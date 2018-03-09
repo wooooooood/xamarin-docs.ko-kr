@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/12/2016
 ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2018
 ---
@@ -22,7 +22,7 @@ _Xamarin.Forms 레이아웃 논리 구조를으로 사용자 인터페이스 컨
 
 ## <a name="layouts"></a>레이아웃
 
-[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) Xamarin.Forms에는 클래스는 역할을 하는 컨테이너의 다른 뷰나 레이아웃 보기의 특수 한 하위 형식입니다. 일반적으로 Xamarin.Forms는 응용 프로그램에서 자식 요소의 크기와 위치를 설정 하는 논리가 포함 됩니다.
+[`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) Xamarin.Forms에는 클래스는 역할을 하는 컨테이너의 다른 뷰나 레이아웃 보기의 특수 한 하위 형식입니다. 일반적으로 Xamarin.Forms는 응용 프로그램에서 자식 요소의 크기와 위치를 설정 하는 논리가 포함 됩니다.
 
  [ ![](layouts-images/layouts-sml.png "Xamarin.Forms Layout Types")](layouts-images/layouts.png "Xamarin.Forms Layout Types")
 
