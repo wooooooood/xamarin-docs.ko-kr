@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 04/14/2017
 ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2018
 ---
@@ -27,7 +27,7 @@ _사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 �
 
 개념적으로 문자로 라는 세 번째 축을 추가 하는 3 차원 좌표계, 화면 오른쪽 각도에 Z 축이 있습니다. 3D 공간에서 좌표 점 기반으로 세 숫자가으로 표시 됩니다: (x, y, z). 3d에서 오른쪽 증가 X의 값이이 문서에서 사용 하는 좌표계 되며 Y의 증가 값이 두 차원에서와 마찬가지로 아래로 이동 합니다. 화면 나오는 양의 Z 값이 증가 합니다. 원점은 왼쪽 위 모퉁이 있는 2 차원 그래픽에서와 마찬가지로 있습니다. 이 평면의 오른쪽 각도에 Z 축이 있는 XY 평면으로 화면 생각할 수 있습니다.
 
-이 왼쪽 좌표 시스템 이라고 합니다. 가리키면 양의 X 방향으로 왼쪽 프로그램에 대 한 집게 (오른쪽)으로 조정 하 고 중간 손가락 증가 Y 방향 (아래쪽), 다음 프로그램 thumb 포인트의 Z 좌표 & #x 2014; 오름차순 방향 조정 화면에서으로 확장 합니다.
+이 왼쪽 좌표 시스템 이라고 합니다. 가리키면 양의 X 방향으로 왼쪽 프로그램에 대 한 집게 (오른쪽)으로 조정 하 고 중간 손가락 증가 Y 방향 (아래쪽), 다음 프로그램 thumb 포인트의 Z 좌표 &#x2014; 오름차순 방향 조정 화면에서으로 확장 합니다.
 
 3D 그래픽에는 변환은 4-4 행렬을 기반으로 합니다. 4-4 항등 매트릭스는 다음과 같습니다.
 
@@ -109,7 +109,7 @@ Z 축 중심으로 회전 2 차원 그래픽에서와 같습니다.
 |    0       0     0  1  |
 </pre>
 
-좌표 시스템의 선호도 회전 방향을 포함 됩니다. 이 왼쪽 시스템의 특정 축 & #x 2014;에 대 한 값을 늘리면 방향으로 왼쪽 손 엄지 단추를 가리킬 경우 X 축 중심으로 회전에 대 한 오른쪽으로 회전 Y 축을 중심으로 회전을 Z 축 & #x 2014;에 대 한 down 그런 다음 다른 손가락 곡선의 양의 각도 회전 방향을 나타냅니다.
+좌표 시스템의 선호도 회전 방향을 포함 됩니다. 이 왼쪽 시스템의 특정 축 &#x2014;에 대 한 값을 늘리면 방향으로 왼쪽 손 엄지 단추를 가리킬 경우 X 축 중심으로 회전에 대 한 오른쪽으로 회전 Y 축을 중심으로 회전을 Z 축 &#x2014;에 대 한 down 그런 다음 다른 손가락 곡선의 양의 각도 회전 방향을 나타냅니다.
 
 `SKMatrix44` 정적 일반화 [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) 및 [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) 회전 중심점입니다 발생 축을 지정 하려면 사용할 수 있는 메서드가 있습니다.
 
@@ -442,7 +442,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing` 재정의 정의 세 Xamarin.Forms `Animation` 애니메이션 효과를 줄 개체는 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드입니다. 이러한 애니메이션 기간 소수 & #x 2014;으로 설정 되어 있는지 확인 합니다. 5 초, 7 초 및 11 초 인 & #x 2014; 따라서 전체 조합 마다 385 초 또는 10 분 이상에 반복:
+`OnAppearing` 재정의 정의 세 Xamarin.Forms `Animation` 애니메이션 효과를 줄 개체는 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드입니다. 이러한 애니메이션 기간 소수 &#x2014;으로 설정 되어 있는지 확인 합니다. 5 초, 7 초 및 11 초 인 &#x2014; 따라서 전체 조합 마다 385 초 또는 10 분 이상에 반복:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
