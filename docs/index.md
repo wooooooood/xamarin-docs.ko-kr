@@ -1140,7 +1140,7 @@ ms.lasthandoff: 02/27/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>지속적인 통합</h3>
+                                                    <h3>연속 통합</h3>
                                                     <p>Xamarin 프로젝트를 지속적인 빌드 및 통합 파이프라인에 통합하는 방법입니다.</p>
                                                 </div>
                                             </div>
