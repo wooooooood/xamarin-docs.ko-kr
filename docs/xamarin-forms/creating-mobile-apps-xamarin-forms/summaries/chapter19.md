@@ -8,7 +8,7 @@ ms.author: chape
 ms.date: 11/07/2017
 ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/27/2018
 ---
@@ -30,7 +30,7 @@ Xamarin.Forms는 컬렉션을 유지 관리 하 고 해당 요소를 표시 하�
 
 [ **PickerDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerDemo) 샘플에서는 XAML을 사용 하 여 설정 하는 방법을 보여 줍니다.는 `Picker` [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) 속성 추가 `string` 는 항목[ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/) 컬렉션입니다. 사용자가 선택할 때는 `Picker`에 있는 항목 표시는 `Items` 플랫폼별 방식으로 컬렉션입니다.
 
-[ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) 이벤트는 사용자가 항목을 선택 하는 경우를 나타냅니다. 0부터 시작 [ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) 속성 다음 선택된 항목을 나타냅니다. 선택 된 항목이 경우 `SelectedIndex` equals & #x 2013; 1.
+[ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) 이벤트는 사용자가 항목을 선택 하는 경우를 나타냅니다. 0부터 시작 [ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) 속성 다음 선택된 항목을 나타냅니다. 선택 된 항목이 경우 `SelectedIndex` equals &#x2013;1.
 
 사용할 수도 있습니다 `SelectedIndex` 하지만 선택한 항목을 초기화 하려면 다음 설정 되어야 합니다는 `Items` 컬렉션 채워집니다. 사용할 수 있다고 속성 요소를 설정 하려면 즉 XAML에서 `SelectedIndex`합니다.
 
@@ -81,11 +81,11 @@ IOS 및 Android 디스플레이에서 얇은 선 행을 구분합니다. 이를 
 
 `ListView` 이러한 항목을 표시 하는 템플릿이 필요 합니다. 코드에서 설정할 수는 [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) 에 정의 된 속성 `ItemsView<TVisual>` 에 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) 를 사용 하 여 개체는 [ `DataTemplate` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) 입니다 참조의 파생 클래스는 [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) 클래스입니다. `Cell` 5 개의 파생 항목에 있습니다.
 
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) & #x 2014; 에 두 개의 `Label` (개념적) 뷰
-- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) & #x 2014; 추가 `Image` 를 보려면 `TextCell`
-- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) & #x 2014; 포함 된 `Entry` 포함 된 뷰는 `Label`
-- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) & #x 2014; 포함 된 `Switch` 으로 `Label`
-- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) & #x 2014; 하나일 수 있습니다 `View` (자식이 가능성이 거의)
+- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &#x2014; 에 두 개의 `Label` (개념적) 뷰
+- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &#x2014; 추가 `Image` 를 보려면 `TextCell`
+- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &#x2014; 포함 된 `Entry` 포함 된 뷰는 `Label`
+- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &#x2014; 포함 된 `Switch` 으로 `Label`
+- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &#x2014; 하나일 수 있습니다 `View` (자식이 가능성이 거의)
 
 그런 다음 호출 [ `SetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) 및 [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) 에 `DataTemplate` 사용 하 여 값을 연결할 개체는 `Cell` 속성 또는에서 데이터 바인딩을 설정 하는 `Cell` 속성에 있는 항목의 속성을 참조 하는 `ItemsSource` 컬렉션입니다. 이 확인할는 [ **TextCellListCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode) 샘플.
 
