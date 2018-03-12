@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e78b76a531e9f8ea88adca46fc59b2063fce14cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너와 사용자 지정 컨트롤을 사용 하는 연습-
 
@@ -33,13 +33,13 @@ IOS 용 Xamarin 디자이너는 Windows에서 Mac 및 Visual Studio 2015 및 201
 1. 새 솔루션 만들기는 **iOS > 앱 > 단일 보기 응용 프로그램 > C#** 서식 파일을 이름을 `ScratchTicket`, 새 프로젝트 마법사를 통해 계속:
 
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "새 솔루션 만들기")](ios-designable-controls-walkthrough-images/01new.png)
+    [![](ios-designable-controls-walkthrough-images/01new.png "새 솔루션 만들기")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 
 1. 라는 새 빈 클래스 파일을 만듭니다 `ScratchTicketView`:
 
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "새 ScratchTicketView 클래스 만들기")](ios-designable-controls-walkthrough-images/02new.png)
+    [![](ios-designable-controls-walkthrough-images/02new.png "새 ScratchTicketView 클래스 만들기")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 
 1. 다음 코드에 대 한 추가 `ScratchTicketView` 클래스:
@@ -168,63 +168,50 @@ IOS 용 Xamarin 디자이너는 Windows에서 Mac 및 Visual Studio 2015 및 201
     
 1. 두 번 클릭 하 여 `Main.storyboard` 디자이너에서 열려는 파일:
 
-    
-    [![](ios-designable-controls-walkthrough-images/03new.png "IOS 디자이너")](ios-designable-controls-walkthrough-images/03new.png)
-
+    [![](ios-designable-controls-walkthrough-images/03new.png "IOS 디자이너")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
 1. 끌기/놓기는 **이미지 보기** 에서 **도구 상자** 스토리 보드에서 보기로 합니다.
 
-    
-    [![](ios-designable-controls-walkthrough-images/04new.png "레이아웃에 이미지 뷰 추가")](ios-designable-controls-walkthrough-images/04new.png)
+    [![](ios-designable-controls-walkthrough-images/04new.png "레이아웃에 이미지 뷰 추가")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
 1. 선택 된 **이미지 보기** 변경 하 고 해당 **이미지** 속성을 `Monkey.png`합니다.
 
-    
-    [![](ios-designable-controls-walkthrough-images/05new.png "Monkey.png에 이미지 뷰 이미지 속성을 설정합니다.")](ios-designable-controls-walkthrough-images/05new.png)
+    [! (ios-디자인할 수-컨트롤-연습-이미지/05new.png Monkey.png "설정 이미지 보기 이미지 속성)]](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
 1. 크기 클래스를 사용 하는 것 처럼이 이미지 보기를 제한 해야 합니다. 이미지를 제약 조건 모드로 전환를 두 번 클릭 합니다. Center 고정 핸들을 클릭 하 여 센터로 제한 하 고 세로 및 가로로 정렬 하겠습니다.
-    
-    
-    [![](ios-designable-controls-walkthrough-images/06new.png "이미지를 가운데 맞춤")](ios-designable-controls-walkthrough-images/06new.png)
 
-    
+    [![](ios-designable-controls-walkthrough-images/06new.png "이미지를 가운데 맞춤")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+
 1. 높이 너비를 제한 하려면 크기 고정 핸들 ('본' 모양 핸들) 클릭 하 고 너비와 높이 각각 선택:
 
-    
-    [![](ios-designable-controls-walkthrough-images/07new.png "제약 조건 추가")](ios-designable-controls-walkthrough-images/07new.png)
+    [![](ios-designable-controls-walkthrough-images/07new.png "제약 조건 추가")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
 1. 도구 모음에서 [업데이트] 단추를 클릭 하 여 제약 조건에 따라 프레임을 업데이트 합니다.
 
-
-    [![](ios-designable-controls-walkthrough-images/08new.png "제약 조건 도구 모음")](ios-designable-controls-walkthrough-images/08new.png)
+    [![](ios-designable-controls-walkthrough-images/08new.png "제약 조건 도구 모음")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
 1. 다음으로 프로젝트를 빌드합니다 있도록는 **티켓 보기 스크래치** 아래에 표시 될 **사용자 지정 구성 요소** 도구 상자에서:
 
-    
-    [![](ios-designable-controls-walkthrough-images/09new.png "사용자 지정 구성 요소로 도구 상자")](ios-designable-controls-walkthrough-images/09new.png)
+    [![](ios-designable-controls-walkthrough-images/09new.png "사용자 지정 구성 요소로 도구 상자")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
 1. 끌어서 놓기는 **티켓 보기 스크래치** 원숭이 이미지 위에 표시 되도록 합니다. 스크래치 티켓 보기에서는 원숭이 아래와 같이 완전히 끌기 핸들을 조정 합니다.
 
-    
-    [![](ios-designable-controls-walkthrough-images/10new.png "이미지 보기를 통해 스크래치 티켓 보기")](ios-designable-controls-walkthrough-images/10new.png)
-
+    [![](ios-designable-controls-walkthrough-images/10new.png "이미지 보기를 통해 스크래치 티켓 보기")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. 두 보기를 선택 하는 경계 사각형을 그려 스크래치 티켓 보기 이미지 보기를 제한 합니다. 아래와 같이 제약 조건에 따라 너비, 높이, 가운데 및 중간 및 업데이트 프레임을 제한 하는 옵션을 선택 합니다.
- 
-    
-    [![](ios-designable-controls-walkthrough-images/11new.png "가운데 맞춤 및 제약 조건 추가")](ios-designable-controls-walkthrough-images/11new.png)
+
+    [![](ios-designable-controls-walkthrough-images/11new.png "가운데 맞춤 및 제약 조건 추가")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
 1. 응용 프로그램을 실행 하 고 "스크래치"는 원숭이 표시할 이미지입니다.
 
-
- [ ![](ios-designable-controls-walkthrough-images/10-app.png "샘플 응용 프로그램 실행")](ios-designable-controls-walkthrough-images/10-app.png)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "샘플 응용 프로그램 실행")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="adding-design-time-properties"></a>디자인 타임 속성 추가
 
@@ -286,7 +273,7 @@ public override void Draw(CGRect rect)
 
 포함 하는 `ExportAttribute` 및 `BrowsableAttribute` 인수를로 설정 `true` 디자이너에 표시 되는 속성으로 인해 **속성** 패널입니다. 다른 이미지와 같은 프로젝트에 포함 된 속성을 변경 `FillTexture2.png`, 아래와 같이 디자인 타임에 컨트롤 업데이트 발생:
 
- [ ![](ios-designable-controls-walkthrough-images/11-customproperty.png "디자인 타임 속성 편집")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "디자인 타임 속성 편집")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>요약
 
