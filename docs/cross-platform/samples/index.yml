@@ -5,13 +5,13 @@ metadata:
   description: "모바일 개발자를 위한 플랫폼 간 Xamarin 샘플 앱입니다."
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/26/2018
   ms.topic: article
-  ms.openlocfilehash: c5e8c04dcc5a9bf18af0dd9ce2dcd85b6b760836
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: 24f32938930d7cf13374536f9513640ab8e834dc
+  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 03/12/2018
 abstract:
   description: "C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되는 Xamarin 플랫폼 간 샘플 앱 및 코드 데모입니다."
   menu:
@@ -19,50 +19,68 @@ abstract:
     - href: https://developer.xamarin.com/samples/
       text: "모든 Xamarin 샘플"
 sections:
-- title: 
+- title: "시작"
   items:
   - type: list
     style: cards
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 응용 프로그램을 보여줍니다."
+      html: "이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 응용 프로그램을 보여주며 Xamarin.Forms를 사용하여 빌드됩니다."
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "기존의 익숙한 게임에 새로운 요소가 추가되었습니다. 눈금이 표시된 9x9 바둑판식 타일에 10개의 버그가 숨어있습니다. 게임에서 승리하려면 10개의 버그를 모두 찾아 플래그를 지정해야 합니다."
+    - href: https://github.com/xamarinhq/app-myshoppe
+      html: "영업 사원이 판매 실적을 추적하고, 잠재 고객을 관리하고, 해당 연락처를 보고, 주문을 관리하고, 제품 카탈로그를 찾을 수 있도록 하는 데모 앱입니다."
       image:
-        src: images/bugsweeper.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      title: BugSweeper
-    - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: "RPN(역폴란드 표기법) 계산기를 사용하여 괄호 또는 등호 키 없이 숫자와 연산을 입력할 수 있습니다."
+        src: images/myshoppe.png
+        href: https://github.com/xamarinhq/app-myshoppe
+      title: "내 구매자"
+    - href: https://github.com/xamarin/app-crm
+      html: "영업 사원이 판매 실적을 추적하고, 잠재 고객을 관리하고, 해당 연락처를 보고, 주문을 관리하고, 제품 카탈로그를 찾을 수 있도록 하는 데모 앱입니다."
       image:
-        src: images/rpncalc.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      title: "RPN 계산기"
-    - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "이 프로그램은 손가락을 터치하고 이동하여 그림을 그릴 수 있는 회전 디스크를 시뮬레이트합니다. SpinPaint는 손가락 아래에 선을 그리며 터치에 응답합니다. 또한 해당 선을 3개의 디스크 사분면에 3개의 미러 이미지로 복제하기도 합니다."
+        src: images/crm.png
+        href: https://github.com/xamarin/app-crm
+      title: Xamarin CRM
+- title: "Azure 및 엔터프라이즈"
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
+    - href: https://github.com/xamarinhq/app-acquaint/
+      html: "세부 정보 및 편집 화면이 있는 연락처 목록 앱입니다. Xamarin.Forms 및 Xamarin 네이티브 구현 모두에서 소스 코드가 제공됩니다."
       image:
-        src: images/spinpaint.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      title: SpinPaint
-    - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다."
+        src: images/acquaint.jpg
+        href: https://github.com/xamarinhq/app-acquaint
+      title: Acquaint
+    - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      html: "Xamarin 및 Azure를 비롯한 앱 모음을 구축하여 2017 데모를 연결합니다."
       image:
-        src: images/xaml.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      title: "XAML 샘플"
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다."
+        src: images/smarthotel360.png
+        href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      title: SmartHotel360
+    - href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      html: "Xamarin 및 Azure를 비롯한 앱 모음을 구축하여 2016 데모를 연결합니다."
       image:
-        src: images/xuzzle.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      title: Xuzzle
+        src: images/bikesharing360.png
+        href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      title: BikeSharing360
+    - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      html: "Azure에서 컨테이너를 사용하여 앱을 빌드하는 엔터프라이즈 아키텍처 지침입니다."
+      image:
+        src: images/eshop.png
+        href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      title: eShop
+- title: "모든 샘플"
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
     - href: https://developer.xamarin.com/samples/
-      html: "Xamarin 플랫폼 간 샘플 앱 및 코드 데모의 전체 집합에 액세스합니다."
+      html: "Xamarin 플랫폼 간 샘플 앱 및 코드 데모의 전체 집합입니다."
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/
