@@ -3,16 +3,16 @@ title: SiriKit
 description: "이 문서에는 iOS 장치에서 Siri를 사용 하는 사용자에 액세스할 수 있는 서비스를 제공 하도록 SiriKit Xamarin.iOS 앱에서 사용 하는 방법을 보여 줍니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c4fdf61b35ca28af82e3890242d54a75e50d2f82
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d7773be1244b0ba4e1a57c8a1efbddf02396138
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -31,7 +31,7 @@ Siri의 개념과 작동 **도메인**, 그룹의 관련된 작업에 대 한 �
 
 사용자가 응용 프로그램 확장의 서비스 중 하나는 관련 된 Siri의 요청, SiriKit 확장 보냅니다는 **의도** 지원 데이터와 함께 사용자의 요청을 설명 하는 개체입니다. 앱 확장 한 다음 적절 한 생성 **응답** 개체에 대 한는 주어진 **의도**, 확장에서 요청을 처리할 수는 방법에 대해 자세히 설명 합니다.
 
-## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[SiriKit 개념 이해](~/ios/platform/sirikit/understanding-sirikit.md)
+## <a name="understanding-sirikit-conceptsiosplatformsirikitunderstanding-sirikitmd"></a>[SiriKit 개념 이해하기](~/ios/platform/sirikit/understanding-sirikit.md)
 
 이 문서에서는 필요한 SiriKit Xamarin.iOS 앱에서 사용 하기 위한 주요 개념을 설명 합니다. 적용 되는 새 의도 및 의도 UI 확장 지점 및 응용 프로그램 및 사용자 어휘 Siri에 앱을 열을 사용 하 여 작동 방식입니다.
 

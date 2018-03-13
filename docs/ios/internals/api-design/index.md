@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5fab7579be256e478c69b76b5e41b8c1b0568ba6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: 9bebc33affef4a1a25667039dfcdbe345dbd2cd6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="api-design"></a>API 디자인
 
@@ -25,7 +25,6 @@ Objective C 코드와 통신 하는 낮은 수준의 런타임이 [MonoTouch.Obj
 ## <a name="design-principles"></a>디자인 원칙
 
 (여기에 적용 Xamarin.Mac, OS X에서 Objective C 용 모노 바인딩) Xamarin.iOS 바인딩에 대 한 우리의 디자인 원칙 중 일부입니다.
-
 
 - Framework 디자인 지침 수행
 - Objective C 서브 클래스에는 개발자 허용:
@@ -78,15 +77,14 @@ Xamarin.iOS 다양 한 구성 하는 어셈블리를 포함 된 *Xamarin.iOS 프
 
 ### <a name="major-namespaces"></a>주 네임 스페이스 
 
- <a name="MonoTouch.ObjCRuntime" />
+<a name="MonoTouch.ObjCRuntime" />
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
 [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/) 네임 스페이스에 없습니다. 목표와 C# 사이의 세계 브리지 개발자가 사용할 수
 이 새 바인딩 Cocoa # 및 Gtk # 경험을 기반으로 하는 iOS 용으로 특별히 설계 되었습니다.
 
- <a name="MonoTouch.Foundation" />
-
+<a name="MonoTouch.Foundation" />
 
 #### <a name="foundation"></a>Foundation
 
@@ -100,10 +98,7 @@ Xamarin.iOS의 목표 없습니다. 클래스 계층 구조를 C#에서 미러�
 
 - 다양 한 도우미 Api는 개발자가 제 3 자 Objective-c Api를 다른 iOS Api 또는 현재 Xamarin.iOS로 바인딩되지 않은 Api를 바인딩할 수 있도록 여기 노출 됩니다.
 
-
 바인딩 Api에 대 한 자세한 내용은 참조는 [Xamarin.iOS 바인딩 생성기](~/cross-platform/macios/binding/binding-types-reference.md) 섹션.
-
- <a name="NSObject" />
 
 
 ##### <a name="nsobject"></a>NSObject
@@ -116,7 +111,6 @@ Xamarin.iOS의 목표 없습니다. 클래스 계층 구조를 C#에서 미러�
 
 형식이 명확한 종료를 수행 하는 경우 재정의 [NSObject.Dispose(bool) 메서드](https://developer.xamarin.com/api/type/Foundation.NSObject/%2fM%2fDispose) dispose 매개 변수는 "bool disposing", 하 고 하는 경우 설정할 것을 true로 의미 하기 때문에 프로그램 Dispose 메서드가 호출 되는 사용자 개체에 명시적으로 호출된 Dispose ()입니다. 값 false 이면 종료자 스레드에서 Dispose (bool disposing) 메서드가 종료자에서 호출 되는 것을 의미 합니다. []()
 
-<a name="Categories" />
 
 ##### <a name="categories"></a>범주
 
@@ -185,20 +179,18 @@ class Rotation_IOS6 {
 }
 ```
 
-<a name="PreserveAttribute" />
 
 ##### <a name="preserveattribute"></a>PreserveAttribute
 
 PreserveAttribute는 크기를 줄여 응용 프로그램 처리 시 단계 중에 형식 또는 형식 멤버를 유지 하기 위해 – Xamarin.iOS 배포 도구 – mtouch 알리는 데 사용 되는 사용자 지정 특성입니다.
 
-응용 프로그램에서 정적으로 연결 되지 않은 모든 멤버에는 제거할 수 있습니다. 따라서이 특성은 정적으로 참조 하지 않지만 아직 응용 프로그램에 필요한 멤버를 표시 하는 데 사용 됩니다.
+응용 프로그램이 정적으로 연결하지 않은 모든 멤버는 제거됩니다. 따라서이 특성은 정적으로 참조 하지 않지만 아직 응용 프로그램에 필요한 멤버를 표시 하는 데 사용 됩니다.
 
-예를 들어, 형식, 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지 하는 것이 좋습니다. XML 직렬화를 사용 하는 경우에 형식의 속성을 유지 하는 것이 좋습니다.
+예를 들어 형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다. XML serialization을 사용하는 경우 형식의 속성을 유지하는 것이 좋습니다.
 
-형식의 모든 멤버 또는 형식 자체에이 특성을 적용할 수 있습니다. 전체 형식을 유지 하려는 경우 구문을 사용할 수 있습니다 [보존 (AllMembers = true)] 형식에 있습니다.
+같은 형식의 모든 멤버 또는 형식 자체에 이 특성을 적용할 수 있습니다. 전체 형식을 유지 하려는 경우 구문을 사용할 수 있습니다 [보존 (AllMembers = true)] 형식에 있습니다.
 
- <a name="MonoTouch.UIKit" />
-
+<a name="MonoTouch.UIKit" />
 
 #### <a name="uikit"></a>UIKit
 
@@ -206,8 +198,7 @@ PreserveAttribute는 크기를 줄여 응용 프로그램 처리 시 단계 중�
 
 C# 대리자는 일반적인 작업에 제공 됩니다. 참조는 [대리자](#Delegates) 한 자세 합니다.
 
- <a name="OpenGLES" />
-
+<a name="OpenGLES" />
 
 #### <a name="opengles"></a>OpenGLES
 
@@ -219,8 +210,6 @@ OpenGLES 2.0 기능을 문서화 된 ES20.GL 형식을 통해 사용할 수 [여
 
 OpenGLES 3.0 기능을 문서화 된 ES30.GL 형식을 통해 사용할 수 [여기](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/) 유형입니다.
 
- <a name="Binding_Design" />
-
 
 ### <a name="binding-design"></a>바인딩 디자인
 
@@ -230,8 +219,6 @@ Xamarin.iOS 기본 Objective-c 플랫폼에 대 한 바인딩을 단순히 않�
 
 몇 개 섹션 사용자 Xamarin.iOS 응용 프로그램을 만드는 개발자에 게 필요 하지 않습니다. 다음에 설명 된 것이 완료 하 고 더 복잡 한 응용 프로그램을 만들 때 도움이 됩니다 하는 방법을 이해 합니다.
 
-
- <a name="Types" />
 
 
 #### <a name="types"></a>유형
@@ -254,16 +241,13 @@ UIView [] GetViews ();
 
 또한에 **클래식 API** 노출 하는 대신 `CGRect`, `CGPoint` 및 `CGSize` CoreGraphics API에서 교체 순위가 `System.Drawing` 구현 `RectangleF`, `PointF`및 `SizeF` 개발자 OpenTK를 사용 하는 기존 OpenGL 코드 유지 도움이 됩니다. 새로운 64 비트를 사용 하는 경우 **통합 API**, CoreGraphics API를 사용 해야 합니다.
 
- <a name="Inheritance" />
-
+<a name="Inheritance" />
 
 #### <a name="inheritance"></a>상속
 
 Xamarin.iOS API 디자인에는 개발자가 네이티브 Objective C 형식을 C# 형식을, "base" C# 키워드를 사용 하 여 기본 구현에 체인 뿐만 아니라 "override" 키워드를 사용 하 여 파생된 클래스에서 확장은 같은 방식으로 확장할 수 있습니다.
 
 이 디자인 Xamarin.iOS 라이브러리 안에 전체 Objective-c 시스템이 래핑된 이미 있으므로 Objective-c 선택기는 개발 과정의 일부로 처리를 피하기 위해 개발자가 있습니다.
-
- <a name="Types_and_Interface_Builder" />
 
 
 #### <a name="types-and-interface-builder"></a>형식 및 인터페이스 작성기
@@ -279,8 +263,7 @@ public partial class void MyView : UIView {
 }
 ```
 
-
- <a name="Delegates" />
+<a name="Delegates" />
 
 
 #### <a name="delegates"></a>대리자
@@ -302,15 +285,13 @@ Objective C 클래스 나타납니다이 프로그래밍 패턴을 사용 하는
 
 Xamarin.iOS에서 세 가지 상호 배타적인 메커니즘에는 이러한 대리자를 바인딩할 제공 됩니다.
 
-1.  [이벤트를 통해](#Events) 합니다.
-2.  [통해 강력한 형식의 `Delegate`속성](#StrongDelegate) 합니다.
-3.  [통해 느슨하게 형식화는 `WeakDelegate`속성](#WeakDelegate) 합니다.
-
+1.  [이벤트를 통해](#Via_Events)합니다.
+2.  [통해 강력한 형식의 `Delegate` 속성](#StrongDelegate)
+3.  [통해 느슨하게 형식화는 `WeakDelegate` 속성](#WeakDelegate)
 
 예를 들어는 [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) 클래스입니다. 이 디스패치합니다는 [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) 에 할당 되는 인스턴스는 [위임](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) 속성입니다.
 
- <a name="Via_Events" />
-
+<a name="Via_Events" />
 
 ##### <a name="via-events"></a>이벤트를 통해
 
@@ -320,7 +301,6 @@ Xamarin.iOS에서 세 가지 상호 배타적인 메커니즘에는 이러한 �
 -  [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) 메서드가 매핑되는 [UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/) 이벤트입니다.
 -  [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) 메서드가 매핑되는 [UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/) 이벤트입니다.
 
-
 예를 들어이 간단한 프로그램 웹 로드를 볼 때 시작 및 종료 시간을 기록 합니다.
 
 ```csharp
@@ -329,8 +309,6 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.LoadStarted += (o, e) => startTime = DateTime.Now;
 web.LoadFinished += (o, e) => endTime = DateTime.Now;
 ```
-
- <a name="Via_Properties" />
 
 
 ##### <a name="via-properties"></a>Via 속성
@@ -353,6 +331,7 @@ void SetupTextField (UITextField tf)
 
 `UITextField`의 `ShouldReturn` 속성이 경우에 인수로 부울 값을 반환 하 고 있는지 여부를 텍스트 필드 해야를 바탕으로 조치 반환 단추를 누르는 동작을 결정 하는 대리자입니다. 메서드에서 반환 *true* 호출자에 게 또한 키보드 화면에서 제거 되지만 (텍스트 필드를 호출 하면 이런 경우가 `ResignFirstResponder`).
 
+<a name="StrongDelegate"/>
 
 ##### <a name="strongly-typed-via-a-delegate-property"></a>대리자 속성을 통해 강력한 형식
 
@@ -389,8 +368,9 @@ web.Delegate = new Notifier ();
 
 몇 가지 컨트롤에 대 한 요청 시 데이터를 제공 하는 패턴도 사용 됩니다. 예를 들어는 [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/) 컨트롤은 강력한 표 렌더링 컨트롤 – 이며 모양과 내용을 모두의 인스턴스에서 [UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
 
+<a name="WeakDelegate"/>
 
-@### 느슨한 WeakDelegate 속성을 통해 형식
+### <a name="loosely-typed-via-the-weakdelegate-property"></a>느슨한 WeakDelegate 속성을 통해 형식
 
 강력한 형식의 속성 외에도 개발자가 필요한 경우 작업을 다르게 바인딩할 수 있습니다 하는 약한 형식의 대리자도 됩니다.
 강력한 형식의 everywhere `Delegate` Xamarin.iOS의 바인딩에 해당 속성을 노출 `WeakDelegate` 도 속성을 노출 합니다.
@@ -423,7 +403,7 @@ web.WeakDelegate = new Notifier ();
 두 번 참고는 `WeakDelegate` 속성에 할당 하지는 `Delegate` 속성 사용 되지 것입니다. 또한 [내보내기]를 상속된 된 기본 클래스의 메서드를 구현 하는 경우 확인 해야 하는 공용 메서드.
 
 
-## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>&#35; Objective-c 대리자 패턴의 매핑
+## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>Objective C 대리자 패턴에서 C로의 매핑이&#35;
 
 Objective C 예제는 다음과 같은 표시 될 때:
 
@@ -440,7 +420,7 @@ foo.Delegate = new SomethingDelegate ();
 Xamarin.iOS Objective C에 매핑되는 강력한 형식의 클래스 대리자 클래스 제공 했습니다. 를 사용 하려면 서브클래싱 선택한 Xamarin.iOS의 구현에 의해 정의 된 메서드를 재정의 합니다. 작동 방식에 대 한 자세한 내용은 섹션 "모델" 아래를 참조 하세요.
 
 
-##### <a name="mapping-delegates-to-c35"></a>&#35; 대리자 매핑
+##### <a name="mapping-delegates-to-c35"></a>C 대리자에 매핑&#35;
 
 UIKit 일반적 두 가지 형태로 Objective-c 대리자를 사용합니다.
 
@@ -575,12 +555,12 @@ public class AppController : UIApplicationDelegate {
 장점은 Objective C 헤더 파일을 선택기, 인수, 또는 C#에 대 한 매핑 유형을 알고 없어도, 해당 아이콘 intellisense Visual Studio에서, Mac 용 강력한 종류와 함께
 
 
-#### <a name="xib-outlets-and-c35"></a>XIB 콘센트 및 C# 35;
+#### <a name="xib-outlets-and-c35"></a>XIB 콘센트 및 C&#35;
 
 > [!IMPORTANT]
 > 이 섹션에서는 XIB 파일을 사용 하는 경우 콘센트와 IDE의 통합을 설명 합니다. Xamarin 디자이너를 사용 하 여 iOS 용,이 모든 대체에서 이름을 입력 하 여 **Identity > 이름** 다음과 같이 IDE의 속성 섹션에서:
 >
-> [![](images/designeroutlet.png "IOS 디자이너에서에서 항목 이름 입력")](images/designeroutlet.png)
+> [![](images/designeroutlet.png "IOS 디자이너에서에서 항목 이름 입력")](images/designeroutlet.png#lightbox)
 >
 >IOS 디자이너에서 자세한 정보를 검토 하십시오는 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md#how-it-works) 문서.
 

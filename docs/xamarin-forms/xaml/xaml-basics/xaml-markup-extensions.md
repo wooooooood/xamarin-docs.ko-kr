@@ -4,14 +4,15 @@ description: "XAML 태그 확장 개체 또는 다른 소스에서 직접 참조
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 7aea7b1536efc952378c6a1df63640af191f1ebe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부 합니다. XAML 태그 확장
 
@@ -298,7 +299,7 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
 
 스크린샷을 일관 된 스타일 및 플랫폼 종속 스타일 지정을 확인합니다.
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "스타일의 컨트롤")](xaml-markup-extensions-images/sharedresources-large.png "스타일의 컨트롤")
+[![](xaml-markup-extensions-images/sharedresources.png "스타일의 컨트롤")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "스타일의 컨트롤")
 
 정의 하는 가장 일반적으로 하지만 `Resources` 컬렉션 페이지 맨 위에 있는 염두에서에 둬야 하는 `Resources` 속성으로 정의 된 `VisualElement`, 있으며 있을 수 있습니다 `Resources` 컬렉션 페이지에서 다른 요소에 합니다. 예를 들어를에 추가 시도 `StackLayout` 이 예에서:
 
@@ -436,7 +437,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 결과의 크기 `BoxView` 화면을 기준으로 플랫폼에 따라 다릅니다.
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "X:static 태그 확장을 사용 하 여 컨트롤")](xaml-markup-extensions-images/staticconstants-large.png "X:static 태그 확장을 사용 하 여 컨트롤")
+ [![](xaml-markup-extensions-images/staticconstants.png "X:static 태그 확장을 사용 하 여 컨트롤")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "X:static 태그 확장을 사용 하 여 컨트롤")
 
 ## <a name="other-standard-markup-extensions"></a>다른 표준 태그 확장
 
@@ -552,7 +553,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 다음은 실행 중인 프로그램입니다.
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "제약 조건을 사용 하는 상대 레이아웃")](xaml-markup-extensions-images/relativelayout-large.png "제약 조건을 사용 하는 상대 레이아웃")
+[![](xaml-markup-extensions-images/relativelayout.png "제약 조건을 사용 하는 상대 레이아웃")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "제약 조건을 사용 하는 상대 레이아웃")
 
 ## <a name="summary"></a>요약
 
@@ -563,7 +564,7 @@ XAML 파일에 대 한 중요 한 지원을 제공 하는 여기에 표시 된 X
 ## <a name="related-links"></a>관련 링크
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [1 부입니다. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [2 부 합니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5 단계입니다. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

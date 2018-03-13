@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` 위치 및 크기 보기 레이아웃 또는 형제 보기의 속성을 기준으로 하는 데 사용 됩니다. 와 달리 `AbsoluteLayout`, `RelativeLayout` 이동 앵커의 개념 없고 아래쪽 또는 레이아웃의 오른쪽 가장자리를 기준으로 요소를 배치 하기 위한 기능에는 없습니다. `RelativeLayout` 요소 자체의 범위를 벗어난 위치 지정 지원 하지 않습니다.
 
-[ ![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png "Xamarin.Forms Layouts")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>용도
 
@@ -76,7 +76,7 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 - 상자의 `y` 좌표-100 부모의 높이 절반으로 정의 됩니다.
 
 > [!NOTE]
-> **참고**: 제약 조건을 정의 하는 방식 때문에 C# XAML로 지정 된 수의 더 복잡 한 레이아웃을 만들 수는 있습니다.
+> 이 제약 조건을 정의 하는 방식 때문에 C# XAML로 지정 된 수의 더 복잡 한 레이아웃을 만들 수 있습니다.
 
 제약 조건으로 정의 위의 예에서의 두 `RelativeToParent` &ndash; 부모 요소를 기준으로 요소의 값은 즉, 합니다. 다른 보기를 기준으로 제약 조건을 정의 하는 것도 가능 합니다. 이 통해 (개발자)에 게 보다 직관적인 레이아웃에 있으며 레이아웃 코드의 의도 분명 더 쉽게 만들 수 있습니다.
 

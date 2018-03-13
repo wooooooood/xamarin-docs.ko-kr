@@ -3,21 +3,21 @@ title: "추가 iOS 9 프레임 워크 변경 내용"
 description: "이 문서에서는 추가, 부 버전 변경 또는 iOS 9에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 82c6c2451deafb8a4314254a8138804d927c9bbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
 _이 문서에서는 추가, 부 버전 변경 또는 iOS 9에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다._
 
-[ ![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png)
+[![](additional-framework-changes-images/ios9-sml.png "iOS 9 로고")](additional-framework-changes-images/ios9.png#lightbox)
 
 IOS에 주요 변경 내용 외에도 Apple가 한 수정 및 여러 기존 프레임 워크의 향상 된 기능 iOS 9입니다.
 
@@ -263,6 +263,6 @@ IOS 9에에서 더 이상 발생이 자동 크기 조정 하 고 컨트롤 화�
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
-- [IOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
+- [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0에 새로 이란](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

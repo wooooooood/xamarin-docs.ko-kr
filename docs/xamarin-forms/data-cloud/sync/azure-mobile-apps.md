@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b7756c63901d3b4fbfea70587b3fdf8e5cf9df72
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Azure 모바일 앱과 오프 라인 데이터 동기화
 
@@ -133,7 +133,7 @@ public async Task SyncAsync()
 끌어오기 수행한는 `IMobileServiceSyncTable.PullAsync` 단일 테이블에서 메서드. 첫 번째 매개 변수는 `PullAsync` 메서드는 모바일 장치에 대해서만 사용 되는 쿼리 이름입니다. Azure 모바일 클라이언트 SDK 수행 이름 결과 null이 아닌 쿼리를 제공 하는 *증분 동기화*때마다 가져오기 작업을 반환 하는 위치 결과 얻으려면 최신, `updatedAt` 결과의 타임 스탬프를 로컬에 저장 됩니다 시스템 테이블입니다. 후속 끌어오기 작업만 레코드를 검색한 후 해당 타임 스탬프입니다. 또는 *전체 동기화* 전달 하 여 액세스가 가능 `null` 쿼리 이름으로 생성 된 각 끌어오기 작업에서 검색 되 고 모든 레코드입니다. 모든 동기화 작업에 따라 수신된 된 데이터는 로컬 저장소에 삽입 됩니다.
 
 > [!NOTE]
-> **참고**: 끌어오기를 로컬에서 업데이트 중인 테이블에 대해 실행 되는 경우 끌어오기는 먼저 밀어넣기 동기화 컨텍스트에서 실행할 합니다. 이미 대기 중인 변경 내용 및 Azure 모바일 앱 인스턴스에서 새 데이터 간의 충돌을 최소화 합니다.
+> 로컬에서 업데이트 중인 테이블에 대해 실행 되는 끌어오기 끌어오기 동기화 컨텍스트에 밀어넣기를 먼저 실행 됩니다. 이미 대기 중인 변경 내용 및 Azure 모바일 앱 인스턴스에서 새 데이터 간의 충돌을 최소화 합니다.
 
 `SyncAsync` 메서드에 로컬 저장소와 Azure 모바일 앱 인스턴스에 동일한 레코드가 변경 될 때 충돌을 처리 하는 기본 구현을 포함 됩니다. 로컬 저장소와 Azure 모바일 앱 인스턴스 데이터를 업데이트 하였습니다 충돌 하는 경우는 `SyncAsync` 메서드 Azure 모바일 앱 인스턴스에 저장 된 데이터에서 로컬 저장소의 데이터를 업데이트 합니다. 다른 충돌이 발생 하면는 `SyncAsync` 메서드 로컬 변경 내용을 취소 합니다. Azure 모바일 앱 인스턴스에서 삭제 삭제 하는 데이터에 대 한 로컬 변경 있는 시나리오를 처리 합니다.
 
@@ -150,7 +150,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 에 대 한 호출 `PurgeAsync` 푸시 작업을 트리거합니다. 따라서 로컬 저장소에서 제거 하기 전에 로컬로 완료 상태로 표시 된 모든 항목이 Azure 모바일 앱 인스턴스에 전송 됩니다. 그러나 Azure 모바일 앱 인스턴스와 동기화 보류 중인 작업이 있으면 지우기 throw 됩니다는 `InvalidOperationException` 경우가 아니면는 `force` 로 설정 된 `true`합니다. 다른 방식을 확인 하는 것은 `IMobileServiceSyncContext.PendingOperations` 속성 보류 중인 Azure 모바일 앱 인스턴스에 푸시되 지 않은 하는 속성은 0 하는 경우 데이터베이스 제거가만 수행 하는 작업의 수를 반환 합니다.
 
 > [!NOTE]
-> **참고**: 호출 `PurgeAsync` 와 `force` 매개 변수 설정 `true` 보류 중인 변경 내용이 모두 손실 됩니다.
+> 호출 `PurgeAsync` 와 `force` 매개 변수 설정 `true` 보류 중인 변경 내용이 모두 손실 됩니다.
 
 ## <a name="initiating-synchronization"></a>동기화 시작
 

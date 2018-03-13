@@ -3,14 +3,15 @@ title: "Xamarin.Forms를 사용한 모바일 응용 프로그램을 만들기 �
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b88d227b272c34dd1c4d22fc707edce4df6dd91f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2cf6033958848f0c1b16e78fbc3a3d18a6b4fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>Xamarin.Forms를 사용한 모바일 응용 프로그램을 만들기 위한 장 요약
 
@@ -26,27 +27,27 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="contents"></a>목차
 
-[장 1입니다. Xamarin.Forms 포함할 됩니까?](chapter01.md)
+[장 1입니다. Xamarin.Forms가 왜 적합한가요?](chapter01.md)
 
-[장 2입니다. 응용 프로그램 분석](chapter02.md)
+[장 2입니다. 앱 분석](chapter02.md)
 
-[장 3입니다. 텍스트를 자세하게](chapter03.md)
+[장 3입니다. 텍스트 더 자세히 알아보기](chapter03.md)
 
 [Chapter 4입니다. 스택 스크롤](chapter04.md)
 
-[5 장 합니다. 크기와 처리](chapter05.md)
+[5 장 합니다. 크기 처리](chapter05.md)
 
 [6 장입니다. 단추 클릭](chapter06.md)
 
-[7 장 합니다. XAML 코드와 비교](chapter07.md)
+[7 장 합니다. XAML 및 코드](chapter07.md)
 
-[8 장 합니다. 조화의 XAML 및 코드](chapter08.md)
+[8 장 합니다. 코드와 XAML의 조화](chapter08.md)
 
 [9 장입니다. 플랫폼별 API 호출](chapter09.md)
 
 [장 10입니다. XAML 태그 확장](chapter10.md)
 
-[11 장입니다. 바인딩 가능한 인프라](chapter11.md)
+[11 장입니다. 바인딩할 수 있는 인프라](chapter11.md)
 
 [장 12입니다. 스타일](chapter12.md)
 
@@ -58,13 +59,13 @@ ms.lasthandoff: 02/27/2018
 
 [장 16입니다. 데이터 바인딩](chapter16.md)
 
-[17 장 합니다. 표를 마스터합니다.](chapter17.md)
+[17 장 합니다. 눈금 마스터](chapter17.md)
 
 [18 장 합니다. MVVM](chapter18.md)
 
 [19 장 합니다. 컬렉션 뷰](chapter19.md)
 
-[장 20입니다. Async 및 파일 I/O](chapter20.md)
+[장 20입니다. 비동기 및 파일 I/O](chapter20.md)
 
 [장 21입니다. 변환](chapter21.md)
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/27/2018
 
 [장 24입니다. 페이지 탐색](chapter24.md)
 
-[25 장 합니다. 페이지 변형](chapter25.md)
+[25 장 합니다. 페이지 종류](chapter25.md)
 
 [장 26 합니다. 사용자 지정 레이아웃](chapter26.md)
 

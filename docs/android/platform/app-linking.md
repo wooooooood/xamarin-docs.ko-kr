@@ -3,16 +3,16 @@ title: "Android에서 앱 연결"
 description: "이 가이드 앱 링크, 모바일 앱 웹 사이트 Url에 응답할 수 있도록 허용 하는 기술을 Android 6.0을 지 원하는 방법에 대해 설명 합니다. 어떤 앱 연결, Android 6.0 응용 프로그램에서 응용 프로그램 연결을 구현 하는 방법 및 도메인에 대 한 모바일 앱에 사용 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -84,7 +84,7 @@ Android에서는 URI에 대 한 기본 처리기로 응용 프로그램을 등�
 Android 6.0 응용 프로그램 연결 Android URI에 대 한 기본 처리기로 응용 프로그램을 설정 하기 전에 웹 사이트와 응용 프로그램 간의 연결을 확인 하도록 해야 합니다. 이 확인은 응용 프로그램이 처음 설치할 때 발생 합니다. *디지털 자산 링크* 파일이 관련 webdomain(s)에서 호스팅하는 JSON 파일입니다.
 
 > [!NOTE]
-> **참고:** 는 `android:autoVerify` 의도 필터에서 특성을 설정 해야 &ndash; 그렇지 않은 경우 Android 확인 수행 하지 것입니다.
+> `android:autoVerify` 의도 필터에서 특성을 설정 해야 &ndash; 그렇지 않은 경우 Android 확인 수행 하지 것입니다.
 
 파일 위치에 있는 도메인의 웹 마스터 배치할 **https://domain/.well-known/assetlinks.json**합니다.
 

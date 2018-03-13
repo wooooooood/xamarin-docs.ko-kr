@@ -4,14 +4,15 @@ description: "탐색 SkiaSharp 렌더링 입방 형 3, 정방형, 및 원추형 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 8fdebd00b0b33c184337eacd0836dd81a19f161b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선으로 분할
 
@@ -88,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기 세 플랫폼 모두에서 실행 되 고 있습니다.
 
-[![](beziers-images/beziercurve-small.png "베 지 어 곡선 페이지의 삼중 스크린샷")](beziers-images/beziercurve-large.png "베 지 어 곡선 페이지의 삼중 스크린샷")
+[![](beziers-images/beziercurve-small.png "베 지 어 곡선 페이지의 삼중 스크린샷")](beziers-images/beziercurve-large.png#lightbox "베 지 어 곡선 페이지의 삼중 스크린샷")
 
 수학적으로 곡선 입방 형 3 다항식입니다. 곡선 최대 세 지점에 직선을 교차 합니다. 시작 지점에서 곡선은 항상 탄젠트,와 동일한 방향으로, 처음부터 직선 가리키도록 첫 번째 제어점입니다. 끝점에서 곡선은 항상 탄젠트,와 동일한 방향으로, 두 번째 컨트롤에서 직선 가리키는 끝점입니다.
 
@@ -206,7 +207,7 @@ float Magnitude(SKPoint v)
 
 다음은 세 가지 다른 관점을 사용 하 여 세 플랫폼에서 실행 중인 프로그램입니다.
 
-[![](beziers-images/beziercirculararc-small.png "베 지 어 원호 페이지의 삼중 스크린샷")](beziers-images/beziercirculararc-large.png "베 지 어 원호 페이지의 삼중 스크린샷")
+[![](beziers-images/beziercirculararc-small.png "베 지 어 원호 페이지의 삼중 스크린샷")](beziers-images/beziercirculararc-large.png#lightbox "베 지 어 원호 페이지의 삼중 스크린샷")
 
 Windows Mobile 화면에 치중 하 고 각도 180도 있지만 iOS 화면에는 있다는 것 각도가 90도 제대로 분기 원에 맞게 표시 베 지 어 곡선 특히 반원에서 벗어나는 표시 됩니다.
 
@@ -288,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 포인트의 sinusoidally 진동 값에 따라 보간 `t`합니다. 일련의 연결 된 4 개의 베 지 어 곡선을 생성 하는 보간된 포인트 사용 됩니다. 사각형으로 원에서 진행률을 표시 한 세 가지 플랫폼에서 실행 중인 애니메이션 다음과 같습니다.
 
-[![](beziers-images/squaringthecircle-small.png "Squaring의 삼중 스크린 샷 원 페이지")](beziers-images/squaringthecircle-large.png "는 Squaring의 삼중 스크린 샷 원 페이지")
+[![](beziers-images/squaringthecircle-small.png "Squaring의 삼중 스크린 샷 원 페이지")](beziers-images/squaringthecircle-large.png#lightbox "는 Squaring의 삼중 스크린 샷 원 페이지")
 
 이러한 애니메이션이 있는 원호 및 직선으로 렌더링할 수 있을 정도로 유연 알고리즘 방식으로 곡선 없이 수 없습니다.
 
@@ -337,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 세 플랫폼 모두에서 무한대 기호가입니다.
 
-[![](beziers-images/bezierinfinity-small.png "베 지 어 무한대 페이지의 삼중 스크린샷")](beziers-images/bezierinfinity-large.png "베 지 어 무한대 페이지의 삼중 스크린샷")
+[![](beziers-images/bezierinfinity-small.png "베 지 어 무한대 페이지의 삼중 스크린샷")](beziers-images/bezierinfinity-large.png#lightbox "베 지 어 무한대 페이지의 삼중 스크린샷")
 
 다소 더 부드럽게 만들기 중심 쪽으로 렌더링 하 여 무한대 기호 보다는 **호 무한대** 에서 페이지는 [ **세 가지 방법으로 호를 그릴 수** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 문서.
 
@@ -400,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 및 세 플랫폼 모두에서 실행 되 고 여기서:
 
-[![](beziers-images/quadraticcurve-small.png "정방형 곡선 페이지의 삼중 스크린샷")](beziers-images/quadraticcurve-large.png "정방형 곡선 페이지의 삼중 스크린샷")
+[![](beziers-images/quadraticcurve-small.png "정방형 곡선 페이지의 삼중 스크린샷")](beziers-images/quadraticcurve-large.png#lightbox "정방형 곡선 페이지의 삼중 스크린샷")
 
 점선은 탄젠트 시작점 및 끝점, 곡선 및 제어점 만나고 합니다.
 
@@ -478,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기 세 플랫폼 모두에서 실행 되 고 있습니다.
 
-[![](beziers-images/coniccurve-small.png "원추형 곡선 페이지의 삼중 스크린샷")](beziers-images/coniccurve-large.png "원추형 곡선 페이지의 삼중 스크린샷")
+[![](beziers-images/coniccurve-small.png "원추형 곡선 페이지의 삼중 스크린샷")](beziers-images/coniccurve-large.png#lightbox "원추형 곡선 페이지의 삼중 스크린샷")
 
 볼 수 있듯이 제어점 가중치가 높은 경우 더 눈 곡선 끌어오기 것 처럼 보입니다. 가중치가 0 인 곡선 끝점으로 시작 점에서 직선 됩니다.
 
@@ -542,7 +543,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 볼 수 있듯이 차이가 없습니다 시각적는 `ConicTo` 경로 빨간색으로 표시 되 고 기본 원이 참조용으로 표시 합니다.
 
-[![](beziers-images/coniccirculararc-small.png "원추형 원호 페이지의 삼중 스크린샷")](beziers-images/coniccirculararc-large.png "원추형 원호 페이지의 삼중 스크린샷")
+[![](beziers-images/coniccirculararc-small.png "원추형 원호 페이지의 삼중 스크린샷")](beziers-images/coniccirculararc-large.png#lightbox "원추형 원호 페이지의 삼중 스크린샷")
 
 하지만 각도 180도 및 수학 실패로 설정 합니다.
 

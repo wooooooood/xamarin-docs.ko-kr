@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>ListView 데이터로 채우기
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -23,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 
 기본 제공 어댑터 보기 리소스 ID를 각 행에 사용 되는 매개 변수로 사용 합니다. 에 있는 기본 제공 리소스를 사용할 수 있습니다 `Android.Resource.Layout` 필요 하지 쓰려고 직접 합니다.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>ListActivity 및 ArrayAdapter 사용 하 여&lt;문자열&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>행 처리를 클릭합니다
 
 일반적으로 `ListView` 은 일부 동작 (예:는 곡을 재생 또는 호출 하는 연락처, 또는 다른 화면을 표시)을 수행 하려면 행을 터치 사용자 수 있게 해줍니다. 에 응답 하려면 사용자 작업 하나 있어야 자세한 메서드 구현에 `ListActivity` &ndash; `OnListItemClick` &ndash; 다음과 같이 합니다.
 
-[![SimpleListItem의 스크린 샷](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![SimpleListItem의 스크린 샷](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 이제 사용자는 행을 인접할 수 및 `Toast` 경고가 표시 됩니다.
 
-[![스크린샷의 알림 메시지는 행에 접촉 될 때 표시 되는](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![스크린샷의 알림 메시지는 행에 접촉 될 때 표시 되는](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>ListAdapter 구현
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>사용자 지정 어댑터를 사용 하 여
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 이 예에서는 동일한 행 레이아웃을 사용 하므로 (`SimpleListItem1`) 결과 응용 프로그램은 앞의 예와 동일 하 게 보일 합니다.
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>행 보기 다시 사용
 
@@ -147,13 +141,12 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 일부 어댑터 구현 (같은 `CursorAdapter`) 없는 `GetView` 메서드를 두 가지 방법이 필요한 대신 `NewView` 및 `BindView` 의 업무를 분리 하 여 행이 다시 사용을 적용 하 `GetView` 두 개로 메서드를 합니다. 한 `CursorAdapter` 문서 뒷부분에 나오는 예제입니다.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>빠른 스크롤을 사용 하도록 설정
 
 빠른 스크롤을 통해 사용자는 추가 '하는 핸들' 역할을 목록의 일부에 직접 액세스할 스크롤 막대를 제공 하 여 긴 목록을 통해 스크롤할 수 있습니다. 이 스크린샷에서 빠른 스크롤 핸들을 보여 줍니다.
 
-[![스크롤 핸들 사용 하 여 빠른 스크롤의 스크린샷](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![스크롤 핸들 사용 하 여 빠른 스크롤의 스크린샷](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 로 설정 하기만 하면은 표시에 대 한 빠른 스크롤 핸들을 일으키는 `FastScrollEnabled` 속성을 `true`:
 
@@ -161,13 +154,12 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>섹션 인덱스 추가
 
 섹션 인덱스 긴 목록을 통해 빠른 스크롤 있을 때 사용자에 대 한 추가 피드백을 제공 &ndash; 에 스크롤 'section' 보여 줍니다. 섹션 색인을 어댑터 하위 클래스를 구현 해야 하는 `ISectionIndexer` 인터페이스를 표시 되는 행에 따라 인덱스 텍스트를 입력 합니다.
 
-[![H로 시작 하는 스크린 샷의 H 섹션 위에 나타납니다](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![H로 시작 하는 스크린 샷의 H 섹션 위에 나타납니다](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 구현 하려면 `ISectionIndexer` 를 어댑터에 세 가지 메서드를 추가 해야 합니다.
 

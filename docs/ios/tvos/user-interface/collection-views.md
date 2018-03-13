@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f0201e114f55e0610aceb68f98fae60a801afc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-collection-views"></a>컬렉션 뷰 작업
 
@@ -20,7 +20,7 @@ _이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 
 
 임의의 레이아웃을 사용 하 여 표시 콘텐츠의 그룹에 대 한 컬렉션 뷰를 통해. 사용자 지정 레이아웃을 지원 하면서 쉽게 만들기 표 모양의 또는 선형 레이아웃에 대 한 허용 기본 제공 지원을 사용 하 여, 합니다.
 
-[ ![](collection-views-images/collection01.png "샘플 컬렉션 보기")](collection-views-images/collection01.png)
+[![](collection-views-images/collection01.png "샘플 컬렉션 보기")](collection-views-images/collection01.png#lightbox)
 
 컬렉션 뷰에서 사용자 상호 작용 및 컬렉션의 콘텐츠를 제공 하는 데이터 소스 및 대리자를 사용 하 여 항목의 컬렉션을 유지 합니다. 컬렉션 뷰에서 뷰 자체와 독립적인 레이아웃 하위 시스템을 기반으로 하기 때문 다른 레이아웃을 제공 하 쉽게 변경할 수 컬렉션 뷰 데이터에 즉시 표시 합니다.
 
@@ -103,36 +103,36 @@ Xamarin.tvOS 응용 프로그램에서 컬렉션 뷰를 사용 하는 가장 쉬
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일 및 iOS 디자이너에서에서 엽니다.
 1. 기존 보기를 이미지 보기, 레이블 및 단추를 추가 하 고 다음과 같이 표시 하도록 구성 합니다. 
 
-    [ ![](collection-views-images/collection02.png "예제 레이아웃")](collection-views-images/collection02.png)
+    [![](collection-views-images/collection02.png "예제 레이아웃")](collection-views-images/collection02.png#lightbox)
 1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예: 
 
-    [ ![](collection-views-images/collection03.png "설정 이름")](collection-views-images/collection03.png)
+    [![](collection-views-images/collection03.png "설정 이름")](collection-views-images/collection03.png#lightbox)
 1. 스토리 보드도 컬렉션 뷰 컨트롤러를 다음으로 끌어 옵니다. 
 
-    [ ![](collection-views-images/collection04.png "컬렉션 뷰 컨트롤러")](collection-views-images/collection04.png)
+    [![](collection-views-images/collection04.png "컬렉션 뷰 컨트롤러")](collection-views-images/collection04.png#lightbox)
 1. 컨트롤-단추에서 컬렉션 뷰 컨트롤러를 끌어서 선택 **푸시** 팝업에서: 
 
-    [ ![](collection-views-images/collection05.png "팝업에서 푸시를 선택 합니다.")](collection-views-images/collection05.png)
+    [![](collection-views-images/collection05.png "팝업에서 푸시를 선택 합니다.")](collection-views-images/collection05.png#lightbox)
 1. 앱이 실행 되는 경우 사용자가 단추를 클릭할 때마다 표시 수 컬렉션 뷰 확인 합니다.
 1. 컬렉션 뷰를 선택 하 고 다음 값 입력의 **레이아웃 탭** 의 **속성 탐색기**: 
 
-    [ ![](collection-views-images/collection06.png "속성 탐색기")](collection-views-images/collection06.png)
+    [![](collection-views-images/collection06.png "속성 탐색기")](collection-views-images/collection06.png#lightbox)
 1. 개별 셀과 셀 컬렉션 보기의 외부 가장자리 사이의 테두리의 크기를 제어합니다.
 1. 컬렉션 뷰 컨트롤러를 선택 하 고 해당 클래스로 설정 `CityCollectionViewController` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection07.png "클래스 CityCollectionViewController로 설정")](collection-views-images/collection07.png)
+    [![](collection-views-images/collection07.png "클래스 CityCollectionViewController로 설정")](collection-views-images/collection07.png#lightbox)
 1. 컬렉션 뷰를 선택 하 고 해당 클래스로 설정 `CityCollectionView` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection08.png "클래스 CityCollectionView로 설정")](collection-views-images/collection08.png)
+    [![](collection-views-images/collection08.png "클래스 CityCollectionView로 설정")](collection-views-images/collection08.png#lightbox)
 1. 컬렉션 뷰 셀을 선택 하 고 해당 클래스로 설정 `CityCollectionViewCell` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection09.png "클래스 CityCollectionViewCell로 설정")](collection-views-images/collection09.png)
+    [![](collection-views-images/collection09.png "클래스 CityCollectionViewCell로 설정")](collection-views-images/collection09.png#lightbox)
 1. 에 **위젯을 탭** 되도록는 **레이아웃** 은 `Flow` 및 **스크롤 방향을** 은 `Vertical` 컬렉션 보기에 대 한: 
 
-    [ ![](collection-views-images/collection10.png "위젯 탭")](collection-views-images/collection10.png)
+    [![](collection-views-images/collection10.png "위젯 탭")](collection-views-images/collection10.png#lightbox)
 1. 컬렉션 뷰 셀을 선택 하 고 설정의 **Identity** 를 `CityCell` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection11.png "CityCell으로 Id 설정")](collection-views-images/collection11.png)
+    [![](collection-views-images/collection11.png "CityCell으로 Id 설정")](collection-views-images/collection11.png#lightbox)
 1. 변경 내용을 저장합니다.
     
 
@@ -143,34 +143,34 @@ Xamarin.tvOS 응용 프로그램에서 컬렉션 뷰를 사용 하는 가장 쉬
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일 및 iOS 디자이너에서에서 엽니다.
 1. 기존 보기를 이미지 보기, 레이블 및 단추를 추가 하 고 다음과 같이 표시 하도록 구성 합니다. 
 
-    [ ![](collection-views-images/collection02vs.png "레이아웃 구성")](collection-views-images/collection02vs.png)
+    [![](collection-views-images/collection02vs.png "레이아웃 구성")](collection-views-images/collection02vs.png#lightbox)
 1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예: 
 
-    [ ![](collection-views-images/collection03vs.png "속성 탐색기")](collection-views-images/collection03vs.png)
+    [![](collection-views-images/collection03vs.png "속성 탐색기")](collection-views-images/collection03vs.png#lightbox)
 1. 스토리 보드도 컬렉션 뷰 컨트롤러를 다음으로 끌어 옵니다. 
 
-    [ ![](collection-views-images/collection04vs.png "컬렉션 뷰 컨트롤러")](collection-views-images/collection04vs.png)
+    [![](collection-views-images/collection04vs.png "컬렉션 뷰 컨트롤러")](collection-views-images/collection04vs.png#lightbox)
 1. 컨트롤-단추에서 컬렉션 뷰 컨트롤러를 끌어서 선택 **푸시** 팝업에서: 
 
-    [ ![](collection-views-images/collection05vs.png "팝업에서 푸시를 선택 합니다.")](collection-views-images/collection05vs.png)
+    [![](collection-views-images/collection05vs.png "팝업에서 푸시를 선택 합니다.")](collection-views-images/collection05vs.png#lightbox)
 1. 앱이 실행 되는 경우 사용자가 단추를 클릭할 때마다 표시 수 컬렉션 뷰 확인 합니다.
 1. 컬렉션 뷰를 선택 및는 **레이아웃 탭** 의 **속성 탐색기** 입력는 **너비** 으로 _361_ 및  **높이** 으로 _256_ 
 1. 개별 셀과 셀 컬렉션 보기의 외부 가장자리 사이의 테두리의 크기를 제어합니다.
 1. 컬렉션 뷰 컨트롤러를 선택 하 고 해당 클래스로 설정 `CityCollectionViewController` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection07vs.png "클래스 CityCollectionViewController로 설정")](collection-views-images/collection07vs.png)
+    [![](collection-views-images/collection07vs.png "클래스 CityCollectionViewController로 설정")](collection-views-images/collection07vs.png#lightbox)
 1. 컬렉션 뷰를 선택 하 고 해당 클래스로 설정 `CityCollectionView` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection08vs.png "클래스 CityCollectionView로 설정")](collection-views-images/collection08vs.png)
+    [![](collection-views-images/collection08vs.png "클래스 CityCollectionView로 설정")](collection-views-images/collection08vs.png#lightbox)
 1. 컬렉션 뷰 셀을 선택 하 고 해당 클래스로 설정 `CityCollectionViewCell` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection09vs.png "클래스 CityCollectionViewCell로 설정")](collection-views-images/collection09vs.png)
+    [![](collection-views-images/collection09vs.png "클래스 CityCollectionViewCell로 설정")](collection-views-images/collection09vs.png#lightbox)
 1. 에 **위젯을 탭** 되도록는 **레이아웃** 은 `Flow` 및 **스크롤 방향을** 은 `Vertical` 컬렉션 보기에 대 한: 
 
-    [ ![](collection-views-images/collection10vs.png "사항 위젯을 탭")](collection-views-images/collection10vs.png)
+    [![](collection-views-images/collection10vs.png "사항 위젯을 탭")](collection-views-images/collection10vs.png#lightbox)
 1. 컬렉션 뷰 셀을 선택 하 고 설정의 **Identity** 를 `CityCell` 에 **위젯을 탭**: 
 
-    [ ![](collection-views-images/collection11vs.png "CityCell으로 Id 설정")](collection-views-images/collection11vs.png)
+    [![](collection-views-images/collection11vs.png "CityCell으로 Id 설정")](collection-views-images/collection11vs.png#lightbox)
 1. 변경 내용을 저장합니다.
     
 
@@ -806,17 +806,17 @@ public override void ViewWillAppear (bool animated)
 
 있는 모든 위치에서 빌드 및 응용 프로그램을 실행 하는 경우 기본 도시와 주 보기가 표시 됩니다.
 
-[ ![](collection-views-images/run01.png "주 화면")](collection-views-images/run01.png)
+[![](collection-views-images/run01.png "주 화면")](collection-views-images/run01.png#lightbox)
 
 사용자가 클릭 하는 경우는 **보기를 선택** 단추, 컬렉션 뷰에 표시 됩니다.
 
-[ ![](collection-views-images/run02.png "컬렉션 보기")](collection-views-images/run02.png)
+[![](collection-views-images/run02.png "컬렉션 보기")](collection-views-images/run02.png#lightbox)
 
 모든 도시 해당 `CanSelect` 속성이로 설정 `false` 나타납니다 흐리게 표시 되 고 사용자에 포커스를 설정할 수 없습니다. 사용자는 항목을 강조 하는 경우 (있도록 포커스 내) 제목이 표시 되 고 3d에서 시차 효과 미묘한 기울기 이미지를 사용할 수 있습니다.
 
 사용자가 이미지 선택를 클릭 하면 컬렉션 뷰 닫히고 새 이미지와 함께 주 보기 다시 표시 됩니다.
 
-[ ![](collection-views-images/run03.png "홈 화면에서 새 이미지")](collection-views-images/run03.png)
+[![](collection-views-images/run03.png "홈 화면에서 새 이미지")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 

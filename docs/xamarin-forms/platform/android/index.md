@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
@@ -28,14 +28,14 @@ Xamarin.Forms에는 선택적 `FormsAppCompatActivity` 사용 하 여 **AppCompa
 
 다음은 **Todo** 기본 샘플 `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "AppCompat 없이 Todo 샘플 응용 프로그램")](images/before-appcompat.png "AppCompat 없이 Todo 샘플 응용 프로그램")
+[![](images/before-appcompat-sml.png "AppCompat 없이 Todo 샘플 응용 프로그램")](images/before-appcompat.png#lightbox "AppCompat 없이 Todo 샘플 응용 프로그램")
 
 이 동일한 코드를 사용 하도록 프로젝트를 업그레이드 한 후 및 `FormsAppCompatActivity` (및 추가 테마 정보를 추가):
 
-[ ![](images/post-appcompat-sml.png "Todo 샘플 응용 프로그램을 AppCompat 및 테마")](images/post-appcompat.png "AppCompat 및 테마 설정 Todo 샘플 응용 프로그램")
+[![](images/post-appcompat-sml.png "Todo 샘플 응용 프로그램을 AppCompat 및 테마")](images/post-appcompat.png#lightbox "AppCompat 및 테마 설정 Todo 샘플 응용 프로그램")
 
 > [!NOTE]
-> **참고**: 사용 하는 경우 `FormsAppCompatActivity`, [일부 Android 사용자 지정 렌더러의 기본 클래스](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) 달라 집니다.
+> 사용 하는 경우 `FormsAppCompatActivity`, [일부 Android 사용자 지정 렌더러의 기본 클래스](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) 달라 집니다.
 
 
 ## <a name="related-links"></a>관련 링크

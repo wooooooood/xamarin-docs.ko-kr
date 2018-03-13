@@ -4,18 +4,17 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d20b2aa7df17f2000e2de9cb67f091c52989719b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 39ee7f826d4c775ead679a09ce56a7c0f92b60ed
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissions In Xamarin.Android
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -42,7 +41,7 @@ Android 앱은 보호 된 리소스를 액세스할 수 있는 권한이 있는�
 
 확인 하 고 사용 권한을 요청의 전체 워크플로가 라고는 _런타임 권한_ 확인 하 고 다음 다이어그램에 요약할 수 있습니다. 
 
-[ ![런타임에 사용 권한 검사 순서도](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![런타임에 사용 권한 검사 순서도](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 Android 지원 라이브러리 backports 일부 이전 버전의 Android에 대 한 사용 권한에 대 한 새 Api. 이러한 backported Api API 수준 검사 될 때마다 수행 되지 않도록 장치에서 android 버전을 자동으로 확인 됩니다.  
 
@@ -50,7 +49,7 @@ Android 지원 라이브러리 backports 일부 이전 버전의 Android에 대 
 
 
 > [!NOTE]
-> **참고:** 수 하드웨어에 대 한 사용 권한 앱으로 Google Play 필터링 되는 방식 저하 될 수 있습니다. 예를 들어 카메라에 대 한 사용 권한을 요구 하는 응용 프로그램, 하는 경우 다음 Google Play 표시 되지 않습니다 앱 카메라를 설치 하지 않은 장치에서 Google Play 스토어에서.
+> 있기 하드웨어에 대 한 사용 권한 앱으로 Google Play 필터링 되는 방식 저하 될 수 있습니다. 예를 들어 카메라에 대 한 사용 권한을 요구 하는 응용 프로그램, 하는 경우 다음 Google Play 표시 되지 않습니다 앱 카메라를 설치 하지 않은 장치에서 Google Play 스토어에서.
 
 
 <a name="requirements" />
@@ -59,7 +58,6 @@ Android 지원 라이브러리 backports 일부 이전 버전의 Android에 대 
 
 Xamarin.Android 프로젝트에 포함 되어이 가장 좋습니다는 [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet 패키지 합니다. 이전 버전의 Android, 하나의 공통 제공 위한 특정 Api 인터페이스를 필요 없이 지속적으로이 패키지는 backport 권한을 응용 프로그램에서 실행 되는 Android 버전을 확인 합니다.
 
-<a name="requesting_permissions" />
 
 ## <a name="requesting-system-permissions"></a>시스템 사용 권한 요청
 
@@ -68,9 +66,8 @@ Android 사용 권한을 사용 하는 첫 번째 단계는 Android에서 사용
 앱 대상으로 Android 6.0 이상 없습니다 없다고 해 서 사용자 권한을 유효 하도록 다음에 이전에 특정 시점에 권한이 부여입니다. Android 6.0을 대상으로 하는 응용 프로그램 런타임 사용 권한 검사가 항상 수행 해야 합니다. Android 5.1을 대상으로 하는 응용 프로그램 실행 시 사용 권한 검사를 수행 하도록 필요가 없습니다.
 
 > [!NOTE]
-> **참고:** 응용 프로그램에 필요한 권한을 요청만 해야 합니다.
+> 응용 프로그램에 필요한 권한을 요청만 해야 합니다.
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### <a name="declaring-permissions-in-the-manifest"></a>권한을 매니페스트에서 선언
 
@@ -87,15 +84,15 @@ Visual Studio에 기본 제공 도구 지원을 사용 하 여 사용 권한을 
 
 1. 두 번 클릭 **속성** 에 **솔루션 탐색기** 선택 하 고는 **Android 매니페스트** 속성 창에서 탭:
 
-    [![Android 매니페스트 탭에서 필요한 권한](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![Android 매니페스트 탭에서 필요한 권한](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. 응용 프로그램에 아직 없는 경우는 AndroidManifest.xml, 클릭 **아니요 AndroidManifest.xml 찾을 수 있습니다. 하나를 추가 하려면 클릭** 아래와 같이:
 
-    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. 응용 프로그램에서 필요한 모든 사용 권한을 선택은 **필요한 권한** 나열 하 고 저장 합니다.
 
-    [![예제 카메라 권한 선택](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![예제 카메라 권한 선택](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -103,15 +100,15 @@ Mac 용 Visual Studio에 기본 제공 도구 지원을 사용 하 여 사용 �
 
 1. 프로젝트를 두 번 클릭은 **솔루션 패드** 선택 **옵션 > 빌드 > Android 응용 프로그램**:
 
-    [![표시 된 필요한 사용 권한 섹션](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![표시 된 필요한 사용 권한 섹션](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. 클릭는 **Android 매니페스트 추가** 프로젝트에 아직 없는 경우 단추는 **AndroidManifest.xml**:
 
-    [![프로젝트의 Android 매니페스트가](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![프로젝트의 Android 매니페스트가](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. 응용 프로그램에서 필요한 모든 사용 권한을 선택은 **필요한 권한** 나열 하 고 클릭 **확인**:
 
-    [![예제 카메라 권한 선택](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![예제 카메라 권한 선택](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -119,7 +116,6 @@ Xamarin.Android는 자동으로 추가 일부 사용 권한이 빌드 시 디버
 
 Android 5.1 (API 수준 22) 또는 lower를 대상으로 하는 응용 프로그램의 경우 작업을 수행 해야 하는 자세한 일은 없습니다. 이상 Android 6.0 (API 23 수준 23)에서 실행 되는 앱 런타임에 권한 확인이 수행 하는 방법에는 다음 섹션 진행 해야 합니다. 
 
-<a name="run_time_permission_checks" />
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Android 6.0에서 런타임 권한 확인
 
@@ -213,7 +209,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

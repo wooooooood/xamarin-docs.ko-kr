@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 707ba5874c939fbd25f4e25a7cefd3dc5fc75131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>원격 iOS 시뮬레이터 (Windows)에
 
 _Windows에서 Visual Studio 내에 완전히 iOS 앱을 테스트 및 디버그_
 
-[ ![](ios-simulator-images/hero-sml.png "iOS 시뮬레이터 Windows에서 실행")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "iOS 시뮬레이터 Windows에서 실행")](ios-simulator-images/hero.png#lightbox)
 
 ## <a name="download-and-install"></a>다운로드 및 설치
 
@@ -36,7 +36,7 @@ _Windows에서 Visual Studio 내에 완전히 iOS 앱을 테스트 및 디버그
 
 원격 iOS 시뮬레이터를 사용 하지 않도록 설정할 수 있습니다 **도구 > 옵션 > Xamarin > iOS 설정** 에 대 한 확인란의 선택을 취소 하 여 **Windows 원격 시뮬레이터** 여기에 표시 합니다.
 
-[ ![](ios-simulator-images/options-sml.png "시뮬레이터를 사용 하려면이 확인란")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "시뮬레이터를 사용 하려면이 확인란")](ios-simulator-images/options.png#lightbox)
 
 IOS 시뮬레이터는 연결 된 Mac 컴퓨터에 다음 열립니다. 원격 iOS 시뮬레이터를 다시 설정 하려면이 옵션을 선택 합니다.
 
@@ -54,14 +54,14 @@ IOS 시뮬레이터는 연결 된 Mac 컴퓨터에 다음 열립니다. 원격 i
 - [**설정** ](#settings) -키보드 및 위치를 구성 합니다.
  - 다른 [ **옵션** ](#options) – 다양 한 시뮬레이터 옵션 회전, 흔들기 같은 사용할 수 있거나 다른 상태에서 시뮬레이터를 호출 합니다. 일부 옵션은 가려진 때 창에서 마우스 오른쪽 단추로 클릭 하거나 도구 모음에 표시 되는 줄임표 아이콘에서 액세스할 수 있습니다.
 
-    [ ![](ios-simulator-images/maps-app-sml.png "iOS 시뮬레이터가 매핑합니다 예제를")](ios-simulator-images/maps-app.png)
+    [![](ios-simulator-images/maps-app-sml.png "iOS 시뮬레이터가 매핑합니다 예제를")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### <a name="settings"></a>설정
 
 "기어" 아이콘을 열립니다는 **설정을** 창:
 
-[ ![](ios-simulator-images/settings-sml.png "iOS 시뮬레이터 설정")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "iOS 시뮬레이터 설정")](ios-simulator-images/settings.png#lightbox)
 
 그러면 시뮬레이터에서 하드웨어 키보드를 사용 하도록 설정 하 고 (정적 위치 또는 기타 이동 위치 옵션 포함) 장치에 어떤 위치 보고는 선택 수 있습니다.
 
@@ -71,7 +71,7 @@ IOS 시뮬레이터는 연결 된 Mac 컴퓨터에 다음 열립니다. 원격 i
 
 회전, 흔들기 제스처를 트리거하는 시뮬레이터를 다시 부팅 처럼 시뮬레이터에서 사용할 수 있는 모든 옵션을 보려면 시뮬레이터 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 합니다.
 
-[ ![](ios-simulator-images/more-sml.png "iOS 시뮬레이터 추가 설정")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "iOS 시뮬레이터 추가 설정")](ios-simulator-images/more.png#lightbox)
 
 ### <a name="touchscreen-support"></a>터치 스크린이 지원
 

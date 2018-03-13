@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Android 지역화
 
@@ -81,7 +81,7 @@ Android 응용 프로그램 리소스 폴더에 있는 대부분의 콘텐츠를
 ![여러 문화권 식별자에 대 한 리소스/그릴 및 리소스/값 폴더의 스크린샷](localization-images/resources.png)
 
 > [!NOTE]
-> **하지만 참고:** 같은 최상위 언어를 지정 하는 경우 `es` 만 두 문자는 필수 사항이 고, 디렉터리 이름 형식이 필요 대시 및 소문자 전체 로캘을 지정할 때는 **r** 두 가지를 구분 하려면 예를 들어 부품 **pt rBR** 또는 **글꼴 rCN**합니다. 않음 (예: 밑줄 있는 코드에서 반환 된 값이 비교 `pt_BR`). .NET 값으로 서로 다른 두 가지 `CultureInfo` 대시만 않음 (예:가 사용 하 여, 클래스 `pt-BR`). Xamarin 플랫폼에서 작업 하는 경우에 이러한 차이점에 주의 유지 합니다.
+> 같은 최상위 언어를 지정 하는 경우 `es` 필수 사항이 고, 두 개의 문자를 하나만 디렉터리 이름 형식이 필요 대시 및 소문자 전체 로캘을 지정할 때는 있지만 **r** 예를 들어 두부분을구분하려면**pt rBR** 또는 **글꼴 rCN**합니다. 않음 (예: 밑줄 있는 코드에서 반환 된 값이 비교 `pt_BR`). .NET 값으로 서로 다른 두 가지 `CultureInfo` 대시만 않음 (예:가 사용 하 여, 클래스 `pt-BR`). Xamarin 플랫폼에서 작업 하는 경우에 이러한 차이점에 주의 유지 합니다.
 
 #### <a name="stringsxml-file-format"></a>Strings.xml 파일 형식
 
@@ -164,13 +164,13 @@ Android 문자열 리소스도 만들 수 있습니다 *수량 문자열* 와 �
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Android 4.2 (API 수준 17)를 사용 하는 경우 최신, 맞춤 값으로 지
 
 다음 스크린 샷에 표시 된 [지역화 된 **Tasky** 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 아랍어에서:
 
-[![아랍어에서 Tasky 앱의 스크린 샷](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![아랍어에서 Tasky 앱의 스크린 샷](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 다음 스크린 샷에 표시 된 [지역화 된 **Tasky** 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 히브리어에:
 
-[![히브루어에서 Tasky 앱의 스크린 샷](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![히브루어에서 Tasky 앱의 스크린 샷](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 사용 하 여 오른쪽에서 왼쪽 텍스트는 지역화 **Strings.xml** 동일한 방식으로 텍스트를 왼쪽에서 오른쪽에 있는 파일입니다.
-
-<a name="testing" />
 
 ## <a name="testing"></a>테스트
 

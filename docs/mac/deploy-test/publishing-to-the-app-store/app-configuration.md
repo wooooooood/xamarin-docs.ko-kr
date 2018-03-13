@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 8f9294c10f8d3287a2985ede9aadf84ce663c38a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-app-configuration"></a>Mac 앱 구성
 
@@ -32,7 +32,7 @@ Xamarin.Mac 앱의 응용 프로그램 설정을 변경하려면 **Solution Pad*
 
 그러면 앱에 사용 가능한 옵션이 표시됩니다.
 
- [![Info.plist 파일 편집](app-configuration-images/config01.png "Info.plist 파일 편집")](app-configuration-images/config01-large.png)
+ [![Info.plist 파일 편집](app-configuration-images/config01.png "Info.plist 파일 편집")](app-configuration-images/config01-large.png#lightbox)
 
 Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 같은 시스템 요구 사항이 필요합니다.
 
@@ -43,7 +43,7 @@ Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 �
 
 **프로젝트 옵션** 대화 상자의 **Mac 서명** 섹션에서 개발자는 Apple 앱 스토어를 통해 테스트, 셀프 릴리스 또는 릴리스에 사용할 Xamarin.Mac 앱을 서명할 수 있습니다.
 
-[![Mac 서명 편집기](app-configuration-images/config02.png "Mac 서명 창")](app-configuration-images/config02-large.png)
+[![Mac 서명 편집기](app-configuration-images/config02.png "Mac 서명 창")](app-configuration-images/config02-large.png#lightbox)
 
 여기서 앱이 컴파일될 때 앱을 서명하는 데 사용되는 ID, 프로비전 프로필 및 사용자 지정 자격을 선택합니다. 개발자는 필요에 따라 다른 Mac에 앱을 설치하는 데 사용되는 설치 관리자를 서명할 수 있습니다.
 
@@ -52,7 +52,7 @@ Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 �
 
 **프로젝트 옵션** 대화 상자의 **Mac 빌드** 섹션에서 개발자는 Xamarin.Mac 앱의 아키텍처를 선택하고, 앱에서 지원할 macOS 버전을 제어하고, 필요에 따라 앱이 컴파일되면 설치 패키지를 만들 수 있습니다.
 
- [![빌드 설정 편집](app-configuration-images/config03.png "빌드 설정 편집")](app-configuration-images/config03-large.png)
+ [![빌드 설정 편집](app-configuration-images/config03.png "빌드 설정 편집")](app-configuration-images/config03-large.png#lightbox)
 
 
 ## <a name="related-links"></a>관련 링크

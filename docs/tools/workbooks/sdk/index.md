@@ -6,11 +6,11 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 57dec129a5f16b004e054a7a3fedd296bad92a3e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3978b046a8ab4d42cbf86bf524452a033b5dbb4d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Xamarin 통합 문서 SDK 시작
 
@@ -28,15 +28,15 @@ Xamarin 통합 문서 통합은 사용 하는 작은 라이브러리는 [ `Xamar
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![이식 가능한 라이브러리 Mac 용 Visual Studio 템플릿](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png)
+[![이식 가능한 라이브러리 Mac 용 Visual Studio 템플릿](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![이식 가능한 라이브러리 템플릿 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png)
+[![이식 가능한 라이브러리 템플릿 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
 Visual Studio에서 이식 가능한 라이브러리에 대 한 다음 대상 플랫폼을 선택 했는지 확인 하려면:
 
-[![이식 가능한 라이브러리 플랫폼 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png)
+[![이식 가능한 라이브러리 플랫폼 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
@@ -44,11 +44,11 @@ Visual Studio에서 이식 가능한 라이브러리에 대 한 다음 대상 �
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Mac 용 NuGet Visual Studio](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png)
+[![Mac 용 NuGet Visual Studio](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png)
+[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
 -----
 
@@ -146,11 +146,11 @@ nuget pack MyIntegration.nuspec
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![통합 문서와 통합](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png)
+[![통합 문서와 통합](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![통합 문서와 통합](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png)
+[![통합 문서와 통합](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 

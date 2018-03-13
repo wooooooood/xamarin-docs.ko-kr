@@ -6,12 +6,12 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b1ddcca25fd83a806e8383a5717462b518b46d0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 89679f7d825422ab34dd77b31a7a3fde60f36e99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="recyclerview-parts-and-functionality"></a>RecyclerView 파트 및 기능
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/27/2018
 
 `RecyclerView` 데이터 원본에 있는 모든 항목에 대 한 항목 보기를 할당 하지 않습니다. 대신, 화면에 맞게 항목 보기 수만 할당 하 고 사용자 스크롤으로 해당 항목 레이아웃을 다시 사용 합니다. 보이지 먼저 스크롤 하는 뷰, 다음 그림에에서 나와 있는 재활용 프로세스를 진행 합니다.
 
-[ ![보기 재활용의 6 단계를 보여 주는 다이어그램](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![보기 재활용의 6 단계를 보여 주는 다이어그램](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  뷰 보이지 스크롤한 더 이상 표시, 됩니다는 *보기 중단*합니다.
 
@@ -75,7 +75,6 @@ ms.lasthandoff: 02/27/2018
 항목 보기 재사용 외에도 `RecyclerView` 또한 다른 효율성 최적화를 사용 하 여: 소유자를 확인 합니다. A *뷰 소유자* 캐시 참조를 볼 간단한 클래스입니다. 어댑터 항목 레이아웃 파일을 만들고 될 때마다 해당 뷰 소유자를 만듭니다. 보기 보유자 `FindViewById` 높여서 항목 레이아웃 파일 내 보기에 대 한 참조를 가져올 수 있습니다. 이러한 참조는 레이아웃은 새 데이터를 표시 하려면 재활용 될 때마다 새 데이터 보기를 로드 하는 데 사용 됩니다.
  
 
-<a name="layoutmanager" />
 
 ### <a name="the-layout-manager"></a>레이아웃 관리자
 
@@ -96,7 +95,6 @@ ms.lasthandoff: 02/27/2018
 
 레이아웃 관리자에 대 한 자세한 내용은 참조는 [RecyclerView.LayoutManager 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html)합니다.
 
-<a name="viewholder" />
 
 ### <a name="the-view-holder"></a>뷰 소유자
 
@@ -109,7 +107,6 @@ ms.lasthandoff: 02/27/2018
 자세한 예는 `ViewHolder` 구현에 표시 된 [기본 RecyclerView 예제에서는](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)합니다.
 에 대 한 자세한 내용은 `RecyclerView.ViewHolder`, 참조는 [RecyclerView.ViewHolder 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)합니다.
 
-<a name="adapter" />
 
 ### <a name="the-adapter"></a>어댑터
 
@@ -118,7 +115,7 @@ ms.lasthandoff: 02/27/2018
 
 다음 그림과 어댑터 매핑되는 방법을 통해 뷰 소유자에 게 데이터 원본에서 콘텐츠의 각 행 항목 내에서 개별 보기는 `RecyclerView`:
 
-[ ![어댑터 ViewHolders에 데이터 원본 연결을 보여 주는 다이어그램](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![어댑터 ViewHolders에 데이터 원본 연결을 보여 주는 다이어그램](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 각 어댑터 로드 `RecyclerView` 행 특정 행 항목에 대 한 데이터를 사용 합니다. 행 위치에 대 한 *P*, 어댑터 위치에 있는 관련된 데이터를 찾는 예를 들어 *P* 데이터 원본 및 복사본 내에서이 데이터 행에 위치에 항목 *P* 에 `RecyclerView` 컬렉션입니다.
 위 그림의 예를 들어, 어댑터를 사용 하 여 뷰 소유자에 대 한 참조를 조회할는 `ImageView` 및 `TextView` 반복 해 서 호출 포함 되지 않도록 해당 위치의 `FindViewById` 사용자로 이러한 뷰에 대 한 스크롤 하는 컬렉션 및 뷰를 다시 사용합니다.
@@ -134,7 +131,6 @@ ms.lasthandoff: 02/27/2018
 레이아웃 관리자 내에서 항목을 배치 되는 동안 이러한 메서드 호출에서 `RecyclerView`합니다. 
 
 
-<a name="datachanges" />
 
 ### <a name="notifying-recyclerview-of-data-changes"></a>데이터 변경 내용을 알릴 RecyclerView
 

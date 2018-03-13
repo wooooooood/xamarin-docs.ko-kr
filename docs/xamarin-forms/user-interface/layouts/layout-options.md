@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 978985c4e9803fad33760e4b40ab73d57f3ec420
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2aa143d5aeb801cd753dd99718ca9cf6dd72353
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layoutoptions"></a>LayoutOptions
 
@@ -91,7 +91,7 @@ Content = new StackLayout
 
 다음 스크린샷에 표시 된 레이아웃은 코드 발생 합니다.
 
-[![](layout-options-images/alignment.png "맞춤 레이아웃 옵션")](layout-options-images/alignment-large.png "맞춤 레이아웃 옵션")
+[![](layout-options-images/alignment.png "맞춤 레이아웃 옵션")](layout-options-images/alignment-large.png#lightbox "맞춤 레이아웃 옵션")
 
 <a name="expansion" />
 
@@ -146,7 +146,7 @@ Content = new StackLayout
 
 다음 스크린샷에 표시 된 레이아웃은 코드 발생 합니다.
 
-[![](layout-options-images/expansion.png "확장 레이아웃 옵션")](layout-options-images/expansion-large.png "확장 레이아웃 옵션")
+[![](layout-options-images/expansion.png "확장 레이아웃 옵션")](layout-options-images/expansion-large.png#lightbox "확장 레이아웃 옵션")
 
 각 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 동일한 양의 내에서 공간을 차지 하는 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)합니다. 그러나 최종만 `Label`, 입력 집합의 [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 속성을 [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) 크기가 다른 합니다. 또한 각 `Label` 작은 빨간색으로 구분 됩니다 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/),이 통해 공간은 `Label` 차지를 쉽게 볼 수 있습니다.
 

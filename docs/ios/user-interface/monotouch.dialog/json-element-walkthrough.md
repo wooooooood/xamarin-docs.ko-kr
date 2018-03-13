@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>연습: JSON 요소를 사용 하 여 사용자 인터페이스 만들기
 
@@ -22,7 +22,7 @@ _MonoTouch.Dialog (산 D) JSON 데이터를 통해 동적 UI 생성에 대 한 �
 
 산 D 모든 범위의 JSON을 사용 하는 경우 요소 API에서 사용할 수 있는 기능을 지원 합니다. 예를 들어 다음 스크린 샷에 응용 프로그램은 JSON을 사용 하 여을 선언 완전히 됩니다.
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "예를 들어 왼쪽 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ] (json-element-walkthrough-images/02-load-from-file-details.png "예를 들어 왼쪽 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "예를 들어 왼쪽 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "예를 들어 왼쪽 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 예를 다시 확인 하겠습니다는 [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) JSON을 사용 하 여 작업 세부 정보 화면을 추가 하는 방법을 보여 주는 자습서입니다.
 
@@ -30,7 +30,7 @@ _MonoTouch.Dialog (산 D) JSON 데이터를 통해 동적 UI 생성에 대 한 �
 
 이 연습에 대 한 예제를 통해 작업을 만들어야 합니다. 첫 번째 화면에서 작업을 선택 하면 세부 정보 화면에 표시 된 것 처럼 표시 됩니다.
 
- [ ![](json-element-walkthrough-images/03-task-list.png "세부 정보 화면 표시 된 것 처럼 표시 됩니다는 작업을 첫 번째 화면에서 선택")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "세부 정보 화면 표시 된 것 처럼 표시 됩니다는 작업을 첫 번째 화면에서 선택")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>JSON 만들기
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 런타임 시 파일이 검색 하 고 산에서 구문 분석 아래 스크린샷에 표시 된 것 처럼 사용자가 두 번째 보기를 탐색할 때 D:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "파일 검색 하 고 산에서 구문 분석 사용자가 두 번째 보기를 탐색할 때 D")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "파일 검색 하 고 산에서 구문 분석 사용자가 두 번째 보기를 탐색할 때 D")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

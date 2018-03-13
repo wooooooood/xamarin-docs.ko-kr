@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>수동으로 APK 서명
 
-<a name="signing_legacy" />
 
 응용 프로그램이 릴리스용으로 빌드된 후 배포 전에 APK에 서명해야 Android 장치에서 실행할 수 있습니다. 이 프로세스는 일반적으로 IDE로 처리되지만 명령줄에서 수동으로 APK에 서명하기 위해 필요한 경우가 있습니다. APK 서명과 관련된 단계는 다음과 같습니다.
 
@@ -29,16 +28,14 @@ ms.lasthandoff: 02/27/2018
 단계의 순서는 중요하며 APK에 서명하는 데 사용되는 도구에 따라 달라집니다. **apksigner**를 사용할 경우 먼저 응용 프로그램 **zipalign**을 수행한 후 **apksigner**로 서명하는 것이 중요합니다.  **jarsigner**를 사용하여 APK에 서명해야 하며, 먼저 APK에 서명한 후 **zipalign**을 실행하는 것이 중요합니다. 
 
 
-<a name="Prerequisites" />
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 가이드에서는 Android SDK 빌드 도구 v24.0.3 이상 버전의 **apksigner**를 사용하는 방법을 중점적으로 설명합니다. APK가 이미 빌드되었다고 가정합니다.
 
 이전 버전의 Android SDK 빌드 도구를 사용하여 빌드된 응용 프로그램은 아래의 [jarsigner로 APK 서명](#Sign_the_APK_with_jarsigner)에 설명된 대로 **jarsigner**를 사용해야 합니다.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>개인 키 저장소 만들기
 
@@ -53,7 +50,6 @@ ms.lasthandoff: 02/27/2018
 키 저장소 분실로 인해 발생하는 문제를 해결하는 유일한 방법은 새 키 저장소를 만들고, 새 키로 APK에 다시 서명한 후, 새 응용 프로그램을 제출하는 것입니다. 그런 다음, 기존 응용 프로그램을 Google Play에서 제거해야 합니다. 마찬가지로, 이 새 키 저장소가 손상되거나 공개적으로 배포될 경우 응용 프로그램의 비공식 또는 악성 버전이 배포될 가능성이 있습니다.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>새 키 저장소 만들기
 
@@ -99,7 +95,6 @@ Re-enter new password:
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>APK Zipalign
 
@@ -111,7 +106,6 @@ $ keytool -list -keystore xample.keystore
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>APK 서명
 

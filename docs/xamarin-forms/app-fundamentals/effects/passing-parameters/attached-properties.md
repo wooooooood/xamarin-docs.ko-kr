@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: df1287d2389d7645ee3f17b166af790f79aa70e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결 된 속성으로 효과 매개 변수 전달
 
@@ -29,7 +29,7 @@ _연결 된 속성은 런타임 속성 변경 내용에 응답 하는 효과 매
 매개 변수가 해당 컨트롤에 연결 된 속성 및 속성 값을 추가 하 여 효과에 전달할 수 있습니다. 또한 매개 변수는 새 연결 된 속성 값을 지정 하 여 런타임 시 변경할 수 있습니다.
 
 > [!NOTE]
-> **참고**: 연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 다른 개체에 연결 되 고 XAML에서 인식할 수 있지만 하나의 클래스에서 속성 이름과 마침표로 구분 되는 클래스를 포함 하는 특성으로 정의 합니다. 자세한 내용은 참조 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)합니다.
+> 연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 다른 개체에 연결 되 고 XAML에서 인식할 수 있지만 하나의 클래스에서 속성 이름과 마침표로 구분 되는 클래스를 포함 하는 특성으로 정의 합니다. 자세한 내용은 참조 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)합니다.
 
 샘플 응용 프로그램을 보여 줍니다.는 `ShadowEffect` 하 여 표시 되는 텍스트에 그림자를 추가 하는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 제어 합니다. 또한 런타임 시 그림자의 색을 변경할 수 있습니다. 다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램의 각 프로젝트의 책임을 보여줍니다.
 

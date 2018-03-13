@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: cddf3c58020b534abdc1541d967a9a7f5a4d891a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="images"></a>이미지
 
@@ -79,7 +79,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 다음 스크린샷에서 각 플랫폼에서 로컬 이미지를 표시 하는 결과 보여 줍니다.
 
-[ ![로컬 ImageSource](images-images/local-sml.png "샘플 로컬 이미지를 표시 하는 응용 프로그램")](images-images/local.png "샘플 로컬 이미지를 표시 하는 응용 프로그램")
+[![로컬 ImageSource](images-images/local-sml.png "샘플 로컬 이미지를 표시 하는 응용 프로그램")](images-images/local.png#lightbox "샘플 로컬 이미지를 표시 하는 응용 프로그램")
 
 유연성을 높이 `Device.RuntimePlatform` 이 코드 예제와 같이 다른 이미지 파일 또는 일부 또는 모든 플랫폼에 대 한 경로 선택 하 속성을 사용할 수 있습니다.
 
@@ -102,7 +102,7 @@ IOS 9 이전 이미지의 레 티 나 버전에 놓일 수 있습니다는 **리
 
 Android 대체 고해상도 이미지를 배치할 [특별 하 게 명명 된 디렉터리](http://developer.android.com/guide/practices/screens_support.html) 다음 스크린샷에 표시 된 대로 Android 프로젝트:
 
-[![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png "Android 다중 해상도 이미지 위치")](images-images/xs-highdpisolution.png "Android 다중 해상도 이미지 위치")
+[![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png "Android 다중 해상도 이미지 위치")](images-images/xs-highdpisolution.png#lightbox "Android 다중 해상도 이미지 위치")
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 
@@ -159,7 +159,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 
 다음 스크린샷에서 각 플랫폼에서 포함된 된 이미지를 표시 하는 결과 보여 줍니다.
 
-[ ![ResourceImageSource](images-images/resource-sml.png "샘플 포함 된 이미지를 표시 하는 응용 프로그램")](images-images/resource.png "샘플 포함 된 이미지를 표시 하는 응용 프로그램")
+[![ResourceImageSource](images-images/resource-sml.png "샘플 포함 된 이미지를 표시 하는 응용 프로그램")](images-images/resource.png#lightbox "샘플 포함 된 이미지를 표시 하는 응용 프로그램")
 
 <a name="Embedded_Images_in_Xaml" />
 
@@ -261,7 +261,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 다음 스크린샷에서 각 플랫폼에서 원격 이미지를 표시 하는 결과 보여 줍니다.
 
-[![ImageSource 다운로드](images-images/download-sml.png "샘플 다운로드 한 이미지를 표시 하는 응용 프로그램")](images-images/download.png "샘플 응용 프로그램을 다운로드 한 이미지를 표시 합니다.")
+[![ImageSource 다운로드](images-images/download-sml.png "샘플 다운로드 한 이미지를 표시 하는 응용 프로그램")](images-images/download.png#lightbox "샘플 응용 프로그램을 다운로드 한 이미지를 표시 합니다.")
 
 <a name="Image_Caching" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 79ce4a1393b2affade3422f73e1c3d4680d199df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e65207e987dbdab8bf2fe5f48f0b0a500dd27bc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/28/2018
 
 DataPages 미리 보기를 사용 하 여 간단한 데이터 드라이브 페이지 구성 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 미리 보기에서 하드 코드 된 스타일 ("이벤트") 빌드에 코드에서 특정 JSON 형식 에서만 작동 합니다.
 
-[ ![](get-started-images/demo-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/demo.png "DataPages 샘플 응용 프로그램")
+[![](get-started-images/demo-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 
 ## <a name="1-add-nuget-packages"></a>1. NuGet 패키지 추가
 
@@ -134,7 +134,7 @@ JSON 데이터의 예로 [데모 원본](http://demo3143189.mockable.io/sessions
 
 위의 단계 작업 데이터 페이지에서 발생 해야 합니다.
 
-[ ![](get-started-images/demo-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/demo.png "DataPages 샘플 응용 프로그램")
+[![](get-started-images/demo-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 
 에서는이 방법이 미리 작성 된 스타일 **"이벤트"** 밝은 테마 Nuget 패키지에 존재 하며 데이터 원본 (예: 일치 하는 정의 된 스타일. "제목", "image", "발표자").
 
@@ -163,7 +163,7 @@ JSON 데이터의 예로 [데모 원본](http://demo3143189.mockable.io/sessions
 
 제공 하 여는 `DataTemplate` 재정의이 코드는 `StyleClass` 대신에 기본 레이아웃을 사용 하 여는 `ListItemControl`합니다.
 
-[ ![](get-started-images/custom-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/custom.png "DataPages 샘플 응용 프로그램")
+[![](get-started-images/custom-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/custom.png#lightbox "DataPages 샘플 응용 프로그램")
 
 C# XAML로 데이터를 만들 수는 것을 선호 하는 개발자가 원본 바인딩을 너무 (포함 해야는 `using Xamarin.Forms.Pages;` 문):
 

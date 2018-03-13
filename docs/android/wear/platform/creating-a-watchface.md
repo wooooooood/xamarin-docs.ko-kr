@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 004f7c815a1629310ba4c0f4c6f4219581a12366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-watch-face"></a>Watch 화면 만들기
 
@@ -22,11 +22,11 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 이 연습에서는 기본 조사식 얼굴 서비스는 사용자 지정 Android 착용 watch 화면 만들기의 필수 항목을 설명 하기 위해 생성 됩니다. 초기 조사식 얼굴 서비스에는 시간 및 분 단위로 현재 시간을 표시 하는 간단한 디지털 조사식 표시 됩니다. 
 
-[![디지털 watch 화면](creating-a-watchface-images/01-initial-face.png "초기 디지털 시계 화면의의 예제 스크린 샷")](creating-a-watchface-images/01-initial-face.png)
+[![디지털 watch 화면](creating-a-watchface-images/01-initial-face.png "초기 디지털 시계 화면의의 예제 스크린 샷")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 이 디지털 watch 화면을 개발 하 고 테스트 한 후 더 많은 코드를 더 많이로 업그레이드 하는 정교한 아날로그 watch 화면 3 개의 자동으로 추가 됩니다. 
 
-[ ![아날로그 watch 화면](creating-a-watchface-images/02-example-watchface.png "최종 아날로그 시계 화면의의 예제 스크린 샷")](creating-a-watchface-images/02-example-watchface.png)
+[![아날로그 watch 화면](creating-a-watchface-images/02-example-watchface.png "최종 아날로그 시계 화면의의 예제 스크린 샷")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 조사식 얼굴 서비스 번들로 제공 되며 마모 응용 프로그램의 일부로 설치 됩니다. 다음 예에서 `MainActivity` 며 포함 마모 응용 프로그램 템플릿에서 코드 조사식 얼굴 서비스를 패키지 하 고 응용 프로그램의 일부로 스마트 조사식에 배포할 수 있도록 합니다. 실제로이 앱은 디버깅 및 테스트에 대 한 조사식 얼굴 서비스 마모 장치 (또는 에뮬레이터)에 로드를 가져오기 위한 수단으로 순수 하 게 역할 합니다. 
 
@@ -47,11 +47,11 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![새 프로젝트 대화 상자](creating-a-watchface-images/03-wear-project-vs-sml.png "새 프로젝트 대화 상자에서 쓰는 유형 응용 프로그램 선택")](creating-a-watchface-images/03-wear-project-vs.png)
+[![새 프로젝트 대화 상자](creating-a-watchface-images/03-wear-project-vs-sml.png "새 프로젝트 대화 상자에서 쓰는 유형 응용 프로그램 선택")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![새 프로젝트 대화 상자](creating-a-watchface-images/03-wear-project-xs-sml.png "새 프로젝트 대화 상자에서 쓰는 유형 응용 프로그램 선택")](creating-a-watchface-images/03-wear-project-xs.png)
+[![새 프로젝트 대화 상자](creating-a-watchface-images/03-wear-project-xs-sml.png "새 프로젝트 대화 상자에서 쓰는 유형 응용 프로그램 선택")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![패키지의 이름 설정을](creating-a-watchface-images/04-package-name-vs.png "com.xamarin.watchface에 패키지 이름을 설정")](creating-a-watchface-images/04-package-name-vs.png)
+[![패키지의 이름 설정을](creating-a-watchface-images/04-package-name-vs.png "com.xamarin.watchface에 패키지 이름을 설정")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![패키지의 이름 설정을](creating-a-watchface-images/04-package-name-xs.png "com.xamarin.watchface에 패키지 이름을 설정")](creating-a-watchface-images/04-package-name-xs.png)
+[![패키지의 이름 설정을](creating-a-watchface-images/04-package-name-xs.png "com.xamarin.watchface에 패키지 이름을 설정")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -72,13 +72,13 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 또한, 아래로 스크롤하여 사용 하도록 설정 된 **인터넷** 및 **WAKE_LOCK** 사용 권한: 
 
-[ ![필요한 권한](creating-a-watchface-images/05-required-permissions-vs.png "인터넷을 사용 하도록 설정 및 WAKE_LOCK 사용 권한")](creating-a-watchface-images/05-required-permissions-vs.png)
+[![필요한 권한](creating-a-watchface-images/05-required-permissions-vs.png "인터넷을 사용 하도록 설정 및 WAKE_LOCK 사용 권한")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 최소 Android 버전을 설정 **Android 5.1 (API 수준 22)**합니다. 또한 가능 하 게는 **인터넷** 및 **WakeLock** 사용 권한:
 
-[ ![필요한 권한](creating-a-watchface-images/05-required-permissions-xs.png "인터넷을 사용 하도록 설정 및 WakeLock 사용 권한")](creating-a-watchface-images/05-required-permissions-xs.png)
+[![필요한 권한](creating-a-watchface-images/05-required-permissions-xs.png "인터넷을 사용 하도록 설정 및 WakeLock 사용 권한")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -91,24 +91,24 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 NuGet 패키지 관리자를 시작 (Visual Studio에서 마우스 오른쪽 단추로 클릭 **참조** 에 **솔루션 탐색기** 선택 **NuGet 패키지 관리...** ). 안정적인 최신 버전의 프로젝트 업데이트 **Xamarin.Android.Wear**: 
 
-[ ![NuGet 패키지 관리자 추가](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Xamarin.Android.Wear 패키지 추가")](creating-a-watchface-images/06-add-wear-pkg-vs.png)
+[![NuGet 패키지 관리자 추가](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "Xamarin.Android.Wear 패키지 추가")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 다음으로 **Xamarin.Android.Support.v13** 은 설치, 제거:
 
-[ ![NuGet 패키지 관리자 제거](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 제거")](creating-a-watchface-images/07-uninstall-v13.png)
+[![NuGet 패키지 관리자 제거](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 제거")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 NuGet 패키지 관리자를 시작 (Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **패키지** 에 **솔루션 창** 선택 **패키지 추가...** ). 안정적인 최신 버전의 프로젝트 업데이트 **Xamarin.Android.Wear**: 
 
-[ ![NuGet 패키지 관리자 추가](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Xamarin.Android.Wear 패키지 추가")](creating-a-watchface-images/06-add-wear-pkg-xs.png)
+[![NuGet 패키지 관리자 추가](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "Xamarin.Android.Wear 패키지 추가")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
 빌드 및 마모 장치 또는 에뮬레이터에서 앱을 실행 (이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조는 [시작](~/android/wear/get-started/index.md) 가이드). 마모 장치에서 다음 응용 프로그램 화면이 표시 되어야 합니다.
 
-[ ![앱 스크린 샷을](creating-a-watchface-images/08-app-screen.png "마모 장치에 응용 프로그램 화면")](creating-a-watchface-images/08-app-screen.png)
+[![앱 스크린 샷을](creating-a-watchface-images/08-app-screen.png "마모 장치에 응용 프로그램 화면")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 이 시점에서 기본 마모 앱 되므로 필요는 없습니다 조사식 얼굴 기능 아직 조사식 얼굴 서비스 구현을 제공 하지 않습니다. 이 서비스는 다음 추가 됩니다. 
 
@@ -117,7 +117,7 @@ NuGet 패키지 관리자를 시작 (Mac 용 Visual Studio에서 마우스 오�
 
 Android 마모 구현 조사식 통해 얼굴은 `CanvasWatchFaceService` 클래스입니다. `CanvasWatchFaceService` 파생 된 `WatchFaceService`에서 파생 되는 자체 `WallpaperService` 다음 다이어그램에 나와 있는 것 처럼: 
 
-[ ![상속 다이어그램](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService 상속 다이어그램")](creating-a-watchface-images/09-inheritance-diagram.png)
+[![상속 다이어그램](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService 상속 다이어그램")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` 중첩 된 포함 `CanvasWatchFaceService.Engine`; 인스턴스화하여는 `CanvasWatchFaceService.Engine` 시계 화면의 그리기의 실제 작업을 수행 하는 개체입니다. `CanvasWatchFaceService.Engine` 파생 된 `WallpaperService.Engine` 는 위의 다이어그램에 나와 있는 것 처럼 합니다. 
 
@@ -317,11 +317,11 @@ public override void OnTimeTick()
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![빌드 작업](creating-a-watchface-images/10-android-resource-vs.png "빌드 AndroidResource 하는 작업 집합")](creating-a-watchface-images/10-android-resource-vs.png)
+[![빌드 작업](creating-a-watchface-images/10-android-resource-vs.png "빌드 AndroidResource 하는 작업 집합")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![빌드 작업](creating-a-watchface-images/10-android-resource-xs.png "빌드 AndroidResource 하는 작업 집합")](creating-a-watchface-images/10-android-resource-xs.png)
+[![빌드 작업](creating-a-watchface-images/10-android-resource-xs.png "빌드 AndroidResource 하는 작업 집합")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -342,13 +342,13 @@ public override void OnTimeTick()
 
 4.  선택 된 **Xamarin 샘플** 시청 얼굴 (오른쪽에 표시): 
 
-    [ ![Watchface 선택기](creating-a-watchface-images/11-watchface-picker.png "살짝 Xamarin 샘플 watch 화면을 찾을 수")](creating-a-watchface-images/11-watchface-picker.png)
+    [![Watchface 선택기](creating-a-watchface-images/11-watchface-picker.png "살짝 Xamarin 샘플 watch 화면을 찾을 수")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5.  탭의 **Xamarin 샘플** 얼굴 선택을 시청 합니다. 
 
 이렇게 하면 지금까지 구현 하는 사용자 정의 보기 글꼴 서비스를 사용 하는 마모 장치의 시계 화면의 변경: 
 
-[ ![디지털 watch 화면](creating-a-watchface-images/12-digital-watchface.png "마모 장치에서 실행 하는 사용자 지정 디지털 조사식")](creating-a-watchface-images/12-digital-watchface.png)
+[![디지털 watch 화면](creating-a-watchface-images/12-digital-watchface.png "마모 장치에서 실행 하는 사용자 지정 디지털 조사식")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 응용 프로그램 구현도 따라서 최소 때문에 이것이 비교적 조잡 watch 화면 (예를 들어 조사식 얼굴 배경 포함 되지 않습니다 및를 호출 하지 않습니다 `Paint` 앤티앨리어싱 모양을 개선 하는 메서드). 그러나 사용자 지정 watch 화면을 만드는 데 필요한 핵심 기능을 구현지 않습니다. 
 
@@ -476,7 +476,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 빌드하고 마모 장치에 앱을 다시 배포 합니다. 앞으로 조사식 글꼴 선택에서 시계 화면의 선택 합니다. 왼쪽에 표시 되는 감시 선택에서 미리 보기 및 새 시계 화면의 오른쪽에 표시 됩니다.
 
-[ ![아날로그 watch 화면](creating-a-watchface-images/13-analog-watchface.png "아날로그 글꼴 선택에서와 장치에 향상")](creating-a-watchface-images/13-analog-watchface.png)
+[![아날로그 watch 화면](creating-a-watchface-images/13-analog-watchface.png "아날로그 글꼴 선택에서와 장치에 향상")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 이 화면에 두 번째 손 모양 아이콘이 초당 한 번 이동 됩니다. 마모 장치에서이 코드를 실행 하면 시계 앰비언트 모드로 설정 되 면 두 번째 손 모양 아이콘이 사라집니다.
 

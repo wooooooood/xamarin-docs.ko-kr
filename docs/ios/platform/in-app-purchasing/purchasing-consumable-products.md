@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7366a4ce5cbb6a3026a7445a03f03b45d89d9210
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e5875249d7a84412b1c30580c3a8038cb53892f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="purchasing-consumable-products"></a>사용 될 제품을 구입
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 이 문서와 함께 제공 되는 샘플 코드는 기본 제공 된 제품을 보여 줍니다.-'후 잠금을 해제' 기능 결제 하는 코드에 밀접 하 게 결합 된 때문에 제품 Id는 응용 프로그램에 하드 코딩 합니다. 구매 프로세스는 다음과 같은 시각화할 수 있습니다.   
    
-[ ![구매 프로세스 시각화](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![구매 프로세스 시각화](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  기본 워크플로.   
    
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![사용자가 잔액에 더 많은 원숭이 크레딧을 추가 하는 각 구매](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![사용자가 잔액에 더 많은 원숭이 크레딧을 추가 하는 각 구매](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![사용자 지정 클래스, StoreKit 및 앱 스토어 간의 상호 작용](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![사용자 지정 클래스, StoreKit 및 앱 스토어 간의 상호 작용](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -214,7 +214,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 여러 수량을 구매 하는 사용자 StoreKit 확인 경고 반영 합니다 수량, 단가 및 총 금액이 청구 될 수 다음 스크린샷에 표시 된 것 처럼:
 
-[ ![구매를 확인합니다.](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![구매를 확인합니다.](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>네트워크 중단 상태 처리
 
@@ -328,7 +328,7 @@ public bool CanMakePayments()
    
    
    
- [ ![IOS의 제한 기능을 사용 하 여 앱에서 바로 구매를 사용 하지 않도록 설정 하려면](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![IOS의 제한 기능을 사용 하 여 앱에서 바로 구매를 사용 하지 않도록 설정 하려면](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -352,7 +352,7 @@ if (iap.CanMakePayments()) {
    
    
    
- [ ![기능은 In 앱에서 바로 구매 단추가 비활성화 됩니다 구매를 제한 하면 다음과 같이 표시 되는 응용 프로그램](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![기능은 In 앱에서 바로 구매 단추가 비활성화 됩니다 구매를 제한 하면 다음과 같이 표시 되는 응용 프로그램](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -361,7 +361,7 @@ if (iap.CanMakePayments()) {
    
    
    
- [ ![앱에서 바로 구매 허용 되지 않습니다.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![앱에서 바로 구매 허용 되지 않습니다.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

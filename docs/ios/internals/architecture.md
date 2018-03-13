@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: bf9d292acf43bbbe3e4ba76b5a264a11288b7225
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732f60a413077bc15018679fe8f8bc0a18227246
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-architecture"></a>iOS 아키텍처
 
@@ -20,7 +20,7 @@ Xamarin.iOS 응용 프로그램 모노 실행 환경 내에서 실행 하 고 C#
 
 다음 다이어그램에서는이 아키텍처의 기본적인 개요를 보여 줍니다.
 
-[ ![](architecture-images/ios-arch-small.png "이 다이어그램은 앞의 시간 (AOT) 컴파일 아키텍처의 기본적인 개요를 보여 줍니다.")](architecture-images/ios-arch.png)
+[ ![](architecture-images/ios-arch-small.png "이 다이어그램은 앞의 시간 (AOT) 컴파일 아키텍처의 기본적인 개요를 보여 줍니다.")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 코드: An 설명
 
@@ -36,7 +36,7 @@ Xamarin 플랫폼 응용 프로그램을 컴파일할 때 모노 C# (또는 F #)
 그러나 ios에서 Apple 장치에서 동적으로 생성 된 코드의 실행을 허용 하지 않는 설정한 보안 제한이 있습니다.
 이러한 보안 프로토콜을 준수 것을 보장 하려면 Xamarin.iOS 관리 되는 코드를 컴파일하려면 앞의 시간 (AOT) 컴파일러 대신 사용 합니다. Apple의 ARM 기반 프로세서에 배포할 수 있는 장치에 대 한 원하는 LLVM로 최적화 필요에 따라 기본 iOS 이진을 생성 합니다. 아래에 함께 맞추는 방법 대 한 대략적인 다이어그램 보여 줍니다.
 
-[ ![](architecture-images/aot.png "이 적용 되는 방식 함께의 대략적인 다이어그램")](architecture-images/aot-large.png)
+[![](architecture-images/aot.png "이 적용 되는 방식 함께의 대략적인 다이어그램")](architecture-images/aot-large.png#lightbox)
 
 에 자세히 설명 되어 있는 제한의 개수가 AOT를 사용 하는 [제한](~/ios/internals/limitations.md) 가이드입니다. 또한 다양 한 기능이 향상 수 있게 JIT 시작 시간 및 다양 한 성능 최적화의 감소를 통해
 
@@ -101,7 +101,7 @@ Xamarin 플랫폼 응용 프로그램을 컴파일할 때 모노 C# (또는 F #)
 
 - **정적 등록 기관** -정적 등록자를 정적 라이브러리로 취합 되어 실행 파일에 연결 하는 빌드 중 Objective C 코드를 생성 합니다. 이 빠른 시작을 위한 허용 하지만 빌드 시간 동안 오래 걸리는 합니다. 이 장치 빌드에 대해 기본적으로 사용 됩니다. 정적 등록자는 iOS 시뮬레이터와 전달 하 여 `--registrar:static` 로 `mtouch` 아래와 같이 프로젝트의 빌드 옵션 특성:
 
-    [ ![](architecture-images/image1.png "추가 mtouch 인수 설정")](architecture-images/image1.png)
+    [![](architecture-images/image1.png "추가 mtouch 인수 설정")](architecture-images/image1.png#lightbox)
 
 IOS Xamarin.iOS에서 사용 하는 형식 등록 시스템의 세부 사항에 자세한 내용은 참조는 [형식 등록자](~/ios/internals/registrar.md) 가이드입니다.
 
@@ -179,7 +179,7 @@ Xamarin.iOS.dll를 만든 후 mtouch 모든 구성 요소를 함께 묶이 됩�
 ## <a name="related-links"></a>관련 링크
 
 - [제한 사항](~/ios/internals/limitations.md)
-- [Objective C 바인딩](~/cross-platform/macios/binding/overview.md)
+- [Objective-C 바인딩](~/cross-platform/macios/binding/overview.md)
 - [Objective C 선택기](~/ios/internals/objective-c-selectors.md)
 - [유형 등록 기관](~/ios/internals/registrar.md)
-- [Linker](~/ios/deploy-test/linker.md)
+- [링커](~/ios/deploy-test/linker.md)

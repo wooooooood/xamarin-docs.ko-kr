@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>연습-터치를 사용 하 여 Android에서
 
 응용 프로그램의 이전 섹션에서 개념을 사용 하는 방법을 참조 알려 주세요. 응용 프로그램를 4 개 작업을 만듭니다. 첫 번째 활동 메뉴 또는 다양 한 Api를 설명 하기 위해 다른 활동을 시작 하는 스위치 보드 됩니다. 다음 스크린 샷에서 기본 활동을 보여 줍니다.
 
-[![단추 Me 있는 예제 스크린 샷 터치](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![단추 Me 있는 예제 스크린 샷 터치](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 첫 번째 활동 터치 샘플 보기를 변경 하는 것에 대 한 이벤트 처리기를 사용 하는 방법을 표시 됩니다. 제스처 인식기 활동 보여주는 서브 클래스 하는 방법을 `Android.View.Views` 이벤트를 처리할 뿐만 아니라 축소 제스처를 처리 하는 방법을 보여 줍니다. 세 번째이자 마지막 활동 **사용자 지정 제스처**, 됩니다 표시 방법을 사용 하 여 사용자 지정 제스처입니다. 작업을 진행할 흡수를 간단 하 게 하려면 활동 중 하나에 중점을 두기 각 섹션의 섹션으로이 연습에서는 분석할 수 있습니다.
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 -   프로젝트를 열고 **TouchWalkthrough\_시작**합니다. **MainActivity** 모든 설정의 이동이 스타일은 &ndash; 는 활동에 터치 동작을 구현 하도록 합니다. 응용 프로그램을 실행 하 고 클릭 **터치 샘플**, 다음 작업 시작 해야 합니다.
 
-    [![표시 시작 터치 있는 활동의 스크린 샷](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![표시 시작 터치 있는 활동의 스크린 샷](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   활동 시동 확인 우리는 이제 파일을 열 **TouchActivity.cs** 에 대 한 처리기를 추가 하 고는 `Touch` 의 이벤트는 `ImageView`:
 
@@ -63,11 +63,11 @@ ms.lasthandoff: 02/27/2018
 
 사용자 작업에서 사용자가 `ImageView`, `Touch` 이벤트가 발생 하 고 처리기에 메시지가 표시 됩니다 **시작 터치** 다음 스크린샷에 표시 된 것 처럼 화면에:
 
-[![시작 터치 있는 활동의 스크린 샷](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![시작 터치 있는 활동의 스크린 샷](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 사용자가 터치으로 `ImageView`, **시작 터치** 에 표시 됩니다는 `TextView`합니다. 사용자는 더 이상으로 변경 된 `ImageView`, 메시지 **종료 터치** 에 표시 됩니다는 `TextView`다음 스크린샷에 표시 된 것 처럼:
 
-[![터치 종료 된 활동의 스크린샷](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![터치 종료 된 활동의 스크린샷](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>제스처 인식기 활동
@@ -234,11 +234,11 @@ ms.lasthandoff: 02/27/2018
 -   이제 응용 프로그램을 실행 하 고 제스처 인식기 작업을 시작 합니다.
     이 시작 될 때 화면 아래 스크린샷과 같이 같아야 합니다.
 
-    [![Android 아이콘으로 제스처 인식기 시작 화면](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Android 아이콘으로 제스처 인식기 시작 화면](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   이제 아이콘을 터치 하 고 화면으로 끕니다. 핀치 확대/축소 제스처를 시도 하십시오. 특정 시점에 사용자의 화면에서는 다음 스크린 샷과 같이 나타낼 수 있습니다.
 
-    [![화면 제스처 이동 아이콘](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![화면 제스처 이동 아이콘](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 이 시점에서 부여 해야 사용자가 직접 pat 뒷면: Android 응용 프로그램에서 핀치 확대/축소를 방금 구현 했습니다! 빠른 중단 하 고이 연습에서 세 번째이자 마지막 활동으로 이동할 수 있습니다. &ndash; 사용자 지정 제스처를 사용 하 여 합니다.
 
@@ -341,17 +341,17 @@ ms.lasthandoff: 02/27/2018
 
 -   응용 프로그램을 실행 하 고 사용자 지정 제스처 인식기 활동을 시작 합니다. 다음 스크린 샷에서 같은 같아야 합니다.
 
-    [![Me 있는 스크린 샷 이미지를 제공 하는 확인](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Me 있는 스크린 샷 이미지를 제공 하는 확인](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     이제 화면에서 확인 표시를 그립니다 하 고 스크린샷에 표시와 같은 화면이 표시 되는 비트맵은 표시 됩니다.
 
-    [![확인 표시를 그리는](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![인식 확인 표시](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![확인 표시를 그리는](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![인식 확인 표시](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     마지막으로, 화면에 자유 곡선을 그립니다. 이 스크린 샷에 표시 된 것 처럼를 원래 이미지로 다시 확인란을 변경 해야 합니다.
 
-    [![화면에 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![원래 이미지가 표시 됩니다](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![화면에 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![원래 이미지가 표시 됩니다](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 터치 및 제스처 Xamarin.Android를 사용 하 여 Android 응용 프로그램에 통합 하는 방법 이해를 해야 합니다.
 

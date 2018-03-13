@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 115f3340c5678c0ead06cf773e193fbdc4ba3d07
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 
@@ -27,11 +27,11 @@ _이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그�
 1. **표준 데이터 형식을** -두 응용 프로그램을 지 원하는 다른 데이터 변수의 형식을 알기 뿐 작업은 두 개의 관련 없는 앱 간에 일반적으로 수행 됩니다, 때문입니다. 공유에 대 한 가능성을 최대화 하려면 지 (일반적인 데이터 형식의 표준 집합을 사용 하 여) 지정된 된 항목의 여러 표현에 저장할 수 있는, 사용 중인 응용 프로그램에서 필요에 맞게 가장 적합 한 버전 선택이 허용 합니다.
 2. **사용자 지정 데이터** -복사 및 붙여넣기 지에서 처리 되는 사용자 지정 데이터 형식을 정의할 수 있습니다 프로그램 Xamarin.Mac 내에서 복잡 한 데이터를 지원 하도록 합니다. 예를 들어 벡터 드로잉 앱 있도록 사용자를 구성 하는 여러 데이터 형식 및 포인트 복잡 한 셰이프 복사 및 붙여넣기 합니다.
 
-[![실행 중인 응용 프로그램의 예](copy-paste-images/intro01.png "실행 중인 응용 프로그램의 예")](copy-paste-images/intro01-large.png)
+[![실행 중인 응용 프로그램의 예](copy-paste-images/intro01.png "실행 중인 응용 프로그램의 예")](copy-paste-images/intro01-large.png#lightbox)
 
 이 문서는 기본적인 작업을 지원 하려면 복사 하 여 붙여넣기 작업 Xamarin.Mac 응용 프로그램에서 지 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
-참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-c 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
+참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
 
 ## <a name="getting-started-with-the-pasteboard"></a>임시 보드 시작
 
@@ -50,14 +50,14 @@ _이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그�
 1. 클릭 하 고 Mac에 대 한 Visual Studio를 시작 합니다.는 **새 프로젝트...**  링크 합니다.
 2. 선택 **Mac** > **앱** > **Cocoa 앱**, 클릭는 **다음** 단추: 
 
-    [![새 Cocoa 앱 프로젝트를 만드는](copy-paste-images/sample01.png "새 Cocoa 앱 프로젝트 만들기")](copy-paste-images/sample01-large.png)
+    [![새 Cocoa 앱 프로젝트를 만드는](copy-paste-images/sample01.png "새 Cocoa 앱 프로젝트 만들기")](copy-paste-images/sample01-large.png#lightbox)
 3. 입력 `MacCopyPaste` 에 대 한는 **프로젝트 이름을** 기본값으로 다른 모든 항목을 유지 합니다. 다음을 클릭 합니다. 
 
-    [![프로젝트의 이름을 설정](copy-paste-images/sample01a.png "프로젝트의 이름을 설정 합니다.")](copy-paste-images/sample01a-large.png)
+    [![프로젝트의 이름을 설정](copy-paste-images/sample01a.png "프로젝트의 이름을 설정 합니다.")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. 클릭는 **만들기** 단추: 
 
-    [![새 프로젝트 설정 확인](copy-paste-images/sample02.png "새 프로젝트 설정 확인")](copy-paste-images/sample02-large.png)
+    [![새 프로젝트 설정 확인](copy-paste-images/sample02.png "새 프로젝트 설정 확인")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>NSDocument 추가
 
@@ -265,7 +265,7 @@ public void PasteImage(NSObject sender) {
 
 두 번 클릭은 **Main.storyboard** 파일 Xcode에서 엽니다. 다음으로는 도구 모음 및 이미지를 추가 하 고 다음과 같이 구성 합니다.
 
-[![도구 모음 편집](copy-paste-images/sample04.png "도구 모음 편집")](copy-paste-images/sample04-large.png)
+[![도구 모음 편집](copy-paste-images/sample04.png "도구 모음 편집")](copy-paste-images/sample04-large.png#lightbox)
 
 복사본을 추가 하 고 붙여 **이미지 도구 모음 항목** 도구 모음의 왼쪽에 있습니다. 사용할 것 바로 가기를으로 편집 메뉴에서 복사 및 붙여넣기를 합니다. 그런 다음 4 개를 추가 **이미지 도구 모음 항목** 도구 모음의 왼쪽에서 오른쪽으로 합니다. 이러한 일부 기본 이미지와 이미지를 채우는 데 사용 합니다.
 
@@ -273,7 +273,7 @@ public void PasteImage(NSObject sender) {
 
 다음으로, 보겠습니다 잘 콘센트 आ स ा 우리의 도구 모음 항목 및 이미지에 대 한 작업을 노출 합니다.
 
-[![콘센트 및 작업 만들기](copy-paste-images/sample05.png "콘센트 및 작업 만들기")](copy-paste-images/sample05-large.png)
+[![콘센트 및 작업 만들기](copy-paste-images/sample05.png "콘센트 및 작업 만들기")](copy-paste-images/sample05-large.png#lightbox)
 
 작업 콘센트 및 작업에 대 한 자세한 내용은 참조 하십시오는 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션 우리의 [Hello, Mac](~/mac/get-started/hello-mac.md) 설명서입니다.
 

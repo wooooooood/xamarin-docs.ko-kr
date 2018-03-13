@@ -7,11 +7,11 @@ ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 44df6fce4ec6d667c096da01cfc339ec2afdb077
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>연습: 리플렉션 API를 사용 하 여 응용 프로그램 만들기
 
@@ -34,7 +34,7 @@ _요소 API MonoTouch.Dialog (산 뿐만 아니라 특성 기반 리플렉션 AP
 
 리플렉션 API를 사용 하는 방법을 설명 하는 예제를 살펴 보겠습니다. 이 예제에서는 아래와 같이 간단한 데이터 입력 화면을 빌드합니다.
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "이 예제에서는 작성할 것 다음과 같이 간단한 데이터 입력 화면")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "이 예제에서는 작성할 것 다음과 같이 간단한 데이터 입력 화면")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -119,7 +119,7 @@ window.RootViewController = nav;
 
 에 제목이 표시 응용 프로그램을 실행 하면 이제는 `UINavigationController’s` 다음 스크린 샷은로 탐색 모음:
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "이제 응용 프로그램을 실행 하면에 제목이 나타납니다 UINavigationControllers 탐색 모음")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "이제 응용 프로그램을 실행 하면에 제목이 나타납니다 UINavigationControllers 탐색 모음")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 포함 하 여 한 `UINavigationController`, 이제 산의 다른 기능을 수행할 수 있습니다 D 탐색이 필요 합니다. 예를 들어 하는 열거형을 추가할 수 있습니다는 `Expense` 비용과 산에 대 한 범주를 정의 하는 클래스 D 선택 화면이 자동으로 만듭니다. 을 설명 하기 위해 수정 된 `Expense` 포함 하도록 클래스는 `ExpenseCategory` 다음과 같이 필드:
 
@@ -142,11 +142,11 @@ public class Expense
 
 응용 프로그램을 지금 실행 결과 범주에 대 한 테이블에 새 행 표시 된 것 처럼 됩니다.
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "표시 된 것 처럼 범주에 대 한 테이블에 새 행으로 인해 응용 프로그램을 지금 실행")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "표시 된 것 처럼 범주에 대 한 테이블에 새 행으로 인해 응용 프로그램을 지금 실행")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 행을 선택 하는 응용 프로그램 화면 이동 하는 새 행에 해당 하는 열거형과 함께 아래와 같이 발생 합니다.
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "열거형에 해당 하는 행이 포함 된 새로운 화면으로 응용 프로그램 이동으로 인해 행을 선택")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "열거형에 해당 하는 행이 포함 된 새로운 화면으로 응용 프로그램 이동으로 인해 행을 선택")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 

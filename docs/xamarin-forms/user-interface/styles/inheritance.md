@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 482358b0ccbedf926cd9182065a1eb8f4c12683c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e57f19d1eb66e22badb418d4584f5654904c7ade
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="style-inheritance"></a>스타일 상속
 
@@ -62,10 +62,10 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 
 `baseStyle` 대상 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 인스턴스가 집합과 [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) 및 [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신, `labelStyle` 및 `buttonStyle` 바인딩할 수 있는 추가 속성 값을 설정, 여기에서 상속 합니다. `labelStyle` 및 `buttonStyle` 그런 다음에 적용 되는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스 및 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 인스턴스를 설정 하 여 자신의 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
+[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> **참고**: 암시적 스타일 명시적 스타일에서 파생 될 수 있지만 명시적 스타일 암시적 스타일에서 파생 될 수 없습니다.
+> 암시적 스타일 명시적 스타일에서 파생 될 수 있지만 명시적 스타일 암시적 스타일에서 파생 될 수 없습니다.
 
 ### <a name="respecting-the-inheritance-chain"></a>상속 체인을 유지합니다.
 
@@ -106,7 +106,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 
 이 예제에서는 `labelStyle` 및 `buttonStyle` 제어 수준 리소스는 동안 `baseStyle` 은 페이지 수준 리소스입니다. 그러나 `labelStyle` 및 `buttonStyle` 에서 상속 `baseStyle`에 대 한 수는 없습니다 `baseStyle` 상속할 `labelStyle` 또는 `buttonStyle`뷰 계층 구조에서 해당 위치로 인해 합니다.
 
-## <a name="style-inheritance-in-c35"></a>#35; & C 스타일 상속
+## <a name="style-inheritance-in-c35"></a>C에서 스타일 상속&#35;
 
 해당 하는 C# 페이지, 여기서 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스 게 직접 할당 된는 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 필요한 컨트롤 속성의 다음 코드 예제에 표시 됩니다:
 

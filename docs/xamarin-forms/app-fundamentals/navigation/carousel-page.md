@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: adb1042b8f44d3f414e2161e20b7eb3dc0e940a2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c4f8d70625fd8ee0e07832f8bdb3b7e502b5b38f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="carousel-page"></a>회전식 페이지
 
@@ -36,7 +36,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으�
 
 <!--
 > [!NOTE]
-> **Note**: The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
+> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
 -->
 
 ## <a name="creating-a-carouselpage"></a>CarouselPage 만들기
@@ -49,7 +49,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으�
 두 방법으로는 `CarouselPage` 를 표시 한 다음 각 페이지 차례로 표시 될 다음 페이지로 이동 하 여 살짝 밀어 상호 작용 합니다. 이 탐색 환경을 자연스럽 고 Windows Phone 사용자에 게 익숙한 느낄 됩니다.
 
 > [!NOTE]
-> **참고**: A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 을 채울 수 있습니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스 또는 `ContentPage` 파생 항목입니다.
+> A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 을 채울 수 있습니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스 또는 `ContentPage` 파생 항목입니다.
 
 <a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
@@ -142,7 +142,7 @@ public class MainPageCS : CarouselPage
 각 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 단순히 표시는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 특정 색에 대 한 및 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 해당 색상의 합니다.
 
 > [!NOTE]
-> **참고**:는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `CarouselPage` 자식 요소가 너무 많습니다.
+> [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `CarouselPage` 자식 요소가 너무 많습니다.
 
 경우는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 에 포함 되는 [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) 의 페이지는 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), [ `MasterDetailPage.IsGestureEnabled` ](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) 속성 설정 해야 `false` 간에 제스처 충돌을 방지 하는 `CarouselPage` 및 `MasterDetailPage`합니다.
 
@@ -239,7 +239,7 @@ public class MainPageCS : CarouselPage
 각 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 단순히 표시는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 특정 색에 대 한 및 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 해당 색상의 합니다.
 
 > [!NOTE]
-> **참고**:는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `CarouselPage` 자식 요소가 너무 많습니다.
+> [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `CarouselPage` 자식 요소가 너무 많습니다.
 
 경우는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 에 포함 되는 [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) 의 페이지는 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/), [ `MasterDetailPage.IsGestureEnabled` ](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/) 속성 설정 해야 `false` 간에 제스처 충돌을 방지 하는 `CarouselPage` 및 `MasterDetailPage`합니다.
 

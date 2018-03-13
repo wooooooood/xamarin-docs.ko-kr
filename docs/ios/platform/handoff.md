@@ -7,11 +7,11 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0b3471f607bbde6560af597b6b901e6fbd1ec0b0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handoff"></a>전달
 
@@ -19,7 +19,7 @@ _이 문서에서 Xamarin.iOS 앱으로 전송 하도록 핸드 오프 작업에
 
 Apple는 iOS 8 및 OS X Yosemite (10.10) 자신의 장치 중 하나에서 시작 하는 작업을 전송 하도록 사용자에 대 한 일반적인 메커니즘을 제공에서 동일한 응용 프로그램 또는 동일한 작업을 지 원하는 다른 응용 프로그램을 실행 하는 다른 장치에 핸드 오프를 도입 되었습니다.
 
-[ ![](handoff-images/handoff02.png "핸드 오프 작업 수행의 예")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "핸드 오프 작업 수행의 예")](handoff-images/handoff02.png#lightbox)
 
 이 문서는 빠른 살펴보기 Xamarin.iOS 앱에서 공유 하는 활동을 사용 하도록 설정 하 고 자세히 핸드 오프 프레임 워크를 포함 합니다.
 
@@ -45,7 +45,7 @@ Apple는 iOS 8 및 OS X Yosemite (10.10) 자신의 장치 중 하나에서 시�
 
 수신 하는 장치에서 사용자 활동 continuation에 사용할 수 있는 되었다는 알림을 받게 됩니다. (아직 실행 하지 않은) 하는 경우 지정 된 앱이 시작 사용자가 새 장치에서 작업을 계속을 선택 하면 및에서 페이로드는 `NSUserActivity` 작업을 다시 시작 하는 데 사용 됩니다.
 
-[ ![](handoff-images/handoffinteractions.png "지속적인 사용자 작업의 개요")](handoff-images/handoffinteractions.png)
+[![](handoff-images/handoffinteractions.png "지속적인 사용자 작업의 개요")](handoff-images/handoffinteractions.png#lightbox)
 
 동일한 개발자 팀 ID를 공유 하 고 응답 하는 앱만는 주어진 _활동 유형_ 연속 작업에 적합 합니다. 앱에서 지원 되는 활동 형식을 정의 `NSUserActivityTypes` 키의 해당 **Info.plist** 파일입니다. 이 점을 고려 지속적인 장치 활동 유형 팀 ID에 따라 연속 작업을 수행 하는 앱을 선택 하 고 선택적으로 _작업 제목_합니다.
 
@@ -114,21 +114,21 @@ OS x는 `NSUserActivity` 관리 하는 `AppKit` 응답자를 자동으로 연관
 3. 그렇게 이미 하지 않은 경우 클릭 **식별자** 응용 프로그램에 대 한 ID를 만듭니다 (예: `com.company.appname`), 프로그램 기존 id입니다. 그렇지 않으면 편집
 4. 확인은 **iCloud** 서비스가 지정된 된 ID에 대 한 검사 된: 
 
-    [ ![](handoff-images/provision01.png "지정된 된 ID에 대 한 iCloud 서비스를 사용 하도록 설정")](handoff-images/provision01.png)
+    [![](handoff-images/provision01.png "지정된 된 ID에 대 한 iCloud 서비스를 사용 하도록 설정")](handoff-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
 4. 클릭 **프로 비전 프로필** > **개발** 드립니다 프로비저닝 프로필이 새로운 개발 응용 프로그램을 만듭니다. 
 
-    [ ![](handoff-images/provision02.png "프로비저닝 프로필에서 앱에 대 한 새로운 개발 만들기")](handoff-images/provision02.png)
+    [![](handoff-images/provision02.png "프로비저닝 프로필에서 앱에 대 한 새로운 개발 만들기")](handoff-images/provision02.png#lightbox)
 5. 다운로드 및 새 프로비저닝 프로필을 설치 하거나 사용 Xcode를 다운로드 하 여 프로필을 설치 하십시오.
 6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 하십시오. 
 
-    [ ![](handoff-images/provision03.png "방금 만든 프로 비전 프로필을 선택 합니다.")](handoff-images/provision03.png)
+    [![](handoff-images/provision03.png "방금 만든 프로 비전 프로필을 선택 합니다.")](handoff-images/provision03.png#lightbox)
 7. 다음에 편집 프로그램 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 하는 응용 프로그램 ID를 사용 하 고 있는지 확인 하십시오. 
 
-    [ ![](handoff-images/provision04.png "앱 ID를 설정 합니다.")](handoff-images/provision04.png)
+    [![](handoff-images/provision04.png "앱 ID를 설정 합니다.")](handoff-images/provision04.png#lightbox)
 8. 스크롤하여는 **백그라운드 모드** 섹션 및 다음 항목을 확인 합니다. 
 
-    [ ![](handoff-images/provision05.png "필요한 백그라운드 모드를 사용 하도록 설정")](handoff-images/provision05.png)
+    [![](handoff-images/provision05.png "필요한 백그라운드 모드를 사용 하도록 설정")](handoff-images/provision05.png#lightbox)
 9. 모든 파일에 변경 내용을 저장 합니다.
 
 현재 위치를이 설정 하 여 응용 프로그램 전달 프레임 워크 Api에 액세스할 준비가 되었습니다. 에 대 한 자세한 내용은 프로 비전을 참조 하십시오 우리의 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 및 [앱을 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
@@ -155,7 +155,7 @@ _활동 유형 식별자_ 에 추가 하는 짧은 문자열의 `NSUserActivityT
 
 이 동작을 지원 하도록 필요한 작업 유형 식별자를 만들려면 편집는 **Info.plist** 파일을 전환 하는 **소스** 보기. 추가 `NSUserActivityTypes` 키를 다음과 같은 식별자를 만듭니다.
 
-[ ![](handoff-images/type01.png "NSUserActivityTypes 키 및 plist 편집기에서 필요한 식별자")](handoff-images/type01.png)
+[![](handoff-images/type01.png "NSUserActivityTypes 키 및 plist 편집기에서 필요한 식별자")](handoff-images/type01.png#lightbox)
 
 4 개의 새 활동 유형 식별자를 각 예제에서에 탭에 대 한 만든 **MonkeyBrowser** 응용 프로그램입니다. 앱을 만들 때의 내용을 대체는 `NSUserActivityTypes` 앱 하 여 특정 활동 유형 식별자와 배열 지원.
 
@@ -610,15 +610,15 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 새 URL과 탭은 사용자가 입력 하는 경우 모든 탭에는 **이동** 단추를 새 `NSUserActivity` 가 현재 사용자를 검색할 URL이 포함 된 해당 탭에 대해 생성 됩니다.
 
-[ ![](handoff-images/handoff01.png "예제 핸드 오프 앱")](handoff-images/handoff01.png)
+[![](handoff-images/handoff01.png "예제 핸드 오프 앱")](handoff-images/handoff01.png#lightbox)
 
 다른 사용자의 장치에는 **MonkeyBrowser** , 설치 된 응용 프로그램 같은 사용자 계정을 사용 하 여 iCloud에 서명는 동일한 네트워크 위의 장치에 가까이 있는 전달 작업이 홈 표시 됩니다 화면 하단 왼쪽 모서리 쪽) (에:
 
-[ ![](handoff-images/handoff02.png "홈 화면의 하단 왼쪽 모서리 쪽에 표시 된 전달 활동")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "홈 화면의 하단 왼쪽 모서리 쪽에 표시 된 전달 활동")](handoff-images/handoff02.png#lightbox)
 
 핸드 오프 아이콘 끌 규모를 증가 하는 경우 응용 프로그램을 시작할 및 사용자 작업에 지정 된는 `NSUserActivity` 새 장치에서 계속 됩니다.
 
-[ ![](handoff-images/handoff03.png "새 장치에 사용자 작업은 계속")](handoff-images/handoff03.png)
+[![](handoff-images/handoff03.png "새 장치에 사용자 작업은 계속")](handoff-images/handoff03.png#lightbox)
 
 경우 사용자 작업에 전송 되었습니다 다른 Apple 장치로 보내는 장치의 `NSUserActivity` 에 대 한 호출을 받게 됩니다는 `UserActivityWasContinued` 메서드를 해당 `NSUserActivityDelegate` 사용자 작업은 다른 성공적으로 전송 된 알립니다. 장치입니다.
 

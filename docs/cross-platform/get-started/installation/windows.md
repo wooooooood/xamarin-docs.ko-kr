@@ -7,27 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: b68e03251b83192bdc5836af6ea54446ddaad24a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bffc6bb1bc6537745fe9603906b5938fc3c34fe1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarin-in-visual-studio-on-windows"></a>Windows에서 Visual Studio에 Xamarin 설치
 
 Xamarin은 이제 모든 버전의 Visual Studio에 무료로 포함되며 별도의 라이선스를 요구하지 않으므로 Visual Studio 설치 관리자를 사용하여 Xamarin 도구를 다운로드하고 설치할 수 있습니다.
 
--   [Requirements](#requirements)
--   [설치](#installation)
--   [Visual Studio 2017에 Xamarin 추가](#vs2017)
--   [Visual Studio 2015에 Xamarin 추가](#vs2015)
--   [설치 확인](#verifying)
--   [다음 단계](#nextsteps)
-
-
 <a name="requirements" />
 
-# <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
 Xamarin용 Visual Studio 도구를 설치하려면 다음이 필요합니다.
 
@@ -44,7 +36,7 @@ Xamarin을 설치하고 사용하기 위한 필수 구성 요소에 대한 자�
 
 <a name="installation" />
 
-# <a name="installation"></a>설치
+## <a name="installation"></a>설치
 
 Xamarin은 새로운 Visual Studio 설치의 일부로 설치할 수 있습니다.
 이렇게 하려면 다음 단계를 따릅니다.
@@ -55,7 +47,7 @@ Xamarin은 새로운 Visual Studio 설치의 일부로 설치할 수 있습니�
 
 3. 설치 화면에서 **.NET을 사용한 모바일 개발** 워크로드를 선택합니다. 
 
-    [![워크로드 화면에서 .NET을 사용한 모바일 개발 선택](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png)
+    [![워크로드 화면에서 .NET을 사용한 모바일 개발 선택](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png#lightbox)
 
 4. **.NET을 사용한 모바일 개발**이 선택된 상태에서 오른쪽에 있는 **요약** 패널을 봅니다. 여기에서는 설치하지 않으려는 모바일 개발 옵션의 선택을 취소할 수 있습니다. 기본적으로 다음 스크린샷에 표시된 모든 옵션이 설치됩니다(**Xamarin Workbooks**, **Xamarin Profiler**, **Xamarin Remoted Simulator**, **Android NDK**, **Android SDK**, **Java SE Development Kit**, **Google Android Emulator**, **F# 지원** 및 **Intel HAXM**).
 
@@ -76,7 +68,7 @@ Xamarin은 새로운 Visual Studio 설치의 일부로 설치할 수 있습니�
 
 <a name="vs2017" />
 
-## <a name="adding-xamarin-to-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 추가
+### <a name="adding-xamarin-to-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 추가
 
 Visual Studio 2017이 이미 설치된 경우 워크로드를 수정하는 Visual Studio 설치 관리자를 다시 실행하여 Xamarin을 추가할 수 있습니다(자세한 내용은 [Visual Studio 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 참조). 그런 다음, 위에 나열된 단계를 따라 Xamarin을 설치합니다.
 
@@ -85,7 +77,7 @@ Visual Studio 2017을 다운로드하고 설치하는 방법에 대한 자세한
 
 <a name="vs2015" />
 
-## <a name="adding-xamarin-to-visual-studio-2015"></a>Visual Studio 2015에 Xamarin 추가
+### <a name="adding-xamarin-to-visual-studio-2015"></a>Visual Studio 2015에 Xamarin 추가
 
 Xamarin.Android를 Visual Studio 2015의 기존 설치에 추가하려면 다음 단계를 따릅니다.
 
@@ -104,7 +96,7 @@ Xamarin.Android를 Visual Studio 2015의 기존 설치에 추가하려면 다음
 
 <a name="verifying" />
 
-## <a name="verifying-installation"></a>설치 확인
+### <a name="verifying-installation"></a>설치 확인
 
 Visual Studio 2017에서 **도움말** 메뉴를 클릭하여 Xamarin이 설치되었는지 확인할 수 있습니다. Xamarin이 설치된 경우 이 스크린샷에 표시된 것처럼 **Xamarin** 메뉴 항목이 표시됩니다.
 
@@ -118,11 +110,11 @@ Visual Studio 2017에서 **도움말** 메뉴를 클릭하여 Xamarin이 설치�
 
 <a name="nextsteps" />
 
-# <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
 Xamarin용 Visual Studio Tools를 설치하면 앱용 코드 작성을 시작할 수 있지만 앱을 빌드하여 시뮬레이터, 에뮬레이터 및 장치에 배포하기 위한 추가 설정이 필요 없습니다. 다음 가이드를 참조하여 설치를 완료하고 플랫폼 간 앱 빌드를 시작하세요.
 
-## <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 자세한 내용은 [Windows에 Xamarin.iOS 설치](~/ios/get-started/installation/windows/index.md) 가이드를 참조하세요. 
 
@@ -133,7 +125,7 @@ Xamarin용 Visual Studio Tools를 설치하면 앱용 코드 작성을 시작할
 5. [원격 iOS 시뮬레이터](~/tools/ios-simulator.md)
 6. [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
-## <a name="android"></a>Android
+### <a name="android"></a>Android
 
 자세한 내용은 [Windows에 Xamarin.Android 설치](~/android/get-started/installation/windows.md) 가이드를 참조하세요.
 

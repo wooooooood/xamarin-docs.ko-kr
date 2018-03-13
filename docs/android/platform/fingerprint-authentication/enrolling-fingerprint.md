@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 494c808c8c65e0f3cf0a34b26d87069dd456718c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 20e6d693f2a3eba54afaf1d3c7054ad75d7a7610
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="enrolling-a-fingerprint"></a>지문 등록
 
@@ -46,7 +46,7 @@ Android 디버그 브리지 (ADB)를 사용 하 여 명령 프롬프트에 익�
 
 4. 여기에서 장치에 지문을 추가 하는 순서를 수행 합니다.
 
-    [![스크린 샷의 지문 장치를 추가 하기 위한 시퀀스](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png)
+    [![스크린 샷의 지문 장치를 추가 하기 위한 시퀀스](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. 마지막 화면에서 손가락 지문 스캐너에 배치 하 라는 메시지가 표시 됩니다. 
 

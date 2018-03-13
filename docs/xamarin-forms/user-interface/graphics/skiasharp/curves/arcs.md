@@ -4,14 +4,15 @@ description: "SkiaSharp를 사용 하 여 세 가지 방법으로 호를 정의 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 236f5da78022d6f6482ed66ffd439c4cd15766a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 다음 세 가지 방법
 
@@ -100,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 볼 수 있듯이 시작 각도 및 스윕 각도 둘 다 음수 값에 사용할 수 있습니다.
 
-[![](arcs-images/anglearc-small.png "각도 호 페이지의 삼중 스크린샷")](arcs-images/anglearc-large.png "각도 호 페이지의 삼중 스크린샷")
+[![](arcs-images/anglearc-small.png "각도 호 페이지의 삼중 스크린샷")](arcs-images/anglearc-large.png#lightbox "각도 호 페이지의 삼중 스크린샷")
 
 호를 생성 하려면이 방법은 알고리즘 방식으로 가장 단순한 및 호를 설명 하는 매개 방정식 파생 하기 쉽습니다. 타원 및 시작 및 스윕 각도의 위치와 크기를 알고 있으면 원호의 시작점 및 끝점 수를 계산 간단한 삼각 함수를 사용 하 여.
 
@@ -205,11 +206,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 새 `SKPath` 각 원형 조각이 개체가 만들어집니다. 센터에서 줄의 경로 구성 되어 아니라면 `ArcTo` 호를 및 다른 줄에서 센터 결과를 다시 그리는 `Close` 호출 합니다. 이 프로그램을 이동 하 여 주십시오 센터에서 50 픽셀인 "쪼개기" 원형 조각을 표시 합니다. 해당 작업에는 각 조각에 대 한 스윕 각도의 중간점 방향에서 벡터를 필요합니다.
 
-[![](arcs-images/explodedpiechart-small.png "쪼개진 원형 차트 페이지의 삼중 스크린샷")](arcs-images/explodedpiechart-large.png "쪼개진 원형 차트 페이지의 삼중 스크린 샷")
+[![](arcs-images/explodedpiechart-small.png "쪼개진 원형 차트 페이지의 삼중 스크린샷")](arcs-images/explodedpiechart-large.png#lightbox "쪼개진 원형 차트 페이지의 삼중 스크린 샷")
 
 모양 "쪼개기" 없이 보려면 주석으로 `Translate` 호출:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "폭발적 없이 쪼개진 원형 차트 페이지의 삼중 스크린샷")](arcs-images/explodedpiechartunexploded-large.png "분해 없이 쪼개진 원형 차트 페이지의 삼중 스크린 샷")
+[![](arcs-images/explodedpiechartunexploded-small.png "폭발적 없이 쪼개진 원형 차트 페이지의 삼중 스크린샷")](arcs-images/explodedpiechartunexploded-large.png#lightbox "분해 없이 쪼개진 원형 차트 페이지의 삼중 스크린 샷")
 
 ## <a name="the-tangent-arc"></a>탄젠트 호로 변환
 
@@ -413,7 +414,7 @@ public partial class TangentArcPage : InteractivePage
 
 다음은 **탄젠트 호** 세 플랫폼 모두에서 실행 되는 페이지:
 
-[![](arcs-images/tangentarc-small.png "탄젠트 호 페이지의 삼중 스크린샷")](arcs-images/tangentarc-large.png "탄젠트 호 페이지의 삼중 스크린샷")
+[![](arcs-images/tangentarc-small.png "탄젠트 호 페이지의 삼중 스크린샷")](arcs-images/tangentarc-large.png#lightbox "탄젠트 호 페이지의 삼중 스크린샷")
 
 Windows Mobile 장치에서 세 점 모두가 거의 동일 선상의 및 호 매우 작습니다.
 
@@ -490,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 세 가지 플랫폼에서 실행 중인 프로그램입니다.
 
-[![](arcs-images/roundedheptagon-small.png "반올림 Heptagon 페이지의 삼중 스크린샷")](arcs-images/roundedheptagon-large.png "반올림 Heptagon 페이지의 삼중 스크린샷")
+[![](arcs-images/roundedheptagon-small.png "반올림 Heptagon 페이지의 삼중 스크린샷")](arcs-images/roundedheptagon-large.png#lightbox "반올림 Heptagon 페이지의 삼중 스크린샷")
 
 ## <a name="the-elliptical-arc"></a>타원형 호의
 
@@ -585,7 +586,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음 세 가지 플랫폼에서 실행 중인:
 
-[![](arcs-images/ellipticalarc-small.png "타원형 호 페이지의 삼중 스크린샷")](arcs-images/ellipticalarc-large.png "타원형 호 페이지의 삼중 스크린샷")
+[![](arcs-images/ellipticalarc-small.png "타원형 호 페이지의 삼중 스크린샷")](arcs-images/ellipticalarc-large.png#lightbox "타원형 호 페이지의 삼중 스크린샷")
 
 **호 무한대** 페이지 무한대 기호를 그리는 데 타원형 호를 사용 합니다. 무한대 기호 반지름 100 단위 100 건으로 구분 된 2 개의 원을 기반으로 합니다.
 
@@ -653,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 코드를 사용 하 여는 `Bounds` 속성 `SKPath` 캔버스의 크기 조정을 무한대 사인 값의 크기를 확인 하려면:
 
-[![](arcs-images/arcinfinity-small.png "호 무한대 페이지의 삼중 스크린샷")](arcs-images/arcinfinity-large.png "호 무한대 페이지의 삼중 스크린샷")
+[![](arcs-images/arcinfinity-small.png "호 무한대 페이지의 삼중 스크린샷")](arcs-images/arcinfinity-large.png#lightbox "호 무한대 페이지의 삼중 스크린샷")
 
 결과 제안 하는 약간 작은 같습니다는 `Bounds` 속성 `SKPath` 경로 보다 큰 크기를 보고 합니다.
 
@@ -661,7 +662,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 긴밀 하 게 맞춤을 사용은 `TightBounds` 제어점을 제외 하는 속성입니다. 같습니다. 가로 모드에서 실행 되 고 사용 하 여 프로그램은 `TightBounds` 속성 경로 경계를 가져오려면:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "긴밀 하 게 한을 가진 호 무한대 페이지의 삼중 스크린샷")](arcs-images/arcinfinitytightbounds-large.png "긴밀 하 게 한을 가진 호 무한대 페이지의 삼중 스크린 샷")
+[![](arcs-images/arcinfinitytightbounds-small.png "긴밀 하 게 한을 가진 호 무한대 페이지의 삼중 스크린샷")](arcs-images/arcinfinitytightbounds-large.png#lightbox "긴밀 하 게 한을 가진 호 무한대 페이지의 삼중 스크린 샷")
 
 원호 및 직선 간의 연결 옵션은 수학적으로 부드러운에 호 직선 하 여 변경을 약간 상황이 뜻하지 않게 보일 수 있습니다. 더 나은 무한대 기호를 다음 페이지에 표시 됩니다.
 

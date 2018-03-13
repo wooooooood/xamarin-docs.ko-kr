@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4e640979305a568649c59f6c75033296153b99de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 838a11f078d735759eda1d45a082ccbad51e2779
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-ios"></a>IOS에서 터치
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/27/2018
 
 그러나의 보기 중 많은 `UIKit` 기본적으로 사용 되는 터치를 갖지 않습니다. 컨트롤에 대 한 터치 사용 하는 방법은 두 가지가 있습니다. 다음 스크린샷에 표시 된 것 처럼 ios 디자이너 속성 패드에서 사용자 상호 작용 사용 확인란을 선택 하 여 첫 번째 방법은 무엇입니까?
 
- [ ![](touch-in-ios-images/image1.png "Ios 디자이너 속성 패드에서 사용자 상호 작용 사용 확인란을 선택합니다")](touch-in-ios-images/image1.png)
+ [![](touch-in-ios-images/image1.png "Ios 디자이너 속성 패드에서 사용자 상호 작용 사용 확인란을 선택합니다")](touch-in-ios-images/image1.png#lightbox)
 
 또한 컨트롤러를 설정 하려면 사용할 수는 `UserInteractionEnabled` 속성을 true로는 `UIView` 클래스입니다. 이 코드에서 UI를 만들 경우에 필요 합니다.
 
@@ -81,7 +81,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 멀티 터치 컨트롤에서 기본적으로 사용 되지 않습니다. 다음 스크린샷에 표시 된 것 처럼 멀티 터치 iOS 디자이너에서에서 활성화할 수 있습니다.
 
- [ ![](touch-in-ios-images/image2.png "IOS 디자이너에서에서 사용 하도록 설정 하는 멀티 터치")](touch-in-ios-images/image2.png)
+ [![](touch-in-ios-images/image2.png "IOS 디자이너에서에서 사용 하도록 설정 하는 멀티 터치")](touch-in-ios-images/image2.png#lightbox)
 
 설정 하 여 멀티 터치를 프로그래밍 방식으로 설정할 수 이기도 `MultipleTouchEnabled` 코드의 다음 줄에 표시 된 것 처럼 속성:
 

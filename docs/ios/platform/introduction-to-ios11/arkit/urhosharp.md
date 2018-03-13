@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/01/2016
-ms.openlocfilehash: 4c6928af364870541581b784b7c4e9e7717eb2db
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 94963e92f8372316a982bbe38f1fb653d38b2a3b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-arkit-with-urhosharp"></a>UrhoSharp ARKit 사용
 
@@ -106,7 +106,7 @@ ARKit API는 상당히 간단, 만들기 및 구성 된 [ARSession](https://deve
 
 다음 그림 수행 되 어떤는 `ArkitApp` 클래스:
 
-[ ![클래스 및 화면에는 ArkitApp의 다이어그램](urhosharp-images/image2.png)](urhosharp-images/image2.png)
+[![클래스 및 화면에는 ArkitApp의 다이어그램](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
 ### <a name="rendering-the-frames"></a>프레임을 렌더링
 

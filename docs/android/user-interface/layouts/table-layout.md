@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 80147de0f639b4b597e11b41a6854f550edd61a9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 31713937f9423bacdee83620a7e852ea6f141ee6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tablelayout"></a>TableLayout
 
@@ -116,10 +116,9 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 응용 프로그램을 실행합니다. 다음을 참조 합니다.
 
-[![여러 테이블 행을 표시 하는 TableLayout 응용 프로그램의 예제 스크린 샷](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png)
+[![여러 테이블 행을 표시 하는 TableLayout 응용 프로그램의 예제 스크린 샷](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
-<a name="References" />
 
 ## <a name="references"></a>참조
 

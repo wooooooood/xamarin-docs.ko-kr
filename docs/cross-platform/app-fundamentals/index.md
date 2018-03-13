@@ -3,22 +3,22 @@ title: "응용 프로그램 기본 사항"
 description: "응용 프로그램의 핵심 개념"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 9e4e7705e1ca29b6abf716a48ae3fa0e7c1a19ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>응용 프로그램 기본 사항
 
 이 섹션에서 일반적인 작업 작업 또는 개발자가 모바일 응용 프로그램을 개발할 때 알고 있어야 하는 개념 중 일부는 지침을 제공 합니다.
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[크로스 플랫폼 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 Xamarin을 선택 하 고 디자인 하 고 모바일 응용 프로그램을 개발할 때는 몇 가지 사항에 유의 지속적으로 업데이트를 있습니다 수 모바일 플랫폼 간에 공유 되는 엄청난 코드 실현, 시장 출시 시간을 줄일, 기존 인력 활용 하 여, 모바일 액세스를 위한 고객 수요를 충족 하 고 플랫폼 간 복잡성을 줄입니다. &nbsp;이 문서에서는 유틸리티 및 생산성 응용 프로그램에 이러한 이점을 이해 하는 데 핵심 지침에 설명 합니다.
 

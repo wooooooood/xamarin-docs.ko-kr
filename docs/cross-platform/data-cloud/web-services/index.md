@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 76934b56503c381b40081d2ac82a785a7bb86fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 48489ca7dc28dcc14a7810b15dc1ffa1fd4f7cf4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -305,7 +305,7 @@ A *프록시* 사용 하면 응용 프로그램이 서비스에 연결 하는 AS
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[ ![](images/add-webreference-dialog.png "웹 서비스 URL은 호스팅된 원격 소스 또는 파일 경로 접두사를 통해 액세스할 수 있는 로컬 파일 시스템 리소스 수 있습니다.")](images/add-webreference-dialog.png)
+[![](images/add-webreference-dialog.png "웹 서비스 URL은 호스팅된 원격 소스 또는 파일 경로 접두사를 통해 액세스할 수 있는 로컬 파일 시스템 리소스 수 있습니다.")](images/add-webreference-dialog.png#lightbox)
 
 이 프로젝트의 웹 사이트 또는 서비스 참조 폴더에 프록시를 생성합니다. 프록시 생성 코드를 수정 하지 않아야 합니다.
 

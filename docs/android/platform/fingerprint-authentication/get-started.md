@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: ea9046c0c546a2f331aefd2332008e10ec6db3c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e3c986b03408dae98a5a79f257029c10909aeabd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>지문 인증 시작
 
@@ -27,13 +27,13 @@ ms.lasthandoff: 02/27/2018
 
 Android 응용 프로그램 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에 사용 권한입니다. 다음 스크린샷은 Visual Studio 2015에서 응용 프로그램에이 사용 권한을 추가 하는 방법을 보여 줍니다.
 
-[![사용 하도록 설정 하면\_Android 매니페스트 화면에는 지문](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png) 
+[![사용 하도록 설정 하면\_Android 매니페스트 화면에는 지문](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Android 응용 프로그램 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에 사용 권한입니다. 다음 스크린 샷에서 Mac 용 Visual Studio에서 응용 프로그램에이 사용 권한을 추가 하는 방법을 보여 줍니다.
 
-[![Android 응용 프로그램 화면에서 사용할 수 있도록 UseFingerprint](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png) 
+[![Android 응용 프로그램 화면에서 사용할 수 있도록 UseFingerprint](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 

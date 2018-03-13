@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c3de0150bd34667a9310b796bf98a6bff6c07a67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="databases"></a>Databases
 
@@ -27,13 +27,13 @@ _이 문서에서는 키-값 코딩 및 키-값 관찰 허용 하기 위해 SQLi
 1. **직접 액세스** -SQLite 데이터베이스에 직접 액세스 하 여 키-값 코딩에 대 한 데이터베이스의에서 데이터를 사용할 수 있으며 UI 요소와 데이터 바인딩을 Xcode의 인터페이스 작성기에서 만든 합니다. 키-값 코딩 및 바인딩 기술 Xamarin.Mac 응용 프로그램에서 데이터를 사용 하 여 작성 및 유지를 채우고 UI 요소를 사용 해야 하는 코드의 양을 크게 줄일 수 있습니다. 추가 백업 데이터를 분리 하는 이점이 있습니다 (_데이터 모델_) 사용자 인터페이스를 종료 하면 앞에서 (_모델-뷰-컨트롤러_)를 보다 융통성 있는 응용 프로그램 유지 관리 디자인 합니다.
 2. **SQLite.NET ORM** 오픈 소스를 사용 하 여 [SQLite.NET](http://www.sqlite.org) 개체 관계 관리자 ORM () 읽고 SQLite 데이터베이스에서 데이터를 쓰는 데 필요한 코드의 양을 상당히 줄일 수 있습니다. 다음이 데이터 표 보기와 같은 사용자 인터페이스 항목을 채우는 데 사용할 수 있습니다.
 
-[![실행 중인 응용 프로그램의 예로](databases-images/intro01.png "실행 중인 응용 프로그램의 예")](databases-images/intro01-large.png)
+[![실행 중인 응용 프로그램의 예로](databases-images/intro01.png "실행 중인 응용 프로그램의 예")](databases-images/intro01-large.png#lightbox)
 
 이 문서에서 키-값 코딩 및 Xamarin.Mac 응용 프로그램에서 SQLite 데이터베이스와 데이터 바인딩을 사용 하 여 작업의 기본 사항을 다룰 것입니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
 키-값 코딩 및 데이터 바인딩을 사용 합니다, 이후 하십시오 협의 [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 먼저 마찬가지로 핵심 기술 및 개념을 설명 합니다이 문서와 해당 샘플에 사용할 응용 프로그램입니다.
 
-참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-c 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
+참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
 
 ## <a name="direct-sqlite-access"></a>SQLite에 대 한 직접 액세스
 
@@ -52,7 +52,7 @@ Xcode의 인터페이스 작성기에서 UI 요소에 바인딩될 때 일어나
 1. 에 **솔루션 패드**를 마우스 오른쪽 단추로 클릭는 **참조** 폴더를 선택 **참조 편집**합니다.
 2. 둘 다 선택은 **Mono.Data.Sqlite** 및 **System.Data** 어셈블리: 
 
-    [![필요한 참조를 추가](databases-images/reference01.png "필요한 참조를 추가 합니다.")](databases-images/reference01-large.png)
+    [![필요한 참조를 추가](databases-images/reference01.png "필요한 참조를 추가 합니다.")](databases-images/reference01-large.png#lightbox)
 3. 클릭는 **확인** 단추 하 여 변경 내용을 저장 하 고 참조를 추가 합니다.
 
 ### <a name="modifying-the-data-model"></a>데이터 모델을 수정
@@ -1019,7 +1019,7 @@ _conn.Close ();
 
 예를 들어, 콤보 상자를 추가 하는 단순 바인딩 위의 예에서는 인터페이스 작성기에서 편집 하 고 라는 콘센트에 연결을 사용 하 여 노출 `EmployeeSelector`:
 
-[![콤보 상자 콘센트 노출](databases-images/combo01.png "콤보 상자 콘센트 노출")](databases-images/combo01-large.png)
+[![콤보 상자 콘센트 노출](databases-images/combo01.png "콤보 상자 콘센트 노출")](databases-images/combo01-large.png#lightbox)
 
 에 **특성 검사기**, 확인 된 **시 자동 완성 됩니다** 및 **사용 하 여 데이터 원본** 속성:
 
@@ -1924,7 +1924,7 @@ SQLite.NET 응용 프로그램에 포함 하는 NuGet 패키지로 제공 됩니
 1. 에 **솔루션 패드**를 마우스 오른쪽 단추로 클릭는 **패키지** 폴더를 선택 **패키지 추가 중...**
 2. 입력 `SQLite.net` 에 **검색 상자** 선택 하 고는 **sqlite net** 항목:
 
-    [![SQLite NuGet 패키지를 추가](databases-images/nuget01.png "SQLite NuGet 패키지를 추가 합니다.")](databases-images/nuget01-large.png)
+    [![SQLite NuGet 패키지를 추가](databases-images/nuget01.png "SQLite NuGet 패키지를 추가 합니다.")](databases-images/nuget01-large.png#lightbox)
 3. 클릭는 **패키지 추가** 단추를 완료 합니다.
 
 ### <a name="creating-the-data-model"></a>데이터 모델 만들기
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 사용 예제로 표 보기 Xcode의 인터페이스 작성기에서 UI를 추가 합니다. 이 테이블 뷰를 콘센트에 연결을 통해 노출 됩니다 (`OccupationTable`)에서는 C# 코드를 통해 액세스할 수 있도록 합니다.
 
-[![테이블 보기 콘센트 노출](databases-images/table01.png "테이블 보기 콘센트 노출")](databases-images/table01-large.png)
+[![테이블 보기 콘센트 노출](databases-images/table01.png "테이블 보기 콘센트 노출")](databases-images/table01-large.png#lightbox)
 
 다음으로, SQLite.NET 데이터베이스의 데이터로이 테이블을 채우기 위한 사용자 지정 클래스를 추가 합니다.
 

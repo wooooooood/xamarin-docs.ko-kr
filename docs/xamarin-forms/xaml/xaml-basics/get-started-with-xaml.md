@@ -3,16 +3,16 @@ title: "1 부입니다. XAML 시작"
 description: "Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠를 정의할 수 주로 사용 됩니다. XAML 파일은 항상는 C# 코드 파일의 태그에 대 한 코드 지원을 제공 하와 연결 합니다. 함께이 두 파일 속성 초기화 및 자식 뷰를 포함 하는 새 클래스 정의에 적용 됩니다. XAML 파일 내에서 XML 요소와 특성, 클래스 및 속성 참조 되 고 태그와 코드 간 연결이 설정 됩니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 8e02dbd8687fc10582874710db7ca6848f546751
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML 시작
 
@@ -195,7 +195,7 @@ Mac 용 Visual Studio에서 프로젝트를 빌드할 때 C# 코드 파일을 �
 
 컴파일 및이 프로그램을 실행 하는 경우는 `Label` XAML 알 수 있듯이 요소는 페이지의 가운데에 표시 합니다. 왼쪽에서 오른쪽에는 세 플랫폼은 iOS, Android 및 Windows 10 Mobile
 
-[![](get-started-with-xaml-images/xamlsamples.png "Xamarin.Forms 디스플레이 기본")](get-started-with-xaml-images/xamlsamples-large.png "Xamarin.Forms 기본 표시")
+[![](get-started-with-xaml-images/xamlsamples.png "Xamarin.Forms 디스플레이 기본")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "Xamarin.Forms 기본 표시")
 
 더 흥미로운 시각적 개체에 대 한 필요한 것은 더 많은 XAML 흥미로운 합니다.
 
@@ -354,7 +354,7 @@ public MainPage()
 
 설정의 `Content` 속성 페이지의 설정을 대체는 `Content` XAML 파일에는 속성입니다. 컴파일하고이 프로그램의 새 버전을 배포 하는 경우 단추가 화면에 나타납니다. 이동 누르지 `HelloXamlPage`합니다. 다음 결과 페이지에 iPhone, Android 및 Windows 10 Mobile은 장치:
 
-[ ![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml1-large.png "레이블 텍스트를 회전")
+[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전")
 
 다시 탐색할 수 있습니다 `MainPage` 를 사용 하 여는 **< 다시** ios, android에서는 전화 맨 아래에 또는 페이지 맨 위에 있는 왼쪽된 화살표를 사용 하 여 또는 왼쪽된 화살표를 사용 하 여 Windows 10 Mobile에 페이지의 맨 아래에 단추입니다.
 
@@ -364,7 +364,7 @@ public MainPage()
 
 창의 모양은 다음과 같습니다.
 
-[ ![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자로 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png "유니코드 문자로 레이블 텍스트를 회전")
+[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자로 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자로 레이블 텍스트를 회전")
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
@@ -392,7 +392,7 @@ public MainPage()
 
 이 XAML 파일에는 구문상 완료 되며 다음과 같이 표시:
 
-[ ![](get-started-with-xaml-images/xamlpluscode1.png "페이지에 있는 여러 컨트롤")](get-started-with-xaml-images/xamlpluscode1-large.png "페이지에 있는 여러 컨트롤")
+[![](get-started-with-xaml-images/xamlpluscode1.png "페이지에 있는 여러 컨트롤")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "페이지에 있는 여러 컨트롤")
 
 그러나 해야이 프로그램의 기능적 불완전 한 수를 고려해 야 할 가능성이 높습니다. 아마도 `Slider` 발생 하도록 되어는 `Label` 현재 값을 표시 하 고 `Button` 프로그램 내에서 작업을 수행 하기 위한 용도가 것입니다.
 
@@ -483,7 +483,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 프로그램을 처음 실행할 때는 `Label` 표시 되지 않습니다는 `Slider` 때문에 값의 `ValueChanged` 이벤트가 아직 실행 되지 않았습니다. 하지만 조작 하는 `Slider` 인해 값이 표시 될 수 있습니다.
 
-[ ![](get-started-with-xaml-images/xamlpluscode2.png "표시 되는 슬라이더 값")](get-started-with-xaml-images/xamlpluscode2-large.png "슬라이더 값 표시")
+[![](get-started-with-xaml-images/xamlpluscode2.png "표시 되는 슬라이더 값")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "슬라이더 값 표시")
 
 이제는 `Button`합니다. 보겠습니다에 대 한 응답을 시뮬레이션 한 `Clicked` 로 경고를 표시 하 여 이벤트는 `Text` 단추의 합니다. 이벤트 처리기 안전 하 게 캐스팅 수는 `sender` 인수에는 `Button` 다음 해당 속성에 액세스:
 
@@ -530,7 +530,7 @@ public partial class XamlPlusCodePage : ContentPage {
 ## <a name="related-links"></a>관련 링크
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [2 부 합니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [3 부 합니다. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5 단계입니다. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

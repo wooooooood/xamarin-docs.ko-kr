@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: ba460bee067162f8e42f84f230f93cb1cf98ba98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b10894d6b18d78d682825000726c5ef2cbe5ba6b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-background-location"></a>연습-배경 위치를 사용 하 여
 
@@ -31,55 +31,55 @@ ms.lasthandoff: 02/27/2018
 
     Mac 용 Visual Studio에서 코드는 다음과 같이 보입니다.
 
-    [![](location-walkthrough-images/image7.png "사용 하도록 설정 하는 백그라운드 모드와 위치 업데이트 확인란에서 확인란을 선택합니다")](location-walkthrough-images/image7.png)
+    [![](location-walkthrough-images/image7.png "사용 하도록 설정 하는 백그라운드 모드와 위치 업데이트 확인란에서 확인란을 선택합니다")](location-walkthrough-images/image7.png#lightbox)
 
     Visual Studio에서 **Info.plist** 다음 키/값 쌍을 추가 하 여 수동으로 업데이트 해야 합니다.
 
-        ```csharp
-        <key>UIBackgroundModes</key>
-        <array>
-            <string>location</string>
-        </array>
-        ```
+    ```xml
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
+    ```
 
 1. 응용 프로그램 등록은 장치에서 위치 데이터를 가져올 수 있습니다. IOS의 경우에 `CLLocationManager` 클래스 위치 정보에 액세스 하는 데 사용 되 고 위치 업데이트를 제공 하는 이벤트를 발생 시킬 수 있습니다.
 
 1. 코드에서 라는 새 클래스를 만들고 `LocationManager` 다양 한 화면 및 위치 업데이트를 구독 하는 코드에 대 한 단일 장소를 제공 합니다. 에 `LocationManager` 클래스의 인스턴스를 확인 합니다는 `CLLocationManager` 호출 `LocMgr`:
 
-```csharp
-        public class LocationManager
-        {
-          protected CLLocationManager locMgr;
+    ```csharp
+    public class LocationManager
+    {
+        protected CLLocationManager locMgr;
 
-          public LocationManager (){
+        public LocationManager () {
             this.locMgr = new CLLocationManager();
             this.locMgr.PausesLocationUpdatesAutomatically = false;
 
             // iOS 8 has additional permissions requirements
             if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-              locMgr.RequestAlwaysAuthorization (); // works in background
-              //locMgr.RequestWhenInUseAuthorization (); // only in foreground
+                locMgr.RequestAlwaysAuthorization (); // works in background
+                //locMgr.RequestWhenInUseAuthorization (); // only in foreground
             }
 
             if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
-               locMgr.AllowsBackgroundLocationUpdates = true;
+                locMgr.AllowsBackgroundLocationUpdates = true;
             }
-          }
-
-          public CLLocationManager LocMgr{
-            get { return this.locMgr; }
-          }
         }
-```
 
-    The code above sets a number of properties and permissions on the [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) class:
+        public CLLocationManager LocMgr {
+            get { return this.locMgr; }
+        }
+    }
+    ```
+
+    위의 코드에 다양 한 속성 및 사용 권한을 설정 하는 [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) 클래스:
 
     - `PausesLocationUpdatesAutomatically` -위치 업데이트를 일시 중지 하는 시스템 수 있는지 여부에 따라 설정할 수 있는 부울 값입니다. 기본적으로 일부 장치에서 `true`, 업데이트를 중단 배경 위치 약 15 분 후에 장치가 될 수 있습니다.
     - `RequestAlwaysAuthorization` -응용 프로그램 사용자에 게 위치에 백그라운드에서 액세스를 허용 하는 옵션을 제공 하려면이 메서드를 전달 해야 합니다. `RequestWhenInUseAuthorization` 위치에 액세스 하 여 앱이 포그라운드에서 하는 경우에 허용 하는 옵션을 사용자에 게 제공 하려는 경우에 전달 수 있습니다.
     - `AllowsBackgroundLocationUpdates` – 앱이 일시 중단 되었을 때 위치 업데이트를 받을 수 있도록 설정할 수 있는 iOS 9에에서 도입 하는 부울 속성입니다.
 
     > [!IMPORTANT]
-> **경고**: iOS 8 (및 큰)에 있는 항목 필요는 **Info.plist** 파일을 사용자에 게 권한 부여 요청의 일부로 표시 합니다.
+    > **경고**: iOS 8 (및 큰)에 있는 항목 필요는 **Info.plist** 파일을 사용자에 게 권한 부여 요청의 일부로 표시 합니다.
 
 1. 키를 추가 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription` 요청 위치 데이터에 액세스 하는 경고의 사용자에 게 표시 되는 문자열을 사용 합니다.
 
@@ -89,25 +89,25 @@ ms.lasthandoff: 02/27/2018
 1. 내에서 `LocationManager` 클래스, 이라는 메서드를 만들어 `StartLocationUpdates` 를 다음 코드로 합니다. 이 코드에서는에서 위치 업데이트 수신을 시작 하는 `CLLocationManager`:
 
     ```csharp
-        if (CLLocationManager.LocationServicesEnabled) {
-          //set the desired accuracy, in meters
-          LocMgr.DesiredAccuracy = 1;
-          LocMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
-          {
-              // fire our custom Location Updated event
-              LocationUpdated (this, new LocationUpdatedEventArgs (e.Locations [e.Locations.Length - 1]));
-          };
-          LocMgr.StartUpdatingLocation();
-        }
-        ```
+    if (CLLocationManager.LocationServicesEnabled) {
+        //set the desired accuracy, in meters
+        LocMgr.DesiredAccuracy = 1;
+        LocMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
+        {
+            // fire our custom Location Updated event
+            LocationUpdated (this, new LocationUpdatedEventArgs (e.Locations [e.Locations.Length - 1]));
+        };
+        LocMgr.StartUpdatingLocation();
+    }
+    ```
 
-    There are several important things happening in this method. First, we perform a check to see if the application has access to location data on the device. We verify this by calling `LocationServicesEnabled` on the `CLLocationManager`. This method will return **false** if the user has denied the application access to location information.
+    이 방법에서 발생 하는 몇 가지 중요 한 사항이 있습니다. 첫째, 응용 프로그램에이 장치에서 위치 데이터에 액세스할 수 있는지 확인할 검사를 수행 합니다. 호출 하 여이 확인 `LocationServicesEnabled` 에 `CLLocationManager`합니다. 이 메서드는 반환 **false** 사용자가 위치 정보에 대 한 응용 프로그램 액세스를 거부 한 경우.
 
-1. Next, tell the location manager how often to update. `CLLocationManager` provides many options for filtering and configuring location data, including the frequency of updates. In this example, set the `DesiredAccuracy` to update whenever the location changes by a meter. For more information on configuring location update frequency and other preferences, refer to the [CLLocationManager Class Reference](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) in the Apple documentation.
+1. 다음으로 업데이트 하려면 얼마나 자주 위치 관리자를 지시 합니다. `CLLocationManager` 필터링 및 업데이트 빈도 등의 위치 데이터를 구성 하기 위한 다양 한 옵션을 제공 합니다. 이 예제에서는 설정는 `DesiredAccuracy` 측정기 위치 변경 될 때마다 업데이트 됩니다. 위치 업데이트 빈도 및 기타 기본 설정을 구성에 대 한 자세한 내용은 참조는 [CLLocationManager 클래스 참조](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) Apple 설명서에 있습니다.
 
-1. Finally, call `StartUpdatingLocation` on the `CLLocationManager` instance. This tells the location manager to get an initial fix on the current location, and to start sending updates
+1. 마지막으로 호출 `StartUpdatingLocation` 에 `CLLocationManager` 인스턴스. 이렇게 하면 위치 관리자는 현재 위치에 초기 수정 하 고 업데이트를 보내기 시작 합니다.
 
-So far, the location manager has been created, configured with the kinds of data we want to receive, and has determined the initial location. Now the code needs to render the location data to the user interface. We can do this with a custom event that takes a `CLLocation` as an argument:
+지금까지 위치 관리자를 만든 수신, 하고자 하는 데이터의 종류를 사용 하 여 구성 하 고 초기 위치를 확인 했습니다. 이제는 코드는 사용자 인터페이스에 대 한 위치 데이터를 렌더링 해야 합니다. 사용 하는 사용자 지정 이벤트와 이렇게 하려면 한 `CLLocation` 인수로:
 
 ```csharp
 // event for the location changing
@@ -146,45 +146,47 @@ public class LocationUpdatedEventArgs : EventArgs
 1. 솔루션 패드에서 두 번 클릭은 `ViewController.cs` 파일을 편집 하는 LocationManager와 호출의 새 인스턴스를 만들고 `StartLocationUpdates`에 있습니다.
   다음과 같이 표시 하는 코드를 변경 합니다.
 
-        #region Computed Properties
-        public static bool UserInterfaceIdiomIsPhone {
-                    get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-                }
+    ```csharp
+    #region Computed Properties
+    public static bool UserInterfaceIdiomIsPhone {
+                get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+            }
 
-        public static LocationManager Manager { get; set;}
-        #endregion
+    public static LocationManager Manager { get; set;}
+    #endregion
 
-        #region Constructors
-        public ViewController (IntPtr handle) : base (handle)
-        {
-        // As soon as the app is done launching, begin generating location updates in the location manager
-            Manager = new LocationManager();
-            Manager.StartLocationUpdates();
-        }
+    #region Constructors
+    public ViewController (IntPtr handle) : base (handle)
+    {
+    // As soon as the app is done launching, begin generating location updates in the location manager
+        Manager = new LocationManager();
+        Manager.StartLocationUpdates();
+    }
 
-        #endregion
+    #endregion
+    ```
 
     데이터가 없는 표시 되지만 동적 디스크인 위치 업데이트 응용 프로그램 시작 시에 시작 됩니다.
 
 1. 위치 업데이트를 수신 했으므로 화면 위치 정보로 업데이트 합니다. 다음 메서드에서 위치를 가져옵니다 우리의 `LocationUpdated` 이벤트 UI에 표시 합니다.
 
-        #region Public Methods
-        public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
-        {
-            // Handle foreground updates
-            CLLocation location = e.Location;
+    ```csharp
+    #region Public Methods
+    public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
+    {
+        // Handle foreground updates
+        CLLocation location = e.Location;
 
-            LblAltitude.Text = location.Altitude + " meters";
-            LblLongitude.Text = location.Coordinate.Longitude.ToString ();
-            LblLatitude.Text = location.Coordinate.Latitude.ToString ();
-            LblCourse.Text = location.Course.ToString ();
-            LblSpeed.Text = location.Speed.ToString ();
+        LblAltitude.Text = location.Altitude + " meters";
+        LblLongitude.Text = location.Coordinate.Longitude.ToString ();
+        LblLatitude.Text = location.Coordinate.Latitude.ToString ();
+        LblCourse.Text = location.Course.ToString ();
+        LblSpeed.Text = location.Speed.ToString ();
 
-            Console.WriteLine ("foreground updated");
-        }
-
-        #endregion
-
+        Console.WriteLine ("foreground updated");
+    }
+    #endregion
+    ```
 
 구독 해야는 `LocationUpdated` AppDelegate, UI를 업데이트 하 고 새 메서드 호출에는 이벤트입니다. 에 다음 코드를 추가 `ViewDidLoad,` 바로 뒤의 `StartLocationUpdates` 호출:
 
@@ -203,43 +205,47 @@ public override void ViewDidLoad ()
 
 이제 응용 프로그램이 실행 될 때 같아야 합니다 다음과 같습니다.
 
-[![](location-walkthrough-images/image5.png "실행 하는 예제 응용 프로그램")](location-walkthrough-images/image5.png)
+[![](location-walkthrough-images/image5.png "실행 하는 예제 응용 프로그램")](location-walkthrough-images/image5.png#lightbox)
 
 ## <a name="handling-active-and-background-states"></a>활성 및 배경 상태 처리
 
 1. 응용 프로그램은 포그라운드 및 활성 상태일 위치 업데이트를 출력 합니다. 응용 프로그램이 백그라운드 들어가며 때 수행 되는 작업을 보여 주기 위해 재정의 `AppDelegate` 전경과 배경 간에 전환할 때 응용 프로그램을 콘솔에 작성 되도록 응용 프로그램을 추적 하는 메서드 상태 변경:
 
-        public override void DidEnterBackground (UIApplication application)
-        {
-          Console.WriteLine ("App entering background state.");
-        }
+    ```csharp
+    public override void DidEnterBackground (UIApplication application)
+    {
+        Console.WriteLine ("App entering background state.");
+    }
 
-        public override void WillEnterForeground (UIApplication application)
-        {
-          Console.WriteLine ("App will enter foreground");
-        }
+    public override void WillEnterForeground (UIApplication application)
+    {
+        Console.WriteLine ("App will enter foreground");
+    }
+    ```
 
     에 다음 코드를 추가 `LocationManager` 지속적으로 업데이트 된 위치를 인쇄 하려면 데이터를 응용 프로그램 출력 위치 정보를 확인 하는 백그라운드에서 계속 사용할 수 있습니다.
 
-        public class LocationManager
+    ```csharp
+    public class LocationManager
+    {
+        public LocationManager ()
         {
-          public LocationManager ()
-          {
-            ...
-            LocationUpdated += PrintLocation;
-          }
-          ...
-
-          //This will keep going in the background and the foreground
-          public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
-            CLLocation location = e.Location;
-            Console.WriteLine ("Altitude: " + location.Altitude + " meters");
-            Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
-            Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
-            Console.WriteLine ("Course: " + location.Course);
-            Console.WriteLine ("Speed: " + location.Speed);
-          }
+        ...
+        LocationUpdated += PrintLocation;
         }
+        ...
+
+        //This will keep going in the background and the foreground
+        public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
+        CLLocation location = e.Location;
+        Console.WriteLine ("Altitude: " + location.Altitude + " meters");
+        Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
+        Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
+        Console.WriteLine ("Course: " + location.Course);
+        Console.WriteLine ("Speed: " + location.Speed);
+        }
+    }
+    ```
 
 1. 코드에 나머지 하나의 문제가: 응용 프로그램은 backgrounded 때 UI를 업데이트 하는 동안 됩니다 원인 iOS 됩니다 종료 합니다. 응용 프로그램을 백그라운드 화할 때는 코드 위치 업데이트에서 등록을 취소 하 고 UI 업데이트를 중지 해야 합니다.
 
@@ -247,9 +253,11 @@ public override void ViewDidLoad ()
 
     다음 코드 조각 알림을 사용 하 여 UI 업데이트를 중단 하는 경우 확인 보기를 하는 방법을 보여 줍니다. 이동이 `ViewDidLoad`:
 
-        UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
-          Manager.LocationUpdated -= HandleLocationChanged;
-        });
+    ```csharp
+    UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
+        Manager.LocationUpdated -= HandleLocationChanged;
+    });
+    ```
 
     앱을 실행 하는 경우 출력 다음과 같이 표시 됩니다.
 

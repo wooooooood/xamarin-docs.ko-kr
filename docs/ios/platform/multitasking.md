@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e5bb4747811729adf5363b0a893b0f85108b220
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="multitasking-for-ipad"></a>IPad 용 멀티태스킹
 
@@ -35,6 +36,11 @@ iOS 9 iPad 특정 하드웨어에 동시에 두 개의 응용 프로그램을 �
 응용 프로그램 개발자는 수도 있습니다 [되지 않게 멀티태스킹](#Opting-Out-of-Multitasking)를 포함 하 여 [PIP 비디오 재생을 사용 하지 않도록 설정](#Disabling-PIP-Video-Playback)합니다.
 
 이 문서에서는 멀티태스킹 환경에서 올바르게 실행 되는 Xamarin.iOS 앱 또는 앱에 적합 한 것이 좋은 경우 멀티태스킹 옵트아웃 하는 방법을 확인 하는 데 필요한 단계를 설명 합니다.
+
+> [!VIDEO https://youtube.com/embed/GctYAozoLr8]
+
+**IPad의 경우에 대 한 멀티태스킹 여 [Xamarin 대학](https://university.xamarin.com)**
+
 
 <a name="Multitasking-QuickStart" />
 
@@ -59,7 +65,7 @@ iOS 9 iPad의 도입으로에서 새로운 멀티태스킹 능력 제공 _슬라
 
 기능을 통해 이동 하는 두 번째 응용 프로그램을 선택 하 고 빠른 상호 작용을 제공 하는 작은 슬라이딩 패널에 표시할 수 있습니다. 패널을 통해 슬라이드는 일시적 이며 사용자가 다시 기본 응용 프로그램을 다시 작업할 때 닫힙니다.
 
-[ ![](multitasking-images/about01.png "통해 슬라이드 패널")](multitasking-images/about01.png)
+[![](multitasking-images/about01.png "통해 슬라이드 패널")](multitasking-images/about01.png#lightbox)
 
 기억해 야 할 주요 사항은 사용자가 어떤 두 응용 프로그램 개발자가 제어할 수 없거나이 프로세스와 나란히 실행 될 결정입니다. 결과적으로, Xamarin.iOS 앱을 통해 슬라이드 패널에서 제대로 실행 되도록 하기 위해 수행 해야 하는 몇 가지 있습니다.
 
@@ -74,7 +80,7 @@ iOS 9 iPad의 도입으로에서 새로운 멀티태스킹 능력 제공 _슬라
 
 지원 되는 iPad 하드웨어 (iPad iPad를 미니 4 및 iPad Pro만 공기 2)에서 사용자는 두 번째 응용 프로그램을 선택 하 고 분할 화면 모드에서 현재 실행 중인 응용 프로그램을 사용 하 여-병렬 실행 수입니다. 사용자의 기본 화면으로 끌어 각 앱 차지 하는 백분율을 제어할 수 있는 화면 구분선입니다.
 
-[ ![](multitasking-images/about02.png "분할 뷰")](multitasking-images/about02.png)
+[![](multitasking-images/about02.png "분할 뷰")](multitasking-images/about02.png#lightbox)
 
 슬라이드 통해와 마찬가지로 사용자가 어떤 두 응용 프로그램-병렬 실행을 결정 하 고 다시 개발자는이 프로세스를 통해 제어 하지 않습니다. 결과적으로, 분할 된 뷰 Xamarin.iOS 앱에서 이와 비슷한 요구 사항을 넣습니다.
 
@@ -89,7 +95,7 @@ iOS 9 iPad의 도입으로에서 새로운 멀티태스킹 능력 제공 _슬라
 
 그림 기능에서 새 그림 (라고도 _PIP_) 사용자는 위에서 실행 중인 다른 응용 프로그램 화면에서 아무 곳 이나 배치할 수 있는 작은, 부동 창에서 비디오를 볼 수 있습니다.
 
-[ ![](multitasking-images/about03.png "예가 그림 부동 창에는 그림")](multitasking-images/about03.png)
+[![](multitasking-images/about03.png "예가 그림 부동 창에는 그림")](multitasking-images/about03.png#lightbox)
 
 슬라이드를 통해 및 분할 뷰를 사용 하 여 하는 사용자 그림 모드로 그림에는 비디오를 시청에 대해 모든 권한을 갖습니다. 응용 프로그램의 main 함수를 비디오를 시청 하려면 PIP 모드에서 제대로 동작 하려면이 필요 합니다. 그렇지 않으면 변경 내용이 없습니다 PIP를 지원 해야 합니다.
 
@@ -111,44 +117,27 @@ IOS 9 멀티태스킹 새 Xamarin.iOS 앱을 지원 하려면 자동 레이아�
 
 ### <a name="screen-size-and-orientation-considerations"></a>화면 크기와 방향 고려 사항
 
-IOS 9 하기 전에 앱 agains 특정 장치 화면 크기와 방향이 설정 디자인할 수 있습니다. 앱 슬라이드 아웃 패널 또는 분할 보기 모드에서 실행할 수 있습니다, 때문에 실행 compact 또는 일반 가로 크기 클래스 장치의 실제 방향 또는 화면 크기에 관계 없이 iPad에서 자체를 찾을 수 있습니다.
+IOS 9 하기 전에 특정 장치 화면 크기와 방향이 설정에 대 한 앱을 디자인할 수 있습니다. 앱 슬라이드 아웃 패널 또는 분할 보기 모드에서 실행할 수 있습니다, 때문에 실행 compact 또는 일반 가로 크기 클래스 장치의 실제 방향 또는 화면 크기에 관계 없이 iPad에서 자체를 찾을 수 있습니다.
 
-[ ![](multitasking-images/sizeclasses01.png "화면 크기와 방향 고려 사항")](multitasking-images/sizeclasses01.png)
+[![](multitasking-images/sizeclasses01.png "화면 크기와 방향 고려 사항")](multitasking-images/sizeclasses01.png#lightbox)
 
 IPad에서 전체 화면 앱에 일반 가로 및 세로 크기가 클래스가 있습니다. 모든 Iphone 있지만 iPhone 6 Plus 및 iPhone 6s 방향에서 모두에 클래스를 압축 크기 또한 합니다. IPhone 6 Plus 및 iPhone 6s 가로 모드에서 일반 가로 크기 클래스 및 흡사 iPad 미니 세로 크기 클래스를 압축 해야 합니다.
 
 위로 이동 및 분할 된 뷰를 지 원하는 Ipad를에서 다음과 같은 조합을 결국 수 있습니다.:
 
-<table width=100% border="1px">
-    <tr>
-        <td><b>방향</b></td>
-        <td><b>기본 응용 프로그램</b></td>
-        <td><b>보조 응용 프로그램</b></td>
-    </tr>
-    <tr>
-        <td><b>세로</b></td>
-        <td>화면의 75%<br/>Compact 가로<br/>일반 세로</td>
-        <td>화면의 25%<br/>Compact 가로<br/>일반 세로</td>
-    </tr>
-    <tr>
-        <td><b>가로</b></td>
-        <td>화면의 75%<br/>일반 가로<br/>일반 세로</td>
-        <td>화면의 25%<br/>Compact 가로<br/>일반 세로</td>
-    </tr>
-    <tr>
-        <td><b>가로</b></td>
-        <td>화면 50%<br/>Compact 가로<br/>일반 세로</td>
-        <td>화면 50%<br/>Compact 가로<br/>일반 세로</td>
-    </tr>
-</table>
+| **방향** | **기본 응용 프로그램** | **보조 응용 프로그램** |
+|--- |--- |--- |
+| **세로** |화면의 75%<br />Compact 가로<br />일반 세로|화면의 25%<br />Compact 가로<br />일반 세로|
+| **가로** |화면의 75%<br />일반 가로<br />일반 세로|화면의 25%<br />Compact 가로<br />일반 세로|
+| **가로** |화면 50%<br />Compact 가로<br />일반 세로|화면 50%<br />Compact 가로<br />일반 세로|
 
 예제에서 [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) 목록과 동시에 세부 정보 보기 모두 제공 합니다 앱을 전체 화면 가로 모드로 iPad에서 실행 되는 경우:
 
-[ ![](multitasking-images/sizeclasses03.png "동시에 표시 되는 세부 정보 보기 및 목록")](multitasking-images/sizeclasses03.png)
+[![](multitasking-images/sizeclasses03.png "동시에 표시 되는 세부 정보 보기 및 목록")](multitasking-images/sizeclasses03.png#lightbox)
 
 동일한 응용 프로그램을 통해 슬라이드 패널에서를 실행 하는 경우 Compact 가로 크기 클래스로으로 배치 하 고 목록만 표시:
 
-[ ![](multitasking-images/sizeclasses04.png "장치가 가로 때 제공 된 목록에만")](multitasking-images/sizeclasses04.png)
+[![](multitasking-images/sizeclasses04.png "장치가 가로 때 제공 된 목록에만")](multitasking-images/sizeclasses04.png#lightbox)
 
 앱이에서 올바르게 작동을 보장 하려면 특성 컬렉션 크기 클래스와 함께 채택 하 고 준수 해야는 `IUIContentContainer` 및 `IUITraitEnvironment` 인터페이스입니다. Apple의를 참조 하십시오. [UITraitCollection 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) 및 [스토리 보드 통합 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 대 한 자세한 내용은 가이드입니다.
 
@@ -166,11 +155,11 @@ iOS 9 iPad에서 실행, Apple에 하드웨어 키보드에 대 한 추가 지�
 
 **명령 탭** Mac OS 매우 유사 하 게 키보드에서 응용 프로그램 사이 빠르게 전환할 수 있도록 하는 응용 프로그램 전환기를 표시 합니다.
 
-[ ![](multitasking-images/keyboard01.png "응용 프로그램 전환기")](multitasking-images/keyboard01.png)
+[![](multitasking-images/keyboard01.png "응용 프로그램 전환기")](multitasking-images/keyboard01.png#lightbox)
 
 IOS 9 앱에서 바로 가기 키가 포함 된 경우 사용자 수 키를 누른 채는 **명령**, **옵션** 또는 **제어** 팝업에 표시 하는 키:
 
-[ ![](multitasking-images/keyboard02.png "바로 가기 키 팝업")](multitasking-images/keyboard02.png)
+[![](multitasking-images/keyboard02.png "바로 가기 키 팝업")](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>사용자 지정 바로 가기 키를 정의합니다.
 
@@ -206,7 +195,7 @@ public void NewEntry() {
 
 하드웨어 키보드를 연결 및 사용자가 iPad에서이 응용 프로그램을 실행 하는 경우 **명령 N**, 새 항목이 목록에 추가 됩니다. 사용자는에 유지 하는 경우는 **명령** 키, 바로 가기 목록이 표시 됩니다.
 
-[ ![](multitasking-images/keyboard03.png "바로 가기 키 팝업")](multitasking-images/keyboard03.png)
+[![](multitasking-images/keyboard03.png "바로 가기 키 팝업")](multitasking-images/keyboard03.png#lightbox)
 
 이 샘플을 참조 하십시오 [MultiTask 앱](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) 예제 구현에 대 한 합니다.
 
@@ -240,7 +229,7 @@ Apple 모든 iOS 9 앱 멀티태스킹 지원 하는지 알 수, 사항이 있�
 
 프로젝트의 편집 되지 않게 하려면 두 슬라이드 아웃 패널 또는 분할 보기 모드에서 실행 되 고의 Xamarin.iOS 앱 **Info.plist** 파일을 확인 **전체 화면 필요**:
 
-[ ![](multitasking-images/fullscreen01.png "사용 하 고 부재 멀티태스킹 중")](multitasking-images/fullscreen01.png)
+[![](multitasking-images/fullscreen01.png "사용 하 고 부재 멀티태스킹 중")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
 > **참고:** 않습니다 멀티태스킹 Opting 아웃 슬라이드 아웃 또는 분할 뷰에서 실행 되지 않도록 앱을 방지, 동안 **하지** 다른 앱과 함께 표시 안 함 슬라이드 아웃 또는 그림 비디오에서 그림에서 실행 되지 않도록 방지 프로그램 응용 프로그램입니다.

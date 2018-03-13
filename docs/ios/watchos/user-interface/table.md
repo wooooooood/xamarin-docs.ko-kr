@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4887b9a42c5a855353b5a4e422559aafcdc68173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="table-control"></a>Table 컨트롤
 
@@ -24,7 +24,7 @@ watchOS `WKInterfaceTable` 제어가 해당 iOS 정수 보다 훨씬 간단 하�
 
 끌어서는 **테이블** 를 장면에 대 한 제어 합니다. 기본적으로이 (표시 단일 지정 되지 않은 행 레이아웃) 처럼 보입니다.
 
-[ ![](table-images/add-table-sml.png "테이블 추가")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "테이블 추가")](table-images/add-table.png#lightbox)
 
 테이블 이름을 부여는 **속성** 패드의 **이름** 상자를 코드에서를 참조할 수 있습니다.
 
@@ -34,7 +34,7 @@ watchOS `WKInterfaceTable` 제어가 해당 iOS 정수 보다 훨씬 간단 하�
 
 설정 하는 **클래스** 행 컨트롤러에 대 한에서 행을 선택는 **문서 개요** 에 클래스 이름을 입력 하 고는 **속성** 패드:
 
-[ ![](table-images/add-row-controller-sml.png "속성 패드에서 클래스 이름 입력")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "속성 패드에서 클래스 이름 입력")](table-images/add-row-controller.png#lightbox)
 
 행의 컨트롤러에 대 한 클래스 설정 되 고 나면 IDE는 프로젝트에 C# 파일을 해당 만들어집니다. 행에 (예: 레이블) 컨트롤을 끌어과 코드에서를 참조할 수 있도록 이름을 지정 합니다.
 

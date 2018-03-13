@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 37c0b3f1f826893bef5c1a7ffb5d422c1c8c5c78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>탭 표시줄 컨트롤러 작업
 
@@ -20,7 +20,7 @@ _이 문서에서는 디자인 하 고 탭 모음 컨트롤러 Xamarin.tvOS 앱 
 
 TvOS 앱의 여러 형식에 대 한 주요 탐색 화면 위쪽에서 실행 되는 탭 막대로 표시 됩니다. 사용자 천공 기와 왼쪽 및 오른쪽에서 사용자의 선택 가능한 범주 및 변경 내용이 아래 콘텐츠 영역 목록.
 
-[ ![](tab-bars-images/tab01.png "샘플 탭 표시줄")](tab-bars-images/tab01.png)
+[![](tab-bars-images/tab01.png "샘플 탭 표시줄")](tab-bars-images/tab01.png#lightbox)
 
 기본적으로 투명 탭 모음 이며 항상 화면 위쪽에 나타납니다. 포커스를 탭 표시줄이 화면 위쪽 140 픽셀은 설명 있지만 포커스 아래 콘텐츠 영역으로 이동 하면 자리를 비울 슬라이드 신속 하 게 됩니다.
 
@@ -64,22 +64,22 @@ Apple 탭 막대를 사용 하기 위한 다음 제안 사항을 있습니다.
     
 1. 새 Xamarin.tvOS 응용 프로그램을 시작 하 고 선택 **tvOS** > **앱** > **앱 탭**: 
 
-    [ ![](tab-bars-images/tab02.png "탭된 앱 선택")](tab-bars-images/tab02.png)
+    [![](tab-bars-images/tab02.png "탭된 앱 선택")](tab-bars-images/tab02.png#lightbox)
 1. 모든 새 Xamarin.tvOS 솔루션 만들기를 수행 하십시오.
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 변경 하려면는 **아이콘** 또는 **제목** 지정된 된 범주에 대 한 선택은 **탭 모음 항목** 에 대 한는 **뷰-컨트롤러** 에  **문서 개요**:
 
-    [ ![](tab-bars-images/tab03a.png "문서 개요의 뷰 컨트롤러에 대 한 항목 탭 표시줄")](tab-bars-images/tab03a.png)
+    [![](tab-bars-images/tab03a.png "문서 개요의 뷰 컨트롤러에 대 한 항목 탭 표시줄")](tab-bars-images/tab03a.png#lightbox)
 1. 다음 필수 속성을 설정는 **위젯을 탭** 의 **속성 탐색기**: 
 
-    [ ![](tab-bars-images/tab03.png "위젯 탭")](tab-bars-images/tab03.png)
+    [![](tab-bars-images/tab03.png "위젯 탭")](tab-bars-images/tab03.png#lightbox)
 1. 새 범주 (탭)을 추가 하려면 한 **뷰-컨트롤러** 디자인 화면으로: 
 
-    [ ![](tab-bars-images/tab04.png "뷰 컨트롤러")](tab-bars-images/tab04.png)
+    [![](tab-bars-images/tab04.png "뷰 컨트롤러")](tab-bars-images/tab04.png#lightbox)
 1. 컨트롤을 클릭 하 고에서 끌어는 **탭 뷰-컨트롤러** 새 **뷰-컨트롤러**합니다.
 1. 선택 된 팝업 화면에서 **컨트롤러 볼** 탭 (범주)으로 새 보기를 추가 하려면: 
 
-    [ ![](tab-bars-images/tab05.png "탭을 선택 합니다.")](tab-bars-images/tab05.png)
+    [![](tab-bars-images/tab05.png "탭을 선택 합니다.")](tab-bars-images/tab05.png#lightbox)
 1. IOS 디자이너에서에서 UI 요소를 추가 하 여 정상적으로 각 Caterogies 콘텐츠 영역에 대 한 UI의 레이아웃을 디자인 합니다.
 1. C# 코드에서 UI 컨트롤을 사용 하려면 필요한 모든 이벤트를 노출 합니다.
 1. C# 코드에 노출 하려는 UI 컨트롤 이름을 지정 합니다.
@@ -89,22 +89,22 @@ Apple 탭 막대를 사용 하기 위한 다음 제안 사항을 있습니다.
     
 1. 새 Xamarin.tvOS 응용 프로그램을 시작 하 고 선택 **tvOS** > **앱** > **앱 탭**: 
 
-    [ ![](tab-bars-images/tab02vs.png "탭된 앱 선택")](tab-bars-images/tab02vs.png)
+    [![](tab-bars-images/tab02vs.png "탭된 앱 선택")](tab-bars-images/tab02vs.png#lightbox)
 1. 모든 새 Xamarin.tvOS 솔루션 만들기를 수행 하십시오.
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 변경 하려면는 **아이콘** 또는 **제목** 지정된 된 범주에 대 한 선택은 **탭 모음 항목** 에 대 한는 **뷰-컨트롤러** 에  **문서 개요**:
 
-    [ ![](tab-bars-images/tab03avs.png "문서 개요의 뷰 컨트롤러")](tab-bars-images/tab03avs.png)
+    [![](tab-bars-images/tab03avs.png "문서 개요의 뷰 컨트롤러")](tab-bars-images/tab03avs.png#lightbox)
 1. 다음 필수 속성을 설정는 **위젯을 탭** 의 **속성 탐색기**: 
 
-    [ ![](tab-bars-images/tab03vs.png "위젯 탭")](tab-bars-images/tab03vs.png)
+    [![](tab-bars-images/tab03vs.png "위젯 탭")](tab-bars-images/tab03vs.png#lightbox)
 1. 새 범주 (탭)을 추가 하려면 끌어는 **뷰-컨트롤러** 에서 **도구 상자** 디자인 화면에 놓습니다. 
 
-    [ ![](tab-bars-images/tab04vs.png "뷰 컨트롤러")](tab-bars-images/tab04vs.png)
+    [![](tab-bars-images/tab04vs.png "뷰 컨트롤러")](tab-bars-images/tab04vs.png#lightbox)
 1. 컨트롤을 클릭 하 고에서 끌어는 **탭 뷰-컨트롤러** 새 **뷰-컨트롤러**합니다.
 1. 선택 된 팝업 화면에서 **컨트롤러 볼** 탭 (범주)으로 새 보기를 추가 하려면: 
 
-    [ ![](tab-bars-images/tab05vs.png "탭을 선택 합니다.")](tab-bars-images/tab05vs.png)
+    [![](tab-bars-images/tab05vs.png "탭을 선택 합니다.")](tab-bars-images/tab05vs.png#lightbox)
 1. IOS 디자이너에서에서 UI 요소를 추가 하 여 정상적으로 각 Caterogies 콘텐츠 영역에 대 한 UI의 레이아웃을 디자인 합니다.
 1. C# 코드에서 UI 컨트롤을 사용 하려면 필요한 모든 이벤트를 노출 합니다.
 1. C# 코드에 노출 하려는 UI 컨트롤 이름을 지정 합니다.
@@ -137,7 +137,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 실행 하는 경우 다음과 같은 결과가 발생 합니다.
 
-[ ![](tab-bars-images/tab06.png "배지와 탭 모음 항목")](tab-bars-images/tab06.png)
+[![](tab-bars-images/tab06.png "배지와 탭 모음 항목")](tab-bars-images/tab06.png#lightbox)
 
 사용 하 여는 `Title` 속성은 `UITabBarItem` 제목을 변경 하려면 및 `Image` 아이콘 변경할 속성입니다.
 

@@ -1,17 +1,17 @@
 ---
 title: "UrhoSharp Windows 지원"
-description: "Windows 특정 설치 프로그램 및 기능"
+description: "Windows 특정 설치 및 UrhoSharp에 대 한 기능입니다."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: ec4fec01aa27e522aeec6df09041f14b1c3db080
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0deefe0e00ec96a21317bfa2e8bf4894d5deae47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
 
@@ -27,11 +27,11 @@ _Windows 특정 설치 프로그램 및 기능_
 
 # <a name="standalone-project"></a>독립 실행형 프로젝트
 
-## <a name="creating-a-project"></a>프로젝트 만들기
+### <a name="creating-a-project"></a>프로젝트 만들기
 
 콘솔 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
 
-## <a name="configuring-and-launching-urho"></a>구성 및 Urho 시작
+### <a name="configuring-and-launching-urho"></a>구성 및 Urho 시작
 
 응용 프로그램을 시작 하려면이 수행 합니다.
 
@@ -39,17 +39,17 @@ _Windows 특정 설치 프로그램 및 기능_
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
-## <a name="example"></a>예
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-# <a name="integrated-with-wpf"></a>WPF와 통합
+## <a name="integrated-with-wpf"></a>WPF와 통합
 
-## <a name="creating-a-project"></a>프로젝트 만들기
+### <a name="creating-a-project"></a>프로젝트 만들기
 
 WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
 
-## <a name="configuring-and-launching-urho-from-wpf"></a>구성 및 WPF에서 Urho 시작
+### <a name="configuring-and-launching-urho-from-wpf"></a>구성 및 WPF에서 Urho 시작
 
 서브 클래스를 만든 `Window` 하 고 다음과 같이 자산을 구성 합니다.
 
@@ -83,17 +83,17 @@ WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-## <a name="example"></a>예
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-# <a name="integrated-with-uwp"></a>UWP와 통합
+## <a name="integrated-with-uwp"></a>UWP와 통합
 
-## <a name="creating-a-project"></a>프로젝트 만들기
+### <a name="creating-a-project"></a>프로젝트 만들기
 
 UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
 
-## <a name="configuring-and-launching-urho-from-uwp"></a>구성 및 Urho UWP에서 시작
+### <a name="configuring-and-launching-urho-from-uwp"></a>구성 및 Urho UWP에서 시작
 
 서브 클래스를 만든 `Window` 하 고 다음과 같이 자산을 구성 합니다.
 
@@ -116,17 +116,17 @@ UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-## <a name="example"></a>예
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-# <a name="integrated-with-windowsforms"></a>Windows.Forms와 통합
+## <a name="integrated-with-windowsforms"></a>Windows.Forms와 통합
 
-## <a name="creating-a-project"></a>프로젝트 만들기
+### <a name="creating-a-project"></a>프로젝트 만들기
 
 Windows.Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
 
-## <a name="configuring-and-launching-urho-from-windowsforms"></a>구성 및 Urho Windows.Forms에서 시작
+### <a name="configuring-and-launching-urho-from-windowsforms"></a>구성 및 Urho Windows.Forms에서 시작
 
 폼의 Urho를 시작, 참조 [전체 샘플](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
 

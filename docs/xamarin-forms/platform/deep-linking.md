@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>응용 프로그램 인덱싱 및 직접 링크
 
 _응용 프로그램 인덱싱을 그렇지 않은 경우 무시 될 후 몇 가지 사용 하 여 검색 결과에 표시 하 여 관련 상태를 유지 하는 응용 프로그램 수 있습니다. 직접 링크 수 딥 링크에서 참조 하는 페이지로 이동 하 여 일반적으로 응용 프로그램 데이터를 포함 하는 검색 결과에 응답할 수 있습니다. 이 문서에서는 응용 프로그램 인덱싱을 사용 하는 방법과 Xamarin.Forms 응용 프로그램 콘텐츠를 iOS 및 Android 장치에서 검색할 수 있도록 하는 직접 링크를 보여줍니다._
 
-## <a name="overview"></a>개요
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**심층 Xamarin.Forms 및 Azure에 의해 링크 [Xamarin 대학](https://university.xamarin.com/)**
+
 
 Xamarin.Forms 응용 프로그램 인덱싱 및 직접 링크 응용 프로그램 인덱싱을 응용 프로그램을 통해 사용자가 탐색에 대 한 메타 데이터 게시에 대 한 API를 제공 합니다. 스포트라이트 검색, Google 검색 또는 웹 검색에 대 한 인덱싱된 콘텐츠가 검색 다음 수 있습니다. 딥 링크를 포함 하는 검색 결과에 누르기 딥 링크에서 참조 하는 페이지를 탐색 하는 데 일반적으로 및 응용 프로그램에서 처리 될 수 있는 이벤트를 발생 합니다.
 
@@ -31,7 +35,7 @@ Xamarin.Forms 응용 프로그램 인덱싱 및 직접 링크 응용 프로그�
 SQLite 데이터베이스를 사용 하는 방법에 대 한 자세한 내용은 참조 [로컬 데이터베이스 작업을](~/xamarin-forms/app-fundamentals/databases.md)합니다.
 
 > [!NOTE]
-> **참고**: Xamarin.Forms 응용 프로그램 인덱싱 및 심층 기능을 연결 iOS 및 Android 플랫폼에서 제공 되 고 iOS 9 및 API 23 각각 필요 합니다.
+> Xamarin.Forms 응용 프로그램 인덱싱 및 기능을 연결 하는 전체 iOS 및 Android 플랫폼에서 제공 되 고 iOS 9 및 API 23 각각 필요 합니다.
 
 ## <a name="setup"></a>설정
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 이렇게 하면 추가 [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) 응용 프로그램의 인스턴스 [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) 컬렉션입니다.
 
 > [!NOTE]
-> **참고**:는 `RegisterLink` 메서드 페이지에 대 한 인덱싱된는 콘텐츠 업데이트를 사용할 수도 있습니다.
+> `RegisterLink` 메서드 페이지에 대 한 인덱싱된는 콘텐츠 업데이트를 사용할 수도 있습니다.
 
 한 번는 [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) 인스턴스에 등록 되어 인덱싱, 검색 결과에 나타날 수 있습니다. 다음 스크린샷은 iOS 플랫폼 검색 결과에 표시 되는 인덱싱된 콘텐츠:
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 이렇게 하면 제거는 [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) 에서 응용 프로그램의 인스턴스 [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) 컬렉션입니다.
 
 > [!NOTE]
-> **참고**: Android 검색 결과에서 인덱싱된 콘텐츠를 제거할 수는 없습니다.
+> Android에서은 검색 결과에서 인덱싱된 콘텐츠를 제거할 수 없습니다.
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 - `shouldAddToPublicIndex` –는 `string` 의 `true` 또는 `false` 인덱싱된 콘텐츠 다음 iOS 장치에 응용 프로그램을 설치 하지 않은 사용자에 게 제공할 수 있는 Apple의 공용 클라우드 인덱스를 추가할 것인지 여부를 제어 하 합니다. 그러나 해 서 콘텐츠 공용 인덱싱에 대해 설정 되어 있는지 자동으로 추가 됩니다 Apple의 공용 클라우드 인덱스로 것은 아닙니다. 자세한 내용은 참조 [공용 검색 인덱싱](~/ios/platform/search/nsuseractivity.md)합니다. 이 키로 설정 해야 하는 참고 `false` 개인 데이터를 추가 하는 경우는 [ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) 컬렉션입니다.
 
 > [!NOTE]
-> **참고**:는 `KeyValues` 컬렉션 Android 플랫폼에서 사용 되지 않습니다.
+> `KeyValues` 컬렉션 Android 플랫폼에서 사용 되지 않습니다.
 
 핸드 오프 하는 방법에 대 한 자세한 내용은 참조 [핸드 오프 소개](~/ios/platform/handoff.md)합니다.
 

@@ -3,14 +3,15 @@ title: "요약 장 27입니다. 사용자 지정 렌더러"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>요약 장 27입니다. 사용자 지정 렌더러
 
@@ -66,7 +67,7 @@ Windows 런타임 [ `ViewRenderer<TElement, TNativeElement>` ](https://github.co
 
 모든는 `ViewRenderer` 파생 항목 포함는 `ExportRenderer` 연결 하는 어셈블리 수준에서 특성의 `HelloView` 클래스는 특정 `HelloViewRenderer` 클래스. 다음은 Xamarin.Forms 개별 플랫폼 프로젝트에서는 렌더러를 찾는 방법입니다.
 
-[![Hello 보기의 삼중 스크린 샷](images/ch27fg02-small.png "사용자 지정 렌더러")](images/ch27fg02-large.png "사용자 지정 렌더러")
+[![Hello 보기의 삼중 스크린 샷](images/ch27fg02-small.png "사용자 지정 렌더러")](images/ch27fg02-large.png#lightbox "사용자 지정 렌더러")
 
 ## <a name="renderers-and-properties"></a>렌더러 및 속성
 
@@ -89,7 +90,7 @@ Windows 런타임 [ `ViewRenderer<TElement, TNativeElement>` ](https://github.co
 
 [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) 클래스 표시 중 몇 `EllipseView` 개체:
 
-[![타원 데모의 삼중 스크린 샷](images/ch27fg03-small.png "EllipseView 사용자 지정 렌더러")](images/ch27fg03-large.png "EllipseView 사용자 지정 렌더러")
+[![타원 데모의 삼중 스크린 샷](images/ch27fg03-small.png "EllipseView 사용자 지정 렌더러")](images/ch27fg03-large.png#lightbox "EllipseView 사용자 지정 렌더러")
 
 [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) 반송는 `EllipseView` 화면의 측면을 해제 합니다.
 

@@ -3,16 +3,16 @@ title: "iOS 게임 Api"
 description: "이 문서에서는 Xamarin.iOS 게임의 그래픽 및 오디오 기능을 개선 하기 위해 사용할 수 있는 iOS 9 제공한 새 게임 향상 된 기능을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6c735c68ee61032d8dfe3a74e6858bc058c6fa47
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-gaming-apis"></a>iOS 게임 Api
 
@@ -21,7 +21,7 @@ _이 문서에서는 Xamarin.iOS 게임의 그래픽 및 오디오 기능을 개
 Apple는 iOS 9에에서 Api 게임을 보다 쉽게 Xamarin.iOS 앱에서 게임 그래픽 및 오디오를 구현할 수 있도록 몇 가지 기술적 개선을 했습니다.
 여기에 두 간편한 개발을 통해 높은 수준의 프레임 워크 및 향상 된 속도 그래픽 기능에 대 한 iOS 장치 GPU의 기능을 통해 포함 됩니다.
 
-[ ![](images/flocking01.png "떼지 실행 되는 앱의 예")](images/flocking01.png)
+[![](images/flocking01.png "떼지 실행 되는 앱의 예")](images/flocking01.png#lightbox)
 
 여기에 GameplayKit "," ReplayKit "," 모델 I/O "," MetalKit "및" Metal 성능 셰이더 금속, SceneKit 및 SpriteKit 더욱 향상 기능입니다.
 
@@ -56,7 +56,7 @@ GameplayKit에 대 한 자세한 내용은 Apple의를 참조 하십시오 [Game
 
 다음과 같은 맵을 고려해 야 합니다.
 
-[ ![](images/gkpathfindpath.png "예제 경로 찾기 맵")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "예제 경로 찾기 맵")](images/gkpathfindpath.png#lightbox)
 
 경로 찾기를 사용 하 여이 C# 코드 맵을 통해는 방법을 찾을 수 있습니다.:
 
@@ -367,7 +367,7 @@ public override void ViewWillLayoutSubviews ()
 
 를 실행할 때 약간 애니메이션 _"Boids"_ 우리의 손가락 탭 주위 flock 됩니다.
 
-[ ![](images/flocking01.png "애니메이션 효과 준된 약간 Boids 손가락 탭 주위 flock 됩니다.")](images/flocking01.png)
+[![](images/flocking01.png "애니메이션 효과 준된 약간 Boids 손가락 탭 주위 flock 됩니다.")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>다른 Apple 예제
 

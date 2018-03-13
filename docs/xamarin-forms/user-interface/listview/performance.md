@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 2acaef5fd42b867e88fb9b81d401ea752480124a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 81d4aec3153a4cb7bbb0f3577c5a67acd430f279
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -45,7 +45,7 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> **참고**: 유니버설 Windows 플랫폼 (UWP) The 무시는 [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) 캐싱 전략을 사용 하기 때문에 항상 캐싱 성능 향상을 위해 합니다. 기본적으로 동작 하기 처럼는 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 캐싱 전략 적용 됩니다.
+> 유니버설 Windows 플랫폼 (UWP) 무시는 [ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/) 캐싱 전략을 사용 하기 때문에 항상 캐싱 성능 향상을 위해 합니다. 기본적으로 동작 하기 처럼는 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 캐싱 전략 적용 됩니다.
 
 ### <a name="retainelement"></a>RetainElement
 
@@ -101,14 +101,14 @@ IOS 및 Android에서 셀 사용자 지정 렌더러를 사용 하는 경우 해
 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 사용 하 여 한 [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 선택 하는 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 캐싱 전략을 캐시 하지 않습니다 `DataTemplate`s입니다. 대신,는 `DataTemplate` 목록에는 데이터의 각 항목을 선택 합니다.
 
 > [!NOTE]
-> **참고**:는 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 필수에 캐싱 전략 Xamarin.Forms 2.4에 도입 된 때를 [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 선택 하는 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) 각 `DataTemplate` 동일한 반환 해야 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 유형입니다. 예를 들어 한 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 와 `DataTemplateSelector` 중 하나를 반환할 수 있는 `MyDataTemplateA` (여기서 `MyDataTemplateA` 반환는 `ViewCell` 형식의 `MyViewCellA`), 또는 `MyDataTemplateB` (여기서 `MyDataTemplateB`반환는 `ViewCell` 형식의 `MyViewCellB`), `MyDataTemplateA` 반환 해야이 반환 `MyViewCellA` 그렇지 않으면 예외가 throw 됩니다.
+> [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 필수에 캐싱 전략 Xamarin.Forms 2.4에 도입 된 때를 [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 선택 하는 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)각 `DataTemplate` 동일한 반환 해야 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 유형입니다. 예를 들어 한 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 와 `DataTemplateSelector` 중 하나를 반환할 수 있는 `MyDataTemplateA` (여기서 `MyDataTemplateA` 반환는 `ViewCell` 형식의 `MyViewCellA`), 또는 `MyDataTemplateB` (여기서 `MyDataTemplateB`반환는 `ViewCell` 형식의 `MyViewCellB`), `MyDataTemplateA` 반환 해야이 반환 `MyViewCellA` 그렇지 않으면 예외가 throw 됩니다.
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
 [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) 기반 캐싱 전략의 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/) 는 또한 함으로써 캐싱 전략을 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 는 를사용하여[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 선택 하는 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/), `DataTemplate`의형식 목록에서 항목에 따라 캐시 됩니다. 따라서 `DataTemplate`의항목 인스턴스당 한 번이 아닌 항목 형식 당 한 번만 선택 됩니다.
 
 > [!NOTE]
-> **참고**:는 [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) 필수에 캐싱 전략 하는 `DataTemplate`에서 반환 된 s는 [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 사용 해야 합니다는 [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) 사용 하는 생성자는 `Type`합니다.
+> [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/) 필수에 캐싱 전략 하는 `DataTemplate`에서 반환 된 s는 [ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/) 사용 해야 합니다는 [ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) 사용 하는 생성자는 `Type`합니다.
 
 ### <a name="setting-the-caching-strategy"></a>캐싱 전략을 설정합니다.
 

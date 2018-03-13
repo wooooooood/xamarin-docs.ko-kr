@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9dc50aeec88131a1ce49c7e3357382c019774450
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7f42d6e36638bf5c7e98b9363295e37997ee067
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-nunit-264-using-nuget"></a>NuGet을 사용하여 NUnit 2.6.4 설치하기
 
@@ -43,16 +43,16 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 1. **패키지 관리자 열기** - **패키지**를 마우스 오른쪽 단추로 클릭하고 팝업 메뉴에서 **패키지 추가**를 선택합니다.
 
-    [![](installing-nunit-using-nuget-images/add-packages-xs.png "패키지를 마우스 오른쪽 단추로 클릭하고 팝업 메뉴에서 패키지 추가를 선택합니다.")](installing-nunit-using-nuget-images/add-packages-xs.png)
+    [![](installing-nunit-using-nuget-images/add-packages-xs.png "패키지를 마우스 오른쪽 단추로 클릭하고 팝업 메뉴에서 패키지 추가를 선택합니다.")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
     
 1. **`NUnit version:2.6.4`를 검색함** - Mac용 Visual Studio는 NUnit 3.0을 제거(필요한 경우)하고 NUnit 2.6.4를 다운로드하여 설치합니다. **패키지 추가** 대화 상자에서 텍스트 `nunit version:2.6.4`를 오른쪽 위 모서리에 있는 **검색** 필드에 입력합니다. 검색 결과에서 **NUnit**을 선택하고 **패키지 추가** 단추를 클릭합니다.
 
-    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "검색 결과에서 NUnit를 선택하고 패키지 추가 단추를 클릭합니다.")](installing-nunit-using-nuget-images/nunit-search-xs.png)
+    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "검색 결과에서 NUnit를 선택하고 패키지 추가 단추를 클릭합니다.")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
 
 
 솔루션 패드에서 NUnit 패키지의 버전 번호를 검사하여 NUnit 2.6.4이 설치되었는지 확인할 수 있습니다.
 
-[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "솔루션 패드에서 NUnit 패키지의 버전 번호 검사")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png)
+[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "솔루션 패드에서 NUnit 패키지의 버전 번호 검사")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png#lightbox)
 
 ## <a name="summary"></a>요약
 
@@ -68,7 +68,7 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 1. **NuGet 패키지 관리자 콘솔 시작하기** - **도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔**을 선택합니다.
 
-    [![](installing-nunit-using-nuget-images/package-manager-console.png "NuGet 패키지 관리자 콘솔 시작하기 - 도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔을 선택합니다.")](installing-nunit-using-nuget-images/package-manager-console.png)
+    [![](installing-nunit-using-nuget-images/package-manager-console.png "NuGet 패키지 관리자 콘솔 시작하기 - 도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔을 선택합니다.")](installing-nunit-using-nuget-images/package-manager-console.png#lightbox)
     
 1. **NUnit 버전 확인** - 필요한 경우 명령 `Get-Package -Project <UITEST PROJECT>`을 실행하여 설치된 NUnit 버전을 확인할 수도 있습니다.
 

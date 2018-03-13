@@ -7,12 +7,12 @@ ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ccd55d4d7f1aea55110e109bed1fbd4ebc90b93f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 
@@ -44,7 +44,7 @@ Android 활동 수명 주기는 개발자 리소스 관리 프레임 워크를 �
 
 Android OS는 활동의 상태에 따라 arbitrates 합니다. 이렇게 하면 더 이상 사용 하 여, 메모리 및 리소스를 회수 하려면 os 중인 활동을 식별 하는 Android 없습니다. 다음 다이어그램에서는 활동의 수명 동안을 통과할 수 상태를 보여 줍니다.
 
-[ ![활동 상태 다이어그램](images/image1-sml.png)](images/image1.png)
+[![활동 상태 다이어그램](images/image1-sml.png)](images/image1.png#lightbox)
 
 이러한 상태는 다음과 같이 4 개의 주요 그룹으로 나눌 수 있습니다.
 
@@ -69,7 +69,7 @@ Android OS는 활동의 상태에 따라 arbitrates 합니다. 이렇게 하면 
 
 Android SDK 및 확장에 의해 Xamarin.Android framework 응용 프로그램 내에서 활동의 상태를 관리 하기 위한 강력한 모델을 제공 합니다. 활동의 상태를 변경할 때는 해당 활동에 특정 메서드를 호출 하는 운영 체제에서 활동 알림이 전송 됩니다. 다음 다이어그램은 관계에는 활동 수명 주기에서 이러한 메서드를 보여줍니다.
 
-[ ![활동 수명 주기 순서도](images/image2-sml.png)](images/image2.png)
+[![활동 수명 주기 순서도](images/image2-sml.png)](images/image2.png#lightbox)
 
 개발자는 활동 내에서 이러한 메서드를 재정의 하 여 상태 변경 내용을 처리할 수 있습니다. 단, 모든 수명 주기 메서드는 UI 스레드에서 호출 및 등 새 활동을 표시에서 현재 작업 숨기기 등의 UI 작업의 다음 부분을 수행 합니다. 운영 체제는 차단 하는 것이 유용 합니다. 따라서 이러한 메서드의 코드 간단 하 게 잘 수행 생각 될 응용 프로그램을 만들 수 있어야 합니다. 모든 장기 실행 작업은 백그라운드 스레드에서 실행 되어야 합니다.
 
@@ -205,7 +205,7 @@ public void OnPause()
 
 다양 한 Android 장치에는 두 가지 단추가: "뒤로" 단추와 "홈" 단추가 있습니다. 이러한 예: Android 4.0.3 다음 스크린 샷에 볼 수 있습니다.
 
-[ ![뒤로 및 홈 단추](images/image4-sml.png)](images/image4.png)
+[![뒤로 및 홈 단추](images/image4-sml.png)](images/image4.png#lightbox)
 
 표시 되는 동일한 효과가 백그라운드에서 응용 프로그램을 게시 하는 경우에 두 개의 단추는 미묘한 차이가 있습니다. 사용자가 뒤로 단추를 클릭 하면 이러한 한다는 Android 작업과 완료 합니다. Android 활동을 삭제 됩니다. 반면, 사용자 홈 단추를 클릭할 때 활동 단순히에 놓입니다 백그라운드 &ndash; Android 활동을 종료 하지 것입니다.
 
@@ -225,7 +225,6 @@ public void OnPause()
 
 이 가이드에서는 처음 두 옵션에 설명 합니다.
 
- <a name="Bundle_State" />
 
 
 ### <a name="bundle-state"></a>번들 상태
@@ -241,7 +240,7 @@ public void OnPause()
 
 다음 다이어그램에서는 이러한 메서드의 사용 방법을 보여 줍니다.
 
-[ ![번들 상태 순서도](images/image3-sml.png)](images/image3.png)
+[![번들 상태 순서도](images/image3-sml.png)](images/image3.png#lightbox)
 
 #### <a name="onsaveinstancestate"></a>OnSaveInstanceState
 
@@ -276,7 +275,7 @@ protected override void OnCreate (Bundle bundle)
 
 위의 코드 증가 라는 정수 `c` 때 이라는 단추 `incrementCounter` 를 클릭 하면 결과에 표시는 `TextView` 라는 `output`합니다. 경우 구성 변경-예를 들어 때 장치를 회전-위의 코드는 값을 손실 `c` 때문에 `bundle` 것 `null`아래 그림에 표시 된 것 처럼:
 
-[ ![이전 값 표시 되지 않습니다.](images/07-sml.png)](images/07.png)
+[![이전 값 표시 되지 않습니다.](images/07-sml.png)](images/07.png#lightbox)
 
 값을 보존 하려면 `c` 이 예제에서는 활동을 재정의할 수 `OnSaveInstanceState`, 아래와 같이 번들의 값을 저장 합니다.
 
@@ -295,10 +294,9 @@ c = bundle.GetInt ("counter", -1);
 ```
 
 > [!NOTE]
-> **참고:** 이것은 항상에 중요 한 호출의 기본 구현 `OnSaveInstanceState` 를 뷰 계층의 상태를 저장할 수도 있습니다.
+> 이것은 항상에 중요 한 호출의 기본 구현 `OnSaveInstanceState` 를 뷰 계층의 상태를 저장할 수도 있습니다.
 
 
-<a name="View_State" />
 
 ##### <a name="view-state"></a>상태 보기
 
@@ -312,7 +310,7 @@ c = bundle.GetInt ("counter", -1);
 
 이후는 `EditText` 컨트롤에는 `id` 할당, 사용자 데이터 일부를 입력 하 고가 장치를 회전할 때 데이터도 표시 됩니다, 아래와 같이:
 
-[ ![가로 모드에서 데이터는 보존 됨](images/08-sml.png)](images/08.png)
+[![가로 모드에서 데이터는 보존 됨](images/08-sml.png)](images/08.png#lightbox)
 
 #### <a name="onrestoreinstancestate"></a>OnRestoreInstanceState
 
@@ -334,8 +332,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 사용 하 여 상태 저장에 대 한 예제는 `Bundle`, 참조는 [연습-저장 하는 활동 상태](saving-state.md)합니다.
 
 
-<a name="Bundle_Limitations" />
-
 #### <a name="bundle-limitations"></a>번들 제한 사항
 
 하지만 `OnSaveInstanceState` 를 사용 하면 일시적 데이터를 저장 하는 쉽게 몇 가지 제한이 있기 때문에:
@@ -348,7 +344,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 
 번들 상태는 많은 메모리를 사용 하지 않는 단순 데이터에 대 한 유용한 반면 *비구성 인스턴스 데이터* 는 더 복잡 한 데이터 또는 데이터를 검색 하는 데 비용이 유용 하 고 웹 서비스 호출 또는 복잡 한 데이터베이스 쿼리 합니다. 필요에 따라 비 구성 인스턴스 데이터 개체에 저장 됩니다. 다음 섹션에서는 소개 `OnRetainNonConfigurationInstance` 구성 변경을 통해 더 복잡 한 데이터 형식을 유지 하는 방법으로 합니다.
 
-<a name="Persisting_Complex_Data" />
 
 ### <a name="persisting-complex-data"></a>복잡 한 데이터를 유지합니다.
 
@@ -407,7 +402,7 @@ public class NonConfigInstanceActivity : ListActivity
 
 이 코드 형식 JSON으로 지정 하는 웹에서 결과 검색 하 고, 구문 분석 하 고 다음 스크린샷에 표시 된 것 처럼 쿼리 결과 목록에 표시.
 
-[ ![화면에 표시 되는 결과](images/06-sml.png)](images/06.png)
+[![화면에 표시 되는 결과](images/06-sml.png)](images/06.png#lightbox)
 
 구성 변경-예를 들어 회전할 때 발생 한 장치-코드는 프로세스를 반복 합니다. 사용할 수는 원래 검색 된 결과 다시 사용 하 고 불필요 하 게, 중복 네트워크 호출을 일으키지, `OnRetainNonconfigurationInstance` 아래와 같이 결과 저장 하려면:
 
@@ -492,5 +487,5 @@ Android 활동 수명 주기는 응용 프로그램 내에서 활동을 상태 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [처리 회전](~/android/app-fundamentals/handling-rotation.md)
+- [회전 처리](~/android/app-fundamentals/handling-rotation.md)
 - [Android 활동](https://developer.xamarin.com/api/type/Android.App.Activity/)

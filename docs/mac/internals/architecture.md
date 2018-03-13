@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4e4392a52035c8285bc746da75e93fcb8e7c7695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e32a06499d68c58bedbe88b24dc40b6c86ee8d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.Mac 아키텍처
 
@@ -24,7 +24,7 @@ Xamarin.Mac 응용 프로그램 모노 실행 환경 내에서 실행 및 Xamari
 
 다음 다이어그램에서는이 아키텍처의 기본적인 개요를 보여 줍니다.
 
-[![아키텍처의 기본적인 개요를 보여 주는 다이어그램](architecture-images/mac-arch.png "아키텍처의 기본적인 개요를 보여 주는 다이어그램")](architecture-images/mac-arch-large.png)
+[![아키텍처의 기본적인 개요를 보여 주는 다이어그램](architecture-images/mac-arch.png "아키텍처의 기본적인 개요를 보여 주는 다이어그램")](architecture-images/mac-arch-large.png#lightbox)
 
 ### <a name="native-and-managed-code"></a>네이티브 모듈과 관리 코드
 

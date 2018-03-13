@@ -7,18 +7,17 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 84ef87f5ed84fcd0a9aa2504c52a0fec17404e1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
 
 _이 문서에 바인딩 가능한 원인과 해결 방법이 함께 생성 하는 경우 발생할 수 있는 몇 가지 일반적인 오류 요약 되어 있습니다._
 
-<a name="OVERVIEW" />
 
 ## <a name="overview"></a>개요
 
@@ -38,7 +37,6 @@ Android 라이브러리 바인딩 (한 **.aar** 또는 **.jar**) 파일은 간�
 
 또한 Android 라이브러리 디컴파일 하 형식과 Xamarin.Android 바인딩할 시도 하는 메서드를 검사할 유용할 수 있습니다. 이 내용은이 가이드에서 나중에 자세히 설명 합니다.
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## <a name="decompiling-an-android-library"></a>Android 라이브러리 디컴파일하지
 
@@ -59,9 +57,8 @@ Android 라이브러리 decompiled 있어야, 되 면 소스 코드를 검사 �
 - **`import` 참조 되지 않는 라이브러리에 대 한 문을** &ndash; 참조 되지 않는 라이브러리를 식별 하 고 해당 종속성을 사용 하 여 바인딩 Xamarin.Android 프로젝트 추가 **빌드 작업** 의 **ReferenceJar**  또는 **EmbedddedReferenceJar**합니다.
 
 > [!NOTE]
-> **참고:** Java 라이브러리 디컴파일하지 금지 되었거나 현지법 또는 Java 라이브러리를 게시 라이선스에 따라 법적 제한 사항이 적용 됩니다. 필요한 경우를 디컴파일할 Java 라이브러리 및 소스 코드를 검사 하기 전에 법적 professional의 서비스를 등록 합니다.
+> Java 라이브러리 디컴파일하지 금지 되었거나 현지법 또는 Java 라이브러리를 게시 라이선스에 따라 법적 제한 사항이 적용 됩니다. 필요한 경우를 디컴파일할 Java 라이브러리 및 소스 코드를 검사 하기 전에 법적 professional의 서비스를 등록 합니다.
 
-<a name="INSPECTING_API_XML" />
 
 ## <a name="inspect-apixml"></a>API를 검사 합니다. XML
 
@@ -71,19 +68,16 @@ Xamarin.Android은 XML 파일 이름의 생성 하는 데 바인딩 프로젝트
 
 이 파일 Xamarin.Android 바인딩은 중임 모든 Java Api의 목록을 제공 합니다. 이 파일의 내용에는 누락 된 형식 또는 메서드를 식별, 바인딩이 중복 되었습니다 데 도움이 됩니다. 이 파일의 검사 지루하고 시간이 오래 걸리는 경우에 원인이 무엇 바인딩 문제에 대 한 단서를 제공할 수 있습니다. 예를 들어 **api.xml** 속성은 부적절 한 형식을 반환 하거나 관리 되는 동일한 이름을 공유 하를 입력 하는 두 드러날 수 있습니다.
 
-<a name="KNOWN_ISSUES" />
 
 ## <a name="known-issues"></a>알려진 문제
 
 이 섹션은 일반적인 오류 메시지 또는 증상 중 일부를 나열 하는 내 Android 라이브러리 바인딩할 하려고 할 때 발생 합니다.
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### <a name="problem-java-version-mismatch"></a>문제: Java 버전이 일치 하지 않습니다
 
 형식이 생성 되지 않을 경우에 따라 또는 예기치 않은 작동 중단의 Java 라이브러리도 컴파일 되었습니다에 비해 최신 또는 이전 버전 중 하나를 사용 하는 때문에 발생할 수 있습니다. Xamarin.Android 프로젝트를 사용 하는 JDK의 동일한 버전을 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>문제: Java 라이브러리를 하나 이상 있어야 있습니다.
 
@@ -93,7 +87,6 @@ Xamarin.Android은 XML 파일 이름의 생성 하는 데 바인딩 프로젝트
 
 빌드 작업 설정 되어 있는지 확인 `EmbeddedJar`합니다. 에 대 한 여러 빌드 동작 때문입니다. JAR 파일 (예: `InputJar`, `EmbeddedJar`, `ReferenceJar` 및 `EmbeddedReferenceJar`), 바인딩 생성기 기본적으로 사용할을 자동으로 추측할 수 없습니다. 빌드 작업에 대 한 자세한 내용은 참조 [빌드 동작](~/android/platform/binding-java-library/index.md)합니다.
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>문제: 로드할 수 없습니다 바인딩 도구는 합니다. JAR 라이브러리
 
@@ -104,7 +97,6 @@ Xamarin.Android은 XML 파일 이름의 생성 하는 데 바인딩 프로젝트
 일부입니다. Java 도구 (Proguard 등의 도구)를 통해 코드 난독 처리를 사용 하는 JAR 라이브러리를 로드할 수 없습니다. 자사 도구로 Java 리플렉션 사용 하 여와 라이브러리 엔지니어링 ASM 바이트 코드를, 이후 Android 런타임 도구에 전달할 수 있지만 이러한 종속 도구 난독 처리 된 라이브러리를 거부할 수 있습니다. 이 대 한 해결 방법은 직접 바인딩 바인딩 생성기를 사용 하는 대신 이러한 라이브러리입니다.
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>문제: C# 형식 생성 된 출력에 없습니다.
 
@@ -253,8 +245,6 @@ Java에서 필요 하지는 파생된 클래스는 부모와 동일한 표시 �
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## <a name="summary"></a>요약
 

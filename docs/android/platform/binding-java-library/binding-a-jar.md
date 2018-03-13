@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 011b6d184e55c9054a845d4922687b4565221859
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-jar"></a>바인딩는 합니다. JAR
 
@@ -75,7 +75,6 @@ Picasso.With (this)
 
 ```
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>바인딩 라이브러리 만들기
 
@@ -83,19 +82,19 @@ Picasso.With (this)
 
 먼저 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac 또는 Visual Studio 용 Visual Studio에서 새 솔루션을 만들고 선택 된 *Android 바인딩 라이브러리* 템플릿. (Visual Studio를 사용 하는이 연습에서 스크린 샷 있지만 Mac 용 Visual Studio는 매우 유사). 솔루션 이름을 **JarBinding**: 
 
-[ ![JarBinding 라이브러리 프로젝트 만들기](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png)
+[![JarBinding 라이브러리 프로젝트 만들기](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
 
 템플릿에 포함 되어는 **단지** 폴더를 추가 하면 합니다. 바인딩 라이브러리 프로젝트에 JAR(s) 합니다. 마우스 오른쪽 단추로 클릭는 **단지** 폴더와 선택 **추가 > 기존 항목**: 
 
-[ ![기존 항목 추가](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png)
+[![기존 항목 추가](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
 탐색 하 고 **피카소 2.x.x.jar** 이전에 다운로드 한 파일을 선택 하 고 클릭 **추가**: 
 
-[ ![Jar 파일을 선택 하 고 추가 클릭 합니다.](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png)
+[![Jar 파일을 선택 하 고 추가 클릭 합니다.](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
 확인 하는 **피카소 2.x.x.jar** 파일이 프로젝트에 추가 되었습니다. 
 
-[ ![프로젝트에 추가 하는 jar](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png)
+[![프로젝트에 추가 하는 jar](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
 Java 바인딩 라이브러리 프로젝트를 만들 때 지정 해야 하는지 여부를 합니다. JAR는 바인딩 라이브러리에 포함 하거나 별도로 패키지 하는 것입니다. 이렇게 하려면 중 하나를 지정 다음 *빌드 작업*: 
 
@@ -107,19 +106,18 @@ Java 바인딩 라이브러리 프로젝트를 만들 때 지정 해야 하는�
 
 빌드 작업을 설정 **EmbeddedJar**: 
 
-[ ![EmbeddedJar 빌드 작업을 선택 합니다.](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png)
+[![EmbeddedJar 빌드 작업을 선택 합니다.](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
 프로젝트 속성을 구성을 열고는 *대상 프레임 워크*합니다. 경우는 합니다. 모든 Android Api를 사용 하는 JAR, API 수준으로 대상 프레임 워크 설정에서 합니다. JAR 필요합니다. 일반적으로 개발자는 합니다. JAR 파일에는 API 수준 (또는 수준) 표시 됩니다 하 고 있습니다. JAR 호환 됩니다. (대상 프레임 워크 설정 및 일반적으로 Android API 수준에 대 한 자세한 내용은 참조 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md).)
 
 바인딩 라이브러리에 대 한 대상 API 수준 설정 (이 예제에서 사용 하 여 API 수준 19): 
 
-[ ![API 19로 설정 하는 대상 API 레벨](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png)
+[![API 19로 설정 하는 대상 API 레벨](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
 마지막으로, 바인딩 라이브러리를 빌드하십시오. 일부 경고 메시지가 나타날 수 있지만 바인딩 라이브러리 프로젝트에는 성공적으로 빌드를 업데이트 하 고 출력을 생성 해야 합니다. 다음 위치에서 DLL: **JarBinding/bin/Debug/JarBinding.dll**
     
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>바인딩 라이브러리를 사용 하 여
 
@@ -133,19 +131,19 @@ Java 바인딩 라이브러리 프로젝트를 만들 때 지정 해야 하는�
 
 먼저 바인딩 라이브러리를 사용 하는 새 Xamarin.Android 앱을 만듭니다. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **새 프로젝트 추가**; 새 프로젝트의 이름을 **BindingTest**합니다. 이 연습에서는; 간소화 하기 위해 바인딩을 라이브러리와 동일한 솔루션에이 응용 프로그램을 만들으십시오 그러나 바인딩 라이브러리를 사용 하는 앱 다른 솔루션에 있는 대신 수 있습니다.: 
 
-[ ![새 BindingTest 프로젝트 추가](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png)
+[![새 BindingTest 프로젝트 추가](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
 마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가...** :
 
-[ ![오른쪽 참조를 추가 합니다.](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png)
+[![오른쪽 참조를 추가 합니다.](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
 확인 된 **JarBinding** 클릭 하 고 앞에서 만든 프로젝트 **확인**:
 
-[ ![JarBinding 프로젝트 선택](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png)
+[![JarBinding 프로젝트 선택](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
 열기는 **참조** 의 노드는 **BindingTest** 되어 있는지 확인 하 고 프로젝트는 **JarBinding** 참조가 있습니다. 
 
-[ ![JarBinding 참조 아래에 나타납니다.](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png)
+[![JarBinding 참조 아래에 나타납니다.](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
 수정 된 **BindingTest** 레이아웃 (**Main.axml**)에 단일 있도록 `ImageView`:
 
@@ -191,11 +189,10 @@ public class MainActivity : Activity
 
 컴파일 및 실행 된 **BindingTest** 프로젝트. 앱의 시작 및 (네트워크 상태)에 따라 짧은 지연 후 다운로드 하 고 다음 스크린샷과 유사 하 게 이미지를 표시 합니다.
 
-[ ![BindingTest 스크린샷 실행](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png)
+[![BindingTest 스크린샷 실행](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 지금까지 Java 라이브러리에 성공적으로 연결 했습니다. Xamarin.Android 앱에서 사용 하는 JAR.
  
-<a name="summary" />
  
 ## <a name="summary"></a>요약
 

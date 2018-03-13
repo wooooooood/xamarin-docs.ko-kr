@@ -6,11 +6,11 @@ ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 2801fd74e9f5f8f2927b06dc7b68cdf004faa104
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a1e28bc9a8a17b4b06ec45746a6ce60ddd129ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cocossharp"></a>CocosSharp
 
@@ -22,9 +22,9 @@ CocosSharp는 C# 및 F #을 사용 하는 2D 게임을 위한 사용 하기 쉬�
 
 이 실습 비디오 게임을 만드는 간단한 플랫폼 간 CocosSharp 방법을 보여줍니다.
 
-<iframe src="//channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player" width="800" height="450" allowFullScreen frameBorder="0"></iframe>
+> [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Developing-Cross-platform-2D-Games-in-C-and-CocosSharp/player]
 
-###  <a name="introduction-to-game-development-with-cocossharpgraphics-gamescocossharpfirst-gameindexmd"></a>[CocosSharp와 게임 개발 소개](~/graphics-games/cocossharp/first-game/index.md)
+###  <a name="introduction-to-game-development-with-cocossharpgraphics-gamescocossharpfirst-gameindexmd"></a>[CocosSharp를 통한 게임 개발 소개](~/graphics-games/cocossharp/first-game/index.md)
 
 ![](images/first-game.png "CocosSharp를 사용 하 여 간단한 2D 게임")
 
@@ -32,7 +32,7 @@ CocosSharp는 C# 및 F #을 사용 하는 2D 게임을 위한 사용 하기 쉬�
 
 
 
-##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[세부 정보를 게임 fruity 위치 합니다.](~/graphics-games/cocossharp/fruity-falls.md)
+##  <a name="fruity-falls-game-detailsgraphics-gamescocossharpfruity-fallsmd"></a>[Fruity Falls 게임 세부 정보](~/graphics-games/cocossharp/fruity-falls.md)
 
 ![](images/fruity-falls.png "이 가이드는 Fruity 까지의 게임 검토")
 
@@ -56,7 +56,7 @@ CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드�
 
 
 
-## <a name="animating-with-ccactiongraphics-gamescocossharpccactionmd"></a>[CCAction 사용한 애니메이션](~/graphics-games/cocossharp/ccaction.md)
+## <a name="animating-with-ccactiongraphics-gamescocossharpccactionmd"></a>[CCAction을 사용한 애니메이션](~/graphics-games/cocossharp/ccaction.md)
 
 ![](images/ccaction.png "CCAction는 CocosSharp 개체에 애니메이션 적용 하는 데 사용할 수 있는 기본 클래스")
 
@@ -64,7 +64,7 @@ CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드�
 
 
 
-## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[사용 하 여 CocosSharp와 바둑판식으로 배열](~/graphics-games/cocossharp/tiled.md)
+## <a name="using-tiled-with-cocossharpgraphics-gamescocossharptiledmd"></a>[CocosSharp로 바둑판식 화면 사용](~/graphics-games/cocossharp/tiled.md)
 
 ![](images/tiled.png "바둑판식으로 배열 되는 강력한 유연 하 고, 및 직교 및 아이소메트릭 타일을 만들기 위한 완성 응용 게임에 대 한 맵") 바둑판식으로 배열는 강력한 유연 하 고, 이며 직교 및 아이소메트릭 타일을 만들기 위한 완성 된 응용 프로그램 게임에 대 한 매핑. CocosSharp 타일의 기본 파일 형식에 대 한 기본 제공 통합을 제공합니다.
 
@@ -78,7 +78,7 @@ CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드�
 
 
 
-##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[CocosSharp에 여러 해상도 처리합니다.](~/graphics-games/cocossharp/resolutions.md)
+##  <a name="handling-multiple-resolutions-in-cocossharpgraphics-gamescocossharpresolutionsmd"></a>[CocosSharp에서 여러 해결 방법 처리](~/graphics-games/cocossharp/resolutions.md)
 
 ![](images/resolutions.png "이 가이드에서는 다양 한 해상도의 장치에서 제대로 표시 하는 게임을 개발 하는 CocosSharp 사용 방법을 보여 줍니다.")
 
@@ -94,7 +94,7 @@ CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드�
 
 
 
-## <a name="improving-framerate-with-ccspritesheetgraphics-gamescocossharpccspritesheetmd"></a>[CCSpriteSheet와 프레임 속도 향상](~/graphics-games/cocossharp/ccspritesheet.md)
+## <a name="improving-framerate-with-ccspritesheetgraphics-gamescocossharpccspritesheetmd"></a>[CCSpriteSheet를 통한 Framerate 개선](~/graphics-games/cocossharp/ccspritesheet.md)
 
 ![](images/ccspritesheet.png "CCSpriteSheet을 결합 하 고 한 텍스처에서 여러 이미지 파일을 사용 하 여에 대 한 기능을 제공 합니다.")
 
@@ -110,7 +110,7 @@ CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠�
 
 
 
-## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[2D 수학 CocosSharp와](~/graphics-games/cocossharp/math.md)
+## <a name="2d-math-with-cocossharpgraphics-gamescocossharpmathmd"></a>[CocosSharp를 사용한 2D 수치 연산](~/graphics-games/cocossharp/math.md)
 
 ![](images/math.png "이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다.")
 

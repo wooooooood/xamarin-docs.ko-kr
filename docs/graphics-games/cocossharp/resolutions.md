@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0c79e982e7f6543c6dc34885b0afcd7056989a96
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>CocosSharp에 여러 해상도 처리합니다.
 
@@ -22,33 +22,12 @@ CocosSharp 물리적 장치의 디스플레이에서 픽셀 수에 관계 없이
 
 기본 해상도 CocosSharp 동작은 물리적 픽셀 게임 좌표와 일치 합니다. 다음 표에서 다양 한 장치를 다시 설정 하 게 렌더링 배경 환경 스프라이트 368 x 240의 너비와 높이를 보여 줍니다. 첫 번째 행은 기술적으로 하지는 실제 장치를 장치 해상도 관계 없이 sprite의 예상된 렌더링 아니라:
 
-<table>
-    <thead>
-        <tr>
-            <th>장치</th>
-            <th>디스플레이 해상도</th>
-            <th>예제 스크린 샷</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>원하는 표시 오프셋</td>
-            <td>368 x 240 (된 가로 세로 비율에 대 한 검은 막대)</td>
-            <td><img src="resolutions-images/image1.png" title="368 x 240 (된 가로 세로 비율에 대 한 검은 막대)" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 4s</td>
-            <td>960x640</td>
-            <td><img src="resolutions-images/image2.png" title="iPhone 4s 960x640" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 6 Plus</td>
-            <td>1920x1080</td>
-            <td><img src="resolutions-images/image3.png" title="iPhone 6 Plus 1920 x 1080" /></td>
-        </tr>
-    </tbody>
-</table>
 
+| **장치** | **디스플레이 해상도** | **예제 스크린 샷** |
+|--- | --- |--- |
+|원하는 표시 오프셋|368 x 240 (된 가로 세로 비율에 대 한 검은 막대)| ![368 x 240 (된 가로 세로 비율에 대 한 검은 막대)](resolutions-images/image1.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
 
 이 문서에서는 위 표에 표시 된 문제를 해결 하려면 CocosSharp를 사용 하는 방법을 설명 합니다. 즉, 모든 장치 – 화면 해상도 관계 없이 첫 번째 행에 표시 된 대로 렌더링 하는 방법을 설명 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 3de0e09b15b704db5e67fbbee6ba9bac86f58557
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -28,7 +28,7 @@ Xamarin의 비동기 지원은 모노 3.0 foundation에서 구축 되며 모바�
 
 샘플 응용 프로그램 (주 스레드를 차단) 없이 간단한 비동기 웹 요청 다음 다운로드 한 html 및 문자 수와 UI를 업데이트 합니다.
 
- [ ![](async-images/AsyncAwait_427x368.png "샘플 응용 프로그램 주 스레드를 차단 하지 않고는 간단한 비동기 웹 요청을 만들고 다운로드 한 html 및 문자 수와 UI를 업데이트 함")](async-images/AsyncAwait.png)
+ [![](async-images/AsyncAwait_427x368.png "샘플 응용 프로그램 주 스레드를 차단 하지 않고는 간단한 비동기 웹 요청을 만들고 다운로드 한 html 및 문자 수와 UI를 업데이트 함")](async-images/AsyncAwait.png#lightbox)
 
 Xamarin의 비동기 지원은 모노 3.0 foundation에서 구축 되며 모바일에서 잘 작동 Silverlight 버전을 모바일에서 잘 작동 버전의.NET 4.5가 되도록 되는 API 프로 파일을 업그레이드 합니다.
 

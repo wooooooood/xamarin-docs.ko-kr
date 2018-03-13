@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 3214a76ee3f976f5dd2afb28edde07100db5a7a1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e53df69fdfd5b5c1fc98b667d4b75d06c16c35dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-standard-preview"></a>XAML 표준 (미리 보기)
 
@@ -71,7 +71,7 @@ XAML Standard Xamarin.Forms를 테스트 하려면 다음이 단계를 수행:
 ```
 
 > [!NOTE]
-> **참고:** xmlns 요구 `a:` 표준 XAML 컨트롤에는 접두사는 현재 미리 보기의 제한 사항입니다.
+> Xmlns 요구 `a:` 표준 XAML 컨트롤에는 접두사는 현재 미리 보기의 제한 사항입니다.
 
 
 ## <a name="related-links"></a>관련 링크

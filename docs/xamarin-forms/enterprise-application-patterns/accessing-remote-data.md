@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a219a5ed4045bff639f29fd49ef5288139140135
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0eec51a6c95894482a57bfe3bb1f95aec2045af4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessing-remote-data"></a>원격 데이터 액세스
 
@@ -52,7 +52,7 @@ EShopOnContainers 모바일 앱 사용 하 여는 `HttpClient` json을 미디어
 
 그림 10-1에서 표시 하기 위한 카탈로그 마이크로 서비스에서 카탈로그 데이터를 읽는 클래스와의 상호 작용을 보여 줍니다.는 `CatalogView`합니다.
 
-[![](accessing-remote-data-images/catalogdata.png "카탈로그 마이크로 서비스에서 데이터를 검색할")](accessing-remote-data-images/catalogdata-large.png "카탈로그 마이크로 서비스에서 데이터 검색")
+[![](accessing-remote-data-images/catalogdata.png "카탈로그 마이크로 서비스에서 데이터를 검색할")](accessing-remote-data-images/catalogdata-large.png#lightbox "카탈로그 마이크로 서비스에서 데이터 검색")
 
 **그림 10-1**: 카탈로그 마이크로 서비스에서 데이터 검색
 
@@ -157,7 +157,7 @@ public async Task<IActionResult> Items(
 
 그림 10-2에 표시 된 바구니 데이터를 전송 하는 클래스와의 상호 작용을 보여 줍니다.는 `BasketView`, 바구니 마이크로 서비스를 합니다.
 
-[![](accessing-remote-data-images/basketdata.png "데이터 바구니 마이크로 서비스를 보내는")](accessing-remote-data-images/basketdata-large.png "바구니 마이크로 서비스에 데이터 보내기")
+[![](accessing-remote-data-images/basketdata.png "데이터 바구니 마이크로 서비스를 보내는")](accessing-remote-data-images/basketdata-large.png#lightbox "바구니 마이크로 서비스에 데이터 보내기")
 
 **그림 10-2**: 바구니 마이크로 서비스에 데이터 보내기
 

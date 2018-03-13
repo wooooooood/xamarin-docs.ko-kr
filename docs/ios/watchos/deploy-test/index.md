@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/27/2018
 - 에 **iOS Dev Center**:
   - [앱 Id](#App_IDs) 만들어졌습니다.
   - [앱 그룹](#App_Groups) (필요한 경우)를 구성 합니다.
-  - [*배포* 프로 비전 프로필](#Provisioning_Profiles) 생성 합니다.
+  - 배포에 프로 비전 프로필 파일을 만든
 
 - 솔루션:
 
@@ -36,6 +36,7 @@ ms.lasthandoff: 02/27/2018
   - [Apple Watch 테스트를 위한 배포](~/ios/watchos/deploy-test/device.md), 또는
   - [앱 스토어에 업로드](~/ios/watchos/deploy-test/appstore.md)합니다.
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>응용 프로그램 Id
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/27/2018
 
 배포에 대 한 하면 됩니다. 앱 ID 와일드 카드에 대 한 하나의 배포 프로 비전 프로필을 만들려면
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>앱 그룹
 
@@ -102,8 +103,6 @@ ms.lasthandoff: 02/27/2018
 이어야 합니다.![Entitlements.plist 편집기](images/entitlements-plist-sml.png)
 
 수행 **하지** Watch 앱 프로젝트에서 자격을 설정 합니다. 조사식 자체에서 사용 되려면 필요 하지 않습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

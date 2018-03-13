@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: ac4644f65486d70fcbb7da1a03574fb238348313
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="target-framework"></a>대상 프레임워크
 
@@ -40,13 +40,13 @@ _이 문서에서는 Xamarin.Mac에 사용할 수 있는 대상 프레임 (기�
 
 Xamarin.Mac 프로젝트에 대 한 대상 프레임 워크 종류를 변경 하려면 다음을 수행 합니다.
 
-1. Mac.에 대 한 Visual Studio에서 Xamarin.Mac 프로젝트 열기
-2. 에 **솔루션 탐색기**를 열려는 프로젝트 파일을 두 번 클릭은 **프로젝트 옵션** 대화 상자.
+1. Mac용 Visual Studio에서 Xamarin.Mac 프로젝트를 엽니다.
+2. **솔루션 탐색기**에서 프로젝트 파일을 두 번 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다.
 3. **일반** 탭의 형식을 선택 하 고 **대상 프레임 워크** 하는 응용 프로그램의 요구에 적합 한:
 
-  [![프로젝트 옵션 창을 사용 하 여 대상 프레임 워크 선택](target-framework-images/select-target-full.png "프로젝트 옵션 창을 사용 하 여 대상 프레임 워크 선택")](target-framework-images/select-target-full-large.png)
+  [![프로젝트 옵션 창을 사용 하 여 대상 프레임 워크 선택](target-framework-images/select-target-full.png "프로젝트 옵션 창을 사용 하 여 대상 프레임 워크 선택")](target-framework-images/select-target-full-large.png#lightbox)
 
-4. 클릭는 **확인** 변경 내용을 저장 하는 단추입니다.
+4. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 수행 해야 **Clean** 차례로 **다시 작성** Xamarin.Mac 프로젝트 대상 프레임 워크 형식이 전환한 후 합니다.
 
@@ -58,7 +58,7 @@ Xamarin.Mac 프로젝트에 대 한 대상 프레임 워크 종류를 변경 하
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 및 Mac 코드 공유](~/cross-platform/macios/index.md)
-- [통합된 API](~/cross-platform/macios/unified/index.md)
+- [Unified API](~/cross-platform/macios/unified/index.md)
 - [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)
 - [어셈블리](~/cross-platform/internals/available-assemblies.md)
 - [기존 Mac 응용 프로그램 업데이트](~/cross-platform/macios/unified/updating-mac-apps.md)

@@ -3,14 +3,15 @@ title: "요약 장 20입니다. Async 및 파일 I/O"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: f7c81cfb77772af219fe28f081e7f8636e118fb1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 86ae56fc2baac3eab0fbf375c5f67f7b2327721a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 장 20입니다. Async 및 파일 I/O
 
@@ -150,7 +151,7 @@ Xamarin.iOS 및 Xamarin.Android 라이브러리의 Xamarin에이 두 플랫폼�
 
 [ **MandelbrotXF** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotXF) 샘플 더 광범위 한 사용자 인터페이스가 있으며 대부분 기반으로 한 [ `MandelbrotModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/MandelbrotXF/MandelbrotXF/MandelbrotXF/MandelbrotModel.cs) 및 [ `MandelbrotViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/MandelbrotXF/MandelbrotXF/MandelbrotXF/MandelbrotViewModel.cs)클래스:
 
-[![Mandelbrot X F의 삼중 스크린 샷](images/ch20fg13-small.png "MVVM Mandelbrot")](images/ch20fg13-large.png "MVVM Mandelbrot")
+[![Mandelbrot X F의 삼중 스크린 샷](images/ch20fg13-small.png "MVVM Mandelbrot")](images/ch20fg13-large.png#lightbox "MVVM Mandelbrot")
 
 ## <a name="back-to-the-web"></a>웹 돌아가기
 

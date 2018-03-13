@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>경로 기본 사항
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 첫 번째 윤곽선에 대 한 호출 이루어져 [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) X 및 Y 좌표를 사용 하 여 아닌 `SKPoint` 를 세 번 호출 하 여 뒤에 오는 값 [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) 의 세 가지 면을 그리는 데는 삼각형입니다. 두 번째 윤곽 한 두 개의 호출이 `LineTo` 윤곽을 호출 하 여 완료 하지만 [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), 윤곽을 닫습니다. 큰 차이:
 
-[![](paths-images/twotrianglecontours-small.png "두 개의 삼각형 윤곽선 페이지의 삼중 스크린샷")](paths-images/twotrianglecontours-large.png "두 개의 삼각형 윤곽선 페이지의 삼중 스크린샷")
+[![](paths-images/twotrianglecontours-small.png "두 개의 삼각형 윤곽선 페이지의 삼중 스크린샷")](paths-images/twotrianglecontours-large.png#lightbox "두 개의 삼각형 윤곽선 페이지의 삼중 스크린샷")
 
 볼 수 있듯이 첫 번째 윤곽선은 일련의 세 가지 연결 된 선 분명히 있지만 시작 부분과 끝 연결 되지는 않습니다. 위쪽에서 두 줄 겹칩니다. 두 번째 윤곽 분명히 닫혀 있고 더 적은 하나를 사용 하 여 수행 된 `LineTo` 없어 해당 메서드가 호출 된 `Close` 메서드 윤곽을 마지막 줄을 자동으로 추가 합니다.
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 세 가지 플랫폼에서 실행 중인 프로그램입니다.
 
-[![](paths-images/strokejoins-small.png "선 조인 페이지의 삼중 스크린샷")](paths-images/strokejoins-large.png "획 조인 페이지의 삼중 스크린 샷")
+[![](paths-images/strokejoins-small.png "선 조인 페이지의 삼중 스크린샷")](paths-images/strokejoins-large.png#lightbox "획 조인 페이지의 삼중 스크린 샷")
 
 이 음 줄 연결할 수 있는 날카로운 지점으로 구성 됩니다. 두 줄을 작은 각도로 조인 마이터 연결 상당히 길어질 수 있습니다. 지나치게 긴 이음이 조인을 방지 하려면 마이터 연결의 길이 값에 의해 제한 됩니다는 [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) 속성 `SKPaint`합니다. 이 길이 초과 하는 음 경사 연결 되도록 잘려 됩니다.
 

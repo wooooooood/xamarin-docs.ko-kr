@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: eb7189226e4f5d7eb2b55bf61728e65db44ba57b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 737c55aea087094ceb5e6070261d0a3d724e8a01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 
@@ -117,7 +117,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 
 때 `HslColorExtension` XML 태그 인지, 특성으로, 다음 네 가지 속성은 설정 되지만 네 가지 속성은 따옴표 없이 쉼표로 구분 중괄호 사이의 있으면 오류가 발생 합니다. 기본값을 `H`, `S`, 및 `L` 0이 고의 기본값은 `A` 1 이므로 기본값으로 설정 하려는 경우 해당 속성을 생략할 수 있습니다. 마지막 예제에서는 명도 검은색으로 인해 일반적으로 0 이지만 알파 채널은 0.5, 절반 투명 한 표시 되므로 예를 보여 줍니다. 페이지의 흰색 배경 회색:
 
-[![HSL 색 데모](creating-images/hslcolordemo-small.png "HSL 색 데모")](creating-images/hslcolordemo-large.png "HSL 색 데모")
+[![HSL 색 데모](creating-images/hslcolordemo-small.png "HSL 색 데모")](creating-images/hslcolordemo-large.png#lightbox "HSL 색 데모")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>비트맵에 액세스 하기 위한 태그 확장
 
@@ -180,7 +180,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 
 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png "리소스 데모 이미지")
+[![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png#lightbox "리소스 데모 이미지")
 
 ## <a name="service-providers"></a>서비스 공급자
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 670c990fb4f2e4d2a01ada83ea98e8e589b5c473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons-and-images"></a>아이콘 및 이미지 작업
 
@@ -67,13 +67,13 @@ TvOS 프로젝트에 대 한 시작 이미지를 설정 하려면 다음을 수�
 
 1. 에 **솔루션 탐색기**, 두 번 클릭 `Assets.xcassets` 열어 편집 하려면: 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png#lightbox)
 2. 에 **자산 편집기**, 클릭는 `LaunchImages` 자산: 
 
-    [ ![](icons-images-images/asset02.png "LaunchImages 자산")](icons-images-images/asset02.png)
+    [![](icons-images-images/asset02.png "LaunchImages 자산")](icons-images-images/asset02.png#lightbox)
 3. 클릭는 **1 Apple TV x** 항목 시작 이미지를 선택 하거나 필요에 따라 파일 시스템에서 새 이미지 끌어: 
 
-    [ ![](icons-images-images/asset03.png "시작 이미지 선택")](icons-images-images/asset03.png)
+    [![](icons-images-images/asset03.png "시작 이미지 선택")](icons-images-images/asset03.png#lightbox)
 4. 변경 내용을 저장합니다.
 
 <a name="Layered-Images" />
@@ -84,7 +84,7 @@ Apple TV, 게임를 통해 연결 된 화면의 콘텐츠 대화방 소파에 �
 
 계층화 된 이미지에는 다음이 포함 되어에서 두 개의 (2)를 5 개 결합 되어 이미지 완료 구성 하는 계층을 구분 합니다. 배경 계층을 제외한 각 계층 투명도 함께 해당 Z 순서를 사용 하 여 깊이 감을 만듭니다. 계층화 된 이미지와 상호 작용할 더 높은 Z 순서 계층을 크기가 조정 하 고 이러한 효과를 만들려면 겹쳐진 됩니다.
 
-[ ![](icons-images-images/layered01.png "계층화 된 이미지 Z 순서 다이어그램")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "계층화 된 이미지 Z 순서 다이어그램")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **참고:** 겹친 이미지 응용 프로그램의 아이콘에 대 한 필요 하 고 다른 선택적 [포커스 항목](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (예: 위쪽 선반 이미지). 그러나 Apple 계층화 된 이미지를 사용 하 여 앱에 포커스를 얻을 수 있는 모든 이미지에 대 한 제안 합니다.
@@ -109,7 +109,7 @@ Apple에서는 계층화 된 이미지를 디자인 하기 위한 다음 방법�
 
 반드시 포함 해야 하는 _보호 영역_ 테두리는 계층화 된 이미지를 구성 하는 각 계층에 있습니다. 개별 계층 크기가 조정 하 고 시차 효과 중 잘릴 수 있습니다, 때문에 계층의 내용은 수 잘려 레이어의 가장자리에 너무 가까워지면 경우:
 
-[ ![](icons-images-images/layered02.png "35 픽셀 테두리")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "35 픽셀 테두리")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -128,7 +128,7 @@ Apple에서는 계층화 된 이미지를 디자인 하기 위한 다음 방법�
 
 생성 되는 Apple에서 [시차 미리 보기](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) 미리 보기 및 응용 프로그램 아이콘 및 포커스를 받을 수 있는 선택 항목에 필요한 만든된 계층화 된 이미지를 합니다. 미리 보기는 복잡된 한 계층화 된 이미지를 구성 하는 모든 계층을 보여 줍니다.
 
-[ ![](icons-images-images/layered03.png "시차 미리 보기")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "시차 미리 보기")](icons-images-images/layered03.png#lightbox)
 
 계층화 된 이미지를 미리 볼 때 이미지 회전를 시차 효과 미리 보려면 마우스를 사용할 수 있습니다. 사용 하 여는  **+**  (더하기) 및  **-**  (빼기) 단추를 추가 하 고 계층을 제거 합니다.
 
@@ -142,7 +142,7 @@ Apple에서는 계층화 된 이미지를 디자인 하기 위한 다음 방법�
 
 Xamarin.tvOS 앱 Apple TV 홈 화면에서 뿐만 아니라 앱 스토어에 대 한 아이콘 뿐만 아니라 응용 프로그램 아이콘 필요 합니다. 앱 아이콘은는 첫 번째 잠재적 사용자에 매우 깊은 인상을을 변경한 응용 프로그램의 용도 한 눈에 전달 해야 합니다.
 
-[ ![](icons-images-images/icon01.png "앱 아이콘")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "앱 아이콘")](icons-images-images/icon01.png#lightbox)
 
 모든 응용 프로그램은 작 및 해당 응용 프로그램 아이콘의 큰 버전을 모두 제공 해야 합니다. 작은 아이콘에는 앱을 설치 하는 경우 Apple TV 홈 화면에서 사용 됩니다. 큰 버전 앱 스토어에서 사용 됩니다. 큰 응용 프로그램 아이콘에는 작은 아이콘 버전의 모양과 느낌 유사 해야 합니다.
 
@@ -202,16 +202,16 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 1. 에 **솔루션 탐색기**, 두 번 클릭 `Assets.xcassets` 열어 편집 하려면: 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets fileg")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
 2. 에 **자산 편집기**를 확장 하 고는 `App Icon & Top Shelf Image` 자산: 
 
-    [ ![](icons-images-images/asset04.png "위쪽 선반 이미지 자산 확장")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "위쪽 선반 이미지 자산 확장")](icons-images-images/asset04.png#lightbox)
 3. 다음으로 확장 하 고는 `App Icon - Small` 자산: 
 
-    [ ![](icons-images-images/asset05.png "응용 프로그램 아이콘-작은 자산 확장")](icons-images-images/asset05.png)
+    [![](icons-images-images/asset05.png "응용 프로그램 아이콘-작은 자산 확장")](icons-images-images/asset05.png#lightbox)
 4. 다음 확장은 `Back` 자산 고를 클릭은 `Contents` 항목: 
 
-    [ ![](icons-images-images/asset06.png "다음 백 자산 확장")](icons-images-images/asset06.png)
+    [![](icons-images-images/asset06.png "다음 백 자산 확장")](icons-images-images/asset06.png#lightbox)
 5. 클릭는 **1 Apple TV 항목 x** 이미지 파일을 선택 하 고 있습니다.
 6. 에 대해 위의 단계를 반복 하는 `Front` 및 `Middle` 자산입니다.
 7. 그런 다음 정의 하려면 같은 단계를 반복는 `App Icon - Large` 자산입니다.
@@ -223,7 +223,7 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 사용자가을 배치 하 Xamarin.tvOS 앱 Apple TV 홈 화면에서 첫 행에는 사용자가 앱을 선택 하는 큰 위쪽 선반 이미지 표시 됩니다. 이 이미지는 응용 프로그램의 기능을 강조 표시 하거나 해당 내용에 대 한 직접 링크를 제공 해야 합니다.
 
-[ ![](icons-images-images/topshelf01.png "위쪽 선반 이미지 예제")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "위쪽 선반 이미지 예제")](icons-images-images/topshelf01.png#lightbox)
 
 위쪽 선반 이미지 수를 단일 정적으로 제공 되거나 `.png` 또는 `.lsr` 파일 (참조 [계층화 된 이미지 만들기](#Creating-Layered-Images))를 동적으로 만들기 런타임에 포커스 항목의 단일 행으로 또는 (참조 [ 위쪽 선반 동적 콘텐츠](#Dynamic-Top-Shelf-Content) 아래).
 
@@ -253,13 +253,13 @@ TvOS 프로젝트에 대 한 필요한 위쪽 선반 이미지를 설정 하려�
 
 1. 에 **솔루션 탐색기**, 두 번 클릭 `Assets.xcassets` 열어 편집 하려면: 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png#lightbox)
 2. 에 **자산 편집기**를 확장 하 고는 `App Icon & Top Shelf Image` 자산: 
 
-    [ ![](icons-images-images/asset04.png "위쪽 선반 이미지 자산 확장")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "위쪽 선반 이미지 자산 확장")](icons-images-images/asset04.png#lightbox)
 3. 클릭는 `Top Shelf Image` 자산: 
 
-    [ ![](icons-images-images/asset07.png "위쪽 선반 이미지 자산")](icons-images-images/asset07.png)
+    [![](icons-images-images/asset07.png "위쪽 선반 이미지 자산")](icons-images-images/asset07.png#lightbox)
 5. 클릭는 **1 Apple TV 항목 x** 이미지 파일을 선택 하 고 있습니다.
 6. 변경 내용을 저장합니다.
 
@@ -423,10 +423,10 @@ Xamarin.tvOS 앱은 게임 게임 센터 지원을 포함 한 경우 몇 가지 
 
 1. 에 **솔루션 탐색기**를 두 번 클릭은 `Info.plist` 편집 하기 위해 열려는: 
 
-    [ ![](icons-images-images/info01.png "Info.plist 파일")](icons-images-images/info01.png)
+    [![](icons-images-images/info01.png "Info.plist 파일")](icons-images-images/info01.png#lightbox)
 2. 에 **Info.Plist 편집기**, 자산 카탈로그를 선택 (에서 위에 구성 된는 [앱 아이콘 설정](#Setting-the-App-Icons) 섹션)에 대 한는 **앱 아이콘**: 
 
-    [ ![](icons-images-images/info02.png "Info.Plist 편집기")](icons-images-images/info02.png)
+    [![](icons-images-images/info02.png "Info.Plist 편집기")](icons-images-images/info02.png#lightbox)
 3. 다음으로, 자산 카탈로그를 선택 (에서 위에 구성 된는 [시작 이미지 설정](#Setting-the-Launch-Image) 섹션)에 대 한는 **시작 이미지**합니다.
 4. 변경 내용을 저장합니다.
 

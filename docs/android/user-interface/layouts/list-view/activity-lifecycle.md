@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 009e8fa78e0e9405cf264054ad79dcdf91e6d7c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8ee113a321dbc84cf12a7ef4bb5084c5307115b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-and-the-activity-lifecycle"></a>ListView 및 활동 수명 주기
 
@@ -24,7 +24,6 @@ ms.lasthandoff: 02/27/2018
 
 어댑터에 메모리 또는 관리 되는 커서와 같은 리소스가 사용 하는 경우 이러한 리소스에 상호 보완적인 메서드 (예: 인스턴스화된 위치를 해제 해야. 개체에서 만든 `OnStart` 수 삭제 되어야 `OnStop`).
 
-<a name="Configuration_Changes" />
 
 ## <a name="configuration-changes"></a>구성 변경
 

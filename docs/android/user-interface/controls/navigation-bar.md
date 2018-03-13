@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 396ed31cba336976342a8dfb26f31eeda20cf494
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe76c93afc149553e44b5e8fa29a21767becf5c5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="navigation-bar"></a>탐색 모음
 
 Android 4 라는 새로운 시스템 사용자 인터페이스 기능을 도입는 *탐색 모음*, 탐색 컨트롤에 대 한 하드웨어 단추를 포함 하지 않는 장치에서 제공 하는 **홈**, **다시** , 및 **메뉴**합니다.
 다음 스크린 샷에서 Nexus Prime 장치에서 탐색 모음을 보여 줍니다.
 
- [ ![Android 탐색 모음의 예](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png)
+ [![Android 탐색 모음의 예](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 몇 가지 새로운 플래그를 사용할 수 있는 탐색 모음과 해당 컨트롤의 표시 여부 뿐만 아니라 Android 3에 도입 된 시스템 표시줄의 표시 여부를 제어 합니다. 에 정의 된 플래그는 `Android.View.View` 클래스와 다음과 같습니다:
 
@@ -31,7 +31,7 @@ Android 4 라는 새로운 시스템 사용자 인터페이스 기능을 도입�
 
 다음 예제에서는 간단한 응용 프로그램 단추 중 하나를 클릭 하면 변경 하는 위치는 `SystemUiVisibility`:
 
- [ ![Visible, 낮은 프로필과 숨겨진 SystemUiVisibility 보여 주는 스크린샷](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png)
+ [![Visible, 낮은 프로필과 숨겨진 SystemUiVisibility 보여 주는 스크린샷](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 변경 하는 코드는 `SystemUiVisibility` 에서 속성 설정는 `TextView` 아래 표시 된 대로 클릭 이벤트 처리기에서 각 단추:
 

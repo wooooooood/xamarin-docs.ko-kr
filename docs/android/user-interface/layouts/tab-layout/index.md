@@ -8,15 +8,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/23/2017
-ms.openlocfilehash: f8680cde2e5536495f33d571adea9980020a72fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 02a425c8276524accc088b53c1099e7c2e28d828
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts"></a>레이아웃 탭된
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -45,7 +44,6 @@ Android 3.0 (API 수준 11) 이후이 호환 되지 않는 API의 중요 한 UI 
 `TabHost` API Android의 모든 버전에서 호환 되는 데 더 많은 노력이 필요 있고 현재와 일치 하지 않습니다 [Android UI 지침](http://developer.android.com/design/index.html)합니다. 개발자가이 API를 사용 하 여 해서는 안 되며 Xamarin.Android 응용 프로그램에는 최신 작업 모음에 맞도록 해야 합니다. 
 
 
-<a name="Introducing_ActionBarSherlock" />
 
 ## <a name="actionbarsherlock"></a>ActionBarSherlock
 

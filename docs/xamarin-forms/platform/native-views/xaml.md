@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: fc44b2a6080832d11c610661244172ad4a6a0716
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-xaml"></a>XAML의 기본 뷰
 
@@ -51,13 +51,13 @@ Xamarin.Forms XAML 파일에 대 한 기본 뷰를 포함 합니다.
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         x:Class="NativeViews.NativeViewDemo">
     <StackLayout Margin="20">
         <ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
-        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static formsandroid:Forms.Context}" />
+        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
         <win:TextBlock Text="Hello World" />
     </StackLayout>
 </ContentPage>
@@ -72,7 +72,7 @@ Xamarin.Forms XAML 파일에 대 한 기본 뷰를 포함 합니다.
 > [!NOTE]
 > 스타일 속성에 의해 지원 되는 대상만 지정할 수 있으므로 기본 보기와 스타일을 사용할 수 없습니다 참고 `BindableProperty` 개체입니다.
 
-Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 인수를 지정 하 고이 개체를 통해 사용할 수는 `Xamarin.Forms.Platform.Android.Forms.Context` 개체입니다. 따라서 xaml에서는 Android 위젯을 만들 때는 `Context` 개체 일반적으로 위젯의 생성자에 전달 해야 합니다를 사용 하는 `x:Arguments` 특성이 `x:Static` 태그 확장 합니다. 자세한 내용은 참조 [기본 보기에 대 한 인수를 전달](#passing_arguments)합니다.
+Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 개체이 고 인수를 사용할 수 있도록 설정에서 정적 속성을 통해 것으로 `MainActivity` 클래스입니다. 따라서 xaml에서는 Android 위젯을 만들 때는 `Context` 개체 일반적으로 위젯의 생성자에 전달 해야 합니다를 사용 하는 `x:Arguments` 특성이 `x:Static` 태그 확장 합니다. 자세한 내용은 참조 [기본 보기에 대 한 인수를 전달](#passing_arguments)합니다.
 
 > [!NOTE]
 > 해당 이름을 지정 하 여 네이티브 뷰에 참고 `x:Name` PCL 이식 가능한 클래스 라이브러리 () 프로젝트 또는 공유 자산 프로젝트 (SAP)의 수는 없습니다. 이렇게 하면 컴파일 오류가 발생할 수 있는 네이티브 형식의 변수를 생성 합니다. 하지만 기본 보기에 래핑될 수 있습니다 `ContentView` 인스턴스 및 SAP 사용 되는 코드 숨김 파일에서 검색 합니다. 자세한 내용은 참조 [코드에서 네이티브 뷰를 참조](#native_view_code)합니다.
@@ -90,7 +90,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 �
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeSwitch"
@@ -101,7 +101,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 �
         <ios:UISwitch On="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=ValueChanged}"
             OnTintColor="{x:Static ios:UIColor.Red}"
             ThumbTintColor="{x:Static ios:UIColor.Blue}" />
-        <androidWidget:Switch x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:Switch x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             Checked="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=CheckedChange}"
             Text="Enable Entry?" />
         <win:ToggleSwitch Header="Enable Entry?"
@@ -135,7 +135,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 �
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -151,7 +151,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 �
                 </ios:UIFont>
             </ios:UILabel.Font>
         </ios:UILabel>
-        <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                     Text="Simple Native Color Picker"
                     TextSize="24"
                     View.HorizontalOptions="Center">
@@ -187,7 +187,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 으로 �
 [ `FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) 생성자는 설정 하는 데 사용 되는 [ `TextBlock.FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) 속성을 새 `FontFamily` 유니버설 Windows 플랫폼 (UWP)에 있습니다. `FontFamily` 의 자식인 메서드 인수의으로 이름이 지정 된 `x:Arguments` 특성입니다.
 
 > [!NOTE]
-> **참고**: 인수 생성자 또는 팩터리 방법에 필요한 형식과 일치 해야 합니다.
+> 인수는 생성자 또는 팩터리 메서드에 필요한 형식으로 일치 해야 합니다.
 
 다음 스크린샷에서 서로 다른 기본 뷰에 글꼴을 설정 하려면 팩터리 메서드 및 생성자 인수를 지정 하 고 결과 표시:
 
@@ -211,7 +211,7 @@ XAML의 인수를 전달 하는 방법에 대 한 자세한 내용은 참조 [XA
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeViewInsideContentView"
@@ -219,20 +219,19 @@ XAML의 인수를 전달 하는 방법에 대 한 자세한 내용은 참조 [XA
     <StackLayout Margin="20">
         <ContentView x:Name="contentViewTextParent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
             <ios:UILabel Text="Text in a UILabel" TextColor="{x:Static ios:UIColor.Red}" />
-            <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Text in a TextView" />
             <winControls:TextBlock Text="Text in a TextBlock" />
         </ContentView>
         <ContentView x:Name="contentViewButtonParent" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
             <ios:UIButton TouchUpInside="OnButtonTap" View.HorizontalOptions="Center" View.VerticalOptions="Center" />
-            <androidWidget:Button x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:Button x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Scale and Rotate Text"
                 Click="OnButtonTap" />
             <winControls:Button Content="Scale and Rotate Text" />
         </ContentView>
     </StackLayout>
 </ContentPage>
-
 ```
 
 위의 예제에서 각 플랫폼에 대 한 기본 보기의 자식인 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 컨트롤와 `x:Name` 특성 값을 검색 하는 데 사용 되는 `ContentView` 코드 숨김에서:
@@ -297,7 +296,7 @@ IOS 및 Android 네이티브 단추로 공유할지 `OnButtonTap` 이벤트 처�
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS"
         xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -311,7 +310,7 @@ IOS 및 Android 네이티브 단추로 공유할지 `OnButtonTap` 이벤트 처�
         </StackLayout>
         <iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
             SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
-        <androidLocal:MySpinner x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidLocal:MySpinner x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             ItemsSource="{Binding Fruits}"
             SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
         <winControls:ComboBox ItemsSource="{Binding Fruits}"
@@ -493,5 +492,5 @@ class MySpinner : Spinner
 - [Forms2Native (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Forms2Native/)
 - [NativeViewInsideContentView (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
 - [SubclassedNativeControls (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)
-- [기본 형식](~/xamarin-forms/platform/native-forms.md)
+- [네이티브 양식](~/xamarin-forms/platform/native-forms.md)
 - [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)

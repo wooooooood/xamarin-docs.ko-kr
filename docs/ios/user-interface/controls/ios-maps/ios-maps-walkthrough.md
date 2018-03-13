@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 7eea7231ec4300a368e4612cbed2ba4ebc044a26
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 807ae6554d029120ad28f8fb8cc6c57ba3b58c8c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="annotations-and-overlays--walkthrough"></a>주석 및 오버레이 – 연습
 
 이 연습에서 작성 하 여 응용 프로그램은 다음과 같습니다.
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "예제 MapKit 앱")](ios-maps-walkthrough-images/00-map-overlay.png)
+ [![](ios-maps-walkthrough-images/00-map-overlay.png "예제 MapKit 앱")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
  
 완성 된 코드를 찾을 수 있습니다는 **MapsWalkthroughComplete** 내의 폴더는 [지도 데모 샘플](https://developer.xamarin.com/samples/monotouch/MapDemo/)합니다.
 
@@ -279,7 +279,7 @@ ms.lasthandoff: 02/27/2018
 
 응용 프로그램을 실행합니다. 사용자 지정 주석 및 오버레이 대화형 지도 했습니다! 주석을 누르고 Austin 이미지 아래와 같이 표시 됩니다.
 
- [![](ios-maps-walkthrough-images/01-map-image.png "주석을 누르고 Austin 이미지가 표시 됩니다.")](ios-maps-walkthrough-images/01-map-image.png)
+ [![](ios-maps-walkthrough-images/01-map-image.png "주석을 누르고 Austin 이미지가 표시 됩니다.")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>요약
 

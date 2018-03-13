@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>스포트라이트 코어를 사용 하 여 검색
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 이 정보에는 검색 결과에서 다음과 같은 표시:
 
-[ ![](corespotlight-images/corespotlight01.png "코어 스포트라이트 검색 결과 개요")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "코어 스포트라이트 검색 결과 개요")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>항목 복원
 
@@ -80,7 +80,7 @@ public override bool ContinueUserActivity (UIApplication application,
 때 핵심 스포트라이트도 만든 인덱스 항목 수정 해야 할 제목 또는 미리 보기 이미지는 필요한 경우가 있을 수 있습니다. 이와 같이 변경 하는 인덱스를 처음 만들 때 사용한 것과 동일한 방법을 사용 합니다.
 새 만듭니다 `CSSearchableItem` 을 항목을 만들고 새 연결에 사용한 것과 동일한 ID를 사용 하 여 `CSSearchableItemAttributeSet` 수정 된 특성이 포함 된:
 
-[ ![](corespotlight-images/corespotlight02.png "업데이트 항목 개요")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "업데이트 항목 개요")](corespotlight-images/corespotlight02.png#lightbox)
 
 이 항목은 검색 가능한 인덱스에 기록 하는 경우 기존 항목은 새 정보로 업데이트 됩니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 3de935fd407524d7ba62a93205e333c7dd7adde0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b62af404ce0d3f5dacc479682a3002af49e968d1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="date-picker"></a>날짜 선택
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/27/2018
 
 이 가이드에서는 사용 하는 방법을 보여 줍니다는 `DatePickerDialog`에 래핑되어는 `DialogFragment`합니다. 샘플 응용 프로그램에 표시 됩니다는 `DatePickerDialog` 사용자가을 활동에 단추를 클릭 하면 모달 대화 상자로 합니다. 날짜는 사용자가 설정 된 경우는 `TextView` 선택 된 기간으로 업데이트 됩니다.
 
-[![날짜 선택 대화 상자에서 다음 선택 날짜 스크린 샷 단추](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png)
+[![날짜 선택 대화 상자에서 다음 선택 날짜 스크린 샷 단추](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -49,7 +49,6 @@ ms.lasthandoff: 02/27/2018
 3. **사용 하 여 프로그램 `Action`**  &ndash; 는 `DialogFragment` 호출할 수는 `Action<DateTime>` 활동에서 날짜를 표시 하 합니다. 활동은 제공는 `Action<DateTime` 인스턴스화할 때는 `DialogFragment`합니다. 이 샘플은 세 번째 방법을 사용 하 여 하 고 필요한 작업을 제공 합니다는 `Action<DateTime>` 에 `DialogFragment`합니다.
 
 
-<a name="extending_dialogfragment" />
 
 ### <a name="extending-dialogfragment"></a>DialogFragment 확장
 
@@ -99,10 +98,9 @@ Android에서는 메서드를 호출 조각 표시 될 때 `OnCreateDialog`합�
 
 
 > [!NOTE]
-> **참고:** 점에 유의 하는 월의 값 때 `IOnDateSetListener.OnDateSet` 가 호출 11, 0 및 하지 1 ~ 12의 범위 내에 있습니다. 월의 날짜 범위는 1에서 31 (월이 선택한 따라) 됩니다.
+> 점에 유의 하는 월의 값 때 `IOnDateSetListener.OnDateSet` 가 호출 11, 0 및 하지 1 ~ 12의 범위 내에 있습니다. 월의 날짜 범위는 1에서 31 (월이 선택한 따라) 됩니다.
 
 
-<a name="date_picker_fragment" />
 
 ### <a name="showing-the-datepickerfragment"></a>DatePickerFragment 표시
 
@@ -136,7 +134,6 @@ public class MainActivity : Activity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e10a34bc5de16c19f48fa1b869daca9670f37804
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay watchOS에
 
@@ -31,7 +31,7 @@ IOS 10와 3 watchOS 몇 가지 새로운 Api가 iOS 및 watchOS 동적 지불 �
 
 ### <a name="supporting-apple-pay-outside-of-uikit"></a>Apple Pay UIKit 외부에서 지원
 
-사용 하 여 [PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller) 및 [PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate), 응용 프로그램에서 제공 하는 동일한 기능을 지원할 수 [ PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller) UIKit 사용 하지 않고 있습니다. 이 새로운 API Apple Pay Apple Watch (및 특정 의도)을 지원 하기 위해 필요한 상태인 동안에 다른 상황 (예: 기존 응용 프로그램)에서는 선택 사항입니다. 그러나 Apple 제안 지원을 제공 하기 위해 광범위 한 Apple Pay 개발자의 응용 프로그램의 모든 단일 코드 베이스를 최대한 빨리 새로운 API를 이동 합니다. 의도 대 한 자세한 내용은 및 Siri 통합을 참조 하십시오 우리의 [SiriKit 소개](/~/ios/platform/sirikit/index.md) 설명서입니다.
+사용 하 여 [PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller) 및 [PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate), 응용 프로그램에서 제공 하는 동일한 기능을 지원할 수 [ PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller) UIKit 사용 하지 않고 있습니다. 이 새로운 API Apple Pay Apple Watch (및 특정 의도)을 지원 하기 위해 필요한 상태인 동안에 다른 상황 (예: 기존 응용 프로그램)에서는 선택 사항입니다. 그러나 Apple 제안 지원을 제공 하기 위해 광범위 한 Apple Pay 개발자의 응용 프로그램의 모든 단일 코드 베이스를 최대한 빨리 새로운 API를 이동 합니다. 의도 대 한 자세한 내용은 및 Siri 통합을 참조 하십시오 우리의 [SiriKit 소개](~/ios/platform/sirikit/index.md) 설명서입니다.
 
 ### <a name="presenting-issuer-cards-from-within-apps"></a>앱 내에서 발급자 카드를 제시합니다.
 

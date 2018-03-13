@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b0b1db6bf73b03eed99c5ede038d07bb3ccf284
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23aa944b88fe3e743b6b29810c29d1843f2efc29
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="api-design"></a>API 디자인
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -23,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin.Android의 핵심 있습니다 interop 엔진에서 Java와 C# 브리지 당시 이며 C# 또는 다른.NET 언어에서 Java Api에 액세스할 수 있는 개발자에 게 제공 합니다.
 
-<a name="Design_Principles" />
 
 ## <a name="design-principles"></a>디자인 원칙
 
@@ -64,7 +62,6 @@ Xamarin.Android의 핵심 있습니다 interop 엔진에서 Java와 C# 브리지
     - 임의의 Java 라이브러리를 호출할 수 있는 메커니즘 제공 ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
 
 
-<a name="Assemblies" />
 
 ## <a name="assemblies"></a>어셈블리
 
@@ -72,11 +69,9 @@ Xamarin.Android 다양 한 구성 하는 어셈블리를 포함 된 *MonoMobile 
 
 Android 플랫폼에 대 한 바인딩을에 포함 되어는 `Mono.Android.dll` 어셈블리입니다. 사용 중인 Android Api에 대 한 전체 바인딩 Android 런타임 VM과 통신 하 고이 어셈블리에 포함 되어 있습니다.
 
-<a name="Binding_Design" />
 
 ## <a name="binding-design"></a>바인딩 디자인
 
-<a name="Collections" />
 
 ### <a name="collections"></a>컬렉션
 
@@ -112,7 +107,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-<a name="Properties" />
 
 ### <a name="properties"></a>속성
 
@@ -127,7 +121,6 @@ if (goodSource.Count != 4) // false
 -  속성은 *하지* 속성 형식은 배열 되는 경우를 생성 합니다.
 
 
-<a name="Events_and_Listeners" />
 
 ### <a name="events-and-listeners"></a>이벤트 및 수신기
 
@@ -177,7 +170,6 @@ C# 이벤트 또는 속성 자동으로 생성 하는 경우 Android 이벤트 �
 
 모든 수신기 인터페이스를 구현 하는 [ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 인터페이스를 통해 바인딩, 수신기 클래스에서이 인터페이스를 구현 해야 하므로 구현 세부 사항으로 인해 합니다. 수신기 인터페이스의 서브 클래스에서 구현 하 여이 작업을 수행할 수 있습니다 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 또는 다른 겹쳐진 Android 작업 등의 Java 개체입니다.
 
-<a name="Runnables" />
 
 ### <a name="runnables"></a>Runnables
 
@@ -188,7 +180,6 @@ Java에서 사용 된 [java.lang.Runnable](https://developer.xamarin.com/api/typ
 
 부터 [irunnable이](https://developer.xamarin.com/api/type/Java.Lang.IRunnable/) 다양 한 인터페이스를 구현 하 고 따라서 수 있으므로를 대체 하는 대신 현재 위치에서 오버 로드 runnables로 직접 전달 되어야 합니다.
 
-<a name="Inner_Classes" />
 
 ### <a name="inner-classes"></a>내부 클래스
 
@@ -227,7 +218,6 @@ class CubeWallpaper : WallpaperService {
 
 참고 어떻게 `CubeWallpaper.CubeEngine` 내에 중첩 된 `CubeWallpaper`, `CubeWallpaper` 의 포함 하는 클래스에서 상속 `WallpaperService.Engine`, 및 `CubeWallpaper.CubeEngine` 선언 형식-를 사용 하는 생성자가 `CubeWallpaper` 위에 지정 된 것으로이 경우.
 
-<a name="Interfaces" />
 
 ### <a name="interfaces"></a>인터페이스
 
@@ -254,7 +244,7 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 
 
 > [!NOTE]
-> **참고:** Java 인터페이스 상수는 Xamarin.Android 1.9 부터는 <em>중복</em> Java 이식 단순화 하기 위해에서 코드입니다. 이렇게 하면 사용 하는 Java 코드를 포팅하는 작업을 개선 하기 위해 [android 공급자](http://developer.android.com/reference/android/provider/package-summary.html) 상수 인터페이스입니다.
+> Java 인터페이스 상수는 Xamarin.Android 1.9 부터는 <em>중복</em> Java 이식 단순화 하기 위해에서 코드입니다. 이렇게 하면 사용 하는 Java 코드를 포팅하는 작업을 개선 하기 위해 [android 공급자](http://developer.android.com/reference/android/provider/package-summary.html) 상수 인터페이스입니다.
 
 이러한 형식 외에 네 개의 추가 변경 사항이:
 
@@ -277,9 +267,8 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 
 마지막으로, 형식은 형식을 *상수에 사용* 접미사와 같은 *Android.OS.ParcelableConsts* 는 이제 사용 되지 않음, 새로 도입 된 InterfaceConsts 이외의 중첩 형식입니다. Xamarin.Android 3.0에서 제거 됩니다.
 
-<a name="Resources" />
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 이미지, 레이아웃 설명, 이진 blob 및 문자열 사전으로 응용 프로그램에 포함할 수 [리소스 파일](http://developer.android.com/guide/topics/resources/providing-resources.html)합니다.
 다양 한 Android Api는에 설계 [리소스 Id에 작동](http://developer.android.com/guide/topics/resources/accessing-resources.html) 이미지 처리를 하는 대신 문자열이 나 이진 blob 직접 합니다.
@@ -323,7 +312,6 @@ public class Resource {
 
 다음 사용 `Resource.Drawable.icon` 참조에는 `drawable/icon.png` 파일을 또는 `Resource.Layout.main` 참조에는 `layout/main.xml` 파일을 또는 `Resource.String.first_string` 사전 파일에 첫 번째 문자열을 참조 하도록 `values/strings.xml`합니다.
 
-<a name="Constants_and_Enumerations" />
 
 ## <a name="constants-and-enumerations"></a>상수 및 열거형
 

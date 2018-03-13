@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2a10c161c49e7cd0d45d29522a98c0dc78f7adb7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 702a5986c9249eec38868895f55ef6f63b534b9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tab-bars-and-tab-bar-controllers"></a>탭 모음 및 탭 표시줄 컨트롤러
 
@@ -42,7 +42,7 @@ _iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클�
 
 이 연습에 대 한 다음 응용 프로그램을 만드는 하겠습니다.
 
-[ ![](creating-tabbed-applications-images/00-app.png "샘플 탭된 응용 프로그램")](creating-tabbed-applications-images/00-app.png)
+[![](creating-tabbed-applications-images/00-app.png "샘플 탭된 응용 프로그램")](creating-tabbed-applications-images/00-app.png#lightbox)
 
 를 없지만 이미 탭된 응용 프로그램 템플릿을이 예에서는, Mac 용 Visual Studio에서 사용할 수 있는 응용 프로그램 생성 방법의 더 잘 이해할 수를 빈 프로젝트에서 작동 하도록 하겠습니다.
 
@@ -55,9 +55,9 @@ _iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클�
 
 선택 된 **파일 > 새로 만들기 > 솔루션** Mac 및 선택 용 Visual Studio에서 메뉴 항목은 **iOS > 앱 > 빈 프로젝트** 서식 파일을 프로젝트 이름 `TabbedApplication`아래와 같이,:
 
-[ ![](creating-tabbed-applications-images/newsolution1.png "빈 프로젝트 템플릿 선택")](creating-tabbed-applications-images/newsolution1.png)
+[![](creating-tabbed-applications-images/newsolution1.png "빈 프로젝트 템플릿 선택")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
-[ ![](creating-tabbed-applications-images/newsolution2.png "TabbedApplication 프로젝트 이름을")](creating-tabbed-applications-images/newsolution2.png)
+[![](creating-tabbed-applications-images/newsolution2.png "TabbedApplication 프로젝트 이름을")](creating-tabbed-applications-images/newsolution2.png#lightbox)
 
 
 
@@ -65,7 +65,7 @@ _iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클�
 
 다음으로 빈 클래스를 선택 하 여 추가 **파일 > 새 파일** 선택 하 고는 **일반: 빈 클래스** 템플릿. 파일 이름을 `TabController` 아래와 같이:
 
-[ ![](creating-tabbed-applications-images/02-newclass.png "TabController 클래스 추가")](creating-tabbed-applications-images/02-newclass.png)
+[![](creating-tabbed-applications-images/02-newclass.png "TabController 클래스 추가")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
 `TabController` 클래스의 구현에 포함 됩니다는 `UITabBarController` 배열의 관리할 `UIViewControllers`합니다. 사용자가 탭을 선택 된 `UITabBarController` 하므로 적절 한 보기 컨트롤러에 대 한 보기를 제공 합니다.
 
@@ -113,7 +113,7 @@ namespace TabbedApplication {
 
 각각에 대해 다음에 유의 `UIViewController` 설정 인스턴스를는 `Title` 의 속성은 `UIViewController`합니다. 컨트롤러에 추가 될 때는 `UITabBarController`, `UITabBarController` 읽힙니다는 `Title` 각 컨트롤러에 대해 아래와 같이 연결 된 탭의 레이블에 표시:
 
-[ ![](creating-tabbed-applications-images/00-app.png "샘플 응용 프로그램 실행")](creating-tabbed-applications-images/00-app.png)
+[![](creating-tabbed-applications-images/00-app.png "샘플 응용 프로그램 실행")](creating-tabbed-applications-images/00-app.png#lightbox)
 
 #### <a name="setting-the-tabcontroller-as-the-rootviewcontroller"></a>TabController는 RootViewController로 설정
 
@@ -144,7 +144,7 @@ namespace TabbedApplication {
 
 응용 프로그램을 지금 실행 하는 경우는 `UITabBarController` 첫 번째 탭이 기본적으로 선택 된 로드 됩니다. 다른 탭을 선택 하면 연결된 된 컨트롤러에서 결과 보기에서 제공 되는 `UITabBarController,` 최종 사용자가 두 번째 탭을 선택 하는 위치 아래와 같이:
 
-[ ![](creating-tabbed-applications-images/03-secondtab.png "표시 된 두 번째 탭")](creating-tabbed-applications-images/03-secondtab.png)
+[![](creating-tabbed-applications-images/03-secondtab.png "표시 된 두 번째 탭")](creating-tabbed-applications-images/03-secondtab.png#lightbox)
 
  <a name="Modifying_TabBarItems" />
 
@@ -185,7 +185,7 @@ tab2.View.BackgroundColor = UIColor.Orange;
 
 위의 코드에서는 명명 된 이미지 `second.png` Mac.에 대 한 Visual Studio에서 프로젝트의 루트에 추가 된 실제로 세 개의 이미지 아래와 같이 장치 해상도 모두 포함 하는 프로젝트에 추가 되었습니다.
 
- [ ![](creating-tabbed-applications-images/tabbedimages7new.png "프로젝트에 추가 이미지")](creating-tabbed-applications-images/tabbedimages7new.png)
+ [![](creating-tabbed-applications-images/tabbedimages7new.png "프로젝트에 추가 이미지")](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
 
 탭 이미지에는 일반적인 확인 고해상도 대 한 60 및 iPhone 6에 대 한 90 x 90 60에 대 한 투명도 있는 30 x 30 png 여야 합니다 Plus 확인 합니다. 이 코드만 하면 명명 된 파일을 로드 `second.png` iOS 레 티 나 디스플레이 사용 하 여 장치에서 높은 해상도 자동으로 로드 됩니다. 자세한 내용은이에 대 한는 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 가이드 합니다. 기본적으로 탭 모음 항목이 선택 파란색 tint으로 회색, 됩니다.
 
@@ -193,13 +193,13 @@ tab2.View.BackgroundColor = UIColor.Orange;
 
 위의 이미지를 추가할 수도 있습니다는 **리소스** 디렉터리를 자동으로 해당 내용이 응용 프로그램 번들의 루트에 복사 될 특수 디렉터리:
 
-[ ![](creating-tabbed-applications-images/tabbedapplication8.png "리소스 그룹으로 이미지")](creating-tabbed-applications-images/tabbedapplication8.png)
+[![](creating-tabbed-applications-images/tabbedapplication8.png "리소스 그룹으로 이미지")](creating-tabbed-applications-images/tabbedapplication8.png#lightbox)
 
 또한에서는 설정 된 경우는 `Title` 속성을 직접는 `TabBarItem`, 설정에 대 한 모든 값을 재정의 `Title` 컨트롤러 자체에 있습니다.
 
 응용 프로그램을 지금를 실행 하면 두 번째 탭이 표시 사용자 지정 우리의 제목과 이미지 아래와 같이:
 
-[ ![](creating-tabbed-applications-images/05-customtab.png "사각형 아이콘을 사용 하 여 두 번째 탭")](creating-tabbed-applications-images/05-customtab.png)
+[![](creating-tabbed-applications-images/05-customtab.png "사각형 아이콘을 사용 하 여 두 번째 탭")](creating-tabbed-applications-images/05-customtab.png#lightbox)
 
  <a name="Setting_the_Badge_Value" />
 
@@ -214,7 +214,7 @@ tab3.TabBarItem.BadgeValue = "Hi";
 
 아래와 같이 탭의 왼쪽된 위 모퉁이에 있는 문자열 "Hi"를 사용 하 여 빨간색 레이블을에서는이 명령을 실행 합니다.
 
-[ ![](creating-tabbed-applications-images/06-badge.png "Hi 배지 사용 하 여 두 번째 탭")](creating-tabbed-applications-images/06-badge.png)
+[![](creating-tabbed-applications-images/06-badge.png "Hi 배지 사용 하 여 두 번째 탭")](creating-tabbed-applications-images/06-badge.png#lightbox)
 
 배지 숫자 읽지 않은 나타내는 값을 표시 하는 대개 새 항목입니다. 배지를 제거 하려면 설정는 `BadgeValue` 아래와 같이 null로:
 
@@ -236,7 +236,7 @@ tab3.TabBarItem.BadgeValue = null;
 
 이 시나리오에 대 한 초기 화면 없는 컨트롤러에서 로드 한 `UITabBarController`합니다. 단추를 눌러 사용자는 화면과 상호 상호 작용 하는 경우 동일한 보기 컨트롤러에 로드 되는 `UITabBarController`, 사용자에 게 제공 되는 합니다. 다음 스크린 샷은 응용 프로그램 흐름을 보여 줍니다.
 
-[ ![](creating-tabbed-applications-images/inital-screen-application.png "이 스크린 샷 응용 프로그램 흐름을 보여 줍니다.")](creating-tabbed-applications-images/inital-screen-application.png)
+[![](creating-tabbed-applications-images/inital-screen-application.png "이 스크린 샷 응용 프로그램 흐름을 보여 줍니다.")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 이 예제에 대 한 새 응용 프로그램을 시작 하겠습니다. 에서는 다시는 **iPhone > 앱 > 빈 프로젝트 (C#)** 서식 파일, 프로젝트 이름 지정이 이번 `InitialScreenDemo`합니다.
 
@@ -249,14 +249,14 @@ tab3.TabBarItem.BadgeValue = null;
 
 이 새 스토리 보드 부르겠습니다 **MainStoryboard** 아래 그림과 같이,: 
 
-[ ![](creating-tabbed-applications-images/new-file-dialog.png "MainStoryboard 파일을 프로젝트에 추가")](creating-tabbed-applications-images/new-file-dialog.png)
+[![](creating-tabbed-applications-images/new-file-dialog.png "MainStoryboard 파일을 프로젝트에 추가")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
 다루는 이전에 스토리 보드 아닌 파일 스토리 보드를 추가할 때 알아야 할 몇 가지 중요 한 단계는 [스토리 보드에는 소개](~/ios/user-interface/storyboards/index.md) 가이드입니다. 이러한 항목은 다음과 같습니다.
 
  
 1. 에 사용자 스토리 보드의 이름을 추가 **주 인터페이스** 의 섹션은 `Info.plist`:
 
-    [![](creating-tabbed-applications-images/project-options.png "주 인터페이스 MainStoryboard로 설정")](creating-tabbed-applications-images/project-options.png)
+    [![](creating-tabbed-applications-images/project-options.png "주 인터페이스 MainStoryboard로 설정")](creating-tabbed-applications-images/project-options.png#lightbox)
 1. 사용자 `App Delegate`를 다음 코드로 창 메서드를 재정의:
 
     ```csharp
@@ -270,11 +270,11 @@ tab3.TabBarItem.BadgeValue = null;
 
 컨트롤러 디자인 화면에 세 명의 보기를 끌어서 두 번 MainStoryboard.storyboard 파일을 클릭 하 여 디자이너를 엽니다. 원하는 각 위의 이름에 해당 하는 자체 클래스 있는 컨트롤러 이러한 보기에서 그러한 **Identity > 클래스**, 아래 스크린샷에 표시 된 것과 같이 이름에 입력:
 
-[ ![](creating-tabbed-applications-images/class-name.png "클래스 ViewController1로 설정")](creating-tabbed-applications-images/class-name.png)
+[![](creating-tabbed-applications-images/class-name.png "클래스 ViewController1로 설정")](creating-tabbed-applications-images/class-name.png#lightbox)
 
 Mac 용 visual Studio는 클래스와 필요한 디자이너 파일을 자동으로 생성 됩니다, 그리고 아래 그림과 같이 솔루션 패드에서 확인할 수 있습니다.
 
-[ ![](creating-tabbed-applications-images/solution-pad2.png "프로젝트에서 자동으로 생성 된 파일")](creating-tabbed-applications-images/solution-pad2.png)
+[![](creating-tabbed-applications-images/solution-pad2.png "프로젝트에서 자동으로 생성 된 파일")](creating-tabbed-applications-images/solution-pad2.png#lightbox)
 
  <a name="Creating_the_UI" />
 
@@ -291,11 +291,11 @@ Mac 용 visual Studio는 클래스와 필요한 디자이너 파일을 자동으
 
 이 단추의 표시 여부를 제어 우리는 `TouchUpInside` 이벤트 않으며이 뒤에 있는 코드에서 참조 하는 데 필요 합니다. 보겠습니다로 식별 된 **이름** `aButton` 다음 스크린샷에 표시 된 것 처럼 속성 패드에서:
 
-[ ![](creating-tabbed-applications-images/abutton-properties.png "aButton 속성 패드에서에 이름을 설정합니다")](creating-tabbed-applications-images/abutton-properties.png)
+[![](creating-tabbed-applications-images/abutton-properties.png "aButton 속성 패드에서에 이름을 설정합니다")](creating-tabbed-applications-images/abutton-properties.png#lightbox)
 
 이제 디자인 화면 아래 스크린샷과 유사 하 게 표시 됩니다.
 
-[ ![](creating-tabbed-applications-images/design-surface1.png "디자인 화면 해야 이제 유사 하 게이 스크린 샷")](creating-tabbed-applications-images/design-surface1.png)
+[![](creating-tabbed-applications-images/design-surface1.png "디자인 화면 해야 이제 유사 하 게이 스크린 샷")](creating-tabbed-applications-images/design-surface1.png#lightbox)
 
 조금 더 자세히를 추가 하겠습니다. `ViewController2` 및 `ViewController3`을 각각, 레이블을 추가 하거나 '2' 및 '3'에 각각 텍스트를 변경 합니다. 사용자에 게이 하이라이트 살펴보고 탭/보기.
 
@@ -305,7 +305,7 @@ Mac 용 visual Studio는 클래스와 필요한 디자이너 파일을 자동으
 
 놓으면는 `aButton`, TouchUpInside 이벤트를 트리거하려면 주시기 바랍니다. 이제 단추를 선택 및는 **이벤트 탭** 속성 패드의 이벤트 처리기 – 선언 `InitialActionCompleted` – 되므로 코드에서를 참조할 수 있습니다. 아래 스크린샷에서이 보여 줍니다.
 
-[ ![](creating-tabbed-applications-images/event-handler.png "사용자는은 aButton 놓으면 TouchUpInside 이벤트 트리거")](creating-tabbed-applications-images/event-handler.png)
+[![](creating-tabbed-applications-images/event-handler.png "사용자는은 aButton 놓으면 TouchUpInside 이벤트 트리거")](creating-tabbed-applications-images/event-handler.png#lightbox)
 
 이제 단추를 숨기려면이 이벤트가 발생 하는 경우 뷰 컨트롤러를 지시 해야 `InitialActionCompleted`합니다. `ViewController1`, 다음 부분 메서드를 추가 합니다.
 
@@ -324,7 +324,7 @@ partial void InitialActionCompleted (UIButton sender)
 
 **도구 상자**, 검색할는 **탭 모음 컨트롤러** 컨트롤러 & 개체에서이 디자인 화면으로 끕니다. 아래 스크린샷에서 보시 탭 모음 컨트롤러는 ui와 기본적으로 된 두 명의 뷰 컨트롤러의 따라서:
 
-[ ![](creating-tabbed-applications-images/tabbarcontroller.png "레이아웃 탭 모음 컨트롤러 추가")](creating-tabbed-applications-images/tabbarcontroller.png)
+[![](creating-tabbed-applications-images/tabbarcontroller.png "레이아웃 탭 모음 컨트롤러 추가")](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
 
 아래쪽의 검은색 표시줄을 선택 하 고 delete 키를 눌러 하 여 새 컨트롤러 이러한 보기를 삭제 합니다.
 
@@ -334,15 +334,15 @@ partial void InitialActionCompleted (UIButton sender)
  
 이 탭의 각를 설정 하려면 **Ctrl + 클릭** 1 ~ 3 차원 및 관계 선택 순서로 컨트롤러 우리의 보기의 각 TabBarController에서 **탭** 아래 그림과 같이 상황에 맞는 메뉴에서:
 
-[ ![](creating-tabbed-applications-images/context-menu.png "탭 관계를 선택 합니다.")](creating-tabbed-applications-images/context-menu.png)
+[![](creating-tabbed-applications-images/context-menu.png "탭 관계를 선택 합니다.")](creating-tabbed-applications-images/context-menu.png#lightbox)
 
 스토리 보드에는 아래 스크린샷과 유사 합니다.
 
-[ ![](creating-tabbed-applications-images/segue-layout.png "스토리 보드가 스크린이 샷을 비슷해야 합니다.")](creating-tabbed-applications-images/segue-layout.png)
+[![](creating-tabbed-applications-images/segue-layout.png "스토리 보드가 스크린이 샷을 비슷해야 합니다.")](creating-tabbed-applications-images/segue-layout.png#lightbox)
 
 탭 모음 항목 중 하나를 클릭 하 고 탐색 속성 패널을 아래 그림과 같이 다양 한 다른 옵션을 확인할 수 있습니다.
 
-[ ![](creating-tabbed-applications-images/properties-panel.png "속성 탐색기 탭 옵션 설정")](creating-tabbed-applications-images/properties-panel.png)
+[![](creating-tabbed-applications-images/properties-panel.png "속성 탐색기 탭 옵션 설정")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
 IOS 배지, 제목 등 특정 속성을 편집 하는 데 사용할 수 있습니다 [식별자](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), 기타
 
@@ -360,11 +360,11 @@ public override void ViewDidLoad ()
 
 응용 프로그램을 실행 하 고 사용자가 첫 번째 화면의 UITabBarController 단추를 누를 때 로드 되는 아래와 같이 첫 번째 탭에 배치 하는 첫 번째 화면에서 보기:
 
-[ ![](creating-tabbed-applications-images/first-view.png "예제 응용 프로그램 출력")](creating-tabbed-applications-images/first-view.png)
+[![](creating-tabbed-applications-images/first-view.png "예제 응용 프로그램 출력")](creating-tabbed-applications-images/first-view.png#lightbox)
 
 <!--Save the files and run the application:
 
-[ ![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png)-->
+[![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)-->
 
 ## <a name="summary"></a>요약
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 88db45135104f14ca3a4b18e466e95288853a6df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cc2c12ce2826f0b66cdf49a9a4df84d7f67f7713
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-pay-capabilities"></a>Apple Pay 기능
 
@@ -79,8 +79,8 @@ Apple Pay를 사용하면 사용자의 iOS 장치를 통해 실제 상품을 구
 7.  펼쳐진 섹션의 맨 아래로 스크롤하여 **편집**을 클릭합니다.
 8.  목록을 Apple Pay까지 아래로 스크롤하여 **편집** 단추를 클릭합니다.  
     
-    
     ![Apple Pay 앱 ID 세부 정보 편집](apple-pay-capabilities-images/image39.png)
+
 9.  이 앱 ID와 함께 사용할 가맹점 ID를 선택하고 **계속**을 클릭합니다.  
     
     ![앱 ID에 사용할 가맹점 ID 선택](apple-pay-capabilities-images/image40.png)

@@ -3,14 +3,15 @@ title: "요약 장 14입니다. 절대 레이아웃"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: ac4c41ebd70b58e95a3fa4fa7a391a473361b1db
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 장 14입니다. 절대 레이아웃
 
@@ -91,7 +92,7 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1-layoutBounds.Height))
 
 [ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) 샘플 시뮬레이션된 5 무휴 도트 매트릭스 표시와 함께 현재 시간을 표시 합니다. 각 점이 `BoxView` (그 중 228는) 크기 및 위치에 `AbsoluteLayout`합니다.
 
-[![도트 매트릭스 클록의 삼중 스크린 샷](images/ch14fg08-small.png "도트 매트릭스 클록")](images/ch14fg08-large.png "도트 매트릭스 클록")
+[![도트 매트릭스 클록의 삼중 스크린 샷](images/ch14fg08-small.png "도트 매트릭스 클록")](images/ch14fg08-large.png#lightbox "도트 매트릭스 클록")
 
 [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) 두 프로그램 애니메이션 `Label` 화면 가로 및 세로로 bounce 개체입니다.
 

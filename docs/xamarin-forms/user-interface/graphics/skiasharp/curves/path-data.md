@@ -4,14 +4,15 @@ description: "텍스트 문자열을 사용 하 여 확장 가능한 벡터 그�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>SVG 경로 데이터입니다.
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 경로 가로 모드로 볼 때 더 적절 하 게 표시 되는 캔버스를 채웁니다.
 
-[![](path-data-images/pathdatahello-small.png "경로 데이터 Hello 페이지의 삼중 스크린샷")](path-data-images/pathdatahello-large.png "경로 데이터 Hello 페이지의 삼중 스크린 샷")
+[![](path-data-images/pathdatahello-small.png "경로 데이터 Hello 페이지의 삼중 스크린샷")](path-data-images/pathdatahello-large.png#lightbox "경로 데이터 Hello 페이지의 삼중 스크린 샷")
 
 **경로 데이터 Cat** 페이지는와 유사 합니다. 경로 및 그리기 개체 모두에 필드로 정의 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 클래스:
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![](path-data-images/pathdatacat-small.png "경로 데이터 Cat 페이지의 삼중 스크린샷")](path-data-images/pathdatacat-large.png "경로 데이터 Cat 페이지의 삼중 스크린샷")
+[![](path-data-images/pathdatacat-small.png "경로 데이터 Cat 페이지의 삼중 스크린샷")](path-data-images/pathdatacat-large.png#lightbox "경로 데이터 Cat 페이지의 삼중 스크린샷")
 
 일반적으로, 한 `SKPath` 개체 필드로 정의 되 면 경로의 윤곽선 생성자 나 다른 방법에 정의 되어야 합니다. 그러나 SVG 경로 데이터를 사용할 때 살펴보았습니다 필드 정의에 전체 경로 지정할 수 있습니다.
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 그러나 두 번째 손으로 로드할은 특수 한 합니다. 시계는 업데이트 되므로 16 밀리초 마다는 `Millisecond` 속성의는 `DateTime` 값 하나 개별 점프에 이동 하는 대신 직접 두 번째 스윕을 애니메이션 효과를 잠재적으로 사용할 수 있습니다 초에 두 번째에서입니다. 하지만이 코드를 매끄럽게 이동을 허용 하지 않습니다. 대신,는 Xamarin.Forms를 사용 [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) 및 [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) 감속/가속 함수는 다른 종류의 이동에 대 한 애니메이션 합니다. 이러한 감속/가속 함수 인해 두 번째 포인터는 화면 떨림 방식으로 & #x 2014;으로 이동 하려면 끌어오기 다시 약간를 이동한 다음 약간 과도 하 게 해결 목적지 효과 아쉽게도 재현할 수 없는 정적이 스크린 샷에 전에:
 
-[![](path-data-images/prettyanalogclock-small.png "예쁜 아날로그 클록 페이지의 삼중 스크린샷")](path-data-images/prettyanalogclock-large.png "아날로그 클록 꽤 페이지의 삼중 스크린샷")
+[![](path-data-images/prettyanalogclock-small.png "예쁜 아날로그 클록 페이지의 삼중 스크린샷")](path-data-images/prettyanalogclock-large.png#lightbox "아날로그 클록 꽤 페이지의 삼중 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크

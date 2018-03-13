@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: c276352bc0ef1478c5145089277183b774bd9bff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 55d13589e4241e9f4e29aea9a55346a8f514f208
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="text"></a>텍스트
 
@@ -26,6 +26,8 @@ Xamarin.Forms에 텍스트를 사용 하기 위한 세 가지 기본 뷰가 있�
 
 기본 제공 또는 사용자 지정을 사용 하 여 텍스트 모양을 변경할 수 있습니다 [스타일](#Styles) 일부 컨트롤은 사용자 지정 지원 및 [글꼴](#Fonts)합니다.
 
+<a name="Label" />
+
 ## <a name="labellabelmd"></a>[레이블](label.md)
 
 `Label` 보기 텍스트를 표시 하는 데 사용 됩니다. 여러 줄의 텍스트 또는 텍스트 한 줄에 표시할 수 있습니다. `Label` 텍스트 인라인에 사용 되는 여러 서식 지정 옵션을 제공할 수 있습니다. 레이블 보기 래핑할 하거나 한 줄에 표시할 수 없을 때 텍스트를 자를 수 있습니다.
@@ -36,7 +38,9 @@ Xamarin.Forms에 텍스트를 사용 하기 위한 세 가지 기본 뷰가 있�
 
 레이블에 사용 되는 글꼴을 사용자 지정에 대 한 자세한 내용은 참조 하십시오. [글꼴](fonts.md)합니다.
 
-## <a name="entryentrymd"></a>[Entry](entry.md)
+<a name="Entry" />
+
+## <a name="entryentrymd"></a>[항목](entry.md)
 
 `Entry` 한 줄 텍스트 입력을 허용 하는 데 사용 됩니다. `Entry` 제안 색을 제어할 수 있지만 글꼴 사용자 지정 수 없습니다. `Entry` 암호 모드 있으며 텍스트를 입력할 때까지 개체 틀 텍스트를 표시할 수 있습니다.
 
@@ -46,6 +50,8 @@ Xamarin.Forms에 텍스트를 사용 하기 위한 세 가지 기본 뷰가 있�
 
 이때 달리 `Label`, `Entry` 사용자 지정 글꼴 설정을 사용할 수 없습니다.
 
+<a name="Editor" />
+
 ## <a name="editoreditormd"></a>[편집기](editor.md)
 
 `Editor` 여러 줄 텍스트 입력을 허용 하는 데 사용 됩니다. `Editor` 사용자 지정 배경 색 이지만 텍스트 색을 가질 수 있습니다 및 글꼴을 변경할 수 없습니다.
@@ -54,9 +60,13 @@ Xamarin.Forms에 텍스트를 사용 하기 위한 세 가지 기본 뷰가 있�
 
 참조는 [편집기](editor.md) 대 한 자세한 내용은 문서.
 
+<a name="Fonts" />
+
 ## <a name="fontsfontsmd"></a>[글꼴](fonts.md)
 
 `Label` 컨트롤은 기본 제공 되는 글꼴을 사용 하 여 각 플랫폼 또는 사용자 지정 글꼴을 앱에 포함 된 다른 글꼴 설정을 지원 합니다. 참조는 [글꼴](fonts.md) 대 한 자세한 내용은 문서입니다.
+
+<a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[스타일](styles.md)
 

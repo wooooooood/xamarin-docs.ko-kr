@@ -3,16 +3,16 @@ title: "Hello, Android: 심층 분석"
 description: "두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고 Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: de6037b9cfeb66ee1c26c12c2e81913a4a2f1e79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9e554da80218d2e89ff79c6e89886d707b1ed95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -83,13 +83,13 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 다음 스크린샷에서는 솔루션의 콘텐츠를 나열합니다. 솔루션 탐색기에는 솔루션과 연결된 디렉터리 구조와 모든 파일이 포함됩니다.
 
-[![솔루션 탐색기](hello-android-deepdive-images/vs/02-solution-structure-sml.png )](hello-android-deepdive-images/vs/02-solution-structure.png)
+[![솔루션 탐색기](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 다음 스크린샷에서는 솔루션의 콘텐츠를 나열합니다. Solution Pad에는 솔루션과 연결된 디렉터리 구조와 모든 파일이 포함됩니다.
 
-[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png)
+[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 -----
 
@@ -106,7 +106,7 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 -   **리소스** &ndash; 문자열, 이미지 및 레이아웃과 같은 응용 프로그램 리소스가 포함됩니다. 생성된 `Resource` 클래스를 통해 코드에 있는 이러한 리소스에 액세스할 수 있습니다. [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md) 가이드는 **리소스** 디렉터리에 대한 자세한 정보를 제공합니다. 응용 프로그램 템플릿에는 **AboutResources.txt** 파일의 리소스에 대한 간단한 가이드가 포함됩니다.
 
-### <a name="resources"></a>리소스
+### <a name="resources"></a>자료
 
 **리소스** 디렉터리에는 **drawable**, **layout**, **mipmap** 및 **values**라는 4개의 폴더 및 **Resource.designer.cs**라는 파일이 포함됩니다.
 
@@ -135,11 +135,11 @@ Android의 이러한 고유한 기능은 복잡한 응용 프로그램을 디자
 
 에뮬레이터 또는 장치에서 처음으로 **Phoneword** 응용 프로그램을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 응용 프로그램 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 응용 프로그램의 첫 번째 작업을 만들 때 전체 응용 프로그램을 로드합니다.
 
-[![작업 부하](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png)
+[![작업 부하](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 Android 응용 프로그램을 통한 선형 진행이 없으므로(여러 위치에서 응용 프로그램을 시작할 수 있음) Android는 고유한 방법을 클래스 및 파일이 응용 프로그램을 구성하는 작업을 추적합니다. **Phoneword** 예제에서는 **Android 매니페스트**라는 특별한 XML 파일로 응용 프로그램을 구성하는 모든 파트를 등록합니다. **Android 매니페스트**의 역할은 응용 프로그램의 콘텐츠, 속성 및 사용 권한을 추적하고 Android 운영 체제에 공개하는 것입니다. 아래 다이어그램에 표시된 대로 단일 작업(화면)인 **Phoneword** 응용 프로그램 및 Android 매니페스트 파일에 의해 서로 연결된 리소스 모음과 도우미 파일을 가정할 수 있습니다.
 
-[![리소스 도우미](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png)
+[![리소스 도우미](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 다음 섹션에서는 **Phoneword** 응용 프로그램의 다양한 파트 간에 관계를 탐색합니다. 그러면 위의 다이어그램을 더 잘 이해할 수 있습니다. 이러한 탐색을 통해 Android Designer 및 레이아웃 파일에 대해 설명한 대로 사용자 인터페이스를 시작합니다.
 
@@ -150,11 +150,11 @@ Android 응용 프로그램을 통한 선형 진행이 없으므로(여러 위�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 -----
 
@@ -162,11 +162,11 @@ Android 응용 프로그램을 통한 선형 진행이 없으므로(여러 위�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![TranslateButton ID 설정](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton ID 설정")](hello-android-deepdive-images/vs/04-translatebutton.png)
+[![TranslateButton ID 설정](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton ID 설정")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![TranslateButton ID 설정](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png)
+[![TranslateButton ID 설정](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 -----
 
@@ -179,11 +179,11 @@ Android 응용 프로그램을 통한 선형 진행이 없으므로(여러 위�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디자이너 원본 보기](hello-android-deepdive-images/vs/05-source-view-sml.png "디자이너 원본 보기")](hello-android-deepdive-images/vs/05-source-view.png)
+[![디자이너 원본 보기](hello-android-deepdive-images/vs/05-source-view-sml.png "디자이너 원본 보기")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자이너 원본 보기](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png)
+[![디자이너 원본 보기](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 -----
 
@@ -223,7 +223,7 @@ public class MainActivity : Activity
 
 Android에서 작업은 사용자와의 상호 작용에 따라 수명 주기의 여러 단계를 거칩니다. 작업을 만들고, 시작하고, 일시 중지하고, 다시 시작하고 소멸할 수 있습니다. `Activity` 클래스에는 시스템이 화면의 수명 주기에서 특정 시점에 호출하는 메서드가 포함되어 있습니다. 다음 다이어그램에서는 작업의 일반적인 수명뿐만 아니라 해당 수명 주기 메서드 중 일부를 보여줍니다.
 
-[![작업 수명 주기](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png)
+[![작업 수명 주기](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 `Activity` 수명 주기 메서드를 재정의하여 작업이 로드하는 방법, 사용자에게 반응하는 방법 및 장치 화면에서 사라진 후에 수행되는 작업을 제어할 수 있습니다. 예를 들어 위의 다이어그램에서 수명 주기 메서드를 재정의하여 몇 가지 중요한 작업을 수행할 수 있습니다.
 
@@ -320,21 +320,20 @@ Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하
 
 장치를 구성한 후에 플러그 인하고, **시작(플레이)**를 누르고, **장치 선택** 대화 상자에서 선택하고, **확인**을 눌러서 배포할 수 있습니다.
 
-[![디버그 장치 선택](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png)
+[![디버그 장치 선택](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 -----
 
 그러면 장치에서 응용 프로그램을 시작합니다.
 
-[![Phoneword 입력](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png)
+[![Phoneword 입력](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
-<a name="densities" />
 
 ### <a name="set-icons-for-different-screen-densities"></a>다른 화면 밀도의 아이콘 설정
 
 Android 장치가 다양한 화면 크기 및 해상도에서 제공되지만 일부 이미지는 화면에서 제대로 표시되지 않습니다. 예를 들어 고밀도 Nexus 5에서 저밀도 아이콘의 스크린샷은 다음과 같습니다. 주변 아이콘에 비해 흐리게 표시되는 점에 유의하세요.
 
-[![흐린 아이콘](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png)
+[![흐린 아이콘](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 이를 고려하려면 다른 해상도의 아이콘을 **리소스** 폴더에 추가하는 것이 좋습니다. Android는 다른 버전의 **mipmap** 폴더를 제공하여 밀도가 다른 시작 관리자 아이콘, 중간 밀도의 *mdpi*, 고밀도의 *hdpi* 및 고밀도 화면의 *xhdpi*, *xxhdpi*, *xxxhdpi*를 처리합니다. 다양한 크기의 아이콘을 적절한 **mipmap-** 폴더에 저장합니다.
 
@@ -344,13 +343,13 @@ Android 장치가 다양한 화면 크기 및 해상도에서 제공되지만 �
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Mipmap 폴더](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png)
+[![Mipmap 폴더](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 -----
 
 Android는 적절한 밀도의 아이콘을 선택합니다.
 
-[![적절한 밀도의 아이콘](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png)
+[![적절한 밀도의 아이콘](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### <a name="generate-custom-icons"></a>사용자 지정 아이콘 생성
 
@@ -393,15 +392,15 @@ _Google Play 서비스_는 Android 개발자가 Google 맵, Google Cloud Messagi
 
 하나 이상의 Google Play 서비스 라이브러리를 추가하려면 프로젝트 트리에서 **패키지** 노드를 마우스 오른쪽 단추로 클릭하고, **Google Play 서비스 추가...**를 클릭합니다.
 
-[![Google Play 서비스 추가](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png)
+[![Google Play 서비스 추가](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 **Google Play 서비스 추가** 대화 상자가 표시되면 프로젝트에 추가하려는 패키지(NuGet)를 선택합니다.
 
-[![패키지 선택](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png)
+[![패키지 선택](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 서비스를 선택하고 **패키지 추가**를 클릭하면 Mac용 Visual Studio가 필요한 모든 종속 Google Play 서비스뿐만 아니라 선택한 패키지를 다운로드하고 설치합니다. 일부 경우에는 패키지를 설치하기 전에 **동의**를 클릭해야 하는 **라이선스 승인** 대화 상자가 표시될 수 있습니다.
 
-[![라이선스 승인](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png)
+[![라이선스 승인](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
 -----
 

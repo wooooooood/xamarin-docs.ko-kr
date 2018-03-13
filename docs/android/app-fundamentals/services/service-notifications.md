@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a5309b46b67a79225611aafb546b35e73d891b38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3c06fca9c6d8c3cd91889007bd1879149771622b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="service-notifications"></a>서비스 알림
 
@@ -48,7 +48,7 @@ public class MyService: Service
 
 이 스크린 샷은 표시 되는 알림 메시지의 예:
 
-[![상태 표시줄에 표시 되는 알림 아이콘](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png)
+[![상태 표시줄에 표시 되는 알림 아이콘](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 사용자 슬라이드 알림 화면 위쪽에서 아래쪽, 전체 알림이 표시 됩니다.
 

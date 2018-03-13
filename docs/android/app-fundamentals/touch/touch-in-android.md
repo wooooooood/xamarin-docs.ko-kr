@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>Android에서 터치
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/27/2018
 
 
 > [!NOTE]
-> **참고:** 모든 Android 장치의 터치 스크린을 지원 합니다. 
+> 모든 Android 장치의 터치 스크린을 지원합니다. 
 
 매니페스트 파일에 다음 태그를 추가 하면 Google Play를 디스플레이만 터치 사용에 이러한 장치에 앱:
 
@@ -90,11 +90,11 @@ public override bool OnTouchEvent(MotionEvent e)
 
 Android SDK는 Android 1.6 이후 제스처 작성기 라는 에뮬레이터에 미리 설치 된 응용 프로그램 함께 제공 됩니다. 이 응용 프로그램 개발자를 응용 프로그램에 포함할 수 있는 미리 정의 된 제스처를 만들 수 있습니다. 다음 스크린 샷에서 제스처 작성기의 예를 보여 줍니다.
 
-[![예제 동작과 상호 스크린샷 제스처 작성기의](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![예제 동작과 상호 스크린샷 제스처 작성기의](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Google Play 제스처 도구 라는이 응용 프로그램의 향상된 된 버전을 찾을 수 있습니다. 제스처 도구는 제스처 작성기와 매우 비슷하며 점을 제외 하 고 생성 된 후 제스처를 테스트할 수 있습니다. 다음 스크린샷은이 제스처 작성기:
 
-[![예제 동작과 상호 스크린 샷의 제스처 도구](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![예제 동작과 상호 스크린 샷의 제스처 도구](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 제스처 도구 생성 될 때 테스트할 제스처 수 있으므로 사용자 지정 제스처를 만들기 위한 좀 더 유용 하 고 Google Play를 통해 쉽게 사용할 수 있습니다.
 

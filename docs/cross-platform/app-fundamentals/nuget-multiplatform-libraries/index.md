@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 66bf9c215e3d30687fa8037220b8b35409ca285d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 49e7c00feb697d25d61a5e09b051c41945c260c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="nuget-projects-nugetizer-3000"></a>NuGet 프로젝트 (Nugetizer 3000)
 
@@ -21,14 +21,18 @@ _NuGet 패키지 ' Nugetizer 3000'를 사용 하 여 플랫폼 간 코드 공유
 NuGet 패키지를 사용 하 여 플랫폼 간 코드 공유를 자동으로 만들 수는 _Nugetizer 3000_합니다. 이렇게이 하면 새 또는 기존 라이브러리 프로젝트에서 NuGet 패키지를 만들 수는 **다중 플랫폼 라이브러리 프로젝트**합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
 Nugetizer 3000 Mac 6.2에 대 한 Visual Studio와 함께 포함 되어 있습니다.
+
+[![](images/mulitplatform-library-sml.png "새 다중 플랫폼 라이브러리 창 만들기")](images/mulitplatform-library.png#lightbox)
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-<a name="to-use-the-nugetizer-3000-in-visual-studio-please-download-and-run-the-vsix-installerhttpbitlynugetizer-2017"></a>Visual Studio에서 Nugetizer 3000을 사용 하려면 하세요 [다운로드 하 고 VSIX 설치 관리자 실행](http://bit.ly/nugetizer-2017)합니다.
+
+Visual Studio에서 Nugetizer 3000을 사용 하려면 하세요 [다운로드 하 고 VSIX 설치 관리자 실행](http://bit.ly/nugetizer-2017)합니다.
+
 -----
 
-
-
-[ ![](images/mulitplatform-library-sml.png "새 다중 플랫폼 라이브러리 창 만들기")](images/mulitplatform-library.png)
+## <a name="building-nuget-packages"></a>NuGet 패키지 빌드
 
 프로젝트의 모든 빌드 출력에 업로드 하거나 다른 앱과 내부적으로 코드를 공유 하는 데 사용 될 수 있는 전체 NuGet 패키지를 구성한 후 [NuGet.org](https://www.nuget.org)합니다.
 

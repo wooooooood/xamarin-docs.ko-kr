@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: a49c442fcce31fb6b853359ddfafc9a43d0a2114
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eaebd8cbae996e9a5792d0a4898fafb72bdded47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Xamarin.forms에서 SkiaSharp를 사용 하 여
 
@@ -22,10 +22,9 @@ SkiaSharp는.NET 및 C# Google 제품에서 광범위 하 게 사용 되는 오�
 
 이 가이드에서는 Xamarin.Forms 프로그래밍에 익숙한 가정 합니다.
 
-## <a name="webinar"></a>웹 세미나
+> [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-[![](images/skiasharpwebinarscreen.png "Xamarin.Forms 웹 세미나에 대 한 SkiaSharp")](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)  
-["Xamarin.Forms SkiaSharp" 세미나를 시청 하세요](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
+**Xamarin.Forms에 대 한 웹 세미나: SkiaSharp**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp 준비 단계
 

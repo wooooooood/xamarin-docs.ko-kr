@@ -3,16 +3,16 @@ title: "유니버설 Windows 플랫폼 (UWP) 앱 추가"
 description: "이 문서에서는 Mac.에 대 한 Visual Studio에서 생성 하는 Xamarin.Forms 솔루션을 UWP 앱 프로젝트를 추가 하는 방법에 설명"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: ADF99B78-F1BC-48DF-9128-01B93C4411C1
+ms.assetid: 34AAA045-64B8-4FDE-BB49-3FF0B4FFA17C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: a3746165db83b5b8adba9adb862f9ea09f7069b9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 36865dac6bd2ad13b9d3e286ab18a035c1edb3d8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>유니버설 Windows 플랫폼 (UWP) 앱 추가
 
@@ -38,7 +38,7 @@ Windows 10 휴대폰, 태블릿 및 데스크톱에서 실행 되는 UWP 앱을 
 
  4 . 있는지 확인 새 UWP 프로젝트 생성 됩니다는 **빌드 > 구성 관리자** 창 (이 아마도 않습니다 나타나므로 기본적으로). 눈금의 **빌드** 및 **배포** 유니버설 프로젝트에 대 한 상자:
 
-  [ ![](universal-images/configuration-sml.png "구성 관리자 창")](universal-images/configuration.png "구성 관리자 창")
+  [![](universal-images/configuration-sml.png "구성 관리자 창")](universal-images/configuration.png#lightbox "구성 관리자 창")
 
  5 . 선택한 프로젝트를 마우스 오른쪽 단추로 클릭 **추가 > 참조** Xamarin.Forms 응용 프로그램 프로젝트 (PCL,.NET 표준 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
 

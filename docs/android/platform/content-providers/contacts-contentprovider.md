@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 677d672b3f00d4c3f3505ab2adf977f16fca4de5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 730cc1f815641d79350784790e3b33b743d1aebe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-contacts-contentprovider"></a>연락처 ContentProvider를 사용 하 여
 
@@ -40,7 +40,6 @@ Uri에서 커서를 만들려고 하는 방법은 세 가지가 있습니다.
 -  **SortOrder** &ndash; 열을 기준으로 정렬 합니다.
 
 
-<a name="Creating_Inputs_for_a_Query" />
 
 ## <a name="creating-inputs-for-a-query"></a>쿼리에 대 한 입력 만들기
 
@@ -60,14 +59,12 @@ string[] projection = {
 이 예는 `selection`, `selectionArgs` 및 `sortOrder` 로 설정 하 여 무시 됩니다 `null`합니다.
 
 
-<a name="Creating_a_Cursor_from_a_Content_Provider_Uri" />
 
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>콘텐츠 공급자 Uri에서 커서를 만드는
 
 매개 변수 개체를 만든 후 다음 세 가지 방법 중 하나에 사용할 수 있습니다.
 
 
-<a name="Using_a_Managed_Query" />
 
 ### <a name="using-a-managed-query"></a>관리 되는 쿼리를 사용 하 여
 
@@ -80,7 +77,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 이 커서 되므로 닫습니다 하지 않고도 Android에서 관리 됩니다.
 
 
-<a name="Using_ContentResolver" />
 
 ### <a name="using-contentresolver"></a>ContentResolver를 사용 하 여
 
@@ -100,7 +96,6 @@ cursor.Close();
 호출할 수 있습니다 `StartManagingCursor()` 및 `StopManagingCursor()` 커서 '관리' 하 합니다. 자동으로 관리 되는 커서 비활성화 하 고 작업 중지 및 다시 시작할 때 다시 쿼리 됩니다.
 
 
-<a name="Using_CursorLoader" />
 
 ### <a name="using-cursorloader"></a>CursorLoader를 사용 하 여
 
@@ -116,7 +111,6 @@ var cursor = (ICursor)loader.LoadInBackground();
 이전 Android 버전도 사용할 수는 `CursorLoader` 클래스를 사용 하 여는 [v4 지원 라이브러리](http://developer.android.com/tools/support-library/index.html)합니다.
 
 
-<a name="Displaying_the_Cursor_Data_with_a_Custom_Adapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>사용자 지정 어댑터를 사용 하 여 커서 데이터를 표시합니다.
 
@@ -189,13 +183,12 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 
 (있는 경우) 이미지가 표시 되는 Uri를 사용 하 여 장치에 이미지 파일에 있습니다. 응용 프로그램은 다음과 같습니다.
 
-[![ListView;에 연락처를 표시 하는 응용 프로그램의 스크린 샷 이미지가 한 항목의 왼쪽에 표시 됩니다.](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![ListView;에 연락처를 표시 하는 응용 프로그램의 스크린 샷 이미지가 한 항목의 왼쪽에 표시 됩니다.](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 응용 프로그램 유사한 코드 패턴을 사용 하 여 다양 한 사용자의 사진, 비디오 및 음악을 포함 하 여 시스템 데이터를 액세스할 수 있습니다.
 일부 데이터 형식은 프로젝트의 요청에 특별 한 권한이 필요 **AndroidManifest.xml**합니다.
 
 
-<a name="Displaying_the_Cursor_Data_with_a_SimpleCursorAdapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>SimpleCursorAdapter 사용 하 여 커서 데이터를 표시합니다.
 

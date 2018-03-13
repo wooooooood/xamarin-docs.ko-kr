@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 2df101615ed512d362fc065a1bb7080f3fd3bb33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resolving-library-installation-errors"></a>라이브러리 설치 오류 해결
 
@@ -23,7 +23,6 @@ _경우에 따라 Android 지원 라이브러리를 설치 하는 동안 오류�
 Xamarin.Android 응용 프로그램 프로젝트를 빌드하는 동안 Visual Studio 또는 Mac 용 Visual Studio 다운로드 하 여 종속성 라이브러리를 설치 하려고 할 때 빌드 오류가 발생할 수 있습니다. 이러한 오류 중 대부분는 네트워크 연결 문제, 파일 손상 또는 버전 관리 문제가 발생 합니다. 이 가이드는 가장 일반적인 지원 라이브러리 설치 오류를 설명 하 고 응용 프로그램 프로젝트 다시 빌드를 살펴보고 이러한 문제를 해결 하는 단계를 제공 합니다. 
 
  
-<a name="m2repository" />
  
 ## <a name="errors-while-downloading-m2repository"></a>M2Repository 다운로드 하는 동안 오류
 
@@ -36,7 +35,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 이 예제에는 **android\_m2repository\_r16**와 같은 다른 버전에 대 한이 오류 메시지가 표시 될 수 있습니다 하지만 **android\_m2repository\_r18**  또는 **android\_m2repository\_r25**합니다. 
 
 
-<a name="automatic" /> 
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>M2repository 오류 로부터 자동 복구 
 
@@ -50,11 +48,11 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
 2. 오류 메시지에 해당 하는 라이브러리 및 버전 폴더를 찾습니다. 예를 들어 위의 오류 메시지에 대 한 라이브러리 및 버전 폴더에 위치한 **Android.Support.v4\\22.2.1**:
 
-    [![22.2.1에 대 한 폴더 위치 예제 라이브러리를 지원 합니다.](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png)
+    [![22.2.1에 대 한 폴더 위치 예제 라이브러리를 지원 합니다.](resolving-library-installation-errors-images/01-example-location.png)](resolving-library-installation-errors-images/01-example-location.png#lightbox)
 
 3. 버전 폴더의 내용을 삭제 합니다. 제거는 **.zip** 파일으로 **콘텐츠** 및 **포함** 이 폴더 내의 하위 디렉터리입니다. 파일 및 하위가이 스크린 샷에 표시 된 위에 표시 된 예제 오류 메시지에 대 한 (**콘텐츠**, **포함**, 및 **android_m2repository_r16.zip**)입니다. 삭제할 수 있습니다.
 
-    [![예제 내용의 22.2.1 라이브러리 폴더를 지원합니다.](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png)
+    [![예제 내용의 22.2.1 라이브러리 폴더를 지원합니다.](resolving-library-installation-errors-images/02-example-folder-vs.png)](resolving-library-installation-errors-images/02-example-folder-vs.png#lightbox)
 
    삭제 하는 *전체* 이 폴더의 내용을 합니다. 이 폴더 초기값으로 포함할 수 있지만 "없음" **android\_m2repository\_r16.zip** 파일을이 파일이 되었을 수 있습니다 부분적으로 다운로드 하거나 손상 되었습니다.
 
@@ -63,7 +61,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 대부분의 경우에서 이러한 단계는 빌드 오류를 해결 하 고 단계로 진행 됩니다. 이 라이브러리를 삭제 하는 경우에 빌드 오류가 해결 되지 않으면를 수동으로 다운로드 하 고 설치 해야는 **android\_m2repository\_r_nn_.zip** 다음 섹션에 설명 된 대로 파일입니다. 
 
 
-<a name="download" /> 
 
 ### <a name="manually-downloading-m2repository"></a>M2repository을 수동으로 다운로드
 
@@ -119,13 +116,11 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     예를 들어 다음 스크린 샷에서 결과 보여 줍니다 때 **android\_m2repository\_r16.zip** 다운로드 되 고 Windows에서의 다운로드 URL의 MD5 해시로 변경 합니다.
 
-    [![0595E577D19D31708195A83087881EE6.zip로 변경 되 고 r16.zip 저장소의 예](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png)
+    [![0595E577D19D31708195A83087881EE6.zip로 변경 되 고 r16.zip 저장소의 예](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
 
 이 절차에 빌드 오류가 해결 되지 않으면를 수동으로 다운로드 해야는 **android\_m2repository\_r_nn_.zip** 파일, 압축을 푼 및 다음 섹션에 설명 된 대로 해당 콘텐츠를 설치 합니다. 
 
-
-<a name="install" /> 
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>수동으로 다운로드 및 m2repository 파일 설치
 
@@ -140,36 +135,35 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 1.  오류 메시지에 해당 하는 라이브러리 폴더의 내용을 삭제 합니다. 예를 들어 위의 오류 메시지에는 내용을 삭제의 **c:\\사용자\\***username***\\AppData\\로컬\\Xamarin\\ Android.Support.v4\\23.1.1.0**합니다. 
     앞에서 설명한 대로이 디렉터리의 전체 내용을 삭제 해야 합니다.
 
-    [![포함 된 콘텐츠를 삭제 하 고는 23.1.1.0에서 android_m2repository 폴더 폴더](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png)
+    [![포함 된 콘텐츠를 삭제 하 고는 23.1.1.0에서 android_m2repository 폴더 폴더](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
 
 2.  다운로드는 **android\_m2repository\_r_nn_.zip** 파일 오류에 해당 하는 Google에서 메시지 (링크에 대 한 이전 섹션의 표 참조).
 
 3.  이 추출한 **.zip** (예: 바탕 화면) 모든 위치에 보관 합니다. 이름에 해당 하는 디렉터리 만들어야는 **.zip** 보관 합니다. 이 디렉터리 내에서 라는 하위 디렉터리 찾아야 **m2repository**: 
 
-    [![추출 된 zip 보관 파일에 m2repository 폴더](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png)
+    [![추출 된 zip 보관 파일에 m2repository 폴더](resolving-library-installation-errors-images/05-m2repository-vs.png)](resolving-library-installation-errors-images/05-m2repository-vs.png#lightbox)
 
 4.  1 단계에서 제거 하는 버전이 지정 된 라이브러리 디렉터리에서 다시 만들기는 **콘텐츠** 및 **포함** 하위 디렉터리입니다. 예를 들어 다음 스크린 샷에서에서는 **콘텐츠** 및 **포함** 하위 디렉터리에 생성 되는 **23.1.1.0** 폴더에 대 한 **android \_m2repository\_r25.zip**: 
 
-    [![콘텐츠 및 포함 된 폴더는 23.1.1.0 작성 폴더](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png)
+    [![콘텐츠 및 포함 된 폴더는 23.1.1.0 작성 폴더](resolving-library-installation-errors-images/06-recreate-folders-vs.png)](resolving-library-installation-errors-images/06-recreate-folders-vs.png#lightbox)
 
 5.  복사 **m2repository** 에서 추출 된 **.zip** 에 **콘텐츠** 이전 단계에서 만든 디렉터리: 
 
-    [![23.1.1.0/content 폴더에 복사 m2repository의 스크린샷](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)
+    [![23.1.1.0/content 폴더에 복사 m2repository의 스크린샷](resolving-library-installation-errors-images/07-copied-m2repository-vs.png)](resolving-library-installation-errors-images/07-copied-m2repository-vs.png#lightbox)
 
 6.  추출 된 **.zip** 디렉터리 찾아보기 **m2repository\\com\\android\\지원\\지원 v4** 하 고 해당 폴더를 엽니다 위에서 만든 버전 번호 (이 예제에서는 **23.1.1**):
 
-    [![예제 샘플 support-v4/23.1.1 폴더에 포함 된 파일](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png)
+    [![예제 샘플 support-v4/23.1.1 폴더에 포함 된 파일](resolving-library-installation-errors-images/08-zip-contents-vs.png)](resolving-library-installation-errors-images/08-zip-contents-vs.png#lightbox)
 
 7.  이 폴더의 모든 파일 복사는 **포함** 4 단계에서 만든 디렉터리:
 
-    [![23.1.1.0/embedded 폴더에 복사 된 파일의 예](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png)
+    [![23.1.1.0/embedded 폴더에 복사 된 파일의 예](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  통해 모든 파일이 복사 됩니다 있는지 확인 합니다. **포함** 디렉터리 파일 같은 포함 이제 **.jar**, **.aar**, 및 **.pom**합니다.
 
 이 시점에서 누락 된 구성 요소를 직접 설치 하 고 프로젝트가 오류 없이 빌드되어야 합니다. 그렇지 않은 경우 다운로드 한 확인은 **m2repository** **.zip** 정확 하 게 오류 메시지에 대 한 버전에 해당 하는 버전을 보관 하 고에서 해당 콘텐츠를 설치 했는지 확인 하십시오.는 위의 단계에 설명 된 대로 위치를 수정 합니다. 
 
 
-<a name="summary" /> 
 
 ## <a name="summary"></a>요약 
 

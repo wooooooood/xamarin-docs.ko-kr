@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 523d79adbc5d4f88d4a2670b6422a58fb9256ab2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e40fd215d23e7da6f1356bba17fac84ce91007ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 결과 라고도 *산술 나선* 각 루프 간의 오프셋도 상수 이므로:
 
-[![](polylines-images/archimedeanspiral-small.png "Archimedean 나선 페이지의 삼중 스크린샷")](polylines-images/archimedeanspiral-large.png "Archimedean 나선 페이지의 삼중 스크린샷")
+[![](polylines-images/archimedeanspiral-small.png "Archimedean 나선 페이지의 삼중 스크린샷")](polylines-images/archimedeanspiral-large.png#lightbox "Archimedean 나선 페이지의 삼중 스크린샷")
 
 에 `SKPath` 에서 만든는 `using` 블록입니다. 이 `SKPath` 보다 더 많은 메모리를 소비는 `SKPath` 를 제안 하는 이전 프로그램의 개체는 `using` 블록은 모든 관리 되지 않는 리소스를 삭제 하기 위해 더 적합 합니다.
 

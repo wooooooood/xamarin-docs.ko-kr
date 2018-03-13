@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 71f3774c12add26e818b0859cf90c17ab6358538
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 716189fbf1518e9100a78cc5ae64e9e63a24c949
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-images"></a>이미지 표시
 
@@ -25,7 +25,7 @@ Mac 용 visual Studio는 이미지 파일에도 포함할 수 있는 리소스 �
 
 이 스크린샷에서 **빌드 작업** 때 파일이 표시 되는 옵션은 마우스 오른쪽 단추로 클릭 합니다.
 
- [ ![](image-images/image30a.png "빌드 작업 메뉴")](image-images/image30a.png)
+ [![](image-images/image30a.png "빌드 작업 메뉴")](image-images/image30a.png#lightbox)
 
 Mac 용 visual Studio는 일반적으로 올바른 선택 **빌드 작업** 자동으로 하지만 특히 하면 파일을 이동할 프로젝트의 경우 이러한 설정을 알고 있어야 합니다.
 
@@ -33,15 +33,15 @@ Mac 용 visual Studio는 일반적으로 올바른 선택 **빌드 작업** 자�
 
 이미지 파일을 프로젝트에 추가 하려면 먼저 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **파일 추가 중...**
 
- [ ![](image-images/image31a.png "파일 추가... 메뉴")](image-images/image31a.png)
+ [![](image-images/image31a.png "파일 추가... 메뉴")](image-images/image31a.png#lightbox)
 
 이미지 (또는 이미지)를 선택 합니다. 표준 파일 대화 상자에 포함 하려면. 기본 빌드 작업 이미지 됩니다 **BundleResource** – 특정 이유가 없으면이 값을 무시 하지 않습니다.
 
- [ ![](image-images/image32a.png "파일 대화 상자를 추가 합니다.")](image-images/image32a.png)
+ [![](image-images/image32a.png "파일 대화 상자를 추가 합니다.")](image-images/image32a.png#lightbox)
 
 이미지 추가 됩니다. 프로젝트에 로드 되 고 코드에 표시를 사용할 수 있습니다. 이 스크린샷에서 iOS 응용 프로그램 프로젝트에 추가 하는 이미지를 보여 줍니다.
 
- [ ![](image-images/image33a.png "프로젝트에 이미지")](image-images/image33a.png)
+ [![](image-images/image33a.png "프로젝트에 이미지")](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>리소스 디렉터리는 무엇입니까?
 
@@ -61,11 +61,11 @@ Resources 디렉터리 이름을 하므로,로 모든 파일에 빌드 작업으
 
 디자이너를 사용 하 여 이미지를 표시 하려면 이미지 보기는 컨테이너로 사용 해야 하며 단일 이미지 또는 이미지의 애니메이션 표시할 수 있습니다. **이미지 보기** 도구 상자의 아이콘은 다음과 같습니다.
 
- [ ![](image-images/image35a.png "도구 상자에 ImageView")](image-images/image35.png)
+ [![](image-images/image35a.png "도구 상자에 ImageView")](image-images/image35.png#lightbox)
 
 끌어서는 **이미지 보기** 에서 **Toobox** 보기 컨트롤러에 있습니다. 다음 * * 이미지 보기 > 이미지 * * 드롭 다운 목록에는 프로젝트의 모든 사용 가능한 이미지 파일의 목록을 제공 합니다. 이러한 이미지 보기에 추가할 항목 중 하나를 선택 합니다.
 
- [ ![](image-images/image36a.png "도구 상자에 ImageView")](image-images/image36.png)
+ [![](image-images/image36a.png "도구 상자에 ImageView")](image-images/image36.png#lightbox)
 
 ### <a name="displaying-the-image-programmatically"></a>이미지를 프로그래밍 방식으로 표시
 

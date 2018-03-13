@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf43cfe31811e91524af7894ea347e3dba784d92
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="menus"></a>메뉴
 
@@ -28,7 +28,7 @@ _이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설�
 - **도킹 메뉴** -도킹 스테이션에 각 응용 프로그램에 대 한 메뉴 나타나는 경우 사용자가 해야 하는지 또는 제어 응용 프로그램의 아이콘 또는 사용자가 아이콘 한 마우스 단추를 누르고 경우.
 - **팝업 단추 및 풀 다운 목록** -팝업 단추 선택된 된 항목을 표시 하 고 사용자가 클릭할 때에서 선택 하는 옵션의 목록을 제공 합니다. 풀 다운 목록은 일반적으로 현재 작업 컨텍스트에 특정 명령을 선택 하는 데 사용 되는 팝업 단추의 한 종류입니다. 둘 다 창에서 아무 곳 이나 나타날 수 있습니다.
 
-[![예제에서는 메뉴](menu-images/intro01.png "예제 메뉴")](menu-images/intro01-large.png)
+[![예제에서는 메뉴](menu-images/intro01.png "예제 메뉴")](menu-images/intro01-large.png#lightbox)
 
 이 문서는 기본적인 Cocoa 메뉴 모음, 메뉴 및 Xamarin.Mac 응용 프로그램에서 메뉴 항목을 사용 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -38,7 +38,7 @@ _이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설�
 
 모든 창의 연결 된 메뉴 모음 자체를 가질 수 있는 Windows 운영 체제에서 실행 되는 응용 프로그램과 달리 macOS에서 실행 중인 모든 응용 프로그램에는 해당 응용 프로그램의 모든 창에 사용 되는 화면 맨 실행 되는 단일 메뉴 모음에 있습니다.
 
-[![메뉴 모음](menu-images/appmenu01.png "메뉴 모음")](menu-images/appmenu01-large.png)
+[![메뉴 모음](menu-images/appmenu01.png "메뉴 모음")](menu-images/appmenu01-large.png#lightbox)
 
 이 메뉴 모음에 있는 항목은 활성화 또는 비활성화 하는 지정된 된 시점에는 현재 컨텍스트 또는 응용 프로그램 및 해당 사용자 인터페이스의 상태를 기반 합니다. 예를 들어: 사용자가 텍스트 필드에 선택 항목에 **편집** 메뉴와 같은 사용 가능한 상태가 됩니다 **복사** 및 **잘라내기**합니다.
 
@@ -64,21 +64,21 @@ Apple에 따라 및 기본적으로 모든 macOS 응용 프로그램 메뉴 및 
 
 두 번 클릭은 **Main.storyboard** 메뉴 편집기 인터페이스와 함께 제공 됩니다 Xcode의 인터페이스 작성기에서 편집에 대 한 열 파일입니다.
 
-[![Xcode에서 UI 편집](menu-images/defaultbar01.png "Xcode에서 UI를 편집 합니다.")](menu-images/defaultbar01-large.png)
+[![Xcode에서 UI 편집](menu-images/defaultbar01.png "Xcode에서 UI를 편집 합니다.")](menu-images/defaultbar01-large.png#lightbox)
 
 여기에서 우리 항목을 클릭 수와 같은 **열려** 메뉴 항목에는 **파일** 메뉴 편집 하거나 해당 속성을 조정 하 고는 **특성 검사기**:
 
-[![메뉴의 특성을 편집](menu-images/defaultbar02.png "메뉴의 속성 편집")](menu-images/defaultbar02-large.png)
+[![메뉴의 특성을 편집](menu-images/defaultbar02.png "메뉴의 속성 편집")](menu-images/defaultbar02-large.png#lightbox)
 
 추가, 편집 및 삭제 메뉴와이 문서의 뒷부분에 나오는 항목을 살펴보겠습니다. 이제 방금 확인 하려는 기본으로 사용할 수 있는 메뉴 및 메뉴 항목 및 방법을 자동으로 표시 되지 미리 정의 된 콘센트 / 작업 집합을 통해 코드에 대 한 (자세한 내용은 참조는 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 설명서)입니다.
 
 예를 들어에서 클릭 하면는 **연결 검사기** 에 대 한는 **열려** 메뉴 항목이 자동으로 연결 되는 최대 볼 수 있습니다는 `openDocument:` 동작: 
 
-[![연결 된 작업을 보기](menu-images/defaultbar03.png "연결 된 작업 보기")](menu-images/defaultbar03-large.png)
+[![연결 된 작업을 보기](menu-images/defaultbar03.png "연결 된 작업 보기")](menu-images/defaultbar03-large.png#lightbox)
 
 선택 하는 경우는 **첫 번째 응답자** 에 **인터페이스 계층 구조** 에서 아래로 스크롤하여 및는 **연결 검사기**의 정의 볼 수 있습니다는 `openDocument:` 작업 하는 **열려** 메뉴 항목 (함께 여러 가지 다른 기본 작업 응용 프로그램에 대 한 이며 반드시 컨트롤까지 자리 자동으로 있는)에 연결 된:
 
-[![연결 된 모든 작업을 보기](menu-images/defaultbar04.png "모든 연결 된 동작 보기")](menu-images/defaultbar04-large.png) 
+[![연결 된 모든 작업을 보기](menu-images/defaultbar04.png "모든 연결 된 동작 보기")](menu-images/defaultbar04-large.png#lightbox) 
 
 이유는이 중요 한가요? 다음에서 섹션으로 자동으로 사용 하도록 설정 및 메뉴 항목을 사용 하지 않도록 설정, 항목에 대 한 기본 제공 기능을 제공 합니다. 다른 Cocoa 사용자 인터페이스 요소와 이러한 자동으로 정의 된 작업 어떻게 표시 되는지 확인 됩니다.
 
@@ -98,11 +98,11 @@ Apple에 따라 및 기본적으로 모든 macOS 응용 프로그램 메뉴 및 
 
 응용 프로그램을 중지 하 고 두 번 클릭 해 보겠습니다는 **Main.storyboard** 파일에 **솔루션 패드** Xcode에서 편집 하기 위해 열려는 인터페이스 작성기의 합니다. 를 끌어 한 **텍스트 보기** 에서 **라이브러리** 창의 보기 컨트롤러에는 **인터페이스 편집기**:
 
-[![라이브러리에서 텍스트 뷰를 선택 하면](menu-images/appmenu05.png "라이브러리에서 텍스트 뷰를 선택 합니다.")](menu-images/appmenu05-large.png)
+[![라이브러리에서 텍스트 뷰를 선택 하면](menu-images/appmenu05.png "라이브러리에서 텍스트 뷰를 선택 합니다.")](menu-images/appmenu05-large.png#lightbox)
 
 에 **제약 조건 편집기** 텍스트 뷰 창의 가장자리를 고정 하 고 증가 하 고 모든 4 개의 빨간색 I-빔 편집기의 맨 위쪽에 클릭 하 고 클릭 하 여 창 축소 설정 하겠습니다는 **4 제약 조건을추가** 단추:
 
-[![제약 조건 편집](menu-images/appmenu06.png "제약 조건 편집")](menu-images/appmenu06-large.png)
+[![제약 조건 편집](menu-images/appmenu06.png "제약 조건 편집")](menu-images/appmenu06-large.png#lightbox)
 
 사용자 인터페이스 디자인에 변경 내용을 저장 하 고 변경 내용을 Xamarin.Mac 프로젝트와 동기화 하는 Mac에 대 한 Visual Studio를 다시 전환 합니다. 이제 응용 프로그램을 시작, 텍스트 보기에 텍스트를 입력, 선택한 열은 **편집** 메뉴:
 
@@ -209,7 +209,7 @@ void OpenDialog (NSObject sender)
 
 키 통화 여기 `[Export ("openDocument:")]`, 인지 `NSMenu` 하는 우리의 **AppDelegate** 메서드가 `void OpenDialog (NSObject sender)` 에 대해 응답 하는 `openDocument:` 동작 합니다. 위쪽에서 기억 하는 경우는 **열려** 메뉴 항목은 자동으로 유선 접속이이 동작에 인터페이스 작성기에서 기본적으로:
 
-[![연결 된 작업을 보기](menu-images/defaultbar03.png "연결 된 작업 보기")](menu-images/defaultbar03-large.png)
+[![연결 된 작업을 보기](menu-images/defaultbar03.png "연결 된 작업 보기")](menu-images/defaultbar03-large.png#lightbox)
 
 다음에 대해 살펴보겠습니다 고유한 메뉴, 메뉴 항목 및 작업을 만들고 응답 코드에서 항목에 있습니다.
 
@@ -453,7 +453,7 @@ public void defineKeyword (NSObject sender) {
 
 스토리 보드의 변경 내용을 저장 하 고 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 돌아갑니다. 응용 프로그램을 실행 하는 경우 사용자 지정 작업을 연결 하는 메뉴 항목은 자동으로 수 사용/사용 안 함 (열려 있기 액션과 창에 기반) 및 작업 실행 메뉴 항목이 선택:
 
-[![새 동작을 테스트](menu-images/action05.png "새 동작을 테스트")](menu-images/action05-large.png)
+[![새 동작을 테스트](menu-images/action05.png "새 동작을 테스트")](menu-images/action05-large.png#lightbox)
 
 <a name="Adding,_Editing_and_Deleting_Menus" />
 
@@ -465,7 +465,7 @@ public void defineKeyword (NSObject sender) {
 
 두 번 클릭은 **Main.storyboard** 파일에 **솔루션 패드** 편집 하기 위해 열려는:
 
-[![Xcode에서 UI 편집](menu-images/maint01.png "Xcode에서 UI를 편집 합니다.")](menu-images/maint01-large.png)
+[![Xcode에서 UI 편집](menu-images/maint01.png "Xcode에서 UI를 편집 합니다.")](menu-images/maint01-large.png#lightbox)
 
 특정 Xamarin.Mac 응용 프로그램에 대 한 하지 것 이며 기본 사용할 **보기** 메뉴를 제거 하도록 합니다. 에 **인터페이스 계층 구조** 선택 된 **보기** 주 메뉴 모음의 일부인 메뉴 항목:
 
@@ -477,19 +477,19 @@ Delete 키를 누릅니다 또는 백스페이스 삭제 메뉴에 있습니다.
 
 부모 아래 항목을 끌어 **메뉴** 현재이 위치에서:
 
-[![부모 메뉴에 메뉴 항목을 끌어](menu-images/maint04.png "부모 메뉴에 메뉴 항목을 끌어")](menu-images/maint04-large.png)
+[![부모 메뉴에 메뉴 항목을 끌어](menu-images/maint04.png "부모 메뉴에 메뉴 항목을 끌어")](menu-images/maint04-large.png#lightbox)
 
 이제 메뉴가 같습니다.
 
-[![새 위치에 있는 항목](menu-images/maint05.png "새 위치에 있는 항목")](menu-images/maint05-large.png)
+[![새 위치에 있는 항목](menu-images/maint05.png "새 위치에 있는 항목")](menu-images/maint05-large.png#lightbox)
 
 다음 보겠습니다 끌어는 **텍스트** 아래에서 아웃 하위 메뉴는 **형식** 메뉴 사이의 주 메뉴 모음에 배치 하는 **형식** 및 **창** 메뉴:
 
-[![텍스트 메뉴](menu-images/maint06.png "Ext 메뉴")](menu-images/maint06-large.png)
+[![텍스트 메뉴](menu-images/maint06.png "Ext 메뉴")](menu-images/maint06-large.png#lightbox)
 
 아래에서 돌아가겠습니다는 **형식** 메뉴와 삭제는 **글꼴** 하위 메뉴 항목입니다. 다음으로, 선택는 **형식** 메뉴 "글꼴"로 이름을 바꿉니다.
 
-[![글꼴 메뉴](menu-images/maint07.png "The 글꼴 메뉴")](menu-images/maint07-large.png)
+[![글꼴 메뉴](menu-images/maint07.png "The 글꼴 메뉴")](menu-images/maint07-large.png#lightbox)
 
 다음으로, 사용자 지정 메뉴는 자동으로 가져오기 텍스트에 추가 텍스트 보기에서 선택 하면 미리 정의 된 구의 만들어 보겠습니다. 맨 아래에 검색 상자에는 **라이브러리 관리자** "메뉴" 형식 이렇게 하면 더욱 쉽게 찾아 메뉴 UI 요소를 모두 사용할 수 있습니다.
 
@@ -502,42 +502,42 @@ Delete 키를 누릅니다 또는 백스페이스 삭제 메뉴에 있습니다.
     ![라이브러리에 새 메뉴 항목을 선택 하면](menu-images/maint10.png "라이브러리에 새 메뉴 항목을 선택 합니다.")
 2. "구" 항목을 이름을 바꿉니다. 
 
-    [![설정 메뉴 이름](menu-images/maint09.png "설정 메뉴 이름")](menu-images/maint09-large.png)
+    [![설정 메뉴 이름](menu-images/maint09.png "설정 메뉴 이름")](menu-images/maint09-large.png#lightbox)
 3. 이제는 **메뉴** 에서 **라이브러리 관리자**: 
 
     ![라이브러리에서 메뉴를 선택 하면](menu-images/maint11.png "라이브러리에서 메뉴를 선택 하면")
 4. 다음 drop **메뉴** 새 **메뉴 항목** 것 바로 전에 만들고 해당 이름을 "구"로 변경 합니다. 
 
-    [![편집 메뉴 이름](menu-images/maint12.png "메뉴 이름 편집")](menu-images/maint12-large.png)
+    [![편집 메뉴 이름](menu-images/maint12.png "메뉴 이름 편집")](menu-images/maint12-large.png#lightbox)
 5. 이제 세 가지 기본의 이름을 **메뉴 항목** "Address", "날짜" 및 "Greeting": 
 
-    [![구 메뉴](menu-images/maint13.png "The 구 메뉴")](menu-images/maint13-large.png)
+    [![구 메뉴](menu-images/maint13.png "The 구 메뉴")](menu-images/maint13-large.png#lightbox)
 6. 네 번째 추가해보겠습니다 **메뉴 항목** 끌어는 **메뉴 항목** 에서 **라이브러리 관리자** "서명" 호출: 
 
-    [![메뉴 항목 이름을 편집](menu-images/maint14.png "메뉴 항목 이름을 편집 합니다.")](menu-images/maint14-large.png)
+    [![메뉴 항목 이름을 편집](menu-images/maint14.png "메뉴 항목 이름을 편집 합니다.")](menu-images/maint14-large.png#lightbox)
 7. 메뉴 모음에 저장 합니다.
 
 이제 C# 코드에 표시 되는 새 메뉴 항목 수 있도록 사용자 지정 동작의 집합을 만들어 보겠습니다. Xcode에서으로 전환 해 보겠습니다는 **도우미** 보기:
 
-[![필요한 작업을 만드는](menu-images/maint15.png "필요한 동작 만들기")](menu-images/maint15-large.png)
+[![필요한 작업을 만드는](menu-images/maint15.png "필요한 동작 만들기")](menu-images/maint15-large.png#lightbox)
 
 다음을 수행 하겠습니다.
 
 1. 컨트롤 끌기는 **주소** 메뉴 항목에는 **AppDelegate.h** 파일입니다.
 2. 스위치는 **연결** 형식을 **동작**: 
 
-    [![동작 종류를 선택 하면](menu-images/maint17.png "동작 종류를 선택 합니다.")](menu-images/maint17-large.png)
+    [![동작 종류를 선택 하면](menu-images/maint17.png "동작 종류를 선택 합니다.")](menu-images/maint17-large.png#lightbox)
 3. 입력 한 **이름** "phraseAddress" 고 키를 누릅니다는 **연결** 단추를 새 작업 만들기: 
 
-    [![액션 구성](menu-images/maint18.png "액션 구성")](menu-images/maint18-large.png)
+    [![액션 구성](menu-images/maint18.png "액션 구성")](menu-images/maint18-large.png#lightbox)
 4. 에 대해 위의 단계를 반복 하는 **날짜**, **인사말**, 및 **서명** 메뉴 항목: 
 
-    [![완료 된 동작은](menu-images/maint19.png "완료 된 작업")](menu-images/maint19-large.png)
+    [![완료 된 동작은](menu-images/maint19.png "완료 된 작업")](menu-images/maint19-large.png#lightbox)
 5. 메뉴 모음에 저장 합니다.
 
 다음 코드에서 해당 내용을 사용자가 조정할 수 있도록 우리의 텍스트 보기에 대 한 콘센트 만들 해야 합니다. 선택의 **ViewController.h** 파일에 **도우미 편집기** 라는 새 콘센트 만들고 `documentText`:
 
-[![콘센트 만들기](menu-images/maint20.png "콘센트 만들기")](menu-images/maint20-large.png)
+[![콘센트 만들기](menu-images/maint20.png "콘센트 만들기")](menu-images/maint20-large.png#lightbox)
 
 Xcode에서 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 반환 합니다. 다음 편집는 **ViewController.cs** 파일을 다음과 같이 되도록 합니다.
 
@@ -895,36 +895,36 @@ public void UnpopulateFormattingMenu(NSMenu menu) {
 
 편집 우리의 **Main.storyboard** Xcode에서 파일을 추가 **창** 우리의 디자인 창 설정 해당 **클래스** 에서 "NSPanel"에 **Identity 관리자**, 새 추가 **도우미** 항목의 **창** 메뉴를 사용 하 여 새 창에 연결을 **Segue 표시**:
 
-[![설정 segue 유형](menu-images/context01.png "segue 유형을 설정")](menu-images/context01-large.png)
+[![설정 segue 유형](menu-images/context01.png "segue 유형을 설정")](menu-images/context01-large.png#lightbox)
 
 다음을 수행 하겠습니다.
 
 1. 끌어서는 **레이블** 에서 **라이브러리 관리자** 에 **패널** 창 고 해당 텍스트를 "Property" 설정: 
 
-    [![레이블 값을 편집](menu-images/context03.png "레이블의 값 편집")](menu-images/context03-large.png)
+    [![레이블 값을 편집](menu-images/context03.png "레이블의 값 편집")](menu-images/context03-large.png#lightbox)
 2. 이제는 **메뉴** 에서 **라이브러리 검사기** 기본 메뉴 항목의 이름 바꾸기를 세 고 계층 구조 보기에서 보기 컨트롤러에 **문서**, **텍스트**  및 **글꼴**:
 
-    [![필요한 메뉴 항목](menu-images/context02.png "필요한 메뉴 항목")](menu-images/context02-large.png)
+    [![필요한 메뉴 항목](menu-images/context02.png "필요한 메뉴 항목")](menu-images/context02-large.png#lightbox)
 3. 컨트롤 끌기 이제는 **속성 레이블** 에 **메뉴**:
 
-    [![segue 만들려는 끌기](menu-images/context04.png "는 segue 만들려는 끌기")](menu-images/context04-large.png)
+    [![segue 만들려는 끌기](menu-images/context04.png "는 segue 만들려는 끌기")](menu-images/context04-large.png#lightbox)
 4. 팝업 대화 상자에서 선택 **메뉴**: 
 
     ![설정 segue 유형](menu-images/context05.png "segue 유형을 설정")
 5. **Identity 관리자**, 보기 컨트롤러의 클래스 "PanelViewController"를 설정 합니다. 
 
-    [![Segue 클래스 설정](menu-images/context10.png "segue 클래스를 설정 합니다.")](menu-images/context10-large.png)
+    [![Segue 클래스 설정](menu-images/context10.png "segue 클래스를 설정 합니다.")](menu-images/context10-large.png#lightbox)
 6. 동기화 되는 데 Mac 용 Visual Studio로 다시 전환 하 면 작성기 인터페이스를 반환 합니다.
 7. 전환 하는 **도우미 편집기** 선택 하 고는 **PanelViewController.h** 파일입니다.
 8. 에 대 한 작업을 만듭니다는 **문서** 메뉴 항목 라는 `propertyDocument`: 
 
-    [![액션 구성](menu-images/context06.png "액션 구성")](menu-images/context06-large.png)
+    [![액션 구성](menu-images/context06.png "액션 구성")](menu-images/context06-large.png#lightbox)
 9. 나머지 메뉴 항목에 대 한 만들기 작업을 반복 합니다. 
 
-    [![필요한 동작은](menu-images/context07.png "필요한 동작")](menu-images/context07-large.png)
+    [![필요한 동작은](menu-images/context07.png "필요한 동작")](menu-images/context07-large.png#lightbox)
 10. 마지막으로 콘센트에 대 한 연결을 만듭니다는 **속성 레이블** 호출 `propertyLabel`: 
 
-    [![콘센트 구성](menu-images/context08.png "콘센트 구성")](menu-images/context08-large.png)
+    [![콘센트 구성](menu-images/context08.png "콘센트 구성")](menu-images/context08-large.png#lightbox)
 11. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
 편집 된 **PanelViewController.cs** 파일을 다음 코드를 추가 합니다.
@@ -1013,26 +1013,26 @@ public override void DidFinishLaunching (NSNotification notification)
     ![빈 인터페이스 정의 추가](menu-images/dock02.png "빈 인터페이스 정의 추가 합니다.")
 2. 에 **솔루션 패드**, 두 번 클릭은 **DockMenu.xib** Xcode에서 편집을 위해 열 파일입니다. 새 **메뉴** 다음 항목이 포함: **주소**, **날짜**, **인사말**, 및 **서명** 
 
-    [![UI 레이아웃](menu-images/dock03.png "UI 배치")](menu-images/dock03-large.png)
+    [![UI 레이아웃](menu-images/dock03.png "UI 배치")](menu-images/dock03-large.png#lightbox)
 3. 다음으로, 보겠습니다 새 메뉴 항목의 동작에 연결 우리의 기존에 사용자 지정 메뉴에 작성 된는 [추가, 편집 및 삭제 메뉴](#Adding,_Editing_and_Deleting_Menus) 위의 섹션. 로 전환는 **연결 검사기** 선택 하 고는 **첫 번째 응답자** 에 **인터페이스 계층 구조**합니다. 아래로 스크롤하여 찾아는 `phraseAddress:` 동작 합니다. 해당 작업을 원에서 선을 끌어서는 **주소** 메뉴 항목:
 
-    [![작업을 연결으로 끌어](menu-images/dock04.png "액션을 연결으로 끌어")](menu-images/dock04-large.png)
+    [![작업을 연결으로 끌어](menu-images/dock04.png "액션을 연결으로 끌어")](menu-images/dock04-large.png#lightbox)
 4. 모든 해당 액션에 연결할 다른 메뉴 항목에 대해 반복 합니다. 
 
-    [![필요한 동작은](menu-images/dock05.png "필요한 동작")](menu-images/dock05-large.png)
+    [![필요한 동작은](menu-images/dock05.png "필요한 동작")](menu-images/dock05-large.png#lightbox)
 5. 다음으로, 선택는 **응용 프로그램** 에 **인터페이스 계층 구조**합니다. 에 **연결 검사기**, 원에서 선을 끌어서는 `dockMenu` 콘센트에 방금 만든 메뉴:
 
-    [![콘센트를 연결 하는 끌어](menu-images/dock06.png "콘센트를 연결 하는 끌어")](menu-images/dock06-large.png)
+    [![콘센트를 연결 하는 끌어](menu-images/dock06.png "콘센트를 연결 하는 끌어")](menu-images/dock06-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 다시 전환 합니다.
 7. 두 번 클릭은 **Info.plist** 편집을 위해 열 파일입니다. 
 
-    [![Info.plist 파일을 편집](menu-images/dock07.png "Info.plist 파일 편집")](menu-images/dock07-large.png)
+    [![Info.plist 파일 편집](menu-images/dock07.png "Info.plist 파일 편집")](menu-images/dock07-large.png#lightbox)
 8. 클릭는 **소스** 화면 아래쪽에서 탭: 
 
-    [![소스 뷰를 선택 하면](menu-images/dock08.png "원본 뷰 선택")](menu-images/dock08-large.png)
+    [![소스 뷰를 선택 하면](menu-images/dock08.png "원본 뷰 선택")](menu-images/dock08-large.png#lightbox)
 9. 클릭 **새 항목 추가**, 녹색 더하기 단추 클릭, "AppleDockMenu"에 속성 이름 및 값 "DockMenu" (쿼리하여 새로운.xib 파일 확장명 없이 이름)을 설정 합니다. 
 
-    [![DockMenu 항목 추가](menu-images/dock09.png "DockMenu 항목 추가")](menu-images/dock09-large.png)
+    [![DockMenu 항목 추가](menu-images/dock09.png "DockMenu 항목 추가")](menu-images/dock09-large.png#lightbox)
 
 이제 응용 프로그램을 실행 하 고 도킹 스테이션에서 해당 아이콘을 마우스 오른쪽 단추로 클릭, 우리의 새 메뉴 항목이 표시 됩니다.
 
@@ -1050,16 +1050,16 @@ public override void DidFinishLaunching (NSNotification notification)
 
 1. 편집 된 **Main.storyboard** 끌어서 Xcode에서 파일은 **팝업 단추** 에서 **라이브러리 관리자** 에 **패널** 에서 만든 창 [상황에 맞는 메뉴](#Contextual_Menus) 섹션: 
 
-    [![단추 추가 하는 팝업](menu-images/popup01.png "팝업 단추 추가")](menu-images/popup01-large.png)
+    [![단추 추가 하는 팝업](menu-images/popup01.png "팝업 단추 추가")](menu-images/popup01-large.png#lightbox)
 2. 새 메뉴 항목을 추가 하 고를 팝업에서 항목의 제목이 설정: **주소**, **날짜**, **인사말**, 및 **서명** 
 
-    [![메뉴 항목을 구성](menu-images/popup02.png "는 메뉴 항목을 구성")](menu-images/popup02-large.png)
+    [![메뉴 항목을 구성](menu-images/popup02.png "는 메뉴 항목을 구성")](menu-images/popup02-large.png#lightbox)
 3. 다음으로, 보겠습니다 우리의 새 메뉴 항목에는 사용자 지정 메뉴에 대 한 만든 기존 작업에 연결 된 [추가, 편집 및 삭제 메뉴](#Adding,_Editing_and_Deleting_Menus) 위의 섹션. 로 전환는 **연결 검사기** 선택 하 고는 **첫 번째 응답자** 에 **인터페이스 계층 구조**합니다. 아래로 스크롤하여 찾아는 `phraseAddress:` 동작 합니다. 해당 작업을 원에서 선을 끌어서는 **주소** 메뉴 항목: 
 
-    [![작업을 연결으로 끌어](menu-images/popup03.png "액션을 연결으로 끌어")](menu-images/popup03-large.png)
+    [![작업을 연결으로 끌어](menu-images/popup03.png "액션을 연결으로 끌어")](menu-images/popup03-large.png#lightbox)
 4. 모든 해당 액션에 연결할 다른 메뉴 항목에 대해 반복 합니다. 
 
-    [![작업에 필요한 모든](menu-images/popup04.png "모든 필요한 작업")](menu-images/popup04-large.png)
+    [![작업에 필요한 모든](menu-images/popup04.png "모든 필요한 작업")](menu-images/popup04-large.png#lightbox)
 5. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 다시 전환 합니다.
 
 이제 응용 프로그램을 실행 하 고 팝업에서 항목을 선택, 우리의 텍스트 보기에 있는 텍스트 변경 됩니다.

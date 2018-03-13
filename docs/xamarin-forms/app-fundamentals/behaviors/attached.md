@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 9751b39987819428f93e09d4bfb6bee261604bb5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="attached-behaviors"></a>연결 된 동작
 
@@ -101,10 +101,10 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 런타임에 동작 구현에 따라 동작 컨트롤과 상호 작용에 응답 합니다. 다음 스크린샷에서 잘못 된 입력에 응답 하는 연결 된 동작을 보여 줍니다.
 
-[ ![](attached-images/screenshots-sml.png "샘플 응용 프로그램 연결 된 동작으로")](attached-images/screenshots.png "샘플 연결 된 동작으로 응용 프로그램")
+[![](attached-images/screenshots-sml.png "샘플 응용 프로그램 연결 된 동작으로")](attached-images/screenshots.png#lightbox "샘플 연결 된 동작으로 응용 프로그램")
 
 > [!NOTE]
-> **참고**: 연결 된 동작 하는 특정 컨트롤 형식 (또는 많은 컨트롤에 적용할 수 있는 슈퍼 클래스)에 대 한 작성 되 고 호환 되는 컨트롤에만 추가 해야 합니다. 알 수 없는 동작이 발생 하 고 동작 구현에 따라는 호환 되지 않는 컨트롤에 대 한 동작을 연결 하려고 합니다.
+> 특정 컨트롤 형식 (또는 많은 컨트롤에 적용할 수 있는 슈퍼 클래스)에 연결 된 동작으로 작성 하 고 호환 되는 컨트롤에만 추가 해야 합니다. 알 수 없는 동작이 발생 하 고 동작 구현에 따라는 호환 되지 않는 컨트롤에 대 한 동작을 연결 하려고 합니다.
 
 ### <a name="removing-an-attached-behavior-from-a-control"></a>컨트롤에서 연결 된 동작을 제거합니다.
 

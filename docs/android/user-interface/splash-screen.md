@@ -7,18 +7,17 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 9acb1ad6ab1425edb98b938e8c03edc3704f50ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="splash-screen"></a>시작 화면
 
 _Android 앱 다소 시간이 걸릴 수 특히 앱을 처음 시작할 때 장치를 시작 합니다. 시작 화면이 시작 표시 될 수 있습니다를 사용자에 게 또는 브랜드를 나타내는 진행률입니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -32,10 +31,8 @@ Android 앱에 시작 될 때까지 다소 시간이 걸리는, 특히 처음으
 
 3.  이전 단계에서 만든 테마에 정의 된 시작 화면으로 사용 될 응용 프로그램에 새 활동을 추가 합니다.
 
-[![응용 프로그램 화면에서 다음 예제에서는 Xamarin 로고 시작 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![응용 프로그램 화면에서 다음 예제에서는 Xamarin 로고 시작 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
@@ -43,7 +40,6 @@ Android 앱에 시작 될 때까지 다소 시간이 걸리는, 특히 처음으
 
 모든 코드 및이 가이드에는 XML에서 찾을 수 있습니다는 [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) 이 가이드에 대 한 샘플 프로젝트입니다.
 
-<a name="implement" />
 
 ## <a name="implementing-a-splash-screen"></a>시작 화면을 구현합니다.
 
@@ -51,7 +47,6 @@ Android 앱에 시작 될 때까지 다소 시간이 걸리는, 특히 처음으
 
 시작 화면의 브랜드가 지정 된 표시 하는 활동으로 구현 됩니다을 그릴 수 있는 모든 초기화를 수행 하 고 작업을 시작 합니다. 응용 프로그램 부트스트랩가 되 면 활동의 시작 화면 기본 활동을 시작 하 고 응용 프로그램 백 스택에 자체 제거 합니다.
 
-<a name="drawable" />
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>시작 화면에 대 한를 그릴 수 있는 만들기
 
@@ -79,7 +74,6 @@ Android 앱에 시작 될 때까지 다소 시간이 걸리는, 특히 처음으
 
 그릴 수 있는 시작 화면을 만든 후에 다음 단계에서는 시작 화면에 대 한 테마를 만드는 것입니다.
 
-<a name="theme" />
 
 ### <a name="implementing-a-theme"></a>테마를 구현합니다.
 
@@ -103,7 +97,6 @@ Android 앱에 시작 될 때까지 다소 시간이 걸리는, 특히 처음으
 
 **MyTheme.Splash** 은 매우 스파르타식 &ndash; 것 선언 창 배경, 명시적으로 창에서 제목 표시줄을 제거 하 고 전체 화면 임을 선언 합니다. 활동의 첫 번째 레이아웃을 확장 하기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우 사용할 수 있습니다 `windowContentOverlay` 대신 `windowBackground` 스타일 정의에 있습니다. 이 경우 수정 해야는 **splash_screen.xml** 그릴 UI의 에뮬레이션 표시 되도록 합니다.
 
-<a name="activity" />
 
 ### <a name="create-a-splash-activity"></a>시작 작업 만들기
 
@@ -161,7 +154,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

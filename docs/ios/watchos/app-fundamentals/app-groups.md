@@ -3,14 +3,15 @@ title: "앱 그룹 작업"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-ios
+ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 27ce6c48c5bca69605773eb5ef5637201b9ce6c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9365bc2707876816419bb5d136a6a1011cf129d7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="working-with-app-groups"></a>앱 그룹 작업
 
@@ -29,18 +30,18 @@ ms.lasthandoff: 02/27/2018
 
 앱 그룹 식별자는 일반적으로 번들 ID를 마다와 `group.` 접두사입니다. 예를 들어, 번들 ID를 사용할 수 म `com.xamarin.WatchSettings` 및 응용 프로그램 그룹 `group.com.xamarin.WatchSettings`합니다.
 
-[ ![](app-groups-images/app-group-sml.png "번들 ID com.xamarin.WatchSettings 및 응용 프로그램 그룹 group.com.xamarin.WatchSettings 사용")](app-groups-images/app-group.png)
+[![](app-groups-images/app-group-sml.png "번들 ID com.xamarin.WatchSettings 및 응용 프로그램 그룹 group.com.xamarin.WatchSettings 사용")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
 프로 비전 프로필을 구성할 뿐 아니라 **앱 그룹을 사용 하도록 설정** 에 **Entitlements.plist** 사용자가 선택한 ID 입력:
 
-[ ![](app-groups-images/entitlements-sml.png "plist를 구성 하 고 ID를 입력 합니다.")](app-groups-images/entitlements.png)
+[![](app-groups-images/entitlements-sml.png "plist를 구성 하 고 ID를 입력 합니다.")](app-groups-images/entitlements.png#lightbox)
 
 
 ### <a name="deployment"></a>배포
 
-앱 그룹을 구성 하면 [배포](~/ios/watchos/deploy-test/index.md#app-groups) 프로 비전 합니다.
+앱 그룹을 구성 하면 [배포](~/ios/watchos/deploy-test/index.md#App_Groups) 프로 비전 합니다.
 
 
 자세한 내용은 참조 하십시오는 [앱 그룹 기능](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) 설명서입니다.

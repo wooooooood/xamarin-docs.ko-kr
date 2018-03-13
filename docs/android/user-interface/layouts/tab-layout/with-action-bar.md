@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 14abb7a4b85b493bb0ab96a982d989fad783fabd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>작업 모음으로 탭된 레이아웃
 
 _이 가이드 소개 하 고 Xamarin.Android 응용 프로그램에서 탭된 사용자 인터페이스를 만들 작업 모음 Api를 사용 하는 방법을 설명 합니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -27,7 +26,6 @@ _이 가이드 소개 하 고 Xamarin.Android 응용 프로그램에서 탭된 �
 `Toolbar` 의 대신 사용 해야 하는 새롭고 보다 일반화 작업 모음 구성 요소 `ActionBar` (`Toolbar` 대체 하도록 설계 된 `ActionBar`). 자세한 내용은 참조 [도구 모음](~/android/user-interface/controls/tool-bar/index.md)합니다. 
 
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
@@ -36,7 +34,6 @@ API 수준 11 (Android 3.0)을 대상으로 나 높을수록 네이티브 Androi
 API 수준 (Android 2.1) 7로 다시 이식 되었습니다 및 통해 사용할 수 있는 몇 가지 작업 모음 Api는 [V7 AppCompat 라이브러리](http://developer.android.com/tools/support-library/features.html#v7-appcompat)를 통해 Xamarin.Android 앱을 사용할 수 있는 [Xamarin Android 지원 라이브러리-v 7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지 합니다.
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>탭에는 작업 모음 소개
 
@@ -63,7 +60,6 @@ Xamarin.Android 래핑하는 `ActionBar.ITabListener` 의 이벤트에 `ActionBa
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### <a name="adding-tabs-to-the-actionbar"></a>작업 모음에 탭 추가
 
@@ -111,7 +107,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>이벤트 처리기 vs ActionBar.ITabListener
 
@@ -120,7 +115,6 @@ protected override void OnCreate(Bundle bundle)
 많은 탭을 처리할 때 작업 모음 탭 간에 공통 기능을 공유 하는 것이 메모리 및 구현 하는 사용자 지정 클래스를 만드는 성능 측면에서 더 효율적일 또는 `ActionBar.ITabListener`, 및 클래스의 단일 인스턴스를 공유 합니다. 이렇게 하면 GREF의 Xamarin.Android 응용 프로그램을 사용 하는 수가 줄어듭니다. 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### <a name="backwards-compatibility-for-older-devices"></a>이전 버전과 이전 버전의 장치에 대 한 호환성
 
@@ -177,7 +171,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 
@@ -187,7 +180,7 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 ## <a name="related-links"></a>관련 링크
 
 - [ActionBarTabs (샘플)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
-- [Toolbar](~/android/user-interface/controls/tool-bar/index.md)
+- [도구 모음](~/android/user-interface/controls/tool-bar/index.md)
 - [조각](~/android/platform/fragments/index.md)
 - [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
 - [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)

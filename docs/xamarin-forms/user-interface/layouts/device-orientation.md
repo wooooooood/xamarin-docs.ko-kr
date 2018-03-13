@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d18cf055bb206099eecea0d9f417af571f3819e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
 Xamarin.Forms를 사용 하면 지원 되는 방법은 장치 방향을 제어의 개별 프로젝트 각각에 대 한 설정을 사용 하도록 합니다.
 
 > [!NOTE]
-> **참고**: of Xamarin.Forms 1.5.0가 사용자 지정 렌더러를 통해 시도 실패 하는 방향을 제어 하는 것을 금지 하는 버그가 있습니다. 참조 [이 토론](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)자세한 정보에 대 한 Xamarin 포럼에서이 설명 합니다.
+> Xamarin.Forms는 것을 방지 버그가 1.5.0가 기준으로 사용자 지정 렌더러 기반 실패 하는 방향을 제어 하려고 합니다. 참조 [이 토론](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)자세한 정보에 대 한 Xamarin 포럼에서이 설명 합니다.
 
 ### <a name="ios"></a>iOS
 
@@ -123,7 +123,7 @@ Windows Phone 지원 가로 뷰 모두에서 (처럼 세로에서) 왼쪽에서 
 Xamarin.Forms는 앱의 방향 변경 내용 공유 코드에 알리는 대 한 기본 이벤트를 제공 하지 않습니다. 그러나는 `SizeChanged` 의 이벤트는 `Page` 은 수행 된 경우 너비 또는 높이 `Page` 변경 합니다. 때의 너비는 `Page` 높이 보다 크면 장치가 가로 모드입니다. 자세한 내용은 참조 [화면 방향에 따라 이미지 표시](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)합니다.
 
 > [!NOTE]
-> **참고**: 기존, 무료 NuGet 패키지가 공유 코드에 방향 변경 알림을 수신 하기 위해 제공 됩니다. 참조는 [GitHub 리포지토리](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 정보에 대 한 합니다.
+> 기존 무료 NuGet 패키지가 공유 코드에 방향 변경 알림을 수신 하기 위해 제공 됩니다. 참조는 [GitHub 리포지토리](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 정보에 대 한 합니다.
 
 재정의할 수는 또는 [ `OnSizeAllocated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/) 메서드를 한 `Page`, 모든 레이아웃 삽입 그 논리를 변경 합니다. `OnSizeAllocated` 메서드를 호출 될 때마다는 `Page` 발생 하는 장치 회전 때도 항상 새 크기를 할당 합니다. 기본 구현을 `OnSizeAllocated` 재정의 기본 구현을 호출 해야 하므로 중요 한 레이아웃 기능을 수행 합니다.
 
@@ -176,7 +176,7 @@ protected override void OnSizeAllocated(double width, double height)
 위의 규칙 모범 사례 고려 일반적으로 한 화면 크기 및는 여러 인터페이스를 구현 하는 경우에 적용 됩니다. 이 가이드의 나머지 부분에서는 Xamarin.Forms에 기본 레이아웃의 각를 사용 하 여 반응 형 레이아웃의 구체적인 예제를 설명 합니다.
 
 > [!NOTE]
-> **참고**: 다음 섹션에서는 이해를 돕기 위해 반응 형 레이아웃 형식 중 하나를 사용 하 여 구현 하는 방법을 보여 줍니다 `Layout` 한 번에 있습니다. 실제로 더 자주 간단 하 게 혼합 `Layout`더 간단한 클라이언트나 가장 직관적인를 사용 하 여 원하는 레이아웃을 달성 하기 위해 s `Layout` 각 구성 요소에 대 한 합니다.
+> 다음 섹션에서는 이해를 돕기 위해 반응 형 레이아웃 형식 중 하나를 사용 하 여 구현 하는 방법을 보여 줍니다 `Layout` 한 번에 있습니다. 실제로 더 자주 간단 하 게 혼합 `Layout`더 간단한 클라이언트나 가장 직관적인를 사용 하 여 원하는 레이아웃을 달성 하기 위해 s `Layout` 각 구성 요소에 대 한 합니다.
 
 ### <a name="stacklayout"></a>StackLayout
 

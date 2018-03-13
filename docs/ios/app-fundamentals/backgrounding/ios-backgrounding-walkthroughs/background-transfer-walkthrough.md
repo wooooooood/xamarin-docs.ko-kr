@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 015bce612f369797f0540a0cb55f71f420f007a2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
 
@@ -20,7 +20,7 @@ _이 연습에서는 사용 하 여 백그라운드 전송 서비스와 NSURLSes
 
 백그라운드 전송은 배경을 구성 하 여 시작 됩니다 `NSURLSession` 및 업로드 또는 다운로드 작업 큐에 삽입 합니다. IOS 응용 프로그램의 완료 처리기를 호출 하 여 응용 프로그램에 알리는 응용 프로그램 backgrounded, 일시 중단 또는 종료 하는 동안 태스크가 완료 되 면 경우 *AppDelegate*합니다. 다음 다이어그램에서는 작업에서이 보여 줍니다.
 
- [ ![](background-transfer-walkthrough-images/transfer.png "백그라운드 전송 배경 NSURLSession를 구성 하 여 시작 되 고 다시 업로드 또는 다운로드 작업")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "백그라운드 전송 배경 NSURLSession를 구성 하 여 시작 되 고 다시 업로드 또는 다운로드 작업")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 이 기능 코드에서 살펴보겠습니다.
 

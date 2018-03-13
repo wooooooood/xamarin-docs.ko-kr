@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 234bd79754ae7f328d3207757156089441fc588c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0d418786a7364946e4e20100157fa0907b66deeb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-view"></a>웹 보기
 
@@ -96,7 +96,7 @@ protected override void OnCreate (Bundle bundle)
 
 앱을 빌드하고 실행합니다. 다음 스크린샷에 표시 된 것과는 간단한 웹 페이지 뷰어 앱을 나타나야 합니다.
 
-[![보기를 표시 하는 응용 프로그램의 예](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png)
+[![보기를 표시 하는 응용 프로그램의 예](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 처리 하는 **다시** 키 누름 단추, 다음 추가 문을 사용 하 여:
 
@@ -122,7 +122,7 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 
 응용 프로그램을 다시 실행합니다. 이제 링크를 통해 / 탐색을 다시 페이지 기록 수: 있습니다.
 
-[![예제 작업에서 뒤로 단추 스크린샷](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png)
+[![예제 작업에서 뒤로 단추 스크린샷](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
 *이 페이지의 일부는 Android 열려 있는 소스 프로젝트에서 공유 하 고 만들고에 설명 된 조건에 따라 사용 작업에 따라 수정 된*

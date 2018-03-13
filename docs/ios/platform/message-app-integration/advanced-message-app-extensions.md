@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7e6621dc580e478873ce2db7139b04284bee355c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-message-app-extensions"></a>고급 메시지 응용 프로그램 확장
 
@@ -50,11 +50,11 @@ _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게
 
 대화형 메시지 사용자 지정 메시지 거품을 표시 하 고 메시지 응용 프로그램 확장에서 제공 됩니다. 메시지 입력 필드에 삽입 하 고 보냅니다 대화형 메시지 콘텐츠를 만드는 데 사용할 수 있습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive01.png "대화형 메시지 콘텐츠 만들기")](advanced-message-app-extensions-images/interactive01.png)
+[![](advanced-message-app-extensions-images/interactive01.png "대화형 메시지 콘텐츠 만들기")](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
 받는 사용자를 만든 메시지 앱 확장을 로드 하 고 메시지 기록에 해당 메시지 거품을 탭 하 여 대화형 메시지에 회신할 수 있습니다. 확장 전체 화면 시작된 되며 사용자 응답을 작성 하 고 다시 원래 사용자에 게 보낼 수 있도록 합니다.
 
-[ ![](advanced-message-app-extensions-images/interactive02.png "확장 전체 화면 시작")](advanced-message-app-extensions-images/interactive02.png)
+[![](advanced-message-app-extensions-images/interactive02.png "확장 전체 화면 시작")](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
 
 다음 항목 아래에 자세히 설명 합니다.
@@ -68,7 +68,7 @@ _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게
 
 사용자가 호출 되 면 메시지 앱 확장의 간단한 보기 모드에서 메시지 기록 맨 아래에 표시 됩니다.
 
-[ ![](advanced-message-app-extensions-images/interactive03.png "메시지 API 개요")](advanced-message-app-extensions-images/interactive03.png)
+[![](advanced-message-app-extensions-images/interactive03.png "메시지 API 개요")](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
 1. `MSMessageAppViewController` 메시지 앱 확장 개체가 확장의 뷰가 사용자에 게 표시 될 때 호출 되는 주 클래스입니다.
 2. 사용자에 게 표시 되는 대화는 `MSConversation` 개체 인스턴스입니다.
@@ -80,7 +80,7 @@ _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게
 
 활성화 되기 메시지 앱 확장의 과정을 살펴보겠습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive04.png "활성화 되기 메시지 앱 확장의 프로세스")](advanced-message-app-extensions-images/interactive04.png)
+[![](advanced-message-app-extensions-images/interactive04.png "활성화 되기 메시지 앱 확장의 프로세스")](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
 1. 확장 (예: 앱 서랍)에서 시작 되 면 메시지 응용 프로그램 프로세스를 시작 됩니다.
 2. `DidBecomeActive` 메서드를 호출 하 고 전달 되는 `MSConversation` 메시지 앱 확장에서 실행 되는 대화를 나타내는입니다.
@@ -88,7 +88,7 @@ _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게
 
 다음으로 비활성화 되 고 메시지 앱 확장의 프로세스를 살펴보세요.
 
-[ ![](advanced-message-app-extensions-images/interactive05.png "비활성화 되 고 메시지 앱 확장의 프로세스")](advanced-message-app-extensions-images/interactive05.png)
+[![](advanced-message-app-extensions-images/interactive05.png "비활성화 되 고 메시지 앱 확장의 프로세스")](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
 1. 메시지 앱 확장을 비활성화 하는 중 때는 `ViewWillDisappear` 메서드가 먼저 호출 됩니다.
 2. 그런 다음 `ViewDidDisappear` 메서드가 호출 됩니다.
@@ -128,7 +128,7 @@ MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session =
 
 `AccessibilityLabel` 속성은 화면 판독기가 사용자에 게 대화의 대화 참여자를 읽는 데 사용 됩니다. `Layout` 속성 지정 방법을 메시지가 표시 됩니다, 현재만 `MSMessageTemplateLayout` 를 지원 하며 다음과 같습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive06.png "MSMessageTemplateLayout 서식 파일")](advanced-message-app-extensions-images/interactive06.png)
+[![](advanced-message-app-extensions-images/interactive06.png "MSMessageTemplateLayout 서식 파일")](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
 `Image` 의 속성은 `MSMessageTemplateLayout` 화면의 MessageBubble의 본문에 콘텐츠를 제공 합니다. `MediaFileUrl` 속성 메시지 거품의 본문에 콘텐츠를 제공 하지만 지원 하지 않습니다는 콘텐츠에 대 한 허용 `UIImage` (예: 백그라운드에서 루프는 비디오 파일). 모두는 `Image` 및 `MediaFileUrl` 속성이 제공 됩니다는 `Image` 속성 우선 적용 됩니다. `MediaFileUrl` PNG, JPEG, GIF 및 모든 형식의 미디어 플레이어 프레임 워크에서 재생할 수 있는 비디오를 지 원하는 미디어 형식입니다.
 
@@ -140,7 +140,7 @@ MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session =
 
 `Caption`, `SubCaption`, `TrailingCaption` 및 `TrailingSubcaption` 속성에서 더욱 이미지를 설명 하 고 이미지 아래 섹션에서 렌더링 됩니다. 이러한 모든 속성을 설정 `null` 캡션 영역 없이 메시지 거품을 만듭니다.
 
-[ ![](advanced-message-app-extensions-images/interactive07.png "캡션 영역의 없이 메시지 거품형")](advanced-message-app-extensions-images/interactive07.png)
+[![](advanced-message-app-extensions-images/interactive07.png "캡션 영역의 없이 메시지 거품형")](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
 마지막은 메시지 응용 프로그램에서 메시지 앱 확장의 아이콘 메시지 거품의 왼쪽 위 모서리에는 그립니다.
 
@@ -181,7 +181,7 @@ public void SendMessage (MSMessage message)
 
 두 가지 다른 보기 모드 중 하나에서 메시지 앱 확장을 표시할 수 있습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive08.png "두 가지 다른 보기 모드에 표시 되는 메시지 응용 프로그램 확장: 압축 및 확장")](advanced-message-app-extensions-images/interactive08.png)
+[![](advanced-message-app-extensions-images/interactive08.png "두 가지 다른 보기 모드에 표시 되는 메시지 응용 프로그램 확장: 압축 및 확장")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -메시지 보기의 아래쪽 25%를 메시지 앱 확장 사용 되는 기본 모드입니다. 축소 모드에서는 응용 프로그램 키보드, 가로 스크롤 또는 살짝 제스처 인식기에 액세스할 수 없는지 않습니다. 응용 프로그램 입력 필드에 액세스 권한이 및에 대 한 호출이 `InsertMessage` 없는 사용자에 게 즉시 표시 됩니다.
 - **확장** -메시지 앱 확장의 전체 메시지 보기를 채웁니다. 키보드, 가로 스크롤 및 살짝 제스처 인식기에 액세스 하지 않는 하지만 입력 필드에 대 한 액세스 없는 합니다.
@@ -384,7 +384,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 메시지 앱 확장 메시지에 회신 하는 경우를 처리 해야 하는 두 가지 경우에는
 
-[ ![](advanced-message-app-extensions-images/interactive09.png "비활성 및 활성 모드에서 메시지 앱 확장")](advanced-message-app-extensions-images/interactive09.png)
+[![](advanced-message-app-extensions-images/interactive09.png "비활성 및 활성 모드에서 메시지 앱 확장")](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
 - **확장은 비활성** -확장을 활성화 하는 대화형 대화 계속를 탭 하는 메시지 대화 내용에서 메시지 앱 확장의 메시지 거품 중 하나가 있습니다.
 - **확장은 활성** -확장 된 보기 모드를 입력 하 고 중단 한 위치에서 대화형 프로세스를 계속 하려면 메시지 대화 내용에서 메시지 앱 확장의 메시지 거품형을 탭 합니다.
@@ -393,7 +393,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 메시지 거품 메시지 기록에서 사용자가 탭 됩니다 때 메시지 앱 확장 아니기 때문에 다음 프로세스가 발생 합니다.
 
-[ ![](advanced-message-app-extensions-images/interactive10.png "처리는 비활성 메시지 거품형")](advanced-message-app-extensions-images/interactive10.png)
+[![](advanced-message-app-extensions-images/interactive10.png "처리는 비활성 메시지 거품형")](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. 사용자가 확장의 메시지 거품을 탭합니다.
 2. 확장 프로그램을 시작할 때 메시지가 응용 프로그램 프로세스를 시작 됩니다.
@@ -406,7 +406,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 메시지 거품 메시지 기록에서 사용자가 탭이 수행 되 고 메시지 앱 확장이 활성 상태 인지를 다음 프로세스가 발생 합니다.
 
-[ ![](advanced-message-app-extensions-images/interactive11.png "처리는 활성 메시지 거품형")](advanced-message-app-extensions-images/interactive11.png)
+[![](advanced-message-app-extensions-images/interactive11.png "처리는 활성 메시지 거품형")](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
 1. 사용자가 확장의 메시지 거품을 탭합니다.
 2. 메시지 앱 확장을 활성화 이미 이므로 `WillTransition` 의 메서드는 `MSMessagesAppViewController` 압축에서 확장 된 보기 모드로 전환 처리 하기 위해 호출 됩니다.
@@ -457,11 +457,11 @@ namespace MessageExtension
 
 두 개의 사용자 대화에서 간에 대화형 대화의 다른 단계를 보내는 과정에서 부분적으로 완료 된 메시지 거품 채울 메시지 대 본을 시작할 수 있습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive12.png "부분적으로 완료 된 메시지 거품 메시지 기록을 복잡 하 게 만들지 수 있습니다.")](advanced-message-app-extensions-images/interactive12.png)
+[![](advanced-message-app-extensions-images/interactive12.png "부분적으로 완료 된 메시지 거품 메시지 기록을 복잡 하 게 만들지 수 있습니다.")](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
 대신, 메시지 앱 확장 간결한 설명 메시지 대 본에 이전 메시지 거품을 축소 해야:
 
-[ ![](advanced-message-app-extensions-images/interactive13.png "메시지 기록의 이전 메시지 거품을 축소")](advanced-message-app-extensions-images/interactive13.png)
+[![](advanced-message-app-extensions-images/interactive13.png "메시지 기록의 이전 메시지 거품을 축소")](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
 이 사용 하 여 처리 됩니다는 `MSSession` 을 기존 단계를 모두 축소 합니다. 하므로 `DidSelectMessage` 의 메서드는 `MSMessagesAppViewController` 클래스 다음과 같이 변경할 수 있습니다.
 
@@ -516,7 +516,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 
 3 명의 사용자와 그룹의 대화에 상호 작용을 살펴보세요.
 
-[ ![](advanced-message-app-extensions-images/interactive14.png "3 명의 사용자와 그룹의 대화에 대 한 상호 작용")](advanced-message-app-extensions-images/interactive14.png)
+[![](advanced-message-app-extensions-images/interactive14.png "3 명의 사용자와 그룹의 대화에 대 한 상호 작용")](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
 1. 1 사용자가 그룹 대화형 메시지를 보낼 요청 사용자 2와 사용자 3 햄버거 토핑이 선택할 수 있습니다.
 2. 사용자 2 tomatoes를 선택합니다.
@@ -531,7 +531,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 
 메시지 보낸 사람 식별자에 액세스 토론 하 위에 제시한 그룹 대화를 예로 들어를 보겠습니다.
 
-[ ![](advanced-message-app-extensions-images/interactive15.png "그룹 대화 식별자를 전송 합니다.")](advanced-message-app-extensions-images/interactive15.png)
+[![](advanced-message-app-extensions-images/interactive15.png "그룹 대화 식별자를 전송 합니다.")](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
 1. 사용자 1 그룹 대화형 메시지를 전송 하는 다시 요청 사용자 2와 사용자 3 햄버거 토핑이 선택할 수 있습니다.
 2. 사용자 3 pickles를 선택합니다.
@@ -584,7 +584,7 @@ public override void DidStartSendingMessage (MSMessage message, MSConversation c
 다음 Apple 플랫폼에서 메시지 응용 프로그램 확장에 의해 생성 되는 대화형 메시지 배달 됩니다.
 
 - watchOS 3
-- macOS 시에라
+- macOS Sierra
 - iOS 10
 
 세 플랫폼 iOS 10에는 대화형 메시지를 생성 하 사용자 수 있게 됩니다. 시에라 macOS에서 사용자가 대화형 메시지 거품을 클릭할 경우 URL에 연결 된는 `MSMessage` Safari에서 열 수 있는 메시지 표현을 표시 되지 않도록 합니다.

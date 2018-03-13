@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a3c9c76ce173606d206166b2bcfb9760eb5634ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abb8ee30828e5d9856b9fd72cca8adb669959818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV 앱 스토어에 게시
 
@@ -154,12 +154,12 @@ tvOS 사용 하 여 *프로 비전 프로필* 특정 응용 프로그램 빌드 
     ![](app-store-publishing-images/buildxs01new.png "릴리스 구성을 선택합니다")
 2. **빌드** 메뉴에서 **게시를 위해 보관**을 선택합니다.
 
-    [ ![](app-store-publishing-images/buildxs02new.png "게시를 위해 보관 선택")](app-store-publishing-images/buildxs02new.png)
+    [![](app-store-publishing-images/buildxs02new.png "게시에 대 한 보관 파일을 선택 합니다.")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. 보관이 만들어지면 **보관** 보기가 표시됩니다.
 
-    [ ![](app-store-publishing-images/buildxs03new.png "보관 파일 보기")](app-store-publishing-images/buildxs03new.png)
+    [![](app-store-publishing-images/buildxs03new.png "보관 파일 보기")](app-store-publishing-images/buildxs03new.png#lightbox)
 
-#<a name="3-sign-and-distribute-your-app"></a>서명 하 고 앱을 배포 하는 &#3; #
+### <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
 보관용 응용 프로그램을 빌드할 때마다 *보관 보기*가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 이 보기에는 기본적으로 현재 열려 있는 솔루션만 표시됩니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 옵션을 클릭합니다.
 
@@ -169,19 +169,19 @@ tvOS 사용 하 여 *프로 비전 프로필* 특정 응용 프로그램 빌드 
 
 1. 선택 된 **서명 하 고 배포...** , 아래 그림 참조:
 
-    [ ![](app-store-publishing-images/buildxs04new.png "를 theSign 및 배포 선택...")](app-store-publishing-images/buildxs04new.png)
+    [![](app-store-publishing-images/buildxs04new.png "를 theSign 및 배포 선택...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. 그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택하여 패키지를 만들고 응용 프로그램 로더를 엽니다.
 
-    [ ![](app-store-publishing-images/distribute01.png "앱 스토어 배포 채널을 선택 합니다.")](app-store-publishing-images/distribute01.png)
+    [![](app-store-publishing-images/distribute01.png "앱 스토어 배포 채널을 선택 합니다.")](app-store-publishing-images/distribute01.png#lightbox)
 3. 프로 비전 프로필 화면에서 해당 서명 id 및 프로비저닝 프로필을 해당 선택 또는 다른 id로 다시 서명:
 
-    [ ![](app-store-publishing-images/distribute02.png "서명 id 및 프로비저닝 프로필을 해당 선택")](app-store-publishing-images/distribute02.png)
+    [![](app-store-publishing-images/distribute02.png "서명 id 및 프로비저닝 프로필을 해당 선택")](app-store-publishing-images/distribute02.png#lightbox)
 4. 패키지 세부 정보를 확인하고 **게시**를 클릭하여 `.ipa` 패키지를 저장합니다.
 
-    [ ![](app-store-publishing-images/distribute03.png "패키지의 세부 정보를 확인 합니다.")](app-store-publishing-images/distribute03.png)
+    [![](app-store-publishing-images/distribute03.png "패키지의 세부 정보를 확인 합니다.")](app-store-publishing-images/distribute03.png#lightbox)
 5. `.ipa`가 저장되면 앱이 응용 프로그램 로더를 통해 iTunes Connect에 업로드될 준비가 됩니다.
 
-    [ ![](app-store-publishing-images/distribute04.png "응용 프로그램 로더를 통해 연결 iTunes에 업로드")](app-store-publishing-images/distribute04.png)
+    [![](app-store-publishing-images/distribute04.png "응용 프로그램 로더를 통해 연결 iTunes에 업로드")](app-store-publishing-images/distribute04.png#lightbox)
 
 배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 응용 프로그램을 제출할 준비가 되었습니다.
 
@@ -196,15 +196,15 @@ Mac 용 Visual Studio에서 보관 워크플로 열립니다 응용 프로그램
 
 2. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
 
-    [ ![](app-store-publishing-images/publishvs01.png "앱 배달 선택")](app-store-publishing-images/publishvs01.png)
+    [![](app-store-publishing-images/publishvs01.png "선택 제공 앱")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
 4. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.
 
-    [ ![](app-store-publishing-images/publishvs02.png "응용 프로그램 로더 유효성 검사 화면")](app-store-publishing-images/publishvs02.png)
+    [![](app-store-publishing-images/publishvs02.png "응용 프로그램 로더 유효성 검사 화면")](app-store-publishing-images/publishvs02.png#lightbox)
 5. *다음* 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
 
-    [ ![](app-store-publishing-images/publishvs03.png "앱 스토어에 대해 유효성이 검사 되 고 응용 프로그램")](app-store-publishing-images/publishvs03.png)
+    [![](app-store-publishing-images/publishvs03.png "앱 스토어에 대해 유효성이 검사 되 고 응용 프로그램")](app-store-publishing-images/publishvs03.png#lightbox)
 6. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
 7. 파일이 성공적으로 업로드되면 응용 프로그램 로더에서 알려줍니다.
 
@@ -214,7 +214,7 @@ Mac 용 Visual Studio에서 보관 워크플로 열립니다 응용 프로그램
 
 ITunes Connect에 다시 로그인 하 고 사용할 수 있는 앱 목록에서 앱을 선택 하는 경우 iTunes Connect에서에서 이제 표시 되어야 임을 **검토를 위해 대기** (일시적으로 읽을 수 있습니다 **받은 업로드** 처리 하는 동안):
 
-[ ![](app-store-publishing-images/image21.png "검토를 위해 대기를 보여 주는 iTunes에 상태 연결")](app-store-publishing-images/image21.png)
+[![](app-store-publishing-images/image21.png "검토를 위해 대기를 보여 주는 iTunes에 상태 연결")](app-store-publishing-images/image21.png#lightbox)
 
 <a name="Troubleshooting" />
 
@@ -234,5 +234,5 @@ Apple TV 앱 스토어에 Xamarin.tvOS 앱 제출 하는 데 문제가 있는 �
 - [아이콘 및 이미지 작업](~/ios/tvos/app-fundamentals/icons-images.md)
 - [새 Apple TV에 대 한 응용 프로그램 제출 Your 준비](https://developer.apple.com/tvos/submit/)
 - [앱 스토어 제출 팁](https://developer.apple.com/appstore/resources/submission/tips.html)
-- [일반적인 앱 거부 사유](https://developer.apple.com/app-store/review/rejections/)
+- [일반적인 앱 거부](https://developer.apple.com/app-store/review/rejections/)
 - [앱 스토어 검토 지침](https://developer.apple.com/appstore/resources/approval/guidelines.html)

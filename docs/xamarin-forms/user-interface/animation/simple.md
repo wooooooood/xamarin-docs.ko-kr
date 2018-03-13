@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>간단한 애니메이션
 
@@ -130,7 +130,7 @@ await image.TranslateTo (-100, -100, 1000);
 ![](simple-images/translateto.png "번역 애니메이션")
 
 > [!NOTE]
-> **참고**: 요소가 화면 밖으로 처음 배치을 화면에 다음 변환 하는 경우 변환 후 요소 레이아웃은 유지 화면 밖의 입력 및 사용자와 상호 작용할 수 없습니다. 따라서 뷰는 최종 위치에 배치 해야 하 고 다음 수행 되는 변환 필요한 좋습니다.
+> 요소 화면 밖으로 처음 배치을 화면에 다음 변환 하는 경우에 변환 후 요소의 입력된 레이아웃 화면 밖 남아 있으며 사용자와 상호 작용할 수 없습니다. 따라서 뷰는 최종 위치에 배치 해야 하 고 다음 수행 되는 변환 필요한 좋습니다.
 
 ### <a name="fading"></a>페이딩
 

@@ -7,18 +7,16 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 5f583fa78674b1b07d362e5171877e4ec3c861a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
 _이 문서는 설치 단계 및 구성 세부 정보를 쓰는 유형 Android 개발에 대 한 장치 및 컴퓨터를 준비 하는 데 필요한 안내 합니다. 이 문서의 뒷부분에서 작동 중인 Xamarin.Android 마모 설치 Mac 및/또는 Microsoft Visual Studio에 대 한 Visual Studio에 통합 해야 합니다. 첫 번째 Xamarin.Android 마모 응용 프로그램 작성을 시작할 준비가 수 고 합니다._
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
@@ -35,9 +33,7 @@ _이 문서는 설치 단계 및 구성 세부 정보를 쓰는 유형 Android �
 계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 수준 23에 맞게 개발 이하의 경우.
 
 > [!IMPORTANT]
-> **참고:** Xamarin.Android JDK 9를 지원 하지 않습니다.
-
-<a name="installation" />
+> Xamarin.Android는 JDK 9를 지원 하지 않습니다.
 
 ## <a name="installation"></a>설치
 
@@ -49,7 +45,6 @@ Xamarin.Android를 설치한 후 빌드 및 쓰는 유형 Android 앱을 테스�
 
 이러한 단계는 다음 섹션에 설명 되어 있습니다.
 
-<a name="sdktools" />
 
 ### <a name="install-android-sdk-and-tools"></a>Android SDK 및 도구 설치 
 

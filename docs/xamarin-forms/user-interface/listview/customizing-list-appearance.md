@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: c828a48342fc1b387dab2884dbb4aa5d82faebdd
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4e849cc034b8c77b84d1be8cb31cc1206f203ef6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="list-appearance"></a>목록 모양
 
@@ -262,7 +262,8 @@ XAML:
 
 ![](customizing-list-appearance-images/separator-custom.png "녹색 행 구분 기호와 함께 ListView")
 
-**참고**: 이러한 속성 중 하나를 Android에서 로드 한 후 설정 된 `ListView` 큰 성능 저하가 발생 합니다.
+> [!NOTE]
+> 이러한 속성 중 하나를 Android에서 로드 한 후 설정 된 `ListView` 큰 성능 저하가 발생 합니다.
 
 <a name="Row_Heights" />
 

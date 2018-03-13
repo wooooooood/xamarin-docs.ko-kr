@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트에서 사용
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml** 복 XML 및 빌드 프로세스의 일부로 생성 **Properties/AndroidManifest.xml** 사용자 지정 특성에서 생성 되는 XML과 병합 됩니다. 병합 된 **AndroidManifest.xml** 에 **obj** ; 하위 디렉터리에 있는 예를 들어 **obj/Debug/android/AndroidManifest.xml** 디버그 빌드에 대 한 . 병합 프로세스는 trivial: 코드 내에서 사용자 지정 특성을 사용 하 여 XML 요소를 생성 하 고 *삽입* 이러한 요소를 **AndroidManifest.xml**합니다. 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>기본 사항
 
@@ -60,7 +58,6 @@ namespace Demo
 `[Activity]` 특성 영향을 주지 않습니다에 `abstract` 형식; `abstract` 형식은 무시 됩니다.
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>작업 이름
 
@@ -83,7 +80,6 @@ public class MyActivity : Activity
 
 *참고*: 사용할지는 `Name` 이전 버전과 호환성 이유로으로 이름 바꾸기에 대해서만 속성 런타임 시 형식 조회 속도가 느려질 수 있습니다. 바뀌거나 네임 스페이스를 기반으로 할 활동의 기본 형식 이름과 클래스 이름 참조 필요로 하는 기존 코드가 있는 경우 [Android 호출 가능 래퍼 명명](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) 호환성을 유지 관리에 대 한 팁입니다. 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>작업 제목 표시줄
 
@@ -104,7 +100,6 @@ public class MyActivity : Activity
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>응용 프로그램 선택에서 컴파일되
 
@@ -130,7 +125,6 @@ public class MyActivity : Activity
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>활동 아이콘
 
@@ -155,7 +149,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>사용 권한
 
@@ -178,11 +171,9 @@ public class MyActivity : Activity
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>고급 기능
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>의도 된 동작 및 기능
 
@@ -214,7 +205,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>Application 요소
 
@@ -243,7 +233,6 @@ Android 매니페스트에서 또한 전체 응용 프로그램에 대 한 속�
 구성할 수 있는 많은 응용 프로그램 수준 특성이 없는 `<application>` 요소로 이러한 설정에 대 한 자세한 내용은 참조는 [공용 속성](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties) 섹션 [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>사용자 지정 특성의 목록
 

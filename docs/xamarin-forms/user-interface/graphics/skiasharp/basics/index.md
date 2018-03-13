@@ -4,14 +4,15 @@ description: "SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1220da91cd3d8cd6a448a8845c897013419867e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb12924ff181439de601ecc07e1c7f3fe63a6616
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 그리기 기본 사항
 
@@ -25,11 +26,11 @@ Xamarin.Forms 응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 
 
 SkiaSharp 드로잉에 캔버스 및 그리기를 비롯 한 기본 내용을 알아봅니다.
 
-## <a name="integrating-with-xamarinformsintegrationmd"></a>[Xamarin.Forms를 사용한 통합](integration.md)
+## <a name="integrating-with-xamarinformsintegrationmd"></a>[Xamarin.Forms와 통합](integration.md)
 
 터치식 입력 하 고 Xamarin.Forms 요소 통합에 대 한 응답으로 대화형 SkiaSharp 그래픽을 만듭니다.
 
-## <a name="pixels-and-device-independent-unitspixelsmd"></a>[픽셀과 장치 독립적 단위](pixels.md)
+## <a name="pixels-and-device-independent-unitspixelsmd"></a>[픽셀 및 장치 독립적 단위](pixels.md)
 
 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점을 살펴봅니다.
 

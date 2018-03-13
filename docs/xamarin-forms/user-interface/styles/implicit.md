@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 0600a4ca1f26fd034679619c1427821e9c7a12b8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b96b306c882eb30aaf8c81604afb9b6a547d715b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implicit-styles"></a>암시적 스타일
 
@@ -51,7 +51,7 @@ _암시적 스타일은 스타일을 참조 하려면 각 컨트롤을 요구 �
 
 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 단일 정의 *암시적* 스타일의 페이지에 적용 되는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 인스턴스. `Style` 배경이 노란색인에 다른 모양 옵션을 설정 하는 동안 파란색 텍스트를 표시 하는 데 사용 됩니다. `Style` 는 페이지에 추가 되 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 지정 하지 않고는 `x:Key` 특성입니다. 따라서는 `Style` 모두에 적용 되는 `Entry` 일치 하는 대로 암시적으로 인스턴스는 [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) 속성은 `Style` 정확 하 게 합니다. 그러나는 `Style` 에 적용 되지 않습니다는 `CustomEntry` 서브클래싱된는 인스턴스에 `Entry`합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](implicit-images/implicit-styles.png "암시적 스타일 예제")](implicit-images/implicit-styles-large.png "암시적 스타일 예제")
+[![](implicit-images/implicit-styles.png "암시적 스타일 예제")](implicit-images/implicit-styles-large.png#lightbox "암시적 스타일 예제")
 
 또한, 네 번째 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 재정의 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) 및 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) 다른 암시적스타일의속성`Color`값입니다.
 
@@ -82,7 +82,7 @@ _암시적 스타일은 스타일을 참조 하려면 각 컨트롤을 요구 �
 
 응용 프로그램에서 스타일을 만드는 방법은 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 참조 [글로벌 스타일](~/xamarin-forms/user-interface/styles/application.md)합니다.
 
-## <a name="creating-an-implicit-style-in-c35"></a>&#35;에서 암시적 스타일 만들기
+## <a name="creating-an-implicit-style-in-c35"></a>C에서 암시적 스타일 만들기&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스는 페이지에 추가할 수 있습니다 [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 새 C#에서 컬렉션 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 고 추가 하 여 다음의 `Style` 인스턴스는 `ResourceDictionary`에 나타난 것 처럼는 다음 코드 예제
 

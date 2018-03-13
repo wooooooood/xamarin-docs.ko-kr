@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 641f62d5e646607b2ff61db412a5defce63a211d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbars"></a>도구 모음
 
@@ -82,7 +82,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 2. 디자인 화면의 창 컨트롤러를 선택 합니다.
 3. 전환 하는 **Identity 관리자** 으로 "WindowController"를 입력 하 고는 **클래스 이름**: 
 
-    [![설정 창 컨트롤러에 대 한 사용자 지정 클래스 이름](toolbar-images/windowcontroller01.png "설정 창 컨트롤러에 대 한 사용자 지정 클래스 이름")](toolbar-images/windowcontroller01-large.png) 
+    [![설정 창 컨트롤러에 대 한 사용자 지정 클래스 이름](toolbar-images/windowcontroller01.png "설정 창 컨트롤러에 대 한 사용자 지정 클래스 이름")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. 변경 내용을 저장 하 고 동기화 하는 Mac에 대 한 Visual Studio로 돌아갑니다.
 5. A **WindowController.cs** 파일을 프로젝트에 추가 됩니다는 **솔루션 패드** Mac 용 Visual Studio에서: 
@@ -92,7 +92,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 6. Xcode의 인터페이스 작성기에서 스토리 보드를 다시 엽니다.
 7. **WindowController.h** 파일은 사용 하기 위해 사용할 수 있습니다. 
 
-    [![WindowController.h 파일](toolbar-images/windowcontroller03.png "The WindowController.h 파일")](toolbar-images/windowcontroller03-large.png)
+    [![WindowController.h 파일](toolbar-images/windowcontroller03.png "The WindowController.h 파일")](toolbar-images/windowcontroller03-large.png#lightbox)
 
 ## <a name="creating-and-maintaining-toolbars-in-xcode"></a>만들기 및 도구 모음 Xcode에서 유지 관리
 
@@ -188,7 +188,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 
 여러 Cocoa UI 요소는 기본적으로 표준 도구 모음의 항목과 상호 작용 합니다. 예를 들어는 **텍스트 보기** 응용 프로그램의 창으로 끌고 콘텐츠 영역을 채우는 배치:
 
-[![응용 프로그램에 텍스트 뷰 추가](toolbar-images/edit09.png "텍스트 보기 응용 프로그램에 추가")](toolbar-images/edit09-large.png)
+[![응용 프로그램에 텍스트 뷰 추가](toolbar-images/edit09.png "텍스트 보기 응용 프로그램에 추가")](toolbar-images/edit09-large.png#lightbox)
 
 문서를 반환 하 여 Xcode와 동기화, 응용 프로그램을 실행, 텍스트를 입력, 선택, 클릭 Mac 용 Visual Studio로 저장 된 **색** 도구 모음 항목입니다. 텍스트 보기 색 선택 자동으로 작동 하는지 확인 합니다.
 
@@ -201,7 +201,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 1. Mac에 대 한 Visual Studio에서의 **솔루션 패드**를 마우스 오른쪽 단추로 클릭는 **리소스** 폴더를 선택 **추가** > **파일 추가** .
 2. **파일 추가** 대화 상자 원하는 이미지로 이동, 선택한 클릭는 **열려** 단추: 
 
-    [![이미지를 추가 하려면 선택](toolbar-images/edit11.png "이미지를 추가 하려면 선택")](toolbar-images/edit11-large.png)
+    [![이미지를 추가 하려면 선택](toolbar-images/edit11.png "이미지를 추가 하려면 선택")](toolbar-images/edit11-large.png#lightbox)
 
 3. 선택 **복사**, 확인 **동일한 작업을 사용 하 여 선택한 모든 파일에 대 한**를 클릭 하 고 **확인**:
 
@@ -225,7 +225,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 
 9. 끌어서는 **구분 기호 도구 모음 항목** 에서 **라이브러리 검사기** 의 도구 모음 **도구 모음 항목 허용** 영역: 
 
-    [![도구 모음 항목 허용 된 영역에 추가 구분 기호 도구 모음 항목](toolbar-images/edit17.png "A 구분 기호 도구 모음 항목 도구 모음 항목 허용 된 영역에 추가")](toolbar-images/edit17-large.png)
+    [![도구 모음 항목 허용 된 영역에 추가 구분 기호 도구 모음 항목](toolbar-images/edit17.png "A 구분 기호 도구 모음 항목 도구 모음 항목 허용 된 영역에 추가")](toolbar-images/edit17-large.png#lightbox)
 
 10. 구분 기호 항목 및 "휴지통" 항목을 끌어는 **기본 도구 모음 항목** 영역 및 집합에서 항목을 도구 모음 순서 왼쪽에서 오른쪽 (색, 글꼴, 구분 기호, 휴지통, 유연한 공간, 인쇄)를 다음과 같이 합니다. 
 
@@ -244,7 +244,7 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 1. 에 **솔루션 패드**를 두 번 클릭 **Main.storyboard** Xcode에서 엽니다.
 2. "WindowController"의 주 창 컨트롤러에 할당 된 사용자 지정 클래스를 확인 하 고 **Identity 관리자**:
 
-    [![창 컨트롤러에 대 한 사용자 지정 클래스를 설정 하 여 Identity 관리자를 사용 하 여](toolbar-images/edit20a.png "Identity 관리자를 사용 하 여 창 컨트롤러에 대 한 사용자 지정 클래스를 설정 하려면")](toolbar-images/edit20a-large.png)
+    [![창 컨트롤러에 대 한 사용자 지정 클래스를 설정 하 여 Identity 관리자를 사용 하 여](toolbar-images/edit20a.png "Identity 관리자를 사용 하 여 창 컨트롤러에 대 한 사용자 지정 클래스를 설정 하려면")](toolbar-images/edit20a-large.png#lightbox)
 
 3. 도구 모음 항목을 다음으로, 선택는 **인터페이스 계층 구조**: 
 
@@ -253,11 +253,11 @@ UI 요소 콘센트 및 작업, Xamarin.Mac 응용 프로그램을 통해 C# 코
 4. 열기는 **도우미 보기**, 선택는 **WindowController.h** 파일 및 도구 모음 항목의 컨트롤 끌기를 **WindowController.h** 파일입니다.
 5. 설정는 **연결** 형식을 **동작**, "trashDocument"에 대 한 입력는 **이름**를 클릭 하 고는 **연결** 단추: 
 
-    [![도구 모음 항목에 대 한 작업 구성](toolbar-images/edit23.png "도구 모음 항목에 대 한 작업 구성")](toolbar-images/edit23-large.png)
+    [![도구 모음 항목에 대 한 작업 구성](toolbar-images/edit23.png "도구 모음 항목에 대 한 작업 구성")](toolbar-images/edit23-large.png#lightbox)
 
 6. 노출 된 **텍스트 보기** 콘센트에서 "documentEditor" 호출로 **ViewController.h** 파일: 
 
-    [![텍스트 보기에 대 한 콘센트 구성](toolbar-images/edit24.png "콘센트 텍스트 보기에 대 한 구성")](toolbar-images/edit24-large.png)
+    [![텍스트 보기에 대 한 콘센트 구성](toolbar-images/edit24.png "콘센트 텍스트 보기에 대 한 구성")](toolbar-images/edit24-large.png#lightbox)
 
 7. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 

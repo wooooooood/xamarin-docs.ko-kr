@@ -7,18 +7,17 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 91e27fcaef0ef1b262eceecd4d3c71bac34e328d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타 데이터
 
 _Xamarin.Android에서 C# 코드에서 Java 기본 인터페이스 (JNI)를 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘은 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.Android 이러한 바인딩을 생성 하는 도구를 제공 합니다. 이 도구를 사용 하면 개발자의 제어를 사용 하면 프로시저가 네임 스페이스를 수정 및 멤버 이름 바꾸기와 같은 메타 데이터를 사용 하 여 바인딩을 만들어지는 방법이 있습니다. 이 문서에서는 메타 데이터의 작동 원리, 특성 메타 데이터를 요약, 지원 및이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는 방법을 설명 합니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -74,7 +73,6 @@ Xamarin.Android **Java 바인딩 라이브러리** 라고도 하는 도구를 �
 
 논의로 이동할 수 있습니다. **Metadata.xml** 자세히 합니다.
 
-<a name="Metadata.xml_Transform_File" />
 
 ## <a name="metadataxml-transform-file"></a>Metadata.xml 변환 파일
 
@@ -114,7 +112,6 @@ Xamarin.Android **Java 바인딩 라이브러리** 라고도 하는 도구를 �
 -   `parameter` &ndash; 메서드에 대 한 매개 변수를 식별 합니다. 예: `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### <a name="adding-types"></a>형식 추가
 
@@ -129,7 +126,6 @@ Xamarin.Android **Java 바인딩 라이브러리** 라고도 하는 도구를 �
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### <a name="removing-types"></a>형식 제거
 
@@ -138,8 +134,6 @@ Xamarin.Android 바인딩 생성기 Java 유형을 무시 하 고 바인딩할 �
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
-
-<a name="Renaming_Members" />
 
 ### <a name="renaming-members"></a>멤버 이름 바꾸기
 
@@ -169,6 +163,8 @@ public class NewName : Java.Lang.Object { ... }
     name="managedName">NewName</attr>
 ```
 
+<a name="Renaming_EventArg_Wrapper_Classes" />
+
 #### <a name="renaming-eventarg-wrapper-classes"></a>이름 바꾸기 `EventArg` 래퍼 클래스
 
 Xamarin.Android 바인딩 생성기 식별 하는 경우는 `onXXX` 에 대 한 setter 메서드는 _수신기 형식_, C# 이벤트 및 `EventArgs` 하위 클래스를 생성 됩니다는.NET 지원 하기 위해 Java 기반 수신기에 대 한 API flavoured 패턴입니다. 예를 들어 다음 Java 클래스와 메서드가 고려 합니다.
@@ -193,7 +189,6 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## <a name="supported-attributes"></a>지원 되는 특성
 
@@ -341,7 +336,6 @@ Java 클래스 이동 여기 `SKRealReachSettings` 라는 C# 열거형 정의 �
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

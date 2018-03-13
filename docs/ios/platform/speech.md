@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 00980c0038ac3ae51d0444e6f71dde9dfef25831
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="speech-recognition"></a>음성 인식
 
@@ -33,7 +33,7 @@ Apple에 따라 음성 인식 API에는 다음 기능과 이점:
 
 음성 인식 (에 지 원하는 API 통용된 언어 중 하나로) 라이브 또는 미리 녹음 된 오디오를 획득 하는 단어는 일반 텍스트로 기록 반환 하는 음성 인식기에 전달 하 여 iOS 앱에 구현 됩니다.
 
-[ ![](speech-images/speech01.png "음성 인식 작동 방식")](speech-images/speech01.png)
+[![](speech-images/speech01.png "음성 인식 작동 방식")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>키보드 받아쓰기
 
@@ -104,13 +104,13 @@ Apple가 지정된 된 언어는 현재 시점에서 변환에 사용할 수 있
 1. 두 번 클릭 하 여 `Info.plist` 편집을 위해 열 파일입니다.
 2. 전환 하는 **소스** 보기: 
 
-    [ ![](speech-images/speech02.png "소스 뷰")](speech-images/speech02.png)
+    [![](speech-images/speech02.png "소스 뷰")](speech-images/speech02.png#lightbox)
 3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
 
-    [ ![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png)
+    [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
 4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
 
-    [ ![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png)
+    [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -118,10 +118,10 @@ Apple가 지정된 된 언어는 현재 시점에서 변환에 사용할 수 있
 1. 두 번 클릭 하 여 `Info.plist` 편집을 위해 열 파일입니다.
 3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
 
-    [ ![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png)
+    [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
 4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
 
-    [ ![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png)
+    [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 
 -----

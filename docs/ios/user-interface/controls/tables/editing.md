@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>편집
 
 메서드를 재정의 하 여 테이블 편집 기능을 사용할 수는 `UITableViewSource` 하위 클래스입니다. 가장 간단한 편집 동작에는 단일 메서드를 재정의할으로 구현할 수 있는 삭제 하려면 살짝 밀기입니다.
 더 복잡 한 (포함 하 여 행 이동)을 편집 하는 테이블과 함께 편집 모드에 수행할 수 있습니다.
 
-이 가이드는 다음에 표시 됩니다.
-
-- [살짝 삭제 하려면](#Swipe_to_Delete)
-- [편집 모드](#Edit_Mode)
-- [행 삽입 편집 스타일](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>삭제를 살짝
 
 살짝 기능을 삭제 하는 자연 스러운 제스처에 사용자가 예상 하는 iOS입니다. 
 
- [ ![](editing-images/image10.png "삭제를 살짝의 예")](editing-images/image10.png)
+ [![](editing-images/image10.png "삭제를 살짝의 예")](editing-images/image10.png#lightbox)
 
 살짝 밀기 표시에 영향을 주는 세 개의 메서드 재정의는 **삭제** 셀의 단추:
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 이 예는 `UITableViewSource` 사용 하도록 업데이트 되었습니다는 `List<TableItem>` (대신 문자열 배열) 문서로 지원 하기 때문에 데이터 원본을 추가 및 삭제 항목 컬렉션에서 합니다.
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>편집 모드
 
 테이블은 편집 모드에 액세스 하는 경우 삭제 단추를 보여 줍니다. 각 행에 빨간색 'stop' 위젯 사용자에 게 표시 합니다. 또한 테이블을 나타내는 행 순서를 변경 하려면 놓을 수 있습니다 '핸들' 아이콘을 표시 합니다.
 **TableEditMode** 샘플 표시 된 것 처럼 이러한 기능을 구현 합니다.
 
- [ ![](editing-images/image11.png "표시 된 것 처럼 TableEditMode이 샘플에서는 이러한 기능을 구현")](editing-images/image11.png)
+ [![](editing-images/image11.png "표시 된 것 처럼 TableEditMode이 샘플에서는 이러한 기능을 구현")](editing-images/image11.png#lightbox)
 
 여러 가지 방법의 여러 가지 `UITableViewSource` 테이블의 편집 모드 동작에 영향을 주는:
 
@@ -136,13 +127,12 @@ table.SetEditing (true, true);
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>행 삽입 편집 스타일
 
 테이블 내에서 행을 삽입 한 경우를 흔히 볼 사용자 인터페이스는 – 표준 iOS 앱의 기본 예제는 **편집 연락처** 화면입니다. 이 스크린 샷 행 삽입 기능이 작동 하는 방법을 보여 줍니다.-편집에서 모드는 추가 행 (클릭) 하는 경우 데이터에 추가 행을 삽입 합니다. 편집이 완료 되었을 때, 임시 **(새로 추가)** 행이 제거 됩니다.
 
- [ ![](editing-images/image12.png "편집이 완료 되 면 새 임시 추가 행이 제거")](editing-images/image12.png)
+ [![](editing-images/image12.png "편집이 완료 되 면 새 임시 추가 행이 제거")](editing-images/image12.png#lightbox)
 
 여러 가지 방법의 여러 가지 `UITableViewSource` 테이블의 편집 모드 동작에 영향을 주는 합니다. 이러한 방법의 예제 코드에 다음과 같이 구현 되었습니다.
 

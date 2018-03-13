@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: 43d1ef53933ca7867b834dbf118ec730ccbf71ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5cadaf5f41d940a0255113178d018b59b780eabc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-cursoradapters"></a>CursorAdapters를 사용 하 여
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -27,7 +26,6 @@ Android는 데이터 SQLite 데이터베이스 쿼리를 표시 하도록 특별
 
 커서 어댑터 SQLite에 저장 된 데이터의 긴 목록을 통해 스크롤할 수는 성능이 뛰어난 방법을 제공 합니다. 사용 하는 코드에서 SQL 쿼리를 정의 해야 합니다는 `Cursor` 개체를 다음 만들고 각 행에 대 한 보기를 입력 하는 방법에 설명 합니다.
 
-<a name="Creating_an_SQLite_Database" />
 
 ## <a name="creating-an-sqlite-database"></a>SQLite 데이터베이스 만들기
 
@@ -63,7 +61,6 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 커서 쿼리에 *해야* 는 정수 열이 있어야 `_id` 에 대 한는 `CursorAdapter` 에서 실행 되도록 합니다. 기본 테이블에 명명 된 정수 열이 없는 경우 `_id` 다음에 다른 고유한 정수에 대 한 열 별칭을 사용 하 여는 `RawQuery` 커서를 구성 합니다. 참조는 [Android docs](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/) 자세한 정보.
 
-<a name="Creating_the_Cursor" />
 
 ### <a name="creating-the-cursor"></a>커서 만들기
 
@@ -85,7 +82,6 @@ cursor.Close();
 
 중 하나 사용 되 면 응용 프로그램이 사용할 수 있는 SQLite 데이터베이스 하 나와 있는 것 처럼 커서 개체를 만들었습니다는 `SimpleCursorAdapter` 또는 하위 클래스 `CusorAdapter` 에서 행을 표시 하는 `ListView`합니다.
 
-<a name="Using_SimpleCursorAdapter" />
 
 ## <a name="using-simplecursoradapter"></a>SimpleCursorAdapter를 사용 하 여
 
@@ -119,7 +115,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 
 `SimpleCursorAdapter` SQLite 데이터를 표시할 빠르고 간편한 방법이 `ListView`합니다. 기본 제한은 컨트롤을 표시 하는 열 값만 바인딩할 수 있습니다, 행 레이아웃 (예를 들어 표시/숨기기 컨트롤 속성 또는 변경)의 다른 부분을 변경할 수 있도록 메시지를 표시 하지 않습니다.
 
-<a name="Subclassing_CursorAdapter" />
 
 ## <a name="subclassing-cursoradapter"></a>CursorAdapter 서브클래싱
 
@@ -133,7 +128,6 @@ A `CursorAdapter` 하위 클래스는 이점이 동일한 성능으로는 `Simpl
 
 이전 예제에서 어댑터 하위 클래스는 행의 수를 반환 하 고 현재 항목-을 검색 하는 메서드가 `CursorAdapter` 커서 자체에서 해당 정보를 수집할 수 있으므로 이러한 메서드를 필요 하지 않습니다. 만들고 채우는 각 뷰의 이러한 두 개의 메서드로 분할 하 여는 `CursorAdapter` 보기 사용 하 여 다시 적용 합니다. 이 통해 반대로 일반 어댑터를 무시 하려면 수는 `convertView` 의 매개 변수는 `BaseAdapter.GetView` 메서드.
 
-<a name="Implementing_the_CursorAdapter" />
 
 ### <a name="implementing-the-cursoradapter"></a>CursorAdapter 구현
 
@@ -159,7 +153,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-<a name="Assigning_the_CursorAdapter" />
 
 ### <a name="assigning-the-cursoradapter"></a>CursorAdapter 할당
 

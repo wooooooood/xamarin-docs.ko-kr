@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5df7c2bbc7be1089795c94b6f639bd4556b49366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="events-protocols-and-delegates"></a>이벤트, 프로토콜 및 대리자
 
@@ -32,7 +32,7 @@ Xamarin.iOS 응용 프로그램으로 기존.NET 응용 프로그램 거의 동�
 
 프로토콜 및 대리자를 보여 주기 위해 다음 그림과 같이 지도에 주석을 추가 하는 단순 맵 응용 프로그램을 빌드합니다.
 
- [ ![](delegates-protocols-and-events-images/01-map.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로") ](delegates-protocols-and-events-images/01-map.png) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "지도에 추가 하는 예 주석")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/01-map.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "지도에 추가 하는 예 주석")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 이 앱을 수행 하는 작업량과, 하기 전에 시작 하겠습니다.NET 이벤트는 UIKit 아래를 살펴보면 합니다.
 
@@ -59,15 +59,15 @@ aButton.TouchUpInside += delegate {
 
 위의 코드는 UIViewContoller의 ViewDidLoad 메서드에 연결 됩니다. aButton 변수가 참조 하는 단추는 iOS 디자이너 또는 코드를 추가할 수 있습니다. 다음 그림에는이 문서를 함께 제공 되는 샘플에서 가져온 iOS 디자이너에에서 추가 될 때이 단추를 보여 줍니다.
 
- [ ![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "IOS 디자이너에에서 추가 된 단추")](delegates-protocols-and-events-images/02-interface-builder-outlet.png)
+ [![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "IOS 디자이너에에서 추가 된 단추")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 또한 Xamarin.iOS 컨트롤과 함께 발생 하는 상호 작용에 코드를 연결할 때의 대상 동작 스타일을 지원 합니다. Hello 단추에 대 한 대상 작업을 만들려면 두 번 클릭 디자이너는 ios입니다. UIViewController의 코드 숨김 파일이 표시 되 고 개발자를 연결 하는 메서드를 삽입할 위치를 선택 하 라는 메시지가 표시 됩니다.
 
- [ ![](delegates-protocols-and-events-images/03-interface-builder-action.png "UIViewControllers 코드 숨김 파일")](delegates-protocols-and-events-images/03-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/03-interface-builder-action.png "UIViewControllers 코드 숨김 파일")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 위치 선택 된 후 새 메서드가 만들고 컨트롤에 대 한 유선 대부분이 합니다. 단추를 클릭할 때 메시지 다음 예제에서는 콘솔에 기록 됩니다.
 
- [ ![](delegates-protocols-and-events-images/05-interface-builder-action.png "메시지는 단추를 클릭할 때 콘솔에 기록 됩니다.")](delegates-protocols-and-events-images/05-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/05-interface-builder-action.png "메시지는 단추를 클릭할 때 콘솔에 기록 됩니다.")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 IOS 대상 작업 패턴에 대 한 자세한 내용은의 대상 작업 섹션을 참조 하십시오. " [iOS에 대 한 핵심 응용 프로그램 경쟁력](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)" Apple iOS 개발자 라이브러리에서에서.
 
@@ -170,7 +170,7 @@ Xamarin.iOS에서는 Objective-c 프로토콜을 사용 하는 예제를 살펴�
 
 이러한 방식으로 `MKAnnotation` 프로토콜은 주석을 함께 제공 되는 관련 데이터를 제공 하는 데 사용 됩니다. 주석 자체에 대 한 실제 보기에는 적용 하는 개체의 데이터에서 작성 되는 `MKAnnotation` 프로토콜입니다. 설명선 (아래 스크린샷에 나와 있는 것) 처럼 사용자가 주석을 누를 때 표시 되는 텍스트에서 제공 하는 예를 들어는 `Title` 프로토콜을 구현 하는 클래스의 속성:
 
- [ ![](delegates-protocols-and-events-images/04-annotation-with-callout.png "사용자가 주석을 누르면 설명선에 대 한 예제 텍스트")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "사용자가 주석을 누르면 설명선에 대 한 예제 텍스트")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 프로토콜 심층 분석 다음 섹션에 설명 된 대로 Xamarin.iOS 프로토콜 추상 클래스에 바인딩합니다. 에 대 한는 `MKAnnotation` 프로토콜을 바인딩된 C# 클래스 이름은 `MKAnnotation` 는 프로토콜의 이름과 모방 하기 위해의 서브 클래스는 `NSObject`, CocoaTouch에 대 한 루트 기본 클래스입니다. Getter 및 setter 좌표;에 대 한 구현 하는 프로토콜 요구 그러나 제목 및 부제목은 선택적입니다. 따라서는 `MKAnnotation` 클래스는 `Coordinate` 속성은 *추상*, 구현 요구 및 `Title` 및 `Subtitle` 속성 표시 된 *가상* 아래와 같이 선택적 있게:
 

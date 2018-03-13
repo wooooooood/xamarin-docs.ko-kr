@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8afce6021c2816f354e26ccecd7d0c40ceb2a9bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: babbe0344130dc0ce38023eabe7479d2b464276b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing-nuget-metadata"></a>NuGet 메타 데이터 편집
 
@@ -26,7 +26,7 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리에 대 �
 
 **일반** 탭에는 NuGet 패키지를 입력 해야 하는 4 개의 필드:
 
-[ ![](metadata-images/metadata-general-sml.png "NuGet 패키지 필요한 메타 데이터 창")](metadata-images/metadata-general.png)
+[![](metadata-images/metadata-general-sml.png "NuGet 패키지 필요한 메타 데이터 창")](metadata-images/metadata-general.png#lightbox)
 
 - **ID** – Nuget.org (또는 패키지가 배포 아무 곳에 나) 내에서 고유 해야 하는 패키지 식별자입니다. 이 따라 [지침](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) 만 URL에 사용할 수 있는 문자를 사용 하 고 (공백 없이 대부분의 특수 문자를 방지 하 고).
 - **버전** – 버전 번호와 일치 선택 [NuGet의 버전 관리 규칙](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions)합니다.
@@ -45,7 +45,7 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리에 대 �
 
 **세부 정보** 탭 NuGet 패키지 매니페스트 파일에 포함 될 선택적 필드를 포함 합니다.
 
-[ ![](metadata-images/metadata-detail-sml.png "NuGet 패키지의 선택적 메타 데이터 창")](metadata-images/metadata-detail.png)
+[![](metadata-images/metadata-detail-sml.png "NuGet 패키지의 선택적 메타 데이터 창")](metadata-images/metadata-detail.png#lightbox)
 
 참조는 [참조 하는 요소에는 선택적](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements) 필수 및 선택적 필드에 대 한 자세한 내용은 합니다.
 

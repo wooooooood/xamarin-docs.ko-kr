@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 2d9c2b27de7addc0ed1faeed038db81e2470087f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: da9b9230a466c70cd584a00af848ffe87dacbc5b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="coreimage"></a>CoreImage
 
@@ -214,7 +214,7 @@ foreach (var filter in filters){
 
 시뮬레이터 목록 범주 출력은 다음과 같습니다 – 모든 필터 및 매개 변수를 보려면 목록을 통해 스크롤할 수 있습니다.
 
- [ ![](introduction-to-coreimage-images/coreimage05.png "시뮬레이터 목록 범주 출력은 다음과 같습니다.")](introduction-to-coreimage-images/coreimage05.png)
+ [![](introduction-to-coreimage-images/coreimage05.png "시뮬레이터 목록 범주 출력은 다음과 같습니다.")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 나열 된 각 필터, Xamarin.iOS 클래스로 표시 된 어셈블리 브라우저 또는 Mac 용 Visual Studio 또는 Visual Studio에서 자동 완성을 사용 하 여 Xamarin.iOS.CoreImage API도 탐색할 수 있도록 합니다. 
 

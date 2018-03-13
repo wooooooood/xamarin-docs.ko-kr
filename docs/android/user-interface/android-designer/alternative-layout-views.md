@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: f6884260315f8846720370c558f7435d2c5a9d91
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c2df60a79ea3b5a0ff226cfaade0440db13fd5ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternative-layout-views"></a>대체 레이아웃 뷰
 
 _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사용 하 여 설명 합니다. 예를 들어 가로 모드로 장치가 있을 때만 사용 되는 레이아웃의 버전과 레이아웃 된 버전을 세로 모드에 대해서만 있을 수 있습니다._
 
-<a name="creating_alternative_layouts" />
 
 ## <a name="creating-alternative-layouts"></a>대체 레이아웃 만들기
 
@@ -26,11 +25,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![대체 레이아웃 보기 창](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "대체 레이아웃 보기 창")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png)
+[![대체 레이아웃 보기 창](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "대체 레이아웃 보기 창")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![대체 레이아웃 보기 창](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png)
+[![대체 레이아웃 보기 창](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png#lightbox)
 
 -----
 
@@ -38,11 +37,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![레이아웃 변형 만들기](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "레이아웃 변형 만들기")](alternative-layout-views-images/vs/02-create-layout-variation.png)
+[![레이아웃 변형 만들기](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "레이아웃 변형 만들기")](alternative-layout-views-images/vs/02-create-layout-variation.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![레이아웃 변형 만들기](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png)
+[![레이아웃 변형 만들기](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png#lightbox)
 
 -----
 
@@ -51,11 +50,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![큰 토지 변형](alternative-layout-views-images/vs/03-large-land-sml.png "큰 토지 변형")](alternative-layout-views-images/vs/03-large-land.png)
+[![큰 토지 변형](alternative-layout-views-images/vs/03-large-land-sml.png "큰 토지 변형")](alternative-layout-views-images/vs/03-large-land.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![큰 토지 변형](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png)
+[![큰 토지 변형](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png#lightbox)
 
 -----
 
@@ -64,16 +63,15 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![로드 된 레이아웃 표시기](alternative-layout-views-images/vs/04-new-layout-sml.png "로드 레이아웃 표시기")](alternative-layout-views-images/vs/04-new-layout.png)
+[![로드 된 레이아웃 표시기](alternative-layout-views-images/vs/04-new-layout-sml.png "로드 레이아웃 표시기")](alternative-layout-views-images/vs/04-new-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![로드 된 레이아웃 표시기](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png)
+[![로드 된 레이아웃 표시기](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png#lightbox)
 
 -----
 
 
-<a name="editing_alternative_layouts" />
 
 ## <a name="editing-alternative-layouts"></a>대체 레이아웃 편집
 
@@ -83,11 +81,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![다중 편집 아이콘](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "다중 편집 아이콘")](alternative-layout-views-images/vs/05-multi-layout-icon.png)
+[![다중 편집 아이콘](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "다중 편집 아이콘")](alternative-layout-views-images/vs/05-multi-layout-icon.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![다중 편집 아이콘](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png)
+[![다중 편집 아이콘](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png#lightbox)
 
 -----
 
@@ -96,11 +94,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![모든 레이아웃의 연결을 해제](alternative-layout-views-images/vs/06-multi-linked-sml.png "모든 레이아웃의 연결을 해제")](alternative-layout-views-images/vs/06-multi-linked.png)
+[![모든 레이아웃의 연결을 해제](alternative-layout-views-images/vs/06-multi-linked-sml.png "모든 레이아웃의 연결을 해제")](alternative-layout-views-images/vs/06-multi-linked.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![모든 레이아웃의 연결을 해제합니다](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png)
+[![모든 레이아웃의 연결을 해제합니다](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png#lightbox)
 
 -----
 
@@ -109,11 +107,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![연결 끊기 중간 레이아웃](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "Unlink 중간 레이아웃")](alternative-layout-views-images/vs/07-unlink-middle-layout.png)
+[![연결 끊기 중간 레이아웃](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "Unlink 중간 레이아웃")](alternative-layout-views-images/vs/07-unlink-middle-layout.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![중간 레이아웃의 연결을 해제합니다](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png)
+[![중간 레이아웃의 연결을 해제합니다](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png#lightbox)
  
 -----
  
@@ -121,7 +119,6 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 이 예제에서는 변경 중 하나로 **기본** 또는 **긴** 다른 레이아웃으로 제외한 레이아웃 전파 됩니다는 **큰 토지** 레이아웃 합니다. 
 
 
-<a name="multi_edit_example" />
 
 ### <a name="multi-edit-example"></a>다중 편집 예제 
 
@@ -129,11 +126,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![TextView 추가](alternative-layout-views-images/vs/08-add-textview-sml.png "TextView를 추가 합니다.")](alternative-layout-views-images/vs/08-add-textview.png)
+[![TextView 추가](alternative-layout-views-images/vs/08-add-textview-sml.png "TextView를 추가 합니다.")](alternative-layout-views-images/vs/08-add-textview.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![TextView를 추가 합니다.](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png)
+[![TextView를 추가 합니다.](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png#lightbox)
  
 -----
  
@@ -142,11 +139,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![TextView를 가로로](alternative-layout-views-images/vs/09-landscape-textview-sml.png "TextView를 가로 방향")](alternative-layout-views-images/vs/09-landscape-textview.png)
+[![TextView를 가로로](alternative-layout-views-images/vs/09-landscape-textview-sml.png "TextView를 가로 방향")](alternative-layout-views-images/vs/09-landscape-textview.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![가로 TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png)
+[![가로 TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
  
 -----
  
@@ -154,7 +151,6 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 하지만 하나의 레이아웃에 로컬 변경 하려는 경우 (즉, 않으려면 다른 레이아웃에 전파 하 여 변경 내용을)? 이 수행 하려면 레이아웃을 수정 하기 전에 다음에 설명 된 대로 변경 하려면를 연결 해제 해야 합니다. 
 
 
-<a name="making_local_changes" />
 
 ### <a name="making-local-changes"></a>로컬 변경 
 
@@ -162,11 +158,11 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![로컬 변경](alternative-layout-views-images/vs/10-local-change-sml.png "로컬 변경")](alternative-layout-views-images/vs/10-local-change.png)
+[![로컬 변경](alternative-layout-views-images/vs/10-local-change-sml.png "로컬 변경")](alternative-layout-views-images/vs/10-local-change.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![로컬 변경](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png)
+[![로컬 변경](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png#lightbox)
  
 -----
  
@@ -174,7 +170,6 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 클릭는 **기본** 볼 레이아웃의 `TextView` 텍스트 문자열은로 설정 되어 `Portrait`합니다. 
 
 
-<a name="handling_conflicts" />
 
 ## <a name="handling-conflicts"></a>충돌 처리 
 
@@ -182,22 +177,21 @@ _이 방법을 레이아웃 버전 관리가 가능 리소스 한정자를 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![충돌 변경](alternative-layout-views-images/vs/11-conflicting-change-sml.png "충돌 하는 변경")](alternative-layout-views-images/vs/11-conflicting-change.png)
+[![충돌 변경](alternative-layout-views-images/vs/11-conflicting-change-sml.png "충돌 하는 변경")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![변경 내용이 충돌](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png)
+[![변경 내용이 충돌](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
  
 -----
  
 
 A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 됩니다. 
 
-[ ![충돌 경고](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png)
+[![충돌 경고](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
 
 충돌 상자 변경 된 속성의 목록을 표시 하 고 해당 값을 나열 합니다. 클릭 하면 **무시 충돌** 속성 변경 하는이 위젯의에 적용 됩니다. 클릭 하면 **적용** 이 위젯의 연결 된 테이블에 해당 위젯 속성 변경을 적용할 **기본** 레이아웃 합니다. 모든 속성 변경이 적용 된 충돌은 자동으로 삭제 됩니다. 
 
-<a name="view_group_conflicts" />
 
 ### <a name="view-group-conflicts"></a>보기 그룹 충돌 
 
@@ -205,11 +199,11 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![그룹 충돌 보기](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "그룹 충돌 보기")](alternative-layout-views-images/vs/12-view-group-conflict.png)
+[![그룹 충돌 보기](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "그룹 충돌 보기")](alternative-layout-views-images/vs/12-view-group-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![그룹 충돌 보기](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png)
+[![그룹 충돌 보기](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
  
 -----
  
@@ -220,11 +214,11 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![확인란 충돌](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "확인란 충돌")](alternative-layout-views-images/vs/13-checkbox-conflict.png)
+[![확인란 충돌](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "확인란 충돌")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![확인란 충돌](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png)
+[![확인란 충돌](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
 -----
  
@@ -233,18 +227,18 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Alt 레이아웃 충돌](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt 레이아웃 충돌")](alternative-layout-views-images/vs/14-alt-layout-conflict.png)
+[![Alt 레이아웃 충돌](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt 레이아웃 충돌")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Alt 레이아웃 충돌](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png)
+[![Alt 레이아웃 충돌](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  
 -----
  
 
 또한 충돌 상자에는 다음과 같은 메시지가 표시 됩니다.
 
-[ ![충돌 메시지](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png)
+[![충돌 메시지](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
 
 추가 `CheckBox` 때문에 충돌이 발생는 **큰 토지** 레이아웃 변경 되었습니다는 `LinearLayout` 해당 항목을 포함 합니다. 그러나이 경우 표시에 방금 삽입 된 위젯 충돌 상자는 **기본** 레이아웃 (의 `CheckBox`).
 
@@ -252,11 +246,11 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![그룹 충돌 해결](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "그룹 충돌 해결")](alternative-layout-views-images/vs/15-resolved-group-conflict.png)
+[![그룹 충돌 해결](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "그룹 충돌 해결")](alternative-layout-views-images/vs/15-resolved-group-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![그룹 충돌 해결](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png)
+[![그룹 충돌 해결](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
  
 -----
  
@@ -264,7 +258,6 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 이전 예제와 같이 `Button`, `CheckBox` 때문에 빨간색 변경 표식 없는는 `LinearLayout` 에 적용 된 변경에는 **큰 토지** 레이아웃 합니다.
 
 
-<a name="Conflict_Persistence" />
 
 ### <a name="conflict-persistence"></a>충돌 지 속성
 

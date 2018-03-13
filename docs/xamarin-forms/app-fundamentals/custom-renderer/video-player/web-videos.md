@@ -2,16 +2,16 @@
 title: "웹 비디오를 재생"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2e44d32f199d5c85bbae242d9168a43e028c73d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a5a98df4346c8720ae25fae4f27b5294993111c4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="playing-a-web-video"></a>웹 비디오를 재생
 
@@ -462,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 
 `VideoSourceConverter` 클래스 문자열을 변환는 `UriVideoSource`합니다. 페이지로 이동 하 여 **웹 비디오 재생** 로드 하 고 충분 한 양의 데이터를 다운로드 하 고 버퍼링 되었습니다 재생을 시작 페이지, 비디오를 시작 합니다. 이 비디오는 약 10 분 길이:
 
-[![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png "웹 비디오 재생")
+[![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png#lightbox "웹 비디오 재생")
 
 세 플랫폼 각각에 전송 컨트롤 페이드 아웃은 사용 되지 않는 있지만 비디오를 탭 하 여 보려는 복원할 수 있습니다.
 

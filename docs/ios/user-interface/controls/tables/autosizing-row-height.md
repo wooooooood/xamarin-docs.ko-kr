@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c5deb294aac679d60535f3f3bd6c9745e8bff358
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-sizing-row-height"></a>자동 크기 조정 행 높이
 
@@ -23,25 +23,25 @@ iOS 11을 자동으로 확장 하는 행에 대 한 기능을 추가 했습니�
 
 열린 행의 자동 크기 조정에 대 한 iOS 디자이너에에서 포함 되도록 테이블 보기에 대 한 스토리 보드 선택 셀의 *프로토타입* 셀의 레이아웃 디자인입니다. 예:
 
-[ ![](autosizing-row-height-images/table01.png "셀의 프로토타입 디자인")](autosizing-row-height-images/table01.png)
+[![](autosizing-row-height-images/table01.png "셀의 프로토타입 디자인")](autosizing-row-height-images/table01.png#lightbox)
 
 프로토타입에 각 요소에 대 한 제약 조건을 테이블 뷰 회전 또는 다른 iOS 장치 화면 크기에 대 한 크기를 조정할 때 올바른 위치에 요소를 계속 추가 합니다. 예를 들어, 고정는 `Title` 셀의 위쪽, 왼쪽 및 오른쪽 *콘텐츠 보기*:
 
-[ ![](autosizing-row-height-images/table02.png "고정 제목을 위쪽, 왼쪽 및 오른쪽의 셀 콘텐츠 뷰")](autosizing-row-height-images/table02.png)
+[![](autosizing-row-height-images/table02.png "고정 제목을 위쪽, 왼쪽 및 오른쪽의 셀 콘텐츠 뷰")](autosizing-row-height-images/table02.png#lightbox)
 
 예제 테이블, 작은 경우 `Label` (아래에서 `Title`) 축소 하 고 행 높이 늘리거나 증가할 수 있는 필드입니다. 이를 위해서는, 왼쪽, 오른쪽, 위쪽 및 아래쪽 레이블의 고정 하려면 다음과 같은 제약 조건을 추가 합니다.
 
-[ ![](autosizing-row-height-images/table03.png "이러한 제약 조건의 왼쪽, 오른쪽, 위쪽 및 아래쪽 레이블의 고정 하려면")](autosizing-row-height-images/table03.png)
+[![](autosizing-row-height-images/table03.png "이러한 제약 조건의 왼쪽, 오른쪽, 위쪽 및 아래쪽 레이블의 고정 하려면")](autosizing-row-height-images/table03.png#lightbox)
 
 셀에서 요소 제약 조건이 완전히 म 했으므로 요소 늘이는 명확 하 게 해야 합니다. 이 위해 설정 된 **콘텐츠 Hugging 우선 순위** 및 **콘텐츠 압축 저항 우선 순위** 에서 필요에 따라는 **레이아웃** 속성 패드의 섹션:
 
-[ ![](autosizing-row-height-images/table03a.png "속성 패드의 레이아웃 섹션")](autosizing-row-height-images/table03a.png)
+[![](autosizing-row-height-images/table03a.png "속성 패드의 레이아웃 섹션")](autosizing-row-height-images/table03a.png#lightbox)
 
 확장 해야 하는 요소를 설정는 **낮은** Hugging 우선 순위 값 및 **낮은** 압축 저항 우선 순위 값입니다.
 
 다음으로 셀 프로토타입을 선택 하는 고유한 부여 해야 **식별자**:
 
-[ ![](autosizing-row-height-images/table04.png "셀 프로토타입 고유 식별자 제공")](autosizing-row-height-images/table04.png)
+[![](autosizing-row-height-images/table04.png "셀 프로토타입 고유 식별자 제공")](autosizing-row-height-images/table04.png#lightbox)
 
 이 예제의 경우 `GrowCell`합니다. 에서는 테이블을 구성 하는 경우이 값이 나중에 사용 됩니다.
 
@@ -50,19 +50,19 @@ iOS 11을 자동으로 확장 하는 행에 대 한 기능을 추가 했습니�
 
 이 셀 프로토타입의 각 요소에 대 한 할당 한 **이름** C# 코드에 노출할 합니다. 예:
 
-[ ![](autosizing-row-height-images/table05.png "C# 코드에 노출 하는 이름을 지정 합니다.")](autosizing-row-height-images/table05.png)
+[![](autosizing-row-height-images/table05.png "C# 코드에 노출 하는 이름을 지정 합니다.")](autosizing-row-height-images/table05.png#lightbox)
 
 다음으로 사용자 지정 클래스에 대 한 추가 `UITableViewController`, `UITableView` 및 `UITableCell` (프로토타입). 예: 
 
-[ ![](autosizing-row-height-images/table06.png "UITableViewController는 UITableView 및는 UITableCell에 대 한 사용자 지정 클래스 추가")](autosizing-row-height-images/table06.png)
+[![](autosizing-row-height-images/table06.png "UITableViewController는 UITableView 및는 UITableCell에 대 한 사용자 지정 클래스 추가")](autosizing-row-height-images/table06.png#lightbox)
 
 마지막으로,을 예상 했던 모든 콘텐츠 우리의 레이블에 표시 되 고 확인 하기 위해 설정 된 **줄** 속성을 `0`:
 
-[ ![](autosizing-row-height-images/table06.png "줄 속성이 0으로 설정")](autosizing-row-height-images/table06a.png)
+[![](autosizing-row-height-images/table06.png "줄 속성이 0으로 설정")](autosizing-row-height-images/table06a.png#lightbox)
 
 Ui가 정의 된, 자동 행 높이 크기 조정을 사용 하도록 코드를 추가 해 보겠습니다.
 
-##<a name="enabling-auto-resizing-height"></a>크기 자동 조정 높이 사용 하도록 설정
+## <a name="enabling-auto-resizing-height"></a>크기 자동 조정 높이 사용 하도록 설정
 
 우리의 테이블 보기의 데이터 원본 (`UITableViewDatasource`) 또는 소스 (`UITableViewSource`)를 사용 해야 하는 셀을에서는 큐에서 제거 하는 경우는 `Identifier` 디자이너에 정의 되어 있습니다. 예:
 
@@ -106,7 +106,7 @@ public override void ViewWillAppear (bool animated)
 
 이 코드 위치에서 앱이 실행 되는 경우 각 행은 축소와 셀 프로토타입의 마지막 레이블의 높이에 따라 증가할 됩니다. 예:
 
-[ ![](autosizing-row-height-images/table07.png "실행 하는 예제 테이블")](autosizing-row-height-images/table07.png)
+[![](autosizing-row-height-images/table07.png "실행 하는 예제 테이블")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>관련 링크

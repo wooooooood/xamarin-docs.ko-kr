@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 11a7c9dcbe9481209d2eb90ff9d981f7437a1c99
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b970432d7cd5b6a84b8af72ab616493f3cd36a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="limitations"></a>제한 사항
 
@@ -19,13 +19,11 @@ Android에서 Java 프록시 형식을 생성 하는 빌드 프로세스 중에 
 
 다음은 데스크톱 모노에 비해 Xamarin.Android 제한 사항입니다.
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## <a name="limited-dynamic-language-support"></a>제한 된 동적 언어 지원
 
  [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md) Android 런타임에서 관리 코드를 호출 해야 할 때마다 필요 합니다. Android 호출 가능 래퍼는 IL의 정적 분석에 따라 컴파일 타임에 생성 됩니다. 이의 결과로 net: 있습니다 *없습니다* 언어를 사용할 동적 (IronPython, IronRuby, 등) 모든 시나리오에서 Java 형식의 서브클래싱 (간접 서브클래싱)을 포함 하 여 필요한 경우 이러한 동적 형식을 추출 하는 방법이 있으면 처럼 컴파일 시를 필요한 Android 호출 가능 래퍼를 생성 합니다.
 
-<a name="Limited_Java_Generation_Support" />
 
 ## <a name="limited-java-generation-support"></a>제한 된 Java 생성은 지원
 
@@ -88,7 +86,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### <a name="generic-c-classes"></a>일반 C# 클래스
 
@@ -150,7 +147,6 @@ class MyIntentService : IntentService {
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## <a name="partial-java-generics-support"></a>부분 Java 제네릭 지원
 

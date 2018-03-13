@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 55864073aecb48176d650da6edefad24c3248767
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-c"></a>C#에서 기본 뷰
 
@@ -24,7 +24,7 @@ _C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 네이티브 iOS, And
 
 다음 스크린샷에서 보여 플랫폼 관련 뷰는 xamarin.forms 추가 되어 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 
-[![](code-images/screenshots-sml.png "플랫폼 특정 보기를 포함 하는 StackLayout")](code-images/screenshots.png "플랫폼 특정 보기를 포함 하는 StackLayout")
+[![](code-images/screenshots-sml.png "플랫폼 특정 보기를 포함 하는 StackLayout")](code-images/screenshots.png#lightbox "플랫폼 특정 보기를 포함 하는 StackLayout")
 
 각 플랫폼에서 두 개의 확장 메서드로 Xamarin.Forms 레이아웃에 플랫폼 관련 뷰를 추가 하는 기능 사용 됩니다.
 
@@ -64,7 +64,7 @@ contentView.Content = uiLabel.ToView();
 다음 코드 예제에서는 추가 하는 방법을 보여 줍니다.는 `TextView` 에 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 및 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
 ```csharp
-var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
+var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
 stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
@@ -188,7 +188,7 @@ public class CustomControl : TextView
 이 보기의 인스턴스를 추가할는 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)다음 코드 예제에서와 같이,:
 
 ```csharp
-var customControl = new CustomControl (Forms.Context) {
+var customControl = new CustomControl (MainActivity.Instance) {
   Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
   TextSize = 14
 };
@@ -323,4 +323,4 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 ## <a name="related-links"></a>관련 링크
 
 - [NativeEmbedding (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
-- [기본 형식](~/xamarin-forms/platform/native-forms.md)
+- [네이티브 양식](~/xamarin-forms/platform/native-forms.md)

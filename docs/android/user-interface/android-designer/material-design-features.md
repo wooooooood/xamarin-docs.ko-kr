@@ -8,17 +8,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: c0b5fa3e7eacb9f7fd8aa133a290d0e7654972ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="material-design-features"></a>자재 디자인 기능
 
 _이 항목을 쉽게 디자인을 규격 자재 레이아웃을 만드는 개발자를 위한 디자이너 기능에 설명 합니다. 이 여기서 소개 하 고 자료 그리드, 자료 색상표, 인쇄 확장 및 테마 편집기를 사용 하는 방법에 설명 합니다._
 
-<a name="overview" />
+
+> [!Video https://youtube.com/embed/E3_ZjIOzVzY]
+
+**2016 개선: 모든 앱을 만들 수 Beautiful 자재 디자인**
 
 ## <a name="overview"></a>개요
 
@@ -37,7 +40,6 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 이러한 각 기능 확인 했으며 사용 하는 방법의 예를 제공 합니다.
 
 
-<a name="material_grid" />
 
 ## <a name="material-design-grid"></a>자재 디자인 눈금
 
@@ -45,11 +47,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![자재 디자인 눈금](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png)
+[![자재 디자인 눈금](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![자재 디자인 눈금](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png)
+[![자재 디자인 눈금](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 -----
 
@@ -65,11 +67,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![도련을, 간격 및 그리드](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png)
+[![도련을, 간격 및 그리드](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![도련을, 간격 및 그리드](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png)
+[![도련을, 간격 및 그리드](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
 -----
 
@@ -89,7 +91,7 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 이러한 각 오버레이 항목은 구성할 수 있습니다. 자료 디자인 눈금 메뉴 옆에 있는 아래쪽 삼각형을 클릭 하 여 표를 사용/사용 안 함, keylines의 배치를 구성 하 고는 간격을 설정 할 수 있는 대화 popover가 열립니다. 모든 값에 표시 되는 `dp` (밀도 독립적 픽셀):
 
-[![그리드, 도련을, 및 간격 구성](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png)
+[![그리드, 도련을, 및 간격 구성](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 새 도련을 추가 하려면에 새 오프셋된 값을 입력에서 **오프셋** 상자 위치를 선택 합니다 (**왼쪽**, **top**, **오른쪽**, 또는  **아래쪽**)를 클릭 하 고는 + 새 도련을 추가 하는 아이콘입니다.
 
@@ -102,20 +104,20 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 이제 색을 허용 하는 모든 속성 패널 항목이이 스크린 샷에 표시 된 것 처럼를 열려면 디자인 자료 색상표를 사용할 수 있는 추가 아이콘에 있습니다.
 
-[![색 아이콘](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png)
+[![색 아이콘](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 이 아이콘을 클릭할 때 대화 popover 자료 디자인 색상표에서 해당 속성의 색을 구성할 수 있게 해 주는 열립니다.
 
-[![자재 디자인 색상표](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png)
+[![자재 디자인 색상표](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 색 색상표 색상표의 맨 아래 선택 된 기본 색에 대 한 색상의 범위를 표시 하는 동안 기본 자료 디자인 색을 표시 합니다. 예를 들어 선택 **Indigo**의 컬렉션인 **Indigo** 색조 대화 상자의 맨 아래에 표시 됩니다.
 색상을 선택 하면 속성의 색 선택 된 색상으로 변경 됩니다. 다음 예제에서는 `Background Tint` 으로 변경 되는 단추의 *Indigo 500*:
 
-[![Indigo 500 선택](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png)
+[![Indigo 500 선택](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` 에 대 한 색 코드로 설정 되어 *Indigo 500* (`#ff3f51b5`),이 변경 내용을 적용 하는 단추의 배경색을 업데이트 하는 디자이너 및:
 
-[![배경 tint 변경 내용](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png)
+[![배경 tint 변경 내용](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 자료 디자인 색상표에 대 한 자세한 내용은 참조 자료 디자인 [색 색상표 가이드](http://www.google.com/design/spec/style/color.html#color-color-palette)합니다.
 
@@ -123,24 +125,23 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 **텍스트 모양** 의 섹션은 **속성** 패드 **스타일** 탭 수 있는 아이콘에 중에서 선택는 `TextAppearance` 준수 자료 디자인 하는 스타일 사양입니다.
 
-[![스타일 탭](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png)
+[![스타일 탭](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 이 아이콘을 클릭 하면 열립니다는 **인쇄 눈금** 을 선택할 수 있는 미리 구성 된 텍스트 스타일의 목록을 나타내는 대화 popover:
 
-[![텍스트 스타일 선택](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png)
+[![텍스트 스타일 선택](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 클릭 하면 다음 예제에서는 **디스플레이 1** 단추의 텍스트를 큰 글꼴로 변경 **디스플레이 1**:
 
-[![1 표시 스타일](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png)
+[![1 표시 스타일](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 텍스트 스타일에는 **인쇄 눈금** 따르는 **테마** 설정 합니다. 예를 들어 경우는 **Light** 는 미러의 목록에 사용 가능한 텍스트 스타일 디자이너 테마를 선택는 **Light** 테마:
 
-[![밝은 테마](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png)
+[![밝은 테마](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 -----
 
 
-<a name="theme_editor" />
 
 ## <a name="theme-editor"></a>테마 편집기
 
@@ -152,7 +153,7 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![테마 편집기 아이콘](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png)
+[![테마 편집기 아이콘](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 -----
 
@@ -162,11 +163,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![테마 편집기](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png)
+[![테마 편집기](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![테마 편집기](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png)
+[![테마 편집기](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 -----
 
@@ -183,7 +184,6 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 자세히 이러한 탭 중 하나를 각를 살펴 보겠습니다.
 
 
-<a name="theme_edit_inherit_tab" />
 
 ### <a name="inherit-tab"></a>탭을 상속 합니다.
 
@@ -191,11 +191,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![탭을 상속 합니다.](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png)
+[![탭을 상속 합니다.](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![탭을 상속 합니다.](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png)
+[![탭을 상속 합니다.](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 -----
 
@@ -203,7 +203,6 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 스타일 상속 하는 방법에 대 한 자세한 내용은 참조 [스타일 및 테마](http://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
 
 
-<a name="theme_edit_color_picker" />
 
 ### <a name="color-picker"></a>색 선택
 
@@ -211,11 +210,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![색 선택](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png)
+[![색 선택](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![색 선택](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png)
+[![색 선택](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 -----
 
@@ -229,26 +228,24 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 색 선택에서 선택한 색은 *하지* 자료 디자인 지침 또는 사용 가능한 색 리소스 집합을 제한 합니다.
 
-<a name="theme_edit_resources" />
 
-### <a name="resources"></a>리소스
+### <a name="resources"></a>자료
 
 **리소스** 탭 테마에 존재 하는 색 리소스의 목록을 제공 합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![리소스](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png)
+[![리소스](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![리소스](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png)
+[![리소스](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 -----
 
 사용 하는 **리소스** 탭 색이이 목록에 선택한 내용을 제한 합니다. 테마의 다른 부분에 이미 할당 된 색 리소스를 선택 하면 UI의 인접 요소 두 개 있습니다 "함께 실행" (했기 때문에 동일한 색) 염두에서에 둬야 구분 하기 위해 사용자에 대 한 어려워질 및 합니다.
 
 
-<a name="theme_edit_material_pallette" />
 
 ### <a name="material-palette"></a>자재 색상표
 
@@ -256,7 +253,7 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 **자료 색상표** 탭이 열리고는 **자료 디자인 색상표**합니다. 색 선택을 자료 디자인 지침과 일치 되도록 제한이 색상표에서 색 값을 선택 합니다.
 
-[![자재 색상표](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png)
+[![자재 색상표](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png#lightbox)
 
 색 색상표 색상표의 맨 아래 선택 된 기본 색에 대 한 색상의 범위를 표시 하는 동안 기본 자료 디자인 색을 표시 합니다. 예를 들어 선택 **Indigo**의 컬렉션인 **Indigo** 색조 대화 상자의 맨 아래에 표시 됩니다.
 색상을 선택 하면 속성의 색 선택 된 색상으로 변경 됩니다. 다음 예제에서는 `Background Tint` 으로 변경 되는 단추의 *Indigo 500*:
@@ -265,7 +262,7 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 `Background Tint` 에 대 한 색 코드로 설정 되어 *Indigo 500* (`#ff3f51b5`), 디자이너 배경 색이이 변경 내용을 반영 하도록 업데이트 합니다.
 
-[![배경 tint 변경](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png)
+[![배경 tint 변경](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png#lightbox)
 
 자료 디자인 색상표에 대 한 자세한 내용은 참조 자료 디자인 [색 색상표 가이드](http://www.google.com/design/spec/style/color.html#color-color-palette)합니다.
 
@@ -273,12 +270,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 **자료 색상표** 탭이 열리고는 **자료 디자인 색상표** 설명 [이전](#material_palette)합니다. 색 선택을 자료 디자인 지침과 일치 되도록 제한이 색상표에서 색 값을 선택 합니다.
 
-[![자재 색상표](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png)
+[![자재 색상표](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 -----
 
 
-<a name="theme_create" />
 
 ### <a name="creating-a-new-theme"></a>새 테마 만들기
 
@@ -290,7 +286,7 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![배경이 파란색 900 변경](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png)
+[![배경이 파란색 900 변경](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 -----
 
@@ -299,11 +295,11 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![경고 저장 되지 않은 변경](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png)
+[![경고 저장 되지 않은 변경](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![경고 저장 되지 않은 변경](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png)
+[![경고 저장 되지 않은 변경](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 -----
 
@@ -327,18 +323,17 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![추가 사용자 지정 테마](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png)
+[![추가 사용자 지정 테마](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![추가 사용자 지정 테마](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png)
+[![추가 사용자 지정 테마](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png#lightbox)
 
 -----
 
 
 현재 선택한 테마 프로젝트 테마 아니므로 대화 상자가 없습니다 선택한 테마를 업데이트 하거나 새 위치를 지정 합니다.
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 
@@ -348,5 +343,5 @@ Xamarin.Android 디자이너 쉽게 자료 디자인-규격 레이아웃을 만�
 
 ## <a name="related-links"></a>관련 링크
 
-- [자재 테마](~/android/user-interface/material-theme.md)
+- [재질 테마](~/android/user-interface/material-theme.md)
 - [자재 디자인 소개](https://www.google.com/design/spec/material-design/introduction.html)

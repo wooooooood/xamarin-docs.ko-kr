@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4af76a37e5fd42ff1d6344f60642425c73e9d733
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f5383465f7bc5c4529eebefca02718c83a653e9f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-opentk"></a>OpenTK 소개
 
 OpenTK (The Open Toolkit)은 고급, 하위 수준 C# 라이브러리 OpenAL, OpenGL 및 OpenCL와 작업을 쉽게 합니다. OpenTK 게임, 과학 응용 프로그램 또는 다른 3D 그래픽을 필요로 하는 프로젝트, 오디오 또는 계산 기능에 사용할 수 있습니다. 이 문서에서는 OpenTK Xamarin.Mac 응용 프로그램에서 사용 하 여에 대 한 간략 한 소개를 제공 합니다.
 
-[ ![](opentk-images/intro01.png "실행 하는 예제 응용 프로그램")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "실행 하는 예제 응용 프로그램")](opentk-images/intro01.png#lightbox)
 
 이 문서는 기본적인 OpenTK Xamarin.Mac 응용 프로그램에서 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -54,11 +54,11 @@ OpenTK Xamarin.Mac 응용 프로그램에서 사용 하 여 간략 한 소개를
 
 Mac 용 Visual Studio를 시작 하 고 새 Xamarin.Mac 솔루션을 만듭니다. 선택 **Mac** > **앱** > **일반** > **Cocoa 앱**:
 
-[ ![](opentk-images/sample01.png "새 Cocoa 앱 추가")](opentk-images/sample01.png)
+[![](opentk-images/sample01.png "새 Cocoa 앱 추가")](opentk-images/sample01.png#lightbox)
 
 입력 `MacOpenTK` 에 대 한는 **프로젝트 이름**:
 
-[ ![](opentk-images/sample02.png "프로젝트 이름을 설정합니다.")](opentk-images/sample02.png)
+[![](opentk-images/sample02.png "프로젝트 이름을 설정합니다.")](opentk-images/sample02.png#lightbox)
 
 클릭는 **만들기** 단추를 새 프로젝트를 빌드합니다.
 
@@ -70,7 +70,7 @@ Mac 용 Visual Studio를 시작 하 고 새 Xamarin.Mac 솔루션을 만듭니�
 
 확인란을 선택 하 여 `OpenTK` 클릭는 **확인** 단추:
 
-[ ![](opentk-images/sample03.png "프로젝트 참조를 편집합니다.")](opentk-images/sample03.png)
+[![](opentk-images/sample03.png "프로젝트 참조를 편집합니다.")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
@@ -296,7 +296,7 @@ Game.Run(60.0);
 
 앱을 실행 하 고 출력 하겠습니다.
 
-[ ![](opentk-images/intro01.png "응용 프로그램 출력의 예제")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "응용 프로그램 출력의 예제")](opentk-images/intro01.png#lightbox)
 
 이 창의 크기를 조정 했습니다 들이 있고 삼각형 크기가 조정 되며 역시 실시간 업데이트 게임 보기 수도 있습니다.
 
@@ -329,5 +329,5 @@ OpenTK 구현 보다 복잡 한 Xamarin.Mac 예제를 참조 하십시오 우리
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [창 작업](~/mac/user-interface/window.md)
 - [열기 도구 키트](http://www.opentk.com)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

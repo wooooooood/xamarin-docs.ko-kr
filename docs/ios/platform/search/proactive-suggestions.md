@@ -3,16 +3,16 @@ title: "사전 제안 소개"
 description: "이 문서에서는 시스템을 적극적으로 사용자에 게 유용한 정보를 자동으로 표시 함으로써 Xamarin.iOS 앱 드라이브 engagement에 제안을 자동 관리를 사용 하는 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>사전 제안 소개
 
@@ -63,7 +63,7 @@ UIKit ios 10 포함 하도록 확장 되었습니다는 [TextContentType](https:
 
 ## <a name="ride-sharing-based-suggestions"></a>공유 안에서 기반 추천
 
-안에서 공유 응용 프로그램을 사용 하는 경우는 [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 됩니다 제공 응용 프로그램 전환기에 옵션으로 않을 때 사용자가을 안에서 싶을 것입니다. 응용 프로그램 에서도 등록 해야 안에서 공유 응용 프로그램으로 지정 하 여는 `MKDirectionsModeRideShare` 에 대 한는 [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) 키에 해당 `Info.plist` 파일입니다.
+안에서 공유 응용 프로그램을 사용 하는 경우는 [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 됩니다 제공 응용 프로그램 전환기에 옵션으로 않을 때 사용자가을 안에서 싶을 것입니다. 응용 프로그램 에서도 등록 해야 안에서 공유 응용 프로그램으로 지정 하 여는 `MKDirectionsModeRideShare` 에 대 한는 [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) 키에 해당 `Info.plist` 파일입니다.
 
 시스템 제안 시작 합니다 앱만을 지 원하는 경우 안에서 공유 *"... 하 안에서 Get"*, 시스템에서 사용 됩니다 (예: Walking 또는 자전거) 라우팅 방향 다른 유형의 지원 되 면 *"위해 방향으로 Get..."*
 
@@ -95,7 +95,7 @@ UIKit ios 10 포함 하도록 확장 되었습니다는 [TextContentType](https:
 
 위의 설명 대로 `NSUserActivity` 화면에 사용자가 현재 사용 정보를 이해 하는 시스템을 사용 합니다. `NSUserActivity` 간단한 상태 캐싱 응용 프로그램을 탐색할 때 사용자의 활동을 캡처할 수는 메커니즘입니다. 예를 들어 식당 응용 프로그램을 살펴보면 다음과 같습니다.
 
-[ ![](proactive-suggestions-images/activity02.png "캐싱 메커니즘 NSUserActivity 간단한 상태")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "캐싱 메커니즘 NSUserActivity 간단한 상태")](proactive-suggestions-images/activity02.png#lightbox)
 
 다음과 같은 상호:
 
@@ -105,7 +105,7 @@ UIKit ios 10 포함 하도록 확장 되었습니다는 [TextContentType](https:
 
 마지막 화면에 자세히 살펴보겠습니다.
 
-[ ![](proactive-suggestions-images/activity03.png "NSUserActivity 세부 정보")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "NSUserActivity 세부 정보")](proactive-suggestions-images/activity03.png#lightbox)
 
 응용 프로그램을 만드는 것 여기는 `NSUserActivity` 및 상태를 나중에 다시 정보로 구성 되었습니다. 응용 프로그램 해당 위치의 이름 및 주소와 같은 일부 메타 데이터도 포함 했습니다. 이 활동과 만든 응용 프로그램에 iOS를 사용자의 현재 상태를 나타내는 것을 알 수 있습니다.
 
@@ -324,7 +324,7 @@ attributes.SupportsNavigation = true;
 
 응용 프로그램 상호 작용을 지정할 수는 방법에 대해 살펴보겠습니다.
 
-[ ![](proactive-suggestions-images/activity04.png "상호 작용 기증 개요")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "상호 작용 기증 개요")](proactive-suggestions-images/activity04.png#lightbox)
 
 응용 프로그램을 만듭니다는 `INInteraction` 포함 된 개체는 **의도** (`INIntent`), **참가자** 및 **메타 데이터**합니다. **의도** 비디오를 호출한 또는 문자 메시지를 보내는 등의 사용자 작업을 나타냅니다. **참가자** 통신 받는 사람을 포함 합니다. **메타 데이터** 성공적으로 등 메시지를 보내는 것과 같은 추가 정보를 정의 합니다.
 
@@ -334,7 +334,7 @@ attributes.SupportsNavigation = true;
 
 사용자가 대화 상대 카드에서 앱과 상호 작용할 때 상호 작용 가져옵니다 번들로 제공 되는 `NSUserActivity`, 응용 프로그램을 실행에 사용 되는:
 
-[ ![](proactive-suggestions-images/activity05.png "상호 작용 가져옵니다 응용 프로그램을 실행 하는 데 사용 되는 NSUserActivity 함께 제공 됩니다.")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "상호 작용 가져옵니다 응용 프로그램을 실행 하는 데 사용 되는 NSUserActivity 함께 제공 됩니다.")](proactive-suggestions-images/activity05.png#lightbox)
 
 다음 예제에서는 보내는 메시지 의도 살펴보겠습니다.
 
@@ -449,7 +449,7 @@ Schema.org 동일한 유형의 웹 사이트에 위치 기반 상호 작용을 �
 - 사용할 수 있는 다양 한 개념을 나타내는 500 개 이상의 스키마가 있습니다.
 - 웹 사이트에서 구현 하 여 개발자 획득할 수 있습니다 사용할 때의 이점 중 일부 `NSUserActivity` 네이티브 응용 프로그램에 있습니다.
 
-스키마 트리 구조, 특정과 같은 형식이 같은 정렬 되는 *식당*와 같은 보다 일반적인 형식에서 상속할 *로컬 비즈니스*합니다. 자세한 내용은 참조 하십시오 [Schema.org](#http://schema.org)합니다.
+스키마 트리 구조, 특정과 같은 형식이 같은 정렬 되는 *식당*와 같은 보다 일반적인 형식에서 상속할 *로컬 비즈니스*합니다. 자세한 내용은 참조 하십시오 [Schema.org](http://schema.org)합니다.
 
 예를 들어, 웹 페이지는 다음 데이터를 포함 하는 경우:
 

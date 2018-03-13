@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>시각적 디자인 업데이트
 
@@ -51,7 +51,7 @@ iOS 11을 보다 쉽게 검색 컨트롤러의 탐색 모음에 직접 추가할
 NavigationItem.SearchController = searchController;
 ```
 
-[![검색 표시줄을 사용 하 여 큰 탐색 타이틀](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![검색 표시줄을 사용 하 여 큰 탐색 타이틀](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 응용 프로그램의 기능에 따라 있거나 사용자가 목록을 통해 스크롤할 때 검색 표시줄을 원하지 않을 수 있습니다. 사용 하 여 조정할 수 있습니다는 `HidesSearchBarWhenScrolling` 속성입니다.
 
@@ -75,7 +75,7 @@ iOS 7 [도입](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `topLa
 
 안전 영역이 보이는 공간 응용 프로그램 및 보기와 슈퍼 보기 사이 제약 조건이 추가 되는 방법에 대해 생각 하는 새로운 방법을 보여 줍니다. 예, 다음 그림을 참조 하십시오.
 
-[![보호 영역 vs 위쪽 및 아래쪽 레이아웃 가이드](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![보호 영역 vs 위쪽 및 아래쪽 레이아웃 가이드](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 이전에 뷰를 추가 하 고 녹색 위쪽 영역에 표시 되어야 하 게 하려고 했습니다를 있습니다는 변수를 제한 하는 _아래쪽_ 의 `TopLayoutGuide` 및 _top_ 의 `BottomLayoutGuide`합니다. 11 iOS에서 하는 대신 매개 변수를 제한 하는 _top_ 및 _아래쪽_ 안전 영역입니다. 이러한 예제는 다음과 같습니다.
 

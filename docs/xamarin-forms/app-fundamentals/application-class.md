@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: d7965c5d4d65dd6bf7aa4128f467acd3e2d39e60
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c383808d443685c1561113e418aed62467f1d5bd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-class"></a>App 클래스
 
@@ -98,7 +98,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 예기치 않은 오류를 방지 하기 위해 액세스 하기 전에 항상 키가 있는지 확인 합니다.
 
 > [!NOTE]
-> **참고:** 는 `Properties` 사전 저장소에 대 한 기본 형식만 직렬화 할 수 있습니다. 다른 형식을 저장 하는 (예: `List<string>`) 자동으로 실패할 수 있습니다.
+> `Properties` 사전 저장소에 대 한 기본 형식만 직렬화 할 수 있습니다. 다른 형식을 저장 하는 (예: `List<string>`) 자동으로 실패할 수 있습니다.
 
 <!-- bugzilla 28657 -->
 
@@ -196,7 +196,7 @@ public class MainActivity :
 ```
 
 > [!NOTE]
-> **참고:** 최신는 [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) 기본 Android 자료 디자인을 더 잘 지원 하기 위해 사용할 수 있는 클래스입니다.
+> 최신는 [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) 기본 Android 자료 디자인을 더 잘 지원 하기 위해 사용할 수 있는 클래스입니다.
 > 이것은 기본 Android 템플릿을 나중에 되지만 참고할 수 [이러한 지침](~/xamarin-forms/platform/android/appcompat.md) 기존 Android 앱을 업데이트 합니다.
 
 

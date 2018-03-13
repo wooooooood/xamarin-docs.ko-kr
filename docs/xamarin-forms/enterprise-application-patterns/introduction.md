@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b8d8aed397f72df53fdca7e455b8ef723e48e0a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction"></a>소개
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/28/2018
 
 이 가이드 Xamarin.Forms를 사용 하 여 플랫폼 간 엔터프라이즈 앱 개발을 중점적으로 다루며 eShopOnContainers 모바일 앱을 사용 하 여 예를 들어 합니다. 그림 1-2에서는 앞부분에서 설명한 기능을 제공 하는 eShopOnContainers 모바일 앱에서 페이지를 보여 줍니다.
 
-[![](introduction-images/screenshots.png "EShopOnContainers 모바일 앱")](introduction-images/screenshots-large.png "eShopOnContainers 모바일 앱")
+[![](introduction-images/screenshots.png "EShopOnContainers 모바일 앱")](introduction-images/screenshots-large.png#lightbox "eShopOnContainers 모바일 앱")
 
 **그림 1-2**: eShopOnContainers 모바일 앱
 

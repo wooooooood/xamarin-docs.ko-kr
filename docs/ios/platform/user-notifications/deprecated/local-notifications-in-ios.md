@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d84473ee4379cd9a39315635017b81a2714da162
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Xamarin.iOS의 알림
 
@@ -44,7 +44,7 @@ var settings = UIUserNotificationSettings.GetSettingsForTypes(
 UIApplication.SharedApplication.RegisterUserNotificationSettings (settings);
 ```
 
-  [ ![](local-notifications-in-ios-images/image0-sml.png "로컬 알림을 보낼 수를 확인 합니다.")](local-notifications-in-ios-images/image0.png)
+  [![](local-notifications-in-ios-images/image0-sml.png "로컬 알림을 보낼 수를 확인 합니다.")](local-notifications-in-ios-images/image0.png#lightbox)
 
 로컬 알림을 만들면 예약 하는 `UILocalNotification` 개체, 설정는 `FireDate`, 하 고 예약을 통해는 `ScheduleLocalNotification` 에서 메서드는 `UIApplication.SharedApplication` 개체입니다. 다음 코드 조각 앞으로 1 분에 실행 되 고 메시지와 함께 경고를 표시 하는 알림은 예약 하는 방법을 표시 됩니다.
 
@@ -59,7 +59,7 @@ UIApplication.SharedApplication.ScheduleLocalNotification(notification);
 
 다음 스크린샷은이 경고의 모양을 보여 줍니다.
 
-  [ ![](local-notifications-in-ios-images/image2-sml.png "예제에서는 경고")](local-notifications-in-ios-images/image2.png)
+  [![](local-notifications-in-ios-images/image2-sml.png "예제에서는 경고")](local-notifications-in-ios-images/image2.png#lightbox)
 
 사용자를 선택 하는 경우 *없도록* 알림을 아무 것도 표시 됩니다.
 

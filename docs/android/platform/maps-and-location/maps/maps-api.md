@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: eddd723c07919db4749c63c5b4f1d05e9be81022
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="maps-api"></a>지도 API
 
@@ -25,7 +25,6 @@ ms.lasthandoff: 02/27/2018
 지금은 사용 되지 않는 Google 맵 Android API v1 달리 Google 맵 Android API v 2의 일부인 [Google Play 서비스](http://developer.android.com/google/play-services/index.html)합니다.
 따라서은 Google 맵 Android API Xamarin.Android 응용 프로그램의 사용 가능 상태가 되기 전에 일부 필수 필수 구성 요소를 충족 하기 위해 필요 합니다.
 
-<a name="Configuring_Maps_API_Prerequisites" />
 
 ## <a name="google-maps-api-prerequisites"></a>Google는 API 필수 구성 요소를 맵
 
@@ -37,7 +36,6 @@ ms.lasthandoff: 02/27/2018
 -  필요한 사용 권한을 지정 합니다.
 
 
-<a name="Google_APIs_Add-On" />
 
 ### <a name="install-the-google-play-services-sdk"></a>Google Play 서비스 SDK 설치
 
@@ -53,9 +51,8 @@ Xamarin.Android 응용 프로그램에서 지도 API를 사용 하려면 먼저 
 ![Google Play 서비스 Extras Android SDK Manager 아래에 나타납니다.](maps-api-images/image01.png)
 
 > [!NOTE]
-> **참고:** 모든 장치에서 APK은 사용이 허가 된 제품 하지 않을 수 있는 Google Play 서비스를 제공 합니다. 이 설치 되어 있지 않으면 장치에서 Google 맵 작동 하지 않습니다.
+> Google Play 서비스 APK는 모든 장치에 있을 수 있는 사용이 허가 된 제품입니다. 이 설치 되어 있지 않으면 장치에서 Google 맵 작동 하지 않습니다.
 
-<a name="Binding_Google_Play_Services" />
 
 #### <a name="binding-google-play-services"></a>바인딩 Google Play 서비스
 
@@ -68,7 +65,6 @@ Google Play 서비스 클라이언트 라이브러리를 설치한 후 Xamarin.A
 -  **Google Play 서비스 클라이언트 라이브러리를 수동으로 바인딩할** -은 더 복잡 한 접근 방식 및 Google 재생 서비스 SDK를 바인딩할 Xamarin.Android 4.4 또는 Xamarin.Android 4.6에 대 한 유일한 방법은이 있습니다.
    이 문서의 범위를 벗어납니다 Google Play 서비스 클라이언트 라이브러리를 수동으로 바인딩 하지만에서 수행 하는 방법의 예를 확인할 수 있습니다는 [지도 위치 데모 v3 샘플](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3) Github에서 합니다.
 
-<a name="Adding_the_Google_Play_Services_Component" />
 
 #### <a name="adding-the-google-play-services-map-package"></a>Google Play 서비스 맵 패키지 추가
 
@@ -78,7 +74,7 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 
 열립니다는 **NuGet 패키지 관리자**합니다. 클릭 **찾아보기** 입력 **Xamarin Google 재생 맵** 검색 필드에 있습니다. 선택 **Xamarin.GooglePlayServices.Maps** 클릭 **설치**합니다. (이 패키지는 이전에 설치 되어 있던, 클릭 **업데이트**.):
 
-[![선택한 Xamarin.GooglePlayServices.Maps 패키지와 함께 NuGet 패키지 관리자](maps-api-images/image03-sml.png)](maps-api-images/image03.png)
+[![선택한 Xamarin.GooglePlayServices.Maps 패키지와 함께 NuGet 패키지 관리자](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 다음과 같은 종속성 패키지도 설치 되어 있는지 확인 합니다.
 
@@ -87,7 +83,6 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 -   **Xamarin.GooglePlayServices.Tasks**
 
 
-<a name="Creating_an_Emulator_with_Google_APIs" />
 
 ### <a name="create-an-emulator-with-google-apis"></a>Google Api를 사용 하 여 에뮬레이터 만들기
 
@@ -96,14 +91,12 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 ![Android 에뮬레이터 관리자는 AVD API 수준 19에 대해 구성 된](maps-api-images/image04.png)
 
 
-<a name="apikey" />
 
 ### <a name="obtain-a-google-maps-api-key"></a>Google 맵 API 키를 가져오려면
 
 마지막 단계 (참고 레거시 Google 맵 v 1에서 API 키를 다시 사용할 수 없습니다) Google 맵 API 키를 가져오는 것입니다. API 키 Xamarin.Android를 사용 하는 방법에 대 한 정보를 참조 하십시오. [A Google 지도 API 키를 가져오는](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)합니다.
  
 
-<a name="Specify_Permissions" />
 
 ### <a name="specify-the-required-permissions"></a>필요한 사용 권한을 지정 합니다.
 
@@ -167,7 +160,6 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 </manifest>
 ```
 
-<a name="The_GoogleMap" />
 
 ## <a name="the-googlemap-class"></a>GoogleMap 클래스
 
@@ -190,13 +182,12 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 
 각이 컨테이너를 노출 한 `Map` 속성의 인스턴스를 반환 하는 `GoogleMap`합니다. 기본 설정에 부여 해야는 [MapFragment](http://developer.android.com/reference/com/google/android/gms/maps/MapFragment.html) 개발자 수동으로 구현 해야 하는 양 상용구 코드는 감소 하는 간단한 API 이므로 클래스입니다.
 
-<a name="Adding_GoogleMap_To_An_Activity" />
 
 ### <a name="adding-a-mapfragment-to-an-activity"></a>활동에는 MapFragment 추가
 
 다음 스크린 샷에서 매우 간단한의 예시 `MapFragment`:
 
-[![지도 조각 표시 하는 장치의 스크린 샷](maps-api-images/image05-sml.png)](maps-api-images/image05.png)
+[![지도 조각 표시 하는 장치의 스크린 샷](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
 마찬가지로 다른 조각 클래스, 두 가지 추가 하시 `MapFragment` 활동에:
 
@@ -255,7 +246,6 @@ public void OnMapReady (GoogleMap map)
 이 결과 사용 하는 방법의 예를 들어 때 `OnResume` 가 있는지 확인할 수 호출 `_map` null이 아닌 합니다. 경우 `_map` 로 설정 되는 `GoogleMap` 개체 `OnResume` 마커를 추가 하 고 지정 된 경도 위도를 해당 카메라를 이동 하는 데 메서드를 호출할 수 있습니다. 전체 코드 예제를 보려면 [SimpleMapDemo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3/SimpleMapDemo)합니다.
 
 
-<a name="Map_Types" />
 
 ### <a name="map-types"></a>맵 유형
 
@@ -274,7 +264,7 @@ Google 맵 API에서 사용할 수 있는 5 개의 서로 다른 유형의 지�
 
 아래 이미지에서는 다양 한 유형의 지도의 왼쪽에서 오른쪽 (보통, 하이브리드, 지형)에서 중 3 개를 보여 줍니다.
 
-[![스크린 샷입니다 매핑할 3: 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png)
+[![스크린 샷입니다 매핑할 3: 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 `GoogleMap.MapType` 속성 설정 하거나 표시 하는 지도 유형을 변경 하는 데 사용 됩니다. 다음 코드 조각에는 위성 지도 표시 하는 방법을 보여 줍니다.
 
@@ -287,7 +277,6 @@ if (_map != null) {
 }
 ```
 
-<a name="GoogleMap_Properties" />
 
 ### <a name="googlemap-properties"></a>GoogleMap 속성
 
@@ -317,7 +306,6 @@ if (_map != null) {
 }
 ```
 
-<a name="Interacting_with_the_Map" />
 
 ## <a name="interacting-with-the-map"></a>지도와 상호 작용
 
@@ -363,9 +351,8 @@ if (_map != null) {
 
 이전 코드 조각에서 지도에서 특정 위치도 표시 됩니다는 [LatLng](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/LatLng) 클래스입니다. 확대/축소 수준은 18로 설정 됩니다. 영향을 주지 북부에서 시계 방향으로 나침반 측정입니다. 속성 보기 각도 제어 되며 기울기 세로에서 25도 각도 지정 합니다. 다음 스크린 샷에 표시 된 `GoogleMap` 앞의 코드를 실행 한 후:
 
-[![기운는와 지정된 된 위치를 보여 주는 예제 Google 맵 시야각](maps-api-images/image06-sml.png)](maps-api-images/image06.png)
+[![기운는와 지정된 된 위치를 보여 주는 예제 Google 맵 시야각](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
-<a name="Adding_Overlays_to_a_Map" />
 
 ### <a name="drawing-on-the-map"></a>지도에 그리기
 
@@ -377,13 +364,11 @@ Android 지도 API를 지도에 다음 항목을 그리기 위한 API를 제공 
 
 -  **선, 다각형 및 원** -이 활동 지도에 셰이프를 추가할 수 있는 Api입니다.
 
-<a name="markers" />
 
 #### <a name="markers"></a>Markers
 
 지도 API를 제공는 [표식](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker) 지도에 단일 위치에 대 한 데이터를 모두 캡슐화 하는 클래스입니다. 기본적으로 Google 맵에서 제공 되는 표준 아이콘을 사용 합니다. 되기 표식 모양을 사용자 지정 하 고 사용자가 클릭할 때 응답할 수 있습니다.
 
-<a name="AddingAMarker" />
 
 ##### <a name="adding-a-marker"></a>표식을 추가
 
@@ -403,9 +388,8 @@ if (_map != null) {
 
 표식의 제목에 표시 됩니다는 *정보 창의* 사용자 표식에 대가 하는 경우. 다음 스크린샷에이 표식 모양을 보여 줍니다.
 
-[![예제 Google 맵 마커 및 Vimy 홈 음각 대 한 정보 창](maps-api-images/image07-sml.png)](maps-api-images/image07.png)
+[![예제 Google 맵 마커 및 Vimy 홈 음각 대 한 정보 창](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
-<a name="Customizing_A_Marker" />
 
 ##### <a name="customizing-a-marker"></a>표식을 사용자 지정
 
@@ -437,7 +421,6 @@ if (_map != null)
 }
 ```
 
-<a name="Info_Windows" />
 
 #### <a name="info-windows"></a>Windows 정보
 
@@ -455,13 +438,11 @@ if (_map != null)
 
 ![멜버른, 아이콘 및 인구를 포함 하 여에 대 한 예제 표식 기간입니다. 오른쪽 창에 모서리가 둥글게 변합니다.](maps-api-images/marker-infowindows.png)
 
-<a name="Adding_an_overlay" />
 
 #### <a name="ground-overlays"></a>명확 하 게 오버레이
 
 지도에 특정 위치를 식별 하는 마커 달리는 [GroundOverlay](http://developer.android.com/reference/com/google/android/gms/maps/model/GroundOverlay.html) 위치나 영역 지도에 있는 컬렉션을 식별 하는 데 사용 하는 이미지입니다.
 
-<a name="AddingAGroundOverlay" />
 
 ##### <a name="adding-a-groundoverlay"></a>GroundOverlay 추가
 
@@ -477,9 +458,8 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 
 다음 스크린 샷에서 지도에이 오버레이 보여 줍니다.
 
-[![북극곰 오버레이할 이미지 예제 맵](maps-api-images/image09-sml.png)](maps-api-images/image09.png)
+[![북극곰 오버레이할 이미지 예제 맵](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
-<a name="Lines_Circles_and_Polygons" />
 
 #### <a name="lines-circles-and-polygons"></a>선, 원 및 다각형
 
@@ -492,7 +472,6 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 -  **원** -이 지도에 있는 원형 그리기 됩니다.
 
 
-<a name="Polylines" />
 
 ##### <a name="polylines"></a>폴리라인
 
@@ -508,7 +487,6 @@ rectOptions.Add(new LatLng(37.35, -122.0)); // close the polyline - this makes a
 myMap.AddPolyline(rectOptions);
 ```
 
-<a name="Polygons" />
 
 ##### <a name="polygons"></a>다각형
 
@@ -527,7 +505,6 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 myMap.AddPolygon(rectOptions);
 ```
 
-<a name="Circles" />
 
 ##### <a name="circles"></a>원
 
@@ -541,7 +518,6 @@ circleOptions.InvokeRadius (1000);
 _map.AddCircle (CircleOptions);
 ```
 
-<a name="RespondingToClicks" />
 
 ## <a name="responding-to-events"></a>이벤트에 응답
 
@@ -555,7 +531,6 @@ _map.AddCircle (CircleOptions);
 
 이러한 각 이벤트는 아래에서 자세히 설명 합니다.
 
-<a name="Marker_Click_Events" />
 
 ### <a name="marker-click-events"></a>표식 이벤트를 클릭 합니다.
 
@@ -584,7 +559,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 }
 ```
 
-<a name="Marker_Drag_Events" />
 
 ### <a name="marker-drag-events"></a>표식 끌기 이벤트
 
@@ -602,7 +576,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 
 각각의 `EventArgs` 라는 단일 속성 포함 `P0` 즉에 대 한 참조는 `Marker` 끌고 개체입니다.
 
-<a name="Info_Window_Click_Events" />
 
 ### <a name="info-window-click-events"></a>정보 창 Click 이벤트
 

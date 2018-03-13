@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 4c61a588eafdf0a86f4124d264c41cabef3e7a14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
@@ -22,7 +22,7 @@ _두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 �
 
 이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 응용 프로그램에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 응용 프로그램](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
 
-[![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 함께 제공된 [심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)은 빌드된 기능을 검토하고, 해당 과정에서 발생한 아키텍처, 탐색 및 기타 새로운 Android 개념에 대해 설명합니다.
 
@@ -44,15 +44,15 @@ Visual Studio에서 **Phoneword** 응용 프로그램을 열고 **솔루션 탐�
 
 **도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 창에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다. 
 
-[![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png)
+[![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
 단추의 **Text** 속성을 `@string/translationHistory`로 설정합니다. Android Designer는 문자 그대로 이를 변환하지만 단추의 텍스트가 올바르게 표시되도록 몇 가지를 변경해야 합니다.
 
-[![변환 기록 단추 텍스트 설정](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png)
+[![변환 기록 단추 텍스트 설정](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
 **솔루션 탐색기**의 **리소스** 폴더에서 **값** 노드를 확장하고, 문자열 리소스 파일인 **Strings.xml**을 두 번 클릭합니다.
 
-[![Strings.xml 열기](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png)
+[![Strings.xml 열기](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png#lightbox)
 
 `translationHistory` 문자열 이름 및 값을 **Strings.xml** 파일에 추가하고 저장합니다.
 
@@ -66,17 +66,17 @@ Visual Studio에서 **Phoneword** 응용 프로그램을 열고 **솔루션 탐�
 
 **변환 기록** 단추 텍스트는 새 문자열 값을 반영하도록 업데이트되어야 합니다.
 
-[![새 문자열 값을 반영하는 단추](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)
+[![새 문자열 값을 반영하는 단추](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
 
 디자인 화면에서 선택한 **변환 기록** 단추를 사용하여 **속성** 창에서 `enabled` 설정을 찾고 값을 `false`로 설정하여 단추를 비활성화합니다. 그러면 단추의 색깔이 디자인 화면에서 짙어집니다.
 
-[![변환 기록 단추 사용 안 함](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png)
+[![변환 기록 단추 사용 안 함](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>두 번째 작업 만들기
 
 두 번째 화면에 전원을 공급하는 두 번째 작업을 만듭니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...**을 선택합니다.
 
-[![새 파일 추가](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png)
+[![새 파일 추가](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
 **새 항목 추가** 대화 상자에서 **Visual C# > 작업**을 선택하고 작업 파일의 이름을 **TranslationHistoryActivity.cs**로 지정합니다.
 
@@ -171,7 +171,7 @@ translateButton.Click += (sender, e) =>
 
 에뮬레이터 또는 장치에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 응용 프로그램을 설명합니다.
 
-[![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -181,16 +181,16 @@ Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패�
 
 **도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 패드에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다. 
 
-[![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png)
+[![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
 단추의 **Text** 속성을 `@string/translationHistory`로 설정합니다. Android Designer는 문자 그대로 이를 변환하지만 단추의 텍스트가 올바르게 표시되도록 몇 가지를 변경해야 합니다.
 
-[![변환 기록 단추 텍스트 설정](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png)
+[![변환 기록 단추 텍스트 설정](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
 
 **솔루션 패드**의 **리소스** 폴더에서 **값** 노드를 확장하고, 문자열 리소스 파일인 **Strings.xml**을 두 번 클릭합니다.
 
-[![문자열 열기](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png)
+[![문자열 열기](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
 
 
 `translationHistory` 문자열 이름 및 값을 **Strings.xml** 파일에 추가하고 저장합니다.
@@ -205,12 +205,12 @@ Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패�
 
 **변환 기록** 단추 텍스트는 새 문자열 값을 반영하도록 업데이트되어야 합니다.
 
-[![새 문자열 값을 반영하는 단추](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png)
+[![새 문자열 값을 반영하는 단추](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
 
 디자인 화면에서 선택한 **변환 기록** 단추를 사용하여 **속성 패드**에서 **동작** 탭을 열고, **사용함** 확인란을 두 번 클릭하여 단추를 비활성화합니다. 그러면 단추의 색깔이 디자인 화면에서 짙어집니다.
 
-[![변환 기록 단추 사용 안 함](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png)
+[![변환 기록 단추 사용 안 함](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>두 번째 작업 만들기
 
@@ -304,7 +304,7 @@ translateButton.Click += (sender, e) =>
 
 에뮬레이터 또는 장치에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 응용 프로그램을 설명합니다.
 
-[![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 -----
 

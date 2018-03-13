@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 85413cf223e794ad2fda093601f9221d0261af39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>Amazon SimpleDB 서비스와 사용자 인증
 
@@ -61,7 +61,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 `SelectAsync` 메서드 항목 및 쿼리 식과 일치 하는 관련된 특성의 컬렉션을 포함 하는 응답을 반환 합니다. 쿼리 식만 사용자의 전자 메일 주소와 일치 하는 항목을 검색할 보장 합니다. 쿼리 식에 대 한 자세한 내용은 참조 [만들 Amazon SimpleDB 쿼리를 사용 하 여 선택](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) Amazon의 웹 사이트에서.
 
 > [!NOTE]
-> **참고**: 규칙을 따르도록 따옴표 쿼리 식을 생성할 때는 주의 해야 합니다. 자세한 내용은 참조 [인용 규칙 선택](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) Amazon의 웹 사이트에서.
+> 규칙을 따르도록 따옴표 쿼리 식을 생성할 때는 주의 해야 합니다. 자세한 내용은 참조 [인용 규칙 선택](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) Amazon의 웹 사이트에서.
 
 ## <a name="summary"></a>요약
 

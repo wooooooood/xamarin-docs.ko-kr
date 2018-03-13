@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: afbd2d8f25cdf51c7c7c33f72f10e3b5ce8762ef
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 29686b29a18fe409a1f778d54266cbeedea40eda
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="local-databases"></a>로컬 데이터베이스
 
@@ -24,7 +24,7 @@ Xamarin.Forms 응용 프로그램이 사용할 수는 [SQLite.NET PCL NuGet](htt
 
 함께 제공 되 [샘플 응용 프로그램](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) 는 간단한 Todo 목록 응용 프로그램입니다. 다음 스크린샷에서 샘플 각 플랫폼에 어떻게 표시 되는지를 보여 줍니다.
 
-[ ![Xamarin.Forms 데이터베이스 스크린 샷입니다](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png "TodoList 첫 번째 페이지 스크린샷") [ ![ Xamarin.Forms 데이터베이스 스크린 샷입니다](databases-images/todo-detail-sml.png "TodoList 두 번째 페이지 스크린샷")](databases-images/todo-detail.png "TodoList 두 번째 페이지 스크린샷")
+[![Xamarin.Forms 데이터베이스 스크린 샷입니다](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷") [ ![ Xamarin.Forms 데이터베이스 스크린 샷입니다](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷")
 
 <a name="Using_SQLite_with_PCL" />
 

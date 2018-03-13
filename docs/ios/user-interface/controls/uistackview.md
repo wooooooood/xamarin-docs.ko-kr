@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>스택 보기
 
@@ -25,11 +26,15 @@ _이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackVi
 
 스택 보기에 연결 된 모든 하위 뷰가 레이아웃을 같은 축, 배포, 정렬 및 간격 정의 개발자 속성에 따라 관리 합니다.
 
-[ ![](uistackview-images/stacked01.png "스택 뷰 레이아웃 다이어그램")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "스택 뷰 레이아웃 다이어그램")](uistackview-images/stacked01.png#lightbox)
 
 사용 하는 경우는 `UIStackView` Xamarin.iOS 앱의 개발자 정의할 수 하위 스토리 보드 디자이너는 iOS 또는 추가 하 고 C# 코드에서 하위 뷰가 제거 하 여 내부 중 하나입니다.
 
 이 문서는 두 부분으로 구성 됩니다: 첫 번째 스택을 볼 구현 하 고 일부 작동 방법에 대 한 기술적 세부 다음 수 있도록 빠른 시작 합니다.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, 만든 사람 [Xamarin 대학](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>UIStackView 빠른 시작
 
@@ -39,11 +44,11 @@ _이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackVi
 
 새 Xamarin.iOS 프로젝트를 시작 하 고 편집 된 **Main.storyboard** Xcode의 인터페이스 작성기에는 파일입니다. 첫째, 단일을 끌어 **세로 스택 뷰** 에 **뷰-컨트롤러**:
 
-[ ![](uistackview-images/quick01.png "뷰 컨트롤러의 단일 세로 스택 뷰를 끌어 옵니다.")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "뷰 컨트롤러의 단일 세로 스택 뷰를 끌어 옵니다.")](uistackview-images/quick01.png#lightbox)
 
 에 **특성 검사기**, 다음 옵션을 설정 합니다.
 
-[ ![](uistackview-images/quick02.png "스택 보기 옵션 설정")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "스택 보기 옵션 설정")](uistackview-images/quick02.png#lightbox)
 
 여기서
 
@@ -61,17 +66,17 @@ _이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackVi
 
 다음과 유사한 되도록 레이블, ImageView, 두 개의 단추 및 가로 스택 뷰를 추가 하 여 응용 프로그램의 인터페이스 레이아웃을 계속 합니다.
 
-[ ![](uistackview-images/quick03.png "스택 뷰 UI 배치")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "스택 뷰 UI 배치")](uistackview-images/quick03.png#lightbox)
 
 다음 옵션으로 가로 스택 뷰를 구성 합니다.
 
-[ ![](uistackview-images/quick04.png "가로 스택 뷰 옵션 구성")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "가로 스택 뷰 옵션 구성")](uistackview-images/quick04.png#lightbox)
 
 않기 때문에 각 "요소"를 나타내는 아이콘 늘이기 등급에 추가 하면 가로 스택 뷰를 설정 했습니다는 **맞춤** 를 **센터** 및  **배포** 를 **동일 하 게 채울**합니다.
 
 마지막으로, 다음 연결 **콘센트** 및 **동작**:
 
-[ ![](uistackview-images/quick05.png "스택 뷰 콘센트 및 동작")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "스택 뷰 콘센트 및 동작")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>코드에서 UIStackView 채우기
 
@@ -168,7 +173,7 @@ icon.RemoveFromSuperview();
 
 사용자가 누를 때는 **등급 올리기** 단추를 다른 "별모양" (최대 5) 화면에 추가 됩니다.
 
-[ ![](uistackview-images/intro01.png "샘플 응용 프로그램 실행")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "샘플 응용 프로그램 실행")](uistackview-images/intro01.png#lightbox)
 
 "별표" 자동으로 가운데 맞춤 되며 가로 스택 보기에서 동일 하 게 분산 합니다. 사용자가 누를 때는 **등급 낮추기** , "별모양" 메일로 (될 때까지 남아 없음).
 

@@ -6,23 +6,20 @@ ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 0dbf8c32ca7b7565105c01cfaa077fe792b09b18
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: bc39faa37adae660a7751313d0d573237fadce94
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications-in-xamarinandroid"></a>Notifications in Xamarin.Android
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
-이 섹션에는 알림을 Xamarin.Android에서 구현 하는 방법을 보여 줍니다.
-Android 알림의 다양 한 UI 요소에 설명 하 고 API에 설명의 관련 만들기 및 알림을 표시 합니다.
+이 섹션에서는 알림을 Xamarin.Android에서 구현 하는 방법을 설명 합니다. Android 알림의 다양 한 UI 요소를 설명 하 고 API에 설명의 관련 만들기 및 알림을 표시 합니다.
 
-<a name="Sections" />
 
 ## <a name="sections"></a>섹션
 

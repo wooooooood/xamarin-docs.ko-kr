@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 26609043e872241a2ec4f878086b97b12b064e87
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스의 실행 중인 Android 서비스
 
@@ -470,7 +470,7 @@ APK, 서비스에 권한을 생성 하려면는 `permission` 요소가 추가 �
 
 응용 프로그램에 부여 된 사용 권한을 보려면 Android 설정 앱을 열고 선택 **앱**합니다. 찾기 및 응용 프로그램 목록에서 선택 합니다. **앱 정보** 화면을 탭 **사용 권한을** 는 응용 프로그램에 부여 된 모든 사용 권한을 표시 하는 보기를 표시 합니다.
 
-[![응용 프로그램에 부여 된 사용 권한의 찾을 하는 방법을 보여 주는 Android 장치에서 스크린 샷](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png)
+[![응용 프로그램에 부여 된 사용 권한의 찾을 하는 방법을 보여 주는 Android 장치에서 스크린 샷](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## <a name="summary"></a>요약
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a5711b5ac8332ac518ba5b639f05de557229af6e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1491e6ec36a9ced9460e083769b2148386d1d518
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-and-mac"></a>iOS 및 Mac
 
@@ -24,7 +24,7 @@ _이 섹션에서는 Xamarin.iOS 및 Xamarin.Mac 프로젝트 간에 코드를 �
 
 일부 사용자 인터페이스 작업을 수행할 수 있는 코드에 대 한를 공유 하려는 아직 사용할지 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md) 단일 프로젝트에서 공유할을 하 게 참조 될 때 iOS와 Mac을 사용 하 여 컴파일된 코드를 배치할 수 있도록 허용 합니다.
 
-##  <a name="unified-apiunifiedindexmd"></a>[통합된 API](unified/index.md)
+##  <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 
 IOS 및 Mac 프로젝트에 대 한 통합 API 같은 코드 파일 원활한 코드 공유에 대 한 두 플랫폼에서 사용 될 수 있도록 프레임 워크에 대해 동일한 네임 스페이스를 사용 합니다. 또한 32와 64 비트 빌드 수 있습니다. 통합 API 템플릿 기본값 초기 2015 이후의 되었으며 모든 새 프로젝트-권장 *만* 통합 API 프로젝트는 앱 스토어에 제출할 수 있습니다.
 
@@ -40,7 +40,7 @@ IOS 및 Mac 프로젝트에 대 한 통합 API 같은 코드 파일 원활한 �
 
 통합 된 API를 이전의에서 응용 프로그램 업데이트에 대 한 자세한 지침이 표시 됩니다.
 
-## <a name="binding-objective-c-librariesbindingindexmd"></a>[바인딩 Objective C 라이브러리](binding/index.md)
+## <a name="binding-objective-c-librariesbindingindexmd"></a>[Objective-C 라이브러리 바인딩](binding/index.md)
 
 Xamarin은 바인딩을 사용 하는 앱으로 네이티브 라이브러리를 가져올 수 있습니다. 이 섹션에 설명합니다.
 
@@ -56,11 +56,11 @@ Xamarin은 바인딩을 사용 하는 앱으로 네이티브 라이브러리를 
 
 32와 C# 및 F #에서 투명 하 게 64 비트 코드를 지원 하기 위해 새로운 데이터 형식을 도입 했습니다.   여기에 대해 알아봅니다.
 
-##  <a name="building-32-and-64-bit-apps32-and-64md"></a>[32와 64 비트 응용 프로그램 구축](32-and-64.md)
+##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[32와 64 비트 응용 프로그램 구축](32-and-64/index.md)
 
 필요한 32와 64 비트 응용 프로그램을 지원 하기 위해 알아야 합니다.
 
-## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[플랫폼 간 앱에서 네이티브 형식 사용](native-types-cross-platform.md)
+## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[플랫폼 간 앱에서의 네이티브 형식 작업](native-types-cross-platform.md)
 
 이 문서에서는 새 iOS 통합 API 네이티브 형식을 사용 하 여 (`nint`, `nuint`, `nfloat`) Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 플랫폼 간 응용 프로그램에서 합니다.
 네이티브 형식을 사용 해야 하는 시기에 대 한 정보를 제공 하 고 새 형식의 플랫폼 간 코드를 함께 사용 해야 하는 위치 하는 경우에 몇 가지 가능한 해결 방법을 제공 합니다.

@@ -7,19 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 695d02c5fa0477053cd95d73e1b738332d14f0f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0fdeecc4465aa5709b452ef0b591ec4e5c262e3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="labels"></a>레이블
 
-`UILabel` 읽기 전용 텍스트 컨트롤은 단일 행 삽입과 다중 행을 표시 하기 위해 사용 됩니다. 이 문서에서는 다음 항목을 다룹니다.
-
-- [레이블을 구현합니다.](#Implementing_a_Label)
-- [잘라내기 및 줄 바꿈](#Truncating_and_Wrapping)
-- [텍스트 및 레이블 서식 지정](#Formatting_Text_and_Label)
+`UILabel` 읽기 전용 텍스트 컨트롤은 단일 행 삽입과 다중 행을 표시 하기 위해 사용 됩니다. 
 
 ## <a name="implementing-a-label"></a>레이블을 구현합니다.
 
@@ -52,6 +48,8 @@ UILabel label = new UILabel();
 ## <a name="truncating-and-wrapping"></a>잘라내기 및 줄 바꿈
 
 IOS에서 줄을 사용 하는 방법은 중단에 대 한 참조는 [잘라내기 및 텍스트 줄 바꿈](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) 조리법 합니다.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>텍스트 및 레이블 서식 지정
 

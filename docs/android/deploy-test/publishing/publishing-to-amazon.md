@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6b4958c6a82b824f19cc041b124e79034eba4c86
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9bae3c56c5f6c445618f41d877c3188a86167be1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Amazon App Store에 게시
 
 Amazon Mobile App Distribution Program을 사용하면 모바일 앱 개발자들이 응용 프로그램을 Amazon에 게시할 수 있습니다. 이 섹션에서는 Amazon App Store for Android에 대해 간략히 설명합니다. 
 
-[![Amazon App Store 화면](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png)
+[![Amazon App Store 화면](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon은 APK의 크기를 제한하지 않습니다. 그러나 APK가 30MB를 초과하면 Amazon 모바일 앱 배포 포털이 아닌 FTP를 배포에 사용하게 됩니다.
 
-<a name="Submitting_Apps:_Binary_Info" />
 
 ## <a name="submitting-apps-binary-info"></a>앱 제출: 이진 정보
 
@@ -34,7 +33,6 @@ Amazon App Store에 응용 프로그램을 제출하는 것은 Google Play에 �
 -  5개 비디오에 대한 업데이트가 제공될 수 잇습니다.
 
 
-<a name="Approval_Process" />
 
 ## <a name="approval-process"></a>승인 프로세스
 

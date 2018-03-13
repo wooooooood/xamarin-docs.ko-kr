@@ -3,22 +3,22 @@ title: "응용 프로그램 기본 사항"
 description: "응용 프로그램의 핵심 개념"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 9cace37a9e762a49a90963591931793d30d05453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f6c0bb75327f0c14d314a0e7ad9d114fd17c2a57
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>응용 프로그램 기본 사항
 
 이 섹션에서 일반적인 작업 작업 또는 개발자가 Xamarin.iOS (이전의 MonoTouch) 응용 프로그램을 개발할 때 알고 있어야 하는 개념 중 일부는 지침을 제공 합니다.
 
-## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[앱의 전송 보안](~/ios/app-fundamentals/ats.md)
+## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[앱 전송 보안](~/ios/app-fundamentals/ats.md)
 
 이 문서에서는 소개 Xamarin.iOS 프로젝트에 대 한 의미 및 iOS 9 응용 프로그램에 앱 전송 보안을 적용 하는 보안 변경 내용, AT 구성 옵션에 적용 됩니다 및 필요한 경우 되지 않게 AT, 하는 방법에 적용 됩니다. AT 기본적으로 사용 하도록 설정 하기 때문에 안전 하지 않은 모든 인터넷 연결 (하지 않은 것을 명시적으로 허용 된) iOS 9 앱에서 예외가 발생 합니다.
 

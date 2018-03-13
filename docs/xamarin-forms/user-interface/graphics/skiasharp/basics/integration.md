@@ -4,14 +4,15 @@ description: "터치 및 Xamarin.Forms 요소에 응답 하는 SkiaSharp 그래�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: c4db5c77113e80e5c73b800f7214ea70c6e325a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c938e5ef836904c42f3349c66d48a9b13cb335ca
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms를 사용한 통합
 
@@ -234,7 +235,7 @@ HSV 모델에서 순수 색 채도 값은 100 때 발생 합니다. 값이 0 다
 
 하지만 두 모델에 대해 이해할 수 있도록 하는 가장 좋은 방법은 이러한 실험:
 
-[![](integration-images/colorexplore-large.png "색 탐색 페이지의 삼중 스크린샷")](integration-images/colorexplore-small.png "색 탐색 페이지의 삼중 스크린 샷")
+[![](integration-images/colorexplore-large.png "색 탐색 페이지의 삼중 스크린샷")](integration-images/colorexplore-small.png#lightbox "색 탐색 페이지의 삼중 스크린 샷")
 
 
 ## <a name="related-links"></a>관련 링크

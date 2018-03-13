@@ -3,16 +3,16 @@ title: "IOS의 사용자 인터페이스"
 description: "Xamarin.iOS 앱의 iOS 사용자 인터페이스 작업을 다룹니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
+ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 831ddfff7e05c391472b280095564f90528369ff
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f456b54180d50cfc4b6b98ed8f3d4118c8397b37
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-interface-in-ios"></a>IOS의 사용자 인터페이스
 
@@ -28,7 +28,7 @@ Apple 그룹 관련 부분에 "프레임 워크" Xamarin.iOS 네임 스페이스
 
 보기를 조정 하거나 회전할 때 레이아웃을 제어 하기 위한 두 가지 다른 메커니즘을 없는: 자동 레이아웃 및 크기 자동 조정 합니다.
 
-## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Haptic 사용자 의견 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
+## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 이 문서에서는 새로운 유형의 haptic 피드백 Xamarin.iOS에 구현 하는 방법과 iOS 10에서 사용할 수 있는 설명 합니다.
 

@@ -3,14 +3,15 @@ title: "7 장의 요약입니다. XAML 코드와 비교"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1263328a748ac0bacd368da361aeaff57c4cfa20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1104f7576cabfed9988154f3b6a8beb429136fb3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>7 장의 요약입니다. XAML 코드와 비교
 
@@ -68,7 +69,7 @@ Xaml에서는 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Fo
 
  여러 줄 문자열으로 설정 된 경우는 `Text` 속성, 줄 끝 문자는 공백 문자 변환 되지만 여러 줄 문자열의 내용으로 표시 될 때 줄 끝 문자를 유지는 `Label` 또는 `Label.Text` 태그:
 
- [![공유 하는 텍스트 변형의 삼중 스크린 샷](images/ch07fg03-small.png "서식이 지정 된 텍스트 변형")](images/ch07fg03-large.png "서식이 지정 된 텍스트 변형")
+ [![공유 하는 텍스트 변형의 삼중 스크린 샷](images/ch07fg03-small.png "서식이 지정 된 텍스트 변형")](images/ch07fg03-large.png#lightbox "서식이 지정 된 텍스트 변형")
 
 
 

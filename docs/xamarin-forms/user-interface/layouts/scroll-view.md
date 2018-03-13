@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: c305075d37a25bfe828f16d4e69955437a591f9a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 레이아웃을 포함 하 고 스크롤 스크린 수 있습니다. `ScrollView` 키보드 표시 될 때 자동으로 화면에 보이는 부분을 이동 하는 보기를 허용 하도록도 사용 됩니다.
 
-[ ![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png "Xamarin.Forms Layouts")
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 이 문서에서는 다룹니다.
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="usage"></a>사용법
 
 > [!NOTE]
-> **참고**: `ScrollView`s 다음에 중첩 될 수 없습니다. 또한 `ScrollView`s 같은 스크롤을 제공 하는 다른 제어 기능과 함께 중첩 되어야 합니다 `ListView` 및 `WebView`합니다.
+> `ScrollView`s는 중첩할 수 없습니다. 또한 `ScrollView`s 같은 스크롤을 제공 하는 다른 제어 기능과 함께 중첩 되어야 합니다 `ListView` 및 `WebView`합니다.
 
 `ScrollView` 노출 된 `Content` 단일 뷰 또는 레이아웃을 설정할 수 있는 속성입니다. 이어서 하는 매우 큰 boxView 있는 레이아웃의 예는 `Entry`:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 43a1a5ee6a8bd9d53f6fd44be935ae7573db6812
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fbc12288527c053a24041aa6c49cc1a4abdde55
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="explicit-styles"></a>명시적 스타일
 
@@ -64,7 +64,7 @@ _명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으�
 
 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 세 정의 *명시적* 스타일의 페이지에 적용 되는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 `Label` 설정 하 여 해당 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 사용 하 여 속성의 `StaticResource` 태그 확장 합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](explicit-images/explicit-styles.png "명시적 스타일 예제")](explicit-images/explicit-styles-large.png "명시적 스타일 예제")
+[![](explicit-images/explicit-styles.png "명시적 스타일 예제")](explicit-images/explicit-styles-large.png#lightbox "명시적 스타일 예제")
 
 또한 최종 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 에 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 적용 하지만 재정의 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) 속성을 다른 `Color`값입니다.
 
@@ -95,7 +95,7 @@ _명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으�
 
 응용 프로그램에서 스타일을 만드는 방법은 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 참조 [글로벌 스타일](~/xamarin-forms/user-interface/styles/application.md)합니다.
 
-## <a name="creating-an-explicit-style-in-c35"></a>&#35;에 명시적 스타일 만들기
+## <a name="creating-an-explicit-style-in-c35"></a>C에서 명시적 스타일 만들기&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스는 페이지에 추가할 수 있습니다 [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 새 C#에서 컬렉션 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 고 추가 하 여 다음의 `Style` 인스턴스는 `ResourceDictionary`에 나타난 것 처럼는 다음 코드 예제
 

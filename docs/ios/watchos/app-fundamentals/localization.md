@@ -7,11 +7,11 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4dde338a7c289f228f877fa4d968d156a941ba16
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-localization"></a>지역화 작업
 
@@ -67,7 +67,7 @@ Watch 앱 응용 프로그램의 사용자 인터페이스를 설명 하는 스�
 
 스토리 보드를 편집할 때 각 요소를 선택는 **지역화 ID** 에 표시 되는 **속성** 패드:
 
-  [ ![](localization-images/storyboard-sml.png "속성 패드에 나타나는 지역화 ID")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "속성 패드에 나타나는 지역화 ID")](localization-images/storyboard.png#lightbox)
 
 에 **Base.lproj** 폴더 키 하 여 형성 되는 위치 아래와 같이 키-값 쌍을 만들고는 **지역화 ID** 컨트롤에서 속성 이름에 점 조인 (`.`).
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 742780ad87672bd8a3e2bb3cb66ca582a680d44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icon"></a>응용 프로그램 아이콘
 
@@ -122,7 +122,7 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
     ![AppIcons.appiconset 편집](app-icon-images/intro01.png "AppIcons.appiconset 편집")
 2. 필요한 각 아이콘 크기에서, 아이콘을 클릭하고 위에서 만든 해당 이미지 파일을 선택합니다. 
 
-    [![아이콘 이미지 선택](app-icon-images/intro02.png "아이콘 이미지 선택")](app-icon-images/intro02-large.png)
+    [![아이콘 이미지 선택](app-icon-images/intro02.png "아이콘 이미지 선택")](app-icon-images/intro02-large.png#lightbox)
 3. 변경 내용을 저장합니다.
 
 
@@ -135,7 +135,7 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 1. **Solution Pad**에서 **Info.plist**를 두 번 클릭하여 **프로젝트 옵션**을 엽니다.
 2. **Mac OS X 응용 프로그램 대상** 섹션에서 **앱 아이콘**을 클릭하여 `AppIcons.appiconset` 파일을 선택합니다. 
 
-    [![아이콘 집합 설정](app-icon-images/icon01.png "아이콘 집합 설정")](app-icon-images/icon01-large.png)
+    [![아이콘 집합 설정](app-icon-images/icon01.png "아이콘 집합 설정")](app-icon-images/icon01-large.png#lightbox)
 3. 변경 내용을 저장합니다.
 
 앱이 실행되면 새 아이콘이 도크에 표시됩니다.

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/21/2016
-ms.openlocfilehash: 3afb7608838a2c34f143d0563b50f03ad7f6ecf4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c6fb404919621e1b22217b4461597ae07a5624c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-compilation"></a>XAML 컴파일
 
@@ -56,7 +56,7 @@ public class HomePage : ContentPage
 이 예제에서는 컴파일 타임에 대 한 XAML의 검사는 `HomePage` 컴파일 프로세스의 일부로 오류 보고 및 클래스 수행 됩니다.
 
 > [!NOTE]
-> **참고**:는 `XamlCompilation` 특성 및 `XamlCompilationOptions` 열거형에 있는 `Xamarin.Forms.Xaml0` 네임 스페이스를 사용 하 여 가져와야 합니다.
+> `XamlCompilation` 특성 및 `XamlCompilationOptions` 열거형에 있는 `Xamarin.Forms.Xaml0` 네임 스페이스를 사용 하 여 가져와야 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

@@ -3,14 +3,15 @@ title: "요약 장 26입니다. 사용자 지정 레이아웃"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: dbddaaf2f4a5ad9d7161013f2ae11466b953e20c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 장 26입니다. 사용자 지정 레이아웃
 
@@ -98,9 +99,9 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 시스템이 없
 파생 되는 모든 클래스는 `Layout` 또는 `Layout<T>` 재정의 해야 `OnSizeRequest` 또는 `OnMeasure`합니다. 이 레이아웃 클래스 일반적으로 호출 하 여 얻을 수 있는 자식의 크기를 기반으로 하는 자체 크기를 결정 하는 위치는 `GetSizeRequest` 또는 `Measure` 자식에 대해 합니다. 호출 전후 `OnSizeRequest` 또는 `OnMeasure`, `GetSizeRequest` 또는 `Measure` 다음 속성에 따라 조정 합니다.
 
 - [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)형식의 `double`, 영향을 줍니다는 `Request` 속성 `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)형식의 `double`, 영향을 줍니다는 `Request` 속성 `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/)형식의 `double`, 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/)형식의 `double`, 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
+- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) 형식의 `double`, 영향을 줍니다는 `Request` 속성 `SizeRequest`
+- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) 형식의 `double`, 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
+- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) 형식의 `double`, 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
 
 ### <a name="infinite-constraints"></a>무한 제약 조건
 
@@ -159,7 +160,7 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 시스템이 없
 
 [ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) 샘플 `UniformGridLayout`:
 
-[![사진 눈금의 삼중 스크린 샷](images/ch26fg08-small.png "균일 한 모눈 레이아웃")](images/ch26fg08-large.png "균일 한 모눈 레이아웃")
+[![사진 눈금의 삼중 스크린 샷](images/ch26fg08-small.png "균일 한 모눈 레이아웃")](images/ch26fg08-large.png#lightbox "균일 한 모눈 레이아웃")
 
 ### <a name="overlapping-children"></a>겹치는 하위
 
@@ -174,7 +175,7 @@ A `Layout<T>` 파생 클래스에는 자식 겹칠 수 있습니다. 그러나 �
 
 [ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) 클래스에 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 렌더링 순서일 따라서 중 하나를 허용 하는 연결된 속성을 정의 하는 라이브러리의 다른 맨 위에 표시 될 자식입니다. [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) 이 샘플을 보여 줍니다.
 
-[![학생 카드 파일 눈금의 삼중 스크린 샷](images/ch26fg10-small.png "레이아웃 자식 겹치는")](images/ch26fg10-large.png "레이아웃 자식 겹치는")
+[![학생 카드 파일 눈금의 삼중 스크린 샷](images/ch26fg10-small.png "레이아웃 자식 겹치는")](images/ch26fg10-large.png#lightbox "레이아웃 자식 겹치는")
 
 ### <a name="more-attached-bindable-properties"></a>추가 연결 된 바인딩 가능한 속성
 

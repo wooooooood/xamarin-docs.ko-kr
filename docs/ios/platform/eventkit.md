@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: db3662db50d8f3538f16f2af1f9e7880957dc25c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="eventkit"></a>EventKit
 
@@ -30,7 +30,7 @@ EventKit 프레임 워크에 액세스 하는 방법을 제공는 *달력*, *일
 
 이 가이드의 모든 작업 도우미 샘플 응용 프로그램에서 제공 됩니다.
 
- [ ![](eventkit-images/01.png "도우미 샘플 응용 프로그램 화면")](eventkit-images/01.png)
+ [![](eventkit-images/01.png "도우미 샘플 응용 프로그램 화면")](eventkit-images/01.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -148,7 +148,7 @@ App.Current.EventStore.GetCalendars ( EKEntityType.Event );
 
 *EKEventEditViewController* 만들거나 일정 응용 프로그램을 사용 하는 경우 사용자에 게 제공 되는 동일한 UI 사용 하 여 이벤트를 편집 하려면 많은 중요 한 역할을 수행 합니다.
 
- [ ![](eventkit-images/02.png "일정 응용 프로그램을 사용 하는 경우 사용자에 게 제공 되는 UI")](eventkit-images/02.png)
+ [![](eventkit-images/02.png "일정 응용 프로그램을 사용 하는 경우 사용자에 게 제공 되는 UI")](eventkit-images/02.png#lightbox)
 
 를 사용 하려면 메서드 내에서 선언 되는 경우 가비지 수집 가져올 하지 않는 있도록 클래스 수준 변수로 선언 해야 합니다.
 
@@ -383,5 +383,5 @@ App.Current.EventStore.FetchReminders (
 ## <a name="related-links"></a>관련 링크
 
 - [달력 (샘플)](https://developer.xamarin.com/samples/monotouch/Calendars/)
-- [IOS 6 소개](~/ios/platform/introduction-to-ios6/index.md)
+- [iOS 6 소개](~/ios/platform/introduction-to-ios6/index.md)
 - [일정 및 미리 알림을 소개](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)

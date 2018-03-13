@@ -6,11 +6,11 @@ ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f784497173db6bc3ffa87617765e63fc8d904e5f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/28/2018
 
 위의 태그 다음 UI를 생성합니다.
 
- [ ![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "태그를 지정된 하 여 만든 UI")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)
+ [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "태그를 지정된 하 여 만든 UI")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 트리의 모든 요소에는 속성이 포함 될 수 있습니다 `"id"`합니다. 런타임 시 수는 개별 섹션 또는 JsonElement 인덱서를 사용 하 여 요소를 참조 합니다. 다음과 같습니다.
 

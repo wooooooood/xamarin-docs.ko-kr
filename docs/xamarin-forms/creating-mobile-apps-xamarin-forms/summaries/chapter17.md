@@ -3,14 +3,15 @@ title: "17 장의 요약입니다. 표를 마스터합니다."
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0a184b80b57980c7ae00572517ad52a18b5755c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09f63dd418ea1fb523c028edb02c28c22bfdccd1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>17 장의 요약입니다. 표를 마스터합니다.
 
@@ -90,7 +91,7 @@ XAML에서 이러한 값을 설정 하기 위한 다음과 같은 특성을 사�
 
 [ **KeypadGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/KeypadGrid) 샘플에서는 `Grid` 키패드를 표시 하려면:
 
-[![키패드 눈금의 삼중 스크린 샷](images/ch17fg12-small.png "키패드 그리드")](images/ch17fg12-large.png "키패드 표")
+[![키패드 눈금의 삼중 스크린 샷](images/ch17fg12-small.png "키패드 그리드")](images/ch17fg12-large.png#lightbox "키패드 표")
 
 ### <a name="responding-to-orientation-changes"></a>방향 변경 내용에 응답
 

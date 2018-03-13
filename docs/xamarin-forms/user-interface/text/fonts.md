@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>글꼴
 
@@ -181,7 +181,7 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
 
 기본 제공 서체 이외의 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴 스크린샷은 **바다가 재** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) iOS, Android 및 Xamarin.Forms를 사용 하 여 Windows Phone 렌더링 합니다.
 
- [ ![IOS 및 Android 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예제")](fonts-images/custom.png "사용자 지정 글꼴 예제")
+ [![IOS 및 Android 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예제")](fonts-images/custom.png#lightbox "사용자 지정 글꼴 예제")
 
 각 플랫폼에 대해 필요한 단계는 다음과 같습니다. 응용 프로그램을 사용 하 여 사용자 지정 글꼴 파일을 포함 하는 경우 배포에 대 한 글꼴의 라이선스를 허용 하는지 확인 해야 합니다.
 
@@ -229,7 +229,7 @@ new Label
 > [!NOTE]
 > 글꼴 파일 이름과 글꼴 이름을 참고 달라질 수 있습니다. Windows에서 글꼴 이름을 검색 하려면.ttf 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **미리 보기**합니다. 그런 다음 미리 보기 창에서 글꼴 이름의 확인할 수 있습니다.
 
-응용 프로그램에 대 한 일반적인 코드 완료 됩니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
+응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
 ### <a name="xaml"></a>XAML
 

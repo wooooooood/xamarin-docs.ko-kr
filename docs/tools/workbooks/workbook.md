@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>대화형 통합 문서
 
@@ -30,7 +30,7 @@ _교육 또는 탐색 교육, 실험에 대 한 C# 코드를 사용 하 여 라�
 
 코드 편집 창 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄으로 된 문 지원에 제공 합니다.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집 창 제공 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄으로 된 문 지원")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집 창 제공 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄으로 된 문 지원")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin 통합 문서에 저장 됩니다는 `.workbook` 는 CommonMark 일부 메타 데이터가 있는 파일 위쪽에 있는 파일 (참조 [통합 문서 파일 형식을](#Workbooks_Files_Types) 통합 문서를 저장할 수 방법에 대 한 자세한 내용은).
 

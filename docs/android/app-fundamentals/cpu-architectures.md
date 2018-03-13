@@ -7,12 +7,12 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6139b5e27e9689da6366a2107acc14a6adcfc928
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 3df6dc72eaed74ad335596d55db8b1295b16f3c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cpu-architectures"></a>CPU 아키텍처
 
@@ -32,7 +32,7 @@ _Xamarin.Android 32 비트 및 64 비트 장치를 포함 하 여 여러 CPU 아
 
 Visual Studio에서 두 번 클릭 **속성** 에서 프로젝트 아래의 **솔루션 탐색기** 선택 하 고는 **Android 옵션** 페이지. 클릭는 **패키징** 탭 하 고 있는지 확인 **공유 런타임 사용** 사용 되지 않는지 (해제 하면이 선택할 수 있습니다 명시적으로 지원 하기 위해 어떤 ABIs). 클릭는 **고급** 탭 고 **고급 속성**를 지원 하 고 아키텍처 확인:
 
-[ ![Armeabi 및 armeabi v7a 선택](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![Armeabi 및 armeabi v7a 선택](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -40,12 +40,12 @@ Visual Studio에서 두 번 클릭 **속성** 에서 프로젝트 아래의 **�
 
 Mac 용 Visual Studio에서 프로젝트를 찾습니다는 **솔루션** 패드 프로젝트 옆의 기어 아이콘을 선택 **옵션**합니다. 에 **프로젝트 옵션** 대화 상자를 클릭 하 여 **Android 빌드**합니다. 클릭는 **일반** 탭 하 고 있는지 확인 **공유 모노 런타임 사용** 사용 되지 않는지 (해제 하면이 선택할 수 있습니다 명시적으로 지원 하기 위해 어떤 ABIs). 클릭는 **고급** 탭 고 **지원 ABIs**를 지원 하 고 아키텍처에 대 한 ABIs 확인:
 
-[ ![Armeabi 및 armeabi v7a 선택](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![Armeabi 및 armeabi v7a 선택](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 
 
-Xamarin.Android 아키텍처를 지원합니다.
+Xamarin.Android는 다음과 같은 아키텍처를 지원합니다.
 
 -   **armeabi** &ndash; ARM 기반 Cpu를 최소한 ARMv5TE 명령 집합을 지원 합니다. `armeabi` 는 스레드로부터 안전 하지 않으며 다중 CPU 장치에 사용할 수 없습니다.
 
@@ -66,7 +66,7 @@ Xamarin.Android 아키텍처를 지원합니다.
 선택 해야 **arm64 v8a** 또는 **x86_64** ; 64 비트 장치를 대상으로 64 비트 지원은 64 비트 하드웨어에서 앱을 실행 하지 않아도 됩니다. 예를 들어 64 비트 ARM 장치 (예:는 [Nexus 9](http://www.google.com/nexus/9/))에 대해 구성 된 앱을 실행할 수 `armeabi-v7a`합니다. 64 비트 지원을 사용 하도록 설정의 주요 이점은 더 많은 메모리를 앱에 대 한 수 있게 하는 것입니다.
 
 > [!NOTE]
-> **참고:**: 64 비트 런타임 지원은 현재 실험적인 기능입니다. 64 비트 런타임을 *하지* 64 비트 장치에서 앱을 실행 하는 데 필요한 합니다. 
+> 현재 64 비트 런타임 지원은 실험적인 기능 합니다. 64 비트 런타임을 *하지* 64 비트 장치에서 앱을 실행 하는 데 필요한 합니다. 
 
 ## <a name="additional-information"></a>추가 정보
 

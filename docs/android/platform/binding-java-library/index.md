@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
@@ -30,7 +30,7 @@ Android에 대 한 타사 라이브러리 생태계는 대규모입니다. 이 �
 
 Xamarin.Android를 사용 하 여 바인딩을 구현 *호출 가능 래퍼 관리* (*MCW*). MCW 관리 코드에서 Java 코드를 호출 해야 할 때 사용 되는 JNI 브리지입니다. 관리 되는 호출 가능 래퍼 지원도 제공 서브클래싱 Java 형식에 대 한 Java 형식에 대 한 가상 메서드를 재정의 합니다. 마찬가지로, Android 런타임 (아트) 코드에서 하지 않고자 한다면 관리 코드를 호출할 때마다이 작업을 수행으로 Android 호출 가능 래퍼 (ACW) 알려진 다른 JNI 브리지를 통해 합니다. 이 [아키텍처](~/android/internals/architecture.md) 다음 다이어그램에 나와 있습니다.
 
-[ ![Android JNI 브리지 아키텍처](images/architecture.png)](images/architecture.png)
+[![Android JNI 브리지 아키텍처](images/architecture.png)](images/architecture.png#lightbox)
 
 바인딩 라이브러리는 Java 형식에 대 한 관리 되는 호출 가능 래퍼를 포함 하는 어셈블리. Java 형식 예를 들어, 다음은 `MyClass`, 바인딩 라이브러리에 배치 하려는:
 
@@ -74,7 +74,6 @@ using Com.Company.Package;
 
 * **JDK의 어떤 버전의 라이브러리를 컴파일하는 데 사용 되었습니다.** &ndash; 바인딩 오류 Android 라이브러리 Xamarin.Android에 의해 사용 중인 보다 JDK의 다른 버전으로 빌드된 경우 발생할 수 있습니다. 가능 하면 Xamarin.Android 설치에서 사용 되는 JDK의 동일한 버전을 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>빌드 작업
 
@@ -127,7 +126,6 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 -   _내부 클래스_ Java는는 _중첩 된 클래스_ C#에 인스턴스 생성자를 사용 합니다.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>바인딩 시나리오
 
@@ -148,4 +146,4 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 
 - [JNI 작업](~/android/platform/java-integration/working-with-jni.md)
 - [GAPI 메타 데이터](http://www.mono-project.com/GAPI#Metadata)
-- [네이티브 라이브러리를 사용 하 여](~/android/platform/native-libraries.md)
+- [네이티브 라이브러리 사용](~/android/platform/native-libraries.md)

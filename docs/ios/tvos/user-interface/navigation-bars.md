@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3d5b4b0d3e6e9388906efa3bff2db0ea38fa8605
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-controllers"></a>탐색 컨트롤러 작업
 
@@ -20,7 +20,7 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 
 제목과 선택적 탐색 모음 단추를 표시 하는 보기의 맨 위에 탐색 모음을 추가할 수 있습니다. 일반적으로 테이블 뷰, 컬렉션 또는 하위 선택한 항목의 세부 정보를 보여 주는 뷰 메뉴와 같은 기본 페이지에서 사용자가 탐색 하는 경우 사용 됩니다.
 
-[ ![](navigation-bars-images/navbar01.png "샘플 탐색 모음")](navigation-bars-images/navbar01.png)
+[![](navigation-bars-images/navbar01.png "샘플 탐색 모음")](navigation-bars-images/navbar01.png#lightbox)
 
 또한 제목 (가운데에 표시)에 탐색 모음에 하나 이상의 탐색 모음 단추가 포함 될 수 있습니다 (`UIBarButtonItem`) 막대의 왼쪽과 오른쪽에 있습니다.
 
@@ -42,16 +42,16 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 1. 에 **솔루션 패드**를 두 번 클릭 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **탐색 모음** 에서 **도구 상자** 화면 맨 위에 있는 보기에 놓습니다. 
 
-    [ ![](navigation-bars-images/navbar02.png "탐색 모음")](navigation-bars-images/navbar02.png)
+    [![](navigation-bars-images/navbar02.png "탐색 모음")](navigation-bars-images/navbar02.png#lightbox)
 1. 두 번 클릭은 **탐색 모음** 하기 위해 선택 **탐색 항목**합니다. 에 **위젯** 탭은 **속성 패드**를 설정할 수 있습니다는 **제목**: 
 
-    [ ![](navigation-bars-images/navbar03.png "제목 설정")](navigation-bars-images/navbar03.png)
+    [![](navigation-bars-images/navbar03.png "제목 설정")](navigation-bars-images/navbar03.png#lightbox)
 1. 하나 이상을 추가할 수는 다음으로 **표시줄 단추 항목** 막대의 양쪽 끝에: 
 
-    [ ![](navigation-bars-images/navbar04.png "막대 단추 항목 A")](navigation-bars-images/navbar04.png)
+    [![](navigation-bars-images/navbar04.png "막대 단추 항목 A")](navigation-bars-images/navbar04.png#lightbox)
 1. 마지막으로, 유선 접속은 **표시줄 단추 항목** 작업에 **이벤트** 탭은 **속성 탐색기**: 
 
-    [ ![](navigation-bars-images/navbar05.png "단추 항목 동작 가로 막대")](navigation-bars-images/navbar05.png)
+    [![](navigation-bars-images/navbar05.png "단추 항목 동작 가로 막대")](navigation-bars-images/navbar05.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 
@@ -61,16 +61,16 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 1. 에 **솔루션 탐색기**를 두 번 클릭 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **탐색 모음** 에서 **도구 상자** 화면 맨 위에 있는 보기에 놓습니다. 
 
-    [ ![](navigation-bars-images/navbar02-vs.png "탐색 모음")](navigation-bars-images/navbar02-vs.png)
+    [![](navigation-bars-images/navbar02-vs.png "탐색 모음")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. 두 번 클릭은 **탐색 모음** 하기 위해 선택 **탐색 항목**합니다. 에 **위젯** 탭은 **속성 탐색기**를 설정할 수 있습니다는 **제목**: 
 
-    [ ![](navigation-bars-images/navbar03-vs.png "제목 설정")](navigation-bars-images/navbar03-vs.png)
+    [![](navigation-bars-images/navbar03-vs.png "제목 설정")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. 하나 이상을 추가할 수는 다음으로 **표시줄 단추 항목** 막대의 양쪽 끝에: 
 
-    [ ![](navigation-bars-images/navbar04-vs.png "단추 항목 가로 막대")](navigation-bars-images/navbar04-vs.png)
+    [![](navigation-bars-images/navbar04-vs.png "단추 항목 가로 막대")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. 마지막으로, 유선 접속은 **표시줄 단추 항목** 작업에 **이벤트** 탭은 **속성 탐색기**: 
 
-    [ ![](navigation-bars-images/navbar05-vs.png "단추 항목 동작 가로 막대")](navigation-bars-images/navbar05-vs.png)
+    [![](navigation-bars-images/navbar05-vs.png "단추 항목 동작 가로 막대")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 

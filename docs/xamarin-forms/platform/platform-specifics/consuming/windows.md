@@ -3,16 +3,16 @@ title: "Windows 플랫폼 특성"
 description: "플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms에 기본 제공 되는 Windows 플랫폼 특성을 사용 하는 방법을 보여줍니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Windows 플랫폼 특성
 
@@ -52,7 +52,7 @@ page.On<Windows>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
 결과 지정 된 도구 모음 배치에 적용 되는 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 인스턴스:
 
-[![](windows-images/toolbar-placement.png "도구 모음 배치 플랫폼별")](windows-images/toolbar-placement-large.png "도구 모음 배치 플랫폼별")
+[![](windows-images/toolbar-placement.png "도구 모음 배치 플랫폼별")](windows-images/toolbar-placement-large.png#lightbox "도구 모음 배치 플랫폼별")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 결과 지정 된 [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) 에 적용 되는 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) 지정 되 고 너비가 인스턴스:
 
-[![](windows-images/collapsed-navigation-bar.png "탐색 모음 플랫폼별 축소")](windows-images/collapsed-navigation-bar-large.png "탐색 모음 플랫폼별 축소")
+[![](windows-images/collapsed-navigation-bar.png "탐색 모음 플랫폼별 축소")](windows-images/collapsed-navigation-bar-large.png#lightbox "탐색 모음 플랫폼별 축소")
 
 ## <a name="summary"></a>요약
 
@@ -93,6 +93,6 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 특성 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)

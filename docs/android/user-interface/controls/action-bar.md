@@ -7,28 +7,26 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: cdbdf7195daf9add01052df8fc0f0cf4c7a0cb0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64a5ac7e0c448205da66f9790a506ca34a944140
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="actionbar"></a>ActionBar
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
 사용 하는 경우 `TabActivity`, 탭 아이콘을 만들려면 코드에는 Android 4.0 프레임 워크에 대해 실행 하면 영향을 주지 않습니다. Android 2.3, 이전 버전에서 작동 기능 하지만 `TabActivity` 클래스 자체는 4.0에서 사용 되지 합니다. 그런 다음 아래에서는 작업 모음을 사용 하는 탭된 인터페이스를 만들 수 있는 새로운 방법 도입 되었습니다.
 
-<a name="Action_Bar_Tabs" />
 
 ## <a name="action-bar-tabs"></a>작업 표시줄 탭
 
 작업 표시줄 탭된 인터페이스를 Android 4.0에 추가 하는 것에 대 한 지원이 포함 되어 있습니다.
 다음 스크린 샷에서 이러한 인터페이스의 예를 보여 줍니다.
 
-[![에뮬레이터;에서 실행 중인 앱의 스크린 샷 두 개의 탭이 표시 됩니다.](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png)
+[![에뮬레이터;에서 실행 중인 앱의 스크린 샷 두 개의 탭이 표시 됩니다.](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 작업 표시줄에 탭을 만들려면 원하므로 먼저 설정 해야 해당 `NavigationMode` 탭을 지 원하는 속성을 합니다. Android 4에서는 `ActionBar` 속성을 설정 하는 데 사용할 수 있는 म 활동 클래스에 사용할 수는 `NavigationMode` 다음과 같이 합니다.
 
@@ -84,26 +82,23 @@ this.ActionBar.AddTab (tab);
 
 전체 예제를 참조 하십시오.는 *HelloTabsICS* 이 문서에 대 한 샘플 코드에 대 한 프로젝트입니다.
 
-<a name="ShareActionProvider" />
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 `ShareActionProvider` 클래스를 사용 하면 작업 모음에서 수행할 동작을 공유 합니다. 공유 의도 처리할 수 있는 작업 모음에서 나중에 쉽게 액세스할 수 이전에 사용 되는 응용 프로그램 기록을를 유지 하는 응용 프로그램 목록은 사용 하 여 작업 보기를 만드는 것이 담당 합니다. 따라서 응용 프로그램이 Android 전체에서 일치 하는 사용자 경험을 통해 데이터를 공유할 수 있습니다.
 
-<a name="Image_Sharing_Example" />
 
 ### <a name="image-sharing-example"></a>이미지 공유 예제
 
 예를 들어 다음은 이미지를 공유 하는 작업 모음 메뉴 항목과 스크린샷입니다 (에서 가져온는 [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) 샘플). ShareActionProvider 연관 된 의도 처리 하도록 응용 프로그램을 로드할 사용자 작업 모음에서 메뉴 항목을 누르면는 `ShareActionProvider`합니다. 이 예제에서는 메시징 응용 프로그램에 이전에 사용 되었으므로, 작업 모음에 표시 됩니다.
 
-[![메시징 작업 모음에서 응용 프로그램 아이콘의 스크린 샷](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png)
+[![메시징 작업 모음에서 응용 프로그램 아이콘의 스크린 샷](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 작업 모음에서 항목에 대해 사용자가 아래와 같이 공유 이미지가 포함 된 메시징 앱 시작 됩니다.
 
-[![원숭이 이미지를 표시 하는 메시징 응용 프로그램의 스크린 샷](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
+[![원숭이 이미지를 표시 하는 메시징 응용 프로그램의 스크린 샷](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### <a name="specifying-the-action-provider-class"></a>작업 공급자 클래스를 지정합니다.
 
@@ -119,7 +114,6 @@ this.ActionBar.AddTab (tab);
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### <a name="inflating-the-menu"></a>메뉴 않아서
 
@@ -137,7 +131,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### <a name="creating-the-intent"></a>의도 만들기
 

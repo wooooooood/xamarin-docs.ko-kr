@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 278b9e782073a26dc04bac9418613ea4c09db445
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -46,7 +46,7 @@ Apple TV 앱 스토어에 Xamarin.tvOS 응용 제출 하려고 시도할 때, �
 1. Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭에서 Xamarin.tvOS 프로젝트 파일에는 **솔루션 탐색기** 선택 **옵션**합니다.
 2. 선택 **tvOS 빌드** 을 있는지 확인 하 고는 **릴리스** 구성: 
 
-    [ ![](troubleshooting-images/ts01.png "TvOS 빌드 옵션을 선택 합니다.")](troubleshooting-images/ts01.png)
+    [![](troubleshooting-images/ts01.png "TvOS 빌드 옵션을 선택 합니다.")](troubleshooting-images/ts01.png#lightbox)
 3. 추가 `--bitcode=asmonly` 에 **추가 mtouch 인수** 필드를 클릭는 **확인** 단추입니다.
 4. 응용 프로그램을 다시 작성은 **릴리스** 구성 합니다.
 
@@ -124,7 +124,7 @@ _"만 arm64 분할 영역을 포함 하는 앱 있어야"arm64"UIRequiredDeviceC
 
 (예: MonoGame) 3rd 파티 라이브러리를 사용 하는 일련의 오류 메시지에서 끝나는 긴와 릴리스 컴파일 실패 한 경우 `Task "MTouch" execution -- FAILED`를 추가 해 보십시오 `-gcc_flags="-framework OpenAL"` 하 여 **추가 터치 인수**:
 
-[ ![](troubleshooting-images/mtouch01.png "작업 MTouch 실행")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "작업 MTouch 실행")](troubleshooting-images/mtouch01.png#lightbox)
 
 도 포함 해야 `--bitcode=asmonly` 에 **추가 터치 인수**, 링커 옵션으로 설정 **링크 모든** 하 고 새로 컴파일하는를 실행 합니다.
 

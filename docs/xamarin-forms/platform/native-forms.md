@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 89636b874f8dbc8f66280dcc1ed99d0f832ff312
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-forms"></a>기본 형식
 
@@ -31,7 +31,7 @@ Xamarin.Forms를 사용 하기 위한 프로세스 [ `ContentPage` ](https://dev
 Xamarin.Forms를 호출 하 여 초기화 해야 합니다는 `Forms.Init` 네이티브 프로젝트를 생성 하려면 먼저 메서드는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-파생 페이지입니다. 응용 프로그램 흐름에 가장 편리한 시간에 따라 달라 집니다이 작업을 주로 수행 하는 시기 선택 – 바로 앞 이나 응용 프로그램 시작 시 수행 될 수는 `ContentPage`-파생된 페이지 생성 됩니다. 이 문서와 함께 제공 된 예제 응용 프로그램에는 `Forms.Init` 메서드는 응용 프로그램 시작 시 호출 됩니다.
 
 > [!NOTE]
-> **참고**:는 **NativeForms** 샘플 응용 프로그램 솔루션 모든 Xamarin.Forms 프로젝트가 포함 되어 있지 않습니다. 대신, 프로젝트 Xamarin.iOS, Xamarin.Android 프로젝트 및 UWP 프로젝트의 구성 됩니다. 각 프로젝트를 사용할 기본 폼을 사용 하는 네이티브 프로젝트는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-페이지를 파생 합니다. 그러나은 아니지만 네이티브 프로젝트를 사용할 수 없습니다. 이유 `ContentPage`-PCL,.NET 표준 라이브러리 또는 공유 프로젝트에서 페이지를 파생 합니다.
+> **NativeForms** 샘플 응용 프로그램 솔루션 모든 Xamarin.Forms 프로젝트가 포함 되어 있지 않습니다. 대신, 프로젝트 Xamarin.iOS, Xamarin.Android 프로젝트 및 UWP 프로젝트의 구성 됩니다. 각 프로젝트를 사용할 기본 폼을 사용 하는 네이티브 프로젝트는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-페이지를 파생 합니다. 그러나은 아니지만 네이티브 프로젝트를 사용할 수 없습니다. 이유 `ContentPage`-PCL,.NET 표준 라이브러리 또는 공유 프로젝트에서 페이지를 파생 합니다.
 
 기본 폼을 사용할 때와 같은 Xamarin.Forms 기능 [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/), [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/), 및 데이터 바인딩 엔진 모두 작동 합니다.
 
@@ -85,7 +85,7 @@ public class AppDelegate : UIApplicationDelegate
 
 한 번는 `FinishedLaunching` 메서드가 실행, UI는 Xamarin.Forms에 정의 된 `PhonewordPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png "iOS PhonewordPage")
+[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png#lightbox "iOS PhonewordPage")
 
 탭 하 여 예를 들어 UI와 상호 작용 한 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), 이벤트 처리기에 발생 합니다는 `PhonewordPage` 관련 코드를 실행 합니다. 사용자가 누를 때을 예를 들어는 **호출 기록** 단추를 다음 이벤트 처리기 실행:
 
@@ -109,7 +109,7 @@ public void NavigateToCallHistoryPage()
 
 `NavigateToCallHistoryPage` 메서드 변환 하는 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-파생 하는 페이지는 `UIViewController` 와 `CreateViewController` 확장 메서드와 설정은 `Title` 속성은 `UIViewController`합니다. `UIViewController` 다음 푸시되 `UINavigationController` 여는 `PushViewController` 메서드. UI는 Xamarin.Forms에 따라서, 정의 `CallHistoryPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png "iOS CallHistoryPage")
+[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png#lightbox "iOS CallHistoryPage")
 
 때는 `CallHistoryPage` 뒤로 탭 표시 됩니다 팝업 화살표는 `UIViewController` 에 대 한는 `CallHistoryPage` 에서 클래스는 `UINavigationController`, 사용자를 반환는 `UIViewController` 에 대 한는 `PhonewordPage` 클래스입니다.
 
@@ -157,11 +157,11 @@ public class MainActivity : AppCompatActivity
 조각에 대 한 자세한 내용은 참조 [조각](~/android/platform/fragments/index.md)합니다.
 
 > [!NOTE]
-> **참고**: 외에 `CreateFragment` 확장 메서드를 Xamarin.Forms도 포함 되어는 `CreateSupportFragment` 메서드. `CreateFragment` 메서드 만듭니다는 `Android.App.Fragment` API 11을 대상으로 하는 응용 프로그램에서 사용 하는 큰 수입니다. `CreateSupportFragment` 메서드 만듭니다는 `Android.Support.V4.App.Fragment` 11 이전 API 버전을 대상으로 하는 응용 프로그램에서 사용할 수 있는 합니다.
+> 이외에 `CreateFragment` 확장 메서드를 Xamarin.Forms도 포함 되어는 `CreateSupportFragment` 메서드. `CreateFragment` 메서드 만듭니다는 `Android.App.Fragment` API 11을 대상으로 하는 응용 프로그램에서 사용 하는 큰 수입니다. `CreateSupportFragment` 메서드 만듭니다는 `Android.Support.V4.App.Fragment` 11 이전 API 버전을 대상으로 하는 응용 프로그램에서 사용할 수 있는 합니다.
 
 한 번는 `OnCreate` 메서드가 실행, UI는 Xamarin.Forms에 정의 된 `PhonewordPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png "Android PhonewordPage")
+[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png#lightbox "Android PhonewordPage")
 
 탭 하 여 예를 들어 UI와 상호 작용 한 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), 이벤트 처리기에 발생 합니다는 `PhonewordPage` 관련 코드를 실행 합니다. 사용자가 누를 때을 예를 들어는 **호출 기록** 단추를 다음 이벤트 처리기 실행:
 
@@ -188,7 +188,7 @@ public void NavigateToCallHistoryPage()
 
 `NavigateToCallHistoryPage` 메서드 변환 하는 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-파생 하는 페이지는 `Fragment` 와 `CreateFragment` 확장 메서드를 추가 하 고는 `Fragment` 백 스택은 조각에 합니다. UI는 Xamarin.Forms에 따라서, 정의 `CallHistoryPage` 다음 스크린샷에 표시 된 것 처럼 표시 될 됩니다.
 
-[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png "Android CallHistoryPage")
+[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
 때는 `CallHistoryPage` 뒤로 탭 표시 됩니다 팝업 화살표는 `Fragment` 에 대 한는 `CallHistoryPage` 조각 백 스택에에서 사용자를 반환는 `Fragment` 에 대 한는 `PhonewordPage` 클래스입니다.
 
@@ -271,7 +271,7 @@ public sealed partial class MainPage : Page
 
 한 번는 `MainPage` 생성자가 실행, UI는 Xamarin.Forms에 정의 된 `PhonewordPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png "UWP PhonewordPage")
+[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png#lightbox "UWP PhonewordPage")
 
 탭 하 여 예를 들어 UI와 상호 작용 한 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/), 이벤트 처리기에 발생 합니다는 `PhonewordPage` 관련 코드를 실행 합니다. 사용자가 누를 때을 예를 들어는 **호출 기록** 단추를 다음 이벤트 처리기 실행:
 
@@ -293,7 +293,7 @@ public void NavigateToCallHistoryPage()
 
 UWP에서 탐색 하 여 일반적으로 수행 됩니다는 `Frame.Navigate` 사용 메서드는 `Page` 인수입니다. Xamarin.Forms 정의 `Frame.Navigate` 확장 메서드를 사용 하는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-파생 페이지 인스턴스입니다. 따라서,는 `NavigateToCallHistoryPage` 메서드가 실행 되 고 Xamarin.Forms에 정의 된 UI `CallHistoryPage` 다음 스크린샷에 표시 된 것 처럼 표시 될지 것입니다:
 
-[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png "UWP CallHistoryPage")
+[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png#lightbox "UWP CallHistoryPage")
 
 때는 `CallHistoryPage` 뒤로 탭 표시 됩니다 팝업 화살표는 `FrameworkElement` 에 대 한는 `CallHistoryPage` 앱에서 바로 뒤로 스택에서 사용자를 반환는 `FrameworkElement` 에 대 한는 `PhonewordPage` 클래스입니다.
 
@@ -356,4 +356,4 @@ Xamarin.Forms를 허용 하는 기본 형식 [ `ContentPage` ](https://developer
 ## <a name="related-links"></a>관련 링크
 
 - [NativeForms (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
-- [기본 뷰](~/xamarin-forms/platform/native-views/index.md)
+- [네이티브 뷰](~/xamarin-forms/platform/native-views/index.md)

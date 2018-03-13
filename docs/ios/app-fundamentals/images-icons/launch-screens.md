@@ -3,16 +3,16 @@ title: "시작 화면"
 description: "이 문서에서는 모든 해상도와 방향으로 하나의 통합 된 스토리 보드를 사용 하 여 모든 iOS 장치에 대 한 응용 프로그램 시작 화면을 만드는 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
+ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 48dc2e7a270c4e12c4e3dc9d1e2ce14fb0d41249
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="launch-screens"></a>시작 화면
 
@@ -225,8 +225,8 @@ IOS 8 이상, 개발자는 하나 이상의 정적 시작 이미지를 사용 �
 ## <a name="related-links"></a>관련 링크
 
 - [동적 시작 화면 (샘플)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
-- [통합 된 스토리 보드](~/ios/user-interface/storyboards/unified-storyboards.md)
-- [iOS 디자이너 기본 사항](~/ios/user-interface/designer/index.md)
+- [통합 Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
+- [iOS Designer 기본 사항](~/ios/user-interface/designer/index.md)
 - [자산 카탈로그 이미지에 추가 이미지 설정](~/ios/app-fundamentals/images-icons/displaying-an-image.md#asset-catalogs)
 - [IOS 용 Xamarin 디자이너로 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md)
 - [휴먼 인터페이스 지침: 실행 화면](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

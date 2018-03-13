@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 56d868f64de009d01930ec34ee2cb436276006ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -20,23 +20,6 @@ _Xamarin 플랫폼으로 빌드된 응용 프로그램의 성능을 높이기 �
 
 낮은 응용 프로그램 성능은 여러 가지 방법으로 나타납니다. 이 경우에 응용 프로그램이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 응용 프로그램 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
 
-Xamarin 플랫폼으로 빌드된 응용 프로그램의 성능과 인식 성능을 높이는 여러 가지 기술이 있습니다. 다음과 같은 변경 내용이 해당됩니다.
-
-- [프로파일러 사용](#profiler)
-- [IDisposable 리소스 릴리스](#idisposable)
-- [이벤트 구독 취소](#events)
-- [약한 참조를 사용하여 유한 개체 방지](#weakreferences)
-- [개체를 만드는 비용 연기](#lazy)
-- [비동기 작업 구현](#async)
-- [SGen 가비지 수집기 사용](#sgen)
-- [응용 프로그램의 크기 축소](#linker)
-- [이미지 리소스 최적화](#optimizeimages)
-- [응용 프로그램 활성화 기간 축소](#activationperiod)
-- [웹 서비스 통신 축소](#webservicecommunication)
-
-이 체험용 [Xamarin University 비디오](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)에는 Xamarin 앱을 디자인하는 유용한 정보가 포함됩니다.
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "일반적인 문제를 방지하기 위한 체험용 Xamarin University 비디오")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 

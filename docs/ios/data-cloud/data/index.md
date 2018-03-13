@@ -3,16 +3,16 @@ title: "iOS 데이터 액세스"
 description: "대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구를 사항이 있습니다. 많으면 데이터의 양이 다르거나 일반적으로,이 일반적으로 필요 데이터베이스 및 데이터 계층 응용 프로그램에 데이터베이스 액세스를 관리 합니다. iOS는 \"기본 제공\" SQLite 데이터베이스 엔진이 및 데이터 저장 및 검색에 대 한 액세스 Xamarin 플랫폼을 통해 간소화 되었습니다. 이 문서에는 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
+ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 9ca929f584ec2b0d98300e7645707131df89969f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dba862055cc266b2af1eaf87418fe7ebf5830c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-data-access"></a>iOS 데이터 액세스
 
@@ -38,9 +38,9 @@ Xamarin.Forms 응용 프로그램에 대 한 읽기 [데이터베이스 작업](
 
 -  [소개](introduction.md)
 -  [구성](configuration.md)
--  [SQLite.NET ORM을 사용 하 여](using-sqlite-orm.md)
--  [Using ADO.NET](using-adonet.md)
--  [응용 프로그램의 데이터를 사용 하 여](using-data-in-an-app.md)
+-  [SQLite.NET ORM 사용](using-sqlite-orm.md)
+-  [ADO.NET 사용](using-adonet.md)
+-  [앱에서 데이터 사용](using-data-in-an-app.md)
 
 
 ## <a name="summary"></a>요약

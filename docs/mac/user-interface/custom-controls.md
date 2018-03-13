@@ -3,16 +3,16 @@ title: "사용자 지정 컨트롤 만들기"
 description: "이 문서에서는 사용자 지정 컨트롤을 만들고 인터페이스 작성기에서 사용 하는 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f3d6301bc2c0237a268669fff437801bfb2657d1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-custom-controls"></a>사용자 지정 컨트롤 만들기
 
@@ -22,7 +22,7 @@ C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 �
 
 MacOS 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하며, 기본적으로 지원 되지 않는 기능을 제공 하거나 (예: 게임 인터페이스) 사용자 지정 UI 테마에 맞게 사용자 지정 컨트롤을 만들어야 하는 횟수가 있을 수 있습니다.
 
-[ ![](custom-controls-images/intro01.png "사용자 지정 UI 컨트롤의 예")](custom-controls-images/intro01.png)
+[![](custom-controls-images/intro01.png "사용자 지정 UI 컨트롤의 예")](custom-controls-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.Mac 응용 프로그램에서 다시 사용할 수 있는 사용자 지정 사용자 인터페이스 컨트롤을 작성 하는 기본적인 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -50,7 +50,7 @@ MacOS 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하며, 기�
 
 Mac 용 Visual Studio에서 사용자 지정 사용자 인터페이스 컨트롤을 만드는 (또는 새로 만들) 하려는 Xamarin.Mac 프로젝트를 엽니다. 새 클래스를 추가 하 고 호출할 `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom01.png "새 클래스 추가")](custom-controls-images/custom01.png)
+[![](custom-controls-images/custom01.png "새 클래스 추가")](custom-controls-images/custom01.png#lightbox)
 
 다음으로 편집 된 `NSFlipSwitch.cs` 클래스와 다음과 비슷하게 표시:
 
@@ -336,19 +336,19 @@ if (this.Action !=null)
 
 인터페이스 작성기를 사용 하 여 컨트롤을 추가 하려면 먼저 Xamarin.Mac 프로젝트의 클린 빌드를 수행 합니다. 다음 두 번 클릭 하 고 `Main.storyboard` 인터페이스 작성기에서 편집 하기 위해 열려는 파일:
 
-[ ![](custom-controls-images/custom02.png "Xcode에서 스토리 보드를 편집합니다.")](custom-controls-images/custom02.png)
+[![](custom-controls-images/custom02.png "Xcode에서 스토리 보드를 편집합니다.")](custom-controls-images/custom02.png#lightbox)
 
 를 끌어 한 `Custom View` 사용자 인터페이스 디자인에:
 
-[ ![](custom-controls-images/custom03.png "라이브러리에서 사용자 지정 보기를 선택합니다.")](custom-controls-images/custom03.png)
+[![](custom-controls-images/custom03.png "라이브러리에서 사용자 지정 보기를 선택합니다.")](custom-controls-images/custom03.png#lightbox)
 
 선택 된 상태, 사용자 지정 보기를 전환 하는 **Identity 관리자** 뷰의 변경 **클래스** 를 `NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom04.png "보기의 클래스를 설정합니다.")](custom-controls-images/custom04.png)
+[![](custom-controls-images/custom04.png "보기의 클래스를 설정합니다.")](custom-controls-images/custom04.png#lightbox)
 
 전환 하는 **도우미 편집기** 만듭니다는 **콘센트** 사용자 지정 컨트롤에 대 한 (에 바인딩할 수 있도록는 `ViewControler.h` 파일 및 not는 `.m` 파일):
 
-[ ![](custom-controls-images/custom05.png "새 콘센트 구성")](custom-controls-images/custom05.png)
+[![](custom-controls-images/custom05.png "새 콘센트 구성")](custom-controls-images/custom05.png#lightbox)
 
 Mac 용 Visual Studio로 돌아가서 여 변경 내용을 저장 하 고 변경 내용을 동기화를 허용 합니다. 편집 된 `ViewController.cs` 파일을 확인는 `ViewDidLoad` 다음과 같은 메서드 모양을:
 
@@ -369,7 +369,7 @@ public override void ViewDidLoad ()
 
 필요에 따라 우리 수 인터페이스 작성기 돌아가서 정의 **동작** 컨트롤에:
 
-[ ![](custom-controls-images/custom06.png "새 동작 구성")](custom-controls-images/custom06.png)
+[![](custom-controls-images/custom06.png "새 동작 구성")](custom-controls-images/custom06.png#lightbox)
 
 다시 편집는 `ViewController.cs` 파일을 다음 메서드를 추가 합니다.
 
@@ -394,5 +394,5 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 - [MacCustomControl (샘플)](https://developer.xamarin.com/samples/mac/MacCustomControl/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [마우스 이벤트를 처리합니다.](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/EventOverview/HandlingMouseEvents/HandlingMouseEvents.html)

@@ -7,11 +7,11 @@ ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e20015d1872cbaea21dd8b8e5431981e463c33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>연습-요소 API를 사용 하 여 응용 프로그램 만들기
 
@@ -19,7 +19,7 @@ _이 문서 MonoTouch 대화 문서의에 제공 된 정보를 기준으로 작�
 
 이 연습에서 산 사용 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들려면 D 요소 API입니다. 사용자가 선택할 때의 <span class="ui"> + </span> 단추 탐색 모음에서 새 행의 작업에 대 한 테이블에 추가 됩니다. 행을 선택 하는 아래 그림과 같이 작업 설명 및 만료 날짜를 업데이트할 수 있는 세부 정보 화면으로 이동 됩니다.
 
- [ ![](elements-api-walkthrough-images/01-task-list-app.png "작업 설명 및 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 되는 행을 선택 하면")](elements-api-walkthrough-images/01-task-list-app.png)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "작업 설명 및 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 되는 행을 선택 하면")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
  <a name="Elements_API_Walkthrough" />
 
@@ -72,7 +72,7 @@ public override bool FinishedLaunching (UIApplication app,
 
 위의 코드의 인스턴스를 만듭니다.는 `RootElement` 에 전달 하 고는 `DialogViewController`합니다. `DialogViewController` 항상 한 `RootElement` 해당 계층 구조의 맨 위에 있는 합니다. 이 예제는 `RootElement` "할 일 목록," 탐색 컨트롤러의 탐색 모음에서 제목으로 사용 되는 문자열을 사용 하 여 만들어집니다. 이 시점에서 응용 프로그램을 실행 아래에 표시 된 화면을 제공 합니다.
 
- [ ![](elements-api-walkthrough-images/02-to-do-list-screen-.png "여기에 표시 된 화면을 제시 합니다 응용 프로그램 실행")](elements-api-walkthrough-images/02-to-do-list-screen-.png)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "여기에 표시 된 화면을 제시 합니다 응용 프로그램 실행")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 MonoTouch.Dialog의 계층 구조를 사용 하는 방법을 알아보겠습니다 `Sections` 및 `Elements` 자세한 화면을 추가 하 합니다.
 
@@ -148,11 +148,11 @@ public class Task
 
 두 개의 섹션; 자체 작업 세부 정보 화면으로 구성 된 이러한 섹션의 각 단일 요소를 포함합니다. 만든 첫 번째 요소는 `EntryElement` 작업에 대 한 편집 가능한 행 수 있도록 `Description` 속성입니다. 요소를 선택할 때 텍스트 편집 바로 아래와 같이 표시 됩니다.
 
- [ ![](elements-api-walkthrough-images/03-create-task.png "텍스트 편집 바로 표시 된 것 처럼 표시 됩니다는 요소를 선택할 때")](elements-api-walkthrough-images/03-create-task.png)
+ [![](elements-api-walkthrough-images/03-create-task.png "텍스트 편집 바로 표시 된 것 처럼 표시 됩니다는 요소를 선택할 때")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 두 번째 섹션에 포함 되어는 `DateElement` 우리는 작업을 관리할 수 있는 `DueDate` 속성입니다. 날짜를 선택 하면 자동으로 표시 된 것 처럼 날짜 선택을 로드 합니다.
 
- [ ![](elements-api-walkthrough-images/04-date-picker.png "날짜 선택으로 로드 날짜를 선택 하면 자동으로")](elements-api-walkthrough-images/04-date-picker.png)
+ [![](elements-api-walkthrough-images/04-date-picker.png "날짜 선택으로 로드 날짜를 선택 하면 자동으로")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 모두에 `EntryElement` 및 `DateElement` 의 경우 (또는 MonoTouch.Dialog에 있는 모든 데이터 입력 요소에 대 한) 값의 변경 내용은 자동으로 유지 됩니다. 날짜를 편집 및 루트 화면 및 세부 정보 화면에서 값의 유지 여기서 다양 한 작업 세부 정보, 간에 앞뒤로 탐색 하 여이 보여줄 수 있습니다.
 

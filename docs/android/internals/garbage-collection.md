@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d2298cf3edcadcc8a4d781e3e121852886fbf1d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
@@ -21,7 +21,7 @@ Xamarin.Android 모노의를 사용 하 여 [간단한 세대 가비지 수집�
 -   주요 컬렉션 (Gen1 수집 하 고 큰 개체 공백 힙)입니다. 
 
 > [!NOTE]
-> **참고:** 를 통해 명시적 컬렉션의 지정 하지 않을 경우에서 [GC 합니다. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) 컬렉션은 *주문형*, 힙 할당에 기반 합니다. *이 참조 횟수 시스템*; 개체 *미해결 참조가 없으면으로 수집 되지 것입니다*, 또는 범위를가 종료 합니다. GC는 부 힙 새 할당에 대 한 메모리 부족 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
+> 통해 명시적 컬렉션의 지정 하지 않을 경우에서 [GC 합니다. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) 컬렉션은 *주문형*, 힙 할당에 기반 합니다. *이 참조 횟수 시스템*; 개체 *미해결 참조가 없으면으로 수집 되지 것입니다*, 또는 범위를가 종료 합니다. GC는 부 힙 새 할당에 대 한 메모리 부족 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
 
 
 보조 컬렉션 저렴 하 고, 자주 수행 되며 최근에 할당 되 고 비활성 개체를 수집 하는 데 사용 됩니다. 보조 컬렉션 할당 된 개체의 모든 몇 MB 후 수행 됩니다. 호출 하 여 보조 컬렉션을 수동으로 수행 될 수 [GC 합니다. (0)를 수집 합니다.](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
@@ -29,7 +29,6 @@ Xamarin.Android 모노의를 사용 하 여 [간단한 세대 가비지 수집�
 주요 컬렉션은 비용이 많이 덜 자주 수행 하 고 모든 비활성 개체를 회수 하는 데 사용 됩니다. 주요 컬렉션 메모리가 부족 한 상태에 대 한 현재 힙 크기 (힙 크기 조정) 이전 되 면 수행 됩니다. 호출 하 여 주요 컬렉션을 수동으로 수행 될 수 [GC 합니다. ()를 수집](https://developer.xamarin.com/api/member/System.GC.Collect/) 또는 호출 하 여 [GC 합니다. (Int)를 수집](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) 인수와 함께 [GC 합니다. MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/)합니다. 
 
 
-<a name="Cross-VM_Object_Collections" />
 
 ## <a name="cross-vm-object-collections"></a>교차 VM 개체 컬렉션입니다.
 
@@ -67,7 +66,6 @@ Android 런타임 컬렉션 일반적으로 하지만 다는 경고와 함께 �
 
 이것은 피어 개체의 인스턴스 중 하나에서 참조 되 고으로 만들겠습니다는 모두의 최종 결과 관리 코드 (예:에 저장 된는 `static` 변수) 또는 Java 코드에서 참조 합니다. 어떤 게 초과 네이티브 피어 수명 확장할 수는 또한 라이브, 네이티브 피어 네이티브 피어와 관리 되는 피어가 수집 될 때까지 수집 되지 않습니다.
 
-<a name="Object_Cycles" />
 
 ## <a name="object-cycles"></a>개체 주기
 
@@ -77,7 +75,6 @@ Android 런타임 컬렉션 일반적으로 하지만 다는 경고와 함께 �
 
 개체 수명 간단히 줄이거나 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) 를 호출 해야 합니다. 이 직접 "서버" 개체를 더 빠르게 수집할 수 있도록 전역 참조를 해제 하 여 두 개의 Vm 간에 개체에 대 한 연결. 
 
-<a name="Automatic_Collections" />
 
 ## <a name="automatic-collections"></a>자동 컬렉션
 
@@ -135,7 +132,6 @@ MONO_GC_PARAMS=bridge-implementation=tarjan
 여러 가지 방법으로 메모리 사용 및 수집 시간을 줄이기 위한 GC 수 있도록 합니다.
 
 
-<a name="Disposing_of_Peer_instances" />
 
 ### <a name="disposing-of-peer-instances"></a>피어 인스턴스 삭제
 
@@ -148,7 +144,7 @@ GC를 자주 해야만 됩니다. 그러나 *GC 합니다. AddMemoryPressure()* 
 
 
 > [!NOTE]
-> **참고:** 여야 *매우* 삭제할 때 신중 하 게 `Java.Lang.Object` 하위 클래스 인스턴스.
+> 여야 *매우* 삭제할 때 신중 하 게 `Java.Lang.Object` 하위 클래스 인스턴스.
 
 호출할 때 메모리 손상 가능성을 최소화 하려면 다음 지침을 준수 `Dispose()`합니다.
 
@@ -243,7 +239,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-<a name="Reduce_Referenced_Instances" />
 
 ### <a name="reduce-referenced-instances"></a>참조 된 인스턴스를 줄이기
 
@@ -316,7 +311,6 @@ class BetterActivity : Activity {
 }
 ```
 
-<a name="Minor_Collections" />
 
 ## <a name="minor-collections"></a>보조 컬렉션
 
@@ -329,7 +323,6 @@ class BetterActivity : Activity {
 -  그룹 새로 고침/앱 데이터 동기화에 대 한 네트워크 요청입니다.
 
 
-<a name="Major_Collections" />
 
 ## <a name="major-collections"></a>주요 컬렉션
 
@@ -344,14 +337,12 @@ class BetterActivity : Activity {
 -   내에서 재정의 된 [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) 메서드. 
 
 
-<a name="Diagnostics" />
 
 ## <a name="diagnostics"></a>진단
 
 전역 참조 생성 되 고 삭제 하는 경우를 추적 하려면 설정할 수 있습니다는 [debug.mono.log](~/android/troubleshooting/index.md) 포함 하는 시스템 속성 [ *gref* ](~/android/troubleshooting/index.md) 및/또는 [ *gc*](~/android/troubleshooting/index.md)합니다. 
 
 
-<a name="Configuration" />
 
 ## <a name="configuration"></a>구성
 

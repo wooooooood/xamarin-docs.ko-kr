@@ -1,6 +1,6 @@
 ---
 title: "조각을 사용 하 여 구현"
-description: "Android 3.0에 조각의 도입 되었습니다. 조각은 다른 화면 크기에서 실행 하는 응용 프로그램 작성의 복잡성을 해결 하기 위해 사용 되는 자체 포함 된, 모듈형 구성입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다."
+description: "Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
@@ -8,23 +8,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ebb53398edba64e255f1a534556836df8734ba6f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-with-fragments"></a>조각을 사용 하 여 구현
 
-_Android 3.0에 조각의 도입 되었습니다. 조각은 다른 화면 크기에서 실행 하는 응용 프로그램 작성의 복잡성을 해결 하기 위해 사용 되는 자체 포함 된, 모듈형 구성입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다._
+_Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
 이 섹션의 역할 및 각 선택한 play에서 따옴표의 목록을 표시 하는 응용 프로그램을 만드는 방법을 살펴봅니다. 앱 म 우리의 UI 구성 요소를 한 곳에서 정의할 수 있지만 다음 다양 한 폼에서 사용할 수 있도록 조각이 사용 됩니다. 예를 들어 다음 스크린 샷과 10"태블릿 뿐 아니라 휴대폰 실행 응용 프로그램을 보여 줍니다.
 
-[![태블릿 및 전화에서 실행 되는 예제 앱의 스크린 샷](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![태블릿 및 전화에서 실행 되는 예제 앱의 스크린 샷](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 이 섹션에서는 다음 항목을 설명 합니다.
 
@@ -34,13 +33,11 @@ _Android 3.0에 조각의 도입 되었습니다. 조각은 다른 화면 크기
 
 - **Android 지원 패키지를 사용 하 여** &ndash; 하므로 이전 버전의 Android에서 실행 하는 응용 프로그램에서 활동을 몇 가지 사소한 변경 하 한 다음 Android 지원 패키지를 구현 합니다.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
 이 연습에서는 Xamarin.Android 4.0 이상이 필요 합니다. 또한 됩니다 Android 지원 패키지를 설치 하는 데 필요한 조각 설명서에 설명 된 대로 합니다.
 
-<a name="Introduction" />
 
 ## <a name="introduction"></a>소개
 

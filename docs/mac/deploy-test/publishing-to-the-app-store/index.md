@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0846dc8bdb3ac722838faa4173f5d30233912ecc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
 
@@ -32,7 +32,7 @@ Xamarin.Mac 앱은 두 가지 방법으로 배포할 수 있습니다.
 
 [Mac 개발자 프로그램](https://developer.apple.com/devcenter/mac/)에 가입하는 개발자는 아래 스크린샷처럼 개인으로 가입할 것인지 아니면 회사로 가입할 것인지 선택할 수 있습니다.
 
-[![Apple 개발자 포털](images/image1.png "Apple 개발자 포털")](images/image1-large.png)
+[![Apple 개발자 포털](images/image1.png "Apple 개발자 포털")](images/image1-large.png#lightbox)
 
 상황에 맞는 올바른 등록 형식을 선택합니다.
 

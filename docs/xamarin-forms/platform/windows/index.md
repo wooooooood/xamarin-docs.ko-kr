@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 4385534a6e2ecfc9c908648fa267a543c2313ce0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77290a8c780d7dd5c936af576b39228d91687aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
@@ -32,7 +32,7 @@ Visual Studio에서 올바른 개발 옵션을 설치한 경우 것도 가능 �
 
 
 > [!NOTE]
-> **하지만 참고:** Xamarin.Forms 1.x와 2.x 지원 _Windows Phone 8 Silverlight_ 응용 프로그램 개발이 프로젝트 형식은 사용 되지 않습니다.
+> 하지만 Xamarin.Forms 1.x와 2.x 지원 _Windows Phone 8 Silverlight_ 응용 프로그램 개발이 프로젝트 형식은 사용 되지 않습니다.
 
 
 ## <a name="getting-started"></a>시작

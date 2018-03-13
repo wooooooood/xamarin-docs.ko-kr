@@ -6,11 +6,11 @@ ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 3b07e457bd54f16826f44a3b913434fea6ebe20b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f71da0f522c6c028981637a9797c3836063516f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sample-integrations"></a>샘플 통합
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 02/27/2018
 
 참조는 [주방 싱크] [ KitchenSink] 작업 예제 integration 샘플입니다. 만들기만 하면 `KitchenSink.sln` Mac 또는 Visual Studio를 연 후에 대 한 Visual Studio에서 `KitchenSink.workbook`합니다.
 
-[![주방 싱크 통합 스크린 샷](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png)
+[![주방 싱크 통합 스크린 샷](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
 
 주방 싱크 샘플에는 두 집합 개념을 보여 줍니다.
 

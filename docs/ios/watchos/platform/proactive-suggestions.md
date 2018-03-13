@@ -3,16 +3,16 @@ title: "자동 관리 제안"
 description: "이 문서는 사전 예방적으로 사용자에 게 유용한 정보를 자동으로 표시 하려면 시스템을 허용 하 여 사전 제안 드라이브 engagement에 watchOS 3 응용 프로그램에서 사용 하는 방법을 보여 줍니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>자동 관리 제안
 
@@ -61,7 +61,7 @@ WatchOS 3, 새는 `NSUserActivity` 클래스를 포함 한 `MapItem` 속성을 �
 
 위의 설명 대로 `NSUserActivity` 화면에 사용자가 현재 사용 정보를 이해 하는 시스템을 사용 합니다. `NSUserActivity` 간단한 상태 캐싱 응용 프로그램을 탐색할 때 사용자의 활동을 캡처할 수는 메커니즘입니다. 예를 들어 식당 응용 프로그램을 살펴보면 다음과 같습니다.
 
-[ ![](proactive-suggestions-images/activity02.png "식당 응용 프로그램")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "식당 응용 프로그램")](proactive-suggestions-images/activity02.png#lightbox)
 
 다음과 같은 상호:
 
@@ -71,7 +71,7 @@ WatchOS 3, 새는 `NSUserActivity` 클래스를 포함 한 `MapItem` 속성을 �
 
 마지막 화면에 자세히 살펴보겠습니다.
 
-[ ![](proactive-suggestions-images/activity03.png "NSUserActivity 페이로드")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "NSUserActivity 페이로드")](proactive-suggestions-images/activity03.png#lightbox)
 
 응용 프로그램을 만드는 것 여기는 `NSUserActivity` 및 상태를 나중에 다시 정보로 구성 되었습니다. 응용 프로그램 해당 위치의 이름 및 주소와 같은 일부 메타 데이터도 포함 했습니다. 이 활동과 만든 응용 프로그램에 iOS를 사용자의 현재 상태를 나타내는 것을 알 수 있습니다.
 

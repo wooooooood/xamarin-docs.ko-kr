@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>테이블의 모양 사용자 지정
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/27/2018
 
 이러한 스크린샷 각 스타일 표시 되는 방식을 보여 줍니다.
 
- [ ![](customizing-table-appearance-images/image7.png "이러한 스크린샷 각 스타일 표시 되는 방식을 보여 줍니다.")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "이러한 스크린샷 각 스타일 표시 되는 방식을 보여 줍니다.")](customizing-table-appearance-images/image7.png#lightbox)
 
 샘플 **CellDefaultTable** 이 화면을 생성 하기 위해 코드를 포함 합니다. 셀 스타일에 설정 되어는 `UITableViewCell` 다음과 같은 생성자:
 
@@ -60,7 +60,7 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 다음은 모양을입니다.
 
- [ ![](customizing-table-appearance-images/image8.png "샘플 액세서리")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "샘플 액세서리")](customizing-table-appearance-images/image8.png#lightbox)
 
 설정할 수 있습니다 이러한 accessories 중 하나를 표시 하는 `Accessory` 속성에는 `GetCell` 메서드:
 
@@ -119,7 +119,7 @@ TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 
 CellCustomTable 예제를 구현 하는 `UITableViewCell` 의 사용자 지정 레이아웃을 정의 하는 하위 클래스 `UILabel`s 및 `UIImage` 다른 글꼴 및 색입니다. 결과 셀은 다음과 같습니다.
 
- [ ![](customizing-table-appearance-images/image9.png "사용자 지정 셀 레이아웃")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "사용자 지정 셀 레이아웃")](customizing-table-appearance-images/image9.png#lightbox)
 
 사용자 지정 셀 클래스만 세 가지 방법으로 구성 됩니다.
 

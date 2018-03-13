@@ -3,16 +3,16 @@ title: PhotoKit
 description: "사진 키트 앱을 시스템 이미지 라이브러리를 쿼리하고 보고 내용을 수정 하는 사용자 지정 UI를 만들 수 있습니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
+ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 6f6858f36c30f45225417c78225926906481eb8d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1f316979c3262883fc58df93de1afb1167fd36ce
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="photokit"></a>PhotoKit
 

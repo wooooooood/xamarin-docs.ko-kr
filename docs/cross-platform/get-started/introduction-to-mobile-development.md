@@ -7,28 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f29851f9de410183c6f35d19486e7da8017566a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d3a39070e17729e99614e26e0a8892c6314512af
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-mobile-development"></a>모바일 개발 소개
 
-
 모바일 응용 프로그램 빌드는 IDE를 열고, 함께 준비하고, 신속히 테스트하며 앱 스토어에 제출하는 것처럼 손쉽게 수행할 수 있습니다. 모든 작업이 그 날 완료됩니다. 또는 엄격한 사전 설계, 유용성 테스트, 수천 대의 장치에서 QA 테스트, 전체 베타 주기 및 여러 가지 다른 방식의 배포가 포함된 매우 복잡한 프로세스일 수 있습니다.
-
-이 가이드에서는 다음을 포함하여 Xamarin 모바일 응용 프로그램 빌드에 대한 소개를 자세히 살펴보겠습니다.
-
-1.   [ **Xamarin 소개**](#Introduction_to_Xamarin) – Xamarin 플랫폼의 기능 목록입니다.
-1.   [ **Xamarin 작동 방식**](#How_Does_Xamarin_Work) – Xamarin이 C#을 iOS 및 Android로 가져오는 방법에 대한 간략한 개요입니다.
-1.   [ **시작**](#Sample_App) – Xamarin.Forms를 사용하여 iOS, Android 또는 모든 플랫폼용 Xamarin 앱을 시작하고 빌드합니다.
-
 
 이 문서는 Xamarin 플랫폼을 소개하기 위해 작성되었습니다. 설계부터 테스트에 이르는 모바일 응용 프로그램을 빌드하는 *프로세스*에 대한 자세한 내용은 [모바일 소프트웨어 개발 수명 주기 소개](~/cross-platform/get-started/introduction-to-mobile-sdlc.md) 문서를 참조하세요.
 
 Xamarin을 설치할 수 있는지 확인하려면 [시스템 요구 사항](~/cross-platform/get-started/requirements.md#mac)을 참조하세요.
-
 
 ## <a name="introduction-to-xamarin"></a>Xamarin 소개
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 82151599b92094b816f4763c533ed7746db37920
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>탐색 및 포커스 작업
 
@@ -21,7 +21,7 @@ _이 문서에서는 포커스 및을 나타내고 Xamarin.tvOS 앱 내에서 �
 
 이 문서에서는의 개념을 설명 [포커스](#Focus-and-Selection) 처리 하는 방법 및 [탐색](#Navigation) Xamarin.tvOS 응용 프로그램의 사용자 인터페이스에 있습니다. 기본 제공 tvOS 탐색 컨트롤 Xamarin.tvOS 앱의 사용자 인터페이스 탐색을 제공 포커스, 강조 표시 및 선택 영역을 사용 방법을 검토 합니다.
 
-[ ![](navigation-focus-images/intro01.png "사용자 인터페이스 탐색 tvOS 앱")](navigation-focus-images/intro01.png)
+[![](navigation-focus-images/intro01.png "사용자 인터페이스 탐색 tvOS 앱")](navigation-focus-images/intro01.png#lightbox)
 
 으로 포커스를 사용할 수 있는 방법을 살펴보겠습니다 다음에 살펴보겠습니다 [시차](#Focus-and-Parallax) 및 *계층화 된 이미지* 최종 사용자에 게 현재 탐색 상태에 대 한 시각적 단서 수 있도록 합니다.
 
@@ -35,7 +35,7 @@ Xamarin.tvOS 응용 프로그램의 사용자의 인터페이스를 직접으로
 
 성공적인 tvOS 앱 자체 탐색에 주의 호출 하지 않고 표시 하는 데이터의 구조와 응용 프로그램의 용도 원활 하 게 지원 되는 방식에서 탐색을 구현 합니다. 콘텐츠 및 응용 프로그램 사용자 경험에서 포커스를 그리거나 원형이 사용자 인터페이스 없이 자연스럽 고 친숙 한 느낌 되도록 탐색을 디자인 합니다.
 
-[ ![](navigation-focus-images/nav01.png "TvOS 설정 앱")](navigation-focus-images/nav01.png)
+[![](navigation-focus-images/nav01.png "TvOS 설정 앱")](navigation-focus-images/nav01.png#lightbox)
 
 하지만 일반적으로 Apple TV, 사용자를 사용 하 여 탐색 집합 화면을 통해 각 지정된 된 집합의 콘텐츠를 제공 합니다. 하나 이상의 하위 화면와 같은 표준 UI 컨트롤을 사용 하는 콘텐츠의 모든 새 화면 차례로 발생할 수 있습니다 [단추](~/ios/tvos/user-interface/buttons.md), [탭 막대](~/ios/tvos/user-interface/tab-bars.md), 테이블, [컬렉션 뷰](~/ios/tvos/user-interface/collection-views.md) 또는 [ 분할 뷰](~/ios/tvos/user-interface/split-views.md)합니다.
 
@@ -58,7 +58,7 @@ Apple 앱 tvOS에 대 한 탐색을 설계할 때 다음 염두에서에 두고 
 
 Apple tv, 이미지, 단추 또는 다른 UI 요소 것으로 간주 됩니다 _포커스가_ 때 현재 탐색의 대상입니다.
 
-[ ![](navigation-focus-images/focus01.png "포커스 및 선택 예")](navigation-focus-images/focus01.png)
+[![](navigation-focus-images/focus01.png "포커스 및 선택 예")](navigation-focus-images/focus01.png#lightbox)
 
 여기서는 사용자가 직접 장치의 터치 스크린에 요소가 상호 작용 하는 iOS 장치와 달리 사용자 간에 Siri 원격을 사용 하 여에서 tvOS 요소와 상호 작용 합니다. Apple TV 시키며이 사용자 상호 작용 처리를 사용 하 여 한 _포커스_ 기반 모델입니다.
 
@@ -138,7 +138,7 @@ TvOS에 기본 제공 포커스 엔진은 처리 움직임 가로 및 세로 모
 
 예를 보려면 다음 UI 레이아웃을 수행 합니다.
 
- [ ![](navigation-focus-images/guide01.png "포커스 가이드 예제 사용")](navigation-focus-images/guide01.png)
+ [![](navigation-focus-images/guide01.png "포커스 가이드 예제 사용")](navigation-focus-images/guide01.png#lightbox)
  
 때문에 **추가 정보** 단추와 가로 및 세로 모눈에 속하지는 **구입** 단추는 것이 사용자에 게 액세스할 수 있습니다. 그러나이 쉽게 해결할 수를 사용 하는 _포커스 가이드_ 포커스 엔진에 이동 힌트를 제공할 수 있습니다. 
 
@@ -170,7 +170,7 @@ public override void ViewDidLoad ()
 
 포커스 가이드의 위쪽, 왼쪽, 너비 및 높이 앵커 기준으로 조정 하는 다음으로 **추가 정보** 및 **구입** 서로 배치 하는 단추입니다. 참조
 
-[ ![](navigation-focus-images/guide02.png "예제 포커스 가이드")](navigation-focus-images/guide02.png)
+[![](navigation-focus-images/guide02.png "예제 포커스 가이드")](navigation-focus-images/guide02.png#lightbox)
 
 설정 하 여 만들어지는 새 제약 조건을 활성화 해야 것도 해당 `Active` 속성을 `true`:
 

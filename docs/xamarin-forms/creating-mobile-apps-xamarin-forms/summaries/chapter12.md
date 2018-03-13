@@ -3,14 +3,15 @@ title: "요약 장 12입니다. 스타일"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 168ad0bc2f59f0afd5b457dba38ae39cfa148c89
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9563bc811250038e8932067280a8e5292a379077
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-12-styles"></a>요약 장 12입니다. 스타일
 
@@ -30,7 +31,7 @@ XAML에서는 `Property` 설정은 CLR 속성의 이름입니다 (같은 `Text` 
 
 [ **BasicStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) 프로그램의 기본 구문을 보여 주는 및 참조 하는 방법을 보여 줍니다.는 `Style` 와 `StaticResource` 태그 확장:
 
-[![기본 스타일의 삼중 스크린 샷](images/ch12fg01-small.png "기본 스타일이")](images/ch12fg01-large.png "기본 스타일")
+[![기본 스타일의 삼중 스크린 샷](images/ch12fg01-small.png "기본 스타일이")](images/ch12fg01-large.png#lightbox "기본 스타일")
 
 `Style` 개체 및에서 만든 모든 개체는 `Style` 개체로 `Value` 설정 하는 참조 하는 모든 뷰 간에 공유 되 `Style`합니다. `Style` 와 같은 공유할 수 없는 모든 항목을 포함할 수 없습니다는 `View` 파생 클래스입니다.
 

@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>연습-작업 상태를 저장 합니다.
 
@@ -22,7 +22,7 @@ _활동 수명 주기 가이드;의 상태를 저장 이론 설명 했습니다.
 
 열어 보겠습니다는 **ActivityLifecycle_Start** 프로젝트 (에 [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) 샘플)를 빌드하고 실행 합니다. 이 매우 간단한 프로젝트는 활동 수명 주기 및 다양 한 수명 주기 메서드를 호출 하는 방법을 보여 주기 위해 두 개의 활동입니다. 응용 프로그램의 화면을 시작할 때 `MainActivity` 표시 됩니다. 
 
-[ ![활동 A 화면](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![활동 A 화면](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>보기 상태 전환
 
@@ -48,7 +48,7 @@ _활동 수명 주기 가이드;의 상태를 저장 이론 설명 했습니다.
 
 결과적으로, *활동 B* 시작 되 고 대신 표시할 *활동 A*: 
 
-[ ![활동 B 화면](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![활동 B 화면](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 클릭는 **다시** 단추를 *활동 B* 소멸 되 고 *활동 A* 이 다시 시작: 
 
@@ -62,7 +62,7 @@ _활동 수명 주기 가이드;의 상태를 저장 이론 설명 했습니다.
 ```
 ### <a name="adding-a-click-counter"></a>클릭 하 여 카운터를 추가합니다.
 
-다음으로 계산 하 고 클릭 횟수를 표시 하는 단추 할 수 있도록 응용 프로그램을 변경 하려고 합니다. 첫째, 추가 하겠습니다.는 `_counter` 인스턴스 변수를 `MainActivity`: 
+다음으로 계산 하 고 클릭 횟수를 표시 하는 단추 할 수 있도록 응용 프로그램을 변경 하려고 합니다. 첫째, 추가 하겠습니다.는 `_counter` 인스턴스 변수를 `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 값을 표시를 증가 시킨 경우 구축 하 고 앱을 다시 실행 새 하는 단추가 표시 `_counter` 클릭할 때마다에:
 
-[![터치 개수를 추가 합니다.](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![터치 개수를 추가 합니다.](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 하지만 가로 모드로 장치를 회전할 우리 경우이 카운트는 손실 됩니다.
 
-[ ![카운트를 0으로 설정 가로 방향으로 회전](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![카운트를 0으로 설정 가로 방향으로 회전](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 응용 프로그램 출력을 검사 하 것을 확인할 *활동 A* 가 일시 중지, 중지, 삭제, 다시, 다시 시작 세로에서 가로 모드를 회전 하는 동안 다시 시작 합니다. 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 작성 하 고 응용 프로그램을 다시 실행 한 후 두 번째 단추를 몇 번 클릭 합니다. 가로 모드로 장치를 회전할 म 개수가 유지 됩니다!
 
-[ ![보존 4의 수를 보여 주는 화면을 회전](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![보존 4의 수를 보여 주는 화면을 회전](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 발생 한 내용을 확인할 수 있는 출력 창에 살펴보겠습니다.
@@ -181,5 +181,5 @@ if (bundle != null)
 ## <a name="related-links"></a>관련 링크
 
 - [ActivityLifecycle (샘플)](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
-- [활동 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
+- [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Android 활동](https://developer.xamarin.com/api/type/Android.App.Activity/)

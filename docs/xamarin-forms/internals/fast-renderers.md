@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 92a11ebe983840270d3679fd11f5faa0b8222cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956fa919ef9aa994fea92a9a64ca1325819f3ffc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fast-renderers"></a>빠른 렌더러
 
@@ -40,7 +40,7 @@ Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> **참고**: 빠른 렌더러는 에서만 앱 compat Android 백엔드에 적용할 수 있으므로 이전 응용 프로그램 호환성 활동에이 설정이 무시 됩니다.
+> 빠른 렌더러 앱 compat Android 백엔드에 적용할 수만 되므로 이전 응용 프로그램 호환성 활동에이 설정이 무시 됩니다.
 
 레이아웃의 복잡성에 따라 각 응용 프로그램에 대 한 성능 향상 달라 집니다. 예를 들어, x2의 성능 향상은 스크롤할 때 가능한 한 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 수천 빠른 렌더러를 사용 하는 컨트롤의 각 행의 셀을 수행 되는, 데이터의 행을 포함 하는 결과에 시각적으로 부드러운 스크롤입니다.
 

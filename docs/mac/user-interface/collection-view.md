@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: d8fa54f23dfea063fa25f6e26e2df2c2ed82101e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>컬렉션 뷰
 
@@ -22,7 +22,7 @@ C# 및.NET 개발자 Xamarin.Mac 응용 프로그램에서 작업에 동일 하 
 
 A `NSCollectionView` 사용 하 여 구성 하는 하위 뷰가 표를 표시 한 `NSCollectionViewLayout`합니다. 눈금에서 각 하위 뷰로 표시 됩니다는 `NSCollectionViewItem` 관리 보기의 콘텐츠를 로드 하는 `.xib` 파일입니다.
 
-[ ![실행 하는 예제 응용 프로그램](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![실행 하는 예제 응용 프로그램](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 이 문서에서는 컬렉션 뷰 Xamarin.Mac 응용 프로그램에서 작업의 기본 사항을 설명 합니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 그대로 섹션에서는 주요 개념 및이 문서 전체에서 사용 되는 기술을 설명 합니다.
 
@@ -821,4 +821,4 @@ public override void ViewDidLoad()
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

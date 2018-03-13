@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5a5072d7f07fa7e426a14d3ac841e775d872acff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cb87593b63e28c01beacdea479cc9d6ec4aceb9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="validation"></a>유효성 검사
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/28/2018
 
 ViewModel 모델 (MVVM)의 컨텍스트에서 패턴을 보기 모델 또는 모델 데이터 유효성 검사를 수행 하 고 보기에 유효성 검사 오류를 해결할 수 있도록 신호를 자주 필요 합니다. EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 고는 사용자에 게 알리는 오류 메시지를 표시 하 여 유효성 검사 오류가 발생 하는 사용자를 게 알립니다. 이유는 데이터가 올바르지 않습니다. 그림 6-1은 eShopOnContainers 모바일 앱에서 유효성 검사를 수행 하는 클래스를 보여줍니다.
 
-[![](validation-images/validation.png "EShopOnContainers 모바일 앱의 유효성 검사 클래스")](validation-images/validation-large.png "eShopOnContainers 모바일 앱의 유효성 검사 클래스")
+[![](validation-images/validation.png "EShopOnContainers 모바일 앱의 유효성 검사 클래스")](validation-images/validation-large.png#lightbox "eShopOnContainers 모바일 앱의 유효성 검사 클래스")
 
 **그림 6-1**: eShopOnContainers 모바일 앱의 유효성 검사 클래스
 

@@ -3,16 +3,16 @@ title: "이미지"
 description: "이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 이미지와 작업을 수행 합니다. 만들기 및 응용 프로그램의 아이콘을 만드는 데 필요한 및 C# 코드와 Xcode의 인터페이스 작성기에서 이미지를 사용 하 여 이미지를 유지 관리를 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f12b2af0c9325796db63fcd65af135f54277ece0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="images"></a>이미지
 
@@ -34,7 +34,7 @@ _이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 이미지와 �
 
 또한 macOS 응용 프로그램 전체에서 사용할 수 있는 미리 정의 된 이미지 집합을 제공 합니다.
 
-[![예제 응용 프로그램의 실행](image-images/intro01.png "응용 프로그램의 예 실행")](image-images/intro01-large.png)
+[![예제 응용 프로그램의 실행](image-images/intro01.png "응용 프로그램의 예 실행")](image-images/intro01-large.png#lightbox)
 
 이 문서에서는의 기본적인 Xamarin.Mac 응용 프로그램에서 이미지 및 아이콘 사용 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -59,18 +59,18 @@ Xamarin.Mac 응용 프로그램에서 사용할 이미지를 추가할 때 여�
     ![Assets.xcassets 선택](image-images/imageset01.png "는 Assets.xcassets 선택")
 2. 마우스 오른쪽 단추로 클릭는 **자산 목록** 선택 **새 이미지 집합**: 
 
-    [![새 이미지 집합을 추가](image-images/imageset02.png "새 이미지 집합 추가")](image-images/imageset02-large.png)
+    [![새 이미지 집합을 추가](image-images/imageset02.png "새 이미지 집합 추가")](image-images/imageset02-large.png#lightbox)
 3. 새 이미지 집합을 선택 하 고 편집기를 표시 됩니다. 
 
-    [![새 이미지 집합을 선택 하면](image-images/imageset03.png "새 이미지 집합을 선택 하면")](image-images/imageset03-large.png)
+    [![새 이미지 집합을 선택 하면](image-images/imageset03.png "새 이미지 집합을 선택 하면")](image-images/imageset03-large.png#lightbox)
 4. 여기에서 끌어서 이미지에서 다양 한 장치 및 필요한 해결 방법은 각각에 대해 합니다. 
 5. 새 이미지 집합을 두 번 클릭 **이름** 에 **자산 목록** 편집 하려면: 
 
-    [![이름 설정 이미지 편집](image-images/imageset04.png "이미지 편집 집합 이름")](image-images/imageset04-large.png)
+    [![이름 설정 이미지 편집](image-images/imageset04.png "이미지 편집 집합 이름")](image-images/imageset04-large.png#lightbox)
     
 특별 한 **벡터** 클래스에 추가 **이미지 집합** 포함할 수 있도록 하는 _PDF_ 대신에 개별 비트맵 파일을 포함 하 여 casset에서 벡터 이미지 형식 해결 방법은 다릅니다. 에 대 한 단일 벡터 파일을 제공 하이 메서드를 사용 하 여  **@1x**  해상도 (벡터 PDF 파일 형식) 및  **@2x**  및  **@3x**  파일의 버전 컴파일 타임에 생성 되며 응용 프로그램의 번들에 포함 합니다.
 
-[![이미지 편집기 인터페이스 설정](image-images/imageset05.png "이미지 편집기 인터페이스 설정")](image-images/imageset05-large.png)
+[![이미지 편집기 인터페이스 설정](image-images/imageset05.png "이미지 편집기 인터페이스 설정")](image-images/imageset05-large.png#lightbox)
 
 예를 들어, 포함 하는 경우는 `MonkeyIcon.pdf` 150px x 150px, 자산 컴파일할 때 최종 응용 프로그램 번들에 포함 되어 다음과 같은 비트맵의 해결 방법을 통해 벡터 자산 카탈로그의 파일:
 
@@ -115,7 +115,7 @@ Xamarin.Mac 응용 프로그램에서 사용할 이미지를 추가할 때 여�
     ![파일 추가](image-images/add01.png "파일 추가")
 2. **파일 추가** 대화 상자에서 이미지 파일을 프로젝트에 추가 하려면 선택 `BundleResource` 에 대 한는 **재정의 빌드 작업** 클릭는 **열려** 단추:
 
-    [![추가할 파일을 선택 하면](image-images/add02.png "추가할 파일을 선택 합니다.")](image-images/add02-large.png)
+    [![추가할 파일을 선택 하면](image-images/add02.png "추가할 파일을 선택 합니다.")](image-images/add02-large.png#lightbox)
 3. 파일이 없는 경우에 **리소스** 폴더를 묻는 하려는 경우 **복사**, **이동** 또는 **링크** 파일입니다. 되는 모든를 선택할 수 있는 일반적으로 필요 **복사**:
 
     ![추가 작업을 선택 하면](image-images/add04.png "추가 동작 선택")
@@ -164,13 +164,13 @@ Mac에서 실행 되는 하면 Xamarin.Mac 응용 프로그램의 _ImageName_**.
      ![솔루션 패드에서 이미지 리소스](image-images/ib00.png "솔루션 패드에서 이미지 리소스")
 2. 두 번 클릭 하 여 **Main.storyboard** 인터페이스 작성기에서 편집을 위해 열 파일입니다. 
 
-     [![주 스토리 보드 편집](image-images/ib01.png "주 스토리 보드를 편집 합니다.")](image-images/ib01-large.png)
+     [![주 스토리 보드 편집](image-images/ib01.png "주 스토리 보드를 편집 합니다.")](image-images/ib01-large.png#lightbox)
 3. 디자인 화면에 이미지를 사용 하는 UI 요소를 끌어 옵니다 (예를 들어 한 **이미지 도구 모음 항목**): 
 
      ![도구 모음 항목 편집](image-images/ib02.png "도구 모음 항목 편집")
 4. 이미지에 추가 선택 하 고 **리소스** 폴더에는 **이미지 이름** 드롭다운: 
 
-     [![도구 모음 항목에 대 한 이미지를 선택 하면](image-images/ib03.png "도구 모음 항목에 대 한 이미지를 선택 합니다.")](image-images/ib03-large.png)
+     [![도구 모음 항목에 대 한 이미지를 선택 하면](image-images/ib03.png "도구 모음 항목에 대 한 이미지를 선택 합니다.")](image-images/ib03-large.png#lightbox)
 5. 선택한 이미지는 디자인 화면에 표시 됩니다. 
 
      ![도구 모음 편집기에 표시 되는 이미지](image-images/ib04.png "도구 모음 편집기에 표시 되는 이미지")
@@ -205,7 +205,7 @@ MacOS 응용 프로그램의 디자인에 따라, 경우도 아이콘 또는 이
 
 이 효과 얻기 위해 스위치는 _렌더링 모드_ 의 이미지 자산을 **템플릿 이미지**:
 
-[![템플릿 이미지 설정](image-images/templateimage01.png "템플릿 이미지를 설정 합니다.")](image-images/templateimage01-large.png)
+[![템플릿 이미지 설정](image-images/templateimage01.png "템플릿 이미지를 설정 합니다.")](image-images/templateimage01-large.png#lightbox)
 
 Xcode의 인터페이스 작성기에서 이미지 자산 UI 컨트롤에 할당 합니다.
 
@@ -337,7 +337,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 예제 출력:
 
-[![응용 프로그램에서 이미지를 표시의 예가](image-images/tables01.png "응용 프로그램에서 이미지를 표시 하는의 예")](image-images/tables01-large.png)
+[![응용 프로그램에서 이미지를 표시의 예가](image-images/tables01.png "응용 프로그램에서 이미지를 표시 하는의 예")](image-images/tables01-large.png#lightbox)
 
 표 보기를 사용한 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [테이블 뷰](~/mac/user-interface/table-view.md) 설명서입니다.
 
@@ -440,7 +440,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 예제 출력:
 
-[![개요 보기에 표시 되는 이미지의 예로](image-images/outline01.png "개요 보기에 표시 되는 이미지의 예")](image-images/outline01-large.png)
+[![개요 보기에 표시 되는 이미지의 예로](image-images/outline01.png "개요 보기에 표시 되는 이미지의 예")](image-images/outline01-large.png#lightbox)
 
 개요 보기를 사용한 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [개요 뷰](~/mac/user-interface/outline-view.md) 설명서입니다.
 
@@ -453,9 +453,9 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacImages (샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages(샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [테이블 뷰](~/mac/user-interface/table-view.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)
 - [macOS X Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
-- [OS X에 대 한 높은 해상도 대 한](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)
+- [OS X용 고해상도 정보](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)

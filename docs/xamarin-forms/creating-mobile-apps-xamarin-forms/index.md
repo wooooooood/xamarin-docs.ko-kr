@@ -8,15 +8,15 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: b6054b4037b14a73cb5bfe50b619e805fdcf1737
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: caee0d685838f7c0a54e19611fdf72df5730c037
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Xamarin.Forms 책 첫 번째 버전을 사용 하 여 모바일 앱 만들기
 
-<p><img src="Images/Cover-sml.png" title="Xamarin.Forms 책을 사용 하 여 모바일 앱 만들기" align="left"/>최신 설명서 Charles Petzold <i>Xamarin.Forms 사용 하 여 모바일 앱 만들기</i> - (전자)를 눌러야 하 보내 졌으 며 다운로드에 대 한 출시 되었습니다!</p>
+<p><img src="Images/Cover-sml.png" title="Xamarin.Forms 책을 사용 하 여 모바일 앱 만들기" align="left" />최신 설명서 Charles Petzold <i>Xamarin.Forms 사용 하 여 모바일 앱 만들기</i> - (전자)를 눌러야 하 보내 졌으 며 다운로드에 대 한 출시 되었습니다!</p>
 
 이 *첫 번째 버전* 27 장 개이고 Xamarin.Forms에 설명&nbsp;2.x 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러 및 등을 포함 합니다.
 장 28 이기도 이제 사용 가능한 온라인 아래에 나열 된 개별 장 사이입니다.

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: c5bd753aaa3a9e807a03a9fb05b233cfa39d0dc3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6ac9ca7bae517602c33729134eb0bd48359afbc7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-text-to-speech"></a>텍스트 음성 변환 구현
 
@@ -44,7 +44,7 @@ public interface ITextToSpeech
 공유 코드에서이 인터페이스에 대 한 코딩 하면 Xamarin.Forms 앱 각 플랫폼에서 음성 Api에 액세스할 수 있습니다.
 
 > [!NOTE]
-> **참고**: 인터페이스를 구현 하는 클래스를 작성 하려면 매개 변수가 없는 생성자가 있어야는 `DependencyService`합니다.
+> 인터페이스를 구현 하는 클래스를 작성 하려면 매개 변수가 없는 생성자가 있어야는 `DependencyService`합니다.
 
 <a name="iOS_Implementation" />
 
@@ -84,15 +84,12 @@ namespace DependencyServiceSample.iOS
 
 ## <a name="android-implementation"></a>Android 구현
 
-Android 코드는 iOS 버전 보다 더 복잡 한: Android 관련에서 상속 하도록 구현 하는 클래스를 필요로 `Java.Lang.Object` 및 구현 하는 `IOnInitListener` 인터페이스도 합니다.
-
-Xamarin.Forms 제공는 `Forms.Context` 현재 Android 컨텍스트의 인스턴스 개체입니다. 이 많은 Android SDK 메서드 호출 하는 기능을 하는 좋은 예를 제공 하는 요구 `StartActivity()`합니다.
+Android 코드는 iOS 버전 보다 더 복잡 한: Android 관련에서 상속 하도록 구현 하는 클래스를 필요로 `Java.Lang.Object` 및 구현 하는 `IOnInitListener` 인터페이스도 합니다. 에 의해 노출 되는 현재 Android 컨텍스트에 액세스 해야는 `MainActivity.Instance` 속성입니다.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
 namespace DependencyServiceSample.Droid
 {
-
     public class TextToSpeechImplementation : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
     {
         TextToSpeech speaker;
@@ -103,7 +100,7 @@ namespace DependencyServiceSample.Droid
             toSpeak = text;
             if (speaker == null)
             {
-                speaker = new TextToSpeech(Forms.Context, this);
+                speaker = new TextToSpeech(MainActivity.Instance, this);
             }
             else
             {

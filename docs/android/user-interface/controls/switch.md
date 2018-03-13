@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 8bfa599ce0a85897ecaf655c1d4da00fe898bc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cf1c4d749eb85a7e0f4c035e10e2e7a40e0c711
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="switch"></a>전환
 
 `Switch` (아래 참조) 위젯 시작과 같은 두 가지 상태 간에 전환할 수 있습니다. `Switch` 기본값은 OFF입니다. ON 및 OFF 상태 위젯은 다음과 같습니다.
 
-[ ![스위치 위젯 오프 했다가 다시 로그온 상태 스크린샷](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png)
+[![스위치 위젯 오프 했다가 다시 로그온 상태 스크린샷](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
-<a name="Creating_a_Switch" />
 
 ## <a name="creating-a-switch"></a>스위치 만들기
 
@@ -32,9 +31,8 @@ ms.lasthandoff: 02/27/2018
 
 그러면 아래와 같이 기본 스위치를 생성 됩니다.
 
-[ ![꺼짐 상태에는 스위치를 표시 하는 데모 응용 프로그램의 스크린 샷](switch-images/07-switch.png)](switch-images/07-switch.png)
+[![꺼짐 상태에는 스위치를 표시 하는 데모 응용 프로그램의 스크린 샷](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
-<a name="Changing_Default_Values" />
 
 ## <a name="changing-default-values"></a>기본값을 변경
 
@@ -48,7 +46,6 @@ ON 및 OFF 상태에 대 한 컨트롤이 표시 하는 텍스트와 기본값�
         android:textOff="NO" />
 ```
 
- <a name="Providing_a_Title" />
 
 
 ## <a name="providing-a-title"></a>제목을 제공합니다.
@@ -66,7 +63,7 @@ ON 및 OFF 상태에 대 한 컨트롤이 표시 하는 텍스트와 기본값�
 
 이 태그는 런타임 시 다음 스크린 샷에서 생성합니다.
 
-[![가로로 스위치 위젯 앞에 오는 텍스트가 있는 데모 응용 프로그램의 스크린 샷](switch-images/08-switch.png)](switch-images/08-switch.png)
+[![가로로 스위치 위젯 앞에 오는 텍스트가 있는 데모 응용 프로그램의 스크린 샷](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
 경우는 `Switch`의 발생 값이 변경 되는 `CheckedChange` 이벤트입니다.
 예를 들어 다음 코드에서에서는이 이벤트를 캡처하고 제공는 `Toast` 메시지와 함께 widget 기반는 `isChecked` 값 `Switch`의 일환으로 이벤트 처리기로 전달 되는 `CompoundButton.CheckedChangeEventArg` 인수입니다.

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 077be02aacb9d4200db2d2eadf6f7388842b8e29
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unified-storyboards"></a>통합 된 스토리 보드
 
@@ -36,7 +36,7 @@ IOS 8 이전 버전에서 개발자는 다음과 같이 사용 됩니다. `UIInt
 
 두 가지 개념을 함께 사용할 경우 결과 다음 다이어그램에 표시 되는 모두 서로 다른 방향에 사용할 수 있는 다양 한 가능한 크기를 정의 하는 2 x 2 표:
 
- [ ![](unified-storyboards-images/sizeclassgrid.png "일반 연결 및 압축 방향에서 사용할 수 있는 다양 한 가능한 크기를 정의 하는 2 x 2 표")](unified-storyboards-images/sizeclassgrid.png)
+ [![](unified-storyboards-images/sizeclassgrid.png "일반 연결 및 압축 방향에서 사용할 수 있는 다양 한 가능한 크기를 정의 하는 2 x 2 표")](unified-storyboards-images/sizeclassgrid.png#lightbox)
 
 개발자 (처럼 위의 그래픽) 서로 다른 레이아웃으로 발생 하는 네 가지 가능성 중 하나를 사용 하는 보기 컨트롤러를 만들 수 있습니다.
 
@@ -44,14 +44,14 @@ IOS 8 이전 버전에서 개발자는 다음과 같이 사용 됩니다. `UIInt
 
 IPad의 경우 크기 때문에 **일반** 양쪽 방향에 대 한 크기 클래스입니다.
 
- [ ![](unified-storyboards-images/image1.png "iPad 크기 클래스")](unified-storyboards-images/image1.png)
+ [![](unified-storyboards-images/image1.png "iPad 크기 클래스")](unified-storyboards-images/image1.png#lightbox)
 
 
 ### <a name="iphone-size-classes"></a>iPhone 크기 클래스
 
 IPhone에 장치의 방향에 따라 서로 다른 크기 클래스가 있습니다.
 
- [![](unified-storyboards-images/iphonesizeclasses.png "iPhone 크기 클래스")](unified-storyboards-images/iphonesizeclasses.png)
+ [![](unified-storyboards-images/iphonesizeclasses.png "iPhone 크기 클래스")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
 
 -  화면에 장치가 세로 모드일 때는 **압축** 가로로 클래스 및 **일반** 세로로
 -  가로 모드로 장치가 때 화면 클래스 세로 모드에서 취소 됩니다.
@@ -60,7 +60,7 @@ IPhone에 장치의 방향에 따라 서로 다른 크기 클래스가 있습니
 
 크기는 가로 방향의 다르지만 세로 방향으로 작업 하는 경우 이전 Iphone과 동일 합니다.
 
-[![](unified-storyboards-images/iphone6sizeclasses.png "iPhone 6 Plus 크기 클래스")](unified-storyboards-images/iphone6sizeclasses.png)
+[![](unified-storyboards-images/iphone6sizeclasses.png "iPhone 6 Plus 크기 클래스")](unified-storyboards-images/iphone6sizeclasses.png#lightbox)
 
 때문에 iPhone 6 더하기 화면이 작아 화면이 이므로 가로 모드에서 일반 너비 크기 클래스를 사용할 수 있습니다.
 
@@ -104,7 +104,7 @@ IOS를 사용 하는 UI 요소에 이미지를 할당 하는 경우 또는으로
 
 모든 특성 환경 다음 다이어그램에 표시 된 대로 계층 구조를 확인 합니다.
 
- [ ![](unified-storyboards-images/viewhierarchy.png "환경 특성 계층 구조 다이어그램")](unified-storyboards-images/viewhierarchy.png)
+ [![](unified-storyboards-images/viewhierarchy.png "환경 특성 계층 구조 다이어그램")](unified-storyboards-images/viewhierarchy.png#lightbox)
 
 특성 컬렉션의 부모를 자식 환경에서 기본적으로 흐름는 위의 특성 환경의 포함 하는 합니다.
 
@@ -233,17 +233,17 @@ IOS 8에서 가장 많은 변경 된 뷰-컨트롤러 클래스 중 하나는 `U
 
 자식 컨테이너 가로 방향의 iPad에서 분할 뷰 컨트롤러를 보여 주는 다음 그림에서와 같이 아래로 부모 컨테이너에서 성분 환경 계단식 배열:
 
- [ ![](unified-storyboards-images/cascadingclasses01.png "가로 방향의 iPad에서 분할 뷰 컨트롤러")](unified-storyboards-images/cascadingclasses01.png)
+ [![](unified-storyboards-images/cascadingclasses01.png "가로 방향의 iPad에서 분할 뷰 컨트롤러")](unified-storyboards-images/cascadingclasses01.png#lightbox)
 
 IPad 가로 및 세로 방향에서 일반 크기 클래스에 있으므로 분할 보기에는 마스터 및 세부 정보 보기가 표시 됩니다.
 
 여기서 크기 클래스는 두 방향 모두에서 압축, iPhone에서 분할 뷰 컨트롤러만 표시 세부 정보 보기 아래와 같이 합니다.
 
- [ ![](unified-storyboards-images/cascadingclasses02.png "분할 뷰 컨트롤러 세부 정보 보기 표시")](unified-storyboards-images/cascadingclasses02.png)
+ [![](unified-storyboards-images/cascadingclasses02.png "분할 뷰 컨트롤러 세부 정보 보기 표시")](unified-storyboards-images/cascadingclasses02.png#lightbox)
 
 응용 프로그램 개발자가 가로 방향의 iPhone에 마스터 및 세부 정보 보기를 표시 하려고 하는 위치에서 개발자는 분할 뷰 컨트롤러에 대 한 부모 컨테이너를 삽입 하 고 특성 컬렉션을 재정의 해야 합니다. 아래 그림에서와 같이:
 
- [ ![](unified-storyboards-images/cascadingclasses03.png "개발자는 분할 뷰 컨트롤러에 대 한 부모 컨테이너를 삽입 하 고 특성 컬렉션을 재정의 해야 합니다.")](unified-storyboards-images/cascadingclasses03.png)
+ [![](unified-storyboards-images/cascadingclasses03.png "개발자는 분할 뷰 컨트롤러에 대 한 부모 컨테이너를 삽입 하 고 특성 컬렉션을 재정의 해야 합니다.")](unified-storyboards-images/cascadingclasses03.png#lightbox)
 
 A `UIView` 분할 뷰 컨트롤러의 부모로 설정 및 `SetOverrideTraitCollection` 보기에서 새 특성 컬렉션을 전달 하 고 분할 뷰 컨트롤러를 대상으로 메서드를 호출 합니다. 새 특성 컬렉션 재정의 `HorizontalSizeClass`로 설정 `Regular`에 분할 뷰 컨트롤러 가로 방향에 iPhone에서 마스터 및 세부 정보 보기를 표시 합니다.
 
@@ -253,7 +253,7 @@ A `UIView` 분할 뷰 컨트롤러의 부모로 설정 및 `SetOverrideTraitColl
 
 이 섹션에는 특성 컬렉션 특성 환경 변경 될 때 전환 하는 방법에 대해 자세히 설명 모양으로 걸립니다. 예를 들어 때 장치 회전 세로에서 가로로 합니다.
 
- [ ![](unified-storyboards-images/traittransitions01.png "특성 변경 내용 개요 가로 세로")](unified-storyboards-images/traittransitions01.png)
+ [![](unified-storyboards-images/traittransitions01.png "특성 변경 내용 개요 가로 세로")](unified-storyboards-images/traittransitions01.png#lightbox)
 
 첫째, iOS 8을 수행 하려면 전환에 대 한 준비 하려면 몇 가지 설치를 수행 합니다. 다음으로, 시스템 전환 상태에 애니메이션을 적용 합니다. 마지막으로 iOS 8 정리 전환 하는 동안 필요한 모든 임시 상태입니다.
 
@@ -352,7 +352,7 @@ Apple iOS 8 했습니다. 다른 변경 하는 개발자 컨트롤러 보기를 
 
 이 섹션에서는 어떻게 이러한 메서드는 실제로 iOS 8에에서 구현 살펴보겠습니다 해당 메뉴로 이동 합니다. 첫 번째 새에서 살펴보겠습니다 `GetTargetForAction` 메서드:
 
- [ ![](unified-storyboards-images/gettargetforaction.png "새 GetTargetForAction 메서드")](unified-storyboards-images/gettargetforaction.png)
+ [![](unified-storyboards-images/gettargetforaction.png "새 GetTargetForAction 메서드")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
 이 메서드는 올바른 컨테이너 뷰-컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 예:
 
@@ -374,7 +374,7 @@ IOS 8에서에서 Apple Popover 프레젠테이션을 했습니다 ( `UIPopoverP
 
 사용자 지정 표시 스타일을 개발자가 사용자 지정 프레젠테이션 컨트롤러를 사용 하도록 선택할 수 있게 합니다. 이 사용자 지정 컨트롤러 모양 및 동작을 동맹은 뷰의 수정 데 사용할 수 있습니다.
 
-<a name="size-classes">
+<a name="size-classes"/>
 
 ## <a name="working-with-size-classes"></a>크기 클래스 사용
 
@@ -388,7 +388,7 @@ IOS 8에서에서 Apple Popover 프레젠테이션을 했습니다 ( `UIPopoverP
 
 를 실행할 때 적응 사진 응용 프로그램을 사용 하는 iPhone에서 세로에서 가로로 장치를 회전할 때 분할 뷰 컨트롤러의 마스터 및 세부 정보 보기를 표시 됩니다.
 
- [ ![](unified-storyboards-images/rotation.png "분할 뷰 컨트롤러에는 모두 마스터 표시 되 고 그림과 같이 세부 정보 뷰")](unified-storyboards-images/rotation.png)
+ [![](unified-storyboards-images/rotation.png "분할 뷰 컨트롤러에는 모두 마스터 표시 되 고 그림과 같이 세부 정보 뷰")](unified-storyboards-images/rotation.png#lightbox)
 
 재정의 하 여 이렇게는 `UpdateConstraintsForTraitCollection` 의 값을 기반으로 하는 뷰 컨트롤러 및 조정 하는 제약 조건에서 `VerticalSizeClass`합니다. 예:
 
@@ -662,11 +662,11 @@ public override void ViewDidLoad ()
 
 IOS 디자이너 및 검사에에서 변환에 스토리 보드를 열고이 작업을 수행 하는 **사용 크기 클래스** 확인란:
 
- [ ![](unified-storyboards-images/sizeclass01.png "크기 클래스를 사용 확인란")](unified-storyboards-images/sizeclass01.png)
+ [![](unified-storyboards-images/sizeclass01.png "크기 클래스를 사용 확인란")](unified-storyboards-images/sizeclass01.png#lightbox)
 
 IOS 디자이너는 크기 클래스를 사용 하는 스토리 보드의 형식을 변환 하려는 개발자는 확인:
 
- [ ![](unified-storyboards-images/sizeclass02.png "크기 클래스 경고 사용")](unified-storyboards-images/sizeclass02.png)
+ [![](unified-storyboards-images/sizeclass02.png "크기 클래스 경고 사용")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
 > **참고**: 자동 레이아웃 제대로 작동 하려면 크기 클래스에 대 한 선택 해야 합니다.
@@ -675,41 +675,41 @@ IOS 디자이너는 크기 클래스를 사용 하는 스토리 보드의 형식
 
 스토리 보드 크기 클래스를 사용으로 변환 된, 일단 것은 될 다시 표시 디자인 화면에서 및 **다른 이름으로 뷰** 장치 제네릭 됩니다:
 
- [ ![](unified-storyboards-images/sizeclass03.png "일반 장치 유형으로 보기")](unified-storyboards-images/sizeclass03.png)
+ [![](unified-storyboards-images/sizeclass03.png "일반 장치 유형으로 보기")](unified-storyboards-images/sizeclass03.png#lightbox)
 
 일반 장치 유형을 선택 하면, 모든 컨트롤러 보기 600 x 600 사각형으로 크기가 조정 됩니다. 이 사각형 어떤 너비 및 높이 모든 크기를 나타냅니다. 이 모드에서는 iOS 디자이너 이면 편집 내용은 모든 크기 클래스에 적용 됩니다.
 
 개발자는 iPhone로 디자인 화면을 표시 하는 옵션도 있습니다.
 
- [ ![](unified-storyboards-images/sizeclass04.png "IPhone로 디자인 화면을 보기")](unified-storyboards-images/sizeclass04.png)
+ [![](unified-storyboards-images/sizeclass04.png "IPhone로 디자인 화면을 보기")](unified-storyboards-images/sizeclass04.png#lightbox)
 
 또는 iPad로 보기:
 
- [ ![](unified-storyboards-images/sizeclass05.png "IPad로 디자인 화면을 보기")](unified-storyboards-images/sizeclass05.png)
+ [![](unified-storyboards-images/sizeclass05.png "IPad로 디자인 화면을 보기")](unified-storyboards-images/sizeclass05.png#lightbox)
 
 ### <a name="select-a-size-class"></a>크기 클래스 선택
 
 디자인 화면으로 뷰 드롭다운) (근처의 왼쪽 위 모퉁이에 크기 클래스 선택기 단추가입니다. 현재 편집 중인 크기 클래스를 선택 하는 개발자 수 있습니다.
 
- [ ![](unified-storyboards-images/sizeclass06.png "크기 클래스 선택")](unified-storyboards-images/sizeclass06.png)
+ [![](unified-storyboards-images/sizeclass06.png "크기 클래스 선택")](unified-storyboards-images/sizeclass06.png#lightbox)
 
 선택기 크기 클래스 선택 3 x 3 그리드로 표시합니다. 각 표에 사각형 너비 클래스와 높이의 조합을 나타냅니다. 가운데 사각형 Any Width/Any 높이 크기 클래스 (즉, 통합 된 스토리 보드에 대 한 기본 뷰)를 선택 합니다. 이 사각형을 선택 하면 개발자가 다른 구성에 의해 상속 되는 기본 레이아웃을 편집 합니다.
 
 모눈의 왼쪽 위 모퉁이에 있는 사각형 Compact 압축 너비/높이 크기 클래스를 나타냅니다.
 
- [ ![](unified-storyboards-images/sizeclass07.png "Compact 너비/압축 높이 크기 클래스")](unified-storyboards-images/sizeclass07.png)
+ [![](unified-storyboards-images/sizeclass07.png "Compact 너비/압축 높이 크기 클래스")](unified-storyboards-images/sizeclass07.png#lightbox)
 
 이 모드는 가로 방향의 iPhone에 해당합니다. 눈금의 오른쪽 아래 모퉁이에 있는 사각형 iPad를 나타내는 일반 일반 너비/높이 크기 클래스를 나타냅니다.
 
- [ ![](unified-storyboards-images/sizeclass08.png "일반 너비/일반 높이 크기 클래스")](unified-storyboards-images/sizeclass08.png)
+ [![](unified-storyboards-images/sizeclass08.png "일반 너비/일반 높이 크기 클래스")](unified-storyboards-images/sizeclass08.png#lightbox)
 
 세로 방향의 iPhone에 대 한 레이아웃을 편집 하려면 왼쪽 아래 모서리에 있는 사각형을 선택 합니다. Compact 일반 너비/높이 크기 클래스를 나타냅니다.
 
- [ ![](unified-storyboards-images/sizeclass09.png "Compact 너비/일반 높이 크기 클래스")](unified-storyboards-images/sizeclass09.png)
+ [![](unified-storyboards-images/sizeclass09.png "Compact 너비/일반 높이 크기 클래스")](unified-storyboards-images/sizeclass09.png#lightbox)
 
 사각형 선택를 클릭 하 고 디자인 화면 보기 컨트롤러에서 새 선택 항목과 일치 하도록 크기를 변경 합니다.
 
- [ ![](unified-storyboards-images/sizeclass10.png "디자인 화면 보기 컨트롤러에서와 같이 새 선택 항목과 일치 하도록 크기를 변경 합니다.")](unified-storyboards-images/sizeclass10.png)
+ [![](unified-storyboards-images/sizeclass10.png "디자인 화면 보기 컨트롤러에서와 같이 새 선택 항목과 일치 하도록 크기를 변경 합니다.")](unified-storyboards-images/sizeclass10.png#lightbox)
 
 크기 클래스 및 Iphone 및 Ipad에 대 한 레이아웃에 미치는 영향에 자세한 내용은이 문서의 크기 클래스 섹션을 참조 하십시오.
 
@@ -724,49 +724,49 @@ IOS의 예로 마스터 보기 간단한 게임 탐색 메뉴에 있는 분할 �
 
 이 효과 얻기 위해 iOS 디자이너에에서 컨트롤-단추를 클릭 하 고 표시할 보기 컨트롤러에 선을 끌어 합니다. 마우스 단추를 놓으면 선택 `Show Detail` Segue 형식 팝업 메뉴에서:
 
- [ ![](unified-storyboards-images/segue01.png "Segue 형식 팝업 메뉴에서 세부 보기를 선택 합니다.")](unified-storyboards-images/segue01.png)
+ [![](unified-storyboards-images/segue01.png "Segue 형식 팝업 메뉴에서 세부 보기를 선택 합니다.")](unified-storyboards-images/segue01.png#lightbox)
 
 새 segue 단추와 뷰 컨트롤러 사이의 만들어질 수 있습니다. 이제는 iPhone 시뮬레이터에서에서 응용 프로그램을 실행 하 고 기본 메뉴가 표시 됩니다.
 
- [ ![](unified-storyboards-images/segue02.png "주 메뉴")](unified-storyboards-images/segue02.png)
+ [![](unified-storyboards-images/segue02.png "주 메뉴")](unified-storyboards-images/segue02.png#lightbox)
 
 클릭는 **선택 게임** 단추와 해당 항목의 뷰-컨트롤러 탐색 스택에 밀어 넣은 됩니다.
 
- [ ![](unified-storyboards-images/segue03.png "항목 보기 컨트롤러 밀어넣습니다 탐색 스택에 표시 된 것 처럼")](unified-storyboards-images/segue03.png)
+ [![](unified-storyboards-images/segue03.png "항목 보기 컨트롤러 밀어넣습니다 탐색 스택에 표시 된 것 처럼")](unified-storyboards-images/segue03.png#lightbox)
 
 IPhone 시뮬레이터를 중지 하 고 iPad 시뮬레이터에서에서 응용 프로그램을 실행 합니다. 주 가로 방향으로 전환 하 메뉴가 다시 표시 됩니다.
 
- [ ![](unified-storyboards-images/segue04.png "표시 되는 주 메뉴")](unified-storyboards-images/segue04.png)
+ [![](unified-storyboards-images/segue04.png "표시 되는 주 메뉴")](unified-storyboards-images/segue04.png#lightbox)
 
 다시 클릭는 **선택 게임** 단추와 해당 항목의 뷰-컨트롤러 분할 뷰 컨트롤러의 세부 정보 섹션에 표시 됩니다.
 
- [ ![](unified-storyboards-images/segue05.png "뷰-컨트롤러 분할 뷰 컨트롤러의 세부 정보 섹션에 표시 된 항목")](unified-storyboards-images/segue05.png)
+ [![](unified-storyboards-images/segue05.png "뷰-컨트롤러 분할 뷰 컨트롤러의 세부 정보 섹션에 표시 된 항목")](unified-storyboards-images/segue05.png#lightbox)
 
 ### <a name="excluding-an-element-from-a-size-class"></a>크기 클래스에서 요소 제외
 
 지정된 된 요소 (예: 보기, 컨트롤 또는 제약 조건) 특정 크기 클래스 내부에서 필요 없는 경우 경우가 있습니다. 요소를 크기가 클래스에서 제외 하려면에서 제외 하려면 원하는 항목을 선택는 **디자인 화면**합니다. 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는 **기어** 드롭다운 메뉴. 조합을 선택 **너비** 및 **높이** 에서 항목을 제외 하려면:
 
-[ ![](unified-storyboards-images/exclude-a.png "너비 및 높이의 조합을 선택합니다")](unified-storyboards-images/exclude-a.png)
+[![](unified-storyboards-images/exclude-a.png "너비 및 높이의 조합을 선택합니다")](unified-storyboards-images/exclude-a.png#lightbox)
 
 새 *제외 대/소문자* 의 맨 아래에 있는 요소에 추가 됩니다는 **속성 탐색기**합니다. 다음으로 선택 취소 된 **설치 됨** 주어진된 크기 클래스에 대 한 확인란:
 
-[ ![](unified-storyboards-images/exclude-b.png "설치 된 확인란을 선택 취소")](unified-storyboards-images/exclude-b.png)
+[![](unified-storyboards-images/exclude-b.png "설치 된 확인란을 선택 취소")](unified-storyboards-images/exclude-b.png#lightbox)
 
 디자인 화면 너비와 높이 항목에서 제외 된 전환, 지정된 된 크기 클래스 않고 전체 UI 디자인에서 제거 된:
 
- [ ![](unified-storyboards-images/exclude02.png "디자인 화면 너비와 높이 항목에서 제외 된 전환")](unified-storyboards-images/exclude02.png)
+ [![](unified-storyboards-images/exclude02.png "디자인 화면 너비와 높이 항목에서 제외 된 전환")](unified-storyboards-images/exclude02.png#lightbox)
 
 Any Width/Any 높이 크기의 클래스 및 요소로 다시 전환 여전히 설정 되어 있습니다.
 
- [ ![](unified-storyboards-images/exclude03.png "Any Width/Any 높이 크기 클래스로 다시 전환")](unified-storyboards-images/exclude03.png)
+ [![](unified-storyboards-images/exclude03.png "Any Width/Any 높이 크기 클래스로 다시 전환")](unified-storyboards-images/exclude03.png#lightbox)
 
 IPad 시뮬레이터에서에서 응용 프로그램이 실행 되는 요소는 나타납니다.
 
- [ ![](unified-storyboards-images/exclude04.png "표시 된 경우 요소 iPad 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude04.png)
+ [![](unified-storyboards-images/exclude04.png "표시 된 경우 요소 iPad 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude04.png#lightbox)
 
 와 iPhone 시뮬레이터에서 응용 프로그램이 실행 되는 요소 없습니다.
 
- [ ![](unified-storyboards-images/exclude05.png "누락 된 경우 요소 iPhone 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude05.png)
+ [![](unified-storyboards-images/exclude05.png "누락 된 경우 요소 iPhone 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude05.png#lightbox)
 
 요소에서 제외 사례를 제거 하려면에서 요소를 선택 하기만 하면는 **디자인 화면**의 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는  **-** 제거 하는 경우 옆에 있는 단추입니다.
 
@@ -797,48 +797,48 @@ IPad 시뮬레이터에서에서 응용 프로그램이 실행 되는 요소는 
 1. 열기 **Mac 용 Visual Studio** 로드는 **솔루션** 동적 시작 화면을 추가 하려면.
 2. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 `MainStoryboard.storyboard` 파일을 선택 **프로그램** > **Xcode 인터페이스 작성기**:
 
-    [![](unified-storyboards-images/dls01.png "Xcode 인터페이스 작성기로 열기")](unified-storyboards-images/dls01.png)
+    [![](unified-storyboards-images/dls01.png "Xcode 인터페이스 작성기로 열기")](unified-storyboards-images/dls01.png#lightbox)
 3. Xcode에서 선택 **파일** > **새로** > **파일...** :
 
-    [![](unified-storyboards-images/dls02.png "파일 / 새로 만들기")](unified-storyboards-images/dls02.png)
+    [![](unified-storyboards-images/dls02.png "파일 / 새로 만들기")](unified-storyboards-images/dls02.png#lightbox)
 4. 선택 **iOS** > **사용자 인터페이스** > **시작 화면** 클릭는 **다음** 단추:
 
-    [![](unified-storyboards-images/dls03.png "IOS 선택 / 사용자 인터페이스 / 시작 화면")](unified-storyboards-images/dls03.png)
+    [![](unified-storyboards-images/dls03.png "IOS 선택 / 사용자 인터페이스 / 시작 화면")](unified-storyboards-images/dls03.png#lightbox)
 5. 파일 이름을 `LaunchScreen.xib` 클릭는 **만들기** 단추:
 
-    [![](unified-storyboards-images/dls04.png "LaunchScreen.xib 파일 이름")](unified-storyboards-images/dls04.png)
+    [![](unified-storyboards-images/dls04.png "LaunchScreen.xib 파일 이름")](unified-storyboards-images/dls04.png#lightbox)
 6. 그래픽 요소를 추가 하 고 지정 된 장치, 방향 및 화면 크기에 대 한 위치로 레이아웃 제약 조건을 사용 하 여 실행 화면의 디자인을 편집 합니다.
 
-    [![](unified-storyboards-images/dls05.png "편집 실행 화면 디자인")](unified-storyboards-images/dls05.png)
+    [![](unified-storyboards-images/dls05.png "편집 실행 화면 디자인")](unified-storyboards-images/dls05.png#lightbox)
 7. 에 변경 내용을 저장 `LaunchScreen.xib`합니다.
 8. 선택 된 **응용 프로그램 대상** 및 **일반** 탭:
 
-    [![](unified-storyboards-images/dls06.png "일반 탭 및 응용 프로그램 대상 선택")](unified-storyboards-images/dls06.png)
+    [![](unified-storyboards-images/dls06.png "일반 탭 및 응용 프로그램 대상 선택")](unified-storyboards-images/dls06.png#lightbox)
 9. 클릭는 **선택 Info.plist** 단추를 선택는 `Info.plist` 누른 Xamarin 앱에 대 한는 **선택** 단추:
 
-    [![](unified-storyboards-images/dls07.png "Xamarin 앱에 대 한 Info.plist 선택")](unified-storyboards-images/dls07.png)
+    [![](unified-storyboards-images/dls07.png "Xamarin 앱에 대 한 Info.plist 선택")](unified-storyboards-images/dls07.png#lightbox)
 10. 에 **앱 아이콘 및 시작 이미지** 섹션에서 열고는 **시작 화면 파일** 드롭다운 선택는 `LaunchScreen.xib` 위에서 만든:
 
-    [![](unified-storyboards-images/dls08.png "LaunchScreen.xib 선택")](unified-storyboards-images/dls08.png)
+    [![](unified-storyboards-images/dls08.png "LaunchScreen.xib 선택")](unified-storyboards-images/dls08.png#lightbox)
 11. 파일에 변경 내용을 저장 하 고 Mac.에 Visual Studio로 반환 합니다.
 12. Visual Studio for Mac xcode 변경 내용을 동기화 완료 될 때까지 기다립니다.
 13. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **리소스** 폴더와 선택 **추가** > **파일 추가 중...** :
 
-    [![](unified-storyboards-images/dls09.png "선택/추가 파일을 추가 중...")](unified-storyboards-images/dls09.png)
+    [![](unified-storyboards-images/dls09.png "선택/추가 파일을 추가 중...")](unified-storyboards-images/dls09.png#lightbox)
 14. 선택 된 `LaunchScreen.xib` 위에서 만든 파일을 클릭은 **열려** 단추:
 
-    [![](unified-storyboards-images/dls10.png "LaunchScreen.xib 파일 선택")](unified-storyboards-images/dls10.png)
+    [![](unified-storyboards-images/dls10.png "LaunchScreen.xib 파일 선택")](unified-storyboards-images/dls10.png#lightbox)
 15. 응용 프로그램을 빌드합니다.
 
 ### <a name="testing-the-dynamic-launch-screen"></a>동적 실행 화면 테스트
 
 Mac 용 Visual Studio에서 iPhone 4 레 티 나 시뮬레이터를 선택 하 고 응용 프로그램을 실행 합니다. 동적 시작 화면에서 올바른 형식 및 방향을 표시 됩니다.
 
-[![](unified-storyboards-images/dls11.png "세로 방향으로 표시 되는 동적 시작 화면")](unified-storyboards-images/dls11.png)
+[![](unified-storyboards-images/dls11.png "세로 방향으로 표시 되는 동적 시작 화면")](unified-storyboards-images/dls11.png#lightbox)
 
 Mac 용 Visual Studio에서 응용 프로그램을 중지 하 고 iOS 8 iPad 장치를 선택 합니다. 응용 프로그램을 실행 하 고 실행 화면 올바르게 포맷할이 장치와 방향에 대 한 키를 누릅니다.
 
-[![](unified-storyboards-images/dls12.png "가로 방향으로 표시 되는 동적 시작 화면")](unified-storyboards-images/dls12.png)
+[![](unified-storyboards-images/dls12.png "가로 방향으로 표시 되는 동적 시작 화면")](unified-storyboards-images/dls12.png#lightbox)
 
 Mac 용 Visual Studio로 반환 하 고 응용 프로그램이 실행을 중지 합니다.
 
@@ -859,7 +859,7 @@ Xamarin에서 동적 시작 화면의 구현을 보려면는 [동적 시작 화�
 - [적응 사진 (샘플)](https://developer.xamarin.com/samples/monotouch/ios8/AdaptivePhotos/)
 - [StoryboardIntro 샘플](https://developer.xamarin.com/samples/monotouch/StoryboardIntro/)
 - [동적 시작 화면 (샘플)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
-- [IOS 8 소개](~/ios/platform/introduction-to-ios8.md)
+- [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [IOS8-발전 2014 (비디오)에서 동적 레이아웃](http://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)
 - [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset)

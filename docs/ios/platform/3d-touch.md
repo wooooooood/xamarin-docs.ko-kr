@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 66cc67b38d70992fe815732407317fab3dc52528
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-3d-touch"></a>3D 터치 소개
 
 _이 문서에서는 새를 사용 하 여 응용 프로그램에서 iPhone 6s 및 iPhone 6s Plus 3D 터치 제스처입니다._
 
-[ ![](3d-touch-images/info01.png "3D 터치의 예로 응용 프로그램을 사용 하도록 설정")](3d-touch-images/info01.png)
+[![](3d-touch-images/info01.png "3D 터치의 예로 응용 프로그램을 사용 하도록 설정")](3d-touch-images/info01.png#lightbox)
 
 이 문서에서는 제공 압력 중요 한 제스처 6s 및 iPhone 6s 새 iPhone에서 실행 되는 Xamarin.iOS 앱에 추가할 새 3D 터치 Api를 사용 하는 소개 하 고 장치 및 합니다.
 
@@ -29,7 +29,7 @@ _이 문서에서는 새를 사용 하 여 응용 프로그램에서 iPhone 6s �
 - [압력 감지](#Pressure-Sensitivity) -앱이 얼마나 측정할 이제 수 또는 light 사용자 화면을 수행 하십시오 활용 해당 정보에 연결 되어 있습니다.
   예를 들어 그리기 응용 프로그램 사용자는 화면을 터치가 얼마나 살 기반으로 또는 두꺼울수록 줄을 가능 합니다.
 - [피크 (peek) 및 팝](#Peek-and-Pop) -응용 프로그램 사용자가 자신의 현재 컨텍스트 외부 이동 하지 않고도 데이터와 상호 작용할 수 이제 수 있습니다. 키를 눌러 화면 화면에 하드, (예: 메시지를 미리 보기) 관심 있는 항목을 피킹할 수 있습니다. 키를 눌러 쉽다는 점, 항목으로 팝 수 있습니다.
-- [빠른 작업](#Quick-Action) -수 수 팝 접속 데스크톱 응용 프로그램에서 해당 항목의 누를 때 있는 상황에 맞는 메뉴와 같은 빠른의 작업의 생각 합니다.
+- [빠른 작업](#Quick-Actions) -수 수 팝 접속 데스크톱 응용 프로그램에서 해당 항목의 누를 때 있는 상황에 맞는 메뉴와 같은 빠른의 작업의 생각 합니다.
   빠른 작업을 사용 하 여 추가할 수 있습니다 바로 가기를 함수에 응용 프로그램의 홈 화면에서 앱 아이콘에서 직접.
 - [시뮬레이터에서 3D 터치 테스트](#Testing-3D-Touch-in-the-Simulator) -올바른 Mac 하드웨어와 iOS 시뮬레이터에서에서 3D 터치 사용 앱을 테스트할 수 있습니다.
 
@@ -39,7 +39,7 @@ _이 문서에서는 새를 사용 하 여 응용 프로그램에서 iPhone 6s �
 
 새 속성을 사용 하 여 설명한 것 처럼는 [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) 클래스 iOS 장치 화면에 적용 하는 사용자 압력을 측정 하 고 사용자 인터페이스에서이 정보를 사용할 수 있습니다. 예를 들어 브러시 스트로크 더 투명 또는 불투명 따라에 않고 압력입니다.
 
-[ ![](3d-touch-images/pressure01.png "가 중 정도가 금액을 기준으로 하는 브러시 스트로크 같이 더 투명 또는 불투명 렌더링")](3d-touch-images/pressure01.png)
+[![](3d-touch-images/pressure01.png "가 중 정도가 금액을 기준으로 하는 브러시 스트로크 같이 더 투명 또는 불투명 렌더링")](3d-touch-images/pressure01.png#lightbox)
 
 3D 터치 결과로 경우 앱이 iOS 9 (또는 그 이상)에서 실행 되 고 iOS 장치 지원 3D 터치 수 압력의 변경 하면는 `TouchesMoved` 이벤트를 발생 합니다.
 
@@ -80,7 +80,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 예를 들어 응용 프로그램은 메시지의 테이블에 표시 하는 경우 사용자를 누를 수 오버레이 보기에서 해당 콘텐츠를 미리 보려면 항목에 하드 (Apple로 참조 하는 *피킹*).
 
-[ ![](3d-touch-images/peekandpop01.png "콘텐츠 보기의 예")](3d-touch-images/peekandpop01.png)
+[![](3d-touch-images/peekandpop01.png "콘텐츠 보기의 예")](3d-touch-images/peekandpop01.png#lightbox)
 
 일반 메시지 보기를 입력 누르면 쉽다는 점 (하 라고 *팝*-보기에는 ping).
 
@@ -208,9 +208,8 @@ public override void ViewDidLoad ()
 
 위에서 설명 했 듯이 수 수 팝 접속 데스크톱 응용 프로그램에서 해당 항목의 누를 때 있는 상황에 맞는 메뉴와 같은 빠른 작업 생각할 수 있습니다. 빠른 작업을 사용 하 여 가장 일반적인 함수 또는 앱의 기능에 바로 가기를 제공 해야 합니다.
 
-[ ![](3d-touch-images/quickactions01.png "바로 가기 메뉴의 예")](3d-touch-images/quickactions01.png)
+[![](3d-touch-images/quickactions01.png "바로 가기 메뉴의 예")](3d-touch-images/quickactions01.png#lightbox)
 
-<a name="Defining-Static-Quick-Actions" />
 
 ### <a name="defining-static-quick-actions"></a>정적 빠른 작업 정의
 
@@ -287,7 +286,6 @@ public override void ViewDidLoad ()
 
 
 
-<a name="Identifying-Quick-Action-Items" />
 
 ### <a name="identifying-quick-action-items"></a>빠른 작업 항목 식별
 
@@ -389,7 +387,6 @@ public override void PerformActionForShortcutItem (UIApplication application, UI
 
 마지막으로, 앱이 이미 실행 중인 경우는 `PerformActionForShortcutItem` 메서드를 호출 하 여 재정의 하 고 호출 하므로 빠른 작업 항목을 처리 하는 우리의 `HandleShortcutItem` 메서드 여기에도 합니다.
 
-<a name="Creating-Dynamic-Quick-Action-Items" />
 
 ### <a name="creating-dynamic-quick-action-items"></a>동적 빠른 작업 항목 만들기
 
@@ -442,7 +439,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 시뮬레이션 된 iPhone 지 원하는 하드웨어에 3D 터치에이 기능을 사용 하려면 모든 앱을 실행 (iPhone 6s 이상)입니다. 다음으로, 선택는 **하드웨어** 의 ios 시뮬레이터를 사용 하도록 설정한 메뉴는 **3D 터치에 대 한 트랙 패드 Force를 사용 하 여** 메뉴 항목:
 
-[ ![](3d-touch-images/simulator01.png "IOS 시뮬레이터에서에서 하드웨어 메뉴를 선택 하 고 3D 터치 메뉴 항목에 대 한 사용 트랙 패드 Force를 사용 하도록 설정")](3d-touch-images/simulator01.png)
+[![](3d-touch-images/simulator01.png "IOS 시뮬레이터에서에서 하드웨어 메뉴를 선택 하 고 3D 터치 메뉴 항목에 대 한 사용 트랙 패드 Force를 사용 하도록 설정")](3d-touch-images/simulator01.png#lightbox)
 
 현재이 기능을 누르면 더 어려워지므로 Mac의 트랙 패드에서 3D 터치 있는 것 처럼 iPhone 실제 하드웨어에서 사용할 수 있도록 합니다.
 

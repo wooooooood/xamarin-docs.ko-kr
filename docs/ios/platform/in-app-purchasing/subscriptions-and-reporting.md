@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8bf47f1edfd4256e25c7af8ce2970ad1918b8027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 237a986d6db2fb6984e99c6265fbbc212b35a351
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="subscriptions-and-reporting"></a>구독 및 보고
 
@@ -53,17 +53,17 @@ Server-Delivered 제품 워크플로 사용 하 여 자동 갱신 가능한 구�
 
 ITunes Connect 홈 페이지 선택에서에서 **My Apps**:   
    
- [ ![](subscriptions-and-reporting-images/image2.png "My Apps 선택")](subscriptions-and-reporting-images/image2.png)  
+ [![](subscriptions-and-reporting-images/image2.png "내 앱 선택")](subscriptions-and-reporting-images/image2.png#lightbox)  
  
 응용 프로그램을 선택 하 고 클릭는 **앱에서 바로 구매** 탭:
 
-[ ![](subscriptions-and-reporting-images/image6.png "내 앱에서 바로 구매 탭을 클릭")](subscriptions-and-reporting-images/image6.png)
+[![](subscriptions-and-reporting-images/image6.png "내 앱에서 바로 구매 탭을 클릭")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 페이지 아래쪽에서 선택 **보기는 공유 암호 생성 또는**:
    
- [ ![](subscriptions-and-reporting-images/image40.png "보기를 선택 하거나 공유 암호를 생성 합니다.")](subscriptions-and-reporting-images/image40.png)
+ [![](subscriptions-and-reporting-images/image40.png "보기를 선택 하거나 공유 암호를 생성 합니다.")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [ ![](subscriptions-and-reporting-images/image41.png "공유 암호를 생성 합니다.")](subscriptions-and-reporting-images/image41.png)   
+ [![](subscriptions-and-reporting-images/image41.png "공유 암호를 생성 합니다.")](subscriptions-and-reporting-images/image41.png#lightbox)   
    
    
    
@@ -115,9 +115,9 @@ iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com))를 �
 
 판매 및 추세 보고서 예제는 다음과 같습니다.   
 
- [ ![](subscriptions-and-reporting-images/image42.png "판매 및 추세 보고서 예제")](subscriptions-and-reporting-images/image42.png)   
+ [![](subscriptions-and-reporting-images/image42.png "판매 및 추세 보고서 예제")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
  또한는 [ **체 연결 모바일**iOS 앱 (iTunes 링크)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8)합니다.
 일부 제공 되는 통계에 대 한 iPhone 스크린샷은 다음과 같습니다.   
    
- [ ![](subscriptions-and-reporting-images/image43.png "일부 제공 되는 통계에 대 한 iPhone 스크린 샷")](subscriptions-and-reporting-images/image43.png)
+ [![](subscriptions-and-reporting-images/image43.png "일부 제공 되는 통계에 대 한 iPhone 스크린 샷")](subscriptions-and-reporting-images/image43.png#lightbox)

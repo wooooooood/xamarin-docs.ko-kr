@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 053696ebf37e73e3b121e2aa52b80b7ea1b8ed64
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f870cda73625197fb15bf19be1cdabbd675124d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 응용 프로그램 레이아웃
 
@@ -41,7 +41,7 @@ Xamarin.Forms 템플릿을 구성 하 여 iPad 지원을 자동으로 포함 된
 IOS 9 하기 전에 모든 앱은 장치에서 전체 화면을 걸린 일부 Ipad 수행할 수 있지만 [화면 멀티태스킹 분할](~/ios/platform/multitasking.md)합니다.
 즉, 앱이 화면에서 화면 또는 전체 화면 너비의 50% 측면에 slim 열만 걸릴 수 있습니다.
 
-[ ![](tablet-images/ipad-sml.png "iPad 분할 화면 예제")](tablet-images/ipad.png "iPad 분할 화면 예제")
+[![](tablet-images/ipad-sml.png "iPad 분할 화면 예제")](tablet-images/ipad.png#lightbox "iPad 분할 화면 예제")
 
 화면 분할 기능 의미 넓거나으로 1366 픽셀 너비를 적게 320 픽셀 함께 사용할 수 있는 응용 프로그램을 디자인 해야 합니다.
 
@@ -63,7 +63,7 @@ Android 에코 시스템의 큰 태블릿까지 작은 휴대폰에서 지원 �
 
 Windows 태블릿 및 데스크톱에서 실행 되는 앱을 조정할 수 있는 임의의 차원에 뿐만 아니라 전체 화면을 실행 합니다.
 
-[ ![](tablet-images/splitscreen-sml.png "Windows 분할 화면 예제")](tablet-images/splitscreen.png "Windows 분할 화면 예제")
+[![](tablet-images/splitscreen-sml.png "Windows 분할 화면 예제")](tablet-images/splitscreen.png#lightbox "Windows 분할 화면 예제")
 
 
 <a name="optimize" />

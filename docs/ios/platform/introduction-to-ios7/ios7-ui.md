@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 6df47bd54611feedd0d355a976a055d62f37afeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -146,7 +146,7 @@ IOS 7에 대 한 응용 프로그램을 준비 하는 경우, 다시 정렬할 �
 
  `TopLayoutGuide` 및 `BottomLayoutGuide` 콘텐츠 하지 겹치는 반투명 되도록 보기를 시작 하거나 끝낼 수 위치에 대 한 참조를 토대로 `UIKit` 다음 예제와 같이 모음:
 
- [ ![](ios7-ui-images/clipped.png "샘플 콘텐츠 반투명 UIKit 막대로 겹쳐진 하지")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "샘플 콘텐츠 반투명 UIKit 막대로 겹쳐진 하지")](ios7-ui-images/clipped.png#lightbox)
 
 이러한 Api 위나 아래 화면에서 보기의 치환 계산에 사용할 수 있으며 내용 배치를 적절 하 게 조정:
 
@@ -166,7 +166,7 @@ public override void ViewDidLayoutSubviews ()
 
 설정 하려면 위에 계산 된 값을 사용할 수 있습니다이 `ImageView`의 하므로 전체 이미지를 볼 수는 화면 맨 위에서부터 위치 변경:
 
- [ ![](ios7-ui-images/good2.png "화면 맨 위에서부터 예제 ImageViews 위치 변경")](ios7-ui-images/good2.png)
+ [![](ios7-ui-images/good2.png "화면 맨 위에서부터 예제 ImageViews 위치 변경")](ios7-ui-images/good2.png#lightbox)
 
 참조는 [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) 작업 샘플입니다.
 
@@ -179,15 +179,15 @@ public override void ViewDidLayoutSubviews ()
 
 이 API는 뷰의 가장자리 확장 해야 전체 화면으로에 관계 없이 투명도 막대를 지정 합니다. IOS 7에서에서 탐색 모음 및 도구 모음 표시 위의 계층에 컨트롤러의 뷰-달리 이전 ios에서 버전을 여기서 동일한 공간을 차지 하지 않았습니다. IOS 7 사진 응용 프로그램에서는 기본 `UIViewController.EdgesForExtendedLayout` 값 `UIRectEdge.All`합니다. 이 설정은 겹치는 및 전체 화면 효과 만드는 콘텐츠, 보기에서 모든 네 가장자리를 채웁니다.
 
- [ ![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png)
+ [![](ios7-ui-images/photos.png "샘플 EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
 이미지를 눌러 막대를 제거 하 고 이미지 전체 화면을 보여 줍니다.
 
- [ ![](ios7-ui-images/photos2.png "제거 막대 EdgesForExtendedLayout")](ios7-ui-images/photos2.png)
+ [![](ios7-ui-images/photos2.png "제거 막대 EdgesForExtendedLayout")](ios7-ui-images/photos2.png#lightbox)
 
 전체 화면 콘텐츠 기본값 이기 때문에 아래 스크린샷에서 같이 잘린 보기의 일부 iOS 6에 대해 구성 된 응용 프로그램에 적용 됩니다.
 
- [ ![](ios7-ui-images/clipped.png "IOS 6에 대해 구성 된 앱이이 스크린샷에서 같이 잘린 보기의 일부를 갖습니다 합니다.")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "IOS 6에 대해 구성 된 앱이이 스크린샷에서 같이 잘린 보기의 일부를 갖습니다 합니다.")](ios7-ui-images/clipped.png#lightbox)
 
 수정 된 `UIViewController.EdgesForExtendedLayout` 이 동작에 대 한 속성을 조정 합니다. 지정 하 고 있는지 보기 채우지 모든 가장자리 시각 탐색 또는 도구 모음 (모든 방향)에서 사용 하는 공간에 콘텐츠를 표시 하지 않습니다.
 
@@ -199,7 +199,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 앱에서 보겠습니다 뷰 위치를 조정한 다시 하므로 전체 이미지를 볼 수 있습니다.
 
- [ ![](ios7-ui-images/good.png "전체 이미지를 볼 수 있는 예제")](ios7-ui-images/good.png)
+ [![](ios7-ui-images/good.png "전체 이미지를 볼 수 있는 예제")](ios7-ui-images/good.png#lightbox)
 
 하지만의 효과 `TopLayoutGuide/BottomLayoutGuide` 및 `EdgesForExtendedLayout` Api와 유사한는, 보관 다른 목표를 입력 합니다. 변경 된 `EdgesForExtendedLayout` 기본에서 설정은 6, iOS 용으로 설계 된 응용 프로그램에서 잘린된 뷰를 해결할 수 있습니다 하지만 좋은 iOS 7 디자인 해야 전체 화면 좋게를 인식 하 고는 전체 화면 보기 경험, 의존 제공 `TopLayoutGuide` 및 `BottomLayoutGuide`제대로 의미는를 편하게 위치에 사용자를 조작할 수 있는 콘텐츠를 위치입니다.
 

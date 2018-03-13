@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e5ff4e3732476415ff32e98b8281f3cb6e03e332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manual-camera-controls"></a>수동 카메라 컨트롤
 
@@ -26,7 +26,7 @@ _AVFoundation 프레임 워크를 사용 하면 사용자가 수동 카메라 �
 
 비디오 또는 여전히 iOS 장치에서 카메라를 사용 하 여 이미지를 가져와 여부를 이러한 이미지를 캡처하는 데 사용 프로세스는 대부분 동일 합니다. 기본 자동 카메라 컨트롤 또는 새 수동 카메라 컨트롤을 활용 하는 스토리를 사용 하는 응용 프로그램에 해당 됩니다.
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "AVFoundation 캡처 개체 개요")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "AVFoundation 캡처 개체 개요")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 입력에서 가져온 것는 `AVCaptureDeviceInput` 에 `AVCaptureSession` 통해는 `AVCaptureConnection`합니다. 결과 여전히 이미지 또는 비디오 스트림으로 출력 중 하나입니다. 전체 프로세스에 의해 제어 되는 `AVCaptureDevice`합니다.
 
@@ -280,11 +280,11 @@ AV 캡처 세션의 라이브 비디오 iOS 장치 카메라에서 기록을 제
 
 예를 들어 전문 작가 달성 하기 위해 이미지의 포커스를 부드럽게 수는 [Bokeh 효과](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "Bokeh 효과")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "Bokeh 효과")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 또는 만들는 [포커스 끌어오기 효과](http://www.mediacollege.com/video/camera/focus/pull.html), 같은:
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "포커스 끌어오기 효과")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "포커스 끌어오기 효과")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 과학자 또는 의료 응용 프로그램의 작성자에 대 한 응용 프로그램 수 프로그래밍 방식으로 실험 렌즈를 이동 하려고 합니다. 어떤 방법을 사용 하는 새로운 API 이미지 때 포커스에 대 한 제어를 적용 하려면 응용 프로그램 또는 최종 사용자가 수행 하는 것을 허용 합니다.
 
@@ -292,7 +292,7 @@ AV 캡처 세션의 라이브 비디오 iOS 장치 카메라에서 기록을 제
 
 IOS 8 응용 프로그램에서 포커스 제어의 세부 정보를 설명 하기 전에 합니다. 포커스 iOS 장치에서 작동 하는 방법을 빠르게 살펴보겠습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "IOS 장치에서 포커스의 작동 방식")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "IOS 장치에서 포커스의 작동 방식")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 밝은 테마 이미지 센서에 포커스가가 iOS 장치에서 카메라 렌즈를 입력 합니다. 여기서는 중점이 (이미지 표시 되는 위치는 가장 선명한 영역), 관계에는 센서에 렌즈 센서 컨트롤에서의 거리입니다. 멀리 렌즈를 확인 하는 센서에서 거리 개체 가장 선명 하 게 보일 있고, 개체 근처에 가깝게 울 가장 선명 하 게 합니다.
 
@@ -358,7 +358,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 현재 위치에서 일반 AV 캡처 설치 코드와는 `UIViewController` 응용 프로그램의 스토리 보드에 추가 하 고 다음과 같이 구성할 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 뷰는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
@@ -491,10 +491,10 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
   
 1. Auto 모드에서 카메라로 슬라이더 카메라 포커스를 조정 하는 대로 자동으로 이동 합니다.
 
-    [![](intro-to-manual-camera-controls-images/image6.png "이 샘플 응용 프로그램에 포커스를 조정 하는 카메라도 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image6.png)
+    [![](intro-to-manual-camera-controls-images/image6.png "이 샘플 응용 프로그램에 포커스를 조정 하는 카메라도 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. 잠금 세그먼트 누르고 렌즈 위치를 수동으로 조정 하려면 슬라이더 위치가 끕니다.
 
-    [![](intro-to-manual-camera-controls-images/image7.png "수동으로 렌즈 위치를 조정")](intro-to-manual-camera-controls-images/image7.png)
+    [![](intro-to-manual-camera-controls-images/image7.png "수동으로 렌즈 위치를 조정")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. 응용 프로그램을 중지 합니다.
 
 
@@ -506,7 +506,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 수동 노출 컨트롤을 사용 하는 사용자 어두운 및 moody 비현실적으로 밝은에서 이미지를 사용할 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "샘플 어두운과 moody 비현실적으로 밝은 노출을 보여 주는 이미지")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "샘플 어두운과 moody 비현실적으로 밝은 노출을 보여 주는 이미지")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 다시, 이렇게 과학 응용 프로그램 또는 응용 프로그램 사용자 인터페이스에서 제공 되는 수동 제어를 통해 프로그래밍 방식 제어를 사용 하 여 자동으로 합니다. 어떤 방법을 사용 하는 새 iOS 8 노출 Api은 카메라의 노출 설정에 대 한 세분화 된 제어를 제공 합니다.
 
@@ -514,7 +514,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 IOS 8 응용 프로그램에 노출 제어의 세부 정보를 설명 하기 전에 합니다. 노출의 작동 원리 빠른 살펴보겠습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "노출 작동 방식")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "노출 작동 방식")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 노출 제어 하려면 함께 제공 하는 세 가지 기본 요소는:
 
@@ -527,7 +527,7 @@ IOS 8 응용 프로그램에 노출 제어의 세부 정보를 설명 하기 전
 
 학습 하기 전에 수동 노출 작동 방법 이기는 확인 된 iOS 장치에서 작동 하는 역할을 어떻게 연속 자동 노출 이해 해야 합니다.
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "IOS 장치에서 작동 하는 연속 자동 노출 하는 방법")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "IOS 장치에서 작동 하는 연속 자동 노출 하는 방법")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 먼저 자동 노출 블록은 이상적인 노출을 계산 작업을 포함 하 고 지속적으로 공급 되는 방향이 계량 통계. 이 정보를 사용 하 여 최적의 혼합 잘 켜지 장면 가져오려는 ISO 및 셔터 속도 계산 합니다. 이 주기 AE 루프 라고 합니다.
 
@@ -535,7 +535,7 @@ IOS 8 응용 프로그램에 노출 제어의 세부 정보를 설명 하기 전
 
 그런 다음 iOS 장치에서 어떻게 잠긴된 노출 works에 살펴보겠습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "잠긴 iOS 장치에서 작동 하는 노출")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "잠긴 iOS 장치에서 작동 하는 노출")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 다시, 최적의 iOS 및 기간 값을 계산 하려고 하는 자동 노출 블록 해야 합니다. 그러나이 모드에서는 AE 블록에서에서 연결이 끊어진 계량 통계 엔진입니다.
 
@@ -589,7 +589,7 @@ CaptureDevice.UnlockForConfiguration();
 
 현재 위치에서 일반 AV 캡처 설치 코드와는 `UIViewController` 응용 프로그램의 스토리 보드에 추가 하 고 다음과 같이 구성할 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 뷰는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
@@ -791,13 +791,13 @@ CaptureDevice.UnlockForConfiguration();
   
 1. Auto 모드에서 카메라로 슬라이더 카메라 조정 노출 하는 대로 자동으로 이동 합니다.
 
-    [![](intro-to-manual-camera-controls-images/image13.png "카메라 노출 조정으로 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image13.png)
+    [![](intro-to-manual-camera-controls-images/image13.png "카메라 노출 조정으로 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. 잠금 세그먼트를 누르고 자동 노출 바이어스를 수동으로 조정 하려면 바이어스 슬라이더를 끕니다.
 
-    [![](intro-to-manual-camera-controls-images/image14.png "자동 노출 바이어스를 수동으로 조정")](intro-to-manual-camera-controls-images/image14.png)
+    [![](intro-to-manual-camera-controls-images/image14.png "자동 노출 바이어스를 수동으로 조정")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. 사용자 지정 세그먼트를 수동으로 노출 제어 기간 및 ISO 슬라이더를 끕니다.
 
-    [![](intro-to-manual-camera-controls-images/image15.png "수동으로 노출 제어를 기간 및 ISO 슬라이더를 끌어 옵니다.")](intro-to-manual-camera-controls-images/image15.png)
+    [![](intro-to-manual-camera-controls-images/image15.png "수동으로 노출 제어를 기간 및 ISO 슬라이더를 끌어 옵니다.")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. 응용 프로그램을 중지 합니다.
 
 
@@ -807,7 +807,7 @@ CaptureDevice.UnlockForConfiguration();
 
 흰색 밸런스 컨트롤에서 이미지를 좀 더 현실적인 보이도록 colosr 균형을 조정 하는 사용자 수 있습니다. 다른 광원은 다른 색 온도 있고 카메라 설정 이미지를 캡처하는 데 이러한 차이 대 한 보정을 위해 조정 해야 합니다. 다시 흰색 균형 대 한 사용자 제어를 허용 하 여 전문적인 조정을 자동 루틴은 지원 되지 않는의 꾸밈 효과를 얻기 위해 내릴 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "수동 흰색 균형 조정을 보여 주는 샘플 이미지")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "수동 흰색 균형 조정을 보여 주는 샘플 이미지")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 예를 들어, 일광 절약 텅스텐 incandescent lights 워 머, 노랑 주황색 tint 반면 blueish 캐스트를 있습니다. (사용,: "쿨" 색 "웜" 색 보다 더 높은 색 온도 있습니다. 색 온도 물리적 측정값을 정도가 하나를 사용 하지 않습니다.)
 
@@ -821,7 +821,7 @@ CaptureDevice.UnlockForConfiguration();
 
 색상 관념의 연구에는 [CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간](http://en.wikipedia.org/wiki/CIE_1931_color_space) 는 첫 번째 색 공간을 수학적으로 정의 합니다. 원래 1931 국제 Commission 조명 (CIE)에 의해 작성 된 합니다.
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 위의 차트 표시 모든 색 밝은 빨강, 녹색 밝은 파란색에서 사람의 눈에 표시 됩니다. 다이어그램에서 언제 든 위의 그래프에 표시 된 것 처럼 X 및 Y 값을 그릴 수 있습니다.
 
@@ -900,7 +900,7 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 
 현재 위치에서 일반 AV 캡처 설치 코드와는 `UIViewController` 응용 프로그램의 스토리 보드에 추가 하 고 다음과 같이 구성할 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 뷰는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
@@ -1111,13 +1111,13 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 1. 변경 내용을 저장 된 하 고 응용 프로그램을 실행 합니다.
 1. Auto 모드에서 카메라로 슬라이더 카메라 흰색 균형을 조정 하는 대로 자동으로 이동 합니다.
 
-    [![](intro-to-manual-camera-controls-images/image19.png "카메라 흰색 균형을 조정 하는 대로 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image19.png)
+    [![](intro-to-manual-camera-controls-images/image19.png "카메라 흰색 균형을 조정 하는 대로 슬라이더는 자동으로 이동")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. 잠금 세그먼트 누르고 흰색 균형을 수동으로 조정 하려면 Temp 및 Tint 슬라이더를 끕니다.
 
-    [![](intro-to-manual-camera-controls-images/image20.png "수동으로 흰색 균형을 조정 하려면 Temp 및 Tint 슬라이더를 끌어 옵니다.")](intro-to-manual-camera-controls-images/image20.png)
+    [![](intro-to-manual-camera-controls-images/image20.png "수동으로 흰색 균형을 조정 하려면 Temp 및 Tint 슬라이더를 끌어 옵니다.")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. 잠금 세그먼트를 선택한 상태와 물리적 회색 카드 카메라의 앞에 놓고 회색 세계에 흰색 균형을 조정 하려면 회색 카드 단추를 탭 합니다.
 
-    [![](intro-to-manual-camera-controls-images/image21.png "회색 세계에 흰색 균형을 조정 하려면 회색 카드 단추를 누릅니다")](intro-to-manual-camera-controls-images/image21.png)
+    [![](intro-to-manual-camera-controls-images/image21.png "회색 세계에 흰색 균형을 조정 하려면 회색 카드 단추를 누릅니다")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. 응용 프로그램을 중지 합니다.
 
 위의 코드는 카메라 자동 모드에 있을 때 흰색 밸런스 설정이 모니터링 하거나 슬라이더를 사용 하 여 잠금 모드일 때 흰색 균형을 제어 하는 방법으로 나타났습니다.
@@ -1128,7 +1128,7 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 
 간단히 말하면 여전히 찍은 다양 한 설정 그림에서 그림의 캡처 대괄호로 묶습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "대괄호로 묶은 캡처 작동 방식")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "대괄호로 묶은 캡처 작동 방식")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 대괄호로 묶은 캡처를 사용 하 여 iOS 8에에서, 응용 프로그램 수 일련의 수동 카메라 컨트롤 미리 설정, 단일 명령을 실행 있고 각 수동 사전 설정에 대 한 일련의 이미지 반환 현재 장면.
 
@@ -1187,7 +1187,7 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 
 현재 위치에서 일반 AV 캡처 설치 코드와는 `UIViewController` 응용 프로그램의 스토리 보드에 추가 하 고 다음과 같이 구성할 수 있습니다.
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "UIViewController는 스토리 보드 응용 프로그램에 추가 하 고 여기 표시 된 대로 구성 수 있습니다.")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 뷰는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
@@ -1345,10 +1345,10 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 1. 변경 내용을 저장 된 하 고 응용 프로그램을 실행 합니다.
 1. 장면이 프레임 하 고 대괄호 캡처 단추를 탭 합니다.
 
-    [![](intro-to-manual-camera-controls-images/image24.png "장면이 프레임 및 대괄호 캡처 단추를 누릅니다")](intro-to-manual-camera-controls-images/image24.png)
+    [![](intro-to-manual-camera-controls-images/image24.png "장면이 프레임 및 대괄호 캡처 단추를 누릅니다")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. 오른쪽에서 왼쪽으로 괄호로 묶입니다 캡처에 의해 수행 되는 세 가지 이미지를 보려면 살짝 밉니다.
 
-    [![](intro-to-manual-camera-controls-images/image25.png "살짝 오른쪽에서 왼쪽으로 괄호로 묶입니다 캡처에 의해 수행 되는 세 가지 이미지를 보려면")](intro-to-manual-camera-controls-images/image25.png)
+    [![](intro-to-manual-camera-controls-images/image25.png "살짝 오른쪽에서 왼쪽으로 괄호로 묶입니다 캡처에 의해 수행 되는 세 가지 이미지를 보려면")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. 응용 프로그램을 중지 합니다.
 
 
@@ -1361,4 +1361,4 @@ Apple 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 회�
 ## <a name="related-links"></a>관련 링크
 
 - [ManualCameraControls (샘플)](https://developer.xamarin.com/samples/monotouch/ManualCameraControls)
-- [IOS 8 소개](~/ios/platform/introduction-to-ios8.md)
+- [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)

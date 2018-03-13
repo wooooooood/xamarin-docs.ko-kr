@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: e3416b0551bafcd7ab87b21eafbe56b733f359a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>Windows에 Xamarin.iOS 설치
 
@@ -34,7 +34,7 @@ Visual Studio용 Xamarin.iOS는 Visual Studio가 Mac의 Windows 가상 머신 �
 
 아래 다이어그램은 Xamarin.iOS 개발 워크플로에 대한 간단한 개요를 보여줍니다.
 
-[![Xamarin.iOS 개발 워크플로](images/xma2.png)](images/xma2.png)
+[![Xamarin.iOS 개발 워크플로](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  Visual Studio는 프로젝트를 빌드하는 별도의 MSBuild 프로세스를 시작합니다. 이 프로세스에서는 Mac에 대한 새 연결을 설정합니다. 즉, Visual Studio가 빌드할 때 Windows에서 Mac으로 이어지는 두 개의 SSH 연결이 있습니다. [명령줄](~/ios/get-started/installation/windows/connecting-to-mac/index.md)에서 빌드하면 MSBuild 프로세스가 하나만 생성됩니다. 다이어그램을 단순화하기 위해 모든 연결을 화살표로 표시했습니다.
@@ -44,7 +44,7 @@ Visual Studio용 Xamarin.iOS는 Visual Studio가 Mac의 Windows 가상 머신 �
 Visual Studio용 Xamarin.iOS는 놀라운 결과를 가져다 줍니다. 개발자가 Visual Studio IDE를 사용하여 Windows 컴퓨터에서 iOS 응용 프로그램을 만들고 빌드하고 디버그할 수 있습니다. 단독으로는 불가능합니다. Apple의 컴파일러가 없으면 iOS 응용 프로그램을 만들 수 없으며, Apple의 인증서 및 코드 서명 도구 없이는 배포할 수 없습니다. 다시 말해서, Visual Studio용 Xamarin.iOS를 설치하려면 이러한 작업을 수행할 수 있도록 네트워크로 연결된 Mac OS X 컴퓨터에 연결해야 합니다. 구성이 완료되면 Xamarin 도구가 프로세스를 최대한 원활하게 만들어줍니다.
 
 
-<a name="system-requirements">
+<a name="system-requirements"/>
 
 ### <a name="system-requirements"></a>시스템 요구 사항
 
@@ -72,13 +72,9 @@ Xamarin 도구는 플러그 인이 지원되지 않아 Visual Studio Express 버
 
 **Windows 컴퓨터가 네트워크를 통해 Mac에 연결할 수 있어야 합니다.**
 
-<a name="appleaccount" />
-
 ### <a name="apple-developer-account"></a>Apple 개발자 계정
 
 장치에 응용 프로그램을 배포하거나 앱 스토어에 제출하려면 Apple 개발자 계정이 필요합니다. 관련 개발자 인증서 및 프로비전 프로필을 만들어서 네트워크로 연결된 Mac에 설치해야만 Visual Studio용 Xamarin.iOS가 작동합니다. [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 문서에서 개발 인증서를 얻고 장치를 프로비전하는 단계를 참조하세요.
-
-<a name="features" />
 
 ## <a name="features"></a>기능 
 
@@ -100,6 +96,7 @@ Visual Studio용 Xamarin.iOS를 사용하면 Windows에서 Xamarin.iOS 프로젝
 
 ## <a name="configuring-your-mac"></a>Mac 구성
 
+<a name="installation"/>
 
 ### <a name="installation"></a>설치
 
@@ -148,7 +145,7 @@ iOS 개발의 경우 관련 서명 ID를 사용하여 Mac 컴퓨터를 구성하
 
 Mac을 구성한 후에는 Windows 컴퓨터를 설정해야 합니다.
 
-<a name="windowsinstallation">
+<a name="windowsinstallation"/>
 
 ## <a name="windows-installation"></a>Windows 설치
 
@@ -159,7 +156,7 @@ Xamarin은 Visual Studio 2017 또는 2015 설치의 일부로 설치할 수 있�
 설치 프로세스를 완료한 후에도 모든 기능을 사용하려면 몇 가지 단계를 더 수행해야 합니다.
 
 - [Visual Studio를 Mac에 연결](#connectingtomac) – Visual Studio를 Mac 빌드 호스트에 연결해야만 Xamarin.iOS 프로젝트를 빌드할 수 있습니다.
-- [Visual Studio 도구 모음 구성](#Visual_Studio_Toolbar_Overview) - 그러면 Visual Studio에서 Xamarin.iOS 기능에 손쉽게 액세스할 수 있습니다.
+- [Visual Studio 도구 모음 구성](#toolbar) - 그러면 Visual Studio에서 Xamarin.iOS 기능에 손쉽게 액세스할 수 있습니다.
 
 <a name="connectingtomac" /> 
 
@@ -171,19 +168,19 @@ Mac에 연결하려면 아래 단계를 수행합니다.
 
 - **도구 > 옵션**으로 이동한 후 **Xamarin** 아래에서 **iOS 설정**을 선택합니다.
 
-  [![iOS 설정 화면](images/image2.png)](images/image2.png)
+  [![iOS 설정 화면](images/image2.png)](images/image2.png#lightbox)
 
 - **원격 로그인**을 허용하도록 Mac을 올바르게 [구성](#configuration)하면 목록에서 Mac을 선택할 수 있습니다.
 
-  [![원격 호스트 대화 상자](images/xma3.png)](images/xma3.png)
+  [![원격 호스트 대화 상자](images/xma3.png)](images/xma3.png#lightbox)
 
 - Mac 호스트의 관리 자격 증명을 요구합니다.
 
-  [![로그인 대화 상자](images/xma4.png)](images/xma4.png)
+  [![로그인 대화 상자](images/xma4.png)](images/xma4.png#lightbox)
 
 - 연결되면 컴퓨터 이름 옆에 '연결 성공' 아이콘이 표시됩니다.
 
-  [![컴퓨터 이름 옆에 연결 성공 아이콘을 표시하는 원격 대화 상자](images/image6.png)](images/image6.png)
+  [![컴퓨터 이름 옆에 연결 성공 아이콘을 표시하는 원격 대화 상자](images/image6.png)](images/image6.png#lightbox)
 
 Visual Studio를 시작할 때마다 다시 연결됩니다.
 
@@ -197,7 +194,7 @@ iOS 도구 모음이 표시되지 않으면 아래 단계를 사용합니다.
 
 도구 모음을 구성하려면 먼저 **보기 > 도구 모음** 메뉴를 열고 **iOS** 항목을 선택합니다. 이 스크린샷에 보이는 것처럼 메뉴 항목을 선택하면 도구 모음을 표시하도록 선택됩니다.
 
-[![도구 모음 > iOS 선택](images/image31.png)](images/image31.png)
+[![도구 모음 > iOS 선택](images/image31.png)](images/image31.png#lightbox)
 
 ### <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -208,11 +205,11 @@ Visual Studio 2017 이전 버전에서는 **솔루션 플랫폼** 단추를 표�
 - **단추 추가 또는 제거** 선택
 - **솔루션 플랫폼** 선택
 
-[![솔루션 플랫폼 선택](images/image35.png)](images/image35.png)
+[![솔루션 플랫폼 선택](images/image35.png)](images/image35.png#lightbox)
 
 이제 **표준** 및 **iOS** 도구 모음이 이 스크린샷과 비슷하게 보일 것입니다.
 
-[![이제 표준 및 iOS 도구 모음이 이 스크린샷과 비슷하게 표시됨](images/image36.png)](images/image36.png)
+[![이제 표준 및 iOS 도구 모음이 이 스크린샷과 비슷하게 표시됨](images/image36.png)](images/image36.png#lightbox)
 
 도구 모음 구성이 완료되면 Visual Studio용 Xamarin iOS를 사용할 준비가 완료된 것입니다.
 

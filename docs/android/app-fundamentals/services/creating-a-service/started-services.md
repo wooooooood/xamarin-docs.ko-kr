@@ -4,14 +4,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: b6c0e67e3411aa5b7846a1b7bc0de2473a3546fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8c2d68f08fea5b808b627803da9f9ddb7d62eb6c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="started-services-with-xamarinandroid"></a>Xamarin.Android 사용 하 여 시작된 서비스
 
@@ -57,6 +57,8 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ![수명 주기 메서드 호출 되는 순서를 보여 주는 다이어그램](started-services-images/started-service-01.png "수명 주기 메서드 호출 되는 순서를 보여 주는 다이어그램입니다.")
 
+
+<a name="Stopping_the_Service" />
 
 ## <a name="stopping-the-service"></a>서비스 중지
 

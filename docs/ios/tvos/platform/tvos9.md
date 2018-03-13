@@ -3,16 +3,16 @@ title: "9 tvOS 소개"
 description: "이 문서 Xamarin.tvOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 tvOS 9에서에서 사용할 수 있는 기능을 소개합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c1fafe85fb7f5c30dca0dff6fe3dff5172e0b9aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-tvos-9"></a>9 tvOS 소개
 
@@ -91,7 +91,7 @@ Siri 원격은 다음과 같은 국가에서 현재 제공 됩니다.
 
 다른 모든 국가 Apple TV 원격 검색을 위해 텍스트 입력이 포함 된 기본 검색 화면을 열 수 있는 검색 단추와 Siri 단추를 대체 하는 표시 됩니다.
 
-[ ![](tvos9-images/remote02.png "Siri 원격")](tvos9-images/remote02.png)
+[![](tvos9-images/remote02.png "Siri 원격")](tvos9-images/remote02.png#lightbox)
 
 자세한 내용은 참조 하십시오 우리의 [Siri 원격 인스턴스 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 설명서입니다.
 
@@ -155,7 +155,7 @@ IOS 또는 OS X와 달리 Apple TV 않아도 터치 스크린 또는 사용자�
 
 Apple TV 홈 화면 설치 되 고 사용자 기본 설정에 액세스 하는 방법을 제공 하는 모든 앱에 표시 됩니다.
 
-[ ![](tvos9-images/home01.png "홈 화면")](tvos9-images/home01.png)
+[![](tvos9-images/home01.png "홈 화면")](tvos9-images/home01.png#lightbox)
 
 사용자가 포커스를 사용 하 여 응용 프로그램을 선택 하 고 응용 프로그램을 시작 하 고 Siri 원격에서 터치 제스처를 사용 하 여 응용 프로그램 아이콘의 표를 탐색 합니다. 앱 아이콘은는 첫 번째 잠재적 사용자에 매우 깊은 인상을 나타내고를 한 눈에 응용 프로그램의 용도 나타내야 합니다.
 
@@ -169,7 +169,7 @@ Apple TV 홈 화면 설치 되 고 사용자 기본 설정에 액세스 하는 �
 
 사용자가을 배치 하 Xamarin.tvOS 앱 Apple TV 홈 화면에서 첫 행에는 사용자가 앱을 선택 하는 큰 위쪽 선반 이미지 표시 됩니다. 이 이미지는 응용 프로그램의 기능을 강조 표시 하거나 해당 내용에 대 한 직접 링크를 제공 해야 합니다.
 
-[ ![](tvos9-images/topshelf01.png "위쪽 선반")](tvos9-images/topshelf01.png)
+[![](tvos9-images/topshelf01.png "위쪽 선반")](tvos9-images/topshelf01.png#lightbox)
 
 위쪽 선반 이미지 수를 단일 정적으로 제공 되거나 `.png` 또는 `.lsr` 파일 이거나 동적으로 런타임에 포커스 항목의 단일 행으로 합니다.
 

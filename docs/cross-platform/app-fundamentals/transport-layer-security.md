@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/10/2017
-ms.openlocfilehash: 5237ed35116e5f8983df579d0ab68363996fb06f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0f205c5ab2c65f0e2a99f912f3961f12a4f2b7a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transport-layer-security-tls"></a>Transport Layer Security (TLS)
 
@@ -41,12 +41,12 @@ TLS 1.2 지원 제공 됩니다.
 
 이러한 설정을 찾을 수 있습니다 **프로젝트 옵션 > Android 옵션** 다음를 클릭 하 고 **고급** 단추: 
 
-[![Visual Studio에서 TLS 및 HttpClient 구성](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png)
+[![Visual Studio에서 TLS 및 HttpClient 구성](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 이러한 설정을 찾을 수 있습니다 **프로젝트 속성 > 빌드 옵션 > 고급** 탭:
 
-[![Mac 용 Xamarin Studio 및 Visual Studio의 TLS 및 HttpClient 구성](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png)
+[![Mac 용 Xamarin Studio 및 Visual Studio의 TLS 및 HttpClient 구성](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png#lightbox)
 
 -----
 
@@ -79,7 +79,7 @@ TLS 1.2 지원 제공 됩니다.
 >
 > 기본 옵션을 사용 하는 것이 좋습니다.
 
-# <a name="platform-specific-details"></a>플랫폼 관련 세부 정보
+## <a name="platform-specific-details"></a>플랫폼 관련 세부 정보
 
 위의 요약 Xamarin 프로젝트에서 SSL/TLS 및 HttpClient 구현에 대 한 프로젝트 수준의 설정에 설명 합니다. HttpClient 구현 코드에서 동적으로 설정할 수도 있습니다 및 iOS에는 두 가지 기본 옵션을 선택 합니다.
 
@@ -87,14 +87,14 @@ TLS 1.2 지원 제공 됩니다.
 - [**iOS 및 Mac**](~/cross-platform/macios/http-stack.md)
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 가능한 경우 응용 프로그램 보안 TLS (전송 계층) 1.2를 사용 해야 합니다.
 하지만 새로운 앱 이제 기본적으로이 구성이 문서의 지침에 따라 기존 응용 프로그램의 설정을 업데이트 해야 할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [앱의 전송 보안](~/ios/app-fundamentals/ats.md)
+- [앱 전송 보안](~/ios/app-fundamentals/ats.md)
 - [Xamarin.Android Environment](~/android/deploy-test/environment.md)
 - [Xamarin 주기 9 (2017 년 2 월)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)

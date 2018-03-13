@@ -3,16 +3,16 @@ title: "tvOS 내부 기능"
 description: "Xamarin.tvOS는 tvOS 제품 iOS 제품에 대 한 생성 하는 고급 문서 거의 동일 하므로 동일한 DNA Xamarin.iOS 제품으로 공유 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 6adba454ac153186c05715f4baa3261212e7b18b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fee2843840f7f6dac461cd4e3426fb8b296b30bf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tvos-internals"></a>tvOS 내부 기능
 
@@ -31,7 +31,7 @@ Xamarin.tvOS 응용 프로그램에 대 한 Xamarin에서 지 원하는 어셈�
 
 다음 문서는 iOS에만 있지만 tvOS 관련이 (9 tvOS iOS 9의 하위 집합 이므로).
 
-###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[통합된 API](~/cross-platform/macios/unified/index.md)
+###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[Unified API](~/cross-platform/macios/unified/index.md)
 
 Apple TV 및 iOS 간에 공유 하는 보다 간단한 코드 Api 64 비트 및 64 비트 컴파일에 대 한 지원을 도입 뿐만 아니라 코드 베이스를 사용할 수 있는 새로운 통합 Api를 소개 합니다.  
 
@@ -43,7 +43,7 @@ API 바인딩 디자인 원칙을 설명합니다.
 
 이 섹션에는 문제 및 제한 사항에 관한 Xamarin.iOS, 있으며이 중 대다수가 Xamarin.tvOS에 적용할 수 있는에 대해 알고 해야 보여 줍니다.
 
-###  <a name="linkeriosdeploy-testlinkermd"></a>[Linker](~/ios/deploy-test/linker.md)
+###  <a name="linkeriosdeploy-testlinkermd"></a>[링커](~/ios/deploy-test/linker.md)
 
 설정 및 사용을 수정 하는 방법과 가장 작은 가능한 응용 프로그램 패키지를 확인 하는 링커 작동 하는 방법에 대해 설명 합니다.
 
@@ -53,7 +53,7 @@ API 바인딩 디자인 원칙을 설명합니다.
 
 ###  <a name="mtouchiosdeploy-testmtouchmd"></a>[mtouch](~/ios/deploy-test/mtouch.md)
 
-메모와 mtouch.exe, iOS에서 사용할 수 있는 응용 프로그램으로 프로젝트를 작성 하는 명령줄 도구에 대 한 정보입니다.
+프로젝트를 iOS에서 사용할 수 있는 응용 프로그램으로 빌드하는 명령줄 도구인 mtouch.exe에 대한 메모와 정보입니다.
 
 ###  <a name="linking-native-librariesiosplatformnative-interopmd"></a>[네이티브 라이브러리 연결](~/ios/platform/native-interop.md)
 

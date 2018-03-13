@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: f55620720bb986142a56de7e8602be56280006d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -34,7 +34,7 @@ CloudKit 프레임 워크는 해당 액세스 iCloud 응용 프로그램 개발�
 
 CloudKit 사용 방법은 서버 iCloud에 개발자 액세스할 수 있습니다. 드라이브 iCloud와 사진 라이브러리 iCloud에 대 한 기초를 제공합니다. CloudKit은 Mac OS X와 Apple iOS 장치에서 지원 됩니다.
 
- [ ![](intro-to-cloudkit-images/image1.png "Mac OS X와 Apple iOS 장치에서 CloudKit 지 원하는 방법")](intro-to-cloudkit-images/image1.png)
+ [![](intro-to-cloudkit-images/image1.png "Mac OS X와 Apple iOS 장치에서 CloudKit 지 원하는 방법")](intro-to-cloudkit-images/image1.png#lightbox)
 
 CloudKit은 iCloud 계정 인프라를 사용 합니다. iCloud 장치에서 계정에 로그인 한 사용자가을 CloudKit 사용자를 식별 하의 ID를 사용 합니다. 사용할 수 있는 계정이 없는 경우 제한 된 읽기 전용 액세스 제공 됩니다.
 
@@ -55,11 +55,11 @@ Xamarin 응용 프로그램 CloudKit 프레임 워크를 활용할 수 있습니
 1.  Mac 또는 Visual Studio에 대 한 Visual Studio에서 프로젝트를 엽니다.
 2.  에 **솔루션 탐색기**열고는 **Info.plist** 파일을 확인는 **번들 식별자** 에 정의 된 것과 일치 **앱 ID**프로 비전의 일부를 설정 하는 대로 생성:
  
-    [ ![](intro-to-cloudkit-images/image26a.png "번들 Id를 입력 합니다")](intro-to-cloudkit-images/image26a-orig.png "Info.plist file displaying Bundle Identifier")
+    [![](intro-to-cloudkit-images/image26a.png "번들 Id를 입력 합니다")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3.  맨 아래로 스크롤하여는 **Info.plist** 파일을 선택 **백그라운드 모드 활성화**, **위치 업데이트** 및 **원격 알림**:
 
-    [ ![](intro-to-cloudkit-images/image27a.png "사용 가능한 백그라운드 모드, 위치 업데이트 및 원격 알림 선택")](intro-to-cloudkit-images/image27a-orig.png "Info.plist file displaying background modes")
+    [![](intro-to-cloudkit-images/image27a.png "사용 가능한 백그라운드 모드, 위치 업데이트 및 원격 알림 선택")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4.  선택한 솔루션에 iOS 프로젝트를 마우스 오른쪽 단추로 클릭 **옵션**합니다.
 5.  선택 **iOS 번들 서명**, 선택는 **개발자 Identity** 및 **프로 비전 프로필** 위에서 만든 합니다.
 6.  확인 된 **Entitlements.plist** 포함 **iCloud를 사용 하도록 설정** , **키-값 저장소** 및 **CloudKit** 합니다.
@@ -95,7 +95,7 @@ CloudKit Xamarin iOS 응용 프로그램에서을 구현 하기 전에이 문서
 
 위에 나열 된은 동일한 이점을 제공할 및 클라우드 기반 정보로 작업에 적용할 CloudKit ´ ù.
 
- [ ![](intro-to-cloudkit-images/image31.png "컨테이너를 사용 하 여 CloudKit 응용 프로그램이 통신")](intro-to-cloudkit-images/image31.png)
+ [![](intro-to-cloudkit-images/image31.png "컨테이너를 사용 하 여 CloudKit 응용 프로그램이 통신")](intro-to-cloudkit-images/image31.png#lightbox)
 
 되는 응용 프로그램 처럼의 일 대 다는 장치에서 실행 되는 일 대 다의 iCloud와의 통신을 응용 프로그램의 따라서입니다. 이러한 다양 한 통신 사일로의 각 컨테이너 라고 합니다.
 
@@ -117,13 +117,13 @@ iCloud.com.company-name.application-name
 
 CloudKit의 주요 기능 중 하나 해당 모델 최대 iCloud 서버 응용 프로그램의 데이터 모델 및 복제를 수행 하는 것입니다. 일부 정보를 만든 사용자를 위한, 다른 정보는 공용으로 사용 (예: 음식점 리뷰의 경우)에 대 한 사용자가 만들 수 있는 공용 데이터 또는 정보를 개발자가 응용 프로그램에 대 한 게시 수 있습니다. 두 경우 모두의 대상 형식이 단일 사용자 아니지만 사용자의 커뮤니티입니다.
 
- [ ![](intro-to-cloudkit-images/image32.png "CloudKit 컨테이너 다이어그램")](intro-to-cloudkit-images/image32.png)
+ [![](intro-to-cloudkit-images/image32.png "CloudKit 컨테이너 다이어그램")](intro-to-cloudkit-images/image32.png#lightbox)
 
 컨테이너 내부 즉, 무엇 보다도 공용 데이터베이스가입니다. 이것이 거주 하 고 모든 공용 정보 및 mingles 배치입니다. 또한 응용 프로그램의 각 사용자에 대 한 개별 여러 개인 데이터베이스 됩니다.
 
 IOS 장치에서 실행 하는 경우 응용 프로그램에만 iCloud 현재 로그인 한 사용자에 대 한 정보에 대 한 액세스를 갖습니다. 따라서 컨테이너의 응용 프로그램의 보기 다음과 같이 됩니다.
 
- [ ![](intro-to-cloudkit-images/image33.png "컨테이너의 응용 프로그램 보기")](intro-to-cloudkit-images/image33.png)
+ [![](intro-to-cloudkit-images/image33.png "컨테이너의 응용 프로그램 보기")](intro-to-cloudkit-images/image33.png#lightbox)
 
 공용 데이터베이스와 현재 로그온 iCloud 사용자와 관련 된 개인 데이터베이스에만 볼 수 있습니다.
 
@@ -186,7 +186,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 데이터베이스 및 데이터베이스 내의 레코드가 보유 하는 컨테이너입니다. 레코드는 CloudKit에서 구조화 된 데이터 이동 메커니즘.
 
- [ ![](intro-to-cloudkit-images/image34.png "데이터베이스 및 데이터베이스 내의 레코드가 보유 하 고 컨테이너")](intro-to-cloudkit-images/image34.png)
+ [![](intro-to-cloudkit-images/image34.png "데이터베이스 및 데이터베이스 내의 레코드가 보유 하 고 컨테이너")](intro-to-cloudkit-images/image34.png#lightbox)
 
 레코드를 통해 CloudKit 프레임 워크에서 제공 되는 `CKRecord` 키-값 쌍을 래핑하는 클래스입니다. 응용 프로그램에서 개체의 인스턴스는 해당 하는 `CKRecord` CloudKit에 있습니다. 또한 각 `CKRecord` 개체의 클래스에 해당 하는 레코드 유형을 소유 하 고 있습니다.
 
@@ -227,11 +227,11 @@ await CloudManager.SaveAsync (newRecord);
 
 레코드는 특정된 데이터베이스 내에 단독으로 존재 하지 않으므로-레코드 그룹 레코드 영역 내 함께 존재 합니다. 기존 관계형 데이터베이스의 테이블로 레코드 영역 생각할 수 있습니다.
 
- [ ![](intro-to-cloudkit-images/image35.png "레코드 그룹을 존재 레코드 영역 내에 함께")](intro-to-cloudkit-images/image35.png)
+ [![](intro-to-cloudkit-images/image35.png "레코드 그룹을 존재 레코드 영역 내에 함께")](intro-to-cloudkit-images/image35.png#lightbox)
 
 지정 된 레코드가 영역 내의 여러 레코드와 지정된 된 데이터베이스 내에서 여러 레코드 영역 수 있습니다. 모든 데이터베이스에 기본 레코드 영역이 포함 되어 있습니다.
 
- [ ![](intro-to-cloudkit-images/image36.png "기본 레코드 영역 및 사용자 지정 영역을 포함 하는 모든 데이터베이스")](intro-to-cloudkit-images/image36.png)
+ [![](intro-to-cloudkit-images/image36.png "기본 레코드 영역 및 사용자 지정 영역을 포함 하는 모든 데이터베이스")](intro-to-cloudkit-images/image36.png#lightbox)
 
 이것이 기본적으로 레코드가 저장 되는 위치입니다. 또한 사용자 지정 레코드 영역을 만들 수 있습니다. 기본 세분성은 원자성 커밋 및 변경 내용 추적에 의해 이루어진다는 영역 나타내며를 기록 합니다.
 
@@ -258,7 +258,7 @@ var recordID =  new CKRecordID("My Record");
 
 참조는 특정된 데이터베이스 내 관련된 레코드 간의 관계를 제공합니다.
 
- [ ![](intro-to-cloudkit-images/image37.png "참조는 특정된 데이터베이스 내 관련된 레코드 간의 관계를 제공합니다.")](intro-to-cloudkit-images/image37.png)
+ [![](intro-to-cloudkit-images/image37.png "참조는 특정된 데이터베이스 내 관련된 레코드 간의 관계를 제공합니다.")](intro-to-cloudkit-images/image37.png#lightbox)
 
 위의 예제에서는 자식은 부모 레코드의 자식 레코드를 부모 자식을 소유 합니다. 관계는 부모 레코드에 자식 레코드에서가 이동 하며 라고는 *다시 참조*합니다.
 
@@ -283,7 +283,7 @@ var reference = new CKReference(newRecord, new CKReferenceAction());
 
 자산에는 큰, 구조화 되지 않은 데이터를 iCloud에 업로드 하 고 지정된 된 레코드와 연결 된 허용:
 
- [ ![](intro-to-cloudkit-images/image38.png "자산에는 큰, 구조화 되지 않은 데이터를 iCloud에 업로드 하 고 지정된 된 레코드와 연결 된 허용")](intro-to-cloudkit-images/image38.png)
+ [![](intro-to-cloudkit-images/image38.png "자산에는 큰, 구조화 되지 않은 데이터를 iCloud에 업로드 하 고 지정된 된 레코드와 연결 된 허용")](intro-to-cloudkit-images/image38.png#lightbox)
 
 클라이언트에서는 한 `CKRecord` 만들어집니다 iCloud 서버에 업로드 하려는 파일을 설명 하는 합니다. A `CKAsset` 파일을 포함 하기 위해 만들어진 및 것을 설명 하는 레코드에 연결 되어 있습니다.
 
@@ -594,7 +594,7 @@ ThisApp.PublicDatabase.PerformQuery(query, CKRecordZone.DefaultRecordZone().Zone
 
 C# 코드에서 구독을 구현 하기 전에 구독 어떻게 작동 하는지에 대 한 간략 한 개요를 보겠습니다.
 
- [ ![](intro-to-cloudkit-images/image39.png "구독 어떻게 작동 하는지에 대 한 개요")](intro-to-cloudkit-images/image39.png)
+ [![](intro-to-cloudkit-images/image39.png "구독 어떻게 작동 하는지에 대 한 개요")](intro-to-cloudkit-images/image39.png#lightbox)
 
 위의 그래프는 다음과 같은 일반적인 구독 프로세스를 보여 줍니다.
 
@@ -697,7 +697,7 @@ CloudKit은 개발자에 게 다음과 같은 사용자 정보를 제공합니�
 
 위에서 설명 했 듯이 CloudKit 응용 프로그램을 고유 하 게 지정된 된 사용자를 식별할 수 있는 방법을 제공 합니다.
 
- [ ![](intro-to-cloudkit-images/image40.png "고유 하 게 버전별 지정된 된 사용자")](intro-to-cloudkit-images/image40.png)
+ [![](intro-to-cloudkit-images/image40.png "고유 하 게 버전별 지정된 된 사용자")](intro-to-cloudkit-images/image40.png#lightbox)
 
 사용자의 장치 및 모든 특정 사용자 개인 데이터베이스 CloudKit 컨테이너 내에서 실행 중인 클라이언트 응용 프로그램이 있습니다. 클라이언트 응용 프로그램이 특정 사용자 중 하나에 연결 되도록 하려고 합니다. 이 설정은 장치에서 로컬로 iCloud에 로그인 된 사용자에 기반 합니다.
 
@@ -732,7 +732,7 @@ CKContainer.DefaultContainer.FetchUserRecordId ((recordID, err) => {
 
 CloudKit에 각 사용자에 게 이러한 기능을 설명 하는 특정 메타 데이터입니다. 이 메타 데이터는 CloudKit 레코드로 표시 됩니다.
 
- [ ![](intro-to-cloudkit-images/image41.png "CloudKit에 각 사용자에 게 이러한 기능을 설명 하는 특정 메타 데이터")](intro-to-cloudkit-images/image41.png)
+ [![](intro-to-cloudkit-images/image41.png "CloudKit에 각 사용자에 게 이러한 기능을 설명 하는 특정 메타 데이터")](intro-to-cloudkit-images/image41.png#lightbox)
 
 특정 사용자의 컨테이너를 찾고 개인 데이터베이스 내부는 해당 사용자를 정의 하는 하나의 레코드입니다. 데이터베이스 내부에 공용 컨테이너의 각 사용자에 게 하나씩 여러 사용자 레코드 있습니다. 이 중 한 현재 로그온 한 사용자의 레코드 id입니다. 일치 하는 레코드 ID
 
@@ -768,7 +768,7 @@ CloudKit은 기본적으로 현재 로그온된 한 사용자의 개인 정보�
 
 가정 하는 사용자에 게 응용 프로그램을 허용 하 게 사용자 계정 정보에 대 한 액세스를 제한, 응용 프로그램의 다른 사용자가 검색 될 수 있습니다.
 
- [ ![](intro-to-cloudkit-images/image42.png "사용자는 응용 프로그램의 다른 사용자에 게 검색할 수 있습니다.")](intro-to-cloudkit-images/image42.png)
+ [![](intro-to-cloudkit-images/image42.png "사용자는 응용 프로그램의 다른 사용자에 게 검색할 수 있습니다.")](intro-to-cloudkit-images/image42.png#lightbox)
 
 클라이언트 응용 프로그램이 통신 하는 컨테이너 및 컨테이너 사용자 정보에 액세스할 수 iCloud와 통신 합니다. 사용자 전자 메일 주소를 제공할 수 있습니다 및 다시 사용자에 대 한 정보 검색을 사용할 수 있습니다. 필요에 따라 사용자 ID도 사용할 수 사용자에 대 한 정보를 검색 합니다.
 
@@ -849,40 +849,40 @@ CloudKit를 사용 하는 응용 프로그램을 제공 하기 전에 구성 해
 
 1. Ma에 대 한 Visual Studio에서 응용 프로그램을 컴파일할 **릴리스** > **iOS 장치**: 
 
-    [![](intro-to-cloudkit-images/shipping01.png "릴리스에 대 한 응용 프로그램 컴파일")](intro-to-cloudkit-images/shipping01.png)
+    [![](intro-to-cloudkit-images/shipping01.png "릴리스에 대 한 응용 프로그램 컴파일")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
 2. **빌드** 메뉴 선택 **보관**: 
 
-    [![](intro-to-cloudkit-images/shipping02.png "보관 파일을 선택 합니다.")](intro-to-cloudkit-images/shipping02.png)
+    [![](intro-to-cloudkit-images/shipping02.png "보관 파일을 선택 합니다.")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
 3. **보관** 만들어지고 Mac 용 Visual Studio에 표시 됩니다. 
 
-    [![](intro-to-cloudkit-images/shipping03.png "보관 파일을 만든 표시")](intro-to-cloudkit-images/shipping03.png)
+    [![](intro-to-cloudkit-images/shipping03.png "보관 파일을 만든 표시")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. **Xcode**를 시작합니다.
 5. **창** 메뉴 선택 **구성 도우미**: 
 
-    [![](intro-to-cloudkit-images/shipping04.png "구성 도우미를 선택 합니다.")](intro-to-cloudkit-images/shipping04.png)
+    [![](intro-to-cloudkit-images/shipping04.png "구성 도우미를 선택 합니다.")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
 6. 응용 프로그램의 보관 파일을 선택 하 고 클릭는 **내보내기...**  단추: 
 
-    [![](intro-to-cloudkit-images/shipping05.png "응용 프로그램의 보관 파일")](intro-to-cloudkit-images/shipping05.png)
+    [![](intro-to-cloudkit-images/shipping05.png "응용 프로그램의 보관 파일")](intro-to-cloudkit-images/shipping05.png#lightbox)
     
 7. 내보내기에 대 한 방법을 선택 하 고 클릭 하 고 **다음** 단추: 
 
-    [![](intro-to-cloudkit-images/shipping06.png "내보내기에 대 한 방법 선택")](intro-to-cloudkit-images/shipping06.png)
+    [![](intro-to-cloudkit-images/shipping06.png "내보내기에 대 한 방법 선택")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
 8. 선택 된 **개발팀** 클릭 확인 하 고 드롭다운 목록에서는 **선택** 단추: 
 
-    [![](intro-to-cloudkit-images/shipping07.png "드롭다운 목록에서 개발 팀을 선택 합니다.")](intro-to-cloudkit-images/shipping07.png)
+    [![](intro-to-cloudkit-images/shipping07.png "드롭다운 목록에서 개발 팀을 선택 합니다.")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
 9. 선택 **프로덕션** 클릭 확인 하 고 드롭다운 목록에서는 **다음** 단추: 
 
-    [![](intro-to-cloudkit-images/shipping08.png "드롭다운 목록에서 프로덕션을 선택 합니다.")](intro-to-cloudkit-images/shipping08.png)
+    [![](intro-to-cloudkit-images/shipping08.png "드롭다운 목록에서 프로덕션을 선택 합니다.")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
 10. 설정 및 클릭 검토는 **내보내기** 단추: 
 
-    [![](intro-to-cloudkit-images/shipping09.png "설정을 검토합니다")](intro-to-cloudkit-images/shipping09.png)
+    [![](intro-to-cloudkit-images/shipping09.png "설정을 검토합니다")](intro-to-cloudkit-images/shipping09.png#lightbox)
 
 11. 완성 된 응용 프로그램을 생성 하는 위치를 선택 `.ipa` 파일입니다.
 
@@ -911,5 +911,5 @@ CloudKit를 사용 하는 응용 프로그램을 제공 하기 전에 구성 해
 ## <a name="related-links"></a>관련 링크
 
 - [CloudKitAtlas (샘플)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
-- [IOS 8 소개](~/ios/platform/introduction-to-ios8.md)
+- [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [프로비저닝 프로필을 만들려면](~/ios/get-started/installation/device-provisioning/index.md)

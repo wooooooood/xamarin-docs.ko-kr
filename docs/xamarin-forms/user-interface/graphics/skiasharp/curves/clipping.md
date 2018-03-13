@@ -4,14 +4,15 @@ description: "클립 그래픽 경로 사용 하 여 특정 영역을 영역을 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: b1c5b64725a163e15f07d2aecaea4e56b7ecec2e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 영역을 사용 하 여 클리핑
 
@@ -98,7 +99,7 @@ canvas.ClipPath(keyholePath);
 
 `PaintSurface` 처리기에 다음을 호출 하 여 변환을 다시 설정 `ResetMatrix` 화면의 전체 높이를 확장 하는 비트맵을 그립니다. 이 코드는 비트맵 이라고 가정 정사각형을이 비트맵 인 합니다. 비트맵에서 클리핑 패스에 정의 된 영역 내에 렌더링 됩니다.
 
-[![](clipping-images/monkeythroughkeyhole-small.png "구멍 페이지를 통해 원숭이의 삼중 스크린 샷")](clipping-images/monkeythroughkeyhole-large.png "구멍 페이지를 통해 원숭이의 삼중 스크린 샷")
+[![](clipping-images/monkeythroughkeyhole-small.png "구멍 페이지를 통해 원숭이의 삼중 스크린 샷")](clipping-images/monkeythroughkeyhole-large.png#lightbox "구멍 페이지를 통해 원숭이의 삼중 스크린 샷")
 
 클리핑 패스 변환에 적용 되 면는 `ClipPath` 메서드를 호출 하 고에 변환을 적용 때 그래픽 개체 (예: 비트맵)이 표시 되지 않습니다. 클리핑 패스는 캔버스 상태와 함께 저장 하는 부분에서 `Save` 메서드 되 고 있는 복원 된는 `Restore` 메서드.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 남은 이러한 4 개의 원의 교집합입니다.
 
-[![](clipping-images//fourcircleintersectclip-small.png "4 개의 원 교차 클립 페이지의 삼중 스크린샷")](clipping-images/fourcircleintersectclip-large.png "4 개의 원 교차 클립 페이지의 삼중 스크린샷")
+[![](clipping-images//fourcircleintersectclip-small.png "4 개의 원 교차 클립 페이지의 삼중 스크린샷")](clipping-images/fourcircleintersectclip-large.png#lightbox "4 개의 원 교차 클립 페이지의 삼중 스크린샷")
 
 [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) 열거형에는 두 명의 멤버:
 
@@ -175,13 +176,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 4 개의 대체 하는 경우 `SKClipOperation.Intersect` 인수에는 `FourCircleIntersectClipPage` 클래스와 `SKClipOperation.Difference`, 다음에 표시 됩니다.
 
-[![](clipping-images//fourcircledifferenceclip-small.png "차이점 작업을 4 개의 원 교차 클립 페이지의 삼중 스크린샷")](clipping-images/fourcircledifferenceclip-large.png "차이 연산 사용 하 여 4 개의 원 교차 클립 페이지의 삼중 스크린 샷")
+[![](clipping-images//fourcircledifferenceclip-small.png "차이점 작업을 4 개의 원 교차 클립 페이지의 삼중 스크린샷")](clipping-images/fourcircledifferenceclip-large.png#lightbox "차이 연산 사용 하 여 4 개의 원 교차 클립 페이지의 삼중 스크린 샷")
 
 4 개의 겹치는 원 클리핑 영역에서 제거 되었습니다.
 
 **클립 작업** 페이지 원 쌍만과 두 가지 동작 차이점을 보여 줍니다. 왼쪽의 첫 번째 원의 기본 클립 작업과 클리핑 영역에 추가 될 `Intersect`, 텍스트 레이블으로 표시 된 클립 작업 함께 오른쪽에 두 번째 원이 클리핑 영역에 추가 됩니다.
 
-[![](clipping-images//clipoperations-small.png "클립 작업 페이지의 삼중 스크린 샷")](clipping-images/clipoperations-large.png "클립 작업 페이지의 삼중 스크린 샷")
+[![](clipping-images//clipoperations-small.png "클립 작업 페이지의 삼중 스크린 샷")](clipping-images/clipoperations-large.png#lightbox "클립 작업 페이지의 삼중 스크린 샷")
 
 [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) 두 클래스 정의 `SKPaint` 필드로 개체를 다음 두 개의 사각형 영역으로 화면 나눕니다. 이러한 영역 전화가 세로 또는 가로 모드 인지에 따라 다릅니다. `DisplayClipOp` 클래스에는 다음 텍스트와 호출 표시 `ClipPath` 각 잘라내기 작업을 설명 하기 위해 두 개의 원 경로:
 
@@ -282,7 +283,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 다음 스크린 샷에서 6 개의 영역 작업에 따라 클리핑 영역을 보여 줍니다. 왼쪽된 circle은 지역 하는 `Op` 메서드를 호출 하 고 오른쪽 원은 지역에 전달 되는 `Op` 메서드:
 
-[![](clipping-images//regionoperations-small.png "영역 작업 페이지의 삼중 스크린샷")](clipping-images/regionoperations-large.png "영역 작업 페이지의 삼중 스크린샷")
+[![](clipping-images//regionoperations-small.png "영역 작업 페이지의 삼중 스크린샷")](clipping-images/regionoperations-large.png#lightbox "영역 작업 페이지의 삼중 스크린샷")
 
 이러한 모든 가능성을 결합 하 여 이러한 두 개의 원을?합니다 결과 이미지 자체에 표시 되는 세 가지 구성의 조합으로 고려는 `Difference`, `Intersect`, 및 `ReverseDifference` 작업 합니다. 조합 총 수를 3 제곱 2 개 또는 8은 합니다. 누락 된 두 가지 원본 영역 (에서 호출 하지 줄어들고 결과적 `Op` 전혀) 및 완전히 빈 지역입니다.
 
@@ -423,7 +424,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `DrawRegion` 호출 주황색으로 영역을 채우는 동안는 `DrawPath` 호출 파란색 비교에 대 한 원래 경로 획:
 
-[![](clipping-images//regionpaint-small.png "그리기 영역 페이지의 삼중 스크린샷")](clipping-images/regionpaint-large.png "영역 페인트 페이지의 삼중 스크린샷")
+[![](clipping-images//regionpaint-small.png "그리기 영역 페이지의 삼중 스크린샷")](clipping-images/regionpaint-large.png#lightbox "영역 페인트 페이지의 삼중 스크린샷")
 
 지역은 일련의 개별 좌표입니다.
 
@@ -509,7 +510,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 स ो द 실제로 ि 네-리프 clover 처럼 이지만 클리핑 없이 렌더링 하기 어려운 될 수 있는 이미지:
 
-[![](clipping-images//fourleafclover-small.png "4 개의-리프 Clover 페이지의 삼중 스크린샷")](clipping-images/fourleafclover-large.png "네-리프 Clover 페이지의 삼중 스크린샷")
+[![](clipping-images//fourleafclover-small.png "4 개의-리프 Clover 페이지의 삼중 스크린샷")](clipping-images/fourleafclover-large.png#lightbox "네-리프 Clover 페이지의 삼중 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크

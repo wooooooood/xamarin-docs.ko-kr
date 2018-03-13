@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 4d7129ed8645eda5d2bed2d5b22ffb3cd979c280
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7de56038d5f59c6cff89b87f48535c3e757bb91
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
@@ -75,11 +75,10 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 응용 프로그램을 실행합니다. 다음과 같은 레이아웃을 표시 되어야 합니다.
 
-[![TextView, EditText, 두 개의 단추와 상대적 레이아웃의 스크린 샷](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png)
+[![TextView, EditText, 두 개의 단추와 상대적 레이아웃의 스크린 샷](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
-<a name="Resources" />
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 -   [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
 -   [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)

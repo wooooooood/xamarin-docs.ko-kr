@@ -7,18 +7,17 @@ ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: b8f643c8158c5a3a849a3d8ee3dd8d0e7e30addf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cardview"></a>CardView
 
 _Cardview 위젯은 뷰에서 카드 유사한 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. 이 가이드를 사용 하 고 이전 버전의 Android와 이전 버전과 호환성을 유지 하면서 CardView Xamarin.Android 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -59,7 +58,6 @@ _Cardview 위젯은 뷰에서 카드 유사한 텍스트 및 이미지 콘텐츠
 Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아보려면 참조 [설정을 Android 5.0 프로젝트](~/android/platform/lollipop.md)합니다.
 NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 [연습: 프로젝트에 포함 하는 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
 
-<a name="basic" />
 
 ## <a name="introducing-cardview"></a>CardView 소개
 
@@ -94,11 +92,10 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 [�
 
 이 레이아웃 예제는 기본 만듭니다 `CardView` 다음 화면에 표시 된 대로 텍스트의 한 줄으로:
 
-[![흰색 배경 및 텍스트 줄을 사용 하 여 CardView의 스크린 샷](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png)
+[![흰색 배경 및 텍스트 줄을 사용 하 여 CardView의 스크린 샷](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 이 예제에서는 앱 스타일이 있는 밝은 테마 자료로 설정 됩니다 (`Theme.Material.Light`) 하는 `CardView` 그림자 및 가장자리는 쉽게 볼 수 있습니다. 테마 설정 Android 5.0 앱에 대 한 자세한 내용은 참조 [자료 테마](~/android/user-interface/material-theme.md)합니다. 다음 섹션에서는 사용자 지정 하는 방법을 알아봅니다에서는 `CardView` 응용 프로그램에 대 한 합니다.
 
-<a name="customizing" />
 
 ## <a name="customizing-cardview"></a>CardView 사용자 지정
 
@@ -159,30 +156,28 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 [�
 
 이 레이아웃 예제 사진 보기 응용 프로그램에서 이미지를 표시 하는 사용 되는 경우는 `CardView` 다음 스크린샷에 표시 된 것 처럼 사진 스냅숏의 모양이:
 
-[![이미지와 이미지 아래 캡션이 있는 CardView](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png)
+[![이미지와 이미지 아래 캡션이 있는 CardView](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 가져온 것이 스크린 샷은 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer) 샘플 응용 프로그램을 사용 하 여는 `RecyclerView` 스크롤 목록으로 표시 하는 위젯 `CardView` 사진을 보기 위한 이미지입니다. 에 대 한 자세한 내용은 `RecyclerView`, 참조는 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) 가이드입니다.
 
 에 `CardView` 콘텐츠 영역에 둘 이상의 자식 뷰를 표시할 수 있습니다. 예를 들어 위의 사진 앱 예제 보기의 콘텐츠 영역으로 이루어진는 `ListView` 를 포함 하는 `ImageView` 및 `TextView`합니다. 하지만 `CardView` 인스턴스 세로로 정렬 종종 됩니다, 가로로도 정렬할 수 (참조 [만드는 사용자 지정 보기 스타일](~/android/user-interface/material-theme.md#customview) 예제 스크린샷에 대 한).
 
-<a name="layout" />
 
 ### <a name="cardview-layout-options"></a>CardView 레이아웃 옵션
 
 `CardView` 안쪽 여백, 권한 상승, 모퉁이 반경 및 배경 색에 영향을 주는 하나 이상의 특성을 설정 하 여 레이아웃을 사용자 지정할 수 있습니다.
 
-[![CardView 특성의 다이어그램](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png)
+[![CardView 특성의 다이어그램](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 각 특성 해당 하는 도구를 호출 하 여 동적으로 변경할 수도 있습니다 `CardView` 메서드 (대 한 자세한 내용은 `CardView` 메서드 참조는 [CardView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/CardView.html)).
 참고 (제외 배경색) 이러한 특성은 다음의 단위를 10 진수 사용 되는 차원 값의 허용 합니다. 예를 들어 `11.5dp` 11.5 밀도 독립적 픽셀로 지정 합니다.
 
-<a name="padding" />
 
 #### <a name="padding"></a>안쪽 여백
 `
 CardView` 카드 내에서 콘텐츠를 배치 5 안쪽 여백 특성을 제공 합니다. XML 레이아웃에서 설정할 수 있습니다 또는 유사한 메서드가 코드에서 호출할 수 있습니다.
 
-[![안쪽 여백 특성 CardView의 다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png)
+[![안쪽 여백 특성 CardView의 다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 안쪽 여백 특성을 다음과 같이 설명 합니다.
 
@@ -200,13 +195,12 @@ CardView` 카드 내에서 콘텐츠를 배치 5 안쪽 여백 특성을 제공 
 예를 들어 경우 `contentPadding` 사진 보기 응용 프로그램에서 충분히 증가할는 `CardView` 카드에 표시 되는 텍스트와 이미지 자르기 것입니다.
 
 
-<a name="elevation" />
 
 #### <a name="elevation"></a>권한 상승
 
 `CardView` 해당 승격을 제어 하는 두 개의 권한 상승 특성을 제공 하 고, 결과적으로 해당 그림자의 크기:
 
-[![CardView 상승 특성의 다이어그램](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png)
+[![CardView 상승 특성의 다이어그램](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 권한 상승 특성을 다음과 같이 설명 합니다.
 
@@ -217,13 +211,12 @@ CardView` 카드 내에서 콘텐츠를 배치 5 안쪽 여백 특성을 제공 
 값이 클수록 `cardElevation` 있도록 그림자 크기를 늘리려면 `CardView` float 배경 위에 더 높은 것 같습니다. `cardElevation` 특성도 뷰 겹치는의 그리기 순서를 결정 합니다; 즉, `CardView` 상승 설정이 낮은 겹치는 모든 뷰 이상과 더 높은 권한 상승 설정과 함께 다른 겹치는 보기 아래에 그려집니다.
 `cardMaxElevation` 설정은 변경 될 때 응용 프로그램 권한 상승 동적으로 하는 데 유용 &ndash; 그림자의 값이 설정으로 정의 하는 개발자가 수 없습니다.
 
-<a name="radius" />
 
 #### <a name="corner-radius-and-background-color"></a>모퉁이 반경 및 배경색
 
 `CardView` 모서리 반지름 및 배경 색을 제어 하는 데 사용할 수 있는 특성을 제공 합니다. 이러한 두 속성의 전체 스타일을 바꾸는 데 사용할 수는 `CardView`:
 
-[![Radious CardView 모퉁이 및 배경 색 특성의 다이어그램](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png)
+[![Radious CardView 모퉁이 및 배경 색 특성의 다이어그램](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 이러한 특성은 다음과 같이 설명 되어 있습니다.
 
@@ -233,8 +226,6 @@ CardView` 카드 내에서 콘텐츠를 배치 5 안쪽 여백 특성을 제공 
 
 이 다이어그램에서 `cardCornerRadius` 더 둥근된 10dp로 설정 된 및 `cardBackgroundColor` 로 설정 된 `"#FFFFCC"` (연한 노랑)입니다.
 
-
-<a name="compatibility" />
 
 ## <a name="compatibility"></a>호환성
 
@@ -255,7 +246,6 @@ CardView` 카드 내에서 콘텐츠를 배치 5 안쪽 여백 특성을 제공 
 
 Android의 이전 버전과 호환성을 유지 하는 방법에 대 한 자세한 내용은 참조 [호환성을 유지](https://developer.android.com/training/material/compatibility.html)합니다.
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

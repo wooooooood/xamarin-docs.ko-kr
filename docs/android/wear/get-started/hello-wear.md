@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Hello, 마모
 
@@ -30,11 +30,11 @@ _첫 Android 착용 응용 프로그램을 만들고 마모 에뮬레이터 또�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![새 프로젝트 대화 상자에서 새 Android 착용 응용 프로그램 만들기](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![새 프로젝트 대화 상자에서 새 Android 착용 응용 프로그램 만들기](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![새 솔루션 대화 상자에서 새 Android 착용 응용 프로그램 만들기](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![새 솔루션 대화 상자에서 새 Android 착용 응용 프로그램 만들기](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ _첫 Android 착용 응용 프로그램을 만들고 마모 에뮬레이터 또�
 
 되도록 **최소 Android 대상** 로 설정 된 **Android 5.0 (롤리팝)** 이상: 
 
-[![Visual Studio에서 Android 5.0에 대상 프레임 워크를 설정합니다.](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![Visual Studio에서 Android 5.0에 대상 프레임 워크를 설정합니다.](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 대상 프레임 워크로 설정 되어 **Android 5.0 (롤리팝)** 이상:
 
-[ ![Mac 용 Visual Studio에서 Android 5.0에 대상 프레임 워크를 설정](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Mac 용 Visual Studio에서 Android 5.0에 대상 프레임 워크를 설정](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ Android 착용 Smartwatch 같은 쓰는 유형 Android 장치를 설정한 경�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Visual Studio 장치 메뉴에 쓰는 유형 AVD 선택](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![Visual Studio 장치 메뉴에 쓰는 유형 AVD 선택](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Mac 장치 메뉴에 대 한 Visual Studio에서 착용 AVD 선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![Mac 장치 메뉴에 대 한 Visual Studio에서 착용 AVD 선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Android 착용 Smartwatch 같은 쓰는 유형 Android 장치를 설정한 경�
 
 응용 프로그램을 성공적으로 배포 후 마모 장치의 화면에는 다음과 같은 화면이 표시 되어야 합니다.
 
-[![마모 응용 프로그램의 초기 화면](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![마모 응용 프로그램의 초기 화면](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 탭의 **CLICK ME!** 마모 장치와 참조 각 탭이 있는 수 증가 되는 단추:
 
-[![3 번 클릭 한 후 앱 착용 스크린 샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![3 번 클릭 한 후 앱 착용 스크린 샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>다음 단계

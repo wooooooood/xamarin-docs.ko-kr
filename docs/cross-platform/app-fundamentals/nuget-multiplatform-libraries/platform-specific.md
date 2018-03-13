@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 951de7c134e6882d621b015456d5d40a7cf2b8d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6512387738217259067e7b9ae8076f73b4fbeb07
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>NuGet에 대 한 새 플랫폼 관련 라이브러리 프로젝트 만들기
 
@@ -27,11 +27,11 @@ NuGet으로 iOS 및 Android 관련 코드 모두에 공통적인.NET 코드를 �
 
 2. 선택 **다중 플랫폼 라이브러리** 에서 **다중 플랫폼 > 라이브러리** 섹션:
 
-  [ ![](platform-specific-images/mulitplatform-library-sml.png "단일 코드 베이스에 대 한 다양 한 플랫폼 라이브러리 구성")](platform-specific-images/multiplatform-library.png)
+  [![](platform-specific-images/mulitplatform-library-sml.png "단일 코드 베이스에 대 한 다양 한 플랫폼 라이브러리 구성")](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. 입력 한 **이름** 및 **설명**, 선택 **플랫폼별**:
 
-  [ ![](platform-specific-images/specific-configure-sml.png "IOS 및 Android 플랫폼 관련 라이브러리를 구성 합니다.")](platform-specific-images/specific-configure.png)
+  [![](platform-specific-images/specific-configure-sml.png "IOS 및 Android 플랫폼 관련 라이브러리를 구성 합니다.")](platform-specific-images/specific-configure.png#lightbox)
 
 4. 마법사를 완료합니다. 다음 프로젝트는 솔루션에 추가 됩니다.
 
@@ -42,7 +42,7 @@ NuGet으로 iOS 및 Android 관련 코드 모두에 공통적인.NET 코드를 �
 
 5. NuGet 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**을 연 다음는 **NuGet 패키지 > 메타 데이터** 섹션 및 입력의 [필요한 메타 데이터가](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (모든 선택적으로 메타 데이터):
 
-  [ ![](platform-specific-images/specific-metadata-sml.png "필요한 메타 데이터를 입력 합니다.")](platform-specific-images/specific-metadata.png)
+  [![](platform-specific-images/specific-metadata-sml.png "필요한 메타 데이터를 입력 합니다.")](platform-specific-images/specific-metadata.png#lightbox)
 
 6. 또한는 **프로젝트 옵션** 창을 열려면는 **참조 어셈블리** 섹션 및 공유 라이브러리 "밥 and 스위치"를 통해 지원할 PCL 프로필 선택:
 
@@ -67,4 +67,4 @@ NuGet 패키지는 ZIP 파일도 생성 되는 패키지의 내부 구조를 검
 
 ## <a name="related-links"></a>관련 링크
 
-- [메타 데이터 가이드](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
+- [메타데이터 가이드](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 51cc7a4700e8cb3ece556b0ada841d70d5f2bb8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 486df3bbee3f8af511140e2d287f9f95571c7b3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-sdk-emulator-troubleshooting"></a>Android SDK 에뮬레이터 문제 해결
 
@@ -83,7 +83,7 @@ SERVICE_NAME: intelhaxm
 
 성능 경고를 표시하지 않기 위해 사용하지 않게 설정할 수 있습니다. Visual Studio에서 **도구 > 옵션 > Xamarin > Android 설정**을 클릭하고 **AVD 가속이 지원되지 않는 경우 경고(HAXM)** 옵션을 사용하지 않게 설정합니다.
 
-[![AVD 가속 경고를 사용하지 않도록 설정](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png)
+[![AVD 가속 경고를 사용하지 않도록 설정](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -110,13 +110,11 @@ HAXM 프로세스가 실행되지 않는 경우 이 대화 상자가 표시됩�
 
 -----
 
-<a name="solutions" />
 
 ## <a name="solutions-to-common-problems"></a>일반적인 문제에 대한 해결 방법
 
 여러 일반적인 Android SDK 에뮬레이터 문제는 추가 소프트웨어를 설치하거나 컴퓨터 구성을 변경하여 해결할 수 있습니다. 다음 섹션에서는 이러한 문제를 설명하고 해결 방법을 제시합니다.
 
-<a name="deployment" />
 
 ### <a name="deployment-issues"></a>배포 문제
 
@@ -142,7 +140,6 @@ HAXM 프로세스가 실행되지 않는 경우 이 대화 상자가 표시됩�
 5. 에뮬레이터가 이 목록에 나타나지 않는 경우 **Android SDK Manager**를 시작하고 모든 업데이트를 적용한 다음, 다시 에뮬레이터를 시작해 봅니다.
 
 
-<a name="haxm-issues" />
 
 ### <a name="haxm-issues"></a>HAXM 문제
 
@@ -162,7 +159,6 @@ HAXM은 Hyper-v, Windows Device Guard 및 일부 바이러스 백신 소프트�
 
 - **바이러스 백신 소프트웨어** &ndash; 하드웨어 지원 가상화(예: Avast)를 사용하는 바이러스 백신 소프트웨어를 실행 중인 경우 이 소프트웨어를 사용하지 않게 설정하거나 제거한 다음 다시 부팅하고 Android SDK 에뮬레이터를 다시 시도합니다.
 
-<a name="bios" />
 
 #### <a name="incorrect-bios-settings"></a>잘못된 BIOS 설정
 

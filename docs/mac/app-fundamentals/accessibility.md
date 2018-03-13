@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>MacOS에서 내게 필요한 옵션
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/28/2018
 Xamarin.Mac는 Xcode 인터페이스 작성기를 사용 하 여 스토리 보드 파일을 편집 합니다.
 내게 필요한 옵션 정보를 편집할 수는 **Identity 관리자** 컨트롤을 선택 하면 디자인 화면에서 (같이 아래 스크린샷에서):
 
-[![Xcode의 인터페이스 작성기에서 내게 필요한 옵션 추가](accessibility-images/xcode.png "Xcode의 인터페이스 작성기에서 내게 필요한 옵션 추가")](accessibility-images/xcode-large.png)
+[![Xcode의 인터페이스 작성기에서 내게 필요한 옵션 추가](accessibility-images/xcode.png "Xcode의 인터페이스 작성기에서 내게 필요한 옵션 추가")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>코드
 
@@ -80,7 +80,7 @@ macOS 제공는 **내게 필요한 옵션 검사기** 하면 내게 필요한 �
 
 활성화 되 면 검사기 화면 이동할 수 있는 부동 창으로 나타납니다. 아래 스크린샷에서 샘플 Mac 응용 프로그램 옆에 있는 실행 중인 검사를 보여 줍니다. 커서를 창 위로 움직일 검사기 각 컨트롤의 액세스 가능한 모든 속성을 표시 합니다.
 
-[![내게 필요한 옵션 관리자 실행의 예제](accessibility-images/accessibility-example.png "내게 필요한 옵션 검사기 예제 실행")](accessibility-images/accessibility-example-large.png)
+[![내게 필요한 옵션 관리자 실행의 예제](accessibility-images/accessibility-example.png "내게 필요한 옵션 검사기 예제 실행")](accessibility-images/accessibility-example-large.png#lightbox)
 
 자세한 내용은 참조는 [OS X 가이드에 대 한 내게 필요한 옵션 테스트](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html)합니다.
 

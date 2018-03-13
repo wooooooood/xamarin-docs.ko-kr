@@ -3,16 +3,16 @@ title: "터치"
 description: "여러 오늘날의 장치에 터치 스크린이 빠르고 효율적으로 상호 작용할 수 장치와 자연스럽 고 직관적인 방식입니다. 이 상호 작용 간단한 터치 검색만 제한 되지 않습니다.-제스처도 사용할 수 있습니다. 예를 들어 핀치 확대/축소 제스처는 두 손가락 사용자 수 확대 / 축소 된 화면의 일부를 모으는 하 여이 매우 일반적인 예제입니다. 이 가이드를 터치를 검사 하 고 Android에서 제스처입니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4A17FD28-313F-4AAC-B82B-3847B4D64A88
+ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 8a207b327706bc23d946e5ade0efabd3d321a1d1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 791dd25796e1f9ba4d73b99dea0fd043431f0218
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="touch"></a>터치
 
@@ -32,7 +32,7 @@ Android 또는 iOS에서 작업 하는 복잡 한 터치 및 제스처 인식기
 
 ## <a name="sections"></a>섹션
 
--  [Android에서 터치](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+-  [Android 터치](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 -  [연습: Android에서 터치 사용](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 -  [멀티 터치 추적](touch-tracking.md)
 

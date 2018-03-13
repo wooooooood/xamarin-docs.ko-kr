@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d81776dcb48d33927ffde4087ceb3f408b38d16f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 036e1ddc95f8eabec3e87c13c25cad972c29a5d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS 시에라 소개
 
@@ -52,7 +52,7 @@ macOS 시에라 Apple Pay iOS와 macOS Safari 기반 웹 사이트에 직접 통
 
 Apple Safari 웹 브라우저, 페이지 워드 프로세서 및 숫자 스프레드 시트 사용에서는 부동 패널 같은 기존의 UI 요소와 통합 된 상황에 맞는 사용자 인터페이스를 제공 하는 많은 새로운 기술 및 여러 열과 같은 최신 macOS 앱 창입니다.
 
-[ ![탭된 창 Mac의 예](images/content08.png)](images/content08.png)
+[![탭된 창 Mac의 예](images/content08.png)](images/content08.png#lightbox)
 
 우리의 [건물 최신 macOS 앱](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) 가이드에서는 몇 가지 팁, 기능 및 기술 Xamarin.Mac에 최신 macOS 앱을 빌드하기 위해 개발자가 사용할 수 있습니다.
 

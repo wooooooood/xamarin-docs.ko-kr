@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: 56fee71f2ed36b682d323bae1225430ff991f140
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>리소스 한정자 및 시각화 옵션
 
 _이 항목에서는 일부 한정자 값 일치 하는 경우에 사용할 수 있는 리소스를 정의 하는 방법을 설명 합니다. 간단한 예는 언어 한정 된 문자열 리소스입니다. 추가 언어에 사용할 정의 된 다른 대체 리소스와 기본적으로 문자열 리소스를 정의할 수 있습니다. 자체 레이아웃을 포함 하 여 모든 리소스 종류 정규화 할 수 있습니다._
 
-<a name="Custom_Device_Configurations" />
 
 ## <a name="custom-device-configurations"></a>사용자 지정 장치 구성
 
@@ -30,11 +29,11 @@ Android는 다양 한 장치 및 화면 해상도에 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![장치 선택기 메뉴](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png)
+[![장치 선택기 메뉴](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![장치 선택기 메뉴](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png)
+[![장치 선택기 메뉴](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png#lightbox)
 
 -----
 
@@ -43,11 +42,11 @@ Android는 다양 한 장치 및 화면 해상도에 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![AVD Manager](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png)
+[![AVD Manager](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![AVD Manager](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png)
+[![AVD Manager](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png#lightbox)
 
 -----
 
@@ -57,11 +56,11 @@ Android는 다양 한 장치 및 화면 해상도에 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![장치를 복제 합니다.](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png)
+[![장치를 복제 합니다.](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![장치를 복제 합니다.](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png)
+[![장치를 복제 합니다.](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png#lightbox)
 
 -----
 
@@ -70,11 +69,11 @@ Android는 다양 한 장치 및 화면 해상도에 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![사용자 지정 장치](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png)
+[![사용자 지정 장치](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![사용자 지정 장치](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png)
+[![사용자 지정 장치](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png#lightbox)
 
 -----
 
@@ -83,11 +82,11 @@ Android는 다양 한 장치 및 화면 해상도에 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![업데이트 된 장치 정의](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png)
+[![업데이트 된 장치 정의](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![업데이트 된 장치 정의](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png)
+[![업데이트 된 장치 정의](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png#lightbox)
 
 -----
 
@@ -96,11 +95,11 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![사용자 지정 장치가 장치 목록에 표시 됩니다.](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png)
+[![사용자 지정 장치가 장치 목록에 표시 됩니다.](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![사용자 지정 장치가 장치 목록에 표시 됩니다.](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png)
+[![사용자 지정 장치가 장치 목록에 표시 됩니다.](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png#lightbox)
 
 -----
 
@@ -109,16 +108,15 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![사용자 지정 장치 사용](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png)
+[![사용자 지정 장치 사용](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![사용자 지정 장치 사용](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png)
+[![사용자 지정 장치 사용](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png#lightbox)
 
 -----
 
 
-<a name="resource_qualifier_options" />
 
 ## <a name="resource-qualifier-options"></a>리소스 한정자 옵션
 
@@ -126,11 +124,11 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![리소스 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png)
+[![리소스 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![리소스 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png)
+[![리소스 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png#lightbox)
 
 -----
 
@@ -144,7 +142,6 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 이러한 풀 다운 메뉴의 각 선택 하 고 리소스 한정자 (아래 설명) 구성할 수 있는 새로운 대화 상자를 엽니다.
 
 
-<a name="Language_and_Region" />
 
 ### <a name="language"></a>언어
 
@@ -152,11 +149,11 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![언어/영역 추가](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png)
+[![언어/영역 추가](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![언어/영역 추가](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png)
+[![언어/영역 추가](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png#lightbox)
 
 -----
 
@@ -169,7 +166,7 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![언어 목록](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png)
+[![언어 목록](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png#lightbox)
 
 -----
 
@@ -182,7 +179,7 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![언어 및 지역 선택](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png)
+[![언어 및 지역 선택](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png#lightbox)
 
 -----
 
@@ -190,7 +187,6 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 새 언어를 추가 하지만 다음에 아니므로 추가 된 언어는 더 이상 표시에 대 한 새 리소스 만들지 하는 경우 프로젝트를 열을 참고 합니다.
 
 
-<a name="ui_mode" />
 
 ### <a name="ui-mode"></a>UI 모드
 
@@ -198,7 +194,7 @@ Note 위에 표시 된 대로 각 장치 사용자가 만든 정의가 녹색 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![UI 모드 메뉴](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png)
+[![UI 모드 메뉴](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 이 목록 아래의 밤 모드가 **하지 밤** 및 **밤**레이아웃 방향이 **왼쪽에서 오른쪽으로** 및 **오른쪽에서 왼쪽** ( 에 대 한 정보 **왼쪽에서 오른쪽으로** 및 **오른쪽에서 왼쪽** 옵션 참조 [LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/)합니다.
 마지막 항목에 **리소스 한정자 옵션** 대화 상자는는 **화면 반올림** (예: Android 착용 함께 사용) 또는 **화면 반올림 되지** (라운드에 대 한 내용은 및 비 라운드 화면 참조 [레이아웃](https://developer.android.com/training/wearables/ui/layouts.html)).
@@ -206,7 +202,7 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![UI 모드 메뉴](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png)
+[![UI 모드 메뉴](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png#lightbox)
 
 이 목록 아래의 밤 모드가 **하지 밤** 및 **밤**레이아웃 방향으로 이어집니다 **왼쪽에서 오른쪽으로** 및 **오른쪽에서 왼쪽**합니다. Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://developer.xamarin.com/api/type/Android.App.UiModeManager/)합니다.
 에 대 한 내용은 **왼쪽에서 오른쪽으로** 및 **오른쪽에서 왼쪽** 옵션 참조 [LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/)합니다.
@@ -215,12 +211,11 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 
 에 있는 마지막 항목은 **리소스 한정자 옵션** 대화 상자는는 **화면 라운드** 메뉴. 이 메뉴를 사용 하면 중 하나를 선택할 수 있습니다 **화면 반올림** (예: Android 착용 함께 사용) 또는 **직사각형 화면**:
 
-[ ![Round 화면 메뉴](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png)
+[![Round 화면 메뉴](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png#lightbox)
 
 -----
 
 
-<a name="Action_Bar" />
 
 ## <a name="action-bar-settings"></a>작업 모음 설정
 
@@ -232,7 +227,7 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![작업 모음 설정](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png)
+[![작업 모음 설정](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png#lightbox)
 
 -----
 
@@ -246,7 +241,6 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 -   **탭** &ndash; 탭 탐색 모드입니다. 정적 제목 텍스트가 아닌이 모드는 일련의 작업 내에서 탐색을 위한 탭을 표시합니다.
 
 
-<a name="Themes" />
 
 ## <a name="themes"></a>테마
 
@@ -254,11 +248,11 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![더 많은 테마 목록의](resource-qualifiers-images/vs/15-theme-menu-sml.png "더 테마 목록")](resource-qualifiers-images/vs/15-theme-menu.png)
+[![더 많은 테마 목록의](resource-qualifiers-images/vs/15-theme-menu-sml.png "더 테마 목록")](resource-qualifiers-images/vs/15-theme-menu.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![더 많은 테마 목록](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png)
+[![더 많은 테마 목록](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png#lightbox)
 
 -----
 
@@ -271,12 +265,11 @@ Android UI 모드에 대 한 자세한 내용은 참조 [UiModeManager](https://
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![밝은 테마 출시 되었습니다.](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png)
+[![밝은 테마 출시 되었습니다.](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png#lightbox)
 
 -----
 
 
-<a name="Android_Version" />
 
 ## <a name="android-version"></a>Android 버전
 
@@ -293,7 +286,7 @@ Android **버전** 선택기 디자이너에서 레이아웃을 렌더링 하는
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Android 버전 목록](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png)
+[![Android 버전 목록](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png#lightbox)
 
 대상 프레임 워크 버전에서 프로젝트의 설정에서 설정할 수 있습니다는 **프로젝트 옵션 > 빌드 > 일반** 섹션. 대상 프레임 워크 버전에 대 한 자세한 내용은 참조 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
 

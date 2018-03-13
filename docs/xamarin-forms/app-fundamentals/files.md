@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 605374c0f2bfe656e564e48d14ffe18ce5b7dfe5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c6d10025ccc038ba160fe3c09f6ce92e97d916d2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="files"></a>파일
 
@@ -40,18 +40,18 @@ Xamarin.Forms 코드는 각자 자체적인 파일 시스템을 지닌 여러 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![구성 리소스 빌드 작업을 포함](files-images/vs-embeddedresource-sml.png "설정을 포함 리소스 빌드 작업")](files-images/vs-embeddedresource.png "설정을 포함 리소스 빌드 작업")
+[![구성 리소스 빌드 작업을 포함](files-images/vs-embeddedresource-sml.png "설정을 포함 리소스 빌드 작업")](files-images/vs-embeddedresource.png#lightbox "설정을 포함 리소스 빌드 작업")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![포함된 리소스 빌드 작업을 구성 하는 PCL에 포함 된 텍스트 파일](files-images/xs-embeddedresource-sml.png "설정을 포함 리소스 빌드 작업")](files-images/xs-embeddedresource.png "설정을 포함 리소스 빌드 작업")
+[![포함된 리소스 빌드 작업을 구성 하는 PCL에 포함 된 텍스트 파일](files-images/xs-embeddedresource-sml.png "설정을 포함 리소스 빌드 작업")](files-images/xs-embeddedresource.png#lightbox "설정을 포함 리소스 빌드 작업")
 
 -----
 
 `GetManifestResourceStream` 사용 하 여 포함 된 파일에 액세스 하는 데 사용 되는 **리소스 ID**합니다. 리소스 ID는 파일 이름-에 포함 된 프로젝트에 대 한 기본 네임 스페이스 접두사로 기본적으로이 경우 어셈블리는 **WorkingWithFiles** 파일 이름이 고 **PCLTextResource.txt**, 리소스 ID가 있으므로 `WorkingWithFiles.PCLTextResource.txt`합니다.
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
 string text = "";
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -61,12 +61,12 @@ using (var reader = new System.IO.StreamReader (stream)) {
 
 `text` 변수는 텍스트를 표시 하거나 그렇지 않으면 코드에서 사용 하 여 사용할 수 있습니다. 이 스크린샷은 [샘플 응용 프로그램](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) 에 렌더링 하면 라는 텍스트가 표시는 `Label` 제어 합니다.
 
- [ ![PCL에 포함 된 텍스트 파일](files-images/pcltext-sml.png "앱에 표시 되는 PCL에 포함 된 텍스트 파일")](files-images/pcltext.png "앱에 표시 되는 PCL에 포함 된 텍스트 파일")
+ [![PCL에 포함 된 텍스트 파일](files-images/pcltext-sml.png "앱에 표시 되는 PCL에 포함 된 텍스트 파일")](files-images/pcltext.png#lightbox "앱에 표시 되는 PCL에 포함 된 텍스트 파일")
 
 로드 하 고 XML을 역직렬화도 매우 간단 합니다. 다음 코드에 표시 된 XML 파일의 로드 하 고 리소스에에서 deserialize 된 다음에 바인딩된는 `ListView` 표시 합니다. XML 파일의 배열을 포함 `Monkey` 개체 (클래스 샘플 코드에 정의 됨).
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -77,7 +77,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [ ![ListView에 표시 되는 PCL에 포함 된 Xml 파일](files-images/pclxml-sml.png "ListView에 표시 되는 PCL에 포함 된 XML 파일")](files-images/pclxml.png "ListView에 표시 되는 PCL에 포함 된 XML 파일")
+ [![ListView에 표시 되는 PCL에 포함 된 Xml 파일](files-images/pclxml-sml.png "ListView에 표시 되는 PCL에 포함 된 XML 파일")](files-images/pclxml.png#lightbox "ListView에 표시 되는 PCL에 포함 된 XML 파일")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -106,7 +106,7 @@ var resourcePrefix = "WorkingWithFiles.WinPhone.";
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
@@ -129,7 +129,7 @@ Stream stream = assembly.GetManifestResourceStream
 using System.Reflection;
 // ...
 // use for debugging, not in released app code!
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 foreach (var res in assembly.GetManifestResourceNames()) {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);
 }
@@ -141,7 +141,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Xamarin.Forms는 각각 자체 파일 시스템에 있는 여러 플랫폼에서 실행 되므로를 로드 하 고 사용자가 만든 파일을 저장 한 방법은 없습니다. 저장 하 고 샘플 응용 프로그램에 저장 하 고 일부 사용자 입력-로드 화면을 포함 하는 텍스트 파일을 로드 하는 방법을 보여 주는 완성 된 화면은 다음과 같습니다.
 
- [ ![저장 및 로드 텍스트](files-images/saveandload-sml.png "저장 및 응용 프로그램에서 파일 로드")](files-images/saveandload.png "저장 및 응용 프로그램에서 파일 로드")
+ [![저장 및 로드 텍스트](files-images/saveandload-sml.png "저장 및 응용 프로그램에서 파일 로드")](files-images/saveandload.png#lightbox "저장 및 응용 프로그램에서 파일 로드")
 
 각 플랫폼에는 약간 다른 디렉터리 구조 및 다른 파일 시스템 기능-예를 들어 Xamarin.iOS 및 Xamarin.Android 지원 대부분 `System.IO` 기능 하지만 Windows Phone 지원 `IsolatedStorage` 및 [ `Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) Api입니다.
 

@@ -7,18 +7,17 @@ ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 9b200bd335ea65bf46de00d2dc7382b7f838716b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="viewpager-with-fragments"></a>조각 사용 하 여 ViewPager
 
 _ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 조각을 사용 하 여 데이터 페이지와 ViewPager swipeable UI를 구현 하는 방법을 설명 합니다._
 
-<a name="overview" />
  
 ## <a name="overview"></a>개요
 
@@ -27,14 +26,12 @@ _ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자
 이 가이드에 조각의 기본 사항 다루지 않습니다 &ndash; 모르는 아직 Xamarin.Android의 조각으로, 참조 [조각](~/android/platform/fragments/index.md) 조각을 사용 하 여 시작할 수 있도록 합니다. 
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>응용 프로그램 프로젝트를 시작 합니다.
 
 라는 새 Android 프로젝트 만들기 **FlashCardPager**합니다. 그런 다음 NuGet 패키지 관리자를 시작 (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 [연습: 프로젝트에 포함 하는 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치는 **Xamarin.Android.Support.v4** 에 설명 된 대로 패키지 [Viewpager 뷰와](~/android/user-interface/controls/view-pager/viewpager-and-views.md)합니다. 
 
 
-<a name="datasource" />
 
 ## <a name="add-an-example-data-source"></a>예제 데이터 소스 추가
 
@@ -61,7 +58,6 @@ string answer = flashCardDeck[3].Answer;
 이 소스 파일을 다운로드 (복사한 새 코드를 붙여 넣습니다. **FlashCardDeck.cs** 파일)를 프로젝트에 추가 합니다.
 
 
-<a name="layout" />
 
 ## <a name="create-a-viewpager-layout"></a>ViewPager 레이아웃 만들기
 
@@ -80,8 +76,6 @@ string answer = flashCardDeck[3].Answer;
 
 이 XML 정의 `ViewPager` 전체 화면을 차지 하는 합니다. 정규화 된 이름을 사용 해야 **android.support.v4.view.ViewPager** 때문에 `ViewPager` 지원 라이브러리에 패키지 됩니다. `ViewPager` 에서만 사용할 수는 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/); Android SDK에서 사용할 수 없는 합니다.
 
-
-<a name="setup" />
 
 ## <a name="set-up-viewpager"></a>ViewPager 설정
 
@@ -120,14 +114,13 @@ protected override void OnCreate(Bundle bundle)
 
 빌드하고이 코드를 실행 하는 경우 다음 스크린 샷에서 유사한 디스플레이 표시 되어야 합니다. 
 
-[![빈 ViewPager 사용 앱을 FlashCardPager 스크린 샷](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png)
+[![빈 ViewPager 사용 앱을 FlashCardPager 스크린 샷](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png#lightbox)
 
 이 시점에서 `ViewPager` 채우기 사용 되는 조각 되어 있지 때문에 비어 있지는는 `ViewPager`, 데이터에서이 조각이 만들기 위한 어댑터 없는 및 **FlashCardDeck**합니다. 
 
 다음 섹션에서는 `FlashCardFragment` 는 만드는 각 플래시 카드의 기능을 구현 하는 및 `FragmentPagerAdapter` 연결할 만들어집니다는 `ViewPager` 데이터에서 만든 조각에는 `FlashCardDeck`합니다. 
 
 
-<a name="fragment" />
 
 ## <a name="create-the-fragment"></a>조각 만들기
 
@@ -135,7 +128,6 @@ protected override void OnCreate(Bundle bundle)
 `FlashCardFragment`뷰 구성 됩니다는 `TextView` 플래시 카드 문제가 되는 텍스트를 표시 하는 합니다. 이 보기를 사용 하는 이벤트 처리기를 구현 합니다는 `Toast` 사용자 플래시 카드 질문을 누르면 답변을 표시 합니다. 
 
 
-<a name="layout" />
 
 ### <a name="create-the-flashcardfragment-layout"></a>FlashCardFragment 레이아웃 만들기
 
@@ -163,7 +155,6 @@ protected override void OnCreate(Bundle bundle)
 이 레이아웃 단일 플래시 카드 조각; 정의 각 조각은 이루어진는 `TextView` 큰 (100sp) 글꼴을 사용 하 여 수학 문제를 표시 하는 합니다. 이 텍스트 세로 및 가로로 가운데에 표시 됩니다 플래시 카드입니다. 
 
 
-<a name="fcfclass" />
 
 ### <a name="create-the-initial-flashcardfragment-class"></a>초기 FlashCardFragment 클래스 만들기
 
@@ -205,7 +196,6 @@ namespace FlashCardPager
 조각에서 보기에 대 한 호출에서 명시적으로 확장 `inflater.Inflate`합니다. `container` 인수는 보기의 부모 및 `false` 플래그 inflater 높여서 뷰 보기의 부모에 추가 하지 않는 것을 지시 (계층이 추가 됩니다. 때 `ViewPager` 호출의 어댑터의 `GetItem` 뒷부분에서는이 메서드 연습)입니다. 
 
 
-<a name="state" />
 
 ### <a name="add-state-code-to-flashcardfragment"></a>FlashCardFragment에 상태 코드를 추가 합니다.
 
@@ -251,8 +241,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 `answer` 변수 여기에서 사용 되지 않지만 이벤트 처리기 코드는이 파일에 추가 되 면 나중에 사용할 수는 있습니다. 
 
 
-<a name="adapter" />
-
 ## <a name="create-the-adapter"></a>어댑터 만들기
 
 `ViewPager` 사이 있는 어댑터 컨트롤러 개체를 사용 하 여는 `ViewPager` 와 데이터 원본 (의 ViewPager에 그림을 참조 하십시오 [어댑터](~/android/user-interface/controls/view-pager/index.md#adapter) 문서). 이 데이터에 액세스 하려면 `ViewPager` 에서 파생 된 사용자 지정 어댑터를 제공 해야 `PagerAdapter`합니다. 이 예에서는 조각을 사용 하므로 사용는 `FragmentPagerAdapter` &ndash; `FragmentPagerAdapter` 에서 파생 된 `PagerAdapter`합니다. 
@@ -297,7 +285,6 @@ namespace FlashCardPager
 이 코드는 필수적이 지 끊고 `FragmentPagerAdapter` 구현 합니다. 다음 섹션에서 이러한 각 방법의 작업 코드로 대체 됩니다. 생성자의 목적은 조각 관리자를 전달 하는 `FlashCardDeckAdapter`의 기본 클래스 생성자입니다. 
 
 
-<a name="ctor" />
 
 ### <a name="implement-the-adapter-constructor"></a>구현 하며 어댑터 생성자
 
@@ -316,7 +303,6 @@ this.flashCardDeck = flashCards;
 이 줄의 코드 저장소는 `FlashCardDeck` 인스턴스가 `FlashCardDeckAdapter` 사용 합니다. 
 
 
-<a name="count" />
 
 ### <a name="implement-count"></a>구현 개수
 
@@ -333,7 +319,6 @@ public override int Count
 `NumCards` 속성 `FlashCardDeck` 데이터 집합의 플래시 카드 (조각 수)의 수를 반환 합니다. 
 
 
-<a name="getitem" />
 
 ### <a name="implement-getitem"></a>GetItem 구현
 
@@ -361,7 +346,6 @@ public override Android.Support.V4.App.Fragment GetItem(int position)
 경우는 `ViewPager` 렌더링는 `Fragment` 에서 `position`, 표시는 `TextBox` 에 있는 수학 문제 문자열이 포함 된 `position` 플래시 카드 묶음에 합니다. 
 
 
-<a name="addadapter" />
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>어댑터는 ViewPager를 추가
 
@@ -378,10 +362,9 @@ viewPager.Adapter = adapter;
 핵심 구현을 완료 되었습니다. &ndash; 빌드하고 응용 프로그램을 실행 합니다.
 다음 스크린샷에서 왼쪽에 표시 된 것 처럼 화면에 나타나는 플래시 카드 묶음의 첫 번째 이미지에 표시 됩니다. 살짝 왼쪽에서 더 많은 flash 카드를 참조 한 다음 오른쪽으로 살짝을 플래시 카드 데크를 뒤로 이동:
 
-[![호출기 표시기 없이 FlashCardPager 앱의 스크린 샷](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png)
+[![호출기 표시기 없이 FlashCardPager 앱의 스크린 샷](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## <a name="add-a-pager-indicator"></a>호출기 표시기 추가
 
@@ -409,10 +392,9 @@ viewPager.Adapter = adapter;
 
 빈 빌드하고 앱을 실행할 때 나타납니다 `PagerTabStrip` 각 플래시 카드의 맨 위에 표시: 
 
-[![텍스트 없이 PagerTabStrip의 클로즈업](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png)
+[![텍스트 없이 PagerTabStrip의 클로즈업](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png#lightbox)
 
 
-<a name="title" />
 
 ### <a name="display-a-title"></a>제목 표시
 
@@ -427,12 +409,11 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 이 코드 위치 플래시 카드 묶음에는 문제가 숫자로 변환합니다. 결과 문자열은 Java로 변환 `String` 에 반환 되는 `ViewPager`합니다. 앱이 새 메서드를 실행 하면 각 페이지에 문제 수를 표시 하는 고 `PagerTabStrip`: 
 
-[![각 페이지 위에 표시 된 문제 수와 FlashCardPager의 스크린샷](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png)
+[![각 페이지 위에 표시 된 문제 수와 FlashCardPager의 스크린샷](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png#lightbox)
 
 각 플래시 카드의 맨 위쪽에 표시 되는 플래시 카드 묶음에 문제 수를 확인할 간에 살짝 수 있습니다. 
 
 
-<a name="userinput" />
 
 ## <a name="handle-user-input"></a>사용자 입력을 처리
 
@@ -450,12 +431,11 @@ questionBox.Click += delegate
 
 이 `Click` 이벤트 처리기는 사용자가 누를 때 표시 되는 알림 메시지에 대 한 대답 표시는 `TextBox`합니다. `answer` 에 전달 된 번들에서 상태 정보를 읽으면 변수 이전 초기화 했습니다 `OnCreateView`합니다. 작성 하 고 앱을 실행 한 후 답변을 참조 하기 위한 각 플래시 카드 문제가 되는 텍스트를 탭: 
 
-[![FlashCardPager 스크린샷 앱 알림 수학 문제 탭이 수행 되는 경우](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png)
+[![FlashCardPager 스크린샷 앱 알림 수학 문제 탭이 수행 되는 경우](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png#lightbox)
 
 **FlashCardPager** 이 연습에서 사용 하 여는 `MainActivity` 에서 파생 된 `FragmentActivity`, 산출할 수도 있지만 `MainActivity` 에서 `AppCompatActivity` (있는 지원도 제공 조각을 관리 하기 위한)입니다. 보려는 `AppCompatActivity` 예제에서는 참조 [FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface%5CFlashCardPager/) 샘플 갤러리에서 합니다. 
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

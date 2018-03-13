@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -22,13 +22,12 @@ Xamarin.Android 응용 프로그램 모노 실행 환경 내에서 실행 합니
 
 Android에서는 대부분의 오디오, 그래픽, OpenGL 및 전화 통신와 같은 시스템 기능을 사용할 수 없는 직접 네이티브 응용 프로그램만 중 하나에 있는 Android 런타임 Java Api를 통해 제공 됩니다는 [Java](https://developer.xamarin.com/api/namespace/Java.Lang/). * 네임 스페이스 또는 [Android](https://developer.xamarin.com/api/namespace/Android/). * 네임 스페이스입니다. 이 아키텍처는 다음과 같은 대략적인:
 
-[![커널 위아래 T/j + 바인딩 모노 및 아트의 다이어그램](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![커널 위아래 T/j + 바인딩 모노 및 아트의 다이어그램](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin.Android 개발자 (하위 수준 액세스)에 대 한 알고 있는.NET Api를 호출 하거나 브리지에 의해 노출 되는 Java Api에 제공 하는 Android 네임 스페이스에서 노출 된 클래스를 사용 하 여 운영 체제의 다양 한 기능에 액세스 Android 런타임입니다.
 
 Android 클래스 Android 런타임 클래스와 통신 하는 방법에 대 한 자세한 내용은 참조는 [API 디자인](~/android/internals/api-design.md) 문서.
 
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>응용 프로그램 패키지
 
@@ -44,7 +43,6 @@ Android 응용 프로그램 패키지는 ZIP 컨테이너는 *.apk* 파일 확�
 Xamarin.Android 응용 프로그램에도 포함 *Android 호출 가능 래퍼* Android 관리 되는 코드를 호출할 수 있도록 합니다.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android 호출 가능 래퍼
 
@@ -67,7 +65,6 @@ Xamarin.Android 응용 프로그램에도 포함 *Android 호출 가능 래퍼* 
 다른 모든 스레드에 대 한 참조에 영향을 줍니다 인스턴스가 실수로 인스턴스를 삭제 하는 대로 스레드 간에 공유할 수 있습니다 하는 경우 관리 되는 호출 가능 래퍼를 삭제 하는 경우 주의 해야 합니다. 최대 안전을 `Dispose()` 를 통해 할당 된 인스턴스 `new` *또는* 방법 중에서 어떤 있습니다 *알고* 항상 될 수 있는 캐시 된 인스턴스와 새 인스턴스를 할당 실수로 인스턴스 스레드 간에 공유 발생 합니다.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>호출 가능 래퍼 하위 클래스를 관리합니다.
 
@@ -76,7 +73,6 @@ Xamarin.Android 응용 프로그램에도 포함 *Android 호출 가능 래퍼* 
 마찬가지로 호출 가능 래퍼를 관리 하는 관리 되는 호출 가능 래퍼 하위 클래스를 통해 액세스할 수 있는 전역 참조를 포함할 수도 [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) 속성입니다. 관리 되는 호출 가능 래퍼와 전역 참조 해제할 수 있도록 명시적으로 호출 하 여 처럼 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)합니다.
 관리 되는 호출 가능 래퍼 달리 *신중* 로 이러한 인스턴스를 삭제 하기 전에 수행 해야 할 *dispose ()*인스턴스의 ing Java 인스턴스 간의 매핑을 끊긴다는 (의 인스턴스는 Android 호출 가능 래퍼) 및 관리 되는 인스턴스.
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Java 정품 인증
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 만 *dispose ()* 의 호출 가능 래퍼 하위 클래스를 관리 되는 Java 개체가 더 이상 사용 되지 것입니다 또는 하위 클래스 인스턴스 데이터가 없는 알고 및 *(IntPtr, JniHandleOwnership)* 생성자를 제공 했습니다.
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>응용 프로그램 시작
 

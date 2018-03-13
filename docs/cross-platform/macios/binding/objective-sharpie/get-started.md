@@ -7,23 +7,20 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 01c390af08e59f3b10888a183df7fa6758c2609c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5d1de42a398affc1b6b6c9b863df5bc86a016c08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started"></a>시작
-
-<style type="text/css"> .terminal 파랑 {색: rgb(10,96,254);을 (를).terminal 녹색 {색: rgb(12,156,26);}.terminal 자홍 {색: rgb(152,12,103);을 (를) </style>
-
 
 > [!IMPORTANT]
 > **경고:** 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.
 
 <a name="installing" />
 
-# <a name="installing-objective-sharpie"></a>목표 Sharpie 설치
+## <a name="installing-objective-sharpie"></a>목표 Sharpie 설치
 
 목표 Sharpie 현재 Mac OS X 10.10 이상 버전에서는 독립 실행형 명령줄 도구 이며 _완벽 하 게 지원 되는 Xamarin 제품과_합니다. 만 바인딩 프로젝트를 만드는 타사 Objective C 라이브러리를 지원 하기 위해 고급 개발자가 사용 해야 합니다.
 
@@ -34,9 +31,10 @@ ms.lasthandoff: 02/27/2018
   - [최신 릴리스를 다운로드 합니다.](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
   - [포럼 알림](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
-> 💡 **팁:** 사용은 `sharpie update` 최신 버전으로 업데이트 하는 명령입니다.
+> [!TIP]
+> 사용 하 여는 `sharpie update` 최신 버전으로 업데이트 하는 명령입니다.
 
-# <a name="basic-walkthrough"></a>기본 연습
+## <a name="basic-walkthrough"></a>기본 연습
 
 목표 Sharpie는 C# 3rd 파티 Objective C 라이브러리를 바인딩하는 데 필요한 정의 만드는 데 도움이 되는 Xamarin으로 제공 된 명령줄 도구입니다.
 목표 Sharpie, 개발자를 사용 하는 경우에 *됩니다* 목표 Sharpie 도구에 의해 자동으로 처리할 수 없는 모든 문제를 해결 하기 위해 완료 된 후 생성 된 파일을 수정 해야 합니다.

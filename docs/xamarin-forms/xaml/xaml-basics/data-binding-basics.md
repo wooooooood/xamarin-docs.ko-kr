@@ -4,14 +4,15 @@ description: "데이터 바인딩을 변경 하나에 다른 변경으로 인해
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 46e0c1f9b2aff52c1d31774a15e818c78a70056a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
 
@@ -99,7 +100,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 다음은 실행 중인 프로그램이입니다.
 
-[ ![](data-binding-basics-images/sliderbinding.png "보기-바인딩")](data-binding-basics-images/sliderbinding-large.png "보기-바인딩 ")
+[![](data-binding-basics-images/sliderbinding.png "보기-바인딩")](data-binding-basics-images/sliderbinding-large.png#lightbox "보기-바인딩 ")
 
 ## <a name="the-binding-mode"></a>바인딩 모드 
 
@@ -197,7 +198,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 그러나에 대 한 바인딩을 `Scale` 속성은 `TwoWay`합니다. ¿¡´는 `Scale` 속성에는 기본값은 1 일을 사용 하 여 한 `TwoWay` 원인을 바인딩는 `Slider` 초기 값을 0이 아닌 1에서 설정할 수 있습니다. 해당 바인딩이 되었으면 `OneWayToSource`, `Scale` 속성은 처음에서 0으로 설정 됩니다는 `Slider` 기본값입니다. `Label` 사용자에 게 혼란을 일으킬 수 있는 및 표시 됩니다.
 
- [ ![](data-binding-basics-images/slidertransforms.png "이전 버전과 바인딩")](data-binding-basics-images/slidertransforms-large.png "뒤로 바인딩")
+ [![](data-binding-basics-images/slidertransforms.png "이전 버전과 바인딩")](data-binding-basics-images/slidertransforms-large.png#lightbox "뒤로 바인딩")
 
 ## <a name="bindings-and-collections"></a>바인딩 및 컬렉션
 
@@ -227,7 +228,7 @@ XamlSamples에 포함 된 프로젝트는 라는 클래스 `NamedColor`합니다
 
 결과 디스플레이 설정 항목 유형의 진정한은 `XamlSamples.NamedColor`:
 
-[ ![](data-binding-basics-images/listview1.png "컬렉션에 바인딩")](data-binding-basics-images/listview1-large.png "컬렉션에 바인딩")
+[![](data-binding-basics-images/listview1.png "컬렉션에 바인딩")](data-binding-basics-images/listview1-large.png#lightbox "컬렉션에 바인딩")
 
 많은 정보 않습니다 되지만 `ListView` 스크롤 가능 하 고 선택할 수는 있습니다.
 
@@ -249,7 +250,7 @@ XamlSamples에 포함 된 프로젝트는 라는 클래스 `NamedColor`합니다
 
 `Label` 요소가로 설정 되는 `View` 의 속성은 `ViewCell`합니다. (의 `ViewCell.View` 태그 되므로 세 키워드가 필요 하지는 `View` 속성의 콘텐츠 속성은 `ViewCell`.) 이 태그 표시는 `FriendlyName` 각 속성 `NamedColor` 개체:
 
-[ ![](data-binding-basics-images/listview2.png "DataTemplate 사용 하 여 컬렉션에 바인딩")](data-binding-basics-images/listview2-large.png "DataTemplate 사용 하 여 컬렉션에 바인딩")
+[![](data-binding-basics-images/listview2.png "DataTemplate 사용 하 여 컬렉션에 바인딩")](data-binding-basics-images/listview2-large.png#lightbox "DataTemplate 사용 하 여 컬렉션에 바인딩")
 
 훨씬 나은. 이제 필요한 모든 되려고 가문비나무 자세한 정보 및 실제 색 항목 템플릿을 구성 합니다. 이 서식 파일을 지원 하려면 일부 값과 개체에에서 정의 된 페이지의 리소스 사전:
 
@@ -385,7 +386,7 @@ namespace XamlSamples
 
 다음은 결과가입니다.
 
-[ ![](data-binding-basics-images/listview3.png "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")](data-binding-basics-images/listview3-large.png "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")
+[![](data-binding-basics-images/listview3.png "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")](data-binding-basics-images/listview3-large.png#lightbox "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")
 
 `ListView` 은 매우 정교 내부에서 동적으로 발생할 수 있는 변경 내용 처리의 경우에만 아니라 데이터가 특정 단계를 수행 합니다. 항목의 컬렉션에 할당 된 경우는 `ItemsSource` 속성은 `ListView` 런타임 중에 변경-하는 항목에 추가할 수 있는 경우 또는 컬렉션에서 제거-사용 하 여는 `ObservableCollection` 이러한 항목에 대 한 클래스입니다. `ObservableCollection` 구현 하는 `INotifyCollectionChanged` 인터페이스 및 `ListView` 에 대 한 처리기를 설치 합니다는 `CollectionChanged` 이벤트입니다.
 
@@ -400,7 +401,7 @@ namespace XamlSamples
 ## <a name="related-links"></a>관련 링크
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [1 부입니다. XAML (샘플)를 시작 하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [2 부 합니다. 필수 XAML 구문 (샘플)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [3 부 합니다. XAML 태그 확장 (샘플)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [5 단계입니다. MVVM (샘플)에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [1부. XAML (샘플)를 시작 하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [2부. 필수 XAML 구문 (샘플)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [3부. XAML 태그 확장 (샘플)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [5부. MVVM (샘플)에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

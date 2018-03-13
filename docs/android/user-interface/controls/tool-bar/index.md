@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>Toolbar
 
 _도구 모음을 기본 작업 모음 보다 더 많은 유연성을 제공 하는 작업 모음 구성 요소: 앱에서 아무 곳 이나 배치 될 수, 크기는 변경할 수 있으며 다른 앱의 테마 색 구성표를 사용할 수 있습니다. 또한 각 응용 프로그램 화면에는 여러 도구 모음이 있을 수 있습니다._
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>개요
 
@@ -27,7 +25,7 @@ _도구 모음을 기본 작업 모음 보다 더 많은 유연성을 제공 하
 
 `Toolbar` (Android 5.0 롤리팝에 도입 된) 위젯 작업 모음 인터페이스의 개념으로 생각할 수 있습니다 &ndash; 작업 모음을 대체 하기 위한 것입니다. `Toolbar` 앱 레이아웃에서 어디서 나 사용할 수 있고 그것이 작업 모음 보다 훨씬 더 사용자 지정할 수 있습니다. 다음 스크린 샷에서 사용자 지정에서는 `Toolbar` 이 가이드에서 만든 예제: 
 
-[![예제 스크린 샷 편집, 도구 모음에 저장 하 고 오버플로 메뉴 항목](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![예제 스크린 샷 편집, 도구 모음에 저장 하 고 오버플로 메뉴 항목](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 몇 가지 중요 한 차이점이 간에 `Toolbar` 및 작업 모음: 
 
@@ -72,7 +70,6 @@ Google의 [자료 디자인 지침](https://material.google.com/) 다른 모양�
 -   사용 하는 **지원 라이브러리 Android v7 AppCompat** 라이브러리 (라고 *AppCompat* 이 가이드의 나머지 부분에서)를 배포 하 `Toolbar` 이전 버전의 Android 합니다. 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>요구 사항
 

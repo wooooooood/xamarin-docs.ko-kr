@@ -7,18 +7,17 @@ ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/14/2017
-ms.openlocfilehash: 2e54bfc4bea3955dc80a747c4ecce485b78ada1d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="jelly-bean-features"></a>젤리 Bean 기능
 
 _이 문서는 Android 4.1에서 도입 된 개발자를 위한 새로운 기능의 높은 수준의 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한에 대 한 업데이트, 큰 파일을 공유할 Android 빔에 대 한 업데이트를 강화 합니다._
 
-<a name="Overview" />
 
 
 ## <a name="overview"></a>개요
@@ -31,21 +30,18 @@ Android 응용 프로그램의 안정성 불안정 한 콘텐츠 공급자에 �
 
 마지막으로 여러 새 사용 권한 Android 4.1에 추가 되었습니다.
 
- <a name="Requirements" />
 
 
 ## <a name="requirements"></a>요구 사항
 
 Xamarin.Android 응용 프로그램을 개발 하려면 Xamarin.Android 필요 젤리 Bean을 사용 하 여 4.2.6 또는 상위 수준과 Android 4.1 (API 수준 16) 다음 화면에 표시 된 대로 Android SDK Manager를 통해를 설치할 수 있습니다.
 
-[![Android SDK Manager에서 Android 4.1를 선택합니다.](jelly-bean-images/image1.png)](jelly-bean-images/image1.png)
+[![Android SDK Manager에서 Android 4.1를 선택합니다.](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
- <a name="What's_New" />
 
 
 ## <a name="whats-new"></a>새로운 기능
 
- <a name="Animations" />
 
 
 ### <a name="animations"></a>애니메이션
@@ -79,7 +75,6 @@ animator.Start();
 
 로 `TimeAnimator` 인스턴스가 실행 되 고, 호출 `ITimeAnimator.ITimeListener`, 방법을 다음 기록 합니다는 긴 애니메이터가 경과 했는데도 실행 기간 것 메서드가 마지막으로 이후에 된 대로 호출 했습니다.
 
- <a name="Application_Stack_Navigation" />
 
 
 ### <a name="application-stack-navigation"></a>응용 프로그램 스택 탐색
@@ -98,7 +93,6 @@ Android 4.1 Android 3.0에 도입 된 응용 프로그램 스택 탐색 향상 �
 -   `OnCreateNavigateUpTaskStack` –이 메서드는 가상 스택 만들어지는 방법을 완전히 제어 해야 하는 경우 재정의 됩니다.
 
 
- <a name="Camera" />
 
 
 ### <a name="camera"></a>카메라
@@ -149,19 +143,16 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
- <a name="Connectivity" />
 
 
 ### <a name="connectivity"></a>연결
 
- <a name="Android_Beam" />
 
 
 #### <a name="android-beam"></a>Android 빔
 
 Android 빔 두 Android 장치가 서로 통신할 수 있도록 하는 NFC 기반 기술입니다. Android 4.1 큰 파일 전송에 대 한 향상 된 지원을 제공합니다. 새 메서드를 사용 하는 경우 `NfcAdapter.SetBeamPushUris()` Android는 빠른 전송 속도 달성 하기 위해 (예: Bluetooth) 대체 전송 메커니즘 간에 전환 합니다.
 
- <a name="Network_Services_Discovery" />
 
 
 #### <a name="network-services-discovery"></a>네트워크 서비스 검색
@@ -173,14 +164,12 @@ Android 4.1 새로운 API의 멀티 캐스트 DNS 기반 서비스 검색에 포
 
 네트워크 및의 구현에서 서비스를 검색 하려면 `Nsd.DiscoveryListener` 에 전달 된 `NsdManager.discoverServices()`합니다.
 
- <a name="Network_Usage" />
 
 
 #### <a name="network-usage"></a>네트워크 사용량
 
 새로운 메서드를 `ConnectivityManager.IsActiveNetworkMetered` 요금제 네트워크에 연결 되어 있는지 확인 하는 장치를 허용 합니다. 이 메서드는 정확 하 게 데이터 작업에 대 한 비용이 많이 드는 비용은 있을 수 있음을 사용자에 게 알리는 하 여 데이터 사용을 관리 하는 데 도움이 데 사용할 수 있습니다.
 
- <a name="WiFi_Direct_Service_Discovery" />
 
 
 #### <a name="wifi-direct-service-discovery"></a>WiFi 직접 서비스 검색
@@ -195,14 +184,12 @@ Android 4.1 새로운 API의 멀티 캐스트 DNS 기반 서비스 검색에 포
 -   `SetUpnpServiceResponseListener()` –이 메서드는 Upnp 검색 요청에 대 한 응답을 수신한 경우에 호출 될 콜백을 등록에 사용 됩니다.
 
 
- <a name="Content_Providers" />
 
 
 ### <a name="content-providers"></a>콘텐츠 공급자
 
 `ContentResolver` 클래스에는 새로운 메서드를 받았음을 `AcquireUnstableContentProvider`합니다. 이 메서드를 사용 하면 응용 프로그램에서 "불안정" 콘텐츠 공급자를 얻으려고 합니다. 일반적으로 응용 프로그램 콘텐츠 공급자를 획득 하 고이 콘텐츠 공급자가 충돌을 응용 프로그램이 됩니다. 이 메서드 호출으로 콘텐츠 공급자가 충돌 하면 응용 프로그램 충돌 하지 않습니다. 대신, `Android.OS.DeadObjectionException` 콘텐츠 공급자가 지나갈 하는 응용 프로그램에 알리기 위해 콘텐츠 공급자에 대 한 호출에서 throw 됩니다. "불안정" 콘텐츠 공급자가 다른 응용 프로그램에서 콘텐츠 공급자와 상호 작용할 때 유용 – 확률이 다른 응용 프로그램에서 오류가 있는 코드가 다른 응용 프로그램에 영향을 줍니다.
 
- <a name="Copy_and_Paste_With_Intents" />
 
 
 ### <a name="copy-and-paste-with-intents"></a>복사 및 붙여넣기 의도
@@ -214,14 +201,11 @@ Android 4.1 새로운 API의 멀티 캐스트 DNS 기반 서비스 검색에 포
 -   **Uri** – HTTP 책갈피 콘텐츠 공급자에 대 한 URI 등 모든 URI 수입니다.
 
 
- <a name="Isolated_Services" />
 
 
 ### <a name="isolated-services"></a>격리 서비스
 
 격리 된 서비스는 서비스 특수 자체 프로세스에서 실행 하는 자체의 권한이 없습니다. 서비스와만 통신 인 경우 서비스 API를 통해 바인딩 및 서비스를 시작 합니다. isolated 서비스 속성을 설정 하 여 선언할 수는 `IsolatedProcess="true"` 에 `ServiceAttribute` 하는 서비스 클래스를 보여 합니다.
-
- <a name="Media" />
 
 
 ### <a name="media"></a>미디어
@@ -245,7 +229,6 @@ Android 4.1 새로운 API의 멀티 캐스트 DNS 기반 서비스 검색에 포
 -   `MediaRouterActionProvider` 및 `MediaRouteButton` -이러한 클래스를 선택 하 고 미디어 재생 일관 된 UI를 제공할 수 있습니다.
 
 
- <a name="Notifications" />
 
 
 ### <a name="notifications"></a>알림
@@ -255,26 +238,25 @@ Android 4.1 더 많은 유연성 및 알림을 표시 하는 컨트롤과 응용
 -   `Notification.BigPictureStyle` – 이미지 개는 알림을 생성 하는 도우미 클래스입니다. 다음 이미지는 큰 이미지를 사용 하는 알림 예를 보여 줍니다.
 
 
- [ ![BigPictureStyle 알림 예제 스크린 샷](jelly-bean-images/image2.png)](jelly-bean-images/image2.png)
+ [![BigPictureStyle 알림 예제 스크린 샷](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 -   `Notification.BigTextStyle` -전자 메일 등의 텍스트의 여러 줄에 있는 알림을 생성 하는 도우미 클래스입니다. 다음 스크린샷에이 새 알림 스타일의 예를 볼 수 있습니다.
 
 
- [ ![BigTextStyle 알림 예제 스크린 샷](jelly-bean-images/image3.png)](jelly-bean-images/image3.png)
+ [![BigTextStyle 알림 예제 스크린 샷](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 -   `Notification.InboxStyle` –이 클래스는이 스크린샷에 표시 된 대로 전자 메일 메시지에서 조각 등의 문자열의 목록을 포함 하는 알림을 생성 하는 도우미 클래스:
 
 
- [ ![Notification.InboxStyle 알림 예제 스크린 샷](jelly-bean-images/image4.png)](jelly-bean-images/image4.png)
+ [![Notification.InboxStyle 알림 예제 스크린 샷](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
 것 알림을 normal 또는 더 큰 스타일을 사용 하는 경우 알림 메시지의 맨 아래에 최대 두 개의 실행 단추를 추가 하는 것과 같습니다.
 실행 단추는 알림 메시지의 아래쪽에 다음 스크린샷에서 이러한 예제를 볼 수 있습니다.
 
- [ ![아래 알림 메시지가 표시 되는 작업 단추의 예제 스크린 샷](jelly-bean-images/image5.png)](jelly-bean-images/image5.png)
+ [![아래 알림 메시지가 표시 되는 작업 단추의 예제 스크린 샷](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 `Notification` 클래스는 개발자가 알림에 대 한 우선 순위 수준 5 개 중 하나를 지정할 수 있는 새로운 상수를 수신 했습니다. 사용 하 여 알림을 설정할 수 있습니다는 `Priority` 속성입니다.
 
- <a name="Permissions" />
 
 
 ### <a name="permissions"></a>사용 권한
@@ -290,7 +272,6 @@ Android 4.1 더 많은 유연성 및 알림을 표시 하는 컨트롤과 응용
 
 중요 한 변경 사항에 유의 하 `READ_EXTERNAL_STORAGE` – Android에서이 권한이 자동으로 부여 되는 현재 합니다. Android의 이후 버전에는 사용 권한을 부여 하기 전에이 권한을 요청 하는 응용 프로그램 필요 합니다.
 
- <a name="Summary" />
 
 
 ## <a name="summary"></a>요약

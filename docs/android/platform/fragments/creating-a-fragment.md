@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>조각 만들기
 
@@ -28,7 +28,7 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 
 > [!NOTE]
-> **참고:** 조각 하위 클래스는 공용 기본 인수 없는 생성자 있어야 합니다.
+> 조각 하위 클래스는 공용 기본 인수 없는 생성자를 있어야 합니다.
 
 ## <a name="adding-a-fragment-to-an-activity"></a>활동에 조각 추가
 
@@ -108,7 +108,7 @@ Android는 패키지 이름;에 대 문자가 허용 하지 않습니다. 패키
 조각은 무관 다소 건에 의해 영향을 여전히 자신의 기간이 [호스팅 활동의 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)합니다.
 예를 들어 활동 일시 중지 될 때 연결 된 해당 조각 모두 일시 중지 됩니다. 다음 다이어그램에 조각의 수명 주기를 간략하게 설명합니다.
 
-[![조각 수명 주기를 보여 주는 흐름 다이어그램](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![조각 수명 주기를 보여 주는 흐름 다이어그램](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>조각 생성 수명 주기 메서드
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 다음 화면이이 메뉴 모양을 보여 줍니다.
 
-[![메뉴 항목을 표시 하는 내와 응용 프로그램의 예제 스크린 샷](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![메뉴 항목을 표시 하는 내와 응용 프로그램의 예제 스크린 샷](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

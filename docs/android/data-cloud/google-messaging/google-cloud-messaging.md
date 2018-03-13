@@ -8,34 +8,32 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 225662fe64c92b77af3e75cbee865561118692a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f44899ecf5ba2d904333b71226cdd6c7dcea8db0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="google-cloud-messaging"></a>Google 클라우드 메시징
 
 _Google 클라우드 메시징 (GCM)는 모바일 응용 프로그램 및 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 GCM 작동 하는 방법에 대 한 개요를 제공 하 고 응용 프로그램 GCM에서 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다._
 
-[![Google Cloud Messaging 로고](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png)
+[![Google Cloud Messaging 로고](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
 
 이 항목에서는 방법을 응용 프로그램 및 응용 프로그램 서버 사이 메시지를 라우팅하 Google Cloud Messaging에 대 한 높은 수준의 개요를 제공 하 고 앱 GCM 서비스를 사용할 수 있도록 자격 증명을 인식 하기 위한 단계별 절차를 제공 합니다.
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
 Google 클라우드 메시징 (GCM)는 전송, 라우팅 및 서버 응용 프로그램 및 모바일 클라이언트 응용 프로그램 사이 메시지 큐를 처리 하는 서비스입니다. A *클라이언트 응용 프로그램* 장치에서 실행 되는 GCM 사용이 가능한 앱입니다. *응용 프로그램 서버* (또는 귀하의 회사에서 제공)는 클라이언트 앱에서 GCM을 통해 통신할 GCM 사용이 가능한 서버:
 
-[![클라이언트 응용 프로그램 및 응용 프로그램 서버 간에 있는 GCM](google-cloud-messaging-images/01-server-gcm-app-sml.png)](google-cloud-messaging-images/01-server-gcm-app.png)
+[![클라이언트 응용 프로그램 및 응용 프로그램 서버 간에 있는 GCM](google-cloud-messaging-images/01-server-gcm-app-sml.png)](google-cloud-messaging-images/01-server-gcm-app.png#lightbox)
 
 GCM을 사용 하 여, 응용 프로그램 서버는 메시지 단일 장치, 장치, 그룹 또는 항목에 등록 된 장치의 수를 보낼 수 있습니다. 클라이언트 앱 (예: 원격 알림의 받을) 응용 프로그램 서버에서 다운스트림 메시지에 등록 하도록 GCM를 사용할 수 있습니다. 또한, GCM은 메시지를 보내는 업스트림 응용 프로그램 서버에 클라이언트 앱에 대 한 지원 합니다.
 
 GCM에 대 한 응용 프로그램 서버를 구현 하는 방법에 대 한 정보를 참조 하십시오. [GCM 연결 서버에 대 한](https://developers.google.com/cloud-messaging/server)합니다.
 
 
-<a name="inaction" />
 
 ## <a name="google-cloud-messaging-in-action"></a>Google 클라우드 메시징 작업
 
@@ -58,13 +56,12 @@ GCM 다음 자격 증명을 사용 하 여 응용 프로그램 서버 및 클라
 다음 섹션에서는 클라이언트 응용 프로그램이 GCM 통해 응용 프로그램 서버와 통신 하는 경우 이러한 자격 증명은 사용 하는 방법을 설명 합니다.
 
 
-<a name="registration" />
 
 ### <a name="registration-with-gcm"></a>GCM 등록
 
 메시징 수행 될 수 전에 GCM을 장치에 설치 하는 클라이언트 응용 프로그램 등록 해야 합니다. 클라이언트 앱 등록 단계는 다음 다이어그램에 표시 된 것을 완료 해야 합니다.
 
-[![앱 등록 단계](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png)
+[![앱 등록 단계](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
 
 1.  GCM GCM에 보낸 사람 ID를 전달 하는 등록 토큰을 가져오려면 클라이언트 응용 프로그램에 연결 합니다.
 
@@ -80,13 +77,12 @@ GCM 다음 자격 증명을 사용 하 여 응용 프로그램 서버 및 클라
 Google의 [클라이언트 앱 등록](https://developers.google.com/cloud-messaging/registration) 자세히;에서 등록 프로세스를 설명 합니다. 등록을 취소 하 고 템플릿의 설명 및 클라이언트 응용 프로그램을 제거할 때에 등록 취소 과정을 설명 합니다.
 
 
-<a name="downstream" />
 
 ### <a name="downstream-messaging"></a>다운스트림 메시징
 
 응용 프로그램 서버에 클라이언트 앱에는 다운스트림 메시지를 보내는 다음 다이어그램에 표시 된 단계 따릅니다.
 
-[![다운스트림 메시징 저장소 및 앞으로 다이어그램](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png)
+[![다운스트림 메시징 저장소 및 앞으로 다이어그램](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
 
 1.  응용 프로그램 서버 GCM에 메시지를 보냅니다.
 
@@ -101,27 +97,22 @@ Google의 [클라이언트 앱 등록](https://developers.google.com/cloud-messa
 자세한 내용은 (코드 샘플 포함) Android에서 다운스트림 GCM 메시지를 수신 하는 방법에 대 한 [원격 알림](~/android/data-cloud/google-messaging/remote-notifications-with-gcm.md)합니다.
 
 
-<a name="topic" />
-
 #### <a name="topic-messaging"></a>항목 메시징
 
 *항목 메시징* 는 다운스트림 메시징 유형의 응용 프로그램 서버 (예: 일기 예보) 항목에 등록 하는 여러 클라이언트 응용 프로그램 장치를 단일 메시지를 보냅니다. 앱 당 최대 1 백만 구독을 지 원하는 항목 메시징 있으며 항목 메시지에는 길이가 최대 2KB 수 있습니다. GCM 메시징 항목에 대 한 사용량을 클라이언트 응용 프로그램 등록 토큰을 응용 프로그램 서버에 보내도록 않아도 됩니다. Google의 [항목 메시징 구현](https://developers.google.com/cloud-messaging/topic-messaging) 특정 항목에 등록 하는 여러 장치에 응용 프로그램 서버에서 메시지를 전송 하는 방법을 설명 합니다.
 
 
-<a name="group" />
 
 #### <a name="group-messaging"></a>그룹에서 메시징
 
 *메시징 그룹* 는 다운스트림 메시징 유형의 응용 프로그램 서버 그룹 (예를 들어 단일 사용자에 속하는 장치 그룹)에 속하는 여러 클라이언트 응용 프로그램 장치를 단일 메시지를 보냅니다. 그룹 메시지가 iOS 장치에 대 한 길이가 최대 2KB 수 있는 4KB Android 장치에 대 한 길이가 최대 합니다. 그룹은 20 멤버의 최대 제한 합니다. Google의 [장치 그룹 메시징](https://developers.google.com/cloud-messaging/notifications) 앱 서버 그룹에 속한 장치에서 실행 되는 여러 클라이언트 응용 프로그램 인스턴스를 단일 메시지를 보낼 수 있는 방법을 설명 합니다.
 
 
-<a name="upstream" />
-
 ### <a name="upstream-messaging"></a>업스트림 메시징
 
 클라이언트 앱을 지 원하는 서버에 연결 하는 경우 [XMPP](https://developers.google.com/cloud-messaging/ccs), 다음 다이어그램에 나타난 것 처럼 메시지 응용 프로그램 서버에 다시 보낼 수 있습니다.
 
-[![업스트림 메시징 다이어그램](google-cloud-messaging-images/04-upstream-sml.png)](google-cloud-messaging-images/04-upstream.png)
+[![업스트림 메시징 다이어그램](google-cloud-messaging-images/04-upstream-sml.png)](google-cloud-messaging-images/04-upstream.png#lightbox)
 
 1.  클라이언트 응용 프로그램 GCM XMPP 연결 서버에 메시지를 보냅니다.
 
@@ -143,50 +134,47 @@ Google의 [업스트림 메시지](https://developers.google.com/cloud-messaging
 GCM 서비스 응용 프로그램을 사용 하려면 먼저 Google의 GCM 서버에 대 한 액세스 자격 증명에 먼저 획득 해야 합니다. 다음 섹션에서는이 프로세스를 완료 하는 데 필요한 단계를 설명 합니다.
 
 
-<a name="googleservices" />
 
 ### <a name="enable-google-services-for-your-app"></a>앱에 대 한 Google 서비스를 사용 하도록 설정
 
 1.  에 로그인 된 [Google 개발자 콘솔](https://developers.google.com/mobile/add?platform=android) 프로그램 Google 계정 (즉, gmail 주소)를 새 프로젝트를 만듭니다. 기존 프로젝트를 사용 하도록 설정한 경우 될 GCM을 사용 하도록 설정 하는 프로젝트를 선택 합니다. 다음 예제에서는 새 프로젝트 호출 **XamarinGCM** 만들어집니다.
 
-    [![XamarinGCM 프로젝트 만들기](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png)
+    [![XamarinGCM 프로젝트 만들기](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
 2.  다음으로 응용 프로그램에 대 한 패키지 이름을 입력 하세요 (이 예제에서는 패키지 이름이 **com.xamarin.gcmexample**)를 클릭 하 고 **계속을 선택 하 고 서비스를 구성**:
 
-    [![패키지 이름을 입력합니다.](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png)
+    [![패키지 이름을 입력합니다.](google-cloud-messaging-images/06-package-name-sml.png)](google-cloud-messaging-images/06-package-name.png#lightbox)
 
     참고가 패키지 이름은 응용 프로그램에 대 한 응용 프로그램 ID 이기도 합니다.
 
 3.  **선택 하 고 서비스 구성** 섹션 응용 프로그램에 추가할 수 있는 Google 서비스를 나열 합니다. 클릭 **메시징 클라우드**:
 
-    [![클라우드 선택 메시징](google-cloud-messaging-images/07-choose-gcm-service-sml.png)](google-cloud-messaging-images/07-choose-gcm-service.png)
+    [![클라우드 선택 메시징](google-cloud-messaging-images/07-choose-gcm-service-sml.png)](google-cloud-messaging-images/07-choose-gcm-service.png#lightbox)
 
 4.  그런 다음 클릭 **GOOGLE 클라우드 메시징 사용**:
 
-    [![Google 클라우드 메시징 설정](google-cloud-messaging-images/08-enable-gcm-sml.png)](google-cloud-messaging-images/08-enable-gcm.png)
+    [![Google 클라우드 메시징 설정](google-cloud-messaging-images/08-enable-gcm-sml.png)](google-cloud-messaging-images/08-enable-gcm.png#lightbox)
 
 5.  A **서버 API 키** 및 **보낸 사람 ID** 응용 프로그램에 대해 생성 됩니다. 이러한 값을 기록 하 고 클릭 **닫기**:
 
-    [![서버 API 키 및 표시 하는 보낸 사람 ID](google-cloud-messaging-images/09-get-api-key-and-id-sml.png)](google-cloud-messaging-images/09-get-api-key-and-id.png)
+    [![서버 API 키 및 표시 하는 보낸 사람 ID](google-cloud-messaging-images/09-get-api-key-and-id-sml.png)](google-cloud-messaging-images/09-get-api-key-and-id.png#lightbox)
 
     API 키를 보호 &ndash; 공용 용도가 아닙니다. API 키가 손상 될 경우 권한이 없는 서버 클라이언트 응용 프로그램에 메시지를 게시할 수 있습니다.
     [API 키를 사용 하 여 안전 하 게 하는 것에 대 한 유용한](https://support.google.com/cloud/answer/6310037?hl=en) API 키를 보호 하는 데 유용한 지침을 제공 합니다.
 
 
-<a name="projectsettings" />
 
 ### <a name="view-your-project-settings"></a>프로젝트 설정 보기
 
 에 로그인 하 여 프로젝트 설정을 언제 든 지 볼 수 있습니다는 [Google 클라우드 콘솔](https://console.cloud.google.com/) 프로젝트를 선택 하 고 있습니다. 예를 들어 볼 수 있습니다는 **보낸 사람 ID** 페이지 맨 위에 있는 풀 다운 메뉴에서에서 프로젝트를 선택 하 여 (이 예제에서는 프로젝트 라고 **XamarinGCM**). 보낸 사람 ID는이 스크린 샷에 표시 된 것 처럼 프로젝트 번호 (보낸 사람 ID 여기는 **9349932736**):
 
-[![보낸 사람 ID 보기](google-cloud-messaging-images/10-view-server-id-sml.png)](google-cloud-messaging-images/10-view-server-id.png)
+[![보낸 사람 ID 보기](google-cloud-messaging-images/10-view-server-id-sml.png)](google-cloud-messaging-images/10-view-server-id.png#lightbox)
 
 보려는 **API 키**, 클릭 **API 관리자** 클릭 하 고 **자격 증명**:
 
-[![API 키 보기](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png)
+[![API 키 보기](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
 
-<a name="furtherreading" />
 
 ## <a name="for-further-reading"></a>추가 정보
 
@@ -195,7 +183,6 @@ GCM 서비스 응용 프로그램을 사용 하려면 먼저 Google의 GCM 서�
 -   [RFC 6120](https://tools.ietf.org/html/rfc6120) 및 [RFC 6121](https://tools.ietf.org/html/rfc6121) 설명 하 고 확장할 수 있는 메시징 및 현재 상태 프로토콜 (XMPP)를 정의 합니다.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 8db4a816becca54428b3524f79b6ebc5ff4ec084
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7934738a546a266036573b81e15ef9b2fa28d7b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sharing-code-options"></a>코드 공유 옵션
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/27/2018
 
  [유용한 코드 전략을 공유-5 부](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-5-practical-code-sharing-strategies.md)
 
- [6-부 테스트 및 앱 스토어 승인](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-6-testing-and-app-store-approvals.md)
+ [6부 - 테스트 및 App Store 승인](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-6-testing-and-app-store-approvals.md)
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/27/2018
 Tasky iOS, Android 및 Windows Phone 대 한 간단한 할 일 목록 응용 프로그램이입니다.
 가상 컴퓨터는 기본적인 Xamarin을 사용한 플랫폼 간 응용 프로그램을 만드는 방법을 보여 줍니다와 로컬 SQLite 데이터베이스를 사용 합니다.
 
- [ ![tasky 목록](images/iphone-list-sml.png)](images/iphone-list.png) [ ![tasky 세부 정보](images/iphone-detail-sml.png)](images/iphone-detail.png)
+ [![tasky 목록](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![tasky 목록](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 읽기는 [Tasky 사례 연구](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)합니다.
 

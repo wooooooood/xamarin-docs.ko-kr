@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 013db64add615e94ef3494f14bc82fc17ec2dca1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8a9735845139da700959caf3639defa6594f307
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridlayout"></a>GridLayout
 
 `GridLayout` 는 새로운 `ViewGroup` 아래와 같이 뷰는 HTML 테이블과 비슷한 2D 눈금에 배치를 지 원하는 서브 클래스:
 
- [ ![잘린 GridLayout 네 개의 셀을 표시 합니다.](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png)
+ [![잘린 GridLayout 네 개의 셀을 표시 합니다.](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` 자식 뷰 ו 위치로 표에 행과에 있어야 하는 열을 지정 하 여 계층 구조는 플랫 보기 함께 작동 합니다. 이러한 방식으로 *GridLayout* 중간 모든 뷰는 테이블 구조를 제공 등의 TableLayout에 사용 된 테이블 행에서 볼 필요 없이 표에서 뷰 위치를 지정할 수 있습니다. 플랫 계층 유지 관리 함으로써 *GridLayout* 더 빨리 레이아웃 수 해당 자식 뷰. 이 개념 실제로 의미 코드에서 설명 하는 예제를 살펴보겠습니다.
 
-<a name="Creating_a_Grid_Layout" />
 
 ## <a name="creating-a-grid-layout"></a>격자 레이아웃 만들기
 
@@ -51,13 +50,12 @@ ms.lasthandoff: 02/27/2018
 
 레이아웃 다음 다이어그램에서와 같이 셀에는 콘텐츠를 넣을 수 있도록 행 및 열 크기를 조정 합니다.
 
- [ ![두 개의 셀 오른쪽에 보다 작은 왼쪽에 표시 하는 레이아웃 다이어그램](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png)
+ [![두 개의 셀 오른쪽에 보다 작은 왼쪽에 표시 하는 레이아웃 다이어그램](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 이 인해 응용 프로그램에서 실행 될 경우 다음과 같은 사용자 인터페이스:
 
- [ ![네 개의 셀을 표시 하는 GridLayoutDemo 스크린샷 응용 프로그램](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png)
+ [![네 개의 셀을 표시 하는 GridLayoutDemo 스크린샷 응용 프로그램](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
- <a name="Specifying_Orientation" />
 
 
 ## <a name="specifying-orientation"></a>방향 지정
@@ -76,13 +74,12 @@ ms.lasthandoff: 02/27/2018
 
 이제는 `GridLayout` 아래와 같이 왼쪽에서 오른쪽으로 대신 각 열에서 아래쪽으로 위쪽에서 셀을 배치 합니다.
 
- [ ![셀이 세로 방향으로 배치 되는 방식을 보여 주는 다이어그램](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png)
+ [![셀이 세로 방향으로 배치 되는 방식을 보여 주는 다이어그램](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 이 인해 런타임 시 다음과 같은 사용자 인터페이스:
 
- [ ![세로 방향에 배치 하는 셀과 GridLayoutDemo의 스크린 샷](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png)
+ [![세로 방향에 배치 하는 셀과 GridLayoutDemo의 스크린 샷](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
- <a name="Specifying_Explicit_Position" />
 
 
 ### <a name="specifying-explicit-position"></a>명시적 위치를 지정합니다.
@@ -119,7 +116,6 @@ ms.lasthandoff: 02/27/2018
 </GridLayout>
 ```
 
- <a name="Specifying_spacing" />
 
 
 ### <a name="specifying-spacing"></a>간격 지정
@@ -176,11 +172,10 @@ ms.lasthandoff: 02/27/2018
 
 이 XML에는 공백을 만듭니다는 `GridLayout` 아래와 같이:
 
- [ ![스크린샷의 GridLayoutDemo 간격으로 더 큰 셀을 보여 주기 위해](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png)
+ [![스크린샷의 GridLayoutDemo 간격으로 더 큰 셀을 보여 주기 위해](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 새 사용 하는 장점은 `Space` 보기는 간격을 허용 하 고 않아도 모든 자식 보기에서 특성을 설정 합니다.
 
- <a name="Spanning_Columns_and_Rows" />
 
 
 ### <a name="spanning-columns-and-rows"></a>행과 열 확장
@@ -230,7 +225,7 @@ ms.lasthandoff: 02/27/2018
 
 이렇게 하면 첫 번째 열에는 `GridLayout` 여기 볼 수 있듯이 단추의 크기에 맞게 확대 되:
 
-[ ![첫 번째 열만 스패닝 단추와 GridLayoutDemo의 스크린 샷](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png)
+[![첫 번째 열만 스패닝 단추와 GridLayoutDemo의 스크린 샷](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 확장에서 첫 번째 열을 유지 하려면 해당 columnspan 다음과 같이 설정 하 여 두 개의 열으로 확장에 있는 단추를 설정할 수 있습니다.
 
@@ -245,7 +240,7 @@ ms.lasthandoff: 02/27/2018
 
 에 대 한 레이아웃으로 인해이 작업은 `TextViews` 는 레이아웃 했습니다. 이전 버전에서의 맨 아래에 추가 하는 단추와 유사한는 `GridLayout` 아래와 같이:
 
- [ ![두 열을 확장 하는 단추와 GridLayoutDemo의 스크린 샷](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png)
+ [![두 열을 확장 하는 단추와 GridLayoutDemo의 스크린 샷](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 
 ## <a name="related-links"></a>관련 링크

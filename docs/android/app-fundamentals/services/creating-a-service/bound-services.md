@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a299969e6251bcea59ea2ec52db90d59cf0461ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04307eab1bc8dc28fa69315809e254c920fb6d56
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Xamarin.Android에서 서비스 바인딩
 
@@ -36,7 +36,7 @@ _바인딩된 서비스는 클라이언트 (예: Android 활동) 상호 작용�
 
 이 가이드에는 확장 하는 방법을 설명 합니다는 `Service` 바운드 서비스를 구현 하는 클래스입니다. 구현에 적용 됩니다 `IServiceConnection` 및 확장 `Binder` 클라이언트가 서비스와 통신할 수 있도록 합니다. 샘플 응용 프로그램을 라는 단일 Xamarin.Android 프로젝트와 솔루션을 포함 하는이 가이드에서는 포함  **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)**  합니다. 이 서비스를 구현 하는 방법과 활동을 바인딩하는 방법을 설명 하는 매우 기본적인 응용 프로그램입니다. 바인딩된 서비스에 단 하나의 메서드를 사용 하 여 매우 간단한 API `GetFormattedTimestamp`, 서비스가 시작 될 때 사용자를 알려 주는 문자열 및 기간 실행 된 반환 하는 합니다. 응용 프로그램에는 사용자를가 직접 바인딩을 해제 하는 서비스에 바인딩할 수 있습니다.
 
-[![Android 휴대폰에서 실행 되는 응용 프로그램의 스크린 샷](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png)
+[![Android 휴대폰에서 실행 되는 응용 프로그램의 스크린 샷](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## <a name="implementing-and-consuming-a-bound-service"></a>구현 및 바운드 서비스 사용
 

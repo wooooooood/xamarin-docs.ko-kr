@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>웹 태그를 사용 하 여 검색
 
@@ -20,12 +20,12 @@ ms.lasthandoff: 02/27/2018
 
 IOS 앱 이미 모바일 직접 링크를 지원 하며 웹 사이트 딥 링크 앱 내에서 사과 콘텐츠를 표시 하는 경우 _Applebot_ 웹 크롤러가이 콘텐츠 인덱싱 및 클라우드 인덱스에 자동으로 추가 됩니다.
 
-[ ![](web-markup-images/webmarkup01.png "클라우드 인덱스 개요")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "클라우드 인덱스 개요")](web-markup-images/webmarkup01.png#lightbox)
 
 스포트라이트 검색 및 Safari 검색 결과에서 이러한 결과 Apple 노출할 합니다.
 사용자가 누를 경우 결과 다음 중 하나 (수행 되었으며 설치 된 앱) 다음 응용 프로그램의 콘텐츠를 수행 됩니다.
 
-[ ![](web-markup-images/webmarkup02.png "심층 검색 결과에 웹 사이트에서 연결 합니다.")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "심층 검색 결과에 웹 사이트에서 연결 합니다.")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>웹 콘텐츠 인덱싱 사용
 
@@ -154,7 +154,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다음은 최종 사용자에 게 풍부한 검색 결과 제공 하 여 웹 사이트에서 메타 데이터의 예입니다.
 
-[ ![](web-markup-images/deeplink01.png "서식 있는 구조화 된 데이터 태그를 통해 결과 검색")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "서식 있는 구조화 된 데이터 태그를 통해 결과 검색")](web-markup-images/deeplink01.png#lightbox)
 
 Apple에는 현재 schema.org에서 다음과 같은 스키마 형식을 지원합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 593e17096d92d9a9764545149991817fa616e2fc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-alerts"></a>경고 사용
 
@@ -21,7 +21,7 @@ _이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경�
 
 사용 하 여 경고 메시지를 제공할 수는 tvOS 사용자의 참여를 요청 하거나 파괴적 동작 (예: 파일을 삭제)를 수행할 수 있는 권한을 요청 해야 하는 경우는 `UIAlertViewController`:
 
-[ ![](alerts-images/alert01.png "UIAlertViewController 예")](alerts-images/alert01.png)
+[![](alerts-images/alert01.png "UIAlertViewController 예")](alerts-images/alert01.png#lightbox)
 
 경우 메시지 표시 외, 추가할 수 있습니다 단추 및 텍스트 필드 사용자 동작에 응답 하 고 피드백을 제공할 수 있도록 경고 합니다.
 
@@ -31,7 +31,7 @@ _이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경�
 
 위에서 설명 했 듯이 경고 사용자의 주의 가져오고 응용 프로그램 또는 요청 피드백의 상태를 알리는 데 사용 됩니다. 경고 제목을 제시 해야, 메시지 및 하나 이상의 단추 또는 텍스트 필드는 필요에 따라 수 있습니다.
 
-[ ![](alerts-images/alert04.png "예제에서는 경고")](alerts-images/alert04.png)
+[![](alerts-images/alert04.png "예제에서는 경고")](alerts-images/alert04.png#lightbox)
 
 Apple 알림 작업에 대 한 다음 제안 사항을 있습니다.
 
@@ -118,11 +118,11 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 
 작업 (단추)에 경고를 추가 하는 것 외에도 사용자가 사용자 Id 및 암호와 같은 정보를 입력 하도록 허용 하는 경고를 텍스트 필드를 추가할 수 있습니다.
 
-[ ![](alerts-images/alert02.png "경고의 텍스트 필드")](alerts-images/alert02.png)
+[![](alerts-images/alert02.png "경고의 텍스트 필드")](alerts-images/alert02.png#lightbox)
 
 텍스트 필드를 선택 하면 필드에 대 한 값을 입력 하도록 허용 표준 tvOS 바로 표시 됩니다.
 
-[ ![](alerts-images/alert03.png "텍스트 입력")](alerts-images/alert03.png)
+[![](alerts-images/alert03.png "텍스트 입력")](alerts-images/alert03.png#lightbox)
 
 다음 코드 값을 입력 하기 위한 단일 텍스트 필드는 확인/취소 경고를 표시 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 39d326714a6fee1abe242a7256888647784cdec3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb385a9c7d1dfd01d95691b77122cdbb84d814e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-path"></a>바인딩 경로
 
@@ -136,7 +136,7 @@ ms.lasthandoff: 02/27/2018
 
 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![경로 변형](binding-path-images/pathvariations-small.png "경로 변형")](binding-path-images/pathvariations-large.png "경로 변형")
+[![경로 변형](binding-path-images/pathvariations-small.png "경로 변형")](binding-path-images/pathvariations-large.png#lightbox "경로 변형")
 
 ## <a name="debugging-complex-paths"></a>복잡 한 경로 디버깅합니다.
 

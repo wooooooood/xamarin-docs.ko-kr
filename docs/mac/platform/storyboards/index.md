@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>스토리 보드에는 소개
 
@@ -20,7 +20,7 @@ _이 문서에서는 Xamarin.Mac 앱에서 스토리 보드와 작업에 대해 
 
 스토리 보드를 사용 하면 뿐만 아니라 창 정 및 컨트롤을 포함 하 고 또한 다른 창 간의 링크가 포함 되어 Xamarin.Mac 앱에 대 한 사용자 인터페이스를 개발할 수 (통해 segues) 상태를 확인 합니다.
 
-[ ![](images/intro01.png "Xcode에서 UI 샘플")](images/intro01.png)
+[![](images/intro01.png "Xcode에서 UI 샘플")](images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.Mac 응용 프로그램의 사용자 인터페이스를 정의 하려면 스토리 보드를 사용 하 여에 대 한 소개를 제공 합니다.
 
@@ -36,11 +36,11 @@ _이 문서에서는 Xamarin.Mac 앱에서 스토리 보드와 작업에 대해 
 
 스토리 보드 ui의 기능 개요로 분리 하는 지정된 된 앱에 대 한 모든 정의 하는 위에서 설명한 대로 해당 _컨트롤러 보기_합니다. Xcode의 인터페이스 작성기에서 각 이러한 컨트롤러에 거주 하 고 자체 _장면_합니다.
 
-[ ![](images/intro02.png "예에서는 뷰 컨트롤러")](images/intro02.png)
+[![](images/intro02.png "예에서는 뷰 컨트롤러")](images/intro02.png#lightbox)
 
 각 장면 각 장면 따라서 해당 관계를 보여 주는 UI에 연결 하는 줄 (Segues 라고 함)의 집합과 지정 된 보기 및 보기 컨트롤러 쌍을 나타냅니다. 일부 Segues 정의 어떻게 뷰-컨트롤러 하나 이상의 자식 뷰 또는 컨트롤러 보기를 포함 합니다. 다른 Segues (예: popover 또는 대화 상자를 표시 하는) 뷰-컨트롤러 간의 변환을 정의 합니다. 
 
-[ ![](images/intro03.png "샘플 segue")](images/intro03.png)
+[![](images/intro03.png "샘플 segue")](images/intro03.png#lightbox)
 
 가장 중요 한 참고 사항은 각 Segue 일종의 응용 프로그램의 UI의 특정된 요소 간의 데이터 흐름을 나타냅니다.
 
@@ -50,7 +50,7 @@ _이 문서에서는 Xamarin.Mac 앱에서 스토리 보드와 작업에 대해 
 
 컨트롤러 보기 Mac 응용 프로그램 내에서 정보가 지정된 된 보기와 해당 정보를 제공 하는 데이터 모델 간의 관계를 정의 합니다. 스토리 보드의 각 최상위 장면이 Xamarin.Mac 앱 코드에서 하나의 보기 컨트롤러를 나타냅니다.
 
-[ ![](images/intro04.png "예로 뷰-컨트롤러 지연")](images/intro04.png)
+[![](images/intro04.png "예로 뷰-컨트롤러 지연")](images/intro04.png#lightbox)
 
 이러한 방식으로 각 뷰-컨트롤러 정보의 시각적 표시 (뷰) 및 표시 하 고 해당 정보를 제어 하는 논리가의 자체 포함 하 고 재사용 가능한 쌍입니다.
 
@@ -115,8 +115,8 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, Mac (샘플)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac(샘플)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [창 작업](~/mac/user-interface/window.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 21d5478c7e8317510a6f46b72a261582c9432301
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9918c7e54f443477006ad40931c24d814f7171ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="light-theme"></a>밝은 테마
 
@@ -50,7 +50,7 @@ XAML 파일의 예는 다음과 같습니다.
 
 단추와 레이블의 생성 하는 태그와 함께 밝은 테마의 예를 들면 다음과 같습니다.
 
-[ ![](light-images/light-theme-sml.png "단추 및 밝은 테마의 레이블")](light-images/light-theme.png "단추 및 밝은 테마의 레이블")
+[![](light-images/light-theme-sml.png "단추 및 밝은 테마의 레이블")](light-images/light-theme.png#lightbox "단추 및 밝은 테마의 레이블")
 
 ```xaml
 <StackLayout Padding="20">

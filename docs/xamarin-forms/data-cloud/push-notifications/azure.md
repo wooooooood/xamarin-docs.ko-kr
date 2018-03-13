@@ -5,32 +5,35 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: cccbe64f69b926ced77403bcf85540ef1060dbac
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Azure 모바일 앱에서 푸시 알림을 보내면
 
 _Azure 알림 허브가 이와 동시에 다른 플랫폼 알림 시스템 통신할 필요가 백 엔드의 복잡성 원하는 모바일 플랫폼으로 모든 백 엔드에서 모바일 푸시 알림을 보내는 경우에 확장 가능한 푸시 인프라를 제공 합니다. 이 문서에서는 Azure 알림 허브를 사용 하 여 Azure 모바일 앱 인스턴스 Xamarin.Forms 응용 프로그램에 푸시 알림을 보낼 하는 방법을 설명 합니다._
 
-## <a name="overview"></a>개요
+> [!VIDEO https://youtube.com/embed/le2lDY22xwM]
+
+**Azure 알림 허브와 Xamarin.Forms에 푸시 여 [Xamarin 대학](https://university.xamarin.com/)**
 
 푸시 알림은 응용 프로그램 계약 및 사용량을 높이기 위해 모바일 장치에서 응용 프로그램에 백 엔드 시스템에서 메시지를 같은 정보를 제공 하는 데 사용 됩니다. 알림을 보낼 수 있습니다에 언제 든 지 사용자 대상된 응용 프로그램 사용 하지 않는 경우에 합니다.
 
 통합 문서는 다음 다이어그램에 나와 있는 것 처럼 백 엔드 시스템을 통해 시스템 PNS (플랫폼 알림), 모바일 장치에 푸시 알림을 보내려면:
 
-[![](azure-images/pns.png "플랫폼 알림 시스템")](azure-images/pns-large.png "플랫폼 알림 시스템")
+[![](azure-images/pns.png "플랫폼 알림 시스템")](azure-images/pns-large.png#lightbox "플랫폼 알림 시스템")
 
 푸시 알림을 보내도록 백 엔드 시스템에는 클라이언트 응용 프로그램 인스턴스는 알림을 보내도록 플랫폼별 PNS에 연결 합니다. 이 상당히 복잡해 집니다 백 엔드의 플랫폼 간 푸시 알림을, 필요할 때 백 엔드 각 플랫폼별 PNS API 및 프로토콜을 사용 해야 하기 때문에.
 
 Azure 알림 허브가이 복잡성을 줄이는이 서로 다른 플랫폼 알림 시스템의 세부 정보를 추출 하 여 다음 다이어그램에 나와 있는 것 처럼 단일 API 호출으로 보내야 하는 플랫폼 간 알림 허용:
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 푸시 알림을 보내도록 백 엔드 시스템만 연락처 Azure 알림 허브는 서로 다른 플랫폼 알림 시스템와 다시 통신, 백 엔드의 복잡성 감소 해당 보냅니다 푸시 알림 코드입니다.
 
@@ -44,7 +47,7 @@ Azure 모바일 앱 푸시 알림 알림 허브 사용에 대 한 기본 제공 
 
 샘플 응용 프로그램 데이터가 Azure 모바일 앱 인스턴스에 저장 된 할 일 목록 응용 프로그램을 보여 줍니다. 새 항목을 Azure 모바일 앱 인스턴스를 추가할 때마다 푸시 알림은 Xamarin.Forms 응용 프로그램에 전송 됩니다. 다음 스크린샷에서 받은 푸시 알림을 표시 하는 각 플랫폼을 보여 줍니다.
 
-[![](azure-images/screenshots.png "샘플 응용 프로그램 푸시 알림을 받는")](azure-images/screenshots-large.png "샘플 푸시 알림을 수신 하는 응용 프로그램")
+[![](azure-images/screenshots.png "샘플 응용 프로그램 푸시 알림을 받는")](azure-images/screenshots-large.png#lightbox "샘플 푸시 알림을 수신 하는 응용 프로그램")
 
 Azure 알림 허브에 대 한 자세한 내용은 참조 [Azure 알림 허브](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) 및 [Xamarin.Forms 앱에 푸시 알림 추가](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/)합니다.
 
@@ -118,7 +121,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 APNS와 iOS 응용 프로그램을 등록 하는 경우의 수신 하겠다고 푸시 알림 유형을 지정 해야 합니다. `RegisterUserNotificationSettings` 메서드 등록의 응용 프로그램을 받을 수 있는 알림 유형을와 `RegisterForRemoteNotifications` 메서드 APNS에서 푸시 알림을 받도록 등록 합니다.
 
 > [!NOTE]
-> **참고**: 호출 하지 못하면는 `RegisterUserNotificationSettings` 메서드는 응용 프로그램에서 자동으로 수신 되는 푸시 알림을 생성 합니다.
+> 호출 하지 못하면는 `RegisterUserNotificationSettings` 메서드는 응용 프로그램에서 자동으로 수신 되는 푸시 알림을 생성 합니다.
 
 <a name="ios_registration_response" />
 
@@ -146,7 +149,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 이 메서드는 JSON으로 간단한 알림 메시지 템플릿을 만들고 알림 허브에서 템플릿 알림의 받을 장치를 등록 합니다.
 
 > [!NOTE]
-> **참고**:는 `FailedToRegisterForRemoteNotifications` 네트워크 연결 같은 상황을 처리 재정의 구현 해야 합니다. 사용자가 하는 동안 응용 프로그램을 시작할 수 있으므로이 기능은 중요 오프 라인 상태입니다.
+> `FailedToRegisterForRemoteNotifications` 네트워크 연결 같은 상황을 처리 재정의 구현 해야 합니다. 사용자가 하는 동안 응용 프로그램을 시작할 수 있으므로이 기능은 중요 오프 라인 상태입니다.
 
 <a name="ios_process_incoming" />
 
@@ -177,7 +180,7 @@ public override void DidReceiveRemoteNotification(
 `userInfo` 사전에 포함 되어는 `aps` 값이 키의 `alert` 나머지 알림 데이터를 사용 하 여 사전입니다. 이 사전은 검색 됩니다와 `string` 대화 상자에 표시 되는 알림 메시지입니다.
 
 > [!NOTE]
-> **참고**: 응용 프로그램 실행 중이 아닌 푸시 알림을 도착 하면 응용 프로그램이 시작 됩니다 되지만 `DidReceiveRemoteNotification` 메서드 알림을 처리 하지 않습니다. 대신, 알림 페이로드를 가져오고에서 적절 하 게 응답할는 `WillFinishLaunching` 또는 `FinishedLaunching` 재정의 합니다.
+> 응용 프로그램 실행 중이 아닌 푸시 알림을 도착 하면 응용 프로그램이 시작 됩니다 되지만 `DidReceiveRemoteNotification` 메서드 알림을 처리 하지 않습니다. 대신, 알림 페이로드를 가져오고에서 적절 하 게 응답할는 `WillFinishLaunching` 또는 `FinishedLaunching` 재정의 합니다.
 
 APNS에 대 한 자세한 내용은 참조 [iOS에서 푸시 알림을](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md)합니다.
 
@@ -330,7 +333,7 @@ public class FirebaseNotificationService : FirebaseMessagingService
         intent.AddFlags(ActivityFlags.ClearTop);
         var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-        var notificationBuilder = new Notification.Builder(this)
+        var notificationBuilder = new NotificationCompat.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
             .SetContentTitle("New Todo Item")
             .SetContentText(messageBody)

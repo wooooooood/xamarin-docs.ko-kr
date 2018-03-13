@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 97ca114f1160168c7fd9439e31dc475bc37b0467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2ec783b6963fc4ae14166ebf1e56bf8a802ba8b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-page"></a>탭된 페이지
 
@@ -97,7 +97,7 @@ public class MainPageCS : TabbedPage
 [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) 두 명의 자식 채워집니다 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 개체입니다. 첫 번째 자식이 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스 및 두 번째 탭은는 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 포함 하는 `ContentPage` 인스턴스.
 
 > [!NOTE]
-> **참고**:는 [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `TabbedPage` 자식 요소가 너무 많습니다.
+> [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) UI 가상화를 지원 하지 않습니다. 따라서 성능 영향을 받을 수는 경우는 `TabbedPage` 자식 요소가 너무 많습니다.
 
 다음 스크린 샷 표시는 `TodayPage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 에 표시 되는 인스턴스는 *오늘* 탭:
 

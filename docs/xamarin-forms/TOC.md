@@ -257,7 +257,7 @@
 ## [배포 및 테스트](deploy-test/index.md)
 ### [성능](deploy-test/performance.md)
 ### [Xamarin.UITest 및 Test Cloud](deploy-test/uitest-and-test-cloud.md)
-## [내부 살펴보기](internals/index.md)
+## [고급 개념 및 내부 요소](internals/index.md)
 ### [빠른 렌더러](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
 ## [문제 해결](troubleshooting/index.md)

@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 18c53ed6428eff911420c696d45b341d8e0fa5c1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1bf481e4999365f4afc52cb9dda83c6e627950e1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>ListView의 모양 사용자 지정
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
 ListView의 모양은 표시 되는 행의 레이아웃에 따라 결정 됩니다. 모양을 변경 하는 `ListView`, 다른 행 레이아웃을 사용 합니다.
 
-<a name="Built-in_Row_Views" />
 
 ## <a name="built-in-row-views"></a>기본 제공 행 보기
 
@@ -53,11 +51,11 @@ ListView의 모양은 표시 되는 행의 레이아웃에 따라 결정 됩니�
 
 각 기본 제공 행 보기에 연결 된 기본 제공된 스타일입니다. 이러한 스크린샷 각 보기 표시 되는 방식을 보여 줍니다.
 
-[![TestListItem, SimpleSelectableListItem, SimpleListitem1, 및 SimpleListItem2 스크린샷](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![TestListItem, SimpleSelectableListItem, SimpleListitem1, 및 SimpleListItem2 스크린샷](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked, 및 SimpleListItemMultipleChecked 스크린샷](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked, 및 SimpleListItemMultipleChecked 스크린샷](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem, 및 SimpleExpandableListItem 스크린샷](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem, 및 SimpleExpandableListItem 스크린샷](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 **BuiltInViews/HomeScreenAdapter.cs** 샘플 파일 (에 **BuiltInViews** 솔루션)를 확장할 수 없는 목록 항목 화면을 만드는 코드를 포함 합니다. 보기에 설정 된 `GetView` 다음과 같이 메서드:
 
@@ -88,7 +86,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 그런 다음 표준 참조 하 여 그룹 뷰와 자식 뷰에 대 한 속성을 설정할 수 `Text1` 및 `Text2` 위와 같이 식별자를 제어 합니다. 위의 SimpleExpandableListItem 스크린 샷 한 줄 그룹 보기 (SimpleExpandableListItem1) 및 두 줄 자식 뷰 (SimpleExpandableListItem2)의 예를 제공 합니다. 또는 두 줄 (SimpleExpandableListItem2)에 대 한 그룹 보기를 구성할 수 있습니다 (SimpleExpandableListItem1) 한 줄에 대 한 자식 뷰를 구성할 수 있습니다 또는 보기 그룹 둘 다 및 자식 뷰에 같은 줄 수를 포함할 수 있습니다. 
 
 
-<a name="Accessories" />
 
 ## <a name="accessories"></a>보조 프로그램
 
@@ -102,7 +99,7 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 
 앞에서 언급 한 accessories는 해당 순서 대로 다음 화면에서 확인할 수 있습니다.
 
-[![SimpleListItemChecked 스크린샷, SimpleListItemSingleChoice, 및 액세서리와 SimpleListItemMultipleChoice](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![SimpleListItemChecked 스크린샷, SimpleListItemSingleChoice, 및 액세서리와 SimpleListItemMultipleChoice](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 이러한 보조 프로그램 패스 중 하나를 표시 하려면 어댑터에 필요한 레이아웃 리소스 ID 다음 수동으로 설정 필요한 행에 대 한 선택 상태입니다. 이 줄의 코드를 만들고 할당 하는 방법을 보여 줍니다는 `Adapter` 이러한 레이아웃 중 하나를 사용 하 여:
 
@@ -112,7 +109,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 `ListView` 자체에서는 표시 되 고 접근자에 관계 없이 다른 선택 모드를 사용 하 고 지원 합니다. 혼동을 피하기 위해 사용 하 여 `Single` 선택 모드와 `Checked` 및 `SingleChoice` 액세서리 및 `Multiple` 모드는 `MultipleChoice` 스타일입니다. 선택 모드에 의해 제어 되는 `ChoiceMode` 속성은 `ListView`합니다.
 
-<a name="Handling_API_Level" />
 
 ### <a name="handling-api-level"></a>처리 API 레벨
 
@@ -137,7 +133,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### <a name="selecting-items-programmatically"></a>프로그래밍 방식으로 항목 선택
 
@@ -165,7 +160,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## <a name="creating-custom-row-layouts"></a>행 사용자 지정 레이아웃 만들기
 
@@ -188,7 +182,6 @@ Console.WriteLine();
 
 이러한 변경 내용은 아래에서 자세히, 활동의 뷰 및 사용자 지정 행 뷰 만들기 및 수정 프로그램 렌더링할 어댑터 및 활동에 설명한 다음으로 시작 합니다.
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>ListView 레이아웃에 추가 된 활동
 
@@ -220,7 +213,6 @@ Console.WriteLine();
 
 사용 하는 장점은 `Activity` 사용자 지정 레이아웃 (대신는 `ListActivity`) 제목 등 화면에 추가 컨트롤을 추가할 수 있다는 점 `TextView` 이 예에서 합니다.
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### <a name="creating-a-custom-row-layout"></a>행 사용자 지정 레이아웃 만들기
 
@@ -267,7 +259,6 @@ Console.WriteLine();
 
 사용자 지정 행 레이아웃 서로 다른 여러 컨트롤을 포함할 수 있는 동안 스크롤 성능 영향을 받을 수 복잡 한 디자인 및 (특히 경우 네트워크를 통해 로드 될 필요가) 이미지를 사용 하 여 합니다. 스크롤 성능 문제 해결에 자세한 내용은 Google의 문서를 참조 하십시오.
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### <a name="referencing-a-custom-row-view"></a>사용자 지정 행 뷰를 참조
 
@@ -309,7 +300,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>사용자 지정 활동에서 ListView 참조
 
@@ -343,10 +333,9 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 결과 화면은 다음과 같습니다.
 
-[![결과 CustomRowView의 스크린 샷](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![결과 CustomRowView의 스크린 샷](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### <a name="customizing-the-row-selector-color"></a>행 선택기 색을 사용자 지정
 
@@ -386,10 +375,9 @@ android:background="@drawable/CustomSelector"
 
 선택한 행과 해당 `Toast` 메시지 지금은 다음과 같습니다.
 
-[![선택한 행의 이름을 표시 하는 알림 메시지와 함께 주황색으로 선택 된 행](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![선택한 행의 이름을 표시 하는 알림 메시지와 함께 주황색으로 선택 된 행](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>사용자 지정 레이아웃에 깜박이 방지
 

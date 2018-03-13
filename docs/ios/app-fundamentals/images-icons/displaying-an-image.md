@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c54cb71b0cab653eee52e3773a5233d536412e7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-an-image"></a>이미지 표시
 
@@ -135,11 +135,11 @@ IOS 앱의 디자인에 따라, 경우도 아이콘 또는 변경 (예: 사용�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage01.png "템플릿 이미지에 렌더링 모드 설정")](displaying-an-image-images/templateimage01.png)
+[![](displaying-an-image-images/templateimage01.png "템플릿 이미지에 렌더링 모드 설정")](displaying-an-image-images/templateimage01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage01vs.png "서식 파일을 렌더링할 모드 설정")](displaying-an-image-images/templateimage01vs.png)
+[![](displaying-an-image-images/templateimage01vs.png "서식 파일을 렌더링할 모드 설정")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
 -----
 
@@ -147,11 +147,11 @@ IOS 디자이너에서에서 이미지 자산 UI 컨트롤을 할당 한 다음 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](displaying-an-image-images/templateimage03.png "Tint 색상을 지정 하는 이미지 설정")](displaying-an-image-images/templateimage03.png)
+[![](displaying-an-image-images/templateimage03.png "Tint 색상을 지정 하는 이미지 설정")](displaying-an-image-images/templateimage03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](displaying-an-image-images/templateimage03vs.png "Tint 색상을 지정 하는 이미지 설정")](displaying-an-image-images/templateimage03vs.png)
+[![](displaying-an-image-images/templateimage03vs.png "Tint 색상을 지정 하는 이미지 설정")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
 -----
 

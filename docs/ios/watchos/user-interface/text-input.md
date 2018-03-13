@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: b606773b44d32b724fe7f4dfa2ef18fe34b85cae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 170131a2449b37acfa411eeca54f7aa921b0d9e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-input"></a>텍스트 입력 사용
 
@@ -62,7 +62,7 @@ PresentTextInputController (suggest, WatchKit.WKTextInputMode.AllowEmoji, (resul
 - 자유 곡선 또는
 - 응용 프로그램이 제공 하는 미리 정의 된 목록에서
 
-[ ![](text-input-images/plain-scribble-sml.png "Scribble, 받아쓰기 또는 응용 프로그램을 제공 하는 미리 정의 된 목록에서")](text-input-images/plain-scribble.png)
+[![](text-input-images/plain-scribble-sml.png "Scribble, 받아쓰기 또는 응용 프로그램을 제공 하는 미리 정의 된 목록에서")](text-input-images/plain-scribble.png#lightbox)
 
 결과 항상 서 반환 되는 `NSObject` 으로 캐스팅 될 수는 `string`합니다.
 
@@ -106,4 +106,4 @@ PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (resu
 ## <a name="related-links"></a>관련 링크
 
 - [Apple의 텍스트 및 레이블 문서](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)
-- [WatchOS 3 소개](~/ios/watchos/platform/introduction-to-watchos3/index.md)
+- [watchOS 3 소개](~/ios/watchos/platform/introduction-to-watchos3/index.md)

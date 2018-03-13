@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a16f72e6aaee93aa313aff0aba23887b51acf701
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스와 사용자 인증
 
@@ -81,7 +81,7 @@ Azure 앱 서비스에서 리소스 토큰 브로커를 호스팅하기 위한 �
 
     다음 스크린샷은이 구성을 보여 줍니다.
 
-    [![](authentication-images/azure-web-app-settings.png "앱 서비스 웹 앱 설정을")](authentication-images/azure-web-app-settings-large.png "앱 서비스 웹 앱 설정")
+    [![](authentication-images/azure-web-app-settings.png "앱 서비스 웹 앱 설정을")](authentication-images/azure-web-app-settings-large.png#lightbox "앱 서비스 웹 앱 설정")
 
 1. Azure 앱 서비스 웹 앱으로 리소스 토큰 브로커 솔루션을 게시 합니다.
 
@@ -117,7 +117,7 @@ Azure 앱 서비스에서 리소스 토큰 브로커를 호스팅하기 위한 �
 
   다음 스크린샷은이 구성을 보여 줍니다.
 
-  [![](authentication-images/app-service-authentication-settings.png "앱 서비스 웹 앱 인증 설정을")](authentication-images/app-service-authentication-settings-large.png "앱 서비스 웹 앱 인증 설정")
+  [![](authentication-images/app-service-authentication-settings.png "앱 서비스 웹 앱 인증 설정을")](authentication-images/app-service-authentication-settings-large.png#lightbox "앱 서비스 웹 앱 인증 설정")
 
 앱 서비스 웹 앱 인증 흐름을 사용 하는 Facebook 응용 프로그램와 통신 하도록 구성도 해야 합니다. Facebook id 공급자를 선택 하 고를 입력 하 여이 작업을 수행할 수 있습니다는 **앱 ID** 및 **응용 프로그램 암호** Facebook 개발자 센터에서 Facebook 응용 프로그램 설정 값입니다. 자세한 내용은 참조 [응용 프로그램에 추가 Facebook 정보](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)합니다.
 
@@ -270,7 +270,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 ## <a name="related-links"></a>관련 링크
 
 - [TodoDocumentDBAuth (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
-- [Azure DB Cosmos 문서 데이터베이스 사용](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
+- [Azure Cosmos DB 문서 데이터베이스 사용](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [Azure Cosmos DB 데이터에 대 한 액세스 보호](/azure/cosmos-db/secure-access-to-data/)
 - [DocumentDB API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
 - [파티션 및 Azure Cosmos DB에 크기 조정 하는 방법](/azure/cosmos-db/partition-data/)

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 500ad02d79cea79f59b1aca91b0312c9a9d6bac3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="basic-bindings"></a>기본 바인딩
 
@@ -94,7 +94,7 @@ label.SetBinding(RotationProperty, "Value");
 
 조작할 때는 `Slider`, `Label` 적절 하 게 회전 합니다.
 
-[![바인딩 Basice 코드](basic-bindings-images/basiccodebinding-small.png "기본 코드 바인딩")](basic-bindings-images/basiccodebinding-large.png "기본 코드 바인딩")
+[![바인딩 Basice 코드](basic-bindings-images/basiccodebinding-small.png "기본 코드 바인딩")](basic-bindings-images/basiccodebinding-large.png#lightbox "기본 코드 바인딩")
 
 **기본 Xaml 바인딩** 페이지는 동일 **기본 코드 바인딩** 제외 하 고 XAML에서 전체 데이터 바인딩이 정의:
 
@@ -190,7 +190,7 @@ public partial class AlternativeCodeBindingPage : ContentPage
 
 이 프로그램을 실행 하는 것은 놀라운 약간 수 있습니다.
 
-[![대체 코드 바인딩](basic-bindings-images/alternativecodebinding-small.png "대체 코드 바인딩")](basic-bindings-images/alternativecodebinding-large.png "대체 코드 바인딩")
+[![대체 코드 바인딩](basic-bindings-images/alternativecodebinding-small.png "대체 코드 바인딩")](basic-bindings-images/alternativecodebinding-large.png#lightbox "대체 코드 바인딩")
 
 IOS 화면 왼쪽에는 페이지가 처음 나타날 때 화면 표시 되는 모양을 보여 줍니다. 여기서는 `Label`? 
 
@@ -319,7 +319,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 
 `BindingContext` 속성은 `StackLayout` 로 설정 되는 `slider` 개체입니다. 이 바인딩 컨텍스트가 모두에 의해 상속 되는 `Label` 및 `BoxView`모두 충족 하는의 해당 `Rotation` 속성으로 설정는 `Value` 속성의는 `Slider`: 
 
-[![바인딩 컨텍스트 상속](basic-bindings-images/bindingcontextinheritance-small.png "컨텍스트 상속 바인딩")](basic-bindings-images/bindingcontextinheritance-large.png "컨텍스트 상속 바인딩")
+[![바인딩 컨텍스트 상속](basic-bindings-images/bindingcontextinheritance-small.png "컨텍스트 상속 바인딩")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "컨텍스트 상속 바인딩")
 
 에 [다음 기사](binding-mode.md), 표시 됩니다는 방법을 *바인딩 모드* 개체 대상과 원본 간의 데이터 흐름을 변경할 수 있습니다.
 

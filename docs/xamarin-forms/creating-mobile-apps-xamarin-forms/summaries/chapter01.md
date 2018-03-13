@@ -3,14 +3,15 @@ title: "Chapter 1의 요약입니다. Xamarin.Forms 포함할 됩니까?"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Chapter 1의 요약입니다. Xamarin.Forms 포함할 됩니까?
 
@@ -44,7 +45,7 @@ Xamarin에는 현재 네이티브 Mac, iOS 및 Android Api C# 및.NET을 사용 
 
 Xamarin.Forms 프로그램의 대부분 PCL 또는 SAP에 있습니다. 각 플랫폼 PCL를 호출 하는 작은 응용 프로그램 스텁 이루어져 있습니다. Xamarin.Forms Api는 각 플랫폼의 문자 모양 및 느낌을 유지 되도록 각 플랫폼에 네이티브 컨트롤에 매핑됩니다.
 
-[![공유 플랫폼 시각적 개체의 삼중 스크린 샷](images/ch01fg03-small.png "각 플랫폼에서 컨트롤 Xamarin.Forms")](images/ch01fg03-large.png "각 플랫폼에서 Xamarin.Forms 컨트롤")
+[![공유 플랫폼 시각적 개체의 삼중 스크린 샷](images/ch01fg03-small.png "각 플랫폼에서 컨트롤 Xamarin.Forms")](images/ch01fg03-large.png#lightbox "각 플랫폼에서 Xamarin.Forms 컨트롤")
 
 왼쪽에서 오른쪽 스크린샷을 iPhone, Android 휴대폰, 및 Windows 10 Mobile phone 보여 줍니다. 각 화면에서 페이지에는 Xamarin.Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 텍스트를 표시 하기 위한는 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 동작을 시작 하는 것에 대 한 한 [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) 에 대 한 켜기/끄기 값을 선택 및 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 연속 범위 내의 값을 지정 하는 데 있습니다. 보기의 모든 4 개의 자식 요소인는 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 에 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)합니다.
 

@@ -7,12 +7,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4e5bf2b24845fa008c6f97a6d55e18a51bc82164
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 사용 하 여 원격 알림을 클라우드 메시징
 
@@ -22,7 +22,7 @@ _이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 
 
 이 연습에서는 기본 응용 프로그램 호출 **FCMClient** FCM 메시징 기능을 설명 하기 위해 생성 됩니다. **FCMClient** Google Play 서비스 여부를 확인, FCM에서 등록 토큰을 받고를 Firebase 콘솔에서 보내는 원격 알림에 표시 및 항목 메시지에 등록 합니다.
 
-[![응용 프로그램의 예제 스크린 샷](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png)
+[![응용 프로그램의 예제 스크린 샷](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png#lightbox)
 
 다음 항목 영역에 대해 알아봅니다.
 
@@ -56,7 +56,7 @@ Google의 FCM 서버;를 사용 하는 데 필요한 자격 증명을 획득 해
 
 다음 예제에서는 패키지 이름 설정 되어 `com.xamarin.fcmexample`: 
 
-[![패키지 이름 설정](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png)
+[![패키지 이름 설정](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png#lightbox)
 
 업데이트 하는 동안는 **Android 매니페스트**, 선택 사항을 확인 해야는 `Internet` 권한 사용 합니다. 
 
@@ -68,7 +68,7 @@ Google의 FCM 서버;를 사용 하는 데 필요한 자격 증명을 획득 해
 
 다음 예제에서는 패키지 이름 설정 되어 `com.xamarin.fcmexample`: 
 
-[![패키지 이름 설정](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png)
+[![패키지 이름 설정](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png#lightbox)
 
 업데이트 하는 동안는 **Android 매니페스트**, 선택 사항을 확인 해야는 `INTERNET` 권한 사용 (아래 **필요한 권한**). 
 
@@ -88,7 +88,7 @@ Google Play 서비스에 따라 달라 Firebase Cloud Messaging는 [Xamarin Goog
 
 3.  이 패키지에 설치 된 **FCMClient** 프로젝트: 
 
-    [ ![Google Play 서비스 자료를 설치합니다.](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png)
+    [![Google Play 서비스 자료를 설치합니다.](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -98,7 +98,7 @@ Google Play 서비스에 따라 달라 Firebase Cloud Messaging는 [Xamarin Goog
 
 3.  이 패키지에 설치 된 **FCMClient** 프로젝트: 
 
-    [ ![Google Play 서비스 자료를 설치합니다.](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png)
+    [![Google Play 서비스 자료를 설치합니다.](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png#lightbox)
 
 -----
 
@@ -125,7 +125,7 @@ FCM에서 메시지를 받을 [Xamarin Firebase-메시징](https://www.nuget.org
 
 3.  이 패키지에 설치 된 **FCMClient** 프로젝트: 
 
-    [ ![Xamarin Firebase 메시징 설치](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png)
+    [![Xamarin Firebase 메시징 설치](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -135,7 +135,7 @@ FCM에서 메시지를 받을 [Xamarin Firebase-메시징](https://www.nuget.org
 
 3.  이 패키지에 설치 된 **FCMClient** 프로젝트: 
 
-    [ ![Xamarin Firebase 메시징 설치](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png)
+    [![Xamarin Firebase 메시징 설치](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
 -----
  
@@ -166,7 +166,7 @@ using Android.Util;
 
 4.  에 **속성** 창 설정는 **빌드 작업** 를 **GoogleServicesJson** (하는 경우는 **GoogleServicesJson** 빌드 작업이 표시 되지 않습니다 저장 하 고 솔루션을 닫았다가):
 
-    [![빌드 작업 GoogleServicesJson을로 설정](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png)
+    [![빌드 작업 GoogleServicesJson을로 설정](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -178,7 +178,7 @@ using Android.Util;
 
 4.  설정의 **빌드 작업** 를 **GoogleServicesJson**: 
 
-    [![빌드 작업 GoogleServicesJson을로 설정](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png)
+    [![빌드 작업 GoogleServicesJson을로 설정](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png#lightbox)
  
 -----
  
@@ -254,7 +254,7 @@ protected override void OnCreate (Bundle bundle)
 
 `IsPlayServicesAvailable` 끝에서 호출 `OnCreate` Google Play 서비스 각 실행은 응용 프로그램 시작 될 때마다 확인 되도록 합니다. 응용 프로그램에 있는 경우는 `OnResume` 호출 메서드를 `IsPlayServicesAvailable` 에서 `OnResume` 도 합니다. 완전히 다시 작성 하 고 응용 프로그램을 실행 합니다. 모두 제대로 구성 되어 다음 스크린샷과 같이 화면이 표시 되어야 합니다. 
 
-[![응용 프로그램 Google Play 서비스를 사용할 수 있는지 나타냅니다.](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png)
+[![응용 프로그램 Google Play 서비스를 사용할 수 있는지 나타냅니다.](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png#lightbox)
 
 이 결과 얻지 못한 경우 Google 재생 서비스 APK 장치에 설치 되어 있는지 확인 하십시오 (자세한 내용은 참조 [설정을을 Google Play 서비스](https://developers.google.com/android/guides/setup)). 또한 추가 했는지 확인는 **Xamarin.Google.Play.Services.Base** 패키지를 프로그램 **FCMClient** 앞에서 설명한 대로 프로젝트.
 
@@ -365,7 +365,7 @@ void SendRegistrationToAppServer (string token)
 
 수신기 서비스를 저장 했으므로 이러한 서비스를 활용 하기 위해 클라이언트 앱 코드를 작성할 수 있습니다. 다음 섹션에서 단추 등록 토큰 로그온 UI에 추가 됩니다 (라고도 *인스턴스 ID 토큰*), 더 많은 코드에 추가 됩니다 `MainActivity` 보려는 `Intent` 에서 앱을 실행 하는 경우 정보는 알림: 
 
-[![응용 프로그램 화면에 추가 로그 토큰 단추](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![응용 프로그램 화면에 추가 로그 토큰 단추](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 ### <a name="log-tokens"></a>로그 토큰
 
@@ -419,11 +419,11 @@ if (Intent.Extras != null)
 
 빌드 및 실행 된 **FCMClient** 응용 프로그램입니다. **로그 토큰** 단추가 표시 됩니다.
 
-[![로그 토큰 단추가 표시 됩니다.](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![로그 토큰 단추가 표시 됩니다.](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 탭의 **로그 토큰** 단추입니다. IDE 출력 창에 다음과 같은 메시지가 나타납니다. 
 
-[![출력 창에 표시 된 인스턴스 ID 토큰](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png)
+[![출력 창에 표시 된 인스턴스 ID 토큰](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png#lightbox)
 
 긴 문자열 붙이지 **토큰** Firebase 콘솔 붙여넣으면 하는 인스턴스 ID 토큰 &ndash; 선택 하 고이 문자열을 클립보드에 복사 합니다. 인스턴스 ID 토큰을 표시 되지 않으면 다음 줄의 맨 위에 추가 `OnCreate` 되었는지 확인 하는 메서드 **google services.json** 올바르게 구문 분석:
 
@@ -437,34 +437,34 @@ Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
 
 에 로그인 된 [Firebase 콘솔](https://console.firebase.google.com), 프로젝트를 선택, 클릭 **알림**, 클릭 하 고 **첫 번째 메시지 보내기**: 
 
-[![보내기 Your 첫 번째 메시지 단추](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png)
+[![보내기 Your 첫 번째 메시지 단추](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png#lightbox)
 
 에 **작성 메시지** 페이지 메시지 텍스트를 입력 하 고 선택 **단일 장치**합니다. IDE 출력 창에서 인스턴스 ID 토큰을 복사 하 고 붙여넣습니다는 **FCM 등록 토큰** Firebase 콘솔 필드: 
 
-[![메시지 대화 상자를 구성 합니다.](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png)
+[![메시지 대화 상자를 구성 합니다.](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png#lightbox)
 
 Android 장치 (또는 에뮬레이터에), 앱은 Android를 탭 하 여 백그라운드 **개요** 단추와 홈 화면을 터치 합니다. 클릭 하 여 장치 준비 되 면 **메시지 보내기** Firebase 콘솔에서: 
 
-[![보내기 메시지 단추](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png)
+[![보내기 메시지 단추](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png#lightbox)
 
 경우는 **검토 메시지** 대화 상자가 표시 됩니다, 클릭 **보낼**합니다.
 알림 아이콘은 장치 (또는 에뮬레이터)의 알림 영역에 표시 됩니다. 
 
-[![알림 아이콘 표시 됩니다.](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png)
+[![알림 아이콘 표시 됩니다.](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png#lightbox)
 
 메시지를 보려면 알림 아이콘을 엽니다. 알림 메시지 해야 정확 하 게 입력 된 내용는 **메시지 텍스트** Firebase 콘솔 필드: 
 
-[![장치에 알림 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png)
+[![장치에 알림 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png#lightbox)
 
 돌아가려면 알림 아이콘을 누르세요.는 **FCMClient** 응용 프로그램입니다. `Intent` 전송 extras **FCMClient** IDE 출력 창에 나열 됩니다. 
 
-[![의도 extras 키, 메시지 ID와 축소 키 나열](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png)
+[![의도 extras 키, 메시지 ID와 축소 키 나열](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png#lightbox)
 
 이 예제는 **에서** 키가 응용 프로그램의 Firebase 프로젝트 번호로 설정 (이 예제에서는 `41590732`), 및 **collapse_key** 해당 패키지 이름으로 설정 됩니다 ( **com.xamarin.fcmexample**). 메시지를 받지 하지 않으면 삭제 해 보십시오는 **FCMClient** 응용 프로그램에 액세스 (장치나 에뮬레이터) 하 고 위의 단계를 반복 합니다. 
 
 
 > [!NOTE]
-> **참고:** 경우 하면 강제 닫기는 응용 프로그램, FCM 알림 배달 중지 됩니다. Android에서 중지 된 응용 프로그램의 구성 요소 시작 하는 실수로 또는 불필요 하 게 백그라운드 서비스 브로드캐스트를 방지 합니다. (이 동작에 대 한 자세한 내용은 참조 [중지 된 응용 프로그램에서 컨트롤 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols).) 이러한 이유로 필요는 때마다 응용 프로그램을 수동으로 제거 하 고 실행 하 고이 디버그 세션에서 작업을 중지할 &ndash; 이렇게 하면 FCM 메시지는 계속 받을 수 있도록 새 토큰을 생성할 수 있습니다.
+> 경우 하면 강제 닫기 응용 프로그램을 알림 배달 FCM 중지 됩니다. Android에서 중지 된 응용 프로그램의 구성 요소 시작 하는 실수로 또는 불필요 하 게 백그라운드 서비스 브로드캐스트를 방지 합니다. (이 동작에 대 한 자세한 내용은 참조 [중지 된 응용 프로그램에서 컨트롤 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols).) 이러한 이유로 필요는 때마다 응용 프로그램을 수동으로 제거 하 고 실행 하 고이 디버그 세션에서 작업을 중지할 &ndash; 이렇게 하면 FCM 메시지는 계속 받을 수 있도록 새 토큰을 생성할 수 있습니다.
 
 ### <a name="add-a-custom-default-notification-icon"></a>추가 사용자 지정 기본 알림 아이콘
 
@@ -515,11 +515,11 @@ subscribeButton.Click += delegate {
 
 앱을 제거 하 고 다시 만드는 것을 다시 실행 합니다. 클릭는 **알림을 구독할** 단추:
 
-[![구독 알림 단추](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png)
+[![구독 알림 단추](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png#lightbox)
 
 응용 프로그램에서 성공적으로 구독을 하는 경우 표시 되어야 **항목 동기화 완료** IDE에 출력 창: 
 
-[![출력 창에 메시지를 성공 동기화 하는 항목 표시](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png)
+[![출력 창에 메시지를 성공 동기화 하는 항목 표시](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png#lightbox)
 
 다음 절차 항목 메시지를 보낼 수 있습니다.
 
@@ -529,7 +529,7 @@ subscribeButton.Click += delegate {
 
 3.  에 **항목** 풀 다운 메뉴에서 기본 제공 항목 선택 **뉴스**: 
 
-    [ ![뉴스 항목을 선택 하면](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png)
+    [![뉴스 항목을 선택 하면](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png#lightbox)
 
 4.  Android 장치 (또는 에뮬레이터에), 앱은 Android를 탭 하 여 백그라운드 **개요** 단추와 홈 화면을 터치 합니다. 
 
@@ -537,11 +537,11 @@ subscribeButton.Click += delegate {
 
 6.  IDE 출력 창을 확인 **/항목/뉴스** 로그 출력에: 
 
-    [ ![/Topic/news에서 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png)
+    [![/Topic/news에서 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 
 이 메시지가 출력 창에 표시 되는 Android 장치에서 알림 영역에서 알림 아이콘도 나타납니다. 항목 메시지를 보려면 알림 아이콘을 엽니다. 
 
-[![알림으로 항목 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png)
+[![알림으로 항목 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png#lightbox)
 
 메시지를 받지 하지 않으면 삭제 해 보십시오는 **FCMClient** 응용 프로그램에 액세스 (장치나 에뮬레이터) 하 고 위의 단계를 반복 합니다. 
 
@@ -593,7 +593,7 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 ```
 
 > [!NOTE]
-> **참고:** 에 중단점을 설정 하는 경우 `FirebaseMessagingService`하려면 디버깅 세션 수도 FCM 메시지를 배달 하는 방법으로 인해 이러한 중단점을 적중할 수 있습니다.
+> 중단점을 설정한 경우 `FirebaseMessagingService`하려면 디버깅 세션 수도 FCM 메시지를 배달 하는 방법으로 인해 이러한 중단점을 적중할 수 있습니다.
  
 
 ### <a name="send-another-message"></a>다른 메시지 보내기
@@ -608,13 +608,13 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 
 4.  응용 프로그램을 전경에 실행 되 고 있는지 확인 한 다음 클릭 **메시지 보내기** Firebase 콘솔에서: 
 
-    [ ![콘솔에서 다른 메시지 보내기](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png)
+    [![콘솔에서 다른 메시지 보내기](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png#lightbox)
 
 5.  경우는 **검토 메시지** 대화 상자가 표시 됩니다, 클릭 **보낼**합니다.
 
 6.  들어오는 메시지가 IDE 출력 창에 기록 됩니다.
 
-    [ ![출력 창에 출력할지 메시지 본문](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png)
+    [![출력 창에 출력할지 메시지 본문](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
 
 
 ### <a name="add-a-local-notifications-sender"></a>로컬 알림을 보낸 사람 추가
@@ -675,15 +675,15 @@ SendNotification(message.GetNotification().Body, message.Data);
 
 4.  응용 프로그램을 전경에 실행 되 고 있는지 확인 한 다음 클릭 **메시지 보내기** Firebase 콘솔에서: 
 
-    [ ![전경 메시지 보내기](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png)
+    [![전경 메시지 보내기](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png#lightbox)
 
 이 이번에 출력 창에 기록 된 메시지는 새로운 알림이에 패키지도 &ndash; 앱이 포그라운드에서 실행 되는 동안 알림 아이콘이 알림 표시줄에 나타납니다. 
 
-[![전경 메시지에 대 한 알림 아이콘](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png)
+[![전경 메시지에 대 한 알림 아이콘](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png#lightbox)
 
 알림을 열면 Firebase 콘솔 알림 GUI에서 보낸 마지막 메시지를 표시 됩니다. 
 
-[![전경 알림 전경 아이콘과 함께 표시](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png)
+[![전경 알림 전경 아이콘과 함께 표시](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
  
 ## <a name="troubleshooting"></a>문제 해결

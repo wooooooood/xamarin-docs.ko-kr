@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: 2a6013d9bab26f90a6d8afa101298b494f2f90ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6546870d85f7b77e60dff0cb9e6075f982c9cb8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resources"></a>Android 리소스
 
 _이 문서는 Xamarin.Android의 Android 리소스의 개념을 소개 하 고 사용 하는 방법에 문서화 됩니다. Android 응용 프로그램에서 응용 프로그램 지역화 및 다양 한 화면 크기 및 밀도 포함 하 여 여러 장치를 지원 하기 위해 리소스를 사용 하는 방법을 알아봅니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -71,7 +70,7 @@ Xamarin.Android 응용 프로그램에서 이러한 리소스에 액세스 하�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android 자산 사용 하 여](~/android/app-fundamentals/resources-in-android/android-assets.md)
+- [Android 자산 사용](~/android/app-fundamentals/resources-in-android/android-assets.md)
 - [응용 프로그램 기본 사항](http://developer.android.com/guide/topics/fundamentals.html)
 - [응용 프로그램 리소스](http://developer.android.com/guide/topics/resources/index.html)
 - [여러 화면을 지 원하는](http://developer.android.com/guide/practices/screens_support.html)

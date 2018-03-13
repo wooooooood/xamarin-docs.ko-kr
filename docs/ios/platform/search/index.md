@@ -7,11 +7,11 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2d802a96fcc8dad1d610b99a1cddffdc4398da38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-search-apis"></a>새 검색 Api
 
@@ -21,7 +21,7 @@ _이 문서에서는 사용자가 정보 및 Xamarin.iOS 앱 내 기능을 검�
 
 또한 새로운 검색 Api 쉽게 검색 이전 검색 구현 환경 없이 응용 프로그램에 통합할 수 있습니다. 이 인해 Apple iOS 9 응용 프로그램의 콘텐츠를 앱 검색을 사용 하 여 범용으로 검색할 수 있도록 하는 데 몇 시간이 걸릴 일반적으로 클레임입니다.
 
-[ ![](images/intro01.png "전체적으로 검색할 수 있는 앱 검색을 사용 하 여 iOS 9 앱 콘텐츠의 예")](images/intro01.png)
+[![](images/intro01.png "전체적으로 검색할 수 있는 앱 검색을 사용 하 여 iOS 9 앱 콘텐츠의 예")](images/intro01.png#lightbox)
 
 앱 검색의 세 가지 별도 Api로 구성 됩니다.
 

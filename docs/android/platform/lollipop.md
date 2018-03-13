@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 24d85d7be580f8db8621d91ebbb27c0b7881b4eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lollipop-features"></a>롤리팝 기능
 
@@ -54,8 +54,6 @@ Android 5.0 (롤리팝)에 새로운 디자인 언어 *자료 디자인*, 더욱
 계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 수준 23에 맞게 개발 이하의 경우.
 
 
-<a name="settingup" />
-
 ## <a name="setting-up-an-android-50-project"></a>Android 5.0 프로젝트 설정
 
 Android 5.0 프로젝트를 만들려면 최신 도구와 SDK 패키지를 설치 해야 합니다. 대상으로 Android 5.0 Xamarin.Android 프로젝트를 설정 하려면 다음 단계를 사용 합니다.
@@ -66,11 +64,11 @@ Android 5.0 프로젝트를 만들려면 최신 도구와 SDK 패키지를 설�
 
 3. Android SDK Manager를 시작 (Mac 용 Visual Studio에서 사용 하 여 **도구 &gt; 열려 Android SDK Manager&hellip;**) 23.0.5 Android SDK 도구를 설치 및 이상 버전:
 
-    [![Android SDK Manager에서 Android SDK 도구 선택](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png)
+    [![Android SDK Manager에서 Android SDK 도구 선택](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
 
    또한 최신 Android 5.0 SDK 패키지 (API 21)를 설치 합니다.
 
-    [![Android SDK Manager에서 Android 5.0 SDK 패키지를 설치합니다.](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png)
+    [![Android SDK Manager에서 Android 5.0 SDK 패키지를 설치합니다.](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
    Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html)합니다.
 
@@ -87,14 +85,9 @@ Android 5.0 프로젝트를 만들려면 최신 도구와 SDK 패키지를 설�
 
 참고: Android L 미리 보기를 대상으로 지정 된 기존 Android 프로젝트를 업데이트 하는 경우 업데이트 해야는 **대상 프레임 워크** 및 **Android 버전** 위에서 설명한 값에 있습니다.
 
-
-<a name="changes" />
-
 ## <a name="important-changes"></a>중요 한 변경 내용
 
 이전에 게시 된 Android 앱은 Android 5.0에서 변경 내용에 의해 저하 될 수 있습니다. 특히, Android 5.0에서는 새로운 런타임 및 크게 변경 된 알림 형식을 사용합니다.
-
-<a name="runtime" />
 
 ### <a name="android-runtime"></a>Android 런타임
 
@@ -108,7 +101,6 @@ Android 5.0 Dalvik 대신 기본 런타임으로 새 Android 런타임 (아트)�
 
 아트에서 변경 하지 않고 기존 앱이 작동 해야 &ndash; 이전 Dalvik 런타임을에 고유한 기법을 악용 하는 응용 프로그램을 제외 하 고는 작동 하지 않을 아트에서 합니다. 이러한 변경에 대 한 자세한 내용은 참조 [확인 앱 동작에는 Android 런타임 (아트)](http://developer.android.com/guide/practices/verifying-apps-art.html)합니다.
 
-<a name="notifchanges" />
 
 ### <a name="notification-changes"></a>알림 변경
 
@@ -136,29 +128,26 @@ Android 5.0 Dalvik 대신 기본 런타임으로 새 Android 런타임 (아트)�
 
 Android에서 알림이 생성 하는 방법에 대 한 정보를 참조 하십시오. [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md)합니다. [호환성](~/android/app-fundamentals/notifications/local-notifications.md#compatibility) 이 문서의 섹션 아래쪽 호환 되는 알림을 만드는 방법에 설명 이전 버전의 Android 합니다.
 
-<a name="materialtheme" />
 
 ## <a name="material-theme"></a>자재 테마
 
 새 Android 5.0 자료 테마에서는 Android UI의 모양과 느낌을 대대적으로 변경 합니다. 시각적 요소는 이제 굵게 그래픽과 서체 인쇄 기반 디자인의 밝은 색에 사용 하는 tactile 화면을 사용 합니다. 자료 테마의 예는 다음 스크린샷에 표시 되는
 
-[![자료 테마 홈 화면, 앱 화면 및 화면 설정의 스크린샷](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png)
+[![자료 테마 홈 화면, 앱 화면 및 화면 설정의 스크린샷](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
 
 Android 5.0는 왼쪽에 표시 된 홈 화면으로 반응 합니다. Center 스크린 샷 앱 목록의 첫 번째 화면 이며 오른쪽에 스크린 샷은 **설정을** 화면입니다. Google의 [자료 디자인](https://material.io/guidelines/material-design/introduction.html) 사양 뒤에 새로운 자료가 테마 개념이 기본 디자인 규칙에 설명 합니다.
 
 자재 테마에 응용 프로그램에서 사용할 수 있는 세 가지 기본 제공 된 버전:는 `Theme.Material` 어두운 테마 (기본값) 이면는 `Theme.Material.Light` 테마 및 `Theme.Material.Light.DarkActionBar` 테마: 
 
-[![어두운 스크린샷, 조명 및 DarkActionBar 테마](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png)
+[![어두운 스크린샷, 조명 및 DarkActionBar 테마](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
 Xamarin.Android 앱의 자료 테마 기능을 사용 하는 방법에 대 한 자세한 내용은 [자료 테마](~/android/user-interface/material-theme.md)합니다.
 
-<a name="animations" />
 
 ## <a name="animations"></a>애니메이션
 
 Android 5.0 터치 피드백 애니메이션, 활동 전환 애니메이션 및 응용 프로그램 인터페이스를 사용 하는 보다 직관적인 있도록 뷰 상태 전환 애니메이션을 제공 합니다. Android 5.0 앱을 사용할 수 또한 *효과 표시* 애니메이션을 숨기 거 나 뷰를 표시 합니다. 사용할 수 있습니다 *동작 곡선* 얼마나 빨리 구성 하는 설정을 또는 느리게 애니메이션 렌더링 됩니다.
 
-<a name="touchanim" />
 
 ### <a name="touch-feedback-animations"></a>터치 피드백 애니메이션
 
@@ -170,7 +159,6 @@ Android 5.0 터치 피드백 애니메이션, 활동 전환 애니메이션 및 
 
 Android 5.0에서 피드백 애니메이션을 터치에 대 한 자세한 참조 [터치 피드백을 사용자 지정](http://developer.android.com/training/material/animations.html#Touch)합니다.
 
-<a name="activityanim" />
 
 ### <a name="activity-transition-animations"></a>활동 전환 애니메이션
 
@@ -184,7 +172,7 @@ Android 5.0에서 피드백 애니메이션을 터치에 대 한 자세한 참�
 
 예를 들어 다음과 같은 순서의 스크린 샷 공유 요소 전환을 보여 줍니다.
 
-[![공유 요소 전환 애니메이션의 프레임 스크린 샷 하 여 프레임](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png)
+[![공유 요소 전환 애니메이션의 프레임 스크린 샷 하 여 프레임](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
 
 공유 요소 (한 애벌레 사진)는 첫 번째 활동;에 여러 가지 뷰 중 하나 것만 보기에는 두 번째 작업에서 두 번째 첫 번째 활동 전환으로 되도록 확대 합니다.
 
@@ -220,7 +208,6 @@ Enter 전환에 대 한 Android 5.0에는 세 가지 유형의 애니메이션 �
 
 Android 5.0에서 활동 전환 애니메이션에 대 한 자세한 내용은 [사용자 지정 활동 전환](http://developer.android.com/training/material/animations.html#Transitions)합니다.
 
-<a name="viewstate" />
 
 ### <a name="view-state-transition-animations"></a>뷰 상태 전환 애니메이션
 
@@ -232,23 +219,21 @@ Android 5.0에 대 한 애니메이션을 보기의 상태가 변경 될 때 실
 
 Android 5.0의 보기 상태 전환 애니메이션에 대 한 자세한 내용은 [뷰 상태 변경 내용이 애니메이션 효과 주는](http://developer.android.com/training/material/animations.html#ViewState)합니다.
 
-<a name="reveal" />
 
 ### <a name="reveal-effect"></a>효과 표시
 
 *효과 표시* 클리핑 원 해당 변경 내용을 반지름을 표시 하거나 숨기는 보기입니다. 초기 및 최종 클리핑 원의 반지름을 설정 하 여이 영향을 제어할 수 있습니다. 스크린 샷의 다음과 같은 화면 중심에서 표시 효과 애니메이션:
 
-[![표시 애니메이션의 프레임 스크린 샷 하 여 프레임](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png)
+[![표시 애니메이션의 프레임 스크린 샷 하 여 프레임](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
 
 다음 화면 왼쪽된 아래 모서리에서 일어나는 표시 효과 애니메이션을 보여 줍니다.
 
-[![프레임 여 클리핑 애니메이션의 프레임 스크린 샷](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png)
+[![프레임 여 클리핑 애니메이션의 프레임 스크린 샷](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
 
 애니메이션을 되돌릴 수를 표시 합니다. 즉, 클리핑 원 보기 숨기려면 축소 하지 않고 수는 보기를 표시 하기 위해 확대.
 
 Android 5.0 표시 효과에 대 한 자세한 내용은 참조 하십시오. [표시 효과 사용 하 여](http://developer.android.com/training/material/animations.html#Reveal)합니다.
 
-<a name="curvedmotion" />
 
 ### <a name="curved-motion"></a>곡선된 동작
 
@@ -262,7 +247,6 @@ Android 5.0 표시 효과에 대 한 자세한 내용은 참조 하십시오. [�
 
 새 사용할 수 있습니다 `PathInterpolator` 동작 보간을 수행 방법을 지정 하는 클래스입니다. `PathInterpolator` 지정 된 제어점 및 모션 곡선에 따라 애니메이션 경로 통과 하는 보간이입니다. Android 5.0에서 곡선된 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 참조 [곡선 동작을 사용 하 여](http://developer.android.com/training/material/animations.html#CurvedMotion)합니다.
 
-<a name="viewshadows" />
 
 ## <a name="view-shadows--elevation"></a>보기 그림자 및 권한 상승
 
@@ -270,13 +254,12 @@ Android 5.0에서 지정할 수 있습니다는 *상승* 새 설정 하 여 뷰�
 
 다음 예제에서는 빈에서 캐스팅 그림자 `TextView` 의 승격 속성이로 설정 된 경우 2dp, 4dp, 및 6dp를 각각 제어 합니다.
 
-[![더 큰 progessively의 스크린 샷을 보려면 그림자](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png)
+[![더 큰 progessively의 스크린 샷을 보려면 그림자](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
 
 그림자 설정 보기 (위와 같이) 정적 수 또는 보기의 배경 위에 일시적으로 증가 하 고 표시 하는 보기를 만들 애니메이션에 사용할 수 있습니다. 사용할 수는 `ViewPropertyAnimator` 상승의 경우 보기의 애니메이션 효과를 줄 클래스입니다. 보기의 상승 레이아웃의 합계인 `elevation` 설정 뒤에 `translationZ` 통해 설정할 수 있는 속성은 `ViewPropertyAnimator` 메서드를 호출 합니다.
 
 Android 5.0에서 보기 그림자에 대 한 자세한 내용은 [그림자 정의 및 클리핑 뷰](http://developer.android.com/training/material/shadows-clipping.html)합니다.
 
-<a name="colorfeatures" />
 
 ## <a name="color-features"></a>색상 기능
 
@@ -286,7 +269,6 @@ Android 5.0에는 앱에서 색을 관리 하기 위한 두 가지 새로운 기
 
 -   *두드러진 색 추출* 동적으로 표시 된 이미지의 색상표와 조정 하기 위해 응용 프로그램의 색 테마를 사용자 지정할 수 있습니다.
 
-<a name="tinting" />
 
 ### <a name="drawable-tinting"></a>그릴 색조
 
@@ -302,7 +284,6 @@ Android 5.0에는 앱에서 색을 관리 하기 위한 두 가지 새로운 기
 
 Android 5.0에 그릴 색조 하는 방법에 대 한 자세한 내용은 [그릴 색조](http://developer.android.com/training/material/drawables.html#DrawableTint)합니다.
 
-<a name="colorextract" />
 
 ### <a name="prominent-color-extraction"></a>두드러진 색상을 추출
 
@@ -322,13 +303,12 @@ Android 5.0에 그릴 색조 하는 방법에 대 한 자세한 내용은 [그�
 
 예를 들어 다음 스크린샷에서 사진 앱 보기 두드러진 색 디스플레이에 이미지에서 추출 및 이미지에 맞게 응용 프로그램의 색 구성표에 맞게 이러한 색을 사용 하 여:
 
-[![녹색으로 및 파랑 테마 색 추출의 스크린샷](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png)
+[![녹색으로 및 파랑 테마 색 추출의 스크린샷](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
 
 위의 스크린샷에서 작업 모음 압축 푼된 "넘치는 조명"로 설정 되어 색과 배경 압축 푼된 "넘치는 어둡게"로 설정 된 색입니다. 위의 각 예제에 작은 색 사각형의 행은 이미지에서 추출 된 색상표 색을 설명 하기 위해 포함 됩니다.
 
 Android 5.0의 색상을 추출 하는 방법에 대 한 자세한 내용은 [이미지에서 두드러진 색 추출](http://developer.android.com/training/material/drawables.html#ColorExtract)합니다.
 
-<a name="newuiwidgets" />
 
 ## <a name="new-ui-widgets"></a>새 UI 위젯
 
@@ -340,11 +320,10 @@ Android 5.0에는 두 개의 새 UI 위젯 소개합니다.
 
 두 위젯 자료 테마 기능에는 처리 된 지원이 포함 예를 들어 `RecyclerView` 애니메이션을 사용 하 여 뷰를를 추가 및 제거 하 고 `CardView` 사용 하 여 볼 그림자 각 카드의 배경 위에 배치 하는 것 같습니다. 이러한 새로운 위젯의 예는 다음 스크린샷에서에 나와 있습니다.
 
-[![RecyclerView를 사용 하 여 빌드한 앱의 스크린 샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![RecyclerView를 사용 하 여 빌드한 앱의 스크린 샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 왼쪽 스크린샷에서의 예로 `RecyclerView` 에 스크린샷 및 전자 메일 응용 프로그램에서 사용 되는 오른쪽의 예는 `CardView` 여행 예약 응용 프로그램에서 사용 되는 합니다.
 
-<a name="recyclerview" />
 
 ### <a name="recyclerview"></a>RecyclerView
 
@@ -356,27 +335,25 @@ Android 5.0에는 두 개의 새 UI 위젯 소개합니다.
 
 다음 스크린샷에서 보여 주기는 `RecyclerView` 100 항목이 포함 된 (각 항목은 구성 되어는 `ImageView` 및 `TextView`):
 
-[![이미지를 통해 스크롤할 RecyclerView 응용 프로그램의 스크린 샷](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png)
+[![이미지를 통해 스크롤할 RecyclerView 응용 프로그램의 스크린 샷](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
 
 `RecyclerView` 이 큰 데이터 집합으로 쉽게 처리 &ndash; 스크롤 종료 목록의 시작 부분에서이 샘플에서 목록의 응용 프로그램은 몇 초 밖에 걸리지 합니다. `RecyclerView` 또한 애니메이션; 지원 사실, 항목 추가 및 제거에 대 한 애니메이션 기본적으로 활성화 됩니다. 에 항목을 추가 하는 경우는 `RecyclerView`, 스크린 샷의이 시퀀스에 나와 있는 것 처럼에 사라지기:
 
-[![프레임으로의 사진 항목 옅은 색의 프레임 스크린 샷](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png)
+[![프레임으로의 사진 항목 옅은 색의 프레임 스크린 샷](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
 
 에 대 한 자세한 `RecyclerView`, 참조 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)합니다.
 
-<a name="cardview" />
 
 ### <a name="cardview"></a>CardView
 
 `CardView` 모퉁이가 둥근 부동 카드를 시뮬레이션 하는 간단한 보기가입니다. 때문에 `CardView` 기본 제공 뷰 그림자가, 시각적 깊이 응용 프로그램에 추가할 수는 쉬운 방법을 제공 합니다. 다음 스크린샷에서의 세 가지 텍스트 기반 예제를 보여 줍니다. `CardView`:
 
-[![CardView 기반 항목과 RecyclerView를 사용 하 여 앱 스크린 샷을 예제](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![CardView 기반 항목과 RecyclerView를 사용 하 여 앱 스크린 샷을 예제](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 각 위의 예제에서 카드를 포함 한 `TextView`; 배경색을 통해 설정 됩니다는 `cardBackgroundColor` 특성입니다.
 
 에 대 한 자세한 `CardView`, 참조 [CardView](~/android/user-interface/controls/card-view.md)합니다.
 
-<a name="enhanced" />
 
 ## <a name="enhanced-notifications"></a>향상 된 알림
 
@@ -389,13 +366,13 @@ Android 5.0에서 알림 시스템 크게 새 시각적 형식 및 새로운 기
 Android 5.0 장치 잠금 화면에 알림을 나타날 수도 있습니다.
 예를 들어 다음은 예제 스크린샷은 단일 알림 사용 하 여 잠금 화면입니다.
 
-[![잠금 화면에 표시 되는 알림 스크린 샷](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png)
+[![잠금 화면에 표시 되는 알림 스크린 샷](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
 
 사용자 수를 두 번 누릅니다 장치 잠금을 해제 하 해당 알림을 발생 시킨 앱으로 이동 하려면 잠금 화면에서 알림 또는 알림을 해제할을 살짝 밉니다. 알림이 새 *가시성* 내용의 양을 잠금 화면에 표시 될 수를 결정 하는 설정입니다. 잠금 화면 알림에 표시할 중요 한 내용이 수 있도록 할지 여부를 선택할 수 있습니다.
 
 Android 5.0 이라고 하는 새 우선 순위가 높은 알림 표시 형식에는 *헤드업*합니다. 화면 알림 몇 초간 화면 맨 위에서부터 내려갈 및 다음 화면 맨 위에 있는 알림 음영으로 다시 후퇴 합니다. 화면 알림 시스템 UI 현재 실행 중인 작업을 방해 하지 않고 중요 한 정보를 넣을 수 있도록 합니다. 다음 예제에서는 간단한 헤드업 알림이 앱 위에 표시 됩니다.
 
-[![Heads-up 알림 예](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png)
+[![Heads-up 알림 예](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
 화면 알림 다음과 같은 이벤트에 대 한 일반적으로 사용 됩니다.
 
@@ -414,9 +391,8 @@ Android 5.0에서 Android를 정렬 및 표시를 지능적으로 더 수 있도
 
 만들기 및 Android 5.0, 그러면 최신 기능을 사용 하 여 알림을 시작 하는 방법에 대 한 자세한 내용은 참조 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md)합니다.
 
-<a name="newapis" />
 
-## <a name="new-apis"></a>새 Api
+## <a name="new-apis"></a>새로운 API
 
 위에서 설명한 새로운 모양 및 기능 외에도 Android 5.0 기존 멀티미디어의 기능, 저장소 및 무선/연결 기능을 확장 하는 새로운 Api를 추가 합니다. 또한 Android 5.0 새 작업 스케줄러 기능에 대 한 지원을 제공 하는 새 Api가 포함 됩니다.
 

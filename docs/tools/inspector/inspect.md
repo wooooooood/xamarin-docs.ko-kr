@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: bd6d47f98435cc68ecf4156423526c31dbac09da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c923208b7ca4d41914504b4b0aa0687db1d49f01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="inspecting-live-applications"></a>라이브 응용 프로그램을 검사합니다.
 
@@ -27,11 +27,11 @@ ms.lasthandoff: 02/27/2018
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "IDE의 도구 모음에서 검사 단추를 클릭 합니다.")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "IDE의 도구 모음에서 검사 단추를 클릭 합니다.")](inspect-images/mac-heres-the-button.png#lightbox)
 
 새 REPL 프롬프트와 함께 새 Xamarin 검사기 클라이언트 창이 열립니다.
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "새 Xamarin 검사기 클라이언트 창이 열리고, 새로운 REPL 프롬프트")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "새 Xamarin 검사기 클라이언트 창이 열리고, 새로운 REPL 프롬프트")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 이 창 표시 될 때 대화형 C# 프롬프트를 실행 하 고 C# 문 및 식 평가 하는 데 사용할 수 있는 해야 합니다. 가 있기 때문에이 고유 코드 대상 프로세스의 컨텍스트에서 계산 됩니다. 이 경우 표시 되는 iOS 응용 프로그램에 대해 실행 되는 코드를 나와 있습니다.
 

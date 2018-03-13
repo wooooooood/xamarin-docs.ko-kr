@@ -3,16 +3,16 @@ title: ".xib 파일"
 description: "이 문서에서는.xib 만들고 Xamarin.Mac 응용 프로그램에 대 한 사용자 인터페이스를 유지 관리 하는 Xcode의 인터페이스 작성기에서 만든 파일에서 작업을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xib-files"></a>.xib 파일
 
@@ -27,7 +27,7 @@ _이 문서에서는.xib 만들고 Xamarin.Mac 응용 프로그램에 대 한 �
 
 .Xib 파일은 Xcode의 인터페이스 작성기에서 작성 및 관리 되는 응용 프로그램의 사용자 인터페이스 (예: 메뉴, Windows, 뷰, 레이블, 텍스트 필드)의 요소를 그래픽으로 정의 하 여 macOS 사용 됩니다.
 
-[![실행 중인 응용 프로그램의 예로](xib-images/intro01.png "실행 중인 응용 프로그램의 예")](xib-images/intro01-large.png)
+[![실행 중인 응용 프로그램의 예로](xib-images/intro01.png "실행 중인 응용 프로그램의 예")](xib-images/intro01-large.png#lightbox)
 
 이 문서에서는의 기본적인 Xamarin.Mac 응용 프로그램에서.xib 파일을 사용 하겠습니다. 것이 가장 좋습니다를 통해 협력 하 고 [Hello, Mac](~/mac/get-started/hello-mac.md) 이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 하는 대로 먼저 문서.
 
@@ -43,7 +43,7 @@ Xcode의 일환으로, 사과 디자이너에서 사용자 인터페이스를 �
 
 Mac 용 Visual Studio에서 Xcode에서.xib 파일을 열 때 사용 하 여 여는 **Project Navigator** 왼쪽에는 **인터페이스 계층 구조** 및 **인터페이스 편집기** 중간에 및 **속성 및 유틸리티** 오른쪽의 섹션:
 
-[![Xcode UI의 구성 요소](xib-images/xcode03.png "Xcode UI의 구성 요소")](xib-images/xcode03-large.png)
+[![Xcode UI의 구성 요소](xib-images/xcode03.png "Xcode UI의 구성 요소")](xib-images/xcode03-large.png#lightbox)
 
 직접 살펴보겠습니다 이러한 각 기능에서 Xcode 섹션은 며는 사용법을 Xamarin.Mac 응용 프로그램에 대 한 인터페이스를 만들려고 합니다.
 
@@ -75,7 +75,7 @@ Xcode에서 편집할.xib 파일을 여는 경우 Mac 용 Visual Studio 자체�
 
 **속성** 섹션 내에는 다음 그림처럼 8개의 *검사기 탭*이 있습니다.
 
-[![모든 검사기에 대해 간략하게](xib-images/xcode05.png "모든 검사기에 대 한 개요")](xib-images/xcode05-large.png)
+[![모든 검사기에 대해 간략하게](xib-images/xcode05.png "모든 검사기에 대 한 개요")](xib-images/xcode05-large.png#lightbox)
 
 왼쪽부터 시작해서 오른쪽으로 가면서 다음과 같은 탭이 있습니다.
 
@@ -123,17 +123,17 @@ Xcode에서 편집할.xib 파일을 여는 경우 Mac 용 Visual Studio 자체�
 10. 에 **솔루션 패드**, 두 번 클릭은 **Info.plist** 편집을 위해 열 파일입니다.
 11. 선택 `MainMenu` 에서 **주 인터페이스** 드롭다운:
 
-    [![주 메뉴 설정](xib-images/setup05.png "주 메뉴를 설정 합니다.")](xib-images/setup05-large.png)
+    [![주 메뉴 설정](xib-images/setup05.png "주 메뉴를 설정 합니다.")](xib-images/setup05-large.png#lightbox)
 12. 에 **솔루션 패드**, 두 번 클릭은 **MainMenu.xib** Xcode의 인터페이스 작성기에서 편집을 위해 열 파일입니다.
 13. 에 **라이브러리 검사기**, 형식 `object` 검색 필드에 다음 끌어 새 **개체** 디자인 화면으로:
 
-    [![주 메뉴 편집](xib-images/setup06.png "주 메뉴 편집")](xib-images/setup06-large.png)
+    [![주 메뉴 편집](xib-images/setup06.png "주 메뉴 편집")](xib-images/setup06-large.png#lightbox)
 14. 에 **Identity 관리자**, 입력 `AppDelegate` 에 대 한는 **클래스**:
 
-    [![응용 프로그램 대리자를 선택 하면](xib-images/setup07.png "앱 대리자를 선택 합니다.")](xib-images/setup07-large.png)
+    [![응용 프로그램 대리자를 선택 하면](xib-images/setup07.png "앱 대리자를 선택 합니다.")](xib-images/setup07-large.png#lightbox)
 15. 선택 **파일의 소유자만** 에서 **인터페이스 계층 구조**, 전환할는 **연결 검사기** 대리자에서 선을 끌어 및는 `AppDelegate` **개체** 프로젝트에 추가 되었습니다.
 
-    [![응용 프로그램 대리자를 연결](xib-images/setup08.png "앱 대리자 연결")](xib-images/setup08-large.png)
+    [![응용 프로그램 대리자를 연결](xib-images/setup08.png "앱 대리자 연결")](xib-images/setup08-large.png#lightbox)
 16. 변경 내용을 저장 하 고 Mac.에 Visual Studio로 반환 합니다.
 
 위치에서 이러한 모든 변화를 통해 편집는 **AppDelegate.cs** 파일을 다음과 같이 표시 하 게 합니다.
@@ -168,13 +168,13 @@ namespace MacXib
 }
 ```
 
-이제 응용 프로그램의 주 창에는.xib 정의 (OS **X*- **I**인터페이스 **B**uilder) 창에 추가할 때 프로젝트에 자동으로 포함 파일 컨트롤러입니다. windows 디자인에 맞게 편집 하는 **솔루션 패드**, 두 번 클릭 하 고 **MainWindow.xib** 파일:
+응용 프로그램의 주 창에 정의 되어 이제는 **.xib** 파일 창 컨트롤러를 추가할 때 프로젝트에 자동으로 포함 합니다. windows 디자인에 맞게 편집 하는 **솔루션 패드**, 두 번 클릭 하 고 **MainWindow.xib** 파일:
 
 ![MainWindow.xib 파일을 선택 하면](xib-images/edit01.png "MainWindow.xib 파일 선택")
 
 Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
-[![MainWindow.xib 편집](xib-images/edit02.png "는 MainWindow.xib 편집")](xib-images/edit02-large.png)
+[![MainWindow.xib 편집](xib-images/edit02.png "는 MainWindow.xib 편집")](xib-images/edit02-large.png#lightbox)
 
 
 ### <a name="standard-window-workflow"></a>표준 창 워크플로
@@ -205,22 +205,22 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 1. Xcode의 **라이브러리 섹션**에서 **누름 단추**를 끕니다.
 
-    [![단추를 선택 하 고 라이브러리에서](xib-images/xcode07.png "단추를 선택 하 고 라이브러리에서")](xib-images/xcode07-large.png)
+    [![단추를 선택 하 고 라이브러리에서](xib-images/xcode07.png "단추를 선택 하 고 라이브러리에서")](xib-images/xcode07-large.png#lightbox)
 2. 드롭 단추에는 **창** 에 **인터페이스 편집기**:
 
-    [![창에 단추 추가](xib-images/xcode08.png "창에 단추 추가")](xib-images/xcode08-large.png)
+    [![창에 단추 추가](xib-images/xcode08.png "창에 단추 추가")](xib-images/xcode08-large.png#lightbox)
 3. **특성 검사기**에서 **제목** 속성을 클릭하고 단추 제목을 `Click Me`로 변경합니다.
 
     ![단추 특성 설정](xib-images/xcode09.png "단추 특성 설정")
 4. **라이브러리 섹션**에서 **레이블**을 끕니다.
 
-    [![라이브러리의 레이블을 선택](xib-images/xcode10.png "라이브러리의 레이블을 선택")](xib-images/xcode10-large.png)
+    [![라이브러리의 레이블을 선택](xib-images/xcode10.png "라이브러리의 레이블을 선택")](xib-images/xcode10-large.png#lightbox)
 5. **인터페이스 편집기**에서 단추 옆에 있는 **창**에 레이블을 놓습니다.
 
-    [![창에 레이블을 추가](xib-images/xcode11.png "창에 레이블 추가")](xib-images/xcode11-large.png)
+    [![창에 레이블을 추가](xib-images/xcode11.png "창에 레이블 추가")](xib-images/xcode11-large.png#lightbox)
 6. 레이블의 오른쪽 핸들을 잡고 창의 가장자리 근처까지 끕니다.
 
-    [![레이블 크기 조정](xib-images/xcode12.png "레이블 크기 조정")](xib-images/xcode12-large.png)
+    [![레이블 크기 조정](xib-images/xcode12.png "레이블 크기 조정")](xib-images/xcode12-large.png#lightbox)
 7. 선택한 상태에서 레이블로 **인터페이스 편집기**, 전환할는 **크기 검사기**:
 
     ![크기 관리자를 선택 하면](xib-images/xcode13.png "크기 관리자를 선택 합니다.")
@@ -256,7 +256,7 @@ UI 요소를 C# 코드 노출 하기 위해 콘센트 및 동작을 만들 수 �
 2. 선택 된 `NSWindowController` 디자인 화면에서 합니다.
 3. 전환 하는 **Identity 관리자** 보기 및 입력 `WindowController` 로 **클래스 이름**:
 
-    [![클래스 이름을 편집](xib-images/windowcontroller01.png "클래스 이름 편집")](xib-images/windowcontroller01-large.png)
+    [![클래스 이름을 편집](xib-images/windowcontroller01.png "클래스 이름 편집")](xib-images/windowcontroller01-large.png#lightbox)
 4. 변경 내용을 저장 하 고 동기화 하는 Mac에 대 한 Visual Studio로 돌아갑니다.
 5. A **WindowController.cs** 파일을 프로젝트에 추가 됩니다는 **솔루션 패드** Mac 용 Visual Studio에서:
 
@@ -264,7 +264,7 @@ UI 요소를 C# 코드 노출 하기 위해 콘센트 및 동작을 만들 수 �
 6. Xcode의 인터페이스 작성기에서 스토리 보드를 다시 엽니다.
 7. **WindowController.h** 파일은 사용 하기 위해 사용할 수 있습니다.
 
-    [![Xcode에서 일치 하는.h 파일](xib-images/windowcontroller03.png "Xcode에서 일치 하는.h 파일")](xib-images/windowcontroller03-large.png)
+    [![Xcode에서 일치 하는.h 파일](xib-images/windowcontroller03.png "Xcode에서 일치 하는.h 파일")](xib-images/windowcontroller03-large.png#lightbox)
 
 
 ### <a name="outlets-and-actions"></a>콘센트 및 동작
@@ -278,7 +278,7 @@ UI 요소를 C# 코드 노출 하기 위해 콘센트 및 동작을 만들 수 �
 
 Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하는 C# 파일에 해당 하는 Objective-C 스텁 파일에 끌어을 의미 합니다. Mac 용 visual Studio 라는 파일을 만든 **MainWindow.h** shim Xcode 프로젝트의 일부로 인터페이스 작성기 사용 하 여 생성:
 
-[![Xcode에서.h 파일의 예](xib-images/xcode16.png "Xcode에서.h 파일의 예")](xib-images/xcode16-large.png)
+[![Xcode에서.h 파일의 예](xib-images/xcode16.png "Xcode에서.h 파일의 예")](xib-images/xcode16-large.png#lightbox)
 
 이 스텁.h 파일을 미러링합니다.는 **MainWindow.designer.cs** 새 Xamarin.Mac 프로젝트에 자동으로 추가 된 `NSWindow` 만들어집니다. 이 파일이 인터페이스 작성기 수행한 변경 내용을 동기화 하는 데 사용할 하며 여기서 만듭니다 콘센트 및 동작 UI 요소는 C# 코드에 노출 되도록 합니다.
 
@@ -291,22 +291,22 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
 
 1. 화면의 오른쪽 맨 위 모서리에 있는 Xcode에서 **이중 원** 단추를 클릭하여 **도우미 편집기**를 엽니다.
 
-    [![도우미 편집기를 선택 하면](xib-images/outlet01.png "길잡이 편집기를 선택 합니다.")](xib-images/outlet01-large.png)
+    [![도우미 편집기를 선택 하면](xib-images/outlet01.png "길잡이 편집기를 선택 합니다.")](xib-images/outlet01-large.png#lightbox)
 2. Xcode가 분할 보기 모드로 전환되어 한 쪽에는 **인터페이스 편집기**가, 다른 쪽에는 **코드 편집기** 표시됩니다.
 3. Xcode가 자동으로 선택 하는 **MainWindowController.m** 파일에 **코드 편집기**는 올바르지 않습니다. 콘센트 및 동작 이란 위에 한 토론에서 기억 있어야 해야는 **MainWindow.h** 선택 합니다.
 4. 맨 위에 있는 **코드 편집기** 클릭는 **자동 링크** 선택 하 고는 **MainWindow.h** 파일:
 
-    [![올바른.h 파일을 선택 하면](xib-images/outlet02.png "올바른.h 파일 선택")](xib-images/outlet02-large.png)
+    [![올바른.h 파일을 선택 하면](xib-images/outlet02.png "올바른.h 파일 선택")](xib-images/outlet02-large.png#lightbox)
 5. Xcode가 이제 올바른 파일을 선택했습니다.
 
-    [![올바른 파일 선택](xib-images/outlet03.png "올바른 파일 선택")](xib-images/outlet03-large.png)
+    [![올바른 파일 선택](xib-images/outlet03.png "올바른 파일 선택")](xib-images/outlet03-large.png#lightbox)
 6. **마지막 단계는 매우 중요합니다!** 올바른 파일 선택를 설정 하지 않은 콘센트 만들 수 없습니다 및 동작 또는 C#에서 잘못 된 클래스에 노출 됩니다!
 7. 에 **인터페이스 편집기**, 키를 누른 채는 **제어** 키보드의 키를 클릭 한 후 코드 편집기에 위에서 만든 레이블 드래그 바로 아래에서 `@interface MainWindow : NSWindow { }` 코드:
 
-    [![새 콘센트 만들려는 끌기](xib-images/outlet04.png "새 콘센트 만들려는 끌기")](xib-images/outlet04-large.png)
+    [![새 콘센트 만들려는 끌기](xib-images/outlet04.png "새 콘센트 만들려는 끌기")](xib-images/outlet04-large.png#lightbox)
 8. 대화 상자가 표시됩니다. 유지 된 **연결** 콘센트로 설정 하 고 입력 `ClickedLabel` 에 대 한는 **이름**:
 
-    [![콘센트 속성을 설정](xib-images/outlet05.png "콘센트 속성 설정")](xib-images/outlet05-large.png)
+    [![콘센트 속성을 설정](xib-images/outlet05.png "콘센트 속성 설정")](xib-images/outlet05-large.png#lightbox)
 9. 클릭는 **연결** 콘센트 만들기 단추:
 
     ![완료 된 콘센트](xib-images/outlet06.png "완료 콘센트")
@@ -322,13 +322,13 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
 1. 우리는 여전히 있는지 확인은 **도우미 편집기** 및 **MainWindow.h** 파일을 볼 수는 **코드 편집기**합니다.
 2. 에 **인터페이스 편집기**, 키를 누른 채는 **제어** 키보드의 키 및 코드 편집기에 위에서 만든 단추를 클릭 한 후 드래그 바로 아래에서 `@property (assign) IBOutlet NSTextField *ClickedLabel;` 코드:
 
-    [![동작을 만들려면 끌기](xib-images/action01.png "끌기 동작을 만들려면")](xib-images/action01-large.png)
+    [![동작을 만들려면 끌기](xib-images/action01.png "끌기 동작을 만들려면")](xib-images/action01-large.png#lightbox)
 3. 변경 된 **연결** 액션에는 형식:
 
-    [![작업 유형 선택](xib-images/action02.png "동작 종류를 선택 합니다.")](xib-images/action02-large.png)
+    [![작업 유형 선택](xib-images/action02.png "동작 종류를 선택 합니다.")](xib-images/action02-large.png#lightbox)
 4. **이름**으로 `ClickedButton`을 입력합니다.
 
-    [![액션 구성](xib-images/action03.png "액션 구성")](xib-images/action03-large.png)
+    [![액션 구성](xib-images/action03.png "액션 구성")](xib-images/action03-large.png#lightbox)
 5. 클릭는 **연결** 단추 동작을 만들려면:
 
     ![완료 된 동작](xib-images/action04.png "완료 된 동작")
@@ -341,7 +341,7 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
 
 만든 사용자 인터페이스와 콘센트 및 동작을 통해 코드에 노출 하는 UI 요소를 준비가 프로그램 수명을 도입 하는 코드를 작성 합니다. 예를 들어 열은 **MainWindow.cs** 에 두 번 클릭 하 여 편집을 위해 파일의 **솔루션 패드**:
 
-[![MainWindow.cs 파일](xib-images/code01.png "The MainWindow.cs 파일")](xib-images/code01-large.png)
+[![MainWindow.cs 파일](xib-images/code01.png "The MainWindow.cs 파일")](xib-images/code01-large.png#lightbox)
 
 다음 코드를 추가 하 고는 `MainWindow` 위에서 만든 샘플 콘센트 작업할 클래스:
 
@@ -407,7 +407,7 @@ void OpenDialog (NSObject sender)
 
 선택 하는 경우는 **MainWindow.designer.cs** 에 **솔루션 패드** 어떻게 우리의 콘센트 및 작업 되었습니다 유선를 C# 코드에서 볼 수 있습니다.
 
-[![Xcode 변경 내용을 동기화 할](xib-images/sync01.png "변경 Xcode와 동기화")](xib-images/sync01-large.png)
+[![Xcode 변경 내용을 동기화 할](xib-images/sync01.png "변경 Xcode와 동기화")](xib-images/sync01-large.png#lightbox)
 
 알림 방법에서 두 개의 정의 **MainWindow.designer.cs** 파일:
 
@@ -447,10 +447,10 @@ Mac 용 Visual Studio.h 파일에 변경 내용을 수신 대기 하 고 다음�
 3. **이름**에 대해 `PreferencesWindow`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. 두 번 클릭 하 여 **PreferencesWindow.xib** 인터페이스 작성기에서 편집을 위해 열 파일입니다.
 
-    [![편집 Xcode에서 창](xib-images/new02.png "편집 Xcode에서 창")](xib-images/new02-large.png)
+    [![편집 Xcode에서 창](xib-images/new02.png "편집 Xcode에서 창")](xib-images/new02-large.png#lightbox)
 5. 사용자 인터페이스를 디자인 합니다.
 
-    [![창 레이아웃을 디자인](xib-images/new03.png "windows 레이아웃 디자인")](xib-images/new03-large.png)
+    [![창 레이아웃을 디자인](xib-images/new03.png "windows 레이아웃 디자인")](xib-images/new03-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
 다음 코드를 추가 **AppDelegate.cs** 프로그램 새 창을 표시 하려면:
@@ -488,7 +488,7 @@ Xamarin.Mac 응용 프로그램에서 Windows 사용한 작업에 대 한 자세
 3. **이름**에 대해 `SubviewTable`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. 두 번 클릭 하 여 **SubviewTable.xib** 인터페이스 작성기에서 편집을 위해 열고 사용자 인터페이스를 디자인 하는 파일:
 
-    [![Xcode에서 새 뷰 디자인](xib-images/view02.png "Xcode에서 새 뷰 디자인")](xib-images/view02-large.png)
+    [![Xcode에서 새 뷰 디자인](xib-images/view02.png "Xcode에서 새 뷰 디자인")](xib-images/view02-large.png#lightbox)
 5. 모든 필요한 작업 및 콘센트를 연결 합니다.
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -529,7 +529,7 @@ public enum SubviewType
 
 보기에 사용 되 고 표시 되는 창의.xib 파일을 편집 합니다. 추가 **사용자 지정 보기** 역할을 할 컨테이너 보기에 대 한 C# 코드와 이라는 콘센트도 노출 하 여 메모리에 로드 되 면 `ViewContainer`:
 
-[![필요한 콘센트 만들기](xib-images/view03.png "필요한 콘센트 만들기")](xib-images/view03-large.png)
+[![필요한 콘센트 만들기](xib-images/view03.png "필요한 콘센트 만들기")](xib-images/view03-large.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -577,7 +577,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 표시할 새 보기에 대 한 보기 컨트롤러의 새 인스턴스를 만들고, (지정 된 대로 프로젝트에 추가 하는 열거형에서) 해당 유형을 설정 및 사용 하 여이 고 `DisplaySubview` 메서드가 실제로 보기를 표시 하려면 창 클래스에 추가 합니다. 예:
 
-[![샘플 응용 프로그램을 실행](xib-images/view04.png "샘플 응용 프로그램 실행")](xib-images/view04-large.png)
+[![샘플 응용 프로그램을 실행](xib-images/view04.png "샘플 응용 프로그램 실행")](xib-images/view04-large.png#lightbox)
 
 Xamarin.Mac 응용 프로그램에서 Windows 사용한 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [Windows](~/mac/user-interface/window.md) 및 [대화 상자의](~/mac/user-interface/dialog.md) 설명서입니다.
 
@@ -589,7 +589,7 @@ Xamarin.Mac 응용 프로그램에서 Windows 사용한 작업에 대 한 자세
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacImages (샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages(샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [메뉴](~/mac/user-interface/menu.md)

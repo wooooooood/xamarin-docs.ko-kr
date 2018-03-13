@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 0c2765551c16be605bc78d9ef32a91fd2c4ead8c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -83,10 +83,10 @@ XAML, 리소스에 정의 되어 한 [ `ResourceDictionary` ](https://developer.
 
 첫 번째 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스를 검색 하 고 사용 된 `LabelPageHeadingStyle` 응용 프로그램 수준에서 정의 된 리소스 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 두 번째 `Label` 인스턴스 검색 하 고 사용 된 `LabelNormalStyle` 제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 마찬가지로,는 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 인스턴스를 검색 하 고 사용 된 `NormalTextColor` 응용 프로그램 수준에서 정의 된 리소스 `ResourceDictionary`, 및 `MediumBoldText` 제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](resource-dictionaries-images/screenshots-sml.png "ResourceDictionary 리소스를 소비")](resource-dictionaries-images/screenshots.png "ResourceDictionary 리소스 사용")
+[![](resource-dictionaries-images/screenshots-sml.png "ResourceDictionary 리소스를 소비")](resource-dictionaries-images/screenshots.png#lightbox "ResourceDictionary 리소스 사용")
 
 > [!NOTE]
-> **참고**: 따라서 리소스 다음 구문 분석 대신 응용 프로그램 시작 시 페이지에서 필요한 경우, 한 페이지에 관련 리소스를 응용 프로그램 수준 리소스 사전에 포함 해서는 안 됩니다. 자세한 내용은 참조 [응용 프로그램 리소스 사전의 크기를 줄이거나](~/xamarin-forms/deploy-test/performance.md)합니다.
+> 응용 프로그램 수준 리소스 사전을, 따라서 리소스 다음 구문 분석 아닌 응용 프로그램 시작 시 페이지에서 필요한 경우에 한 페이지에 관련 된 리소스를 포함 해서는 안. 자세한 내용은 참조 [응용 프로그램 리소스 사전의 크기를 줄이거나](~/xamarin-forms/deploy-test/performance.md)합니다.
 
 ## <a name="overriding-resources"></a>리소스를 재정의합니다.
 
@@ -118,7 +118,7 @@ XAML, 리소스에 정의 되어 한 [ `ResourceDictionary` ](https://developer.
 
 원래 `PageBackgroundColor` 및 `NormalTextColor` 에 의해 재정의 되며 응용 프로그램 수준에서 정의 된 인스턴스는 `PageBackgroundColor` 및 `NormalTextColor` 페이지 수준에서 정의 된 인스턴스. 따라서 페이지 배경색 파란색 되며 다음 스크린샷에서 같이 페이지에서 텍스트, 노란색 됩니다.
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "ResourceDictionary 리소스 재정의")](resource-dictionaries-images/overridding-screenshots.png "ResourceDictionary 리소스를 재정의 합니다.")
+[![](resource-dictionaries-images/overridding-screenshots-sml.png "ResourceDictionary 리소스 재정의")](resource-dictionaries-images/overridding-screenshots.png#lightbox "ResourceDictionary 리소스를 재정의 합니다.")
 
 하지만의 막대는 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 은 여전히 노란색 때문에 [ `BarBackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)합니다.
 
@@ -175,7 +175,7 @@ XAML, 리소스에 정의 되어 한 [ `ResourceDictionary` ](https://developer.
 1. 통해 병합 된 리소스 사전에 포함 된 리소스는 `MergedDictionaries` 컬렉션에 나열 된 순서로 `MergedDictionaries` 속성입니다.
 
 > [!NOTE]
-> **참고**: 리소스 사전 검색 될 수 있습니다는 계산이 많은 작업 응용 프로그램에 여러 포함 된 경우 큰 리소스 사전입니다. 따라서, 응용 프로그램에서 각 페이지에만 불필요 한 검색을 방지 하기 위해 페이지에 적절 한 리소스 사전을 사용 확인 해야 합니다.
+> 리소스 사전 검색 될 수 있습니다는 계산이 많은 작업 응용 프로그램에 여러 포함 된 경우 큰 리소스 사전입니다. 따라서, 응용 프로그램에서 각 페이지에만 불필요 한 검색을 방지 하기 위해 페이지에 적절 한 리소스 사전을 사용 확인 해야 합니다.
 
 ## <a name="summary"></a>요약
 

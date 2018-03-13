@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: cbabaf36ba8bfaa74ec17b0af0cd97e29f72d270
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="contacts-and-contactsui"></a>연락처와 ContactsUI
 
@@ -27,7 +27,7 @@ Apple iOS 9의 도입으로 두 개의 새로운 프레임 워크를 출시 했�
 
 - [**ContactsUI** ](#contactsui) -제공 Xamarin.iOS UI 요소를 표시 하려면 편집을 선택 하 고 iOS 장치에서 연락처를 만들 합니다.
 
-[ ![](contacts-images/add01.png "IOS 장치에서 연락처 시트 예")](contacts-images/add01.png)
+[![](contacts-images/add01.png "IOS 장치에서 연락처 시트 예")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > **참고:** 기존 `AddressBook` 및 `AddressBookUI` 프레임 워크 iOS 8에서 사용할 사전 iOS 9에서에서 사용 되지 않는 및 새로 대체 해야 `Contacts` 및 `ContactsUI` 모든 기존 Xamarin.iOS에 대 한 가능한 한 빨리 프레임 워크 응용 프로그램입니다. 새 프레임 워크에 대해 새 응용 프로그램을 작성 되어야 합니다.
@@ -43,11 +43,13 @@ Apple iOS 9의 도입으로 두 개의 새로운 프레임 워크를 출시 했�
 
 연락처 프레임 워크 Xamarin.iOS 사용자의 연락처 정보에 대 한 액세스를 제공합니다. 대부분의 응용 프로그램에는 읽기 전용 액세스 해야 하기 때문에이 프레임 워크는 스레드로부터 안전 하 고 읽기 전용 액세스를 위해 최적화 되었습니다.
 
+<a name="Contact_Objects" />
+
 ### <a name="contact-objects"></a>연락처 개체
 
 `CNContact` 클래스 이름, 주소 또는 전화 번호와 같은 연락처의 속성에 스레드 안전 하 고 읽기 전용 액세스를 제공 합니다. `CNContact` 와 같은 함수는 `NSDictionary` 포함 속성 (주소 또는 전화 번호) 등의 여러, 읽기 전용 컬렉션:
 
-[ ![](contacts-images/contactobjects.png "연락처 개체 개요")](contacts-images/contactobjects.png)
+[![](contacts-images/contactobjects.png "연락처 개체 개요")](contacts-images/contactobjects.png#lightbox)
 
 배열으로 표현 되 있습니다 (예: 전자 메일 주소 또는 전화 번호) 여러 값을 가질 수 있는 모든 속성에 대 한 `NSLabeledValue` 개체입니다. `NSLabeledValue` 레이블 읽기 전용 집합으로 구성 된 스레드 안전 튜플입니다 및 레이블을 사용자 (예를 들어 홈 또는 회사 전자 메일)에 값을 정의 하는 위치 값입니다. 연락처 프레임 워크는 미리 정의 된 레이블의 선택 영역을 제공 (통해는 `CNLabelKey` 및 `CNLabelPhoneNumberKey` 정적 클래스)는 응용 프로그램에서 사용할 수 있거나 요구 사항에 대 한 사용자 지정 레이블이 정의 옵션이 있습니다.
 
@@ -111,7 +113,7 @@ else
 
 IOS 9 장치에서이 코드를 실행 하면 새 연락처를 사용자의 컬렉션에 추가 됩니다. 예:
 
-[ ![](contacts-images/add01.png "사용자의 컬렉션에 추가 된 새 연락처")](contacts-images/add01.png)
+[![](contacts-images/add01.png "사용자의 컬렉션에 추가 된 새 연락처")](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>연락처 서식 지정 및 지역화
 
@@ -194,7 +196,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 사용자는 다양 한 소스 (예: Facebook 또는 Google 메일 iCloud) 연락처 데이터베이스에서 한 사람에 대 한 연락처 정보에 있을 수 있습니다. IOS 및 OS X 앱에서이 연락처 정보를 자동으로 함께 연결 되며는 단일 사용자에 게 표시 _문의 통합_:
 
-[ ![](contacts-images/unified01.png "통합 된 연락처 개요")](contacts-images/unified01.png)
+[![](contacts-images/unified01.png "통합 된 연락처 개요")](contacts-images/unified01.png#lightbox)
 
 이 통합 문의 (해야 하는 데 사용할 필요한 경우 연락처를 반드시 다시 반입) 자체 고유 식별자를 지정 하는 링크 연락처 정보의 임시 메모리 보기입니다. 기본적으로 연락처 프레임 워크는 가능한 경우 항상 통합 연락처를 반환 합니다.
 
@@ -259,11 +261,11 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 사용자의 연락처 또는 로컬 사용자의 장치에서 하나 이상의 서버 계정 (예: Facebook 또는 Google)에서 장치에 동기화 된 연락처 존재할 수 있습니다. 연락처의 각 풀에는 자체 _컨테이너_ 및 지정 된 연락처 하나의 컨테이너에만 존재할 수 있습니다.
 
-[ ![](contacts-images/containers01.png "컨테이너 및 그룹 개요")](contacts-images/containers01.png)
+[![](contacts-images/containers01.png "컨테이너 및 그룹 개요")](contacts-images/containers01.png#lightbox)
 
 일부 컨테이너를 하나 이상에 정렬 연락처에 대 한 허용 _그룹_ 또는 _하위 그룹_합니다. 이 동작은 특정된 컨테이너에 대 한 백업 저장소에 따라 달라 집니다. 예를 들어 iCloud 하나의 컨테이너 갖지만 많은 그룹 (하지만 하위 그룹이 없는) 있을 수 있습니다. Microsoft Exchange는 반면에 그룹 지원 하지 않지만 (각 Exchange 폴더에 대해 하나씩)는 여러 컨테이너가 있을 수 있습니다.
 
-[ ![](contacts-images/containers02.png "컨테이너와 그룹 내에서 겹쳐질 수")](contacts-images/containers02.png)
+[![](contacts-images/containers02.png "컨테이너와 그룹 내에서 겹쳐질 수")](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui" />
 

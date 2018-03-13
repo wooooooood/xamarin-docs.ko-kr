@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e85bc98b5da4c6e529f150c6e7945a8556e2c60f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 887dc3cf710fb75d05d02af179bc218c15d31f97
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-mode"></a>바인딩 모드
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/27/2018
 
 예상 대로 `Slider` 에서 초기 값을 1로 초기화 `Opacity` 값 `Label`합니다. 이 iOS 스크린샷에서 왼쪽에 표시 됩니다.
 
-[![바인딩 역방향](binding-mode-images/reversebinding-small.png "바인딩 역방향")](binding-mode-images/reversebinding-large.png "역방향 바인딩")
+[![바인딩 역방향](binding-mode-images/reversebinding-small.png "바인딩 역방향")](binding-mode-images/reversebinding-large.png#lightbox "역방향 바인딩")
 
 하지만 수 있습니다는 달라진는 `Slider` Android 및 UWP 스크린 샷을 설명한 것 처럼 작동 하도록 하는 계속 됩니다. 이 방법은 데이터 바인딩은 더 나은 경우에 작동 하는지 제안 하는 `Slider` 은 바인딩 대상 보다는 `Label` 기대할 수와 같은 초기화는 작동 하기 때문에 있습니다.
 
@@ -250,7 +250,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 프로그램을 처음 실행할 때의 `BoxView`, `Label`, 3 및 `Slider` 요소는 초기에 따라 ViewModel에서 모두 설정 `Color` 속성이 ViewModel를 인스턴스화할 때 설정 합니다. 이 iOS 스크린샷에서 왼쪽에 표시 됩니다.
 
-[![간단한 색 선택기](binding-mode-images/simplecolorselector-small.png "간단한 색 선택기")](binding-mode-images/simplecolorselector-large.png "간단한 색 선택기")
+[![간단한 색 선택기](binding-mode-images/simplecolorselector-small.png "간단한 색 선택기")](binding-mode-images/simplecolorselector-large.png#lightbox "간단한 색 선택기")
 
 슬라이더를 조작할 때는 `BoxView` 및 `Label` Android 및 UWP 스크린샷을 보려면 표시 된 것 처럼 따라서 업데이트 됩니다.
 
@@ -661,7 +661,7 @@ public partial class SampleSettingsPage : ContentPage
 
 왼쪽에 iOS 스크린 샷을 처음 실행할 때 프로그램을 보여 줍니다. 생성자 `SampleSettingsViewModel` 초기화 배경색을 흰색으로 되며, 그에서 선택 된 항목의 `ListView`:
 
-[![예제 설정](binding-mode-images/samplesettings-small.png "설정 샘플")](binding-mode-images/samplesettings-large.png "예제 설정")
+[![예제 설정](binding-mode-images/samplesettings-small.png "설정 샘플")](binding-mode-images/samplesettings-large.png#lightbox "예제 설정")
 
 변경 된 설정 표시 하는 다른 두 가지 스크린샷입니다. 이 페이지를 시험해 프로그램 절전 모드로 전환 하거나 장치 또는 실행 중인 에뮬레이터에서 종료를 전환 해야 합니다. Visual Studio 디버거에서 프로그램 종료를 발생 하지 것입니다는 `OnSleep` 의 재정의 `App` 클래스를 호출할 수 있습니다.
 

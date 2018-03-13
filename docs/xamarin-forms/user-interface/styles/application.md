@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: d258d993d8452c0c93c53d875d81683a294f80d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc728e5817a7d1d61d7745120bca7f05641ce76f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="global-styles"></a>전역 스타일
 
@@ -60,7 +60,7 @@ _스타일 있습니다 사용할 수 전체적으로 응용 프로그램의 리
 
 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](application-images/application-styles-1.png "전역 스타일 예제")](application-images/application-styles-1-large.png "글로벌 스타일 예제")
+[![](application-images/application-styles-1.png "전역 스타일 예제")](application-images/application-styles-1-large.png#lightbox "글로벌 스타일 예제")
 
 페이지의 스타일을 만드는 방법은 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 참조 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md) 및 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)합니다.
 
@@ -98,9 +98,9 @@ _스타일 있습니다 사용할 수 전체적으로 응용 프로그램의 리
 
 원래 `buttonStyle`응용 프로그램 수준에서 정의 된,을 재정의 하 여는 `buttonStyle` 페이지 수준에서 정의 된 인스턴스. 페이지 수준 스타일을 재정의 하 여 제어 수준 또한 `buttonStyle`합니다. 따라서는 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 다음 스크린샷에서 같이 인스턴스가 파란색 텍스트로 표시 됩니다.
 
-[![](application-images/application-styles-2.png "스타일 예제 재정의")](application-images/application-styles-2-large.png "스타일 예제를 재정의 합니다.")
+[![](application-images/application-styles-2.png "스타일 예제 재정의")](application-images/application-styles-2-large.png#lightbox "스타일 예제를 재정의 합니다.")
 
-## <a name="creating-a-global-style-in-c35"></a>&#35;에서 전역 스타일 만들기
+## <a name="creating-a-global-style-in-c35"></a>C에서 전역 스타일 만들기&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스는 응용 프로그램에 추가할 수 있습니다 [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 새 C#에서 컬렉션 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 고 추가 하 여 다음의 `Style` 인스턴스는 `ResourceDictionary`,으로 다음 코드 예제에 나와 있습니다.
 

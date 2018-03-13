@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: e599c56f732f918d2a9c82255bc01182651d506c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 74b22f31fabf70885eca732ef021232124df71bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 소개
 
@@ -129,10 +129,10 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 [샘플 UsingDependencyService 솔루션](https://developer.xamarin.com/samples/UsingDependencyService/) iOS 및 Android에 대 한 아래 표시 된, 위에 나와 있는 코드 변경 내용으로 강조 표시 됩니다.
 
- [ ![iOS 및 Android 솔루션](introduction-images/solution-sml.png "DependencyService 샘플 솔루션 구조")](introduction-images/solution.png "DependencyService 샘플 솔루션 구조")
+ [![iOS 및 Android 솔루션](introduction-images/solution-sml.png "DependencyService 샘플 솔루션 구조")](introduction-images/solution.png#lightbox "DependencyService 샘플 솔루션 구조")
 
 > [!NOTE]
-> **참고:** 있습니다 **해야** 모든 플랫폼 프로젝트에 대 한 구현을 제공 합니다. 인터페이스 구현이 등록 되어 있으면 하면 `DependencyService` 확인할 수 없습니다는 `Get<T>()` 런타임에 메서드.
+> 하면 **해야** 모든 플랫폼 프로젝트에 대 한 구현을 제공 합니다. 인터페이스 구현이 등록 되어 있으면 하면 `DependencyService` 확인할 수 없습니다는 `Get<T>()` 런타임에 메서드.
 
 
 ## <a name="related-links"></a>관련 링크

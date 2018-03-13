@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: e26fcb81bb99e5a49d16731777171b4efa4163c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼-세부 사항
 
@@ -54,7 +54,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 결과 소프트 키보드 입력 입력된 컨트롤에 포커스가 있을 때 운영 모드를 설정할 수 있습니다는 영역을 사용 하는.
 
-[![](android-images/pan-resize.png "운영 모드 플랫폼별 소프트 키보드")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "운영 모드 플랫폼별 소프트 키보드")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -98,7 +98,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 결과 데이터를 통해 빠른 스크롤 하는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 스크롤 위치 조정 컨트롤의 크기 변경 내용을 사용할 수 있습니다.
 
-[![](android-images/fastscroll.png "ListView FastScroll 플랫폼별")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll 플랫폼별")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -244,7 +244,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 결과 [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 및 [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 페이지 이벤트는 응용 프로그램 일시 중지에 발생 하지 않습니다 하 고 각각 다시 시작 되었으며 되는 경우 소프트 키보드 선택할 때 표시 된 응용 프로그램 가 일시 중지 된 것도 표시 됩니다는 응용 프로그램 다시 시작 될 때:
 
-[![](android-images/keyboard-on-resume.png "수명 주기 이벤트 플랫폼별")](android-images/keyboard-on-resume-large.png "수명 주기 이벤트 플랫폼별")
+[![](android-images/keyboard-on-resume.png "수명 주기 이벤트 플랫폼별")](android-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 플랫폼별")
 
 ## <a name="summary"></a>요약
 
@@ -253,7 +253,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 특성 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [AndroidSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/)
 - [AndroidSpecific.AppCompat](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat/)

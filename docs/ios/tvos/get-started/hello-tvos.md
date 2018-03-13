@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: fe58aa8ffb74a9b6e937be5a7f1dde0432794405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
 
@@ -34,7 +34,7 @@ Xamarin.tvOS C# 및.NET에서 개발할 때 사용 되는 인터페이스 컨트
 
 이 문서 Xamarin.tvOS 및 Visual Studio를 사용 하 여 기본 구축 프로세스를 통해 Apple TV 응용 프로그램을 만드는 데 필요한 핵심 개념을 소개 합니다 **Hello, tvOS** 횟수를 계산 하는 응용 프로그램 단추에 클릭 합니다.
 
-[ ![](hello-tvos-images/run05.png "예제 앱 실행")](hello-tvos-images/run05.png)
+[![](hello-tvos-images/run05.png "예제 앱 실행")](hello-tvos-images/run05.png#lightbox)
 
 다음과 같은 개념을 설명 합니다.
 
@@ -51,21 +51,21 @@ Apple TV 응용 프로그램이 호출한 만들겠습니다 위에서 설명한
 
 1. Mac용 Visual Studio 시작:
 
-    [ ![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png)
+    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
 2. 클릭는 **새 솔루션 중...**  링크를 열려면 화면의 왼쪽 위 모서리에는 **새 프로젝트** 대화 상자.
 3. 선택 **tvOS** > **앱** > **단일 앱 보기** 클릭는 **다음** 단추:
 
-    [ ![](hello-tvos-images/setup02.png "단일 보기는 앱 선택")](hello-tvos-images/setup02.png)
+    [![](hello-tvos-images/setup02.png "단일 보기는 앱 선택")](hello-tvos-images/setup02.png#lightbox)
 4. 입력 `Hello, tvOS` 에 대 한는 **응용 프로그램 이름**를 입력 하면 **조직 식별자** 클릭는 **다음** 단추:
 
-    [ ![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png)
+    [![](hello-tvos-images/setup04.png "Hello, tvOS 입력")](hello-tvos-images/setup04.png#lightbox)
 5. 입력 `Hello_tvOS` 에 대 한는 **프로젝트 이름** 클릭는 **만들기** 단추:
 
-    [ ![](hello-tvos-images/setup03.png "HellotvOS 입력")](hello-tvos-images/setup03.png)
+    [![](hello-tvos-images/setup03.png "HellotvOS 입력")](hello-tvos-images/setup03.png#lightbox)
 
 Mac 용 visual Studio 새 Xamarin.tvOS 앱 만들고 응용 프로그램의 솔루션에 추가 되는 기본 파일 표시 됩니다.
 
- [ ![](hello-tvos-images/project01.png "기본 파일 보기")](hello-tvos-images/project01.png)
+ [![](hello-tvos-images/project01.png "기본 파일 보기")](hello-tvos-images/project01.png#lightbox)
 
 사용 하 여 Mac에 대 한 visual Studio **솔루션** 및 **프로젝트**와 정확히 같은 방식으로 Visual Studio에서 합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등을 포함할 수 있습니다. 이 경우 Mac 용 Visual Studio가 생성 한 솔루션 및 응용 프로그램 프로젝트 모두.
 
@@ -253,11 +253,11 @@ IOS 용 Xamarin 디자이너를 사용 하 여 Xamarin.tvOS 앱에 대 한 사�
 
 UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storyboard` 파일에 **솔루션 탐색기** iOS 디자이너에서에서 편집 하기 위해 열려는:
 
-[ ![](hello-tvos-images/designer01.png "솔루션 탐색기의 Main.storyboard 파일")](hello-tvos-images/designer01.png)
+[![](hello-tvos-images/designer01.png "솔루션 탐색기에서 Main.storyboard 파일")](hello-tvos-images/designer01.png#lightbox)
 
 이 디자이너를 시작 하 고 다음과 같은 해야 합니다.
 
-[ ![](hello-tvos-images/designer02.png "디자이너")](hello-tvos-images/designer02.png)
+[![](hello-tvos-images/designer02.png "디자이너")](hello-tvos-images/designer02.png#lightbox)
 
 자세한 내용은 iOS 디자이너에서 및 작동 방식에 대 한 참조는 [iOS 용 Xamarin 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드입니다.
 
@@ -267,57 +267,57 @@ UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storybo
 
 1. 찾습니다는 **도구 상자**, 디자인 화면 오른쪽에 여야 합니다.
 
-    [![](hello-tvos-images/designer03.png "도구 상자")](hello-tvos-images/designer03.png)
+    [![](hello-tvos-images/designer03.png "도구 상자")](hello-tvos-images/designer03.png#lightbox)
 
     여기 찾을 수 없으면로 이동 **보기 > 패드 > 도구 상자** 볼 수 있습니다.
 2. 끌어서는 **레이블** 에서 **도구 상자** 디자인 화면에:
 
-    [ ![](hello-tvos-images/designer04.png "도구 상자에서 레이블을 끌어 옵니다.")](hello-tvos-images/designer04.png)
+    [![](hello-tvos-images/designer04.png "도구 상자에서 레이블을 끌어 옵니다.")](hello-tvos-images/designer04.png#lightbox)
 3. 클릭는 **제목** 속성에는 **속성 패드** 단추의 제목을 변경 하 고 `Hello, tvOS` 설정 하 고는 **글꼴 크기** 128로:
 
-    [ ![](hello-tvos-images/designer05.png "Hello, tvOS 제목을 설정합니다 하 고 글꼴 크기를 128로 설정")](hello-tvos-images/designer05.png)
+    [![](hello-tvos-images/designer05.png "Hello, tvOS 제목을 설정합니다 하 고 글꼴 크기를 128로 설정")](hello-tvos-images/designer05.png#lightbox)
 4. 모든 단어 표시 되며 창의 위쪽 가운데에 배치 되도록 레이블의 크기를 조정 합니다.
 
-    [ ![](hello-tvos-images/designer06.png "크기를 조정 하 고 레이블을 가운데로 정렬")](hello-tvos-images/designer06.png)
+    [![](hello-tvos-images/designer06.png "크기를 조정 하 고 레이블을 가운데로 정렬")](hello-tvos-images/designer06.png#lightbox)
 5. 의도 한 대로 표시 되도록의 위치를 제한 되는 레이블 이제 할 수 있습니다. 화면 크기에 관계 없이 이 위해까지 레이블을 클릭는 *T 모양의 핸들* 나타납니다.
 
-    [ ![](hello-tvos-images/designer07.png "T 모양 핸들")](hello-tvos-images/designer07.png)
+    [![](hello-tvos-images/designer07.png "T 모양 핸들")](hello-tvos-images/designer07.png#lightbox)
 6. 레이블을 가로로 제한 하려면 가운데 사각형을 선택 하 고 세로로 파선으로 끕니다.
 
-    [ ![](hello-tvos-images/designer08.png "가운데 사각형을 선택 합니다.")](hello-tvos-images/designer08zoom.png)
+    [![](hello-tvos-images/designer08.png "가운데 사각형을 선택 합니다.")](hello-tvos-images/designer08zoom.png#lightbox)
 
      레이블을 주황색을 설정 해야 합니다.
 7. 레이블의 상단에서 T 핸들을 선택 하 고 창의 위쪽 가장자리를 끌어:
 
-    [ ![](hello-tvos-images/designer09.png "창의 위쪽 가장자리에 핸들을 끌어 옵니다.")](hello-tvos-images/designer09.png)
+    [![](hello-tvos-images/designer09.png "창의 위쪽 가장자리에 핸들을 끌어 옵니다.")](hello-tvos-images/designer09.png#lightbox)
 8. 너비와 높이 다음으로 클릭 *본 핸들* 아래 그림과 같이:
 
-    [ ![](hello-tvos-images/designer10.png "너비 및 높이 본 핸들")](hello-tvos-images/designer10.png)
+    [![](hello-tvos-images/designer10.png "너비 및 높이 본 핸들")](hello-tvos-images/designer10.png#lightbox)
 
      때 각 *본 핸들* 은 너비와 높이가 모두 각각 고정 된 크기를 설정 하려면 선택를 클릭 합니다.
 9. 완료 되 면 제약 조건이 배포 속성 패드의 레이아웃 탭에서와 비슷한 같아야 합니다.
 
-    [ ![](hello-tvos-images/designer11.png "예제에서는 제약 조건")](hello-tvos-images/designer11.png)
+    [![](hello-tvos-images/designer11.png "예제에서는 제약 조건")](hello-tvos-images/designer11.png#lightbox)
 8. 끌어서는 **단추** 에서 **도구 상자** 레이블 아래에 놓습니다.
 9. 클릭는 **제목** 속성에는 **속성 패드** 단추의 제목을 변경 하 고 `Click Me`:
 
-    [ ![](hello-tvos-images/designer12.png "Click Me 단추 제목을 변경합니다")](hello-tvos-images/designer12.png)
+    [![](hello-tvos-images/designer12.png "Click Me 단추 제목을 변경합니다")](hello-tvos-images/designer12.png#lightbox)
 10. TvOS 창에서 단추를 제한 하려면 위의 5 ~ 8 단계를 반복 합니다. 그러나, 끌어오는 방법 대신 T 핸들 (단계 7)에서 같이 창의 맨 위로 이동, 끌어 레이블 맨 아래에:
 
-    [ ![](hello-tvos-images/designer14.png "단추를 제한 합니다.")](hello-tvos-images/designer14.png)
+    [![](hello-tvos-images/designer14.png "단추를 제한 합니다.")](hello-tvos-images/designer14.png#lightbox)
 11. 단추 아래에서 다른 레이블을 끌어 크기를 조정 동일한 너비로 첫 번째 레이블과 집합 수, 해당 **맞춤** 를 **센터**:
 
-    [ ![](hello-tvos-images/designer15.png "단추 아래에서 다른 레이블을 끌어, 센터로 맞춤을 설정 하 고 동일한 너비로 첫 번째 레이블의 됩니다 size")](hello-tvos-images/designer15.png)
+    [![](hello-tvos-images/designer15.png "단추 아래에서 다른 레이블을 끌어, 센터로 맞춤을 설정 하 고 동일한 너비로 첫 번째 레이블의 됩니다 size")](hello-tvos-images/designer15.png#lightbox)
 12. 첫 번째 레이블 및 단추와 같은이 레이블을 가운데 맞춤 및 위치와 크기에 pin을 설정 합니다.
 
-    [ ![](hello-tvos-images/designer16.png "위치와 크기를 레이블이 고정합니다")](hello-tvos-images/designer16.png)
+    [![](hello-tvos-images/designer16.png "위치와 크기를 레이블이 고정합니다")](hello-tvos-images/designer16.png#lightbox)
 13. 사용자 인터페이스에 변경 내용을 저장 합니다.
 
 크기 조정 하 고 이동 하는 컨트롤 주위의 것을 알아야 했습니다 디자이너 기반으로 하는 것이 도움이 스냅인 힌트는 하면 [Apple TV Human Interface Guidelines](https://developer.apple.com/tvos/human-interface-guidelines/)합니다. 이러한 지침을 Apple TV 사용자에 대 한 친숙 한 모양 및 느낌에 있는 고품질 응용 프로그램을 만들 수 있습니다.
 
 보면는 **문서 개요** 섹션에서 방법을 레이아웃과 사용자 인터페이스를 구성 하는 요소 들의 계층이 표시 됩니다.
 
-[ ![](hello-tvos-images/designer17.png "문서 개요 섹션")](hello-tvos-images/designer17.png)
+[![](hello-tvos-images/designer17.png "문서 개요 섹션")](hello-tvos-images/designer17.png#lightbox)
 
 여기에서 편집 하거나 필요한 경우에 UI 요소를 다시 정렬 하려면 끌어 항목을 선택할 수 있습니다. 예를 들어 UI 요소의 다른 요소에 의해 검사 되 고, 경우 끌어 놓을 수 있습니다 맨 아래 목록에서 창에서 최상위 항목을 확인 합니다.
 
@@ -339,16 +339,16 @@ UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storybo
 1. Xamarin iOS 디자이너 뷰 컨트롤러에 있는 단추를 선택 합니다.
 2. 속성 패드에서 선택 된 **이벤트** 탭:
 
-    [![](hello-tvos-images/event1.png "이벤트 탭")](hello-tvos-images/event1.png)
+    [![](hello-tvos-images/event1.png "이벤트 탭")](hello-tvos-images/event1.png#lightbox)
 3. TouchUpInside 이벤트를 찾아 이라는 이벤트 처리기를 지정 `Clicked`:
 
-    [![](hello-tvos-images/event2.png "TouchUpInside 이벤트")](hello-tvos-images/event2.png)
+    [![](hello-tvos-images/event2.png "TouchUpInside 이벤트")](hello-tvos-images/event2.png#lightbox)
 4. 누를 때 **Enter**, **ViewController**.cs 파일은 열립니다 코드에서 이벤트 처리기에 대 한 위치를 제안 하는 것입니다. 키보드의 화살표 키를 사용 하 여 위치를 설정 하려면:
 
-    [![](hello-tvos-images/event3.png "위치 설정")](hello-tvos-images/event3.png)
+    [![](hello-tvos-images/event3.png "위치 설정")](hello-tvos-images/event3.png#lightbox)
 5. 아래와 같이 부분 메서드를 만들어집니다.
 
-    [![](hello-tvos-images/event4.png "부분 메서드")](hello-tvos-images/event4.png)
+    [![](hello-tvos-images/event4.png "부분 메서드")](hello-tvos-images/event4.png#lightbox)
 
 이제 단추 함수를 허용 하는 코드 추가 시작할 준비가 되었습니다.
 
@@ -359,10 +359,10 @@ UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storybo
 1. 스토리 보드를 열고 뷰 컨트롤러의 아래쪽에 레이블을 선택 합니다.
 2. 속성 패드에서 선택 된 **위젯** 탭:
 
-    [![](hello-tvos-images/name1.png "위젯을 탭 선택")](hello-tvos-images/name1.png)
+    [![](hello-tvos-images/name1.png "위젯을 탭 선택")](hello-tvos-images/name1.png#lightbox)
 3. 아래 **Identity > 이름을**, 추가 `ClickedLabel`:
 
-    [![](hello-tvos-images/name2.png "ClickedLabel 설정")](hello-tvos-images/name2.png)
+    [![](hello-tvos-images/name2.png "ClickedLabel 설정")](hello-tvos-images/name2.png#lightbox)
 
 이제는 레이블을 업데이트를 시작할 준비가 되었습니다!
 
@@ -370,7 +370,7 @@ UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storybo
 
 선택 하는 경우는 `ViewController.designer.cs` 에 **솔루션 탐색기** 볼 수는 어떻게는 `ClickedLabel` 레이블 및 `Clicked` 이벤트 처리기에 매핑된는 **콘센트** 및  **동작** C#:
 
-[ ![](hello-tvos-images/accesscontrol.png "콘센트 및 동작")](hello-tvos-images/accesscontrol.png)
+[![](hello-tvos-images/accesscontrol.png "콘센트 및 동작")](hello-tvos-images/accesscontrol.png#lightbox)
 
 알 수 있습니다 `ViewController.designer.cs` Mac 용 Visual Studio를 수정 하지 않아도 되도록 partial 클래스는 `ViewController.cs` 있는 우리는 클래스에 대 한 변경 내용을 덮어씁니다.
 
@@ -386,7 +386,7 @@ UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storybo
 
 응용 프로그램에서는 첫 번째 단추를 클릭할 때마다을 맞추려고는 단추를 클릭 하는 횟수를 표시 하는 레이블을 업데이트 합니다. 열려는 해야이를 위해는 `ViewController.cs` 에 두 번 클릭 하 여 편집을 위해 파일의 **솔루션 패드**:
 
-[ ![](hello-tvos-images/code01.png "솔루션 채움")](hello-tvos-images/code01.png)
+[![](hello-tvos-images/code01.png "솔루션 채움")](hello-tvos-images/code01.png#lightbox)
 
 먼저에서 클래스 수준 변수를 만들려면 우리의 `ViewController` 발생 한 번의 클릭 수를 추적 하는 클래스입니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
 
@@ -440,7 +440,7 @@ partial void Clicked (UIButton sender)
 
 빌드 형식을 선택할 수 있습니다는 **구성 선택기** Mac 화면에 대 한 Visual Studio의 왼쪽 위 모서리에:
 
-[ ![](hello-tvos-images/run01.png "빌드 종류 선택")](hello-tvos-images/run01.png)
+[![](hello-tvos-images/run01.png "빌드 종류 선택")](hello-tvos-images/run01.png#lightbox)
 
 ### <a name="building-the-application"></a>응용 프로그램 빌드
 
@@ -458,15 +458,15 @@ partial void Clicked (UIButton sender)
 
 (이미 빌드 되었는지 되지 않은) 하는 경우 응용 프로그램을 작성 합니다, 시작 시뮬레이터 tvOS 디버그 모드로 시작 됩니다 및 응용 프로그램 시작 되며 주 인터페이스 창을 표시 합니다.
 
-[ ![샘플 앱 홈 화면](hello-tvos-images/run03.png)](hello-tvos-images/run03.png)
+[![샘플 앱 홈 화면](hello-tvos-images/run03.png)](hello-tvos-images/run03.png#lightbox)
 
 **하드웨어** 메뉴 선택 **Apple TV 원격 표시** 시뮬레이터를 제어할 수 있게 합니다.
 
-[ ![](hello-tvos-images/run04.png "Apple TV 원격 표시를 선택 합니다.")](hello-tvos-images/run04.png)
+[![](hello-tvos-images/run04.png "Apple TV 원격 표시를 선택 합니다.")](hello-tvos-images/run04.png#lightbox)
 
 단추를 몇 번 레이블을 클릭 하면 시뮬레이터의 원격을 사용 하 여 개수와 업데이트 해야 합니다.
 
-[ ![](hello-tvos-images/run05.png "업데이트 된 개수를 사용 하 여 레이블")](hello-tvos-images/run05.png)
+[![](hello-tvos-images/run05.png "업데이트 된 개수를 사용 하 여 레이블")](hello-tvos-images/run05.png#lightbox)
 
 지금까지 명확 하 게 여기에서 많은 다룬 하지만 이제 만드는 데 사용 되는 도구 뿐만 아니라 Xamarin.tvOS 응용 프로그램의 구성 요소를 확실 하 게 이해 한 경우이 자습서에서는 처음부터 끝까지, 있어야 합니다.
 

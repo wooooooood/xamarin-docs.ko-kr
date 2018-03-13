@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 857cafa475f24357b39da0640eb81c37f5a8634c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-complete"></a>자동 완성
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -43,7 +42,6 @@ ms.lasthandoff: 02/27/2018
 
 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 소개 하는 레이블이 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다.
 
-<a name="tutorial" />
 
 ## <a name="tutorial"></a>자습서
 
@@ -156,10 +154,9 @@ static string[] COUNTRIES = new string[] {
 
 응용 프로그램을 실행합니다. 를 입력 하면 다음과 같이 표시 됩니다.
 
-[!["Ca"를 포함 하는 이름을 나열 하는 예에서는 자동 완성 스크린샷](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png)
+[!["Ca"를 포함 하는 이름을 나열 하는 예에서는 자동 완성 스크린샷](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
-<a name="More_Information" />
 
 ## <a name="more-information"></a>추가 정보
 
@@ -187,7 +184,6 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-<a name="References" />
 
 ### <a name="references"></a>참조
 

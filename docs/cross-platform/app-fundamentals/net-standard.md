@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 294d28c57978218986d62d1ee6579e8d283b8f72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -29,12 +29,12 @@ ms.lasthandoff: 02/27/2018
 
 이식 가능한 라이브러리 프로젝트를 먼저 만들어 Xamarin Studio 6.2에서 표준.NET 라이브러리 프로젝트를 만들 수 있습니다.
 
-[ ![](net-standard-images/xs01-sml.png "새 이식 가능한 라이브러리 프로젝트 만들기")](net-standard-images/xs01.png)
+[![](net-standard-images/xs01-sml.png "새 이식 가능한 라이브러리 프로젝트 만들기")](net-standard-images/xs01.png#lightbox)
 
 프로젝트를 만든 후 마우스 오른쪽 단추로 클릭 하 고 열은 **프로젝트 옵션** 창.
 에 **일반** 섹션 프로젝트를.NET 표준으로 변환 하 고에서 특정 버전을 사용 하도록 설정할 수는 **플랫폼** 드롭 다운 목록:
 
-[ ![](net-standard-images/xs02-sml.png "변환할 표준.NET 일반적 옵션")](net-standard-images/xs02.png)
+[![](net-standard-images/xs02-sml.png "변환할 표준.NET 일반적 옵션")](net-standard-images/xs02.png#lightbox)
 
 그런 다음 [NuGet 패키지를 만들](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) 를 다른 개발자와 라이브러리를 공유 합니다.
 

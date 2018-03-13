@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/27/2018
 - 두 개를 추가할 수 없습니다 `WKNotificationControllers` 스토리 보드에 있습니다.
     해결 방법:는 `notificationCategory` XML 스토리 보드에서 요소를 동일한 삽입 항상 `id`합니다. 두 개 이상의 알림 컨트롤러를 추가할을 텍스트 편집기에서 스토리 보드 파일을 열고 한 다음 변경 수동으로이 문제를 해결 하려면는 `id` 요소를 고유 하 게 합니다.
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "텍스트 편집기에서 파일을 고유 하 게 하는 id 요소를 수동으로 변경 스토리 보드 열기")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "텍스트 편집기에서 파일을 고유 하 게 하는 id 요소를 수동으로 변경 스토리 보드 열기")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - "응용 프로그램을 작성 되지 않았습니다." 오류가 표시 될 수 응용 프로그램을 실행 하려고 할 때입니다. 다음에 발생 한 **Clean** 조사식 확장 프로젝트를 시작 프로젝트로 설정 된 경우.
     선택 하는 수정 프로그램 **빌드 > 모두 다시 빌드** 하 고 응용 프로그램을 다시 시작 합니다.

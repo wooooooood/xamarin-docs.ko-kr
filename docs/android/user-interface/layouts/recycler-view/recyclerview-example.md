@@ -7,22 +7,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: a8de515563d9b9e38f049fd92c94b95e75239eb2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44ebc8098250da26762538cddf5a89ffac709d8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
 
 이해 하려면 방법을 `RecyclerView` 작동 일반 응용 프로그램에서이 항목에서는 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) 샘플 응용 프로그램을 사용 하는 간단한 코드 예제 `RecyclerView` 대규모 사진의 컬렉션을 표시 하려면: 
 
-[ ![CardViews를 사용 하 여 사진 표시 하는 RecyclerView 앱의 두 가지 스크린샷](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png)
+[![CardViews를 사용 하 여 사진 표시 하는 RecyclerView 앱의 두 가지 스크린샷](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** 사용 하 여 [CardView](~/android/user-interface/controls/card-view.md) 의 각 사진 항목을 구현 하는 `RecyclerView` 레이아웃 합니다. 때문에 `RecyclerView`의 성능 이점을이 샘플 응용 프로그램은 원활 하 고 상당한 지연을 없이 큰 사진 컬렉션을 통해 신속 하 게 스크롤할 수 있습니다.
 
-<a name="datasource" />
 
 ### <a name="an-example-data-source"></a>예제 데이터 원본
 
@@ -48,7 +47,6 @@ mPhotoAlbum.RandomSwap ();
 
 때문에 구현 세부 사항 `PhotoAlbum` 이해에 관련 되지 않은 `RecyclerView`, `PhotoAlbum` 소스 코드를 제공 하지 않습니다. 소스 코드를 `PhotoAlbum` 에 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) 에 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) 샘플 응용 프로그램입니다.
 
-<a name="preliminaries" />
 
 ### <a name="layout-and-initialization"></a>레이아웃 및 초기화
 
@@ -128,7 +126,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 뷰 소유자 클래스 라고 `PhotoViewHolder`합니다. 각 `PhotoViewHolder` 에 대 한 참조를 보유 하는 인스턴스는 `ImageView` 및 `TextView` 의 연결 된 행 항목을 레이아웃 하는 `CardView` 사실 여기 대로:
 
-[ ![CardView ImageView 및 TextView를 포함 하는 다이어그램](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png)
+[![CardView ImageView 및 TextView를 포함 하는 다이어그램](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
 
 `PhotoViewHolder` 파생 `RecyclerView.ViewHolder` 에 대 한 참조를 저장 하는 속성을 포함 하는 `ImageView` 및 `TextView` 위의 레이아웃에 표시 된 것입니다.
 `PhotoViewHolder` 두 개의 속성 및 생성자가 하나 이루어져 있습니다.
@@ -181,7 +179,6 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 레이아웃 관리자 내에서 항목을 배치 되는 동안 이러한 메서드 호출에서 `RecyclerView`합니다. 다음 섹션에서 이러한 메서드의 구현을 검사 합니다.
 
-<a name="oncreateviewholder" />
 
 #### <a name="oncreateviewholder"></a>OnCreateViewHolder
 
@@ -245,7 +242,6 @@ public override RecyclerView.ViewHolder
 
 결과 뷰 소유자 인스턴스로 `vh`, (레이아웃 관리자) 호출자에 게 반환 됩니다.
 
-<a name="onbindviewholder" />
 
 #### <a name="onbindviewholder"></a>OnBindViewHolder
 
@@ -270,7 +266,6 @@ public override void
 
 다음에 유의 `OnBindViewHolder` 데이터의 구조를 직접 처리 하는 코드입니다. 이 경우 `OnBindViewHolder` 매핑하는 방법에 대 한 이해는 `RecyclerView` 항목 데이터 소스에서 해당 연결 된 데이터 항목에 위치 합니다. 매핑이 간단 하 게이 경우는 사진 앨범;에 위치를 배열 인덱스로 사용할 수 있으므로 그러나 더 복잡 한 데이터 원본에는 이러한 매핑을 설정 하려면 추가 코드가 필요할 수 있습니다.
 
-<a name="itemcount" />
 
 #### <a name="itemcount"></a>ItemCount
 
@@ -285,7 +280,6 @@ public override int ItemCount
 
 에 대 한 자세한 내용은 `RecyclerView.Adapter`, 참조는 [RecyclerView.Adapter 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html)합니다.
 
-<a name="together" />
 
 ### <a name="putting-it-all-together"></a>정리 및 모든
 
@@ -372,11 +366,10 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 이 코드를 컴파일 및 실행 하면 다음 스크린샷에 표시 된 것 처럼 응용 프로그램 보기 기본적인 사진을 만듭니다.
 
-[ ![사진 보기 사진 카드를 세로 방향으로 스크롤이 응용 프로그램의 두 가지 스크린샷](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png)
+[![사진 보기 사진 카드를 세로 방향으로 스크롤이 응용 프로그램의 두 가지 스크린샷](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
 이 기본 앱의 사진 앨범 검색만 지원 합니다. 항목 터치 이벤트에 응답 하지 않습니다 나 원본 데이터의 변경 내용을 처리 합니다. 이 기능이 추가 됨 [RecyclerView 예제 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md)합니다.
 
-<a name="layoutmanagerchange" />
 
 ### <a name="changing-the-layoutmanager"></a>LayoutManager 변경
 
@@ -388,7 +381,7 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 
 이 코드를 변경 대체 세로 `LinearLayoutManager` 와 `GridLayoutManager` 가로 방향으로 스크롤 하는 두 행의 구성 된 표를 표시 하 합니다. 컴파일하고 앱을 다시 실행 하면 사진은 눈금에 표시 되 고 스크롤 효과 수직 하는 대신 가로 표시 됩니다.
 
-[ ![표의 가로 스크롤 사진으로 응용 프로그램의 예제 스크린 샷](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png)
+[![표의 가로 스크롤 사진으로 응용 프로그램의 예제 스크린 샷](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
 한 줄의 코드를 변경 하 여 사진 보기 응용 프로그램에서 다른 레이아웃을 사용 하 여 다른 동작으로 수정할 수 있습니다.
 레이아웃 스타일을 변경 하려면 수정할 경우 어댑터 코드 또는 레이아웃 XML 아닙니다 했습니다 확인 합니다. 

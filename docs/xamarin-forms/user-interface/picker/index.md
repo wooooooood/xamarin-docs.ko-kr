@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: edc724eb73b314c0accd3e8775b9b26b6eac16d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc1aaffe4e31b596d57b5de30c87217ffba3772e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picker"></a>선택
 
@@ -20,11 +20,11 @@ _선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하
 
 A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 항목을 선택할 수 있는 간단한 목록을 표시 합니다. 그러나 한 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 처음 표시 된 모든 데이터를 표시 하지 않습니다. 대신, 값 해당 [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) 속성 iOS 및 Android 플랫폼에 대 한 자리 표시자로 표시 됩니다.
 
-[![](images/picker-initial.png "선택 표시를 초기")](images/picker-initial-large.png "선택 표시를 초기 합니다.")
+[![](images/picker-initial.png "선택 표시를 초기")](images/picker-initial-large.png#lightbox "선택 표시를 초기 합니다.")
 
 경우는 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 향상 포커스를 데이터가 표시 되 고 사용자는 항목을 선택할 수 있습니다.
 
-[![](images/picker-selection.png "선택 항목을 선택 하면")](images/picker-selection-large.png "선택 항목을 선택 하면")
+[![](images/picker-selection.png "선택 항목을 선택 하면")](images/picker-selection-large.png#lightbox "선택 항목을 선택 하면")
 
 선택 항목을 다음 선택된 항목으로 표시 됩니다는 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 
@@ -38,4 +38,4 @@ A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 항
 
 ## <a name="related-links"></a>관련 링크
 
-- [Picker](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)
+- [선택기](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)

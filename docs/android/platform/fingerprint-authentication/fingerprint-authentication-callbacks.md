@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: 371ffae8e14a630cb548f4a9ee2bf0bd06f7284c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>인증 콜백을에 응답
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 
 > [!NOTE]
-> **참고:** 응용 프로그램별 논리의를 콜백 클래스 양이 비교적 적은 가중치를 유지 하는 것이 좋습니다. 콜백은 한 "트래픽 개의 cop" Android 응용 프로그램 및 결과 간의 지문 스캐너에서로 작동 해야 합니다.
+> 콜백 클래스 양이 비교적 적은 가중치를 유지 하며 응용 프로그램별 논리 하는 것이 좋습니다. 콜백은 한 "트래픽 개의 cop" Android 응용 프로그램 및 결과 간의 지문 스캐너에서로 작동 해야 합니다.
 
 ## <a name="a-sample-authentication-callback-handler"></a>샘플 인증 콜백 처리기
 

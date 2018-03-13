@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c40472f794be9a21045da4f4477d4104c3ddbdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7246379fbe5918671de68cd4af10d1ce497e7c4e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-tvos"></a>TvOS 소개
 
@@ -23,6 +24,10 @@ Apple는 iOS 11에 따라 tvOS 운영 체제의 최신 버전을 실행 하는 A
 Apple TV 플랫폼은 다양 한 앱을 만들고 Apple TV 기본 제공 앱 스토어를 통해 해제할 수 있도록 개발자에 게 열기.
 
 TvOS에 대 한 자세한 내용은 참조 하십시오는 [시작](~/ios/tvos/get-started/index.md) 문서.
+
+> [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
+
+**xamarin을 tvOS 여 [Xamarin 대학](https://university.xamarin.com/)**
 
 ## <a name="documentation"></a>설명서
 

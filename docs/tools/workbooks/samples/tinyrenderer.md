@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 1689736ce3f2a8e20ceaa23edf410d3892038522
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5422d3f0a68f99790617fe534b30389aae2563c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tinyrenderer-workbooks"></a>TinyRenderer 통합 문서
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/27/2018
 -    [7 단원: 섀도 매핑](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [8 단원: 앰비언트 폐색](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "와이어 프레임 렌더링 예제")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "와이어 프레임 렌더링 예제")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 이 오픈 소스를 기반으로 하는 이러한 통합 문서에 C# 코드 [c + + 코드](https://github.com/ssloy/tinyrenderer) 이 텍스트는 [wiki](https://github.com/ssloy/tinyrenderer/wiki/)합니다. 원래 작업의 통합 문서 집합으로 바꿀 수 있도록 해 주는 라이선스에 따라 사용할 수 있는 감사 드립니다.
 

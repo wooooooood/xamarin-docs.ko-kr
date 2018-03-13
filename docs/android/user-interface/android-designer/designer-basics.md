@@ -7,18 +7,17 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b2ed48ae9df7e950525fdc0cb97181ebe5a44dfb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="designer-basics"></a>디자이너의 기본 사항
 
 _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법을 설명, 디자인 화면을 설명 및 위젯 속성을 편집 하려면 속성 창을 사용 하는 방법에 자세히 설명 합니다._
 
-<a name="Launching_the_Designer" />
 
 ## <a name="launching-the-designer"></a>디자이너를 시작합니다.
 
@@ -26,11 +25,11 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Visual Studio에서 디자이너 화면](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png)
+[![Visual Studio에서 디자이너 화면](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Mac 용 Visual Studio에서 디자이너 화면](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png)
+[![Mac 용 Visual Studio에서 디자이너 화면](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 -----
 
@@ -39,20 +38,19 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 마찬가지로, 마우스 오른쪽 단추로 클릭 하 여 새 레이아웃을 추가할 수 있습니다는 **레이아웃** 폴더에는 **솔루션 탐색기** 선택 하 고 **추가 > 새 항목 … > Android 레이아웃**:
 
-[![새 항목 추가 대화 상자](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png)
+[![새 항목 추가 대화 상자](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 마찬가지로, 마우스 오른쪽 단추로 클릭 하 여 새 레이아웃을 추가할 수 있습니다는 **레이아웃** 폴더에는 **솔루션 패드** 선택 하 고 **추가 > 새 파일 > Android > 레이아웃**:
 
-[![새 파일 대화 상자를 추가 합니다.](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png)
+[![새 파일 대화 상자를 추가 합니다.](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 -----
 
 새.axml 파일을 디자인 화면으로 로드 됩니다.
 
 
-<a name="Designer_Features" />
 
 ## <a name="designer-features"></a>디자이너 기능
 
@@ -60,11 +58,11 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디자이너 창 다이어그램](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png)
+[![디자이너 창 다이어그램](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자이너 창 다이어그램](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png)
+[![디자이너 창 다이어그램](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 -----
 
@@ -97,7 +95,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 -----
 
 
-<a name="Toolbar" />
 
 ## <a name="toolbar"></a>Toolbar
 
@@ -105,11 +102,11 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![다이어그램 디자이너 도구 모음](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png)
+[![다이어그램 디자이너 도구 모음](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![다이어그램 디자이너 도구 모음](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png)
+[![다이어그램 디자이너 도구 모음](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 -----
 
@@ -143,7 +140,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 [자재 디자인 기능](~/android/user-interface/android-designer/material-design-features.md) 의 포괄적인 개요를 제공 된 **테마 편집기** 및 **자료 디자인 눈금**합니다.
 
 
-<a name="Design_Surface" />
 
 ## <a name="design-surface"></a>디자인 화면
 
@@ -151,17 +147,16 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디자인 화면에서 예제 삽입 선](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png)
+[![디자인 화면에서 예제 삽입 선](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자인 화면에서 예제 삽입 선](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png)
+[![디자인 화면에서 예제 삽입 선](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 -----
 
 또한 위젯을 복사할 수 있습니다: 복사본을 사용할 수 있습니다 및 붙여넣기 위젯, 복사를 끌어 놓은 수는 기존 위젯 누른 채는 <kbd>Ctrl</kbd> 키입니다.
 
-<a name="Context_Menu_Commands" />
 
 ### <a name="context-menu-commands"></a>상황에 맞는 메뉴 명령
 
@@ -169,7 +164,7 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디자인 화면을 마우스 오른쪽 단추로 클릭 하는 경우 예제 상황에 맞는 메뉴](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png)
+[![디자인 화면을 마우스 오른쪽 단추로 클릭 하는 경우 예제 상황에 맞는 메뉴](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 이 예제에서는 마우스 오른쪽 단추로 클릭 한 `TextView` 몇 가지 옵션을 제공 하는 상황에 맞는 메뉴를 엽니다.
 
@@ -179,7 +174,7 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자인 화면을 마우스 오른쪽 단추로 클릭 하는 경우 예제 상황에 맞는 메뉴](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png)
+[![디자인 화면을 마우스 오른쪽 단추로 클릭 하는 경우 예제 상황에 맞는 메뉴](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 이 예제에서는 마우스 오른쪽 단추로 클릭 한 `TextView` 몇 가지 옵션을 제공 하는 상황에 맞는 메뉴를 엽니다.
 
@@ -198,7 +193,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 -   **삭제**, **복사**, 및 **잘라내기** &ndash; 적용 하 고 마우스 오른쪽 단추로 클릭 하는 작업 `TextView`합니다.
 
 
-<a name="Zoom_Controls" />
 
 ### <a name="zoom-controls"></a>확대/축소 컨트롤
 
@@ -206,11 +200,11 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디자인 화면 확대/축소 컨트롤의 다이어그램](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png)
+[![디자인 화면 확대/축소 컨트롤의 다이어그램](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자인 화면 확대/축소 컨트롤의 다이어그램](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png)
+[![디자인 화면 확대/축소 컨트롤의 다이어그램](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 -----
 
@@ -228,7 +222,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 참고 선택한 확대/축소 설정을 런타임에 응용 프로그램의 사용자 인터페이스에 영향을 주지 않습니다.
 
-<a name="property_pad" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -238,11 +231,10 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 디자이너는 통해 위젯 속성을 편집 하는 지원의 **속성 패드**합니다. 디자이너 화면에서 선택한 위젯에 따라 속성 패드 변경에 나열 된 속성입니다. 때는 `Button` 앞의 예제에서를 선택 하에 대 한 속성 `Button` 위젯 표시 됩니다.
 
-[![속성 패드의 스크린 샷](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png)
+[![속성 패드의 스크린 샷](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 -----
 
-<a name="Property_Pad_Sections" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -272,7 +264,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 -----
 
 
-<a name="Default_Values" />
 
 ### <a name="default-values"></a>기본값
 
@@ -287,7 +278,6 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 -----
 
-<a name="Referencing_resources" />
 
 ### <a name="referencing-resources"></a>리소스 참조
 
@@ -299,13 +289,13 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 예를 들어 다음 스크린샷은 사용할 수 있는 리소스에 대 한 텍스트 필드의 오른쪽에 있는 줄임표를 클릭 하면는 `Button` 에서 위젯의 **속성** 창:
 
-[![나열 된 두 리소스가 포함 된 예제 리소스 스크린 샷](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png)
+[![나열 된 두 리소스가 포함 된 예제 리소스 스크린 샷](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 예를 들어 다음 스크린샷은 사용할 수 있는 리소스에 대 한 텍스트 필드의 오른쪽에 있는 줄임표를 클릭 하면는 `Button` 에서 위젯의 **속성 패드**:
 
-[![나열 된 두 리소스가 포함 된 예제 리소스 스크린 샷](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png)
+[![나열 된 두 리소스가 포함 된 예제 리소스 스크린 샷](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 -----
 
@@ -313,16 +303,15 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![ImageView에 대 한 아이콘 리소스를 나열 하는 리소스 선택기](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png)
+[![ImageView에 대 한 아이콘 리소스를 나열 하는 리소스 선택기](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![ImageView에 대 한 아이콘 리소스를 나열 하는 리소스 선택기](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png)
+[![ImageView에 대 한 아이콘 리소스를 나열 하는 리소스 선택기](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 -----
 
 
-<a name="Boolean_Property_References" />
 
 ### <a name="boolean-property-references"></a>부울 속성 참조
 
@@ -336,25 +325,21 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 *부울* 속성이 속성 패드에 확인란으로 정상적으로 표시 됩니다. 경우는 `Boolean` 속성 옆에 작은 확인란이 표시, 속성 리소스 참조를 지원 합니다. 선택 된 확인란 의미 `true` 하 고 빈 상자 의미 `false`합니다. 와 같은 값을 입력도 직접 수 `true` 또는 `false`합니다. 입력을 마우스로 가리키면 작은 텍스트 필드 아이콘은 표시 합니다. 값을 수동으로 입력 하려면에 클릭 수 있습니다.
 
-[![부울 속성을 설정 하는 예](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png)
+[![부울 속성을 설정 하는 예](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
-<a name="Grouped_Properties" />
 
 ## <a name="grouped-properties"></a>그룹화 된 속성
 
 일부 위젯이 함께 그룹화 된 다중 값 속성 (같은 `Padding`예를 들면). 이러한 속성 값에 나열 됩니다는 **속성 패드** 를 확장할 수 있는 단일 행에 있습니다. 이러한 속성 중 일부를 편집할 수 있습니다 그룹화 된 행에 직접와 같은 `Padding` 아래에 표시 된 속성:
 
-[![Padding 속성에 대 한 예제 설정](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png)
+[![Padding 속성에 대 한 예제 설정](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 -----
 
-<a name="Editing_Properties_Inline" />
 
 ## <a name="editing-properties-inline"></a>속성 인라인 편집
 
 Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색할 필요가 없습니다) 디자인 화면에서 특정 속성을 직접 편집을 지원 합니다. 직접 편집할 수 있는 속성에는 텍스트, 여백 및 크기 포함 됩니다.
-
-<a name="Text" />
 
 ### <a name="text"></a>텍스트
 
@@ -366,7 +351,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Hello 문자열에 대 한 텍스트 리소스](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png)
+[![Hello 문자열에 대 한 텍스트 리소스](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 -----
 
@@ -378,7 +363,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Shift + Enter를 새 리소스에 텍스트를 자동으로 링크](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png)
+[![Shift + Enter를 새 리소스에 텍스트를 자동으로 링크](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 -----
 
@@ -386,7 +371,6 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 경우 새 텍스트 문자열의 키를 누르면 <kbd>Shift</kbd> +
 <kbd>Enter</kbd> 에 자동으로 입력 한 텍스트를 새 리소스에 연결 합니다.
 
-<a name="Margin" />
 
 ### <a name="margin"></a>여백
 
@@ -400,7 +384,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디자이너에서 처리 하는 여백을 보여 주는 스크린샷](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png)
+[![디자이너에서 처리 하는 여백을 보여 주는 스크린샷](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 -----
 
@@ -412,12 +396,11 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![점선은 단추 주위의 공간을 표시의 예](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png)
+[![점선은 단추 주위의 공간을 표시의 예](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 -----
 
 
-<a name="Size" />
 
 ### <a name="size"></a>크기
 
@@ -429,7 +412,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![래핑 콘텐츠 및 크기 조정 핸들](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png)
+[![래핑 콘텐츠 및 크기 조정 핸들](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 -----
 
@@ -443,7 +426,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![일치 항목이 부모 핸들](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png)
+[![일치 항목이 부모 핸들](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 -----
 
@@ -457,7 +440,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![순환 크기 조정 핸들](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png)
+[![순환 크기 조정 핸들](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 -----
 
@@ -469,12 +452,11 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![없음, 크기 조정 핸들](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png)
+[![없음, 크기 조정 핸들](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 -----
 
 
-<a name="Outline_View" />
 
 ## <a name="document-outline"></a>문서 개요
 
@@ -487,7 +469,7 @@ Android 디자이너 (하므로 속성 목록에서 이러한 속성을 검색�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![문서 개요](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png)
+[![문서 개요](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 -----
 

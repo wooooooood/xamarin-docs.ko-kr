@@ -8,23 +8,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: b199e4370e93712211db125e427fb61da39cb296
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-android-designer"></a>Android 디자이너를 사용 하 여
 
 _이 항목은 Xamarin.Android 디자이너의 연습 과정입니다. 소형 컬러 브라우저 응용 프로그램에 대 한 사용자 인터페이스를 만드는 방법을 보여 줍니다. 이 사용자 인터페이스 디자이너에서 전적으로 만들어집니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
 Android 사용자 인터페이스 XML 파일을 사용 하 여 또는 프로그래밍 방식으로 코드를 작성 하 여 선언적으로 만들 수 있습니다. Xamarin.Android 개발자가을 만들고 XML 파일을 직접 편집 건을 다루는 데 필요 없이 선언적 레이아웃을 시각적으로 수정할 수 있습니다. 디자이너는 또한 개발자는 장치 또는 에뮬레이터에 응용 프로그램을 다시 배포할 필요 없이 UI 변경 내용을 평가할 수 있는 실시간 피드백을 제공 합니다. 이 속도를 높일 수 Android UI 개발 매우 합니다. 이 문서에서는 Xamarin.Android 디자이너 사용자 인터페이스를 시각적으로 만들를 사용 하는 방법을 보여 주는 연습을 소개 합니다.
 
-<a name="Walkthrough" />
 
 ## <a name="walkthrough"></a>연습
 
@@ -32,7 +30,6 @@ Android 사용자 인터페이스 XML 파일을 사용 하 여 또는 프로그�
 
 이제 시작 하겠습니다.
 
-<a name="Creating_a_New_Project" />
 
 ### <a name="creating-a-new-project"></a>새 프로젝트 만들기
 
@@ -42,13 +39,13 @@ Android 사용자 인터페이스 XML 파일을 사용 하 여 또는 프로그�
 
 Visual Studio를 시작 하 고 클릭 **새 프로젝트...**  선택 합니다는 **Visual C\# > Android > 비어 있는 앱 (Android)** 템플릿:
 
-[ ![새 android 응용 프로그램](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png)
+[![새 android 응용 프로그램](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Mac 및 클릭에 대 한 Visual Studio를 시작 **새 솔루션 중...** . 선택 된 **Android 앱** 템플릿을 **다음**:
 
-[ ![새 android 응용 프로그램](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png)
+[![새 android 응용 프로그램](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png#lightbox)
 
 -----
 
@@ -56,20 +53,19 @@ Mac 및 클릭에 대 한 Visual Studio를 시작 **새 솔루션 중...** . 선
 
 새 앱의 이름을 **DesignerWalkthrough** 클릭 **확인**합니다.
 
-[ ![응용 프로그램 이름](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png)
+[![응용 프로그램 이름](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 새 앱의 이름을 **DesignerWalkthrough**합니다. 아래 **대상 플랫폼**선택, **최신 정보 및 가장** 클릭 **다음**:
 
-[ ![응용 프로그램 이름](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png)
+[![응용 프로그램 이름](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png#lightbox)
 
 다음 대화 상자 화면에서 클릭 **만들기**합니다.
 
 -----
 
 
-<a name="Adding_a_Layout" />
 
 ### <a name="adding-a-layout"></a>레이아웃을 추가합니다.
 
@@ -79,38 +75,37 @@ Mac 및 클릭에 대 한 Visual Studio를 시작 **새 솔루션 중...** . 선
 
 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레이아웃** 에 **솔루션 탐색기** 선택 **추가 > 새 항목...** . 에 **새 항목 추가** 대화 상자에서 **Android 레이아웃**합니다. 파일 이름을 **ListItem.axml** 클릭 **추가**:
 
-[ ![새 레이아웃](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png)
+[![새 레이아웃](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
 
 새 **ListItem** 레이아웃이 디자이너에 표시 됩니다.
 
-[ ![디자이너 뷰](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png)
+[![디자이너 뷰](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png#lightbox)
 
 클릭는 **소스** 이 레이아웃에 대 한 XML 원본을 보려면 디자이너의 아래쪽에 탭:
 
-[ ![XML 디자이너](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png)
+[![XML 디자이너](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png#lightbox)
 
 **보기** 메뉴를 클릭 하 여 **다른 창 > 문서 개요** 열려는 **문서 개요**합니다. **문서 개요** 레이아웃 단일 현재 포함 되어 있음을 보여 줍니다. **LinearLayout** 위젯:
 
-[ ![문서 개요](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png)
+[![문서 개요](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레이아웃** 에 **솔루션** 패딩 하 고 선택 **추가 > 새 파일...** . 에 **새 파일** 대화 상자에서 **Android > 레이아웃**합니다. 파일 이름을 **ListItem** 클릭 **새로**:
 
-[ ![새 레이아웃](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png)
+[![새 레이아웃](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png#lightbox)
 
 새 **ListItem** 레이아웃이 디자이너에 표시 됩니다.
 
-[ ![디자이너 뷰](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png)
+[![디자이너 뷰](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png#lightbox)
 
 클릭는 **소스** 이 레이아웃에 대 한 XML 원본을 보려면 디자이너의 아래쪽에 탭 합니다. 클릭는 **문서 개요** 탭 오른쪽에 레이아웃 단일을 현재 포함 된 표시 **LinearLayout** 위젯:
 
-[ ![XML 디자이너](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png)
+[![XML 디자이너](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png#lightbox)
 
 -----
 
 
-<a name="Creating_the_List_Item_User_Interface" />
 
 ### <a name="creating-the-list-item-user-interface"></a>목록 항목 사용자 인터페이스 만들기
 
@@ -120,11 +115,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![ImageView 찾기](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png)
+[![ImageView 찾기](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView 찾기](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png)
+[![ImageView 찾기](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png#lightbox)
 
 -----
 
@@ -132,11 +127,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![ImageView 검색](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png)
+[![ImageView 검색](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView 검색](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png)
+[![ImageView 검색](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png#lightbox)
 
 -----
 
@@ -144,11 +139,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![캔버스에서 ImageView](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png)
+[![캔버스에서 ImageView](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![캔버스에서 ImageView](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png)
+[![캔버스에서 ImageView](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png#lightbox)
 
 -----
 
@@ -158,11 +153,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![파란색 개요](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png)
+[![파란색 개요](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![파란색 개요](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png)
+[![파란색 개요](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png#lightbox)
 
 -----
 
@@ -170,11 +165,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![ImageView 선택](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png)
+[![ImageView 선택](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView 선택](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png)
+[![ImageView 선택](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png#lightbox)
 
 -----
 
@@ -182,11 +177,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![녹색 강조 표시](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png)
+[![녹색 강조 표시](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![녹색 강조 표시](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png)
+[![녹색 강조 표시](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png#lightbox)
 
 -----
 
@@ -194,11 +189,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![작은 텍스트 위젯 추가](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png)
+[![작은 텍스트 위젯 추가](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![작은 텍스트 위젯 추가](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png)
+[![작은 텍스트 위젯 추가](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png#lightbox)
 
 -----
 
@@ -206,18 +201,17 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![디자이너 레이아웃](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png)
+[![디자이너 레이아웃](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![디자이너 레이아웃](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png)
+[![디자이너 레이아웃](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png#lightbox)
 
 -----
 
 경우 두 `textView` widget를 안쪽 없는 `linearLayout1`에으로 끌 수 있습니다 `linearLayout1` 에 **문서 개요** 하 고 이전 스크린 샷에 표시 된 것 처럼 표시 위치 (아래 들여쓰기 되어 `linearLayout1`).
 
 
-<a name="Arranging_The_User_Interface" />
 
 ### <a name="arranging-the-user-interface"></a>사용자 인터페이스를 정렬합니다.
 
@@ -241,13 +235,13 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 3.  으로 아래로 스크롤하여 **보기 그룹** 변경 하 고는 `Width` 설정을 `wrap_content`:
 
-[ ![집합 래핑 콘텐츠](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png)
+[![집합 래핑 콘텐츠](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png#lightbox)
 
 -----
 
 변경할 수는 `Width` 설정은 해당 너비 설정을를 전환 하려면 위젯의 오른쪽에 있는 삼각형을 클릭 하는 `wrap_content`:
 
-[ ![끌어서 너비를 설정 하려면](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png)
+[![끌어서 너비를 설정 하려면](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png#lightbox)
 
 반환 삼각형을 다시 클릭 하 고 `Width` 설정을 `match_parent`합니다.
 
@@ -255,11 +249,11 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![루트 LinearLayout 선택](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png)
+[![루트 LinearLayout 선택](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![루트 LinearLayout 선택](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png)
+[![루트 LinearLayout 선택](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png#lightbox)
 
 -----
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -272,7 +266,7 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 루트와 `LinearLayout` 돌아가려면 선택 된 **속성** 탭을 클릭 **위젯**합니다. 변경 된 `Orientation` 설정을 `horizontal`:
 
-[ ![가로 방향을 선택 합니다.](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png)
+[![가로 방향을 선택 합니다.](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png#lightbox)
 
 -----
 
@@ -280,15 +274,14 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![디자이너 레이아웃](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png)
+[![디자이너 레이아웃](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![디자이너 레이아웃](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png)
+[![디자이너 레이아웃](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png#lightbox)
 
 -----
 
-<a name="Modifying_the_Spacing" />
 
 ### <a name="modifying-the-spacing"></a>간격을 수정합니다.
 
@@ -296,13 +289,13 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 다음으로 위젯 사이 공백을 더 제공 하기 위해 UI에 안쪽 여백 및 여백 설정을 수정 합니다. 선택의 `ImageView`, 클릭는 **항목별** 검색 아이콘에는 **속성** 창과로 스크롤하여는 **레이아웃** 섹션. 변경의 `Min Height` 를 `70dp`, `Min Width` 를 `50dp`, 및 `padding` 를 `10dp`합니다. 모든 면 주위의 여백이 적용 됩니다는 `ImageView` 세로로 elongates 및:
 
-[ ![안쪽 여백 설정](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png)
+[![안쪽 여백 설정](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 다음으로 위젯 사이 공백을 더 제공 하기 위해 UI에 안쪽 여백 및 여백 설정을 수정 합니다. 선택 된 `ImageView` 클릭는 **레이아웃** 탭의 **속성**합니다. 변경의 `Padding` 를 `10dp`, `Min Width` 를 `50dp`, 및 `Min Height` 를 `70dp`합니다. 모든 면 주위의 여백이 적용 됩니다는 `ImageView` 세로로 elongates 및:
 
-[ ![안쪽 여백 설정](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png)
+[![안쪽 여백 설정](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png#lightbox)
 
 -----
 
@@ -311,13 +304,13 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 아래, 왼쪽, 오른쪽 안쪽 여백 설정이 위쪽에 값을 입력 하 여 독립적으로 설정할 수 있습니다는 `paddingBottom`, `paddingLeft`, `paddingRight`, 및 `paddingTop` 필드를 각각.
 예를 들어 설정는 `paddingLeft` 필드를 `5dp` 및 `paddingBottom`, `paddingRight`, 및 `paddingTop` 필드를 `10dp`:
 
-[ ![사용자 지정 안쪽 여백 설정](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png)
+[![사용자 지정 안쪽 여백 설정](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 위쪽, 오른쪽, 아래쪽 및 왼쪽 설정을 안쪽 여백을 설정할 수 있습니다 독립적으로 값을 입력 하 여는 `Top`, `Right`, `Bottom`, 및 `Left` 필드를 각각 패딩 합니다. 예를 들어 설정는 `Left` 안쪽 여백 값을 `5dp` 및 `Top`, `Right`, 및 `Bottom` 안쪽 여백 값을 `10dp`합니다. `Padding` 설정이 이러한 값의 쉼표로 구분 된 목록으로 변경 합니다.
 
-[ ![사용자 지정 안쪽 여백 설정](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png)
+[![사용자 지정 안쪽 여백 설정](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png#lightbox)
 
 -----
 
@@ -325,18 +318,17 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 위치를 수정 하는 다음으로 `LinearLayout` 두 포함 된 위젯을 `TextView` 위젯입니다. 에 **문서 개요**선택, `linearLayout1`합니다. 에 **속성** 창에서는 **레이아웃-보기 그룹** 섹션. 설정 `layout_marginBottom`, `layout_marginLeft`, `layout_marginRight`, 및 `layout_marginTop` 를 `5dp`, `5dp`, `0dp`, 및 `5dp` 각각:
 
-[ ![여백 설정](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png)
+[![여백 설정](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 위치를 수정 하는 다음으로 `LinearLayout` 두 포함 된 위젯을 `TextView` 위젯입니다. 에 **문서 개요**선택, `linearLayout1`합니다. 에 **속성** 창, 선택는 **레이아웃** 탭 합니다. 으로 아래로 스크롤하여는 **보기 그룹** 섹션 및 설정의 `Left`, `Top`, `Right`, 및 `Bottom` 를 여백 `5dp`, `5dp`, `0dp`, 및 `5dp` 각각:
 
-[ ![여백 설정](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png)
+[![여백 설정](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png#lightbox)
 
 -----
 
 
-<a name="Removing_the_Default_Image" />
 
 ### <a name="removing-the-default-image"></a>기본 이미지를 제거합니다.
 
@@ -360,11 +352,10 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 3.  선택을 취소는 `Src` 목록이 비어 있도록 설정 합니다.
 
-[ ![ImageView src 설정의 선택을 취소합니다](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png)
+[![ImageView src 설정의 선택을 취소합니다](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png#lightbox)
 
 -----
 
-<a name="Adding_a_ListView" />
 
 ### <a name="adding-a-listview-container"></a>ListView 컨테이너 추가 중
 
@@ -377,7 +368,7 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![새 ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png)
+[![새 ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png#lightbox)
 
 -----
 
@@ -390,14 +381,13 @@ Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![MyListView id의 이름을](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png)
+[![MyListView id의 이름을](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png#lightbox)
 
 -----
 
 이 시점에서 사용자 인터페이스를 사용할 수는 있습니다.
 
 
-<a name="Running_the_Application" />
 
 ### <a name="running-the-application"></a>응용 프로그램 실행
 
@@ -490,10 +480,9 @@ namespace DesignerWalkthrough
 
 응용 프로그램을 빌드 및 실행합니다. 다음 스크린 샷에서 장치에서 실행 하는 경우 응용 프로그램이 표시 하는 방법의 예시:
 
-[ ![최종 스크린 샷](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png)
+[![최종 스크린 샷](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

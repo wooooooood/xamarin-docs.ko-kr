@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: eb1602a96b304919fe563d1bb9ea0a15722e436b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 
@@ -34,7 +34,7 @@ Jenkins 구성 하 고 필요한 모든 플러그 인 설치 된을 Xamarin.iOS 
 
 이 가이드에서는 이러한 각 지점 다루는 Jenkins 서버를 설정 하는 방법을 단계별로 안내 합니다. 끝 부분에서 우리는 설정 및 Xamarin 모바일 프로젝트 만들기 IPA 및 APK의 Jenkins를 구성 하는 방법 잘 알고가 있어야 합니다.
 
-# <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
 이상적인 빌드 서버가 독립 실행형 컴퓨터 전용 구축 하 고 가능한 응용 프로그램을 테스트 목적으로 사용 합니다. 전용된 컴퓨터 아티팩트 (예: 웹 서버는) 다른 역할에 대 한 필요할 수 있는 빌드를 묻지 않도록 보장 합니다. 예를 들어, 빌드 서버는 웹 서버 역할도, 웹 서버에는 충돌 하는 버전의 일부 공용 라이브러리 필요할 수 있습니다. 이 충돌 때문에 웹 서버가 올바르게 작동 하지 않습니다 또는 Jenkins 사용자에 게 배포 하는 경우 작동 하지 않는 빌드를 만들 수 있습니다.
 
@@ -42,7 +42,7 @@ Xamarin 모바일 앱 용 빌드 서버로 매우 유사 개발자의 워크스�
 
 다음 다이어그램에서는 일반 Jenkins 빌드 서버에서 이러한 요소를 모두 수행 합니다.
 
- [ ![](jenkins-walkthrough-images/image1.png "이 다이어그램에서는 모든 일반 Jenkins 빌드 서버에서 이러한 요소")](jenkins-walkthrough-images/image1.png)
+ [![](jenkins-walkthrough-images/image1.png "이 다이어그램에서는 모든 일반 Jenkins 빌드 서버에서 이러한 요소")](jenkins-walkthrough-images/image1.png#lightbox)
 
 iOS 응용 프로그램 빌드 및 Mac OS X를 실행 하는 컴퓨터에 서명 된만 수 있습니다. Mac Mini 필요한 저렴 한 비용 옵션을 적당 한 건 OS X 10.10 (Yosemite)를 실행할 수 있는 모든 컴퓨터 또는 이상이 충분 합니다.
 
@@ -50,7 +50,7 @@ iOS 응용 프로그램 빌드 및 Mac OS X를 실행 하는 컴퓨터에 서명
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
-# <a name="installing-jenkins"></a>Jenkins 설치
+## <a name="installing-jenkins"></a>Jenkins 설치
 
 첫 번째 작업 Jenkins를 사용 하 여 설치 하는 것입니다. OS x:에 Jenkins를 실행 하는 방법은 세 가지가
 
@@ -63,57 +63,57 @@ iOS 응용 프로그램 빌드 및 Mac OS X를 실행 하는 컴퓨터에 서명
 
 Jenkins.App는 Jenkins를 설치 하는 편리한 방법입니다. 시작을 간소화 하는 AppleScript 래퍼와 Jenkins 서버를 중지 하는 중입니다. Bash 셸의 실행 하는 대신 Jenkins 앱으로 실행 한 Dock에 아이콘과 함께 다음 스크린샷에 표시 된 것 처럼:
 
- [ ![](jenkins-walkthrough-images/image2.png "Bash 셸의 실행 하는 대신 Jenkins 앱으로 실행 한 Dock에 아이콘과 함께이 스크린 샷에 표시 된 것 처럼")](jenkins-walkthrough-images/image2.png)
+ [![](jenkins-walkthrough-images/image2.png "Bash 셸의 실행 하는 대신 Jenkins 앱으로 실행 한 Dock에 아이콘과 함께이 스크린 샷에 표시 된 것 처럼")](jenkins-walkthrough-images/image2.png#lightbox)
 
 시작 또는 중지 Jenkins은 시작 또는 중지 Jenkins.App 하기만 합니다.
 
 Jenkins.App를 설치 하려면 아래 스크린샷에 표시 되는 프로젝트의 다운로드 페이지에서 최신 버전을 다운로드 합니다.
 
- [ ![](jenkins-walkthrough-images/image3.png "응용 프로그램에는 프로젝트에서 최신 버전 다운로드 페이지에서이 스크린샷에 나온 다운로드")](jenkins-walkthrough-images/image3.png)
+ [![](jenkins-walkthrough-images/image3.png "응용 프로그램에는 프로젝트에서 최신 버전 다운로드 페이지에서이 스크린샷에 나온 다운로드")](jenkins-walkthrough-images/image3.png#lightbox)
 
 Zip 파일을 추출는 `/Applications` 폴더에 빌드 서버와 마찬가지로 다른 모든 OS X 응용 프로그램 시작 합니다.
 처음 Jenkins.App를 시작 하면 Jenkins 다운로드 알리는 대화 상자가 제공 합니다.
 
- [ ![](jenkins-walkthrough-images/image4.png "앱을 Jenkins 다운로드 알리는 대화 상자가 표시를 제공 합니다.")](jenkins-walkthrough-images/image4.png)
+ [![](jenkins-walkthrough-images/image4.png "앱을 Jenkins 다운로드 알리는 대화 상자가 표시를 제공 합니다.")](jenkins-walkthrough-images/image4.png#lightbox)
 
 Jenkins.App 다운로드 완료 되 면 것인지 Jenkins 시작 사용자 지정 하려면 다음 스크린샷에 표시 된 대로 라는 또 다른 대화 상자를 표시 됩니다.
 
- [ ![](jenkins-walkthrough-images/image5.png "응용 프로그램 다운로드를 완료 하는 경우 원하는 Jenkins 시작 사용자 지정 하려면이 스크린 샷에 표시 된 대로 라는 또 다른 대화 상자를 표시 됩니다, 그리고")](jenkins-walkthrough-images/image5.png)
+ [![](jenkins-walkthrough-images/image5.png "응용 프로그램 다운로드를 완료 하는 경우 원하는 Jenkins 시작 사용자 지정 하려면이 스크린 샷에 표시 된 대로 라는 또 다른 대화 상자를 표시 됩니다, 그리고")](jenkins-walkthrough-images/image5.png#lightbox)
 
 Jenkins 사용자 지정 하는 선택적 이며 대부분의 경우에 Jenkins 작동할지에 대 한 응용 프로그램 시작 될 때마다-기본 설정을 수행할 필요가 없습니다.
 
 Jenkins 사용자 지정 해야 하는 경우 클릭 하 여는 **기본값 변경** 단추입니다. 이 두 개의 연속 된 대화 상자가 제공 합니다: Java 명령줄 매개 변수를 요청 하 고 Jenkins 명령줄 매개 변수를 요청 하는 다른 합니다. 다음 두 가지 스크린샷입니다 이러한 두 대화 상자를 보여 줍니다.
 
- [ ![](jenkins-walkthrough-images/image6.png "이 스크린샷은 다음 대화 상자를 보여 줍니다.")](jenkins-walkthrough-images/image6.png)
+ [![](jenkins-walkthrough-images/image6.png "이 스크린샷은 다음 대화 상자를 보여 줍니다.")](jenkins-walkthrough-images/image6.png#lightbox)
 
- [ ![](jenkins-walkthrough-images/image7.png "이 스크린샷은 다음 대화 상자를 보여 줍니다.")](jenkins-walkthrough-images/image7.png)
+ [![](jenkins-walkthrough-images/image7.png "이 스크린샷은 다음 대화 상자를 보여 줍니다.")](jenkins-walkthrough-images/image7.png#lightbox)
 
 Jenkins 실행 되 면 시작 될 때마다 컴퓨터에 사용자 로그인에 있도록 로그인 항목으로 설정 하는 것이 좋습니다. 도킹 스테이션에서 Jenkins 아이콘을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 이렇게 하려면 **옵션... 로그인 할 때 열린**다음 스크린샷에 표시 된 것 처럼:
 
- [ ![](jenkins-walkthrough-images/image8.png "이 스크린 샷에 표시 된 것 처럼 도킹 스테이션에서 Jenkins 아이콘을 마우스 오른쪽 단추로 클릭 하 고 로그인 시 OptionsOpen를 선택 하 여 이렇게 하려면 있습니다.")](jenkins-walkthrough-images/image8.png)
+ [![](jenkins-walkthrough-images/image8.png "이 스크린 샷에 표시 된 것 처럼 도킹 스테이션에서 Jenkins 아이콘을 마우스 오른쪽 단추로 클릭 하 고 로그인 시 OptionsOpen를 선택 하 여 이렇게 하려면 있습니다.")](jenkins-walkthrough-images/image8.png#lightbox)
 
 이렇게 하면 자동으로 실행 될 때마다 Jenkins.App 하지 때 컴퓨터 부팅 시 하지만 사용자가 로그인 합니다. 부팅 시 자동으로 로그인 하기 위해 OS X가 사용할 사용자 계정을 지정 하는 것이 불가능 합니다. 열기는 **시스템 환경 설정**, 선택는 **사용자 및 그룹** 이 스크린 샷에 표시 된 것 처럼 아이콘:
 
- [ ![](jenkins-walkthrough-images/image9.png "시스템 환경 설정을 열고이 스크린 샷에 표시 된 것 처럼 사용자 그룹 아이콘을 선택 합니다.")](jenkins-walkthrough-images/image9.png)
+ [![](jenkins-walkthrough-images/image9.png "시스템 환경 설정을 열고이 스크린 샷에 표시 된 것 처럼 사용자 그룹 아이콘을 선택 합니다.")](jenkins-walkthrough-images/image9.png#lightbox)
 
 클릭는 **로그인 옵션** 단추를 선택한 다음 부팅 시 로그인에 대 한 OS X 사용 하는 계정을 선택 합니다.
 
 이 시점에서 Jenkins가 설치 되었습니다. 그러나, Xamarin 모바일 응용 프로그램을 구축 하려고 하는 경우 일부 플러그 인을 설치 해야 합니다.
 
 
-## <a name="installing-plugins"></a>플러그 인 설치
+### <a name="installing-plugins"></a>플러그 인 설치
 
 Jenkins.App 설치 관리자가 완료 되 면 Jenkins를 시작 하 고 아래 스크린샷에 표시 된 것 처럼 http://localhost:8080, URL과 웹 브라우저를 시작 합니다.
 
- [ ![](jenkins-walkthrough-images/image10.png "이 스크린 샷에 표시 된 것 처럼 8080")](jenkins-walkthrough-images/image10.png)
+ [![](jenkins-walkthrough-images/image10.png "이 스크린 샷에 표시 된 것 처럼 8080")](jenkins-walkthrough-images/image10.png#lightbox)
 
 이 페이지에서 선택 **Jenkins > Jenkins 관리 > 플러그 인 관리** 아래 스크린샷에 표시 된 것 처럼 왼쪽 위 모서리에 있는 메뉴에서:
 
- [ ![](jenkins-walkthrough-images/image11.png "이 페이지에서 왼쪽 위 모서리에 있는 메뉴에서 Jenkins Jenkins 관리 플러그 인 관리 선택")](jenkins-walkthrough-images/image11.png)
+ [![](jenkins-walkthrough-images/image11.png "이 페이지에서 왼쪽 위 모서리에 있는 메뉴에서 Jenkins Jenkins 관리 플러그 인 관리 선택")](jenkins-walkthrough-images/image11.png#lightbox)
 
 이 표시 됩니다는 **Jenkins 플러그 인 관리자** 페이지. 사용 가능한 탭을 클릭 하면 다운로드 및 설치 하는 600 개가 넘는 플러그 인 목록이 표시 됩니다. 이 작업은 아래 스크린샷에 표시:
 
- [ ![](jenkins-walkthrough-images/image12.png "사용 가능한 탭을 클릭 다운로드 및 설치 하는 600 개가 넘는 플러그 인 목록이 표시 됩니다.")](jenkins-walkthrough-images/image12.png)
+ [![](jenkins-walkthrough-images/image12.png "사용 가능한 탭을 클릭 다운로드 및 설치 하는 600 개가 넘는 플러그 인 목록이 표시 됩니다.")](jenkins-walkthrough-images/image12.png#lightbox)
 
 몇 가지는 것을 찾을 수 플러그 인 및 오류 발생 가능성에 대 한 모든 600를 통해 스크롤입니다. Jenkins는 인터페이스의 오른쪽 상단 모서리에 필터 검색 필드를 제공합니다. 이 필터 필드를 사용 하 여 검색 하려면 다음 플러그 인 중 찾기 및 설치 된 하나 또는 전부가 간소화 됩니다.
 
@@ -125,22 +125,22 @@ Jenkins 없이 모든 추가 플러그 인 Git를 지원합니다.
 
 모든는 플러그 인을 설치한 후을 Jenkins를 다시 시작 하 고 각 플러그 인에 대 한 전역 설정을 구성 합니다. 플러그 인에 대 한 전역 설정을 선택 하 여 있습니다 **Jenkins > Jenkins 관리 > 시스템 구성** 아래 스크린샷에 표시 된 것 처럼 왼쪽 위 모서리에서:
 
- [ ![](jenkins-walkthrough-images/image13.png "Jenkins를 선택 하 여 플러그 인에 대 한 전역 설정이 있습니다 / Jenkins 관리 / 모퉁이 전달 하는 왼쪽 상단에서 시스템 구성")](jenkins-walkthrough-images/image13.png)
+ [![](jenkins-walkthrough-images/image13.png "Jenkins를 선택 하 여 플러그 인에 대 한 전역 설정이 있습니다 / Jenkins 관리 / 모퉁이 전달 하는 왼쪽 상단에서 시스템 구성")](jenkins-walkthrough-images/image13.png#lightbox)
 
 이 메뉴 옵션을 선택 하면 돌아갑니다는 **시스템 구성 [Jenkins]** 페이지. 이 페이지에는 섹션을 Jenkins 자체를 구성 하 고 일부는 전역 플러그 인 값을 설정할 수 있습니다.  아래 스크린샷에서이 페이지의 예를 보여 줍니다.
 
- [ ![](jenkins-walkthrough-images/image14.png "이 스크린샷은이 페이지의 예를 보여 줍니다.")](jenkins-walkthrough-images/image14.png)
+ [![](jenkins-walkthrough-images/image14.png "이 스크린샷은이 페이지의 예를 보여 줍니다.")](jenkins-walkthrough-images/image14.png#lightbox)
 
 
-### <a name="configuring-the-msbuild-plugin"></a>MSBuild 플러그 인 구성
+#### <a name="configuring-the-msbuild-plugin"></a>MSBuild 플러그 인 구성
 
 MSBuild 플러그 인을 사용 하도록 구성 해야 **/Library/Frameworks/Mono.framework/Commands/xbuild** Mac 솔루션 및 프로젝트 파일에 대 한 Visual Studio를 컴파일하는 데 있습니다. 아래로 스크롤하여는 **시스템 구성 [Jenkins]** 될 때까지 페이지는 **추가 MSBuild** 아래 스크린샷에 표시 된 것 처럼 단추가 나타납니다.
 
- [ ![](jenkins-walkthrough-images/image15.png "추가 MSBuild 단추가 나타날 때까지 시스템 Jenkins 구성 페이지 아래로 스크롤하여")](jenkins-walkthrough-images/image15.png)
+ [![](jenkins-walkthrough-images/image15.png "추가 MSBuild 단추가 나타날 때까지 시스템 Jenkins 구성 페이지 아래로 스크롤하여")](jenkins-walkthrough-images/image15.png#lightbox)
 
 이 단추를 클릭 하 고 채울는 **이름** 및 **경로** 를 **MSBuild** 표시 되는 양식에서 필드입니다. 이름에 **MSBuild** 설치를 사용 해야 하는 동안 의미 있는 **MSBuild에 대 한 경로** 에 경로가 지정 되어야 `xbuild`, 일반적으로 **/Library/프레임 워크 / Mono.framework/Commands/xbuild**합니다. 변경 내용을 저장 또는 페이지의 맨 아래에 있는 [적용] 단추를 클릭 하 여, 저장 한 후 Jenkins에서 사용할 수 있게 됩니다. `xbuild` 솔루션을 컴파일할 수 있습니다.
 
-### <a name="configuring-the-tfs-plugin"></a>TFS 플러그 인 구성
+#### <a name="configuring-the-tfs-plugin"></a>TFS 플러그 인 구성
 
 이 섹션은 소스 코드 제어에 대 한 TFS를 사용 하려는 경우에 필수입니다.
 
@@ -160,34 +160,34 @@ TFS 서버와 상호 작용 하는 OS X 워크스테이션에 대 한 순서로 
 
 TFS에 대 한 명령줄 클라이언트 설치 되 면 Jenkins의 전체 경로를 구성 해야는 `tf` 명령줄 클라이언트입니다. 아래로 스크롤하여는 **시스템 구성 [Jenkins]** 다음 스크린샷에 표시 된 것 처럼 Team Foundation Server 섹션을 찾을 때까지 페이지:
 
- [ ![](jenkins-walkthrough-images/image17.png "Team Foundation Server 섹션을 찾을 때까지 시스템 Jenkins 구성 페이지 아래로 스크롤하여")](jenkins-walkthrough-images/image17.png)
+ [![](jenkins-walkthrough-images/image17.png "Team Foundation Server 섹션을 찾을 때까지 시스템 Jenkins 구성 페이지 아래로 스크롤하여")](jenkins-walkthrough-images/image17.png#lightbox)
 
 전체 경로를 입력는 `tf` 명령을 실행 하 고 클릭는 **저장** 단추입니다.
 
-## <a name="configure-jenkins-security"></a>Jenkins 보안 구성
+### <a name="configure-jenkins-security"></a>Jenkins 보안 구성
 
 를 처음 설치할 때 모든 사용자를 설정 하 고 익명으로 모든 종류의 작업을 실행 하는 Jenkins 보안이 비활성화 됨에 있습니다. 이 섹션에서는 인증 및 권한 부여를 구성 하는 Jenkins 사용자 데이터베이스를 사용 하 여 보안을 구성 하는 방법에 설명 합니다.
 
 보안 설정을 선택 하 여 있습니다 **Jenkins > Jenkins 관리 > 글로벌 보안 구성**이 스크린 샷에 표시 된 것 처럼:
 
- [ ![](jenkins-walkthrough-images/image18.png "보안 설정은 Jenkins를 선택 하 여 있습니다 / Jenkins 관리 / 글로벌 보안 구성")](jenkins-walkthrough-images/image18.png)
+ [![](jenkins-walkthrough-images/image18.png "보안 설정은 Jenkins를 선택 하 여 있습니다 / Jenkins 관리 / 글로벌 보안 구성")](jenkins-walkthrough-images/image18.png#lightbox)
 
 에 **글로벌 보안 구성** 확인 페이지는 **보안 사용** 확인란 및 **액세스 제어** 폼 나타나야 다음 스크린샷과 유사 하 게:
 
- [ ![](jenkins-walkthrough-images/image19.png "전역 보안 구성 페이지에서 보안 사용 확인 확인란을 선택 하 고 액세스 제어 형식와 비슷하게 나타납니다이 스크린 샷")](jenkins-walkthrough-images/image19.png)
+ [![](jenkins-walkthrough-images/image19.png "전역 보안 구성 페이지에서 보안 사용 확인 확인란을 선택 하 고 액세스 제어 형식와 비슷하게 나타납니다이 스크린 샷")](jenkins-walkthrough-images/image19.png#lightbox)
 
 라디오 단추를 설정/해제 **Jenkins' 사용자 데이터베이스** 에 **보안 영역 섹션**에 및 **사용자가 등록할 수 있도록** 확인란도 선택 하면에 설명 된 대로 다음 스크린 샷:
 
- [ ![](jenkins-walkthrough-images/image20.png "보안 영역 섹션의 Jenkins 사용자 자체 데이터베이스에 대 한 라디오 단추를 설정/해제 하 고 사용자가 등록 하도록 허용도 선택 되어 있는지 확인 하십시오.")](jenkins-walkthrough-images/image20.png)
+ [![](jenkins-walkthrough-images/image20.png "보안 영역 섹션의 Jenkins 사용자 자체 데이터베이스에 대 한 라디오 단추를 설정/해제 하 고 사용자가 등록 하도록 허용도 선택 되어 있는지 확인 하십시오.")](jenkins-walkthrough-images/image20.png#lightbox)
 
 마지막으로 Jenkins를 다시 시작 하 고 새 계정을 만듭니다. 만든 첫 번째 계정은 루트 계정이 고이 계정 관리자에 게 자동으로 승격 됩니다. 로 돌아가 **글로벌 보안 구성** 페이지 및 확인는 **매트릭스 기반 보안** 라디오 단추입니다. 루트 계정의 모든 액세스 권한을 부여 해야 하며, 익명 계정 주어져야 읽기 전용 액세스 다음 스크린샷에 표시 된 것 처럼:
 
- [ ![](jenkins-walkthrough-images/image21.png "루트 계정의 모든 액세스 권한을 부여 해야 하며 익명 계정 읽기 전용 액세스를 제공")](jenkins-walkthrough-images/image21.png)
+ [![](jenkins-walkthrough-images/image21.png "루트 계정의 모든 액세스 권한을 부여 해야 하며 익명 계정 읽기 전용 액세스를 제공")](jenkins-walkthrough-images/image21.png#lightbox)
 
 이러한 설정을 저장할 Jenkins를 다시 시작 되 면 보안 켜 집니다.
 
 
-### <a name="disabling-security"></a>보안을 사용 하지 않도록 설정
+#### <a name="disabling-security"></a>보안을 사용 하지 않도록 설정
 
 된 잊어버린된 암호 또는 Jenkins 수준의 잠금 다음이 단계를 수행 하 여 보안을 사용 하지 않도록 설정할 수 있습니다.
 
@@ -199,7 +199,7 @@ TFS에 대 한 명령줄 클라이언트 설치 되 면 Jenkins의 전체 경로
 4. 삭제는 `<authorizationstrategy></authorizationstrategy>` 및 `<securityrealm></securityrealm>` 는 파일의에서 요소입니다.
 5. Jenkins를 다시 시작 합니다.
 
-# <a name="setting-up-a-job"></a>작업 설정
+## <a name="setting-up-a-job"></a>작업 설정
 
 최상위 수준에서 Jenkins 소프트웨어를 빌드하는 데 필요한 다양 한 작업에서 모든 구성는 *작업*합니다. 작업에 연결 된 소스 코드, 빌드를 실행할 빈도, 빌딩에 필요한 모든 특별 한 변수를 가져오는 방법으로 빌드가 실패 한 경우 개발자가 알리는 방법 등 빌드에 대 한 정보를 제공 하는 메타 데이터를 있습니다.
 
@@ -226,11 +226,11 @@ TFS에 대 한 명령줄 클라이언트 설치 되 면 Jenkins의 전체 경로
  - 하나 이상의 *빌드 작업* 프로젝트에 추가 해야 합니다. 이들은 응용 프로그램을 빌드하는 데 필요한 작업 또는 단계입니다.
  - 하나는 작업을 할당 되어야 합니다 *빌드 트리거* – Jenkins 얼마나 자주 하는 코드를 검색 하 고 최종 프로젝트 빌드 알리는 명령 집합입니다.
 
-## <a name="configuring-source-code-control"></a>소스 코드 제어를 구성합니다.
+### <a name="configuring-source-code-control"></a>소스 코드 제어를 구성합니다.
 
 Jenkins는 첫 번째 작업 소스 코드 관리 시스템에서 소스 코드를 검색 됩니다. Jenkins 인기 있는 소스 코드 관리 시스템 현재 사용할 수 있는 다양 한 지원합니다. 이 섹션에서는 두 인기 있는 시스템 Git 및 Team Foundation Server에 설명 합니다. 이러한 각 소스 코드 관리 시스템 아래 섹션에서 자세히 설명 합니다.
 
-### <a name="using-git-for-source-code-control"></a>소스 코드 제어에 Git를 사용 하 여
+#### <a name="using-git-for-source-code-control"></a>소스 코드 제어에 Git를 사용 하 여
 
 소스 코드 제어에 대 한 TFS를 사용 하는 경우 [건너뛸](#Using_TFS_for_Source_Code_Management) 이 섹션 및 TFS를 사용 하 여 다음 섹션으로 이동 합니다.
 
@@ -240,7 +240,7 @@ Jenkins Git 즉시 지원 – 추가 플러그 인을 찾지는 필요 합니다
 
 변경 내용이 저장 되 면 Git 구성이 완료 되었습니다.
 
-### <a name="using-tfs-for-source-code-management"></a>TFS를 사용 하 여 소스 코드 관리에 대 한
+#### <a name="using-tfs-for-source-code-management"></a>TFS를 사용 하 여 소스 코드 관리에 대 한
 
 이 섹션은 TFS 사용자에만 적용 됩니다.
 
@@ -253,7 +253,7 @@ TFS에 대 한 필요한 정보를 제공 합니다. 다음 스크린 샷에서 
 
 ![](jenkins-walkthrough-images/image27.png "이 스크린 샷 완성 된 폼의 예를 보여 줍니다.")
 
-### <a name="testing-the-source-code-control-configuration"></a>테스트 소스 코드 제어 구성
+#### <a name="testing-the-source-code-control-configuration"></a>테스트 소스 코드 제어 구성
 
 적절 한 소스 코드 제어를 구성한 후 클릭 **저장** 여 변경 내용을 저장 합니다. 다음 스크린 샷에서 비슷합니다는 작업에 대 한 홈 페이지로 돌아갑니다.
 
@@ -273,7 +273,7 @@ TFS에 대 한 필요한 정보를 제공 합니다. 다음 스크린 샷에서 
 
 ![](jenkins-walkthrough-images/image31.png "이 스크린 샷 콘솔 출력 링크도 성공적인 작업에서 출력의 일부를 보여 줍니다.")
 
-### <a name="location-of-build-artifacts"></a>빌드 아티팩트의 위치
+#### <a name="location-of-build-artifacts"></a>빌드 아티팩트의 위치
 
 Jenkins 라는 특수 폴더에는 전체 소스 코드를 검색 합니다는 *작업 영역*합니다. 다음 위치에 폴더에이 디렉터리를 찾을 수 있습니다.
 
@@ -285,7 +285,7 @@ Jenkins 라는 특수 폴더에는 전체 소스 코드를 검색 합니다는 *
 
 ![](jenkins-walkthrough-images/image32.png "이 스크린 샷 HelloWorld 라는 작업에 대 한 작업 영역의 예를 보여 줍니다.")
 
-## <a name="build-triggers"></a>빌드 트리거
+### <a name="build-triggers"></a>빌드 트리거
 
 Jenkins에서 빌드를 시작 하기 위한 일부의 전략-라고 *빌드 트리거*합니다. 빌드 트리거 Jenkins 작업을 시작 하 고 프로젝트를 작성 하는 시기를 결정할 수 있습니다. 일반적인 빌드 트리거 중 두 가지는:
 
@@ -297,7 +297,7 @@ SCM 폴링 되므로 인기 있는 트리거 개발자 빌드가 중단 하도�
 정기적인 빌드는 테스터에 배포할 수 있는 응용 프로그램의 버전을 만들려면 자주 사용 됩니다. 예를 들어, QA 팀의 멤버가 이전 주 작업을 테스트할 수 있도록 정기적인 빌드 금요일 저녁에 대 한 예약 될 수 있습니다.
 
 
-## <a name="compiling-a-xamarinios-applications"></a>Xamarin.iOS 응용 프로그램 컴파일
+### <a name="compiling-a-xamarinios-applications"></a>Xamarin.iOS 응용 프로그램 컴파일
 Xamarin.iOS 프로젝트를 사용 하 여 명령줄에서 컴파일할 수 `xbuild` 또는 `msbuild`합니다. 셸 명령은 Jenkins를 실행 하는 사용자 계정의 컨텍스트에서 실행 됩니다. 사용자 계정에 프로비저닝 프로필에 대 한 액세스 배포에 대 한 응용 프로그램을 제대로 패키지할 수 있도록 유용 합니다. 작업 구성 페이지에서이 셸 명령을 추가 하는 것이 불가능 합니다.
 
 으로 아래로 스크롤하여는 **빌드** 섹션. 클릭는 **추가 빌드 단계** 선택한 단추 **셸 실행**다음 스크린샷에 표시 된 것 처럼,:
@@ -307,7 +307,7 @@ Xamarin.iOS 프로젝트를 사용 하 여 명령줄에서 컴파일할 수 `xbu
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-## <a name="building-a-xamarinandroid-project"></a>Building a Xamarin.Android Project
+### <a name="building-a-xamarinandroid-project"></a>Building a Xamarin.Android Project
 
 Xamarin.Android 프로젝트를 작성 하는 것은 매우 유사 Xamarin.iOS 프로젝트 빌드입니다. APK Xamarin.Android 프로젝트에서를 만들려면 다음 두 단계를 수행 하려면 Jenkins는 구성 해야 합니다.
 
@@ -316,7 +316,7 @@ Xamarin.Android 프로젝트를 작성 하는 것은 매우 유사 Xamarin.iOS �
 
 이러한 두 단계는 다음 두 섹션에서 자세히 설명 합니다.
 
-## <a name="creating-the-apk"></a>APK 만들기
+### <a name="creating-the-apk"></a>APK 만들기
 
 클릭는 **추가 빌드 단계** 단추를 선택 하 고 **에서 Visual Studio 프로젝트 또는 MSBuild를 사용 하 여 솔루션을 만들**아래 스크린샷에 표시 된 것 처럼:
 
@@ -337,7 +337,7 @@ Xamarin.Android 프로젝트를 작성 하는 것은 매우 유사 Xamarin.iOS �
 
 이 APK zip 정렬 해야 하 고 개인 키 저장소와 서명 되지 않은 배포에 대 한 준비 되지 않았습니다.
 
-### <a name="signing-and-zipaligning-the-apk-for-release"></a>서명 및 Zipaligning 릴리스 APK
+#### <a name="signing-and-zipaligning-the-apk-for-release"></a>서명 및 Zipaligning 릴리스 APK
 
 서명 및 zipaligning APK는 기술적으로 두 가지 별도 작업이 Android SDK에서 두 개의 별도 명령줄 도구에 의해 수행 됩니다. 그러나이 하나 이상의 빌드 작업에서 수행 하 여 편리 합니다. 서명 및 zipaligning는 APK 하는 방법에 대 한 자세한 내용은 릴리스에 대 한 Android 응용 프로그램 준비 Xamarin의 설명서를 참조 합니다.
 
@@ -410,12 +410,12 @@ APK 파일에 대 한 환경 변수 중 일부 작성 된 것을 알는 `WORKSPA
 
 모든 빌드 작업을 저장 한 후 것이 모든 기능이 작동을 확인 하려면 수동 빌드를 트리거할 좋습니다. 빌드가 실패 한 경우는 **콘솔 출력** 빌드 실패의 원인에 대 한 내용은 검토 해야 합니다.
 
-## <a name="submitting-tests-to-test-cloud"></a>테스트 테스트 클라우드를 제출합니다.
+### <a name="submitting-tests-to-test-cloud"></a>테스트 테스트 클라우드를 제출합니다.
 
 자동화 된 테스트 셸 명령을 사용 하 여 테스트 클라우드로 제출할 수 있습니다. Xamarin 테스트 클라우드에서 테스트 실행 설정에 대 한 자세한 내용은 사용 하기 위한 가이드 있는 [Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) 또는 [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)합니다.
 
 
-#<a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에서는에서 Mac OS X, 빌드 서버 Jenkins를 도입 하 고를 컴파일하고 Xamarin 릴리스에 대 한 모바일 응용 프로그램을 준비 하려면이 구성 합니다. 여러 플러그 인 빌드 프로세스를 지원 하기 위해 함께 Mac OS X 컴퓨터에서 Jenkins를 설치 했습니다. 생성 하 고, Git 또는 TFS에서 코드를 끌어오도록 되며 다음 릴리스 준비 응용 프로그램에 해당 코드를 컴파일 하는 작업을 구성 합니다. 작업이 실행 되어야 하는 시점을 예약 하는 두 가지 방법으로 살펴본 합니다.
 

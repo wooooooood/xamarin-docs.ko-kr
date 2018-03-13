@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 94d88246090208913c4b340eaed221ab64b78f19
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a8849a75f3c26a83a030700878a3195fde7515f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용한 연속 통합 소개
 
@@ -33,13 +33,13 @@ _연속 통합은 자동화 된 빌드 컴파일 및 코드를 추가 하거나 
 
 다음 다이어그램에서는이 프로세스를 보여 줍니다.
 
-[![](intro-to-ci-images/intro01-small.png "이 다이어그램에서는이 프로세스를 보여 줍니다.")](intro-to-ci-images/intro01.png)
+[![](intro-to-ci-images/intro01-small.png "이 다이어그램에서는이 프로세스를 보여 줍니다.")](intro-to-ci-images/intro01.png#lightbox)
 
 모바일 앱에는 연속 통합에 대 한 고유한 문제가 소개합니다. 앱만 실제 장치에서 사용할 수 있는 예: 카메라 또는 GPS 센서 필요할 수 있습니다. 또한 시뮬레이터, 에뮬레이터 하드웨어의 근사값만 하 고을 숨길 수도 있습니다를 려 서 문제. 되 결국에서 진정한 고객용 준비 인지 확신 하는 실제 하드웨어에서 모바일 앱을 테스트 해야 합니다.
 
 [앱 센터 테스트](https://docs.microsoft.com/en-us/appcenter/test-cloud) 수백 대의 물리적 장치에서 직접 앱을 테스트 하 여이 특정 문제를 해결 합니다. 개발자는 강력한 UI 테스트를 허용 하는 자동화 된 통용 테스트를 작성 합니다. 이러한 테스트 앱 센터에 업로드 되 면 CI 서버 수 자동으로 실행할 CI 프로세스의 일부로 다음 다이어그램에 나와 있는 것 처럼:
 
-[![](intro-to-ci-images/intro02-small.png "이러한 테스트 앱 센터에 업로드 되 면 CI 서버 수 자동으로 실행할 CI 프로세스의 일부로이 다이어그램에 나와 있는 것 처럼")](intro-to-ci-images/intro02.png)
+[![](intro-to-ci-images/intro02-small.png "이러한 테스트 앱 센터에 업로드 되 면 CI 서버 수 자동으로 실행할 CI 프로세스의 일부로이 다이어그램에 나와 있는 것 처럼")](intro-to-ci-images/intro02.png#lightbox)
 
 # <a name="components-of-continuous-integration"></a>연속 통합의 구성 요소
 
@@ -72,7 +72,7 @@ Visual Studio, Visual Studio Team Services 및 Team Foundation Server 참조의 
 
 Git 또는 웹 브라우저를 통해 완전히 작동할 수 [GUI 클라이언트](http://git-scm.com/downloads/guis) Linux, Mac OSX 및 Windows에서 실행 하는 합니다. 공용 저장소;에 대 한 무료입니다. 필요한 개인 저장소는 [계획 유료](https://github.com/pricing)합니다.
 
-Visual Studio 2015 및 Visual Studio Mac에 대 한 Git;에 대 한 기본 지원을 제공합니다 Visual Studio 2013 및 이전 버전에서 Microsoft 제공는 [Git에 대 한 다운로드 가능한 확장명](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c)합니다. 위에서 언급 한 대로 Visual Studio Team Services 및 TFS 대신 TFVC 버전 제어에 대 한 Git을 사용할 수 있습니다.
+Visual Studio 2015 및 Visual Studio Mac에 대 한 Git;에 대 한 기본 지원을 제공합니다 Microsoft는 이전 버전의 경우 다음을 제공 합니다. 한 [Git에 대 한 다운로드 가능한 확장명](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c)합니다. 위에서 언급 한 대로 Visual Studio Team Services 및 TFS 대신 TFVC 버전 제어에 대 한 Git을 사용할 수 있습니다.
 
 
 ### <a name="subversion"></a>Subversion
@@ -102,7 +102,7 @@ Team Foundation Server와 같이 특정 대상 플랫폼에 대 한 빌드 컴�
 
 다음 다이어그램에서는이 지형을이 보여 줍니다.
 
-[![](intro-to-ci-images/intro03-small.png "이 다이어그램에서는이 지형을이 보여 줍니다.")](intro-to-ci-images/intro03.png)
+[![](intro-to-ci-images/intro03-small.png "이 다이어그램에서는이 지형을이 보여 줍니다.")](intro-to-ci-images/intro03.png#lightbox)
 
 VSTS 빌드는 로컬 서버에 위임 됩니다 있도록 Visual Studio Team Services 프로젝트에 대 한 로컬 TFS 서버 연결도 가능 합니다. 자세한 내용은 참조 [배포 빌드 서버를 구성 하 고](http://msdn.microsoft.com/en-us/library/ms181712.aspx) msdn 합니다.
 
@@ -110,13 +110,13 @@ VSTS 빌드는 로컬 서버에 위임 됩니다 있도록 Visual Studio Team Se
 
 앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장할 수 있으며 계속 Jenkins CI 빌드에 사용 합니다. 팀 프로젝트의 Git 리포지토리 또는 체크 인할 때는 코드 TFVC에 코드를 푸시할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services를 통해 Jenkins](https://www.visualstudio.com/en-us/docs/marketplace/integrate/service-hooks/services/jenkins)합니다.
 
-[![](intro-to-ci-images/intro04-small.png "앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장 하 고 계속 Jenkins CI 빌드에 대 한 사용 수 있습니다.")](intro-to-ci-images/intro04.png)
+[![](intro-to-ci-images/intro04-small.png "앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장 하 고 계속 Jenkins CI 빌드에 대 한 사용 수 있습니다.")](intro-to-ci-images/intro04.png#lightbox)
 
 ### <a name="git-and-jenkins"></a>Git 및 Jenkins
 
 다른 일반적인 CI 환경을 완전히 OS X 기반 수 있습니다. 이 시나리오에서는 소스 코드 제어 및 Jenkins 빌드 서버에 대 한 Git를 사용 합니다. 설치 된 Mac에 대 한 Visual Studio와 함께 단일 Mac OS X 컴퓨터에서 실행 중인 둘 다에 해당 합니다. 이 옵션은 Visual Studio Team Services + 이전 섹션에서 설명 하는 Jenkins 환경 매우 유사 합니다.
 
-[![](intro-to-ci-images/intro05-small.png "이 Visual Studio Team Services + 이전 섹션에서 설명 하는 Jenkins 환경 매우 비슷합니다.")](intro-to-ci-images/intro05.png)
+[![](intro-to-ci-images/intro05-small.png "이 Visual Studio Team Services + 이전 섹션에서 설명 하는 Jenkins 환경 매우 비슷합니다.")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
 > **참고: Jenkins는 [Xamarin에서 지원 되지 않습니다](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md)합니다.**

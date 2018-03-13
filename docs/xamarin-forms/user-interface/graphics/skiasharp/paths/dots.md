@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>점, 대시
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 다음 스크린샷에서 왼쪽 끝에 iOS 화면 점선을 보여 줍니다.
 
-[![](dots-images/dotsanddashes-small.png "점, 대시 페이지의 삼중 스크린샷")](dots-images/dotsanddashes-large.png "점과 대시 페이지의 삼중 스크린 샷")
+[![](dots-images/dotsanddashes-small.png "점, 대시 페이지의 삼중 스크린샷")](dots-images/dotsanddashes-large.png#lightbox "점과 대시 페이지의 삼중 스크린 샷")
 
 Android 화면 점선 {10, 10} 배열을 사용 하 여 표시 되는 또한 하지만 대신 선은 단색입니다. 어떻게 된 것입니까? 문제는 Android 화면에서는 스트로크 caps 설정이 있는지 `Square`합니다. 모든 대시 간격 모두 채울 그 결과, 절반 스트로크 너비를 확장 합니다.
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 물론, 실제로 애니메이션을 확인 하기 위해 프로그램을 실행 해야 합니다.
 
-[![](dots-images/animatedspiral-small.png "애니메이션을 나선 페이지의 삼중 스크린샷")](dots-images/animatedspiral-large.png "애니메이션 나선 페이지의 삼중 스크린샷")
+[![](dots-images/animatedspiral-small.png "애니메이션을 나선 페이지의 삼중 스크린샷")](dots-images/animatedspiral-large.png#lightbox "애니메이션 나선 페이지의 삼중 스크린샷")
 
 이제 선을 그리는 파라메트릭 수식을 사용 하 여 곡선을 정의 하는 방법을 살펴보았습니다. 나중에 게시할는 섹션은 다양 한 종류의 곡선을 설명 하는 `SKPath` 지원 합니다.
 

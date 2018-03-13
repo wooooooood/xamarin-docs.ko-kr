@@ -4,14 +4,15 @@ description: "개체를 다양 한 크기 조절용 SkiaSharp 배율 변환을 �
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -103,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 볼 수 있듯이, 그리는 모든 항목이 `Scale` 비례적으로 증가 호출 합니다.
 
-[![](scale-images/basicscale-small.png "기본 크기 조정 페이지의 삼중 스크린 샷")](scale-images/basicscale-large.png "기본 크기 조정 페이지의 삼중 스크린 샷")
+[![](scale-images/basicscale-small.png "기본 크기 조정 페이지의 삼중 스크린 샷")](scale-images/basicscale-large.png#lightbox "기본 크기 조정 페이지의 삼중 스크린 샷")
 
 텍스트를 파선 모퉁이가 및 캔버스의 왼쪽 및 위쪽 가장자리와 모퉁이가 둥근된 사각형 사이의 10 픽셀 여백을 반올림 해당 줄에는 대시의 길이의 너비는 동일한 배율 인수 모두 받습니다.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 모퉁이가 둥근된 사각형의 왼쪽 위 모서리 위치 `margin` 캔버스의 왼쪽에서 픽셀 및 `margin` 위쪽에서 픽셀입니다. 에 대 한 마지막 두 개의 인수는 `Scale` 방법은 해당 값 및 너비와 높이의 모퉁이가 둥근된 사각형의 너비와 높이 이기도 텍스트의로 설정 됩니다. 즉, 모든 크기 조정 사각형의 가운데를 기준으로 합니다.
 
-[![](scale-images/centeredscale-small.png "가운데에 크기 조정 페이지의 삼중 스크린 샷")](scale-images/centeredscale-large.png "가운데에 크기 조정 페이지의 삼중 스크린 샷")
+[![](scale-images/centeredscale-small.png "가운데에 크기 조정 페이지의 삼중 스크린 샷")](scale-images/centeredscale-large.png#lightbox "가운데에 크기 조정 페이지의 삼중 스크린 샷")
 
 `Slider` 범위의 & #x 2013;이 프로그램에는 요소는 10 ~ 10입니다. 볼 수 있듯이 세로 크기 조정 (예:는 Android에서 가운데에 화면)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 가로 축을 대칭 개체가 합니다. 가로 크기 조정 (예: Windows 화면 오른쪽)의 음수 값을 선택 하면 개체가 크기 조정의 중심을 통과 하는 세로 축을 대칭 이동 합니다.
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 `pathBounds` 위쪽이 코드의 사각형은 구하여 너비와 높이 캔버스 나중에 사용 된 `Scale` 호출 합니다. 렌더링 될 때 호출 자체로 경로의 좌표 크기 조정 됩니다는 `DrawPath` 호출 했지만 별 캔버스의 오른쪽 위 모서리에서 가운데에 맞춰야 합니다. 아래쪽 및 왼쪽으로 이동 해야 합니다. 이 작업의는 `Translate` 호출 합니다. 이러한 두 속성의 `pathBounds` 약-100 되므로 변환 요소는 약 100입니다. 때문에 `Translate` 후 호출 되는 `Scale` 호출, 캔버스의 가운데에는 별모양의 중심 이동 하도록 배율 요소에 의해 효과적으로 해당 값이 확장:
 
-[![](scale-images/anisotropicscaling-small.png "이방성 크기 조정 페이지의 삼중 스크린샷")](scale-images/anisotropicscaling-large.png "이방성 크기 조정 페이지의 삼중 스크린 샷")
+[![](scale-images/anisotropicscaling-small.png "이방성 크기 조정 페이지의 삼중 스크린샷")](scale-images/anisotropicscaling-large.png#lightbox "이방성 크기 조정 페이지의 삼중 스크린 샷")
 
 또 다른 방법은 생각해볼 수 있겠습니다는 `Scale` 및 `Translate` 역방향 시퀀스의 효과 확인 하는 호출:는 `Translate` 캔버스의 왼쪽 위 모서리에서 지향 하지만 완벽 하 게 표시 되는 것이 호출 경로 이동 합니다. `Scale` 메서드 설정 하면 해당 별 큰 왼쪽 위 모퉁이 기준으로 합니다.
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 도 비슷한 논리가 이며에서 반환 된 텍스트 경계 사각형에 따라 페이지의 크기에 텍스트가 확장 `MeasureText` (실제 텍스트 보다 약간 큰는 있는):
 
-[![](scale-images/anisotropictext-small.png "3 중 이방성 테스트 페이지 스크린샷")](scale-images/anisotropictext-large.png "3 중 이방성 테스트 페이지 스크린샷")
+[![](scale-images/anisotropictext-small.png "3 중 이방성 테스트 페이지 스크린샷")](scale-images/anisotropictext-large.png#lightbox "3 중 이방성 테스트 페이지 스크린샷")
 
 그래픽 개체의 가로 세로 비율을 유지 해야 할 경우 등방성 크기 조정을 사용 합니다. **등방성 배율** 페이지 11 점이 개인 별에 대 한이 보여 줍니다. 개념적으로, 그래픽 개체 등방성 크기 조정을 사용 하 여 페이지의 가운데에 표시 하기 위한 단계는.
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 코드도 표시 별 10 번 이상, 10%-점진적으로 빨강에서 파랑 색을 변경 하 여 크기 조정의 감소 될 때마다:
 
-[![](scale-images/isotropicscaling-small.png "등방성 크기 조정 페이지의 삼중 스크린샷")](scale-images/isotropicscaling-large.png "등방성 크기 조정 페이지의 삼중 스크린 샷")
+[![](scale-images/isotropicscaling-small.png "등방성 크기 조정 페이지의 삼중 스크린샷")](scale-images/isotropicscaling-large.png#lightbox "등방성 크기 조정 페이지의 삼중 스크린 샷")
 
 
 ## <a name="related-links"></a>관련 링크

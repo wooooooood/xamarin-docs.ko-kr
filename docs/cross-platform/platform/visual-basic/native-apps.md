@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: dc107ee865ea93cdc12148a5498cf3d512f1dae9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95817c2ec22c4c27f0f4a933db54105614e54030
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Xamarin iOS 및 Android visual Basic.NET
 
 [TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/) 샘플 응용 프로그램 Xamarin과 Visual Basic 코드를 이식 가능한 클래스 라이브러리로 컴파일를 사용할 수 있는 방법을 보여 줍니다. 다음은 iOS, Android 및 Windows Phone 실행 되는 결과 앱의 일부 스크린 샷은입니다.
 
- [ ![](native-apps-images/image5.png "iOS, Android 및 Windows phone Visual Basic을 사용 하 여 빌드한 앱 실행")](native-apps-images/image5.png)
+ [![](native-apps-images/image5.png "iOS, Android 및 Windows phone Visual Basic을 사용 하 여 빌드한 앱 실행")](native-apps-images/image5.png#lightbox)
 
 iOS, Android 및 Windows Phone 예제에서 프로젝트는 모든 C#으로 작성 됩니다. 기본 기술을 사용 하 여 각 응용 프로그램에 대 한 사용자 인터페이스 빌드 (스토리 보드, Xml 및 Xaml 각각), 동안는 `TodoItem` Visual Basic 이식 가능한 클래스 라이브러리에서 관리를 제공를 사용 하는 `IXmlStorage` 구현에서 제공 네이티브 프로젝트입니다.
 
@@ -26,7 +26,8 @@ iOS, Android 및 Windows Phone 예제에서 프로젝트는 모든 C#으로 작�
 
 이 가이드에서는에서 Visual Basic 어떻게 구현 되었는지는 [TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB) iOS 및 Android 용 Xamarin 샘플입니다.
 
-> ⚠️ 지침을 검토 [Visual Basic.NET PCLs](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/) 이 가이드를 계속 합니다.
+> [!NOTE]
+> 지침을 검토 [Visual Basic.NET PCLs](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/) 이 가이드를 계속 합니다.
 
 ## <a name="visualbasicportablelibrary"></a>VisualBasicPortableLibrary
 
@@ -158,9 +159,9 @@ Public Class TodoItemRepositoryXML
 End Class
 ```
 
-> ℹ️ **참고:** 이 코드는은의 예는 매우 기본적인 데이터 저장소 메커니즘입니다.
-> 이식 가능한 클래스 라이브러리에 (이 경우 로드 하 고 Xml 파일을 저장할) 플랫폼 특정 기능에 액세스 하는 인터페이스에 대 한 코드를 작성할 수 방법을 보여 주기 위해 제공 됩니다.
-> 것이 없습니다 프로덕션 품질 데이터베이스 대신 사용할 수 있습니다.
+> [!NOTE]
+> 이 코드는는 매우 기본적인 데이터 저장 메커니즘의 예시입니다.
+> 이식 가능한 클래스 라이브러리에 (이 경우 로드 하 고 Xml 파일을 저장할) 플랫폼 특정 기능에 액세스 하는 인터페이스에 대 한 코드를 작성할 수 방법을 보여 주기 위해 제공 됩니다. 것이 없습니다 프로덕션 품질 데이터베이스 대신 사용할 수 있습니다.
 
 ## <a name="ios-android-and-windows-phone-application-projects"></a>iOS, Android 및 Windows Phone 응용 프로그램 프로젝트
 
@@ -263,7 +264,7 @@ TodoMgr = new TodoItemManager(filename, xmlStorage);
 
 Windows Phone 응용 프로그램의 나머지 구성 Xaml 및 C# 사용자 인터페이스를 만들고 사용 하는 `TodoMgr` 클래스를 로드 및 저장 `TodoItem` 개체입니다.
 
-# <a name="visual-basic-pcl-in-visual-studio-for-mac"></a>PCL Mac 용 Visual Studio에서 Visual Basic
+## <a name="visual-basic-pcl-in-visual-studio-for-mac"></a>PCL Mac 용 Visual Studio에서 Visual Basic
 
 Mac 용 visual Studio는 Visual Basic 언어를 지원 하지 않습니다 – 만들거나 Mac.에 대 한 Visual Studio와 Visual Basic 프로젝트를 컴파일할 수 없습니다.
 
@@ -271,58 +272,58 @@ Mac 용 visual Studio는 Visual Basic 언어를 지원 하지 않습니다 – �
 
 이 섹션에서는 Visual Studio에서 PCL 어셈블리를 컴파일한 다음이 보장 것은 버전 제어 시스템에 저장 된 다른 프로젝트에서 참조 하는 방법을 설명 합니다.
 
-## <a name="keeping-the-pcl-output-from-visual-studio"></a>Visual Studio에서 PCL 출력 유지
+### <a name="keeping-the-pcl-output-from-visual-studio"></a>Visual Studio에서 PCL 출력 유지
 
 기본적으로 대부분의 버전 제어 시스템 (TFS 및 Git 포함)를 무시 하도록 구성 됩니다는 **/bin/** 즉, 컴파일된 PCL 어셈블리 디렉터리에 저장 되지 것입니다. 이 의미에 대 한 참조를 추가 하는 Mac에 대 한 Visual Studio를 실행 하는 모든 컴퓨터에 수동으로 복사 해야 합니다.
 
 버전 제어 시스템 PCL 어셈블리 출력을 저장할 수 있도록 프로젝트 루트에 복사 하는 빌드 후 스크립트를 만들 수 있습니다. 이 빌드 후 단계를 사용 하는 어셈블리를 쉽게 소스 제어에 추가 하 고 다른 프로젝트와 공유할 수 있습니다.
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+#### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 된 **속성 > 빌드 이벤트** 섹션.
 
 2. 추가 _빌드 후_ 프로젝트 루트 디렉터리에이 프로젝트에서 출력 DLL을 복사 하는 스크립트 (외부의 **/bin/**). 버전 제어 구성에 따라 DLL 이제 수 소스 제어에 추가할 수 있습니다.
 
-  [ ![](native-apps-images/image6-vs-sml.png "Post 빌드 스크립트가 VB DLL을 복사 하도록 빌드 이벤트")](native-apps-images/image6-vs.png)
+  [![](native-apps-images/image6-vs-sml.png "Post 빌드 스크립트가 VB DLL을 복사 하도록 빌드 이벤트")](native-apps-images/image6-vs.png#lightbox)
 
-### <a name="visual-studio-2015"></a>Visual Studio 2015
+#### <a name="visual-studio-2015"></a>Visual Studio 2015
 
 1.  프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성 > 컴파일** , 그런 다음 모든 구성의 왼쪽 위 조합 상자에서 선택 되어 있는지 확인 합니다. 클릭는 **빌드 이벤트 중...**  오른쪽 하단에서 단추입니다.
 
-  [ ![](native-apps-images/image6.png "프로젝트 속성 컴파일 섹션")](native-apps-images/image6.png)
+    [![](native-apps-images/image6.png "프로젝트 속성 컴파일 섹션")](native-apps-images/image6.png#lightbox)
 
 1.  프로젝트 루트 디렉터리에이 프로젝트에서 출력 DLL을 복사 하는 빌드 후 스크립트 추가 (외부의 **/bin/** ). 버전 제어 구성에 따라 DLL 이제 수 소스 제어에 추가할 수 있습니다.
 
-  [ ![](native-apps-images/image7.png "빌드 이벤트 창")](native-apps-images/image7.png)
+    [![](native-apps-images/image7.png "빌드 이벤트 창")](native-apps-images/image7.png#lightbox)
 
-### <a name="all-versions"></a>모든 버전
+#### <a name="all-versions"></a>모든 버전
 
 다음에 프로젝트를 빌드, 프로젝트 루트 및 검사에 / 커밋/푸시 DLL 변경 내용이 됩니다 이식 가능한 클래스 라이브러리 어셈블리를 복사할지 저장 (되므로 Mac 용 Visual Studio를 사용 하는 Mac에 다운로드할 수 있습니다).
 
-  [ ![](native-apps-images/image8-sml.png "출력 Visual 기본 어셈블리의 파일 위치")](native-apps-images/image8.png)
+  [![](native-apps-images/image8-sml.png "출력 Visual 기본 어셈블리의 파일 위치")](native-apps-images/image8.png#lightbox)
 
 
 이 어셈블리 다음 추가할 수 있습니다에 Visual Studio의 Xamarin 프로젝트, Mac 용 Xamarin iOS 또는 Android 프로젝트에서 자체 Visual Basic 언어를 사용할 수 없습니다도 합니다.
 
-## <a name="referencing-the-pcl-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 PCL 참조
+### <a name="referencing-the-pcl-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 PCL 참조
 
 Xamarin은 Visual Basic을 지원 하지 않으므로이 스크린 샷에 표시 된 것 처럼 PCL 프로젝트 (또는 Windows Phone 앱)를 로드할 수 없습니다 것:
 
- [ ![](native-apps-images/image9.png "Mac 솔루션에 대 한 visual Studio")](native-apps-images/image9.png)
+ [![](native-apps-images/image9.png "Mac 솔루션에 대 한 visual Studio")](native-apps-images/image9.png#lightbox)
 
 Xamarin.iOS 및 Xamarin.Android 프로젝트에서 Visual Basic PCL 어셈블리 DLL 여전히 포함 시키려면:
 
 1.  마우스 오른쪽 단추로 클릭는 **참조** 노드 선택한 **참조 편집...**
 
-  [ ![](native-apps-images/image10.png "프로젝트 편집 참조 메뉴")](native-apps-images/image10.png)
+    [![](native-apps-images/image10.png "프로젝트 편집 참조 메뉴")](native-apps-images/image10.png#lightbox)
 
 1.  선택 된 **.NET 어셈블리** 탭 하 고 Visual Basic 프로젝트 디렉터리에 출력 DLL로 이동 합니다. Mac 용 Visual Studio에서 프로젝트를 열 수 없는 경우에 모든 파일은 소스 제어에서 있습니다 수. 있습니다 클릭 **추가** 다음 **확인** iOS 및 Android 응용 프로그램에이 어셈블리를 추가 합니다.
 
-  [ ![](native-apps-images/image11-sml.png "클릭 한 다음 추가 확인 iOS 및 Android 응용 프로그램에이 어셈블리를 추가 하려면")](native-apps-images/image11.png)
+    [![](native-apps-images/image11-sml.png "클릭 한 다음 추가 확인 iOS 및 Android 응용 프로그램에이 어셈블리를 추가 하려면")](native-apps-images/image11.png#lightbox)
 
 1.  IOS 및 Android 응용 프로그램 이제 Visual Basic 이식 가능한 클래스 라이브러리에서 제공 하는 응용 프로그램 논리를 포함할 수 있습니다. 이 스크린샷은 Visual Basic PCL 참조 하며 해당 라이브러리에서 기능을 사용 하는 코드를 포함 하는 iOS 응용 프로그램을 보여 줍니다.
 
-  [ ![](native-apps-images/image12-sml.png "편집 참조 추가.NET 어셈블리 창")](native-apps-images/image12.png)
+    [![](native-apps-images/image12-sml.png "편집 참조 추가.NET 어셈블리 창")](native-apps-images/image12.png#lightbox)
 
 
 Visual Studio에서 Visual Basic 프로젝트에 프로젝트 빌드, 소스 제어에 결과 어셈블리 DLL을 저장 하려면 기억 하 고 Mac 용 Visual Studio에서는 있도록 Mac에 소스 제어에서이 새 DLL을 차단한 변경 되 면 최신 포함 기능입니다.

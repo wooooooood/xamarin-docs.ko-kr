@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: eec352264d918730e68a925f2a1e3796d9125c88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4be12c5530f59dc027672d8db72b966711a531d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>앱 배포 개요
 
@@ -21,7 +21,7 @@ _이 문서는 Xamarin.iOS 응용 프로그램에 사용할 수 있는 배포 �
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 아래 다이어그램에서 강조 표시된 부분과 같이 사용자에게 앱을 배포하는 것입니다.
 
 
-[![](images/publishingdiagram.png "iOS 앱을 개발한 후 사용자에게 해당 앱을 배포(다이어그램에서 강조 표시된 섹션)")](images/publishingdiagram.png)
+[![](images/publishingdiagram.png "iOS 앱을 개발한 후 사용자에게 해당 앱을 배포(다이어그램에서 강조 표시된 섹션)")](images/publishingdiagram.png#lightbox)
 
 
 Xamarin.iOS에서 지원하는 iOS 응용 프로그램을 배포하기 위해 Apple에서 제공하는 방법은 다음과 같습니다.
@@ -31,6 +31,8 @@ Xamarin.iOS에서 지원하는 iOS 응용 프로그램을 배포하기 위해 Ap
 2. [**임시**](#Ad_Hoc_Distribution)
 
 이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 장치에 대한 정보도 포함되어 있습니다.
+
+<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -42,12 +44,15 @@ iOS 응용 프로그램이 iOS 장치의 소비자에게 배포되는 기본 방
 
 자세한 내용은 [앱 스토어 배포](~/ios/deploy-test/app-distribution/app-store-distribution/index.md) 가이드를 참조하세요.
 
+<a name="In-House_Distribution"/>
+
 ## <a name="in-house-distribution"></a>사내 배포
 
 *엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 응용 프로그램을 설치할 수 있는 장치의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
 
 사내 응용 프로그램을 설정하고 배포하는 방법에 대한 자세한 내용은 [사내 배포 가이드](~/ios/deploy-test/app-distribution/in-house-distribution.md)를 참조하세요.
 
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>임시 배포
 

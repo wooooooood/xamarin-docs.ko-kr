@@ -4,14 +4,15 @@ description: "곡선 그리기 및 경로 기능을 사용 하 여 SkiaSharp를 
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0e3a9d0e4bedb2e4321c3c846eddeee8b36cb3e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9daea43ea09f7acaa2f3cd1300785391f69c4746
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
@@ -21,19 +22,19 @@ _곡선 그리기 및 경로 기능을 사용 하 여 SkiaSharp를 사용 하는
 
 이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **곡선과 추가 경로** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램을 및는 [ **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
 
-## <a name="three-ways-to-draw-an-arcarcsmd"></a>[호를 그리려면 다음 세 가지 방법](arcs.md)
+## <a name="three-ways-to-draw-an-arcarcsmd"></a>[원호를 그리는 3가지 방법](arcs.md)
 
 SkiaSharp를 사용 하 여 세 가지 방법으로 호를 정의 하는 방법에 알아봅니다.
 
-## <a name="three-types-of-bzier-curvesbeziersmd"></a>[세 가지 유형의 베 지 어 곡선으로 분할](beziers.md)
+## <a name="three-types-of-bzier-curvesbeziersmd"></a>[3가지 형식의 Bézier 곡선](beziers.md)
 
 탐색 SkiaSharp 렌더링 입방 형 3, 정방형, 및 원추형 베 지 어 곡선을 사용 하는 방법
 
-## <a name="svg-path-datapath-datamd"></a>[SVG 경로 데이터입니다.](path-data.md)
+## <a name="svg-path-datapath-datamd"></a>[SVG 경로 데이터](path-data.md)
 
 텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다.
 
-## <a name="clipping-with-paths-and-regionsclippingmd"></a>[경로 및 영역을 사용 하 여 클리핑](clipping.md)
+## <a name="clipping-with-paths-and-regionsclippingmd"></a>[경로 및 지역 클리핑](clipping.md)
 
 클립 그래픽 경로 사용 하 여 특정 영역을 영역을 만드는 데 합니다.
 

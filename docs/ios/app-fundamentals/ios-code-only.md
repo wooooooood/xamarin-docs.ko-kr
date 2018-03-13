@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5e4b0e7bbad94976b23e58d4248cb2ea1a6f2b0f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
 
@@ -24,7 +24,7 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 
 다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
-[ ![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰가, 및 뷰-컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰가, 및 뷰-컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
 그러나 사용 하 여 이러한 보기 계층을 생성할 수는 [iOS에 대 한 Xamarin 디자이너](~/ios/user-interface/designer/index.md) Visual Studio에서 좋네요 코드에서 완전히 작동 하는 방법에 대 한 기본적인 이해 합니다. 이 문서 코드 전용 사용자 인터페이스 개발 실행 되 고 작동 하는 기본 가리키는 몇 가지 안내 합니다.
 
@@ -32,7 +32,7 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 
 다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
-[ ![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰가, 및 뷰-컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰가, 및 뷰-컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
 
 그러나 사용 하 여 이러한 보기 계층을 생성할 수는 [iOS에 대 한 Xamarin 디자이너](~/ios/user-interface/designer/index.md) Mac 용 Visual Studio에서 좋네요 코드에서 완전히 작동 하는 방법에 대 한 기본적인 이해 합니다. 이 문서 코드 전용 사용자 인터페이스 개발 실행 되 고 작동 하는 기본 가리키는 몇 가지 안내 합니다.
@@ -49,13 +49,13 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 첫째, iPhone을 사용 하 여 Visual Studio에서 iOS 프로젝트를 만들 **빈 프로젝트** 서식 파일을 아래 표시 된는 컨트롤러와 뷰를 추가 하려면 확장 합니다.
 
 
-[ ![](ios-code-only-images/blankapp-vs.png "새 프로젝트 대화 상자")](ios-code-only-images/blankapp-vs.png)
+[![](ios-code-only-images/blankapp-vs.png "새 프로젝트 대화 상자")](ios-code-only-images/blankapp-vs.png#lightbox)
 
 
 빈 프로젝트 템플릿을 프로젝트에 4 개 파일을 추가합니다.
 
 
-[ ![](ios-code-only-images/empty-project.png "프로젝트 파일")](ios-code-only-images/empty-project.png)
+[![](ios-code-only-images/empty-project.png "프로젝트 파일")](ios-code-only-images/empty-project.png#lightbox)
 
 
 1. **AppDelegate.cs** -를 포함 한 `UIApplicationDelegate` 하위 클래스 `AppDelegate` , iOS에서 응용 프로그램 이벤트를 처리 하는 데 사용 되는 합니다. 응용 프로그램 창에 만들어집니다는 `AppDelegate`의 `FinishedLaunching` 메서드.
@@ -76,16 +76,16 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
 
 1. 단일 보기 응용 프로그램 템플릿을 사용 하 여 새 iOS 프로젝트를 만들려면:
     
-    [ ![](ios-code-only-images/single-view-app.png "단일 보기 응용 프로그램 템플릿을 사용 하 여")](ios-code-only-images/single-view-app.png)
+    [![](ios-code-only-images/single-view-app.png "단일 보기 응용 프로그램 템플릿을 사용 하 여")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. 삭제 된 `Main.Storyboard` 및 `ViewController.cs` 파일입니다. 수행 **하지** 삭제는 `LaunchScreen.Storyboard`합니다. 스토리 보드에서 만들어진 보기 컨트롤러에 대 한 코드 숨김 그대로 뷰 컨트롤러를 삭제 해야 합니다.
 1. 선택 되어 있는지 확인 **삭제** 팝업 대화 상자에서:
     
-    [ ![](ios-code-only-images/delete.png "팝업 대화 상자에서 삭제를 선택 합니다.")](ios-code-only-images/delete.png)
+    [![](ios-code-only-images/delete.png "팝업 대화 상자에서 삭제를 선택 합니다.")](ios-code-only-images/delete.png#lightbox)
 
 1. Info.plist에서 내부 정보를 삭제는 **배포 정보 > 주 인터페이스** 옵션:
     
-    [ ![](ios-code-only-images/main-interface.png "주 인터페이스 옵션에 포함 된 정보를 삭제 합니다.")](ios-code-only-images/main-interface.png)
+    [![](ios-code-only-images/main-interface.png "주 인터페이스 옵션에 포함 된 정보를 삭제 합니다.")](ios-code-only-images/main-interface.png#lightbox)
 
 1. 마지막으로, 다음 코드를 추가 하면 `FinishedLaunching` AppDelegate 클래스의 메서드:
         
@@ -176,7 +176,7 @@ public class AppDelegate : UIApplicationDelegate
 
 모든 컨트롤러에서 액세스할 수 있는 관련된 보기에는 `View` 속성입니다. 위의 코드에서는 변경 보기의 `BackgroundColor` 속성을 `UIColor.LightGray` 를 아래와 같이 표시 됩니다.
 
- [ ![](ios-code-only-images/image1.png "보기의 배경을 표시 밝은 회색은")](ios-code-only-images/image1.png)
+ [![](ios-code-only-images/image1.png "보기의 배경을 표시 밝은 회색은")](ios-code-only-images/image1.png#lightbox)
 
 모든 설정 수 `UIViewController` 으로 하위 클래스는 `RootViewController` 이러한 방식으로 포함 하 여 컨트롤러에서 도메인 UIKit 직접 작성 하는 것입니다. 예를 들어 다음 코드는 추가 `UINavigationController` 로 `RootViewController`:
 
@@ -214,7 +214,7 @@ public class AppDelegate : UIApplicationDelegate
 
 아래와 같이 탐색 컨트롤러 내에 중첩 된 컨트롤러를 생성 합니다.
 
- [ ![](ios-code-only-images/image2.png "탐색 컨트롤러 내에 중첩 된 컨트롤러")](ios-code-only-images/image2.png)
+ [![](ios-code-only-images/image2.png "탐색 컨트롤러 내에 중첩 된 컨트롤러")](ios-code-only-images/image2.png#lightbox)
 
 ## <a name="creating-a-view-controller"></a>보기 컨트롤러 만들기
 
@@ -224,11 +224,11 @@ public class AppDelegate : UIApplicationDelegate
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](ios-code-only-images/customviewcontroller.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/customviewcontroller.png)
+[![](ios-code-only-images/customviewcontroller.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/customviewcontroller.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](ios-code-only-images/new-file.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/new-file.png)
+[![](ios-code-only-images/new-file.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/new-file.png#lightbox)
 
 -----
 
@@ -245,6 +245,8 @@ namespace CodeOnlyDemo
     }
 }
 ```
+
+<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>뷰 초기화
 
@@ -302,11 +304,11 @@ Window.RootViewController = navController;
 
 이제 로드 될 때 응용 프로그램의 `CustomViewController` 탐색 컨트롤러 내 로드 됩니다.
 
- [ ![](ios-code-only-images/customvc.png "탐색 컨트롤러 내에서 CustomViewController 로드")](ios-code-only-images/customvc.png)
+ [![](ios-code-only-images/customvc.png "탐색 컨트롤러 내에서 CustomViewController 로드")](ios-code-only-images/customvc.png#lightbox)
  
 단추를 클릭 합니다 _푸시_ 탐색 스택에 새 뷰 컨트롤러:
 
-[ ![](ios-code-only-images/customvca.png "탐색 스택에 밀어 넣은 새 뷰 컨트롤러")](ios-code-only-images/customvca.png)
+[![](ios-code-only-images/customvca.png "탐색 스택에 밀어 넣은 새 뷰 컨트롤러")](ios-code-only-images/customvca.png#lightbox)
 
 ## <a name="building-the-view-hierarchy"></a>뷰 계층 구조를 작성합니다.
 
@@ -352,7 +354,7 @@ class CustomViewController : UIViewController
 
 응용 프로그램을는 `UITextField` 포함 아래에 표시 됩니다.
 
- [ ![](ios-code-only-images/image4.png "포함 된 UITextField로 응용 프로그램")](ios-code-only-images/image4.png)
+ [![](ios-code-only-images/image4.png "포함 된 UITextField로 응용 프로그램")](ios-code-only-images/image4.png#lightbox)
 
 추가할 수 있습니다는 `UITextField` 유사한 방식으로 암호를이 경우에만 설정는 `SecureTextEntry` 속성을 아래와 같이 true로:
 
@@ -380,7 +382,7 @@ public class CustomViewController : UIViewController
 
 설정 `SecureTextEntry = true` 에 입력 한 텍스트를 숨기는 `UITextField` 아래와 같이 사용자가:
 
- [ ![](ios-code-only-images/image4a.png "True는 사용자가 입력 한 텍스트를 숨기려면 SecureTextEntry 설정")](ios-code-only-images/image4a.png)
+ [![](ios-code-only-images/image4a.png "True는 사용자가 입력 한 텍스트를 숨기려면 SecureTextEntry 설정")](ios-code-only-images/image4a.png#lightbox)
 
 ### <a name="adding-the-button"></a>단추 추가
 
@@ -403,7 +405,7 @@ View.AddSubview(submitButton);
 
 로그인 화면 위치에이 아래와 같이 이제 나타납니다.
 
- [ ![](ios-code-only-images/image5.png "로그인 화면")](ios-code-only-images/image5.png)
+ [![](ios-code-only-images/image5.png "로그인 화면")](ios-code-only-images/image5.png#lightbox)
 
 와 달리 이전 버전 iOS의 기본 단추 배경은 투명 합니다. 단추의 변경 `BackgroundColor` 이 속성이 변경:
 
@@ -419,7 +421,7 @@ submitButton.Layer.CornerRadius = 5f;
 
 이러한 변경 내용으로 뷰는 다음과 같이 표시 됩니다.
 
-[ ![](ios-code-only-images/image6.png "보기의 한 예 실행")](ios-code-only-images/image6.png)
+[![](ios-code-only-images/image6.png "보기의 한 예 실행")](ios-code-only-images/image6.png#lightbox)
  
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>보기 계층에 뷰 여러 개 추가
 
@@ -452,7 +454,7 @@ submitButton.TouchUpInside += (sender, e) => {
 
 탐색 아래 그림에 나와 있습니다.
 
-[ ![](ios-code-only-images/navigation.png "이 차트 탐색 보여 줍니다.")](ios-code-only-images/navigation.png)
+[![](ios-code-only-images/navigation.png "이 차트 탐색 보여 줍니다.")](ios-code-only-images/navigation.png#lightbox)
 
 기본적으로 탐색 컨트롤러를 사용 하는 경우 iOS 응용 프로그램에 제공 탐색 모음 및 사용자 스택을 통해 다시 이동할 수 있도록 뒤로 단추를 확인 합니다.
 
@@ -477,7 +479,7 @@ foreach(var subview in View.Subviews)
 
 가로 방향으로 장치를 회전할 하는 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게 다음 스크린 샷에서 같이:
 
- [ ![](ios-code-only-images/image7.png "가로 방향으로 장치를 회전할 하는 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게")](ios-code-only-images/image7.png)
+ [![](ios-code-only-images/image7.png "가로 방향으로 장치를 회전할 하는 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게")](ios-code-only-images/image7.png#lightbox)
 
 이 문제를 해결 하는 방법을 설정 하는 것은 `AutoresizingMask` 각 보기에는 속성입니다. 이 경우에 있게 하려면이 컨트롤을 수평으로 확장 하도록 각 설정할 것 `AutoresizingMask`합니다. 다음 예제에 대 한는 `usernameField`, 있으 나 동일한 들은 뷰 계층 구조에서 각 가젯에 적용 될 수 있습니다.
 
@@ -487,7 +489,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 이제 장치 또는 시뮬레이터를 회전에서는 모든 확장을 채우는 추가 공간을 아래와 같이:
 
- [ ![](ios-code-only-images/image8.png "모든 컨트롤을 추가 공간을 채우도록 확장")](ios-code-only-images/image8.png)
+ [![](ios-code-only-images/image8.png "모든 컨트롤을 추가 공간을 채우도록 확장")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>사용자 지정 보기 만들기
 
@@ -592,7 +594,7 @@ submitButton.TouchUpInside += delegate
 
 이제 응용 프로그램을 실행 하 고 전송 단추를 탭, 원이 있는 새 보기가 표시 됩니다.
 
- [ ![](ios-code-only-images/circles.png "새 보기가 원으로 표시 됩니다.")](ios-code-only-images/circles.png)
+ [![](ios-code-only-images/circles.png "새 보기가 원으로 표시 됩니다.")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>시작 화면 만들기
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 726c65746b1282223c403b08c54c400ea32a6324
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cell-appearance"></a>셀 모양
 
@@ -230,7 +230,7 @@ public class CustomCell : ViewCell
 또한 UI 컨트롤에 바인딩할 수는 [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) 재정의할 필요가 없으므로 해당 값을 표시 하는 인스턴스는 `OnBindingContextChanged` 메서드.
 
 > [!NOTE]
-> **참고**: 재정의 하는 경우 `OnBindingContextChanged`, 기본 클래스의 확인 `OnBindingContextChanged` 받도록 등록 된 대리자 메서드는 `BindingContextChanged` 이벤트입니다.
+> 재정의 하는 경우 `OnBindingContextChanged`, 기본 클래스의 확인 `OnBindingContextChanged` 받도록 등록 된 대리자 메서드는 `BindingContextChanged` 이벤트입니다.
 
 XAML에서 바인딩 사용자 지정 셀 유형 데이터를 얻을 수 있습니다 다음 코드 예제에 표시 된 대로:
 

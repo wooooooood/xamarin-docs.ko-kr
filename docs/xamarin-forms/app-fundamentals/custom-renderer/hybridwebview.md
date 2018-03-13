@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -151,7 +151,7 @@ public partial class HybridWebViewPage : ContentPage
 1. 추가 `ExportRenderer` 특성을 사용자 지정 렌더러 클래스 Xamarin.Forms 사용자 지정 컨트롤을 렌더링 하 사용 수를 지정할 수 있습니다. 이 특성은 Xamarin.Forms를 사용한 사용자 지정 렌더러를 등록 하려면 사용 합니다.
 
 > [!NOTE]
-> **참고**: 대부분의 Xamarin.Forms 요소에 대 한 것은 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하는 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 요소입니다.
+> 대부분의 Xamarin.Forms 요소에 대 한 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하기 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 요소입니다.
 
 다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램의 각 프로젝트의 책임을 보여줍니다.
 
@@ -316,7 +316,7 @@ namespace CustomRenderer.iOS
   - 리소스가 해제 됩니다.
 
 > [!NOTE]
-> **참고**:는 `WKWebView` 클래스 iOS 8 이상 에서만 지원 됩니다.
+> `WKWebView` 클래스 iOS 8 이상 에서만 지원 됩니다.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Android 사용자 지정 렌더러 만들기
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 클래스에서 파생 되어야 `Java.Lang.Object`, 및 JavaScript에 노출 되는 메서드가로 데코 레이트 되어야 합니다는 `[JavascriptInterface]` 및 `[Export]` 특성입니다. 따라서,는 `invokeCSharpAction` 호출 합니다, JavaScript 함수를 웹 페이지에 삽입 하 고 실행 됩니다는 `JSBridge.InvokeAction` 로 데코레이팅 되 응답으로 메서드는 `[JavascriptInterface]` 및 `[Export("invokeAction")]` 특성입니다. 차례로 `InvokeAction` 메서드가 호출 하는 `HybridWebView.InvokeAction` 으로 팝업을 표시 하려면 등록 된 작업을 호출 하는 메서드, 합니다.
 
 > [!NOTE]
-> **참고**: 사용 하는 프로젝트는 `[Export]` 특성에 대 한 참조를 포함 해야 `Mono.Android.Export`, 또는 컴파일러 오류가 발생 합니다.
+> 사용 하는 프로젝트는 `[Export]` 특성에 대 한 참조를 포함 해야 `Mono.Android.Export`, 또는 컴파일러 오류가 발생 합니다.
 
 `JSBridge` 클래스를 유지 관리는 `WeakReference` 에 `HybridWebViewRenderer` 클래스입니다. 이 두 클래스 간에 순환 참조가 만들지 않도록 합니다. 자세한 내용은 참조 [약한 참조](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) msdn 합니다.
 

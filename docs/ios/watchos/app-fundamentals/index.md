@@ -6,14 +6,13 @@ ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a470314097342e9c2e068a6015664074540d0ddd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06c2fbe7537df004641a2c1bd6e7d4e420fef1c7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-application-fundamentals"></a>watchOS 응용 프로그램 기본 사항
-
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[부모 응용 프로그램](~/ios/watchos/app-fundamentals/parent-app.md)
 
@@ -39,7 +38,7 @@ Apple Watch 사용자 인터페이스를 빌드하기 위한 디자인 팁입니
 
 Watch 앱에 사용할 수 있는 두 가지 탐색 옵션에 대 한 자세한 내용은: 계층적 또는 페이지 기반 탐색 합니다.
 
-##  <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[한 화면 크기](~/ios/watchos/app-fundamentals/screen-sizes.md)
+##  <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[화면 크기](~/ios/watchos/app-fundamentals/screen-sizes.md)
 
 미리 보기 하 고 모두 사용할 수 있는 watch 크기에 대 한 사용자 인터페이스를 최적화 합니다.
 

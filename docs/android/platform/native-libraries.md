@@ -6,11 +6,12 @@ ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: 8d7e03582571939b8cd3ae89fc2deff3b5603d36
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 7bd9a64ab7ea775688225ff5496773647174ebf8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리를 사용 하 여
 
@@ -21,13 +22,13 @@ Xamarin.Android 응용 프로그램으로 네이티브 라이브러리를 배포
 Xamarin.Android 라이브러리 프로젝트를 네이티브 라이브러리를 배포 하려면 이진 라이브러리 프로젝트에 추가 하 고 설정의 **빌드 작업** 를 **EmbeddedNativeLibrary**합니다.
 
 여러 응용 프로그램 이진 인터페이스 (ABIs)를 지 원하는 Android 이후 Xamarin.Android 알고 있어야 한다는 어떤 ABI 네이티브 라이브러리 참고 작성 됩니다.
-두 가지 방법으로 수행할 수 있습니다.
+이는 두 가지 방법으로 수행할 수 있습니다.
 
 1.  경로 "성이"
 1.  사용 하 여 프로그램 `AndroidNativeLibrary/Abi` 프로젝트 파일의 요소를
 
 
-경로 스니핑와 네이티브 라이브러리의 부모 디렉터리 이름을 ABI를 지정 하는 데 사용 하는 라이브러리 대상으로 합니다. 따라서 추가 하는 경우 `lib/armeabi/libfoo.so` 을 프로젝트에 다음 ABI 됩니다 수 "스니핑"으로 `armeabi`합니다.
+경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 추가 하는 경우 `lib/armeabi/libfoo.so` 을 프로젝트에 다음 ABI 됩니다 수 "스니핑"으로 `armeabi`합니다.
 
 또는 사용 하려면 ABI를 명시적으로 지정 하도록 프로젝트 파일을 편집할 수 있습니다.
 

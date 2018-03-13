@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ee91f0ebdc07f03831ae95a4b8ae6f85c3eb549e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d23f29fbfb51473ff5f89f27c0bfd621cfffbce0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-device-orientation"></a>장치 방향을 확인 하는 중
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/28/2018
 ![](device-orientation-images/orientation-diagram.png "DependencyService 응용 프로그램 구조")
 
 > [!NOTE]
-> **참고:** 와 같이 공유 코드에는 장치가 세로 또는 가로 방향 인지 여부를 검색할 수 있기에 [장치 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation) . 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
+> 와 같이 공유 코드에는 장치가 세로 또는 가로 방향 인지 여부를 검색할 수 있기에 [장치 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
 
 <a name="Creating_the_Interface" />
 
@@ -57,7 +57,7 @@ namespace DependencyServiceSample.Abstractions
 공유 코드에서이 인터페이스에 대 한 코딩 하면 Xamarin.Forms 앱 각 플랫폼에서 장치 방향을 Api에 액세스할 수 있습니다.
 
 > [!NOTE]
-> **참고**: 인터페이스를 구현 하는 클래스를 작성 하려면 매개 변수가 없는 생성자가 있어야는 `DependencyService`합니다.
+> 인터페이스를 구현 하는 클래스를 작성 하려면 매개 변수가 없는 생성자가 있어야는 `DependencyService`합니다.
 
 <a name="iOS_Implementation" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 0240dd5e381694a31ba9ebb12dd166ca0ef54750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -223,7 +223,7 @@ _Objective C 예외가 발생 했습니다.  이름: NSInternalInconsistencyExce
 - 에 선택 되어 SiriKit **Entitlements.plist**합니다.
 - **Entitlements.plist** 에 구성 된 **프로젝트 옵션 > 빌드 > iOS 번들 서명**합니다.
 
-  [![프로젝트 옵션 자격 올바르게 설정 표시](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png)
+  [![프로젝트 옵션 자격 올바르게 설정 표시](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (배포를 위한 장치) 응용 프로그램 ID에 SiriKit 사용 하도록 설정 하 고 다운로드 프로비저닝 프로필 키를 누릅니다.
 

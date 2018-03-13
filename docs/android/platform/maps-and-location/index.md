@@ -8,21 +8,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/03/2016
-ms.openlocfilehash: 29e9ad7aa2ca9553f488dfa697caf1fd71966eee
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83da1e44d7671d7ac5f6a493856331af9d0ba77a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-and-location"></a>지도 및 위치
 
-<a name="location" />
 
 ##  <a name="location-servicesandroidplatformmaps-and-locationlocationmd"></a>[위치 서비스](~/android/platform/maps-and-location/location.md)
 
 이 가이드는 Android 응용 프로그램에서 인식 하는 위치를 소개 하 고 Google 위치 서비스 API와 함께 사용할 수 있는 Fused 위치 공급자 뿐만 아니라 Android 위치 서비스 API를 사용 하 여 사용자의 위치를 가져오는 방법을 보여 줍니다.
 
- <a name="maps" />
 
 ##  <a name="mapsandroidplatformmaps-and-locationmapsindexmd"></a>[지도](~/android/platform/maps-and-location/maps/index.md)
 

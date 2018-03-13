@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 44775853a29a384216af308a607cfddd18c9c192
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7c850d0ea06d69c3601081c1e9cde193903eb27
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="spinner"></a>Spinner
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 이 자습서의 첫 번째 부분에서는 행의 목록을 표시 하는 간단한 회전자 위젯을 만듭니다. 지구 옵션을 선택 하면 선택한 항목 알림 메시지에 표시 됩니다.
 
-[![HelloSpinner 응용 프로그램의 스크린 샷](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png)
+[![HelloSpinner 응용 프로그램의 스크린 샷](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
 라는 새 프로젝트를 시작 **HelloSpinner**합니다.
 
@@ -120,7 +120,7 @@ private void spinner_ItemSelected (object sender, AdapterView.ItemSelectedEventA
 
 응용 프로그램 실행 다음과 같이 같아야 합니다.
 
-[![회전자 mars가 이다 선택의 스크린 샷 예제](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png)
+[![회전자 mars가 이다 선택의 스크린 샷 예제](spinner-images/02-basic-example-sml.png)](spinner-images/02-basic-example.png#lightbox)
 
 ## <a name="spinner-using-keyvalue-pairs"></a>키/값 쌍을 사용 하 여 회전자
 
@@ -188,12 +188,11 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 
 응용 프로그램 실행 알림을 다음과 같이 표시 됩니다.
 
-[![온도 표시 지구 선택의 예](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png)
+[![온도 표시 지구 선택의 예](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
    
   
-<a name="Resources" />
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 -   [`Resource.Layout`](https://developer.xamarin.com/api/type/Android.Resource+Layout/) 
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 

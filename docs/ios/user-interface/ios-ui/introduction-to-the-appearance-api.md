@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6d2a454665691c028fe8307940a5662a98ab9c98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="appearance-api"></a>모양 API
 
@@ -32,7 +32,7 @@ iOS 응용 프로그램에 적용 하려는 브랜딩 맞게 표준 컨트롤 �
 
 모양 샘플 응용 프로그램에서는이 스크린 샷에 표시 된 것 처럼 세 가지 방법을 모두를 보여 줍니다.
 
- [ ![](introduction-to-the-appearance-api-images/appearance01.png "모양 샘플 응용 프로그램에는 세 가지 방법을 모두 보여 줍니다.")](introduction-to-the-appearance-api-images/appearance01.png)
+ [![](introduction-to-the-appearance-api-images/appearance01.png "모양 샘플 응용 프로그램에는 세 가지 방법을 모두 보여 줍니다.")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 IOS 8 기준으로 모양 프록시 TraitCollections 하도록 확장 되었습니다.
  `AppearanceForTraitCollection` 데 사용할 수는 특정 특성 컬렉션에 기본 모양을 설정 합니다. 자세한 내용은이에 대 한는 [스토리 보드에 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드 합니다.
@@ -87,11 +87,11 @@ sg1.TintColor = UIColor.Magenta;
 
 또는 디자이너의 속성 패드에 값을 설정 합니다. 
 
-[ ![](introduction-to-the-appearance-api-images/propertiespadtint.png "패드 Tint 속성")](introduction-to-the-appearance-api-images/propertiespadtint.png)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "패드 Tint 속성")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 아래 이미지에서는이 농도 's g 1' 이라는 컨트롤에만 설정 하는 보여 줍니다.
 
- [ ![](introduction-to-the-appearance-api-images/image53.png "개별 컨트롤 tint 설정")](introduction-to-the-appearance-api-images/image53.png)
+ [![](introduction-to-the-appearance-api-images/image53.png "개별 컨트롤 tint 설정")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 이러한 방식으로 여러 컨트롤을 설정 하는 완전히 비효율적일 수 대신 정적 설정할 수 있습니다 `Appearance` 클래스 자체에 속성입니다. 이 아래 코드에 나와 있습니다.
 
@@ -101,7 +101,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 이제 아래 이미지는 자홍으로 설정 하는 모양을 사용 하 여 세그먼트화 된 컨트롤이 모두 보여 줍니다.
 
- [ ![](introduction-to-the-appearance-api-images/image54.png "모양 컨트롤 tint 설정")](introduction-to-the-appearance-api-images/image54.png)
+ [![](introduction-to-the-appearance-api-images/image54.png "모양 컨트롤 tint 설정")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` 속성 설정 해야 응용 프로그램 수명의 초기에 같은 AppDelegate의 `FinishedLaunching` 이벤트 또는 영향을 받는 컨트롤을 표시 하기 전에 ViewController 합니다.
 

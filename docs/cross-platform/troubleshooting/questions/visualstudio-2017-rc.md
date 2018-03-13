@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 745e532a9543029f13e5fdffcc15153d780278ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6144a422b9c01279ce345eccf9830bcd335597a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>Xamarin을 사용한 Visual Studio 2017 릴리스 후보를 사용할 수 있습니까?
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/27/2018
 
 * 선택 된 **Xamarin** 새의 일부로 구성 요소 **Visual Studio 설치 관리자**
 
-  [ ![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png)
+  [![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
 
 그러면 Xamarin.iOS 및 Xamarin.Android 개발을 위한 Visual Studio 확장명을 설치 됩니다.
 
@@ -40,26 +40,26 @@ ms.lasthandoff: 02/27/2018
 
 1. Visual Studio 설치 관리자 응용 프로그램 검색
 
-  [ ![](visualstudio-2017-rc-images/reinstall1-sml.png "Visual Studio 설치 관리자 응용 프로그램에 대 한 검색 결과")](visualstudio-2017-rc-images/reinstall1-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall1-sml.png "Visual Studio 설치 관리자 응용 프로그램에 대 한 검색 결과")](visualstudio-2017-rc-images/reinstall1-orig.png#lightbox)
 
 2. 선택:는 합니다. **.NET (미리 보기)을 사용한 모바일 개발** 작업 탭에서 또는
 
-  [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 설치 관리자 작업 탭") ](visualstudio-2017-rc-images/reinstall2-orig.png) b 합니다. **Xamarin** 에 **개별 구성 요소** 탭
+  [![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 설치 관리자 작업 탭") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b 합니다. **Xamarin** 에 **개별 구성 요소** 탭
 
-  [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 설치 관리자 구성 요소 탭")](visualstudio-2017-rc-images/reinstall3-orig.png)
+  [![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 설치 관리자 구성 요소 탭")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)
 
 #### <a name="using-the-visual-studio-installer-within-visual-studio"></a>Visual Studio 내에서 Visual Studio 설치 관리자를 사용 하 여:
 1. Visual Studio 2017 시작 페이지로 이동
 2. 클릭 **더 프로젝트 템플릿** 아래는 **새 프로젝트** 섹션
 
-    [ ![](visualstudio-2017-rc-images/reinstall4-sml.png "Visual Studio 시작 페이지")](visualstudio-2017-rc-images/reinstall4-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall4-sml.png "Visual Studio 시작 페이지")](visualstudio-2017-rc-images/reinstall4-orig.png#lightbox)
 3. 클릭 `Open Visual Studio Installer` 왼쪽된 창에서
 
-    [ ![](visualstudio-2017-rc-images/reinstall5-sml.png "새 프로젝트 화면")](visualstudio-2017-rc-images/reinstall5-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall5-sml.png "새 프로젝트 화면")](visualstudio-2017-rc-images/reinstall5-orig.png#lightbox)
 4. 선택:
     
     a. **.NET (미리 보기)을 사용한 모바일 개발** 작업 탭에서 또는
 
-    [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 설치 관리자 작업 탭") ](visualstudio-2017-rc-images/reinstall2-orig.png) b 합니다. **Xamarin** 에 **개별 구성 요소** 탭
+    [![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 설치 관리자 작업 탭") ](visualstudio-2017-rc-images/reinstall2-orig.png#lightbox) b 합니다. **Xamarin** 에 **개별 구성 요소** 탭
 
-    [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 설치 관리자 구성 요소 탭")](visualstudio-2017-rc-images/reinstall3-orig.png)
+    [![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 설치 관리자 구성 요소 탭")](visualstudio-2017-rc-images/reinstall3-orig.png#lightbox)

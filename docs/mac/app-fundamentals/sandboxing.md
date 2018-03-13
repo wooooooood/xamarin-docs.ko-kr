@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e64f1962e35372a6058f4b515efa5a61c1c9e45
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>샌드 박싱 Xamarin.Mac 응용 프로그램
 
@@ -22,11 +22,11 @@ _이 문서에서는 샌드 박싱 앱 스토어에서 릴리스에 대 한 Xama
 
 를 사용할 때 C# 및.NET Xamarin.Mac 응용 프로그램에서 Objective-c 또는 Swift에서 작업할 때 작업을 수행 하는 대로 샌드박스 응용 프로그램에 동일한 수가 있습니다.
 
-[![실행 중인 응용 프로그램의 예로](sandboxing-images/intro01.png "실행 중인 응용 프로그램의 예")](sandboxing-images/intro01-large.png)
+[![실행 중인 응용 프로그램의 예로](sandboxing-images/intro01.png "실행 중인 응용 프로그램의 예")](sandboxing-images/intro01-large.png#lightbox)
 
 이 문서에서는 샌드 박싱 Xamarin.Mac 응용 프로그램과 모든 샌드 박싱으로 이동 하는 요소에 작업의 기본 사항을 설명 합니다: 컨테이너 디렉터리, 권한 부여, 사용자가 지정한 사용 권한, 권한 분할 및 커널 적용 합니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
-참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-c 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
+참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
 
 ## <a name="about-the-app-sandbox"></a>샌드박스 응용 프로그램에 대 한
 
@@ -70,19 +70,19 @@ _이 문서에서는 샌드 박싱 앱 스토어에서 릴리스에 대 한 Xama
 1. 클릭 하 고 Mac에 대 한 Visual Studio를 시작 합니다.는 **새 솔루션...** 추가합니다.
 2. **새 프로젝트** 대화 상자에서 **Mac** > **앱** > **Cocoa 앱**: 
 
-    [![새 Cocoa 앱 만들기](sandboxing-images/sample01.png "새 Cocoa 앱 만들기")](sandboxing-images/sample01-large.png)
+    [![새 Cocoa 앱 만들기](sandboxing-images/sample01.png "새 Cocoa 앱 만들기")](sandboxing-images/sample01-large.png#lightbox)
 3. 클릭는 **다음** 단추, 입력 `MacSandbox` 클릭 이나 프로젝트 이름에는 **만들기** 단추: 
 
-    [![응용 프로그램 이름 입력](sandboxing-images/sample02.png "앱 이름 입력")](sandboxing-images/sample02-large.png)
+    [![응용 프로그램 이름 입력](sandboxing-images/sample02.png "앱 이름 입력")](sandboxing-images/sample02-large.png#lightbox)
 4. 에 **솔루션 패드**, 두 번 클릭는 **Main.storyboard** Xcode에서 편집을 위해 열 파일입니다. 
 
-    [![주 스토리 보드 편집](sandboxing-images/sample03.png "주 스토리 보드를 편집 합니다.")](sandboxing-images/sample03-large.png)
+    [![주 스토리 보드 편집](sandboxing-images/sample03.png "주 스토리 보드를 편집 합니다.")](sandboxing-images/sample03-large.png#lightbox)
 5. 끌어서는 **웹 보기** 는 창으로 크기를 조정 콘텐츠 영역을 입력 하 고 확장 및 축소 창을 사용 하도록 설정 합니다. 
 
-    [![웹 보기 추가](sandboxing-images/sample04.png "웹 보기를 추가 합니다.")](sandboxing-images/sample04-large.png)
+    [![웹 보기 추가](sandboxing-images/sample04.png "웹 보기를 추가 합니다.")](sandboxing-images/sample04-large.png#lightbox)
 6. 웹 보기에 대 한 콘센트 만들기 `webView`: 
 
-    [![만드는 새 콘센트](sandboxing-images/sample05.png "새 콘센트 만들기")](sandboxing-images/sample05-large.png)
+    [![만드는 새 콘센트](sandboxing-images/sample05.png "새 콘센트 만들기")](sandboxing-images/sample05-large.png#lightbox)
 7. Mac 및 두 번 클릭에 대 한 Visual Studio로 되돌아가려면는 **ViewController.cs** 파일을 **솔루션 패드** 를 편집 하기 위해 엽니다.
 8. 다음 추가 문을 사용 하 여: `using WebKit;`
 9. 확인 된 `ViewDidLoad` 다음과 같은 메서드 보기: 
@@ -99,7 +99,7 @@ public override void AwakeFromNib ()
 
 응용 프로그램을 실행 하 고 Apple 웹 사이트에서 다음과 같은 창에 표시 되는지 확인 합니다.
 
-[![예제 응용 프로그램을 실행 표시](sandboxing-images/sample06.png "는 예제 응용 프로그램을 실행 표시")](sandboxing-images/sample06-large.png)
+[![예제 응용 프로그램을 실행 표시](sandboxing-images/sample06.png "는 예제 응용 프로그램을 실행 표시")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -111,34 +111,34 @@ public override void AwakeFromNib ()
 
 1. Apple 개발자 포털에 로그인 합니다. 
 
-    [![Apple 개발자 포털에 로그인 할](sandboxing-images/sign01.png "Apple 개발자 포털에 로그인")](sandboxing-images/sign01-large.png)
+    [![Apple 개발자 포털에 로그인 할](sandboxing-images/sign01.png "Apple 개발자 포털에 로그인")](sandboxing-images/sign01-large.png#lightbox)
 2. 선택 **인증서, 식별자 및 프로필**: 
 
-    [![인증서, 식별자 및 프로필을 선택 하면](sandboxing-images/sign02.png "인증서, 식별자 및 프로필 선택")](sandboxing-images/sign02-large.png)
+    [![인증서, 식별자 및 프로필 선택](sandboxing-images/sign02.png "인증서, 식별자 및 프로필 선택")](sandboxing-images/sign02-large.png#lightbox)
 3. 아래 **Mac 앱**선택, **식별자**: 
 
-    [![식별자를 선택 하면](sandboxing-images/sign03.png "식별자를 선택 합니다.")](sandboxing-images/sign03-large.png)
+    [![식별자를 선택 하면](sandboxing-images/sign03.png "식별자를 선택 합니다.")](sandboxing-images/sign03-large.png#lightbox)
 4. 응용 프로그램에 대 한 새 ID를 만듭니다. 
 
-    [![새 앱 ID를 만들어](sandboxing-images/sign04.png "새 앱 ID를 만들어")](sandboxing-images/sign04-large.png)
+    [![새 앱 ID를 만들어](sandboxing-images/sign04.png "새 앱 ID를 만들어")](sandboxing-images/sign04-large.png#lightbox)
 5. 아래 **프로 비전 프로필**선택, **개발**: 
 
-    [![개발을 선택 하면](sandboxing-images/sign05.png "개발을 선택 합니다.")](sandboxing-images/sign05-large.png)
+    [![개발을 선택 하면](sandboxing-images/sign05.png "개발을 선택 합니다.")](sandboxing-images/sign05-large.png#lightbox)
 6. 새 프로필을 만들고 선택 **Mac 응용 프로그램 개발**: 
 
-    [![새 프로필 작성](sandboxing-images/sign06.png "새 프로필 작성")](sandboxing-images/sign06-large.png)
+    [![새 프로필 작성](sandboxing-images/sign06.png "새 프로필 작성")](sandboxing-images/sign06-large.png#lightbox)
 7. 위에서 만든 앱 ID를 선택 합니다. 
 
-    [![앱 ID를 선택 하면](sandboxing-images/sign07.png "앱 ID를 선택 합니다.")](sandboxing-images/sign07-large.png)
+    [![앱 ID를 선택 하면](sandboxing-images/sign07.png "앱 ID를 선택 합니다.")](sandboxing-images/sign07-large.png#lightbox)
 8. 이 프로필에 대 한 개발자가 제공을 선택 합니다. 
 
-    [![추가 개발자](sandboxing-images/sign08.png "추가 개발자")](sandboxing-images/sign08-large.png)
+    [![추가 개발자](sandboxing-images/sign08.png "추가 개발자")](sandboxing-images/sign08-large.png#lightbox)
 9. 이 프로필에 대 한 컴퓨터를 선택 합니다. 
 
-    [![허용 된 컴퓨터를 선택 하면](sandboxing-images/sign09.png "허용 된 컴퓨터를 선택 합니다.")](sandboxing-images/sign09-large.png)
+    [![허용 된 컴퓨터를 선택 하면](sandboxing-images/sign09.png "허용 된 컴퓨터를 선택 합니다.")](sandboxing-images/sign09-large.png#lightbox)
 10. 프로필 이름을 지정 합니다. 
 
-    [![프로필에 이름을 지정](sandboxing-images/sign10.png "프로 파일에 이름을 지정")](sandboxing-images/sign10-large.png)
+    [![프로필에 이름을 지정](sandboxing-images/sign10.png "프로 파일에 이름을 지정")](sandboxing-images/sign10-large.png#lightbox)
 11. 클릭는 **수행** 단추입니다.
 
 > [!IMPORTANT]
@@ -160,10 +160,10 @@ public override void AwakeFromNib ()
 1. 에 **솔루션 패드**, 두 번 클릭은 **Info.plist** 편집을 위해 열 파일입니다.
 2. 확인 된 **번들 식별자** 위에서 만든 우리의 응용 프로그램 ID와 일치 (예: `com.appracatappra.MacSandbox`): 
 
-    [![번들 식별자 편집](sandboxing-images/sign13.png "번들 식별자를 편집 합니다.")](sandboxing-images/sign13-large.png)
+    [![번들 식별자 편집](sandboxing-images/sign13.png "번들 식별자를 편집 합니다.")](sandboxing-images/sign13-large.png#lightbox)
 3. 다음으로 두 번 클릭은 **Entitlements.plist** 파일을 확인 우리의 **iCloud 키-값 저장소** 및 **iCloud 컨테이너** 모두 일치 위에서 만든 우리의 앱 ID (예: `com.appracatappra.MacSandbox`): 
 
-    [![Entitlements.plist 파일을 편집](sandboxing-images/sign17.png "Entitlements.plist 파일 편집")](sandboxing-images/sign17-large.png)
+    [![Entitlements.plist 파일을 편집](sandboxing-images/sign17.png "Entitlements.plist 파일 편집")](sandboxing-images/sign17-large.png#lightbox)
 3. 변경 내용을 저장합니다.
 4. 에 **솔루션 패드**, 프로젝트 파일 편집을 위해 해당 옵션을 열려면 두 번 클릭 합니다.  
 
@@ -180,7 +180,7 @@ public override void AwakeFromNib ()
 
 이 시점에서 하려고 노력 해야 응용 프로그램을 실행 하 고 있는지 모든 것에 서명이 되어 있고 올바르게 프로 비전 해야 합니다. 앱 여전히 실행 되는 경우 이전 처럼, 모든 것이 좋습니다. 오류가 발생 하면 다음과 같은 대화 상자가 나타날 수 있습니다.
 
-[![프로비저닝 문제가 대화 상자 예](sandboxing-images/sign16.png "프로비저닝 문제가 대화 상자 예제")](sandboxing-images/sign16-large.png)
+[![프로비저닝 문제가 대화 상자 예](sandboxing-images/sign16.png "프로비저닝 문제가 대화 상자 예제")](sandboxing-images/sign16-large.png#lightbox)
 
 프로 비전 하 고 서명 문제 가장 일반적인 원인은 다음과 같습니다.
 
@@ -197,12 +197,12 @@ public override void AwakeFromNib ()
 1. 에 **솔루션 패드**, 두 번 클릭은 **Entitlements.plist** 편집을 위해 열 파일입니다.
 2. 모두 선택 **자격 사용 하도록 설정** 및 **앱 샌드 박싱을 사용 하도록 설정**: 
 
-    [![자격을 편집 하 고 샌드 박싱을 사용 하도록 설정](sandboxing-images/sign17.png "자격 편집 및 샌드 박싱을 사용 하도록 설정")](sandboxing-images/sign17-large.png)
+    [![자격을 편집 하 고 샌드 박싱을 사용 하도록 설정](sandboxing-images/sign17.png "자격 편집 및 샌드 박싱을 사용 하도록 설정")](sandboxing-images/sign17-large.png#lightbox)
 3. 변경 내용을 저장합니다.
 
 이 시점에서 앱 샌드박스 사용 하도록 설정한 하지만 웹 보기에 대 한 필요한 네트워크 액세스를 제공 하지 않았습니다. 지금 응용 프로그램을 실행 하는 경우 빈 창이 받습니다.
 
-[![차단 되 고 웹 액세스를 보여 주는](sandboxing-images/sample08.png "차단 되 고 웹 액세스를 보여 주는")](sandboxing-images/sample08-large.png)
+[![차단 되 고 웹 액세스를 보여 주는](sandboxing-images/sample08.png "차단 되 고 웹 액세스를 보여 주는")](sandboxing-images/sample08-large.png#lightbox)
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>샌드 박싱된 응용 프로그램 인지 확인
 
@@ -210,25 +210,25 @@ public override void AwakeFromNib ()
 
 1. 검색기의 콘텐츠를 확인는 `~/Library/Containers/` 폴더-샌드박스가 적용 하는 경우 됩니다 앱의 번들 식별자와 같은 명명 된 폴더 (예: `com.appracatappra.MacSandbox`): 
 
-    [![앱의 번들 열기](sandboxing-images/sample09.png "앱의 번들 열기")](sandboxing-images/sample09-large.png)
+    [![앱의 번들 열기](sandboxing-images/sample09.png "앱의 번들 열기")](sandboxing-images/sample09-large.png#lightbox)
 2. 시스템에서는 작업 모니터에서 차단으로 응용 프로그램을 확인합니다.
     - 작업 모니터를 시작할 (아래 `/Applications/Utilities`). 
     - 선택 **보기** > **열** 되어 있는지 확인 하 고는 **샌드박스** 메뉴 항목을 선택 합니다.
     - 샌드박스 열의 레이블은 있는지 확인 하십시오. `Yes` 응용 프로그램: 
 
-    [![작업 모니터의 응용 프로그램을 확인 하는 중](sandboxing-images/sample10.png "작업 모니터의 응용 프로그램을 확인 하는 중")](sandboxing-images/sample10-large.png)
+    [![작업 모니터의 응용 프로그램을 확인 하는 중](sandboxing-images/sample10.png "작업 모니터의 응용 프로그램을 확인 하는 중")](sandboxing-images/sample10-large.png#lightbox)
 3. 샌드 박싱된 응용 프로그램 이진 인지 확인 합니다.
     - 터미널 앱을 시작 합니다.
     - 응용 프로그램으로 이동 `bin` 디렉터리입니다.
     - 이 명령을 실행: `codesign -dvvv --entitlements :- executable_path` (여기서 `executable_path` 응용 프로그램의 경로): 
 
-    [![명령줄에서 응용 프로그램 확인](sandboxing-images/sample11.png "명령줄에서 응용 프로그램 확인")](sandboxing-images/sample11-large.png)
+    [![명령줄에서 응용 프로그램 확인](sandboxing-images/sample11.png "명령줄에서 응용 프로그램 확인")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>샌드 박싱된 응용 프로그램 디버깅
 
 기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"*합니다. 
 
-[![필요한 옵션 설정](sandboxing-images/debug01.png "필요한 옵션 설정")](sandboxing-images/debug01-large.png)
+[![필요한 옵션 설정](sandboxing-images/debug01.png "필요한 옵션 설정")](sandboxing-images/debug01-large.png#lightbox)
 
 **나가는 네트워크 연결 허용 (클라이언트)** 권한에 디버거에 대 한 필요한,이 중 하나를 사용 하도록 설정 하면 정상적으로 디버깅 합니다. 없이 디버깅할 수 없습니다, 이후 업데이트는 `CompileEntitlements` 에 대 한 대상 `msbuild` 가 디버그에 대 한 보안으로 보호 하는 앱만 빌드에 대해 해당 사용 권한을 자격에 자동으로 추가 합니다. 릴리스 빌드는 수정 되지 않은 자격 파일에 지정 된 자격을 사용 해야 합니다.
 
@@ -248,7 +248,7 @@ public override void AwakeFromNib ()
 2. 열기는 **콘솔** 응용 프로그램 (에서 `/Applications/Utilties/`).
 3. 선택 **모든 메시지** 사이드바에서 입력 `sandbox` 검색에: 
 
-    [![콘솔에서 샌드 박싱 문제의 예](sandboxing-images/resolve01.png "콘솔에서 샌드 박싱 문제의 예")](sandboxing-images/resolve01-large.png)
+    [![콘솔에서 샌드 박싱 문제의 예](sandboxing-images/resolve01.png "콘솔에서 샌드 박싱 문제의 예")](sandboxing-images/resolve01-large.png#lightbox)
 
 위의 예제에서는 앱에서 볼 수 있습니다는 Kernal 차단는 `network-outbound` 트래픽 앱 샌드박스로 인해, 해당 권한을 요청 하지 않았으므로 म 때문입니다.
 
@@ -261,7 +261,7 @@ public override void AwakeFromNib ()
 1. 에 **솔루션 패드**, 두 번 클릭은 **Entitlements.plist** 편집을 위해 열 파일입니다.
 2. 아래는 **자격** 섹션을 검사는 **나가는 네트워크 연결 허용 (클라이언트)** 확인란: 
 
-    [![자격 편집](sandboxing-images/sign17.png "자격 편집")](sandboxing-images/sign17-large.png)
+    [![자격 편집](sandboxing-images/sign17.png "자격 편집")](sandboxing-images/sign17-large.png#lightbox)
 3. 응용 프로그램에 변경 내용을 저장 합니다.
 
 म 위의 모든 예제에 대 한 작업, 다음 빌드를 실행할 예상 대로 웹 콘텐츠 표시 이제 됩니다.
@@ -284,7 +284,7 @@ public override void AwakeFromNib ()
 
 편집 하 여 응용 프로그램의 응용 프로그램 샌드박스 리소스를 수정할 해당 **Entitlements.plist** 파일을 확인 하거나 편집기 드롭다운 상자에서 필요한 권한을 선택 하 합니다.
 
-[![자격 편집](sandboxing-images/sign17.png "자격 편집")](sandboxing-images/sign17-large.png)
+[![자격 편집](sandboxing-images/sign17.png "자격 편집")](sandboxing-images/sign17-large.png#lightbox)
 
 ### <a name="container-directories-and-file-system-access"></a>컨테이너 디렉터리 및 파일 시스템 액세스
 

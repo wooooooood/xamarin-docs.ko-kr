@@ -3,14 +3,15 @@ title: "요약 Chapter 4입니다. 스택 스크롤"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 59d51c48cee30a242f5e1adcb1c886169334e9b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 Chapter 4입니다. 스택 스크롤
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/27/2018
 
 여러 인스턴스를 사용할 수 있습니다 `StackLayout` 결합 하는 `BoxView` 과 몇 가지 `Label` 인스턴스에 `Frame` 특정 색을 표시 하 고 각각에서 이러한 보기를 배치 하는 `StackLayout` 에 `ScrollView` 매력적인는 만들려는 에 표시 된 색 목록을 [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) 샘플:
 
-[![색 블록과 삼중 스크린 샷](images/ch04fg11-small.png "색 목록")](images/ch04fg11-large.png "색 목록")
+[![색 블록과 삼중 스크린 샷](images/ch04fg11-small.png "색 목록")](images/ch04fg11-large.png#lightbox "색 목록")
 
 ## <a name="a-scrollview-in-a-stacklayout"></a>에 StackLayout ScrollView?
 

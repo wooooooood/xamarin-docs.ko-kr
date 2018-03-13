@@ -3,14 +3,15 @@ title: "19 장의 요약입니다. 컬렉션 뷰"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 73b3ec3e60a8fca5c48f515eab2cbb8359618dbb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>19 장의 요약입니다. 컬렉션 뷰
 
@@ -97,7 +98,7 @@ IOS 및 Android 디스플레이에서 얇은 선 행을 구분합니다. 이를 
 
 XAML에서 설정할 수는 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 에 `DataTemplate` 다음으로 사용자 지정 시각적 트리를 정의 하 고는 [ `View` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ViewCell.View/) 속성 `ViewCell`합니다. (`View` 의 content 속성은 `ViewCell` 하므로 `ViewCell.View` 태그 사용할 필요가 없습니다.) [ **CustomNamedColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/CustomNamedColorList) 샘플에는이 기술을 보여 줍니다.
 
-[![명명 된 색 목록을 사용자 지정의 삼중 스크린 샷](images/ch19fg11-small.png "사용자 지정 명명 된 색 목록")](images/ch19fg11-large.png "명명 된 색 목록을 사용자 지정")
+[![명명 된 색 목록을 사용자 지정의 삼중 스크린 샷](images/ch19fg11-small.png "사용자 지정 명명 된 색 목록")](images/ch19fg11-large.png#lightbox "명명 된 색 목록을 사용자 지정")
 
 가져오기는 모든 플랫폼 권한에 대 한 크기 조정 하는 것은 까다로울 수 있습니다. [ `RowHeight` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RowHeight/) 속성이 유용 하지만 경우에 따라 적용 해야는 [ `HasUnevenRows` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HasUnevenRows/) 덜 효율적인 속성이 있지만 강제로 `ListView` 행 크기를 조정 합니다. IOS 및 Android에 대 한 하나를 사용 해야 이러한 두 속성의 적절 한 행 크기 조정 얻으려고 합니다.
 
@@ -127,7 +128,7 @@ XAML에서 설정할 수는 [ `ViewCell` ](https://developer.xamarin.com/api/typ
 
 [ **StudentList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/StudentList) 사용 하 여 프로그램는 `ImageCell` 학생과에서 해당 이미지를 표시 하는 `ListView`:
 
-[![삼중 학생 목록 스크린샷](images/ch19fg18-small.png "학생 목록")](images/ch19fg18-large.png "학생 목록")
+[![삼중 학생 목록 스크린샷](images/ch19fg18-small.png "학생 목록")](images/ch19fg18-large.png#lightbox "학생 목록")
 
 [ **ListViewHeader** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ListViewHeader) 샘플 추가 [ `Header` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.Header/) 속성 표시 Android에서.
 

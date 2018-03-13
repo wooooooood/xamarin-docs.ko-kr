@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3362744d0d201ef82c846c80b0e1a87426953c85
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>ASP.NET 웹 서비스 (ASMX)를 사용합니다.
 
@@ -74,7 +74,7 @@ ASMX 서비스는 다음 작업을 제공합니다.
 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 참조 [데이터 모델링](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 
 > [!NOTE]
-> **참고**: 웹 서비스에 대 한 읽기 전용 액세스를 제공 하는 ASMX Xamarin 호스팅 서비스를 사용 하는 예제 응용 프로그램입니다. 따라서 생성, 업데이트 및 데이터를 삭제 하는 작업은 응용 프로그램에서 사용 하는 데이터가 변경 하지 않습니다. 그러나 ASMX 서비스의 호스팅 가능한 버전은 영어로 **TodoASMXService** 함께 제공 된 샘플 응용 프로그램의 폴더입니다. 이 호스팅 가능 버전 전체 ASMX 서비스 허용의 만들기, 업데이트, 읽기 및 데이터에 대 한 액세스를 삭제 합니다.
+> 샘플 응용 프로그램 웹 서비스에 대 한 읽기 전용 액세스를 제공 하는 ASMX Xamarin 호스팅 서비스를 사용 합니다. 따라서 생성, 업데이트 및 데이터를 삭제 하는 작업은 응용 프로그램에서 사용 하는 데이터가 변경 하지 않습니다. 그러나 ASMX 서비스의 호스팅 가능한 버전은 영어로 **TodoASMXService** 함께 제공 된 샘플 응용 프로그램의 폴더입니다. 이 호스팅 가능 버전 전체 ASMX 서비스 허용의 만들기, 업데이트, 읽기 및 데이터에 대 한 액세스를 삭제 합니다.
 
 A *프록시* 응용 프로그램이 서비스에 연결할 수 있는 ASMX 서비스를 사용할 생성 해야 합니다. 프록시는 메서드 및 연결 된 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 구성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 되는 WSDL 웹 서비스 설명 언어 () 문서의 형태로 표시 됩니다. 프록시는 플랫폼별 프로젝트에 웹 서비스에 대 한 웹 참조를 추가 하 여 작성 됩니다.
 

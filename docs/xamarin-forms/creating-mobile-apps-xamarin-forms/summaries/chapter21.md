@@ -3,14 +3,15 @@ title: "요약 장 21입니다. 변형"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 장 21입니다. 변형
 
@@ -49,7 +50,7 @@ Xamarin.Forms에는 확장은 등방성; 적용 너비와 높이 균일 하 게 
 
 변환 속성의 한 일반적인 용도를 오프셋할 약간 텍스트의 렌더링입니다. 이 확인할는 [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) 샘플:
 
-[![텍스트 만큼 오프셋의 삼중 스크린 샷](images/ch21fg03-small.png "텍스트 오프셋")](images/ch21fg03-large.png "텍스트 오프셋")
+[![텍스트 만큼 오프셋의 삼중 스크린 샷](images/ch21fg03-small.png "텍스트 오프셋")](images/ch21fg03-large.png#lightbox "텍스트 오프셋")
 
 여러 복사본을 렌더링 하는 다른 효과 `Label` 에서 같은 3D 블록 유사 하 게는 [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) 샘플.
 
@@ -101,7 +102,7 @@ Ios에서의 기본값이 아닌 값을 사용 하 여 `AnchorX` 및 `AnchorY` �
 
 [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) 사용 하 여 `BoxView` 클록의 글꼴 관련 표시 되며 거의 거리를 회전 하의 끝에서 전달 눈금을 포함 하 여 하 더 광범위 한 그래픽:
 
-[![BoxView 클록의 삼중 스크린 샷](images/ch21fg17-small.png "아날로그 시계")](images/ch21fg17-large.png "아날로그 시계 모양")
+[![BoxView 클록의 삼중 스크린 샷](images/ch21fg17-small.png "아날로그 시계")](images/ch21fg17-large.png#lightbox "아날로그 시계 모양")
 
 또한는 [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) 클래스 **Xamarin.FormsBook.Toolkit** 약간, 미리 시작 하기 전에 달릴 나타내려면 두 번째 손 모양 아이콘이 사용 하면 다음 올바른 위치로 다시 이동 하 합니다.
 

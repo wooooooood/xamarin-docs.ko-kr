@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>위치 서비스
 
@@ -54,7 +54,7 @@ API 버전 (Android 5.0 롤리팝) 21 대상으로 하는 앱에 대 한 활성�
 
 사용 권한을 설정, 확장 하 고는 **속성** 폴더에는 **솔루션 패드** 두 번 클릭 하 고 **AndroidManifest.xml**합니다. 사용 권한이 나열 됩니다 **필요한 권한**:
 
-[![Android 매니페스트에서 필요한 권한 설정의 스크린샷](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Android 매니페스트에서 필요한 권한 설정의 스크린샷](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 이러한 사용 권한 중 하나가 설정에 응용 프로그램에 사용자 로부터 위치 공급자에 대 한 액세스 권한이 필요한 Android가 알립니다. 장치는 API 수준 22 (Android 5.1)를 실행 또는 이하인 각 앱을 설치할 때 이러한 사용 권한을 부여 하려면 사용자에 게 됩니다. API를 실행 하는 장치에서 23 (Android 6.0) 수준 또는 이상에 응용 프로그램 위치 공급자의 요청을 하기 전에 실행 시 사용 권한 검사를 수행 해야 합니다. 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  사용자가 모든 위치 공급자를 사용할 수 없는 경우 `GetBestProvider` 돌아갑니다 `null`합니다. 이 코드는 실제 장치에서 작동 하는 방법을 보려면를 반드시 GPS, Wi-fi, 및 셀룰러 네트워크에서 사용할 수 있도록 **Google 설정 > 위치 > 모드** 이 스크린 샷에 표시 된 것 처럼:
 
-[![Android 휴대폰에서 설정 위치 모드 화면](location-images/location-02.png)](location-images/location-02.png)
+[![Android 휴대폰에서 설정 위치 모드 화면](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 아래 스크린샷에서 응용 프로그램 실행 중 사용 하 여 위치 하는 방법을 보여 줍니다 `GetBestProvider`:
 
-[![GetBestProvider 앱 위도, 경도 및 공급자를 표시 합니다.](location-images/location-03.png)](location-images/location-03.png)
+[![GetBestProvider 앱 위도, 경도 및 공급자를 표시 합니다.](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 `GetBestProvider` 공급자를 동적으로 변경 되지 않습니다. 대신, 활동 수명 주기 동안 한 번 가장 사용 가능한 공급자를 결정합니다. 응용 프로그램에서 추가 코드가 필요 합니다 공급자 상태에이 설정 된 후 변경 되는 경우는 `ILocationListener` 메서드 &ndash; `OnProviderEnabled`, `OnProviderDisabled`, 및 `OnStatusChanged` &ndash; 와 관련 된 모든 가능성을 처리 하는 공급자 스위치입니다.
 

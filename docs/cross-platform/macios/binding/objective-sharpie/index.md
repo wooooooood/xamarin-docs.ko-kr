@@ -3,22 +3,20 @@ title: "목표 Sharpie"
 description: "이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바인딩을 만드는 과정을 자동화 하는 데 Xamarin의 명령줄 도구를 소개"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
+ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 02eebb7d8f579a207b6777771dbea223d30211cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bcb7be862537a002e5a80462702ed1f2f8497cda
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="objective-sharpie"></a>목표 Sharpie
 
 _이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바인딩을 만드는 과정을 자동화 하는 데 Xamarin의 명령줄 도구를 소개_
-
-<style type="text/css"> .terminal 파랑 {색: rgb(10,96,254);을 (를).terminal 녹색 {색: rgb(12,156,26);}.terminal 자홍 {색: rgb(152,12,103);을 (를) </style>
 
 - [개요](#overview) & [기록](#history)
 - [시작](get-started.md)
@@ -28,7 +26,7 @@ _이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바�
 - [연습을 완료](~/ios/platform/binding-objective-c/walkthrough.md)
 - [릴리스 기록](releases.md)
 
-#<a name="overview"></a>개요
+## <a name="overview"></a>개요
 
 목표 Sharpie는 바인딩 첫 번째 패스를 부트스트랩 하려면 명령줄 도구입니다.
 공용 API에 매핑할 네이티브 라이브러리의 헤더 파일을 구문 분석 하 여 작동는 [바인딩 정의](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (이전에 수동으로 수행한 프로세스).
@@ -40,7 +38,7 @@ _이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바�
 
 
 
-#<a name="history"></a>기록
+## <a name="history"></a>기록
 
 된 진화 했으며에서 사용 하 여 목표 Sharpie 내부적으로 Xamarin 지난 3 년에 대 한 합니다. 목표 Sharpie의 척도가, iOS 8, Mac OS X 10.10 이후 Xamarin.iOS 및 Xamarin.Mac에 도입 된 Api 및 2.0 watchOS 목표 Sharpie로 완전 하 게 부트스트랩 되었습니다. Xamarin에 크게 의존 목표 Sharpie 내부적으로 자체 제품 빌드를 위한 합니다.
 
@@ -52,7 +50,7 @@ _이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바�
 
 - [목표 Sharpie 다운로드](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
 - [연습: 바인딩 Objective C 라이브러리](~/ios/platform/binding-objective-c/walkthrough.md)
-- [바인딩 Objective C 라이브러리](~/cross-platform/macios/binding/objective-c-libraries.md)
+- [Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 형식에 대 한 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
-- [Objective C 개발자 용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
+- [Objective-C 개발자용 Xamarin](~/ios/get-started/objective-c-developers/index.md)

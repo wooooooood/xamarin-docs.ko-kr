@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 80fe298f3dd24aac7f84213aee96499dd369d16d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-animation"></a>코어 애니메이션
 
@@ -23,12 +23,16 @@ iOS 포함 [ *코어 애니메이션* ](https://developer.apple.com/library/ios/
 
 핵심 애니메이션 그래픽과 핵심 프레임 워크 beautiful, 만들려는 함께 작업할 수 2 차원 그래픽을 애니메이션 효과가 적용 합니다. 실제로 코어 애니메이션도 변형할 수 3D 공간에서 2 차원 그래픽 놀라운, 시네마 환경을 만들기. 그러나 true 3D 그래픽을 만들려는 해야 OpenGL ES 또는 게임 나아가서는 MonoGame, 등의 API에 대 한 형식을 사용 하려면 3D은이 문서의 범위를 벗어납니다.
 
+<a name="Using_Core_Animation" />
+
 ## <a name="core-animation"></a>코어 애니메이션
 
 iOS 코어 애니메이션 프레임 워크를 사용 하 여와 같은 보기 간에 전환 되 고, 메뉴 슬라이딩 및 스크롤 효과에 애니메이션 효과 만듭니다. 애니메이션을 사용 하는 방법은 두 가지가 있습니다.
 
--  [UIKit 통해](#Using_UIKit_Animation), 애니메이션 뷰 기반 뿐만 아니라 컨트롤러 간의 애니메이션된 전환을 포함 합니다.
--   [코어 애니메이션을 통해](#Using_Core_Animation)에 대 한 세부적으로 제어할 수 있도록 레이어를 직접 합니다.
+- [UIKit 통해](#Using_UIKit_Animation), 애니메이션 뷰 기반 뿐만 아니라 컨트롤러 간의 애니메이션된 전환을 포함 합니다.
+- [코어 애니메이션을 통해](#Using_Core_Animation)에 대 한 세부적으로 제어할 수 있도록 레이어를 직접 합니다.
+
+<a name="Using_UIKit_Animation" />
 
 ## <a name="using-uikit-animation"></a>UIKit 애니메이션을 사용 하 여
 
@@ -237,6 +241,6 @@ public override void ViewDidAppear (bool animated)
 ## <a name="related-links"></a>관련 링크
 
 - [코어 애니메이션 샘플](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
-- [코어 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [그래픽 및 애니메이션 연습](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [코어 애니메이션](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [핵심 애니메이션](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 332ce13b08f3d021553be5747b21b05d62aba6ea
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transactions-and-verification"></a>트랜잭션 및 확인
 
@@ -148,7 +148,7 @@ public override void RestoreCompletedTransactionsFailedWithError (SKPaymentQueue
    
    
    
- [ ![](transactions-and-verification-images/image38.png "제품 서버 배달에 대 한 가격을 가져오기")](transactions-and-verification-images/image38.png)   
+ [![](transactions-and-verification-images/image38.png "제품 서버 배달에 대 한 가격을 가져오기")](transactions-and-verification-images/image38.png#lightbox)   
    
    
    
@@ -170,7 +170,7 @@ public override void RestoreCompletedTransactionsFailedWithError (SKPaymentQueue
 
 원격 서버에 콘텐츠 요청 올바른지 유효성을 검사 하는 방법이 필요 하기 때문에 (ie.에 대해 지불), 인증을 위해 읽음 확인 정보를 따라 전달 됩니다. 원격 서버는 해당 데이터를 확인 하기 위해 iTunes 전달 및 성공 하면 응용 프로그램에 대 한 응답에 제품 내용을 포함 합니다.   
    
- [ ![](transactions-and-verification-images/image39.png "서버 배달 제품 구매")](transactions-and-verification-images/image39.png)   
+ [![](transactions-and-verification-images/image39.png "서버 배달 제품 구매")](transactions-and-verification-images/image39.png#lightbox)   
    
  1. 앱 추가 `SKPayment` 큐에 있습니다. 사용자의 Apple ID를 묻는 메시지가 표시 되며 지불 확인 하도록 요청 필요한 경우.   
    

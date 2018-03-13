@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 38a2e8b8cd5932bf96c1e0032a6f47627c3ea592
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons"></a>작업 아이콘
 
@@ -97,7 +97,7 @@ IOS 앱 및 watch 앱 올바른 이름 및 아이콘을 표시 하려면 각 프
 
 3. 이 스크린 샷에 표시 된 대로 모든 watchOS 이미지를 추가 합니다.
 
-  [ ![](icons-images/appicons-sml.png "이 스크린 샷에 표시 된 것 처럼 모든 watchOS 이미지 추가")](icons-images/appicons.png)
+  [![](icons-images/appicons-sml.png "이 스크린 샷에 표시 된 것 처럼 모든 watchOS 이미지 추가")](icons-images/appicons.png#lightbox)
 
   참조 [Apple의 아이콘 지침](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/IconandImageSizes.html) (크기는도 화면에 표시 됨) 필요한 크기에 대 한 합니다. 이러한 아이콘은 원 안에 렌더링 자동으로 잘릴 수 기억 합니다.
 

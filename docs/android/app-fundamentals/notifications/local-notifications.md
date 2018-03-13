@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 7566ebac0f487ef321c512c988c79f34e50777ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="local-notifications"></a>로컬 알림
 
@@ -28,7 +28,7 @@ Android는 사용자에 게 알림 아이콘 및 알림 정보를 표시 하기 
 
 알림에 대 한 세부 정보를 가져오려면 사용자 (알림 콘텐츠를 표시 하기 위해 각 알림 아이콘을 확장)이 표시 되는 알림 서랍을 열 수는 알림과 관련 된 모든 작업을 수행 하 고 있습니다. 다음 스크린샷에 표시 된 *알림 서랍* 위에 표시 되는 알림 영역에 해당 하는:
 
-[![예제 알림 서랍 알림 세 건을 표시 합니다.](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png)
+[![예제 알림 서랍 알림 세 건을 표시 합니다.](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Android 알림을 두 종류의 레이아웃을 사용합니다.
 
@@ -38,7 +38,6 @@ Android 알림을 두 종류의 레이아웃을 사용합니다.
 
 이러한 각 유형의 레이아웃 (및를 만드는 방법) 다음 섹션에 설명 되어 있습니다.
 
-<a name="base-layout" />
 
 ### <a name="base-layout"></a>기본 레이아웃
 
@@ -54,7 +53,7 @@ Android 알림을 두 종류의 레이아웃을 사용합니다.
 
 이러한 요소는 다음 그림과 같이 표시 됩니다.
 
-[![알림 요소의 위치](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png)
+[![알림 요소의 위치](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 기본 레이아웃 높이 64 밀도 독립적 픽셀 (dp)로 제한 됩니다. Android는 기본적으로이 기본 알림 스타일을 만듭니다.
 
@@ -64,13 +63,13 @@ Android 알림을 두 종류의 레이아웃을 사용합니다.
 
 Android 5.0 이후부터, 알림 수에 표시는 잠금 화면:
 
-[![잠금 화면 알림 예제](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png)
+[![잠금 화면 알림 예제](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
 사용자 수를 두 번 누릅니다 장치 잠금을 해제 하 고 해당 알림을 발생 시킨 응용 프로그램으로 이동 하려면 잠금 화면 알림 또는 알림을 해제할을 살짝 밉니다. 앱의 잠금 화면에 표시 되는 내용을 제어에 대 한 알림의 표시 수준을 설정할 수 및 사용자가 중요 한 내용이 잠금 화면 알림에 표시할 수 있도록 할지 여부를 선택할 수 있습니다.
 
 Android 5.0 도입 이라고 하는 우선 순위가 높은 알림 프레젠테이션 형식 *헤드업*합니다. 화면 알림 몇 초간 화면 맨 위에서부터 내려갈 및 알림 영역에 백업 후퇴 다음:
 
-[![예제 heads-up 알림](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png)
+[![예제 heads-up 알림](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
 
 화면 알림 시스템 UI 현재 실행 중인 활동의 상태를 방해 하지 않고 중요 한 정보를 넣을 수 있도록 합니다.
 
@@ -84,7 +83,6 @@ Android는 알림을 정렬 및 지능적으로 표시 될 수 있도록 알림 
 
 **참고:** **가시성** 및 **범주** Android 5.0 및 이전 버전의 Android 수 없는에서 도입 되었습니다. Android 8.0부터 [알림 채널](#notif-chan) 알림을 사용자에 게 표시 되는 방식을 제어 하는 데 사용 됩니다.
 
-<a name="expanded-layouts" />
 
 ### <a name="expanded-layouts"></a>확장 된 레이아웃
 
@@ -106,7 +104,6 @@ Android에서는 단일 이벤트 알림에 대 한 세 가지 확장 된 레이
 
 [기본 알림 외](#beyond-the-basic-notification) (이 문서의 뒷부분에)를 만드는 방법을 설명 *큰 텍스트*, *받은 편지함*, 및 *이미지* 알림입니다.
 
-<a name="notification-creation" />
 
 ## <a name="notification-creation"></a>알림 만들기
 
@@ -127,7 +124,6 @@ Android 알림을 만들려면에서 사용 하는 [Notification.Builder](https:
 
 작성기에서 이러한 옵션을 설정한 후 설정을 포함 하는 알림 개체를 생성 합니다. 이 알림 개체를 전달 하면이 알림을 게시 하려면는 *알림 관리자*합니다. Android에서 제공 된 [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/) 알림을 게시 하 고 사용자에 게 표시 하는 일을 담당 하는 클래스입니다. 이 클래스에 대 한 작업 또는 서비스와 같은 모든 컨텍스트를 가져올 수 있습니다.
 
-<a name="how-to-generate" />
 
 ### <a name="how-to-generate-a-notification"></a>알림을 생성 하는 방법
 
@@ -185,7 +181,6 @@ notificationManager.Notify (notificationId, notification);
 ```csharp
 builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
 ```
-<a name="sound-and-vibr" />
 
 ### <a name="enabling-sound-and-vibration"></a>사운드 및 진동을 사용 하도록 설정
 
@@ -265,7 +260,6 @@ notificationManager.Notify (notificationId, notification);
 
 Android 알림을 업데이트에 대 한 자세한 내용은 [알림을 수정](http://developer.android.com/training/notify-user/managing.html#Updating)합니다.
 
-<a name="starting-an-activity" />
 
 ### <a name="starting-an-activity-from-a-notification"></a>알림을에서 활동을 시작합니다.
 
@@ -380,11 +374,11 @@ Android (Oreo) 8.0부터 사용할 수 있습니다는 *알림 채널* 표시 �
 
 **YouTube** 두 알림 범주를 나열 하는 앱에 설치 된 Android Oreo: **다운로드 알림** 및 **일반 알림**:
 
-[![Android Oreo에 YouTube에 대 한 알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png)
+[![Android Oreo에 YouTube에 대 한 알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 이러한 각 범주는 알림 채널에 해당합니다. YouTube 앱 구현 하는 **다운로드 알림** 채널 및 **일반 알림** 채널입니다. 탭 **다운로드 알림**, 응용 프로그램의 다운로드 알림 채널에 대 한 설정 화면을 표시 하는:
 
-[![YouTube 앱에 대 한 알림 화면을 다운로드 합니다.](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png)
+[![YouTube 앱에 대 한 알림 화면을 다운로드 합니다.](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 이 화면에서 사용자의 동작을 수정할 수는 **다운로드** 다음을 수행 하 여 알림 채널:
 
@@ -400,14 +394,13 @@ Android (Oreo) 8.0부터 사용할 수 있습니다는 *알림 채널* 표시 �
 
 **일반 알림** 채널에과 비슷한 설정:
 
-[![YouTube 앱에 대 한 일반 알림 화면](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png)
+[![YouTube 앱에 대 한 일반 알림 화면](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
 알림 채널 사용자 상호 작용 하는 방법을 제어할 절대 않았는지 공지 &ndash; 위의 스크린샷에서 같이 사용자가 장치에 모든 알림 채널에 대 한 설정을 수정할 수 있습니다. 그러나 (됩니다 수 아래 설명 참조)으로 기본값을 구성할 수 있습니다. 이러한 예제에서 알 수 있듯이 새 알림 채널 기능은 사용 하면 사용자가 다른 종류의 알림이 세부적으로 제어를 제공할 수 있습니다.
 
 알림 채널에 대 한 지원을 응용 프로그램에 추가 해야 하나요? Android 8.0, 앱을 대상으로 하는 경우 *해야* 알림 채널을 구현 합니다.
 알림 채널을 사용 하지 않고 사용자에 게 로컬 알림을 보내려고 시도 Oreo에 대 한 대상으로 하는 응용 프로그램 Oreo 장치에 알림을 표시 되지 것입니다. Android 8.0을 대상으로 하지 않는 경우 응용 프로그램 계속 실행 됩니다 알림 동작이 동일 하지만 Android 8.0에서 실행 또는 이전 버전의 Android 7.1 발생으로.
 
-<a name="notif-chan-create" />
 
 ### <a name="creating-a-notification-channel"></a>알림 채널
 
@@ -448,7 +441,6 @@ Android (Oreo) 8.0부터 사용할 수 있습니다는 *알림 채널* 표시 �
     notificationManager.CreateNotificationChannel (chan);
     ```
 
-<a name="notif-chan-post" />
 
 ### <a name="posting-to-a-notifications-channel"></a>알림 채널에 게시
 
@@ -507,7 +499,6 @@ builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable
 이 예제 코드에서 이미지 파일을 열고 **Resources/drawable/monkey_icon.png**, 비트맵으로 변환 하 고 결과 비트맵을 전달 `Notification.Builder`합니다. 일반적으로 원본 이미지 해상도 작은 아이콘에 보다 큰 &ndash; 훨씬 더 않고 합니다. 너무 큰 이미지에는 알림 게시를 지연 시킬 수 있는 불필요 한 크기 조정 작업 발생할 수 있습니다.
 Android에서 알림 아이콘 크기에 대 한 자세한 내용은 [알림 아이콘](http://developer.android.com/design/style/iconography.html#notification)합니다.
 
-<a name="big-text-style" />
 
 ### <a name="big-text-style"></a>큰 텍스트 스타일
 
@@ -544,7 +535,6 @@ builder.SetStyle (textStyle);
 
 이 예제에서는 메시지 텍스트와 요약 텍스트에 저장 됩니다는 `BigTextStyle` 개체 (`textStyle`)에 전달 되기 전에 `Notification.Builder.`
 
-<a name="image-style" />
 
 ### <a name="image-style"></a>이미지 스타일
 
@@ -609,7 +599,6 @@ builder.SetStyle (picStyle);
 
 로드 하 고 디코딩 큰 비트맵 이미지에 대 한 자세한 내용은 [부하 큰 비트맵 효율적으로](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently)합니다.
 
-<a name="inbox-style" />
 
 ### <a name="inbox-style"></a>받은 편지함 스타일
 
@@ -645,13 +634,11 @@ builder.SetStyle (inboxStyle);
 
 사용할 수도 있습니다는 *받은 편지함* 알림에 확장명된 형식에 개별 줄의 텍스트를 표시 하는 스타일입니다. 예를 들어는 *받은 편지함* 알림 스타일 요약 알림에 보류 중인 여러 알림을 결합 데 사용할 수 &ndash; 단일을 업데이트할 수 있습니다 *받은 편지함* 새 알림 스타일 지정 알림 내용의 줄 (참조 [업데이트 알림을](#updating-a-notification) 위에) 대신, 새, 주로 비슷한 알림의 연속 스트림을 생성 하는 보다 합니다. 이 방법을 사용 하는 방법에 대 한 자세한 내용은 참조 [알림에 요약](http://developer.android.com/design/patterns/notifications.html#summarize_your_notifications)합니다.
 
-<a name="configuring-metadata" />
 
 ## <a name="configuring-metadata"></a>메타데이터 구성
 
 `Notification.Builder` 우선 순위, 표시 유형 및 범주와 같이 사용자 알림에 대 한 메타 데이터를 설정 하기 위해 호출할 수 있는 방법을 제공 합니다. 이 정보를 사용 하는 android &mdash; 사용자 기본 설정 함께 &mdash; 방법과 시기를 결정 하 알림을 표시 합니다.
 
-<a name="priority-settings" />
 
 ### <a name="priority-settings"></a>우선 순위 설정
 
@@ -694,7 +681,6 @@ builder.SetPriority (NotificationPriority.High);
 
 "는 날에 대 한 사고" 알림 우선 순위가 낮은 알림 이기 때문에 Android에에서 표시 되지 않습니다 것 Heads-up 형식입니다.
 
-<a name="visibility-settings" />
 
 ### <a name="visibility-settings"></a>표시 유형 설정
 
@@ -719,7 +705,6 @@ builder.SetVisibility (NotificationVisibility.Private);
 
 이 예제에서는 **NotificationsLab** 원래 응용 프로그램의 이름입니다. 알림 교정된이 버전은 잠금 화면에서 안전한 경우에 표시 됩니다 (즉, PIN, 패턴 또는 암호를 통해 보안) &ndash; 는 잠금 화면 보안 없는 경우에 알림 메시지의 전체 내용을 잠금 화면에서 사용할 수는 있습니다.
 
-<a name="category-settings" />
 
 ### <a name="category-settings"></a>범주 설정
 
@@ -791,7 +776,6 @@ Notification notification = builder.Build();
 
 [LocalNotifications](https://developer.xamarin.com/samples/monodroid/LocalNotifications) 샘플에 사용 하는 방법을 보여 줍니다 `NotificationCompat.Builder` 를 알림에서 두 번째 활동을 시작 합니다. 이 샘플 코드에 대해서는 설명의 [Xamarin.Android에서 로컬 알림을 사용 하 여](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) 연습 합니다.
 
-<a name="notification-styles" />
 
 ### <a name="notification-styles"></a>알림 스타일
 
@@ -806,7 +790,6 @@ builder.SetStyle (textStyle);
 
 마찬가지로, 응용 프로그램에서 사용할 수 `NotificationCompat.InboxStyle` 및 `NotificationCompat.BigPictureStyle` 에 대 한 *받은 편지함* 및 *이미지* 각각 스타일입니다.
 
-<a name="priority-and-category" />
 
 ### <a name="notification-priority-and-category"></a>알림 우선 순위와 범주
 
@@ -823,7 +806,6 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 이 예제에서는 앱의 **대상 프레임 워크** Android 5.0로 설정 된 및 **최소 Android 버전** 로 설정 된 **Android 4.1 (API 수준 16)**합니다. 때문에 `SetCategory` 는 API 수준 21 이상에서 사용할 수 있는,이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 &ndash; 호출 하지 것입니다 `SetCategory` API 수준 경우 미만
 21.
 
-<a name="lockscreen-visibility" />
 
 ### <a name="lockscreen-visibility"></a>잠금 화면 표시 유형
 
@@ -835,7 +817,6 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

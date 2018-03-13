@@ -4,14 +4,15 @@ description: "손가락을 사용 하 여 캔버스에 그릴 합니다."
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: c9894cac0064b91049b0142971896d7dd67dec5f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b4213d71c2eca6c2552ac674a0203d7a2cc36e1b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="finger-painting"></a>손가락 그리기
 
@@ -162,7 +163,7 @@ public partial class FingerPaintPage : ContentPage
 
 손가락 그림 프로그램 인력에 의해서만 제한 됩니다.
 
-[![](finger-paint-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](finger-paint-images/fingerpaint-large.png "손가락 페인트 페이지의 삼중 스크린샷")
+[![](finger-paint-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](finger-paint-images/fingerpaint-large.png#lightbox "손가락 페인트 페이지의 삼중 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크

@@ -2,16 +2,16 @@
 title: "비디오 플레이어를 구현합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e818bc3fa9793f093c10ac2617c5a822d08213d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a889be5ee31f667117d2c36859e667980f0e6610
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="implementing-a-video-player"></a>비디오 플레이어를 구현합니다.
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 비디오 플레이어 필요 *전송 컨트롤*, 재생 및 비디오를 일시 중지에 대 한 개가 있는 있는데 비디오 통해 진행률을 표시 하는 바는 위치 지정 및 신속 하 게 다른 위치로 이동할 수 있습니다. `VideoPlayer` 전송 컨트롤을 사용 하 고 플랫폼 (아래와 같이) 또는 사용자가 제공 하는 위치 지정 모음 사용자 지정 전송 컨트롤 및 위치 지정 막대를 제공할 수 있습니다. 다음은 iOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램입니다.
 
-[![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png "웹 비디오 재생")
+[![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png#lightbox "웹 비디오 재생")
 
 물론, 크게 보려면 옆으로 전화를 설정할 수 있습니다.
 

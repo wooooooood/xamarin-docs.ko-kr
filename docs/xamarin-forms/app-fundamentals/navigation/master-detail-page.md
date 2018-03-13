@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: f7e949902e2f960a9aa68c600514b7fefc8ae30d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9d774870a541630d8c6519f9dfeaeb21cacb98e8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="master-detail-page"></a>마스터-세부 페이지
 
@@ -22,7 +22,7 @@ _Xamarin.Forms MasterDetailPage는 두 개의 관련된 페이지의 정보-항�
 
 마스터 페이지는 일반적으로 다음 스크린샷에서 같이 항목의 목록을 표시 합니다.
 
-[![](master-detail-page-images/masterpage-components.png "마스터 페이지 구성 요소")](master-detail-page-images/masterpage-components-large.png "마스터 페이지 구성 요소")
+[![](master-detail-page-images/masterpage-components.png "마스터 페이지 구성 요소")](master-detail-page-images/masterpage-components-large.png#lightbox "마스터 페이지 구성 요소")
 
 목록 항목의 위치는 각 플랫폼에서 동일 하 고 항목 중 하나를 선택 하는 페이지로 이동 하 여 해당 세부 정보. 또한 마스터 페이지에는 또한 페이지로 이동 하 여 현재 세부 정보를 사용할 수 있는 단추가 포함 된 탐색 모음을 기능은 다음과 같습니다.
 

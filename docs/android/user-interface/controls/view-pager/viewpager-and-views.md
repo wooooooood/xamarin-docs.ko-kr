@@ -7,18 +7,17 @@ ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: d81f897fb7af39334cec4ea9f806533f09754079
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="viewpager-with-views"></a>보기와 ViewPager
 
 _ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 ViewPager 및 뷰를 사용 하 여 데이터 페이지와 PagerTabStrip swipeable UI를 구현 하는 방법을 설명 (후속 가이드는 페이지 조각을 사용 하는 방법에 설명)._
 
-<a name="overview" />
  
 ## <a name="overview"></a>개요
 
@@ -27,18 +26,16 @@ _ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자
 하지만 `ViewPager`-기반된 앱은 종종 사용 하 여 구현 됩니다 `Fragment`s는 비교적 단순한 몇 가지 사례가 있는의 복잡성 `Fragment`s 필요 하지 않습니다. 예를 들어이 연습에서 수행할 기본 이미지 갤러리 응용 프로그램의 사용 필요 하지 않습니다 `Fragment`s입니다. 콘텐츠는 정적이 고는 사용자만 천공 기와 간에 서로 다른 이미지를 구현을 상태로 유지할 수 있지만 간단 표준 Android 보기 및 레이아웃을 사용 하 여 때문에. 
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>응용 프로그램 프로젝트를 시작 합니다.
 
 라는 새 Android 프로젝트 만들기 **TreePager** (참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 새 Android 프로젝트 만들기에 대 한 자세한 내용은). 그런 다음 NuGet 패키지 관리자를 시작 합니다. (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 [연습: 프로젝트에 포함 하는 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치 **Android 지원 라이브러리 v4**: 
 
-[![지원 스크린샷 v4 Nuget NuGet 패키지 관리자를 선택 합니다.](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png)
+[![지원 스크린샷 v4 Nuget NuGet 패키지 관리자를 선택 합니다.](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 이 설치 하 여 모든 추가 패키지 reaquired **Android 지원 라이브러리 v4**합니다.
 
 
-<a name="datasource" />
 
 ## <a name="add-an-example-data-source"></a>예제 데이터 소스 추가
 
@@ -58,7 +55,6 @@ int imageId = treeCatalog[2].imageId;
 때문에 구현 세부 사항 `TreeCatalog` 이해 관련이 없는 `ViewPager`, `TreeCatalog` 코드가 여기에 나열 되어 있지 합니다. 소스 코드를 `TreeCatalog` 에 [TreeCatalog.cs](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/TreePager/TreeCatalog.cs)합니다. 이 소스 파일을 다운로드 (복사한 새 코드를 붙여 넣습니다. **TreeCatalog.cs** 파일)를 프로젝트에 추가 합니다. 또한 다운로드 하 고 압축을 풀면는 [이미지 파일](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) 에 프로그램 **리소스/그릴** 폴더를 프로젝트에 포함 합니다. 
 
 
-<a name="layout" />
 
 ## <a name="create-a-viewpager-layout"></a>ViewPager 레이아웃 만들기
 
@@ -82,8 +78,6 @@ available only from
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
 
-
-<a name="setup" />
 
 ## Set up ViewPager
 
@@ -115,12 +109,10 @@ protected override void OnCreate(Bundle bundle)
 
 빌드하고이 코드를 실행 하는 경우 다음 스크린 샷에서 유사한 디스플레이 표시 되어야 합니다. 
 
-[![빈 ViewPager 표시 하는 응용 프로그램의 스크린 샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png)
+[![빈 ViewPager 표시 하는 응용 프로그램의 스크린 샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 이 시점에서 `ViewPager` 에서 콘텐츠에 액세스 하기 위한 어댑터 되어 있지 않아서 비어 **TreeCatalog**합니다. 다음 섹션에는 **PagerAdapter** 연결할 만들어집니다는 `ViewPager` 에 **TreeCatalog**합니다. 
 
-
-<a name="adapter" />
 
 ## <a name="create-the-adapter"></a>어댑터 만들기
 
@@ -178,7 +170,6 @@ namespace TreePager
 이 코드는 필수적이 지 끊고 `PagerAdapter` 구현 합니다. 다음 섹션에서 이러한 각 방법의 작업 코드로 대체 됩니다. 
 
 
-<a name="ctor" />
 
 ### <a name="implement-the-constructor"></a>생성자를 구현 합니다.
 
@@ -198,7 +189,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 이 생성자의 목적은 컨텍스트를 저장 하는 것 및 `TreeCatalog` 인스턴스는 `TreePagerAdapter` 사용 합니다. 
 
 
-<a name="count" />
 
 ### <a name="implement-count"></a>구현 개수
 
@@ -214,7 +204,6 @@ public override int Count
 `NumTrees` 속성 `TreeCatalog` 데이터 집합의 트리 (페이지 수)의 수를 반환 합니다.
 
 
-<a name="instantiateitem" />
 
 ### <a name="implement-instantiateitem"></a>InstantiateItem 구현
 
@@ -247,7 +236,6 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 때는 `ViewPager` 에서 이미지 표시 `position`,이 표시 `ImageView`합니다. 처음에 `InstantiateItem` 뷰가 포함 된 처음 두 페이지를 채우는를 두 번 호출 됩니다. 사용자가 스크롤할 때 바로 뒤와 현재 표시 된 항목 미리 보기를 유지 하기 위해 다시 호출 됩니다. 
 
 
-<a name="destroyitem" />
 
 ### <a name="implement-destroyitem"></a>DestroyItem 구현
 
@@ -272,7 +260,6 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 3.  해당 뷰가 제거는 `ViewPager`합니다. 
 
 
-<a name="isviewfromobject" />
 
 ### <a name="implement-isviewfromobject"></a>IsViewFromObject 구현
 
@@ -287,7 +274,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 }
 ```
 
-<a name="addadapter" />
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>어댑터는 ViewPager를 추가
 
@@ -301,10 +287,9 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 핵심 구현을 완료 되었습니다. &ndash; 빌드하고 응용 프로그램을 실행 합니다. 다음 스크린샷에서 왼쪽에 표시 된 것 처럼 화면에 나타나는 트리 카탈로그의 첫 번째 이미지에 표시 됩니다. 살짝 왼쪽에서 더 많은 트리 보기를 참조 한 다음 오른쪽으로 살짝 트리 카탈로그를 통해 다시 이동 하려면: 
 
-[![트리 이미지를 통한 넘기기가 TreePager 스크린샷 앱](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png)
+[![트리 이미지를 통한 넘기기가 TreePager 스크린샷 앱](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## <a name="add-a-pager-indicator"></a>호출기 표시기 추가
 
@@ -333,10 +318,9 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` 및 `PagerTabStrip` 함께 작동 하도록 설계 되었습니다. 선언 하는 경우는 `PagerTabStrip` 내는 `ViewPager` 레이아웃의 `ViewPager` 자동으로 찾을 수는 `PagerTabStrip` 어댑터에 연결 합니다. 빈 빌드하고 앱을 실행할 때 나타납니다 `PagerTabStrip` 각 화면 위쪽에 표시 됩니다. 
 
-[![빈 PagerTabStrip의 클로즈업 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png)
+[![빈 PagerTabStrip의 클로즈업 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 
-<a name="title" />
 
 ### <a name="display-a-title"></a>제목 표시
 
@@ -351,23 +335,21 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 이 코드는 트리 카탈로그에서 지정된 된 페이지 (위치)에서 트리 캡션 문자열을 검색, Java로 변환 `String`를 반환 하는 `ViewPager`합니다. 앱이 새 메서드를 실행 하면 각 페이지의 트리 캡션을 표시 됩니다는 `PagerTabStrip`합니다. 밑줄 없이 화면 맨 위에 있는 트리 이름이 표시 되어야 합니다. 
 
-[![텍스트 채워진 PagerTabStrip 탭이 포함 된 페이지의 스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png)
+[![텍스트 채워진 PagerTabStrip 탭이 포함 된 페이지의 스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 주고받는 각 캡션된 트리에서 이미지를 보려면 카탈로그 살짝 수 있습니다. 
 
 
-<a name="pagertitlestrip" />
 
 ### <a name="pagertitlestrip-variation"></a>PagerTitleStrip Variation
 
 `PagerTitleStrip` 매우 비슷하지만 `PagerTabStrip` 점을 제외 하 고 `PagerTabStrip` 현재 선택 된 탭에는 밑줄을 추가 합니다. 바꿀 수 `PagerTabStrip` 와 `PagerTitleStrip` 위의 레이아웃 및 앱으로 어떻게 나타나는지 확인을 다시 실행 `PagerTitleStrip`: 
 
-[![텍스트에서 제거 하는 밑줄로 PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png)
+[![텍스트에서 제거 하는 밑줄로 PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 에 밑줄은 제거할를 변환할 때 `PagerTitleStrip`합니다. 
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>요약
 

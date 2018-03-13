@@ -4,14 +4,15 @@ description: "자세하게 다양 한 변환 매트릭스와 SkiaSharp 변환"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>매트릭스 변환
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 캔버스의 왼쪽 위 모서리에 표시 합니다.
 
-[![](matrix-images/pathtransform-small.png "경로 변환 페이지의 삼중 스크린샷")](matrix-images/pathtransform-large.png "경로 변환 페이지의 삼중 스크린 샷")
+[![](matrix-images/pathtransform-small.png "경로 변환 페이지의 삼중 스크린샷")](matrix-images/pathtransform-large.png#lightbox "경로 변환 페이지의 삼중 스크린 샷")
 
 이 프로그램의 생성자 호출으로 경로에 행렬을 적용 됩니다.
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 다른 두 화면 조작 후 표시 하는 동안 페이지를 처음 로드 될 때 아래의 iOS 화면 비트맵을 보여 줍니다.
 
-[![](matrix-images/showaffinematrix-small.png "Affine 행렬 표시 페이지의 삼중 스크린샷")](matrix-images/showaffinematrix-large.png "Affine 행렬 표시 페이지의 삼중 스크린샷")
+[![](matrix-images/showaffinematrix-small.png "Affine 행렬 표시 페이지의 삼중 스크린샷")](matrix-images/showaffinematrix-large.png#lightbox "Affine 행렬 표시 페이지의 삼중 스크린샷")
 
 것 처럼 터치 포인트 비트맵의 모서리를 끌어 처럼 보이지만, 가정을입니다. 터치 포인트에서 계산 되는 행렬 모서리 터치 포인트와 일치 하는 비트맵을 변환 합니다.
 

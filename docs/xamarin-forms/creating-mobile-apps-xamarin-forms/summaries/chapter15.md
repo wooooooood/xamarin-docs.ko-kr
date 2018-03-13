@@ -3,14 +3,15 @@ title: "15 장의 요약입니다. 대화형 인터페이스"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e6c61f9a6ba66db2b9a5c7b217c7da952607e709
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 37bbbf2b89048db175ddc1b3b1a24cea92b898a7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>15 장의 요약입니다. 대화형 인터페이스
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **RgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/RgbSliders) 프로그램에 세 개의 `Slider` 을 대화형으로 색의 RGB 값을 지정 하 여 선택할 수 있는 요소:
 
-[![R G B 슬라이더의 삼중 스크린 샷](images/ch15fg03-small.png "RGB 슬라이더")](images/ch15fg03-large.png "RGB 슬라이더")
+[![R G B 슬라이더의 삼중 스크린 샷](images/ch15fg03-small.png "RGB 슬라이더")](images/ch15fg03-large.png#lightbox "RGB 슬라이더")
 
 [ **TextFade** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/TextFade) 샘플에서는 두 개의 `Slider` 요소를 이동 하는 두 개의 `Label` 에서 요소는 `AbsoluteLayout` 하나에 다른 페이드 및 합니다.
 
@@ -266,5 +267,5 @@ Xamarin.Forms는 사용자가 입력 하 고 텍스트를 편집할 수 있는 �
 
 - [15 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [15 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
-- [Entry](~/xamarin-forms/user-interface/text/entry.md)
+- [항목](~/xamarin-forms/user-interface/text/entry.md)
 - [편집기](~/xamarin-forms/user-interface/text/editor.md)

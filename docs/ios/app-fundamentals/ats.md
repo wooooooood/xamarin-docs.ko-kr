@@ -3,16 +3,16 @@ title: "앱의 전송 보안"
 description: "앱 전송 보안 (AT)는 인터넷 리소스 (예: 응용 프로그램의 백 엔드 서버)와 응용 프로그램 간 보안 연결을 적용합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: 60858e05e222725f05eb67bd7aaa4e56d2ff3880
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-transport-security"></a>앱의 전송 보안
 
@@ -69,7 +69,7 @@ IOS 인터넷 통신 클래스 사용에 대 한 자세한 내용은 Apple의를
 
 Xamarin.iOS 앱 라이브러리 또는 서비스를 사용 하는 인터넷에 연결 하면 AT 9 iOS 및 OS X El Capitan에 기본적으로 활성화 되므로 특정 작업을 수행 해야 하거나 연결 예외가 throw 됩니다.
 
-기존 응용 프로그램에 대 한 Apple 제안 지 원하는 `HTTPS` 최대한 빨리 프로토콜입니다. 하거나 수 없는 경우 타사 지원 하지 않는 웹 서비스에 연결 하는 때문에 `HTTPS` 지 원하는 경우 또는 `HTTPS` 유용한 것, 있습니다 수 되지 않게 AT 합니다. 참조는 [AT Opting 아웃](#Opting-Out-of-ATS) 자세한 내용을 보려면 아래 섹션.
+기존 응용 프로그램에 대 한 Apple 제안 지 원하는 `HTTPS` 최대한 빨리 프로토콜입니다. 하거나 수 없는 경우 타사 지원 하지 않는 웹 서비스에 연결 하는 때문에 `HTTPS` 지 원하는 경우 또는 `HTTPS` 유용한 것, 있습니다 수 되지 않게 AT 합니다. 참조는 [AT Opting 아웃](#optout) 자세한 내용을 보려면 아래 섹션.
 
 사용 해야 새 Xamarin.iOS 앱에 대 한 `HTTPS` 인터넷 리소스와 통신할 때에 합니다. 다시, 경우가 있을 수 있습니다 (예: 타사 웹 서비스를 사용 하 여) 여기서 이것이 불가능 하 고 되지 않게 하려면 AT의 필요 합니다.
 
@@ -144,7 +144,7 @@ IOS9, 앱 전송 보안 (AT)는 인터넷 리소스 (예: 응용 프로그램의
 
 AT 9 iOS 및 OS X 10.11 (El Capitan)에 대 한 모든 연결을 사용 하 여 빌드한 앱에 기본적으로 활성화 되어 있으므로 `NSURLConnection`, `CFURL` 또는 `NSURLSession` AT 보안 요구 사항이 적용 됩니다. 연결에는 이러한 요구 사항을 충족 하지 않는 경우 예외와 함께 실패 합니다.
 
-Apple 제공는 [TLSTool 샘플 응용 프로그램](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) 컴파일할 수 있습니다 (또는 필요에 따라 Xamarin 및 C# 코드 변환) AT/TLS 문제를 진단 하는 데 사용 합니다. 참조 하십시오는 [AT Opting 아웃](#Opting-Out_of_ATS) 이 문제를 해결 하는 방법에 대 한 내용은 아래 섹션.
+Apple 제공는 [TLSTool 샘플 응용 프로그램](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) 컴파일할 수 있습니다 (또는 필요에 따라 Xamarin 및 C# 코드 변환) AT/TLS 문제를 진단 하는 데 사용 합니다. 참조 하십시오는 [AT Opting 아웃](#optout) 이 문제를 해결 하는 방법에 대 한 내용은 아래 섹션.
 
 
 <a name="config" />
@@ -215,7 +215,7 @@ Apple 항상 사용 하도록 제안 하는 동안는 `HTTPS` 프로토콜 및 �
 
 Mac 용 Visual Studio 안에서 두 번 클릭는 `Info.plist` 파일에 **솔루션 탐색기**, 전환할는 **소스** 위 키 추가:
 
-[ ![](ats-images/ats01.png "Info.plist 파일의 소스 뷰")](ats-images/ats01.png)
+[![](ats-images/ats01.png "Info.plist 파일의 소스 뷰")](ats-images/ats01.png#lightbox)
 
 
 응용 프로그램을 로드 하 고 안전 하지 않은 사이트에서 웹 콘텐츠를 표시 하는 경우 다음 응용 프로그램을 추가 **Info.plist** 파일을 웹 페이지를 나머지에도 사용할 Apple 전송 보안 (AT) 보호 하는 동안 올바르게 로드 하려면 응용 프로그램:
@@ -240,7 +240,7 @@ Mac 용 Visual Studio 안에서 두 번 클릭는 `Info.plist` 파일에 **솔�
 
 Mac 용 Visual Studio 안에서 두 번 클릭는 `Info.plist` 파일에 **솔루션 탐색기**, 전환할는 **소스** 위 키 추가:
 
-[ ![](ats-images/ats02.png "Info.plist 파일의 소스 뷰")](ats-images/ats02.png)
+[![](ats-images/ats02.png "Info.plist 파일의 소스 뷰")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > **참고:** 해야 응용 프로그램에서 안전 하지 않은 웹 사이트에 대 한 연결을 필요한 경우 **항상** 도메인을 사용 하 여 예외 입력 `NSExceptionDomains` AT 사용 하 여 완전히 해제 하는 대신 `NSAllowsArbitraryLoads`합니다. `NSAllowsArbitraryLoads` 극단적인 응급 상황에만 사용 해야 합니다.

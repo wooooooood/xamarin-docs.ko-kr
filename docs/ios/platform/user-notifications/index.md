@@ -3,16 +3,16 @@ title: "사용자 알림 프레임 워크"
 description: "이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 473f9b4d4fa2a034c7f39ce309fb3f921d809a10
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-notifications-framework"></a>사용자 알림 프레임 워크
 
@@ -25,7 +25,7 @@ _이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 �
 새 사용자 알림 UI 프레임 워크에는 응용 프로그램 또는 사용자에 게 제공 하는 경우에 로컬 및 원격 알림 표시를 사용자 지정에 대 한 응용 프로그램 확장 수 있습니다.
 
 
-## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[향상 된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md)
+## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[향상된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
 이 문서에는 모든 사용자 알림을 iOS 10에 대 한 향상 된와 간략 한 소개는 새 사용자 알림 프레임 워크를 사용 하 여 구현 된 방법을 소개 합니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 7441fbe1fc686dc4fa5cb67cbfc5ae6353f32c93
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c058f173f64efe4a5c777872e9ea67120115f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough"></a>연습
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 라는 새 Xamarin.Android 프로젝트 만들기 **FragmentSample**합니다. **최소 Android** 버전 설정할지를 Android 3.1 이상으로 아래 이미지에 나와 있는 것 처럼:
 
-[![최소 Android 버전을 설정합니다.](walkthrough-images/00.png)](walkthrough-images/00.png)
+[![최소 Android 버전을 설정합니다.](walkthrough-images/00.png)](walkthrough-images/00.png#lightbox)
 
 
 ## <a name="2-create-the-mainactivity"></a>2. MainActivity 만들기
@@ -47,7 +47,7 @@ public class MainActivity : Activity
 
 두 개의 다른 화면 크기에는 두 개의 다른 레이아웃 파일이 필요 합니다. 이제 새 폴더를 만들 **리소스/레이아웃-대형**, 라는 새 레이아웃을 만들고 **activity_main.axml**합니다. 기본 레이아웃 파일으로 바꾼 또한 합니다 **Resources/Layout/activity_main.axml**합니다. 이러한 변경 된 후 레이아웃 폴더는 다음 스크린샷을 유사 해야 합니다.
 
-[![IDE에서 레이아웃 폴더의 스크린샷](walkthrough-images/01.png)](walkthrough-images/01.png)
+[![IDE에서 레이아웃 폴더의 스크린샷](walkthrough-images/01.png)](walkthrough-images/01.png#lightbox)
 
 
 모든 장치 로드 되 고 레이아웃 파일을 사용할 **리소스/레이아웃**합니다.
@@ -92,7 +92,7 @@ Android 3.2 화면 레이아웃을 지정 하는 새로운 방법을 도입 되�
 
 `TitlesFragment` 다양 한 역할의 제목을 표시 되 면 프로젝트에 새 조각을 호출을 추가 하겠습니다. 따라서 `TitlesFragment`:
 
-[![새로운 조각이 TitlesFragment 프로젝트에 추가](walkthrough-images/02.png)](walkthrough-images/02.png)
+[![새로운 조각이 TitlesFragment 프로젝트에 추가](walkthrough-images/02.png)](walkthrough-images/02.png#lightbox)
 
 후 `TitlesFragment` 추가 클래스에서 상속 되도록 변경 해야 `Android.App.ListFragment`합니다. `ListFragment` 목록 기능을 포함 하는 특수 한 조각 형식이입니다.
 `TitlesFragment` 재정의 합니다 `OnActivityCreated` (다른 조각 수명 주기 메서드)를 제공 하 고는 `Adapter` 하 `ListFragment` 목록을 채우는 데 사용 합니다:
@@ -162,7 +162,6 @@ private void ShowDetails(int playId)
 
 장치에서 선택한 play에서 따옴표를 표시 하는 방법을 결정 하는 코드 합니다. 태블릿의 경우는 `_isDualPane` 플래그로 설정 됩니다 `true`, 및 견적에 옆에 표시 됩니다는 `TitlesFragment`합니다. 경우 선택한 재생 `id` 아직 표시 되지 않은 다음 새 `DetailsFragment` 생성 한 다음에 로드 되는 `FrameLayout` 활동에 있습니다. 대형 디스플레이 갖지 않는 다른 장치에 대 한 &ndash; 폰, 예를 들어 &ndash; `isDualPane` 로 설정 됩니다 `false` 하므로 새 `DetailsActivity` 시작 됩니다.
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## <a name="5-create-the-detailsactivity"></a>5. DetailsActivity 만들기
 
@@ -187,7 +186,6 @@ public class DetailsActivity : Activity
 
 레이아웃 파일이 없는 하기 위해 로드 된 알림 `DetailsActivity`합니다. 대신, `DetailsFragment` 작업의 루트 보기에 로드 됩니다. 이 루트 뷰에 특수 ID `Android.Resource.Id.Content`합니다. 새 `DetailFragment` 생성 되어 다음 내부에이 루트 보기에 추가 `FragmentTransaction` 활동의에서 만들어진 `FragmentManager`합니다.
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## <a name="6-create-the-detailsfragment"></a>6. DetailsFragment 만들기
 

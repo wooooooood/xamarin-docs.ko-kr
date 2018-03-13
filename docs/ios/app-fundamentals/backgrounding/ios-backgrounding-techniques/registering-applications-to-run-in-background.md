@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dddd1ad4ae70b97f17ba71a7e96b553759e35695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5fcb41f4f60adc8ca5be761c2b9a7449387a89d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="registering-applications-to-run-in-the-background"></a>백그라운드에서 실행 되도록 응용 프로그램 등록
 
@@ -34,7 +34,7 @@ GPS 통해 사용자에 대 한 지침을 얻는 등의 중요 한, 장기 실�
 
 응용 프로그램을 설정 하 여 등록할 수 있습니다는 **백그라운드 모드 필요한** 응용 프로그램의 속성 *Info.plist*합니다. 응용 프로그램은 필요한 수 만큼 범주에 등록할 수 있습니다.
 
- [ ![](registering-applications-to-run-in-background-images/bgmodes.png "백그라운드 모드를 설정합니다.")](registering-applications-to-run-in-background-images/bgmodes.png)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "백그라운드 모드를 설정합니다.")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 백그라운드 위치 업데이트에 대 한 응용 프로그램을 등록 하는 단계별 가이드에 대 한 참조는 [배경 위치 연습](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)합니다.
 
@@ -42,7 +42,7 @@ GPS 통해 사용자에 대 한 지침을 얻는 등의 중요 한, 장기 실�
 
 다른 속성에 설정할 수 있는 *Info.plist* 는 *응용 프로그램이 백그라운드에서 실행 되지 않는*, 또는 `UIApplicationExitsOnSuspend` 속성:
 
- [ ![](registering-applications-to-run-in-background-images/plist.png "배경 실행을 사용 하지 않도록 설정")](registering-applications-to-run-in-background-images/plist.png)
+ [![](registering-applications-to-run-in-background-images/plist.png "배경 실행을 사용 하지 않도록 설정")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 이 백그라운드 응용 프로그램 새로 고침 설정이 개발자 쪽에만 변경할 수 있습니다 점을 제외 하 고 iOS 7 이상에서 off로 설정 하는 것과 동일한 결과가 정확 하 게 이며 iOS 4 이상용 수 있습니다. 응용 프로그램 백그라운드를 입력 한 후 즉시 일시 중단 및 처리 작업을 수행할 수 없습니다.
 

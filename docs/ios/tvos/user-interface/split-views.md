@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8787913c04b11a84828cd98960407f0cc27aa391
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-split-view-controllers"></a>분할 뷰 컨트롤러 작업
 
@@ -21,7 +21,7 @@ _이 문서에서는 디자인 및 분할 뷰 컨트롤러 Xamarin.tvOS 앱 내�
 
 분할 뷰 컨트롤러 수를 표시 하 고는 마스터 및 세부 정보 뷰-컨트롤러-side-by-side를 동시에 화면을 관리 합니다. 분할 뷰 컨트롤러는 마스터 보기 (왼쪽에서 더 작은 섹션)에서 영구, 포커스 콘텐츠를 제공 하는 데 사용 하 고 관련 된 세부 정보 보기 (오른쪽에 더 큰 섹션)에서 세부 정보입니다.
 
-[ ![](split-views-images/intro01.png "샘플 분할 뷰")](split-views-images/intro01.png)
+[![](split-views-images/intro01.png "샘플 분할 뷰")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -31,7 +31,7 @@ _이 문서에서는 디자인 및 분할 뷰 컨트롤러 Xamarin.tvOS 앱 내�
 
 마스터 뷰-컨트롤러 수 있는 되었습니다 숨겨지거나 표시 하는 또한 필요에 따라: 
 
-[ ![](split-views-images/intro02.png "숨겨진 마스터 뷰 컨트롤러")](split-views-images/intro02.png)
+[![](split-views-images/intro02.png "숨겨진 마스터 뷰 컨트롤러")](split-views-images/intro02.png#lightbox)
 
 마스터 보기에서 범주 및 세부 정보 뷰에서 필터링 된 결과에 필터링 가능한 콘텐츠 목록을 표시할 분할 뷰 컨트롤러를 사용 하는 경우가 많습니다. 이 속성은 일반적으로 왼쪽에 표 보기로 표시 됩니다는 및 [컬렉션 뷰](~/ios/tvos/user-interface/collection-views.md) 오른쪽에 있습니다.
 
@@ -54,18 +54,18 @@ Apple에 분할 뷰 컨트롤러를 사용 하기 위한 다음 제안 사항을
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **분할 뷰 컨트롤러** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](split-views-images/activity01.png "분할 뷰 컨트롤러")](split-views-images/activity01.png)
+    [![](split-views-images/activity01.png "분할 뷰 컨트롤러")](split-views-images/activity01.png#lightbox)
 1. 기본적으로 iOS 디자이너 마스터 보기에서 탐색 컨트롤러와 뷰 컨트롤러를 설치 됩니다. 응용 프로그램의 요구 사항을 맞지 않은 경우 단순히 삭제.
 1. 기본 마스터 뷰를 제거한 경우 새 보기 컨트롤러 디자인 화면으로 끌어 옵니다. 
 
-    [ ![](split-views-images/activity02.png "뷰 컨트롤러")](split-views-images/activity02.png)
+    [![](split-views-images/activity02.png "뷰 컨트롤러")](split-views-images/activity02.png#lightbox)
 1. Control 클릭 분할 뷰 컨트롤러를 끌어서 새 마스터 뷰 컨트롤러입니다. 
 1. 선택 **마스터** 에서 **팝업 메뉴**: 
 
-    [ ![](split-views-images/activity03.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03.png)
+    [![](split-views-images/activity03.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03.png#lightbox)
 1. 마스터 및 세부 정보 보기의 내용을 디자인: 
 
-    [ ![](split-views-images/activity04.png "예제 레이아웃")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "예제 레이아웃")](split-views-images/activity04.png#lightbox)
 1. 할당 **이름** 에 **위젯을 탭** 의 **속성 패드** C# 코드에서 UI 컨트롤을 사용 하려면.
 1. 변경 내용을 저장 하 고 Mac.에 Visual Studio로 반환 합니다.
 
@@ -74,18 +74,18 @@ Apple에 분할 뷰 컨트롤러를 사용 하기 위한 다음 제안 사항을
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **분할 뷰 컨트롤러** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](split-views-images/activity01-vs.png "분할 뷰 컨트롤러")](split-views-images/activity01-vs.png)
+    [![](split-views-images/activity01-vs.png "분할 뷰 컨트롤러")](split-views-images/activity01-vs.png#lightbox)
 1. 기본적으로 iOS 디자이너가 탐색 컨트롤러와 뷰-컨트롤러 마스터 뷰에 추가 합니다. 응용 프로그램의 요구 사항을 맞지 않은 경우 단순히 삭제.
 1. 기본 마스터 뷰를 제거한 경우 새 보기 컨트롤러 디자인 화면으로 끌어 옵니다. 
 
-    [ ![](split-views-images/activity02-vs.png "뷰 컨트롤러")](split-views-images/activity02-vs.png)
+    [![](split-views-images/activity02-vs.png "뷰 컨트롤러")](split-views-images/activity02-vs.png#lightbox)
 1. Control 클릭 분할 뷰 컨트롤러를 끌어서 새 마스터 뷰 컨트롤러입니다. 
 1. 선택 **마스터** 에서 **팝업 메뉴**: 
 
-    [ ![](split-views-images/activity03-vs.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03-vs.png)
+    [![](split-views-images/activity03-vs.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03-vs.png#lightbox)
 1. 마스터 및 세부 정보 보기의 내용을 디자인: 
 
-    [ ![](split-views-images/activity04.png "콘텐츠 레이아웃")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "콘텐츠 레이아웃")](split-views-images/activity04.png#lightbox)
 1. 할당 **이름** 에 **위젯을 탭** 의 **속성 탐색기** C# 코드에서 UI 컨트롤을 사용 하려면.
 1. 변경 내용을 저장합니다.
     

@@ -5,20 +5,23 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 41e28366a856f5f0c12db6087117aebb4de72844
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5013b35828cecc2e38600839f306f3c0fc1366b9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스 사용
 
 _Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure DocumentDB 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다._
 
-## <a name="overview"></a>개요
+> [!VIDEO https://youtube.com/embed/BoVH12igmbg]
+
+**Microsoft Azure Cosmos DB 위한 것 이며 [Xamarin 대학](https://university.xamarin.com/)**
 
 Azure Cosmos DB 문서 데이터베이스 계정은 Azure 구독을 사용 하 여 프로 비전 할 수 있습니다. 각 데이터베이스 계정 0 개 이상의 데이터베이스를 가질 수 있습니다. 문서 데이터베이스 Azure Cosmos DB에는 문서 컬렉션 및 사용자에 대 한 논리적 컨테이너입니다.
 

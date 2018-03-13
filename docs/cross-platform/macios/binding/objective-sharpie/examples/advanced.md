@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 67bd1caf26c441e2a89def41ce3189b0dd67d7b1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc41c70495e40235d7acffa56c1255bfd074ca0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예제
 
@@ -130,7 +130,7 @@ Done.
 
 지정한 기는 또한 `-c -Ibuild/headers`합니다. 첫째, 고 `-c` 명령줄 인수를 해석할 중지 하 고 모든 후속 인수를 전달 하려면 Sharpie 목표를 지정 하는 인수 _clang 컴파일러에 직접_합니다. 따라서 `-Ibuild/Headers` 에서 검색할 clang 지시 하는 clang 컴파일러 인수를 포함 하는 `build/Headers`, POP 헤더 거주 변수인 합니다. Clang이이 인수를 사용 하지 않고 파일을 배치할 위치를 인식 하지 못하기는 `POP.h` 은 `#import`연산입니다. _프록시 서버 설정을 clang에 전달할 확인을 하느냐, 목표 Sharpie를 사용 하 여 거의 모든 "문제"_합니다.
 
-###<a name="completing-the-binding"></a>바인딩이 완료
+### <a name="completing-the-binding"></a>바인딩이 완료
 
 목표 Sharpie 이제 벌어 들인 `Binding/ApiDefinitions.cs` 및 `Binding/StructsAndEnums.cs` 파일입니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: eed12c84b9952ef5c3dd27847071f05392bc16c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-to-the-app-store"></a>앱 스토어에 배포
 
@@ -62,6 +62,8 @@ ms.lasthandoff: 02/27/2018
 **프로 비전 프로필** 모든 일치 하는 프로필 목록에 표시 됩니다-직접 만든이 드롭 다운 목록에서 일치 하는 프로필 표시 되어야 합니다.
 
 ![](appstore-images/options-selectprofile-sml.png "IOS 번들 서명 대화 상자")
+
+<a name="iTunes_Connect"/>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
@@ -123,7 +125,7 @@ Xcode는 Mac.에 대 한 Visual Studio에서 만든 보관 파일을 자동으�
 
 5. ITunes Connect 업로드 된 바이너리를 다시 방문 합니다. 응용 프로그램의 구성 페이지로 이동 하 고 선택 **시험판** 참조 하 고 상단 메뉴에서는 **빌드** 목록:
 
-  [ ![](appstore-images/itc-prerelease-sml.png "ITunes Connect에서에서 응용 프로그램 구성 페이지")](appstore-images/itc-prerelease.png)
+  [![](appstore-images/itc-prerelease-sml.png "ITunes Connect에서에서 응용 프로그램 구성 페이지")](appstore-images/itc-prerelease.png#lightbox)
 
 다음 승인을 받기 위해 응용 프로그램을 제출할 수 있습니다는 **버전** 페이지. 참조는 [iOS 응용 프로그램 배포 개요](~/ios/deploy-test/app-distribution/index.md) 자세한 정보에 대 한 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>문자열 서식 지정
 
@@ -121,7 +121,7 @@ XAML 파일의 다음 섹션은는 `StackLayout` 와 `BindingContext` 로 설정
 
 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![서식 지정 문자열](string-formatting-images/stringformatting-small.png "서식 지정 문자열")](string-formatting-images/stringformatting-large.png "서식 지정 문자열")
+[![서식 지정 문자열](string-formatting-images/stringformatting-small.png "서식 지정 문자열")](string-formatting-images/stringformatting-large.png#lightbox "서식 지정 문자열")
 
 ## <a name="viewmodels-and-string-formatting"></a>Viewmodel 및 문자열 서식 지정
 
@@ -174,7 +174,7 @@ XAML 파일의 다음 섹션은는 `StackLayout` 와 `BindingContext` 로 설정
 
 이제의 세 쌍 있습니다 `Slider` 및 `Label` 동일 하 게 바인딩된 요소에 원본 속성에는 `HslColorViewModel` 개체입니다. 유일한 차이점은 `Label` 에 `StringFormat` 속성을 표시 하는 각 `Slider` 값입니다.
 
-[![선택기를 더 잘 색](string-formatting-images/bettercolorselector-small.png "선택기를 더 잘 색")](string-formatting-images/bettercolorselector-large.png "선택기를 더 잘 색")
+[![선택기를 더 잘 색](string-formatting-images/bettercolorselector-small.png "선택기를 더 잘 색")](string-formatting-images/bettercolorselector-large.png#lightbox "선택기를 더 잘 색")
 
 기존의 두 자리 16 진수 형식의 RGB (빨강, 녹색, 파랑) 값을 표시할 수는 어떻게 궁금하실 수도 있습니다. 이러한 정수 값에서 직접 사용할 수 없습니다.는 `Color` 구조입니다. 한 가지 해결 ViewModel 내 색상 구성의 정수 값을 계산 하 고 속성으로 노출 하는 것입니다. 다음 서식을 수 있습니다를 사용 하는 `X2` 사양 서식 지정 합니다.
 

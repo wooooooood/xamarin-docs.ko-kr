@@ -3,14 +3,15 @@ title: "요약 장 28입니다. 위치 및 지도"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7361f65fecfed9d61b9df7088f9021ffa0192ad8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 장 28입니다. 위치 및 지도
 
@@ -215,7 +216,7 @@ Windows 런타임 응용 프로그램 Bing 지도 사용 하기 위한 인증 �
 
 에 사용 됩니다는 [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) 파일 및 [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) 코드 숨김 파일을 사용자의 위치는 박물관 거리도 표시 합니다.
 
-[![로컬 박물관 페이지의 삼중 스크린샷](images/ch28fg28-small.png "위치로 거리")](images/ch28fg28-large.png "위치로 거리")
+[![로컬 박물관 페이지의 삼중 스크린샷](images/ch28fg28-small.png "위치로 거리")](images/ch28fg28-large.png#lightbox "위치로 거리")
 
 프로그램에는 동적으로 지도 위치에 따라 pin 수를 제한 하는 방법을 보여 줍니다.
 

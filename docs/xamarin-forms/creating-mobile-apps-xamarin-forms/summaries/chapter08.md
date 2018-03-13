@@ -3,14 +3,15 @@ title: "8 장의 요약입니다. 조화의 XAML 및 코드"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e95d6a20e828c92deb0e03fe1bcbcf18aac9e508
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 452a7835bcb54501edffe7a2467544c6677616ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>8 장의 요약입니다. 조화의 XAML 및 코드
 
@@ -69,7 +70,7 @@ Xaml에서는 이벤트 처리기에 이벤트를 지정할 수 있지만 자체
 
 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 생성 [ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) 이벤트입니다. [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) 프로그램에서는 연결 하는 방법을 보여 줍니다. `TapGestureRecognizer` 4로 개체 `BoxView` 요소를 사용 하는 모조 게임 만들기:
 
-[![원숭이 탭의 삼중 스크린 샷](images/ch08fg07-small.png "모방 게임")](images/ch08fg07-large.png "모방 게임")
+[![원숭이 탭의 삼중 스크린 샷](images/ch08fg07-small.png "모방 게임")](images/ch08fg07-large.png#lightbox "모방 게임")
 
 하지만 **MonkeyTap** 프로그램 소리를 반드시 필요 합니다. (참조 [다음 장에서](chapter09.md).)
 

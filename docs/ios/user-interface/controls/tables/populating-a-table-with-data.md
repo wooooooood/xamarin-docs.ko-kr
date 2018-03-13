@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>데이터로 테이블 채우기
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 결과 테이블에는 다음과 같습니다.
 
- [ ![](populating-a-table-with-data-images/image3.png "실행 하는 예제 테이블")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "실행 하는 예제 테이블")](populating-a-table-with-data-images/image3.png#lightbox)
 
 대부분의 테이블 터치 행을 선택 하 고 (예:는 곡을 재생 또는 호출 하는 연락처, 또는 다른 화면을 보여 주는) 다른 작업을 수행할 수 있습니다. 이를 위해 해야 할 몇 가지 있습니다. 첫째, 사용자는 다음을 추가 하 여 행을 클릭 하는 경우 메시지를 표시 하려면 AlertController 만들기는 `RowSelected` 메서드:
 
@@ -140,7 +140,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "행 선택한 경고")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "행 선택한 경고")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>셀 재사용
@@ -220,7 +220,7 @@ public class MyCell : UITableViewCell
 
 인덱스를 통해 사용자는 일반적으로 인덱싱할 수 있지만 사전순으로 정렬 하는 긴 목록을 스크롤하여 원하는 어떤 기준으로 합니다. **BasicTableIndex** 샘플 인덱스를 설명 하기 위해 파일에서 훨씬 더 긴 항목 목록이 로드 합니다. 각 항목의 인덱스는 테이블의 'section'에 해당합니다.
 
- [ ![](populating-a-table-with-data-images/image5.png "인덱스 표시")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "인덱스 표시")](populating-a-table-with-data-images/image5.png#lightbox)
 
 테이블 뒤에 있는 데이터를 그룹화 할 수 있어야 BasicTableIndex 샘플 만듭니다 하므로 ' sections'를 지원 하기 위해 한 `Dictionary<>` 사전 키로 각 항목의 첫 번째 문자를 사용 하 여 문자열 배열에서:
 
@@ -270,7 +270,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 머리글 및 바닥글 데 사용할 수는 테이블의 행을 시각적으로 그룹화 합니다. 필요한 데이터 구조는 매우 유사 인덱스를 추가 하는 – `Dictionary<>` 잘 작동 합니다. 셀을 그룹화 하는 알파벳을 사용 하는 대신이 예제에서는 야채 botanical 유형별로 그룹화 됩니다.
 출력은 다음과 같습니다.
 
- [ ![](populating-a-table-with-data-images/image6.png "샘플 머리글 및 바닥글")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "샘플 머리글 및 바닥글")](populating-a-table-with-data-images/image6.png#lightbox)
 
 머리글 및 바닥글을 표시 하는 `UITableViewSource` 하위 클래스에는 이러한 추가 메서드가 필요 합니다.
 

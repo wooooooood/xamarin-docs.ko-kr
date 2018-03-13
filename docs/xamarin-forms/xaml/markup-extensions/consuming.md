@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -137,7 +137,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 다음은 세 플랫폼 모두에서 실행 되는 샘플입니다.
 
-[![X:static 데모](consuming-images/staticdemo-small.png "X:static 데모")](consuming-images/staticdemo-large.png "X:static 데모")
+[![X:static 데모](consuming-images/staticdemo-small.png "X:static 데모")](consuming-images/staticdemo-large.png#lightbox "X:static 데모")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 둘 다 `x:Reference` 의 축약된 버전을 사용 하 여 식에서 `ReferenceExtension` 클래스 이름 및 제거는 `Name=` 식의 부분입니다. 첫 번째 예제에서는 `x:Reference` 태그 확장에 포함 되어는 `Binding` 태그 확장 합니다. 에 `Source` 및 `StringFormat` 설정을 쉼표로 구분 됩니다. 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![X:reference 데모](consuming-images/referencedemo-small.png "X:reference 데모")](consuming-images/referencedemo-large.png "X:reference 데모")
+[![X:reference 데모](consuming-images/referencedemo-small.png "X:reference 데모")](consuming-images/referencedemo-large.png#lightbox "X:reference 데모")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ Xamarin.Forms에 내에서 여러 가지 속성 형식의 인수가 있는 `Type
 
 여기는 첫 주 페이지 **태그 확장**:
 
-[![주 페이지](consuming-images/mainpage-small.png "Main 페이지")](consuming-images/mainpage-large.png "주 페이지")
+[![주 페이지](consuming-images/mainpage-small.png "Main 페이지")](consuming-images/mainpage-large.png#lightbox "주 페이지")
 
 각 `CommandParameter` 속성이로 설정 되는 `x:Type` 다른 페이지 중 하나를 참조 하는 태그 확장입니다. `Command` 속성이 라는 속성이에 바인딩될 `NavigateCommand`합니다. 이 속성에 정의 된는 `MainPage` 코드 숨김 파일:
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 메서드는 될 때 실행 되는 `Button` 눌려질 인수의 새 인스턴스를 만들고, 설정 해당 `VerticalOptions` 속성에 추가 `StackLayout`합니다. 세 개의 `Button` 요소가 동적으로 생성된 된 뷰가 포함 된 다음 페이지를 공유 합니다.
 
-[![X:type 데모](consuming-images/typedemo-small.png "X:type 데모")](consuming-images/typedemo-large.png "X:type 데모")
+[![X:type 데모](consuming-images/typedemo-small.png "X:type 데모")](consuming-images/typedemo-large.png#lightbox "X:type 데모")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ public partial class TypeDemoPage : ContentPage
 
 `ViewCell` 간단한 만듭니다 `BoxView` 각 색 항목에 대해:
 
-[![X:array 데모](consuming-images/arraydemo-small.png "X:array 데모")](consuming-images/arraydemo-large.png "X:array 데모")
+[![X:array 데모](consuming-images/arraydemo-small.png "X:array 데모")](consuming-images/arraydemo-large.png#lightbox "X:array 데모")
 
 개별을 지정 하는 방법은 여러 가지가 `Color` 이 배열의 항목입니다. 사용할 수는 `x:Static` 태그 확장:
 
@@ -449,7 +449,7 @@ public partial class TypeDemoPage : ContentPage
 
 다음은 세 가지 플랫폼에서 실행 중인 프로그램입니다.
 
-[![X:null 데모](consuming-images/nulldemo-small.png "X:null 데모")](consuming-images/nulldemo-large.png "X:null 데모")
+[![X:null 데모](consuming-images/nulldemo-small.png "X:null 데모")](consuming-images/nulldemo-large.png#lightbox "X:null 데모")
 
 해당 4 통지는 `Label` 요소 중심 하지만 serif 글꼴에는 `Label` 기본 굴림 글꼴에 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 92cacd7ca5ff52a2bfe9060f47332b57d637609e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ae209f8099925cc160e16cb5365625e48e6c384d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-an-aar"></a>바인딩는 합니다. AAR
 
@@ -26,7 +26,7 @@ _이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러�
 
 -   컴파일된 Java 코드
 -   리소스 Id
--   리소스
+-   자료
 -   메타 데이터 (예를 들어 활동 선언, 사용 권한)
 
 이 가이드에서는 단일에 대 한 바인딩 라이브러리를 만드는 기본적인 단계별로 합니다에서는 합니다. AAR 파일입니다. Java 라이브러리 바인딩으로 일반적 (기본 코드 예제를 보려면)의 개요를 참조 하십시오. [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)합니다.
@@ -35,7 +35,6 @@ _이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러�
 > [!IMPORTANT]
 > 바인딩 프로젝트 하나 포함할 수 있습니다. AAR 파일입니다. 경우는 합니다. 다른 AAR 종속성입니다. AAR, 다음 이러한 종속성이 자신의 바인딩 프로젝트에 포함 된 고 그런 다음 참조 해야 합니다. 참조 [44573 버그](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)합니다.
 
-<a name="walkthrough" />
 
 ## <a name="walkthrough"></a>연습
 
@@ -72,12 +71,11 @@ public class TextCounter
 
 이 샘플 응용 프로그램 검색 하 고에 패키지 된 이미지 리소스를 표시 합니다. 또한 **textanalyzer.aar**:
 
-[ ![Xamarin 원숭이 이미지](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png)
+[![Xamarin 원숭이 이미지](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 이 이미지 리소스에 있는 **res/drawable/monkey.png** 에 **textanalyzer.aar**합니다.
 
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>바인딩 라이브러리 만들기
 
@@ -85,36 +83,35 @@ public class TextCounter
 
 1.  Android 바인딩 라이브러리 템플릿을 사용 하 여 시작 하는 새 바인딩을 라이브러리 프로젝트를 만듭니다. Mac 용 Visual Studio 또는 Visual Studio (아래 스크린샷과 Visual Studio를 표시 하지만 Mac 용 Visual Studio는 매우 유사)을 사용할 수 있습니다. 솔루션 이름을 **AarBinding**:
 
-    [ ![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png)
+    [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
 
 2.  템플릿에 포함 되어는 **단지** 폴더를 추가 하면 합니다. 바인딩 라이브러리 프로젝트에 AAR(s) 합니다. 마우스 오른쪽 단추로 클릭는 **단지** 폴더와 선택 **추가 > 기존 항목**:
 
-    [ ![기존 항목 추가](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png)
+    [![기존 항목 추가](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 
 3.  탐색 하 고 **textanalyzer.aar** 이전에 다운로드 한 파일을 선택 하 고 클릭 **추가**:
 
-    [ ![Textanalayzer.aar 추가](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png)
+    [![Textanalayzer.aar 추가](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 
 4.  확인은 **textanalyzer.aar** 파일이 프로젝트에 추가 되었습니다.
 
-    [ ![Textanalyzer.aar 파일이 추가 된](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png)
+    [![Textanalyzer.aar 파일이 추가 된](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
 5.  빌드 작업에 대 한 설정 **textanalyzer.aar** 를 `LibraryProjectZip`합니다. Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **textanalyzer.aar** 빌드 작업을 설정할 수 있습니다. Visual Studio 빌드 작업에서 설정할 수 있습니다는 **속성** 창):
 
-    [ ![Textanalyzer.aar 빌드 작업 LibraryProjectZip을로 설정](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png)
+    [![Textanalyzer.aar 빌드 작업 LibraryProjectZip을로 설정](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
 6.  프로젝트 속성을 구성을 열고는 *대상 프레임 워크*합니다. 경우는 합니다. API 수준으로 대상 프레임 워크를 설정, AAR Android Api를 사용 하 여 여 합니다. AAR 필요합니다. (대상 프레임 워크 설정 및 일반적으로 Android API 수준에 대 한 자세한 내용은 참조 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md).)
 
     바인딩 라이브러리에 대 한 대상 API 레벨을 설정 합니다. 이 예제에서는 때문에 최신 플랫폼 API 수준 (API 수준 23)을 사용 하는 우리의 **textanalyzer** Android Api에 종속 되어 있지 않습니다.
 
-    [ ![대상 수준을 API 23으로 설정](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png)
+    [![대상 수준을 API 23으로 설정](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
 7.  바인딩 라이브러리를 빌드하십시오. 바인딩 라이브러리 프로젝트는 빌드만 성공할 하 고 출력을 생성 해야 합니다. 다음 위치에서 DLL: **AarBinding/bin/Debug/AarBinding.dll**
 
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>바인딩 라이브러리를 사용 하 여
 
@@ -122,29 +119,28 @@ public class TextCounter
 
 1.  이 연습을 단순화 하기 위해 바인딩을 라이브러리와 동일한 솔루션에이 응용 프로그램을 만들고 있습니다. (바인딩 라이브러리를 사용 하는 응용 프로그램은 다른 솔루션에는 있을 수도 없습니다.) 새 Xamarin.Android 앱 만들기: 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **새 프로젝트 추가**합니다. 새 프로젝트의 이름을 **BindingTest**:
 
-    [ ![새 BindingTest 프로젝트 만들기](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png)
+    [![새 BindingTest 프로젝트 만들기](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
 
 2.  마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가...** :
 
-    [ ![참조 추가 클릭](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png)
+    [![참조 추가 클릭](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
 3.  선택 된 **AarBinding** 클릭 하 고 앞에서 만든 프로젝트 **확인**:
 
-    [ ![AAR 바인딩 프로젝트를 확인 합니다.](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png)
+    [![AAR 바인딩 프로젝트를 확인 합니다.](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
 4.  열기는 **참조** 의 노드는 **BindingTest** 되었는지 확인 하는 프로젝트는 **AarBinding** 참조가 있습니다.
 
-    [ ![AarBinding 참조 아래에 나열 됩니다.](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png)
+    [![AarBinding 참조 아래에 나열 됩니다.](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
 
 원하는 바인딩 라이브러리 프로젝트의 콘텐츠를 보려면를 두 번 눌러에서 열에 대 한 참조는 **개체 브라우저**합니다. 매핑된 콘텐츠를 볼 수는 `Com.Xamarin.Textcounter` 네임 스페이스 (Java에서 매핑된 `com.xamarin.textanalyzezr` 패키지)의 멤버를 볼 수 있습니다는 `TextCounter` 클래스:
 
-[ ![개체 브라우저 보기](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png)
+[![개체 브라우저 보기](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
 
 위의 스크린 샷에서 두 강조 표시 `TextAnalyzer` 예제 응용 프로그램에서 호출할 메서드를: `NumConsonants` (기본 Java를 래핑하는 `numConsonants` 메서드), 및 `NumVowels` (기본 Java를 래핑하는 `numVowels` 메서드).
 
 
-<a name="accessing_types" />
 
 ### <a name="accessing-aar-types"></a>에 액세스합니다. AAR 형식
 
@@ -264,12 +260,11 @@ namespace BindingTest
 
 컴파일 및 실행 된 **BindingTest** 프로젝트. 응용 프로그램 시작 되며 스크린샷에서 왼쪽에 있는 (의 `EditText` 일부 텍스트를 사용 하 여 초기화 되 변경 하 여 얻을 수 있지만). 탭 하면 **COUNT 모음**, 오른쪽에 표시 된 것 처럼 알림 메시지 모음 수가 표시 됩니다.
 
-[ ![BindingTest 실행의 스크린 샷](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png)
+[![BindingTest 실행의 스크린 샷](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png#lightbox)
 
 눌러 보십시오는 **COUNT 자음** 단추입니다. 또한 텍스트의 줄을 수정 하 고 다시 다른 모음을 테스트 하려면이 단추를 탭 하 고 자음 셉니다.
 
 
-<a name="accessing_resources" />
 
 ### <a name="accessing-aar-resources"></a>에 액세스합니다. AAR 리소스
 
@@ -305,13 +300,12 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 컴파일 및 실행 된 **BindingTest** 프로젝트. 응용 프로그램 시작 되며 스크린샷에서 왼쪽에 있는 &ndash; 탭 하면 **COUNT 자음**, 오른쪽에 표시 된 것 처럼 결과가 표시 됩니다.
 
-[ ![BindingTest 자음 개수를 표시 합니다.](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png)
+[![BindingTest 자음 개수를 표시 합니다.](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
 
 지금까지 Java 라이브러리에 성공적으로 연결 했습니다. AAR!
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 
@@ -322,7 +316,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 ## <a name="related-links"></a>관련 링크
 
 - [작성 Java 바인딩 라이브러리 (비디오)](https://university.xamarin.com/classes#10090)
-- [바인딩는 합니다. JAR](~/android/platform/binding-java-library/binding-a-jar.md)
+- [JAR 바인딩](~/android/platform/binding-java-library/binding-a-jar.md)
 - [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)
 - [AarBinding (샘플)](https://developer.xamarin.com/samples/monodroid/JavaIntegration/AarBinding)
 - [버그 44573 하나 프로젝트 여러.aar 파일을 바인딩할 수 없습니다.](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)

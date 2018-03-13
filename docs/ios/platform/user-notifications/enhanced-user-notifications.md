@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ba5249a275d3aa695ccc6527805c56907bbda0ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="enhanced-user-notifications"></a>향상 된 사용자 알림
 
@@ -168,11 +168,11 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 1. 두 번 클릭는 `Entitlements.plist` 파일에 **솔루션 패드** 를 편집 하기 위해 엽니다.
 2. 전환 하는 **소스** 보기: 
 
-    [ ![](enhanced-user-notifications-images/setup01.png "소스 뷰")](enhanced-user-notifications-images/setup01.png)
+    [![](enhanced-user-notifications-images/setup01.png "소스 뷰")](enhanced-user-notifications-images/setup01.png#lightbox)
 3. 클릭는  **+**  단추를 새 키를 추가 합니다.
 4. 입력 `aps-environment` 에 대 한는 **속성**, 둡니다는 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한는 **값**: 
 
-    [ ![](enhanced-user-notifications-images/setup02.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png)
+    [![](enhanced-user-notifications-images/setup02.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -181,7 +181,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 3. 클릭는  **+**  단추를 새 키를 추가 합니다.
 4. 입력 `aps-environment` 에 대 한는 **속성**, 둡니다는 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한는 **값**: 
 
-    [ ![](enhanced-user-notifications-images/setup02w.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png)
+    [![](enhanced-user-notifications-images/setup02w.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
 
 -----
@@ -190,7 +190,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 
 응용 프로그램을 보내고 원격 알림을 받기, 하는 경우 여전히 할 해야 합니다 _토큰 등록_ 기존를 사용 하 여 `UIApplication` API입니다. 이 등록 하려면 장치를 생성 하는 응용 프로그램에 전송 될 필요한 토큰 APNs는 라이브 네트워크 연결 액세스. 응용 프로그램은 다음 원격 알림을 등록 하는 개발자의 서버 쪽 앱을이 토큰을 전달 해야 합니다.
 
-[ ![](enhanced-user-notifications-images/token01.png "토큰 등록 개요")](enhanced-user-notifications-images/token01.png)
+[![](enhanced-user-notifications-images/token01.png "토큰 등록 개요")](enhanced-user-notifications-images/token01.png#lightbox)
 
 다음 코드를 사용 하 여 필요한 등록 초기화:
 
@@ -200,7 +200,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 
 알림 페이로드는 get의 일부를 보낼 때 서버에서 APNs 원격 알림을 보낼 때 포함 되도록 서버 쪽 응용 프로그램 개발자의로 전송 하는 토큰이 필요 합니다.
 
-[ ![](enhanced-user-notifications-images/token02.png "알림 페이로드의 일부로 포함 된 토큰")](enhanced-user-notifications-images/token02.png)
+[![](enhanced-user-notifications-images/token02.png "알림 페이로드의 일부로 포함 된 토큰")](enhanced-user-notifications-images/token02.png#lightbox)
 
 토큰이 함께 알림과 열거나 알림에 응답 하는 데 사용 되는 앱에 연결 하는 키로 사용 됩니다.
 
@@ -519,7 +519,7 @@ namespace MonkeyNotification
 
 원격 알림, 작업할 때 _서비스 확장_ 알림 페이로드 내에서 종단 간 암호화를 사용 하는 방법을 제공 합니다. 서비스 확장은 확장 또는 사용자에 게 표시 하기 전에 알림 표시 된 콘텐츠를 교체의 기본 목적은 백그라운드에서 실행 하는 사용자 인터페이스가 아닌 확장 (iOS 10에서에서 사용 가능). 
 
-[ ![](enhanced-user-notifications-images/extension01.png "서비스 확장 개요")](enhanced-user-notifications-images/extension01.png)
+[![](enhanced-user-notifications-images/extension01.png "서비스 확장 개요")](enhanced-user-notifications-images/extension01.png#lightbox)
 
 서비스 확장 신속 하 게 실행 되어야 하 고 시스템에서 실행 하는 시간이 짧은 시간을 지정만 됩니다. 서비스 확장명 실패는 할당 된 시간 내에 작업을 완료 하기 대체 메서드가 호출 됩니다. 대체 실패 하면 원래 알림 콘텐츠 나타납니다 사용자에 게 합니다.
 
@@ -538,13 +538,13 @@ Xamarin.iOS 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 패드** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **알림 서비스 확장** 클릭는 **다음** 단추: 
 
-    [ ![](enhanced-user-notifications-images/extension02.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension02.png)
+    [![](enhanced-user-notifications-images/extension02.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **다음** 단추: 
 
-    [ ![](enhanced-user-notifications-images/extension03.png "확장에 대 한 이름을 입력 합니다.")](enhanced-user-notifications-images/extension03.png)
+    [![](enhanced-user-notifications-images/extension03.png "확장에 대 한 이름을 입력 합니다.")](enhanced-user-notifications-images/extension03.png#lightbox)
 5. 조정 된 **프로젝트 이름** 및/또는 **솔루션 이름** 필요 하 고 클릭는 **만들기** 단추: 
 
-    [ ![](enhanced-user-notifications-images/extension04.png "프로젝트 이름 및/또는 솔루션 이름 조정")](enhanced-user-notifications-images/extension04.png) 
+    [![](enhanced-user-notifications-images/extension04.png "프로젝트 이름 및/또는 솔루션 이름 조정")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -552,7 +552,7 @@ Xamarin.iOS 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **알림 서비스 확장**: 
 
-    [ ![](enhanced-user-notifications-images/extension01w.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension01w.png)
+    [![](enhanced-user-notifications-images/extension01w.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension01w.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **확인** 단추입니다.
 
 -----

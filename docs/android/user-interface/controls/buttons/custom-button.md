@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: f77a9b8d3bb69bb47d973a56aed5ad1d49f9a02d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5131b4d09f01af6a6e8bed28a2df27bc801dfb80
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="custom-button"></a>사용자 지정 단추
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 마우스 오른쪽 단추로 클릭 하 아래 세 개의 이미지를 다운로드 한 다음에 복사는 **리소스/그릴** 프로젝트의 디렉터리입니다. 여러 단추 상태에 대 한 사용 됩니다.
 
- [![정상 상태에 대 한 Android 녹색 아이콘](custom-button-images/android-normal.png)](custom-button-images/android-normal.png) [ ![포커스가 있는 상태에 대 한 Android 주황색 아이콘이](custom-button-images/android-focused.png)](custom-button-images/android-focused.png) [ ![누른된 상태에 대 한 Android 노란색 아이콘](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png)
+ [![정상 상태에 대 한 Android 녹색 아이콘](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [ ![포커스가 있는 상태에 대 한 Android 주황색 아이콘이](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [ ![누른된 상태에 대 한 Android 노란색 아이콘](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
 새 파일을 만듭니다는 **리소스/그릴** 라는 디렉터리 **android_button.xml**합니다. 다음 XML을 삽입 합니다.
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/27/2018
 
 
 > [!NOTE]
-> **참고:** 의 순서는 `<item>` 요소는 중요 합니다. 이 그릴 수 있는 참조 될 때는 `<item>`는 어떤 것은 현재 단추 상태에 적합 한지 결정 하는 순서 대로 이동 합니다.
+> 순서는 `<item>` 요소는 중요 합니다. 이 그릴 수 있는 참조 될 때는 `<item>`는 어떤 것은 현재 단추 상태에 적합 한지 결정 하는 순서 대로 이동 합니다.
 > 이기 때문에 "일반" 이미지 마지막, 적용 된 경우에만 조건 `android:state_pressed` 및 `android:state_focused` false 평가 둘 다 있어야 합니다.
 
 열기는 **Resources/layout/Main.axml** 파일을 추가 [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) 요소:

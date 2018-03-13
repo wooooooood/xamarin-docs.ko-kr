@@ -4,14 +4,15 @@ description: "탐색 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 2643e06474ffe0fd60830db3f315bf525c2f84eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀과 장치 독립적 단위
 
@@ -98,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
 
-[![](pixels-images/surfacesize-small.png "화면 크기 페이지의 삼중 스크린샷")](pixels-images/surfacesize-large.png "화면 크기 페이지의 삼중 스크린 샷")
+[![](pixels-images/surfacesize-small.png "화면 크기 페이지의 삼중 스크린샷")](pixels-images/surfacesize-large.png#lightbox "화면 크기 페이지의 삼중 스크린 샷")
 
 볼 수 있듯이 `CanvasSize` 속성의는 `SKCanvasView` 및 `Size` 속성의는 `SKImageInfo` 값 픽셀 크기를 보고에서 일관성이 있습니다. `Height` 및 `Width` 의 속성은 `SKCanvasView` Xamarin.Forms 속성 및 플랫폼에 의해 정의 된 장치 독립적 단위에서 뷰의 크기를 보고 합니다.
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음 세 가지 플랫폼에서 실행 중인:
 
-[![](pixels-images/ellipsefill-small.png "화면 크기 페이지의 삼중 스크린샷")](pixels-images/ellipsefill-large.png "화면 크기 페이지의 삼중 스크린 샷")
+[![](pixels-images/ellipsefill-small.png "화면 크기 페이지의 삼중 스크린샷")](pixels-images/ellipsefill-large.png#lightbox "화면 크기 페이지의 삼중 스크린 샷")
 
 [다른 `DrawOval` 메서드](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 에 [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) 사각형의 왼쪽 및 오른쪽 아래 모서리의 X 및 Y 좌표를 기준으로 정의 된 인수입니다. 타원에 사용할 수도 있는지 제안 하는 해당 사각형에 채웁니다는 **타원 채우기** 다음과 같이 페이지:
 

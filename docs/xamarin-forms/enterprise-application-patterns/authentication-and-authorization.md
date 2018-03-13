@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 8b1715c8e7c3e9bb296577acd3d09a0f22488250
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -48,7 +48,7 @@ EShopOnContainers 모바일 앱 인증을 수행 하 고 Api에 대 한 액세�
 -   모바일 응용 프로그램 요청에 의해 이루어집니다 IdentityServer 사용 하 여 리소스에 액세스 하는 *액세스* API 리소스에 액세스할 수 있도록 하는 토큰입니다. 클라이언트는 액세스 토큰을 요청을 API에 전달 합니다. 액세스 토큰 (있는 경우)는 클라이언트와 사용자에 대 한 정보를 포함 합니다. Api 정보를 사용 하 여 자신의 데이터에 액세스 권한을 부여 합니다.
 
 > [!NOTE]
-> **참고**: 토큰을 요청할 수 전에 IdentityServer에 클라이언트를 등록 해야 합니다.
+> 클라이언트 토큰을 요청할 수 전에 IdentityServer 등록 되어야 합니다.
 
 ### <a name="adding-identityserver-to-a-web-application"></a>IdentityServer 웹 응용 프로그램에 추가
 

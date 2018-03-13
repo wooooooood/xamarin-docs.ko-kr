@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3b862f03a81364594f33d82ebf02d75440d7bc4c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5d64c7c1dbc502acd3876c2442f9bae1c46eeb74
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 있는 사용자를 인증합니다.
 
@@ -21,7 +21,7 @@ _Azure Active Directory B2C 연결 소비자 웹 및 모바일 응용 프로그�
 ![](~/media/shared/preview.png "이 API는 현재 시험판 버전")
 
 > [!NOTE]
-> **참고**:는 [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) 미리 보기 상태, 하지만 프로덕션 환경에서 사용 하기에 적합 합니다. 그러나 있을 수 있습니다 수의 주요 변경 내용 API, 내부 캐시 형식 및 응용 프로그램에 영향을 줄 수 있는 라이브러리의 다른 메커니즘입니다.
+> [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) 미리 보기 상태, 하지만 프로덕션 환경에서 사용 하기에 적합 합니다. 그러나 있을 수 있습니다 수의 주요 변경 내용 API, 내부 캐시 형식 및 응용 프로그램에 영향을 줄 수 있는 라이브러리의 다른 메커니즘입니다.
 
 ## <a name="overview"></a>개요
 
@@ -38,12 +38,12 @@ Azure Active Directory B2C id 관리 서비스로 모바일 응용 프로그램�
 1. 사용 하 여 [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) Azure Active Directory B2C 테 넌 트와 인증 하는 워크플로 시작 하려면 모바일 응용 프로그램에서 합니다.
 
 > [!NOTE]
-> **참고**: 모바일 응용 프로그램에 Azure Active Directory B2C id 관리를 통합, 뿐만 아니라 MSAL 사용할 수도 있습니다를 모바일 응용 프로그램에 Azure Active Directory id 관리를 통합 합니다. Azure Active directory에서 모바일 응용 프로그램을 등록 하 여이 작업을 수행할 수 있습니다는 [응용 프로그램 등록 포털](https://apps.dev.microsoft.com/)합니다. 등록 프로세스에서 할당 한 **응용 프로그램 ID** MSAL를 사용 하는 경우 지정할 수 있는 사용자 응용 프로그램을 고유 하 게 식별 합니다. 자세한 내용은 참조 [v2.0 끝점과 응용 프로그램을 등록 하는 방법을](/azure/active-directory/develop/active-directory-v2-app-registration/), 및 [인증 Your 모바일 앱 사용 하 여 Microsoft 인증 라이브러리](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) Xamarin 블로그.
+> 모바일 응용 프로그램에 Azure Active Directory B2C id 관리를 통합, 뿐만 아니라 모바일 응용 프로그램에 Azure Active Directory id 관리를 통합 하 MSAL도 사용할 수 있습니다. Azure Active directory에서 모바일 응용 프로그램을 등록 하 여이 작업을 수행할 수 있습니다는 [응용 프로그램 등록 포털](https://apps.dev.microsoft.com/)합니다. 등록 프로세스에서 할당 한 **응용 프로그램 ID** MSAL를 사용 하는 경우 지정할 수 있는 사용자 응용 프로그램을 고유 하 게 식별 합니다. 자세한 내용은 참조 [v2.0 끝점과 응용 프로그램을 등록 하는 방법을](/azure/active-directory/develop/active-directory-v2-app-registration/), 및 [인증 Your 모바일 앱 사용 하 여 Microsoft 인증 라이브러리](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/) Xamarin 블로그.
 
 MSAL 인증을 수행 하는 장치의 웹 브라우저를 사용 합니다. 사용자만 로그인 할 장치, 응용 프로그램에서 흐름의 로그인 및 권한 부여 변환율 향상 되 면 필요에 따라 응용 프로그램의 유용성이 향상 됩니다. 또한 장치 브라우저 보안 향상된을 제공합니다. 인증 프로세스를 완료 하는 사용자, 웹 브라우저 탭에서 응용 프로그램에 제어가 돌아옵니다. 이 사용자 지정 URL 체계는 인증 프로세스 후를 검색 하 고 전송 된 후 사용자 지정 URL을 처리에서 반환 되는 리디렉션 URL에 대 한 등록 하 여 달성 됩니다. 사용자 지정 URL 구성표를 선택 하는 방법에 대 한 자세한 내용은 참조 [네이티브 응용 프로그램 리디렉션 URI 선택](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri/)합니다.
 
 > [!NOTE]
-> **참고**: 운영 체제와 사용자 지정 URL 체계를 등록 하 고 체계를 처리 하기 위한 메커니즘은 각 플랫폼에 특정 합니다.
+> 운영 체제와 사용자 지정 URL 체계를 등록 하 고 체계를 처리 하기 위한 메커니즘은 각 플랫폼에 관련이 있습니다.
 
 Azure Active Directory B2C 테 넌 트에 전송 된 각 요청에 지정 된 *정책*합니다. 정책 등록 또는 로그인 시와 같은 소비자 identity 경험에 설명 합니다. 예를 들어 등록 정책에서 다음 설정을 통해 구성 될 Azure Active Directory B2C 테 넌 트의 동작 허용:
 
@@ -127,7 +127,7 @@ namespace TodoAzure.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             LoadApplication(new App());
-            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
+            App.UiParent = new UIParent(this);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

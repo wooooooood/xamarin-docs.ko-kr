@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f1d968dcee0cb9b6cd0cee8fa60be4f4dbb2833
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 600d651eae1f470f17511afaf9bc86c80ffc1a75
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications"></a>알림
 
@@ -99,17 +99,17 @@ Apple Watch 대 한 알림을 테스트할 때 유의 해야 [Apple 설명서](h
 Mac 용 visual Studio 조사식 확장으로 설정 된 경우 추가 옵션이 표시 됩니다는 **시작 프로젝트**합니다.
 조사식 확장 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **실행으로 > 사용자 지정 매개 변수 중...** :
     
-[![](notifications-images/runwith-customparams-sml.png "사용자 지정 속성을 가진 실행")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "사용자 지정 속성을 가진 실행")](notifications-images/runwith-customparams.png#lightbox)
     
 열립니다는 **실행 인수가** 창을 포함 하는 **WatchKit** 탭 합니다. 선택 **알림** JSON 페이로드를 제공 하 고 다음 키를 누릅니다 **Execute** 시뮬레이터에서 watch 앱을 시작 하려면:
     
-[![](notifications-images/runwith-execargs-sml.png "알림 페이로드 기본값 선택")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "알림 페이로드 기본값 선택")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 편집 하려면 조사식 확장에서 Visual Studio를 마우스 오른쪽 단추로 누르고 테스트 알림 페이로드를 설정 하는 **프로젝트 속성**합니다. 이동 하 여 **디버그** 섹션 (자동으로 나열 하는 프로젝트에 포함 된 모든 JSON 파일) 목록에서 알림을 JSON 파일을 선택 하십시오.
     
-[![](notifications-images/runwith-execargs-sml-vs.png "알림 JSON 파일을 선택 합니다.")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "알림 JSON 파일을 선택 합니다.")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 조사식 확장명이 **시작 프로젝트**, 아래와 같이 Visual Studio 추가 옵션이 표시 됩니다. 중 하나를 선택는 **알림** 에서 watch 앱을 시작 하는 옵션을 **알림** (속성 창에서 선택한 JSON 파일을 사용 하 여) 모드:
     

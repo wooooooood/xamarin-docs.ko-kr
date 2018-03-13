@@ -3,14 +3,15 @@ title: "요약 장 11입니다. 바인딩 가능한 인프라"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3e3cfb55f7b96751979d14b489e892bc07817780
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 장 11입니다. 바인딩 가능한 인프라
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) 샘플 Xamarin.Forms 클래스 계층 구조를 표시 하 고 실행 하는 중요 한 역할을 시연 하기 위해 `BindableObject` 이 계층 구조에서. `BindableObject` 파생 `Object` 의 부모 클래스를 [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) 올 [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) 파생 됩니다. 이 클래스는 부모 클래스를 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 및 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/),이를 부모 클래스 [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/):
 
-[![공유 하는 클래스 계층 구조의 세 스크린 샷](images/ch11fg01-small.png "클래스 계층 구조 공유")](images/ch11fg01-large.png "클래스 계층 구조 공유")
+[![공유 하는 클래스 계층 구조의 세 스크린 샷](images/ch11fg01-small.png "클래스 계층 구조 공유")](images/ch11fg01-large.png#lightbox "클래스 계층 구조 공유")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>BindableObject 및 BindableProperty 피킹
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 95f7ad5069abfe4dff82659c0fbc79eef2125e15
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af124c2ae0390c5321e9dd34158c7b53b33b2c48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-search-enhancements"></a>앱 검색의 향상 된 기능
 
@@ -54,17 +54,15 @@ IOS에서 10 Apple 기반으로이 기능은 사용자 스포트라이트 또는
 
 이 기능을 구현 하려면 응용 프로그램의 편집 `Info.plist` 파일에서 추가 된 `CoreSpotlightContinuation` 형식의 키 **부울** 으로 값을 설정 하 고 `YES`:
 
-[[ide name="xs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](app-search-enhancements-images/search01.png "CoreSpotlightContinuation Info.plist 파일에서 편집")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/search01.png "CoreSpotlightContinuation Info.plist 파일에서 편집")](app-search-enhancements-images/search01.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[ide name="vs]]
+[![](app-search-enhancements-images/searchw01.png "CoreSpotlightContinuation Info.plist 파일에서 편집")](app-search-enhancements-images/search01.png#lightbox)
 
-[ ![](app-search-enhancements-images/searchw01.png "CoreSpotlightContinuation Info.plist 파일에서 편집")](app-search-enhancements-images/search01.png)
-
-[[/ide]]
+-----
 
 검색 결과 계속 사용자에 게 응답 하도록 (`NSUserActivity`), 편집는 `AppDelegate.cs` 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 0c4b0571d9254edba15177d5f98fd6718f1c6bcb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e233d83eb9c5cb360add36da100963b95e54514
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture-changes"></a>아키텍처 변경
 
@@ -34,7 +34,7 @@ Mac 용 Visual Studio에서 앱을 업데이트 하려면 다음 단계를 사�
 
 5. 하도록 구성을 변경 **릴리스 | iPhone** 설정 하 고는 **지원 되는 아키텍처** 드롭다운을 **ARM64**합니다.
 
-32 비트 및 64 비트 아키텍처에 대 한 자세한 내용은 참조는 [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64.md#ios) 가이드입니다.
+32 비트 및 64 비트 아키텍처에 대 한 자세한 내용은 참조는 [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md#ios) 가이드입니다.
 
 ## <a name="related-links"></a>관련 링크
 

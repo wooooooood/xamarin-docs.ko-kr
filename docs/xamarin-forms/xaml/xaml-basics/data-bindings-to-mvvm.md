@@ -3,16 +3,16 @@ title: "5 단계입니다. MVVM에 대 한 데이터 바인딩을에서"
 description: "모델-뷰-MVVM () 아키텍처 패턴 염두에서 XAML과 고안 된 합니다. 세 가지 소프트웨어 계층을 분리를 적용 하는 패턴-; 뷰라고 XAML 사용자 인터페이스 내부 데이터, 모델 고 보기와 모델 간에 중간자 ViewModel 라고 합니다. 뷰와 ViewModel 종종 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰에 대 한 BindingContext ViewModel의 인스턴스는 일반적으로 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: b16aa2456cdae7a08f8f9ee8adbc32c124e78e18
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 207bf7649d588f973b400cb452d9d8b246955cdb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5 단계입니다. MVVM에 대 한 데이터 바인딩을에서
 
@@ -59,7 +59,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 물론, 큰 문제가 날짜와 시간 표시 되는 페이지 처음 빌드할 때 면 집합과 되지 변경.
 
-[ ![](data-bindings-to-mvvm-images/oneshotdatetime.png "날짜 및 시간을 표시 하는 보기")](data-bindings-to-mvvm-images/oneshotdatetime-large.png "날짜 및 시간을 표시 하는 보기")
+[![](data-bindings-to-mvvm-images/oneshotdatetime.png "날짜 및 시간을 표시 하는 보기")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "날짜 및 시간을 표시 하는 보기")
 
 XAML 파일에는 항상 현재 시간을 보여 주는 클록 표시할 수 있지만 필요한 일부 코드를 도움을 줍니다. MVVM, 모델 및 ViewModel 고안 된 경우 전체를 코드로 작성 된 클래스 됩니다. 뷰는 보통 데이터 바인딩을 통해 ViewModel에 정의 된 속성을 참조 하는 XAML 파일입니다.
 
@@ -142,7 +142,7 @@ Viewmodel 일반적으로 구현는 `INotifyPropertyChanged` 인터페이스는 
 
 `Binding` 태그 확장에는 `Text` 의 속성은 `Label` 형식은 `DateTime` 속성입니다. 디스플레이 다음과 같습니다.
 
-[ ![](data-bindings-to-mvvm-images/clock.png "ViewModel 통해 시간과 날짜를 표시 하는 보기")](data-bindings-to-mvvm-images/clock-large.png "ViewModel 통해 시간과 날짜를 표시 하는 보기")
+[![](data-bindings-to-mvvm-images/clock.png "ViewModel 통해 시간과 날짜를 표시 하는 보기")](data-bindings-to-mvvm-images/clock-large.png#lightbox "ViewModel 통해 시간과 날짜를 표시 하는 보기")
 
 개별 속성에 액세스할 수 이기도 `DateTime` 마침표로 구분 하 여 ViewModel 속성:
 
@@ -292,7 +292,7 @@ namespace XamlSamples
 
 각 바인딩 `Label` 기본값이 `OneWay`합니다. 만 값을 표시 해야 합니다. 하지만 각 바인딩 `Slider` 은 `TwoWay`합니다. 이 통해는 `Slider` ViewModel에서 초기화 합니다. 다음에 유의 `Color` 속성이 `Blue` ViewModel 인스턴스화될 때. 하지만 변경에는 `Slider` 도 다음 새 색을 계산 하는 ViewModel에서 속성에 대 한 새 값을 설정 해야 합니다.
 
-[ ![](data-bindings-to-mvvm-images/hslcolorscroll.png "양방향 데이터 바인딩을 사용 하 여 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png "양방향 데이터 바인딩을 사용 하 여 MVVM")
+[![](data-bindings-to-mvvm-images/hslcolorscroll.png "양방향 데이터 바인딩을 사용 하 여 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용 하 여 MVVM")
 
 ## <a name="commanding-with-viewmodels"></a>Viewmodel와 명령 실행
 
@@ -553,7 +553,7 @@ namespace XamlSamples
 
 `Command` 첫 번째 속성 `Button` 이 나타나는 태그에 바인딩된는 `DeleteCharCommand`; 나머지 부분에 바인딩된는 `AddCharCommand` 와 `CommandParameter` 동일 하 게에 표시 되는 문자는 `Button` 얼굴 합니다. 다음은 실행에서 프로그램이입니다.
 
-[ ![](data-bindings-to-mvvm-images/keypad.png "MVVM 및 명령을 사용 하 여 계산기")](data-bindings-to-mvvm-images/keypad-large.png "MVVM 및 명령을 사용 하 여 계산기")
+[![](data-bindings-to-mvvm-images/keypad.png "MVVM 및 명령을 사용 하 여 계산기")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "MVVM 및 명령을 사용 하 여 계산기")
 
 ### <a name="invoking-asynchronous-methods"></a>비동기 메서드 호출
 
@@ -678,7 +678,7 @@ public class PageDataViewModel
 
 페이지는 스크롤 가능한 목록에 나와 있습니다.
 
-[ ![](data-bindings-to-mvvm-images/mainpage.png "페이지를 스크롤할 수 있는 목록이")](data-bindings-to-mvvm-images/mainpage-large.png "스크롤할 수 있는 목록 페이지")
+[![](data-bindings-to-mvvm-images/mainpage.png "페이지를 스크롤할 수 있는 목록이")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "스크롤할 수 있는 목록 페이지")
 
 코드 숨김 파일에서 처리기는 사용자가 항목을 선택할 때 트리거됩니다. 처리기 집합은 `SelectedItem` 의 속성은 `ListBox` 다시 `null` 한 다음 선택한 페이지를 인스턴스화하고를 탐색:
 
@@ -696,6 +696,12 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 }
 ```
 
+## <a name="video"></a>비디오
+
+> [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
+
+**Xamarin.Forms 및 프리즘 간단 하 게 Xamarin 발전 2016: MVVM**
+
 ## <a name="summary"></a>요약
 
 XAML은 Xamarin.Forms 응용 프로그램에서 데이터 바인딩할 때에 특히 사용자 인터페이스를 정의 하기 위한 강력한 도구 및 MVVM 사용 됩니다. 코드의 모든 백그라운드 지원 사용자 인터페이스의 깨끗 한 잠재적으로 높은 표현 됩니다.
@@ -704,7 +710,7 @@ XAML은 Xamarin.Forms 응용 프로그램에서 데이터 바인딩할 때에 �
 ## <a name="related-links"></a>관련 링크
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [1 부입니다. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-- [2 부 합니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-- [3 부 합니다. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+- [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>팝업 메뉴
 
 `PopupMenu` 클래스 특정 보기에 연결 된 팝업 메뉴를 표시 하는 것에 대 한 지원을 추가 합니다. 다음 그림은 두 번째 항목을 선택 하는 것 처럼 강조 표시는 단추에서 표시 하는 팝업 메뉴를 보여 줍니다.
 
- [ ![세 항목 중 세 번 PopopMenu 예제](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![세 항목 중 세 번 PopopMenu 예제](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 몇 가지 새 기능을 추가 `PopupMenu` 즉 작업할 좀 더 쉽게 만들어 주는:
 
@@ -26,9 +26,8 @@ Android 4 몇 가지 새 기능을 추가 `PopupMenu` 즉 작업할 좀 더 쉽�
 
 이러한 향상 된이 기능에 살펴보겠습니다. 이 예제에는 단추를 포함 하는 단일 활동을 개가 있습니다. 사용자가 단추를 클릭 하면 아래와 같이 팝업 메뉴가 표시 됩니다.
 
- [ ![단추 및 3 개 항목 팝업 메뉴와 함께 에뮬레이터에서 실행 중인 응용 프로그램의 예](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![단추 및 3 개 항목 팝업 메뉴와 함께 에뮬레이터에서 실행 중인 응용 프로그램의 예](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>팝업 메뉴 만들기
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 위의 코드에서 메뉴 않아서 후를 호출 하 `menu.Show` 화면에 표시 합니다.
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>메뉴 이벤트 처리
 

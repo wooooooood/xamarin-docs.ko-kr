@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a6749ca9d8a793372ec088433780d622f2f05b41
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>검색 및 홈 화면 위젯 향상 된 기능
 
@@ -25,7 +25,7 @@ Apple에 위젯 10 잠금 화면 새 iOS에 있는 모든 백그라운드에서 
 
 위젯 폭넓게 사용자 지정할 수 및 텍스트, 이미지, 단추 등의 UI 요소를 포함할 수 있습니다. 또한 개발자 해당 위젯 레이아웃 추가로 사용자 지정할 수 있습니다.
 
-[ ![](widgets-images/widgets01.png "예제 위젯")](widgets-images/widgets01.png)
+[![](widgets-images/widgets01.png "예제 위젯")](widgets-images/widgets01.png#lightbox)
 
 사용자 보고는 응용 프로그램의 위젯을 상호 작용할 수 있는 주요 자릿수가 두 가지가 있습니다.
 

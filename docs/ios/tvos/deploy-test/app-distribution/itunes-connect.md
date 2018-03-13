@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5db53bef0f62937f7be0a5e5fb6f64f1bf3ca007
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>응용 프로그램 tvOS iTunes Connect에서 구성
 
@@ -39,11 +39,11 @@ Apple TV 앱 스토어에 출시 될 새 응용 프로그램을 만드는 Apple 
 
 위의 단계를 완료 모든 앱의 iTunes Connect 레코드 및 왼쪽 세로 막대를 사용 하 여 tvOS 지원을 추가 하려면 선택을 엽니다.
 
-[ ![](itunes-connect-images/connect01.png "왼쪽 세로 막대를 사용 하 여 tvOS 지원 추가")](itunes-connect-images/connect01.png)
+[![](itunes-connect-images/connect01.png "왼쪽 세로 막대를 사용 하 여 tvOS 지원 추가")](itunes-connect-images/connect01.png#lightbox)
 
 TvOS 특정 정보 화면 지정된 iTunes Connect 레코드에 대해 사용할 수 있습니다.
 
-[ ![](itunes-connect-images/connect02.png "TvOS 특정 정보 화면")](itunes-connect-images/connect02.png)
+[![](itunes-connect-images/connect02.png "TvOS 특정 정보 화면")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -51,7 +51,7 @@ TvOS 특정 정보 화면 지정된 iTunes Connect 레코드에 대해 사용할
 
 왼쪽 세로 막대에서 선택 **제출 위한 1.0 준비** tvOS 응용 프로그램 섹션에서:
 
-[ ![](itunes-connect-images/connect03.png "tvOS 버전 정보")](itunes-connect-images/connect03.png)
+[![](itunes-connect-images/connect03.png "tvOS 버전 정보")](itunes-connect-images/connect03.png#lightbox)
 
 이 화면에서 다음 정보를 제공 합니다.
 
@@ -63,7 +63,7 @@ TvOS 특정 정보 화면 지정된 iTunes Connect 레코드에 대해 사용할
 
 필요한 정보를 입력 하 고 나면 클릭는 **저장** 변경 내용을 저장 하려면 화면의 오른쪽 위 모서리에 있는 단추:
 
-[ ![](itunes-connect-images/connect04.png "tvOS 제출할 준비가 버전 정보")](itunes-connect-images/connect04.png)
+[![](itunes-connect-images/connect04.png "tvOS 제출할 준비가 버전 정보")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -71,7 +71,7 @@ TvOS 특정 정보 화면 지정된 iTunes Connect 레코드에 대해 사용할
 
 마지막으로 Xamarin.tvOS 응용 프로그램을 검토를 위해 Apple TV 앱 스토어에 제출할 준비가 러 우면로 응용 프로그램의 iTunes Connect 레코드 돌아가서는 **검토를 위해 제출** 화면의 오른쪽 위 모퉁이의 단추:
 
-[ ![](itunes-connect-images/connect05.png "검토를 위해 제출 합니다.")](itunes-connect-images/connect05.png)
+[![](itunes-connect-images/connect05.png "검토를 위해 제출 합니다.")](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

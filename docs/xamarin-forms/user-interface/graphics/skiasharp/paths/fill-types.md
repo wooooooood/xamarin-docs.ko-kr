@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e8a37816e28120392f550376807e91fb3b5d458
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cee93f082386e78a643b8c07dd48d0196e8ecd6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
@@ -164,7 +164,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 일반적으로 경로 채우기 유형에 영향을 미치지 채우기와 스트로크 하지 하지만 두 `Inverse` 모드 채우기와 스트로크에 영향을 줍니다. 두 채우기에 `Inverse` 형식 채우기 영역 oppositely를 별 외부 영역을 채웁니다. 선의 경우 두 `Inverse` 획 제외한 모든 항목 형식 색입니다. 이러한 역 채우기 형식을 사용 하 여 iOS 스크린 샷은 설명 된 것 처럼 일부 홀수 효과 만들 수 있습니다.
 
-[![](fill-types-images/fivepointedstar-small.png "Five-Pointed 별 페이지의 삼중 스크린샷")](fill-types-images/fivepointedstar-large.png "Five-Pointed 별 페이지의 삼중 스크린샷")
+[![](fill-types-images/fivepointedstar-small.png "Five-Pointed 별 페이지의 삼중 스크린샷")](fill-types-images/fivepointedstar-large.png#lightbox "Five-Pointed 별 페이지의 삼중 스크린샷")
 
 Android 및 Windows 모바일 스크린 샷을 일반적인 홀수 및 굴곡 효과 표시 하지만 선 및 채우기의 순서는 결과도 영향을 줍니다.
 
@@ -217,7 +217,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 최소한의 코드만 사용 하 여 만든 흥미로운 이미지:
 
-[![](fill-types-images/overlappingcircles-small.png "겹치는 원 페이지의 삼중 스크린샷")](fill-types-images/overlappingcircles-large.png "겹치는 원 페이지의 삼중 스크린샷")
+[![](fill-types-images/overlappingcircles-small.png "겹치는 원 페이지의 삼중 스크린샷")](fill-types-images/overlappingcircles-large.png#lightbox "겹치는 원 페이지의 삼중 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크

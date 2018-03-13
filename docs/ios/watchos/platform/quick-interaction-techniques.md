@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>WatchOS 3에 대 한 빠른 상호 작용 방법
 
@@ -77,7 +77,7 @@ Apple이 추가 몇 가지 새로운 기능과 Api WatchKit 해결 하기 위한
 
 개별 제스처에 대 한 제스처 인식 되 면 및 상태는 작업이 호출 된 (`WKGestureRecognizerState`)으로 할당 됩니다.
 
-[ ![](quick-interaction-techniques-images/quick01.png "개별 제스처 상태")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "개별 제스처 상태")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 모든 개별 제스처 시작는 `Possible` 상태 및 전환 중 하나로 `Failed` 또는 `Recognized` 상태입니다. 때 일반적으로 개발자 불연속 제스처를 사용 하 여 상태를 직접 처리 하지 않습니다. 대신 제스처만 인식 되 면 호출 되는 작업을 사용 합니다.
 
@@ -85,7 +85,7 @@ Apple이 추가 몇 가지 새로운 기능과 Api WatchKit 해결 하기 위한
 
 연속 제스처는 여기서 작업을 여러 번 호출 제스처를 인식 하는 개별 제스처를 약간 다릅니다.
 
-[ ![](quick-interaction-techniques-images/quick02.png "연속 제스처 상태")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "연속 제스처 상태")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 다시, 연속 제스처에서 시작는 `Possible` 상태에 있지만 여러 업데이트 동안 진행 합니다. 개발자 인식기의 상태는 고려 하 하는 동안 응용 프로그램의 UI를 업데이트 해야 합니다는 여기에서 `Changed` 제스처 마지막 될 때까지 단계 `Recognized` 또는 `Canceled`합니다.
 
@@ -168,7 +168,7 @@ Apple 상태로 남아 서 회전 개수 변경 내용 업데이트 하 고 UI �
 
 기호 (`+/-`) 회전 델타의 사용자의 디지털 왕관 회전 하는 방향을 나타냅니다.
 
-[ ![](quick-interaction-techniques-images/quick03.png "회전 델타의 부호는 사용자의 디지털 왕관 회전 하는 방향을 나타내는합니다")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "회전 델타의 부호는 사용자의 디지털 왕관 회전 하는 방향을 나타내는합니다")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 사용자를 스크롤 하는 경우 양수 델타 고 하는 경우 아래로 스크롤하여 다음 음수 델타 반환 됩니다, 방향 사용자에서 조사식 착용는 관계 없이 WatchKit 반환 합니다.
@@ -189,15 +189,15 @@ Apple 상태로 남아 서 회전 개수 변경 내용 업데이트 하 고 UI �
 
 데이터의 원하는 부분으로 스크롤하고 자세히 보기에는 표시 하려면 세부 정보 확인을 마쳤으면 뒤로 단추를 눌러 특정 행에 탭 또는 기타 정보에 대 한 프로세스를 반복 하는 사용자가 watchOS 응용 프로그램에서 테이블 뷰를 탐색 하는 표준 방법 하 고 y에 관심이에서 테이블 내에서:
 
-[ ![](quick-interaction-techniques-images/quick04.png "세부 정보 보기 및 테이블 간 이동")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "세부 정보 보기 및 테이블 간 이동")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 새로운 3 watchOS 개발자 활성화 세로 페이징 해당 테이블 뷰 컨트롤에 있습니다. 이 기능을 사용 하기 전에 해당 세부 정보를 보려면 행을 누르고 테이블 뷰 행을 찾을 사용자 스크롤할 수 있습니다. 그러나 있습니다 수 이제 위쪽으로 살짝 아래로 선택 이전 행 또는 테이블에서 다음 행 선택 (또는 사용 디지털 왕관), 테이블 보기로 돌아가려면 필요 없이 먼저:
 
-[ ![](quick-interaction-techniques-images/quick05.png "세부 정보 보기 및 테이블 간 이동 및 넘기기가 아래로 다른 행에는 사이 이동 하려면")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "세부 정보 보기 및 테이블 간 이동 및 넘기기가 아래로 다른 행에는 사이 이동 하려면")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 이 모드를 사용 하려면 watchOS 응용 프로그램의 스토리 보드 Xcode에서 편집을 위해 테이블 뷰 찾아서 확인는 **세로 세부 페이징** 확인란을 선택 합니다.
 
-[ ![](quick-interaction-techniques-images/quick06.png "세로 세부 페이징 확인란")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "세로 세부 페이징 확인란")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 테이블 자세히 보기에 표시 하 고 스토리 보드의 변경 내용을 저장, 동기화 하는 Mac에 대 한 Visual Studio로 되돌아가려면을 Segues 사용 중인지 확인 합니다.
 
@@ -313,7 +313,7 @@ Apple의 모든 watchOS 쉽고 빠르게 watchOS 응용 프로그램 인터페�
 
 이 특히, 여기서 watch 앱 되었거나 모든 종류의 네트워크 연결을 수행 하는 도우미 iPhone 앱과 정보를 공유 하는 경우 문제는. 트랜잭션을 조치가 바람직하지 않습니다 빠른 상호 작용 하는 동안 발생 하는 동안 대기 표시기를 발생할 종종 있습니다. 다음 예제를 참조하세요.
 
-[ ![](quick-interaction-techniques-images/quick07.png "네트워크 연결을 수행 하 고 해당 도우미 iPhone 앱과 정보를 공유 watch 앱의 다이어그램")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "네트워크 연결을 수행 하 고 해당 도우미 iPhone 앱과 정보를 공유 watch 앱의 다이어그램")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. 사용자가 시계에 구매 항목을 선택 합니다.
 2. 구입 단추를 누릅니다.
@@ -325,7 +325,7 @@ Apple의 모든 watchOS 쉽고 빠르게 watchOS 응용 프로그램 인터페�
 
 Apple의 제안 된 모델을 사용 하는 같은 빠른 상호 작용 다시 살펴보겠습니다를 수행 합니다.
 
-[ ![](quick-interaction-techniques-images/quick08.png "사과 제안 된 모델 다이어그램")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "사과 제안 된 모델 다이어그램")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. 사용자가 시계에 구매 항목을 선택 합니다.
 2. 구입 단추를 누릅니다.

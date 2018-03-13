@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e138fc1176c646a2e4e9caf94462028dd7c68e9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Mac 앱 스토어용 번들
 
@@ -25,11 +25,11 @@ ms.lasthandoff: 02/27/2018
 
 코드 서명 및 패키징 옵션을 업데이트하기 전에 **구성**을 **릴리스**로 변경합니다. 개발자는 회사 **ID**와 위에서 앱 스토어에 릴리스할 응용 프로그램을 서명할 때 만든 프로비전 프로필을 사용해야 합니다.
 
- [![코드 서명 옵션 편집](bundling-images/config02.png "코드 서명 옵션 편집")](bundling-images/config02-large.png)
+ [![코드 서명 옵션 편집](bundling-images/config02.png "코드 서명 옵션 편집")](bundling-images/config02-large.png#lightbox)
 
 **Mac에서 빌드** 설정에서 설치 관리자 패키지를 만드는 옵션을 선택했는지 확인합니다.
 
-[![빌드 옵션 편집](bundling-images/config03.png "빌드 옵션 편집")](bundling-images/config03-large.png)
+[![빌드 옵션 편집](bundling-images/config03.png "빌드 옵션 편집")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>빌드
 

@@ -3,16 +3,16 @@ title: Xamarin Workbooks
 description: "Xamarin 통합 문서에는 학습, 하 고 지침을 만들고 교육 보조 기능 설명서와 실험에는 완벽 하는 코드를 혼합 하 여 제공 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
+ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 3d01d157fde1e69c7180c07adfd52e259cdddf14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04d6110ea9d0f2c10cf0c3d17182cd06b88e7708
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -26,13 +26,13 @@ Xamarin 통합 문서는 오픈 소스 소프트웨어입니다. GitHub의 개�
 
 시험해 보기 및 의견을 알려 주시면 경우 있습니다 [버그에](~/tools/workbooks/install.md#reporting-bugs)합니다. 한 [포럼](https://forums.xamarin.com/categories/inspector) 너무!
 
-[ ![](images/interactive-1.0.0-urho-planet-earth-small.png "샘플 기반 UrhoSharp 통합 문서")](images/interactive-1.0.0-urho-planet-earth.png)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "샘플 기반 UrhoSharp 통합 문서")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
-## <a name="installation-and-requirementsinstallmd"></a>[설치 및 요구 사항](install.md)
+## <a name="installation-and-requirementsinstallmd"></a>[설치 및 요구사항](install.md)
 
 Windows 또는 Mac 컴퓨터에 설치 하는 통합 문서를 가져오는 방법에 대 한 정보입니다.
 
-## <a name="interactive-workbooksworkbookmd"></a>[대화형 통합 문서](workbook.md)
+## <a name="interactive-workbooksworkbookmd"></a>[대화형 Workbooks](workbook.md)
 
 Xamarin 통합 문서를 사용 하는 방법에 소개 합니다.
 

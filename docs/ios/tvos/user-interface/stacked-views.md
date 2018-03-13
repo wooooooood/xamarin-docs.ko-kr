@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>누적된 보기 사용
 
@@ -23,7 +23,7 @@ _이 문서에서는 디자인 및 보기 누적 Xamarin.tvOS 응용 프로그�
 
 스택 보기에 연결 된 모든 하위 뷰가 레이아웃을 같은 축, 배포, 정렬 및 간격 정의 개발자 속성에 따라 관리 합니다.
 
-[ ![](stacked-views-images/stacked01.png "하위 뷰 레이아웃 다이어그램")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "하위 뷰 레이아웃 다이어그램")](stacked-views-images/stacked01.png#lightbox)
 
 사용 하는 경우는 `UIStackView` Xamarin.tvOS 앱의 개발자 정의할 수 하위 스토리 보드 디자이너는 iOS 또는 추가 하 고 C# 코드에서 하위 뷰가 제거 하 여 내부 중 하나입니다.
 
@@ -103,21 +103,21 @@ Xamarin.tvOS 응용 프로그램에서 스택 뷰를 사용 하는 가장 쉬운
 1. 에 **솔루션 패드**, 클릭는 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 스택 보기에 추가 하는 것에 개별 요소의 레이아웃을 디자인: 
 
-    [ ![](stacked-views-images/layout01.png "요소 레이아웃 예제")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "요소 레이아웃 예제")](stacked-views-images/layout01.png#lightbox)
 1. 제대로 크기가 조정 되도록 요소에 필요한 모든 제약 조건을 추가 합니다. 스택 보기에 추가 되 면이 단계는 중요 합니다.
 1. (이 경우 4 개) 복사본 필요한 개수를 확인 합니다. 
 
-    [ ![](stacked-views-images/layout02.png "필요한 복사본의 수")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "필요한 복사본의 수")](stacked-views-images/layout02.png#lightbox)
 1. 끌어서는 **스택 뷰** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](stacked-views-images/layout03.png "스택 보기")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "스택 보기")](stacked-views-images/layout03.png#lightbox)
 1. 스택 보기를 선택는 **위젯을 탭** 의 **속성 패드** 선택 **채우기** 에 대 한는 **맞춤**, **채우기 동일 하 게** 에 대 한는 **배포** 입력 `25` 에 대 한는 **간격**: 
 
-    [ ![](stacked-views-images/layout04.png "위젯 탭")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "위젯 탭")](stacked-views-images/layout04.png#lightbox)
 1. 스택 뷰 원하는 하 고 필요한 위치에 보관 하는 제약 조건을 추가 화면에 놓습니다.
 1. 개별 요소를 선택 하 고 스택 뷰로 끌어 오십시오. 
 
-    [ ![](stacked-views-images/layout05.png "스택 보기에서 개별 요소")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "스택 보기에서 개별 요소")](stacked-views-images/layout05.png#lightbox)
 1. 레이아웃을 조정 될 것 및 요소 이상으로 설정 하는 특성을 기준으로 스택 보기에 정렬 됩니다.
 1. 할당 **이름** 에 **위젯을 탭** 의 **속성 탐색기** C# 코드에서 UI 컨트롤을 사용 하려면.
 1. 변경 내용을 저장합니다.
@@ -127,21 +127,21 @@ Xamarin.tvOS 응용 프로그램에서 스택 뷰를 사용 하는 가장 쉬운
 1. 에 **솔루션 탐색기**, 클릭는 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 스택 보기에 추가 하는 것에 개별 요소의 레이아웃을 디자인: 
 
-    [ ![](stacked-views-images/layout01.png "요소 레이아웃의 예")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "요소 레이아웃의 예")](stacked-views-images/layout01.png#lightbox)
 1. 제대로 크기가 조정 되도록 요소에 필요한 모든 제약 조건을 추가 합니다. 스택 보기에 추가 되 면이 단계는 중요 합니다.
 1. (이 경우 4 개) 복사본 필요한 개수를 확인 합니다. 
 
-    [ ![](stacked-views-images/layout02.png "필요한 복사본의 수")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "필요한 복사본의 수")](stacked-views-images/layout02.png#lightbox)
 1. 끌어서는 **스택 뷰** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](stacked-views-images/layout03-vs.png "스택 보기")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "스택 보기")](stacked-views-images/layout03-vs.png#lightbox)
 1. 스택 보기를 선택는 **위젯을 탭** 의 **속성 탐색기** 선택 **채우기** 에 대 한는 **맞춤**, **채우기 동일 하 게** 에 대 한는 **배포** 입력 `25` 에 대 한는 **간격**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "위젯 탭")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "위젯 탭")](stacked-views-images/layout04-vs.png#lightbox)
 1. 스택 뷰 원하는 하 고 필요한 위치에 보관 하는 제약 조건을 추가 화면에 놓습니다.
 1. 개별 요소를 선택 하 고 스택 뷰로 끌어 오십시오. 
 
-    [ ![](stacked-views-images/layout05-vs.png "스택 보기에서 개별 요소")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "스택 보기에서 개별 요소")](stacked-views-images/layout05-vs.png#lightbox)
 1. 레이아웃을 조정 될 것 및 요소 이상으로 설정 하는 특성을 기준으로 스택 보기에 정렬 됩니다.
 1. 할당 **이름** 에 **위젯을 탭** 의 **속성 탐색기** C# 코드에서 UI 컨트롤을 사용 하려면.
 1. 변경 내용을 저장합니다.
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 앱이 실행 되는 4 개의 요소가 우리의 스택 보기에서 동일 하 게 배포 됩니다.
 
-[ ![](stacked-views-images/layout06.png "4 개의 요소가 우리의 스택 보기에서 동일 하 게 배포 될 앱이 실행 되는 경우")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "4 개의 요소가 우리의 스택 보기에서 동일 하 게 배포 될 앱이 실행 되는 경우")](stacked-views-images/layout06.png#lightbox)
 
 플레이어 수를 줄이면 사용 하지 않는 뷰는 숨겨져 있으며, 스택 보기에 맞게 레이아웃을 조정 합니다.
 
-[ ![](stacked-views-images/layout07.png "플레이어의 수를 줄이면 사용 하지 않는 뷰는 숨겨져 있으며에 맞게 레이아웃을 조정 하는 스택 보기")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "플레이어의 수를 줄이면 사용 하지 않는 뷰는 숨겨져 있으며에 맞게 레이아웃을 조정 하는 스택 보기")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 

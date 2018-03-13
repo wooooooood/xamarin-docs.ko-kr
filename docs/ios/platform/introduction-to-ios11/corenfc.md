@@ -4,14 +4,15 @@ description: "11 iOS를 사용 하 여 읽기 근처 NFC (근거리 통신) 태�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-ios
+ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: 4975b4008c635ad2355ca2806ba867636dd50201
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 72c19ef09843c137514983b1d7ee7104e3cb32c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="core-nfc"></a>NFC 코어
 
@@ -62,7 +63,7 @@ CoreNFC를 사용 하려면 프로젝트의 항목 3 개를 구성 해야 합니
 
 새 **앱 ID** 있는지 확인는 **NFC 태그 읽기** 서비스 선택 되어 있습니다.
 
-[ ![개발자 포털 새 앱 ID 페이지를 선택 하는 NFC 태그 읽기](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png)
+[![개발자 포털 새 앱 ID 페이지를 선택 하는 NFC 태그 읽기](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 그런 다음이 응용 프로그램 ID에 대 한 새 프로비저닝 프로필을 만들 다음 다운로드 하 고 해야 사용자가 개발 Mac.에 설치
 

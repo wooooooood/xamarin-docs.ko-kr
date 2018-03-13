@@ -6,18 +6,17 @@ ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/12/2017
-ms.openlocfilehash: aeb7115e3c7521f6679e8802eb759d7e56ba1cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: fcd77d97d492baee441cfd428e58ea83525f927e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-resources-for-varying-screens"></a>다양 한 화면에 대 한 리소스 만들기
 
 Android 자체 각각 다양 한 해상도, 한 화면 크기 및 화면 밀도 가지 다양 한 장치에서 실행 됩니다. Android를 크기 조정 및 이러한 장치에서 작동 하는 응용 프로그램을 쉽게 크기 조정을 수행 합니다 되지만이 하위 최적의 사용자 경험을 제공할 수 있습니다. 예를 들어 이미지가 흐리게 표시, 이미지 될 수 있습니다 유발 하는 레이아웃에서 UI 요소의 위치 겹치거나 멀리 떨어져 너무 수는 과도 한 (또는 부족) 화면 공간을 차지 하는 것입니다.
 
-<a name="Concepts" />
 
 ## <a name="concepts"></a>개념
 
@@ -39,7 +38,6 @@ Android 자체 각각 다양 한 해상도, 한 화면 크기 및 화면 밀도 
 
 이 복잡성이를 해결 하려면 Android 프레임 워크를 사용 하 여 선호 *밀도 독립적 픽셀 (dp)* 화면 레이아웃에 대 한 합니다. UI 요소는 독립적 픽셀 밀도 사용 하 여 다른 밀도 화면에는 동일한 실제 크기를 사용자에 게 표시 됩니다.
 
-<a name="Supporting_Various_Screen_Sizes_and_Densities" />
 
 ## <a name="supporting-various-screen-sizes-and-densities"></a>다양 한 화면 크기와 밀도 지원합니다.
 
@@ -49,7 +47,6 @@ Android에는 각 화면 구성에 대해 제대로 레이아웃을 렌더링 �
 Android에는 적절 한 크기를 런타임에 drawables를 확장 됩니다.
 그러나 있기이 크기 조정은 흐리게 표시 하는 비트맵 발생 합니다. 이 방지 하려면 다른 밀도 대 한 대체 리소스를 제공 해야 할 수도 있습니다. 것이 더 쉽게 하는 다중 해상도 형식 및 화면 밀도 대 한 장치를 디자인할 때 시작 하 여 더 높은 해상도 또는 밀도 이미지, 다음 축소할 수도 있습니다. 이렇게 하면 모든 뜨 리고 또는 크기 조정이 발생할 수 있는 왜곡 되지 것입니다.
 
-<a name="Declare_the_Screen_Size_the_Application_Supports" />
 
 ### <a name="declare-the-screen-size-the-application-supports"></a>화면 크기에서 응용 프로그램에서 지 원하는 선언
 
@@ -59,29 +56,21 @@ Xamarin.Android에서이 작업을 수행 하려면 먼저 추가 하는 데 필
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android 매니페스트에서](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-[![Android 매니페스트에서](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png)
-
------
-
+[![Android 매니페스트에서](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
 
 **AndroidManifest.xml** 에 추가 되 고 **속성** 디렉터리입니다. 파일을 포함 하도록 한 다음 편집할 [지원 화면](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![화면 지원 추가](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png)
+[![화면 지원 추가](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![화면 지원 추가](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png)
+[![Android 매니페스트에서](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
+
+**AndroidManifest.xml** 에 추가 되 고 **속성** 디렉터리입니다. 파일을 포함 하도록 한 다음 편집할 [지원 화면](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+
+[![화면 지원 추가](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
 
 -----
-
-
-<a name="Provide_Alternate_Layouts_for_Different_Screen_Sizes" />
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>다양 한 화면 크기에 대 한 대체 레이아웃을 제공 합니다.
 
@@ -148,7 +137,6 @@ API 수준 (Android 3.2) 13 부터는 한 화면 크기는 이제는 소프트�
 -----
 
 
-<a name="Provide_Different_Bitmaps_for_Different_Screen_Densities" />
 
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>다른 화면 밀도 대 한 다른 비트맵을 제공 합니다.
 
@@ -162,17 +150,15 @@ Android 장치에 대해 필요에 따라 비트맵을 크기 조정 하지만 �
 
 ![밀도 별 리소스와 스크린샷](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-<a name="Create_Varying_Density_Resources_with_Android_Asset_Studio" />
 
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Android 자산 Studio와 함께 다양 한 밀도 리소스 만들기
 
 다양 한 밀도 이러한 비트맵 만들기 지루한 작업이 될 수 있습니다. 따라서 Google 이라는 이러한 비트맵 만들기와 관련 된 건 일부 줄일 수 있습니다는 온라인 유틸리티 만들었습니다는 [ **자산 o**](https://romannurik.github.io/AndroidAssetStudio/)합니다.
 
-[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png)
+[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 이 웹 사이트 생성의 비트맵 이미지를 제공 하 여 4 개의 일반적인 화면 밀도 대상으로 하는 데 도움이 됩니다. 자산 o 다음 비트맵 일부 사용자 지정을 만들고 zip 파일로 다운로드할 수 있도록 합니다.
 
-<a name="Tips_for_Multiple_Screens" />
 
 ## <a name="tips-for-multiple-screens"></a>여러 화면에 대 한 팁
 
@@ -189,7 +175,6 @@ Android 장치에 대해 필요에 따라 비트맵을 크기 조정 하지만 �
 
 - **LayoutParams를 사용 하 여 높이 및 너비에 대 한** -XML 레이아웃 파일로에서 UI 요소를 정의 하는 경우 사용 하 여 Android 응용 프로그램의 **wrap_content** 및 **fill_parent** 값 자세한 성공 기준이 있는 됩니다 픽셀 또는 밀도 독립적인 단위를 사용 하 여 보다 다양 한 장치의 적절 한 참조를 확인 합니다. 이러한 차원 값 Android 배율 비트맵 리소스를 적절 하 게 중단. 이와 동일한 이유로 밀도 독립적 단위 예약어 가장 시기에 대 한 여백을 지정 하 고 UI 요소의 안쪽 여백입니다.
 
-<a name="Testing_Multiple_Screens" />
 
 ## <a name="testing-multiple-screens"></a>여러 화면 테스트
 

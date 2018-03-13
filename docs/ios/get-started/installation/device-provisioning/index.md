@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 1a5120f088fca6997eef3a1bc27126b442380cac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b54adc28e318b263052bb6073390556a198cffe7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-provisioning"></a>장치 프로비전
 
@@ -22,7 +22,7 @@ Xamarin.iOS 응용 프로그램을 개발하는 동안 시뮬레이터 뿐만 �
 
 아래 그림에 강조 표시된 섹션은 iOS 프로비전을 설정하는 데 필요한 단계를 보여 줍니다.
 
-[![](images/provisioningdiagram.png "이 그림에 강조 표시된 섹션은 iOS 프로비전을 설정하는 데 필요한 단계를 보여 줍니다.")](images/provisioningdiagram.png)
+[![](images/provisioningdiagram.png "이 그림에 강조 표시된 섹션은 iOS 프로비전을 설정하는 데 필요한 단계를 보여 줍니다.")](images/provisioningdiagram.png#lightbox)
 
 이 후 다음 단계는 응용 프로그램을 배포하는 것입니다. 배포에 대한 자세한 내용은 [앱 배포](~/ios/deploy-test/app-distribution/index.md) 가이드를 참조하세요.
 

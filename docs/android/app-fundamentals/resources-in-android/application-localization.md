@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: 9c65672ef2c3f968e76c6180da07f5daf9f5b68a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8d25d8780a62e54780d7aa03d81f89fa0f668a4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-localization-and-string-resources"></a>응용 프로그램 지역화 및 문자열 리소스
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 예를 들어 아래 이미지를 같은 응용 프로그램을 세 개의 다른 장치 로캘에서 실행 보여주지만 각 단추에 표시 되는 텍스트는 각 장치에 설정 된 로캘에도 특정:
 
-[![세 개의 서로 다른 로캘의 예](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png)
+[![세 개의 서로 다른 로캘의 예](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 이 예제에서는 레이아웃 파일의 내용 **Main.axml** 다음과 같습니다.
 

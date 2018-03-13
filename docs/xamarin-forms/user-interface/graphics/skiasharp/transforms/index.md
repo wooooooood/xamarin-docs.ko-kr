@@ -4,14 +4,15 @@ description: "SkiaSharp 그래픽을 표시 하기 위한 변환에 대 한 자�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 06db59f5585671342ef7dbaa2d2cf14ec6830c41
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 756261db8f82198e6c5a4330a663bbd9965e57f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
@@ -50,11 +51,11 @@ SkiaSharp 변환은의 왼쪽 위 모퉁이 기준으로 `SKCanvas` Xamarin.Form
 
 이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **변환** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램 및는 [ **변환** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) 솔루션의 폴더입니다.
 
-## <a name="the-translate-transformtranslatemd"></a>[이동 변환](translate.md)
+## <a name="the-translate-transformtranslatemd"></a>[좌표 이동 변환](translate.md)
 
 이동할 SkiaSharp 그래픽 이동 변환을 사용 하는 방법에 알아봅니다.
 
-## <a name="the-scale-transformscalemd"></a>[크기 조정 변환](scale.md)
+## <a name="the-scale-transformscalemd"></a>[배율 변환](scale.md)
 
 개체를 다양 한 크기 조절용 SkiaSharp 배율 변환을 검색 합니다.
 
@@ -62,7 +63,7 @@ SkiaSharp 변환은의 왼쪽 위 모퉁이 기준으로 `SKCanvas` Xamarin.Form
 
 및 SkiaSharp 회전 변환을 사용 하 여 가능한 애니메이션 효과 탐색 합니다.
 
-## <a name="the-skew-transformskewmd"></a>[시간차 변환](skew.md)
+## <a name="the-skew-transformskewmd"></a>[기울이기 변환](skew.md)
 
 로 인해 기울이기 변환을 SkiaSharp의 기운된 그래픽 개체를 만들 수는 방법을 참조 하십시오.
 
@@ -74,7 +75,7 @@ SkiaSharp 변환은의 왼쪽 위 모퉁이 기준으로 `SKCanvas` Xamarin.Form
 
 사용 하 여 행렬 끌어, 크기 조정 및 회전에 대 한 터치 조작을 구현 하는 변형 합니다.
 
-## <a name="non-affine-transformsnon-affinemd"></a>[유사 형식이 아닌 변형](non-affine.md)
+## <a name="non-affine-transformsnon-affinemd"></a>[비아핀(Non-Affine) 변환](non-affine.md)
 
 유사 형식이 아닌 변형 효과로 인해 oridinary 넘지.
 

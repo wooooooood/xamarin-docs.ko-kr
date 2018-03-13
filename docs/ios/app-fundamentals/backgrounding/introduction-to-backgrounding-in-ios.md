@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e46520122b54fabfe27f73370e2ab736a349f7f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>IOS에서 Backgrounding 소개
 
@@ -27,7 +27,7 @@ iOS는 백그라운드 매우 밀접 하 게 처리를 조정 하 고 구현 하
 
 IOS 응용 프로그램 수명 주기는 응용 프로그램 상태와 서로 이동할 메서드가의 컬렉션입니다. 응용 프로그램 사용자의 동작 및 응용 프로그램의 backgrounding 요구에 따라 상태를 전환 합니다. 다음 다이어그램은 이동 보여 줍니다.
 
- [ ![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "응용 프로그램 상태 및 대리자 메서드를 응용 프로그램 다이어그램")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png)
+ [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "응용 프로그램 상태 및 대리자 메서드를 응용 프로그램 다이어그램")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 -  **실행 되 고 있지** -응용 프로그램이 장치에 아직 시작 되지 했습니다.
 -  **실행/활성** -응용 프로그램의 화면에 표시 되 고 포그라운드에서 코드를 실행 합니다.
@@ -52,7 +52,7 @@ IOS 응용 프로그램에 게 알리는 이벤트 메서드를 통해 응용 �
 
 다음 다이어그램에서는 방법을 응용 프로그램 상태 및 수명 주기 메서드 종합:
 
- [ ![](introduction-to-backgrounding-in-ios-images/image2.png "이 다이어그램에서는 방법을 응용 프로그램 상태와 종합 수명 주기 메서드")](introduction-to-backgrounding-in-ios-images/image2.png)
+ [![](introduction-to-backgrounding-in-ios-images/image2.png "이 다이어그램에서는 방법을 응용 프로그램 상태와 종합 수명 주기 메서드")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## <a name="user-controls-for-backgrounding-in-ios"></a>IOS에서 Backgrounding에 대 한 사용자 정의 컨트롤
 
@@ -62,7 +62,7 @@ iOS 7에는 사용자에 게 제공 backgrounded 응용 프로그램의 상태�
 
 응용 프로그램 전환기 iOS 7에에서 도입 된 중요 한 제어 기능은입니다. 두 번 눌러에 의해 시작 되는 **홈** 단추를 선택한 프로세스 연결이 유지 된 응용 프로그램을 표시 합니다.
 
- [ ![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "응용 프로그램 전환기를 사용 하 여 앱 간에 이동")](introduction-to-backgrounding-in-ios-images/app-switcher-.png)
+ [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "응용 프로그램 전환기를 사용 하 여 앱 간에 이동")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 응용 프로그램 전환기, 사용자가 모든 backgrounded 및 일시 중단 된 응용 프로그램의 스냅숏을 스크롤할 수 있습니다. 응용 프로그램을 눌러 전경으로 시작 합니다. 넘기기가 해당 프로세스를 종료 하 게 백그라운드에서 응용 프로그램을 제거 합니다. 자세히 보기에 응용 프로그램 전환기 해당 메뉴로 이동 합니다는 [iOS 응용 프로그램 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) 다음 섹션에 있습니다.
 
@@ -77,7 +77,7 @@ iOS 7 응용 프로그램에 대 한 backgrounding 취소 하기 위해 사용�
 
 사용자가 이동 하 여이 설정을 변경할 수 <span class="uiitem">설정 > 일반 > 하면서 응용 프로그램 새로 고침</span> 및 선택한 응용 프로그램에 대 한 backgrounding 권한을 편집 합니다. 하면서 응용 프로그램 새로 고침을 off로 설정 하는 경우 응용 프로그램은 백그라운드 들어갈 때 즉시 일시 중단 되며 백그라운드 처리를 수행할 수 없습니다.
 
- [ ![](introduction-to-backgrounding-in-ios-images/settings-.png "백그라운드 응용 프로그램 새로 고침 설정")](introduction-to-backgrounding-in-ios-images/settings-.png)
+ [![](introduction-to-backgrounding-in-ios-images/settings-.png "백그라운드 응용 프로그램 새로 고침 설정")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
 개발자와 백그라운드 새로 고침 응용 프로그램 상태를 확인할 수는 `BackgroundRefreshStatus` API입니다. 예를 들어 참조는 [백그라운드 새로 고침 설정을 확인 레시피](https://developer.xamarin.com/recipes/ios/multitasking/check_background_refresh_setting/)합니다.
 

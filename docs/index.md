@@ -5,11 +5,11 @@ title: "Xamarin 설명서"
 description: "Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다."
 featureFlags:
 - clicktale
-ms.openlocfilehash: e81c8b860f202efb0bc7ab795f54b32eecc3cf6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 162d608d6eeaf0da0120308168f88fcc805b5406
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -955,7 +955,7 @@ ms.lasthandoff: 02/27/2018
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-graphics-urhosharp.svg?branch=master" alt="UrhoSharp" />
+                                                        <img src="~/media/index/xamarin-graphics-urho.svg?branch=master" alt="UrhoSharp" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: c8f66ac8532d6926fe8280b5687135dc3df53289
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="portable-visual-basicnet"></a>휴대용 Visual Basic.NET
 
@@ -24,7 +24,8 @@ Xamarin iOS 및 Android 프로젝트 지원 하지 않는 기본적으로 Visual
 
 만들고 Visual Basic 이식 가능한 클래스 라이브러리를 컴파일하 Windows (Visual Studio 2012 이상 버전)에서 Visual Studio를 사용 해야 합니다.
 
-> ℹ️ **참고:** Visual Basic 라이브러리만 만들 수 있으며 Visual Studio를 사용 하 여 합니다. Xamarin.iOS 및 Xamarin.Android Visual Basic 언어를 지원 하지 않습니다.
+> [!NOTE]
+> Visual Basic 라이브러리만 만들 수 있으며 Visual Studio를 사용 하 여 합니다. Xamarin.iOS 및 Xamarin.Android Visual Basic 언어를 지원 하지 않습니다.
 >
 > Visual Studio에서 전적으로 작업 하는 경우에 Xamarin.iOS 및 Xamarin.Android 프로젝트에서 Visual Basic 프로젝트를 참조할 수 있습니다.
 >
@@ -44,15 +45,15 @@ Visual Studio에서 Visual Basic PCL에 추가 하는 경우 플랫폼 라이브
 
 1.  에 **새 프로젝트** 화면에서의 **Visual Basic > 클래스 라이브러리 (이식 가능)** 옵션:
 
-  [ ![](images/image1-sml.png "새 Visual Basic 이식 가능한 라이브러리 만들기")](images/image1.png)
+    [![](images/image1-sml.png "새 Visual Basic 이식 가능한 라이브러리 만들기")](images/image1.png#lightbox)
 
 1.  다음으로 visual Studio 즉시 물어봅니다 **이식 가능한 클래스 라이브러리 추가** 대화 프로필을 구성할 수 있습니다. 지원 하 고 키를 눌러 필요한 플랫폼 눈금 **확인**합니다.
 
-  [ ![](images/image2-sml.png "플랫폼을 선택 하 여 PCL 프로필을 선택 합니다.")](images/image2.png)
+    [![](images/image2-sml.png "플랫폼을 선택 하 여 PCL 프로필을 선택 합니다.")](images/image2.png#lightbox)
 
 1.  Visual Basic PCL 프로젝트에 표시 된 것과 같이 표시 됩니다는 **솔루션 탐색기** 다음과 같이 합니다.
 
-  [ ![](images/image3-sml.png "빈 Visual Studio PCL 프로젝트")](images/image3.png)
+    [![](images/image3-sml.png "빈 Visual Studio PCL 프로젝트")](images/image3.png#lightbox)
 
 
 PCL은 Visual Basic 코드를 추가할 준비가 되었습니다. PCL 프로젝트 (응용 프로그램 프로젝트, 라이브러리 프로젝트 및 다른 PCL 프로젝트) 다른 프로젝트에서 참조할 수 있습니다.
@@ -61,7 +62,7 @@ PCL은 Visual Basic 코드를 추가할 준비가 되었습니다. PCL 프로젝
 
 (제어 하는 PCL와 호환 되는 플랫폼) PCL 프로필 보기 및 변경 된 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 **속성 > 라이브러리 > 변경 중...** . 이 화면에 대화 상자가 표시 됩니다.
 
- [ ![](images/image4-sml.png "프로젝트 속성에서 PCL 프로필 편집")](images/image4.png)
+ [![](images/image4-sml.png "프로젝트 속성에서 PCL 프로필 편집")](images/image4.png#lightbox)
 
 프로필에는 코드는 PCL에 이미 추가 된 후 변경 되 면 있기 코드 새로 선택한 프로필에 포함 되지 않는 기능을 참조 하는 경우 라이브러리가 더 이상 컴파일되지 것입니다.
 

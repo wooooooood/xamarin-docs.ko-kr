@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1cc74fb30e59ecd5f6be3cf3e1c84f60cd5ca0a6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="source-lists"></a>소스 목록
 
@@ -22,7 +22,7 @@ C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 �
 
 소스 목록에는 소스 찾기 또는 iTunes에서 세로 막대와 같은 작업을 표시 하는 데 사용 되는 개요 보기의 특별 한 형식입니다.
 
-[ ![](source-list-images/source05.png "예제 원본 목록")](source-list-images/source05.png)
+[![](source-list-images/source05.png "예제 원본 목록")](source-list-images/source05.png#lightbox)
 
 이 문서에서는의 기본적인 Xamarin.Mac 응용 프로그램에서 소스 목록 사용 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -50,7 +50,7 @@ C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 �
 
 첫째, 새를 만들어 보겠습니다 `SourceListItem` 소스 목록에 대 한 데이터를 보유 하는 클래스입니다. 에 **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...** 선택 **일반** > **빈 클래스**, 입력 `SourceListItem` 에 대 한는 **이름** 클릭는 **새로** 단추:
 
-[ ![](source-list-images/source01.png "빈 클래스 추가")](source-list-images/source01.png)
+[![](source-list-images/source01.png "빈 클래스 추가")](source-list-images/source01.png#lightbox)
 
 확인 된 `SourceListItem.cs` 다음과 같은 파일 보기: 
 
@@ -532,19 +532,19 @@ namespace MacOutlines
 
 이제 인터페이스 작성기의 소스 목록 설계 해 보겠습니다. 두 번 클릭는 `Main.storyboard` 파일 인터페이스 작성기에서 편집을 위해 열고에서 분할 뷰를 끌어 놓을 **라이브러리 관리자**을 보기 컨트롤러에 추가 하 고 보기에 크기를 조정 하도록 설정 된 **제약 조건 편집기** :
 
-[ ![](source-list-images/source00.png "제약 조건 편집")](source-list-images/source00.png)
+[![](source-list-images/source00.png "제약 조건 편집")](source-list-images/source00.png#lightbox)
 
 원본 목록에서를 끌어는 **라이브러리 관리자**을 분할 보기의 왼쪽에 추가 하 고 보기에 크기를 조정 하도록 설정 된 **제약 조건 편집기**:
 
-[ ![](source-list-images/source02.png "제약 조건 편집")](source-list-images/source02.png)
+[![](source-list-images/source02.png "제약 조건 편집")](source-list-images/source02.png#lightbox)
 
 다음으로 전환 하는 **Identity 보기**, 소스 목록에서 선택 하 고 변경의 **클래스** 를 `SourceListView`:
 
-[ ![](source-list-images/source03.png "설정 클래스 이름")](source-list-images/source03.png)
+[![](source-list-images/source03.png "설정 클래스 이름")](source-list-images/source03.png#lightbox)
 
 마지막으로 작성 한 **콘센트** 호출 된 원본 목록 `SourceList` 에 `ViewController.h` 파일:
 
-[ ![](source-list-images/source04.png "콘센트에 연결 구성")](source-list-images/source04.png)
+[![](source-list-images/source04.png "콘센트에 연결 구성")](source-list-images/source04.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 응용 프로그램을 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](source-list-images/source05.png "실행 하는 예제 응용 프로그램")](source-list-images/source05.png)
+[![](source-list-images/source05.png "실행 하는 예제 응용 프로그램")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
@@ -628,7 +628,7 @@ public override void DidFinishLaunching (NSNotification notification)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [개요 보기 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

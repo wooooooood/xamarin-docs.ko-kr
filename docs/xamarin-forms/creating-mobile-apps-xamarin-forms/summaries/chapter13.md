@@ -3,14 +3,15 @@ title: "13 장의 요약입니다. Bitmaps"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2e511f2ebf75b065469a9051ee5797ac58c147f3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74e5e47a481d02fe11be4b770b818d2c88b517f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>13 장의 요약입니다. Bitmaps
 
@@ -76,7 +77,7 @@ Xamarin.Forms에는 비트맵에서 네 가지 위치를 가져옵니다.
 
 [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) Lewis Carroll의 7 장 표시 *Wonderland Alice의 탐험* John Tenniel 하 여 원래 그림:
 
-[![Mad 찻잔 파티의 삼중 스크린 샷](images/ch13fg16-small.png "Mad Hatters 찻잔 파티 책 텍스트")](images/ch13fg16-large.png "Mad Hatters 찻잔 파티 책 텍스트")
+[![Mad 찻잔 파티의 삼중 스크린 샷](images/ch13fg16-small.png "Mad Hatters 찻잔 파티 책 텍스트")](images/ch13fg16-large.png#lightbox "Mad Hatters 찻잔 파티 책 텍스트")
 
 ### <a name="browsing-and-waiting"></a>찾아보기 및 대기
 

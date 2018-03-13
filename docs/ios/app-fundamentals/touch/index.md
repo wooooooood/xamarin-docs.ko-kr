@@ -3,16 +3,16 @@ title: "터치"
 description: "여러 오늘날의 장치에 터치 스크린이 빠르고 효율적으로 상호 작용할 수 장치와 자연스럽 고 직관적인 방식입니다. 이 상호 작용 간단한 터치 검색만 제한 되지 않습니다. – 제스처도 사용할 수 있습니다. 예를 들어 핀치 확대/축소 제스처는 두 손가락 사용자 수 확대 / 축소 된 화면의 일부를 모으는으로 매우 일반적인 예 –이입니다. 이 가이드는 터치 및 제스처 iOS에서 검사합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4A17FD28-313F-4AAC-B82B-3847B4D64A88
+ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: 8f6c26048bc0ece0d64acf069151ff1d67403ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0e1cf8b1cb18982fe319fef7c524aeb70be4a9b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="touch"></a>터치
 
@@ -31,14 +31,14 @@ IOS는 터치 데이터를 캡처할 뿐만 아니라 터치 제스처에의 패
 
 ## <a name="sections"></a>섹션
 
--  [IOS에서 터치](touch-in-ios.md)
+-  [iOS의 터치](touch-in-ios.md)
 -  [연습: iOS에서 터치 사용](ios-touch-walkthrough.md)
--  [추적 멀티 터치](touch-tracking.md)
+-  [멀티 터치 추적](touch-tracking.md)
 
 이 가이드에서 iOS 터치 소개로 사용 됩니다. 3D 터치 및 Haptic 피드백을 사용 하 여 iOS에 대 한 자세한 내용은 iOS 9 및 10 각각 아래의 특정 가이드를 참조 하십시오에 도입 된입니다.
 
 * [3D Touch](~/ios/platform/3d-touch.md)
-* [Haptic 사용자 의견 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
+* [햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 
 

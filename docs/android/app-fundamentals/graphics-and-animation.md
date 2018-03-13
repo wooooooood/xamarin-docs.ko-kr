@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 90a2eb219ae1189e7a48e60cde9761e3e9e93e0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="graphics-and-animation"></a>그래픽 및 애니메이션
 
 _Android 2 차원 그래픽 및 애니메이션을 지원 하기 위한 풍부 하 고 다양 한 프레임 워크를 제공 합니다. 이 항목 이러한 프레임 워크를 소개 하 고 Xamarin.Android 응용 프로그램에서 사용자 지정 그래픽 및 사용에 대 한 애니메이션을 만드는 방법에 설명 합니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -61,7 +60,6 @@ Android 앱 보기 좋게 하려면 그래픽 및 애니메이션 도움말 및�
 참조 [Google의 내게 필요한 옵션 가이드](http://developer.android.com/guide/topics/ui/accessibility/) Android의 내게 필요한 옵션 Api를 활용 하는 방법에 대 한 자세한 내용은 합니다.
 
 
-<a name="2D_Graphics" />
 
 ## <a name="2d-graphics"></a>2 차원 그래픽
 
@@ -71,7 +69,6 @@ Android 앱 보기 좋게 하려면 그래픽 및 애니메이션 도움말 및�
 
 그릴 수 있는 리소스를 먼저 살펴보겠습니다. 더 간단 하며 가장 일반적인 사용자 지정 그리기 사례를 포함 합니다.
 
-<a name="Drawable Resources" />
 
 ### <a name="drawable-resources"></a>그릴 수 있는 리소스
 
@@ -153,7 +150,6 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 XML 요소 및 그릴 수 있는 리소스의 구문에 대 한 자세한 내용은 참조 하십시오. [Google 설명서](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)합니다.
 
-<a name="Using the Canvas Drawing API" />
 
 ### <a name="using-the-canvas-drawing-api"></a>캔버스 드로잉 API를 사용 하 여
 
@@ -183,7 +179,6 @@ Canvas canvas = new Canvas(b);
 -   [Canvas.DrawText](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawText/p/System.String/System.Single/System.Single/Android.Graphics.Paint/) &ndash; 지정 된 색상을 사용 하 여 캔버스에 텍스트를 그립니다. 위치에 텍스트를 그리는 `x,y` 합니다.
 
 
-<a name="Drawing with the Canvas API" />
 
 #### <a name="drawing-with-the-canvas-api"></a>캔버스 API 사용 하 여 그리기
 
@@ -218,7 +213,6 @@ public class MyView : View
 
 ![빨간색 페인트 및 녹색 페인트 개체와 함께 화면](graphics-and-animation-images/image3.png)
 
-<a name="Animation" />
 
 ## <a name="animation"></a>애니메이션
 
@@ -232,7 +226,6 @@ public class MyView : View
 
 일반적으로 속성 애니메이션은 기본 시스템을 사용은 보다 유연 하 고 더 많은 기능을 제공 합니다.
 
-<a name="View Animations" />
 
 ### <a name="view-animations"></a>애니메이션 보기
 
@@ -319,7 +312,6 @@ myImage.StartAnimation(myAnimation);
 
 이제 보기 애니메이션의 작동 방식에 대 한 기본적인 이해 했으므로 속성 애니메이션 이동 수 있습니다.
 
-<a name="Property Animations" />
 
 ### <a name="property-animations"></a>속성 애니메이션
 
@@ -397,7 +389,6 @@ animator.Start();
 
 이전 코드 조각에서 볼 수 있듯이 `ObjectAnimator` 개체에 애니메이션을 적용 해야 하는 코드를 단순화를 줄일 수 있습니다.
 
-<a name="Drawable Animations" />
 
 ### <a name="drawable-animations"></a>그릴 애니메이션
 
@@ -442,7 +433,6 @@ protected override void OnCreate(Bundle bundle)
 
 이 시점에서 애니메이션 Android 응용 프로그램에서 사용할 수 있는 Api의 기본 요 설명 했습니다.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

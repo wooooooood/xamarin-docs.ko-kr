@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: a13de7fbb4b6e1f9fa2853ce599f3a038a5e4040
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: affe58d9276bd0b687089fb42a14ca964c570c9c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="complications"></a>복잡성
 
@@ -24,7 +24,7 @@ _watchOS는 조사식에 대해 사용자 지정 복잡성을 작성 하는 개�
 
 먼저 읽으십시오 [Apple의 docs](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) 는 복잡 한 상황에 적합 한 응용 프로그램 인지 여부를 확인 합니다. 5 가지 `CLKComplicationFamily` 유형의 디스플레이에서 선택할 수 있습니다.
 
-[ ![](complications-images/all-complications-sml.png "지원 되는 5 CLKComplicationFamily 유형을: 순환 작은, 모듈식 작은, 모듈식 큰, 상태로 이해 하기 쉽게 작은, 상태로 이해 하기 쉽게 큰")](complications-images/all-complications.png)
+[![](complications-images/all-complications-sml.png "지원 되는 5 CLKComplicationFamily 유형을: 순환 작은, 모듈식 작은, 모듈식 큰, 상태로 이해 하기 쉽게 작은, 상태로 이해 하기 쉽게 큰")](complications-images/all-complications.png#lightbox)
 
 응용 프로그램은 하나의 스타일 또는 모든 다섯 개, 표시 되는 데이터에 따라 구현할 수 있습니다.
 사용자가 디지털 왕관을 지난 및/또는 이후 시간에 대 한 값을 제공 하는 시간 이동을 지원할 수 있습니다.
@@ -83,7 +83,7 @@ public class ComplicationController : CLKComplicationDataSource
 
 조사식 확장 **Info.plist** 파일의 이름을 지정 해야는 `CLKComplicationDataSource` 어떤 complication 패밀리를 지원 하려면 및:
 
-[ ![](complications-images/complications-config-sml.png "Complication 패밀리 형식")](complications-images/complications-config.png)
+[![](complications-images/complications-config-sml.png "Complication 패밀리 형식")](complications-images/complications-config.png#lightbox)
 
 **데이터 소스 클래스** 항목 목록 클래스 이름을 해당 하위 클래스에 표시 됩니다 `CLKComplicationDataSource` complication 논리를 포함 하는 하위 클래스입니다.
 

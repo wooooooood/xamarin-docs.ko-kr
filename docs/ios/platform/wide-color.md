@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>광범위 한 색
 
@@ -38,19 +38,19 @@ iOS 10와 macOS 시에라 확장 범위 픽셀 형식 및 코어 그래픽, Core
 
 색 공간은 환경은 색 표시 하 고 비교할 수 있습니다. 강도 색상 구성 요소에서 정의한 1 ~ 4 개의 차원 공간 수 있습니다. 
 
-[ ![](wide-color-images/color00.png "색 공간")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "색 공간")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>색 채널
 
 또한 색상 구성 색 채널로 참조할 수 있습니다. 일부 친숙 한 표현을 RGB 공백, 회색 공간, CMYK 공백 또는 장치 독립적인 공간 것입니다. 
 
-[ ![](wide-color-images/color02.png "색의 구성 요소 수를 구분 색 채널으로")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "색의 구성 요소 수를 구분 색 채널으로")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>기본 색
 
 색 됨으로 비교 하 고 색을 계산 하는 데 사용 되는 좌표계를 제공 합니다. 색 됨으로 대개 색 채널 내에서 생성 될 수 있는 지정된 된 색의 가장 강한 버전을 포함 합니다.
 
-[ ![](wide-color-images/color01.png "색 됨으로 비교 하 고 색을 계산 하는 데 사용 되는 좌표계를 제공 합니다.")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "색 됨으로 비교 하 고 색을 계산 하는 데 사용 되는 좌표계를 제공 합니다.")](wide-color-images/color01.png#lightbox)
 
 RGB 색 공간 위에 표시 되는 경우 색 됨으로 위치는 `1.0` 좌표 고정 됩니다 (같은 `[1.0, 0.0, 0.0]` 빨강)입니다.
 
@@ -58,7 +58,7 @@ RGB 색 공간 위에 표시 되는 경우 색 됨으로 위치는 `1.0` 좌표 
 
 모든 제공 색 공간 내에서 개별 색 채널의 조합으로 정의할 수 있는 색 색 영역 참조 합니다.
 
-[ ![](wide-color-images/color03.png "색 색상 영역 예제")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "색 색상 영역 예제")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>광범위 한 색 무엇입니까
 
@@ -80,7 +80,7 @@ SRGB 널리 업계에서 사용 하면 개발자 몇 가지 사항을 가정 프
 
 2015, 사과 출시 sRGB 색 공간에서 만든 문제를 처리 하는 새 디스플레이 P3 색 공간을 제공 하는 새 제품 (iMac 및 iPad Pro 9.7").
 
-[ ![](wide-color-images/color04.png "새 표시 P3 색 공간")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "새 표시 P3 색 공간")](wide-color-images/color04.png#lightbox)
 
 디스플레이 P3 색 공간에는 다음과 같은 속성이 있습니다.
 
@@ -112,7 +112,7 @@ Apple에 따라 사용자를 이동 하는 워크플로 해당 모바일 플랫�
 
 확장 범위 sRGB 색 공간에서에서 외부 0과 1의 값이 어떻게 작동을 보려면 수행의 다음 예제는 디스플레이 P3 색 공간에서 사용할 수 있는 가장 높은 채도 빨간색의:
 
-[ ![](wide-color-images/color05.png "확장 범위 sRGB 색 공간에서에서 값 0과 1 외부에서 작동 하는 방법")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "확장 범위 sRGB 색 공간에서에서 값 0과 1 외부에서 작동 하는 방법")](wide-color-images/color05.png#lightbox)
 
 디스플레이 P3이이 색으로 나타낼 수는 `[1.0, 0.0, 0.0]` 및 것 확장 범위 sRGB `[1.358, -0.074, -0.012]`합니다. SRGB 값 가득 찼기 때문에 표시 P3 값과 표시 P3 안에 포함 된 배치 "외부" sRGB 범위의 합니다.
 

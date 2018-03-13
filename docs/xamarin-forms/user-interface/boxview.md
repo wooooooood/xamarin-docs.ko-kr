@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 78ccb117e621b89d85e701b2ea027115f8681dc9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4d50ea5c3db0f5a141f1b48cf0a948c10b63f7f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="boxview"></a>BoxView
 
@@ -68,7 +68,7 @@ A `BoxView` 에서 하나 이상의 차원을 제한 하 고 다른 제약 받�
 
 다음은 결과가입니다.
 
-[![기본 BoxView](boxview-images/basicboxview-small.png "기본 BoxView")](boxview-images/basicboxview-large.png "BasicBoxView")
+[![기본 BoxView](boxview-images/basicboxview-small.png "기본 BoxView")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
 경우는 `VerticalOptions` 및 `HorizontalOptions` 속성에서 제거 됩니다는 `BoxView` 태그 또는로 설정 `Fill`, 하면 `BoxView` 페이지의 크기에 의해 제한 되 고 페이지 크기에 맞게 확장 합니다.
 
@@ -113,7 +113,7 @@ A `BoxView` 의 자식이 될 수도 있습니다는 `AbsoluteLayout`합니다. 
 
 자식인 모든 태그 뒤에 `StackLayout`합니다. 이 태그 몇 가지 유형의 장식 이루어져 `BoxView` 와 사용 되는 요소는 `Label` 요소:
 
-[![텍스트 장식](boxview-images/textdecoration-small.png "텍스트 장식")](boxview-images/textdecoration-large.png "적용 되는 텍스트")
+[![텍스트 장식](boxview-images/textdecoration-small.png "텍스트 장식")](boxview-images/textdecoration-large.png#lightbox "적용 되는 텍스트")
 
 페이지 맨 위에 있는 세련 된 헤더를 통해는 `AbsoluteLayout` 자식을 네 가지 `BoxView` 요소와 `Label`모든를의 특정 위치 및 크기를 할당:
 
@@ -168,7 +168,7 @@ XAML 파일에는 `AbsoluteLayout` 나옵니다는 `Label` 설명 하는 텍스�
 
 `BoxView` 색을 표시 하기 위한 편리 합니다. 이 프로그램에서 사용 하는 `ListView` 모든 공개 읽기 전용의 정적 필드는 Xamarin.Forms 나열 `Color` 구조:
 
-[![ListView 색](boxview-images/listviewcolors-small.png "ListView 색")](boxview-images/listviewcolors-large.png "ListView 색")
+[![ListView 색](boxview-images/listviewcolors-small.png "ListView 색")](boxview-images/listviewcolors-large.png#lightbox "ListView 색")
 
 [ **ListViewColors** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ListViewColors/) 라는 클래스를 포함 하는 프로그램 `NamedColor`합니다. 정적 생성자의 모든 필드에 액세스 하기 위해는 `Color` 만들고 구조는 `NamedColor` 각각에 대 한 개체입니다. 이러한 정적에 저장 됩니다 `All` 속성:
 
@@ -350,7 +350,7 @@ class LifeCell : BoxView
 
 **GameOfLife** 프로그램도 포함 되어는 `LifeGrid` 의 많은 게임의 논리를 캡슐화 하는 클래스 및 `MainPage` 프로그램의 시각적 개체를 처리 하는 클래스입니다. 여기에 게임의 규칙을 설명 하는 오버레이 포함 됩니다. 다음 몇 백을 보여 주는 실행 프로그램은 `LifeCell` 페이지에 있는 개체:
 
-[![수명 게임](boxview-images/gameoflife-small.png "수명 게임")](boxview-images/gameoflife-large.png "수명 게임")
+[![수명 게임](boxview-images/gameoflife-small.png "수명 게임")](boxview-images/gameoflife-large.png#lightbox "수명 게임")
 
 <a name="digitalclock" />
 
@@ -358,7 +358,7 @@ class LifeCell : BoxView
 
 [ **DotMatrixClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock/) 프로그램 만듭니다 210 `BoxView` 요소를 사용 하는 구식 5-7 도트 디스플레이의 점 시뮬레이션 합니다. 세로 또는 가로 모드의 시간을 읽을 수는 있지만 가로 크기:
 
-[![도트 클록](boxview-images/dotmatrixclock-small.png "도트 클록")](boxview-images/dotmatrixclock-large.png "도트 클록")
+[![도트 클록](boxview-images/dotmatrixclock-small.png "도트 클록")](boxview-images/dotmatrixclock-large.png#lightbox "도트 클록")
 
 XAML 파일을 인스턴스화할 수 약는 `AbsoluteLayout` 클록에 사용:
 
@@ -594,7 +594,7 @@ public partial class MainPage : ContentPage
 
 도트 클록의 응용 프로그램 명백한 것 처럼 보일 수 `BoxView`, 하지만 `BoxView` 요소 아날로그 시계의 인식 수도 있습니다.
 
-[![BoxView 클록](boxview-images/boxviewclock-small.png "BoxView 클록")](boxview-images/boxviewclock-large.png "BoxView 클록")
+[![BoxView 클록](boxview-images/boxviewclock-small.png "BoxView 클록")](boxview-images/boxviewclock-large.png#lightbox "BoxView 클록")
 
 모든 시각적 개체는 [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) 프로그램 자식 요소인는 `AbsoluteLayout`합니다. 사용 하 여 이러한 요소는 크기는 `LayoutBounds` 연결 된 속성을 사용 하 여 회전 및는 `Rotation` 속성입니다. 
 

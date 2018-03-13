@@ -3,14 +3,15 @@ title: "5 장의 요약입니다. 크기와 처리"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 4454150b4caad86eb063ab7fcf8a721cbab9b5ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>5 장의 요약입니다. 크기와 처리
 
@@ -62,7 +63,7 @@ Windows 런타임 인치당 160 장치 독립적 단위에 가까운 내재 된 
 
 [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize) 샘플에는이 기술을 보여 줍니다. 하기 전에 작성 된이 [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) 속성은 사용할 수 있으므로 사용는 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 와 [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) 설정을 시뮬레이션 하는 여백입니다.
 
-[![예상된 글꼴 크기의 세 스크린 샷](images/ch05fg07-small.png "텍스트 사용 가능한 크기에 맞추기")](images/ch05fg07-large.png "텍스트 사용 가능한 크기에 맞추기")
+[![예상된 글꼴 크기의 세 스크린 샷](images/ch05fg07-small.png "텍스트 사용 가능한 크기에 맞추기")](images/ch05fg07-large.png#lightbox "텍스트 사용 가능한 크기에 맞추기")
 
 ## <a name="a-fit-to-size-clock"></a>크기에 맞게 시계
 

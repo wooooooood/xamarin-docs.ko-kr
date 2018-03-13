@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a2c3ce9e19340067d77a8bc131b5a247806ecfa1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-file-system"></a>파일 시스템 작업
 
@@ -26,7 +26,7 @@ iOS 파일 시스템 관련 기능도 일부 있으며: 특정 디렉터리 백�
 
 이 문서는 기능을 설명 및 iOS의 제한 사항 자세히 파일 시스템 고 Xamarin.iOS 몇 가지 간단한 파일 시스템 작업 실행을 사용 하는 방법을 보여 주는 샘플 응용 프로그램을 포함 합니다.
 
- [ ![](file-system-images/05-sampleapp.png "몇 가지 간단한 파일 시스템 작업을 실행 하는 iOS의 샘플")](file-system-images/05-sampleapp.png)
+ [![](file-system-images/05-sampleapp.png "몇 가지 간단한 파일 시스템 작업을 실행 하는 iOS의 샘플")](file-system-images/05-sampleapp.png#lightbox)
 
  <a name="General_File_Access" />
 
@@ -110,7 +110,7 @@ System.IO 네임 스페이스에 대 한 자세한 내용은 참조는 [MSDN 설
 
 Json 사용 Xamarin.iOS 응용 프로그램에서 데이터를 매우 쉽게 사용 하는 [Json.NET](http://www.newtonsoft.com/json) .NET NuGet 패키지용 고성능 JSON 프레임 워크입니다. 응용 프로그램의 프로젝트에 NuGet 패키지를 추가 합니다. 
 
-[ ![](file-system-images/json01.png "응용 프로그램 프로젝트에 NuGet 패키지 추가")](file-system-images/json01.png)
+[![](file-system-images/json01.png "응용 프로그램 프로젝트에 NuGet 패키지 추가")](file-system-images/json01.png#lightbox)
 
 다음에 serialization/deserialization에 대 한 데이터 모델로 사용할 클래스를 추가 (이 경우 `Account.cs`):
 
@@ -217,11 +217,11 @@ Mac OS에서 응용 프로그램 번들에를 탐색할 때 표시 아이콘은 
 
 샘플 코드에 대 한 응용 프로그램 번들을 보려면 마우스 오른쪽 단추로 클릭 Visual Studio에서 프로젝트를 선택 하 고 Mac에 대 한 **상위 폴더 열기**합니다. 다음로 이동 **bin/Debug/** 위치를 찾아야 응용 프로그램 아이콘 (아래 스크린샷에서 유사).
 
- [ ![](file-system-images/40-bundle.png "Bin/Debug이이 스크린샷과 유사 하 게 응용 프로그램 아이콘을 찾을 수로 이동")](file-system-images/40-bundle.png)
+ [![](file-system-images/40-bundle.png "Bin/Debug이이 스크린샷과 유사 하 게 응용 프로그램 아이콘을 찾을 수로 이동")](file-system-images/40-bundle.png#lightbox)
 
 이 아이콘을 마우스 오른쪽 단추로 클릭 하 고 선택 **패키지 내용 보기** 응용 프로그램 번들 디렉터리의 내용을 찾아볼 수 있습니다. 내용을 다음과 같이 일반 디렉터리의 내용을와 동일 하 게 표시 됩니다.
 
- [ ![](file-system-images/45-bundle.png "앱 번들의 내용")](file-system-images/45-bundle.png)
+ [![](file-system-images/45-bundle.png "앱 번들의 내용")](file-system-images/45-bundle.png#lightbox)
 
 응용 프로그램 번들 시뮬레이터 또는 장치에서 테스트 중에 설치 되어 지정 되며 최종적으로 Apple 앱 스토어에 포함할에 제출 내용입니다.
 
@@ -313,7 +313,7 @@ Mac OS에서 응용 프로그램 번들에를 탐색할 때 표시 아이콘은 
 
 이 스크린샷에서 Finder 창의 디렉터리 구조를 보여 줍니다.
 
- [ ![](file-system-images/08-library-directory.png "이 스크린 샷 Finder 창의 디렉터리 구조를 보여 줍니다.")](file-system-images/08-library-directory.png)
+ [![](file-system-images/08-library-directory.png "이 스크린 샷 Finder 창의 디렉터리 구조를 보여 줍니다.")](file-system-images/08-library-directory.png#lightbox)
 
  <a name="Accessing_Other_Directories_Programmatically" />
 
@@ -352,11 +352,11 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 사용자가 편집 하 여 응용 프로그램의 문서 디렉터리에 파일에 액세스할 수 `Info.plist` 및 만들기는 **iTunes 공유 응용 프로그램이 지원** (`UIFileSharingEnabled`) 항목에는 **소스** 보기도 다음과 같습니다.
 
- [ ![](file-system-images/09-uifilesharingenabled-plist.png "속성을 공유 하는 iTunes를 지 원하는 응용 프로그램 추가")](file-system-images/09-uifilesharingenabled-plist.png)
+ [![](file-system-images/09-uifilesharingenabled-plist.png "속성을 공유 하는 iTunes를 지 원하는 응용 프로그램 추가")](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 장치가 연결 되어 있고 사용자가 선택 하는 경우 iTunes에서 이러한 파일을 액세스할 수 있습니다는 `Apps` 탭 합니다. 예를 들어 다음 스크린 샷에서 iTunes 통해 공유 하는 선택 된 응용 프로그램에서는 파일:
 
- [ ![](file-system-images/10-itunes-file-sharing.png "이 스크린 샷 iTunes 통해 공유 하는 선택 된 응용 프로그램의 파일을 보여")](file-system-images/10-itunes-file-sharing.png)
+ [![](file-system-images/10-itunes-file-sharing.png "이 스크린 샷 iTunes 통해 공유 하는 선택 된 응용 프로그램의 파일을 보여")](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 사용자는 iTunes 통해이 디렉터리의 최상위 항목만 액세스할 수 있습니다. (하지만 자신의 컴퓨터에 복사 하거나 삭제할 수 있습니다) 하위 디렉터리의 내용을 볼 수 없습니다. 예를 들어와 GoodReader, PDF 및 EPUB 파일 공유할 수 있습니다 응용 프로그램과 사용자가 iOS 장치에서 읽을 수 있도록.
 
@@ -364,7 +364,7 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 이 문서에 대 한 샘플 코드 Documents 폴더에는 파일과 폴더를 만듭니다 (에서 **SampleCode.cs**)에서 파일 공유를 사용 하도록 설정 하 고는 **Info.plist** 파일입니다. 이 스크린샷에서 이러한 iTunes에서 어떻게 나타나는지 보여 줍니다.
 
- [ ![](file-system-images/15-itunes-file-sharing-example.png "이 스크린샷은 iTunes에 파일을 표시 하는 방법을 보여 줍니다.")](file-system-images/15-itunes-file-sharing-example.png)
+ [![](file-system-images/15-itunes-file-sharing-example.png "이 스크린샷은 iTunes에 파일을 표시 하는 방법을 보여 줍니다.")](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 참조는 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 만들면 모든 사용자 지정 문서 유형에 대 한 응용 프로그램에 대 한 아이콘이 설정 하는 방법에 대 한 내용은 합니다.
 

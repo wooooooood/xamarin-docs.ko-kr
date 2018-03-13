@@ -3,14 +3,15 @@ title: "6 장의 요약입니다. 단추 클릭"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 44dbb4d2cdc573e721bb772fdd05d392c90b746a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 972d0d76fd55981ebca70acce69533d98c3fc0b5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>6 장의 요약입니다. 단추 클릭
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) 샘플 및 숫자 키패드의 10 모든 숫자 키에 대 한 동일한 이벤트 처리기를 사용 하 여이 사용 하 여 구분 된 `StyleId` 속성:
 
-[![가장 간단한 키패드의 삼중 스크린 샷](images/ch06fg04-small.png "계산기")](images/ch06fg04-large.png "계산기")
+[![가장 간단한 키패드의 삼중 스크린 샷](images/ch06fg04-small.png "계산기")](images/ch06fg04-large.png#lightbox "계산기")
 
 ## <a name="saving-transient-data"></a>임시 데이터를 저장합니다.
 

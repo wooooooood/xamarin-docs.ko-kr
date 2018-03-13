@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>표
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 행과 열으로 뷰를 정렬 하는 지원 합니다. 행과 열을 비례 크기 또는 절대 크기를 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블와 혼동 해서는 안 하며 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식의 개념을 없습니다. HTML 테이블과 달리 `Grid` 콘텐츠도 배치 하기 위한 순수 하 게 됩니다.
 
-[ ![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png "Xamarin.Forms Layouts")
+[![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 이 문서에서는 설명 합니다.
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/28/2018
 - **절대** &ndash; 열 및 특정 고정된 높이 너비 값이 있는 행의 크기를 조정 합니다. 값으로 지정 하 고 `GridUnitType.Absolute` C#에서 `#` XAML에서와 `#` 되 사용자가 원하는 값입니다.
 
 > [!NOTE]
-> **참고**: 열에 대 한 너비 값으로 설정 된 ' * ' Xamarin.Forms에는 기본적으로를 통해 열으로 가득 찰 사용 가능한 공간입니다.
+> 열에 대 한 너비 값으로 설정 된 ' * ' Xamarin.Forms에는 기본적으로를 통해 열으로 가득 찰 사용 가능한 공간입니다.
 
 세 개의 행과 두 개의 열을 필요로 하는 앱을 살펴보겠습니다. 맨 아래 행 높이가 200px 정확 하 게 해야 하며 맨 위 행 높이가 가운데 행의 두 배가 됩니다. 왼쪽된 열 수 있을 만큼의 너비만를 콘텐츠에 맞게 하 고 오른쪽 열 나머지 공간을 채우기 위해 필요 합니다.
 

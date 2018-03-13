@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: e9d3e2eecd4c03e7b3046e1ad86dd8a0d70a7f73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-row-actions"></a>행 작업 사용
 
@@ -177,7 +177,7 @@ table.Delegate = tableDelegate;
 
 위의 코드를 실행 하 고 테이블 행에 남아 있는 사용자 천공 기와 **Hi** 대신 단추가 표시 됩니다는 **삭제** 기본적으로 표시 되는 단추:
 
-[ ![](row-action-images/action01.png "삭제 단추 대신 표시 되 고 Hi 단추")](row-action-images/action01.png)
+[![](row-action-images/action01.png "삭제 단추 대신 표시 되 고 Hi 단추")](row-action-images/action01.png#lightbox)
 
 사용자가 누를 경우는 **Hi** 단추를 `Hello World!` 작성 됩니다 Visual Studio에서 콘솔에 Mac 또는 Visual Studio에 대 한 응용 프로그램 디버그 모드에서 실행 됩니다.
 

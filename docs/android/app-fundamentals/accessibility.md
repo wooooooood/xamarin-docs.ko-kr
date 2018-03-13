@@ -6,12 +6,12 @@ ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/31/2018
-ms.openlocfilehash: 0cf1557cea8d5adb3678ba5e424f9f23375e32bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 2dea77b4c52db0c032aba9bde471e76eb36ba3ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-android"></a>Android에서 내게 필요한 옵션
 
@@ -171,14 +171,12 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 별도 파일에 텍스트를 저장할 경우의 이점은 응용 프로그램에서 파일의 여러 언어 번역을 제공할 수 있습니다입니다. 참조는 [Android 지역화 가이드](~/android/app-fundamentals/localization.md) 자세한 방법을 응용 프로그램 프로젝트에는 지역화 된 문자열 파일을 추가 합니다.
 
-<a name="testing" />
 
 ## <a name="testing-accessibility"></a>내게 필요한 옵션 테스트
 
 에 따라 [이러한 단계](http://developer.android.com/training/accessibility/testing.html#how-to) TalkBack 및 탐색 터치를 Android 장치에서의 접근성 테스트에 사용할 수 있도록 합니다.
 
 설치 해야 할 수 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) 에 표시 되지 않으면 Google Play에서 **설정 > 내게 필요한 옵션**합니다.
-
 
 
 ## <a name="related-links"></a>관련 링크

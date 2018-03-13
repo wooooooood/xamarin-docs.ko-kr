@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 때문에 `AutoPlay` 로 설정 된 `false` 에 **CustomTransport.xaml** 눌러야 할 파일을는 **재생** 단추 비디오를 시작 하려면 사용할 수 있게 됩니다. 단추는 위에 설명 된 유니코드 문자가 해당 하는 해당 텍스트와 함께 제공 됩니다 되도록 정의 됩니다. 비디오가 재생 되는 경우 각 플랫폼에서 일관 된 모양을 갖도록 하는 단추:
 
-[![사용자 지정 전송 재생](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 재생")](custom-transport-images/customtransportplaying-large.png "사용자 지정 전송 재생")
+[![사용자 지정 전송 재생](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 재생")](custom-transport-images/customtransportplaying-large.png#lightbox "사용자 지정 전송 재생")
 
 하지만 Android 및 UWP는 **재생** 글자에 매우 다른 비디오 일시 중지 된 경우:
 
-[![사용자 지정 전송을 일시 중지](custom-transport-images/customtransportpaused-small.png "사용자 지정 전송을 일시 중지")](custom-transport-images/customtransportpaused-large.png "사용자 지정 전송을 일시 중지")
+[![사용자 지정 전송을 일시 중지](custom-transport-images/customtransportpaused-small.png "사용자 지정 전송을 일시 중지")](custom-transport-images/customtransportpaused-large.png#lightbox "사용자 지정 전송을 일시 중지")
 
 프로덕션 응용 프로그램에서는 시각적 일관성을 얻기 위해 단추에 대 한 비트맵 이미지를 직접 사용할 줄일 것 있습니다.
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: a963922dfdc07164b7c20f84be4f0b87440bff13
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a7947c40d80c0ff8cb35dab54a11907280335d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-parts-and-functionality"></a>ListView 파트 및 기능
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -31,41 +30,36 @@ A `ListView` 다음과 같은 부분으로 구성 됩니다.
 
 다음이 스크린샷에서 기본 사용 하 여 `ListView` 컨트롤을 빨리 스크롤 및 섹션 인덱스 렌더링 하는 방법을 보여 줍니다.
 
-[![오래 된 일반 행을 사용 하 여 앱의 스크린 샷을 빠른 스크롤 및 섹션 인덱스](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png)
+[![오래 된 일반 행을 사용 하 여 앱의 스크린 샷을 빠른 스크롤 및 섹션 인덱스](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 구성 하는 요소는 `ListView` 아래에서 자세히 설명 합니다.
 
-<a name="Rows" />
 
 ## <a name="rows"></a>행
 
 각 행에는 자체 `View`합니다. 보기에 정의 된 기본 제공 뷰 중 하나일 수 있습니다 `Android.Resources`, 또는 사용자 지정 보기. 각 행 동일한 보기 레이아웃을 사용할 수 또는 수 모두 다를 수 있습니다. 기본 제공 레이아웃 및 사용자 지정 레이아웃을 정의 하는 방법을 설명 하는 다른 사용자를 사용 하 여이 문서에은 예입니다.
 
-<a name="Adapter" />
 
 ## <a name="adapter"></a>어댑터
 
 `ListView` 컨트롤을 사용 하려면는 `Adapter` 는 형식이 지정 된 제공 `View` 각 행에 대 한 합니다. Android에 기본 제공 어댑터 및 사용할 수 있는 뷰 또는 사용자 지정 클래스를 만들 수 있습니다.
 
-<a name="Fast_Scrolling" />
 
 ## <a name="fast-scrolling"></a>빠른 스크롤
 
 경우는 `ListView` 많은 행이 포함 되어 데이터의 빠른 스크롤 하도록 할 수 있습니다는 목록의 모든 부분으로 이동 하는 사용자입니다. Fast-스크롤 '스크롤 막대' 필요에 따라 사용 하도록 설정 (및 사용자 지정 API 수준 11에서에서 되 고 더 높은) 수 있습니다.
 
-<a name="Section_Index" />
 
 ## <a name="section-index"></a>섹션 인덱스
 
 긴 목록을 통해 스크롤 하는 동안 선택적 섹션 인덱스 목록의 어떤 부분이 현재 보고에 사용자에 게 피드백을 제공 합니다. 일반적으로 빠른 스크롤와 함께에 긴 목록에서 적절 한 됩니다.
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>클래스 개요
 
 표시 하는 데 사용 되는 기본 클래스 `ListViews` 여기에 표시 됩니다.
 
-[![ListView 및 관련된 클래스 간의 관계를 보여 주는 UML 다이어그램](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png)
+[![ListView 및 관련된 클래스 간의 관계를 보여 주는 UML 다이어그램](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 다음은 각 클래스의 용도 대 한 설명입니다.
 

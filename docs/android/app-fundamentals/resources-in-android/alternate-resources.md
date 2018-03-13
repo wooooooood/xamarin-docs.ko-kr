@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
@@ -142,7 +142,7 @@ Android 규칙의 다음 테스트를 반복 하 여 기본 리소스를 결정 
 
 이러한 규칙은 다음 순서도에 확인할 수 있습니다.
 
-[![리소스 순서도](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![리소스 순서도](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 시스템에서 밀도 별 리소스를 찾고을 찾을 수 없는 때 다른 밀도 특정 리소스를 찾아 확장 하거나 시도 합니다. Android 기본 리소스를 반드시 사용 하지 않을 수 있습니다.
 예를 들어 저밀도 리소스와이 사용할 수 없는 Android 고밀도 리소스의 버전을 기본 또는 중간 밀도 리소스에 대해 선택할 수 있습니다. 0.5, 0.75 배 해야 하는 중간 밀도 리소스 축소 보다 더 적은 가시성 문제 그러면 계수로 고밀도 리소스 축소 될 수 있으므로이 없습니다.
@@ -196,4 +196,4 @@ Android 규칙의 다음 테스트를 반복 하 여 기본 리소스를 결정 
 이 과정의 결과로 Android 리소스를 사용 합니다 그릴 수 있는 리소스 디렉터리에 `drawable-en-port-ldpi` 장치에 대 한 합니다.
 
 > [!NOTE]
-> **참고:** 화면 크기 한정자는이 선택 프로세스의 한 가지 예외를 제공 합니다. Android 리소스 제공 하는 현재 장치 보다 작은 화면에 대 한 설계를 선택 하는 것이 불가능 합니다. 큰 화면 장치에서 리소스를 사용할 수 있습니다는 예를 들어 기본 크기의 화면을 제공 합니다. 그러나이 반대는 성립 하지 않습니다: 같은 큰 화면 장치 xlarge 화면에 대해 제공 되는 리소스를 사용 하지 것입니다. Android에서 지정 된 화면 크기와 일치 하는 리소스 집합을 찾을 수 없으면 응용 프로그램의 작동이 중단 됩니다.
+> 화면 크기 한정자는이 선택 프로세스의 한 가지 예외를 제공합니다. Android 리소스 제공 하는 현재 장치 보다 작은 화면에 대 한 설계를 선택 하는 것이 불가능 합니다. 큰 화면 장치에서 리소스를 사용할 수 있습니다는 예를 들어 기본 크기의 화면을 제공 합니다. 그러나이 반대는 성립 하지 않습니다: 같은 큰 화면 장치 xlarge 화면에 대해 제공 되는 리소스를 사용 하지 것입니다. Android에서 지정 된 화면 크기와 일치 하는 리소스 집합을 찾을 수 없으면 응용 프로그램의 작동이 중단 됩니다.

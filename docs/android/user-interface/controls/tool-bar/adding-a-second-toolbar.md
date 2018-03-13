@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: b471742ae9fb365d75e8dd3ca0f93f5e55208f19
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 343694163c79ab4d7e8b78875282e7077db979e5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="adding-a-second-toolbar"></a>두 번째 도구 추가
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요 
 
 `Toolbar` 바꾸기 보다 많은 작업 모음 수행할 수 있는 &ndash; 활동 내에서 여러 번 사용할 수 있습니다, 될 수 있습니다는 화면에 있는 모든 배치에 대 한 사용자 지정 하 고 화면의 너비를 부분에 걸쳐 하도록 구성할 수 있습니다. 아래 예에서는 두 번째를 만드는 방법을 설명 `Toolbar` 화면 맨 아래에 배치 합니다. 이 `Toolbar` 구현 **복사**, **잘라내기**, 및 **붙여넣기** 메뉴 항목입니다. 
 
-<a name="define_second" />
 
 ## <a name="define-the-second-toolbar"></a>두 번째 도구 모음을 정의 합니다. 
 
@@ -78,10 +76,9 @@ android:background="?android:attr/colorAccent
 
 이렇게 하면 아래쪽 도구 모음 주황색 어두운 색입니다. 빌드 및 응용 프로그램을 실행 화면 맨 아래에 빈 두 번째 도구 모음을 표시 합니다. 
 
-[![화면 맨 아래에 노란색 두 번째 도구 모음을 사용 하는 앱의 스크린 샷](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png)
+[![화면 맨 아래에 노란색 두 번째 도구 모음을 사용 하는 앱의 스크린 샷](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
 
-<a name="second_menus" />
  
 ## <a name="add-edit-menu-items"></a>편집 메뉴 항목 추가 
 
@@ -100,7 +97,6 @@ android:background="?android:attr/colorAccent
 다음 섹션에서는이 프로세스를 자세히 보여: **잘라내기**, **복사**, 및 **붙여넣기** 메뉴 항목이 아래쪽에 추가 된 `Toolbar`합니다. 
 
 
-<a name="second_resource" />
 
 ### <a name="define-the-edit-menu-resource"></a>편집 메뉴 리소스를 정의 합니다.
 
@@ -130,7 +126,6 @@ android:background="?android:attr/colorAccent
 이 XML을 만듭니다는 **잘라내기**, **복사**, 및 **붙여넣기** 메뉴 항목 (에 추가 된 아이콘을 사용 하는 `mipmap-` 폴더에 [작업 모음 교체 ](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 
-<a name="inflate_menus" />
 
 ### <a name="inflate-the-menus"></a>메뉴 팽창
 
@@ -149,18 +144,17 @@ editToolbar.MenuItemClick += (sender, e) => {
 
 앱을 빌드하고 실행합니다. 앱을 실행할 때 텍스트 및 아이콘 위에 추가 다음과 같이 표시 됩니다. 
 
-[![잘라내기, 복사 및 붙여넣기 아이콘이 있는 도구 모음 아래쪽의 다이어그램](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png)
+[![잘라내기, 복사 및 붙여넣기 아이콘이 있는 도구 모음 아래쪽의 다이어그램](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
 탭의 **잘라내기** 메뉴 아이콘 표시 되 고 다음 알림을 사용 하면: 
 
-[![스크린샷의 알림을 잘라내기 메뉴 아이콘을 누른 나타내는](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png)
+[![스크린샷의 알림을 잘라내기 메뉴 아이콘을 누른 나타내는](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
 결과 알림을 표시 하거나 도구 모음에서 메뉴 항목 탭: 
 
-[![에 대 한 알림을의 스크린 샷 복사, 저장 하 고 누른 되 고 메뉴 항목을 붙여 넣을](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png)
+[![에 대 한 알림을의 스크린 샷 복사, 저장 하 고 누른 되 고 메뉴 항목을 붙여 넣을](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
 
-<a name="up_button" />
 
 ## <a name="the-up-button"></a>위쪽 단추 
 
@@ -187,7 +181,7 @@ SupportActionBar.SetHomeButtonEnabled (true);
 
 사용자가 탐색 하는 경우 `MainActivity` 를 `DetailActivity`, `DetailActivity` 표시는 **를** 스크린샷에 표시 된 대로 (왼쪽된 화살표) 단추:
 
-[![도구 모음에서 위로 단추 왼쪽된 화살표의 예에서는 스크린 샷](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png)
+[![도구 모음에서 위로 단추 왼쪽된 화살표의 예에서는 스크린 샷](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 이 탭 **를** 단추를 클릭 하면 응용 프로그램으로 돌아가려면 `MainActivity`합니다. 여러 수준의 계층으로 더 복잡 한 응용 프로그램에서이 단추를 누르면는 반환 사용자 앱에서 다음으로 가장 높은 수준으로 아닌 이전 화면으로 합니다. 
 

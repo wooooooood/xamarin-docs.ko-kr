@@ -8,21 +8,21 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: effa527b330fb6ca75800392e557289a326f17aa
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 388744d48799e84587a4f554a4eb67cd677d8c9a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboards"></a>스토리보드
 
 스토리 보드 모든 컨트롤러 해당 보기의 기능 개요로 분리 하는 지정된 된 앱에 대 한 UI를 정의 합니다. Xcode의 인터페이스 작성기에서 이러한 컨트롤러 각각 자체 장면에서 실행 됩니다.
 
-[ ![](indepth-images/intro01.png "Xcode의 인터페이스 작성기에서 스토리 보드")](indepth-images/intro01.png)
+[![](indepth-images/intro01.png "Xcode의 인터페이스 작성기에서 스토리 보드")](indepth-images/intro01.png#lightbox)
 
 스토리 보드는 리소스 파일 (확장명을 가진 `.storyboard`) 컴파일 및 배송 때 Xamarin.Mac 앱의 번들에 포함을 가져옵니다. 앱에 대 한 시작 스토리 보드를 정의 하려면 편집의 `Info.plist` 파일을 선택 된 **주 인터페이스** 드롭다운 상자에서: 
 
-[ ![](indepth-images/sb01.png "Info.plist 편집기")](indepth-images/sb01.png)
+[![](indepth-images/sb01.png "Info.plist 편집기")](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -41,11 +41,11 @@ controller.ShowWindow(this);
 
 `FromName` 앱의 번들에 포함 되어 있는 지정 된 이름의 스토리 보드 파일을 로드 합니다. `InstantiateControllerWithIdentifier` 지정한 id의 뷰 컨트롤러 인스턴스를 만듭니다. UI를 디자인할 때는 Xcode의 인터페이스 구성 관리자에서 Id를 설정 합니다.
 
-[ ![](indepth-images/sb02.png "스토리 보드 ID 설정")](indepth-images/sb02.png)
+[![](indepth-images/sb02.png "스토리 보드 ID 설정")](indepth-images/sb02.png#lightbox)
 
 사용할 수 있습니다는 `InstantiateInitialController` 초기 컨트롤러 인터페이스 작성기에 할당 된 뷰 컨트롤러를 로드 하는 메서드:
 
-[ ![](indepth-images/sb03.png "초기 컨트롤러 설정")](indepth-images/sb03.png)
+[![](indepth-images/sb03.png "초기 컨트롤러 설정")](indepth-images/sb03.png#lightbox)
 
 표시는 **스토리 보드 진입점** 와 위의 열기 종료 화살표입니다.
 
@@ -76,7 +76,7 @@ controller.ShowWindow(this);
 
 또한 `NSViewControllers` 창의의 일부인 이제 _응답자 체인_:
 
-[ ![](indepth-images/vc01.png "응답자 체인")](indepth-images/vc01.png)
+[![](indepth-images/vc01.png "응답자 체인")](indepth-images/vc01.png#lightbox)
 
 있으며 따라서 유선 업 잘라내기, 복사 및 붙여넣기 메뉴 항목 선택 등과 같은 이벤트에 응답 합니다. 이 자동 뷰-컨트롤러 통신 기능을 macOS 시에라 (10.12)에서 실행 되는 앱 에서만 발생 이상에 있습니다.
 
@@ -86,13 +86,13 @@ controller.ShowWindow(this);
 
 스토리 보드의 보기 컨트롤러 (예: 분할 뷰 컨트롤러 및 탭 뷰 컨트롤러)를 구현할 수 있습니다 _제약_는 "포함" 다른 하위 컨트롤러 보기:
 
-[ ![](indepth-images/vc02.png "보기 컨트롤러 포함의 예")](indepth-images/vc02.png)
+[![](indepth-images/vc02.png "보기 컨트롤러 포함의 예")](indepth-images/vc02.png#lightbox)
 
 자식 뷰 컨트롤러 메서드를 포함 하 고 해당 부모 뷰-컨트롤러를 표시 하 고 뷰 화면에서 제거를 사용 하에 넣어 속성 백업 키를 누릅니다.
 
 MacOS에 기본 제공 되는 모든 컨테이너 보기 컨트롤러 Apple 사용자 고유의 사용자 지정 컨테이너 보기 컨트롤러를 만드는 경우에 따라 제안 되는 특정 레이아웃에는
 
-[ ![](indepth-images/vc03.png "뷰-컨트롤러 레이아웃")](indepth-images/vc03.png)
+[![](indepth-images/vc03.png "뷰-컨트롤러 레이아웃")](indepth-images/vc03.png#lightbox)
 
 컬렉션 뷰 컨트롤러 자신의 뷰를 포함 하는 하나 이상의 보기 컨트롤러를 포함 하며 각 컬렉션 보기 항목의 배열을 포함 합니다.
 
@@ -131,7 +131,7 @@ PerformSegue("MyNamedSegue", this);
 
 응용 프로그램의 UI를 레이아웃할 때 Segue ID Xcode의 인터페이스 작성기 내에서 정의 됩니다.
 
-[ ![](indepth-images/sg02.png "입력 한 이름 Segue")](indepth-images/sg02.png)
+[![](indepth-images/sg02.png "입력 한 이름 Segue")](indepth-images/sg02.png#lightbox)
 
 재정의 해야는 Segue의 원본으로 사용 되는 보기 컨트롤러에는 `PrepareForSegue` 메서드 및 모든 초기화는 Segue 실행 하기 전에 필요한 do 및 지정된 된 보기 컨트롤러 표시 됩니다.
 
@@ -215,7 +215,7 @@ namespace OnCardMac
 
 이 새로운 Segue 형식은 Xcode의 인터페이스 작성기를 사용 하려면 먼저 앱을 컴파일하면 다음 Xcode로 전환 하 고, 두 장면 사이의 새 Segue 추가 하려면 필요 합니다. 설정의 **스타일** 를 **사용자 지정** 및 **Segue 클래스** 를 `ReplaceViewSegue` (사용자 지정 Segue 클래스의 이름):
 
-[ ![](indepth-images/sg01.png "Segue 클래스를 설정합니다.")](indepth-images/sg01.png)
+[![](indepth-images/sg01.png "Segue 클래스를 설정합니다.")](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -271,21 +271,21 @@ namespace OnCardMac
 
 1. 에 **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...**   >  **Mac** > **스토리 보드**합니다. 입력 한 **이름** 새 스토리 보드 및 클릭에 대 한는 **새로** 단추: 
 
-    [ ![](indepth-images/ref01.png "새 스토리 추가")](indepth-images/ref01.png)
+    [![](indepth-images/ref01.png "새 스토리 추가")](indepth-images/ref01.png#lightbox)
 2. 에 **솔루션 탐색기**, Xcode의 인터페이스 작성기에서 편집 하기 위해 열려는 새 스토리 보드 이름을 두 번 클릭 합니다.
 2. 일반적으로 하는 변경 내용을 저장 하는 대로 새 스토리 보드의 장면의 레이아웃을 디자인 합니다. 
 
-    [ ![](indepth-images/ref02.png "인터페이스 디자인")](indepth-images/ref02.png)
+    [![](indepth-images/ref02.png "인터페이스 디자인")](indepth-images/ref02.png#lightbox)
 3. 스토리 보드 인터페이스 작성기에서에 대 한 참조를 추가 하는 것으로 전환 합니다.
 4. 끌어서는 **참조 스토리 보드** 에서 **라이브러리 개체** 디자인 화면으로: 
 
-    [ ![](indepth-images/ref03.png "라이브러리에 대 한 스토리 보드 참조를 선택 하면")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "라이브러리에 대 한 스토리 보드 참조를 선택 하면")](indepth-images/ref03.png#lightbox)
 5. 에 **특성 검사기**의 이름을 선택 된 **스토리 보드** 위에서 만든: 
 
-    [ ![](indepth-images/ref04.png "참조를 구성합니다.")](indepth-images/ref04.png)
+    [![](indepth-images/ref04.png "참조를 구성합니다.")](indepth-images/ref04.png#lightbox)
 6. 기존 장면에 (예: 단추) UI 위젯에 컨트롤을 클릭 하 고에 새 Segue 만들기는 **스토리 보드 참조** 방금 만든 합니다.  팝업 메뉴에서 선택 **표시** 는 Segue를 완료 하려면: 
 
-    [ ![](indepth-images/ref06.png "설정 Segue 유형")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "설정 Segue 유형")](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
 9. 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 반환 합니다.
 
@@ -300,20 +300,20 @@ namespace OnCardMac
 1. 에 **솔루션 탐색기**, Xcode의 인터페이스 작성기에서 편집 하기 위해 열려는 외부 스토리 보드를 두 번 클릭 합니다.
 2. 새 장면을 추가 하 고 일반적인 방법으로 해당 레이아웃을 디자인 합니다. 
 
-    [ ![](indepth-images/ref07.png "Xcode에서 레이아웃 디자인")](indepth-images/ref07.png)
+    [![](indepth-images/ref07.png "Xcode에서 레이아웃 디자인")](indepth-images/ref07.png#lightbox)
 3. 에 **Identity 관리자**를 입력 한 **스토리 보드 ID** 새 장면이 창 컨트롤러에 대 한: 
 
-    [ ![](indepth-images/ref08.png "스토리 보드 ID 설정")](indepth-images/ref08.png)
+    [![](indepth-images/ref08.png "스토리 보드 ID 설정")](indepth-images/ref08.png#lightbox)
 3. 인터페이스 작성기에서에 대 한 참조를 추가 하는 것 스토리 보드를 엽니다.
 4. 끌어서는 **참조 스토리 보드** 에서 **라이브러리 개체** 디자인 화면으로: 
 
-    [ ![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png#lightbox)
 5. 에 **Identity 관리자**의 이름을 선택 된 **스토리 보드** 및 **참조 ID가** (스토리 보드 ID) 위에서 만든 장면의: 
 
-    [ ![](indepth-images/ref09.png "참조 ID를 설정합니다.")](indepth-images/ref09.png)
+    [![](indepth-images/ref09.png "참조 ID를 설정합니다.")](indepth-images/ref09.png#lightbox)
 6. 기존 장면에 (예: 단추) UI 위젯에 컨트롤을 클릭 하 고에 새 Segue 만들기는 **스토리 보드 참조** 방금 만든 합니다. 팝업 메뉴에서 선택 **표시** 는 Segue를 완료 하려면: 
 
-    [ ![](indepth-images/ref06.png "설정 Segue 유형")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "설정 Segue 유형")](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
 9. 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 반환 합니다.
 
@@ -328,19 +328,19 @@ namespace OnCardMac
 1. 에 **솔루션 탐색기**를 편집 하기 위해 열려는 스토리 보드를 두 번 클릭 합니다.
 2. 새 장면을 추가 하 고 일반적인 방법으로 해당 레이아웃을 디자인 합니다. 
 
-    [ ![](indepth-images/ref11.png "Xcode에서 스토리 보드를 편집합니다.")](indepth-images/ref11.png)
+    [![](indepth-images/ref11.png "Xcode에서 스토리 보드를 편집합니다.")](indepth-images/ref11.png#lightbox)
 3. 에 **Identity 관리자**를 입력 한 **스토리 보드 ID** 새 장면이 창 컨트롤러에 대 한: 
 
-    [ ![](indepth-images/ref12.png "스토리 보드 ID 설정")](indepth-images/ref12.png)
+    [![](indepth-images/ref12.png "스토리 보드 ID 설정")](indepth-images/ref12.png#lightbox)
 3. 끌어서는 **참조 스토리 보드** 에서 **도구 상자** 디자인 화면으로: 
 
-    [ ![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png#lightbox)
 5. **특성 검사기**선택, **참조 ID** (스토리 보드 ID) 위에서 만든 장면의: 
 
-    [ ![](indepth-images/ref13.png "참조 ID를 설정합니다.")](indepth-images/ref13.png)
+    [![](indepth-images/ref13.png "참조 ID를 설정합니다.")](indepth-images/ref13.png#lightbox)
 6. 기존 장면에 (예: 단추) UI 위젯에 컨트롤을 클릭 하 고에 새 Segue 만들기는 **스토리 보드 참조** 방금 만든 합니다. 팝업 메뉴에서 선택 **표시** 는 Segue를 완료 하려면: 
 
-    [ ![](indepth-images/ref06.png "Segue 유형 선택")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "Segue 유형 선택")](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
 9. 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 반환 합니다.
 
@@ -359,5 +359,5 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 - [MacStoryboard (샘플)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [창 작업](~/mac/user-interface/window.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

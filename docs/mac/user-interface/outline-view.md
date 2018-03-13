@@ -3,16 +3,16 @@ title: "개요 보기"
 description: "이 문서에서는 Xamarin.Mac 응용 프로그램의 개요 보기와 작업을 설명합니다. 및 작성 하 고, Xcode 및 인터페이스 작성기의 개요 보기를 유지 관리 하 고, 이러한 작업을 프로그래밍 방식으로 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a125c2991c9b8c2453fad396c1d0baebe10be015
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: dbbd10af046c0a8421e06e675364f92405b2317f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="outline-views"></a>개요 보기
 
@@ -22,7 +22,7 @@ C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 �
 
 개요 보기 수 있도록 사용자 테이블의 형식을 확장 하거나 계층적 데이터의 행을 축소 됩니다. 테이블 보기와 같은 개요 보기 개별 항목과 해당 항목의 특성을 나타내는 열을 나타내는 행과 관련 된 항목의 집합에 대 한 데이터를 표시 합니다. 표 보기와 달리 개요 보기의 항목에 단순 목록에 없는, 하드 드라이브에서 파일 및 폴더와 같은 계층에 구성 됩니다.
 
-[ ![](outline-view-images/populate03.png "실행 하는 예제 응용 프로그램")](outline-view-images/populate03.png)
+[![](outline-view-images/populate03.png "실행 하는 예제 응용 프로그램")](outline-view-images/populate03.png#lightbox)
 
 이 문서에서는의 기본적인 개요 보기와 Xamarin.Mac 응용 프로그램에서 사용 하겠습니다. 것이 가장 좋습니다를 통해 협력 하는 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서는 [Xcode 및 인터페이스 작성기 소개](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) 및 [콘센트 및 동작](~/mac/get-started/hello-mac.md#Outlets_and_Actions) 섹션으로이 문서에서 사용할 수 있는 주요 개념 및 기술을 설명 합니다.
 
@@ -50,23 +50,23 @@ C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 �
 
 새 Xamarin.Mac Cocoa 응용 프로그램을 만들 때 기본적으로 표준, 빈 창이 얻을 수 있습니다. 에 정의 되어 있는이 windows는 `.storyboard` 파일은 프로젝트에 자동으로 포함 합니다. windows 디자인에 맞게 편집 하는 **솔루션 탐색기**, 두 번 클릭 하 고 `Main.storyboard` 파일:
 
-[ ![](outline-view-images/edit01.png "주 스토리 보드를 선택합니다.")](outline-view-images/edit01.png)
+[![](outline-view-images/edit01.png "주 스토리 보드를 선택합니다.")](outline-view-images/edit01.png#lightbox)
 
 Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
-[ ![](outline-view-images/edit02.png "Xcode에서 UI를 편집합니다.")](outline-view-images/edit02.png)
+[![](outline-view-images/edit02.png "Xcode에서 UI를 편집합니다.")](outline-view-images/edit02.png#lightbox)
 
 형식 `outline` 에 **라이브러리 검사기의** 쉽게 개요 보기 컨트롤을 찾을 수 있도록 하려면 검색 상자:
 
-[ ![](outline-view-images/edit03.png "라이브러리에서 개요 보기를 선택 하면")](outline-view-images/edit03.png)
+[![](outline-view-images/edit03.png "라이브러리에서 개요 보기를 선택 하면")](outline-view-images/edit03.png#lightbox)
 
 개요 보기의 뷰 컨트롤러 끌어다는 **인터페이스 편집기**, 축소 하 고 있는 창으로 증가를 설정 하 고 뷰 컨트롤러의 콘텐츠 영역을 채우는 **제약 조건 편집기**:
 
-[ ![](outline-view-images/edit04.png "제약 조건을 편집")](outline-view-images/edit04.png)
+[![](outline-view-images/edit04.png "제약 조건을 편집")](outline-view-images/edit04.png#lightbox)
 
 개요 보기를 선택는 **인터페이스 계층 구조** 하며 다음과 같은 속성에서 사용할 수는 **특성 검사기**:
 
-[ ![](outline-view-images/edit05.png "특성 검사기")](outline-view-images/edit05.png)
+[![](outline-view-images/edit05.png "특성 검사기")](outline-view-images/edit05.png#lightbox)
 
 - **열에 간략하게 설명** -해당 테이블 열 계층적 데이터가 표시 됩니다.
 - **자동 저장 개요 열** -경우 `true`, 개요 열을 자동으로 저장 하 고 응용 프로그램 실행 간에 복원 됩니다.
@@ -101,7 +101,7 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 테이블 열 선택의 **인터페이스 계층 구조** 다음 속성에서 사용할 수 있는 **특성 검사기**:
 
-[ ![](outline-view-images/edit06.png "특성 검사기")](outline-view-images/edit06.png)
+[![](outline-view-images/edit06.png "특성 검사기")](outline-view-images/edit06.png#lightbox)
 
 - **제목** -열의 제목을 설정 합니다.
 - **맞춤** -셀 내의 텍스트의 맞춤을 설정 합니다.
@@ -119,19 +119,19 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 표 셀 보기 선택 (`NSTableViewCell`)에 **인터페이스 계층 구조** 하며 다음과 같은 속성에서 사용할 수는 **특성 검사기**:
 
-[ ![](outline-view-images/edit07.png "특성 검사기")](outline-view-images/edit07.png)
+[![](outline-view-images/edit07.png "특성 검사기")](outline-view-images/edit07.png#lightbox)
 
 이들은 모두 표준 보기의 속성입니다. 여기에이 열에 대 한 행의 크기를 조정 하는 옵션이 수도 있습니다.
 
 테이블 보기 셀을 선택 (이 기본적으로 `NSTextField`)에 **인터페이스 계층 구조** 다음 속성에서 사용할 수 있는 **특성 검사기**:
 
-[ ![](outline-view-images/edit08.png "특성 검사기")](outline-view-images/edit08.png)
+[![](outline-view-images/edit08.png "특성 검사기")](outline-view-images/edit08.png#lightbox)
 
 여기에서 설정 하는 표준 텍스트 필드의 모든 속성이 있습니다. 기본적으로 표준 텍스트 필드는 데이터를 표시 하는 셀에 대 한 열에 사용 됩니다.
 
 표 셀 보기 선택 (`NSTableFieldCell`)에 **인터페이스 계층 구조** 하며 다음과 같은 속성에서 사용할 수는 **특성 검사기**:
 
-[ ![](outline-view-images/edit09.png "특성 검사기")](outline-view-images/edit09.png)
+[![](outline-view-images/edit09.png "특성 검사기")](outline-view-images/edit09.png#lightbox)
 
 여기에 가장 중요 한 설정은 다음과 같습니다.
 
@@ -145,7 +145,7 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 표 셀 보기 선택 (`NSTableFieldCell`)에서 테이블 열의 맨 아래에 **인터페이스 계층 구조**:
 
-[ ![](outline-view-images/edit11.png "표 셀 보기를 선택합니다.")](outline-view-images/edit10.png)
+[![](outline-view-images/edit11.png "표 셀 보기를 선택합니다.")](outline-view-images/edit10.png#lightbox)
 
 기본으로 사용 되는 테이블 셀 보기를 편집할 수 있습니다 _패턴_ 지정된 된 열에 대해 생성 된 모든 셀에 대 한 합니다.
 
@@ -159,14 +159,14 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 1. 전환 하는 **도우미 편집기** 되어 있는지 확인 하 고는 `ViewController.h` 파일을 선택: 
 
-    [ ![](outline-view-images/edit11.png "올바른.h 파일을 선택 하면")](outline-view-images/edit11.png)
+    [![](outline-view-images/edit11.png "올바른.h 파일을 선택 하면")](outline-view-images/edit11.png#lightbox)
 2. 개요 보기에서 선택 하는 **인터페이스 계층 구조**control 클릭 하 고 끌어는 `ViewController.h` 파일입니다.
 3. 만들기는 **콘센트** 개요 보기 호출 된 `ProductOutline`: 
 
-    [ ![](outline-view-images/edit13.png "콘센트에 연결 구성")](outline-view-images/edit13.png)
+    [![](outline-view-images/edit13.png "콘센트에 연결 구성")](outline-view-images/edit13.png#lightbox)
 4. 만들 **콘센트** 는 테이블 열에 대 한 호출 `ProductColumn` 및 `DetailsColumn`: 
 
-    [ ![](outline-view-images/edit14.png "콘센트에 연결 구성")](outline-view-images/edit14.png)
+    [![](outline-view-images/edit14.png "콘센트에 연결 구성")](outline-view-images/edit14.png#lightbox)
 5. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
 다음으로 작성 합니다 코드 디스플레이 윤곽선에 대 한 일부 데이터는 응용 프로그램이 실행 될 때.
@@ -179,7 +179,7 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 첫째, 새를 만들어 보겠습니다 `Product` 개별 행과 하위 제품의 그룹에 대 한 정보를 보관 하는 클래스입니다. 에 **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...** 선택 **일반** > **빈 클래스**, 입력 `Product` 에 대 한는 **이름** 클릭는 **새로** 단추:
 
-[ ![](outline-view-images/populate01.png "빈 클래스 만들기")](outline-view-images/populate01.png)
+[![](outline-view-images/populate01.png "빈 클래스 만들기")](outline-view-images/populate01.png#lightbox)
 
 확인 된 `Product.cs` 다음과 같은 파일 보기:
 
@@ -390,11 +390,11 @@ public override void AwakeFromNib ()
 
 응용 프로그램을 실행 하는 경우 다음 내용이 표시 됩니다.
 
-[ ![](outline-view-images/populate02.png "축소 된 보기")](outline-view-images/populate02.png)
+[![](outline-view-images/populate02.png "축소 된 보기")](outline-view-images/populate02.png#lightbox)
 
 개요 보기에서 노드를 확장 하는 경우 다음과 같이 표시 됩니다.
 
-[ ![](outline-view-images/populate03.png "확장 된 보기")](outline-view-images/populate03.png)
+[![](outline-view-images/populate03.png "확장 된 보기")](outline-view-images/populate03.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
@@ -402,7 +402,7 @@ public override void AwakeFromNib ()
 
 열 머리글을 클릭 하 여 개요 창에서 데이터를 정렬할 수 있는 사용자를 수 보겠습니다. 첫째, 두 번 클릭 하 고 `Main.storyboard` 인터페이스 작성기에서 편집을 위해 열 파일입니다. 선택 된 `Product` 열을 입력 `Title` 에 대 한는 **정렬 키**, `compare:` 에 대 한는 **선택기** 선택 `Ascending` 에 대 한는 **순서**:
 
-[ ![](outline-view-images/sort01.png "정렬 키 순서 설정")](outline-view-images/sort01.png)
+[![](outline-view-images/sort01.png "정렬 키 순서 설정")](outline-view-images/sort01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -435,7 +435,7 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 
 응용 프로그램을 실행 하 고 열 머리글에서을 클릭 합니다 행이 해당 열으로 정렬 됩니다.
 
-[ ![](outline-view-images/sort02.png "정렬 된 출력의 예")](outline-view-images/sort02.png)
+[![](outline-view-images/sort02.png "정렬 된 출력의 예")](outline-view-images/sort02.png#lightbox)
 
 <a name="Row_Selection" />
 
@@ -443,7 +443,7 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 
 사용자가 두 번 클릭을 단일 행을 선택 하도록 허용 하려는 경우는 `Main.storyboard` 인터페이스 작성기에서 편집을 위해 열 파일입니다. 개요 보기를 선택는 **인터페이스 계층 구조** 의 선택을 취소 하 고는 **여러** 확인란을 선택은 **특성 검사기**:
 
-[ ![](outline-view-images/select01.png "특성 검사기")](outline-view-images/select01.png)
+[![](outline-view-images/select01.png "특성 검사기")](outline-view-images/select01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -466,7 +466,7 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 
 사용자가 두 번 클릭을 여러 행을 선택 하도록 허용 하려는 경우는 `Main.storyboard` 인터페이스 작성기에서 편집을 위해 열 파일입니다. 개요 보기를 선택는 **인터페이스 계층 구조** 확인 하 고는 **여러** 확인란을 선택은 **특성 검사기**:
 
-[ ![](outline-view-images/select02.png "특성 검사기")](outline-view-images/select02.png)
+[![](outline-view-images/select02.png "특성 검사기")](outline-view-images/select02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -489,7 +489,7 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 
 사용자 개요 보기를 선택 하는 문자를 입력 하도록 허용 하 고 첫 번째 행을 선택 하려면 해당 문자를 두 번 클릭 하 고 `Main.storyboard` 인터페이스 작성기에서 편집을 위해 열 파일입니다. 개요 보기를 선택는 **인터페이스 계층 구조** 확인 하 고는 **유형 선택** 확인란을 선택은 **특성 검사기**:
 
-[ ![](outline-view-images/type01.png "행 형식 편집")](outline-view-images/type01.png)
+[![](outline-view-images/type01.png "행 형식 편집")](outline-view-images/type01.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac 용 Visual Studio로 돌아갑니다.
 
@@ -517,7 +517,7 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 
 개요 보기에서 열 순서 바꾸기 끌어서 놓을 수 있도록 하려는 경우, 두 번 클릭 하 고 `Main.storyboard` 인터페이스 작성기에서 편집을 위해 열 파일입니다. 개요 보기를 선택는 **인터페이스 계층 구조** 확인 하 고는 **Reordering** 확인란을 선택은 **특성 검사기**:
 
-[ ![](outline-view-images/reorder01.png "특성 검사기")](outline-view-images/reorder01.png)
+[![](outline-view-images/reorder01.png "특성 검사기")](outline-view-images/reorder01.png#lightbox)
 
 에 대 한 값을 제공 하는 경우는 **자동 저장** 속성 및 검사는 **열 정보** 필드 테이블의 레이아웃을 변경 했습니다 위해 자동으로 저장 되 고 다음에 응용 프로그램 복원 실행 됩니다.
 
@@ -536,7 +536,7 @@ public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex,
 
 응용 프로그램을 실행 하는 경우 열 순서를 변경 하려면 열 머리글 주위 끌어서:
 
-[ ![](outline-view-images/reorder02.png "열 다시 정렬의 예")](outline-view-images/reorder02.png)
+[![](outline-view-images/reorder02.png "열 다시 정렬의 예")](outline-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
@@ -598,7 +598,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 이제 응용 프로그램을 실행 하는 경우 사용자 테이블 보기에 있는 셀을 편집할 수 있습니다.:
 
-[ ![](outline-view-images/editing01.png "셀 편집의 예")](outline-view-images/editing01.png)
+[![](outline-view-images/editing01.png "셀 편집의 예")](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views" />
 
@@ -689,12 +689,12 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 ## <a name="related-links"></a>관련 링크
 
 - [MacOutlines (샘플)](https://developer.xamarin.com/samples/mac/MacOutlines/)
-- [MacImages (샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages(샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [원본 목록](~/mac/user-interface/source-list.md)
 - [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [개요 보기 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

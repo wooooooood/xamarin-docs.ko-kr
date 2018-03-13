@@ -4,14 +4,15 @@ description: "변환 행렬의 세 번째 열이 있는 테이퍼 효과 및 큐
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>유사 형식이 아닌 변형
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 다음은 몇 가지 예제 이미지입니다.
 
-[![](non-affine-images/testperspective-small.png "테스트 큐브 뷰 페이지의 삼중 스크린샷")](non-affine-images/testperspective-large.png "테스트 큐브 뷰 페이지의 삼중 스크린샷")
+[![](non-affine-images/testperspective-small.png "테스트 큐브 뷰 페이지의 삼중 스크린샷")](non-affine-images/testperspective-large.png#lightbox "테스트 큐브 뷰 페이지의 삼중 스크린샷")
 
 슬라이더를 시도할 때 –0.0066 이하일 0.0066 이외의 값은 이미지의 갑자기 분열 된 및 일관 되지 않도록 찾을 수 있습니다. 변환할 비트맵 300 픽셀 사각형입니다. 비트맵의 좌표에서에서 까지의 –150 150 하므로 중심을 기준으로 변환 됩니다. 이전에 설명한 대로 z 값 ' 됩니다.
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 몇 가지 예입니다.
 
-[![](non-affine-images/tapertransform-small.png "테이퍼 변환 페이지의 삼중 스크린샷")](non-affine-images/tapertransform-large.png "테이퍼 변환 페이지의 삼중 스크린 샷")
+[![](non-affine-images/tapertransform-small.png "테이퍼 변환 페이지의 삼중 스크린샷")](non-affine-images/tapertransform-large.png#lightbox "테이퍼 변환 페이지의 삼중 스크린 샷")
 
 다른 유형의 일반화 된 유사 형식이 아닌 변형은 다음 문서에서 설명 하는 3D 회전 [3D 회전](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)합니다.
 
 유사 형식이 아닌 변형 모든 볼록 사각형에 사각형을 변형할 수 있습니다. 이 확인할는 **비 유사 매트릭스 표시** 페이지. 매우 비슷합니다는 **Affine 행렬 표시** 에서 페이지는 [매트릭스를 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) 네 번째 있다는 점을 제외 하 고 문서 `TouchPoint` 비트맵의 네 번째 모퉁이 조작 하는 개체:
 
-[![](non-affine-images/shownonaffinematrix-small.png "비 Affine 행렬 표시 페이지의 삼중 스크린샷")](non-affine-images/shownonaffinematrix-large.png "비 Affine 행렬 표시 페이지의 삼중 스크린샷")
+[![](non-affine-images/shownonaffinematrix-small.png "비 Affine 행렬 표시 페이지의 삼중 스크린샷")](non-affine-images/shownonaffinematrix-large.png#lightbox "비 Affine 행렬 표시 페이지의 삼중 스크린샷")
 
 프로그램에서이 메서드를 사용 하 여 변환을 성공적으로 계산으로 비트맵의 모서리 중 하나의 내부가 각도 180도 보다 큰지 확인 하거나 양쪽이 서로 교차 하지 마세요는 [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) 클래스:
 

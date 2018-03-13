@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: bea8480c66a2ecf499375636c98511ca55ce7693
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-beam"></a>Android 빔
 
 Android 빔 응용 프로그램을 통해 NFC 서로 가까이 있는 경우 정보를 공유할 수 있는 Android 4의 새로운 근처 NFC (근거리 통신) 기술입니다.
 
-[![정보 공유 가까이 있는 두 개의 장치를 보여 주는 다이어그램](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png)
+[![정보 공유 가까이 있는 두 개의 장치를 보여 주는 다이어그램](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Android 빔 두 장치 범위에 있는 경우 NFC를 통해 메시지를 푸시 하 여 작동 합니다. 장치를 서로 약 4 c m Android 빔을 사용 하 여 데이터를 공유할 수 있습니다. 한 장치에서 작업 메시지를 만들고 활동 (또는 활동)을 지정 푸시합니다 처리할 수 있는 합니다. 지정된 된 활동이 포그라운드에서 때 장치 범위에는 Android 빔은 두 번째 장치에 메시지를 푸시합니다. 수신 하는 장치에서 메시지 데이터를 포함 하는 의도 호출 합니다.
 
@@ -30,7 +30,6 @@ Android는 Android 빔을 사용 하 여 설정 메시지의 두 가지 방법�
 
 두 경우 모두 Android 빔으로 데이터를 보내는 응용 프로그램 보냅니다는 `NdefMessage`을 몇 개에 데이터를 패키징 `NdefRecords`합니다. Android 빔 트리거할 수도 하기 전에 해결 해야 하는 주요 사항에 살펴보겠습니다. 먼저 만드는 콜백 스타일을 사용 합니다 우리는 `NdefMessage`합니다.
 
-<a name="Creating_a_Message" />
 
 ## <a name="creating-a-message"></a>메시지 만들기
 
@@ -66,7 +65,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## <a name="receiving-a-message"></a>메시지 수신
 
@@ -79,7 +77,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 아래 스크린샷에서에서 실행 중인 Android 광선을 사용 하는 전체 코드 예제에 대 한 참조는 [Android 빔 데모](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) 샘플 갤러리에서 합니다.
 
-[![Android 빔 데모의 예제 스크린 샷](android-beam-images/24.png)](android-beam-images/24.png)
+[![Android 빔 데모의 예제 스크린 샷](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 

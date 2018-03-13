@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 05a162dab3b427ec345f22818b6c6d9df82c498b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-buttons"></a>단추와 작업
 
@@ -21,7 +21,7 @@ _이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 단추가 포함 �
 
 인스턴스를 사용 하 여는 `UIButton` tvOS 창에 포커스를 받을 수, 선택할 수 있는 단추를 만드는 클래스입니다. 대상 개체에 동작 메시지를 보낼 사용자가 단추를 선택 하는 경우 사용자에 게 응답 하 여 Xamarin.tvOS 응용 프로그램의 입력을 허용 합니다.
 
-[ ![](buttons-images/buttons01.png "예제에서는 단추")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "예제에서는 단추")](buttons-images/buttons01.png#lightbox)
 
 Siri 원격을 사용 하 여 탐색 및 포커스 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [탐색 및 포커스 작업](~/ios/tvos/app-fundamentals/navigation-focus.md) 및 [Siri 원격 인스턴스 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 설명서입니다.
 
@@ -31,7 +31,7 @@ Siri 원격을 사용 하 여 탐색 및 포커스 작업에 대 한 자세한 �
 
 TvOS, 단추 응용 프로그램별 동작에 사용 하 고 제목, 아이콘은 또는 둘 다 포함 될 수 있습니다. 사용자가 응용 프로그램의 사용자 인터페이스를 사용 하 여 이동할 때는 [Siri 원격](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), 텍스트 색과 배경색을 변경 하므로 지정된 된 단추 포커스가 이동 합니다. 그림자 효과 추가 하면 3D 사용자 인터페이스의 나머지 부분 위에 증가 하 고 표시 되 게 단추에도 적용 됩니다.
 
-[ ![](buttons-images/buttons01.png "예제에서는 단추")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "예제에서는 단추")](buttons-images/buttons01.png#lightbox)
 
 Apple에 단추를 사용 하기 위한 다음 제안 사항을:
 
@@ -70,19 +70,19 @@ Xamarin 디자이너를 사용 하 여 iOS 용 앱 UI에 추가할 Xamarin.tvOS 
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **단추** 에서 **라이브러리** 보기에 놓습니다. 
 
-    [ ![](buttons-images/storyboard01.png "단추")](buttons-images/storyboard01.png)
+    [![](buttons-images/storyboard01.png "단추")](buttons-images/storyboard01.png#lightbox)
 1. 에 **속성 탐색기**와 같은 단추의 여러 속성을 조정할 수 있습니다는 **제목** 및 **텍스트 색**: 
 
-    [ ![](buttons-images/storyboard02.png "단추 속성")](buttons-images/storyboard02.png)
+    [![](buttons-images/storyboard02.png "단추 속성")](buttons-images/storyboard02.png#lightbox)
 1. 다음으로 전환 하는 **이벤트 탭** 및 연결 된 **이벤트** 에서 **단추** 버전을 호출 `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03.png "이벤트 탭")](buttons-images/storyboard03.png)
+    [![](buttons-images/storyboard03.png "이벤트 탭")](buttons-images/storyboard03.png#lightbox)
 1. 하면 자동으로 전환 됩니다는 `ViewController.cs` 보기를 사용 하 여 코드에서 새 동작을 배치할 수 있습니다는 **를** 및 **아래로** 화살표 키. 
 
-    [ ![](buttons-images/storyboard04.png "새 작업을 코드에 배치")](buttons-images/storyboard04.png)
+    [![](buttons-images/storyboard04.png "새 작업을 코드에 배치")](buttons-images/storyboard04.png#lightbox)
 1. 키를 눌러는 **Enter** 위치를 선택 합니다. 
 
-    [ ![](buttons-images/storyboard05.png "코드 편집기")](buttons-images/storyboard05.png)
+    [![](buttons-images/storyboard05.png "코드 편집기")](buttons-images/storyboard05.png#lightbox)
 1. 모든 파일에 변경 내용을 저장 합니다.
 
 
@@ -91,13 +91,13 @@ Xamarin 디자이너를 사용 하 여 iOS 용 앱 UI에 추가할 Xamarin.tvOS 
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **단추** 에서 **라이브러리** 보기에 놓습니다. 
 
-    [ ![](buttons-images/storyboard01vs.png "단추")](buttons-images/storyboard01vs.png)
+    [![](buttons-images/storyboard01vs.png "단추")](buttons-images/storyboard01vs.png#lightbox)
 1. 에 **속성 탐색기**와 같은 단추의 여러 속성을 조정할 수 있습니다는 **제목** 및 **텍스트 색**: 
 
-    [ ![](buttons-images/storyboard02vs.png "속성 탐색기")](buttons-images/storyboard02vs.png)
+    [![](buttons-images/storyboard02vs.png "속성 탐색기")](buttons-images/storyboard02vs.png#lightbox)
 1. 다음으로 전환 하는 **이벤트 탭** 및 연결 된 **이벤트** 에서 **단추** 버전을 호출 `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03vs.png "이벤트 탭")](buttons-images/storyboard03vs.png)
+    [![](buttons-images/storyboard03vs.png "이벤트 탭")](buttons-images/storyboard03vs.png#lightbox)
 1. 모든 파일에 변경 내용을 저장 합니다.
 
 

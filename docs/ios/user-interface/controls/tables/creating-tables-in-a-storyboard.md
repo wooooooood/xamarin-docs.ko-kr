@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>IOS 디자이너에서에서 테이블 작업
 
@@ -40,7 +40,7 @@ A `UITableView` 프로토타입으로 콘텐츠는 일반적으로 사용 데이
 
 StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보드에서 사용 하는 간단한 마스터-세부 앱을 포함 합니다. 이 섹션의 나머지 부분에서는 완료 되 면 다음과 같이 표시 됩니다는 작은 할 일 목록 예제를 빌드하는 방법을 설명 합니다.
 
- [ ![예제에서는 화면](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![예제에서는 화면](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 사용자 인터페이스에 스토리 만들어지고 두 화면은 UITableView를 사용 합니다. 주 화면에 사용 하 여 *프로토타입 콘텐츠* 화면 레이아웃 행 및 세부 정보를 사용 하 여 *정적 콘텐츠가 담긴* 셀 사용자 지정 레이아웃을 사용 하 여 데이터 입력 양식을 만들 수 있습니다.
 
@@ -48,7 +48,7 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 
 Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프로젝트... > 단일 보기 App(C#)**, 해당 버전을 호출 _StoryboardTables_합니다.
 
- [ ![새 프로젝트 대화 상자 만들기](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![새 프로젝트 대화 상자 만들기](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 일부 C# 파일 솔루션이 열리면서 및 `Main.storyboard` 이미 만든 파일입니다. 두 번 클릭은 `Main.storyboard` iOS 디자이너에서에서 열 파일입니다.
 
@@ -75,24 +75,24 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 2.  끌어서는 **탐색 컨트롤러** 및 **테이블 뷰-컨트롤러** 도구 상자에서 스토리 보드에 있습니다. 
 3.  루트 뷰 컨트롤러에서 방금 추가 된 두 번째 테이블 보기 컨트롤러에는 segue를 만듭니다. 컨트롤 segue 만들 + 끌어 *세부 셀에서* 새로 추가 된 UITableViewController 하 합니다. 옵션을 선택 **표시*** 아래 **Segue 선택**합니다. 
 4.  새 사용자가 만든 segue 하 고 식별자 코드에서 segue이 참조를 선택 합니다. segue 클릭 하 고 입력 `TaskSegue` 에 대 한는 **식별자** 에 **속성 패드**, 다음과 같이:    
-  [ ![속성 패널에서 segue 이름 지정](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![속성 패널에서 segue 이름 지정](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. 다음을 선택 하 고 속성 패드를 사용 하 여 두 테이블 뷰를 구성 합니다. 뷰와 하지 뷰-컨트롤러 선택 되어 있는지 확인-문서 개요를 사용 하 여 선택 영역에 도움이 되도록 합니다.
 
 6.  루트 뷰 컨트롤러 되도록 변경 **콘텐츠: 동적 프로토타입** (디자인 화면의 보기 라는 레이블이 지정 **프로토타입 콘텐츠** ):
 
-    [ ![콘텐츠 속성을 동적 프로토타입을 설정](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![콘텐츠 속성을 동적 프로토타입을 설정](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  새 변경 **UITableViewController** 되도록 **콘텐츠: 정적 셀**합니다. 
 
 
 8. 새 UITableViewController 클래스 이름 및 식별자 집합에 있어야 합니다. 뷰-컨트롤러와 유형을 선택 _TaskDetailViewController_ 에 대 한는 **클래스** 에 **속성 패드** – 새 만들어집니다 `TaskDetailViewController.cs` 솔루션의 파일 패드입니다. 입력은 **StoryboardID** 으로 _세부_아래 예에서 같이, 합니다. 이 나중에 C# 코드에서이 뷰를 로드할 수 있습니다:  
 
-    [ ![스토리 보드 ID 설정](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![스토리 보드 ID 설정](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. 스토리 보드 디자인 화면은 이제 다음과 같이 표시 됩니다 (루트 뷰 컨트롤러 탐색 항목 제목 변경 된 경우 "작업 보드"):
 
-    [ ![디자인 화면](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![디자인 화면](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 
 먼저 마스터 뷰 컨트롤러에서 프로토타입 셀을 선택 하 고 설정 된 **식별자** 으로 _taskcell_아래 그림과 같이, 합니다. 이 나중에 코드에서에서이 UITableViewCell의 인스턴스를 검색 합니다.
 
- [ ![셀 식별자를 설정합니다.](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![셀 식별자를 설정합니다.](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 다음으로 아래 그림과 같이 새 작업을 추가 합니다 있는 단추를 만듭니다 해야 합니다.
 
-[ ![막대 탐색 모음에서 단추 항목](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![막대 탐색 모음에서 단추 항목](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 다음을 수행합니다. 
 
@@ -123,7 +123,7 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 
 세부 정보 보기에는 더 많은 작업이 필요합니다. 표 보기 셀 뷰를 끌어 및 레이블, 텍스트 뷰 및 단추 채워진 다음 필요 합니다. 아래 스크린샷에서 두 섹션이 포함 된 완료 된 UI를 표시 합니다. 하나의 섹션에 세 개의 셀, 레이블을 3 개, 두 번째 섹션에 있는 두 개의 단추를 사용 하 여 한 셀 하는 동안 두 개의 텍스트 필드와 한 전환할:
 
- [ ![세부 정보 보기 레이아웃](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![세부 정보 보기 레이아웃](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 전체 레이아웃 작성 하는 단계는:
 
@@ -137,7 +137,7 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 맨 위 섹션에 선택 고 **속성 > 테이블 뷰 섹션** 변경 **행** 를 _3_아래 그림과 같이,:
 
 
- [ ![3 개의 행을 맨 위 섹션에 설정](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![3 개의 행을 맨 위 섹션에 설정](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 열린 각 셀에 대 한는 **속성 패드** 설정:
 
@@ -152,7 +152,7 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 -  **배경 설정**: _색 지우기_ 합니다.
 -  두 개의 단추 셀으로 끌어서 직함을 적절 하 게 설정 (예: _저장_ 및 _삭제_) 아래 그림과 같이,:
 
-   [ ![아래쪽 섹션에 두 단추 설정](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![아래쪽 섹션에 두 단추 설정](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 이 시점에서 셀과 적응 레이아웃을 확인 하는 컨트롤에 대 한 제약 조건을 설정할 수도 있습니다.
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 스토리 보드 예제-는 완성 된 응용 프로그램은 다음과 같습니다 완료:
 
-[ ![완성 된 응용 프로그램](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![완성 된 응용 프로그램](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 예를 보여 줍니다.
 
@@ -356,4 +356,4 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 ## <a name="related-links"></a>관련 링크
 
 - [StoryboardTable (샘플)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
-- [스토리 보드에는 소개](~/ios/user-interface/storyboards/index.md)
+- [Storyboards 소개](~/ios/user-interface/storyboards/index.md)

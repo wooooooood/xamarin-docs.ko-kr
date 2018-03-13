@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ea8335348416dc00074d83e09b74521da7abcb66
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5f33d4c9d826085af3fccb3140bfc70216f40e46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-c"></a>C 시작
 
@@ -24,7 +24,7 @@ C로 포함 하는.NET을 사용 하려면 Mac 또는 Windows 실행 하는 컴�
 * Xcode 8.3.2 이상 버전
 
 * Windows 7, 8, 10 이상
-* Visual Studio 2013 이상
+* Visual Studio 2015 이상
 
 * [Mono](http://www.mono-project.com/download/)
 

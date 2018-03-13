@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: 7e02c92f9c1aafeb97da4905c17898b02362c960
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -48,7 +48,7 @@ ICloud에 액세스 하려면 응용 프로그램을 올바르게 구성:
 
 -   **새로운 응용 프로그램 ID 만들기** -를 응용 프로그램 ID 만들기에 나오는 단계에 따라는 [장치 프로 비전 가이드의 섹션 저장소 기술에 대 한 프로비저닝](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)를 반드시 확인 하 고 **iCloud** 으로 허용 된 서비스:
 
- [ ![](introduction-to-icloud-images/icloud-sml.png "Icloud와 허용 되는 서비스로 확인")](introduction-to-icloud-images/icloud.png)
+ [![](introduction-to-icloud-images/icloud-sml.png "Icloud와 허용 되는 서비스로 확인")](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **새 프로비저닝 프로필을 만들려면** -프로 비전 프로필을 만들려면을에 설명 된 단계를 수행 하려면는 [장치 프로 비전 가이드](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) 합니다.
 
@@ -83,7 +83,7 @@ ICloud에 액세스 하려면 응용 프로그램을 올바르게 구성:
 
 
 
- [ ![](introduction-to-icloud-images/icloud-kv-arrows.png "장치 간의 메시지 흐름")](introduction-to-icloud-images/icloud-kv-arrows.png)
+ [![](introduction-to-icloud-images/icloud-kv-arrows.png "장치 간의 메시지 흐름")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### <a name="setting-and-retrieving-data"></a>설정 및 데이터를 검색 합니다.
 
@@ -151,13 +151,13 @@ icloud와 문서 저장소는 응용 프로그램 (및 사용자)에 중요 한 
 
 이 다이어그램 모든 맞춰지는 방법은 함께 보여 줍니다. 각 장치에 로컬 저장소 (UbiquityContainer) 및 디먼 데이터 보내기 및 받기 클라우드에서 담당 하는 운영 체제의 iCloud에 저장 된 데이터가 있습니다. 파일에 액세스 하려면 액세스는 UbiquityContainer FilePresenter/FileCoordinator 동시 액세스를 방지 하기 위해를 통해 수행 되어야 합니다. `UIDocument` 클래스를 구현 하기 위한; UIDocument를 사용 하는 방법을 보여 주는이 예제입니다.
 
- [ ![](introduction-to-icloud-images/icloud-overview.png "문서 저장소 개요")](introduction-to-icloud-images/icloud-overview.png)
+ [![](introduction-to-icloud-images/icloud-overview.png "문서 저장소 개요")](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 ICloudUIDoc 예제는 간단한 구현 `UIDocument` 단일 텍스트 필드가 포함 된 하위 클래스입니다. 에 텍스트를 렌더링 한 `UITextView` 편집 빨간색으로 표시 된 알림 메시지를 사용 하 여 다른 장치로 iCloud 전파 됩니다. 충돌 해결 같은 고급 iCloud 기능으로는 샘플 코드를 처리 하지 않습니다.
 
 이 스크린샷은 다음 텍스트를 변경 하 고 키를 눌러 샘플 응용 프로그램- **UpdateChangeCount** 통해 다른 장치를 icloud와 문서 동기화 됩니다.
 
- [ ![](introduction-to-icloud-images/iclouduidoc.png "이 스크린샷은 다음 텍스트를 변경 하 고 UpdateChangeCount 키를 눌러 샘플 응용 프로그램")](introduction-to-icloud-images/iclouduidoc.png)
+ [![](introduction-to-icloud-images/iclouduidoc.png "이 스크린샷은 다음 텍스트를 변경 하 고 UpdateChangeCount 키를 눌러 샘플 응용 프로그램")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 iCloudUIDoc 샘플 5 개 부분이 있습니다.
 
@@ -403,15 +403,15 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 사용자의 icloud와 문서를 관리할 수 있습니다는 **문서** 디렉터리 설정을 통해 응용 프로그램 외부의 "편 재 컨테이너"의 파일 목록과 삭제할의 통과 볼 수 있습니다. 응용 프로그램 코드는 사용자가 문서 삭제는 하는 상황을 처리할 수 있어야 합니다. 내부 응용 프로그램 데이터를 저장 하지 마십시오는 **문서** 디렉터리입니다.
 
- [ ![](introduction-to-icloud-images/icloudstorage.png "Icloud와 문서 워크플로 관리")](introduction-to-icloud-images/icloudstorage.png)
+ [![](introduction-to-icloud-images/icloudstorage.png "Icloud와 문서 워크플로 관리")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 
 
 사용자가 해당 응용 프로그램에 관련 된 icloud와 문서 상태를 알리기 위해가 장치에서 iCloud 사용이 가능한 응용 프로그램을 제거 하려고 할 때 여러 가지 경고를 발생 하기도 합니다.
 
- [ ![](introduction-to-icloud-images/icloud-delete1.png "사용자가 장치에서 iCloud 사용이 가능한 응용 프로그램을 제거 하려고 할 때 샘플 대화 상자")](introduction-to-icloud-images/icloud-delete1.png)
+ [![](introduction-to-icloud-images/icloud-delete1.png "사용자가 장치에서 iCloud 사용이 가능한 응용 프로그램을 제거 하려고 할 때 샘플 대화 상자")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [ ![](introduction-to-icloud-images/icloud-delete2.png "사용자가 장치에서 iCloud 사용이 가능한 응용 프로그램을 제거 하려고 할 때 샘플 대화 상자")](introduction-to-icloud-images/icloud-delete2.png)
+ [![](introduction-to-icloud-images/icloud-delete2.png "사용자가 장치에서 iCloud 사용이 가능한 응용 프로그램을 제거 하려고 할 때 샘플 대화 상자")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>iCloud 백업
 

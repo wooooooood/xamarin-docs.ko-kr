@@ -2,27 +2,29 @@
 title: "SQLite.NET를 사용 하 여"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
+ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: d18fe5960a44153626fbf0bda30e3485faf5b9fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-sqlitenet"></a>SQLite.NET를 사용 하 여
 
 Xamarin에서 권장 하는 SQLite.NET 라이브러리는 iOS 장치에서 로컬 SQLite 데이터베이스에 개체를 검색 하 고 저장할 수 있는 기본 ORM입니다.
 ORM는 개체 관계형 매핑-SQL 문을 작성 하지 않고도 데이터베이스에서 "개체"를 검색 하 고 저장할 수 있는 API를 나타냅니다.
 
-## <a name="using-sqlitenet"></a>SQLite.NET를 사용 하 여
+<a name="Usage"/>
+
+## <a name="usage"></a>사용법
 
 추가 [SQLite.net PCL NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/),-프로젝트에 다양 한 iOS, Android 및 Windows를 포함 하는 플랫폼을 지원 합니다.
 
-  [ ![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png)
+  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
 
 SQLite.NET 라이브러리를 사용할 수 있으면 데이터베이스에 액세스 하려면 사용 하려면 다음 세 가지 단계를 따르십시오.
 
@@ -68,7 +70,7 @@ SQLite.NET 라이브러리를 사용할 수 있으면 데이터베이스에 액�
 using SQLite; // from the github SQLite.cs class
 ```
 
-이 위해서는 SQLite 강조 표시 된 대로 프로젝트에 추가 했는지 [여기](#Using_SQLite.NET)합니다. SQLite 데이터베이스 테이블 클래스에 특성을 추가 하 여 정의 됩니다 (의 `Stock` 클래스) CREATE TABLE 명령 대신 합니다.
+이 위해서는 SQLite 강조 표시 된 대로 프로젝트에 추가 했는지 [여기](#Usage)합니다. SQLite 데이터베이스 테이블 클래스에 특성을 추가 하 여 정의 됩니다 (의 `Stock` 클래스) CREATE TABLE 명령 대신 합니다.
 
 ```csharp
 [Table("Items")]

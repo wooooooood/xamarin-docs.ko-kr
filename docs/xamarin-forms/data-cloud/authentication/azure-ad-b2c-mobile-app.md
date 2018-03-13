@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3a7d89d9b0f383d365b18364e5d902ee0642f395
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c28ddc09b07066de67f5c974cf5c2128726c6932
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Azure 모바일 앱에 Azure Active Directory B2C 통합
 
@@ -21,7 +21,7 @@ _Azure Active Directory B2C 연결 소비자 웹 및 모바일 응용 프로그�
 ![](~/media/shared/preview.png "이 API는 현재 시험판 버전")
 
 > [!NOTE]
-> **참고**:는 [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) 미리 보기 상태, 하지만 프로덕션 환경에서 사용 하기에 적합 합니다. 그러나 있을 수 있습니다 수의 주요 변경 내용 API, 내부 캐시 형식 및 응용 프로그램에 영향을 줄 수 있는 라이브러리의 다른 메커니즘입니다.
+> [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) 미리 보기 상태, 하지만 프로덕션 환경에서 사용 하기에 적합 합니다. 그러나 있을 수 있습니다 수의 주요 변경 내용 API, 내부 캐시 형식 및 응용 프로그램에 영향을 줄 수 있는 라이브러리의 다른 메커니즘입니다.
 
 ## <a name="overview"></a>개요
 
@@ -72,7 +72,7 @@ Note 인증 클라이언트에서 관리 하는 워크플로 사용 하는 경�
 
 다음 스크린샷은이 구성을 보여 줍니다.
 
-[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C 구성")](azure-ad-b2c-mobile-app-images/client-flow-config.png "Azure Active Directory B2C 구성")
+[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C 구성")](azure-ad-b2c-mobile-app-images/client-flow-config.png#lightbox "Azure Active Directory B2C 구성")
 
 테 넌 트에 동일한 사용자 지정 URL 체계 회신 URL 설정 되도록도 구성 해야 Azure Active Directory B2C에 사용 되는 정책 이어서 `://auth/`합니다. 다음 스크린샷은이 구성을 보여 줍니다.
 
@@ -158,7 +158,7 @@ public async Task<bool> LogoutAsync()
 
 다음 스크린샷은이 구성을 보여 줍니다.
 
-[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C 구성")](azure-ad-b2c-mobile-app-images/server-flow-config.png "Azure Active Directory B2C 구성")
+[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C 구성")](azure-ad-b2c-mobile-app-images/server-flow-config.png#lightbox "Azure Active Directory B2C 구성")
 
 Azure 모바일 앱의 주소로 회신 URL 설정 되도록 테 넌 트도 구성 해야 Azure Active Directory B2C에 사용 되는 정책 이어서 `/.auth/login/aad/callback`합니다. 다음 스크린샷은이 구성을 보여 줍니다.
 

@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: b2d89fd6f9030864931395db00bd6f6321b7fbf9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 14982fc5cb3e05243c819cbc8b37349d872bd24c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stacklayout"></a>StackLayout
 
 `StackLayout` 가로 또는 세로로 1 차원 줄 ("스택")에 뷰를 구성합니다. 뷰는 `StackLayout` 크기를 조정할 수 레이아웃 옵션을 사용 하 여 레이아웃에서 공간을 기초로 합니다. 위치 지정 보기는 레이아웃과 뷰의 레이아웃 옵션에 추가 된 순서에 따라 결정 됩니다.
 
-[ ![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png "Xamarin.Forms Layouts")
+[![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="purpose"></a>용도
 

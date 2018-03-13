@@ -1,5 +1,5 @@
 ---
-title: "Android 마모"
+title: Android Wear
 description: "Android 착용 식 장치에 대 한 응용 프로그램을 구축 합니다."
 ms.topic: article
 ms.prod: xamarin
@@ -8,15 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1dad5e859efdf69e7003b45724f718b16faffd62
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="android-wear"></a>Android 마모
-
-## <a name="android-wear"></a>Android 마모
+# <a name="android-wear"></a>Android Wear
 
 Android 마모는 android 착용 식 장치 스마트 감시 등을 위해 디자인 버전입니다. 이 섹션에서는 설치 하 고 직접 만들기 위한 앱 착용를 참조할 수 있는 샘플의 목록과 첫 번째 마모 장치를 만들기 위한 단계별 연습, 마모 개발을 위해 필요한 도구를 구성 하는 방법에 대 한 지침입니다.
 
@@ -32,7 +30,7 @@ Android 착용 소개, 설치 하 고, 마모 개발을 위해 컴퓨터를 구�
 
 이 섹션의 문서를 쓰는 유형 Android에 대 한 기능을 다룹니다. 여기는 WatchFace를 만드는 방법을 설명 하는 항목을 찾을 수 있습니다.
 
-##  <a name="screen-sizesandroidwearscreen-sizesmd"></a>[한 화면 크기](~/android/wear/screen-sizes.md)
+##  <a name="screen-sizesandroidwearscreen-sizesmd"></a>[화면 크기](~/android/wear/screen-sizes.md)
 
 미리 보기 및 사용 가능한 화면 크기에 대 한 사용자 인터페이스를 최적화 합니다.
 
@@ -41,7 +39,6 @@ Android 착용 소개, 설치 하 고, 마모 개발을 위해 컴퓨터를 구�
 마모에 대해 구성 된 Android 에뮬레이터 또는 Android 착용 장치에 쓰는 유형 Android 앱을 배포 하는 방법에 설명 합니다. 디버깅 팁 및 개발 컴퓨터 및 Android 장치 간에 Bluetooth 연결을 설정 하는 방법에 대 한 정보가 포함 됩니다.
 
 
-<a name="Samples" />
 
 ## <a name="samples"></a>샘플
 
@@ -137,21 +134,21 @@ WatchViewStub에서 작동 하는 방법을 참조는 <b>Resources/layout/main_a
 <table align="center" border="0" cellpadding="1" cellspacing="1">
     <tr>
         <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
         <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">Android L 및 더 많은</a>
         <br />
 Android L 개발자 미리 보기 자료 디자인, 알림 및 새 애니메이션 등을 포함 하는 새로운 Api 활용 하기 위해 개발자를 위한 다양 한을 도입 되었습니다.</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C#이 내 귀 및 눈에: Google 유리 및 Android 쓰는 유형</a>
         <br />
 미래 (또는 검사기 가젯 에피소드)에서 것 처럼 보이기는 착용 식 계산 하지만 많은 사람들이 미래 오늘 디렉터리가 이미! C# 개발자 이러한 내용을 알아야 하 고 있는 도구와 기술을 활용 하 여 (Evolve 2014)에서 착용 식 장치.</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">Xamarin.Android의 새로운 기능</a>
         <br />
         <i>Android L, Android 마모, Android TV, Android 자동, 자재 디자인 및 아트; 그에 Xamarin 개발자? </i> 에서 2014 발전 합니다.</td>

@@ -3,16 +3,16 @@ title: "Hello, Android 멀티스크린: 심층 분석"
 description: "두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에서 만든 기본 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 기본 Android 응용 프로그램 구성 요소를 소개합니다. Android 아키텍처에 대한 심층 분석이 포함되어 Android 응용 프로그램 구조체 및 기능을 보다 잘 이해할 수 있습니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: a47dea43b1fb1e84a0cd3dffc07b483497edbe09
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android 멀티스크린: 심층 분석
 
@@ -30,7 +30,6 @@ _두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에�
 
 [Hello, Android 심층 분석](~/android/get-started/hello-android/hello-android-deepdive.md)에서 단일 액세스 지점이 부족하기 때문에 Android 응용 프로그램이 고유한 프로그램임을 알아보았습니다. 대신, 운영 체제(또는 다른 응용 프로그램)는 응용 프로그램의 등록된 작업 중 하나를 시작합니다. 그러면 응용 프로그램에 대한 프로세스를 다시 시작합니다. Android 아키텍처에 대한 심층 분석은 Android 응용 프로그램 구성 요소와 해당 기능을 도입하여 Android 응용 프로그램을 구축하는 방법에 대한 이해로 확장됩니다.
 
-<a name="AndroidApplicationBlocks" />
 
 ### <a name="android-application-blocks"></a>Android 응용 프로그램 블록
 
@@ -52,7 +51,6 @@ Android는 *최소 권한의 원칙*에 맞게 디자인되었습니다. &ndash;
 
 통신을 위해 응용 프로그램 블록은 *의도*라고 하는 비동기 메시지를 서로 전달합니다. 의도는 수신하는 블록 및 경우에 따라 일부 데이터에 대한 정보를 포함합니다. 하나의 앱 구성 요소에서 보낸 의도는 다른 앱 구성 요소에 어떤 항목을 트리거하여 두 가지 앱 구성 요소를 바인딩하고 통신할 수 있도록 합니다. 의도를 서로 전송하여 블록에서 카메라 앱을 시작하거나, 위치 정보를 수집하거나, 화면 간에 이동하는 등 복잡한 작업을 조정할 수 있습니다.
 
-<a name="AndroidManifestXML" />
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 

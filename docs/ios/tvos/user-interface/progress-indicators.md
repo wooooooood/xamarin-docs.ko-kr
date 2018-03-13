@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b5d3a03324e73b06bd3defe7e6610163c3d1b26d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-progress-indicators"></a>진행률 표시기 작업
 
@@ -21,7 +21,7 @@ _이 문서에서는 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내�
 
 새 콘텐츠를 로드 하거나 시간이 오래 걸리는 처리 작업을 수행 하려면 Xamarin.tvOS 앱 필요한 시간이 있을 수 있습니다. 이 시간 동안 활동 표시기 또는 진행률 표시줄 사용자에 게 알리는 앱이 여전히 실행 하 고 실행 중인 작업의 길이 대 한 일부 원인을 제공을 제공 해야 합니다.
 
-[ ![](progress-indicators-images/intro01.png "샘플 진행률 표시기")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "샘플 진행률 표시기")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -57,19 +57,19 @@ Apple에 진행률 표시줄을 사용 하기 위한 다음 제안 사항을:
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **활동 표시기** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](progress-indicators-images/activity01.png "활동 표시기")](progress-indicators-images/activity01.png)
+    [![](progress-indicators-images/activity01.png "활동 표시기")](progress-indicators-images/activity01.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 패드**와 같은 활동 표시기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **동작**: 
 
-    [ ![](progress-indicators-images/activity02.png "위젯 탭 ")](progress-indicators-images/activity02.png)
+    [![](progress-indicators-images/activity02.png "위젯 탭 ")](progress-indicators-images/activity02.png#lightbox)
 1. 끌어서는 **진행 보기** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](progress-indicators-images/activity03.png "진행률 보기")](progress-indicators-images/activity03.png)
+    [![](progress-indicators-images/activity03.png "진행률 보기")](progress-indicators-images/activity03.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 진행 보기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **진행률**(완료율): 
 
-    [ ![](progress-indicators-images/activity04.png "위젯 탭")](progress-indicators-images/activity04.png)
+    [![](progress-indicators-images/activity04.png "위젯 탭")](progress-indicators-images/activity04.png#lightbox)
 1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
 
-    [ ![](progress-indicators-images/activity05.png "이름을 할당합니다")](progress-indicators-images/activity05.png)
+    [![](progress-indicators-images/activity05.png "이름을 할당합니다")](progress-indicators-images/activity05.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -77,19 +77,19 @@ Apple에 진행률 표시줄을 사용 하기 위한 다음 제안 사항을:
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **활동 표시기** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](progress-indicators-images/activity01-vs.png "활동 표시기")](progress-indicators-images/activity01-vs.png)
+    [![](progress-indicators-images/activity01-vs.png "활동 표시기")](progress-indicators-images/activity01-vs.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 활동 표시기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **동작**: 
 
-    [ ![](progress-indicators-images/activity02-vs.png "위젯 탭")](progress-indicators-images/activity02-vs.png)
+    [![](progress-indicators-images/activity02-vs.png "위젯 탭")](progress-indicators-images/activity02-vs.png#lightbox)
 1. 끌어서는 **진행 보기** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](progress-indicators-images/activity03-vs.png "진행률 보기")](progress-indicators-images/activity03-vs.png)
+    [![](progress-indicators-images/activity03-vs.png "진행률 보기")](progress-indicators-images/activity03-vs.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 진행 보기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **진행률**(완료율): 
 
-    [ ![](progress-indicators-images/activity04-vs.png "위젯 탭")](progress-indicators-images/activity04-vs.png)
+    [![](progress-indicators-images/activity04-vs.png "위젯 탭")](progress-indicators-images/activity04-vs.png#lightbox)
 1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
 
-    [ ![](progress-indicators-images/activity05-vs.png "이름을 할당합니다")](progress-indicators-images/activity05-vs.png)
+    [![](progress-indicators-images/activity05-vs.png "이름을 할당합니다")](progress-indicators-images/activity05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 -----

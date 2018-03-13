@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 3cc5db39280c72f0de9dbdae07a49b56416c90a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc6bc9e1d4625f8f45887b0a144a31383046b296
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="linearlayout"></a>LinearLayout
 
@@ -116,11 +116,10 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 응용 프로그램을 실행합니다. 다음을 참조 합니다.
 
-[ ![스크린샷 첫 번째 LinearLayout 가로로 정렬 하는 앱의 두 번째 세로](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png)
+[![스크린샷 첫 번째 LinearLayout 가로로 정렬 하는 앱의 두 번째 세로](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
 XML 특성은 각 보기의 동작을 정의 하는 방법을 확인 합니다. 에 대해 다른 값을 사용 하 여 실험해 `android:layout_weight` 가중치의 각 요소에 따라 화면 자원을 분산 하는 방법을 볼 수 있습니다. 참조는 [공통 개체의 레이아웃](http://developer.android.com/guide/topics/ui/declaring-layout.html) 방법에 대 한 자세한 문서 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 핸들은 `android:layout_weight` 특성입니다.
 
-<a name="References" />
 
 ## <a name="references"></a>참조
 

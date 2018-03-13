@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1665168344a1e1da4f5b07909a8119d77ef2583a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 540a459be24296c8446c2136773ddde59f9d4dd7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps"></a>맵
 
@@ -234,6 +234,8 @@ iOS 로컬 검색 비동기 지정된 지리적 지역에 관심 지점 검색�
 
 
 로컬 검색 API 자체는 없는 사용자 인터페이스를 제공합니다. 사용할 맵도 필요 하지 않습니다. 그러나 로컬 검색으로 사용 하려면 응용 프로그램 해야 검색 쿼리를 지정 하 고 결과 표시할 수 있는 방법을 제공 합니다. 또한 결과 위치 데이터를 포함할 수 있으므로 종종 좋을 지도에 표시 하려면.
+
+<a name="Adding_a_Local_Search_UI"/>
 
 ### <a name="adding-a-local-search-ui"></a>로컬 검색 UI 추가
 

@@ -3,14 +3,15 @@ title: "요약 장 22입니다. 애니메이션"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0ee99881a43b625cc8a70fb59e54710705c2d07a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0647e869fcf37a3a1dfdeb6f3dbf1e7d07ad95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-22-animation"></a>요약 장 22입니다. 애니메이션
 
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/27/2018
 
 [**RotatingSpokes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) 회전 `BoxView` 화면 중심 spoke 하 고 다음 각 스포크 자체 흥미로운 패턴을 만들 수 있습니다.
 
-[![Spoke 회전의 삼중 스크린 샷](images/ch22fg21-small.png "Spoke 회전")](images/ch22fg21-large.png "Spoke 회전")
+[![Spoke 회전의 삼중 스크린 샷](images/ch22fg21-small.png "Spoke 회전")](images/ch22fg21-large.png#lightbox "Spoke 회전")
 
 그러나 점진적으로 증가 `Rotation` 요소의 속성으로는 장기적으로 작동 하지 않을 수는 [ **RotationBreakdown** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) 샘플을 보여 줍니다.
 
@@ -124,7 +125,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **XamagonXuzzle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) 샘플에서는 `LayoutTo` 이동 하려면 타일의 기본 구현에서 번호가 매겨진된 타일 대신 암호화 된 이미지를 표시 하는 15-16 퍼즐:
 
-[![Xamarin Xuzzle의 삼중 스크린 샷](images/ch22fg26-small.png "Xuzzle 퍼즐 게임")](images/ch22fg26-large.png "Xuzzle 퍼즐 게임")
+[![Xamarin Xuzzle의 삼중 스크린 샷](images/ch22fg26-small.png "Xuzzle 퍼즐 게임")](images/ch22fg26-large.png#lightbox "Xuzzle 퍼즐 게임")
 
 ### <a name="your-own-awaitable-animations"></a>고유한 awaitable 애니메이션
 

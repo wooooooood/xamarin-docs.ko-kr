@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d878f922b74ea3e95fd0e1ebce9e7445063a2946
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>백그라운드에서 응용 프로그램 업데이트
 
@@ -44,7 +44,7 @@ IOS 6, 전경 입력 응용 프로그램에 간단 하 게 사용자 콘텐츠�
 
 백그라운드 가져오기의 구현 하려면 편집 *Info.plist* 확인 하 고는 **백그라운드 모드를 사용 하도록 설정** 및 **백그라운드 가져오기를** 확인란:
 
- [ ![](updating-an-application-in-the-background-images/fetch.png "Info.plist 편집 하 고 백그라운드 모드를 사용 하도록 설정 하 고 백그라운드 인출 확인란")](updating-an-application-in-the-background-images/fetch.png)
+ [![](updating-an-application-in-the-background-images/fetch.png "Info.plist 편집 하 고 백그라운드 모드를 사용 하도록 설정 하 고 백그라운드 인출 확인란")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 다음에 `AppDelegate`, 재정의 `FinishedLaunching` 최소 인출 간격을 설정 하는 메서드. 이 예제에서는 새 콘텐츠를 인출 하는 빈도 결정 하는 OS를 사용 했습니다.
 
@@ -106,7 +106,7 @@ IOS 6에에서는 들어오는 푸시 알림을 응용 프로그램에서 발생
 
 원격 알림을 구현 하려면 편집 *Info.plist* 확인 하 고는 **백그라운드 모드를 사용 하도록 설정** 및 **원격 알림** 확인란:
 
- [ ![](updating-an-application-in-the-background-images/remote.png "백그라운드 모드를 사용 하도록 설정 및 원격 알림 백그라운드 모드 설정")](updating-an-application-in-the-background-images/remote.png)
+ [![](updating-an-application-in-the-background-images/remote.png "백그라운드 모드를 사용 하도록 설정 및 원격 알림 백그라운드 모드 설정")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 다음으로 설정 된 `content-available` 1로 푸시 알림 자체에 대 한 플래그입니다. 이 응용 프로그램을 경고를 표시 하기 전에 새 내용을 가져올 알 수 있습니다.
 
@@ -153,7 +153,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 그러나 APNs에서 "피기백" 일반 원격 알림 또는 유지 응답와 함께 자동 알림 수입니다. 정기적으로 알림이 속도 제한 되지 않으므로 다음 다이어그램에 표시 된 것 처럼 장치에 APNs에서 저장된 한 자동 알림을 데 다시 사용할 수 있습니다.
 
- [ ![](updating-an-application-in-the-background-images/silent.png "이 다이어그램에서와 같이 정기적으로 알림이 장치에 APNs에서 자동 저장된 알림 데 사용할 수 수 있습니다.")](updating-an-application-in-the-background-images/silent.png)
+ [![](updating-an-application-in-the-background-images/silent.png "이 다이어그램에서와 같이 정기적으로 알림이 장치에 APNs에서 자동 저장된 알림 데 사용할 수 수 있습니다.")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > **참고**: Apple 응용 프로그램에서 필요로 하 고 let APNs의 배달을 예약할 때마다 자동 푸시 알림을 보내려면 개발자가 권장 합니다.

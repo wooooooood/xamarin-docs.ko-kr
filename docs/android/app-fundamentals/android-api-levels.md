@@ -7,18 +7,17 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 5a8b51f6c63d8632e71d1cddabb0c37758ee02f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 907af0948e9d081f05cc201c49f94629a513c935
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
 _Xamarin.Android에 여러 버전의 Android 앱의 호환성을 결정 하는 몇 가지 Android API 수준 설정이 있습니다. 이러한 설정은 의미를 구성 하는 방법 및 영향을 잘 모르겠으면이 가이드에서는 설명 앱 실행 시가지고 있습니다._
 
-<a name="quick" />
 
 ## <a name="quick-start"></a>빠른 시작
 
@@ -37,30 +36,30 @@ Xamarin.Android 세 Android API 수준 프로젝트 설정을 노출합니다.
 일반적으로 세 Xamarin.Android API 수준 모두 동일한 값으로 설정 됩니다. 에 **응용 프로그램** 페이지에서 설정 **Android 버전 (대상 프레임 워크)를 사용 하 여 컴파일** 를 안정적인 최신 API 버전 (또는 여기에 Android 버전의 모든 필요한 기능을 하는 최소한).
 대상 프레임 워크로 설정 되어 다음 스크린 샷에 **Android 7.1 (API 수준 25-Nougat)**:
 
-[![대상 프레임 워크 버전 기본값으로 Android 버전을 사용 하 여 컴파일](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png)
+[![대상 프레임 워크 버전 기본값으로 Android 버전을 사용 하 여 컴파일](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png#lightbox)
 
 에 **Android 매니페스트** 페이지에서 최소 Android 버전을 설정 **사용 하 여 SDK 버전을 사용 하 여 컴파일** Android 대상 버전 (다음에에서 대상 프레임 워크 버전으로 동일한 값을 설정 하 고 스크린 샷, Android 대상 프레임 워크로 설정 된 **Android 7.1 (Nougat)**):
 
-[![대상 프레임 워크 버전으로 최소 및 대상 Android 버전 설정](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png)
+[![대상 프레임 워크 버전으로 최소 및 대상 Android 버전 설정](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png#lightbox)
 
 이전 버전의 Android와 이전 버전과 호환성을 유지 하려면 설정 **최소 Android 버전을 대상** 가장 오래 된 버전의 Android 앱이 지원 되도록 합니다. (API 수준 14에 필요한 최소 API 수준은 [하려면 Google Play 서비스 및 Firebase 지원](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).) 다음 예제에서는 구성을 통해 API 수준 25 API 수준 14에서 Android 버전을 지원합니다.
 
-[![API 수준 25를 사용 하 여 컴파일 Nougat, API 레벨 14로 설정 하는 최소 Android 버전](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png)
+[![API 수준 25를 사용 하 여 컴파일 Nougat, API 레벨 14로 설정 하는 최소 Android 버전](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 일반적으로 세 Xamarin.Android API 수준 모두 동일한 값으로 설정 됩니다. 설정 **대상 프레임 워크** 를 안정적인 최신 API 버전 (또는 여기에 Android 버전의 모든 필요한 기능을 하는 최소한). 설정 하는 **대상 프레임 워크**로 이동 **빌드 > 일반** 에 **프로젝트 옵션**합니다. 대상 프레임 워크로 설정 되어 다음 스크린 샷에 **최신 설치 된 플랫폼 (8.0)를 사용 하 여**:
 
-[![대상 프레임 워크를 사용 하 여 최신 설치 플랫폼 기본값으로 설정](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png)
+[![대상 프레임 워크를 사용 하 여 최신 설치 플랫폼 기본값으로 설정](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
 최소 및 대상 Android 버전 설정을 확인할 수 있습니다 **빌드 > Android 응용 프로그램** 에 **프로젝트 옵션**합니다. 최소 Android 버전을 설정 **자동으로 사용 하 여 대상 프레임 워크 버전** 대상 프레임 워크 버전으로 동일한 값으로 대상 Android 버전을 설정 합니다. 다음 스크린 샷에서 Android 대상 프레임 워크로 설정 되어 **Android 8.0 (API 수준 26)** 위의 대상 프레임 워크 설정과 일치 시킵니다.
 
-[![프로젝트 옵션에서 대상 및 프레임 워크 수준 설정](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png)
+[![프로젝트 옵션에서 대상 및 프레임 워크 수준 설정](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png#lightbox)
 
 이전 버전의 Android와 이전 버전과 호환성을 유지 하려면 변경 **최소 Android 버전** 가장 오래 된 버전의 Android 앱이 지원 되도록 합니다. API 수준 14에 필요한 최소 API 수준은 [하려면 Google Play 서비스 및 Firebase 지원](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html)합니다.
 예를 들어 다음 구성은 초기 API 수준 14에 Android 버전이 지원 됩니다.
 
-[ ![-자동으로 설정 하는 대상 버전 및 최소 대상 프레임 워크 버전을 사용 하 여](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png)
+[![-자동으로 설정 하는 대상 버전 및 최소 대상 프레임 워크 버전을 사용 하 여](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png#lightbox)
 
 -----
 
@@ -68,13 +67,11 @@ Xamarin.Android 세 Android API 수준 프로젝트 설정을 노출합니다.
 코드 최소 Android 버전 설정으로 앱이 작동 하도록 하려면 런타임 검사를 포함 해야 앱이 여러 Android 버전을 지 원하는 경우 (참조 [Android 버전에 대 한 런타임 검사](#runtimechecks) 아래의 세부 정보에 대 한). 사용 하거나 라이브러리를 만드는 하는 경우 참조 [API 수준 및 라이브러리](#libraries) 아래 API 구성에서 모범 사례에 대 한 수준 라이브러리에 대 한 설정입니다.
 
 
-<a name="verslevels" />
 
 ## <a name="android-versions-and-api-levels"></a>Android 버전 및 API 레벨
 
 각 Android 버전 라는 고유 정수 식별자는 할당 된 Android 플랫폼 진화 함에 따라와 새 Android 버전이 출시 되는 *API 레벨*합니다. 따라서 각 Android 버전 단일 Android API 수준에 해당합니다. 사용자가 이전도 가장 최근 버전의 Android에서 앱을 설치 하기 때문에 실제 Android 응용 프로그램을 여러 Android API 수준에 맞게 디자인 되어야 합니다.
 
-<a name="versions" />
 
 ### <a name="android-versions"></a>Android 버전
 
@@ -145,7 +142,6 @@ Android의 각 릴리스 여러 이름으로 진행 됩니다.
 
 새 Android 버전 자주 릴리스될이 목록에 표시 대로 &ndash; 때로는 여러 릴리스 1 년입니다. 결과적으로, 다양 한 Android 버전을 이전 버전과 새 버전의 앱이 실행 될 수 있는 Android 장치 universe 포함 되어 있습니다. 앱에서 실행 됩니다 일관 되 고 안정적으로 많은 다른 버전의 Android 어떻게 보장할 수 있습니까? Android의 API 수준은이 문제를 관리할 수 있습니다.
 
-<a name="apilevels" />
 
 ### <a name="android-api-levels"></a>Android API 수준
 
@@ -159,13 +155,11 @@ Android의 각 릴리스 여러 이름으로 진행 됩니다.
 
 이러한 설정은 응용 프로그램을 올바르게 실행 하는 데 필요한 기능을 설치 시에는 Android 장치에서 사용할 수 있도록 하는 데 사용 됩니다. 그렇지 않은 경우 응용 프로그램은 해당 장치에서 실행에서 차단 됩니다. 예를 들어, Android 장치 API 수준의 응용 프로그램에 대해 지정 하는 최소 API 수준 보다 낮은 경우 Android 장치는 설치 응용 프로그램에서 사용자를 하지 것입니다.
 
-<a name="settings" />
 
 ## <a name="project-api-level-settings"></a>프로젝트 API 수준 설정
 
 다음 섹션으로 구성 하는 방법에 대 한 세부 정보를 대상으로 지정할 API 레벨을 위한 개발 환경을 준비 하려면 SDK 관리자를 사용 하는 방법을 설명 *대상 프레임 워크*, *최소 Android 버전*, 및 *대상 Android 버전* Xamarin.Android에서 설정 합니다.
 
-<a name="sdk" />
 
 ### <a name="android-sdk-platforms"></a>Android SDK 플랫폼
 
@@ -182,7 +176,7 @@ Android의 각 릴리스 여러 이름으로 진행 됩니다.
 사용 하 여 항상 컴파일하는 것이 좋습니다는 *최신* 대상 프레임 워크 버전을 사용할 수 있습니다. 이렇게 하면 코드에서 호출할 수 있는 사용 되지 않는 Api에 대 한 유용한 경고 메시지와 함께 제공 합니다. 최신 대상 프레임 워크 버전을 사용 하는 최신 지원 라이브러리 릴리스를 사용 하는 경우 특히 중요 &ndash; 각 라이브러리에서는 해당 지원 라이브러리의 최소 API 수준에서 컴파일된 클 수 있는 응용 프로그램입니다. 
 
 > [!NOTE]
-> **참고:** 2018 년 8 월부터, Google 재생 콘솔을 새 응용 프로그램 대상 API 레벨 26 (Android 8.0) 해야 합니다 또는 이상.
+> 2018 년 8 월부터, Google 재생 콘솔을 새 응용 프로그램 대상 API 레벨 26 (Android 8.0) 해야 합니다 또는 이상.
 기존 응용 프로그램 API 수준 26 또는 2018 년 11 월에서에서 시작 하는 더 높은 대상으로 해야 합니다. 자세한 내용은 참조 [앱 보안 및 년에 대 한 상태가 될 때까지 Google Play에서 성능 향상](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)합니다.
 
 
@@ -190,7 +184,7 @@ Android의 각 릴리스 여러 이름으로 진행 됩니다.
 
 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 속성에서 열고 **솔루션 탐색기** 선택 하 고는 **응용 프로그램** 페이지:
 
-[![프로젝트 속성의 응용 프로그램 페이지](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png)
+[![프로젝트 속성의 응용 프로그램 페이지](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png#lightbox)
 
 API 수준 아래에 있는 드롭 다운 메뉴에서 선택 하 여 대상 프레임 워크를 설정 **Android 버전을 사용 하 여 컴파일** 위와 같이 합니다.
 
@@ -198,7 +192,7 @@ API 수준 아래에 있는 드롭 다운 메뉴에서 선택 하 여 대상 프
 
 Mac에 대 한 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**;이 열립니다는 **프로젝트 옵션** 대화 상자. 이 대화 상자에서로 이동 **빌드 > 일반** 다음과 같이 합니다.
 
-[![프로젝트 옵션 페이지의 일반 섹션을 빌드](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png)
+[![프로젝트 옵션 페이지의 일반 섹션을 빌드](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png#lightbox)
 
 오른쪽의 드롭다운 메뉴에서 API 레벨을 선택 하 여 대상 프레임 워크를 설정 **대상 프레임 워크** 위와 같이 합니다.
 
@@ -219,7 +213,7 @@ Mac에 대 한 Visual Studio에서 대상 프레임 워크 설정에 액세스 �
 
 Visual Studio에서 최소 Android 버전 설정에 액세스 하려면 프로젝트 속성에서 열고 **솔루션 탐색기** 선택 하 고는 **Android 매니페스트** 페이지. 아래에 있는 드롭 다운 메뉴에서 **최소 Android 버전** 응용 프로그램에 대 한 최소 Android 버전을 선택할 수 있습니다.
 
-[![최소 Android SDK 버전을 사용 하 여 컴파일로 설정 하는 대상 옵션](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png)
+[![최소 Android SDK 버전을 사용 하 여 컴파일로 설정 하는 대상 옵션](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png#lightbox)
 
 선택 하는 경우 **사용 하 여 SDK 버전을 사용 하 여 컴파일**, 최소 Android 버전 대상 프레임 워크와 동일 하 게 됩니다.
 
@@ -228,7 +222,7 @@ Visual Studio에서 최소 Android 버전 설정에 액세스 하려면 프로�
 Mac에 대 한 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**;이 열립니다는 **프로젝트 옵션** 대화 상자. 로 이동 **빌드 > Android 응용 프로그램**합니다.
 오른쪽의 드롭다운 메뉴를 사용 하 여 **최소 Android 버전**, 응용 프로그램에 대 한 최소 Android 버전을 설정할 수 있습니다.
 
-[ ![최소 Android 버전을 자동으로 사용 하 여 대상 프레임 워크 버전으로 설정](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png)
+[![최소 Android 버전을 자동으로 사용 하 여 대상 프레임 워크 버전으로 설정](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png#lightbox)
 
 선택 하는 경우 **자동 &ndash; 대상 프레임 워크 버전을 사용 하 여**, 최소 Android 버전 대상 프레임 워크와 동일 하 게 됩니다.
 
@@ -247,7 +241,7 @@ Mac에 대 한 Visual Studio에서 대상 프레임 워크 설정에 액세스 �
 
 Visual Studio에서이 설정에 액세스 하려면 프로젝트 속성에서 열고 **솔루션 탐색기** 선택 하 고는 **Android 매니페스트** 페이지. 아래에 있는 드롭 다운 메뉴에서 **대상 Android 버전** 응용 프로그램에 대 한 대상 Android 버전을 선택할 수 있습니다.
 
-[![SDK 버전을 사용 하 여 컴파일로 설정 하는 Android 대상 버전](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png)
+[![SDK 버전을 사용 하 여 컴파일로 설정 하는 Android 대상 버전](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png#lightbox)
 
 Android 응용 프로그램을 테스트 하는 데 사용할 수 있는 최신 버전으로 대상 Android 버전을 명시적으로 설정 하는 것이 좋습니다. 최신 Android SDK 버전으로 설정 해야 이상적으로 &ndash; 동작 변경 내용을 통해 작업을 수행 하기 전에 새로운 Api를 사용할 수 있습니다. 대부분의 개발자에 대 한 우리 *없는* 대상 Android 버전 설정 하는 것 **사용 하 여 SDK 버전을 사용 하 여 컴파일**합니다.
 
@@ -256,7 +250,7 @@ Android 응용 프로그램을 테스트 하는 데 사용할 수 있는 최신 
 Mac에 대 한 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**;이 열립니다는 **프로젝트 옵션** 대화 상자. 로 이동 **빌드 > Android 응용 프로그램**합니다.
 오른쪽의 드롭다운 메뉴를 사용 하 여 **대상 Android 버전**, 응용 프로그램에 대 한 대상 Android 버전을 설정할 수 있습니다.
 
-[![자동으로 사용 하 여 대상 프레임 워크 버전으로 대상 Android 버전 설정](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png)
+[![자동으로 사용 하 여 대상 프레임 워크 버전으로 대상 Android 버전 설정](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png#lightbox)
 
 Android 응용 프로그램을 테스트 하는 데 사용할 수 있는 최신 버전으로 대상 Android 버전을 명시적으로 설정 하는 것이 좋습니다. 사용 가능한 최신 Android SDK 버전을 이상적으로 설정 해야 &ndash; 동작 변경 내용을 통해 작업을 수행 하기 전에 새로운 Api를 사용할 수 있습니다. 대부분의 개발자에 대 한 권장 하지는 않습니다 대상 Android 버전을 설정 **자동으로 사용 하 여 대상 프레임 워크 버전**합니다.
 
@@ -311,14 +305,14 @@ else
 
 대상 프레임 워크 설정에만 구성할 수 있습니다 (예: 클래스 라이브러리 또는 바인딩 라이브러리) Xamarin.Android 라이브러리 프로젝트를 만들 때 &ndash; 최소 Android 버전 및 대상 Android 버전 설정을 사용할 수 없는 합니다. 있기 때문에는 없는 **Android 매니페스트** 페이지:
 
-[![Android 버전 옵션을 사용 하 여 컴파일만을 사용할 수](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png)
+[![Android 버전 옵션을 사용 하 여 컴파일만을 사용할 수](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Xamarin.Android 라이브러리 프로젝트를 만들 때 없습니다 **Android 응용 프로그램** 최소 Android 버전 및 대상 Android 버전을 구성할 수 있는 페이지 &ndash; 최소 Android 버전 및 대상 Android 버전 설정은 사용할 수 없습니다.
 있기 때문에는 없는 **빌드 > Android 응용 프로그램** 페이지):
 
-[ ![빌드 최소값 및 대상 버전 옵션 없이 일반 페이지](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png)
+[![빌드 최소값 및 대상 버전 옵션 없이 일반 페이지](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 
 -----
 

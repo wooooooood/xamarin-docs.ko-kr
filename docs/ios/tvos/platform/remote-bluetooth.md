@@ -3,16 +3,16 @@ title: "Siri 원격 인스턴스 및 Bluetooth 컨트롤러"
 description: "이 문서에서는 Xamarin.tvOS 응용 프로그램에서 새 Siri 원격 인스턴스 및 Bluetooth 게임 컨트롤러를 지 원하는 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5d74479e995c5c6ba6f6fd9fd23fbca78718ee31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri 원격 인스턴스 및 Bluetooth 컨트롤러
 
@@ -23,7 +23,7 @@ Xamarin.tvOS 응용 프로그램의 사용자의 인터페이스를 직접으로
 
 게임 앱을 사용 하는 경우 필요에 따라 빌드할 수에 만든 제 3 자에 대 한 지원이 iOS (MFI) [Bluetooth 게임 컨트롤러](#Bluetooth-Game-Controllers) 도 응용 프로그램에서 합니다.
 
-[ ![](remote-bluetooth-images/intro01.png "Bluetooth 원격 및 게임 컨트롤러")](remote-bluetooth-images/intro01.png)
+[![](remote-bluetooth-images/intro01.png "Bluetooth 원격 및 게임 컨트롤러")](remote-bluetooth-images/intro01.png#lightbox)
 
 이 문서에서는 설명는 [Siri 원격](#The-Siri-Remote), [화면 터치 제스처](#Touch-Surface-Gestures) 및 [Siri 원격 단추](#Siri-Remote-Buttons) 통해을 사용 하는 방법을 보여 줍니다. [제스처 및 스토리 보드](#Gestures-and-Storyboards), [제스처 및 코드](#Gestures-and-Code) 및 [하위 수준 이벤트 처리](#Low-Level-Event-Handling)합니다. 에서는 마지막으로, [게임 컨트롤러 작업](#Working-with-Game-Controllers) Xamarin.tvOS 응용 프로그램에서입니다.
 
@@ -35,7 +35,7 @@ Xamarin.tvOS 응용 프로그램의 사용자의 인터페이스를 직접으로
 
 TvOS 응용 프로그램 개발자는 Siri 원격 터치가 속도계, 자이로스코프가 화면과 단추를 활용 하는 빠르고 편리한 시각적으로 뛰어난 사용자 인터페이스 만들기.
 
-[ ![](remote-bluetooth-images/remote01.png "Siri 원격")](remote-bluetooth-images/remote01.png)
+[![](remote-bluetooth-images/remote01.png "Siri 원격")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri 원격에는 다음 기능 및 tvOS 앱 내 예상된 사용:
 
@@ -128,14 +128,14 @@ Siri 원격 Xamarin.tvOS 응용 프로그램에서 사용 하는 가장 쉬운 �
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 인터페이스 디자이너 편집 합니다.
 2. 끌어서는 **탭 제스처 인식기** 에서 **라이브러리** 보기에 놓습니다. 
 
-    [ ![](remote-bluetooth-images/storyboard01.png "Tap 제스처 인식기")](remote-bluetooth-images/storyboard01.png)
+    [![](remote-bluetooth-images/storyboard01.png "Tap 제스처 인식기")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. 확인 **선택** 에 **단추** 의 섹션은 **특성 검사기**: 
 
-    [ ![](remote-bluetooth-images/storyboard02.png "선택 확인")](remote-bluetooth-images/storyboard02.png)
+    [![](remote-bluetooth-images/storyboard02.png "선택 확인")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **선택** 제스처 사용자 클릭에 응답 하 의미는 **터치 화면** Siri 원격입니다. 에 대 한 응답 옵션도 제공는 **메뉴**, **재생/일시 중지**, **를**, **아래로**, **왼쪽** 및 **오른쪽** 단추입니다.
 5. 다음으로 연결 하는 **동작** 에서 **탭 제스처 인식기** 메서드를 호출 하 고 `TouchSurfaceClicked`: 
 
-    [ ![](remote-bluetooth-images/storyboard03.png "Tap 제스처 인식기에서 작업")](remote-bluetooth-images/storyboard03.png)
+    [![](remote-bluetooth-images/storyboard03.png "Tap 제스처 인식기에서 작업")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. 변경 내용을 저장 하 고 Mac.에 Visual Studio로 반환 합니다.
 
 편집 뷰 컨트롤러 (예제 `FirstViewController.cs`) 파일 트리거된 제스처를 처리 하는 다음 코드를 추가 합니다.
@@ -314,7 +314,7 @@ namespace tvRemote
 
 Apple TV, 제 3 자, iOS 용 만든와 함께 제공 되는 표준 Siri 원격 외에도 (MFI) Bluetooth 게임 컨트롤러 수 Apple TV 쌍을 이루는 있고 Xamarin.tvOS 앱을 제어 하는 데 사용 합니다.
 
-[ ![](remote-bluetooth-images/game01.png "Bluetooth 게임 컨트롤러")](remote-bluetooth-images/game01.png)
+[![](remote-bluetooth-images/game01.png "Bluetooth 게임 컨트롤러")](remote-bluetooth-images/game01.png#lightbox)
 
 게임 컨트롤러 게임을 개선 하 고 게임에 대 한 생생한의 의미를 제공 데 사용할 수 있습니다. 원격 인스턴스 및 컨트롤러 사이 전환할 필요가 사용 되므로 표준 Apple TV 인터페이스를 제어 하도 사용할 수 있습니다.
 
@@ -425,7 +425,7 @@ Apple에 Xamarin.tvOS 앱 게임 컨트롤러를 지 원하는 경우 충족 해
 
 게임 컨트롤러 지원 Xamarin.tvOS 응용 프로그램을 사용 하도록 설정 하려면 두 번 클릭은 `Info.plist` 파일에 **솔루션 탐색기** 편집 하기 위해 열려는:
 
-[ ![](remote-bluetooth-images/game02.png "Info.plist 편집기")](remote-bluetooth-images/game02.png)
+[![](remote-bluetooth-images/game02.png "Info.plist 편집기")](remote-bluetooth-images/game02.png#lightbox)
 
 아래는 **게임 컨트롤러** 섹션에서 확인란을 선택 하 여 **게임 컨트롤러를 사용 하도록 설정**, 모든 응용 프로그램에서 지원 되는 게임 컨트롤러 유형을 확인 합니다.
 

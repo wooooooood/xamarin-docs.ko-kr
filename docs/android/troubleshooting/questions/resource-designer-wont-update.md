@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: b169bcc64af15de3d87bfb7f8059b4251f1a3ad9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b1496f4a6a504c8e991f853c92f937015797aa6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Android Resource.designer.cs 파일이 업데이트 되지 않습니다.
 
 > [!NOTE]
-> **참고:** Xamarin Studio 5.1.4 이상 버전에서이 문제가 해결 되었습니다. 그러나 Mac 용 Visual Studio에서 문제가 발생 하는 경우 보관는 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 프로그램 버전 관리를 사용 합니다.
+> Xamarin Studio 5.1.4 이상 버전에서이 문제가 해결 되었습니다. 그러나 Mac 용 Visual Studio에서 문제가 발생 하는 경우 보관는 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 프로그램 버전 관리를 사용 합니다.
 
 이전에 Xamarin.Studio 5.1의 버그는 부분적으로 또는 완전히.csproj 파일의 xml 코드를 삭제 하 여.csproj 파일 손상 되었습니다. 이 인해 시스템 (예: Android Resource.designer.cs 업데이트)을 작성 하는 Android의 일부 중요 한 실패 합니다. 7 월 15 일에 발표 안정적인 5.1.4 기준으로,이 버그는 수정 되었습니다. 하지만 대부분의 경우 프로젝트 파일에 수동으로 아래 설명 된 대로 복구 해야 합니다.
 

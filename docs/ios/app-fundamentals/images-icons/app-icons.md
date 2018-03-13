@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>응용 프로그램 아이콘
 
@@ -32,13 +32,13 @@ UI 컨트롤에 대 한 및 문서 아이콘으로 Xamarin.iOS 앱 이미지 자
 
 - **응용 프로그램 아이콘** -모든 iOS 응용 프로그램 응용 프로그램 아이콘을 정의 해야 합니다. 이 사용자는 탭 아이콘에서 앱을 시작 하려면 iOS 홈 화면입니다. 또한 해당 하는 경우이 아이콘 게임 센터에서 사용 됩니다. 예제: 
 
-    [ ![](app-icons-images/000.png "응용 프로그램 아이콘")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "응용 프로그램 아이콘")](app-icons-images/000-full.png#lightbox)
 - **아이콘을 강조할** 스포트라이트 검색에서 응용 프로그램의 이름을 입력할 때마다-이 아이콘이 표시 됩니다. 예제: 
 
-    [ ![](app-icons-images/000a.png "스포트라이트 아이콘")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "스포트라이트 아이콘")](app-icons-images/000a-full.png#lightbox)
 - **설정 아이콘** -사용자가을 입력 하는 경우는 **설정** 이 아이콘은 iOS 장치에서 앱의 끝에 표시 되는 **설정을** 응용 프로그램에 대 한 목록입니다. 예제: 
 
-    [ ![](app-icons-images/000b.png "설정 아이콘")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "설정 아이콘")](app-icons-images/000b-full.png#lightbox)
 
 다음 이미지 자산 크기 및 해상도 모든 iOS 9 (또는 그 이상)를 통해 iOS 5를 대상으로 하는 Xamarin.iOS 앱에 필요한 아이콘 유형을 지 원하는 데 필요 합니다.
 

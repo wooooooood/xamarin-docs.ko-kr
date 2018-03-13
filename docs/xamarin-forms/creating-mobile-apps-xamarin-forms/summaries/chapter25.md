@@ -3,14 +3,15 @@ title: "25 장의 요약입니다. 페이지 변형"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: bbe960357d9180df90a4423d6acfdf3f869d1b77
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 30642709519fc809d30da9a437728112f56a64d6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>25 장의 요약입니다. 페이지 변형
 
@@ -54,7 +55,7 @@ Windows 8.1 및 Windows Phone 8.1 플랫폼으로 설정 하는 비트맵 필요
 
 XAML 파일을 설정 하는 [ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/) 속성 `MasterDetailPage` 를 `True`합니다. 이 인해 시작; 시 표시 될 마스터 페이지 기본적으로 세부 정보 페이지 표시 됩니다. [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs) 파일 집합 `IsPresented` 를 `false` 에서 항목을 선택 하는 경우는 `ListView` 마스터 페이지에 있습니다. 세부 정보 페이지 표시 됩니다.
 
-[![학교 및 세부 삼중 스크린 샷](images/ch25fg09-small.png "는 MasterDetailPage에서 세부 정보 페이지")](images/ch25fg09-large.png "는 MasterDetailPage에서 세부 정보 페이지")
+[![학교 및 세부 삼중 스크린 샷](images/ch25fg09-small.png "는 MasterDetailPage에서 세부 정보 페이지")](images/ch25fg09-large.png#lightbox "는 MasterDetailPage에서 세부 정보 페이지")
 
 ### <a name="your-own-user-interface"></a>사용자 고유의 사용자 인터페이스
 
@@ -98,7 +99,7 @@ Xamarin.Forms를 마스터 및 세부 정보 뷰 사이 전환 하기 위한 사
 
 에 나타나는 각 페이지에 대 한 `TabbedPage`, `Title` 속성 탭에서 텍스트를 지정 하는 데 필요 하 고 Apple 스토어 아이콘도 사용 해야 하므로 `Icon` iOS에 대 한 속성이 설정 되어:
 
-[![개별 탭 색의 삼중 스크린 샷](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png "TabbedPage")
+[![개별 탭 색의 삼중 스크린 샷](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
 
 [ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes) 샘플 모든 학생을 나열 하는 홈 페이지에 있습니다. 학생의 탭이 수행 되는 경우이를 탐색 한 `TabbedPage` 파생 개체를 [ `StudentNotesDataPage` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml), 3 개를 통합 하는 `ContentPage` 해당 학생에 대 한 몇 가지 정보를 입력할 수 중 하나는 해당 시각적 트리의 개체입니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a891e5bf797742ceb1bb45bb8144fa77dec99b2c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0e271fb78cfd225f9ccdae9a515685e89bfd7ac2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-sirikit"></a>SiriKit 구현
 
@@ -35,7 +35,7 @@ Siri의 개념과 작동 **도메인**, 그룹의 관련된 작업에 대 한 �
 
 이 가이드는 기존 앱에 SiriKit 지원을 포함 하는 빠른 예제를 제공 합니다. 이 예에서 사용할 예정 가짜 MonkeyChat 앱:
 
-[ ![](implementing-sirikit-images/monkeychat01.png "MonkeyChat 아이콘")](implementing-sirikit-images/monkeychat01.png)
+[![](implementing-sirikit-images/monkeychat01.png "MonkeyChat 아이콘")](implementing-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat 유지 사용자의 친구의 연락처 자체 책, 각는 화면 이름 (예: Bobo 예:)와 관련 된 화면 이름 기준으로 텍스트 채팅 친구에 보낼 수 있습니다.
 
@@ -43,7 +43,7 @@ MonkeyChat 유지 사용자의 친구의 연락처 자체 책, 각는 화면 이
 
 에 나와 있는 것 처럼는 [SiriKit 개념 이해](~/ios/platform/sirikit/understanding-sirikit.md) 가이드에서는 세 가지 주요 부분은 확장 SiriKit 사용 하 여 앱에 관련 된:
 
-[ ![](implementing-sirikit-images/elements01.png "응용 프로그램을 SiriKit 다이어그램 확장")](implementing-sirikit-images/elements01.png)
+[![](implementing-sirikit-images/elements01.png "응용 프로그램을 SiriKit 다이어그램 확장")](implementing-sirikit-images/elements01.png#lightbox)
 
 여기에는 다음이 포함됩니다.
 
@@ -75,20 +75,20 @@ MonkeyChat 예제 앱의 경우 데이터 모델 및 처리 코드 네트워크 
 1. Mac 용 Visual Studio를 시작 하 고 MonkeyChat 앱을 엽니다.
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 패드** 선택 **추가** > **새 프로젝트...** : 
 
-    [ ![](implementing-sirikit-images/prep01.png "새 프로젝트 추가")](implementing-sirikit-images/prep01.png)
+    [![](implementing-sirikit-images/prep01.png "새 프로젝트 추가")](implementing-sirikit-images/prep01.png#lightbox)
 3. 선택 **iOS** > **라이브러리** > **클래스 라이브러리** 클릭는 **다음** 단추: 
 
-    [ ![](implementing-sirikit-images/prep02.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02.png)
+    [![](implementing-sirikit-images/prep02.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02.png#lightbox)
 4. 입력 `MonkeyChatCommon` 에 대 한는 **이름** 클릭는 **만들기** 단추: 
 
-    [ ![](implementing-sirikit-images/prep03.png "이름에 대 한 MonkeyChatCommon 입력")](implementing-sirikit-images/prep03.png)
+    [![](implementing-sirikit-images/prep03.png "이름에 대 한 MonkeyChatCommon 입력")](implementing-sirikit-images/prep03.png#lightbox)
 5. 마우스 오른쪽 단추로 클릭는 **참조** 에서 기본 응용 프로그램의 폴더는 **솔루션 탐색기** 선택 **참조 편집...** . 확인 된 **MonkeyChatCommon** 프로젝트는 **확인** 단추: 
 
-    [ ![](implementing-sirikit-images/prep05.png "MonkeyChatCommon 프로젝트를 확인 합니다.")](implementing-sirikit-images/prep05.png)
+    [![](implementing-sirikit-images/prep05.png "MonkeyChatCommon 프로젝트를 확인 합니다.")](implementing-sirikit-images/prep05.png#lightbox)
 6. 에 **솔루션 탐색기**, 기본 응용 프로그램에서 네이티브 라이브러리를 공용 공유 코드를 끕니다.
 7. 끌어 MonkeyChat의 경우는 **DataModels** 및 **프로세서** 네이티브 라이브러리에 대 한 기본 응용 프로그램에서 폴더: 
 
-    [ ![](implementing-sirikit-images/prep06.png "솔루션 탐색기에서 DataModels 및 프로세서 폴더")](implementing-sirikit-images/prep06.png)
+    [![](implementing-sirikit-images/prep06.png "솔루션 탐색기에서 DataModels 및 프로세서 폴더")](implementing-sirikit-images/prep06.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -96,11 +96,11 @@ MonkeyChat 예제 앱의 경우 데이터 모델 및 처리 코드 네트워크 
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트...** .
 3. 선택 **Visual C#** > **공유 프로젝트** 클릭는 **다음** 단추: 
 
-    [ ![](implementing-sirikit-images/prep02w.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02w.png)
+    [![](implementing-sirikit-images/prep02w.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02w.png#lightbox)
 4. 입력 `MonkeyChatCommon` 에 대 한는 **이름** 클릭는 **만들기** 단추입니다.
 5. 마우스 오른쪽 단추로 클릭는 **참조** 에서 기본 응용 프로그램의 폴더는 **솔루션 탐색기** 선택 **참조 편집...** . 확인 된 **MonkeyChatCommon** 프로젝트는 **확인** 단추: 
 
-    [ ![](implementing-sirikit-images/prep05w.png "MonkeyChatCommon 프로젝트를 확인 합니다.")](implementing-sirikit-images/prep05w.png)
+    [![](implementing-sirikit-images/prep05w.png "MonkeyChatCommon 프로젝트를 확인 합니다.")](implementing-sirikit-images/prep05w.png#lightbox)
 6. 에 **솔루션 탐색기**, 공유 프로젝트에 기본 응용 프로그램에서 공용 공유 코드를 끕니다.
 7. 끌어 MonkeyChat의 경우는 **DataModels** 및 **프로세서** 네이티브 라이브러리에 대 한 기본 응용 프로그램에서 폴더입니다.
 
@@ -172,12 +172,12 @@ SiriKit 통합을 포함 하는 모든 Xamarin.iOS 앱, 올바른 권한이 설�
 2. 전환 하는 **소스** 탭 합니다.
 3. 추가 `com.apple.developer.siri` **속성**로 설정 된 **형식** 를 `Boolean` 및 **값** 를 `Yes`: 
 
-    [ ![](implementing-sirikit-images/setup01.png "Com.apple.developer.siri 속성 추가")](implementing-sirikit-images/setup01.png)
+    [![](implementing-sirikit-images/setup01.png "Com.apple.developer.siri 속성 추가")](implementing-sirikit-images/setup01.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 5. 두 번 클릭는 **프로젝트 파일** 에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 6. 선택 **iOS 번들 서명** 되어 있는지 확인 하 고는 `Entitlements.plist` 에서 파일을 선택는 **사용자 지정 자격** 필드: 
 
-    [ ![](implementing-sirikit-images/setup02.png "사용자 지정 자격 필드에서 Entitlements.plist 파일을 선택 합니다.")](implementing-sirikit-images/setup02.png)
+    [![](implementing-sirikit-images/setup02.png "사용자 지정 자격 필드에서 Entitlements.plist 파일을 선택 합니다.")](implementing-sirikit-images/setup02.png#lightbox)
 7. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -185,7 +185,7 @@ SiriKit 통합을 포함 하는 모든 Xamarin.iOS 앱, 올바른 권한이 설�
 1. 두 번 클릭는 `Entitlements.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 3. 추가 `com.apple.developer.siri` **속성**로 설정 된 **형식** 를 `Boolean` 및 **값** 를 `Yes`: 
 
-    [ ![](implementing-sirikit-images/setup01w.png "Com.apple.developer.siri 속성 추가")](implementing-sirikit-images/setup01w.png)
+    [![](implementing-sirikit-images/setup01w.png "Com.apple.developer.siri 속성 추가")](implementing-sirikit-images/setup01w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 5. 두 번 클릭는 **프로젝트 파일** 에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 6. 선택 **iOS 번들 서명** 되어 있는지 확인 하 고는 `Entitlements.plist` 에서 파일을 선택는 **사용자 지정 자격** 필드입니다.
@@ -218,7 +218,7 @@ Mac에서 다음을 수행 합니다.
 5. 입력 한 **번들 ID** Apple 다음의 권장 명명 합니다.
 6. 으로 아래로 스크롤하여는 **응용 프로그램 서비스** 섹션에서 **SiriKit** 클릭는 **계속** 단추: 
 
-    [ ![](implementing-sirikit-images/setup03.png "SiriKit 선택")](implementing-sirikit-images/setup03.png)
+    [![](implementing-sirikit-images/setup03.png "SiriKit 선택")](implementing-sirikit-images/setup03.png#lightbox)
 7. 다음 설정의 모든 확인 **전송** 응용 프로그램 id입니다.
 8. 선택 **프로 비전 프로필** > **개발**, 클릭는  **+**  단추를 선택는 **Apple ID**, 클릭 **계속**합니다.
 9. 선택을 클릭 **모든**, 클릭 **계속**합니다.
@@ -228,21 +228,21 @@ Mac에서 다음을 수행 합니다.
 13. Xcode 메뉴에서 선택 **기본 설정 중...**
 14. 선택 **계정**, 클릭는 **세부 정보 보기...** button: 
 
-    [ ![](implementing-sirikit-images/setup04.png "계정을 선택 하십시오.")](implementing-sirikit-images/setup04.png)
+    [![](implementing-sirikit-images/setup04.png "계정을 선택 하십시오.")](implementing-sirikit-images/setup04.png#lightbox)
 15. 클릭는 **모든 프로필 다운로드** 왼쪽 아래 모퉁이의 단추: 
 
-    [ ![](implementing-sirikit-images/setup05.png "모든 프로필 다운로드")](implementing-sirikit-images/setup05.png)
+    [![](implementing-sirikit-images/setup05.png "모든 프로필 다운로드")](implementing-sirikit-images/setup05.png#lightbox)
 16. 확인는 **프로 비전 프로필** 만든 위에 설치가 완료 된 후 Xcode에서 합니다.
 17. Mac.에 대 한 Visual Studio에서 SiriKit 지원을 추가할 프로젝트를 엽니다.
 18. 두 번 클릭은 `Info.plist` 파일에 **솔루션 탐색기**합니다.
 18. 확인 하는 **번들 식별자** 위의 Apple 개발자 포털에서 만든 것과 일치 합니다. 
 
-    [ ![](implementing-sirikit-images/setup06.png "번들 식별자")](implementing-sirikit-images/setup06.png)
+    [![](implementing-sirikit-images/setup06.png "번들 식별자")](implementing-sirikit-images/setup06.png#lightbox)
 18. 에 **솔루션 탐색기**, 선택는 **프로젝트**합니다.
 19. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**합니다.
 21. 선택 **iOS 번들 서명**, 선택는 **서명 Identity** 및 **프로 비전 프로필** 위에서 만든: 
 
-    [ ![](implementing-sirikit-images/setup07.png "서명 Id 및 프로비저닝 프로필을 선택 합니다.")](implementing-sirikit-images/setup07.png)
+    [![](implementing-sirikit-images/setup07.png "서명 Id 및 프로비저닝 프로필을 선택 합니다.")](implementing-sirikit-images/setup07.png#lightbox)
 22. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
@@ -256,13 +256,13 @@ Mac에서 다음을 수행 합니다.
 
 응용 프로그램의 편집 `Info.plist` 파일, 전환할는 **소스** 추가 `NSSiriUsageDescription` Siri와 앱은 사용 하는 방법을 설명 하는 문자열 값을 가진 키 형식의 데이터를 전송 됩니다. 예를 들어 MonkeyChat 앱 수 "MonkeyChat 연락처로 보내지며 Siri" 한다고 가정 합니다.
 
-[ ![](implementing-sirikit-images/request01.png "Info.plist 편집기에서 NSSiriUsageDescription")](implementing-sirikit-images/request01.png)
+[![](implementing-sirikit-images/request01.png "Info.plist 편집기에서 NSSiriUsageDescription")](implementing-sirikit-images/request01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 응용 프로그램의 편집 `Info.plist` 파일을 추가 `NSSiriUsageDescription` Siri 내용과 앱은 사용 하는 방법을 설명 하는 문자열 값을 가진 키 형식의 데이터를 전송 됩니다. 예를 들어 MonkeyChat 앱 수 "MonkeyChat 연락처로 보내지며 Siri" 한다고 가정 합니다.
 
-[ ![](implementing-sirikit-images/request01w.png "Info.plist 편집기에서 NSSiriUsageDescription")](implementing-sirikit-images/request01w.png)
+[![](implementing-sirikit-images/request01w.png "Info.plist 편집기에서 NSSiriUsageDescription")](implementing-sirikit-images/request01w.png#lightbox)
 
 -----
 
@@ -460,128 +460,128 @@ namespace MonkeyChat
 
 1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 파일...**   >  **iOS**:
 
-    [ ![](implementing-sirikit-images/plist01.png "속성 목록 추가")](implementing-sirikit-images/plist01.png) 
+    [![](implementing-sirikit-images/plist01.png "속성 목록 추가")](implementing-sirikit-images/plist01.png#lightbox) 
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 3. 클릭는  **+**  설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
-    [ ![](implementing-sirikit-images/plist02.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02.png)
+    [![](implementing-sirikit-images/plist02.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02.png#lightbox)
 4. 확장 `ParameterVocabularies` 클릭는  **+**  단추 및 설정의 **형식** 를 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist03.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03.png)
+    [![](implementing-sirikit-images/plist03.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03.png#lightbox)
 5. 클릭는  **+**  설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
 
-    [ ![](implementing-sirikit-images/plist04.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04.png)
+    [![](implementing-sirikit-images/plist04.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04.png#lightbox)
 6. 클릭는  **+**  된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
 
-    [ ![](implementing-sirikit-images/plist05.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05.png)
+    [![](implementing-sirikit-images/plist05.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05.png#lightbox)
 7. 추가 `ParameterVocabulary` 키를 `ParameterVocabularies` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist06.png "형식 배열 ParameterVocabularies 키에 ParameterVocabulary 키 추가")](implementing-sirikit-images/plist06.png)
+    [![](implementing-sirikit-images/plist06.png "형식 배열 ParameterVocabularies 키에 ParameterVocabulary 키 추가")](implementing-sirikit-images/plist06.png#lightbox)
 8. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist07.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist07.png)
+    [![](implementing-sirikit-images/plist07.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist07.png#lightbox)
 9. 추가 `VocabularyItemIdentifier` 인 키는 **형식** 의 `String` 용어에 대 한 고유 ID를 지정 합니다.
 
-    [ ![](implementing-sirikit-images/plist08.png "문자열 형식을 사용 하 여 VocabularyItemIdentifier 키를 추가 하 고 고유 ID를 지정 합니다.")](implementing-sirikit-images/plist08.png)
+    [![](implementing-sirikit-images/plist08.png "문자열 형식을 사용 하 여 VocabularyItemIdentifier 키를 추가 하 고 고유 ID를 지정 합니다.")](implementing-sirikit-images/plist08.png#lightbox)
 10. 추가 `VocabularyItemSynonyms` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist09.png "형식 배열 VocabularyItemSynonyms 키 추가")](implementing-sirikit-images/plist09.png)
+    [![](implementing-sirikit-images/plist09.png "형식 배열 VocabularyItemSynonyms 키 추가")](implementing-sirikit-images/plist09.png#lightbox)
 11. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist10.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist10.png)
+    [![](implementing-sirikit-images/plist10.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist10.png#lightbox)
 12. 추가 `VocabularyItemPhrase` 와 키의 **형식** 의 `String` 응용 프로그램에서 정의 하는 용어 및:
 
-    [ ![](implementing-sirikit-images/plist11.png "문자열 형식 및 응용 프로그램을 정의 하는 용어와 VocabularyItemPhrase 키 추가")](implementing-sirikit-images/plist11.png)
+    [![](implementing-sirikit-images/plist11.png "문자열 형식 및 응용 프로그램을 정의 하는 용어와 VocabularyItemPhrase 키 추가")](implementing-sirikit-images/plist11.png#lightbox)
 13. 추가 `VocabularyItemPronunciation` 와 키의 **형식** 의 `String` 및 용어의 음성 발음:
 
-    [ ![](implementing-sirikit-images/plist12.png "문자열 형식 및 해당 기간의 음성 발음 VocabularyItemPronunciation 키 추가")](implementing-sirikit-images/plist12.png)
+    [![](implementing-sirikit-images/plist12.png "문자열 형식 및 해당 기간의 음성 발음 VocabularyItemPronunciation 키 추가")](implementing-sirikit-images/plist12.png#lightbox)
 14. 추가 `VocabularyItemExamples` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist13.png "형식 배열 VocabularyItemExamples 키 추가")](implementing-sirikit-images/plist13.png)
+    [![](implementing-sirikit-images/plist13.png "형식 배열 VocabularyItemExamples 키 추가")](implementing-sirikit-images/plist13.png#lightbox)
 15. 몇 가지 추가 `String` 용어의 사용 하 여 예제를 사용 하 여 키:
 
-    [ ![](implementing-sirikit-images/plist14.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist14.png)
+    [![](implementing-sirikit-images/plist14.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist14.png#lightbox)
 16. 응용 프로그램을 정의 해야 합니다. 다른 사용자 지정 조건에 대 한 위의 단계를 반복 합니다.
 17. 축소 된 `ParameterVocabularies` 키입니다.
 18. 추가 `IntentPhrases` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist15.png "형식 배열 IntentPhrases 키 추가")](implementing-sirikit-images/plist15.png)
+    [![](implementing-sirikit-images/plist15.png "형식 배열 IntentPhrases 키 추가")](implementing-sirikit-images/plist15.png#lightbox)
 19. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist16.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist16.png)
+    [![](implementing-sirikit-images/plist16.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist16.png#lightbox)
 20. 추가 `IntentName` 와 키의 **형식** 의 `String` 예제에 대 한 의도 및:
 
-    [ ![](implementing-sirikit-images/plist17.png "이 예제에서는 문자열 형식 및 의도 IntentName 키 추가")](implementing-sirikit-images/plist17.png)
+    [![](implementing-sirikit-images/plist17.png "이 예제에서는 문자열 형식 및 의도 IntentName 키 추가")](implementing-sirikit-images/plist17.png#lightbox)
 21. 추가 `IntentExamples` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist18.png "형식 배열 IntentExamples 키 추가")](implementing-sirikit-images/plist18.png)
+    [![](implementing-sirikit-images/plist18.png "형식 배열 IntentExamples 키 추가")](implementing-sirikit-images/plist18.png#lightbox)
 22. 몇 가지 추가 `String` 용어의 사용 하 여 예제를 사용 하 여 키:
 
-    [ ![](implementing-sirikit-images/plist19.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist19.png)
+    [![](implementing-sirikit-images/plist19.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist19.png#lightbox)
 23. 응용 프로그램의 사용 예를 제공 해야 할 모든 의도 대 한 위의 단계를 반복 합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 파일...**   >  **iOS**:
 
-    [ ![](implementing-sirikit-images/plist01w.png "새 Info.plist 추가")](implementing-sirikit-images/plist01w.png) 
+    [![](implementing-sirikit-images/plist01w.png "새 Info.plist 추가")](implementing-sirikit-images/plist01w.png#lightbox) 
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 3. 클릭는  **+**  설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
-    [ ![](implementing-sirikit-images/plist02w.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02w.png)
+    [![](implementing-sirikit-images/plist02w.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02w.png#lightbox)
 4. 확장 `ParameterVocabularies` 클릭는  **+**  단추 및 설정의 **형식** 를 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist03w.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03w.png)
+    [![](implementing-sirikit-images/plist03w.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03w.png#lightbox)
 5. 클릭는  **+**  설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
 
-    [ ![](implementing-sirikit-images/plist04w.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04w.png)
+    [![](implementing-sirikit-images/plist04w.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04w.png#lightbox)
 6. 클릭는  **+**  된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
 
-    [ ![](implementing-sirikit-images/plist05w.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05w.png)
+    [![](implementing-sirikit-images/plist05w.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05w.png#lightbox)
 7. 추가 `ParameterVocabulary` 키를 `ParameterVocabularies` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist06w.png "형식 배열 ParameterVocabularies 키에 ParameterVocabulary 키 추가")](implementing-sirikit-images/plist06w.png)
+    [![](implementing-sirikit-images/plist06w.png "형식 배열 ParameterVocabularies 키에 ParameterVocabulary 키 추가")](implementing-sirikit-images/plist06w.png#lightbox)
 8. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist07w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist07w.png)
+    [![](implementing-sirikit-images/plist07w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist07w.png#lightbox)
 9. 추가 `VocabularyItemIdentifier` 인 키는 **형식** 의 `String` 용어에 대 한 고유 ID를 지정 합니다.
 
-    [ ![](implementing-sirikit-images/plist08w.png "문자열 형식을 사용 하 여 VocabularyItemIdentifier 키를 추가 하 고 용어에 대 한 고유 ID를 지정 합니다.")](implementing-sirikit-images/plist08w.png)
+    [![](implementing-sirikit-images/plist08w.png "문자열 형식을 사용 하 여 VocabularyItemIdentifier 키를 추가 하 고 용어에 대 한 고유 ID를 지정 합니다.")](implementing-sirikit-images/plist08w.png#lightbox)
 10. 추가 `VocabularyItemSynonyms` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist09w.png "형식 배열 VocabularyItemSynonyms 키 추가")](implementing-sirikit-images/plist09w.png)
+    [![](implementing-sirikit-images/plist09w.png "형식 배열 VocabularyItemSynonyms 키 추가")](implementing-sirikit-images/plist09w.png#lightbox)
 11. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist10w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist10w.png)
+    [![](implementing-sirikit-images/plist10w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist10w.png#lightbox)
 12. 추가 `VocabularyItemPhrase` 와 키의 **형식** 의 `String` 응용 프로그램에서 정의 하는 용어 및:
 
-    [ ![](implementing-sirikit-images/plist11w.png "문자열 형식 및 응용 프로그램을 정의 하는 용어와 VocabularyItemPhrase 키 추가")](implementing-sirikit-images/plist11w.png)
+    [![](implementing-sirikit-images/plist11w.png "문자열 형식 및 응용 프로그램을 정의 하는 용어와 VocabularyItemPhrase 키 추가")](implementing-sirikit-images/plist11w.png#lightbox)
 13. 추가 `VocabularyItemPronunciation` 와 키의 **형식** 의 `String` 및 용어의 음성 발음:
 
-    [ ![](implementing-sirikit-images/plist12w.png "문자열 형식 및 해당 기간의 음성 발음 VocabularyItemPronunciation 키 추가")](implementing-sirikit-images/plist12w.png)
+    [![](implementing-sirikit-images/plist12w.png "문자열 형식 및 해당 기간의 음성 발음 VocabularyItemPronunciation 키 추가")](implementing-sirikit-images/plist12w.png#lightbox)
 14. 추가 `VocabularyItemExamples` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist13w.png "형식 배열 VocabularyItemExamples 키 추가")](implementing-sirikit-images/plist13w.png)
+    [![](implementing-sirikit-images/plist13w.png "형식 배열 VocabularyItemExamples 키 추가")](implementing-sirikit-images/plist13w.png#lightbox)
 15. 몇 가지 추가 `String` 용어의 사용 하 여 예제를 사용 하 여 키:
 
-    [ ![](implementing-sirikit-images/plist14w.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist14w.png)
+    [![](implementing-sirikit-images/plist14w.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist14w.png#lightbox)
 16. 응용 프로그램을 정의 해야 합니다. 다른 사용자 지정 조건에 대 한 위의 단계를 반복 합니다.
 17. 축소 된 `ParameterVocabularies` 키입니다.
 18. 추가 `IntentPhrases` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist15w.png "형식 배열 IntentPhrases 키 추가")](implementing-sirikit-images/plist15w.png)
+    [![](implementing-sirikit-images/plist15w.png "형식 배열 IntentPhrases 키 추가")](implementing-sirikit-images/plist15w.png#lightbox)
 19. 사용 하 여 새 키를 추가 **형식** 의 `Dictionary`:
 
-    [ ![](implementing-sirikit-images/plist16w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist16w.png)
+    [![](implementing-sirikit-images/plist16w.png "사전 종류를 사용 하 여 새 키를 추가 합니다.")](implementing-sirikit-images/plist16w.png#lightbox)
 20. 추가 `IntentName` 와 키의 **형식** 의 `String` 예제에 대 한 의도 및:
 
-    [ ![](implementing-sirikit-images/plist17w.png "이 예제에서는 문자열 형식 및 의도 IntentName 키 추가")](implementing-sirikit-images/plist17w.png)
+    [![](implementing-sirikit-images/plist17w.png "이 예제에서는 문자열 형식 및 의도 IntentName 키 추가")](implementing-sirikit-images/plist17w.png#lightbox)
 21. 추가 `IntentExamples` 와 키의 **형식** 의 `Array`:
 
-    [ ![](implementing-sirikit-images/plist18w.png "형식 배열 IntentExamples 키 추가")](implementing-sirikit-images/plist18w.png)
+    [![](implementing-sirikit-images/plist18w.png "형식 배열 IntentExamples 키 추가")](implementing-sirikit-images/plist18w.png#lightbox)
 22. 몇 가지 추가 `String` 용어의 사용 하 여 예제를 사용 하 여 키:
 
-    [ ![](implementing-sirikit-images/plist19w.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist19w.png)
+    [![](implementing-sirikit-images/plist19w.png "용어에 대 한 예에서는 사용 하는 몇 가지 문자열 키 추가")](implementing-sirikit-images/plist19w.png#lightbox)
 23. 응용 프로그램의 사용 예를 제공 해야 할 모든 의도 대 한 위의 단계를 반복 합니다.
 
 -----
@@ -612,27 +612,27 @@ namespace MonkeyChat
 1. 마우스 오른쪽 단추로 클릭는 **솔루션 이름** 에 **솔루션 패드** 선택 **추가** > **새 프로젝트 추가...** .
 2. 대화 상자에서 선택 **iOS** > **확장** > **의도 확장** 클릭는 **다음** button: 
 
-    [ ![](implementing-sirikit-images/intents05.png "의도 확장 선택")](implementing-sirikit-images/intents05.png)
+    [![](implementing-sirikit-images/intents05.png "의도 확장 선택")](implementing-sirikit-images/intents05.png#lightbox)
 3. 그 다음 입력 한 **이름** 의도 확장과 클릭에 대 한는 **다음** 단추: 
 
-    [ ![](implementing-sirikit-images/intents06.png "의도 확장에 대 한 이름을 입력 합니다.")](implementing-sirikit-images/intents06.png)
+    [![](implementing-sirikit-images/intents06.png "의도 확장에 대 한 이름을 입력 합니다.")](implementing-sirikit-images/intents06.png#lightbox)
 4. 마지막으로, 클릭는 **만들기** 의도 확장 응용 프로그램 솔루션을 추가 하는 단추: 
 
-    [ ![](implementing-sirikit-images/intents07.png "앱 솔루션에 의도 확장 추가")](implementing-sirikit-images/intents07.png)
+    [![](implementing-sirikit-images/intents07.png "앱 솔루션에 의도 확장 추가")](implementing-sirikit-images/intents07.png#lightbox)
 5. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **참조** 새로 만든된 의도 확장 폴더입니다. (즉 응용 프로그램은 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 하 고 **확인** 단추: 
 
-    [ ![](implementing-sirikit-images/intents08.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08.png)
+    [![](implementing-sirikit-images/intents08.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08.png#lightbox)
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 마우스 오른쪽 단추로 클릭는 **솔루션 이름** 에 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가...** .
 2. 대화 상자에서 선택 **iOS** > **확장** > **의도 확장** 클릭는 **다음** button: 
 
-    [ ![](implementing-sirikit-images/intents05w.png "의도 확장 선택")](implementing-sirikit-images/intents05w.png)
+    [![](implementing-sirikit-images/intents05w.png "의도 확장 선택")](implementing-sirikit-images/intents05w.png#lightbox)
 3. 그 다음 입력 한 **이름** 의도 확장과 클릭에 대 한는 **확인** 단추입니다.
 5. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **참조** 새로 만든된 의도 확장 폴더입니다. (즉 응용 프로그램은 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 하 고 **확인** 단추: 
 
-    [ ![](implementing-sirikit-images/intents08w.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08w.png)
+    [![](implementing-sirikit-images/intents08w.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08w.png#lightbox)
     
 -----
 
@@ -644,7 +644,7 @@ namespace MonkeyChat
 
 모든 일반적인 응용 프로그램 확장와 마찬가지로 응용 프로그램의 기존 키 갖습니다 `NSExtension` 및 `NSExtensionAttributes`합니다. 의도 확장 구성 해야 하는 두 개의 새로운 특성을 가지 있습니다.
 
-[ ![](implementing-sirikit-images/intents01.png "구성 해야 하는 두 개의 새로운 특성")](implementing-sirikit-images/intents01.png)
+[![](implementing-sirikit-images/intents01.png "구성 해야 하는 두 개의 새로운 특성")](implementing-sirikit-images/intents01.png#lightbox)
 
 - **IntentsSupported** -필요 하 고 응용 프로그램에서 의도 확장 프로그램에서 지원 하려는 의도 클래스 이름의 배열로 구성 됩니다.
 - **IntentsRestrictedWhileLocked** -응용 프로그램 확장의 잠금 화면 동작을 지정 하는 데는 선택적 키입니다. 사용자가 의도 확장에서 사용 하려면 로그인 해야 하는 응용 프로그램 의도 클래스 이름의 배열을 구성 됩니다.
@@ -653,11 +653,11 @@ namespace MonkeyChat
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents02.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents02.png)
+[![](implementing-sirikit-images/intents02.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents02.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents02w.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents02w.png)
+[![](implementing-sirikit-images/intents02w.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents02w.png#lightbox)
 
 -----
 
@@ -665,11 +665,11 @@ namespace MonkeyChat
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents09.png "INSendMessageIntent 키")](implementing-sirikit-images/intents09.png)
+[![](implementing-sirikit-images/intents09.png "INSendMessageIntent 키")](implementing-sirikit-images/intents09.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents09w.png "INSendMessageIntent 키")](implementing-sirikit-images/intents09w.png)
+[![](implementing-sirikit-images/intents09w.png "INSendMessageIntent 키")](implementing-sirikit-images/intents09w.png#lightbox)
 
 -----
 
@@ -677,11 +677,11 @@ namespace MonkeyChat
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents10.png "추가 된 INSendMessageIntent 키")](implementing-sirikit-images/intents10.png)
+[![](implementing-sirikit-images/intents10.png "추가 된 INSendMessageIntent 키")](implementing-sirikit-images/intents10.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents10w.png "추가 된 INSendMessageIntent 키")](implementing-sirikit-images/intents10w.png)
+[![](implementing-sirikit-images/intents10w.png "추가 된 INSendMessageIntent 키")](implementing-sirikit-images/intents10w.png#lightbox)
 
 -----
 
@@ -857,7 +857,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 선택적 의도 UI 확장 응용 프로그램의 UI 및 Siri 환경에 브랜딩 영업 기회 수를 표시 하 고 생각 될 앱에 연결 된 사용자가 확인 합니다. 이 확장으로 응용 프로그램에는 브랜드 정보 뿐 아니라 시각 및 기타 대 본에 가져올 수 있습니다.
 
-[ ![](implementing-sirikit-images/intentsui01.png "의도 UI 확장 출력 예")](implementing-sirikit-images/intentsui01.png)
+[![](implementing-sirikit-images/intentsui01.png "의도 UI 확장 출력 예")](implementing-sirikit-images/intentsui01.png#lightbox)
 
 의도 확장와 마찬가지로 개발자가 의도 UI 확장에 대 한 다음 단계를 수행 합니다.
 
@@ -876,16 +876,16 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 1. 마우스 오른쪽 단추로 클릭는 **솔루션 이름** 에 **솔루션 패드** 선택 **추가** > **새 프로젝트 추가...** .
 2. 대화 상자에서 선택 **iOS** > **확장** > **의도 UI 확장** 클릭는 **다음** button: 
 
-    [ ![](implementing-sirikit-images/intents11.png "의도 UI 확장 선택")](implementing-sirikit-images/intents11.png)
+    [![](implementing-sirikit-images/intents11.png "의도 UI 확장 선택")](implementing-sirikit-images/intents11.png#lightbox)
 3. 그 다음 입력 한 **이름** 의도 확장과 클릭에 대 한는 **다음** 단추: 
 
-    [ ![](implementing-sirikit-images/intents12.png "의도 확장에 대 한 이름을 입력 합니다.")](implementing-sirikit-images/intents12.png)
+    [![](implementing-sirikit-images/intents12.png "의도 확장에 대 한 이름을 입력 합니다.")](implementing-sirikit-images/intents12.png#lightbox)
 4. 마지막으로, 클릭는 **만들기** 의도 확장 응용 프로그램 솔루션을 추가 하는 단추: 
 
-    [ ![](implementing-sirikit-images/intents13.png "앱 솔루션에 의도 확장 추가")](implementing-sirikit-images/intents13.png)
+    [![](implementing-sirikit-images/intents13.png "앱 솔루션에 의도 확장 추가")](implementing-sirikit-images/intents13.png#lightbox)
 5. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **참조** 새로 만든된 의도 확장 폴더입니다. (즉 응용 프로그램은 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 하 고 **확인** 단추: 
 
-    [ ![](implementing-sirikit-images/intents14.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents14.png)
+    [![](implementing-sirikit-images/intents14.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents14.png#lightbox)
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -902,7 +902,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 모든 일반적인 응용 프로그램 확장와 마찬가지로 응용 프로그램의 기존 키 갖습니다 `NSExtension` 및 `NSExtensionAttributes`합니다. 의도 확장에 대 한 새 구성 해야 하는 특성이 하나 있습니다.
 
-[ ![](implementing-sirikit-images/intents03.png "구성 해야 하는 하나의 새 특성")](implementing-sirikit-images/intents03.png)
+[![](implementing-sirikit-images/intents03.png "구성 해야 하는 하나의 새 특성")](implementing-sirikit-images/intents03.png#lightbox)
 
 **IntentsSupported** 필수 항목이 며 의도 확장 프로그램에서 지원 하 고 응용 프로그램 의도 클래스 이름의 배열로 구성 됩니다.
 
@@ -910,13 +910,13 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 의도 UI 확장을 구성 하려면 `Info.plist` 파일,이 창에서 원하는 **솔루션 탐색기** 를 편집 하기 위해 엽니다. 다음으로 전환 하는 **소스** 확인 한 후 확장의 `NSExtension` 및 `NSExtensionAttributes` 편집기에 있는 키:
 
-[ ![](implementing-sirikit-images/intents04.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents04.png)
+[![](implementing-sirikit-images/intents04.png "편집기에서 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents04.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 의도 UI 확장을 구성 하려면 `Info.plist` 파일,이 창에서 원하는 **솔루션 탐색기** 를 편집 하기 위해 엽니다. 확장 된 `NSExtension` 및 `NSExtensionAttributes` 편집기에 있는 키:
 
-[ ![](implementing-sirikit-images/intents04w.png "편집기에서 구성 제품 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents04w.png)
+[![](implementing-sirikit-images/intents04w.png "편집기에서 구성 제품 NSExtension 및 NSExtensionAttributes 키")](implementing-sirikit-images/intents04w.png#lightbox)
 
 -----
 
@@ -924,11 +924,11 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](implementing-sirikit-images/intents15.png "INSendMessageIntent 키")](implementing-sirikit-images/intents15.png)
+[![](implementing-sirikit-images/intents15.png "INSendMessageIntent 키")](implementing-sirikit-images/intents15.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](implementing-sirikit-images/intents15w.png "INSendMessageIntent 키")](implementing-sirikit-images/intents15w.png)
+[![](implementing-sirikit-images/intents15w.png "INSendMessageIntent 키")](implementing-sirikit-images/intents15w.png#lightbox)
 
 -----
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -29,11 +29,11 @@ WatchOS 앱 솔루션에 프로젝트 3에 있습니다.
 
 WatchOS 1 응용 프로그램에서 확장에 코드가 iPhone에서 실행-Apple Watch 결과적으로 외부 디스플레이 합니다. watchOS 2와 3 단계 앱 Apple Watch 완전히 실행 합니다. 이러한 차이 아래 다이어그램에 표시 됩니다.
 
-[ ![](intro-to-watchos-images/arch-sml.png "이 다이어그램에 나와 watchOS 1과 2 (및 큰) watchOS의 차이점")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "이 다이어그램에 나와 watchOS 1과 2 (및 큰) watchOS의 차이점")](intro-to-watchos-images/arch.png#lightbox)
 
 WatchOS의 버전, 대상에 관계 없이 Mac의 솔루션 패드에 대 한 Visual Studio에서 완벽 한 솔루션은 다음과 같이 표시:
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "솔루션 채움")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "솔루션 채움")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 *부모 앱* 는 watchOS 솔루션은 일반 iOS 앱. 표시 되는 솔루션의 프로젝트만 이것이 **통화**합니다. 이 앱에 대 한 사용 사례는 자습서, 관리 화면 및 중간 계층 필터링 cacheing 등 포함 됩니다. 그러나 사용자가 설치 하 고 실행 하지 않고 watch 앱/확장은 **적이** 부모 앱을 열고 난, 따라서 부모 응용 프로그램이 한 번만 초기화 또는 관리에 대 한 실행 되도록 해야 할 경우 해야 시계로 프로그래밍 사용자에 게 알리고 앱/확장입니다.
 
@@ -139,4 +139,4 @@ Apple에서 제공한 설명서를 확인해 보십시오.
 - [첫 번째 Watch 앱 비디오](http://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple는 Watch 키트 가이드에 대 한 개발의](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Apple의 WatchKit 팁](https://developer.apple.com/watchkit/tips/)
-- [WatchOS 3 소개](~/ios/watchos/platform/introduction-to-watchos3/index.md)
+- [watchOS 3 소개](~/ios/watchos/platform/introduction-to-watchos3/index.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9073d64c43c6817b45dca02b870fcfe093ebf46d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -24,7 +24,7 @@ _이 문서에서는 몇 가지 팁, 기능 및 기술 Xamarin.Mac에 최신 mac
 
 최신 보기 아래에 표시 된 예제에서는 앱과 같은 최신 창 및 도구 모음 모양을 포함 됩니다.
 
-[ ![](modern-cocoa-apps-images/content08.png "최신 Mac 앱 UI의 예")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "최신 Mac 앱 UI의 예")](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views" />
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 이 기능은 사용할 수 있는 또한 Xcode의 인터페이스 작성기 창을 선택 하 고 확인 하 여 **전체 크기의 콘텐츠 뷰**:
 
-[ ![](modern-cocoa-apps-images/content01.png "Xcode의 인터페이스 작성기에서 주 스토리 보드를 편집합니다.")](modern-cocoa-apps-images/content01.png)
+[![](modern-cocoa-apps-images/content01.png "Xcode의 인터페이스 작성기에서 주 스토리 보드를 편집합니다.")](modern-cocoa-apps-images/content01.png#lightbox)
 
 전체 크기 콘텐츠 보기를 사용할 때의 제목 및 도구 모음 영역 아래에 있는 콘텐츠를 오프셋 하 여 특정 콘텐츠 (예: 레이블) 아래의 슬라이드 하지 개발자 해야 합니다.
 
@@ -145,11 +145,11 @@ topConstraint.Active = true;
 
 일반 macOS 창 제목 표시줄에는 창의 위쪽 가장자리에 실행 하는 표준에 포함 됩니다. 창 도구 모음을 포함 하는 경우이 제목 표시줄 영역에서 표시 됩니다.
 
-[ ![](modern-cocoa-apps-images/content02.png "표준 Mac 도구 모음")](modern-cocoa-apps-images/content02.png)
+[![](modern-cocoa-apps-images/content02.png "표준 Mac 도구 모음")](modern-cocoa-apps-images/content02.png#lightbox)
 
 제목 영역 사라집니다 간소화 된 도구 모음을 사용 하 고 제목 표시줄의 위치에 도구 모음을 위로 이동 하는 경우와 동일한 줄에 창 닫기, 최소화 및 최대화 단추:
 
-[ ![](modern-cocoa-apps-images/content03.png "간소화 된 Mac 도구 모음")](modern-cocoa-apps-images/content03.png)
+[![](modern-cocoa-apps-images/content03.png "간소화 된 Mac 도구 모음")](modern-cocoa-apps-images/content03.png#lightbox)
 
 재정의 하 여 효율적인 도구 모음이 사용는 `ViewWillAppear` 의 메서드는 `NSViewController` 다음와 같은 보이게 하 고:
 
@@ -171,7 +171,7 @@ public override void ViewWillAppear ()
 
 응용 프로그램의 디자인에 따라 개발자는 오른쪽 아래 상황에 맞는 컨트롤 제공 활동에 따라 사용자에 게 이러한 하기 위해 제목/도구 모음으로 표시 되는 액세서리 보기 컨트롤러와 영역은 제목 표시줄을 보완 하기 위해 수도 있음 현재에 포함 되어 있습니다.
 
-[ ![](modern-cocoa-apps-images/content04.png "예로 액세서리 뷰-컨트롤러")](modern-cocoa-apps-images/content04.png)
+[![](modern-cocoa-apps-images/content04.png "예로 액세서리 뷰-컨트롤러")](modern-cocoa-apps-images/content04.png#lightbox)
 
 액세서리 뷰 컨트롤러 자동으로 흐리게 표시 되며 개발자의 개입 없이 시스템 크기를 조정 합니다.
 
@@ -180,13 +180,13 @@ public override void ViewWillAppear ()
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 2. 끌어서는 **사용자 지정 보기 컨트롤러** 창의 계층 구조에: 
 
-    [ ![](modern-cocoa-apps-images/content05.png "새 사용자 지정 보기 컨트롤러 추가")](modern-cocoa-apps-images/content05.png)
+    [![](modern-cocoa-apps-images/content05.png "새 사용자 지정 보기 컨트롤러 추가")](modern-cocoa-apps-images/content05.png#lightbox)
 3. 레이아웃 액세서리 보기의 UI: 
 
-    [ ![](modern-cocoa-apps-images/content06.png "새 뷰 디자인")](modern-cocoa-apps-images/content06.png)
+    [![](modern-cocoa-apps-images/content06.png "새 뷰 디자인")](modern-cocoa-apps-images/content06.png#lightbox)
 4. 노출 액세서리 뷰는 **콘센트** 및 기타 **동작** 또는 **콘센트** UI에 대 한: 
 
-    [ ![](modern-cocoa-apps-images/content07.png "필요한 콘센트 추가")](modern-cocoa-apps-images/content07.png)
+    [![](modern-cocoa-apps-images/content07.png "필요한 콘센트 추가")](modern-cocoa-apps-images/content07.png#lightbox)
 5. 변경 내용을 저장합니다.
 6. 변경 내용을 동기화 하는 Mac에 대 한 Visual Studio로 반환 합니다.
 
@@ -248,7 +248,7 @@ MacOS 이제 지역화 완벽 하 게 되므로 `Left` 및 `Right` `NSLayoutAttr
 
 또한 macOS 시스템 컨트롤러 액세서리 보기 응용 프로그램의 창을 추가할 수 있습니다. 예를 들어, 하나의 가상 창에 병합 됩니다는 다양 한 응용 프로그램의 Windows 탭 창을 만들 수 있습니다.
 
-[ ![](modern-cocoa-apps-images/content08.png "탭된 창 Mac의 예")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "탭된 창 Mac의 예")](modern-cocoa-apps-images/content08.png#lightbox)
 
 일반적으로 개발자 탭 Windows가 Xamarin.Mac 앱에 제한 된 작업 사용을 수행 해야 합니다, 그리고 시스템이 다음과 같이 자동으로 처리 됩니다.
 
@@ -430,7 +430,7 @@ A `CALayer` 개체와 같은 표시 되는 내용을 제어 하는 개발자 화
 
 백업 레이어를 설정 하 여 사용할 수는 `WantsLayer` 의 `NSView` 를 `true` 이나 아래 Xcode의 인터페이스 작성기 안에 **보기 효과 검사기** 확인 하 여 **코어 애니메이션 레이어**:
 
-[ ![](modern-cocoa-apps-images/content09.png "보기 효과 검사기")](modern-cocoa-apps-images/content09.png)
+[![](modern-cocoa-apps-images/content09.png "보기 효과 검사기")](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers" />
 
@@ -792,7 +792,7 @@ Apple 다음을 수행 하 제안 합니다.
 
 Apple는 개발자 때 사용할 수 있는 디자인 하거나 응용 프로그램의 UI 편집 지역화를 지 원하는 Xcode의 인터페이스 작성기의 몇 가지 기능 제공 했습니다. **텍스트 방향을** 섹션은 **특성 검사기** 개발자 방향 해야 사용 되 고 select에서는 텍스트 기반 뷰에서 업데이트 방법에 힌트를 제공할 수 있습니다 (같은 `NSTextField`):
 
-[ ![](modern-cocoa-apps-images/content10.png "텍스트 방향 옵션")](modern-cocoa-apps-images/content10.png)
+[![](modern-cocoa-apps-images/content10.png "텍스트 방향 옵션")](modern-cocoa-apps-images/content10.png#lightbox)
 
 에 대 한 세 가지 가능한 값은 **텍스트 방향**:
 
@@ -851,7 +851,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 최신 macOS 앱 이미지 만들기, 편집 또는 프레젠테이션 응용 프로그램에 사용할 새 어두운 인터페이스 모양을 채택할 수 있습니다.
 
-[ ![](modern-cocoa-apps-images/content11.png "어두운 Mac 창 UI의 예")](modern-cocoa-apps-images/content11.png)
+[![](modern-cocoa-apps-images/content11.png "어두운 Mac 창 UI의 예")](modern-cocoa-apps-images/content11.png#lightbox)
 
 이 창을 표시 하기 전에 한 줄의 코드를 추가 하 여 수행할 수 있습니다. 예:
 
@@ -898,7 +898,7 @@ Apple에 시스템 모양을 사용 하기 위한 다음 제안 사항을:
 
 컨트롤러를 사용 하면 개발자 단위 컴퍼지션 및 Segues 추상으로 요소를 수집 하는 일반적인 "글 루 코드" 보기 계층 구조 전체에서 이동 하는 데 필요한를 제거할:
 
-[ ![](modern-cocoa-apps-images/content12.png "UI Xcode의 인터페이스 작성기에서 편집")](modern-cocoa-apps-images/content12.png)
+[![](modern-cocoa-apps-images/content12.png "UI Xcode의 인터페이스 작성기에서 편집")](modern-cocoa-apps-images/content12.png#lightbox)
 
 자세한 내용은 참조 하십시오 우리의 [스토리 보드에는 소개](~/mac/platform/storyboards/index.md) 설명서입니다.
 

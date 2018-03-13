@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/30/2018
-ms.openlocfilehash: 4728b50446033c02d33ccf8273f1dc2e50d66906
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8642a1c96ee525fbd6950616fbc6da0ad0e2337
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.Android에 로컬 알림을 사용 하 여
 
 _이 연습에는 로컬 알림을 Xamarin.Android 응용 프로그램에서 사용 하는 방법을 보여 줍니다. 만들기 및 로컬 알림을 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭, 두 번째 활동을 시작 합니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -26,16 +25,14 @@ _이 연습에는 로컬 알림을 Xamarin.Android 응용 프로그램에서 사
 
 다음 스크린샷에서이 응용 프로그램의 몇 가지 예를 보여 줍니다.
 
-[![알림 사용 하 여 예제 스크린 샷](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
+[![알림 사용 하 여 예제 스크린 샷](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 
-<a name="walkthrough" />
 
 ## <a name="walkthrough"></a>연습
 
 를 시작 하려면 만들기 사용 하 여 새 Android 프로젝트는 **Android 앱** 템플릿. 이 프로젝트 부르겠습니다 **LocalNotifications**합니다. (Xamarin.Android 프로젝트 만들기에 익숙하지 않은 경우 참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
-<a name="add-v4-support" />
 
 ### <a name="add-the-androidsupportv4app-component"></a>Android.Support.V4.App 구성 요소를 추가 합니다.
 
@@ -53,7 +50,6 @@ using Android.Support.V4.App;
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-<a name="define-id" />
 
 ### <a name="define-the-notification-id"></a>알림 ID를 정의 합니다.
 
@@ -63,7 +59,6 @@ using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 private static readonly int ButtonClickNotificationId = 1000;
 ```
 
-<a name="add-code" />
 
 ### <a name="add-code-to-generate-the-notification"></a>알림을 생성 하는 코드를 추가 합니다.
 
@@ -117,7 +112,6 @@ private void ButtonOnClick (object sender, EventArgs eventArgs)
 button.Click += ButtonOnClick;
 ```
 
-<a name="second-activity" />
 
 ### <a name="create-a-second-activity"></a>두 번째 활동 만들기
 
@@ -174,36 +168,33 @@ namespace LocalNotifications
 </LinearLayout>
 ```
 
-<a name="add-icon" />
 
 ### <a name="add-a-notification-icon"></a>추가 알림 아이콘
 
 마지막으로,이 알림을 시작할 때 알림 영역에 표시 되는 작은 아이콘을 추가 해 보겠습니다. 복사할 수는 있지만 [이 아이콘](local-notifications-walkthrough-images/ic-stat-button-click.png) 프로젝트에 하거나 사용자 지정 아이콘을 만듭니다. 아이콘 파일의 이름을 **ic\_stat\_단추\_click.png** 복사는 **리소스/그릴** 폴더입니다. 사용 해야 **추가 > 기존 항목...**  프로젝트에서이 아이콘 파일을 포함 하도록 합니다.
 
-<a name="run-app" />
 
 ### <a name="run-the-application"></a>응용 프로그램 실행
 
 빌드 및 응용 프로그램을 실행 해 보겠습니다. 다음 스크린샷과 유사 하 게 첫 번째 활동과 함께 표시 되어야 합니다.
 
-[ ![첫 번째 활동 스크린 샷](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png)
+[![첫 번째 활동 스크린 샷](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
 단추를 클릭할 때 작은 아이콘에 알림에 대 한 알림 영역에 표시를 확인 해야 합니다.
 
-[ ![알림 아이콘 표시](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png)
+[![알림 아이콘 표시](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
 아래로 살짝 알림 서랍을 노출 하는 경우 알림을 표시 되어야 합니다.
 
-[ ![알림 메시지](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png)
+[![알림 메시지](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
 알림을 클릭 하 고, 사라져야 다른 활동을 실행 해야 하는 경우 &ndash; 다음 스크린 샷에서 같은 검색:
 
-[ ![두 번째 활동 스크린 샷](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png)
+[![두 번째 활동 스크린 샷](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
 지금까지 이 시점에서 Android 로컬 알림 연습 완료 하며를 참조할 수 있는 작업 예제를 해야 합니다. 알림을 대 한 자세한 우리는 여기 표시 된 것 보다 자세한 정보를 가져오려면 그러니까 살펴보겠습니다 많은 [알림을 통해 Google 설명서](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) 및 Android [알림](http://developer.android.com/design/patterns/notifications.html) 디자인 가이드입니다.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

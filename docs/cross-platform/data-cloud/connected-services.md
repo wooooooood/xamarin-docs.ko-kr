@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cc2deb11d544bc4e933e690d6089eb001a186c79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c9ae8d65a2bfdd035cccb6b911448ea047f8c40
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connected-services-walkthrough"></a>연결 된 서비스 연습
 
@@ -24,22 +24,22 @@ ms.lasthandoff: 02/27/2018
 1.  두 번 클릭 하 여 시작는 **연결 된 서비스** 나타납니다 솔루션에 있는 노드는 **서비스 갤러리**합니다.
   이 응용 프로그램 종류에 대 한 모든 사용 가능한 서비스 목록입니다. 서비스를 선택 (예: **Azure 앱 서비스와 모바일 백 엔드**) 클릭 하 여 합니다.
 
-  [ ![](connected-services-images/image001-sml.png "Mac 용 Visual Studio에서 서비스 노드를 연결")](connected-services-images/image001.png)
+  [![](connected-services-images/image001-sml.png "Mac 용 Visual Studio에서 서비스 노드를 연결")](connected-services-images/image001.png#lightbox)
 
 2. 서비스 세부 정보 페이지에 대 한 설명이 서비스 및 종속성을 설치할 수 있습니다.
   클릭는 **추가** 응용 프로그램에 종속성을 추가 하는 단추:
 
-  [ ![](connected-services-images/image002-sml.png "Azure 모바일 백 엔드")](connected-services-images/image002.png)
+  [![](connected-services-images/image002-sml.png "Azure 모바일 백 엔드")](connected-services-images/image002.png#lightbox)
 
 3. 종속성에서 실행 되도록 하는 PCL와 플랫폼별 프로젝트에 추가 해야 합니다.
   참조 하는 것 (직접 또는 간접적으로) 모든 프로젝트에 서비스를 추가 하려면 확인란을 선택 합니다.
 
-  [ ![](connected-services-images/image003-sml.png "서비스를 참조 해야 하는 모든 프로젝트를 확인 합니다.")](connected-services-images/image003.png)
+  [![](connected-services-images/image003-sml.png "서비스를 참조 해야 하는 모든 프로젝트를 확인 합니다.")](connected-services-images/image003.png#lightbox)
 
 4. 선택 **Accept** 에 **라이선스 승인** NuGet 패키지에 대 한 대화 상자.
   두 대화 상자에 동의할 수,는 MobileClient 및 종속성에 대 한 관리를 위한 SQLiteStore, 오프 라인 데이터 동기화에 필요한 수 있습니다.
 
-  [ ![](connected-services-images/image004-sml.png "사용권 계약에 동의")](connected-services-images/image004.png)
+  [![](connected-services-images/image004-sml.png "사용권 계약에 동의")](connected-services-images/image004.png#lightbox)
 
   ![](connected-services-images/image005.png "라이선스 승인 창")
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/27/2018
 
 6. 목록에서 응용 프로그램 서비스를 선택 합니다. 이 대 한 템플릿 코드를 채울는 `MobileServiceClient` Azure에서 응용 프로그램 서비스의 해당 URL 가진 개체:
 
-  [ ![](connected-services-images/image006-sml.png "목록에서 응용 프로그램 서비스를 선택 합니다.")](connected-services-images/image006.png)
+  [![](connected-services-images/image006-sml.png "목록에서 응용 프로그램 서비스를 선택 합니다.")](connected-services-images/image006.png#lightbox)
 
   나열 된 서비스가 있는 경우 클릭는 **새로** 단추 (9 단계 참조).
 
@@ -59,12 +59,12 @@ ms.lasthandoff: 02/27/2018
 
 8. 에 대 한 설명서에 따라 **다음 단계** 데이터, 오프 라인 동기화, 인증을 추가 하 여 응용 프로그램에 대 한 푸시 알림:
 
-  [ ![](connected-services-images/image008-sml.png "다음 단계 지침을 검토")](connected-services-images/image008.png)
+  [![](connected-services-images/image008-sml.png "다음 단계 지침을 검토")](connected-services-images/image008.png#lightbox)
 
 10. 모든 기존 앱 서비스를 설정 하지 않은 경우 Mac.에 대 한 Visual Studio 내에서 새 서비스를 만들 수 있습니다.
   클릭는 **새로** 열려는 서비스 목록의 왼쪽 하단에서에서 단추는 **새 앱 서비스** 대화 상자:
 
-  [ ![](connected-services-images/image009-sml.png "Mac 용 Visual Studio에서 새 응용 프로그램 서비스 만들기")](connected-services-images/image009.png)
+  [![](connected-services-images/image009-sml.png "Mac 용 Visual Studio에서 새 응용 프로그램 서비스 만들기")](connected-services-images/image009.png#lightbox)
 
 새 서비스는 다음 매개 변수가 필요합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c4a88f875b4082f85b1c5565de2a24548e7b8874
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="push-notifications-in-ios"></a>IOS에 대 한 푸시 알림
 
@@ -45,37 +45,37 @@ Apple APNS의 두 가지 환경 유지 관리:는 *샌드박스* 및 *프로덕�
 
 1.  만들 인증서는 iOS 프로 비전 포털으로 이동 Apple 웹 사이트 (왼쪽에서의 앱 Id 메뉴 항목 표시) 다음 스크린샷에 표시 된 것 처럼:
 
-    [ ![](remote-notifications-in-ios-images/image5new.png "IOS 사과 웹 사이트에서 프로 비전 포털")](remote-notifications-in-ios-images/image5new.png)
+    [![](remote-notifications-in-ios-images/image5new.png "IOS 사과 웹 사이트에서 프로 비전 포털")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
 2.  다음으로 응용 프로그램 ID 섹션으로 이동 하 고 다음 스크린샷에 표시 된 대로 새 응용 프로그램 ID를 만들려면:
 
-    [ ![](remote-notifications-in-ios-images/image6new.png "앱 Id 섹션을 찾아 새 앱 ID를 만들려면")](remote-notifications-in-ios-images/image6new.png)
+    [![](remote-notifications-in-ios-images/image6new.png "앱 Id 섹션을 찾아 새 앱 ID를 만들려면")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
 3.  클릭는  **+**  단추를 수 있습니다는 응용 프로그램 ID에 대 한 설명과 번들 식별자를 입력 하려면 다음 스크린샷에 표시 된 대로:
 
-    [ ![](remote-notifications-in-ios-images/image7new.png "응용 프로그램 ID에 대 한 설명 및 번들 식별자 입력")](remote-notifications-in-ios-images/image7new.png)
+    [![](remote-notifications-in-ios-images/image7new.png "응용 프로그램 ID에 대 한 설명 및 번들 식별자 입력")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
 4. 선택 되어 있는지 확인 **명시적 앱 ID** 및 번들 식별자로 끝나지 않습니다는 `*` 합니다. 여러 응용 프로그램에 대 한 좋은 식별자를 만들어집니다 및 단일 응용 프로그램에 대 한 푸시 알림 인증서 이어야 합니다.
 
 1. 앱 서비스에서 선택 **푸시 알림을**:
 
-    [ ![](remote-notifications-in-ios-images/image8new.png "푸시 알림 선택")](remote-notifications-in-ios-images/image8new.png)
+    [![](remote-notifications-in-ios-images/image8new.png "푸시 알림 선택")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
 2. 키를 누릅니다 **전송** 새 앱 ID의 등록을 확인 하려면:
 
-    [ ![](remote-notifications-in-ios-images/image9new.png "새 앱 ID의 등록을 확인 합니다.")](remote-notifications-in-ios-images/image9new.png)
+    [![](remote-notifications-in-ios-images/image9new.png "새 앱 ID의 등록을 확인 합니다.")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
 3.  다음으로 만들어야 합니다 인증서에 대 한 응용 프로그램 id입니다. 왼쪽 탐색 영역에서 찾은 **인증서 > 모든** 선택 하 고는 `+` 다음 스크린샷에 표시 된 것 처럼 단추:
 
-    [ ![](remote-notifications-in-ios-images/image10new.png "응용 프로그램 ID에 대 한 인증서를 만듭니다.")](remote-notifications-in-ios-images/image8.png)
+    [![](remote-notifications-in-ios-images/image10new.png "응용 프로그램 ID에 대 한 인증서를 만듭니다.")](remote-notifications-in-ios-images/image8.png#lightbox)
 
 4.  개발 또는 프로덕션 인증서를 사용 하도록 여부를 선택 합니다.
 
-    [ ![](remote-notifications-in-ios-images/image11new.png "개발 또는 프로덕션 인증서를 선택 합니다.")](remote-notifications-in-ios-images/image11new.png)
+    [![](remote-notifications-in-ios-images/image11new.png "개발 또는 프로덕션 인증서를 선택 합니다.")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
 5. 한 다음 방금 작성 한 새 앱 ID를 선택 합니다.
 
-    [ ![](remote-notifications-in-ios-images/image12new.png "방금 만든 새 응용 프로그램 ID 선택")](remote-notifications-in-ios-images/image12new.png)
+    [![](remote-notifications-in-ios-images/image12new.png "방금 만든 새 응용 프로그램 ID 선택")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
 6.  이 만드는 과정을 통해 사용 하는 명령에 표시 됩니다는 *인증서 서명 요청* 를 사용 하는 **키 집합 접근** mac 응용 프로그램
 
@@ -85,11 +85,11 @@ Apple APNS의 두 가지 환경 유지 관리:는 *샌드박스* 및 *프로덕�
 
 9.  프로비저닝 프로필을 만든 후에 개방 **Xcode 구성 도우미** 고 새로 고칩니다. 프로비저닝 프로필을 만든 경우 나타나지 않습니다를 iOS 프로비저닝 포털에서에서 프로필을 다운로드 하 여 수동으로 가져와야 할 수도 있습니다. 다음 스크린 샷에서 추가 프로 비전 프로필을 가진 구성의 예를 보여 줍니다.
 
-    [ ![](remote-notifications-in-ios-images/image13new.png "이 스크린 샷 추가 프로 비전 프로필을 가진 구성의 예를 보여 줍니다.")](remote-notifications-in-ios-images/image13new.png)
+    [![](remote-notifications-in-ios-images/image13new.png "이 스크린 샷 추가 프로 비전 프로필을 가진 구성의 예를 보여 줍니다.")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 10.  이 시점에서 Xamarin.iOS 프로젝트가 새로 프로 비전 프로필을 만든이 사용 하도록 구성 해야 합니다. 이렇게 **프로젝트 옵션** 대화에서 **iOS 번들 서명** 으로 다음 스크린샷에 표시 된 탭:
 
-    [ ![](remote-notifications-in-ios-images/image11.png "Xamarin.iOS 프로젝트가 새로 프로 비전 프로필을 만든이 사용 하도록 구성")](remote-notifications-in-ios-images/image11.png)
+    [![](remote-notifications-in-ios-images/image11.png "Xamarin.iOS 프로젝트가 새로 프로 비전 프로필을 만든이 사용 하도록 구성")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 
 

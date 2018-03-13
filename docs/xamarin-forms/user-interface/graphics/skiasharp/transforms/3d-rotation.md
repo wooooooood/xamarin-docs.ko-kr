@@ -4,14 +4,15 @@ description: "사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="3d-rotations"></a>3D 회전
 
@@ -27,7 +28,7 @@ _사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 �
 
 개념적으로 문자로 라는 세 번째 축을 추가 하는 3 차원 좌표계, 화면 오른쪽 각도에 Z 축이 있습니다. 3D 공간에서 좌표 점 기반으로 세 숫자가으로 표시 됩니다: (x, y, z). 3d에서 오른쪽 증가 X의 값이이 문서에서 사용 하는 좌표계 되며 Y의 증가 값이 두 차원에서와 마찬가지로 아래로 이동 합니다. 화면 나오는 양의 Z 값이 증가 합니다. 원점은 왼쪽 위 모퉁이 있는 2 차원 그래픽에서와 마찬가지로 있습니다. 이 평면의 오른쪽 각도에 Z 축이 있는 XY 평면으로 화면 생각할 수 있습니다.
 
-이 왼쪽 좌표 시스템 이라고 합니다. 가리키면 양의 X 방향으로 왼쪽 프로그램에 대 한 집게 (오른쪽)으로 조정 하 고 중간 손가락 증가 Y 방향 (아래쪽), 다음 프로그램 thumb 포인트의 Z 좌표 &#x2014; 오름차순 방향 조정 화면에서으로 확장 합니다.
+이 왼쪽 좌표 시스템 이라고 합니다. 프로그램 왼쪽의 X 좌표 (오른쪽)으로 양의 방향에서에 대 한 집게 가리키고 Y 늘어나는 방향 중간 손가락 (다운)를 조정 하는 경우 다음 프로그램 thumb의에서 점은 Z 좌표 늘어나는 방향을-에서으로 확장 화면입니다.
 
 3D 그래픽에는 변환은 4-4 행렬을 기반으로 합니다. 4-4 항등 매트릭스는 다음과 같습니다.
 
@@ -109,7 +110,7 @@ Z 축 중심으로 회전 2 차원 그래픽에서와 같습니다.
 |    0       0     0  1  |
 </pre>
 
-좌표 시스템의 선호도 회전 방향을 포함 됩니다. 이 왼쪽 시스템의 특정 축 &#x2014;에 대 한 값을 늘리면 방향으로 왼쪽 손 엄지 단추를 가리킬 경우 X 축 중심으로 회전에 대 한 오른쪽으로 회전 Y 축을 중심으로 회전을 Z 축 &#x2014;에 대 한 down 그런 다음 다른 손가락 곡선의 양의 각도 회전 방향을 나타냅니다.
+좌표 시스템의 선호도 회전 방향을 포함 됩니다. 왼쪽 시스템입니다 증가 값 특정 축 방향으로 왼쪽 손 엄지 단추를 가리킬 경우-회전을 X 축에 대 한 오른쪽으로 회전 Y 축을 중심으로 회전을 Z 축에 대 한 아래쪽-다음의 곡선 yo 다른 손가락의 회전 양의 각도 방향을 나타냅니다.
 
 `SKMatrix44` 정적 일반화 [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) 및 [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) 회전 중심점입니다 발생 축을 지정 하려면 사용할 수 있는 메서드가 있습니다.
 
@@ -408,7 +409,7 @@ public partial class Rotation3DPage : ContentPage
 
 네 번째 슬라이더를 시험해 볼 때 다른 깊이 설정을 뷰어에서 개체를 더 이상 이동 하지 않는 하지만 대신 원근 효과의 범위를 변경할 알 수 있습니다.
 
-[![](3d-rotation-images/rotation3d-small.png "회전 3D 페이지의 삼중 스크린샷")](3d-rotation-images/rotation3d-large.png "회전의 3D 페이지의 삼중 스크린 샷")
+[![](3d-rotation-images/rotation3d-small.png "회전 3D 페이지의 삼중 스크린샷")](3d-rotation-images/rotation3d-large.png#lightbox "회전의 3D 페이지의 삼중 스크린 샷")
 
 **애니메이션 회전 3D** 또한 사용 하 여 `SKMatrix44` 3D 공간에서 텍스트 문자열에 애니메이션 효과를 주는 합니다. `textPaint` 텍스트의 범위를 결정 하는 필드는 생성자에서 사용으로 설정 하는 개체:
 
@@ -442,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing` 재정의 정의 세 Xamarin.Forms `Animation` 애니메이션 효과를 줄 개체는 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드입니다. 이러한 애니메이션 기간 소수 &#x2014;으로 설정 되어 있는지 확인 합니다. 5 초, 7 초 및 11 초 인 &#x2014; 따라서 전체 조합 마다 385 초 또는 10 분 이상에 반복:
+`OnAppearing` 재정의 정의 세 Xamarin.Forms `Animation` 애니메이션 효과를 줄 개체는 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드입니다. 이러한 애니메이션 기간 설정 되어 있는 단추가 숫자를-5 초를 7 초 11 초-모든 385 초 또는 10 분 이상에 전체 조합 반복 되므로:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -532,7 +533,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 2D 변환을 여러 화면 가운데에 회전의 중심을 이동 하 고 동일한 너비로 화면 구분 되는 텍스트 문자열의 크기를 조정할 수로이 3D 회전 묶은:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "애니메이션을 회전 3D 페이지의 삼중 스크린샷")](3d-rotation-images/animatedrotation3d-large.png "애니메이션 회전의 3D 페이지의 삼중 스크린 샷")
+[![](3d-rotation-images/animatedrotation3d-small.png "애니메이션을 회전 3D 페이지의 삼중 스크린샷")](3d-rotation-images/animatedrotation3d-large.png#lightbox "애니메이션 회전의 3D 페이지의 삼중 스크린 샷")
 
 
 ## <a name="related-links"></a>관련 링크

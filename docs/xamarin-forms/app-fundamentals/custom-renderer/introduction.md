@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -52,7 +52,7 @@ public class MyEntry : Entry
 `local` 네임 스페이스 접두사는 모두 사용할 수 있습니다. 그러나는 `namespace` 및 `assembly` 값에는 사용자 지정 컨트롤의 세부 정보과 일치 해야 합니다. 네임 스페이스 선언 되 면 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
 
 > [!NOTE]
-> **참고**: 정의 `xmlns` 공유 프로젝트 보다 PCLs에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 PCL는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. 공유 프로젝트를 사용할 때 XAML 등 모든 공유 자산 컴파일됩니다. iOS, Android 및 Windows Phone 의미는 참조 프로젝트의 각 프로젝트에는 자신의 *어셈블리 이름을* 수는 없습니다 작성에 `xmlns` 선언 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
+> 정의 `xmlns` 공유 프로젝트 보다 PCLs에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 PCL는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. 공유 프로젝트를 사용할 때 XAML 등 모든 공유 자산 컴파일됩니다. iOS, Android 및 Windows Phone 의미는 참조 프로젝트의 각 프로젝트에는 자신의 *어셈블리 이름을* 수는 없습니다 작성에 `xmlns` 선언 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
 
 `MyEntry` 사용자 지정 컨트롤 다음 스크린샷에 표시 된 것 처럼 그런 다음 회색 배경으로 각 플랫폼에서 렌더링 됩니다.
 
@@ -69,7 +69,7 @@ public class MyEntry : Entry
 1. 추가 `ExportRenderer` 특성을 사용자 지정 렌더러 클래스 Xamarin.Forms 컨트롤을 렌더링 하 사용 수를 지정할 수 있습니다. 이 특성은 Xamarin.Forms를 사용한 사용자 지정 렌더러를 등록 하려면 사용 합니다.
 
 > [!NOTE]
-> **참고**: 대부분의 Xamarin.Forms 요소에 대 한 것은 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하는 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 또는 [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 요소입니다.
+> 대부분의 Xamarin.Forms 요소에 대 한 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하기 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 또는 [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 요소입니다.
 
 이 시리즈의 항목에는 데모 및이 프로세스의 다양 한 Xamarin.Forms 요소에 대 한 설명을 제공 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 372ea9a20e9f67c41c74fb01afb8110ee741a709
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Windows Communication Foundation (WCF) 웹 서비스 사용
 
@@ -76,7 +76,7 @@ WCF 서비스는 다음 작업을 제공합니다.
 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 참조 [데이터 모델링](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 
 > [!NOTE]
-> **참고**: 웹 서비스에 대 한 읽기 전용 액세스를 제공 하는 Xamarin에서 호스팅되는 WCF 서비스를 사용 하는 예제 응용 프로그램입니다. 따라서 생성, 업데이트 및 데이터를 삭제 하는 작업은 응용 프로그램에서 사용 하는 데이터가 변경 하지 않습니다. 그러나 ASMX 서비스의 호스팅 가능한 버전은 영어로 **TodoWCFService** 함께 제공 된 샘플 응용 프로그램의 폴더입니다. 이 호스팅 가능 버전 전체 WCF 서비스 사용의 만들기, 업데이트, 읽기 및 데이터에 대 한 액세스를 삭제 합니다.
+> 샘플 응용 프로그램 웹 서비스에 대 한 읽기 전용 액세스를 제공 하는 Xamarin에서 호스팅되는 WCF 서비스를 사용 합니다. 따라서 생성, 업데이트 및 데이터를 삭제 하는 작업은 응용 프로그램에서 사용 하는 데이터가 변경 하지 않습니다. 그러나 ASMX 서비스의 호스팅 가능한 버전은 영어로 **TodoWCFService** 함께 제공 된 샘플 응용 프로그램의 폴더입니다. 이 호스팅 가능 버전 전체 WCF 서비스 사용의 만들기, 업데이트, 읽기 및 데이터에 대 한 액세스를 삭제 합니다.
 
 A *프록시* 를 응용 프로그램이 서비스에 연결할 수 있는 WCF 서비스를 생성 해야 합니다. 프록시는 메서드 및 연결 된 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 구성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 되는 WSDL 웹 서비스 설명 언어 () 문서의 형태로 표시 됩니다. .NET 표준 라이브러리에는 웹 서비스에 대 한 서비스 참조를 추가 하려면 Visual Studio 2017에 Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 프록시를 빌드할 수 있습니다. Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)합니다.
 

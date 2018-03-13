@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f375f58215fbef13298e31b03b969c9388d2bfa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="workout-apps"></a>워크 아웃 앱
 
@@ -29,7 +29,7 @@ _이 문서에서는 이러한 향상 된 기능에 설명 Apple 워크 아웃 �
 
 잘 디자인 된 적합성 또는 워크 아웃 앱 사용자가 해당 작업의 적합성에 대 한 목표에 도달 하도록 차트를 수 있습니다. Apple Watch 사용 하 여 적합성 및 워크 아웃 응용 프로그램에 바로 액세스할 심 박수 칼로리 및 활동 검색 합니다.
 
-[ ![](workout-apps-images/workout01.png "적합성 및 워크 아웃 응용 프로그램 예제")](workout-apps-images/workout01.png)
+[![](workout-apps-images/workout01.png "적합성 및 워크 아웃 응용 프로그램 예제")](workout-apps-images/workout01.png#lightbox)
 
 WatchOS 3, 새 _배경 실행_ 제공 워크 아웃 관련 응용 프로그램에서 Apple Watch 백그라운드에서 실행 하 고 HealthKit 데이터에 액세스할 수 있습니다.
 
@@ -60,20 +60,20 @@ Apple Watch 높은 성능을 유지 하기 위해 백그라운드에서 실행�
 1. 에 **솔루션 탐색기**, 조사식 확장 도우미 iPhone 앱을 두 번 클릭 `Info.plist` 편집을 위해 열 파일입니다.
 2. 전환 하는 **소스** 보기: 
 
-    [ ![](workout-apps-images/plist01.png "소스 뷰")](workout-apps-images/plist01.png)
+    [![](workout-apps-images/plist01.png "소스 뷰")](workout-apps-images/plist01.png#lightbox)
 3. 라는 새 키를 추가 `WKBackgroundModes` 설정 하 고는 **형식** 를 `Array`: 
 
-    [ ![](workout-apps-images/plist02.png "WKBackgroundModes 라는 새 키를 추가 합니다.")](workout-apps-images/plist02.png)
+    [![](workout-apps-images/plist02.png "WKBackgroundModes 라는 새 키를 추가 합니다.")](workout-apps-images/plist02.png#lightbox)
 4. 배열에 새 항목 추가 **형식** 의 `String` 값 `workout-processing`: 
 
-    [ ![](workout-apps-images/plist03.png "문자열 형식 및 처리 워크 아웃의 값을 가진 배열에 새 항목 추가")](workout-apps-images/plist03.png)
+    [![](workout-apps-images/plist03.png "문자열 형식 및 처리 워크 아웃의 값을 가진 배열에 새 항목 추가")](workout-apps-images/plist03.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
 
 ## <a name="starting-a-workout-session"></a>워크 아웃 세션 시작
 
 워크 아웃 세션을 시작 하는 세 가지 주요 단계가 있습니다.
 
-[ ![](workout-apps-images/workout02.png "워크 아웃 세션을 시작 하는 세 가지 주요 단계")](workout-apps-images/workout02.png)
+[![](workout-apps-images/workout02.png "워크 아웃 세션을 시작 하는 세 가지 주요 단계")](workout-apps-images/workout02.png#lightbox)
 
 1. 응용 프로그램 데이터 HealthKit에 액세스 하려면 권한 부여를 요청 해야 합니다.
 2. 시작 되 고 워크 아웃 형식에 대 한 워크 아웃 구성 개체를 만듭니다.
@@ -97,7 +97,7 @@ Apple Watch 높은 성능을 유지 하기 위해 백그라운드에서 실행�
 1. 편집하기 위해 **솔루션 탐색기**에서 `Entitlements.plist` 파일을 두 번 클릭하여 엽니다.
 2. 아래쪽으로 스크롤하여 확인 **사용 HealthKit**: 
 
-    [ ![](workout-apps-images/auth01.png "Enable HealthKit 확인")](workout-apps-images/auth01.png)
+    [![](workout-apps-images/auth01.png "Enable HealthKit 확인")](workout-apps-images/auth01.png#lightbox)
 3. 파일의 변경 내용을 저장합니다.
 4. 지침에 따라는 [명시적 앱 ID 및 프로비저닝 프로필](~/ios/platform/healthkit.md) 및 [앱 ID 및 프로비저닝 프로필와 Xamarin.iOS 앱 연결](~/ios/platform/healthkit.md) 의 섹션은 [소개 HealthKit](~/ios/platform/healthkit.md) 올바르게 앱 프로 비전 하는 문서입니다.
 5. 지침을 사용 하 여 마지막으로 [상태 키트 프로그래밍](~/ios/platform/healthkit.md) 및 [the 사용자에서 권한을 요청](~/ios/platform/healthkit.md) 의 섹션은 [HealthKit 소개](~/ios/platform/healthkit.md) 요청에 대 한 문서 사용자의 HealthKit 데이터 저장소에 액세스할 수 있는 권한입니다.
@@ -273,7 +273,7 @@ private void StartOutdoorRun ()
 
 앱이 워크 아웃 세션을 시작 하는 경우 사용자가 자신의 watch 화면에 다시 전환 아주 작은 녹색 "man 실행 중" 아이콘 글꼴 위에 표시 됩니다.
 
-[ ![](workout-apps-images/workout03.png "아주 작은 녹색 실행 중인 매뉴얼 아이콘 글꼴 위에 표시")](workout-apps-images/workout03.png)
+[![](workout-apps-images/workout03.png "아주 작은 녹색 실행 중인 매뉴얼 아이콘 글꼴 위에 표시")](workout-apps-images/workout03.png#lightbox)
 
 사용자가이 아이콘을 하는 경우은 돌아갑니다 다시 응용 프로그램.
 
@@ -281,7 +281,7 @@ private void StartOutdoorRun ()
 
 워크 아웃 세션 구성 되어 시작, 되 면 응용 프로그램 (예: 사용자의 심 박수) 세션에 대 한 데이터를 수집 하 고 세션의 상태를 제어 해야 합니다.
 
-[ ![](workout-apps-images/workout04.png "데이터 수집 및 제어 다이어그램")](workout-apps-images/workout04.png)
+[![](workout-apps-images/workout04.png "데이터 수집 및 제어 다이어그램")](workout-apps-images/workout04.png#lightbox)
 
 1. **샘플을 관찰** -응용 프로그램에 따라 처리 되 고 사용자에 게 표시 되는 HealthKit에서 정보를 검색 해야 합니다.
 2. **이벤트를 관찰** -앱 HealthKit 하거나 (예: 사용자는 워크 아웃 일시 중지) 응용 프로그램의 UI에서 생성 되는 이벤트에 응답 해야 합니다.
@@ -502,7 +502,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 다음 단계 함께 종료 되 고 워크 아웃 세션을 저장 해야 합니다.
 
-[ ![](workout-apps-images/workout05.png "종료 하 고 워크 아웃 세션 다이어그램 저장")](workout-apps-images/workout05.png)
+[![](workout-apps-images/workout05.png "종료 하 고 워크 아웃 세션 다이어그램 저장")](workout-apps-images/workout05.png#lightbox)
 
 1. 첫째, 응용 프로그램 워크 아웃 세션을 종료 해야 합니다.
 2. 워크 아웃 세션 HealthKit에 저장 됩니다.
@@ -642,7 +642,7 @@ WatchOS 앱이 실행 되는 동안 WatchConnectivity 메시징 및 통신 부�
 
 이 프로세스의 작동 방식에 대해 살펴보겠습니다.
 
-[ ![](workout-apps-images/workout06.png "iPhone 및 Apple Watch 통신 다이어그램")](workout-apps-images/workout06.png)
+[![](workout-apps-images/workout06.png "iPhone 및 Apple Watch 통신 다이어그램")](workout-apps-images/workout06.png#lightbox)
 
 1. IPhone 앱을 만듭니다는 `HKWorkoutConfiguration` 개체 및 워크 아웃 유형 및 위치를 설정 합니다.
 2. `HKWorkoutConfiguration` 개체가 모두 보내질 Apple Watch 버전의 앱 및 시스템에서 시작 되어 아직 실행 하지 않은 경우.

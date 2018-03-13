@@ -8,23 +8,23 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b07a88f25da1ea504785ddc4a0db8db1ed0e2650
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a04dc047674b67b8f21571ed9e7890ddf773f64
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩이 통합된 API로 마이그레이션
 
 _이 문서에서는 Xamarin.IOS 및 Xamarin.Mac 응용 프로그램에 통합 된 Api를 지원 하기 위해 기존 Xamarin 바인딩 프로젝트를 업데이트 하는 데 필요한 단계에 설명 합니다._
 
-#<a name="overview"></a>개요
+## <a name="overview"></a>개요
 
 2015 년 2 월 1 일 시작 Apple 필요 iTunes 및 Mac 앱 스토어에 대 한 모든 새 전송은 64 비트 응용 프로그램 이어야 합니다. 결과적으로, 새로운 Xamarin.iOS 또는 Xamarin.Mac 응용 프로그램 수를 사용 하 여 새 통합 API 기존 클래식 MonoTouch 및 MonoMac Api 대신 64 비트 지원 해야 합니다.
 
 또한 Xamarin 바인딩 프로젝트는 64 비트 Xamarin.iOS 또는 Xamarin.Mac 프로젝트에 포함 시킬 새 통합 Api를도 지원 해야 합니다. 이 문서는 통합 API를 사용 하도록 기존 바인딩 프로젝트를 업데이트 하는 데 필요한 단계를 설명 합니다.
 
-#<a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
 이 문서에 제공 된 단계를 완료 하려면 다음이 요구 됩니다.
 
@@ -33,7 +33,7 @@ _이 문서에서는 Xamarin.IOS 및 Xamarin.Mac 응용 프로그램에 통합 �
 
 바인딩 프로젝트가 Windows 컴퓨터에서 Visual studio에서 지원 되지 않습니다.
 
-#<a name="modify-the-using-statements"></a>사용 하 여 문을 수정 합니다.
+## <a name="modify-the-using-statements"></a>사용 하 여 문을 수정 합니다.
 
 통합 Api 쉽게 그 어느 때 보다 Mac 및 iOS로 있도록 동일한 32와 64 비트 응용 프로그램을 지원 하기 위해 이진 사이 코드를 공유할 수 있습니다. 삭제 하 여는 _MonoMac_ 및 _MonoTouch_ 접두사는 네임 스페이스에서 간단한 공유에 걸쳐 균일 Xamarin.Mac Xamarin.iOS 및 응용 프로그램 프로젝트입니다.
 
@@ -61,9 +61,9 @@ using ObjCRuntime;
 
 다시 모든에 대해이 작업을 수행 해야 합니다 `.cs` 바인딩 프로젝트에는 파일입니다. 위치에이 변경으로 다음 단계는 새 네이티브 데이터 형식을 사용 하 여 바인딩 프로젝트를 업데이트할 것입니다.
 
-통합 API에 대 한 자세한 내용은 참조 하십시오는 [통합 API](~/cross-platform/macios/unified/index.md) 설명서입니다. 자세한 배경을 알고 싶으면 32와 64 비트 응용 프로그램 및 프레임 워크에 대 한 정보를 지원에 대 한 참조는 [32, 64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64.md) 설명서입니다.
+통합 API에 대 한 자세한 내용은 참조 하십시오는 [통합 API](~/cross-platform/macios/unified/index.md) 설명서입니다. 자세한 배경을 알고 싶으면 32와 64 비트 응용 프로그램 및 프레임 워크에 대 한 정보를 지원에 대 한 참조는 [32, 64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서입니다.
 
-#<a name="update-to-native-data-types"></a>네이티브 데이터 형식에 대 한 업데이트
+## <a name="update-to-native-data-types"></a>네이티브 데이터 형식에 대 한 업데이트
 
 Objective C 매핑하는 `NSInteger` 데이터 형식을 `int32_t` 32 비트 시스템 및 `int64_t` 64 비트 시스템에서 합니다. 이 문제를 찾으려면 새 통합 API는 이전을 사용 하는 대체 `int` (.net에서으로 정의 되 고 항상 `System.Int32`)을 새 데이터 형식: `System.nint`합니다.
 
@@ -94,7 +94,7 @@ nint Add(nint operandUn, nint operandDeux);
 
 이러한 데이터 형식 변경 하는 방법에 대 한 자세한 내용은 참조는 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 문서.
 
-#<a name="update-the-coregraphics-types"></a>CoreGraphics 형식 업데이트
+## <a name="update-the-coregraphics-types"></a>CoreGraphics 형식 업데이트
 
 함께 사용 되는 포인트, 크기 및 사각형 데이터 형식을 `CoreGraphics` 에서 실행 중인 장치에 따라 32 또는 64 비트를 사용 합니다. Xamarin iOS 및 Mac Api 원래 바인딩된 때 기존 데이터 구조에 속하는 데이터 형식에 맞게 발생 사용한 `System.Drawing` (`RectangleF` 예를 들어).
 
@@ -130,12 +130,12 @@ IntPtr Constructor (CGRect frame);
 
 모든 코드 변경 내용을 했으니에서, 우리의 바인딩 프로젝트를 수정 하거나 통합 Api에 대해 바인딩할 파일을 확인 해야 합니다.
 
-#<a name="modify-the-binding-project"></a>바인딩 프로젝트 수정
+## <a name="modify-the-binding-project"></a>바인딩 프로젝트 수정
 
 수정 하거나 해야 통합 Api를 사용 하 여 바인딩 프로젝트를 업데이트 하는 마지막 단계는 `MakeFile` 프로젝트를 빌드하거나 Xamarin 프로젝트 형식 (경우 Mac 용 Visual Studio 내에서 바인딩하는 것) 하 고 지시를 사용 하는 _btouch_  클래식 것 대신 통합 Api에 대해 바인딩할 합니다.
 
 
-##<a name="updating-a-makefile"></a>메이크파일의 업데이트
+### <a name="updating-a-makefile"></a>메이크파일의 업데이트
 
 메이크파일을 사용 하는 Xamarin에 우리의 바인딩 프로젝트를 빌드할 수는 합니다. DLL의 경우 수집 해야 포함는 `--new-style` 명령줄 옵션과 호출 `btouch-native` 대신 `btouch`합니다.
 
@@ -189,7 +189,7 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 
 이제 실행 우리의 `MakeFile` API의 새로운 64 비트 버전을 빌드하려면 정상적으로 합니다.
 
-##<a name="updating-a-binding-project-type"></a>바인딩 프로젝트 형식 업데이트
+### <a name="updating-a-binding-project-type"></a>바인딩 프로젝트 형식 업데이트
 
 API를 빌드하려면 Mac 바인딩 프로젝트 템플릿에 대 한 Visual Studio를 사용 하는 경우 바인딩 프로젝트 템플릿의 새 통합 API 버전으로 업데이트 해야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 다시 모든 기존 코드와 설정을 새 통합 API 바인딩 프로젝트 및 복사를 시작 하는 합니다.
 
@@ -199,7 +199,7 @@ API를 빌드하려면 Mac 바인딩 프로젝트 템플릿에 대 한 Visual St
 2. 선택 **파일** > **새** > **솔루션 중...**
 3. 새 솔루션 대화 상자에서 선택 **iOS** > **통합 API** > **iOS 프로젝트 바인딩**: 
 
-    [ ![](update-binding-images/image01new.png "새 솔루션 대화 상자에서 선택 iOS / 통합 API / iOS 바인딩 프로젝트")](update-binding-images/image01new.png)
+    [![](update-binding-images/image01new.png "새 솔루션 대화 상자에서 선택 iOS / 통합 API / iOS 바인딩 프로젝트")](update-binding-images/image01new.png#lightbox)
 4. '새 프로젝트 구성' 대화 상자에서 다음을 입력 한 **이름** 클릭 확인 하 고 새 바인딩 프로젝트에 대 한는 **확인** 단추입니다.
 5. 64 비트 버전에 대 한 바인딩을 만들 할 Objective C 라이브러리의를 포함 합니다.
 6. 기존 32 비트 클래식 API 바인딩 프로젝트의 소스 코드를 통해 복사 (예:는 `ApiDefinition.cs` 및 `StructsAndEnums.cs` 파일).
@@ -207,7 +207,7 @@ API를 빌드하려면 Mac 바인딩 프로젝트 템플릿에 대 한 Visual St
 
 모든 위치에서 이러한 변경 내용을 사용 하 여 32 비트 버전와 마찬가지로 새 64 비트 버전의 API 빌드할 수 있습니다.
 
-#<a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 문서에서 새 통합 Api 및 64 비트 장치를 지원 하기 위해 기존 Xamarin 바인딩 프로젝트 변경 해야 하는 변경 사항을 소개 했지만 및 새 64 비트 호환 버전의 API 빌드하는 데 필요한 단계입니다.
 
@@ -216,8 +216,8 @@ API를 빌드하려면 Mac 바인딩 프로젝트 템플릿에 대 한 Visual St
 ## <a name="related-links"></a>관련 링크
 
 - [IOS 및 Mac](~/cross-platform/macios/index.md)
-- [통합된 API](~/cross-platform/macios/nativetypes.md)
-- [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64.md)
+- [Unified API](~/cross-platform/macios/nativetypes.md)
+- [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md)
 - [기존 iOS 앱 업그레이드](~/cross-platform/macios/unified/updating-ios-apps.md)
-- [통합된 API](~/cross-platform/macios/unified/index.md)
+- [Unified API](~/cross-platform/macios/unified/index.md)
 - [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)

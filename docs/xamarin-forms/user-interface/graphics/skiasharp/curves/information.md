@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 992e6583d64f078c0cd693765a1512c3e41a620a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7edf0c8e563dad25693d184d3a44a3e66466126
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -110,7 +110,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `Length` 속성을 새로 만든 `SKPathMeasure` 개체의 경로 길이 가져옵니다. 이 나눈는 `baseTextWidth` (변수인 10의 텍스트 크기에 따라 텍스트의 너비) 값 및 다음 10의 기본 텍스트 크기와 곱하면 합니다. 결과 해당 경로의 텍스트를 표시 하기 위한 새 텍스트 크기:
 
-[![](information-images/pathlength-small.png "경로 길이 페이지의 삼중 스크린샷")](information-images/pathlength-large.png "경로 길이 페이지의 삼중 스크린샷")
+[![](information-images/pathlength-small.png "경로 길이 페이지의 삼중 스크린샷")](information-images/pathlength-large.png#lightbox "경로 길이 페이지의 삼중 스크린샷")
 
 베 지 어 곡선을 더 길거나 더 짧은 가져옵니다, 텍스트 크기 변경 볼 수 있습니다.
 
@@ -136,7 +136,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 **자전거 절반 파이프** 페이지 사람 모양 아이콘이 있는 입방 형 3 차원 곡선을 따라 전달 자전거로 자전거에 애니메이션 효과 적용 합니다.
 
-[![](information-images/unicyclehalfpipe-small.png "자전거 절반 파이프 페이지의 삼중 스크린샷")](information-images/unicyclehalfpipe-large.png "자전거 절반 파이프 페이지의 삼중 스크린샷")
+[![](information-images/unicyclehalfpipe-small.png "자전거 절반 파이프 페이지의 삼중 스크린샷")](information-images/unicyclehalfpipe-large.png#lightbox "자전거 절반 파이프 페이지의 삼중 스크린샷")
 
 `SKPaint` 절반 파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다는 [ `UnicycleHalfPipePage` ]() 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
 
@@ -425,7 +425,7 @@ static class PathExtensions
 
 **GlobularText** 샘플이 확장 메서드를 사용 하 여 것 처럼 보이는 3 차원 효과에 반구 주위의 텍스트를 줄 바꿈 합니다.
 
-[![](information-images/globulartext-small.png "Globular 텍스트 페이지의 삼중 스크린샷")](information-images/globulartext-large.png "Globular 텍스트 페이지의 삼중 스크린 샷")
+[![](information-images/globulartext-small.png "Globular 텍스트 페이지의 삼중 스크린샷")](information-images/globulartext-large.png#lightbox "Globular 텍스트 페이지의 삼중 스크린 샷")
 
 [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드: 
 

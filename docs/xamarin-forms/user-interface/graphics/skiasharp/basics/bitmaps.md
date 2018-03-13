@@ -4,14 +4,15 @@ description: "다양 한 소스에서 비트맵을 로드 하 고 표시 합니�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 9045fb2f54407fe8c9071efc5570296bb102f72e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bitmap-basics"></a>비트맵 기본 사항
 
@@ -204,7 +205,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 때문에이 스크린 샷에 원숭이 확장 된 가로로 사각형의 크기에 비트맵이 늘어납니다.
 
-[![](bitmaps-images/basicbitmaps-small.png "기본 비트맵 페이지의 삼중 스크린샷")](bitmaps-images/basicbitmaps-large.png "기본 비트맵 페이지의 삼중 스크린샷")
+[![](bitmaps-images/basicbitmaps-small.png "기본 비트맵 페이지의 삼중 스크린샷")](bitmaps-images/basicbitmaps-large.png#lightbox "기본 비트맵 페이지의 삼중 스크린샷")
 
 세 번째 이미지 & #x 2014; 프로그램을 실행 하 고 사용자 고유의 그림 라이브러리 & #x 2014;에서 사진을 로드 하는 경우에 볼 수 있습니다 사각형의 않고 사각형 안에 표시 됩니다는 비트맵의 가로 세로 비율을 유지 하기 위해 위치 및 크기가 조정 됩니다. 이 계산이 자릿수 비트맵 및 대상 사각형의 크기에 따라 요소 및 해당 영역에 있는 사각형 가운데 맞추기 계산 필요 하기 때문에 약간 더 개입 됩니다.
 

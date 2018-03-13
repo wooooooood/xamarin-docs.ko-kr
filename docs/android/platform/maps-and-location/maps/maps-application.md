@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>지도 응용 프로그램
 
 Xamarin.Android의 지도를 작성 하려면 가장 간단한 방법은 아래에 표시 된 기본 제공 지도 응용 프로그램을 활용 하 여:
 
-[![기본 제공 Google 맵 응용 프로그램의 예제 스크린 샷](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![기본 제공 Google 맵 응용 프로그램의 예제 스크린 샷](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 지도 응용 프로그램을 사용 하는 경우 지도 응용 프로그램의 일부가 되지 않습니다. 대신, 응용 프로그램 맵 응용 프로그램을 시작 하 고 지도 외부적으로 로드 됩니다. 다음 섹션에는 위의 그림과 같이 지도 시작 하기 위해 Xamarin.Android를 사용 하는 방법을 검사 합니다.
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>의도 만들기
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 이 코드는 이전 스크린 샷에 표시 된 맵 시작 하는 데 필요한 모든. 위도 및 경도 지정 하는 것 외에도 지도 대 한 URI 체계는 다른 여러 가지 옵션을 지원 합니다.
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>지역 URI 체계
 
@@ -52,10 +50,9 @@ URI를 만드는 데 지역 체계를 사용 하는 위의 코드. 이 URI 체�
 
 그런 다음 지도에 표시 되는 위치를 검색할 Google의 geocoder 서비스를 사용 하는 쿼리 (즉 집 주소 또는 검색 용어)을 사용 하는 URI의 버전이 있습니다. 예를 들어 URI `geo:0,0?q=coop+Cambridge` 아래에 표시 된 맵에 결과:
 
-[![검색 용어와 Google 맵을 보여 주는 예제 스크린 샷](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![검색 용어와 Google 맵을 보여 주는 예제 스크린 샷](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 지역 URI 구성표에 대 한 자세한 내용은 참조 [지도에 위치를 표시 합니다.](http://developer.android.com/guide/components/intents-common.html#Maps)합니다.
 
@@ -64,7 +61,7 @@ URI를 만드는 데 지역 체계를 사용 하는 위의 코드. 이 URI 체�
 
 지역 구성표 외에도 Android 프로그램 의도에서 번 지 뷰를 로드도 지원 합니다. Xamarin.Android에서 시작 된 거리 보기 응용 프로그램의 예는 다음과 같습니다.
 
-[![거리 보기의 예에서는 스크린 샷](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![거리 보기의 예에서는 스크린 샷](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 거리 보기를 시작 하려면 사용 된 `google.streetview` URI 체계를 다음 코드와 같이:
 

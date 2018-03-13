@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 6ac228f85f3f717ddf95e0dc2e434b13bfec5d06
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: db7f5058983195c0dcea9505f5adcd0fd03f905d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 그림 라이브러리에서 선택
 
@@ -200,25 +200,22 @@ namespace DependencyServiceSample.Droid
             intent.SetType("image/*");
             intent.SetAction(Intent.ActionGetContent);
 
-            // Get the MainActivity instance
-            MainActivity activity = Forms.Context as MainActivity;
-
             // Start the picture-picker activity (resumes in MainActivity.cs)
-            activity.StartActivityForResult(
+            MainActivity.Instance.StartActivityForResult(
                 Intent.CreateChooser(intent, "Select Picture"),
                 MainActivity.PickImageId);
 
             // Save the TaskCompletionSource object as a MainActivity property
-            activity.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
+            MainActivity.Instance.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
 
             // Return Task object
-            return activity.PickImageTaskCompletionSource.Task;
+            return MainActivity.Instance.PickImageTaskCompletionSource.Task;
         }
     }
 }
 ```
 
-액세스 하는 메서드는 `MainActivity` 여러 용도로 클래스:에 대 한는 `PickImageId` 필드에 대 한는 `TaskCompletionSource` 속성을 호출 하 고 `StartActivityForResult`합니다. 이 메서드는 여 정의 된는 `FormsApplicationActivity` 클래스의 기본 클래스 즉 `MainActivity`합니다.
+액세스 하는이 메서드는 `MainActivity` 여러 용도로 클래스:에 대 한는 `Instance` 속성을에 대 한는 `PickImageId` 필드에 대 한는 `TaskCompletionSource` 속성을 호출 하 고 `StartActivityForResult`합니다. 이 메서드는 여 정의 된는 `FormsApplicationActivity` 클래스의 기본 클래스 즉 `MainActivity`합니다.
 
 <a name="UWP_Implementation" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e3701960f246a8f627d991edf244656b5fd8958e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>이식 가능한 클래스 라이브러리 소개
 
@@ -29,10 +29,6 @@ _이 문서는 PCL 이식 가능한 클래스 라이브러리 () 프로젝트를
 
 
 이 페이지를 만드는 방법을 설명는 **PCL** 여러 플랫폼 특정 프로젝트에서 참조할 수 있습니다는 특정 프로필을 대상으로 하는 프로젝트입니다.
-
-## <a name="requirements"></a>요구 사항
-
-이식 가능한 라이브러리 프로젝트는 자동으로 Visual Studio에서 Mac 용에서 사용 macOS 등 하 고는 Visual Studio 2013 이상에 기본 제공 합니다.
 
 
 ## <a name="what-is-a-portable-class-library"></a>이식 가능한 클래스 라이브러리는 무엇입니까?
@@ -132,7 +128,7 @@ Y </td>
   </tbody>
 </table>
 
-Xamarin.iOS 및 Xamarin.Android Visual Studio 2013 이상에서 제공 하는 모든 프로필을 지원 하 고 다른 플랫폼을 선택 하 여 사용자가 만드는 모든 라이브러리의 기능 가용성 제한만 됩니다를 반영 하는 Xamarin 열 이 옵션을 지원 합니다.
+Xamarin 열 반영 Xamarin.iOS 및 Xamarin.Android Visual Studio와 함께 제공 하는 모든 프로필을 지원 하 고 사용자가 만드는 모든 라이브러리의 기능 가용성을 지원 하도록 선택 하면 다른 플랫폼만 제한 됩니다.
 
 조합 하는 프로필은 다음과 같습니다.
 
@@ -170,7 +166,7 @@ Xamarin.iOS 및 Xamarin.Android Visual Studio 2013 이상에서 제공 하는 �
 
 
 
-[![](pcl-images/image1.png "이 다이어그램도 종속성 주입을 사용 하 여 플랫폼에 종속 된 기능에 전달할 수 있지만 이식 가능한 클래스 라이브러리를 사용 하 여 코드를 공유 하는 플랫폼 간 응용 프로그램의 아키텍처를 보여 줍니다.")](pcl-images/image1.png)
+[![](pcl-images/image1.png "이 다이어그램도 종속성 주입을 사용 하 여 플랫폼에 종속 된 기능에 전달할 수 있지만 이식 가능한 클래스 라이브러리를 사용 하 여 코드를 공유 하는 플랫폼 간 응용 프로그램의 아키텍처를 보여 줍니다.")](pcl-images/image1.png#lightbox)
 
 
 
@@ -212,7 +208,7 @@ PCL 코드를 추가할 준비가 되었습니다. (응용 프로그램 프로�
 
 
 
-[![](pcl-images/image4.png "를 확인 하 고이 프로젝트에 대 한 PCL 설정을 변경 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 여기에 표시 된 화면 표시 옵션 빌드 일반을 선택합니다")](pcl-images/image4.png)
+[![](pcl-images/image4.png "를 확인 하 고이 프로젝트에 대 한 PCL 설정을 변경 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 여기에 표시 된 화면 표시 옵션 빌드 일반을 선택합니다")](pcl-images/image4.png#lightbox)
 
 
 
@@ -224,7 +220,7 @@ PCL 코드를 추가할 준비가 되었습니다. (응용 프로그램 프로�
 
 
 
-[![](pcl-images/image5.png "현재 프로필 업데이트 대상 프레임 워크 옵션 중 하나를 자동으로 변경 화면에서 호환 되지 않는 옵션을 선택한 경우에 경고를 표시")](pcl-images/image5.png)
+[![](pcl-images/image5.png "현재 프로필 업데이트 대상 프레임 워크 옵션 중 하나를 자동으로 변경 화면에서 호환 되지 않는 옵션을 선택한 경우에 경고를 표시")](pcl-images/image5.png#lightbox)
 
 
 
@@ -238,7 +234,7 @@ PCL 라이브러리를 코드를 작성 하는 경우 Mac 편집기에 대 한 V
 
 
 
-[![](pcl-images/image6.png "Profile136 실제로 발생 표시 되는 사용 가능한 클래스의 절반 정도 나타내는 스크롤 막대는 14 클래스를 사용할 수만 Mac 공지에 대 한 Visual Studio에서 사용 되는 기본 프로필을 사용 하는 IO")](pcl-images/image6.png)
+[![](pcl-images/image6.png "Profile136 실제로 발생 표시 되는 사용 가능한 클래스의 절반 정도 나타내는 스크롤 막대는 14 클래스를 사용할 수만 Mac 공지에 대 한 Visual Studio에서 사용 되는 기본 프로필을 사용 하는 IO")](pcl-images/image6.png#lightbox)
 
 
 
@@ -246,7 +242,7 @@ Xamarin.iOS 또는 Xamarin.Android 프로젝트 – 자동 완성 System.IO와 �
 
 
 
-[![](pcl-images/image7.png "사용 되는 모든 PCL 프로필에 없는 파일 및 디렉터리와 같은 클래스를 사용할 수 있는 포함 하 여 일반적으로 한 40 클래스")](pcl-images/image7.png)
+[![](pcl-images/image7.png "사용 되는 모든 PCL 프로필에 없는 파일 및 디렉터리와 같은 클래스를 사용할 수 있는 포함 하 여 일반적으로 한 40 클래스")](pcl-images/image7.png#lightbox)
 
 
 
@@ -261,7 +257,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image8.png "Mac 용 Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 선택한 참조 편집 다음 표시 된 것 처럼 프로젝트 탭으로 전환")](pcl-images/image8.png)
+[![](pcl-images/image8.png "Mac 용 Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 선택한 참조 편집 다음 표시 된 것 처럼 프로젝트 탭으로 전환")](pcl-images/image8.png#lightbox)
 
 
 
@@ -269,7 +265,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image9.png "TaskyPortable 샘플 응용 프로그램에 대 한 솔루션 채움")](pcl-images/image9.png)
+[![](pcl-images/image9.png "TaskyPortable 샘플 응용 프로그램에 대 한 솔루션 채움")](pcl-images/image9.png#lightbox)
 
 
 
@@ -325,7 +321,7 @@ PCL 설정을 확인 및 프로젝트를 마우스 오른쪽 단추로 클릭 �
 
 
 
-[![](pcl-images/image13.png "PCL 설정은 확인 및이 스크린 샷에 표시 된 것 처럼 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 속성 라이브러리를 선택 하 여 변경할 수")](pcl-images/image13.png)
+[![](pcl-images/image13.png "PCL 설정은 확인 및이 스크린 샷에 표시 된 것 처럼 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 속성 라이브러리를 선택 하 여 변경할 수")](pcl-images/image13.png#lightbox)
 
 
 
@@ -340,7 +336,7 @@ PCL 라이브러리를 코드를 작성 하는 경우 Visual Studio는 선택한
 
 
 
-[![](pcl-images/image14.png "Profile136 기본 프로필을 사용 하는 IO")](pcl-images/image14.png)
+[![](pcl-images/image14.png "Profile136 기본 프로필을 사용 하는 IO")](pcl-images/image14.png#lightbox)
 
 
 
@@ -348,7 +344,7 @@ PCL 라이브러리를 코드를 작성 하는 경우 Visual Studio는 선택한
 
 
 
-[![](pcl-images/image15.png "일반 프로젝트에서 자동 완성")](pcl-images/image15.png)
+[![](pcl-images/image15.png "일반 프로젝트에서 자동 완성")](pcl-images/image15.png#lightbox)
 
 
 
@@ -363,7 +359,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image16.png "표시 된 것 처럼 프로젝트 탭")](pcl-images/image16.png)
+[![](pcl-images/image16.png "표시 된 것 처럼 프로젝트 탭")](pcl-images/image16.png#lightbox)
 
 
 
@@ -371,7 +367,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image17.png "TaskyPortable 샘플 응용 프로그램에 대 한 솔루션 창")](pcl-images/image17.png)
+[![](pcl-images/image17.png "TaskyPortable 샘플 응용 프로그램에 대 한 솔루션 창")](pcl-images/image17.png#lightbox)
 
 
 
@@ -393,7 +389,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image18.png "다음은 iOS, Android 및 Windows Phone 실행 되는 결과 앱의 일부 스크린 샷은")](pcl-images/image18.png)
+[![](pcl-images/image18.png "다음은 iOS, Android 및 Windows Phone 실행 되는 결과 앱의 일부 스크린 샷은")](pcl-images/image18.png#lightbox)
 
 
 
@@ -406,7 +402,7 @@ PCL 프로젝트를 만든 후 일반적으로 참조를 추가 같은 방식으
 
 
 
-[![](pcl-images/image19.png "솔루션 구조가 같습니다. Visual Studio에서 Mac 및 Visual Studio 용 각각")](pcl-images/image19.png)
+[![](pcl-images/image19.png "솔루션 구조가 같습니다. Visual Studio에서 Mac 및 Visual Studio 용 각각")](pcl-images/image19.png#lightbox)
 
 
 
@@ -511,7 +507,7 @@ public static Result Close(Sqlite3.sqlite3 db)
 ## <a name="related-links"></a>관련 링크
 
 - [TaskyPortable (샘플)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
-- [크로스 플랫폼 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+- [플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [휴대용 Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)

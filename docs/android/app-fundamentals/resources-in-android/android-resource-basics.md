@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: c8f6832f618c37b3593f28c8efaeb87e4df5df03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resource-basics"></a>Android 리소스 기본 사항
 
@@ -39,7 +39,6 @@ ms.lasthandoff: 02/27/2018
 
 -  **Resource.designer.cs** &ndash; 이 파일은 자동으로 생성 되거나 Xamarin.Android 및 보류 된 고유에서 유지 관리 ID의 각 리소스에 할당 합니다. 이 매우 유사 하 고 Java로 작성 된 Android 응용 프로그램에 R.java 파일 용도 동일 합니다. Xamarin.Android 도구에 의해 자동으로 만들어집니다 하 고 때때로 다시 생성 됩니다.
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## <a name="creating-and-accessing-resources"></a>리소스 만들기 및 액세스
 
@@ -62,7 +61,6 @@ ms.lasthandoff: 02/27/2018
 
 리소스는 프로젝트에 추가 되 면 두 가지 응용 프로그램에서 사용 하 &ndash; 프로그래밍 방식으로 (내부의 코드) 또는 XML 파일입니다.
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## <a name="referencing-resources-programmatically"></a>프로그래밍 방식으로 리소스 참조
 
@@ -108,7 +106,6 @@ public partial class Resource
 
 -  **리소스 이름** &ndash; (확장명 없음) 리소스의 파일 이름 또는 XML 요소에 있는 리소스에 대 한 android: name 특성의 값입니다.
 
-<a name="Referencing_Resources_from_XML" />
 
 ## <a name="referencing-resources-from-xml"></a>XML에서 리소스를 참조합니다.
 

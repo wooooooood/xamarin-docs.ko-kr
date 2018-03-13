@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
@@ -138,7 +138,7 @@ Job myJob = dispatcher.NewJobBuilder()
 * A `Job`의 _수명_ 장치가 다시 부팅 될 때 까지만 됩니다 (시간 것을 예약 됩니다. 실행) &ndash; 장치를 다시 부팅은 `Job` 손실 됩니다.
 * A `Job` 되풀이 되지 &ndash; 한 번만 실행 됩니다.
 * A `Job` 가능한 한 빨리 실행 되도록 예약 됩니다.
-* 에 대 한 기본 다시 시도 전략은 `Job` 사용 하는 _지 수 백오프_ (섹션에서 자세히 아래에 설명 된 [는 RetryStrategy 설정](#Setting_a_RestryStrategy))
+* 에 대 한 기본 다시 시도 전략은 `Job` 사용 하는 _지 수 백오프_ (섹션에서 자세히 아래에 설명 된 [는 RetryStrategy 설정](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>예약 된 `Job`
 
@@ -171,6 +171,8 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 이러한 각 항목 살펴봅니다 더 다음 섹션에 있습니다.
 
+<a name="Passing_Parameters_to_a_Job" />
+
 #### <a name="passing-parameters-to-a-job"></a>작업에 매개 변수 전달
 
 매개 변수를 만들어 작업에 전달 되는 `Bundle` 와 함께 전달 되는 `Job.Builder.SetExtras` 메서드:
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>제약 조건 설정
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>설정 작업 트리거
 
 `JobTrigger` 작업을 시작할 하는 방법에 대 한 운영 체제에 대 한 지침을 제공 합니다. A `JobTrigger` 에 _창 실행_ 시기에 대 한 예약 된 시간을 정의 하는 `Job` 실행 해야 합니다. 실행 창에는 _창을 시작_ 값과 _종료 윈도_ 값입니다. 시작 창이 장치 작업을 실행 하기 전에 대기할 시간 (초) 수 있으며 최종 창 값은 실행 하기 전에 대기할 시간 (초)의 최대 수는 `Job`합니다. 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 기본 `JobTrigger` 는 값으로 표현 되는 작업에 대 한 `Trigger.Now`, 예약 된 후 최대한 빨리는 작업을 실행할 수 있는지를 지정 하는...
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>RetryStrategy 설정
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 프로그램별 지원 기능
 
@@ -42,7 +42,7 @@ Xamarin.Mac 2.10 미리 보기에서 여러 macOS 확장 지점에 대 한 지�
 - 확인할 수 없는 모든 예외에는 적은 양의에서 유용한 정보를 제공 하는 확장 프로세스 작동이 중단 됩니다는 **시스템 로그**합니다. 문제가 있는 코드를 래핑하는 `try/catch` (예외) 블록을 `NSLog`의 전에 다시 throw 할 유용할 수 있습니다.
 - **시스템 로그** 에서 액세스할 수는 **콘솔** 모드로 응용 프로그램 **응용 프로그램** > **유틸리티**:
 
-    [ ![](extensions-images/extension02.png "시스템 로그")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "시스템 로그")](extensions-images/extension02.png#lightbox)
 - 위에서 언급 한 대로 확장 호스트 응용 프로그램 실행은 등록 하 여 시스템. 삭제 된 응용 프로그램 번들 등록을 취소 합니다. 
 - "흩어진" 버전의 응용 프로그램 확장 등록 된 다음 명령을 사용 하 여 (하므로 삭제할 수 있습니다) 찾기: `plugin kit -mv`
 
@@ -65,4 +65,4 @@ Xamarin.Mac 2.10 미리 보기에서 여러 macOS 확장 지점에 대 한 지�
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

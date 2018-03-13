@@ -4,14 +4,15 @@ description: "및 SkiaSharp 회전 변환을 사용 하 여 가능한 애니메�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: c87f9a561ac2f7a8c3da1c1e4ab839431073fcb9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 146093e15651316e84947e2bd81eeee3bf55cedb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-rotate-transform"></a>회전 변환
 
@@ -57,7 +58,7 @@ using (SKPaint textPaint = new SKPaint
 
 이 프로그램에서 설정 하는 대부분 각도 캔버스의 왼쪽 위 모서리를 중심으로 하는 회전 하기 때문에 화면 밖 텍스트의 회전 합니다.
 
-[![](rotate-images/basicrotate-small.png "페이지 기본 회전의 삼중 스크린 샷")](rotate-images/basicrotate-large.png "페이지 기본 회전의 삼중 스크린 샷")
+[![](rotate-images/basicrotate-small.png "페이지 기본 회전의 삼중 스크린 샷")](rotate-images/basicrotate-large.png#lightbox "페이지 기본 회전의 삼중 스크린 샷")
 
 이러한 버전을 사용 하 여 지정한 피벗 포인트를 중심 무언가 회전 해야 하는 경우가 매우 자주는 [ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) 및 [ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) 메서드:
 
@@ -85,7 +86,7 @@ using (SKPaint textPaint = new SKPaint
 
 이제 텍스트 텍스트는 텍스트의 기준의 가로 중앙 위치를 지정 하는 데 사용 되는 지점 중심으로 회전 합니다.
 
-[![](rotate-images/centeredrotate-small.png "회전 중심 페이지의 삼중 스크린샷")](rotate-images/centeredrotate-large.png "페이지 회전 중심의 삼중 스크린 샷")
+[![](rotate-images/centeredrotate-small.png "회전 중심 페이지의 삼중 스크린샷")](rotate-images/centeredrotate-large.png#lightbox "페이지 회전 중심의 삼중 스크린 샷")
 
 가운데에 맞출지 버전의 경우와 마찬가지로 `Scale` 메서드, 가운데에 맞출지 버전은 `RotateDegrees` 호출 바로 가기는:
 
@@ -139,7 +140,7 @@ canvas.DrawText(Title, 0, 0, textPaint);
 
 회전 및 번역을 결합 하는 여러 가지 방법으로 일반적으로 합니다. **텍스트 회전** 페이지 다음 디스플레이 만듭니다.
 
-[![](rotate-images/rotatedtext-small.png "회전 된 텍스트 페이지의 삼중 스크린샷")](rotate-images/rotatedtext-large.png "회전 된 텍스트 페이지의 삼중 스크린 샷")
+[![](rotate-images/rotatedtext-small.png "회전 된 텍스트 페이지의 삼중 스크린샷")](rotate-images/rotatedtext-large.png#lightbox "회전 된 텍스트 페이지의 삼중 스크린 샷")
 
 다음은 `PaintSurface` 의 처리기는 [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) 클래스:
 
@@ -363,7 +364,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 클록이 바늘은 다소 조잡 하지만 확실히 기능:
 
-[![](rotate-images/uglyanalogclock-small.png "삼중 까다로운 아날로그 클록 텍스트 페이지의 스크린샷")](rotate-images/uglyanalogclock-large.png "Triple screenshot of the Ugly Analog page")
+[![](rotate-images/uglyanalogclock-small.png "삼중 까다로운 아날로그 클록 텍스트 페이지의 스크린샷")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 
 ## <a name="related-links"></a>관련 링크

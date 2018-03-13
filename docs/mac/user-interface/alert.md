@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 73b0a3292d7b1681b4086e8366e8b813194969a9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8901bb57ace4f05e8c26fdc43dfe8c476927903a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alerts"></a>경고
 
@@ -22,7 +22,7 @@ _이 문서에서는 Xamarin.Mac 응용 프로그램에서 알림이 있는 작�
 
 경고는 특수 한 유형의 (예: 오류)는 심각한 문제가 발생 하면 나타나는 대화 상자 또는 (예: 파일을 삭제 하려면 준비) 경고로 표시 합니다. 경고 대화 상자 이기 때문에 문제가 닫을 수 전에 사용자 응답도 필요 합니다.
 
-[ ![](alert-images/alert06.png "예제에서는 경고")](alert-images/alert06.png)
+[![](alert-images/alert06.png "예제에서는 경고")](alert-images/alert06.png#lightbox)
 
 이 문서는 기본적인 Xamarin.Mac 응용 프로그램에서 경고를 사용 하겠습니다. 
 
@@ -60,7 +60,7 @@ alert.RunModal ();
 
 위의 코드는 단일 경고 아이콘, 제목, 경고 메시지 등에 겹쳐 응용 프로그램 아이콘으로 경고를 표시 **확인** 단추:
 
-[ ![](alert-images/alert01.png "확인 단추를 사용 하는 경고")](alert-images/alert01.png)
+[![](alert-images/alert01.png "확인 단추를 사용 하는 경고")](alert-images/alert01.png#lightbox)
 
 Apple 경고 사용자 지정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다.
 
@@ -92,7 +92,7 @@ alert.RunModal ();
 ```
 이 코드를 실행 하는 경우 다음 내용이 표시 됩니다.
 
-[ ![](alert-images/alert02.png "간단한 경고")](alert-images/alert02.png)
+[![](alert-images/alert02.png "간단한 경고")](alert-images/alert02.png#lightbox)
 
 다음 코드를 시트로 동일한 경고를 표시합니다.
 
@@ -107,7 +107,7 @@ alert.BeginSheet (this);
 
 이 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert03.png "시트로 표시 되는 경고")](alert-images/alert03.png)
+[![](alert-images/alert03.png "시트로 표시 되는 경고")](alert-images/alert03.png#lightbox)
 
 
 <a name="Working_with_Alert_Buttons" />
@@ -136,7 +136,7 @@ var result = alert.RunModal ();
 
 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert04.png "세 개의 단추 옵션과 함께 경고")](alert-images/alert04.png)
+[![](alert-images/alert04.png "세 개의 단추 옵션과 함께 경고")](alert-images/alert04.png#lightbox)
 
 시트로 동일한 경고에 대 한 코드는 다음과 같습니다.
 
@@ -155,7 +155,7 @@ alert.BeginSheetForResponse (this, (result) => {
 ```
 이 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert05.png "시트로 표시 되는 세 개의 단추 경고")](alert-images/alert05.png)
+[![](alert-images/alert05.png "시트로 표시 되는 세 개의 단추 경고")](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > 경고에 세 개 이상의 단추를 추가 해서는 안 됩니다.
@@ -184,7 +184,7 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 
 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert06.png "경고 표시 안 함 단추")](alert-images/alert06.png)
+[![](alert-images/alert06.png "경고 표시 안 함 단추")](alert-images/alert06.png#lightbox)
 
 시트로 동일한 경고에 대 한 코드는 다음과 같습니다.
 
@@ -205,7 +205,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 이 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert07.png "경고 표시 안 함 단추와 시트로 표시")](alert-images/alert07.png)
+[![](alert-images/alert07.png "경고 표시 안 함 단추와 시트로 표시")](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView" />
 
@@ -235,7 +235,7 @@ Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.Suppression
 
 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert08.png "코드를 실행 하는 경우 다음 나타납니다.")](alert-images/alert08.png)
+[![](alert-images/alert08.png "코드를 실행 하는 경우 다음 나타납니다.")](alert-images/alert08.png#lightbox)
 
 시트로 동일한 경고는 다음과 같습니다.
 
@@ -260,7 +260,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 이 코드를 실행 하는 경우 다음 표시 됩니다.
 
-[ ![](alert-images/alert09.png "사용자 지정 보기와 경고")](alert-images/alert09.png)
+[![](alert-images/alert09.png "사용자 지정 보기와 경고")](alert-images/alert09.png#lightbox)
 
 <a name="Summary" />
 
@@ -273,6 +273,6 @@ alert.BeginSheetForResponse (this, (result) => {
 - [MacWindows (샘플)](https://developer.xamarin.com/samples/mac/MacWindows/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [창 작업](~/mac/user-interface/window.md)
-- [OS X 사용자 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [NSAlert](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAlert_Class/index.html#//apple_ref/doc/uid/TP40004001)

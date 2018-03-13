@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 34063be728f8a13bbe5d68440d9aceba417c5627
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0717b8484c6094bb1d9589c44df37745d9e21900
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-user-interface"></a>watchOS 사용자 인터페이스
 
 [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) 샘플에서는 다양 한 watchOS 컨트롤을 보여 줍니다. 응용 프로그램의 스토리 보드는 다음과 같습니다 (확대/축소 하려면 클릭).
 
-[ ![](images/storyboard-sml.png "샘플 watchOS 레이아웃")](images/storyboard.png)
+[![](images/storyboard-sml.png "샘플 watchOS 레이아웃")](images/storyboard.png#lightbox)
 
 모든 컨트롤의 프로그래밍 방식 이름 접두사로 `WKInterface` 않음 (예: `WKInterfaceLabel`, `WKInterfaceButton`).
 

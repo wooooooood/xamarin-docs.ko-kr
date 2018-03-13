@@ -3,16 +3,16 @@ title: "고급 사용자 알림"
 description: "이 문서에서는 활용 전체 Xamarin.iOS 앱에서 하는 방법과 새 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4e1ff652-28f0-4566-b383-9d12664401a4
+ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6408f3b45f93413fa814e410f07e7b71179b7338
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="advanced-user-notifications"></a>고급 사용자 알림
 
@@ -81,7 +81,7 @@ UI 사용자 지정 사용자 알림이 표시 되 면 알림을에 연결 된 �
 
 다음 프로세스의 개요를 살펴봅니다.
 
-[ ![](advanced-user-notifications-images/extension02.png "추가 미디어 첨부 파일 프로세스")](advanced-user-notifications-images/extension02.png)
+[![](advanced-user-notifications-images/extension02.png "추가 미디어 첨부 파일 프로세스")](advanced-user-notifications-images/extension02.png#lightbox)
 
 서비스 확장 (APNs)를 통해 장치에 원격 알림이 배달 되 면 원하는 모든 수단을 통해 필요한 이미지 다운로드할 수 있습니다 (예:는 `NSURLSession`) 및 이미지를 수신한 후 알림 및 표시 폴더의 내용을 수정할 수 있습니다 사용자에 게 것입니다.
 
@@ -157,7 +157,7 @@ IOS 10에서에서 알림은 미디어 첨부 파일의 이미지를 지원 (정
 
 사용자 지정 UI를 사용한 사용자 알림을 사용자에 게 표시 되 면 다음과 같은 요소가 미치게 될:
 
-[ ![](advanced-user-notifications-images/customui01.png "사용자 지정 UI 요소와 사용자 알림")](advanced-user-notifications-images/customui01.png)
+[![](advanced-user-notifications-images/customui01.png "사용자 지정 UI 요소와 사용자 알림")](advanced-user-notifications-images/customui01.png#lightbox)
 
 사용자 지정 작업 (알림 아래 제시 된)와 상호 작용할 하는 경우는 발생 하는 결과 지정된 된 동작을 호출할 때로 사용자 피드백을 제공할 사용자 인터페이스를 업데이트할 수 있습니다.
 
@@ -171,13 +171,13 @@ Xamarin.iOS 앱에서 UI는 사용자 지정 사용자 알림을 구현 하려�
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 패드** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **알림 콘텐츠 확장이** 클릭는 **다음** 단추: 
 
-    [ ![](advanced-user-notifications-images/notify01.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01.png)
+    [![](advanced-user-notifications-images/notify01.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **다음** 단추: 
 
-    [ ![](advanced-user-notifications-images/notify02.png "확장에 대 한 이름을 입력 합니다.")](advanced-user-notifications-images/notify02.png)
+    [![](advanced-user-notifications-images/notify02.png "확장에 대 한 이름을 입력 합니다.")](advanced-user-notifications-images/notify02.png#lightbox)
 5. 조정 된 **프로젝트 이름** 및/또는 **솔루션 이름** 필요 하 고 클릭는 **만들기** 단추: 
 
-    [ ![](advanced-user-notifications-images/notify03.png "프로젝트 이름 및/또는 솔루션 이름 조정")](advanced-user-notifications-images/notify03.png)
+    [![](advanced-user-notifications-images/notify03.png "프로젝트 이름 및/또는 솔루션 이름 조정")](advanced-user-notifications-images/notify03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -185,7 +185,7 @@ Xamarin.iOS 앱에서 UI는 사용자 지정 사용자 알림을 구현 하려�
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **알림 콘텐츠 확장이**: 
 
-    [ ![](advanced-user-notifications-images/notify01w.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01w.png)
+    [![](advanced-user-notifications-images/notify01w.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01w.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **확인** 단추입니다.
 
 -----
@@ -254,7 +254,7 @@ namespace MonkeyChatNotifyExtension
 3. 확장 된 `NSExtension` 키입니다.
 4. 추가 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장에 속한 범주 값 (이 예제의 ' 이벤트 초대): 
 
-    [ ![](advanced-user-notifications-images/customui02.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02.png)
+    [![](advanced-user-notifications-images/customui02.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02.png#lightbox)
 5. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -263,7 +263,7 @@ namespace MonkeyChatNotifyExtension
 3. 확장 된 `NSExtension` 키입니다.
 4. 추가 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장에 속한 범주 값 (이 예제의 ' 이벤트 초대): 
 
-    [ ![](advanced-user-notifications-images/customui02w.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02w.png)
+    [![](advanced-user-notifications-images/customui02w.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02w.png#lightbox)
 5. 변경 내용을 저장합니다.
 
 -----
@@ -272,11 +272,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui03.png "알림 콘텐츠 확장 범주")](advanced-user-notifications-images/customui03.png)
+[![](advanced-user-notifications-images/customui03.png "알림 콘텐츠 확장 범주")](advanced-user-notifications-images/customui03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui03w.png "알림 콘텐츠 확장 범주")](advanced-user-notifications-images/customui03w.png)
+[![](advanced-user-notifications-images/customui03w.png "알림 콘텐츠 확장 범주")](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui04.png "기본 정보 찾기")](advanced-user-notifications-images/customui04.png)
+[![](advanced-user-notifications-images/customui04.png "기본 정보 찾기")](advanced-user-notifications-images/customui04.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui04w.png "기본 정보 찾기")](advanced-user-notifications-images/customui04w.png)
+[![](advanced-user-notifications-images/customui04w.png "기본 정보 찾기")](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
@@ -367,11 +367,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui05.png "UNNotificationExtensionInitialContentSizeRatio 키")](advanced-user-notifications-images/customui05.png)
+[![](advanced-user-notifications-images/customui05.png "UNNotificationExtensionInitialContentSizeRatio 키")](advanced-user-notifications-images/customui05.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui05w.png "UNNotificationExtensionInitialContentSizeRatio 키")](advanced-user-notifications-images/customui05w.png)
+[![](advanced-user-notifications-images/customui05w.png "UNNotificationExtensionInitialContentSizeRatio 키")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 

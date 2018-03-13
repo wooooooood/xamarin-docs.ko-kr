@@ -3,14 +3,15 @@ title: "요약 장 23입니다. 트리거 및 동작"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 72158cac683e46a37d2cbd537cdfd72bea78a336
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 장 23입니다. 트리거 및 동작
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **GenderColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) 샘플을 사용 하려면는 [ **SchoolOfFineArt** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) 라이브러리 및 색을 파랑 학생 들의 이름을 설정 또는 분홍색 기반는 `Sex` 속성:
 
-[![성별 색의 삼중 스크린 샷](images/ch23fg04-small.png "성별 색")](images/ch23fg04-large.png "성별 색")
+[![성별 색의 삼중 스크린 샷](images/ch23fg04-small.png "성별 색")](images/ch23fg04-large.png#lightbox "성별 색")
 
 [ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler) 집합 예제는 `IsEnabled` 속성은 `Entry` 를 `False` 경우는 `Length` 속성의는 `Text` 는 의속성`Entry`0입니다. 에 `Text` 속성은 빈 문자열로 초기화 됩니다. 즉, 기본적으로 `null`, 및 `DataTrigger` 방법이 올바르게 작동 하지 않습니다.
 
@@ -170,7 +171,7 @@ A [ `RotateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/
 
 [ **RadioLabels** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) 프로그램 해당 라디오 단추에 대 한 텍스트 문자열을 사용 합니다. [ **RadioStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) 샘플에서는 `Style` 모양이 checked 및 unchecked 단추 사이의 차이점에 대 한 합니다. [ **RadioImages** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) 샘플 boxed 이미지를 사용 하 여 해당 라디오 단추에 대 한:
 
-[![라디오 이미지의 삼중 스크린 샷](images/ch23fg17-small.png "라디오 단추 이미지")](images/ch23fg17-large.png "라디오 단추 이미지")
+[![라디오 이미지의 삼중 스크린 샷](images/ch23fg17-small.png "라디오 단추 이미지")](images/ch23fg17-large.png#lightbox "라디오 단추 이미지")
 
 [ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios) 샘플 원 안에 점이 있는 기존의 표시 라디오 단추를 그립니다.
 
@@ -187,4 +188,4 @@ A [ `RotateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/
 - [장 23 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)
 - [23 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 - [트리거 사용](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms Behaviors](~/xamarin-forms/app-fundamentals/behaviors/creating.md)
+- [Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/creating.md)

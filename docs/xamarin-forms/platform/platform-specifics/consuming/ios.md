@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/16/2017
-ms.openlocfilehash: a95b49fa3f090339773233dada46a14e69c8bb43
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 798bb2b15534a620acbe76080e171af1a548ac25
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-platform-specifics"></a>iOS 플랫폼 세부 사항
 
@@ -180,10 +180,10 @@ On<iOS>().SetUseSafeArea(true);
 
 결과 페이지 콘텐츠를 모든 Iphone 안전 하 게 되는 화면 영역에 배치 될 수 있습니다.
 
-[![](ios-images/safe-area-layout.png "보호 영역 레이아웃 가이드")](ios-images/safe-area-layout-large.png "보호 영역 레이아웃 가이드")
+[![](ios-images/safe-area-layout.png "보호 영역 레이아웃 가이드")](ios-images/safe-area-layout-large.png#lightbox "보호 영역 레이아웃 가이드")
 
 > [!NOTE]
-> **참고**: Apple에 의해 정의 되는 안전 하 게 보호 영역 Xamarin.Forms에는 데 사용 되는 [ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) 속성을이 속성의 설정 된 이전 값을 재정의 합니다.
+> Apple에 의해 정의 되는 안전 하 게 보호 영역 Xamarin.Forms에는 데 사용 되는 [ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/) 속성을이 속성의 설정 된 이전 값을 재정의 합니다.
 
 안전 하 게 보호 영역을 검색 하 여 사용자 지정할 수 있습니다는 [ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/) 값과 `Page.SafeAreaInsets` 에서 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) 네임 스페이스입니다. 다음으로 수정할 수 있습니다에 다시 할당 하 고 필요한는 `Padding` 페이지 생성자에서 속성 또는 [ `OnAppearing` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/) 재정의:
 
@@ -385,7 +385,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 결과 지정 된 `UpdateMode` 에 적용 되는 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/), 항목 선택 시기를 제어 합니다.
 
-[![](ios-images/picker-updatemode.png "선택기 UpdateMode 플랫폼별")](ios-images/picker-updatemode-large.png "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "선택기 UpdateMode 플랫폼별")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
 
 <a name="set_status_bar_visibility" />
 
@@ -468,7 +468,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 결과 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 콘텐츠 터치 하므로 수신 연기를 비활성화할 수는이 시나리오에서는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 제스처를 받는 보다는 [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) 의 페이지는 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 플랫폼별와 연결")](ios-images/scrollview-delay-content-touches-large.png "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 플랫폼별와 연결")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
 ## <a name="summary"></a>요약
 
@@ -477,6 +477,6 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 특성 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [iOSSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)

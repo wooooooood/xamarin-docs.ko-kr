@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: acdcdc2b76a995ca324532c6a034b2fdf8e21db5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 보호 기능
 
@@ -76,7 +76,7 @@ IOS 10 (또는 이후 버전)에서 실행 되는 앱에 하나 이상의 개인
 
 IOS 10 (이상)에서 HomeKit에 액세스 하는 다음 예제에서는, 개발자는를 추가 해야 합니다는 `NSHomeKitUsageDescription` 응용 프로그램의 키 `Info.plist` 파일 및 응용 프로그램 사용자의 HomeKit 데이터베이스에 액세스 하려는 이유 선언 문자열을 제공 합니다. 이 문자열은 응용 프로그램을 실행 하는 사용자는 첫 번째 시간에 나타납니다.
 
-[ ![](security-privacy-images/info01.png "예제 NSHomeKitUsageDescription 경고")](security-privacy-images/info01.png)
+[![](security-privacy-images/info01.png "예제 NSHomeKitUsageDescription 경고")](security-privacy-images/info01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -87,7 +87,7 @@ IOS 10 (이상)에서 HomeKit에 액세스 하는 다음 예제에서는, 개발
 3. 필요한 설명을 제공 하는 다음 노드를 추가 합니다. `<string>Allows the app to control HomeKit enabled devices.</string>`
 4. `Info.plist` 파일은 다음과 같습니다. 
 
-    [ ![](security-privacy-images/info02vs.png "Info.plist 파일은 다음과 같이 표시")](security-privacy-images/info02vs.png)
+    [![](security-privacy-images/info02vs.png "Info.plist 파일은 다음과 같이 표시")](security-privacy-images/info02vs.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 5. Visual Studio로 반환 하 고 다시 컴파일한 응용 프로그램의 키를 누릅니다.
 
@@ -100,10 +100,10 @@ IOS 10 (이상)에서 HomeKit에 액세스 하는 다음 예제에서는, 개발
 3. 새로 추가 **항목** 목록에 있습니다.
 4. 드롭다운 목록에서 개인 키를 선택 합니다 (예: **개인정보 취급 방침-HomeKit 사용 설명을**): 
 
-    [ ![](security-privacy-images/info02.png "개인 키를 선택 합니다.")](security-privacy-images/info02.png)
+    [![](security-privacy-images/info02.png "개인 키를 선택 합니다.")](security-privacy-images/info02.png#lightbox)
 5. 응용 프로그램이 지정된 된 기능 또는 사용자 정보에 액세스 하려고 하는 이유에 대 한 설명을 입력 합니다. 
 
-    [ ![](security-privacy-images/info03.png "설명을 입력합니다")](security-privacy-images/info03.png)
+    [![](security-privacy-images/info03.png "설명을 입력합니다")](security-privacy-images/info03.png#lightbox)
 6. 파일의 변경 내용을 저장합니다.
 
 -----

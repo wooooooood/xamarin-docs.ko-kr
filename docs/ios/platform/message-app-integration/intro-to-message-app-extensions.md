@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7da0f52816d4efc102e830411589e0ac38a73574
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="message-app-extension-basics"></a>메시지 앱 확장의 기본 사항
 
@@ -121,13 +121,13 @@ Xcode의 특성 검사기를 사용 하 여 전체 스티커 팩에 대 한 크�
 2. 메시지 앱 확장을 추가 하는 솔루션을 엽니다. 
 3. 선택 **iOS** > **확장** > **iMessage 확장** 클릭는 **다음** 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/message01.png "IMessage 확장 선택")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01.png "IMessage 확장 선택")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. 입력 한 **확장 이름** 클릭는 **다음** 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/message02.png "확장 이름 입력")](intro-to-message-app-extensions-images/message02.png)
+    [![](intro-to-message-app-extensions-images/message02.png "확장 이름 입력")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. 클릭는 **만들기** 확장을 작성 하는 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/message03.png "만들기 단추를 클릭 합니다.")](intro-to-message-app-extensions-images/message03.png)
+    [![](intro-to-message-app-extensions-images/message03.png "만들기 단추를 클릭 합니다.")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -135,7 +135,7 @@ Xcode의 특성 검사기를 사용 하 여 전체 스티커 팩에 대 한 크�
 2. 메시지 앱 확장을 추가 하는 솔루션을 엽니다. 
 3. 선택 **iOS** > **확장** > **iMessage 확장** 클릭는 **다음** 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/message01w.png "IMessage 확장 선택")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01w.png "IMessage 확장 선택")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. 입력 한 **확장 이름** 클릭는 **확인** 단추
 
 -----
@@ -159,7 +159,7 @@ Xcode의 특성 검사기를 사용 하 여 전체 스티커 팩에 대 한 크�
 1. 에 **솔루션 패드**확장의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...**   >  **iOS | Apple Watch** > **컨트롤러 인터페이스**합니다.
 2. 입력 `StickerBrowserViewController` 에 대 한는 **이름** 클릭는 **새로** 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/browser01.png "이름에 대 한 StickerBrowserViewController 입력")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01.png "이름에 대 한 StickerBrowserViewController 입력")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. 열기는 `StickerBrowserViewController.cs` 편집할 수 있도록 합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -167,7 +167,7 @@ Xcode의 특성 검사기를 사용 하 여 전체 스티커 팩에 대 한 크�
 1. 에 **솔루션 탐색기**확장의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...**   >  **iOS | Apple Watch** > **컨트롤러 인터페이스**합니다.
 2. 입력 `StickerBrowserViewController` 에 대 한는 **이름** 클릭는 **새로** 단추: 
 
-    [ ![](intro-to-message-app-extensions-images/browser01w.png "이름에 대 한 StickerBrowserViewController 입력")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01w.png "이름에 대 한 StickerBrowserViewController 입력")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. 열기는 `StickerBrowserViewController.cs` 편집할 수 있도록 합니다.
 
 -----

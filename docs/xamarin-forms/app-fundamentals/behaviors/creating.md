@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: c70e4c9ec49b48c3bf6ecc6a4944d992f8ae930a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 160dd4b2326529abbb456e77391f0f73ee374f50
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-behaviors"></a>Xamarin.Forms Behaviors
 
@@ -85,7 +85,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 `NumericValidationBehavior` 에서 파생 되는 [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) 클래스, 여기서 `T` 는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)합니다. [ `OnAttachedTo` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnAttachedTo/p/Xamarin.Forms.BindableObject/) 에 대 한 이벤트 처리기를 등록 하는 메서드는 [ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) 이벤트의 경우와 [ `OnDetachingFrom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnDetachingFrom/p/Xamarin.Forms.BindableObject/) 메서드는 를등록취소`TextChanged`이벤트 메모리 누수 합니다. 동작의 핵심 기능을 제공는 `OnEntryTextChanged` 에 사용자가 입력 한 값을 구문 분석 하는 메서드는 `Entry`, 설정 및는 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) 속성 값이 없는 경우에 빨강을는 `double`합니다.
 
 > [!NOTE]
-> **참고**: Xamarin.Forms로 설정 하지는 `BindingContext` 은 동작의 동작을 공유 하 고 스타일을 통해 여러 컨트롤에 적용 될 수 있으므로 합니다.
+> Xamarin.Forms로 설정 하지는 `BindingContext` 은 동작의 동작을 공유 하 고 스타일을 통해 여러 컨트롤에 적용 될 수 있으므로 합니다.
 
 ## <a name="consuming-a-xamarinforms-behavior"></a>Xamarin.Forms 동작 사용
 
@@ -108,10 +108,10 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 런타임에 동작 구현에 따라 동작 컨트롤과 상호 작용에 응답 합니다. 다음 스크린샷에서 잘못 된 입력에 응답 동작을 보여 줍니다.
 
-[ ![](creating-images/screenshots-sml.png "샘플 Xamarin.Forms 동작으로 응용 프로그램")](creating-images/screenshots.png "샘플 Xamarin.Forms 동작으로 응용 프로그램")
+[![](creating-images/screenshots-sml.png "샘플 Xamarin.Forms 동작으로 응용 프로그램")](creating-images/screenshots.png#lightbox "샘플 Xamarin.Forms 동작으로 응용 프로그램")
 
 > [!NOTE]
-> **참고**: 동작 하는 특정 컨트롤 형식 (또는 많은 컨트롤에 적용할 수 있는 슈퍼 클래스)에 대 한 작성 되 고 호환 되는 컨트롤에만 추가 해야 합니다. 호환 되지 않는 컨트롤에 대 한 동작을 연결 하려고 하면 예외가 throw 됩니다.
+> 특정 컨트롤 형식 (또는 많은 컨트롤에 적용할 수 있는 슈퍼 클래스)에 동작으로 작성 하 고 호환 되는 컨트롤에만 추가 해야 합니다. 호환 되지 않는 컨트롤에 대 한 동작을 연결 하려고 하면 예외가 throw 됩니다.
 
 ### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>Xamarin.Forms 동작 스타일을 사용합니다.
 
@@ -181,7 +181,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 스타일에 대 한 자세한 내용은 참조 [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
 
 > [!NOTE]
-> **참고**: 상태에 있는 바인딩 가능한 속성을 설정 하거나 만들면 동작 하는 경우 XAML에서 쿼리 하는 동작을 추가할 수는 있지만 이러한에서 컨트롤 사이 공유 하지 않아야는 `Style` 에 `ResourceDictionary`합니다.
+> 상태에 있는 바인딩 가능한 속성을 설정 하거나 만들면 동작 하는 경우 XAML에서 쿼리 하는 동작을 추가할 수는 있지만 이러한에서 컨트롤 사이 공유 하지 않아야는 `Style` 에 `ResourceDictionary`합니다.
 
 ### <a name="removing-a-behavior-from-a-control"></a>컨트롤에서 동작을 제거합니다.
 

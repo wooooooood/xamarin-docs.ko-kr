@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e09ac502298296277d9264bcd18f1ce1cbbf0c55
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 53309be2712f14c79b84c2eabb519b86dd73a404
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-controltemplate"></a>ControlTemplate 만들기
 
@@ -100,7 +100,7 @@ void OnButtonClicked (object sender, EventArgs e)
 ![](creating-images/aqua-theme.png "바다색 컨트롤 템플릿")
 
 > [!NOTE]
-> **참고**:에 `ContentPage`, `Content` 속성을 할당할 수 있습니다 및 `ControlTemplate` 에서도 속성을 설정할 수 있습니다. 이 경우 경우는 `ControlTemplate` 포함는 `ContentPresenter` 인스턴스에 할당 된 콘텐츠는 `Content` 속성으로 표시 됩니다는 `ContentPresenter` 내는 `ControlTemplate`합니다.
+> 에 `ContentPage`, `Content` 속성을 할당할 수 있습니다 및 `ControlTemplate` 에서도 속성을 설정할 수 있습니다. 이 경우 경우는 `ControlTemplate` 포함는 `ContentPresenter` 인스턴스에 할당 된 콘텐츠는 `Content` 속성으로 표시 됩니다는 `ContentPresenter` 내는 `ControlTemplate`합니다.
 
 ### <a name="setting-a-controltemplate-with-a-style"></a>스타일으로 ControlTemplate 설정
 
@@ -148,7 +148,7 @@ A [ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Con
 
 추가 하는 경우는 [ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/) 페이지 수준에서는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 에 추가 되는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), 한 다음은 `ControlTemplate` 인스턴스가 포함 됩니다. 에 `ResourceDictionary`합니다.
 
-## <a name="creating-a-controltemplate-in-c35"></a>&#35;에서 한 ControlTemplate 만들기
+## <a name="creating-a-controltemplate-in-c35"></a>C에서는 ControlTemplate 만들기&#35;
 
 정의 하는 [ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/) 응용 프로그램 수준에서 한 `class` 나타내는 만들어야 합니다는 `ControlTemplate`합니다. 클래스에서 파생 된 [레이아웃](~/xamarin-forms/user-interface/layouts/index.md) 다음 코드 예제에 표시 된 대로 서식 파일에 대 한 사용:
 

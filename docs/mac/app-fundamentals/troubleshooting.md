@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>버그를 보고
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/27/2018
 
 기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"*합니다. 
 
-[![자격 편집](troubleshooting-images/debug01.png "자격 편집")](troubleshooting-images/debug01-large.png)
+[![자격 편집](troubleshooting-images/debug01.png "자격 편집")](troubleshooting-images/debug01-large.png#lightbox)
 
 **나가는 네트워크 연결 허용 (클라이언트)** 권한에 디버거에 대 한 필요한,이 중 하나를 사용 하도록 설정 하면 정상적으로 디버깅 합니다. 없이 디버깅할 수 없습니다, 이후 업데이트는 `CompileEntitlements` 에 대 한 대상 `msbuild` 가 디버그에 대 한 보안으로 보호 하는 앱만 빌드에 대해 해당 사용 권한을 자격에 자동으로 추가 합니다. 릴리스 빌드는 수정 되지 않은 자격 파일에 지정 된 자격을 사용 해야 합니다.
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin.Mac 프로젝트에 대 한 옵션을 열어이 해결할 수 있습니다 **Mac 빌드** > **국제화** 및 검사는 **서쪽** 국제화:
 
-[![빌드 옵션 편집](troubleshooting-images/issue01.png "편집 빌드 옵션")](troubleshooting-images/issue01-large.png)
+[![빌드 옵션 편집](troubleshooting-images/issue01.png "빌드 옵션 편집")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>(Mm5103) 컴파일하지 못했습니다.
 
@@ -100,7 +100,7 @@ Mac 용 Visual Studio의 최신 버전에서 자격 섹션은 제거는 **Info.p
 
 두 번 클릭 하면는 **Entitlements.plist** 파일인 자격 편집기 표시 됩니다.
 
-[![자격 편집](troubleshooting-images/entitlements02.png "자격 편집")](troubleshooting-images/entitlements02-large.png)
+[![자격 편집](troubleshooting-images/entitlements02.png "자격 편집")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 수동으로 만들어야 할 Xamarin.Mac의 기존 프로젝트에는 **Entitlements.plist** 파일에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여는 **솔루션 패드** 선택 하 고 **추가**  >  **새 파일...** . 다음으로, 선택 **Xamarin.Mac** > **빈 속성 목록을**:
 
@@ -108,7 +108,7 @@ Mac 용 Visual Studio의 최신 버전에서 자격 섹션은 제거는 **Info.p
 
 입력 `Entitlements` 클릭 이나 이름에는 **새로** 단추입니다. 프로젝트가 이전에 자격 파일을 포함 하는 경우 새 파일을 만드는 대신 프로젝트에 추가 하 라는 메시지가 표시 됩니다.
 
-[![파일 덮어쓰기 확인](troubleshooting-images/entitlements04.png "파일 덮어쓰기 확인")](troubleshooting-images/entitlements04-large.png)
+[![파일 덮어쓰기 확인](troubleshooting-images/entitlements04.png "파일 덮어쓰기 확인")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>(비즈니스 또는 엔터프라이즈 라이선스) 지원에 문의
 
@@ -124,14 +124,14 @@ Xamarin 제품을 사용 하는 개발자의 커뮤니티는 놀라운 일 이�
 
 여러분의 의견은 소중 합니다. Xamarin.Mac 문제가 있는지 확인 하는 경우:
 
-- 검색 된 [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 
-- GitHub 문제를 전환 하기 전에 Xamarin 문제에서 추적 된 [: Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)합니다. 문제 일치에 대 한 있습니다를 검색 해 보십시오.
-- 일치 하는 문제를 찾을 수 없는 경우에 새 문제를 제출 하세요는 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)합니다.
+- [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색 
+- GitHub 문제로 전환하기 전에 Xamarin 문제가 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)에서 추적되었습니다. 여기서 일치하는 문제를 검색해 보세요.
+- 일치하는 문제를 찾을 수 없는 경우 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 제출하세요.
 
-GitHub 문제는 모든 공용입니다. 설명 또는 첨부 파일을 숨기려고 하는 것이 불가능 합니다. 
+GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다. 
 
-다음을 가능한 많이 포함 하세요.                                                                                                                                          
+다음 정보를 가능한 많이 포함하세요.                                                                                                                                          
 
-- 이 문제를 재현 하는 간단한 예제입니다. 이 **매우 유용한** 가능 합니다. 
-- 크래시의 전체 스택 추적입니다.
-- C# 코드 주변 충돌 합니다. 
+- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**. 
+- 크래시의 전체 스택 추적.
+- 크래시 주변의 C# 코드. 

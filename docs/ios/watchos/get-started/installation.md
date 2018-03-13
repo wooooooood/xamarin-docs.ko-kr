@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: f7e511d7f0a933ab7f29369e5e5f0aa46607c8f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c423c9bf49c735673793f8e61134f7e705816d54
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation"></a>설치
 
@@ -55,19 +55,19 @@ Watch 앱의 세 프로젝트로 구성 됩니다.
 
 1. 기존 프로젝트를 설정 하지 않은 경우 먼저 선택 **파일 > 새 솔루션** iOS 앱을 만듭니다 (예를 들어 한 **단일 앱 보기**):
 
-    [ ![](installation-images/cycle8-2-sml.png "파일 > 새 솔루션 및 iOS 앱 만들기")](installation-images/cycle8-2.png)
+    [![](installation-images/cycle8-2-sml.png "파일 > 새 솔루션 및 iOS 앱 만들기")](installation-images/cycle8-2.png#lightbox)
 
 2. IOS 앱이 생성 됩니다 (또는 기존 iOS 앱을 사용 하려는) 되 면 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > 새 프로젝트 추가...** . 에 **새 프로젝트** 창 선택 **watchOS > 앱 > WatchKit 앱**:
 
-    [ ![](installation-images/cycle8-6-sml.png "WatchOS 선택 > 앱 > WatchKit 응용 프로그램")](installation-images/cycle8-6.png)
+    [![](installation-images/cycle8-6-sml.png "WatchOS 선택 > 앱 > WatchKit 응용 프로그램")](installation-images/cycle8-6.png#lightbox)
 
 3. 다음 화면에는 iOS 앱 프로젝트는 watch 앱을 포함 해야 선택할 수 있습니다.
 
-    [ ![](installation-images/cycle8-7-sml.png "IOS 앱 프로젝트는 watch 앱을 포함 해야 선택")](installation-images/cycle8-7.png)
+    [![](installation-images/cycle8-7-sml.png "IOS 앱 프로젝트는 watch 앱을 포함 해야 선택")](installation-images/cycle8-7.png#lightbox)
 
 4. 마지막으로 프로젝트를 저장할 위치를 선택 (및 필요에 따라 소스 제어를 사용 하도록 설정):
 
-    [ ![](installation-images/cycle8-8-sml.png "프로젝트를 저장할 위치를 선택 합니다.")](installation-images/cycle8-8.png)
+    [![](installation-images/cycle8-8-sml.png "프로젝트를 저장할 위치를 선택 합니다.")](installation-images/cycle8-8.png#lightbox)
 
 5. Mac 용 visual Studio에서 자동으로 구성 [프로젝트 참조 및 **Info.plist** 설정을](~/ios/watchos/get-started/project-references.md) 드립니다.
 
@@ -81,11 +81,11 @@ Watch 앱을 두 번 클릭 **Interface.storyboard** iOS 디자이너를 사용 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![](installation-images/iosdesigner-sml.png "디자이너에서 스토리 보드")](installation-images/iosdesigner.png)
+[![](installation-images/iosdesigner-sml.png "디자이너에서 스토리 보드")](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](installation-images/iosdesigner-sml-vs.png "디자이너에서 스토리 보드")](installation-images/iosdesigner-vs.png)
+[![](installation-images/iosdesigner-sml-vs.png "디자이너에서 스토리 보드")](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -152,7 +152,7 @@ Studio (Mac 빌드 호스트에서 시작 됨) Visual 또는 Mac 용 Visual Stud
 Apple Watch 시뮬레이터는 iOS 시뮬레이터 별개 8 또는 그 이상의 Xcode가 설치 되 면 (달리 [Xcode 6](#xcode6)로 표시 되 던 것 여기서는 *외부 디스플레이*).
 시뮬레이터 목록에 표시 됩니다 Watch 앱 프로젝트를 선택 하 고 시작 프로젝트를 만들 때 *iOS 시뮬레이터* 를 선택할 수 (아래 참조).
 
-[ ![](installation-images/xs-xcode8-watchos3-sml.png "시뮬레이터 유형 선택")](installation-images/xs-xcode8-watchos3.png)
+[![](installation-images/xs-xcode8-watchos3-sml.png "시뮬레이터 유형 선택")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 디버깅을 시작할 때 *두* 시뮬레이터 시작 해야-iOS 시뮬레이터 *및* Apple Watch 시뮬레이터. 사용 하 여 **명령 + Shift + H** 시계 메뉴 및 시계 화면의;로 이동 하 여 사용할는 **하드웨어** 설정 메뉴는 **Force 터치 압력**합니다. 트랙 패드 또는 마우스에 스크롤 디지털 왕관을 사용 하 여 시뮬레이트합니다.
 
@@ -195,13 +195,13 @@ Mac 용 visual Studio는 알림과 함께 watch 앱을 시작할 수 _시작 모
 조사식 응용 프로그램 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **실행으로 > 사용자 지정 구성 중...** :
 
 
-[![](installation-images/runwith-customparams-sml.png "사용자 지정 구성을 실행합니다.")](installation-images/runwith-customparams.png)
+[![](installation-images/runwith-customparams-sml.png "사용자 지정 구성을 실행합니다.")](installation-images/runwith-customparams.png#lightbox)
 
 
 열립니다는 **사용자 지정 매개 변수** 선택할 수 있는 창을 **알림** (및 JSON 페이로드 제공) 키를 누릅니다 **실행** 시뮬레이터에서 watch 앱을 시작 하려면:
 
 
-[![](installation-images/runwith-execargs-sml.png "알림 및 페이로드를 설정합니다.")](installation-images/runwith-execargs.png)
+[![](installation-images/runwith-execargs-sml.png "알림 및 페이로드를 설정합니다.")](installation-images/runwith-execargs.png#lightbox)
 
 
 

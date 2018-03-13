@@ -6,17 +6,13 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 165313fb0150c2d9832566d5bc32842722b0a039
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>어떤 지원 옵션은 Xamarin에 대 한 사용할 수 있습니까?
-
-## <a name="overview"></a>개요
-- [지원 옵션 요약](#Summary_of_Support_Options)
-- [자세한 권장 사항](#Detailed_Recommendations)
 
 ## <a name="summary-of-support-options"></a>지원 옵션 요약
 
@@ -47,6 +43,8 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin 지원 팀에 이러한 각 옵션을 모니터링 하는 데 도움이 됩니다.  모든 사용자가 자신의 신중 하 게 질문 및 활용 하 고 지식을 Xamarin 개발자 커뮤니티를 확장 하는 데 보고서를 사용 하는 것이 좋습니다.  의심 되는 오류에 대 한 Xamarin 엔지니어링 팀에서 문제를 공식적으로 추적 하려면 가능한 경우 버그 보고서를 제출 해야 합니다.
 
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
+
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Visual Studio 전자 메일 인시던트를 Xamarin 항목에 대 한 지원
 
 일부로 Xamarin SDK 및 IDE 기능을 기술 지원에 대 한 적격 [Visual Studio 구독자 혜택](https://msdn.microsoft.com/subscriptions/bb266240) 및 [Microsoft 프리미어 지원](https://www.microsoft.com/en-us/microsoftservices/support.aspx)합니다.  이 일치 하는 UWP 및 ASP.NET와 같은 Visual Studio에서 다른 개발 플랫폼에 대 한 정책입니다.  Xamarin 인시던트 제출 이러한 방식으로 Xamarin 지원 팀에 할당 됩니다.  참조는 [Microsoft 지원 FAQ](https://support.microsoft.com/gp/offerprophone) 이러한 사고에 대 한 정책에 대 한 자세한 내용은 합니다.
@@ -63,7 +61,7 @@ Xamarin은 [이제 Visual Studio 구독 통합된 부분이](https://blog.xamari
 
 [스택 오버플로에 질문을 게시 합니다.](http://stackoverflow.com/questions/ask?tags=xamarin) 일반적인 오류 또는 까다로운 구현 및 파일 API 사용 관련 질문에 대 한 커뮤니티에서 도움말을 가져올 수 있습니다.  포함 해야 합니다는 _xamarin_ 질문에 태그를 지정 합니다.  참고 항목: [æ ÷ 좋은 구성 방법을?](http://stackoverflow.com/help/how-to-ask)
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   확인 [Xamarin 개발자 센터](/index.md) 설명서, 가이드 및 샘플에 대 한 합니다.
 -   확인 [스택 오버플로 설명서](http://stackoverflow.com/documentation) 커뮤니티 제공 샘플 코드와 설명이 대 한 합니다.
@@ -75,7 +73,7 @@ Xamarin은 [이제 Visual Studio 구독 통합된 부분이](https://blog.xamari
 
 (참고:이 권장 사항은 계속 초기 설치 작업 동안 새 사용자가 일반적인 문제에 대 한 지원에 최상의 액세스를 발전 하 합니다.  기대해 주세요 업데이트에 대 한.)
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   확인 된 [설치 가이드](~/cross-platform/get-started/installation/index.md) 및 [시스템 요구 사항](~/cross-platform/get-started/requirements.md) 를 설치 하 고 호환 되는 모든 올바른 패키지 해야 합니다.
 
@@ -85,7 +83,7 @@ Xamarin은 [이제 Visual Studio 구독 통합된 부분이](https://blog.xamari
 
 (*안정성 업데이트 후에 문제에 대 한*: 원하는 대로 새 안정적인 버전으로 업데이트 한 후에 오류, 설치 실패 또는 기타 예기치 않은 동작이 실행 되는 경우 빠른 버그 신고를 사용 하지 마십시오.  이러한 보고서는 매우 중요 합니다.  Of course, 수행을 선택 해야는 [릴리스 정보](https://developer.xamarin.com/releases/) 의도적으로 변경 또는 알려진된 문제 경우 표시 되는 문제가 될 수 있습니다 간단 하 게 합니다.)
 
-#### <a name="additional-resources"></a>추가 리소스
+#### <a name="additional-resources"></a>추가 자료
 
 -   경우 해결 문제가 로컬로에 따라 사용자 지정 수정 프로그램을 만들어 [Xamarin의 오픈 소스 개발 프로젝트](http://open.xamarin.com/), 하십시오 된다고 여겨서는 Xamarin에 통합 하 여 변경 내용을 끌어오기 요청 제출!
 
@@ -95,7 +93,7 @@ Xamarin은 [이제 Visual Studio 구독 통합된 부분이](https://blog.xamari
 
 알려진된 문제 및 가능한 해결 방법에 대 한 커뮤니티 토론에 대 한 해당 미리 보기 포럼에서 질문을 게시할 수 있습니다.
 
--   [라이브 Xamarin Player](https://forums.xamarin.com/categories/live-player)
+-   [Xamarin Live Player](https://forums.xamarin.com/categories/live-player)
 -   Android, iOS 및 macOS Sdk의 새 버전에 대 한 SDK 바인딩 미리 보기에 해당 하는 미리 보기 릴리스 공지 찾을 [Xamarin.Android](http://forums.xamarin.com/categories/android), [Xamarin.iOS](http://forums.xamarin.com/categories/ios), 또는 [Xamarin.Mac ](http://forums.xamarin.com/categories/mac) 포럼입니다.
 -   다른 미리 보기 기능에 대 한에 해당 릴리스 공지에 대 한 찾아보기는 [시험판 & 베타](http://forums.xamarin.com/categories/xamarin-prerelease) 포럼입니다.  일치 하는 알림 없는 경우 자유롭게 자체 스레드에서 해당 포럼에서 질문을 발생 시킵니다.
 

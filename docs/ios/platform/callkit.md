@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c78396ce55c776c615f3b3027a97b5a334c0b7f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="callkit"></a>CallKit
 
@@ -52,11 +52,11 @@ MonkeyCall 응용 프로그램에서 새로운 CallKit Api를 구현 하 여 들
 
 10 ios에서는 Apple는 채택 했습니다 CallKit을 시스템 서비스의 모든를 예를 들어 CarPlay에 대 한 호출을 통해 CallKit 시스템 UI로 알려져 있습니다. MonkeyCall CallKit를 채택 하므로, 아래 제공 된 예제에서는 이러한 기본 제공 시스템 서비스와 동일한 방법으로 시스템에 인식 하 고 동일한 기능을 모두 가져옵니다.
 
-[ ![](callkit-images/callkit01.png "CallKit 서비스 스택")](callkit-images/callkit01.png)
+[![](callkit-images/callkit01.png "CallKit 서비스 스택")](callkit-images/callkit01.png#lightbox)
 
 위의 다이어그램에서 MonkeyCall 응용 프로그램에 자세히 살펴보겠습니다. 응용 프로그램 자체 네트워크와 통신 하는 코드를 모두 포함 되 고 자체 사용자 인터페이스를 포함 합니다. 시스템과 통신 하는 CallKit에 연결 합니다.
 
-[ ![](callkit-images/callkit02.png "MonkeyCall 응용 프로그램 아키텍처")](callkit-images/callkit02.png)
+[![](callkit-images/callkit02.png "MonkeyCall 응용 프로그램 아키텍처")](callkit-images/callkit02.png#lightbox)
 
 CallKit 앱을 사용 하는 두 가지 주요 인터페이스 되어 있습니다.
 
@@ -75,7 +75,7 @@ CallKit 앱을 사용 하는 두 가지 주요 인터페이스 되어 있습니�
 
 사용 하 여 응용 프로그램을 시스템에 전달 하려는 경우는 `CXCallUpdate` 클래스 및 사용 하 여 시스템을 앱과 통신 해야 하는 경우는 `CXAction` 클래스:
 
-[ ![](callkit-images/callkit03.png "CXProvider 통해 시스템과 통신합니다.")](callkit-images/callkit03.png)
+[![](callkit-images/callkit03.png "CXProvider 통해 시스템과 통신합니다.")](callkit-images/callkit03.png#lightbox)
 
 ### <a name="the-cxcallcontroller"></a>CXCallController
 
@@ -89,7 +89,7 @@ CallKit 앱을 사용 하는 두 가지 주요 인터페이스 되어 있습니�
 
 사용 하 여 응용 프로그램에서 로컬 사용자 작업은 시스템을 통신 하려는 `CXTransaction` 클래스:
 
-[ ![](callkit-images/callkit04.png "CXCallController를 사용 하 여 시스템에 보고")](callkit-images/callkit04.png)
+[![](callkit-images/callkit04.png "CXCallController를 사용 하 여 시스템에 보고")](callkit-images/callkit04.png#lightbox)
 
 ## <a name="implementing-callkit"></a>CallKit 구현
 
@@ -748,7 +748,7 @@ namespace MonkeyCall
 
 원격 사용자는 로컬 사용자와 VOIP 대화를 시작 하는 경우 결과 다음과 같습니다.
 
-[ ![](callkit-images/callkit05.png "원격 사용자가 VOIP 대화를 시작 하는")](callkit-images/callkit05.png)
+[![](callkit-images/callkit05.png "원격 사용자가 VOIP 대화를 시작 하는")](callkit-images/callkit05.png#lightbox)
 
 1. 응용 프로그램은 알림을 가져옵니다 해당 통신 네트워크에서 들어오는 VOIP 호출 있다는 것입니다.
 2. 응용 프로그램 사용 하 여는 `CXProvider` 보내려고는 `CXCallUpdate` 시스템 호출의 알립니다.
@@ -783,7 +783,7 @@ public void ReportIncomingCall (NSUuid uuid, string handle)
 
 사용자를 수신 VOIP 전화에 답변 하려고 하는 경우 결과 다음과 같습니다.
 
-[ ![](callkit-images/callkit06.png "사용자는 들어오는 VOIP 호출에 응답")](callkit-images/callkit06.png)
+[![](callkit-images/callkit06.png "사용자는 들어오는 VOIP 호출에 응답")](callkit-images/callkit06.png#lightbox)
 
 1. 시스템 UI VOIP 호출에 응답 하도록 사용자에 게 시스템에 알립니다.
 2. 시스템은 보냅니다는 `CXAnswerCallAction` 에 응용 프로그램의 `CXProvider` 응답 의도 알립니다.
@@ -824,7 +824,7 @@ public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallA
 
 응용 프로그램의 UI 내에서 호출에서 종료 하려는 경우 결과 다음과 같습니다.
 
-[ ![](callkit-images/callkit07.png "사용자 응용 프로그램의 UI 내에서 호출을 종료")](callkit-images/callkit07.png)
+[![](callkit-images/callkit07.png "사용자 응용 프로그램의 UI 내에서 호출을 종료")](callkit-images/callkit07.png#lightbox)
 
 1. 응용 프로그램을 만듭니다 `CXEndCallAction` 에 번들로 제공 가져옵니다는 `CXTransaction` 호출이 종료 되 게 알리기 위해 시스템에 전송 합니다.
 2. 시스템 종료 호출 의도 확인 하 고 보냅니다는 `CXEndCallAction` 를 통해 앱으로 다시는 `CXProvider`합니다.
@@ -874,7 +874,7 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 
 사용자가 휴대폰 앱) (에서 제외할지 목록에서 항목을 하는 경우 예를 들어, 앱에 속하는 호출에서 즉 보내집니다는 _호출 의도 시작_ 시스템에서:
 
-[ ![](callkit-images/callkit08.png "시작 호출 의도 수신합니다.")](callkit-images/callkit08.png)
+[![](callkit-images/callkit08.png "시작 호출 의도 수신합니다.")](callkit-images/callkit08.png#lightbox)
 
 1. 응용 프로그램을 만듭니다는 _호출 동작 시작_ 시스템에서 받은 시작 호출 의도에 따라 합니다. 
 2. 앱이 사용의 `CXCallController` 를 시스템에서 시작 호출 작업을 요청 합니다.
@@ -1119,7 +1119,7 @@ CallKit 라이브 VOIP 호출을 사용 하는 동안 iOS 10 VOIP 앱 해야 하
 
 일반적인 VOIP의 수명 주기 동안 CallKit를 사용 하 여 호출, 응용 프로그램 오디오 스트림을 CallKit를 제공할 것을 구성 해야 합니다. 다음 예제를 살펴보겠습니다.
 
-[ ![](callkit-images/callkit09.png "시작 호출 작업 시퀀스")](callkit-images/callkit09.png)
+[![](callkit-images/callkit09.png "시작 호출 작업 시퀀스")](callkit-images/callkit09.png#lightbox)
 
 1. 호출 작업은 들어오는 호출에 응답 하도록 응용 프로그램에서 수신 됩니다.
 2. 이 작업, 응용 프로그램에서 처리 되기 전에 구성에 필요한 제공 해당 `AVAudioSession`합니다.
@@ -1140,13 +1140,13 @@ Xamarin.iOS 앱에서 호출 디렉터리 확장을 구현 하려면 다음을 �
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **디렉터리 확장 호출** 클릭는 **다음** 단추: 
 
-    [ ![](callkit-images/calldir01.png "새 호출 디렉터리 확장 만들기")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01.png "새 호출 디렉터리 확장 만들기")](callkit-images/calldir01.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **다음** 단추: 
 
-    [ ![](callkit-images/calldir02.png "확장에 대 한 이름을 입력합니다.")](callkit-images/calldir02.png)
+    [![](callkit-images/calldir02.png "확장에 대 한 이름을 입력합니다.")](callkit-images/calldir02.png#lightbox)
 5. 조정 된 **프로젝트 이름** 및/또는 **솔루션 이름** 필요 하 고 클릭는 **만들기** 단추: 
 
-    [ ![](callkit-images/calldir03.png "프로젝트 만들기")](callkit-images/calldir03.png) 
+    [![](callkit-images/calldir03.png "프로젝트 만들기")](callkit-images/calldir03.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -1154,7 +1154,7 @@ Xamarin.iOS 앱에서 호출 디렉터리 확장을 구현 하려면 다음을 �
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
 3. 선택 **iOS** > **확장** > **디렉터리 확장 호출** 클릭는 **다음** 단추: 
 
-    [ ![](callkit-images/calldir01w.png "새 호출 디렉터리 확장 만들기")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01w.png "새 호출 디렉터리 확장 만들기")](callkit-images/calldir01.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **확인** 단추
 
 -----

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 6aee83cd07a52d667c24c3e70fced2e291ed99c8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>연습-WCF 작업
 
@@ -158,7 +158,7 @@ Us 하기 전에 첫 번째 작업와 통신 하는 모바일 응용 프로그�
 
 1. 외부 요청 수신 하기 위해 IIS Express를 구성 하 여 시작 해 보겠습니다. IIS Express에 대 한 구성 파일을 편집 하 여 이렇게 하려면 `[solutiondirectory]\.vs\config\applicationhost.config`다음 스크린샷에 표시 된 것 처럼:
 
-    [![](walkthrough-working-with-wcf-images/image05.png "이렇게 하려면 solutiondirectory.vsconfigapplicationhost.config에서 IIS Express에 대 한 구성 파일을 편집 하 여이 스크린 샷에 표시 된 것 처럼")](walkthrough-working-with-wcf-images/image05.png)
+    [![](walkthrough-working-with-wcf-images/image05.png "이렇게 하려면 solutiondirectory.vsconfigapplicationhost.config에서 IIS Express에 대 한 구성 파일을 편집 하 여이 스크린 샷에 표시 된 것 처럼")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
 
     찾을 `site` 이름의 요소 `HelloWorldWcfHost`합니다. 다음 XML 조각 같은 같아야 합니다.
@@ -270,7 +270,7 @@ WCF 서비스 프록시 Xamarin.Android 응용 프로그램에 의해 다음과 
 
     다음 스크린샷에서 디자이너에서 UI를 보여 줍니다.
 
-    [![](walkthrough-working-with-wcf-images/image09.png "이 디자이너에서이 UI 모양을의 스크린 샷")](walkthrough-working-with-wcf-images/image09.png)
+    [![](walkthrough-working-with-wcf-images/image09.png "이 디자이너에서이 UI 모양을의 스크린 샷")](walkthrough-working-with-wcf-images/image09.png#lightbox)
 
 1. **솔루션 탐색기**개방형 `Resources/values/Strings.xml` 다음 XML을 추가 하 고:
 
@@ -382,7 +382,7 @@ WCF 서비스 프록시 Xamarin.Android 응용 프로그램에 의해 다음과 
 
 1. 응용 프로그램을 실행 하 고 WCF 서비스가 실행 되 고 두 개의 단추 클릭을 확인 합니다. 응용 프로그램은 WCF를 비동기적으로 호출 하는 `Endpoint` 필드 올바르게 설정 되지 않습니다.
 
-  [![](walkthrough-working-with-wcf-images/image08.png "30 초 내에서 각 WCF 메서드 응답이 수신 하 고 응용 프로그램은이 스크린샷 같은 화면이 표시")](walkthrough-working-with-wcf-images/image08.png)
+  [![](walkthrough-working-with-wcf-images/image08.png "30 초 내에서 각 WCF 메서드 응답이 수신 하 고 응용 프로그램은이 스크린샷 같은 화면이 표시")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -428,7 +428,7 @@ WCF 서비스 프록시 Xamarin.iOS 응용 프로그램에 의해 다음과 같�
 
     컨트롤을 추가한 후 UI의 다음 스크린 샷에서 유사 합니다.
 
-    [![](walkthrough-working-with-wcf-images/image12.png "UI는 컨트롤을 추가한 후이 스크린샷과 유사 합니다.")](walkthrough-working-with-wcf-images/image12.png)
+    [![](walkthrough-working-with-wcf-images/image12.png "UI는 컨트롤을 추가한 후이 스크린샷과 유사 합니다.")](walkthrough-working-with-wcf-images/image12.png#lightbox)
 
 1. **솔루션 탐색기**열기, `ViewController.cs` 다음 코드를 추가 합니다.
 
@@ -515,7 +515,7 @@ WCF 서비스 프록시 Xamarin.iOS 응용 프로그램에 의해 다음과 같�
 
 1. 응용 프로그램을 실행 하 고 WCF 서비스가 실행 되 고 두 개의 단추 클릭을 확인 합니다. 응용 프로그램은 WCF를 비동기적으로 호출 하는 `Endpoint` 필드 올바르게 설정 되지 않습니다.
 
-    [![](walkthrough-working-with-wcf-images/image10.png "30 초 내에서 각 WCF 메서드 응답이 수신 하 고 응용 프로그램은이 스크린샷과 같이 표시 됩니다.")](walkthrough-working-with-wcf-images/image10.png)
+    [![](walkthrough-working-with-wcf-images/image10.png "30 초 내에서 각 WCF 메서드 응답이 수신 하 고 응용 프로그램은이 스크린샷과 같이 표시 됩니다.")](walkthrough-working-with-wcf-images/image10.png#lightbox)
 
 <a name="Summary" />
 

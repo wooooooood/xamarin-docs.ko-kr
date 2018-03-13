@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d4446d30491ee796ca93eadf2e107fc9d74748df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e7f2ad9e94d68007b1b7d0cca212cd51515a0108
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-positioning"></a>사용자 지정 비디오 위치 지정
 
@@ -472,7 +472,7 @@ UWP에 대 한 설명서 [ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.Me
 
 첫 번째 줄임표 (···) 숨기는 `ActivityIndicator`; 이전 처럼 동일 **사용자 지정 전송** 페이지. 두 확인 `Label` 표시 하는 요소는 `Position` 및 `TimeToEnd` 속성입니다. 이 두 간의 줄임표 `Label` 요소 두 숨깁니다 `Button` 에 표시 된 요소는 **사용자 지정 전송** 재생, 일시 중지, 페이지 및 중지 합니다. 코드 숨김 논리는 또한 동일는 **사용자 지정 전송** 페이지.
 
-[![사용자 지정 위치 지정](custom-positioning-images/custompositioning-small.png "사용자 지정 위치 지정")](custom-positioning-images/custompositioning-large.png "사용자 지정 위치 지정")
+[![사용자 지정 위치 지정](custom-positioning-images/custompositioning-small.png "사용자 지정 위치 지정")](custom-positioning-images/custompositioning-large.png#lightbox "사용자 지정 위치 지정")
 
 에 대 한 설명으로 마칩니다는 `VideoPlayer`합니다.
 

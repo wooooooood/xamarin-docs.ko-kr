@@ -7,18 +7,14 @@ ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: ba73e03d6bdeea64918e0232b2188bf8e3b65084
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 479abf7fef695be156d4447592bc59dceabe3f03
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="material-theme"></a>자재 테마
-
-<a name="overview" />
-
-## <a name="overview"></a>개요
 
 *자재 테마* 뷰와 Android 5.0 (롤리팝)로 시작 하는 활동의 디자인을 결정 하는 사용자 인터페이스 스타일입니다. 자재 테마는 물론 응용 프로그램에서 시스템 UI에서 사용 하도록 Android 5.0에 포함 됩니다. 사용자 설정 메뉴에서 동적으로 선택할 수 있는 시스템 수준의 모양 옵션의 의미에서 "테마" 자재 테마가 아닙니다. 대신, 자료 테마 앱의 모양과 느낌을 사용자 지정 하는 데 사용할 수 있는 관련된 기본 제공 기본 스타일의 집합으로 생각할 수 있습니다.
 
@@ -32,7 +28,7 @@ Android에서는 세 가지 자료 테마 특성을 제공합니다.
 
 이러한 자료 테마 특성의 예는 여기에 표시 됩니다.
 
-[![어두운 테마, 밝은 테마 및 어두운 작업 모음 테마 예제 스크린 샷](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png)
+[![어두운 테마, 밝은 테마 및 어두운 작업 모음 테마 예제 스크린 샷](material-theme-images/three-flavors-sml.png)](material-theme-images/three-flavors.png#lightbox)
 
 재정의 일부 또는 모든 색 특성 직접 테마를 만들 자료 테마에서 파생할 수 있습니다. 파생 되는 테마를 만들 수는 예를 들어 `Theme.Material.Light`, 브랜드 색과 일치 하도록 응용 프로그램 표시줄 색을 재정의 하지만 합니다. 개별 뷰만 스타일도 수 있습니다. 에 대 한 스타일을 만들 수는 예를 들어 [CardView](~/android/user-interface/controls/card-view.md) 모서리가 둥근 더 하 고 어두운 배경색을 사용 합니다.
 
@@ -40,7 +36,6 @@ Android에서는 세 가지 자료 테마 특성을 제공합니다.
 
 자료 테마 이상 Android 5.0 에서만 지원 되므로 사용할 수 없습니다 (또는 자료 테마에서 파생 된 사용자 지정 테마) 테마를 앱 Android의 이전 버전에서 실행 합니다. 그러나 Android 5.0 장치에서 자료 테마를 사용 하 고 적절 하 게 대체 이전 테마를 이전 버전의 Android에서 실행 될 경우 앱을 구성할 수 있습니다 (참조는 [호환성](#compatibility) 대 한 자세한 내용은이 문서의 섹션).
 
-<a name="requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
@@ -54,13 +49,11 @@ Android에서는 세 가지 자료 테마 특성을 제공합니다.
 
 Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아보려면 참조 [설정을 Android 5.0 프로젝트](~/android/platform/lollipop.md)합니다.
 
-<a name="builtinthemes" />
 
 ## <a name="using-the-built-in-themes"></a>기본 테마를 사용 하 여
 
 자료 테마를 사용 하는 가장 쉬운 방법은 사용자 지정 하지 않고 기본 테마를 사용 하도록 앱을 구성 하는 것입니다. 테마를 명시적으로 구성 하지 않으려면 응용 프로그램에서 기본적으로를 `Theme.Material` (어두운 테마). 앱의 활동이 하나만 있으면 응용 프로그램 수준에서 테마를 구성할 수 있습니다. 응용 프로그램에 여러 활동을 동일한 테마를 사용 하 여 모든 활동 간에 또는 다른 활동에 다양 한 테마를 할당할 수 있도록 응용 프로그램 수준에서 테마를 구성할 수 있습니다. 다음 섹션에서는 응용 프로그램 수준 및 작업 수준에서 테마를 구성 하는 방법에 설명 합니다.
 
-<a name="themeanapp" />
 
 ### <a name="theming-an-application"></a>응용 프로그램 테마 설정
 
@@ -88,7 +81,6 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 
 응용 프로그램 테마로 설정 되 면 `@android:style/Theme.Material.Light`, 모든 활동에 *MyApp* 사용 하 여 표시 `Theme.Material.Light`합니다.
 
-<a name="activitytheme" />
 
 ### <a name="theming-an-activity"></a>테마 설정 활동
 
@@ -125,11 +117,10 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 
 이러한 화면 영역 다음 다이어그램에 레이블이 지정 됩니다.
 
-[ ![특성 및 해당 연관 된 화면 영역 다이어그램](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png)
+[![특성 및 해당 연관 된 화면 영역 다이어그램](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png#lightbox)
 
 기본적으로 `statusBarColor` 의 값으로 설정 되어 `colorPrimaryDark`합니다. 설정할 수 있습니다 `statusBarColor` 의 단색를 설정할 수 있습니다 또는 `@android:color/transparent` 투명 하 게 하려면 상태 표시줄입니다. 탐색 모음 만들 수도 있습니다 투명 하 게 설정 하 여 `navigationBarColor` 를 `@android:color/transparent`합니다.
 
-<a name="customapptheme" />
 
 ### <a name="creating-a-custom-app-theme"></a>사용자 지정 응용 프로그램 테마 만들기
 
@@ -151,7 +142,7 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 
 -   만들기는 **리소스/값-v21** 폴더입니다. 이 폴더에 만듭니다는 **styles.xml** 파일:
 
-    [ ![Styles.xml 리소스/값-21.xml 폴더에서의 위치](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png)
+    [![Styles.xml 리소스/값-21.xml 폴더에서의 위치](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     **리소스/값-v21** Android 5.0에 관련 된 &ndash; 이전 버전의 Android이이 폴더의 파일을 읽지 것입니다.
 
@@ -169,7 +160,7 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 
 -   이 시점에서 응용 프로그램을 사용 하 여 *MyCustomTheme* 재고 ½ ֳ µ `Theme.Material.Light` 테마 사용자 지정 하지 않고:
 
-    [ ![사용자 지정 하기 전에 사용자 지정 테마 모양](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png)
+    [![사용자 지정 하기 전에 사용자 지정 테마 모양](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
 -   색 사용자 지정을 추가 **styles.xml** 레이아웃 특성을 변경 하려면 색 정의 합니다. 예를 들어, 응용 프로그램 표시줄 색을 변경 하려면 `my_blue` 에 UI 컨트롤의 색을 변경 `my_purple`를 추가 하려면 재정의 색 **styles.xml** 에 구성 된 색 리소스를 참조 하는 **colors.xml**:
 
@@ -188,7 +179,7 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 
 위치에 이러한 변경 내용으로는 응용 프로그램을 사용 하 *MyCustomTheme* 에 응용 프로그램 표시줄 색 ½ ֳ µ `my_blue` 및 UI 컨트롤에 `my_purple`, 사용 하지만 `Theme.Material.Light` 다른 색 구성표:
 
-[ ![사용자 지정 테마 모양을 사용자 지정 후](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png)
+[![사용자 지정 테마 모양을 사용자 지정 후](material-theme-images/custom-theme-after-sml.png)](material-theme-images/custom-theme-after.png#lightbox)
 
 이 예제에서는 *MyCustomTheme* 에서 색을 빌리 기 `Theme.Material.Light` 배경에 대 한 색, 상태 표시줄 및 텍스트 색, 하지만의 색을 변경 하려면 앱 바 `my_blue` 라디오단추의색을설정하고`my_purple`.
 
@@ -225,11 +216,10 @@ Android 5.0를 하면 개별 뷰 스타일 지정 수 있습니다. 만든 후 *
 
 기본 예제를 제공 하는 다음 스크린 샷에서 `CardView` (표시 왼쪽)에 비해 대로 `CardView` 를 사용자 지정 스타일 `CardView.MyBlue` 테마 (오른쪽에 표시):
 
-[ ![CardView 기본 및 사용자 지정 CardView 예제](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png)
+[![CardView 기본 및 사용자 지정 CardView 예제](material-theme-images/custom-cardview-sml.png)](material-theme-images/custom-cardview.png#lightbox)
 
 이 예제에서는 사용자 지정 `CardView` 배경색으로 표시 `my_blue` 및 18dp 모서리 반지름입니다.
 
-<a name="compatibility" />
 
 ## <a name="compatibility"></a>호환성
 

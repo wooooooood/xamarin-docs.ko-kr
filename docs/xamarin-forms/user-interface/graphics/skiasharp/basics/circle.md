@@ -4,14 +4,15 @@ description: "SkiaSharp 그리기를 캔버스 및 그리기를 포함 하 여 �
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 63314efdd29c8da0273459de2d12f7b807968a04
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="drawing-a-simple-circle"></a>단순 원 그리기
 
@@ -139,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 다음은 iOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램입니다.
 
-[![](circle-images/simplecircle-small.png "단순 원을 페이지의 삼중 스크린샷")](circle-images/simplecircle-large.png "단순 원을 페이지의 삼중 스크린샷")
+[![](circle-images/simplecircle-small.png "단순 원을 페이지의 삼중 스크린샷")](circle-images/simplecircle-large.png#lightbox "단순 원을 페이지의 삼중 스크린샷")
 
 프로그램을 직접 실행 하는 경우 전화 또는 시뮬레이터 옆으로 그래픽을 다시 그리면는 참조를 설정할 수 있습니다. 다시 그려야 하는 데 필요한 그래픽 때마다는 `PaintSurface` 이벤트 처리기가 다시 호출 합니다.
 

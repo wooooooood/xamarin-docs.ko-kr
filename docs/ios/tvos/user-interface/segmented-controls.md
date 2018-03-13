@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fd31413b777e1179e7f4faf6f91f91bc6c41e82b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-segmented-controls"></a>분할 된 컨트롤을 사용한 작업
 
@@ -21,7 +21,7 @@ _이 문서에서는 디자인 하 고 세그먼트 컨트롤 Xamarin.tvOS 앱 �
 
 분할 된 컨트롤 아이콘 또는 텍스트를 포함할 수 있습니다 및 관련 된 선택 항목 집합이 사용자에 게 제공 하는 데 사용 되는 각각의 선형 요소 집합을 제공 합니다.
 
-[ ![](segmented-controls-images/segment01.png "샘플 세그먼트 컨트롤")](segmented-controls-images/segment01.png)
+[![](segmented-controls-images/segment01.png "샘플 세그먼트 컨트롤")](segmented-controls-images/segment01.png#lightbox)
 
 Apple에 컨트롤 세그먼트 작업을 위한 다음 제안 사항이 있습니다.
 
@@ -57,36 +57,36 @@ Apple에서는 세그먼트 텍스트 작업에 대 한 다음 제안 합니다.
 
 Xamarin.tvOS 응용 프로그램에서 세그먼트 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 디자이너를 사용 하 여 응용 프로그램의 UI를에 추가 하는 합니다.
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **세그먼트 제어** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](segmented-controls-images/segment02.png "세그먼트 컨트롤")](segmented-controls-images/segment02.png)
+    [![](segmented-controls-images/segment02.png "세그먼트 컨트롤")](segmented-controls-images/segment02.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 패드**와 같은 세그먼트 컨트롤의 몇 가지 속성을 조정할 수 있습니다는 **스타일** 및 **상태**: 
 
-    [ ![](segmented-controls-images/segment03.png "위젯 탭")](segmented-controls-images/segment03.png)
+    [![](segmented-controls-images/segment03.png "위젯 탭")](segmented-controls-images/segment03.png#lightbox)
 1. 사용 하 여는 **세그먼트** 컨트롤러에서 세그먼트의 수를 제어 하는 필드입니다.
 1. 지정된 된 세그먼트를 선택는 **세그먼트 드롭다운** 와 같은 개별 속성을 조정 하려면 **제목** 또는 **이미지** 을 지정 된 세그먼트가 제어  **활성화** 또는 **선택한** 컨트롤을 표시 합니다.
 1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
 
-    [ ![](segmented-controls-images/segment04.png "이름을 할당합니다")](segmented-controls-images/segment04.png)
+    [![](segmented-controls-images/segment04.png "이름을 할당합니다")](segmented-controls-images/segment04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. 에 **솔루션 탐색기**, 두 번 클릭은 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **세그먼트 제어** 에서 **도구 상자** 보기에 놓습니다. 
 
-    [ ![](segmented-controls-images/segment02-vs.png "세그먼트 컨트롤")](segmented-controls-images/segment02-vs.png)
+    [![](segmented-controls-images/segment02-vs.png "세그먼트 컨트롤")](segmented-controls-images/segment02-vs.png#lightbox)
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 세그먼트 컨트롤의 몇 가지 속성을 조정할 수 있습니다는 **스타일** 및 **상태**: 
 
-    [ ![](segmented-controls-images/segment03-vs.png "위젯 탭")](segmented-controls-images/segment03-vs.png)
+    [![](segmented-controls-images/segment03-vs.png "위젯 탭")](segmented-controls-images/segment03-vs.png#lightbox)
 1. 사용 하 여는 **세그먼트** 컨트롤러에서 세그먼트의 수를 제어 하는 필드입니다.
 1. 지정된 된 세그먼트를 선택는 **세그먼트 드롭다운** 와 같은 개별 속성을 조정 하려면 **제목** 또는 **이미지** 을 지정 된 세그먼트가 제어  **활성화** 또는 **선택한** 컨트롤을 표시 합니다.
 1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
 
-    [ ![](segmented-controls-images/segment04-vs.png "이름을 할당합니다")](segmented-controls-images/segment04-vs.png)
+    [![](segmented-controls-images/segment04-vs.png "이름을 할당합니다")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
     
 -----

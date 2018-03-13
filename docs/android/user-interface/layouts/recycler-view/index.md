@@ -3,16 +3,16 @@ title: RecyclerView
 description: "RecyclerView는 컬렉션을 표시 하기 위한 뷰 그룹 ListView 및 GridView와 같은 이전 보기 그룹에 대 한 유연성을 대체할 수 있도록 설계 되었습니다.  이 가이드에는 사용 및 RecyclerView Xamarin.Android 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
+ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: ec8b3a4655c8e8d9e492c9f7a1807dd64ecc6ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -23,7 +23,7 @@ _RecyclerView는 컬렉션을 표시 하기 위한 뷰 그룹 ListView 및 GridV
 많은 응용 프로그램 (예: 메시지, 연락처, 이미지 또는 노래); 같은 유형의 컬렉션을 표시 해야 합니다. 대개이 컬렉션은 너무 커서 화면에 맞게 컬렉션은 컬렉션의 모든 항목을 통해 원활 하 게 스크롤할 수 있는 작은 창에 표시 됩니다.
 `RecyclerView` 목록 또는 그리드로 컬렉션을 스크롤할 수 있도록 항목의 컬렉션을 표시 하는 Android 위젯 됩니다. 다음은 사용 하는 예제 앱의 스크린샷을 `RecyclerView` 세로 스크롤 목록에 전자 메일 받은 편지함 내용을 표시 합니다.
 
-[ ![RecyclerView 목록 받은 편지함 메시지를 사용 하 여 예제 응용 프로그램](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png)
+[![RecyclerView 목록 받은 편지함 메시지를 사용 하 여 예제 응용 프로그램](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` 두 개의 강력한 기능을 제공합니다.
 

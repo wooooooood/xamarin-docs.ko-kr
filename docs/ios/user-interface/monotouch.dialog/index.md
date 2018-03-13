@@ -7,11 +7,11 @@ ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b279f3e643e008e88b8ad086c400d992427c6df4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>MonoTouch.Dialog 소개
 
@@ -20,7 +20,7 @@ _(산 MonoTouch.Dialog D) toolkit은 신속한 응용 프로그램 UI 개발 Xam
 
 산 라고 MonoTouch.Dialog 줄여서 D 응용 프로그램 화면 및 덜어 컨트롤러 보기, 테이블 등을 만드는 것이 아니라 정보를 사용 하 여 탐색을 빌드하기 위해 개발자가 사용할 수 있는 신속한 UI 개발 도구 키트입니다. 따라서 UI 코드와 개발 감소의 중요 한 단순화를 제공합니다. 예를 들어 다음 스크린 샷에서를 것이 좋습니다.
 
- [ ![](images/image1.png "예를 들어이 스크린 샷")](images/image1.png)
+ [![](images/image1.png "예를 들어이 스크린 샷")](images/image1.png#lightbox)
 
 다음 코드는이 전체 화면 정의에 사용 된:
 
@@ -57,7 +57,7 @@ IOS에서 테이블을 사용 하는 경우 있습니다 엄청난 양의 반복
 산 D 간소화 하는 해당 코드의 모든 테이블 생성을 위한 제네릭 API를 캡슐화 합니다. 그런 다음 바인딩 보다 쉽게 구문 선언적 개체에 대 한 허용 하는 API 기반으로 추상화를 제공 합니다. 따라서 두 가지 Api 산에서 사용할 수 있는 D:
 
 -   **하위 수준 요소 API** – *요소 API* 화면 및 해당 구성 요소를 나타내는 요소의 계층적 트리를 만드는 방법에 기반 합니다. 요소 API는 가장 뛰어난 유연성 및 제어 Ui를 만드는 개발자에 게 제공 합니다. 또한, 요소 API는 선언적 정의 대 한 지원으로 아주 빨리 선언 하는 서버에서 동적 UI 생성을 허용 하는 JSON을 통해 고급 합니다. 
--   **수준의 리플렉션 API** – 라고도 *바인딩**API* , 클래스 주석을 지정 하 여 UI 힌트와 산에서 D 화면에서 개체를 기반으로 자동으로 만들고 백업 원본 개체와 내용 간의 바인딩을 표시 (및 필요에 따라 편집) 화면에서 제공 합니다.   위의 예제에서는 리플렉션 API의 사용을 방법을 보여 줍니다. 이 API는 API 요소 않는 세분화 된 제어를 제공 하지 않습니다 하지만 클래스 특성을 기반으로 요소 계층으로 자동으로 작성 하 여 복잡성을 더욱 줄입니다. 
+-   **수준의 리플렉션 API** – 라고도 *바인딩**API* , 클래스 주석을 지정 하 여 UI 힌트와 산에서 D 화면에서 개체를 기반으로 자동으로 만들고 백업 원본 개체와 내용 간의 바인딩을 표시 (및 필요에 따라 편집) 화면에서 제공 합니다. 위의 예제에서는 리플렉션 API의 사용을 방법을 보여 줍니다. 이 API는 API 요소 않는 세분화 된 제어를 제공 하지 않습니다 하지만 클래스 특성을 기반으로 요소 계층으로 자동으로 작성 하 여 복잡성을 더욱 줄입니다. 
 
 
 산 D 제공 큰 집합으로 압축으로 화면 만들기에 대 한 UI 요소에 기본 제공 되지만 사용자 지정된 요소와 고급 화면 레이아웃에 대 한 필요성도 인식 합니다. 따라서 확장성은 첫 번째 클래스 갖춘 API에는 기본 제공 됩니다. 개발자 기존 요소를 확장할 수 있습니다 또는 새로 만들와 완벽 하 게 통합 합니다.
@@ -94,13 +94,13 @@ A *RootElement* 는 DVC 속하게 될 항목에 대 한 최상위 컨테이너�
 
 섹션은 테이블에 있는 셀의 그룹입니다. 일반 테이블 섹션으로이 발생할 수 있으므로 필요에 따라는 머리글 및 바닥글 유지할 수 있습니다. 있는 텍스트 또는 다음 스크린 샷에서 같이 사용자 지정 보기 수 있습니다:
 
- [ ![](images/image2.png "머리글 및 바닥글을 유지할 수 될 텍스트 또는이 스크린샷에서 같이 사용자 지정 뷰를 일반 테이블 섹션으로이 발생할 수 있으므로 필요에 따라")](images/image2.png)
+ [![](images/image2.png "머리글 및 바닥글을 유지할 수 될 텍스트 또는이 스크린샷에서 같이 사용자 지정 뷰를 일반 테이블 섹션으로이 발생할 수 있으므로 필요에 따라")](images/image2.png#lightbox)
 
 ### <a name="element"></a>요소
 
 요소는 테이블에는 실제 셀을 나타냅니다. 산 D 압축는 다양 한 데이터 형식이 나 다른 서로 다른 입력을 나타내는 요소와 함께 제공 됩니다. 예를 들어 다음 스크린샷에서 사용 가능한 요소 중 일부를 보여 줍니다.
 
- [ ![](images/image3.png "이 스크린샷을 사용할 수 있는 요소 중 일부를 설명 하는 예를 들어")](images/image3.png)
+ [![](images/image3.png "이 스크린샷을 사용할 수 있는 요소 중 일부를 설명 하는 예를 들어")](images/image3.png#lightbox)
 
 ## <a name="more-on-sections-and-rootelements"></a>자세한 on 섹션 및 RootElements
 
@@ -112,7 +112,7 @@ A *RootElement* 는 DVC 속하게 될 항목에 대 한 최상위 컨테이너�
 
 RootElement 섹션/요소 값으로 초기화 되 면이 값은 자식 디스플레이의 오른쪽에 렌더링 되는 구성의 요약을 제공 하는 요소를 찾으려고 사용 됩니다. 예를 들어, 아래 스크린샷에서 테이블을 보여 줍니다 왼쪽에 셀의 오른쪽에 "후 식" 선택한 사막 값과 함께 세부 정보 화면 제목을 포함 합니다.
 
- [ ![](images/image4.png "이 스크린샷은 테이블 왼쪽의 세부 정보 화면 오른쪽의 후 식, 선택한 desert 값과 함께 제목이 포함 된 셀과") ](images/image4.png) [ ![ ] (images/image5.png "이 아래 스크린샷에서 세부 정보 화면 오른쪽의 후 식, 선택한 사막 값과 함께 제목이 포함 된 셀과 표를 왼쪽에 표시")](images/image5.png)
+ [![](images/image4.png "이 스크린샷은 테이블 왼쪽의 세부 정보 화면 오른쪽의 후 식, 선택한 desert 값과 함께 제목이 포함 된 셀과") ](images/image4.png#lightbox) [ ![ ] (images/image5.png "이 아래 스크린샷에서 세부 정보 화면 오른쪽의 후 식, 선택한 사막 값과 함께 제목이 포함 된 셀과 표를 왼쪽에 표시")](images/image5.png#lightbox)
 
 루트 요소 데도 사용할 수 있습니다 섹션 내 새 중첩 된 구성 페이지를 로드할 트리거할 위와 같이 합니다. 이 모드에서 사용 되는 캡션을 제공 섹션 내에서 렌더링 중에 사용 하 고 하위 페이지에 제목으로도 사용 됩니다. 예:
 
@@ -195,7 +195,7 @@ var taskElement = new RootElement (task.Name){
 
 이 코드는 아래와 같이 UI를 만듭니다. 이 예제는 전체 연습은 대 한 참조는 [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) 자습서입니다.
 
- [ ![](images/image6.png "Element.Value 속성을 함께 콜백 값을 검색할 수는 다른 요소에서 설정")](images/image6.png)
+ [![](images/image6.png "Element.Value 속성을 함께 콜백 값을 검색할 수는 다른 요소에서 설정")](images/image6.png#lightbox)
 
 아래쪽 테이블 셀을 누를 때는 익명 함수에 코드 실행에서 값을 쓰는 `element` 인스턴스는 **응용 프로그램 출력** Mac.에 대 한 Visual Studio에서 채움
 
@@ -216,7 +216,7 @@ Html 및 이미지와 같은 다양 한 데이터 형식을 지원 하기는 훨
 
 A `StringElement` 캡션을 표 셀과 셀의 오른쪽에 문자열 값의 왼쪽에 표시 합니다.
 
- [ ![](images/image7.png "표 셀과 셀의 오른쪽에 문자열 값의 왼쪽에는 StringElement 캡션을 보여 줍니다.")](images/image7.png)
+ [![](images/image7.png "표 셀과 셀의 오른쪽에 문자열 값의 왼쪽에는 StringElement 캡션을 보여 줍니다.")](images/image7.png#lightbox)
 
 사용 하는 `StringElement` 단추와 대리자를 제공 합니다.
 
@@ -227,25 +227,25 @@ new StringElement (
 , null, "ok", null).Show(); })
 ```
 
- [ ![](images/image8.png "StringElement 단추를 사용 하려면 한 대리자를 제공 합니다.")](images/image8.png)
+ [![](images/image8.png "StringElement 단추를 사용 하려면 한 대리자를 제공 합니다.")](images/image8.png#lightbox)
 
 ### <a name="styled-string-element"></a>스타일이 적용 된 문자열 요소
 
 A `StyledStringElement` 기본 표 셀 스타일 중 하나를 사용 하 여 표시 되는 문자열을 허용 하거나 사용자 지정 서식을 사용 하 여 합니다.
 
- [ ![](images/image9.png "StyledStringElement 기본 표 셀 스타일 중 하나를 사용 하 여 표시 되는 문자열을 허용 하거나 사용자 지정 서식을 지정 하 여")](images/image9.png)
+ [![](images/image9.png "StyledStringElement 기본 표 셀 스타일 중 하나를 사용 하 여 표시 되는 문자열을 허용 하거나 사용자 지정 서식을 지정 하 여")](images/image9.png#lightbox)
 
 `StyledStringElement` 클래스에서 파생 `StringElement`, 되지만 사용 하면 개발자가 사용자는 소수의 글꼴, 텍스트 색, 배경 셀 색, 줄 바꿈 모드, 개수의 줄을 표시 하려면 같은 속성을 지정 하 고는 액세서리를 표시할지 여부입니다.
 
 ### <a name="multiline-element"></a>여러 줄 요소
 
- [ ![](images/image10.png "여러 줄 요소")](images/image10.png)
+ [![](images/image10.png "여러 줄 요소")](images/image10.png#lightbox)
 
 ### <a name="entry-element"></a>Entry 요소
 
 `EntryElement`, 의미 이름으로, 사용자 입력을 가져오는 데 사용 됩니다. 일반 문자열 또는 문자 숨겨져 있습니다 암호를 지원 합니다.
 
- [ ![](images/image11.png "EntryElement 사용자 입력을 가져오는 데 사용 됩니다.")](images/image11.png)
+ [![](images/image11.png "EntryElement 사용자 입력을 가져오는 데 사용 됩니다.")](images/image11.png#lightbox)
 
 세 가지 값으로 초기화 됩니다.
 
@@ -268,11 +268,11 @@ A `StyledStringElement` 기본 표 셀 스타일 중 하나를 사용 하 여 �
 
 ### <a name="boolean-element"></a>부울 요소
 
- [ ![](images/image12.png "부울 요소")](images/image12.png)
+ [![](images/image12.png "부울 요소")](images/image12.png#lightbox)
 
 ### <a name="checkbox-element"></a>확인란 요소
 
- [ ![](images/image13.png "확인란 요소")](images/image13.png)
+ [![](images/image13.png "확인란 요소")](images/image13.png#lightbox)
 
 ### <a name="radio-element"></a>라디오 요소
 
@@ -282,7 +282,7 @@ A `RadioElement` 필요는 `RadioGroup` 를 지정 해야는 `RootElement`합니
 mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
 ```
 
- [ ![](images/image14.png "RadioElement는 RootElement 지정 되어 RadioGroup 필요")](images/image14.png)
+ [![](images/image14.png "RadioElement는 RootElement 지정 되어 RadioGroup 필요")](images/image14.png#lightbox)
 
  `RootElements` 라디오 요소 조정도 사용 됩니다. `RadioElement` 멤버 등 비슷한 링 톤 선택기와 별도 사용자 지정 벨소리 시스템 벨 소리 등에서 구현 하는 여러 섹션을 확장할 수 있습니다. 요약 보기에는 현재 선택 된 라디오 요소를 표시 됩니다. 이 사용 하려면 만듭니다는 `RootElement` 다음과 같이 그룹 생성자에서:
 
@@ -294,15 +294,15 @@ var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
 
 ### <a name="badge-element"></a>배지 요소
 
- [ ![](images/image15.png "배지 요소")](images/image15.png)
+ [![](images/image15.png "배지 요소")](images/image15.png#lightbox)
 
 ### <a name="float-element"></a>Float 요소
 
- [ ![](images/image16.png "Float 요소")](images/image16.png)
+ [![](images/image16.png "Float 요소")](images/image16.png#lightbox)
 
 ### <a name="activity-element"></a>작업 요소
 
- [ ![](images/image17.png "작업 요소")](images/image17.png)
+ [![](images/image17.png "작업 요소")](images/image17.png#lightbox)
 
 ### <a name="date-element"></a>날짜 요소
 
@@ -310,35 +310,35 @@ var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
 
 에 해당 하는 DateElement 셀을 선택 하면 아래와 같이 날짜 선택 표시 됩니다.
 
- [ ![](images/image19.png "날짜 선택 표시 된 것 처럼 표시 됩니다는 DateElement를 해당 셀을 선택 하면")](images/image19.png)
+ [![](images/image19.png "날짜 선택 표시 된 것 처럼 표시 됩니다는 DateElement를 해당 셀을 선택 하면")](images/image19.png#lightbox)
 
 ### <a name="time-element"></a>Time 요소
 
- [ ![](images/image20.png "Time 요소")](images/image20.png)
+ [![](images/image20.png "Time 요소")](images/image20.png#lightbox)
 
 에 해당 하는 TimeElement 셀을 선택 하면 시간 선택은 아래와 같이 표시 됩니다.
 
- [ ![](images/image21.png "표시 된 것 처럼 시간 선택은 표시에 해당 하는 TimeElement 셀을 선택 하면")](images/image21.png)
+ [![](images/image21.png "표시 된 것 처럼 시간 선택은 표시에 해당 하는 TimeElement 셀을 선택 하면")](images/image21.png#lightbox)
 
 ### <a name="datetime-element"></a>날짜/시간 요소
 
- [ ![](images/image22.png "날짜/시간 요소")](images/image22.png)
+ [![](images/image22.png "날짜/시간 요소")](images/image22.png#lightbox)
 
 에 해당 하는 DateTimeElement 셀을 선택 하면 날짜/시간 선택기는 아래와 같이 표시 됩니다.
 
- [ ![](images/image23.png "날짜/시간 선택기와 같이 표시 됩니다에 해당 하는 DateTimeElement 셀을 선택 하면")](images/image23.png)
+ [![](images/image23.png "날짜/시간 선택기와 같이 표시 됩니다에 해당 하는 DateTimeElement 셀을 선택 하면")](images/image23.png#lightbox)
 
 ### <a name="html-element"></a>HTML 요소
 
- [ ![](images/image24.png "HTML 요소")](images/image24.png)
+ [![](images/image24.png "HTML 요소")](images/image24.png#lightbox)
 
 `HTMLElement` 의 값을 표시 해당 `Caption` 테이블 셀의 속성입니다. 을 선택 하는 위치는 `Url` 요소에 할당에서 로드 되는 `UIWebView` 아래와 같이 제어:
 
- [ ![](images/image25.png "아래와 같이 UIWebView 컨트롤에 로드 되는 요소에 할당 된 Url을 끄지 선택")](images/image25.png)
+ [![](images/image25.png "아래와 같이 UIWebView 컨트롤에 로드 되는 요소에 할당 된 Url을 끄지 선택")](images/image25.png#lightbox)
 
 ### <a name="message-element"></a>Message 요소
 
- [ ![](images/image26.png "Message 요소")](images/image26.png)
+ [![](images/image26.png "Message 요소")](images/image26.png#lightbox)
 
 ### <a name="load-more-element"></a>더 많은 요소를 로드 합니다.
 
@@ -587,9 +587,9 @@ public override Source CreateSizingSource (bool unevenRows)
 
 - [동영상 가이드-Miguel de Icaza는 MonoTouch.Dialog를 사용 하 여 iOS 로그인 화면을 만듭니다.](http://youtu.be/3butqB1EG0c)
 - [동영상 가이드-MonoTouch.Dialog와 iOS 사용자 인터페이스를 쉽게 만들](http://youtu.be/j7OC5r8ZkYg)
-- [연습: 요소 API를 사용 하 여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
-- [연습: 리플렉션 API를 사용 하 여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [연습: JSON 요소를 사용 하 여 사용자 인터페이스 만들기](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [연습: 요소 API를 사용하여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
+- [연습: 리플렉션 API를 사용하여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
+- [연습: JSON 요소를 사용하여 사용자 인터페이스 만들기](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [MonoTouch.Dialog JSON 태그](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Github에서 MonoTouch 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [UITableViewController 클래스 참조](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)

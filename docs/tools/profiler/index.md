@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9c95a1b71f83ee810b775420aab3ceafeeca0379
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -212,11 +212,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![](images/profiler-mac-sml.png "Mac 용 Visual Studio에서 프로파일러 섹션")](images/profiler-mac.png) 
+[![](images/profiler-mac-sml.png "Mac 용 Visual Studio에서 프로파일러 섹션")](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/profiler-vs.png "Visual Studio에서 프로파일러 섹션")](images/profiler-vs.png)
+[![](images/profiler-vs.png "Visual Studio에서 프로파일러 섹션")](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -234,11 +234,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![](images/allocations1.png "할당 방법")](images/allocations1.png) 
+[![](images/allocations1.png "할당 방법")](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/allocations1-vs.png "할당 방법")](images/allocations1-vs.png)
+[![](images/allocations1-vs.png "할당 방법")](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-  [![](images/allocations3.png "할당 탭")](images/allocations3.png) 
+  [![](images/allocations3.png "할당 탭")](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations2-vs.png "할당 탭")](images/allocations2-vs.png)
+  [![](images/allocations2-vs.png "할당 탭")](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -264,11 +264,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-  [![](images/allocations2.png "호출 트리 탭")](images/allocations2.png) 
+  [![](images/allocations2.png "호출 트리 탭")](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations3-vs.png "호출 트리 탭")](images/allocations3-vs.png)
+  [![](images/allocations3-vs.png "호출 트리 탭")](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -276,11 +276,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-  [![](images/allocations4.png "스냅숏 탭")](images/allocations4.png) 
+  [![](images/allocations4.png "스냅숏 탭")](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/allocations4-vs.png "스냅숏 탭")](images/allocations4-vs.png)
+  [![](images/allocations4-vs.png "스냅숏 탭")](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -292,15 +292,15 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![시간 프로파일러 계측](images/time1.png)](images/time1.png) 
+[![시간 프로파일러 계측](images/time1.png)](images/time1.png#lightbox) 
 
-[![시간 프로파일러 계측 – 샘플 목록](images/time3.png)](images/time3.png) 
+[![시간 프로파일러 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![시간 프로파일러 계측](images/time1-vs.png)](images/time1-vs.png) 
+[![시간 프로파일러 계측](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![시간 프로파일러 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png) 
+[![시간 프로파일러 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -309,11 +309,11 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-  [![](images/time2.png "시간 프로파일러 계측-호출 트리")](images/time2.png) 
+  [![](images/time2.png "시간 프로파일러 계측-호출 트리")](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-  [![](images/time2-vs.png "시간 프로파일러 계측-호출 트리")](images/time2-vs.png) 
+  [![](images/time2-vs.png "시간 프로파일러 계측-호출 트리")](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -325,7 +325,7 @@ C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![주기 계측](images/cycles-vs.png)](images/time1-vs.png) 
+[![주기 계측](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
 
 -----
 
@@ -338,11 +338,11 @@ C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![프로 파일링 오류 대화 상자](images/image001.png)](images/image001.png) 
+[![프로 파일링 오류 대화 상자](images/image001.png)](images/image001.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](images/image1vs.png "프로 파일링 오류 대화 상자")](images/image1vs.png) 
+[![](images/image1vs.png "프로 파일링 오류 대화 상자")](images/image1vs.png#lightbox) 
 
 -----
 
@@ -350,7 +350,7 @@ C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 
 선택 **업데이트** 를 계속 합니다.
 
 <!---
-##Profiling Android Applications
+## Profiling Android Applications
 
 
 Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
@@ -358,7 +358,7 @@ Due to the recent inclusion of the profiling libraries into any new Android proj
 You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
 
 
-##Profiling iOS Applications
+## Profiling iOS Applications
 
 ### Profiling tvOS
 

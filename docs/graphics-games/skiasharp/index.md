@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 03089e4760ebf19849cd4d34cafb7047d8915a4d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee0625f22062fef3c27a697ce33488274abc24d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="2d-drawing"></a>2D 그리기
 
 SkiaSharp 2 차원 그래픽을 수행 하기 위한 강력한 C# API를 제공 합니다. 으로 작동 하는 [Google의 Skia 라이브러리](http://skia.org), Google Chrome, Firefox 및 Android의 그래픽 스택을 구동 하는 라이브러리입니다.
 
-[ ![](images/ide-sml.png "2 차원 그래픽을 수행 하기 위한 강력한 C# API를 제공 하는 SkiaSharp")](images/ide.png)
+[![](images/ide-sml.png "2 차원 그래픽을 수행 하기 위한 강력한 C# API를 제공 하는 SkiaSharp")](images/ide.png#lightbox)
 
 SkiaSharp는 휴대용 라이브러리 하며으로 편리 하 게 포함 한 [플랫폼 간 NuGet 패키지](https://www.nuget.org/packages/SkiaSharp), 즉시 다음 플랫폼을 지원 하 고: macOS 등 Xamarin.Android, Xamarin.iOS, 및의 Windows 바탕 화면입니다.
 
@@ -32,7 +32,7 @@ Xamarin.Forms에 렌더링 하는 플랫폼 그래픽 크로스 작업할 방법
 
 - [그리기 기본 사항](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
   * [단순 원을 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [Xamarin.Forms를 사용한 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
+  * [Xamarin.Forms와 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
   * [픽셀과 장치 독립적 단위](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
   * [기본 애니메이션](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
   * [텍스트와 그래픽 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
@@ -43,7 +43,7 @@ Xamarin.Forms에 렌더링 하는 플랫폼 그래픽 크로스 작업할 방법
   * [경로 채우기 유형](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
   * [폴리라인 및 파라메트릭 수식](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
   * [점, 대시](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [손가락 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
+  * [손가락으로 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
 - [변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
   * [이동 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
   * [크기 조정 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
@@ -54,15 +54,15 @@ Xamarin.Forms에 렌더링 하는 플랫폼 그래픽 크로스 작업할 방법
   * [비 3x3 유사 변형](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
   * [3D 회전](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
 - [곡선 및 경로](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [호를 그리려면 다음 세 가지 방법](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
-  * [세 가지 유형의 베 지 어 곡선으로 분할](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [SVG 경로 데이터입니다.](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [경로 및 영역을 사용 하 여 클리핑](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
+  * [원호를 그리는 3가지 방법](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
+  * [3가지 형식의 Bézier 곡선](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
+  * [SVG 경로 데이터](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
+  * [경로 및 지역 클리핑](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
   * [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
   * [경로 및 텍스트](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [경로 정보 및 열거형](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 
-## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[플랫폼 특정 참고 사항](~/graphics-games/skiasharp/platform.md)
+## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[플랫폼별 설명](~/graphics-games/skiasharp/platform.md)
 
 이 페이지에서는 iOS, Android, macOS 등 및 Windows를 포함 하 여 서로 다른 플랫폼에서 SkiaSharp에 대 한 설치 지침을 설명 합니다.
 

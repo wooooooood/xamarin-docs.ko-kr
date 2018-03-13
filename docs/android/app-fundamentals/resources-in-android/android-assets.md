@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: bbf20155fe097f0229aa28c1f0d046cb3ef31a63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-android-assets"></a>Android 자산 사용 하 여
 
@@ -20,7 +20,6 @@ _자산_ 응용 프로그램에 텍스트, xml, 글꼴, 음악 및 비디오와 
 프로젝트에 추가 하는 자산 파일 시스템에서 사용 하 여 응용 프로그램에서 읽을 수 있는 것 처럼 표시 됩니다 [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)합니다.
 이 간단한 데모는 텍스트 파일 자산을 위해 프로젝트에 추가 하겠습니다 읽기를 사용 하 여 `AssetManager`, TextView에 표시 합니다.
 
-<a name="Add_Asset_to_Project" />
 
 ## <a name="add-asset-to-project"></a>자산을 프로젝트에 추가
 
@@ -36,13 +35,12 @@ Visual Studio를 설정 해야 함는 **빌드 작업** 이 파일에 대해 **A
 
 Mac 용 visual Studio를 설정 해야 함는 **빌드 작업** 이 파일에 대해 **AndroidAsset**:
 
-[![빌드 작업 AndroidAsset을로 설정](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![빌드 작업 AndroidAsset을로 설정](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
 선택 하 고 올바른 **빌드 작업** 파일을 컴파일 타임에 APK에 패키지 됩니다 있는지 확인 합니다.
 
-<a name="Reading_Assets" />
 
 ## <a name="reading-assets"></a>자산 읽기
 
@@ -71,7 +69,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>응용 프로그램 실행
 

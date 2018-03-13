@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: b1eb886685597e671dccf70063c34e102ce2cac9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b9523d76c04dae97b74744fbe2bd6bc7022c3194
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-sqlitenet"></a>SQLite.NET를 사용 하 여
 
@@ -21,7 +21,7 @@ Xamarin에서 권장 하는 SQLite.NET 라이브러리는 쉽게 저장 하 고 
 
 Xamarin 앱에 SQLite.NET 라이브러리를 포함 하려면 추가 [SQLite.net PCL NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/) 사용 하 여 프로젝트에는 **SQLite net PCL** NuGet 패키지:
 
-[ ![SQLite.NET NuGet 패키지](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png)
+[![SQLite.NET NuGet 패키지](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
 
 SQLite.NET 라이브러리를 사용할 수 있으면 데이터베이스에 액세스 하려면 사용 하려면 다음 세 가지 단계를 따르십시오.
 
@@ -185,7 +185,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!NOTE]
-> **참고:** 의 테이블 및 사용자 클래스 및 해당 특성에서 생성 된 데이터베이스의 열 이름에는 종속성을 만들면 직접 SQL 문을 작성 하는 경우. 코드에서 해당 이름을 변경 하면 모든 수동으로 작성 된 SQL 문을 업데이트 해야 합니다.
+> 직접 SQL 문을 작성 하는 경우 테이블 및 사용자 클래스 및 해당 특성에서 생성 된 데이터베이스의 열 이름에 대 한 종속성을 만듭니다. 코드에서 해당 이름을 변경 하면 모든 수동으로 작성 된 SQL 문을 업데이트 해야 합니다.
 
 ### <a name="deleting-an-object"></a>개체 삭제
 

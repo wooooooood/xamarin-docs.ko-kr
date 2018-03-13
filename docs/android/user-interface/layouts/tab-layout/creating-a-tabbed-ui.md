@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>연습-TabHost를 사용 하 여 탭된 UI 만들기
 
 _이 문서에서는 Xamarin.Android TabHost API를 사용 하 여 탭된 UI를 만드는 과정을 안내 합니다._
 
 > [!NOTE]
-> **참고:** `TabHost` 는 Google에서 사용 되지 않은 오래 된 API가 있습니다. 개발자는를 사용 하 여 탭된 응용 프로그램을 빌드하는 [작업 모음](~/android/user-interface/controls/action-bar.md)합니다. `ActionBar` Android의 모든 버전에서 사용할 수 있습니다. Android (API 수준 11) 3.0에서 처음 도입 하 고 Android 2.2 (API 수준 8) 및 Android 2.3 (API 수준 10)에서 다시 포팅된는 [V7 AppCompat 라이브러리](http://developer.android.com/tools/support-library/features.html#v7-appcompat), Xamarin.Android를 통해 제공 되는 [Xamarin Android 지원 라이브러리-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지 합니다.
+> `TabHost` Google에서 사용 되지 않은 오래 된 API입니다. 개발자는를 사용 하 여 탭된 응용 프로그램을 빌드하는 [작업 모음](~/android/user-interface/controls/action-bar.md)합니다. `ActionBar` Android의 모든 버전에서 사용할 수 있습니다. Android (API 수준 11) 3.0에서 처음 도입 하 고 Android 2.2 (API 수준 8) 및 Android 2.3 (API 수준 10)에서 다시 포팅된는 [V7 AppCompat 라이브러리](http://developer.android.com/tools/support-library/features.html#v7-appcompat), Xamarin.Android를 통해 제공 되는 [Xamarin Android 지원 라이브러리-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지 합니다.
 
 이 문서에서는 Xamarin.Android를 사용 하 여 탭된 UI를 만드는 과정을 안내는 `TabHost` API입니다. Android의 모든 버전에서 사용할 수 있는 이전 API입니다. 이 예제는 활동에 캡슐화 되 고 각 탭에 대 한 논리와 세 개의 탭이 포함 된 응용 프로그램을 만듭니다.
 다음 스크린 샷에서 만들 응용 프로그램의 예제.
 
 ![여러 탭이 포함 된 응용 프로그램의 예제 스크린 샷](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>응용 프로그램 작성
 
@@ -61,7 +60,7 @@ _이 문서에서는 Xamarin.Android TabHost API를 사용 하 여 탭된 UI를 
 
 다음 스크린 샷에서 Xamarin 디자이너에서 레이아웃을 보여 줍니다.
 
-[![Xamarin 디자이너에서 TabHost 레이아웃의 스크린 샷](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Xamarin 디자이너에서 TabHost 레이아웃의 스크린 샷](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 TabHost 그 안에 두 개의 자식 뷰 있어야:는 `TabWidget` 및 `FrameLayout`합니다. 위치는 `TabWidget` 및 `FrameLayout` 세로로 내부는 `TabHost`, `LinearLayout` 사용 됩니다. 각 탭에 대 한 콘텐츠 흐름 방향은, 비어 있는 FrameLayout은 때문에 `TabHost` 런타임에 각 활동을 자동으로 포함 됩니다. 탭된 사용자 인터페이스에 대 한 레이아웃을 만들 때 따라야 하는 몇 가지 규칙이 있습니다.
 
@@ -203,7 +202,6 @@ protected override void OnCreate(Bundle bundle)
 정말 간단하죠. 응용 프로그램의 다른 부분에 쉽게 이동 하는 사용자를 제공 하는 탭된 응용 프로그램을 작성 했습니다.
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

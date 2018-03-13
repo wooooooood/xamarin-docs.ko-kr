@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1a49c3a3181b477b777de74b0eb53f5e0da6f041
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ea51dc2c7dadc5cc430df990c9ce79eac6e941da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="homekit"></a>HomeKit
 
 _HomeKit은 홈 자동화 장치 제어에 대 한 Apple의 프레임 워크. 이 문서는 HomeKit를 소개 하 고 이러한 액세서리와 상호 작용할 수 HomeKit 액세서리 시뮬레이터 및 간단한 Xamarin.iOS 앱 작성에 테스트 액세서리 구성에 대해 설명 합니다._
 
-[ ![](homekit-images/accessory01.png "HomeKit 예제 응용 프로그램을 사용 하도록 설정")](homekit-images/accessory01.png)
+[![](homekit-images/accessory01.png "HomeKit 예제 응용 프로그램을 사용 하도록 설정")](homekit-images/accessory01.png#lightbox)
 
 Apple는 iOS 8에서에서 원활 하 게 하나의 단위로 다양 한 공급 업체의 여러 가정 자동화 장치를 통합 하는 방법으로 HomeKit를 도입 되었습니다. 검색 하기 위한 일반적인 프로토콜 올려서 구성 하 고 홈 자동화 장치 제어 HomeKit 있습니다 장치를 함께 작동 하 여 개별 공급 업체를 조정 하기 위한 필요 없이 모두 관련 되지 않은 공급 업체에서.
 
@@ -57,21 +57,21 @@ HomeKit에서 설정한 보안 요구 사항으로 인해 HomeKit 프레임 워�
 3. 그렇게 이미 하지 않은 경우 클릭 **식별자** 응용 프로그램에 대 한 ID를 만듭니다 (예: `com.company.appname`), 프로그램 기존 id입니다. 그렇지 않으면 편집
 4. 확인 된 **HomeKit** 서비스가 지정된 된 ID에 대 한 검사 된: 
 
-    [ ![](homekit-images/provision01.png "지정된 된 ID에 대 한 HomeKit 서비스를 사용 하도록 설정")](homekit-images/provision01.png)
+    [![](homekit-images/provision01.png "지정된 된 ID에 대 한 HomeKit 서비스를 사용 하도록 설정")](homekit-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
 4. 클릭 **프로 비전 프로필** > **개발** 프로비저닝 프로필 응용 프로그램에 대 한 새로운 개발을 만듭니다. 
 
-    [ ![](homekit-images/provision02.png "프로비저닝 프로필에서 앱에 대 한 새로운 개발 만들기")](homekit-images/provision02.png)
+    [![](homekit-images/provision02.png "프로비저닝 프로필에서 앱에 대 한 새로운 개발 만들기")](homekit-images/provision02.png#lightbox)
 5. 다운로드 및 새 프로비저닝 프로필을 설치 하거나 사용 Xcode를 다운로드 하 여 프로필을 설치 하십시오.
 6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 하십시오. 
 
-    [ ![](homekit-images/provision03.png "방금 만든 프로비저닝 프로필을 선택 합니다.")](homekit-images/provision03.png)
+    [![](homekit-images/provision03.png "방금 만든 프로비저닝 프로필을 선택 합니다.")](homekit-images/provision03.png#lightbox)
 7. 다음에 편집 프로그램 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 하는 응용 프로그램 ID를 사용 하 고 있는지 확인 하십시오. 
 
-    [ ![](homekit-images/provision04.png "앱 ID를 설정 합니다. ")](homekit-images/provision04.png)
+    [![](homekit-images/provision04.png "앱 ID를 설정 합니다. ")](homekit-images/provision04.png#lightbox)
 8. 마지막으로 편집 프로그램 **Entitlements.plist** 파일을 확인 하는 **HomeKit** 권한 선택: 
 
-    [ ![](homekit-images/provision05.png "HomeKit 자격을 사용 하도록 설정")](homekit-images/provision05.png)
+    [![](homekit-images/provision05.png "HomeKit 자격을 사용 하도록 설정")](homekit-images/provision05.png#lightbox)
 9. 모든 파일에 변경 내용을 저장 합니다.
 
 현재 위치를이 설정 하 여 응용 프로그램 HomeKit 프레임 워크 Api에 액세스할 준비가 되었습니다. 에 대 한 자세한 내용은 프로 비전을 참조 하십시오 우리의 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 및 [앱을 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
@@ -92,7 +92,7 @@ HomeKit에서 설정한 보안 요구 사항으로 인해 HomeKit 프레임 워�
 1. 웹 브라우저에서 방문 [Apple 개발자를 위한 다운로드](https://developer.apple.com/download/more/?name=for%20Xcode)
 2. 다운로드는 **Xcode xxx 위한 도구가 추가로** (xxx는 사용자가 설치한 Xcode의 버전): 
 
-    [ ![](homekit-images/simulator01.png "Xcode에 대 한 추가 도구 다운로드")](homekit-images/simulator01.png)
+    [![](homekit-images/simulator01.png "Xcode에 대 한 추가 도구 다운로드")](homekit-images/simulator01.png#lightbox)
 3. 디스크 이미지를 열고의 도구를 설치 하면 **응용 프로그램** 디렉터리입니다.
 
 설치 HomeKit 액세서리 시뮬레이터와 테스트를 위해 가상 보조 프로그램을 만들 수 있습니다.
@@ -103,22 +103,22 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 보조 
 
 1. 응용 프로그램 폴더에서 HomeKit 액세서리 시뮬레이터를 시작 합니다. 
 
-    [ ![](homekit-images/simulator02.png "HomeKit 액세서리 시뮬레이터")](homekit-images/simulator02.png)
+    [![](homekit-images/simulator02.png "HomeKit 액세서리 시뮬레이터")](homekit-images/simulator02.png#lightbox)
 2. 클릭는  **+**  선택한 단추 **새 액세서리 중...** : 
 
-    [ ![](homekit-images/simulator03.png "새 보조를 추가 합니다.")](homekit-images/simulator03.png)
+    [![](homekit-images/simulator03.png "새 보조를 추가 합니다.")](homekit-images/simulator03.png#lightbox)
 3. 새 접근자에 대 한 정보를 입력 하 고 클릭 하 고 **마침** 단추: 
 
-    [ ![](homekit-images/simulator04.png "새 보조에 대 한 정보 입력")](homekit-images/simulator04.png)
+    [![](homekit-images/simulator04.png "새 보조에 대 한 정보 입력")](homekit-images/simulator04.png#lightbox)
 4. 클릭는 **서비스 추가...** 단추를 하 고 드롭다운 목록에서 서비스 종류를 선택 합니다. 
 
-    [ ![](homekit-images/simulator05.png "드롭다운 목록에서 서비스 유형 선택")](homekit-images/simulator05.png)
+    [![](homekit-images/simulator05.png "드롭다운 목록에서 서비스 유형 선택")](homekit-images/simulator05.png#lightbox)
 5. 제공 된 **이름** 서비스와 클릭에 대 한는 **마침** 단추: 
 
-    [ ![](homekit-images/simulator06.png "서비스에 대 한 이름을 입력 합니다.")](homekit-images/simulator06.png)
+    [![](homekit-images/simulator06.png "서비스에 대 한 이름을 입력 합니다.")](homekit-images/simulator06.png#lightbox)
 6. 클릭 하 여 서비스에 대 한 선택적 특성을 제공할 수 있습니다는 **추가 특성** 단추 및 필요한 설정을 구성 합니다. 
 
-    [ ![](homekit-images/simulator07.png "필요한 설정 구성")](homekit-images/simulator07.png)
+    [![](homekit-images/simulator07.png "필요한 설정 구성")](homekit-images/simulator07.png#lightbox)
 7. 각 유형의 가상 가정 자동화 HomeKit 지 원하는 장치를 새로 만들려면 위의 단계를 반복 합니다.
 
 일부 샘플 가상 HomeKit 차례로 만들고 구성한 지금 사용 하 고 사용할 수 Xamarin.iOS 앱에서 이러한 장치를 제어 합니다.
@@ -127,7 +127,7 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 보조 
 
 개발자를 추가 해야 합니다 iOS 10에 대 한 새 (이상)는 `NSHomeKitUsageDescription` 응용 프로그램의 키 `Info.plist` 파일 및 응용 프로그램 사용자의 HomeKit 데이터베이스에 액세스 하려는 이유 선언 문자열을 제공 합니다. 이 문자열은 응용 프로그램을 실행 하는 사용자는 첫 번째 시간에 나타납니다.
 
-[ ![](homekit-images/info01.png "HomeKit 권한 대화 상자")](homekit-images/info01.png)
+[![](homekit-images/info01.png "HomeKit 권한 대화 상자")](homekit-images/info01.png#lightbox)
 
 이 키를 설정 하려면 다음을 수행 합니다.
 
@@ -136,10 +136,10 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 보조 
 3. 새로 추가 **항목** 목록에 있습니다.
 4. 드롭다운 목록에서 선택 **개인정보 취급 방침-HomeKit 사용 설명을**: 
 
-    [ ![](homekit-images/info02.png "개인정보 취급 방침-HomeKit 사용 설명을 선택합니다")](homekit-images/info02.png)
+    [![](homekit-images/info02.png "개인정보 취급 방침-HomeKit 사용 설명을 선택합니다")](homekit-images/info02.png#lightbox)
 5. 응용 프로그램 사용자의 HomeKit 데이터베이스에 액세스 하려는 이유에 대 한 설명을 입력 합니다. 
 
-    [ ![](homekit-images/info03.png "설명을 입력합니다")](homekit-images/info03.png)
+    [![](homekit-images/info03.png "설명을 입력합니다")](homekit-images/info03.png#lightbox)
 6. 파일의 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
@@ -189,7 +189,7 @@ public override void FinishedLaunching (UIApplication application)
 
 응용 프로그램을 처음 실행할 때 사용자가 묻습니다 자신의 HomeKit 정보에 액세스할 수 있도록 하려는 경우:
 
-[ ![](homekit-images/home01.png "원하는 경우 자신의 HomeKit 정보에 액세스할 수 있도록 허용 하는 사용자는 요청")](homekit-images/home01.png)
+[![](homekit-images/home01.png "원하는 경우 자신의 HomeKit 정보에 액세스할 수 있도록 허용 하는 사용자는 요청")](homekit-images/home01.png#lightbox)
 
 사용자가 대답 **확인**, 응용 프로그램의 HomeKit Accessories 작업할 수 없습니다는 그렇지 않은 경우 및 HomeKit에 대 한 모든 호출 오류와 함께 실패 합니다.
 
@@ -283,7 +283,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 
 새 액세서리 발견 되 면 사용자에 게 표시 되어야 합니다 및 있으므로 선택 수 고 홈에 추가 합니다. 예제:
 
-[ ![](homekit-images/accessory01.png "새 액세서리 찾기")](homekit-images/accessory01.png)
+[![](homekit-images/accessory01.png "새 액세서리 찾기")](homekit-images/accessory01.png#lightbox)
 
 호출의 `AddAccessory` 메서드를 선택한 액세서리 홈의 컬렉션에 추가 합니다. 예:
 
@@ -300,11 +300,11 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 경우는 `err` 속성은 `null`오류가 발생 하 고 사용자에 게 표시 되어야 합니다. 그렇지 않으면 사용자를 추가 하려면 장치에 대 한 설치 코드를 입력 하 라는 표시 됩니다.
 
-[ ![](homekit-images/accessory02.png "추가 하려면 장치에 대 한 설치 코드를 입력 합니다.")](homekit-images/accessory02.png)
+[![](homekit-images/accessory02.png "추가 하려면 장치에 대 한 설치 코드를 입력 합니다.")](homekit-images/accessory02.png#lightbox)
 
 HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다는 **설치 코드** 필드:
 
-[ ![](homekit-images/accessory03.png "HomeKit 액세서리 시뮬레이터에 있는 설치 코드 필드")](homekit-images/accessory03.png)
+[![](homekit-images/accessory03.png "HomeKit 액세서리 시뮬레이터에 있는 설치 코드 필드")](homekit-images/accessory03.png#lightbox)
 
 실제 HomeKit accessories에 대 한 설치 코드 장치 자체에, 제품 상자 또는 액세서리의 설명서에서 레이블을 인쇄 하거나 됩니다.
 
@@ -320,7 +320,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다�
 
 `HMHome` 개체에 할당 된 액세서리 사용자에 게 표시 될 수 있는 목록이 포함 되어 해당 `Accessories` 속성입니다. 예:
 
-[ ![](homekit-images/accessory04.png "예제 액세서리")](homekit-images/accessory04.png)
+[![](homekit-images/accessory04.png "예제 액세서리")](homekit-images/accessory04.png#lightbox)
 
 여기 양식에서 사용자 지정된 액세서리를 선택할 수 있으며 서비스를 제공 하는 작업을 수행 합니다.
 
@@ -368,7 +368,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다�
 
 로드 한 후에 `HMAccessory` 개별을 쿼리할 수 있습니다 `HNService` 개체를 제공 하 고 사용자에 게 해당 정보를 표시 합니다.
 
-[ ![](homekit-images/accessory05.png "서비스 정보를 표시합니다.")](homekit-images/accessory05.png)
+[![](homekit-images/accessory05.png "서비스 정보를 표시합니다.")](homekit-images/accessory05.png#lightbox)
 
 항상 해야 확인 해야는 `Reachable` 의 속성을 `HMAccessory` 작업을 시도 하기 전에. 액세서리는 연결할 수 없습니다. 사용자가 장치의 범위 내에서 또는 경우 해제 된 연결 수 있습니다.
 
@@ -658,7 +658,7 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 
 와 **HomeKitIntro** HomeKit 액세서리 시뮬레이터에 있는 실제 iOS 장치 하드웨어에는 특성 값 변경에서 실행 중인 앱을 거의 즉시 이해 되어야 합니다. 예를 들어 iOS 앱의 광원의 상태 변경:
 
-[ ![](homekit-images/test01.png "IOS 앱의 광원의 상태 변경")](homekit-images/test01.png)
+[![](homekit-images/test01.png "IOS 앱의 광원의 상태 변경")](homekit-images/test01.png#lightbox)
 
 HomeKit 액세서리 시뮬레이터에 있는 광원의 상태를 변경 해야 합니다. 값 변경 되지 않는 경우 새 특성 값을 쓸 때 오류 메시지의 상태를 확인 하 고 접근자 계속 연결할 수 있는지 확인 합니다.
 

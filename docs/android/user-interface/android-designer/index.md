@@ -7,17 +7,17 @@ ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: c06dab9bf280a2543585d36147c7c3311f6445ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
 _이 문서는 Xamarin.Android 디자이너의 기능에 설명 합니다. 위젯 시각적으로 배치 하려면 디자이너를 사용 하는 방법 및 속성을 편집 하는 방법을 보여 주는 디자이너 기본 사항 설명 합니다. 또한 가로 세로 같은 대체 뷰를 디자인 하는 방법 뿐만 아니라 테마, 언어 및 장치 구성 등의 다양 한 구성에 따른 사용자 인터페이스 및 리소스를 사용 하 여 디자이너를 사용 하는 방법을 보여 줍니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -37,22 +37,20 @@ Xamarin.Android 모두 선언적 스타일 코드에서 프로그래밍 방식�
 9.  자재 디자인-규격 앱을 빌드할 자료 디자인 도구를 사용 하는 방법.
 
 
-<a name="Sections" />
 
 ## <a name="sections"></a>섹션
 
- [Android 디자이너를 사용 하 여](~/android/user-interface/android-designer/designer-walkthrough.md)
+ [Android Designer 사용](~/android/user-interface/android-designer/designer-walkthrough.md)
 
- [디자이너의 기본 사항](~/android/user-interface/android-designer/designer-basics.md)
+ [디자이너 기본 사항](~/android/user-interface/android-designer/designer-basics.md)
 
  [리소스 한정자 및 시각화 옵션](~/android/user-interface/android-designer/resource-qualifiers.md)
 
- [대체 레이아웃 뷰](~/android/user-interface/android-designer/alternative-layout-views.md)
+ [대체 레이아웃 보기](~/android/user-interface/android-designer/alternative-layout-views.md)
 
- [자재 디자인 기능](~/android/user-interface/android-designer/material-design-features.md)
+ [재질 디자인 기능](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

@@ -2,20 +2,19 @@
 title: "글꼴"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
+ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 01/30/2018
-ms.openlocfilehash: 3b7c45a50ffb0748b5f63edfd444cb02af3fdc67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fonts"></a>글꼴
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -60,7 +59,6 @@ Android 지원 라이브러리 v26 API 수준 26 글꼴 backport 지원이 됩�
 
 이 가이드는 먼저 Android 리소스로 글꼴을 사용 하는 방법에 설명 하 고 런타임 시 글꼴을 다운로드 하는 방법에 토론 하려면 이동 합니다.
 
-<a name="fonts_as_a_resource" />
 
 ## <a name="fonts-as-a-resource"></a>글꼴 리소스
 
@@ -139,7 +137,6 @@ Android APK에 글꼴을 패키징 응용 프로그램에 사용할 수 있는 �
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### <a name="programmatically-assigning-fonts"></a>글꼴을 프로그래밍 방식으로 할당
 
@@ -158,7 +155,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## <a name="downloading-fonts"></a>글꼴 다운로드
 
@@ -202,7 +198,6 @@ Android 8.0 두 가지 방법으로 다운로드 글꼴을 지원합니다.
 
 글꼴을 정의한 후에 대 한 정보를 제공 해야 할 수 있습니다는 _글꼴 인증서_ 다운로드에 포함 합니다.
 
-<a name="font_certificates" />
 
 ### <a name="font-certificates"></a>글꼴 인증서
 
@@ -232,7 +227,6 @@ Android 8.0 두 가지 방법으로 다운로드 글꼴을 지원합니다.
 
 이러한 리소스는 위치에 파일을 통해 앱이 글꼴을 다운로드할 수 있습니다.
 
-<a name="downloadable_font_resource_declaration" />
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>리소스 그룹으로 다운로드할 수 있는 글꼴 선언
 
@@ -253,7 +247,6 @@ Android 8.0 두 가지 방법으로 다운로드 글꼴을 지원합니다.
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>글꼴 Api가 있는 글꼴 다운로드
 
@@ -326,10 +319,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -360,7 +349,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

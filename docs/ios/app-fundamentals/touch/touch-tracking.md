@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c096e211bc29e94dbff0202c50ca69780cb6849e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a9e3842611aab86d23a2b0c2a832efce18c22465
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>멀티 터치 손가락 추적
 
@@ -184,7 +184,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 
 이 처리를 사용 하면 맵는 [핑거 페인트](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) 프로그램 개별 손가락을 추적 하 고 화면에 결과 그립니다.
 
-[ ![](touch-tracking-images/image01.png "개별 손가락을 추적 하 고 화면에 결과 그리기")](touch-tracking-images/image01.png)
+[![](touch-tracking-images/image01.png "개별 손가락을 추적 하 고 화면에 결과 그리기")](touch-tracking-images/image01.png#lightbox)
 
 이제 화면에서 손가락을 개별 추적 파일 그룹을 구분할 하는 방법을 살펴보았습니다.
 

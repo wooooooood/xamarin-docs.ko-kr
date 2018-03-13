@@ -7,12 +7,12 @@ ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/07/2018
-ms.openlocfilehash: ae6b89e48005ca028db5d13f1a55f237888ae08b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -37,7 +37,7 @@ Android 4.4 (API 수준 19) 라고도 "KitKat"가, 런타임에 2013에서 릴�
 
 KitKat를 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하려면 *Xamarin.Android 4.11.0* 또는 상위 수준과 Android 4.4 (API 수준 19) 다음 스크린샷에 표시 된 것 처럼 Android SDK Manager를 통해를 설치 합니다.
 
-[![Android SDK Manager에서 Android 4.4를 선택합니다.](kitkat-images/api19.png)](kitkat-images/api19.png)
+[![Android SDK Manager에서 Android 4.4를 선택합니다.](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
 <a name="Migrating_Your_App_to_KitKat" />
 
@@ -84,7 +84,7 @@ alarmManager.SetExact (AlarmType.Rtc, AlarmManager.IntervalDay, pendingIntent);
 -  표시 되는 경우 파일 또는 디렉터리 경로 속성에 액세스 하거나에서 메서드를 호출 하 여 `Environment` 와 같은 [ `GetExternalStorageDirectory` ](https://developer.xamarin.com/api/property/Android.OS.Environment.ExternalStorageDirectory/) 또는 [ `GetExternalStoragePublicDirectory` ](https://developer.xamarin.com/api/member/Android.OS.Environment.GetExternalStoragePublicDirectory/p/System.String/) , 앱에 필요한는 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한.
 
 > [!NOTE]
-> **참고:** `WRITE_EXTERNAL_STORAGE` 의미는 `READ_EXTERNAL_STORAGE` 권한, 해야만 해야 하나 사용 권한을 설정 합니다.
+> `WRITE_EXTERNAL_STORAGE` 의미는 `READ_EXTERNAL_STORAGE` 권한, 해야만 해야 하나 사용 권한을 설정 합니다.
 
 ### <a name="sms-consolidation"></a>SMS 통합
 
@@ -147,11 +147,11 @@ public class MainActivity : Activity
 
 아래 스크린샷에서 애니메이션 하기 전에 앱을 보여 줍니다.
 
-[![애니메이션을 시작 하기 전에 응용 프로그램 스크린 샷](kitkat-images/trans-before.png)](kitkat-images/trans-before.png)
+[![애니메이션을 시작 하기 전에 응용 프로그램 스크린 샷](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 아래 스크린샷에서 애니메이션 후 앱을 보여 줍니다.
 
-[![애니메이션이 완료 된 후 응용 프로그램 스크린 샷](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![애니메이션이 완료 된 후 응용 프로그램 스크린 샷](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 다음 섹션에서 다루는 장면 가진 전환 보다 자세히 제어를 얻을 수 있습니다.
 
@@ -161,7 +161,7 @@ public class MainActivity : Activity
 
 동적 콘텐츠를 보유 하는 정적 UI 요소 라고는 *컨테이너* 또는 *장면 기본*합니다. 다음 예제에서는 Android 디자이너를 사용 하 여 만듭니다는 `RelativeLayout` 호출 `container`:
 
-[![Android 디자이너를 사용 하 여 RelativeLayout 컨테이너를 만들려면](kitkat-images/container.png)](kitkat-images/container.png)
+[![Android 디자이너를 사용 하 여 RelativeLayout 컨테이너를 만들려면](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
 
 샘플 레이아웃 이라는 단추가 정의 `sceneButton` 아래에서 `container`합니다. 이 단추는 전환이 트리거됩니다.
 
@@ -237,22 +237,22 @@ sceneButton.Click += (o, e) => {
 
 아래 스크린샷에서 전에 애니메이션 장면의 보여 줍니다.
 
-[![애니메이션을 시작 하기 전에 응용 프로그램의 스크린 샷](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![애니메이션을 시작 하기 전에 응용 프로그램의 스크린 샷](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 아래 스크린샷에서 후 애니메이션 장면의 보여 줍니다.
 
-[![애니메이션이 완료 된 후의 응용 프로그램의 스크린 샷](kitkat-images/scene.png)](kitkat-images/scene.png)
+[![애니메이션이 완료 된 후의 응용 프로그램의 스크린 샷](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
 
 > [!NOTE]
-> **참고:** 는 [알려진된 버그](https://code.google.com/p/android/issues/detail?id=62450) Android 전환에 백그라운드에서 발생 하는 라이브러리를 사용 하 여 만든 `GetSceneForLayout` 두 번째 활동을 통해는 사용자가을 중단 하도록 합니다. Java 해결 방법이 설명 되어 [여기](http://www.doubleencore.com/2013/11/new-transitions-framework/)합니다.
+> 한 [알려진된 버그](https://code.google.com/p/android/issues/detail?id=62450) Android 전환에 백그라운드에서 발생 하는 라이브러리를 사용 하 여 만든 `GetSceneForLayout` 두 번째 활동을 통해는 사용자가을 중단 하도록 합니다. Java 해결 방법이 설명 되어 [여기](http://www.doubleencore.com/2013/11/new-transitions-framework/)합니다.
 
 
 ##### <a name="custom-transitions-in-scenes"></a>장면에 사용자 지정 전환
 
 사용자 지정 전환의 xml 리소스 파일에 정의할 수 있습니다는 `transition` 아래의 디렉터리 `Resources`아래 스크린샷에서 예와 같이:
 
-[![리소스/전환 디렉터리 transition.xml 파일의 위치](kitkat-images/resources.png)](kitkat-images/resources.png)
+[![리소스/전환 디렉터리 transition.xml 파일의 위치](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
 다음 코드 샘플 5 초간 애니메이션 효과 적용 하 고 사용 하는 전환을 정의 [보간 지나친](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
@@ -307,7 +307,7 @@ KitKat 사용 하면 더 제어할 테마 설정 선택적 transclucent 상태�
 
 아래 스크린샷에서 위에 반투명 상태 및 탐색 모음과 테마를 보여 줍니다.
 
-[![반투명 상태와 탐색 모음으로 응용 프로그램의 예제 스크린 샷](kitkat-images/theme.png)](kitkat-images/theme.png)
+[![반투명 상태와 탐색 모음으로 응용 프로그램의 예제 스크린 샷](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -338,7 +338,7 @@ StartActivityForResult (intent, save_request_code);
 
 호출 `StartActivityForResult` 사용자 이미지를 선택 하 여 탐색할 수 있는 SAF UI를 시작 합니다.
 
-[![저장소 액세스 프레임 워크를 사용 하 여 browing 이미지에 대 한 응용 프로그램의 예제 스크린 샷](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png)
+[![저장소 액세스 프레임 워크를 사용 하 여 browing 이미지에 대 한 응용 프로그램의 예제 스크린 샷](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 사용자가 이미지를 선택한 후 `OnActivityResult` 반환 된 `Android.Net.Uri` 선택한 파일의 합니다. 다음 코드 예제에는 사용자의 이미지 선택을 표시 됩니다.
 
@@ -368,7 +368,7 @@ StartActivityForResult (intentCreate, write_request_code);
 
 위 예제 코드는 파일 이름을 바꾸고 새 파일을 저장할 디렉터리를 선택 하 여 사용자 SAF UI를 로드 합니다.
 
-[![NewDoc 다운로드 디렉터리에 파일 이름을 변경 하는 사용자의 스크린샷](kitkat-images/saf-save.png)](kitkat-images/saf-save.png)
+[![NewDoc 다운로드 디렉터리에 파일 이름을 변경 하는 사용자의 스크린샷](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
 사용자가 누르면 **저장**, `OnActivityResult` 전달 되는 `Android.Net.Uri` 으로 액세스할 수 있는 새로 생성된 된 파일의 `data.Data`합니다. 새 파일에 데이터를 스트리밍하는 uri를 사용할 수 있습니다.
 
@@ -396,11 +396,11 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 인쇄 콘텐츠의 도입으로 KitKat 간소화 되어는 [인쇄 서비스](https://developer.xamarin.com/api/namespace/Android.PrintServices/) 및 `PrintManager`합니다. KitKat 완전히 활용 하 여 첫 번째 API 버전 이기도 [Google의 클라우드 인쇄 서비스 Api](https://developers.google.com/cloud-print/) 를 사용 하는 [Google 클라우드 인쇄 응용 프로그램](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint)합니다.
 Google 클라우드 인쇄 앱을 다운로드 하는 자동으로 KitKat와 함께 제공 되는 대부분 장치 및 [HP 인쇄 서비스 플러그인](https://play.google.com/store/apps/details?id=com.hp.android.printservice)처음에 연결할 때 WiFi 합니다. 로 이동 하 여 사용자가 자신의 장치 인쇄 설정을 확인할 수 **설정 > 시스템 > 인쇄**:
 
-[![인쇄 설정 화면의 예제 스크린 샷](kitkat-images/printing.png)](kitkat-images/printing.png)
+[![인쇄 설정 화면의 예제 스크린 샷](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 
 > [!NOTE]
-> **참고:** Android 여전히 개발자는 새로운 Api를 사용 하 여 인쇄 내용을 준비 하 고 인쇄를 처리 하도록 다른 응용 프로그램에 보낼 인쇄 Api는 기본적으로 Google 클라우드 인쇄와 작동 하도록 설정 된, 있지만 수 있습니다.
+> 하지만 인쇄 Api는 기본적으로 Google 클라우드 인쇄와 작동 하도록 설정 된, Android에 여전히 개발자를 새로운 Api를 사용 하 여 인쇄 내용을 준비 하 고 인쇄를 처리 하도록 다른 응용 프로그램에 보낼 수 있습니다.
 
 
 
@@ -410,14 +410,14 @@ KitKat 자동으로 만듭니다는 [ `PrintDocumentAdapter` ](https://developer
 
 Note를 로드 하 고 웹 콘텐츠를 인쇄 하려면 인터넷 권한이 필요 합니다.
 
-[![응용 프로그램 옵션에 대 한 인터넷 권한 설정](kitkat-images/internet.png)](kitkat-images/internet.png)
+[![응용 프로그램 옵션에 대 한 인터넷 권한 설정](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### <a name="print-menu-item"></a>인쇄 메뉴 항목
 
 인쇄 옵션은 활동의에 일반적으로 표시 됩니다 [옵션 메뉴](http://developer.android.com/guide/topics/ui/menus.html#options-menu)합니다.
 옵션 메뉴에는 사용자가 활동에 작업을 수행할 수 있습니다. 화면의 오른쪽 위에 이며 다음과 같습니다.
 
-[![화면 오른쪽 위 모퉁이에 인쇄 메뉴 항목 표시의 예제 스크린 샷](kitkat-images/menu.png)](kitkat-images/menu.png)
+[![화면 오른쪽 위 모퉁이에 인쇄 메뉴 항목 표시의 예제 스크린 샷](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 추가 메뉴 항목에 정의할 수는 *메뉴*아래의 디렉터리 *리소스*합니다. 아래 코드 샘플 실행을 정의 [인쇄](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -500,9 +500,9 @@ void PrintPage ()
 
 호출 `Print` 인쇄 작업에 대 한 옵션을 나열 하는 인쇄 UI를 로드 합니다. UI 아래 스크린샷과 표시 된 것 처럼 사용자에 게를 pdf로 HTML 콘텐츠를 저장 하거나 인쇄 옵션을 제공 합니다.
 
-[![스크린샷의 PrintHtmlActivity 인쇄 메뉴 표시](kitkat-images/print1.png)](kitkat-images/print1.png)
+[![스크린샷의 PrintHtmlActivity 인쇄 메뉴 표시](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
 
-[![스크린샷의 PrintHtmlActivity 저장 PDF 메뉴로 표시](kitkat-images/print2.png)](kitkat-images/print2.png)
+[![스크린샷의 PrintHtmlActivity 저장 PDF 메뉴로 표시](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
 <a name="hardware" />
 
@@ -524,7 +524,7 @@ bool hceSupport = PackageManager.HasSystemFeature(PackageManager.FeatureNfcHostC
 <uses-feature android:name="android.hardware.nfc.hce" />
 ```
 
-[![응용 프로그램 옵션에서 NFC 사용 권한 설정](kitkat-images/nfc.png)](kitkat-images/nfc.png)
+[![응용 프로그램 옵션에서 NFC 사용 권한 설정](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
 
 작동 하려면 HCE 백그라운드에서 실행할 수 및 HCE를 사용 하 여 응용 프로그램 실행 되지 않는 경우에 사용자가 NFC 트랜잭션을 만들 때 시작 해야 합니다. HCE 코드를 작성 하 여이 작업을 수행할 수 있습니다는 `Service`합니다. HCE 서비스에서 구현 하는 `HostApduService` 다음 메서드를 구현 하는 인터페이스:
 
@@ -588,7 +588,7 @@ KitKat 통해 장치의 센서에 액세스할 수는 [ `SensorManager` ](https:
 
 아래 스크린샷에서 단계 카운터를의 동작을 보여 줍니다.
 
-[![단계 카운터 표시 SensorsActivity 앱의 스크린 샷](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png)
+[![단계 카운터 표시 SensorsActivity 앱의 스크린 샷](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
 만들 수는 `SensorManager` 호출 하 여 `GetSystemService(SensorService)` 로 결과 캐스팅 하는 `SensorManager`합니다. 단계 카운터를 사용 하려면 호출 `GetDeafultSensor` 에 `SensorManager`합니다. 센서를 등록 하 고 사용 하 여 단계 수의 변화에 따라 수신 된 [ `ISensorEventListener` ](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/) 인터페이스, 다음 코드 예제에 표시 된 것 처럼:
 
@@ -637,11 +637,10 @@ protected override void OnPause()
 
 
 > [!NOTE]
-> **참고:** 단계 검색과 KitKat과 함께 제공 되며 계산에 대 한 API를 하는 동안 모든 휴대폰 센서를 갖출 됩니다. 센서가 실행 하 여 사용할 수 있는 경우를 확인할 수 있습니다 `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`, 또는 반환된 된 값의 되도록 확인 `GetDefaultSensor` 되지 않습니다 `null`합니다.
+> 단계 검색과 KitKat과 함께 제공 되며 계산에 대 한 API를 하는 동안 모든 휴대폰 센서를 갖출 됩니다. 센서가 실행 하 여 사용할 수 있는 경우를 확인할 수 있습니다 `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`, 또는 반환된 된 값의 되도록 확인 `GetDefaultSensor` 되지 않습니다 `null`합니다.
 
 
- <a name="developer_tools" />
-
+<a name="developer_tools" />
 
 ## <a name="developer-tools"></a>개발자 도구
 
@@ -664,7 +663,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 장치에서 비디오를 찾을 수 있습니다-녹음/녹화 완료 되 면 갤러리에 표시 됩니다.
 
-<a name="other_kitkat_additions" />
 
 ## <a name="other-kitkat-additions"></a>기타 KitKat 추가 기능
 

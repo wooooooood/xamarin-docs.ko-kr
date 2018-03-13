@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 70a7abb186c102fb803c0ab6fa38c7b2d8222292
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="listview"></a>ListView
 
 _ListView가 Android 응용 프로그램의 중요 한 UI 요소 모든 위치에서 짧은 목록 메뉴 옵션에서 위해 사용 연락처 또는 인터넷 즐겨찾기 긴 목록을 합니다. 행 수는 기본 제공 스타일으로 서식이 지정 하거나 광범위 하 게 사용자 지정 스크롤 목록을 표시 하는 간단한 방법을 제공 합니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -30,10 +29,9 @@ _ListView가 Android 응용 프로그램의 중요 한 UI 요소 모든 위치�
 
 
 > [!NOTE]
-> **참고**:는 `RecyclerView` 위젯 보다 고급 하 고 유연한의 버전이 `ListView`합니다. 때문에 `RecyclerView` 에 대 한 후속 되도록 디자인 되었습니다 `ListView` (및 `GridView`)를 사용 하는 것이 좋습니다 `RecyclerView` 보다는 `ListView` 새로운 응용 프로그램 개발에 대 한 합니다. 자세한 내용은 참조 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)합니다.
+> `RecyclerView` 위젯 보다 고급 하 고 유연한의 버전이 `ListView`합니다. 때문에 `RecyclerView` 에 대 한 후속 되도록 디자인 되었습니다 `ListView` (및 `GridView`)를 사용 하는 것이 좋습니다 `RecyclerView` 보다는 `ListView` 새로운 응용 프로그램 개발에 대 한 합니다. 자세한 내용은 참조 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)합니다.
 
 
-<a name="tutorial" />
 
 ## <a name="listview-tutorial"></a>ListView 자습서
 
@@ -147,7 +145,7 @@ static readonly string[] countries = new String[] {
 
 응용 프로그램을 실행합니다. 목록을 스크롤하여 하거나 다음 메시지를 보려면 항목을 클릭 필터링 하는 것을 입력할 수 있습니다. 다음과 같이 표시되어야 합니다.
 
-[ ![국가 이름으로 ListView의 예제 스크린 샷](images/helloviews6.png)](images/helloviews6.png)
+[![국가 이름으로 ListView의 예제 스크린 샷](images/helloviews6.png)](images/helloviews6.png#lightbox)
 
 이때 하드 코드 된 문자열 배열을 사용 하 여 최상의 디자인 되었습니다. 설명 하기 위해 간단한 설명을 위해이 자습서에서 사용 하나는 [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) 위젯입니다. 와 같은 외부 리소스를 정의 하는 문자열 배열을 참조 하는 것이 좋습니다는 `string-array` 프로젝트 자원에에서 **Resources/Values/Strings.xml** 파일입니다. 예:
 
@@ -173,7 +171,6 @@ string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
 
-<a name="going_further" />
 
 ## <a name="going-further-with-listview"></a>ListView 계속 진행
 
@@ -195,12 +192,11 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 -   [ListView 파트 및 기능](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
 -   [ListView 데이터로 채우기](~/android/user-interface/layouts/list-view/populating.md)
--   [ListView의 모양 사용자 지정](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [CursorAdapters를 사용 하 여](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [ContentProvider를 사용 하 여](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView 및 활동 수명 주기](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+-   [ListView 모양 사용자 지정](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+-   [CursorAdapters 사용](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+-   [ContentProvider 사용](~/android/user-interface/layouts/list-view/content-provider.md)
+-   [ListView 및 작업 수명 주기](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

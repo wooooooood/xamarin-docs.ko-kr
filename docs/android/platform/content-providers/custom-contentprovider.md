@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: 66b956eddc48699c6fd61e9cb52a7fbc3fa70a51
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9fac4a233cecd9332602047bc83830d145b5fb08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 
@@ -28,7 +28,6 @@ _이전 섹션에는 기본 제공 ContentProvider 구현에서 데이터를 사
 
 Android 용 모노, 콘텐츠 공급자 클래스 없어야는 `[ContentProvider]` Uri (또는 Uri)를 지정 하는 특성에 추가 해야 하는 **AndroidManifest.xml**합니다.
 
-<a name="Mime_Type" />
 
 ### <a name="mime-type"></a>Mime 형식
 
@@ -40,7 +39,6 @@ MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다.
 
 역방향 DNS 표준에 사용 해야 응용 프로그램에 특정 MIME 형식을 두 번째 부분 되며는 `vnd.` 접두사입니다. 예제 코드에서는 사용 `vnd.com.xamarin.sample.Vegetables`합니다.
 
-<a name="Data_Model_Metadata" />
 
 ### <a name="data-model-metadata"></a>데이터 모델 메타 데이터
 
@@ -50,7 +48,6 @@ MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다.
 
 이전 예에서 `android.provider.ContactsContract` 클래스 연락처 데이터에 대 한 메타 데이터를 노출 합니다. 사용자 지정에 대 한 `ContentProvider` 우리는 방금 클래스 자체에 상수를 제공 합니다.
 
-<a name="Implementation" />
 
 ## <a name="implementation"></a>구현
 
@@ -64,7 +61,6 @@ MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다.
 
 앞에서 설명한 대로 `ContentProviders` 정의 되어 있는 이외의 응용 프로그램에서 사용 될 수 있습니다. 이 예에서 동일한 응용 프로그램에서 데이터를 사용 하지만 다른 응용 프로그램 에서도 액세스할 수 Uri 및 스키마 (일반적으로 노출 되는 상수 값)에 대 한 정보를 모르는 상태로 염두에서에 둬야 합니다.
 
-<a name="Create_a_database" />
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 
@@ -98,13 +94,11 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 자체 데이터베이스 구현으로 노출 되도록 특별 한 고려 하지 않아도 `ContentProvider`그러나 바인딩을 의도 하는 경우는 `ContentProvider's` 데이터를는 `ListView` 라는 고유한 정수 열을 다음 제어 `_id` 의 일부가 되어야 합니다는 결과 집합입니다. 참조는 [Listview 및 어댑터](~/android/user-interface/layouts/list-view/index.md) 문서에 대 한 자세한 내용은 사용 하는 `ListView` 제어 합니다.
 
-<a name="Create_the_ContentProvider" />
 
 ## <a name="create-the-contentprovider"></a>ContentProvider 만들기
 
 이 섹션의 나머지 부분 방법에 대 한 단계별 지침인 **SimpleContentProvider/VegetableProvider.cs** 클래스 예제 빌드 되었습니다.
 
-<a name="Initialize_the_Database" />
 
 ### <a name="initialize-the-database"></a>데이터베이스를 초기화 합니다.
 
@@ -124,7 +118,6 @@ public class VegetableProvider : ContentProvider
 
 코드의 나머지 부분 하면 데이터를 검색 하 고 쿼리 하는 실제 콘텐츠 공급자 구현을 형성 됩니다.
 
-<a name="Add_Metadata_for_Consumers" />
 
 
 ## <a name="add-metadata-for-consumers"></a>소비자에 대 한 메타 데이터 추가
@@ -165,7 +158,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-<a name="Implement_the_URI_Parsing_Helper" />
 
 ## <a name="implement-the-uri-parsing-helper"></a>도우미를 구문 분석 하는 URI를 구현 합니다.
 
@@ -195,7 +187,6 @@ static UriMatcher BuildUriMatcher()
 
 이 코드는 모든 개인는 `ContentProvider` 클래스입니다. 참조 [Google UriMatcher 설명서](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/) 자세한 정보.
 
-<a name="Implement_the_QueryMethod" />
 
 ## <a name="implement-the-querymethod"></a>QueryMethod 구현
 
@@ -241,7 +232,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-<a name="Implement_the_Other_Overrides" />
 
 ## <a name="implement-the-other-overrides"></a>다른 재정의 구현 합니다.
 
@@ -264,13 +254,11 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 
 기본 완료 `ContentProvider` 구현 합니다. 응용 프로그램 설치가 완료 된 후 되 면 노출 된 데이터에서 제공 됩니다. 둘 다 응용 프로그램 내부 될 뿐만 아니라 다른 응용 프로그램을 참조 하는 Uri를 알고 있습니다.
 
-<a name="Access_the_ContentProvider" />
 
 ## <a name="access-the-contentprovider"></a>액세스는 ContentProvider
 
 한 번의 `VegetableProvider` 되었습니다, 구현에 액세스 이루어진다는 동일한 방식으로이 문서의 시작 부분에 연락처 공급자: 지정된 된 Uri를 사용 하 여 커서를 가져오고 다음 어댑터를 사용 하 여 데이터에 액세스 합니다.
 
-<a name="Bind_a_ListView_to_a_ContentProvider" />
 
 ## <a name="bind-a-listview-to-a-contentprovider"></a>ListView를 ContentProvider에 바인딩
 
@@ -296,10 +284,9 @@ listView.Adapter = adapter;
 
 완성 된 응용 프로그램은 다음과 같습니다.
 
-[![야채, 과일, 꽃 bud과, Legumes, 전구, Tubers 나열 하는 앱의 스크린 샷](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png)
+[![야채, 과일, 꽃 bud과, Legumes, 전구, Tubers 나열 하는 앱의 스크린 샷](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
-<a name="Retrieve_a_Single_Item_from_a_ContentProvider" />
 
 ## <a name="retrieve-a-single-item-from-a-contentprovider"></a>ContentProvider에서 단일 항목을 검색 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 524d551a96dd1352d86671238a63c103cef9b0c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="background-tasks"></a>백그라운드 작업
 
@@ -30,7 +30,7 @@ WatchOS 3는 watch 앱 정보를 유지할 수는 최신 크게 세 가지가 �
 
 다음 예제를 참조하세요.
 
-[ ![](background-tasks-images/update00.png "사용자가 iPhone와 해당 Apple Watch 하루 종일 사이 이동 될 수 있습니다 어떻게")](background-tasks-images/update00.png)
+[![](background-tasks-images/update00.png "사용자가 iPhone와 해당 Apple Watch 하루 종일 사이 이동 될 수 있습니다 어떻게")](background-tasks-images/update00.png#lightbox)
 
 1. 커피를 대 한 줄에 대기 하는 동안 아침에 사용자가 몇 분 동안 해당 iPhone에 현재 뉴스를 탐색합니다.
 2. 신속 하 게 너무 짧으면을 떠나기 전에 해당 watch 화면에는 복잡 한와 날씨를 체크 합니다.
@@ -43,7 +43,7 @@ WatchOS 3는 watch 앱 정보를 유지할 수는 최신 크게 세 가지가 �
 
 Api Apple 내에 포함 된 새를 사용 하 여 watchOS 3 응용 프로그램에 대 한 예약할 수는 _백그라운드 새로 고침_ 전에 사용자가 요청할 준비 원하는 정보를 갖고 있습니다. 위에서 설명한 날씨 Complication의 예제를 수행 합니다.
 
-[ ![](background-tasks-images/update01.png "날씨 Complication의 예")](background-tasks-images/update01.png)
+[![](background-tasks-images/update01.png "날씨 Complication의 예")](background-tasks-images/update01.png#lightbox)
 
 1. 에 의해 해제 시스템 특정 시간에 응용 프로그램 예약 합니다. 
 2. 응용 프로그램 업데이트를 생성 하려면 필요할 정보를 인출 합니다.
@@ -52,7 +52,7 @@ Api Apple 내에 포함 된 새를 사용 하 여 watchOS 3 응용 프로그램�
 
 위의 예제와 같이 watchOS 시스템에 사용할 수 있는 매우 제한 된 풀에 있는 하나 이상의 작업을 사용 하 여 응용 프로그램 다시 시작:
 
-[ ![](background-tasks-images/update02.png "하나 이상의 작업을 사용 하 여 응용 프로그램을 다시 시작 되어 watchOS 시스템")](background-tasks-images/update02.png)
+[![](background-tasks-images/update02.png "하나 이상의 작업을 사용 하 여 응용 프로그램을 다시 시작 되어 watchOS 시스템")](background-tasks-images/update02.png#lightbox)
 
 응용 프로그램에서 자체를 업데이트 하는 프로세스를 완료할 때까지 끌어다 놓으면 Apple 제안 (응용 프로그램에 사용 하는 제한 된 리소스 이므로)이이 작업을 최대한을 확보 합니다.
 
@@ -86,7 +86,7 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 응용 프로그램 지정된 된 작업이 완료 되 면 해당 반환 시스템에 표시를 완료 하 여:
 
-[ ![](background-tasks-images/update03.png "작업 완료 표시 하 여 시스템에 반환 합니다.")](background-tasks-images/update03.png)
+[![](background-tasks-images/update03.png "작업 완료 표시 하 여 시스템에 반환 합니다.")](background-tasks-images/update03.png#lightbox)
 
 <a name="New-Background-Tasks" />
 
@@ -107,7 +107,7 @@ watchOS 3 응용 프로그램 콘텐츠를에 있는지 확인 하면 아래와 
 
 `WKApplicationRefreshBackgroundTask` 미래 날짜에 절전 모드 해제 앱을 예약할 수 있는 일반 작업은:
 
-[ ![](background-tasks-images/update04.png "나중에 해제 되지 않습니다 WKApplicationRefreshBackgroundTask")](background-tasks-images/update04.png)
+[![](background-tasks-images/update04.png "나중에 해제 되지 않습니다 WKApplicationRefreshBackgroundTask")](background-tasks-images/update04.png#lightbox)
 
 응용 프로그램 작업의 런타임 내에서 모든 종류의 업데이트와 같은 로컬 처리 Complication 타임 라인을 수행 하거나와 필요한 일부 데이터를 인출 하는 `NSUrlSession`합니다.
 
@@ -118,7 +118,7 @@ watchOS 3 응용 프로그램 콘텐츠를에 있는지 확인 하면 아래와 
 
 시스템에서 보냅니다는 `WKURLSessionRefreshBackgroundTask` 데이터 마쳤음을 다운로드 하 고 응용 프로그램에서 처리할 준비가:
 
-[ ![](background-tasks-images/update05.png "데이터 다운로드가 완료 되 WKURLSessionRefreshBackgroundTask")](background-tasks-images/update05.png)
+[![](background-tasks-images/update05.png "데이터 다운로드가 완료 되 WKURLSessionRefreshBackgroundTask")](background-tasks-images/update05.png#lightbox)
 
 앱은 백그라운드에서 데이터를 다운로드 하는 동시에 실행를 남겨둘 수 없습니다. 대신, 데이터에 대 한 요청을 예약 하는 응용 프로그램 다음 일시 중단 되 고 시스템 다운로드가 완료 되 면 앱만 reawakening 데이터의 다운로드를 처리 합니다.
 
@@ -128,17 +128,17 @@ watchOS 3 응용 프로그램 콘텐츠를에 있는지 확인 하면 아래와 
 
 3 watchOS Apple 도킹 스테이션 사용자가 즐겨 찾는 앱 고정 고 저장해 두고 빠르게 액세스할 수를 추가 했습니다. Apple Watch 측면 단추를 누를 때 스냅숏 고정 된 응용 프로그램 갤러리 표시 됩니다. 사용자 수 왼쪽 이나 오른쪽으로 원하는 앱을 찾은 다음 유틸리티를 실행 중인 응용 프로그램 인터페이스 스냅숏을 바꿉니다 실행 하려면 앱을 누르면 살짝 밉니다.
 
-[ ![](background-tasks-images/update06.png "실행 중인 앱 인터페이스와 스냅숏이 교체")](background-tasks-images/update06.png)
+[![](background-tasks-images/update06.png "실행 중인 앱 인터페이스와 스냅숏이 교체")](background-tasks-images/update06.png#lightbox)
 
 취합니다 응용 프로그램의 UI의 스냅숏을 정기적으로 (전송 하 여는 `WKSnapshotRefreshBackgroundTask`) 및 해당 스냅숏으로 사용 하 여 도킹 합니다. watchOS는 앱이이 스냅숏을 생성 하기 전에 해당 콘텐츠 및 UI를 업데이트할 수를 제공 합니다.
 
 응용 프로그램에 대 한 미리 보기와 시작 이미지로 작동 하므로 스냅숏은 watchOS 3에서에서 매우 중요 합니다. 도킹 스테이션에서 응용 프로그램에 사용자 settles, 하는 경우 전체 화면으로 확장 하 고, 입력 전경 되며 반드시 스냅숏이 최신 상태로 유지할 수 있도록 실행을 시작:
 
-[ ![](background-tasks-images/update07.png "전체 화면으로 확장 됩니다 도킹 스테이션에서 응용 프로그램에 사용자 settles, 하는 경우")](background-tasks-images/update07.png)
+[![](background-tasks-images/update07.png "전체 화면으로 확장 됩니다 도킹 스테이션에서 응용 프로그램에 사용자 settles, 하는 경우")](background-tasks-images/update07.png#lightbox)
 
 시스템에서 발생 하는 다시는 `WKSnapshotRefreshBackgroundTask` 스냅숏을 생성 하기 전에 응용 프로그램 데이터와 UI를 업데이트) 하는 것 (여 준비할 수 있도록 합니다.
 
-[ ![](background-tasks-images/update08.png "스냅숏을 생성 하기 전에 데이터 및 UI를 업데이트 하 여 앱 준비할 수 있습니다.")](background-tasks-images/update08.png)
+[![](background-tasks-images/update08.png "스냅숏을 생성 하기 전에 데이터 및 UI를 업데이트 하 여 앱 준비할 수 있습니다.")](background-tasks-images/update08.png#lightbox)
 
 응용 프로그램을 표시는 `WKSnapshotRefreshBackgroundTask` 완료 되 면 시스템은 자동으로 스냅숏을 응용 프로그램의 UI입니다.
 
@@ -150,7 +150,7 @@ watchOS 3 응용 프로그램 콘텐츠를에 있는지 확인 하면 아래와 
 
 또한 사용자 앱에서 알림을 수신 하 고 응용 프로그램은 전경으로 가져올 수 탭을 스냅숏 최신 되므로 역할을 실행 화면도 필요 합니다.
 
-[ ![](background-tasks-images/update09.png "사용자 앱에서 알림을 수신 하 고 응용 프로그램은 전경으로 가져올 수 탭")](background-tasks-images/update09.png)
+[![](background-tasks-images/update09.png "사용자 앱에서 알림을 수신 하 고 응용 프로그램은 전경으로 가져올 수 탭")](background-tasks-images/update09.png#lightbox)
 
 사용자와 watchOS 응용 작용 한 후 1 시간 이상 경과 했는데도, 하는 경우 해당 기본 상태인으로 반환할 수 됩니다. 기본 상태로 다른 응용 프로그램에 서로 다른 것을 의미할 수 있습니다 및 응용 프로그램의 디자인에 따라, 없는 경우 기본 상태로 전혀 합니다.
 
@@ -162,13 +162,13 @@ watchOS 3 응용 프로그램 콘텐츠를에 있는지 확인 하면 아래와 
 
 WatchOS 3에서에서 Apple가 통합 조사식 연결을 통해 새 백그라운드 새로 고침 api `WKWatchConnectivityRefreshBackgroundTask`합니다. 이 새로운 기능을 사용 하 여 iPhone 앱을 전달할 수 새로운 데이터 조사식이 응용 프로그램에 대응 watchOS 앱은 백그라운드에서 실행 되는 동안.
 
-[ ![](background-tasks-images/update10.png "WatchOS 앱은 백그라운드에서 실행 되는 동안 iPhone 앱 조사식이 응용 프로그램에 대응을 새로운 데이터 전달할 수 있습니다.")](background-tasks-images/update10.png)
+[![](background-tasks-images/update10.png "WatchOS 앱은 백그라운드에서 실행 되는 동안 iPhone 앱 조사식이 응용 프로그램에 대응을 새로운 데이터 전달할 수 있습니다.")](background-tasks-images/update10.png#lightbox)
 
 푸시 복잡 함 중 하나를 시작할 응용 프로그램 컨텍스트는 파일 또는 iPhone 앱에서 사용자 정보를 업데이트는 백그라운드에서 Apple Watch 앱 다시 시작 됩니다.
 
 Watch 앱을 통해 경우 절전 모드 해제는 `WKWatchConnectivityRefreshBackgroundTask` 하려면 iPhone 앱에서 데이터를 수신 하 고, 표준 API 메서드를 사용 해야 합니다.
 
-[ ![](background-tasks-images/update11.png "WKWatchConnectivityRefreshBackgroundTask 데이터 흐름")](background-tasks-images/update11.png)
+[![](background-tasks-images/update11.png "WKWatchConnectivityRefreshBackgroundTask 데이터 흐름")](background-tasks-images/update11.png#lightbox)
 
 1. 세션이 활성화 되어 있는지 확인 합니다.
 2. 새 모니터링 `HasContentPending` 속성 값이 있다면 `true`, 응용 프로그램에 아직 데이터를 처리 합니다. 대로 이전에 응용 프로그램에 모든 데이터 처리를 완료 될 때까지 작업에 포함 해야 합니다.
@@ -180,7 +180,7 @@ Watch 앱을 통해 경우 절전 모드 해제는 `WKWatchConnectivityRefreshBa
 
 모든 새 백그라운드 작업 API의 부분이 함께 배치의 상호 작용 하는 일반적인 집합 다음과 같은 형태가 됩니다.
 
-[ ![](background-tasks-images/update12.png "배경 API 수명 주기")](background-tasks-images/update12.png)
+[![](background-tasks-images/update12.png "배경 API 수명 주기")](background-tasks-images/update12.png#lightbox)
 
 1. 첫째, watchOS 앱 백그라운드 작업을 나중에 특정 시점으로 중지 되어 수를 예약 합니다.
 2. 앱을 시스템에 의해 해제 되지 않습니다 하 고 작업을 전송 합니다.
@@ -196,7 +196,7 @@ watchOS 앱 작동 하는지 책임감 있게이 에코 시스템 내에서 해�
 
 다음 시나리오를 살펴보겠습니다.
 
-[ ![](background-tasks-images/update13.png "WatchOS 앱 제한 시스템의 공유 리소스에서 해당 드레이닝")](background-tasks-images/update13.png)
+[![](background-tasks-images/update13.png "WatchOS 앱 제한 시스템의 공유 리소스에서 해당 드레이닝")](background-tasks-images/update13.png#lightbox)
 
 1. 사용자가 오후 1 시에 watchOS 응용 프로그램을 시작 합니다.
 2. 응용 프로그램에는 절전 모드 해제 오후 2 시에 한 시간에 새로운 콘텐츠를 다운로드 하는 작업을 예약 합니다.
@@ -213,7 +213,7 @@ watchOS 앱 작동 하는지 책임감 있게이 에코 시스템 내에서 해�
 
 다음과 같은 일반적인 사용 시나리오를 살펴보겠습니다.
 
-[ ![](background-tasks-images/update14.png "일반적인 사용 시나리오")](background-tasks-images/update14.png)
+[![](background-tasks-images/update14.png "일반적인 사용 시나리오")](background-tasks-images/update14.png#lightbox)
 
 사용자의 즐겨 찾는 축구 팀 오후 7시에서 오후 9시 일치 하는 큰 항목이 재생 하므로 응용 프로그램 사용자의 점수를 정기적으로 확인 수를 예상 해야 하 고 30 분에 대 한 업데이트 간격으로 결정 합니다.
 
@@ -262,7 +262,7 @@ private void ScheduleNextBackgroundUpdate ()
 
 다음으로 점수를 업데이트 하는 데 필요한 단계를 보여 주는 5 분 창 자세히 보기를 수행 합니다.
 
-[ ![](background-tasks-images/update15.png "점수를 업데이트 하는 데 필요한 단계를 보여 주는 5 분 창")](background-tasks-images/update15.png)
+[![](background-tasks-images/update15.png "점수를 업데이트 하는 데 필요한 단계를 보여 주는 5 분 창")](background-tasks-images/update15.png#lightbox)
 
 1. 오후 7시 30분: 02 앱을 시스템에 의해 활성화 하 고 업데이트 백그라운드 작업을 지정 합니다. 첫 번째 우선 순위는 서버에서 최신 점수를 확보 하는 것입니다. 참조 [는 NSUrlSession 예약](#Scheduling-a-NSUrlSession) 아래 합니다.
 2. 7시 30분: 05에 응용 프로그램에는 원래 작업에이 완료 되 면 시스템 응용 프로그램에서 절전 모드를 전환 하 고 계속 백그라운드에서 요청 된 데이터를 다운로드 합니다.
@@ -529,7 +529,7 @@ snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 
 와 같이 MonkeySoccer 앱 효율적으로 작동 하 고 새 watchOS를 사용 하 여 해당 점수를 업데이트 하는 데 걸린 최대 5 분 창 위의 예에서 3 백그라운드 작업을 앱을 15 초 총 활성만: 
 
-[ ![](background-tasks-images/update16.png "응용 프로그램은 15 초 총에 활성 상태 였던만")](background-tasks-images/update16.png)
+[![](background-tasks-images/update16.png "응용 프로그램은 15 초 총에 활성 상태 였던만")](background-tasks-images/update16.png#lightbox)
 
 이 응용 프로그램 했을 사용할 수 있는 Apple Watch 리소스와 배터리 수명에 영향을 통해 줄어듭니다 응용 프로그램이 시계에서 실행 되는 다른 앱과 원활 하 게 작동 되도록 해줍니다.
 
@@ -617,7 +617,7 @@ private void UpdateComplication ()
 
 3 watchOS Apple 도킹 스테이션 사용자가 즐겨 찾는 앱 고정 고 저장해 두고 빠르게 액세스할 수를 추가 했습니다. Apple Watch 측면 단추를 누를 때 스냅숏 고정 된 응용 프로그램 갤러리 표시 됩니다. 사용자 수 왼쪽 이나 오른쪽으로 원하는 앱을 찾은 다음 유틸리티를 실행 중인 응용 프로그램 인터페이스 스냅숏을 바꿉니다 실행 하려면 앱을 누르면 살짝 밉니다.
 
-[ ![](background-tasks-images/dock01.png "도킹 스테이션")](background-tasks-images/dock01.png)
+[![](background-tasks-images/dock01.png "도킹 스테이션")](background-tasks-images/dock01.png#lightbox)
 
 정기적으로 시스템 응용 프로그램의 UI의 스냅숏을 사용 하 고 해당 스냅숏으로 사용 하 여 문서. watchOS는 앱이이 스냅숏을 생성 하기 전에 해당 콘텐츠 및 UI를 업데이트할 수를 제공 합니다.
 
@@ -676,7 +676,7 @@ private void UpdateComplication ()
 
 Apple는 데이터 흐름에 따라 작업에 대해 다음을 제안 합니다.
 
-[ ![](background-tasks-images/update17.png "응용 프로그램 데이터 흐름 다이어그램")](background-tasks-images/update17.png)
+[![](background-tasks-images/update17.png "응용 프로그램 데이터 흐름 다이어그램")](background-tasks-images/update17.png#lightbox)
 
 외부 이벤트 (예: 조사식 Connectivity) 응용 프로그램 다시 시작 합니다. 이렇게 하면 응용 프로그램에서 해당 데이터 모델 (응용 프로그램의 현재 상태를 나타냄)를 업데이트 합니다. 새 스냅숏으로 요청 결과적으로 데이터 모델 변경의 응용 프로그램을 업데이트 해야 합니다는 복잡성, 가능 배경 시작 `NSURLSession` 더 많은 데이터를 끌어오고 하 배경을 예약 하는 데 새로 고칩니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: aaa4c93eda9edb0eb5d568b3470c02352bdb7467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: df6a0afe18b6929f8e03ce4d9bf35198034508bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-value-converters"></a>바인딩 값 변환기
 
@@ -95,7 +95,7 @@ public class IntToBoolConverter : IValueConverter
 
 **사용 단추** 페이지는 공통 필요한 경우 보여 줍니다.는 `Button` 사용자에 입력 텍스트에 기반 하는 작업을 수행는 `Entry` 보기. Nothing에 입력 된 경우는 `Entry`, `Button` 비활성화 해야 합니다. 각 `Button` 에 데이터 바인딩이 포함 되어 해당 `IsEnabled` 속성입니다. 데이터 바인딩 소스는는 `Length` 의 속성은 `Text` 해당 속성 `Entry`합니다. 경우 해당 `Length` 속성은 0, 값 변환기 반환 `true` 및 `Button` 사용 됨:
 
-[![단추를 사용 하도록 설정](converters-images/enablebuttons-small.png "단추를 사용 하도록 설정")](converters-images/enablebuttons-large.png "단추를 사용 하도록 설정")
+[![단추를 사용 하도록 설정](converters-images/enablebuttons-small.png "단추를 사용 하도록 설정")](converters-images/enablebuttons-large.png#lightbox "단추를 사용 하도록 설정")
 
 에 `Text` 각 속성 `Entry` 빈 문자열로 초기화 합니다. `Text` 속성은 `null` 기본적으로, 및 데이터 바인딩 작동 하지 것입니다이 경우.
 
@@ -236,7 +236,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 
 세 가지 지난에서 `Switch` 및 `Label` 쌍의 제네릭 인수가로 설정 된 `Style`, 전체 및 `Style` 개체의 값에 대해 제공 되 `TrueObject` 및 `FalseObject`합니다. 이러한 재정의 대 한 암시적 스타일 `Label` 리소스 사전에서 설정 되므로 해당 스타일의 속성을 명시적으로 할당 된는 `Label`합니다. 설정/해제는 `Switch` 해당 하면 `Label` 변경 사항을 반영 합니다.
 
-[![표시기 전환](converters-images/switchindicators-small.png "표시기 전환")](converters-images/switchindicators-large.png "표시기를 전환 합니다.")
+[![표시기 전환](converters-images/switchindicators-small.png "표시기 전환")](converters-images/switchindicators-large.png#lightbox "표시기를 전환 합니다.")
 
 사용 하 여 이기도 [ `Triggers` ](~/xamarin-forms/app-fundamentals/triggers.md) 유사한 변경을 다른 보기에 따라 사용자 인터페이스에서 구현 합니다.
 
@@ -460,7 +460,7 @@ binding.ConverterParameter = 255;
 
 다음은 결과가입니다.
 
-[![RGB 색 선택기](converters-images/rgbcolorselector-small.png "RGB 색 선택기")](converters-images/rgbcolorselector-large.png "RGB 색 선택기")
+[![RGB 색 선택기](converters-images/rgbcolorselector-small.png "RGB 색 선택기")](converters-images/rgbcolorselector-large.png#lightbox "RGB 색 선택기")
 
 
 ## <a name="related-links"></a>관련 링크

@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a5f98fc351c879be55475808b5ab412449dadc7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 11b693193b36a80b55a61308d98b76f4f6984e8a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Android NUnit 테스트 프로젝트를 자동화 하는 방법
 
 > [!NOTE]
-> **참고:** 이 가이드에서는 Xamarin.UITest 프로젝트가 아니라는 Android NUnit 테스트 프로젝트를 설정 하기 위한 단계를 설명 합니다. Xamarin.UITest 설명서를 참조할 수 있습니다 [여기](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)합니다.
+> 이 가이드에서는 Xamarin.UITest 프로젝트가 아니라는 Android NUnit 테스트 프로젝트를 설정 하기 위한 단계를 설명 합니다. Xamarin.UITest 설명서를 참조할 수 있습니다 [여기](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)합니다.
 
 Android 단위 테스트 프로젝트 [Visual Studio Mac 용] 또는 단위 테스트 응용 프로그램 [Visual Studio], (Android)를 만들 때 기본적으로 실행 되지 않습니다 자동으로 테스트 합니다.
 Android 단위 테스트를 자동화 하려면: NUnit에서 테스트를 실행할 대상 장치를 사용는 `Android.App.Instrumentation` 생성 하 고 사용 하 여 실행할 수 있는 하위 클래스는 `adb shell am instrument` 명령입니다.

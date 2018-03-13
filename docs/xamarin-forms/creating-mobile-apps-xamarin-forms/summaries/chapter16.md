@@ -3,14 +3,15 @@ title: "요약 장 16입니다. 데이터 바인딩"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 954d5d9e270db156f5ef2577706c667e05ab544c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf08874f66c9ab21cd0ede642c8c94821b6c5a2a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>요약 장 16입니다. 데이터 바인딩
 
@@ -95,7 +96,7 @@ MVVM 시나리오의 데이터 바인딩에 대상을 일반적으로 사용할 
 
 [ **ReverseBinding** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ReverseBinding) 에 바인딩을 설정 하는 예제는 `Value` 속성은 `Slider` 참조 하는 `FontSize` 각 속성 `Label`합니다. 초기화 하에서 더 잘 작동 하지만 이전 버전과 호환성 것 처럼는 `Slider` 요소 때문에 `Value` 의 속성은 `Slider` 에 `DefaultBindingMode` 의 `TwoWay`합니다.
 
-[![바인딩 역방향 삼중 스크린 샷](images/ch16fg06-small.png "바인딩 역방향")](images/ch16fg06-large.png "역방향 바인딩")
+[![바인딩 역방향 삼중 스크린 샷](images/ch16fg06-small.png "바인딩 역방향")](images/ch16fg06-large.png#lightbox "역방향 바인딩")
 
 이것은 바인딩이 MVVM에 정의 된 방법을 유사 하 고 자주 바인딩이 형식을 사용 합니다.
 

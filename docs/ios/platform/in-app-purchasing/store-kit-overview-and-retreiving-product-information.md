@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a636a5ee2b027a2b2889c375f1fef5be67c379b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bafada037f912007201fd5e81b17302b21de3092
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="store-kit-overview-and-retrieving-product-information"></a>키트 개요 및 제품 정보를 검색 저장
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 트랜잭션 수행 되기 전에 응용 프로그램은 제품의 가격 및 표시에 대 한 검색 해야 합니다. 그런 다음 사용자가 누르면 **구입**, 응용 프로그램 StoreKit 확인 대화 상자 및 Apple ID 로그인을 관리 하는 요청 하 합니다. 트랜잭션이 성공 하면 StoreKit 응용 프로그램 코드에 게 알리는 것으로 가정 하 트랜잭션 결과 저장 하 고 사용자에 게 구매에 대 한 액세스 제공 해야 합니다.   
 
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit은 트랜잭션 결과 저장 하 고 사용자에 게 구매에 대 한 액세스 제공 해야 하는 응용 프로그램 코드를에 알립니다.")](store-kit-overview-and-retreiving-product-information-images/image14.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit은 트랜잭션 결과 저장 하 고 사용자에 게 구매에 대 한 액세스 제공 해야 하는 응용 프로그램 코드를에 알립니다.")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>클래스
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image15.png "다양 한 StoreKit 클래스의 추상 클래스 간의 관계는 응용 프로그램에 구현 되어야 합니다.")](store-kit-overview-and-retreiving-product-information-images/image15.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image15.png "다양 한 StoreKit 클래스의 추상 클래스 간의 관계는 응용 프로그램에 구현 되어야 합니다.")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
    
    
    
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/27/2018
 
 StoreKit 코드를 테스트 하려면 테스트 저장소에 연결 된 특별 한 테스트 계정 (iTunes Connect에서에서 생성 됨)으로 일반 iTunes 테스트 계정 및 로그인의 로그 아웃을 해야 합니다. 로그 아웃 계정이 든 현재 계정 방문 **설정 > iTunes App Store 및** 다음과 같이:
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image16.png "로그 아웃 설정 iTunes 계정이 든 현재 계정 방문 및 앱 스토어")](store-kit-overview-and-retreiving-product-information-images/image16.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image16.png "로그 아웃 설정 iTunes 계정이 든 현재 계정 방문 및 앱 스토어")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
  
 다음 테스트 계정으로 로그인 *앱 내에서 StoreKit에서 요청 시*:
 
@@ -72,19 +72,19 @@ StoreKit 코드를 테스트 하려면 테스트 저장소에 연결 된 특별 
 
 만들려는 테스트 iTunes Connect에서에서을 클릭 하 여 **사용자 및 역할** 기본 페이지에 있습니다.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image17.png "ITunes에서 테스트 사용자를 만들려면 연결 클릭 하 여 사용자 및 역할에 기본 페이지에서")](store-kit-overview-and-retreiving-product-information-images/image17.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image17.png "ITunes에서 테스트 사용자를 만들려면 연결 클릭 하 여 사용자 및 역할에 기본 페이지에서")](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 선택 **샌드박스 테스터**
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image18.png "샌드박스 테스터를 선택합니다.")](store-kit-overview-and-retreiving-product-information-images/image18.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image18.png "샌드박스 테스터를 선택합니다.")](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 기존 사용자의 목록이 표시 됩니다. 새 사용자를 추가 하거나 기존 레코드를 삭제할 수 있습니다. 포털에서 없습니다 (현재) 보기 편집 기존의 하므로 (특히: 지정한 암호)를 만든 각 테스트 사용자의 좋은 레코드를 유지 하는 것이 좋습니다. 사용자, 테스트 또는 사용 합니다. 테스트 사용자를 삭제 한 후 전자 메일 주소를 다른 테스트 계정에 대 한 다시 사용할 수 없습니다.  
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image19.png "기존 사용자의 목록이 표시 됩니다.")](store-kit-overview-and-retreiving-product-information-images/image19.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image19.png "기존 사용자의 목록이 표시 됩니다.")](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
    
  새 테스트 사용자 (예: 이름, 암호, 본인 확인 질문 및 답변) 실제 Apple ID를을 비슷한 특성이 있습니다. 여기에 입력 된 모든 세부 사항 기록해를 둡니다. **선택 iTunes 스토어** 필드는 통화를 결정 합니다 고 앱에서 바로 구매 언어 사용 하 여는 경우 해당 사용자로 로그인 합니다.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image20.png "사용자의 통화 및 해당 앱에서 바로 구매에 대 한 언어 선택 iTunes 스토어 필드 결정")](store-kit-overview-and-retreiving-product-information-images/image20.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image20.png "사용자의 통화 및 해당 앱에서 바로 구매에 대 한 언어 선택 iTunes 스토어 필드 결정")](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## <a name="retrieving-product-information"></a>제품 정보 검색
 
@@ -102,7 +102,7 @@ StoreKit 코드를 테스트 하려면 테스트 저장소에 연결 된 특별 
 
 전체 상호 작용은 다음과 같습니다 ( **StoreKit** iOS의 경우에 기본 제공 되 고 **앱 스토어** Apple의 서버를 나타냅니다.):
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image21.png "제품 정보 그래프를 검색합니다.")](store-kit-overview-and-retreiving-product-information-images/image21.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image21.png "제품 정보 그래프를 검색합니다.")](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### <a name="displaying-product-information-example"></a>제품 정보의 예에 표시
 
@@ -110,7 +110,7 @@ StoreKit 코드를 테스트 하려면 테스트 저장소에 연결 된 특별 
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image23.png "주 화면에는 앱 스토어에서 검색 된 정보 제품 표시 됩니다.")](store-kit-overview-and-retreiving-product-information-images/image23.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image23.png "주 화면에는 앱 스토어에서 검색 된 정보 제품 표시 됩니다.")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
    
    
    
@@ -235,7 +235,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 
 이 스크린샷에서 (사용할 수 있는 제품 정보가 없는 경우)를 로드 한 후 바로 샘플 응용 프로그램을 보여 줍니다.
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image24.png "제품 정보가 없는 경우 로드 한 후에 바로 샘플 응용 프로그램")](store-kit-overview-and-retreiving-product-information-images/image24.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image24.png "제품 정보가 없는 경우 로드 한 후에 바로 샘플 응용 프로그램")](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## <a name="invalid-products"></a>잘못 된 제품
 
@@ -296,7 +296,7 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image25.png "두 개의 서로 다른 iTunes 테스트 결과 특정 언어를 표시 하는 계정")](store-kit-overview-and-retreiving-product-information-images/image25.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image25.png "두 개의 서로 다른 iTunes 테스트 결과 특정 언어를 표시 하는 계정")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
    
    
    

@@ -7,18 +7,17 @@ ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c334e78793f90b4f349f87e12e6b0093fe5cacf8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-android-wear"></a>Android 마모 소개
 
 _Google Android 착용의 도입으로 더 이상으로 제한 됩니다 휴대폰과 태블릿 유용한 Android 앱을 개발 하는 데 있어 합니다. Xamarin.Android의 Android 쓰는 유형에서는 지원 되기 때문에 프로그램 손목에서 C# 코드를 실행할 수 있습니다! 이 소개 Android 착용의 기본적인 개요를 제공 하 고 해당 핵심 기능에 설명에서는 Android 착용 2.0에서 사용할 수 있는 기능 개요를 제공 합니다. 일부 더 인기가 쓰는 유형 Android 장치를 나열 하 고 추가 정보에 대 한 중요 한 Google Android 착용 문서에 대 한 링크를 제공 합니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -29,47 +28,40 @@ _Google Android 착용의 도입으로 더 이상으로 제한 됩니다 휴대�
 추가 추가 하는 NuGet 패키지 마모 특정 UI 컨트롤 및 우리의 Android 4.4W (API 20)를 통해 Android 착용 Xamarin.Android 5.0 이상은 지원 지원 합니다. Xamarin.Android 5.0 이상은 기능 마모 앱 패키징을 포함 합니다. NuGet 패키지는이 가이드의 뒷부분에 설명 된 대로 Android 착용 2.0에 대해 사용할 수 있습니다.
 
 
-<a name="basics" />
-
 ## <a name="android-wear-basics"></a>Android 마모 기본 사항
 
 Android 마모 핸드헬드 Android 앱의 다른 사용자 인터페이스 패러다임을 있습니다. 마모 앱의 첫 번째 유입과 함께 사용을 확장 하도록 설계 된 몇 가지 방법으로 있지만 Android 마모 2.0 부터는 핸드헬드 앱, 마모 앱 사용 되는 독립 실행형 수 있습니다. 마모 앱을 배포 하면 도우미 핸드헬드 장치 앱과 함께 패키지 됩니다. 대부분 착용 하므로 앱 핸드헬드 도우미 응용 프로그램에 따라 달라 집니다, 그리고 핸드헬드 장치 앱과 통신 하는 방법이 필요 합니다. 다음 섹션에서는 이러한 사용 시나리오에 설명 하 고 필수 Android 착용 기능에 간략하게 설명 합니다. 
 
 
-<a name="scenarios" />
 
 ### <a name="usage-scenarios"></a>사용 시나리오
 
 Android 착용의 첫 번째 버전 주로 향상 된 알림 핸드헬드 현재 응용 프로그램을 확장 하 고 핸드헬드 앱와 착용 식 응용 프로그램 간에 데이터를 동기화 하는 중에 집중 되어 있었습니다. 따라서 이러한 시나리오는 비교적 간단 하 게 구현 합니다.
 
-<a name="notifications" />
 
 #### <a name="wearable-notifications"></a>착용 식 알림
 
 Android 착용 지원 하기 위해 알림 핸드헬드 장치 및 착용 식 장치 사이 공유 특성을 활용 하는 것이 쉽습니다. 지원 v4 알림 API를 사용 하 여 및 `WearableExtender` 클래스 (에서 사용할 수는 [Xamarin Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), 음성 입력 하거나 받은 편지함 스타일 카드와 같은 플랫폼의 기본 기능을 활용할 수 있습니다. [RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/) 샘플 알림 목록을 쓰는 유형 Android 장치에 전송 하는 방법을 보여 주는 예제 코드를 제공 합니다. 
 
 
-<a name="companion" />
 
 #### <a name="companion-applications"></a>도우미 응용 프로그램
 
 또 다른 전략 착용 식 장치에서 고유 하 게 실행 되며 도우미 핸드헬드 장치 앱과 쌍을 만드는 것입니다. 이 방법의 좋은 예로 [퀴즈](https://developer.xamarin.com/samples/monodroid/wear/Quiz/) 샘플 응용 프로그램을 만드는 퀴즈 핸드헬드 장치에서 실행 되 고 착용 식 장치에서 몇 가지 퀴즈 질문 하는 방법을 보여 줍니다. 
 
 
-<a name="ui" />
 
 ### <a name="user-interface"></a>사용자 인터페이스
 
 마모 주요 탐색 패턴은 일련의 카드 세로로 정렬 합니다. 이러한 카드 각각 동일한 행에 계층에 있는 동작을 연결할 수 있습니다. `GridViewPager` 클래스가이 기능을 제공 합니다; 동일한 어댑터 개념을 따를 `ListView`합니다. 일반적으로 연결 된 `GridViewPager` 와 `FragmentGridPagerAdaptor` (또는 `GridPagerAdaptor`)으로 각 행 및 열 셀을 나타낼 수 있도록 하는 `Fragment`: 
 
-[ ![탐색 착용](intro-to-wear-images/2d-picker-sml.png "탐색 쓰는 유형")](intro-to-wear-images/2d-picker.png)
+[![탐색 착용](intro-to-wear-images/2d-picker-sml.png "탐색 쓰는 유형")](intro-to-wear-images/2d-picker.png#lightbox)
 
 큰는 구성 된 작업 단추 사용 (같이 위에) 아래에 있는 작은 설명 텍스트가 있는 원 색이 지정 되지 않습니다.  [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) 샘플에서는 사용 하는 방법을 보여 줍니다. `GridViewPager` 및 `GridPagerAdapter` 마모 응용 프로그램에서입니다.
 
 Android 착용 2.0 마모 사용자 인터페이스를 탐색 서랍, 동작 서랍 및 인라인 실행 단추를 추가합니다. Android 착용 2.0 사용자 인터페이스 요소에 대 한 자세한 참조 Android [Anatomy](https://www.google.com/design/spec-wear/system-overview/anatomy.html) 항목입니다. 
 
 
-<a name="comm" />
 
 ### <a name="communications"></a>통신
 
@@ -86,7 +78,6 @@ Android 착용 여이 서비스를 자동으로 인스턴스화할 수 됩니다
 [FindMyPhone](https://developer.xamarin.com/samples/monodroid/wear/FindMyPhoneSample/) 샘플에서는 구현 하는 방법을 보여 줍니다.는 `WearableListenerService`합니다.
 
 
-<a name="deploy" />
 
 ### <a name="deployment"></a>배포
 
@@ -94,7 +85,6 @@ Android 착용 여이 서비스를 자동으로 인스턴스화할 수 됩니다
 [패키징 작업](~/android/wear/deploy-test/packaging.md) 자세히 배포에 설명 합니다. 
 
 
-<a name="further" />
 
 ## <a name="going-further"></a>계속 진행 
 
@@ -114,34 +104,30 @@ Android 착용 세요 빌드하고 첫 응용 프로그램을 테스트 하는 �
 [Watch 화면 만들기](~/android/wear/platform/creating-a-watchface.md) 훼손는 디지털 조사식 얼굴 서비스, 뒤에 추가 기능으로는 아날로그 스타일 watch 화면을 개선 하는 더 많은 코드를 개발 하기 위한 단계별 지침 및 예제 코드를 제공 합니다. 
 
 
-<a name="wear2" />
 
 ## <a name="android-wear-20"></a>Android 마모 2.0
 
 Android 착용 2.0와 같은 다양 한 새로운 기능 및 기능을 도입 되었습니다 *복잡성*, 레이아웃, 탐색 및 작업 서랍 및 확장 된 알림에 곡선입니다. 또한 착용 2.0을 사용 하면 핸드헬드 앱 독립적으로 작동 하는 독립 실행형 앱을 빌드할 수 있습니다. 새 *손목 제스처* 기능을 사용 하면 앱과 함께 드는 상호 작용 합니다. 다음 섹션에서는 이러한 기능을 강조 표시 하 고 응용 프로그램에서 사용 하 여 시작 데 유용한 링크를 제공 합니다.
 
 
-<a name="install2" />
 
 ### <a name="install-wear-20-packages"></a>쓰는 2.0 패키지 유형 설치
 
 추가 해야 Xamarin.Android로 착용 2.0 앱을 빌드하려면는 **Xamarin.Android.Wear v2.0** 패키지를 프로젝트 (클릭는 **찾아보기 탭**):
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Xamarin.Android.Wear v2.0 NuGet 설치")](intro-to-wear-images/wear-nuget-2.0.png)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "Xamarin.Android.Wear v2.0 NuGet 설치")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 이 NuGet 패키지에는 Android 지원 착용 식과 호환 가능 쓰는 유형 라이브러리에 대 한 바인딩을 포함합니다.
 
 외에 **Xamarin.Android.Wear**, 설치 하는 것이 좋습니다는 **Xamarin.GooglePlayServices.Wearable** NuGet: 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Xamarin.GooglePlayServices.Wearable NuGet 설치")](intro-to-wear-images/gpsw-nuget.png)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Xamarin.GooglePlayServices.Wearable NuGet 설치")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-<a name="wear2feat" />
 
 ### <a name="key-features-of-wear-20"></a>마모 2.0의 주요 기능
 
 Android 착용 2.0은 2014에서 초기 서비스를 시작한 Android 착용는 가장 큰 업데이트입니다. 다음 섹션에서는 Android 착용 2.0의 주요 기능을 강조 표시 및 연결을 위해 제공 됩니다 응용 프로그램에서 이러한 새 기능을 사용 하 여 시작 합니다. 
 
-<a name="compl" />
 
 #### <a name="complications"></a>복잡성
 
@@ -152,7 +138,6 @@ Android 착용 2.0은 2014에서 초기 서비스를 시작한 Android 착용는
 복잡성에 대 한 자세한 내용은 Android [조사식 얼굴 복잡성](https://developer.android.com/wear/preview/features/complications.html) 항목입니다. 
 
 
-<a name="drawers" />
 
 #### <a name="navigation-and-action-drawers"></a>탐색 및 작업 서랍 
 
@@ -163,7 +148,6 @@ Android 착용 2.0은 2014에서 초기 서비스를 시작한 Android 착용는
 이러한 두 명의 새 대화형 서랍에 대 한 자세한 내용은 참조는 Android [착용 탐색 및 작업](https://developer.android.com/wear/preview/features/ui-nav-actions.html) 항목입니다. 
 
 
-<a name="curved" />
 
 #### <a name="curved-layouts"></a>곡선된 레이아웃 
 
@@ -174,14 +158,12 @@ Android 착용 2.0은 2014에서 초기 서비스를 시작한 Android 착용는
 `WearableRecyclerView` 확장 된 `RecyclerView` 곡선 레이아웃과 순환 스크롤 제스처를 지원 하기 위해 클래스입니다. 자세한 내용은 참조는 Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) API 설명서입니다. 
 
 
-<a name="standalone" />
 
 #### <a name="standalone-apps"></a>독립 실행형 응용 프로그램 
 
 Android 착용 2.0 앱 핸드헬드 앱 독립적으로 작업할 수 있습니다. 즉, 예를 들어 스마트 조사식 계속 수 포함 핸드헬드 장치 꺼져 있거나 멀리 떨어져 착용 식 장치에서 경우에 전체 기능을 제공 합니다. 이 기능에 대 한 자세한 내용은 참조는 Android [독립 실행형 앱](https://developer.android.com/wear/preview/features/standalone-apps.html) 항목입니다.
 
 
-<a name="wrist" />
 
 #### <a name="wrist-gestures"></a>손목 제스처 
 
@@ -196,7 +178,6 @@ Android 착용 2.0 앱 핸드헬드 앱 독립적으로 작업할 수 있습니�
 인라인 작업, 스마트 회신, 원격 입력, 확장 된 알림 및 알림에 대 한 새로운 브리징 모드와 같은 더 많은 착용 2.0 기능이 많이 있습니다. 새 착용 2.0 기능에 대 한 자세한 내용은 참조는 Android [API 개요](https://developer.android.com/wear/preview/api-overview.html)합니다. 
 
 
-<a name="devices" />
 
 ## <a name="devices"></a>장치
 
@@ -210,7 +191,6 @@ Android 착용 2.0 앱 핸드헬드 앱 독립적으로 작업할 수 있습니�
 * [ASU ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
-<a name="reading" />
 
 ## <a name="further-reading"></a>추가 정보
 
@@ -222,7 +202,6 @@ Google Android 착용 설명서 확인해 보세요.
 * [Android 마모 2.0](https://developer.android.com/wear/preview/index.html)
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 42ef3e6c82763831b5114f3de7603bba8f59eac6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c582e0306bdc69570e3f8e8d35c7fa15b30523da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-animations"></a>사용자 지정 애니메이션
 
@@ -54,7 +54,7 @@ animation.Commit (this, "SimpleAnimation", 16, 2000, Easing.Linear, (v, c) => im
 이 따라 증가 하는 애니메이션을 생성 하는 것은 [ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) 속성의는 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 1에서 2, 2 초 이상 (2000 밀리초)을 사용 하는 [ `Linear` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.Linear/) 감속/가속 함수입니다. 애니메이션이 완료 될 때마다 해당 `Scale` 속성을 1로 다시 설정 되 고 애니메이션 반복 됩니다.
 
 > [!NOTE]
-> **참고**: 만들어 서로 독립적으로 실행 하는 동시 애니메이션을 생성할 수는 `Animation` 각 애니메이션에 대 한 개체를 호출한 다음는 `Commit` 각 애니메이션 메서드.
+> 만들어 서로 독립적으로 실행 하는 동시 애니메이션을 생성할 수는 `Animation` 각 애니메이션에 대 한 개체를 호출한 다음는 `Commit` 각 애니메이션 메서드.
 
 <a name="child" />
 

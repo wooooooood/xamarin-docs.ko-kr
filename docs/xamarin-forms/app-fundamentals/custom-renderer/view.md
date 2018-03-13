@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>뷰를 구현합니다.
 
@@ -115,7 +115,7 @@ public class MainPageCS : ContentPage
 1. 추가 `ExportRenderer` 특성을 사용자 지정 렌더러 클래스 Xamarin.Forms 사용자 지정 컨트롤을 렌더링 하 사용 수를 지정할 수 있습니다. 이 특성은 Xamarin.Forms를 사용한 사용자 지정 렌더러를 등록 하려면 사용 합니다.
 
 > [!NOTE]
-> **참고**: 대부분의 Xamarin.Forms 요소에 대 한 것은 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하는 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 요소입니다.
+> 대부분의 Xamarin.Forms 요소에 대 한 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하기 선택 사항입니다. 사용자 지정 렌더러 등록 되지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에 렌더링 하는 경우는 [보기](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 요소입니다.
 
 다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램의 각 프로젝트의 책임을 보여줍니다.
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 에 `Control` 속성은 `null`, 새 `CaptureElement` 인스턴스화될 및 `InitializeAsync` 메서드가 호출 되 면 사용 하는 `MediaCapture` 카메라에서 미리 보기 스트림을 제공 하는 API입니다. `SetNativeControl` 메서드를 호출에 대 한 참조를 할당 하는 `CaptureElement` 인스턴스는 `Control` 속성입니다. `CaptureElement` 노출 제어는 `Tapped` 에서 처리 하는 이벤트는 `OnCameraPreviewTapped` 메서드를 중지 하는 탭 비디오 미리 보기를 시작 합니다. `Tapped` 이벤트를 구독 하는 사용자 지정 렌더러를 새 Xamarin.Forms 요소에 연결 하 고 렌더러 요소 변경 내용에 추가 되 면에에서 구독 취소 했습니다.
 
 > [!NOTE]
-> **참고**: 중지 하 고 Windows Phone 또는 UWP 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 해야 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조 및 [퀵 스타트: MediaCapture API를 사용 하 여 비디오 캡처](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) Windows 런타임 응용 프로그램에 대 한 및 [카메라 미리 보기 표시](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) UWP 응용 프로그램에 대 한 합니다.
+> 중지 하 고 Windows Phone 또는 UWP 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 하는 것이 유용 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조 및 [퀵 스타트: MediaCapture API를 사용 하 여 비디오 캡처](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) Windows 런타임 응용 프로그램에 대 한 및 [카메라 미리 보기 표시](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) UWP 응용 프로그램에 대 한 합니다.
 
 ## <a name="summary"></a>요약
 

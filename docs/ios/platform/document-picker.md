@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a10dcbbdcd7792cb7c54c883566911264b6d81e6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="document-picker"></a>문서 선택
 
@@ -54,7 +54,7 @@ Xamarin을 사용한 문서 선택기를 사용 하는 데 필요한 코드를 �
 
 여러 다른 위치에서 파일을 수정할 수 있습니다, 때문에 데이터 손실을 방지 하기 위해 조정에 사용 되어야 합니다.
 
- [ ![](document-picker-images/image1.png "파일 조정 사용")](document-picker-images/image1.png)
+ [![](document-picker-images/image1.png "파일 조정 사용")](document-picker-images/image1.png#lightbox)
 
 위의 그림에서는 살펴보겠습니다.
 
@@ -193,7 +193,7 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 
 8, iOS 전에 `NSMetadataQuery` 와 같은 로컬 픽업 파일 변경에 속도 느리게 나타났습니다: 삭제를 만들고 이름을 바꿉니다.
 
- [ ![](document-picker-images/image2.png "NSMetadataQuery 로컬 파일 변경 내용 개요")](document-picker-images/image2.png)
+ [![](document-picker-images/image2.png "NSMetadataQuery 로컬 파일 변경 내용 개요")](document-picker-images/image2.png#lightbox)
 
 위의 다이어그램에서
 
@@ -208,7 +208,7 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 
 8, iOS에서 `NSMetadataQuery` 연결 이라는 새로운 기능에 직접 사용 하기 쉽습니다.
 
- [ ![](document-picker-images/image3.png "새로운 기능으로 NSMetadataQuery 호출 연결")](document-picker-images/image3.png)
+ [![](document-picker-images/image3.png "새로운 기능으로 NSMetadataQuery 호출 연결")](document-picker-images/image3.png#lightbox)
 
 연결을 사용 하 여 위의 다이어그램에:
 
@@ -824,7 +824,7 @@ IOS 8 하기 전에 응용 프로그램 내에서 응용 프로그램 외부의 
 
 ### <a name="existing-behavior"></a>기존 동작
 
- [ ![](document-picker-images/image31.png "기존 동작 개요")](document-picker-images/image31.png)
+ [![](document-picker-images/image31.png "기존 동작 개요")](document-picker-images/image31.png#lightbox)
 
 IOS 8 하기 전에 외부 문서에 액세스에 대해 살펴보겠습니다.
 
@@ -839,7 +839,7 @@ IOS 8 하기 전에 외부 문서에 액세스에 대해 살펴보겠습니다.
 
 IOS 8의에서 응용 프로그램은 자체 응용 프로그램 컨테이너 외부에 있는 문서를 쉽게 액세스할 수 있습니다:
 
- [ ![](document-picker-images/image32.png "컨테이너는 응용 프로그램의 외부에 있는 문서를 검색합니다.")](document-picker-images/image32.png)
+ [![](document-picker-images/image32.png "컨테이너는 응용 프로그램의 외부에 있는 문서를 검색합니다.")](document-picker-images/image32.png#lightbox)
 
 새 icloud와 문서 선택기를 사용 하 여 ( `UIDocumentPickerViewController`)를 직접 검색 하 고 응용 프로그램 컨테이너 외부에서 액세스할 수는 iOS 응용 프로그램입니다. `UIDocumentPickerViewController` 제공 하는 메커니즘에 대 한 액세스를 부여 하 고 편집 하는 것을 사용자에 대 한 사용 권한을 통해 문서를 검색 합니다.
 
@@ -910,16 +910,16 @@ if (presentationPopover!=null) {
 
 1.  사용자가 응용 프로그램을 시작 하 고는 주 인터페이스 표시 됩니다.   
  
-    [ ![](document-picker-images/image33.png "표시 되는 주 인터페이스")](document-picker-images/image33.png)
+    [![](document-picker-images/image33.png "표시 되는 주 인터페이스")](document-picker-images/image33.png#lightbox)
 1.  사용자 탭의 **작업** 화면 위쪽에 단추를 선택 하 라는 메시지가 표시 되 고는 **문서 공급자** 사용 가능한 공급자 목록에서:   
  
-    [ ![](document-picker-images/image34.png "사용 가능한 공급자 목록에서 문서 공급자를 선택 합니다.")](document-picker-images/image34.png)
+    [![](document-picker-images/image34.png "사용 가능한 공급자 목록에서 문서 공급자를 선택 합니다.")](document-picker-images/image34.png#lightbox)
 1.  **문서 선택 뷰-컨트롤러** 표시 되는 선택 된 **문서 공급자**:   
  
-    [ ![](document-picker-images/image35.png "표시 되는 문서 선택 뷰-컨트롤러")](document-picker-images/image35.png)
+    [![](document-picker-images/image35.png "표시 되는 문서 선택 뷰-컨트롤러")](document-picker-images/image35.png#lightbox)
 1.  에 사용자가을 **문서 폴더** 내용이 표시 되도록 합니다.   
  
-    [ ![](document-picker-images/image36.png "문서 폴더 내용")](document-picker-images/image36.png)
+    [![](document-picker-images/image36.png "문서 폴더 내용")](document-picker-images/image36.png#lightbox)
 1.  사용자가을 선택는 **문서** 및 **문서 선택** 닫혀 있습니다.
 1.  주 인터페이스는 다시 표시는 **문서** 외부 컨테이너와 내용이 표시에서 로드 되었습니다.
 
@@ -930,7 +930,7 @@ if (presentationPopover!=null) {
 
 8, iOS 하기 전에, 위에서 설명한 것 처럼 응용 프로그램 문서 컨테이너 응용 프로그램의 일부분 이었던만 액세스할 수 없습니다. IOS 8에서에서 응용 프로그램의 외부 원본에서 문서에 액세스할 수 있습니다.
 
- [ ![](document-picker-images/image37.png "관리 외부 문서 개요")](document-picker-images/image37.png)
+ [![](document-picker-images/image37.png "관리 외부 문서 개요")](document-picker-images/image37.png#lightbox)
 
 외부 소스에서 문서를 선택할 때 참조 문서는 원래 문서를 가리키는 응용 프로그램 컨테이너에 기록 됩니다.
 
@@ -1021,10 +1021,10 @@ if (Bookmark != null) {
 
 1.  **모드 엽니다** -이 모드에서는 사용자가을 선택 하 고 외부 문서 문서 선택 응용 프로그램 컨테이너에 있는 보안 범위가 지정 된 책갈피를 만들면 됩니다.   
  
-    [ ![](document-picker-images/image37.png "보안 응용 프로그램 컨테이너에서 책갈피 범위")](document-picker-images/image37.png)
+    [![](document-picker-images/image37.png "보안 응용 프로그램 컨테이너에서 책갈피 범위")](document-picker-images/image37.png#lightbox)
 1.  **가져오기 모드** -이 모드에서는 사용자가 선택 하 고 외부 문서, 문서 선택 하지 책갈피를 만들어야 하지만 대신, 해당 파일을 임시 위치 복사한이 위치에 있는 문서에 대 한 응용 프로그램 액세스를 제공 합니다.   
  
-    [ ![](document-picker-images/image38.png "문서 선택 파일을 임시 위치에 복사 되며이 위치에 문서에 응용 프로그램 액세스를 제공 합니다.")](document-picker-images/image38.png)   
+    [![](document-picker-images/image38.png "문서 선택 파일을 임시 위치에 복사 되며이 위치에 문서에 응용 프로그램 액세스를 제공 합니다.")](document-picker-images/image38.png#lightbox)   
  어떤 이유로 든 응용 프로그램 종료 되 면 일단 임시 위치 비워지고 파일이 제거 합니다. 응용 프로그램을 파일에 대 한 액세스를 유지 관리 하는 경우 복사본을 확인 하 고 응용 프로그램 컨테이너에 넣습니다.
 
 
@@ -1069,7 +1069,7 @@ Ios 8, Apple 최종 사용자가 실제로 있는 위치에 관계 없이 클라
 
 다음 다이어그램에서는 문서 공급자 확장 작업 시 일반적인 데이터 흐름을 보여 줍니다.
 
- [ ![](document-picker-images/image39.png "이 다이어그램 문서 공급자 확장 작업 시 일반적인 데이터 흐름을 보여 줍니다.")](document-picker-images/image39.png)
+ [![](document-picker-images/image39.png "이 다이어그램 문서 공급자 확장 작업 시 일반적인 데이터 흐름을 보여 줍니다.")](document-picker-images/image39.png#lightbox)
 
 다음 프로세스가 발생합니다.
 
@@ -1095,7 +1095,7 @@ Ios 8, Apple 최종 사용자가 실제로 있는 위치에 관계 없이 클라
 
 다음 다이어그램에서는 책갈피 및 문서 공급자 확장 작업 시 데이터 흐름을 보여 줍니다.
 
- [ ![](document-picker-images/image40.png "이 다이어그램 책갈피 및 문서 공급자 확장 작업 시 데이터 흐름을 보여 줍니다.")](document-picker-images/image40.png)
+ [![](document-picker-images/image40.png "이 다이어그램 책갈피 및 문서 공급자 확장 작업 시 데이터 흐름을 보여 줍니다.")](document-picker-images/image40.png#lightbox)
 
 다음 프로세스가 발생합니다.
 
@@ -1145,5 +1145,5 @@ Mac OS X Yosemite, 사과 제공 하지 않습니다는 이전 버전과 호환�
 ## <a name="related-links"></a>관련 링크
 
 - [DocPicker (샘플)](https://developer.xamarin.com/samples/monotouch/ios8/DocPicker/)
-- [IOS 8 소개](~/ios/platform/introduction-to-ios8.md)
+- [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [응용 프로그램 확장 프로그램 소개](~/ios/platform/extensions.md)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0842a54f725e5a9504668f977ba06648a96ee6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 209b301c44da9bbb52ad8bf7fe867811a9b7617f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-video-sources-to-the-player"></a>플레이어에 게 비디오 소스 바인딩
 
@@ -72,7 +72,7 @@ namespace VideoPlayerDemos
 
 이 페이지가 처음 로드 될 때는 `ListView`이므로 비디오 재생을 시작 하려면 하나를 선택 해야 합니다.
 
-[![웹 비디오 선택](source-bindings-images/selectwebvideo-small.png "웹 비디오 선택")](source-bindings-images/selectwebvideo-large.png "웹 비디오를 선택 합니다.")
+[![웹 비디오 선택](source-bindings-images/selectwebvideo-small.png "웹 비디오 선택")](source-bindings-images/selectwebvideo-large.png#lightbox "웹 비디오를 선택 합니다.")
 
 `Source` 속성 `VideoPlayer` 는에서 대상 데이터 바인딩을 사용할 수 있다는 것을 의미 하는 바인딩 가능한 속성을 지원 합니다. 이 확인할는 **VideoPlayer 바인딩할** 페이지. 태그는 **BindToVideoPlayer.xaml** 파일은 비디오와 그의 제목을 캡슐화 하는 다음 클래스에 의해 지원 `VideoSource` 개체:
 

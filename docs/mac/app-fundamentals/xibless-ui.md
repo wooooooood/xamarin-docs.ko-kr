@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 544aad278b9bc66120e188eec54fa68be71dc625
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 52d300ac583ec2313d3169c7b2adb73c15ebe4fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboardxib-less-user-interface-design"></a>.storyboard/.xib-less 사용자 인터페이스 디자인
 
@@ -21,11 +21,11 @@ _이 문서에서는.storyboard 파일,.xib 파일 또는 인터페이스 작성
 
 ## <a name="overview"></a>개요
 
-동일한 사용자 인터페이스 요소에 대 한 액세스 권한이 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 작업 하는 개발자 도구를 *Objective-c* 및 *Xcode* 않습니다. 일반적으로 Xamarin.Mac 응용 프로그램을 만들 때 사용 합니다 Xcode의 인터페이스 작성기.storyboard 또는.xib 파일을 만들고 응용 프로그램의 사용자 인터페이스를 유지.
+동일한 사용자 인터페이스 요소에 대 한 액세스 권한이 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 작업 하는 개발자 도구를 *Objective-C* 및 *Xcode* 않습니다. 일반적으로 Xamarin.Mac 응용 프로그램을 만들 때 사용 합니다 Xcode의 인터페이스 작성기.storyboard 또는.xib 파일을 만들고 응용 프로그램의 사용자 인터페이스를 유지.
 
 C# 코드에서 직접 Xamarin.Mac 응용 프로그램의 UI의 일부 또는 전부를 만들을 수도 있습니다. 이 문서에서는 C# 코드에서 사용자 인터페이스와 UI 요소를 만드는 기본적인 하겠습니다.
 
-[![Mac 코드 편집기에 대 한 Visual Studio](xibless-ui-images/intro01.png "Mac 코드 편집기에 대 한 Visual Studio")](xibless-ui-images/intro01-large.png)
+[![Mac 코드 편집기에 대 한 Visual Studio](xibless-ui-images/intro01.png "Mac 코드 편집기에 대 한 Visual Studio")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 

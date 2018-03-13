@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 각 멤버에 대 한는 `SKStrokeCap` 열거형 처리기 그립니다 두 줄 50 픽셀 및 2 픽셀의 선 두께를 맨 위에 배치 하는 다른 줄의 스트로크 두께 사용 합니다. 이 두 번째 줄은 기하학적 시작과 선 두께 스트로크 단면 독립적인 줄의 끝을 보여 주기 위한:
 
-[![](lines-images/strokecaps-small.png "스트로크 단면 페이지의 삼중 스크린샷")](lines-images/strokecaps-large.png "스트로크 단면 페이지의 삼중 스크린샷")
+[![](lines-images/strokecaps-small.png "스트로크 단면 페이지의 삼중 스크린샷")](lines-images/strokecaps-large.png#lightbox "스트로크 단면 페이지의 삼중 스크린샷")
 
 볼 수 있듯이 `Square` 및 `Round` 스트로크 단면 스트로크 너비 절반 줄의 시작 및 끝에서 다시 여 줄 길이 효과적으로 확장 합니다. 이 확장은 렌더링 되는 그래픽 개체의 크기를 결정 해야 하는 경우 중요 합니다.
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 스크린샷은의 다양 한 `Picker` 세 가지 플랫폼에서 선택 항목:
 
-[![](lines-images/multiplelines-small.png "여러 줄 페이지의 삼중 스크린샷")](lines-images/multiplelines-large.png "여러 줄 페이지의 삼중 스크린샷")
+[![](lines-images/multiplelines-small.png "여러 줄 페이지의 삼중 스크린샷")](lines-images/multiplelines-large.png#lightbox "여러 줄 페이지의 삼중 스크린샷")
 
 IPhone에서 왼쪽된에 표시 된 방법을 `SKPointMode.Points` 열거형 멤버 하면 `DrawPoints` 각 항목에 렌더링 하는 `SKPoint` 선 단면 경우 사각형으로 배열 `Butt` 또는 `Square`합니다. 선 끝 모양 이면 원으로 렌더링 됩니다 `Round`합니다.
 

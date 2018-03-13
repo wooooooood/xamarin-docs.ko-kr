@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 88f9a86173756738d44f099b13177489226fa0e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732fd9808ded4bf97e99e7ab0e6ab63b989452d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-watch"></a>Hello, 조사식
 
@@ -150,7 +150,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 1. 키를 눌러는 **디버그** 를 빌드 및 시뮬레이터 시작을 트리거하는 단추입니다.
 
-    [ ![](hello-watch-images/readytodebug-sml.png "Visual Studio 인터페이스 요소")](hello-watch-images/readytodebug.png)
+    [![](hello-watch-images/readytodebug-sml.png "Visual Studio 인터페이스 요소")](hello-watch-images/readytodebug.png#lightbox)
 
 시뮬레이터가 시작 되 면 단추 레이블이 증가를 키를 누릅니다.
 축 하 합니다, Watch 앱 구현할 수!

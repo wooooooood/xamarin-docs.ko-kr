@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fe1796839524a271760a9beb82895fd6e93c7ad0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-graphics"></a>코어 그래픽
 
@@ -40,6 +40,7 @@ iOS에 포함 되어는 [ *코어 그래픽* ](https://developer.apple.com/libra
 -  응용 프로그램 번들의 정적 이미지에 대 한 필요성을 줄이고 응용 프로그램 크기를 줄일 수 있습니다.
 -  장치에서 그래픽 해상도 변경 복원 력이 향상 됩니다.
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>UIView 하위 클래스에 그리기
 
@@ -182,6 +183,8 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
  ![](core-graphics-images/02-dashed-stroke.png "파선에 그리기 작업 결과 앞에 다음이 코드를 추가합니다.")
  
 통합 API를 사용 하 여 Xamarin.iOS에서, 배열 형식 되도록 필요는 `nfloat`, Math.PI를 명시적으로 캐스팅 해야 합니다.
+
+<a name="Drawing_Images_and_Text"/>
 
 ## <a name="drawing-images-and-text"></a>그리기 이미지 및 텍스트
 
@@ -428,5 +431,5 @@ UIGraphics.EndPDFContent ();
 
 - [코어 그래픽 예제](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
 - [그래픽 및 애니메이션 연습](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [코어 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [코어 애니메이션 레시피](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: e71d497201cc2d8f2b3e2b8b252e5f963806a75b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-bindings"></a>사용자 지정 바인딩
 
 _바인딩 프로세스를 제어 하는 메타 데이터를 편집 하 여 Xamarin.Android 바인딩을 사용자 지정할 수 있습니다. 이러한 수동 수정이 고, C#와 보다 일치 되도록 결과 API를 만들기 위한 빌드 오류를 해결 하는 데 필요한 종종 /.NET 합니다. 이러한 가이드에는이 메타 데이터의 구조, 메타 데이터를 수정 하는 방법 및 JavaDoc를 복구할 메서드 매개 변수 이름을 사용 하는 방법을 설명 합니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
  
@@ -34,7 +33,6 @@ Xamarin.Android는 바인딩 프로세스;의 대부분을 자동화합니다 �
 
 바인딩 프로세스를 제어 하는 메타 데이터를 수정 하 여 이러한 변경의 일부 또는 전부를 만들 수 있습니다.
 
-<a name="guides" />
 
 ## <a name="guides"></a>안내선
 

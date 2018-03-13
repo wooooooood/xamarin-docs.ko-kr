@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>조사식 장치에 대 한 테스트
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/27/2018
 
 감시에도 마찬가지-앱을 배포 하기 전에 Apple Watch 장치를 추가 해야 합니다. 시계의 UDID 사용 하 여 검색 **Xcode** (**Windows > 장치** 목록). 쌍을 이루는 전화 연결 된 경우에 시계의 정보가 표시 됩니다.
 
-[ ![](device-images/xcode-devices-sml.png "쌍을 이루는 조사식 정보")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "쌍을 이루는 조사식 정보")](device-images/xcode-devices.png#lightbox)
 
 시계의 알고 있을 때 UDID, 개발자 센터의 장치 목록에 추가 합니다.
 
@@ -99,12 +99,12 @@ ms.lasthandoff: 02/27/2018
 
 *일시적으로* 이 문제 해결, 사용 하지 않도록 설정 **증분 빌드** 조사식 확장에서 **프로젝트 옵션 > 빌드 > watchOS 빌드** 창:
 
-[ ![](device-images/disable-incremental-sml.png "증분 빌드 확인란")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "증분 빌드 확인란")](device-images/disable-incremental.png#lightbox)
 
 이는 증분 빌드 다시 설정할 수 있습니다 빌드 시간 단축을 활용 하려면 이후 릴리스에서 수정 될 예정입니다.
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a>장치에서 디버깅 하는 동안 시작 하려면 &#3; watch 앱 실패
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Watch 앱 장치에서 디버깅 하는 동안 시작 되지 않습니다.
 
 표시 된 아이콘 및 로드 회전자 물리적 장치에서 조사식 응용 프로그램을 디버깅 하는 경우 (및 결국 제한 시간). 향후 릴리스에서 해결 될 예정 해결 방법 (함 디버깅을 허용 하지 것입니다) 릴리스 빌드를 실행 하는 것입니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: c28296af43f0091443eda0364fc0c28a938a7760
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2fb3133833dbaa0b174c4611d204f6c8ceb42a2b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridview"></a>GridView
 
@@ -145,11 +145,10 @@ public class ImageAdapter : BaseAdapter
 
 응용 프로그램을 실행합니다. 모눈 레이아웃에는 다음과 같이 표시 됩니다.
 
-[![15 이미지를 표시 하는 GridView의 예제 스크린 샷](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png)
+[![15 이미지를 표시 하는 GridView의 예제 스크린 샷](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 
 동작을 사용 하 여 실험해는 [ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/) 및 [ `ImageView` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView/) 해당 속성을 조정 하 여 요소입니다. 예를 들어, 사용 하는 대신 [ `LayoutParams` ](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/) 사용해 [ `SetAdjustViewBounds()` ](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetAdjustViewBounds/)합니다.
 
-<a name="References" />
 
 ## <a name="references"></a>참조
 

@@ -7,17 +7,17 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: fb74e0efd62c6347534e6f301953325bd4d378d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
 _Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다._
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -91,7 +91,6 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 다음 섹션에서는 C#과 Java의 기본적인 "시작" 차이점에 대해 설명하고, 이후 섹션에서는 이러한 언어 간의 개체 지향 차이점에 대해 설명합니다.
 
 
-<a name="assemblies" />
 
 ### <a name="libraries-vs-assemblies"></a>라이브러리 및 어셈블리
 
@@ -99,7 +98,6 @@ Java는 일반적으로 **.jar** 파일에 관련 클래스를 패키지합니�
 
 어셈블리에 대한 자세한 내용은 MSDN [어셈블리와 전역 어셈블리 캐시](https://msdn.microsoft.com/en-us/library/ms173099.aspx) 항목을 참조하세요.
 
-<a name="namespaces" />
 
 ### <a name="packages-vs-namespaces"></a>패키지 대 네임스페이스
 
@@ -111,7 +109,6 @@ namespace WeatherApp
     ...
 ```
 
-<a name="imports" />
 
 ### <a name="importing-types"></a>형식 가져오기
 
@@ -146,7 +143,6 @@ using System.Threading.Tasks;
 이러한 명령문은 `System`, `Android.App`, `Android.Content` 등의 네임스페이스에서 기능을 가져옵니다.
 
 
-<a name="generics" />
 
 ### <a name="generics"></a>제네릭
 
@@ -197,7 +193,6 @@ Java와 C# 모두는 다음과 같이 매우 비슷한 개체 지향 프로그�
 -   C#은 C++ 스타일 소멸자 구문을 사용하여 종료자를 표현합니다. 이 구문은 Java의 `finalize` 메서드와 다르지만 의미는 거의 같습니다. (`super.finalize`에 대한 명시적 호출이 사용되는 Java와 달리, C#에서는 소멸자가 기본 클래스 소멸자를 자동으로 호출합니다.)
 
 
-<a name="inheritance" />
 
 ### <a name="class-inheritance"></a>클래스 상속
 
@@ -251,7 +246,6 @@ rulerView.DrawingCacheEnabled = true;
 C# 속성에 대한 자세한 내용은 MSDN [속성](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx) 항목을 참조하세요.
 
 
-<a name="basemethods" />
 
 ### <a name="calling-base-class-methods"></a>기본 클래스 메서드 호출
 
@@ -287,7 +281,6 @@ public class MainActivity : Activity
 이 경우 파생 클래스(`MainActivity`)에서 정의된 `OnCreate` 메서드는 기본 클래스(`Activity`)의 `OnCreate` 메서드를 호출합니다.
 
 
-<a name="accessmodifiers" />
 
 ### <a name="access-modifiers"></a>액세스 한정자
 
@@ -300,7 +293,6 @@ Java 및 C#은 모두 `public`, `private` 및 `protected` 액세스 한정자를
 C# 액세스 한정자에 대한 자세한 내용은 MSDN [액세스 한정자](https://msdn.microsoft.com/en-us/library/ms173121.aspx) 항목을 참조하세요.
 
 
-<a name="virtualoverride" />
 
 ### <a name="virtual-and-override-methods"></a>가상 및 재정의 메서드
 
@@ -792,7 +784,6 @@ C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.A
 이러한 방법에 대한 자세한 내용은 [Java 통합 개요](~/android/platform/java-integration/index.md)를 참조하세요.
 
 
-<a name="further" />
 
 ## <a name="for-further-reading"></a>추가 정보
 
@@ -803,7 +794,6 @@ Java 지식에서 최소한 Java 언어를 알고 있는 만큼 Java 클래스 �
 C#에서 첫 번째 Xamarin.Android 프로젝트를 시작할 준비가 되면, [Hello, Android](~/android/get-started/hello-android/index.md) 시리즈를 통해 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고 Xamarin을 사용하여 Android 응용 프로그램 개발의 기본 사항에 대한 이해를 높일 수 있습니다.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

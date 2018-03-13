@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: dda7597456421aa4ae401f56ed6cfc7983df29c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64961e9c45c28ede4cc84f7b978da565be4426d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
@@ -53,7 +53,7 @@ Google Cloud Messaging에서 메시지를 받을 [Google Play 서비스](https:/
 
 Visual Studio에서 마우스 오른쪽 단추로 클릭 **참조 > NuGet 패키지 관리...** ; Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가 중...** . 검색할 **Xamarin Google Play 서비스-GCM** 에이 패키지를 설치 하 고는 **ClientApp** 프로젝트: 
 
-[ ![Google Play 서비스를 설치합니다.](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png)
+[![Google Play 서비스를 설치합니다.](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
 
 설치 하는 경우 **Xamarin Google Play 서비스-GCM**, **Xamarin Google Play 서비스-자료** 자동으로 설치 됩니다. 오류가 발생 하는 경우 프로젝트의 변경 *최소 Android 대상* 아닌 다른 값으로 설정을 **SDK 버전을 사용 하 여 컴파일** NuGet 설치를 다시 시도 하십시오. 
 
@@ -76,7 +76,7 @@ GCM에서 메시지를 받으려면 장치에서 Google Play 스토어 응용 �
 
 [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md), GCM 사용이 가능한 앱에 대 한 패키지 이름 지정 (이 패키지 이름으로도 사용는 *응용 프로그램 ID* 우리의 API 키 및 보낸 사람 ID와 연결 된). 에 대 한 속성을 열어 보겠습니다는 **ClientApp** 프로젝트 및 패키지 이름을이 문자열로 설정 합니다. 이 예제 패키지 이름을 설정 `com.xamarin.gcmexample`:
 
-[ ![패키지 이름 설정](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png)
+[![패키지 이름 설정](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png#lightbox)
 
 클라이언트 응용 프로그램을 패키지 이름이이 가리키지 않으면 GCM에서 등록 토큰을 받을 수 됩니다는 *정확히* Google 개발자 콘솔에 회사 이름을 입력 하는 패키지 이름과 일치 합니다. 
 
@@ -192,7 +192,7 @@ protected override void OnCreate (Bundle bundle)
 
 보겠습니다 완전히 다시 작성 하 고 응용 프로그램을 실행 합니다. 다음 스크린 샷에서 같은 화면이 나타나야 합니다. 
 
-[ ![Google Play 서비스를 사용할 수](remote-notifications-with-gcm-images/3-first-screen-sml.png)](remote-notifications-with-gcm-images/3-first-screen.png)
+[![Google Play 서비스를 사용할 수](remote-notifications-with-gcm-images/3-first-screen-sml.png)](remote-notifications-with-gcm-images/3-first-screen.png#lightbox)
 
 이 결과 얻지 못한 경우 Google 재생 서비스 APK 장치에 설치 되어 있는지 확인은 **Xamarin Google Play 서비스-GCM** 패키지에 추가 됩니다 프로그램 **ClientApp** 설명 된 대로 프로젝트 이전 버전입니다. 빌드 오류가 발생할 경우 솔루션을 정리 하 고 프로젝트를 다시 빌드 해 보십시오. 
 
@@ -271,11 +271,11 @@ namespace ClientApp
 
 1.  에 로그인 된 [Google 클라우드 콘솔](https://console.cloud.google.com/) 풀 다운 메뉴에서에서 프로젝트 이름을 선택 합니다. 에 **정보 프로젝트** 프로젝트에 대해 표시 되는 창의 클릭 **프로젝트 설정으로 이동**:
 
-    [![XamarinGCM 프로젝트를 선택합니다.](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png)
+    [![XamarinGCM 프로젝트를 선택합니다.](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
 2.  에 **설정** 페이지에서 찾은 **프로젝트 번호** &ndash; 프로젝트에 대 한 보낸 사람 ID입니다.
 
-    [![프로젝트 번호 표시](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png)
+    [![프로젝트 번호 표시](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
 
 시작 하려면 원하는 우리의 `RegistrationIntentService` 앱 실행을 시작할 때입니다. 편집 **MainActivity.cs** 수정 하 고는 `OnCreate` 메서드 있도록 우리의 `RegistrationIntentService` Google Play 서비스의 존재를 확인 한 후 시작: 
 
@@ -548,7 +548,7 @@ C# 데스크톱 콘솔 응용 프로그램 프로젝트를 솔루션에 추가 �
 
 찾아 보겠습니다는 **Json.NET** 패키지 및 프로젝트에 설치 합니다. 
 
-[ ![Json.NET 패키지 설치](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png)
+[![Json.NET 패키지 설치](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
 
 
 #### <a name="add-a-reference-to-systemnethttp"></a>System.Net.Http에 대 한 참조를 추가 합니다.
@@ -630,7 +630,6 @@ namespace MessageSender
 차례로 GCM, 클라이언트 응용 프로그램에이 메시지를 전달합니다. 제작 해 보겠습니다 **MessageSender** 에서는 실행할 수 있는 것 명령줄에서 콘솔 창을 엽니다.
 
 
-<a name="tryit" />
 
 ### <a name="try-it"></a>실습
 
@@ -666,11 +665,11 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 또한 알림 표시줄에 새 알림 아이콘이 나타나면 확인 해야 합니다. 
 
-[ ![장치에 Notiication 아이콘 표시](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png)
+[![장치에 Notiication 아이콘 표시](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 알림을 보려면 알림 표시줄을 열 때이 원격 알림을 표시 되어야 합니다.
 
-[ ![알림 메시지가 표시 됩니다.](remote-notifications-with-gcm-images/6-notification-in-tray-sml.png)](remote-notifications-with-gcm-images/6-notification-in-tray.png)
+[![알림 메시지가 표시 됩니다.](remote-notifications-with-gcm-images/6-notification-in-tray-sml.png)](remote-notifications-with-gcm-images/6-notification-in-tray.png#lightbox)
 
 축 하 합니다, 응용 프로그램의 첫 번째 원격 알림을 받았습니다!
 
@@ -685,4 +684,4 @@ Note 강제 중지 하는 경우 GCM 메시지가 수신 되지 않습니다. �
 ## <a name="related-links"></a>관련 링크
 
 - [GCM RemoteNotifications (샘플)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications)
-- [Google 클라우드 메시징](~/android/data-cloud/google-messaging/google-cloud-messaging.md)
+- [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md)

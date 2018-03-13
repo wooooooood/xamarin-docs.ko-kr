@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: d75c1393f2b5701226433235010a41da9c1aeb03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78528c750c6350d113b34a07d166a03773119a8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-store-changes"></a>앱 스토어 변경 내용
 
@@ -87,6 +87,7 @@ Apple 했습니다 앱에서 바로 구매를 더 쉽게 검색할 수 앱 스�
 
 자세한 내용은 Apple의을 참조 하십시오. [검토에 응답](https://developer.apple.com/app-store/responding-to-reviews/) 페이지.
 
+<a name="Phased_Release"/>
 
 ## <a name="phased-release"></a>단계적된 출시
 

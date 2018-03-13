@@ -3,14 +3,15 @@ title: "요약 Chapter 3입니다. 텍스트를 자세하게"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9d283a4136a7cdfe39ea0b2da65273332fd47b00
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 Chapter 3입니다. 텍스트를 자세하게
 
@@ -129,7 +130,7 @@ Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 �
 
 [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) 샘플 사용을 보여 줍니다.는 `FormattedText` 의 텍스트를 한 줄에 대 한 속성 및 [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) 다음과 같이 단락 전체 기법을 보여 줍니다.
 
-[![변수의 세 스크린 샷 단락 서식이 지정 된](images/ch03fg06-small.png "변수 형식의 레이블 텍스트")](images/ch03fg06-large.png "변수 형식의 레이블 텍스트")
+[![변수의 세 스크린 샷 단락 서식이 지정 된](images/ch03fg06-small.png "변수 형식의 레이블 텍스트")](images/ch03fg06-large.png#lightbox "변수 형식의 레이블 텍스트")
 
 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 프로그램 하나를 사용 하 여 `Label` 및 `FormattedString` 모든 각 플랫폼에 대 한 명명 된 글꼴 크기를 표시 하는 개체입니다.
 

@@ -3,14 +3,15 @@ title: "요약 장 9입니다. 플랫폼별 API 호출"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 637096d3ebb7fb90321f7f459e0ca9e51572d935
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84650c930445172d27520129123d493253851642
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 장 9입니다. 플랫폼별 API 호출
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin.Forms 공유 자산 프로젝트용 C# 전처리기 지시문을 사용 하 여 각 플랫폼에 대 한 다른 코드를 실행할 수 있으며 `#if`, `#elif`, 및 `endif`합니다. 이 확인할 [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![변수의 세 스크린 샷 단락 서식이 지정 된](images/ch09fg01-small.png "장치 모델 및 운영 체제")](images/ch09fg01-large.png "장치 모델 및 운영 체제")
+[![변수의 세 스크린 샷 단락 서식이 지정 된](images/ch09fg01-small.png "장치 모델 및 운영 체제")](images/ch09fg01-large.png#lightbox "장치 모델 및 운영 체제")
 
 그러나 결과 코드에 있으며 읽기 어려울 수 있습니다.
 

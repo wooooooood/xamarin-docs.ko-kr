@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83e01bba82713b55a0a69858c2a83aa243f71588
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 70703797792a2f667a2eb20cbc45d1736e5e6b9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-views"></a>웹 보기
 
@@ -40,7 +40,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 다음 웹 보기를 생성합니다.
 
-[ ![](uiwebview-images/webview.png "ScalesPagesToFit의 효과")](uiwebview-images/webview.png)
+[![](uiwebview-images/webview.png "ScalesPagesToFit의 효과")](uiwebview-images/webview.png#lightbox)
 
 사용 하 여 대 한 자세한 내용은 `UIWebView`, 다음 레시피를 참조 하십시오.
 
@@ -68,7 +68,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 다음 웹 보기를 생성합니다.
 
-[ ![](uiwebview-images/wkwebview.png "ScalesPagesToFit 없이 예제 웹 보기")](uiwebview-images/wkwebview.png)
+[![](uiwebview-images/wkwebview.png "ScalesPagesToFit 없이 예제 웹 보기")](uiwebview-images/wkwebview.png#lightbox)
 
 사항에 유의 해야 `WKWebView` 이므로 WebKit 네임 스페이스, 클래스의 맨 위에 지시문을 사용 하 여 추가 해야 합니다.
 
@@ -98,7 +98,7 @@ PresentViewController(sfViewController, true, null);
 
 다음 웹 보기를 생성합니다.
 
-[ ![](uiwebview-images/sfsafariviewcontroller.png "SFSafariViewController로는 예제 웹 보기")](uiwebview-images/sfsafariviewcontroller.png)
+[![](uiwebview-images/sfsafariviewcontroller.png "SFSafariViewController로는 예제 웹 보기")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -113,7 +113,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 다음 웹 보기를 생성합니다.
 
-[ ![](uiwebview-images/safari.png "Safari에 제공 된 웹 페이지")](uiwebview-images/safari.png)
+[![](uiwebview-images/safari.png "Safari에 제공 된 웹 페이지")](uiwebview-images/safari.png#lightbox)
 
 Safari로 응용 프로그램에서 사용자가 탐색 일반적으로 항상 사용 하지 않아야 합니다. 대부분 사용자가 응용 프로그램 외부의 탐색을 기대 하지 앱 벗어나 탐색 하면 사용자가 돌아가지 않을 수 있습니다, 기본적으로 서비스를 중지 하면 되므로 합니다.
 

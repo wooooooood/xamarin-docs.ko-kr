@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1ad3c193261bf22b7ee344aa1ccabb226533b907
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Android 에뮬레이터 마모 디버그
 
@@ -28,14 +28,14 @@ _이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램�
 
 마모 가상 장치를 만들 때 Android 착용 장치 프로필을 선택 합니다. (예: **Android 마모 정사각형**). 성능 향상된을 위해 사용 된 마모 **x86** 이 예제와 같이 CPU/ABI:
 
-[![마모 가상 장치 구성의 예](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![마모 가상 장치 구성의 예](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## <a name="launch-the-wear-virtual-device"></a>마모 가상 장치 시작 
 
 쓰는 유형 Android 가상 장치를 만든 후 디버깅을 시작 하기 전에 IDE에서 장치 풀 다운 메뉴에서 선택할 수 있습니다. 가상 장치 풀 다운 장치에서 사용할 수 없는 경우 프로젝트는 Android 인지 확인 *착용* 가상 장치로 수준 응용 프로그램 프로젝트 (Android 앱 프로젝트가 아닌 함)와 대상 API 레벨 동일한 API로 설정 되어 있습니다. 예:
 
-[ ![Visual Studio 장치 메뉴에 쓰는 유형 AVD 선택](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![Visual Studio 장치 메뉴에 쓰는 유형 AVD 선택](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Android 에뮬레이터 시작 된 후 Xamarin.Android 에뮬레이터에 마모 응용 프로그램을 배포 합니다. 에뮬레이터가 구성된 가상 장치 이미지로 앱을 실행합니다.
 

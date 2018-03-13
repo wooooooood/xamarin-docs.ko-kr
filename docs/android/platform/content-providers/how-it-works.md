@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 142ef16606bbf47de073122791fa2509ed6b6353
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7802988833563469fcc25e03ee1bda2046591681
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="how-content-providers-work"></a>콘텐츠 공급자 작업
 
@@ -23,14 +23,12 @@ ms.lasthandoff: 02/27/2018
 
 콘텐츠 공급자는 일반적으로 SQLite 데이터베이스에서 지원 하지만 API를 사용 하는 코드가 하지 않아도 기본 SQL에 대 한 어떠한 정보도 알 수를 의미 합니다. 쿼리 상수를 사용 하 여 열 이름 (기본 데이터 구조에 대 한 종속성)을 참조 하는 Uri를 통해 완료 되는 및 `ICursor` 반복을 사용 하는 코드에 대해 반환 됩니다.
 
-<a name="Consuming_a_ContentProvider" />
 
 ## <a name="consuming-a-contentprovider"></a>ContentProvider 사용
 
 `ContentProviders` 기능에 등록 되어 있는 Uri 통해는 **AndroidManifest.xml** 데이터를 게시 하는 응용 프로그램입니다. 규칙은 위치 Uri 및 노출 하는 데이터 열에는 해야 쉽게 데이터에 바인딩할 수 있도록 상수로 사용할 수 있습니다. Android의 기본 제공 `ContentProviders` 모든 기능을 제공 편의 클래스의 데이터 구조를 참조 하는 상수는 [ `Android.Providers` ](https://developer.xamarin.com/api/namespace/Android.Provider/) 네임 스페이스입니다.
 
 
-<a name="Built-In_Providers" />
 
 ### <a name="built-in-providers"></a>기본 제공 공급자
 
@@ -51,13 +49,12 @@ Android에서는 다양 한 시스템 및 사용 하 여 사용자 데이터에 
 - *음성 메일* &ndash; 음성 메일 메시지의 기록 합니다.
 
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>클래스 개요
 
 작업할 때 사용 하는 기본 클래스는 `ContentProvider` 여기에 표시 됩니다.
 
-[![콘텐츠 공급자 응용 프로그램 및 응용 프로그램 상호 작용 Consuming 클래스 다이어그램](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png)
+[![콘텐츠 공급자 응용 프로그램 및 응용 프로그램 상호 작용 Consuming 클래스 다이어그램](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
 이 다이어그램에는 `ContentProvider` 쿼리를 구현 하 고 URI의 다른 응용 프로그램 데이터를 찾을 사용 하는 등록 합니다. `ContentResolver` 프록시 역할을 하는 ''에 `ContentProvider` (쿼리, 삽입, 업데이트 및 삭제 메서드). `SQLiteOpenHelper` 에서 사용 하는 데이터가 포함 되어는 `ContentProvider`, 있지만 응용 프로그램을 사용 하는 데 직접 노출 되지 않습니다.
 `CursorAdapter` 전달 하 여 반환 되는 커서는 `ContentResolver` 에 표시 하는 `ListView`합니다. `UriMatcher` 쿼리를 처리할 때 Uri를 구문 분석 하는 도우미 클래스입니다.

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cb6917f9cd0dc22cc32a2d32c203328f1d6d963b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7d58c30e745e26d1076e75470e527cbe95e85eb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-and-search-fields"></a>텍스트 및 검색 필드 작업
 
@@ -22,11 +22,11 @@ _이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 텍스트 및 일�
 
 Xamarin.tvOS 앱 (예: 사용자 Id와 암호) 사용자에서 작은 조각 텍스트를 요청할 수 필요한 경우 텍스트 필드를 사용 하 고 화상 키보드:
 
-[ ![](text-fields-and-search-images/intro01.png "예제 검색 필드")](text-fields-and-search-images/intro01.png)
+[![](text-fields-and-search-images/intro01.png "예제 검색 필드")](text-fields-and-search-images/intro01.png#lightbox)
 
 필요에 따라 응용 프로그램의 콘텐츠 검색 필드를 사용 하 여 키워드 검색 기능을 제공할 수 있습니다.
 
-[ ![](text-fields-and-search-images/intro02.png "샘플 검색 결과")](text-fields-and-search-images/intro02.png)
+[![](text-fields-and-search-images/intro02.png "샘플 검색 결과")](text-fields-and-search-images/intro02.png#lightbox)
 
 이 문서에서는 Xamarin.tvOS 응용 프로그램에서 텍스트 및 일치 작업의 세부 정보를 설명 합니다.
 
@@ -44,7 +44,7 @@ Xamarin.tvOS 앱 (예: 사용자 Id와 암호) 사용자에서 작은 조각 텍
 
 TvOS, 텍스트 필드를 표시 합니다를 고정 높이, 둥근 모서리 항목 상자가 표시 됩니다는 화상 키보드를 사용자가 클릭 하면:
 
-[ ![](text-fields-and-search-images/text01.png "텍스트 필드에 tvOS")](text-fields-and-search-images/text01.png)
+[![](text-fields-and-search-images/text01.png "텍스트 필드에 tvOS")](text-fields-and-search-images/text01.png#lightbox)
 
 가져가면 [포커스](~/ios/tvos/app-fundamentals/navigation-focus.md) 지정된 된 텍스트 필드에 더 커질 하 고 전체에 그림자를 표시 합니다. 이 사용자 인터페이스를 디자인할 때 때 염두 텍스트 필드에서 포커스는 경우 다른 UI 요소를 겹칠 수 해야 합니다.
 
@@ -61,7 +61,7 @@ Apple는 텍스트 필드를 사용 하기 위한 다음 제안 사항을 있습
 
 클릭할 때마다 선형 사용자 인터페이스에서 텍스트 필드에 화상 키보드 표시 됩니다. 터치 화면을 사용 하 여 사용자는 [Siri 원격](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) 키보드에서 개별 문자를 선택 하 고 필요한 정보를 입력 하려면:
 
-[ ![](text-fields-and-search-images/keyboard01.png "Siri 원격 키보드")](text-fields-and-search-images/keyboard01.png)
+[![](text-fields-and-search-images/keyboard01.png "Siri 원격 키보드")](text-fields-and-search-images/keyboard01.png#lightbox)
 
 현재 보기에 텍스트 필드가 여러 개 있으면 한 **다음** 단추는 다음 텍스트 필드에 사용자를 자동으로 표시 됩니다. A **수행** 이 텍스트 항목 종료 되 고 이전 화면으로 사용자를 반환 하는 마지막 텍스트 필드에 대 한 단추가 표시 됩니다. 
 
@@ -80,7 +80,7 @@ Apple 사용에 대 한 다음 제안 사항을 화상 키보드를에 있습니
 
 검색 필드 텍스트 필드를 제공 하는 특수 한 화면 시키며 화상 키보드를 하는 사용자는 바로 아래에 표시 되는 항목의 컬렉션을 필터링 할 수 있습니다.
 
-[ ![](text-fields-and-search-images/search01.png "샘플 검색 결과")](text-fields-and-search-images/search01.png)
+[![](text-fields-and-search-images/search01.png "샘플 검색 결과")](text-fields-and-search-images/search01.png#lightbox)
 
 검색 필드에 문자를가 하는 사용자를 아래에서 결과 검색 결과 자동으로 반영 됩니다. 언제 든 지 사용자 결과에 포커스를 이동 하 고 표시 되어 있는 항목 중 하나를 선택할 수 있습니다.
 
@@ -105,16 +105,16 @@ Apple 검색 필드를 사용 하기 위한 다음 제안 사항을 있습니다
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 편집을 위해 열 파일입니다.
 1. 하나 이상의 끌어서 **텍스트 필드** int 보기로 디자인 화면: 
 
-    [ ![](text-fields-and-search-images/text02.png "텍스트 필드")](text-fields-and-search-images/text02.png)
+    [![](text-fields-and-search-images/text02.png "텍스트 필드")](text-fields-and-search-images/text02.png#lightbox)
 1. 선택 된 **텍스트 필드** 주며 각각은 고유한 **이름** 에 **위젯** 탭은 **속성 패드**: 
 
-    [ ![](text-fields-and-search-images/text03.png "속성 패드의 위젯 탭")](text-fields-and-search-images/text03.png)
+    [![](text-fields-and-search-images/text03.png "속성 패드의 위젯 탭")](text-fields-and-search-images/text03.png#lightbox)
 1. 에 **텍스트 필드** 섹션에서와 같은 요소를 정의할 수 있습니다는 **자리 표시자** 힌트 및 기본 **값**: 
 
-    [ ![](text-fields-and-search-images/text04.png "텍스트 필드 섹션")](text-fields-and-search-images/text04.png)
+    [![](text-fields-and-search-images/text04.png "텍스트 필드 섹션")](text-fields-and-search-images/text04.png#lightbox)
 1. 속성을 정의할 수와 같은 아래로 스크롤하여 **맞춤법 검사**, **대/소문자가** 및 기본 **키보드 종류**: 
 
-    [ ![](text-fields-and-search-images/text05.png "맞춤법 검사, 대/소문자 및 기본 키보드 종류")](text-fields-and-search-images/text05.png) 
+    [![](text-fields-and-search-images/text05.png "맞춤법 검사, 대/소문자 및 기본 키보드 종류")](text-fields-and-search-images/text05.png#lightbox) 
 1. 스토리 보드의 변경 내용을 저장 합니다.
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -122,16 +122,16 @@ Apple 검색 필드를 사용 하기 위한 다음 제안 사항을 있습니다
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 하나 이상의 끌어서 **텍스트 필드** int 보기로 디자인 화면: 
 
-    [ ![](text-fields-and-search-images/text02-vs.png "텍스트 필드")](text-fields-and-search-images/text02-vs.png)
+    [![](text-fields-and-search-images/text02-vs.png "텍스트 필드")](text-fields-and-search-images/text02-vs.png#lightbox)
 1. 선택 된 **텍스트 필드** 주며 각각은 고유한 **이름** 에 **위젯** 탭은 **속성 탐색기**: 
 
-    [ ![](text-fields-and-search-images/text03-vs.png "위젯 탭")](text-fields-and-search-images/text03-vs.png)
+    [![](text-fields-and-search-images/text03-vs.png "위젯 탭")](text-fields-and-search-images/text03-vs.png#lightbox)
 1. 에 **텍스트 필드** 섹션에서와 같은 요소를 정의할 수 있습니다는 **자리 표시자** 힌트 및 기본 **값**: 
 
-    [ ![](text-fields-and-search-images/text04-vs.png "텍스트 필드 섹션")](text-fields-and-search-images/text04-vs.png)
+    [![](text-fields-and-search-images/text04-vs.png "텍스트 필드 섹션")](text-fields-and-search-images/text04-vs.png#lightbox)
 1. 속성을 정의할 수와 같은 아래로 스크롤하여 **맞춤법 검사**, **대/소문자가** 및 기본 **키보드 종류**: 
 
-    [ ![](text-fields-and-search-images/text05-vs.png "맞춤법 검사, 대/소문자 및 기본 키보드 종류")](text-fields-and-search-images/text05-vs.png) 
+    [![](text-fields-and-search-images/text05-vs.png "맞춤법 검사, 대/소문자 및 기본 키보드 종류")](text-fields-and-search-images/text05-vs.png#lightbox) 
 1. 스토리 보드의 변경 내용을 저장 합니다.
     
 -----
@@ -157,17 +157,17 @@ Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 1. 에 **솔루션 패드**, 두 번 클릭은 `Main.storyboard` 편집을 위해 열 파일입니다.
 1. 새 컬렉션 뷰 컨트롤러 사용자의 검색 결과 표시 하는 스토리 보드를 끌어 옵니다. 
 
-    [ ![](text-fields-and-search-images/search02.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/search02.png)
+    [![](text-fields-and-search-images/search02.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/search02.png#lightbox)
 1. 에 **위젯** 탭은 **속성 패드**를 사용 하 여 `SearchResultsViewController` 에 대 한는 **클래스** 및 `SearchResults` 에 대 한는 **스토리 보드 ID**: 
 
-    [ ![](text-fields-and-search-images/search03.png "위젯 탭")](text-fields-and-search-images/search03.png)
+    [![](text-fields-and-search-images/search03.png "위젯 탭")](text-fields-and-search-images/search03.png#lightbox)
 1. 선택 된 **셀 프로토타입** 디자인 화면에서 합니다.
 1. 에 **위젯** 탭은 **속성 탐색기**를 사용 하 여 `SearchResultCell` 에 대 한는 **클래스** 및 `ImageCell` 에 대 한는 **식별자**: 
 
-    [ ![](text-fields-and-search-images/search04.png "위젯 탭")](text-fields-and-search-images/search04.png)
+    [![](text-fields-and-search-images/search04.png "위젯 탭")](text-fields-and-search-images/search04.png#lightbox)
 1. 레이아웃 디자인의는 **셀 프로토타입** 고유 각 요소가 노출 하 고 **이름** 에 **위젯** 탭은 **속성 탐색기**: 
 
-    [ ![](text-fields-and-search-images/search05.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05.png)
+    [![](text-fields-and-search-images/search05.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05.png#lightbox)
 1. 스토리 보드의 변경 내용을 저장 합니다.
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -175,17 +175,17 @@ Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 1. 새 컬렉션 뷰 컨트롤러 사용자의 검색 결과 표시 하는 스토리 보드를 끌어 옵니다. 
 
-    [ ![](text-fields-and-search-images/seach02-vs.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/seach02-vs.png)
+    [![](text-fields-and-search-images/seach02-vs.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. 에 **위젯** 탭은 **속성 탐색기**를 사용 하 여 `SearchResultsViewController` 에 대 한는 **클래스** 및 `SearchResults` 에 대 한는 **스토리 보드 ID**: 
 
-    [ ![](text-fields-and-search-images/search03-vs.png "위젯 탭")](text-fields-and-search-images/search03-vs.png)
+    [![](text-fields-and-search-images/search03-vs.png "위젯 탭")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. 선택 된 **셀 프로토타입** 디자인 화면에서 합니다.
 1. 에 **위젯** 탭은 **속성 탐색기**를 사용 하 여 `SearchResultCell` 에 대 한는 **클래스** 및 `ImageCell` 에 대 한는 **식별자**: 
 
-    [ ![](text-fields-and-search-images/search04-vs.png "위젯 탭")](text-fields-and-search-images/search04-vs.png)
+    [![](text-fields-and-search-images/search04-vs.png "위젯 탭")](text-fields-and-search-images/search04-vs.png#lightbox)
 1. 레이아웃 디자인의는 **셀 프로토타입** 고유 각 요소가 노출 하 고 **이름** 에 **위젯** 탭은 **속성 탐색기**: 
 
-    [ ![](text-fields-and-search-images/search05-vs.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05-vs.png)
+    [![](text-fields-and-search-images/search05-vs.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. 스토리 보드의 변경 내용을 저장 합니다.
     
 -----
@@ -198,13 +198,13 @@ Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 
 다음으로 사용자에 대 한 검색 하는 결과 대 한 데이터 모델로 사용할 클래스를 제공 해야 합니다. 에 **솔루션 탐색기**프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 파일...**   >  **일반** > **빈 클래스** 설명과 **이름**: 
 
-[ ![](text-fields-and-search-images/search06.png "빈 클래스를 선택 하 고 이름을 제공합니다")](text-fields-and-search-images/search06.png)
+[![](text-fields-and-search-images/search06.png "빈 클래스를 선택 하 고 이름을 제공합니다")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 다음으로 사용자에 대 한 검색 하는 결과 대 한 데이터 모델로 사용할 클래스를 제공 해야 합니다. 에 **솔루션 탐색기**프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **새 항목...**   >  **Apple** > **기타** > **클래스** 설명과 **이름**: 
 
-[ ![](text-fields-and-search-images/search06-vs.png "클래스를 선택 하 고 이름을 제공합니다")](text-fields-and-search-images/search06-vs.png)
+[![](text-fields-and-search-images/search06-vs.png "클래스를 선택 하 고 이름을 제공합니다")](text-fields-and-search-images/search06-vs.png#lightbox)
 
 -----
 
@@ -772,11 +772,11 @@ public override void ViewDidAppear (bool animated)
 
 앱이 실행 되 고 때는 사용자가 선택한 검색 탭을 사용자에 게 전체 필터링 되지 않은 항목 목록이 표시 됩니다.
 
-[ ![](text-fields-and-search-images/intro02.png "기본 검색 결과")](text-fields-and-search-images/intro02.png)
+[![](text-fields-and-search-images/intro02.png "기본 검색 결과")](text-fields-and-search-images/intro02.png#lightbox)
 
 사용자는 검색 용어를 입력 하기 시작, 결과 목록이 해당 용어도 필터링 되며 자동으로 업데이트:
 
-[ ![](text-fields-and-search-images/intro03.png "필터링 된 검색 결과")](text-fields-and-search-images/intro03.png)
+[![](text-fields-and-search-images/intro03.png "필터링 된 검색 결과")](text-fields-and-search-images/intro03.png#lightbox)
 
 언제 든 지 사용자는 검색 결과의 항목에 포커스를 전환 수 있으며 선택 하는 Siri 원격 터치 화면을 클릭 합니다.
 

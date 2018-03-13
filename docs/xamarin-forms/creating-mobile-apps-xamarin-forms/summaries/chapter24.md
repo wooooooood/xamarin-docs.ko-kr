@@ -3,14 +3,15 @@ title: "요약 장 24입니다. 페이지 탐색"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>요약 장 24입니다. 페이지 탐색
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) 샘플 사용을 보여 줍니다.는 `TableView` 목록 메뉴 항목에 있습니다. 각 항목이 연결 된는 `Type` 특정 페이지에 대 한 개체입니다. 해당 항목이 선택 될 때 프로그램 페이지를 인스턴스화하고를 탐색 합니다.
 
-[![갤러리 보기 유형의 삼중 스크린 샷](images/ch24fg21-small.png "메뉴 항목을 나열 하는 TableView")](images/ch24fg21-large.png "TableView 나열 하는 메뉴 항목")
+[![갤러리 보기 유형의 삼중 스크린 샷](images/ch24fg21-small.png "메뉴 항목을 나열 하는 TableView")](images/ch24fg21-large.png#lightbox "TableView 나열 하는 메뉴 항목")
 
 [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) 메뉴 형식이 아니라 각 페이지의 인스턴스를 포함 한다는 점에서 샘플은 약간 다릅니다. 각 페이지에서 정보를 유지 되지만 해당 프로그램을 시작할 때 모든 페이지를 인스턴스화해야 합니다.
 

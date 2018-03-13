@@ -4,14 +4,15 @@ description: "렌더링된 텍스트 SkiaSharp 그래픽 텍스트를 통합 하
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a8cfac8911b1a8a13a4b6f149d02cd2f2c78453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
@@ -113,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 그런 다음, 메서드의 나머지 부분에서는 간단한 것입니다. 다른 만듭니다 `SKPaint` 테두리 및 호출에 대 한 개체 `DrawRoundRect` 두 번입니다. 두 번째 호출은 다른 10 픽셀 x 팽창 사각형을 사용 합니다. 첫 번째 호출의 20 픽셀; 모서리 반지름을 지정합니다. 두 번째는 평행 하 게 되므로 30 픽셀의 모서리 반지름을 있습니다.
 
- [![](text-images/framedtext-small.png "묶을 텍스트 페이지의 삼중 스크린샷")](text-images/framedtext-large.png "묶을 텍스트 페이지의 삼중 스크린 샷")
+ [![](text-images/framedtext-small.png "묶을 텍스트 페이지의 삼중 스크린샷")](text-images/framedtext-large.png#lightbox "묶을 텍스트 페이지의 삼중 스크린 샷")
 
 전화 또는 옆으로 시뮬레이터 텍스트와 크기가 증가 하는 프레임을 설정할 수 있습니다.
 
@@ -121,7 +122,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 그래픽 옵션 처럼 훨씬 텍스트 자체를 처리할 수 있습니다. 한 가지 간단한 옵션 표준 채워진된 디스플레이 아닌 텍스트 문자의 개요를 표시 하는 것:
 
-[![](text-images/outlinedtext-small.png "설명 된 텍스트 페이지의 스크린 샷을 삼중")](text-images/outlinedtext-large.png "삼중 설명 된 텍스트 페이지의 스크린 샷")
+[![](text-images/outlinedtext-small.png "설명 된 텍스트 페이지의 스크린 샷을 삼중")](text-images/outlinedtext-large.png#lightbox "삼중 설명 된 텍스트 페이지의 스크린 샷")
 
 일반 변경 하 여 이렇게 `Style` 속성은 `SKPaint` 개체에서 기본 설정인 `SKPaintStyle.Fill` 를 `SKPaintStyle.Stroke` 스트로크 너비를 지정 하 여 합니다. `PaintSurface` 의 처리기는 **설명 텍스트** 페이지 수행 하는 방법을 보여 줍니다.
 

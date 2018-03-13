@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 210a6b45c144de3a0663658d8b33132e39c75ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: 바인딩 iOS Objective C 라이브러리
 
@@ -30,7 +30,7 @@ IOS를 사용 하는 경우에 제 3 자 Objective C 라이브러리를 사용 �
 
 이 문서는 오픈 소스를 사용 하 여 바인딩 프로젝트를 만드는 단계별 연습을 제공 [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) 함께이 가이드의 모든 정보를 사용할 수 있지만 Objective-c 예를 들어, 프로젝트 제 3 자 Objective C 라이브러리입니다. InfColorPicker 라이브러리 색 선택 더 친숙 하을 HSB 표현에 따라 색을 선택할 수 있는 재사용 가능한 뷰 컨트롤러를 제공 합니다.
 
-[ ![](walkthrough-images/run01.png "IOS에서 실행 중인 InfColorPicker 라이브러리의 예")](walkthrough-images/run01.png)
+[![](walkthrough-images/run01.png "IOS에서 실행 중인 InfColorPicker 라이브러리의 예")](walkthrough-images/run01.png#lightbox)
 
 Xamarin.iOS에서이 특정 Objective-c API를 사용 하는 데 필요한 모든 단계를 설명 합니다.
 
@@ -49,6 +49,8 @@ Xamarin.iOS에서이 특정 Objective-c API를 사용 하는 데 필요한 모�
 -  **[Xcode 명령줄 도구](#Installing_the_Xcode_Command_Line_Tools)**  -Xcode (설치 세부 정보에 대 한 아래 참조)의 현재 설치 된 버전의 Xcode 명령줄 도구를 설치 해야 합니다.
 -  **Mac 또는 Visual Studio 용 visual Studio** -최신 버전의 Visual Studio를 Mac 또는 Visual Studio를 설치 하 고 개발 컴퓨터에 구성 해야 합니다. Apple Mac Xamarin.iOS 응용 프로그램을 개발 하기 위한 필수 항목이 며 연결에 해야 Visual Studio를 사용 하는 경우 [는 Xamarin.iOS 빌드 호스트](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 -  **최신 버전의 목표 Sharpie** -목표 Sharpie 도구의 현재 복사본에서 다운로드 한 [여기](~/cross-platform/macios/binding/objective-sharpie/get-started.md)합니다. 설치 하는 목표 Sharpie 이미 있는 경우 업데이트할 수 있습니다 최신 버전을 사용 하 여는 `sharpie update`
+
+<a name="Installing_the_Xcode_Command_Line_Tools"/>
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Xcode 명령 명령줄 도구를 설치합니다.
 
@@ -79,11 +81,11 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - 명령줄 도구 설치를 클릭 합니다. 라는 메시지가 표시 됩니다는 **설치** 단추: [ ![ ] (walkthrough-images/xcode01.png "명령줄 도구를 설치 합니다.")](walkthrough-images/xcode01.png)
+    - 명령줄 도구 설치를 클릭 합니다. 라는 메시지가 표시 됩니다는 **설치** 단추: [ ![ ] (walkthrough-images/xcode01.png "명령줄 도구를 설치 합니다.")](walkthrough-images/xcode01.png#lightbox)
 
-    - 도구 다운로드 되 고 Apple 서버에서 설치: [ ![ ] (walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png)
+    - 도구 다운로드 되 고 Apple 서버에서 설치: [ ![ ] (walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
 
-- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드]() 웹 페이지입니다. Apple ID를 사용 하 여 로그인 한 다음 검색 하 고, 명령줄 도구를 다운로드: [ ![ ] (walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png)
+- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드]() 웹 페이지입니다. Apple ID를 사용 하 여 로그인 한 다음 검색 하 고, 명령줄 도구를 다운로드: [ ![ ] (walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
 
 명령줄 도구가 설치 된 준비가 연습에서 계속 합니다.
 
@@ -98,11 +100,13 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
 
 관련 된 단계를 이해 했으므로 살펴보겠습니다 연습의 나머지 부분에 있습니다.
 
+<a name="Creating_A_Static_Library"/>
+
 ## <a name="creating-a-static-library"></a>정적 라이브러리 만들기
 
 경우 म InfColorPicker Github에서 코드 있는지 검사 합니다.
 
-[ ![](walkthrough-images/image02.png "Github에서 InfColorPicker에 대 한 코드 검사")](walkthrough-images/image02.png)
+[![](walkthrough-images/image02.png "Github에서 InfColorPicker에 대 한 코드 검사")](walkthrough-images/image02.png#lightbox)
 
 다음 세 가지 디렉터리 프로젝트에서 볼 수 있습니다.
 
@@ -112,7 +116,7 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
 
 InfColorPicker 프로젝트를 다운로드 해 보겠습니다 [GitHub](https://github.com/InfinitApps/InfColorPicker/archive/master.zip) 고 우리의 선택의 디렉터리에 압축을 풉니다. 에 대 한 Xcode 대상을 열면 `PickerSamplePhone` 프로젝트를 Xcode 탐색 창에서 다음 프로젝트 구조를 보면:
 
-[ ![](walkthrough-images/image03.png "Xcode 탐색기의 프로젝트 구조")](walkthrough-images/image03.png)
+[![](walkthrough-images/image03.png "Xcode 탐색기의 프로젝트 구조")](walkthrough-images/image03.png#lightbox)
 
 이 프로젝트 직접 InfColorPicker 소스 코드는 빨간색 상자에서 각 샘플 프로젝트에 추가 하 여 코드 재사용을 달성 합니다. 샘플 프로젝트에 대 한 코드는 파란색 상자 내부. 해야 하는이 특정 프로젝트에서 제공 하지 않으므로 우리는 정적 라이브러리와, 정적 라이브러리를 컴파일하는 데 Xcode 프로젝트를 만들 수 있습니다.
 
@@ -121,47 +125,47 @@ InfColorPicker 프로젝트를 다운로드 해 보겠습니다 [GitHub](https:/
 1. Xcode를 시작합니다.
 2. **파일** 메뉴 선택 **새로** > **프로젝트...** :
 
-    [ ![](walkthrough-images/image04.png "새 프로젝트를 시작합니다.")](walkthrough-images/image04.png)
+    [![](walkthrough-images/image04.png "새 프로젝트를 시작합니다.")](walkthrough-images/image04.png#lightbox)
 3. 선택 **프레임 워크 및 라이브러리**, **Cocoa 터치 정적 라이브러리** 템플릿과 클릭은 **다음** 단추:
 
-    [ ![](walkthrough-images/image05.png "정적 라이브러리 Cocoa 터치 템플릿 선택")](walkthrough-images/image05.png)
+    [![](walkthrough-images/image05.png "정적 라이브러리 Cocoa 터치 템플릿 선택")](walkthrough-images/image05.png#lightbox)
 4. 입력 `InfColorPicker` 에 대 한는 **프로젝트 이름** 클릭는 **다음** 단추:
 
-    [ ![](walkthrough-images/image06.png "프로젝트 이름에 대 한 InfColorPicker 입력")](walkthrough-images/image06.png)
+    [![](walkthrough-images/image06.png "프로젝트 이름에 대 한 InfColorPicker 입력")](walkthrough-images/image06.png#lightbox)
 5. 프로젝트를 저장 하 고 클릭 위치를 선택는 **확인** 단추입니다.
 6. 이제 당사의 정적 라이브러리 프로젝트에 InfColorPicker 프로젝트에서 소스를 추가 해야 합니다. 때문에 **InfColorPicker.h** 파일이 이미이 정적 라이브러리에 기본적으로, Xcode 덮어쓰시겠습니까를 허용 하지 것입니다. **Finder**, GitHub에서 압축을 푼 우리는 원래 프로젝트에서 InfColorPicker 소스 코드로 이동, 모든 InfColorPicker 파일 복사 및 우리의 새 정적 라이브러리 프로젝트에 붙여 넣습니다.
 
-    [ ![](walkthrough-images/image12.png "모든 InfColorPicker 파일 복사")](walkthrough-images/image12.png)
+    [![](walkthrough-images/image12.png "모든 InfColorPicker 파일 복사")](walkthrough-images/image12.png#lightbox)
 
 7. Xcode에 반환, 마우스 오른쪽 단추로 클릭는 **InfColorPicker** 폴더와 선택 **"InfColorPicker..."에 파일 추가**:
 
-    [ ![](walkthrough-images/image08.png "파일 추가")](walkthrough-images/image08.png)
+    [![](walkthrough-images/image08.png "파일 추가")](walkthrough-images/image08.png#lightbox)
 
 8. 파일 추가 대화 상자에서 방금 복사한 InfColorPicker 소스 코드 파일을 이동, 모든 컨트롤을 선택 하 고 클릭는 **추가** 단추:
 
-    [ ![](walkthrough-images/image09.png "모두 선택 하 고 추가 단추를 클릭 합니다.")](walkthrough-images/image09.png)
+    [![](walkthrough-images/image09.png "모두 선택 하 고 추가 단추를 클릭 합니다.")](walkthrough-images/image09.png#lightbox)
 
 9. 소스 코드의 프로젝트에 복사 됩니다.
 
-    [ ![](walkthrough-images/image10.png "소스 코드 프로젝트에 복사 되지 것입니다.")](walkthrough-images/image10.png)
+    [![](walkthrough-images/image10.png "소스 코드 프로젝트에 복사 되지 것입니다.")](walkthrough-images/image10.png#lightbox)
 
 10. Xcode 프로젝트 탐색기에서 선택 된 **InfColorPicker.m** 파일 (이 라이브러리 작성 된이 파일이 사용 되지 않는 방식) 때문에 마지막 두 줄을 주석 및:
 
-    [ ![](walkthrough-images/image14.png "InfColorPicker.m 파일 편집")](walkthrough-images/image14.png)
+    [![](walkthrough-images/image14.png "InfColorPicker.m 파일 편집")](walkthrough-images/image14.png#lightbox)
 
 11. 이제는 라이브러리에 필요한 프레임 워크는 확인 해야 합니다. 추가 정보 파일, 또는 제공 된 샘플 프로젝트 중 하나를 열면이 정보를 찾을 수 있습니다. 이 예에서는 `Foundation.framework`, `UIKit.framework`, 및 `CoreGraphics.framework` 추가 하겠습니다.
 
 12. 선택 된 **InfColorPicker 대상 > 빌드 단계** 확장는 **링크 이진 파일과 라이브러리** 섹션:
 
-    [ ![](walkthrough-images/image16b.png "링크 이진 파일과 라이브러리 섹션을 확장")](walkthrough-images/image16b.png)
+    [![](walkthrough-images/image16b.png "링크 이진 파일과 라이브러리 섹션을 확장")](walkthrough-images/image16b.png#lightbox)
 
 13. 사용 하 여는  **+**  단추 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있도록 대화 상자를 엽니다.
 
-    [ ![](walkthrough-images/image16c.png "위에 나열 된 필수 프레임 프레임 워크 추가")](walkthrough-images/image16c.png)
+    [![](walkthrough-images/image16c.png "위에 나열 된 필수 프레임 프레임 워크 추가")](walkthrough-images/image16c.png#lightbox)
 
 14. **링크 이진 파일과 라이브러리** 섹션 아래 이미지와 같이 이제 표시:
 
-    [ ![](walkthrough-images/image16d.png "링크 이진 파일과 라이브러리 섹션")](walkthrough-images/image16d.png)
+    [![](walkthrough-images/image16d.png "링크 이진 파일과 라이브러리 섹션")](walkthrough-images/image16d.png#lightbox)
 
 이 시점에서는 시가, 종가 प ण त ु 완료 정확 하지 않습니다. 정적 라이브러리, 만들어졌지만 Fat iOS 장치 및 iOS 시뮬레이터를 모두에 대해 필요한 아키텍처를 모두 포함 하는 이진 만들려는 빌드에 필요 합니다.
 
@@ -212,16 +216,15 @@ clean:
 
 파일 이름으로 저장 **메이크파일** 위에서 만든 InfColorPicker Xcode 정적 라이브러리와 동일한 위치에:
 
-
-[ ![](walkthrough-images/lib00.png "메이크파일 이름의 파일을 저장 합니다.")](walkthrough-images/lib00.png)
+[![](walkthrough-images/lib00.png "메이크파일 이름의 파일을 저장 합니다.")](walkthrough-images/lib00.png#lightbox)
 
 Mac에서 터미널 응용 프로그램을 열고 메이크파일의 위치로 이동 합니다. 형식 `make` 를 터미널을 눌러 **Enter** 및 **메이크파일** 실행 됩니다.
 
-[ ![](walkthrough-images/lib01.png "샘플 메이크파일 출력")](walkthrough-images/lib01.png)
+[![](walkthrough-images/lib01.png "샘플 메이크파일 출력")](walkthrough-images/lib01.png#lightbox)
 
 확인을 실행 하면 여 스크롤 텍스트가 표시 됩니다. 올바르게 작동 했던 단어가 나타납니다 **빌드에 성공** 및 `libInfColorPicker-armv7.a`, `libInfColorPicker-i386.a` 및 `libInfColorPickerSDK.a` 와 동일한 위치에 파일을 복사할는 **메이크파일**:
 
-[ ![](walkthrough-images/lib02.png "메이크파일의에서 생성 한 libInfColorPicker armv7.a, libInfColorPicker i386.a 및 libInfColorPickerSDK.a 파일")](walkthrough-images/lib02.png)
+[![](walkthrough-images/lib02.png "메이크파일의에서 생성 한 libInfColorPicker armv7.a, libInfColorPicker i386.a 및 libInfColorPickerSDK.a 파일")](walkthrough-images/lib02.png#lightbox)
 
 Fat 이진 파일 내에서 다음 명령을 사용 하 여 아키텍처를 확인할 수 있습니다.
 
@@ -236,6 +239,8 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 ```
 
 이 시점에서는 Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만들어 iOS 바인딩에의 첫 번째 단계를 완료 한 `make` 및 `lipo`합니다. 다음 단계로 이동 하 고 사용 하 여 하겠습니다 **목표 Sharpie** us에 대 한 API 바인딩의 만들기를 자동화 합니다.
+
+<a name="Create_a_Xamarin.iOS_Binding_Project"/>
 
 ## <a name="create-a-xamarinios-binding-project"></a>프로젝트를 바인딩 Xamarin.iOS 만들기
 
@@ -344,6 +349,8 @@ using ObjCRuntime;
 
 
 해야 할 다음으로 InfColorPicker 프로젝트에 대 한 API 정의 만드는 것입니다. 이 연습에서는 파일을 생성 하도록 목표 Sharpie 사용 합니다 **ApiDefinition.cs**합니다.
+
+<a name="Using_Objective_Sharpie"/>
 
 ## <a name="using-objective-sharpie"></a>목표 Sharpie를 사용 하 여
 
@@ -455,7 +462,7 @@ Europa:Resources kmullins$
 
 및 **InfColorPicker.enums.cs** 및 **InfColorPicker.cs** 파일의 디렉터리에 생성 됩니다.
 
-[ ![](walkthrough-images/os06.png "InfColorPicker.enums.cs 및 InfColorPicker.cs 파일")](walkthrough-images/os06.png)
+[![](walkthrough-images/os06.png "InfColorPicker.enums.cs 및 InfColorPicker.cs 파일")](walkthrough-images/os06.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -473,6 +480,8 @@ Europa:Resources kmullins$
 
 -----
 
+<a name="Normalize_the_API_Definitions"/>
+
 ## <a name="normalize-the-api-definitions"></a>API 정의 표준화
 
 목표 Sharpie는 문제를 해석 하는 경우가 `Delegates`이므로의 정의 수정 해야 합니다는 `InfColorPickerControllerDelegate` 인터페이스 및 바꾸기는 `[Protocol, Model]` 다음 준수:
@@ -483,11 +492,11 @@ Europa:Resources kmullins$
 ```
 정의 다음과 같습니다.
 
-[ ![](walkthrough-images/os11.png "정의")](walkthrough-images/os11.png)
+[![](walkthrough-images/os11.png "정의")](walkthrough-images/os11.png#lightbox)
 
 에서는의 내용으로 동일한 작업을 수행 하는 다음으로 `InfColorPicker.enums.cs` 파일을 복사 및 붙여넣기에 `StructsAndEnums.cs` 그대로 두고 파일은 `using` 그대로 문:
 
-[ ![](walkthrough-images/os09.png "콘텐츠는 StructsAndEnums.cs 파일 ")](walkthrough-images/os09.png)
+[![](walkthrough-images/os09.png "콘텐츠는 StructsAndEnums.cs 파일 ")](walkthrough-images/os09.png#lightbox)
 
 살펴보면 목표 Sharpie가 사용 하 여 바인딩을 주석이 추가 된 `[Verify]` 특성입니다. 이러한 특성 나타냅니다 목표 Sharpie 원래 C/Objective-c 선언 (바인딩된 선언 위에 주석에서 제공 됩니다)를 사용 하 여 바인딩을 비교 하 여에서는 올바른 동작인이 있는지 확인 해야 합니다. 바인딩을 확인 한 후 확인 특성을 제거 합니다. 자세한 내용은 참조는 [확인](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) 가이드입니다.
 
@@ -506,6 +515,8 @@ Europa:Resources kmullins$
 
 
 -----
+
+<a name="Using_the_Binding"/>
 
 ## <a name="using-the-binding"></a>바인딩 사용
 
@@ -669,7 +680,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 **응용 프로그램을 실행** -코드의 모든 완료 된이 위치에 있습니다. 배경색을 변경할 수 있어야 응용 프로그램을 실행 하는 경우는 `InfColorColorPickerSampleView` 다음 스크린샷에 표시 된 것 처럼:
 
-[ ![](walkthrough-images/run01.png "응용 프로그램 실행")](walkthrough-images/run01.png)
+[![](walkthrough-images/run01.png "응용 프로그램 실행")](walkthrough-images/run01.png#lightbox)
 
 지금까지 이 시점에서 성공적으로 생성 되었으며 바인딩된 Xamarin.iOS 응용 프로그램에 사용 된 Objective C 라이브러리입니다. 다음으로 약한 대리자를 사용 하 여에 대해 알아보겠습니다.
 
@@ -721,8 +732,8 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 ## <a name="related-links"></a>관련 링크
 
 - [바인딩 예제 (샘플)](https://developer.xamarin.com/samples/monotouch/InfColorPicker/)
-- [바인딩 Objective C 라이브러리](~/cross-platform/macios/binding/objective-c-libraries.md)
+- [Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 형식에 대 한 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
-- [Objective C 개발자 용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
+- [Objective-C 개발자용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
 - [프레임워크 디자인 지침](http://msdn.microsoft.com/en-us/library/ms229042.aspx)

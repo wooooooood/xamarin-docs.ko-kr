@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: da096c8575896bc9f522a92b3fb94b81f9e772df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="social-framework"></a>소셜 프레임 워크
 
@@ -30,7 +30,7 @@ _소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국
 
 소셜 프레임 워크를 사용 하 여 Twitter에 연결할 계정의을 아래와 같이 장치 설정에서 구성할 수 있어야 합니다.
 
- [ ![](social-framework-images/twitter01.png "Twitter 계정 설정")](social-framework-images/twitter01.png)
+ [![](social-framework-images/twitter01.png "Twitter 계정 설정")](social-framework-images/twitter01.png#lightbox)
 
 계정을 입력 하 고 Twitter를 사용 하 여 확인 된 모든 응용 프로그램에서 소셜 프레임 워크 클래스를 사용 하 여 Twitter를 액세스 하는 장치에이 계정을 사용 합니다.
 
@@ -38,7 +38,7 @@ _소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국
 
 소셜 프레임 워크 라는 컨트롤러가 포함 `SLComposeViewController` 를 편집 하 고 여 트 윗을 보낼 제공 하는 시스템 뷰를 제공 하는 합니다. 다음 스크린샷은이 보기의 예를 보여 줍니다.
 
- [ ![](social-framework-images/twitter02.png "이 스크린샷에서 SLComposeViewController 예를 보여 줍니다.")](social-framework-images/twitter02.png)
+ [![](social-framework-images/twitter02.png "이 스크린샷에서 SLComposeViewController 예를 보여 줍니다.")](social-framework-images/twitter02.png#lightbox)
 
 사용 하는 `SLComposeViewController` Twitter와 컨트롤러의 인스턴스가 호출 하 여 생성 해야 합니다는 `FromService` 메서드 `SLServiceType.Twitter` 아래와 같이:
 
@@ -284,7 +284,7 @@ request.PerformRequest ((data, response, error) => {
 
 데이터를 로드 했습니다 경우 원시 JSON 데이터 (아래 예제의 출력)에서 같이 표시 됩니다.
 
-[ ![](social-framework-images/twitter03.png "원시 JSON 데이터 표시의 예")](social-framework-images/twitter03.png)
+[![](social-framework-images/twitter03.png "원시 JSON 데이터 표시의 예")](social-framework-images/twitter03.png#lightbox)
 
 실제 앱에서 JSON 결과 다음 구문 분석 될 수 표준 및 사용자에 게 결과입니다. 참조 [소개 웹 서비스](~/cross-platform/data-cloud/web-services/index.md) JSON을 구문 분석 하는 방법에 대 한 내용은 합니다.
 
@@ -294,7 +294,7 @@ request.PerformRequest ((data, response, error) => {
 
 Facebook 소셜 프레임 워크에 연결 하는 것은 위에 표시 된 Twitter에 사용 되는 프로세스에 거의 동일 합니다. Facebook 사용자 계정은 아래와 같이 장치 설정에서 구성 해야 합니다.
 
-[ ![](social-framework-images/facebook01.png "Facebook 계정 설정")](social-framework-images/facebook01.png)
+[![](social-framework-images/facebook01.png "Facebook 계정 설정")](social-framework-images/facebook01.png#lightbox)
 
 구성 되 면 모든 응용 프로그램에서 소셜 프레임 워크를 사용 하는 장치는 Facebook에 연결할이 계정을 사용 합니다.
 
@@ -368,7 +368,7 @@ namespace SocialFrameworkDemo
 
 Facebook과 함께 사용할 경우의 `SLComposeViewController` 뷰를 표시 하 고 Twitter 예제 거의 똑같은 표시 **Facebook** 이 사례에서 제목으로:
 
-[ ![](social-framework-images/facebook02.png "SLComposeViewController 표시")](social-framework-images/facebook02.png)
+[![](social-framework-images/facebook02.png "SLComposeViewController 표시")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Facebook Graph API를 호출합니다.
 

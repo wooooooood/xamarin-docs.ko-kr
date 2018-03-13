@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ad9129e06f43eea69518c4d876edc7cfd462f4e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -71,7 +71,7 @@ Xamarin.Forms PCL 응용 프로그램을 전역화 하는 첫 번째 단계는 �
 
 와 같은 의미 있는 이름을 선택 **AppResources** 누릅니다 **확인**합니다.
 
-[ ![리소스 파일 추가](localization-images/resx-new-file-sml.png "새 파일 대화 상자")](localization-images/resx-new-file.png "새 파일 대화 상자")
+[![리소스 파일 추가](localization-images/resx-new-file-sml.png "새 파일 대화 상자")](localization-images/resx-new-file.png#lightbox "새 파일 대화 상자")
 
 두 개의 파일을 프로젝트에 추가 됩니다.
 
@@ -88,32 +88,32 @@ Xamarin.Forms PCL 응용 프로그램을 전역화 하는 첫 번째 단계는 �
 
 선택 된 **AppResources.resx** 파일을 표시는 **속성** 패드 여기서는이 빌드 도구를 구성 합니다. 다음 스크린샷에서 **사용자 지정 도구: ResXFileCodeGenerator**합니다.
 
-[[ide name="xs]]
 
-[ ![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 패드 속성")](localization-images/xs-resx-internal.png)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[/ide]]
+[![](localization-images/vs-resx-internal-sml.png "AppResources.Resx에 대 한 속성 창")](localization-images/vs-resx-internal.png#lightbox)
 
-[[ide name="vs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](localization-images/vs-resx-internal-sml.png "AppResources.Resx에 대 한 속성 창")](localization-images/vs-resx-internal.png)
+[![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 패드 속성")](localization-images/xs-resx-internal.png#lightbox)
 
-[[/ide]]
+-----
 
 강력한 형식의 문자열 속성을 확인 하려면 `public`, 구성을 사용 하 여 수동으로 변경 해야 **사용자 지정 도구: PublicResXFileCodeGenerator**아래 스크린샷에 표시 된 것 처럼:
 
 
-[[ide name="xs]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](localization-images/xs-resx-public-sml.png "AppResources.Resx 패드 속성")](localization-images/xs-resx-public.png)
+[![](localization-images/vs-resx-public-sml.png "AppResources.Resx에 대 한 속성 창")](localization-images/vs-resx-public.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[[ide name="vs]]
+[![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 패드 속성")](localization-images/xs-resx-internal.png#lightbox)
 
-[ ![](localization-images/vs-resx-public-sml.png "AppResources.Resx에 대 한 속성 창")](localization-images/vs-resx-public.png)
 
-[[/ide]]
+[![](localization-images/xs-resx-public-sml.png "AppResources.Resx 패드 속성")](localization-images/xs-resx-public.png#lightbox)
+
+-----
 
 이러한 변경에는 선택적 이며만 (예를 들어 경우 코드를 다른 어셈블리에 RESX 파일을 저장할) 지역화 된 문자열을 다른 어셈블리에서 참조 하고자 하는 경우 필요 합니다. 이 항목에 대 한 샘플 유지 문자열 `internal` 사용 된 동일한 Xamarin.Forms PCL 어셈블리에 정의 되기 때문입니다.
 
@@ -605,13 +605,13 @@ Windows Phone 8.0 프로젝트에 대 한 지역화 된 표시 될 텍스트를 
 
 Windows Phone 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **응용 프로그램** 눈금 탭는 **지원 문화권** 지 원하는 응용 프로그램:
 
-[ ![](localization-images/winphone-projectproperties-sml.png "프로젝트 속성-지원 되는 Culture")](localization-images/winphone-projectproperties.png "프로젝트 속성-지원 되는 Culture")
+[![](localization-images/winphone-projectproperties-sml.png "프로젝트 속성-지원 되는 Culture")](localization-images/winphone-projectproperties.png#lightbox "프로젝트 속성-지원 되는 Culture")
 
 ##### <a name="wmappmanifestxml"></a>WMAppManifest.xml
 
 Windows Phone 프로젝트의 속성 노드를 확장 하 고 두 번 클릭 하 고 **WMAppManifest.xml** 파일입니다. 클릭는 **패키징** 탭 하 고 응용 프로그램에서 지 원하는 모든 언어로 눈금.
 
-[ ![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml-지원 되는 언어")](localization-images/winphone-wmappmanifest.png "WMAppManifest.xml-지원 되는 언어")
+[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml-지원 되는 언어")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml-지원 되는 언어")
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 

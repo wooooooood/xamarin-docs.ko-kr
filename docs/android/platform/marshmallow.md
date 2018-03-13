@@ -7,12 +7,12 @@ ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: b28ca68701394a8b7b0b543a5ae646910e7c8361
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c9ff9eb0b8d013485f0437d470ec49f1c1795d7a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="marshmallow-features"></a>Marshmallow 기능
 
@@ -20,7 +20,6 @@ _이 문서에서는 Android 6.0 Marshmallow에 대 한 응용 프로그램을 �
 
 이 문서 Android 6.0 Marshmallow에 대 한 새로운 기능의 개요를 제공 Xamarin.Android Android Marshmallow 개발을 위해 준비 하는 방법에 설명 하 고 새 Android Marshmallow를 사용 하는 방법을 보여 주는 예제 응용 프로그램에 대 한 링크를 제공 합니다. Xamarin.Android 앱의 기능입니다. 
 
-<a name="overview" />
 
 ## <a name="overview"></a>개요
 
@@ -29,7 +28,7 @@ Xamarin.Android Android Marshmallow 한 지원 합니다.
 
 -   **API 23/Android 6.0 바인딩** &ndash; 아래에 설명 된 새로운 기능에 대 한 많은 새로운 Api를 추가 하는 Android 6.0; API 수준 23 대상으로 지정할 경우 이러한 Api는 Xamarin.Android 앱에 사용할 수 있습니다. Android 6.0 Api에 대 한 자세한 내용은 참조 [Android 6.0 Api](http://developer.android.com/preview/api-overview.html)합니다. 
 
-[![태블릿 및 휴대폰 Marshmallow 실행의 이미지 Hero](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png)
+[![태블릿 및 휴대폰 Marshmallow 실행의 이미지 Hero](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
 Marshmallow 릴리스는 주로 중심으로 "폴란드어 및 품질" 있지만 Xamarin.Android 개발자에 게 관심 있는 여러 가지 새로운 기능도 제공 합니다. 이러한 기능에는 다음이 포함됩니다. 
 
@@ -57,9 +56,6 @@ Marshmallow 릴리스는 주로 중심으로 "폴란드어 및 품질" 있지만
 
 또한 많은 코어 Android 라이브러리 업데이트 Android Marshmallow와 함께 출시 된 및 이러한 업데이트는 이전 버전의 Android와 Android Marshmallow에 대 한 새로운 기능을 제공 합니다. 이 문서에서는 Android Marshmallow를 사용 하 여 앱을 구축 하는 방법에 설명 하 고 Android 6.0으로 강조 표시는 새로운 기능의 개요를 제공 합니다. 
 
-
-<a name="requirements" />
-
 ## <a name="requirements"></a>요구 사항
 
 다음은 Xamarin 기반 앱에서 새 Android Marshmallow 기능을 사용 하려면 필요 합니다. 
@@ -74,7 +70,6 @@ Marshmallow 릴리스는 주로 중심으로 "폴란드어 및 품질" 있지만
 
 계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 수준 23에 맞게 개발 이하의 경우. 
 
-<a name="gettingstarted" />
 
 ## <a name="getting-started"></a>시작
 
@@ -90,13 +85,11 @@ Android Marshmallow Xamarin.Android를 사용 하 여 시작 하려면 다운로
 
 이러한 각 단계는 다음 섹션에서 설명:
 
-<a name="updates" />
 
 ### <a name="install-xamarin-updates"></a>Xamarin 업데이트를 설치 합니다.
 
 Xamarin Android 6.0 Marshmallow에 대 한 지원을 포함 하도록를 업데이트 하려면 업데이트 채널을 변경 **안정적인** 하 고 모든 업데이트를 설치 합니다. 업데이트 채널에서 업데이트를 설치 하는 방법에 대 한 자세한 내용은 참조 [변경 업데이트 채널](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)합니다. 
 
-<a name="sdkpreview" />
 
 ### <a name="install-the-android-60-sdk"></a>Android 6.0 SDK 설치
 
@@ -104,17 +97,16 @@ Android Marshmallow에 대 한 Xamarin.Android 프로젝트를 만들려면 먼�
 
 -   Android SDK Manager를 시작 (Mac 용 Visual Studio에서 사용 하 여 **도구 > SDK Manager**; Visual Studio를 사용 하 여 **도구 > Android > Android SDK Manager**) 하 고 최신 Android SDK 도구 설치:
 
-    [![Android SDK Manager에서 Android SDK 도구 선택](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png)
+    [![Android SDK Manager에서 Android SDK 도구 선택](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
 
 -   또한 최신 설치 **Android 6.0** SDK 패키지:
 
-    [![Android SDK Manager에서 Android 6.0 SDK 패키지를 선택 하면](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png)
+    [![Android SDK Manager에서 Android 6.0 SDK 패키지를 선택 하면](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
 설치한 다음 Android SDK 도구 개정 24.3.4 이상.
 Android SDK Manager를 사용 하 여 Android 6.0 SDK를 설치 하는 방법에 대 한 자세한 내용은 참조 [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html)합니다.
 
 
-<a name="xaproject" />
 
 ### <a name="start-a-xamarinandroid-project"></a>Start a Xamarin.Android Project
 
@@ -123,7 +115,6 @@ Android SDK Manager를 사용 하 여 Android 6.0 SDK를 설치 하는 방법에
 Android 프로젝트를 만들 때 대상 Android 6.0 MarshMallow에 버전 설정을 구성 해야 합니다. 에 대 한 프로젝트를 구성 해야 Marshmallow에 대 한 프로젝트를 대상으로 **API 수준 23 (Xamarin.Android v6.0 지원)**합니다. Android API 수준 수준을 구성 하는 방법에 대 한 자세한 내용은 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
 
 
-<a name="emudev" />
 
 ### <a name="configure-an-emulator-or-device"></a>에뮬레이터 또는 장치를 구성 합니다.
 
@@ -135,19 +126,17 @@ Android 프로젝트를 만들 때 대상 Android 6.0 MarshMallow에 버전 설�
 
 예를 들어이 가상 장치를 Nexus 5 에뮬레이션 하기 위해 구성 합니다.
 
-[![AVD Nexus 5 장치, Android 6.0 대상 및 Intel Atom (x86)를 사용 하 여 구성](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png)
+[![AVD Nexus 5 장치, Android 6.0 대상 및 Intel Atom (x86)를 사용 하 여 구성](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
 Nexus 5와 같은 물리적 장치를 사용 하는 경우 또는 9, 6, 설치할 수 있습니다 Android Marshmallow의 미리 보기 이미지입니다. Android Marshmallow에 장치를 업데이트 하는 방법에 대 한 자세한 내용은 참조 [하드웨어 시스템 이미지](http://developer.android.com/preview/download.html#images)합니다.
 
 
-<a name="newfeatures" />
 
 ## <a name="new-features"></a>새 기능
 
 Android 사용자 환경을 개선 하 고, 성능, 증가, 버그 수정에 포커스가 있는 많은 Android Marshmallow에 도입 된 변경 합니다. 그러나 Marshmallow는 Android 플랫폼의 기본 사항에 광범위 한 일부 변경도 도입 했습니다. 다음 섹션에서는 이러한 향상 된이 기능을 강조 표시 하 고 새로운 Android Marshmallow 기능을 사용 하 여 응용 프로그램에서 시작 하는 데 유용한 링크를 제공 합니다. 
 
 
-<a name="permissions" />
 
 ### <a name="runtime-permissions"></a>런타임 사용 권한
 
@@ -169,7 +158,6 @@ Xamarin Android Marshmallow (이상) 런타임 권한이 작동 하는 방법을
 Android Marshmallow에 새로운 런타임 권한 기능에 대 한 자세한 내용은 참조 [시스템 권한으로 작업](https://developer.android.com/preview/features/runtime-permissions.html)합니다.
 
 
-<a name="authentication" />
 
 ### <a name="authentication-enhancements"></a>인증의 향상 된 기능
 
@@ -181,8 +169,6 @@ Android Marshmallow 포함 암호에 대 한 필요성을 제거 하는 데 도�
 
 링크와 다음에 설명 하는 샘플 응용 프로그램 수에 익숙해질 수 이러한 새로운 기능을 사용 합니다.
 
-
-<a name="fingerprint" />
 
 #### <a name="fingerprint-authentication"></a>지문 인증
 
@@ -200,7 +186,6 @@ Xamarin에서는 등록 된 지문을 사용 하 여 응용 프로그램에서 �
 이 앱에는 지문 (또는 암호) 저장 하지 않습니다.
 
 
-<a name="voice" />
 
 #### <a name="voice-interactions"></a>음성 상호 작용
 
@@ -210,7 +195,6 @@ Android Marshmallow에 도입 된 새 음성의 상호 작용 기능은 사용�
 샘플 앱은 사용할 수 있는 음성 상호 작용 API Xamarin.Android 응용 프로그램에서 사용 하는 방법을 보여 주는: [음성 상호 작용](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions)합니다.
 
 
-<a name="confirmcred" />
 
 #### <a name="confirm-credential"></a>자격 증명 확인
 
@@ -225,7 +209,6 @@ Xamarin 앱에서 장치 자격 증명 (예: PIN, 패턴 또는 암호)를 사�
 2.  탭의 **구매** 단추 및 보안 잠금 화면 자격 증명을 확인 합니다.
 
 
-<a name="chrometabs" />
 
 ### <a name="chrome-custom-tabs"></a>크롬 사용자 지정 탭
 
@@ -245,7 +228,6 @@ Xamarin 앱에서 장치 자격 증명 (예: PIN, 패턴 또는 암호)를 사�
 이 기능에 대 한 자세한 내용은 참조 [크롬 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs)합니다.
 
 
-<a name="designlib" />
 
 ### <a name="material-design-support-library"></a>자재 디자인 지원 라이브러리
 
@@ -280,8 +262,6 @@ Xamarin에서는 새 Android 디자인 라이브러리 Xamarin.Android에서 데
 
 디자인 라이브러리에 대 한 자세한 내용은 참조 [Android 디자인 지원 라이브러리](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html) Android 개발자 블로그에 있습니다.
 
-
-<a name="libraries" />
 
 ### <a name="additional-library-updates"></a>추가 라이브러리 업데이트
 

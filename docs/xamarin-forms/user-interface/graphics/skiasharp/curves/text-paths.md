@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: bf382f380876e85db46226fb3586382f20d630f2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b22cebf8ca5804884c559da687fe90236c7af44d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="paths-and-text"></a>경로 및 텍스트
 
@@ -44,7 +44,7 @@ public SKPath GetTextPath (String text, Single x, Single y)
 
 이러한 태스크 중 하나에 맞추는 됩니다. **클리핑 텍스트** 페이지 "코드입니다." 라는 단어의 문자 윤곽선에 따라 클리핑 패스를 만듭니다. 이 경로를 이미지를 포함 하는 비트맵을 자르는 페이지 크기를 위해 확장 된 **클리핑 텍스트** 소스 코드:
 
-[![](text-paths-images/clippingtext-small.png "클리핑 텍스트 페이지의 삼중 스크린샷")](text-paths-images/clippingtext-large.png "클리핑 텍스트 페이지의 삼중 스크린 샷")
+[![](text-paths-images/clippingtext-small.png "클리핑 텍스트 페이지의 삼중 스크린샷")](text-paths-images/clippingtext-large.png#lightbox "클리핑 텍스트 페이지의 삼중 스크린 샷")
 
 [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) 에 포함 리소스로 저장 되어 있는 비트맵을 로드 하는 클래스 생성자는 **미디어** 솔루션의 폴더:
 
@@ -125,7 +125,7 @@ public class ClippingTextPage : ContentPage
 
 **텍스트 경로 효과** 페이지 단일 앰퍼샌드 문자를 1 D 경로 효과 만들기에 대 한 경로를 변환 합니다. 이 경로 영향을 주지 않고 페인트 개체는 같은 문자를 더 큰 버전의 개요를 스트로크 하려면 다음 사용 됩니다.
 
-[![](text-paths-images/textpatheffect-small.png "경로 텍스트 효과 페이지의 삼중 스크린샷")](text-paths-images/textpatheffect-large.png "텍스트 경로 효과 페이지의 삼중 스크린샷")
+[![](text-paths-images/textpatheffect-small.png "경로 텍스트 효과 페이지의 삼중 스크린샷")](text-paths-images/textpatheffect-large.png#lightbox "텍스트 경로 효과 페이지의 삼중 스크린샷")
 
 작업의 많은 [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 클래스 필드와 생성자에 발생 합니다. 두 `SKPaint` 필드는 두 개의 서로 다른 용도로 사용 되 고 정의 된 개체: 첫 번째 (라는 `textPathPaint`)와 앰퍼샌드를 변환 하는 데 사용 되는 `TextSize` 1d 경로 효과 대 한 경로로 50입니다. 두 번째 (`textPaint`)는 해당 경로 영향을 주지 않고 앰퍼샌드의 더 큰 버전을 표시 하는 데 사용 됩니다. 이런 이유로 `Style` 이 두 번째 페인트 개체가으로 설정 되 `Stroke`, 하지만 `StrokeWidth` 1d 경로 효과 사용 하는 경우 해당 속성은 필요 하기 때문에 속성이 설정 되지 않은:
 
@@ -270,7 +270,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `PaintSurface` 처리기 라는 새 경로 만듭니다 `outlinePath`합니다. 이 대상 경로에 대 한 호출에서 `GetFillPath`합니다. `StrokeWidth` 속성 25 원인 중 `outlinePath` 텍스트 문자를 따라 그려지는 25 픽셀 너비 경로 간략하게 설명 하기 위해 합니다. 이 경로 다음 빨강 선 너비가 5에에서 표시 됩니다.
 
-[![](text-paths-images/characteroutlineoutlines-small.png "문자 개요 윤곽선 페이지의 삼중 스크린샷")](text-paths-images/characteroutlineoutlines-large.png "문자 개요 윤곽선 페이지의 삼중 스크린샷")
+[![](text-paths-images/characteroutlineoutlines-small.png "문자 개요 윤곽선 페이지의 삼중 스크린샷")](text-paths-images/characteroutlineoutlines-large.png#lightbox "문자 개요 윤곽선 페이지의 삼중 스크린샷")
 
 치중를 경로 개요 날카로운 모퉁이 사용 하면 여기서 overlaps 나타납니다. 다음은이 프로세스의 일반 아티팩트입니다.
 
@@ -323,7 +323,7 @@ public class CircularTextPage : ContentPage
 
 `TextSize` 속성 `textPaint` 있는 텍스트의 너비와 원의 원주를 일치 하도록 한 다음 조정 됩니다.
 
-[![](text-paths-images/circulartext-small.png "순환 텍스트 페이지의 삼중 스크린샷")](text-paths-images/circulartext-large.png "순환 텍스트 페이지의 삼중 스크린 샷")
+[![](text-paths-images/circulartext-small.png "순환 텍스트 페이지의 삼중 스크린샷")](text-paths-images/circulartext-large.png#lightbox "순환 텍스트 페이지의 삼중 스크린 샷")
 
 텍스트 자체도 다소 순환 되도록 선택 되었습니다: "circle" 단어는 모두 문장에는 제목 및 전치사 구의 개체가 있습니다. 
 

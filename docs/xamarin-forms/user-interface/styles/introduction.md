@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6b4d63637eae7c1719f3f6e525327d416ddff59d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-styles"></a>스타일 소개
 
@@ -84,7 +84,7 @@ public class NoStylesPageCS : ContentPage
 
 각 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스에 동일한 속성 값으로 표시 되는 텍스트의 모양을 제어 하기 위한는 `Label`합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
-[![](introduction-images/no-styles.png "스타일 모양에 레이블을")](introduction-images/no-styles-large.png "스타일 모양에 레이블을")
+[![](introduction-images/no-styles.png "스타일 모양에 레이블을")](introduction-images/no-styles-large.png#lightbox "스타일 모양에 레이블을")
 
 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일을 만들 수 있습니다 하의 모양을 정의 하 고 그런 다음 필요한 컨트롤에 적용 합니다.
 

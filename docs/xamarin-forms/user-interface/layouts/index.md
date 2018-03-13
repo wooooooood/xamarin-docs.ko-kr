@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>레이아웃
 
-Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 구성 하는 데 있습니다. 각 레이아웃 컨트롤은 화면 방향 변경을 처리 하는 방법에 대 한 세부 정보 뿐만 아니라, 다음과 같습니다.
+Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 구성 하는 데 있습니다. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Xamarin.Forms 레이아웃, 만든 사람 [Xamarin 대학](https://university.xamarin.com/)**
+
+각 레이아웃 컨트롤은 화면 방향 변경을 처리 하는 방법에 대 한 세부 정보 뿐만 아니라, 다음과 같습니다.
 
 * **[StackLayout](stack-layout.md)**  &ndash; 사용 하 여 뷰를 연속적으로 정렬 가로 또는 세로로 합니다. 뷰는 StackLayout의 왼쪽 또는 오른쪽 레이아웃의 가운데에 정렬할 수 있습니다.
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; 좌표를 설정 하 여 보기를 정렬 및 절대값 또는 비율 크기 조정 하는 데 사용 합니다. AbsoluteLayout 뷰 계층 수 있을 뿐만 아니라 왼쪽, 오른쪽 또는 가운데 고정 데 사용할 수 있습니다.
@@ -35,7 +42,7 @@ Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 �
 
 다음 그래픽 레이아웃 컨트롤을 시각화합니다.
 
-[ ![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png "Xamarin.Forms Layouts")
+[![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## <a name="choosing-the-right-layout"></a>오른쪽 레이아웃 선택
 

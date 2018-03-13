@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c0cfe437b03a1f0dea05a506b1dfce62a4658bb4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e96e98f90c7f4c849a9f679b2de819ccaabfec0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>앱 배포 개요
 
@@ -22,7 +22,7 @@ _이 문서는 Xamarin.tvOS 응용 프로그램에 사용할 수 있는 배포 �
 Xamarin.tvOS 응용 프로그램을 개발한 후 아래 다이어그램의 강조 표시 된 섹션에 나와 있는 것 처럼 소프트웨어 개발 수명 주기에서 다음 단계는 사용자에 게 앱을 배포할 수입니다.
 
 
-[![소프트웨어 개발 수명 주기 개요](images/publishingdiagram.png)](images/publishingdiagram.png)
+[![소프트웨어 개발 수명 주기 개요](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 
 Apple에는 Xamarin.tvOS에서 지원 되는 tvOS 앱을 배포 하려면 다음 방법을 제공 합니다.
@@ -70,7 +70,7 @@ Apple TV 앱 스토어에 Xamarin.tvOS 앱 제출 하는 데 문제가 있는 �
 
 설치 하 고 내부 응용 프로그램을 배포 하는 방법에 대 한 자세한 내용은 참조 하십시오는 [사내 배포 가이드](~/ios/deploy-test/app-distribution/in-house-distribution.md)합니다. IOS에만이 문서는 있지만 tvOS 앱에 동일한 기술이 사용 됩니다.
 
-<a name="Ad-Hoc-Distribution" />
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>임시 배포
 

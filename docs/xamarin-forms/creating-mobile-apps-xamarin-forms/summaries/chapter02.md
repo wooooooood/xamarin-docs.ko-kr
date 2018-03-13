@@ -3,14 +3,15 @@ title: "요약 Chapter 2입니다. 응용 프로그램 분석"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 893030170175403c7f7d6885e924e425b4f73c05
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1569911eb47f28ea6aee2313d01e07c801746df
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>요약 Chapter 2입니다. 응용 프로그램 분석
 
@@ -186,7 +187,7 @@ IOS 및 Android에서 사이의 구분에 대 한 `Tablet` 및 `Phone` 600 단�
 
 다음은 결과를 `HorizontalOptions` 및 `VerticalOptions` 의 속성 `Label` 모두으로 설정 된 `LayoutOptions.Center`:
 
-[![Greetings 프로그램의 삼중 스크린 샷](images/ch02fg05-small.png "가운데에 레이블을 가로 및 세로로")](images/ch02fg05-large.png "가로 및 세로로 가운데 맞춤 레이블")
+[![Greetings 프로그램의 삼중 스크린 샷](images/ch02fg05-small.png "가운데에 레이블을 가로 및 세로로")](images/ch02fg05-large.png#lightbox "가로 및 세로로 가운데 맞춤 레이블")
 
 ## <a name="solution-5-center-the-text-within-the-label"></a>솔루션 5입니다. 레이블 내에서 텍스트를 가운데에
 

@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 시작 하기 전에 만듭니다 (또는 기존 사용) Xamarin.Forms 프로젝트.
 Mac 앱 Mac.에 대 한 Visual Studio를 사용 하 여 추가할 수 있습니다.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**Xamarin.Forms에에 의해 macOS 프로젝트를 추가 [Xamarin 대학](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>Mac 앱 추가
 
@@ -92,7 +97,7 @@ Mac 앱 Mac.에 대 한 Visual Studio를 사용 하 여 추가할 수 있습니�
 
 9. 두 번 클릭 **Main.storyboard** Xcode에서 편집할 수 있습니다. 선택 된 **창** 및 _의 선택을 취소_ 는 **초기 컨트롤러는** 확인란 (이 위의 코드 창을 만들기 때문에):
 
-  [ ![Xcode에서 초기 컨트롤러는 확인란을 선택 취소](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Xcode에서 초기 컨트롤러는 확인란을 선택 취소](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   원치 않는 항목을 제거 하려면 스토리 보드의 메뉴 시스템을 편집할 수 있습니다.
 

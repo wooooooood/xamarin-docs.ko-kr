@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0bc039385a6b2077c3b5fa5114b35b586a14a150
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-command-interface"></a>명령 인터페이스
 
@@ -279,7 +279,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 IOS 화면 왼쪽에 유효한 시간을 입력 하기 전에 레이아웃을 보여 줍니다. Android 및 UWP 화면 표시는 **전송** age이 설정 된 후 활성화 단추:
 
-[![개인 항목](commanding-images/personentry-small.png "개인 항목")](commanding-images/personentry-large.png "개인 항목")
+[![개인 항목](commanding-images/personentry-small.png "개인 항목")](commanding-images/personentry-large.png#lightbox "개인 항목")
 
 프로그램에 기존 항목을 편집 하기 위한 모든 기능 없고 페이지에서 벗어나면 항목을 저장 하지 않습니다.
 
@@ -531,7 +531,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 다음은 실행에서 프로그램이입니다.
 
-[![10 진수 키보드](commanding-images/decimalkeyboard-small.png "10 진수 키보드")](commanding-images/decimalkeyboard-large.png "10 진수 키보드")
+[![10 진수 키보드](commanding-images/decimalkeyboard-small.png "10 진수 키보드")](commanding-images/decimalkeyboard-large.png#lightbox "10 진수 키보드")
 
 입력 한 수에 이미 소수점이 포함 되어 있으므로 모든 세 스크린샷에서 소수점에 대 한 단추는 비활성화를 확인 합니다. 
 

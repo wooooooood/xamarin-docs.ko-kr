@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Java 통합 개요
 
 _Java 생태계는 다양 하 고 여러 구성 요소 컬렉션을 포함합니다. 이러한 구성 요소에 Android 응용 프로그램을 개발 하는 데 걸리는 시간을 줄이기 위해 사용할 수 있습니다. 이 문서는 소개 하 고는 몇 가지 개발자가 자신의 Xamarin.Android 응용 프로그램 개발 환경을 개선 하기 위해 이러한 기존 Java 구성 요소를 사용할 수는 상위 수준 개요를 제공 됩니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -41,7 +40,6 @@ JNI를 사용 하 여 두 번째 기술은 훨씬는 더 낮은 수준에서 작
 세 번째 방법은 이전 두 근본적으로 다릅니다: C#에 대 한 Java 코드를 이식 합니다. 다른 언어에서 코드 포팅에 매우 어려운 프로세스 일 수 있습니다 하지만 도구를 사용 하 여 노력에 호출 되도록 줄일 수 *선명*합니다. 선명 하 게는 Java 되는 오픈 소스 도구-에-C# 변환기입니다. 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

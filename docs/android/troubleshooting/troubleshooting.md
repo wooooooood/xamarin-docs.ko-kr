@@ -6,16 +6,15 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ce62e844a9ec76217947c0f0f5ed5e9a81336c7e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
-<a name="Getting_Diagnostic_Information" />
 
 ## <a name="getting-diagnostic-information"></a>진단 정보 가져오기
 
@@ -27,20 +26,19 @@ Xamarin.Android에 다양 한 버그를 추적 하는 때를 찾을 몇 개의 �
 3.  Android 디버그 로그 출력입니다.
 
 
- <a name="Diagnostic_MSBuild_Output" />
-
+<a name="Diagnostic_MSBuild_Output" />
 
 ## <a name="diagnostic-msbuild-output"></a>진단 MSBuild 출력
 
 진단 MSBuild 패키지 빌드에 관련 된 추가 정보를 포함할 수 있습니다 및 일부 패키지 배포 정보를 포함 될 수 있습니다.
 
-사용 하려면 Visual Studio 내에서 진단 MSBuild 출력:
+Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1.  클릭 **도구 > 옵션...**
 2.  왼쪽 트리 뷰에서 선택 **프로젝트 및 솔루션 > 빌드 및 실행**
 3.  오른쪽 패널에 MSBuild 빌드 출력의 자세한 정도 드롭다운 진단으로 설정
 4.  **확인**을 클릭합니다.
-5.  정리 하 고 패키지를 다시 빌드하십시오.
+5.  패키지를 지우고 다시 빌드합니다.
 6.  진단 출력을 출력 패널에 표시 됩니다.
 
 
@@ -50,12 +48,11 @@ Mac/OS x:에 대 한 진단 출력을 Visual Studio에서 MSBuild를 사용 하�
 2.  왼쪽 트리 뷰에서 선택 **프로젝트 > 빌드**
 3.  오른쪽 패널에는 로그의 자세한 정도 드롭 다운으로 설정 진단
 4.  **확인**을 클릭합니다.
-5.  Mac 용 Visual Studio를 다시 시작
-6.  정리 하 고 패키지를 다시 빌드하십시오.
+5.  Mac용 Visual Studio 다시 시작
+6.  패키지를 지우고 다시 빌드합니다.
 7.  진단 출력 오류 패드 안에서 표시 되는 (**보기 > 패드 > 오류** ), 빌드 출력 단추를 클릭 하 여 합니다.
 
 
- <a name="Device_Deployment_Logs" />
 
 
 ## <a name="device-deployment-logs"></a>장치 배포 로그
@@ -74,7 +71,6 @@ Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾아�
 -  OS X에서 로그 파일에 기록 됩니다 `$HOME/Library/Logs/XamarinStudio-{VERSION}`합니다.
 
 
- <a name="Android_Debug_Log_Output" />
 
 
 ## <a name="android-debug-log-output"></a>Android 디버그 로그 출력
@@ -88,10 +84,9 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 시스템 속성 프로세스 시작 하는 동안 읽고 응용 프로그램이 시작 되거나 시스템 속성 변경 된 후 응용 프로그램을 다시 시작 해야 하기 전에 설정 되어야 합니다.
 
-<a name="Xamarin.Android_System_Properties" />
 
 
-### <a name="xamarinandroid-system-properties"></a>Xamarin.Android System Properties
+### <a name="xamarinandroid-system-properties"></a>Xamarin.Android 시스템 속성
 
 Xamarin.Android 다음 시스템 속성을 지원합니다.
 
@@ -130,7 +125,6 @@ Xamarin.Android 다음 시스템 속성을 지원합니다.
 
 Visual Studio 2017 설치와 일치 하는 올바른 System.ValueTuple NuGet을 선택 하십시오.
 
-<a name="GC_Messages" />
 
 ## <a name="gc-messages"></a>GC 메시지
 
@@ -162,7 +156,6 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 
  *일반적*의 값이 클수록 `num_hash_entries`, 하는 많은 시간이 `bridge` 컬렉션 사용 하는 및 더 큰 숫자는 `total` 수집 하는 데 걸린 시간 사용 됩니다.
 
- <a name="Global_Reference_Messages" />
 
 
 ## <a name="global-reference-messages"></a>전역 참조 메시지
@@ -254,14 +247,12 @@ I/monodroid-gref(27679): -w- grefc 1914 gwrefc 296 handle 0xde68f95f/W from take
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` -약한 참조 횟수
 
- <a name="Offline_Activation" />
 
 
 ## <a name="offline-activation"></a>오프 라인 정품 인증
 
 Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS x Xamarin.Android의 전체 버전을 설치할 수 없습니다 인 경우 참조 하십시오.는 [오프 라인 정품 인증](~/android/get-started/installation/index.md) 페이지.
 
- <a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
 
 
 ## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>평가판 계정에서 Indie/비즈니스로 업그레이드할 수 없습니다.
@@ -275,7 +266,6 @@ Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS 
 
 이 가동 되 고 실행 발생 해야 합니다. 문제가 계속 되 면 수 하려는 시도 [오프 라인 정품 인증](~/android/get-started/installation/index.md) 워크스테이션의 활성화를 완료 합니다.
 
- <a name="Receiving_'Activation_Incomplete'_Error_Message" />
 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>받는 ' 활성화 불완전 한 오류 메시지
@@ -285,7 +275,6 @@ Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS 
 -  로그 위치: **% LocalAppData %\\Xamarin\\로그**
 
 
- <a name="Receiving_'Error_Retrieving_Update_Information'_Error_Message" />
 
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>오류 메시지 '오류 업데이트 정보를 검색 하는 데 사용'
@@ -315,14 +304,12 @@ Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS 
 이 오류 메시지가 계속 표시 되 면 전자 하십시오  **contact@xamarin.com** 합니다.
 
 
- <a name="Android_Debug_Logs" />
 
 
 ## <a name="android-debug-logs"></a>Android 디버그 로그
 
 [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 표시 되는 모든 런타임 오류에 대 한 추가 컨텍스트를 제공할 수 있습니다.
 
- <a name="Floating-Point_performance_is_terrible!" />
 
 
 ## <a name="floating-point-performance-is-terrible"></a>부동 소수점 성능은 테러!
@@ -339,7 +326,6 @@ Xamarin.Android 여러 장치 ABIs 지원: *armeabi*, *armeabi v7a*, 및 *x86*�
 
 앱에 괜찮은 부동 소수점 성능 (예: 게임)가 필요한 경우 활성화 해야는 *armeabi v7a* ABI입니다. 만 지원 하려는 경우는 *armeabi v7a* 런타임이 의미 하는 경우에 지 원하는 이전 장치 *armeabi* 앱을 실행할 수 없습니다.
 
- <a name="Could_not_locate_Android_SDK" />
 
 
 ## <a name="could-not-locate-android-sdk"></a>Android SDK를 찾을 수 없습니다.
@@ -347,9 +333,8 @@ Xamarin.Android 여러 장치 ABIs 지원: *armeabi*, *armeabi v7a*, 및 *x86*�
 Windows 용 Android SDK에 대 한 Google에서 제공 2 다운로드 됩니다.
 .Exe 설치 관리자를 선택 하면 설치 된 Xamarin.Android 지시 하는 레지스트리 키를 기록 합니다. .Zip 파일을 선택 하 고 압축을 풀고 직접 경우 Xamarin.Android를 SDK를 찾을 위치를 알지 못합니다. 로 이동 하 여 Visual Studio에서 SDK 인 Xamarin.Android 알 수 **도구 > 옵션 > Xamarin > Android 설정**:
 
-[![Xamarin Android 설정에서 android SDK 위치](troubleshooting-images/01a.png)]()
+[![Xamarin Android 설정에서 android SDK 위치](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
 
-<a name="IDE_does_not_display_target_device" />
 
 
 ## <a name="ide-does-not-display-target-device"></a>IDE는 대상 장치를 표시 하지 않습니다.
@@ -393,7 +378,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 즉, 올바른 시뮬레이터 이름을 사용 해야 [시뮬레이터를 구성할 때 사용한 이름](~/android/get-started/installation/windows.md#device)합니다.
 
-<a name="INSTALL_FAILED_INVALID_APK_when_installing_a_package" />
 
 ## <a name="installfailedinvalidapk-when-installing-a-package"></a>설치\_실패\_잘못 된\_APK 패키지를 설치할 때
 
@@ -410,7 +394,6 @@ Android 패키지 이름 *해야* 마침표가 포함 ('*.*'). 마침표를 포�
     -   패키지 이름 필드를 포함 하도록 변경는 '.'.
 
 
-<a name="INSTALL_FAILED_MISSING_SHARED_LIBRARY_when_installing_a_package" />
 
 
 ## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>설치\_실패\_MISSING\_SHARED\_라이브러리 패키지를 설치할 때
@@ -424,7 +407,6 @@ Android 패키지에서 사용 중인 공유 라이브러리 됩니다 지정는
 
 예를 들어, 어셈블리 참조를 추가 *Mono.Android.GoogleMaps.dll* 암시적으로 추가 됩니다 한 `<uses-library/>` Google 맵 공유 라이브러리에 대 한 합니다.
 
-<a name="INSTALL_FAILED_UPDATE_INCOMPATIBLE_when_installing_a_package" />
 
 
 ## <a name="installfailedupdateincompatible-when-installing-a-package"></a>설치\_실패\_업데이트\_패키지를 설치할 때 호환 되지 않습니다.
@@ -450,7 +432,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 이 오류를 해결 하려면에서 완전히 제거 응용 프로그램 장치를 다시 설치 하기 전에.
 
-<a name="INSTALL_FAILED_UID_CHANGED_when_installing_a_package" />
 
 ## <a name="installfaileduidchanged-when-installing-a-package"></a>설치\_실패\_UID\_패키지를 설치할 때 변경
 
@@ -475,7 +456,6 @@ $ adb uninstall @PACKAGE_NAME@
 **사용 하지 마십시오** `adb uninstall -k`으로이 표시 *유지* 응용 프로그램 데이터를를 따라서 충돌 하는 대상 장치에서 UID를 보관 합니다.
 
 
-<a name="Release_apps_fail_to_launch_on_device" />
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>릴리스 앱 장치에서 실행 되지 않습니다.
 
@@ -603,7 +583,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [그러면 이후 릴리스에서 수정 될](https://bugzilla.xamarin.com/show_bug.cgi?id=5401)합니다.
 
-<a name="Unexpected_NullReferenceExceptions" />
 
 ## <a name="unexpected-nullreferenceexceptions"></a>Unexpected NullReferenceExceptions
 
@@ -635,7 +614,6 @@ E/mono    ( 4176): at Android.Util.Log.Info (string,string)
 E/dalvikvm(  123): VM aborting
 ```
 
-<a name="Abort_due_to_Global_Reference_Exhaustion" />
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>전역 참조 소모도 인해 중단
 
@@ -726,7 +704,6 @@ E/dalvikvm(  602): VM aborting
 
 사용 하도록 설정할 수 [GREF 로깅](~/android/troubleshooting/index.md) GREFs 만들어지는 시기와 횟수 존재 합니다.
 
-<a name="Abort_due_to_JNI_type_mismatch" />
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>JNI 유형이 일치 하지 않아 중단
 
