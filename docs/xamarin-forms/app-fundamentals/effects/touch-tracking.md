@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 89d3b56a15110d0c106c43ce227f11f86bbdf404
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="invoking-events-from-effects"></a>효과의 이벤트를 호출합니다.
 
@@ -448,7 +448,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 여러 이동할 수 있습니다 `BoxView` 동시에 다른 손가락을 사용 하 여 요소입니다.
 
-[![](touch-tracking-images/boxviewdragging-small.png "BoxView 끌어 페이지의 삼중 스크린샷")](touch-tracking-images/boxviewdragging-large.png "BoxView 끌어 페이지의 삼중 스크린 샷")
+[![](touch-tracking-images/boxviewdragging-small.png "BoxView 끌어 페이지의 삼중 스크린샷")](touch-tracking-images/boxviewdragging-large.png#lightbox "BoxView 끌어 페이지의 삼중 스크린 샷")
 
 ### <a name="subclassing-the-view"></a>보기를 서브클래싱합니다.
 
@@ -511,7 +511,7 @@ class DraggableBoxView : BoxView
 
 **타원 그리기** 페이지 화면에서 손가락을 살짝 밀어 타원을 그릴 수 있습니다. 손가락을 이동 하는 방법을 따라, 아래 오른쪽에 왼쪽 위 또는 반대 모퉁이에 다른 모퉁이에서 타원을 그릴 수 있습니다. 타원 임의의 색상 및 불투명도 사용 하 여 그린 합니다.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "타원 그리기 페이지의 삼중 스크린샷")](touch-tracking-images/ellipsedrawing-large.png "타원 그리기 페이지의 삼중 스크린샷")
+[![](touch-tracking-images/ellipsedrawing-small.png "타원 그리기 페이지의 삼중 스크린샷")](touch-tracking-images/ellipsedrawing-large.png#lightbox "타원 그리기 페이지의 삼중 스크린샷")
 
 타원 중 하나 다음 터치 할 경우 다른 위치로 끌어 놓을 수 있습니다. 이렇게 하려면으로 "적중 테스트," 특정 시점 그래픽 개체에 대 한 검색 해야 합니다. SkiaSharp 줄임표 되지 않으므로 Xamarin.Forms 요소를 직접 실행할 수 없는 `TouchEffect` 처리 합니다. `TouchEffect` 전체에 적용 해야 `SKCanvasView` 개체입니다.
 
@@ -683,7 +683,7 @@ case TouchActionType.Pressed:
 
 다른 SkiaSharp 예로 **손가락 페인트** 페이지. 두 개에서 선 색과 선 너비를 선택할 수 있습니다 `Picker` 뷰를 다음 하나 이상의 손가락으로 그립니다.
 
-[![](touch-tracking-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](touch-tracking-images/fingerpaint-large.png "손가락 페인트 페이지의 삼중 스크린샷")
+[![](touch-tracking-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](touch-tracking-images/fingerpaint-large.png#lightbox "손가락 페인트 페이지의 삼중 스크린샷")
 
 이 예제에는 별도 클래스를 화면에 그릴 각 줄을 나타내는 데 필요 합니다.
 
@@ -791,7 +791,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 다양 한 `WhiteKey` 및 `BlackKey` 페이지의 요소 정렬 되는 [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), 전화 가로 모드로 유지 되는 경우 최상의 표시:
 
-[![](touch-tracking-images/silentkeyboard-small.png "자동 키보드 페이지의 삼중 스크린샷")](touch-tracking-images/silentkeyboard-large.png "자동 키보드 페이지의 삼중 스크린 샷")
+[![](touch-tracking-images/silentkeyboard-small.png "자동 키보드 페이지의 삼중 스크린샷")](touch-tracking-images/silentkeyboard-large.png#lightbox "자동 키보드 페이지의 삼중 스크린 샷")
 
 키에서 손가락을 정리 하는 경우 표시 됩니다 컬러로 약간 변경 하 여 다른 한 키에서 터치 이벤트 전송 됩니다.
 

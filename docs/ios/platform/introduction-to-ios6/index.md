@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0d08b2ff5131996984dbe41862ad1d6aac33b3d0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-ios-6"></a>IOS 6 소개
 
 _iOS 6 다양 한 Xamarin.iOS 6 C# 개발자에 게 표시 하는 앱 개발을 위한 새로운 기술이 포함 되어 있습니다._
 
-[ ![](images/ios6-large.jpg "IOS 6 로고")](images/ios6-large.jpg)
+[ ![](images/ios6-large.jpg "IOS 6 로고")](images/ios6-large.jpg#lightbox)
 
 IOS 6 및 6 Xamarin.iOS 개발자 개발자에서 해당 대상 iPhone 5는 스토리를 포함 하 여 iOS 응용 프로그램을 만들려는 마음껏 다양 한 기능이 이제 있습니다.
 이 문서에는 사용할 수 있는 더 흥미로운 새 기능 및 각 항목에 대 한 문서와 연결 합니다. 또한 중요 개발자가 iOS 6 및 iPhone 5의 새로운 해상도를 이동할 수 있는 몇 가지 변경 사항에 연결 합니다.
@@ -92,11 +92,11 @@ if (myImageView != null){
 
 iPhone 5 장치 640 x 1136 확인이 있어야 합니다. 이전 버전의 iOS 대상으로 하는 응용 프로그램은 letterboxed 실행할 경우 나타납니다 iPhone 5에서 아래와 같이:
 
- [ ![](images/01-letterboxed.png "이전 버전의 iOS 대상으로 하는 응용 프로그램 letterboxed iPhone 5에서 실행 될 때 나타납니다.")](images/01-letterboxed.png)
+ [![](images/01-letterboxed.png "이전 버전의 iOS 대상으로 하는 응용 프로그램 letterboxed iPhone 5에서 실행 될 때 나타납니다.")](images/01-letterboxed.png#lightbox)
 
 응용 프로그램이 나타나도록 하려면 iphone 5, 전체 화면 추가 하면 명명 된 이미지 `Default-568h@2x.png` 640 x 1136의 해상도 필요 합니다. 다음 스크린샷은이 이미지에 포함 된 후에 실행 되도록 응용 프로그램:
 
- [ ![](images/02-fullscreen.png "이 스크린샷은 응용 프로그램을 실행 한 후이 이미지 포함 되었습니다.")](images/02-fullscreen.png)
+ [![](images/02-fullscreen.png "이 스크린샷은 응용 프로그램을 실행 한 후이 이미지 포함 되었습니다.")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>UINavigationBar 서브클래싱
 
@@ -130,7 +130,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 
 이 사용 하 여 `UINavigationBar` 하위 클래스는 다음 스크린샷에 표시 된 것 처럼 표시 되는 이미지 보기에서 결과:
 
- [ ![](images/03-navbar.png "이 스크린 샷에 표시 된 것 처럼 표시 되 고 이미지 뷰에서이 UINavigationBar 하위 클래스 결과 사용 하 여")](images/03-navbar.png)
+ [![](images/03-navbar.png "이 스크린 샷에 표시 된 것 처럼 표시 되 고 이미지 뷰에서이 UINavigationBar 하위 클래스 결과 사용 하 여")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>인터페이스 방향
 
