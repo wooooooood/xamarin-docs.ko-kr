@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: 21cd08ad2eb9c78ba1bcd6b31400a38266c65e51
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>4 부-여러 플랫폼을 다루는
 
@@ -145,9 +145,9 @@ ms.lasthandoff: 03/09/2018
 사용할 수 있는 플랫폼 간 기능을 제공 하는 타사 라이브러리의 여러 가지:
 
 -   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **기업** (지역화를 위해)- [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** (XNA 게임)-에 대 한 [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
--   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) 및 수행 하려면 먼저 해당 [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
+-   **기업** (지역화를 위해)-  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
+-   **MonoGame** (XNA 게임)-에 대 한  [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
+-   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) 및 해당 앞서 수행 [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
 
 
  <a name="Divergent_Implementation" />
