@@ -6,23 +6,20 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 68ddb9baa008ec8222b4399a5ab25330fda2afd1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 51caebb86cb72b11ced70522fc253e608f5ccab0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="build-process"></a>빌드 프로세스
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
 Xamarin.Android 빌드 프로세스는 [`Resource.designer.cs`를 생성하고](~/android/internals/api-design.md), `AndroidAsset`, `AndroidResource` 및 다른 [빌드 동작](#Build_Actions)을 지원하고, [Android에서 호출 가능한 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)를 생성하고, Android 장치에서 실행할 `.apk`를 생성하는 등 모든 것을 결합하는 역할을 합니다.
 
-<a name="App_Packaging" />
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>응용 프로그램 패키지
 
@@ -34,7 +31,6 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 
 이는 우연치 않게 패키지를 생성하는 MSBuild `Configuration`과 일치합니다.
 
-<a name="Shared_Runtime" />
 
 ### <a name="shared-runtime"></a>공유 런타임
 
@@ -53,7 +49,6 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 빠른 배포는 기본적으로 활성화되며, 디버그 빌드에서 `$(EmbedAssembliesIntoApk)` 속성을 `True`로 설정하여 비활성화할 수 있습니다.
 
 
-<a name="MSBuild_Projects" />
 
 ## <a name="msbuild-projects"></a>MSBuild 프로젝트
 
@@ -81,7 +76,6 @@ Xamarin.Android 프로젝트에는 다음 빌드 대상이 정의됩니다.
 
 -   **UpdateAndroidResources** &ndash; `Resource.designer.cs` 파일을 업데이트합니다. 이 대상은 일반적으로 프로젝트에 새 리소스가 추가될 때 IDE에 의해 호출됩니다.
 
-<a name="Build_Properties" />
 
 ## <a name="build-properties"></a>빌드 속성
 
@@ -116,7 +110,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
-<a name="App_Packaging" />
 
 ### <a name="packaging-properties"></a>패키징 속성
 
@@ -146,7 +139,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     기본적으로 이 속성은 `False`입니다.
 
--   **AndroidFastDeploymentType** &ndash; [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) MSBuild 속성이 `False`일 경우 대상 장치에서 [빠른 배포 디렉터리](#Fast_Deployment)에 배포할 수 있는 형식을 제어하는 값의 콜론(`:`)으로 구분된 목록입니다. 리소스가 빠르게 배포될 경우 생성된 `.apk`에 포함되지 *않아* 배포 시간을 줄일 수 있습니다. (빠르게 배포되는 리소스가 많을수록 `.apk`를 재빌드해야 하는 경우가 줄어들고 설치 프로세스가 빨라질 수 있습니다.) 유효한 값은 다음과 같습니다.
+-   **AndroidFastDeploymentType** &ndash; `$(EmbedAssembliesIntoApk)` MSBuild 속성이 `False`일 경우 대상 장치에서 [빠른 배포 디렉터리](#Fast_Deployment)에 배포할 수 있는 형식을 제어하는 값의 콜론(`:`)으로 구분된 목록입니다. 리소스가 빠르게 배포될 경우 생성된 `.apk`에 포함되지 *않아* 배포 시간을 줄일 수 있습니다. (빠르게 배포되는 리소스가 많을수록 `.apk`를 재빌드해야 하는 경우가 줄어들고 설치 프로세스가 빨라질 수 있습니다.) 유효한 값은 다음과 같습니다.
 
     - `Assemblies`: 응용 프로그램 어셈블리를 배포합니다.
 
@@ -158,7 +151,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidApplicationJavaClass** &ndash; 클래스가 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)에서 상속되는 경우 `android.app.Application` 대신 사용할 전체 Java 클래스 이름입니다.
 
-    이 속성은 일반적으로 [`$(AndroidEnableMultiDex)`](#AndroidEnableMultiDex) MSBuild 속성과 같은 *other* 속성으로 설정됩니다.
+    이 속성은 일반적으로 `$(AndroidEnableMultiDex)` MSBuild 속성과 같은 *다른* 속성으로 설정됩니다.
 
     Xamarin.Android 6.1에 추가되었습니다.
 
@@ -285,7 +278,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **MonoSymbolArchive** &ndash; 릴리스 스택 추적에서 &ldquo;실제&rdquo; 파일 이름 및 줄 번호 정보를 추출하기 위해 나중에 `mono-symbolicate`와 함께 사용할 `.mSYM` 아티팩트를 만들지 여부를 제어하는 부울 속성입니다.
 
-    디버깅 기호가 활성화된 &ldquo;릴리스&rdquo;의 경우 이는 기본적으로 True입니다. [`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk), `$(DebugSymbols)`, `$(Optimize)` 모두 True입니다.
+    디버깅 기호가 활성화된 &ldquo;릴리스&rdquo; 앱의 경우 이는 기본적으로 True입니다. `$(EmbedAssembliesIntoApk)`, `$(DebugSymbols)`, `$(Optimize)` 모두 True입니다.
 
     Xamarin.Android 7.1에 추가되었습니다.
 
@@ -312,13 +305,11 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     -   **versionCode** &ndash; `Properties\AndroidManifest.xml`에서 바로 버전 코드를 사용합니다.
 
-    [AndroidVersionCodeProperties](#AndroidVersionCodeProperties) 속성을 사용하여 사용자 지정 항목을 정의할 수 있습니다.
+    `AndroidVersionCodeProperties` 속성(다음에 정의됨)을 사용하여 사용자 지정 항목을 정의할 수 있습니다.
 
     Xamarin.Android 7.2에 추가되었습니다.
 
--   **AndroidVersionCodeProperties** &ndash; 개발자가 [AndroidVersionCodePattern](#AndroidVersionCodePattern)과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다.
-    `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_SupportedApiLevel)`
-    보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
+-   **AndroidVersionCodeProperties** &ndash; 개발자가 `AndroidVersionCodePattern`과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다. `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_SupportedApiLevel)` 보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
 
     Xamarin.Android 7.2에 추가되었습니다.
 
@@ -365,8 +356,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     이 기본값은 향후 릴리스에서 변경될 예정입니다.
 
 
-<a name="Resgen" />
-<a name="Resource_Properties" />
 
 ### <a name="resource-properties"></a>리소스 속성
 
@@ -385,7 +374,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     **실험적**. Xamarin.Android 7.0에 추가되었습니다.
 
 
-<a name="Signing" />
 <a name="Signing_Properties" />
 
 ### <a name="signing-properties"></a>서명 속성
@@ -446,21 +434,16 @@ Enter key password for keystore.alias
 빌드 동작이 `AndroidEnvironment`인 파일은 [프로세스 시작 시 환경 변수 및 시스템 속성을 초기화](~/android/deploy-test/environment.md)하는 데 사용됩니다.
 `AndroidEnvironment` 빌드 동작은 여러 파일에 적용될 수 있으며, 특정 순서로 평가되지 않습니다(따라서 여러 파일에 동일한 환경 변수나 시스템 속성을 지정해서는 안 됨).
 
-<a name="Java_Interop_Support" />
-<a name="AndroidJavaSource" />
 
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 빌드 동작이 `AndroidJavaSource`인 파일은 최종 Android 패키지에 포함될 Java 소스 코드입니다.
 
-<a name="AndroidJavaLibrary" />
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 빌드 동작이 `AndroidJavaLibrary`인 파일은 최종 Android 패키지에 포함될 Java 아카이브(`.jar` 파일)입니다.
 
-<a name="Resources" />
-<a name="AndroidResource" />
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -499,8 +482,6 @@ Enter key password for keystore.alias
 </ItemGroup>
 ```
 
-<a name="Native_Library_Support" />
-<a name="AndroidNativeLibrary" />
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -546,7 +527,6 @@ Xamarin.Android 5.1부터 thw `@(Content)` 빌드 동작을 사용하려고 하�
 `$(EnableProguard)` MSBuild 속성이 `True`가 아닐 경우 이러한 파일이 무시됩니다.
 
 
-<a name="Target_Definitions" />
 
 ## <a name="target-definitions"></a>대상 정의
 

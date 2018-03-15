@@ -7,11 +7,11 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7e26c11f71b446baf89ca11effe30bc1e041f951
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Objective-C 개발자용 Xamarin
 
@@ -21,7 +21,7 @@ Xamarin은 iOS를 대상으로 하는 개발자가 비 사용자 인터페이스
 
 또한 Xamarin에서는 바인딩으로 알려진 기술을 통해 기존 Objective-C 자산을 활용할 수 있습니다. 다음 다이어그램에 보이는 것처럼, 간단하게 Objective-C에서 정적 라이브러리를 만들고 바인딩을 통해 C#에 노출하면 됩니다.
 
- [ ![](images/01-bindings.png "바인딩을 통해 C#에 노출된 Objective-C의 정적 라이브러리")](images/01-bindings.png)
+ [![](images/01-bindings.png "바인딩을 통해 C#에 노출된 Objective-C의 정적 라이브러리")](images/01-bindings.png#lightbox)
 
 이것은 비 UI 코드로 제한할 필요가 없습니다. Objective-C에서 개발된 사용자 인터페이스 코드도 바인딩을 통해 노출할 수 있습니다.
 

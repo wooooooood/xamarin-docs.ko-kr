@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 2a7b2a856d51447d6b7ab2032ebf7445d3f06ecb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac525805fce99f44ea1efb132fb99f6d3a01f2f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 장치 및 Xamarin.Android
 
 _Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습니다. 이 문서에서는 Xamarin.Android 응용 프로그램에 대해 사용할 수 있는 여러 CPU 아키텍처에 설명합니다. 이 문서에서는 또한 여러 CPU 아키텍처를 지원하도록 Android 응용 프로그램을 패키징하는 방법도 설명합니다. ABI(응용 프로그램 이진 인터페이스)를 소개하고, Xamarin.Android 응용 프로그램에서 사용할 ABI에 대한 지침을 제공합니다._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -47,16 +46,14 @@ Android는 여러 CPU 아키텍처를 지원하는 컴퓨터 코드가 포함된
 Android 4.0.0, 4.0.1, 4.0.2 및 4.0.3의 버그로 인해 `armeabi-v7a` 디렉터리가 있고 장치가 `armeabi-v7a` 장치이더라도 네이티브 라이브러리는 `armeabi` 디렉터리에서 선택됩니다.
 
 > [!NOTE]
-> **참고**: Xamarin.Android는 `.so`가 올바른 순서로 APK에 추가되도록 합니다. 이 버그는 Xamarin.Android의 사용자에게 문제가 되지 않습니다.
+> Xamarin.Android는 `.so`가 올바른 순서로 APK에 추가되도록 합니다. 이 버그는 Xamarin.Android의 사용자에게 문제가 되지 않습니다.
 
-<a name="ABI_Descriptions" />
 
 ### <a name="abi-descriptions"></a>ABI 설명
 
 Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 
 
-<a name="armeabi" />
 
 #### <a name="armeabi"></a>armeabi
 
@@ -65,7 +62,6 @@ Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 **참고**: Xamarin.Android의 `armeabi` 코드는 스레드로부터 안전하지 않으며 다중 CPU `armeabi-v7a` 장치에 사용해서는 안 됩니다(아래 설명 참조). 단일 코어 `armeabi-v7a` 장치에서 `aremabi` 코드를 사용하는 것은 안전합니다.
 
 
-<a name="armeabi-v7a" />
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
@@ -74,7 +70,6 @@ Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 **참고:** `armeabi-v7a` 기계어 코드는 ARMv5 장치에서 실행되지 않습니다.
 
 
-<a name="arm64-v8a" />
 
 #### <a name="arm64-v8a"></a>arm64-v8a
 
@@ -82,7 +77,6 @@ Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 Xamarin.Android 5.1은 이 아키텍처에 대한 실험적 지원을 제공합니다(자세한 내용은 [실험적 기능](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) 참조).
 
 
-<a name="x86" />
 
 #### <a name="x86"></a>x86
 
@@ -93,10 +87,9 @@ Xamarin.Android 5.1은 이 아키텍처에 대한 실험적 지원을 제공합�
 -  SSE4 변형.
 
 
-**참고:** Google TV는 x86에서 실행되기는 하지만 Android의 NDK 또는 Xamarin.Android에서 지원되지 않습니다. <a name="mips" />
+**참고:** Google TV는 x86에서 실행되기는 하지만 Android의 NDK 또는 다음에서 지원되지 않습니다.
 
 
-<a name="x86_64" />
 
 #### <a name="x8664"></a>x86_64
 
@@ -110,13 +103,12 @@ Xamarin.Android 5.1은 이 아키텍처에 대한 실험적 지원을 제공합�
 **참고:** MIPS 장치는 현재 Xamarin.Android에서 지원되지 않지만 향후 릴리스에서는 지원될 예정입니다.
 
 
-<a name="APK_File_Format" />
 
 #### <a name="apk-file-format"></a>APK 파일 형식
 
 Android 응용 프로그램 패키지는 Android 응용 프로그램에 필요한 모든 코드, 자산, 리소스 및 인증서를 저장하는 파일 형식입니다. `.zip` 파일 이지만 `.apk` 파일 이름 확장명을 사용합니다. 확장할 경우 Xamarin.Android에서 만든 `.apk` 콘텐츠를 아래 스크린샷에서 볼 수 있습니다.
 
-[ ![.apk의 콘텐츠](multicore-devices-images/00.png)](multicore-devices-images/00.png)
+[![.apk의 콘텐츠](multicore-devices-images/00.png)](multicore-devices-images/00.png#lightbox)
 
 `.apk` 파일의 콘텐츠에 대한 간단한 설명:
 
@@ -133,10 +125,9 @@ Android 응용 프로그램 패키지는 Android 응용 프로그램에 필요�
 -   **res** &ndash; 이 디렉터리는 `resources.arsc`로 컴파일되지 않은 리소스를 저장합니다.
 
 > [!NOTE]
-> **참고**: `libmonodroid.so` 파일은 모든 Xamarin.Android 응용 프로그램에 필요한 네이티브 라이브러리입니다.
+> `libmonodroid.so` 파일은 모든 Xamarin.Android 응용 프로그램에 필요한 네이티브 라이브러리입니다.
 
 
-<a name="Android_Device_ABI_Support" />
 
 #### <a name="android-device-abi-support"></a>Android 장치 ABI 지원
 
@@ -149,7 +140,6 @@ Android 응용 프로그램 패키지는 Android 응용 프로그램에 필요�
 
 예를 들어 일반적인 ARMv5TE 장치는 `armeabi`의 주 ABI만 있지만, ARMv7 장치는 `armeabi-v7a`의 주 ABI와 `armeabi`의 보조 ABI를 지정합니다. 일반적인 x86 장치는 `x86`의 주 ABI만 지정합니다.
 
-<a name="Android_Native_Library_Installation" />
 
 ### <a name="android-native-library-installation"></a>Android 네이티브 라이브러리 설치
 
@@ -249,7 +239,6 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-<a name="Xamarin.Android_and_ABIs" />
 
 ### <a name="xamarinandroid-and-abis"></a>Xamarin.Android 및 ABI
 
@@ -270,7 +259,6 @@ Xamarin.Android는 다음과 같은 아키텍처에 대해 실험적인 지원�
 Xamarin.Android는 현재 `mips`에 대한 지원을 제공하지 않습니다.
 
 
-<a name="Declaring_Supported_ABIs" />
 
 ### <a name="declaring-supported-abis"></a>지원되는 ABI 선언
 
@@ -281,7 +269,7 @@ Xamarin.Android는 현재 `mips`에 대한 지원을 제공하지 않습니다.
 
 Mac용 Visual Studio에서는 다음 스크린샷에서처럼 **고급** 탭에서 **프로젝트 옵션**의 **Android 빌드** 페이지에서 지원되는 아키텍처를 선택할 수 있습니다.
 
-[![Android 빌드 지원 ABI](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png)
+[![Android 빌드 지원 ABI](multicore-devices-images/xs-abi-selections-sml.png)](multicore-devices-images/xs-abi-selections.png#lightbox)
 
 다음과 같이 추가적인 ABI 지원을 선언해야 하는 경우가 있습니다.
 

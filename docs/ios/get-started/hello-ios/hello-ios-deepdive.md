@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS 자세히 알아보기
 
@@ -102,7 +102,7 @@ iOS 응용 프로그램이 사용자 인터페이스를 로드하려면 두 가�
 
 이 섹션에서는 다음 다이어그램에 표시된 관계를 연구합니다.
 
-[ ![](hello-ios-deepdive-images/image32.png "아키텍처 및 앱의 기본 관계가 설명된 다이어그램")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "아키텍처 및 앱의 기본 관계가 이 다이어그램에 설명되었습니다.")](hello-ios-deepdive-images/image32.png#lightbox)
 
 처음부터 시작하여 응용 프로그램 시작 시 어떻게 되는지 알아봅니다.
 
@@ -197,7 +197,7 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 아래 스크린샷에서 나온 것처럼 장면의 왼쪽에 플래그 아이콘이 포함된 회색 화살표가 있습니다.
 
- [ ![](hello-ios-deepdive-images/image37.png "플래그 아이콘이 포함된 회색 화살표")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "플래그 아이콘이 포함된 회색 화살표")](hello-ios-deepdive-images/image37.png#lightbox)
 
 회색 화살표는 *Segue*(“세그웨이”라고 발음)라고 하는 스토리보드 전환을 나타냅니다. 이 Segue에는 원본이 없으므로 *원본 없는 Segue*라고 합니다. 원본 없는 Segue는 뷰가 시작 시 응용 프로그램의 창으로 로드되는 첫 번째 장면을 가리킵니다. 그 안에 포함된 장면 및 뷰는 앱이 로드 될 때 사용자에게 가장 먼저 표시됩니다.
 
@@ -243,7 +243,7 @@ _뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰
 
 _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단일 뷰 컨트롤러에서 관리하는 뷰 및 하위 뷰의 스택입니다.
 
- [ ![](hello-ios-deepdive-images/image41.png "콘텐츠 뷰 계층 구조")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "콘텐츠 보기 계층 구조")](hello-ios-deepdive-images/image41.png#lightbox)
 
 `ViewController`의 콘텐츠 뷰 계층 구조를 더 쉽게 확인할 수 있도록 **속성 패드**의 뷰 섹션에서 루트 뷰의 배경 색상을 아래 스크린샷에 나온 것처럼 일시적으로 노란색으로 변경할 수 있습니다.
 
@@ -259,7 +259,7 @@ _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단�
 
 다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
 
- [ ![](hello-ios-deepdive-images/image43.png "창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "창, 보기, 하위 보기 및 보기 컨트롤러 간의 관계")](hello-ios-deepdive-images/image43.png#lightbox)
 
 다음에서 섹션에서는 코드에서 뷰를 사용하고 뷰 컨트롤러 및 뷰 수명 주기를 사용하여 사용자 상호 작용에 대한 프로그래밍하는 방법에 대해 알아봅니다.
 
@@ -331,7 +331,7 @@ public partial class ViewController : UIViewController
 뷰 및 뷰 컨트롤러에 대해 자세히 알아보았습니다. 이제 작동 원리를 살펴보겠습니다.
 `Phoneword_iOS` 프로젝트에서 콘텐츠 뷰 계층 구조에 `TranslateButton`이라고 하는 단추가 추가되었습니다.
 
- [ ![](hello-ios-deepdive-images/image1.png "콘텐츠 뷰 계층 구조에 TranslateButton이라고 하는 단추가 추가됨")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "콘텐츠 보기 계층 구조에 TranslateButton이라는 단추가 추가되었습니다.")](hello-ios-deepdive-images/image1.png#lightbox)
 
 **이름**이 **속성 패드**의 **단추** 컨트롤에 할당되는 경우 iOS 디자이너는 `ViewController` 클래스 내에서 `TranslateButton`을 사용할 수 있도록 자동으로  **ViewController.designer.cs**의 컨트롤에 매핑합니다. 컨트롤은 먼저 뷰 수명 주기의 `ViewDidLoad` 단계에서 사용할 수 있게 되므로 이 수명 주기 메서드는 사용자의 터치에 응답하는 데 사용됩니다.
 
@@ -432,7 +432,7 @@ iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방�
 
 앱이 iOS 장치에 배포합니다.
 
-[ ![](hello-ios-deepdive-images/image1.png "앱이 iOS 장치에 배포하고 실행됨")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "앱이 iOS 장치에 배포되고 실행됩니다.")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>사용자 지정 아이콘 및 시작 이미지 생성
 

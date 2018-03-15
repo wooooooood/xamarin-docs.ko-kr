@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ca3afa892176a11c4688b4f4d8d34e59d1758585
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging"></a>디버깅
 
@@ -34,11 +34,11 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1.png)
+[![](debugging-in-xamarin-ios-images/debugging1.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1a.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1a.png)
+[![](debugging-in-xamarin-ios-images/debugging1a.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
 -----
 
@@ -46,13 +46,13 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/image0a.png "중단점 패드")](debugging-in-xamarin-ios-images/image0a.png)
+[![](debugging-in-xamarin-ios-images/image0a.png "중단점 패드")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  중단점 패드가 자동으로 표시되지 않으면 _보기 > 디버그 창 > 중단점_을 선택하여 중단점 패드를 표시할 수 있습니다.
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/image0.png "중단점 패드")](debugging-in-xamarin-ios-images/image0.png)
+[![](debugging-in-xamarin-ios-images/image0.png "중단점 패드")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  중단점 패드가 자동으로 표시되지 않으면 _디버그 > 창 > 중단점_을 선택하여 중단점 패드를 표시할 수 있습니다.
  
@@ -62,13 +62,13 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7a.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7a.png)
+[![](debugging-in-xamarin-ios-images/debugging7.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7c.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7c.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7d.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7d.png)
+[![](debugging-in-xamarin-ios-images/debugging7c.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
@@ -77,11 +77,11 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7b.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7b.png)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7e.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7e.png)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
@@ -91,11 +91,11 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 중단점을 적중하면 코드가 노란색으로 강조 표시됩니다.
 
-[ ![](debugging-in-xamarin-ios-images/image2.png "노란색으로 강조 표시된 코드")](debugging-in-xamarin-ios-images/image2.png)
+[![](debugging-in-xamarin-ios-images/image2.png "노란색으로 강조 표시된 코드")](debugging-in-xamarin-ios-images/image2.png#lightbox)
 
 개체의 값을 검사하는 것과 같은 디버깅 도구를 현재 시점에서 사용하여 코드에서 발생하는 상황에 대한 자세한 정보를 얻을 수 있습니다.
 
-[ ![](debugging-in-xamarin-ios-images/image3.png "색상 값 표시")](debugging-in-xamarin-ios-images/image3.png)
+[![](debugging-in-xamarin-ios-images/image3.png "색상 값 표시")](debugging-in-xamarin-ios-images/image3.png#lightbox)
 
 ## <a name="conditional-breakpoints"></a>조건부 중단점
 
@@ -108,26 +108,26 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 - 새 조건부 중단점을 추가하려면 편집기 여백에서 중단점을 설정하려는 코드의 줄 번호 왼쪽을 마우스 오른쪽 단추로 클릭하고 새 중단점을 선택합니다.
 
-    [ ![](debugging-in-xamarin-ios-images/image4.png "새 중단점 선택")](debugging-in-xamarin-ios-images/image4.png)
+    [![](debugging-in-xamarin-ios-images/image4.png "새 중단점 선택")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - 기존 중단점에 조건을 추가하려면, 중단점을 마우스 오른쪽 단추로 클릭하고 ***중단점 속성**을 선택하거나 **중단점 패드**에서 아래 그림과 같은 속성 단추를 선택합니다.
 
-    [ ![](debugging-in-xamarin-ios-images/image5.png "중단점 패드")](debugging-in-xamarin-ios-images/image5.png)
+    [![](debugging-in-xamarin-ios-images/image5.png "중단점 패드")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 그런 다음, 중단점이 발생되게 하는 조건을 입력할 수 있습니다.
 
-[ ![](debugging-in-xamarin-ios-images/image6.png "발생할 중단점의 조건 입력")](debugging-in-xamarin-ios-images/image6.png)
+[![](debugging-in-xamarin-ios-images/image6.png "발생할 중단점의 조건 입력")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Visual Studio 2015에서 조건부 중단점을 설정하려면 먼저 [일반 중단점을 설정](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)합니다. 중단점을 마우스 오른쪽 단추로 클릭하여 팝업 메뉴를 표시합니다.
 
- [ ![](debugging-in-xamarin-ios-images/image4vs.png "중단점 팝업 메뉴")](debugging-in-xamarin-ios-images/image4vs.png)
+ [![](debugging-in-xamarin-ios-images/image4vs.png "중단점 팝업 메뉴")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
 **조건...**을 선택하여 _중단점 설정_ 메뉴를 표시합니다.
 
- [ ![](debugging-in-xamarin-ios-images/image6vs.png "중단점 설정 메뉴")](debugging-in-xamarin-ios-images/image6vs.png)
+ [![](debugging-in-xamarin-ios-images/image6vs.png "중단점 설정 메뉴")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
 여기서 중단점이 발생되게 하는 조건을 입력할 수 있습니다.
 
@@ -143,7 +143,7 @@ Visual Studio 2015에서 조건부 중단점을 설정하려면 먼저 [일반 �
 
 Mac용 Visual Studio에서는 다음과 같이 표시됩니다.
 
- [ ![](debugging-in-xamarin-ios-images/image7.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7.png)
+ [![](debugging-in-xamarin-ios-images/image7.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
 이러한 항목은 다음과 같습니다.
 
@@ -156,7 +156,7 @@ Mac용 Visual Studio에서는 다음과 같이 표시됩니다.
 
 Visual Studio에서는 다음과 같이 표시됩니다.
 
-[ ![](debugging-in-xamarin-ios-images/image7vs.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7vs.png)
+[![](debugging-in-xamarin-ios-images/image7vs.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
 이러한 항목은 다음과 같습니다.
 
@@ -224,13 +224,13 @@ Xamarin.iOS는 Mono의 클래스 라이브러리에 대한 소스 코드와 함�
 
 이 기능을 사용하도록 설정하려면 아래 그림과 같이 _Mac용 Visual Studio > 기본 설정> 디버거_ 메뉴에서 **프로젝트 코드만 디버깅합니다. 프레임워크 코드는 한 단계씩 실행하지 마세요.** 옵션이 선택 취소되어 있는지 확인합니다.
 
-[ ![](debugging-in-xamarin-ios-images/debugging6.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6.png)
+[![](debugging-in-xamarin-ios-images/debugging6.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Visual Studio에서 클래스 라이브러리를 디버그하려면 _디버그 > 옵션_ 메뉴에서 **내 코드만**을 사용하지 않도록 설정해야 합니다. _디버깅 > 일반_ 노드에서 **내 코드만 사용** 확인란을 선택 취소합니다.
 
-[ ![](debugging-in-xamarin-ios-images/debugging6vs.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6vs.png)
+[![](debugging-in-xamarin-ios-images/debugging6vs.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

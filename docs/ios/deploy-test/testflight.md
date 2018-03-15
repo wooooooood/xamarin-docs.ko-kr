@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8de7b91e5854e5c660788cdca055860b2ba0139e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: adc08009de308598041adb79dc02bf83bcf4a2f2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-testflight"></a>TestFlight 사용
 
@@ -43,7 +43,7 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
 아래 그림과 같이 [Xcode에서 빌드의 유효성을 검사](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)할 때 배포 프로필에 베타 자격이 포함되어 있는지 확인할 수 있습니다.
 
-[ ![](testflight-images/validate-build.png "Apple에 앱 제출")](testflight-images/validate-build.png)
+[![](testflight-images/validate-build.png "Apple에 앱 제출")](testflight-images/validate-build.png#lightbox)
 
 
 ## <a name="testflight-workflow"></a>TestFlight 워크플로
@@ -66,7 +66,7 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 1.  Apple 개발자 자격 증명을 사용하여 [iTunes Connect 포털](https://itunesconnect.apple.com/)에 로그인합니다.
 2.  **My Apps**를 선택합니다.
 
-    [ ![](testflight-images/my-apps.png "My Apps 선택")](testflight-images/my-apps.png)
+    [![](testflight-images/my-apps.png "내 앱 선택")](testflight-images/my-apps.png#lightbox)
 
 
 3.  **My Apps** 화면의 왼쪽 위 모서리에 있는 **+** 단추를 클릭하여 새 앱을 추가합니다. Mac 및 iOS 개발자 계정이 있는 경우 여기서 새 앱 유형을 선택하라는 메시지가 표시됩니다.
@@ -81,8 +81,8 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
 양식은 아래 그림과 같이 앱의 Info.plist 파일에 있는 정보를 정확히 반영해야 합니다.
 
-[ ![](testflight-images/infoplist.png "앱의 Info.plist")](testflight-images/infoplist.png)
-[ ![](testflight-images/newiosapp.png "iTunes Connect의 양식")](testflight-images/newiosapp.png)
+[![](testflight-images/infoplist.png "앱의 Info.plist")](testflight-images/infoplist.png#lightbox)
+[ ![](testflight-images/newiosapp.png "iTunes Connect의 양식")](testflight-images/newiosapp.png#lightbox)
 
 -  **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **응용 프로그램 이름** 항목과 정확히 일치해야 합니다.
 -  **기본 언어** - 앱 내에서 사용되는 기본 언어입니다. 일반적으로 말하는 모든 언어입니다.
@@ -104,7 +104,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
  Mac용 Visual Studio에서 이진 파일을 빌드하려면 _보관_ 기능을 사용해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 아래 그림과 같이 **게시를 위해 보관**을 선택합니다.
 
- [ ![](testflight-images/new-archive.png "게시를 위해 보관 선택")](testflight-images/new-archive.png)
+ [![](testflight-images/new-archive.png "게시를 위해 보관 선택")](testflight-images/new-archive.png#lightbox)
 
 
  자세한 내용은 [배포 가능한 파일 빌드](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드를 참조하세요.
@@ -113,11 +113,11 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
  보관을 만들면 **보관 보기**가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 앱에 서명하고 배포할 준비를 하려면 아래 그림과 같이 **서명 및 배포...**를 선택합니다.
 
-[ ![](testflight-images/archive-view.png "보관을 만들면 자동으로 열리는 보관 보기")](testflight-images/archive-view.png)
+[![](testflight-images/archive-view.png "보관을 만들면 자동으로 열리는 보관 보기")](testflight-images/archive-view.png#lightbox)
 
  그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택하여 패키지를 만들고 응용 프로그램 로더를 엽니다. [프로비전 프로필] 화면에서 서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명합니다. 패키지 세부 정보를 확인하고 **게시**를 클릭하여 `.ipa`를 저장합니다.
 
-[ ![](testflight-images/group.png "서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명.")](testflight-images/group.png)
+[![](testflight-images/group.png "서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명")](testflight-images/group.png#lightbox)
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
@@ -156,11 +156,11 @@ iTunes Connect의 **My Apps** 섹션으로 돌아가면 응용 프로그램이 �
 
 TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동합니다. 아래 그림과 같이 빌드, 내부 테스터 및 외부 테스터의 목록을 보여 주는 세 개의 탭이 표시됩니다.
 
-[ ![](testflight-images/app-uploaded.png "빌드, 내부 테스터 및 외부 테스터 탭")](testflight-images/app-uploaded.png)
+[![](testflight-images/app-uploaded.png "빌드, 내부 테스터 및 외부 테스터 탭")](testflight-images/app-uploaded.png#lightbox)
 
 메타데이터를 앱에 추가하려면 빌드 번호, TestFlight를 차례로 클릭합니다.
 
-[ ![](testflight-images/metadata.png "메타데이터 추가")](testflight-images/metadata.png)
+[![](testflight-images/metadata.png "메타데이터 추가")](testflight-images/metadata.png#lightbox)
 
 **테스트 정보** 아래에서 테스터에게 앱과 관련된 중요한 정보를 제공할 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -178,11 +178,11 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 앱 테스트를 시작할 준비가 되면 버전에 대한 **TestFlight 베타 테스트** 스위치를 켭니다.
 
-[ ![](testflight-images/turn-on-testing.png "TestFlight 베타 테스트 스위치 켜기")](testflight-images/turn-on-testing.png)
+[![](testflight-images/turn-on-testing.png "TestFlight 베타 테스트 스위치 켜기")](testflight-images/turn-on-testing.png#lightbox)
 
 각 빌드는 TestFlight 베타 스위치를 켠 날짜로부터 **60일** 동안 활성화됩니다. **테스트 정보** 페이지에서 각 빌드에 남아 있는 일 수를 확인할 수 있습니다.
 
-[ ![](testflight-images/daysleft.png "테스트 정보 페이지")](testflight-images/daysleft.png)
+[![](testflight-images/daysleft.png "테스트 정보 페이지")](testflight-images/daysleft.png#lightbox)
 
 테스트는 언제든지 해제할 수 있습니다.
 
@@ -198,25 +198,25 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 테스터를 추가하려면 iTunes Connect 주 화면에서 **사용자 및 역할**로 이동합니다.
 
-[ ![](testflight-images/users-and-roles.png "iTunes Connect 주 화면의 사용자 및 역할")](testflight-images/users-and-roles.png)
+[![](testflight-images/users-and-roles.png "iTunes Connect 주 화면의 사용자 및 역할")](testflight-images/users-and-roles.png#lightbox)
 
 기존 iTunes Connect 사용자가 목록에 표시됩니다. 이러한 사용자를 선택하려면 이름을 클릭하고, **내부 테스터** 스위치를 켜고, **저장**을 클릭합니다.
 
-[ ![](testflight-images/internal-tester.png "내부 테스터 스위치 켜기")](testflight-images/internal-tester.png)
+[![](testflight-images/internal-tester.png "내부 테스터 스위치 켜기")](testflight-images/internal-tester.png#lightbox)
 
 목록에 없는 사용자를 추가하려면 *사용자* 옆에 있는 **+** 단추를 선택하고, 이름, 성 및 이메일 주소를 제공하여 계정을 만듭니다. 사용자는 이메일을 확인하여 계정을 활성화해야 합니다.
 
-[ ![](testflight-images/add-new-user.png "사용자 추가")](testflight-images/add-new-user.png)
+[![](testflight-images/add-new-user.png "사용자 추가")](testflight-images/add-new-user.png#lightbox)
 
 **My Apps > 시험판 > 내부 테스터**로 돌아가면 TestFlight 내부 베타 테스트를 위해 추가된 사용자가 표시됩니다.
 
-[ ![](testflight-images/select-users.png "TestFlight 내부 베타 테스트를 위해 추가된 사용자 목록")](testflight-images/select-users.png)
+[![](testflight-images/select-users.png "TestFlight 내부 베타 테스트를 위해 추가된 사용자 목록")](testflight-images/select-users.png#lightbox)
 
 이름을 선택하고 **초대** 단추를 클릭하여 이러한 테스터를 초대할 수 있습니다. 이러한 테스터는 앱을 테스트하기 위한 초대가 포함된 이메일을 받게 됩니다.
 
 내부 테스터 페이지의 상태 열에서 초대 상태를 확인할 수 있습니다.
 
-[ ![](testflight-images/status-added.png "초대 상태")](testflight-images/status-added.png)
+[![](testflight-images/status-added.png "초대 상태")](testflight-images/status-added.png#lightbox)
 
 
 ### <a name="external-testers"></a>외부 테스터
@@ -225,13 +225,13 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 검토를 위해 앱을 제출하려면 아래 그림과 같이 빌드 옆에 있는 **베타 앱 검토 제출** 텍스트를 클릭합니다.
 
-[ ![](testflight-images/beta-app-review.png "베타 앱 검토 제출")](testflight-images/beta-app-review.png)
+[![](testflight-images/beta-app-review.png "베타 앱 검토 제출")](testflight-images/beta-app-review.png#lightbox)
 
 앱에서 검토를 통과하려면 TestFlight 베타 정보 페이지에 필요한 모든 메타데이터를 입력해야 합니다.
 
 이제 초대 준비를 시작하고, [외부 테스터] 탭을 통해 아래 스크린샷과 같이 이메일, 이름 및 성을 입력하여 최대 2,000명의 외부 테스터를 추가할 수 있습니다. 입력하는 이메일은 Apple ID일 필요는 없습니다. 이는 초대를 받을 이메일일 뿐입니다.
 
-[ ![](testflight-images/add-external.png "테스터 초대")](testflight-images/add-external.png)
+[![](testflight-images/add-external.png "테스터 초대")](testflight-images/add-external.png#lightbox)
 
 외부 테스터가 많은 경우 **파일 가져오기** 링크를 사용하여 줄마다 다음과 같은 형식으로 채워진 `CSV` 파일을 가져올 수 있습니다.
 
@@ -243,7 +243,7 @@ first name, last name, email address
 
 외부 테스터의 세부 정보가 입력되었으면 **추가**를 클릭하고 사용자가 초대에 동의했는지 확인합니다.
 
-[ ![](testflight-images/confirm-consent.png "사용자가 초대에 동의했는지 확인")](testflight-images/confirm-consent.png)
+[![](testflight-images/confirm-consent.png "사용자가 초대에 동의했는지 확인")](testflight-images/confirm-consent.png#lightbox)
 
 베타 앱이 성공적으로 검토되면 외부 테스터에게 초대를 보낼 수 있습니다. 이 시점에서 빌드 페이지의 **외부** 아래에 있는 텍스트가 **초대 보내기**로 변경됩니다. 이 항목을 클릭하여 이미 추가한 모든 테스터에게 초대를 보냅니다.
 
@@ -253,13 +253,13 @@ first name, last name, email address
 
 초대된 테스터는 아래 스크린샷과 비슷한 이메일을 받습니다.
 
-[ ![](testflight-images/tester-email.png "초대 이메일 예")](testflight-images/tester-email.png)
+[![](testflight-images/tester-email.png "초대 이메일 예제")](testflight-images/tester-email.png#lightbox)
 
 **TestFlight에서 열기** 단추를 클릭하면 TestFlight 응용 프로그램에서 앱이 열리거나, 아직 다운로드되지 않은 경우 앱 스토어로 이동하여 다운로드할 수 있습니다.
 
 앱이 TestFlight에서 열리면 테스트할 항목에 대한 세부 정보가 표시되고, 테스터가 iOS 8.0 이상 장치에 응용 프로그램을 설치하도록 요구하는 메시지가 표시됩니다.
 
-[ ![](testflight-images/install-app.png "테스트할 항목에 대한 세부 정보를 보여 주는 TestFlight")](testflight-images/install-app.png)
+[![](testflight-images/install-app.png "테스트할 항목에 대한 세부 정보를 보여주는 TestFlight")](testflight-images/install-app.png#lightbox)
 
 테스트 빌드는 장치의 홈 화면에서 응용 프로그램 이름 앞에 주황색 점으로 표시됩니다.
 
@@ -269,7 +269,7 @@ first name, last name, email address
 
 베타 테스트가 완료되면 이제 Apple에 의한 앱 스토어 검토를 위해 앱을 제출할 수 있습니다. 이 프로세스는 아래 그림과 같이 **검토를 위해 제출** 단추를 클릭하여 iTunes Connect에서 매우 간단하게 수행됩니다.
 
-[ ![](testflight-images/submit-for-review.png "검토를 위해 제출 단추 클릭")](testflight-images/submit-for-review.png)
+[![](testflight-images/submit-for-review.png "검토를 위해 제출 단추 클릭")](testflight-images/submit-for-review.png#lightbox)
 
 ## <a name="summary"></a>요약
 

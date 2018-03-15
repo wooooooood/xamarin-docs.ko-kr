@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: fec57fbeb201d55e887969c5a50baf6a76c10e17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e09bb1150c3cc53104b41b75a2c3d4d2db4e5ff
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="publishing-independently"></a>독립적으로 게시
 
 기존 Android 마켓플레이스를 사용하지 않고 응용 프로그램을 게시할 수 있습니다. 이 섹션에서는 이러한 기타 게시 방법과 Xamarin.Android의 라이선스 수준을 설명합니다.
 
-<a name="Xamarin_Licensing" />
 
 ## <a name="xamarin-licensing"></a>Xamarin 라이선스
 
@@ -31,36 +30,32 @@ Xamarin.Android 앱의 개발, 배포 및 보급에 4가지 라이선스를 사�
 
 Community Edition을 다운로드하거나 Professional 및 Enterprise Edition 구매에 대한 자세한 내용을 알아보려면 [visualstudio.com](https://www.visualstudio.com/xamarin/)을 방문하세요.
 
-<a name="Allow_Installation_from_Unknown_Sources" />
 
 ## <a name="allow-installation-from-unknown-sources"></a>알 수 없는 원본에서의 설치 허용
 
 기본적으로 Android는 사용자가 Google Play 이외의 위치에서 응용 프로그램을 다운로드하여 설치하는 것을 차단합니다. 마켓플레이스 이외 원본에서의 설치를 허용하려면 사용자가 응용 프로그램을 설치하기 전에 먼저 장치에서 *알 수 없는 원본* 설정을 사용하도록 설정해야 합니다. 이에 대한 설정은 다음 그림처럼 **설정 > 보안**에 있습니다.
 
-[ ![보안 설정 화면](publishing-independently-images/settings.png)](publishing-independently-images/settings.png)
+[![보안 설정 화면](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 
 > [!IMPORTANT]
-> **참고:** 일부 네트워크 공급자는 이 설정과 관계없이 알 수 없는 원본으로부터의 응용 프로그램 설치를 차단할 수 있습니다.
+> 일부 네트워크 공급자는 이 설정과 관계없이 알 수 없는 원본의 응용 프로그램 설치를 차단할 수 있습니다.
 
 
-<a name="Publishing_by_E-Mail" />
 
 ## <a name="publishing-by-e-mail"></a>이메일로 게시
 
 이메일에 릴리스 APK를 첨부하면 응용 프로그램을 쉽고 빠르게 사용자에게 배포할 수 있습니다. Android 지원 장치에서 사용자가 이메일을 열면 다음 이미지에서처럼 Android가 APK 첨부 파일을 인식하고 **설치** 단추를 표시합니다.
 
-[ ![첨부 파일에 대한 설치 단추](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png)
+[![첨부 파일에 대한 설치 단추](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 이메일을 통한 배포는 간단하지만 개인 정보나 무단 배포에 대한 보호가 부족합니다. 응용 프로그램의 받는 사람이 극소수이며 해당 응용 프로그램을 배포하지 않는다고 확신하는 경우에만 이 방법이 적합합니다.
 
-<a name="Publishing_by_Web" />
 
 ## <a name="publishing-by-web"></a>웹으로 게시
 
 웹 서버를 통해 응용 프로그램을 배포할 수 있습니다. 이 작업은 웹 서버에 응용 프로그램을 업로드한 다음 사용자에게 다운로드 링크를 제공하여 수행합니다. Android 지원 장치가 이 링크로 이동하면 응용 프로그램을 다운로드하면 다운로드 완료 후 응용 프로그램이 자동으로 설치됩니다.
 
-<a name="Manually_Installing_an_APK" />
 
 ## <a name="manually-installing-an-apk"></a>수동으로 APK 설치
 

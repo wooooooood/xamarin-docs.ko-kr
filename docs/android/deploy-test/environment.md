@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9ba8fc1a82e932c01b8a07b49d9ae11ad1ceb81c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -42,7 +42,6 @@ Xamarin.Android 4.6부터 시스템 속성 및 환경 변수는 모두 앱별로
 
 Xamarin.Android는 `adb shell setprop debug.mono.env` 또는 `$(AndroidEnvironment)` 빌드 동작을 통해 설정할 수 있는 `XA_HTTP_CLIENT_HANDLER_TYPE` 변수를 지원합니다.
 
-<a name="XA_HTTP_CLIENT_HANDLER_TYPE" />
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
@@ -148,7 +147,7 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 ```
 
 > [!NOTE]
-> **참고:** 기본 Android 장치가 TLS 1.2를 지원해야 합니다.
+> 기본 Android 장치가 TLS 1.2를 지원해야 합니다.
 Android 5.0 이상은 TLS 1.2를 지원합니다.
 
 

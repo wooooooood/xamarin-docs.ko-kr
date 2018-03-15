@@ -31,7 +31,7 @@
 ## [플랫폼 기능](platform/index.md)
 ### [macOS Sierra 소개](platform/introduction-to-macos-sierra/index.md)
 #### [최신 macOS 앱 빌드](platform/introduction-to-macos-sierra/modern-cocoa-apps.md)
-#### [iOS 10 프레임워크 추가 변경 내용](platform/introduction-to-macos-sierra/additional-framework-changes.md)
+#### [추가 macOS Sierra 프레임워크 변경 내용](platform/introduction-to-macos-sierra/additional-framework-changes.md)
 #### [문제 해결](platform/introduction-to-macos-sierra/troubleshooting.md)
 ### [Mac 라이브러리 바인딩](platform/binding.md)
 ### [OpenTK 소개](platform/opentk.md)

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: fbf18bad2dbe227575f4d820a121eab6e91655a0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="connection-troubleshooting"></a>연결 문제 해결
 
@@ -45,15 +45,15 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 2. Mac에서 **원격 로그인**이 설정되었는지 확인합니다. **이 사용자만**에 대한 액세스를 설정하고, Mac 사용자를 목록 또는 그룹에 포함합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image1.png "이 사용자만에 대한 액세스 설정")](troubleshooting-images/troubleshooting-image1.png)
+    [![](troubleshooting-images/troubleshooting-image1.png "이 사용자 전용 액세스 설정")](troubleshooting-images/troubleshooting-image1.png#lightbox)
 
 3. 방화벽이 SSH의 기본 포트인 포트 22를 통해 들어오는 연결을 허용하는지 확인합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image2.png "방화벽이 포트 22를 통해 들어오는 연결을 허용하는지 확인")](troubleshooting-images/troubleshooting-image2.png)
+    [![](troubleshooting-images/troubleshooting-image2.png "방화벽이 포트 22를 통해 들어오는 연결을 허용하는지 확인")](troubleshooting-images/troubleshooting-image2.png#lightbox)
 
     **서명된 소프트웨어가 들어오는 연결을 수신하도록 자동으로 허용**을 해제하면 OS X은 연결 과정에서 들어오는 연결을 수신할 수 있도록 `mono-sgen` 또는 `mono-sgen32`를 허용해 줄 것을 요청하는 대화 상자를 표시합니다. 이 대화 상자에서 **허용**을 클릭합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image4a.png "이 대화 상자에서 [허용] 클릭")](troubleshooting-images/troubleshooting-image4a.png)
+    [![](troubleshooting-images/troubleshooting-image4a.png "이 대화 상자에서 허용 클릭")](troubleshooting-images/troubleshooting-image4a.png#lightbox)
 
 4. 해당 Mac에서 사용자 계정으로 로그인하여 GUI 세션이 활성화되었는지 확인합니다.
 
@@ -63,12 +63,12 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     예를 들어 아래 스크린샷에서 계정 이름은 **Amy Burns**가 아닌 **amyb**입니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image5a.png "터미널 앱에서 계정 이름 가져오기")](troubleshooting-images/troubleshooting-image5a.png)
+    [![](troubleshooting-images/troubleshooting-image5a.png "터미널 앱에서 계정 이름 가져오기")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
 
 
 6. Mac에 사용하는 IP 주소가 올바른지 확인합니다. IP 주소는 Mac의 **시스템 기본 설정 > 공유 > 원격 로그인**에서 찾을 수 있습니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image17.png "시스템 기본 설정 앱의 IP 주소")](troubleshooting-images/troubleshooting-image17.png)
+    [![](troubleshooting-images/troubleshooting-image17.png "시스템 기본 설정 앱의 IP 주소")](troubleshooting-images/troubleshooting-image17.png#lightbox)
 
 7. Mac의 IP 주소를 확인한 후에는 Windows의 `cmd.exe`에서 해당 주소에 대한 `ping`을 시도합니다.
 
@@ -80,7 +80,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
         ssh amyb@10.1.8.95
 
-<a name="stepnine">
+<a name="stepnine" />
 
 9. **8단계가 성공하면** 연결에 대해 `ls` 같은 간단한 명령을 실행해 볼 수 있습니다.
 
@@ -129,7 +129,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 - **버그 [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – **시스템 환경 설정 &gt; 사용자 &amp; 그룹**의 Mac 사용자에 대한 **고급 옵션** 상황에 맞는 메뉴의 **로그인 셸**이 **/bin/bash** 이외의 값으로 설정된 경우 Xamarin 4.1에서 이 문제가 발생할 수 있습니다. (Xamarin 4.2부터는 이 시나리오가 "연결할 수 없음" 오류 메시지로 연결됩니다.) **해결 방법**: **로그인 셸**을 **/bin/bash**의 원래 기본값으로 변경합니다.
 
-<a name="tryagain">
+<a name="tryagain" />
 
 ### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요."
 
@@ -153,7 +153,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     1. 터미널 명령 프롬프트에서 `ls /etc/ssh/sshd_config` 및 `ls /etc/sshd_config` 명령을 실행하여 **sshd\_config** 파일의 위치를 확인합니다. 나머지 단계에서는 "해당 파일 또는 디렉터리 없음" 오류 메시지를 반환하지 _않는_ 위치를 사용해야 합니다.
 
-        [ ![](troubleshooting-images/troubleshooting-image18.png "터미널에서 `ls /etc/ssh/sshd_config` 및 `ls /etc/sshd_config` 실행")](troubleshooting-images/troubleshooting-image18.png)
+        [![](troubleshooting-images/troubleshooting-image18.png "터미널에서 `ls /etc/ssh/sshd_config` 및 `ls /etc/sshd_config` 실행")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
     3. 터미널에서 `cp /etc/ssh/sshd_config "$HOME/Desktop/"` 명령을 실행하여 데스크톱으로 파일을 복사합니다.
 
@@ -171,7 +171,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     9. **시스템 환경 설정 &gt; 공유 &gt; 원격 로그인**에서 **원격 로그인**을 해제했다가 다시 설정하여 SSH 서버를 다시 시작합니다.
 
-<a name="clearing">
+<a name="clearing" />
 
 ### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Mac에서 브로커, IDB, 빌드 및 디자이너 에이전트 지우기
 
@@ -183,7 +183,7 @@ Mac 에이전트와 관련된 "설치", "업로드" 또는 "시작" 단계에서
 
 2. 컨트롤 키를 누른 상태로 **XMA** 폴더를 클릭하고 **휴지통으로 이동**을 선택합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image8.png "XMA 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image8.png)
+    [![](troubleshooting-images/troubleshooting-image8.png "XMA 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. 또한 Windows에는 지우는 것이 더 좋은 캐시가 있습니다. Windows에서 관리자 권한으로 명령 프롬프트를 엽니다.
 
@@ -221,7 +221,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 2. **다음에서 출력 보기** 드롭다운 메뉴를 클릭합니다.
 3. **Xamarin**을 선택합니다.
 
-[ ![](troubleshooting-images/troubleshooting-image11.png "[출력] 탭에서 Xamarin 선택")](troubleshooting-images/troubleshooting-image11.png)
+[![](troubleshooting-images/troubleshooting-image11.png "출력 탭에서 Xamarin 선택")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
 ### <a name="log-files"></a>로그 파일
 
@@ -236,18 +236,18 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
 3. Visual Studio에서 연결 오류가 발생하면 **도움말 > Xamarin > Zip 로그**에서 로그를 수집합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image12.png "도움말에서 로그 수집 > Xamarin > Zip 로그")](troubleshooting-images/troubleshooting-image12.png)
+    [![](troubleshooting-images/troubleshooting-image12.png "도움말에서 로그 수집 > Xamarin > Zip 로그")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
 4. .zip 파일을 열면 아래 예제와 비슷한 파일 목록이 표시됩니다. 연결 오류에서 가장 중요한 파일은 **\*Ide.log** 및 **\*Ide.svclog** 파일입니다. 두 파일에는 동일한 메시지가 약간 다른 형식으로 포함되어 있습니다. **.svclog**는 XML이고, 메시지를 탐색하려는 경우에 유용합니다. **.log**는 일반 텍스트이고, 명령줄 도구를 사용하여 메시지를 필터링하려는 경우에 유용합니다.
 
 
     모든 메시지를 탐색하려면 **.svclog** 파일을 선택하여 엽니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image13.png "svclog 파일 선택")](troubleshooting-images/troubleshooting-image13.png)
+    [![](troubleshooting-images/troubleshooting-image13.png "svclog 파일 선택")](troubleshooting-images/troubleshooting-image13.png#lightbox)
 
 5. **Microsoft Service Trace Viewer**에서 **.svclog** 파일이 열립니다. 메시지를 스레드 단위로 검색하면서 관련 메시지 그룹을 살펴볼 수 있습니다. 스레드 단위로 검색하려면 **Graph** 탭을 선택한 다음, **레이아웃 모드** 드롭다운 메뉴를 클릭하고 **스레드**를 선택합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image14.png "레이아웃 모드 드롭다운 메뉴를 클릭하고 스레드 선택")](troubleshooting-images/troubleshooting-image14.png)
+    [![](troubleshooting-images/troubleshooting-image14.png "레이아웃 모드 드롭다운 메뉴를 클릭하고 스레드 선택")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
 <a name="verboselogs" />
 
@@ -307,7 +307,7 @@ error : Building from a network share path is not supported at the moment. Pleas
 
 Mac에서 Xcode를 시작한 후 Apple 개발자 계정에 로그인되었는지 그리고 iOS 개발 프로필이 다운로드되었는지 확인합니다.
 
-[ ![](troubleshooting-images/troubleshooting-image7.png "Apple 개발자 계정에 로그인되었는지 그리고 iOS 개발 프로필이 다운로드되었는지 확인")](troubleshooting-images/troubleshooting-image7.png)
+[![](troubleshooting-images/troubleshooting-image7.png "Apple 개발자 계정에 로그인되었는지 및 iOS 개발 프로필이 다운로드되었는지 확인")](troubleshooting-images/troubleshooting-image7.png#lightbox)
 
 ### <a name="a-socket-operation-was-attempted-to-an-unreachable-network"></a>"연결할 수 없는 네트워크에서 소켓 작업을 시도했습니다."
 
@@ -323,7 +323,7 @@ Visual Studio가 MEF 구성 요소 캐시 새로 고침에 실패할 경우 이 
 
 이렇게 하면 Visual Studio MEF 구성 요소 캐시를 삭제하여 캐시 손상으로 인한 문제가 해결됩니다.
 
-<a name="errors">
+<a name="errors" />
 
 ### <a name="errors-due-to-existing-build-host-processes-on-the-mac"></a>Mac에 있는 기존 빌드 호스트 프로세스로 인한 오류
 
@@ -333,7 +333,7 @@ Visual Studio가 MEF 구성 요소 캐시 새로 고침에 실패할 경우 이 
 ps -A | grep mono
 ```
 
-[ ![](troubleshooting-images/troubleshooting-image10.png "Mac의 터미널에서 명령 실행")](troubleshooting-images/troubleshooting-image10.png)
+[![](troubleshooting-images/troubleshooting-image10.png "Mac의 터미널에서 명령 실행")](troubleshooting-images/troubleshooting-image10.png#lightbox)
 
 기존 프로세스를 종료하려면 다음 명령을 사용합니다.
 
@@ -353,7 +353,7 @@ killall mono
 
 2. 컨트롤 키를 누른 상태로 **mtbs** 폴더를 클릭하고 **휴지통으로 이동**을 선택합니다.
 
-    [ ![](troubleshooting-images/troubleshooting-image9.png "mtbs 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image9.png)
+    [![](troubleshooting-images/troubleshooting-image9.png "mtbs 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image9.png#lightbox)
 
 
 ## <a name="related-links"></a>관련 링크

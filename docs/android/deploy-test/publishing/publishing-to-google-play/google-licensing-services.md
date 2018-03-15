@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/20/2017
-ms.openlocfilehash: f1e7e36dfa1bfe122084f0525d83f06760ca1fe0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4ed2df994ace7f6de5ade78577e759bb811565c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="google-licensing-services"></a>Google 라이선스 서비스
 
@@ -26,7 +26,7 @@ Google 라이선스는 Google Play 서버와 응용 프로그램 간에 독점�
 
 Google 라이선스를 구현하는 응용 프로그램은 장치에서 Google Play 응용 프로그램이 호스트하는 서비스에 대한 요청을 수행합니다. 그러면 Google Play가 Google 라이선스 서버에 이 요청을 보내고 해당 서버가 라이선스 상태를 응답합니다. 
 
-[ ![라이선스 서버 워크플로 다이어그램](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png)
+[![라이선스 서버 워크플로 다이어그램](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 위의 다이어그램은 이 워크플로 보여줍니다. 
 
@@ -36,7 +36,6 @@ Google 라이선스를 구현하는 응용 프로그램은 장치에서 Google P
 
 Google 라이선스 서비스도 APK 확장 파일의 핵심 구성 요소입니다(이 문서의 후반부에서 논의). APK 확장 파일은 Google 라이선스 서비스를 사용하여 다운로드되는 확장 파일의 URL을 가져옵니다.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>요구 사항
 

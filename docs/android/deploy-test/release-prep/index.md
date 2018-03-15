@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f36a29b00e0393ac0a2d65e7ebe7d290bbdb89a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 응용 프로그램 준비
 
-<a name="Compile_the_Application_for_Release" />
 
 응용 프로그램을 코딩하고 테스트한 후에 배포할 패키지를 준비해야 합니다. 이 패키지를 준비하는 첫 번째 작업은 릴리스할 응용 프로그램을 빌드하는 것입니다. 여기에는 주로 일부 응용 프로그램 특성을 설정하는 작업이 포함됩니다.
 
@@ -53,13 +52,13 @@ ms.lasthandoff: 02/27/2018
 
 Visual Studio 2015 이상에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션을 통해 응용 프로그램 아이콘을 지정합니다.
 
-[ ![응용 프로그램 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png)
+[![응용 프로그램 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 응용 프로그램** 섹션을 통해 응용 프로그램 아이콘을 지정할 수 있습니다.
 
-[ ![응용 프로그램 아이콘 설정](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png)
+[![응용 프로그램 아이콘 설정](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
 
@@ -77,13 +76,13 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션에서 이 값을 설정할 수 있습니다.
 
-[ ![버전 번호 설정](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png)
+[![버전 번호 설정](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 이러한 값은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **빌드 > Android 응용 프로그램** 섹션을 통해 설정할 수 있습니다.
 
-[ ![버전 번호 설정](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png)
+[![버전 번호 설정](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png#lightbox)
 
 -----
 
@@ -93,7 +92,6 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 불필요한 *관리* 코드를 제거하는 Xamarin.Android 링커와, 사용하지 않는 *Java 바이트코드*를 제거하는 Android SDK *ProGuard* 도구 조합을 통해 Xamarin.Android APK를 더 작게 만들 수 있습니다. 빌드 프로세스에서는 먼저 Xamarin.Android 링커를 사용하여 관리 코드(C#) 수준에서 앱을 최적화한 다음 ProGuard(사용하도록 설정된 경우)를 사용하여 Java 바이트코드 수준에서 APK를 최적화합니다.
 
-<a name="Configure_the_Linker" />
 
 ### <a name="configure-the-linker"></a>링커 구성
 
@@ -107,7 +105,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 프로젝트 **속성**의 **Android 옵션** 섹션을 통해 링커 옵션을 설정합니다.
 
-[ ![링커 옵션](images/vs/03-linking-sml.png)](images/vs/03-linking.png)
+[![링커 옵션](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
 
 **연결** 풀다운 메뉴는 링커 제어를 위한 다음 옵션을 제공합니다.
 
@@ -122,7 +120,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 링커 옵션은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 빌드** 섹션에 있는 **링커** 탭을 통해 설정합니다.
 
-[![링커 옵션](images/xs/03-linking-sml.png)](images/xs/03-linking.png)
+[![링커 옵션](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
 링커 제어를 위한 옵션은 다음과 같습니다.
 
@@ -136,7 +134,6 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 연결에는 의도치 않은 부작용이 있을 수 있으므로 물리적 장치의 릴리스 모드에서 응용 프로그램을 다시 테스트하는 것이 중요합니다.
 
-<a name="proguard" />
 
 ### <a name="proguard"></a>ProGuard
 
@@ -148,11 +145,11 @@ ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Proguard 빌드 작업](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png)
+[![Proguard 빌드 작업](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Proguard 빌드 작업](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png)
+[![Proguard 빌드 작업](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -228,7 +225,6 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 **AOT 컴파일** 옵션에는 엔터프라이즈 이상의 라이선스가 필요합니다. **AOT 컴파일**은 프로젝트가 릴리스 모드로 구성된 경우에만 사용할 수 있고 기본적으로 사용하지 않게 설정되어 있습니다. AOT에 대한 자세한 내용은 [AOT](http://www.mono-project.com/docs/advanced/aot/)를 참조하세요.
 
-<a name="llvm" />
 
 #### <a name="llvm-optimizing-compiler"></a>LLVM 최적화 컴파일러
 
@@ -246,31 +242,28 @@ _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며
 
 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 옵션** 섹션에서 패키지 속성을 설정할 수 있습니다.
 
-[ ![패키지 속성](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png)
+[![패키징 속성](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 다음 스크린 샷에서처럼 **프로젝트 옵션**에서 패키지 속성을 설정할 수 있습니다.
 
-[ ![패키지 속성](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png)
+[![패키징 속성](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
 **공유 런타임 사용**, **빠른 배포 사용** 등과 같이 이러한 여러 속성은 디버그 모드용입니다. 그러나 응용 프로그램이 릴리스 모드용으로 구성되었을 때 앱이 [크기 및 실행 속도를 위해 최적화되고](#shrink_apk), [변조를 방지하며](#protect_app), 다양한 아키텍처 및 크기 제한을 지원하도록 패키징할 수 있는 방법을 결정하는 다른 설정이 있습니다.
 
-<a name="Specify_Supported_Architectures" />
 
 ### <a name="specify-supported-architectures"></a>지원되는 아키텍처 지정
 
 Xamarin.Android 앱의 릴리스를 준비할 때는 지원되는 CPU 아키텍처를 지정해야 합니다. 단일 APK가 여러 서로 다른 아키텍처를 지원하는 머신 코드를 포함할 수 잇습니다. 여러 CPU 아키텍처 지원에 대한 세부 정보는 [CPU 아키텍처](~/android/app-fundamentals/cpu-architectures.md)를 참조하세요.
 
-<a name="multiabi" />
 
 ### <a name="generate-one-package-apk-per-selected-abi"></a>선택한 ABI마다 한 패키지(.APK) 생성
 
 이 옵션을 사용하는 경우 모든 지원되는 ABI에 대해 대형 단일 APK를 만드는 것이 아니라, 지원되는 ABI 각각에 대해 하나의 APK가 만들어집니다([CPU 아키텍처](~/android/app-fundamentals/cpu-architectures.md)에서 설명한 것처럼 **고급** 탭). 이 옵션은 프로젝트가 릴리스 모드로 구성되었고 기본적으로 사용하지 않게 설정된 경우에만 사용할 수 있습니다.
 
-<a name="multidex" />
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -305,30 +298,30 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 게시 프로세스를 시작하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **보관...**  바로 가기 메뉴 항목을 선택합니다.
 
-[ ![앱 보관](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png)
+[![앱 보관](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 **보관...** 은 **Archive Manager**를 실행하고 이 스크린 샷에서처럼 앱 번들을 보관하는 프로세스를 시작합니다.
 
-[ ![Archive Manager](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png)
+[![보관 관리자](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 보관 파일을 만드는 또 다른 방법은 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **모두 보관...**을 선택하는 것입니다. 그러면 솔루션을 빌드하고 보관 파일을 생성할 수 있는 모든 Xamarin 프로젝트를 보관합니다.
 
-[ ![모두 보관](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png)
+[![모두 보관](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
 
 **보관** 및 **모두 보관**에서는 모두 **Archive Manager**가 자동으로 시작됩니다. **Archive Manager**를 직접 시작하려면 **도구 > Archive Manager...** 메뉴 항목을 클릭합니다.
 
-[ ![Archive Manager 시작](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png)
+[![보관 관리자 시작](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 **솔루션** 노드를 마우스 오른쪽 단추로 클릭하고 **보관 보기**를 선택하면 언제든 솔루션의 보관 파일을 볼 수 있습니다.
 
-[ ![보관 파일 보기](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png)
+[![보관 파일 보기](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png#lightbox)
 
 ### <a name="the-archive-manager"></a>Archive Manager
 
 **Archive Manager**는 **솔루션 목록** 창, **보관 목록**, **세부 정보 패널**로 구성됩니다.
 
-[ ![Archive Manager 창](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png)
+[![보관 관리자 창](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 **솔루션 목록**은 보관된 프로젝트가 하나 이상 있는 모든 솔루션을 표시합니다. **솔루션 목록**에는 다음 섹션이 포함됩니다.
 
@@ -348,11 +341,11 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 응용 프로그램의 보관 버전을 게시할 준비가 되면 **Archive Manager**에서 보관 파일을 선택하고 **배포...** 단추를 클릭합니다.
 
-[ ![배포 단추](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png)
+[![배포 단추](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
 **배포 채널** 대화 상자에는 앱 관련 정보, 배포 워크플로 진행률 표시, 배포 채널 선택이 나타납니다. 첫 번째 실행에서는 두 가지 선택 항목이 표시됩니다.
 
-[ ![배포 채널 선택](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png)
+[![배포 채널 선택](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
 
 다음 배포 채널 중 하나를 선택할 수 있습니다.
 
@@ -364,15 +357,15 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 게시 프로세스를 시작하려면 **빌드 > 게시를 위해 보관**을 선택합니다.
 
-[ ![게시를 위해 보관](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png)
+[![게시를 위해 보관](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
 **게시를 위해 보관**은 프로젝트를 빌드하고 보관 파일에 번들로 묶습니다. **모두 보관** 메뉴 선택은 솔루션에서 보관 가능한 모든 프로젝트를 보관하게 됩니다. 두 경우 모두 빌드 및 번들 작업이 완료되면 자동으로 **Archive Manager**가 열립니다.
 
-[ ![보관 파일 보기](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png)
+[![보관 파일 보기](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
 이 예제에서는 **Archive Manager**가 하나의 보관된 응용 프로그램인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관파일과 함께 저장할 수 있습니다. Xamarin.Android 응용 프로그램의 보관된 버전을 게시하려면 **Archive Manager**에서 앱을 선택하고 다음과 같이 **서명 및 배포...**를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
 
-[ ![서명 및 배포](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png)
+[![서명 및 배포](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 
 여기에서는 배포 채널을 선택할 수 있습니다.

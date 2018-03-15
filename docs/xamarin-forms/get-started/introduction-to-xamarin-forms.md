@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 593e720e4a6125e2ef4a1c9488186cb2c04dcd66
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: be4b0c907774c33dfcd1818da167acb2dc3b04dd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 소개
 
@@ -45,7 +45,7 @@ Xamarin.Forms에서 사용자 인터페이스를 만드는 기술에는 두 가�
 
 Mac용 Visual Studio 및 Visual Studio에서 기본 Xamarin.Forms 앱 템플릿은 사용자에게 텍스트를 표시하는 가능한 가장 간단한 Xamarin.Forms 솔루션을 만듭니다. 응용 프로그램을 실행하는 경우, 다음 스크린샷과 비슷하게 나타납니다.
 
-[![](introduction-to-xamarin-forms-images/image05-sml.png "기본 Xamarin.Forms 응용 프로그램")](introduction-to-xamarin-forms-images/image05.png "기본 Xamarin.Forms 응용 프로그램")
+[![](introduction-to-xamarin-forms-images/image05-sml.png "기본 Xamarin.Forms 응용 프로그램")](introduction-to-xamarin-forms-images/image05.png#lightbox "기본 Xamarin.Forms 응용 프로그램")
 
 스크린샷의 각 화면은 Xamarin.Forms에 있는 *페이지*에 해당합니다. [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)은 Android에서 *활동*, iOS에서 *뷰-컨트롤러* 또는 UWP(유니버설 Windows 플랫폼)에서 *페이지*를 나타냅니다. 위 스크린샷의 샘플은 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 개체를 인스턴스화하고 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)을 표시하기 위해 그것을 사용합니다.
 
@@ -249,7 +249,7 @@ public class StackLayoutExample : ContentPage
 
 기본적으로 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)은 다음 스크린샷과 같이 세로 방향이라고 가정합니다.
 
-[ ![](introduction-to-xamarin-forms-images/image09-sml.png "세로 StackLayout")](introduction-to-xamarin-forms-images/image09.png "세로 StackLayout")
+[![](introduction-to-xamarin-forms-images/image09-sml.png "세로 StackLayout")](introduction-to-xamarin-forms-images/image09.png#lightbox "세로 StackLayout")
 
 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)의 방향은 다음 XAML 코드 예제에서 설명한 것처럼 가로 방향으로 바뀔 수 있습니다.
 
@@ -286,7 +286,7 @@ public class StackLayoutExample: ContentPage
 
 다음 스크린샷은 결과 레이아웃을 보여줍니다.
 
-[![](introduction-to-xamarin-forms-images/image10-sml.png "가로 StackLayout")](introduction-to-xamarin-forms-images/image10.png "가로 StackLayout")
+[![](introduction-to-xamarin-forms-images/image10-sml.png "가로 StackLayout")](introduction-to-xamarin-forms-images/image10.png#lightbox "가로 StackLayout")
 
 컨트롤의 크기는 다음 XAML 코드 예제에서 설명한 것처럼 `HeightRequest`과 `WidthRequest` 속성을 통해 설정할 수 있습니다.
 
@@ -329,7 +329,7 @@ Content = new StackLayout
 
 다음 스크린샷은 결과 레이아웃을 보여줍니다.
 
-[![](introduction-to-xamarin-forms-images/image11-sml.png "LayoutOptions을 사용한 가로 StackLayout")](introduction-to-xamarin-forms-images/image11.png "LayoutOptions을 사용한 가로 StackLayout")
+[![](introduction-to-xamarin-forms-images/image11-sml.png "LayoutOptions을 사용한 가로 StackLayout")](introduction-to-xamarin-forms-images/image11.png#lightbox "LayoutOptions을 사용한 가로 StackLayout")
 
 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 클래스에 대한 자세한 내용은 [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
 

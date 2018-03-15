@@ -3,16 +3,17 @@ title: "iOS 시작"
 description: "Hello World에서 Hello 앱 스토어로"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
+ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/23/2016
-ms.openlocfilehash: 1c59a67a87087a821339e98bcdcc004a342e311a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01e4d2e42f61145f220545c832bcbaf1d8a994f1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="getting-started-with-ios"></a>iOS 시작
 
@@ -45,3 +46,9 @@ Mac용 Visual Studio 또는 Visual Studio에서 Xamarin.iOS를 설정하고 실�
 ##  <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Objective-C 개발자용 Xamarin](objective-c-developers/index.md)
 
 Xamarin 플랫폼으로 전환하는 Objective-C 개발자를 위한 정보를 제공합니다.
+
+## <a name="xamarin-university-video"></a>Xamarin University 비디오
+
+> [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
+
+**Visual Studio에서 Xamarin을 사용하여 첫 번째 iOS 앱 빌드, 작성자: [Xamarin University](https://university.xamarin.com)**

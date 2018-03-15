@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0fff4de7420bceda8c15ae33b03886eb6b332aeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-package-size"></a>응용 프로그램 패키지 크기
 
@@ -28,13 +28,13 @@ Xamarin.Android는 다양한 메커니즘을 사용하여 패키지 크기를 �
 
 완전히 포함된 응용 프로그램을 제공하기 위해 패키지에는 응용 프로그램, 관련 라이브러리, 콘텐츠, Mono 런타임 및 필요한 BCL(기본 클래스 라이브러리) 어셈블리가 포함되어야 합니다. 예를 들어 기본 "Hello World" 템플릿을 사용할 경우 전체 패키지 빌드의 콘텐츠는 다음과 같이 표시됩니다.
 
-[ ![링커 실행 전 패키지 크기](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![링커 실행 전 패키지 크기](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15.8MB는 예상보다 더 큰 다운로드 크기입니다. 문제는 BCL 라이브러리입니다. mscorlib, System 및 Mono.Android를 포함하고 있고, 응용 프로그램을 실행하는 데 필요한 많은 구성 요소를 제공하기 때문입니다. 그러나 사용자가 응용 프로그램에서 사용하지 않을 수 있는 기능도 제공하므로 이러한 구성 요소는 제외하는 것이 좋습니다.
 
 배포용 응용 프로그램을 빌드할 때는 응용 프로그램을 살펴보고 직접 사용되지 않는 코드를 제거하는 연결이라고 하는 프로세스를 실행합니다. 이 프로세스는 [가비지 수집](~/android/internals/garbage-collection.md)에서 힙 할당 메모리에 제공하는 기능과 유사합니다. 단, 연결 프로세스는 개체를 통해 작동하지 않고 코드를 통해 작동합니다. 예를 들어 System.dll에 이메일을 주고받는 데 사용되는 완전한 네임스페이스가 있지만 응용 프로그램에서 이 기능을 활용하지 않는 경우 해당 코드는 공간 낭비일 뿐입니다. Hello World 응용 프로그램에서 링커를 실행한 후 패키지의 모습은 다음과 같습니다.
 
-[ ![링커 실행 후 패키지 크기](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![링커 실행 후 패키지 크기](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 보시다시피 이는 사용하지 않는 BCL 공간을 상당 부분 제거해 줍니다. 최종 BCL 크기는 응용 프로그램에서 실제로 사용하는 구성 요소에 따라 달라집니다. 예를 들어 ApiDemo라는 좀 더 견고한 샘플 응용 프로그램을 살펴보면 ApiDemo가 Hello, World보다 BCL을 더 많이 사용하기 때문에 BCL 구성 요소의 크기가 증가한 것을 알 수 있습니다.
 
@@ -51,7 +51,7 @@ Android는 상대적으로 패키지를 복사하고 설치하는 속도가 느�
 
 장치에서 처음 디버깅할 때는 *공유 런타임*과 *공유 플랫폼*이라는 대규모 패키지 두 개를 복사합니다. 공유 런타임에는 Mono Runtime 및 BCL이 포함되고, 공유 플랫폼에는 Android API 수준별 어셈블리가 포함됩니다.
 
-[ ![공유 런타임 패키지 크기](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![공유 런타임 패키지 크기](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 이러한 핵심 구성 요소를 복사하는 작업은 시간이 상당히 오래 걸리므로 한 번만 수행하며, 그래도 디버그 모드에서 실행 중인 모든 후속 응용 프로그램이 이러한 구성 요소를 활용할 수 있습니다. 마지막으로, 작고 빠른 실제 응용 프로그램을 복사합니다.
 

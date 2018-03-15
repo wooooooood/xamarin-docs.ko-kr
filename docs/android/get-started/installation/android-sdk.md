@@ -7,12 +7,12 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 66ed0965f1ed01be129f22996e50bdea89a95287
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 585bcac193d6824bc7c96092c14e40fd7971b0e2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-sdk-setup"></a>Android SDK 설정
 
@@ -30,7 +30,7 @@ _Visual Studio에는 Google의 독립 실행형 SDK Manager를 대체하는 Andr
 이 가이드에서는 Mac(또는 [Windows](?tabs=vswin))용 Visual Studio를 위해 Xamarin Android SDK Manager를 설치하고 사용하는 방법을 설명합니다.
 
 > [!NOTE]
-> **참고:** 이 가이드는 Visual Studio 2017 및 Mac용 Visual Studio에만 적용됩니다  
+> 이 가이드는 Visual Studio 2017 및 Mac용 Visual Studio에만 적용됩니다.  
 
 -----
 
@@ -38,8 +38,6 @@ Xamarin Android SDK Manager를 사용하여 Xamarin.Android 앱 개발에 필요
 이는 더 이상 사용되지 않는 Google의 독립 실행형 SDK Manager를 대체합니다.
 
 Android SDK에 포함되어 있는 SDK Manager 대신 Xamarin Android SDK Manager를 사용해야 하는 이유는 무엇일까요? Android SDK Tools 패키지 버전 25.2.3에서 Google은 Android SDK를 유지하기 위해 새로운 도구를 도입했습니다. **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)**라는 이 새 도구는 Android SDK의 독립 실행형 UI 관리자를 대체하는 명령줄 유틸리티입니다. 따라서 SDK Tools 버전 26.0.1(Android 8.0에 필요) 이상으로 업데이트하고 UI 인터페이스를 통해 Android SDK를 계속 관리하려는 경우 Xamarin Android SDK Manager를 사용해야 합니다.
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
@@ -64,10 +62,8 @@ Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치
 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함). API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> **참고:** Xamarin.Android는 JDK 9를 지원하지 않습니다.
+> Xamarin.Android는 JDK 9를 지원하지 않습니다.
 
-
-<a name="installation" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -86,7 +82,6 @@ Visual Studio 2017을 이미 설치한 경우 [Visual Studio 2017 수정](https:
  
 -----
 
-<a name="sdk-manager" /> 
  
 ## <a name="sdk-manager"></a>SDK Manager 
 
@@ -94,11 +89,11 @@ Visual Studio 2017을 이미 설치한 경우 [Visual Studio 2017 수정](https:
 
 Visual Studio의 SDK Manager를 시작하려면 **도구 -> Android-> Android SDK Manager**를 클릭합니다.
 
-[![Android SDK Manager 메뉴 항목의 위치](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png)
+[![Android SDK Manager 메뉴 항목의 위치](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 **Xamarin Android SDK Manager**는 **Android SDK 및 도구**에서 열 수 있습니다. 이 화면에는 **플랫폼** 및 **도구**라는 두 개의 탭이 있습니다.
 
-[![플랫폼 탭에서 열린 Android SDK Manager의 스크린샷](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png)
+[![플랫폼 탭에서 열린 Android SDK Manager의 스크린샷](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 **Android SDK 및 도구** 화면에 대해서는 다음 섹션에서 자세히 설명합니다.
 
@@ -117,7 +112,6 @@ Xamarin Android SDK Manager의 탭에 대해서는 다음 섹션에서 자세히
 -----
 
 
-<a name="sdkmanager-locations" /> 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -151,7 +145,6 @@ SDK Manager가 기본 위치에 있는 SDK, NDK 및 JDK를 찾도록 하려면 *
 
 -----
 
-<a name="sdkmanager-tools" /> 
 
 ### <a name="tools-tab"></a>도구 탭
 
@@ -162,7 +155,7 @@ SDK Manager가 기본 위치에 있는 SDK, NDK 및 JDK를 찾도록 하려면 *
 
 예를 들어 Google Android Emulator 패키지를 다운로드하려면 **Android Emulator** 옆에 있는 확인 표시를 클릭하고 **변경 내용 적용** 단추를 클릭합니다.
 
-[![도구 탭에서 Android Emulator 설치](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png)
+[![도구 탭에서 Android Emulator 설치](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -188,7 +181,6 @@ _일부 구성 요소를 업데이트할 수 있습니다. 지금 업데이트�
 사용 약관에 동의하려면 **동의**를 클릭합니다. 창 아래쪽에 다운로드 및 설치 진행률을 나타내는 진행률 표시줄이 표시됩니다. 설치가 완료되면 **도구** 탭에 선택한 도구 및 추가 기능이 설치된 것으로 표시됩니다.
 
 
-<a name="xvs-platforms" /> 
 
 ### <a name="platforms-tab"></a>플랫폼 탭
 
@@ -196,7 +188,7 @@ _일부 구성 요소를 업데이트할 수 있습니다. 지금 업데이트�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![플랫폼 창의 스크린샷](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png)
+[![플랫폼 창의 스크린샷](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -224,7 +216,7 @@ SDK에 다른 플랫폼을 추가하려면 확인 표시가 나타날 때까지 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android SDK에 Android 7.1 Nougat 구성 요소를 추가하는 예제](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png)
+[![Android SDK에 Android 7.1 Nougat 구성 요소를 추가하는 예제](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -236,7 +228,7 @@ SDK만 설치하려면 플랫폼 옆에 있는 상자를 한 번 클릭합니다
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![일부 Android 7.1 구성 요소를 추가하는 예제](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png)
+[![일부 Android 7.1 구성 요소를 추가하는 예제](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -270,7 +262,6 @@ SDK만 설치하려면 플랫폼 옆에 있는 상자를 한 번 클릭합니다
 이제 가장 높은 최신 Android API 수준을 대상으로 앱을 개발할 수 있습니다.
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>요약
 

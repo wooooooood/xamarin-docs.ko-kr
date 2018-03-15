@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7e964f2bdb523720e044c309a2ec0801080be59b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fdf5d1236c0d8f797bc53d01eada1777b1d92373
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-mac"></a>Hello, Mac
 
@@ -22,7 +22,7 @@ Xamarin.Mac을 사용하면 *Objective-C* 및 *Xcode*에서 개발할 때 사용
 
 이 문서에서는 단추 클릭 횟수를 계산하는 간단한 **Hello, Mac** 앱을 빌드하는 프로세스를 살펴보면서 Xamarin.Mac, Mac용 Visual Studio 및 Xcode의 Interface Builder를 사용하여 Mac 앱을 만드는 데 필요한 핵심 개념을 소개합니다.
 
-[ ![](hello-mac-images/run02.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png)
+[![](hello-mac-images/run02.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png#lightbox)
 
 다음 개념을 다룹니다.
 
@@ -57,29 +57,29 @@ Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 �
 
 1. Mac용 Visual Studio 시작:
 
-    [ ![](hello-mac-images/setup01.png "Mac용 Visual Studio 기본 인터페이스")](hello-mac-images/setup01.png)
+    [![](hello-mac-images/setup01.png "Mac용 Visual Studio 기본 인터페이스")](hello-mac-images/setup01.png#lightbox)
 
 2. 화면의 왼쪽 위 모서리에서 **새 솔루션...** 링크를 클릭하여 **새 프로젝트** 대화 상자를 엽니다.
 
-    [ ![](hello-mac-images/setup03.png "Mac용 Visual Studio에서 새 솔루션 만들기")](hello-mac-images/setup02.png)
+    [![](hello-mac-images/setup03.png "Mac용 Visual Studio에서 새 솔루션 만들기")](hello-mac-images/setup02.png#lightbox)
 
 3. **Mac** > **앱** > **Cocoa 앱**을 선택하고 **다음** 단추를 클릭합니다.
 
-    [ ![](hello-mac-images/setup03.png "Cocoa 앱 선택")](hello-mac-images/setup03.png)
+    [![](hello-mac-images/setup03.png "Cocoa 앱 선택")](hello-mac-images/setup03.png#lightbox)
 
 4. **앱 이름**으로 `Hello_Mac`을 입력하고, 나머지는 기본값을 유지합니다. **다음**을 클릭합니다.
 
-    [ ![](hello-mac-images/setup05.png "앱 이름 설정")](hello-mac-images/setup05.png)
+    [![](hello-mac-images/setup05.png "앱 이름 설정")](hello-mac-images/setup05.png#lightbox)
 
 4. 여러 다양한 프로젝트를 저장하는 솔루션을 만들 때 개발자는 다른 **솔루션 이름**을 설정하고 싶겠지만, 여기서는 이 예제의 목적 달성을 위해 기본값인 **Project Name**으로 둡니다.
 
-    [ ![](hello-mac-images/setup04.png "새 솔루션 세부 정보 확인")](hello-mac-images/setup04.png)
+    [![](hello-mac-images/setup04.png "새 솔루션 세부 정보 확인")](hello-mac-images/setup04.png#lightbox)
 
 5. **만들기** 단추를 클릭합니다.
 
 Mac용 visual Studio가 새 Xamarin.Mac 앱을 만들고 앱의 솔루션에 추가되는 기본 파일을 표시합니다.
 
- [ ![](hello-mac-images/project01.png "새 솔루션 기본 보기")](hello-mac-images/project01.png)
+ [![](hello-mac-images/project01.png "새 솔루션 기본 보기")](hello-mac-images/project01.png#lightbox)
 
 Mac용 Visual Studio는 **솔루션** 및 **프로젝트**를 Visual Studio와 똑같은 방식으로 사용합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등을 포함할 수 있습니다. 여기서는 Mac용 Visual Studio가 솔루션과 응용 프로그램 프로젝트를 자동으로 만들었습니다.
 
@@ -246,7 +246,7 @@ Xamarin.Mac 앱 프로젝트를 만들고 구성 요소에 대한 기본적인 �
 
 `Info.plist` 파일은 **이름**, **번들 식별자** 등 Xamarin.Mac 앱에 대한 정보를 포함합니다.
 
-[ ![](hello-mac-images/infoplist01.png "Mac용 Visual Studio plist 편집기")](hello-mac-images/infoplist01.png)
+[![](hello-mac-images/infoplist01.png "Mac용 Visual Studio plist 편집기")](hello-mac-images/infoplist01.png#lightbox)
 
 그리고 **주 인터페이스** 드롭다운 아래에 Xamarin.Mac 앱의 사용자 인터페이스를 표시하는 데 사용되는 _스토리보드_를 정의합니다. 위의 예에서 드롭다운의 `Main`은 **솔루션 탐색기**의 프로젝트 소스 트리에 있는 `Main.storyboard`와 관련되어 있습니다. 또한 아이콘(여기서는 AppIcons)을 포함하는 *자산 카탈로그*를 지정하여 앱의 아이콘을 정의합니다.
 
@@ -254,7 +254,7 @@ Xamarin.Mac 앱 프로젝트를 만들고 구성 요소에 대한 기본적인 �
 
 앱의 `Entitlements.plist` 파일은 Xamarin.Mac 앱이 보유한 **샌드박싱** 및 **iCloud** 같은 자격을 제어합니다.
 
-[ ![](hello-mac-images/entitlements01.png "Mac용 Visual Studio 자격 편집기")](hello-mac-images/entitlements01.png)
+[![](hello-mac-images/entitlements01.png "Mac용 Visual Studio 자격 편집기")](hello-mac-images/entitlements01.png#lightbox)
 
 Hello World 예제에서는 자격이 필요 없습니다. 다음 섹션에서는 Xcode의 Interface Builder를 사용하여 `Main.storyboard` 파일을 편집하고 Xamarin.Mac 앱의 UI를 정의하는 방법을 보여줍니다.
 
@@ -266,11 +266,11 @@ Apple에서는 Xcode의 일부로 개발자가 디자이너에서 시각적으�
 
 시작하려면 Xcode 및 Interface Builder에서 파일을 편집할 수 있도록 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
 
-[ ![](hello-mac-images/xcode01.png "솔루션 탐색기의 Main.storyboard 파일")](hello-mac-images/xcode01.png)
+[![](hello-mac-images/xcode01.png "솔루션 탐색기의 Main.storyboard 파일")](hello-mac-images/xcode01.png#lightbox)
 
 그러면 Xcode가 실행되고 다음과 같이 표시됩니다.
 
-[ ![](hello-mac-images/xcode02.png "기본 Xcode Interface Builder 보기")](hello-mac-images/xcode02.png)
+[![](hello-mac-images/xcode02.png "기본 Xcode Interface Builder 보기")](hello-mac-images/xcode02.png#lightbox)
 
 인터페이스 디자인을 시작하기 전에, Xcode를 간략하게 살펴보면서 우리가 사용할 주요 기능을 알아보겠습니다.
 
@@ -284,7 +284,7 @@ Apple에서는 Xcode의 일부로 개발자가 디자이너에서 시각적으�
 
 Mac용 Visual Studio에서 Xcode로 `.storyboard` 파일을 열면 왼쪽에는 **프로젝트 탐색기**, 가운데에는 **인터페이스 계층 구조** 및 **인터페이스 편집기**, 오른쪽에는 **속성 및 유틸리티** 섹션이 표시됩니다.
 
-[ ![](hello-mac-images/xcode03.png "Xcode의 Interface Builder 내 여러 섹션")](hello-mac-images/xcode03.png)
+[![](hello-mac-images/xcode03.png "Xcode에서 Interface Builder의 다양한 섹션")](hello-mac-images/xcode03.png#lightbox)
 
 다음 섹션에서는 각 Xcode 기능이 하는 일 및 각 기능을 사용하여 Xamarin.Mac 앱의 인터페이스를 만드는 방법을 살펴보겠습니다.
 
@@ -314,13 +314,13 @@ Xcode에서 편집하기 위해 `.storyboard` 파일을 열면 Mac용 Visual Stu
 
 **속성 및 유틸리티** 섹션은 크게 **속성**(검사기라고도 함) 및 **라이브러리**의 두 섹션으로 나뉩니다.
 
-[ ![](hello-mac-images/xcode04.png "속성 검사기")](hello-mac-images/xcode04.png)
+[![](hello-mac-images/xcode04.png "속성 검사기")](hello-mac-images/xcode04.png#lightbox)
 
 처음에는 이 섹션이 거의 비어 있지만, 개발자가 **인터페이스 편집기** 또는 **인터페이스 계층 구조**에서 요소를 선택하면 **속성** 섹션은 조정 가능한 특정 요소 및 속성에 대한 정보로 채워집니다.
 
 **속성** 섹션 내에는 다음 그림처럼 8개의 *검사기 탭*이 있습니다.
 
-[ ![](hello-mac-images/xcode05.png "모든 검사기에 대한 개요")](hello-mac-images/xcode05.png)
+[![](hello-mac-images/xcode05.png "모든 검사기 개요")](hello-mac-images/xcode05.png#lightbox)
 
 <a name="Properties_Utility_Types" />
 
@@ -339,7 +339,7 @@ Xcode에서 편집하기 위해 `.storyboard` 파일을 열면 Mac용 Visual Stu
 
 **라이브러리** 섹션을 사용하여 디자이너에 배치할 컨트롤 및 개체를 찾아 그래픽으로 사용자 인터페이스를 빌드할 수 있습니다.
 
-[ ![](hello-mac-images/xcode06.png "Xcode 라이브러리 검사기")](hello-mac-images/xcode06.png)
+[![](hello-mac-images/xcode06.png "Xcode 라이브러리 검사기")](hello-mac-images/xcode06.png#lightbox)
 
 <a name="Creating_the_Interface" />
 
@@ -351,31 +351,31 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 1. Xcode의 **라이브러리 섹션**에서 **누름 단추**를 끕니다.
 
-    [ ![](hello-mac-images/xcode07.png "라이브러리 검사기에서 NSButton 선택")](hello-mac-images/xcode07.png)
+    [![](hello-mac-images/xcode07.png "라이브러리 검사기에서 NSButton 선택")](hello-mac-images/xcode07.png#lightbox)
 
 2. **인터페이스 편집기**에서 **보기**(**창 컨트롤러** 아래)에 단추를 놓습니다.
 
-    [ ![](hello-mac-images/xcode08.png "인터페이스 디자인에 단추 추가")](hello-mac-images/xcode08.png)
+    [![](hello-mac-images/xcode08.png "인터페이스 디자인에 단추 추가")](hello-mac-images/xcode08.png#lightbox)
 
 3. **특성 검사기**에서 **제목** 속성을 클릭하고 단추 제목을 `Click Me`로 변경합니다.
 
-    [ ![](hello-mac-images/xcode09.png "단추의 속성 설정")](hello-mac-images/xcode09.png)
+    [![](hello-mac-images/xcode09.png "단추의 속성 설정")](hello-mac-images/xcode09.png#lightbox)
 
 4. **라이브러리 섹션**에서 **레이블**을 끕니다.
 
-    [ ![](hello-mac-images/xcode10.png "라이브러리 검사기에서 레이블 선택")](hello-mac-images/xcode10.png)
+    [![](hello-mac-images/xcode10.png "라이브러리 검사기에서 레이블 선택")](hello-mac-images/xcode10.png#lightbox)
 
 5. **인터페이스 편집기**에서 단추 옆에 있는 **창**에 레이블을 놓습니다.
 
-    [ ![](hello-mac-images/xcode11.png "인터페이스 디자인에 레이블 추가")](hello-mac-images/xcode11.png)
+    [![](hello-mac-images/xcode11.png "인터페이스 디자인에 레이블 추가")](hello-mac-images/xcode11.png#lightbox)
 
 6. 레이블의 오른쪽 핸들을 잡고 창의 가장자리 근처까지 끕니다.
 
-    [ ![](hello-mac-images/xcode12.png "레이블 크기 조정")](hello-mac-images/xcode12.png)
+    [![](hello-mac-images/xcode12.png "레이블 크기 조정")](hello-mac-images/xcode12.png#lightbox)
 
 7. **인터페이스 편집기**에서 방금 추가한 단추를 선택하고 창의 아래쪽에서 **제약 조건 편집기** 아이콘을 클릭합니다.
 
-    [ ![](hello-mac-images/xcode13.png "단추에 제약 조건 추가")](hello-mac-images/xcode13.png)
+    [![](hello-mac-images/xcode13.png "단추에 제약 조건 추가")](hello-mac-images/xcode13.png#lightbox)
 
 8. 편집기 상단에서 위쪽과 왼쪽의 **빨간색 I-빔**을 클릭합니다. 이렇게 하면 창 크기를 조정할 때 단추가 화면의 왼쪽 모서리에서 같은 위치를 유지합니다.
 
@@ -385,7 +385,7 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 11. 레이블을 선택하고 **제약 조건 편집기** 아이콘을 다시 클릭합니다.
 
-    [ ![](hello-mac-images/xcode14.png "레이블에 제약 조건 추가")](hello-mac-images/xcode14.png)
+    [![](hello-mac-images/xcode14.png "레이블에 제약 조건 추가")](hello-mac-images/xcode14.png#lightbox)
 
 12. **제약 조건 편집기**의 위쪽, 오른쪽 및 왼쪽에서 **빨간색 I-빔**을 클릭하면 실행 중인 응용 프로그램에서 창 크기를 조정할 때 레이블의 위치는 지정된 X 및 Y로 고정되고 크기는 확장 및 축소됩니다.
 
@@ -397,7 +397,7 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 **인터페이스 계층 구조** 섹션에서 사용자 인터페이스를 구성하는 요소의 레이아웃과 계층 구조가 어떤 모양인지 살펴볼 수 있습니다.
 
-[ ![](hello-mac-images/xcode15.png "인터페이스 계층 구조에서 요소 선택")](hello-mac-images/xcode15.png)
+[![](hello-mac-images/xcode15.png "인터페이스 계층 구조에서 요소 선택")](hello-mac-images/xcode15.png#lightbox)
 
 여기서 개발자는 편집하거나 끌 항목을 선택하여 필요한 경우 UI 요소를 다시 정렬할 수 있습니다. 예를 들어 UI 요소를 다른 요소가 가리는 경우 목록 맨 아래로 끌어서 창의 최상위 항목으로 만들 수 있습니다.
 
@@ -416,7 +416,7 @@ Xcode에서 **출선** 및 **작업**은 *컨트롤 끌기*를 통해 코드에�
 
 Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 파일에 해당하는 Objective-C 스텁 파일로 끕니다. Mac용 Visual Studio는 Interface Builder를 사용하기 위해 생성한 shim Xcode 프로젝트의 일부로 `ViewController.h`라는 파일을 만들었습니다.
 
-[ ![](hello-mac-images/xcode16.png "Xcode에서 원본 보기")](hello-mac-images/xcode16.png)
+[![](hello-mac-images/xcode16.png "Xcode에서 원본 보기")](hello-mac-images/xcode16.png#lightbox)
 
 이 스텁 `.h` 파일은 새 `NSWindow`가 생성될 때 Xamarin.Mac 프로젝트에 자동으로 추가되는 `ViewController.designer.cs`를 미러링합니다. 이 파일은 Interface Builder에서 변경한 내용을 동기화하는 데 사용되며, UI 요소가 C# 코드에 노출되도록 **출선** 및 **작업**이 생성되는 위치입니다.
 
@@ -430,7 +430,7 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 
 1. 화면의 오른쪽 맨 위 모서리에 있는 Xcode에서 **이중 원** 단추를 클릭하여 **도우미 편집기**를 엽니다.
 
-    [ ![](hello-mac-images/outlet01.png "도우미 편집기 표시")](hello-mac-images/outlet01.png)
+    [![](hello-mac-images/outlet01.png "도우미 편집기 표시")](hello-mac-images/outlet01.png#lightbox)
 
 2. Xcode가 분할 보기 모드로 전환되어 한 쪽에는 **인터페이스 편집기**가, 다른 쪽에는 **코드 편집기** 표시됩니다.
 
@@ -438,25 +438,25 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 
 4. **코드 편집기** 위쪽에서 **자동 링크**를 클릭하고 `ViewController.h` 파일을 선택합니다.
 
-    [ ![](hello-mac-images/outlet02.png "올바른 파일 선택")](hello-mac-images/outlet02.png)
+    [![](hello-mac-images/outlet02.png "올바른 파일 선택")](hello-mac-images/outlet02.png#lightbox)
 
 5. Xcode가 이제 올바른 파일을 선택했습니다.
 
-    [ ![](hello-mac-images/outlet03.png "ViewController.h 파일 보기")](hello-mac-images/outlet03.png)
+    [![](hello-mac-images/outlet03.png "ViewController.h 파일 보기")](hello-mac-images/outlet03.png#lightbox)
 
 6. **마지막 단계는 매우 중요합니다!** 개발자가 올바른 파일을 선택하지 않으면 **출선** 및 **작업**을 만들 수 없거나 C#에서 잘못된 클래스에 노출됩니다.
 
 7. **인터페이스 편집기**에서 키보드의 **Control** 키를 누른 채로 위에서 만든 레이블을 클릭하여 `@interface ViewController : NSViewController {}` 코드 바로 아래에 있는 코드 편집기 위로 끕니다.
 
-    [ ![](hello-mac-images/outlet04.png "끌어서 출선 만들기")](hello-mac-images/outlet04.png)
+    [![](hello-mac-images/outlet04.png "끌어서 아웃렛 만들기")](hello-mac-images/outlet04.png#lightbox)
 
 8. 대화 상자가 표시됩니다. **연결**은 **출선**으로 두고 **이름**으로 `ClickedLabel`을 입력합니다.
 
-    [ ![](hello-mac-images/outlet05.png "출선 정의")](hello-mac-images/outlet05.png)
+    [![](hello-mac-images/outlet05.png "아웃렛 정의")](hello-mac-images/outlet05.png#lightbox)
 
 9. **연결** 단추를 클릭하여 **출선**을 만듭니다.
 
-    [ ![](hello-mac-images/outlet06.png "최종 출선 보기")](hello-mac-images/outlet06.png)
+    [![](hello-mac-images/outlet06.png "최종 아웃렛 보기")](hello-mac-images/outlet06.png#lightbox)
 
 10. 파일의 변경 내용을 저장합니다.
 
@@ -471,19 +471,19 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 1. Xcode가 여전히 **도우미 편집기**에 있고 **코드 편집기**에서 **ViewController.h** 파일이 보이는지 확인합니다.
 2. **인터페이스 편집기**에서 키보드의 **Control** 키를 누른 채로 위에서 만든 단추를 클릭하여 `@property (assign) IBOutlet NSTextField *ClickedLabel;` 코드 바로 아래에 있는 코드 편집기 위로 끕니다.
 
-    [ ![](hello-mac-images/action01.png "끌어서 작업 만들기")](hello-mac-images/action01.png)
+    [![](hello-mac-images/action01.png "끌어서 작업 만들기")](hello-mac-images/action01.png#lightbox)
 
 3. **연결** 형식을 **작업**으로 변경합니다.
 
-    [ ![](hello-mac-images/action02.png "작업 정의")](hello-mac-images/action02.png)
+    [![](hello-mac-images/action02.png "작업 정의")](hello-mac-images/action02.png#lightbox)
 
 4. **이름**으로 `ClickedButton`을 입력합니다.
 
-    [ ![](hello-mac-images/action03.png "새 작업의 이름 지정")](hello-mac-images/action03.png)
+    [![](hello-mac-images/action03.png "새 작업의 이름 지정")](hello-mac-images/action03.png#lightbox)
 
 5. **연결** 단추를 클릭하여 **작업**을 만듭니다.
 
-    [ ![](hello-mac-images/action04.png "최종 작업 보기")](hello-mac-images/action04.png)
+    [![](hello-mac-images/action04.png "최종 작업 보기")](hello-mac-images/action04.png#lightbox)
 
 6. 파일의 변경 내용을 저장합니다.
 
@@ -500,7 +500,7 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 
 **솔루션 탐색기**에서 **ViewController.designer.cs**를 선택하여 C# 코드에서 **출선** 및 **작업**이 연결되는 방식을 살펴봅니다.
 
-[ ![](hello-mac-images/sync01.png "Xcode와 변경 내용 동기화")](hello-mac-images/sync01.png)
+[![](hello-mac-images/sync01.png "Xcode와 변경 내용 동기화")](hello-mac-images/sync01.png#lightbox)
 
 **ViewController.designer.cs** 파일의 두 정의를 살펴봅니다.
 
@@ -534,7 +534,7 @@ Mac용 Visual Studio는 **.h** 파일의 변경 내용을 수신 대기하면서
 
 이 샘플 앱에서 첫 번째 단추를 클릭할 때마다 단추 클릭 횟수를 표시하도록 레이블이 업데이트됩니다. 이 작업을 수행하려면 `ViewController.cs` 파일을 편집할 수 있도록 **솔루션 탐색기**에서 이 파일을 두 번 클릭하여 엽니다.
 
-[ ![](hello-mac-images/code01.png "Mac용 Visual Studio에서 ViewController.cs 파일 보기")](hello-mac-images/code01.png)
+[![](hello-mac-images/code01.png "Mac용 Visual Studio에서 ViewController.cs 파일 보기")](hello-mac-images/code01.png#lightbox)
 
 먼저 `ViewController` 클래스에서 발생한 클릭 횟수를 추적하는 클래스 수준 변수를 만듭니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
 
@@ -586,7 +586,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 개발자는 Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기**에서 빌드 유형을 선택할 수 있습니다.
 
-[ ![](hello-mac-images/run01.png "디버그 빌드 선택")](hello-mac-images/run01.png)
+[![](hello-mac-images/run01.png "디버그 빌드 선택")](hello-mac-images/run01.png#lightbox)
 
 <a name="Building_the_Application" />
 
@@ -608,11 +608,11 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 앱이 빌드되고(아직 빌드되지 않은 경우), 디버그 모드에서 시작되고, 주 인터페이스 창을 표시합니다.
 
-[ ![](hello-mac-images/run02.png "응용 프로그램 실행")](hello-mac-images/run02.png)
+[![](hello-mac-images/run02.png "응용 프로그램 실행")](hello-mac-images/run02.png#lightbox)
 
 단추를 몇 번 클릭하면 그 횟수에 따라 레이블이 업데이트됩니다.
 
-[ ![](hello-mac-images/run03.png "단추 클릭 결과 표시")](hello-mac-images/run03.png)
+[![](hello-mac-images/run03.png "단추 클릭 결과 표시")](hello-mac-images/run03.png#lightbox)
 
 <a name="Where_to_Next" />
 

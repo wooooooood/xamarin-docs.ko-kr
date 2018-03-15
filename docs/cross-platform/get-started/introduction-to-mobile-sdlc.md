@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 360f2585f05446e2d7f8ad5f85b13b16ed84a606
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a344ce211a025176c2b40540ce8337802dd347b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기 소개
 
@@ -25,10 +25,7 @@ _이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 
 1.   **프로세스** - 소프트웨어 개발 프로세스를 SDLC(소프트웨어 개발 수명 주기)라고합니다. 착안, 설계, 개발, 안정화, 배포 및 유지 관리 등 모바일 응용 프로그램 개발과 관련된 SDLC의 모든 단계를 검토해 보겠습니다.
 1.   **고려 사항** – 특히, 기존 웹 또는 데스크톱 응용 프로그램과 달리, 모바일 응용 프로그램을 빌드할 때는 여러 가지 고려 사항이 있습니다. 이러한 고려 사항과 이러한 고려 사항이 모바일 개발에 주는 영향에 대해 살펴 보겠습니다.
 
-
 이 문서는 초급 및 고급 응용 프로그램 개발자 모두를 대상으로 모바일 앱 개발에 대한 기본적인 질문에 답하기 위해 작성되었습니다. 전체 SDLC(소프트웨어 개발 수명 주기) 중에 마주치는 대부분의 개념을 상당히 포괄적인 방식으로 소개합니다. 그러나 이 문서가 모든 사람에게 적절한 것은 아닙니다. 바로 응용 프로그램 빌드를 시작하고 싶다면 [모바일 개발 소개](~/cross-platform/get-started/introduction-to-mobile-development.md), [Hello, Android](~/android/get-started/hello-android/index.md) 또는 [Hello, iPhone](~/ios/get-started/hello-ios/index.md) 자습서를 진행한 후 나중에 이 문서를 다시 살펴보는 것이 좋습니다.
-
-
 
 ## <a name="mobile-development-sdlc"></a>모바일 개발 SDLC
 
@@ -40,17 +37,13 @@ _이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 
 1.   **안정화** – 개발이 충분히 진행되면 일반적으로 QA를 통해 응용 프로그램을 테스트하고 버그를 수정합니다. 종종 응용 프로그램은 제한된 베타 단계로 진행되며 이 단계에서 보다 광범위한 대상 사용자에게 응용 프로그램을 사용하고 피드백을 제공하며 변경 내용을 알릴 기회가 주어집니다.
 1.  **배포**
 
-
 이러한 단계는 많은 부분이 겹칩니다. 예를 들어, UI가 완료되는 동안 개발이 진행되는 것이 일반적이며 UI 디자인에 정보를 제공할 수도 있습니다. 또한 응용 프로그램은 새로운 기능이 새로운 버전에 추가되는 것과 동시에 안정화 단계에 들어갈 수 있습니다.
 
 이러한 단계는 애자일(Agile), 나선형(Spiral), 폭포수(Waterfall) 등과 같은 다양한 SDLC 방법론에서도 사용할 수 있습니다.
 
 각 단계는 다음 섹션에 서보다 자세히 설명합니다.
 
-
-
-
-## <a name="inception"></a>개시
+### <a name="inception"></a>개시
 
 모바일 장치를 보유하고 있는 사람의 보편화와 상호 작용 수준을 보면, 거의 모든 사람이 모바일 앱에 대한 개념이 있음을 알 수 있습니다. 모바일 장치는 컴퓨팅, 웹, 심지어 기업 인프라와도 상호 작용할 수 있는 완전히 새로운 방식입니다.
 
@@ -59,17 +52,14 @@ _이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 
 
 -   **경쟁 우위** – 유사한 앱이 이미 있나요? 있다면 이 응용 프로그램을 어떻게 차별화할 것인가요?
 
-
 엔터프라이즈에 배포할 앱의 경우:
 
 -   **인프라 통합** – 어떤 기존 인프라와 통합 또는 확장할 계획인가요?
-
 
 또한 모바일 폼 팩터와 관련해서 앱을 평가해야 합니다.
 
 -   **가치** – 이 앱이 사용자에게 어떤 가치를 제공하나요? 사용자는 이 가치를 어떻게 활용하나요?
 -   **폼/이동성** – 이 앱이 모바일 폼 팩터에서 어떻게 작동하나요? 위치 인식, 카메라 등 모바일 기술을 사용하여 어떻게 가치를 부여할 수 있나요?
-
 
 앱 기능 설계를 돕기 위해 행위자 및 [사용 사례](http://en.wikipedia.org/wiki/Use_case)를 정의하는 것이 유용할 수 있습니다. 행위자는 응용 프로그램 내에서 역할이며 보통 사용자입니다. 사용 사례는 일반적으로 작업 또는 인텐트입니다.
 
@@ -77,31 +67,21 @@ _이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 
 
 적절한 수의 사용 사례 및 행위자를 캡처했으면 응용 프로그램 디자인을 훨씬 쉽게 시작할 수 있습니다. 그러면 개발 시 무슨 앱이며 앱으로 무엇을 해야 하는지보다는, 앱을 만드는 방법에 집중할 수 있습니다.
 
-
-
-
-## <a name="designing-mobile-applications"></a>모바일 응용 프로그램 디자인
+### <a name="designing-mobile-applications"></a>모바일 응용 프로그램 디자인
 
 앱의 특징 및 기능이 결정되면 다음 단계는 UX(사용자 환경)를 해결하는 것입니다.
 
-
-
-
-### <a name="ux-design"></a>UX 디자인
+#### <a name="ux-design"></a>UX 디자인
 
 UX는 일반적으로 [Balsamiq](http://www.balsamiq.com/), [Mockingbird](https://gomockingbird.com/), [Visio](http://office.microsoft.com/en-us/visio/)와 같은 도구 또는 펜과 종이를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다. UX 모형을 통해 실제 UI 디자인을 고민할 필요없이 UX를 디자인할 수 있습니다.
 
-
- [ ![](introduction-to-mobile-sdlc-images/balsamiq.png "UX는 일반적으로 Balsamiq와 같은 도구를 사용하여 와이어프레임 또는 모형을 통해 수행됨")](introduction-to-mobile-sdlc-images/balsamiq.png)
-
-
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX는 일반적으로 Balsamiq와 같은 도구를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다.")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인터페이스 지침을 고려하는 것이 중요합니다. 앱은 각 플랫폼에서 “익숙한 방식”이어야 합니다. 각 플랫폼에 대한 공식 디자인 지침은 다음과 같습니다.
 
 1.   **Apple** -  [휴먼 인터페이스 지침](http://developer.apple.com/library/ios/#DOCUMENTATION/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 1.   **Android** –  [디자인 지침](http://developer.android.com/design/index.html)
 1.   **Windows Phone** –  [Windows Phone용 디자인 라이브러리](http://msdn.microsoft.com/en-US/library/windowsphone/design/fa00461b-abe1-41d1-be87-0b0fe3d3389d(v=vs.105).aspx)
-
 
 예를 들어, 각 앱에는 응용 프로그램의 섹션 간 전환을 위한 메타포가 있습니다. iOS는 화면 하단에 탭 표시줄을 사용하고 Android는 화면 상단에 탭 표시줄을 사용하며 Windows Phone은 파노라마 뷰를 사용합니다.
 
@@ -113,20 +93,17 @@ UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인�
 
 또한 폼 팩터도 UX 결정에 영향을 줍니다. 태블릿은 훨씬 더 많은 화면 공간을 보유하고 있으므로 더 많은 정보를 표시할 수 있습니다. 보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.
 
- [ ![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됨")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 그리고 수많은 폼 팩터가 있기 때문에 대상으로 지정할 수 있는 중간 크기의 폼 팩터(휴대폰과 태블릿 중간)가 있습니다.
 
-
-
-
-### <a name="user-interface-ui-design"></a>UI(사용자 인터페이스) 디자인
+#### <a name="user-interface-ui-design"></a>UI(사용자 인터페이스) 디자인
 
 UX가 결정되면 다음 단계는 UI 디자인을 만드는 것입니다. UX는 일반적으로 단순한 흑백 모형이지만 UI 디자인 단계에서는 색상, 그래픽 등을 도입하고 마무리합니다. 좋은 UI 디자인에 시간을 투자하는 것이 중요하며 일반적으로 가장 인기 있는 앱은 디자인이 전문적입니다.
 
 UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으므로 잘 디자인된 응용 프로그램은 각 플랫폼마다 다르게 나타날 수 있습니다.
 
- [ ![](introduction-to-mobile-sdlc-images/multiplatform-1.png "잘 디자인된 응용 프로그램은 각 플랫폼마다 다르게 보일 수 있음")](introduction-to-mobile-sdlc-images/multiplatform-1.png)
+ [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "잘 디자인된 응용 프로그램은 각 플랫폼마다 다르게 보일 수 있습니다.")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 좋은 UI 디자인 착안을 위해 다음 사이트를 확인합니다.
 
@@ -135,22 +112,15 @@ UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으�
 1.   [lovelyui.com](http://lovelyui.com) – (iOS, Android 및 Windows Phone)
 1.   [mobiledesignpatterngallery.com](http://mobiledesignpatterngallery.com) – (iOS, Android 및 Windows Phone)
 
-
 또한 [Behance.com](http://behance.com) 및 [Dribbble.com](http://dribbble.com)과 같은 사이트에서 그래픽 디자이너의 포트폴리오를 볼 수 있습니다. 이 사이트에서 전 세계의 디자이너를 찾을 수 있으며 환율이 유리한 경우가 많으므로 좋은 그래픽 디자인이라고 반드시 비용이 많이 드는 것은 아닙니다.
 
-
-
-
-## <a name="development"></a>개발
+### <a name="development"></a>개발
 
 일반적으로 개발 단계는 매우 일찍 시작됩니다. 사실, 아이디어가 개념/착안 단계에서 어느 정도 진행되면 기능, 가정을 검증하고 작업 범위를 이해하는 데 도움이 되는 작업 프로토타입이 자주 개발됩니다.
 
 자습서의 나머지 부분에서는 개발 단계에 주로 초점을 둡니다.
 
-
-
-
-## <a name="stabilization"></a>안정화
+### <a name="stabilization"></a>안정화
 
 안정화는 앱에서 버그를 찾는 프로세스입니다. “이 단추를 클릭하면 충돌이 발생합니다”와 같은 기능적 관점뿐만 아니라 유용성 및 성능 관점에서도 해당됩니다. 개발 프로세스 내에서 매우 일찍 안정화를 시작하여 비용이 많이 들기 전에 궤도 수정이 발생하도록 하는 것이 가장 좋습니다. 일반적으로 응용 프로그램은 *프로토타입*, *알파*, *베타* 및 *릴리스 후보* 단계를 거칩니다. 사람들마다 다르게 정의하지만 일반적으로 다음과 같은 패턴을 따릅니다.
 
@@ -158,7 +128,6 @@ UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으�
 1.   **알파** – 일반적으로 핵심 기능에 대한 코드가 완성되어 있습니다(빌드되었지만 완전히 테스트되지는 않음). 여전히 주요 버그가 있으며 외부 기능은 아직 없을 수 있습니다.
 1.   **베타** – 이제 대부분의 기능이 완료되었으며 최소한 가벼운 테스트와 버그 수정을 완료했습니다. 주요 알려진 문제가 여전히 존재할 수 있습니다.
 1.   **릴리스 후보** – 모든 기능을 완료하고 테스트했습니다. 새로운 버그가 없다면 이 앱은 시장에 릴리스할 후보입니다.
-
 
 응용 프로그램 테스트를 시작하는 것이 결코 이르지 않습니다. 예를 들어, 프로토타입 단계에서 주요 문제가 발견되면 이를 적용하도록 앱의 UX를 계속 수정할 수 있습니다. 알파 단계에서 성능 문제가 발견되면 잘못된 가정 하에 많은 코드를 작성하기 전에 아키텍처를 수정하는 것이 좋습니다.
 
@@ -173,9 +142,11 @@ UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으�
 3.   **Vessel(vessel.io)** – iOS 및 Android용 서비스로, 사용량을 모니터링하고 고객을 추적하며 앱 내부에서 A/B 테스트를 수행할 수도 있습니다.
 4.  **hockeyapp.com** - iOS, Android 및 Windows Phone에 대한 테스트 서비스를 제공합니다.
 
-## <a name="distribution"></a>분포
+### <a name="distribution"></a>분포
 
 응용 프로그램이 안정화되었으면 이제 시장에 내놓을 시간입니다. 플랫폼에 따라 다양한 배포 옵션이 제공됩니다.
+
+#### <a name="ios"></a>iOS
 
 Xamarin.iOS 및 Objective-C 앱은 정확히 동일한 방법으로 배포됩니다.
 
@@ -183,11 +154,7 @@ Xamarin.iOS 및 Objective-C 앱은 정확히 동일한 방법으로 배포됩니
 1.   **사내 배포** – 사내 배포는 App Store를 통해 공개적으로 제공되지 않는 기업 응용 프로그램의 내부 배포를 위한 것입니다.
 1.   **애드혹 배포** – 애드혹 배포는 주로 개발 및 테스트용으로 사용되며 제한된 수의 올바르게 프로비전된 장치에 배포할 수 있도록 해줍니다. Mac용 Xcode 또는 Visual Studio를 통해 장치에 배포하는 경우 이를 애드혹 배포라고 합니다.
 
-
-
-
-
-### <a name="android"></a>Android
+#### <a name="android"></a>Android
 
 모든 Android 응용 프로그램은 서명된 후 배포되어야 합니다. 개발자는 개인 키로 보호되는 사용자 고유의 인증서를 사용하여 응용 프로그램을 서명합니다. 이 인증서는 개발자가 빌드 및 릴리스한 응용 프로그램과 응용 프로그램 개발자를 연결하는 신뢰성 체인을 제공할 수 있습니다.
 공인된 인증 기관에서 Android용 개발 인증서를 서명할 수는 있지만 대부분의 개발자는 이러한 서비스를 활용하지 않고 자신의 인증서를 자체 서명합니다. 인증서의 주요 목적은 서로 다른 개발자와 응용 프로그램을 구별하는 것입니다.
@@ -203,46 +170,28 @@ Android는 이 정보를 사용하여 Android OS 내에서 실행되는 응용 �
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-
-
-
-
-## <a name="windows"></a>Windows 
+#### <a name="windows"></a>Windows 
 
 Windows 응용 프로그램은 Microsoft Store를 통해 사용자에게 배포됩니다. 개발자가 앱을 제출하여 승인을 받으면 해당 앱이 스토어에 표시됩니다.
 
-
-
-
-# <a name="mobile-development-considerations"></a>모바일 개발 고려 사항
+## <a name="mobile-development-considerations"></a>모바일 개발 고려 사항
 
 모바일 응용 프로그램을 개발하는 것이 프로세스 또는 아키텍처와 관련하여 기존의 웹/데스크톱 개발과 근본적으로 다른 것은 아니지만 몇 가지 고려해야 할 사항이 있습니다.
 
+### <a name="common-considerations"></a>일반적인 고려 사항
 
-
-
-## <a name="common-considerations"></a>일반적인 고려 사항
-
-
-
-
-### <a name="multitasking"></a>멀티태스킹
+#### <a name="multitasking"></a>멀티태스킹
 
 모바일 장치에서 멀티태스킹(여러 응용 프로그램을 한 번에 실행)에는 두 가지 중요한 문제가 있습니다. 첫째, 제한된 화면 공간에서는 여러 응용 프로그램을 동시에 표시하기 어렵습니다. 따라서 모바일 장치에서는 한 번에 하나의 앱만 포그라운드에 있을 수 있습니다. 둘째, 여러 응용 프로그램을 열어두고 작업을 수행하면 배터리 전원이 빨리 소모될 수 있습니다.
 
 플랫폼마다 멀티태스킹을 다르게 처리하며, 이 내용은 잠시 후에 살펴볼 것입니다.
 
-
-
-### <a name="form-factor"></a>폼 팩터
+#### <a name="form-factor"></a>폼 팩터
 
 모바일 장치는 일반적으로 휴대폰과 태블릿이라는 두 범주로 나뉘며 그 사이에 몇 가지 크로스오버 장치가 있습니다. 이러한 폼 팩터 개발은 일반적으로 매우 유사하지만 응용 프로그램을 설계하는 것은 매우 다를 수 있습니다.
 휴대폰은 화면 공간이 매우 제한되어 있는 반면 태블릿은 이보다 크기는 하지만 대부분의 랩톱보다는 여전히 화면 공간이 적은 모바일 장치입니다. 이 때문에 모바일 플랫폼 UI 컨트롤은 소형 폼 팩터에서 효과적으로 작동하도록 특별히 설계되었습니다.
 
-
-
-
-### <a name="device-and-os-fragmentation"></a>장치 및 OS 조각화
+#### <a name="device-and-os-fragmentation"></a>장치 및 OS 조각화
 
 전체 소프트웨어 개발 수명 주기에서 다양한 장치를 고려하는 것이 중요합니다.
 
@@ -251,11 +200,7 @@ Windows 응용 프로그램은 Microsoft Store를 통해 사용자에게 배포�
 1.   **개발** – 코드의 기능을 사용할 때 먼저 해당 기능의 존재 여부를 항상 테스트해야 합니다. 예를 들어, 카메라와 같은 장치 기능을 사용하기 전에 항상 OS에서 해당 기능의 존재 여부를 먼저 쿼리합니다. 그런 다음, 기능/장치를 초기화할 때 OS에서 해당 장치에 대한 현재 지원을 요청한 다음, 해당 구성 설정을 사용해야 합니다.
 1.   **테스트** – 실제 장치에서 조기에 자주 응용 프로그램을 테스트하는 것이 매우 중요합니다. 동일한 하드웨어 사양을 포함하는 장치조차도 동작이 매우 다양할 수 있습니다.
 
-
-
-
-
-### <a name="limited-resources"></a>제한된 리소스
+#### <a name="limited-resources"></a>제한된 리소스
 
 모바일 장치는 갈수록 점점 더 강력해지고 있지만 데스크톱이나 노트북 컴퓨터에 비해 기능이 제한적인 모바일 장치입니다. 예를 들어, 데스크톱 개발자는 일반적으로 메모리 용량에 대해 걱정하지 않습니다. 이들은 보통 실제 메모리와 가상 메모리 모두를 충분히 사용합니다. 그러나 모바일 장치에서는 고화질 사진 몇 장만 로드해도 순식간에 사용 가능한 모든 메모리를 소비할 수 있습니다.
 
@@ -263,22 +208,13 @@ Windows 응용 프로그램은 Microsoft Store를 통해 사용자에게 배포�
 
 이와 같은 고려 사항 때문에 응답성을 검증하기 위해 현명하게 코드를 작성하고 실제 장치에 조기에 자주 배포하는 것이 중요합니다.
 
+### <a name="ios-considerations"></a>iOS 고려 사항
 
-
-
-## <a name="ios-considerations"></a>iOS 고려 사항
-
-
-
-
-### <a name="multitasking"></a>멀티태스킹
+#### <a name="multitasking"></a>멀티태스킹
 
 멀티태스킹은 iOS에서 매우 엄격하게 제어되며 다른 응용 프로그램이 포그라운드로 오면 응용 프로그램이 따라야 하는 규칙과 동작이 많습니다. 그렇지 않으면 응용 프로그램이 iOS에 의해 종료됩니다.
 
-
-
-
-### <a name="device-specific-resources"></a>장치별 리소스
+#### <a name="device-specific-resources"></a>장치별 리소스
 
 특정 폼 팩터 내에서 하드웨어는 여러 모델 간에 크게 다를 수 있습니다. 예를 들어, 일부 장치에는 후면 카메라가 있고 일부는 전면 카메라가 있으며 어떤 장치는 아무 것도 없습니다.
 
@@ -286,84 +222,55 @@ Windows 응용 프로그램은 Microsoft Store를 통해 사용자에게 배포�
 
 이러한 장치 모델 간 차이점으로 인해 기능을 사용하기 전에 해당 기능이 존재하는지 확인하는 것이 중요합니다.
 
-
-
-
-### <a name="os-specific-constraints"></a>OS 관련 제약 조건
+#### <a name="os-specific-constraints"></a>OS 관련 제약 조건
 
 응용 프로그램이 잘 응답하고 안전한지 확인하기 위해 iOS는 응용 프로그램이 준수해야 하는 여러 가지 규칙을 시행합니다. 멀티태스킹과 관련된 규칙 외에도, 앱이 특정 시간 내에 반환해야 하는 여러 가지 이벤트 메서드가 있습니다. 특정 시간 내에 반환하지 않으면 iOS에서 종료됩니다.
 
 또한 주목할 만한 것은 앱이 액세스할 수 있는 것을 제한하는 보안 제약 조건을 적용하는 샌드박스라는 환경에서 실행된다는 것입니다. 예를 들어, 앱은 자체 디렉터리에서 읽고 쓸 수 있지만 다른 앱 디렉터리에 쓰기를 시도하면 종료됩니다.
 
+### <a name="android-considerations"></a>Android 고려 사항
 
-
-
-## <a name="android-considerations"></a>Android 고려 사항
-
-
-
-
-### <a name="multitasking"></a>멀티태스킹
+#### <a name="multitasking"></a>멀티태스킹
 
 Android의 멀티태스팅에는 두 구성 요소가 있습니다. 첫 번째는 작업 수명 주기입니다. Android 응용 프로그램의 각 화면은 작업으로 표시되며, 응용 프로그램이 백그라운드에 배치되거나 포그라운드로 들어올 때 발생하는 특정 이벤트 집합이 있습니다. 응답성이 좋고 올바르게 동작하는 응용 프로그램을 만들려면 응용 프로그램이 이 수명 주기를 준수해야 합니다. 자세한 내용은 [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md) 가이드를 참조하세요.
 
 Android에서 멀티태스킹에 대한 두 번째 구성 요소는 서비스 사용입니다.
 서비스는 응용 프로그램과 독립적으로 존재하며 응용 프로그램이 백그라운드에서 실행되는 동안 프로세스를 실행하는 데 사용되는 장기 실행 프로세스입니다. 자세한 내용은 [서비스 만들기](~/android/app-fundamentals/services/index.md) 가이드를 참조하세요.
 
-
-
-
-### <a name="many-devices-amp-many-form-factors"></a>많은 장치 &amp; 많은 폼 팩터
+#### <a name="many-devices-amp-many-form-factors"></a>많은 장치 &amp; 많은 폼 팩터
 
 최소한의 플랫폼 요구 사항을 충족하는 승인된 장치에서만 실행되는 소수의 장치 또는 Windows Phone이 있는 iOS와 달리, Google은 Android OS를 실행할 수있는 장치에 어떠한 제한도 두지 않습니다. 이 개방적 패러다임은 매우 다른 하드웨어, 화면 해상도 및 비율, 장치 기능 및 성능을 갖춘 수많은 다양한 장치로 채워지는 제품 환경을 만들어냅니다.
 
 Android 장치의 극단적인 조각화로 인해 대부분의 사람들은 가장 인기 있는 5개 또는 6개의 장치를 선택하여 디자인, 테스트 및 우선 순위를 지정합니다.
 
-
-
-
-### <a name="security-considerations"></a>보안 고려 사항
+#### <a name="security-considerations"></a>보안 고려 사항
 
 Android OS의 응용 프로그램은 모두 제한된 권한을 사용하여 별개의 격리된 ID로 실행됩니다. 기본적으로 응용 프로그램은 할 수 있는 것이 거의 없습니다. 예를 들어, 특별한 권한이 없다면 응용 프로그램은 문자 메시지를 보내거나 휴대폰 상태를 확인하거나 인터넷에 액세스할 수 없습니다! 이러한 기능에 액세스하려면, 응용 프로그램은 응용 프로그램 매니페스트 파일에 원하는 사용 권한과 설치 시기를 지정해야 합니다. OS는 이러한 권한을 읽고 응용 프로그램이 해당 권한을 요청하고 있음을 사용자에게 알린 다음, 사용자가 설치를 계속하거나 취소할 수 있도록 합니다.
 응용 프로그램이 iOS와 같은 방식으로 큐레이트되지 않기 때문에 개방형 응용 프로그램 스토어 모델로 인해 Android 배포 모델에서 필수적인 단계입니다. 응용 프로그램 권한 목록은 Android 설명서의 [매니페스트 권한](http://developer.android.com/reference/android/Manifest.permission.html) 참조 문서를 참조하세요.
 
+### <a name="windows-considerations"></a>Windows 고려 사항
 
-
-## <a name="windows-considerations"></a>Windows 고려 사항
-
-
-
-
-### <a name="multitasking"></a>멀티태스킹
+#### <a name="multitasking"></a>멀티태스킹
 
 Windows Phone 멀티태스킹 역시 페이지 및 응용 프로그램에 대한 수명 주기와 백그라운드 프로세스라는 두 부분으로 구성됩니다. 응용 프로그램의 각 화면은 활성 또는 비활성(비활성 상태를 처리하거나 “삭제 표시”하는 특수 규칙이 있음)과 관련된 이벤트가 있는 Page 클래스의 인스턴스입니다. 
 
 두 번째 부분은 응용 프로그램이 포그라운드에서 실행되지 않는 경우에도 작업 처리를 위한 백그라운드 에이전트를 제공합니다. 
 
-
-
-### <a name="device-capabilities"></a>장치 성능
+#### <a name="device-capabilities"></a>장치 성능
 
 Windows Phone 하드웨어는 Microsoft에서 제공하는 엄격한 지침으로 인해 유형은 거의 같지만 여전히 옵션 구성 요소이므로 코딩하는 동안 특별한 고려 사항이 요구됩니다. 옵션 하드웨어 기능으로는 카메라, 나침반 및 자이로스코프가 있습니다. 특별 고려 사항이 필요한 특수한 종류의 저용량 메모리(256MB)가 있거나 개발자가 메모리 부족 지원을 제외할 수 있습니다.
 
-
-
-
-### <a name="database"></a>데이터베이스
+#### <a name="database"></a>데이터베이스
 
 iOS와 Android에는 모두 SQLite 데이터베이스 엔진이 포함되어 있어 플랫폼 간 작동하는 정교한 데이터 저장소가 가능합니다. Windows Phone 7에는 데이터베이스가 포함되어 있지 않지만 Windows Phone 7.1 및 8에는 [LINQ to SQL](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202872(v=vs.105).aspx)로만 쿼리할 수 있고 Transact-SQL 쿼리는 지원하지 않는 [로컬 데이터베이스 엔진](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202860(v=vs.105).aspx)이 포함되어 있습니다. 익숙한 Transact-SQL 지원과 플랫폼 간 호환성을 제공하기 위해 Windows Phone 응용 프로그램에 추가할 수있는 [SQLite의 공개 소스 포트](http://code.google.com/p/csharp-sqlite/)가 있습니다.
 
-
-
-### <a name="security-considerations"></a>보안 고려 사항
+#### <a name="security-considerations"></a>보안 고려 사항
 
 Windows Phone 응용 프로그램은 서로 격리된 사용 권한 집합으로 실행되며 수행할 수 있는 작업이 제한됩니다.
 네트워크 액세스는 특정 API를 통해 수행되어야 하며 응용 프로그램 간 통신은 제어된 메커니즘을 통해서만 수행될 수 있습니다. 파일 시스템에 대한 액세스도 제한됩니다. 격리된 저장소 API는 키-값 쌍 저장소와 제어된 방식으로 파일 및 폴더를 만드는 기능을 제공합니다(자세한 내용은 [격리된 저장소 개요 ](http://msdn.microsoft.com/en-us/library/ff402541(v=vs.92).aspx) 참조).
 
 응용 프로그램의 하드웨어 및 운영 체제 기능에 대한 액세스는 매니페스트 파일에 나열된 기능에 따라 정해집니다(Android와 유사).
 매니페스트는 응용 프로그램에 필요한 기능을 선언해야 하므로 사용자가 이러한 권한을 보고 동의할 수 있으며 운영 체제에서 API에 액세스할 수 있습니다. 응용 프로그램은 연락처 또는 약속 데이터, 카메라, 위치, 미디어 라이브러리 등의 기능에 대한 액세스를 요청해야 합니다. 자세한 내용은 Microsoft의 [응용 프로그램 매니페스트 파일](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509(v=vs.92).aspx)을 참조하세요.
-
-
 
 ## <a name="summary"></a>요약
 

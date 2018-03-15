@@ -2,16 +2,16 @@
 title: "iOS용 fastlane – match"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 435ba4c3799288724625ca06016770b3ecad56a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d92f820e22277148b4de3ff87e3fdaca0f573f52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios---match"></a>iOS용 fastlane – match
 
@@ -56,15 +56,15 @@ App Store에 앱을 배포하거나 베타 테스트를 수행하거나 장치�
 
 메시지가 표시되면 Git 리포지토리의 URL을 입력합니다.
 
- [ ![](match-images/fastlane-image7.png "Git 리포지토리의 URL 입력")](match-images/fastlane-image7.png)
+ [![](match-images/fastlane-image7.png "Git 리포지토리의 URL 입력")](match-images/fastlane-image7.png#lightbox)
 
 URL은 아래 그림과 같이 github.com에서 찾아서 **Clone or Download**(복제 또는 다운로드) 단추를 클릭하여 복사할 수 있습니다.
 
-[ ![](match-images/fastlane-image6.png "github.com의 Clone or Download 단추 아래 URL")](match-images/fastlane-image6.png)
+[![](match-images/fastlane-image6.png "github.com에서 복제 또는 다운로드 단추의 URL")](match-images/fastlane-image6.png#lightbox)
 
 프로젝트를 초기화하면 matchfile(match 도구에 환경 변수를 전달하도록 편집할 수 있는 텍스트 파일)이 생성됩니다. matchfile 예제는 다음과 같습니다.
 
-[ ![](match-images/fastlane-image8.png "matchfile 예제")](match-images/fastlane-image8.png)
+[![](match-images/fastlane-image8.png "matchfile 예제")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -88,7 +88,7 @@ URL은 아래 그림과 같이 github.com에서 찾아서 **Clone or Download**(
 - 기본 지침이 포함된 readme
 - match version
 
-[ ![](match-images/fastlane-image9.png "Git 리포지토리의 프로젝트 구조")](match-images/fastlane-image9.png)
+[![](match-images/fastlane-image9.png "Git 리포지토리의 프로젝트 구조")](match-images/fastlane-image9.png#lightbox)
 
 프로비전 프로필은 `~/Library/MobileDevice/Provisioning Profiles`에 설치됩니다. 인증서와 개인 키는 키 집합에 바로 설치됩니다.
 

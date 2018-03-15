@@ -7,27 +7,26 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 13838215b32abe49a5fe07b04088bc4216250844
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12b8f51156c2ed750c59ef79522121c6c5d2c03c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="compiling-for-different-devices"></a>다른 장치용으로 컴파일
 
 프로젝트의 **iOS 빌드** 속성 페이지에서 실행 파일의 빌드 속성을 구성할 수 있으며, 이 페이지는 Mac용 Visual Studio에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **옵션 > iOS 빌드**를 찾거나 Visual Studio의 **속성**에서 찾을 수 있습니다.
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](compiling-for-different-devices-images/image1.png "프로젝트 iOS 빌드 속성 페이지")](compiling-for-different-devices-images/image1.png) 
 
-[[/ide]] 
+[![](compiling-for-different-devices-images/image1.png "프로젝트 iOS 빌드 속성 페이지")](compiling-for-different-devices-images/image1.png#lightbox) 
 
-[[ide name="vs"]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](compiling-for-different-devices-images/image1a.png "프로젝트 iOS 빌드 속성 페이지")](compiling-for-different-devices-images/image1a.png)
+[![](compiling-for-different-devices-images/image1a.png "프로젝트 iOS 빌드 속성 페이지")](compiling-for-different-devices-images/image1a.png#lightbox)
 
-[[/ide]]
+-----
 
 UI에서 사용할 수 있는 구성 옵션 외에도, 개발자 고유의 명령줄 옵션 집합을 [Xamarin.iOS 빌드 도구(mtouch)](~/ios/deploy-test/mtouch.md)에 전달할 수 있습니다.
 
@@ -66,9 +65,9 @@ LLVM 최적화 백 엔드 엔진은 Mono 엔진보다 빠르고 엄격한 코드
 
 이 방법은 Mac용 Visual Studio 또는 Visual Studio의 iOS 빌드 옵션에서 사용할 수 있습니다.
 
-[ ![](compiling-for-different-devices-images/image2.png "LLVM 사용")](compiling-for-different-devices-images/image2.png)
+[![](compiling-for-different-devices-images/image2.png "LLVM 사용")](compiling-for-different-devices-images/image2.png#lightbox)
 
-[ ![](compiling-for-different-devices-images/image2a.png "LLVM 사용")](compiling-for-different-devices-images/image2a.png)
+[![](compiling-for-different-devices-images/image2a.png "LLVM 사용")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
 
@@ -132,7 +131,7 @@ Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입�
 -  약하게 연결하려는 각 구성의 **추가 옵션**에 `'-gcc_flags "-weak_framework iAd"'`를 추가합니다.
 
 
-[ ![](compiling-for-different-devices-images/image3.png "추가 옵션")](compiling-for-different-devices-images/image3.png)
+[![](compiling-for-different-devices-images/image3.png "추가 옵션")](compiling-for-different-devices-images/image3.png#lightbox)
 
 
 그 외에도 사용하는 유형이 존재하지 않는 이전 iOS 버전에서 실행되지 않도록 보호해야 합니다. 이렇게 하는 여러 가지 방법이 있는데, 그 중 하나는 `UIDevice.CurrentDevice.SystemVersion`을 구문 분석하는 것입니다.

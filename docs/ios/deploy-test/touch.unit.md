@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>단위 테스트
 
@@ -119,15 +119,15 @@ namespace Fixtures {
 
 테스트 실행기를 사용하면 등록된 테스트를 확인하고 실행할 수 있는 테스트를 개별적으로 선택할 수 있습니다.
 
-[ ![](touch.unit-images/02.png "등록된 테스트 목록")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "등록된 테스트 목록")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "개별 텍스트")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "개별 텍스트")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "실행 결과")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "실행 결과")](touch.unit-images/04.png#lightbox)
 
 중첩된 뷰에서 테스트 픽스쳐를 선택하여 개별 테스트 픽스쳐를 실행하거나, "모든 항목 실행"으로 모든 테스트를 실행할 수 있습니다. 기본 테스트를 실행하는 경우 통과한 테스트, 실패한 테스트 및 무시한 테스트를 하나씩 포함하도록 되어 있습니다. 보고서는 다음과 같이 표시되며, 실패한 테스트를 직접 드릴다운하여 실패에 대한 자세한 정보를 확인할 수 있습니다.
 
-[ ![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "샘플 보고서")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "샘플 보고서")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox)
 
 또한 IDE에서 응용 프로그램 출력 창을 통해 실행 중인 테스트와 현재 상태를 확인할 수도 있습니다.
 

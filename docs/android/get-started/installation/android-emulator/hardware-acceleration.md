@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/22/2017
-ms.openlocfilehash: 53dc85cab94bdf692e088d7c6eea6916d283ba84
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7560900ace62a737ac765bcfe93f759f8985aca2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android Emulator 하드웨어 가속
 
 Android SDK 에뮬레이터는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 Android SDK 에뮬레이터의 성능을 획기적으로 높이려면 Intel의 HAXM(Hardware Accelerated Execution Manager)을 사용하는 것이 좋습니다.
 
-<a name="haxm-overview" />
 
 ## <a name="haxm-overview"></a>HAXM 개요
 
@@ -27,9 +26,8 @@ HAXM은 Intel VT(가상화 기술)를 사용하여 호스트 컴퓨터에서Andr
 HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 이를 사용합니다. ([구성 및 사용](~/android/deploy-test/debugging/android-sdk-emulator/index.md)에 설명된 대로) **x86** 기반 가상 장치를 선택하면 가상 장치에서 하드웨어 가속을 위해 HAXM을 사용합니다. Android SDK 에뮬레이터를 처음으로 사용하기 전에 HAXM이 설치되어 있고 Android SDK 에뮬레이터에서 사용할 수 있는지 확인하는 것이 좋습니다.
 
 > [!NOTE]
-> **참고:** 가상 머신에서는 HAXM을 실행할 수 없습니다.
+> 가상 머신에서 HAXM을 실행할 수 없습니다.
 
-<a name="verify-haxm" />
 
 ## <a name="verifying-haxm-installation"></a>HAXM 설치 확인
 
@@ -39,7 +37,7 @@ HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 
 
 1. **도구 > Android > Android Emulator 관리자**를 클릭하여 Android Emulator 관리자를 시작합니다.
 
-    [![Android Emulator 관리자 메뉴 항목 위치](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png)
+    [![Android Emulator 관리자 메뉴 항목 위치](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
 
 2. 다음과 유사한 **성능 경고** 대화 상자가 표시되면 해당 컴퓨터에 HAXM이 아직 설치되지 않았거나 올바르게 구성되지 않은 것입니다.
 
@@ -65,7 +63,7 @@ HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 
 
 1. **도구 > Google 에뮬레이터 관리자**를 클릭하여 Android Emulator 관리자를 시작합니다.
 
-    [![Android Emulator 관리자 메뉴 항목 위치](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png)
+    [![Android Emulator 관리자 메뉴 항목 위치](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
 
 2. 다음과 유사한 **성능 경고** 대화 상자가 표시되면 해당 컴퓨터에 HAXM이 아직 설치되지 않았거나 올바르게 구성되지 않은 것입니다.
 
@@ -75,7 +73,7 @@ HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 
 
 3. **x86** 이미지(예: **Android\_Accelerated\_x86**)를 선택하고 **시작**을 클릭한 후 **실행**을 클릭합니다.
 
-    [![기본 가상 장치 이미지를 사용하여 Android SDK 에뮬레이터 시작](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png)
+    [![기본 가상 장치 이미지를 사용하여 Android SDK 에뮬레이터 시작](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. 에뮬레이터가 시작될 때 **Android Emulator 시작 중** 대화 상자가 표시되기를 기다리세요. HAXM이 설치된 경우 이 스크린샷에 표시된 것처럼 **HAX가 작동 중이고 에뮬레이터가 고속 가상 모드로 실행 중입니다**라는 메시지가 표시됩니다.
 
@@ -147,7 +145,7 @@ Windows 10에서 다음 단계를 따라 **Device Guard**가 실행 중인지 �
 
 2. **시스템 요약**에서 **Device Guard 가상화 기반 보안**이 존재하고 **실행 중** 상태인지 확인합니다.
 
-   [![장치 가드가 존재하고 실행 중임](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png)
+   [![장치 가드가 존재하고 실행 중임](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
 
 Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니다.
 
@@ -157,7 +155,7 @@ Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니�
 
 3. **로컬 그룹 정책 편집기**에서 **컴퓨터 구성 > 관리 템플릿 > 시스템 > Device Guard**로 이동합니다.
 
-   [![로컬 그룹 정책 편집기의 Device Guard](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png)
+   [![로컬 그룹 정책 편집기의 Device Guard](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
 
 4. (위에 보이는 것과 같이) **가상화 기반 보안 켜기**를 **사용 안 함**으로 변경하고 **로컬 그룹 정책 편집기**를 종료합니다.
 
@@ -190,6 +188,6 @@ Hyper-V가 아직 비활성화되지 않은 경우 도메인 가입 컴퓨터의
 
 2. HAXM 설치 관리자를 실행합니다. 설치 관리자 대화 상자에서 기본값을 적용합니다.
 
-   [![Intel Hardware Accelerated Execution Manager 설치 창](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png)
+   [![Intel Hardware Accelerated Execution Manager 설치 창](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----

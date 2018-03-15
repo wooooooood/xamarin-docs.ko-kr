@@ -7,12 +7,12 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d4d00019f9c0fd3483cdf1b03d9f110078ce37a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: a31d90e6d5abd574eb6187953082e1b70f66a113
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Visual Studio Android Emulator
 
@@ -24,36 +24,32 @@ Microsoft Visual Studio 2015에는 Xamarin.Android 앱을 디버깅하기 위한
 
 이 가이드에서는 Visual Studio에서 Microsoft Android 에뮬레이터를 실행하여 앱을 테스트하는 방법과, 에뮬레이터에서 제공하는 여러 기능에 대해 설명합니다. 서로 다른 유형의 Android 장치를 시뮬레이션 하기 위해 *장치 프로필*(기본 Android SDK 에뮬레이터의 장치 정의와 유사)을 선택하는 방법을 살펴볼 것입니다. 마지막으로, 문제 해결 섹션에서는 일반적인 문제 및 해결 방법을 설명합니다.
 
-<a name="requirements" />
-
 ## <a name="requirements"></a>요구 사항
 
 에뮬레이터를 실행하려면 컴퓨터가 Hyper-V 실행을 위한 요구 사항을 충족해야 합니다. Hyper-V에는 64비트 버전 Windows 8 Pro Edition, Windows 8.1 및 Windows 10 이상이 필요합니다. 요구 사항에 대한 자세한 내용은 [Visual Studio Emulator for Android에 대한 시스템 요구 사항](https://msdn.microsoft.com/en-us/library/mt228280.aspx)을 참조하세요.
 
 > [!NOTE]
-> **참고:** Hyper-V를 사용할 때는 HAXM(Android SDK 에뮬레이터에서 사용)을 사용할 수 없습니다. HAXM의 제한 사항과 가능한 문제에 대한 자세한 내용은 [HAXM 가상화 충돌](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#virt-conflicts)을 참조하세요.
+> Hyper-V를 사용할 때는 HAXM(Android SDK 에뮬레이터에서 사용)을 사용할 수 없습니다. HAXM의 제한 사항과 가능한 문제에 대한 자세한 내용은 [HAXM 가상화 충돌](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#virt-conflicts)을 참조하세요.
 
-
-<a name="launching" />
 
 ## <a name="running-the-emulator"></a>에뮬레이터 실행
 
 Visual Studio는 **디버그 대상** 드롭다운 메뉴에서 미리 구성된 몇 가지 대상-장치 프로필을 제공합니다(다음 스크린 샷에 표시). Microsoft Android Emulator 대상의 앞에는 **VS Emulator**:가 붙습니다.
 
-[ ![미리 구성된 대상 장치 프로필](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs-sml.png)](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs.png)
+[![미리 구성된 대상 장치 프로필](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs-sml.png)](visual-studio-android-emulator-images/01-vs-emulator-defaults-vs.png#lightbox)
 
 Visual Studio가 Xamarin.Android 응용 프로그램을 시작할 때 에뮬레이터가 선택된 장치 대상으로 시작되며 앱이 에뮬레이터에 배포됩니다. Visual Studio 왼쪽 아래 모서리에 에뮬레이터가 시작 중임을 나타내는 메시지가 표시됩니다.
 
-[ ![VS 에뮬레이터 시작](visual-studio-android-emulator-images/02-emulator-starting-vs-sml.png)](visual-studio-android-emulator-images/02-emulator-starting-vs.png)
+[![VS 에뮬레이터 시작](visual-studio-android-emulator-images/02-emulator-starting-vs-sml.png)](visual-studio-android-emulator-images/02-emulator-starting-vs.png#lightbox)
 
 시작이 지연된 후 에뮬레이터 화면이 왼쪽 아래처럼 표시됩니다. 화면 위쪽으로 잠금 아이콘을 끌어가면 장치 잠금이 해제됩니다.
 그런 다음 Xamarin.Android 앱이 오른쪽에 보이는 것처럼 에뮬레이터에서 실행될 것입니다.
 
-[ ![에뮬레이터 스크린 샷](visual-studio-android-emulator-images/03-first-screen-vs-sml.png)](visual-studio-android-emulator-images/03-first-screen-vs.png)
+[![에뮬레이터 스크린샷](visual-studio-android-emulator-images/03-first-screen-vs-sml.png)](visual-studio-android-emulator-images/03-first-screen-vs.png#lightbox)
 
 기본 Android SDK 에뮬레이터에서와 마찬가지로 코드에서 중단점을 설정하고, 변수를 점검하며, 호출 스택을 확인할 수 있습니다. 에뮬레이터 오른쪽의 세로 도구 모음은 에뮬레이터 기능에 대한 액세스를 제공합니다.
 
-[ ![세로 도구 모음의 단추](visual-studio-android-emulator-images/04-vertical-toolbar-vs-sml.png)](visual-studio-android-emulator-images/04-vertical-toolbar-vs.png)
+[![세로 도구 모음의 단추](visual-studio-android-emulator-images/04-vertical-toolbar-vs-sml.png)](visual-studio-android-emulator-images/04-vertical-toolbar-vs.png#lightbox)
 
 다음 목록에는 세로 도구 모음의 각 단추 기능이 요약되어 있습니다.
 
@@ -77,7 +73,7 @@ Visual Studio가 Xamarin.Android 응용 프로그램을 시작할 때 에뮬레�
 
 *추가 도구* 단추는 에뮬레이터의 추가 기능을 표시하는 대화 상자를 엽니다.
 
-[ ![추가 도구 대화 상자](visual-studio-android-emulator-images/05-additional-tools-vs-sml.png)](visual-studio-android-emulator-images/05-additional-tools-vs.png)
+[![추가 도구 대화 상자](visual-studio-android-emulator-images/05-additional-tools-vs-sml.png)](visual-studio-android-emulator-images/05-additional-tools-vs.png#lightbox)
 
 
 각 추가 기능은 대화 상자 맨 위에 있는 탭의 행에서 제공됩니다.
@@ -100,7 +96,6 @@ Visual Studio가 Xamarin.Android 응용 프로그램을 시작할 때 에뮬레�
 이러한 기능을 사용하는 방법에 대한 자세한 내용은 [Visual Studio Emulator for Android 소개](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/12/introducing-visual-studios-emulator-for-android/)를 참조하세요.
 
 
-<a name="device_profiles" />
 
 ## <a name="configuring-device-profiles"></a>장치 프로필 구성
 
@@ -108,28 +103,26 @@ Microsoft Android 에뮬레이터에는 출시된 Android 장치의 가장 인�
 
 *Emulator Manager*는 장치 프로필을 설치, 제거, 시작하는 데 사용됩니다. 이 스크린 샷에 표시된 것처럼 **도구** 메뉴에서 **Visual Studio Emulator for Android...**를 선택합니다.
 
-[ ![도구 메뉴에서 에뮬레이터 시작](visual-studio-android-emulator-images/06-launch-emulator-manager-vs-sml.png)](visual-studio-android-emulator-images/06-launch-emulator-manager-vs.png)
+[![도구 메뉴에서 에뮬레이터 시작](visual-studio-android-emulator-images/06-launch-emulator-manager-vs-sml.png)](visual-studio-android-emulator-images/06-launch-emulator-manager-vs.png#lightbox)
 
 그러면 **장치 프로필** 대화 상자가 열립니다. 설치된 프로필은 장치 프로필 목록의 맨 위서 강조 표시됩니다. 설치되지 않았으나 설치할 수 있는 프로필은 흐리게 표시됩니다.
 
-[ ![장치 프로필 아이콘](visual-studio-android-emulator-images/07-device-profiles-vs-sml.png)](visual-studio-android-emulator-images/07-device-profiles-vs.png)
+[![장치 프로필 아이콘](visual-studio-android-emulator-images/07-device-profiles-vs-sml.png)](visual-studio-android-emulator-images/07-device-profiles-vs.png#lightbox)
 
 새 프로필을 설치하려면 프로필 설치 아이콘을 클릭합니다(위 스크린 샷에서 표시된 아래쪽 방향 화살표). 예를 들어 **5.7" Marshmallow (6.0.0) XHDPI Phone** 설치 아이콘을 클릭하면 Emulator Manager가 아래와 같이 프로필을 다운로드합니다.
 
-[ ![프로필 다운로드의 예](visual-studio-android-emulator-images/08-downloading-profile-vs-sml.png)](visual-studio-android-emulator-images/08-downloading-profile-vs.png)
+[![프로필 다운로드의 예제](visual-studio-android-emulator-images/08-downloading-profile-vs-sml.png)](visual-studio-android-emulator-images/08-downloading-profile-vs.png#lightbox)
 
 장치 프로필을 다운로드한 후에는 프로필이 설치되었음을 표시하기 위해 강조 표시됩니다. *세부 정보 표시* 아이콘을 클릭하면 플랫폼 유형, CPU 아키텍처, 화면 크기/해상도, 장치에 사용 가능한 메모리가 표시됩니다.
 
-[ ![장치 프로필 세부 정보 표시](visual-studio-android-emulator-images/09-show-details-vs-sml.png)](visual-studio-android-emulator-images/09-show-details-vs.png)
+[![장치 프로필 세부 정보 표시](visual-studio-android-emulator-images/09-show-details-vs-sml.png)](visual-studio-android-emulator-images/09-show-details-vs.png#lightbox)
 
 Visual Studio **디버그 대상** 드롭다운 메뉴가 열리면 새로 설치된 장치 프로필을 대상으로 사용할 수 있습니다.
 
-[ ![대상 드롭다운 메뉴의 새 프로필](visual-studio-android-emulator-images/10-debug-target-vs-sml.png)](visual-studio-android-emulator-images/10-debug-target-vs.png)
+[![대상 드롭다운 메뉴의 새 프로필](visual-studio-android-emulator-images/10-debug-target-vs-sml.png)](visual-studio-android-emulator-images/10-debug-target-vs.png#lightbox)
 
 *Emulator Manager*에서 **이 프로필 제거**를 클릭하여 사용하지 않는 장치 프로필을 제거하면 이 목록을 줄일 수 있습니다. 현재는 이 에뮬레이터에서 사용자 지정 장치 프로필을 만들 수 없습니다.
 
-
-<a name="troubleshooting" />
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -144,27 +137,25 @@ Visual Studio **디버그 대상** 드롭다운 메뉴가 열리면 새로 설�
 
 1.  **시작** 단추를 클릭하고 **MMC**를 입력한 다음 **Enter**를 누릅니다. 다음 그림처럼 **Hyper-V Manager**를 클릭합니다.
 
-    [ ![Hyper-V Manager](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)
+    [![Hyper-V 관리자](visual-studio-android-emulator-images/15-launch-hyperv-manager.png)](visual-studio-android-emulator-images/15-launch-hyperv-manager.png#lightbox)
 
 2.  Hyper-V Manager **가상 머신** 창에서 편집에 사용할 에뮬레이터를 마우스 오른쪽 단추로 클릭하고 **설정...** 을 클릭합니다.
 
-    [ ![가상 머신 설정 메뉴 항목](visual-studio-android-emulator-images/16-vm-settings.png)](visual-studio-android-emulator-images/16-vm-settings.png)
+    [![가상 머신 설정 메뉴 항목](visual-studio-android-emulator-images/16-vm-settings.png)](visual-studio-android-emulator-images/16-vm-settings.png#lightbox)
 
 3.  설정 창에서 **호환성** 섹션(**하드웨어 > 프로세서** 아래)을 찾고 **다른 프로세서 버전을 사용하는 물리적 컴퓨터로 마이그레이션**을 사용하도록 설정합니다.
 
-    [ ![마이그레이션 옵션 선택](visual-studio-android-emulator-images/17-set-compatibility-vs-sml.png)](visual-studio-android-emulator-images/17-set-compatibility-vs.png)
+    [![마이그레이션 옵션 선택](visual-studio-android-emulator-images/17-set-compatibility-vs-sml.png)](visual-studio-android-emulator-images/17-set-compatibility-vs.png#lightbox)
 
 4.  **확인**을 클릭하고 Hyper-V Manager 창을 닫습니다.
 
 
-<a name="app_fail" />
 
 ### <a name="app-deploys-and-starts-but-fails-immediately"></a>앱 배포가 시작되나 즉시 실패
 
 이 상황에서는 에뮬레이터가 시작되고 앱이 에뮬레이터에 성공적으로 배포되며 앱이 시작됩니다. 그러나 즉시 앱이 실패합니다.
 많은 경우 호스트 프로세서와 Hyper-V 가상 머신 간의 비호환성으로 인해서도 이 문제가 발생합니다. 이 오류를 해결하려면 [에뮬레이터가 시작되지 않음](#cant_connect)(위)의 지침을 따릅니다.
 
-<a name="mscorlib" />
 
 ### <a name="emulator-stops-with-the-diagnostic-message-libaot-mscorlibdllso-not-found"></a>진단 메시지 **libaot-mscorlib.dll.so not found**와 함께 에뮬레이터 멈춤
 
@@ -176,23 +167,20 @@ Visual Studio **디버그 대상** 드롭다운 메뉴가 열리면 새로 설�
 
 3.  **Android 옵션**을 클릭하고 **빠른 배포 사용(디버그 모드에만 해당)**을 선택 취소합니다.
 
-    [ ![빠른 배포 옵션 사용 선택 취소](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png)
+    [![빠른 배포 옵션 사용 선택 취소](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png#lightbox)
 
 
-<a name="dragndrop" />
 
 ### <a name="drag-and-drop-does-not-work"></a>끌어서 놓기가 작동하지 않음
 
 관리자로 *Visual Studio Emulator for Android*를 시작한 경우(또는 Visual Studio가 관리자 권한으로 실행 중인 동안 Visual Studio에서 시작한 경우) .APK 또는 .ZIP 파일의 끌어서 놓기가 작동하지 않을 수 있습니다. 이 문제를 해결하려면 권한 상승 없이 *Visual Studio Emulator for Android*를 실행합니다(즉 관리자가 아니게).
 
-<a name="other" />
 
 ### <a name="other-errors"></a>기타 오류
 
 위의 문제 해결 팁은 Xamarin.Android에서 Visual Studio Android Emulator를 사용할 때 발생하는 대부분의 일반적인 문제에 적용될 수 있습니다.  Visual Studio Android Emulator 문제 해결에 대한 더 자세한 가이드는 [Visual Studio Emulator for Android 문제 해결](https://msdn.microsoft.com/en-us/library/mt228282.aspx)을 참조하세요.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>요약
 

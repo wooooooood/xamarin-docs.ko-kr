@@ -2,19 +2,56 @@
 documentType: LandingData
 title: "Xamarin.Mac 샘플"
 metadata:
-  description: "모바일 개발자를 위한 플랫폼 간 Xamarin.Android 샘플 앱입니다."
+  description: "모바일 개발자를 위한 플랫폼 간 Xamarin.Mac 샘플 앱입니다."
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/27/2018
   ms.topic: article
-  ms.openlocfilehash: 839a4df38f8d297a90d6d7b202bf0f20c76588b7
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: b367917c1605ccb6e50a55621521b56942ef8f54
+  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 02/28/2018
 abstract:
-  description: "C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되는 Xamarin 플랫폼 간 샘플 앱 및 코드 데모입니다."
+  description: "C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되는 Xamarin.Mac 샘플 앱 및 코드 데모입니다."
   menu:
     items:
     - href: https://developer.xamarin.com/samples/mac/all/
       text: "모든 Xamarin.Mac 샘플"
+sections:
+- title: 
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
+    - href: https://developer.xamarin.com/samples/mac/Hello_Mac/
+      html: "Mac 개발을 시작할 Hello World 앱입니다."
+      image:
+        src: images/hellomac.png
+        href: https://developer.xamarin.com/samples/mac/Hello_Mac/
+      title: Hello, Mac
+    - href: https://developer.xamarin.com/samples/mac/MacControls/
+      html: "Mac 앱용 UI 컨트롤의 예제입니다."
+      image:
+        src: images/controls.png
+        href: https://developer.xamarin.com/samples/mac/MacControls/
+      title: MacControls
+    - href: https://developer.xamarin.com/samples/mac/MacImages/
+      html: "Mac 앱용 UI 컨트롤의 예제입니다."
+      image:
+        src: images/images.png
+        href: https://developer.xamarin.com/samples/mac/MacImages/
+      title: MacImages
+    - href: https://developer.xamarin.com/samples/mac/SourceWriter/
+      html: "코드 완성 및 구문 강조 기능에 대한 지원을 제공하는 간단한 편집기입니다."
+      image:
+        src: images/sourcewriter.png
+        href: https://developer.xamarin.com/samples/mac/SourceWriter/
+      title: SourceWriter
+    - href: https://developer.xamarin.com/samples/mac/all/
+      html: "Xamarin.Mac 샘플 앱 및 코드 데모의 전체 집합입니다."
+      image:
+        src: ~/media/shared/sample-download.svg
+        href: https://developer.xamarin.com/samples/mac/all/
+      title: "모든 Xamarin.Mac 샘플"

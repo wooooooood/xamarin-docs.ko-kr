@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 854ca06abc8be2f55f3e95a8ac3bd87c78af19cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55f5cf22718713fdcf11c49e0993f47c2f5a6f1d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-setup"></a>Android Emulator 설정
 
@@ -25,7 +25,7 @@ Google Android SDK 에뮬레이터를 다양한 구성으로 실행하여 다양
 
 
 > [!NOTE]
-> **참고:** Android SDK Tools 버전 **26.0.1** 이상부터 Google은 새로운 CLI(명령줄 인터페이스) 도구를 위해 기존의 AVD/SDK 관리자에 대한 지원을 중단했습니다. 이러한 사용 중단 변경으로 인해 이제 Android Tools 26.0.1 이상에서 Google SDK/에뮬레이터 관리자 대신 Xamarin SDK/장치 관리자가 사용됩니다. (Xamarin SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요).
+> Android SDK Tools 버전 **26.0.1** 이상부터 Google은 새로운 CLI(명령줄 인터페이스) 도구를 위해 기존의 AVD/SDK 관리자에 대한 지원을 중단했습니다. 이러한 사용 중단 변경으로 인해 이제 Android Tools 26.0.1 이상에서 Google SDK/에뮬레이터 관리자 대신 Xamarin SDK/장치 관리자가 사용됩니다. (Xamarin SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요).
 
 
 ## <a name="sections"></a>섹션

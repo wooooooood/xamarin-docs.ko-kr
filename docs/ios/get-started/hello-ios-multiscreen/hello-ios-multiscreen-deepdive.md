@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 8e36548e0d9926a28c133f8f1dc688fcbfa9f78e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS 멀티스크린 심층 분석
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 [Hello, iOS](~/ios/get-started/hello-ios/index.md) 자습서에서는 iOS 응용 프로그램에 뷰 컨트롤러가 해당 *콘텐츠 뷰 계층 구조*를 창으로 로딩할 책임이 있는 하나의 *창*만 있다는 것을 배웠습니다. 두 번째 Phoneword 연습에서는 응용 프로그램에 두 번째 화면을 추가하고 아래 다이어그램에 표시된 것처럼 두 개의 화면 간에 일부 데이터(전화번호 목록)를 전달했습니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/08.png "이 다이어그램은 두 개의 화면 간 데이터 전달을 보여 줍니다.")](hello-ios-multiscreen-deepdive-images/08.png)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "이 다이어그램은 두 개의 화면 간 데이터 전달을 보여줍니다.")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 예제에서 데이터는 첫 번째 화면에서 수집되었고, 첫 번째 뷰 컨트롤러에서 두 번째로 전달되었으며 두 번째 화면에서 표시되었습니다. 이 화면, 컨트롤러 뷰 및 데이터의 분리는 *MVC(모델, 뷰, 컨트롤러)* 패턴을 따릅니다. 다음 단원에서는 패턴의 이점, 해당 구성 요소 및 Phoneword 응용 프로그램에서 사용하는 방법을 설명합니다.
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/27/2018
 
 모델-뷰-컨트롤러는 *디자인 패턴*입니다. 코드의 일반적인 문제 또는 사용 사례에 대한 재사용 가능한 아키텍처 솔루션입니다. MVC는 *GUI(그래픽 사용자 인터페이스)*를 포함하는 응용 프로그램에 대한 아키텍처입니다. 세 가지 역할 중 하나에 응용 프로그램의 개체를 할당합니다(*모델*(데이터 또는 응용 프로그램 논리), *뷰*(사용자 인터페이스) 및 *컨트롤러*(코드 숨김)). 아래 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여 줍니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/00.png "다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여 줍니다.")](hello-ios-multiscreen-deepdive-images/00.png)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "이 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 MVC 패턴은 GUI 응용 프로그램의 다른 부분 간의 논리 분리를 제공하고 코드 및 뷰를 쉽게 다시 사용할 수 있도록 하기 때문에 유용합니다. 시작하여 세 가지 역할을 각각 자세히 살펴보겠습니다.
 
@@ -71,23 +71,23 @@ Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 
 
 탐색 컨트롤러는 iOS 응용 프로그램에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 응용 프로그램에 대한 탐색을 제공합니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/01.png "탐색 컨트롤러는 여기에 표시된 Settings 앱과 같은 iOS 응용 프로그램에 대한 탐색을 제공합니다.")](hello-ios-multiscreen-deepdive-images/01.png)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "탐색 컨트롤러는 여기에 표시된 Settings 앱과 같은 iOS 응용 프로그램에 대한 탐색을 제공합니다.")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 탐색 컨트롤러는 세 가지 기본 기능을 제공합니다.
 
 -  **앞으로 후크 탐색을 제공합니다.** – 탐색 컨트롤러는 콘텐츠 뷰 계층 구조가 *탐색 스택*으로 *푸시*되는 계층적 탐색 메타포를 사용합니다. 탐색 스택을 아래 다이어그램에 표시된 것처럼 최상위 카드만 표시되는 플레잉 카드의 스택으로 생각할 수 있습니다.  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/02.png "이 다이어그램은 카드의 스택으로 탐색을 보여 줍니다.")](hello-ios-multiscreen-deepdive-images/02.png)
+    [![](hello-ios-multiscreen-deepdive-images/02.png "이 다이어그램은 카드의 스택으로 탐색을 보여줍니다.")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
 -  **필요한 경우 뒤로 단추를 제공합니다.** - 새 항목을 탐색 스택으로 푸시할 때 제목 표시줄은 사용자를 뒤로 탐색할 수 있도록 하는 *뒤로 단추*를 자동으로 표시할 수 있습니다. 뒤로 단추를 누르면 탐색 스택에서 현재 뷰 컨트롤러를 *꺼내고* 이전 콘텐츠 뷰 계층 구조를 창으로 로드합니다.  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/03.png "이 다이어그램은 스택에서 카드 '꺼내기'를 보여 줍니다.")](hello-ios-multiscreen-deepdive-images/03.png)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "이 다이어그램은 스택에서 카드 '꺼내기'를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **제목 표시줄을 제공합니다.** – **탐색 컨트롤러**의 윗 부분은 *제목 표시줄*이라고 합니다. 아래 다이어그램에 표시된 것처럼 뷰 컨트롤러 제목을 표시합니다.  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/04.png "제목 표시줄은 뷰 컨트롤러 제목을 표시합니다.")](hello-ios-multiscreen-deepdive-images/04.png)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "제목 표시줄은 보기 컨트롤러 제목을 표시합니다.")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 
 
@@ -97,11 +97,11 @@ Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 
 **탐색 컨트롤러**는 콘텐츠 뷰 계층 구조를 관리하지 않으므로 표시할 항목이 없습니다.
 대신 **탐색 컨트롤러**는 *루트 뷰 컨트롤러*와 쌍을 이룹니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/05.png "탐색 컨트롤러는 루트 뷰 컨트롤러와 쌍을 이룹니다.")](hello-ios-multiscreen-deepdive-images/05.png)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "탐색 컨트롤러는 루트 보기 컨트롤러와 쌍을 이룹니다.")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 루트 뷰 컨트롤러는 **탐색 컨트롤러의** 스택에 첫 번째 뷰 컨트롤러를 나타내며 루트 뷰 컨트롤러의 콘텐츠 뷰 계층 구조는 창에 로드되는 첫 번째 콘텐츠 뷰 계층 구조입니다. 전체 응용 프로그램을 탐색 컨트롤러의 스택에 배치하고자 하는 경우 원본 없는 Segue를 **탐색 컨트롤러**로 이동하고 Phoneword 앱에서 수행한 것처럼 첫 번째 화면의 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정할 수 있습니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/06.png "원본 없는 Segue는 첫 번째 화면 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정합니다.")](hello-ios-multiscreen-deepdive-images/06.png)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "원본 없는 Segue는 첫 번째 화면 보기 컨트롤러를 루트 보기 컨트롤러로 설정합니다.")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>추가 탐색 옵션
 
@@ -115,7 +115,7 @@ Phoneword 연습에서는 두 가지 방법으로(Storyboard Segue로 먼저 그
 
 **표시** 작업으로 Segue를 Storyboard에 추가할 때 두 번째 뷰 컨트롤러를 탐색 컨트롤러의 스택으로 푸시하도록 iOS에 지시합니다.
 
- [ ![](hello-ios-multiscreen-deepdive-images/09.png "드롭다운 목록에서 segue 종류 설정")](hello-ios-multiscreen-deepdive-images/09.png)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "드롭다운 목록에서 Segue 형식 설정")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 Segue를 Storyboard에 추가하는 것은 화면 간의 간단한 전환을 만들기에 충분합니다. 뷰 컨트롤러 간에 데이터를 전달하려는 경우 `PrepareForSegue` 메서드를 재정의하고 데이터를 직접 처리해야 합니다.
 

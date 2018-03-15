@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bc53a8230b66b88319f729d7effe8ed75f0176b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf2f62929df63d08add76b7fb6de404d2780b2b3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -42,7 +42,6 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 이 가이드의 뒷부분에 [Rake](http://martinfowler.com/articles/rake.html)를 사용하여 이러한 단계를 스크립팅하는 방법을 보여주는 연습이 있습니다.
 
 
-<a name="Setting_android_versionCode" />
 
 ### <a name="creating-the-version-code-for-the-apk"></a>APK의 버전 코드 만들기
 
@@ -67,7 +66,7 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
 
 다음 다이어그램에서는 위 목록에 설명된 각 코드의 위치를 보여줍니다.
 
-[![다이어그램의 8자리 버전 코드 형식의 다이어그램(색상으로 구분)](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![다이어그램의 8자리 버전 코드 형식의 다이어그램(색상으로 구분)](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 Google Play에서는 `versionCode` 및 APK 구성에 따라 장치에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 장치에 제공됩니다. 예를 들어 응용 프로그램에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
@@ -88,7 +87,6 @@ x86 버전이 최신 API(API 수준 19)를 대상으로 하는 업데이트나 �
 이러한 버전 코드를 수동으로 유지 관리하는 것은 개발자에게 큰 부담이 될 수 있습니다. 정확한 `android:versionCode`를 계산한 후 APK를 빌드하는 프로세스는 자동화되어야 합니다.
 이를 수행하는 방법에 대한 예는 이 문서의 뒷부분에 나오는 연습에서 설명합니다.
 
-<a name="CreatingAndroidManifest" />
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>임시 AndroidManifest.XML 만들기
 
@@ -123,7 +121,6 @@ ABI별 APK를 빌드할 때는 다음 샘플 명령줄에 나와 있는 것처�
 -   `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트의 `.csproj` 파일에 대한 경로입니다.
 
 
-<a name="SignAndZipAlign" />
 
 ### <a name="sign-and-zipalign-the-apk"></a>APK 서명 및 Zipalign
 
@@ -139,7 +136,6 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTO
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## <a name="automating-apk-creation-with-rake"></a>Rake를 사용한 APK 만들기 자동화
 
@@ -174,11 +170,11 @@ $ rake build
 
 Rake 작업이 완료되면 `xamarin.helloworld.apk` 파일이 있는 `bin` 폴더 3개가 있을 것입니다. 다음 스크린샷은 이러한 각각의 폴더와 그 내용을 보여줍니다.
 
-[![xamarin.helloworld.apk를 포함하는 플랫폼별 폴더의 위치](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![xamarin.helloworld.apk를 포함하는 플랫폼별 폴더의 위치](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]
-> **참고:** 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](http://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
+> 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](http://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
 
 
 ## <a name="summary"></a>요약

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>사내 배포
 
@@ -56,15 +56,15 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
 4. *프로덕션* 제목 아래에서 **사내 및 임시**를 선택합니다.
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "사내 및 임시 선택")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "사내 및 임시 선택")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. [계속]을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. 지시한 대로 CSR을 만들었으면 [계속]을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. [생성]을 클릭하여 인증서를 만듭니다.
 8. 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
@@ -74,15 +74,15 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. 팀을 선택하고 *세부 정보 보기*를 클릭합니다.
 
-    [ ![](in-house-distribution-images/selectteam.png "팀 선택")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "팀 선택")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.
 
-   [ ![](in-house-distribution-images/selectcert.png "iOS 배포 인증서 만들기")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "iOS 배포 인증서 만들기")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.
 
-   [ ![](in-house-distribution-images/selectcert.png "iOS 앱 스토어 선택")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "iOS 앱 스토어 선택")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. Apple 프로비전 포털로 돌아가서 **프로비전** > **배포**를 차례로 선택합니다.
 
-   [![](in-house-distribution-images/distribute01.png "프로비전 > 배포 선택")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "프로비전 > 배포 선택")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **사내**로 선택합니다.
 
-   [![](in-house-distribution-images/distribute02.png "사내 배포 프로필 만들기")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "사내 배포 프로필 만들기")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. **계속** 단추를 클릭하고 드롭다운 목록에서 배포 프로필을 만들려는 앱 ID를 선택합니다.
 
-   [![](in-house-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. **계속** 단추를 클릭하고 응용 프로그램에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-   [![](in-house-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
-   [![](in-house-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 

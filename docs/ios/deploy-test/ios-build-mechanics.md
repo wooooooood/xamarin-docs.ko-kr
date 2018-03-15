@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b752ebdd1a98d5258cc27b2221d33e07fa04aa46
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -33,7 +33,7 @@ Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **Mac용 Visual Studio > 기본 설정...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 선택
-3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정: [ ![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png)
+3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다. [![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png#lightbox)
 4. **확인**을 클릭합니다.
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드
@@ -46,7 +46,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **도구 > 옵션...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 및 솔루션 > 빌드 및 실행** 선택
-3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정: [ ![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png)
+3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다. [![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. **확인**을 클릭합니다.
 5. 패키지를 지우고 다시 빌드합니다.
 6. 출력 패널에 진단 출력이 표시됩니다.
@@ -101,7 +101,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[ ![](ios-build-mechanics-images/image3.png "옵션 설정")](ios-build-mechanics-images/image3.png)
+[![](ios-build-mechanics-images/image3.png "옵션 설정")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>장치 트릭
 
@@ -155,7 +155,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[ ![](ios-build-mechanics-images/image4.png "옵션 설정")](ios-build-mechanics-images/image4.png)
+[![](ios-build-mechanics-images/image4.png "옵션 설정")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>링커 사용
 

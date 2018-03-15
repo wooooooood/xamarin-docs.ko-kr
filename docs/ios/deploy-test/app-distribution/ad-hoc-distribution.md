@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 423240949daf45d8d179a3ca9f89677f490cc24d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ad-hoc-distribution"></a>임시 배포
 
@@ -51,15 +51,15 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
 4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **앱 스토어 및 임시**를 선택합니다.
 
-  [ ![](ad-hoc-distribution-images/cert-first-small.png "사내 및 임시 선택 또는 앱 스토어 및 임시 선택")](ad-hoc-distribution-images/cert-first-large.png)
+  [![](ad-hoc-distribution-images/cert-first-small.png "사내 및 임시 선택 또는 앱 스토어 및 임시 선택")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. [계속]을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-  [ ![](ad-hoc-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](ad-hoc-distribution-images/createcertmanually02.png)
+  [![](ad-hoc-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. 지시한 대로 CSR을 만들었으면 [계속]을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-  [ ![](ad-hoc-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](ad-hoc-distribution-images/createcertmanually03.png)
+  [![](ad-hoc-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. [생성]을 클릭하여 인증서를 만듭니다.
 8. 마지막으로 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
@@ -67,9 +67,9 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-1.   팀을 선택하고 **인증서 관리...** 클릭: [ ![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png)
+1.   팀을 선택하고 **인증서 관리...**를 클릭합니다. [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어** 선택: [ ![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png)
+2.   다음으로 **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다. [![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,23 +91,23 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 배포 프로필을 만드는 데 필요한 필수 구성 요소가 있으면 아래 단계에 따라 해당 배포 프로필을 만듭니다.
 
-1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 선택합니다. [ ![](ad-hoc-distribution-images/distribute01.png "프로비전 > 배포 선택")](ad-hoc-distribution-images/distribute01.png)
+1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 선택합니다. [![](ad-hoc-distribution-images/distribute01.png "프로비전 > 배포 선택")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **임시**로 선택합니다.
 
-    [ ![](ad-hoc-distribution-images/distribute02.png "임시 배포 유형 만들기")](ad-hoc-distribution-images/distribute02.png)
+    [![](ad-hoc-distribution-images/distribute02.png "임시 배포 형식 만들기")](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. **계속** 단추를 클릭하고 드롭다운 목록에서 배포 프로필을 만들려는 앱 ID를 선택합니다.
 
-    [ ![](ad-hoc-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](ad-hoc-distribution-images/distribute03.png)
+    [![](ad-hoc-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. **계속** 단추를 클릭하고 응용 프로그램에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-    [ ![](ad-hoc-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](ad-hoc-distribution-images/distribute04.png)
+    [![](ad-hoc-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
-    [ ![](ad-hoc-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](ad-hoc-distribution-images/distribute06.png)
+    [![](ad-hoc-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 

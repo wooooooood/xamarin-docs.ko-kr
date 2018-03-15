@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 99f66fd0d23f14224bcd915ef7d1c6d81367f173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 412e65e074a171666a0ed9b61e347c4a16ec366b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-an-application"></a>응용 프로그램 게시
 
 멋진 응용 프로그램을 만들었다면 사람들이 이를 사용하고자 할 것입니다. 이 섹션에서는 Xamarin.Android로 만든 응용 프로그램을 이메일, 개인 웹 서버, Google Play 또는 Amazon App Store for Android 등을 통해 공개 배포하는 단계를 설명합니다.
 
-<a name="Overview" />
 
 ## <a name="overview"></a>개요
 
@@ -29,7 +28,7 @@ Xamarin.Android 응용 프로그램 개발의 마지막 단계는 응용 프로�
 
 다음 다이어그램에서는 Xamarin.Android 응용 프로그램 게시와 관련된 단계를 보여 줍니다.
 
-[ ![빌드 및 배포 순서도](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png)
+[![빌드 및 배포 순서도](images/build-and-deploy-steps.png)](images/build-and-deploy-steps.png#lightbox)
 
 위의 다이어그램에서 볼 수 있듯이 사용되는 배포 방법에 관계없이 준비는 동일합니다. 몇 가지 방법으로 Android 응용 프로그램을 사용자에게 릴리스할 수 있습니다.
 
@@ -49,7 +48,7 @@ Amazon Mobile App Distribution Program을 사용하면 모바일 앱 개발자�
 
 Google Play는 Android 응용 프로그램에 대한 가장 포괄적이고 인기 있는 마켓플레이스입니다. Google Play에서는 사용자가 장치나 컴퓨터의 간단한 아이콘을 클릭하여 응용 프로그램을 검색, 다운로드, 평가 및 결제할 수 있습니다. Google Play는 판매 및 시장 추세 분석을 지원하고 응용 프로그램을 다운로드할 수 있는 장치 및 사용자를 제어하는 도구도 제공합니다. Android 장치에서 실행되는 Google Play의 스크린 샷은 다음과 같습니다.
 
-[ ![Google Play 스크린 샷](images/google-play-app.png)](images/google-play-app.png)
+[![Google Play 스크린샷](images/google-play-app.png)](images/google-play-app.png#lightbox)
 
 이 섹션에서는 적합한 프로모션 자료와 함께 Google Play 등의 스토어에 응용 프로그램을 업로드하는 방법을 보여 줍니다. APK 확장 파일이 무엇이며 어떻게 작동하는지를 개념적으로 설명합니다. Google 라이선스 서비스에 대해서도 설명합니다. 마지막으로 HTTP 웹 서버, 간단한 이메일 배포 및 Amazon App Store for Android 등, 다른 배포 방법에 대해서 소개합니다.
 

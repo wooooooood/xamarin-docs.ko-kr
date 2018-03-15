@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2995d9126617a767013ed1f5cb808f22ce0fd2da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89768d2562814091f0e5894c4af2edd67d68cb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="running-the-android-sdk-emulator"></a>Android SDK 에뮬레이터 실행
 
@@ -32,13 +32,13 @@ Visual Studio에는 장치 드롭다운 메뉴에 표시되는 미리 구성된 
 
 -   **VisualStudio\_android-23\_x86\_tablet** 
 
-[ ![가상 장치](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png)
+[![가상 장치](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png#lightbox)
 
 일반적으로 **VisualStudio\_android-23\_x86\_phone** 가상 장치를 선택하여 전화 앱을 테스트 및 디버그합니다. 미리 구성된 가상 장치 중 하나가 요구 사항에 부합할 경우(즉 앱의 대상 API 수준에 맞는 경우) [에뮬레이터 시작](#launching)으로 건너뛰어 에뮬레이터에서 앱 실행을 시작합니다. Android API 수준에 대해 아직 잘 모르겠으면 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조하세요.
 
 Xamarin.Android 프로젝트에서 사용 가능한 가상 장치와 호환되지 않는 대상 프레임워크 수준을 사용할 경우, 드롭다운 메뉴의 **지원되지 않는 장치**에 사용할 수 없는 가상 장치가 나열됩니다. 예를 들어 다음 프로젝트는 대상 프로레임워크가 **Android 7.1 Nougat(API 25)**로 설정되었는데 이는 기본 제공되는 **Android 6.0** 가상 장치와 호환되지 않습니다.
 
-[ ![호환되지 않는 가상 장치](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png)
+[![호환되지 않는 가상 장치](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 **최소 Android 대상 변경**을 클릭하여 프로젝트의 최소 Android 버전을 사용 가능한 가상 장치의 API 수준에 맞게 변경할 수 있습니다. 또는 나중에 [가상 장치 구성](#virtualdevice)에서 설명한 대로 **Android Emulator Manager**를 사용하여 대상 API 수준을 지원하는 새 가상 장치를 만들 수 있습니다. 새 API 수준에 대해 가상 장치를 구성할 수 있으려면 먼저 해당 API 수준에 대한 시스템 이미지를 설치해야 합니다. &ndash; 이에 대해서는 다음 섹션에서 설명합니다.
 
@@ -50,7 +50,7 @@ Visual Studio for Mac에는 장치 드롭다운 메뉴에 표시되는 미리 �
 
 -   **Android\_ARMv7a**
 
-[ ![가상 장치](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png)
+[![가상 장치](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 일반적으로 **Android\_Accelerated\_x86** 가상 장치를 선택하여 전화 앱을 테스트 및 디버그합니다. 미리 구성된 이 가상 장치가 요구 사항에 부합할 경우(즉 앱의 대상 API 수준에 맞는 경우) [에뮬레이터 시작](#launching)으로 건너뛰어 에뮬레이터에서 앱 실행을 시작합니다. Android API 수준에 대해 아직 잘 모르겠으면 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조하세요.
 
@@ -73,11 +73,11 @@ IDE 위에는 **디버그** 또는 **릴리스** 모드를 선택하는 데 사�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![디버그 및 릴리스 모드, 재생 단추](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png)
+[![디버그 및 릴리스 모드, 재생 단추](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![디버그 및 릴리스 모드, 재생 단추](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png)
+[![디버그 및 릴리스 모드, 재생 단추](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 

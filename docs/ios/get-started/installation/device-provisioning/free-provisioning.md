@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: baf1ae7d4cc533af0db482e8d7c31fc3c8b4edbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4e93696f8eef44030ffacbdbaa8ebcd860a402f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="free-provisioning"></a>무료 프로비전
 
@@ -43,29 +43,29 @@ Apple 개발자 계정을 사용하지 않는 프로비전은 *서명 ID*(개발
 2. Xcode를 열고 **Xcode > 기본 설정**으로 이동합니다.
 3. **계정** 아래에서 **+** 단추를 사용하여 기존 Apple ID를 추가합니다. 이래 스크린샷과 비슷한 화면이 보일 것입니다.
 
-  [ ![](free-provisioning-images/launchapp1.png "Xcode 기본 계정")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Xcode 기본 계정")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. 배포하려는 iOS 장치를 연결하고 Xcode에서 비어 있는 새 단일 보기 iOS 프로젝트를 만듭니다. **팀** 드롭다운을 방금 추가한 Apple ID로 설정합니다. `your name (Personal Team - your Apple ID)`와 비슷한 형식이어야 합니다.
 
-  [ ![](free-provisioning-images/launchapp2.png "서명 ID 만들기")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "서명 ID 만들기")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. **일반 > ID** 섹션 아래에서 번들 식별자가 Xamarin.iOS 앱의 번들 식별자와 _정확히_ 일치하는지 확인하고 배포 대상이 연결된 iOS 장치보다 낮거나 일치하는지 확인합니다. Xcode는 명시적 앱 ID로만 프로비전 프로필을 만들기 때문에 이 단계가 매우 중요합니다.
 
-  [![](free-provisioning-images/launchapp5.png "명시적 앱 ID로 프로비전 프로필 만들기")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "명시적 앱 ID로 프로비전 프로필 만들기")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. 서명 섹션에서 **자동으로 서명 관리**를 선택하고 드롭다운 목록에서 팀을 선택합니다.
 
-  [![](free-provisioning-images/launchapp6.png "자동으로 서명 관리를 선택하고 드롭다운 목록에서 팀 선택")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "자동으로 서명 관리를 선택하고 드롭다운 목록에서 팀 선택")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. 이전 단계에서는 자동으로 프로비전 프로필 및 서명 ID가 생성됩니다. 프로비전 프로필 옆에 있는 정보 아이콘을 클릭하면 볼 수 있습니다.
 
-  [![](free-provisioning-images/launchapp7.png "프로비전 프로필 보기")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "프로비전 프로필 보기")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. Xcode를 테스트하려면 [실행] 단추를 클릭하여 장치에 새 응용 프로그램을 배포합니다.
 
 9. IDE로 돌아가서, 동일한 장치가 연결된 상태에서 Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다. IOS 번들 서명 섹션을 찾아서 서명 ID 및 프로비전 프로필을 명시적으로 설정합니다.
 
-  [![](free-provisioning-images/launchapp8.png "서명 ID 및 프로비전 프로필 설정")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "서명 ID 및 프로비전 프로필 설정")](free-provisioning-images/launchapp8.png#lightbox)
 
 IDE에서 서명 ID 또는 올바른 프로비전 프로필을 찾을 수 없는 경우 IDE를 다시 시작해야 할 수도 있습니다.
 

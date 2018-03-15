@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6df2e2ad97e42c854b6377268086b80eef145e37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4b7439448d5c25aacf991c89a188086c95a44ac
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="helloios-multiscreen-quickstart"></a>Hello.iOS 멀티스크린 빠른 시작
 
 이 연습의 부분은 앱으로 호출된 전화번호의 기록을 표시하는 두 번째 화면을 Phoneword 응용 프로그램에 추가합니다. 다음 스크린샷에 표시된 것처럼 최종 응용 프로그램에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.
 
- [ ![](hello-ios-multiscreen-quickstart-images/00.png "이 스크린샷에 표시된 것처럼 최종 응용 프로그램에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.")](hello-ios-multiscreen-quickstart-images/00.png)
+ [![](hello-ios-multiscreen-quickstart-images/00.png "이 스크린샷에 표시된 것처럼 최종 응용 프로그램에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
 [함께 제공되는 심층 분석](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)은 빌드하였던 응용 프로그램을 검토하고, 진행하면서 나오는 아키텍처, 탐색 및 다른 새 iOS 개념에 대해 논의합니다.
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/27/2018
   ![](hello-ios-multiscreen-quickstart-images/03new.png "탐색 컨트롤러를 도구 상자에서 디자인 화면으로 끌어 옵니다.")
 
 
-4. **원본 없는 Segue**(단일 보기 컨트롤러의 왼쪽에 있는 회색 화살표)를 **탐색 컨트롤러**로 끌어 와 응용 프로그램의 시작점을 변경합니다.
+4. **원본 없는 Segue**(단일 보기 컨트롤러의 왼쪽에 있는 회색 화살표)를 **탐색 컨트롤러**로 끌어와서 응용 프로그램의 시작점을 변경합니다.
 
   ![](hello-ios-multiscreen-quickstart-images/04new.png "원본 없는 Segue를 탐색 컨트롤러로 끌어 와 응용 프로그램의 시작점을 변경합니다.")
 
@@ -276,7 +276,7 @@ ms.lasthandoff: 02/27/2018
 여기서 몇 가지 일이 발생합니다.
   * `translatedNumber` 변수가 `ViewDidLoad` 메서드에서 _클래스 수준 변수_로 이동되었습니다.
   * `PhoneNumbers.Add(translatedNumber)`를 호출하여 전화를 건 번호를 전화번호 목록에 추가하도록 **CallButton** 코드가 수정되었습니다.
-  * `PrepareForSegue` 메서드가 추가되었습니다
+  * `PrepareForSegue` 메서드가 추가되었습니다.
 
   응용 프로그램을 저장하고 빌드하여 오류가 없는지 확인합니다.
 

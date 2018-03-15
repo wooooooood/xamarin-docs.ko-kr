@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
 이 연습에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 그 번호로 전화하는 응용 프로그램을 만드는 방법을 보여줍니다. 최종 응용 프로그램은 다음과 같습니다.
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword 응용 프로그램")](quickstart-images/intro-app-examples.png "Phoneword 응용 프로그램")
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword 응용 프로그램")](quickstart-images/intro-app-examples.png#lightbox "Phoneword 응용 프로그램")
 
 Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
@@ -113,7 +113,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
         }
 
   > [!NOTE]
-> **참고 사항**: 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정될 오류가 발생합니다.
+  > 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정될 오류가 발생합니다.
 
   **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 선택합니다.
 
@@ -565,7 +565,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
         }
 
   > [!NOTE]
-> **참고 사항**: 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정될 오류가 발생합니다.
+  > 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정될 오류가 발생합니다.
 
   **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 

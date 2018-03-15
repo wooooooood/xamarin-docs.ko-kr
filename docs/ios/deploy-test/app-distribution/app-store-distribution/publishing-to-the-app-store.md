@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 84db17ede0019e1134b65edaca85ef2401fb3bc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
 
@@ -133,7 +133,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 4. 연결하면 사용되지 않는 메서드, 속성, 클래스 등을 제거하여 응용 프로그램의 배포 가능한 전체 크기를 줄일 수 있으며, 대부분의 경우 **SDK 어셈블리만 연결**의 기본값으로 유지해야 합니다. 일부 특정 타사 라이브러리를 사용할 때와 같이 일부 상황에서는 이 값을 **연결하지 않음**으로 설정하여 필수 요소가 제거되지 않도록 강제할 수 있습니다. 자세한 내용은 [iOS 빌드 메커니즘](~/ios/deploy-test/ios-build-mechanics.md) 가이드를 참조하세요.
 5. **iOS용 PNG 이미지 파일 최적화** 확인란을 선택하면 응용 프로그램의 결과물 크기를 더 줄일 수 있습니다.
 6. 디버깅은 빌드를 쓸데없이 크게 만들므로 _사용하지 않도록_ 설정해야 합니다.
-8. iOS 11의 경우 **ARM64**를 지원하는 장치 아키텍처 중 하나를 선택해야 합니다. 64비트 iOS 장치 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
+8. iOS 11의 경우 **ARM64**를 지원하는 장치 아키텍처 중 하나를 선택해야 합니다. 64비트 iOS 장치 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
 9. 필요에 따라 더 작고 더 빠른 코드를 만드는 **LLVM** 컴파일러를 사용할 수도 있지만 컴파일하는 데 시간이 더 오래 걸립니다.
 10. 응용 프로그램의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
 11. 변경 내용을 빌드 구성에 저장합니다.
@@ -157,7 +157,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 
     ![](publishing-to-the-app-store-images/configurevs02.png "고급 탭")
 
-8. Xamarin.iOS 응용 프로그램이 iOS 8 및 64비트 iOS 장치를 대상으로 하는 경우 **ARM64**를 지원하는 장치 아키텍처 중 하나를 선택해야 합니다. 64비트 iOS 장치 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
+8. Xamarin.iOS 응용 프로그램이 iOS 8 및 64비트 iOS 장치를 대상으로 하는 경우 **ARM64**를 지원하는 장치 아키텍처 중 하나를 선택해야 합니다. 64비트 iOS 장치 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
 9. 필요에 따라 더 작고 더 빠른 코드를 만드는 **LLVM** 컴파일러를 사용할 수도 있지만 컴파일하는 데 시간이 더 오래 걸립니다.
 10. 응용 프로그램의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
 11. 변경 내용을 빌드 구성에 저장합니다.
@@ -351,16 +351,16 @@ _.ipa_가 저장되면 Mac용 Visual Studio의 보관 워크플로에서 응용 
 
 1. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
 
-    [ ![](publishing-to-the-app-store-images/publishvs01.png "앱 배달 선택")](publishing-to-the-app-store-images/publishvs01.png)
+    [![](publishing-to-the-app-store-images/publishvs01.png "앱 배달 선택")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
 
 3. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.
 
-    [ ![](publishing-to-the-app-store-images/publishvs02.png "유효성 검사 화면")](publishing-to-the-app-store-images/publishvs02.png)
+    [![](publishing-to-the-app-store-images/publishvs02.png "유효성 검사 화면")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. *다음* 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
 
-    [ ![](publishing-to-the-app-store-images/publishvs03.png "앱 스토어에 대한 유효성 검사")](publishing-to-the-app-store-images/publishvs03.png)
+    [![](publishing-to-the-app-store-images/publishvs03.png "앱 스토어에 대한 유효성 검사")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
 6. 파일이 성공적으로 업로드되면 응용 프로그램 로더에서 알려줍니다.
 
@@ -368,7 +368,7 @@ _.ipa_가 저장되면 Mac용 Visual Studio의 보관 워크플로에서 응용 
 
 iTunes Connect에 다시 로그인하고 사용 가능한 앱 목록에서 응용 프로그램을 선택하면, iTunes Connect의 상태가 **검토 대기 중**임을 나타냅니다(처리 중에 **업로드 수신됨**을 일시적으로 읽을 수 있음).
 
-[ ![](publishing-to-the-app-store-images/image21.png "검토 대기 중임을 나타내는 iTunes Connect 상태")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "검토 대기 중임을 나타내는 iTunes Connect 상태")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## <a name="summary"></a>요약
 

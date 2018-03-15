@@ -3,16 +3,16 @@ title: "iOS에 대한 Fastlane 소개"
 description: "이 가이드에서는 iOS 응용 프로그램 서명을 코드하는데 사용할 수 있는 다양한 fastlane 도구를 소개합니다."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 084be16b55650f607d71f6eb3baf86b6f968aa35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>iOS에 대한 Fastlane 소개
 
@@ -87,12 +87,12 @@ fastlane은 다양한 방식으로 사용할 수 있습니다: 그러한 방식�
 
 fastlane는 정기적으로 새 릴리스를 푸시하는 매우 활성화된 오픈 소스 프로젝트입니다. 새 버전의 fastlane이 사용 가능하게 된다면 fastlane 명령을 실행할 때 알림을 받을 것입니다.
 
-[![](images/fastlane-image0.png "Fast 레인 업데이트 프롬프트")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "패스트 레인 업데이트 프롬프트")](images/fastlane-image0.png#lightbox)
 
 
 Fastlane의 새 버전으로 업데이트하려면 [여기](https://download.fastlane.tools)서 최신 패키지를 다운로드하여 설치 패키지를 두 번 클릭하여 실행합니다.
 
-[ ![](images/fastlane-image0a.png "설치 패키지 실행")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "설치 패키지 실행")](images/fastlane-image0a.png#lightbox)
 
 
 ## <a name="contents"></a>목차
@@ -111,7 +111,7 @@ fastlane을 사용하여 서명 ID와 프로비전 프로필을 만들었다면 
 
 Xamarin.iOS 응용 프로그램에 대한 코드 서명 옵션을 설정하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션 > 빌드 > iOS 번들 서명**을 선택하고 아래에 설명했듯이 서명 ID와 프로비전 프로필을 명시적으로 설정합니다.
 
-[ ![](images/fastlane-image11.png "서명 ID와 프로비전 프로필을 명시적으로 설정")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "서명 ID와 프로비전 프로필을 명시적으로 설정")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

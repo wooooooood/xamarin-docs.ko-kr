@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ee98e19ce59b8a61040941d9851b8fbf965c3b17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 사용하여 `gdb`를 사용하는 부분적인 지원을 도입했습니다. 
 
 > [!NOTE]
-> **참고:** `gdb` 지원을 위해서는 Android NDK를 설치해야 합니다.
+> `gdb` 지원을 위해서는 Android NDK를 설치해야 합니다.
 
 `gdb`를 사용하는 방법은 세 가지가 있습니다.
 
@@ -59,7 +59,7 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 
 
 > [!NOTE]
-> **참고:** `gdb-symbols` 디렉터리의 콘텐츠는 사용자가 배포한 Android 대상에 연결되고, 사용자가 대상을 변경하지 않는 한 자동으로 바뀌지 않습니다. (이는 버그로 간주하세요.) Android 대상 장치를 변경할 경우 이 디렉터리를 수동으로 삭제해야 합니다.
+> `gdb-symbols` 디렉터리의 콘텐츠는 사용자가 배포한 Android 대상에 연결되고, 사용자가 대상을 변경하지 않는 한 자동으로 바뀌지 않습니다. (이는 버그로 간주하세요.) Android 대상 장치를 변경할 경우 이 디렉터리를 수동으로 삭제해야 합니다.
 
 마지막으로, 생성된 `gdb` 명령을 복사하여 셸에서 실행합니다.
 

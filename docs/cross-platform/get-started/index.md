@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform
+ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 24d58621ae8143984683a41cd849a8b60893fd25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8d9acbf5fa53c2fa94d1a15d51de9d3db48a16fe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started"></a>시작
 
@@ -45,6 +46,12 @@ Xamarin 작동 방법 및 모바일 앱 개발 프로젝트에 접근하는 방�
 
 이 문서에서는 Mac용 Visual Studio의 개요, IDE(통합 개발 환경)를 제공합니다.
 
+
+## <a name="xamarin-university-video"></a>Xamarin University 비디오
+
+> [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
+
+**Visual Studio에서 Xamarin을 사용하여 첫 번째 Xamarin.Forms 앱 빌드, 작성자: [Xamarin University](https://university.xamarin.com)**
 
 ## <a name="related-links"></a>관련 링크
 

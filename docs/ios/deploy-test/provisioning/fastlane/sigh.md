@@ -2,16 +2,16 @@
 title: "iOS용 fastlane – sigh"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d80a0ab5583231f95241fb8d4f6e339e44a84ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c6ac298ca2040bb2d3619be080fb1387fbfd3a0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--sigh"></a>iOS용 fastlane – sigh
 
@@ -61,7 +61,7 @@ sigh는 개발, 앱 스토어 배포, 임시 배포 및 엔터프라이즈 배�
 
 `com.company.appname`은 앱의 번들 ID이며 아래 그림과 같이 Xamarin.iOS 응용 프로그램의 Info.plist 파일에서 찾을 수 있습니다.
 
-[ ![](sigh-images/fastlane-image5.png "Xamarin.iOS 응용 프로그램의 Info.plist 파일")](sigh-images/fastlane-image5.png)
+[![](sigh-images/fastlane-image5.png "Xamarin.iOS 응용 프로그램의 Info.plist 파일")](sigh-images/fastlane-image5.png#lightbox)
 
 고유한 앱 ID는 역방향 DNS 스타일 문자열이어야 합니다. ID를 만든 후에는 ID를 메모해 두었다가 이 가이드의 뒷부분 나오는 sigh를 사용할 때 사용해야 합니다.
 
@@ -108,7 +108,7 @@ fastlane 프롬프트가 표시되면 Apple ID 사용자 이름을 입력합니�
 
 Apple ID가 여러 팀에 연결되어 있으면 여기에 표시됩니다. 사용할 팀에 해당하는 번호를 선택합니다.
 
-[ ![](sigh-images/fastlane-image2.png "사용할 팀을 선택합니다.")](sigh-images/fastlane-image2.png)
+[![](sigh-images/fastlane-image2.png "사용하려는 팀 선택")](sigh-images/fastlane-image2.png#lightbox)
 
 팀 ID는 다음과 같은 방법으로 CLI에 전달될 수도 있습니다.
 
@@ -124,7 +124,7 @@ fastlane sigh -l 2TU993NY9J
 
 개발자 센터를 탐색하면 아래 그림과 같이 새로 만든 프로비전 프로필을 볼 수 있습니다.
 
-[ ![](sigh-images/fastlane-image10.png "새로 만든 프로비전 프로필 보기")](sigh-images/fastlane-image10.png)
+[![](sigh-images/fastlane-image10.png "새로 만든 프로비전 프로필 보기")](sigh-images/fastlane-image10.png#lightbox)
 
 sigh는 기본적으로 현재 폴더에 프로비전 프로필을 저장합니다. 출력 디렉터리를 변경하려면 `output_path`를 편집하거나 다음을 수행합니다.
 
@@ -140,19 +140,19 @@ fastlane sigh -o "~/Library/MobileDevice/Provisioning Profiles"
 
 - 모든 프로비전 프로필을 다운로드하려면 다음을 사용합니다.
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 
-- To use a specific signing identity for your provisioning profile use:
+- 프로비전 프로필에 특정 서명 ID를 사용하려면 다음을 사용합니다.
 
     ```bash
     fastlane sigh -c "Amy cert"
     ```
     
-    Where `Amy cert` is the Code Signing Identity name.
+    여기서 `Amy cert`는 코드 서명 ID 이름입니다.
 
 
-## Related Links
+## <a name="related-links"></a>관련 링크
 
 - [fastlane - sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)

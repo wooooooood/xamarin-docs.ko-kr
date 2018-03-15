@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6327c00253036f5ede8bf1934f56e6d4bb8f0ecd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-device-for-development"></a>개발용 장치 설정
 
@@ -28,13 +28,11 @@ _이 아티클에서는 장치를 사용하여 Xamarin.Android 응용 프로그�
 
 이러한 각 단계는 아래 섹션에서 자세히 다룹니다.
 
-<a name="EnableDebugging" />
 
 ## <a name="enable-debugging-on-the-device"></a>장치에서 디버깅 사용
 
 Android 장치를 사용하여 Android 응용 프로그램을 테스트할 수 있습니다. 그러나 디버깅하기 전에 장치를 올바르게 구성해야 합니다. 포함된 단계는 장치에서 실행되는 Android 버전에 따라 약간 다릅니다.
 
-<a name="EnableDebuggingAndroid4" />
 
 ### <a name="android-40-to-android-41"></a>Android 4.0부터 Android 4.1까지
 
@@ -46,23 +44,21 @@ Android 4.0.x부터 Android 4.1.x까지는 다음과 같은 단계에서 디버�
 
 이 스크린샷에서는 Android 4.0.3을 실행하는 장치의 **개발자 옵션** 화면을 보여줍니다.
 
-[![개발자 옵션](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![개발자 옵션](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
-<a name="EnableDebuggingAndroid42" />
 
 ### <a name="android-42-and-higher"></a>Android 4.2 이상
 
 Android 4.2 이상 버전부터는 **개발자 옵션**이 기본적으로 숨겨집니다. 개발자 옵션을 사용할 수 있도록 하려면 **설정 > 휴대폰 정보**로 이동하고, **빌드 번호** 항목을 7번 눌러서 **개발자 옵션** 탭을 표시합니다.
 
-[![빌드 번호 항목](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![빌드 번호 항목](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 **개발자 옵션** 탭을 **설정 > 시스템** 아래에서 사용할 수 있게 되면 개발자 설정을 표시하도록 엽니다.
 
-[![개발자 설정 화면](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![개발자 설정 화면](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 USB 디버깅 등 개발자 옵션을 사용하도록 설정하고 절전 모드를 유지하는 위치입니다.
 
-<a name="USB_Debugging" />
 
 ## <a name="install-usb-drivers"></a>USB 드라이버 설치
 
@@ -71,13 +67,12 @@ USB 디버깅 등 개발자 옵션을 사용하도록 설정하고 절전 모드
 Windows 컴퓨터에서 USB로 연결된 Android 장치를 인식하기 전에 몇 가지 추가 드라이버를 설치해야 할 수도 있습니다.
 
 > [!NOTE]
-> **참고:** Google Nexus 장치를 설정하는 단계이며 참조로 제공됩니다. 특정 장치에 대한 단계가 다를 수 있지만 비슷한 패턴을 따릅니다. 문제가 발생하는 경우 장치에 대해 인터넷을 검색합니다.
+> Google Nexus 장치를 설정하는 단계이며 참조로 제공됩니다. 특정 장치에 대한 단계가 다를 수 있지만 비슷한 패턴을 따릅니다. 문제가 발생하는 경우 장치에 대해 인터넷을 검색합니다.
 
 **[Android SDK install path]\tools** 디렉터리에서 **android.bat** 응용 프로그램을 실행합니다. 기본적으로 Xamarin.Android 설치 관리자는 Windows 컴퓨터의 다음과 같은 위치에 Android SDK를 배치합니다.
 
     C:\Users\[username]\AppData\Local\Android\android-sdk
 
-<a name="Download_the_USB_Drivers" />
 
 ### <a name="download-the-usb-drivers"></a>USB 드라이버를 다운로드합니다.
 
@@ -86,7 +81,7 @@ Google Nexus 장치(Galaxy Nexus 제외)에는 Google USB 드라이버가 필요
 
 다음 스크린샷에서 볼 수 있듯이 Android SDK Manager를 시작하고 **Extras** 폴더를 확장하여 **Google USB 드라이버** 패키지를 설치합니다.
 
-[![선택한 Google USB 드라이버 패키지](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![선택한 Google USB 드라이버 패키지](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 **Google USB 드라이버** 상자를 확인하고 **설치** 단추를 클릭합니다.
 드라이버 파일은 다음 위치에 다운로드됩니다.
@@ -98,7 +93,6 @@ Xamarin.Android 설치의 기본 경로는 다음과 같습니다.
     C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
 
 
-<a name="Installing_the_USB_Driver" />
 
 ### <a name="installing-the-usb-driver"></a>USB 드라이버 설치
 
@@ -122,7 +116,6 @@ Windows 7에서 드라이버를 설치하려면:
 
 8.  **다음**을 클릭하여 드라이버를 설치합니다.
 
-<a name="Windows_8" />
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Windows 8에서 확인되지 않은 드라이버 설치
 
@@ -140,7 +133,6 @@ Windows에서 확인되지 않은 드라이버를 설치하기 위해 추가 단
 4.  **장치 드라이버 설치** - 위에 설명한 대로 장치 드라이버를 설치합니다.
 
 
-<a name="ConnectDevice" />
 
 ## <a name="connect-the-device-to-the-computer"></a>컴퓨터에 장치 연결
 
@@ -150,7 +142,6 @@ Windows에서 확인되지 않은 드라이버를 설치하기 위해 추가 단
 
 -   **WiFi** - USB 케이블을 사용하지 않고 WiFi를 통해 컴퓨터에 Android 장치를 연결할 수 있습니다. 이 기술은 약간 더 많은 노력이 필요하지만 USB 케이블이 없거나 장치가 USB 케이블에서 멀리 떨어져 있는 경우에 유용할 수 있습니다. WiFi를 통한 연결은 다음 섹션에서 설명합니다.
 
-<a name="Debug_over_WiFi" />
 
 ### <a name="connecting-over-wifi"></a>WiFi를 통한 연결
 
@@ -186,7 +177,6 @@ WiFi를 통해 디버깅을 완료하면 다음 명령을 사용하여 ADB를 US
 
     adb devices
 
-<a name="Summary" />
 
 ## <a name="summary"></a>요약
 

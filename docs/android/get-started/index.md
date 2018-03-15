@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
+ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
-ms.openlocfilehash: 974388ad3ad125fb059a0c71252f53e140e056cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c07ab37bc88b52bbff0ddc0fb7bf1faa4d97bb2a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-series"></a>시리즈 시작
 
@@ -32,6 +33,12 @@ Xamarin.Android를 설정하고 Visual Studio에서 실행합니다. 이 섹션�
 두 부분으로 구성된 이 가이드에서는 _Hello, Android_에서 만든 응용 프로그램을 확장하여 두 번째 화면을 구현합니다. 이 과정에서 Android 응용 프로그램 구조 및 기능을 더 이해하면 기본 Android *응용 프로그램 구성 요소* 및 Android 아키텍처에 대한 자세한 분석을 소개합니다.
 
 
-##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Java 개발자를 위한 Xamarin](~/android/get-started/java-developers.md)
+##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Java 개발자용 Xamarin](~/android/get-started/java-developers.md)
 
 이 아티클에서는 Java 개발자가 Xamarin.Android 앱 개발에 대해 배울 때 만나게 되는 C# 언어 기능을 중점적으로 Java 개발자를 위한 C# 프로그래밍을 소개합니다.
+
+## <a name="xamarin-university-video"></a>Xamarin University 비디오
+
+> [!VIDEO https://youtube.com/embed/rkNikCa5D48]
+
+**Visual Studio에서 Xamarin을 사용하여 첫 번째 Android 앱 빌드, 작성자: [Xamarin University](https://university.xamarin.com)**

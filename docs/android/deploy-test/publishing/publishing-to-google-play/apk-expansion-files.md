@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d118eb5e9f875c5480105d1596ef1318112fb53e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3431791d51858df2013634e1594ee960a10728da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apk-expansion-files"></a>APK 확장 파일
 
@@ -33,7 +33,6 @@ ms.lasthandoff: 02/27/2018
 확장 파일은 APK 업로드와 동시에 업로드해야 합니다.
 Google Play에서는 기존 APK에 확장 파일을 업로드하거나 기존 APK를 업데이트하는 것은 허용되지 않습니다. 확장 파일 업데이트가 필요한 경우 새 APK를 업데이트된 `versionCode`와 함께 업로드해야 합니다.
 
-<a name="Expansion_File_Storage" />
 
 ## <a name="expansion-file-storage"></a>확장 파일 저장
 
@@ -51,7 +50,6 @@ Google Play에서는 기존 APK에 확장 파일을 업로드하거나 기존 AP
 
 확장 파일에서 파일 압축을 푸는 또 다른 방법은 확장 파일에서 직접 자산이나 리소스를 읽는 것입니다. 확장 파일은 적합한 `ContentProvider`에 사용할 수 있는 zip 파일 수준입니다. [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary)에 어셈블리 [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip)이 포함되며 여기에는 일부 미디어 파일에 대한 직접 액세스를 허용하는 `ContentProvider`가 포함됩니다. 미디어 파일을 zip 파일로 묶으면 미디어 재생 호출에서 zip 파일 압축을 풀지 않고도 직접 zip의 파일을 사용할 수 있습니다. 미디어 파일은 zip 파일에 추가될 때 압축되어서는 안 됩니다. 
 
-<a name="FileName_Format" />
 
 ### <a name="filename-format"></a>파일 이름 형식
 
@@ -68,13 +66,12 @@ Google Play에서는 기존 APK에 확장 파일을 업로드하거나 기존 AP
 
 예를 들어, APK 버전이 21이고 패키지 이름이 `mono.samples.helloworld`이면 기본 확장 파일의 이름은 **main.21.mono.samples.helloworld**가 됩니다.
 
-<a name="Download_Process" />
 
 ## <a name="download-process"></a>다운로드 프로세스
 
 Google Play에서 응용 프로그램을 설치할 때 확장 파일이 APK와 함께 다운로드 및 저장되어야 합니다. 특정 상황에서 이것이 발생하지 않거나 확장 파일이 삭제될 수 있습니다. 이 문제를 처리하려면 필요한 경우 앱이 확장 파일이 존재하는지 확인한 다음 다운로드해야 합니다. 다음 순서도는 이 프로세스의 권장 워크플로를 나타냅니다.
 
-[ ![APK 확장 순서도](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![APK 확장 순서도](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 응용 프로그램이 시작되면 적합한 확장 파일이 현재 장치에 있는지 확인하는 검사를 수행해야 합니다. 없으면 응용 프로그램이 Google Play의 [응용 프로그램 라이선스](http://developer.android.com/google/play/licensing/index.html)에서 요청해야 합니다. 이 검사는 *LVL(라이선스 확인 라이브러리)*를 통해 이루어지며 무료 및 라이선스 응용 프로그램 모두에 대해 수행되야 합니다. LVL은 주로 유료 응용 프로그램에서 라이선스 제한을 적용하기 위해 사용됩니다. 그러나 Google은 확장 라이브러리에도 이를 사용할 수 있게 LVL을 확장하고 있습니다. 무료 응용 프로그램은 LVL 검사를 수행해야 하지만 라이선스 제한은 무시할 수 있습니다. LVL 요청은 응용 프로그램에서 요구하는 확장 파일에 관한 다음 정보를 제공하기 위한 것입니다. 
 
@@ -92,7 +89,6 @@ LVL 검사가 수행된 후 응용 프로그램은 확장 파일을 다운로드
 -  다운로드하는 동안 발생하는 오류는 정상적으로 처리되며 복구할 수 있습니다.
 
 
-<a name="Architectural_Overview" />
 
 ## <a name="architectural-overview"></a>아키텍처 개요
 
