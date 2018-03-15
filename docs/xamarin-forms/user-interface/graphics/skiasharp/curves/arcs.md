@@ -8,11 +8,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 739efa994f172a7a1de82ac02d1c10b0d80f4c30
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 다음 세 가지 방법
 
@@ -238,7 +238,7 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 
 ![](arcs-images/tangentarcconnectinglines.png "탄젠트 호의 점이 3 개를 연결 하는 선")
 
-동일 선상의 & #x 2014;는 세 가지 경우 즉, 동일한 직선 & #x 2014; 상에 있는 경우 원호가 그려집니다.
+세 점 모두가 동일 선상의 &mdash; 즉, 동일한 직선에 포함 될 경우 &mdash; 원호가 그려집니다.
 
 `ArcTo` 메서드에 포함 됩니다는 `radius` 매개 변수입니다. 이 원의 반지름을 정의합니다.
 

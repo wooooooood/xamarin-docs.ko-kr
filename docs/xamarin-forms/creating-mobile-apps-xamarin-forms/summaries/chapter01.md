@@ -7,11 +7,11 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1d246ea65e88bde07c3d527c18b7850aa09e08b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Chapter 1의 요약입니다. Xamarin.Forms 포함할 됩니까?
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 03/12/2018
 
 이 문제는 모바일 플랫폼을 대상으로 할 때 자주 발생 합니다. 현재 두 가지 주요 모바일 플랫폼, Apple Iphone 및 Ipad iOS 운영 체제를 실행 하는 다양 한 휴대폰 및 태블릿에 실행 되는 Android 운영 체제 제품군은 존재 합니다. 또 다른 중요 한 플랫폼은 Microsoft 웹 플랫폼 UWP (유니버설 Windows), Windows 10 및 Windows 10 Mobile 모두 대상으로 하는 단일 프로그램 있습니다.
 
-하지 않고자 한다면 이러한 세 가지 플랫폼을 대상으로 하는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 처리 해야 하 고 & #x 2014 하며 대부분의 경우 아마도 이라는 & #x 2014; 세 다양 한 프로그래밍 언어: Objective-c iPhone 및 iPad, android의 경우 Java와 C# windows에 대 한 합니다.
+하지 않고자 한다면 이러한 세 가지 플랫폼을 대상으로 하는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 처리 해야 하 고&mdash;아마도 가장 이라는&mdash; 세 가지 프로그래밍 언어: Objective-c iPhone 및 iPad, android의 경우 Java와 C# windows에 대 한 합니다.
 
 ## <a name="the-c-and-net-solution"></a>C# 및.NET 솔루션
 

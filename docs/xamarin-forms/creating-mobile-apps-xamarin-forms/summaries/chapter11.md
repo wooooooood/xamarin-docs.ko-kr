@@ -7,11 +7,11 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ccae97021e86eb1375f948c5ad126253c6088037
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 장 11입니다. 바인딩 가능한 인프라
 
@@ -47,9 +47,9 @@ ms.lasthandoff: 03/12/2018
 
 때마다 바인딩 가능한 속성 변경에서 지 원하는 속성 `BindableObject` 발생 한 [ `PropertyChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.PropertyChanged/) 변경 된 속성을 식별 하는 이벤트입니다. 속성이 동일한 값으로 설정 된 경우이 이벤트가 발생 하지 않습니다.
 
-일부 속성 바인딩 가능한 속성 및 일부 인 Xamarin.Forms 클래스 & #x 2014; 백업 하지 않습니다. 와 같은 `Span` & #x 2014;에서 파생 되지 않는 `BindableObject`합니다. 파생 된 클래스만 있는 `BindableObject` 때문에 바인딩 가능한 속성을 지원할 수 `BindableObject` 정의 `SetValue` 및 `GetValue` 메서드.
+일부 속성은 바인딩 가능한 속성 및 일부 Xamarin.Forms 클래스에서 지원 하지 &mdash; 같은 `Span` &mdash; 에서 파생 되지 않는 `BindableObject`합니다. 파생 된 클래스만 있는 `BindableObject` 때문에 바인딩 가능한 속성을 지원할 수 `BindableObject` 정의 `SetValue` 및 `GetValue` 메서드.
 
-때문에 `Span` 에서 파생 되지 않은 `BindableObject`, 해당 속성 & #x 2014;와 같은 없음 `Text` & #x 2014; 바인딩 가능한 속성에 의해 지원 됩니다. 이 인해는 `DynamicResource` 에 설정 된 `Text` 의 속성 `Span` 에서 예외를 발생 시킵니다는 [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) 이전 장에서 샘플. [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) 샘플에서는 동적 리소스를 사용 하 여 코드에서 설정 하는 방법을 보여 줍니다.는 [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) 정의한 메서드 `Element`합니다. 첫 번째 인수는 형식의 개체로 `BindableProperty`합니다.
+때문에 `Span` 에서 파생 되지 않은 `BindableObject`, 해당 속성이 없는 &mdash; 같은 `Text` &mdash; 바인딩 가능한 속성에 의해 지원 됩니다. 이 인해는 `DynamicResource` 에 설정 된 `Text` 의 속성 `Span` 에서 예외를 발생 시킵니다는 [ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) 이전 장에서 샘플. [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) 샘플에서는 동적 리소스를 사용 하 여 코드에서 설정 하는 방법을 보여 줍니다.는 [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/) 정의한 메서드 `Element`합니다. 첫 번째 인수는 형식의 개체로 `BindableProperty`합니다.
 
 마찬가지로,는 [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) 정의한 메서드 `BindableObject` 형식의 첫 번째 인수가 `BindableProperty`합니다.
 

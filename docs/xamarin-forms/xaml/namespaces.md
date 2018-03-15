@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: b0afba90dab5cba4bad385f8d6447d8b83c1de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55b83151e9c345096aeb0bfdd686d50c5fde62fd
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-namespaces"></a>XAML 네임스페이스
 
@@ -38,40 +38,14 @@ XAML 네임 스페이스 내에서 형식을 참조할 때 사용 되는 접두�
 
 다음 표에서 윤곽선은 `x` Xamarin.Forms에서 지 원하는 네임 스페이스 특성:
 
-<table>
- <thead>
-   <tr>
-     <td><strong>구문</strong></td>
-     <td><strong>설명</strong></td>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <td><code>x:Arguments</code></td>
-     <td>기본이 아닌 생성자 또는 팩터리 메서드 개체 선언에 대 한 생성자 인수를 지정합니다.</td>
-   </tr>
-   <tr>
-     <td><code>x:Class</code></td>
-     <td>XAML에서 정의 된 클래스에 대 한 네임 스페이스 및 클래스 이름을 지정 합니다. 클래스 이름에는 코드 숨김 파일의 클래스 이름을 일치 해야 합니다. 이 생성자는 XAML 파일의 루트 요소에만 나타날 수 있는 참고 합니다.</td>
-   </tr>
-   <tr>
-     <td><code>x:FactoryMethod</code></td>
-     <td>개체를 초기화 하는 데 사용할 수 있는 팩터리 메서드를 지정 합니다.</td>
-   </tr>
-   <tr>
-     <td><code>x:Key</code></td>
-     <td>각 리소스에 대 한 사용자 지정 고유 키에 지정 된 <code>ResourceDictionary</code>합니다. 키의 값 XAML 리소스를 검색 하는 데 사용 되 고에 대 한 인수로 일반적으로 사용 되는 <code>StaticResource</code> 태그 확장 합니다.</td>
-   </tr>
-   <tr>
-     <td><code>x:Name</code></td>
-     <td>XAML 요소에 대 한 런타임 개체 이름을 지정합니다. 설정 <code>x:Name</code> 코드에서 변수를 선언 하는 것과 비슷합니다.</td>
-   </tr>
-   <tr>
-     <td><code>x:TypeArguments</code></td>
-     <td>제네릭 형식의 생성자에 대 한 제네릭 형식 인수를 지정합니다.</td>
-   </tr>
- </tbody>
-</table>
+|구문|설명|
+|--- |--- |
+|`x:Arguments`|기본이 아닌 생성자 또는 팩터리 메서드 개체 선언에 대 한 생성자 인수를 지정합니다.|
+|`x:Class`|XAML에서 정의 된 클래스에 대 한 네임 스페이스 및 클래스 이름을 지정 합니다. 클래스 이름에는 코드 숨김 파일의 클래스 이름을 일치 해야 합니다. 이 생성자는 XAML 파일의 루트 요소에만 나타날 수 있는 참고 합니다.|
+|`x:FactoryMethod`|개체를 초기화 하는 데 사용할 수 있는 팩터리 메서드를 지정 합니다.|
+|`x:Key`|각 리소스에 대 한 사용자 지정 고유 키에 지정 된 `ResourceDictionary`합니다. 키의 값 XAML 리소스를 검색 하는 데 사용 되 고에 대 한 인수로 일반적으로 사용 되는 `StaticResource` 태그 확장 합니다.|
+|`x:Name`|XAML 요소에 대 한 런타임 개체 이름을 지정합니다. 설정 `x:Name` 코드에서 변수를 선언 하는 것과 비슷합니다.|
+|`x:TypeArguments`|제네릭 형식의 생성자에 대 한 제네릭 형식 인수를 지정합니다.|
 
 에 대 한 자세한 내용은 `x:Arguments`, `x:FactoryMethod`, 및 `x:TypeArguments` 특성 참조 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)합니다.
 

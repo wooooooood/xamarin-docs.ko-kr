@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d1c4c46b62b95d70dd2832c96ffd2686163990a5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 Objective C 라이브러리
 
@@ -1514,6 +1514,6 @@ Xamarin.iOS v3.2 기준으로 표시 하는 프로토콜에서 상속 지원는 
 
 모든 구현 하는 프로토콜 복사 요구 지금까지 하지만 이러한 경우 이제 수 있으며 이러한 시각화는 `MKShape` 클래스에서 상속 된 `MKOverlay` 프로토콜과 것에서 필요한 메서드를 모두 자동으로 생성 합니다.
 
-### <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련된 링크
 
 - [바인딩 예제](https://developer.xamarin.com/samples/BindingSample/)

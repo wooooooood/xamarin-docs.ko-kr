@@ -8,17 +8,17 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 756261db8f82198e6c5a4330a663bbd9965e57f7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10b23975fab8aa87019b9d0fed42decdc6adddfb
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
 _SkiaSharp 그래픽을 표시 하기 위한 변환에 대 한 자세한 내용은_
 
-SkiaSharp 지원의 메서드로 구현 되는 전통적인 그래픽 변형을 [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) 개체입니다. 변환 좌표 및에서 지정 하는 크기를 변경 하는 수학적으로 `SKCanvas` 그리기 기능 그래픽 개체 렌더링 됩니다. 변환은 애니메이션 또는 반복적인 그래픽 그리기에 대 한 편리한 경우가 많습니다. 일부 기술은 & #x 2014; 회전 비트맵 또는 텍스트 & #x 2014; 예: 변환 사용 하지 않고 가능 하지 않습니다.
+SkiaSharp 지원의 메서드로 구현 되는 전통적인 그래픽 변형을 [ `SKCanvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) 개체입니다. 변환 좌표 및에서 지정 하는 크기를 변경 하는 수학적으로 `SKCanvas` 그리기 기능 그래픽 개체 렌더링 됩니다. 변환은 애니메이션 또는 반복적인 그래픽 그리기에 대 한 편리한 경우가 많습니다. 일부 기법은 &mdash; 비트맵 또는 텍스트를 회전 등 &mdash; 변환 사용 하지 않고 가능 하지 않습니다.
 
 SkiaSharp 변환 작업을 지원 합니다.
 

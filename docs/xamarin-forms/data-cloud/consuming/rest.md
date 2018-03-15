@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: f8b748ad1b57218d1e8aab11bdc1037cf3cfa14c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 98c38001ea7751c419d4be5b0f68339b06ec656f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
@@ -49,42 +49,12 @@ RESTful 웹 서비스는 일반적으로 클라이언트에 데이터를 반환�
 
 REST 서비스는 ASP.NET Core를 사용 하 여 작성 된 하 고 다음 작업을 제공 합니다.
 
-<table>
-  <thead>
-    <tr>
-      <th>작업</th>
-      <th>HTTP 메서드</th>
-      <th>상대 URI</th>
-      <th>매개 변수</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>할 일 항목의 목록 가져오기</td>
-      <td>가져오기</td>
-      <td>/api/todoitems/</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>새 할 일 항목을 만듭니다.</td>
-      <td>올리기</td>
-      <td>/api/todoitems/</td>
-      <td>JSON 형식의 <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>할 일 항목 업데이트</td>
-      <td>PUT</td>
-      <td>/api/todoitems/</td>
-      <td>JSON 형식의 <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>할 일 항목 삭제</td>
-      <td>Delete</td>
-      <td>/api/todoitems/{id}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+|작업|HTTP 메서드|상대 URI|매개 변수|
+|--- |--- |--- |--- |
+|할 일 항목의 목록 가져오기|가져오기|/api/todoitems/|
+|새 할 일 항목을 만듭니다.|올리기|/api/todoitems/|JSON 형식의 TodoItem|
+|할 일 항목 업데이트|PUT|/api/todoitems/|JSON 형식의 TodoItem|
+|할 일 항목 삭제|Delete|/api/todoitems/{id}|
 
 Uri의 대부분 포함는 `TodoItem` 경로에 대 한 ID입니다. 예를 들어, 삭제 하는 `TodoItem` ID가 갖는 `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, 클라이언트는 DELETE 요청을 보냅니다 `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`합니다. 샘플 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 참조 [데이터 모델링](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 

@@ -7,11 +7,11 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a3ef515feabfc142f30e7e00a8fed710e733f4dc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 Chapter 3입니다. 텍스트를 자세하게
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 03/12/2018
 
 마지막으로, 두 개의 정적 읽기 전용 속성 특별 한 색상 값을 정의합니다.
 
-- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)모든로 설정 하는 채널 & #x 2013, 1
+- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)을로 설정 된 모든 채널 &ndash;1
 - [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
 
 `Color.Default` 플랫폼의 색 구성표를 적용 되며 결과적으로 서로 다른 플랫폼에서 다양 한 상황에서 다른 의미를 합니다. 기본적으로 플랫폼 색 구성표 있습니다.

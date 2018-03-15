@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 Chapter 4입니다. 스택 스크롤
 
@@ -67,9 +67,9 @@ ms.lasthandoff: 03/12/2018
 
 세로 `StackLayout`, 각 자식 세로로 제약을 받지 않는 및 가져옵니다 세로 슬롯 어린이 높이 따라는 쿼리에서 `VerticalOptions` 설정은 적용 됩니다.
 
-경우 세로 `StackLayout` 자체 제약을 받지 않는 &은 #x 2014; 경우 해당 `VerticalOptions` 설정은 `Start`, `Center`, 또는 `End`, 다음의 높이 `StackLayout` 자식 총 높이 같습니다.
+경우 세로 `StackLayout` 자체 제약을 받지 않는&mdash;즉 경우 해당 `VerticalOptions` 설정은 `Start`, `Center`, 또는 `End`, 다음의 높이 `StackLayout` 자식 총 높이 같습니다.
 
-그러나 경우 세로 `StackLayout` 제약을 세로로 & #x 2014 경우 해당 `VerticalOptions` 설정은 `Fill`& #x 2014; 다음의 높이 `StackLayout` 의 전체 높이 보다 클 수 있습니다는 해당 컨테이너의 높이 됩니다 자식입니다. 고 자식이 하나 이상에 해당 되는 경우는 `VerticalOptions` 사용 하 여 설정는 `Expands` 의 플래그가 `true`에 추가 공간이 다음는 `StackLayout` 와 이러한 모든 자식 항목 간에 균등 하 게 할당 되는 `Expands` 의 플래그가 `true`합니다. 자식 항목의 전체 높이의 높이 용량이 다음 됩니다는 `StackLayout`, 및 `Alignment` 의 일부로 `VerticalOptions` 설정은 슬롯에 자식 세로로 배치 되는 방법을 결정 합니다.
+그러나 경우 세로 `StackLayout` 제약을 세로로&mdash;경우 해당 `VerticalOptions` 설정은 `Fill` &mdash;다음의 높이 `StackLayout` 합계 보다 클 수 있습니다는 해당 컨테이너의 높이 됩니다 해당 자식 항목의 높이입니다. 고 자식이 하나 이상에 해당 되는 경우는 `VerticalOptions` 사용 하 여 설정는 `Expands` 의 플래그가 `true`에 추가 공간이 다음는 `StackLayout` 와 이러한 모든 자식 항목 간에 균등 하 게 할당 되는 `Expands` 의 플래그가 `true`합니다. 자식 항목의 전체 높이의 높이 용량이 다음 됩니다는 `StackLayout`, 및 `Alignment` 의 일부로 `VerticalOptions` 설정은 슬롯에 자식 세로로 배치 되는 방법을 결정 합니다.
 
 이 확인할는 [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) 샘플.
 

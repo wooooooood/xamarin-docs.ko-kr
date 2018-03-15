@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xib-files"></a>.xib 파일
 
@@ -67,7 +67,7 @@ Xcode에서 편집할.xib 파일을 여는 경우 Mac 용 Visual Studio 자체�
 
 #### <a name="properties--utilities"></a>속성 및 유틸리티
 
-**속성 및 유틸리티** 섹션은 함께 사용할 수 있는 두 개의 주 섹션으로 devided **속성** (검사자 라고도 함) 및 **라이브러리**:
+**속성 및 유틸리티** 섹션, 사용할 두 개의 기본 섹션으로 나뉩니다 **속성** (검사자 라고도 함) 및 **라이브러리**:
 
 ![속성 검사자](xib-images/xcode04.png "속성 관리자")
 
@@ -375,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 이 코드는 단추를 클릭할 때마다 라고 하 고 Xcode 및 인터페이스 작성기에서 만든 하는 동작에 연결 합니다.
 
-일부 UI 요소가 자동으로 기본적으로 작업을 예를 들어 기본 메뉴 모음에서 항목와 같은 **열기...**  메뉴 항목 (`openDocument:`). 에 **솔루션 패드**를 두 번 클릭는 `AppDelegate.CS` 편집 열고 아래에 다음 코드를 추가 하는 파일의 `DidFinishLaunching` 메서드:
+일부 UI 요소가 자동으로 기본적으로 작업을 예를 들어 기본 메뉴 모음에서 항목와 같은 **열기...**  메뉴 항목 (`openDocument:`). 에 **솔루션 패드**를 두 번 클릭는 **AppDelegate.cs** 편집 열고 아래에 다음 코드를 추가 하는 파일의 `DidFinishLaunching` 메서드:
 
 ```csharp
 [Export ("openDocument:")]

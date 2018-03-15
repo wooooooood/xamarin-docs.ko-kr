@@ -7,11 +7,11 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d7a75ce0303030d53315b5e698fc604a910c969c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 장 28입니다. 위치 및 지도
 
@@ -29,7 +29,7 @@ Xamarin.Forms 지원는 [ `Map` ](https://developer.xamarin.com/api/type/Xamarin
 
 ### <a name="longitude-and-meridians"></a>경도 및 자오선
 
-남부 극을 북극에서 훌륭한 원 중 절반은 줄의 같은 경도 라고도 *자오선*합니다. 이들은 영국 그리니치를에서 자오선에 상대적입니다. 규칙에 따라 자오선의 동쪽 위 도와 경도 180도, 0도부터 양수 값 및 경도 자오선 서쪽은 음수 값으로 0도 & #x 2013;에서 180도 합니다.
+남부 극을 북극에서 훌륭한 원 중 절반은 줄의 같은 경도 라고도 *자오선*합니다. 이들은 영국 그리니치를에서 자오선에 상대적입니다. 규칙에 따라 자오선의 동쪽 위 도와 경도 180도, 0도부터 양수 값 및 경도 자오선 서쪽은 음수 값으로 0도에서 &ndash;180도 합니다.
 
 ### <a name="the-equirectangular-projection"></a>등 장방형 도법이
 

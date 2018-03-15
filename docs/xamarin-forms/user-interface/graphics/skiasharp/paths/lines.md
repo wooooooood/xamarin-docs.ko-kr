@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 341d850709ff27f4dc397cee3bb2fc5f73c0ec3c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -30,7 +30,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 기본적으로는 `StrokeWidth` 새로 인스턴스화된의 속성 `SKPaint` 개체는 0 값이 1 픽셀의 선 두께의 렌더링에 1과 동일한 결과가입니다. 이 나타나므로 정도로 작은 전화, 예: 고해상도 장치에서 설정 좋을 것은 `StrokeWidth` 큰 값으로. 다른 문제가 발생 하는 큰 두께의 선 그리기를 시작 하면 하지만: 시작 되 고 이러한 두꺼운 줄 끝 렌더링 되는 방식을?
 
-작업이 시작 되 고 줄 끝 모양을 라고는 *선 단면* 또는 Skia는 *획 cap*합니다. 이 컨텍스트에서 "cap" 라는 단어 hat & #x 2014;의 종류를 의미 줄의 끝에 있는 항목입니다. 설정한는 [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) 의 속성은 `SKPaint` 개체의 다음 멤버 중 하나에 [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) 열거형:
+작업이 시작 되 고 줄 끝 모양을 라고는 *선 단면* 또는 Skia는 *획 cap*합니다. 이 컨텍스트에서 "cap" 라는 단어 hat의 종류를 의미 &mdash; 줄의 끝에 있는 것입니다. 설정한는 [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) 의 속성은 `SKPaint` 개체의 다음 멤버 중 하나에 [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) 열거형:
 
 - [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (기본값)
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 7934738a546a266036573b81e15ef9b2fa28d7b4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 53c32003cd1a77a3aa5feb0ab26cedeab27789dc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sharing-code-options"></a>코드 공유 옵션
 
@@ -22,19 +22,19 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="building-cross-platform-mobile-apps"></a>크로스 플랫폼 모바일 앱 빌드
 
- [개요](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-0-overview.md)
+ [개요](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
- [1 – 모바일 Xamarin 플랫폼 이해](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-1-understanding-the-xamarin-mobile-platform.md)
+ [1 – 모바일 Xamarin 플랫폼 이해](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 
- [Part 2-아키텍처](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-2-architecture.md)
+ [Part 2-아키텍처](~/cross-platform/app-fundamentals/building-cross-platform-applications/architecture.md)
 
- [3 – 부 Xamarin 크로스 플랫폼 솔루션 설정](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-3-setting-up-a-xamarin-cross-platform-solution.md)
+ [3 – 부 Xamarin 크로스 플랫폼 솔루션 설정](~/cross-platform/app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md)
 
- [-4 부를 다루는 여러 플랫폼](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-4-platform-divergence-abstraction-divergent-implementation.md)
+ [-4 부를 다루는 여러 플랫폼](~/cross-platform/app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md)
 
- [유용한 코드 전략을 공유-5 부](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-5-practical-code-sharing-strategies.md)
+ [유용한 코드 전략을 공유-5 부](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
 
- [6부 - 테스트 및 App Store 승인](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-6-testing-and-app-store-approvals.md)
+ [6부 - 테스트 및 App Store 승인](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 

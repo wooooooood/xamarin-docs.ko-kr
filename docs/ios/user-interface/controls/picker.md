@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: 3418d0b7946e1da68380512d64bdfc8b13d1d784
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b92bdc365cae524cee1f586b293c4638225c6178
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="picker"></a>선택
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 
 문서에서는 구현 및 사용 하는 [선택기](#picker) 및 [날짜 선택](#datepicker) 컨트롤입니다.
 
-<a name="picker"/>
+<a name="picker" />
 
 ## <a name="picker"></a>선택
 
@@ -143,7 +143,7 @@ public override nint GetComponentCount(UIPickerView pickerView)
 모양을 `UIPickerView` 를 사용 하 여 사용자 지정할 수 있습니다는 `UIPickerView.UIPickerViewAppearance` 나 클래스에서 재정의 된 `UIPickerViewModel.GetView` 및 `UIPickerViewModel.GetRowHeight` 의 메서드는 `UIPickerViewModel`합니다.
 
 
-<a name="datepicker"/>
+<a name="datepicker" />
 
 ## <a name="date-picker"></a>날짜 선택
 

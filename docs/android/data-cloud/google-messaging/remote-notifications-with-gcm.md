@@ -7,12 +7,12 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 64961e9c45c28ede4cc84f7b978da565be4426d9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
@@ -507,32 +507,12 @@ GCM에서 메시지를 받을 수 있습니다, 전에 GCM 수신기 Android 매
 
 이 XML에 각 설정에 살펴보겠습니다.
 
-<table>
-    <thead>
-        <tr>
-            <th>설정</th>
-            <th>설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>com.google.android.gms.gcm.GcmReceiver</code></td>
-            <td>앱 캡처하고 들어오는 푸시 알림 메시지를 처리 하는 GCM 수신기를 구현 함을 선언 합니다.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.permission.SEND</code></td>
-            <td>GCM 서버 에서만 응용 프로그램에 직접 메시지를 보낼 수 있음을 선언 합니다.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.RECEIVE</code></td> 
-            <td>앱에서 GCM에서 브로드캐스트 메시지를 처리 하는 광고 의도 필터입니다.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.REGISTRATION</code></td>
-            <td>앱에서 새 등록 의도 처리 하는 광고 의도 필터 (즉, 구현 했습니다 인스턴스 ID 수신기 서비스).</td>
-        </tr>
-    </tbody>
-</table>
+|설정|설명|
+|---|---|
+|`com.google.android.gms.gcm.GcmReceiver`|앱 캡처하고 들어오는 푸시 알림 메시지를 처리 하는 GCM 수신기를 구현 함을 선언 합니다.|
+|`com.google.android.c2dm.permission.SEND`|GCM 서버 에서만 응용 프로그램에 직접 메시지를 보낼 수 있음을 선언 합니다.|
+|`com.google.android.c2dm.intent.RECEIVE`|앱에서 GCM에서 브로드캐스트 메시지를 처리 하는 광고 의도 필터입니다.|
+|`com.google.android.c2dm.intent.REGISTRATION`|앱에서 새 등록 의도 처리 하는 광고 의도 필터 (즉, 구현 했습니다 인스턴스 ID 수신기 서비스).|
 
 데코레이팅 할 수 있습니다 `GcmListenerService` XML;에 지정 하는 대신 이러한 특성으로 여기 지정에서 **AndroidManifest.xml** 코드 예제를 보다 쉽게 따를 수 있도록 합니다. 
 

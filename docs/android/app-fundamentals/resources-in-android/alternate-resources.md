@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/09/2018
 참조에 대 한 가능한 한정자는 다음과 같습니다.
 
 - **MCC 및 MNC** &ndash; 는 [모바일 국가 코드](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) 및 필요에 따라는 [모바일 네트워크 코드](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). SIM 카드는 MNC를 제공 하는 장치에 연결 된 네트워크는 MCC를 제공 합니다. 모바일 국가 코드를 사용 하 여 대상 로캘로 수 있지만 아래에 지정 된 언어 한정자를 사용 하는 권장 방법이입니다. 예를 들어, 대상 리소스에 독일에 한정자 것 `mcc262`합니다. 미국에서는 T Mobile에 대 한 대상 리소스에 한정자가 `mcc310-mnc026`합니다.
-  모바일 국가 코드와 모바일 네트워크 코드의 전체 목록은 참조 <http://mcclist.com/>합니다.
+  모바일 국가 코드와 모바일 네트워크 코드의 전체 목록은 참조 <http://mcc-mnc.com/>합니다.
 
 - **언어** &ndash; 두 문자로 [ISO 639-1 언어 코드](http://en.wikipedia.org/wiki/ISO_639-1) 및 필요에 따라 두 문자 뒤 [ISO 3166-알파 2 지역 코드](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)합니다. 
   두 한정자를 사용할 경우로 구분 됩니다는 `-r`합니다. 예를 들어 대상 로캘을 프랑스어 다음의 한정자 `fr` 사용 됩니다. 캐나다 로캘에서 대상으로 `fr-rCA` 사용 됩니다. 언어 코드 및 지역 코드의 전체 목록은 참조 하십시오. [표현의 이름은의 언어에 대 한 코드](http://www.loc.gov/standards/iso639-2/php/English_list.php) 및 [국가 이름 및 코드 요소](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm)합니다.

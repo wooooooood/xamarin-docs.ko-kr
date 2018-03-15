@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a37773b666e015277d2fecc103066e82b6f7f108
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ec91a7c100f294437bb1498fcd56a35f5b19c399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="navigation"></a>탐색
 
@@ -51,36 +51,13 @@ public interface INavigationService
 
 이 인터페이스를 구현 하는 클래스는 다음 메서드를 제공 해야 지정 합니다.
 
-<table>
-<thead>
-<tr class="header">
-<th>메서드</th>
-<th>용도</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>InitializeAsync</code></td>
-<td>앱을 실행 하는 경우 두 페이지 중 하나로 탐색을 수행 합니다.</td>
-</tr>
-<tr class="even">
-<td><code>NavigateToAsync<T></code></td>
-<td>지정된 된 페이지에 있는 계층 탐색을 수행합니다.</td>
-</tr>
-<tr class="odd">
-<td><code>NavigateToAsync<T>(parameter)</code></td>
-<td>매개 변수 전달, 특정 페이지로 계층 탐색을 수행 합니다.</td>
-</tr>
-<tr class="even">
-<td><code>RemoveLastFromBackStackAsync</code></td>
-<td>탐색 스택에서 이전 페이지를 제거합니다.</td>
-</tr>
-<tr class="odd">
-<td><code>RemoveBackStackAsync</code></td>
-<td>탐색 스택에서 이전의 모든 페이지를 제거합니다.</td>
-</tr>
-</tbody>
-</table>
+|메서드|용도|
+|--- |--- |
+|`InitializeAsync`|앱을 실행 하는 경우 두 페이지 중 하나로 탐색을 수행 합니다.|
+|`NavigateToAsync`|지정된 된 페이지에 있는 계층 탐색을 수행합니다.|
+|`NavigateToAsync(parameter)`|매개 변수 전달, 특정 페이지로 계층 탐색을 수행 합니다.|
+|`RemoveLastFromBackStackAsync`|탐색 스택에서 이전 페이지를 제거합니다.|
+|`RemoveBackStackAsync`|탐색 스택에서 이전의 모든 페이지를 제거합니다.|
 
 또한는 `INavigationService` 인터페이스를 구현 하는 클래스를 제공 하는 지정 된 `PreviousPageViewModel` 속성입니다. 이 탐색 스택의 이전 페이지와 관련 된 뷰 모델 유형을 반환 합니다.
 

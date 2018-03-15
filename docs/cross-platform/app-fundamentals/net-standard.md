@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab22881f383e00a67fda8d3e8ffc5d9a4f7f993e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -25,20 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-## <a name="xamarin-studio"></a>Xamarin Studio
-
-이식 가능한 라이브러리 프로젝트를 먼저 만들어 Xamarin Studio 6.2에서 표준.NET 라이브러리 프로젝트를 만들 수 있습니다.
-
-[![](net-standard-images/xs01-sml.png "새 이식 가능한 라이브러리 프로젝트 만들기")](net-standard-images/xs01.png#lightbox)
-
-프로젝트를 만든 후 마우스 오른쪽 단추로 클릭 하 고 열은 **프로젝트 옵션** 창.
-에 **일반** 섹션 프로젝트를.NET 표준으로 변환 하 고에서 특정 버전을 사용 하도록 설정할 수는 **플랫폼** 드롭 다운 목록:
-
-[![](net-standard-images/xs02-sml.png "변환할 표준.NET 일반적 옵션")](net-standard-images/xs02.png#lightbox)
-
-그런 다음 [NuGet 패키지를 만들](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) 를 다른 개발자와 라이브러리를 공유 합니다.
-
-## <a name="visual-studio-for-mac-walkthrough"></a>Mac용 Visual Studio 연습
+## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 이 섹션을 만들고 Mac.에 대 한 Visual Studio를 사용 하 여.NET 표준 라이브러리를 사용 하는 방법을 안내합니다 완전 한 구현에 대 한.NET 표준 라이브러리 예제 단원을 참조 하십시오.
 
@@ -68,7 +55,7 @@ ms.lasthandoff: 03/09/2018
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-## <a name="visual-studio-windows-walkthrough"></a>연습에서는 visual Studio (Windows)
+## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
 이 섹션을 만들고 Visual Studio를 사용 하 여.NET 표준 라이브러리를 사용 하는 방법을 안내 합니다. 완전 한 구현에 대 한.NET 표준 라이브러리 예제 단원을 참조 하십시오.
 
@@ -104,7 +91,3 @@ ms.lasthandoff: 03/09/2018
 
 -----
 
-
-## <a name="related-links"></a>관련 링크
-
-- [릴리스 정보](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#.NET_Standard_Support)

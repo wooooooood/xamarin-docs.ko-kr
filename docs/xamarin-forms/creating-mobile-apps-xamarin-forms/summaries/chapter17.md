@@ -7,11 +7,11 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09f63dd418ea1fb523c028edb02c28c22bfdccd1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4f76b1060ee8a672319683525470aee00e3db001
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>17 장의 요약입니다. 표를 마스터합니다.
 
@@ -29,16 +29,16 @@ ms.lasthandoff: 03/12/2018
 
 Xaml에서는 [ `GridLengthTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/) 간단한 텍스트 문자열을 변환 `GridLength` 값입니다. 내부적으로 [ `GridLength` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/) 만듭니다는 `GridLength` 숫자와 형식의 값에 따라 값 [ `GridUnitType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/), 세 멤버가 포함 된 열거:
 
-- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) & #x 2014; 너비 또는 높이 장치 독립적 단위 (XAML의 번호)에 지정 된
-- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) & #x 2014; height 또는 width가 셀 내용 (XAML에서 "자동")에 따라 창의 자동 크기 조정
-- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) & #x 2014; 남은 높이 또는 너비 비례적으로 할당 됩니다 (사용 하 여 숫자 "\*" 이라는 *별모양*, XAML에서)
+- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &mdash; 너비 또는 높이 장치 독립적 단위 (XAML의 번호)에 지정 된
+- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &mdash; height 또는 width가 셀 내용 (XAML에서 "자동")에 따라 창의 자동 크기 조정
+- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &mdash; 남은 높이 또는 너비 비례적으로 할당 됩니다 (사용 하 여 숫자 "\*" 이라는 *별모양*, XAML에서)
 
-각 자식은 `Grid` 할당 되어야 행 및 열 (명시적 또는 암시적으로). 행에 걸쳐 및 열 범위는 선택 사항입니다. 이러한 모든 지정 된 바인딩 가능한 속성 & #x 2014; 연결 된 사용 하 여 정의한 속성은 `Grid` 의 자식을에서 설정 하지만 `Grid`합니다. `Grid` 4 개의 정적 연결 된 바인딩 가능한 속성을 정의합니다.
+각 자식은 `Grid` 할당 되어야 행 및 열 (명시적 또는 암시적으로). 행에 걸쳐 및 열 범위는 선택 사항입니다. 이러한 모든 지정 된 연결 된 바인딩 가능한 속성을 사용 하 여 &mdash; 에서 정의한 속성의 `Grid` 의 자식을에서 설정 하지만 `Grid`합니다. `Grid` 4 개의 정적 연결 된 바인딩 가능한 속성을 정의합니다.
 
-- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) & #x 2014; 행 0부터 시작 합니다. 기본값은 0
-- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) & #x 2014; 0부터 시작 열입니다. 기본값은 0
-- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) & #x 2014; 수의 행 자식 걸쳐; 기본값은 1
-- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) & #x 2014; 수의 열 자식 걸쳐; 기본값은 1
+- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &mdash; 행 0부터 시작 합니다. 기본값은 0
+- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &mdash; 0부터 시작 열입니다. 기본값은 0
+- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &mdash; 수의 행 자식 걸쳐; 기본값은 1
+- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &mdash; 수의 열 자식 걸쳐; 기본값은 1
 
 프로그램 코드에서 설정 하 고 이러한 값을 가져오는 8 개의 정적 메서드를 사용할 수 있습니다.
 

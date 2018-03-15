@@ -6,12 +6,12 @@ ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2017
-ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: e1890575f5c3a5bd2e0c0de0712ba459607e6139
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-android-assets"></a>Android 자산 사용 하 여
 
@@ -44,7 +44,7 @@ Mac 용 visual Studio를 설정 해야 함는 **빌드 작업** 이 파일에 �
 
 ## <a name="reading-assets"></a>자산 읽기
 
-사용 하 여 자산 읽혀집니다는 [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)합니다. 인스턴스는 `AssetManager` access에서 사용할 수는 [자산](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) 속성에는 `Android.Contet.Context`, 작업 등입니다.
+사용 하 여 자산 읽혀집니다는 [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)합니다. 인스턴스는 `AssetManager` 를 액세스 하 여 사용할 수는 [자산](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/) 속성에는 `Android.Content.Context`, 작업 등입니다.
 다음 코드에서에서는 열 우리의 **read_asset.txt** 자산에서 콘텐츠를 읽고 TextView를 사용 하 여 표시 합니다.
 
 ```csharp

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 650f8dceebb088b3601c21c1f5373fc4ae8c76dc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Cognitive 서비스를 사용 하 여 인텔리전스 추가
 
@@ -52,51 +52,20 @@ Smilies 단추를 클릭 하 고 `TodoListPage` 로 이동는 `RateAppPage`, emo
 
 샘플 응용 프로그램에 대 한 PCL 이식 가능한 클래스 라이브러리 () 프로젝트 5 개의 주 폴더가 이루어져 있습니다.
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>용도</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>모델</strong></td>
-            <td>응용 프로그램에 대 한 데이터 모델 클래스를 포함합니다. 여기에 <code>TodoItem</code> 응용 프로그램에서 사용 되는 데이터의 단일 항목을 모델링 하는 클래스입니다. 폴더에는 모델 JSON 응답의 다른 Microsoft Cognitive 서비스 Api에서 반환 하는 데 사용 되는 클래스도 포함 됩니다.</td>
-        </tr>
-        <tr>
-            <td><strong>저장소</strong></td>
-                        <td>포함 된 <code>ITodoItemRepository</code> 인터페이스 및 <code>TodoItemRepository</code> 데이터베이스 작업을 수행 하는 데 사용 되는 클래스입니다.</td>
-        </tr>
-        <tr>
-            <td><strong>서비스</strong></td>
-                        <td>다른 Microsoft Cognitive 서비스 Api에서 사용 되는 인터페이스와 함께 액세스 하는 데 사용 되는 클래스 및 인터페이스가 들어는 <code>DependencyService</code> 클래스 플랫폼 프로젝트에서 인터페이스를 구현 하는 클래스를 찾으려고 합니다.</td>
-        </tr>
-        <tr>
-            <td><strong>유틸리티</strong></td>
-            <td>포함 된 <code>Timer</code> 클래스에서 사용 되는 <code>AuthenticationService</code> 9 분 마다 JWT 액세스 토큰을 갱신 하는 클래스입니다.</td>
-        </tr>
-        <tr>
-            <td><strong>뷰</strong></td>
-            <td>응용 프로그램 페이지가 포함 됩니다.</td>
-        </tr>
-    </tbody>
-</table>
+|폴더|용도|
+|--- |--- |
+|모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함합니다. 여기에 `TodoItem` 응용 프로그램에서 사용 되는 데이터의 단일 항목을 모델링 하는 클래스입니다. 폴더에는 모델 JSON 응답의 다른 Microsoft Cognitive 서비스 Api에서 반환 하는 데 사용 되는 클래스도 포함 됩니다.|
+|저장소|포함 된 `ITodoItemRepository` 인터페이스 및 `TodoItemRepository` 데이터베이스 작업을 수행 하는 데 사용 되는 클래스입니다.|
+|서비스|다른 Microsoft Cognitive 서비스 Api에서 사용 되는 인터페이스와 함께 액세스 하는 데 사용 되는 클래스 및 인터페이스가 들어는 `DependencyService` 클래스 플랫폼 프로젝트에서 인터페이스를 구현 하는 클래스를 찾으려고 합니다.|
+|유틸리티|포함 된 `Timer` 클래스에서 사용 되는 `AuthenticationService` 9 분 마다 JWT 액세스 토큰을 갱신 하는 클래스입니다.|
+|보기|응용 프로그램 페이지가 포함 됩니다.|
 
 PCL 프로젝트에는 몇 가지 중요 한 파일이 들어 있습니다.
 
-<table>
-    <thead>
-      <tr><td><strong>파일</strong></td><td><strong>용도</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td><code>Constants</code> Microsoft Cognitive 서비스 api 호출 되는 API 키와 끝점을 지정 하는 클래스입니다. API 키 상수 다른 Cognitive 서비스 Api에 액세스 하려면 업데이트 해야 합니다.
-        </tr>
-        <tr>
-          <td><strong>App.xaml.cs</strong></td>
-          <td><code>App</code> 클래스는 각 플랫폼에서 응용 프로그램에 의해 표시 되는 두는 첫 번째 페이지를 인스턴스화 및 <code>TodoManager</code> 데이터베이스 작업을 호출 하는 데 사용 되는 클래스입니다.</td>
-        </tr>
-    </tbody>
-</table>
+|파일|용도|
+|--- |--- |
+|Constants.cs|`Constants` Microsoft Cognitive 서비스 api 호출 되는 API 키와 끝점을 지정 하는 클래스입니다. API 키 상수 다른 Cognitive 서비스 Api에 액세스 하려면 업데이트 해야 합니다.|
+|App.xaml.cs|`App` 클래스는 각 플랫폼에서 응용 프로그램에 의해 표시 되는 두는 첫 번째 페이지를 인스턴스화 및 `TodoManager` 데이터베이스 작업을 호출 하는 데 사용 되는 클래스입니다.|
 
 ### <a name="nuget-packages"></a>NuGet 패키지
 

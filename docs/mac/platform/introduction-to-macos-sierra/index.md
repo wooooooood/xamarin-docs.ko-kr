@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 036e1ddc95f8eabec3e87c13c25cad972c29a5d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 161a5be643ccf5f96b04413cec5956264af6ce60
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS 시에라 소개
 
@@ -63,8 +63,6 @@ Apple Safari 웹 브라우저, 페이지 워드 프로세서 및 숫자 스프�
 사용자 레코드 또는 개인 iCloud 데이터베이스에서 레코드 집합 빠르고 쉽게 공유할 수 있도록 시에라 macOS에서 CloudKit 프레임 워크 확장 되었습니다.
 
 사용자에 게 레코드에 대 한 액세스 권한이 있는 사람에 대 한 전체 읽기/쓰기 제어 및 CloudKit 보내고 레코드 공유 초대를 수락 하는 것에 대 한 전체 UI를 제공 합니다.
-
-<!--To find out more, please see our [CloudKit Data Sharing](~/mac/platform-features/introduction-to-macos-sierra/cloudkit-data-sharing/) guide.-->
 
 자세한 내용은 Apple의를 참조 하십시오 [CloudKit 프레임 워크 참조](https://developer.apple.com/reference/clockkit) 및 [CloudKit JS 프레임 워크 참조](https://developer.apple.com/reference/cloudkitjs)합니다.
 

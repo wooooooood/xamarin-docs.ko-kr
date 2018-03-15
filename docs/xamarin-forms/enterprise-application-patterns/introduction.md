@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d5d5de21c4f397f203b4da5ea86e1f9a0e4714e9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction"></a>소개
 
@@ -118,48 +118,16 @@ ms.lasthandoff: 03/09/2018
 
 EShopOnContainers 모바일 응용 프로그램 솔루션 프로젝트도 소스 코드 및 기타 리소스를 구성합니다. 모든 프로젝트 폴더를 사용 하 여 범주로 소스 코드 및 기타 리소스를 구성 하 합니다. 다음 표에서 eShopOnContainers 모바일 앱 구성 하는 프로젝트를 설명 합니다.
 
-<table>
-<thead>
-<tr class="header">
-<th>프로젝트</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>eShopOnContainers.Core</td>
-<td>이 프로젝트는 공유 코드와 공유 UI를 포함 하는 이식 가능한 클래스 라이브러리 (PCL) 프로젝트.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.Droid</td>
-<td>이 프로젝트는 특정 Android 코드를 보유 하 고 Android 앱에 대 한 진입점입니다.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.iOS</td>
-<td>이 프로젝트는 특정 코드 iOS를 보유 하 고 iOS 앱에 대 한 진입점입니다.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UWP</td>
-<td>이 프로젝트는 유니버설 Windows 플랫폼 (UWP) 특정 코드를 보유 하 고 Windows 앱에 대 한 진입점입니다.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Droid</td>
-<td>이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 Android test runner입니다.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.TestRunner.iOS</td>
-<td>이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 iOS test runner입니다.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Windows</td>
-<td>이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 유니버설 Windows 플랫폼 test runner입니다.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UnitTests</td>
-<td>이 프로젝트는 eShopOnContainers.Core 프로젝트에 대 한 단위 테스트를 포함 합니다.</td>
-</tr>
-</tbody>
-</table>
+|프로젝트|설명|
+|--- |--- |
+|eShopOnContainers.Core|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 이식 가능한 클래스 라이브러리 (PCL) 프로젝트.|
+|eShopOnContainers.Droid|이 프로젝트는 특정 Android 코드를 보유 하 고 Android 앱에 대 한 진입점입니다.|
+|eShopOnContainers.iOS|이 프로젝트는 특정 코드 iOS를 보유 하 고 iOS 앱에 대 한 진입점입니다.|
+|eShopOnContainers.UWP|이 프로젝트는 유니버설 Windows 플랫폼 (UWP) 특정 코드를 보유 하 고 Windows 앱에 대 한 진입점입니다.|
+|eShopOnContainers.TestRunner.Droid|이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 Android test runner입니다.|
+|eShopOnContainers.TestRunner.iOS|이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 iOS test runner입니다.|
+|eShopOnContainers.TestRunner.Windows|이 프로젝트는 eShopOnContainers.UnitTests 프로젝트에 대 한 유니버설 Windows 플랫폼 test runner입니다.|
+|eShopOnContainers.UnitTests|이 프로젝트는 eShopOnContainers.Core 프로젝트에 대 한 단위 테스트를 포함 합니다.|
 
 EShopOnContainers 모바일 앱에서 클래스를 수정 하지 않고 모든 Xamarin.Forms 앱에서 다시 사용할 수 있습니다.
 
@@ -167,76 +135,23 @@ EShopOnContainers 모바일 앱에서 클래스를 수정 하지 않고 모든 X
 
 EShopOnContainers.Core PCL 프로젝트에는 다음 폴더가 포함 되어 있습니다.
 
-<table>
-<thead>
-<tr class="header">
-<th>폴더</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>애니메이션</td>
-<td>애니메이션을 XAML에서 사용할 수 있는 클래스를 포함 합니다.</td>
-</tr>
-<tr class="even">
-<td>동작</td>
-<td>클래스를 보려면 노출 되는 동작을 포함 합니다.</td>
-</tr>
-<tr class="odd">
-<td>컨트롤</td>
-<td>응용 프로그램에서 사용 되는 사용자 지정 컨트롤을 포함 합니다.</td>
-</tr>
-<tr class="even">
-<td>변환기</td>
-<td>바인딩에 사용자 지정 논리를 적용 하는 값 변환기를 포함 합니다.</td>
-</tr>
-<tr class="odd">
-<td>효과</td>
-<td>포함 된 <code>EntryLineColorEffect</code> 특정의 테두리 색을 변경 하는 데 사용 되는 클래스 <code>Entry</code> 컨트롤입니다.</td>
-</tr>
-<tr class="even">
-<td>예외</td>
-<td>사용자 지정 포함 <code>ServiceAuthenticationException</code>합니다.</td>
-</tr>
-<tr class="odd">
-<td>확장</td>
-<td>에 대 한 확장 메서드가 포함 되어는 <code>VisualElement</code> 및 <code>IEnumerable<T> </code> 클래스입니다.</td>
-</tr>
-<tr class="even">
-<td>도우미</td>
-<td>응용 프로그램에 대 한 도우미 클래스를 포함합니다.</td>
-</tr>
-<tr class="odd">
-<td>모델</td>
-<td>응용 프로그램에 대 한 모델 클래스를 포함합니다.</td>
-</tr>
-<tr class="even">
-<td>속성</td>
-<td>포함 <code>AssemblyInfo.cs</code>,.NET 어셈블리 메타 데이터 파일.</td>
-</tr>
-<tr class="odd">
-<td>서비스</td>
-<td>응용 프로그램에 제공 되는 서비스를 구현 하는 클래스 및 인터페이스가 포함 되어 있습니다.</td>
-</tr>
-<tr class="even">
-<td>트리거</td>
-<td>포함의 <code>BeginAnimation</code> 트리거 XAML에서 애니메이션을 호출 하는 데 사용 됩니다.</td>
-</tr>
-<tr class="odd">
-<td>유효성 검사</td>
-<td>데이터 입력을 확인 하는 관련 된 클래스를 포함 합니다.</td>
-</tr>
-<tr class="even">
-<td>ViewModels</td>
-<td>페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.</td>
-</tr>
-<tr class="odd">
-<td>보기</td>
-<td>응용 프로그램에 대 한 페이지에 포함 되어 있습니다.</td>
-</tr>
-</tbody>
-</table>
+|폴더|설명|
+|--- |--- |
+|애니메이션|애니메이션을 XAML에서 사용할 수 있는 클래스를 포함 합니다.|
+|동작|클래스를 보려면 노출 되는 동작을 포함 합니다.|
+|컨트롤|응용 프로그램에서 사용 되는 사용자 지정 컨트롤을 포함 합니다.|
+|변환기|바인딩에 사용자 지정 논리를 적용 하는 값 변환기를 포함 합니다.|
+|효과|포함 된 `EntryLineColorEffect` 특정의 테두리 색을 변경 하는 데 사용 되는 클래스 `Entry` 컨트롤입니다.|
+|예외|사용자 지정 포함 `ServiceAuthenticationException`합니다.|
+|확장|에 대 한 확장 메서드가 포함 되어는 `VisualElement` 및 `IEnumerable` 클래스입니다.|
+|도우미|응용 프로그램에 대 한 도우미 클래스를 포함합니다.|
+|모델|응용 프로그램에 대 한 모델 클래스를 포함합니다.|
+|속성|포함 `AssemblyInfo.cs`,.NET 어셈블리 메타 데이터 파일.|
+|서비스|응용 프로그램에 제공 되는 서비스를 구현 하는 클래스 및 인터페이스가 포함 되어 있습니다.|
+|트리거|포함의 `BeginAnimation` 트리거 XAML에서 애니메이션을 호출 하는 데 사용 됩니다.|
+|유효성 검사|데이터 입력을 확인 하는 관련 된 클래스를 포함 합니다.|
+|ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
+|보기|응용 프로그램에 대 한 페이지에 포함 되어 있습니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

@@ -7,11 +7,11 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a3980c63c31f4fdf0297fdc9b05da3590f0cac54
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 장 14입니다. 절대 레이아웃
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/12/2018
 
 자식으로 추가할 수 있습니다는 `Children` 의 컬렉션은 `AbsoluteLayout` 표준을 사용 하 여 [ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/) 메서드를 하지만 `AbsoluteLayout` 확장 제공 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) 지정할 수 있는 메서드는 [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/)합니다. 다른 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) 방법만 필요는 [ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/),이 경우 제약을 받지 않는 자식과 크기가 자동으로 조정 합니다.
 
-만들 수는 `Rectangle` 값과 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) 4 개의 값 & #x 2014; 필요한의 부모에 상대적인 자식 왼쪽 위 모서리의 위치를 나타내는 처음 두 가지로를 나타내는 두 번째 두는 하위 항목의 크기입니다. 또는 사용할 수는 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) 필요로 하는 `Point` 및 [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) 값입니다.
+만들 수는 `Rectangle` 값과 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) 4 개의 값을 필요로 하 &mdash; 부모에 상대적인 자식의 왼쪽 위 모퉁이의 위치를 나타내는 처음 두 가지로를 나타내는 두 번째 두는 하위 항목의 크기입니다. 또는 사용할 수는 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) 필요로 하는 `Point` 및 [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) 값입니다.
 
 이러한 `Add` 메서드에서 보여지는 [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), 어떤 위치 `BoxView` 요소를 사용 하 여 `Rectangle` 값, 및 `Label` 만을사용하여요소`Point` 값입니다.
 

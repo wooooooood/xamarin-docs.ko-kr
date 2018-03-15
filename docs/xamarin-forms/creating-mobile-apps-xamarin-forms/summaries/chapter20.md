@@ -7,11 +7,11 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 86ae56fc2baac3eab0fbf375c5f67f7b2327721a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0ac316bc2cef04a80958c047427845dbdcc4137f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 장 20입니다. Async 및 파일 I/O
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/12/2018
 
 ### <a name="good-news-and-bad-news"></a>다행히도 및 나쁜 소식
 
-Xamarin.Forms 지원 응용 프로그램에 대 한 로컬 저장소 & #x 2014;에서 지 원하는 모든 플랫폼 응용 프로그램에 전용 저장소입니다.
+Xamarin.Forms 지원 응용 프로그램에 대 한 로컬 저장소에서 지 원하는 모든 플랫폼 &mdash; 은 응용 프로그램에 개인 저장소.
 
 Xamarin.iOS 및 Xamarin.Android 라이브러리의 Xamarin에이 두 플랫폼에 맞게 명시적으로.NET 버전을 포함 합니다. 클래스를 포함 하는 이러한 `System.IO` 이 두 플랫폼에서 응용 프로그램의 로컬 저장소와 파일 I/O를 수행 하는 데 사용할 수 있는 합니다.
 
@@ -117,7 +117,7 @@ Xamarin.iOS 및 Xamarin.Android 라이브러리의 Xamarin에이 두 플랫폼�
 
 ### <a name="keeping-it-in-the-background"></a>백그라운드에서 유지
 
-여러 비동기 메서드 & #x 2014;에 대 한 호출을 구성 하는 라이브러리의 메서드 와 같은 `WriteFileAsync` 및 `ReadFileASync` 메서드는 Windows 런타임에서 [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) 클래스 & #x 2014; 가능 좀 더 효율적으로 사용 하 여는 [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) 메서드 사용자 인터페이스 스레드로 전환 하지 마십시오.
+여러 비동기 메서드를 호출 하는 라이브러리의 메서드 &mdash; 와 같은 `WriteFileAsync` 및 `ReadFileASync` 메서드는 Windows 런타임에서 [ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs) 클래스 &mdash; 다소 만들 수 있습니다 사용 하 여 보다 효율적인는 [ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/) 사용자 인터페이스 스레드로 전환 되지 않게 하려면.
 
 ### <a name="dont-block-the-ui-thread"></a>UI 스레드를 차단 하지 않습니다!
 

@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선으로 분할
 
@@ -20,7 +20,7 @@ _탐색 SkiaSharp 렌더링 입방 형 3, 정방형, 및 원추형 베 지 어 �
 
 베 지 어 곡선 피에르 베 지 어 (1910 – 1999) 자동차 회사 곡선 자동차 본문의 컴퓨터 기반 디자인에 대 한 사용 Renault 프랑스어 엔지니어 후 라고 합니다.
 
-베 지 어 곡선으로 분할은 대화형 디자인에 잘 맞는 것으로 알려져: 것은 잘 일관 되지 않게 동작 & #x 2014; 즉, 무한 하거나 다루기 어려운 되도록 곡선 & #x 2014; 시키는 singularities 없습니다. 있으며 시선을 일반적으로 합니다. 컴퓨터 기반 글꼴의 문자 윤곽선은 일반적으로 베 지 어 곡선으로 정의 됩니다.
+베 지 어 곡선으로 분할은 대화형 디자인에 잘 맞는 것으로 알려져:는 정상적으로 작동 &mdash; 즉, 무한 하거나 다루기 어려운 되도록 곡선을 발생 시키는 singularities 없는 &mdash; 며, 일반적으로 시선을 . 컴퓨터 기반 글꼴의 문자 윤곽선은 일반적으로 베 지 어 곡선으로 정의 됩니다.
 
 ![](beziers-images/beziersample.png "예제 3 차원 곡선")
 
@@ -411,7 +411,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="the-conic-bzier-curve"></a>원추형 베 지 어 곡선
 
-베 지 어 곡선 원추형 & #x 2014; 유리 정방형 베 지 어 곡선 & #x 2014; 함 베 지 어 곡선의 제품군으로 비교적 최근 추가 합니다. 정방형 베 지 어 곡선 합리적인 정방형 3 차원 곡선 시작점, 끝점 및 제어점 하나 포함 됩니다. 유리 정방형 3 차원 곡선도 필요 하지만 *가중치* 값입니다. 호출 되는 *합리적인* 정방형 파라메트릭 수식 비율을 포함 하기 때문입니다.
+원추형 베 지 어 곡선 &mdash; 라고도 합리적인 정방형 3 차원 곡선 &mdash; 는 베 지 어 곡선의 제품군으로 비교적 최근 추가 합니다. 정방형 베 지 어 곡선 합리적인 정방형 3 차원 곡선 시작점, 끝점 및 제어점 하나 포함 됩니다. 유리 정방형 3 차원 곡선도 필요 하지만 *가중치* 값입니다. 호출 되는 *합리적인* 정방형 파라메트릭 수식 비율을 포함 하기 때문입니다.
 
 매개 방정식 X 및 Y는 동일한 분모를 공유 하는 비율입니다. 다음에 대 한 기준에 대 한 수식은 *t* 0에서 사이의 가중치는 1로 *w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t) ²x₀ + 2wt (1-t) x₁ t²x₂ +)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ + 2wt (1-t) y₁ t²y₂ +)) ÷ d(t)
 
-유리 정방형 베 지 어 커브 라고도 *conics* 모든 원추형 섹션 & #x 2014;의 세그먼트 정확 하 게 나타낼 수 있으므로 hyperbolas, parabolas, 타원, 및 원입니다.
+유리 정방형 베 지 어 커브 라고도 *conics* 원추형 만큼의 세그먼트로 정확 하 게 나타낼 수 있으므로 &mdash; hyperbolas, parabolas, 타원, 및 원입니다.
 
 경로에 유리 정방형 베 지 어 곡선을 추가 하려면 사용 된 [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) 메서드 또는 [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) 오버 로드와 별도 `x` 및 `y` 좌표:
 

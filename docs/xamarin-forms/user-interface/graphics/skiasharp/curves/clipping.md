@@ -8,11 +8,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e84bce5d4280ded801ed58999a2570d3c6bd327e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 영역을 사용 하 여 클리핑
 
@@ -267,7 +267,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKClipOperation clipOp)
 
 계속 사용할 수 있습니다는 `SKRegionOperation` 의 측면에서 클리핑 영역을 정의 하는 열거형 되지만 필요는 [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) 개체입니다.
 
-새로 만든 `SKRegion` 빈 영역을 설명 하는 개체입니다. 일반적으로 개체에 첫 번째 호출 [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) 를 지역 사각형 영역에 설명 합니다. 매개 변수를 `SetRect` 는는 `SKRectI` 값 & #x 2014; 사각형 값과 정수 속성입니다. 호출할 수 있습니다 [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) 와 `SKPath` 개체입니다. 이 메서드는 경로, 내부 동일 하지만 초기 사각형 영역에 클리핑 하는 영역을 만듭니다.
+새로 만든 `SKRegion` 빈 영역을 설명 하는 개체입니다. 일반적으로 개체에 첫 번째 호출 [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) 를 지역 사각형 영역에 설명 합니다. 매개 변수를 `SetRect` 는는 `SKRectI` 값 &mdash; 사각형 값과 정수 속성입니다. 호출할 수 있습니다 [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) 와 `SKPath` 개체입니다. 이 메서드는 경로, 내부 동일 하지만 초기 사각형 영역에 클리핑 하는 영역을 만듭니다.
 
 `SKRegionOperation` 열거형에 중 하나를 호출할 때만 발생는 [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) 와 같은 메서드 오버 로드 합니다.
 

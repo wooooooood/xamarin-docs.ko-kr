@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Windows Communication Foundation (WCF) 웹 서비스 사용
 
@@ -41,37 +41,12 @@ ASP.NET 웹 서비스 (ASMX) 및 WCF에 대 한 차이점은 있지만 WCF와 �
 
 WCF 서비스는 다음 작업을 제공합니다.
 
-<table>
-  <thead>
-    <tr>
-      <th>작업</th>
-      <th>설명</th>
-      <th>매개 변수</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>할 일 항목의 목록 가져오기</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>새 할 일 항목을 만듭니다.</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>할 일 항목 업데이트</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>할 일 항목 삭제</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|작업|설명|매개 변수|
+|--- |--- |--- |
+|GetTodoItems|할 일 항목의 목록 가져오기|
+|CreateTodoItem|새 할 일 항목을 만듭니다.|XML 직렬화 TodoItem|
+|EditTodoItem|할 일 항목 업데이트|XML 직렬화 TodoItem|
+|DeleteTodoItem|할 일 항목 삭제|XML 직렬화 TodoItem|
 
 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 참조 [데이터 모델링](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 

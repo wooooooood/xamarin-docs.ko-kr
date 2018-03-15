@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>이식 가능한 클래스 라이브러리 소개
 
@@ -39,94 +39,13 @@ _이 문서는 PCL 이식 가능한 클래스 라이브러리 () 프로젝트를
 
 다음 표에서.NET 플랫폼에 따라 다른 기능 중 일부를 보여 줍니다. 특정 장치/플랫폼에서 실행 되도록 보장 하는 PCL 어셈블리를 작성할 수 있습니다 선택 하면 프로젝트를 만들 때 어떤 지원이 필요 합니다.
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-기능 </td>
-      <td>
-.NET Framework </td>
-      <td>
-UWP 앱 </td>
-      <td>
-Silverlight </td>
-      <td>
-Windows Phone </td>
-      <td>
-Xamarin </td>
-    </tr>
-    <tr>
-      <td>
-코어 </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-LINQ </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-IQueryable </td>
-       <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-7.5 + </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-Serialization </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-데이터 주석 </td>
-      <td>
-4.0.3 + </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-      </td>
-      <td>
-Y </td>
-    </tr>
-  </tbody>
-</table>
+|기능|.NET Framework|UWP 앱|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|코어|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 +|Y|
+|Serialization|Y|Y|Y|Y|Y|
+|데이터 주석|4.0.3 +|Y|Y||Y|
 
 Xamarin 열 반영 Xamarin.iOS 및 Xamarin.Android Visual Studio와 함께 제공 하는 모든 프로필을 지원 하 고 사용자가 만드는 모든 라이브러리의 기능 가용성을 지원 하도록 선택 하면 다른 플랫폼만 제한 됩니다.
 

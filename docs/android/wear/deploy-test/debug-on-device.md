@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 5ec627fad1695bab8d05d75a5089fe849ea2fd75
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c12764610d0fd9834914b8114818b2ccd7d7def0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="debug-on-a-wear-device"></a>마모 장치에서 디버깅
 
@@ -92,7 +92,7 @@ Bluetooth 연결 마모 장치를 만들기 위한 휴대폰을 준비 하려면
 
 이 시점에서 마모 장치에 앱을 배포할 수 있습니다.
 
-<a name="screenshots"/>
+<a name="screenshots" />
 
 ### <a name="taking-screenshots"></a>만들기 스크린 샷
 

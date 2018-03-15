@@ -8,11 +8,11 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: c938e5ef836904c42f3349c66d48a9b13cb335ca
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: aa6011c783228848212c633c1c8059c402fdaa3f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms를 사용한 통합
 
@@ -23,7 +23,7 @@ SkiaSharp 그래픽 여러 가지 방법으로 Xamarin.Forms의 나머지와 통
 ![](integration-images/integrationexample.png "슬라이더와 색을 선택 하면")
 
 Xamarin.Forms에 대화형 SkiaSharp 그래픽 만들기를 다른 하나는 터치 합니다.
-두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 간단한 그릴 두 가지 방법 & #x 2014; circle 채우기 & #x 2014; 채우기 하지 않고 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
+두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 단순 원을 두 가지 방법으로 그릴 &mdash; 채우기 없이 및 채우기가 적용 된 &mdash; 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
 
 이 페이지에 대 한는 `SKCanvasView` 클래스 인스턴스화되고는 [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 또한 Xamarin.Forms는 설정 된 파일을 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 보기:
 

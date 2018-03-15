@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 장 21입니다. 변형
 
@@ -19,9 +19,9 @@ ms.lasthandoff: 03/12/2018
 
 Xamarin.Forms는 세 가지 기본 유형은 변환를 지원합니다.
 
-- *번역* & #x 2014; 가로 또는 세로로 요소 이동
-- *배율* & #x 2014; 요소 크기 변경
-- *회전* & #x 2014; 또는 축 데이터 요소에는 요소를 설정 합니다.
+- *번역* &mdash; 가로 또는 세로로 요소 이동
+- *배율* &mdash; 요소 크기를 변경 합니다.
+- *회전* &mdash; 또는 축 데이터 요소에는 요소를 설정 합니다.
 
 Xamarin.Forms에는 확장은 등방성; 적용 너비와 높이 균일 하 게 됩니다. 회전은 모두에서 화면 및 2 차원 표면 3D 공간에서 사용할 수 있습니다. 변환이 없는 시간차 (또는 순수) 및 일반화 매트릭스 변환 되지 있습니다.
 

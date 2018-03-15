@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="working-with-jni"></a>JNI 작업
 
@@ -154,7 +154,7 @@ public class HelloAndroid extends android.app.Activity {
 
 일반적으로 Xamarin.Android ACW; 구성 하는 Java 코드를 자동으로 생성 클래스는 Java 클래스에서 파생 되 고 기존 Java 메서드를 재정의 하는 경우이 세대는 클래스 및 메서드 이름에 기반 합니다. 그러나 일부 시나리오에서는 코드 생성 적합 하지 않은, 아래 설명 된 대로:
 
--   Android 지원 작업 레이아웃 xml 특성에서 다음과 같이 이름을 [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML 특성입니다. 지정 된 확장된 인스턴스 보기에서 Java 메서드를 조회 하려고 합니다.
+-   Android에서는 작업 이름은 레이아웃 XML 특성을 예를 들어는 [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML 특성입니다. 지정 된 확장된 인스턴스 보기에서 Java 메서드를 조회 하려고 합니다.
 
 -   [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html) 인터페이스 필요 `readObject` 및 `writeObject` 메서드. 아니므로이 인터페이스의 멤버를 해당 관리 되는 구현에는 이러한 메서드 Java 코드를 노출 하지 않습니다.
 

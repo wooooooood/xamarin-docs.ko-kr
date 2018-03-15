@@ -6,12 +6,12 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3d9c747cdf8e43f33b9310ac1156550066b400eb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 5cf5bd38612f0f763e30456b0dd42198a3c0ff06
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="default-resources"></a>기본 리소스
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/09/2018
 -  **애니메이션** &ndash; 설명 하는 XML 파일 *트윈* 애니메이션 합니다. 트윈 애니메이션은 일련의 이미지 또는 텍스트의 크기 증가 보기 개체 또는 예제에서는 회전의 내용에 대 한 변환을 수행 하는 애니메이션 명령입니다. 트윈 애니메이션 개체를 볼만 제한 됩니다.
 
 -  **색** &ndash; 색 상태 목록을 설명 하는 XML 파일입니다. 상태 목록 색을 이해 하려면 단추와 같은 UI 위젯을 것이 좋습니다.
-   와 같은 눌려 지거나 사용 하지 않도록 설정, 다른 상태를 갖도록 해야 하 고 단추 각 변경 상태에서 색을 변경할 수 있습니다. 목록 상태 목록에 표시 됩니다.
+   와 같은 눌려 지거나 사용 하지 않도록 설정, 다른 상태에 있을 수 있습니다 하 고 단추 각 변경 상태에서 색을 변경할 수 있습니다. 목록 상태 목록에 표시 됩니다.
 
 -  **그릴** &ndash; 그릴 수 있는 리소스는 그래픽 또는 될 수 있는 응용 프로그램으로 컴파일된 하 고 다음 API 호출에 의해 액세스 다른 XML 리소스도에서 참조에 대 한 일반 개념입니다.
    Drawables의 몇 가지 예는 비트맵 파일 (.png,.gif,.jpg), 라고 하는 특별 한 크기 조정 가능한 비트맵 [9 패치](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), 상태 목록 등 XML에 정의 된 제네릭 셰이프입니다.

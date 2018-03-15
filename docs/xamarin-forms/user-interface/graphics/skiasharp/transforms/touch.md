@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -193,7 +193,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-경우는 `HitTest` 메서드가 반환 되 `true` & #x 2014; 의미 손가락 화면 비트맵 & #x 2014; 차지한 영역이 내에서 작업에 다음 터치 ID에 추가 되는 `TouchIds` 컬렉션입니다. 이 ID는 화면에서 손가락 들어 올릴 때까지 해당 지문에 대 한 터치 이벤트 순서를 나타냅니다. 여러 손가락 터치 비트맵을 하면 `touchIds` 컬렉션에 대 한 각 손가락 터치 ID에 포함 합니다.
+경우는 `HitTest` 메서드 반환 `true` &mdash; 손가락 비트맵을 차지한 영역이 내에서 화면을 touched가 의미 &mdash; 터치 ID에 추가 되는 `TouchIds` 컬렉션입니다. 이 ID는 화면에서 손가락 들어 올릴 때까지 해당 지문에 대 한 터치 이벤트 순서를 나타냅니다. 여러 손가락 터치 비트맵을 하면 `touchIds` 컬렉션에 대 한 각 손가락 터치 ID에 포함 합니다.
 
 `TouchAction` 처리기도 호출는 `ProcessTouchEvent` 클래스 `TouchManipulationBitmap`합니다. 여기에 일부 (모두는 아니지만)의 실제 터치 처리가 발생 합니다.
 
@@ -404,7 +404,7 @@ class TouchManipulationManager
 
 회전을 선택 될 때마다 한 손가락 및 두 손가락 조작 방법은 모두 먼저 회전을 처리 합니다. 회전 하지 감지 되 면 회전 구성 요소 효과적으로 제거 됩니다. 남은 것은 이동 및 크기 조정으로 해석 됩니다.
 
-다음은 `OneFingerManipulate` 메서드. 한 손가락 회전 설정 되지 않은 경우 다음 논리는 간단한 & #x 2014; 단순히 라는 벡터를 생성 하는 이전 점과 새 점을 사용 `delta` 정확 하 게 번역에 해당 하는 합니다. 한 손가락 회전을 사용 하도록 설정, 메서드를 사용 하 여 각도 피벗 지점 (비트맵의 센터)에서 이전 지점 및 새 지점을 회전 매트릭스 구성:
+다음은 `OneFingerManipulate` 메서드. 한 손가락 회전 설정 되어 있지 않은 경우 논리는 간단한 &mdash; 단순히 라는 벡터를 생성 하는 이전 점과 새 점을 사용 `delta` 정확 하 게 번역에 해당 하는 합니다. 한 손가락 회전을 사용 하도록 설정, 메서드를 사용 하 여 각도 피벗 지점 (비트맵의 센터)에서 이전 지점 및 새 지점을 회전 매트릭스 구성:
 
 ```csharp
 class TouchManipulationManager

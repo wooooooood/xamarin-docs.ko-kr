@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: f3dbfb52d4fbcb4dd65f695a862f6b041d2b22c0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4de4517c960395e5d7d5a8fb2c537576e15fc007
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet 구성 요소 참조를 업데이트합니다.
 
@@ -27,6 +27,82 @@ _앱을 미래 보증 NuGet 패키지와 구성 요소 참조를 대체 합니�
 해당 하는 NuGet 패키지를 갖고, 읽기에 표시 되지 않는 구성 요소를 사용 하는 경우는 [NuGet 마이그레이션 경로가 없는 구성 요소](#require-update) 아래 섹션.
 
 자세한 지침은 NuGet 패키지에 추가 하기 위한 이러한 페이지를 참조 [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
+
+## <a name="opening-a-project-containing-a-component"></a>구성 요소를 포함 하는 프로젝트 열기
+
+2017 년 1 년 11 월에서는 있었습니다 [발표](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) Xamarin 구성 요소 저장소가 사용이 중지 될 것입니다. Sunsetting 구성 요소와 함께 앞으로 이동 하기 위해, 15.6 버전의 Visual Studio 및 Mac 용 Visual Studio의 7.4 릴리스에서 더 이상 프로젝트에서 구성 요소 지원 합니다. 
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Visual Studio에는 프로젝트를 로드 하는 경우는 수동으로 제거 해야 모든 구성 요소 프로젝트에서 설명 하는 다음과 같은 대화 상자가 표시 됩니다.
+
+![경고 대화를 설명 하는 구성 요소 프로젝트에 및를 제거 해야 합니다](component-nuget-images/component-alert-vs.png)
+
+제거 하려면 구성 요소 프로젝트에서:
+
+1. .Csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **프로젝트 언로드**합니다. 
+
+2. 언로드된 프로젝트에 다시를 마우스 오른쪽 단추로 클릭 하 고 선택 **{your-프로젝트-name}.csproj 편집**합니다.
+
+3. 파일에 대 한 모든 참조 찾기 `XamarinComponentReference`합니다. 다음 예제와 비슷한 같아야 합니다.
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+4. 에 대 한 참조를 제거 `XamarinComponentReference` 파일을 저장 합니다. 위의 예에서 전체를 제거 해도 안전은 `ItemGroup`합니다.
+
+5. 파일을 저장 후 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **프로젝트 다시 로드**합니다.
+
+6. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+Mac 용 Visual Studio에는 프로젝트를 로드 하는 경우는 수동으로 제거 해야 모든 구성 요소 프로젝트에서 설명 하는 다음과 같은 대화 상자가 표시 됩니다.
+
+![경고 대화를 설명 하는 구성 요소 프로젝트에 및를 제거 해야 합니다](component-nuget-images/component-alert.png)
+
+제거 하려면 구성 요소 프로젝트에서:
+
+1. .Csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **도구 > 파일 편집**합니다.
+
+2. 파일에 대 한 모든 참조 찾기 `XamarinComponentReference`합니다. 다음 예제와 비슷한 같아야 합니다.
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+3. 에 대 한 참조를 제거 `XamarinComponentReference` 파일을 저장 합니다. 위의 예에서 것이 안전 전체를 제거 하려면 `ItemGroup`
+
+4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다. 
+
+-----
 
 <a name="contain" />
 

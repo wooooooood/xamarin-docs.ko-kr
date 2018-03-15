@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 7c38ebb6b482f4097a4977accecc4a230d3f3ed3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-speech"></a>Android Speech
 
@@ -128,11 +128,11 @@ Android 장치는 기본 함께 제공 되는 대부분, Google TTS 서비스를
 
 ### <a name="step-1---instantiating-texttospeech"></a>1 단계-인스턴스화하는 동안 TextToSpeech
 
-`TextToSpeech` 최대 3 개의 매개 변수를 걸릴 수 있으며, 세 번째 작업에서 사용 됩니다 처음 두 선택 사항 (`AppContext`, `IOnInitListener`, `engine`). 수신기는 바인딩하는 데 사용 서비스 및 실패에 대 한 테스트 되 여기에 최소한의 사용 가능한 Android 개의 문자 음성 변환 엔진을 개수에 관계 없이 엔진, 장치는 Google의 엔진입니다.
+`TextToSpeech` 최대 3 개의 매개 변수를 걸릴 수 있으며, 세 번째 작업에서 사용 됩니다 처음 두 선택 사항 (`AppContext`, `IOnInitListener`, `engine`). 수신기에 사용 가능한 Android 개의 문자 음성 변환 엔진을 개수에 관계 없이 되 고 엔진 서비스 및 실패에 대 한 테스트에 바인딩하려면 사용 됩니다. 여기에 최소한 장치 Google의 엔진을 갖습니다.
 
 ### <a name="step-2---finding-the-languages-available"></a>2 단계-사용할 수 있는 언어 찾기
 
-`Java.Util.Locale` 라는 유용한 메서드를 포함 하는 네임 스페이스 `GetAvailableLocales()`합니다. 이 목록 음성 엔진에서 지 원하는 언어의 설치 된 언어에 대 한 다음 테스트할 수 있습니다.
+`Java.Util.Locale` 라는 유용한 메서드를 포함 하는 클래스 `GetAvailableLocales()`합니다. 이 목록 음성 엔진에서 지 원하는 언어의 설치 된 언어에 대 한 다음 테스트할 수 있습니다.
 
 "이해" 언어의 목록을 생성 하는 그다지 중요 하지 않은 경우 기본 언어 (처음 설정할 때 장치 사용자가 설정할 언어)은 항상에이 예제는 `List<string>` "Default" 첫 번째 매개 변수로, 결과에 따라 목록의 나머지를 채우는 `textToSpeech.IsLanguageAvailable(locale)`합니다.
 
@@ -186,7 +186,7 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 ### <a name="step-5---the-ioninitlistener"></a>5-는 IOnInitListener 단계
 
-텍스트를 음성 인터페이스 메서드를 변환할 수 있어야 하는 활동에 대 한 `OnInit` 을 만들어야 (의 인스턴스화에 대 한 지정 된 두 번째 매개 변수 인지는 `TextToSpeech` 클래스). 이 수신기를 초기화 하 고 결과 테스트 합니다.
+텍스트를 음성 인터페이스 메서드를 변환할 수 있어야 하는 활동에 대 한 `OnInit` 구현 해야 하는 (의 인스턴스화에 대 한 지정 된 두 번째 매개 변수 인지는 `TextToSpeech` 클래스). 이 수신기를 초기화 하 고 결과 테스트 합니다.
 
 수신기를 모두 테스트 해야 `OperationResult.Success` 및 `OperationResult.Failure` 최소한 합니다.
 다음 예제에서는 보여 줍니다.

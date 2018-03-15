@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/14/2018
+ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resolving-library-installation-errors"></a>라이브러리 설치 오류 해결
 
@@ -104,7 +104,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    경우는 **m2repository** 보관 파일에에서 표시 되지 않습니다이 테이블 앞에 추가 하 여 다운로드 URL을 만들 수 있습니다 **https://dl-ssl.google.com/android/repository/** 의 이름에는 **m2repository**  를 다운로드 합니다. 사용 예를 들어 **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** 다운로드 **android\_m2repository\_r10.zip** .
+    경우는 **m2repository** 보관 파일에에서 표시 되지 않습니다이 테이블 앞에 추가 하 여 다운로드 URL을 만들 수 있습니다  **https://dl-ssl.google.com/android/repository/**  의 이름에는 **m2repository** 를 다운로드 합니다. 사용 예를 들어  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** 다운로드 **android\_m2repository\_r10.zip**합니다.
 
 2.  위 표에 나와 있는 것 처럼 다운로드 URL에 해당 MD5 해시를 파일을 이름을 바꿉니다. 예를 들어, 다운로드 한 경우 **android\_m2repository\_r25.zip**,이 파일 이름을 **0B3F1796C97C707339FB13AE8507AF50.zip**합니다. 다운로드 된 파일의 다운로드 URL에 대 한 MD5 해시 테이블에 표시 되지 않는 경우 사용할 수 있습니다는 [온라인 MD5 생성기](http://www.webconfs.com/online-md5-generator.php) URL MD5 해시 문자열로 변환 합니다. 
 
@@ -160,6 +160,8 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
     [![23.1.1.0/embedded 폴더에 복사 된 파일의 예](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  통해 모든 파일이 복사 됩니다 있는지 확인 합니다. **포함** 디렉터리 파일 같은 포함 이제 **.jar**, **.aar**, 및 **.pom**합니다.
+
+9.  추출 된 모든 압축을 풀 **.aar** 파일입니다. Windows에서는 추가 **.zip** 확장을는 **.aar** 파일을 마우스 오른쪽 단추로 클릭 한 다음 선택 **모두 추출...** , 다음 제거는 **.zip** 확장 합니다. MacOS 등에서 압축을 풀는 **.aar** 사용 하 여 파일은 **의 압축을 푸는** 명령에 터미널 (예를 들어 **file.aar의 압축을 푸는**).
 
 이 시점에서 누락 된 구성 요소를 직접 설치 하 고 프로젝트가 오류 없이 빌드되어야 합니다. 그렇지 않은 경우 다운로드 한 확인은 **m2repository** **.zip** 정확 하 게 오류 메시지에 대 한 버전에 해당 하는 버전을 보관 하 고에서 해당 콘텐츠를 설치 했는지 확인 하십시오.는 위의 단계에 설명 된 대로 위치를 수정 합니다. 
 

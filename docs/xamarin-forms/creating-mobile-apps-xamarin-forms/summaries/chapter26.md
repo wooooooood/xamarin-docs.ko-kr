@@ -7,11 +7,11 @@ ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b17924ee2ee7c944b3924ec79568f07feb4449a7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 장 26입니다. 사용자 지정 레이아웃
 
@@ -44,7 +44,7 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 시스템이 없
 - [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) 형식의 `double`
 - [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 형식의 `double`
 
-이전에 `Layout` 호출, `Height` 및 `Width` 모의 값의 & #x 2013;가 1입니다.
+이전에 `Layout` 호출, `Height` 및 `Width` 모의 값이 있는 &ndash;1입니다.
 
 에 대 한 호출 `Layout` 다음 보호 된 메서드 호출을 트리거합니다.
 

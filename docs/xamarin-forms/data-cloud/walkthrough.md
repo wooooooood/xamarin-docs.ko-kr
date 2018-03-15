@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 6625edc1f661e5f9769de82ec48367e9f900e567
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understanding-the-sample"></a>이 샘플 이해
 
@@ -38,47 +38,19 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 각 샘플 응용 프로그램에 대 한 PCL 프로젝트 세 개의 주 폴더가 이루어져 있습니다.
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>용도</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Data</strong></td>
-                        <td>클래스 및 데이터 항목을 관리 하 고 웹 서비스와 통신 하는 데 사용 되는 인터페이스를 포함 합니다. 여기에 최소한은 <code>TodoItemManager</code> 클래스의 속성을 통해 노출 되는 <code>App</code> 웹 서비스 작업을 호출 하는 클래스입니다.</td>
-        </tr>
-        <tr>
-            <td><strong>모델</strong></td>
-                        <td>응용 프로그램에 대 한 데이터 모델 클래스를 포함합니다. 여기에 최소한의 <code>TodoItem</code> 응용 프로그램에서 사용 되는 데이터의 단일 항목을 모델링 하는 클래스입니다. 폴더는 사용자 데이터를 모델에 사용 되는 모든 추가 클래스를 포함할 수도 있습니다.</td>
-        </tr>
-        <tr>
-            <td><strong>뷰</strong></td>
-                        <td>응용 프로그램 페이지가 포함 됩니다. 일반적으로 이루어져이 <code>TodoListPage</code> 및 <code>TodoItemPage</code> 클래스 및 인증을 위해 사용 되는 모든 추가 클래스입니다.</td>
-                </tr>
-    </tbody>
-</table>
+|폴더|용도|
+|--- |--- |
+|데이터|클래스 및 데이터 항목을 관리 하 고 웹 서비스와 통신 하는 데 사용 되는 인터페이스를 포함 합니다. 여기에 최소한은 `TodoItemManager` 클래스의 속성을 통해 노출 되는 `App` 웹 서비스 작업을 호출 하는 클래스입니다.|
+|모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함합니다. 여기에 최소한의 `TodoItem` 응용 프로그램에서 사용 되는 데이터의 단일 항목을 모델링 하는 클래스입니다. 폴더는 사용자 데이터를 모델에 사용 되는 모든 추가 클래스를 포함할 수도 있습니다.|
+|보기|응용 프로그램 페이지가 포함 됩니다. 일반적으로 이루어져이 `TodoListPage` 및 `TodoItemPage` 클래스 및 인증을 위해 사용 되는 모든 추가 클래스입니다.|
 
 또한 각 응용 프로그램에 대 한 PCL 프로젝트 다양 한 중요 한 파일 구성 됩니다.
 
-<table>
-    <thead>
-      <tr><td><strong>파일</strong></td><td><strong>용도</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td><code>Constants</code> 웹 서비스와 통신 하는 응용 프로그램에서 사용 하는 모든 상수를 지정 하는 클래스입니다. 이러한 상수는 공급자에 대해 만든 개인 백 엔드 서비스에 액세스 하려면 업데이트 해야 합니다.
-        </tr>
-        <tr>
-            <td><strong>ITextToSpeech.cs</strong></td>
-            <td><code>ITextToSpeech</code> 인터페이스를 지정 하는 <code>Speak</code> 모든 구현 클래스에서 메서드를 제공 해야 합니다.</td>
-        </tr>
-        <tr>
-          <td><strong>Todo.cs</strong></td>
-          <td><code>App</code> 모두 첫 번째 페이지에서 각 플랫폼에 응용 프로그램에 의해 표시 되는 인스턴스화를 담당 하는 클래스 및 <code>TodoItemManager</code> 웹 서비스 작업을 호출 하는 데 사용 되는 클래스입니다.</td>
-        </tr>
-    </tbody>
-</table>
+|파일|용도|
+|--- |--- |
+|Constants.cs|`Constants` 웹 서비스와 통신 하는 응용 프로그램에서 사용 하는 모든 상수를 지정 하는 클래스입니다. 이러한 상수는 공급자에 대해 만든 개인 백 엔드 서비스에 액세스 하려면 업데이트 해야 합니다.|
+|ITextToSpeech.cs|`ITextToSpeech` 인터페이스를 지정 하는 `Speak` 모든 구현 클래스에서 메서드를 제공 해야 합니다.|
+|Todo.cs|`App` 모두 첫 번째 페이지에서 각 플랫폼에 응용 프로그램에 의해 표시 되는 인스턴스화를 담당 하는 클래스 및 `TodoItemManager` 웹 서비스 작업을 호출 하는 데 사용 되는 클래스입니다.|
 
 ### <a name="viewing-pages"></a>페이지 보기
 

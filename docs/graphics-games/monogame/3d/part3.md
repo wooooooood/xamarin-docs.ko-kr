@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 861d47d001c10c14a0294536c6122cafb33a93ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e930004a91133f391f68221473f212b7caaf1b07
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="3d-coordinates-in-monogame"></a>3D MonoGame 좌표
 
@@ -47,7 +47,7 @@ _3D 게임 개발에 중요 한 단계는 3D 좌표계를 이해 합니다. Mono
 
 이 로봇 주위를 이동 하기 시작 하기 전에 만듭니다는 `Robot` 그리기 및 이동에 대 한 논리를 포함 하는 클래스입니다. 이 캡슐화 논리로 데이터의 게임 개발자 참조는 *엔터티*합니다.
 
-새 빈 클래스 파일을 추가 **MonoGame3D** 이식 가능한 클래스 라이브러리 (플랫폼 특정 ModelAndVerts.Android 제외). 이름 지정 it ** 로봇 **를 클릭 하 고 **새로**:
+새 빈 클래스 파일을 추가 **MonoGame3D** 이식 가능한 클래스 라이브러리 (플랫폼 특정 ModelAndVerts.Android 제외). 이름을 **로봇** 클릭 **새로**:
 
 ![](part3-images/image3.png "로봇 이름을 지정 하 고 새로 만들기를 클릭 합니다.")
 

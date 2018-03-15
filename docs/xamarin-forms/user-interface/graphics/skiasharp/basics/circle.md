@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>단순 원 그리기
 
@@ -146,7 +146,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `SKPaint` 개체는 그래픽 속성 그리기의 컬렉션 보다 약간 더 합니다. 이러한 개체는 매우 간단 합니다. 다시 사용할 수 있습니다 `SKPaint` 이 프로그램이 수행 하거나 여러 개 만들 수 있습니다 개체 `SKPaint` 속성 그리기의 다양 한 조합에 대 한 개체입니다. 만들고 외부에서 이러한 개체를 초기화할 수는 `PaintSurface` 이벤트 처리기 및 있습니다 수 필드로 저장 page 클래스에 있습니다.
 
-원의 윤곽선의 너비는 25 픽셀 & #x 2014;으로 지정 되어 있지만 또는 1 / 4 원형 & #x 2014;의 반지름에 을 도출할 수를 표시 되며 해당 하는 이유: 파란색 원에서 줄의 너비 절반 크기로 려 지 합니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 파란색 내부의 해당 차원에 가장 가까운 픽셀의 경우 25 픽셀 너비 개요 기하학적 원 & #x 2014; 분명 하지만 내부 및 외부 절반에 반 합니다.
+원의 윤곽선의 너비는 25 픽셀으로 지정 되어 있지만 &mdash; 또는 원의 반지름의 1 / 4 &mdash; 도출할, 되도록 표시 되며 해당 하는 이유: 파란색 원에서 줄의 너비 절반 크기로 려 지 합니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 파란색 내부의 해당 차원에 가장 가까운 픽셀의 경우 25 픽셀 너비 개요 기하학적 원 분명 하지만 &mdash; 내부 및 외부 절반에 반 합니다.
 
 다음 샘플에는 [xamarin.forms 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 문서 이러한 부하 분산 방식이 시각적으로 합니다.
 

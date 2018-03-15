@@ -7,11 +7,11 @@ ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 37bbbf2b89048db175ddc1b3b1a24cea92b898a7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 09b999771ec500409e40dc2aef671045bf9f5565
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>15 장의 요약입니다. 대화형 인터페이스
 
@@ -30,37 +30,12 @@ ms.lasthandoff: 03/12/2018
 
 이 장에서 8 개의 보기 기본.NET 데이터 형식을와 상호 작용 하는 사용자를 효과적으로 허용:
 
-<table>
-  <tr>
-    <th>데이터 형식</th>
-    <th>보기</th>
-  </tr>
-  <tr>
-    <td>`Double`</td>
-    <td
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/">슬라이더</a></code>,
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Stepper</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`Boolean`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/">Switch</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`String`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">Entry</a></code>, <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/">Editor</a></code>, <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/">SearchBar</a></code>
-    </td>
-  </tr>
-  <tr>
-    <td>`DateTime`</td>
-    <td>
-      <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/">DatePicker</a></code>, <code><a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/">TimePicker</a></code>
-    </td>
-  </tr>
-</table>
+|데이터 형식|보기|
+|--- |--- |
+|`Double`|[`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/), [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/)|
+|`Boolean`|[`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/)|
+|`String`|[`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/), [`Editor`](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/), [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/)|
+|`DateTime`|[`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/), [`TimePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/)|
 
 이러한 뷰는 기본 데이터 형식은의 대화형 시각적 표시로 생각할 수 있습니다. 이 개념은 다음 장에서 더 대해서는 [ **장 16입니다. 데이터 바인딩**](chapter16.md)합니다.
 
@@ -116,7 +91,7 @@ ms.lasthandoff: 03/12/2018
 
 - [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) 형식의 `double`1로 초기화 된,
 
-시각적으로 `Stepper` 레이블이 지정 된 두 개의 단추 이루어져 **& #x 2013;** 및  **+** 합니다. 키를 누르면 **& #x 2013;** 감소 `Value` 여 `Increment` 최소 `Minimum`합니다. 키를 누르면  **+**  증가 `Value` 여 `Increment` 최대 `Maximum`합니다.
+시각적으로 `Stepper` 레이블이 지정 된 두 개의 단추 이루어져  **&ndash;**  및  **+** 합니다. 키를 누르면  **&ndash;**  감소 `Value` 여 `Increment` 최소 `Minimum`합니다. 키를 누르면  **+**  증가 `Value` 여 `Increment` 최대 `Maximum`합니다.
 
 이 확인할는 [ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo) 샘플.
 

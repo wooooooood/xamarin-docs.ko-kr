@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>원격 iOS 시뮬레이터 (Windows)에
 
@@ -52,7 +52,7 @@ IOS 시뮬레이터는 연결 된 Mac 컴퓨터에 다음 열립니다. 원격 i
 - **잠금** – 시뮬레이터 (잠금을 해제 하려면 살짝 수)를 잠급니다.
 - **스크린 샷** – 시뮬레이터의 스크린 샷의을 디스크에 저장 합니다.
 - [**설정** ](#settings) -키보드 및 위치를 구성 합니다.
- - 다른 [ **옵션** ](#options) – 다양 한 시뮬레이터 옵션 회전, 흔들기 같은 사용할 수 있거나 다른 상태에서 시뮬레이터를 호출 합니다. 일부 옵션은 가려진 때 창에서 마우스 오른쪽 단추로 클릭 하거나 도구 모음에 표시 되는 줄임표 아이콘에서 액세스할 수 있습니다.
+- 다른 [ **옵션** ](#options) – 다양 한 시뮬레이터 옵션 회전, 흔들기 같은 사용할 수 있거나 다른 상태에서 시뮬레이터를 호출 합니다. 일부 옵션은 가려진 때 창에서 마우스 오른쪽 단추로 클릭 하거나 도구 모음에 표시 되는 줄임표 아이콘에서 액세스할 수 있습니다.
 
     [![](ios-simulator-images/maps-app-sml.png "iOS 시뮬레이터가 매핑합니다 예제를")](ios-simulator-images/maps-app.png#lightbox)
 

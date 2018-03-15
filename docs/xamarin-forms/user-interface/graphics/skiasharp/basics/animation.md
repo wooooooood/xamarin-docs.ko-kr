@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="basic-animation"></a>기본 애니메이션
 
@@ -107,7 +107,7 @@ async Task AnimationLoop()
 
 ```
 
-`while` 루프에서 주기 시간을 확보 하 여 시작 된 `Slider`합니다. 예를 들어 5 초 단위로 시간입니다. 값을 계산 하는 두 번째 문은 `t` 에 대 한 *시간*합니다. 에 대 한는 `cycleTime` 5 `t` 5 초 마다 1로 0에서 증가 합니다. 에 대 한 인수는 `Math.Sin` 함수에는 두 번째 문 범위는 0에서 5 초 마다 2 π에 있습니다. `Math.Sin` 함수 다시 0으로 차례로 1 & #x 2013; 1 및 0 5 초 마다 있지만 1 또는-1 값이 더 느리게 변경 하는 값으로 0에서 사이의 값을 반환 합니다. 값이 양수 이면 항상 하 고 다음 것은 2로 나눈 값을 1로을 0으로 약 1과 0 값이 더 느린 하지만 ½ ½ ½에서 범위 하므로 되므로 값 1이 추가 됩니다. 이에 저장 됩니다는 `scale` 필드 및 `SKCanvasView` 무효화 됩니다.
+`while` 루프에서 주기 시간을 확보 하 여 시작 된 `Slider`합니다. 예를 들어 5 초 단위로 시간입니다. 값을 계산 하는 두 번째 문은 `t` 에 대 한 *시간*합니다. 에 대 한는 `cycleTime` 5 `t` 5 초 마다 1로 0에서 증가 합니다. 에 대 한 인수는 `Math.Sin` 함수에는 두 번째 문 범위는 0에서 5 초 마다 2 π에 있습니다. `Math.Sin` 0에서 1 다시 0으로 차례로 까지의 값을 반환 하는 함수 &ndash;1과 0 5 초 마다 있지만 값은 1 또는-1 값이 더 느리게 변경 합니다. 값이 양수 이면 항상 하 고 다음 것은 2로 나눈 값을 1로을 0으로 약 1과 0 값이 더 느린 하지만 ½ ½ ½에서 범위 하므로 되므로 값 1이 추가 됩니다. 이에 저장 됩니다는 `scale` 필드 및 `SKCanvasView` 무효화 됩니다.
 
 `PaintSurface` 이 방법을 사용 하 여 `scale` 타원의 두 가지 축을 계산 하는 값:
 

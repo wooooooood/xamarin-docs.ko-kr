@@ -7,11 +7,11 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0c61727e90a03d618a7423e5b865a7fcc9e0b399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>5 장의 요약입니다. 크기와 처리
 
@@ -42,7 +42,7 @@ Windows 런타임 인치당 160 장치 독립적 단위에 가까운 내재 된 
 - 해당 하는 인치 160 단위
 - 64는 센티미터 단위
 
-읽기 전용 [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) 및 [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 에서 정의한 속성 `VisualElement` "모의" 값의 & #x 2013; 기본값이 1입니다. 요소 크기가 조정 되 고 레이아웃에 적용 하는 경우에 이러한 속성 반영 됩니다 장치 독립적 단위에 있는 요소의 실제 크기입니다. 이 크기를 포함 하는 `Padding` 요소에 설정 하지 않고는 `Margin`합니다.
+읽기 전용 [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) 및 [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 정의한 속성 `VisualElement` "모의" 값의 기본 &ndash;1입니다. 요소 크기가 조정 되 고 레이아웃에 적용 하는 경우에 이러한 속성 반영 됩니다 장치 독립적 단위에 있는 요소의 실제 크기입니다. 이 크기를 포함 하는 `Padding` 요소에 설정 하지 않고는 `Margin`합니다.
 
 시각적 요소 발생는 [ `SizeChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/) 이벤트 때 해당 `Width` 또는 `Height` 변경 되었습니다. [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize) 샘플이이 이벤트를 사용 하 여 프로그램의 화면 크기를 표시 합니다.
 
@@ -75,7 +75,7 @@ Windows 런타임 인치당 160 장치 독립적 단위에 가까운 내재 된 
 
 ## <a name="empirically-fitting-text"></a>실험적으로 텍스트
 
-텍스트 사각형에 맞게 다른 방법은 실험적으로 렌더링 된 텍스트 크기를 계산 하 여 늘리거나 줄여서 조정 하는 것입니다. 책 호출에서 프로그램 [ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) 에서 시각적 요소는 요소의 원하는 크기를 구합니다. 메서드는 더 이상 사용 되지 않습니다, 및 프로그램 대신 호출 해야 [`Measure`] (/ api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/).
+텍스트 사각형에 맞게 다른 방법은 실험적으로 렌더링 된 텍스트 크기를 계산 하 여 늘리거나 줄여서 조정 하는 것입니다. 책 호출에서 프로그램 [ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/) 에서 시각적 요소는 요소의 원하는 크기를 구합니다. 메서드는 더 이상 사용 되지 않습니다, 및 프로그램 대신 호출 해야 [ `Measure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/)합니다.
 
 에 대 한는 `Label`, 첫 번째 인수는 줄 바꿈을 허용) (컨테이너의 너비 수, 두 번째 인수는 설정 해야를 `Double.PositiveInfinity` 제약 없이 높이 있도록 합니다. [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) 샘플에는이 기술을 보여 줍니다.
 

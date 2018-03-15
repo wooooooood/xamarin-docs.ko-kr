@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="path-basics"></a>경로 기본 사항
 
@@ -115,7 +115,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - `AddPath` 현재 경로에 다른 경로 추가 하려면
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) 반대 방향으로 다른 경로 추가 하려면
 
-`SKPath` 개체 정의 기 하 도형 & #x 2014; 일련의 포인트와 연결 합니다. 경우에만 `SKPath` 와 결합 하는 `SKPaint` 개체는 특정 색, 스트로크 너비 등을 사용 하 여 렌더링 경로입니다. 또한 한다는 점에 유의 하는 `SKPaint` 에 전달 된 개체는 `DrawPath` 메서드는 전체 경로 특성을 정의 합니다. 여러 색 요구 무언가 그려야 하려는 경우에 각 색에 대 한 별도 경로 사용 해야 합니다.
+한 `SKPath` 개체 정의 geometry &mdash; 일련의 포인트와 연결 합니다. 경우에만 `SKPath` 와 결합 하는 `SKPaint` 개체는 특정 색, 스트로크 너비 등을 사용 하 여 렌더링 경로입니다. 또한 한다는 점에 유의 하는 `SKPaint` 에 전달 된 개체는 `DrawPath` 메서드는 전체 경로 특성을 정의 합니다. 여러 색 요구 무언가 그려야 하려는 경우에 각 색에 대 한 별도 경로 사용 해야 합니다.
 
 두 줄 사이의 연결의 모양을 정의한 범위의 시작 줄의 끝 모양을 선 단면에 정의 된 처럼는 *획 조인*합니다. 이 설정 하 여 지정 된 [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) 의 속성 `SKPaint` 의 멤버에는 [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) 열거형:
 

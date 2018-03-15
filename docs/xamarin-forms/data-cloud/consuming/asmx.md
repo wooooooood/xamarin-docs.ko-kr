@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>ASP.NET 웹 서비스 (ASMX)를 사용합니다.
 
@@ -39,37 +39,12 @@ HTTP, SMTP, TCP 및 UDP를 포함 하 여 여러 전송 프로토콜을 통해 S
 
 ASMX 서비스는 다음 작업을 제공합니다.
 
-<table>
-  <thead>
-    <tr>
-      <th>작업</th>
-      <th>설명</th>
-      <th>매개 변수</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>할 일 항목의 목록 가져오기</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>새 할 일 항목을 만듭니다.</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>할 일 항목 업데이트</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>할 일 항목 삭제</td>
-      <td>Serialize 된 XML <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|작업|설명|매개 변수|
+|--- |--- |--- |
+|GetTodoItems|할 일 항목의 목록 가져오기|
+|CreateTodoItem|새 할 일 항목을 만듭니다.|XML 직렬화 TodoItem|
+|EditTodoItem|할 일 항목 업데이트|XML 직렬화 TodoItem|
+|DeleteTodoItem|할 일 항목 삭제|XML 직렬화 TodoItem|
 
 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 참조 [데이터 모델링](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 

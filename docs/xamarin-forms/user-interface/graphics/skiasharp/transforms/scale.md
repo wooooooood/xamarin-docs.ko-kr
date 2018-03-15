@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -44,7 +44,7 @@ y' sy · = y
 public void Scale (Single s)
 ```
 
-로 알려져 *등방성* 배율 즉 동일한 양방향으로 크기 조정을 & #x 2014;. 개체의 가로 세로 비율 유지 등방성 크기를 조정 합니다.
+로 알려져 *등방성* 배율 &mdash; 배율 즉 동일한 방향으로 모두 합니다. 개체의 가로 세로 비율 유지 등방성 크기를 조정 합니다.
 
 두 번째 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) 메서드를 사용 하면 가로 및 세로 크기 조정에 대 한 서로 다른 값을 지정할 수 있습니다.
 
@@ -168,7 +168,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "가운데에 크기 조정 페이지의 삼중 스크린 샷")](scale-images/centeredscale-large.png#lightbox "가운데에 크기 조정 페이지의 삼중 스크린 샷")
 
-`Slider` 범위의 & #x 2013;이 프로그램에는 요소는 10 ~ 10입니다. 볼 수 있듯이 세로 크기 조정 (예:는 Android에서 가운데에 화면)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 가로 축을 대칭 개체가 합니다. 가로 크기 조정 (예: Windows 화면 오른쪽)의 음수 값을 선택 하면 개체가 크기 조정의 중심을 통과 하는 세로 축을 대칭 이동 합니다.
+`Slider` 이 프로그램의 요소는 범위는 &ndash;10 ~ 10입니다. 볼 수 있듯이 세로 크기 조정 (예:는 Android에서 가운데에 화면)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 가로 축을 대칭 개체가 합니다. 가로 크기 조정 (예: Windows 화면 오른쪽)의 음수 값을 선택 하면 개체가 크기 조정의 중심을 통과 하는 세로 축을 대칭 이동 합니다.
 
 이 네 번째 버전의는 `Scale` 메서드는 실제로 바로 가기입니다. 대체 하 여이 과정을 확인 해야 할 수도 있습니다는 `Scale` 다음이 코드에서 메서드:
 

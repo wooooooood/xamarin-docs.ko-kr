@@ -8,11 +8,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1d174e441cd46255d62283521e7db2802b49072f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
@@ -61,13 +61,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 `Left` 및 `Top` 의 속성에서 `SKRect` 구조는 텍스트는 표시 하는 경우 렌더링된 된 텍스트의 왼쪽 위 모퉁이의 좌표를 나타내는 `DrawText` 하 여 호출 0 X 및 Y 위치입니다. 이 프로그램 7 iPhone 시뮬레이터에서 실행 중인 경우에 예를 들어 `TextSize` 호출 다음에 첫 번째 계산의 결과로 90.6254 값이 할당 `MeasureText`합니다. `SKRect` 두 번째 호출에서 얻은 값 `MeasureText` 속성 값은 다음과 같습니다.
 
 - `Left` = 6
-- `Top` = &#x2013;68
+- `Top` = &ndash;68
 - `Width` = 664.8214
 - `Height` = 88;
 
-X 및 Y 좌표 수는 명심에 전달할는 `DrawText` 메서드 기준선에 텍스트의 왼쪽을 지정 합니다. `Top` 값 텍스트 확장 68 픽셀 기준선 및 (68 it에서 88 빼기) 위에 있는지 여부를 나타냅니다 기준선 아래로 20 픽셀입니다. `Left` 6 픽셀에 X 값의 오른쪽을 시작 하는 텍스트 값이 6 이면는 `DrawText` 호출 합니다. 일반 문자 간 간격 수 있습니다. 디스플레이의 왼쪽 위 모서리에 단단히 고정 텍스트를 표시 하려는 경우 이러한 부정 전달 `Left` 및 `Top` 의 X 및 Y 좌표에 따라 값이 `DrawText`,이 예제에서는 & #x 2013;에서 6 및 68 합니다.
+X 및 Y 좌표 수는 명심에 전달할는 `DrawText` 메서드 기준선에 텍스트의 왼쪽을 지정 합니다. `Top` 값 텍스트 확장 68 픽셀 기준선 및 (68 it에서 88 빼기) 위에 있는지 여부를 나타냅니다 기준선 아래로 20 픽셀입니다. `Left` 6 픽셀에 X 값의 오른쪽을 시작 하는 텍스트 값이 6 이면는 `DrawText` 호출 합니다. 일반 문자 간 간격 수 있습니다. 디스플레이의 왼쪽 위 모서리에 단단히 고정 텍스트를 표시 하려는 경우 이러한 부정 전달 `Left` 및 `Top` 의 X 및 Y 좌표에 따라 값이 `DrawText`,이 예제에서는 &ndash;6 및 68 합니다.
 
-`SKRect` 몇 가지 유용한 속성 및 메서드의의 나머지 부분에 사용 되는 다음과 같은 구조 정의 `PaintSurface` 처리기입니다. `MidX` 및 `MidY` 중심 사각형의 좌표를 나타내는 값입니다. (7 iPhone 예제에서는 이러한 값은 338.4107 및 & #x 2013; 24.) 다음 코드를 사용 하면 좌표 쉬운 계산에 대 한 이러한 값을 사용 하는 디스플레이에서 텍스트를 가운데에:
+`SKRect` 몇 가지 유용한 속성 및 메서드의의 나머지 부분에 사용 되는 다음과 같은 구조 정의 `PaintSurface` 처리기입니다. `MidX` 및 `MidY` 중심 사각형의 좌표를 나타내는 값입니다. (7 iPhone 예제에서는 이러한 값은 338.4107 및 &ndash;24.) 다음 코드를 사용 하면 좌표 쉬운 계산에 대 한 이러한 값을 사용 하는 디스플레이에서 텍스트를 가운데에:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

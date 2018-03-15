@@ -7,11 +7,11 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ddb76e00cfe1c19a9d31dc3e53b80a2be0697dbc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 장 23입니다. 트리거 및 동작
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 03/12/2018
 
 인수는 요소에 연결 된 동작입니다. 일반적으로 `OnAttachedTo` 메서드 일부 이벤트 처리기 연결 및 `OnDetachingFrom` 을 분리 합니다. 이러한 클래스는 일반적으로 몇 가지 상태를 저장 하기 때문에 일반적으로 공유할 수 없습니다에 `Style`합니다.
 
-[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) 샘플은 유사한 **TriggerEntryValidation** 동작 & #x 2014; 사용 하는 [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) 는 클래스[ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리입니다.
+[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) 샘플은 유사한 **TriggerEntryValidation** 동작을 사용 하 여 &mdash; 는 [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) 클래스에 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리입니다.
 
 ### <a name="behaviors-with-properties"></a>속성을 가진 동작
 

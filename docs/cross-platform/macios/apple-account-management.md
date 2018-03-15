@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -41,7 +41,7 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
 
 - 인터넷에 연결 되어 있어야 합니다. Apple 개발자 포털와 직접 통신 하며 fastlane 때문입니다.
 - 해야 [fastlane 도구가 설치 되어](~/ios/deploy-test/provisioning/fastlane/index.md#Installation)합니다.
-- 최신 fastlane 도구 해야 [https://download.fastlane.tools](https://download.fastlane.tools)합니다.
+- 최신 fastlane 도구 해야 [ https://download.fastlane.tools ](https://download.fastlane.tools)합니다.
 - 시작 하기 전에 확인에서 모든 사용자 사용권 계약에 동의 하는 [개발자 포털](https://developer.apple.com/account/)합니다.
 
 ## <a name="adding-an-apple-developer-account"></a>Apple 개발자 계정 추가
@@ -69,8 +69,7 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
     ![](apple-account-management-images/image6.png)
 
 
-<a name="managing"/>
-    
+<a name="managing" />
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>서명 Id를 관리 하 고 프로 비전 프로필
