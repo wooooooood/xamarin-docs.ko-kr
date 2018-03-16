@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0456742ca30257670375e3ae781dcdc49707e2ce
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="the-command-interface"></a>명령 인터페이스
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 
 간의 데이터 바인딩을 허용 하는 `Button` 및 ViewModel는 `Button` 두 속성을 정의 합니다.
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) 형식의 [`ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/)
+- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) 형식의 <xref:System.Windows.Input.ICommand>
 - [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) 형식의 `Object`
 
 대상으로 하는 데이터 바인딩을 명령 인터페이스를 사용 하려면 정의 `Command` 속성은 `Button` 소스는 형식의 ViewModel에서 속성 `ICommand`합니다. 와 연결 된 코드를 포함 하는 ViewModel `ICommand` 단추를 클릭할 때 실행 되는 속성입니다. 설정할 수 있습니다 `CommandParameter` 단추를 여러 개 있더라도 모든 구분 하기 위해 임의의 데이터에 바인딩된 `ICommand` ViewModel 속성입니다.
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="the-icommand-interface"></a>ICommand 인터페이스
 
-[ `ICommand` ](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/) 인터페이스 Xamarin.Forms의 일부가 아닙니다. 대신에 정의 되어는 [ `System.Windows.Input` ](https://developer.xamarin.com/api/namespace/System.Windows.Input/) 네임 스페이스를 두 가지 메서드와 하나의 이벤트로 구성 됩니다.
+<xref:System.Windows.Input.ICommand> 인터페이스 Xamarin.Forms의 일부가 아닙니다. 대신에 정의 되어는 [System.Windows.Input](xref:System.Windows.Input) 네임 스페이스를 두 가지 메서드와 하나의 이벤트로 구성 됩니다.
 
 ```csharp
 public interface ICommand

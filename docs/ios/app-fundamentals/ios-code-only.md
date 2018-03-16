@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
 
@@ -69,7 +69,7 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 ## <a name="ios-templates"></a>iOS 템플릿
 
 
-Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 서식 파일에는 UI를 만드는 기본 방법으로 Apple 권장 하는 스토리 보드 지원을 제공 합니다. 그러나 코드에서 완전히에서 UI를 만들려면 수는 있습니다. 
+Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 서식 파일에는 UI를 만드는 기본 방법으로 Apple 권장 하는 스토리 보드 지원을 제공 합니다. 그러나, 코드에서 완전히 UI를 만들 수는 있습니다. 
 
 다음 단계 응용 프로그램에서 스토리 보드를 제거 하는 과정을 안내 합니다. 
 
@@ -316,7 +316,7 @@ Window.RootViewController = navController;
 
 iOS 사용자 인터페이스 계층 구조 보기 이루어져 있습니다. 추가 보기, 레이블, 단추, 슬라이더, 등과 같은 일부 부모 보기의 하위로 추가 됩니다.
 
-예를 들어 편집 하십시오에 `CustomViewController` 사용자 사용자 이름 및 암호를 입력할 수 있는 로그인 화면을 만들려면 합니다. 화면에 두 개의 텍스트 필드와 단추로 단계로 구성 됩니다.
+예를 들어 편집는 `CustomViewController` 사용자 사용자 이름 및 암호를 입력할 수 있는 로그인 화면을 만듭니다. 화면에 두 개의 텍스트 필드와 단추로 단계로 구성 됩니다.
 
 ### <a name="adding-the-text-fields"></a>텍스트 필드 추가
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>단추 기능 추가
 
-단추를 클릭 하면 사용자가 할 필요한 특정 작업이 실행 여부, 경고 또는 다른 화면으로 이동 하 여이 합니다. 
+단추를 클릭할 때 사용자에 게 필요 특정 작업이 실행 합니다. 예를 들어 경고를 표시할지 탐색 다른 화면으로 수행 됩니다. 
 
 두 번째 보기 컨트롤러 탐색 스택의에 적용할 몇 가지 코드를 추가 해 보겠습니다.
 
@@ -497,7 +497,7 @@ UIKit의 일부인 컨트롤을 사용 하는 것 외에도 사용자 지정 보
 
 ### <a name="inheriting-from-uiview"></a>UIView에서 상속
 
-가장 먼저 해야 할 경우 사용자 지정 보기에 대 한 클래스 만들기 사용 하 여 수행 합니다 우리는 **클래스** 이라는 빈 클래스로 추가 하려면 Visual Studio에서 템플릿을 `CircleView`합니다. 기본 클래스 설정 해야 `UIView`이며 회수 중인는 `UIKit` 네임 스페이스입니다. 필요 합니다는 `System.Drawing` 네임 스페이스에도 합니다. 다른 다양 한 `System.*` 네임 스페이스 됩니다이 예제에서 사용 되므로 자유롭게를 제거 합니다.
+가장 먼저 해야 할 경우 사용자 지정 보기에 대 한 클래스 만들기 사용 하 여 수행 합니다 우리는 **클래스** 이라는 빈 클래스로 추가 하려면 Visual Studio에서 템플릿을 `CircleView`합니다. 기본 클래스 설정 해야 `UIView`, 우리 회수 중인는 `UIKit` 네임 스페이스입니다. 필요 합니다는 `System.Drawing` 네임 스페이스에도 합니다. 다른 다양 한 `System.*` 네임 스페이스 됩니다이 예제에서 사용 되므로 자유롭게를 제거 합니다.
 
 클래스는 다음과 같이 표시 됩니다.
 

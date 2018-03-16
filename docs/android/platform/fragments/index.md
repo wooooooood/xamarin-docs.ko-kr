@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>조각
 
@@ -53,9 +53,9 @@ _Android 3.0에 조각의 휴대폰 및 태블릿에 있는 많은 다양 한 �
 
 [![Android SDK Manager API 수준 선택](images/02.png)](images/02.png#lightbox)
 
-조각은 이상 Xamarin.Android 4.0에서 사용할 수 있습니다. Xamarin.Android 응용 프로그램을 최소한 대상으로 해야 합니다 (Android 3.0) 11 API 레벨 조각을 사용 하려면 이상. 대상 프레임 워크 아래와 같이 프로젝트 옵션에서 설정할 수 있습니다.
+조각은 이상 Xamarin.Android 4.0에서 사용할 수 있습니다. Xamarin.Android 응용 프로그램을 최소한 대상으로 해야 합니다 (Android 3.0) 11 API 레벨 조각을 사용 하려면 이상. 대상 프레임 워크 프로젝트 아래와 같이 속성에에서 설정할 수 있습니다.
 
-[![프로젝트 옵션에서 대상 프레임 워크 API 수준 설정](images/03.png)](images/03.png#lightbox)
+[![프로젝트 옵션에서 대상 프레임 워크 API 수준 설정](images/03-sml.png)](images/03.png#lightbox)
 
 이전 버전의 Android 지원 패키지 및 Xamarin.Android 4.2를 사용 하 여 Android 또는 더 높은에서 조각을 사용 하는 것이 불가능 합니다. 이 섹션의 문서에 자세히이 작업을 수행 하는 방법을 다룹니다.
 

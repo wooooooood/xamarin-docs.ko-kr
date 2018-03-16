@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>사용자 기본값 사용
 
-_이 문서에서는 NSUserDefault Xamarin iOS 응용 프로그램 또는 확장에서에서 기본 설정을 저장 하려면 작업을 설명 합니다._
+_이 문서에서는 NSUserDefault Xamarin.iOS 앱 또는 확장에서 기본 설정을 저장 하려면 작업을 설명 합니다._
 
 
-`NSUserDefaults` ios 앱 및 확장 프로그래밍 방식으로 시스템 차원의 기본 시스템과 상호 작용 하는 방법을 제공 합니다. 기본적으로 시스템을 사용 하 여 사용자는 앱의 동작이 나 (응용 프로그램의 디자인에 기반)의 기본 설정을 충족 하기 위해 스타일을 지정 구성할 수 있습니다. 예를 들어, 제국 측정 단위가 미터법 vs에서 데이터를 표시 하거나 특정된 UI 테마를 선택 합니다.
+`NSUserDefaults` ios 앱 및 확장 프로그래밍 방식으로 시스템 차원 기본값 시스템과 상호 작용 하는 방법을 제공 합니다. 기본적으로 시스템을 사용 하 여 사용자는 앱의 동작이 나 (응용 프로그램의 디자인에 기반)의 기본 설정을 충족 하기 위해 스타일을 지정 구성할 수 있습니다. 예를 들어, 제국 측정 단위가 미터법 vs에서 데이터를 표시 하거나 특정된 UI 테마를 선택 합니다.
 
-때 응용 프로그램 그룹을 사용할 `NSUserDefaults` 또한 지정된 된 그룹 내에서 응용 프로그램 (또는 확장) 사이 통신 하는 방법을 제공 합니다.
+앱 그룹와 함께 사용할 경우 `NSUserDefaults` 또한 지정된 된 그룹 내에서 응용 프로그램 (또는 확장) 사이 통신 하는 방법을 제공 합니다.
 
 <a name="About-User-Defaults" />
 
@@ -32,7 +32,7 @@ _이 문서에서는 NSUserDefault Xamarin iOS 응용 프로그램 또는 확장
 응용 프로그램 먼저 실행 되 면 `NSUserDefaults` 응용 프로그램의 사용자 기본 데이터베이스에서 키와 값은 읽고 값이 필요 열기 및 될 때마다 데이터베이스 읽기를 방지 하기 위해 메모리에 캐시 합니다. 
 
 > [!IMPORTANT]
-> **참고**: Apple 개발자 호출 하는 더 이상 제안는 `Synchronize` 메서드를 직접 데이터베이스와 메모리 내 캐시를 동기화 합니다. 대신, 자동으로 호출 됩니다 주기적으로 메모리에 캐시를 사용자의 기본 데이터베이스와 동기화 상태로 유지 합니다.
+> **참고**: Apple 더 이상 권장 하는 개발자 호출은 `Synchronize` 메서드를 직접 데이터베이스와 메모리 내 캐시를 동기화 합니다. 대신, 자동으로 호출 됩니다 주기적으로 메모리에 캐시를 사용자의 기본 데이터베이스와 동기화 상태로 유지 합니다.
 
 `NSUserDefaults` 읽고와 같은 일반적인 데이터 형식에 대 한 기본 설정 값을 쓰기 위한 몇 가지 편의 메서드를 포함 하는 클래스: 문자열, 정수, float, boolean 및 Url입니다. 사용 하 여 다른 종류의 데이터를 보관할 수 `NSData`, 다음에서 읽거나 사용자 기본 데이터베이스에 기록 합니다. 자세한 내용은 Apple의를 참조 하십시오 [기본 설정 및 설정 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)합니다.
 
@@ -46,7 +46,7 @@ _이 문서에서는 NSUserDefault Xamarin iOS 응용 프로그램 또는 확장
 - 앱의 번들 식별자 도메인입니다.
 - `NSGlobalDomain` 로 구성 된 모든 앱에서 공유 하는 기본값입니다.
 - 각 사용자의 기본 언어에 대해 별도 도메인입니다.
-- `NSRegistationDomain` 검색은 항상 성공 하도록 응용 프로그램에서 수정할 수 있는 임시 기본값 집합이 있는 합니다.
+- `NSRegistrationDomain` 검색은 항상 성공 하도록 응용 프로그램에서 수정할 수 있는 임시 기본값 집합이 있는 합니다.
 
 공유 사용자 기본값 인스턴스에 액세스 하려면 다음 코드를 사용 합니다.
 
@@ -59,11 +59,11 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 ## <a name="accessing-an-app-group-nsuserdefaults-instance"></a>앱 그룹 NSUserDefaults 인스턴스 액세스
 
-앱 그룹을 사용 하 여 설명한 것 처럼 `NSUserDefaults` 지정된 된 그룹 내에서 응용 프로그램 (또는 확장) 간의 통신에 사용할 수 있습니다. 첫째, 있는지 App 그룹 및 필수 응용 프로그램 Id가 올바르게 구성 되도록 해야 합니다는 **인증서, 식별자 및 프로필** 섹션에서 [iOS Dev Center](https://developer.apple.com/devcenter/ios/) 및 설치 된 개발 환경에서 합니다.
+앱 그룹을 사용 하 여 설명한 것 처럼 `NSUserDefaults` 지정된 된 그룹 내에서 응용 프로그램 (또는 확장) 간의 통신에 사용할 수 있습니다. 첫째, 있는지 App 그룹 및 필수 응용 프로그램 Id가 올바르게 구성 되도록 해야 합니다는 **인증서, 식별자 및 프로필** 섹션에서 [iOS Dev Center](https://developer.apple.com/devcenter/ios/) 및 설치 된 개발 환경입니다.
 
-다음으로 응용 프로그램 및/또는 확장 프로젝트 할 필요가 있습니다, 위에서 만든 유효한 응용 프로그램 Id 중 하나는 `Entitlements.plist` 파일에 사용 하 고 지정한 앱 그룹 및 앱 번들에 포함 된의 가져오는 것입니다.
+응용 프로그램 및/또는 확장 프로젝트 다음으로, 위에서 만든 유효한 응용 프로그램 Id 중 하나를 가질 필요가 및 `Entitlements.plist` 파일의 앱 그룹을 사용 하 고 지정한 앱 번들에 포함 되도록 합니다.
 
-위치에이 작업은이 모두,으로 다음 코드를 사용 하 여 공유 응용 프로그램 그룹 사용자 기본값을 액세스할 수 있습니다.
+위치에이 작업은이 모두와 공유 응용 프로그램 그룹 사용자 기본값 액세스할 수 있습니다 다음 코드를 사용 하 여:
 
 ```csharp
 // Get App Group User Defaults

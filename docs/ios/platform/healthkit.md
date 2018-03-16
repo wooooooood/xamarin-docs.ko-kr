@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4f85f208c12561b6db9800d963e2d7bf32c2a4d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -67,7 +67,7 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 [장치 �
 
 명시적 만들기 **앱 ID** 및 적절 한 **프로 비전 프로필** Apple의 내에서 [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action)합니다. 
 
-현재 **의 앱 Id** 내에 나열 된는 [인증서, 식별자 및 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 개발자 센터의 섹션입니다. 종종이 목록에 표시 됩니다 **ID** 값 `*`한다는 표시 이므로 하는 **앱 ID*- **이름** 접미사를 개수에 관계 없이 함께 사용할 수 있습니다. 이러한 *와일드 카드의 앱 Id* 키트 상태와 함께 사용할 수 없습니다.
+현재 **의 앱 Id** 내에 나열 된는 [인증서, 식별자 및 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 개발자 센터의 섹션입니다. 종종이 목록에 표시 됩니다 **ID** 값 `*`한다는 표시 이므로 하는 **앱 ID** - **이름** 접미사를 개수에 관계 없이 함께 사용할 수 있습니다. 이러한 *와일드 카드의 앱 Id* 키트 상태와 함께 사용할 수 없습니다.
  
 만들려면 명시적 **앱 ID**, 클릭는  **+**  를 이동 하는 데 오른쪽 위 단추는 **iOS 앱 ID를 등록** 페이지:
 

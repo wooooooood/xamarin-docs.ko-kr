@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Player 라이브 설치
 
@@ -68,7 +68,7 @@ Xamarin Player 라이브에 다음 사항이 필요합니다.
 
   장치가 없어 경우 쌍을 이루 면 QR 코드는 방법에 대 한 설명이 나타납니다 장치와 쌍으로 연결 하려면:
 
-    ![쌍 장치 창](install-images/manage-empty-windows.png)
+  ![쌍 장치 창](install-images/manage-empty-windows.png)
 
   쌍을 이루기 위해 장치를 연결할 수 없는 경우 오류가 나타날 수 있습니다.
 
@@ -111,11 +111,11 @@ Xamarin Player 라이브에 다음 사항이 필요합니다.
 
   장치가 없거나 쌍을 이루 면 QR 코드를 장치와 쌍으로 연결 하는 방법에 대 한 설명이 표시 됩니다.
 
-    ![쌍 장치 창](install-images/manage-empty.png)
+  ![쌍 장치 창](install-images/manage-empty.png)
 
   쌍을 이루기 위해 장치를 연결할 수 없는 경우 오류가 표시 됩니다.
 
-    ![장치 오류 메시지에 연결할 수 없습니다.](install-images/error-cannot-connect.png)
+  ![장치 오류 메시지에 연결할 수 없습니다.](install-images/error-cannot-connect.png)
 
 
 -----

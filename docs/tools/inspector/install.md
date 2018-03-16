@@ -8,23 +8,23 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: a2e6f254c77ac099b5700543db5763b8bbb44fef
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d93481a865be1ee9272c7ce7969bdb6ebd6b5536
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>설치 관리자 및 요구 사항
 
 ## <a name="download-and-installation"></a>다운로드 및 설치
 
 
-# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 1. 다운로드 및 설치 [Xamarin 통합 문서 및 관리자에 대 한 Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi)합니다.
 2. [사용자 고유의 응용 프로그램을 검사 하는!](~/tools/inspector/inspect.md)
 
-# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. 다운로드 및 설치 [Xamarin 통합 문서 및 Mac 용 검사기](https://dl.xamarin.com/interactive/XamarinInteractive.pkg)합니다.
 2. [사용자 고유의 응용 프로그램을 검사 하는!](~/tools/inspector/inspect.md)

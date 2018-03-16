@@ -6,12 +6,12 @@ ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/15/2018
+ms.openlocfilehash: db277f20e63a59690ffaa8a8544ff9540578d3f5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
@@ -21,12 +21,12 @@ Xamarin.Android 모노의를 사용 하 여 [간단한 세대 가비지 수집�
 -   주요 컬렉션 (Gen1 수집 하 고 큰 개체 공백 힙)입니다. 
 
 > [!NOTE]
-> 통해 명시적 컬렉션의 지정 하지 않을 경우에서 [GC 합니다. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) 컬렉션은 *주문형*, 힙 할당에 기반 합니다. *이 참조 횟수 시스템*; 개체 *미해결 참조가 없으면으로 수집 되지 것입니다*, 또는 범위를가 종료 합니다. GC는 부 힙 새 할당에 대 한 메모리 부족 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
+> 통해 명시적 컬렉션의 지정 하지 않을 경우에서 [GC 합니다. Collect ()](xref:System.GC.Collect) 컬렉션은 *주문형*, 힙 할당에 기반 합니다. *이 참조 횟수 시스템*; 개체 *미해결 참조가 없으면으로 수집 되지 것입니다*, 또는 범위를가 종료 합니다. GC는 부 힙 새 할당에 대 한 메모리 부족 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
 
 
-보조 컬렉션 저렴 하 고, 자주 수행 되며 최근에 할당 되 고 비활성 개체를 수집 하는 데 사용 됩니다. 보조 컬렉션 할당 된 개체의 모든 몇 MB 후 수행 됩니다. 호출 하 여 보조 컬렉션을 수동으로 수행 될 수 [GC 합니다. (0)를 수집 합니다.](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
+보조 컬렉션 저렴 하 고, 자주 수행 되며 최근에 할당 되 고 비활성 개체를 수집 하는 데 사용 됩니다. 보조 컬렉션 할당 된 개체의 모든 몇 MB 후 수행 됩니다. 호출 하 여 보조 컬렉션을 수동으로 수행 될 수 [GC 합니다. (0)를 수집 합니다.](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 
-주요 컬렉션은 비용이 많이 덜 자주 수행 하 고 모든 비활성 개체를 회수 하는 데 사용 됩니다. 주요 컬렉션 메모리가 부족 한 상태에 대 한 현재 힙 크기 (힙 크기 조정) 이전 되 면 수행 됩니다. 호출 하 여 주요 컬렉션을 수동으로 수행 될 수 [GC 합니다. ()를 수집](https://developer.xamarin.com/api/member/System.GC.Collect/) 또는 호출 하 여 [GC 합니다. (Int)를 수집](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32) 인수와 함께 [GC 합니다. MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/)합니다. 
+주요 컬렉션은 비용이 많이 덜 자주 수행 하 고 모든 비활성 개체를 회수 하는 데 사용 됩니다. 주요 컬렉션 메모리가 부족 한 상태에 대 한 현재 힙 크기 (힙 크기 조정) 이전 되 면 수행 됩니다. 호출 하 여 주요 컬렉션을 수동으로 수행 될 수 [GC 합니다. ()를 수집](xref:System.GC.Collect) 또는 호출 하 여 [GC 합니다. (Int)를 수집](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 인수와 함께 [GC 합니다. MaxGeneration](xref:System.GC.MaxGeneration)합니다. 
 
 
 
@@ -34,7 +34,7 @@ Xamarin.Android 모노의를 사용 하 여 [간단한 세대 가비지 수집�
 
 개체 유형의 세 가지 종류가 있습니다.
 
--   **관리 되는 개체**: 라도 형식 *하지* 에서 상속 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , 예: [System.String](https://developer.xamarin.com/api/type/System.String/)합니다. 
+-   **관리 되는 개체**: 라도 형식 *하지* 에서 상속 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , 예: [System.String](xref:System.String)합니다. 
     이러한 GC가 정상적으로 수집 됩니다. 
 
 -   **Java 개체**: Java 형식을 Android 런타임 VM 내에 있는 있지만 모노 VM에 노출 되지 않습니다. 자세히 설명 하는 수 고 지루한 작업, 됩니다. 이러한 Android 런타임 VM에서 일반적으로 수집 됩니다. 
@@ -71,7 +71,7 @@ Android 런타임 컬렉션 일반적으로 하지만 다는 경고와 함께 �
 
 피어 개체 Android 런타임 및 모노 VM 내에서 논리적으로 제공 됩니다. 예를 들어 한 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 해당 관리 되는 피어 인스턴스가 갖습니다 [android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) 프레임 워크 피어 Java 인스턴스. 상속 하는 모든 개체 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 두 Vm 내에서 표현이을 사용할 수 있습니다. 
 
-두 Vm에서 하 게 표현 하는 모든 개체는 단일 VM 내 에서만 제공 되는 개체를 비교 하 여 확장 수명을 갖습니다 (예: 한 [ `System.Collections.Generic.List<int>` ](https://developer.xamarin.com/api/type/System.Collections.Generic.List%601/)). 호출 [GC 합니다. 수집](https://developer.xamarin.com/api/member/System.GC.Collect/) Xamarin.Android GC를 수집 하기 전에 개체가 VM 중 하나에 의해 참조 되지 않으면 확인 해야 합니다. 이러한 개체를 반드시 수집 하지 않습니다. 
+두 Vm에서 하 게 표현 하는 모든 개체는 단일 VM 내 에서만 제공 되는 개체를 비교 하 여 확장 수명을 갖습니다 (예: 한 [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). 호출 [GC 합니다. 수집](xref:System.GC.Collect) Xamarin.Android GC를 수집 하기 전에 개체가 VM 중 하나에 의해 참조 되지 않으면 확인 해야 합니다. 이러한 개체를 반드시 수집 하지 않습니다. 
 
 개체 수명 간단히 줄이거나 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) 를 호출 해야 합니다. 이 직접 "서버" 개체를 더 빠르게 수집할 수 있도록 전역 참조를 해제 하 여 두 개의 Vm 간에 개체에 대 한 연결. 
 
@@ -140,7 +140,7 @@ GC 불완전 한 뷰를 포함 하는 프로세스와 실행 되지 년 5 월의
 인스턴스의 예를 들어 한 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 형식 또는 파생된 형식인은 크기가 20 바이트인 이상 (공지 등 없이 변경 될 수 등.). 
 [관리 되는 호출 가능 래퍼](~/android/internals/architecture.md) 하므로 추가 인스턴스 멤버를 추가 하지 마십시오 보유 하는 경우는 [Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) 는 메모리의 10MB blob을 참조 하는 인스턴스 Xamarin.Android의 GC 사실을 &ndash; GC 20 바이트 개체 표시 되 고 10 MB의 메모리만 활성화 하는 유지 하는 Android 런타임 할당 된 개체에 연결 되어 있음을 확인할 수 없습니다. 
 
-GC를 자주 해야만 됩니다. 그러나 *GC 합니다. AddMemoryPressure()* 및 *GC 합니다. RemoveMemoryPressure()* 지원 되지 않으며, 하므로 있습니다 *알고* 큰 Java에서 할당 된 개체 그래프를 직접 호출 하도록 할 수 방금 해제 하는 [GC 합니다. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) GC Java 측을 해제 하기 위해이 메시지에 메모리 또는 있습니다 수를 명시적으로 삭제 *Java.Lang.Object* 관리 되는 호출 가능 래퍼 및 Java 인스턴스 간의 매핑을 주요 하위 클래스입니다. 예를 들어 참조 [버그 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)합니다. 
+GC를 자주 해야만 됩니다. 그러나 *GC 합니다. AddMemoryPressure()* 및 *GC 합니다. RemoveMemoryPressure()* 지원 되지 않으며, 하므로 있습니다 *알고* 큰 Java에서 할당 된 개체 그래프를 직접 호출 하도록 할 수 방금 해제 하는 [GC 합니다. Collect ()](xref:System.GC.Collect) GC Java 측을 해제 하기 위해이 메시지에 메모리 또는 있습니다 수를 명시적으로 삭제 *Java.Lang.Object* 관리 되는 호출 가능 래퍼 및 Java 인스턴스 간의 매핑을 주요 하위 클래스입니다. 예를 들어 참조 [버그 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)합니다. 
 
 
 > [!NOTE]
@@ -314,7 +314,7 @@ class BetterActivity : Activity {
 
 ## <a name="minor-collections"></a>보조 컬렉션
 
-호출 하 여 보조 컬렉션을 수동으로 수행 될 수 [GC 합니다. Collect(0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32)합니다. 보조 컬렉션은 저렴 (주요 컬렉션 비교) 하는 경우, 하지만 권한이 큰 고정 비용를 자주 트리거하 않도록 해야 하며, 몇 밀리초의 일시 중지 시간이 있습니다. 
+호출 하 여 보조 컬렉션을 수동으로 수행 될 수 [GC 합니다. Collect(0)](xref:System.GC.Collect)합니다. 보조 컬렉션은 저렴 (주요 컬렉션 비교) 하는 경우, 하지만 권한이 큰 고정 비용를 자주 트리거하 않도록 해야 하며, 몇 밀리초의 일시 중지 시간이 있습니다. 
 
 응용 프로그램에 "duty 주기" 동일한 작업은 완료 하 반복 해 경우 duty 주기가 종료 된 후 수동으로 약간 컬렉션을 수행 하는 것이 좋습니다 수 있습니다. Duty 주기 예제는 다음과 같습니다. 
 
@@ -326,7 +326,7 @@ class BetterActivity : Activity {
 
 ## <a name="major-collections"></a>주요 컬렉션
 
-호출 하 여 주요 컬렉션을 수동으로 수행 될 수 [GC 합니다. Collect ()](https://developer.xamarin.com/api/member/System.GC.Collect/) 또는 `GC.Collect(GC.MaxGeneration)`합니다. 
+호출 하 여 주요 컬렉션을 수동으로 수행 될 수 [GC 합니다. Collect ()](xref:System.GC.Collect) 또는 `GC.Collect(GC.MaxGeneration)`합니다. 
 
 매우 드문 경우에 수행 해야 하며 512MB 힙 수집 하는 경우 1 초 일시 중지 시간이 스타일 Android 장치에 있을 수 있습니다. 
 

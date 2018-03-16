@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 8bebc24ee62d7b5a6f2b9df6e33b6f2b9dbe2431
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 
@@ -38,6 +38,10 @@ Xamarin.Forms에는 간단 하면서도 용도가 넓은 함수로 충분히 복
 
 DataPages 쉽고 빠르게 데이터 소스 바인딩할 미리 작성 된 보기에는 API를 제공 합니다. 목록 항목 및 세부 정보 페이지 데이터를 자동으로 렌더링 됩니다 및 테마를 사용 하 여 사용자 지정할 수 있습니다.
 
+## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
+
+`DatePicker` 사용자 지정된 된 범위 내에서 날짜를 선택할 수 있습니다. 프로그램에서 실행 되는 특정 플랫폼에서 지 원하는 날짜 선택을 사용 하 여 구현 됩니다.
+
 ## <a name="graphicsgraphicsindexmd"></a>[그래픽](graphics/index.md)
 
 Xamarin.Forms 응용 프로그램에 그래픽 및 게임 엔진 시각적 개체를 통합 하는 방법입니다.
@@ -58,7 +62,7 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시 하는 목록 뷰 컨트�
 
 맵 추가 추가 NuGet 패키지 다운로드 및 몇 가지 플랫폼 특정 구성이 필요 합니다. 구성 작업이 완료 되 면 몇 줄의 코드 맵 및 pin 표식을 추가할 수 있습니다.
 
-## <a name="pickerpickerindexmd"></a>[Picker](picker/index.md)
+## <a name="pickerpickerindexmd"></a>[선택기](picker/index.md)
 
 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 뷰는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다.
 
@@ -78,7 +82,7 @@ Xamarin.Forms에 제공 하 고 텍스트를 받기에 대 한 몇 가지 뷰가
 
 Xamarin.Forms 테마 표준 컨트롤에 대 한 특정 시각적 모양을 정의합니다. 응용 프로그램의 리소스 사전에 테마를 추가 하면 표준 컨트롤의 모양을 변경 합니다.
 
-## <a name="webviewwebviewmd"></a>[웹 보기](webview.md)
+## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 
 Xamarin.Forms는 각 플랫폼에서 기본 웹 브라우저 컨트롤을 사용 하 여 및 웹 사이트, 로컬 리소스 및 생성 된 Html 문자열을 표시할 수 있습니다.
 

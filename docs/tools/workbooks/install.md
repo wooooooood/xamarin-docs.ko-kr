@@ -7,11 +7,11 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: abd6ac7d4bce5a180db087488b32c878ed0a416b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: bf3d675224a1e1696d4ce526fa42260d2102aa7d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -19,13 +19,13 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="download-and-install"></a>다운로드 및 설치
 
-# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 1. 확인 된 [요구 사항](#requirements) 아래 합니다.
 2. 다운로드 및 설치 [Xamarin 통합 문서에 대 한 Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi)합니다.
 3. 시작 [리스트](~/tools/workbooks/workbook.md) 통합 문서 또는 out 시도로 [샘플](https://developer.xamarin.com/workbooks)
 
-# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 1. 확인 된 [요구 사항](#Requirements) 아래 합니다.
 2. 다운로드 및 설치 [Mac 용 Xamarin 통합 문서](https://dl.xamarin.com/interactive/XamarinInteractive.pkg)합니다.

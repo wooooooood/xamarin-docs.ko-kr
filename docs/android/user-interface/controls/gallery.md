@@ -6,12 +6,12 @@ ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: da6815a073d93379c8564f3ff91023deb20b0d55
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: c5e7cb864fc37a5365992fdff12a5be43dcccdd5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="gallery"></a>갤러리
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/09/2018
 
 라는 새 프로젝트를 시작 *HelloGallery*합니다.
 
-![새 솔루션 대화 상자에서 새 Android 프로젝트의 스크린 샷](gallery-images/hellogallery1.png)
+[![새 솔루션 대화 상자에서 새 Android 프로젝트의 스크린 샷](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
 를 사용 하려면 원하는 일부 사진 찾기 또는 [이러한 샘플 이미지 다운로드](http://developer.android.com/shareables/sample_images.zip)합니다.
 프로젝트에 이미지 파일 추가 **리소스/Drawable** 디렉터리입니다. 에 **속성** 창에 각각에 대 한 빌드 작업 설정 **AndroidResource**합니다.

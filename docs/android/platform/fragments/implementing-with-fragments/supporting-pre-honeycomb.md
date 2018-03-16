@@ -6,38 +6,33 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>지원 패키지를 사용 하 여 사전 Honeycomb Android 지원
 
 *Android 지원 패키지* 다시 몇 가지 새로운 API를 이식 하는 라이브러리 이루어져 &ndash; 조각과 같은 &ndash; 이전 버전의 Android 합니다. 따라서 Android 지원 패키지를 추가 하 여 우리 실행 응용 프로그램이 Android 2.3 장치의 다음 화면으로 이동 하 여 표시 된 것 처럼 됩니다.
 
-![조각 연습 스크린 샷](supporting-pre-honeycomb-images/00.png)
-
-![세부 정보 활동 스크린 샷](supporting-pre-honeycomb-images/01.png)
-
+[![조각 연습 및 활동 세부 정보 스크린 샷](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## <a name="adding-the-support-package"></a>지원 패키지를 추가합니다.
 
 Android 지원 패키지 Xamarin.Android 응용 프로그램에 자동으로 추가 되지 않습니다. Xamarin에서는 [Android 지원 라이브러리 v4 NuGet 패키지](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 를 간단히 지원 라이브러리 Xamarin.Android 응용 프로그램에 추가할 합니다.
 응용 프로그램에 포함 하 여 Xamarin.Android에 지원 패키지를 포함 하도록는 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 다음 스크린샷에 표시 된 것 처럼 Xamarin.Android 프로젝트에 구성 요소:
 
-![Android 지원 라이브러리 v4 패키지 추가](supporting-pre-honeycomb-images/02.png)
+[![Android 지원 라이브러리 v4 패키지 추가](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 패키지 추가 되 면 대상 프레임 워크를 Android 2.2 이상 변경 합니다.
 
-![대상 프레임 워크 API 수준 변경의 스크린 샷](supporting-pre-honeycomb-images/03.png)
+[![대상 프레임 워크 API 수준 변경의 스크린 샷](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 또한 동일한 API 수준 최소 Android 버전을 대상으로 있는지 확인 합니다.
 
-![최소 Android 버전을 설정할 때의 스크린 샷](supporting-pre-honeycomb-images/04.png)
-
-
+[![최소 Android 버전을 설정할 때의 스크린 샷](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>MainActivity FragmentActivity에서 파생 되도록 변경 합니다.
 
