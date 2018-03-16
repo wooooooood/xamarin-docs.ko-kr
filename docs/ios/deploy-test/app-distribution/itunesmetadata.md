@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 21ae62ee0d43e688e63ca8b7feb6a8aebb227cd5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3bdf00a9e50b2bf66f51c825306c2ba8e6365dd2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-itunesmetadataplist-file"></a>iTunesMetadata.plist 파일
 
@@ -239,7 +239,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르 ID는 다음과 같습니다.
 
-[!include[](~/ios/includes/table-appstore.html)]
+[!include[](~/ios/includes/table-appstore.md)]
 
 자세한 내용은 Apple의 [장르 ID 부록](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) 설명서를 참조하세요.
 
