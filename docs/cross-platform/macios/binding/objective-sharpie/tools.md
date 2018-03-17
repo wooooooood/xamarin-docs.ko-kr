@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 0d6e953a6a45b78d470c7ff73e1d6faa7444a683
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4985d67f74d54644cbc033d6c76148f88d741ee1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tools--commands"></a>도구 및 명령
 
@@ -53,19 +53,14 @@ Available Tools:
 
 목표 Sharpie 다음과 같은 도구를 제공합니다.
 
-<table>
-  <thead>
-    <tr><td>도구</td><td>설명</td>
-  </thead>
-  <tbody>
-    <tr><td><b>xcode</b></td><td>현재 Xcode 설치 및 iOS 및 사용할 수 있는 Mac Sdk의 버전에 대 한 정보를 제공 합니다. 이 바인딩을 생성 하는 경우 나중에이 정보를 사용 합니다.</td></tr>
-    <tr><td><b>pod</b></td><td>검색 구성 (로컬 디렉터리)에 설치 하 고 바인딩합니다 Objective-c <a href="https://cocoapods.org">CocoaPod</a> 마스터 사양 리포지토리에서 사용할 수 있는 라이브러리입니다. 이 도구에 전달 하는 입력이 올바른지를 자동으로 추론 하는 설치 된 CocoaPod 평가 <code>bind</code> 아래 도구입니다. <em><strong>3.0의 새로운 기능!</strong></em></td></tr>
-    <tr><td><b>bind</b></td><td>헤더 파일을 구문 분석 (<code>*.h</code>)에 Objective C 라이브러리에는 <a href="~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md">초기 <i>ApiDefinition.cs</i> 및 <i>StructsAndEnums.cs</i> 파일</a>합니다.</td></tr>
-    <tr><td><b>update</b></td><td>목표 Sharpie의 최신 버전을 확인 하 고 다운로드 하 고 사용 가능한 경우 설치 관리자를 시작 합니다.</td></tr>
-    <tr><td><b>verify-docs</b></td><td>에 대 한 자세한 정보 표시 <code>[Verify]</code> 특성입니다.</td></tr>
-    <tr><td><b>docs</b></td><td>기본 웹 브라우저에서이 문서를 탐색합니다.</td></tr>
-  </tbody>
-</table>
+|도구|설명|
+|--- |--- |
+|**xcode**|현재 Xcode 설치 및 iOS 및 사용할 수 있는 Mac Sdk의 버전에 대 한 정보를 제공 합니다. 이 바인딩을 생성 하는 경우 나중에이 정보를 사용 합니다.|
+|**pod**|검색 구성 (로컬 디렉터리)에 설치 하 고 바인딩합니다 Objective-c [CocoaPod](https://cocoapods.org/) 마스터 사양 리포지토리에서 사용할 수 있는 라이브러리입니다. 이 도구에 전달 하는 입력이 올바른지를 자동으로 추론 하는 설치 된 CocoaPod 평가 `bind` 아래 도구입니다. 3.0의 새로운 기능!|
+|**bind**|헤더 파일을 구문 분석 (`*.h`)에서 처음 Objective C 라이브러리의 [ApiDefinition.cs 및 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) 파일입니다.|
+|**update**|목표 Sharpie의 최신 버전을 확인 하 고 다운로드 하 고 사용 가능한 경우 설치 관리자를 시작 합니다.|
+|**verify-docs**|에 대 한 자세한 정보 표시 `[Verify]` 특성입니다.|
+|**docs**|기본 웹 브라우저에서이 문서를 탐색합니다.|
 
 특정 목표 Sharpie 도구 도움말을 보려면 도구의 이름을 입력 및 `-help` 옵션입니다. 예를 들어 `sharpie xcode -help` 다음과 같은 출력을 반환 합니다.
 

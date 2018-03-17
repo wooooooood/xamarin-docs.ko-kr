@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 3b1bb45ab87c85dff42b4f7ea5297eb3596b81a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ab6f68aed791dd21516d663367ac5435e92d6cc
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-game-development-with-cocossharp"></a>CocosSharp와 게임 개발 소개
 
@@ -38,4 +38,4 @@ CocosSharp의 핵심에서 제공 되는 [MonoGame 프레임 워크](http://www.
 - [게임 콘텐츠 (샘플)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Content.zip?raw=true)
 - [완료 된 프로젝트 (샘플)](https://developer.xamarin.com/samples/mobile/BouncingGame/)
 - [NuGet에 CocosSharp PCL](http://www.nuget.org/packages/CocosSharp.PCL.Shared/)
-- [CocosSharp API 설명서](http://developer.xamarin.comhttps://developer.xamarin.com/api/namespace/CocosSharp/)
+- [CocosSharp API 설명서](https://developer.xamarin.com/api/namespace/CocosSharp/)

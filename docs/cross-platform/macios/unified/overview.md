@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 21245d741ff025cb8c2a680642ec0226369540cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2f55edb27f33becca8d354f9a7bb65932b4fd924
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-api-overview"></a>통합 된 API 개요
 
@@ -67,36 +67,14 @@ IOS 및 Mac 제품 간에 코드 공유를 발생 하는 충돌을 줄이기 위
 
 통합 API 사용 되지 않는 메서드를 제거 하 고 몇 가지 인스턴스가 있었던 오타 API 이름에 클래식 Api에서 원래 MonoTouch 및 MonoMac 네임 스페이스에 바인딩된 경우입니다. 이러한 인스턴스는 새 통합 Api에서 수정 하 고 구성 요소, iOS 및 Mac 응용 프로그램에서 업데이트 해야 합니다. 충돌할 수 있는 가장 일반적인 구성 목록은 다음과 같습니다.
 
-<table width="100%" border="1">
-<tr>
-    <th>클래식 API 메서드 이름</th>
-    <th>통합 된 API 메서드 이름</th>
-</tr>
-<tr>
-    <td>UINavigationController.PushViewControllerAnimated()</td>
-    <td>UINavigationController.PushViewController()</td>
-</tr>
-<tr>
-    <td>UINavigationController.PopViewControllerAnimated()</td>
-    <td>UINavigationController.PopViewController()</td>
-</tr>
-<tr>
-    <td>CGContext.SetRGBFillColor()</td>
-    <td>CGContext.SetFillColor()</td>
-</tr>
-<tr>
-    <td>NetworkReachability.SetCallback()</td>
-    <td>NetworkReachability.SetNotification()</td>
-</tr>
-<tr>
-    <td>CGContext.SetShadowWithColor</td>
-    <td>CGContext.SetShadow</td>
-</tr>
-<tr>
-    <td>UIView.StringSize</td>
-    <td>UIKit.UIStringDrawing.StringSize</td>
-</tr>
-</table>
+|클래식 API 메서드 이름|통합 된 API 메서드 이름|
+|--- |--- |
+|`UINavigationController.PushViewControllerAnimated()`|`UINavigationController.PushViewController()`|
+|`UINavigationController.PopViewControllerAnimated()`|`UINavigationController.PopViewController()`|
+|`CGContext.SetRGBFillColor()`|`CGContext.SetFillColor()`|
+|`NetworkReachability.SetCallback()`|`NetworkReachability.SetNotification()`|
+|`CGContext.SetShadowWithColor`|`CGContext.SetShadow`|
+|`UIView.StringSize`|`UIKit.UIStringDrawing.StringSize`|
 
 이전의에서 통합 API로 전환할 때 변경 내용 목록은 전체 참조 하십시오 우리의 [클래식 (monotouch.dll) vs (Xamarin.iOS.dll) 통합 API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 설명서입니다.
 
@@ -133,7 +111,7 @@ Xamarin.iOS 클래식 API를 통해 이전에 지원 하 고 있는 NuGet 패키
 
 ## <a name="arrays-and-systemcollectionsgeneric"></a>배열 및 System.Collections.Generic
 
-C# 인덱서는 유형의 예상 하기 때문에 `int`를 명시적으로 캐스팅 해야 합니다. `nint` 값을 `int` 컬렉션 또는 배열의 요소에 액세스 하 합니다. 예:
+C# 인덱서는 유형의 예상 하기 때문에 `int`를 명시적으로 캐스팅 해야 합니다. `nint` 값을 `int` 컬렉션 또는 배열의 요소에 액세스 하 합니다. 예를 들어:
 
 ```csharp
 public List<string> Names = new List<string>();

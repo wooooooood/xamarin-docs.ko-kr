@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>아이콘 및 이미지 작업
 
@@ -40,17 +40,9 @@ _이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이�
 
 시작 이미지가 하지 않은 광고 또는 꾸밈 식에 대 한 기회, 앱 신속 하 게 시작 하 고 준비 되어 효과 제공 하기 위한 것만 사용 하도록 합니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>이미지를 시작 합니다.</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|이미지 크기를 시작 합니다.|노트|
+|---|---|
+|1920x1080px|비 계층화.png 파일에만 해당|
 
 Apple 앱의 시작 이미지를 디자인 하기 위한 다음 방법을 사용 하면:
 
@@ -146,39 +138,15 @@ Xamarin.tvOS 앱 Apple TV 홈 화면에서 뿐만 아니라 앱 스토어에 대
 
 모든 응용 프로그램은 작 및 해당 응용 프로그램 아이콘의 큰 버전을 모두 제공 해야 합니다. 작은 아이콘에는 앱을 설치 하는 경우 Apple TV 홈 화면에서 사용 됩니다. 큰 버전 앱 스토어에서 사용 됩니다. 큰 응용 프로그램 아이콘에는 작은 아이콘 버전의 모양과 느낌 유사 해야 합니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>작은 아이콘</b></td>
-    <td colspan="2"><b>큰 아이콘</b></td>
-</tr>
-<tr>
-    <td><b>실제 크기</b></td>
-    <td>400px x 240px</td>
-    <td><b>Size</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>보호 영역 크기</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>포커스가 없는 크기</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>포커스가 지정 된 크기</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|작은 아이콘||큰 아이콘||
+|---|---|---|---|
+|실제 크기|400x240px|크기|1280x768px|
+|보호 영역 크기|370x222px|||
+|포커스가 없는 크기|300x180px|||
+|포커스가 지정 된 크기|370x222px|||
 
 > [!IMPORTANT]
-> **참고:** 응용 프로그램 아이콘으로 제공 되어야 합니다 **계층화 이미지**합니다. 참조 하십시오는 [계층화 이미지](#Layered-Images) 자세한 내용은 섹션.
+> 응용 프로그램 아이콘으로 제공 되어야 합니다 **계층화 이미지**합니다. 참조 하십시오는 [계층화 이미지](#Layered-Images) 자세한 내용은 섹션.
 
 
 
@@ -227,17 +195,9 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 위쪽 선반 이미지 수를 단일 정적으로 제공 되거나 `.png` 또는 `.lsr` 파일 (참조 [계층화 된 이미지 만들기](#Creating-Layered-Images))를 동적으로 만들기 런타임에 포커스 항목의 단일 행으로 또는 (참조 [ 위쪽 선반 동적 콘텐츠](#Dynamic-Top-Shelf-Content) 아래).
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>위쪽 선반 이미지</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|위쪽 선반 이미지 크기|노트|
+|---|---|
+|1920x720px|정적.png 또는 계층화 된.lsr 파일|
 
 Apple 위쪽 선반 이미지를 만들기 위한 다음 제안 사항을 제공 합니다.
 
@@ -279,38 +239,12 @@ TvOS 프로젝트에 대 한 필요한 위쪽 선반 이미지를 설정 하려�
 
 다음 콘텐츠 크기 해야 합니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>포스터 (2:3)</b></td>
-    <td><b>Square (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>실제 크기</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>보호 영역 크기</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>포커스가 없는 크기</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>포커스가 지정 된 크기</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||포스터 (2:3)|Square (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|실제 크기|404x608px|608x608px|908x512px|
+|보호 영역 크기|380x570px|570x570px|852x479px|
+|포커스가 없는 크기|333x500px|500x500px|782x440px|
+|포커스가 지정 된 크기|380x570px|570x570px|852x479px|
 
 Apple 콘텐츠 단면화 행에 대 한 다음 제안 사항을 제공합니다.
 
@@ -325,27 +259,14 @@ Apple 콘텐츠 단면화 행에 대 한 다음 제안 사항을 제공합니다
 
 자동 스크롤 하는 것 외에도 사용자는 배너를 제어 하 고 Siri 원격을 사용 하 여 어느 방향으로 스크롤할 수 있습니다. 소수에 수행할 배너 포커스가 있을 때 Siri 원격 순환 제스처는 해당 배너 시차 효과 정품 인증 됩니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>배너 이미지 (추가 넓은)</b></td>
-</tr>
-<tr>
-    <td><b>실제 크기</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>보호 영역 크기</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>포커스가 없는 크기</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>포커스가 지정 된 크기</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**배너 이미지 (추가 넓은)**
+
+|   |   |
+|---|---|
+|실제 크기|1940x624px|
+|보호 영역 크기|1740x620px|
+|포커스가 없는 크기|1740x560px|
+|포커스가 지정 된 크기|1740x620px|
 
 Inset 배너 스크롤 하나으로 제공 될 수는 정적 `.png` 계층화 또는 `.lsr` 파일입니다.
 
@@ -366,44 +287,13 @@ Xamarin.tvOS 앱은 게임 게임 센터 지원을 포함 한 경우 몇 가지 
 - **대시보드 아트 워크** -제공 게임 센터 앱의 대시보드 위쪽에 표시 되는 선택적 이미지 될 수 있습니다. 이러한 이미지는 비-포커스를 받을 수 있습니다.
 - **순위표 아트 워크** -에 제공 해야 간의 일 (1)을 3 개의 16:9 가로 세로 비율 이미지 앱에서 지 원하는 각 순위표 합니다. 정적 장치일 수 `.png` 계층화 또는 `.lsr` 파일입니다. 순위표 아트 워크 포커스를 받을 수입니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>성과 아이콘</b></td>
-    <td><b>대시보드 아트 워크</b></td>
-    <td><b>순위표 아트 워크</b></td>
-</tr>
-<tr>
-    <td><b>표시 되는 크기</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>N/A</td>
-</tr>
-<tr>
-    <td><b>실제 크기</b></td>
-    <td>320px x 320px</td>
-    <td>N/A</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>보호 영역 크기</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>포커스가 없는 크기</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>포커스가 지정 된 크기</b></td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||성과 아이콘|대시보드 아트 워크|순위표 아트 워크|
+|---|---|---|---|
+|표시 되는 크기|200x200px|923x150px|N/A|
+|실제 크기|320x320px|N/A|659x371px|
+|보호 영역 크기|N/A|N/A|618x348px|
+|포커스가 없는 크기|N/A|N/A|548x309px|
+|포커스가 지정 된 크기|N/A|N/A|618x348px|
 
 게임 센터 사용에 대 한 자세한 내용은 Apple의를 참조 하십시오 [게임 센터 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)합니다.
 

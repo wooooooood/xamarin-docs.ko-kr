@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: f962f4619352dbaaed8c8ffcf5d8c8305cb6ad62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7ddb4b7d4867813311448258bb4fb177ae4cd175
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="specialized-fragment-classes"></a>특수화 된 조각 클래스
 
@@ -191,8 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-조각 API는 기본 설정 관리 하려면 다음을 제공 합니다.는 `PreferenceFragment` 하위 클래스입니다. `PreferenceFragment` 는 비슷합니다는 [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/
-) &ndash; 사용자에 게 기본 설정의 계층 구조는 조각에 표시 됩니다. 사용자 기본 설정와 상호 작용 하은 자동으로 저장 될 [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html)합니다.
+조각 API는 기본 설정 관리 하려면 다음을 제공 합니다.는 `PreferenceFragment` 하위 클래스입니다. `PreferenceFragment` 는 비슷합니다는 [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; 사용자에 게 기본 설정의 계층 구조는 조각에 표시 됩니다. 사용자 기본 설정와 상호 작용 하은 자동으로 저장 될 [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html)합니다.
 Android 3.0 또는 더 높은 응용 프로그램에서 사용 하 여는 `PreferenceFragment` 기본 설정과 응용 프로그램에서 처리 하도록 합니다. 다음 그림은 예를 보여 줍니다.는 `PreferenceFragment`:
 
 [![예제 PreferencesFragment 인라인, 대화 상자에서 및 실행할 때 환경 설정](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

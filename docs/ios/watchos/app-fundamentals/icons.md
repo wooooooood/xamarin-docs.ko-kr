@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons"></a>작업 아이콘
 
@@ -21,48 +21,12 @@ Apple Watch 솔루션 아이콘을 두 개의 집합이 필요합니다.
 
 ## <a name="apple-watch-icons"></a>Apple Watch 아이콘
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td valign="top">
-        <b>iOS 응용 프로그램 아이콘</b>
-      </td>
-      <td valign="top">
-IPhone에 나타나고 부모 응용 프로그램이 시작 </td>
-      <td>
-        <img src="icons-images/icon-ios.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" rowspan="3">
-        <b>조사식 앱 아이콘</b>
-      </td>
-      <td valign="top">
-Apple Watch 홈 화면에 표시 </td>
-      <td>
-        <img src="icons-images/icon-home.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-조사식 알림만 표시 됩니다. </td>
-      <td>
-        <img src="icons-images/notification-icon.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-에 표시 된 <a href="~/ios/watchos/app-fundamentals/settings.md">iOS Apple Watch 앱</a>
-      </td>
-      <td>
-        <a href="icons-images/watch-app.png">
-          <img src="icons-images/watch-app-sml.png" class="tableimg">
-        </a>
-      </td>
-    </tr>
-    <tbody>
-</table>
-
-
+| | | |
+|-|-|-|
+|iOS 응용 프로그램 아이콘|IPhone에 나타나고 부모 응용 프로그램이 시작|![](icons-images/icon-ios.png)|
+|조사식 앱 아이콘|Apple Watch 홈 화면에 표시|![](icons-images/icon-home.png)|
+||조사식 알림만 표시 됩니다.|![](icons-images/notification-icon.png)|
+||에 표시 된 [iOS Apple Watch 앱](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>솔루션 구성
 

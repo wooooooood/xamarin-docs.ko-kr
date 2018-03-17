@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 
@@ -343,40 +343,14 @@ Xamarin.Android 프로젝트를 작성 하는 것은 매우 유사 Xamarin.iOS �
 
 두이 명령은 모두 프로젝트 마다 다를 수 있는 명령줄 매개 변수가 필요 합니다. 또한 이러한 명령줄 매개 변수 중 일부는 빌드가 실행 될 때 콘솔 출력에 표시 되지 않도록 하는 암호입니다. 이러한 명령줄 매개 변수 중 일부 환경 변수에 저장 합니다. 서명 및/또는 zip 정렬 하는 데 필요한 환경 변수는 아래 표에 설명 되어 있습니다.
 
-<table>
-    <thead>
-        <tr>
-            <td>환경 변수</td>
-            <td>설명</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>APK 서명에 키 저장소에 대 한 경로입니다.</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>APK 서명에 사용할 키 저장소의 키입니다.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>에 의해 만들어진 APK `xbuild`합니다.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>생성 되는 서명 된 APK `jarsigner`합니다.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>이것은 zip APK에 의해 생성 되는 정렬 `zipalign`합니다.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>이것이 노래 파일에 대 한 키 저장소의 내용에 액세스 하는 데 사용 되는 암호입니다.</td>
-        </tr>
-    </tbody>
-</table>
+|환경 변수|설명|
+|--- |--- |
+|KEYSTORE_FILE|APK 서명에 키 저장소에 대 한 경로입니다.|
+|KEYSTORE_ALIAS|APK 서명에 사용할 키 저장소의 키입니다.|
+|INPUT_APK|에 의해 만들어진 APK `xbuild`합니다.|
+|SIGNED_APK|생성 되는 서명 된 APK `jarsigner`합니다.|
+|FINAL_APK|이것은 zip APK에 의해 생성 되는 정렬 `zipalign`합니다.|
+|STORE_PASS|이것이 노래 파일에 대 한 키 저장소의 내용에 액세스 하는 데 사용 되는 암호입니다.|
 
 요구 사항 섹션에서에서 설명한 대로 EnvInject 플러그 인을 사용 하 여 빌드하는 동안 이러한 환경 변수를 설정할 수 있습니다. 작업에는 새 빌드를 있어야 단계 넣기 환경 변수를 기반으로 다음 스크린샷에 표시 된 대로 추가:
 

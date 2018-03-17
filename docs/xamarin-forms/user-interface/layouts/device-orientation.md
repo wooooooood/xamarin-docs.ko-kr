@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -504,4 +504,4 @@ protected override void OnSizeAllocated (double width, double height){
 - [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [반응 형 레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [화면 방향을 기반으로 이미지를 표시 합니다.](https://developer.xamarin.comhttps://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [화면 방향을 기반으로 이미지를 표시 합니다.](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)

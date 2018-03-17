@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="multitasking-for-ipad"></a>IPad 용 멀티태스킹
 
@@ -260,7 +260,7 @@ Apple 모든 iOS 9 앱 멀티태스킹 지원 하는지 알 수, 사항이 있�
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
-- [멀티태스킹이 (샘플)](http://developer.xamarin.comhttps://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
+- [멀티태스킹이 (샘플)](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
 - [통합 된 스토리 보드에는 소개](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

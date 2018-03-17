@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b1b6338494b9be98e677cf9d338410eae759feb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a09ba93fe7c3f5ade6b5cafe44fd7ee2b0c33487
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>통합 된 API에는 기존 앱 업데이트
 
@@ -49,7 +49,7 @@ Xamarin University 무료로 사용할 수 있는 비디오에 **iOS 통합 API�
 
 통합 된 API를 사용 하는 iOS 프로젝트 기존 Xamarin.Forms 솔루션을 업데이트 하려면 다음이 지침을 따릅니다. 통합 된 API 지원은 Xamarin.Forms 1.3에서 사용할 수 있으며 나중에 있으므로 [지침](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) 또한 Xamarin.Forms 앱 버전 1.3 업데이트 하는 방법을 설명 합니다. 이러한 [팁](~/cross-platform/macios/unified/updating-tips.md) 사용자 지정 렌더러 또는 종속성 서비스의 모든 네이티브 iOS 코드를 업데이트 하는 데 도움이 될 수 있습니다.
 
-## <a name="working-with-native-types-in-cross-platform-appscross-platformmaciosnativetypesmd"></a>[플랫폼 간 앱에서 네이티브 형식 사용](~/cross-platform/macios/nativetypes.md)
+## <a name="working-with-native-types-in-cross-platform-appscross-platformmaciosnativetypesmd"></a>[플랫폼 간 앱에서의 네이티브 형식 작업](~/cross-platform/macios/nativetypes.md)
 
 이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 하는 플랫폼 간 응용 프로그램에서 새 iOS API 네이티브 통합 유형 (nint, nuint, nfloat)를 사용 하 여 설명 합니다. 네이티브 형식을 사용 해야 하는 시기에 대 한 정보를 제공 하 고 새 형식의 플랫폼 간 코드를 함께 사용 해야 하는 위치 하는 경우에 몇 가지 가능한 해결 방법을 제공 합니다.
 
@@ -68,4 +68,4 @@ Objective C 라이브러리에 대 한 바인딩을 만든 사용자는 API (여
 - [Xamarin.Forms 앱 업데이트](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [바인딩 업데이트](~/cross-platform/macios/unified/update-binding.md)
 - [팁 업데이트](~/cross-platform/macios/unified/updating-tips.md)
-- [클래식 vs 통합 API 차이점](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [클래식 vs 통합 API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

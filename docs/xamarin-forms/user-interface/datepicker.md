@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>DatePicker를 사용 하 여
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-때는 `DateTime` XAML 파서에서 사용 하 여 XAML에 지정 된 값에는 `DateTime.Parse` 메서드는 `CultureInfo.InvariantCulture` 인수 문자열을 변환 하는 `DateTime` 값입니다. 정확한 형식으로 날짜를 지정 해야 합니다: 두 자리 월, 두 일 전 부터는 및 4 자리 연도 슬래시로 구분:
+때는 `DateTime` XAML 파서에서 사용 하 여 XAML에서 값이 지정는 `DateTime.Parse` 메서드는 `CultureInfo.InvariantCulture` 인수 문자열을 변환 하는 `DateTime` 값입니다. 정확한 형식으로 날짜를 지정 해야 합니다: 두 자리 월, 두 일 전 부터는 및 4 자리 연도 슬래시로 구분:
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -78,7 +78,7 @@ DatePicker datePicker = new DatePicker
             ··· />
 ```
 
-그러나이 권장 되지 않습니다. 설정에 따라는 `Format` 속성을 선택한 날짜에는 다른 표시 너비 필요할 수 있습니다. "D" 형식 문자열을 지정 하면 예를 들어 `DateTime` 긴 형식 및 "수요일, 9 월 12, 2018"의 날짜 표시 하려면 "금요일, 년 5 월 4, 2018" 보다 큰 표시 너비를 필요 합니다. 플랫폼에 따라 이러한 차이로 인해 발생할 수 있습니다는 `DateTime` 레이아웃에서는 또는를 자를 수 표시를 위해 너비를 변경 하려면 보기.
+그러나이 권장 되지 않습니다. 설정에 따라는 `Format` 속성을 선택한 날짜에는 다른 표시 너비 필요할 수 있습니다. "D" 형식 문자열을 지정 하면 예를 들어 `DateTime` 긴 형식 및 "수요일, 9 월 12, 2018"의 날짜 표시 하려면 "금요일, 년 5 월 4, 2018." 보다 큰 표시 너비 플랫폼에 따라 이러한 차이로 인해 발생할 수 있습니다는 `DateTime` 레이아웃에서는 또는를 자를 수 표시를 위해 너비를 변경 하려면 보기.
 
 > [!TIP]
 > 기본값을 사용 하는 것이 좋습니다 `HorizontalOptions` 설정인 `Fill` 와 `DatePicker`, 고의 너비를 사용 하지 않는 `Auto` 설정할 때 `DatePicker` 에 `Grid` 셀입니다.
@@ -139,7 +139,7 @@ DatePicker datePicker = new DatePicker
 </ContentPage>
 ```
 
-각 `DatePicker` 할당 되는 `Format` 자세한 날짜 형식에 대 한 "D"의 속성입니다. 또한는 `endDatePicker` 개체의 대상으로 하는 바인딩을 해당 `MinimumDate` 속성입니다. 바인딩 소스는 선택한 `Date` 의 속성은 `startDatePicker` 개체입니다. 이렇게 하면 하는 종료 날짜 보다 나중에 항상 보다 크거나 시작 날짜입니다. 두 외에도 `DatePicker` 개체는 `Switch` "Include 두 하루 총 에서" 레이블이 지정 됩니다. 
+각 `DatePicker` 할당 되는 `Format` 자세한 날짜 형식에 대 한 "D"의 속성입니다. 또한는 `endDatePicker` 개체의 대상으로 하는 바인딩을 해당 `MinimumDate` 속성입니다. 바인딩 소스는 선택한 `Date` 의 속성은 `startDatePicker` 개체입니다. 이렇게 하면 하는 종료 날짜 보다 나중에 항상 보다 크거나 시작 날짜입니다. 두 외에도 `DatePicker` 개체는 `Switch` "총에서 모두 일 수를 포함 합니다." 라는 
 
 두 `DatePicker` 보기에 연결 하는 처리기가는 `DateSelected` 이벤트 및 `Switch` 처리기에 연결 된 해당 `Toggled` 이벤트입니다. 이러한 이벤트 처리기 코드 숨김 파일에 있으며 두 날짜 사이의 일 새 계산을 트리거할:
 
@@ -184,7 +184,7 @@ public partial class MainPage : ContentPage
 
 [![결과 날짜 사이의 일](datepicker-images/DaysBetweenDatesResult.png "결과 날짜 사이의 일")](datepicker-images/DaysBetweenDatesResult-Large.png#lightbox "결과 날짜 사이의 일")
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [DaysBetweenDates 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
 - [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)

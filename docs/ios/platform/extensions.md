@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="ios-extensions"></a>iOS 확장
 
@@ -44,63 +44,14 @@ _IOS 8에에서 도입 된, 확장 프로그램은 표시 되는 표준 컨텍�
 
 ## <a name="extension-points"></a>확장점
 
-여러 유형의 확장 8 (및 큰) iOS에서 만들 수 있습니다.
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-    <th >형식</th>
-    <th >설명</th>
-    <th >확장 지점</th>
-    <th >호스트 응용 프로그램</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td >작업</td>
-    <td >특수 편집기 또는 특정 미디어 유형에 대 한 뷰어</td>
-    <td ><code>com.apple.ui-services</code></td>
-    <td >임의의 값</td>
-</tr>
-<tr>
-    <td >문서 공급자</td>
-    <td >앱을 원격 문서 저장소를 사용 하도록 할 수 있습니다.</td>
-    <td ><code>com.apple.fileprovider-ui</code></td>
-    <td >사용 하 여 앱을 <a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-    <td >키보드</td>
-    <td >대체 키보드</td>
-    <td ><code>com.apple.keyboard-service</code></td>
-    <td >임의의 값</td>
-</tr>
-<tr>
-    <td >사진 편집</td>
-    <td >사진 조작 및 편집</td>
-    <td ><code>com.apple.photo-editing</code></td>
-    <td >Photos.app 편집기</td>
-</tr>
-<tr>
-    <td >공유</td>
-    <td >메시징 서비스 등, 소셜 네트워크와 데이터를 공유 합니다.</td>
-    <td ><code>com.apple.share-services</code></td>
-    <td >임의의 값</td>
-</tr>
-<tr>
-    <td >오늘</td>
-    <td >오늘 화면 또는 알림 센터에 표시 되는 "위젯"</td>
-    <td ><code>com.apple.widget-extensions</code></td>
-    <td >오늘과 알림 센터</td>
-</tr>
-</tbody>
-</table>
+|형식|설명|확장 지점|호스트 응용 프로그램|
+|--- |--- |--- |--- |
+|작업|특수 편집기 또는 특정 미디어 유형에 대 한 뷰어|`com.apple.ui-services`|임의의 값|
+|문서 공급자|앱을 원격 문서 저장소를 사용 하도록 할 수 있습니다.|`com.apple.fileprovider-ui`|사용 하 여 앱을 [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|키보드|대체 키보드|`com.apple.keyboard-service`|임의의 값|
+|사진 편집|사진 조작 및 편집|`com.apple.photo-editing`|Photos.app 편집기|
+|공유|메시징 서비스 등, 소셜 네트워크와 데이터를 공유 합니다.|`com.apple.share-services`|임의의 값|
+|오늘|오늘 화면 또는 알림 센터에 표시 되는 "위젯"|`com.apple.widget-extensions`|오늘과 알림 센터|
 
 [추가 확장점](~/ios/platform/introduction-to-ios10/index.md#app-extensions) iOS 10에에서 추가 되었습니다.
 

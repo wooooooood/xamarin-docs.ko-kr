@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>연습-WCF 작업
 
@@ -394,37 +394,12 @@ WCF 서비스 프록시 Xamarin.iOS 응용 프로그램에 의해 다음과 같�
 1. 에 `HelloWorld.iOS` 프로젝트에서에 대 한 참조를 추가 `HelloWorldServiceProxy` 프로젝트 및에 대 한 참조는 `System.ServiceModel` 네임 스페이스입니다.
 1. **솔루션 탐색기**를 두 번 클릭 `Main.storyboard` iOS 디자이너에서의 파일을 엽니다. 그런 다음에 다음 추가 `UIButton` 및 `UITextView` 컨트롤:
 
-    <table>
-        <thead>
-            <tr>
-                <td></td>
-                <td>name</td>
-                <td>제목</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>sayHelloWorldButton</code></td>
-                <td>"Hello, World"를 표시 합니다.</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>sayHelloWorldText</code></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>getHelloWorldDataButton</code></td>
-                <td>"Hello, World" get 데이터</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>getHelloWorldDataText</code></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    ||이름|제목|
+    |--- |--- |--- |
+    |`UIButton`|`sayHelloWorldButton`|"Hello, World"를 표시 합니다.|
+    |`UITextView`|`sayHelloWorldText`||
+    |`UIButton`|`getHelloWorldDataButton`|"Hello, World" get 데이터|
+    |`UITextView`|`getHelloWorldDataText`||
 
     컨트롤을 추가한 후 UI의 다음 스크린 샷에서 유사 합니다.
 

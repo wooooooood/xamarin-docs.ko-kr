@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -147,40 +147,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 데이터베이스 형식 간의 차이점은 다음과 같습니다.
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>Public 데이터베이스</td>
-<td>전용 데이터베이스</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>데이터 형식</td>
-<td>공유 데이터</td>
-<td>현재 사용자의 데이터</td>
-</tr>
-
-<tr>
-<td>할당량</td>
-<td>개발자의 할당량에서 고려</td>
-<td>사용자의 할당량에서 고려</td>
-</tr>
-
-<tr>
-<td>기본 사용 권한</td>
-<td>읽을 수 있는 world</td>
-<td>읽을 수 있는 사용자</td>
-</tr>
-
-<tr>
-<td>사용 권한 편집</td>
-<td>iCloud 대시보드 역할을 통해 레코드 클래스 수준</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
+||Public 데이터베이스|전용 데이터베이스|
+|---|--- |--- |
+|**데이터 형식**|공유 데이터|현재 사용자의 데이터|
+|**할당량**|개발자의 할당량에서 고려|사용자의 할당량에서 고려|
+|**기본 사용 권한**|읽을 수 있는 world|읽을 수 있는 사용자|
+|**사용 권한 편집**|iCloud 대시보드 역할을 통해 레코드 클래스 수준|N/A|
 
 ### <a name="records"></a>레코드
 

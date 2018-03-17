@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 6042ab9aa861a08da421140857459b02a78f7c70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 568650a850b9db1fa22deef55eebb6a437e7e0b7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식에 대 한 가이드
 
@@ -114,7 +114,7 @@ Bool 값을 반환 하면이 경우 람다 구문 통해 하는 값을 반환할
 
 이벤트와 같은 클래스를 연결 하는 속성과 생성 바인딩 생성기 지원 `UIScrollView` 와 해당 `UIScrollViewDelegate` (도 이러한 모델 클래스)를 호출에 주석 지정 하면 됩니다 프로그램 `BaseType` 함께 정의 `Events` 및 `Delegates`매개 변수 (아래 설명 참조). 주석을 추가 하는 것 외에도 `BaseType` 해당 매개 변수를 사용 해야 하는 몇 가지 구성 요소가 더 생성자에 게 알립니다.
 
-둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `EventArgs` 모델 클래스에서 메서드 선언에서 특성입니다. 예:
+둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `EventArgs` 모델 클래스에서 메서드 선언에서 특성입니다. 예를 들어:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -324,7 +324,7 @@ interface FooObject {
 
 방금 정적 클래스에서 파생 되지 않는 것이 특성이 클래스에 적용 되 면 기반인 `NSObject` 하므로 `[BaseType]` 특성은 무시 됩니다. 정적 클래스 C 공용 변수를 노출 하려면를 호스트 하는 데 사용 됩니다.
 
-예:
+예를 들어:
 
 ```csharp
 [Static]
@@ -498,7 +498,7 @@ public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 
 둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `EventArgs` 에서 메서드 선언에서 특성 프로그램 `Model` 클래스입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -785,7 +785,7 @@ interface NSUrlSession {
 
 (반환 값)에 대 한 메서드, 매개 변수 및 사용 하 여 속성 데코레이팅 할 수 있습니다 `BindAs`합니다. 유일한 제한 사항은 구성원은 **하지 않아야** 안에 `[Protocol]` 또는 `[Model]` 인터페이스입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -894,7 +894,7 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 메서드 또는 속성에 사용할 경우 바인딩 특성의 효과 지정 된 선택기를 호출 하는 메서드를 생성 하는 것입니다. 으로 생성된 된 결과 메서드를 데코레이팅하 지 않으면 하지만 `[Export]` 특성을 메서드가 재정의에 참여 하지 않을 수 있습니다. 이 일반적으로 함께에서 사용 되어는 `Target` Objective-c 확장 메서드를 구현 하기 위한 특성입니다.
 
-예:
+예를 들어:
 
 ```csharp
 public interface UIView {
@@ -906,7 +906,7 @@ public interface UIView {
 Getter 또는 setter를 사용 하는 경우는 `Bind` 특성을 사용 하는 속성에 대 한 getter 및 setter Objective-c 선택기 이름을 생성할 때 코드 생성기에 의해 유추 기본값을 변경 합니다. 기본적으로 이름은 "fooBar"를 사용 하 여 속성 플래그를 지정 하는 경우 생성자 생성 getter에 대 한 "fooBar" 내보내기 및 "setFooBar:" setter에 대 한 합니다. 일부 상황에서는 Objective-c이이 규칙을 따르지 않습니다, 그리고 일반적으로 getter 이름을 "isFooBar"으로 변경 합니다.
 이 생성자를 알리기 위해이 특성을 사용 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 // Default behavior
@@ -1004,7 +1004,7 @@ Objective c:에 다음은 이러한 두 속성
 
 이후는 `Dispose` 메서드를 자동으로 생성 됩니다는 `bmac-native` 및 `btouch-native` 사용 해야 하는 도구는 `Dispose` 특성으로 생성 된 일부 코드를 삽입할 `Dispose` 메서드 구현 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1090,7 +1090,7 @@ interface CameraEffects {
 
 바인딩 디자인, 일반적으로이 특성을 사용 하 여 속성 또는 메서드 숨기기 하는 메서드 또는 속성에 대 한 다른 이름을 제공 및 다음 C# 상호 보완적인 지원 파일을 추가할 때 노출 되는 강력한 형식의 래퍼를 때는 기본 기능입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [Internal]
@@ -1140,7 +1140,7 @@ public NSObject this [NSObject idx] {
 
 이 특성을 사용 하 여 알림을 하지 않는 페이로드를 전송 하는 인수 없이 하거나 지정할 수 있습니다는 `System.Type` "EventArgs"로 끝나는 이름의 일반적으로 API 정의에서 다른 인터페이스를 참조 하는 합니다. 생성기 바뀝니다 인터페이스 클래스 서브클래싱하는 `EventArgs` 여기에 나열 된 속성을 모두 포함 됩니다. `[Export]` 특성을 사용 해야는 `EventArgs` 클래스 값을 인출 Objective-c 사전을 조회 하는 데 사용 되는 키의 이름을 표시 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 interface MyClass {
@@ -1252,7 +1252,7 @@ interface MyClass {
 
 참조 형식에이 특성이 없으면 바인딩 도구 Objective-c 전달 하기 전에 할당 되는 값에 대 한 검사를 생성 하는 및이 발생 시키는 check가 생성 하는 프로그램 `ArgumentNullException` 할당 된 값이 null입니다.
 
-예:
+예를 들어:
 
 ```csharp
 // In properties
@@ -1440,7 +1440,7 @@ demo.Delegate = new MyDelegate ();
 ```
 
 
-또 다른 용도 `Wrap` 특성은 메서드의 강력한 형식의 버전을 지원 하도록 합니다.   예:
+또 다른 용도 `Wrap` 특성은 메서드의 강력한 형식의 버전을 지원 하도록 합니다.   예를 들어:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1935,7 +1935,7 @@ Xamarin.iOS 8.0으로 래핑하는 강력한 형식의 클래스를 쉽게 만�
 
 이 특성 사전에서 요소에 액세스 하는 데 사용 되는 키를 포함 하는 클래스의 이름을 하나의 매개를 변수로 입력 합니다.   기본적으로 특성을 사용 하 여 인터페이스의 각 속성 이름 "키" 접미사에 대 한 지정된 된 형식에서 멤버를 조회할 됩니다.
 
-예:
+예를 들어:
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]
@@ -1987,70 +1987,20 @@ interface MyColoringKeys {
 
 다음과 같은 데이터 형식이 지원 되는 `StrongDictionary` 정의:
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-<tbody>
-  <tr>
-    <td>C# 인터페이스 형식</td>
-    <td>NSDictionary 저장 유형</td>
-  </tr>
-  <tr>
-    <td>bool</td>
-    <td>NSNumber에 저장 하는 부울 값</td>
-  </tr>
-  <tr>
-    <td>열거형 값</td>
-    <td>정수는 NSNumber에 저장</td>
-  </tr>
-  <tr>
-    <td>int</td>
-    <td>32 비트 정수는 NSNumber에 저장</td>
-  </tr>
-  <tr>
-    <td>uint</td>
-    <td>NSNumber에 저장 하는 32 비트 부호 없는 정수</td>
-  </tr>
-  <tr>
-    <td>nint</td>
-    <td>NSNumber에 저장 된 NSInteger</td>
-  </tr>
-  <tr>
-    <td>nuint</td>
-    <td>NSNumber에 저장 된 NSUInteger</td>
-  </tr>
-  <tr>
-    <td>long</td>
-    <td>64 비트 정수는 NSNumber에 저장</td>
-  </tr>
-  <tr>
-    <td>float</td>
-    <td>32 비트 정수는 NSNumber로 저장</td>
-  </tr>
-  <tr>
-    <td>double</td>
-    <td>64 비트 정수는 NSNumber로 저장</td>
-  </tr>
-  <tr>
-    <td>NSObject 및 하위 클래스</td>
-    <td>NSObject</td>
-  </tr>
-  <tr>
-    <td>NSDictionary</td>
-    <td>NSDictionary</td>
-  </tr>
-  <tr>
-    <td>string</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>NSString</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>C# NSObject의 배열</td>
-    <td>NSArray</td>
-  </tr>
-  <tr>
-    <td>C# 열거형의 배열</td>
-    <td>NSNumbers 값을 포함 하는 NSArray</td>
-  </tr>
-</tbody>
+|C# 인터페이스 형식|`NSDictionary` 저장소 유형|
+|---|---|
+|`bool`|`Boolean` 에 저장 된 `NSNumber`|
+|열거형 값|에 저장 된 정수는 `NSNumber`|
+|`int`|32 비트 정수에 저장 된 `NSNumber`|
+|`uint`|32 비트 부호 없는 정수에 저장 된 `NSNumber`|
+|`nint`|`NSInteger` 에 저장 된 `NSNumber`|
+|`nuint`|`NSUInteger` 에 저장 된 `NSNumber`|
+|`long`|64 비트 정수에 저장 된 `NSNumber`|
+|`float`|로 저장 하는 32 비트 정수는 `NSNumber`|
+|`double`|로 저장 하는 64 비트 정수는 `NSNumber`|
+|`NSObject` 및 하위 클래스|`NSObject`|
+|`NSDictionary`|`NSDictionary`|
+|`string`|`NSString`|
+|`NSString`|`NSString`|
+|C# `Array` 의 `NSObject`|`NSArray`|
+|C# `Array` 열거|`NSArray` 포함 된 `NSNumber` 값|

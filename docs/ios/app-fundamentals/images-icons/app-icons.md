@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68372d90b0567c662f0ae43e315663832f1f769b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="application-icons"></a>응용 프로그램 아이콘
 
@@ -42,104 +42,66 @@ UI 컨트롤에 대 한 및 문서 아이콘으로 Xamarin.iOS 앱 이미지 자
 
 다음 이미지 자산 크기 및 해상도 모든 iOS 9 (또는 그 이상)를 통해 iOS 5를 대상으로 하는 Xamarin.iOS 앱에 필요한 아이콘 유형을 지 원하는 데 필요 합니다.
 
-<table cellpadding="7" cellspacing="0" width="100%">
-    <tr valign="top">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="5" align="center" bgcolor="#F0F0F0"><b>iPhone</b></td>
-    </tr>
-    <tr valign="center">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 5 & 6</b></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 7 & 8</b></td>
-        <td align="center" bgcolor="#F9F9F9"><b>iOS 9 & 10<b><br/><i>(iPhone 6 및 7 +)</i></td>
-    </tr>
-    <tr valign="top" bgcolor="#F0F0F0">
-        <td width="200" align="center"><b>아이콘 유형</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>3x</b></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">응용 프로그램 아이콘</td>
-        <td align="center">57x57</td>
-        <td align="center">114x114</td>
-        <td align="center" style="color:#BBBBBB;">60x60<sup>(1)</sup></td>
-        <td align="center">120x120</td>
-        <td align="center">180x180</td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">스포트라이트</td>
-        <td align="center">29x29</td>
-        <td align="center">58x58</td>
-        <td align="center" style="color:#BBBBBB;">40x40<sup>(2)</sup></td>
-        <td align="center">80x80</td>
-        <td align="center">120x120</td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">설정</td>
-        <td align="center" style="color:#BBBBBB;">29x29<sup>(3)(4)</sup></td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(3)(4)</sup></td>
-        <td align="center">-</td>
-        <td align="center">-</td>
-        <td align="center">87x87</td>
-    </tr>
-</table>
+### <a name="iphone-icon-sizes"></a>iPhone 아이콘 크기
 
-<table cellpadding="7" cellspacing="0" width="100%">
-    <tr valign="top">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="5" align="center" bgcolor="#F0F0F0"><b>iPad</b></td>
-    </tr>
-    <tr valign="center">
-        <td width="200" style="border-width: 0px;"></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 5 & 6</b></td>
-        <td colspan="2" align="center" bgcolor="#F9F9F9"><b>iOS 7 & 8</b></td>
-        <td colspan="1" align="center" bgcolor="#F9F9F9"><b>iOS&nbsp;9 & 10</b></td>
-    </tr>
-    <tr valign="top" bgcolor="#F0F0F0">
-        <td width="200" align="center"><b>아이콘 유형</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>1x</b></td>
-        <td align="center"><b>2x</b></td>
-        <td align="center"><b>2x<br/>iPad&nbsp;Pro</b></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">응용 프로그램 아이콘</td>
-        <td align="center">72x72</td>
-        <td align="center">144x144</td>
-        <td align="center">76x76</td>
-        <td align="center">152x152</td>
-        <td align="center">167x167<sup>(6)</sup></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">스포트라이트</td>
-        <td align="center">50x50</td>
-        <td align="center">100x100</td>
-        <td align="center">40x40</td>
-        <td align="center">80x80</td>
-        <td align="center" style="color:#BBBBBB;">120x120<sup>(5)</sup></td>
-    </tr>
-    <tr valign="top">
-        <td width="200" bgcolor="#F9F9F9" align="right">설정</td>
-        <td align="center" style="color:#BBBBBB;">29x29<sup>(3)(5)</sup></td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(3)(5)</sup></td>
-        <td align="center">-</td>
-        <td align="center">-</td>
-        <td align="center" style="color:#BBBBBB;">58x58<sup>(5)</sup></td>
-    </tr>
-</table>
+- **iPhone: 9 및 10 iOS (iPhone 6 및 7 +)**
 
-1. _Mac에서 Xcode를 둘 다 Visual Studio는 더 이상 iOS 7에 대 한 1 x 이미지 설정 지원._
-2. _IOS 7에 대 한 1 x 이미지 설정 자산 카탈로그를 사용 하는 경우 지원 되지 않습니다._
-3. _iOS 7 및 8 iOS 5 및 6으로 동일한 이미지 크기를 사용합니다._
-4. _스포트라이트 아이콘으로 동일한 이미지 및 크기를 사용합니다._
-5. _IPhone로 같은 크기 아이콘을 사용합니다._
-6. _자산 카탈로그 이미지 집합 에서만 지원 됩니다._
+    ||3x|
+    |---|---|
+    |응용 프로그램 아이콘|180x180|
+    |스포트라이트|120x120|
+    |설정|87x87|
 
-아이콘에 대 한 자세한 내용은 Apple의를 참조 하십시오 [아이콘 및 이미지 크기](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) 설명서입니다.
+- **iPhone: iOS 7 및 8**
+
+    ||1x|2x|
+    |---|---|---|
+    |응용 프로그램 아이콘|60x60<sup>1</sup>|120x120|
+    |스포트라이트|40x40<sup>2</sup>|80x80|
+    |설정|-|-|
+
+- **iPhone: iOS 5 및 6**
+
+    ||1x|2x|
+    |---|---|---|
+    |응용 프로그램 아이콘|57x57|114x114|
+    |스포트라이트|29x29|58x58|
+    |설정|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+
+### <a name="ipad-icon-sizes"></a>iPad 아이콘 크기
+
+- **iPad: iOS 9 & 10**
+
+    ||2 x (iPad Pro)|
+    |---|---|
+    |응용 프로그램 아이콘|167x167<sup>6</sup>|
+    |스포트라이트|120x120<sup>6</sup>|
+    |설정|58x58<sup>5</sup>|
+
+- **iPad: iOS 7 & 8**
+
+    ||1x|2x|
+    |---|---|---|
+    |응용 프로그램 아이콘|76x76|152x152|
+    |스포트라이트|40x40|80x80|
+    |설정|-|-|
+
+- **iPad: iOS 5 & 6**
+
+    ||1x|2x|
+    |---|---|---|
+    |응용 프로그램 아이콘|72x72|144x144|
+    |스포트라이트|50x50|100x100|
+    |설정|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+
+ 1. Mac에서 Xcode를 둘 다 Visual Studio는 더 이상 iOS 7에 대 한 1 x 이미지 설정 지원.
+ 2. IOS 7에 대 한 1 x 이미지 설정 자산 카탈로그를 사용 하는 경우 지원 되지 않습니다.
+ 3. iOS 7 및 8 iOS 5 및 6으로 동일한 이미지 크기를 사용합니다.
+ 4. 스포트라이트 아이콘으로 동일한 이미지 및 크기를 사용합니다.
+ 5. IPhone로 같은 크기 아이콘을 사용합니다.
+ 6. 자산 카탈로그 이미지 집합 에서만 지원 됩니다.
+ 
+ 아이콘에 대 한 자세한 내용은 Apple의를 참조 하십시오 [아이콘 및 이미지 크기](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) 설명서입니다.
 
 <a name="managing" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>통합 된 스토리 보드
 
@@ -116,63 +116,23 @@ IOS를 사용 하는 UI 요소에 이미지를 할당 하는 경우 또는으로
 
 다음은 개발자 iPhone에서 볼 수 있는 일반적인 특성 컬렉션입니다.
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>속성</td>
-    <td>값</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>압축</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>기본</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>전화 번호</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|속성|값|
+|--- |--- |
+|`HorizontalSizeClass`|압축|
+|`VerticalSizeClass`|기본|
+|`UserInterfaceIdom`|전화 번호|
+|`DisplayScale`|2.0|
 
 위의 집합은 모든 특성 속성에 대 한 값이 완전히 정규화 된 특성 컬렉션을 나타냅니다.
 
 것도 가능 특성 컬렉션을 일부 값이 누락 되었습니다 (Apple로 참조 하는 *Unspecified*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>속성</td>
-    <td>값</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>압축</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{unspecified}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{unspecified}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{unspecified}</td>
-</tr>
-</tbody>
-</table>
+|속성|값|
+|--- |--- |
+|`HorizontalSizeClass`|압축|
+|`VerticalSizeClass`|지정되지 않음|
+|`UserInterfaceIdom`|지정되지 않음|
+|`DisplayScale`|지정되지 않음|
 
 그러나 일반적으로 개발자는 특성 컬렉션을 성분 환경 요청 반환 됩니다 정규화 컬렉션 위의 예제에서와 같이 합니다.
 
@@ -216,7 +176,6 @@ Apple이 라는 iOS 8에 새 클래스 추가 `UIImageAsset` 제어할 수 있�
 
 특성 컬렉션 중 하나에서 지정 되지 않은 특성 중 하나를 다른 지정 된 경우, 위에서 설명한 대로 값이 지정 된 버전으로 설정 됩니다. 그러나 지정 된 지정된 된 값의 여러 버전에 있는 경우 마지막에서 값 특성 컬렉션이 됩니다 사용 되는 값입니다.
 
-
 ## <a name="adaptive-view-controllers"></a>컨트롤러 적응 보기
 
 이 섹션은 어떻게 iOS 뷰 및 컨트롤러 보기를 자동으로 개발자는 응용 프로그램에서 더 적응 특성 및 크기 클래스의 개념 채택한의 세부 정보를 설명 합니다.
@@ -259,58 +218,11 @@ A `UIView` 분할 뷰 컨트롤러의 부모로 설정 및 `SetOverrideTraitColl
 
 iOS 8 개발자는 다음 표에 표시 된 대로 특성 변경에 참여 하는 데 사용할 수 있는 몇 가지 콜백을 제공 합니다.
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Phase</td>
-    <td>Callback</td>
-    <td>설명</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>설정</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>이 메서드는 특성 컬렉션을 가져옵니다 새 값으로 설정 하기 전에 특성 변경의 시작 부분에서 호출 됩니다.</li>
-        <li>특성 컬렉션의 값이 변경 되었지만 애니메이션이 모두를 수행 하기 전에 메서드 호출을 가져옵니다.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>애니메이션</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>이 메서드에 전달 되는 전환 코디네이터에는 <code>AnimateAlongside</code> 속성을 사용 하 고 개발자에 게 기본 애니메이션 함께 실행 될 애니메이션 추가 합니다.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>정리</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>전환이 발생 한 후에 자신의 정리 코드를 포함 하는 개발자를 위한 방법을 제공 합니다.</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Phase|Callback|설명|
+|--- |--- |--- |
+|설정|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>이 메서드는 특성 컬렉션을 가져옵니다 새 값으로 설정 하기 전에 특성 변경의 시작 부분에서 호출 됩니다.</li><li>특성 컬렉션의 값이 변경 되었지만 애니메이션이 모두를 수행 하기 전에 메서드 호출을 가져옵니다.</li></ul>|
+|애니메이션|`WillTransitionToTraitCollection`|이 메서드에 전달 되는 전환 코디네이터에는 `AnimateAlongside` 속성을 사용 하 고 개발자에 게 기본 애니메이션 함께 실행 될 애니메이션 추가 합니다.|
+|정리|`WillTransitionToTraitCollection`|전환이 발생 한 후에 자신의 정리 코드를 포함 하는 개발자를 위한 방법을 제공 합니다.|
 
 `WillTransitionToTraitCollection` 방법은 특성 컬렉션 변경 내용과 함께 컨트롤러 보기 애니메이션에 매우 유용 합니다. `WillTransitionToTraitCollection` 메서드는 컨트롤러 보기에서 사용할 수만 ( `UIViewController`) 특성의 다른 환경에서는 아닌 같은 `UIViews`합니다.
 
@@ -354,7 +266,7 @@ Apple iOS 8 했습니다. 다른 변경 하는 개발자 컨트롤러 보기를 
 
  [![](unified-storyboards-images/gettargetforaction.png "새 GetTargetForAction 메서드")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-이 메서드는 올바른 컨테이너 뷰-컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 예:
+이 메서드는 올바른 컨테이너 뷰-컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 예를 들어:
 
 1.  경우는 `ShowViewController` 메서드가 호출 되 면이 메서드를 구현 하는 체인에서 첫 번째 뷰 컨트롤러 이므로 탐색 컨트롤러 새 보기의 부모로 사용 됩니다.
 1.  경우는 `ShowDetailViewController` 분할 뷰 컨트롤러는의 부모로 사용 되도록 구현 하는 첫 번째 보기 컨트롤러, 메서드를 대신 호출 했습니다.
@@ -390,7 +302,7 @@ IOS 8에서에서 Apple Popover 프레젠테이션을 했습니다 ( `UIPopoverP
 
  [![](unified-storyboards-images/rotation.png "분할 뷰 컨트롤러에는 모두 마스터 표시 되 고 그림과 같이 세부 정보 뷰")](unified-storyboards-images/rotation.png#lightbox)
 
-재정의 하 여 이렇게는 `UpdateConstraintsForTraitCollection` 의 값을 기반으로 하는 뷰 컨트롤러 및 조정 하는 제약 조건에서 `VerticalSizeClass`합니다. 예:
+재정의 하 여 이렇게는 `UpdateConstraintsForTraitCollection` 의 값을 기반으로 하는 뷰 컨트롤러 및 조정 하는 제약 조건에서 `VerticalSizeClass`합니다. 예를 들어:
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -446,7 +358,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>전환 애니메이션 추가
 
-애니메이션 응용 프로그램에서 이동 적응 사진의 분할 뷰 컨트롤러에 확장 된 축소 하면 재정의 하 여 기본 애니메이션에 추가 됩니다는 `WillTransitionToTraitCollection` 보기 컨트롤러의 메서드. 예:
+애니메이션 응용 프로그램에서 이동 적응 사진의 분할 뷰 컨트롤러에 확장 된 축소 하면 재정의 하 여 기본 애니메이션에 추가 됩니다는 `WillTransitionToTraitCollection` 보기 컨트롤러의 메서드. 예를 들어:
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)

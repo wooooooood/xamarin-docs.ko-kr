@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25a10fdcfc612d85875ba684fced3f188400b71e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="graphics-and-animation"></a>그래픽 및 애니메이션
 
@@ -170,7 +170,7 @@ Canvas canvas = new Canvas(b);
 
 검색 하는 다른 방법은 `Canvas` 로 개체가 있는 상태에서 [OnDraw](https://developer.xamarin.com/api/member/Android.Views.View.OnDraw/) 제공 되는 콜백 메서드는 [보기](https://developer.xamarin.com/api/type/Android.Views.View/) 기본 클래스입니다. Android 뷰 자체를 그려야 하 고 전달 결정할 때이 메서드를 호출 하는 `Canvas` 작업할 보기에 대 한 개체입니다.
 
-캔버스 클래스 프로그래밍 방식으로 그리기 지침을 제공 하는 메서드를 노출 합니다. 예:
+캔버스 클래스 프로그래밍 방식으로 그리기 지침을 제공 하는 메서드를 노출 합니다. 예를 들어:
 
 -   [Canvas.DrawPaint](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawPaint/p/Android.Graphics.Paint/) &ndash; 지정 된 색과 전체 캔버스의 비트맵을 채웁니다.
 
@@ -445,7 +445,7 @@ protected override void OnCreate(Bundle bundle)
 - [애니메이션 데모 (샘플)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
 - [애니메이션 및 그래픽](http://developer.android.com/guide/topics/graphics/index.html)
 - [애니메이션을 사용 하 여 모바일 앱 수명을 가져올 수](http://youtu.be/ikSk_ILg3d0)
-- [AnimationDrawable](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
-- [캔버스](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
-- [개체 애니메이터](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
-- [값 애니메이터](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
+- [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
+- [캔버스](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
+- [개체 애니메이터](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
+- [값 애니메이터](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)

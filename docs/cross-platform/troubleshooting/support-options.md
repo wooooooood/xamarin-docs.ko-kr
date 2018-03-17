@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>어떤 지원 옵션은 Xamarin에 대 한 사용할 수 있습니까?
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 에 표시 된 것 처럼는 [Xamarin 지원 페이지](https://www.xamarin.com/support), 몇 가지 옵션을 사용할 수 있습니다.  다음은 몇 가지 빠른 초기 권장 사항 [스택 오버플로에서 영감을 얻은](http://stackoverflow.com/help/product-support) 가장 적합 한 옵션을 선택 하는 방법에:
 
-<table>
-    <tr>
-        <td>"이이 오류 의미" "작업 방법..." 또는</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">스택 오버플로</a> 아래는 <em>xamarin</em> 태그</td>
-    </tr>
-    <tr>
-        <td>이 문제는 결함의 Xamarin 소스 코드에서 발생 하는 것이 믿습니다.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>개념, 기능 요청 또는 새 설명서 요청 해야합니다.</td>
-        <td><a href="https://xamarin.uservoice.com">Xamarin UserVoice 페이지</a></td>
-    </tr>
-    <tr>
-        <td>어떤 리소스, 프레임 워크 또는 도구 않으면 다른 사용자에 대해 권장...? (및 다른 개방형 토론)</td>
-        <td><a href="https://forums.xamarin.com/">Xamarin 포럼</a></td>
-    </tr>
-    <tr>
-        <td>라이선스, 가격 또는 구독에 대 한 질문이 했습니다.</td>
-        <td>전자 메일 또는에서 연락처 정보를 사용 하 여 호출 된 <a href="https://www.xamarin.com/faq">FAQ</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"이이 오류 의미" "작업 방법..." 또는|[스택 오버플로](http://stackoverflow.com/questions/ask?tags=xamarin) 아래는 *xamarin* 태그|
+|이 문제는 결함의 Xamarin 소스 코드에서 발생 하는 것이 믿습니다.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|개념, 기능 요청 또는 새 설명서 요청 해야합니다.|[Xamarin UserVoice 페이지](https://xamarin.uservoice.com)|
+|어떤 리소스, 프레임 워크 또는 도구 않으면 다른 사용자에 대해 권장...? (및 다른 개방형 토론)|[Xamarin 포럼](https://forums.xamarin.com)|
+|라이선스, 가격 또는 구독에 대 한 질문이 했습니다.|전자 메일 또는에서 연락처 정보를 사용 하 여 호출 된 [FAQ](https://www.xamarin.com/faq)|
 
 Xamarin 지원 팀에 이러한 각 옵션을 모니터링 하는 데 도움이 됩니다.  모든 사용자가 자신의 신중 하 게 질문 및 활용 하 고 지식을 Xamarin 개발자 커뮤니티를 확장 하는 데 보고서를 사용 하는 것이 좋습니다.  의심 되는 오류에 대 한 Xamarin 엔지니어링 팀에서 문제를 공식적으로 추적 하려면 가능한 경우 버그 보고서를 제출 해야 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>프로그래밍 방식으로 레이아웃 제약 조건
 
@@ -51,7 +51,7 @@ _이 가이드 iOS 디자이너에에서 새로 만드는 대신 C# 코드에서
 - **ConstraintGreaterThanOrEqualTo** -관계를 정의 합니다. 여기서 `first attribute >= second attribute + [constant]` 필요에 따라 제공 된 `constant` 오프셋 값입니다.
 - **ConstraintLessThanOrEqualTo** -관계를 정의 합니다. 여기서 `first attribute <= second attribute + [constant]` 필요에 따라 제공 된 `constant` 오프셋 값입니다.
 
-예:
+예를 들어:
 
 ```csharp
 // Get the parent view's layout
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 여기서 C# 코드의 일부에 해당 수식의 주어진된 부분 다음과 같습니다.
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>수식</b></td><td><b>코드</b></td>
-</tr>
-<tr>
-<td width="50%">항목 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">1 특성</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relationship</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">승수</td><td>기본값을 지정 하지 않으므로 1.0</td>
-</tr>
-<tr>
-<td width="50%">항목 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">특성 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">상수</td><td>10.0</td>
-</tr>
-</table>
+|수식|코드|
+|---|---|
+|항목 1|PurpleView|
+|1 특성|LeadingAnchor|
+|Relationship|ConstraintEqualTo|
+|승수|기본값을 지정 하지 않으므로 1.0|
+|항목 2|OrangeView|
+|특성 2|TrailingAnchor|
+|상수|10.0|
 
 지정 된 레이아웃 제약 조건 수식 해결 하는 데 필요한 매개 변수만 제공할 뿐만 아니라 형식에 전달 된 매개 변수 형식 안전성 적용 레이아웃 앵커 메서드는 각각. 따라서 가로 제약 조건 같은 고정 `LeadingAnchor` 또는 `TrailingAnchor` 에서만 사용할 수 있습니다 다른 가로 앵커와 형식 및 승수만 제공 크기 제약 조건입니다.
 
@@ -112,7 +95,7 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 ### <a name="layout-constraints"></a>레이아웃 제약 조건
 
-직접 구성 하 여 자동 레이아웃 제약 조건을 수동으로 추가할 수 있습니다는 `NSLayoutConstraint` C# 코드에서입니다. 레이아웃 앵커를 사용 하 여 달리 정의 하 고 제약 조건에 영향을 주지 미치게 될 경우에 모든 매개 변수에 대해 값을 지정 해야 합니다. 결과적으로, 상당한 읽기가 상용구 코드 생성 결국 것입니다. 예:
+직접 구성 하 여 자동 레이아웃 제약 조건을 수동으로 추가할 수 있습니다는 `NSLayoutConstraint` C# 코드에서입니다. 레이아웃 앵커를 사용 하 여 달리 정의 하 고 제약 조건에 영향을 주지 미치게 될 경우에 모든 매개 변수에 대해 값을 지정 해야 합니다. 결과적으로, 상당한 읽기가 상용구 코드 생성 결국 것입니다. 예를 들어:
 
 ```csharp
 //// Pin the leading edge of the view to the margin

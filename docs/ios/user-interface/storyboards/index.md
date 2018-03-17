@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>스토리 보드에는 소개
 
@@ -84,32 +84,12 @@ A *Segue*, 또는 *Segue 개체*, 장면 전환을 나타내기 위해 iOS 개�
 
 [![](images/adaptivesegue.png "적응 Segues 드롭다운")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Segue</th>
-            <th>설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>표시</td>
-            <td>이 매우 비슷합니다 밀어넣기 segue 하지만 화면 콘텐츠 반영 됩니다. </td>
-        </tr>
-        <tr>
-            <td>세부 정보를 표시 합니다.</td>
-            <td>응용 프로그램 (예를 들어 iPAd에서 분할 뷰 컨트롤러)에 마스터 및 세부 정보 보기를 표시 하는 경우 콘텐츠 세부 정보 보기를 대체 합니다. ऍ प 마스터만 <strong>또는</strong> 세부 콘텐츠 보기 컨트롤러 스택 맨 바뀝니다.</td>
-        </tr>
-        <tr>
-            <td>프레젠테이션</td>
-            <td>이 모달 segue 비슷합니다 고 프레젠테이션 및 전환 스타일 허용 합니다.</td>
-        </tr>
-        <tr>
-            <td>Popover 프레젠테이션</td>
-            <td>이 경우 콘텐츠는 popover로 발생</td>
-        </tr>
-    </tbody>
-</table>
+|Segue|설명|
+|--- |--- |
+|표시|이 매우 비슷합니다 밀어넣기 segue 하지만 화면 콘텐츠 반영 됩니다.|
+|세부 정보를 표시 합니다.|응용 프로그램 (예를 들어 iPad에서 분할 뷰 컨트롤러)에 마스터 및 세부 정보 보기를 표시 하는 경우 콘텐츠 세부 정보 보기를 대체 합니다. 응용 프로그램 마스터 또는 세부 정보를 표시 하는 경우 콘텐츠 보기 컨트롤러 스택 맨을 대체 합니다.|
+|프레젠테이션|이 모달 segue 비슷합니다 고 프레젠테이션 및 전환 스타일 허용 합니다.|
+|Popover 프레젠테이션|이 경우 콘텐츠는 popover로 발생|
 
 ### <a name="transferring-data-with-segues"></a>Segues 사용 하 여 데이터를 전송 합니다.
 

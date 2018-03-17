@@ -7,12 +7,12 @@ ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: 5db4c735205753810466c26535ba9e2f525709a8
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/16/2018
+ms.openlocfilehash: 31114df0b631aea909e82f3a8b836d5ef922d2c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -37,6 +37,10 @@ Android 착용 소개, 설치 하 고, 마모 개발을 위해 컴퓨터를 구�
 ##  <a name="deployment--testingandroidweardeploy-testindexmd"></a>[배포 및 테스트](~/android/wear/deploy-test/index.md)
 
 마모에 대해 구성 된 Android 에뮬레이터 또는 Android 착용 장치에 쓰는 유형 Android 앱을 배포 하는 방법에 설명 합니다. 디버깅 팁 및 개발 컴퓨터 및 Android 장치 간에 Bluetooth 연결을 설정 하는 방법에 대 한 정보가 포함 됩니다.
+
+##  <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Api 쓰는 유형](https://developer.android.com/reference/android/support/wearable)
+
+Android 개발자 사이트와 같은 주요 착용 Api에 대 한 자세한 정보를 제공 [착용 식 활동](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [의도](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [인증](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [ 복잡성](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [렌더링 문제가](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [알림](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html), [뷰](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), 및 [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html)합니다.
 
 
 

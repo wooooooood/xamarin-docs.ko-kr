@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: b78ade19efed92ab3b2d8ba790f2d7334472bab4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09858bd7902b44bbedd96f1be9c9c827131ee16f
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="native-types"></a>네이티브 형식
 
@@ -27,28 +27,11 @@ ms.lasthandoff: 02/27/2018
 
 다음 표에서 이러한 새로운 32/64 비트 환경에 맞게 데이터 유형을의 변화를 보여줍니다.
 
-<table>
-        <tr>
-            <th>네이티브 형식</th>
-            <th>32 비트 지원 형식</th> 
-            <th>64 비트 지원 형식</th>
-        </tr>
-        <tr>
-            <td><code>System.nint</code></td>
-        <td><code>System.Int32</code> (<code>int</code>)</td>
-        <td><code>System.Int64</code> (<code>long</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nuint</code></td>
-        <td><code>System.UInt32</code> (<code>uint</code>)</td>
-        <td><code>System.UInt64</code> (<code>ulong</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nfloat</code></td>
-        <td><code>System.Single</code> (<code>float</code>)</td>
-        <td><code>System.Double</code> (<code>double</code>)</td>
-        </tr>
-    </table>
+|네이티브 형식|32 비트 지원 형식|64 비트 지원 형식|
+|--- |--- |--- |
+|`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
+|`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
+|`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
 C# 코드를 찾을 차이가 오늘 유사할 것와 동일한 방식으로 이러한 이름을 선택 했습니다.
 
@@ -76,32 +59,15 @@ CoreGraphics 함께 사용 되는 포인트, 크기 및 사각형 데이터 형�
 
 이동할 때 **통합**, 인스턴스를 대체 해야 `System.Drawing` 와 해당 `CoreGraphics` 함수와 다음 표에 나와 있는 것 처럼:
 
-<table>
-        <tr>
-            <th>System.Drawing에서 이전 종류</th>
-            <th>새 데이터 형식 CoreGraphics</th> 
-            <th>설명</th>
-        </tr>
-        <tr>
-        <td><code>RectangleF</code></td>
-        <td><code>CGRect</code></td>
-        <td>부동 지점 사각형 정보를 포함 합니다.  </td>
-        </tr>
-        <tr>
-        <td><code>SizeF</code></td>
-        <td><code>CGSize</code></td>
-        <td>보류 부동 소수점 크기 정보 (너비, 높이)</td>
-        </tr>
-        <tr>
-        <td><code>PointF</code></td>
-        <td><code>CGPoint</code></td>
-        <td>보유 부동 소수점, 지점 정보 (X, Y)</td>
-        </tr>
-    </table>
+|System.Drawing에서 이전 종류|새 데이터 형식 CoreGraphics|설명|
+|--- |--- |--- |
+|`RectangleF`|`CGRect`|부동 지점 사각형 정보를 포함 합니다.|
+|`SizeF`|`CGSize`|보류 부동 소수점 크기 정보 (너비, 높이)|
+|`PointF`|`CGPoint`|보유 부동 소수점, 지점 정보 (X, Y)|
 
 이전 데이터 사용 되는 형식 부동 소수점 데이터 구조의 요소를 저장 하는 동안 하나 사용 하 여 새 `System.nfloat`합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 간 앱에서 네이티브 형식 사용](~/cross-platform/macios/native-types-cross-platform.md)
-- [클래식 vs 통합 API 차이점](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [플랫폼 간 앱에서의 네이티브 형식 작업](~/cross-platform/macios/native-types-cross-platform.md)
+- [클래식 vs 통합 API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

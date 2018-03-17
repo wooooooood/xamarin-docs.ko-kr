@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>Touch ID
 
@@ -39,11 +39,8 @@ Touch ID 및 해당 가치를 완벽 하 게 이해 하려면 살펴볼 키 집�
 
 먼저 응용 프로그램 암호가 있는지 확인 키 집합에 쿼리해야 합니다. 존재 하지 않는 경우 메시지를 표시 하려면 암호는 사용자 요청 계속 되지 않습니다. 새 암호를 묻는 메시지 암호를 업데이트 하는 경우에 키 집합에 업데이트 된 값에 전달 합니다.
 
-
-> ℹ️ **참고**: 된 비밀을 데이터베이스에서 수신 것 바로 모범 사례는 아닙니다 이지만 있어야 해당 없는 비밀 메모리에 보관 됩니다. 필요에 따라 long 및 절대적으로 할당 하지 말아야 전역 변수에 따라만 대 한 암호를 유지 해야!
-
-
-
+> [!NOTE]
+> 키 집합에서 검색 되는 암호를 사용 하 여 메모리에서 데이터에 대 한 모든 참조를 제거 해야 합니다. 전역 변수를 할당 하지 않습니다.
 
 ## <a name="keychain-acl-and-touch-id"></a>키 집합 ACL과 터치 ID
 
@@ -53,32 +50,11 @@ Touch ID 및 해당 가치를 완벽 하 게 이해 하려면 살펴볼 키 집�
 
 현재 iOS 8 있습니다는 이제 새 사용자 상태 정책 `SecAccessControl`, 하는 iPhone 5 이상에서 보안 영토에 의해 적용 됩니다. 방금 어떻게 장치 구성 수에 영향을 줄 정책 평가 아래 테이블에서 볼 수 있습니다.
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>장치 구성</td>
-    <td>정책 평가</td>
-    <td>백업 메커니즘</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>암호 없이 장치</td>
-    <td>권한 없음</td>
-    <td>없음</td>
-</tr>
-<tr>
-    <td>암호와 함께 장치</td>
-    <td>암호 필요</td>
-    <td>없음</td>
-</tr>
-<tr>
-    <td>Touch ID 사용 하 여 장치</td>
-    <td>Touch ID를 선호합니다.</td>
-    <td>암호를 허용합니다.</td>
-</tr>
-</tbody>
-</table>
+|장치 구성|정책 평가|백업 메커니즘|
+|--- |--- |--- |
+|암호 없이 장치|권한 없음|없음|
+|암호와 함께 장치|암호 필요|없음|
+|Touch ID 사용 하 여 장치|Touch ID를 선호합니다.|암호를 허용합니다.|
 
 보안 영토 내 모든 작업에 서로 신뢰할 수 있습니다. 즉, 키 집합 항목 암호 해독 권한을 부여 하려면 Touch ID 인증 결과 사용할 수 있습니다. 또한 Secure 영토 있는 경우 사용자는으로 되돌려야 할 암호를 사용 하 여 실패 한 Touch ID 검색 작업의 카운터를 유지 합니다.
 새로운 프레임 워크 8, iOS에서 호출 _로컬 인증_, 장치 내에서 인증 하는이 과정을 지원 합니다. 다음 섹션에서 살펴보겠습니다.

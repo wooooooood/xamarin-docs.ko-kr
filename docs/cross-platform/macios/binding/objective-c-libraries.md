@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 8674a8b846573c27e54660ae3bc065e07561f411
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 Objective C 라이브러리
 
@@ -528,7 +528,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열 또는 정수 값을 포함 합니다. 일반적으로 특정 알림 메시지를 나타내는 문자열로 및 사전에 키로 사용 됩니다.
 
-필드를 바인딩하려면 프로그램 인터페이스 정의 파일에 속성을 추가 하 고 사용 하 여 속성 데코레이팅는 [[Field]](~/cross-platform/macios/binding/binding-types-reference.md) 특성입니다. 이 특성에는 매개 변수 사용: C 이름을 조회 하는 기호입니다. 예:
+필드를 바인딩하려면 프로그램 인터페이스 정의 파일에 속성을 추가 하 고 사용 하 여 속성 데코레이팅는 [[Field]](~/cross-platform/macios/binding/binding-types-reference.md) 특성입니다. 이 특성에는 매개 변수 사용: C 이름을 조회 하는 기호입니다. 예를 들어:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -636,7 +636,7 @@ interface MyType {
 
 (반환 값)에 대 한 메서드, 매개 변수 및 사용 하 여 속성 데코레이팅 할 수 있습니다 [[BindAs]](~/cross-platform/macios/binding/binding-types-reference.md)합니다. 유일한 제한 사항은 구성원은 **하지 않아야** 안에 `[Protocol]` 또는 `[Model]` 인터페이스입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -655,7 +655,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [[BindAs] ](~/cross-platform/macios/binding/binding-types-reference.md) 도 배열을 지원 `NSNumber` `NSValue` 및 `NSString`(열거형)입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -684,7 +684,7 @@ Xamarin.iOS 바인딩 생성기 알림 바인딩하는 개발자를 위한 지�
 
 이 특성을 사용 하 여 알림을 하지 않는 페이로드를 전송 하는 인수 없이 하거나 지정할 수 있습니다는 `System.Type` "EventArgs"로 끝나는 이름의 일반적으로 API 정의에서 다른 인터페이스를 참조 하는 합니다. 생성기 바뀝니다 인터페이스 클래스 서브클래싱하는 `EventArgs` 여기에 나열 된 속성을 모두 포함 됩니다. `[Export]` 특성은 값을 인출 Objective-c 사전을 조회 하는 데 사용 되는 키의 이름을 나열 하는 EventArgs 클래스에 사용 해야 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 interface MyClass {
@@ -1021,155 +1021,31 @@ interface XyzPanel {
 
 다음 표에서 Xamarin.iOS 세계 Objective C와 CocoaTouch 세계에서 형식을 매핑하 해야 하는 방법을 보여 줍니다.
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-      <caption> 형식 매핑 </caption>
-      <tbody>
-        <tr>
-          <td>
-Objective C 형식 이름 </td>
-          <td>
-Xamarin.iOS 통합 API 유형 </td>
-        </tr>
-        <tr>
-          <td>
-BOOL, GLboolean </td>
-          <td>
-bool </td>
-        </tr>
-        <tr>
-          <td>
-NSInteger </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSUInteger </td>
-          <td>
-nuint </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval / NSTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-NSString (<a href="~/ios/internals/api-design/nsstring.md">NSString 바인딩에 더 많은</a>) </td>
-          <td>
-string </td>
-        </tr>
-        <tr>
-          <td>
-char * </td>
-          <td>
-            <a href="~/cross-platform/macios/binding/binding-types-reference.md#plainstring"> [PlainString] </a> 문자열 </td>
-        </tr>
-        <tr>
-          <td>
-CGRect </td>
-          <td>
-CGRect </td>
-        </tr>
-        <tr>
-          <td>
-CGPoint </td>
-          <td>
-CGPoint </td>
-        </tr>
-        <tr>
-          <td>
-CGSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-CGFloat, GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-CoreFoundation 형식 (CF *) </td>
-          <td>
-CoreFoundation.CF* </td>
-        </tr>
-        <tr>
-          <td>
-반짝임 </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-Foundation 형식 (NS *) </td>
-          <td>
-Foundation.NS* </td>
-        </tr>
-        <tr>
-          <td>
-ID </td>
-          <td>
-Foundation.NSObject </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-NSTextAlignment </td>
-          <td>
-UITextAlignment </td>
-        </tr>
-        <tr>
-          <td>
-SEL </td>
-          <td>
-ObjCRuntime.Selector </td>
-        </tr>
-        <tr>
-          <td>
-dispatch_queue_t </td>
-          <td>
-CoreFoundation.DispatchQueue </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-CFIndex </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nuint </td>
-        </tr>
-      </tbody>
-    </table>
+|Objective C 형식 이름|Xamarin.iOS 통합 API 유형|
+|---|---|
+|`BOOL`, `GLboolean`|`bool`|
+|`NSInteger`|`nint`|
+|`NSUInteger`|`nuint`|
+|`CFTimeInterval` / `NSTimeInterval`|`double`|
+|`NSString` ([바인딩에 더 `NSString` ](~/ios/internals/api-design/nsstring.md))|`string`|
+|`char *`|`string` (참고 항목: [PlainString 특성](~/cross-platform/macios/binding/binding-types-reference.md#plainstring))|
+|`CGRect`|`CGRect`|
+|`CGPoint`|`CGPoint`|
+|`CGSize`|`CGSize`|
+|`CGFloat`, `GLfloat`|`nfloat`|
+|CoreFoundation 형식 (`CF*`)|`CoreFoundation.CF*`|
+|`GLint`|`nint`|
+|`GLfloat`|`nfloat`|
+|Foundation 형식 (`NS*`)|`Foundation.NS*`|
+|`id`|`Foundation`.`NSObject`|
+|`NSGlyph`|`nint`|
+|`NSSize`|`CGSize`|
+|`NSTextAlignment`|`UITextAlignment`|
+|`SEL`|`ObjCRuntime.Selector`|
+|`dispatch_queue_t`|`CoreFoundation.DispatchQueue`|
+|`CFTimeInterval`|`double`|
+|`CFIndex`|`nint`|
+|`NSGlyph`|`nuint`|
 
  <a name="Arrays" />
 
@@ -1450,7 +1326,7 @@ Xamarin.iOS 라이브러리를 연결 하는 방법을 알려 주어 야, 이렇
 
 위의 예제에서는 연결 `libMyLibrary.a`, `libSystemLibrary.dylib` 및 `CFNetwork` framework 라이브러리를 최종 실행 파일에 있습니다.
 
-어셈블리 수준의 이용할 수 있습니다 또는 `LinkWithAttribute`, 계약 파일에 포함할 수 있는 (예: `AssemblyInfo.cs`). 사용 하는 경우는 `LinkWithAttribute`, 하면 바인딩, 대로 확인이 네이티브 라이브러리가 응용 프로그램과 함께 포함 됩니다 때 네이티브 라이브러리 해야 합니다. 예:
+어셈블리 수준의 이용할 수 있습니다 또는 `LinkWithAttribute`, 계약 파일에 포함할 수 있는 (예: `AssemblyInfo.cs`). 사용 하는 경우는 `LinkWithAttribute`, 하면 바인딩, 대로 확인이 네이티브 라이브러리가 응용 프로그램과 함께 포함 됩니다 때 네이티브 라이브러리 해야 합니다. 예를 들어:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

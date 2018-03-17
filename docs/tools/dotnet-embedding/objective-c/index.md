@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Objective C 지원
 
@@ -74,7 +74,7 @@ Api를 노출 하는 `System.String` 형식으로 변환 됩니다 `NSString`합
 
 ### <a name="subscripting"></a>첨자
 
-관리 되는 인덱싱된 속성은 개체 첨자도 변환 됩니다. 예:
+관리 되는 인덱싱된 속성은 개체 첨자도 변환 됩니다. 예를 들어:
 
 ```csharp
     public bool this[int index] {
@@ -201,13 +201,11 @@ ObjC 연산자를 지원 하지 않는 연산자 클래스 선택기로 변환�
 
 변환할 때 `DateTime` 를 `NSDate` DateTime의 `Kind` 속성 고려 됩니다.
 
-<table>
-<tr><th> 종류         </th><th> 결과                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Utc          </td><td> 그대로 제공된 된 DateTime 개체를 사용 하 여 변환이 수행 됩니다.                                  </td></tr>
-<tr><td> 로컬        </td><td> 호출 결과 `ToUniversalTime ()` 변환에 제공 된 DateTime 개체를 사용 합니다. </td></tr>
-<tr><td> 지정되지 않음  </td><td> 제공된 된 DateTime 개체가 UTC 종류와 동일한 동작으로 간주 됩니다 Utc = = 합니다.                </td></tr>
-</table>
+|종류|결과                                                                                            |
+|---|---|
+|Utc|제공 된를 사용 하 여 변환이 수행 되어 `DateTime` 그대로 개체입니다.|
+|로컬|호출 결과 `ToUniversalTime()` 을 제공 된 `DateTime` 개체 변환에 사용 됩니다.|
+|지정되지 않음|제공 된 `DateTime` 개체 종류와 동일한 동작 UTC로 간주 됩니다 Utc = = 합니다.|
 
 다음 수식을 사용 하 여 변환이 수행 됩니다.
 
