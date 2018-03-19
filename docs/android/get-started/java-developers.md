@@ -7,12 +7,12 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
@@ -433,342 +433,48 @@ Xamarin의 비동기 프로그래밍 기능 지원에 대한 자세한 내용은
 
 Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 또한 이 표에 나열된 것과 같이 C#에서 동등하지만 다른 이름이 지정된 Java 키워드가 많이 있습니다.
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>Java</strong>
-    </th>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>설명</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <code>boolean</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx">bool</a>
-      </td>
-      <td valign="top">
-<code>true</code> 및 <code>false</code> 부울 값을 선언하는 데 사용됩니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>extends</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-상속받을 클래스 및 인터페이스 앞에 나옵니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>implements</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-상속받을 클래스 및 인터페이스 앞에 나옵니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>import</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx">using</a>
-      </td>
-      <td valign="top">
-네임스페이스에서 형식을 가져오며, 네임스페이스 별칭을 만드는 데도 사용됩니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="final">
-        <code>final</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/88c54tsw.aspx">sealed</a>
-      </td>
-      <td valign="top">
-클래스 파생을 방지합니다. 메서드 및 속성이 파생 클래스에서 재정의되지 않도록 합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>instanceof</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/scekt9xw.aspx">is</a>
-      </td>
-      <td valign="top">
-개체가 지정된 형식과 호환되는지 여부를 평가합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>native</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/e59b22c5.aspx">extern</a>
-      </td>
-      <td valign="top">
-외부적으로 구현된 메서드를 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>package</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx">namespace</a>
-      </td>
-      <td valign="top">
-관련 개체 집합의 범위를 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>T...</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/w5zay9db.aspx">params T[]</a>
-      </td>
-      <td valign="top">
-가변 개수의 인수를 사용하는 메서드 매개 변수를 지정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>super</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx">base</a>
-      </td>
-      <td valign="top">
-파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="synchronized">
-        <code>synchronized</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx">lock</a>
-      </td>
-      <td valign="top">
-잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Java|C#|설명|
+|---|---|---|
+|`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|true 및 false 부울 값을 선언하는 데 사용됩니다.|
+|`extends`|`:`|상속받을 클래스 및 인터페이스 앞에 나옵니다.|
+|`implements`|`:`|상속받을 클래스 및 인터페이스 앞에 나옵니다.|
+|`import`|[using](https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx)|네임스페이스에서 형식을 가져오며, 네임스페이스 별칭을 만드는 데도 사용됩니다.|
+|`final`|[sealed](https://msdn.microsoft.com/en-us/library/88c54tsw.aspx)|클래스 파생을 방지합니다. 메서드 및 속성이 파생 클래스에서 재정의되지 않도록 합니다.|
+|`instanceof`|[is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx)|개체가 지정된 형식과 호환되는지 여부를 평가합니다.|
+|`native`|[extern](https://msdn.microsoft.com/en-us/library/e59b22c5.aspx)|외부적으로 구현된 메서드를 선언합니다.|
+|`package`|[namespace](https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx)|관련 개체 집합의 범위를 선언합니다.|
+|`T...`|[params T](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)|가변 개수의 인수를 사용하는 메서드 매개 변수를 지정합니다.|
+|`super`|[base](https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx)|파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.|
+|`synchronized`|[lock](https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
 
 
 또한 C#에 고유하고 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://developer.xamarin.com/samples/android/all/)를 읽을 때 유용하게 참조할 수 있습니다.
 
-
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>설명</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx">as</a>
-      </td>
-      <td valign="top">
-호환되는 참조 형식 또는 null 사용 가능 형식 간의 변환을 수행합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156513.aspx">async</a>
-      </td>
-      <td valign="top">
-메서드 또는 람다 식이 비동기임을 지정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156528.aspx">await</a>
-      </td>
-      <td valign="top">
-작업이 완료될 때까지 메서드 실행을 일시 중단합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/5bdb6693.aspx">byte</a>
-      </td>
-      <td valign="top">
-부호 없는 8비트 정수 형식입니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/900fyy8e.aspx">delegate</a>
-      </td>
-      <td valign="top">
-메서드 또는 무명 메서드를 캡슐화하는 데 사용됩니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/sbbt4032.aspx">enum</a>
-      </td>
-      <td valign="top">
-명명된 상수 집합인 열거형을 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/8627sbea.aspx">event</a>
-      </td>
-      <td valign="top">
-게시자 클래스에서 이벤트를 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/f58wzh21.aspx">fixed</a>
-      </td>
-      <td valign="top">
-변수가 다시 할당되지 않도록 방지합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Get </td>
-      <td valign="top">
-속성 값을 검색하는 접근자 메서드를 정의합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/dd469484.aspx">in</a>
-      </td>
-      <td valign="top">
-제네릭 인터페이스에서 더 적게 파생된 형식을 수락하는 매개 변수를 사용하도록 설정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx">object</a>
-      </td>
-      <td valign="top">
-.NET Framework의 <code>Object</code> 형식에 대한 별칭입니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx">out</a>
-      </td>
-      <td valign="top">
-매개 변수 한정자 또는 제네릭 형식 매개 변수 선언입니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx">override</a>
-      </td>
-      <td valign="top">
-상속된 멤버의 구현을 확장하거나 수정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/6b0scde8.aspx">partial</a>
-      </td>
-      <td valign="top">
-정의를 선언하여 여러 파일로 분할하거나 메서드 정의를 해당 구현에서 분할합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx">readonly</a>
-      </td>
-      <td valign="top">
-클래스 멤버가 선언 시에만 또는 클래스 생성자에서 할당될 수 있음을 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/14akc2c7.aspx">ref</a>
-      </td>
-      <td valign="top">
-인수를 값이 아닌 참조로 전달하도록 합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ms228368.aspx">set</a>
-      </td>
-      <td valign="top">
-속성 값을 설정하는 접근자 메서드를 정의합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/362314fe.aspx">string</a>
-      </td>
-      <td valign="top">
-.NET Framework의 <code>String</code> 형식에 대한 별칭입니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ah19swz4.aspx">struct</a>
-      </td>
-      <td valign="top">
-관련 변수 그룹을 캡슐화하는 값 형식입니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/58918ffs.aspx">typeof</a>
-      </td>
-      <td valign="top">
-개체의 형식을 가져옵니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/bb383973.aspx">var</a>
-      </td>
-      <td valign="top">
-암시적으로 형식화된 지역 변수를 선언합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx">value</a>
-      </td>
-      <td valign="top">
-클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx">virtual</a>
-      </td>
-      <td valign="top">
-파생 클래스에서 메서드를 재정의할 수 있도록 합니다.
-      </td>
-    </tr>
-  </tbody>
-</table>
+|C#|설명|
+|---|---|
+|[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|호환되는 참조 형식 또는 null 사용 가능 형식 간의 변환을 수행합니다.|
+|[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|메서드 또는 람다 식이 비동기임을 지정합니다.|
+|[await](https://msdn.microsoft.com/en-us/library/hh156528.aspx)|작업이 완료될 때까지 메서드 실행을 일시 중단합니다.|
+|[byte](https://msdn.microsoft.com/en-us/library/5bdb6693.aspx)|부호 없는 8비트 정수 형식입니다.|
+|[delegate](https://msdn.microsoft.com/en-us/library/900fyy8e.aspx)|메서드 또는 무명 메서드를 캡슐화하는 데 사용됩니다.|
+|[enum](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)|명명된 상수 집합인 열거형을 선언합니다.|
+|[event](https://msdn.microsoft.com/en-us/library/8627sbea.aspx)|게시자 클래스에서 이벤트를 선언합니다.|
+|[fixed](https://msdn.microsoft.com/en-us/library/f58wzh21.aspx)|변수가 다시 할당되지 않도록 방지합니다.|
+|`get`|속성 값을 검색하는 접근자 메서드를 정의합니다.|
+|[in](https://msdn.microsoft.com/en-us/library/dd469484.aspx)|제네릭 인터페이스에서 더 적게 파생된 형식을 수락하는 매개 변수를 사용하도록 설정합니다.|
+|[object](https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx)|.NET Framework의 개체 형식에 대한 별칭입니다.|
+|[out](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx)|매개 변수 한정자 또는 제네릭 형식 매개 변수 선언입니다.|
+|[override](https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx)|상속된 멤버의 구현을 확장하거나 수정합니다.|
+|[partial](https://msdn.microsoft.com/en-us/library/6b0scde8.aspx)|정의를 선언하여 여러 파일로 분할하거나 메서드 정의를 해당 구현에서 분할합니다.|
+|[readonly](https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx)|클래스 멤버가 선언 시에만 또는 클래스 생성자에서 할당될 수 있음을 선언합니다.|
+|[ref](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx)|인수를 값이 아닌 참조로 전달하도록 합니다.|
+|[set](https://msdn.microsoft.com/en-us/library/ms228368.aspx)|속성 값을 설정하는 접근자 메서드를 정의합니다.|
+|[string](https://msdn.microsoft.com/en-us/library/362314fe.aspx)|.NET Framework의 문자열 형식에 대한 별칭입니다.|
+|[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|관련 변수 그룹을 캡슐화하는 값 형식입니다.|
+|[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|개체의 형식을 가져옵니다.|
+|[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|암시적으로 형식화된 지역 변수를 선언합니다.|
+|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
+|[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
 
 
 <a name="interop" />

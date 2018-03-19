@@ -1,6 +1,6 @@
 ---
 title: "무선 배포"
-description: "이 미리 보기 기능을 사용하면 네트워크 연결을 통해 iOS 또는 Apple TV 장치에 배포할 수 있습니다."
+description: "이 기능을 사용하면 네트워크 연결을 통해 iOS 또는 Apple TV 장치에 배포할 수 있습니다."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -8,47 +8,40 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: 11961a21a7c4188c505c822a35531036fd953405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7566669fb7d607ca6616b88cb32b770537146c94
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="wireless-deployment"></a>무선 배포
 
-_이 미리 보기 기능을 사용하면 네트워크 연결을 통해 iOS 또는 Apple TV 장치에 배포할 수 있습니다._
-
-![미리 보기 릴리스](~/media/shared/preview.png)
-
-개발자 워크플로에서 중요한 부분은 장치에 배포하는 것입니다. Xcode 9은 앱을 배포하고 디버그할 때마다 장치를 유선으로 연결하지 않고 네트워크를 통해 iOS 장치 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 Mac용 Visual Studio 및 Visual Studio 15.6 릴리스에 도입되었으며, 현재는 미리 보기 상태입니다.
+개발자 워크플로에서 중요한 부분은 장치에 배포하는 것입니다. Xcode 9은 앱을 배포하고 디버그할 때마다 장치를 유선으로 연결하지 않고 네트워크를 통해 iOS 장치 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 Mac용 Visual Studio 7.4 및 Visual Studio 15.6 릴리스에 도입되었습니다.
 
 이 가이드에서는 네트워크를 통해 페어링하고 장치에 배포하는 방법을 설명합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-무선 배포는 Mac용 Visual Studio 및 Visual Studio에서 **미리 보기** 기능으로 제공됩니다.
-
+무선 배포는 Mac용 Visual Studio 및 Visual Studio에서 기능으로 제공됩니다.
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- Mac용 Visual Studio의 최신 미리 보기 버전 
-    - 이 버전을 설치하려면 Mac용 Visual Studio에서 [알파 또는 베타 채널](https://docs.microsoft.com/en-us/visualstudio/mac/update)로 전환합니다.
+- 최신 버전의 Mac용 Visual Studio
 - Xcode 9.0 이상
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-- Visual Studio 최신 [미리 보기 버전](https://www.visualstudio.com/vs/preview/)
+- 최신 버전의 Visual Studio
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치
 
 Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 - macOS 10.12.4
-- Mac용 Visual Studio 미리 보기
-    - 설치하려면 Mac용 Visual Studio에서 [알파 또는 베타 채널](https://docs.microsoft.com/en-us/visualstudio/mac/update)로 전환합니다.
+- Visual Studio for Mac
 - Xcode 9.0 이상
 
 -----

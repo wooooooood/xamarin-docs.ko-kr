@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="connection-troubleshooting"></a>연결 문제 해결
 
@@ -240,7 +240,6 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
 4. .zip 파일을 열면 아래 예제와 비슷한 파일 목록이 표시됩니다. 연결 오류에서 가장 중요한 파일은 **\*Ide.log** 및 **\*Ide.svclog** 파일입니다. 두 파일에는 동일한 메시지가 약간 다른 형식으로 포함되어 있습니다. **.svclog**는 XML이고, 메시지를 탐색하려는 경우에 유용합니다. **.log**는 일반 텍스트이고, 명령줄 도구를 사용하여 메시지를 필터링하려는 경우에 유용합니다.
 
-
     모든 메시지를 탐색하려면 **.svclog** 파일을 선택하여 엽니다.
 
     [![](troubleshooting-images/troubleshooting-image13.png "svclog 파일 선택")](troubleshooting-images/troubleshooting-image13.png#lightbox)
@@ -319,7 +318,7 @@ Mac에서 Xcode를 시작한 후 Apple 개발자 계정에 로그인되었는지
 
 관련 버그 [#40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781).
 
-Visual Studio가 MEF 구성 요소 캐시 새로 고침에 실패할 경우 이 문제가 발생할 수 있습니다. 이 경우 Visual Studio 확장([https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd))을 설치하면 도움이 될 수 있습니다.
+Visual Studio가 MEF 구성 요소 캐시 새로 고침에 실패할 경우 이 문제가 발생할 수 있습니다. 그러한 경우 다음 Visual Studio 확장을 설치하면 도움이 될 수 있습니다. [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 
 이렇게 하면 Visual Studio MEF 구성 요소 캐시를 삭제하여 캐시 손상으로 인한 문제가 해결됩니다.
 

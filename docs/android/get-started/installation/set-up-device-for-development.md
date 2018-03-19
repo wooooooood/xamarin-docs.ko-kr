@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 26a543cc096d96346cd4503bf4fa2382f8ca9b78
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-device-for-development"></a>개발용 장치 설정
 
@@ -119,8 +119,7 @@ Windows 7에서 드라이버를 설치하려면:
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Windows 8에서 확인되지 않은 드라이버 설치
 
-Windows에서 확인되지 않은 드라이버를 설치하기 위해 추가 단계가 필요할 수 있습니다.
-8. 다음 단계에서는 Galaxy Nexus용 드라이버를 설치하는 방법에 대해 설명합니다.
+Windows 8에서 확인되지 않은 드라이버를 설치하기 위해 추가 단계가 필요할 수 있습니다. 다음 단계에서는 Galaxy Nexus용 드라이버를 설치하는 방법에 대해 설명합니다.
 
 1.  **Windows 8 고급 부팅 옵션에 액세스** - 이 단계에는 고급 부팅 옵션에 액세스하기 위해 컴퓨터를 다시 부팅하는 작업이 포함됩니다. 명령줄 프롬프트를 시작하고 다음 명령을 사용하여 컴퓨터를 다시 부팅합니다.
 

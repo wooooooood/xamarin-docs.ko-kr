@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>자동 프로비저닝
 
@@ -36,21 +36,13 @@ IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합�
 
 2. **Info.plist** 파일을 엽니다.
 
-    ![Info.plist 파일](automatic-provisioning-images/image1.png)
-
-3. **서명** 섹션의 **팀** 드롭다운에서 해당하는 팀을 선택합니다.
+3. **서명** 섹션에서 **자동 프로비저닝**을 선택합니다.
 
     ![팀 선택기 드롭다운](automatic-provisioning-images/image2.png)
 
-4. 아래 그림과 같이 **자동으로 서명 관리** 확인란을 선택합니다. 그러면 자동 서명 프로세스가 시작되고, Mac용 Visual Studio가 앱 ID, 프로비저닝 프로필 및 서명 ID를 생성하고 서명에 사용할 이러한 아티팩트를 설정합니다. 이 확인란을 선택하면 서명 ID를 선택하는 데 사용되는 수동 컨트롤이 비활성화됩니다.
+4. **팀** 드롭다운에서 팀을 선택합니다.
 
-    ![자동으로 팀 관리 옵션](automatic-provisioning-images/image3.png)
-
-5. 새로 생성된 인증서 및 프로비저닝 프로필을 사용하려면 프로젝트 파일을 수정해야 함을 알리는 다음과 같은 대화 상자가 표시됩니다.
-
-    ![프로젝트 파일을 수정해야 함을 알리는 대화 상자](automatic-provisioning-images/image4.png)
-
-6. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성되고 표시됩니다.
+6. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성됩니다.
 
     ![성공적으로 생성된 인증서와 프로필](automatic-provisioning-images/image5.png)
 

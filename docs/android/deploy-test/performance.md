@@ -8,15 +8,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 
-_Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 아티클에서는 이러한 기술에 대해 설명합니다._
+_Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다._
 
 ## <a name="performance-overview"></a>성능 개요
 
@@ -37,7 +37,7 @@ Xamarin.Android로 빌드된 응용 프로그램의 성능과 인식 성능을 �
 
 
 > [!NOTE]
-> 이 아티클을 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 응용 프로그램의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
+> 이 문서를 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 응용 프로그램의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
 
 <a name="optimizelayout" />
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 사용자가 스크롤하면 [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)은 `GetView` 재정의를 호출하여 표시할 새 보기를 요청합니다. 가능하면 `convertView` 매개 변수에서 사용되지 않은 보기를 전달합니다. 이 값이 `null`인 경우 코드에서는 새 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/) 인스턴스를 만들고, 그렇지 않으면 `convertView` 속성을 다시 설정하고 다시 사용합니다.
 
-자세한 내용은 [데이터로 ListView 채우기](~/android/user-interface/layouts/list-view/populating.md)에서 [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md)을 참조하세요.
+자세한 내용은 [데이터로 ListView 채우기](~/android/user-interface/layouts/list-view/populating.md)에서 [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use)을 참조하세요.
 
 <a name="removeeventhandlers" />
 

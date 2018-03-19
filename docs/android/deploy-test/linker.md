@@ -6,12 +6,12 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: bfbd95d33e442d31e94bd8c6ed888741f88d1188
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 971c663a93a837e40e82aa63e24ce4935c44c85a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
@@ -19,37 +19,10 @@ Xamarin.Android 응용 프로그램은 *링커*를 사용하여 응용 프로그
 
 예를 들어 [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/) 샘플은 다음과 같습니다.
 
-<table border="0" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-        <strong>구성</strong>
-      </td>
-      <td>
-        <strong>1.2.0 크기</strong>
-      </td>
-      <td>
-        <strong>4.0.1 크기</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-연결 없이 릴리스: </td>
-      <td>
-14.0MB </td>
-      <td>
-16.0MB </td>
-    </tr>
-    <tr>
-      <td>
-연결 없이 릴리스: </td>
-      <td>
-4.2MB </td>
-      <td>
-2.9MB </td>
-    </tr>
-  </tbody>
-</table>
+|구성|1.2.0 크기|4.0.1 크기|
+|---|---|---|
+|연결 없이 릴리스:|14.0MB|16.0MB|
+|연결 없이 릴리스:|4.2MB|2.9MB|
 
 연결 결과 1.2.0에서 원래(연결되지 않은) 패키지 크기의 30%, 4.0.1에서 연결되지 않은 패키지 크기의 18%에 해당하는 패키지가 생성됩니다.
 

@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 2ad3bd55ae0abc44b0c9757bd79c2711eddf171d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manual-provisioning"></a>수동 프로비전
 
@@ -236,7 +236,8 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-프로젝트 옵션 > iOS 번들 서명 아래에서 팀 선택기를 없음으로 설정해야 합니다.
+> [!IMPORTANT]
+> 시작하기 전에 **Info.plist**에서 **수동 프로비저닝**을 선택해야 합니다.
 
 1. 장치를 Mac에 연결합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다(앱 ID가 와일드카드인 경우 제외).
