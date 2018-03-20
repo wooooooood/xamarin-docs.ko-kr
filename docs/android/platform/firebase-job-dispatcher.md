@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
@@ -27,7 +27,7 @@ Android 응용 프로그램을 사용자에 응답성을 유지 하는 가장 �
 Android에는 이미 여러 Api를 이용 하 게 백그라운드에서 작업을 수행 하는 포괄적인 솔루션 이지만이 중 하나도 없는를 제공 합니다.
 
 * **[하지만 의도 서비스](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; 의도 서비스는 작업을 예약할 수 없으므로 제공 작업을 수행 하기 위한 훌륭한 합니다.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash; 이러한 Api 작업을 예약할 수 있지만 실제로 작업을 수행할 수 없으므로 제공 하도록 허용 합니다. 또한는 AlarmManager 허용 시간 기반 제약 조건, 즉, 특정 시간이 나 특정 기간을 경과한 후 경보 발생 합니다. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; 이러한 Api 작업을 예약할 수 있지만 실제로 작업을 수행할 수 없으므로 제공 하도록 허용 합니다. 또한는 AlarmManager 허용 시간 기반 제약 조건, 즉, 특정 시간이 나 특정 기간을 경과한 후 경보 발생 합니다. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; The JobSchedule는 작업을 예약 하려면 운영 체제와 작동 하는 훌륭한 API입니다. 그러나이 경우에 API 수준 21을 대상으로 하는 Android 응용 프로그램에 사용할 수 있습니다. 
 * **[브로드캐스트 수신기](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; 는 Android 앱 브로드캐스트 수신기 시스템 넓은 이벤트 나 의도에 대 한 응답 작업을 수행 하기를 설정할 수 있습니다. 그러나 브로드캐스트 수신기는 작업을 실행 해야 하는 경우에 대 한 제어를 제공 하지 않습니다. Android 운영 체제의 변경 내용에서 제한도 브로드캐스트 수신기는 작동 하는 경우 않거나에 응답할 수 있는 작업 유형입니다. 
 * **Google 클라우드 메시지 네트워크 관리자** &ndash; 오랜 시간 동안 지금,이 가장 좋은 방법은 일정 배경 지능적으로 작동 합니다. 그러나는 GCMNetworkManager 이후로 되지 않습니다. 

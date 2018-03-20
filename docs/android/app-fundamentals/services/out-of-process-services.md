@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스의 실행 중인 Android 서비스
 
@@ -415,7 +415,7 @@ Android 사용 권한이 있는 서비스를 보안 하는 두 가지 일반적�
 
 사용자 지정 권한을 사용 하려면에 클라이언트에서 명시적으로 해당 권한을 요청 하는 동안 서비스에 의해 선언 되었습니다.
 
-APK, 서비스에 권한을 생성 하려면는 `permission` 요소가 추가 되는 `manifest` 요소**AndroidManifest.xml**합니다. 이 사용 권한이 있어야는 `name`, `protectionLevel`, 및 `label` 특성 집합입니다. `name` 특성을 고유 하 게 사용 권한을 식별 하는 문자열에 설정 해야 합니다. 이름에 표시 됩니다는 **앱 정보** 볼 수는 **Android 설정** (같이 다음 섹션에서).
+APK, 서비스에 권한을 생성 하려면는 `permission` 요소가 추가 되는 `manifest` 요소 **AndroidManifest.xml**합니다. 이 사용 권한이 있어야는 `name`, `protectionLevel`, 및 `label` 특성 집합입니다. `name` 특성을 고유 하 게 사용 권한을 식별 하는 문자열에 설정 해야 합니다. 이름에 표시 됩니다는 **앱 정보** 볼 수는 **Android 설정** (같이 다음 섹션에서).
 
 `protectionLevel` 특성을 위에서 설명한 4 개의 문자열 값 중 하나로 설정 해야 합니다.  `label` 및 `description` 문자열 리소스를 참조 해야 하며 사용자에 게 친숙 한 이름 및 설명을 제공 하는 데 사용 됩니다.
 

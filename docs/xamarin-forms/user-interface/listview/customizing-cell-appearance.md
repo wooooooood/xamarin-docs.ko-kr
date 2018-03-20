@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 551a0de8cd4965815c67a795fb5723d4261a173c
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="cell-appearance"></a>셀 모양
 
@@ -73,11 +73,9 @@ Windows Phone 8.1을 대상으로 할 때 사용자에 게 유의 `ImageCell` �
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>사용자 지정 셀
-기본 제공 셀 필요한 레이아웃을 제공 하지 않습니다, 필요한 레이아웃 사용자 지정 셀 구현. 예를 들어 다음 동일한 가중치는 두 개의 레이블이 있는 셀을 표시 하는 것이 좋습니다. A `LabelCell` 충분 한 수 없기 때문에 `LabelCell` 작은 하나의 레이블이 있습니다.
+기본 제공 셀 필요한 레이아웃을 제공 하지 않습니다, 필요한 레이아웃 사용자 지정 셀 구현. 예를 들어 다음 동일한 가중치는 두 개의 레이블이 있는 셀을 표시 하는 것이 좋습니다. A `LabelCell` 충분 한 수 없기 때문에 `LabelCell` 작은 하나의 레이블이 있습니다. 대부분의 셀 사용자 지정 (예: 추가 레이블, 이미지 또는 다른 표시 정보) 읽기 전용 데이터를 추가 합니다.
 
 모든 사용자 지정 셀에서 파생 되어야 [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), 기본 제공 된 셀의 모든 사용을 입력 하는 동일한 기본 클래스입니다.
-
-대부분의 셀 사용자 지정 (예: 추가 레이블, 이미지 또는 다른 표시 정보) 읽기 전용 데이터를 추가 합니다. 단추 또는 집중 될 수 있는 기타 컨트롤을 추가한 경우 자체 셀 Android에서 클릭할 수 있는 아닐 수 있습니다. 이 제한을 극복할 수 있는 방법을 아래를 참조 하십시오.
 
 Xamarin.Forms 2에는 새로 도입 되었습니다. [캐싱 동작](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) 에 `ListView` 일부 형식의 사용자 지정 셀에 대 한 스크롤 성능 향상을 위해 설정할 수 있는 제어 합니다.
 
@@ -261,30 +259,6 @@ var listView = new ListView {
 ```
 
 IOS 및 Android에서 하는 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 요소 재활용 되 고 사용자 지정 셀 사용자 지정 렌더러를 사용 하 여, 사용자 지정 렌더러 속성 변경 알림을 올바르게 구현 해야 합니다. 바인딩 컨텍스트를 사용할 수 있는 셀의 업데이트 된 경우 해당 속성 값이 변경 됩니다 셀이 다시 사용 하는 경우 `PropertyChanged` 발생 하는 이벤트입니다. 자세한 내용은 참조 [는 ViewCell 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)합니다. 셀 재활용 하는 방법에 대 한 자세한 내용은 참조 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)합니다.
-
-### <a name="enabling-row-selection-on-android"></a>Android에서 사용할 수 있도록 행 선택
-
-입력 요소와 같은 포함 된 셀에 대 한 행 선택을 허용 하는 단추, 간단한 [ `custom renderer` ](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) 가 필요 합니다. 공통 코드 서브 클래스를 만든 `Button` 플랫폼 프로젝트에서는 사용자 지정 렌더러를 추가할 수 있도록 합니다.
-
-```csharp
-public class ListButton : Button { }
-```
-
-Android에 대 한 렌더러 구현에서는 단순히 설정는 `Focusable` 를 클릭할 수 있는 호스트 단추로 뿐만 아니라 선택할 수 있는 행 수 있는 속성입니다. 이 코드는 Android 응용 프로그램 프로젝트에 추가 됩니다.
-
-```csharp
-[assembly: ExportRenderer (typeof (ListButton), typeof (ListButtonRenderer))]
-// ...
-public class ListButtonRenderer : ButtonRenderer {
-    protected override void OnElementChanged (ElementChangedEventArgs<ListButton> e) {
-        base.OnElementChanged (e);
-        Control.Focusable = false;
-    }
-}
-```
-
-유일한 Android에서는 위에서 설명한 대로 `ButtonRenderer` 를 구현 해야 합니다. iOS 및 Windows Phone 플랫폼 () 단추를 클릭 하 여 사용자 지정 렌더러를 구현 하지 않고도 수를 허용 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

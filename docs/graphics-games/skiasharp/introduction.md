@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 50f99c48d0f53bd6a2dfaf42284137ce1e424b30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 747c158460b23b91e4c2986d212802528cdd3979
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="an-introduction-to-skiasharp"></a>SkiaSharp 소개
 
@@ -20,7 +20,7 @@ _이렇게 하면 SkiaSharp 개념에 대 한 간략 한 소개_
 
 SkiaSharp 풍부 하 고 강력한 2D 그래픽은 2D 버퍼에 렌더링 하는 데 사용할 수 있는 API를 제공 합니다.  사용자 지정 사용자 인터페이스 요소와 응용 프로그램에 통합할 수 있는 2 차원 그래픽을 구현 하려면이 사용할 수 있습니다.  SkiaSharp는에 대 한.NET 바인딩을 [Skia](https://skia.org) 라이브러리 기능 및이 라이브러리의 상속 합니다.
 
-라이브러리는 현재 플랫폼으로 사용할 수 있는 [NuGet 패키지](https://www.nuget.org/packages/SkiaSharp), 있습니다 수 있는 프로젝트에 NuGet 참조를 추가 합니다.
+라이브러리는 현재 플랫폼으로 사용할 수 있는 [NuGet 패키지](https://www.nuget.org/packages/SkiaSharp), NuGet 참조를 추가 하 여 프로젝트에 추가할 수 있습니다.
 
 그리기, 사용자 코드를 만듭니다는 `SkCanvas` 그리기 작업이 수행 됩니다 있는 화면을 설명 하는 합니다.
 
