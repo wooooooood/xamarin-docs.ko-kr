@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타 데이터
 
@@ -275,7 +275,7 @@ Java 라이브러리를 난독 처리 하는 도구는 Xamarin.Android 바인딩
 
 ### <a name="sender"></a>sender
 
-메서드의 매개 변수 지정는 `sender` 이벤트에 매핑되는 메서드를 될 때 매개 변수입니다. 값일 수 `true` 또는 `false`합니다. 예:
+메서드의 매개 변수 지정는 `sender` 이벤트에 매핑되는 메서드를 될 때 매개 변수입니다. 값일 수 `true` 또는 `false`합니다. 예를 들어:
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -313,7 +313,7 @@ Android 라이브러리의 라이브러리 메서드나 속성에 전달 되는 
 </mapping>
 ```
 
-Java 클래스 이동 여기 `SKRealReachSettings` 라는 C# 열거형 정의 및 `SKRealReachSettings` 네임 스페이스에 `Skobbler.Ngx.Map.RealReach`합니다. `field` Java 상수 이름을 정의 하는 항목 (예제 `UNIT\_SECOND`), 열거형 항목의 이름 (예 `Second`), 및 두 엔터티를 나타내는 정수 값 (예 `0`). 
+Java 클래스 이동 여기 `SKRealReachSettings` 라는 C# 열거형 정의 및 `SKMeasurementUnit` 네임 스페이스에 `Skobbler.Ngx.Map.RealReach`합니다. `field` Java 상수 이름을 정의 하는 항목 (예제 `UNIT_SECOND`), 열거형 항목의 이름 (예 `Second`), 및 두 엔터티를 나타내는 정수 값 (예 `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>EnumMethods.xml를 사용 하 여 Getter/Setter 메서드를 정의 합니다.
 
@@ -328,7 +328,7 @@ Java 클래스 이동 여기 `SKRealReachSettings` 라는 C# 열거형 정의 �
 </mapping>
 ```
 
-첫 번째 `method` 줄 Java의 반환 값을 매핑합니다 `getMeasurementUnit` 메서드는 `SKRealReachSettings` 열거형입니다. 두 번째 `method` 줄의 첫 번째 매개 변수를 매핑하는 `setMeasurementUnit` 동일한 열거형에 있습니다.
+첫 번째 `method` 줄 Java의 반환 값을 매핑합니다 `getMeasurementUnit` 메서드는 `SKMeasurementUnit` 열거형입니다. 두 번째 `method` 줄의 첫 번째 매개 변수를 매핑하는 `setMeasurementUnit` 동일한 열거형에 있습니다.
 
 모든 위치에서 이러한 변경 내용을 사용 하 여 사용할 수 있습니다 다음 코드 Xamarin.Android에서 설정 하 여 `MeasurementUnit`: 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -21,22 +21,6 @@ _.NET 리소스 파일을 사용 하 여 Xamarin.Forms 응용 프로그램을 �
 ## <a name="overview"></a>개요
 
 .NET 응용 프로그램 사용 하 여 지역화를 위한 기본 제공 메커니즘 [RESX 파일](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) 와의 클래스는 `System.Resources` 및 `System.Globalization` 네임 스페이스입니다. RESX 파일 번역 된 문자열을 포함 하는 번역에 대 한 강력한 형식의 액세스를 제공 하는 컴파일러에서 생성 된 클래스와 함께 Xamarin.Forms 어셈블리에 포함 됩니다. 코드에서 번역 텍스트를 검색할 수 있습니다.
-
-이 문서는 다음 섹션으로 구성됩니다.
-
-**Xamarin.Forms 코드 전역화**
-
-* 추가 및 Xamarin.Forms PCL 응용 프로그램에서 문자열 리소스를 사용 합니다.
-* 네이티브 응용 프로그램의 각 언어 검색을 사용 하도록 설정 합니다.
-
-**XAML 지역화**
-
-* 사용 하 여 XAML 지역화는 `IMarkupExtension`합니다.
-* 네이티브 응용 프로그램에서 태그 확장을 사용 하도록 설정 합니다.
-
-**플랫폼별 요소 지역화**
-
-* 이미지 및 네이티브 앱의 앱 이름을 지역화 합니다.
 
 ### <a name="sample-code"></a>샘플 코드
 
@@ -623,7 +607,7 @@ Windows Phone 프로젝트의 속성 노드를 확장 하 고 두 번 클릭 하
 
 이 언어 중립 RESX 파일에 정의 된 문자열 확인 하므로 응용 프로그램의 기본 문화권의 리소스 관리자를 통해 알립니다 (**AppResources.resx**) 영어 로캘에 응용 프로그램 하나에서 실행 중인 경우에 표시 됩니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 플랫폼별 프로젝트에 표시 된 대로 위의 업데이트 하 고 번역 된 RESX 파일 사용 응용 프로그램을 다시 컴파일하지 후 업데이트 된 번역을 각 응용 프로그램에서는 사용할 수 있습니다. 중국어 (간체)로 변환 하는 샘플 코드의 스크린 샷을 다음과 같습니다.
 
@@ -651,15 +635,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-    // You exclude the 'Extension' suffix when using in Xaml markup
-    [ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
         const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-                                                                                                                  , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
+
+        public string Text { get; set; }
 
         public TranslateExtension()
         {
@@ -669,24 +655,21 @@ namespace UsingResxLocalization
             }
         }
 
-        public string Text { get; set; }
-
-        public object ProvideValue (IServiceProvider serviceProvider)
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (Text == null)
-                return "";
+                return string.Empty;
 
             var translation = ResMgr.Value.GetString(Text, ci);
-
             if (translation == null)
             {
-                #if DEBUG
+#if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
-                #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-                #endif
+#else
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
             }
             return translation;
         }
@@ -699,7 +682,7 @@ namespace UsingResxLocalization
 * 클래스 이름은 `TranslateExtension`, 규칙을 함께 언급할 수에 의해 사용 하는 **번역** 우리의 태그에 있습니다.
 * 클래스 구현 `IMarkupExtension`, 작업에 대 한 Xamarin.Forms 필요로 합니다.
 * `"UsingResxLocalization.Resx.AppResources"` 우리의 RESX 리소스에 대 한 리소스 식별자가입니다. 이 기본 네임 스페이스, 리소스 파일이 있는 폴더 및 기본 RESX 파일 이름이 구성 됩니다.
-* `ResourceManager` 클래스를 사용 하 여 만들 `typeof(TranslateExtension)` 현재 리소스를 로드할 어셈블리를 확인할 수 있습니다.
+* `ResourceManager` 클래스를 사용 하 여 만들어집니다 `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` 리소스를 로드 하려면 현재 어셈블리를 확인할 수 있고 정적에 캐시 된 `ResMgr` 필드입니다. 으로 생성 됩니다는 `Lazy` 을 입력 하 여 만든 처음에 사용 될 때까지 지연 됩니다는 `ProvideValue` 메서드.
 * `ci` 종속성 서비스를 사용 하 여 네이티브 운영 체제에서 사용자가 선택한 언어를 가져올 수 있습니다.
 * `GetString` 리소스 파일에서 실제 번역 된 문자열을 검색 하는 메서드입니다. Windows Phone 8.1 및 유니버설 Windows 플랫폼 `ci` null 때문에 `ILocalize` 인터페이스는 해당 플랫폼에서 구현 되지 않습니다. 이 호출에 해당 하는 `GetString` 메서드 첫 번째 매개 변수입니다. 대신 리소스 프레임 워크에서는 자동으로 로캘을 인식 하 고 적절 한 RESX 파일에서 번역된 된 문자열을 검색 합니다.
 * 오류 처리는 예외를 throw 하 여 누락 된 리소스 디버깅을 돕기 위해 포함 되었습니다 (에서 `DEBUG` 모드에만 해당).

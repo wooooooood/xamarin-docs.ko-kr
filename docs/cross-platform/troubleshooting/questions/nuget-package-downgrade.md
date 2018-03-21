@@ -6,11 +6,11 @@ ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 98d12bd93c50690909ac902a6f2498bcdb94960f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7befac774732d6f9e432d43ac9bdc635b25bf431
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>NuGet 패키지를 다운 그레이드 하는 합니까?
 
@@ -23,7 +23,7 @@ Mac 용 visual Studio 및 Visual Studio는 이전 버전의 패키지를 선택 
 
     > Install-package [PackageName]-[버전 메뉴에 대 한 탭] 버전
 
-있습니다 수 또한 복사/붙여넣기 패키지의 NuGet 페이지에서 정확한 명령입니다. Xamarin.Forms에 대 한 예제: [https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
+있습니다 수 또한 복사/붙여넣기 패키지의 NuGet 페이지에서 정확한 명령입니다. Xamarin.Forms에 대 한 예: [https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 1. 프로젝트의 패키지 폴더를 마우스 오른쪽 단추로 클릭 및 선택 **패키지 추가**
@@ -36,7 +36,6 @@ Mac 용 visual Studio 및 Visual Studio는 이전 버전의 패키지를 선택 
 
     `Xamarin.Forms version:`
 - 모든 Xamarin.Forms 1.4.x 패키지를 나열합니다. 
-
 
     `Xamarin.Forms version:1.4`
 

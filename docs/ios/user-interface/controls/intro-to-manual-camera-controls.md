@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e44635c9dfbe9fa069272f50d035476bd1aa6b9
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="manual-camera-controls"></a>수동 카메라 컨트롤
 
@@ -370,7 +370,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 와이어 접속 뷰 컨트롤러 수동 포커스 컨트롤에 대 한 다음을 실행 합니다.
 
 
- 1. 다음 추가 문을 사용 하 여:
+1. 다음 추가 문을 사용 하 여:
 
     ```csharp
     using System;
@@ -387,7 +387,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     using System.Timers;
     ```  
   
- 1. 다음과 같은 전용 변수를 추가 합니다.
+1. 다음과 같은 전용 변수를 추가 합니다.
 
     ```csharp
     #region Private Variables

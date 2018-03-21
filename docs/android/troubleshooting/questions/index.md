@@ -6,12 +6,12 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 22ddf61d3636962273716d8d5c48857e0004bb42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 69a5c905367f9e6dbd38acb664ad21b9dbe63efc
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -68,6 +68,11 @@ Windows;에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[더 스마트한 Xamarin Android 지원 v4 / v13 NuGet 패키지](android-support-v4v13-libraries.md)
 
 `Support-v4` 및 `Support-v13` 사용할 수 없습니다 함께 동일한 앱에서 즉는 함께 사용할 수 없습니다. 때문에 이것이 `Support-v13` 실제로 형식 및의 구현을 모두 포함 되어 `Support-v4`합니다. 시도 하 고 모두 동일한 프로젝트에서 참조 하는 경우에 중복 되는 형식 오류가 발생 합니다.
+
+### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[PathTooLongException 오류를 어떻게 해결할 수 있습니까?](path-too-long-exception.md)
+
+이 문서에서는 해결 하는 방법에 설명 된 **PathTooLongException** Xamarin.Android 프로젝트를 빌드하는 동안 발생할 수 있는 오류입니다.
+
 
 
 ## <a name="deprecated"></a>사용 되지 않음

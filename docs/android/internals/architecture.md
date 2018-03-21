@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9834da444032622cc3547e7c99ca3de0e41bb603
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -33,7 +33,7 @@ Android 클래스 Android 런타임 클래스와 통신 하는 방법에 대 한
 
 Android 응용 프로그램 패키지는 ZIP 컨테이너는 *.apk* 파일 확장명입니다. Xamarin.Android 응용 프로그램 패키지 다음 항목이 추가 된 기본 Android 패키지와 같은 구조와 레이아웃을 가진:
 
--   응용 프로그램 어셈블리 (IL을 포함)는 *저장* 내에서 압축 되지 않은 *어셈블리* 폴더입니다. 릴리스에서 시작 빌드 프로세스 중의 *.apk* 은 *mmap()* 프로세스와 어셈블리에 ed가 메모리에서 로드 됩니다. 이 어셈블리를 실행 하기 전에 추출할 필요는 없습니다으로 빠른 응용 프로그램 시작을 허용 합니다. - *참고:* 어셈블리 위치 정보 등 [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) 및 [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   응용 프로그램 어셈블리 (IL을 포함)는 *저장* 내에서 압축 되지 않은 *어셈블리* 폴더입니다. 릴리스에서 시작 빌드 프로세스 중의 *.apk* 은 *mmap()* 프로세스와 어셈블리에 ed가 메모리에서 로드 됩니다. 그러면 빠른 응용 프로그램 시작으로 어셈블리를 실행 하기 전에 추출할 필요가 없습니다. - *참고:* 어셈블리 위치 정보 등 [Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/) 및 [Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *에 의존할 수 없습니다* 릴리스에서 작성합니다. 고유한 파일 시스템 항목으로 존재 하지 않는 하 고 사용할 수 없는 위치를 갖습니다.
 
 

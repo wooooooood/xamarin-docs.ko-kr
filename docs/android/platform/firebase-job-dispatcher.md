@@ -8,33 +8,32 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/19/2018
-ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: fbcb0190f609efc4396429a7961c2d49ab82576f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
 _이 가이드에는 Google에서 Firebase 작업 발송자 라이브러리를 사용 하 여 백그라운드 작업을 예약 하는 방법을 설명 합니다._
 
-## <a name="firebase-job-dispatcher-overview"></a>Firebase 작업 발송자 개요
+## <a name="overview"></a>개요
 
 Android 응용 프로그램을 사용자에 응답성을 유지 하는 가장 좋은 방법 중 하나는 복잡 하거나 장기 실행 작업은 백그라운드에서 수행 되도록 하려면입니다. 그러나이 백그라운드 작업 부정적인 영향을 미치지 것입니다는 사용자의 경험 장치에서 중요 합니다. 
 
-예를 들어 백그라운드 작업 웹 사이트는 특정 데이터 집합에 대 한 변경에 대 한 쿼리를 몇 분 마다 폴링할 수 있습니다. 이 있는 장치에 치명적인 영향을 미칠 수 것 있지만 심각 하지 않은 같습니다. 응용 프로그램 장치를 다시 시작, 전원 상태를 더 높은으로 상승 하는 CPU, 라디오 전원 켜기, 네트워크 요청 및 결과 처리 한 다음 종료 됩니다. 장치에서 즉시는 아닙니다 전원을 끄고 한 저전원 유휴 상태를 반환 하므로 더 심각한 가져옵니다. 실수로 잘못 예약 된 백그라운드 작업 불필요 한 과도 한 전원 요구를 사용 하 여 상태의 장치를 유지할 수도 있습니다. 효과적으로,이 처럼 보이기 문제 없는 작업 (웹 사이트를 폴링하여)가 렌더링 장치 비교적 짧은 기간 동안 사용할 수 없게 됩니다.
+예를 들어 백그라운드 작업 웹 사이트 서너 개의 분 마다 쿼리에 특정 데이터 집합에 대 한 변경에 대 한 폴링할 수 있습니다. 이 방법은 치명적인 영향 배터리 수명에 동일 하 게 되었지만 심각 하지 않은 합니다. 응용 프로그램은 반복 해 서에서 장치를 깨우는, CPU 전원 상태를 더 높은 수준으로 상승, 라디오 전원을, 네트워크 요청을 하 고 결과 처리 합니다. 장치에서 즉시는 아닙니다 전원을 끄고 한 저전원 유휴 상태를 반환 하므로 더 심각한 가져옵니다. 실수로 잘못 예약 된 백그라운드 작업 불필요 한 과도 한 전원 요구를 사용 하 여 상태의 장치를 유지할 수도 있습니다. 이 겉보기 문제 없는 작업 (웹 사이트를 폴링하여) 사용 장치 비교적 짧은 기간 동안 사용할 수 없게 렌더링 합니다.
 
-Android에는 이미 여러 Api를 이용 하 게 백그라운드에서 작업을 수행 하는 포괄적인 솔루션 이지만이 중 하나도 없는를 제공 합니다.
+Android 백그라운드에서 작업 수행에 도움이 되도록 다음 Api를 제공 하지만 자체적으로 충분 하지 않습니다 지능형 작업 일정에 대 한 합니다. 
 
 * **[하지만 의도 서비스](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; 의도 서비스는 작업을 예약할 수 없으므로 제공 작업을 수행 하기 위한 훌륭한 합니다.
 * **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; 이러한 Api 작업을 예약할 수 있지만 실제로 작업을 수행할 수 없으므로 제공 하도록 허용 합니다. 또한는 AlarmManager 허용 시간 기반 제약 조건, 즉, 특정 시간이 나 특정 기간을 경과한 후 경보 발생 합니다. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; The JobSchedule는 작업을 예약 하려면 운영 체제와 작동 하는 훌륭한 API입니다. 그러나이 경우에 API 수준 21을 대상으로 하는 Android 응용 프로그램에 사용할 수 있습니다. 
-* **[브로드캐스트 수신기](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; 는 Android 앱 브로드캐스트 수신기 시스템 넓은 이벤트 나 의도에 대 한 응답 작업을 수행 하기를 설정할 수 있습니다. 그러나 브로드캐스트 수신기는 작업을 실행 해야 하는 경우에 대 한 제어를 제공 하지 않습니다. Android 운영 체제의 변경 내용에서 제한도 브로드캐스트 수신기는 작동 하는 경우 않거나에 응답할 수 있는 작업 유형입니다. 
-* **Google 클라우드 메시지 네트워크 관리자** &ndash; 오랜 시간 동안 지금,이 가장 좋은 방법은 일정 배경 지능적으로 작동 합니다. 그러나는 GCMNetworkManager 이후로 되지 않습니다. 
+* **[브로드캐스트 수신기](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; 는 Android 응용 프로그램 의도 또는 시스템 수준 이벤트에 대 한 응답에서 작업을 수행 하는 브로드캐스트 수신기를 설정할 수 있습니다. 그러나 브로드캐스트 수신기는 작업을 실행 해야 하는 경우에 대 한 제어를 제공 하지 않습니다. Android 운영 체제의 변경 내용에서 제한도 브로드캐스트 수신기는 작동 하는 경우 않거나에 응답할 수 있는 작업 유형입니다. 
 
-효과적으로 백그라운드 작업을 수행 하는 데 두 가지 주요 기능이 (라고도 _백그라운드 작업_ 또는 _작업_):
+효율적으로 백그라운드 작업을 수행 하는 데 두 가지 주요 기능이 (라고도 _백그라운드 작업_ 또는 _작업_):
 
-1. **작업을 예약 하는 지능적으로** &ndash; 것이 중요 응용 프로그램은 이렇게 하는 동안 백그라운드에서 작업 한다는 것으로 제대로 작동 합니다. 이상적으로 응용 프로그램 작업을 실행할 수 요청 해서는 안 됩니다. 대신, 응용 프로그램에는 조건이 충족 될 때 실행을 위해 작동 하는 작업에서 수를 실행 하 고 있는 예약할 때 위해 충족 해야 하는 조건을 지정 해야 합니다. 이렇게 하면 Android를 지능적으로 작업을 수행할 수 있습니다. 예를 들어 네트워킹와 관련 된 오버 헤드를 최대한 사용할 수 있도록 한 번에 모두 실행 하려면 네트워크 요청을 일괄 처리 수 있습니다.
+1. **작업을 예약 하는 지능적으로** &ndash; 것이 중요 응용 프로그램은 이렇게 하는 동안 백그라운드에서 작업 한다는 것으로 제대로 작동 합니다. 이상적으로 응용 프로그램 작업을 실행할 수 요청 해서는 안 됩니다. 대신, 응용 프로그램 작업에서 수를 실행 하 고 다음 조건이 충족 되는 때를 실행 하려면 해당 작업을 예약할 때 위해 충족 해야 하는 조건을 지정 해야 합니다. 이렇게 하면 Android를 지능적으로 작업을 수행할 수 있습니다. 예를 들어 네트워킹와 관련 된 오버 헤드를 최대한 사용할 수 있도록 한 번에 모두 실행 하려면 네트워크 요청을 일괄 처리 수 있습니다.
 2. **작업을 캡슐화** &ndash; 백그라운드 작업을 수행 하는 코드는 사용자 인터페이스와 독립적으로 실행할 수 있으며 비교적 쉬운 작업 완료 되지 않으면 다시 예약 하는 개별 구성 요소에서 캡슐화 해야 어떤 이유로 합니다.
 
 Firebase 작업 디스패처는 일정 백그라운드 작업을 간소화 하기 위해 fluent API를 제공 하는 Google에서 라이브러리입니다. Google 클라우드 관리자에 대 한 대체 되어야 하는 것이 됩니다. 다음 Api Firebase 작업 디스패처로 구성 됩니다.
@@ -66,7 +65,7 @@ Firebase 작업 발송자를 시작 하려면 먼저 추가 [Xamarin.Firebase.Jo
 
 작업 디스패처 Firebase 라이브러리를 추가한 후 만들기는 `JobService` 클래스 및 다음의 인스턴스를 사용 하 여 실행 되도록 예약할는 `FirebaseJobDispatcher`합니다.
 
-### <a name="creating-a-jobservice"></a>만들기는 `JobService`
+### <a name="creating-a-jobservice"></a>JobService 만들기
 
 확장 하는 형식에서 Firebase 작업 발송자 라이브러리에 의해 수행 된 모든 작업을 수행 해야는 `Firebase.JobDispatcher.JobService` 추상 클래스입니다. 만들기는 `JobService` 만드는 것과 매우 비슷합니다는 `Service` Android 프레임 워크: 
 
@@ -74,7 +73,7 @@ Firebase 작업 발송자를 시작 하려면 먼저 추가 [Xamarin.Firebase.Jo
 2. 와 하위 클래스를 데코레이팅하는 `ServiceAttribute`합니다. 있지만 반드시 필요한 것이 좋습니다 명시적으로 설정 하는 `Name` 디버깅에 도움이 되도록 매개 변수는 `JobService`합니다. 
 3. 추가 `IntentFilter` 선언 하는 `JobService` 에 **AndroidManifest.xml**합니다. 찾아 호출할 Firebase 작업 발송자 라이브러리에도 도움이 됩니다이 고 `JobService`합니다.
 
-다음 코드는 가장 간단한 예제 `JobService` 응용 프로그램:
+다음 코드는 가장 간단한 예제 `JobService` 응용 프로그램에 대 한 몇 가지 작업을 비동기적으로 수행 하는 TPL을 사용 합니다.
 
 ```csharp
 [Service(Name = "com.xamarin.fjdtestapp.DemoJob")]
@@ -85,11 +84,14 @@ public class DemoJob : JobService
 
     public override bool OnStartJob(IJobParameters jobParameters)
     {
-        Log.Debug(TAG, "DemoJob::OnStartJob");
-        // Note: This runs on the main thread. Anything that takes longer than 16 milliseconds
-         // should be run on a seperate thread.
-        
-        return false; // return false because there is no more work to do.
+        Task.Run(() =>
+        {
+            // Work is happening asynchronously (code omitted)
+                       
+        });
+
+        // Return true because of the asynchronous work
+        return true;  
     }
 
     public override bool OnStopJob(IJobParameters jobParameters)
@@ -101,7 +103,7 @@ public class DemoJob : JobService
 }
 ```
 
-### <a name="creating-a-firebasejobdispatcher"></a>만들기는 `FirebaseJobDispatcher`
+### <a name="creating-a-firebasejobdispatcher"></a>FirebaseJobDispatcher 만들기
 
 만들 필요는 모든 작업을 예약할 수 전에 `Firebase.JobDispatcher.FirebaseJobDispatcher` 개체입니다. `FirebaseJobDispatcher` 예약에 대 한 책임이 `JobService`합니다. 다음 코드 조각은의 인스턴스를 만드는 한 가지 방법은 `FirebaseJobDispatcher`: 
  
@@ -121,7 +123,7 @@ FirebaseJobDispatcher dispatcher = context.CreateJobDispatcher();
 
 한 번의 `FirebaseJobDispatcher` 되었습니다 인스턴스화된 만들 수는 `Job` 의 코드를 실행 하 고는 `JobService` 클래스입니다. `Job` 만들어집니다는 `Job.Builder` 개체와 다음 섹션에서 설명 합니다.
 
-### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>만들기는 `Firebase.JobDispatcher.Job` 으로 `Job.Builder`
+### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Firebase.JobDispatcher.Job는 Job.Builder를 사용 하 여 만들기
 
 `Firebase.JobDispatcher.Job` 클래스는 메타 데이터를 캡슐화 하는 데 실행 하는 데 필요한는 `JobService`합니다. A`Job` 되는 제약 조건 충족 해야 하 고 작업을 실행하기 전에 경우 같은 정보가 포함 되어는 `Job` 되풀이 또는 작업을 실행 하면 모든 트리거가 있습니다.  필요한 최소로는 `Job` 있어야는 _태그_ (작업을 식별 하는 고유 문자열은 `FirebaseJobDispatcher`)의 형식과 `JobService` 실행 해야 하는 합니다. Firebase 작업 발송자 인스턴스화는 `JobService` 작업을 실행 하는 시기입니다.  A `Job` 의 인스턴스를 사용 하 여 만들어집니다는 `Firebase.JobDispatcher.Job.JobBuilder` 클래스입니다. 
 
@@ -140,7 +142,7 @@ Job myJob = dispatcher.NewJobBuilder()
 * A `Job` 가능한 한 빨리 실행 되도록 예약 됩니다.
 * 에 대 한 기본 다시 시도 전략은 `Job` 사용 하는 _지 수 백오프_ (섹션에서 자세히 아래에 설명 된 [는 RetryStrategy 설정](#Setting_a_RetryStrategy))
 
-### <a name="scheduling-a-job"></a>예약 된 `Job`
+### <a name="scheduling-a-job"></a>작업 예약
 
 만든 후의 `Job`,으로 예약 하는 데 필요한는 `FirebaseJobDispatcher` 실행 하기 전에. 예약 하는 데에 두 가지가 `Job`:
 
@@ -173,7 +175,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-parameters-to-a-job"></a>작업에 매개 변수 전달
+#### <a name="passing-jarameters-to-a-job"></a>Jarameters 작업에 전달
 
 매개 변수를 만들어 작업에 전달 되는 `Bundle` 와 함께 전달 되는 `Job.Builder.SetExtras` 메서드:
 
@@ -219,8 +221,6 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 <a name="Setting_Job_Triggers" />
-
-#### <a name="setting-job-triggers"></a>설정 작업 트리거
 
 `JobTrigger` 작업을 시작할 하는 방법에 대 한 운영 체제에 대 한 지침을 제공 합니다. A `JobTrigger` 에 _창 실행_ 시기에 대 한 예약 된 시간을 정의 하는 `Job` 실행 해야 합니다. 실행 창에는 _창을 시작_ 값과 _종료 윈도_ 값입니다. 시작 창이 장치 작업을 실행 하기 전에 대기할 시간 (초) 수 있으며 최종 창 값은 실행 하기 전에 대기할 시간 (초)의 최대 수는 `Job`합니다. 
 
@@ -283,7 +283,7 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 
 ## <a name="summary"></a>요약
 
-이 가이드는 지능적으로 백그라운드에서 작업을 수행 하도록 Firebase 작업 발송자를 사용 하는 방법을 설명 합니다. 로 수행할 작업을 캡슐화 하는 방법을 설명 하는 `JobService` 하는 방법과 `FirebaseJobDispatcher` 와 조건을 지정 하는 작업을 예약 하는 `JobTrigger` 와 오류를 처리 하는 방법 및는 `RetryStrategy`합니다.
+이 가이드는 지능적으로 백그라운드에서 작업을 수행 하도록 Firebase 작업 발송자를 사용 하는 방법을 설명 합니다. 로 수행할 작업을 캡슐화 하는 방법을 설명 하는 `JobService` 방법과 사용 하는 `FirebaseJobDispatcher` 와 조건을 지정 하는 작업을 예약할는 `JobTrigger` 와 오류를 처리 하는 방법 및는 `RetryStrategy`합니다.
 
 
 ## <a name="related-links"></a>관련 링크

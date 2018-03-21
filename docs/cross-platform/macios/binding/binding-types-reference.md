@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 568650a850b9db1fa22deef55eebb6a437e7e0b7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0d58a8ab15a7b2d598aa8fd45a9b4d0c3d9e440b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식에 대 한 가이드
 
@@ -30,7 +30,7 @@ interface MyType [: Protocol1, Protocol2] {
 }
 ```
 
-가 계약 정의에서 모든 인터페이스는 `[BaseType]` 생성 된 개체에 대 한 기본 형식을 선언 하는 특성입니다. 위 선언에서 한 `MyType` 바인딩 Objective C 형식에 호출 되도록 C# 형식의 클래스를 생성할 **MyType**합니다.
+가 계약 정의에서 모든 인터페이스는 [ `[BaseType]` ](#BaseTypeAttribute) 생성 된 개체에 대 한 기본 형식을 선언 하는 특성입니다. 위 선언에서 한 `MyType` 바인딩 Objective C 형식에 호출 되도록 C# 형식의 클래스를 생성할 `MyType`합니다.
 
 Typename 후 하는 형식을 지정 하는 경우 (위의 예제에서 `Protocol1` 및 `Protocol2`) 인터페이스 상속 구문을 사용 하 여 이러한 인터페이스의 내용을 인라인 됩니다에 대 한 계약의 일부 되었을 것 마치 `MyType`합니다.
 형식 프로토콜을 채택 Xamarin.iOS 표면에서 하는 방법은 메서드 및 속성 형식 자체에 프로토콜에 선언 된 모든 인라인 처리 합니다.
@@ -51,12 +51,12 @@ interface UITextField : UITextInput {
 }
 ```
 
-BaseType 특성 구성 뿐만 아니라 인터페이스에 다른 특성을 적용 하 여 코드 생성의 다른 많은 측면을 제어할 수 있습니다.
+구성 뿐만 아니라 인터페이스에 다른 특성을 적용 하 여 코드 생성의 다른 많은 측면을 제어할 수 있습니다는 [ `[BaseType]` ](#BaseTypeAttribute) 특성입니다.
 
 
 ### <a name="generating-events"></a>이벤트를 생성합니다.
 
-Xamarin.iOS 및 Xamarin.Mac API 디자인의 한 가지 특징으로 C# 이벤트와 콜백을 Objective-c 대리자 클래스를 매핑할 것입니다. 같은 속성을 할당 하 여 Objective C 프로그래밍 패턴을 채택 하 게 할지를 사용자가 인스턴스 단위로에서 선택할 수 **대리자** 다양 한 메서드를 구현 하는 클래스의 인스턴스는 Objective C 런타임이 호출 또는 C#을 선택 하 여-스타일 지정 이벤트 및 속성입니다.
+Xamarin.iOS 및 Xamarin.Mac API 디자인의 한 가지 특징으로 C# 이벤트와 콜백을 Objective-c 대리자 클래스를 매핑할 것입니다. 같은 속성을 할당 하 여 Objective C 프로그래밍 패턴을 채택 하 게 할지를 사용자가 인스턴스 단위로에서 선택할 수 `Delegate` Objective C 런타임이 호출 하는 다양 한 메서드를 구현 하는 클래스 또는 인스턴스 선택 하 고 C#-스타일 지정 이벤트 및 속성입니다.
 
 Objective C 모델을 사용 하는 방법의 한 가지 예 참조 알려 주세요.
 
@@ -86,7 +86,7 @@ class MyScrollViewDelegate : UIScrollViewDelegate {
 }
 ```
 
-위의 예제에서 두 개의 메서드를 덮어쓰도록 선택한, 하나는 스크롤 이벤트와 통합 하였습니다 있으며 두 번째, 하는 알림을 위쪽으로 스크롤하여 채워야 여부는 scrollView에 지시 하는 부울 값을 반환 해야 하는 콜백을 볼 수 있습니다 또는 필요는 없습니다.
+위의 예제에서 두 개의 메서드를 덮어쓰도록 선택한, 지시 하는 부울 값을 반환 해야 하는 콜백을 하나는 스크롤 이벤트와 통합 하였습니다 있으며 두 번째, 하는 알림을 볼 수 있습니다는 `scrollView` 여부 스크롤 되 게 할에 여부를 가장 합니다.
 
 C# 모델을 사용 하면 라이브러리의 사용자 속성 구문 또는 C# 구문 이벤트를 사용 하 여 값을 반환 하는 콜백을 후크 알림을 수신 대기 하도록 합니다.
 
@@ -110,11 +110,11 @@ void Setup ()
 public delegate bool UIScrollViewCondition (UIScrollView scrollView);
 ```
 
-Bool 값을 반환 하면이 경우 람다 구문 통해 하는 값을 반환할는 `MakeDecision` 함수입니다.
+반환 된 `bool` 값,이 경우 람다 구문 통해 하는 값을 반환할는 `MakeDecision` 함수입니다.
 
-이벤트와 같은 클래스를 연결 하는 속성과 생성 바인딩 생성기 지원 `UIScrollView` 와 해당 `UIScrollViewDelegate` (도 이러한 모델 클래스)를 호출에 주석 지정 하면 됩니다 프로그램 `BaseType` 함께 정의 `Events` 및 `Delegates`매개 변수 (아래 설명 참조). 주석을 추가 하는 것 외에도 `BaseType` 해당 매개 변수를 사용 해야 하는 몇 가지 구성 요소가 더 생성자에 게 알립니다.
+이벤트와 같은 클래스를 연결 하는 속성과 생성 바인딩 생성기 지원 `UIScrollView` 와 해당 `UIScrollViewDelegate` (도 이러한 모델 클래스)를 호출에 주석 지정 하면 됩니다 프로그램 [ `[BaseType]` ](#BaseTypeAttribute) 함께 정의 `Events` 및 `Delegates` 매개 변수 (아래 설명 참조). 주석을 추가 하는 것 외에도 [ `[BaseType]` ](#BaseTypeAttribute) 해당 매개 변수를 사용 해야 하는 몇 가지 구성 요소가 더 생성자에 게 알립니다.
 
-둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `EventArgs` 모델 클래스에서 메서드 선언에서 특성입니다. 예를 들어:
+둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는) 생성 된 항목에 대 한 원하는 이름을 제공 해야 `EventArgs` 클래스가 될 수 있습니다. 이러한 용도로 [ `[EventArgs]` ](#EventArgsAttribute) 모델 클래스에서 메서드 선언에서 특성입니다. 예를 들어:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -135,7 +135,7 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-그런 다음 UIImagePickerController 클래스에서 다음을 제공합니다.
+다음을 노출 하는 `UIImagePickerController` 클래스:
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
@@ -154,8 +154,9 @@ public interface UIScrollViewDelegate {
 
 위의 만듭니다는 `UIScrollViewCondition` 시그니처가 대리자 위에 나온 및 사용자를 구현 하지 않습니다, 반환 값 true 됩니다.
 
-이외에 `DefaultValue` 특성을 사용할 수도 있습니다는 `DefaultValueFromArgument` 생성자 호출에 지정된 된 매개 변수의 값을 반환 하도록 지시 하는 또는 `NoDefaultValue` 기본값을 갖지 있다는 것을 생성자에 게 지시 하는 매개 변수입니다.
+이외에 [ `[DefaultValue]` ](#DefaultValueAttribute) 특성을 사용할 수도 있습니다는 [ `[DefaultValueFromArgument]` ](#DefaultValueFromArgumentAttribute) 생성자 호출 또는 의지정된된매개변수의값을반환하도록지시하는특성[ `[NoDefaultValue]` ](#NoDefaultValueAttribute) 기본값을 갖지 있다는 것을 생성자에 게 지시 하는 매개 변수입니다.
 
+<a name="BaseTypeAttribute" />
 
 ### <a name="basetypeattribute"></a>BaseTypeAttribute
 
@@ -186,13 +187,13 @@ interface NSUrlConnection {
 }
 ```
 
-지정 된 이름을 생성 된 항목에 대 한 값으로 사용 하기 위해 지정 된 `[Register]` 바인딩에 특성입니다. 경우 `Name` 를 지정 하지 않으면 해당 형식의 약식 이름에 대 한 값으로 사용 됩니다는 `Register` 생성 된 출력에는 특성입니다.
+생성 된 항목에 대 한 값으로 지정 된 이름을 사용은 `[Register]` 바인딩에 특성입니다. 경우 `Name` 를 지정 하지 않으면 해당 형식의 약식 이름에 대 한 값으로 사용 됩니다는 `[Register]` 생성 된 출력에는 특성입니다.
 
 #### <a name="basetypeevents-and-basetypedelegates"></a>BaseType.Events 및 BaseType.Delegates
 
-C#의 생성을 진행 하는 데 이러한 속성을 사용 하는-생성 된 클래스에서 이벤트 스타일입니다. Objective C 대리자 클래스는 지정 된 클래스를 연결 하는 데 사용 됩니다. 대부분의 경우 클래스 알림 및 이벤트에 대리자 클래스를 사용 하는 경우 발생 합니다. 예를 들어 한 `BarcodeScanner` 과 함께 사용 해야 `BardodeScannerDelegate` 클래스입니다. `BarcodeScanner` 클래스의 인스턴스를 할당할 때 "대리자" 속성 것이 일반적으로 `BarcodeScannerDelegate` 에이 방법이 가능 하지만, 사용자에 게 노출 하는 C# 하려는-스타일 이벤트 인터페이스와 같은 및 사용 하 여 이러한 경우에는 `Events` 및 `Delegates` 의 속성은 `BaseType` 특성입니다.
+C#의 생성을 진행 하는 데 이러한 속성을 사용 하는-생성 된 클래스에서 이벤트 스타일입니다. Objective C 대리자 클래스는 지정 된 클래스를 연결 하는 데 사용 됩니다. 대부분의 경우 클래스 알림 및 이벤트에 대리자 클래스를 사용 하는 경우 발생 합니다. 예를 들어 한 `BarcodeScanner` 과 함께 사용 해야 `BardodeScannerDelegate` 클래스입니다. `BarcodeScanner` 클래스 것이 일반적으로 `Delegate` 의 인스턴스를 할당할 때 속성 `BarcodeScannerDelegate` 에이 방법이 가능 하지만, 사용자에 게 노출 하는 C# 하려는-는 사용경우및스타일이벤트인터페이스와같은`Events`및 `Delegates` 의 속성은 [ `[BaseType]` ](#BaseTypeAttribute) 특성입니다.
 
-이러한 속성은 항상 함께 설정 및 요소 수가 있고 동기화 되어야 합니다. `Delegates` 래핑할 하려는 각 약한 형식의 대리자에 대해 하나의 문자열을 포함 하는 배열 및 유형임을 연결 하려는 각 형식에 대 한 이벤트 배열에 포함 합니다.
+이러한 속성은 항상 함께 설정 및 요소 수가 있고 동기화 되어야 합니다. `Delegates` 래핑할 하려는 각 약한 형식의 대리자에 대해 하나의 문자열을 포함 하는 배열 및 `Events` 유형임을 연결 하려는 각 형식에 대 한 배열에 포함 합니다.
 
 ```csharp
 [BaseType (typeof (NSObject),
@@ -210,7 +211,7 @@ public interface UIAccelerometerDelegate {
 
 #### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
 
-이 클래스의 새 인스턴스를 만들 때이 특성을 적용 하는 경우 해당 개체의 인스턴스를 유지할지 주위에서 참조 하는 메서드의 될 때까지 `KeepRefUntil` 호출 했습니다. 이 사용자가 직접 코드를 사용 하도록 기준 개체에 대 한 참조를 유지 하도록 하지 않을 때 사용자 Api의 유용성을 개선 하는 데 유용 합니다. 이 속성의 값은에 있는 메서드의 이름은 `Delegate` 이 이벤트와 함께에서 사용 해야 하므로 클래스 및 `Delegates` 도 속성을 합니다.
+이 클래스의 새 인스턴스를 만들 때이 특성을 적용 하는 경우 해당 개체의 인스턴스를 유지할지 주위에서 참조 하는 메서드의 될 때까지 `KeepRefUntil` 호출 했습니다. 이 사용자가 직접 코드를 사용 하도록 기준 개체에 대 한 참조를 유지 하도록 하지 않을 때 사용자 Api의 유용성을 개선 하는 데 유용 합니다. 이 속성의 값은에 있는 메서드의 이름은 `Delegate` 클래스와 함께에서 사용 해야는 `Events` 및 `Delegates` 속성도 있습니다.
 
 다음 예제에서 사용 방법을 보여 줍니다 `UIActionSheet` Xamarin.iOS에서:
 
@@ -243,6 +244,7 @@ public interface UIActionSheetDelegate {
 
 이 특성은 인터페이스 정의에 적용 되는 기본 생성자는 private로 문법 됩니다. 즉, 확장 파일에서이 클래스의 개체를 내부적으로 인스턴스화할 여전히 있습니다 있지만 것 바로 못함 클래스의 사용자가 액세스할 수 있습니다.
 
+<a name="CategoryAttribute" />
 
 ### <a name="categoryattribute"></a>CategoryAttribute
 
@@ -258,9 +260,9 @@ Objective-c 범주를 바인딩하는 형식 정의에이 특성을 사용 하 �
 @end
 ```
 
-위의 예에서는 경우에의 인스턴스를 확장 하는 것을 라이브러리 `UIView` 메서드로 `makeBackgroundRed`합니다.
+위의 예에서는 인스턴스의 에게도 확장 적용 하는 라이브러리에서 발견 된 `UIView` 메서드로 `makeBackgroundRed`합니다.
 
-사용할 수 있는 바인딩하려면는 `[Category]` 인터페이스 정의의 특성입니다.   사용 하는 경우는 `Category` 특성의 의미는 `[BaseType]` 특성이 기본 클래스를 확장 하, 확장 형식이 되도록 지정 하는 데 사용 되 고에서 변경 합니다.
+사용할 수 있는 바인딩하려면는 [ `[Category]` ](#CategoryAttribute) 인터페이스 정의의 특성입니다.   사용 하는 경우는 [ `[Category]` ](#CategoryAttribute) 특성의 의미는 [ `[BaseType]` ](#BaseTypeAttribute) 특성이 것과 확장할 형식을 확장 하는 기본 클래스를 지정 하는 데 사용 되 고에서 변경 합니다.
 
 에서는 다음 방법을 `UIView` 확장은 바인딩된 있으며 확장 메서드가 C#으로 변환 합니다.
 
@@ -273,7 +275,7 @@ interface MyUIViewExtension {
 }
 ```
 
-위의 만듭니다는 `MyUIViewExtension` 포함 하는 클래스는 `MakeBackgroundRed` 확장 메서드.   즉, 이제 "MakeBackgroundRed" 호출할 수 있습니다에 `UIView` Objective c 얻을 동일한 기능을 제공 하는 하위 클래스
+위의 만듭니다는 `MyUIViewExtension` 포함 하는 클래스는 `MakeBackgroundRed` 확장 메서드.   즉, 이제 호출할 수 있도록 `MakeBackgroundRed` 에 `UIView` Objective c 얻을 동일한 기능을 제공 하는 하위 클래스
 
 일부 경우에는 있습니다 **정적** 다음 예제에서와 같이 범주 내부 멤버:
 
@@ -317,12 +319,13 @@ interface FooObject {
 }
 ```
 
-찾을 때마다 경고 (BI1117) 발급 됩니다는 `[Static]` 내부 멤버는 `[Category]` 정의 합니다. 원하는 경우 `[Static]` 내부 멤버 여 `[Category]` 정의 사용 하 여 경고 소리가 나 지 않도록 수 `[Category (allowStaticMembers: true)]` 하나 통해, 또는 멤버 또는 `[Category]` 인터페이스를 정의 `[Internal]`합니다.
+찾을 때마다 경고 (BI1117) 발급 됩니다는 [ `[Static]` ](#StaticAttribute) 내부 멤버는 [ `[Category]` ](#CategoryAttribute) 정의 합니다. 원하는 경우 [ `[Static]` ](#StaticAttribute) 내부 멤버 여 [ `[Category]` ](#CategoryAttribute) 정의 사용 하 여 경고 소리가 나 지 않도록 수 `[Category (allowStaticMembers: true)]` 멤버 또는 통해,또는[ `[Category]` ](#CategoryAttribute) 인터페이스와 정의 [ `[Internal]` ](#InternalAttribute)합니다.
 
+<a name="StaticAttribute_Class" />
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-방금 정적 클래스에서 파생 되지 않는 것이 특성이 클래스에 적용 되 면 기반인 `NSObject` 하므로 `[BaseType]` 특성은 무시 됩니다. 정적 클래스 C 공용 변수를 노출 하려면를 호스트 하는 데 사용 됩니다.
+방금 정적 클래스에서 파생 되지 않는 것이 특성이 클래스에 적용 되 면 기반인 `NSObject`이므로 [ `[BaseType]` ](#BaseTypeAttribute) 특성은 무시 됩니다. 정적 클래스 C 공용 변수를 노출 하려면를 호스트 하는 데 사용 됩니다.
 
 예를 들어:
 
@@ -341,8 +344,7 @@ public partial class CBAdvertisement  {
 }
 ```
 
-
-## <a name="protocol-definitionsmodel"></a>프로토콜 정의/모델
+## <a name="protocolmodel-definitions"></a>프로토콜/모델 정의
 
 모델은 일반적으로 프로토콜 구현에 의해 사용 됩니다.
 런타임에서에 등록 됩니다 Objective-c 실제로 덮어썼습니다 메서드 한다는 점에서 다릅니다.
@@ -350,12 +352,13 @@ public partial class CBAdvertisement  {
 
 일반적으로 의미 하위 사용 되도록 지정 하는 클래스는 `ModelAttribute`, 기본 메서드를 호출 하지 않아야 합니다.   해당 메서드를 호출 하면 예외가 throw 됩니다, 그리고 재정의 하는 방법에 대 한 서브 클래스에 전체 동작을 구현 하는 것입니다.
 
+<a name="AbstractAttribute" />
 
 ### <a name="abstractattribute"></a>AbstractAttribute
 
-기본적으로는 프로토콜의 일부인 멤버는 필수입니다. 이렇게 하면 사용자의 서브 클래스를 만들 수는 `Model` 단순히 C# 클래스에서 파생 하 고 처리 되는 메서드만 재정의 개체입니다. 경우에 따라 Objective-c 계약에 필요한 사용자가이 메서드에 대 한 구현을 제공 하 (하는 것으로 플래그가 지정는 @required Objective-c 지시문). 이러한 경우에 사용 하는 메서드를 플래그 지정 해야는 `Abstract` 특성입니다.
+기본적으로는 프로토콜의 일부인 멤버는 필수입니다. 이렇게 하면 사용자의 서브 클래스를 만들 수는 `Model` 단순히 C# 클래스에서 파생 하 고 처리 되는 메서드만 재정의 개체입니다. 경우에 따라 Objective-c 계약에 필요한 사용자가이 메서드에 대 한 구현을 제공 하 (하는 것으로 플래그가 지정는 `@required` Objective-c 지시문). 이러한 경우에 사용 하는 메서드를 플래그 지정 해야는 `[Abstract]` 특성입니다.
 
-`Abstract` 특성 메서드 또는 속성에 적용할 수 있습니다 및 생성자가 추상 클래스로 "추상" 및 클래스로 생성 된 멤버 플래그를 지정 합니다.
+`[Abstract]` 특성 메서드 또는 속성에 적용 될 수 있으며 생성자가 생성 된 멤버 추상 속성 및 클래스는 추상 클래스에 플래그를 지정 합니다.
 
 다음에서 가져옵니다 Xamarin.iOS:
 
@@ -402,7 +405,7 @@ var camera = new Camera ();
 camera.ShouldUploadToServer = (camera, action) => return SomeDecision ();
 ```
 
-참고 항목: [NoDefaultValueAttribute](#NoDefaultValueAttribute), [DefaultValueFromArgumentAttribute](#DefaultValueFromArgumentAttribute)합니다.
+참고 항목: [ `[NoDefaultValue]` ](#NoDefaultValueAttribute), [ `[DefaultValueFromArgument]` ](#DefaultValueFromArgumentAttribute)합니다.
 
 <a name="DefaultValueFromArgumentAttribute" />
 
@@ -432,7 +435,7 @@ public interface NSAnimationDelegate {
 
 위의 경우에서의 사용자는 `NSAnimation` 클래스 C# 이벤트/속성을 사용 하 고 설정 하지 않은 `NSAnimation.ComputeAnimationCurve` 메서드 또는 람다, 반환 값에 게 진행률 매개 변수에 전달 된 값입니다.
 
-참고 항목: [NoDefaultValueAttribute](#NoDefaultValueAttribute), [DefaultValueAttribute](#DefaultValueAttribute)
+참고 항목: [ `[NoDefaultValue]` ](#NoDefaultValueAttribute), [`[DefaultValue]`](#DefaultValueAttribute)
 
 ### <a name="ignoredindelegateattribute"></a>IgnoredInDelegateAttribute
 
@@ -494,9 +497,11 @@ public interface NSAnimationDelegate {
 public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 ```
 
+<a name="EventArgsAttribute" />
+
 ### <a name="eventargsattribute"></a>EventArgsAttribute
 
-둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `EventArgs` 에서 메서드 선언에서 특성 프로그램 `Model` 클래스입니다.
+둘 이상의 매개 변수를 사용 하는 이벤트에 대 한 (Objective C의 규칙은 대리자 클래스의 첫 번째 매개 변수는 보낸 사람에 게 개체의 인스턴스는)를 원하는 되도록 생성된 된 EventArgs 클래스에 대 한 이름을 제공 해야 합니다. 이러한 용도로 `[EventArgs]` 에서 메서드 선언에서 특성 프로그램 `Model` 클래스입니다.
 
 예를 들어:
 
@@ -519,7 +524,7 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-그런 다음 UIImagePickerController 클래스에서 다음을 제공합니다.
+다음을 노출 하는 `UIImagePickerController` 클래스:
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
@@ -528,7 +533,7 @@ public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImag
 
 ### <a name="eventnameattribute"></a>EventNameAttribute
 
-이 특성은 사용 하 여 이벤트 클래스에서 생성 하는 속성의 이름을 변경 하려면 생성기에 있도록 합니다. 경우에 유용 때의 이름을 `Model` 클래스 메서드 모델 클래스에 적합 하지만 이벤트 또는 속성으로 원래 클래스에서 이상 할 것입니다.
+이 특성은 사용 하 여 이벤트 클래스에서 생성 하는 속성의 이름을 변경 하려면 생성기에 있도록 합니다. 것이 유용한 경우가 모델 클래스 메서드의 이름을 모델 클래스에 적합 하지만 이벤트 또는 속성으로 원래 클래스에서 이상 할 것입니다.
 
 예를 들어는 `UIWebView` 에서 다음 비트를 사용 하 여 `UIWebViewDelegate`:
 
@@ -544,10 +549,11 @@ var webView = new UIWebView (...);
 webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 ```
 
+<a name="ModelAttribute" />
 
 ### <a name="modelattribute"></a>ModelAttribute
 
-적용 하는 경우는 `Model` 런타임 API 계약의 형식 정의에 특성은만 노출할 호출 클래스에 메서드를 사용자가 클래스의 메서드를 덮어쓸 경우 특수 한 코드를 생성 합니다. 이 특성은 일반적으로 Objective-c 대리자 클래스를 래핑하는 모든 Api에 적용 됩니다.
+적용 하는 경우는 `[Model]` 런타임 API 계약의 형식 정의에 특성은만 노출할 호출 클래스에 메서드를 사용자가 클래스의 메서드를 덮어쓸 경우 특수 한 코드를 생성 합니다. 이 특성은 일반적으로 Objective-c 대리자 클래스를 래핑하는 모든 Api에 적용 됩니다.
 
 <a name="NoDefaultValueAttribute" />
 
@@ -555,7 +561,7 @@ webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 
 모델에 대 한 메서드는 기본 반환 값을 제공 하지 않기를 지정 합니다.
 
-Objective C 런타임 "false" 응답 하 여 수는 지정된 된 선택기가이 클래스에서 구현 하는 경우를 확인 하려면 Objective C 런타임 요청 합니다.
+이 응답 하 여 Objective-c 런타임과 함께 작동 `false` 지정된 된 선택기가이 클래스에서 구현 하는 경우를 확인 하려면 Objective C 런타임 요청 합니다.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -566,13 +572,15 @@ interface CameraDelegate {
 }
 ```
 
-참고 항목: [DefaultValueAttribute](#DefaultValueAttribute) 및 [DefaultValueAttribute](#DefaultValueAttribute)합니다.
+참고 항목: [ `[DefaultValue]` ](#DefaultValueAttribute), [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
+
+<a name="ProtocolAttribute" />
 
 ## <a name="protocols"></a>프로토콜
 
 Objective C 프로토콜 개념 C#에서 실제로 존재 하지 않습니다. 프로토콜 C#의 인터페이스 유사 하지만 것을 채택 하는 클래스에서 구현 해야 하는 메서드 및 프로토콜에 선언 된 속성 중 일부만 한다는 점에서 다릅니다. 대신 메서드 및 속성의 일부는 선택 사항입니다.
 
-일부 프로토콜은 일반적으로 모델 클래스로 사용, 해당 모델 특성을 사용 하 여 바인딩된 해야 합니다.
+모델 클래스로 일부 프로토콜은 일반적으로 사용, 해당 사용 하 여 바인딩된 해야는 [ `[Model]` ](#ModelAttribute) 특성입니다.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -589,7 +597,7 @@ interface MyProtocol {
 }
 ```
 
-바인딩 기능 새롭고 향상 된 프로토콜 MonoTouch 7.0 부터는 통합 되었습니다.  포함 된 모든 정의 `[Protocol]` 특성은 실제로 크게 프로토콜을 사용 하는 방식을 개선 하는 세 가지 지원 클래스를 생성 합니다.
+바인딩 기능 새롭고 향상 된 프로토콜 Xamarin.iOS 7.0 부터는 통합 되었습니다.  포함 된 모든 정의 `[Protocol]` 특성은 실제로 크게 프로토콜을 사용 하는 방식을 개선 하는 세 가지 지원 클래스를 생성 합니다.
 
 ```csharp
 // Full method implementation, contains all methods
@@ -673,7 +681,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 
 ### <a name="protocol-inlining"></a>인라인 처리 프로토콜
 
-프로토콜을 채택로 선언 되어 기존 Objective C 형식에 바인딩하는 동안 하려는 인라인 프로토콜 직접 합니다. 이렇게 하려면 단순히 프로토콜으로 선언 하지 않고 인터페이스 `[BaseType]` 특성 및 사용자 인터페이스에 대 한 기본 인터페이스 목록에 프로토콜을 나열 합니다.
+프로토콜을 채택로 선언 되어 기존 Objective C 형식에 바인딩하는 동안 하려는 인라인 프로토콜 직접 합니다. 이렇게 하려면 단순히 프로토콜으로 선언 하지 않고 인터페이스 [ `[BaseType]` ](#BaseTypeAttribute) 특성 및 사용자 인터페이스에 대 한 기본 인터페이스 목록에 프로토콜을 나열 합니다.
 
 예제:
 
@@ -712,9 +720,9 @@ public interface GLKBaseEffect {
 
 ### <a name="appearanceattribute"></a>AppearanceAttribute
 
-`Appearance` 특성 모양 관리자 도입 된 iOS5로 제한 됩니다.
+`[Appearance]` 특성 모양 관리자 도입 된 5, iOS로 제한 됩니다.
 
-`Appearance` 메서드 또는 속성에 참여 하는 모든 특성을 적용할 수 있습니다는 `UIAppearance` 프레임 워크입니다. 이 특성이 메서드 또는 클래스에서 속성에 적용 되 면이 클래스의 모든 인스턴스 또는 인스턴스에 특정 조건과 일치 하는 스타일을 지정 하는 데 사용 되는 모양을 강력한 형식의 클래스를 만드는 바인딩 생성기를 지시 합니다.
+`[Appearance]` 메서드 또는 속성에 참여 하는 모든 특성을 적용할 수 있습니다는 `UIAppearance` 프레임 워크입니다. 이 특성이 메서드 또는 클래스에서 속성에 적용 되 면이 클래스의 모든 인스턴스 또는 인스턴스에 특정 조건과 일치 하는 스타일을 지정 하는 데 사용 되는 모양을 강력한 형식의 클래스를 만드는 바인딩 생성기를 지시 합니다.
 
 예제:
 
@@ -747,7 +755,7 @@ public partial class UIToolbar {
 
 ### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Xamarin.iOS 5.4)
 
-사용 하 여는 `AutoReleaseAttribute` 메서드에 메서드 호출을 래핑하려면 하도록 메서드 및 속성에는 `NSAutoReleasePool`합니다.
+사용 하 여는 `[AutoReleaseAttribute]` 메서드에 메서드 호출을 래핑하려면 하도록 메서드 및 속성에는 `NSAutoReleasePool`합니다.
 
 Objective C에는 기본값에 추가 하는 값을 반환 하는 몇 가지 메서드 `NSAutoReleasePool`합니다. 기본적으로 이러한을 거쳐야 스레드 `NSAutoReleasePool`, 하지만 Xamarin.iOS도 관리 되는 개체가으로 개체에 대 한 참조를 유지, 되므로 추가 내용을 변경 하지 않으려면 원하지 수는 `NSAutoReleasePool` 스레드 될 때까지 소모 가져오기 됩니다는 다음 스레드에 컨트롤을 반환 하거나 주 루프로 다시 이동 합니다.
 
@@ -755,7 +763,7 @@ Objective C에는 기본값에 추가 하는 값을 반환 하는 몇 가지 메
 
 ### <a name="forcedtypeattribute"></a>ForcedTypeAttribute
 
-`ForcedTypeAttribute` 반환 되는 관리 되지 않는 개체에 바인딩 정의에 설명 된 형식과 일치 하지 않는 경우에 관리 되는 형식 만들기를 적용 하는 데 사용 됩니다.
+`[ForcedTypeAttribute]` 반환 되는 관리 되지 않는 개체에 바인딩 정의에 설명 된 형식과 일치 하지 않는 경우에 관리 되는 형식 만들기를 적용 하는 데 사용 됩니다.
 
 헤더에 설명 된 형식의 네이티브 메서드의 반환된 형식을 일치 하지 않는 경우 유용, 예를 들어 다음 Objective-c 정의에서 걸릴 `NSURLSession`:
 
@@ -763,7 +771,7 @@ Objective C에는 기본값에 추가 하는 값을 반환 하는 몇 가지 메
 
 명확 하 게 반환 하는 것에 따르면는 `NSURLSessionDownloadTask` 인스턴스 하지만 아직 것 **반환** 는 `NSURLSessionTask`, 슈퍼 클래스 변수인 따라서 하지 변환할 및 `NSURLSessionDownloadTask`합니다. 형식이 안전한 컨텍스트 이므로 `InvalidCastException` 일이 발생 합니다.
 
-헤더 파일에 대 한 설명 준수 하 고 방지 하는 `InvalidCastException`, `ForcedTypeAttribute` 사용 됩니다.
+헤더 파일에 대 한 설명 준수 하 고 방지 하는 `InvalidCastException`, `[ForcedTypeAttribute]` 사용 됩니다.
 
 ```csharp
 [BaseType (typeof (NSObject), Name="NSURLSession")]
@@ -775,15 +783,17 @@ interface NSUrlSession {
 }
 ```
 
-`ForcedTypeAttribute` 라는 부울 값을 받기도 `Owns` 즉 `false` 기본적으로 `[ForcedType (owns: true)]`합니다. 따르도록 매개 변수를 사용 하는 소유 하는 [소유권 정책을](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html) 에 대 한 **코어 Foundation** 개체입니다.
+`[ForcedTypeAttribute]` 라는 부울 값을 받기도 `Owns` 즉 `false` 기본적으로 `[ForcedType (owns: true)]`합니다. 따르도록 매개 변수를 사용 하는 소유 하는 [소유권 정책을](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html) 에 대 한 **코어 Foundation** 개체입니다.
 
-`ForcedTypeAttribute` 에서만 유효 `parameters`, `properties` 및 `return value`합니다.
+`[ForcedTypeAttribute]` 매개 변수, 속성 및 반환 값에만 유효 합니다.
+
+<a name="BindAsAttribute" />
 
 ### <a name="bindasattribute"></a>BindAsAttribute
 
-`BindAsAttribute` 바인딩을 허용 `NSNumber`, `NSValue` 및 `NSString`(열거형)를 보다 정확 하 게 C# 형식으로. 특성 보다 효율적이 고, 더 정확 하 게 만드는 데 사용할 수는 네이티브 API 통해.NET API입니다.
+`[BindAsAttribute]` 바인딩을 허용 `NSNumber`, `NSValue` 및 `NSString`(열거형)를 보다 정확 하 게 C# 형식으로. 특성 보다 효율적이 고, 더 정확 하 게 만드는 데 사용할 수는 네이티브 API 통해.NET API입니다.
 
-(반환 값)에 대 한 메서드, 매개 변수 및 사용 하 여 속성 데코레이팅 할 수 있습니다 `BindAs`합니다. 유일한 제한 사항은 구성원은 **하지 않아야** 안에 `[Protocol]` 또는 `[Model]` 인터페이스입니다.
+(반환 값)에 대 한 메서드, 매개 변수 및 사용 하 여 속성 데코레이팅 할 수 있습니다 `BindAs`합니다. 유일한 제한 사항은 구성원은 **하지 않아야** 안에 `[Protocol]` 또는 [ `[Model]` ](#ModelAttribute) 인터페이스입니다.
 
 예를 들어:
 
@@ -852,7 +862,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 #### <a name="nsstring"></a>NSString
 
-`[BindAs]` 와 conjuntion에서 작동 하는 [NSString 상수 뒷받침 되며 열거형](#enum-attributes) 예를 들어 더 나은.NET API를 만들 수 있습니다.
+[`[BindAs]`](#BindAsAttribute) 와 conjuntion에서 작동 하는 [NSString 상수 뒷받침 되며 열거형](#enum-attributes) 예를 들어 더 나은.NET API를 만들 수 있습니다.
 
 ```csharp
 [BindAs (typeof (CAScroll))]
@@ -867,11 +877,11 @@ NSString SupportedScrollMode { get; set; }
 CAScroll SupportedScrollMode { get; set; }
 ```
 
-처리는 `enum`  <->  `NSString` 변환을 제공 된 열거형을 입력 하는 경우에 `[BindAs]` 은 [NSString 상수 뒷받침 되며](#enum-attributes)합니다.
+처리는 `enum`  <->  `NSString` 변환을 제공 된 열거형을 입력 하는 경우에 [ `[BindAs]` ](#BindAsAttribute) 은 [NSString 상수 뒷받침 되며](#enum-attributes)합니다.
 
 #### <a name="arrays"></a>배열
 
-`[BindAs]` 또한 배열을 지원 모든 지원 되는 형식의 예를 들어 다음 API 정의 포함할 수 있습니다.
+[`[BindAs]`](#BindAsAttribute) 또한 배열을 지원 모든 지원 되는 형식의 예를 들어 다음 API 정의 포함할 수 있습니다.
 
 ```csharp
 [return: BindAs (typeof (CAScroll []))]
@@ -888,11 +898,13 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 `rects` 에 매개 변수를 캡슐화 됩니다는 `NSArray` 를 포함 하는 `NSValue` 각각에 대해 `CGRect` 수 있으며 그러면 배열을 `CAScroll?` 는 만든 반환 된 값을 사용 하 여 `NSArray` 포함 된 `NSStrings`합니다.
 
+<a name="BindAttribute" />
+
 ### <a name="bindattribute"></a>BindAttribute
 
-`Bind` 특성의 용도 메서드 또는 속성 선언과 개별 getter 또는 setter를 속성에 적용할 때 다른 항목에 적용 될 때 하나 있습니다.
+`[Bind]` 특성의 용도 메서드 또는 속성 선언과 개별 getter 또는 setter를 속성에 적용할 때 다른 항목에 적용 될 때 하나 있습니다.
 
-메서드 또는 속성에 사용할 경우 바인딩 특성의 효과 지정 된 선택기를 호출 하는 메서드를 생성 하는 것입니다. 으로 생성된 된 결과 메서드를 데코레이팅하 지 않으면 하지만 `[Export]` 특성을 메서드가 재정의에 참여 하지 않을 수 있습니다. 이 일반적으로 함께에서 사용 되어는 `Target` Objective-c 확장 메서드를 구현 하기 위한 특성입니다.
+메서드 또는 속성의 효과에 사용 되는 경우는 `[Bind]` 특성이 지정된 된 선택기를 호출 하는 메서드를 생성 하는 것입니다. 하지만 결과 생성 된 메서드를 데코 레이트 되지 않은 [ `[Export]` ](#ExportAttribute) 특성을 메서드가 재정의에 참여 하지 않을 수 있습니다. 이 일반적으로 함께에서 사용 되어는 `[Target]` Objective-c 확장 메서드를 구현 하기 위한 특성입니다.
 
 예를 들어:
 
@@ -903,7 +915,7 @@ public interface UIView {
 }
 ```
 
-Getter 또는 setter를 사용 하는 경우는 `Bind` 특성을 사용 하는 속성에 대 한 getter 및 setter Objective-c 선택기 이름을 생성할 때 코드 생성기에 의해 유추 기본값을 변경 합니다. 기본적으로 이름은 "fooBar"를 사용 하 여 속성 플래그를 지정 하는 경우 생성자 생성 getter에 대 한 "fooBar" 내보내기 및 "setFooBar:" setter에 대 한 합니다. 일부 상황에서는 Objective-c이이 규칙을 따르지 않습니다, 그리고 일반적으로 getter 이름을 "isFooBar"으로 변경 합니다.
+Getter 또는 setter를 사용 하는 경우는 `[Bind]` 특성을 사용 하는 속성에 대 한 getter 및 setter Objective-c 선택기 이름을 생성할 때 코드 생성기에 의해 유추 기본값을 변경 합니다. 이름의 속성 플래그를 지정 하면 기본적으로 `fooBar`, 생성기를 생성할 수는 `fooBar` getter에 대 한 내보내기 및 `setFooBar:` setter에 대 한 합니다. Objective C 일부의 경우에이 규칙을 따르는 하지 않습니다, 일반적으로 변경 하 고 getter 이름을 `isFooBar`합니다.
 이 생성자를 알리기 위해이 특성을 사용 합니다.
 
 예를 들어:
@@ -918,6 +930,7 @@ bool Active { get; set; }
 bool Visible { [Bind ("isVisible")] get; set; }
 ```
 
+<a name="AsyncAttribute" />
 
 ### <a name="asyncattribute"></a>AsyncAttribute
 
@@ -925,7 +938,7 @@ bool Visible { [Bind ("isVisible")] get; set; }
 
 마지막 인수와 완료 처리기를 사용 하는 메서드로이 특성을 적용할 수 있습니다.
 
-사용할 수는 `[Async]` 메서드에 적용 된 마지막 인수는 콜백을 특성입니다.  이 메서드를 적용 하면 바인딩 생성기에서 접미사와 해당 메서드의 버전을 생성 `Async`합니다.  콜백 매개 변수를 사용 하는 경우 반환 값 됩니다는 `Task`, 콜백 매개 변수를 사용 하는 경우 결과 작업 됩니다&lt;T&gt;합니다.
+사용할 수는 `[Async]` 메서드에 적용 된 마지막 인수는 콜백을 특성입니다.  이 메서드를 적용 하면 바인딩 생성기에서 접미사와 해당 메서드의 버전을 생성 `Async`합니다.  콜백 매개 변수를 사용 하는 경우 반환 값 됩니다는 `Task`, 콜백 매개 변수를 사용 하는 경우 결과 됩니다는 `Task<T>`합니다.
 
 ```csharp
 [Export ("upload:complete:")]
@@ -949,7 +962,7 @@ delegate void OnComplete (string [] files, nint byteCount);
 void LoadFiles (string file, OnComplete complete)
 ```
 
-다음에는이 비동기 메서드에 생성 됩니다 여기서 `FileLoading` "files"와 "byteCount"에 액세스 하는 속성이 포함 되어 있습니다.
+다음에는이 비동기 메서드에 생성 됩니다 여기서 `FileLoading` 모두 액세스할 수 있는 속성이 포함 되어 `files` 및 `byteCount`:
 
 ```csharp
 Task<FileLoading> LoadFile (string file);
@@ -988,7 +1001,7 @@ Task<string> UploadAsync (string file);
 이 특성 문자열 매개 변수 또는 문자열 속성에 적용 되 고이 매개 변수에 대 한 마샬링 0 복사 문자열을 사용 하지 않도록 하는 코드 생성기 및 대신 C# 문자열에서 새 NSString 인스턴스를 만듭니다.
 이 특성에만 필요 문자열 생성기 0 복사 문자열 마샬링 중 하나를 사용 하 여 사용 하도록 지시 하는 경우는 `--zero-copy` 명령줄 옵션 또는 어셈블리 수준 특성을 설정 `ZeroCopyStringsAttribute`합니다.
 
-이 필요한 경우 속성을 Objective C의 선언 된 위치에 "복사" 속성 대신 "유지" 또는 "할당" 속성 이어야 합니다. 이 일반적으로 잘못 "최적화" 개발자가 하는 타사 라이브러리에서 발생 합니다. 일반적으로 "유지" 또는 "할당" `NSString` 속성이 이후 올바른지 `NSMutableString` 또는 사용자에서 파생 된 클래스의 `NSString` 미세 하 게 응용 프로그램을 주요 라이브러리 코드의 지식 없이 문자열의 내용을 변경 될 수 있습니다. 일반적으로이 시기 상 조일 최적화로 인해 발생합니다.
+이 작업은 필요 속성 되도록 Objective-c에 선언 되어 있는 경우에는 `retain` 또는 `assign` 속성 대신는 `copy` 속성입니다. 이 일반적으로 잘못 "최적화" 개발자가 하는 타사 라이브러리에서 발생 합니다. 일반적으로 `retain` 또는 `assign` `NSString` 속성이 이후 올바른지 `NSMutableString` 또는 사용자에서 파생 된 클래스의 `NSString` 약간 주요 라이브러리 코드의 지식 없이 문자열의 내용을 변경 될 수 있습니다는 응용 프로그램입니다. 일반적으로이 시기 상 조일 최적화로 인해 발생합니다.
 
 Objective c:에 다음은 이러한 두 속성
 
@@ -1000,9 +1013,9 @@ Objective c:에 다음은 이러한 두 속성
 
 ### <a name="disposeattribute"></a>DisposeAttribute
 
-적용 하는 경우는 `DisposeAttribute` 에 추가할 수 있는 코드 조각을 제공 하는 클래스에는 `Dispose()` 클래스의 메서드를 구현 합니다.
+적용 하는 경우는 `[DisposeAttribute]` 에 추가할 수 있는 코드 조각을 제공 하는 클래스에는 `Dispose()` 클래스의 메서드를 구현 합니다.
 
-이후는 `Dispose` 메서드를 자동으로 생성 됩니다는 `bmac-native` 및 `btouch-native` 사용 해야 하는 도구는 `Dispose` 특성으로 생성 된 일부 코드를 삽입할 `Dispose` 메서드 구현 합니다.
+이후는 `Dispose` 메서드를 자동으로 생성 됩니다는 `bmac-native` 및 `btouch-native` 사용 해야 하는 도구는 `[Dispose]` 특성으로 생성 된 일부 코드를 삽입할 `Dispose` 메서드 구현 합니다.
 
 예를 들어:
 
@@ -1013,10 +1026,11 @@ interface DatabaseConnection {
 }
 ```
 
+<a name="ExportAttribute" />
 
 ### <a name="exportattribute"></a>ExportAttribute
 
-`Export` 특성은 메서드 또는 Objective-c 런타임에 노출 해야 하는 속성 플래그를 설정 하려면 사용 합니다. 이 특성은 바인딩 도구 및 실제 Xamarin.iOS 및 Xamarin.Mac 런타임 간에 공유 됩니다. 메서드의 경우 매개 변수는 생성 된 코드에 축 자에 대해 전달 된 속성, getter 및 setter 내보내기를 기본 선언에 따라 생성 됩니다 (섹션을 참조는 `BindAttribute` 바인딩 도구의 동작을 변경 하는 방법에 대 한 내용은).
+`[Export]` 특성은 메서드 또는 Objective-c 런타임에 노출 해야 하는 속성 플래그를 설정 하려면 사용 합니다. 이 특성은 바인딩 도구 및 실제 Xamarin.iOS 및 Xamarin.Mac 런타임 간에 공유 됩니다. 메서드의 경우 매개 변수는 생성 된 코드에 축 자에 대해 전달 된 속성, getter 및 setter 내보내기를 기본 선언에 따라 생성 됩니다 (섹션을 참조는 [ `[BindAttribute]` ](#BindAttribute) 변경 하는 방법에 대 한 내용은 바인딩 도구 동작)입니다.
 
 구문:
 
@@ -1035,11 +1049,11 @@ public class ExportAttribute : Attribute {
 }
 ```
 
-[선택기](http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/Chapters/ocSelectors.html) 메서드 또는 바인딩되는 속성의 기본 Objective-c 이름을 나타냅니다.
-
+[선택기](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html) 기본 Objective-c 메서드나 바인딩되는 속성의 이름을 나타냅니다.
 
 #### <a name="exportattributeargumentsemantic"></a>ExportAttribute.ArgumentSemantic
 
+<a name="FieldAttribute" />
 
 ### <a name="fieldattribute"></a>FieldAttribute
 
@@ -1056,7 +1070,7 @@ public class FieldAttribute : Attribute {
 }
 ```
 
-`symbolName` 와 링크 하려면 C 기호입니다. 기본적으로이 로드 하는 형식이 정의 되어 있는 이름이 네임 스페이스에서 유추 되는 라이브러리에서 됩니다. 이 정보가 기호를 조회 되는 라이브러리를 전달 해야는 `libraryName` 매개 변수입니다. 정적 라이브러리를 연결 하 고 사용 하 여 "__Internal"로 `libraryName` 매개 변수입니다.
+`symbolName` 와 링크 하려면 C 기호입니다. 기본적으로이 로드 하는 형식이 정의 되어 있는 이름이 네임 스페이스에서 유추 되는 라이브러리에서 됩니다. 이 정보가 기호를 조회 되는 라이브러리를 전달 해야는 `libraryName` 매개 변수입니다. 정적 라이브러리를 연결 하 고 사용 하 여 `__Internal` 로 `libraryName` 매개 변수입니다.
 
 생성 된 속성은 항상 정적입니다.
 
@@ -1084,9 +1098,11 @@ interface CameraEffects {
 }
 ```
 
+<a name="InternalAttribute" />
+
 ### <a name="internalattribute"></a>InternalAttribute
 
-`Internal` 효과가 "내부" C# 키워드와 생성된 된 어셈블리의 코드를 코드에만 액세스할 수 있도록 생성된 된 코드를 플래그 지정 및 특성은 메서드 또는 속성에 적용할 수 있습니다. 일반적으로 너무 낮은 수준의 Api을 숨기고 시 또는 생성기에서 지원 되지 않는 Api에 대 한 개선 하기 위해 원하는 최적이 아닌 공용 API를 제공 하거나 일부 직접 코딩을 요구 사용 됩니다.
+`[Internal]` 특성은 메서드 또는 속성에 적용할 수 있습니다 및 사용 하 여 생성 된 코드에 플래그 설정의 영향을 주지는 `internal` C# 키워드 생성된 된 어셈블리의 코드를 코드에만 액세스할 수 있도록 합니다. 일반적으로 너무 낮은 수준의 Api을 숨기고 시 또는 생성기에서 지원 되지 않는 Api에 대 한 개선 하기 위해 원하는 최적이 아닌 공용 API를 제공 하거나 일부 직접 코딩을 요구 사용 됩니다.
 
 바인딩 디자인, 일반적으로이 특성을 사용 하 여 속성 또는 메서드 숨기기 하는 메서드 또는 속성에 대 한 다른 이름을 제공 및 다음 C# 상호 보완적인 지원 파일을 추가할 때 노출 되는 강력한 형식의 래퍼를 때는 기본 기능입니다.
 
@@ -1094,7 +1110,7 @@ interface CameraEffects {
 
 ```csharp
 [Internal]
-[Export ("setValue:forKey:");
+[Export ("setValue:forKey:")]
 void _SetValueForKey (NSObject value, NSObject key);
 
 [Internal]
@@ -1115,13 +1131,15 @@ public NSObject this [NSObject idx] {
 }
 ```
 
+<a name="IsThreadStaticAttribute" />
+
 ### <a name="isthreadstaticattribute"></a>IsThreadStaticAttribute
 
 이 특성 플래그는.NET으로 주석을 달아야 하는 속성에 대 한 지원 필드 `[ThreadStatic]` 특성입니다. 필드가 스레드 정적 변수 경우에 유용 합니다.
 
 ### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
 
-이 특성 메서드 지원 네이티브 (ObjectiveC) 예외를 확인 합니다.
+이 특성 메서드 지원 네이티브 (Objective-c) 예외를 확인 합니다.
 호출 하는 대신 `objc_msgSend` 를 직접 호출 ObjectiveC 예외를 catch 하 고 관리 되는 예외를 마샬링합니다는 사용자 지정 trampoline 설명 합니다.
 
 현재 일부만 `objc_msgSend` 서명이 지원 됩니다 (배우면 서명을 누락 monotouch_ 실패 하는 바인딩을 사용 하는 앱의 네이티브 연결 하는 경우 지원 되지 않습니다 경우*_objc_msgSend* 기호), 될 수 있습니다 더 있지만 요청에 추가 합니다.
@@ -1129,16 +1147,17 @@ public NSObject this [NSObject idx] {
 
 ### <a name="newattribute"></a>NewAttribute
 
-이 특성은 메서드 및 속성을 선언 앞에 "new" 키워드를 생성 하는 생성기에 적용 됩니다.
+이 특성이 메서드에 적용 되 고 생성기 속성이 생성는 `new` 선언 앞에 키워드입니다.
 
 동일한 메서드 또는 속성 이름은 기본 클래스에 이미 존재 하는 하위 클래스에 도입 된 때 컴파일러 경고를 방지 하기 위해 사용 됩니다.
 
+<a name="NotificationAttribute" />
 
 ### <a name="notificationattribute"></a>NotificationAttribute
 
 강력한 형식의 도우미 알림 클래스 생성기 생성을 필드에이 특성을 적용할 수 있습니다.
 
-이 특성을 사용 하 여 알림을 하지 않는 페이로드를 전송 하는 인수 없이 하거나 지정할 수 있습니다는 `System.Type` "EventArgs"로 끝나는 이름의 일반적으로 API 정의에서 다른 인터페이스를 참조 하는 합니다. 생성기 바뀝니다 인터페이스 클래스 서브클래싱하는 `EventArgs` 여기에 나열 된 속성을 모두 포함 됩니다. `[Export]` 특성을 사용 해야는 `EventArgs` 클래스 값을 인출 Objective-c 사전을 조회 하는 데 사용 되는 키의 이름을 표시 합니다.
+이 특성을 사용 하 여 알림을 하지 않는 페이로드를 전송 하는 인수 없이 하거나 지정할 수 있습니다는 `System.Type` "EventArgs"로 끝나는 이름의 일반적으로 API 정의에서 다른 인터페이스를 참조 하는 합니다. 생성기 바뀝니다 인터페이스 클래스 서브클래싱하는 `EventArgs` 여기에 나열 된 속성을 모두 포함 됩니다. [ `[Export]` ](#ExportAttribute) 특성을 사용 해야는 `EventArgs` 클래스 값을 인출 Objective-c 사전을 조회 하는 데 사용 되는 키의 이름을 표시 합니다.
 
 예를 들어:
 
@@ -1207,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스와 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성의 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) 키를 사용 하 여 사전 **ScreenXKey** 및 **ScreenYKey** 각각 적절 한 변환을 적용 합니다. `[ProbePresence]` 특성은 키 설정 된 경우를 검색 하는 생성기에 사용 된 `UserInfo`, 값을 추출 하는 것이 아니라 합니다. 이 경우 여기서 키의 존재는 값 (일반적으로 값에 대 한 부울)에 사용 됩니다.
+위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스와 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성의 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) 키를 사용 하 여 사전 `ScreenXKey` 및 `ScreenYKey` 각각 적절 한 변환을 적용 합니다. `[ProbePresence]` 특성은 키 설정 된 경우를 검색 하는 생성기에 사용 된 `UserInfo`, 값을 추출 하는 것이 아니라 합니다. 이 경우 여기서 키의 존재는 값 (일반적으로 값에 대 한 부울)에 사용 됩니다.
 
 이 옵션을 사용 하면 다음과 같은 코드를 작성할 수 있습니다.
 
@@ -1217,11 +1236,11 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 });
 ```
 
-경우에 따라 사전에 전달 된 값과 관련 된 상수가 없는 있습니다.  Apple 공용 기호 상수를 사용 하는 경우도 및 문자열 상수를 사용 하는 경우도 있습니다.  기본적으로는 `[Export]` 특성에 제공 된 프로그램 `EventArgs` 클래스 런타임에 조회 공용 기호 지정 된 이름을 사용 합니다.  경우 이것이 대신 할 문자열 상수 조회할 수 다음 전달 하는 경우는 `ArgumentSemantic.Assign` 내보내기 특성에는 값입니다.
+경우에 따라 사전에 전달 된 값과 관련 된 상수가 없는 있습니다.  Apple 공용 기호 상수를 사용 하는 경우도 및 문자열 상수를 사용 하는 경우도 있습니다.  기본적으로는 [ `[Export]` ](#ExportAttribute) 특성에 제공 된 프로그램 `EventArgs` 클래스 런타임에 조회 공용 기호 지정 된 이름을 사용 합니다.  경우 이것이 대신 할 문자열 상수 조회할 수 다음 전달 하는 경우는 `ArgumentSemantic.Assign` 내보내기 특성에는 값입니다.
 
 **Xamarin.iOS 8.4의에서 새로운 기능**
 
-경우에 따라 알림을 시작 합니다 인수 없이 수명 하므로 사용 `[Notification]` 인수를 허용 하지 않고 있습니다.  하지만 경우에 따라 알림에 대 한 매개 변수를 소개 합니다.  이 시나리오를 지원 하려면 특성을 두 번 이상 적용할 수 있습니다.
+경우에 따라 알림을 시작 합니다 인수 없이 수명 하므로 사용 [ `[Notification]` ](#NotificationAttribute) 인수를 허용 하지 않고 있습니다.  하지만 경우에 따라 알림에 대 한 매개 변수를 소개 합니다.  이 시나리오를 지원 하려면 특성을 두 번 이상 적용할 수 있습니다.
 
 바인딩을 개발 하는 기존 사용자 코드를 수정 하지 않으려는 경우에서 기존 알림 설정:
 
@@ -1244,13 +1263,15 @@ interface MyClass {
 }
 ```
 
+<a name="NullAllowedAttribute" />
+
 ### <a name="nullallowedattribute"></a>NullAllowedAttribute
 
-이 속성에 적용 되 면 속성 값을 할당 해야 하는 null을 허용 하도록 플래그 지정 합니다. 참조 형식에 대해서는이 유효합니다.
+속성 값을 허용 하도록 플래그는 속성에 적용 되는이 `null` 것에 할당할 수 있습니다. 참조 형식에 대해서는이 유효합니다.
 
-메서드 시그니처에서 매개 변수에 적용 되는이 지정된 된 매개 변수를 null 일 수 있습니다 및 검사 없이 null 값 전달 하기 위해 수행 해야 함을 나타냅니다.
+지정한 매개 변수가 null 일 수 있습니다 및 검사 없이 전달 하기 위해 수행 해야 함을 나타냅니다 메서드 시그니처에서 매개 변수에 적용이 될 때 `null` 값입니다.
 
-참조 형식에이 특성이 없으면 바인딩 도구 Objective-c 전달 하기 전에 할당 되는 값에 대 한 검사를 생성 하는 및이 발생 시키는 check가 생성 하는 프로그램 `ArgumentNullException` 할당 된 값이 null입니다.
+참조 형식에이 특성이 없으면 바인딩 도구 Objective-c 전달 하기 전에 할당 되는 값에 대 한 검사를 생성 하는 및이 발생 시키는 check가 생성 하는 프로그램 `ArgumentNullException` 할당 값 `null`합니다.
 
 예를 들어:
 
@@ -1264,16 +1285,15 @@ UIImage IconFile { get; set; }
 void SetImage ([NullAllowed] UIImage image, State forState);
 ```
 
-<a name="OverrideAttribute"/>
+<a name="OverrideAttribute" />
 
 ### <a name="overrideattribute"></a>OverrideAttribute
 
-이 특정 메서드에 대 한 바인딩 "재정의" 키워드와 함께 플래그 지정 해야 바인딩 생성기에 하도록 지시 하려면이 특성을 사용 합니다.
-
+이 특성을 사용 하 여이 특정 메서드에 대 한 바인딩으로 플래그 지정 해야 바인딩 생성자에 게 지시 하는 `override` 키워드입니다.
 
 ### <a name="presnippetattribute"></a>PreSnippetAttribute
 
-이 특성을 사용 하 여 입력된 매개 변수를 확인 한 후 하지만 Objective-c에 코드 호출 하기 전에 삽입 하는 코드를 삽입 합니다.
+이 특성을 사용 하 여 입력된 매개 변수를 확인 한 후 하지만 없습니다. 목표에 코드 호출 하기 전에 삽입 하는 코드를 삽입 합니다.
 
 예제:
 
@@ -1282,7 +1302,6 @@ void SetImage ([NullAllowed] UIImage image, State forState);
 [PreSnippet ("var old = ViewController;")]
 void Demo ();
 ```
-
 
 ### <a name="prologuesnippetattribute"></a>PrologueSnippetAttribute
 
@@ -1295,7 +1314,6 @@ void Demo ();
 [Prologue ("Trace.Entry ();")]
 void Demo ();
 ```
-
 
 ### <a name="postgetattribute"></a>PostGetAttribute
 
@@ -1322,7 +1340,6 @@ public interface NSOperation {
 
 이 경우에 `Dependencies` 속성을 추가 하거나에서 종속 요소를 제거한 후 호출 됩니다는 `NSOperation` 실제 나타내는 그래프 되도록 개체 메모리 누수 뿐만 아니라 메모리 손상을 방지 하는 개체를 로드 합니다.
 
-
 ### <a name="postsnippetattribute"></a>PostSnippetAttribute
 
 이 특성을 사용 하 여 코드 내부 Objective-c 메서드를 호출한 후 삽입할 C# 소스 코드를 삽입 합니다.
@@ -1335,11 +1352,9 @@ public interface NSOperation {
 void Demo ();
 ```
 
-
 ### <a name="proxyattribute"></a>ProxyAttribute
 
 프록시 개체에 있는 것으로 플래그를 지정 하는 값을 반환 하려면이 특성은 적용 됩니다. 일부 Objective-c Api 반환 프록시 개체를 사용자 바인딩에서 구분할 수 있습니다. 이 특성의 효과 개체를 플래그 지정 하는 것을 `DirectBinding` 개체입니다. Xamarin.Mac의 시나리오에서는 볼 수 있습니다는 [이 버그에 대해 토론](https://bugzilla.novell.com/show_bug.cgi?id=670844)합니다.
-
 
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
@@ -1353,7 +1368,7 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-"DoAdd"의 값이 true 인 경우는 매개 변수는 추가 `__mt_{0}_var List<NSObject>;`합니다. 여기서 `{0}` 아래 템플릿으로 바뀝니다는 주어진 `listName`합니다. API에 상호 보완적인 부분 클래스에이 지원 필드를 선언 해야 합니다.
+하는 경우의 값 `doAdd` 이 true 인 경우에 매개 변수 추가 되는 `__mt_{0}_var List<NSObject>;`합니다. 여기서 `{0}` 아래 템플릿으로 바뀝니다는 주어진 `listName`합니다. API에 상호 보완적인 부분 클래스에이 지원 필드를 선언 해야 합니다.
 
 예를 참조 하십시오. [foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) 및 [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
@@ -1376,22 +1391,24 @@ NSObject GetAndRetainObject ();
 
 Sealed로 생성된 된 메서드 플래그를 설정 하려면 생성기에 지시 합니다. 이 특성을 지정 하지 않으면 (가상 메서드, 추상 메서드 또는 다른 특성 사용법에 따라 재정의)는 가상 메서드를 생성 하는 것이 기본값이입니다.
 
+<a name="StaticAttribute" />
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-경우는 `Static` 특성이 적용 된 메서드 또는 속성에이 정적 메서드 또는 속성을 생성 합니다. 이 특성을 지정 하지 않으면 메서드는 인스턴스 메서드 또는 속성 생성기는 생성 됩니다.
+경우는 `[Static]` 특성은 메서드 또는 속성에 적용 되며,이 정적 메서드 또는 속성을 생성 합니다. 이 특성을 지정 하지 않으면 메서드는 인스턴스 메서드 또는 속성 생성기는 생성 됩니다.
 
 
 ### <a name="transientattribute"></a>TransientAttribute
 
-이 특성 값은 임시적인 플래그 속성을 사용 하 여, iOS에서 일시적으로 만들어진 하지만 오래 되지 않은 개체의 수명이 즉, 합니다. 이 특성 속성에 적용 되 면 생성자에서 관리 되는 클래스 개체에 대 한 참조를 보관 하지 않습니다는이 속성에 대 한 지원 필드를 만들지 않습니다.
+플래그 속성 값은 일시적인 항목 즉, iOS에서 일시적으로 만들어진 하지만 수명이 긴 되지 않은 개체에이 특성을 사용 합니다. 이 특성 속성에 적용 되 면 생성자에서 관리 되는 클래스 개체에 대 한 참조를 보관 하지 않습니다는이 속성에 대 한 지원 필드를 만들지 않습니다.
 
+<a name="WrapAttribute" />
 
 ### <a name="wrapattribute"></a>WrapAttribute
 
-Xamarin.iOS/Xamarin.Mac 바인딩의 디자인에는 `Wrap` 특성 포함 된 강력한 형식의 개체를 약한 형식의 개체를 래핑하는 데 사용 됩니다. 이 고려해 Objective-c "위임" 개체 형식의 것으로 일반적으로 선언 되는 대부분와 `id` 또는 `NSObject`합니다. 이러한 대리자 또는 데이터 원본 형식으로 노출 하 Xamarin.iOS 및 Xamarin.Mac에서 사용 하는 규칙은 `NSObject` 및 규칙 "Weak" + 노출 되는 이름을 사용 하 여 이름을 지정 합니다. Objective C는 "id 대리자" 속성으로 노출 됩니다는 `NSObject WeakDelegate { get; set; }` API 계약 파일에서 속성입니다.
+Xamarin.iOS/Xamarin.Mac 바인딩의 디자인에는 `[Wrap]` 특성 포함 된 강력한 형식의 개체를 약한 형식의 개체를 래핑하는 데 사용 됩니다. 이 고려해 형식의 것으로 일반적으로 선언 된 Objective-c 대리자 개체와 대부분 `id` 또는 `NSObject`합니다. 이러한 대리자 또는 데이터 원본 형식으로 노출 하 Xamarin.iOS 및 Xamarin.Mac에서 사용 하는 규칙은 `NSObject` 및 규칙 "Weak" + 노출 되는 이름을 사용 하 여 이름을 지정 합니다. `id delegate` Objective-c 속성으로 노출 됩니다는 `NSObject WeakDelegate { get; set; }` API 계약 파일에서 속성입니다.
 
-하지만 하므로 강력한 형식을 노출 하 고 적용이 대리자에 할당 된 값을 강력한 형식의은 일반적으로 `Wrap` 특성, 즉, 사용자가 일부 세밀 하 게 제어 해야 하는 경우 또는 하위 수준 tric에 의존 하는 경우 약한 형식을 사용 하도록 선택할 수 ks, 또는 업무의 대부분에 대 한 강력한 형식의 속성을 사용할 수 있습니다.
+하지만 하므로 강력한 형식을 노출 하 고 적용이 대리자에 할당 된 값을 강력한 형식의은 일반적으로 `[Wrap]` 특성, 즉, 사용자가 일부 세밀 하 게 제어 해야 하는 경우 또는 하위 수준 tric에 의존 하는 경우 약한 형식을 사용 하도록 선택할 수 ks, 또는 업무의 대부분에 대 한 강력한 형식의 속성을 사용할 수 있습니다.
 
 예제:
 
@@ -1427,7 +1444,7 @@ var demo = new Demo ();
 demo.WeakDelegate = new SomeObject ();
 ```
 
-이 사용자가 강력한 형식의 버전을 사용 하 여, 그 없는지를 수동으로 사용자 C#의 형식 시스템의 이점을 활용 하 고 override 키워드를 사용 하 여 그의 의도 선언 하는 확인할 방법 데코레이팅 사용 하 여 메서드 및 `Export`수행한 것 않아야 하므로 사용자에 대 한 바인딩을 사용할 수 있습니다.
+이 사용자가 강력한 형식의 버전을 사용 하 여, 그 없는지를 수동으로 사용자 C#의 형식 시스템의 이점을 활용 하 고 override 키워드를 사용 하 여 그의 의도 선언 하는 확인할 방법 데코레이팅 사용 하 여 메서드 및 `[Export]`수행한 것 않아야 하므로 사용자에 대 한 바인딩을 사용할 수 있습니다.
 
 ```csharp
 // This is the strong case,
@@ -1439,8 +1456,7 @@ var strongDemo = new Demo ();
 demo.Delegate = new MyDelegate ();
 ```
 
-
-또 다른 용도 `Wrap` 특성은 메서드의 강력한 형식의 버전을 지원 하도록 합니다.   예를 들어:
+또 다른 용도 `[Wrap]` 특성은 메서드의 강력한 형식의 버전을 지원 하도록 합니다.  예를 들어:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1468,7 +1484,7 @@ interface FooExplorer {
 
 ## <a name="parameter-attributes"></a>매개 변수 특성
 
-메서드 정의의 매개 변수에 적용할 수 있는 특성을 설명 하는이 섹션으로 `NullAttribute` 전체적으로 속성에 적용 되는 합니다.
+메서드 정의의 매개 변수에 적용할 수 있는 특성을 설명 하는이 섹션으로 `[NullAttribute]` 전체적으로 속성에 적용 되는 합니다.
 
 <a name="BlockCallback" />
 
@@ -1492,7 +1508,9 @@ typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 
 Objective c:에 다음과 같이 정의 된 콜백에 일반적으로 사용 됩니다.
 
-    typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
+```objc
+typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
+```
 
 참고 항목: [BlockCallback](#BlockCallback)합니다.
 
@@ -1502,13 +1520,17 @@ Objective c:에 다음과 같이 정의 된 콜백에 일반적으로 사용 됩
 
 예를 들어, 다음 정의:
 
-    [Export ("loadFiles:")]
-    void LoadFiles ([Params]NSUrl [] files);
+```csharp
+[Export ("loadFiles:")]
+void LoadFiles ([Params]NSUrl [] files);
+```
 
 다음 코드를를 작성할 수 있습니다.
 
-    foo.LoadFiles (new NSUrl (url));
-    foo.LoadFiles (new NSUrl (url1), new NSUrl (url2), new NSUrl (url3));
+```csharp
+foo.LoadFiles (new NSUrl (url));
+foo.LoadFiles (new NSUrl (url1), new NSUrl (url2), new NSUrl (url3));
+```
 
 이 추가 된 사용자가을 요소 전달에 대 한 순수 하 게 배열을 만들 필요가 없습니다.
 
@@ -1538,10 +1560,9 @@ void SetText (string theText);
 void LogMessage ([PlainString] string theText);
 ```
 
-
 ### <a name="retainattribute"></a>RetainAttribute
 
-생성자가 지정 된 매개 변수에 대 한 참조를 유지 하도록 지시 합니다. 생성기에서이 필드에 대 한 백업 저장소를 제공 합니다 또는 이름을 지정할 수 있습니다 (의 `WrapName`)에서 값을 저장 합니다. Objective C를 매개 변수로 전달 되 고 Objective-c 개체의이 복사본을 보관 합니다만 알고 있는 경우 관리 되는 개체에 대 한 참조를 보유 하는 것과 유용 합니다. 예를 들어,와 같은 API `SetDisplay (SomeObject)` SetDisplay는 한 번에 하나의 개체를 표시할 수만 것 이므로이 특성을 사용 합니다. 사용 추적 하기 위해 둘 이상의 개체 (예: 스택 모양의 API) 해야 할 경우는 `RetainList` 특성입니다.
+생성자가 지정 된 매개 변수에 대 한 참조를 유지 하도록 지시 합니다. 생성기에서이 필드에 대 한 백업 저장소를 제공 합니다 또는 이름을 지정할 수 있습니다 (의 `WrapName`)에서 값을 저장 합니다. Objective C를 매개 변수로 전달 되 고 Objective-c 개체의이 복사본을 보관 합니다만 알고 있는 경우 관리 되는 개체에 대 한 참조를 보유 하는 것과 유용 합니다. 예를 들어,와 같은 API `SetDisplay (SomeObject)` SetDisplay는 한 번에 하나의 개체를 표시할 수만 것 이므로이 특성을 사용 합니다. 사용 추적 하기 위해 둘 이상의 개체 (예: 스택 모양의 API) 해야 할 경우는 `[RetainList]` 특성입니다.
 
 구문:
 
@@ -1566,14 +1587,14 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-"DoAdd"의 값이 true 인 경우는 매개 변수는 추가 `__mt_{0}_var List<NSObject>`합니다. 여기서 `{0}` 아래 템플릿으로 바뀝니다는 주어진 `listName`합니다. API에 상호 보완적인 부분 클래스에이 지원 필드를 선언 해야 합니다.
+하는 경우의 값 `doAdd` 이 true 인 경우에 매개 변수 추가 되는 `__mt_{0}_var List<NSObject>`합니다. 여기서 `{0}` 아래 템플릿으로 바뀝니다는 주어진 `listName`합니다. API에 상호 보완적인 부분 클래스에이 지원 필드를 선언 해야 합니다.
 
 예를 참조 하십시오. [foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) 및 [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
 
 ### <a name="transientattribute"></a>TransientAttribute
 
-이 특성을 매개 변수에 적용 하며 Objective C에서 C#로 전환 하는 경우에 사용 됩니다.  다양 한 Objective-c NSObjects 전환 하는 동안 매개 변수는 개체의 관리 되는 표현으로 래핑됩니다.
+이 특성을 매개 변수에 적용 하며 Objective C에서 C#로 전환 하는 경우에 사용 됩니다.  다양 한 Objective-c 전환 하는 동안 `NSObject` 매개 변수 개체의 관리 되는 표현으로 래핑됩니다.
 
 런타임에서 네이티브 개체에 대 한 참조를 개체에 관리 되는 마지막 참조는 사라지고 나타나고 GC가 실행 될 때까지 대 한 참조를 유지 합니다.
 
@@ -1587,6 +1608,8 @@ public class RetainListAttribute: Attribute {
 
 
 ## <a name="property-attributes"></a>속성 특성
+
+<a name="NotImplementedAttribute" />
 
 ### <a name="notimplementedattribute"></a>NotImplementedAttribute
 
@@ -1621,7 +1644,7 @@ interface MyMutableString {
 }
 ```
 
-<a name="enum-attributes"/>
+<a name="enum-attributes" />
 
 ## <a name="enum-attributes"></a>Enum 특성
 
@@ -1714,8 +1737,9 @@ Call (NSRunLoopModeExtensions.GetValue (constant)); // will return 1000
 
 ## <a name="global-attributes"></a>전역 특성
 
-전역 특성은 사용 하 여 적용 하거나는 `[assembly:]` 같은 특성 한정자는 `LinkWithAttribute` 수 또는 같은 어디에서 나 사용는 `Lion` 및 `Since` 특성입니다.
+전역 특성은 사용 하 여 적용 하거나는 `[assembly:]` 같은 특성 한정자는 [ `[LinkWithAttribute]` ](#LinkWithAttribute) 수 또는 같은 어디에서 나 사용 하는 [ `[Lion]` ](#SinceAndLionAttributes) 및 [ `[Since]` ](#SinceAndLionAttributes) 특성입니다.
 
+<a name="LinkWithAttribute" />
 
 ### <a name="linkwithattribute"></a>LinkWithAttribute
 
@@ -1757,20 +1781,19 @@ public class LinkWithAttribute : Attribute {
 [assembly: LinkWith ("libCorePlot-CocoaTouch.a", LinkTarget.ArmV7 | LinkTarget.ArmV7s | LinkTarget.Simulator, Frameworks = "CoreGraphics QuartzCore", ForceLoad = true)]
 ```
 
-사용 하는 경우는 `LinkWith` 특성을 지정 된 `libraryName` 제대로 사용에 필요한 명령줄 플래그와 관리 되지 않는 종속성 모두 포함 된 단일 DLL을 제공 하는 사용자가 결과 어셈블리에 포함 되는 Xamarin.iOS에서 라이브러리입니다.
+사용 하는 경우는 `[LinkWith]` 특성을 지정 된 `libraryName` 제대로 사용에 필요한 명령줄 플래그와 관리 되지 않는 종속성 모두 포함 된 단일 DLL을 제공 하는 사용자가 결과 어셈블리에 포함 되는 Xamarin.iOS에서 라이브러리입니다.
 
 것도 제공 하지 않도록 가능는 `libraryName`있으며이 경우는 `LinkWith` 만 추가 링커 플래그를 지정할 특성을 사용할 수 있습니다.
 
- ``` csharp
+``` csharp
 [assembly: LinkWith (LinkerFlags = "-lsqlite3")]
- ```
-
+```
 
 #### <a name="linkwithattribute-constructors"></a>LinkWithAttribute 생성자
 
 이러한 생성자를 사용 하 여 라이브러리와 링크와 지원 되는 대상이 지 원하는 라이브러리 및 라이브러리와 연결 하는 데 필요한 모든 선택적 라이브러리 플래그를 결과 어셈블리에 포함를 지정할 수 있습니다.
 
-이때 LinkTarget 인수 Xamarin.iOS에 의해 유추 하 고 설정할 필요가 없습니다.
+`LinkTarget` Xamarin.iOS에 의해 유추 인수와 설정할 필요가 없습니다.
 
 예를 들면 다음과 같습니다.
 
@@ -1788,21 +1811,17 @@ public class LinkWithAttribute : Attribute {
 [assembly: LinkWith ("libDemo.a", LinkTarget.Thumb | LinkTarget.Simulator, SmartLink = true, ForceLoad = true, IsCxx = true);
 ```
 
-
 #### <a name="linkwithattributeforceload"></a>LinkWithAttribute.ForceLoad
 
 `ForceLoad` 속성을 사용 하 여를 결정 여부는 `-force_load` 링크 플래그가 네이티브 라이브러리 연결에 사용 됩니다. 지금은이 항상 true 여야 합니다.
-
 
 #### <a name="linkwithattributeframeworks"></a>LinkWithAttribute.Frameworks
 
 프레임 워크에서이 바인딩되는 라이브러리에 하드 요구 사항이 경우 (이외의 `Foundation` 및 `UIKit`)를 설정 해야는 `Frameworks` 속성 필요한 플랫폼 프레임 워크는 공백으로 구분 된 목록을 포함 하는 문자열을 합니다. 예를 들어 필요한 라이브러리를 바인딩하는 경우 `CoreGraphics` 및 `CoreText`, 설정한는 `Frameworks` 속성을 `"CoreGraphics CoreText"`합니다.
 
-
 #### <a name="linkwithattributeiscxx"></a>LinkWithAttribute.IsCxx
 
 이 속성을 결과 실행 파일을 c + + 컴파일러는 C 컴파일러는 기본값 대신 사용 하 여 컴파일할 수 해야 할 경우 true로 설정 합니다. 라이브러리에 바인딩하는 c + +에서 작성 된 경우이 사용 합니다.
-
 
 #### <a name="linkwithattributelibraryname"></a>LinkWithAttribute.LibraryName
 
@@ -1810,13 +1829,11 @@ public class LinkWithAttribute : Attribute {
 
 이전 버전의 Xamarin.iOS 검사는 `LinkTarget` 속성 라이브러리 지원 플랫폼을 확인할 수 있지만이 이제 자동 감지 및 `LinkTarget` 속성은 무시 됩니다.
 
-
 #### <a name="linkwithattributelinkerflags"></a>LinkWithAttribute.LinkerFlags
 
 `LinkerFlags` 문자열 바인딩 만든 추가 링커 플래그 필요한 응용 프로그램으로 네이티브 라이브러리를 연결 하는 경우 지정할 수 있는 방법을 제공 합니다.
 
 예를 들어, 네이티브 라이브러리 libxml2 및 zlib를 필요로 하는 경우 설정의 `LinkerFlags` 문자열을 `"-lxml2 -lz"`합니다.
-
 
 #### <a name="linkwithattributelinktarget"></a>LinkWithAttribute.LinkTarget
 
@@ -1826,11 +1843,9 @@ public class LinkWithAttribute : Attribute {
 
 이 속성을 연결 하 고 라이브러리 GCC 예외 처리 라이브러리 (gcc_eh) 경우 true로 설정 합니다.
 
-
 #### <a name="linkwithattributesmartlink"></a>LinkWithAttribute.SmartLink
 
 `SmartLink` 속성 Xamarin.iOS 결정 하도록 하려면 true로 설정 해야 하는지 여부를 `ForceLoad` 의 필요 합니다.
-
 
 #### <a name="linkwithattributeweakframeworks"></a>LinkWithAttribute.WeakFrameworks
 
@@ -1840,9 +1855,11 @@ public class LinkWithAttribute : Attribute {
 
 약한 연결 하기에 적합 것 `Frameworks` 계정을 같은 `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` 및 `Twitter` iOS 5에서에서 사용할 수만 있기 때문입니다.
 
+<a name="SinceAndLionAttributes" />
+
 ### <a name="sinceattribute-ios-and-lionattribute-macos"></a>SinceAttribute (iOS) 및 LionAttribute (macOS)
 
-사용 하면는 `Since` 시간에 특정 지점에서 도입 되 고 있는 것으로 특성을 Api 플래그입니다. 특성으로 형식 및 기본 클래스, 메서드 또는 속성 사용할 수 없는 경우에 런타임 문제를 일으킬 수 있는 메서드를 나타내는 플래그만 사용 해야 합니다.
+사용 하면는 `[Since]` 시간에 특정 지점에서 도입 되 고 있는 것으로 특성을 Api 플래그입니다. 특성으로 형식 및 기본 클래스, 메서드 또는 속성 사용할 수 없는 경우에 런타임 문제를 일으킬 수 있는 메서드를 나타내는 플래그만 사용 해야 합니다.
 
 구문:
 
@@ -1880,8 +1897,7 @@ public interface UITableViewController {
     bool ClearsSelectionOnViewWillAppear { get; set; }
 ```
 
-`Lion` 특성 Lion에 도입 된 형식에 대 한 같은 방식으로 적용 됩니다. 사용 하는 이유 `Lion` 주요 OS X 출시 거의 발생 하지 않으며 운영 체제 버전 번호로 해당 코드명 보다 기억 하도록 쉽게 하는 동안 해당 iOS 자주 수정 되는 iOS에 사용 되는 보다 구체적인 버전 번호와
-
+`[Lion]` 특성 Lion에 도입 된 형식에 대 한 같은 방식으로 적용 됩니다. 사용 하는 이유 `[Lion]` 주요 OS X 출시 거의 발생 하지 않으며 운영 체제 버전 번호로 해당 코드명 보다 기억 하도록 쉽게 하는 동안 해당 iOS 자주 수정 되는 iOS에 사용 되는 보다 구체적인 버전 번호와
 
 ### <a name="adviceattribute"></a>AdviceAttribute
 
@@ -1895,7 +1911,7 @@ public interface UITableViewController {
 
 이 특성 생성자에 게 지시 하는이 특정 라이브러리에 대 한 바인딩을 (사용 하 여 적용 `[assembly:]`) 빠른 0 복사 문자열 마샬링 형식을 사용 해야 합니다. 이 특성은 해당 명령줄 옵션을 전달 하 여 `--zero-copy` 생성기에 있습니다.
 
-를 사용 하면 0 복사 문자열에 대 한 생성기 효과적으로 사용 동일한 C# 문자열 Objective C가 새로 생성 헤드 없이 사용 하는 문자열로 `NSString` 개체와 Objective-c 문자열을 C# 문자열에서 데이터를 복사 하지 않고 있습니다. 유일한 0 복사 문자열을 사용 하 여의 단점은 발생 "유지" 또는 "복사" 플래그를 설정 하는 문자열 속성을 래핑하기입니다 갖는지 확인 해야 하는 `DisableZeroCopy` 특성이 설정 합니다. 이 0-복사 문자열에 대 한 핸들 스택에서 할당 및 함수 반환에 유효 하지 해야 합니다.
+를 사용 하면 0 복사 문자열에 대 한 생성기 효과적으로 사용 동일한 C# 문자열 Objective C가 새로 생성 헤드 없이 사용 하는 문자열로 `NSString` 개체와 Objective-c 문자열을 C# 문자열에서 데이터를 복사 하지 않고 있습니다. 유일한 복사본 0 문자열을 사용 하 여의 단점은 있는지 확인 해야 발생으로 플래그를 설정 하는 문자열 속성을 래핑하기입니다 `retain` 또는 `copy` 에 `[DisableZeroCopy]` 특성이 설정 합니다. 이 0-복사 문자열에 대 한 핸들 스택에서 할당 및 함수 반환에 유효 하지 해야 합니다.
 
 예제:
 
@@ -1918,7 +1934,9 @@ interface MyBinding {
 
 어셈블리 수준 특성을 적용할 수 있습니다 하 고 어셈블리의 모든 형식에 적용 됩니다.
 
-    [assembly:ZeroCopyStrings]
+```csharp
+[assembly:ZeroCopyStrings]
+```
 
 ## <a name="strongly-typed-dictionaries"></a>강력한 형식의 사전
 
@@ -1926,6 +1944,7 @@ Xamarin.iOS 8.0으로 래핑하는 강력한 형식의 클래스를 쉽게 만�
 
 항상 사용할 수 있었지만 동안는 [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 수동 API와 함께 데이터 형식을 더 이제 훨씬 간단 하 게이 작업을 수행 합니다.  자세한 내용은 참조 [강력한 형식에서 표시가](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types)합니다.
 
+<a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9bebc33affef4a1a25667039dfcdbe345dbd2cd6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="api-design"></a>API 디자인
 
@@ -92,7 +92,7 @@ Xamarin.iOS 다양 한 구성 하는 어셈블리를 포함 된 *Xamarin.iOS 프
 
 Xamarin.iOS의 목표 없습니다. 클래스 계층 구조를 C#에서 미러링 Objective C 기본 클래스 예를 들어 [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) 통해 C#에서 사용 가능 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)합니다.
 
-이 네임 스페이스의 내부 Objective-c Foundation 형식에 대 한 바인딩을 제공 하지만 일부의 경우에 म 매핑한 기본 형식은.NET 형식입니다. 예:
+이 네임 스페이스의 내부 Objective-c Foundation 형식에 대 한 바인딩을 제공 하지만 일부의 경우에 म 매핑한 기본 형식은.NET 형식입니다. 예를 들어:
 
 - 처리 하는 대신 [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) 및 [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), C#으로 런타임이 노출 [문자열](https://developer.xamarin.com/api/type/System.String/)s 강력한 형식의 [배열](https://developer.xamarin.com/api/type/System.Array/)전체에서 s API입니다.
 
@@ -375,7 +375,7 @@ web.Delegate = new Notifier ();
 강력한 형식의 속성 외에도 개발자가 필요한 경우 작업을 다르게 바인딩할 수 있습니다 하는 약한 형식의 대리자도 됩니다.
 강력한 형식의 everywhere `Delegate` Xamarin.iOS의 바인딩에 해당 속성을 노출 `WeakDelegate` 도 속성을 노출 합니다.
 
-사용 하는 경우는 `WeakDelegate`를 올바르게 사용 하 여 클래스를 데코레이팅하는 일을 담당는 [내보내기](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 선택기를 지정 하는 특성입니다. 예:
+사용 하는 경우는 `WeakDelegate`를 올바르게 사용 하 여 클래스를 데코레이팅하는 일을 담당는 [내보내기](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 선택기를 지정 하는 특성입니다. 예를 들어:
 
 ```csharp
 class Notifier : NSObject  {
@@ -494,6 +494,7 @@ public class MyCallbacks : NSObject {
 
 이 스타일의 프로그래밍을 사용할 때 C# 매개 변수는 런타임 엔진에 전달 하는 실제 형식과 일치 하는지 확인 합니다.
 
+<a name="Models" />
 
 #### <a name="models"></a>모델
 
@@ -619,13 +620,13 @@ Mac 및 InterfaceBuilder 용 Visual Studio를 사용 하는 경우이에 대해 
 
 Objective C 프로그래밍의 핵심 개념 선택기입니다. 선택기에 전달 해야 하거나 선택기에 응답 하도록 코드를 예상 하는 Api에서 종종 옵니다.
 
-C#에서 새 선택기 만들기를 매우 쉽게 –의 새 인스턴스를 만듭니다는 `ObjCRuntime.Selector` 클래스 및에서 필요로 하는 API에서 임의의 위치에서 결과 사용 합니다. 예:
+C#에서 새 선택기 만들기를 매우 쉽게 –의 새 인스턴스를 만듭니다는 `ObjCRuntime.Selector` 클래스 및에서 필요로 하는 API에서 임의의 위치에서 결과 사용 합니다. 예를 들어:
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-상속 해야 합니다는 C# 메서드에 응답 하는 선택기 호출에 대 한는 `NSObject` 사용 하 여 선택기 이름의 형식 및 C# 메서드를 데코레이팅 해야 합니다는 `[Export]` 특성입니다. 예:
+상속 해야 합니다는 C# 메서드에 응답 하는 선택기 호출에 대 한는 `NSObject` 사용 하 여 선택기 이름의 형식 및 C# 메서드를 데코레이팅 해야 합니다는 `[Export]` 특성입니다. 예를 들어:
 
 ```csharp
 public class MyMath : NSObject {
