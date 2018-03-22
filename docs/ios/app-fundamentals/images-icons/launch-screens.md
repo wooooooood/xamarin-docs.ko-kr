@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e07a6b72f2821e8cc65e0b0d690dbadf1a6713b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="launch-screens"></a>시작 화면
 
@@ -179,7 +179,7 @@ IOS 8 이상, 개발자는 하나 이상의 정적 시작 이미지를 사용 �
 -----
 
 > [!NOTE]
-> **참고**: 시작 화면으로 사용 되는 스토리 보드 _해야_ 만 간단 하 고 기본 제공 UI 요소를 포함 하 고 **없습니다** 모든 계산을 수행 하거나 사용자 지정 클래스에서 파생 합니다.
+> 시작 화면으로 사용 되는 스토리 보드 _해야_ 만 간단 하 고 기본 제공 UI 요소를 포함 하 고 **없습니다** 모든 계산을 수행 하거나 사용자 지정 클래스에서 파생 합니다.
 
 통합 스토리 보드를 사용 하 여 시작 화면을 만들기에 대 한 자세한 내용은 참조 하십시오는 [동적 시작 화면](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) 의 섹션은 [통합 스토리 보드](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드입니다.
 

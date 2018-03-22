@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="speech-recognition"></a>음성 인식
 
@@ -105,10 +105,10 @@ Apple가 지정된 된 언어는 현재 시점에서 변환에 사용할 수 있
 2. 전환 하는 **소스** 보기: 
 
     [![](speech-images/speech02.png "소스 뷰")](speech-images/speech02.png#lightbox)
-3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
+3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
-4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
+4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
@@ -116,10 +116,10 @@ Apple가 지정된 된 언어는 현재 시점에서 변환에 사용할 수 있
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 두 번 클릭 하 여 `Info.plist` 편집을 위해 열 파일입니다.
-3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
+3. 클릭 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
-4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예: 
+4. 응용 프로그램은 실시간 오디오 기록을 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한는 **속성**, `String` 에 대 한는 **형식** 및 **사용 설명을** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
@@ -127,7 +127,7 @@ Apple가 지정된 된 언어는 현재 시점에서 변환에 사용할 수 있
 -----
 
 > [!IMPORTANT]
-> **참고:** 위의 항목 중 하나를 제공 하지 못하면 `Info.plist` 키 (`NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription`) 음성 인식 또는 실시간 오디오 마이크 중 하나에 액세스 하려고 할 때 경고 없이 실패 한 응용 프로그램에서 발생할 수 있습니다.
+> 위의 항목 중 하나를 제공 하지 못하면 `Info.plist` 키 (`NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription`) 음성 인식 또는 실시간 오디오 마이크 중 하나에 액세스 하려고 할 때 경고 없이 실패 한 응용 프로그램에서 발생할 수 있습니다.
 
 
 
@@ -186,7 +186,7 @@ namespace MonkeyTalk
 A `SFSpeechRecognizerAuthorizationStatus` 결과에 반환 되는 `RequestAuthorization` 사용자의 허가에 따라 조치를 사용할 수 있는 방법의 콜백 루틴입니다. 
 
 > [!IMPORTANT]
-> **참고:** Apple 제안 사용자 동작이 사용이 권한을 요청 하기 전에 음성 인식을 요구 하는 앱에서 시작할 때까지 대기 합니다.
+> Apple는 사용자 동작이 사용이 권한을 요청 하기 전에 음성 인식을 요구 하는 앱에서 시작할 때까지 대기 하는 것을 제안 합니다.
 
 ### <a name="recognizing-pre-recorded-speech"></a>미리 녹음 된 음성 인식
 
@@ -243,7 +243,7 @@ A `SFSpeechUrlRecognitionRequest` 에서 만든는 `NSUrl` iOS 장치에서 미�
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-응용 프로그램에서 라이브 음성 인식 하도록 하려는 경우 과정이 미리 녹음 된 음성 인식와 매우 비슷합니다. 예:
+응용 프로그램에서 라이브 음성 인식 하도록 하려는 경우 과정이 미리 녹음 된 음성 인식와 매우 비슷합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -373,7 +373,7 @@ RecognitionTask.Cancel ();
 호출 해야 `RecognitionTask.Cancel` 사용자가 장치의 프로세서와 메모리를 확보 하려면 번역을 취소 합니다.
 
 > [!IMPORTANT]
-> **참고:** 를 제공 하지 못하면는 `NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription` `Info.plist` 키 음성 인식 또는 실시간 오디오 마이크 중 하나에 액세스 하려고 할 때 경고 없이 실패 한 응용 프로그램에서 발생할 수 있습니다 (`var node = AudioEngine.InputNode;`). 참조 하십시오는 **사용 설명을 제공 하** 자세한 내용은 섹션.
+> 제공 하지 못하면는 `NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription` `Info.plist` 키 음성 인식 또는 실시간 오디오 마이크 중 하나에 액세스 하려고 할 때 경고 없이 실패 한 응용 프로그램에서 발생할 수 있습니다 (`var node = AudioEngine.InputNode;`). 참조 하십시오는 **사용 설명을 제공 하** 자세한 내용은 섹션.
 
 ## <a name="speech-recognition-limits"></a>음성 인식 제한
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c806eb51be5f585f2c94b438f6ca31a70aaa7551
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 04c7a7235665e14fd128a3a70951168c1914c112
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough--using-touch-in-ios"></a>연습-iOS에서 사용 하 여 터치
 
@@ -92,12 +92,12 @@ ms.lasthandoff: 03/09/2018
         }
     }
     ```
+    
     에 대 한 확인 하 여 사용할 수 있는이 방법은 `UITouch` 개체를 특성이 있으면 터치 발생 한 위치에 따라 일부 작업을 수행 합니다.
 
     * _TouchImage 내부_ – 텍스트 표시 `Touches Began` 레이블 및 이미지를 변경 합니다.
     * _DoubleTouchImage 내부_ – 제스처가 두 번 누르면 표시 되는 이미지를 변경 합니다.
     * _DragImage 내부_ -터치가 시작 되었음을 나타내는 플래그를 설정 합니다. 메서드 `TouchesMoved` 이 플래그를 사용 하 여 여부를 확인 하는 `DragImage` 설정할지 화면, 다음 단계에서를 보게 될 것으로 합니다.
-
 
     위의 코드는 개별 터치를 하나만 처리, 여전히 동작이 없는 사용자가 자신의 손가락 화면에서 이동 하는 경우. 이동에 응답 하려면 구현 `TouchesMoved` 아래 코드에 나와 있는 것 처럼:
 
@@ -192,7 +192,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 파일을 편집 **GestureViewController.cs** 다음 인스턴스 변수를 추가 합니다.
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private RectangleF originalImageFrame = RectangleF.Empty;
@@ -204,7 +204,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 컨트롤러에 다음 메서드를 추가 합니다.
 
-    ```chsarp
+    ```csharp
     private void WireUpDragGestureRecognizer()
     {
         // Create a new tap gesture
@@ -223,7 +223,7 @@ ms.lasthandoff: 03/09/2018
 
 1. HandleDrag를 구현 하려면 컨트롤러에 다음 코드를 추가 합니다.
 
-    ```chsarp
+    ```csharp
     private void HandleDrag(UIPanGestureRecognizer recognizer)
     {
         // If it's just began, cache the location of the image
@@ -250,7 +250,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 추가 `UITapGestureRecognizer` DoubleTouchImage에 표시 되 고 이미지 변경 됩니다. 다음 메서드를 추가 `GestureViewController` 컨트롤러:
 
-    ```chsarp
+    ```csharp
     private void WireUpTapGestureRecognizer()
     {
         // Create a new tap gesture
@@ -286,7 +286,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 수정 해야 할 마지막 작업은 `ViewDidLoad` 방금 추가한 메서드를 호출 하는 것에 있도록 합니다. 다음 코드와 같이 표시 하므로 ViewDidLoad를 변경 합니다.
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
@@ -324,7 +324,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 프로젝트에 새 클래스를 추가 `CheckmarkGestureRecognizer`, 다음 코드와 같은 모양 확인:
 
-    ```chsarp
+    ```csharp
     using System;
     using CoreGraphics;
     using Foundation;
@@ -444,7 +444,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 이전 정의한 사용자 지정 제스처 인식기 했으므로 (`CheckmarkGestureRecognizer`) 편집는 **CustomGestureViewController.cs** 파일을 다음 두 가지 인스턴스 변수를 추가 합니다.
 
-    ```chsarp
+    ```csharp
     #region Private Variables
     private bool isChecked = false;
     private CheckmarkGestureRecognizer checkmarkGesture;
@@ -453,7 +453,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 인스턴스화하고 우리의 제스처 인식기를 구성 하려면 컨트롤러에 다음 메서드를 추가 합니다.
 
-    ```chsarp
+    ```csharp
     private void WireUpCheckmarkGestureRecognizer()
     {
         // Create the recognizer
@@ -482,7 +482,7 @@ ms.lasthandoff: 03/09/2018
 
 1. 편집 `ViewDidLoad` 호출 되도록 `WireUpCheckmarkGestureRecognizer`다음 코드 조각에서와 같이:
 
-    ```chsarp
+    ```csharp
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();

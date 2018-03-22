@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 7ae41e99d20f0e8f3cad6b933e415002903a3294
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d3a370c3a8d930c817d38422b249b496532fa33f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="text-kit"></a>텍스트 키트
 
@@ -143,7 +143,7 @@ public class ExclusionPathView : UITextView
 이 코드는 코어 그래픽을 사용 하 여 텍스트 보기에 그리기에 대 한 지원을 추가 합니다. 이후는 `UITextView` 클래스 이제 레이아웃과 텍스트 렌더링에 대 한 텍스트 키트를 사용 하도록 기본 제공, 텍스트 키트 제외 경로 설정 하는 등의 모든 기능을 사용할 수 있습니다.
 
 > [!IMPORTANT]
->   참고:이 예에서는 하위 클래스 `UITextView` 그리기 지원 터치를 추가 합니다. 서브클래싱 `UITextView` 텍스트 키트의 기능을 가져올 필요가 없습니다.
+> 이 예에서는 하위 클래스 `UITextView` 그리기 지원 터치를 추가 합니다. 서브클래싱 `UITextView` 텍스트 키트의 기능을 가져올 필요가 없습니다.
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3114b2abdc96bc7d122ca0b86e1c53977f6df1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4eaa486fddc23ad18670bef4043a5adf30a1e9ac
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-existing-ios-apps"></a>기존 iOS 앱을 업데이트합니다.
 
@@ -32,7 +32,7 @@ Xamarin Mac 용 Visual Studio와 Visual Studio는 통합 API에 클래식 API에
 
 ## <a name="automated-updating"></a>자동 업데이트
 
-경고를 해결 한 후 Mac 또는 Visual Studio에 대 한 Visual Studio에서 기존 iOS 프로젝트를 선택 하 고 선택 **Xamarin.iOS 통합 API로 마이그레이션** 에서 **프로젝트** 메뉴. 예:
+경고를 해결 한 후 Mac 또는 Visual Studio에 대 한 Visual Studio에서 기존 iOS 프로젝트를 선택 하 고 선택 **Xamarin.iOS 통합 API로 마이그레이션** 에서 **프로젝트** 메뉴. 예를 들어:
 
 ![](updating-ios-apps-images/beta-tool1.png "프로젝트 메뉴에서 Xamarin.iOS 통합 API로 마이그레이션 선택")
 
@@ -101,7 +101,7 @@ NuGet 통합 API 지원을 사용 하도록 변경을 제공한 것 동안 없�
 그 전 까지는 구성 요소와 마찬가지로 통합 Api를 지 원하는 버전으로 프로젝트에 포함 한 모든 NuGet 패키지를 전환 하 고 깨끗 한 빌드를 나중에 실행 해야 합니다.
 
 > [!IMPORTANT]
-> **참고:** 형태로 오류가 있는 경우 _"오류 3 동일한 Xamarin.iOS 프로젝트에 'monotouch.dll'와 'Xamarin.iOS.dll'를 포함할 수 없습니다-'monotouch.dll'에서 참조 하는 동안 'Xamarin.iOS.dll' 명시적으로 참조 되 ' xxx, 버전 = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ 후 통합 Api에 응용 프로그램으로 변환에 일반적으로 인해 구성 요소 또는 NuGet 패키지는 통합 API에 업데이트 되지 않은 프로젝트에서. 제거 하려면 기존 구성 요소/NuGet 통합 Api를 지 원하는 버전으로 업데이트 고 깨끗 한 빌드를 수행 해야 합니다.
+> 폼에 오류가 있는 경우 _"오류 3 동일한 Xamarin.iOS 프로젝트에 'monotouch.dll'와 'Xamarin.iOS.dll'를 포함할 수 없습니다-'monotouch.dll'에서 참조 하는 동안 'Xamarin.iOS.dll' 명시적으로 참조 되 ' xxx, 버전 = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ 응용 프로그램에 통합 된 Api를 변환한 후는입니다 일반적으로 통합 API에 업데이트 되지 않은 프로젝트에 구성 요소 또는 NuGet 패키지를 포함 합니다. 제거 하려면 기존 구성 요소/NuGet 통합 Api를 지 원하는 버전으로 업데이트 고 깨끗 한 빌드를 수행 해야 합니다.
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Xamarin.iOS 앱의 빌드를 64 비트를 사용 하도록 설정
 

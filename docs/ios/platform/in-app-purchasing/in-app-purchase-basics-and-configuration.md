@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 302bb1225067ad401f97ee6bad88b4cd16c6dc95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b622da2d6d9777fc200a091ccf003369b1c2e8d1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="in-app-purchase-basics-and-configuration"></a>앱에서 바로 구매 기본 사항 및 구성
 
@@ -84,7 +84,7 @@ Apple에 판매 – 이름, 설명 되는 것 이며 'product'의 스크린샷�
 에 대해 원하는 모든 문자열을 사용할 수 있습니다 프로그램 **번들 식별자** (으로 계정에서 고유함)을 Apple 있습니다 역방향 DNS 형식에 따라 보다는 임의의 문자열을 사용 하는 것이 좋습니다. 이 문서를 함께 제공 되는 샘플 응용 프로그램 사용 하 여 com.xamarin.storekit.testing 번들 식별자에 대 한 (경우에 Apple 권장 하지 않습니다) my_store_example 같은 식별자를 사용 하는 데 유효한 동일 하 게 있을 것입니다.
 
 > [!IMPORTANT]
-> **그러나 참고**: Apple에 와일드 카드 별표의 끝에 추가할 수도 있습니다는 **번들 식별자** 여러 응용 프로그램에 대 한 단일 응용 프로그램 ID를 사용할 수 있도록 _와일드 카드 응용 프로그램 Id에 사용할 수 없습니다 AppPurchase_합니다. 와일드 카드 번들 식별자 com.xamarin.* 수도 예
+> 그러나 또한 Apple에 와일드 카드 별표의 끝에 추가할 수 있습니다는 **번들 식별자** 여러 응용 프로그램에 대 한 단일 응용 프로그램 ID를 사용할 수 있도록 _AppPurchase에와일드카드의앱Id를사용할수없습니다_. 와일드 카드 번들 식별자 com.xamarin.* 수도 예
 
 #### <a name="enabling-app-services"></a>사용할 수 있도록 응용 프로그램 서비스
 
@@ -92,7 +92,7 @@ Apple에 판매 – 이름, 설명 되는 것 이며 'product'의 스크린샷�
 
  [![](in-app-purchase-basics-and-configuration-images/image5.png "서비스 목록에서 앱에서 바로 구매를 자동으로 설정 됩니다.")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
 
-#### <a name="provisioning-profiles"></a>프로 비전 프로필
+#### <a name="provisioning-profiles"></a>프로비전 프로필
 
 일반적으로 앱에서 바로 구매에 대 한 설정한 응용 프로그램 ID 선택 적절 하 게 하는 대로 개발 및 프로덕션 프로 비전 프로필을 만듭니다. 참조는 [iOS 장치를 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 및 [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 자세한 정보에 대 한 가이드입니다.
 

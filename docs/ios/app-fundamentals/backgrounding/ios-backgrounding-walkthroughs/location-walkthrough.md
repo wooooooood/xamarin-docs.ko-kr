@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b10894d6b18d78d682825000726c5ef2cbe5ba6b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-location"></a>연습-배경 위치를 사용 하 여
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 03/12/2018
     - `AllowsBackgroundLocationUpdates` – 앱이 일시 중단 되었을 때 위치 업데이트를 받을 수 있도록 설정할 수 있는 iOS 9에에서 도입 하는 부울 속성입니다.
 
     > [!IMPORTANT]
-    > **경고**: iOS 8 (및 큰)에 있는 항목 필요는 **Info.plist** 파일을 사용자에 게 권한 부여 요청의 일부로 표시 합니다.
+    > iOS 8 (및 큰)에 있는 항목 필요는 **Info.plist** 파일을 사용자에 게 권한 부여 요청의 일부로 표시 합니다.
 
 1. 키를 추가 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription` 요청 위치 데이터에 액세스 하는 경고의 사용자에 게 표시 되는 문자열을 사용 합니다.
 

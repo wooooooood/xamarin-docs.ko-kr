@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fe1358d330c2a0fd94016853cedeabe094c394da
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>탐색 및 포커스 작업
 
@@ -81,7 +81,7 @@ Apple에 포커스 및 선택 영역을 사용 하려면 다음 제안 사항이
 
 ### <a name="working-with-focus"></a>포커스가 있는 작업
 
-포커스를 받을 수는 항목을 지정할 수 있는 사용자 지정 컨트롤을 만들려는 경우가 있을 수 있습니다. 경우 지금 재정의 `CanBecomeFocused` 속성 및 반환 `true`, 그렇지 않으면 반환 `false`합니다. 예:
+포커스를 받을 수는 항목을 지정할 수 있는 사용자 지정 컨트롤을 만들려는 경우가 있을 수 있습니다. 경우 지금 재정의 `CanBecomeFocused` 속성 및 반환 `true`, 그렇지 않으면 반환 `false`합니다. 예를 들어:
 
 ```csharp
 public class myView : UIView
@@ -92,7 +92,7 @@ public class myView : UIView
 }
 ```
 
-언제 든 지 사용할 수 있습니다는 `Focused` 의 속성을 `UIKit` 컨트롤을 현재 항목 인지 확인 합니다. 경우 `true` UI 항목은 현재 포커스를가지고, 그렇지 않으면 다른 합니다. 예:
+언제 든 지 사용할 수 있습니다는 `Focused` 의 속성을 `UIKit` 컨트롤을 현재 항목 인지 확인 합니다. 경우 `true` UI 항목은 현재 포커스를가지고, 그렇지 않으면 다른 합니다. 예를 들어:
 
 ```csharp
 // Is my view in focus?
@@ -102,7 +102,7 @@ if (myView.Focused) {
 }
 ```
 
-직접 코드를 통해 다른 UI 요소에 포커스를 이동할 수 없습니다, 동안 어떤 UI 요소가 먼저 포커스 화면 설정 하 여 로드 될 때 지정할 수 있습니다는 `PreferredFocusedView` 속성을 `true`합니다. 예:
+직접 코드를 통해 다른 UI 요소에 포커스를 이동할 수 없습니다, 동안 어떤 UI 요소가 먼저 포커스 화면 설정 하 여 로드 될 때 지정할 수 있습니다는 `PreferredFocusedView` 속성을 `true`합니다. 예를 들어:
 
 ```csharp
 // Make the play button the starting focus item
@@ -123,7 +123,7 @@ playButton.PreferredFocusedView = true;
 포커스 백업할 포커스 엔진 이동 하는 것을 요청 하는 `PreferredFocusedView` UI 요소를 호출은 `SetNeedsUpdateFocus` 보기 컨트롤러의 메서드.
 
 > [!IMPORTANT]
-> **참고:** 호출 `SetNeedsUpdateFocus` 뷰 컨트롤러에 대해 호출 되는 현재 포커스가 있는 보기를 포함 하는 경우에 영향을 주지 합니다.
+> 호출 `SetNeedsUpdateFocus` 뷰 컨트롤러에 대해 호출 되는 현재 포커스가 있는 보기를 포함 하는 경우에 영향을 주지 합니다.
 
 
 
@@ -208,7 +208,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 먼저,이 코드 get는 `NextFocusedView` 에서 `UIFocusUpdateContext` 에 전달 되었습니다 (`context`). 이 보기는 `null`다음 없는 처리가 필요 하다 고 메서드 종료 되었습니다.
 
-다음으로 `nextFocusableItem` 평가 됩니다. 일치 하는 **추가 정보** 또는 **구입** 단추, 포커스 포커스 가이드를 사용 하 여 다른 단추에 보내집니다 `PreferredFocusedView` 속성입니다. 예:
+다음으로 `nextFocusableItem` 평가 됩니다. 일치 하는 **추가 정보** 또는 **구입** 단추, 포커스 포커스 가이드를 사용 하 여 다른 단추에 보내집니다 `PreferredFocusedView` 속성입니다. 예를 들어:
 
 ```csharp
 // Move from the More Info to Buy button
@@ -226,7 +226,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>컬렉션에 포커스가 있는 작업
 
-개별 항목에 포커스를 받을 수 수 있는지 여부를 결정할 때는 `UICollectionView` 또는 `UITableView`의 메서드를 재정의 합니다는 `UICollectionViewDelegate` 또는 `UITableViewDelegate` 각각. 예:
+개별 항목에 포커스를 받을 수 수 있는지 여부를 결정할 때는 `UICollectionView` 또는 `UITableView`의 메서드를 재정의 합니다는 `UICollectionViewDelegate` 또는 `UITableViewDelegate` 각각. 예를 들어:
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 69c4b25e17c31d57701f99e84f6f686c65dc7028
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="interactive-workbooks"></a>대화형 통합 문서
 
@@ -32,7 +32,7 @@ _교육 또는 탐색 교육, 실험에 대 한 C# 코드를 사용 하 여 라�
 
 [ ![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집 창 제공 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄으로 된 문 지원")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin 통합 문서에 저장 됩니다는 `.workbook` 는 CommonMark 일부 메타 데이터가 있는 파일 위쪽에 있는 파일 (참조 [통합 문서 파일 형식을](#Workbooks_Files_Types) 통합 문서를 저장할 수 방법에 대 한 자세한 내용은).
+Xamarin 통합 문서에 저장 됩니다는 `.workbook` 는 CommonMark 일부 메타 데이터가 있는 파일 위쪽에 있는 파일 (참조 [통합 문서 파일 형식을](#workbooks-files-types) 통합 문서를 저장할 수 방법에 대 한 자세한 내용은).
 
 ### <a name="nuget-package-support"></a>NuGet 패키지 지원
 
@@ -132,7 +132,7 @@ CommonMark 확장으로 인해 사용 하 여 YAML 메타 데이터 통합 문�
 경우 일반 텍스트 `.workbook` 0.99.3 통합 문서에서 동일한 디렉터리에서 리소스를 참조 하는 파일을 열거나 나중 저장 될 때 변환 됩니다에 `.workbook` 패키지 합니다. Mac 및 Windows 둘 다에 유용합니다.
 
 > [!NOTE]
-> **참고:** Windows 사용자가을 열는 `package.workbook\index.workbook` 를 직접 파일 있지만 그렇지 않은 경우 패키지 Mac.에서와 동일 하 게 동작 합니다
+> Windows 사용자가을 열는 `package.workbook\index.workbook` 를 직접 파일 있지만 그렇지 않은 경우 패키지 Mac.에서와 동일 하 게 동작 합니다
 
 ### <a name="archives"></a>보관 파일
 

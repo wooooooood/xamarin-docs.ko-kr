@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 774d6e6ecdb081650c6f008b1ac83c397f788d5b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="programmatic-layout-constraints"></a>프로그래밍 방식으로 레이아웃 제약 조건
 
@@ -43,7 +43,7 @@ _이 가이드 iOS 디자이너에에서 새로 만드는 대신 C# 코드에서
 사용 하 여는 `NSLayoutAnchor` 제약 되 UI 항목의 앵커 속성에 따라 제약을 만들기 위한 fluent 인터페이스 있는 클래스입니다. 보기 컨트롤러의 위쪽 및 아래쪽 레이아웃 노출을 안내 하는 예를 들어는 `TopAnchor`, `BottomAnchor` 및 `HeightAnchor` 보기 가장자리, 가운데, 크기 및 초기 계획 속성을 표시 하는 동안 속성에 앵커를 지정 합니다.
 
 > [!IMPORTANT]
-> **참고:** 뿐만 아니라 앵커 속성 집합이 표준 iOS 뷰가 포함 된 `LayoutMarginsGuides` 및 `ReadableContentGuide` 속성. 이러한 속성을 노출 `UILayoutGuide` 개체 보기의 여백 및 읽을 수 있는 작업에 대 한 지침을 각각 콘텐츠입니다.
+> 뿐만 아니라 앵커 속성 집합이 표준 iOS 뷰가 포함 된 `LayoutMarginsGuides` 및 `ReadableContentGuide` 속성. 이러한 속성을 노출 `UILayoutGuide` 개체 보기의 여백 및 읽을 수 있는 작업에 대 한 지침을 각각 콘텐츠입니다.
 
 레이아웃 앵커는 읽기 쉬운, compact 형식에서 제약 조건을 만드는 여러 가지 방법을 제공 합니다.
 

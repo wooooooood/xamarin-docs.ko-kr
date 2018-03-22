@@ -8,68 +8,72 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="api-design"></a>API 디자인
 
 핵심 모노의 일부인 기본 클래스 라이브러리 뿐만 아니라 [Xamarin.iOS](http://www.xamarin.com/iOS) 함께 다양 한 iOS 개발자가 모노도 기본 iOS 응용 프로그램 만들기를 허용 하도록 Api에 대 한 바인딩을 제공 합니다.
 
-Xamarin.iOS 핵심인는으로 Objective C와 C# 전 세계에 연결 하는 interop 엔진, iOS에 대 한 바인딩 뿐만 아니라 C 기반 Api CoreGraphics 및 [OpenGLES](#OpenGLES)합니다.
+Xamarin.iOS 핵심인는 C# 세계 Objective-c 세계 뿐 아니라 iOS CoreGraphics C 기반 Api에 대 한 바인딩을 연결 하는 interop 엔진 및 [OpenGL ES](#OpenGLES)합니다.
 
-Objective C 코드와 통신 하는 낮은 수준의 런타임이 [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime)합니다. 에 대 한이 바인딩이이 기반으로 [Foundation](#MonoTouch.Foundation), CoreFoundation 및 [UIKit](#MonoTouch.UIKit) 제공 됩니다.
+Objective C 코드와 통신 하는 낮은 수준의 런타임이 [MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime)합니다. 에 대 한이 바인딩이이 기반으로 [Foundation](#MonoTouch.Foundation), CoreFoundation, 및 [UIKit](#MonoTouch.UIKit) 제공 됩니다.
 
 ## <a name="design-principles"></a>디자인 원칙
 
-(여기에 적용 Xamarin.Mac, OS X에서 Objective C 용 모노 바인딩) Xamarin.iOS 바인딩에 대 한 우리의 디자인 원칙 중 일부입니다.
+(문제에 적용할 Xamarin.Mac, macOS Objective C 용의 모노 바인딩) Xamarin.iOS 바인딩에 대 한 우리의 디자인 원칙 중 일부입니다.
 
-- Framework 디자인 지침 수행
+- 수행 된 [Framework 디자인 지침](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - Objective C 서브 클래스에는 개발자 허용:
 
   - 기존 클래스에서 파생
-  - 체인에 기본 생성자를 호출 합니다.
+  - 에 연결 하 여 기본 생성자를 호출 합니다.
   - C#의 재정의 시스템으로 이루어져야 합니다. 메서드를 재정의 합니다.
+  - C# 표준 구문을 함께 사용할 수 있어야 서브클래싱
 
-- C# 표준 구문을 함께 사용할 수 있어야 하위 클래스
 - 개발자가 Objective-c 선택기를 노출 하지 마십시오.
 - 임의의 Objective C 라이브러리를 호출할 수 있는 메커니즘 제공
-- Objective C 작업 가능한 쉽고 하드 일반적인 Objective-c 작업 확인
+- 쉽고 하드 Objective-c 작업 가능한 일반 Objective-c 작업 확인
 - C# 속성으로 Objective-c 속성을 노출 합니다.
 - 강력한 형식의 API를 노출 합니다.
-- 형식 안전성을 높일
-- 런타임 오류를 최소화
-- 반환 형식은 IDE intellisense 가져오기
-- IDE 팝업 설명서에 대 한 허용
+
+  - 형식 안전성을 높일
+  - 런타임 오류를 최소화
+  - 반환 형식은 IDE IntelliSense 가져오기
+  - IDE 팝업 설명서에 대 한 허용
+
 - Api의 IDE에서 탐색 것을 권장 합니다.
+
+  - 약한 형식의 배열은 다음과 같이 노출 하는 대신에 예를 들어:
+    
+    ```objc
+    NSArray *getViews
+    ```
+    다음과 같이 강력한 형식을 노출 합니다.
+    
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
+    
+    이 API를 검색 하는 동안 자동 완성 기능을 수행할 수 있는 기능 Mac 용 Visual Studio를 제공, 모든는 `System.Array` 반환된 된 값에서 사용 가능한 작업 반환 값을 LINQ에 참여할 수 있습니다.
+
 - 네이티브 C# 형식:
 
-    - 예: 노출 하는 대신 다음과 같이 약한 형식의 배열:
-        ```
-        NSArray *getViews
-        ```
-        다음과 같이 강력한 형식으로 노출:
-    
-        ```
-        NSView [] Views { get; set; }
-        ```
-    
-    이 API를 검색 하는 동안 자동 완성 기능을 수행할 수 있는 기능 Mac 용 Visual Studio를 제공 하 고 또한 사용 하면 모든는 `System.Array` 작업 반환된 값에서 사용할 수 있도록 LINQ에 참여 하도록 반환 값을 허용 하 고
+  - [`NSString` 됩니다. `string`](~/ios/internals/api-design/nsstring.md)
+  - 설정 `int` 및 `uint` 되 었어야 열거형에 열거형 C# 및 C# 열거형에는 매개 변수 `[Flags]` 특성
+  - 형식 중립적 대신 `NSArray` 개체를 강력한 형식의 배열로 배열을 노출 합니다.
+  - 이벤트 및 알림을 위한 사용자 사이 선택을 제공 합니다.
 
-- [NSString은 문자열이](~/ios/internals/api-design/nsstring.md)
-- 열거형으로 C# 열거형 및 C# 열거형 [Flags] 특성이 있는 되었습니다 int, uint 매개 변수를 설정 합니다.
-- 형식 중립적 NSArray 개체 대신 강력한 형식의 배열로 배열을 노출 합니다.
-- 이벤트 및 알림 사용자가 사이 선택을 유용 합니다.
-
-    - 강력한 형식의 버전은 기본값
+    - 기본적으로 강력한 형식의 버전
     - 고급 사용 사례에 대 한 약한 형식의 버전
 
 - Objective C 대리자 패턴을 지원 합니다.
 
     - C# 이벤트 시스템
-    - "블록"으로 C# 대리자 (람다 식, 무명 메서드 및 System.Delegate) Objective-c Api에 노출
+    - C# 대리자 노출 (무명 메서드, 람다 및 `System.Delegate`) 블록으로 Objective-c api
 
 ### <a name="assemblies"></a>어셈블리
 
@@ -221,7 +225,7 @@ Xamarin.iOS 기본 Objective-c 플랫폼에 대 한 바인딩을 단순히 않�
 
 
 
-#### <a name="types"></a>유형
+#### <a name="types"></a>형식
 
 C# 형식 관점에서 여러분이 C# universe 하위 수준 기반 형식 대신 노출 됩니다.  즉 [API는 C# "string" 형식을 사용 하 여 NSString 대신](~/ios/internals/api-design/nsstring.md) 강력한 형식의 C# 배열 NSArray 노출 하는 대신 사용 하 여 합니다.
 

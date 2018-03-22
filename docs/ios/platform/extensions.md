@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-extensions"></a>iOS 확장
 
@@ -131,7 +131,7 @@ _IOS 8에에서 도입 된, 확장 프로그램은 표시 되는 표준 컨텍�
 특정 유형의 확장 추가 요구 사항이 있을 수 있습니다. 예를 들어, 한 **오늘** 또는 **알림 센터** 확장의 기본 클래스를 구현 해야 [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/)합니다.
 
 > [!IMPORTANT]
-> **참고:** Mac 용 Visual Studio에서 제공 되는 확장 템플릿을 하나를 사용 하 여 프로젝트를 시작 하는 경우 대부분 (모두는 아님) 경우 이러한 요구 사항을 제공 되며 자동으로 서식 파일을 충족 합니다.
+> Mac 용 Visual Studio에서 제공 되는 확장 템플릿을 하나를 사용 하 여 프로젝트를 시작 하기 (모두는 아님) 경우에 대부분의 이러한 요구 사항은 제공 되 고 템플릿에 의해 자동으로 사용자에 대해 충족 됩니다.
 
 <a name="Walkthrough" />
 

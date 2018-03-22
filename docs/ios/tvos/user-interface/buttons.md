@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5da834e7e77fb8ab080c124bd09653bc840be3b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-buttons"></a>단추와 작업
 
@@ -130,7 +130,7 @@ namespace tvRemote
 단추의 같으면 `Enabled` 속성은 `true` 다른 컨트롤이 나 보기에서 다루지 않는 하 고, 포커스 항목 Siri 원격을 사용 하 여 만들 수 있습니다. 사용자가 단추를 선택 하 고 터치 화면을 클릭 하는 경우는 `ButtonPressed` 위에 정의 된 동작을 실행 합니다.
 
 > [!IMPORTANT]
-> **참고:** 와 같은 동작을 할당 하는 가능 하지만 `TouchUpInside` 에 `UIButton` iOS를 만들 때 디자이너에는 **이벤트 처리기**, Apple TV에 터치 화면이 나 지원 없는 때문에 호출 되지 않습니다 됩니다 터치 이벤트입니다. 항상 기본값을 사용 해야 **동작 유형** 만들 때 **동작** tvOS 사용자 인터페이스 요소에 대 한 합니다.
+> 와 같은 동작을 할당 하는 가능 하지만 `TouchUpInside` 에 `UIButton` iOS를 만들 때 디자이너에는 **이벤트 처리기**, Apple TV에 없는 터치 스크린 또는 터치 이벤트를 지원 하기 때문에 호출 되지 됩니다. 항상 기본값을 사용 해야 **동작 유형** 만들 때 **동작** tvOS 사용자 인터페이스 요소에 대 한 합니다.
 
 
 
@@ -141,7 +141,7 @@ namespace tvRemote
 
 ## <a name="buttons-and-code"></a>단추 및 코드
 
-필요에 따라 한 `UIButton` 만들고 사용할 수 있는 C# 코드에서 tvOS 응용 프로그램의 보기에 추가 합니다. 예:
+필요에 따라 한 `UIButton` 만들고 사용할 수 있는 C# 코드에서 tvOS 응용 프로그램의 보기에 추가 합니다. 예를 들어:
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -169,7 +169,7 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-단추에 대 한 title을 설정 합니다. `UIButtons` 다른 대부분 `UIKit` 제목의 변경할 수 있도록 하는 것에 없는 상태가 포함 된 컨트롤에 대 한 변경 해야 할는 주어진 `UIControlState`합니다. 예:
+단추에 대 한 title을 설정 합니다. `UIButtons` 다른 대부분 `UIKit` 제목의 변경할 수 있도록 하는 것에 없는 상태가 포함 된 컨트롤에 대 한 변경 해야 할는 주어진 `UIControlState`합니다. 예를 들어:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -191,7 +191,7 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> **참고:** 와 같은 동작을 할당 하는 가능 하지만 `TouchUpInside` 에 `UIButton`, Apple TV에 없는 터치 스크린 또는 터치 이벤트를 지원 하기 때문에 호출 되지 됩니다. 항상 사용 해야 이벤트와 같은 **AllEvents** 또는 **PrimaryActionTriggered**합니다.
+> 와 같은 동작을 할당 하는 가능 하지만 `TouchUpInside` 에 `UIButton`, Apple TV에 없는 터치 스크린 또는 터치 이벤트를 지원 하기 때문에 호출 되지 됩니다. 항상 사용 해야 이벤트와 같은 **AllEvents** 또는 **PrimaryActionTriggered**합니다.
 
 
 
@@ -206,19 +206,19 @@ View.AddSubview (button);
 
 ### <a name="button-titles"></a>단추 제목
 
-위에서 설명한 것 처럼 `UIButtons` 대부분 다른 `UIKit` 제목의 변경할 수 있도록 하는 것에 없는 상태가 포함 된 컨트롤에 대 한 변경 해야 할는 주어진 `UIControlState`합니다. 예:
+위에서 설명한 것 처럼 `UIButtons` 대부분 다른 `UIKit` 제목의 변경할 수 있도록 하는 것에 없는 상태가 포함 된 컨트롤에 대 한 변경 해야 할는 주어진 `UIControlState`합니다. 예를 들어:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-사용 하 여 단추에 대 한 title 색을 설정할 수는 `SetTitleColor` 메서드. 예:
+사용 하 여 단추에 대 한 title 색을 설정할 수는 `SetTitleColor` 메서드. 예를 들어:
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-타이틀의 조정할 수 있습니다를 사용 하 여 숨기는 `SetTitleShadowColor`합니다. 예:
+타이틀의 조정할 수 있습니다를 사용 하 여 숨기는 `SetTitleShadowColor`합니다. 예를 들어:
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -230,7 +230,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-또한 단추의 제목으로 특성이 지정 된 텍스트를 사용할 수 있습니다. 예:
+또한 단추의 제목으로 특성이 지정 된 텍스트를 사용할 수 있습니다. 예를 들어:
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

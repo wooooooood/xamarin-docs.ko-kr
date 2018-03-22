@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -33,13 +33,6 @@ ms.lasthandoff: 03/09/2018
 ### <a name="general"></a>일반
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-    in the current release. You should create an **Archive** in Visual Studio for Mac
-    and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-    is not currently supported (but will be a future release). Refer to the
-    [deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - Mac 용 Visual Studio의 이전 릴리스에서 잘못 표시 하 고 중 하나는 **AppleCompanionSettings** 아이콘 88 x 88 픽셀; 결과적으로 **누락 아이콘 오류** 앱을 제출 하려는 경우 저장소입니다.
     이 아이콘 87 x 87 픽셀 이어야 합니다. (29 단위에 대 한  **@3x**  레 티 나 화면). 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -47,14 +40,6 @@ ms.lasthandoff: 03/09/2018
 - 경우 조사식 확장 프로젝트 **Info.plist > WKApp 번들 ID** 않습니다 [올바르게 설정](~/ios/watchos/get-started/project-references.md) Watch 앱에 맞게 **번들 ID**, 디버거를 연결 하지 못합니다 및 시각적 Mac 용 studio 메시지와 대기 *"디버거를 연결할 때까지 기다리는"*합니다.
 
 - 디버깅은 지원 **알림** 모드 이지만 안정적 수 있습니다. 다시 시도 하는 경우에 따라 작동 합니다. 있는지 확인 Watch 앱 **Info.plist** `WKCompanionAppBundleIdentifier` iOS 부모/컨테이너 응용 프로그램의 번들 식별자와 일치 하도록 설정 됩니다 (ie. iPhone에서 실행 되는 것).
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-    be an issue with the iOS Simulator hanging when trying to
-    install an app that has changed. Xcode release notes (beta 4)
-    includes a similar known issue:
-    If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - iOS 디자이너 보기 또는 알림 인터페이스 컨트롤러에 대 한 진입점 화살표를 표시 하지 않습니다.
 
@@ -69,15 +54,6 @@ ms.lasthandoff: 03/09/2018
 ### <a name="visual-studio"></a>Visual Studio
 
 IOS 디자이너 조사식 키트에 대 한 지원 *필요* 솔루션을 올바르게 구성할 수 있습니다. 프로젝트 참조를 설정 하지 않은 경우 (참조 [참조를 설정 하는 방법을](~/ios/watchos/get-started/project-references.md)) 디자인 화면 제대로 작동 하지 것입니다.
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-    starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-    and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-    Visual Studio for Mac and Xcode on your Mac Build Host.
-    -->
 
 <a name="noalpha" />
 
@@ -109,11 +85,10 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="manually-adding-interface-controller-files"></a>인터페이스 컨트롤러 파일을 수동으로 추가
 
 > [!IMPORTANT]
-> Xamarin의 조사식 키트 지원 조사식 스토리 보드 아래 설명 된 단계를 요구 하지 않는 (모두 Mac 용 Visual Studio 및 Visual Studio에서), iOS 디자이너에서 디자인 포함 됩니다. 단순히 인터페이스 컨트롤러를 Mac 속성 패드에 대 한 Visual Studio 및 C# 코드 파일을 자동으로 만들에서 클래스 이름을 지정 합니다.
+> Xamarin의 WatchKit 지원 조사식 스토리 보드 아래 설명 된 단계를 요구 하지 않는 (모두 Mac 용 Visual Studio 및 Visual Studio에서), iOS 디자이너에서 디자인 포함 됩니다. 단순히 인터페이스 컨트롤러를 Mac 속성 패드에 대 한 Visual Studio 및 C# 코드 파일을 자동으로 만들에서 클래스 이름을 지정 합니다.
 
 
 *경우* Xcode 인터페이스 작성기를 사용 하는 watch 앱에 대 한 새 인터페이스 컨트롤러를 만들고 콘센트 및 동작을 C#에서 사용할 수 있도록 Xcode와의 동기화를 사용 하도록 설정 하려면 다음이 단계를 수행 하십시오.
-
 
 1. Watch 앱을 열고 **Interface.storyboard** 에 **Xcode 인터페이스 작성기**합니다.
     
@@ -256,7 +231,7 @@ IOS 시뮬레이터를 제어 하려면 명령줄을 사용할 수도 있습니�
 기본 응용 프로그램 번들의 전체 경로 *watch 앱 및 확장을 포함 하는 iOS 앱에 대 한*합니다.
 
 > [!NOTE]
-> *참고:* 제공 하면 경로 대 한는 *iPhone 응용 프로그램.app 파일*, 하는 iOS 시뮬레이터로 배포 되 고 조사식 확장와 watch 앱 모두를 포함 하는 것, 즉 합니다.
+> 에 대 한을 제공 해야 하는 경로는 *iPhone 응용 프로그램.app 파일*, 하는 iOS 시뮬레이터로 배포 되 고 조사식 확장와 watch 앱 모두를 포함 하는 것, 즉 합니다.
 
 예제:
 

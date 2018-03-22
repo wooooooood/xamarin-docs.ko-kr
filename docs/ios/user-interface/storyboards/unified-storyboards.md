@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-storyboards"></a>통합 된 스토리 보드
 
@@ -581,7 +581,7 @@ IOS 디자이너는 크기 클래스를 사용 하는 스토리 보드의 형식
  [![](unified-storyboards-images/sizeclass02.png "크기 클래스 경고 사용")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **참고**: 자동 레이아웃 제대로 작동 하려면 크기 클래스에 대 한 선택 해야 합니다.
+> 자동 레이아웃 제대로 작동 하려면 크기 클래스에 대 한 선택 해야 합니다.
 
 ### <a name="generic-device-types"></a>일반 장치 유형
 
@@ -630,7 +630,7 @@ IOS 디자이너는 크기 클래스를 사용 하는 스토리 보드의 형식
 개발자가 이전에 스토리 보드를 사용 하는 경우 기존 segue 유형의 익숙할 것 **푸시**, **모달** 및 **Popover**합니다. 다음과 같은 적응 Segue (해당 하는 형식이 위에 설명 된 새 보기 컨트롤러 API)를 사용할 수 있도록 만들어진 크기 클래스 통합 스토리 보드 파일에 설정 되 면: **표시** 및 **세부 보기** .
 
 > [!IMPORTANT]
-> **참고**: 때 크기 클래스를 사용할 수는 segues 기존의 모든, 새 형식으로 변환 합니다.
+> 크기 클래스 설정 된 경우에 segues 기존의 모든 새 형식으로 변환 합니다.
 
 IOS의 예로 마스터 보기 간단한 게임 탐색 메뉴에 있는 분할 뷰 컨트롤러와 통합 된 스토리 보드를 사용 하는 8 응용 프로그램을 보겠습니다. 사용자가 메뉴 단추를 클릭 하면 선택한 항목의 뷰-컨트롤러 iPad에서 실행할 때 분할 뷰 컨트롤러의 세부 정보 섹션에 표시 합니다. IPhone에서 항목의 뷰-컨트롤러 탐색 스택에 밀어 넣은 해야 합니다.
 

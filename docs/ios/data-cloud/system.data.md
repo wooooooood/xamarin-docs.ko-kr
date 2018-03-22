@@ -6,11 +6,11 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 617b02899e04b5417e352555e91aee966428cb9c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 145a0692ed9761944eec4c7ece1f098a584f2d54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="systemdata"></a>System.Data
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 <a name="Example" />
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 프로그램에서 데이터베이스를 만듭니다. `Documents/mydb.db3`, 하는 경우는 이전에 데이터베이스가 없습니다 것 및 샘플 데이터로 채워집니다. 데이터베이스를 쿼리 한 다음의 출력에 기록 `stderr`합니다.
 
@@ -107,7 +107,7 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> **경고:** 는 것은 코드에 노출 하면 문자열 SQL 명령에 포함할 적절 하 고 위의 코드 예제에서 설명 했 듯이 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
+> 위의 코드 예제에서 설명 했 듯이 것은 코드에 노출 하면 문자열 SQL 명령에 포함할 적절 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
 
 
 ### <a name="using-command-parameters"></a>명령 매개 변수를 사용 하 여

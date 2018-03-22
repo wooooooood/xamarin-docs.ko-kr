@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deploying-to-the-app-store"></a>앱 스토어에 배포
 
 > [!IMPORTANT]
->  검토 해야 [Apple Watch 키트 제출 가이드](https://developer.apple.com/app-store/watch/), 참조 및는 [문제 해결](#Troubleshooting) 섹션의 모든 문제를 할 수 있습니다.
+> 검토 해야 [Apple Watch 키트 제출 가이드](https://developer.apple.com/app-store/watch/), 참조 및는 [문제 해결](#Troubleshooting) 섹션의 모든 문제를 할 수 있습니다.
 
 - 확인 해야 합니다.
   - [**배포 프로 비전 프로필** ](#provisioning) 프로젝트에 대해 생성 됩니다.
@@ -177,7 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Mac 및에 대 한 최신 버전의 Visual Studio를 사용 해야 하면 **AppIcons.appiconset** 이미지의 전체 집합을 포함 합니다. 이 오류를 표시 여전히 되는 경우 원본을 보려면는 **Contents.json** 에 필요한 모든 이미지에 대 한 항목이 포함 되어 있는지 확인 합니다. Xamarin의 최신 버전을 사용 하는 올바른지 확인 했으면 삭제 하 고 다시 만드는 또는 **AppIcons.appiconset**합니다.
 
 > [!IMPORTANT]
-> 참고: 알려진된 버그가 있습니다 Visual Studio에서 Mac의 조사식 아이콘 지원을 위한: 88 x 88 픽셀의 이미지를 가정는  **29x29@3x**  이미지 (87 x 87 픽셀 이어야 함).
+> Mac의 조사식 아이콘 지원에 대 한 Visual Studio에서 알려진된 버그가 있습니다: 88 x 88 픽셀의 이미지를 가정은  **29x29@3x**  이미지 (87 x 87 픽셀 이어야 함).
 
 
 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -196,7 +196,7 @@ The app may have been built or signed with non-compliant or pre-release tools.
 Ensure you are using the latest version of Xcode and Xamarin's tools.
 -->
 > [!IMPORTANT]
-> 참고: 해야 **보관** Mac 한 다음 전환할 Xcode 6.2 + iTunes Connect에 업로드 하 고 확인할 수에 대 한 Visual Studio에서 응용 프로그램입니다.
+> 수행 해야 **보관** Mac 한 다음 전환할 Xcode 6.2 + iTunes Connect에 업로드 하 고 확인할 수에 대 한 Visual Studio에서 응용 프로그램입니다.
 
 
 안정적인 Xamarin 채널과 Xcode 6.2 +를 사용 합니다.

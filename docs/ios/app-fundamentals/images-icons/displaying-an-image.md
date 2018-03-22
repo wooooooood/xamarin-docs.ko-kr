@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39da41b7fb5118a16f2b2953f8fcb0a5b72aa819
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="displaying-an-image"></a>이미지 표시
 
@@ -95,7 +95,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> **참고**: 이미지 설정에 할당 된 이미지 올바르게 표시 되지 않으면, 올바른 파일 이름으로 사용 되 고 있는지 확인은 `FromBundle` 메서드 (에서 **이미지 설정** 부모가 아니라 **자산 카탈로그**  이름). PNG 이미지는 `.png` 확장을 생략할 수 있습니다. 다른 이미지 형식에 대 한 확장은 필요한 않음 (예: `PurpleMonkey.jpg`).
+> 설정 하는 이미지에 할당 된 이미지 올바르게 표시 되지 않으면, 올바른 파일 이름으로 사용 되 고 있는지 확인는 `FromBundle` 메서드 (에서 **이미지 설정** 부모가 아니라 **자산 카탈로그** 이름). PNG 이미지는 `.png` 확장을 생략할 수 있습니다. 다른 이미지 형식에 대 한 확장은 필요한 않음 (예: `PurpleMonkey.jpg`).
 
 <a name="Using-Vector-Images-in-Asset-Catalogs" />
 
@@ -231,7 +231,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage");
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-다른 이미지 형식에 대 한 이름으로 확장명을 포함 합니다. 예:
+다른 이미지 형식에 대 한 이름으로 확장명을 포함 합니다. 예를 들어:
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");

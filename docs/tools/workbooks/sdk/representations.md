@@ -6,11 +6,11 @@ ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2664fbf7dc28591ac9f4e0271382b427b5293900
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a311bace159a450dc27e15baa8ef1c260a90c36e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Xamarin 통합 문서에 표현
 
@@ -64,7 +64,7 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> 참고: Api를 생성 하는 `ISerializableObject` 개체 직접에서 처리할 필요 하지 않습니다는 `RepresentationProvider`합니다. 표시 하려는 개체가 **하지** 는 `ISerializableObject`에서 래핑하여 처리 하려는 프로그램 `RepresentationProvider`합니다.
+> 생성 하는 Api `ISerializableObject` 개체 직접에서 처리할 필요 하지 않습니다는 `RepresentationProvider`합니다. 표시 하려는 개체가 **하지** 는 `ISerializableObject`에서 래핑하여 처리 하려는 프로그램 `RepresentationProvider`합니다.
 
 ### <a name="rendering-a-representation"></a>렌더링 한 표현
 
@@ -87,7 +87,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 여기에서 `PersonRenderer` 구현 하는 `Renderer` 인터페이스입니다. 참조는 [입력 항목] [ typings] 내용을 확인 합니다.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
-[xir-color]: /api/type/Xamarin.Interactive.Representations.Color/
-[repman]: /api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[repp]: /api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[serobj]: /api/type/Xamarin.Interactive.Serialization.ISerializableObject/
+[xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
+[repman]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
+[repp]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
+[serobj]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Serialization.ISerializableObject/

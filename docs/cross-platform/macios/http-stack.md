@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 06/12/2017
-ms.openlocfilehash: eff096b1dca15b9b11038a599987f632bca2352f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 01b316e296f78ea2739e2f3ed1bd8d8ec112fca8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
 
@@ -110,6 +110,7 @@ HttpClient client = new HttpClient(new NSUrlSessionHandler());
 SSL (Secure Socket Layer) 및 그 후속 TLS (전송 계층 보안), HTTP 및를 통해 다른 네트워크 연결에 대 한 지원을 제공 `System.Net.Security.SslStream`합니다. Xamarin.iOS, Xamarin.tvOS 또는 Xamarin.Mac의 `System.Net.Security.SslStream` 구현 모노에서 제공 하는 관리 되는 구현을 사용 하는 대신 Apple의 네이티브 SSL/TLS 구현을 호출 합니다. Apple의 native 구현 TLS 1.2를 지원합니다.
 
 <a name="Mono" />
+
 > [!WARNING]
 > **모노/관리** TLS 공급자 v3 SSL 및 TLS v 1로 제한 됩니다. 이 TLS 공급자 사용 되지 않으며을 Xamarin.iOS 응용 프로그램에 대해 사용할 수 없습니다. 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>3D 터치 소개
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 `MaximumPossibleForce` 속성에 대 한 가능한 가장 높은 값을 반환는 `Force` 의 속성은 [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) 응용 프로그램에서 실행 되는 iOS 장치를 기반 합니다.
 
 > [!IMPORTANT]
-> **참고:** 압력의 변경 하면는 `TouchesMoved` 이벤트를 발생, 경우에 X / Y 좌표는 변경 되지 않았습니다. 동작에이 변경으로 인해 iOS 앱 준비 되어야 합니다는 `TouchesMoved` 이벤트를 더 자주 및 X에 대 한 호출 Y 좌표를 마지막으로 동일 하 게 / `TouchesMoved` 호출 합니다.
+> 압력의 변경 하면는 `TouchesMoved` 이벤트를 발생, 경우에 X / Y 좌표는 변경 되지 않았습니다. 동작에이 변경으로 인해 iOS 앱 준비 되어야 합니다는 `TouchesMoved` 이벤트를 더 자주 및 X에 대 한 호출 Y 좌표를 마지막으로 동일 하 게 / `TouchesMoved` 호출 합니다.
 
 
 
@@ -281,7 +281,7 @@ public override void ViewDidLoad ()
 * `UIApplicationShortcutItemType` -을 앱에 있는 항목을 식별 하는 문자열 값이입니다. 자세한 내용은 다음 단원을 참조하세요.
 
 > [!IMPORTANT]
-> **참고:** 빠른 동작 바로 가기 항목에 설정 된는 `Info.plist` 파일에 액세스할 수 없으므로 `Application.ShortcutItems` 속성입니다. 에만 전달 되는 `HandleShortcutItem` 이벤트 처리기입니다. 
+> 에 설정 된 빠른 동작 바로 가기 항목은 `Info.plist` 파일에 액세스할 수 없으므로 `Application.ShortcutItems` 속성입니다. 에만 전달 되는 `HandleShortcutItem` 이벤트 처리기입니다. 
 
 
 

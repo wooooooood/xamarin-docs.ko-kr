@@ -6,11 +6,11 @@ ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2e9f1282ec567e894f4e0841ae42f791d8a77d3f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e51aa9ab9d4d63d16b3a68d24084c872d831975
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="external-integrations"></a>외부 통합
 
@@ -55,6 +55,6 @@ class AgentIntegration : IAgentIntegration
 통합 어셈블리는 응용 프로그램 또는 관심 있는 SDK와 세션 간의 다리 사실상입니다. 세션을를 검사 하거나 없는 공용 Api를 제공 하 고 간단 하 게 개체를 생성 하는 것과 같은 "백그라운드 에서" 작업을 수행할 컨텍스트는 통합 문서 또는 라이브에 구체적으로 의미 있는 새로운 Api를 제공할 수 있다는 [표현을](~/tools/workbooks/sdk/representations.md)합니다.
 
 > [!NOTE]
-> 참고: public 이어야 하지만 IntelliSense를 통해 표시 되는 Api는 일반적인으로 표시할 수 있으며 `[EditorBrowsable (EditorBrowsableState.Never)]` 특성입니다.
+> 일반적인으로 public 이어야 하지만 IntelliSense를 통해 표시 되는 Api를 표시할 수 있으며 `[EditorBrowsable (EditorBrowsableState.Never)]` 특성입니다.
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

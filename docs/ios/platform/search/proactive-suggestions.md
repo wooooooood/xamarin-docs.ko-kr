@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e7252aa89e2514653fc730c7221d22cc053d2e24
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>사전 제안 소개
 
@@ -68,7 +68,7 @@ UIKit ios 10 포함 하도록 확장 되었습니다는 [TextContentType](https:
 시스템 제안 시작 합니다 앱만을 지 원하는 경우 안에서 공유 *"... 하 안에서 Get"*, 시스템에서 사용 됩니다 (예: Walking 또는 자전거) 라우팅 방향 다른 유형의 지원 되 면 *"위해 방향으로 Get..."*
 
 > [!IMPORTANT]
-> **참고:** 는 [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) 응용 프로그램을 수신 하는 개체 경도 위도 정보를 포함 하지 않을 수 있습니다 및 지 오 코딩 해야 합니다.
+> [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) 응용 프로그램을 수신 하는 개체 경도 위도 정보를 포함 하지 않을 수 있습니다 및 지 오 코딩 해야 합니다.
 
 ## <a name="implementing-proactive-suggestions"></a>사전 제안을 구현
 
@@ -166,7 +166,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>복원 작업
 
-검색 결과에서 누르기 사용자에 게 응답 하도록 (`NSUserActivity`)는 앱에 대 한 편집는 **AppDelegate.cs** 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예:
+검색 결과에서 누르기 사용자에 게 응답 하도록 (`NSUserActivity`)는 앱에 대 한 편집는 **AppDelegate.cs** 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -503,7 +503,7 @@ Safari는 다음과 같은 스키마 속성을 준수 하는 웹 페이지에 �
 - 응용 프로그램 응용 프로그램에서 사전 제안을 확인할 수 있습니다.
 - 응용 프로그램에서 향상 된 자동 고침 이점을 얻을 수 있습니다.
 
-새 `TextContentType` iOS 10에서에서 텍스트 필드 컨트롤의 속성을 사용 하면 개발자는 사용자가을 계산할 값을 지정된 된 필드에 입력에 대 한 의미 체계 여부를 정의할 수 있습니다. 예:
+새 `TextContentType` iOS 10에서에서 텍스트 필드 컨트롤의 속성을 사용 하면 개발자는 사용자가을 계산할 값을 지정된 된 필드에 입력에 대 한 의미 체계 여부를 정의할 수 있습니다. 예를 들어:
 
 ```csharp
 var textField = new UITextField();
@@ -532,7 +532,7 @@ textField.TextContentType = UITextContentType.FullStreetAddress;
 - 처리는 MapKit와 앱을 시작 하기 `MKDirectionsRequest` 개체입니다.
 - IOS 앱 사용자에 게 적절 한 시간에 제안 하는 방법을 배울 수 있는 기능을 부여 하려면 사용자 참여 기반으로 합니다.
 
-MapKit와 응용 프로그램 시작 될 때 `MKDirectionsRequest` 개체, 자동으로 요청 된 위치에 사용자를 안내 시작 또는 쉽게 방향으로 시작 하는 사용자에 대 한 UI를 제공 해야 합니다. 예:
+MapKit와 응용 프로그램 시작 될 때 `MKDirectionsRequest` 개체, 자동으로 요청 된 위치에 사용자를 안내 시작 또는 쉽게 방향으로 시작 하는 사용자에 대 한 UI를 제공 해야 합니다. 예를 들어:
 
 
 ```csharp

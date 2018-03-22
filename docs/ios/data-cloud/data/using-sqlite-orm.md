@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b161519bb6fecd31d54690af7c44772c0752f1f6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-sqlitenet"></a>SQLite.NET를 사용 하 여
 
@@ -167,7 +167,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!IMPORTANT]
-> **참고**: 클래스 및 해당 특성에서 생성 된 데이터베이스의 열과 테이블의 이름을에 종속성을 만들면 직접 SQL 문을 작성 하는 경우. 코드에서 해당 이름을 변경 하면 모든 수동으로 작성 된 SQL 문을 업데이트 해야 합니다.
+> 직접 SQL 문을 작성 하는 경우 테이블 및 사용자 클래스 및 해당 특성에서 생성 된 데이터베이스의 열 이름에 대 한 종속성을 만듭니다. 코드에서 해당 이름을 변경 하면 모든 수동으로 작성 된 SQL 문을 업데이트 해야 합니다.
 
 ### <a name="deleting-an-object"></a>개체 삭제
 

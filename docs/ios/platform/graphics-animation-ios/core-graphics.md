@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 128ec8d19dc25dc2231521756ee0f00690e0d134
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="core-graphics"></a>코어 그래픽
 
@@ -228,7 +228,7 @@ public override void Draw (CGRect rect)
  ![](core-graphics-images/04-upright-monkey.png "샘플 이미지 표시 수직")
 
 > [!IMPORTANT]
->  **참고:** 그래픽 컨텍스트의 변경 내용은 이후의 모든 그리기 작업에 적용 합니다. 따라서는 CTM 변환 될 때 영향을 주므로 드로잉 추가 합니다. 예를 들어 CTM 변환 후 삼각형을 그린 하는 경우에 표시 180도 회전 합니다.
+> 그래픽 컨텍스트의 변경 내용은 이후의 모든 그리기 작업에 적용 합니다. 따라서는 CTM 변환 될 때 영향을 주므로 드로잉 추가 합니다. 예를 들어 CTM 변환 후 삼각형을 그린 하는 경우에 표시 180도 회전 합니다.
 
 ### <a name="adding-text-to-the-image"></a>이미지에 텍스트 추가
 

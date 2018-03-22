@@ -7,11 +7,11 @@ ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ac2a19e9020113df273897a8ec2c86ee1763ec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af899bb1c5708e3fc0be88db6224d9127f5a5c6d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay"></a>Apple Pay
 
@@ -118,7 +118,7 @@ IOS 10, 사과 도입 했는데 개발자가 iOS 장치에서 직접 테스트 �
 4. 테스트 결제 카드 중 하나를 사용 하 여는 [Apple 지불 가이드](https://developer.apple.com/apple-pay/) 지불 되도록 합니다.
 
 > [!IMPORTANT]
->  **참고:** iCloud 계정을 전환 하 여 장치에서 자동 전환 새 테스트 환경. 그러나, 사과 여전히 **필요** iTunes App Store에 제출 하기 전에 프로덕션 환경에서 카드 응용 프로그램에서 실수와 함께 테스트할 수 있습니다.
+> ICloud 계정을 전환 하 여 장치는 자동으로 새 테스트 환경으로 전환 됩니다. 그러나, 사과 여전히 **필요** iTunes App Store에 제출 하기 전에 프로덕션 환경에서 카드 응용 프로그램에서 실수와 함께 테스트할 수 있습니다.
 
 ## <a name="summary"></a>요약
 

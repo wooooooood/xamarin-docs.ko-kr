@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 591f6f53c9e787ee9499b2a1a3cc812f7e72749a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay watchOS에
 
@@ -58,7 +58,8 @@ Apple는 iOS 10와 3 watchOS 개발자가 iOS 장치에서 직접 테스트 결�
 3. 앱을 테스트 하려면 원하는 영역을 설정 합니다.
 4. 테스트 결제 카드 중 하나를 사용 하 여는 [Apple 지불 가이드](https://developer.apple.com/apple-pay/) 지불 되도록 합니다.
 
-> ⚠️ **참고:** iCloud 계정을 전환 하 여 장치에서 자동 전환 새 테스트 환경. 그러나, 사과 여전히 **필요** iTunes App Store에 제출 하기 전에 프로덕션 환경에서 카드 응용 프로그램에서 실수와 함께 테스트할 수 있습니다.
+> [!NOTE]
+> ICloud 계정을 전환 하 여 장치는 자동으로 새 테스트 환경으로 전환 됩니다. 그러나, 사과 여전히 **필요** iTunes App Store에 제출 하기 전에 프로덕션 환경에서 카드 응용 프로그램에서 실수와 함께 테스트할 수 있습니다.
 
 ## <a name="summary"></a>요약
 

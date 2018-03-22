@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7a190014abd3386a3a675d50ce6a89101d0588a7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="social-framework"></a>소셜 프레임 워크
 
@@ -22,7 +22,7 @@ _소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국
 소셜 프레임 워크를 사용 하 여 응용 프로그램을을 인증을 관리 하지 않고도 단일 API에서 소셜 네트워크와 상호 작용할 수 있습니다. HTTP를 통해 각 소셜 네트워크 API를 사용한 허용 하는 추상적 표현 뿐만 아니라 게시물을 작성 하기 위한 뷰-컨트롤러를 제공 하는 시스템을 포함 합니다.
 
 > [!IMPORTANT]
-> **참고:** 다양 한 소셜 네트워크에 연결 하는 플랫폼 간 API에 대 한 참조는 [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin 구성 요소 저장소에서 구성 요소입니다.
+> 다양 한 소셜 네트워크에 연결 하는 플랫폼 간 API에 대 한 참조는 [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin 구성 요소 저장소에서 구성 요소입니다.
 
 ## <a name="connecting-to-twitter"></a>Twitter에 연결
 
@@ -302,7 +302,7 @@ Facebook 소셜 프레임 워크에 연결 하는 것은 위에 표시 된 Twitt
 
 소셜 프레임 워크의 여러 소셜 네트워크에 액세스 하도록 하는 통합된 API 이기 코드를 사용 하 고 해당 소셜 네트워크에 관계 없이 거의 동일 합니다.
 
-예를 들어는 `SLComposeViewController` 만 다른 모드로 전환 하는 facebook 설정 및 옵션을 앞에서 살펴본 Twitter 예제와 같이 정확 하 게 사용할 수 있습니다. 예:
+예를 들어는 `SLComposeViewController` 만 다른 모드로 전환 하는 facebook 설정 및 옵션을 앞에서 살펴본 Twitter 예제와 같이 정확 하 게 사용할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

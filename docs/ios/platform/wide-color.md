@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 34f2e249c5474997b2e2e179285f455c425739cf
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="wide-color"></a>광범위 한 색
 
@@ -191,7 +191,7 @@ Apple에 다음 파일 형식 및 응용 프로그램의 광범위 한 색 이�
 - 이미지 자산에 포함 된 "디스플레이 P3" ICC 프로 파일 16 비트 PNG 파일로 내보냅니다.
 
 > [!IMPORTANT]
-> **참고:** Using는 **웹에 대 한 저장** 또는 **내보내기 자산** 편집 소프트웨어 가장 인기 있는 이미지에 기능을 찾을 _되지 것입니다_ 이후 광범위 한 색 이미지에 대 한 작업 이러한 기능을 지원 하도록 필요한 파일 형식 사양 아직 업데이트 되지 않았습니다.
+> 사용 하는 **웹에 대 한 저장** 또는 **내보내기 자산** 편집 소프트웨어 가장 인기 있는 이미지에 기능을 찾을 _되지 것입니다_ 이러한 기능이 적용 되지 않은 이후 광범위 한 색 이미지에 대 한 작업 아직 필요한 파일 형식 사양을 지원 하도록 업데이트 합니다.
 
 ### <a name="supporting-wide-color-with-asset-catalogs"></a>광범위 한 색 자산 카탈로그 지원
 
@@ -330,7 +330,7 @@ public UIImage DrawWideColorImage ()
 
 ### <a name="drawing-wide-color-in-macos"></a>광범위 한 색 macOS에서 그리기
 
-`NSImage` 광범위 한 색 이미지 그리기를 지원 하기 위해 시에라 macOS에서 클래스 확장 되었습니다. 예:
+`NSImage` 광범위 한 색 이미지 그리기를 지원 하기 위해 시에라 macOS에서 클래스 확장 되었습니다. 예를 들어:
 
 ```csharp
 var size = CGSize(250,250);
@@ -354,7 +354,7 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 
 ### <a name="rendering-on-screen-in-ios"></a>IOS의 화면 렌더링
 
-응용 프로그램을 광범위 한 색 iOS에서 화면에 이미지를 렌더링 해야 하는 경우 재정의 `Draw` 의 메서드는 `UIView` 일반적인 방법 대로 의심 합니다. 예:
+응용 프로그램을 광범위 한 색 iOS에서 화면에 이미지를 렌더링 해야 하는 경우 재정의 `Draw` 의 메서드는 `UIView` 일반적인 방법 대로 의심 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -396,7 +396,7 @@ IOS 10와 마찬가지로 `UIGraphicsImageRenderer` 지능적으로 sRGB 또는 
 
 ### <a name="rendering-on-screen-in-macos"></a>MacOS에서 화면 렌더링
 
-응용 프로그램을 광범위 한 색 macOS에서 화면에 이미지를 렌더링 해야 하는 경우 재정의 `DrawRect` 의 메서드는 `NSView` 일반적인 방법 대로 의심 합니다. 예:
+응용 프로그램을 광범위 한 색 macOS에서 화면에 이미지를 렌더링 해야 하는 경우 재정의 `DrawRect` 의 메서드는 `NSView` 일반적인 방법 대로 의심 합니다. 예를 들어:
 
 ```csharp
 using System;

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 클래스에서 상속 해야 `INExtension`, 고도 구현 샘플 목록 처리 하려는 의도 인식 하므로, `IINNotebookDomainHandling`합니다.
 
 > [!NOTE]
-> **이름 지정에 대 한 참고:** 인터페이스에 대 한.net 대문자로 접두사를 사용 하는 규칙은 `I`, Xamarin iOS SDK에서에서 프로토콜을 바인딩할 때 준수입니다.
->
-> Xamarin iOS, 형식 이름 유지 및 Apple를 사용 하 여 처음 두 문자 형식 이름에는 형식에 속해 있는 프레임 워크를 반영 합니다.
->
-> 에 대 한는 `Intents` 프레임 워크 형식이 접두사가 추가 되며 `IN*` 않음 (예: `INExtension`)는 하지만 _하지_ 인터페이스입니다.
-> 또한 프로토콜 (C#에서 인터페이스 될)을 두 개의 결국 뒤 `I`s와 같은 `IINAddTasksIntentHandling`합니다.
+> - 인터페이스에 대 한.net 대문자로 접두사를 사용 하는 규칙은 `I`, Xamarin iOS SDK에서에서 프로토콜을 바인딩할 때 준수입니다.
+> - Xamarin iOS, 형식 이름 유지 및 Apple를 사용 하 여 처음 두 문자 형식 이름에는 형식에 속해 있는 프레임 워크를 반영 합니다.
+> - 에 대 한는 `Intents` 프레임 워크 형식이 접두사가 추가 되며 `IN*` 않음 (예: `INExtension`)는 하지만 _하지_ 인터페이스입니다.
+> - 또한 프로토콜 (C#에서 인터페이스 될)을 두 개의 결국 뒤 `I`s와 같은 `IINAddTasksIntentHandling`합니다.
 
 #### <a name="handling-intents"></a>의도 처리합니다.
 

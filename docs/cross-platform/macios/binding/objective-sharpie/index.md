@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: bcb7be862537a002e5a80462702ed1f2f8497cda
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 08796d38301ba9c6ae15c3ddfe700b1cd2166ace
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="objective-sharpie"></a>목표 Sharpie
 
@@ -34,17 +34,13 @@ _이 섹션에서는 목표 Sharpie, Objective C 라이브러리에 대 한 바�
 목표 Sharpie 바인딩이으로 정확 하 게 하 고 가능한 철저 한 이므로 Clang 구문 분석 헤더 파일을 사용 합니다. 이렇게 품질 바인딩을 생성 하는 데 걸리는 시간과 크게 줄일 수 있습니다.
 
 > [!IMPORTANT]
-> **경고:** 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.
-
-
+> 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.
 
 ## <a name="history"></a>기록
 
 된 진화 했으며에서 사용 하 여 목표 Sharpie 내부적으로 Xamarin 지난 3 년에 대 한 합니다. 목표 Sharpie의 척도가, iOS 8, Mac OS X 10.10 이후 Xamarin.iOS 및 Xamarin.Mac에 도입 된 Api 및 2.0 watchOS 목표 Sharpie로 완전 하 게 부트스트랩 되었습니다. Xamarin에 크게 의존 목표 Sharpie 내부적으로 자체 제품 빌드를 위한 합니다.
 
 그러나 목표 Sharpie는 Objective C 및 C, 명령줄에 clang 컴파일러를 사용 하는 방법 및 방법을 일반적으로 네이티브 라이브러리 배치 된 고급 지식을 요구 하는 고급 도구입니다. 이 높은 표시줄 때문에 더 쉬워집니다 해당 필요 GUI 잘못 기대치를 설정 하는 마법사 및 이와 같이 목표 Sharpie은 현재 으로만 사용할 수 있는 명령줄 도구입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

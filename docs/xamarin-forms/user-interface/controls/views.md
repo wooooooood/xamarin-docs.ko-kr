@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ef4de2d544f3bcfb661b29dd90de738ae0442373
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: f7d27c5226741ec2b105633206ebaa0ac73d9a7b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -86,7 +86,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 사용자 선택 하도록는 `double` 지정 된 연속 된 범위에서 값의 [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) 및 [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) 속성입니다.<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) | [![슬라이더 예제](views-images/Slider.png "슬라이더 예제")](views-images/Slider-Large.png#lightbox "슬라이더 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
+| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 사용자 선택 하도록는 `double` 지정 된 연속 된 범위에서 값의 [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) 및 [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) 속성입니다.<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) / [가이드](~/xamarin-forms/user-interface/slider.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) | [![슬라이더 예제](views-images/Slider.png "슬라이더 예제")](views-images/Slider-Large.png#lightbox "슬라이더 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
 |     |     |
 
 ### <a name="stepper"></a>스텝 퍼

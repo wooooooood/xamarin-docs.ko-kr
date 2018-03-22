@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c0369fe52897a2557a92fd56ebcd816b8427faf7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>IOS에서 Backgrounding 소개
 
@@ -67,7 +67,7 @@ iOS 7에는 사용자에 게 제공 backgrounded 응용 프로그램의 상태�
 응용 프로그램 전환기, 사용자가 모든 backgrounded 및 일시 중단 된 응용 프로그램의 스냅숏을 스크롤할 수 있습니다. 응용 프로그램을 눌러 전경으로 시작 합니다. 넘기기가 해당 프로세스를 종료 하 게 백그라운드에서 응용 프로그램을 제거 합니다. 자세히 보기에 응용 프로그램 전환기 해당 메뉴로 이동 합니다는 [iOS 응용 프로그램 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) 다음 섹션에 있습니다.
 
 > [!IMPORTANT]
-> **참고**: The 응용 프로그램 전환기 backgrounded 및 일시 중단 된 응용 프로그램 간의 차이 표시 하지 않습니다.
+> 응용 프로그램 전환기 backgrounded 및 일시 중단 된 응용 프로그램 간의 차이 표시 하지 않습니다.
 
 
 

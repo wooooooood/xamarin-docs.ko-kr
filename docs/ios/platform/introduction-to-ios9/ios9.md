@@ -7,18 +7,18 @@ ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfdf0c73226eec472eb671d5543f5ce124919ab8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3f52ef88224e65f12502c9fbf82e240233890a82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
 _응용 프로그램에 곧바로 iOS 9 기능을 추가 하지 않으려는 경우에 최신 버전의 Xamarin 앱을 다시 작성 해야 합니다._
 
 > [!IMPORTANT]
-> **참고:** 이 페이지에서이 정보는 이미 iOS 8 또는 그 이전 버전을 대상으로 하는 앱 스토어에서에서 앱과 iOS 9 호환성에 대 한 업데이트를 아직 제출 하지 않은 고객에 대 한 합니다. Xcode 7 및 앱 개발을 위한 Xamarin.iOS 9-하십시오 방문-최신 버전을 이미 사용 중인 경우는 [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)합니다.
+> 이 페이지의 정보는 고객용 이미 앱 스토어에서에서 앱과 iOS 8을 대상으로 지정 하거나 이전에 게 전송 되지 않은 이미 iOS 9 호환성에 대 한 업데이트 합니다. Xcode 7 및 앱 개발을 위한 Xamarin.iOS 9-하십시오 방문-최신 버전을 이미 사용 중인 경우는 [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)합니다.
 
 첫 번째 iOS 9 베타 나타날 때 이전 버전에서 iOS 9 시작할 수 없게 하는 오래 된 앱으로 표시 되는 Xamarin의 두 가지 문제를 확인 했습니다.
 
@@ -110,5 +110,5 @@ Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaSc
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 9 호환성 릴리스 정보](https://releases.xamarin.com/ios-hotfix-for-ios-9-preview-xcode-6/)
-- [IOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
+- [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 - [Xamarin.iOS 앱 iOS9 (비디오)로 업데이트](https://university.xamarin.com/lightninglectures/Updating-your-XamariniOS-apps-to-iOS9)

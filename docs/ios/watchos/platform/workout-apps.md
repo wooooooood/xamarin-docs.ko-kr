@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2282a340811d9932f9df3a1343b22ffc35247e54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="workout-apps"></a>워크 아웃 앱
 
@@ -472,7 +472,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 응용 프로그램 동작 일시 중지 이벤트를 받으면 사용자를 다시 시작 동작 및 동작을 다시 시작 이벤트를 받을 때까지 데이터 수집 중지 해야 합니다. 응용 프로그램의 응용 프로그램 일시 중지 동작 이벤트에 대 한 응답에서 워크 아웃 세션을 일시 중지할지 합니다.
 
 > [!IMPORTANT]
-> **참고:** 일시 중지 동작 및 동작 Resume 이벤트 RunningWorkout 활동 형식에만 지원 됩니다 (`HKWorkoutActivityType.Running`).
+> 동작 일시 중지 및 다시 시작 동작 이벤트 RunningWorkout 활동 형식에만 지원 됩니다 (`HKWorkoutActivityType.Running`).
 
 다시, 재정의 하 여 이러한 이벤트를 처리할 수 있습니다는 `DidGenerateEvent` 의 메서드는 `HKWorkoutSessionDelegate`:
 
@@ -649,7 +649,7 @@ WatchOS 앱이 실행 되는 동안 WatchConnectivity 메시징 및 통신 부�
 3. 사용 하 여 전달 된 워크 아웃 구성에서 watchOS 3 응용 프로그램에서 새 워크 아웃 세션을 시작 (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> **참고:** 한 워크 아웃 Apple Watch 시작 하는 부모 iPhone 앱에 대 한 순서로 watchOS 3 앱 배경을 실행 해야 사용 하도록 설정 합니다. 참조 하십시오 [배경 실행을 사용 하도록 설정](#Enabling-Background-Running) 위에 더 자세한 합니다.
+> Apple Watch는 워크 아웃 시작 하도록 부모 iPhone 앱의 순서로 watchOS 3 앱 배경 실행 해야 사용 하도록 설정 합니다. 참조 하십시오 [배경 실행을 사용 하도록 설정](#Enabling-Background-Running) 위에 더 자세한 합니다.
 
 이 프로세스는 watchOS 3 응용 프로그램에서 직접 워크 아웃 세션을 시작 하는 과정에 매우 비슷합니다. IPhone, 다음 코드를 사용 합니다.
 
@@ -764,7 +764,7 @@ public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutC
 3. **watchOS 3 `OutdoorRunDelegate.cs`**  -사용자 지정 `HKWorkoutSessionDelegate` 이벤트를 처리 하는 워크 아웃에 대 한 합니다.
 
 > [!IMPORTANT]
-> **참고:** 워크 아웃 앱 watchOS 3에에서 제공 하는 새, 향상 된 기능을 구현 하는 데 필요한 부품 다음 섹션에 표시 된 코드에만 포함 됩니다. 지원 되는 모든 코드와 코드 시키며 UI가 업데이트를 포함 되어 있지 않으면 하지만 watchOS 밖의 설명서를 따라 쉽게 만들 수 있습니다.<p/>
+> 다음 섹션에 표시 된 코드에는 워크 아웃 앱 watchOS 3에에서 제공 하는 새, 향상 된 기능을 구현 하는 데 필요한 파트만 포함 됩니다. 지원 되는 모든 코드와 코드 시키며 UI가 업데이트를 포함 되어 있지 않으면 하지만 watchOS 밖의 설명서를 따라 쉽게 만들 수 있습니다.<p/>
 
 
 

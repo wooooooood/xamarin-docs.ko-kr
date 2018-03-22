@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>백그라운드에서 응용 프로그램 업데이트
 
@@ -79,7 +79,7 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 배경 Fetch를 사용 하 여 응용 프로그램 백그라운드에서 UI를 업데이트 하는 호출을 수행할 수 있습니다. 사용자가 앱을 열면 UI 최신이 고 새 콘텐츠를 표시 됩니다. 또한 사용자 때 응용 프로그램에 새 콘텐츠를 볼 수 있도록 응용 프로그램의 응용 프로그램 전환기 스냅숏을 업데이트 합니다.
 
 > [!IMPORTANT]
-> **참고**: 한 번 `PerformFetch` 는 호출 응용 프로그램은 약 30 초 새 콘텐츠의 다운로드를 시작 하 고 완료 처리기 블록을 호출 합니다. 이 시간이 너무 오래 걸리는 경우 앱이 종료 됩니다. 배경 함께 가져올를 사용 하는 것이 좋습니다는 _백그라운드 전송 서비스_ 미디어 또는 기타 큰 파일을 다운로드할 때.
+> 한 번 `PerformFetch` 는 호출 응용 프로그램은 약 30 초 새 콘텐츠의 다운로드를 시작 하 고 완료 처리기 블록을 호출 합니다. 이 시간이 너무 오래 걸리는 경우 앱이 종료 됩니다. 배경 함께 가져올를 사용 하는 것이 좋습니다는 _백그라운드 전송 서비스_ 미디어 또는 기타 큰 파일을 다운로드할 때.
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 콘텐츠 응용 프로그램의 기능에 중요 한 이유가 드물게 업데이트에 대 한 원격 알림을 사용 해야 합니다. 원격 알림에 대 한 자세한 내용은 참조는 Xamarin [iOS에서 푸시 알림을](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) 가이드입니다.
 
 > [!IMPORTANT]
-> **참고**: 원격 알림에 업데이트 메커니즘은 백그라운드 인출 기반, 응용 프로그램의 새 콘텐츠 다운로드를 시작 하 고는 알림을 받으면 30 초 안에 완료 처리기 블록을 호출 해야 또는 iOS 됩니다 때문에 응용 프로그램을 종료 합니다. 사용 하 여 원격 알림을 쌍으로 연결 하는 것이 좋습니다. _백그라운드 전송 서비스_ 미디어 또는 백그라운드에서 기타 큰 파일을 다운로드할 때.
+> 업데이트 메커니즘에서 원격 알림이 백그라운드 인출 기반으로 하므로 응용 프로그램의 새 콘텐츠 다운로드를 시작 하 고는 알림을 받으면 30 초 안에 완료 처리기 블록을 호출 해야 하거나 iOS 응용 프로그램을 종료 합니다. 사용 하 여 원격 알림을 쌍으로 연결 하는 것이 좋습니다. _백그라운드 전송 서비스_ 미디어 또는 백그라운드에서 기타 큰 파일을 다운로드할 때.
 
 
 ### <a name="silent-remote-notifications"></a>자동 원격 알림
@@ -156,7 +156,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
  [![](updating-an-application-in-the-background-images/silent.png "이 다이어그램에서와 같이 정기적으로 알림이 장치에 APNs에서 자동 저장된 알림 데 사용할 수 수 있습니다.")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **참고**: Apple 응용 프로그램에서 필요로 하 고 let APNs의 배달을 예약할 때마다 자동 푸시 알림을 보내려면 개발자가 권장 합니다.
+> Apple 응용 프로그램에 필요한 될 때마다 자동 푸시 알림을 보내려면 권장 하 고 및 해당 배달 예약 APNs를 사용 합니다.
 
 
 이 섹션에서는 배경 필요한 범주에 적합 하지 않은 작업을 실행 하려면 백그라운드에서 콘텐츠를 새로 고치기 위한 다양 한 옵션에 설명한 합니다. 이제 일부의 작업에서 이러한 Api를 확인해 보겠습니다.

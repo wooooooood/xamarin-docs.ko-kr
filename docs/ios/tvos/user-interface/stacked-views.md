@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>누적된 보기 사용
 
@@ -76,7 +76,7 @@ _이 문서에서는 디자인 및 보기 누적 Xamarin.tvOS 응용 프로그�
 * 가로 스택 뷰 첫 번째와 마지막 기준에 대 한 가장 큰 해당 하위 뷰를 사용 합니다. 가장 높은 보기 스택 보기 이기도 한 경우 가장 긴 서브 기준선으로 사용 됩니다.
 
 > [!IMPORTANT]
-> **참고:** 잘못 된 위치에 초기 계획을 계산할 때 기준선 맞춤 늘어난 또는 압축 된 하위 뷰 크기에서 작동 하지 않습니다. 기준선 맞춤에 대 한 확인 하는 하위 뷰 **높이** 내장 콘텐츠 보기와 일치 **높이**합니다.
+> 기준선 맞춤 잘못 된 위치에 초기 계획을 계산할 때 늘어난 또는 압축 된 하위 뷰 크기에서 작동 하지 않습니다. 기준선 맞춤에 대 한 확인 하는 하위 뷰 **높이** 내장 콘텐츠 보기와 일치 **높이**합니다.
 
 
 
@@ -149,11 +149,11 @@ Xamarin.tvOS 응용 프로그램에서 스택 뷰를 사용 하는 가장 쉬운
 -----
 
 > [!IMPORTANT]
-> **참고:** 참고:와 같은 동작을 할당 하는 가능 하지만 `TouchUpInside` UI 요소에 (같은 `UIButton`) iOS 이벤트 처리기를 만들 때 디자이너에서에서이 호출 되지 것입니다 Apple TV에 터치 화면이 나 지원 터치가 되지 않았으므로 이벤트입니다. 항상 기본값을 사용 해야 `Action Type` 사용자 인터페이스 요소 tvOS에 대 한 작업을 만들 때.
+> 수와 같은 동작을 할당 하는 `TouchUpInside` UI 요소에 (같은 `UIButton`) iOS 이벤트 처리기를 만들 때 디자이너에서에서이 호출 되지 것입니다 있으므로 Apple TV 터치 스크린 또는 터치 이벤트를 지원 하지 않습니다. 항상 기본값을 사용 해야 `Action Type` 사용자 인터페이스 요소 tvOS에 대 한 작업을 만들 때.
 
 스토리 보드를 사용한 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [Hello, tvOS 퀵 스타트 가이드](~/ios/tvos/get-started/hello-tvos.md)합니다.
 
-이 예제의 경우는 콘센트 및 세그먼트 컨트롤에 대 한 작업 및 각 "플레이어 카드" 콘센트 노출 했습니다 했습니다. 코드에서 우리 표시 / 숨기기 플레이어 현재 세그먼트에 기반 합니다. 예:
+이 예제의 경우는 콘센트 및 세그먼트 컨트롤에 대 한 작업 및 각 "플레이어 카드" 콘센트 노출 했습니다 했습니다. 코드에서 우리 표시 / 숨기기 플레이어 현재 세그먼트에 기반 합니다. 예를 들어:
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {

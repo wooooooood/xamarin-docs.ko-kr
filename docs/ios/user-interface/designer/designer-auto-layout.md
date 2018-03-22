@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너로 자동 레이아웃
 
@@ -88,7 +88,7 @@ IOS 디자이너 도구는 두 종류의 디자인 화면에서 요소를 조작
 나머지 두 단추에서 세 가지 녹색 파선 note 합니다. 녹색 선은 나타냅니다 *끌어 놓기 영역*, 또는 특성의 다른 요소를 제한할 수 있습니다. 또한 위의 스크린 샷에서 나머지 두 단추 3 세로 끌어 놓기 영역을 제공 ( *아래쪽*, *centerY*, *top*)이 단추를 제한 하 합니다. 뷰의 맨 위에 있는 녹색 파선 뷰 컨트롤러 보기의 맨 위쪽에는 제약 조건을 제공 하 고 단색 녹색 상자 뷰 컨트롤러 최상위 레이아웃 가이드 아래 제약 조건을 제공 의미를 의미 합니다.
 
 > [!IMPORTANT]
-> **참고**: 레이아웃 안내선은 특수 한 유형의 시스템 모음, 상태 표시줄에서 도구 모음 등의 존재 여부를 고려 하는 위쪽 및 아래쪽 제약 조건을 만들 수 있는 제약 조건 대상으로 합니다. 주요 용도 중 하나는 최신 버전은 상태 표시줄 아래로 확장 하는 컨테이너 보기에 있으므로 iOS 6 및 iOS 7 간에 호환 되는 응용 프로그램을 것입니다. 최상위 레이아웃 가이드에 대 한 자세한 내용은 참조는 [Apple 설명서](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)합니다.
+> 레이아웃 지침은 특정 종류의 위쪽을 만들 수 있는 제약 조건 대상 및 상태 표시줄에서 도구 모음 등의 시스템 막대의 존재 여부를 고려 하는 아래쪽 제약 조건이 됩니다. 주요 용도 중 하나는 최신 버전은 상태 표시줄 아래로 확장 하는 컨테이너 보기에 있으므로 iOS 6 및 iOS 7 간에 호환 되는 응용 프로그램을 것입니다. 최상위 레이아웃 가이드에 대 한 자세한 내용은 참조는 [Apple 설명서](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)합니다.
 
 
 
@@ -203,7 +203,7 @@ IOS 디자이너에에서 제약 조건에 대 한 다음과 같은 설정을 �
 
 ### <a name="animating-constraint-changes"></a>제약 조건이 변경 애니메이션 적용
 
-제약 조건 속성을 수정 하는 것 외에도 변경 내용 보기의 제약 조건에 애니메이션 효과를 주는 핵심 애니메이션을 사용할 수 있습니다. 예:
+제약 조건 속성을 수정 하는 것 외에도 변경 내용 보기의 제약 조건에 애니메이션 효과를 주는 핵심 애니메이션을 사용할 수 있습니다. 예를 들어:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

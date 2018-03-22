@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="stack-view"></a>스택 보기
 
@@ -62,7 +62,7 @@ _이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackVi
 스택 뷰를 사용할 때의 생각할 수 있습니다는 **맞춤** 로 **X** 및 **Y** 서브의 위치 및 **배포** 으로 **높이** 및 **너비**합니다.
 
 > [!IMPORTANT]
-> **참고:** `UIStackView` 기능은의 다른 하위 클래스와 같은 캔버스에 그릴 없는 비 렌더링 컨테이너 보기로 이동 하 고 따라서 `UIView`합니다. 따라서 같은 속성을 설정 `BackgroundColor` 또는 재정의 `DrawRect` 시각적 영향을 미치지 것입니다.
+> `UIStackView` 캔버스의 다른 하위 클래스와 같은 그릴 없는 비 렌더링 컨테이너 보기로 이동 하 고 따라서 `UIView`합니다. 따라서 같은 속성을 설정 `BackgroundColor` 또는 재정의 `DrawRect` 시각적 영향을 미치지 것입니다.
 
 다음과 유사한 되도록 레이블, ImageView, 두 개의 단추 및 가로 스택 뷰를 추가 하 여 응용 프로그램의 인터페이스 레이아웃을 계속 합니다.
 
@@ -209,7 +209,7 @@ icon.RemoveFromSuperview();
  - 가로 스택 뷰 첫 번째와 마지막 기준에 대 한 가장 큰 해당 하위 뷰를 사용 합니다. 가장 높은 보기 스택 보기 이기도 한 경우 가장 긴 서브 기준선으로 사용 됩니다.
 
 > [!IMPORTANT]
-> **참고:** 잘못 된 위치에 초기 계획을 계산할 때 기준선 맞춤 늘어난 또는 압축 된 하위 뷰 크기에서 작동 하지 않습니다. 기준선 맞춤에 대 한 확인 하는 하위 뷰 **높이** 내장 콘텐츠 보기와 일치 **높이**합니다.
+> 기준선 맞춤 잘못 된 위치에 초기 계획을 계산할 때 늘어난 또는 압축 된 하위 뷰 크기에서 작동 하지 않습니다. 기준선 맞춤에 대 한 확인 하는 하위 뷰 **높이** 내장 콘텐츠 보기와 일치 **높이**합니다.
 
 ### <a name="common-stack-view-uses"></a>일반적으로 스택 뷰 사용
 

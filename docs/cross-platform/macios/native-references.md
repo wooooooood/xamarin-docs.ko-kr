@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea635dfd5b7946c6d394d72bffbb328255b56b97
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="native-references"></a>네이티브 참조
 
@@ -22,7 +22,7 @@ _네이티브 참조 Xamarin.iOS 또는 Xamarin.Mac 프로젝트 또는 바인�
 IOS 8.0 이후 응용 프로그램 확장과 Xcode에서 주 앱 간에 코드를 공유 하는 포함 된 프레임 워크를 만들 수 있었지만 했습니다. 네이티브 참조 기능 사용를 Xamarin.iOS에 이러한 포함 된 프레임 워크 (Xcode를 사용 하 여 만든)을 사용할 수 있습니다.
  
 > [!IMPORTANT]
-> **참고:** Xamarin.iOS 또는 Xamarin.Mac 프로젝트의 모든 형식에서 포함 된 프레임 워크를 만들 수 없습니다, 네이티브 참조만 허용 하며 기존 네이티브 (Objective-c) 프레임 워크의 소비 합니다.
+> Xamarin.iOS 또는 Xamarin.Mac 프로젝트의 모든 형식에서 포함 된 프레임 워크를 만들 수 없습니다, 네이티브 참조만 허용 기존 네이티브 (Objective-c) 프레임 워크의 소비 합니다.
 
 
 

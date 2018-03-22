@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c55ba4fb90181aaa1aa8ec52e2fcb3e2b2cc76d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="table-control"></a>Table 컨트롤
 
@@ -51,7 +51,8 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **참고**: ios에서 조건은 테이블 행은 가상화 되지 않습니다. (Apple는 20 미만의 권장 하는 데 사용) 하는 행 수를 제한 하려고 합니다.
+> 테이블 행에는 ios에서 조건은 가상화 되지 않습니다. (Apple는 20 미만의 권장 하는 데 사용) 하는 행 수를 제한 하려고 합니다.
+
 각 셀을 채우는 데 필요한 행을 만든 후 (같은 `GetCell` iOS에서 수행 하는). 이 코드 조각은 [WatchTables 예제](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) 각 행에 레이블을 업데이트
 
 ```csharp
@@ -62,7 +63,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **참고:** Using `SetNumberOfRows` 를 사용 하 여 루핑 및 `GetRowController` 시계에 보내야 하는 전체 테이블입니다. 테이블의 이후 검토를 추가 하거나 제거 해야 할 경우 특정 행 사용 하 여 `InsertRowsAt` 및 `RemoveRowsAt` 성능 향상을 위해 합니다.
+> 사용 하 여 `SetNumberOfRows` 를 사용 하 여 루핑 및 `GetRowController` 시계에 보내야 하는 전체 테이블입니다. 테이블의 이후 검토를 추가 하거나 제거 해야 할 경우 특정 행 사용 하 여 `InsertRowsAt` 및 `RemoveRowsAt` 성능 향상을 위해 합니다.
 
 
 ## <a name="respond-to-taps"></a>탭에 응답
@@ -148,7 +149,7 @@ watchOS 3 테이블에 대 한 새로운 기능을 도입: 테이블로 이동 �
 ![](table-images/table-scroll-sml.png "세로 세부 페이징 예제") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **경고:** 만이 기능을 현재 사용할 수 있는 인터페이스 작성기 Xcode에서에서 스토리 보드를 편집 하 여 합니다.
+> 이 기능은 현재만 사용할 수 있는 인터페이스 작성기 Xcode에서에서 스토리 보드를 편집 하 여 합니다.
 
 이 기능을 사용 하려면 선택은 `WKInterfaceTable` 눈금의 디자인 화면에는 **세로 세부 페이징** 옵션:
 

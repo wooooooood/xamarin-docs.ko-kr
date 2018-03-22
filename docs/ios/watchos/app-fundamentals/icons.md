@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 2961eb4726b9f313d01f8bc075e5ca362d708e92
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons"></a>작업 아이콘
 
@@ -79,7 +79,7 @@ IOS 앱 및 watch 앱 올바른 이름 및 아이콘을 표시 하려면 각 프
 아이콘은 올바른 검사 하 여 구성 작업을 확인할 수 있습니다는 [Apple Watch 설정 앱](~/ios/watchos/app-fundamentals/settings.md) iPhone 시뮬레이터에서에서 또는 생성 한 [알림](~/ios/watchos/platform/notifications.md) 알림 표시 아이콘을 확인 하 고 화면입니다.
 
 > [!NOTE]
-> **참고**: 아이콘 (앱 거부 되며 앱 스토어 제출 하는 동안 알파 채널이 있는 경우) 알파 채널이 있을 수 없습니다. 알파 채널 존재 하 고 제거 하는 경우를 확인할 수 있습니다 [미리 보기 앱을 사용 하 여 Mac OS x](~/ios/watchos/troubleshooting.md#noalpha)합니다.
+> 아이콘 (앱 거부 되며 앱 스토어 제출 하는 동안 알파 채널이 있는 경우) 알파 채널이 있을 수 없습니다. 알파 채널 존재 하 고 제거 하는 경우를 확인할 수 있습니다 [미리 보기 앱을 사용 하 여 Mac OS x](~/ios/watchos/troubleshooting.md#noalpha)합니다.
 
 
 ## <a name="related-links"></a>관련 링크

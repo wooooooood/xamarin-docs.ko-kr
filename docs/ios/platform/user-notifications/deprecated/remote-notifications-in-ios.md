@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="push-notifications-in-ios"></a>IOS에 대 한 푸시 알림
 
 _이 섹션은 iOS에 푸시 알림을 설명 합니다. Apple 푸시 알림 게이트웨이 서비스 및 iOS 응용 프로그램에 게시 알림에서 수행 하는 역할을 소개 합니다. 이 작업에서는 푸시 알림을 사용 하도록 설정 하 고 논의 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로이 섹션은 응용 프로그램 서버에 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 관리 작업 중 일부 설명 합니다._
 
 > [!IMPORTANT]
-> **참고:** iOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
+> IOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
 
 푸시 알림을 간략하게 유지 해야 하 고만 업데이트에 대 한 서버 응용 프로그램을 문의 해야 해당 모바일 응용 프로그램에 알리기 위해 충분 한 데이터를 포함 합니다. 예를 들어 새 전자 메일 도착, 서버 응용 프로그램이 새 전자 메일 도착 한 모바일 응용 프로그램에 알리는 것입니다. 알림 자체는 새 전자 메일을 포함 되지 않을 것입니다. 모바일 응용 프로그램을 검색 합니다는 새 전자 메일 서버에서 적절 한 되었을 때
 

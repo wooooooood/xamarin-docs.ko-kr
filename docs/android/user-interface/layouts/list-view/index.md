@@ -7,12 +7,12 @@ ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/21/2018
+ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -56,10 +56,10 @@ _ListView가 Android 응용 프로그램의 중요 한 UI 요소 모든 위치�
 
 이 파일에 배치 되는 각 항목에 대 한 레이아웃을 정의 [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/)합니다.
 
-열기는 `HelloListView.cs` 클래스를 확장 하 고 [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (대신 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
+열기 `MainActivity.cs` 확장할 클래스를 수정 하 고 [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (대신 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
 
 ```csharp
-public class HelloListView : ListActivity
+public class MainActivity : ListActivity
 {
 ```
 
@@ -74,9 +74,9 @@ protected override void OnCreate (Bundle bundle)
 
     ListView.TextFilterEnabled = true;
 
-    ListView.ItemClick += delegate (object sender, ItemEventArgs args) {
-        // When clicked, show a toast with the TextView text
-        Toast.MakeText (Application, ((TextView)args.View).Text, ToastLength.Short).Show ();
+    ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+    {
+        Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Short).Show();
     };
 }
 ```
@@ -93,7 +93,12 @@ protected override void OnCreate (Bundle bundle)
 에 대 한 레이아웃 파일을 직접 정의 하는 대신 플랫폼에서 제공 하는 목록 항목 디자인을 사용할 수 있습니다는 [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/)합니다.
 예를 들어, 사용 하 여 시도 `Android.Resource.Layout.SimpleListItem1` 대신 `Resource.Layout.list_item`합니다.
 
-후의 [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) 메서드를 문자열 배열을 추가 합니다.
+다음 추가 `using` 문:
+
+```csharp
+using System;
+```
+다음에 다음 문자열 배열을의 구성원으로 추가 `MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -145,22 +150,23 @@ static readonly string[] countries = new String[] {
 
 응용 프로그램을 실행합니다. 목록을 스크롤하여 하거나 다음 메시지를 보려면 항목을 클릭 필터링 하는 것을 입력할 수 있습니다. 다음과 같이 표시되어야 합니다.
 
-[![국가 이름으로 ListView의 예제 스크린 샷](images/helloviews6.png)](images/helloviews6.png#lightbox)
+[![국가 이름으로 ListView의 예제 스크린 샷](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
-이때 하드 코드 된 문자열 배열을 사용 하 여 최상의 디자인 되었습니다. 설명 하기 위해 간단한 설명을 위해이 자습서에서 사용 하나는 [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) 위젯입니다. 와 같은 외부 리소스를 정의 하는 문자열 배열을 참조 하는 것이 좋습니다는 `string-array` 프로젝트 자원에에서 **Resources/Values/Strings.xml** 파일입니다. 예:
+이때 하드 코드 된 문자열 배열을 사용 하 여 최상의 디자인 되었습니다. 설명 하기 위해 간단한 설명을 위해이 자습서에서 사용 하나는 [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) 위젯입니다. 와 같은 외부 리소스를 정의 하는 문자열 배열을 참조 하는 것이 좋습니다는 `string-array` 프로젝트 자원에에서 **Resources/Values/Strings.xml** 파일입니다. 예를 들어:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="countries_array">
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-    </string-array>
+  <string name="app_name">HelloListView</string>
+  <string-array name="countries_array">
+    <item>Bahrain</item>
+    <item>Bangladesh</item>
+    <item>Barbados</item>
+    <item>Belarus</item>
+    <item>Belgium</item>
+    <item>Belize</item>
+    <item>Benin</item>
+  </string-array>
 </resources>
 ```
 
@@ -170,6 +176,9 @@ static readonly string[] countries = new String[] {
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+응용 프로그램을 실행합니다. 다음과 같이 표시되어야 합니다.
+
+[![더 작은 이름 목록이 있는 ListView의 예제 스크린 샷](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 
 ## <a name="going-further-with-listview"></a>ListView 계속 진행

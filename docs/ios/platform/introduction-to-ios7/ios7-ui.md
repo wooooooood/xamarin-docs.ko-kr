@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -173,7 +173,7 @@ public override void ViewDidLayoutSubviews ()
 따라서을 읽는 동안 계층에 보기를 추가한 후 치환이 값은 동적으로 생성 `TopLayoutGuide` 및 `BottomLayoutGuide` 에 값을 `ViewDidLoad` 0을 반환 합니다. 로드 한 후 보기-예를 들어에서 값을 계산의 `ViewDidLayoutSubviews`합니다.
 
 > [!IMPORTANT]
-> **참고**: `TopLayoutGuide` 및 `BottomLayoutGuide` 새로운 보호 영역 레이아웃을 위해 iOS 11에서에서 사용 되지 않습니다. Apple 보호 영역을 사용 하 여 iOS 11 보다 이전 버전 iOS와 호환 되는지 주장 합니다. 자세한 내용은 참조는 [11 iOS 용 앱을 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드입니다.
+> `TopLayoutGuide` 및 `BottomLayoutGuide` 새로운 보호 영역 레이아웃을 위해 iOS 11에서에서 사용 되지 않습니다. Apple 보호 영역을 사용 하 여 iOS 11 보다 이전 버전 iOS와 호환 되는지 주장 합니다. 자세한 내용은 참조는 [11 iOS 용 앱을 업데이트](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) 가이드입니다.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,7 +252,7 @@ public override bool PrefersStatusBarHidden ()
 Tint 색에 이미지도 때 적용할 수 있습니다는 `RenderingMode` 로 설정 된 `UIImageRenderingMode.AlwaysTemplate`합니다.
 
 > [!IMPORTANT]
-> 참고: Tint 색 설정할 수 없습니다를 사용 하 여 `UIAppearance`합니다.
+> 사용 하 여 색조 색상을 설정할 수 없습니다 `UIAppearance`합니다.
 
 
 ### <a name="dynamic-type"></a>동적 형식

@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Xamarin.iOS의 알림
 
 _이 섹션에는 로컬 알림을 Xamarin.iOS에서 구현 하는 방법을 보여 줍니다. IOS 알림의 다양 한 UI 요소에 설명 하 고 API에 설명 합니다의 관련 만들기 및 알림을 표시 합니다._
 
 > [!IMPORTANT]
-> **참고:** iOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
+> IOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
 
 iOS에 알림이 받았음을 사용자에 게 나타내기 위해 세 가지가 있습니다.
 
@@ -78,7 +78,7 @@ notification.SoundName = UILocalNotification.DefaultSoundName;
 Apple Human Interface Guidelines 당 알림을 소리를 재생 하는 경우 그 해야도 함께 배지 또는 사용자는 경고를 발생 시키는 응용 프로그램을 식별할 수 있도록 경고 합니다. 또한 소리가 30 초 보다 긴 경우 iOS 됩니다 기본 소리 재생 대신 합니다.
 
 > [!IMPORTANT]
-> **참고**: 대리자 알림을 두 번 발생 하는 iOS 시뮬레이터에서 버그가 있습니다. 장치에서 응용 프로그램을 실행 하는 경우에이 문제가 발생 하지 않습니다.
+> 대리자 알림을 두 번 발생 하는 iOS 시뮬레이터에서 버그가 있습니다. 장치에서 응용 프로그램을 실행 하는 경우에이 문제가 발생 하지 않습니다.
 
 ## <a name="handling-notifications"></a>알림 처리
 

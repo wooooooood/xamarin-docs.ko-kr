@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="contacts-and-contactsui"></a>연락처와 ContactsUI
 
@@ -30,7 +30,7 @@ Apple iOS 9의 도입으로 두 개의 새로운 프레임 워크를 출시 했�
 [![](contacts-images/add01.png "IOS 장치에서 연락처 시트 예")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> **참고:** 기존 `AddressBook` 및 `AddressBookUI` 프레임 워크 iOS 8에서 사용할 사전 iOS 9에서에서 사용 되지 않는 및 새로 대체 해야 `Contacts` 및 `ContactsUI` 모든 기존 Xamarin.iOS에 대 한 가능한 한 빨리 프레임 워크 응용 프로그램입니다. 새 프레임 워크에 대해 새 응용 프로그램을 작성 되어야 합니다.
+> 기존 `AddressBook` 및 `AddressBookUI` 프레임 워크 iOS 8에서 사용할 사전 iOS 9에서에서 사용 되지 않는 및 새로 대체 해야 `Contacts` 및 `ContactsUI` 모든 기존 Xamarin.iOS 앱에 대 한 가능한 한 빨리 프레임 워크입니다. 새 프레임 워크에 대해 새 응용 프로그램을 작성 되어야 합니다.
 
 
 
@@ -111,7 +111,7 @@ else
 }
 ```
 
-IOS 9 장치에서이 코드를 실행 하면 새 연락처를 사용자의 컬렉션에 추가 됩니다. 예:
+IOS 9 장치에서이 코드를 실행 하면 새 연락처를 사용자의 컬렉션에 추가 됩니다. 예를 들어:
 
 [![](contacts-images/add01.png "사용자의 컬렉션에 추가 된 새 연락처")](contacts-images/add01.png#lightbox)
 
@@ -124,7 +124,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-응용 프로그램의 UI에 표시 될 경우 되는 속성 레이블에 연락처 프레임 워크에도 이러한 문자열 지역화를 위한 메서드가 있습니다. 다시,이 설정은 iOS 장치에서 앱이 실행의 현재 로캘에 기반 합니다. 예:
+응용 프로그램의 UI에 표시 될 경우 되는 속성 레이블에 연락처 프레임 워크에도 이러한 문자열 지역화를 위한 메서드가 있습니다. 다시,이 설정은 iOS 장치에서 앱이 실행의 현재 로캘에 기반 합니다. 예를 들어:
 
 ```csharp
 // Localized properties
@@ -144,7 +144,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 ```
 
 > [!IMPORTANT]
-> **참고:** 제네릭 복합 조건자 연락처 프레임 워크에서 지원 되지 않습니다.
+> 제네릭 및 복합 조건자 연락처 프레임 워크에서 지원 되지 않습니다.
 
 예를 들어, 인출만을 제한 하는 **GivenName** 및 **FamilyName** 다음 코드를 사용 하는 연락처의 속성:
 
@@ -176,7 +176,7 @@ var contacts = store.GetUnifiedContacts(predicate, fetchKeys, out error);
 
 A _부분 문의_ 은 연락처에 대 한 연락처 저장소에서 인출 된 사용 가능한 속성의 일부입니다. 이 이전에 인출 된 있는 속성에 액세스 하려고 하면 예외가 발생 합니다.
 
-지정 된 연락처 중 하나를 사용 하 여 원하는 속성에 있는지를 쉽게 확인할 수 있습니다는 `IsKeyAvailable` 또는 `AreKeysAvailable` 의 메서드는 `CNContact` 인스턴스. 예:
+지정 된 연락처 중 하나를 사용 하 여 원하는 속성에 있는지를 쉽게 확인할 수 있습니다는 `IsKeyAvailable` 또는 `AreKeysAvailable` 의 메서드는 `CNContact` 인스턴스. 예를 들어:
 
 ```csharp
 // Does the contact contain the requested key?
@@ -190,7 +190,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> **참고:** 는 `GetUnifiedContact` 및 `GetUnifiedContacts` 의 메서드는 `CNContactStore` 클래스 _만_ 제공 하는 fetch 키에서 요청 된 속성으로 제한 된 일부 연락처를 반환 합니다.
+> `GetUnifiedContact` 및 `GetUnifiedContacts` 의 메서드는 `CNContactStore` 클래스 _만_ 제공 하는 fetch 키에서 요청 된 속성으로 제한 된 일부 연락처를 반환 합니다.
 
 ### <a name="unified-contacts"></a>통합 된 연락처
 
@@ -227,7 +227,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 A `CNSaveRequest` 한 번에 여러 연락처 및 그룹의 변경 내용을 캐시 하 고 이러한 수정 사항을에 일괄 처리를 사용할 수도 있습니다는 `CNContactStore`합니다.
 
-인출 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 다음 수정 하 고 연락처 저장소에 다시 저장 하는 변경할 수 있는 복사본을 요청 해야 합니다. 예:
+인출 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 다음 수정 하 고 연락처 저장소에 다시 저장 하는 변경할 수 있는 복사본을 요청 해야 합니다. 예를 들어:
 
 ```csharp
 // Get mutable copy of contact
@@ -281,7 +281,7 @@ Apple의 기본 제공 컨트롤을 사용 하 여 뿐만 아니라 Xamarin.iOS 
 
 호출 하기 전에 `CNContactPickerViewController` 사용자를 선택 하 고 디스플레이 및 연락처 속성의 선택을 제어 하는 조건자를 정의할 수 있는 속성을 정의 클래스입니다.
 
-상속 되는 클래스의 인스턴스를 사용 하 여 `CNContactPickerDelegate` 고 선택기와 사용자의 상호 작용에 응답할 수 있습니다. 예:
+상속 되는 클래스의 인스턴스를 사용 하 여 `CNContactPickerDelegate` 고 선택기와 사용자의 상호 작용에 응답할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

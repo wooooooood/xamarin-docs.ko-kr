@@ -7,11 +7,11 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5053d8d0cf9c1c3e6d3282ee8d6e42448e733c2c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -53,7 +53,7 @@ CloudKit 프레임 워크는 해당 액세스 iCloud 응용 프로그램 개발�
 새 _CloudKit 웹 서비스_ 프레임 워크는 동일한 CloudKit 기반 데이터 및 콘텐츠에 Xamarin.iOS 앱에 대 한 액세스를 제공 하도록 웹 사이트에 포함 될 수 있는 JavaScript 라이브러리가 (CloudKit JS)를 제공 합니다.
 
 > [!IMPORTANT]
-> **참고:** 액세스, 제공 하거나 CloudKit JS를 사용 하 여 CloudKit 데이터베이스의 콘텐츠를 업데이트할 수 있습니다, 전에 이전에 정의 해야 해당 데이터베이스의 스키마입니다.
+> 액세스 제공 하거나 CloudKit JS를 사용 하 여 CloudKit 데이터베이스의 콘텐츠를 업데이트할 수 있습니다, 전에 이전에 정의 해야 해당 데이터베이스의 스키마입니다.
 
 
 
@@ -100,7 +100,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>절전 모드에 응답
 
-사용 하 여는 `LowPowerModeEnabled` 의 속성은 [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) 낮은 전원 모드 응용 프로그램에서 실행 되는 iOS 장치에서 설정 되어 있는지 확인 하려면 클래스입니다. 예:
+사용 하 여는 `LowPowerModeEnabled` 의 속성은 [NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/) 낮은 전원 모드 응용 프로그램에서 실행 되는 iOS 장치에서 설정 되어 있는지 확인 하려면 클래스입니다. 예를 들어:
 
 ```csharp
 // Is the device in low power mode?

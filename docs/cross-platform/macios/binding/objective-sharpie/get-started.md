@@ -7,16 +7,16 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 5d1de42a398affc1b6b6c9b863df5bc86a016c08
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 53e64acd8e64c9a8151b2c55045db4e308f97531
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="getting-started"></a>시작
 
 > [!IMPORTANT]
-> **경고:** 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.
+> 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.
 
 <a name="installing" />
 

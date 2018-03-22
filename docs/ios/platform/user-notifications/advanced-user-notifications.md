@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-user-notifications"></a>고급 사용자 알림
 
@@ -67,7 +67,7 @@ UI 사용자 지정 사용자 알림이 표시 되 면 알림을에 연결 된 �
 
 그러나 전송에 관련 된 크기가 더 작은 이미지에 대 한 원격 알림 페이로드를 연결는 비현실적이 됩니다. 이 상황을 처리 하는 개발자는 (예: CloudKit 데이터 저장소의 경우) 다른 소스에서 이미지를 다운로드 하 고 사용자에 게 표시 되기 전에 알림의 콘텐츠를 연결 하려면 iOS 10에서에서 새 서비스 확장을 사용할 수 있습니다.
 
-서비스 확장에 의해 수정 될 원격 알림에 페이로드 표시 되어야 합니다 변경 가능한 것으로. 예:
+서비스 확장에 의해 수정 될 원격 알림에 페이로드 표시 되어야 합니다 변경 가능한 것으로. 예를 들어:
 
 ```csharp
 {
@@ -145,7 +145,7 @@ APNs에서 알림을 받으면 내용에서 이미지의 사용자 지정 주소
 IOS 10에서에서 알림은 미디어 첨부 파일의 이미지를 지원 (정적 및 Gif), 오디오 또는 비디오와 시스템 자동으로 표시 됩니다 올바른 사용자 지정 UI 이러한 유형의 첨부 파일의 각 사용자에 게 알림이 제공 될 때입니다.
 
 > [!NOTE]
-> **참고:** 미디어 크기를 최적화 하기 위해 주의 해야 하며 원격 서버에서 미디어를 다운로드 하려면 (또는 로컬 알림에 대 한 미디어를 어셈블하기) 시스템으로 걸리는 시간이 둘 다에 엄격 하 게 제한 응용 프로그램의 서비스를 실행 하는 경우 확장입니다. 예를 들어 이미지의 아래쪽 크기 조정 된 버전 또는 알림을에 표시 되는 비디오의 작은 클립 전송 하는 것이 좋습니다.
+> 미디어 크기를 최적화 하기 위해 주의 해야 하 고 응용 프로그램의 서비스 확장을 실행 하는 경우 원격 서버에서 미디어를 다운로드 하려면 (또는 로컬 알림에 대 한 미디어를 어셈블하기) 시스템으로 걸리는 시간이 적용 둘 다에 엄격 하 게 제한 합니다. 예를 들어 이미지의 아래쪽 크기 조정 된 버전 또는 알림을에 표시 되는 비디오의 작은 클립 전송 하는 것이 좋습니다.
 
 ## <a name="creating-custom-user-interfaces"></a>사용자 지정 사용자 인터페이스 만들기
 
@@ -268,7 +268,7 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`) 알림 작업을 등록 하는 데 사용 되는 동일한 범주 값을 사용 합니다. 전환 하는 경우 앱 여러 범주에 대 한 동일한 UI를 사용 합니다는 `UNNotificationExtensionCategory` 유형에 **배열** 모든 필요한 범주를 제공 합니다. 예:
+알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`) 알림 작업을 등록 하는 데 사용 되는 동일한 범주 값을 사용 합니다. 전환 하는 경우 앱 여러 범주에 대 한 동일한 UI를 사용 합니다는 `UNNotificationExtensionCategory` 유형에 **배열** 모든 필요한 범주를 제공 합니다. 예를 들어:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -299,9 +299,9 @@ namespace MonkeyChatNotifyExtension
 알림 콘텐츠 확장의 사용자 지정 사용자 인터페이스를 디자인 하려면 두 번 클릭는 `MainInterface.storyboard` iOS 디자이너에서에서 편집을 위해 열 파일을 끌어 원하는 인터페이스를 빌드하는 데 필요한 요소 (같은 `UILabels` 및 `UIImageViews`).
 
 > [!NOTE]
-> **참고:** 알림 UI는 _하지_ 알림 콘텐츠 확장에서 텍스트 필드 또는 단추와 같은 대화형 컨트롤을 지원 합니다. 스토리 보드에 추가할 수 있습니다, 하는 동안 사용자 상호 작용할 수 없습니다. 사용자 상호 작용에는 사용자 지정 알림 UI를 추가 하려면 사용자 지정 작업을 대신 사용 합니다.
+> 알림 UI는 _하지_ 알림 콘텐츠 확장에서 텍스트 필드 또는 단추와 같은 대화형 컨트롤을 지원 합니다. 스토리 보드에 추가할 수 있습니다, 하는 동안 사용자 상호 작용할 수 없습니다. 사용자 상호 작용에는 사용자 지정 알림 UI를 추가 하려면 사용자 지정 작업을 대신 사용 합니다.
 
-UI에 배치 된 하 고 C# 코드에 노출 하는 데 필요한 컨트롤을 열고는 `NotificationViewController.cs` 편집을 위해 및 수정는 `DidReceiveNotification` 메서드 알림을 확장할 때 UI를 채울 수 있습니다. 예:
+UI에 배치 된 하 고 C# 코드에 노출 하는 데 필요한 컨트롤을 열고는 `NotificationViewController.cs` 편집을 위해 및 수정는 `DidReceiveNotification` 메서드 알림을 확장할 때 UI를 채울 수 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -363,7 +363,7 @@ namespace MonkeyChatNotifyExtension
 
 콘텐츠 확장이 호출 알림 콘텐츠 영역 전 시스템 이미 실행 되 고 알림 시작 되기 때문에 전체 크기 조정 및 사용자에 게 표시 하는 경우 요청 된 크기로 애니메이션을 적용할 수 있습니다.
 
-이 효과 제거 하려면 편집는 `Info.plist` 확장을 설정 하는 파일은 `UNNotificationExtensionInitialContentSizeRatio` 의 키는 `NSExtensionAttributes` 키를 입력 **번호** 원하는 비율을 나타내는 값을 사용 합니다. 예:
+이 효과 제거 하려면 편집는 `Info.plist` 확장을 설정 하는 파일은 `UNNotificationExtensionInitialContentSizeRatio` 의 키는 `NSExtensionAttributes` 키를 입력 **번호** 원하는 비율을 나타내는 값을 사용 합니다. 예를 들어:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -457,7 +457,7 @@ namespace MonkeyChatNotifyExtension
 
 알림 콘텐츠 확장이 레이블에도 사용자는 사용자 지정 작업 중 하나를 호출 하는 경우의 UI를 업데이트 하는 기능, 사용자가 수락 하는 경우 날짜를 표시 하는 등의 **Accept** 사용자 지정 작업 단추입니다. 또한 알림 콘텐츠 확장이 사용자 알림을 닫기 전에 해당 작업의 효과 볼 수 있도록 알림 UI 기를 지연 하도록 시스템을 알 수 있습니다.
 
-두 번째 버전을 구현 하 여 이렇게는 `DidReceiveNotification` 완료 처리기를 포함 하는 메서드입니다. 예:
+두 번째 버전을 구현 하 여 이렇게는 `DidReceiveNotification` 완료 처리기를 포함 하는 메서드입니다. 예를 들어:
 
 ```csharp
 using System;
@@ -531,7 +531,7 @@ namespace myApp {
 }
 ```
 
-추가 하 여는 `Server.PostEventResponse` 처리기에는 `DidReceiveNotification` 알림 콘텐츠 확장 확장의 메서드 *해야* 모든 사용자 지정 작업을 처리 합니다. 변경 하 여 포함 된 응용 프로그램에 로그온 하는 사용자 지정 동작 확장에 전달할 수도 있습니다는 `UNNotificationContentExtensionResponseOption`합니다. 예:
+추가 하 여는 `Server.PostEventResponse` 처리기에는 `DidReceiveNotification` 알림 콘텐츠 확장 확장의 메서드 *해야* 모든 사용자 지정 작업을 처리 합니다. 변경 하 여 포함 된 응용 프로그램에 로그온 하는 사용자 지정 동작 확장에 전달할 수도 있습니다는 `UNNotificationContentExtensionResponseOption`합니다. 예를 들어:
 
 ```csharp
 // Close Notification
@@ -542,7 +542,7 @@ completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwar
 
 응용 프로그램의 성능과 알림을 디자인에 따라 사용자를 알림 (예: 메시지에 회신)에 텍스트를 입력 해야 하는 횟수가 있을 수 있습니다. 알림 콘텐츠 확장 표준 알림 않습니다 것 처럼 기본 제공 텍스트 입력된 작업에 대 한 액세스를에 있습니다.
 
-예:
+예를 들어:
 
 ```csharp
 using System;

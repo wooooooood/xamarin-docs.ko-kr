@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>IPad 용 멀티태스킹
 
@@ -33,7 +33,7 @@ iOS 9 iPad 특정 하드웨어에 동시에 두 개의 응용 프로그램을 �
 - [사용자 지정 하드웨어 바로 가기 키](#Custom-Hardware-Keyboard-Shortcuts)
 - [리소스 관리](#Resource-Management-Considerations)
 
-응용 프로그램 개발자는 수도 있습니다 [되지 않게 멀티태스킹](#Opting-Out-of-Multitasking)를 포함 하 여 [PIP 비디오 재생을 사용 하지 않도록 설정](#Disabling-PIP-Video-Playback)합니다.
+응용 프로그램 개발자는 수도 있습니다 [멀티태스킹 옵트아웃](#Opting-Out-of-Multitasking)를 포함 하 여 [PIP 비디오 재생을 사용 하지 않도록 설정](#Disabling-PIP-Video-Playback)합니다.
 
 이 문서에서는 멀티태스킹 환경에서 올바르게 실행 되는 Xamarin.iOS 앱 또는 앱에 적합 한 것이 좋은 경우 멀티태스킹 옵트아웃 하는 방법을 확인 하는 데 필요한 단계를 설명 합니다.
 
@@ -205,7 +205,7 @@ public void NewEntry() {
 
 IOS 8의 디자인 지침 및 모범 사례를 이미 사용 중인 응용 프로그램에도 리소스를 효과적으로 관리 문제를 여전히 수 있습니다. IOS 9에에서 앱 없다면 메모리, CPU 또는 기타 시스템 리소스를 단독으로 사용 합니다.
 
-결과적으로, 시스템 리소스를 효과적으로 사용 하도록 Xamarin.iOS 앱을 미세 조정 해야 하거나 메모리가 부족 한 경우 아래에서 종료를 연결 합니다. 이 동일 하 게 true는 옵트아웃 멀티태스킹을 앱의, 두 번째 이후 응용 프로그램 계속 실행 될 수 슬라이드를 통해 패널 또는 초당 60 프레임에 추가 리소스를 필요로 하거나 새로 고침 빈도 일으키는 그림 창에 그림에서.
+결과적으로, 시스템 리소스를 효과적으로 사용 하도록 Xamarin.iOS 앱을 미세 조정 해야 하거나 메모리가 부족 한 경우 아래에서 종료를 연결 합니다. 다중 작업을 취소 하는 응용 프로그램에 동일 하 게 해당 됩니다, 그리고 두 번째 이후 응용 프로그램 계속 실행 될 수 슬라이드를 통해 패널 또는 초당 60 프레임에 추가 리소스를 필요로 하거나 새로 고침 빈도 일으키는 그림 창에 그림에서 합니다.
 
 다음과 같은 사용자 작업 및 해당 의미를 고려 합니다.
 
@@ -223,19 +223,16 @@ Apple의 참조 [iOS 앱에 대 한 에너지 효율성 가이드](https://devel
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>사용 하 고 부재 멀티태스킹 중
+## <a name="opting-out-of-multitasking"></a>멀티태스킹 옵트아웃
 
 Apple 모든 iOS 9 앱 멀티태스킹 지원 하는지 알 수, 사항이 있을 수 있습니다는 응용 프로그램에 대 한 매우 구체적인 이유가 너무, 게임 또는 제대로 작동 하려면 전체 화면을 필요로 하는 카메라 앱과 같이 합니다.
 
-프로젝트의 편집 되지 않게 하려면 두 슬라이드 아웃 패널 또는 분할 보기 모드에서 실행 되 고의 Xamarin.iOS 앱 **Info.plist** 파일을 확인 **전체 화면 필요**:
+Xamarin.iOS 앱 중 하나는 아웃 슬라이드 패널 또는 분할 보기 모드에서 실행 되 고 컬렉션에서 프로젝트의 편집 **Info.plist** 파일을 확인 **전체 화면 필요**:
 
-[![](multitasking-images/fullscreen01.png "사용 하 고 부재 멀티태스킹 중")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "멀티태스킹 옵트아웃")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **참고:** 않습니다 멀티태스킹 Opting 아웃 슬라이드 아웃 또는 분할 뷰에서 실행 되지 않도록 앱을 방지, 동안 **하지** 다른 앱과 함께 표시 안 함 슬라이드 아웃 또는 그림 비디오에서 그림에서 실행 되지 않도록 방지 프로그램 응용 프로그램입니다.
-
-
-
+> 슬라이드 아웃 또는 분할 뷰에서 실행 되지 않도록 앱을 방지 멀티태스킹을 옵트아웃을 하는 동안 앱과 함께 표시 안 함 슬라이드 아웃 또는 그림 비디오의 그림에서 실행할 수 있는 다른 앱이 중단 되지는 않습니다.
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -243,7 +240,7 @@ Apple 모든 iOS 9 앱 멀티태스킹 지원 하는지 알 수, 사항이 있�
 
 대부분의 경우에서 응용 프로그램 사용자가 표시 되는 그림 부동 창에 그림 비디오 콘텐츠를 재생 하도록 허용 해야 합니다. 그러나 여기서이 수도 적합 하지 게임 컷된 장면 비디오와 같은 상황 있을 수 있습니다.
 
-되지 않게 하려면 PIP 비디오 재생, 앱에서 다음을 수행 합니다.
+PIP 비디오 재생을 취소 하기 위해 앱에서 다음을 수행 합니다.
 
  - 사용 하는 경우는 `AVPlayerViewController` 설정 비디오를 표시 하는 `AllowsPictureInPicturePlayback` 속성을 `false`합니다.
  - 사용 하는 경우는 `AVPlayerLayer` 비디오를 표시 하지 않는 인스턴스화할는 `AVPictureInPictureController`합니다.

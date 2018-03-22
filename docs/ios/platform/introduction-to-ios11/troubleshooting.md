@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 7d282d851d1112af75e856045fd4138d5f0869f7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4d1aaa2e6750ee8d51da5c45612c79ef4c9c6b32
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -26,7 +26,7 @@ _이 문서에서는 iOS 11 Xamarin.iOS 앱에서 사용 하기 위한 몇 가�
 - [포럼 및 StackOverflow](#Forums-and-StackOverflow)
 
 > [!IMPORTANT]
-> **참고:** Xamarin Studio Xcode 9 작동 하지 것입니다.
+> Xamarin Studio Xcode 9로 작동 하지 않습니다.
 > [Mac 용 Visual Studio를 업그레이드 하세요.](https://www.visualstudio.com/vs/)합니다.
 
 <a name="Reporting-Bugs" />

@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: dab1f5d571473fbbdb12ef78eed3788165c3f0a6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82f85808da6776f2f718b21b2e87ff6d4d8087fd
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-the-parent-application"></a>부모 응용 프로그램 사용
 
 _WatchOS 1에서에서 iOS 및 조사식 앱 간에 데이터 공유_
 
 > [!IMPORTANT]
-> **참고:** watchOS 1 watch 앱에서 작동만 아래 예제를 사용 하 여 부모 응용 프로그램에 액세스 합니다.
+> 아래 예제를 사용 하 여만 부모 응용 프로그램에 액세스 watchOS 1 조사식 앱에서 작동 합니다.
 
 
 여러 가지 방법으로 watch 앱 및 라이브러리와 함께 제공 하는 iOS 앱 간에 통신 합니다.

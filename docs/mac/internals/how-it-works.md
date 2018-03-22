@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: 7329e8ddb5b86adcf6e1efaa805149012be8853c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-xamarinmac-works"></a>Xamarin.Mac의 작동 원리
 
@@ -104,12 +104,12 @@ Apple iOS에서 설정한 제한으로 인해 IL 코드의 JIT 컴파일 xamarin
 
 ### <a name="enabling-aot-compilation"></a>AOT 컴파일을 사용 하도록 설정
 
-AOT 두 번 클릭 하 여 Xamarin.Mac에서 설정 됩니다는 **프로젝트 이름** 에 **솔루션 탐색기**탐색 하려면, **Mac 빌드** 추가 `--aot:[options]` 는 를 **추가 mmp 인수:** 필드 (여기서 `[options]` AOT 유형을 제어, 아래를 참조 하는 하나 이상의 옵션은). 예:
+AOT 두 번 클릭 하 여 Xamarin.Mac에서 설정 됩니다는 **프로젝트 이름** 에 **솔루션 탐색기**탐색 하려면, **Mac 빌드** 추가 `--aot:[options]` 는 를 **추가 mmp 인수:** 필드 (여기서 `[options]` AOT 유형을 제어, 아래를 참조 하는 하나 이상의 옵션은). 예를 들어:
 
 ![추가 mmp 인수에 AOT 추가](how-it-works-images/aot01.png "추가 mmp 인수에 AOT 추가")
 
 > [!IMPORTANT]
-> 경고! 사용 하면 AOT 컴파일 크게 빌드 시간 경우에 따라 몇 분까지 걸릴 늘어나지만 앱 시작 시간 20%의 평균으로 높일 수 있습니다. 결과적으로, AOT 컴파일 수에 활성화 해야 **릴리스** Xamarin.Mac 앱의 작성 합니다.
+> 사용 하면 AOT 컴파일 크게 빌드 시간 경우에 따라 몇 분까지 걸릴 늘어나지만 앱 시작 시간 20%의 평균으로 높일 수 있습니다. 결과적으로, AOT 컴파일 수에 활성화 해야 **릴리스** Xamarin.Mac 앱의 작성 합니다.
 
 ### <a name="aot-compilation-options"></a>Aot 컴파일 옵션
 
@@ -146,11 +146,11 @@ Xamarin.iOS 8.13에 처음 도입 된 부분 정적 등록, 두 옵션의 개발
 
 ### <a name="enabling-the-partial-static-registrar"></a>부분 정적 등록자를 사용 하도록 설정
 
-부분 정적 등록 기관 두 번 클릭 하 여 Xamarin.Mac에서 설정 됩니다는 **프로젝트 이름** 에 **솔루션 탐색기**탐색 하려면, **Mac 빌드** 추가`--registrar:static` 에 **추가 mmp 인수:** 필드입니다. 예:
+부분 정적 등록 기관 두 번 클릭 하 여 Xamarin.Mac에서 설정 됩니다는 **프로젝트 이름** 에 **솔루션 탐색기**탐색 하려면, **Mac 빌드** 추가`--registrar:static` 에 **추가 mmp 인수:** 필드입니다. 예를 들어:
 
 ![추가 mmp 인수를 부분 정적 등록자 추가](how-it-works-images/psr01.png "추가 mmp 인수에는 부분 정적 등록 기관 추가")
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 보다 자세한 설명을 작동 원리 내부적으로 다음과 같습니다.
 

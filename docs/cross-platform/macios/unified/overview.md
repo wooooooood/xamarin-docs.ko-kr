@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2f55edb27f33becca8d354f9a7bb65932b4fd924
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 03364b3fd91ffdb4debb3d58f8040d8ade9100b8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-api-overview"></a>통합 된 API 개요
 
@@ -105,7 +105,7 @@ Xamarin.iOS 클래식 API를 통해 이전에 지원 하 고 있는 NuGet 패키
 통합 API 소개-호환 패키지에 대 한 새 플랫폼 식별자 **Xamarin.iOS10**합니다. 기존 NuGet 패키지는 통합 API에 대해 작성 하 여이 플랫폼에 대 한 지원을 추가 하도록 업데이트 해야 합니다.
 
 > [!IMPORTANT]
-> **참고:** 형태로 오류가 있는 경우 _"오류 3 동일한 Xamarin.iOS 프로젝트에 'monotouch.dll'와 'Xamarin.iOS.dll'를 포함할 수 없습니다-'monotouch.dll'에서 참조 하는 동안 'Xamarin.iOS.dll' 명시적으로 참조 되 ' xxx, 버전 = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ 후 통합 Api에 응용 프로그램으로 변환에 일반적으로 인해 구성 요소 또는 NuGet 패키지는 통합 API에 업데이트 되지 않은 프로젝트에서. 제거 하려면 기존 구성 요소/NuGet 통합 Api를 지 원하는 버전으로 업데이트 고 깨끗 한 빌드를 수행 해야 합니다.
+> 폼에 오류가 있는 경우 _"오류 3 동일한 Xamarin.iOS 프로젝트에 'monotouch.dll'와 'Xamarin.iOS.dll'를 포함할 수 없습니다-'monotouch.dll'에서 참조 하는 동안 'Xamarin.iOS.dll' 명시적으로 참조 되 ' xxx, 버전 = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ 응용 프로그램에 통합 된 Api를 변환한 후는입니다 일반적으로 통합 API에 업데이트 되지 않은 프로젝트에 구성 요소 또는 NuGet 패키지를 포함 합니다. 제거 하려면 기존 구성 요소/NuGet 통합 Api를 지 원하는 버전으로 업데이트 고 깨끗 한 빌드를 수행 해야 합니다.
 
 <a name="deprecated-apis" />
 

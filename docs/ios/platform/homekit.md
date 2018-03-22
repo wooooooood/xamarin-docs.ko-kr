@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ea51dc2c7dadc5cc430df990c9ce79eac6e941da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -77,7 +77,7 @@ HomeKit에서 설정한 보안 요구 사항으로 인해 HomeKit 프레임 워�
 현재 위치를이 설정 하 여 응용 프로그램 HomeKit 프레임 워크 Api에 액세스할 준비가 되었습니다. 에 대 한 자세한 내용은 프로 비전을 참조 하십시오 우리의 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 및 [앱을 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
 
 > [!IMPORTANT]
-> **참고:** HomeKit 사용 앱을 테스트 제대로 프로 비전 하는 실제 iOS 장치 개발을 위한 하려면 필요 합니다. HomeKit은 iOS 시뮬레이터에서에서 테스트할 수 없습니다.
+> 테스트 설정 HomeKit 앱 개발을 위한 제대로 프로 비전 하는 실제 iOS 장치가 필요 합니다. HomeKit은 iOS 시뮬레이터에서에서 테스트할 수 없습니다.
 
 ## <a name="the-homekit-accessory-simulator"></a>HomeKit 액세서리 시뮬레이터
 
@@ -143,7 +143,7 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 보조 
 6. 파일의 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
-> **참고:** 설정 실패는 `NSHomeKitUsageDescription` 키에 `Info.plist` 파일은 앱에서 발생 합니다 _자동으로 실패_ (되 런타임 시 시스템에 의해 닫힘) iOS 10 (또는 그 이상)에서 실행할 때 오류 없이 합니다.
+> 설정 실패는 `NSHomeKitUsageDescription` 키에 `Info.plist` 파일은 앱에서 발생 합니다 _자동으로 실패_ (되 런타임 시 시스템에 의해 닫힘) iOS 10 (또는 그 이상)에서 실행할 때 오류 없이 합니다.
 
 ## <a name="connecting-to-homekit"></a>HomeKit에 연결
 
@@ -265,7 +265,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 홈 관리자의 모니터링 해야 `DidAddHome` 및 `DidRemoveHome` 필요에 따라 응용 프로그램의 사용자 인터페이스 이벤트 및 업데이트 합니다.
 
 > [!IMPORTANT]
-> **참고:** 는 `AlertView.PresentOKAlert` 위의 샘플 코드에 사용 되는 방법을 사용 하는 iOS 경고 쉽게 있도록 HomeKitIntro 응용 프로그램에는 도우미 클래스입니다.
+> `AlertView.PresentOKAlert` 위의 샘플 코드에 사용 되는 방법을 사용 하는 iOS 경고 쉽게 있도록 HomeKitIntro 응용 프로그램에는 도우미 클래스입니다.
 
 
 ## <a name="finding-new-accessories"></a>새 보조 프로그램 찾기
@@ -275,7 +275,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 호출의 `StartSearchingForNewAccessories` 새로운 주변 장치를 찾고 시작 하는 메서드 및 `StopSearchingForNewAccessories` 완료 되 면 메서드.
 
 > [!IMPORTANT]
-> **참고:** `StartSearchingForNewAccessories` 부정적인 영향을 주므로 배터리 수명 및 iOS 장치 성능에 모두 오랜 시간 동안 실행 남겨둘 수 없습니다. 호출을 제안 하는 Apple `StopSearchingForNewAccessories` 후 1 분 또는 찾기 액세서리 UI는 사용자에 게 제공 될 때만 검색 합니다.
+> `StartSearchingForNewAccessories` 하지 두어야 부정적인 영향을 주므로 배터리 수명 및 iOS 장치 성능에 모두 오랜 시간 동안 실행 합니다. 호출을 제안 하는 Apple `StopSearchingForNewAccessories` 후 1 분 또는 찾기 액세서리 UI는 사용자에 게 제공 될 때만 검색 합니다.
 
 `DidFindNewAccessory` 이벤트 새로운 기능이 발견 되 고에 추가 됩니다 때 호출 되는 `DiscoveredAccessories` 액세서리 브라우저 목록입니다.
 
@@ -285,7 +285,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 
 [![](homekit-images/accessory01.png "새 액세서리 찾기")](homekit-images/accessory01.png#lightbox)
 
-호출의 `AddAccessory` 메서드를 선택한 액세서리 홈의 컬렉션에 추가 합니다. 예:
+호출의 `AddAccessory` 메서드를 선택한 액세서리 홈의 컬렉션에 추가 합니다. 예를 들어:
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +318,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다�
 
 이 예제에서는에서는 합니다 될 구성을 간단 하 고 방 또는 영역으로 구성 하는 대신는 홈 액세서리를 직접 작동 합니다.
 
-`HMHome` 개체에 할당 된 액세서리 사용자에 게 표시 될 수 있는 목록이 포함 되어 해당 `Accessories` 속성입니다. 예:
+`HMHome` 개체에 할당 된 액세서리 사용자에 게 표시 될 수 있는 목록이 포함 되어 해당 `Accessories` 속성입니다. 예를 들어:
 
 [![](homekit-images/accessory04.png "예제 액세서리")](homekit-images/accessory04.png#lightbox)
 
@@ -426,7 +426,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다�
  - 제조업체
  - 모델
  - MotionDetected
- - name
+ - 이름
  - ObstructionDetected
  - OccupancyDetected
  - OutletInUse

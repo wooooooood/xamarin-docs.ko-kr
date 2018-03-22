@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 48489ca7dc28dcc14a7810b15dc1ffa1fd4f7cf4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f619123fec036dfe919e977b4f218e8d235f0b82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -29,8 +29,8 @@ _이 가이드에는 다른 웹 서비스 기술을 사용 하는 방법을 보�
 Xamarin.Forms를 사용 하 여 고객에 대 한 전체 예는 각에 이러한 기술을 사용 하 여 [Xamarin.Forms 웹 서비스](~/xamarin-forms/data-cloud/index.md) 설명서입니다.
 
 > [!IMPORTANT]
-> **Xamarin.iOS에 대 한 참고:** 9 Ios에서는 앱 전송 보안 (AT) 적용 인터넷 리소스 (예: 응용 프로그램의 백 엔드 서버)와 응용 프로그램 간에 보안 연결 중요 한 정보가 노출 되거나 실수로 인 한 것을 방지 합니다. IOS 9에 대해 빌드된 앱에서 기본적으로 AT를 사용 하므로 모든 연결 AT 보안 요구 사항이 적용 됩니다. 연결에는 이러한 요구 사항을 충족 하지 않는 경우 예외와 함께 실패 합니다.
-
+> IOS 9 앱 전송 보안 (AT)는 인터넷 리소스 (예: 응용 프로그램의 백 엔드 서버)와 응용 프로그램 간에 보안 연결 중요 한 정보가 노출 되거나 실수로 인 한 것을 방지 적용 합니다.
+> IOS 9에 대해 빌드된 앱에서 기본적으로 AT를 사용 하므로 모든 연결 AT 보안 요구 사항이 적용 됩니다. 연결에는 이러한 요구 사항을 충족 하지 않는 경우 예외와 함께 실패 합니다.
 
 있습니다 수 옵트아웃 AT의 사용할 수 없는 경우는 `HTTPS` 및 프로토콜을 인터넷 리소스에 대 한 통신을 보호 합니다. 응용 프로그램의 업데이트 하 여 이렇게 할 **Info.plist** 파일입니다. 자세한 내용은 참조 [앱 전송 보안](~/ios/app-fundamentals/ats.md)합니다.
 
@@ -191,7 +191,7 @@ client.GetAsync<CustomersResponse>("",
 ```
 
 > [!IMPORTANT]
-> **참고:** ServiceStack 및 RestSharp 쉽게 호출 하 고 소비와 같은 도구 REST 서비스를 것은 때로는 특수 XML 또는 JSON은 표준에 맞지 않는 사용할 _DataContract_ serialization 규칙입니다. 필요한 경우에 요청을 호출 하 고 아래에 설명 된 ServiceStack.Text 라이브러리를 사용 하 여 명시적으로 적절 한 serialization을 처리 합니다.
+> ServiceStack 및 RestSharp 쉽게 호출 하 고 소비와 같은 도구 REST 서비스를 것은 때로는 특수 XML 또는 JSON은 표준에 맞지 않는 사용할 _DataContract_ serialization 규칙입니다. 필요한 경우에 요청을 호출 하 고 아래에 설명 된 ServiceStack.Text 라이브러리를 사용 하 여 명시적으로 적절 한 serialization을 처리 합니다.
 
 
 <a name="Options_for_consuming_RESTful_data" />

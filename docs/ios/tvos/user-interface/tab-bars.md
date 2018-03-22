@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7b3a7a2347ed93aff5cddc6f15e25028c61a53d8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>탭 표시줄 컨트롤러 작업
 
@@ -113,7 +113,7 @@ Apple 탭 막대를 사용 하기 위한 다음 제안 사항을 있습니다.
 -----
 
 > [!IMPORTANT]
-> **참고:** 이벤트를 할당할 수 있지만 `TouchUpInside` UI 요소에 (같은 `UIButton`) iOS 디자이너에서에서이 호출 되지 것입니다 있으므로 Apple TV 터치 스크린 또는 터치 이벤트를 지원 하지 않습니다. 항상 사용 해야는 `Primary Action ` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
+> 이벤트를 할당할 수 있지만 `TouchUpInside` UI 요소에 (같은 `UIButton`) iOS 디자이너에서에서이 호출 되지 것입니다 있으므로 Apple TV 터치 스크린 또는 터치 이벤트를 지원 하지 않습니다. 항상 사용 해야는 `Primary Action ` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
 
 스토리 보드를 사용한 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [Hello, tvOS 퀵 스타트 가이드](~/ios/tvos/get-started/hello-tvos.md)합니다. 
 

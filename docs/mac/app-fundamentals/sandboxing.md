@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 71f076bb0dc7d552a041d48a6ce531dcff444de6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>샌드 박싱 Xamarin.Mac 응용 프로그램
 
@@ -174,7 +174,7 @@ public override void AwakeFromNib ()
 6. 클릭는 **수행** 단추입니다.
 
 > [!IMPORTANT]
-> **참고:** 종료 되 고 새 앱 ID와 Xcode에 의해 설치 된 프로비저닝 프로필을 인식 하도록 올려 Mac 용 Visual Studio를 다시 시작 해야 할 수 있습니다.
+> 종료 되 고 새 앱 ID와 Xcode에 의해 설치 된 프로비저닝 프로필을 인식 하도록 올려 Mac 용 Visual Studio를 다시 시작 해야 합니다.
 
 #### <a name="troubleshooting-provisioning-issues"></a>프로 비전 문제 해결
 
@@ -308,7 +308,7 @@ Xamarin.Mac 응용 프로그램의 응용 프로그램 컨테이너 디렉터리
 - 에 대 한 _신발 상자_ 유형의 (예: Apple의 사진 응용 프로그램) 앱을 사용자의 콘텐츠를 컨테이너에 되돌려집니다.
 
 > [!IMPORTANT]
-> **참고:** 아쉽게도 Xamarin.Mac 없는 아직 (달리 Xamarin.iOS) 100 %API 검사 결과적으로 `NSHomeDirectory` API Xamarin.Mac의 현재 버전에 매핑되지 않았습니다.
+> 그러나 Xamarin.Mac 없는 아직 (달리 Xamarin.iOS) 100 %API 검사 결과적으로 `NSHomeDirectory` API Xamarin.Mac의 현재 버전에 매핑되지 않았습니다.
 
 임시 해결 방법으로 다음 코드를 사용할 수 있습니다.
 
@@ -413,7 +413,7 @@ Security-Scoped 책갈피 및 영구 리소스 액세스를 사용할 때에 다
 Document-Scoped 책갈피는 책갈피 데이터와 문서 자체를 열 수 있는 모든 응용 프로그램에서 해결할 수 있습니다. 이 이식성을 사용자가 다른 사용자와도을 작업의 모든 책갈피 있는 프로젝트 파일을 보낼 수 있도록 지원 합니다.
 
 > [!IMPORTANT]
-> **참고:** Document-Scoped 굴림 수 _만_ 단일 파일 및 폴더가 아니라을 가리키고 해당 파일 시스템에서 사용 되는 위치에 있을 수 없습니다 (예: `/private` 또는 `/Library`) 합니다.
+> Document-Scoped 책갈피 수 _만_ 단일 파일 및 폴더가 아니라을 가리키고 해당 파일 시스템에서 사용 되는 위치에 있을 수 없습니다 (예: `/private` 또는 `/Library`).
 
 #### <a name="using-security-scoped-bookmarks"></a>보안 범위 책갈피를 사용 하 여
 
@@ -428,7 +428,7 @@ Document-Scoped 책갈피는 책갈피 데이터와 문서 자체를 열 수 있
 리소스에 대 한 액세스를 잃어 후 액세스를 다시 설정 하기 위해 다시 4 단계를 반환 해야 합니다. Xamarin.Mac 앱을 다시 시작 하는 경우에 3 단계로 돌아가세요을 책갈피를 다시 확인 해야 합니다.
 
 > [!IMPORTANT]
-> **참고:** Security-Scoped URL 리소스에 대 한 액세스를 해제 하는 실패로 인해는 Xamarin.Mac 앱 커널 리소스 누수를 발생 시킵니다. 결과적으로, 응용 프로그램 더 이상 됩니다 다시 시작할 때까지 해당 컨테이너를 파일 시스템 위치를 추가할 수 없습니다.
+> Security-Scoped URL 리소스에 대 한 액세스를 해제 하는 오류는 Xamarin.Mac 앱에서 커널 리소스 누수를 발생 합니다. 결과적으로, 응용 프로그램 더 이상 됩니다 다시 시작할 때까지 해당 컨테이너를 파일 시스템 위치를 추가할 수 없습니다.
 
 ### <a name="the-app-sandbox-and-code-signing"></a>샌드박스 응용 프로그램 및 코드 서명
 
@@ -493,7 +493,7 @@ Apple 서명된 된 버전을 Xamarin.Mac 응용 프로그램 실행을 허용 �
 6. 마이그레이션 전략을 구현 합니다.
 
 > [!IMPORTANT]
-> **참고:** 샌드박스 앱 번들에 포함 된 모든 도우미도 주 실행 파일 뿐만 아니라 해야 응용 프로그램 또는 해당 번들의 도구입니다. Mac 앱 스토어에서 배포 된 모든 앱에 필요한 이므로, 가능한 경우 수행 해야 할 다른 형태의 응용 프로그램 배포.
+> 샌드박스 앱 번들에 포함 된 모든 도우미도 주 실행 파일 뿐만 아니라 해야 응용 프로그램 또는 해당 번들의 도구입니다. Mac 앱 스토어에서 배포 된 모든 앱에 필요한 이므로, 가능한 경우 수행 해야 할 다른 형태의 응용 프로그램 배포.
 
 목록이 Xamarin.Mac 앱의 번들에 모든 실행 가능 이진 파일에 대 한 터미널에 다음 명령을 입력 합니다.
 

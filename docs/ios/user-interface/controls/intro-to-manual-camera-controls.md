@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5e44635c9dfbe9fa069272f50d035476bd1aa6b9
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: f11305fcbf8a5b9bf6552fa31ecfa1c0e8e7a68f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-camera-controls"></a>수동 카메라 컨트롤
 
@@ -881,7 +881,7 @@ Ios 7 이상과 이미 제공 되는 기능 외에 다음과 같은 기능 iOS 8
 사용 하 여는 `CaptureDevice.GetTemperatureAndTintValues`및 `CaptureDevice.GetDeviceWhiteBalanceGains`온도 tint, chromaticity RGB 간의 변환을 위한 메서드를 색 공간을 얻을 수 있습니다.
 
 > [!NOTE]
-> **참고**: 변환 루틴은 보다 정확한 Planckian 궤적 변환할 값이 가까워집니다.
+> 변환 루틴은 Planckian 궤적 변환할 값이 가까워집니다 더 정확 합니다.
 
 
 

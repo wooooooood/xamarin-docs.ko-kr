@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
 
@@ -620,7 +620,7 @@ Apple는.xib 또는 스토리 보드 파일 iOS 8을 대상으로 하는 응용 
 - [스토리 보드가 있는 관리 시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **참고:** Apple iOS 9 기준으로 스토리 보드의 시작 화면을 만들기 위한 기본 방법으로 사용 해야 함을 권장 합니다.
+> Apple는 iOS 9 기준으로 스토리 보드의 시작 화면을 만들기 위한 기본 방법으로 사용 해야 함을 권장 합니다.
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>사전 iOS에 대 한 시작 이미지 8 응용 프로그램 만들기
 
@@ -629,7 +629,7 @@ Apple는.xib 또는 스토리 보드 파일 iOS 8을 대상으로 하는 응용 
 이 정적 이미지 Info.plist 파일 또는 응용 프로그램에서 (iOS 7)에 대 한 자산 카탈로그도 설정할 수 있습니다. 응용 프로그램에서 실행 될 수 있는 각 장치 크기 (예: 320 x 480, 640 x 960, 640 x 1136)에 대 한 별도 이미지를 제공 해야 합니다. 시작 화면 크기에 자세한 내용은 참조는 [시작 화면 이미지 등](~/ios/app-fundamentals/images-icons/launch-screens.md) 가이드입니다.
 
 > [!IMPORTANT]
-> **참고:** 응용 프로그램에 없는 시작 화면, 화면을 맞지 않으면 완벽 하 게 표시 될 수도 있습니다. 이 경우 라는 640 x 1136 이미지에 포함 되었는지 확인 해야 `Default-568@2x.png` 프로그램 Info.plist에 있습니다. 
+> 응용 프로그램에 없는 시작 화면, 화면을 맞지 않으면 완벽 하 게 알 수 있습니다. 이 경우 라는 640 x 1136 이미지에 포함 되었는지 확인 해야 `Default-568@2x.png` 프로그램 Info.plist에 있습니다. 
 
 
 

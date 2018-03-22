@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 469a63a990b1adb108284cfb88ee54e05218a8a9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e63f2c47bbcd6da0f0d5370ebfc231d19a10e7d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="request-app-review"></a>응용 프로그램 검토를 요청
 
@@ -57,7 +57,7 @@ namespace iOSTenThree
 ```
 
 > [!NOTE]
-> **참고:** 호출 `RequestReview()` 아래 개발에서 앱 항상 표시 등급 되며 테스트할 수 있도록 대화를 검토 합니다. 이이 메서드는 무시 됩니다 TestFlight를 통해 배포 된 앱에 적용 되지 않습니다.
+> 호출 `RequestReview()` 아래 개발에서 앱 항상 표시 등급 되며 테스트할 수 있도록 대화를 검토 합니다. 이이 메서드는 무시 됩니다 TestFlight를 통해 배포 된 앱에 적용 되지 않습니다.
 
 경우는 `RequestReview()` 메서드는 사용자가 앱 스토어에서 설치 된 배송 응용 프로그램에서, 10 iOS 개발자 용 전체 등급 및 검토 프로세스를 처리 합니다. 다시이 프로세스는 앱 스토어 정책의 영향을 받는, 때문에 경고 수도 표시 될 수 있습니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons-and-images"></a>아이콘 및 이미지 작업
 
@@ -28,7 +28,7 @@ _이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이�
 - [Xamarin.tvOS 프로젝트 이미지 설정](#Setting-Xamarin.tvOS-Project-Images) -Xamarin.tvOS 앱에 대 한 시작 이미지 및 응용 프로그램 아이콘을 설정 하는 데 필요한 단계에 설명 합니다.
 
 > [!IMPORTANT]
-> **참고:** 1 x 해상도에서 Apple TV에 모든 이미지는 (`@1x`)을 수행 해야 하 고 _만_ 이 크기의 이미지를 사용 합니다. 포함 하 여 더 큰 해상도 높을수록 그래픽 뿐만 아니라를 다운로드 하 여 더 많은 메모리와 저장소를 사용 하 여 시간 사용 하지만 및 런타임에 동적으로 크기가 다시 조정 하는 그리기 성능이 저하 됩니다.
+> Apple TV에 모든 이미지를 1 x 해상도 (`@1x`)을 수행 해야 하 고 _만_ 이 크기의 이미지를 사용 합니다. 포함 하 여 더 큰 해상도 높을수록 그래픽 뿐만 아니라를 다운로드 하 여 더 많은 메모리와 저장소를 사용 하 여 시간 사용 하지만 및 런타임에 동적으로 크기가 다시 조정 하는 그리기 성능이 저하 됩니다.
 
 <a name="Launch-Image" />
 
@@ -79,7 +79,7 @@ Apple TV, 게임를 통해 연결 된 화면의 콘텐츠 대화방 소파에 �
 [![](icons-images-images/layered01.png "계층화 된 이미지 Z 순서 다이어그램")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **참고:** 겹친 이미지 응용 프로그램의 아이콘에 대 한 필요 하 고 다른 선택적 [포커스 항목](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (예: 위쪽 선반 이미지). 그러나 Apple 계층화 된 이미지를 사용 하 여 앱에 포커스를 얻을 수 있는 모든 이미지에 대 한 제안 합니다.
+> 계층화 된 이미지 응용 프로그램의 아이콘에 대 한 필요 하 고 다른 선택적 [포커스 항목](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (예: 위쪽 선반 이미지). 그러나 Apple 계층화 된 이미지를 사용 하 여 앱에 포커스를 얻을 수 있는 모든 이미지에 대 한 제안 합니다.
 
 
 

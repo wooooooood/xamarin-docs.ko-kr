@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
 
@@ -97,7 +97,7 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 세션 대리자 API 작업과 상호 작용 하기 위한 광범위 한 도구 키트를 제공 합니다. 세션의 전체 목록에 대 한 메서드를 대리자를 가리키는 `NSUrlSessionDelegate` API 설명서입니다.
 
 > [!IMPORTANT]
-> **참고**: 하므로 모든 호출에서는 UI 업데이트를 명시적으로 실행 해야 UI 스레드에서 호출 하 여 백그라운드 스레드에서 백그라운드 세션을 시작한 `InvokeOnMainThread` iOS 응용 프로그램 종료를 방지 하려면. 
+> 모든 호출에서는 UI 업데이트를 명시적으로 실행 해야 UI 스레드에서 호출 하 여 하므로 백그라운드 스레드에서 백그라운드 세션을 시작한 `InvokeOnMainThread` iOS 응용 프로그램 종료를 방지 하려면. 
 
 
 ## <a name="handling-transfer-completion"></a>처리 전송 완료

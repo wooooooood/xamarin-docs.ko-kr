@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c636e706e702afa23c36a3d6c618f3e02c2582f1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
@@ -20,8 +20,8 @@ ms.lasthandoff: 03/09/2018
 
 [![Xamarin 라이브 플레이어: 코드를 검사, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. 활성화는 *Xamarin Player 라이브* 에 **기본 설정**다음 중에서 선택 합니다는 **장치** 목록입니다.
-2. 디버그 또는 실행 하 고 장치 QRCodeto 쌍을 검색 합니다.
+1. 활성화는 *Xamarin Player 라이브* 에 **기본 설정**에서 장치를 선택 합니다는 **장치** 목록입니다.
+2. 디버그 또는 실행 하 고 장치와 쌍으로 연결 하는 QR 코드를 검색 합니다.
 3. 휴대폰 이나 태블릿에 앱 바로 실행 됩니다.
 
 ## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin Player 라이브 설치](install.md)

@@ -8,22 +8,20 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 76f35819b00302f4a586643798afbd27416d3997
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a77dcc8ae1c698e1f1ef40757ab03558f329719
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지를 수동으로 만들기
 
 _이 페이지에는 몇 가지 팁을을 Xamarin 플랫폼을 대상으로 하는 NuGet 패키지를 작성할 수 있습니다._
 
 > [!NOTE]
-> Xamarin Studio 6.2 (및 Mac 용 Visual Studio)의 기능이 포함 되어 _자동으로_ PCL,.NET 표준 또는 공유 프로젝트에서 NuGet 패키지를 생성 합니다.
-> 참조는 [코드 공유에 대 한 다중 플랫폼 라이브러리](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) 자세한 내용은 가이드입니다.
+> Xamarin Studio 6.2 (및 Mac 용 Visual Studio)의 기능이 포함 되어 _자동으로_ PCL,.NET 표준 또는 공유 프로젝트에서 NuGet 패키지를 생성 합니다. 참조는 [코드 공유에 대 한 다중 플랫폼 라이브러리](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md) 자세한 내용은 가이드입니다.
 
 ## <a name="nuget-package-xamarin-profiles"></a>NuGet 패키지 Xamarin 프로필
-
 
 NuGet 웹 사이트의 [지 원하는 여러.NET Framework 버전 및 프로필](https://docs.nuget.org/create/enforced-package-conventions) 를 다른 Microsoft 프레임 워크 및 프로필을 지 원하는 방법에 설명 하지만 Xamarin에서 사용 하는 대상 프레임 워크 이름을 포함 하지 않습니다.
 

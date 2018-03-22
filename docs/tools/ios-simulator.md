@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6d1401728c1063ce09c5848865e4c9b3fe7687d7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>원격 iOS 시뮬레이터 (Windows)에
 
@@ -25,7 +25,7 @@ _Windows에서 Visual Studio 내에 완전히 iOS 앱을 테스트 및 디버그
 다운로드는 [installer](https://dl.xamarin.com/xamarin-simulator/Xamarin.Simulator.Installer.msi) Windows 컴퓨터에 설치 합니다. Xamarin 용 도구 visual Studio를 이미 설치 되어 있어야 합니다.
 
 > [!NOTE]
-> 원격 iOS를 사용 하 여 시뮬레이터는 Visual Studio와 Xamarin이 설치 되어 네트워크에 연결 된 Mac 필요 합니다.
+> Visual Studio에서 원격 iOS 시뮬레이터를 사용 하 여 Xamarin이 설치 되어 있는 네트워크에 연결 된 Mac이 필요 합니다.
 
 ## <a name="getting-started"></a>시작
 

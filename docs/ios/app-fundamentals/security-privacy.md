@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 보호 기능
 
@@ -44,7 +44,7 @@ IOS 10의에서 보안 및 개인 정보에는 다음과 같은 일반적인 방
 IOS 10 (또는 이후 버전)에서 실행 되는 앱에 하나 이상의 개인 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하는 기능의 의도 정적으로 선언 해야 자신의 `Info.plist` 사용자 응용 프로그램에 액세스 하려는 이유를 설명 하는 파일입니다.
 
 > [!IMPORTANT]
-> **참고** 필요한 키 자동으로 종료 됩니다 시스템에 의해 제한 된 기능이 나 사용자 정보 중 하나에 액세스 하려고 할 때 제공 되지 않은 앱 _오류 없이_! 응용 프로그램 시작 iOS 10에서 예기치 않게 실패 하는 경우 모든 필수 되도록 `Info.plist` 지정 되었습니다.
+> 필요한 키 자동으로 종료 됩니다 시스템에 의해 제한 된 기능이 나 사용자 정보 중 하나에 액세스 하려고 할 때 제공 되지 않은 앱 _오류 없이_! 응용 프로그램 시작 iOS 10에서 예기치 않게 실패 하는 경우 모든 필수 되도록 `Info.plist` 지정 되었습니다.
 
 다음과 같은 개인 정보 관련 키를 사용할 수 있습니다.
 
@@ -109,7 +109,7 @@ IOS 10 (이상)에서 HomeKit에 액세스 하는 다음 예제에서는, 개발
 -----
 
 > [!IMPORTANT]
-> **참고:** 설정 실패 위에 제공 된 예제에서는 `NSHomeKitUsageDescription` 키에 `Info.plist` 앱에서 파일을 초래 _자동으로 실패_ (되 런타임 시 시스템에 의해 닫힘) iOS 10에서에서 실행할 때 오류 없이 (또는 많은).
+> 설정 실패 위에 제공 된 예제에서는 `NSHomeKitUsageDescription` 키에 `Info.plist` 앱에서 파일을 초래 _자동으로 실패_ (되 런타임 시 시스템에 의해 닫힘) iOS 10 (또는 그 이상)에서 실행할 때 오류 없이 합니다.
 
 <a name="Summary" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>새로운 사용자 인터페이스 스타일
 
@@ -101,7 +101,7 @@ Light UI 테마는 기본 테마 및 어두운 테마를 활용 하는 10 tvOS�
 - TvOS 앱 재정의 하 여 특성 컬렉션 변경 사항을 처리할 수는 `TraitCollectionDidChange` 의 메서드는 `UIView` 또는 `UIViewController` 클래스입니다.
 
 > [!IMPORTANT]
-> **참고:** 10 tvOS에 대 한 Xamarin.tvOS 초기 미리 보기는 지원 하지 않습니다 `UIUserInterfaceStyle` 에 대 한 `UITraitCollection` 아직 합니다. 이후 릴리스에서 완벽 한 지원 추가 됩니다.
+> 10 tvOS에 대 한 Xamarin.tvOS 초기 미리 보기는 지원 하지 않습니다 `UIUserInterfaceStyle` 에 대 한 `UITraitCollection` 아직 합니다. 이후 릴리스에서 완벽 한 지원 추가 됩니다.
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **참고:** 아쉽게도 10 tvOS에 대 한 Xamarin.tvOS 미리 보기는 지원 하지 않습니다 `UIUserInterfaceStyle` 에 대 한 `UITraitCollection`되었으므로이 유형의 사용자 지정에서 사용할 수 없습니다. 이후 릴리스에서 완벽 한 지원 추가 됩니다.
+> 그러나 10 tvOS에 대 한 Xamarin.tvOS 미리 보기는 지원 하지 않습니다 `UIUserInterfaceStyle` 에 대 한 `UITraitCollection`되었으므로이 유형의 사용자 지정에서 사용할 수 없습니다. 이후 릴리스에서 완벽 한 지원 추가 됩니다.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
@@ -132,7 +132,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 개발자는 UI 요소의 모양에 대 한 깊은 제어 선택한 UI 테마에 따라, 재정의할 수 필요는 `TraitCollectionDidChange` 의 메서드는 `UIView` 또는 `UIViewController` 클래스입니다.
 
-예:
+예를 들어:
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -150,7 +150,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 TvOS 앱의 디자인에 따라, 경우도 개발자는 특정 사용자 인터페이스 요소의 특성 컬렉션을 무시 하 고 항상 특정 UI 테마를 사용 하 게 필요로 하는 경우.
 
-수행할 수 있습니다를 사용 하는 `SetOverrideTraitCollection` 에서 메서드는 `UIViewController` 클래스. 예:
+수행할 수 있습니다를 사용 하는 `SetOverrideTraitCollection` 에서 메서드는 `UIViewController` 클래스. 예를 들어:
 
 ```csharp
 // Create new trait and configure it

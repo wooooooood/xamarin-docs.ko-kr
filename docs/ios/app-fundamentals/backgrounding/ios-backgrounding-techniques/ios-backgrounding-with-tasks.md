@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS 작업과 Backgrounding
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 등록 프로세스에 고유한 id 가진 작업 쌍 `taskID`, 일치에 배치 합니다 `BeginBackgroundTask` 및 `EndBackgroundTask` 호출 합니다. 에 대 한 호출의 식별자를 생성 하려면 하도록는 `BeginBackgroundTask` 에서 메서드는 `UIApplication` 개체, 한 다음 새 스레드에서 장기 실행 작업을 일반적으로 시작 합니다. 작업이 완료 될 때 호출할 `EndBackgroundTask` 동일한 식별자를 전달 합니다. IOS를 하는 경우 응용 프로그램 종료 때문에이 중요 한 `BeginBackgroundTask` 호출에 짝이 되는 없는 `EndBackgroundTask`합니다.
 
 > [!IMPORTANT]
-> **참고**: 주 스레드 이거나 백그라운드 스레드, 응용 프로그램의 요구에 따라에서 배경 안전한 작업을 실행할 수 있습니다.
+> 주 스레드 이거나 백그라운드 스레드, 응용 프로그램의 요구에 따라에서 배경 안전한 작업을 실행할 수 있습니다.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>DidEnterBackground 하는 동안 작업을 수행합니다.
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 재정의 하 여 시작 하면는 `DidEnterBackground` 에서 메서드는 `AppDelegate`우리의 작업을 통해 등록 여기서 `BeginBackgroundTask` 앞의 예제에서와 같이 합니다. 다음으로 새 스레드를 생성 하 고 우리의 장기 실행 작업을 수행 합니다. `EndBackgroundTask` 이제 호출에서 장기 실행 작업 내 이후로 `DidEnterBackground` 메서드는 반환 된 이미 있어야 합니다.
 
 > [!IMPORTANT]
-> **참고**: iOS를 사용 하 여는 [메커니즘 감시](http://developer.apple.com/library/ios/qa/qa1693/_index.html) 응용 프로그램의 UI 응답성 유지 되도록 합니다. 에 너무 많은 시간을 소모 하는 응용 프로그램 `DidEnterBackground` UI에 응답 하지 않게 됩니다. 사용 하면 백그라운드에서 실행 하는 작업을 시작한 `DidEnterBackground` 반환할 적절 한 시간 UI 응답 성능을 유지 하 고 감시 장치 응용 프로그램을 종료 하지 못하도록 합니다.
+> iOS를 사용 하 여는 [메커니즘 감시](http://developer.apple.com/library/ios/qa/qa1693/_index.html) 응용 프로그램의 UI 응답성 유지 되도록 합니다. 에 너무 많은 시간을 소모 하는 응용 프로그램 `DidEnterBackground` UI에 응답 하지 않게 됩니다. 사용 하면 백그라운드에서 실행 하는 작업을 시작한 `DidEnterBackground` 반환할 적절 한 시간 UI 응답 성능을 유지 하 고 감시 장치 응용 프로그램을 종료 하지 못하도록 합니다.
 
 
 ## <a name="handling-background-task-time-limits"></a>처리 백그라운드 작업 시간 제한
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **참고**: 하 iOS 6 백그라운드 UI 업데이트를 지원 하지 않으며 응용 프로그램을 종료 하는 iOS 6 규격 코드로 배경에서 UI를 업데이트할 수는 호출 하지 마십시오.
+> IOS 6 백그라운드 UI 업데이트를 지원 하지 않으며 응용 프로그램을 종료 하는 iOS 6 규격 코드로 배경에서 UI를 업데이트할 수 있는 호출을 수행 하지 마십시오.
 
 
 `NSURLSession` API에는 다양 한 인증 처리, 실패 한 전송을 관리 및 클라이언트 쪽 하지 서버 쪽--하지만 오류를 보고 기능을 포함 합니다. 작업의 중단 iOS 7에서에서 도입 된 시간을 실행 하는 브리지 도와 빠르고 안정적으로 대용량 파일을 전송에 대 한 지원 기능을 제공 합니다. 다음 섹션에는이 두 번째 기능을 탐색합니다.

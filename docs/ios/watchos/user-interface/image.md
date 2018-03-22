@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f2416cb4f29eb74cf9cbc3db0a0bb3aa60806589
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4184d7babc396a6b6179e6876dced34b773474b4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="image-control"></a>이미지 컨트롤
 
@@ -102,8 +102,6 @@ animatedImage.StopAnimating ();
 
 > [!IMPORTANT]
 > watchOS 3 앱은 장치에서 완전히 실행 합니다. 다음 정보는 watchOS 1 앱만 해당 합니다.
-
-
 
 응용 프로그램 확장에 저장 됩니다 (또는 다운로드 한) 되는 이미지를 반복적으로 사용 하는 경우 후속 디스플레이 대 한 성능 향상을 위해 시계의 저장소에서 이미지를 캐시 하도록 같습니다.
 

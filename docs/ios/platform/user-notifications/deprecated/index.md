@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: be005f62c914fe5f59696c5ef9b608a73a45d269
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 348f84533974d1434dd0c7e5045c20e16b57057b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deprecated-notification-technologies"></a>사용 되지 않는 알림 기술
 
 이 섹션에는 로컬 구현 및 Xamarin.iOS에 대 한 푸시 알림 방법을 보여 줍니다. IOS 알림의 다양 한 UI 요소에 설명 하 고 API에 설명 합니다의 관련 만들기 및 알림을 표시 합니다.
 
 > [!IMPORTANT]
-> **참고:** iOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
+> IOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
 
 
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/27/2018
 
 <a name="Local Notifications Walkthrough" />
 
-##  <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[연습-Xamarin.iOS에 로컬 알림을 사용 하 여](local-notifications-in-ios-walkthrough.md)
+##  <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[연습 - Xamarin.iOS에서 로컬 알림 사용](local-notifications-in-ios-walkthrough.md)
 
 이 섹션 Xamarin.iOS 응용 프로그램에서 로컬 알림을 사용 하는 방법을 살펴봅니다. 만들기 및 앱에서 받은 경우 경고를 팝업 됩니다 나타내는 알림을 게시 하는 기본적인을 설명 합니다.
 
