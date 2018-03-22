@@ -180,6 +180,7 @@
 ### [선택기](user-interface/picker/index.md)
 #### [선택기의 ItemsSource 속성 설정](user-interface/picker/populating-itemssource.md)
 #### [선택기 항목 컬렉션에 데이터 추가](user-interface/picker/populating-items.md)
+### [슬라이더](user-interface/slider.md)
 ### [스타일](user-interface/styles/index.md)
 #### [소개](user-interface/styles/introduction.md)
 #### [명시적 스타일](user-interface/styles/explicit.md)
