@@ -1,6 +1,6 @@
 ---
-title: "Azure DB Cosmos 문서 데이터베이스와 사용자 인증"
-description: "Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저장소 및 처리량을 지원 하면서 확장할 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 사용자가 자신의 문서 Xamarin.Forms 응용 프로그램에만 액세스할 수 있도록 분할 된 컬렉션을 사용한 액세스 제어를 결합 하는 방법을 설명 합니다."
+title: Azure DB Cosmos 문서 데이터베이스와 사용자 인증
+description: Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저장소 및 처리량을 지원 하면서 확장할 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 사용자가 자신의 문서 Xamarin.Forms 응용 프로그램에만 액세스할 수 있도록 분할 된 컬렉션을 사용한 액세스 제어를 결합 하는 방법을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8de64d6489b4022e43bcf694f3b13d6f7eaaecbd
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스와 사용자 인증
 
@@ -22,12 +22,12 @@ _Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저
 
 분할 된 컬렉션을 만들 때 파티션 키를 지정 해야 하 고 동일한 파티션 키를 사용 하 여 문서를 동일한 파티션에 저장 됩니다. 따라서 파티션 키로 사용자의 id를 지정 하가 해당 사용자에 대 한 문서를 저장할만 분할 된 컬렉션을 발생 합니다. 이 또한 그래야 Azure Cosmos DB 문서 데이터베이스 사용자의 수로 확장 하 고 항목 증가 합니다.
 
-모든 컬렉션에 대 한 액세스를 부여 해야 하 고 DocumentDB API 액세스 제어 모델 두 가지 유형의 액세스 구문 정의 합니다.
+모든 컬렉션에 대 한 액세스를 부여 해야 하 고 SQL API 액세스 제어 모델 두 가지 유형의 액세스 구문 정의 합니다.
 
 - **마스터 키** Cosmos DB 계정 내에서 모든 리소스에 대 한 완전 한 관리 액세스를 사용 하도록 설정 하 고 Cosmos DB 계정이 만들어질 때 만들어집니다.
 - **리소스 토큰이** 데이터베이스의 사용자와 사용자에 게 컬렉션 또는 문서와 같은 특정 Cosmos DB 리소스에 대 한 사용 권한을 간의 관계를 캡처합니다.
 
-마스터 키가 노출 악성 또는 부주의로 사용 가능성을 Cosmos DB 계정을 열립니다. 그러나 Cosmos DB 리소스 토큰 읽기, 쓰기 및 부여 된 권한에 따라 Cosmos DB 계정에 특정 리소스를 삭제 하는 클라이언트 수에 대 한 안전한 메커니즘을 제공 합니다.
+마스터 키가 노출 악성 또는 부주의로 사용 가능성을 Cosmos DB 계정을 열립니다. 그러나 Azure Cosmos DB 리소스 토큰 읽기, 쓰기 및 부여 된 권한에 따라 Azure Cosmos DB 계정에 특정 리소스를 삭제 하는 클라이언트 수에 대 한 안전한 메커니즘을 제공 합니다.
 
 요청에 일반적인 방법은, 생성 및 모바일 응용 프로그램에 리소스 토큰을 전달 하 리소스 토큰 broker를 사용 하는 것입니다. 다음 다이어그램에는 상위 수준 개요를 예제 응용 프로그램 리소스 토큰 broker을 사용 하 여 문서 데이터베이스 데이터에 대 한 액세스를 관리 하는 방법을 보여 줍니다.
 
@@ -44,7 +44,7 @@ _Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저
 > [!NOTE]
 > 리소스 토큰이 만료 되 면 후속 문서 데이터베이스 요청 401 권한이 없음된 예외가 표시 됩니다. 이 시점에서 Xamarin.Forms 응용 프로그램 id 다시 설정 하 고 새 리소스 토큰을 요청 해야 합니다.
 
-Cosmos DB 분할에 대 한 자세한 내용은 참조 [파티션과 Azure Cosmos DB에 크기 조정 하는 방법을](/azure/cosmos-db/partition-data/)합니다. Cosmos DB 액세스 제어에 대 한 자세한 내용은 참조 [Cosmos DB 데이터에 대 한 액세스 보호](/azure/cosmos-db/secure-access-to-data/) 및 [DocumentDB API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
+Cosmos DB 분할에 대 한 자세한 내용은 참조 [파티션과 Azure Cosmos DB에 크기 조정 하는 방법을](/azure/cosmos-db/partition-data/)합니다. Cosmos DB 액세스 제어에 대 한 자세한 내용은 참조 [Cosmos DB 데이터에 대 한 액세스 보호](/azure/cosmos-db/secure-access-to-data/) 및 [SQL API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
 
 ## <a name="setup"></a>설정
 
@@ -58,11 +58,11 @@ Cosmos DB 분할에 대 한 자세한 내용은 참조 [파티션과 Azure Cosmo
 
 <a name="cosmosdb_configuration" />
 
-### <a name="cosmos-db-configuration"></a>Cosmos DB 구성
+### <a name="azure-cosmos-db-configuration"></a>Azure Cosmos DB 구성
 
 액세스 제어를 사용 하는 Cosmos DB 계정을 만들기 위한 프로세스는 다음과 같습니다.
 
-1. Cosmos DB 계정을 만듭니다. 자세한 내용은 참조 [Cosmos DB 계정 만들기](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account)합니다.
+1. Cosmos DB 계정을 만듭니다. 자세한 내용은 참조 [Azure Cosmos DB 계정 만들기](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)합니다.
 1. Cosmos DB 계정에서 명명 된 새 컬렉션을 만들 `UserItems`의 파티션 키를 지정 하 `/userid`합니다.
 
 <a name="app_service_configuration" />
@@ -269,10 +269,10 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoDocumentDBAuth (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB Auth (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 - [Azure Cosmos DB 문서 데이터베이스 사용](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [Azure Cosmos DB 데이터에 대 한 액세스 보호](/azure/cosmos-db/secure-access-to-data/)
-- [DocumentDB API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
+- [SQL API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
 - [파티션 및 Azure Cosmos DB에 크기 조정 하는 방법](/azure/cosmos-db/partition-data/)
-- [DocumentDB 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Azure DB Cosmos 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)

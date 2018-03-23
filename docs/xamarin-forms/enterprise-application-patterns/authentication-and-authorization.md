@@ -1,5 +1,5 @@
 ---
-title: "인증 및 권한 부여"
+title: 인증 및 권한 부여
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 16cd5571a8c3b0e179046351e9996e55b040a9de
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -21,7 +21,7 @@ ASP.NET Core Id, Google, Microsoft와 같은 외부 인증 공급자를 사용 �
 
 ## <a name="authentication"></a>인증
 
-응용 프로그램이 현재 사용자의 id를 알고 있어야 하는 경우 인증이 필요 합니다. ASP.NET Core 사용자를 식별 하기 위한 기본 메커니즘은 개발자가 구성한 데이터 저장소에 사용자 정보를 저장 하는 ASP.NET Core Id 멤버 자격 시스템입니다. 일반적으로 사용자 지정 저장소 또는 타사 패키지를 Azure 저장소, DocumentDB, 또는 다른 위치에서 id 정보를 저장 하려면 사용할 수 있지만이 데이터 저장소는 EntityFramework 저장소가 됩니다.
+응용 프로그램이 현재 사용자의 id를 알고 있어야 하는 경우 인증이 필요 합니다. ASP.NET Core 사용자를 식별 하기 위한 기본 메커니즘은 개발자가 구성한 데이터 저장소에 사용자 정보를 저장 하는 ASP.NET Core Id 멤버 자격 시스템입니다. 일반적으로 사용자 지정 저장소 또는 타사 패키지를 Azure 저장소, Azure Cosmos DB 또는 다른 위치에 id 정보를 저장 하려면 사용할 수 있지만이 데이터 저장소는 EntityFramework 저장소가 됩니다.
 
 로컬 사용자 데이터 저장소를 구성 하는 인증 시나리오에서 사용 하 고 쿠키 (그대로 ASP.NET MVC 웹 응용 프로그램에서 일반적인)를 통해 요청 간에 id 정보를 유지 하는, ASP.NET Core Id 적합 한 솔루션입니다. 그러나 쿠키는 하지 항상 유지 하 고 데이터를 전송 하는 자연 스러운 방법. 예를 들어, 모바일 앱에서 액세스할 수 있는 RESTful 끝점을 노출 하는 ASP.NET Core 웹 응용 프로그램을 일반적으로이 시나리오에서 쿠키를 사용할 수 있으므로 전달자 토큰 인증을 사용 하도록 할 수 있습니다. 그러나 전달자 토큰 수 쉽게 검색 하 고 모바일 앱에서 만든 웹 요청 권한 부여 헤더에 포함 되어 있습니다.
 

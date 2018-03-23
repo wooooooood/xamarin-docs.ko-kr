@@ -1,6 +1,6 @@
 ---
-title: "Azure DB Cosmos 문서 데이터베이스 사용"
-description: "Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure DocumentDB 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다."
+title: Azure DB Cosmos 문서 데이터베이스 사용
+description: Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -9,15 +9,15 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 5013b35828cecc2e38600839f306f3c0fc1366b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e2fa5ae12531069e1ad1bc19e110e4dcffe23a02
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스 사용
 
-_Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure DocumentDB 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다._
+_Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다._
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
@@ -33,23 +33,20 @@ Azure Cosmos DB 문서 데이터베이스 0 개 이상의 문서 컬렉션을 �
 
 이 문서 및 샘플 응용 프로그램을 함께 제공 된 작업은 Azure Cosmos DB 문서 데이터베이스에 저장 되어 있는 할 일 목록 응용 프로그램을 보여 줍니다. 샘플 응용 프로그램에 대 한 자세한 내용은 참조 [샘플 이해](~/xamarin-forms/data-cloud/walkthrough.md)합니다.
 
-> [!NOTE]
-> DocumentDB 클라이언트 라이브러리는 현재 유니버설 Windows 플랫폼 (UWP) 응용 프로그램과 호환 없습니다. 그러나 Azure Cosmos DB 문서 데이터베이스 DocumentDB 클라이언트 라이브러리를 사용 하는 중간 계층 웹 서비스를 만들고 UWP 응용 프로그램에서이 서비스를 호출 하 여 UWP 응용 프로그램에서 사용할 수 있습니다.
-
 Azure Cosmos DB에 대 한 자세한 내용은 참조는 [Azure Cosmos DB 설명서](/azure/cosmos-db/)합니다.
 
 ## <a name="setup"></a>설정
 
 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램으로 통합 하기 위한 프로세스는 다음과 같습니다.
 
-1. Cosmos DB 계정을 만듭니다. 자세한 내용은 참조 [Cosmos DB 계정 만들기](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account)합니다.
-1. 추가 [DocumentDB 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) Xamarin.Forms 솔루션의 플랫폼 프로젝트에 NuGet 패키지 합니다.
+1. Cosmos DB 계정을 만듭니다. 자세한 내용은 참조 [Azure Cosmos DB 계정 만들기](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)합니다.
+1. 추가 [Azure Cosmos DB 표준.NET 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) Xamarin.Forms 솔루션의 플랫폼 프로젝트에 NuGet 패키지 합니다.
 1. 추가 `using` 에 대 한 지시문은 `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, 및 `Microsoft.Azure.Documents.Linq` Cosmos DB 계정에 액세스 하는 클래스에 네임 스페이스입니다.
 
-다음이 단계를 수행한 후 구성 하 고 실행 문서 데이터베이스에 대 한 요청 DocumentDB 클라이언트 라이브러리를 사용할 수 있습니다.
+다음이 단계를 수행한 후 구성 하 고 문서 데이터베이스에 대 한 요청을 실행 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용할 수 있습니다.
 
 > [!NOTE]
-> 클래스 라이브러리 PCL (이식 가능한) 프로젝트 하지 플랫폼 프로젝트 및 Azure DocumentDB 클라이언트 라이브러리만 설치할 수 있습니다. 따라서 샘플 응용 프로그램 코드 중복을 피하기 위해 액세스 프로젝트 공유 (SAP)입니다. 그러나는 `DependencyService` 플랫폼별 프로젝트에 포함 된 Azure DocumentDB 클라이언트 라이브러리 코드를 호출할 PCL 프로젝트에 클래스를 사용할 수 있습니다.
+> 클래스 라이브러리 PCL (이식 가능한) 프로젝트 하지 플랫폼 프로젝트 및 Azure Cosmos DB 표준.NET 클라이언트 라이브러리만 설치할 수 있습니다. 따라서 샘플 응용 프로그램 코드 중복을 피하기 위해 액세스 프로젝트 공유 (SAP)입니다. 그러나는 `DependencyService` 플랫폼별 프로젝트에 포함 된 Azure Cosmos DB 표준.NET 클라이언트 라이브러리 코드를 호출할 PCL 프로젝트에 클래스를 사용할 수 있습니다.
 
 ## <a name="consuming-the-azure-cosmos-db-account"></a>Cosmos DB Azure 계정 사용
 
@@ -59,7 +56,7 @@ Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램으�
 DocumentClient client = new DocumentClient(new Uri(Constants.EndpointUri), Constants.PrimaryKey);
 ```
 
-Cosmos DB Uri 및 기본 키를 제공 해야 합니다는 `DocumentClient` 생성자입니다. 이러한 Azure 포털에서 얻을 수 있습니다. 자세한 내용은 참조 [Azure Cosmos DB 계정에 연결](/azure/cosmos-db/documentdb-dotnetcore-get-started#a-idconnectastep-3-connect-to-an-azure-cosmos-db-account)합니다.
+Cosmos DB Uri 및 기본 키를 제공 해야 합니다는 `DocumentClient` 생성자입니다. 이러한 Azure 포털에서 얻을 수 있습니다. 자세한 내용은 참조 [Azure Cosmos DB 계정에 연결](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect)합니다.
 
 ### <a name="creating-a-database"></a>데이터베이스 만들기
 
@@ -226,12 +223,12 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 
 ## <a name="summary"></a>요약
 
-이 문서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure DocumentDB 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다. Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다.
+이 문서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다. Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoDocumentDB (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
-- [Cosmos DB 설명서](/azure/cosmos-db/)
-- [DocumentDB 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [Todo Azure Cosmos DB (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+- [Azure DB Cosmos 설명서](/azure/cosmos-db/)
+- [Azure Cosmos DB 표준.NET 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Azure Cosmos DB API](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

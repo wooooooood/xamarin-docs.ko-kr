@@ -1,5 +1,5 @@
 ---
-title: "연습-배경 위치를 사용 하 여"
+title: 연습-배경 위치를 사용 하 여
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: efdabc5450b186c89785ee3cb19a3decdd6c2064
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="walkthrough---using-background-location"></a>연습-배경 위치를 사용 하 여
 
@@ -28,7 +28,6 @@ ms.lasthandoff: 03/22/2018
 
     솔루션 탐색기에서 두 번 클릭은 **Info.plist** 파일을 열고 목록 아래쪽으로 스크롤합니다. 확인란에 둘 다로 **백그라운드 모드를 사용 하도록 설정** 및 **위치 업데이트** 확인란을 선택 합니다.
 
-
     Mac 용 Visual Studio에서 코드는 다음과 같이 보입니다.
 
     [![](location-walkthrough-images/image7.png "사용 하도록 설정 하는 백그라운드 모드와 위치 업데이트 확인란에서 확인란을 선택합니다")](location-walkthrough-images/image7.png#lightbox)
@@ -38,7 +37,7 @@ ms.lasthandoff: 03/22/2018
     ```xml
     <key>UIBackgroundModes</key>
     <array>
-        <string>location</string>
+      <string>location</string>
     </array>
     ```
 

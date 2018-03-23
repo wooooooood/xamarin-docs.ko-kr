@@ -1,6 +1,6 @@
 ---
-title: "이미지"
-description: "Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 대해 구체적으로 로드 될 수 또는 표시를 위해 다운로드할 수 있습니다."
+title: 이미지
+description: Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 대해 구체적으로 로드 될 수 또는 표시를 위해 다운로드할 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b2cc302cf45527319bb22a4942290e0b0ac414d7
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="images"></a>이미지
 
@@ -24,7 +24,7 @@ _Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 �
 
 이 문서에서는 다음 내용을 다룹니다.
 
-- [ **로컬 이미지** ](#Local_Images) -iOS는 이미지의 높은 DPI 버전 레 티 나 또는 Android와 같은 네이티브 해상도 확인을 포함 하 여 응용 프로그램을 함께 제공 된 이미지를 표시 합니다.
+- [ **로컬 이미지** ](#Local_Images) -네이티브 해상도 이미지의 높은 DPI 버전 레 티 나, Android 또는 UWP iOS와 같은 해결을 포함 하 여 응용 프로그램을 함께 제공 된 이미지를 표시 합니다.
 - [ **포함 이미지** ](#Embedded_Images) -어셈블리 리소스로 포함 된 이미지를 표시 합니다.
 - [ **이미지를 다운로드 한** ](#Downloading_Images) -다운로드 하 고 이미지를 표시 합니다.
 - [ **아이콘 및 여 시작 화면** ](#Icons_and_splashscreens) -플랫폼별 아이콘 및 시작 시 이미지입니다.
@@ -94,15 +94,17 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>기본 해상도 (레 티 나 및 높은 DPI)
 
-IOS 및 Android 플랫폼 둘 다에 다른 이미지 해상도, 운영 체제에서 장치의 기능에 따라 런타임에 적절 한 이미지를 선택 하는 위치에 대 한 지원이 포함 됩니다. Xamarin.Forms는 파일은 올바르게 라는 이며 프로젝트에 있는 경우 자동으로 대체 해상도 지원 하므로 로컬 이미지를 로드 하기 위한 네이티브 플랫폼의 Api를 사용 합니다.
+iOS, Android, Windows Phone 및 UWP 다른 이미지 해상도, 운영 체제에서 장치의 기능에 따라 런타임에 적절 한 이미지를 선택 하는 위치에 대 한 지원이 포함 됩니다. Xamarin.Forms는 파일은 올바르게 라는 이며 프로젝트에 있는 경우 자동으로 대체 해상도 지원 하므로 로컬 이미지를 로드 하기 위한 네이티브 플랫폼의 Api를 사용 합니다.
 
 적절 한 자산 카탈로그 이미지 세트에 필요한 각 해상도 대 한 이미지를 끌기를 iOS 9 이후 이미지를 관리 하는 것이 좋습니다. 자세한 내용은 참조 [는 자산 카탈로그 이미지를 설정 하는 추가 이미지](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 
-IOS 9 이전 이미지의 레 티 나 버전에 놓일 수 있습니다는 **리소스** 폴더-2와 3 해상도와 제한 시간이 한  **@2x**  또는  **@3x** 않음 (예: 파일 확장명 앞 파일 이름에 접미사 **myimage@2x.png**). 그러나이 방법은 iOS 앱의 이미지 작업에 사용 되지 Apple에서. 자세한 내용은 참조 [이미지 크기와 파일 이름을](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
+IOS 9 이전 이미지의 레 티 나 버전에 놓일 수 있습니다는 **리소스** 폴더-2와 3 해상도와 제한 시간이 한 **@2x** 또는 **@3x**않음 (예: 파일 확장명 앞 파일 이름에 접미사 **myimage@2x.png**). 그러나이 방법은 iOS 앱의 이미지 작업에 사용 되지 Apple에서. 자세한 내용은 참조 [이미지 크기와 파일 이름을](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 
 Android 대체 고해상도 이미지를 배치할 [특별 하 게 명명 된 디렉터리](http://developer.android.com/guide/practices/screens_support.html) 다음 스크린샷에 표시 된 대로 Android 프로젝트:
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png "Android 다중 해상도 이미지 위치")](images-images/xs-highdpisolution.png#lightbox "Android 다중 해상도 이미지 위치")
+
+UWP 및 Windows Phone 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)여기서 `xxx` 예에 자산에 적용 된 확장의 비율 **myimage.scale-200.png**. 이미지 다음 참조할 수 있습니다. 예를 들어 just 코드 또는 XAML 배율 한정자 없이 **myimage.png**합니다. 플랫폼은 디스플레이 현재 DPI를 기준으로 가장 가까운 적절 한 자산 눈금자를 선택 합니다.
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 
@@ -168,7 +170,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 기본 제공 형식 변환기가 있으므로 `string` 를 `ResourceImageSource`, 이러한 유형의 이미지는 xaml을 고유 하 게 로드할 수 없습니다. 대신를 사용 하 여 이미지를 로드 하는 간단한 사용자 지정 XAML 태그 확장을 작성할 수 있습니다는 **리소스 ID** XAML에 지정 된:
 
 ```csharp
-[ContentProperty ("Source")]
+[ContentProperty (nameof(Source))]
 public class ImageResourceExtension : IMarkupExtension
 {
  public string Source { get; set; }
@@ -179,6 +181,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
+   
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 

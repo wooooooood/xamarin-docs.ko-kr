@@ -1,6 +1,6 @@
 ---
-title: "Azure 검색 데이터를 검색합니다."
-description: "Azure 검색은 인덱싱 및 쿼리 업로드 된 데이터에 대 한 기능을 제공 하는 클라우드 서비스입니다. 인프라 요구 사항 및 응용 프로그램에서 검색 기능을 구현 하는과 관련 된 검색 알고리즘 복잡성 제거 합니다. 이 문서에서는 Azure 검색 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure 검색 라이브러리를 사용 하는 방법을 보여줍니다."
+title: Azure 검색 데이터를 검색합니다.
+description: Azure 검색은 인덱싱 및 쿼리 업로드 된 데이터에 대 한 기능을 제공 하는 클라우드 서비스입니다. 인프라 요구 사항 및 응용 프로그램에서 검색 기능을 구현 하는과 관련 된 검색 알고리즘 복잡성 제거 합니다. 이 문서에서는 Azure 검색 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure 검색 라이브러리를 사용 하는 방법을 보여줍니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bf6b9f8aaa07e934a1e707b85ecaa24e4f3d99bf
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="searching-data-with-azure-search"></a>Azure 검색 데이터를 검색합니다.
 
@@ -119,7 +119,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 인덱스를 정의한 후 데이터 두 모델 중 하나를 사용 하 여 업로드할 수 있습니다.
 
-- **끌어오기 모델** – 데이터는 주기적으로 수집 된 Azure DocumentDB, Azure SQL 데이터베이스, Azure Blob 저장소에서 또는 Azure 가상 컴퓨터에서 호스팅되는 SQL Server.
+- **끌어오기 모델** – 데이터는 주기적으로 수집 된 Azure Cosmos DB, Azure SQL 데이터베이스, Azure Blob 저장소에서 또는 Azure 가상 컴퓨터에서 호스팅되는 SQL Server.
 - **밀어넣기 모델** – 데이터에 프로그래밍 방식으로 인덱스에 보내집니다. 이 문서에 적용 하는 모델입니다.
 
 A `SearchIndexClient` 인덱스에 데이터를 가져오려면 인스턴스를 만들어야 합니다. 이 호출 하 여 수행할 수 있습니다는 `SearchServiceClient.Indexes.GetClient` 메서드를 다음 코드 예제에서와 같이:

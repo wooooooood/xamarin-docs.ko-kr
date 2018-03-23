@@ -1,6 +1,6 @@
 ---
-title: "동전 시간 구현 세부 정보"
-description: "이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트, 애니메이션 및 구현 하는 효율적인 충돌을 포함 하 여 동전 시간 게임을 구현 세부 사항을 설명 합니다."
+title: 동전 시간 구현 세부 정보
+description: 이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트, 애니메이션 및 구현 하는 효율적인 충돌을 포함 하 여 동전 시간 게임을 구현 세부 사항을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b3827d05ae9e563ae04dd4ab1e303577f6c9d82a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="coin-time-implementation-details"></a>동전 시간 구현 세부 정보
 
@@ -61,10 +61,7 @@ _이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트,
 1. 그릴 사각형 클릭
 1. 클릭 또는 푸시하고 지도 타일을 칠하는를 위로 끌기
 
-
     ![](cointime-images/image2.png "1 그릴 사각형 클릭")
-
- 
 
 tileset의 왼쪽 위 모든 동전 시간에서는 지형 포함합니다. 단색는 지형 포함는 **SolidCollision** 타일 속성 화면 왼쪽에에서 표시 된 것 처럼 속성:
 
@@ -97,15 +94,11 @@ CoinTime 코드에서 찾는 **EntityType** 엔터티도 대체 해야 하는 �
 1. 와 같은 수준 번호 시퀀스를 기존 수준으로 계속 진행 하도록 새.tmx 파일 이름 바꾸기 **level8.tmx**
 1. Visual Studio 또는 Mac 용 Visual Studio에서 Android 수준 폴더에 새.tmx 파일을 추가 합니다. 파일 사용 하는지 확인는 **AndroidAsset** 빌드 작업입니다.
 
-
     ![](cointime-images/image8.png "파일에서 AndroidAsset 빌드 작업을 사용 하는지 확인")
-
 
 1. IOS 수준 폴더에 새.tmx 파일을 추가 합니다. 원래 위치에서 파일 연결 사용 하는지 확인 하는 **BundleResource** 빌드 작업입니다.
 
-
     ![](cointime-images/image9.png "원래 위치에서 파일에 연결 하 고 BundleResource 빌드 작업을 사용 하는지 확인 하십시오")
-
 
 새 수준 수준 9로 수준 선택 화면에 표시 됩니다 (파일 이름 수준 0부터 시작 하지만 수준 단추 번호 1로 시작):
 
