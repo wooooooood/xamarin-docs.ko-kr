@@ -1,6 +1,6 @@
 ---
-title: "자동 프로비저닝"
-description: "Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 Mac용 Visual Studio의 자동 서명을 사용하여 개발 인증서와 프로필을 요청합니다."
+title: 자동 프로비저닝
+description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 Mac용 Visual Studio의 자동 서명을 사용하여 개발 인증서와 프로필을 요청합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 271d9e3f7ae04f03a132ae2fd0ebf531fe52578c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="automatic-provisioning"></a>자동 프로비저닝
 
@@ -24,7 +24,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 - Xcode 9 이상
 
 > [!IMPORTANT]
->  이 가이드에서는 Mac용 Visual Studio를 사용하여 배포용 Apple 장치를 설정하는 방법과 응용 프로그램을 배포하는 방법을 설명합니다. 이 작업을 수행하는 방법이나 Windows에서 Visual Studio를 사용하여 이 작업을 수행하는 방법에 대한 수동 단계는 [수동 프로비저닝](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) 가이드의 자세한 단계를 참조하는 것이 좋습니다.
+> 이 가이드에서는 Mac용 Visual Studio를 사용하여 배포용 Apple 장치를 설정하는 방법과 응용 프로그램을 배포하는 방법을 설명합니다. 이 작업을 수행하는 방법이나 Windows에서 Visual Studio를 사용하여 이 작업을 수행하는 방법에 대한 수동 단계는 [수동 프로비저닝](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) 가이드의 자세한 단계를 참조하는 것이 좋습니다.
 
 ## <a name="enabling-automatic-signing"></a>자동 서명 사용
 

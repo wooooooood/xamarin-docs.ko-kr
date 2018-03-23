@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms 심층 분석"
+title: Xamarin.Forms 심층 분석
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -7,33 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 3259e9b2bc9be52e8c19acce2dd031ad9046019b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ea02b4329d5a27e47a89f21b475bb5f6d9dea175
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 심층 분석
 
 [Xamarin.Forms 빠른 시작](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)에서는 Phoneword 응용 프로그램을 빌드했습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램의 핵심 작동 원리를 이해하기 위해 무엇이 빌드되었는지 검토합니다.
-
-살펴볼 항목은 다음과 같습니다.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- Visual Studio 소개 - Visual Studio 및 새로운 Xamarin.Forms 응용 프로그램 만들기를 소개합니다.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-- Mac용 Visual Studio 소개 - Mac용 Visual Studio 및 새로운 Xamarin.Forms 응용 프로그램 만들기를 소개합니다.
-
------
-
-- Xamarin.Forms 응용 프로그램 분석 - Xamarin.Forms 응용 프로그램의 핵심 부분을 안내합니다.
-- 아키텍처 및 응용 프로그램 기본 사항 – 각 플랫폼에서 응용 프로그램이 시작되는 방법을 설명합니다.
-- UI(사용자 인터페이스) – Xamarin.Forms에서 사용자 인터페이스를 만듭니다.
-- Phoneword에 도입된 추가 개념 – Phoneword 응용 프로그램에서 사용되는 추가 개념을 간략하게 설명합니다.
-- 테스트 및 배포 - 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 응용 프로그램을 완성합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -52,6 +34,14 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 - Phoneword.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 응용 프로그램의 진입점입니다.
 - Phoneword.UWP - 이 프로젝트는 UWP(유니버설 Windows 플랫폼) 관련 코드를 보관하며 UWP(유니버설 Windows 플랫폼) 응용 프로그램의 진입점입니다.
 
+## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 응용 프로그램 분석
+
+다음 스크린샷은 Visual Studio의 Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
+
+![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 프로젝트 콘텐츠")
+
+프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다. **NuGet** 노드는 프로젝트에 추가된 Xamarin.Forms NuGet 패키지를 포함하고, **SDK** 노드는 .NET Standard를 정의하는 전체 NuGet 패키지 집합을 참조하는 `NETStandard.Library` 메타패키지를 포함합니다.
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Mac용 Visual Studio 소개
@@ -68,19 +58,7 @@ Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는
 - Phoneword.Droid - 이 프로젝트는 Android 관련 코드를 보관하며 Android 응용 프로그램의 진입점입니다.
 - Phoneword.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 응용 프로그램의 진입점입니다.
 
------
-
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 응용 프로그램 분석
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-다음 스크린샷은 Visual Studio의 Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
-
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 프로젝트 콘텐츠")
-
-프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다. **NuGet** 노드는 프로젝트에 추가된 Xamarin.Forms NuGet 패키지를 포함하고, **SDK** 노드는 .NET Standard를 정의하는 전체 NuGet 패키지 집합을 참조하는 `NETStandard.Library` 메타패키지를 포함합니다.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 다음 스크린샷은 Mac용 Visual Studio의 Phoneword PCL 프로젝트 콘텐츠를 보여줍니다.
 
@@ -202,8 +180,6 @@ namespace Phoneword.Droid
 
 ## <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
 
 ```csharp
@@ -230,13 +206,11 @@ namespace Phoneword.UWP
     }
 }
 ```
+
 Xamarin.Forms 응용 프로그램은 `LoadApplication` 메서드를 사용해 로드합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-UWP(유니버설 Windows 플랫폼) 앱은 Xamarin.Forms로 빌드할 수 있지만 Windows에서 Visual Studio만 사용합니다.
-
------
+> [!NOTE]
+> UWP(유니버설 Windows 플랫폼) 앱은 Xamarin.Forms로 빌드할 수 있지만 Windows에서 Visual Studio만 사용합니다.
 
 ## <a name="user-interface"></a>사용자 인터페이스
 
@@ -302,43 +276,52 @@ Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다
 
 - 단추 사용 및 사용 안 함. [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) 속성을 변경하여 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)을 켜거나 끌 수 있습니다. 예를 들어 다음 코드 예제에서는 `callButton`을 사용하지 않습니다.
 
-        callButton.IsEnabled = false;
+    ```csharp
+    callButton.IsEnabled = false;
+    ```
 
 - 경고 대화 상자 표시. 사용자가 통화 **단추**를 누르면 Phoneword 응용 프로그램은 *경고 대화 상자*를 표시하고 전화를 걸거나 취소하는 옵션을 제공합니다. [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) 메서드는 다음 코드 예제와 같이 대화 상자를 만드는 데 사용됩니다.
 
-        await this.DisplayAlert (
-                "Dial a Number",
-                "Would you like to call " + translatedNumber + "?",
-                "Yes",
-                "No");
+    ```csharp
+    await this.DisplayAlert (
+            "Dial a Number",
+            "Would you like to call " + translatedNumber + "?",
+            "Yes",
+            "No");
+    ```
 
 - [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 클래스를 통해 네이티브 기능에 액세스. Phoneword 응용 프로그램은 Phoneword 프로젝트의 다음 코드 예제와 같이 `DependencyService` 클래스를 사용하여 `IDialer` 인터페이스를 플랫폼 관련 전화 걸기 구현으로 해결합니다.
 
-        async void OnCall (object sender, EventArgs e)
-        {
-            ...
-            var dialer = DependencyService.Get<IDialer> ();
-            ...
-        }
+    ```csharp
+    async void OnCall (object sender, EventArgs e)
+    {
+        ...
+        var dialer = DependencyService.Get<IDialer> ();
+        ...
+    }
+    ```
 
   [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 클래스에 대한 자세한 내용은 [DependencyService를 통한 네이티브 기능에 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 
 - URL로 전화 걸기. Phoneword 응용 프로그램은 `OpenURL`을 사용하여 시스템 전화 앱을 시작합니다. iOS 프로젝트의 다음 코드 예제와 같이, URL은 `tel:` 접두사 뒤에 전화를 걸 전화 번호가 붙습니다.
 
-        return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```csharp
+    return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```
 
 - 플랫폼 레이아웃 조정. 여러 플랫폼에서 여러 [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) 값을 사용하여 각 페이지를 올바르게 표시하는 다음 코드 예제처럼, 개발자는 [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 클래스를 사용하여 플랫폼별로 응용 프로그램 레이아웃 및 기능을 사용자 지정할 수 있습니다.
 
-        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                     ...>
-            <ContentPage.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20, 40, 20, 20" />
-                    <On Platform="Android, WinPhone, Windows" Value="20" />
-                </OnPlatform>
-            </ContentPage.Padding>
-            ...
-        </ContentPage>
+    ```xaml
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        ...
+    </ContentPage>
+    ```
 
   플랫폼 조정에 대한 자세한 내용은 [장치 클래스](~/xamarin-forms/platform/device.md)를 참조하세요.
 

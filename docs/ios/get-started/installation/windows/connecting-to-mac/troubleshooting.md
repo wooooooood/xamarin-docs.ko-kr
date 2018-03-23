@@ -1,6 +1,6 @@
 ---
-title: "연결 문제 해결"
-description: "이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리자를 사용하는 동안 발생할 수 있는 문제를 해결하는 단계별 지침을 제공합니다."
+title: 연결 문제 해결
+description: 이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리자를 사용하는 동안 발생할 수 있는 문제를 해결하는 단계별 지침을 제공합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>연결 문제 해결
 
@@ -72,26 +72,34 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 7. Mac의 IP 주소를 확인한 후에는 Windows의 `cmd.exe`에서 해당 주소에 대한 `ping`을 시도합니다.
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     ping이 실패하면 Windows 컴퓨터에서 해당 Mac을 _라우팅_할 수 없는 것입니다. 이 문제는 두 컴퓨터 간의 로컬 영역 네트워크 구성 수준에서 해결해야 합니다. 두 컴퓨터가 같은 로컬 네트워크에 있는지 확인합니다.
 
 8. 다음으로, OpenSSH의 `ssh` 클라이언트가 Windows에서 Mac에 연결할 수 있는지 테스트합니다. 이 프로그램을 설치하는 한 가지 방법은 [Windows용 Git](https://git-for-windows.github.io/)를 설치하는 것입니다. 그런 후 **Git Bash** 명령 프롬프트를 시작하고 사용자 이름 및 IP 주소를 사용하여 해당 Mac으로 `ssh`를 시도할 수 있습니다.
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. **8단계가 성공하면** 연결에 대해 `ls` 같은 간단한 명령을 실행해 볼 수 있습니다.
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     그러면 Mac의 홈 디렉터리에 있는 콘텐츠가 나열됩니다. `ls` 명령은 제대로 작동하지만 Visual Studio 연결이 실패하는 경우 Xamarin의 복잡성에 대한 [알려진 문제 및 제한 사항](#knownissues) 섹션을 확인하세요. 문제와 일치하는 내용이 없는 경우 [자세한 정보 표시 로그 파일 확인](#verboselogs)에 설명된 대로 [새 버그 보고서를 작성](https://bugzilla.xamarin.com/newbug)하여 첨부해주세요.
 
 10. **8단계가 실패하면** Mac의 터미널에서 다음 명령을 실행하여 SSH 서버가 _모든_ 연결을 수락하는지 확인할 수 있습니다.
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. 8단계는 실패하지만 **10단계가 성공**하는 경우 네트워크 구성 때문에 Windows에서 Mac 빌드 호스트의 포트 22에 액세스할 수 없는 문제일 가능성이 높습니다. 가능한 구성 문제는 다음과 같습니다.
 
     - OS X 방화벽 설정에서 연결을 허용하지 않습니다. 3단계를 다시 확인해야 합니다.
@@ -161,8 +169,10 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     5. 파일 맨 아래에 다음 줄을 추가합니다.
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. 새 설정이 적용되도록 `UseDNS yes`를 표시하는 줄을 제거합니다.
 
     7. 파일을 저장합니다.
@@ -179,16 +189,20 @@ Mac 에이전트와 관련된 "설치", "업로드" 또는 "시작" 단계에서
 
 1. Mac의 터미널에서 다음 명령을 실행합니다.
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. 컨트롤 키를 누른 상태로 **XMA** 폴더를 클릭하고 **휴지통으로 이동**을 선택합니다.
 
     [![](troubleshooting-images/troubleshooting-image8.png "XMA 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. 또한 Windows에는 지우는 것이 더 좋은 캐시가 있습니다. Windows에서 관리자 권한으로 명령 프롬프트를 엽니다.
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>경고 메시지
 
 이 섹션에서는 출력 창 및 일반적으로 무시해도 되는 로그에 나타날 수 있는 몇 가지 메시지에 대해 설명합니다.
@@ -230,7 +244,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 1. Visual Studio를 시작합니다.
 
     > [!IMPORTANT]
->  **.svclogs**는 기본적으로 사용되지 않습니다. 이 파일에 액세스하려면 [버전 로그](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs) 가이드에 설명된 대로 자세한 로그를 사용하여 Visual Studio를 시작해야 합니다. 자세한 내용은 [활동 로그를 사용하여 확장 문제 해결](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) 블로그를 참조하세요.
+    > **.svclogs**는 기본적으로 사용되지 않습니다. 이 파일에 액세스하려면 [버전 로그](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs) 가이드에 설명된 대로 자세한 로그를 사용하여 Visual Studio를 시작해야 합니다. 자세한 내용은 [활동 로그를 사용하여 확장 문제 해결](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) 블로그를 참조하세요.
 
 2. 빌드 호스트에 연결을 시도합니다.
 
@@ -272,7 +286,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 자세한 정보 로그 파일이 제공하는 정보가 문제를 직접 해결하기에 충분하지 않은 경우 [새 버그 보고서를 작성](https://bugzilla.xamarin.com/newbug)하고 5단계의 .zip 파일과 6단계의 .log 파일을 첨부해 주세요.
 

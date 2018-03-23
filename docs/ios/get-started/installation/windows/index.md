@@ -1,6 +1,6 @@
 ---
-title: "Windows에 Xamarin.iOS 설치"
-description: "이 문서에서는 Visual Studio용 Xamarin.iOS를 설정하는 방법을 보여줍니다. Visual Studio용 Xamarin 확장의 설치 프로세스를 설명하고, Mac에 설치된 Apple SDK에 연결하는 방법을 살펴봅니다."
+title: Windows에 Xamarin.iOS 설치
+description: 이 문서에서는 Visual Studio용 Xamarin.iOS를 설정하는 방법을 보여줍니다. Visual Studio용 Xamarin 확장의 설치 프로세스를 설명하고, Mac에 설치된 Apple SDK에 연결하는 방법을 살펴봅니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08bf8b2b7c56983c43cf1ae080ab112e81851fbb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>Windows에 Xamarin.iOS 설치
 
@@ -37,7 +37,7 @@ Visual Studio용 Xamarin.iOS는 Visual Studio가 Mac의 Windows 가상 머신 �
 [![Xamarin.iOS 개발 워크플로](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio는 프로젝트를 빌드하는 별도의 MSBuild 프로세스를 시작합니다. 이 프로세스에서는 Mac에 대한 새 연결을 설정합니다. 즉, Visual Studio가 빌드할 때 Windows에서 Mac으로 이어지는 두 개의 SSH 연결이 있습니다. [명령줄](~/ios/get-started/installation/windows/connecting-to-mac/index.md)에서 빌드하면 MSBuild 프로세스가 하나만 생성됩니다. 다이어그램을 단순화하기 위해 모든 연결을 화살표로 표시했습니다.
+> Visual Studio는 프로젝트를 빌드하는 별도의 MSBuild 프로세스를 시작합니다. 이 프로세스에서는 Mac에 대한 새 연결을 설정합니다. 즉, Visual Studio가 빌드할 때 Windows에서 Mac으로 이어지는 두 개의 SSH 연결이 있습니다. [명령줄](~/ios/get-started/installation/windows/connecting-to-mac/index.md)에서 빌드하면 MSBuild 프로세스가 하나만 생성됩니다. 다이어그램을 단순화하기 위해 모든 연결을 화살표로 표시했습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -105,7 +105,7 @@ mac 호스트에 Xamarin.iOS 도구를 설치하려면 [Mac용 Visual Studio를 
 소프트웨어가 설치되면 다음 섹션의 단계에 따라 Visual Studio용 Xamarin이 연결할 수 있도록 macOS에서 Xamarin.iOS를 구성합니다.
 
 > [!IMPORTANT]
->  Windows 컴퓨터는 Mac이 연결되는 것과 동일한 Xamarin.iOS 버전을 사용해야 합니다. 다음과 같은 방법으로 이를 확인할 수 있습니다.
+> Windows 컴퓨터는 Mac이 연결되는 것과 동일한 Xamarin.iOS 버전을 사용해야 합니다. 다음과 같은 방법으로 이를 확인할 수 있습니다.
 >
 > - **Visual Studio 2015 이하**: Mac용 Visual Studio와 동일한 [업데이트 채널](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)에 있는지 확인합니다.
 >

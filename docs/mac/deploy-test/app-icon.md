@@ -1,6 +1,6 @@
 ---
-title: "응용 프로그램 아이콘"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘에 필요한 이미지를 만들고, 그 이미지를 .icns 파일로 묶고, Xamarin.Mac 프로젝트에 아이콘을 포함하는 방법을 다룹니다."
+title: 응용 프로그램 아이콘
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘에 필요한 이미지를 만들고, 그 이미지를 .icns 파일로 묶고, Xamarin.Mac 프로젝트에 아이콘을 포함하는 방법을 다룹니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ceeb0d33b00288e2a50dc7f758902c1dbc7ab04a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="application-icon"></a>응용 프로그램 아이콘
 
@@ -61,52 +61,18 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 사용자가 보는 모든 위치에서 아이콘이 멋지게 보일 수 있도록 아래에 나열된 크기로 리소스를 제공합니다.
 
-<table width="100%" border="1px">
-<tr>
-    <td>파일 이름</td>
-    <td>크기(픽셀)</td>
-</tr>
-<tr>
-    <td>icon_512x512@2x.png</td>
-    <td>1024 x 1024</td>
-</tr>
-<tr>
-    <td>icon_512x512.png</td>
-    <td>512 x 512</td>
-</tr>
-<tr>
-    <td>icon_256x256@2x.png</td>
-    <td>512 x 512</td>
-</tr>
-<tr>
-    <td>icon_256x256.png</td>
-    <td>256 x 256</td>
-</tr>
-<tr>
-    <td>icon_128x128@2x.png</td>
-    <td>256 x 256</td>
-</tr>
-<tr>
-    <td>icon_128x128.png</td>
-    <td>128 x 128</td>
-</tr>
-<tr>
-    <td>icon_32x32@2x.png</td>
-    <td>64 x 64</td>
-</tr>
-<tr>
-    <td>icon_32x32.png</td>
-    <td>32 x 32</td>
-</tr>
-<tr>
-    <td>icon_16x16@2x.png</td>
-    <td>32 x 32</td>
-</tr>
-<tr>
-    <td>icon_16x16.png</td>
-    <td>16 x 16</td>
-</tr>
-</table>
+|파일 이름|크기(픽셀)|
+|---|---|
+|icon_512x512@2x.png|1024 x 1024|
+|icon_512x512.png|512 x 512|
+|icon_256x256@2x.png|512 x 512|
+|icon_256x256.png|256 x 256|
+|icon_128x128@2x.png|256 x 256|
+|icon_128x128.png|128 x 128|
+|icon_32x32@2x.png|64 x 64|
+|icon_32x32.png|32 x 32|
+|icon_16x16@2x.png|32 x 32|
+|icon_16x16.png|16 x 16|
 
 자세한 내용은 Apple의 [모든 앱 그래픽 리소스의 고해상도 버전 제공](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) 설명서를 참조하세요.
 
