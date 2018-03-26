@@ -1,6 +1,6 @@
 ---
-title: "앱 스토어 배포"
-description: "이 문서에서는 Apple 앱 스토어에 배포하기 위한 요구 사항에 대해 설명합니다."
+title: 앱 스토어 배포
+description: 이 문서에서는 Apple 앱 스토어에 배포하기 위한 요구 사항에 대해 설명합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25c4cb980f77880ae690916ec45be3cd12a3cf10
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -37,7 +37,7 @@ Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특
 개발 프로비전 프로필에 사용한 것과 동일한 **앱 ID** 및 **장치**를 선택할 수 있지만, 아직 없는 경우 앱 스토어에 앱을 제출할 때 조직을 식별하기 위한 배포 인증서를 만들어야 합니다. 배포 인증서를 만드는 방법에 대한 단계는 아래 섹션에서 설명합니다.
 
 > [!NOTE]
->  참고: 팀 에이전트 및 관리자만 배포 인증서 및 프로비전 프로필을 만들 수 있습니다.
+> 팀 에이전트 및 관리자만 배포 인증서 및 프로비저닝 프로필을 만들 수 있습니다.
 
 <a name="creatingcertificate" />
 

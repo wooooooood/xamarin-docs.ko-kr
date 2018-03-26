@@ -1,6 +1,6 @@
 ---
-title: "기능 사용"
-description: "응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다."
+title: 기능 사용
+description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c038aba3989046e6df062e97ae7f777ae6238ade
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ffc694e2f513d61cf32e94d8dc3bae17c887521b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-capabilities"></a>기능 사용
 
@@ -58,7 +58,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **참고**: 일부 기능은 Mac용 Visual Studio에서 추가하고 관리할 수 없습니다. 다음 목록에는 지원되는 기능이 포함되어 있습니다.
+> 일부 기능은 Mac용 Visual Studio에서 추가하고 관리할 수 없습니다. 다음 목록에는 지원되는 기능이 포함되어 있습니다.
 >
 >* HealthKit 
 >* HomeKit 
@@ -198,7 +198,7 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
     ![Mac용 Visual Studio 프로젝트 옵션](images/image16.png)
 
 > [!IMPORTANT]
-> 참고: Entitlement.plist 파일에 자격 키를 설정하고 Info.plist 파일에 개인 키를 설정해야 할 수도 있습니다. 자격에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
+> Entitlement.plist 파일에 자격 키를 설정하고 Info.plist 파일에 개인 키를 설정해야 할 수도 있습니다. 자격에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
 <a name="nextsteps" />
 
@@ -220,7 +220,7 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
 -   프로비전 프로필과 App ID가 설치되어 있는지, 앱의 **Info.plist**(Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
 -   앱의 **Entitlements.plist** 파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
 -   info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
--   앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. **참고:** 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
+-   앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
 
 <a name="summary" />
 

@@ -1,6 +1,6 @@
 ---
-title: "Mac에 연결"
-description: "Visual Studio용 Xamarin.iOS는 개발자가 Visual Studio IDE를 사용하여 Windows 컴퓨터에서 iOS 응용 프로그램을 만들고 빌드하고 디버그할 수 있게 해줍니다. 이 가이드에서는 Visual Studio용 Xamarin.iOS에서 제공하는 기능과 Mac 빌드 호스트에 연결하는 방법을 설명합니다."
+title: Mac에 연결
+description: Visual Studio용 Xamarin.iOS는 개발자가 Visual Studio IDE를 사용하여 Windows 컴퓨터에서 iOS 응용 프로그램을 만들고 빌드하고 디버그할 수 있게 해줍니다. 이 가이드에서는 Visual Studio용 Xamarin.iOS에서 제공하는 기능과 Mac 빌드 호스트에 연결하는 방법을 설명합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4f7b55fa859473e84298151bc08878bc2161192
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connecting-to-the-mac"></a>Mac에 연결
 
@@ -39,7 +39,7 @@ Mac에 대한 연결은 브로커에 의해 제어되는 기능(예: iOS 디자�
 [![iOS 개발 워크플로](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio는 프로젝트를 빌드하는 별도의 MSBuild 프로세스를 시작합니다. 이 프로세스에서는 Mac에 대한 새 연결을 설정합니다. 즉, Visual Studio가 빌드할 때 Windows에서 Mac으로 이어지는 두 개의 SSH 연결이 있습니다. [명령줄](#commandline)에서 빌드하면 MSBuild 프로세스가 하나만 생성됩니다. 다이어그램을 단순화하기 위해 모든 연결을 화살표로 표시했습니다.
+> Visual Studio는 프로젝트를 빌드하는 별도의 MSBuild 프로세스를 시작합니다. 이 프로세스에서는 Mac에 대한 새 연결을 설정합니다. 즉, Visual Studio가 빌드할 때 Windows에서 Mac으로 이어지는 두 개의 SSH 연결이 있습니다. [명령줄](#commandline)에서 빌드하면 MSBuild 프로세스가 하나만 생성됩니다. 다이어그램을 단순화하기 위해 모든 연결을 화살표로 표시했습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -53,7 +53,7 @@ Visual Studio용 Xamarin.iOS는 놀라운 결과를 가져다 줍니다. 개발�
 #### <a name="compatibility"></a>호환성
 
 > [!IMPORTANT]
->  Windows 컴퓨터는 Mac이 연결되는 것과 동일한 Xamarin.iOS 버전을 사용해야 합니다. 다음과 같은 방법으로 이를 확인할 수 있습니다.                                                    
+> Windows 컴퓨터는 Mac이 연결되는 것과 동일한 Xamarin.iOS 버전을 사용해야 합니다. 다음과 같은 방법으로 이를 확인할 수 있습니다.                                                    
 >                                                                                                                 
 > - **Visual Studio 2015 이하**: Mac용 Visual Studio와 동일한 [업데이트 채널](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)에 있는지 확인합니다.
 >                                                                                                                 
@@ -113,7 +113,7 @@ Mac 빌드 호스트에 연결하는 두 가지 방법이 있는데,
 에이전트는 자격 증명을 사용하여 Mac에 대한 새 SSH 연결을 만듭니다. 연결이 성공하면 SSH 키가 생성되고 해당 Mac의 `authorized_keys` 파일에 [등록](#commandline)됩니다. 그 다음 연결부터는 에이전트가 사용자 이름 및 키 파일을 사용하여 가장 최근에 연결한 알려진 빌드 호스트에 연결합니다.
 
 > [!NOTE]
->  **참고**: 자격 증명을 입력할 때 _전체 이름_이 아닌 _사용자 이름_을 사용해야 합니다.  이것은 터미널에서 `whoami` 명령을 사용하여 확인할 수 있습니다.  예를 들어 아래 스크린샷에서 계정 이름은 **Amy Burns**가 아닌 **amyb**입니다.
+> 자격 증명을 입력할 때 _전체 이름_이 아닌 _사용자 이름_을 사용해야 합니다.  이것은 터미널에서 `whoami` 명령을 사용하여 확인할 수 있습니다.  예를 들어 아래 스크린샷에서 계정 이름은 **Amy Burns**가 아닌 **amyb**입니다.
 >
 > ![터미널 앱에서 사용자 이름 찾기](images/image5.png)
 

@@ -1,17 +1,17 @@
 ---
-title: "릴리스용 응용 프로그램 준비"
+title: 릴리스용 응용 프로그램 준비
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/21/2018
+ms.openlocfilehash: baaa40bc89a1ca6728189563c8350f9c9f011762
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 응용 프로그램 준비
 
@@ -40,13 +40,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="specify-the-application-icon"></a>응용 프로그램 아이콘 지정
 
-각각의 Xamarin.Android 응용 프로그램마다 응용 프로그램 아이콘을 지정하는 것이 좋습니다. 일부 응용 프로그램 마켓플레이스에서는 아이콘 없이 Android 응용 프로그램을 게시하지 못합니다.
-
-`Application` 특성의 `Icon` 속성은 Xamarin.Android 프로젝트의 응용 프로그램 아이콘을 지정하는 데 사용됩니다. 이 특성은 이 샘플 코드 조각에서처럼 **Properties\AssemblyInfo.cs** 파일에서 선언할 수 있습니다.
-
-```csharp
-[assembly: Application(Icon = "@drawable/icon")]
-```
+각각의 Xamarin.Android 응용 프로그램마다 응용 프로그램 아이콘을 지정하는 것이 좋습니다. 일부 응용 프로그램 마켓플레이스에서는 아이콘 없이 Android 응용 프로그램을 게시하지 못합니다. `Application` 특성의 `Icon` 속성은 Xamarin.Android 프로젝트의 응용 프로그램 아이콘을 지정하는 데 사용됩니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -61,6 +55,15 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 [![응용 프로그램 아이콘 설정](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
+
+이러한 예제에서 `@drawable/icon`은 **Resources/drawable/icon.png**(**.png** 확장명이 리소스 이름에 포함되지 않음)에 있는 아이콘 파일을 참조합니다. 이 특성은 이 샘플 코드 조각에서처럼 **Properties\AssemblyInfo.cs** 파일에서 선언할 수도 있습니다.
+
+```csharp
+[assembly: Application(Icon = "@drawable/icon")]
+```
+
+일반적으로 `using Android.App`은 **AssemblyInfo.cs**(`Application` 특성의 네임스페이스는 `Android.App`임)의 맨 위에 선언되지만, 아직 없는 경우 이 `using` 문을 추가해야 합니다.
+
 
 <a name="Versioning" />
 
