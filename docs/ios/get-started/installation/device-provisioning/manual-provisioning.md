@@ -1,6 +1,6 @@
 ---
-title: "수동 프로비전"
-description: "Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다."
+title: 수동 프로비전
+description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: ecda5823636a1b2d7e31a39e29f1d46cdf7118b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-provisioning"></a>수동 프로비전
 
@@ -85,7 +85,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 -----
 
 > [!WARNING]
-> **참고:** 인증서 및 연결된 키가 손실되면 엄청난 혼란을 겪을 수 있습니다. 기존 인증서를 해지해야 하고 연결된 모든 장치(임의 배포용으로 등록된 장치 포함)를 다시 프로비전해야 하기 때문입니다. 개발 인증서 설정이 완료된 후에는 백업 복사본을 내보내서 안전한 곳에 보관하십시오. 이 작업을 수행하는 방법에 대한 자세한 내용은 Apple 설명서 [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)(인증서 유지 관리) 가이드에서 Exporting and Importing Certificates and Profiles(인증서 및 프로필 내보내기 및 가져오기) 섹션을 참조하세요.
+> 인증서 및 연결된 키가 손실되면 엄청난 혼란을 겪을 수 있습니다. 기존 인증서를 해지해야 하고 연결된 모든 장치(임의 배포용으로 등록된 장치 포함)를 다시 프로비전해야 하기 때문입니다. 개발 인증서 설정이 완료된 후에는 백업 복사본을 내보내서 안전한 곳에 보관하십시오. 이 작업을 수행하는 방법에 대한 자세한 내용은 Apple 설명서 [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)(인증서 유지 관리) 가이드에서 Exporting and Importing Certificates and Profiles(인증서 및 프로필 내보내기 및 가져오기) 섹션을 참조하세요.
 
 <a name="provisioning" />
 
@@ -209,12 +209,12 @@ Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 �
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **참고:** Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
+> Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 > [!IMPORTANT]
-> **참고:** Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
+> Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
 
 -----
 

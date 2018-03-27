@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS: 자세히 알아보기"
-description: "두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다."
+title: 'Hello, iOS: 자세히 알아보기'
+description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS 자세히 알아보기
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 이제 `ViewController`가 스토리보드에서 이 뷰 컨트롤러와 연결된 콘텐츠 뷰 계층 구조의 상호 작용을 수행합니다. 다음으로는 뷰 수명 주기라고 하는 프로세스를 소개함으로써 뷰를 관리할 때 뷰 컨트롤러의 역할에 대해 알아봅니다.
 
 > [!NOTE]
-> **참고:** 사용자 상호 작용이 필요 없는 시각적 개체 전용 화면의 경우 **Properties Pad**에서 **Class** 속성을 비워 둘 수 있습니다. 이는 뷰 컨트롤러의 지원 클래스를 `UIViewController`의 기본 구현으로 설정하며, 이는 추가 사용자 지정 코드에서 계획하지 않은 경우 적절합니다.
+> 사용자 상호 작용이 필요 없는 시각적 개체 전용 화면의 경우 **Properties Pad**에서 **Class** 속성을 비워 둘 수 있습니다. 이는 뷰 컨트롤러의 지원 클래스를 `UIViewController`의 기본 구현으로 설정하며, 이는 추가 사용자 지정 코드에서 계획하지 않은 경우 적절합니다.
 
 ### <a name="view-lifecycle"></a>뷰 수명 주기
 
@@ -373,7 +373,7 @@ public override void ViewDidLoad ()
 
 Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가지 개념이 도입되었습니다. 이러한 개념은 다음과 같습니다.
 
-- **단추 텍스트 변경** – Phoneword 앱은 **Button**에서 `SetTitle`을 호출하여 새 텍스트 및 **단추**의 _컨트롤 상태_에 전달하여 **단추**의 텍스트를 변경하는 방법을 보여 줍니다. 예를 들어 다음 코드는 CallButton의 텍스트를 “Call”로 변경합니다.
+- **단추 텍스트 변경** – Phoneword 앱은 **Button**에서 `SetTitle`을 호출하여 새 텍스트 및 **단추**의 _컨트롤 상태_에 전달하여 **단추**의 텍스트를 변경하는 방법을 보여줍니다. 예를 들어 다음 코드는 CallButton의 텍스트를 “Call”로 변경합니다.
 
     ```csharp
     CallButton.SetTitle ("Call", UIControlState.Normal);
@@ -416,7 +416,7 @@ iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방�
 장치를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침이 나와 있습니다.
 
 > [!NOTE]
-> **참고:** 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 _서명 ID_가 필요합니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+> 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 _서명 ID_가 필요합니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 장치가 프로비전되고 나면, 다음 스크린샷에 표시된 것처럼 플러그 인하고 빌드 도구 모음에 있는 대상을 iOS 장치로 변경한 다음, **Start**(**Play**) 키를 눌러 배포할 수 있습니다.
 

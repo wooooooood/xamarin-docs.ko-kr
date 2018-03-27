@@ -1,18 +1,18 @@
 ---
-title: "Xamarin Android 장치 관리자"
-description: "Xamarin Android 장치 관리자(현재 미리 보기 상태)는 Google의 레거시 장치 관리자를 대체합니다. 이 가이드에서는 Xamarin Android 장치 관리자를 사용하여 Android 장치를 에뮬레이트하는 AVD(Android 가상 장치)를 만들고 구성하는 방법을 설명합니다. 물리적 장치에 의존하지 않고도 이러한 가상 장치를 사용하여 앱을 실행하고 테스트할 수 있습니다."
+title: Xamarin Android 장치 관리자
+description: Xamarin Android 장치 관리자(현재 미리 보기 상태)는 Google의 레거시 장치 관리자를 대체합니다. 이 가이드에서는 Xamarin Android 장치 관리자를 사용하여 Android 장치를 에뮬레이트하는 AVD(Android 가상 장치)를 만들고 구성하는 방법을 설명합니다. 물리적 장치에 의존하지 않고도 이러한 가상 장치를 사용하여 앱을 실행하고 테스트할 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/20/2018
+ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Xamarin Android 장치 관리자
 
@@ -308,7 +308,8 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 
 <a name="device-edit" />
- 
+
+
 ### <a name="edit-device"></a>장치 편집
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -415,6 +416,7 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 <a name="properties" />
  
+
 ## <a name="profile-properties"></a>프로필 속성
 
 **새 장치** 및 **장치 편집기** 화면에서 첫 번째 열에는 가상 장치 속성이 나열되고, 두 번째 열에는 각 속성의 해당 값이 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다. *하드웨어 프로필 속성* 및 해당 *AVD 속성*을 수정할 수 있습니다.
@@ -467,9 +469,9 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 ## <a name="troubleshooting"></a>문제 해결
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 다음은 일반적인 Xamarin Android 장치 관리자 문제 및 해결법에 대한 설명입니다.
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 ### <a name="android-sdk-in-non-standard-location"></a>표준이 아닌 위치의 Android SDK
 
@@ -501,19 +503,64 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 **user.config**를 이와 같이 변경한 후에는 Xamarin Android 장치 관리자를 실행할 수 있어야 합니다.
 
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+
+이 문제를 해결하려면 다음과 같이 합니다.
+
+1. Xamarin 장치 관리자에서 AVD를 선택합니다.
+
+2. 추가 옵션 메뉴에서 **탐색기에 표시**를 클릭합니다.
+
+3. **스냅숏 > default_boot**로 이동합니다.
+
+4. **snapshot.pb** 파일을 삭제합니다.
+
+    [![snapshot.pb 파일의 위치](xamarin-device-manager-images/win/36-delete-snapshot-sml.png)](xamarin-device-manager-images/win/36-delete-snapshot.png#lightbox)
+
+5. AVD를 다시 시작합니다. 
+
+이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+
+이 문제를 해결하려면 다음과 같이 합니다.
+
+1. Xamarin 장치 관리자에서 AVD를 선택합니다.
+
+2. 추가 옵션 메뉴에서 **Finder에 표시**를 클릭합니다.
+
+3. **스냅숏 > default_boot**로 이동합니다.
+
+4. **snapshot.pb** 파일을 삭제합니다.
+
+    [![snapshot.pb 파일의 위치](xamarin-device-manager-images/mac/36-delete-snapshot-sml.png)](xamarin-device-manager-images/mac/36-delete-snapshot.png#lightbox)
+
+5. AVD를 다시 시작합니다. 
+
+이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
+
+-----
+
+
 ### <a name="generating-a-bug-report"></a>버그 보고서 생성
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 위의 문제 해결 팁을 사용하여 해결할 수 없는 Xamarin Android 장치 관리자 관련 문제를 발견할 경우 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **버그 보고서 생성**을 선택하여 버그 보고서를 제출하세요.
 
 ![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](xamarin-device-manager-images/win/35-bug-report.png)
 
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-현재 Mac용 Visual Studio의 Xamarin Android 장치 관리자에 대해 알려진 문제/해결 방법은 없습니다. 
-
-### <a name="generating-a-bug-report"></a>버그 보고서 생성
-
-문제를 발견할 경우 **도움말 > 버그 보고서 생성**을 클릭하여 버그 보고서를 제출하세요.
+위의 문제 해결 팁을 사용하여 해결할 수 없는 Xamarin Android 장치 관리자 관련 문제를 발견할 경우 **도움말 > 버그 보고서 생성**을 클릭하여 버그 보고서를 제출하세요.
 
 ![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](xamarin-device-manager-images/mac/35-bug-report.png)
 

@@ -1,16 +1,16 @@
 ---
-title: "환경"
+title: 환경
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7489c2fe38e8433811c5f298296baebacf1c0727
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c46d3aa151d4a596ca3da881a3c4e5e38bb41cbd
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="environment"></a>환경
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="permanent-environment-variables"></a>영구 환경 변수
 
-영구 환경 변수는 mtouch 패키징 도구에 추가 인수를 지정하여 설정됩니다. 이러한 환경 변수는 실행 파일로 컴파일되며, 앱이 Xamarin Studio에서 시작되지 않더라도 설정됩니다.
+영구 환경 변수는 mtouch 패키징 도구에 추가 인수를 지정하여 설정됩니다. 이러한 환경 변수는 실행 파일로 컴파일되며, 앱이 Mac용 Visual Studio에서 시작되지 않더라도 설정됩니다.
 
 ## <a name="example"></a>예
 

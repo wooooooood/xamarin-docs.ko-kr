@@ -1,6 +1,6 @@
 ---
-title: "디버깅"
-description: "Mac용 Visual Studio 또는 Visual Studio에서 기본 제공 디버거를 사용하여 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다."
+title: 디버깅
+description: Mac용 Visual Studio 또는 Visual Studio에서 기본 제공 디버거를 사용하여 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a449d692a2761f59135930d40ad3708d6ef2e9b9
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="debugging"></a>디버깅
 
@@ -22,7 +22,7 @@ C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual
 
 
 > [!NOTE]
-> **중요:** 디버그 모드에서 응용 프로그램을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 응용 프로그램을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
+> 디버그 모드에서 응용 프로그램을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 응용 프로그램을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
 
 Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 장치에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다.
 

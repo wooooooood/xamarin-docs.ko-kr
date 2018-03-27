@@ -1,6 +1,6 @@
 ---
-title: "시스템 요구 사항"
-description: "Xamarin 사용을 위한 필수 구성 요소"
+title: 시스템 요구 사항
+description: Xamarin 사용을 위한 필수 구성 요소
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: 2a2b5a1135a4d08c2a89caf0fbf4b2cdb1ac624c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4a53053ebef88bf831b7749fa82f3444ecc26723
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -47,7 +47,7 @@ Xamarin 개발에 Mac 컴퓨터를 사용하려면 다음 소프트웨어/SDK �
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
-> 참고: Xcode는 [developer.apple.com](https://developer.apple.com/xcode/download/) 또는 Mac App Store를 통해 설치(및 업데이트)할 수 있습니다.
+> Xcode는 [developer.apple.com](https://developer.apple.com/xcode/download/) 또는 Mac App Store를 통해 설치(및 업데이트)할 수 있습니다.
 
 ### <a name="testing--debugging-on-macos"></a>masOS에서 테스트 및 디버깅
 

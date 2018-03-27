@@ -1,6 +1,6 @@
 ---
-title: "Hello, Android: 빠른 시작"
-description: "두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고, Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다."
+title: 'Hello, Android: 빠른 시작'
+description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고, Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 58197ae9f7c05ab9a838555ba5ab496550a16bce
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -536,5 +536,5 @@ namespace Phoneword
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin Andrid 앱 아이콘(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
+- [Xamarin Android 앱 아이콘(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword(샘플)](https://developer.xamarin.com/samples/monodroid/Phoneword)

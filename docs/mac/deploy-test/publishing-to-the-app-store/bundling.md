@@ -1,6 +1,6 @@
 ---
-title: "Mac 앱 스토어용으로 묶기"
-description: "이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 묶는 방법을 안내합니다."
+title: Mac 앱 스토어용으로 묶기
+description: 이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 묶는 방법을 안내합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3f94b448539b2e4073c7d8a1092df066e484dfc
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Mac 앱 스토어용 번들
 
 이 섹션에서는 Mac용 Visual Studio를 사용하여 Mac 앱 스토어에 릴리스할 응용 프로그램을 빌드하는 기본 사항을 설명합니다. 추가 기능(예: iCloud 액세스 및 푸시 알림)에 따라 이 문서의 범위를 벗어나는 추가 설치가 필요할 수 있습니다.
 
 > [!NOTE]
->  **참고**: 이 섹션을 시작하려면 Mac 앱 스토어용으로 빌드할 프로덕션 프로비전 프로필이 있어야 합니다. 필요한 프로비전 프로필을 만드는 방법에 대한 이 문서의 앞부분의 지침을 참조하세요.
+> 개발자는 이 섹션을 시작하기에 앞서 Mac 앱 스토어용으로 빌드할 프로덕션 프로비저닝 프로필이 있어야 합니다. 필요한 프로비전 프로필을 만드는 방법에 대한 이 문서의 앞부분의 지침을 참조하세요.
 
 ## <a name="code-signing-options"></a>코드 서명 옵션
 

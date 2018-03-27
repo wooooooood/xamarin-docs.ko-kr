@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS
-description: "두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다."
+description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 빠른 시작
 
@@ -90,7 +90,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
   ![](hello-ios-quickstart-images/image8new.png "레이블을 가운데에 있는 디자인 화면으로 끌기")
 
   > [!NOTE]
-> **참고:** 언제든지 **보기 > 패드**로 이동하여 **Properties Pad** 또는 **도구 상자**를 가져올 수 있습니다.
+  > 언제든지 **보기 > 패드**로 이동하여 **Properties Pad** 또는 **도구 상자**를 가져올 수 있습니다.
 
 9. *컨트롤 끌기*(컨트롤 주위에 있는 원)의 핸들을 잡고 레이블을 넓게 만듭니다.
 
@@ -268,9 +268,8 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
   ![](hello-ios-quickstart-images/image27new.png "시작 누르기")
 
-
   > [!NOTE]
-> **참고:** 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 *서명 ID*가 필요할 수 있습니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+  > 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 *서명 ID*가 필요할 수 있습니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 28. 그러면 iOS 시뮬레이터 내에서 응용 프로그램이 시작됩니다.
 
@@ -289,7 +288,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 **참고**: 이 연습에서는 Windows 10 Virtual Machine에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
 
 > [!NOTE]
-> **이 연습을 진행하기 전에** 이미 Visual Studio에서 Mac에 _연결되어 있어야 합니다_. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
+> 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
 
 1. **시작** 메뉴에서 Visual Studio를 시작합니다.
 
@@ -333,7 +332,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
   ![](hello-ios-quickstart-images/vs-image10.png "레이블의 텍스트 속성을 'Phoneword 입력'으로 변경")
 
   > [!NOTE]
-> **참고:** 언제든지 **보기** 메뉴로 이동하여 **속성** 또는 **도구 상자**를 가져올 수 있습니다.
+  > 언제든지 **보기** 메뉴로 이동하여 **속성** 또는 **도구 상자**를 가져올 수 있습니다.
 
 
 9. 도구 상자 내에서 "텍스트 필드"를 검색하고, **텍스트 필드**를 **도구 상자**에서 디자인 화면으로 끌어서 **레이블** 아래에 놓습니다. **텍스트 필드**가 **레이블**과 같은 너비가 될 때까지 조정합니다.
@@ -377,7 +376,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
   ![](hello-ios-quickstart-images/vs-image19.png "PhoneTranslator라는 새 클래스 추가")
 
   > [!IMPORTANT]
-> 아이콘에 C#이 있는 '클래스' 템플릿을 선택했는지 확인합니다. 그렇지 않으면 이 새 클래스를 참조하지 못할 수 있습니다.
+  > 아이콘에 C#이 있는 '클래스' 템플릿을 선택했는지 확인합니다. 그렇지 않으면 이 새 클래스를 참조하지 못할 수 있습니다.
 
 
 17. 그러면 새 C# 클래스가 만들어집니다. 모든 템플릿 코드를 제거하고 다음 코드로 바꿉니다.

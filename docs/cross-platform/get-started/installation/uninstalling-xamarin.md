@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 제거"
-description: "컴퓨터에서 Xamarin 제품 제거"
+title: Xamarin 제거
+description: 컴퓨터에서 Xamarin 제품 제거
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 9b7738736995835ebb6da68d32bdfbec868e73cc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -69,13 +69,14 @@ rm -rf ~/Library/XamarinStudio-*
 Mono는 Microsoft .NET Framework의 오픈 소스 구현으로서 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 등 모든 Xamarin 제품에서 C#으로 이러한 플랫폼을 개발하는 데 사용됩니다.
 
 > [!IMPORTANT]
-> 참고: Mono를 사용하는 Xamarin 이외에도 Unity와 같은 응용 프로그램이 있습니다. Mono를 제거하기 전에 Mono에 대한 다른 종속성이 없는지 확인하세요.
+> Mono를 사용하는 Xamarin 이외에도 Unity와 같은 응용 프로그램이 있습니다. Mono를 제거하기 전에 Mono에 대한 다른 종속성이 없는지 확인하세요.
 
 컴퓨터에서 Mono 프레임워크를 제거하려면 터미널에서 다음 명령을 실행합니다.
 
 ```bash
 sudo rm -rf /Library/Frameworks/Mono.framework
 sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+sudo rm /etc/paths.d/mono-commands
 ```
 
 <a name="uninstallandroid" />
@@ -257,7 +258,7 @@ Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 
 [![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Visual Studio 완전히 제거")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
-> **경고:** 릴리스 및 미리 보기 버전 등 Visual Studio의 두 개(이상) 인스턴스를 나란히(SxS) 설치한 경우 하나의 인스턴스를 제거하면 다음을 비롯한 다른 Visual Studio 인스턴스에서 일부 Xamarin 기능이 제거될 수 있습니다.
+> 릴리스 및 미리 보기 버전 등 Visual Studio의 두 개(이상) 인스턴스를 나란히(SxS) 설치한 경우 하나의 인스턴스를 제거하면 다음을 비롯한 다른 Visual Studio 인스턴스에서 일부 Xamarin 기능이 제거될 수 있습니다.
 >
 > - Xamarin Profiler
 > - Xamarin Workbooks/검사기

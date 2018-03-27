@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Android 환경"
+title: Xamarin.Android 환경
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 66f4dcf14cd179795e9a23bccabe4289d74c7c5b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -36,7 +36,7 @@ Xamarin.Android 4.6부터 시스템 속성 및 환경 변수는 모두 앱별로
 
 *key*가 대문자로 시작될 경우 *key*는 환경 변수로 취급되며, 프로세스 시작 시 지정된 *value*로 환경 변수를 설정하기 위해 **setenv**(3)가 사용됩니다.
 
-*key*가 소문자로 시작하는 경우 *key*가 Android 시스템 속성으로 취급되고 *value*는 *default value*가 됩니다. Android 시스템 속성 서버에서 Xamarin.Android 실행 동작을 제어하는 Android 시스템 속성이 먼저 조회되고, 값이 없을 경우 환경 파일에 지정된 값이 사용됩니다. 이는 진단을 위해 환경 파일에서 제공되는 값을 재정의할 때 `adb shell setprop`를 사용하도록 허용하기 위한 것입니다.
+*key*가 소문자로 시작하는 경우 *key*가 Android 시스템 속성으로 취급되고 *value*는 *default value*가 됩니다. Android 시스템 속성 저장소에서 Xamarin.Android 실행 동작을 제어하는 Android 시스템 속성이 먼저 조회되고, 값이 없을 경우 환경 파일에 지정된 값이 사용됩니다. 이는 진단을 위해 환경 파일에서 제공되는 값을 재정의할 때 `adb shell setprop`를 사용하도록 허용하기 위한 것입니다.
 
 ## <a name="xamarinandroid-environment-variables"></a>Xamarin.Android 환경 변수
 
@@ -45,9 +45,9 @@ Xamarin.Android는 `adb shell setprop debug.mono.env` 또는 `$(AndroidEnvironme
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-[HttpMessageHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpmessagehandler(v=vs.118).aspx)에서 상속되어야 하며 [`HttpClient()` 기본 생성자](https://msdn.microsoft.com/en-us/library/hh138077(v=vs.118).aspx)로 생성되는 어셈블리에 정규화된 형식.
+[HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1)에서 상속되어야 하며 [`HttpClient()` 기본 생성자](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor)로 생성되는 어셈블리에 정규화된 형식.
 
-Xamarin.Android 6.1에서는 이 환경 변수가 기본적으로 설정되지 않으며 [HttpClientHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpclienthandler(v=vs.118).aspx)가 사용됩니다.
+Xamarin.Android 6.1에서는 이 환경 변수가 기본적으로 설정되지 않으며 [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)가 사용됩니다.
 
 또는 `Xamarin.Android.Net.AndroidClientHandler` 값을 지정하여 네트워크 액세스에 Android에서 지원하는 경우 TLS 1.2의 사용을 *허가*하는 [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)을 사용할 수 있습니다.
 

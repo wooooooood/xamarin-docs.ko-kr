@@ -1,5 +1,5 @@
 ---
-title: "디버깅 가능한 특성"
+title: 디버깅 가능한 특성
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 65037029d01d499421fd825f72347ae1bebd9966
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fe516a9780b8b1cdc478a49fe3b6963097649a80
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="debuggable-attribute"></a>디버깅 가능한 특성
 
@@ -22,12 +22,12 @@ Android를 디버깅이 가능하도록 JDWP(Java Debug Wire Protocol)를 지원
 JDWP는 Android 응용 프로그램에서 `android:debuggable` 특성 값이 될 수 있습니다. Xamarin.Android는 이러한 특성을 설정할 수 있는 다음과 같은 방법을 제공합니다.
 
 1.  `AndroidManifext.xml` 파일을 만들어 `android:debuggable` 특성 설정.
-1.  `.CS` 파일에 `ApplicationAttribute` 포함(예: `[assembly: Application(Debuggable=false)]`).
+2.  `.CS` 파일에 `ApplicationAttribute` 포함(예: `[assembly: Application(Debuggable=false)]`).
 
 
 `AndroidManifest.xml` 및 `ApplicationAttribute`가 둘 다 있을 경우 `AndroidManifest.xml`의 콘텐츠가 `ApplicationAttribute`에서 지정하는 것보다 우선합니다.
 
-`AndroidManifest.xml` 및 `ApplicationAttribute`가 둘 다 없을 경우 `android:debuggable` 특성의 기본값은 디버그 기호의 생성 여부에 따라 달라집니다. 디버그 기호가 있을 경우 Xamarin.Android가 `android:debuggable` 특성을 `true`로 설정합니다.
+`AndroidManifest.xml` 또는 `ApplicationAttribute`가 둘 다 없을 경우 `android:debuggable` 특성의 기본값은 디버그 기호의 생성 여부에 따라 달라집니다. 디버그 기호가 있을 경우 Xamarin.Android가 `android:debuggable` 특성을 `true`로 설정합니다.
 
 `android:debuggable` 특성 값이 반드시 빌드 구성에 따라 달라지는 것은 아닙니다. 릴리스 빌드는 `android:debuggable` 특성이 true로 설정되어 있을 수 있습니다.
 

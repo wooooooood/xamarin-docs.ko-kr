@@ -1,6 +1,6 @@
 ---
-title: "임시 배포"
-description: "이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다."
+title: 임시 배포
+description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ad-hoc-distribution"></a>임시 배포
 
@@ -39,7 +39,7 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 다음 섹션에서는 배포 인증서 및 배포 프로비전 프로필을 사용하여 설정하는 방법에 대해 설명합니다.
 
 > [!NOTE]
->  참고: 팀 에이전트 및 관리자만 배포 인증서 및 프로비전 프로필을 만들 수 있습니다.
+> 팀 에이전트 및 관리자만 배포 인증서 및 프로비저닝 프로필을 만들 수 있습니다.
 
 <a name="createcertificate" />
 

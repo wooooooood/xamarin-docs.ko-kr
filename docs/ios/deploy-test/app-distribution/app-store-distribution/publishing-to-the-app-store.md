@@ -1,6 +1,6 @@
 ---
-title: "앱 스토어에 게시"
-description: "이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다."
+title: 앱 스토어에 게시
+description: 이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
@@ -8,15 +8,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef8fafb923dcad936ce0a049e715cdd163ea7222
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
 
-_이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다._
+_이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다._
 
 Apple은 응용 프로그램을 모든 iOS 장치에 배포하기 위해 *앱 스토어*를 통해 앱을 게시해야 하므로 앱 스토어를 iOS 응용 프로그램을 위한 원 스톱 쇼핑 위치로 만들었습니다. 여러 유형의 응용 프로그램 개발자는 스토어에 있는 50만 개가 넘는 응용 프로그램과 함께 이 단일 배포 지점에서 엄청난 성공을 거두었습니다. 앱 스토어는 턴키 솔루션으로, 앱 개발자에게 배포 및 결제 시스템을 모두 제공합니다.
 
@@ -185,7 +185,7 @@ Xamarin.iOS 응용 프로그램을 올바르게 구성했으므로 검토 및 �
 
 
 > [!NOTE]
-> 참고: 이전의 _앱 스토어_ 및 _임시_ 구성은 이제 모든 Mac용 Visual Studio 템플릿 프로젝트에서 제거되었지만, 이전 프로젝트에는 이러한 구성이 여전히 포함되어 있습니다. 이 경우 위 목록의 1단계에서 **앱 스토어 | 장치** 구성을 계속 사용할 수 있습니다.
+> 이전의 _앱 스토어_ 및 _임시_ 구성은 이제 모든 Mac용 Visual Studio 템플릿 프로젝트에서 제거되었지만, 이전 프로젝트에는 이러한 구성이 여전히 포함되어 있습니다. 이 경우 위 목록의 1단계에서 **앱 스토어 | 장치** 구성을 계속 사용할 수 있습니다.
 
 ### <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
@@ -309,7 +309,7 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 ## <a name="submitting-your-app-to-apple"></a>Apple에 앱 제출
 
 > [!NOTE]
-> 참고: Apple은 최근에 iOS 응용 프로그램에 대한 확인 프로세스를 변경했으며 `iTunesMetadata.plist`가 IPA에 포함된 앱을 거부할 수 있습니다. `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"` 오류가 발생하면 [여기](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)서 설명하는 해결 방법으로 문제를 해결해야 합니다.
+> Apple은 최근에 iOS 응용 프로그램에 대한 확인 프로세스를 변경했으며 `iTunesMetadata.plist`가 IPA에 포함된 앱을 거부할 수 있습니다. `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"` 오류가 발생하면 [여기](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)서 설명하는 해결 방법으로 문제를 해결해야 합니다.
 
 배포 빌드가 완료되면 iOS 응용 프로그램을 Apple에 제출하여 앱 스토어에서 검토하고 릴리스할 준비가 됩니다.
 
