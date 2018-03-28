@@ -1,84 +1,98 @@
 ---
-title: "사용자 프로필"
+title: 사용자 프로필
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/21/2017
-ms.openlocfilehash: cf8230c5832104fd17b14532f1d32822a1fc0097
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/22/2018
+ms.openlocfilehash: 1407266f987b36b72e32a82c8f6f43b4a734af5d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-profile"></a>사용자 프로필
 
-Android 사용 하 여 열거 연락처에 지원 되는 `ContactsContract` API 수준 5 이후 공급자입니다. 예를 들어 목록에 연락처가 사용 하 여 단순하게는 `ContactContracts.Contacts` 다음 코드에 나와 있는 것 처럼 클래스:
+Android 사용 하 여 열거 연락처에 지원 되는 [ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/) API 수준 5 이후 공급자입니다. 예를 들어 연락처 나열 작업은을 사용 하 여는 [ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/) 다음 코드 예제와 같이 클래스:
 
 ```csharp
+// Get the URI for the user's contacts:
 var uri = ContactsContract.Contacts.ContentUri;
-           
+
+// Setup the "projection" (columns we want) for only the ID and display name:
 string[] projection = {
-    ContactsContract.Contacts.InterfaceConsts.Id,
+    ContactsContract.Contacts.InterfaceConsts.Id, 
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
-           
-var cursor = ManagedQuery (uri, projection, null, null, null);
-           
-if (cursor.MoveToFirst ()) {
-    do {
-        Console.WriteLine ("Contact ID: {0}, Contact Name: {1}",
-            cursor.GetString (cursor.GetColumnIndex (projection [0])),
-            cursor.GetString (cursor.GetColumnIndex (projection [1])));
-                   
-    } while (cursor.MoveToNext());
+
+// Use a CursorLoader to retrieve the user's contacts data:
+CursorLoader loader = new CursorLoader(this, uri, projection, null, null, null);
+ICursor cursor = (ICursor)loader.LoadInBackground();
+
+// Print the contact data to the console if reading back succeeds:
+if (cursor != null)
+{
+    if (cursor.MoveToFirst())
+    {
+        do
+        {
+            Console.WriteLine("Contact ID: {0}, Contact Name: {1}",
+                               cursor.GetString(cursor.GetColumnIndex(projection[0])),
+                               cursor.GetString(cursor.GetColumnIndex(projection[1])));
+        } while (cursor.MoveToNext());
+    }
 }
 ```
 
-Android 4 (API 수준 14) 새 `ContactsContact.Profile` 클래스는 ContactsContract 공급자를 통해 사용할 수 있습니다. `ContactsContact.Profile` 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터를 포함 하는 장치의 소유자에 대 한 개인 프로필에 대 한 액세스를 제공 합니다.
+Android 4 (API 수준 14)로 시작는 [ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/) 클래스를 통해 사용할 수는 `ContactsContract` 공급자입니다. `ContactsContact.Profile` 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터를 포함 하는 장치의 소유자에 대 한 개인 프로필에 대 한 액세스를 제공 합니다.
 
 
 ## <a name="required-permissions"></a>필요한 권한
 
-읽기 및 쓰기 연락처 데이터를 응용 프로그램 요청 해야는 `Read_Contacts` 및 `Write_Contacts` 사용 권한, 각각. 또한 읽고 사용자 프로필을 편집 응용 프로그램 요청 하는 `Read_Profile` 및 `Write_Profile` 사용 권한.
+읽기 및 쓰기 연락처 데이터를 응용 프로그램 요청 해야는 `READ_CONTACTS` 및 `WRITE_CONTACTS` 사용 권한, 각각.
+또한 읽고 사용자 프로필을 편집 응용 프로그램 요청 하는 `READ_PROFILE` 및 `WRITE_PROFILE` 사용 권한.
 
 
 ## <a name="updating-profile-data"></a>프로필 데이터 업데이트
 
-이러한 사용 권한을 설정한 후 응용 프로그램 정상 Android 기술을 사용해 수 사용자 프로필 데이터와 상호 작용 합니다. 예를 들어, 것 이라고 하는 프로필의 표시 이름을 업데이트 하려면 `ContentResolver.Update` 와 `Uri` 통해 검색는 `ContactsContract.Profile.ContentRawContactsUri` 속성을 아래와 같이:
+이러한 사용 권한을 설정한 후 응용 프로그램 정상 Android 기술을 사용해 수 사용자 프로필 데이터와 상호 작용 합니다. 예를 들어 프로필의 표시 이름을 업데이트 하려면 호출 [ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update) 와 `Uri` 통해 검색는 [ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/) 속성을 표시 된 것 처럼 아래:
 
 ```csharp
 var values = new ContentValues ();
-          
-values.Put (ContactsContract.Contacts.InterfaceConsts.DisplayName,
-    "John Doe");
-           
-ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri,
-    values, null, null);
-```
+values.Put (ContactsContract.Contacts.InterfaceConsts.DisplayName, "John Doe");
 
+// Update the user profile with the name "John Doe":
+ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, null, null);
+```
 
 ## <a name="reading-profile-data"></a>프로필 데이터 읽기
 
-쿼리를 발급 하는 `ContactsContact.Profile.ContentUri` 읽기 프로필 데이터를 다시 합니다. 예를 들어 다음 코드는 사용자 프로필의 표시 이름을 다음과 같습니다.
+쿼리를 발급 하는 [ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/) 읽기 프로필 데이터를 다시 합니다. 예를 들어 다음 코드는 사용자 프로필의 표시 이름을 다음과 같습니다.
 
 ```csharp
+// Read the profile
+var uri = ContactsContract.Profile.ContentUri;
+
+// Setup the "projection" (column we want) for only the display name:
 string[] projection = {
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
-           
-var cursor = ManagedQuery (uri, projection, null, null, null);
 
-if (cursor.MoveToFirst ()) {
-    Console.WriteLine(
-        cursor.GetString (cursor.GetColumnIndex (projection [0])));
+// Use a CursorLoader to retrieve the data:
+CursorLoader loader = new CursorLoader(this, uri, projection, null, null, null);
+ICursor cursor = (ICursor)loader.LoadInBackground();
+if (cursor != null)
+{
+    if (cursor.MoveToFirst ())
+    {
+        Console.WriteLine(cursor.GetString (cursor.GetColumnIndex (projection [0])));
+    }
 }
 ```
 
+## <a name="navigating-to-the-user-profile"></a>사용자 프로필 탐색
 
-## <a name="navigating-to-the-people-app"></a>사용자 응용 프로그램으로 이동
-
-마지막으로, Android 4와 함께 제공 되는 새 사용자 앱에서 사용자 프로필을 이동 하려면 단순히 만듭니다와 의도 `ActionView` 동작 및 `ContactsContract.Profile.ContentUri`에 전달 된 `StartActivity` 다음과 같이 메서드:
+마지막으로, 사용자 프로필을 이동 하려면와 의도 만듭니다는 `ActionView` 동작 및 `ContactsContract.Profile.ContentUri` 다음에 전달 된 `StartActivity` 다음과 같이 메서드:
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
@@ -86,11 +100,11 @@ var intent = new Intent (Intent.ActionView,
 StartActivity (intent);
 ```
 
-위의 코드를 실행할 때 다음 스크린샷에 표시 된 것 처럼 People 앱 사용자 프로필에 로드 됩니다.
+위의 코드를 실행할 때 다음 스크린샷에 표시 된 것 처럼 사용자 프로필이 표시 됩니다.
 
-[![John Doe 사용자 프로필을 표시 하는 사용자 스크린샷 응용 프로그램](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png#lightbox)
+[![John Doe 사용자 프로필을 표시 하는 프로필의 스크린 샷](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-사용자 프로필을 가진 작업 이제 Android의 다른 데이터와 상호 작용 유사 하며 장치 개인 설정 된 추가 수준을 제공 합니다.
+사용자 프로필을 가진 작업은 Android의 다른 데이터와 상호 작용와 장치 개인 설정의 추가 수준을 제공 합니다.
 
 
 

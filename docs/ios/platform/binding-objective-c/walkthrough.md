@@ -1,6 +1,6 @@
 ---
-title: "연습: 바인딩 iOS Objective C 라이브러리"
-description: "이 문서는 기존의 Objective C 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실전 연습을 제공 합니다. Objective C 정적 라이브러리를 컴파일하고, 바인딩, Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 항목을 설명 합니다."
+title: '연습: 바인딩 iOS Objective C 라이브러리'
+description: 이 문서는 기존의 Objective C 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실전 연습을 제공 합니다. Objective C 정적 라이브러리를 컴파일하고, 바인딩, Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 항목을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 44ed651413d66866f131a294158525440278b291
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: 바인딩 iOS Objective C 라이브러리
 
@@ -94,7 +94,7 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
 이 연습에서는 다음 단계를 설명 합니다.
 
 - **[정적 라이브러리 만들기](#Creating_A_Static_Library)**  -이 단계에서는 정적 라이브러리를 만드는 **InfColorPicker** Objective C 코드입니다. 정적 라이브러리 갖습니다는 `.a` 파일 확장명이 및 라이브러리 프로젝트의.NET 어셈블리에 포함 됩니다.
-- **[Xamarin.iOS 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)**  -정적 라이브러리, 있으면 Xamarin.iOS 바인딩 프로젝트를 만들려면 사용 됩니다. 방금 만든 정적 라이브러리 및 Objective-c API 사용할 수 있는 방법을 설명 하는 C# 코드의 형태로 메타 데이터의 바인딩 프로젝트 구성 됩니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 에서는  **[목표 Sharpie](#Using_Objective_Sharpie)**  와 API 정의 만드는 데 도움이 되도록 합니다.
+- **[Xamarin.iOS 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)**  -정적 라이브러리, 있으면 Xamarin.iOS 바인딩 프로젝트를 만들려면 사용 됩니다. 방금 만든 정적 라이브러리 및 Objective-c API 사용할 수 있는 방법을 설명 하는 C# 코드의 형태로 메타 데이터의 바인딩 프로젝트 구성 됩니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 에서는 **[목표 Sharpie](#Using_Objective_Sharpie)** 와 API 정의 만드는 데 도움이 되도록 합니다.
 - **[API 정의 표준화](#Normalize_the_API_Definitions)**  -목표 Sharpie 않습니다 하는 데 도와, 계획을 유지 하지만 모든 작업을 수행할 수 없습니다. 사용 하려면 먼저 API 정의를 확인 해야 하는 일부 변경 내용에 설명 합니다.
 - **[바인딩 라이브러리를 사용 하 여](#Using_the_Binding)**  -마지막으로,이 새로 생성된 된 바인딩의 프로젝트를 사용 하는 방법을 보여 주는 Xamarin.iOS 응용 프로그램을 만들겠습니다.
 
@@ -159,7 +159,7 @@ InfColorPicker 프로젝트를 다운로드 해 보겠습니다 [GitHub](https:/
 
     [![](walkthrough-images/image16b.png "링크 이진 파일과 라이브러리 섹션을 확장")](walkthrough-images/image16b.png#lightbox)
 
-13. 사용 하 여는  **+**  단추 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있도록 대화 상자를 엽니다.
+13. 사용 하 여는 **+** 단추 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있도록 대화 상자를 엽니다.
 
     [![](walkthrough-images/image16c.png "위에 나열 된 필수 프레임 프레임 워크 추가")](walkthrough-images/image16c.png#lightbox)
 
@@ -183,7 +183,7 @@ fat를 이진으로 만드는 작업은 다음 3 단계 프로세스:
 
 이 세 단계는 보다 간단 하 고 Objective C 라이브러리 업데이트를 받을 때 또는 버그 수정 해야 하는 경우 나중에 반복 하는 일을 할 수 있습니다. 이러한 단계를 자동화 하려는 경우 향후 유지 관리 및 iOS 바인딩 프로젝트의 지원을 간소화 됩니다.
 
-많은 도구 등의 작업-는 셸 스크립트 자동화를 사용할 수 있는 [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/Microsoft.Build), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치할 것도 작성,이 연습에 사용 될 빌드 시스템 하도록 설치. 다음은 한 **메이크파일** iOS 장치 및 모든 라이브러리에 대 한 시뮬레이터에서 사용할 수 있는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
+많은 도구 등의 작업-는 셸 스크립트 자동화를 사용할 수 있는 [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치할 것도 작성,이 연습에 사용 될 빌드 시스템 하도록 설치. 다음은 한 **메이크파일** iOS 장치 및 모든 라이브러리에 대 한 시뮬레이터에서 사용할 수 있는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild

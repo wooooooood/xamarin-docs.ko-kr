@@ -1,6 +1,6 @@
 ---
-title: "Android SDK Tools에 대한 변경 내용"
-description: "설치 하는 API 수준 및 AVDs Android SDK가 관리 하는 방법을 변경 합니다."
+title: Android SDK Tools에 대한 변경 내용
+description: 설치 하는 API 수준 및 AVDs Android SDK가 관리 하는 방법을 변경 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 69e9f08870a01c056951700978d07277af5edfa8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a16aa3704d9e0a63cfabde4b620452e7e2a5bf57
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
@@ -20,7 +20,7 @@ _설치 하는 API 수준 및 AVDs Android SDK가 관리 하는 방법을 변경
 
 ## <a name="changes-to--android-sdk-tooling"></a>Android SDK 도구에 대 한 변경
 
-Google Android 용 SDK 도구의 최신 버전에서 새로운 in favour of 기존 AVD 및 SDK 관리자가 제거 _명령줄 인터페이스_ (CLI) 도구입니다. 전자 **android** 프로그램 제거 되었습니다 및 Android SDK 도구 버전을 지 나 GUI (그래픽 사용자 인터페이스) 관리자 Mac 및 이전 버전의 Xamarin for Visual Studio 용 Visual Studio에서 작동 하지 것입니다.
+최신 버전의 Android 용 SDK 도구, Google은 새 CLI (명령줄 인터페이스) 도구 in favour of 기존 AVD 및 SDK 관리자를 제거 합니다. 전자 **android** 프로그램을 제거 하 고 Mac 및 이전 버전의 Xamarin for Visual Studio 용 Visual Studio에서 GUI (그래픽 사용자 인터페이스) 관리자는 더 이상 작동 하지 이전 버전과 25.2.5 Android SDK 도구입니다.
 
 
 ![Visual Studio에서 android IDE 메뉴](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -50,7 +50,7 @@ and tools\bin\avdmanager.bat
 
 **에 추가 되었습니다:** Android SDK 도구 25.3.0 (2017 년 3 월) 이상.
 
-라는 새 프로그램은 **avdmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 AVD의 Google Android 에뮬레이터에 대 한 유지 관리 하는 데 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)합니다.
+라는 새 프로그램은 **avdmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 AVDs Google Android 에뮬레이터에 대 한 유지 하기 위해 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)합니다.
 
 ### <a name="downgrading"></a>다운 그레이드
 
@@ -65,6 +65,6 @@ and tools\bin\avdmanager.bat
 
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
 - [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)
-- [SDK 도구 릴리스 정보 (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

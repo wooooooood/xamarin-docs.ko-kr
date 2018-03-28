@@ -1,6 +1,6 @@
 ---
-title: "IOS 용 Xamarin 디자이너와 사용자 지정 컨트롤을 사용 하는 연습-"
-description: "이 문서에서는 사용자 지정 컨트롤을 만들고 iOS 용 Xamarin 디자이너에서 사용 하는 방법을 보여 주는 단계별 연습을 제공 합니다. 디자이너의 도구 상자에서 사용할 수 있는 컨트롤을 끌어서/삭제 보기로 정도의 만들어야 하는 방법을 보여 줍니다. 또한 디자인 타임에 설정 될 수 있는 속성을 만드는 방법 뿐만 아니라 디자인 타임 및 런타임, 올바르게 렌더링 하도록 컨트롤을 구현 하는 방법을 보여 줍니다."
+title: IOS 용 Xamarin 디자이너와 사용자 지정 컨트롤을 사용 하는 연습-
+description: 이 문서에서는 사용자 지정 컨트롤을 만들고 iOS 용 Xamarin 디자이너에서 사용 하는 방법을 보여 주는 단계별 연습을 제공 합니다. 디자이너의 도구 상자에서 사용할 수 있는 컨트롤을 끌어서/삭제 보기로 정도의 만들어야 하는 방법을 보여 줍니다. 또한 디자인 타임에 설정 될 수 있는 속성을 만드는 방법 뿐만 아니라 디자인 타임 및 런타임, 올바르게 렌더링 하도록 컨트롤을 구현 하는 방법을 보여 줍니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너와 사용자 지정 컨트롤을 사용 하는 연습-
 
@@ -32,15 +32,11 @@ IOS 용 Xamarin 디자이너는 Windows에서 Mac 및 Visual Studio 2015 및 201
 
 1. 새 솔루션 만들기는 **iOS > 앱 > 단일 보기 응용 프로그램 > C#** 서식 파일을 이름을 `ScratchTicket`, 새 프로젝트 마법사를 통해 계속:
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "새 솔루션 만들기")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. 라는 새 빈 클래스 파일을 만듭니다 `ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "새 ScratchTicketView 클래스 만들기")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. 다음 코드에 대 한 추가 `ScratchTicketView` 클래스:
 

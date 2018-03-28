@@ -1,6 +1,6 @@
 ---
-title: "Java 라이브러리 바인딩"
-description: "Android 커뮤니티는; 앱에서 사용 하려고 수 있는 많은 Java 라이브러리 이 가이드에서는 바인딩 라이브러리를 만들어 Java 라이브러리 Xamarin.Android 응용 프로그램에 통합 하는 방법을 설명 합니다."
+title: Java 라이브러리 바인딩
+description: Android 커뮤니티는; 앱에서 사용 하려고 수 있는 많은 Java 라이브러리 이 가이드에서는 바인딩 라이브러리를 만들어 Java 라이브러리 Xamarin.Android 응용 프로그램에 통합 하는 방법을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 47e32a68b7b10a2d02ee41a9abf234be6f002f7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
@@ -145,5 +145,5 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ## <a name="related-links"></a>관련 링크
 
 - [JNI 작업](~/android/platform/java-integration/working-with-jni.md)
-- [GAPI 메타 데이터](http://www.mono-project.com/GAPI#Metadata)
+- [GAPI 메타 데이터](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [네이티브 라이브러리 사용](~/android/platform/native-libraries.md)

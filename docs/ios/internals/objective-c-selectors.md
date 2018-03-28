@@ -1,29 +1,29 @@
 ---
-title: "Objective C 선택기"
+title: Objective C 선택기
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3fa01d8f28dc1c86f9d4a8ee4d9fc0a9cdb8ee9c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b7f64288695ecc0f9f57ec670c4e9ff2e44804c
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="objective-c-selectors"></a>Objective C 선택기
 
 Objective C 언어를 기반으로 *선택기*합니다. 선택 기가 개체에 보낼 수 있는 메시지 또는 *클래스*합니다. [Xamarin.iOS](~/ios/internals/api-design/index.md) 맵 인스턴스 인스턴스 메서드에 선택기 및 정적 메서드와 선택기 클래스입니다.
 
-일반 C 함수 달리 (및 c + + 멤버 함수와 마찬가지로)을 호출할 수 없습니다 직접 사용 하 여 선택기 [P/Invoke](http://www.mono-project.com/Dllimport)합니다.
+일반 C 함수 달리 (및 c + + 멤버 함수와 마찬가지로)을 호출할 수 없습니다 직접 사용 하 여 선택기 [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)합니다.
 (*따로*: 이론적에서 가상이 아닌 c + + 멤버 함수에 대 한 P/Invoke를 사용할 수 있지만 이러한 있습니다 신경쓰지 않아도 컴파일러 당 이름 관리 하는 방법에 대 한 더 잘 무시 불만의 세계 변수인.) 대신, 선택기 Objective-c 클래스에 전송 하거나 인스턴스에서 사용 하 여 [ `objc_msgSend` 함수](http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_msgSend)합니다.
 
 사용할 수 있습니다 [Objective-c 메시징이 유용한 가이드](http://developer.apple.com/iphone/library/documentation/cocoa/conceptual/ObjCRuntimeGuide/Articles/ocrtHowMessagingWorks.html) 유용 합니다.
 
 <a name="Example" />
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 호출 하려는 경우 다음과 같이 [-[NSString sizeWithFont:forWidth:lineBreakMode:]](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/NSString_UIKit_Additions/Reference/Reference.html#//apple_ref/occ/instm/NSString/sizeWithFont:forWidth:lineBreakMode:) 선택기입니다.
 Apple 설명서) (에서 선언이입니다.

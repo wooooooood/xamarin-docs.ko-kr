@@ -1,18 +1,18 @@
 ---
-title: "3 부 합니다. XAML 태그 확장"
-description: "XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값을 설정 하는 속성을 허용 하는 XAML에 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하기 위해 특히 중요 하지만 활용도 가장 큰 데이터 바인딩을 찾습니다."
+title: 3 부 합니다. XAML 태그 확장
+description: XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값을 설정 하는 속성을 허용 하는 XAML에 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하기 위해 특히 중요 하지만 활용도 가장 큰 데이터 바인딩을 찾습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 3/27/2018
+ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부 합니다. XAML 태그 확장
 
@@ -45,7 +45,7 @@ _XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do that!"
                 HorizontalOptions="Center"
@@ -53,7 +53,7 @@ _XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do the other thing!"
                 HorizontalOptions="Center"
@@ -61,7 +61,7 @@ _XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
     </StackLayout>
 </ContentPage>
@@ -103,7 +103,7 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
 </ContentPage>
 ```
 
-이제 리소스 사전에 개체 및 다양 한 형식의 값을 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있는 이어야 합니다. 추상 클래스, 예를 들어 일 수 없습니다. 이러한 형식에 매개 변수가 없는 public 생성자가 있어야 합니다. 각 항목은 지정 된 사전 키 사용은 `x:Key` 특성입니다. 예:
+이제 리소스 사전에 개체 및 다양 한 형식의 값을 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있는 이어야 합니다. 추상 클래스, 예를 들어 일 수 없습니다. 이러한 형식에 매개 변수가 없는 public 생성자가 있어야 합니다. 각 항목은 지정 된 사전 키 사용은 `x:Key` 특성입니다. 예를 들어:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,7 +136,7 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
         BorderWidth="3"
         Rotation="-15"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 `StaticResource` 태그 확장 항상 중괄호로 구분 하 고 사전 키가 포함 됩니다.
@@ -192,7 +192,7 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
         BorderWidth="{StaticResource borderWidth}"
         Rotation="{StaticResource rotationAngle}"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 종류의 리소스에 대 한 `Color`, 직접 이러한 유형의 특성을 할당할 때 사용 하는 동일한 문자열 표현을 사용할 수 있습니다. 형식 변환기는 리소스를 만들 때 호출 됩니다. 다음은 형식의 리소스 `Color`:
@@ -201,14 +201,10 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
 <Color x:Key="textColor">Red</Color>
 ```
 
-`FontSize` 속성에서 작은 문제가 발생 합니다. 속성 형식으로 정의 된 `double`합니다. 멤버에 속성을 설정 하면는 `NamedSize` 열거와 같은 `Large`, `FontSizeConverter` 사용 하 여 플랫폼별 값으로 변환 하는 백그라운드로 작동 클래스는 `Device.GetNamedSized` 메서드.
-
-그러나으로 글꼴 크기에 대 한 리소스를 정의할 수 없습니다는 `double` "large" 값을 설정 합니다. XAML 파서에서 리소스를 처리 하는 동시에 있는지 알 수 없으므로 글꼴 크기는 값이 사용 됩니다. 
-
-솔루션으로 리소스를 정의 하는 것을 `string` 를 사용 하는 `x:String` 유형:
+종종 집합 프로그램는 `FontSize` 속성의 멤버에는 `NamedSize` 열거와 같은 `Large`합니다. `FontSizeConverter` 사용 하 여 플랫폼별 값으로 변환 하는 백그라운드로 작동 클래스는 `Device.GetNamedSized` 메서드. 그러나 글꼴 크기 리소스를 정의할 때 해당 하는 것이 표시 된 숫자 값을 사용 하 여 여기는 `x:Double` 유형:
 
 ```xaml
-<x:String x:Key="fontSize">Large</x:String>
+<x:Double x:Key="fontSize">24</x:Double>
 ```
 
 이제 모든 속성을 제외한 `Text` 리소스 설정에 의해 정의 됩니다.
@@ -275,7 +271,7 @@ XAML에서 하나의 인기 있는 솔루션은 이러한 값을 저장 하 또�
                 BorderWidth="{StaticResource borderWidth}"
                 Rotation="{StaticResource rotationAngle}"
                 TextColor="{StaticResource textColor}"
-                FontSize"{StaticResource fontSize}" />
+                FontSize="{StaticResource fontSize}" />
 
         <Button Text="Do that!"
                 HorizontalOptions="{StaticResource horzOptions}"

@@ -1,6 +1,6 @@
 ---
-title: "Cognitive 서비스를 사용 하 여 인텔리전스 추가"
-description: "Microsoft 인식 서비스는 Api, Sdk 및 안 면 인식, 음성 인식 및 언어 이해 같은 기능을 추가 하 여 응용 프로그램 지능적인을 개발자에 게 사용할 수 있는 서비스의 집합입니다. 이 문서는 일부의 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 소개를 제공 합니다."
+title: Cognitive 서비스를 사용 하 여 인텔리전스 추가
+description: Microsoft 인식 서비스는 Api, Sdk 및 안 면 인식, 음성 인식 및 언어 이해 같은 기능을 추가 하 여 응용 프로그램 지능적인을 개발자에 게 사용할 수 있는 서비스의 집합입니다. 이 문서는 일부의 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 소개를 제공 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: fd67629b9e8d0057ccf3b95b9e84ff1d16acbd7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Cognitive 서비스를 사용 하 여 인텔리전스 추가
 
@@ -23,12 +23,12 @@ _Microsoft 인식 서비스는 Api, Sdk 및 안 면 인식, 음성 인식 및 �
 함께 제공 된 샘플은 기능을 제공 하는 할 일 목록 응용 프로그램:
 
 - 작업 목록을 봅니다.
-- 추가 하 고 소프트 키보드를 통해 또는 Bing Speech api 음성 인식을 수행 하 여 작업을 편집 합니다. 음성 인식을 수행 하는 방법에 대 한 자세한 내용은 참조 [Bing Speech API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
+- 추가 하 고 소프트 키보드를 통해 또는 Microsoft 음성 api 음성 인식을 수행 하 여 작업을 편집 합니다. 음성 인식을 수행 하는 방법에 대 한 자세한 내용은 참조 [Microsoft 음성 API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
 - Bing 맞춤법 검사 API를 사용 하 여 확인 작업 사용 하지 말고 이름입니다. 자세한 내용은 참조 [Bing 맞춤법 검사 API를 사용 하 여 맞춤법 검사](spell-check.md)합니다.
 - 영어에서 변환기 API를 사용 하 여 독일어로 작업을 변환 합니다. 자세한 내용은 참조 [변환기 API를 사용 하 여 텍스트 번역](text-translation.md)합니다.
 - 작업을 삭제 합니다.
 - '완료'에 작업의 상태를 설정 합니다.
-- Emotion 인식, Emotion API를 사용 하 여 응용 프로그램을 평가 합니다. 자세한 내용은 참조 [Emotion API를 사용 하 여 Emotion 인식](emotion-recognition.md)합니다.
+- Face API를 사용 하 여, emotion 인식 하 여 응용 프로그램을 평가 합니다. 자세한 내용은 참조 [Face API를 사용 하 여 Emotion 인식](emotion-recognition.md)합니다.
 
 작업은 로컬 SQLite 데이터베이스에 저장 됩니다. 로컬 SQLite 데이터베이스를 사용 하는 방법에 대 한 자세한 내용은 참조 [로컬 데이터베이스 작업을](~/xamarin-forms/app-fundamentals/databases.md)합니다.
 
@@ -36,7 +36,7 @@ _Microsoft 인식 서비스는 Api, Sdk 및 안 면 인식, 음성 인식 및 �
 
 ![](images/sample-application-1.png "TodoListPage")
 
-클릭 하 여 새 항목을 만들 수 있습니다는  *+*  를 탐색 하는 단추는 `TodoItemPage`합니다. 또한이 페이지는 작업을 선택 하 여를 탐색할 수도 있습니다.
+클릭 하 여 새 항목을 만들 수 있습니다는 *+* 를 탐색 하는 단추는 `TodoItemPage`합니다. 또한이 페이지는 작업을 선택 하 여를 탐색할 수도 있습니다.
 
 ![](images/sample-application-2.png "TodoItemPage")
 
@@ -46,7 +46,7 @@ Smilies 단추를 클릭 하 고 `TodoListPage` 로 이동는 `RateAppPage`, emo
 
 ![](images/sample-application-3.png "RateAppPage")
 
-`RateAppPage` 표시 되 고 반환 된 emotion 사용 하 여 Emotion API에 전송 되는 해당 얼굴 사진 걸릴 수 있습니다.
+`RateAppPage` Face API에 표시 되 고 반환 된 emotion 함께 전송 되는 해당 얼굴 사진 걸릴 수 있습니다.
 
 ## <a name="understanding-the-application-anatomy"></a>응용 프로그램 분석 이해
 
@@ -73,7 +73,7 @@ PCL 프로젝트에는 몇 가지 중요 한 파일이 들어 있습니다.
 
 - `Microsoft.Net.Http` – 제공 된 `HttpClient` HTTP를 통해 요청을 만들기 위한 클래스입니다.
 - `Newtonsoft.Json` –.NET에 대 한 JSON 프레임 워크를 제공 합니다.
-- `Microsoft.ProjectOxford.Emotion` – Emotion API에 액세스 하기 위한 클라이언트 라이브러리입니다.
+- `Microsoft.ProjectOxford.Face` – Face API에 액세스 하기 위한 클라이언트 라이브러리입니다.
 - `PCLStorage` – 플랫폼 간 로컬 파일 IO Api 집합을 제공 합니다.
 - `sqlite-net-pcl` – SQLite 데이터베이스 저장소를 제공 합니다.
 - `Xam.Plugin.Media` – 제공 플랫폼 간 사진 기록 및 Api를 선택 합니다.
@@ -117,11 +117,10 @@ public class TodoItem
 
 샘플 응용 프로그램은 다음 Microsoft Cognitive 서비스를 호출합니다.
 
-- Bing Speech API입니다. 자세한 내용은 참조 [Bing Speech API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
+- Microsoft Speech API. 자세한 내용은 참조 [Microsoft 음성 API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
 - Bing 맞춤법 검사 API입니다. 자세한 내용은 참조 [Bing 맞춤법 검사 API를 사용 하 여 맞춤법 검사](spell-check.md)합니다.
 - API를 변환 합니다. 자세한 내용은 참조 [변환기 API를 사용 하 여 텍스트 번역](text-translation.md)합니다.
-- Emotion API입니다. 자세한 내용은 참조 [Emotion API를 사용 하 여 Emotion 인식](emotion-recognition.md)합니다.
-
+- Face API입니다. 자세한 내용은 참조 [Face API를 사용 하 여 Emotion 인식](emotion-recognition.md)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

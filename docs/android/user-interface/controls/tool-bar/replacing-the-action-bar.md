@@ -1,20 +1,19 @@
 ---
-title: "작업 모음 교체"
+title: 작업 모음 교체
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/27/2018
+ms.openlocfilehash: f02f77eb45086d1d568b367b28163a4773dcd80d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="replacing-the-action-bar"></a>작업 모음 교체
-
 
 ## <a name="overview"></a>개요
 
@@ -38,7 +37,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="start-an-app-project"></a>응용 프로그램 프로젝트를 시작 합니다.
 
-라는 새 Android 프로젝트 만들기 **ToolbarFun** (참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 새 Android 프로젝트 만들기에 대 한 자세한 내용은). 이 프로젝트를 만든 후 대상 및 최소 Android API 수준으로 설정 **Android 5.0 (API 수준 21-롤리팝)**합니다. Android 버전 수준 설정에 대 한 자세한 내용은 참조 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다. 응용 프로그램을 작성 및 실행이 스크린 샷에 표시 된 대로 기본 작업 모음을 표시 합니다. 
+라는 새 Android 프로젝트 만들기 **ToolbarFun** (참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 새 Android 프로젝트 만들기에 대 한 자세한 내용은). 이 프로젝트를 만든 후 대상 및 최소 Android API 수준으로 설정 **Android 5.0 (API 수준 21-롤리팝)** 이상. Android 버전 수준 설정에 대 한 자세한 내용은 참조 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다. 응용 프로그램을 작성 및 실행이 스크린 샷에 표시 된 대로 기본 작업 모음을 표시 합니다.
 
 [![기본 작업 모음의 스크린샷](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -76,6 +75,8 @@ olive-green `colorPrimary` 도구 모음의 배경색에 대 한 설정이 사�
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
+
+## <a name="apply-the-custom-theme"></a>사용자 지정 테마를 적용 합니다.
 
 편집 **Properties/AndroidManifest.xml** 다음 추가 `android:theme` 특성을 `<application>` 요소에는 응용 프로그램을 사용 하도록는 `MyTheme` 사용자 지정 테마: 
 
@@ -136,12 +137,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
 </RelativeLayout>
 ```
 
@@ -171,6 +166,7 @@ ActionBar.Title = "My Toolbar";
 
 에 `Toolbar` 와 독립적으로 스타일 지정는 `Theme.Material.Light.DarkActionBar` 응용 프로그램의 나머지 부분에 적용 되는 테마입니다. 
 
+응용 프로그램을 실행 하는 동안 예외가 발생 하는 경우 참조는 [문제 해결](#troubleshooting) 아래 섹션.
 
  
 ## <a name="add-menu-items"></a>메뉴 항목 추가 
@@ -193,7 +189,7 @@ ActionBar.Title = "My Toolbar";
 
 ### <a name="install-menu-icons"></a>설치 메뉴 아이콘
 
-계속는 `ToolbarFun` 예제 응용 프로그램, 응용 프로그램 프로젝트에 메뉴 아이콘을 추가 합니다. 다운로드 [도구 모음 icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) 고 압축을 풉니다. 추출 된의 내용을 복사 *mip 맵-* 프로젝트에 폴더 *mip 맵-* 아래에 폴더 **ToolbarFun/리소스** 프로젝트에 각 추가 된 아이콘 파일을 포함 합니다.
+계속는 `ToolbarFun` 예제 응용 프로그램, 응용 프로그램 프로젝트에 메뉴 아이콘을 추가 합니다. 다운로드 [도구 모음 아이콘](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true), 압축, 및의 압축을 푼 내용을 복사 *mip 맵-* 프로젝트에 폴더 *mip 맵-* 아래에 폴더 **ToolbarFun / 리소스** 프로젝트에 각 추가 된 아이콘 파일을 포함 합니다.
 
 
 ### <a name="define-a-menu-resource"></a>메뉴 리소스를 정의 합니다.
@@ -277,6 +273,19 @@ Android를 호출 하는 사용자가 메뉴 항목을 누르면는 `OnOptionsIt
 Android 메뉴에 대 한 자세한 내용은 Android 개발자 참조 [메뉴](https://developer.android.com/guide/topics/ui/menus.html) 항목입니다. 
  
 
+## <a name="troubleshooting"></a>문제 해결
+
+다음 팁 작업 모음 도구 모음으로 대체 하는 동안 발생할 수 있는 문제를 디버그할 수 있습니다.
+
+### <a name="activity-already-has-an-action-bar"></a>활동에는 이미 작업 모음
+
+응용 프로그램에 설명 된 대로 사용자 지정 테마를 사용 하도록 제대로 구성 되지 않은 경우 [사용자 지정 테마를 적용](#apply-the-custom-theme), 응용 프로그램을 실행 하는 동안 다음 예외가 발생할 수 있습니다.
+
+![사용자 지정 테마를 사용 하지 않는 경우 발생할 수 있는 오류](replacing-the-action-bar-images/03-theme-not-defined.png)
+
+또한 오류 메시지 인 다음 만들어질 수 있습니다 같은: _Java.Lang.IllegalStateException:이 작업에 이미 창 장식에서 제공 하는 작업 모음입니다._ 
+
+이 오류를 해결 하려면 확인 하는 `android:theme` 특성이 사용자 지정 테마에 추가 됩니다 `<application>` (에서 **Properties/AndroidManifest.xml**)에서 이전에 설명 된 대로 [사용자지정테마를적용](#apply-the-custom-theme). 또한이 오류가 발생할 수 하는 경우는 `Toolbar` 레이아웃 또는 사용자 지정 테마를 제대로 구성 되지 않았습니다.
 
 
 ## <a name="related-links"></a>관련 링크

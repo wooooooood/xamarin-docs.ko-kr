@@ -1,5 +1,5 @@
 ---
-title: "네이티브 라이브러리 참조"
+title: 네이티브 라이브러리 참조
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 9299d2b37825298d3defa18a9f5137e11b29f6ce
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 99e565c2268bec6d80c4976e604333cbd2f160a3
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="referencing-native-libraries"></a>네이티브 라이브러리 참조
 
@@ -105,7 +105,7 @@ lipo -info /full/path/to/libraryname.a
 
 <a name="Accessing_C_Methods_from_C#" />
 
-## <a name="accessing-c-methods-from-c35"></a>C 메서드 &#35;에서 액세스
+## <a name="accessing-c-methods-from-c35"></a>C에서 C 메서드 액세스&#35;
 
 두 가지가 네이티브 라이브러리의 사용 가능한 iOS에서:
 
@@ -114,7 +114,7 @@ lipo -info /full/path/to/libraryname.a
 -  응용 프로그램과 함께 제공 되는 정적 라이브러리입니다.
 
 
-그 중 하나에 정의 된 메서드를 액세스 하려면 사용 [모노의 P/Invoke 기능](http://www.mono-project.com/Interop_with_Native_Libraries) .NET 되기에 사용할 수 있는 동일한 기술인:
+그 중 하나에 정의 된 메서드를 액세스 하려면 사용 [모노의 P/Invoke 기능](http://www.mono-project.com/docs/advanced/pinvoke/) .NET 되기에 사용할 수 있는 동일한 기술인:
 
 -  C 함수를 호출할지를 결정 합니다.
 -  서명 확인

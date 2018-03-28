@@ -1,16 +1,16 @@
 ---
-title: "제한 사항"
+title: 제한 사항
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b099e8ddd6acc3e8cc4ce94580313a39a0c686
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c099797f0687f198ed220c1bd366bd93ab6c6e99
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="limitations"></a>제한 사항
 
@@ -25,7 +25,7 @@ Xamarin.iOS를 사용 하 여 iPhone에 있는 응용 프로그램은 정적 코
 
 일반적인 모노/.NET 달리 iPhone의 코드는 정적으로 JIT 컴파일러에서 필요에 따라 컴파일 중인 하지 않고 미리 컴파일됩니다.
 
-모노의 [전체 AOT](http://www.mono-project.com/AOT#Full_AOT) 기술에는 제네릭와 관련 하 여 몇 가지 제한 사항,이 컴파일 타임에 모든 가능한 제네릭 인스턴스화를 들겠지만 결정 때문에 발생 합니다. 코드가 항상 시간 컴파일러에는 마법사를 사용 하 여 런타임에 컴파일됩니다 대로 일반.NET 또는 모노 런타임에 대 한 문제가 되지 않습니다. 하지만이 사용 하는 경우 Xamarin.iOS 같은 정적 컴파일러에 대 한 합니다.
+모노의 [전체 AOT](http://www.mono-project.com/docs/advanced/aot/#full-aot) 기술에는 제네릭와 관련 하 여 몇 가지 제한 사항,이 컴파일 타임에 모든 가능한 제네릭 인스턴스화를 들겠지만 결정 때문에 발생 합니다. 코드가 항상 시간 컴파일러에는 마법사를 사용 하 여 런타임에 컴파일됩니다 대로 일반.NET 또는 모노 런타임에 대 한 문제가 되지 않습니다. 하지만이 사용 하는 경우 Xamarin.iOS 같은 정적 컴파일러에 대 한 합니다.
 
 개발자가를 실행 하는 일반적인 문제 중 일부는 다음과 같습니다.
 
@@ -117,13 +117,10 @@ System.Reflection 부족 합니다. **내보낼** 런타임 코드 생성에 종
 
 모노 이러한 브리지 시간에서 마법사에 의해 구현 됩니다 컴파일러입니다. 시간 미리 컴파일러를 사용 하 여 필요한 경우 iPhone에서 없는 다음이 시점에서 두 가지 중요 한 제한:
 
--  모든 콜백 메서드를 플래그 지정 해야 합니다는 [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/MonoPInvokeCallbackAttribute/) 
+-  모든 콜백 메서드를 플래그 지정 해야 합니다는 [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
 -  지원 되지 않습니다 예를 들어 메서드를 메서드를 정적 메서드 일 해야 있습니다. 
-
-
  
- <a name="No_Remoting" />
-
+<a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>원격 작업 없음
 
