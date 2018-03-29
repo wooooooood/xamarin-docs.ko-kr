@@ -1,6 +1,6 @@
 ---
-title: Xamarin Live Player
-description: "IOS 또는 Android 장치에서 실시간으로에서 응용 프로그램은 코드 변경 테스트"
+title: Xamarin.Forms에 대 한 라이브 플레이어
+description: Xamarin을 신속 하 게 학습, 구축 및 Android 또는 iOS 장치에서 실행 중인 응용 프로그램을 시작 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
@@ -8,37 +8,38 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: c636e706e702afa23c36a3d6c618f3e02c2582f1
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bd594204c90fb020f089fefc0e1341ee441caf63
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="xamarin-live-player"></a>Xamarin Live Player
+# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms에 대 한 Xamarin 라이브 플레이어
 
-이러한 변경 내용을 반영 않았습니다 실시간 장치에서 및 Xamarin Player 라이브 앱에 라이브를 편집할 수 있습니다. Xamarin Player 라이브 응용 프로그램 내에서 코드 실행-에뮬레이터를 설정 하거나 케이블을 사용 하 여 코드를 배포할 필요가 없습니다.
+라이브 Xamarin Player를 사용 하면 Android 또는 iOS 장치에서 테스트할 수 있는 모바일 앱을 제작할 학습 Xamarin.Forms 개발을 시작 합니다. Xamarin Player 라이브 응용 프로그램 내에서 코드 실행-에뮬레이터를 설정 하거나 케이블을 사용 하 여 코드를 배포할 필요가 없습니다. 시작 하려면 다운로드 라이브 Xamarin Player, Visual Studio를 쌍으로 연결 및 코드, 배포 및 응용 프로그램을 테스트 합니다. 
+
+라이브 Xamarin Player는 개발자가 장치에서 신속 하 게 시각화할 아이디어를 얻을 수에 대 한 샌드박스를 시작 하는 하기으로 설계 되었습니다. 도달할 수 있으므로 소스 코드 해석 되는 [제한](limitations.md) 시간과 완전히 장치 또는 에뮬레이터에 대 한 응용 프로그램을 컴파일할 필요가 후 합니다.
+
+## <a name="get-started-with-xamarin-live-player"></a>Xamarin Player 라이브 시작
 
 [![Xamarin 라이브 플레이어: 코드를 검사, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. 활성화는 *Xamarin Player 라이브* 에 **기본 설정**에서 장치를 선택 합니다는 **장치** 목록입니다.
-2. 디버그 또는 실행 하 고 장치와 쌍으로 연결 하는 QR 코드를 검색 합니다.
+1. 이동 하 여 앱을 다운로드는 [Xamarin Player 라이브 설치](install.md) 지침.
+2. 활성화는 *Xamarin Player 라이브* 에 **기본 설정**에서 장치를 선택 합니다는 **장치** 목록입니다.
+2. 장치에 Visual Studio와 쌍으로 연결 하 여 QR 코드 스캔에 라이브 플레이어 장치를 관리 합니다.
 3. 휴대폰 이나 태블릿에 앱 바로 실행 됩니다.
 
 ## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin Player 라이브 설치](install.md)
 
-Mac.에 대 한 Visual Studio 2017 또는 Visual Studio에서 Xamarin 라이브 플레이어를 사용 하도록 IDE 구성 Xamarin Player 라이브 Android, iOS 및 Xamarin.Forms 프로젝트를 지원합니다.
+라이브 Xamarin Player를 다운로드 하 고 Mac.에 대 한 Visual Studio 2017 또는 Visual Studio에서 Xamarin.Forms 앱과 함께 사용 하 여 IDE 구성 
 
 ## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 앱](player.md)
 
 플레이어 응용 프로그램을 Live Xamarin을 사용 하 여 합니다.
 
-## <a name="xaml-live-previewinglive-viewmd"></a>[XAML 실시간 미리 보기](live-view.md)
-
-"라이브 실행 현재 보기" 기능을 사용 합니다.
-
 ## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[Xamarin Player 라이브와 시도에 사용할 샘플](samples.md)
 
-Xamarin Player 라이브 앱과 함께 사용 하는 샘플입니다.
+Xamarin Player 라이브 앱과 함께 사용할 샘플 연결 되어 있습니다.
 
 ## <a name="limitationslimitationsmd"></a>[제한 사항](limitations.md)
 
@@ -51,6 +52,5 @@ Xamarin Player 라이브 지원할 수 있는 어떤 기능에 몇 가지 제한
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin Player 라이브 개요](https://xamarin.com/live)
 - [블로그 게시물](https://blog.xamarin.com/live-player/)
 - [Xamarin Player 라이브 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)

@@ -1,6 +1,6 @@
 ---
-title: "문제 해결"
-description: "Xamarin 라이브 Player 및 패키지를 수정 하는 방법의 알려진된 문제입니다."
+title: 문제 해결
+description: Xamarin 라이브 Player 및 패키지를 수정 하는 방법의 알려진된 문제입니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: d7c5bedb03d7c869be65e3c704bac58a9cdfcbbd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ab075cad0c3f3456ed23f3eb175dcdb3aa493510
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin Player 라이브 실행 하는 모바일 장치는 IDE를 실행 하는 컴퓨터와 동일한 네트워크에 없을 때 발생 합니다. 다음을 확인 합니다.
 
-- 장치 및 컴퓨터 모두 동일한 WiFi 네트워크에 있는지 확인 합니다.
+- 장치 및 컴퓨터 모두 동일한 Wi-fi 네트워크에 있는지 확인 합니다.
   - 컴퓨터는 유선된 네트워크에도 연결 됩니다, 유선된 연결을 분리 하십시오.
 - 네트워크 밀접 하 게 (예: 일부 기업 네트워크)를 보안 할 수 있습니다 Xamarin Player 라이브에 필요한 포트를 차단 합니다.
 - Xamarin Player 라이브 응용 프로그램을 닫고 다시 시작 합니다.
@@ -35,12 +35,92 @@ Xamarin Player 라이브 실행 하는 모바일 장치는 IDE를 실행 하는 
 
 **"IOException: 전송 연결에서 데이터를 읽을 수 없습니다: 비동기 소켓에 대 한 작업이 차단"**
 
-Xamarin Player 라이브 실행 하는 모바일 장치; IDE를 실행 하는 컴퓨터와 동일한 네트워크에 없는 경우이 오류가 자주 발생 이 오류 이전에 성공적으로 연결 된 장치에 연결할 때 자주 발생 합니다.
+Xamarin Player 라이브 실행 하는 모바일 장치; Visual Studio를 실행 하는 컴퓨터와 동일한 네트워크에 없는 경우이 오류가 자주 발생 이 오류 이전에 성공적으로 연결 된 장치에 연결할 때 자주 발생 합니다.
 
-* 장치 및 컴퓨터 모두 동일한 WiFi 네트워크에 있는지 확인 합니다.
+* 장치 및 컴퓨터 모두 동일한 Wi-fi 네트워크에 있는지 확인 합니다.
 * 네트워크 밀접 하 게 (예: 일부 기업 네트워크)를 보안 할 수 있습니다 Xamarin Player 라이브에 필요한 포트를 차단 합니다. 다음 포트는 라이브 Xamarin Player 필요 합니다.
   * 37847-내부 네트워크 액세스 
   * 8090 – 외부 네트워크에 액세스
+
+## <a name="manually-configure-device"></a>수동으로 장치를 구성 합니다.
+
+메일을 통해 장치에 연결 하지 않는 수를 다음 단계를 구성 파일을 통해 장치를 수동으로 구성 시작할 수 있습니다.
+
+**1 단계: 구성 파일 열기**
+
+응용 프로그램 데이터 폴더에 헤드:
+
+* Windows: **%userprofile%\AppData\Roaming**
+* macOS: **~/Users/$USER/.config**
+
+이 폴더에 있습니다 **PlayerDeviceList.xml** 존재 하지 않는 경우 하나 만듭니다 해야 합니다.
+
+**2 단계: IP 주소 가져오기**
+
+Xamarin Player 라이브 앱에서로 이동 **에 대 한 > 연결 테스트 > 연결 테스트 시작**합니다.
+
+기록해 IP 주소의 장치를 구성 하는 경우 나열 된 IP 주소가 필요 합니다.
+
+**3 단계: 연결 코드 가져오기**
+
+Xamarin Player 라이브 tap 내부 **쌍** 또는 **쌍 다시**, 키를 누릅니다 **수동으로 입력**합니다. 한 숫자 코드는 표시, 구성 파일을 업데이트 해야 합니다.
+
+**4 단계: GUID를 생성 합니다.**
+
+로 이동: https://www.guidgenerator.com/online-guid-generator.aspx 및 새 guid를 생성 하 고 대문자로 켜져 있는지 확인 합니다.
+
+
+**5 단계: 장치를 구성 합니다.**
+
+열립니다는 **PlayerDeviceList.xml** 같은 Visual Studio 또는 Visual Studio Code 편집기의 합니다. 이 파일에서 장치를 수동으로 구성 해야 합니다. 기본적으로 파일에는 다음과 같은 빈 포함 되어야 `Devices` XML 요소:
+
+```xml
+<DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Devices>
+
+</Devices>
+</DeviceList>
+```
+
+**IOS 장치를 추가 합니다.**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>iPhone Player</Name>
+<Platform>iOS</Platform>
+<AndroidApiLevel>0</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+
+**Android 장치를 추가 합니다.**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>Android Player</Name>
+<Platform>Android</Platform>
+<AndroidApiLevel>24</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:34:42.2332328Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+**페이지를 닫고 Visual Studio를 다시 엽니다.** 장치 목록에 나타나야 합니다.
+
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>IDE에서 "형식 또는 네임 스페이스를 찾을 수 없습니다" 메시지가
 

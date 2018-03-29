@@ -1,18 +1,18 @@
 ---
-title: "Java에서.NET 포함"
-description: "Java 기반 네이티브 Android 프로젝트에서 Xamarin.NET 라이브러리를 사용 하는 방법"
+title: Java에서.NET 포함
+description: Java 기반 네이티브 Android 프로젝트에서 Xamarin.NET 라이브러리를 사용 하는 방법
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 1a25f4bc39e39ce58a07ed399082bf13284c16e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/28/2018
+ms.openlocfilehash: f0da12d739c6003257d3acf9ccefdec7e36f5349
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="embedding-net-in-java"></a>Java에서.NET 포함
 
@@ -25,7 +25,7 @@ Embeddinator 4000 Android에서 Java를 사용 하려면 다음이 필요 합니
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/preview/index.html) 나중에 설치 되어 있어야 합니다.
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.4.99](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/) 나중에 설치 되어 있어야 합니다.
+-   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/) 나중에 설치 되어 있어야 합니다.
 
 -   **Java 개발자 키트** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 되어 있어야 합니다.
 

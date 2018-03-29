@@ -4,14 +4,10 @@
 
 # <a name="part-6---testing-and-app-store-approvals"></a>6-부 테스트 및 앱 스토어 승인
 
-<a name="Testing" />
-
 
 ## <a name="testing"></a>테스트
 
 많은 응용 프로그램 (일부 매장에도 Android 앱); 게시 하기 전에 승인 프로세스를 통과 해야 합니다. 테스트 하는 데 중요 하므로 앱 시장에 도달 하면 (감당할 수 있도록 고객에 게가 성공). 테스트 개발자 수준 단위 베타 다양 한 하드웨어에서 테스트를 관리 하는 데 테스트에서 다양 한 형태를 사용할 수 있습니다.
-
- <a name="Test_on_All_Platforms" />
 
 
 ### <a name="test-on-all-platforms"></a>모든 플랫폼에서 테스트
@@ -22,16 +18,12 @@ Windows 휴대폰, 태블릿 및 데스크톱 장치도 동적 코드를 신속 
 
 또한 가능한 한 많은 다양 한 실제 하드웨어 장치에서 테스트 해야 합니다.
 
- <a name="Devices_in_cloud" />
-
 
 #### <a name="devices-in-cloud"></a>클라우드에서 장치
 
 모바일 전화 및 태블릿 생태계는 항상 사용할 수 있는 장치 수가 계속 해 서 증가 테스트 하지 못하도록 커지고 있습니다. 이 문제를 해결 하는 다양 한 서비스 응용 프로그램 설치 및 직접 다양 한 하드웨어 투자 필요 없이 테스트할 수 있도록 다양 한 장치를 원격으로 제어 하는 기능을 제공 합니다.
 
 [앱 센터 테스트](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) iOS 및 수백 대의 서로 다른 장치에서 Android 응용 프로그램을 테스트 하는 쉬운 방법을 제공 합니다.
-
- <a name="Test_Management" />
 
 
 ### <a name="test-management"></a>테스트 관리
@@ -44,10 +36,8 @@ Windows 휴대폰, 태블릿 및 데스크톱 장치도 동적 코드를 신속 
 
 수집 하 고 사용 현황 및 오류를 보고 응용 프로그램에 제공 된 인프라를 제공 하 고 또한 등록 하 고 테스터 및 장치 관리에 프로 비전 프로세스를 간소화 하 여 이러한 문제를 해결 하기 위해 서비스 도움말의 여러 가지 .
 
-[Xamarin Insights 미리 보기](http://xamarin.com/insights) 충돌 보고 및 복잡 한 응용 프로그램 사용 정보를 제공 하는이 문제를 두 번째 부분에 대 한 해결책을 제공 합니다.
+[Visual Studio 앱 센터](/appcenter/) 버전 배포를 테스트, 충돌 보고 및 복잡 한 응용 프로그램 사용 정보를 제공 합니다. 이러한 문제에 대 한 해결책을 제공 합니다.
 
-
- <a name="Test_Automation" />
 
 
 ### <a name="test-automation"></a>테스트 자동화
@@ -55,12 +45,10 @@ Windows 휴대폰, 태블릿 및 데스크톱 장치도 동적 코드를 신속 
 Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) 로컬로 실행 되거나 업로드 될 수 있는 테스트 스크립트 자동화 된 사용자 인터페이스를 만드는 데 사용할 수 있습니다 [앱 센터 테스트](https://docs.microsoft.com/appcenter/test-cloud/)합니다.
 
 
- <a name="Unit_Testing" />
 
 
 ## <a name="unit-testing"></a>단위 테스트
 
- <a name="Touch.Unit" />
 
 
 #### <a name="touchunit"></a>Touch.Unit
@@ -69,29 +57,13 @@ Xamarin.iOS는 테스트 작성 JUnit/NUnit 스타일 다음에 나오는 Touch.
 
 참조 우리의 [Xamarin.iOS를 사용한 단위 테스트](~/ios/deploy-test/touch.unit.md) 테스트를 작성 하 고 Touch.Unit 실행에 대 한 자세한 내용은 설명서입니다.
 
- <a name="Andr.Unit" />
 
 
 #### <a name="andrunit"></a>Andr.Unit
 
 오픈 소스 방식의 Andr.Unit를 호출 하는 Android 용 Touch.Unit 있습니다. 다운로드할 수 [github](https://github.com/spouliot/Andr.Unit) 에 도구에 대 한 읽기 및 [ @spouliot의 블로그](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)합니다.
 
- <a name="Windows_Phone" />
 
-
-#### <a name="windows-phone"></a>Windows Phone
-
-설치 단위 Windows Phone 대 한 테스트를 위해 일부 링크는 다음과 같습니다.
-
--   [http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/](http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/)
--   [http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/](http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/)
--   [http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7](http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7)
--   [http://mobile.dzone.com/articles/unit-testing-your-windows](http://mobile.dzone.com/articles/unit-testing-your-windows)
-
-
-&nbsp;
-
- <a name="App_Store_Approvals" />
 
 
 ## <a name="app-store-approvals"></a>앱 스토어 승인
@@ -100,7 +72,6 @@ Apple 및 Microsoft 작동 해당 플랫폼에서 유일한 저장소: 앱 스�
 
 대기 하는 응용 프로그램 요구 사항을 검토 하는 데 매우 스트레스가 수-비즈니스 부족 한지 되는 상황이 발생할 응용 프로그램은 거의 여백 "대상된" 시작 날짜 이전 오류에 대 한 승인을 받기 위해 제출 합니다. 프로세스는 최대 2 주 정도 걸릴 수 있으며 반드시 투명 하 게 되지 않았습니다: 마지막으로 거부 되거나 승인 때까지 응용 프로그램의 진행 상황을 제한 된 피드백 있습니다. 거부 시점과 응용 프로그램을 승인 된 마지막으로 두 번 이상 발생 하 고 주 원래 시작 날짜 간에 경과 하는 경우에 특히 영업 기회, 마케팅 창 누락 의미할 수 있습니다.
 
- <a name="Be_prepared" />
 
 
 ### <a name="be-prepared"></a>준비
@@ -117,7 +88,6 @@ Apple 및 Microsoft 작동 해당 플랫폼에서 유일한 저장소: 앱 스�
 
 이 섹션의 나머지를 고려 하기 위해 취해야 할 모든 끊겨 없이 앱 승인 되도록 작업을 설명 합니다.
 
- <a name="Quality" />
 
 
 ### <a name="quality"></a>품질
@@ -127,8 +97,6 @@ Apple 및 Microsoft 작동 해당 플랫폼에서 유일한 저장소: 앱 스�
 충돌은 거부에 대 한 일반적인 이유입니다. 응용 프로그램 크래시 하기 쉽지만 너무 이면는 것을 보장 거부 될 수 있습니다. 대부분의 개발자가 충돌 합니다 아직 자주 수행 예상에 따라 앱을 제출 하지 않으면. 제출, 있는 것이 아니라 않고 제대로 작동 하는지 집중 뿐만 아니라 해당 있습니다 네트워크 문제 및 메모리 또는 저장소 공간이 같은 리소스 제약 조건은 같은 일반적인 모바일 오류 시나리오를 처리 하기 전에 응용 프로그램을 철저히 테스트 합니다. 테스트 하려면 시뮬레이터와 물리적 장치를 사용 하 여-얼마나 잘 시뮬레이터에서 앱에서 실행 되는 코드를에 관계 없이 장치에만 응용 프로그램의 실제 성능 보여줄 수 있습니다. 찾기, 및 할 수 있습니다-타사 서비스 베타 분포 및 피드백을 관리 하는 경우 팀은 테스터 베타를 등록할 수 만큼의 다른 장치를 사용 합니다.
 
 모든 모바일 운영 체제를 신속 하 게 시작 되지 않으면 응용 프로그램을 중단 합니다. 허용 되는 시간 길이 달라 지지만 일반적 앱 것을 목적으로 몇 초 후에 응답 하 고 백그라운드 작업을 사용 하 여 오래 걸리는 모든 작업을 수행할 수 있습니다. 앱을 로드 하려면 시간이 오래 걸리는 또는 일반적으로 사용 충분히 응답 하지 거부 됩니다. 항상 백그라운드에서 발생 하는 항목 또는 응용 프로그램 작동이 중단 하 고 다시 한 번, 거절 get를 표시 하는 경우 사용자에 게 피드백을 제공 합니다.
-
- <a name="Check_Your_Edge_Cases" />
 
 
 ### <a name="check-your-edge-cases"></a>한 경계 경우를 확인 합니다.
@@ -143,7 +111,6 @@ Apple 및 Microsoft 작동 해당 플랫폼에서 유일한 저장소: 앱 스�
 -   **하드웨어 다릅니다** – 지원할 계획 하는 가장 오래 된, 가장 느린 하드웨어에서 테스트 해야 합니다. 다음 두 가지 응용 프로그램에 영향을 줄 수: 이전 되는 장치 및 카메라, 마이크, GPS, 자이로스코프가 또는 다른 선택적 구성 요소 등의 하드웨어 기능에 대 한 지원에 사용할 수 있는 성능입니다. 응용 프로그램 저하 해야 정상적으로 (및 충돌 하지) 구성 요소가 없는 경우 사용할 수 있습니다.
 
 
- <a name="Guidelines_are_more_than_just_a_‘guide’" />
 
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>지침은 '가이드' 보다 더 같습니다.
@@ -158,7 +125,6 @@ Windows 개발자는 마찬가지로 주의; 해야 합니다. 일반적인 실�
 
 디자이너를 읽고 각 플랫폼에 대 한 디자인 지침 수행 하도록 권장 합니다.
 
- <a name="Implementing_Platform-Specific_Features" />
 
 
 ### <a name="implementing-platform-specific-features"></a>플랫폼 특정 기능을 구현
@@ -171,7 +137,6 @@ Windows 개발자는 마찬가지로 주의; 해야 합니다. 일반적인 실�
 -   **그러나 매핑합니다** – 모바일 maps에 오버레이 및 기타 기능을 추가, 주의 하지 지도 모호 하 '크레딧을' 정보 (예: iOS5에서 Google 로고) 거부에서 그렇게 하면 대로 점점 일반화 되 고 있습니다.
 
 
- <a name="Manage_Your_Metadata" />
 
 
 ### <a name="manage-your-metadata"></a>메타 데이터 관리
@@ -185,7 +150,6 @@ Windows 개발자는 마찬가지로 주의; 해야 합니다. 일반적인 실�
 
 많은 노력을 응용 프로그램의 메타 데이터에 따라를 개발 및 테스트 합니다. 응용 프로그램 권한을 얻는 데 시간이 걸리는 있으므로 메타 데이터에 사소한 침해에 대 한 거부할지 않습니다.
 
- <a name="App_Stores:_Not_For_Everyone" />
 
 
 ### <a name="app-stores-not-for-everyone"></a>응용 프로그램 저장소: 대 한 모든 사용자
@@ -198,8 +162,6 @@ Windows 개발자는 마찬가지로 주의; 해야 합니다. 일반적인 실�
 Apple는 iOS 앱 스토어 승인 프로세스를 무시 하 고 허용 회사 직원에 게 사내 앱을 배포 하는 Developer Enterprise Program에에서 등록 하는 개발자에 게 사내 배포 옵션을 제공 합니다.
 그러나이 라이선스 고객 또는 공급 업체의 다른 닫힌된 그룹 엑스트라넷와 비슷한 응용 프로그램 배포에 대 한 필요가 다루지 않습니다. [Enterprise (및 임시) 배포](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-
- <a name="App_Store_Summary" />
 
 
 ### <a name="app-store-summary"></a>앱 스토어 요약

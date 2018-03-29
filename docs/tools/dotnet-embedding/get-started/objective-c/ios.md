@@ -1,5 +1,5 @@
 ---
-title: "IOS를 시작 하기"
+title: IOS를 시작 하기
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: c1b21e36d314b79402702f29428f2c337ddc1069
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3921f57847bbe095f01ea9246ffe19f9bc5c5014
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="getting-started-with-ios"></a>IOS를 시작 하기
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 
 요구 사항 뿐 아니라 우리의 [Objective-c 시작](~/tools/dotnet-embedding/get-started/objective-c/index.md) 가이드도 필요 합니다.
 
-* [Xamarin.iOS 10.11 +](https://jenkins.mono-project.com/view/Xamarin.MaciOS/job/xamarin-macios-builds-master/) 에서 우리의 _마스터_ 분기 합니다.
+* [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) 이상 버전
 
 ## <a name="hello-world"></a>Hello World
 

@@ -1,6 +1,6 @@
 ---
 title: Xamarin Profiler
-description: "이 가이드는 Xamarin 프로파일러의 주요 기능을 탐색합니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 / 때 사용 해야, 및 표준 워크플로 찾습니다."
+description: 이 가이드는 Xamarin 프로파일러의 주요 기능을 탐색합니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 / 때 사용 해야, 및 표준 워크플로 찾습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c44541c56d7b1a00a704cfc66812d5537ec83c4
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -48,7 +48,7 @@ Xamarin 프로파일러는 프로 파일링 하기 위해 사용할 수 있는 �
 ## <a name="download-and-install"></a>다운로드 및 설치
 
 > [!NOTE]
-> **참고:** mac에서 Mac에 대 한 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제에 대 한 Visual Studio Enterprise 구독자 해야 합니다
+> **참고:** 해야 합니다는 [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) mac에서 Mac 용 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
 
 Xamarin 프로파일러는 독립 실행형 응용 프로그램 되며 Mac 용 Visual Studio 및 Visual Studio IDE 내에서 프로 파일링 할 수 있도록 통합 됩니다.
 
@@ -60,10 +60,6 @@ Xamarin 프로파일러는 독립 실행형 응용 프로그램 되며 Mac 용 V
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 를 다운로드 한 설치 관리자를 시스템 Xamarin 프로파일러 추가를 시작 합니다.
-
-IDE 통합은 모든 릴리스 버전의 Xamarin에서 사용할 수 있습니다.
-그러나 [Visual Studio Enterprise](https://www.xamarin.com/compare-visual-studio) 프로 파일링 하기 위해 필요 합니다.
-
 
 
 ## <a name="profilers-and-profiling"></a>프로파일러 및 프로 파일링

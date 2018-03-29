@@ -1,6 +1,7 @@
 ---
-title: "XAML 라이브 미리 보기"
-description: "IOS 또는 Android 장치에서 실시간으로에서 응용 프로그램은 코드 변경 테스트"
+redirect_url: /xamarin/tools/live-player/
+title: XAML 라이브 미리 보기
+description: IOS 또는 Android 장치에서 실시간으로에서 응용 프로그램은 코드 변경 테스트
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
@@ -8,11 +9,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: f5c1649d625f2094fb710066f79a4ae89a696266
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 96ce096a57e46b36ebe6516ba0aff2733883e400
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-live-previewing"></a>XAML 라이브 미리 보기
 
@@ -20,12 +21,12 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="requirements"></a>요구 사항
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Windows 7 이상을 실행 하 고 컴퓨터입니다.
 2. Visual Studio 2017 15.4 또는와 더 높은 버전의 **.NET을 사용한 모바일 개발** 설치 하는 작업입니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. OS X 10.11 macOS 10.12, 이상으로 둔 Mac.
 2. Visual Studio 이상 Mac 7.2에 대 한 합니다. 최신 버전을 사용 하는 것이 좋습니다.
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/12/2018
 
 Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Visual Studio에 연결을 해야 라이브 Xamarin Player와 iOS 또는 Android 장치를 사용 하려면 먼저는 [설치](~/tools/live-player/install.md) 가이드입니다. Visual Studio로 장치를 성공적으로 쌍으로 XAML 페이지의 실시간 미리 보기를 시작할 수 있습니다. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio 2017 편집기에서 실시간 미리 보기를 XAML 페이지를 엽니다.
 
@@ -54,7 +55,7 @@ Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Vi
 
     ![](live-view-images/vs-image3.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac 편집기에 대 한 Visual Studio에서 실시간 미리 보기 하려는 XAML 페이지를 엽니다.
 

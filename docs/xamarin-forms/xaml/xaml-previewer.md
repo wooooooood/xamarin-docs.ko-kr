@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms에 대 한 XAML 미리 보기"
-description: "입력할 때 렌더링 Xamarin.Forms 레이아웃을 참조 하세요!"
+title: Xamarin.Forms에 대 한 XAML 미리 보기
+description: 입력할 때 렌더링 Xamarin.Forms 레이아웃을 참조 하세요!
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7a9c4fed92cb4ed8c8c12e97129bc8379037acb
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms에 대 한 XAML 미리 보기
 
@@ -26,17 +26,19 @@ _입력할 때 렌더링 Xamarin.Forms 레이아웃을 참조 하세요!_
 
 ## <a name="getting-started"></a>시작
 
-### <a name="visual-studio-for-mac-on-mac"></a>Mac에서 Mac 용 visual Studio
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+사용 하 여는 **보기 > 다른 창 > Xamarin.Forms 미리 보기** 미리 보기 창을 열려면 Visual Studio에서 메뉴. 사용 하 여는 **창 > 새 세로 탭 그룹** 메뉴-나란히 배치 합니다.
+
+[![Visual Studio에서 ListView 컨트롤의 미리 보기](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio의 Forms 미리 보기")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Visual Studio의 Forms 미리 보기")
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 **미리 보기** 단추 XAML 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 편집기에 표시 될 수 **프로그램 > XAML 뷰어**합니다. 미리 보기 창에 다음 표시 하거나 숨길 수 키를 눌러는 **미리 보기** 모든 XAML 문서 창의 오른쪽 위 모퉁이의 단추:
 
 [![Mac 용 Visual Studio에서 ListView 컨트롤 preview](xaml-previewer-images/xamlp-list-sml.png "Mac 용 Visual Studio의 Forms 미리 보기")](xaml-previewer-images/xamlp-list.png#lightbox "Mac 용 Visual Studio의 Forms 미리 보기")
 
-### <a name="visual-studio-on-windows"></a>Windows의 Visual Studio
-
-사용 하 여는 **보기 > 다른 창 > Xamarin.Forms 미리 보기** 미리 보기 창을 열려면 Visual Studio에서 메뉴. 사용 하 여는 **창 > 새 세로 탭 그룹** 메뉴-나란히 배치 합니다.
-
-[![Visual Studio에서 ListView 컨트롤의 미리 보기](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio의 Forms 미리 보기")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Visual Studio의 Forms 미리 보기")
+-----
 
 ## <a name="xaml-preview-options"></a>XAML 미리 보기 옵션
 

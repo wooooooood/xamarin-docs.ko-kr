@@ -1,5 +1,5 @@
 ---
-title: "Android 빔"
+title: Android 빔
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Android 빔
 
-Android 빔 응용 프로그램을 통해 NFC 서로 가까이 있는 경우 정보를 공유할 수 있는 Android 4의 새로운 근처 NFC (근거리 통신) 기술입니다.
+Android 빔에 응용 프로그램을 통해 NFC 서로 가까이 있는 경우 정보를 공유할 수 있는 Android 4.0에서 도입 된 근처 NFC (근거리 통신) 기술입니다.
 
 [![정보 공유 가까이 있는 두 개의 장치를 보여 주는 다이어그램](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

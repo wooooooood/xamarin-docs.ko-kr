@@ -1,6 +1,6 @@
 ---
-title: "리소스 사전"
-description: "XAML 리소스는 한 번만 사용할 수 있는 개체의 정의입니다. ResourceDictionary에 리소스를를 단일 위치에서 정의 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 다시 사용할 수 있습니다. 이 문서를 만들고 ResourceDictionary를 사용 하는 방법 및 리소스 사전은 병합 하는 방법을 설명 합니다."
+title: 리소스 사전
+description: XAML 리소스는 한 번만 사용할 수 있는 개체의 정의입니다. ResourceDictionary에 리소스를를 단일 위치에서 정의 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 다시 사용할 수 있습니다. 이 문서를 만들고 ResourceDictionary를 사용 하는 방법 및 리소스 사전은 병합 하는 방법을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -53,7 +53,7 @@ XAML, 리소스에 정의 되어 한 [ `ResourceDictionary` ](https://developer.
 
 이 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 세 정의 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 리소스 및 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 리소스입니다. XAML을 작성 하는 방법에 대 한 자세한 내용은 `App` 클래스를 참조 하십시오. [App 클래스](~/xamarin-forms/app-fundamentals/application-class.md)합니다.
 
-각 리소스를 사용 하 여 지정 된 키가는 `x:Key` 특성에 설명이 포함 된 키를 제공 하는 `ResourceDictionary`합니다. 리소스를 검색 하는 키가 사용 되는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 하 여는 `StaticResource` 수준 컨트롤에 정의 된 추가 리소스를 보여 주는 다음 XAML 코드 예제에서와 같이 태그 확장 `ResourceDictionary`:
+각 리소스를 사용 하 여 지정 된 키에는 `x:Key` 특성에 설명이 포함 된 키를 제공 하는 `ResourceDictionary`합니다. 리소스를 검색 하는 키가 사용 되는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 하 여는 `StaticResource` 수준 컨트롤에 정의 된 추가 리소스를 보여 주는 다음 XAML 코드 예제에서와 같이 태그 확장 `ResourceDictionary`:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
