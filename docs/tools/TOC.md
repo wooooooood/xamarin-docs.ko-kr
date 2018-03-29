@@ -2,7 +2,6 @@
 ## [Live Player](live-player/index.md)
 ### [설정](live-player/install.md)
 ### [Xamarin Live Player 앱](live-player/player.md)
-### [XAML 실시간 미리 보기](live-player/live-view.md)
 ### [샘플](live-player/samples.md)
 ### [제한 사항](live-player/limitations.md)
 ### [문제 해결](live-player/troubleshooting.md)
@@ -43,7 +42,7 @@
 ### [제한 사항](dotnet-embedding/limitations.md)
 
 
-## [지속적인 통합](ci/index.md)
+## [연속 통합](ci/index.md)
 ### [지속적인 통합 소개](ci/intro-to-ci.md)
 ### [Xamarin에서 App Center 빌드 사용](/appcenter/build/xamarin/)
 ### [Xamarin에서 TeamCity 사용](ci/teamcity.md)
