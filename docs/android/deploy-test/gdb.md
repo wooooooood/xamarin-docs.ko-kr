@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip`가 작동하지 않음
 
-`mono_pmip` 함수([관리되는 스택 프레임 가져오기](http://www.mono-project.com/Debugging#Debugging_with_GDB)에 유용)가 `libmonosgen-2.0.so`에서 내보내졌고, `_Gdb` 대상을 현재 끌어내릴 수 없습니다. (이 문제는 향후 릴리스에서 수정됩니다.)
+`mono_pmip` 함수([관리되는 스택 프레임 가져오기](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)에 유용)가 `libmonosgen-2.0.so`에서 내보내졌고, `_Gdb` 대상을 현재 끌어내릴 수 없습니다. (이 문제는 향후 릴리스에서 수정됩니다.)
 
 `libmonosgen-2.0.so`에 있는 함수 호출을 활성화하려면 대상 장치에서 `gdb-symbols` 디렉터리로 복사합니다.
 

@@ -1,6 +1,6 @@
 ---
-title: "Hello, Android 멀티스크린: 빠른 시작"
-description: "두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다."
+title: 'Hello, Android 멀티스크린: 빠른 시작'
+description: 두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2913508159787f6d369f5e55f879addfc1b2ba4f
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
@@ -126,7 +126,7 @@ public class MainActivity : Activity
 }
 ```
 
-`MainActivity` 클래스에서 다음 코드를 추가하여 **변환 기록** 단추를 등록합니다(이 줄을 `translationHistory` 선언 뒤에 배치함).
+`MainActivity` 클래스에서 다음 코드를 추가하여 **변환 기록** 단추를 등록합니다(이 줄을 `translateButton` 선언 뒤에 배치함).
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);

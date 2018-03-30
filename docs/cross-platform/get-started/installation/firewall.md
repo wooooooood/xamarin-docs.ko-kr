@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 방화벽 구성 지침"
-description: "Xamarin의 플랫폼을 회사에서 실행할 수 있도록 방화벽에서 허용 목록을 지정해야 하는 호스트 목록입니다."
+title: Xamarin 방화벽 구성 지침
+description: Xamarin의 플랫폼을 회사에서 실행할 수 있도록 방화벽에서 허용 목록을 지정해야 하는 호스트 목록입니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: de68c1a8ceec381faf1b867c708e04030d39c73a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c6e850594e23d650dbe67126143ce7d58fcaa82
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Xamarin 방화벽 구성 지침
 
@@ -55,13 +55,6 @@ Mac을 사용하고 Xamarin.Android 설치 문제가 발생하는 경우 macOS�
 -  software.xamarin.com(업데이트 서비스)
 -  download.visualstudio.microsoft.com
 -  dl.xamarin.com
-
-### <a name="xamarin-insights"></a>Xamarin Insights
-
-다음 주소를 추가하여 작업이 Xamarin Insights 서버에 도달하도록 해야 합니다.
-
-* https://xaapi.xamarin.com
-
 
 ## <a name="xamarin-mac-agent"></a>Xamarin Mac Agent
 

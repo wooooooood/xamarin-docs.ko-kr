@@ -1,6 +1,6 @@
 ---
 title: Windows
-description: "이 문서에서는 windows와 패널 Xamarin.Mac 응용 프로그램에서 작업을 수행 합니다. 만드는 창과 Xcode 및 스토리 보드와.xib 파일에서 로드 하기 및 이러한 작업을 프로그래밍 방식으로 인터페이스 작성기의 패널을 설명 합니다."
+description: 이 문서에서는 windows와 패널 Xamarin.Mac 응용 프로그램에서 작업을 수행 합니다. 만드는 창과 Xcode 및 스토리 보드와.xib 파일에서 로드 하기 및 이러한 작업을 프로그래밍 방식으로 인터페이스 작성기의 패널을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -20,7 +20,7 @@ _이 문서에서는 windows와 패널 Xamarin.Mac 응용 프로그램에서 작
 
 동일한 Windows에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 개발자의 작업을 하는 패널 *Objective-c* 및 *Xcode* 않습니다. Xamarin.Mac Xcode에 직접 통합을 사용 하면 Xcode의 _인터페이스 작성기_ 만들기 및 유지 관리 창 및 패널 (또는 하려면 필요에 따라 C# 코드에서 직접 만들).
 
-용도에 따라, Xamarin.Mac 응용 프로그램 관리 작업 및 정보를 표시 하 고 협력 하에 화면에 하나 이상의 창을 제공할 수 있습니다. Windows의 주 기능은 다음과 같습니다.
+용도에 따라, Xamarin.Mac 응용 프로그램 관리 작업 및 정보를 표시 하 고 협력 하에 화면에 하나 이상의 창을 제공할 수 있습니다. 창 주 기능은 다음과 같습니다.
 
 1. 어떤 보기 및 컨트롤의 영역을 제공 배치 하 고 관리할 수 있습니다.
 2. 받아들이고 키보드 및 마우스 사용자 상호 작용에 대 한 응답으로 이벤트에 응답 합니다.
@@ -278,7 +278,7 @@ public override void ViewWillAppear ()
 
 응용 프로그램을 구현 하는 경우는 `NSWindow`의 `WillClose` 이벤트 창을 닫기 전에 발생 합니다. 이벤트를 반환 하는 경우 `false`, 다음 창 닫히지 것입니다. 창 없는 경우는 **닫기** 단추 하거나 닫을 수 없습니다. 어떤 이유로 든 OS 경고 소리 내보냅니다.
 
-예:
+예를 들어:
 
 ```csharp
 MyWindow.PerformClose(this);
@@ -299,7 +299,7 @@ MyWindow.PerformClose(this);
 1. 발생 시키는 시도 하지 않습니다는 `WillClose` 이벤트입니다.
 2. 클릭 하는 사용자를 시뮬레이션 하지 않습니다는 **닫기** 일시적으로 단추를 강조 표시 하 여 단추입니다.
 
-예:
+예를 들어:
 
 ```csharp
 MyWindow.Close();
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>변경 내용을 저장 하는 창을 닫기 전에
 
-서브 클래스를 만든 할 미리 수정 된 콘텐츠를 저장 하려면 창을 닫고 수 있도록 사용자를 시청 하려면 `NSWindowDelegate` 재정의 하 고 해당 `WindowShouldClose` 메서드. 예:
+서브 클래스를 만든 할 미리 수정 된 콘텐츠를 저장 하려면 창을 닫고 수 있도록 사용자를 시청 하려면 `NSWindowDelegate` 재정의 하 고 해당 `WindowShouldClose` 메서드. 예를 들어:
 
 ```csharp
 using System;
@@ -511,7 +511,7 @@ var window = NSApplication.SharedApplication.KeyWindow;
 
 경우도 Xamarin.Mac 앱 현재 열기에이 windows의 모든 액세스 해야 합니다. 예를 들어 있는지 파일을 열려는 사용자가 기존 창에서 열려 있는입니다.
 
-`NSApplication.SharedApplication` 유지 관리는 `Windows` 응용 프로그램에서 열려 있는 모든 창의 배열을 포함 하는 속성입니다. 응용 프로그램의 현재 windows의 모든 액세스 하려면이 배열을 반복할 수 있습니다. 예:
+`NSApplication.SharedApplication` 유지 관리는 `Windows` 응용 프로그램에서 열려 있는 모든 창의 배열을 포함 하는 속성입니다. 응용 프로그램의 현재 windows의 모든 액세스 하려면이 배열을 반복할 수 있습니다. 예를 들어:
 
 ```csharp
 // Is the file already open?
@@ -561,7 +561,7 @@ SetFrame (frame, true);
 
 [![](window-images/resize01.png "Identity 관리자")](window-images/resize01.png#lightbox)
 
-다음으로, 사용자 지정 창 컨트롤러 클래스 및 모니터를 편집할는 `DidResize` 라이브 크기 변경의 알림을 받을 수 있는 컨트롤러의 창에는 이벤트입니다. 예:
+다음으로, 사용자 지정 창 컨트롤러 클래스 및 모니터를 편집할는 `DidResize` 라이브 크기 변경의 알림을 받을 수 있는 컨트롤러의 창에는 이벤트입니다. 예를 들어:
 
 ```csharp
 public override void WindowDidLoad ()
