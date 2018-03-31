@@ -1,6 +1,6 @@
 ---
-title: "바운스되 게임을 구현합니다."
-description: "이 연습에서는 게임 논리 및 내용을 BouncingGame 라는 전체 게임을 만들기 위해서는 빈 템플릿을 추가 하는 방법을 보여 줍니다."
+title: 바운스되 게임을 구현합니다.
+description: 이 연습에서는 게임 논리 및 내용을 BouncingGame 라는 전체 게임을 만들기 위해서는 빈 템플릿을 추가 하는 방법을 보여 줍니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 584ae03a3a773ae7e16fa7a24b9dbfa6c5056342
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="implementing-the-bouncing-game"></a>바운스되 게임을 구현합니다.
 
