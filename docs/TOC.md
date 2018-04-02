@@ -11,7 +11,7 @@
 ### [Windows용 iOS 시뮬레이터](tools/ios-simulator.md)
 ### [.NET 포함](tools/dotnet-embedding/index.md)
 ### [Xamarin Inspector](tools/inspector/index.md)
-### [Xamarin Live Player](tools/live-player/index.md)
+### [Xamarin.Forms에 대한 Live Player](tools/live-player/index.md)
 ### [Xamarin Profiler](tools/profiler/index.md)
 ### [Xamarin Workbooks](tools/workbooks/index.md)
 ## [그래픽 및 게임](graphics-games/index.yml)
