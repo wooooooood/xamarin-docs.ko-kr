@@ -1,6 +1,6 @@
 ---
-title: "CocosSharp의 엔터티"
-description: "엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. 가독성을 높일 수, 코드를 보다 쉽게 유지 관리, 기본 제공 부모/자식 기능을 활용 하 고 있습니다."
+title: CocosSharp의 엔터티
+description: 엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. 가독성을 높일 수, 코드를 보다 쉽게 유지 관리, 기본 제공 부모/자식 기능을 활용 하 고 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: fe722ce75f0322ab60bb6fd967ff2c498b2e7b20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb4af0f76f6b266cad4eb969d987a346b7396aa9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="entities-in-cocossharp"></a>CocosSharp의 엔터티
 
@@ -34,7 +34,7 @@ _엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. �
 ![](entities-images/image1.png "완성 된 게임은 다음과 같습니다.")
 
 
-# <a name="introduction-to-game-entities"></a>게임 엔터티 소개
+## <a name="introduction-to-game-entities"></a>게임 엔터티 소개
 
 게임 엔터티는 렌더링, 충돌, 물리학 또는 인공 intelligence 논리 필요한 개체를 정의 하는 클래스입니다. 다행히 게임의 코드 베이스에 있는 엔터티는 종종 게임 개념적 개체와 일치 합니다. True 이면 게임에 필요한 엔터티 식별 더 쉽게 수행할 수 있습니다. 
 
@@ -51,7 +51,7 @@ _엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. �
 이러한 엔터티는 게임에서 고유한 클래스와 각 인스턴스에 인스턴스화 초과 거의 없거나 전혀 없이 설치 해야 합니다.
 
 
-# <a name="general-vs-specific-entity-types"></a>일반 vs입니다. 특정 엔터티 형식
+## <a name="general-vs-specific-entity-types"></a>특정 엔터티 형식 및 일반
 
 엔터티 시스템을 사용 하 여 게임 개발자가 직면 하 고 첫 번째 질문 것이 해당 엔터티를 일반화할 수 정도입니다. 가장 구체적인 구현을 정의할 클래스 엔터티의 모든 형식에 대 한 몇 가지 특성에 따라 차이가 있는 경우에 있습니다. 보다 일반적인 시스템 하나의 클래스로 엔터티 그룹을 결합 하 고 인스턴스를 사용자 지정할 수를 허용 합니다.
 
@@ -84,7 +84,7 @@ _엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. �
 간단한 설명을 위해 사용할 예정 특정 클래스 기반 접근 방식을 단일 글머리 기호 및 배송 업체와이 자습서에 대 한 합니다.
 
 
-# <a name="project-setup"></a>프로젝트 설정
+## <a name="project-setup"></a>프로젝트 설정
 
 이 엔터티를 구현 합니다. 시작 하기 전에 프로젝트를 만드는 필요 합니다. 사용할 예정 CocosSharp 프로젝트 템플릿 프로젝트 만들기를 간소화할 수 있습니다. [이 게시물 확인](http://forums.xamarin.com/discussion/26822/cocossharp-project-templates-for-xamarin-studio) Mac 템플릿에 대 한 Visual Studio에서 CocosSharp 프로젝트 만들기에 대 한 내용은 합니다. 이 가이드의 나머지 부분에서는 프로젝트 이름을 ´ ֲ **EntityProject**합니다.
 
@@ -110,14 +110,14 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 관리 CocosSharp 해상도에 대 한 자세한 내용은 참조 하십시오. 우리의 [CocosSharp에 여러 해상도 처리에 대 한 안내서](~/graphics-games/cocossharp/resolutions.md)합니다.
 
 
-# <a name="adding-content-to-the-project"></a>프로젝트에 콘텐츠 추가
+## <a name="adding-content-to-the-project"></a>프로젝트에 콘텐츠 추가
 
 이 프로젝트를 만든 후에 포함 된 파일 추가 합니다 [이 콘텐츠 zip 파일](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true)합니다. 이 위해 zip 파일을 다운로드 하 고 압축을 풉니다. 모두 추가 **ship.png** 및 **bullet.png** 에 **콘텐츠** 폴더입니다. **콘텐츠** 폴더 됩니다는 **자산** 폴더에 Android, ios 프로젝트의 루트에 됩니다. 두 파일에 추가 되 면 확인할는 **콘텐츠** 폴더:
 
 ![](entities-images/image2.png "두 파일을 콘텐츠 폴더에 있어야 추가")
 
 
-# <a name="creating-the-ship-entity"></a>배송 엔터티 만들기
+## <a name="creating-the-ship-entity"></a>배송 엔터티 만들기
 
 `Ship` 클래스 게임의 첫 번째 엔터티 됩니다. 추가 하는 `Ship` 클래스, 먼저 라는 폴더를 만들어 **엔터티** 프로젝트의 루트 수준에서 합니다. 새 클래스 추가 **엔터티** 라는 폴더 `Ship`:
 
@@ -179,16 +179,16 @@ public class GameLayer : CCLayer
 ![](entities-images/image4.png "게임을 실행 하는 경우, 배송 엔터티 표시 됩니다.")
 
 
-## <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>CCSprite 대신 CCNode에서 상속 하는 이유?
+### <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>CCSprite 대신 CCNode에서 상속 하는 이유?
 
 이 시점에서 우리의 `Ship` 클래스에 대 한 간단한 래퍼는는 `CCSprite` 인스턴스. 이후 `CCSprite` 에서 상속 `CCNode`에서 직접 상속 있을 수 있습니다 `CCSprite`의 코드 줄인 것는 `Ship.cs`합니다. 또한에서 직접 상속 `CCSprite` 메모리 개체 수를 줄이고 종속성 트리를 더욱 작게 만드는 방법을 여 성능을 향상 시킬 수 있습니다.
 
 상속에서는 이러한 이점을 불구 하 고 `CCNode` 중 일부를 숨기는 `CCSprite` 각 인스턴스에서 속성입니다. 예를 들어는 `Texture` 외부의 속성을 수정 하지 않아야는 `Ship` 클래스에서 상속 하 고 `CCNode` 을이 속성을 숨길 수 있습니다. 엔터티는 공용 멤버 더욱 게임 커질수록 및 추가 개발자 팀에 추가 될 때 특히 중요 합니다.
 
 
-# <a name="adding-input-to-the-ship"></a>배송에 대 한 입력을 추가합니다.
+## <a name="adding-input-to-the-ship"></a>배송에 대 한 입력을 추가합니다.
 
-우리의 배송 화면에 표시 되었습니다. 입력을 추가할 예정입니다. 이 접근 방식에서 취한 접근 방식을 유사한 됩니다는 [CocosSharp 가이드를 소개](~/graphics-games/cocossharp/first-game/part2.md)의 동작에 대 한 코드 배치할 것 이라는 점을 제외 하면는 `Ship` 클래스 아닌 포함 하는 `CCLayer` 또는 `CCScene`.
+우리의 배송 화면에 표시 되었습니다. 입력을 추가할 예정입니다. 이 접근 방식에서 취한 접근 방식을 유사한 됩니다는 [BouncingGame 가이드](~/graphics-games/cocossharp/bouncing-game.md)의 동작에 대 한 코드 배치할 것 이라는 점을 제외 하면는 `Ship` 클래스 아닌 포함 하는 `CCLayer` 또는 `CCScene`합니다.
 
 코드를 추가 `Ship` 위로 이동 하는 사용자가 여 화면을 터치 하는 아무 곳에 나 지원 하려면:
 
@@ -230,7 +230,7 @@ public class Ship : CCNode
 많은 해결 그들 게임 구현을 기존 컨트롤러 기반 이동을 모방 최대 개발 속도입니다. 즉, 더 짧은 코드를 유지 하는 즉시 이동 하기만 하면 구현 합니다.
 
 
-# <a name="creating-the-bullet-entity"></a>글머리 기호 엔터티 만들기
+## <a name="creating-the-bullet-entity"></a>글머리 기호 엔터티 만들기
 
 간단한 게임 두 번째 엔터티가 글머리 기호를 표시 하기 위한 엔터티가 있습니다. 마찬가지로 `Ship` 엔터티에 `Bullet` 엔터티에 포함 됩니다는 `CCSprite` 화면에 표시 되도록 합니다. 이동에 대 한 논리 달리 이동;에 대 한 사용자 입력에 종속 되지 않습니다. 대신, `Bullet` 인스턴스 속도 속성을 사용 하 여 직선으로 이동 합니다.
 
@@ -288,7 +288,7 @@ namespace EntityProject
 `Schedule` 메서드를 사용 하면 모든 프레임 호출 될 대리자를 추가 합니다. 추가할 예정이 경우에 `ApplyVelocity` 메서드 우리의 글머리 기호는 개발 속도 값에 따라 이동 되도록 합니다. `Schedule` 메서드는 `Action<float>`, float 매개 변수 이동 시간 기반 구현 하는 데 사용 되는 마지막 프레임 이후 초 단위로 시간을 지정 합니다. 이후로 값은 초 단위로 측정 됩니다 다음 우리의 속도 값에서 이동을 나타내는 *초당 픽셀*합니다.
 
 
-# <a name="adding-bullets-to-gamelayer"></a>GameLayer에 글머리 기호 추가
+## <a name="adding-bullets-to-gamelayer"></a>GameLayer에 글머리 기호 추가
 
 모든 추가 하기 전에 `Bullet` 인스턴스를 다루는 게임 해 드립니다는 컨테이너를 구체적으로 `List<Bullet>`합니다. 수정 된 `GameLayer` 글머리 기호 목록을 포함 하도록 합니다.
 
@@ -422,14 +422,14 @@ void HandleBulletCreated(Bullet newBullet)
 ![](entities-images/image1.png "게임을 실행 하 고 배송에 글머리 기호 인스턴스 촬영 합니다.")
 
 
-# <a name="why-gamelayer-has-ship-and-bullets-members"></a>GameLayer 배송 및 글머리 기호 멤버에서 하는 이유
+## <a name="why-gamelayer-has-ship-and-bullets-members"></a>GameLayer 배송 및 글머리 기호 멤버에서 하는 이유
 
 우리의 `GameLayer` 우리의 엔터티 인스턴스에 대 한 참조를 두 개의 필드를 정의 하는 클래스 (`ship` 및 `bullets`), 하지만 이러한 아무 작업도 수행 합니다. 또한 엔터티는 고유한 동작을 해결 합니다. 따라서 이유 않은 추가 `ship` 및 `bullets` 필드를 `GameLayer`?
 
 이러한 멤버를 추가 하는 이유는 하기 때문에 전체 게임 구현에서 논리는 `GameLayer` 서로 다른 엔터티 간의 상호 작용에 대 한 합니다. 예를 들어 플레이어에서 제거할 수 있습니다. 적 포함 하도록이 게임을 추가로 개발 될 수 있습니다. 이러한 적 포함 됩니다는 `List` 에 `GameLayer`, 및 테스트 하는 논리 있는지 여부를 `Bullet` 인스턴스 충돌에서 수행 된 적은 `GameLayer` 도 합니다. 즉,는 `GameLayer` 루트 *소유자* 모든 엔터티의 인스턴스를 되며 엔터티 인스턴스 간의 상호 작용을 담당 합니다.
 
 
-# <a name="bullet-destruction-considerations"></a>글머리 기호 소멸 고려 사항
+## <a name="bullet-destruction-considerations"></a>글머리 기호 소멸 고려 사항
 
 게임에 제거에 대 한 코드를 현재 부족 `Bullet` 인스턴스. 각 `Bullet` 인스턴스에 화면에서 이동 하기 위한 논리는 하지만 모든 화면 밖으로 삭제 하기 위해 코드를 추가 하지는 않았지만 `Bullet` 인스턴스.
 
@@ -437,12 +437,11 @@ void HandleBulletCreated(Bullet newBullet)
 
 가장 간단한 방법은 소멸을 지원 하기 위해 팩터리 클래스의 책임을 확장 하는 것입니다. 엔터티 인스턴스 제거 되 고와 같은 다른 개체에서 처리할 수 있는 공장 알림을 받을 수는 다음의 `GameLayer` 해당 목록에서 엔터티 인스턴스를 제거 합니다. 
 
-
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에서는에서 상속 하 여 CocosSharp 엔터티를 만드는 방법을 보여 줍니다.는 `CCNode` 클래스입니다. 이러한 엔터티는 만들기 자신의 시각적 개체 및 사용자 지정 논리를 처리 하는 자체 포함 된 개체입니다. 이 가이드는 루트 엔터티 컨테이너 (충돌 및 기타 엔터티 상호 작용 논리)에 속해 있는 코드에서 엔터티 (이동 및 다른 엔터티의 생성) 안에 속하는 코드를 지정 합니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [CocosSharp API 설명서](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [콘텐츠 zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true)

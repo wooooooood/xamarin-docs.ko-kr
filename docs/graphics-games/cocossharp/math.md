@@ -1,6 +1,6 @@
 ---
-title: "2D 수학 CocosSharp와"
-description: "이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. CocosSharp를 사용 하 여 일반적인 게임 개발 작업을 수행 하는 방법을 보여 주는 하 고 수학 뒤에 이러한 작업에 설명 합니다."
+title: 2D 수학 CocosSharp와
+description: 이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. CocosSharp를 사용 하 여 일반적인 게임 개발 작업을 수행 하는 방법을 보여 주는 하 고 수학 뒤에 이러한 작업에 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 7573ca423c3d9462d400f117c2116209e7c2a410
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 484bd8b19f2c51dac57a46a1ef93610ed5e13419
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>2D 수학 CocosSharp와
 
@@ -28,12 +28,12 @@ _이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. Coco
 개발자는 장기-잊은 학교에서 이러한 항목 또는 강력한 수학 배경 갖고 있지 않지만 걱정할 필요가 없습니다 우수한 성능을이 문서 물 크기의 조각으로 개념을 구분 합니다 이론적 설명 실제 예제를 함께 사용 해야 합니다. 즉,이 문서에서 오래 된 수학 학생 질문의 대답 됩니다: "때 I 실제로 사용 해야 합니다 이러한?"
 
 
-# <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
 코드 샘플 개체 폼 상속 하는 작업을 가정 CocosSharp의 수학 측에 주로이 문서에서는, `CCNode`합니다. 또한 이후 `CCNode` 값을 포함 하지 않는 개발 속도 가속에 대 한이 코드에서는 엔터티 VelocityX, VelocityY, AccelerationX, 및 AccelerationY 등의 값을 제공 하는 작업에 있습니다. 엔터티에 대 한 자세한 내용은 연습에서 참조 [CocosSharp의 엔터티](~/graphics-games/cocossharp/entities.md)합니다.
 
 
-# <a name="velocity"></a>개발속도
+## <a name="velocity"></a>개발속도
 
 이라는 용어를 사용 하는 게임 개발자 *속도* 에 개체를 이동 – 하는 방법을 설명 합니다. 특히 얼마나 빨리 점이 이동 방향을 한다는 이동 합니다. 
 
@@ -50,7 +50,7 @@ bulletInstance.VelocityY = 300;
 ```
 
 
-## <a name="implementing-velocity"></a>개발 속도 구현합니다.
+### <a name="implementing-velocity"></a>개발 속도 구현합니다.
 
 CocosSharp 때문 움직임을 필요로 하는 개체를 직접 이동 논리를 구현 해야 합니다 속도 구현 하지 않습니다. 개발 속도 종종 구현 하는 새 게임 개발자는 실수의 개발 속도 만드는 프레임 속도에 따라 달라 합니다. 즉, 다음 *잘못 구현* 올바른 결과 제공 하도록 같지만 게임의 프레임 속도에 따라 달라 집니다.
 
@@ -75,7 +75,7 @@ this.PositionY += this.VelocityY * seconds;
 시간 기반 이동을 추가 하는 방법의 예제를 보려면 [시간을 다루는이 조리법 기반 이동을](https://developer.xamarin.com/recipes/cross-platform/game_development/time_based_movement/)합니다.
 
 
-## <a name="calculating-positions-using-velocity"></a>개발 속도 사용 하 여 위치를 계산 합니다.
+### <a name="calculating-positions-using-velocity"></a>개발 속도 사용 하 여 위치를 계산 합니다.
 
 개발 속도 어느 정도의 시간이 지남에 후 개체 될 위치에 대 한 예측을 수행 하거나 게임을 실행 하지 않고도 개체의 동작을 조정 하는 데 사용할 수 있습니다. 예를 들어 개발자 발생할된 글머리의 움직임을 구현 하는 인스턴스화된 후 글머리 기호의 개발 속도 설정 해야 합니다. 화면 크기 개발 속도 설정 하기 위한 기초를 제공 데 사용할 수 있습니다. 즉, 개발자는 알고 있는 경우 글머리 기호 2 초에 화면의 높이 이동 해야 다음 속도 2로 나눈 결과 화면의 높이로 설정 해야 합니다. 화면이 800 픽셀 높이 경우 글머리 기호의 속도 400 (즉, 800/2)으로 설정 됩니다.
 
@@ -92,7 +92,7 @@ label.Text = secondsToReachTarget + " seconds to reach target";
 ```
 
 
-# <a name="acceleration"></a>가속
+## <a name="acceleration"></a>가속
 
 *가속* 는 게임 개발의 일반적인 개념 및 개발 속도와 많은 공통점이 공유 합니다. 가속은 개체가 속도 또는 (속도 값에 따른 변경 내역 시간)의 속도가 느려지지 있는지 수량화 합니다. 가속 *추가* 속도 위치를 추가 하는 것 처럼 개발 속도입니다. 가속 일반 응용 프로그램 등이 무게, 속도 향상, 자동차의 thrusters 발생 하는 공간 선적 있습니다. 
 
@@ -111,12 +111,12 @@ icicle.AccelerationY = -50;
 ```
 
 
-## <a name="acceleration-vs-deceleration"></a>가속 vs입니다. 감속
+### <a name="acceleration-vs-deceleration"></a>가속 감속 비교
 
 가속 및 감속 매일 음성의 경우에 따라 구분 되는지, 이지만 두 기술 차이가 없습니다. 중력 가속 결과적 force입니다. 개체 위쪽으로 throw 되 면 다음 중력 느려집니다 것 (감속) 하지만 개체 오르기 중지 하 고와 동일한 방향으로 중력에 참가 하는 다음 무게는 그 시간을 단축 (가속화). 아래와 같이 가속이 적용이 같습니다 이동의 같은 방향 또는 반대 방향으로 적용 되는 여부. 
 
 
-## <a name="implementing-acceleration"></a>가속 구현
+### <a name="implementing-acceleration"></a>가속 구현
 
 가속 개발 속도 유사 구현할 때 – CocosSharp에서 자동으로 구현 되지 않았습니다 이며 가속 시간 기반 프레임 기반 가속) (대비 원하는 구현 합니다. 따라서 개발 속도) (함께 간단한 가속 구현 같을 수 있습니다.
 
@@ -149,7 +149,7 @@ this.VelocityY += this.AccelerationY * seconds;
 영향 `halfSecondSquare` 가속 수학적으로 정확 하 게 하 고 예상 프레임 속도 상관 없이 동작 하는 합니다. 가속 된 선형 근사값 프레임 속도-는 낮을수록 framerate 삭제는 근사값 덜 정확 하 게 됩니다. 사용 하 여 `halfSecondsSquared` 보장 코드 프레임 속도 관계 없이 동일 하 게 동작 합니다.
 
 
-# <a name="angles-and-rotation"></a>각도 및 회전
+## <a name="angles-and-rotation"></a>각도 및 회전
 
 시각적 개체와 같은 `CCSprite` 통해 회전을 지원 한 `Rotation` 변수입니다. 이 각도로 회전을 설정 하는 값을 할당할 수 있습니다. 예를 들어, 다음 코드를 보여 줍니다 회전 하는 방법을 `CCSprite` 인스턴스:
 
@@ -189,7 +189,7 @@ this.AddChild (rotatedSprite);
 위의 다이어그램에 회전 각도; 표시 드릴 그러나 일부 수치 연산 함수 (등의 함수는 `System.Math` 네임 스페이스) 및 반환 값에 *라디안* 도 대신 합니다. 이 가이드 뒷부분에서 두 명의 단위 형식 간에 변환 하는 방법을 살펴보겠습니다.
 
 
-## <a name="rotating-to-face-a-direction"></a>방향이를 회전
+### <a name="rotating-to-face-a-direction"></a>방향이를 회전
 
 위에 나와 있는 것 처럼 `CCSprite` 를 사용 하 여 회전할 수는 `Rotation` 속성입니다. `Rotation` 에서 제공 속성 `CCNode` (기본 클래스에 대 한 `CCSprite`), 즉, 회전에서 상속 하는 엔터티만에 적용할 수 있습니다 `CCNode` 도 합니다. 
 
@@ -261,14 +261,16 @@ private void HandleInput(System.Collections.Generic.List<CCTouch> touches, CCEve
 
 ![](math-images/image5.gif "이 코드에서는이 동작에서 발생")
 
-### <a name="using-atan2-to-convert-offsets-to-angles"></a>Atan2를 사용 하 여 각도에 오프셋을 변환 합니다.
+#### <a name="using-atan2-to-convert-offsets-to-angles"></a>각도 오프셋과 Atan2를 사용 하 여 변환 하려면
+
 `System.Math.Atan2` 사용 하 오프셋 각도를 변환할 수 있습니다. 함수 이름 `Atan2` 삼각 함수 아크탄젠트에서 가져옵니다. "2" 접미사는 표준에서이 함수를 구분할 `Atan` 아크탄젠트의 수학 동작에 엄격 하 게 일치 하는 함수입니다. 아크탄젠트 값은-90 사이의 값을 반환 하는 함수 및 + 90도 (또는 해당 라디안에서)입니다. 일반적으로 컴퓨터 게임을 비롯 한 대부분의 응용 프로그램의 값을 전체 360도 필요 하므로 `Math` 클래스를 포함 `Atan2` 이 요구를 충족 하기 위해 합니다.
 
 위의 코드를 통과 하는지 Y 매개 변수를 먼저 다음 X 매개 변수를 호출 하는 경우 확인 된 `Atan2` 메서드. 이 이전 버전과 X, Y 위치 좌표의 순서는 일반적인에서입니다. 자세한 내용은 [Atan2 문서 참조](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx)합니다.
 
 주목할 만한 이기도에서 반환 된 값을 `Atan2` 라디안으로 각도 측정 하는 데 사용 되는 다른 단위인 됩니다. 이 가이드 라디안의 세부 정보를 포함 하지 않지만 염두에서에 둬야 하의 모든 삼각 함수는 `System.Math` 네임 스페이스 사용 하 여 radians, 모든 값도 CocosSharp 개체에 사용 되기 전에 변환 해야 합니다. 라디안에서 자세한 정보를 찾을 수 [라디안 Wikipedia 페이지에서](http://en.wikipedia.org/wiki/Radian)합니다.
 
-### <a name="forward-angle"></a>정방향 각도
+#### <a name="forward-angle"></a>정방향 각도
+
 한 번의 `FacePoint` 메서드는 각도를 라디안으로 변환, 정의 `forwardAngle` 값입니다. 이 값은 해당 회전 값이 0 인 경우 엔터티 연결 각도를 나타냅니다. 이 예제는 엔터티 향하도록 위쪽으로, (CocosSharp 회전) 대비 수학 회전을 사용 하는 경우 90도 가정 합니다. 여기에서 사용 된 수학 회전 CocosSharp 회전 아직 반전 하지 않은 것 때문입니다.
 
 다음 테이블에 나와 있는 어떤 엔터티는 `forwardAngle` 90도 아래와 같습니다.
@@ -276,7 +278,7 @@ private void HandleInput(System.Collections.Generic.List<CCTouch> touches, CCEve
 ![](math-images/image6.png "90도 forwardAngle가 있는 엔터티 모양을 표시합니다")
 
 
-## <a name="angled-velocity"></a>각 진된 개발 속도
+### <a name="angled-velocity"></a>각 진된 개발 속도
 
 지금까지 각도에 오프셋을 변환 하는 방법을 알아보았습니다. 이 섹션, 다른 방법으로-는 각도 가져와 들어가고 X로 변환 및 Y 값입니다. 일반적인 예로, 향하고 방향 또는 촬영 글머리 배송 향하도록 방향으로 이동 하는 공간 선적 이동 자동차 있습니다. 
 
@@ -354,6 +356,6 @@ newBullet.Rotation = rotation;
 ![](math-images/image9.png "이 코드는이 스크린샷 같은 화면이 생성 될 수 있습니다.")
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에서는 2D 게임 개발의 일반적인 수학적 개념을 다룹니다. 할당 및 개발 속도 및 가속을 구현 하는 방법을 보여 줍니다. 하 고 개체와 모든 방향에서 이동 벡터를 회전 하는 방법을 설명 합니다.

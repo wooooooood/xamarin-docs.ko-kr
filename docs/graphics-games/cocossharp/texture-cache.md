@@ -1,6 +1,6 @@
 ---
-title: "CCTextureCache를 사용 하는 텍스처 캐싱"
-description: "CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠를 언로드할 표준 방법을 제공 합니다. RAM, 그룹화 및 질감의 삭제 과정을 단순화 하에 전체가 들어 맞지 않을 수 있는 큰 게임에 대 한 특히 유용 합니다."
+title: CCTextureCache를 사용 하는 텍스처 캐싱
+description: CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠를 언로드할 표준 방법을 제공 합니다. RAM, 그룹화 및 질감의 삭제 과정을 단순화 하에 전체가 들어 맞지 않을 수 있는 큰 게임에 대 한 특히 유용 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 365e343a55a208b63f4dc52999e8857b5f0ec1f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 350a454bc94c796b34cfeeb319481919b18d334f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="texture-caching-using-cctexturecache"></a>CCTextureCache를 사용 하는 텍스처 캐싱
+# <a name="texture-caching-using-cctexturecache"></a>질감 CCTextureCache를 사용 하 여 캐싱
 
 _CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠를 언로드할 표준 방법을 제공 합니다. RAM, 그룹화 및 질감의 삭제 과정을 단순화 하에 전체가 들어 맞지 않을 수 있는 큰 게임에 대 한 특히 유용 합니다._
 
@@ -29,7 +29,7 @@ _CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠
  - 텍스처를 삭제합니다.
 
 
-# <a name="why-texture-caching-matters"></a>질감의 캐싱 중요 한 이유
+## <a name="why-texture-caching-matters"></a>질감의 캐싱 중요 한 이유
 
 질감 캐싱은 질감 로드 작업은 시간이 많이 걸리는 작업 하며 질감 있어야 런타임 시 상당한 양의 RAM 게임 개발에는 중요 한 고려 사항입니다.
 
@@ -38,7 +38,7 @@ _CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠
 위에서 설명 했 듯이 텍스처는 또한 많은 양의 런타임 메모리를 차지 합니다. 경우에 PNG 파일의 크기가 몇 킬로바이트만 배경 이미지의 크기는 iPhone 6 (1344 x 750)의 해상도를 ram – 4mb이 차지 하는 예를 들어 합니다. 질감 캐싱 응용 프로그램 내에서 질감 참조를 공유 하는 방법을도 쉽게 여러 게임 상태 간의 전환 될 때 모든 콘텐츠를 언로드할 수 제공 합니다.
 
 
-# <a name="texture-lifespan"></a>질감 수명
+## <a name="texture-lifespan"></a>질감 수명
 
 수명이 짧은 될 수 있습니다 또는 CocosSharp 질감 응용 프로그램 실행의 전체 길이 대 한 메모리에 유지할 수 있습니다. 메모리를 최소화 하기 위해 사용량 응용 프로그램는 더 이상 필요 없는 질감 삭제 해야 합니다. 물론, 즉, 질감 삭제 및 로드 시간이 길어질 수 있거나 로드 하는 동안 성능이 저하 될 수 있는 나중에 다시 로드 될 수 있습니다. 
 
@@ -58,7 +58,7 @@ _CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠
 위에 표시 된 다이어그램을 언로드하여 질감 메모리 사용량을 줄일 수 있습니다 하지만 플레이어가 수준을 재생 하는 경우의 추가적인 로드 시간이 필요할 수 있습니다를 나타냅니다. UITexture 및 MainCharacter 질감 로드 되 고 언로드되지 않으므로 주목할 만한 이기도 합니다. 이 항상 메모리에 유지 되므로 이러한 질감 모든 수준에 필요한 것을 의미 합니다. 
 
 
-# <a name="using-sharedtexturecache"></a>SharedTextureCache를 사용 하 여
+## <a name="using-sharedtexturecache"></a>SharedTextureCache를 사용 하 여
 
 통해 로드할 때 자동으로 CocosSharp 질감 캐시는 `CCSprite` 생성자입니다. 예를 들어 다음 코드는 텍스처 인스턴스를 하나만 만듭니다.
 
@@ -84,7 +84,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` 확인 인수 파일 (이 경우 `star.png`)가 이미 로드 되었습니다. 이 경우 캐시 된 인스턴스가 반환 됩니다. 파일 시스템에서 로드 되는 다음 하지 질감에 대 한 참조에 대해 내부적으로 저장 되어 있으면 후속 `AddImage` 호출 합니다. 즉는 `star.png` 이미지는 한 번만 로드 하 고 후속 호출 추가 질감 메모리 없음이나 추가 디스크 액세스가 필요 합니다.
 
 
-# <a name="lazy-loading-vs-pre-loading-with-addimage"></a>지연 로드 vs입니다. AddImage와 사전 로드
+## <a name="lazy-loading-vs-pre-loading-with-addimage"></a>지연 로드 AddImage와 사전 로드와 비교
 
 `AddImage` 코드를 동일한 쓸 수 있도록 요청된 된 텍스처 이미 로드 여부 여부. 이 즉, 콘텐츠가; 필요할 때까지 로드 되지 않습니다. 그러나이이 예기치 않은 내용 로드로 인해 런타임 시 성능 문제가 발생할 수 있습니다.
 
@@ -114,12 +114,12 @@ void PreLoadImages()
 미리이 로드 하는이 불필요 한 메모리에 발생할 수 있으며 시작 시간이 증가할 수 있습니다. 예를 들어 플레이어는 전원을 나타내는 얻을 실제로 수 있습니다는 `powerup3.png` 질감 불필요 하 게 로드 하도록 합니다. 물론 되므로 미리 로드 콘텐츠를 일반적으로 최상의 경우 RAM에 들어가는 게임의 잠재적인 pop를 방지 하기 위해 비용을 지불 하는 데 필요한 비용이 드는 수 있습니다.
 
 
-# <a name="disposing-textures"></a>텍스처를 삭제합니다.
+## <a name="disposing-textures"></a>텍스처를 삭제합니다.
 
 게임 최소 사양 장치에서 사용할 수 있는 것 보다 많은 질감 메모리를 필요 하지 않은 경우 질감 삭제 필요 하지 않습니다. 반면에 더 큰 게임 새 내용에 대 한 공간을 만들기 위해 질감 메모리를 확보 해야 합니다. 예를 들어 게임 많은 양의 환경에 대 한 질감을 저장 하는 메모리를 사용할 수 있습니다. 특정 수준에 있는 환경만 사용 되는 경우 다음 그 언로드할지 수준을 종료 될 때입니다.
 
 
-## <a name="disposing-a-single-texture"></a>단일 텍스처를 삭제합니다.
+### <a name="disposing-a-single-texture"></a>단일 텍스처를 삭제합니다.
 
 호출 해야 먼저 단일 질감 제거는 `Dispose` 메서드를 다음에서 수동 설치 제거는 `CCTextureCache`합니다.
 
@@ -187,11 +187,11 @@ Dispose 메서드 이러한 질감 사용 되는 메모리를 정리 하는 모�
 
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드를 사용 하는 방법을 보여 줍니다는 `CCTextureCache` 균형 메모리 사용량 및 런타임 성능에는 클래스입니다. `CCTexturCache.SharedTextureCache` 암시적으로 로드 하 고 응용 프로그램의 수명에 대 한 질감 캐시를 사용 하거나 명시적으로 수 `CCTextureCache` 인스턴스 언로드 질감 메모리 사용을 줄일 데 사용할 수 있습니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [https://github.com/mono/CocosSharp](https://github.com/mono/CocosSharp)
 - [/api/type/CocosSharp.CCTextureCache/](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)

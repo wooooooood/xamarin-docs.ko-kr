@@ -1,18 +1,18 @@
 ---
 title: Android Speech
-description: "이 문서에서는 매우 강력한 Android.Speech 네임 스페이스를 사용 하는 기본적인에 설명 합니다. 을 도입한 이후 Android 음성 인식 하 고 텍스트로 출력 수 있었습니다. 이 작업은 비교적 간단 합니다. 그러나 텍스트 음성 변환, 프로세스는 조금 더 복잡 뿐만 아니라 음성 엔진은 않으므로 계정으로 간주 되려면 하지만 사용 가능 하 고 개의 문자 음성 변환 TTS () 시스템에서 설치 된 언어도 합니다."
+description: 이 문서에서는 매우 강력한 Android.Speech 네임 스페이스를 사용 하는 기본적인에 설명 합니다. 을 도입한 이후 Android 음성 인식 하 고 텍스트로 출력 수 있었습니다. 이 작업은 비교적 간단 합니다. 그러나 텍스트 음성 변환, 프로세스는 조금 더 복잡 뿐만 아니라 음성 엔진은 않으므로 계정으로 간주 되려면 하지만 사용 가능 하 고 개의 문자 음성 변환 TTS () 시스템에서 설치 된 언어도 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 04/02/2018
+ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="android-speech"></a>Android Speech
 
@@ -158,15 +158,21 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
+이 코드는 호출 [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 해당 로캘의 언어 패키지가 이미 장치에 있는 경우 테스트 합니다. 이 메서드가 반환 된 [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), 전달 된 로캘에 대 한 언어를 사용할 수 있는지 여부를 나타냅니다. 경우 `LanguageAvailableResult` 언어 임을 나타냅니다 `NotSupported`, (다운로드)에 사용할 수 없는 음성 패키지는 해당 언어에 대 한 합니다. 경우 `LanguageAvailableResult` 로 설정 된 `MissingData`, 4 단계에서에서 아래에 설명 된 대로 새 언어 패키지를 다운로드 하는 것일 수 있습니다.
+
 ### <a name="step-3---setting-the-speed-and-pitch"></a>3 단계-피치와 속도 설정 합니다.
 
 Android 된 음성 소리가 변경 하 여 변경할 수 있습니다는 `SpeechRate` 및 `Pitch` (속도 된 음성의 모양을의 빈도). 이 0에서 1로 둘 다에 대해 1 되 고 "일반" 음성 인 합니다.
 
 ### <a name="step-4---testing-and-loading-new-languages"></a>4 단계-테스트 하 고 새 언어를 로드 합니다.
 
-사용 하 여이 작업을 수행는 `Intent` 에서 해석 되 고 결과와 `OnActivityResult`합니다. 사용할 음성-텍스트 예제와 달리는 `RecognizerIntent` 로 `PutExtra` 매개 변수를는 `Intent`, 의도 사용 하 여 설치 프로그램 `Action`합니다.
+사용 하 여 수행 됩니다 새 언어를 다운로드 한 `Intent`합니다. 이 의도을 수행 하면는 [OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/) 메서드를 호출할 수 있습니다. 음성-텍스트 예제와 달리 (사용 하는 [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/) 로 `PutExtra` 매개 변수를는 `Intent`), 테스트 및 로드 `Intent`는 `Action`-기반:
 
-다음 코드를 사용 하 여 Google의 새 언어를 설치 하는 것이 불가능 합니다. 결과 `Activity` 되려면 다운로드에 대 한 메시지가 표시 되 면 언어를 설치 하는 언어 필요 하 고 그럴 경우를 확인 합니다.
+-   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash; 플랫폼에서 작업 시작 `TextToSpeech` 엔진 적절 한 설치 및 장치에 언어 리소스의 가용성을 확인 합니다.
+
+-   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/) &ndash; 필요한 언어를 다운로드 하 라는 메시지를 표시 하는 활동을 시작 합니다.
+
+다음 코드 예제에서는 이러한 작업을 사용 하 여 리소스에 대 한 테스트 하는 새로운 언어를 다운로드 하는 방법을 보여 줍니다.
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -183,6 +189,19 @@ protected override void OnActivityResult(int req, Result res, Intent data)
     }
 }
 ```
+
+`TextToSpeech.Engine.ActionCheckTtsData` 언어 리소스의 가용성을 테스트 합니다. `OnActivityResult` 이 테스트가 완료 된 후 호출 됩니다. 언어 리소스를 다운로드 해야 하는 경우 `OnActivityResult` 를 발생 시킵니다는 `TextToSpeech.Engine.ActionInstallTtsData` 동작을 사용 하면 필요한 언어를 다운로드 하는 활동을 시작 합니다. 참고가 `OnActivityResult` 구현을 확인 하지 않습니다는 `Result` 이 간단한 예제에서 확인 하는 프로세스가 이미 이루어졌을 언어 패키지 다운로드 해야 하기 때문에 코드입니다.
+
+`TextToSpeech.Engine.ActionInstallTtsData` 동작 원인을 **Google TTS 음성 데이터** 다운로드 하는 언어를 선택 하기 위한 사용자에 게 표시 되는 활동:
+
+![Google TTS 음성 데이터 작업](speech-images/01-google-tts-voice-data.png)
+
+예를 들어, 사용자는 프랑스어를 선택 하 고 프랑스어 음성 데이터를 다운로드 하려면 다운로드 아이콘을 클릭 수 있습니다.:
+
+![프랑스어 언어 다운로드의 예](speech-images/02-selecting-french.png)
+
+이 데이터의 설치 다운로드가 완료 된 후 자동으로 발생 합니다.
+
 
 ### <a name="step-5---the-ioninitlistener"></a>5-는 IOnInitListener 단계
 

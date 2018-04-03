@@ -1,6 +1,6 @@
 ---
-title: "손가락 그리기"
-description: "손가락을 사용 하 여 캔버스에 그릴 합니다."
+title: 손가락 그리기
+description: 손가락을 사용 하 여 캔버스에 그릴 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: b4213d71c2eca6c2552ac674a0203d7a2cc36e1b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dacb9f399ad044d2d5e9c960bce398092766020c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="finger-painting"></a>손가락 그리기
 
@@ -24,7 +24,7 @@ _손가락을 사용 하 여 캔버스에 그릴 합니다._
 
 Xamarin.Forms에 터치 조작 지원 하므로 Xamarin.Forms 터치 추적 효과 추가 터치 지원을 제공 하기 위해 개발 되었습니다 화면의 개별 손가락을 추적 하는 것을 허용 하지 않습니다. 이 효과 문서에 설명 되어 [ **호출 이벤트 효과를**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)합니다. 샘플 프로그램 [ **터치 추적 효과 데모** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) finger-painting 프로그램을 포함 하 여 SkiaSharp를 사용 하는 두 개의 페이지가 포함 됩니다.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 솔루션에이 터치 추적 이벤트를 포함 합니다. 이식 가능한 클래스 라이브러리 프로젝트에 포함 되어는 `TouchEffect` 클래스는 `TouchActionType` 열거형은 `TouchActionEventHandler` 대리자 및 `TouchActionEventArgs` 클래스입니다. 각 플랫폼 프로젝트를 포함 한 `TouchEffect` 해당 플랫폼에 대 한 클래스; iOS 프로젝트에 포함 됩니다는 `TouchRecognizer` 클래스입니다.
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 솔루션에이 터치 추적 이벤트를 포함 합니다. 이식 가능한 클래스 라이브러리 프로젝트에 포함 되어는 `TouchEffect` 클래스는 `TouchActionType` 열거형은 `TouchActionEventHandler` 대리자 및 `TouchActionEventArgs` 클래스입니다. 각 플랫폼 프로젝트를 포함 한 `TouchEffect` 해당 플랫폼에 대 한 클래스; iOS 프로젝트에 포함 됩니다는 `TouchRecognizer` 클래스입니다.
 
 **손가락 페인트** 페이지 **SkiaSharpFormsDemos** 손가락 그리기의 간단한 구현입니다. 색을 선택할 수 있도록 하거나 스트로크 너비 하지 않습니다, 캔버스를 지울 수 있는 방법이 및 물론 아트 워크를 저장할 수 없습니다.
 
@@ -169,6 +169,6 @@ public partial class FingerPaintPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [터치 추적 효과 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [효과의 이벤트를 호출합니다.](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

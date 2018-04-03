@@ -1,6 +1,6 @@
 ---
-title: "플랫폼 간 성능"
-description: "Xamarin 플랫폼으로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다."
+title: 플랫폼 간 성능
+description: Xamarin 플랫폼으로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -291,7 +291,7 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 응용
 
 ## <a name="reduce-the-size-of-the-application"></a>응용 프로그램의 크기 축소
 
-응용 프로그램 실행 파일 크기를 제공한 위치를 이해하려면 각 플랫폼에서 컴파일 프로세스를 이해해야 합니다.
+응용 프로그램의 실행 파일 크기를 제공한 위치를 이해하려면 각 플랫폼에서 컴파일 프로세스를 이해해야 합니다.
 
 - iOS 응용 프로그램은 ARM 어셈블리 언어로 AOT(Ahead Of Time) 컴파일됩니다. 적절한 링커 옵션을 사용하는 경우에만 사용하지 않는 클래스를 제거한 .NET Framework가 포함됩니다.
 - Android 응용 프로그램은 IL(중간 언어)로 컴파일되고 MonoVM 및 JIT(just-in-time) 컴파일로 패키지됩니다. 적절한 링커 옵션을 사용하는 경우에만 사용하지 않는 프레임워크 클래스를 제거합니다.

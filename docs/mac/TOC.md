@@ -53,6 +53,7 @@
 #### [Mac 앱 스토어에 업로드](deploy-test/publishing-to-the-app-store/uploading.md)
 ## [고급 개념 및 내부 요소](internals/index.md)
 ### [AOT](internals/aot.md)
+### [사용 가능한 어셈블리](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)
 ### [Mac 아키텍처](internals/architecture.md)
 ### [Xamarin.Mac 작동 방법](internals/how-it-works.md)
 ### [프레임워크](internals/frameworks.md)

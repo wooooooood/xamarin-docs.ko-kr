@@ -1,6 +1,6 @@
 ---
-title: "유사 형식이 아닌 변형"
-description: "변환 행렬의 세 번째 열이 있는 테이퍼 효과 및 큐브 만들기"
+title: 유사 형식이 아닌 변형
+description: 변환 행렬의 세 번째 열이 있는 테이퍼 효과 및 큐브 만들기
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ae61774a53136af3350d63658470cfb4607026db
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="non-affine-transforms"></a>유사 형식이 아닌 변형
 
@@ -470,4 +470,4 @@ W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환 (`S`) �
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

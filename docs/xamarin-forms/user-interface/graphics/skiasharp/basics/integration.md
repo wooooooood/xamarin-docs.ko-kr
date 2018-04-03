@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms를 사용한 통합"
-description: "터치 및 Xamarin.Forms 요소에 응답 하는 SkiaSharp 그래픽 작성"
+title: Xamarin.Forms를 사용한 통합
+description: 터치 및 Xamarin.Forms 요소에 응답 하는 SkiaSharp 그래픽 작성
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: aa6011c783228848212c633c1c8059c402fdaa3f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3edc71977820ca618447e02caa032cf908e1aae4
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms를 사용한 통합
 
@@ -23,7 +23,7 @@ SkiaSharp 그래픽 여러 가지 방법으로 Xamarin.Forms의 나머지와 통
 ![](integration-images/integrationexample.png "슬라이더와 색을 선택 하면")
 
 Xamarin.Forms에 대화형 SkiaSharp 그래픽 만들기를 다른 하나는 터치 합니다.
-두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 단순 원을 두 가지 방법으로 그릴 &mdash; 채우기 없이 및 채우기가 적용 된 &mdash; 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
+두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 단순 원을 두 가지 방법으로 그릴 &mdash; 채우기 없이 및 채우기가 적용 된 &mdash; 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
 
 이 페이지에 대 한는 `SKCanvasView` 클래스 인스턴스화되고는 [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 또한 Xamarin.Forms는 설정 된 파일을 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 보기:
 
@@ -241,4 +241,4 @@ HSV 모델에서 순수 색 채도 값은 100 때 발생 합니다. 값이 0 다
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

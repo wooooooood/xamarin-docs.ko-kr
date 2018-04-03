@@ -1,6 +1,6 @@
 ---
-title: "CCAction 사용한 애니메이션"
-description: "CCAction 클래스 추가 애니메이션 CocosSharp 게임을 간소화합니다. 이러한 애니메이션 기능을 구현 하거나 폴란드어를 추가 하려면 사용할 수 있습니다."
+title: CCAction 사용한 애니메이션
+description: CCAction 클래스 추가 애니메이션 CocosSharp 게임을 간소화합니다. 이러한 애니메이션 기능을 구현 하거나 폴란드어를 추가 하려면 사용할 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 2852cf0e141e8239cee8dbe580576f4571c919a3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e64789f4e86dbcd47fc760fd9d4d7fb61c76121
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="animating-with-ccaction"></a>CCAction 사용한 애니메이션
 
@@ -23,7 +23,7 @@ _CCAction 클래스 추가 애니메이션 CocosSharp 게임을 간소화합니�
 이 가이드에서는 라는 프로젝트 **ActionProject** 있는 [다운로드할 수 있습니다](https://developer.xamarin.com/samples/mobile/CCAction)합니다. 이 가이드에서는 `CCDrawNode` 에서 클래스는 [CCDrawNode 된 기 하 도형 그리기](~/graphics-games/cocossharp/ccdrawnode.md) 가이드입니다.
 
 
-# <a name="running-the-actionproject"></a>ActionProject 실행
+## <a name="running-the-actionproject"></a>ActionProject 실행
 
 **ActionProject** iOS 및 Android에 대 한 구현 될 수 있는 CocosSharp 솔루션입니다. 역할 둘 다 사용 하는 방법에 대 한 코드 샘플으로는 `CCAction` 클래스 및 일반적으로 실시간 데모로 `CCAction` 구현 합니다.
 
@@ -39,8 +39,7 @@ ActionProject 세 개를 표시, 실행 하는 경우 `CCLabel` 화면 및 두 �
 
 ![](ccaction-images/image3.gif "변경할 수 있는 다양 한 값을 번갈아 표시 위치 레이블을 클릭 하면")
 
-
-# <a name="common-variable-changing-ccactions"></a>일반적인 변수 변경 CCActions 
+## <a name="common-variable-changing-ccaction-classes"></a>일반적인 변수 변경 CCAction 클래스
 
 **ActionProject** 에서는 다음과 같은 `CCAction`-CocosSharp의 일부인 클래스 상속:
 
@@ -94,13 +93,13 @@ nodeToAddTo.AddAction (coreAction);
 각 "To" 클래스 "에서" 하 여 버전에서 현재 값으로 인수 값을 추가 합니다에 `CCNode`합니다. 예를 들어 만들기는 `CCMoveBy` 100 및 Y = X의 위치와 = 200 발생 합니다는 `CCNode` 작업이 시작 된 시점에 위치에서 오른쪽 100 단위 하 고 200 단위를 이동 하는 인스턴스.
 
 
-# <a name="easing-actions"></a>감속/가속 작업
+## <a name="easing-actions"></a>감속/가속 작업
 
 변수 변경 작업에 기본적으로 수행 *선형 보간을* – 작업은 일정 한 비율로에 원하는 값으로 이동 합니다. 보간 하는 경우 *위치* 연속적으로 이동 개체 즉시 시작 되며 시작 및 끝 동작의 이동을 중지 하 고 작업이 실행 되는 속도가 상수 유지 됩니다. 
 
 비 선형 보간을 덜 jarring 이며 CocosSharp 다양 한 작업 변수 변경 동작을 수정 하는 데 사용할 수 있는 감속/가속 제공 하므로 폴란드어의 요소를 추가 합니다.
 
-에 **ActionProject** 샘플에서는 이러한 유형의 두 번째 레이블을 클릭 하 여 감속/가속 작업 간에 전환할 수 있습니다 (데이터베이스가 기본 인  **<None>** ):
+에 **ActionProject** 샘플에서는 이러한 유형의 두 번째 레이블을 클릭 하 여 감속/가속 작업 간에 전환할 수 있습니다 (데이터베이스가 기본 인 **<None>**):
 
 ![](ccaction-images/image4.gif "사용자는 이러한 유형의 두 번째 레이블을 클릭 하 여 감속/가속 작업 간에 전환할 수 있습니다.")
 
@@ -128,35 +127,35 @@ nodeToAddTo.AddAction (easing);
 ![](ccaction-images/image5.gif "정확히 동일한 감속/가속 CCRotateTo 등의 다른 변수 설정 작업에 적용할 수 있습니다.")
 
 
-# <a name="easing-in-out-and-inout"></a>In, Out 및 InOut 감속/가속
+## <a name="easing-in-out-and-inout"></a>In, Out 및 InOut 감속/가속
 
 모든 감속/가속 작업 `In`, `Out`, 또는 `InOut` 감속/가속 형식에 추가 합니다. 적용 되는 감속/가속 때 이러한 용어 참조: `In` 하면 시작 되 면 감속/가속 적용 되지 것입니다 `Out` 끝나도 의미 및 `InOut` 시작과 끝에 모두 의미 합니다.
 
 `In` 변수 (둘 다 시작과 끝), 전체 보간 전체적으로 적용 되는 방법에 영향을 줍니다 작업 감속/가속 있지만 일반적으로 가장 인식할 수 있는 특성 감속/가속 작업을 시작할 때 적용 됩니다. 마찬가지로, `Out` 감속/가속 작업 보간 끝날 때의 동작에 따라 구분 됩니다. 예를 들어 `CCEaseBounceOut` 반송 동작의 끝에 개체에 발생 합니다.
 
 
-## <a name="out"></a>Out
+### <a name="out"></a>Out
 
 `Out` 일반적으로 감속/가속 보간의 끝에서 가장 눈에 띄는 변경 내용을 적용 합니다. 예를 들어 `CCEaseExponentialOut` 대상 값 가까워지면 변경 변수의 변동률 느려집니다.
 
 ![](ccaction-images/image6.gif "대상 값 가까워지면 CCEaseExponentialOut 변경 변수의 변동률을 느려집니다.")
 
 
-## <a name="in"></a>입력
+### <a name="in"></a>입력
 
 `In` 일반적으로 감속/가속에서 가장 큰 변화 보간의 시작 부분에 적용 됩니다. 예를 들어 `CCEaseExponentialIn` 동작의 시작 부분에 더 느리게 이동 합니다.
 
 ![](ccaction-images/image7.gif "CCEaseExponentialIn 동작의 시작 부분에 더 느리게 이동 합니다.")
 
 
-## <a name="inout"></a>InOut
+### <a name="inout"></a>InOut
 
 `InOut` 일반적으로 둘 다 시작과 끝에서 가장 눈에 띄는 변경 내용이 적용 됩니다. `InOut` 감속/가속가 일반적으로 대칭 키입니다. 예를 들어 `CCEaseExponentialInOut` 동작의 시작과 끝에 느린 이동 됩니다.
 
 ![](ccaction-images/image8.gif "시작 및 끝 동작의 CCEaseExponentialInOut 느린 이동 합니다.")
 
 
-# <a name="implementing-a-custom-ccaction"></a>사용자 지정 CCAction 구현
+## <a name="implementing-a-custom-ccaction"></a>사용자 지정 CCAction 구현
 
 모든까지 지금까지 설명한 클래스의 일반적인 기능을 제공 CocosSharp에 포함 됩니다. 사용자 지정 `CCAction` 구현을 추가적인 유연성을 제공할 수 있습니다. 예를 들어 한 `CCAction` 사용자 경험을 획득 될 때마다 경험 모음 원활 하 게 증가 되도록를 제어 경험 막대의 채워진된 비율을 사용할 수 있습니다.
 
@@ -226,7 +225,7 @@ LineWidthAction 다음 애니메이션에 표시 된 대로 다양 한 방법으
 ![](ccaction-images/image9.gif "감속/가속 행위가 다양 한 방법으로 선 두께 변경 하려면이 애니메이션에서 표시 된 것 처럼 LineWidthAction는 함께 사용할 수 있습니다.")
 
 
-## <a name="interpolation-and-the-update-method"></a>보간 및 Update 메서드
+### <a name="interpolation-and-the-update-method"></a>보간 및 Update 메서드
 
 유일한 논리 위의 클래스에 값을 저장 하는 것 외에 거주 하 고는 `LineWidthState.Update` 메서드. `startWidth` 변수 저장 대상의 너비 `LineNode` 동작의 시작 부분에 및 `deltaWidth` 변수 저장 된 작업 과정을 통해 얼마나 많은 값이 변경 됩니다.
 
@@ -247,11 +246,11 @@ castedTarget.Width = startWidth + deltaWidth * 1;
 `time` 값 0과 1-사이의 일반적으로 됩니다-항상 그렇지는 않지만 및 `Update` 구현은이 경계를 가정 하지 않아야 합니다. 감속/가속 일부 메서드 (예: `CCEaseBackIn` 및 `CCEaseBackOut`) 0 ~ 1 범위를 벗어나는 시간 값을 제공 합니다.
 
 
-# <a name="conclusion"></a>결론
+## <a name="conclusion"></a>결론
 
 보간 및 감속/가속는 특히 사용자 인터페이스를 만들 때 세련된 게임 만들기의 중요 한 부분입니다. 이 가이드에서 사용 하는 방법을 설명 `CCActions` 위치 및 회전 등의 표준 값 뿐만 아니라 사용자 지정 값을 보간 하 합니다. `LineWidthState` 및 `LineWidthAction` 클래스 사용자 지정 작업을 구현 하는 방법을 보여 줍니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [CCAction](https://developer.xamarin.com/api/type/CocosSharp.CCAction)
 - [CCMoveTo](https://developer.xamarin.com/api/type/CocosSharp.CCMoveTo)

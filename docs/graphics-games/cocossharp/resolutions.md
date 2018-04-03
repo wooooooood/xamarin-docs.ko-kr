@@ -1,6 +1,6 @@
 ---
-title: "CocosSharp에 여러 해상도 처리합니다."
-description: "이 가이드에는 다양 한 해상도의 장치에서 제대로 표시 하는 게임을 개발 하는 CocosSharp를 사용 하는 방법을 보여 줍니다."
+title: CocosSharp에 여러 해상도 처리합니다.
+description: 이 가이드에는 다양 한 해상도의 장치에서 제대로 표시 하는 게임을 개발 하는 CocosSharp를 사용 하는 방법을 보여 줍니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 772b0d6408a5ba438c5eb0be04a9b549e29b40f9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>CocosSharp에 여러 해상도 처리합니다.
 
@@ -32,7 +32,7 @@ CocosSharp 물리적 장치의 디스플레이에서 픽셀 수에 관계 없이
 이 문서에서는 위 표에 표시 된 문제를 해결 하려면 CocosSharp를 사용 하는 방법을 설명 합니다. 즉, 모든 장치 – 화면 해상도 관계 없이 첫 번째 행에 표시 된 대로 렌더링 하는 방법을 설명 합니다.
 
 
-# <a name="working-with-setdesignresolutionsize"></a>SetDesignResolutionSize 작업
+## <a name="working-with-setdesignresolutionsize"></a>SetDesignResolutionSize 작업
 
 `CCScene` 모든 시각적 개체에 대 한 루트 컨테이너 클래스는 일반적으로 사용 하지만 정적 메서드 호출 또한 제공 `SetDesignResolutionSize` 모든 장면에 대 한 기본 크기를 지정 하는 데 있습니다. 즉 `SetDesignResolutionSize` 메서드를 사용 하면 개발자가 다양 한 하드웨어 해상도에 올바르게 표시 하는 게임을 개발할 수 있습니다. CocosSharp 프로젝트 템플릿은 다음 코드 에서처럼를 1024 x 768 기본 프로젝트 크기를 설정 하려면이 메서드를 사용 합니다.
 
@@ -77,7 +77,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-# <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
+## <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
 
 `SetDesignResolutionSize` 게임 창을 원하는 해상도를 조정 하는 방법을 지정할 수 있도록 합니다. 다음 섹션에서는 서로 다른 500 x 500 이미지 표시 되는 방식을 보여 줍니다. `CCSceneResolutonPolicy` 에 전달 된 값은 `SetDesignResolutionSize` 메서드. 다음 값을 제공 된 `CCSceneResolutionPolicy` enum:
 
@@ -93,7 +93,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ![](resolutions-images/image4.png "모든 스크린 샷을 가로 방향의 iPhone 4s 해상도 960 x 640에서 생성 되 고이 이미지 사용")
 
 
-## <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
+### <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
 
 `ShowAll` 전체 게임 해상도 화면에서 볼 수 있지만 표시 될 수 있습니다 지정 *letterboxing* 다른 가로 세로 비율에 맞게 (검은 막대)입니다. 보장 된 왜곡 없이 전체 게임 보기를 화면에 나타나는 표시 됩니다.이 정책은 일반적으로 사용 됩니다.
 
@@ -109,7 +109,7 @@ Letterboxing 원하는 해상도 보다 넓은 되 고 실제 가로 세로 비�
 ![](resolutions-images/image5.png "Letterboxing 왼쪽 및 오른쪽 이미지에 원하는 해상도 보다 넓은 되 고 실제 가로 세로 비율을 고려 하 게 표시 됩니다.")
 
 
-## <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
+### <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
 
 `ExactFit` 전체 게임 해상도 없는 letterboxing와 화면 표시 되도록 지정 합니다. 표시 가능 영역 왜곡 될 수 있습니다 (가로 세로 비율 유지 되지 않을) 하드웨어 가로 세로 비율에 따라 합니다.
 
@@ -125,7 +125,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.ExactFi
 ![](resolutions-images/image6.png "없음 letterboxing은 표시 되지만 게임 보기 왜곡 장치 해상도 사각형 이므로")
 
 
-## <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
+### <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
 
 `FixedWidth` 보기의 너비는 전달 되는 너비 값 일치 하도록 지정 `SetDesignResolutionSize`, 되지만 볼 수 있는 높이 물리적 장치의 가로 세로 비율이 될 수 있습니다. 전달 되는 높이 값 `SetDesignResolutionSize` 물리적 장치의 가로 세로 비율에 따라 런타임에 계산 됩니다 하므로 무시 됩니다. 즉, 계산된 된 높이 (결과적 중인 화면에서 벗어난 게임 보기의 일부) 원하는 높이 또는 계산된 된 높이 보다 클 수 있습니다 (그 결과 표시 되 고 게임 보기 중) 원하는 높이 것 보다 작은 수 있습니다. 이 표시 되는 게임 중 발생할 수 있습니다, 때문 후 보일 수 있습니다 처럼 letterboxing 발생 했습니다. 그러나 추가 공간이 반드시 됩니다 검정 모든 시각적 개체 표시 되는 경우. 
 
@@ -141,7 +141,7 @@ IPhone 4s 가로 세로 비율이 3: 2의 계산된 된 높이 약 333 단위 �
 ![](resolutions-images/image7.png "IPhone 4s 가로 세로 비율이 3: 2의 계산된 된 높이 약 333 단위 이므로")
 
 
-## <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
+### <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
 
 개념적으로 `FixedHeight` 유사 하 게 동작 `FixedWidth` – 게임은 전달 되는 높이 값 따릅니다 `SetDesignResolutionSize,` 하지만 실제 해상도 기반으로 런타임에 너비를 계산 합니다. 표시 너비 값이 즉 위에서 설명한 대로 되 고 있는 게임 부분 결과 원하는 너비 보다 크거나 작을 화면 또는 각각 표시 되는 게임 중입니다.
 
@@ -157,7 +157,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.FixedHe
 ![](resolutions-images/image8.png "이 정책을 유지 0 X 값 왼쪽 맞춤 해상도 화면 오른쪽에 표시 됩니다.")
 
 
-## <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
+### <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
 
 `NoBorder` 원래 가로 세로 비율 (왜곡 제외)을 유지 하면서 없는 letterboxing와 응용 프로그램을 표시 하려고 합니다. 요청 된 해상도 가로 세로 비율에서 일치 하는 장치의 실제 가로 세로 비율 오려낸 없습니다 발생 합니다. 가로 세로 비율, 일치 하지 않는 경우 다음 클리핑 발생 합니다.
 
@@ -173,7 +173,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.FixedHe
 ![](resolutions-images/image9.png "표시 너비의 모든 500 픽셀로 표시 되 면 잘린 디스플레이의 위쪽 및 아래쪽 부분을 표시 하는이 스크린 샷")
 
 
-## <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
+### <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
 
 `Custom` 각 수 있도록 `CCScene` 에 지정 된 해상도 기준으로 사용자 지정 뷰포트를 지정 하려면 `SetDesignResolutionSize`합니다.
 
@@ -207,7 +207,7 @@ scene.Viewport = new CCViewport (rectangle);
 ![](resolutions-images/image10.png "위의 코드 발생이 스크린 샷")
 
 
-# <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
+## <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
 
 `DefaultTexelToContentSizeRatio` 고해상도 화면을 사용 하 여 장치에서 더 높은 해상도 질감을 사용 하 여 간소화 합니다. 특히,이 속성 크기 또는 시각적 요소의 위치를 변경 하려면 필요 없이 고해상도 자산을 사용 하는 게임을 허용 합니다. 
 
@@ -249,7 +249,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-## <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio Example
+### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio example
 
 확인 하려면 어떻게 `DefaultTexelToContentSizeRatio` 시각적 개체의 크기 영향 요소를 위에서 설명한 코드를 고려 하세요.:
 
@@ -278,7 +278,7 @@ CCSprite.DefaultTexelToContentSizeRatio = 2;
 ![](resolutions-images/image12.png "이제는 게임을 실행 하는 경우 1000 x 1000 질감 완벽 하 게 표시 됩니다.")
 
 
-## <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio Details
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
 
 `DefaultTexelToContentSizeRatio` 속성은 `static,` 응용 프로그램에서 모든 스프라이트를 의미 하는 동일한 값을 공유 합니다. 다른 해상도 대해 발생 자산 게임에 대 한 일반적인 방법은 각 해결 범주에 대 한 자산 전체 집합을 포함 하는 것입니다. Mac 템플릿용으로 CocosSharp Visual Studio는 기본적으로 제공 **ld** 및 **hd** 질감의 두 집합을 지 원하는 게임에 대 한 유용할 수 있는 자산에 대 한 폴더입니다. 내용으로는 예제 콘텐츠 폴더 같을 수 있습니다.
 
@@ -313,11 +313,11 @@ backgroundSprite  = new CCSprite ("background");
 ```
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 문서에서는 장치 해상도 관계 없이 올바르게 표시 하는 게임을 작성 하는 방법에 설명 합니다. 예를 보여 줍니다 사용 하 여 다른 `CCSceneResolutionPolicy` 게임 장치 해상도 따라 크기 조정에 대 한 값입니다. 또한 방법의 예로 제공 `DefaultTexelToContentSizeRatio` 시각적 요소를 개별적으로 크기를 조정할 수를 요구 하지 않고 여러 집합의 콘텐츠를 수용 하기 위해 사용할 수 있습니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
-- [CocosSharp 소개](~/graphics-games/cocossharp/first-game/index.md)
+- [CocosSharp 소개](~/graphics-games/cocossharp/index.md)
 - [CocosSharp API 설명서](https://developer.xamarin.com/api/namespace/CocosSharp/)

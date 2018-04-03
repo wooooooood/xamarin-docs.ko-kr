@@ -1,6 +1,6 @@
 ---
-title: "단순 원 그리기"
-description: "SkiaSharp 그리기를 캔버스 및 그리기를 포함 하 여 기본 사항 알아보기"
+title: 단순 원 그리기
+description: SkiaSharp 그리기를 캔버스 및 그리기를 포함 하 여 기본 사항 알아보기
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 402470c3a27ba4327afa6e77336d60748abad436
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="drawing-a-simple-circle"></a>단순 원 그리기
 
@@ -20,7 +20,7 @@ _SkiaSharp 그리기를 캔버스 및 그리기를 포함 하 여 기본 사항 
 
 그래픽 SkiaSharp를 만드는 등을 사용 하 여 Xamarin.Forms에 그리기의 개념을 소개 하는이 문서는 `SKCanvasView` 개체를 처리 하는 그래픽을 호스팅하는 `PaintSurface` 이벤트를 사용 하는 `SKPaint` 색 및 기타 그리기를 지정 하는 개체 특성입니다.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램 이러한 일련의 SkiaSharp 문서에 대 한 모든 샘플 코드를 포함 합니다. 첫 번째 페이지의 이름이 **단순 원을** page 클래스를 호출 하 고 [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)합니다. 이 코드는 100 픽셀의 radius와 페이지의 가운데에 원을 그리려면 하는 방법을 보여 줍니다. 원의 개요는 빨간색 이며 원의 내부는 파란색입니다.
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 이러한 일련의 SkiaSharp 문서에 대 한 모든 샘플 코드를 포함 합니다. 첫 번째 페이지의 이름이 **단순 원을** page 클래스를 호출 하 고 [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)합니다. 이 코드는 100 픽셀의 radius와 페이지의 가운데에 원을 그리려면 하는 방법을 보여 줍니다. 원의 개요는 빨간색 이며 원의 내부는 파란색입니다.
 
 ![](circle-images/circleexample.png "빨간색으로 윤곽선 처리 파란색 원")
 
@@ -154,4 +154,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

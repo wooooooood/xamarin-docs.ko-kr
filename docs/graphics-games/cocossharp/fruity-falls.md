@@ -1,6 +1,6 @@
 ---
-title: "세부 정보를 게임 fruity 위치 합니다."
-description: "이 가이드에 일반적인 CocosSharp와 게임 디자인 물리학, 콘텐츠 관리, 게임 상태 등 게임 개발 개념을 다루는 Fruity 까지의 게임을 검토 합니다."
+title: 게임 정보 Fruity 위치 합니다.
+description: 이 가이드에 일반적인 CocosSharp와 게임 디자인 물리학, 콘텐츠 관리, 게임 상태 등 게임 개발 개념을 다루는 Fruity 까지의 게임을 검토 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 307fdec697f2b94ddfdfe0c380e02fd69e197132
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="fruity-falls-game-details"></a>세부 정보를 게임 fruity 위치 합니다.
+# <a name="fruity-falls-game-details"></a>게임 정보 Fruity 위치 합니다.
 
 _이 가이드에 일반적인 CocosSharp와 게임 디자인 물리학, 콘텐츠 관리, 게임 상태 등 게임 개발 개념을 다루는 Fruity 까지의 게임을 검토 합니다._
 
@@ -22,7 +22,7 @@ Fruity 위치 합니다.는 간단 하 고 물리학 기반 게임 플레이어�
 
 ![](fruity-falls-images/image1.png "게임의 목적은 점수를 얻는 것 만큼 가능한 게임 종료 잘못 된 bin에 과일 놓기 수 없습니다.")
 
-Fruity 대체 확장에 도입 된 개념은 [BouncingGame 가이드](~/graphics-games/cocossharp/first-game/index.md) 다음 추가:
+Fruity 대체 확장에 도입 된 개념은 [BouncingGame 가이드](~/graphics-games/cocossharp/bouncing-game.md) 다음 추가:
 
  - Png의 형태로 콘텐츠
  - 고급 물리학
@@ -32,20 +32,20 @@ Fruity 대체 확장에 도입 된 개념은 [BouncingGame 가이드](~/graphics
  - 게임 엔터티를 사용 하 여 코드 조직
  - 재미 있고 재생 값에 초점을 맞춘 게임 디자인
 
-BouncingGame에 핵심 CocosSharp 개념 소개 초점 동안 Fruity 위치 합니다. 완성 된 게임 제품에 모두 함께 상태로 전환 하는 방법을 보여 줍니다. 이 가이드는 BouncingGame 참조, 하므로 판독기 먼저 반드시 알아두어야는 [BouncingGame 가이드](~/graphics-games/cocossharp/first-game/index.md) 이 가이드를 읽기 전에 합니다.
+동안는 [BouncingGame 가이드](~/graphics-games/cocossharp/bouncing-game.md) 을 모두 함께 게임 완제품 하는 방법을 보여 줍니다 Fruity 위치 합니다.를 중심으로 CocosSharp의 핵심 개념을 소개 합니다. 이 가이드는 BouncingGame 참조, 하므로 판독기 먼저 반드시 알아두어야는 [BouncingGame 가이드](~/graphics-games/cocossharp/bouncing-game.md) 이 가이드를 읽기 전에 합니다.
 
 이 가이드에서는 구현과 내릴 수 있도록 게임 통찰력을 제공 Fruity의 디자인을 설명 합니다. 다음 항목을 다룹니다.
 
 
-- [GameController 클래스](#GameController_Class)
-- [게임 엔터티](#Game_Entities)
-- [과일 그래픽](#Fruit_Graphics)
-- [물리](#Physics)
-- [게임 콘텐츠](#Game_Content)
-- [GameCoefficients](#GameCoefficients)
+- [GameController 클래스](#gamecontroller-class)
+- [게임 엔터티](#game-entities)
+- [과일 그래픽](#fruit-graphics)
+- [물리](#physics)
+- [콘텐츠 게임](#game-content)
+- [GameCoefficients](#gamecoefficients)
 
 
-# <a name="gamecontroller-class"></a>GameController 클래스
+## <a name="gamecontroller-class"></a>GameController 클래스
 
 Fruity 대체 PCL 프로젝트에 포함 되어는 `GameController` 게임을 인스턴스화하고 장면 간에 이동 하는 일을 담당 하는 클래스입니다. 이 클래스는 iOS 및 Android 프로젝트에서 중복 되는 코드를 제거 하기 위해 사용 됩니다.
 
@@ -79,7 +79,7 @@ GameView.DesignResolution = new CCSizeI (width, height);
 마지막으로 `GameController` 클래스에서 호출 될 수 있는 정적 메서드를 제공 `CCGameScene` 다른 전환 `CCScene`합니다. 이 메서드는 간에 이동 하는 데는 `TitleScene` 및 `GameScene`합니다.
 
 
-# <a name="game-entities"></a>게임 엔터티
+## <a name="game-entities"></a>게임 엔터티
 
 Fruity 까지의에서는 대부분의 게임 개체에 대 한 엔터티 패턴 활용 합니다. 이 패턴에 대 한 자세한 내용은에서 확인할 수 있습니다는 [CocosSharp의 엔터티 안내](~/graphics-games/cocossharp/entities.md)합니다.
 
@@ -107,7 +107,7 @@ public Fruit ()
 ```
 
 
-## <a name="fruit-graphics"></a>과일 그래픽
+### <a name="fruit-graphics"></a>과일 그래픽
 
 `CreateFruitGraphic` 메서드 만듭니다는 `CCSprite` 인스턴스 및에 추가 `Fruit`합니다. `IsAntialiased` 게임 픽셀 디자인으로 속성이 false로 설정 됩니다. 이 값은 모든에서 false로 설정 `CCSprite` 및 `CCLabel` 끝 인스턴스:
 
@@ -179,7 +179,7 @@ if (GameCoefficients.ShowCollisionAreas)
 ![](fruity-falls-images/image4.png "과일 이미지와는 반대로 변경 하지 않으려면 extraPointsLabel 색 조정 되 고 PositionY 값은 CCSprite 과일에 CCLabel 가운데 맞춤")
 
 
-## <a name="collision"></a>충돌
+### <a name="collision"></a>충돌
 
 Fruity 까지의 Geometry 폴더에 있는 개체를 사용 하는 사용자 지정 충돌 솔루션을 구현 합니다.
 
@@ -218,17 +218,17 @@ private void CreateCollision()
 }
 ```
 
-검사 하는 충돌 논리 [이 가이드의 뒷부분에 나오는](#Collision)합니다.
+검사 하는 충돌 논리 [이 가이드의 뒷부분에 나오는](#collision)합니다.
 
 
-# <a name="physics"></a>물리
+## <a name="physics"></a>물리
 
 물리 Fruity 폭포에 두 가지 범주로 구분할 수 있습니다: 이동 및 충돌 합니다. 
 
 
-## <a name="movement-using-velocity-and-acceleration"></a>개발 속도 가속을 사용 하 여 이동
+### <a name="movement-using-velocity-and-acceleration"></a>개발 속도 가속을 사용 하 여 이동
 
-Fruity 위치 합니다. 사용 하 여 `Velocity` 및 `Acceleration` 를 해당 엔터티의 움직임을 제어 하는 값은 [BouncingGame](~/graphics-games/cocossharp/first-game/index.md)합니다. 라는 메서드에서 이동 논리를 구현 하는 엔터티 `Activity`는 프레임 마다 한 번씩 호출 됩니다. 예를 들어 이동 구현을 볼 수 있습니다는 `Fruit` 클래스의 `Activity` 메서드:
+Fruity 위치 합니다. 사용 하 여 `Velocity` 및 `Acceleration` 를 해당 엔터티의 움직임을 제어 하는 값은 [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md)합니다. 라는 메서드에서 이동 논리를 구현 하는 엔터티 `Activity`는 프레임 마다 한 번씩 호출 됩니다. 예를 들어 이동 구현을 볼 수 있습니다는 `Fruit` 클래스의 `Activity` 메서드:
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -274,7 +274,7 @@ public void HandleInput(CCPoint touchPoint)
 }
 ```
 
-## <a name="collision"></a>충돌
+### <a name="collision"></a>충돌
 
 와 같은 구현 하 여 과일 및 기타 collidable 개체 간의 반 현실적인 충돌 Fruity 위치 합니다.는 `Paddle` 및 `GameScene.Splitter`합니다. 충돌을 디버깅 하려면 Fruity 까지의 충돌 영역 표시할 수 있습니다 변경 하 여는 `GameCoefficients.ShowDebugInfo` 에 `GameCoefficients.cs` 파일:
 
@@ -330,7 +330,8 @@ private void PerformCollision()
 }
 ```
 
-### <a name="fruitvsborders"></a>FruitVsBorders
+#### <a name="fruitvsborders"></a>FruitVsBorders
+
 `FruitVsBorders` 다른 클래스에 포함 된 논리에 의존 하지 않고 충돌에 대 한 자체 논리를 수행 하는 충돌 합니다. 이러한 차이 과일와 화면의 테두리 간의 충돌 완벽 하 게 실선입니다. – 신중 하 게 패 이동 하 여 화면의 가장자리에 밀어넣을 수를 과일 수 있기 때문에 존재 합니다. 과일 패,으로 적중 될 때 화면에서 튀어 하지만 플레이어 과일을 느리게 푸시 경우 가장자리 과거와 화면 밖 이동 합니다.
 
 
@@ -352,7 +353,8 @@ private void FruitVsBorders(Fruit fruit)
 }
 ```
 
-### <a name="fruitvsbins"></a>FruitVsBins
+#### <a name="fruitvsbins"></a>FruitVsBins
+
 `FruitVsBins` 메서드는 두 개의 저장소 중 하나에 모든 과일 떨어졌습니다 있는지를 확인 합니다. 그렇다면 플레이어는으로 점수가 (과일/bin 색 일치) 하는 경우 또는 (색이 일치 하지 않음) 하는 경우 게임이 종료:
 
 
@@ -380,7 +382,8 @@ private void FruitVsBins(Fruit fruit)
 }
 ```
 
-### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle 및 FruitPolygonCollision
+#### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle 및 FruitPolygonCollision
+
 패 및 분할자 (두 개의 bin 분리 영역)와 비교 과일이 비교 과일이 충돌의 경우 둘 다는 `FruitPolygonCollision` 메서드. 이 메서드에 세 부분으로 이루어져 있습니다.
 
 1. 개체가 충돌 하는지 여부를 테스트 합니다.
@@ -419,7 +422,7 @@ Fruity 까지의 충돌 응답은 한 면 –만 과일의 개발 속도 및 위
  
 
 
-# <a name="game-content"></a>게임 콘텐츠
+## <a name="game-content"></a>콘텐츠 게임
 
 즉시 아트 Fruity 폭포에는 BouncingGame에서 게임을 구분합니다. 게임 디자인은 유사 하지만, 플레이어가 두 게임 표시 하는 방법의 차이 즉시 표시 됩니다. 종종 게이머 해당 시각적 개체에서 게임을 시도할 것인지 결정 합니다. 따라서 것은 개발자 시각적으로 매력적인을 만들 때의 리소스를 투자는 매우 중요 게임.
 
@@ -432,7 +435,7 @@ Fruity 까지의 충돌 응답은 한 면 –만 과일의 개발 속도 및 위
  - 리소스를 많이 애니메이션 없이 단순 시각 효과 만들 수 있는 기능
 
 
-## <a name="content-location"></a>콘텐츠 위치
+### <a name="content-location"></a>콘텐츠 위치
 
 Fruity 위치 합니다. Android 프로젝트에 이미지 폴더에 모든 해당 콘텐츠를 포함:
 
@@ -445,9 +448,9 @@ Fruity 위치 합니다. Android 프로젝트에 이미지 폴더에 모든 해�
 콘텐츠 내에서 포함 되지 않음을 주목할는 **Ld** 또는 **Hd** 기본 CocosSharp 서식 파일의 구성 요소인 폴더입니다. **Ld** 및 **Hd** 폴더의 콘텐츠-전화 및 태블릿 같은 고해상도 장치에 대 한 같은 저해상도 장치에 대 한 두 개의 집합을 제공 하는 게임을 위한 사용 하는 데 사용 됩니다. Fruity 까지의 아트는 의도적으로 사용 하 여 만들어지므로 픽셀 미적인, 다양 한 화면 크기에 대 한 콘텐츠를 제공 하는 필요 하지 않습니다. 따라서는 **Ld** 및 **Hd** 폴더는 프로젝트에서 완전히 제거 되었습니다.
 
 
-## <a name="gamescene-layering"></a>GameScene 계층화
+### <a name="gamescene-layering"></a>GameScene 계층화
 
-이 가이드 앞부분에서 언급 했 듯이 GameScene 모든 게임 개체 인스턴스화, 위치 지정 및 개체 간 논리 (예: 충돌)에 대 한 책임이 있습니다. 모든 개체는 4 개 중 하나에 추가 됩니다 `CCLayer` 인스턴스:
+이 가이드 앞부분에서 설명한 것 처럼는 `GameScene` 모든 게임 개체 인스턴스화, 위치 지정 및 개체 간 논리 (예: 충돌)을 담당 합니다. 모든 개체는 4 개 중 하나에 추가 됩니다 `CCLayer` 인스턴스:
 
 
 ```csharp
@@ -488,7 +491,7 @@ private void CreateBackground()
 ```
 
 
-## <a name="vine-entity"></a>줄기 엔터티
+### <a name="vine-entity"></a>줄기 엔터티
 
 `Vine` 아무런 영향을 주지 게임에 – 엔터티 내용에 고유 하 게 사용 됩니다. 20 개의 구성 된 `CCSprite` 인스턴스는 줄기 항상 화면 맨 위까지 올라가는 되도록 시행 착오 하 여 선택 하는 번호:
 
@@ -557,7 +560,7 @@ public void Activity(float frameTimeInSeconds)
 적은 양의 회전 통해 줄기에 다시 추가 됩니다는 `vineAngle` 계수입니다. vines 회전 얼마나 조정 하려면이 값을 변경할 수 있습니다.
 
 
-# <a name="gamecoefficients"></a>GameCoefficients
+## <a name="gamecoefficients"></a>GameCoefficients
 
 Fruity 까지의 라는 클래스를 포함 하므로 좋은 모든 게임은 반복 제품 `GameCoefficients` 를 게임을 실행 하는 방법을 제어 합니다. 이 클래스에서 게임 제어 물리학, 레이아웃, 생성, 및 점수 매기기에 사용 되는 표현 변수를 포함 합니다.
 
@@ -606,11 +609,11 @@ public static class GameCoefficients
 ```
 
 
-# <a name="conclusion"></a>결론
+## <a name="conclusion"></a>결론
 
 이 가이드 Fruity 까지의 게임을 탐색 합니다. 것 콘텐츠, 물리학 게임 상태 관리를 비롯 한 개념을 다룹니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [CocosSharp API 설명서](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [완료 된 프로젝트 (샘플)](https://developer.xamarin.com/samples/mobile/FruityFalls/)

@@ -1,6 +1,6 @@
 ---
 title: ListView
-description: "Beautiful, 대화형 목록에 데이터를 제공 합니다."
+description: Beautiful, 대화형 목록에 데이터를 제공 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 3c12ccd5dc77dd7dff9d4eab07eeaf04c6b2c161
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 494c69700ed0b12b4c9151b9a1b04ea091ebfa57
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -40,7 +40,7 @@ ListView에 다양 한 구성 요소는 각 플랫폼의 기본 기능을 실행
 
 ![](images/grouping-depth.png "그룹화 된 데이터와 ListView")
 
-- **[셀](customizing-cell-appearance.md)**  &ndash; ListView에서 데이터 셀에 표시 됩니다. 각 셀의 데이터 행에 해당 합니다. 선택할 수 없어 arebuilt에서 셀 또는 사용자 고유의 사용자 지정 셀을 정의할 수 있습니다. 기본 및 사용자 지정 셀 XAML 또는 코드에 사용 되 는/정의 될 수 있습니다.
+- **[셀](customizing-cell-appearance.md)**  &ndash; ListView에서 데이터 셀에 표시 됩니다. 각 셀의 데이터 행에 해당 합니다. 선택할 수 있는 기본 제공 된 셀 또는 사용자 고유의 사용자 지정 셀을 정의할 수 있습니다. 기본 및 사용자 지정 셀 XAML 또는 코드에 사용 되 는/정의 될 수 있습니다.
   - **[기본 제공](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; 셀 TextCell과 ImageCell, 특히 기본 제공 될 수 있습니다, 성능에 좋지 있으므로 각 플랫폼에서 네이티브 컨트롤에 해당 합니다.
     - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; 정보 텍스트가 있는 필요에 따라 텍스트 문자열을 표시 합니다. 세부 정보 텍스트가 강조 색으로 더 작은 글꼴의 두 번째 줄으로 렌더링 됩니다.
     - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; 텍스트와 이미지를 표시 합니다. 왼쪽에 있는 이미지와 TextCell으로 나타납니다.

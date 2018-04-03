@@ -1,6 +1,6 @@
 ---
-title: "3D 회전"
-description: "사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 변형 합니다."
+title: 3D 회전
+description: 사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 변형 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a7d76bfad6a34bcd43b304a6ea4a8f9210e3550c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="3d-rotations"></a>3D 회전
 
@@ -539,4 +539,4 @@ public class AnimatedRotation3DPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

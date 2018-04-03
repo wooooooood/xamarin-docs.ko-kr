@@ -1,6 +1,6 @@
 ---
-title: "SkiaSharp 그리기 기본 사항"
-description: "SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보기"
+title: SkiaSharp 그리기 기본 사항
+description: SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보기
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,19 +8,19 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: fb12924ff181439de601ecc07e1c7f3fe63a6616
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 194081c5cb8878a418a188003d0f8c40286b2922
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 그리기 기본 사항
 
 _SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보기_
 
-Xamarin.Forms 응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 SkiaSharp 그래픽을 사용 하 여 시작할 수 있습니다. [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 솔루션 SkiaSharp 점차적으로 더 많은 고급 단원에서 프로그래밍 기법을 보여 주는 여러 페이지에 포함 됩니다.
+Xamarin.Forms 응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 SkiaSharp 그래픽을 사용 하 여 시작할 수 있습니다. [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 솔루션 SkiaSharp 점차적으로 더 많은 고급 단원에서 프로그래밍 기법을 보여 주는 여러 페이지에 포함 됩니다.
 
-이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **SkiaSharp 기본 사항** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램 및는 [ **기본 사항** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **SkiaSharp 기본 사항** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 및는 [ **기본 사항** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) 솔루션의 폴더입니다.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[단순 원 그리기](circle.md)
 
@@ -50,4 +50,4 @@ SkiaSharp 그래픽 텍스트를 통합 하는 렌더링 된 텍스트 문자열
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

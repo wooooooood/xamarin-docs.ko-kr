@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.forms에서 CocosSharp를 사용 하 여"
-description: "CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에 정확한 도형, 이미지 및 텍스트 렌더링을 추가할 수 있습니다."
+title: Xamarin.forms에서 CocosSharp를 사용 하 여
+description: CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에 정확한 도형, 이미지 및 텍스트 렌더링을 추가할 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 395defa300da7b8f68746162d877a4fdb17ded9e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83852b6b2d7324ae6aaf6b1dbf86a6ef7f9ac509
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.forms에서 CocosSharp를 사용 하 여
 
@@ -197,7 +197,7 @@ void HandleViewCreated (object sender, EventArgs e)
 
 ![](cocossharp-images/image4.png "일반적인 CocosSharp 계층 구조")
 
-하나의 `CCScene` 한 번에 활성화 될 수 있습니다. 대부분의 게임 여러 개 사용 `CCLayer` 인스턴스 정렬 콘텐츠 있지만 응용 프로그램을 하나만 사용 합니다. 마찬가지로, 대부분의 게임 여러 시각적 개체를 사용 했지만 앱에서 하나가 합니다. 시각적 계층에 있습니다 CocosSharp에 대 한 토론에 대 한 세부는 [반송 게임 연습](~/graphics-games/cocossharp/first-game/index.md)합니다.
+하나의 `CCScene` 한 번에 활성화 될 수 있습니다. 대부분의 게임 여러 개 사용 `CCLayer` 인스턴스 정렬 콘텐츠 있지만 응용 프로그램을 하나만 사용 합니다. 마찬가지로, 대부분의 게임 여러 시각적 개체를 사용 했지만 앱에서 하나가 합니다. 시각적 계층에 있습니다 CocosSharp에 대 한 토론에 대 한 세부는 [BouncingGame 연습](~/graphics-games/cocossharp/bouncing-game.md)합니다.
 
 처음에 `GameScene` 클래스 거의 비어 있게 됩니다에 대 한 참조를 충족 시키기 위해 방금 만들 것 – `HomePage`합니다. 새 클래스 라는 프로그램 PCL에 추가 `GameScene`합니다. 상속 해야는 `CCScene` 클래스를 다음과 같이 합니다.
 

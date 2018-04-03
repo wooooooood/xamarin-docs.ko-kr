@@ -1,6 +1,6 @@
 ---
-title: "CCSpriteSheet와 프레임 속도 향상"
-description: "CCSpriteSheet 결합 하 고 한 텍스처에서 여러 이미지 파일을 사용 하 여 기능을 제공 합니다. 질감 수가 감소 게임의 로드 시간 및 프레임 속도 향상 시킬 수 있습니다."
+title: 프레임 속도와 CCSpriteSheet 향상
+description: CCSpriteSheet 결합 하 고 한 텍스처에서 여러 이미지 파일을 사용 하 여 기능을 제공 합니다. 질감 수가 감소 게임의 로드 시간 및 프레임 속도 향상 시킬 수 있습니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1334030-750C-4C60-8B84-1A8A54B0D00E
@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: ec8a641fbd15f826e92ada62f65b17dd46b369e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2bb5b98b5c93fb625ce645692d8a3ccb3d143b
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="improving-framerate-with-ccspritesheet"></a>CCSpriteSheet와 프레임 속도 향상
+# <a name="improving-frame-rate-with-ccspritesheet"></a>프레임 속도와 CCSpriteSheet 향상
 
 _CCSpriteSheet 결합 하 고 한 텍스처에서 여러 이미지 파일을 사용 하 여 기능을 제공 합니다. 질감 수가 감소 게임의 로드 시간 및 프레임 속도 향상 시킬 수 있습니다._
 
 대부분의 게임 최적화 노력을 원활 하 게 실행 하 고 모바일 하드웨어에 신속 하 게 로드할 필요 합니다. `CCSpriteSheet` 클래스 CocosSharp 게임에서 발생 하는 여러 가지 일반적인 성능 문제를 해결할 수 있습니다. 이 가이드에서는 일반적인 성능 문제 및 해결 하는 방법을 사용 하는 `CCSpriteSheet` 클래스입니다.
 
 
-# <a name="what-is-a-sprite-sheet"></a>Sprite 시트 이란?
+## <a name="what-is-a-sprite-sheet"></a>Sprite 시트 이란?
 
 A *sprite 시트*, 있는 참조할 수로 한 *질감 atlas*, 하나의 파일을 여러 이미지를 결합 하는 이미지입니다. 이 콘텐츠 부하 시간 뿐 아니라 런타임 성능 개선.
 
@@ -30,7 +30,7 @@ A *sprite 시트*, 있는 참조할 수로 한 *질감 atlas*, 하나의 파일�
 ![](ccspritesheet-images/image1.png "개별 이미지에는 모든 크기 수 있으며 결과 sprite 시트 완전히 채울 필요 하지 않습니다.")
 
 
-## <a name="render-states"></a>렌더링 상태
+### <a name="render-states"></a>상태를 렌더링 합니다.
 
 시각적 CocosSharp 개체 (예: `CCSprite`) 꼭 짓 점 버퍼 만들어야 MonoGame 또는 OpenGL 같은 기존의 그래픽 API 렌더링 코드를 통해 렌더링 코드를 단순화 하 (에 설명 된 대로 [3D 그래픽을 그리기 MonoGame의 꼭 짓 점](~/graphics-games/monogame/3d/part2.md) 가이드). CocosSharp은이 클래스는 단순 불구 하 고 설정의 비용을 제거 하지 않습니다 *상태 렌더링*, 질감 또는 기타 렌더링 관련 상태 렌더링 코드 전환 해야 하는 횟수는 합니다.
 
@@ -62,7 +62,7 @@ CocosSharp 하 게 순서로 별 4 개 렌더링 합니다.
 
 물론, 이상적인 상황은 단일 렌더링 상태로 여러 이미지 되더라도 응용 프로그램입니다. CocosSharp 게임이 하나의 해당 파일을 로드 한 다음 모든 이미지를 단일 파일로 결합 하 여 수행할 수 (그에 따른 함께 **.plist** 파일)에 `CCSpriteSheet`합니다. 사용 하는 `CCSpriteSheet` 클래스는 충족 하는 많은 수의 이미지 또는 충족 하는 매우 게임에 대 한 더욱 중요 한 레이아웃 복잡 합니다. 
 
-## <a name="load-times"></a>로드 시간
+### <a name="load-times"></a>로드 시간
 
 또한 게임의 로드 시간에 대 한 여러 가지 이유로 수행 하면 파일 하나에 여러 이미지를 결합:
 
@@ -70,7 +70,7 @@ CocosSharp 하 게 순서로 별 4 개 렌더링 합니다.
  - 더 적은 파일 로드 파일 당 오버 헤드는 줄어들지만,.png 헤더를 구문 분석 하는 등
  - 작은 검색 시간이 중요 한 Dvd 및 기존 컴퓨터 하드 드라이브와 같은 미디어를 디스크 기반 필요 적은 파일 로드
 
-# <a name="using-ccspritesheet-in-code"></a>코드에서 CCSpriteSheet 사용
+## <a name="using-ccspritesheet-in-code"></a>코드에서 CCSpriteSheet 사용
 
 만들려면는 `CCSpriteSheet` 인스턴스, 이미지 및 각 프레임에 사용할 이미지의 영역을 정의 하는 파일의 코드를 제공 해야 합니다. 이미지가 로드 될 수는 **.png** 또는 **.xnb** 파일 (사용 하는 경우는 [콘텐츠 파이프라인](~/graphics-games/cocossharp/content-pipeline/index.md)). 프레임을 정의 하는 파일은 한 **.plist** 를 직접 만들 수 있는 파일 또는 *TexturePacker* (있음 아래에 대해 설명 합니다).
 
@@ -110,7 +110,7 @@ CCSprite sprite = new CCSprite (frame);
 이후는 `CCSprite` 생성자 가져올 수 있습니다는 `CCSpriteFrame` 매개 변수를 코드에 대 한 세부 정보를 조사 하는 `CCSpriteFrame`, 어떤 질감 등 사용 하 여, 또는 마스터 sprite 시트에 있는 이미지의 영역입니다.
 
 
-#  <a name="creating-a-sprite-sheet-plist"></a>.Plist 시트 스타일 스프라이트 만들기
+## <a name="creating-a-sprite-sheet-plist"></a>Sprite 시트.plist 만들기
 
 .Plist 파일이 xml 기반 파일 생성 하 고 직접 편집할 수 있습니다. 마찬가지로, 하나의 큰 파일에 여러 파일을 결합 하 편집 프로그램 이미지를 사용할 수 있습니다. 페이지를 만들고 sprite 시트 시간이 매우 오래 걸릴 수 유지 관리, 이후 CocosSharp 형식의 파일을 내보낼 수 있는 TexturePacker 프로그램에서 살펴보겠습니다. TexturePacker 무료 및를 "프로" 버전으로 제공 되며 Windows 및 Mac OS에 사용할 수 있습니다. 이 가이드의 나머지 부분에서는 무료 버전을 사용 하 여 수행할 수 있습니다. 
 
@@ -124,13 +124,13 @@ TexturePacker 수 [TexturePacker 웹 사이트에서 다운로드할](https://ww
 
 Sprite 시트를 내보내려면 클릭는 **게시 sprite 시트** 단추 고 sprite 시트에 대 한 위치를 선택 합니다. TexturePacker는.plist 파일 및 이미지 파일에 저장 됩니다.
 
-결과 파일을 사용 하려면.png와.plist CocosSharp 프로젝트에 추가 합니다. CocosSharp 프로젝트에 파일 추가 대 한 자세한 내용은 참조는 [BouncingGame 가이드 구현](~/graphics-games/cocossharp/first-game/part2.md)합니다. 파일을 추가한 후에 로드 될 수는 `CCSpriteSheet` 위 코드의 앞부분에 표시 된 대로:
+결과 파일을 사용 하려면.png와.plist CocosSharp 프로젝트에 추가 합니다. CocosSharp 프로젝트에 파일 추가 대 한 자세한 내용은 참조는 [BouncingGame 가이드](~/graphics-games/cocossharp/bouncing-game.md)합니다. 파일을 추가한 후에 로드 될 수는 `CCSpriteSheet` 위 코드의 앞부분에 표시 된 대로:
 
 ```csharp
 CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png"); 
 ```
 
-## <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>TexturePacker Sprite 시트를 유지 관리 하기 위한 고려 사항
+### <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>TexturePacker sprite 시트를 유지 관리 하기 위한 고려 사항
 
 게임 개발 되 예술가 수 추가, 제거 또는 아트 수정 합니다. 변경 내용은 업데이트 된 sprite 시트가 필요합니다. 다음 고려 사항이 sprite 시트 유지 관리를 쉬워질 수 있습니다.
 
@@ -144,11 +144,11 @@ CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png");
 
     ![](ccspritesheet-images/image10.png "폴더 경로 포함 하려면 클릭 데이터 섹션에 설명 된 고급 표시 및 Prepend 폴더 이름 확인")
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에서는 만들고 사용 하는 방법을 설명는 `CCSpriteSheet` 클래스입니다. 에 로드할 수 있는 파일을 생성 하는 방법에 대해서도 설명 `CCSpriteSheet` TexturePacker 프로그램을 사용 하 여 인스턴스.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [CCSpriteSheet](https://developer.xamarin.com/api/type/CocosSharp.CCSpriteSheet/)
 - [전체 데모 (샘플)](https://developer.xamarin.com/samples/mobile/SpriteSheetDemo/)

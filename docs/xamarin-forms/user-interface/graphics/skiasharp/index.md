@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.forms에서 SkiaSharp를 사용 하 여"
-description: "SkiaSharp Xamarin.Forms 응용 프로그램에서 2 차원 그래픽을 사용 하 여"
+title: Xamarin.forms에서 SkiaSharp를 사용 하 여
+description: SkiaSharp Xamarin.Forms 응용 프로그램에서 2 차원 그래픽을 사용 하 여
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: eaebd8cbae996e9a5792d0a4898fafb72bdded47
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2183601ca6e642b2fb21f640ed4fddfe2c300dc8
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Xamarin.forms에서 SkiaSharp를 사용 하 여
 
@@ -57,5 +57,5 @@ SkiaSharp를 사용 하는 C# 페이지에 포함 해야는 `using` 에 대 한 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Xamarin.Forms 웹 세미나 (비디오)와 SkiaSharp](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 5ee36d63e2751eb5d09ee526755d62dda4ef537e
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7c90b5bcca5a6b8d2a4b52c166ae6884646a61d2
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
@@ -31,7 +31,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     ![](quickstart-images/vs/new-solution.png "새 프로젝트")
 
-3. **새 프로젝트** 대화 상자에서 **플랫폼 간**을 클릭하고, **플랫폼 간 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름 및 솔루션 이름을 `Phoneword`로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
+3. **새 프로젝트** 대화 상자에서 **플랫폼 간**을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름 및 솔루션 이름을 `Phoneword`로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/new-project.png "플랫폼 간 프로젝트 템플릿")
 

@@ -1,6 +1,6 @@
 ---
-title: "픽셀과 장치 독립적 단위"
-description: "탐색 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점"
+title: 픽셀과 장치 독립적 단위
+description: 탐색 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1698c18eafdce0585daa81c9462ee038c15586bd
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀과 장치 독립적 단위
 
@@ -26,7 +26,7 @@ _탐색 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점_
 
 이러한 원 *는* Xamarin.Forms 크기에 비해 작은 합니다. 기본적으로 SkiaSharp Xamarin.Forms 좌표 및 크기를 기본 플랫폼에 의해 설정 된 장치 독립적 단위에 기반 하는 동안 픽셀 단위로 그립니다. (에 Xamarin.Forms 좌표 시스템에 대 한 자세한 내용은 있습니다 [5 장 합니다. 크기를 다루는](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) 책의 *Xamarin.Forms 사용 하 여 모바일 앱 만들기*.)
 
-페이지에는 [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 이라는 제목의 프로그램 **화면 크기** SkiaSharp 텍스트 출력을 사용 하 여 서로 다른 세 원본의 디스플레이 화면의 크기를 표시 하려면:
+페이지에는 [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 이라는 제목의 프로그램 **화면 크기** SkiaSharp 텍스트 출력을 사용 하 여 서로 다른 세 원본의 디스플레이 화면의 크기를 표시 하려면:
 
 - 일반 Xamarin.Forms [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) 및 [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 의 속성은 `SKCanvasView` 개체입니다.
 - [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) 의 속성은 `SKCanvasView` 개체입니다.
@@ -165,4 +165,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

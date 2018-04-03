@@ -1,5 +1,5 @@
 ---
-title: 동전 시간 구현 세부 정보
+title: 동전 시간 게임 세부 정보
 description: 이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트, 애니메이션 및 구현 하는 효율적인 충돌을 포함 하 여 동전 시간 게임을 구현 세부 사항을 설명 합니다.
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 8c33b74af80a14df1626ab39ba8c055a81259194
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="coin-time-implementation-details"></a>동전 시간 구현 세부 정보
+# <a name="coin-time-game-details"></a>동전 시간 게임 세부 정보
 
 _이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트, 애니메이션 및 구현 하는 효율적인 충돌을 포함 하 여 동전 시간 게임을 구현 세부 사항을 설명 합니다._
 
@@ -24,27 +24,27 @@ _이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트,
 
 이 가이드에서는 다음 항목을 다루는 동전 시간 내에 구현 세부 사항을 설명 합니다.
 
-- [TMX 파일 작업](#Working_with_TMX_Files)
-- [로드 수준](#Level_Loading)
-- [새 엔터티 추가](#Adding_New_Entities)
-- [애니메이션 효과 준된 엔터티](#Animated_Entities)
+- [Tmx 파일 작업](#working-with-tmx-files)
+- [로드 수준](#level-loading)
+- [새 엔터티 추가](#adding-new-entities)
+- [애니메이션 효과 준된 엔터티](#animated-entities)
 
 
-# <a name="content-in-coin-time"></a>동전 시간에서 콘텐츠
+## <a name="content-in-coin-time"></a>동전 시간에서 콘텐츠
 
 동전 시간은 전체 CocosSharp 프로젝트 수 구성 하는 방식을 나타내는 샘플 프로젝트입니다. 시간의 동전 구조 추가 및 콘텐츠를 유지 관리를 단순화 하는 것을 목표로 합니다. 사용 하 여 **.tmx** 에서 만든 파일 [타일](http://www.mapeditor.org) 수준 및 애니메이션을 정의 하는 XML 파일에 대 한 합니다. 수정 하거나 새 콘텐츠가 추가 최소한의 노력으로 수행할 수 있습니다. 
 
 어떻게 전문 게임을 하지만 재생이이 방법을 수행 동전 시간 학습 및 테스트에 대 한 효과적인 프로젝트도 반영 이루어집니다. 이 가이드에서는 단순화 추가 하 고 콘텐츠를 수정 하는 방법 중 일부에 대해 설명 합니다.
 
 
-# <a name="working-with-tmx-files"></a>TMX 파일 작업
+## <a name="working-with-tmx-files"></a>Tmx 파일 작업
 
 동전 시간 수준에 의해 출력 된.tmx 파일 형식을 사용 하 여 정의 된는 [타일](http://www.mapeditor.org) 타일 맵 편집기입니다. 타일 사용의 자세한 논의 알려면는 [Cocos 날카로운 가이드에 바둑판식으로 표시를 사용 하 여](~/graphics-games/cocossharp/tiled.md)합니다. 
 
 각 수준에 포함 된 자체.tmx 파일에 정의 된는 **CoinTime/자산/내용/수준** 폴더입니다. 모든 동전 시간 수준에 정의 된 하나의 tileset 파일 공유는 **mastersheet.tsx** 파일입니다. 이 파일 타일 단색 충돌에 있는지 여부 또는 타일 엔터티 인스턴스도 대체 해야 하는지 여부와 같은 각 타일에 대 한 사용자 지정 속성을 정의 합니다. Mastersheet.tsx 파일 속성을을 한 번만 정의 하 고 모든 수준에서 사용할 수 있습니다. 
 
 
-## <a name="editing-a-tile-map"></a>타일 맵을 편집
+### <a name="editing-a-tile-map"></a>타일 맵을 편집
 
 지도 타일을 편집 하려면.tmx 파일을 두 번 클릭 하거나 타일에서 파일 메뉴를 열고 타일에서.tmx 파일을 엽니다. 수준 타일 맵은 3 계층을 포함 하는 동전 시간: 
 
@@ -54,7 +54,8 @@ _이 가이드에서는 타일 맵 작업, 엔터티 만들기, 스프라이트,
 
 처럼 나중를 살펴봅니다 수준 로드 코드는이 세 가지 계층 모든 동전 시간 수준에 필요 합니다.
 
-### <a name="editing-terrain"></a>지형 편집
+#### <a name="editing-terrain"></a>지형 편집
+
 타일을 클릭 하 여 배치할 수는 **mastersheet** tileset 및 타일을 클릭 한 다음 매핑합니다. 예를 들어, 한 수준에 있는 새 지형을 그리는 데:
 
 1. 지형 계층 선택
@@ -67,7 +68,8 @@ tileset의 왼쪽 위 모든 동전 시간에서는 지형 포함합니다. 단�
 
 ![](cointime-images/image3.png "단색는 지형 타일 속성 화면 왼쪽에에서 표시 된 것 처럼 SolidCollision 속성 포함")
 
-### <a name="editing-entities"></a>엔터티 편집
+#### <a name="editing-entities"></a>엔터티 편집
+
 엔터티 추가 또는 지형와 마찬가지로 수준 –에서 제거할 수 있습니다. **mastersheet** tileset은 표시 되지 않는 오른쪽 스크롤하지 않고 모든 엔터티를 배치에 대 한 중간 가로로:
 
 ![](cointime-images/image4.png "표시 되지 않는 오른쪽 스크롤 없이 mastersheet tileset에 배치에 대 한 중간 가로 방향으로, 모든 엔터티")
@@ -85,7 +87,7 @@ CoinTime 코드에서 찾는 **EntityType** 엔터티도 대체 해야 하는 �
 ![](cointime-images/image7.png "파일을 수정 하 고 저장 되 면 변경 내용이 자동으로 표시 됩니다는 프로젝트가 빌드 및 실행 하는 경우")
 
 
-## <a name="adding-new-levels"></a>새 수준을 추가합니다.
+### <a name="adding-new-levels"></a>새 수준을 추가합니다.
 
 수준 동전 시간에 추가 하는 과정에는 프로젝트에만 몇 가지 약간 변경 하 고 코드 변경 없이 필요 합니다. 추가 하려면 새 수준:
 
@@ -105,7 +107,7 @@ CoinTime 코드에서 찾는 **EntityType** 엔터티도 대체 해야 하는 �
 ![](cointime-images/image10.png "새 수준 0 수준 9 수준 파일 이름은 시작으로 수준 선택 화면에 표시 되어야 하지만 수준 단추 번호 1로 시작")
 
 
-# <a name="level-loading"></a>로드 수준
+## <a name="level-loading"></a>로드 수준
 
 에서 설명한 것 처럼 새 수준을 코드에서 변경이 필요 – 이름이 올바르게 지정 되며에 추가 하는 경우 자동으로 게임 수준을 검색는 **수준** 올바른 빌드 작업 폴더 (**BundleResource**또는 **AndroidAsset**).
 
@@ -201,7 +203,7 @@ private void GoToLevel(int levelNumber)
 다음에서 호출 메서드를 살펴보면 살펴보겠습니다 `GoToLevel`합니다.
 
 
-## <a name="loadlevel"></a>LoadLevel
+### <a name="loadlevel"></a>LoadLevel
 
 `LoadLevel` .tmx 파일을 로드 하 고 추가 하는 방법에 대 한 메서드는는 `GameScene`합니다. 이 메서드는 충돌, 엔터티 등의 대화형 모든 개체를 만들지 않습니다 – 라고도 하는 수준에 대 한 시각적 개체가 생성 된 *환경*합니다.
 
@@ -227,7 +229,7 @@ private void LoadLevel(int levelNumber)
 현재 CocosSharp에서는 제거 하 고 다시 추가 하는 부모 없이 계층의 순서 변경 `CCScene` (되는 `GameScene` 이 경우) 이므로 메서드의 마지막 몇 줄 계층의 순서를 변경 하는 데 필요한 합니다.
 
 
-## <a name="createcollision"></a>CreateCollision
+### <a name="createcollision"></a>CreateCollision
 
 `CreateCollision` 메서드 구문은 `LevelCollision` 수행 하는 데 사용 되는 인스턴스 *단색 충돌* 플레이어와 환경 간의 합니다.
 
@@ -245,7 +247,7 @@ private void CreateCollision()
 추가 코드 없이 – 바둑판식으로 배열 된 파일에 대 한 수정 내용만 동전 시간에서 충돌을 추가할 수 있습니다. 
 
 
-## <a name="processtileproperties"></a>ProcessTileProperties
+### <a name="processtileproperties"></a>ProcessTileProperties
 
 수준 로드 되 고 충돌을 만든 후 `ProcessTileProperties` 타일 속성에 따라 논리를 수행 하기 위해 호출 됩니다. Time 동전에 포함 된 `PropertyLocation` 속성 및 이러한 속성이 있는 타일의 좌표를 정의 하기 위한 구조체.
 
@@ -343,7 +345,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# <a name="adding-new-entities"></a>새 엔터티 추가
+## <a name="adding-new-entities"></a>새 엔터티 추가
 
 게임 개체에 대 한 엔터티 패턴을 사용 하는 동전 시간 (에 나와 있는 [CocosSharp의 엔터티 안내](~/graphics-games/cocossharp/entities.md)). 상속 하는 모든 엔터티 `CCNode`, 즉,의 자식으로 추가할 수 있습니다는 `gameplayLayer`합니다.
 
@@ -352,19 +354,19 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 기존 코드에는 새 엔터티를 만드는 방법의 예로 여러 가지 엔터티 형식이 제공 합니다. 다음 단계는 새 엔터티를 만드는 데 사용할 수 있습니다.:
 
 
-## <a name="1---define-a-new-class-using-the-entity-pattern"></a>1-엔터티 패턴을 사용 하 여 새 클래스를 정의 합니다.
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1-엔터티 패턴을 사용 하 여 새 클래스를 정의 합니다.
 
 엔터티를 만들기 위한 유일한 요구 사항은에서 상속 되는 클래스를 만드는 것 `CCNode`합니다. 대부분의 엔터티 등의 몇 가지 시각적 개체를 포함할는 `CCSprite`, 생성자의 엔터티에의 자식으로 추가 해야 합니다.
 
-CoinTime 제공는 `AnimatedSpriteEntity` 애니메이션된 엔터티 만들기를 간소화 하는 클래스입니다. 애니메이션에 보다 자세히 다룰 예정는 [애니메이션 엔터티 섹션](#Animated_Entities)합니다.
+CoinTime 제공는 `AnimatedSpriteEntity` 애니메이션된 엔터티 만들기를 간소화 하는 클래스입니다. 애니메이션에 보다 자세히 다룰 예정는 [애니메이션 엔터티 섹션](#animated-entities)합니다.
 
 
-## <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2-TryCreateEntity switch 문의에 새 항목을 추가 합니다.
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2-TryCreateEntity switch 문의에 새 항목을 추가 합니다.
 
 새 엔터티 인스턴스는 인스턴스화할 수는 `TryCreateEntity`합니다. 엔터티 충돌, AI, 또는 입력을 읽기와 같은 모든 프레임 논리가 필요한 경우 그런 다음 `GameScene` 를 개체에 대 한 참조를 유지 해야 합니다. 여러 인스턴스가 필요한 경우 (같은 `Coin` 또는 `Enemy` 인스턴스), 다음 새 `List` 에 추가할지는 `GameScene` 클래스.
 
 
-## <a name="3--modify-tile-properties-for-the-new-entity"></a>3--새 엔터티에 대 한 타일 속성을 수정 하는 중
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3--새 엔터티에 대 한 타일 속성을 수정 하는 중
 
 코드는 새 엔터티 만들기를 지원 되 면 새 엔터티는 tileset에 추가 해야 합니다. tileset 모든 수준을 열어 편집할 수 있습니다 `.tmx` 파일입니다. 
 
@@ -389,7 +391,7 @@ tileset 변경 되 면 내보내야 하며-이렇게 하면 변경 내용이 다
 ![](cointime-images/image15.png "그 tileset 기존 mastersheet.tsx tileset을 덮어써야 합니다.")
 
 
-# <a name="entity-tile-removal"></a>엔터티 타일 제거
+## <a name="entity-tile-removal"></a>엔터티 타일 제거
 
 지도 타일 게임에 로드 되 면 각 타일은 정적 개체입니다. 엔터티 필요 이동 등의 사용자 지정 동작, 동전 시간 코드 엔터티를 만들 때 타일을 제거 합니다.
 
@@ -453,7 +455,7 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="entity-offsets"></a>엔터티 오프셋
+## <a name="entity-offsets"></a>엔터티 오프셋
 
 타일에서 만든 엔터티 타일의 중심 엔터티의 가운데 정렬 하 여 배치 됩니다. 과 같은 더 큰 엔터티 `Door`, 추가 속성 및 논리를 사용 하 여 올바르게 배치할 수 있습니다. 
 
@@ -493,12 +495,12 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="animated-entities"></a>애니메이션 효과 준된 엔터티
+## <a name="animated-entities"></a>애니메이션 효과 준된 엔터티
 
 동전 시간 애니메이션 효과가 적용된 되는 몇 개의 엔터티를 포함합니다. `Player` 및 `Enemy` 엔터티 워크 애니메이션을 재생 및 `Door` 엔터티 수집 된 모든 동전 한 번만 열기 애니메이션을 재생 합니다.
 
 
-## <a name="achx-files"></a>.achx 파일
+### <a name="achx-files"></a>.achx 파일
 
 동전 시간 애니메이션.achx 파일에 정의 됩니다. 간에 정의 된 각 애니메이션이 `AnimationChain` 태그에 정의 된 다음 애니메이션에 표시 된 대로 **propanimations.achx**:
 
@@ -533,7 +535,7 @@ private void ProcessTileProperties()
 동전 시간.achx 파일에 있는 다른 모든 AnimationChain 속성은 무시 됩니다.
 
 
-## <a name="animatedspriteentity"></a>AnimatedSpriteEntity
+### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
 애니메이션 논리에 포함 되어는 `AnimatedSpriteEntity` 클래스에 사용 되는 대부분의 엔터티를 기본 클래스로 사용 되는 `GameScene`합니다. 다음과 같은 기능을 제공합니다.
 
@@ -562,10 +564,10 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에서는 동전 시간의 구현 세부 정보를 다룹니다. 동전 시간 완전 한 게임 되도록 만들어지지만 쉽게 수정 및 확장할 수 있는 프로젝트입니다. 판독기는 새 수준을 추가 하 고 자세히 동전 시간을 구현 하는 방법을 이해 하기 위해 새 엔터티를 만드는 시간 수준에 대 한 수정을 소비 하는 것이 좋습니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [게임 프로젝트 (샘플)](https://developer.xamarin.com/samples/mobile/CoinTime/)

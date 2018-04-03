@@ -1,17 +1,17 @@
 ---
-title: "성능 및 CCRenderTexture로 시각 효과"
-description: "CCRenderTexture는 개발자가 그리기 호출을 줄여서 CocosSharp 게임의 성능을 향상 시킬 수 있으며 특정 시각 효과 만드는 데 사용할 수 있습니다. 이 가이드 실습 효과적으로이 클래스를 사용 하는 방법의 예제를 제공 하도록 CCRenderTexture 샘플을 포함 합니다."
+title: 성능 및 CCRenderTexture로 시각 효과
+description: CCRenderTexture는 개발자가 그리기 호출을 줄여서 CocosSharp 게임의 성능을 향상 시킬 수 있으며 특정 시각 효과 만드는 데 사용할 수 있습니다. 이 가이드 실습 효과적으로이 클래스를 사용 하는 방법의 예제를 제공 하도록 CCRenderTexture 샘플을 포함 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 8283c299d0e6529ef4cf8c285ec47b4d42fc682a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>성능 및 CCRenderTexture로 시각 효과
 
@@ -24,7 +24,7 @@ _CCRenderTexture는 개발자가 그리기 호출을 줄여서 CocosSharp 게임
 ![](ccrendertexture-images/image1.png "이 가이드는 CCRenderTexture 샘플 프로젝트를 참조합니다.")
 
 
-# <a name="card--a-typical-entity"></a>카드 – 일반적인 엔터티
+## <a name="card--a-typical-entity"></a>카드 – 일반적인 엔터티
 
 사용 하는 방법을 살펴보기 전에 `CCRenderTexture` 개체와 직접 먼저 익히게 됩니다 우리는 `Card` 이 프로젝트 전체 탐색을 사용 해야 하는 엔터티는 `CCRenderTexture` 클래스입니다. `Card` 클래스는에 설명 된 엔터티 패턴을 하는 일반적인 엔터티는 [엔터티 가이드](~/graphics-games/cocossharp/entities.md)합니다. 카드 클래스에는 모든 visual 구성 요소 (인스턴스의 `CCSprite` 및 `CCLabel`) 필드로 나열 합니다.
 
@@ -65,7 +65,7 @@ protected override void AddedToScene ()
 - 나중에 살펴볼 것 처럼, 투명도 같은 특정 시각적 효과 정확 하 게 구현할 수 없습니다.
 
 
-## <a name="card-draw-calls"></a>카드 그리기 호출
+### <a name="card-draw-calls"></a>카드 그리기 호출
 
 이 코드는 전체에서 확인할 수 있습니다 어떻게의 단순화 *수집 가능한 카드 게임* (CCG) 예: "매직:: The 수집" 또는 "Hearthstone"입니다. 게임만 3 개의 카드 한 번에 하며 표시 (파란색, 녹색 및 주황색)에 사용 가능한 단위 수가 적은 합니다. 반면 전체 게임 20 개가 넘는 카드 화면의 지정된 된 시간에 없고 플레이어는 수백 개의 카드는 데크를 만들 때 선택할 수 있을 수 있습니다. 게임 현재 성능 문제에서 문제가 발생 하지 않는 경우에 비슷한 구현과 함께 전체 게임 않을 수 있습니다.
 
@@ -76,7 +76,7 @@ CocosSharp는 프레임당을 수행 하는 그리기 호출을 노출 하 여 �
 화면에 3 개의 카드 하더라도 있는지 (6 개에서 각 카드 결과 그리기 호출, 성능 정보 계정 한 개에 대 한 표시 텍스트) 19 개의 그리기 호출을 확인 합니다. 그리기 호출 CocosSharp는 다양 한을 줄일 수 있는 방법 제공 하므로 게임의 성능에 상당한 영향을 줄 합니다. 에 설명 된 방법 중 하나는 [CCSpriteSheet 가이드](~/graphics-games/cocossharp/ccspritesheet.md)합니다. 또 다른 기법을 사용 하는 `CCRenderTexture` 이 가이드에 설명 된 대로 한 번의 호출까지 각 엔터티를 줄일 수 있습니다.
 
 
-## <a name="card-transparency"></a>카드 투명도
+### <a name="card-transparency"></a>카드 투명도
 
 우리의 `Card` 엔터티를 포함 한 `Opacity` 다음 코드 조각에 표시 된 대로 컨트롤 투명도로 속성:
 
@@ -143,7 +143,7 @@ protected override void AddedToScene ()
 사용 하는 `CCRenderTexture` 투명 하 게 전체 카드는 카드 내 개별 구성 요소 렌더링에 영향을 주지 않고이 가이드의 뒷부분에 나와 있듯이을 수 있습니다.
 
 
-# <a name="using-ccrendertexture"></a>CCRenderTexture를 사용 하 여
+## <a name="using-ccrendertexture"></a>CCRenderTexture를 사용 하 여
 
 렌더링에 설정 됩니다는 각 구성 요소를 개별적으로 렌더링 문제가 확인 되었습니다, 이제는 `CCRenderTexture` 및 동작을 비교 합니다.
 
@@ -159,7 +159,7 @@ protected override void AddedToScene ()
 ```
 
 
-## <a name="card-draw-calls"></a>카드 그리기 호출
+### <a name="card-draw-calls"></a>카드 그리기 호출
 
 그리기 호출에서 19 4 바이트로 줄일 보면 게임을 지금 실행 하는 경우 (각 카드 하나에 6 개에서 감소):
 
@@ -168,7 +168,7 @@ protected override void AddedToScene ()
 위에서 언급 한 대로이 유형의 감소는 화면에 시각적 추가 엔터티와 함께 게임에 큰 영향을 받을 수 있습니다.
 
 
-## <a name="card-transparency"></a>카드 투명도
+### <a name="card-transparency"></a>카드 투명도
 
 한 번는 `useRenderTextures` 로 설정 된 `true`, 투명 한 카드 다르게 렌더링 됩니다.
 
@@ -181,7 +181,7 @@ protected override void AddedToScene ()
 가장 확실 한 차이점은 세부 정보 텍스트 (밝은 회색 대신, 검정) 및 로봇 sprite (밝은 대신 어두운 및 흐릿한).
 
 
-# <a name="ccrendertexture-details"></a>CCRenderTexture 세부 정보
+## <a name="ccrendertexture-details"></a>CCRenderTexture 세부 정보
 
 사용 하는 이점을 버퍼 오버런 `CCRenderTexture`에서 사용 방법에 대해 살펴보겠습니다는 `Card` 엔터티.
 
@@ -256,7 +256,7 @@ private void SwitchToRenderTexture()
 다음 섹션에서는 `SwitchToRenderTexture` 메서드. 
 
 
-## <a name="ccrendertexture-size"></a>CCRenderTexture 크기
+### <a name="ccrendertexture-size"></a>CCRenderTexture 크기
 
 CCRenderTexture 생성자에는 두 개의 차원 집합이 필요합니다. 크기를 제어 하는 첫 번째는 `CCRenderTexture` 그린 것 시점과 두 번째 픽셀 너비와 콘텐츠 높이 지정 합니다. `Card` 엔터티 인스턴스화합니다 해당 `CCRenderTexture` 백그라운드를 사용 하 여 [ContentSize](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/)합니다. 게임에는 `DesignResolution` 512에서 384, 에서처럼 `ViewController.LoadGame` iOS에서 및 `MainActivity.LoadGame` Android에서:
 
@@ -293,7 +293,7 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "비교를 배경과 일치 하도록 pixelResolution 값을 변경할 수 있습니다. 되 고 두 배로 증가 하지 않고 contentSize 하 고 결과 비교 합니다.")
 
 
-## <a name="rendering-to-a-ccrendertexture"></a>CCRenderTexture로 렌더링
+### <a name="rendering-to-a-ccrendertexture"></a>CCRenderTexture로 렌더링
 
 일반적으로 시각적 개체 CocosSharp에서 명시적으로 렌더링 되지 않습니다. 대신 시각적 개체에 추가 되는 `CCLayer` 에 포함 되어 있는 한 `CCScene`합니다. CocosSharp 자동으로 렌더링 된 `CCScene` 및 호출 되 고 렌더링 코드 없이 모든 프레임에 해당 시각적 계층 구조입니다. 
 
@@ -355,7 +355,7 @@ foreach (var component in visualComponents)
 this.AddChild(renderTexture.Sprite);
 ```
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드에 설명 된 `CCRenderTexture` 클래스를 사용 하 여는 `Card` 는 수집 가능한 카드 게임에 사용할 수 있는 엔터티. 사용 하는 방법에 알아보았습니다는 `CCRenderTexture` 프레임 속도 향상 시키고 엔터티 수준의 투명도 제대로 구현 클래스입니다.
 

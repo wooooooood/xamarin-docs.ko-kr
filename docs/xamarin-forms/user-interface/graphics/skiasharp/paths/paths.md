@@ -1,6 +1,6 @@
 ---
-title: "경로 기본 사항"
-description: "연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 합니다."
+title: 경로 기본 사항
+description: 연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e083a9d6a97181b4e726d4553b14671f06157f80
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="path-basics"></a>경로 기본 사항
 
@@ -197,4 +197,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

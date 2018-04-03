@@ -1,6 +1,6 @@
 ---
-title: "이동 변환"
-description: "SkiaSharp 그래픽을 이동 하려면 이동 변환을 사용 하는 방법을 알아봅니다"
+title: 이동 변환
+description: SkiaSharp 그래픽을 이동 하려면 이동 변환을 사용 하는 방법을 알아봅니다
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 771fde301a8585f25d7d83c7bf0451cf6e0cf8e9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-translate-transform"></a>이동 변환
 
@@ -36,7 +36,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-**번역 누적** 의 페이지는 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) 프로그램 예제를 여러 번 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 되어 증가 합니다. [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 같은 사각형의 20 버전을 표시 하는 클래스, 각 오프셋 이전 사각형에서 데 필요한 만큼만 대각선 따라 스트레치은 하도록 합니다. 다음은 `PaintSurface` 이벤트 처리기.
+**번역 누적** 의 페이지는 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 예제를 여러 번 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 되어 증가 합니다. [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 같은 사각형의 20 버전을 표시 하는 클래스, 각 오프셋 이전 사각형에서 데 필요한 만큼만 대각선 따라 스트레치은 하도록 합니다. 다음은 `PaintSurface` 이벤트 처리기.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -303,4 +303,4 @@ public class HendecagramAnimationPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

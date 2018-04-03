@@ -1,6 +1,6 @@
 ---
-title: "CCDrawNode로 기 하 도형 그리기"
-description: "CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 합니다."
+title: CCDrawNode로 기 하 도형 그리기
+description: CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 합니다.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 46A3C3CE-74CC-4A3A-AB05-B694AE182ADB
@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: a7b62b131db3fc224ef59bdb9189b96d61129f30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a2471981f2e88ff8af9a803ff8f5a99e5b9266f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="drawing-geometry-with-ccdrawnode"></a>CCDrawNode로 기 하 도형 그리기
 
-_CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 합니다._
+_`CCDrawNode` 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 합니다._
 
 `CCDrawNode` CocosSharp 클래스 일반적인 기 하 도형 그리기 위한 여러 가지 방법을 제공 합니다. 상속 되는 `CCNode` 클래스에 일반적으로 추가 되 고 `CCLayer` 인스턴스. 이 가이드에서 사용 하는 방법을 설명 `CCDrawNode` 인스턴스를 사용자 지정 렌더링을 수행 합니다. 또한 스크린 샷 및 코드 예제 함수를 사용할 수 있는 그리기의 포괄적인 목록을 제공합니다.
 
 
-# <a name="creating-a-ccdrawnode"></a>CCDrawNode 만들기
+## <a name="creating-a-ccdrawnode"></a>CCDrawNode 만들기
 
 `CCDrawNode` 클래스 원, 사각형 및 선과 같은 기하학적 개체를 그리는 데 사용할 수 있습니다. 다음 코드 예제를 만드는 방법을 표시 하는 예를 들어 한 `CCDrawNode` 원에 그리는 데 사용 된 인스턴스는 `CCLayer` 구현 클래스:
 
@@ -52,12 +52,12 @@ public class GameLayer : CCLayer
 ![](ccdrawnode-images/image1.png "이 코드에서는 런타임에이 원")
 
 
-# <a name="draw-method-details"></a>그리기 메서드 세부 정보
+## <a name="draw-method-details"></a>그리기 메서드 세부 정보
 
 그리기와 관련 된 몇 가지 세부 정보에 살펴보겠습니다는 `CCDrawNode`:
 
 
-## <a name="draw-methods-positions-are-relative-to-the-ccdrawnode"></a>그리기 메서드 위치는 상대는 CCDrawNode를
+### <a name="draw-methods-positions-are-relative-to-the-ccdrawnode"></a>메서드는 CCDrawNode 상대적 위치는 그리기
 
 모든 그리기 메서드 그리기에 대 한 하나 이상의 위치 값이 필요 합니다. 이 위치 값은 상대적으로 `CCDrawNode` 인스턴스. 즉는 `CCDrawNode` 자체에 위치 및 모든 그리기 호출에는 `CCDrawNode` 하나 이상의 위치 값을 사용할 수도 있습니다. 이러한 값 결합 하는 방법을 이해 하려면 살펴보겠습니다 몇 가지 예입니다.
 
@@ -94,7 +94,7 @@ drawNode.DrawCircle (center: new CCPoint (50, 60),
 으로 그린 개체 `CCNodes` 도 영향을 받는 `CCNode` 인스턴스의 `Rotation` 및 `Scale` 속성입니다.
 
 
-## <a name="draw-methods-do-not-need-to-be-called-every-frame"></a>메서드를 호출 하는 모든 프레임 수 필요가 없습니다 그리기
+### <a name="draw-methods-do-not-need-to-be-called-every-frame"></a>그리기 메서드 모든 프레임 호출 될 필요가 없습니다.
 
 그리기 메서드 영구 시각적 개체 만들기를 한 번만 호출 해야 합니다. 에 대 한 호출 위의 예에서 `DrawCircle` 의 생성자에는 `GameLayer` – `DrawCircle` 화면을 새로 고칠 때 원 다시 그릴 모든 프레임 호출할 필요가 없습니다.
 
@@ -103,7 +103,7 @@ drawNode.DrawCircle (center: new CCPoint (50, 60),
 그리기 호출 되어 모든 프레임 경우 호출 하는 내부 개체 결국 많아져 `CCDrawNode` 인스턴스를 더 많은 개체 그려집니다 프레임 속도 저하 발생 합니다.
 
 
-## <a name="each-ccdrawnode-supports-multiple-draw-calls"></a>각 CCDrawNode 여러 그리기 호출을 지원
+### <a name="each-ccdrawnode-supports-multiple-draw-calls"></a>각 CCDrawNode 여러 그리기 호출을 지원
 
 `CCDrawNode` 인스턴스는 여러 셰이프를 그리는 데 사용할 수 있습니다. 따라서 복잡 한 시각적 개체를를 단일 개체에 포함 될 수 있습니다. 예를 들어 다음 코드는 데 사용할 수 하나 있는 여러 원 렌더링 `CCDrawNode`:
 
@@ -123,25 +123,25 @@ for (int i = 0; i < 8; i++)
 ![](ccdrawnode-images/image2.png "이 인해이 그래픽")
 
 
-# <a name="draw-call-examples"></a>그리기 호출의 예
+## <a name="draw-call-examples"></a>그리기 호출의 예
 
 다음 그리기 호출에서 사용할 수 있는 `CCDrawNode`:
 
-- [DrawCatmullRom](#DrawCatmullRom)
-- [DrawCircle](#DrawCircle)
-- [DrawCubicBezier](#DrawCubicBezier)
-- [DrawEllipse](#DrawEllipse)
-- [DrawLineList](#DrawLineList)
-- [DrawPolygon](#DrawPolygon)
-- [DrawQuadBezier](#DrawQuadBezier)
-- [DrawRect](#DrawRect)
-- [DrawSegment](#DrawSegment)
-- [DrawSolidArc](#DrawSolidArc)
-- [DrawSolidCircle](#DrawSolidCircle)
-- [DrawTriangleList](#DrawTriangleList)
+- [`DrawCatmullRom`](#drawcatmullrom)
+- [`DrawCircle`](#drawcircle)
+- [`DrawCubicBezier`](#drawcubicbezier)
+- [`DrawEllipse`](#drawellipse)
+- [`DrawLineList`](#drawlinelist)
+- [`DrawPolygon`](#drawpolygon)
+- [`DrawQuadBezier`](#drawquadbezier)
+- [`DrawRect`](#drawrect)
+- [`DrawSegment`](#drawsegment)
+- [`DrawSolidArc`](#drawsolidarc)
+- [`DrawSolidCircle`](#drawsolidcircle)
+- [`DrawTriangleList`](#drawtrianglelist)
 
 
-## <a name="drawcardinalspline"></a>DrawCardinalSpline
+### <a name="drawcardinalspline"></a>DrawCardinalSpline
 
 `DrawCardinalSpline` 다양 한 수의 지점을 통해 곡선을 만듭니다. 
 
@@ -171,7 +171,7 @@ drawNode.DrawCardinalSpline (
 ![](ccdrawnode-images/image3.png "세그먼트 매개 변수는 스플라인 그리기를 사용 하는 세그먼트를 수 제어")
 
 
-## <a name="drawcatmullrom"></a>DrawCatmullRom
+### <a name="drawcatmullrom"></a>DrawCatmullRom
 
 `DrawCatmullRom` 가변 개수의 비슷합니다 통해 곡선 만듭니다 `DrawCardinalLine`합니다. 이 메서드는 장력 매개 변수를 포함 하지 않습니다.
 
@@ -192,7 +192,7 @@ drawNode.DrawCatmullRom (
 ![](ccdrawnode-images/image4.png "DrawCatmullRom 가변 개수의 DrawCardinalLine 비슷합니다 통해 곡선을 만듭니다.")
 
 
-## <a name="drawcircle"></a>DrawCircle
+### <a name="drawcircle"></a>DrawCircle
 
 `DrawCircle` 원의 둘레 만듭니다는 주어진 `radius`합니다.
 
@@ -208,7 +208,7 @@ drawNode.DrawCircle (
 ![](ccdrawnode-images/image5.png "DrawCircle 주어진된 반지름의 원의 둘레를 만듭니다.")
 
 
-## <a name="drawcubicbezier"></a>DrawCubicBezier
+### <a name="drawcubicbezier"></a>DrawCubicBezier
 
 `DrawCubicBezier` 제어점을 사용 하 여 두 지점 사이의 경로 설정 하려면 두 요소 사이의 곡선을 그립니다.
 
@@ -228,7 +228,7 @@ drawNode.DrawCubicBezier (
  ![](ccdrawnode-images/image6.png "DrawCubicBezier 두 점 간 곡선을 그립니다.")
 
 
-## <a name="drawellipse"></a>DrawEllipse
+### <a name="drawellipse"></a>DrawEllipse
 
 `DrawEllipse` 윤곽선을 만듭니다는 *타원*을 자주 참조 되는 있는 타원으로 (하지만 두 기하학적 동일 하지 않은). 타원의 모양을 정의할 수 있는 한 `CCRect` 인스턴스.
 
@@ -245,7 +245,7 @@ drawNode.DrawEllipse (
 ![](ccdrawnode-images/image8.png "DrawEllipse 타원으로 자주 참조 되는 타원의 개요를 만듭니다.")
 
 
-## <a name="drawline"></a>DrawLine
+### <a name="drawline"></a>DrawLine
 
 `DrawLine` 줄이 지정 된 너비의 지점에 연결합니다. 이 메서드는 `DrawSegment`라운드 끝점 달리 플랫 끝점을 만드는 점을 제외 하 고, 합니다.
 
@@ -263,7 +263,7 @@ drawNode.DrawLine (
 ![](ccdrawnode-images/image9.png "DrawLine 줄이 지정 된 너비의 지점에 연결")
 
 
-## <a name="drawlinelist"></a>DrawLineList
+### <a name="drawlinelist"></a>DrawLineList
 
 `DrawLineList` 각 쌍에 의해 지정 된 점 연결 하 여 여러 줄을 만듭니다는 `CCV3F_C4B` 배열입니다. `CCV3F_C4B` 구조체 위치 및 색에 대 한 값을 포함 합니다. `verts` 각 줄은 두 개의 정의 된 대로 매개 변수 포인트의 수는 짝수를 항상 포함 해야 합니다.
 
@@ -288,7 +288,7 @@ drawNode.DrawLineList (verts);
 
 
 
-## <a name="drawpolygon"></a>DrawPolygon
+### <a name="drawpolygon"></a>DrawPolygon
 
 `DrawPolygon` 가변 너비 및 색 윤곽선이 있는 채워진 다각형을 만듭니다.
 
@@ -315,7 +315,7 @@ drawNode.DrawPolygon (verts,
 ![](ccdrawnode-images/image11.png "DrawPolygon 가변 너비 및 색 윤곽선이 있는 채워진 다각형을 만듭니다.")
 
 
-## <a name="drawquadbezier"></a>DrawQuadBezier
+### <a name="drawquadbezier"></a>DrawQuadBezier
 
 `DrawQuadBezier` 두 개의 점을 선으로 연결합니다. 유사 하 게 작동 `DrawCubicBezier` 그러나 단일 제어 지점 지원 합니다.
 
@@ -335,7 +335,7 @@ drawNode.DrawQuadBezier (
 ![](ccdrawnode-images/image12.png "DrawQuadBezier 줄이 두 개의 점을 연결합니다")
 
 
-## <a name="drawrect"></a>DrawRect
+### <a name="drawrect"></a>DrawRect
 
 `DrawRect` 가변 너비 및 색 윤곽선이 있는 채워진 사각형을 만듭니다.
 
@@ -354,7 +354,7 @@ drawNode.DrawRect(shape,
 ![](ccdrawnode-images/image13.png "DrawRect 가변 너비 및 색 윤곽선이 있는 채워진 사각형을 만듭니다.")
 
 
-## <a name="drawsegment"></a>DrawSegment
+### <a name="drawsegment"></a>DrawSegment
 
 `DrawSegment` 가변 너비 및 색 줄이 두 개의 점을 연결합니다. 비슷합니다 `DrawLine`를 제외한 플랫 끝점 보다는 라운드 끝점을 만듭니다.
 
@@ -371,7 +371,7 @@ drawNode.DrawSegment (from: new CCPoint (0, 0),
 ![](ccdrawnode-images/image14.png "DrawSegment 가변 너비 및 색 줄이 두 개의 점을 연결합니다")
 
 
-## <a name="drawsolidarc"></a>DrawSolidArc
+### <a name="drawsolidarc"></a>DrawSolidArc
 
 `DrawSolidArc` 채워진 쐐기 주어진된 색 및 반지름을 만듭니다.
 
@@ -390,7 +390,7 @@ drawNode.DrawSolidArc(
 ![](ccdrawnode-images/image15.png "DrawSolidArc 채워진 쐐기 주어진된 색 및 radius를 만듭니다.")
 
 
-## <a name="drawsolidcircle"></a>DrawSolidCircle
+### <a name="drawsolidcircle"></a>DrawSolidCircle
 
 `DrawCircle` 주어진된 반지름의 채워진 원을 만듭니다.
 
@@ -407,7 +407,7 @@ drawNode.DrawSolidCircle(
 ![](ccdrawnode-images/image16.png "DrawCircle 주어진된 반지름의 채워진 원을 만듭니다.")
 
 
-## <a name="drawtrianglelist"></a>DrawTriangleList
+### <a name="drawtrianglelist"></a>DrawTriangleList
 
 `DrawTriangleList` 삼각형의 목록을 만듭니다. 각 삼각형 3에 의해 정의 됩니다 `CCV3F_C4B` 배열에는 인스턴스. 에 전달 된 배열의 꼭 짓 점 수가 `verts` 매개 변수 3의 배수 여야 합니다. 참고에 정보만 포함 `CCV3F_C4B` 는 verts 및 해당 색 –의 위치는 `DrawTriangleList` 방법은 그리기 삼각형 질감을 지원 하지 않습니다.
 
@@ -432,11 +432,11 @@ drawNode.DrawTriangleList (verts);
 ![](ccdrawnode-images/image17.png "DrawTriangleList은 삼각형의 목록을 만듭니다.")
 
 
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 가이드를 만드는 방법을 설명는 `CCDrawNode` 및 기본 형식 기반 렌더링을 수행 합니다. 각 그리기 호출의 예를 제공 합니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="related-links"></a>관련된 링크
 
 - [CCDrawNode API](https://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
 - [전체 샘플](https://developer.xamarin.com/samples/mobile/CCDrawNode/)
