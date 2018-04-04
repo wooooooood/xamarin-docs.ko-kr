@@ -1,18 +1,17 @@
 ---
-title: "간단한 애니메이션"
-description: "ViewExtensions 클래스 간단한 애니메이션을 생성 하는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서 만들고 ViewExtensions 클래스를 사용 하 여 애니메이션을 취소 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 간단한 애니메이션
+description: ViewExtensions 클래스 간단한 애니메이션을 생성 하는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서 만들고 ViewExtensions 클래스를 사용 하 여 애니메이션을 취소 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0d2cc30f9bc1ae5602394b8ca2d8e75517a01b54
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="simple-animations"></a>간단한 애니메이션
 

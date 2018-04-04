@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-제목: "파트 6-테스트 및 앱 스토어 승인" ms.topic: article ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin 플랫폼 작성자: asb3993 ms.author: amburns ms.date: 03/23/2017
+제목: "파트 6-테스트 및 앱 스토어 승인" ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin 플랫폼 작성자: asb3993 ms.author: amburns ms.date: 03/23/2017
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>6-부 테스트 및 앱 스토어 승인

@@ -1,18 +1,17 @@
 ---
 title: PassKit
-description: "작은 저장 하 고 바코드 및 고객의 거래 '실제 세계' 전화에 연결할 기타 정보를 표시 하는 시스템 iOS 앱입니다."
-ms.topic: article
+description: 작은 저장 하 고 바코드 및 고객의 거래 '실제 세계' 전화에 연결할 기타 정보를 표시 하는 시스템 iOS 앱입니다.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -238,7 +237,7 @@ IOS 응용 프로그램을 지역화 하는 방법과 비슷합니다 패스를 
 
 첫 번째 단계는 각각의 다른에 대 한 전달 유형 ID를 설정 하는 _형식_ 패스를 지원할 수 있도록 합니다. 전달 ID (또는 전달 유형 식별자)의 단계에 대 한 고유 식별자를 만듭니다. 인증서를 사용 하 여 개발자 계정을 사용 하 여 패스를 연결 하려면이 ID를 사용 합니다.
 
-1. 에 [iOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action)로 이동 **식별자** 선택 **유형 Id 전달** 합니다. 다음 선택에서  **+**  단추를 새 패스 형식을 만들: [ ![ ] (passkit-images/passid.png "새 패스 형식 만들기")](passkit-images/passid.png#lightbox)
+1. 에 [iOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action)로 이동 **식별자** 선택 **유형 Id 전달** 합니다. 다음 선택에서 **+** 단추를 새 패스 형식을 만들: [ ![ ] (passkit-images/passid.png "새 패스 형식 만들기")](passkit-images/passid.png#lightbox)
 
 2.   제공 된 **설명** (이름) 및 **식별자** (고유 문자열)의 단계에 대 한 합니다. 모든 전달 유형 Id 문자열으로 시작 해야 하는 참고 `pass.` 사용 하 여이 예에서 `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "설명과 식별자 제공")](passkit-images/register.png#lightbox)
 
@@ -400,7 +399,7 @@ Wallet의 기능은 다음과 같습니다.
 
 이 섹션의 나머지 부분이에서는이 기본 도우미 앱을 빌드할 상호 작용 하는 전달 키트를 사용 하는 방법을 설명 합니다.
 
-### <a name="provisioning"></a>프로 비전
+### <a name="provisioning"></a>프로비전
 
 작은 저장소 기술 이기 때문에 응용 프로그램 별도로 제공 해야 하 고 팀 프로 비전 프로필 또는 와일드 카드 응용 프로그램 ID를 사용할 수 없습니다. 참조는 [기능 작업](~/ios/deploy-test/provisioning/capabilities/wallet-capabilities.md) 가이드는 작은 응용 프로그램에 대 한 고유 앱 ID 및 프로비저닝 프로필을 만들려고 합니다.
 
@@ -463,7 +462,7 @@ Installation failed: Your code signing/provisioning profiles are not correctly c
 -  **PKAddPassesViewControllerDelegate** – Xamarin.iOS 개발자
 
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 문서에 대 한 샘플 코드에서 PassLibrary 프로젝트를 참조 하십시오. 작은 도우미 응용 프로그램에 필요한 다음과 같은 공통 기능을 보여 줍니다.
 

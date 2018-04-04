@@ -1,18 +1,17 @@
 ---
-title: "플랫폼 특성 사용"
-description: "플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다."
-ms.topic: article
+title: 플랫폼 특성 사용
+description: 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 6AF9D016-F693-44B8-B279-7AFDA5504634
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: d3c2051d73f29015e9ed1786936bd9a0e1b61948
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e795bf97a5a723b906f72f425212eb3096d478f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-platform-specifics"></a>플랫폼 특성 사용
 

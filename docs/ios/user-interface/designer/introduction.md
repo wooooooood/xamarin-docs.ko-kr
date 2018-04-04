@@ -1,18 +1,17 @@
 ---
-title: "iOS 디자이너 기본 사항"
-description: "이 가이드에서는 iOS 용 Xamarin 디자이너를 소개합니다. 컨트롤을 시각적으로 배치 하는 iOS 디자이너를 사용 하는 방법, 코드에서 해당 컨트롤에 액세스 하는 방법 및 속성을 편집 하는 방법을 보여 줍니다."
-ms.topic: article
+title: iOS 디자이너 기본 사항
+description: 이 가이드에서는 iOS 용 Xamarin 디자이너를 소개합니다. 컨트롤을 시각적으로 배치 하는 iOS 디자이너를 사용 하는 방법, 코드에서 해당 컨트롤에 액세스 하는 방법 및 속성을 편집 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/31/2018
-ms.openlocfilehash: a2445e49005175f62e4d7cd8aadccb5f596177bf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7e36a402619813214e821f3060e053d76c99cfb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 

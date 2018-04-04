@@ -1,18 +1,17 @@
 ---
-title: "컬렉션 뷰 작업"
-description: "이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 작업을 설명 합니다."
-ms.topic: article
+title: 컬렉션 뷰 작업
+description: 이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-collection-views"></a>컬렉션 뷰 작업
 
@@ -61,7 +60,7 @@ _이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 
 - `DequeueReusableCell` -만들거나 (지정 된 대로 응용 프로그램의 스토리 보드에서) 지정 된 유형의 셀을 반환 합니다.
 - `DequeueReusableSupplementaryView` -만들거나 보충 (지정 된 대로 응용 프로그램의 스토리 보드에서) 지정 된 형식의 뷰를 반환 합니다.
 
-이러한 방법 중 하나를 호출 하기 전에 클래스를 등록 해야 스토리 보드 또는 `.xib` 컬렉션 뷰를 사용 하 여 셀의 보기를 만들려면 사용 되는 파일입니다. 예:
+이러한 방법 중 하나를 호출 하기 전에 클래스를 등록 해야 스토리 보드 또는 `.xib` 컬렉션 뷰를 사용 하 여 셀의 보기를 만들려면 사용 되는 파일입니다. 예를 들어:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -104,7 +103,7 @@ Xamarin.tvOS 응용 프로그램에서 컬렉션 뷰를 사용 하는 가장 쉬
 1. 기존 보기를 이미지 보기, 레이블 및 단추를 추가 하 고 다음과 같이 표시 하도록 구성 합니다. 
 
     [![](collection-views-images/collection02.png "예제 레이아웃")](collection-views-images/collection02.png#lightbox)
-1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예: 
+1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예를 들어: 
 
     [![](collection-views-images/collection03.png "설정 이름")](collection-views-images/collection03.png#lightbox)
 1. 스토리 보드도 컬렉션 뷰 컨트롤러를 다음으로 끌어 옵니다. 
@@ -144,7 +143,7 @@ Xamarin.tvOS 응용 프로그램에서 컬렉션 뷰를 사용 하는 가장 쉬
 1. 기존 보기를 이미지 보기, 레이블 및 단추를 추가 하 고 다음과 같이 표시 하도록 구성 합니다. 
 
     [![](collection-views-images/collection02vs.png "레이아웃 구성")](collection-views-images/collection02vs.png#lightbox)
-1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예: 
+1. 할당 한 **이름** 이미지 보기와에서 레이블을에 **위젯 탭** 의 **속성 탐색기**합니다. 예를 들어: 
 
     [![](collection-views-images/collection03vs.png "속성 탐색기")](collection-views-images/collection03vs.png#lightbox)
 1. 스토리 보드도 컬렉션 뷰 컨트롤러를 다음으로 끌어 옵니다. 

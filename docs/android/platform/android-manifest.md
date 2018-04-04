@@ -1,17 +1,16 @@
 ---
-title: "Android 매니페스트에서 사용"
-ms.topic: article
+title: Android 매니페스트에서 사용
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 18817063900437baa625d8572f0ae28fec77be1e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트에서 사용
 
@@ -84,7 +83,7 @@ public class MyActivity : Activity
 ### <a name="activity-title-bar"></a>작업 제목 표시줄
 
 기본적으로 Android 응용 프로그램에 부여 제목 표시줄을 실행 하는 경우. 이 사용 되는 값은 [ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label)합니다. 대부분의 경우에서 클래스 이름에서이 값은 달라 집니다. 제목 표시줄에을 앱의 레이블을 지정 하려면 사용 된 [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) 속성입니다.
-예: 
+예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -103,7 +102,7 @@ public class MyActivity : Activity
 
 ### <a name="launchable-from-application-chooser"></a>응용 프로그램 선택에서 컴파일되
 
-기본적으로 활동 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이 되기 마련 작업은 많은 응용 프로그램에서 모든 항목에 대 한 아이콘 않으려면 때문입니다. 지정 하는 응용 프로그램 실행 프로그램에서 시작 가능한를 사용 하 여는 [ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/) 속성입니다. 예: 
+기본적으로 활동 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이 되기 마련 작업은 많은 응용 프로그램에서 모든 항목에 대 한 아이콘 않으려면 때문입니다. 지정 하는 응용 프로그램 실행 프로그램에서 시작 가능한를 사용 하 여는 [ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/) 속성입니다. 예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -128,7 +127,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>활동 아이콘
 
-기본적으로 작업은 시스템에서 제공 하는 기본 시작 관리자 아이콘을 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 추가 프로그램 **.png** 를 **리소스/그릴**, 빌드 작업 설정 **AndroidResource**를 사용 하 여는 [ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/) 속성을 통해 사용할 아이콘을 지정 합니다. 예: 
+기본적으로 작업은 시스템에서 제공 하는 기본 시작 관리자 아이콘을 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 추가 프로그램 **.png** 를 **리소스/그릴**, 빌드 작업 설정 **AndroidResource**를 사용 하 여는 [ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/) 속성을 통해 사용할 아이콘을 지정 합니다. 예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -177,7 +176,7 @@ public class MyActivity : Activity
 
 ### <a name="intent-actions-and-features"></a>의도 된 동작 및 기능
 
-Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 통해 이렇게 [의도](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 사용자 지정 특성입니다. 와 작업에 대 한 적절 한 작업을 지정할 수는 [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 생성자 및 있는 범주와 적절 한는 [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 속성입니다. 하나 이상의 활동 (이 활동의 생성자에 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 별도 각 사용으로 인해 여러 번 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예:
+Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 통해 이렇게 [의도](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 사용자 지정 특성입니다. 와 작업에 대 한 적절 한 작업을 지정할 수는 [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 생성자 및 있는 범주와 적절 한는 [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 속성입니다. 하나 이상의 활동 (이 활동의 생성자에 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 별도 각 사용으로 인해 여러 번 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

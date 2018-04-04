@@ -1,19 +1,18 @@
 ---
-title: "Objective C 바인딩"
-ms.topic: article
+title: Objective-C 바인딩
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: e836081d79d904e2d0952386e536eefdabe361e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fef2826f536042dc9be830a4c0dc358658c359d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="binding-objective-c"></a>Objective C 바인딩
+# <a name="binding-objective-c"></a>Objective-C 바인딩
 
 이 섹션에서는 다양 한 Xamarin.iOS 또는 Xamarin.Mac를 사용 하 여 만든 C# 응용 프로그램에서 호출 될 수 있으므로 Objective-c 라이브러리에 대 한 바인딩을 만드는 포괄 하는 문서입니다.
 
@@ -21,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 
 이 문서 바인딩을 수행 방법의 내부 중 일부를 포함 합니다. 일부 기술적인 정보는 고급이 문서가.입니다.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[바인딩 Objective C 라이브러리](~/cross-platform/macios/binding/objective-c-libraries.md)
+##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 이 문서에서는 C# Objective-c Api 및 Objective C의 관용구.NET에서 사용 되는 관용구에 매핑되는 방법의 바인딩을 만드는 데 사용 되는 프로세스를 설명 합니다.
 방금 C Api에 바인딩하는 경우이, P/Invoke 프레임 워크에 대 한 표준.NET 메커니즘을 사용 해야 합니다.

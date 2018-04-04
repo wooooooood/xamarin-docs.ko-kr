@@ -1,18 +1,18 @@
 ---
-title: "watchOS 문제 해결"
-description: "알려진된 문제 및 watchOS 개발 문제에 대 한 대안입니다."
-ms.topic: article
+title: watchOS 문제 해결
+description: 알려진된 문제 및 watchOS 개발 문제에 대 한 대안입니다.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/22/2018
 <a name="deploy" />
 
 - Mac 용 Visual Studio의 이전 릴리스에서 잘못 표시 하 고 중 하나는 **AppleCompanionSettings** 아이콘 88 x 88 픽셀; 결과적으로 **누락 아이콘 오류** 앱을 제출 하려는 경우 저장소입니다.
-    이 아이콘 87 x 87 픽셀 이어야 합니다. (29 단위에 대 한  **@3x**  레 티 나 화면). 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    이 아이콘 87 x 87 픽셀 이어야 합니다. (29 단위에 대 한 **@3x** 레 티 나 화면). 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
 - 경우 조사식 확장 프로젝트 **Info.plist > WKApp 번들 ID** 않습니다 [올바르게 설정](~/ios/watchos/get-started/project-references.md) Watch 앱에 맞게 **번들 ID**, 디버거를 연결 하지 못합니다 및 시각적 Mac 용 studio 메시지와 대기 *"디버거를 연결할 때까지 기다리는"*합니다.
 

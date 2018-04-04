@@ -1,18 +1,17 @@
 ---
-title: "트리거"
-description: "Xaml 사용자 인터페이스 변경 내용에 응답"
-ms.topic: article
+title: 트리거
+description: Xaml 사용자 인터페이스 변경 내용에 응답
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: abfea1dae2699f7d40f2e27285cf8dab3db9400c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3b0cba75c8a62d571e82abb3bd2e27cac1e0d075
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="triggers"></a>트리거
 
@@ -164,7 +163,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 
 트리거를 공유 하는 경우 주의 해야는 `ResourceDictionary`, 한 번만 구성 된 모든 상태는 모두에 적용 됩니다 하나의 인스턴스만 컨트롤 간에 공유 됩니다.
 
-이벤트 트리거를 지원 하지 않는 `EnterActions` 및 `ExitActions` [아래에 설명 된](#enterexit)합니다.   
+이벤트 트리거를 지원 하지 않는 `EnterActions` 및 `ExitActions` [아래에 설명 된](#enterexit)합니다.
 
 <a name="multi" />
 

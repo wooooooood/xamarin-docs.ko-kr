@@ -1,18 +1,17 @@
 ---
-title: "터치"
-description: "여러 오늘날의 장치에 터치 스크린이 빠르고 효율적으로 상호 작용할 수 장치와 자연스럽 고 직관적인 방식입니다. 이 상호 작용 간단한 터치 검색만 제한 되지 않습니다.-제스처도 사용할 수 있습니다. 예를 들어 핀치 확대/축소 제스처는 두 손가락 사용자 수 확대 / 축소 된 화면의 일부를 모으는 하 여이 매우 일반적인 예제입니다. 이 가이드를 터치를 검사 하 고 Android에서 제스처입니다."
-ms.topic: article
+title: 터치
+description: 여러 오늘날의 장치에 터치 스크린이 빠르고 효율적으로 상호 작용할 수 장치와 자연스럽 고 직관적인 방식입니다. 이 상호 작용 간단한 터치 검색만 제한 되지 않습니다.-제스처도 사용할 수 있습니다. 예를 들어 핀치 확대/축소 제스처는 두 손가락 사용자 수 확대 / 축소 된 화면의 일부를 모으는 하 여이 매우 일반적인 예제입니다. 이 가이드를 터치를 검사 하 고 Android에서 제스처입니다.
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 791dd25796e1f9ba4d73b99dea0fd043431f0218
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d6c6d7fd02511ede84b7cfa75575d755f11bab99
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="touch"></a>터치
 

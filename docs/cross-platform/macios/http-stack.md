@@ -1,18 +1,17 @@
 ---
-title: "HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기"
-description: "구현 선택기 SSL/TLS 및 HttpClient 스택의 Xamarin iOS, tvOS, 또는 macOS 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다."
-ms.topic: article
+title: HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
+description: 구현 선택기 SSL/TLS 및 HttpClient 스택의 Xamarin iOS, tvOS, 또는 macOS 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 06/12/2017
-ms.openlocfilehash: 01b316e296f78ea2739e2f3ed1bd8d8ec112fca8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: ba9eb6a062ce91db5f1597de6f9a2b01ad18a367
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
 

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin 사용한 게임 개발 소개"
-description: "특성 게임 개발에 다른 종류의 앱 개발에서 크게 다를 수 있습니다. 이 문서는 Xamarin.iOS 및 Xamarin.Android를 함께 사용할 수 있는 기술을 갖춘 게임 개발에 소개 합니다. Xamarin.iOS 및 Xamarin.Android 게임을 적용 하는 방법을 간략하게 설명 하 고 사용 하기 위해 사용할 수 있는 기술의 샘플링 모두 제공 합니다."
-ms.topic: article
+title: Xamarin 사용한 게임 개발 소개
+description: 특성 게임 개발에 다른 종류의 앱 개발에서 크게 다를 수 있습니다. 이 문서는 Xamarin.iOS 및 Xamarin.Android를 함께 사용할 수 있는 기술을 갖춘 게임 개발에 소개 합니다. Xamarin.iOS 및 Xamarin.Android 게임을 적용 하는 방법을 간략하게 설명 하 고 사용 하기 위해 사용할 수 있는 기술의 샘플링 모두 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9d1ce2da87d6f169efb5431f734695f6876cf3f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin 사용한 게임 개발 소개
 
@@ -97,8 +96,8 @@ _특성 게임 개발에 다른 종류의 앱 개발에서 크게 다를 수 있
 게임 개발 프로세스에 관련 된 개인에 대 한 새 역할 및 타이틀을 소개합니다. 대부분의 게임 개발자가 다양 한 분야 존재 하므로 전체 게임을 해제 하는 데 필요한 기술의 광범위 한 집합을 만족 시킬 수 없습니다. 보다 일반적인 값 중 일부가 개발 – 분야의 전체 목록은 아닌지 염두에서에 둬야 합니다.
 
 - **프로그래머** – 대부분의 사람들이 가장 읽는이 문서는이 범주에 속합니다. 게임 개발에는 프로그래머의 역할은 비 게임 응용 프로그램에서 프로그래머의 역할 유사 합니다. 책임을 게임을 시스템 컨텍스트에서 일반적인 작업에 대 한 추가 콘텐츠를 표시 하 고 버그를 수정 하는 – 물론 – 지정된 된 프로젝트의 개발 흐름을 제어 하는 논리를 작성을 포함 합니다.
-- **2D 아티스트** – 2D 예술가 만드는 책임이 *2D 자산*합니다. 여기의 게임 GUI, 입자, 환경 및 문자에 대 한 이미지 파일에 포함 합니다. 3D 게임 개발 하는 경우, 다음 2D 아티스트 아니어야 환경 및 문자를 담당 합니다. 무료를 찾을 수에서 게임에 대 한 아트 [http://opengameart.org/](http://opengameart.org/) 합니다.
-- **3D 아티스트** – 3D 예술가 만드는 책임이 *3D 자산*합니다. 여기에 환경, 문자 및 props (가구, 장비, 및 기타 inanimate 개체)에 대 한 3D 모델 포함 됩니다. 일부 팀은 3D 아티스트, 팀의 크기에 따라 3D 애니메이터 서로 다릅니다. 무료를 찾을 수에서 게임에 대 한 3D 아트 [http://opengameart.org/](http://opengameart.org/) 합니다.
+- **2D 아티스트** – 2D 예술가 만드는 책임이 *2D 자산*합니다. 여기의 게임 GUI, 입자, 환경 및 문자에 대 한 이미지 파일에 포함 합니다. 3D 게임 개발 하는 경우, 다음 2D 아티스트 아니어야 환경 및 문자를 담당 합니다. 무료를 찾을 수에서 게임에 대 한 아트 [ http://opengameart.org/ ](http://opengameart.org/) 합니다.
+- **3D 아티스트** – 3D 예술가 만드는 책임이 *3D 자산*합니다. 여기에 환경, 문자 및 props (가구, 장비, 및 기타 inanimate 개체)에 대 한 3D 모델 포함 됩니다. 일부 팀은 3D 아티스트, 팀의 크기에 따라 3D 애니메이터 서로 다릅니다. 무료를 찾을 수에서 게임에 대 한 3D 아트 [ http://opengameart.org/ ](http://opengameart.org/) 합니다.
 - **디자이너 게임** – 게임 디자이너는 게임을 실행 하는 방법을 정의 하는 일을 담당 합니다. 이 게임, 게임 및 플레이어가 게임을 통해 진행 되는 방식을의 전반적인 목표의 설정과 같이 높은 수준의 의사 결정을 포함할 수 있습니다. 이동 또는 ups 수준에 대 한 계수를 정의 하 고 레이아웃을 디자인 게임 디자이너와 관련 된 작업에 대 한 매핑 입력과 같은 매우 자세한 의사 결정 될 수도 있습니다. 용어 *디자이너* 게임 디자이너 또는 컨텍스트에 따라 비주얼 디자이너를 참조할 수 있습니다.
 - **디자이너 사운드** – 사운드 디자이너는 게임의 오디오 자산을 담당 합니다. 일부 팀 개인 반면 소규모 팀에 대 한 모든 오디오에 단일 책임자 소리 효과 작곡가 만드는 책임이 구분 될 수 있습니다.
 
@@ -171,9 +170,9 @@ UrhoSharp는 플랫폼 간 높은 수준의 2D 및 3D 엔진 있는 기 하 도�
 
 위에 강조 표시 하는 기술은 샘플만 사용할 수 있는 기술입니다. 주목할 만한 다른 기술은 다음과 같습니다.
 
-- **Sprite 키트** – Xamarin Apple의 Sprite 키트 게임 프레임 워크를 통해 네이티브 API 기능을 모두에 액세스할 수에 대 한 지원을 제공 합니다. Sprite 키트는 Apple에서 만든 기술 이므로 iOS 에코 시스템의 나머지와 긴밀 한 통합을 제공 합니다. 물론, Sprite 키트 아니므로 플랫폼 간 Android에서 사용할 수 없습니다. Sprite 키트를 사용 하 여에 대 한 자세한 내용은이 게시물을 참조 하세요.: [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **장면 키트** – Xamarin iOS 앱에 구현 하는 3D 그래픽을 간소화 하는 Apple의 장면 키트 framework에 대 한 지원 기능을 제공 합니다. 장면 키트 때문에 통합 및 Sprite 키트에 대 한 위에서 언급 한 플랫폼 관련 고려 사항에서 모두, Apple에서 제공한 기술 이기도 합니다. 장면 키트에 대 한 자세한 내용은이 게시물을 참조 하세요.: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (는 열기 도구 키트)에 액세스할 수 하위 수준 OpenGL iOS, 사과, 및 Mac 하드웨어. OpenTK에 자세한 내용은 참조에서 기본 페이지: [http://www.opentk.com/](http://www.opentk.com/)
+- **Sprite 키트** – Xamarin Apple의 Sprite 키트 게임 프레임 워크를 통해 네이티브 API 기능을 모두에 액세스할 수에 대 한 지원을 제공 합니다. Sprite 키트는 Apple에서 만든 기술 이므로 iOS 에코 시스템의 나머지와 긴밀 한 통합을 제공 합니다. 물론, Sprite 키트 아니므로 플랫폼 간 Android에서 사용할 수 없습니다. Sprite 키트를 사용 하 여에 대 한 자세한 내용은이 게시물을 참조 하세요.  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **장면 키트** – Xamarin iOS 앱에 구현 하는 3D 그래픽을 간소화 하는 Apple의 장면 키트 framework에 대 한 지원 기능을 제공 합니다. 장면 키트 때문에 통합 및 Sprite 키트에 대 한 위에서 언급 한 플랫폼 관련 고려 사항에서 모두, Apple에서 제공한 기술 이기도 합니다. 장면 키트에 대 한 자세한 내용은이 게시물을 참조 하세요. [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK –** OpenTK (는 열기 도구 키트)에 액세스할 수 하위 수준 OpenGL iOS, 사과, 및 Mac 하드웨어. OpenTK에서 기본 페이지를 참조 하십시오.  [http://www.opentk.com/](http://www.opentk.com/)
 
 
 # <a name="summary"></a>요약

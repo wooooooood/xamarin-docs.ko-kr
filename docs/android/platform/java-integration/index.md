@@ -1,18 +1,17 @@
 ---
-title: "Java 통합 개요"
-description: "Java 생태계는 다양 하 고 여러 구성 요소 컬렉션을 포함합니다. 이러한 구성 요소에 Android 응용 프로그램을 개발 하는 데 걸리는 시간을 줄이기 위해 사용할 수 있습니다. 이 문서는 소개 하 고는 몇 가지 개발자가 자신의 Xamarin.Android 응용 프로그램 개발 환경을 개선 하기 위해 이러한 기존 Java 구성 요소를 사용할 수는 상위 수준 개요를 제공 됩니다."
-ms.topic: article
+title: Java 통합 개요
+description: Java 생태계는 다양 하 고 여러 구성 요소 컬렉션을 포함합니다. 이러한 구성 요소에 Android 응용 프로그램을 개발 하는 데 걸리는 시간을 줄이기 위해 사용할 수 있습니다. 이 문서는 소개 하 고는 몇 가지 개발자가 자신의 Xamarin.Android 응용 프로그램 개발 환경을 개선 하기 위해 이러한 기존 Java 구성 요소를 사용할 수는 상위 수준 개요를 제공 됩니다.
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dbaf17479ae077fced425df5ac31bdbbc4e06b64
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-integration-overview"></a>Java 통합 개요
 

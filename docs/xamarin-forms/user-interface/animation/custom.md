@@ -1,18 +1,17 @@
 ---
-title: "사용자 지정 애니메이션"
-description: "애니메이션 클래스에는 하나 이상의 애니메이션 개체를 만드는 ViewExtensions 클래스의 확장 방법 사용 하 여 모든 Xamarin.Forms 애니메이션의 구성 요소입니다. 이 문서를 만들기 및 애니메이션을 취소 하 고, 여러 애니메이션 동기화 애니메이션 클래스를 사용 하 고 속성은 기존 애니메이션 메서드에서 애니메이션을 효과 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다."
-ms.topic: article
+title: 사용자 지정 애니메이션
+description: 애니메이션 클래스에는 하나 이상의 애니메이션 개체를 만드는 ViewExtensions 클래스의 확장 방법 사용 하 여 모든 Xamarin.Forms 애니메이션의 구성 요소입니다. 이 문서를 만들기 및 애니메이션을 취소 하 고, 여러 애니메이션 동기화 애니메이션 클래스를 사용 하 고 속성은 기존 애니메이션 메서드에서 애니메이션을 효과 적용 하는 사용자 지정 애니메이션을 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: c582e0306bdc69570e3f8e8d35c7fa15b30523da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 302aa784baad9afb703f88dcfba56b68fd3c9105
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-animations"></a>사용자 지정 애니메이션
 

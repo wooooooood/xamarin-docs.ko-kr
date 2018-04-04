@@ -1,18 +1,17 @@
 ---
-title: "Apple TV 앱 스토어에 게시"
-description: "이 문서에서는 구성, 빌드 및 Apple TV 앱 스토어를 통해 배포에 대 한 Xamarin.tvOS 앱을 게시 하는 방법을 보여 줍니다. 배포에 대 한 앱을 준비 하는 방법, Apple의 도구를 사용 하 여 검토를 위해 앱을 제출 하는 방법 및, 마지막으로, TV Apple 앱 스토어에 앱을 게시 하는 방법에 설명 하는 단계별 지침을 포함 합니다."
-ms.topic: article
+title: Apple TV 앱 스토어에 게시
+description: 이 문서에서는 구성, 빌드 및 Apple TV 앱 스토어를 통해 배포에 대 한 Xamarin.tvOS 앱을 게시 하는 방법을 보여 줍니다. 배포에 대 한 앱을 준비 하는 방법, Apple의 도구를 사용 하 여 검토를 위해 앱을 제출 하는 방법 및, 마지막으로, TV Apple 앱 스토어에 앱을 게시 하는 방법에 설명 하는 단계별 지침을 포함 합니다.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: abb8ee30828e5d9856b9fd72cca8adb669959818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV 앱 스토어에 게시
 
@@ -114,7 +113,7 @@ tvOS 사용 하 여 *프로 비전 프로필* 특정 응용 프로그램 빌드 
 프로비전에는 Apple의 웹 기반 iOS 프로비전 포털을 사용하는 다음 단계가 포함됩니다.
 
 1.  **프로비전** > **배포**를 차례로 선택합니다.
-2.  클릭는  **+**  으로 만들려는 분포 프로필의 유형을 선택 하 고 단추 **Apple TV 앱 스토어**합니다.
+2.  클릭는 **+** 으로 만들려는 분포 프로필의 유형을 선택 하 고 단추 **Apple TV 앱 스토어**합니다.
 3.  드롭다운 목록에서 배포 프로필을 만들려는 **앱 ID**를 선택합니다.
 4.  응용 프로그램에 서명 하는 데 필요한 인증서를 선택 합니다.
 5.  새 **배포 프로필**에 대한 **이름**을 입력하고 해당 프로필을 생성합니다.
@@ -154,7 +153,7 @@ tvOS 사용 하 여 *프로 비전 프로필* 특정 응용 프로그램 빌드 
     ![](app-store-publishing-images/buildxs01new.png "릴리스 구성을 선택합니다")
 2. **빌드** 메뉴에서 **게시를 위해 보관**을 선택합니다.
 
-    [![](app-store-publishing-images/buildxs02new.png "게시에 대 한 보관 파일을 선택 합니다.")](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![](app-store-publishing-images/buildxs02new.png "게시를 위해 보관 선택")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. 보관이 만들어지면 **보관** 보기가 표시됩니다.
 
     [![](app-store-publishing-images/buildxs03new.png "보관 파일 보기")](app-store-publishing-images/buildxs03new.png#lightbox)
@@ -196,7 +195,7 @@ Mac 용 Visual Studio에서 보관 워크플로 열립니다 응용 프로그램
 
 2. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
 
-    [![](app-store-publishing-images/publishvs01.png "선택 제공 앱")](app-store-publishing-images/publishvs01.png#lightbox)
+    [![](app-store-publishing-images/publishvs01.png "앱 배달 선택")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
 4. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.

@@ -1,18 +1,17 @@
 ---
-title: "고급 사용자 알림"
-description: "이 문서에서는 활용 전체 Xamarin.iOS 앱에서 하는 방법과 새 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다."
-ms.topic: article
+title: 고급 사용자 알림
+description: 이 문서에서는 활용 전체 Xamarin.iOS 앱에서 하는 방법과 새 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9958682ce9e356692f451900d7dca0e343b244da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-user-notifications"></a>고급 사용자 알림
 

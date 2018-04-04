@@ -1,18 +1,17 @@
 ---
-title: "JNI 작업"
-description: "Xamarin.Android는 Java 대신 C# 내에서 Android 응용 프로그램 작성을 허용 합니다. 여러 어셈블리를 Mono.Android.dll 및 Mono.Android.GoogleMaps.dll를 비롯 한 Java 라이브러리에 대 한 바인딩을 제공 하는 Xamarin.Android 제공 됩니다. 그러나 모든 가능한 Java 라이브러리용 바인딩을 제공 되지 않습니다 있으며 모든 Java 형식 및 멤버 바인딩에 제공 되는 바인딩할 수 있습니다. 바인딩되지 않은 Java 형식 및 멤버를 사용 하는 Java 기본 인터페이스 (JNI)를 사용할 수 있습니다. 이 문서에는 Java 형식 및 Xamarin.Android 응용 프로그램에서 멤버와 상호 작용할 JNI를 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: JNI 작업
+description: Xamarin.Android는 Java 대신 C# 내에서 Android 응용 프로그램 작성을 허용 합니다. 여러 어셈블리를 Mono.Android.dll 및 Mono.Android.GoogleMaps.dll를 비롯 한 Java 라이브러리에 대 한 바인딩을 제공 하는 Xamarin.Android 제공 됩니다. 그러나 모든 가능한 Java 라이브러리용 바인딩을 제공 되지 않습니다 있으며 모든 Java 형식 및 멤버 바인딩에 제공 되는 바인딩할 수 있습니다. 바인딩되지 않은 Java 형식 및 멤버를 사용 하는 Java 기본 인터페이스 (JNI)를 사용할 수 있습니다. 이 문서에는 Java 형식 및 Xamarin.Android 응용 프로그램에서 멤버와 상호 작용할 JNI를 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4b5874a0f0e4289201f68299e2e37660cabc9ecf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-jni"></a>JNI 작업
 
@@ -72,7 +71,7 @@ Android 코드를 실행 가상 하거나 인터페이스 메서드 재정의 �
 Android 인터페이스를 구현 해야 하는 경우가 있습니다 (예: [Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/)).
 
 모든 Android 클래스와 인터페이스를 확장 된 [Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 인터페이스; 따라서 모든 Android 형식을 구현 해야 `IJavaObject`합니다.
-Xamarin.Android이이 사실을 활용 &ndash; 사용 하 여 `IJavaObject` 지정된 된 관리 되는 형식에 대 한 Java 프록시 (한 Android 호출 가능 래퍼)를 사용한 Android 수 있도록 합니다. 때문에 **monodroid.exe** 만 찾습니다 `Java.Lang.Object` 서브 클래스 (구현 해야 함 `IJavaObject`), 서브클래싱 `Java.Lang.Object` 관리 코드에서 인터페이스를 구현 하는 방법을 제공 합니다. 예:
+Xamarin.Android이이 사실을 활용 &ndash; 사용 하 여 `IJavaObject` 지정된 된 관리 되는 형식에 대 한 Java 프록시 (한 Android 호출 가능 래퍼)를 사용한 Android 수 있도록 합니다. 때문에 **monodroid.exe** 만 찾습니다 `Java.Lang.Object` 서브 클래스 (구현 해야 함 `IJavaObject`), 서브클래싱 `Java.Lang.Object` 관리 코드에서 인터페이스를 구현 하는 방법을 제공 합니다. 예를 들어:
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -1443,7 +1442,7 @@ Java 형식 발생 합니다 두 [java.lang.Thread.State](http://developer.andro
 형식 참조 JNI 서명을 사용 하 여 배열 형식 참조로 사용 됩니다.
 
 형식 참조를 얻으려고 하는 또 다른 방법의 출력을 읽는 `'javap -s -classpath android.jar fully.qualified.Java.Name'`합니다.
-형식에 따라 관련 있습니다 사용할 수는 생성자 선언 또는 메서드 JNI 이름을 결정 하는 형식을 반환 합니다. 예:
+형식에 따라 관련 있습니다 사용할 수는 생성자 선언 또는 메서드 JNI 이름을 결정 하는 형식을 반환 합니다. 예를 들어:
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State

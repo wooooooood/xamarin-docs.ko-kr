@@ -1,18 +1,17 @@
 ---
-title: "플러그 인"
-description: "Xamarin.Forms 응용 프로그램에 기본 기능을 쉽게 추가합니다"
-ms.topic: article
+title: 플러그 인
+description: Xamarin.Forms 응용 프로그램에 기본 기능을 쉽게 추가합니다
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: ad338e655c1aeb475122c837ca5c805e491f84bc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="plugins"></a>플러그 인
 
@@ -35,7 +34,7 @@ Xamarin 커뮤니티 만들었습니다 대부분의 플랫폼 간 플러그 인
 
 예를 들어 플러그 인 아래 목록 모두 오픈 소스 이며의 샘플에 해당 하는 [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) 섹션:
 
-- **텍스트 음성 변환** James Montemagno 여 &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) 및 [NuGet  ](https://www.nuget.org/packages/Xam.Plugin.Battery)
+- **텍스트 음성 변환** James Montemagno 여 &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) 및 [NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
 - **배터리 상태** James Montemagno 여 &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery) 및 [NuGet](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech/)
 
 에 대 한 이러한 지침을 수행 하는 대로 해당 Github 프로젝트 플랫폼 간 플러그 인을 직접를 만들기 위한 좋은 출발점 제공할 수 [Xamarin에 대 한 플러그 인 만들기](https://github.com/xamarin/plugins#create-a-plugin-for-xamarin)합니다.

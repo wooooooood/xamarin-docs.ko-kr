@@ -1,18 +1,17 @@
 ---
 title: StackLayout
-description: "StackLayout를 사용 하 여 하나의 차원에 대해 뷰 컬렉션을 제공 합니다."
-ms.topic: article
+description: StackLayout를 사용 하 여 하나의 차원에 대해 뷰 컬렉션을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 14982fc5cb3e05243c819cbc8b37349d872bd24c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 638243958fce34871089b10185f150492dbd2b0d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="stacklayout"></a>StackLayout
 

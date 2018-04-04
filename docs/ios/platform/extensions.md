@@ -1,7 +1,6 @@
 ---
-title: "iOS 확장"
-description: "IOS 8에에서 도입 된, 확장 프로그램은 표시 되는 표준 컨텍스트에서 ios와 같은 알림 센터 내에서 사진 있을 때 또는 사용자 지정 바로 요청 하면 위젯 편집 합니다. 모든 확장 컨테이너 앱과 함께에서 설치 되 고 호스트 응용 프로그램에서 특정 확장 지점에서 활성화 됩니다."
-ms.topic: article
+title: iOS 확장
+description: IOS 8에에서 도입 된, 확장 프로그램은 표시 되는 표준 컨텍스트에서 ios와 같은 알림 센터 내에서 사진 있을 때 또는 사용자 지정 바로 요청 하면 위젯 편집 합니다. 모든 확장 컨테이너 앱과 함께에서 설치 되 고 호스트 응용 프로그램에서 특정 확장 지점에서 활성화 됩니다.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-extensions"></a>iOS 확장
 

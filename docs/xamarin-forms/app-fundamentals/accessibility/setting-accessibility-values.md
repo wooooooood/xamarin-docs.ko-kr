@@ -1,18 +1,17 @@
 ---
-title: "사용자 인터페이스 요소에 내게 필요한 옵션 값을 설정합니다."
-description: "Xamarin.Forms 내게 필요한 옵션 값을을 네이티브 내게 필요한 옵션 값을 설정은 AutomationProperties 클래스에서 연결 된 속성을 사용 하 여 사용자 인터페이스 요소에서 설정할 수 있습니다. 이 문서를 페이지에는 화면 판독기의 요소에 대 한 서로 통신할 수 있습니다 AutomationProperties 클래스를 사용 하는 방법을 설명 합니다."
-ms.topic: article
+title: 사용자 인터페이스 요소에 내게 필요한 옵션 값을 설정합니다.
+description: Xamarin.Forms 내게 필요한 옵션 값을을 네이티브 내게 필요한 옵션 값을 설정은 AutomationProperties 클래스에서 연결 된 속성을 사용 하 여 사용자 인터페이스 요소에서 설정할 수 있습니다. 이 문서를 페이지에는 화면 판독기의 요소에 대 한 서로 통신할 수 있습니다 AutomationProperties 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 4aeeea7f946a121b12741d2da217daf531935849
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cf9071684061b584e1cb75cfd50b33212f42bf79
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-accessibility-values-on-user-interface-elements"></a>사용자 인터페이스 요소에 내게 필요한 옵션 값을 설정합니다.
 
@@ -146,5 +145,5 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 ## <a name="related-links"></a>관련 링크
 
-- [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)
+- [연결된 속성](~/xamarin-forms/xaml/attached-properties.md)
 - [내게 필요한 옵션 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)

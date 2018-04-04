@@ -1,18 +1,17 @@
 ---
-title: "사용자 지정 렌더러 소개"
-description: "사용자 지정 렌더러 모양 및 Xamarin.Forms 컨트롤의 동작을 사용자 지정 하기 위한 강력한 도구를 제공 합니다. 작은 스타일 변경 내용 또는 정교한 플랫폼 특정 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다. 이 문서에서는 사용자 지정 렌더러를 소개 하 고 사용자 지정 렌더러 만들기 위한 프로세스를 보여 줍니다."
-ms.topic: article
+title: 사용자 지정 렌더러 소개
+description: 사용자 지정 렌더러 모양 및 Xamarin.Forms 컨트롤의 동작을 사용자 지정 하기 위한 강력한 도구를 제공 합니다. 작은 스타일 변경 내용 또는 정교한 플랫폼 특정 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다. 이 문서에서는 사용자 지정 렌더러를 소개 하 고 사용자 지정 렌더러 만들기 위한 프로세스를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 

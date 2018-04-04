@@ -1,18 +1,17 @@
 ---
-title: "Hello, tvOS 빠른 시작 가이드"
-description: "이 가이드는 첫 번째 Xamarin.tvOS 앱 및 해당 개발 도구 체인을 만들어 안내 합니다. 또한 UI 컨트롤, 코드에 표시 빌드, 실행 및 Xamarin.tvOS 응용 프로그램을 테스트 하는 방법을 설명 하는 Xamarin 디자이너를 제공 합니다."
-ms.topic: article
+title: Hello, tvOS 빠른 시작 가이드
+description: 이 가이드는 첫 번째 Xamarin.tvOS 앱 및 해당 개발 도구 체인을 만들어 안내 합니다. 또한 UI 컨트롤, 코드에 표시 빌드, 실행 및 Xamarin.tvOS 응용 프로그램을 테스트 하는 방법을 설명 하는 Xamarin 디자이너를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0adf6e326dd29db15b6bd90626f424b803dc0bc9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
 
@@ -253,7 +252,7 @@ IOS 용 Xamarin 디자이너를 사용 하 여 Xamarin.tvOS 앱에 대 한 사�
 
 UI 만들기를 시작 하려면 보겠습니다 두 번 클릭은 `Main.storyboard` 파일에 **솔루션 탐색기** iOS 디자이너에서에서 편집 하기 위해 열려는:
 
-[![](hello-tvos-images/designer01.png "솔루션 탐색기에서 Main.storyboard 파일")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "솔루션 탐색기의 Main.storyboard 파일")](hello-tvos-images/designer01.png#lightbox)
 
 이 디자이너를 시작 하 고 다음과 같은 해야 합니다.
 

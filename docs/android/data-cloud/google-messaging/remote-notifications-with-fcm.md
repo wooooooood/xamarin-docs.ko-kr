@@ -1,18 +1,17 @@
 ---
-title: "Firebase 사용 하 여 원격 알림을 클라우드 메시징"
-description: "이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Firebase Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Firebase 클라우드 메시징 (FCM)와 통신에 필요한 Android 매니페스트 FCM에 대 한 액세스를 구성 하는 방법의 예제를 제공 하 고 다운스트림 메시징는 Firebase를 사용 하 여 보여 줍니다..는 다양 한 클래스를 구현 하는 방법을 보여 줍니다. 콘솔입니다."
-ms.topic: article
+title: Firebase 사용 하 여 원격 알림을 클라우드 메시징
+description: 이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Firebase Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Firebase 클라우드 메시징 (FCM)와 통신에 필요한 Android 매니페스트 FCM에 대 한 액세스를 구성 하는 방법의 예제를 제공 하 고 다운스트림 메시징는 Firebase를 사용 하 여 보여 줍니다..는 다양 한 클래스를 구현 하는 방법을 보여 줍니다. 콘솔입니다.
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 사용 하 여 원격 알림을 클라우드 메시징
 

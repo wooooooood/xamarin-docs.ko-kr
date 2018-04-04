@@ -1,18 +1,17 @@
 ---
-title: "진행률 표시기 작업"
-description: "이 문서에서는 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내에서 작업을 설명 합니다."
-ms.topic: article
+title: 진행률 표시기 작업
+description: 이 문서에서는 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 96fc3ea0aa802f62bd697b34f7bd504eb445a4f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-progress-indicators"></a>진행률 표시기 작업
 
@@ -67,7 +66,7 @@ Apple에 진행률 표시줄을 사용 하기 위한 다음 제안 사항을:
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 진행 보기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **진행률**(완료율): 
 
     [![](progress-indicators-images/activity04.png "위젯 탭")](progress-indicators-images/activity04.png#lightbox)
-1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
+1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예를 들어: 
 
     [![](progress-indicators-images/activity05.png "이름을 할당합니다")](progress-indicators-images/activity05.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -87,7 +86,7 @@ Apple에 진행률 표시줄을 사용 하기 위한 다음 제안 사항을:
 1. 에 **위젯을 탭** 의 **속성 탐색기**와 같은 진행 보기의 여러 속성을 조정할 수 있습니다는 **스타일** 및 **진행률**(완료율): 
 
     [![](progress-indicators-images/activity04-vs.png "위젯 탭")](progress-indicators-images/activity04-vs.png#lightbox)
-1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예: 
+1. 마지막으로 할당 **이름** 컨트롤에 C# 코드에서에 응답할 수 있도록 합니다. 예를 들어: 
 
     [![](progress-indicators-images/activity05-vs.png "이름을 할당합니다")](progress-indicators-images/activity05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.

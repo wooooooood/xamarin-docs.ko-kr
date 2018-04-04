@@ -1,18 +1,17 @@
 ---
-title: "바인딩 문제 해결"
-description: "이 문서에 바인딩 가능한 원인과 해결 방법이 함께 생성 하는 경우 발생할 수 있는 몇 가지 일반적인 오류 요약 되어 있습니다."
-ms.topic: article
+title: 바인딩 문제 해결
+description: 이 문서에 바인딩 가능한 원인과 해결 방법이 함께 생성 하는 경우 발생할 수 있는 몇 가지 일반적인 오류 요약 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
 
@@ -51,7 +50,7 @@ Android 라이브러리 decompiled 있어야, 되 면 소스 코드를 검사 �
 
 - **난독 처리 하는 특성을 갖는 클래스** &ndash; 난독 처리 된 클래스의 특성을 포함 합니다.
 
-    - 클래스 이름에는  **$** , 즉, **$.class**
+    - 클래스 이름에는 **$**, 즉, **$.class**
     - 클래스 이름은 소문자, 즉, 손상 완전히 **a.class**      
 
 - **`import` 참조 되지 않는 라이브러리에 대 한 문을** &ndash; 참조 되지 않는 라이브러리를 식별 하 고 해당 종속성을 사용 하 여 바인딩 Xamarin.Android 프로젝트 추가 **빌드 작업** 의 **ReferenceJar**  또는 **EmbedddedReferenceJar**합니다.
@@ -114,7 +113,7 @@ Xamarin.Android은 XML 파일 이름의 생성 하는 데 바인딩 프로젝트
 
 -   Java public이 아닌 클래스에서 공용 클래스를 파생 가능 하지만, 이것은.NET에서 지원 되지 않습니다. 바인딩 생성기에서 public이 아닌 클래스에 대 한 바인딩을 생성 하므로 파생 클래스가 이러한 올바르게 생성 될 수 없습니다. 노드 제거를 사용 하는 파생된 클래스에 대 한 메타 데이터 항목을 제거 하거나이 해결 하려면 **Metadata.xml**, 하거나 수행 하는 public이 아닌 클래스 공용 메타 데이터를 수정 합니다. 후자의 솔루션을 만들 것 바인딩 C# 소스 빌드됩니다 되도록 하지만 public이 아닌 클래스를 사용할 수 없습니다.
 
-    예:
+    예를 들어:
 
     ```xml
     <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"

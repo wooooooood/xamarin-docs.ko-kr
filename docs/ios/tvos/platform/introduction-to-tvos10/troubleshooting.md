@@ -1,18 +1,17 @@
 ---
-title: "문제 해결"
-description: "이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다."
-ms.topic: article
+title: 문제 해결
+description: 이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d45b9ed04d3ae4815d408d82068e588a2cbcc6f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -20,7 +19,7 @@ _이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 �
 
 다음 섹션에서는 tvOS 10 Xamarin.tvOS 및 이러한 문제와 솔루션 함께 사용할 때 발생할 수 있는 몇 가지 알려진된 문제를 나열 합니다.
 
-- [앱 스토어](#App-Store)
+- [App Store](#App-Store)
 - [이진 호환성](#Binary-Compatibility)
 - [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)

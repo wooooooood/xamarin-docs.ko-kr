@@ -1,18 +1,17 @@
 ---
 title: HomeKit
-description: "HomeKit은 홈 자동화 장치 제어에 대 한 Apple의 프레임 워크. 이 문서는 HomeKit를 소개 하 고 이러한 액세서리와 상호 작용할 수 HomeKit 액세서리 시뮬레이터 및 간단한 Xamarin.iOS 앱 작성에 테스트 액세서리 구성에 대해 설명 합니다."
-ms.topic: article
+description: HomeKit은 홈 자동화 장치 제어에 대 한 Apple의 프레임 워크. 이 문서는 HomeKit를 소개 하 고 이러한 액세서리와 상호 작용할 수 HomeKit 액세서리 시뮬레이터 및 간단한 Xamarin.iOS 앱 작성에 테스트 액세서리 구성에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -104,7 +103,7 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 보조 
 1. 응용 프로그램 폴더에서 HomeKit 액세서리 시뮬레이터를 시작 합니다. 
 
     [![](homekit-images/simulator02.png "HomeKit 액세서리 시뮬레이터")](homekit-images/simulator02.png#lightbox)
-2. 클릭는  **+**  선택한 단추 **새 액세서리 중...** : 
+2. 클릭는 **+** 선택한 단추 **새 액세서리 중...** : 
 
     [![](homekit-images/simulator03.png "새 보조를 추가 합니다.")](homekit-images/simulator03.png#lightbox)
 3. 새 접근자에 대 한 정보를 입력 하 고 클릭 하 고 **마침** 단추: 

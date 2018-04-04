@@ -1,18 +1,17 @@
 ---
-title: "단추"
-description: "UIButton 클래스는 다양 한 유형의 iOS 화면에서 단추를 나타내는 데 사용 됩니다. 이 섹션에서는 iOS의 단추를 사용 하기 위한 다양 한 옵션을 소개 합니다."
-ms.topic: article
+title: 단추
+description: UIButton 클래스는 다양 한 유형의 iOS 화면에서 단추를 나타내는 데 사용 됩니다. 이 섹션에서는 iOS의 단추를 사용 하기 위한 다양 한 옵션을 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: ab7a77c44412bd22427e17a696eb43278ff7dd94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c2c33103c005a5ed567b1c4703846f887d824ac4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="buttons"></a>단추
 
@@ -52,7 +51,7 @@ UIButtonType 다음 중 하나를로 지정 해야 합니다.
 myButton.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-단추의 텍스트를 변경 하려면 사용 하 여는 `SetTitle` 단추 텍스트 문자열을 설정 하도록 요구 하는 속성 및 `UIControlStyle`합니다. 예:
+단추의 텍스트를 변경 하려면 사용 하 여는 `SetTitle` 단추 텍스트 문자열을 설정 하도록 요구 하는 속성 및 `UIControlStyle`합니다. 예를 들어:
 
 ```csharp
 myButton.SetTitle("Hello, World!", UIControlState.Normal);
@@ -91,7 +90,7 @@ button.SetTitleColor (UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-또한 단추의 제목으로 특성이 지정 된 텍스트를 사용할 수 있습니다. 예:
+또한 단추의 제목으로 특성이 지정 된 텍스트를 사용할 수 있습니다. 예를 들어:
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

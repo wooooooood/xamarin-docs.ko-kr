@@ -1,17 +1,17 @@
 ---
-title: "문제 해결 팁"
-ms.topic: article
+title: 문제 해결 팁
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -200,7 +200,7 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 -  전역 약한 참조 소멸:로 시작 하는 줄 이들은 *-w-* 합니다.
 
 
-모든 메시지에는 *grefc* 값은 만들어진 Xamarin.Android 전역 참조의 개수 동안는 *grefwc* 값 Xamarin.Android 만들어진 글로벌 약한 참조의 수입니다. *처리* 또는 *obj 핸들* 값 JNI 핸들 값 이며 다음 문자는 '  */* ' 핸들 값의 유형: */L* 로컬 참조에 대 한 */G* 전역 참조에 대 한 및 */W* 약한 전역 참조에 대 한 합니다.
+모든 메시지에는 *grefc* 값은 만들어진 Xamarin.Android 전역 참조의 개수 동안는 *grefwc* 값 Xamarin.Android 만들어진 글로벌 약한 참조의 수입니다. *처리* 또는 *obj 핸들* 값 JNI 핸들 값 이며 다음 문자는 ' */*' 핸들 값의 유형: */L* 로컬 참조에 대 한 */G* 전역 참조에 대 한 및 */W* 약한 전역 참조에 대 한 합니다.
 
 GC 프로세스의 일환으로, 전역 참조 (+ g +)로 변환 하는 전역 약한 참조 (a + w + 발생 하 고-g-), Java 측 GC이 시작 및 수집 된 확인 약한 전역 참조 확인 합니다. 여전히 활성 경우 새 gref 약한 ref 주위 만들어집니다 (+ g +,-w-), 약한 ref 그렇지 않은 경우 제거 됩니다 (-w).
 
@@ -270,7 +270,7 @@ Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>받는 ' 활성화 불완전 한 오류 메시지
 
-이 문제는 Visual Studio에 대 한 Xamarin.Android를 사용 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면 보내 주십시오 로그를 다음 위치에서  *contact@xamarin.com* 합니다.
+이 문제는 Visual Studio에 대 한 Xamarin.Android를 사용 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면 보내 주십시오 로그를 다음 위치에서 *contact@xamarin.com*합니다.
 
 -  로그 위치: **% LocalAppData %\\Xamarin\\로그**
 
@@ -301,7 +301,7 @@ Windows에서는 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS 
 5. 자격 증명 입력
 6. 업데이트 확인
 
-이 오류 메시지가 계속 표시 되 면 전자 하십시오  **contact@xamarin.com** 합니다.
+이 오류 메시지가 계속 표시 되 면 전자 하십시오 **contact@xamarin.com**합니다.
 
 
 

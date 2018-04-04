@@ -1,18 +1,17 @@
 ---
 title: Face API를 사용 하 여 emotion 인식
 description: Face API를 입력으로 이미지에는 얼굴 식 하며 감정 각 면 이미지에 대 한 조합에 대해 신뢰도 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 emotion 인식 하도록 Face API를 사용 하는 방법을 설명 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 0fc69fb1283ea2afd95900348cdecec5d6514ae0
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 49e53425dbaf3aadd74d02ab030929e3311c7c8c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="emotion-recognition-using-the-face-api"></a>Face API를 사용 하 여 emotion 인식
 

@@ -1,18 +1,17 @@
 ---
-title: "Android 디자이너를 사용 하 여"
-description: "이 항목은 Xamarin.Android 디자이너의 연습 과정입니다. 소형 컬러 브라우저 응용 프로그램에 대 한 사용자 인터페이스를 만드는 방법을 보여 줍니다. 이 사용자 인터페이스 디자이너에서 전적으로 만들어집니다."
-ms.topic: article
+title: Android 디자이너를 사용 하 여
+description: 이 항목은 Xamarin.Android 디자이너의 연습 과정입니다. 소형 컬러 브라우저 응용 프로그램에 대 한 사용자 인터페이스를 만드는 방법을 보여 줍니다. 이 사용자 인터페이스 디자이너에서 전적으로 만들어집니다.
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-android-designer"></a>Android 디자이너를 사용 하 여
 

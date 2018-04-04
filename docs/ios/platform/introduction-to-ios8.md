@@ -1,18 +1,17 @@
 ---
-title: "IOS 8 소개"
-description: "Ios 8, 사과 새로운 프레임 워크 및 Api를 개발자가 자극 방식과 다양 한을 제공 했습니다. 이 가이드에서 이러한 새 Api를 소개 하 고 개발자와 사용자가 iOS 8 개념과 장점 참조 합니다."
-ms.topic: article
+title: IOS 8 소개
+description: Ios 8, 사과 새로운 프레임 워크 및 Api를 개발자가 자극 방식과 다양 한을 제공 했습니다. 이 가이드에서 이러한 새 Api를 소개 하 고 개발자와 사용자가 iOS 8 개념과 장점 참조 합니다.
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 8a4fabd5cc63434950f4646336b06676f6eb915b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2f57547356adcbafd01851bc54e42a14454ccd6a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-8"></a>IOS 8 소개
 

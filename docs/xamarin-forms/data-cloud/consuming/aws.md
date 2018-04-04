@@ -1,18 +1,17 @@
 ---
-title: "Amazon SimpleDB 서비스 사용"
-description: "Amazon SimpleDB 저장 하 고 Amazon의 클라우드의 데이터를에서 쿼리 하는 기능을 제공 하는 웹 서비스입니다. 이 문서에서는 쿼리를 만들고, 바꾸기 SimpleDB 서비스에 저장 된 데이터를 삭제 하려면 AWS SDK for.NET을 사용 하는 방법을 설명 합니다."
-ms.topic: article
+title: Amazon SimpleDB 서비스 사용
+description: Amazon SimpleDB 저장 하 고 Amazon의 클라우드의 데이터를에서 쿼리 하는 기능을 제공 하는 웹 서비스입니다. 이 문서에서는 쿼리를 만들고, 바꾸기 SimpleDB 서비스에 저장 된 데이터를 삭제 하려면 AWS SDK for.NET을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 823819AA-15F9-4144-B355-78A10AD37513
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5604477ff182711a63ba2b0e6bbcbbcc082a76ed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1602319dbf5a5d00ac5de75f2d438b9aea692699
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>Amazon SimpleDB 서비스 사용
 

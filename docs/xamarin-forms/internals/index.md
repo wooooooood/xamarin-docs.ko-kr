@@ -1,20 +1,19 @@
 ---
-title: "고급 개념 및 내부 기능"
-description: "Xamarin.Forms에 및 고급 팁과 트릭에 대 한 세부 정보를 구현 합니다."
-ms.topic: article
+title: 고급 개념 및 내부 요소
+description: Xamarin.Forms에 및 고급 팁과 트릭에 대 한 세부 정보를 구현 합니다.
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2017
-ms.openlocfilehash: 82b1522b0f49440e820ecd4aa363cbfb5e78032a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c19dca3701b2915625ac8ac8566abf5796a28547
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="advanced-concepts--internals"></a>고급 개념 및 내부 기능
+# <a name="advanced-concepts--internals"></a>고급 개념 및 내부 요소
 
 ## <a name="fast-renderersfast-renderersmd"></a>[빠른 렌더러](fast-renderers.md)
 

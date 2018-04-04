@@ -1,16 +1,16 @@
 ---
-title: "IBTool 오류: 작업을 완료할 수 없습니다."
-ms.topic: article
+title: 'IBTool 오류: 작업을 완료할 수 없습니다.'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd668859428da1abfa3a8e46a0810b2de6645fe2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4647227ad208bfa968f8282a966220a09ab7f4a6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>IBTool 오류: 작업을 완료할 수 없습니다.
 
@@ -54,7 +54,7 @@ Xcode 기준으로 버그에 대 한 자세한 내용은 다음에서 확인할 
 </BundleResource>
 ```
 
-Mac 용 Visual Studio에서의 `LogicalName` 를 사용 하 여 설정할 수도 있습니다는 `Resource ID` 아래에 있는 이미지에 대 한 필드 **보기 > 패드 > 속성**합니다. (참고 항목: [http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+Mac 용 Visual Studio에서의 `LogicalName` 를 사용 하 여 설정할 수도 있습니다는 `Resource ID` 아래에 있는 이미지에 대 한 필드 **보기 > 패드 > 속성**합니다. (참고 항목: [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 이 변경 후 스토리 보드를 업데이트 해야 합니다 및 `.xib` 파일을 새 최상위 이미지 경로 사용 합니다. Mac 용 visual Studio에 대 한 autocompletions 목록이 자동으로 업데이트 됩니다는 `Image` iOS 디자이너에에서는 속성입니다. Visual Studio에서 경로 직접 편집 해야 합니다. IOS 디자이너는 누락 된 이미지에 대 한 표시 다음 하지만 프로젝트를 작성 하 고 제대로 실행 되도록 합니다.
 

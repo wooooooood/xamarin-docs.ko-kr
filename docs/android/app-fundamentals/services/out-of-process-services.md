@@ -1,18 +1,17 @@
 ---
-title: "원격 프로세스의 실행 중인 Android 서비스"
-description: "일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일한 프로세스에서 실행 됩니다. Android 서비스는이 주목할 만한 예외를 자체 프로세스에서 실행 되도록 구성 및 다른 Android 개발자 로부터 포함 하 여 다른 응용 프로그램과 공유할 수 있습니다. 이 가이드에는 만들고 Xamarin을 사용 하는 Android 원격 서비스를 사용 하는 방법을 설명 합니다."
-ms.topic: article
+title: 원격 프로세스의 실행 중인 Android 서비스
+description: 일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일한 프로세스에서 실행 됩니다. Android 서비스는이 주목할 만한 예외를 자체 프로세스에서 실행 되도록 구성 및 다른 Android 개발자 로부터 포함 하 여 다른 응용 프로그램과 공유할 수 있습니다. 이 가이드에는 만들고 Xamarin을 사용 하는 Android 원격 서비스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 57be8187509ad7607c38ea17233e9ab5d25b41f1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스의 실행 중인 Android 서비스
 

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin을 사용한 Jenkins를 사용 하 여"
-description: "이 가이드에는 Jenkins 연속 통합 서버를 설정 하 고 컴파일 Xamarin을 사용 하 여 만든 모바일 응용 프로그램을 자동화 하는 방법을 보여 줍니다. Jenkins OS x 설치, 구성, 및 변경 내용이 소스 코드 관리 시스템에 커밋될 때 Xamarin.iOS 및 Xamarin.Android 응용 프로그램을 컴파일할 작업을 설정 하는 방법을 설명 합니다."
-ms.topic: article
+title: Xamarin을 사용한 Jenkins를 사용 하 여
+description: 이 가이드에는 Jenkins 연속 통합 서버를 설정 하 고 컴파일 Xamarin을 사용 하 여 만든 모바일 응용 프로그램을 자동화 하는 방법을 보여 줍니다. Jenkins OS x 설치, 구성, 및 변경 내용이 소스 코드 관리 시스템에 커밋될 때 Xamarin.iOS 및 Xamarin.Android 응용 프로그램을 컴파일할 작업을 설정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 
@@ -103,7 +102,7 @@ Jenkins 실행 되 면 시작 될 때마다 컴퓨터에 사용자 로그인에 
 
 ### <a name="installing-plugins"></a>플러그 인 설치
 
-Jenkins.App 설치 관리자가 완료 되 면 Jenkins를 시작 하 고 아래 스크린샷에 표시 된 것 처럼 http://localhost:8080, URL과 웹 브라우저를 시작 합니다.
+Jenkins.App 설치 관리자가 완료 되 면 Jenkins를 시작 하 고 URL로 웹 브라우저를 시작할 http://localhost:8080아래 스크린샷에 표시 된 것 처럼:
 
  [![](jenkins-walkthrough-images/image10.png "이 스크린 샷에 표시 된 것 처럼 8080")](jenkins-walkthrough-images/image10.png#lightbox)
 

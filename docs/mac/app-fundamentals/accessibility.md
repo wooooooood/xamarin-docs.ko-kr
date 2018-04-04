@@ -1,18 +1,17 @@
 ---
-title: "MacOS에서 내게 필요한 옵션"
-description: "이 가이드에서는 Xamarin.Mac 기반 응용 프로그램을 구축 하기 위한 기능을 설명 합니다."
-ms.topic: article
+title: MacOS에서 내게 필요한 옵션
+description: 이 가이드에서는 Xamarin.Mac 기반 응용 프로그램을 구축 하기 위한 기능을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad04e0276c046f133a6f71abb38912343d2d86b6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="accessibility-on-macos"></a>MacOS에서 내게 필요한 옵션
 

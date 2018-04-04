@@ -1,18 +1,17 @@
 ---
-title: "컬렉션 뷰"
-description: "컬렉션 뷰에서 임의의 레이아웃을 사용 하 여 표시할 콘텐츠를 허용 합니다. 사용자 지정 레이아웃을 지원 하면서 기본적으로 표 형식 레이아웃을 쉽게 생성할 수 있습니다."
-ms.topic: article
+title: 컬렉션 뷰
+description: 컬렉션 뷰에서 임의의 레이아웃을 사용 하 여 표시할 콘텐츠를 허용 합니다. 사용자 지정 레이아웃을 지원 하면서 기본적으로 표 형식 레이아웃을 쉽게 생성할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>컬렉션 뷰
 
@@ -140,7 +139,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>데이터 원본
 
-IOS의 다른 부분에서와 마찬가지로 같은 `UITableView` 및 `MKMapView`, `UICollectionView` 데이터를 가져오는 *데이터 소스*, Xamarin.iOS를 통해 노출 되는  **`UICollectionViewDataSource`**  클래스입니다. 이 클래스는 콘텐츠를 제공 하는 데는 `UICollectionView` 같은:
+IOS의 다른 부분에서와 마찬가지로 같은 `UITableView` 및 `MKMapView`, `UICollectionView` 데이터를 가져오는 *데이터 소스*, Xamarin.iOS를 통해 노출 되는 **`UICollectionViewDataSource`** 클래스입니다. 이 클래스는 콘텐츠를 제공 하는 데는 `UICollectionView` 같은:
 
 -  **셀** –에서 반환 된 `GetCell` 메서드.
 -  **보충 뷰** –에서 반환 된 `GetViewForSupplementaryElement` 메서드.
@@ -453,7 +452,7 @@ Ios 9, 컬렉션 보기 (`UICollectionView`) 지원 끌어 새 기본 제스처 
 
 컬렉션 뷰를 다시 정렬을 추가 하는 가장 빠른 방법은 사용 하는 iOS 9에에서는 `UICollectionViewController`합니다.
 컬렉션 뷰 컨트롤러에는 `InstallsStandardGestureForInteractiveMovement` 속성을 추가 하는 표준 *제스처 인식기* 끌어 컬렉션에 있는 항목의 순서를 지 원하는 합니다.
-기본값은 이후 `true`를 구현 해야는 `MoveItem` 의 메서드는 `UICollectionViewDataSource` 끌어서 순서 다시 매기기를 지원 하기 위해 클래스입니다. 예:
+기본값은 이후 `true`를 구현 해야는 `MoveItem` 의 메서드는 `UICollectionViewDataSource` 끌어서 순서 다시 매기기를 지원 하기 위해 클래스입니다. 예를 들어:
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -693,7 +692,7 @@ namespace CollectionView
 
 UI에 대 한 변경 내용을 저장 하 고 응용 프로그램을 실행 합니다.
 사용자가 목록에서 항목을 선택 하 고 새 위치로 끌을 하는 경우 다른 항목 애니메이션 효과 자동으로 항목의 위치로 이동 합니다.
-사용자의 새 위치에 항목 떨어지면 해당 위치에 집중 합니다. 예:
+사용자의 새 위치에 항목 떨어지면 해당 위치에 집중 합니다. 예를 들어:
 
 [![](uicollectionview-images/intro01.png "항목을 새 위치로 끌어의 예")](uicollectionview-images/intro01.png#lightbox)
 
@@ -701,7 +700,7 @@ UI에 대 한 변경 내용을 저장 하 고 응용 프로그램을 실행 합�
 
 ### <a name="using-a-custom-gesture-recognizer"></a>사용자 지정 제스처 인식기를 사용 하 여
 
-수 없는 경우에는 `UICollectionViewController` 일반을 사용 해야 합니다 `UIViewController`, 또는 더 많이 제어할 끌어서 놓기 제스처를 수행 하려는 경우 사용자 고유의 사용자 지정 제스처 인식기 만들 하 고 보기 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예:
+수 없는 경우에는 `UICollectionViewController` 일반을 사용 해야 합니다 `UIViewController`, 또는 더 많이 제어할 끌어서 놓기 제스처를 수행 하려는 경우 사용자 고유의 사용자 지정 제스처 인식기 만들 하 고 보기 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들어:
 
 ```csharp
 public override void ViewDidLoad ()

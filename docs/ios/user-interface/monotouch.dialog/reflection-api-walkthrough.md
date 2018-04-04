@@ -1,17 +1,16 @@
 ---
-title: "연습: 리플렉션 API를 사용 하 여 응용 프로그램 만들기"
-description: "요소 API MonoTouch.Dialog (산 뿐만 아니라 특성 기반 리플렉션 API를 D)도 포함 됩니다. 리플렉션 API 산 만드는 화면에는 D 클래스에 특성으로도 그만큼 용이 합니다. 이 문서에서는 리플렉션 API를 사용 하 여 응용 프로그램을 만드는 방법을 보여 주는 살펴봅니다."
-ms.topic: article
+title: '연습: 리플렉션 API를 사용 하 여 응용 프로그램 만들기'
+description: 요소 API MonoTouch.Dialog (산 뿐만 아니라 특성 기반 리플렉션 API를 D)도 포함 됩니다. 리플렉션 API 산 만드는 화면에는 D 클래스에 특성으로도 그만큼 용이 합니다. 이 문서에서는 리플렉션 API를 사용 하 여 응용 프로그램을 만드는 방법을 보여 주는 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>연습: 리플렉션 API를 사용 하 여 응용 프로그램 만들기
 

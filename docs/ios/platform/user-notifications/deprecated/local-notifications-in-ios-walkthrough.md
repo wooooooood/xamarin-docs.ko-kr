@@ -1,18 +1,17 @@
 ---
-title: "연습-Xamarin.iOS에 로컬 알림을 사용 하 여"
-description: "이 섹션 Xamarin.iOS 응용 프로그램에서 로컬 알림을 사용 하는 방법을 살펴봅니다. 만들기 및 앱에서 받은 경우 경고를 팝업 됩니다 나타내는 알림을 게시 하는 기본적인을 설명 합니다."
-ms.topic: article
+title: 연습-Xamarin.iOS에 로컬 알림을 사용 하 여
+description: 이 섹션 Xamarin.iOS 응용 프로그램에서 로컬 알림을 사용 하는 방법을 살펴봅니다. 만들기 및 앱에서 받은 경우 경고를 팝업 됩니다 나타내는 알림을 게시 하는 기본적인을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 846b292aed73a4980f4ce711ecefe4382fa7a321
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bb133d16f12249cbd31e4fce2b227162b4b28333
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>연습-Xamarin.iOS에 로컬 알림을 사용 하 여
 

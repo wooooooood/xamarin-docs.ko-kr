@@ -1,18 +1,17 @@
 ---
-title: "이 샘플 이해"
-description: "이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주는 Xamarin.Forms 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스 응용 프로그램을 별도 예제를 사용 하는 동안은 기능적으로 비슷하지만 하 고 일반 클래스를 공유 합니다."
-ms.topic: article
+title: 이 샘플 이해
+description: 이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주는 Xamarin.Forms 샘플 응용 프로그램의 연습을 제공 합니다. 각 웹 서비스 응용 프로그램을 별도 예제를 사용 하는 동안은 기능적으로 비슷하지만 하 고 일반 클래스를 공유 합니다.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>이 샘플 이해
 
@@ -56,7 +55,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 대부분의 샘플 응용 프로그램에 최소한 두 페이지가 포함 되어 있습니다.
 
-- **TodoListPage** –이 페이지의 목록이 표시 됩니다. `TodoItem` 인스턴스 및 확인 아이콘 경우는 `TodoItem.Done` 속성은 `true`합니다. 항목을 클릭 하면로 이동는 `TodoItemPage`합니다. 또한,를 클릭 하 여 새 항목을 만들 수 수는  *+*  기호입니다.
+- **TodoListPage** –이 페이지의 목록이 표시 됩니다. `TodoItem` 인스턴스 및 확인 아이콘 경우는 `TodoItem.Done` 속성은 `true`합니다. 항목을 클릭 하면로 이동는 `TodoItemPage`합니다. 또한,를 클릭 하 여 새 항목을 만들 수 수는 *+* 기호입니다.
 - **TodoItemPage** – 선택한 항목에 대 한 세부 정보를 표시 하는이 페이지 `TodoItem`, 편집, 저장, 삭제 및 읽을 수 있게 합니다.
 
 또한 일부 샘플 응용 프로그램 사용자 인증 프로세스를 관리 하는 데 사용 되는 추가 페이지를 포함 합니다.

@@ -1,17 +1,16 @@
 ---
-title: "장치의 비디오 라이브러리 액세스"
-ms.topic: article
+title: 장치의 비디오 라이브러리 액세스
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 95f992c2f3ca976c1e02ff3043ceef0a4a81e4f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: eb3d66630613225c9b2becaa20f73a82f409ce7e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="accessing-the-devices-video-library"></a>장치의 비디오 라이브러리 액세스
 

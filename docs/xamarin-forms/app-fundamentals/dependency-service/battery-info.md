@@ -1,18 +1,17 @@
 ---
-title: "배터리 상태를 확인 하는 중"
-description: "각 플랫폼에 대해 고유 하 게 배터리 정보에 액세스할 수 DependencyService를 사용 하 여"
-ms.topic: article
+title: 배터리 상태를 확인 하는 중
+description: 각 플랫폼에 대해 고유 하 게 배터리 정보에 액세스할 수 DependencyService를 사용 하 여
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 78832c396f8968769f3134728cd435555aecbc8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3f098e7f403a4f5e9fd924b8745348197cd4f843
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="checking-battery-status"></a>배터리 상태를 확인 하는 중
 

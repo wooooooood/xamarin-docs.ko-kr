@@ -1,18 +1,17 @@
 ---
-title: "UrhoSharp-3D/2D 엔진"
-description: "UrhoSharp는 플랫폼 간 높은 수준의 2D 및 3D 엔진 있는 기 하 도형, 자료, lights 및 카메라를 사용 하 여 응용 프로그램에 대 한 애니메이션된 2D 및 3D 장면을 만드는 데 사용할 수 있습니다."
-ms.topic: article
+title: UrhoSharp-3D/2D 엔진
+description: UrhoSharp는 플랫폼 간 높은 수준의 2D 및 3D 엔진 있는 기 하 도형, 자료, lights 및 카메라를 사용 하 여 응용 프로그램에 대 한 애니메이션된 2D 및 3D 장면을 만드는 데 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 747c38c4a279b740bf52645c00df85ea9357f4a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp-3D/2D 엔진
 
@@ -26,7 +25,7 @@ Mac 용 Visual Studio 또는 Visual Studio에 설치할 수 있으며 다음 플
 
 이 문서에서는 UrhoSharp 및 3D 시각화에 대 한 및 단순한 3D 게임에서 사용 하기 위해 해당 기능을 간략하게 설명 합니다.
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[UrhoSharp를 사용 하 여](~/graphics-games/urhosharp/using.md)
+##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[UrhoSharp 사용](~/graphics-games/urhosharp/using.md)
 
 이 문서에서는 게임을 작성 하거나 응용 프로그램에 대 한 3D 시각화를 만들 데 사용할 수 있는 UrhoSharp의 핵심 개념에 설명 합니다.
 

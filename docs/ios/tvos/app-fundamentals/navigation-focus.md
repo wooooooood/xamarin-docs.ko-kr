@@ -1,18 +1,17 @@
 ---
-title: "탐색 및 포커스 작업"
-description: "이 문서에서는 포커스 및을 나타내고 Xamarin.tvOS 앱 내에서 탐색을 처리 하는 방법의 개념을 설명 합니다."
-ms.topic: article
+title: 탐색 및 포커스 작업
+description: 이 문서에서는 포커스 및을 나타내고 Xamarin.tvOS 앱 내에서 탐색을 처리 하는 방법의 개념을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fe1358d330c2a0fd94016853cedeabe094c394da
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: cd60a11d860f51fd0d0e574516ca8dec1834865c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>탐색 및 포커스 작업
 

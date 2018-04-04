@@ -1,18 +1,17 @@
 ---
-title: "검색 및 홈 화면 위젯 향상 된 기능"
-description: "이 문서에서는 Apple iOS 10에서에서 위젯 시스템에 대가 향상 된 기능을 설명 합니다."
-ms.topic: article
+title: 검색 및 홈 화면 위젯 향상 된 기능
+description: 이 문서에서는 Apple iOS 10에서에서 위젯 시스템에 대가 향상 된 기능을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>검색 및 홈 화면 위젯 향상 된 기능
 
@@ -51,14 +50,14 @@ Apple에 위젯 10 잠금 화면 새 iOS에 있는 모든 백그라운드에서 
 
 ## <a name="working-with-vibrancy"></a>작업을 표현
 
-표현 하는 위젯 텍스트 위젯의 light, 흐리게 표시 된 배경 (시스템에서 제공)에 나타날 때 읽을 수 유지 되도록 합니다. 개발자 10 iOS 하기 전에 사용 한 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 위젯의 표현에 대 한 합니다. 예:
+표현 하는 위젯 텍스트 위젯의 light, 흐리게 표시 된 배경 (시스템에서 제공)에 나타날 때 읽을 수 유지 되도록 합니다. 개발자 10 iOS 하기 전에 사용 한 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 위젯의 표현에 대 한 합니다. 예를 들어:
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-IOS 10에서에서 사용 되지 않습니다는이 사용 하 여 교체 해야 합니다는 [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)합니다. 예:
+IOS 10에서에서 사용 되지 않습니다는이 사용 하 여 교체 해야 합니다는 [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)합니다. 예를 들어:
 
 ```csharp
 // Get Primary Widget Vibrancy Effect

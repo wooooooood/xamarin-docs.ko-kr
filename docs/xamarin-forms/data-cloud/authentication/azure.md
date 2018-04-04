@@ -1,18 +1,17 @@
 ---
-title: "Azure 모바일 앱을 사용한 사용자 인증"
-description: "Azure 모바일 앱 인증 및 Facebook, Google, Microsoft, Twitter 및 Azure Active Directory를 포함 한 응용 프로그램 사용자 권한 부여를 지원 하기 위해 다양 한 외부 id 공급자를 사용 합니다. 권한은 인증 된 사용자만 액세스를 제한 하려면 테이블에 설정할 수 있습니다. 이 문서에서는 Azure 모바일 앱을 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법을 설명 합니다."
-ms.topic: article
+title: Azure 모바일 앱을 사용한 사용자 인증
+description: Azure 모바일 앱 인증 및 Facebook, Google, Microsoft, Twitter 및 Azure Active Directory를 포함 한 응용 프로그램 사용자 권한 부여를 지원 하기 위해 다양 한 외부 id 공급자를 사용 합니다. 권한은 인증 된 사용자만 액세스를 제한 하려면 테이블에 설정할 수 있습니다. 이 문서에서는 Azure 모바일 앱을 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 823dcdfdaca79045a407b62ec7e75079ee25d72f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f5c69601c11a3c0d25bc804c60883841b0fb30d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-azure-mobile-apps"></a>Azure 모바일 앱을 사용한 사용자 인증
 

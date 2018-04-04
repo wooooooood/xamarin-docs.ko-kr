@@ -1,18 +1,17 @@
 ---
-title: "로컬 알림"
-description: "이 섹션에는 로컬 알림을 Xamarin.Android에서 구현 하는 방법을 보여 줍니다. Android 알림의 다양 한 UI 요소에 설명 하 고 API에 설명의 관련 만들기 및 알림을 표시 합니다."
-ms.topic: article
+title: 로컬 알림
+description: 이 섹션에는 로컬 알림을 Xamarin.Android에서 구현 하는 방법을 보여 줍니다. Android 알림의 다양 한 UI 요소에 설명 하 고 API에 설명의 관련 만들기 및 알림을 표시 합니다.
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 97c8372656f0cbfa5b8f7bb12d15b00feac4b5c3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="local-notifications"></a>로컬 알림
 
@@ -229,7 +228,7 @@ notification.Defaults |= NotificationDefaults.Vibrate;
 
 ### <a name="updating-a-notification"></a>업데이트 알림
 
-이 게시 된 후 알림의 콘텐츠를 업데이트 하려는 경우 다시 사용할 수 있습니다 기존 `Notification.Builder` 새 알림 개체를 만들고 마지막 알림의 식별자를 가진이 알림을 게시 하는 개체입니다. 예:
+이 게시 된 후 알림의 콘텐츠를 업데이트 하려는 경우 다시 사용할 수 있습니다 기존 `Notification.Builder` 새 알림 개체를 만들고 마지막 알림의 식별자를 가진이 알림을 게시 하는 개체입니다. 예를 들어:
 
 ```csharp
 // Update the existing notification builder content:
@@ -446,7 +445,7 @@ Android (Oreo) 8.0부터 사용할 수 있습니다는 *알림 채널* 표시 �
 
 알림 채널에 대 한 알림을 게시 하려면 다음을 수행 합니다.
 
-1.  사용 하 여 알림을 구성는 `Notification.Builder`에 채널 ID를 전달 하는 `SetChannelId` 메서드. 예:
+1.  사용 하 여 알림을 구성는 `Notification.Builder`에 채널 ID를 전달 하는 `SetChannelId` 메서드. 예를 들어:
 
     ```csharp
     Notification.Builder builder = new Notification.Builder (this)
@@ -490,7 +489,7 @@ Android 알림을 일반적으로 (알림 왼쪽)에 원래 응용 프로그램�
 
 알림을 큰 아이콘으로 표시 되 면 큰 아이콘의 오른쪽 아래 모서리에 배지도 작은 앱 아이콘 표시 되는지 확인 합니다.
 
-알림 작성기 알림에서 큰 아이콘으로 이미지를 사용 하려면 호출 [SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/) 메서드와 비트맵 이미지의를 전달 합니다. 와 달리 `SetSmallIcon`, `SetLargeIcon` 비트맵은 허용 합니다. 이미지 파일로 비트맵으로 변환 하려면 사용 된 [BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/) 클래스입니다. 예:
+알림 작성기 알림에서 큰 아이콘으로 이미지를 사용 하려면 호출 [SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/) 메서드와 비트맵 이미지의를 전달 합니다. 와 달리 `SetSmallIcon`, `SetLargeIcon` 비트맵은 허용 합니다. 이미지 파일로 비트맵으로 변환 하려면 사용 된 [BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/) 클래스입니다. 예를 들어:
 
 ```csharp
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
@@ -512,7 +511,7 @@ Android에서 알림 아이콘 크기에 대 한 자세한 내용은 [알림 아
 
 이 확장 된 레이아웃 형식에는 알림 메시지의 맨 아래에 요약 텍스트가 포함 됩니다. 최대 높이 *큰 텍스트* 알림은 256 dp 합니다.
 
-만들려는 *큰 텍스트* 인스턴스화할 알림을 `Notification.Builder` 개체, 이전 처럼 로컬 폴더를 인스턴스화하고 추가 [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) 개체를 `Notification.Builder` 개체입니다. 예:
+만들려는 *큰 텍스트* 인스턴스화할 알림을 `Notification.Builder` 개체, 이전 처럼 로컬 폴더를 인스턴스화하고 추가 [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) 개체를 `Notification.Builder` 개체입니다. 예를 들어:
 
 ```csharp
 // Instantiate the Big Text style:
@@ -550,7 +549,7 @@ builder.SetStyle (textStyle);
 
 알림을 압축 형식으로 표시 되 면 알림 텍스트가 표시 되는 알림 (알림 작성기에 전달 되는 텍스트 `SetContentText` 메서드를 앞에서 보았듯이). 그러나 이미지를 표시 하기 위해 확장 되는 알림 이미지 위에 요약 텍스트가 표시 됩니다.
 
-만들려는 *이미지* 인스턴스화할 알림을 `Notification.Builder` 이전 처럼 개체 로컬 폴더를 만들고 삽입는 [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) 개체는 `Notification.Builder` 개체입니다. 예:
+만들려는 *이미지* 인스턴스화할 알림을 `Notification.Builder` 이전 처럼 개체 로컬 폴더를 만들고 삽입는 [BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/) 개체는 `Notification.Builder` 개체입니다. 예를 들어:
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -610,7 +609,7 @@ builder.SetStyle (picStyle);
 
 ![예제에서는 받은 편지함 알림 확장](local-notifications-images/21-inbox-expanded.png)
 
-만들려면는 *받은 편지함* 인스턴스화할 알림을 `Notification.Builder` 이전 처럼 개체를 추가 [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) 개체는 `Notification.Builder`합니다. 예:
+만들려면는 *받은 편지함* 인스턴스화할 알림을 `Notification.Builder` 이전 처럼 개체를 추가 [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) 개체는 `Notification.Builder`합니다. 예를 들어:
 
 ```csharp
 // Instantiate the Inbox style:
@@ -661,7 +660,7 @@ Xamarin.Android 알림 우선 순위를 설정 하기 위한 다음과 같은 �
 
 -   `NotificationPriority.Min` &ndash; 경우에만 정보는 사용자는 배경 정보 (예: 위치 또는 날씨 정보) 알림을 볼 수 있습니다.
 
-알림의 우선 순위를 설정 하려면 호출는 [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) 의 메서드는 `Notification.Builder` 우선 순위 수준에 전달 하는 개체입니다. 예:
+알림의 우선 순위를 설정 하려면 호출는 [SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/) 의 메서드는 `Notification.Builder` 우선 순위 수준에 전달 하는 개체입니다. 예를 들어:
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -738,7 +737,7 @@ builder.SetVisibility (NotificationVisibility.Private);
 
 -   `Notification.CategoryStatus` &ndash; 장치에 대 한 정보입니다.
 
-알림을 정렬 되는 알림 우선 순위 범주 설정에 따라 보다 우선 합니다. 예를 들어 우선 순위가 높은 알림으로 표시할 화면에 속하는 경우에는 `Promo` 범주입니다. 호출 하는 알림 범주를 설정 하려면는 `SetCategory` 의 메서드는 `Notification.Builder` 범주 설정에 전달 하는 개체입니다. 예:
+알림을 정렬 되는 알림 우선 순위 범주 설정에 따라 보다 우선 합니다. 예를 들어 우선 순위가 높은 알림으로 표시할 화면에 속하는 경우에는 `Promo` 범주입니다. 호출 하는 알림 범주를 설정 하려면는 `SetCategory` 의 메서드는 `Notification.Builder` 범주 설정에 전달 하는 개체입니다. 예를 들어:
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);

@@ -1,18 +1,17 @@
 ---
-title: "다시 사용할 수 있는 동작"
-description: "동작은 둘 이상의 응용 프로그램에서 다시 사용할 수 있습니다. 이러한 문서에서는 자주 사용 되는 기능을 수행 하도록 유용한 동작이 만드는 방법을 설명 합니다."
-ms.topic: article
+title: 다시 사용할 수 있는 동작
+description: 동작은 둘 이상의 응용 프로그램에서 다시 사용할 수 있습니다. 이러한 문서에서는 자주 사용 되는 기능을 수행 하도록 유용한 동작이 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DC9AA512-3624-4EE6-AB5E-628EBA55D2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 8b9f828679e6f58e60307f73d7faf3a38d65f70c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b391be233219d1f0b4bb1fded03696bd4c830e84
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="reusable-behaviors"></a>다시 사용할 수 있는 동작
 

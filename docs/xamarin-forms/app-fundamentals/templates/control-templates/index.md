@@ -1,18 +1,17 @@
 ---
-title: "컨트롤 템플릿"
-description: "컨트롤 템플릿 페이지의 모양 및 해당 콘텐츠를 쉽게 테마를 적용할 수 있는 페이지를 만들 수 명확한 구분을 제공 합니다."
-ms.topic: article
+title: 컨트롤 템플릿
+description: 컨트롤 템플릿 페이지의 모양 및 해당 콘텐츠를 쉽게 테마를 적용할 수 있는 페이지를 만들 수 명확한 구분을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 836C8D57-ABBC-4D5A-B3CF-0B723E069A2B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 499262b0ef1fabfd48a7732a91c007d85a55d2bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7062962b1aeb397e61de769ef1e3c9aaea942147
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 

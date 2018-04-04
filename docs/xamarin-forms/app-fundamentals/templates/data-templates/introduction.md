@@ -1,18 +1,17 @@
 ---
-title: "소개"
-description: "Xamarin.Forms 데이터 템플릿은 지원 되는 컨트롤에 데이터의 표현을 정의 하는 기능을 제공 합니다. 이 문서는 필요한 이유를 검사 하는 데이터 서식 파일에 대 한 소개를 제공 합니다."
-ms.topic: article
+title: 소개
+description: Xamarin.Forms 데이터 템플릿은 지원 되는 컨트롤에 데이터의 표현을 정의 하는 기능을 제공 합니다. 이 문서는 필요한 이유를 검사 하는 데이터 서식 파일에 대 한 소개를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: e7c1a8b233538b7ad40a18e44747bef672210516
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b71e1cb5f45a580aaf04c267028af1740cb560e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>소개
 

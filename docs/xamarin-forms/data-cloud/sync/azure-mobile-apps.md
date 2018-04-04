@@ -1,18 +1,17 @@
 ---
-title: "Azure 모바일 앱과 오프 라인 데이터 동기화"
-description: "오프 라인 동기화에는 사용자가 모바일 응용 프로그램, 보기, 추가, 또는 데이터 수정, 상호 작용할 수 있도록 있더라도 네트워크에 연결 하지 않습니다. 변경 내용이 로컬 데이터베이스에 저장 됩니다 및 장치가 온라인 상태 이면 되 면 변경 내용이 Azure 모바일 앱 인스턴스와 동기화 할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에 오프 라인 동기화 기능을 추가 하는 방법에 설명 합니다."
-ms.topic: article
+title: Azure 모바일 앱과 오프 라인 데이터 동기화
+description: 오프 라인 동기화에는 사용자가 모바일 응용 프로그램, 보기, 추가, 또는 데이터 수정, 상호 작용할 수 있도록 있더라도 네트워크에 연결 하지 않습니다. 변경 내용이 로컬 데이터베이스에 저장 됩니다 및 장치가 온라인 상태 이면 되 면 변경 내용이 Azure 모바일 앱 인스턴스와 동기화 할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에 오프 라인 동기화 기능을 추가 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DBB343B0-2709-4C20-A669-5522B9956D9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b083bb83dbc7266f749c4adc660a8bfb431df795
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Azure 모바일 앱과 오프 라인 데이터 동기화
 

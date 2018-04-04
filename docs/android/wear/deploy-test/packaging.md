@@ -1,17 +1,16 @@
 ---
-title: "마모 앱 패키징"
-ms.topic: article
+title: 마모 앱 패키징
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: a3eb5cd5b4202db8c58870c2b2c679b47f79d4aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af96c0f8cf862b7a208beb5b91ecbb30598b09d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="packaging-wear-apps"></a>마모 앱 패키징
 
@@ -48,7 +47,7 @@ Xamarin Android 5.0 이상에서는 마모 앱은 자동으로로 패키지 핸�
 -----
 
 
-받아볼 수는 **XA5211** 마모 앱의 패키지 이름을 핸드헬드 응용 프로그램의 패키지 이름과 일치 하지 않는 경우 오류가 발생 합니다. 예:
+받아볼 수는 **XA5211** 마모 앱의 패키지 이름을 핸드헬드 응용 프로그램의 패키지 이름과 일치 하지 않는 경우 오류가 발생 합니다. 예를 들어:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -63,7 +62,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 -   패키지 이름이 일치 하는지 확인 합니다. 
 
--   XML을 생성 하 고 마모 앱과 연결할 핸드헬드 프로젝트에 추가 합니다. 예: 
+-   XML을 생성 하 고 마모 앱과 연결할 핸드헬드 프로젝트에 추가 합니다. 예를 들어: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->

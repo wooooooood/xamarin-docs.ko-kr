@@ -1,18 +1,17 @@
 ---
-title: "Mac 용 Visual Studio의 서비스 연결"
-description: "Mac 용 Visual Studio 내에서 모바일 앱에 Azure 데이터 저장소, 인증 및 푸시 알림 추가"
-ms.topic: article
+title: Mac 용 Visual Studio의 서비스 연결
+description: Mac 용 Visual Studio 내에서 모바일 앱에 Azure 데이터 저장소, 인증 및 푸시 알림 추가
 ms.prod: xamarin
 ms.assetid: ADDFB3A5-DB6A-417C-8ACE-33D107FB75C2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5c9ae8d65a2bfdd035cccb6b911448ea047f8c40
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b9aaa197ccf01c59d6e4bbb0476d10295a108f89
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="connected-services-walkthrough"></a>연결 된 서비스 연습
 

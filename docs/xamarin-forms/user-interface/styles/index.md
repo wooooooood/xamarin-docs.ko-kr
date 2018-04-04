@@ -1,18 +1,17 @@
 ---
-title: "스타일"
-description: "스타일을 사용 하 여 모양을 사용자 지정 하려면"
-ms.topic: article
+title: 스타일
+description: 스타일을 사용 하 여 모양을 사용자 지정 하려면
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 934948579e5f3fb19c7afe49f4e86a1ef255b77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a19f7597ee17282bc8b41e7f0e7e3ade2361a50
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="styles"></a>스타일
 
@@ -28,7 +27,7 @@ Xamarin.Forms 응용 프로그램에 동일한 모양을 갖도록 하는 여러
 
 *암시적* 하나는 동일한 모든 컨트롤에서 사용 되는 스타일은 [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), 각 컨트롤에 스타일을 참조 하지 않고도 합니다.
 
-## <a name="global-stylesapplicationmd"></a>[전역 스타일](application.md)
+## <a name="global-stylesapplicationmd"></a>[글로벌 스타일](application.md)
 
 스타일 사용할 수 있도록 설정 전체적으로 응용 프로그램을 추가 하 여 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)합니다. 페이지나 컨트롤 스타일의 중복을 방지할 수 있습니다.
 

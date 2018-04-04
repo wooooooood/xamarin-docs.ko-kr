@@ -1,18 +1,17 @@
 ---
-title: "연락처와 ContactsUI"
-description: "이 문서에서는 새 연락처 및 연락처 UI 프레임 워크 Xamarin.iOS 앱에서 작업에 대해 설명 합니다. 이러한 프레임 워크는 기존 주소록 및 iOS의 이전 버전에서 사용 하는 주소 주소록 UI를 대체 합니다."
-ms.topic: article
+title: 연락처와 ContactsUI
+description: 이 문서에서는 새 연락처 및 연락처 UI 프레임 워크 Xamarin.iOS 앱에서 작업에 대해 설명 합니다. 이러한 프레임 워크는 기존 주소록 및 iOS의 이전 버전에서 사용 하는 주소 주소록 UI를 대체 합니다.
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 4d963bbefce2b4564c3f352be5768df77b45b34d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="contacts-and-contactsui"></a>연락처와 ContactsUI
 

@@ -1,16 +1,16 @@
 ---
-title: "파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거할 수 있습니까?"
-ms.topic: article
+title: 파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거할 수 있습니까?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거할 수 있습니까?
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 및 앱 스토어 확인 프로세스에는 유사한 오류 메시지가 보고 합니다.
 
-> 오류 ITMS 90035: "잘못 된 서명입니다. 봉인 된 리소스 누락 되었거나 잘못 되었습니다. 이진 경로 [iPhoneApp1.app/iPhoneApp1]에 잘못 된 서명이 있습니다. 등록 한 응용 프로그램 배포 인증서, 임시 인증서 말거나 개발 인증서에 있는지 확인 합니다. (프로젝트 수준에서 모든 값이 무시)는 대상 수준 Xcode에서 코드 서명 설정이 정확한 지 확인 합니다. 또한, 업로드 하는 번들 시뮬레이터 대상 하지 Xcode에서 릴리스 대상을 사용 하 여 빌드된 해야 합니다. 인 경우 특정 코드 서명 설정이 잘못 된 선택 "정리" 모두 "Xcode에서 finder에서"빌드"디렉터리를 삭제 하 고, 릴리스 대상 다시 작성 합니다. 자세한 내용은 참조 하십시오 [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> 오류 ITMS 90035: "잘못 된 서명입니다. 봉인 된 리소스 누락 되었거나 잘못 되었습니다. 이진 경로 [iPhoneApp1.app/iPhoneApp1]에 잘못 된 서명이 있습니다. 등록 한 응용 프로그램 배포 인증서, 임시 인증서 말거나 개발 인증서에 있는지 확인 합니다. (프로젝트 수준에서 모든 값이 무시)는 대상 수준 Xcode에서 코드 서명 설정이 정확한 지 확인 합니다. 또한, 업로드 하는 번들 시뮬레이터 대상 하지 Xcode에서 릴리스 대상을 사용 하 여 빌드된 해야 합니다. 인 경우 특정 코드 서명 설정이 잘못 된 선택 "정리" 모두 "Xcode에서 finder에서"빌드"디렉터리를 삭제 하 고, 릴리스 대상 다시 작성 합니다. 자세한 내용은 참조 하십시오 [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

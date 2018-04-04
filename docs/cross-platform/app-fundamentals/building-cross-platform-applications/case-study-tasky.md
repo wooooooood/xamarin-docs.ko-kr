@@ -1,18 +1,17 @@
 ---
-title: "사례 연구: Tasky"
-description: "이 문서에서는 Tasky 휴대용 샘플 응용 프로그램에서 플랫폼 간 응용 프로그램 빌드 원칙 적용 된 방식을 설명 합니다. 그와 모바일 응용 프로그램 디자인을 다시 사용에 대 한 공통 코드를 작성 하 고 구현 하는 iOS, Android 및 Windows Phone 플랫폼을 대상으로 하는 플랫폼별 프로젝트에 연결 합니다."
-ms.topic: article
+title: '사례 연구: Tasky'
+description: 이 문서에서는 Tasky 휴대용 샘플 응용 프로그램에서 플랫폼 간 응용 프로그램 빌드 원칙 적용 된 방식을 설명 합니다. 그와 모바일 응용 프로그램 디자인을 다시 사용에 대 한 공통 코드를 작성 하 고 구현 하는 iOS, Android 및 Windows Phone 플랫폼을 대상으로 하는 플랫폼별 프로젝트에 연결 합니다.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5b16fe1d6dab776af31e0aff97a00065517550ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="case-study-tasky"></a>사례 연구: Tasky
 

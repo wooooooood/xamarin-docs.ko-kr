@@ -1,18 +1,17 @@
 ---
-title: "IOS의 사용자 인터페이스"
-description: "Xamarin.iOS 앱의 iOS 사용자 인터페이스 작업을 다룹니다."
-ms.topic: article
+title: IOS의 사용자 인터페이스
+description: Xamarin.iOS 앱의 iOS 사용자 인터페이스 작업을 다룹니다.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: f456b54180d50cfc4b6b98ed8f3d4118c8397b37
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dd07ba6853901c93ad26b371ea88b7d39c37d3f7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface-in-ios"></a>IOS의 사용자 인터페이스
 

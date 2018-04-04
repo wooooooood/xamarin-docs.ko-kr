@@ -1,18 +1,17 @@
 ---
-title: "스토리 보드에는 소개"
-description: "스토리 보드에는 응용 프로그램의 흐름 및 모양의 시각적 표시는 합니다. Xamarin에는 디자이너 Xamarin.iOS 응용 프로그램이 응용 프로그램 화면을 시각적으로 디자인 하 고 보기에는 액세스할 수 있도록 스토리 보드를 활용할 수 있도록 도입 컨트롤러 더 많은 제어에 대 한 C#과 함께 segues 및 합니다."
-ms.topic: article
+title: 스토리 보드에는 소개
+description: 스토리 보드에는 응용 프로그램의 흐름 및 모양의 시각적 표시는 합니다. Xamarin에는 디자이너 Xamarin.iOS 응용 프로그램이 응용 프로그램 화면을 시각적으로 디자인 하 고 보기에는 액세스할 수 있도록 스토리 보드를 활용할 수 있도록 도입 컨트롤러 더 많은 제어에 대 한 C#과 함께 segues 및 합니다.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 85c05145ce2490468ac5d5fb9b8524853d46a9e3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-storyboards"></a>스토리 보드에는 소개
 

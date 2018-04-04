@@ -1,18 +1,17 @@
 ---
-title: "속성 목록 사용"
-description: "이 문서에서는 Info.plist Entitlements.plist와 작업에 대 한 Mac의 그래픽 및 고급 속성 목록 (.plist) 편집기에 대 한 Visual Studio를 소개 합니다. 설정 아이콘 및 시작 이미지에서 iOS 응용 프로그램에 대 한 설명 하는지 Mac.에 대 한 Visual Studio 내"
-ms.topic: article
+title: 속성 목록 사용
+description: 이 문서에서는 Info.plist Entitlements.plist와 작업에 대 한 Mac의 그래픽 및 고급 속성 목록 (.plist) 편집기에 대 한 Visual Studio를 소개 합니다. 설정 아이콘 및 시작 이미지에서 iOS 응용 프로그램에 대 한 설명 하는지 Mac.에 대 한 Visual Studio 내
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6ee7a606243f5d21d827546b528ca5d9d3f0281
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-property-lists"></a>속성 목록 사용
 

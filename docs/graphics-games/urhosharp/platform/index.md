@@ -1,17 +1,16 @@
 ---
-title: "UrhoSharp 플랫폼 지원"
-description: "크로스 플랫폼 3D/2D 게임 및 시각화 엔진"
-ms.topic: article
+title: UrhoSharp 플랫폼 지원
+description: 크로스 플랫폼 3D/2D 게임 및 시각화 엔진
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 8e9ffe85a544ef688a2551e5875c391b7bcb1e5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2b6139069981c433c4c65ba914c718a454e71613
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp-platform-support"></a>UrhoSharp 플랫폼 지원
 

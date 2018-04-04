@@ -1,18 +1,17 @@
 ---
-title: "Android에서 앱 연결"
-description: "이 가이드 앱 링크, 모바일 앱 웹 사이트 Url에 응답할 수 있도록 허용 하는 기술을 Android 6.0을 지 원하는 방법에 대해 설명 합니다. 어떤 앱 연결, Android 6.0 응용 프로그램에서 응용 프로그램 연결을 구현 하는 방법 및 도메인에 대 한 모바일 앱에 사용 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다."
-ms.topic: article
+title: Android에서 앱 연결
+description: 이 가이드 앱 링크, 모바일 앱 웹 사이트 Url에 응답할 수 있도록 허용 하는 기술을 Android 6.0을 지 원하는 방법에 대해 설명 합니다. 어떤 앱 연결, Android 6.0 응용 프로그램에서 응용 프로그램 연결을 구현 하는 방법 및 도메인에 대 한 모바일 앱에 사용 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -56,7 +55,7 @@ Android 6.0의 응용 프로그램 링크 설정 두 가지 주요 단계가 포
 Android 응용 프로그램에서 활동에는 웹 사이트에서 URI (또는 가능한 Uri 집합을)를 매핑하는 의도 필터를 구성 하는 데 필요한 경우 Xamarin.Android,이 관계와 관련 된 활동을 표시 하 여 설정 되 고 [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)합니다. 의도 필터에서 다음 정보를 선언 해야 합니다.
 
 * **`Intent.ActionView`** &ndash; 이 정보를 보려면 요청에 응답 하도록 의도 필터를 등록 합니다.
-* **`Categories`** &ndash;  의도 필터 둘 모두를 등록 해야  **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)**  및  **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)**  제대로 할 수 웹 URI를 처리 합니다.
+* **`Categories`** &ndash;  의도 필터 둘 모두를 등록 해야 **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** 및 **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** 제대로 할 수 웹 URI를 처리 합니다.
 * **`DataScheme`** &ndash; 선언 해야 합니다. 의도 필터 `http` 및/또는 `https`합니다. 다음은 두 개의 유효한 계획입니다.
 * **`DataHost`** &ndash; 이의 도메인에 있는 Uri에서 생성 됩니다.
 * **`DataPathPrefix`** &ndash; 웹 사이트에 있는 리소스에는 선택적 경로입니다.
@@ -177,7 +176,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     * **`Domain`** &ndash; 웹 링크가 응용 프로그램에서 처리 되는 (공백으로 구분 된) 도메인
     * **`Status`** &ndash; 응용 프로그램에 대 한 현재 링크 처리 상태입니다. 값이 **항상** 응용 프로그램에 있다는 것을 의미 `android:autoVerify=true` 선언 하 고 시스템 확인을 통과 했습니다. 환경 설정의 Android 시스템의 레코드를 나타내는 16 진수 숫자 나옵니다.
 
-    예:
+    예를 들어:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

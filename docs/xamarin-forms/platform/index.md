@@ -1,18 +1,17 @@
 ---
-title: "플랫폼 기능"
-description: "Xamarin.forms는 플랫폼 특정 기능 활용"
-ms.topic: article
+title: 플랫폼 기능
+description: Xamarin.forms는 플랫폼 특정 기능 활용
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -22,7 +21,7 @@ Xamarin.Forms는 확장 가능 하 고 사용 하 여 플랫폼 특정 기능을
 
 이 가이드에서는 기존 Xamarin.Forms Android 앱을 업데이트 하 여 자료 디자인을 구현 하는 방법을 설명 합니다.
 
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[응용 프로그램 인덱싱 및 직접 링크](deep-linking.md)
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[응용 프로그램 인덱싱 및 딥 링크 설정](deep-linking.md)
 
 응용 프로그램 인덱싱을 그렇지 않은 경우 무시 될 후 몇 가지 사용 하 여 검색 결과에 표시 하 여 관련 상태를 유지 하는 응용 프로그램 수 있습니다. 직접 링크 수 딥 링크에서 참조 하는 페이지로 이동 하 여 일반적으로 응용 프로그램 데이터를 포함 하는 검색 결과에 응답할 수 있습니다.
 
@@ -38,11 +37,11 @@ Xamarin.Forms는 확장 가능 하 고 사용 하 여 플랫폼 특정 기능을
 
 Xamarin.Forms는 macOS 앱에 대 한 미리 보기 지원이 되었습니다.
 
-## <a name="native-formsnative-formsmd"></a>[기본 형식](native-forms.md)
+## <a name="native-formsnative-formsmd"></a>[네이티브 양식](native-forms.md)
 
 Xamarin.Forms를 허용 하는 기본 형식 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 페이지를 파생 합니다.
 
-## <a name="native-viewsnative-viewsindexmd"></a>[기본 뷰](native-views/index.md)
+## <a name="native-viewsnative-viewsindexmd"></a>[네이티브 뷰](native-views/index.md)
 
 Xamarin.Forms에서 iOS, Android 및 유니버설 Windows 플랫폼에서 네이티브 뷰를 직접 참조할 수 있습니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 보기와 상호 작용할 수 있습니다.
 

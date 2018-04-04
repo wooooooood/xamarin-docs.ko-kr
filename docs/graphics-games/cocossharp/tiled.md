@@ -1,18 +1,17 @@
 ---
 title: 사용 하 여 CocosSharp와 바둑판식으로 배열
 description: 바둑판식으로 배열은 강력한 유연 하 고, 하며 직교 및 아이소메트릭 타일을 만들기 위한 완성 된 응용 프로그램 게임에 대 한 매핑 CocosSharp 타일의 기본 파일 형식에 대 한 기본 제공 통합을 제공합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a356ddc0412eb1dce1b35e060e6c9127525de804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>사용 하 여 CocosSharp와 바둑판식으로 배열
 

@@ -1,18 +1,17 @@
 ---
-title: "IOS에 대 한 푸시 알림"
-description: "이 섹션은 iOS에 푸시 알림을 설명 합니다. Apple 푸시 알림 게이트웨이 서비스 및 iOS 응용 프로그램에 게시 알림에서 수행 하는 역할을 소개 합니다. 이 작업에서는 푸시 알림을 사용 하도록 설정 하 고 논의 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로이 섹션은 응용 프로그램 서버에 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 관리 작업 중 일부 설명 합니다."
-ms.topic: article
+title: IOS에 대 한 푸시 알림
+description: 이 섹션은 iOS에 푸시 알림을 설명 합니다. Apple 푸시 알림 게이트웨이 서비스 및 iOS 응용 프로그램에 게시 알림에서 수행 하는 역할을 소개 합니다. 이 작업에서는 푸시 알림을 사용 하도록 설정 하 고 논의 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로이 섹션은 응용 프로그램 서버에 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 관리 작업 중 일부 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="push-notifications-in-ios"></a>IOS에 대 한 푸시 알림
 
@@ -51,7 +50,7 @@ Apple APNS의 두 가지 환경 유지 관리:는 *샌드박스* 및 *프로덕�
 
     [![](remote-notifications-in-ios-images/image6new.png "앱 Id 섹션을 찾아 새 앱 ID를 만들려면")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  클릭는  **+**  단추를 수 있습니다는 응용 프로그램 ID에 대 한 설명과 번들 식별자를 입력 하려면 다음 스크린샷에 표시 된 대로:
+3.  클릭는 **+** 단추를 수 있습니다는 응용 프로그램 ID에 대 한 설명과 번들 식별자를 입력 하려면 다음 스크린샷에 표시 된 대로:
 
     [![](remote-notifications-in-ios-images/image7new.png "응용 프로그램 ID에 대 한 설명 및 번들 식별자 입력")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

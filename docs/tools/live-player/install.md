@@ -1,18 +1,17 @@
 ---
 title: Xamarin Player 라이브 설치
 description: 편집 하 고 iOS 또는 Android 장치에서 실시간으로에서 앱을 테스트 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 05d6a679f318406d1ee5c6893ae4d01452a79723
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 6a721eedc278864b79d5f2b3cb16fb7075bfb15d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Player 라이브 설치
 

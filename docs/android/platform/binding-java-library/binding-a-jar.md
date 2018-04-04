@@ -1,18 +1,17 @@
 ---
-title: "바인딩는 합니다. JAR"
-description: "이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. JAR 파일입니다."
-ms.topic: article
+title: 바인딩는 합니다. JAR
+description: 이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. JAR 파일입니다.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-a-jar"></a>바인딩는 합니다. JAR
 
@@ -133,7 +132,7 @@ Java 바인딩 라이브러리 프로젝트를 만들 때 지정 해야 하는�
 
 [![새 BindingTest 프로젝트 추가](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
-마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가...** :
+마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가... **:
 
 [![오른쪽 참조를 추가 합니다.](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 

@@ -1,18 +1,17 @@
 ---
-title: "ControlTemplate에서 바인딩"
-description: "템플릿 바인딩을 쉽게 변경할 수에 대 한 컨트롤 템플릿에 컨트롤에서 속성 값을 사용 하도록 설정 데이터에 컨트롤 템플릿의 컨트롤 공용 속성에 바인딩할 수 있도록 합니다. 이 문서에 컨트롤 서식 파일에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여줍니다."
-ms.topic: article
+title: ControlTemplate에서 바인딩
+description: 템플릿 바인딩을 쉽게 변경할 수에 대 한 컨트롤 템플릿에 컨트롤에서 속성 값을 사용 하도록 설정 데이터에 컨트롤 템플릿의 컨트롤 공용 속성에 바인딩할 수 있도록 합니다. 이 문서에 컨트롤 서식 파일에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 5b330c448a135cbcf8fc2745debc48924e29c103
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b306c79aea9bd2192aa73eddcf95790a9b24353
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-from-a-controltemplate"></a>ControlTemplate에서 바인딩
 
@@ -68,7 +67,7 @@ public string FooterText {
 
 ![](template-binding-images/teal-theme.png "템플릿 바인딩을 사용 하 여 청록색 컨트롤 템플릿")
 
-## <a name="creating-a-templatebinding-in-c35"></a>&#35;에서 TemplateBinding 만들기
+## <a name="creating-a-templatebinding-in-c35"></a>C에서 TemplateBinding 만들기&#35;
 
 C#에서는 [ `TemplateBinding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplateBinding/) 사용 하 여 만든는 `TemplateBinding` 생성자에 다음 코드 예제에서와 같이:
 

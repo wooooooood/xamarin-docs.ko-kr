@@ -1,18 +1,17 @@
 ---
-title: "기본적인 이해"
-description: "살펴볼 Xamarin.Mac의 내부 작업"
-ms.topic: article
+title: 기본적인 이해
+description: 살펴볼 Xamarin.Mac의 내부 작업
 ms.prod: xamarin
 ms.assetid: 84974D75-0CCE-4455-AA38-00DE68AE33B6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: 2ba3ffb421dc64bba7df1e10a40125f14365f29e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74721e880bb0d3ada3f3940a4074d06f55601c0e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="under-the-hood"></a>기본적인 이해
 

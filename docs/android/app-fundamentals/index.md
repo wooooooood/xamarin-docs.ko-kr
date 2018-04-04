@@ -1,18 +1,17 @@
 ---
-title: "응용 프로그램 기본 사항"
-description: "응용 프로그램의 핵심 개념"
-ms.topic: article
+title: 응용 프로그램 기본 사항
+description: 응용 프로그램의 핵심 개념
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>응용 프로그램 기본 사항
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 02/27/2018
 
 
 
-##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[활동 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
+##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 
 활동은 Android 응용 프로그램의 기본 빌딩 블록 및 서로 다른 상태의 수에 존재할 수 있습니다. 활동 수명 주기 인스턴스화로 시작 하 고으로 소멸 끝나며 사이 많은 상태가 포함 됩니다. 활동 상태 변경 되 면 올바르지 않은 상태 변경의 작업을 알리는 하므로 해당 변경 내용에 맞게 코드를 실행 하 고 적절 한 수명 주기 이벤트 메서드 호출 됩니다. 이 문서를 활동의 수명 주기를 검사 하 고 책임에 설명 활동 각 제대로 작동 하 고 신뢰할 수 있는 응용 프로그램의 일부로 이러한 상태 변경 중에 있습니다.
 
@@ -53,7 +52,7 @@ ms.lasthandoff: 02/27/2018
 
 
 
-##  <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[사용 권한](~/android/app-fundamentals/permissions.md)
+##  <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[권한](~/android/app-fundamentals/permissions.md)
 
 만들고 Android 매니페스트에 권한을 추가 하는 Mac 용 Visual Studio 또는 Visual Studio에 기본 제공 도구 지원을 사용할 수 있습니다. 이 문서에서는 Visual Studio 및 Xamarin Studio에서 사용 권한을 추가 하는 방법을 설명 합니다.
 
@@ -71,7 +70,7 @@ Xamarin.Android 32 비트 및 64 비트 장치를 포함 하 여 여러 CPU 아�
 
 
 
-##  <a name="handling-rotationandroidapp-fundamentalshandling-rotationmd"></a>[처리 회전](~/android/app-fundamentals/handling-rotation.md)
+##  <a name="handling-rotationandroidapp-fundamentalshandling-rotationmd"></a>[회전 처리](~/android/app-fundamentals/handling-rotation.md)
 
 이 문서에서는 Xamarin.Android에 장치 방향 변경 내용을 처리 하는 방법을 설명 합니다. 프로그래밍 방식으로 처리할 방향 변경 하는 방식에서는 특정 장치 방향에 대 한 리소스를 자동으로 로드 하려면 Android 리소스 시스템에서 사용 하는 방법을 알아봅니다. 그런 다음 장치를 회전할 때 상태를 유지 하는 기술을 설명 합니다.
 
@@ -96,7 +95,7 @@ Android OS 광범위 한 지원을 제공 멀티미디어, 오디오 및 비디�
 
 
 
-##  <a name="httpclient-stack-and-ssltlsandroidapp-fundamentalshttp-stackmd"></a>[SSL/TLS 및 HttpClient 스택](~/android/app-fundamentals/http-stack.md)
+##  <a name="httpclient-stack-and-ssltlsandroidapp-fundamentalshttp-stackmd"></a>[HttpClient 스택 및 SSL/TLS](~/android/app-fundamentals/http-stack.md)
 
 이 섹션에서는 Android에 대 한 HttpClient 스택 및 SSL/TLS 구현 선택기를 설명 합니다. 이러한 설정은 SSL/TLS 및 HttpClient 구현 Xamarin.Android 앱에서 사용 될를 결정 합니다.
 

@@ -1,18 +1,17 @@
 ---
-title: "복사 및 붙여넣기"
-description: "이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그램에서 여 붙여 넣는 지에 설명 합니다. 작업 하는 방법을 보여 줍니다 지정된 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법 및 여러 앱 간에 공유할 수 있는 표준 데이터 형식입니다."
-ms.topic: article
+title: 복사 및 붙여넣기
+description: 이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그램에서 여 붙여 넣는 지에 설명 합니다. 작업 하는 방법을 보여 줍니다 지정된 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법 및 여러 앱 간에 공유할 수 있는 표준 데이터 형식입니다.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 
@@ -541,7 +540,7 @@ void PasteImage (NSObject sender)
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-여기에서 이라고는 `ImageDocument` 해당 창 처리 복사 및 붙여넣기 작업의 클래스 인스턴스. 예: 
+여기에서 이라고는 `ImageDocument` 해당 창 처리 복사 및 붙여넣기 작업의 클래스 인스턴스. 예를 들어: 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -703,7 +702,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 첫 번째 지에서는 액세스, 기존의 모든 내용 지우기 및 만큼 표현을 지 하는 데 필요한 만큼의 데이터를 작성 하 여 복사 작업을 수행 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 // Get the standard pasteboard
@@ -937,7 +936,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-클래스는 Objective C에도 노출 합니다를 사용 하 여는 `Register` 지시문 필수 속성 또는 메서드를 사용 하 여 노출 해야 `Export`합니다. 예:
+클래스는 Objective C에도 노출 합니다를 사용 하 여는 `Register` 지시문 필수 속성 또는 메서드를 사용 하 여 노출 해야 `Export`합니다. 예를 들어:
 
 ```csharp
 [Export("name")]

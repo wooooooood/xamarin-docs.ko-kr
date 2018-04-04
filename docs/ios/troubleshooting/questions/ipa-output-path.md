@@ -1,17 +1,17 @@
 ---
-title: "IPA 파일의 출력 경로 변경할 수 있나요?"
-ms.topic: article
+title: IPA 파일의 출력 경로 변경할 수 있나요?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2cb5ef615bfd965ce3fbd4efbab7669fe12679a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06074566b3d3a05e05a1646c70de211f908f3aa9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>IPA 파일의 출력 경로 변경할 수 있나요?
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/27/2018
 2. 원하는 출력 폴더에는 DestinationFolder를 설정 합니다. 일반적으로 (예: 원하는 경우이 인수에서 $(OutputPath)) MSBuild 속성을 사용할 수 있습니다.
 
 ## <a name="notes"></a>노트
-- `CreateIpaDependsOn` 속성에 정의 된 `Xamarin.iOS.Common.targets` Xamarin.iOS의 일부인 파일입니다. 에 설명 된 대로 작동 하는지 *덮어씁니다 'DependsOn' 속성* 에 [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx)합니다.
+- `CreateIpaDependsOn` 속성에 정의 된 `Xamarin.iOS.Common.targets` Xamarin.iOS의 일부인 파일입니다. 에 설명 된 대로 작동 하는지 *덮어씁니다 'DependsOn' 속성* 에 [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx)합니다.
 
 - 사용할 수는 **이동** 작업 대신 **복사** 작업 기본 설정 하는 경우. 을 설정 하면 Windows에서 옵션을 빌드하는 경우 작업 정규화 된 이름을 사용 해야 합니다 `<Microsoft.Build.Tasks.Move>` 방지 하기 위해는 XamarinVS와 모호성 빌드 작업입니다.
 
@@ -78,6 +78,6 @@ ms.lasthandoff: 02/27/2018
 2. 설정의 `DestinationFolder` 원하는 출력 폴더에 있습니다. 일반적으로 MSBuild 속성을 사용할 수 있습니다 (같은 `$(OutputPath)`) 하려는 경우이 인수에서 합니다.
 
 ## <a name="notes"></a>노트
-- `CreateIpaDependsOn` 속성에 정의 된 `Xamarin.iOS.Common.targets` Xamarin.iOS의 일부인 파일입니다. 에 설명 된 대로 작동 하는지 *덮어씁니다 "DependsOn" 속성* 에 [https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx)합니다.
+- `CreateIpaDependsOn` 속성에 정의 된 `Xamarin.iOS.Common.targets` Xamarin.iOS의 일부인 파일입니다. 에 설명 된 대로 작동 하는지 *덮어씁니다 "DependsOn" 속성* 에 [ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx)합니다.
 
 - 사용할 수는 **이동** 작업 대신 **복사** 작업 기본 설정 하는 경우. 을 설정 하면 Windows에서 옵션을 빌드하는 경우 작업 정규화 된 이름을 사용 해야 합니다 `<Microsoft.Build.Tasks.Move>` 방지 하기 위해는 XamarinVS와 모호성 빌드 작업입니다.

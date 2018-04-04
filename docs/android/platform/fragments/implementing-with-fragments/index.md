@@ -1,18 +1,17 @@
 ---
-title: "조각을 사용 하 여 구현"
-description: "Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다."
-ms.topic: article
+title: 조각을 사용 하 여 구현
+description: Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다.
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-with-fragments"></a>조각을 사용 하 여 구현
 

@@ -1,18 +1,17 @@
 ---
-title: "텍스트 및 검색 필드 작업"
-description: "이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 텍스트 및 일치 작업을 설명 합니다."
-ms.topic: article
+title: 텍스트 및 검색 필드 작업
+description: 이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 텍스트 및 일치 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7d58c30e745e26d1076e75470e527cbe95e85eb6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-text-and-search-fields"></a>텍스트 및 검색 필드 작업
 

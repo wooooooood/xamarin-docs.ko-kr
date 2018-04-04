@@ -1,18 +1,17 @@
 ---
-title: "Amazon SimpleDB 서비스와 사용자 인증"
-description: "Amazon SimpleDB 자체 사용 권한 리소스 기반의 시스템을 제공 하지 않습니다. 대신, id 공급자에 대 한 인증 갖도록 하는 데 사용자만 자신의 데이터에 대 한 액세스 SimpleDB 도메인에 사용할 수 있습니다. 이 문서에서는 자신의 SimpleDB 데이터에 대 한 사용자 액세스를 제한 하는 방법에 설명 합니다."
-ms.topic: article
+title: Amazon SimpleDB 서비스와 사용자 인증
+description: Amazon SimpleDB 자체 사용 권한 리소스 기반의 시스템을 제공 하지 않습니다. 대신, id 공급자에 대 한 인증 갖도록 하는 데 사용자만 자신의 데이터에 대 한 액세스 SimpleDB 도메인에 사용할 수 있습니다. 이 문서에서는 자신의 SimpleDB 데이터에 대 한 사용자 액세스를 제한 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 797C91A5-9720-4DAC-89D8-5C85996584C8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 592e957e0c64e7189d6f01f1ba0f23da074c4bec
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>Amazon SimpleDB 서비스와 사용자 인증
 

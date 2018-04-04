@@ -1,18 +1,17 @@
 ---
-title: "WatchOS 3에 대 한 빠른 상호 작용 방법"
-description: "이 문서에서는 빠른 상호 작용 하는 기술을 Apple Apple Watch 대 한 Xamarin.iOS에 구현 하는 방법과 watchOS 3에 추가 되었습니다."
-ms.topic: article
+title: WatchOS 3에 대 한 빠른 상호 작용 방법
+description: 이 문서에서는 빠른 상호 작용 하는 기술을 Apple Apple Watch 대 한 Xamarin.iOS에 구현 하는 방법과 watchOS 3에 추가 되었습니다.
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d3c7c6d80a6f23cdadda04d787e28e13b054a9e6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>WatchOS 3에 대 한 빠른 상호 작용 방법
 
@@ -120,7 +119,7 @@ Apple Watch 앱 watchOS 2 이후로 사용할 수는 `WKInterfacePicker` 목록�
 
 #### <a name="rotations-per-second"></a>초당 회전
 
-에 액세스 하는 회전 Per Second 디지털 왕관에서 물리 작업할 애니메이션을 기반으로 하는 경우 유용 합니다. 회전 Per Second에 액세스 하려면 사용 하 여는 `CrownSequencer` 의 속성은 `WKInterfaceController` 조사식 확장의 합니다. 예:
+에 액세스 하는 회전 Per Second 디지털 왕관에서 물리 작업할 애니메이션을 기반으로 하는 경우 유용 합니다. 회전 Per Second에 액세스 하려면 사용 하 여는 `CrownSequencer` 의 속성은 `WKInterfaceController` 조사식 확장의 합니다. 예를 들어:
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +127,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>회전 델타
 
-디지털 왕관에서 회전 델타를 사용 하 여 회전 수를 계산 합니다. 사용 하 여는 `CrownDidRotate` 의 메서드를 재정의 하는 `WKCrownDelegate` 회전 델타를 액세스할 수 있습니다. 예:
+디지털 왕관에서 회전 델타를 사용 하 여 회전 수를 계산 합니다. 사용 하 여는 `CrownDidRotate` 의 메서드를 재정의 하는 `WKCrownDelegate` 회전 델타를 액세스할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

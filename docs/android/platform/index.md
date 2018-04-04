@@ -1,24 +1,23 @@
 ---
-title: "플랫폼 기능"
-description: "이 단원의 문서에서는 Android에 대 한 기능을 다룹니다. 여기 조각을 사용 하 여, 지도가 포함 된 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다."
-ms.topic: article
+title: 플랫폼 기능
+description: 이 단원의 문서에서는 Android에 대 한 기능을 다룹니다. 여기 조각을 사용 하 여, 지도가 포함 된 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2cc8121664afa5130efd2f138a8ea8567948bea5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 69a70fe399bc95a9d8b24cc839382f2f3bee553e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
 _이 단원의 문서에서는 Android에 대 한 기능을 다룹니다. 여기 조각을 사용 하 여, 지도가 포함 된 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다._
 
-## <a name="android-beamandroidplatformandroid-beammd"></a>[Android 빔](~/android/platform/android-beam.md)
+## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
 Android 빔 응용 프로그램을 통해 NFC 서로 가까이 있는 경우 정보를 공유할 수 있는 Android 4의 새로운 근처 NFC (근거리 통신) 기술입니다.
 
@@ -27,7 +26,7 @@ Android 빔 응용 프로그램을 통해 NFC 서로 가까이 있는 경우 정
 이 섹션에서는 Xamarin.Android 응용 프로그램에 Android 6.0에 처음 도입 된 지문 인증을 사용 하는 방법에 설명 합니다.
 
 
-## <a name="firebase-job-dispatcherandroidplatformfirebase-job-dispatchermd"></a>[Firebase 작업 디스패처](~/android/platform/firebase-job-dispatcher.md)
+## <a name="firebase-job-dispatcherandroidplatformfirebase-job-dispatchermd"></a>[Firebase Job Dispatcher](~/android/platform/firebase-job-dispatcher.md)
 
 이 가이드에서는 Firebase 작업 디스패처와 Xamarin.Android 응용 프로그램에서 실행 되는 백그라운드 작업을 간소화 하기 위해 사용 하는 방법을 설명 합니다.
 
@@ -65,7 +64,7 @@ Android 3.0에 조각의 휴대폰 및 태블릿에 있는 많은 다양 한 화
 
 
 
-##  <a name="android-5-lollipopandroidplatformlollipopmd"></a>[Android 5 롤리팝](~/android/platform/lollipop.md)
+##  <a name="android-5-lollipopandroidplatformlollipopmd"></a>[Android 5 Lollipop](~/android/platform/lollipop.md)
 
 이 가이드에서는 자료 테마, CardView, RecyclerView, 헤드를 알림 등 새로운 Android 5.0 롤리팝 기능에 간략하게 설명 하며 자세한 연결 응용 프로그램에서 새 기능을 사용 하는 데 도움이 되는 문서입니다. 
 
@@ -78,13 +77,13 @@ Android 4.4 (KitKat)의 기능에 대해 사용자와 개발자가 cornucopia �
 
 
 
-##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 젤리 Bean](~/android/platform/jelly-bean.md)
+##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
 이 문서는 Android 4.1에서 도입 된 개발자를 위한 새로운 기능의 높은 수준의 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한에 대 한 업데이트, 큰 파일을 공유할 Android 빔에 대 한 업데이트를 강화 합니다. 
 
 
 
-##  <a name="android-40-ice-cream-sandwichandroidplatformice-cream-sandwichmd"></a>[Android 4.0 아이스크림 샌드위치](~/android/platform/ice-cream-sandwich.md)
+##  <a name="android-40-ice-cream-sandwichandroidplatformice-cream-sandwichmd"></a>[Android 4.0 Ice Cream Sandwich](~/android/platform/ice-cream-sandwich.md)
 
 이 문서에서 설명 된 응용 프로그램 개발자에 게 제공 되는 새 기능 중 몇 가지는 *Android 4 API-아이스크림 샌드위치*합니다. 여러 가지 새로운 사용자 인터페이스 기술에 설명 하 고 다양 한 Android 4는 장치 및 응용 프로그램 간의 데이터를 공유 하는 새로운 기능을 검토 합니다. 
 

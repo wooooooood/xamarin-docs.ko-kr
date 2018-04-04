@@ -1,18 +1,17 @@
 ---
-title: "효과의 이벤트를 호출합니다."
-description: "효과 정의 하 고 기본 네이티브 보기에서 변경 됨을 나타내는 이벤트를 호출 수입니다. 이 문서에는 추적, 낮은 수준의 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 알리는 이벤트를 생성 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 효과의 이벤트를 호출합니다.
+description: 효과 정의 하 고 기본 네이티브 보기에서 변경 됨을 나타내는 이벤트를 호출 수입니다. 이 문서에는 추적, 낮은 수준의 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 알리는 이벤트를 생성 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="invoking-events-from-effects"></a>효과의 이벤트를 호출합니다.
 

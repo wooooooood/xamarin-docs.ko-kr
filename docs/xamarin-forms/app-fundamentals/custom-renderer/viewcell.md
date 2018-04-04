@@ -1,18 +1,17 @@
 ---
-title: "ViewCell 사용자 지정"
-description: "Xamarin.Forms ViewCell은 ListView 또는 개발자 정의 보기를 포함 하는 TableView에 추가할 수 있는 셀입니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내에서 호스팅되는 ViewCell에 대 한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. ListView 스크롤 하는 동안 반복 해 서 호출 Xamarin.Forms 레이아웃 계산 되 고에서 중지 합니다."
-ms.topic: article
+title: ViewCell 사용자 지정
+description: Xamarin.Forms ViewCell은 ListView 또는 개발자 정의 보기를 포함 하는 TableView에 추가할 수 있는 셀입니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내에서 호스팅되는 ViewCell에 대 한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. ListView 스크롤 하는 동안 반복 해 서 호출 Xamarin.Forms 레이아웃 계산 되 고에서 중지 합니다.
 ms.prod: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 9e980dd428ec0efab8578a25f9191dbc71bbaf6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 

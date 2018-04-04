@@ -1,18 +1,17 @@
 ---
-title: "응용 프로그램 기본 사항"
-description: "이 섹션에서는 가장 일반적인 작업 및 개발자가 Xamarin.tvOS 응용 프로그램을 작성할 때 알고 있어야 하는 개념을 제공 합니다."
-ms.topic: article
+title: 응용 프로그램 기본 사항
+description: 이 섹션에서는 가장 일반적인 작업 및 개발자가 Xamarin.tvOS 응용 프로그램을 작성할 때 알고 있어야 하는 개념을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 74c9943381cdf6a7d55e36c8ff9f6944e8730779
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4ab06bd7de0b0e847d0ca31bcac9ecdefe79854e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>응용 프로그램 기본 사항
 
@@ -46,7 +45,7 @@ IOS 장치와 달리 새 Apple TV tvOS 앱에 대 한 영구적이 고 로컬 �
 
 <a name="Playing-Sound-with-AVAudioPlayer" />
 
-### <a name="playing-sound-with-avaudioplayeriostvosapp-fundamentalssoundsmd"></a>[AVAudioPlayer와 소리 재생](~/ios/tvos/app-fundamentals/sounds.md)
+### <a name="playing-sound-with-avaudioplayeriostvosapp-fundamentalssoundsmd"></a>[AVAudioPlayer로 소리 재생](~/ios/tvos/app-fundamentals/sounds.md)
 
 이 문서에서는 Xamarin.tvOS 응용 프로그램에 AVAudioPlayer를 사용 하 여 소리 재생을 제어 하는 도우미 클래스를 사용 하는 방법을 보여 줍니다.
 

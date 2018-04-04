@@ -1,18 +1,17 @@
 ---
 title: iCloud
-description: "Apple 응용 프로그램을 Apple 서버에서 데이터를 저장 하 고 (의 Apple ID)를 통해 동일한 사용자가 사용 되는 모든 장치 간에 동기화 할 수 있도록 서비스로 iCloud를 iOS 5에서에서 도입 되었습니다. 백업 구성 요소를 여기서 하 여 장치의 데이터 백업 Apple의 서버에도 있습니다. 이 문서에서는 Apple에서 제공 되는 Api iCloud 중 일부를 사용 하 여 저장 하 고 해당 서버와 C# 문서를 저장 한 키-값의 작은 데이터 쌍을 저장 하기 위한 샘플에서에서 데이터를 검색 하는 방법에 설명 합니다. 또한 iCloud 백업 응용 프로그램의 설계 영향을 줄 수는 방법을 설명 합니다."
-ms.topic: article
+description: Apple 응용 프로그램을 Apple 서버에서 데이터를 저장 하 고 (의 Apple ID)를 통해 동일한 사용자가 사용 되는 모든 장치 간에 동기화 할 수 있도록 서비스로 iCloud를 iOS 5에서에서 도입 되었습니다. 백업 구성 요소를 여기서 하 여 장치의 데이터 백업 Apple의 서버에도 있습니다. 이 문서에서는 Apple에서 제공 되는 Api iCloud 중 일부를 사용 하 여 저장 하 고 해당 서버와 C# 문서를 저장 한 키-값의 작은 데이터 쌍을 저장 하기 위한 샘플에서에서 데이터를 검색 하는 방법에 설명 합니다. 또한 iCloud 백업 응용 프로그램의 설계 영향을 줄 수는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="icloud"></a>iCloud
 

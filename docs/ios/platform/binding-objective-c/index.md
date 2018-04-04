@@ -1,7 +1,6 @@
 ---
-title: "IOS 라이브러리 바인딩"
-description: "IOS 네이티브 라이브러리 (및 CocoaPods) 하는 방법 Xamarin 앱에 액세스할 수 있습니다."
-ms.topic: article
+title: IOS 라이브러리 바인딩
+description: IOS 네이티브 라이브러리 (및 CocoaPods) 하는 방법 Xamarin 앱에 액세스할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: eb3edb007885d9fe839c2407a2581c9824e109c9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 268900c7ab7b317b0b20f4c1ead2360fd6f9bbf0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-ios-libraries"></a>IOS 라이브러리 바인딩
 

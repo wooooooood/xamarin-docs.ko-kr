@@ -1,17 +1,16 @@
 ---
-title: "스포트라이트 코어를 사용 하 여 검색"
-ms.topic: article
+title: 스포트라이트 코어를 사용 하 여 검색
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d38d90ce460c7a93f8412baf372778443eb9d9e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-core-spotlight"></a>스포트라이트 코어를 사용 하 여 검색
 
@@ -50,7 +49,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 ## <a name="restoring-an-item"></a>항목 복원
 
-응용 프로그램에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목에 사용자가 누르면는 `AppDelegate` 메서드 `ContinueUserActivity` 라고 (에 대 한이 메서드는 또한 `NSUserActivity`). 예:
+응용 프로그램에 대 한 핵심 스포트라이트를 통해 검색 결과에 추가 된 항목에 사용자가 누르면는 `AppDelegate` 메서드 `ContinueUserActivity` 라고 (에 대 한이 메서드는 또한 `NSUserActivity`). 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -100,7 +99,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-다음으로, 도메인 이름으로 인덱스 항목의 그룹을 삭제할 수 있습니다. 예:
+다음으로, 도메인 이름으로 인덱스 항목의 그룹을 삭제할 수 있습니다. 예를 들어:
 
 ```csharp
 // Delete by Domain Name

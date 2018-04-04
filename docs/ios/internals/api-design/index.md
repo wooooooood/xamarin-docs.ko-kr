@@ -1,18 +1,17 @@
 ---
-title: "API 디자인"
-description: "Xamarin.iOS API 디자인에 대 한 큐브 뷰"
-ms.topic: article
+title: API 디자인
+description: Xamarin.iOS API 디자인에 대 한 큐브 뷰
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="api-design"></a>API 디자인
 
@@ -225,7 +224,7 @@ Xamarin.iOS 기본 Objective-c 플랫폼에 대 한 바인딩을 단순히 않�
 
 
 
-#### <a name="types"></a>형식
+#### <a name="types"></a>유형
 
 C# 형식 관점에서 여러분이 C# universe 하위 수준 기반 형식 대신 노출 됩니다.  즉 [API는 C# "string" 형식을 사용 하 여 NSString 대신](~/ios/internals/api-design/nsstring.md) 강력한 형식의 C# 배열 NSArray 노출 하는 대신 사용 하 여 합니다.
 

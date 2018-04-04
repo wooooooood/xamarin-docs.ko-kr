@@ -1,18 +1,17 @@
 ---
-title: "HttpClient 스택 및 Android에 대 한 SSL/TLS 구현 선택기"
-description: "HttpClient 스택 및 SSL/TLS 구현 선택기 Xamarin.Android 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다."
-ms.topic: article
+title: HttpClient 스택 및 Android에 대 한 SSL/TLS 구현 선택기
+description: HttpClient 스택 및 SSL/TLS 구현 선택기 Xamarin.Android 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다.
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 5c63bda11a57c0f27efa1db6f0455b25f7da531b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2bc9b2a454b306f0794ef3704daa7e0fe6d04ef8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 스택 및 Android에 대 한 SSL/TLS 구현 선택기
 
@@ -133,7 +132,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 -----
 
-예:
+예를 들어:
 
 ```csharp
 var client = new HttpClient();
@@ -159,7 +158,7 @@ HttpClient 구현으로 설정 된 경우 **관리** 있고 TLS 구현은로 설
 
 Xamarin.Android에 TLS의 사용과 관련 된 두 개의 환경 변수 가지가 있습니다.
 
--   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 이 환경 변수 선언에서 기본 `HttpMessageHandler` 응용 프로그램에서 사용할 합니다. 예:
+-   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 이 환경 변수 선언에서 기본 `HttpMessageHandler` 응용 프로그램에서 사용할 합니다. 예를 들어:
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler

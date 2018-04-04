@@ -1,18 +1,17 @@
 ---
-title: "백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-"
-description: "이 연습에서는 사용 하 여 백그라운드 전송 서비스와 NSURLSession API을 백그라운드에서 앱이 다운로드는 계속 큰 이미지를 다운로드를 시작 합니다."
-ms.topic: article
+title: 백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
+description: 이 연습에서는 사용 하 여 백그라운드 전송 서비스와 NSURLSession API을 백그라운드에서 앱이 다운로드는 계속 큰 이미지를 다운로드를 시작 합니다.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: bedfb6298e63ed06063707178af1ca48179d0dd7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
 

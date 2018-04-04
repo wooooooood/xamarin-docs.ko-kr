@@ -1,18 +1,17 @@
 ---
-title: "컨트롤"
-description: "Xamarin.Android 사용자 인터페이스를 만들기 위한 구성 요소"
-ms.topic: article
+title: 컨트롤
+description: Xamarin.Android 사용자 인터페이스를 만들기 위한 구성 요소
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 25afd284fc88df4f23aaa3dfa1f47a3dc4fee551
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>컨트롤
 
@@ -62,7 +61,7 @@ Xamarin.Android는 Android에서 제공 네이티브 사용자 인터페이스 �
 ![텍스트를 편집 하는 예제](images/edit-text.png)
 
 
-## <a name="galleryandroiduser-interfacecontrolsgallerymd"></a>[Gallery](~/android/user-interface/controls/gallery.md)
+## <a name="galleryandroiduser-interfacecontrolsgallerymd"></a>[갤러리](~/android/user-interface/controls/gallery.md)
 
 `Gallery` 가로 스크롤 막대가 목록의 항목을 표시 하는 데 사용 되는 레이아웃 위젯은 현재 선택 영역 보기의 가운데에 배치 합니다.
 
@@ -76,7 +75,7 @@ Xamarin.Android는 Android에서 제공 네이티브 사용자 인터페이스 �
 ![예제 탐색 모음](images/navigation-bar.png)
 
 
-## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[선택](~/android/user-interface/controls/pickers/index.md)
+## <a name="pickersandroiduser-interfacecontrolspickersindexmd"></a>[선택기](~/android/user-interface/controls/pickers/index.md)
 
 *선택* 는 Android에서 제공 되는 대화 상자를 사용 하 여 날짜 또는 시간을 선택 하는 데 사용할 수 있는 UI 요소입니다.
 
@@ -90,7 +89,7 @@ Xamarin.Android는 Android에서 제공 네이티브 사용자 인터페이스 �
 ![예제에서는 팝업 메뉴](images/popup-menu.png)
 
 
-## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[스핀 상자](~/android/user-interface/controls/spinner.md)
+## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[회전자](~/android/user-interface/controls/spinner.md)
 
 `Spinner` 집합에서 값을 하나 선택 하는 빠른 방법을 제공 하는 UI 요소가입니다. Simmilar 드롭 다운 목록에는 
 
@@ -125,7 +124,7 @@ Xamarin.Android는 Android에서 제공 네이티브 사용자 인터페이스 �
 ![예제 ViewPager](images/viewpager.png)
 
 
-## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[웹 보기](~/android/user-interface/controls/web-view.md)
+## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[WebView](~/android/user-interface/controls/web-view.md)
 
 `WebView` 웹 페이지 보기에 대 한 고유한 창을 만들 (또는 개발 하는 전체 브라우저) 할 수 있는 UI 요소가입니다.
 

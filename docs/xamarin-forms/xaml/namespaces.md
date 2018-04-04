@@ -1,18 +1,17 @@
 ---
-title: "XAML 네임스페이스"
-description: "XAML 네임 스페이스 선언에 대 한 xmlns XML 특성을 사용합니다. 이 문서는 XAML 네임 스페이스 구문을 소개 하 고 형식 액세스 하는 XAML 네임 스페이스를 선언 하는 방법을 보여 줍니다."
-ms.topic: article
+title: XAML 네임스페이스
+description: XAML 네임 스페이스 선언에 대 한 xmlns XML 특성을 사용합니다. 이 문서는 XAML 네임 스페이스 구문을 소개 하 고 형식 액세스 하는 XAML 네임 스페이스를 선언 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: 55b83151e9c345096aeb0bfdd686d50c5fde62fd
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: ecf255d2fc6937e93258eaa021f79152cb7b1c7f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-namespaces"></a>XAML 네임스페이스
 

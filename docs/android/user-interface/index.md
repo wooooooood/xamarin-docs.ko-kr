@@ -1,28 +1,27 @@
 ---
-title: "사용자 인터페이스"
-description: "Xamarin.Android 앱에 대 한 사용자 인터페이스 만들기"
-ms.topic: article
+title: 사용자 인터페이스
+description: Xamarin.Android 앱에 대 한 사용자 인터페이스 만들기
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 40d02def5c0aae3334ae59cec78f6d22a1d5d772
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 
 다음 섹션에서는 다양 한 도구와 Xamarin.Android 앱에서 사용자 인터페이스를 작성 하는 데 사용 되는 구성 요소를 설명 합니다.
 
-## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android 디자이너](~/android/user-interface/android-designer/index.md)
+## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
 이 섹션에서는 시각적으로 컨트롤을 배치 하 고 속성을 편집 하려면 Android 디자이너를 사용 하는 방법을 설명 합니다. 가로 및 세로 같은 대체 뷰를 디자인 하는 방법 뿐만 아니라 테마, 언어 및 장치 구성 등의 다양 한 구성에 따른 사용자 인터페이스 및 리소스를 작성 하려면 디자이너를 사용 하는 방법을 설명 합니다.
 
-## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[자재 테마](~/android/user-interface/material-theme.md)
+## <a name="material-themeandroiduser-interfacematerial-thememd"></a>[재질 테마](~/android/user-interface/material-theme.md)
 
 *자재 테마* 보기 및 Android에는 활동의 디자인을 결정 하는 사용자 인터페이스 스타일입니다. 자재 테마는 물론 응용 프로그램에서 시스템 UI에서 사용 하도록 Android에 포함 됩니다. 이 가이드는 자료 디자인 원칙을 소개 하 고 설명 자료 테마를 기본 제공 또는 사용자 지정 테마를 사용 하 여 응용 프로그램 테마 하는 방법입니다.
 

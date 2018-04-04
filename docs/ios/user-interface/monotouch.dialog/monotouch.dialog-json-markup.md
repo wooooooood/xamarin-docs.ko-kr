@@ -1,16 +1,15 @@
 ---
-title: "MonoTouch.Dialog Json 태그"
-ms.topic: article
+title: MonoTouch.Dialog Json 태그
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -295,7 +294,7 @@ Background 속성 셀에 대 한 배경색을 설정 합니다. 값은 이미지
 
 ### <a name="ontap-and-onaccessorytap"></a>ontap 및 onaccessorytap
 
-이러한 속성은 매개 변수로 개체를 사용 하는 응용 프로그램에 정적 메서드 이름을를 가리켜야 합니다. JsonDialog.FromFile 또는 JsonDialog.FromJson 메서드를 사용 하 여 계층을 만들 때에 선택적 개체 값을 전달할 수 있습니다. 그런 다음이 개체 값이 메서드에 전달 됩니다. 정적 메서드로 일부 컨텍스트를 전달 하려면이 사용할 수 있습니다. 예:
+이러한 속성은 매개 변수로 개체를 사용 하는 응용 프로그램에 정적 메서드 이름을를 가리켜야 합니다. JsonDialog.FromFile 또는 JsonDialog.FromJson 메서드를 사용 하 여 계층을 만들 때에 선택적 개체 값을 전달할 수 있습니다. 그런 다음이 개체 값이 메서드에 전달 됩니다. 정적 메서드로 일부 컨텍스트를 전달 하려면이 사용할 수 있습니다. 예를 들어:
 
 ```csharp
 class Foo {
@@ -360,7 +359,7 @@ class Foo {
 
 ## <a name="boolean-elements"></a>부울 요소
 
-부울 요소 형식으로 설정 해야 `"bool"`, 포함 될 수 있습니다는 `"caption"` 표시 하 고 `"value"` true 또는 false로 설정 됩니다. 경우는 `"on"` 및 `"off"` 속성 설정, 이미지 될으로 간주 됩니다. 이미지는 응용 프로그램에서 현재 작업 디렉터리를 기준으로 확인 됩니다. 번들에 상대적인 파일을 참조 하려는 경우 사용할 수 있습니다는 `"~"` 간단 하 게 응용 프로그램 번들 디렉터리를 나타냅니다. 예를 들어 `"~/favorite.png"` 번들 파일에 포함 된 favorite.png 됩니다. 예:
+부울 요소 형식으로 설정 해야 `"bool"`, 포함 될 수 있습니다는 `"caption"` 표시 하 고 `"value"` true 또는 false로 설정 됩니다. 경우는 `"on"` 및 `"off"` 속성 설정, 이미지 될으로 간주 됩니다. 이미지는 응용 프로그램에서 현재 작업 디렉터리를 기준으로 확인 됩니다. 번들에 상대적인 파일을 참조 하려는 경우 사용할 수 있습니다는 `"~"` 간단 하 게 응용 프로그램 번들 디렉터리를 나타냅니다. 예를 들어 `"~/favorite.png"` 번들 파일에 포함 된 favorite.png 됩니다. 예를 들어:
 
 ```csharp
 { 

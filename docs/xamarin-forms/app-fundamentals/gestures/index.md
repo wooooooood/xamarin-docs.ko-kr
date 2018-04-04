@@ -1,18 +1,17 @@
 ---
-title: "제스처"
-description: "사용자는 Xamarin.Forms 응용 프로그램의 많은 요소와 상호 작용을 감지 하 제스처 인식기를 사용할 수 있습니다."
-ms.topic: article
+title: 제스처
+description: 사용자는 Xamarin.Forms 응용 프로그램의 많은 요소와 상호 작용을 감지 하 제스처 인식기를 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 33acc5cdb070ba5109165808156c4469db420837
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 621110686e52c1558f74108789aa216c349436bc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="gestures"></a>제스처
 

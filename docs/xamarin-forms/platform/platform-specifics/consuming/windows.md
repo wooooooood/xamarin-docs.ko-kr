@@ -1,18 +1,17 @@
 ---
-title: "Windows 플랫폼 특성"
-description: "플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms에 기본 제공 되는 Windows 플랫폼 특성을 사용 하는 방법을 보여줍니다."
-ms.topic: article
+title: Windows 플랫폼 특성
+description: 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms에 기본 제공 되는 Windows 플랫폼 특성을 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d1610e4c9e6a8799362ff955061953962dd755ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="windows-platform-specifics"></a>Windows 플랫폼 특성
 

@@ -1,18 +1,17 @@
 ---
 title: Azure DB Cosmos 문서 데이터베이스와 사용자 인증
 description: Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저장소 및 처리량을 지원 하면서 확장할 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 사용자가 자신의 문서 Xamarin.Forms 응용 프로그램에만 액세스할 수 있도록 분할 된 컬렉션을 사용한 액세스 제어를 결합 하는 방법을 설명 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 8de64d6489b4022e43bcf694f3b13d6f7eaaecbd
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 0132f849a066976896295da8b8b67ed8bf3c3e8d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스와 사용자 인증
 

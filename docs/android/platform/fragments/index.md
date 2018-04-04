@@ -1,18 +1,17 @@
 ---
-title: "조각"
-description: "Android 3.0에 조각의 휴대폰 및 태블릿에 있는 많은 다양 한 화면 크기에 대 한 보다 유연한 디자인을 지 원하는 방법을 보여 주는 도입 되었습니다. 이 문서에서는 Xamarin.Android 응용 프로그램을 개발할 조각을 사용 하는 방법 및 조각을 미리 Android 3.0 (API 수준 11) 장치에서 지 원하는 방법을 설명 합니다."
-ms.topic: article
+title: 조각
+description: Android 3.0에 조각의 휴대폰 및 태블릿에 있는 많은 다양 한 화면 크기에 대 한 보다 유연한 디자인을 지 원하는 방법을 보여 주는 도입 되었습니다. 이 문서에서는 Xamarin.Android 응용 프로그램을 개발할 조각을 사용 하는 방법 및 조각을 미리 Android 3.0 (API 수준 11) 장치에서 지 원하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 08c2edb3acc15518c7d5a69f227fb9ef819887be
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fragments"></a>조각
 

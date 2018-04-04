@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Forms eBook를 사용 하 여 엔터프라이즈 응용 프로그램 패턴"
-description: "융통성 있는, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침"
-ms.topic: article
+title: Xamarin.Forms eBook를 사용 하 여 엔터프라이즈 응용 프로그램 패턴
+description: 융통성 있는, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7ed546ac975ce1956d94d509486e4cfb25d28100
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms eBook를 사용 하 여 엔터프라이즈 응용 프로그램 패턴
 
@@ -22,7 +21,7 @@ _융통성 있는, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이�
 
 이 eBook 느슨한 결합을 유지 하면서 모델-뷰-MVVM () 패턴, 종속성 주입, 탐색, 유효성 검사 및 구성 관리를 구현 하는 방법에 지침을 제공 합니다. 또한 이기도 지침을 인증 및 권한 부여 IdentityServer, 색인화 microservices 및 단위 테스트에서 데이터에 액세스를 수행 합니다.
 
-## <a name="prefaceprefacemd"></a>[접두사](preface.md)
+## <a name="prefaceprefacemd"></a>[서문](preface.md)
 
 이 장에서 가이드 및 목표로 사용자의 범위와 목적을 설명 합니다.
 
@@ -40,7 +39,7 @@ _융통성 있는, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이�
 
 종속성 주입 컨테이너를 클래스 인스턴스를 인스턴스화할 때 컨테이너의 구성에 따라 해당 수명을 관리 하는 기능을 제공 하 여 개체 간의 결합을 줄입니다. 개체를 만드는 동안 컨테이너에는 개체에 필요한 모든 종속성을 삽입 합니다. 이러한 종속성 아직 만들지 않은, 컨테이너 만들고 먼저 해당 종속성을 해결 합니다.
 
-## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[구성 요소를 결합 된 느슨하게 간의 통신](communicating-between-loosely-coupled-components.md)
+## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[느슨하게 결합된 구성 요소 간 통신](communicating-between-loosely-coupled-components.md)
 
 Xamarin.Forms는 [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) 클래스 구현 게시-구독 패턴, 개체 및 형식 참조 하 여 연결 편리한 되지 않는 구성 요소 간에 메시지 기반 통신을 허용 합니다. 이 메커니즘에는 게시자와 구독자에 대 한 참조, 구성 요소를 독립적으로 개발 하 고 테스트 가능 하도록 구성 요소 간의 종속성을 줄이는 데 도움이 필요 없이 통신할 수 있습니다.
 
@@ -60,7 +59,7 @@ ViewModel 모델 (MVVM)의 컨텍스트에서 패턴을 보기 모델 또는 모
 
 설정 동작을 응용 프로그램을 다시 작성 하지 않고 변경할 수 있도록 코드에서 응용 프로그램의 동작을 구성 하는 데이터 분리를 허용 합니다. 응용 프로그램 설정은 응용 프로그램을 만들고 관리 하 고, 데이터 및 사용자 설정을 사용자 지정할 수 있는 하는 설정은 응용 프로그램의 응용 프로그램의 동작에 영향을 주고 자주 다시 조정 필요 하지 않습니다.
 
-## <a name="containerized-microservicescontainerized-microservicesmd"></a>[컨테이너 화 된 Microservices](containerized-microservices.md)
+## <a name="containerized-microservicescontainerized-microservicesmd"></a>[컨테이너화된 마이크로 서비스](containerized-microservices.md)
 
 Microservices 응용 프로그램 개발 및 배포 하는 최신 클라우드 응용 프로그램의 민첩성, 배율 및 안정성 요구 사항에 적합 한 방법을 제공 합니다. 있습니다 수 없게 된다는 확장 독립적으로 즉, 특정 기능 영역의 확장 수 있다는 불필요 하 게 영역을 크기 조정 없이 요청을 지원 하기 위해 더 많은 처리 전원 또는 네트워크 대역폭을 필요로 하는 microservices의 주요 이점 중 하나 늘어난된 수요에 발생 하는 응용 프로그램입니다.
 
@@ -68,7 +67,7 @@ Microservices 응용 프로그램 개발 및 배포 하는 최신 클라우드 �
 
 ASP.NET MVC 웹 응용 프로그램와 통신 하는 Xamarin.Forms 앱에 인증 및 권한 부여를 통합 하는 방법은 여러 가지가 있습니다. 여기에서 인증 및 권한 부여 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스도 수행 됩니다. IdentityServer는 전달자 토큰 인증을 수행 하도록 ASP.NET Core Id와 통합 되는 ASP.NET Core에 대 한 OAuth 2.0 및 OpenID Connect에서 프레임 워크는 오픈 소스입니다.
 
-## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[원격 데이터 액세스](accessing-remote-data.md)
+## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[원격 데이터에 액세스](accessing-remote-data.md)
 
 많은 최신 웹 기반 솔루션을 통해 응용 프로그램 원격 클라이언트에 대 한 기능을 제공 하도록 웹 서버에 의해 호스팅되는 웹 서비스를 사용 합니다. Web API를 구성 하는 웹 서비스를 노출 하는 작업 및 클라이언트 응용 프로그램 데이터 또는 API가 노출 하는 작업의 구현 방법을 몰라도 web API를 활용 하 여 수 있어야 합니다.
 

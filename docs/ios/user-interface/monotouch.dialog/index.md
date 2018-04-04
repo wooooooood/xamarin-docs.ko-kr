@@ -1,17 +1,16 @@
 ---
-title: "MonoTouch.Dialog 소개"
-description: "(산 MonoTouch.Dialog D) toolkit은 신속한 응용 프로그램 UI 개발 Xamarin.iOS에 대 한 필수적인 프레임입니다. 산 D를 사용 하면 빠르고 쉽게 복잡 한 응용 프로그램 탐색 컨트롤러, 테이블 등의 덜어 보다는 선언적 방식을 사용 하 여 UI를 정의할 수 있습니다. 또한 산 D 유연한 전체 컨트롤이 나 넘깁니다 접근 방식으로 끌어오기-새로 고침, 배경 이미지를 로드 하는 등의 추가 기능을 개발자에 게 제공, 지원 및 JSON 데이터를 통해 동적 UI 생성을 검색 하는 Api 집합을 있습니다. 이 가이드에서는 산 사용 하는 여러 가지 방법을 소개합니다 D 및 고급 사용 심층적으로 소개 합니다."
-ms.topic: article
+title: MonoTouch.Dialog 소개
+description: (산 MonoTouch.Dialog D) toolkit은 신속한 응용 프로그램 UI 개발 Xamarin.iOS에 대 한 필수적인 프레임입니다. 산 D를 사용 하면 빠르고 쉽게 복잡 한 응용 프로그램 탐색 컨트롤러, 테이블 등의 덜어 보다는 선언적 방식을 사용 하 여 UI를 정의할 수 있습니다. 또한 산 D 유연한 전체 컨트롤이 나 넘깁니다 접근 방식으로 끌어오기-새로 고침, 배경 이미지를 로드 하는 등의 추가 기능을 개발자에 게 제공, 지원 및 JSON 데이터를 통해 동적 UI 생성을 검색 하는 Api 집합을 있습니다. 이 가이드에서는 산 사용 하는 여러 가지 방법을 소개합니다 D 및 고급 사용 심층적으로 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>MonoTouch.Dialog 소개
 
@@ -114,7 +113,7 @@ RootElement 섹션/요소 값으로 초기화 되 면이 값은 자식 디스플
 
  [![](images/image4.png "이 스크린샷은 테이블 왼쪽의 세부 정보 화면 오른쪽의 후 식, 선택한 desert 값과 함께 제목이 포함 된 셀과") ](images/image4.png#lightbox) [ ![ ] (images/image5.png "이 아래 스크린샷에서 세부 정보 화면 오른쪽의 후 식, 선택한 사막 값과 함께 제목이 포함 된 셀과 표를 왼쪽에 표시")](images/image5.png#lightbox)
 
-루트 요소 데도 사용할 수 있습니다 섹션 내 새 중첩 된 구성 페이지를 로드할 트리거할 위와 같이 합니다. 이 모드에서 사용 되는 캡션을 제공 섹션 내에서 렌더링 중에 사용 하 고 하위 페이지에 제목으로도 사용 됩니다. 예:
+루트 요소 데도 사용할 수 있습니다 섹션 내 새 중첩 된 구성 페이지를 로드할 트리거할 위와 같이 합니다. 이 모드에서 사용 되는 캡션을 제공 섹션 내에서 렌더링 중에 사용 하 고 하위 페이지에 제목으로도 사용 됩니다. 예를 들어:
 
 ```csharp
 var root = new RootElement ("Meals") {

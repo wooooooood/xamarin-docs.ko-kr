@@ -1,17 +1,16 @@
 ---
-title: "앱에서 바로 구매"
-description: "iOS 응용 프로그램은 디지털 제품 및 서비스 저장소 키트 Api를 사용 하 여 판매할 수 있습니다. 제품 생성 및 iTunes Connect 포털에서 관리 됩니다. Apple 트랜잭션 처리를 관리 하 고 판매할 수 있는 전에 모든 제품을 승인 하 고 각 트랜잭션 (현재 30%)에 대 한 요금입니다. Apple에서는 응용 프로그램에서 모든 디지털 판매에 대 한 앱에서 바로 구매를 사용 하지만 실제 상품 또는 디지털이 아닌 서비스의 판매량에 대 한 사용할 수 없습니다. 디지털 제품 및 서비스에 대 한 대체 지불 옵션을 제공 하는 앱이 거부 될 수 있습니다. 이 문서 저장소 키트를 사용 하도록 응용 프로그램을 구성 하는 방법에 설명 하 고 가장 일반적인 앱에서 바로 구매 시나리오의 Xamarin.iOS 예제를 제공 합니다."
-ms.topic: article
+title: 앱에서 바로 구매
+description: iOS 응용 프로그램은 디지털 제품 및 서비스 저장소 키트 Api를 사용 하 여 판매할 수 있습니다. 제품 생성 및 iTunes Connect 포털에서 관리 됩니다. Apple 트랜잭션 처리를 관리 하 고 판매할 수 있는 전에 모든 제품을 승인 하 고 각 트랜잭션 (현재 30%)에 대 한 요금입니다. Apple에서는 응용 프로그램에서 모든 디지털 판매에 대 한 앱에서 바로 구매를 사용 하지만 실제 상품 또는 디지털이 아닌 서비스의 판매량에 대 한 사용할 수 없습니다. 디지털 제품 및 서비스에 대 한 대체 지불 옵션을 제공 하는 앱이 거부 될 수 있습니다. 이 문서 저장소 키트를 사용 하도록 응용 프로그램을 구성 하는 방법에 설명 하 고 가장 일반적인 앱에서 바로 구매 시나리오의 Xamarin.iOS 예제를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: af8eb556215679bab2da8f54e8231f7d7d3ed418
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="in-app-purchasing"></a>앱에서 바로 구매
 
@@ -40,11 +39,11 @@ _iOS 응용 프로그램은 디지털 제품 및 서비스 저장소 키트 Api�
 
  * [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [키트 개요 및 인쇄용 제품 정보를 저장 합니다.](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [StoreKit 개요 및 제품 정보 검색](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
- * [사용 될 제품을 구입](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+ * [소모성 제품 구매](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [에서 사용할 제품 구매](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+ * [영구 제품 구매](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
  * [트랜잭션 및 확인](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 

@@ -1,18 +1,17 @@
 ---
-title: "SiriKit 구현"
-description: "이 문서에 Xamarin.iOS 앱 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다."
-ms.topic: article
+title: SiriKit 구현
+description: 이 문서에 Xamarin.iOS 앱 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 76787ecda1c2cd043b81482dcdbe3751d012ef74
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-sirikit"></a>SiriKit 구현
 
@@ -213,14 +212,14 @@ Mac에서 다음을 수행 합니다.
 
 1. 웹 브라우저에서로 이동 [ http://developer.apple.com ](http://developer.apple.com) 및 사용자 계정에 로그인 합니다.
 2. 클릭 **인증서**, **식별자** 및 **프로필**합니다.
-3. 선택 **프로 비전 프로필** 선택 **의 앱 Id**, 클릭는  **+**  단추입니다.
+3. 선택 **프로 비전 프로필** 선택 **의 앱 Id**, 클릭는 **+** 단추입니다.
 4. 입력 한 **이름** 새 프로필에 대 한 합니다.
 5. 입력 한 **번들 ID** Apple 다음의 권장 명명 합니다.
 6. 으로 아래로 스크롤하여는 **응용 프로그램 서비스** 섹션에서 **SiriKit** 클릭는 **계속** 단추: 
 
     [![](implementing-sirikit-images/setup03.png "SiriKit 선택")](implementing-sirikit-images/setup03.png#lightbox)
 7. 다음 설정의 모든 확인 **전송** 응용 프로그램 id입니다.
-8. 선택 **프로 비전 프로필** > **개발**, 클릭는  **+**  단추를 선택는 **Apple ID**, 클릭 **계속**합니다.
+8. 선택 **프로 비전 프로필** > **개발**, 클릭는 **+** 단추를 선택는 **Apple ID**, 클릭 **계속**합니다.
 9. 선택을 클릭 **모든**, 클릭 **계속**합니다.
 10. 클릭 **모두 선택** 클릭 한 다음 다시 **계속**합니다.
 11. 입력 한 **프로필 이름** 클릭, 사과 사용 하 여 제안의 명명 **계속**합니다.
@@ -462,16 +461,16 @@ namespace MonkeyChat
 
     [![](implementing-sirikit-images/plist01.png "속성 목록 추가")](implementing-sirikit-images/plist01.png#lightbox) 
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
-3. 클릭는  **+**  설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
+3. 클릭는 **+** 설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
     [![](implementing-sirikit-images/plist02.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02.png#lightbox)
-4. 확장 `ParameterVocabularies` 클릭는  **+**  단추 및 설정의 **형식** 를 `Dictionary`:
+4. 확장 `ParameterVocabularies` 클릭는 **+** 단추 및 설정의 **형식** 를 `Dictionary`:
 
     [![](implementing-sirikit-images/plist03.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03.png#lightbox)
-5. 클릭는  **+**  설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
+5. 클릭는 **+** 설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
 
     [![](implementing-sirikit-images/plist04.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04.png#lightbox)
-6. 클릭는  **+**  된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
+6. 클릭는 **+** 된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05.png#lightbox)
 7. 추가 `ParameterVocabulary` 키를 `ParameterVocabularies` 와 키의 **형식** 의 `Array`:
@@ -526,16 +525,16 @@ namespace MonkeyChat
 
     [![](implementing-sirikit-images/plist01w.png "새 Info.plist 추가")](implementing-sirikit-images/plist01w.png#lightbox) 
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
-3. 클릭는  **+**  설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
+3. 클릭는 **+** 설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
     [![](implementing-sirikit-images/plist02w.png "이름을 ParameterVocabularies 및 배열 형식으로 설정")](implementing-sirikit-images/plist02w.png#lightbox)
-4. 확장 `ParameterVocabularies` 클릭는  **+**  단추 및 설정의 **형식** 를 `Dictionary`:
+4. 확장 `ParameterVocabularies` 클릭는 **+** 단추 및 설정의 **형식** 를 `Dictionary`:
 
     [![](implementing-sirikit-images/plist03w.png "사전에 형식을 설정합니다")](implementing-sirikit-images/plist03w.png#lightbox)
-5. 클릭는  **+**  설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
+5. 클릭는 **+** 설정 하 여 새 키를 추가 하려면는 **이름** 를 `ParameterNames` 및 **형식** 를 `Array`:
 
     [![](implementing-sirikit-images/plist04w.png "이름을 ParameterNames 및 배열 형식으로 설정")](implementing-sirikit-images/plist04w.png#lightbox)
-6. 클릭는  **+**  된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
+6. 클릭는 **+** 된 새 키를 추가 하는 **형식** 의 `String` 및 사용 가능한 매개 변수 이름 중 하나로 값입니다. 예를 들어 `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05w.png "INStartWorkoutIntent.workoutName 키")](implementing-sirikit-images/plist05w.png#lightbox)
 7. 추가 `ParameterVocabulary` 키를 `ParameterVocabularies` 와 키의 **형식** 의 `Array`:

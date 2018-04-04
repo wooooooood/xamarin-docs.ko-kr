@@ -1,18 +1,17 @@
 ---
-title: "10 추가 iOS 프레임 워크 변경 내용"
-description: "이 문서에서는 추가, 부 버전 변경 또는 10 iOS에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다."
-ms.topic: article
+title: 10 추가 iOS 프레임 워크 변경 내용
+description: 이 문서에서는 추가, 부 버전 변경 또는 10 iOS에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: fef543291f0743f8ebfa799b67fca2c8243be9bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 33852ef62bd00368ef6544d07e60dd6de4c3b7d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>10 추가 iOS 프레임 워크 변경 내용
 

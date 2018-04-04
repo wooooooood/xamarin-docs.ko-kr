@@ -1,18 +1,17 @@
 ---
-title: "항목을 사용자 지정"
-description: "Xamarin.Forms 입력 컨트롤을 편집할 수는 텍스트 한 줄 수 있습니다. 이 문서에는 개발자가 자신의 플랫폼 관련 사용자 지정과 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다."
-ms.topic: article
+title: 항목을 사용자 지정
+description: Xamarin.Forms 입력 컨트롤을 편집할 수는 텍스트 한 줄 수 있습니다. 이 문서에는 개발자가 자신의 플랫폼 관련 사용자 지정과 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0fe7aa2316abaae33da753e99a6f2eca4870d2d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-an-entry"></a>항목을 사용자 지정
 

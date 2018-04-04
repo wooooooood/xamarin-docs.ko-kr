@@ -1,18 +1,17 @@
 ---
-title: "사용자 지정 문서 아이콘"
-description: "Xamarin.iOS 앱에서 사용자 지정 문서 형식 아이콘으로 사용할 이미지 자산 관리 및 포함 하 여이 문서 다룹니다."
-ms.topic: article
+title: 사용자 지정 문서 아이콘
+description: Xamarin.iOS 앱에서 사용자 지정 문서 형식 아이콘으로 사용할 이미지 자산 관리 및 포함 하 여이 문서 다룹니다.
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/23/2017
-ms.openlocfilehash: e14cfb8d3c09d17bdee4b60786f434ff94ef31dc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b369667bd728f7c8b6e8bcfed9cf5bca2916bf69
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-document-icons"></a>사용자 지정 문서 아이콘
 

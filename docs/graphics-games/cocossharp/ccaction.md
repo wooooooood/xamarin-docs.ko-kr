@@ -1,18 +1,17 @@
 ---
 title: CCAction 사용한 애니메이션
 description: CCAction 클래스 추가 애니메이션 CocosSharp 게임을 간소화합니다. 이러한 애니메이션 기능을 구현 하거나 폴란드어를 추가 하려면 사용할 수 있습니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 7e64789f4e86dbcd47fc760fd9d4d7fb61c76121
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 21d7cd17d7d08f05e044f648fc09b71b7a837065
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="animating-with-ccaction"></a>CCAction 사용한 애니메이션
 

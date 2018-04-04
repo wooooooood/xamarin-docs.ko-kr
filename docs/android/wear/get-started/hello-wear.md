@@ -1,18 +1,17 @@
 ---
-title: "Hello, 마모"
-description: "첫 Android 착용 응용 프로그램을 만들고 마모 에뮬레이터 또는 장치에서 실행 합니다. 이 연습에서는 단추 클릭을 처리 하 고 마모 장치에 클릭 하 여 카운터를 표시 하는 작은 쓰는 유형 Android 프로젝트를 만들기 위한 단계별 지침을 제공 합니다. 마모 에뮬레이터 또는 Android 휴대폰에 Bluetooth를 통해 연결 되어 있는 마모 장치를 사용 하 여 응용 프로그램을 디버깅 하는 방법을 설명 합니다. 또한 Android 착용에 대 한 디버깅 팁의 집합을 제공합니다."
-ms.topic: article
+title: Hello, 마모
+description: 첫 Android 착용 응용 프로그램을 만들고 마모 에뮬레이터 또는 장치에서 실행 합니다. 이 연습에서는 단추 클릭을 처리 하 고 마모 장치에 클릭 하 여 카운터를 표시 하는 작은 쓰는 유형 Android 프로젝트를 만들기 위한 단계별 지침을 제공 합니다. 마모 에뮬레이터 또는 Android 휴대폰에 Bluetooth를 통해 연결 되어 있는 마모 장치를 사용 하 여 응용 프로그램을 디버깅 하는 방법을 설명 합니다. 또한 Android 착용에 대 한 디버깅 팁의 집합을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 742a10ce0042d2bbf6d5690cb7a7a6eca529a57e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-wear"></a>Hello, 마모
 

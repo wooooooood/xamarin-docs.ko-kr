@@ -1,18 +1,17 @@
 ---
-title: "분할 뷰 컨트롤러 작업"
-description: "이 문서에서는 디자인 및 분할 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다."
-ms.topic: article
+title: 분할 뷰 컨트롤러 작업
+description: 이 문서에서는 디자인 및 분할 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-split-view-controllers"></a>분할 뷰 컨트롤러 작업
 
@@ -103,7 +102,7 @@ Apple에 분할 뷰 컨트롤러를 사용 하기 위한 다음 제안 사항을
 
 ### <a name="accessing-master-and-detail"></a>마스터 및 세부 정보에 액세스
 
-마스터 및 세부 정보 보기 컨트롤러를 프로그래밍 방식으로 액세스 해야 할 경우 사용 된 `ViewControllers ` 분할 뷰 컨트롤러의 속성입니다. 예:
+마스터 및 세부 정보 보기 컨트롤러를 프로그래밍 방식으로 액세스 해야 할 경우 사용 된 `ViewControllers ` 분할 뷰 컨트롤러의 속성입니다. 예를 들어:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -125,7 +124,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-분할 뷰 컨트롤러 재정의 `ViewDidLoad` 메서드 및 동률 두 뷰 함께 합니다. 예:
+분할 뷰 컨트롤러 재정의 `ViewDidLoad` 메서드 및 동률 두 뷰 함께 합니다. 예를 들어:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -149,7 +148,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>표시 및 숨기기 마스터
 
-표시 하 고 사용 하 여 마스터 뷰-컨트롤러를 숨길 수 필요에 따라는 `PreferredDisplayMode` 분할 뷰 컨트롤러의 속성입니다. 예:
+표시 하 고 사용 하 여 마스터 뷰-컨트롤러를 숨길 수 필요에 따라는 `PreferredDisplayMode` 분할 뷰 컨트롤러의 속성입니다. 예를 들어:
 
 ```csharp
 // Show hide split view

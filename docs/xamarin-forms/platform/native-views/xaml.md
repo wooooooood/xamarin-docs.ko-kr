@@ -1,18 +1,17 @@
 ---
-title: "XAML의 기본 뷰"
-description: "IOS, Android 및 유니버설 Windows 플랫폼에서 네이티브 뷰 Xamarin.Forms XAML 파일에서 직접 참조할 수 있습니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 보기와 상호 작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일에서 기본 뷰를 사용 하는 방법을 보여줍니다."
-ms.topic: article
+title: XAML의 기본 뷰
+description: IOS, Android 및 유니버설 Windows 플랫폼에서 네이티브 뷰 Xamarin.Forms XAML 파일에서 직접 참조할 수 있습니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 보기와 상호 작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일에서 기본 뷰를 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-xaml"></a>XAML의 기본 뷰
 

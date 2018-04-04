@@ -1,18 +1,17 @@
 ---
 title: HealthKit
-description: "HealthKit 상태 관련 정보에 대 한 중앙 집중화 하 고, 통합, 안전한 데이터 저장소를 제공 하는 iOS 8에에서 도입 된 프레임 워크입니다. 운영 체제는 개인 정보 및 상태 정보 및 보안, 상태 앱을 사용자에 대 한 대시보드를 확인합니다. 사용자의 권한이 있는 응용 프로그램 읽고 다양 한 상태 정보를 쓸 수 있습니다."
-ms.topic: article
+description: HealthKit 상태 관련 정보에 대 한 중앙 집중화 하 고, 통합, 안전한 데이터 저장소를 제공 하는 iOS 8에에서 도입 된 프레임 워크입니다. 운영 체제는 개인 정보 및 상태 정보 및 보안, 상태 앱을 사용자에 대 한 대시보드를 확인합니다. 사용자의 권한이 있는 응용 프로그램 읽고 다양 한 상태 정보를 쓸 수 있습니다.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -69,14 +68,14 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 [장치 �
 
 현재 **의 앱 Id** 내에 나열 된는 [인증서, 식별자 및 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 개발자 센터의 섹션입니다. 종종이 목록에 표시 됩니다 **ID** 값 `*`한다는 표시 이므로 하는 **앱 ID** - **이름** 접미사를 개수에 관계 없이 함께 사용할 수 있습니다. 이러한 *와일드 카드의 앱 Id* 키트 상태와 함께 사용할 수 없습니다.
  
-만들려면 명시적 **앱 ID**, 클릭는  **+**  를 이동 하는 데 오른쪽 위 단추는 **iOS 앱 ID를 등록** 페이지:
+만들려면 명시적 **앱 ID**, 클릭는 **+** 를 이동 하는 데 오른쪽 위 단추는 **iOS 앱 ID를 등록** 페이지:
 
 
 [![](healthkit-images/image02.png "Apple 개발자 포털에 앱 등록")](healthkit-images/image02.png#lightbox)
 
 사용 하 여 응용 프로그램 설명을 만든 후 위의 그림에 표시 된 것 처럼는 **명시적 앱 ID** 응용 프로그램에 대 한 ID를 만들려면 섹션. 에 **응용 프로그램 서비스** 확인 섹션 **상태 키트** 에 **서비스 사용** 섹션.
 
-완료 되 면 키를 눌러는 **계속** 등록 하는 단추는 **앱 ID** 계정에서 합니다. 다시 이동 됩니다는 **인증서, 식별자 및 프로필** 페이지. 클릭 **프로 비전 프로필** 현재 프로 비전 프로필을 목록으로 이동 하 고 클릭 하 고  **+**  를 이동 하는 데 오른쪽 위 모퉁이의 단추는 **iOS 추가 프로비저닝 프로필** 페이지. 선택의 **iOS 응용 프로그램 개발** 옵션 **계속** 를 시작 하는 **응용 프로그램 ID 선택** 페이지. 여기에서 명시적 선택 **앱 ID** 이전에 지정 합니다.
+완료 되 면 키를 눌러는 **계속** 등록 하는 단추는 **앱 ID** 계정에서 합니다. 다시 이동 됩니다는 **인증서, 식별자 및 프로필** 페이지. 클릭 **프로 비전 프로필** 현재 프로 비전 프로필을 목록으로 이동 하 고 클릭 하 고 **+** 를 이동 하는 데 오른쪽 위 모퉁이의 단추는 **iOS 추가 프로비저닝 프로필** 페이지. 선택의 **iOS 응용 프로그램 개발** 옵션 **계속** 를 시작 하는 **응용 프로그램 ID 선택** 페이지. 여기에서 명시적 선택 **앱 ID** 이전에 지정 합니다.
 
 
 [![](healthkit-images/image03.png "명시적 응용 프로그램 ID 선택")](healthkit-images/image03.png#lightbox)

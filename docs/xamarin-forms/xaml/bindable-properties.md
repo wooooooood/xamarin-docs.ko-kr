@@ -1,18 +1,17 @@
 ---
-title: "바인딩 가능한 속성"
-description: "Xamarin.forms에 공용 언어 런타임 (CLR) 속성의 기능을 바인딩할 수 있는 속성에 의해 확장 됩니다. 바인딩 가능한 속성은 속성의 값 Xamarin.Forms 속성 시스템에 의해 추적 되는 위치는 특수 한 유형의 속성. 이 문서에서는 바인딩 가능 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 바인딩 가능한 속성
+description: Xamarin.forms에 공용 언어 런타임 (CLR) 속성의 기능을 바인딩할 수 있는 속성에 의해 확장 됩니다. 바인딩 가능한 속성은 속성의 값 Xamarin.Forms 속성 시스템에 의해 추적 되는 위치는 특수 한 유형의 속성. 이 문서에서는 바인딩 가능 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: ab8c4cfd92a048efb87f7508e53fc024a9c46405
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 7e1d3c82036ef703014ae548a6719937e89d22f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bindable-properties"></a>바인딩 가능한 속성
 

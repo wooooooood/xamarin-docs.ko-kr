@@ -1,18 +1,17 @@
 ---
-title: "앱 검색의 향상 된 기능"
-description: "이 문서에서는 향상 된 Apple iOS 10 및 Xamarin.iOS에 구현 하는 방법에 응용 프로그램 검색 했습니다."
-ms.topic: article
+title: 앱 검색의 향상 된 기능
+description: 이 문서에서는 향상 된 Apple iOS 10 및 Xamarin.iOS에 구현 하는 방법에 응용 프로그램 검색 했습니다.
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: af124c2ae0390c5321e9dd34158c7b53b33b2c48
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-search-enhancements"></a>앱 검색의 향상 된 기능
 
@@ -64,7 +63,7 @@ IOS에서 10 Apple 기반으로이 기능은 사용자 스포트라이트 또는
 
 -----
 
-검색 결과 계속 사용자에 게 응답 하도록 (`NSUserActivity`), 편집는 `AppDelegate.cs` 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예:
+검색 결과 계속 사용자에 게 응답 하도록 (`NSUserActivity`), 편집는 `AppDelegate.cs` 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

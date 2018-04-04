@@ -1,18 +1,17 @@
 ---
-title: "Android 에뮬레이터 마모 디버그"
-description: "이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램을 디버깅 하는 방법을 설명 합니다."
-ms.topic: article
+title: Android 에뮬레이터 마모 디버그
+description: 이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램을 디버깅 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Android 에뮬레이터 마모 디버그
 
@@ -33,7 +32,7 @@ _이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램�
 
 ## <a name="launch-the-wear-virtual-device"></a>마모 가상 장치 시작 
 
-쓰는 유형 Android 가상 장치를 만든 후 디버깅을 시작 하기 전에 IDE에서 장치 풀 다운 메뉴에서 선택할 수 있습니다. 가상 장치 풀 다운 장치에서 사용할 수 없는 경우 프로젝트는 Android 인지 확인 *착용* 가상 장치로 수준 응용 프로그램 프로젝트 (Android 앱 프로젝트가 아닌 함)와 대상 API 레벨 동일한 API로 설정 되어 있습니다. 예:
+쓰는 유형 Android 가상 장치를 만든 후 디버깅을 시작 하기 전에 IDE에서 장치 풀 다운 메뉴에서 선택할 수 있습니다. 가상 장치 풀 다운 장치에서 사용할 수 없는 경우 프로젝트는 Android 인지 확인 *착용* 가상 장치로 수준 응용 프로그램 프로젝트 (Android 앱 프로젝트가 아닌 함)와 대상 API 레벨 동일한 API로 설정 되어 있습니다. 예를 들어:
 
 [![Visual Studio 장치 메뉴에 쓰는 유형 AVD 선택](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 

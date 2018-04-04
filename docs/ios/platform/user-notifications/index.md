@@ -1,18 +1,17 @@
 ---
-title: "사용자 알림 프레임 워크"
-description: "이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다."
-ms.topic: article
+title: 사용자 알림 프레임 워크
+description: 이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/01/2016
-ms.openlocfilehash: 1ab0a4add92db21c352dbaeadc71a3ff1e3d0cf9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 9b8671fe54f4017e81d7151cc42ea9df2bf9fa05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-notifications-framework"></a>사용자 알림 프레임 워크
 

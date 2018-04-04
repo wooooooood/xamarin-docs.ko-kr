@@ -1,18 +1,17 @@
 ---
-title: "고급 메시지 응용 프로그램 확장"
-description: "이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게 새로운 기능을 제공 하는 Xamarin.iOS 솔루션에서 메시지 앱 확장을 사용 하기 위한 고급 기술을 보여 줍니다."
-ms.topic: article
+title: 고급 메시지 응용 프로그램 확장
+description: 이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게 새로운 기능을 제공 하는 Xamarin.iOS 솔루션에서 메시지 앱 확장을 사용 하기 위한 고급 기술을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-message-app-extensions"></a>고급 메시지 응용 프로그램 확장
 
@@ -38,7 +37,7 @@ _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게
 
 또한 새로운 iOS 10, 사과 추가 했습니다 인라인 앱 Attribution 사용자를 쉽게 응용 프로그램을 검색할 수 있도록 합니다. 예를 들어 한 사용자는 두 번째 사용자가 앱에서 다른 콘텐츠를 전송 하는 경우 (예: 스티커 예:), 설치 보내는 응용 프로그램의 이름 아래에 있는지 메시지 기록의 콘텐츠입니다. 사용자가 응용 프로그램의 경우 이름, 열 수 있습니다 메시지 앱 저장소 및 저장소에 선택한 앱입니다.
 
-메시지 응용 프로그램 확장은 기존 iOS 앱 만들기에 익숙한 개발자는 하 고 모든 표준 프레임 워크와 표준 iOS 앱의 기능에 액세스 한 유사 합니다. 예:
+메시지 응용 프로그램 확장은 기존 iOS 앱 만들기에 익숙한 개발자는 하 고 모든 표준 프레임 워크와 표준 iOS 앱의 기능에 액세스 한 유사 합니다. 예를 들어:
 
 - 앱에서 바로 구매에 대 한 액세스를 갖습니다.
 - Apple Pay 액세스를 권한이 있습니다.
@@ -419,7 +418,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 두 경우 모두 사용자 메시지 앱 확장에 속한 메시지 거품을 누르면 해야 합니다 액세스 하는 `MSMessage` 를 사용 하 여 눌렀는지는 `SelectedMessage` 속성은 `MSConversation`합니다.
 
-예:
+예를 들어:
 
 ```csharp
 using System;
@@ -547,7 +546,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 - 확장 사용자 로부터 메시지를 받으면 것의 추적할 수 보낸 사람 식별자입니다. 보낸 사람 식별자가 같은 다른 메시지를 수신 하는 경우 확장 같은 사용자 임을 알고 있습니다.
 - 대화에서 특정 사용자를 식별 하는 데 사용할 수 있습니다.
 
-보낸 사람 식별자의 텍스트 필드에 사용할 수는 `MSMessageTemplateLayout` 달러 기호를 접두사로 (`$`). 예:
+보낸 사람 식별자의 텍스트 필드에 사용할 수는 `MSMessageTemplateLayout` 달러 기호를 접두사로 (`$`). 예를 들어:
 
 ```csharp
 // Pass along the sender identifier

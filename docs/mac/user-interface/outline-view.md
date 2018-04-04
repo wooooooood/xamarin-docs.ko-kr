@@ -1,18 +1,17 @@
 ---
-title: "개요 보기"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램의 개요 보기와 작업을 설명합니다. 및 작성 하 고, Xcode 및 인터페이스 작성기의 개요 보기를 유지 관리 하 고, 이러한 작업을 프로그래밍 방식으로 설명 합니다."
-ms.topic: article
+title: 개요 보기
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 개요 보기와 작업을 설명합니다. 및 작성 하 고, Xcode 및 인터페이스 작성기의 개요 보기를 유지 관리 하 고, 이러한 작업을 프로그래밍 방식으로 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: dbbd10af046c0a8421e06e675364f92405b2317f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 82cb3afadf7615fdd92476371e9ab80cd1228b02
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="outline-views"></a>개요 보기
 
@@ -604,7 +603,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 ## <a name="using-images-in-outline-views"></a>개요 보기에서 이미지를 사용 하 여
 
-에 있는 셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기에서 데이터 반환 되는 방법을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여는 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예:
+에 있는 셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기에서 데이터 반환 되는 방법을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여는 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들어:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {

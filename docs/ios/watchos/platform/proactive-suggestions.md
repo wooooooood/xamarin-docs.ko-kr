@@ -1,18 +1,17 @@
 ---
-title: "자동 관리 제안"
-description: "이 문서는 사전 예방적으로 사용자에 게 유용한 정보를 자동으로 표시 하려면 시스템을 허용 하 여 사전 제안 드라이브 engagement에 watchOS 3 응용 프로그램에서 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 자동 관리 제안
+description: 이 문서는 사전 예방적으로 사용자에 게 유용한 정보를 자동으로 표시 하려면 시스템을 허용 하 여 사전 제안 드라이브 engagement에 watchOS 3 응용 프로그램에서 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="proactive-suggestions"></a>자동 관리 제안
 
@@ -132,7 +131,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>복원 작업
 
-검색 결과에서 누르기 사용자에 게 응답 하도록 (`NSUserActivity`)는 앱에 대 한 편집는 **AppDelegate.cs** 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예:
+검색 결과에서 누르기 사용자에 게 응답 하도록 (`NSUserActivity`)는 앱에 대 한 편집는 **AppDelegate.cs** 파일을 재정의 하는 `ContinueUserActivity` 메서드. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -297,7 +296,7 @@ attributes.SupportsNavigation = true;
 - 처리는 MapKit와 앱을 시작 하기 `MKDirectionsRequest` 개체입니다.
 - WatchOS 사용자 참여에 따라 앱을 제안 하는 방법을 배울 수 있는 기능을 제공 합니다.
 
-MapKit와 응용 프로그램 시작 될 때 `MKDirectionsRequest` 개체, 자동으로 요청 된 위치에 사용자를 안내 시작 또는 쉽게 방향으로 시작 하는 사용자에 대 한 UI를 제공 해야 합니다. 예:
+MapKit와 응용 프로그램 시작 될 때 `MKDirectionsRequest` 개체, 자동으로 요청 된 위치에 사용자를 안내 시작 또는 쉽게 방향으로 시작 하는 사용자에 대 한 UI를 제공 해야 합니다. 예를 들어:
 
 
 ```csharp

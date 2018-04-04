@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.iOS의 알림"
-description: "이 섹션에는 로컬 알림을 Xamarin.iOS에서 구현 하는 방법을 보여 줍니다. IOS 알림의 다양 한 UI 요소에 설명 하 고 API에 설명 합니다의 관련 만들기 및 알림을 표시 합니다."
-ms.topic: article
+title: Xamarin.iOS의 알림
+description: 이 섹션에는 로컬 알림을 Xamarin.iOS에서 구현 하는 방법을 보여 줍니다. IOS 알림의 다양 한 UI 요소에 설명 하 고 API에 설명 합니다의 관련 만들기 및 알림을 표시 합니다.
 ms.prod: xamarin
 ms.assetid: 5BB76915-5DB0-48C7-A267-FA9F7C50793E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d4dd759f52e52f417441f69e6417fab536daf6d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="notifications-in-xamarinios"></a>Xamarin.iOS의 알림
 

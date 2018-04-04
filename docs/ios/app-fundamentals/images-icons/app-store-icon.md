@@ -1,18 +1,17 @@
 ---
-title: "앱 스토어 아이콘"
-description: "앱 스토어 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다."
-ms.topic: article
+title: 앱 스토어 아이콘
+description: 앱 스토어 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/26/2017
-ms.openlocfilehash: 6ec4328f08859c5331a6250bf44ee705a7fd0744
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f8d993ccb23817e237b9cef8074b881f3ea4b3a2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-store-icon"></a>앱 스토어 아이콘
 

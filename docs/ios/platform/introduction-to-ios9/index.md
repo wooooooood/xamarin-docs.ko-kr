@@ -1,18 +1,17 @@
 ---
-title: "IOS 9 소개"
-description: "이 문서 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 9에에서 사용할 수 있는 기능을 소개합니다."
-ms.topic: article
+title: IOS 9 소개
+description: 이 문서 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 9에에서 사용할 수 있는 기능을 소개합니다.
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5b26989603695cfb309fba5a5318f7ef4d2460e2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10ed9154b92e6f13dd71f83cf4fed47585dc795f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-9"></a>IOS 9 소개
 
@@ -212,8 +211,8 @@ Api आ स ा iOS 9의에서 함수에는 Apple에 사용 되지 않는:
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
 - [3D 터치 소개](~/ios/platform/3d-touch.md)
-- [앱의 전송 보안](~/ios/app-fundamentals/ats.md)
-- [IPad 용 멀티태스킹](~/ios/platform/multitasking.md)
+- [앱 전송 보안](~/ios/app-fundamentals/ats.md)
+- [iPad용 멀티태스킹](~/ios/platform/multitasking.md)
 - [연락처 및 연락처 UI](~/ios/platform/contacts.md)
 - [새 검색 Api](~/ios/platform/search/index.md)
 - [스택 뷰 소개](~/ios/user-interface/controls/uistackview.md)
@@ -221,7 +220,7 @@ Api आ स ा iOS 9의에서 함수에는 Apple에 사용 되지 않는:
 - [게임의 향상 된 기능](~/ios/platform/gaming/index.md)
 - [HomeKit 소개](~/ios/platform/homekit.md)
 - [핸드 오프 소개](~/ios/platform/handoff.md)
-- [추가 iOS 9 Framework 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [추가 iOS 9 프레임워크 추가 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [문제 해결](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [IOS 9.0에 새로 이란](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

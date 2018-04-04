@@ -1,18 +1,17 @@
 ---
-title: "위치 서비스"
-description: "이 가이드는 Android 응용 프로그램에서 인식 하는 위치를 소개 하 고 Google 위치 서비스 API와 함께 사용할 수 있는 퓨즈 위치 공급자 뿐만 아니라 Android 위치 서비스 API를 사용 하 여 사용자의 위치를 가져오는 방법을 보여 줍니다."
-ms.topic: article
+title: 위치 서비스
+description: 이 가이드는 Android 응용 프로그램에서 인식 하는 위치를 소개 하 고 Google 위치 서비스 API와 함께 사용할 수 있는 퓨즈 위치 공급자 뿐만 아니라 Android 위치 서비스 API를 사용 하 여 사용자의 위치를 가져오는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="location-services"></a>위치 서비스
 

@@ -1,17 +1,16 @@
 ---
-title: "지역화 작업"
-description: "여러 언어에 대 한 watchOS 앱을 위해 조정"
-ms.topic: article
+title: 지역화 작업
+description: 여러 언어에 대 한 watchOS 앱을 위해 조정
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>지역화 작업
 
@@ -86,13 +85,13 @@ Watch 앱 응용 프로그램의 사용자 인터페이스를 설명 하는 스�
 
 #### <a name="storyboard-images"></a>스토리 보드 이미지
 
-예제 솔루션도 포함 되어는  **gradient@2x.png**  각 언어 폴더에 이미지입니다. 이 이미지 서로 다를 수는 각 언어 (예:. 변환할는 텍스트가 포함 된 수 또는 사용의도 해 지역화).
+예제 솔루션도 포함 되어는 **gradient@2x.png** 각 언어 폴더에 이미지입니다. 이 이미지 서로 다를 수는 각 언어 (예:. 변환할는 텍스트가 포함 된 수 또는 사용의도 해 지역화).
 
 이미지의 설정 하기만 **이미지** 스토리 보드와 올바른 이미지에는 속성은 사용자가 선택한 언어에 따라 시계에 렌더링 됩니다.
 
 ![](localization-images/storyboard-image.png "스토리 보드에서 이미지 이미지 속성을 설정 합니다.")
 
-참고: 모든 Apple 조사식 레 티 나 디스플레이만 포함 되어는  **@2x**  이미지의 버전이 필요 합니다. 지정할 필요가 없습니다  **@2x**  스토리 보드에 있습니다.
+참고: 모든 Apple 조사식 레 티 나 디스플레이만 포함 되어는 **@2x** 이미지의 버전이 필요 합니다. 지정할 필요가 없습니다 **@2x** 스토리 보드에 있습니다.
 
 ### <a name="watch-extension"></a>조사식 확장
 
@@ -130,7 +129,7 @@ displayText.SetText (localizedDisplay);
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. 사용 하 여 조사식 확장에서 이미지를 이동 `FromBundle` 응용 프로그램 사용자의 언어 선택에 대 한 올바른 이미지를 자동으로 선택 됩니다. 예제 솔루션에는 이미지  **language@2x.png**  각 언어에서 폴더를 찾아 그에 표시 되 `DetailController` 다음 코드를 사용 하 여:
+2. 사용 하 여 조사식 확장에서 이미지를 이동 `FromBundle` 응용 프로그램 사용자의 언어 선택에 대 한 올바른 이미지를 자동으로 선택 됩니다. 예제 솔루션에는 이미지 **language@2x.png** 각 언어에서 폴더를 찾아 그에 표시 되 `DetailController` 다음 코드를 사용 하 여:
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ displayText.SetText (localizedDisplay);
   }
   ```
 
-  지정 해야 하는 참고는  **@2x**  이미지의 파일 이름으로 참조할 때.
+  지정 해야 하는 참고는 **@2x** 이미지의 파일 이름으로 참조할 때.
 
 두 번째 방법은 조사식;에서 렌더링할 원격 서버에서 이미지를 다운로드 하는 경우에 적용 됩니다. 그러나이 경우 확인 해야 다운로드 이미지는 사용자의 기본 설정에 따라 올바르게 지역화 됩니다.
 

@@ -1,18 +1,17 @@
 ---
 title: 3 부 합니다. XAML 태그 확장
 description: XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값을 설정 하는 속성을 허용 하는 XAML에 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하기 위해 특히 중요 하지만 활용도 가장 큰 데이터 바인딩을 찾습니다.
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부 합니다. XAML 태그 확장
 

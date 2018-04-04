@@ -1,17 +1,16 @@
 ---
-title: "전달"
-description: "이 문서에서 Xamarin.iOS 앱으로 전송 하도록 핸드 오프 작업에서는 사용자에 실행 되는 앱 간의 작업을 사용자의 다른 장치입니다."
-ms.topic: article
+title: 전달
+description: 이 문서에서 Xamarin.iOS 앱으로 전송 하도록 핸드 오프 작업에서는 사용자에 실행 되는 앱 간의 작업을 사용자의 다른 장치입니다.
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb665c7ffd4241fac14be13ebd8f113d11afd417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handoff"></a>전달
 
@@ -402,13 +401,13 @@ public void PerformHandoff(NSUserActivity activity) {
 }
 ```
 
-`ContinueUserActivity` 메서드를 포함 한 `UIApplicationRestorationHandler` 작업 다시 시작 하는 기반으로 문서 또는 응답자에 대해 호출할 수 있습니다. 전달 해야 합니다는 `NSArray` 또는 호출 될 때 복원 처리기에 개체를 복원할 수 있습니다. 예:
+`ContinueUserActivity` 메서드를 포함 한 `UIApplicationRestorationHandler` 작업 다시 시작 하는 기반으로 문서 또는 응답자에 대해 호출할 수 있습니다. 전달 해야 합니다는 `NSArray` 또는 호출 될 때 복원 처리기에 개체를 복원할 수 있습니다. 예를 들어:
 
 ```csharp
 completionHandler (new NSObject[]{Tab4});
 ```
 
-전달 된, 각 개체에 대 한 해당 `RestoreUserActivityState` 메서드가 호출 됩니다. 각 개체의 데이터를 유도할 수 있습니다는 `UserInfo` 자체의 상태를 복원 하는 사전입니다. 예:
+전달 된, 각 개체에 대 한 해당 `RestoreUserActivityState` 메서드가 호출 됩니다. 각 개체의 데이터를 유도할 수 있습니다는 `UserInfo` 자체의 상태를 복원 하는 사전입니다. 예를 들어:
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -426,7 +425,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 
 핸드 오프 컬렉션 느슨하게 연결 된 iOS 및 OS X 장치 간의 정보의 전송에 의존, 전송 프로세스에서 경우에 따라 실패할 수 있습니다. 이러한 오류를 정상적으로 처리 하 고 발생 하는 경우 모든 사용자에 게 알리는 있는 응용 프로그램을 디자인 해야 합니다.
 
-오류가 발생 한는 `DidFailToContinueUserActivitiy` 의 메서드는 `AppDelegate` 호출 됩니다. 예:
+오류가 발생 한는 `DidFailToContinueUserActivitiy` 의 메서드는 `AppDelegate` 호출 됩니다. 예를 들어:
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -452,7 +451,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 
 지정된 된 도메인에 일치 하는 경우는 `WebpageURL` 해당 도메인의 웹 사이트에서 승인 된 응용 프로그램 Id의 목록을 다운로드 하는 속성의 값을 전달 합니다. 웹 사이트 라는 JSON 파일에 서명 된 승인 된 Id 목록을 제공 해야 **apple 응용 프로그램-사이트 연결** (예를 들어 `https://company.com/apple-app-site-association`).
 
-이 JSON 파일로 포함 형식에서 응용 프로그램 Id의 목록을 지정 하는 사전 `<team identifier>.<bundle identifier>`합니다. 예:
+이 JSON 파일로 포함 형식에서 응용 프로그램 Id의 목록을 지정 하는 사전 `<team identifier>.<bundle identifier>`합니다. 예를 들어:
 
 ```csharp
 {
@@ -463,7 +462,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 }
 ```
 
-JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 하 여는 **터미널** 응용 프로그램 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 하는 키와 함께 명령을 (참조 [ http://support.apple.com/kb/ht5012](http://support.apple.com/kb/ht5012) 목록에 대 한). 예:
+JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 하 여는 **터미널** 응용 프로그램 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 하는 키와 함께 명령을 (참조 [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) 목록에 대 한). 예를 들어:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -476,7 +475,7 @@ cat json.txt | openssl smime -sign -inkey company.com.key
 -outform DER > apple-app-site-association
 ```
 
-`openssl` 명령 출력에서 웹 사이트에 배치 하는 서명된 된 JSON 파일의 **apple 응용 프로그램-사이트 연결** URL입니다. 예:
+`openssl` 명령 출력에서 웹 사이트에 배치 하는 서명된 된 JSON 파일의 **apple 응용 프로그램-사이트 연결** URL입니다. 예를 들어:
 
 ```csharp
 https://example.com/apple-app-site-association.
@@ -486,7 +485,7 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>핸드 오프 문서 기반 앱에서 지원
 
-IOS 및 OS X에서 설명한 것 처럼 문서 기반 응용 프로그램 자동으로 지원 하도록 할 iCloud 기반 문서의 인계 응용 프로그램의 **Info.plist** 파일에 포함 되어는 `CFBundleDocumentTypes` 의 키 `NSUbiquitousDocumentUserActivityType`합니다. 예:
+IOS 및 OS X에서 설명한 것 처럼 문서 기반 응용 프로그램 자동으로 지원 하도록 할 iCloud 기반 문서의 인계 응용 프로그램의 **Info.plist** 파일에 포함 되어는 `CFBundleDocumentTypes` 의 키 `NSUbiquitousDocumentUserActivityType`합니다. 예를 들어:
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -522,7 +521,7 @@ IOS 및 OS X에서 설명한 것 처럼 문서 기반 응용 프로그램 자동
 
 없는 작업을 계속 하는 데 필요한 정보의 양은 전송할 수 없습니다 효율적으로 초기 핸드 오프 페이로드에 경우가 있을 수 있습니다. 이러한 상황에서 수신 응용 프로그램 자체와 원래 응용 프로그램에서 데이터를 전송 사이의 하나 이상의 스트림을 설정할 수 있습니다.
 
-원래 앱 설정 됩니다는 `SupportsContinuationStreams` 의 속성은 `NSUserActivity` 인스턴스를 `true`합니다. 예:
+원래 앱 설정 됩니다는 `SupportsContinuationStreams` 의 속성은 `NSUserActivity` 인스턴스를 `true`합니다. 예를 들어:
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -541,7 +540,7 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-수신 응용 프로그램이 호출할 수는 `GetContinuationStreams` 의 메서드는 `NSUserActivity` 에 해당 `AppDelegate` 스트림을 설정 하기. 예:
+수신 응용 프로그램이 호출할 수는 `GetContinuationStreams` 의 메서드는 `NSUserActivity` 에 해당 `AppDelegate` 스트림을 설정 하기. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

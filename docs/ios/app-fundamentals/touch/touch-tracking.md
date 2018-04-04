@@ -1,18 +1,17 @@
 ---
-title: "멀티 터치 손가락 추적"
-description: "이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 멀티 터치 손가락 추적
+description: 이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a9e3842611aab86d23a2b0c2a832efce18c22465
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 178bd0a68166f033293b2d807fea449355c1c584
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>멀티 터치 손가락 추적
 

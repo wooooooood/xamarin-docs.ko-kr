@@ -1,18 +1,17 @@
 ---
 title: watchOS
-description: "Xamarin 사용한 Apple Watch 용 앱 빌드"
-ms.topic: article
+description: Xamarin 사용한 Apple Watch 용 앱 빌드
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 062c53a855051e70329ec18f6c69253b5ee68e7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos"></a>watchOS
 
@@ -24,7 +23,7 @@ _Xamarin 사용한 Apple Watch 용 앱 빌드_
 
 ##  <a name="getting-startedioswatchosget-startedindexmd"></a>[시작](~/ios/watchos/get-started/index.md)
 
-* [WatchOS 소개](~/ios/watchos/get-started/intro-to-watchos.md)
+* [watchOS 소개](~/ios/watchos/get-started/intro-to-watchos.md)
 * [설치 정보](~/ios/watchos/get-started/installation.md) – Xamarin의 조사식 OS 지원 우리의 안정판에서 사용할 수 있지만 "미리 보기" 것으로 간주 됩니다.
 * 빌드에 [첫 watchOS 응용](~/ios/watchos/get-started/hello-watch.md) Xamarin을 사용 하 여 합니다.
 
@@ -36,7 +35,7 @@ _Xamarin 사용한 Apple Watch 용 앱 빌드_
 
 같은 watchOS 관련 기능을 포함 하는 방법 [알림](~/ios/watchos/platform/notifications.md) 및 [복잡성](~/ios/watchos/platform/complications.md) watch 앱에 있습니다.
 
-##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[응용 프로그램의 기본](~/ios/watchos/app-fundamentals/index.md)
+##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[앱 기본 사항](~/ios/watchos/app-fundamentals/index.md)
 
 작업 watchOS API의 다양 한 측면을 포함 하는 [부모 응용 프로그램](~/ios/watchos/app-fundamentals/parent-app.md), [아이콘](~/ios/watchos/app-fundamentals/icons.md), [레이아웃](~/ios/watchos/app-fundamentals/layout.md), [탐색](~/ios/watchos/app-fundamentals/navigation.md), [크기 화면](~/ios/watchos/app-fundamentals/screen-sizes.md), 및 [설정을](~/ios/watchos/app-fundamentals/settings.md)합니다.
 

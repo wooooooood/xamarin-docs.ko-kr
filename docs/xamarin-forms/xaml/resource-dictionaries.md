@@ -1,18 +1,17 @@
 ---
 title: 리소스 사전
 description: XAML 리소스는 한 번만 사용할 수 있는 개체의 정의입니다. ResourceDictionary에 리소스를를 단일 위치에서 정의 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 다시 사용할 수 있습니다. 이 문서를 만들고 ResourceDictionary를 사용 하는 방법 및 리소스 사전은 병합 하는 방법을 설명 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 37e38f2c4297d5acd148a7e6d1bec5569fe8c51c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 

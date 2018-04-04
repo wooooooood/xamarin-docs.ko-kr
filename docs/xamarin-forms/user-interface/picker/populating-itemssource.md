@@ -1,18 +1,17 @@
 ---
-title: "선택기의 ItemsSource 속성 설정"
-description: "선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다. 이 문서를 ItemsSource 속성을 설정 하 여 선택기를 데이터로 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다."
-ms.topic: article
+title: 선택기의 ItemsSource 속성 설정
+description: 선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다. 이 문서를 ItemsSource 속성을 설정 하 여 선택기를 데이터로 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5e3d20ad213df9fd9331c71c84003c7738bd5a29
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf3940bc1bc0318bad4d785388f9dc9292af80ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
@@ -182,4 +181,4 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 - [선택기 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [원숭이 응용 프로그램 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 - [바인딩 가능한 선택 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [Picker](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)
+- [선택기](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)

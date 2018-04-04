@@ -1,18 +1,17 @@
 ---
-title: "테이블 및 셀 작업"
-description: "Xamarin.iOS UITableView 사용 하 여 데이터를 표시 합니다."
-ms.topic: article
+title: 테이블 및 셀 작업
+description: Xamarin.iOS UITableView 사용 하 여 데이터를 표시 합니다.
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: f6abcaa3a771954785df83e80c7e46dd200e6986
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-and-cells"></a>테이블 및 셀 작업
 
@@ -35,7 +34,7 @@ Xamarin.Android 플랫폼 간 응용 프로그램에서 작업을 위해 UITable
 
  [데이터로 테이블 채우기](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 
- [테이블의 모양 사용자 지정](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
+ [테이블 모양 사용자 지정](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [편집](~/ios/user-interface/controls/tables/editing.md)
  
@@ -43,14 +42,14 @@ Xamarin.Android 플랫폼 간 응용 프로그램에서 작업을 위해 UITable
 
  [스토리 보드에서 표 만들기](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
- [자동 크기 조정 행 높이](~/ios/user-interface/controls/tables/autosizing-row-height.md)
+ [행 높이 자동 크기 조정](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [WorkingWithTables (샘플)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
 - [테이블에 스토리 보드 (샘플)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
-- [스토리 보드에는 소개](~/ios/user-interface/storyboards/index.md)
+- [Storyboards 소개](~/ios/user-interface/storyboards/index.md)
 - [스토리 보드 TableView 레시피](https://developer.xamarin.com/recipes/ios/general/storyboard/storyboard_a_tableview)
 - [MonoTouch.Dialog 소개](~/ios/user-interface/monotouch.dialog/index.md)
 - [Github에 TableEditing 샘플](https://github.com/xamarin/monotouch-samples/tree/master/TableEditing)

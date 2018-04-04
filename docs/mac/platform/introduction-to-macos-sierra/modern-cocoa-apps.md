@@ -1,18 +1,17 @@
 ---
-title: "최신 macOS 앱 빌드"
-description: "이 문서에서는 몇 가지 팁, 기능 및 기술 Xamarin.Mac에 최신 macOS 앱을 빌드하기 위해 개발자가 사용할 수에 대해 설명 합니다."
-ms.topic: article
+title: 최신 macOS 앱 빌드
+description: 이 문서에서는 몇 가지 팁, 기능 및 기술 Xamarin.Mac에 최신 macOS 앱을 빌드하기 위해 개발자가 사용할 수에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4eb4ff4a9e4784d816e2cbe8734e0422573cad92
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -436,7 +435,7 @@ A `CALayer` 개체와 같은 표시 되는 내용을 제어 하는 개발자 화
 
 #### <a name="redrawing-views-with-layers"></a>레이어를 사용 하 여 뷰를 다시 그리기
 
-레이어 백업 뷰를 사용 하 여 Xamarin.Mac 응용 프로그램에서을 설정할 때 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 의 `NSView` 를 `OnSetNeedsDisplay` 에 `NSViewController`합니다. 예:
+레이어 백업 뷰를 사용 하 여 Xamarin.Mac 응용 프로그램에서을 설정할 때 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 의 `NSView` 를 `OnSetNeedsDisplay` 에 `NSViewController`합니다. 예를 들어:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +636,7 @@ macOS 시에라 최신 향상 된 여러 운영 체제의 이전 버전에서 �
 
 ## <a name="table-view-enhancements"></a>테이블 보기의 향상 된 기능
 
-개발자는 새 항상 사용 해야 `NSView` 와 같은 컨테이너 뷰 컨트롤의 버전을 기반으로 `NSTableView`합니다. 예:
+개발자는 새 항상 사용 해야 `NSView` 와 같은 컨테이너 뷰 컨트롤의 버전을 기반으로 `NSTableView`합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -836,7 +835,7 @@ public override void ViewDidLoad ()
 
 여기서는 `Alignment` 및 `ImagePosition` 에 따라 설정 되 고 `UserInterfaceLayoutDirection` 컨트롤의 합니다.
 
-여러 새 편의 생성자를 추가 하는 macOS 시에라 (정적 통해 `CreateButton` 메서드) (예: 제목, 이미지 및 작업)의 여러 매개 변수를 사용 하 고 자동으로 올바르게 미러링하면 합니다. 예:
+여러 새 편의 생성자를 추가 하는 macOS 시에라 (정적 통해 `CreateButton` 메서드) (예: 제목, 이미지 및 작업)의 여러 매개 변수를 사용 하 고 자동으로 올바르게 미러링하면 합니다. 예를 들어:
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -853,7 +852,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 [![](modern-cocoa-apps-images/content11.png "어두운 Mac 창 UI의 예")](modern-cocoa-apps-images/content11.png#lightbox)
 
-이 창을 표시 하기 전에 한 줄의 코드를 추가 하 여 수행할 수 있습니다. 예:
+이 창을 표시 하기 전에 한 줄의 코드를 추가 하 여 수행할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -908,7 +907,7 @@ Apple에 시스템 모양을 사용 하기 위한 다음 제안 사항을:
 - 이 인해 UI 유연성 제한으로 하드 코딩 UI 구조적 dependancies를 하지 마십시오.
 - C#의 인터페이스를 사용 하 여 일반 데이터 dependancies 제공.
 
-Segue의 원본으로 사용 되는 보기 컨트롤러 재정의할 수는 `PrepareForSegue` 메서드와 초기화 (예: 데이터 전달)는 Segue 하기 전에 필요한 수행 대상 뷰-컨트롤러를 표시 하려면 실행 됩니다. 예:
+Segue의 원본으로 사용 되는 보기 컨트롤러 재정의할 수는 `PrepareForSegue` 메서드와 초기화 (예: 데이터 전달)는 Segue 하기 전에 필요한 수행 대상 뷰-컨트롤러를 표시 하려면 실행 됩니다. 예를 들어:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)

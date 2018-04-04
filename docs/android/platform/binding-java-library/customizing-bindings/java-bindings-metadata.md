@@ -1,18 +1,17 @@
 ---
-title: "Java 바인딩 메타 데이터"
-description: "Xamarin.Android에서 C# 코드에서 Java 기본 인터페이스 (JNI)를 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘은 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.Android 이러한 바인딩을 생성 하는 도구를 제공 합니다. 이 도구를 사용 하면 개발자의 제어를 사용 하면 프로시저가 네임 스페이스를 수정 및 멤버 이름 바꾸기와 같은 메타 데이터를 사용 하 여 바인딩을 만들어지는 방법이 있습니다. 이 문서에서는 메타 데이터의 작동 원리, 특성 메타 데이터를 요약, 지원 및이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는 방법을 설명 합니다."
-ms.topic: article
+title: Java 바인딩 메타 데이터
+description: Xamarin.Android에서 C# 코드에서 Java 기본 인터페이스 (JNI)를 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘은 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.Android 이러한 바인딩을 생성 하는 도구를 제공 합니다. 이 도구를 사용 하면 개발자의 제어를 사용 하면 프로시저가 네임 스페이스를 수정 및 멤버 이름 바꾸기와 같은 메타 데이터를 사용 하 여 바인딩을 만들어지는 방법이 있습니다. 이 문서에서는 메타 데이터의 작동 원리, 특성 메타 데이터를 요약, 지원 및이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타 데이터
 
@@ -246,7 +245,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>난독 처리
 
-Java 라이브러리를 난독 처리 하는 도구는 Xamarin.Android 바인딩 생성기 및 C# 래퍼 클래스를 생성 하는 기능과 방해할 수 있습니다. 난독 처리 된 클래스의 특성 포함: * 클래스 이름에는  **$** , 즉, **$.class** * 클래스 이름은 소문자, 즉, 손상 완전히  **a.class**
+Java 라이브러리를 난독 처리 하는 도구는 Xamarin.Android 바인딩 생성기 및 C# 래퍼 클래스를 생성 하는 기능과 방해할 수 있습니다. 난독 처리 된 클래스의 특성 포함: * 클래스 이름에는 **$**, 즉, **$.class** * 클래스 이름은 소문자, 즉, 손상 완전히  **a.class**
 
 이 조각은 "난독 처리 되지 않은" C# 형식을 생성 하는 방법의 예입니다.
 

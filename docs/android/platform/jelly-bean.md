@@ -1,18 +1,17 @@
 ---
-title: "젤리 Bean 기능"
-description: "이 문서는 Android 4.1에서 도입 된 개발자를 위한 새로운 기능의 높은 수준의 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한에 대 한 업데이트, 큰 파일을 공유할 Android 빔에 대 한 업데이트를 강화 합니다."
-ms.topic: article
+title: 젤리 Bean 기능
+description: '이 문서는 Android 4.1에서 도입 된 개발자를 위한 새로운 기능의 높은 수준의 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한에 대 한 업데이트, 큰 파일을 공유할 Android 빔에 대 한 업데이트를 강화 합니다.'
 ms.prod: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1d8068ccfc8d0f159a88704370261ec5f20d8b7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="jelly-bean-features"></a>젤리 Bean 기능
 

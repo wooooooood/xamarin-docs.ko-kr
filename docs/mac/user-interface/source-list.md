@@ -1,18 +1,17 @@
 ---
-title: "소스 목록"
-description: "이 문서에서는 소스 목록 Xamarin.Mac 응용 프로그램에서 사용 하 여 작업을 설명합니다. 만들기, Xcode 및 인터페이스 작성기에서 소스 목록을 유지 관리 및 C# 코드에서 상호 작용 하 설명 합니다."
-ms.topic: article
+title: 소스 목록
+description: 이 문서에서는 소스 목록 Xamarin.Mac 응용 프로그램에서 사용 하 여 작업을 설명합니다. 만들기, Xcode 및 인터페이스 작성기에서 소스 목록을 유지 관리 및 C# 코드에서 상호 작용 하 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8d3a67768b9e47833d1819c3bf44774a52d2438
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="source-lists"></a>소스 목록
 

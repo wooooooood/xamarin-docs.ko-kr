@@ -1,18 +1,17 @@
 ---
-title: "스토리 보드에는 소개"
-description: "이 문서에서는 Xamarin.Mac 앱에서 스토리 보드와 작업에 대해 소개 합니다. 스토리보드와 Xcode의 Interface Builder를 사용하여 앱의 UI를 만들고 유지 관리하는 내용을 다룹니다."
-ms.topic: article
+title: 스토리 보드에는 소개
+description: 이 문서에서는 Xamarin.Mac 앱에서 스토리 보드와 작업에 대해 소개 합니다. 스토리보드와 Xcode의 Interface Builder를 사용하여 앱의 UI를 만들고 유지 관리하는 내용을 다룹니다.
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5d69e1d11fb59afe3cdcbe11391af7eced733b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-storyboards"></a>스토리 보드에는 소개
 

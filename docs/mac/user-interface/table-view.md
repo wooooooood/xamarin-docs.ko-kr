@@ -1,18 +1,17 @@
 ---
-title: "테이블 뷰"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램에서 테이블 뷰를 사용 하는 작업을 설명합니다. Xcode 및 작성기 인터페이스 및 코드에서 상호 작용 하에서 만드는 테이블 뷰를 설명 합니다."
-ms.topic: article
+title: 테이블 뷰
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 테이블 뷰를 사용 하는 작업을 설명합니다. Xcode 및 작성기 인터페이스 및 코드에서 상호 작용 하에서 만드는 테이블 뷰를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4764a4babc9f6b06c7a9299feab1320971b0bf75
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="table-views"></a>테이블 뷰
 
@@ -581,7 +580,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 ## <a name="using-images-in-table-views"></a>표 보기에서 이미지를 사용 하 여
 
-에 있는 셀의 일부로 이미지를 포함 하는 `NSTableView`, 표 보기에서 데이터 반환 되는 방법을 변경 하려면 필요 합니다 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여는 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예:
+에 있는 셀의 일부로 이미지를 포함 하는 `NSTableView`, 표 보기에서 데이터 반환 되는 방법을 변경 하려면 필요 합니다 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여는 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들어:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)

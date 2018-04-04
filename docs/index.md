@@ -5,17 +5,17 @@ title: Xamarin 설명서
 description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다.
 featureFlags:
 - clicktale
-ms.openlocfilehash: d73b8165fc1a71fbfe3202f694c4653788ccfb28
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: de03c1bd1b7874e6a837fbbb9e88a353f19afca5
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="~/cross-platform/get-started/index.md">
+                <a href="~/xamarin-forms/get-started/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -80,10 +80,10 @@ ms.lasthandoff: 03/15/2018
                 <a href="#platforms">플랫폼</a>
                 <ul id="platforms">
                     <li>
-                        <a data-default="true" href="#Cross-Platform">플랫폼 간</a>
-                        <ul id="Cross-Platform" class="cardsC">
+                        <a data-default="true" href="#XamarinForms">Xamarin.Forms</a>
+                        <ul id="XamarinForms" class="cardsC">
                             <li>
-                                <a href="~/cross-platform/get-started/index.md">
+                                <a href="~/xamarin-forms/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -94,7 +94,7 @@ ms.lasthandoff: 03/15/2018
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>시작</h3>
-                                                    <p>Android, iOS, macOS, UWP 등에 적합한 Xamarin을 사용하여 데스크톱 및 모바일 플랫폼용 플랫폼 간 앱을 빌드할 수 있습니다.</p>
+                                                    <p>Xamarin.Forms를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,18 +102,18 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/cross-platform/app-fundamentals/index.md">
+                                <a href="~/xamarin-forms/app-fundamentals/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-forms-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>응용 프로그램 기본 사항</h3>
-                                                    <p>파일 처리, 이미지 등과 같은 기본적인 작업에 대한 공유 가능 코드 작성의 기본 사항에 대해 알아봅니다.</p>
+                                                    <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -121,18 +121,18 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/cross-platform/platform/index.md">
+                                <a href="~/xamarin-forms/user-interface/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="User Interface" src="~/media/index/xamarin-forms-ui.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>플랫폼 기능</h3>
-                                                    <p>FaceID 및 ARKit과 같은 플랫폼별 기능 작업 및 iOS의 최신 추가 기능입니다.</p>
+                                                    <h3>사용자 인터페이스</h3>
+                                                    <p>Android, iOS 및 Windows에서 사용 가능한 UI 컨트롤에 대해 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -140,7 +140,45 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/cross-platform/deploy-test/index.md">
+                                <a href="~/xamarin-forms/xaml/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Xamarin.Forms XAML" src="~/media/index/xamarin-forms-xaml.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>XAML</h3>
+                                                    <p>XAML을 통해 플랫폼 간 사용자 인터페이스를 선언적으로 제공합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/platform/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Platform Features" src="~/media/index/xamarin-forms-platform-features.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>플랫폼 기능</h3>
+                                                    <p>Android, iOS 및 Windows에서의 플랫폼별 기능 작업입니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/deploy-test/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -151,7 +189,7 @@ ms.lasthandoff: 03/15/2018
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>배포 및 테스트</h3>
-                                                    <p>다중 플랫폼용 앱을 빌드하고 배포합니다.</p>
+                                                    <p>앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -159,18 +197,18 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/cross-platform/internals/index.md">
+                                <a href="~/xamarin-forms/internals/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-cross-platform-advanced-topics.svg?branch=master" data-linktype="external">
+                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-forms-internals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>고급 개념 및 내부 요소</h3>
-                                                    <p>Xamarin 내부 요소에 대한 추가 정보 및 지역화와 액세스 가능성 등의 기능에 대한 도움말입니다.</p>
+                                                    <p>Xamarin.Forms의 작동 방법입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -178,7 +216,26 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/cross-platform/samples/index.yml">
+                                <a href="~/xamarin-forms/data-cloud/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Data and Cloud Services" src="~/media/index/xamarin-forms-data-cloud.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>데이터 및 클라우드 서비스</h3>
+                                                    <p>데이터 저장소 및 Microsoft Azure와 같은 클라우드 서비스에 액세스합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/samples/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -188,8 +245,46 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>샘플</h3>
-                                                    <p>Xamarin을 사용하는 플랫폼 간 미리 빌드된 앱입니다.</p>
+                                                    <h3>샘플 앱</h3>
+                                                    <p>Android, iOS 및 Windows에서 실행되는 완전한 Xamarin.Forms용 앱 및 코드 데모입니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Mobile Apps Book" src="~/media/index/xamarin-forms-ebook.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>모바일 앱 책</h3>
+                                                    <p>이 도서 및 샘플을 통해 Xamarin.Forms를 단계별로 알아봅니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/xamarin-forms/enterprise-application-patterns/index.md">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter x-hidden-focus">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img alt="Enterprise Patterns eBook" src="~/media/index/xamarin-forms-enterprise.svg?branch=master" data-linktype="external">
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>엔터프라이즈 전자책</h3>
+                                                    <p>조정, 유지 관리 및 테스트할 수 있는 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발하는 데 유용한 아키텍처 지침입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +345,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>사용자 인터페이스</h3>
+                                                    <h3>Android 사용자 인터페이스</h3>
                                                     <p>Android에서 사용할 수 있는 사용자 인터페이스 위젯의 전체 집합에 대해 알아봅니다.</p>
                                                 </div>
                                             </div>
@@ -269,7 +364,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>플랫폼 기능</h3>
+                                                    <h3>Android 플랫폼 기능</h3>
                                                     <p>플랫폼별 기능 작업 및 Android의 최신 추가 기능입니다.</p>
                                                 </div>
                                             </div>
@@ -388,7 +483,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>시작</h3>
+                                                    <h3>iOS 시작</h3>
                                                     <p>Xamarin.iOS를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
                                                 </div>
                                             </div>
@@ -426,7 +521,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>사용자 인터페이스</h3>
+                                                    <h3>iOS 사용자 인터페이스</h3>
                                                     <p>iOS에서 사용할 수 있는 UIKit 컨트롤을 모두 알아봅니다.</p>
                                                 </div>
                                             </div>
@@ -445,7 +540,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>플랫폼 기능</h3>
+                                                    <h3>iOS 플랫폼 기능</h3>
                                                     <p>FaceID 및 ARKit과 같은 플랫폼별 기능 작업 및 iOS의 최신 추가 기능입니다.</p>
                                                 </div>
                                             </div>
@@ -583,7 +678,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>시작</h3>
+                                                    <h3>Mac 시작</h3>
                                                     <p>Xamarin.Mac을 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
                                                 </div>
                                             </div>
@@ -621,7 +716,7 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>사용자 인터페이스</h3>
+                                                    <h3>Mac 사용자 인터페이스</h3>
                                                     <p>macOS에서 사용할 수 있는 완전한 AppKit 컨트롤 집합에 대해 알아봅니다.</p>
                                                 </div>
                                             </div>
@@ -636,11 +731,11 @@ ms.lasthandoff: 03/15/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-mac-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Mac Platform Features" src="~/media/index/xamarin-mac-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>플랫폼 기능</h3>
+                                                    <h3>Mac 플랫폼 기능</h3>
                                                     <p>플랫폼별 기능 작업 및 macOS의 최신 추가 기능입니다.</p>
                                                 </div>
                                             </div>
@@ -708,10 +803,10 @@ ms.lasthandoff: 03/15/2018
                         </ul>
                     </li>
                     <li>
-                        <a data-default="true" href="#XamarinForms">Xamarin.Forms</a>
-                        <ul id="XamarinForms" class="cardsC">
+                        <a data-default="true" href="#Cross-Platform">플랫폼 간</a>
+                        <ul id="Cross-Platform" class="cardsC">
                             <li>
-                                <a href="~/xamarin-forms/get-started/index.md">
+                                <a href="~/cross-platform/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -722,7 +817,7 @@ ms.lasthandoff: 03/15/2018
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>시작</h3>
-                                                    <p>Xamarin.Forms를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
+                                                    <p>Android, iOS, macOS, UWP 등에 적합한 Xamarin을 사용하여 데스크톱 및 모바일 플랫폼용 플랫폼 간 앱을 빌드할 수 있습니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -730,18 +825,18 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/app-fundamentals/index.md">
+                                <a href="~/cross-platform/app-fundamentals/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-forms-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>응용 프로그램 기본 사항</h3>
-                                                    <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
+                                                    <p>파일 처리, 이미지 등과 같은 기본적인 작업에 대한 공유 가능 코드 작성의 기본 사항에 대해 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -749,56 +844,18 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/user-interface/index.md">
+                                <a href="~/cross-platform/platform/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="User Interface" src="~/media/index/xamarin-forms-ui.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>사용자 인터페이스</h3>
-                                                    <p>지원되는 플랫폼에서 사용 가능한 UI 컨트롤에 대해 알아봅니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/xaml/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Xamarin.Forms XAML" src="~/media/index/xamarin-forms-xaml.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>XAML</h3>
-                                                    <p>XAML을 통해 플랫폼 간 사용자 인터페이스를 선언적으로 제공합니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/platform/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-forms-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>플랫폼 기능</h3>
-                                                    <p>Android, iOS 및 Windows에서의 플랫폼별 기능 작업입니다.</p>
+                                                    <p>FaceID 및 ARKit과 같은 플랫폼별 기능 작업 및 iOS의 최신 추가 기능입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -806,7 +863,7 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/deploy-test/index.md">
+                                <a href="~/cross-platform/deploy-test/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -817,7 +874,7 @@ ms.lasthandoff: 03/15/2018
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>배포 및 테스트</h3>
-                                                    <p>앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다.</p>
+                                                    <p>다중 플랫폼용 앱을 빌드하고 배포합니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -825,45 +882,7 @@ ms.lasthandoff: 03/15/2018
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/internals/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Advanced Concepts and Internals" src="~/media/index/xamarin-forms-internals.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>고급 개념 및 내부 요소</h3>
-                                                    <p>Xamarin.Forms의 작동 방법입니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/data-cloud/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Data and Cloud Services" src="~/media/index/xamarin-forms-data-cloud.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>데이터 및 클라우드 서비스</h3>
-                                                    <p>데이터 저장소 및 클라우드 서비스에 액세스합니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/samples/index.yml">
+                                <a href="~/cross-platform/samples/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -873,46 +892,8 @@ ms.lasthandoff: 03/15/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>샘플 앱</h3>
-                                                    <p>Android, iOS 및 Windows에서 실행되는 완전한 Xamarin.Forms용 앱 및 코드 데모입니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Mobile Apps Book" src="~/media/index/xamarin-forms-ebook.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>모바일 앱 책</h3>
-                                                    <p>이 도서 및 샘플을 통해 Xamarin.Forms를 단계별로 알아봅니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="~/xamarin-forms/enterprise-application-patterns/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter x-hidden-focus">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img alt="Enterprise Patterns eBook" src="~/media/index/xamarin-forms-enterprise.svg?branch=master" data-linktype="external">
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>엔터프라이즈 전자책</h3>
-                                                    <p>조정, 유지 관리 및 테스트할 수 있는 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발하는 데 유용한 아키텍처 지침입니다.</p>
+                                                    <h3>샘플</h3>
+                                                    <p>Xamarin을 사용하는 플랫폼 간 미리 빌드된 앱입니다.</p>
                                                 </div>
                                             </div>
                                         </div>

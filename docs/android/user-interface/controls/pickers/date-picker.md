@@ -1,18 +1,17 @@
 ---
-title: "날짜 선택"
-description: "DatePickerDialog 및 DialogFragment를 사용 하 여 달력 날짜를 선택 합니다."
-ms.topic: article
+title: 날짜 선택
+description: DatePickerDialog 및 DialogFragment를 사용 하 여 달력 날짜를 선택 합니다.
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: b62af404ce0d3f5dacc479682a3002af49e968d1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 916a9c74fa28b99e799eef80db822e86cfda617d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="date-picker"></a>날짜 선택
 

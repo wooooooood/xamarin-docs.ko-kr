@@ -1,18 +1,17 @@
 ---
-title: "Nougat 기능"
-description: "Xamarin.Android를 사용 하 여 Nougat Android 용 앱 개발을 시작 하는 방법입니다."
-ms.topic: article
+title: Nougat 기능
+description: Xamarin.Android를 사용 하 여 Nougat Android 용 앱 개발을 시작 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c666b7d5b680eab3c990950569868eacdb6f30af
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="nougat-features"></a>Nougat 기능
 
@@ -56,7 +55,7 @@ Android Nougat 다른 많은 향상 된 기능을 제공 하는 또한 이동 �
 -   **Java 개발자 키트** &ndash; Xamarin Android 7.0 개발 시 필요한 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 또는 24 API 수준에 대 한 개발 하는 경우 이후 이상 (JDK 8 API에서는 수준을 지원 24 보다 이전 버전). JDK 8의 64 비트 버전은 사용자 지정 컨트롤 또는 양식 미리 보기를 사용 하는 경우에 필요 합니다.
 
 > [!IMPORTANT]
-> Xamarin.Android는 JDK 9를 지원 하지 않습니다.
+> Xamarin.Android는 JDK 9를 지원하지 않습니다.
 
 응용 프로그램 다시 작성 해야 Xamarin C6SR4 이상 안정적으로 Android Nougat 작업할 note 합니다. Android Nougat에만 연결할 수 있으므로 [NDK 제공 하는 네이티브 라이브러리](https://developer.android.com/about/versions/nougat/android-7.0-changes.html), 같은 라이브러리를 사용 하 여 기존 앱 **Mono.Data.Sqlite.dll** 그렇지 않은 경우 제대로 Nougat Android에서 실행 중인 경우 충돌이 발생할 수 있음 다시 작성합니다.
 
@@ -150,7 +149,7 @@ Android Nougat 다양 한 새로운 기능과 다중 창을 지원, 알림 향�
 
 [![세로 및 가로의 다중 창 모드에서 실행 되는 예제 앱](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-Xamarin.Android 앱의 활동을 다중 창 모드를 지원 하는 방법을 구성할 수 있습니다. 예를 들어 다중 창 모드로 최소 크기 및 기본 높이 응용 프로그램의 너비를 설정 하는 특성을 구성할 수 있습니다. 새 사용할 수 있습니다 `Activity.IsInMultiWindowMode` 다중 창 모드로 작업 인지 확인 하는 속성입니다. 예:
+Xamarin.Android 앱의 활동을 다중 창 모드를 지원 하는 방법을 구성할 수 있습니다. 예를 들어 다중 창 모드로 최소 크기 및 기본 높이 응용 프로그램의 너비를 설정 하는 특성을 구성할 수 있습니다. 새 사용할 수 있습니다 `Activity.IsInMultiWindowMode` 다중 창 모드로 작업 인지 확인 하는 속성입니다. 예를 들어:
 
 ```csharp
 if (!IsInMultiWindowMode) {

@@ -1,18 +1,17 @@
 ---
-title: "계층적 탐색"
-description: "NavigationPage 클래스에는 사용자가을 앞으로 및 뒤로 필요에 따라 페이지를 탐색할 수 계층적 탐색 환경을 제공 합니다. 클래스는 페이지 개체 lifo (후입선출) 방식으로 스택에서으로 탐색을 구현합니다. 이 문서에서 페이지의 스택을 탐색을 수행 하는 NavigationPage 클래스를 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 계층적 탐색
+description: NavigationPage 클래스에는 사용자가을 앞으로 및 뒤로 필요에 따라 페이지를 탐색할 수 계층적 탐색 환경을 제공 합니다. 클래스는 페이지 개체 lifo (후입선출) 방식으로 스택에서으로 탐색을 구현합니다. 이 문서에서 페이지의 스택을 탐색을 수행 하는 NavigationPage 클래스를 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 95fc958beb71cba8f4d575eaa96d0612aa458966
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 

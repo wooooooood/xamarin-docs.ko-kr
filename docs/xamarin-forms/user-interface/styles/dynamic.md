@@ -1,18 +1,17 @@
 ---
-title: "동적 스타일"
-description: "스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기간 동안 변경 되지 않습니다. 예를 들어 스타일에 시각적 요소, Setter 인스턴스 중 하나가 수정, 제거 또는 추가 된 새로운 Setter 인스턴스를 할당 한 후 시각적 요소에 변경 내용이 적용 되지 않습니다. 그러나 응용 프로그램 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경 내용에 응답할 수 있습니다."
-ms.topic: article
+title: 동적 스타일
+description: 스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기간 동안 변경 되지 않습니다. 예를 들어 스타일에 시각적 요소, Setter 인스턴스 중 하나가 수정, 제거 또는 추가 된 새로운 Setter 인스턴스를 할당 한 후 시각적 요소에 변경 내용이 적용 되지 않습니다. 그러나 응용 프로그램 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경 내용에 응답할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c484bdc90ec039a8d70209deabbe283cf7100610
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dynamic-styles"></a>동적 스타일
 

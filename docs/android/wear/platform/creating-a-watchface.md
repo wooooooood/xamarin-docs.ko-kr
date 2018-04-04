@@ -1,18 +1,17 @@
 ---
-title: "Watch 화면 만들기"
-description: "이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼굴 서비스를 구현 하는 방법을 설명 합니다. 더 많은 코드를 아날로그 스타일 watch 화면을 만들려면 다음을 디지털 조사식 얼굴 서비스를 훼손는 구축 하기 위한 단계별 지침이 제공 됩니다."
-ms.topic: article
+title: Watch 화면 만들기
+description: 이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼굴 서비스를 구현 하는 방법을 설명 합니다. 더 많은 코드를 아날로그 스타일 watch 화면을 만들려면 다음을 디지털 조사식 얼굴 서비스를 훼손는 구축 하기 위한 단계별 지침이 제공 됩니다.
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02755cc3ff5b46a5a97b6c14185794d8ad538d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-watch-face"></a>Watch 화면 만들기
 

@@ -1,18 +1,17 @@
 ---
-title: "지도에 순환 영역을 강조 표시"
-description: "이 문서 순환 오버레이 순환 지도의 영역을 강조 표시 하는 지도를 추가 하는 방법을 설명 합니다."
-ms.topic: article
+title: 지도에 순환 영역을 강조 표시
+description: 이 문서 순환 오버레이 순환 지도의 영역을 강조 표시 하는 지도를 추가 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0eef31c5b9a93154b1038ffa63ee560bd738fe6b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a70c8fdca457e386a1490ca974e1a1ea5da2f6db
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>지도에 순환 영역을 강조 표시
 
@@ -311,5 +310,5 @@ namespace MapOverlay.UWP
 ## <a name="related-links"></a>관련 링크
 
 - [순환 맵 Ovlerlay (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
-- [지도 핀을 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [지도 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

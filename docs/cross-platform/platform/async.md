@@ -1,18 +1,17 @@
 ---
-title: "비동기 개요"
-description: "최신 버전의 C# 언어-버전 5 – 비동기 작업을 표현 하는 두 개의 새 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다."
-ms.topic: article
+title: 비동기 개요
+description: '최신 버전의 C# 언어-버전 5 – 비동기 작업을 표현 하는 두 개의 새 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -88,7 +87,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 취소에 대 한 자세한 내용은 참조 [비동기 작업을 취소 하는 방법을](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx) msdn 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다운로드는 [예제 Xamarin 솔루션을](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (에 대 한 iOS 및 Android)의 작업 예제를 보려면 `async` 및 `await` 모바일 앱에서 합니다. 예제 코드는이 섹션에서 자세히 설명 합니다.
 

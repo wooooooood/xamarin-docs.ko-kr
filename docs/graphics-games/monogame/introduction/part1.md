@@ -1,18 +1,17 @@
 ---
-title: "크로스 플랫폼 MonoGame 만들기-1 부"
-description: "이 연습에서는 MonoGame를 사용 하 여 Android 및 iOS에 대 한 새 프로젝트를 만드는 방법을 보여 줍니다. 결과 각 플랫폼에 대 한 프로젝트와 플랫폼 간 공유 코드 프로젝트를 사용 하 여 Mac 솔루션에 대 한 Visual Studio입니다. 이 프로젝트에는 실행 때 빈 파란색 화면을 표시 됩니다."
-ms.topic: article
+title: 크로스 플랫폼 MonoGame 만들기-1 부
+description: 이 연습에서는 MonoGame를 사용 하 여 Android 및 iOS에 대 한 새 프로젝트를 만드는 방법을 보여 줍니다. 결과 각 플랫폼에 대 한 프로젝트와 플랫폼 간 공유 코드 프로젝트를 사용 하 여 Mac 솔루션에 대 한 Visual Studio입니다. 이 프로젝트에는 실행 때 빈 파란색 화면을 표시 됩니다.
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0d1352b4129dc1cf8be42e813787b9b73f80cd3e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cd12f23f8cb269b2a41a08bf641db08e18fb82b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>크로스 플랫폼 MonoGame 만들기-1 부
 
@@ -32,7 +31,7 @@ MonoGame에 추가할 수는 추가 기능으로 Visual Studio Mac.에 대 한 M
 ![](part1-images/image2.png "갤러리 탭을 선택, 게임 개발 범주를 확장 하 고 MonoGame 추가 기능을 선택한 다음 설치를 클릭")
 
 > [!IMPORTANT]
-> **참고**: 경우는 **게임 개발** 섹션이 추가 기능 관리자에 표시 되지 않으면, 수동으로 다운로드 하 고 여기에서 최신 버전을 설치할 수 있습니다: http://www.monogame.net/downloads/ 합니다. 표시할 템플릿에 대 한 Mac 용 Visual Studio를 다시 시작 해야 합니다.
+> **참고**: 경우는 **게임 개발** 섹션이 추가 기능 관리자에 표시 되지 않으면, 수동으로 다운로드 하 고 여기에서 최신 버전을 설치할 수 있습니다: http://www.monogame.net/downloads/합니다. 표시할 템플릿에 대 한 Mac 용 Visual Studio를 다시 시작 해야 합니다.
 
 
 

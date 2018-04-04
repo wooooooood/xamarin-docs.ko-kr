@@ -1,20 +1,19 @@
 ---
-title: Mac Api
-description: "이 문서를 Objective-c 선택기를 읽는 방법 및 해당 C# 메서드를 찾는 방법을 설명 합니다."
-ms.topic: article
+title: Mac API
+description: 이 문서를 Objective-c 선택기를 읽는 방법 및 해당 C# 메서드를 찾는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/02/2017
-ms.openlocfilehash: 724edb7d23a5be5d790b43b81486d60c06df60bf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0344fecb9a8d64a680bb11689f56cf074d952f4e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="mac-apis"></a>Mac Api
+# <a name="mac-apis"></a>Mac API
 
 ## <a name="overview"></a>개요
 

@@ -1,18 +1,17 @@
 ---
-title: "통합된 API"
-description: "새 스타일 API 쉽게 그 어느 때 보다 Mac 및 iOS로 있도록 동일한 32와 64 비트 응용 프로그램을 지원 하기 위해 이진 사이 코드를 공유할 수 있습니다."
-ms.topic: article
+title: 통합된 API
+description: 새 스타일 API 쉽게 그 어느 때 보다 Mac 및 iOS로 있도록 동일한 32와 64 비트 응용 프로그램을 지원 하기 위해 이진 사이 코드를 공유할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c31b6e25350089874b5baf868dfe19e12ab4d531
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d0ad5b08aaf5e7b14f75611a28d389e3f7e0477c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-api"></a>통합된 API
 

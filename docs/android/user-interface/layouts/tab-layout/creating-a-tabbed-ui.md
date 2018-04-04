@@ -1,18 +1,17 @@
 ---
-title: "연습-TabHost를 사용 하 여 탭된 UI 만들기"
-description: "이 문서에서는 Xamarin.Android TabHost API를 사용 하 여 탭된 UI를 만드는 과정을 안내 합니다."
-ms.topic: article
+title: 연습-TabHost를 사용 하 여 탭된 UI 만들기
+description: 이 문서에서는 Xamarin.Android TabHost API를 사용 하 여 탭된 UI를 만드는 과정을 안내 합니다.
 ms.prod: xamarin
 ms.assetid: AD6E2173-974E-477C-940F-0CAB5E53326D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca9a3f3d31707205cdcd4e0d8e74fa303ccba047
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>연습-TabHost를 사용 하 여 탭된 UI 만들기
 

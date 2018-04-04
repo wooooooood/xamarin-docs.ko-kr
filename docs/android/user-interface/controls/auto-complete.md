@@ -1,17 +1,16 @@
 ---
-title: "자동 완성"
-ms.topic: article
+title: 자동 완성
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 333264e65e814ad73eabeb7be55abb320400a59a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="auto-complete"></a>자동 완성
 
@@ -160,7 +159,7 @@ static string[] COUNTRIES = new string[] {
 
 ## <a name="more-information"></a>추가 정보
 
-이때 하드 코드 된 문자열 배열을 사용 하 여 적절 하지 않습니다는 권장 되는 디자인 응용 프로그램 코드 동작 하지 콘텐츠에 초점을 맞추어야 합니다. 문자열과 같은 응용 프로그램 콘텐츠는 콘텐츠를 수정 내용을 더 쉽게 및 콘텐츠 지역화를 용이 하 게 하는 코드에서 표면화 될 해야 합니다. 하드 코드 된 문자열은 간단 하 게 만들고에 집중에이 자습서에 사용 되는 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 이를 수행할 수 있습니다는 `<string-array>` 프로젝트 자원에에서 `res/values/strings.xml` 파일입니다. 예:
+이때 하드 코드 된 문자열 배열을 사용 하 여 적절 하지 않습니다는 권장 되는 디자인 응용 프로그램 코드 동작 하지 콘텐츠에 초점을 맞추어야 합니다. 문자열과 같은 응용 프로그램 콘텐츠는 콘텐츠를 수정 내용을 더 쉽게 및 콘텐츠 지역화를 용이 하 게 하는 코드에서 표면화 될 해야 합니다. 하드 코드 된 문자열은 간단 하 게 만들고에 집중에이 자습서에 사용 되는 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 이를 수행할 수 있습니다는 `<string-array>` 프로젝트 자원에에서 `res/values/strings.xml` 파일입니다. 예를 들어:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

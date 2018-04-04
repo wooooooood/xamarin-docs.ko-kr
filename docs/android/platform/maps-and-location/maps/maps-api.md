@@ -1,17 +1,16 @@
 ---
-title: "지도 API"
-ms.topic: article
+title: 지도 API
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fc16178a4068b2dcf22fc19047e0ef403e83633f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps-api"></a>지도 API
 
@@ -207,7 +206,7 @@ Google 재생 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 �
 프로그래밍 방식으로 추가 하는 `MapFragment`, 활동 구현 해야 합니다는 `IOnMapReadyCallback` 인터페이스입니다. 때문에의 초기화는 `GoogleMap` 개체에 따라 Google Play와 통신 하는 API를 완료 하려면 다소 시간이 걸릴 수 있습니다, 응용 프로그램에 알립니다. 콜백을 제공 해야 때는 `GoogleMap` 준비 합니다.
 
 첫째, 추가 `IOnMapReadyCallback` 에 `Activity` 클래스 선언 합니다.
-예:
+예를 들어:
 
 ```csharp
 public class MapWithMarkersActivity : Activity, IOnMapReadyCallback
@@ -232,7 +231,7 @@ if (_mapFragment == null)
 _mapFragment.GetMapAsync(this);
 ```
 
-A `GoogleMap` 를 사용 하 여 획득 해야 `GetMapAsync`끝 이전 코드 예제에 표시 된 것 처럼 &ndash; 지도 시스템과 뷰에 자동으로 초기화 합니다. (참고가이 메서드를 사용 하지 않는 `await` / `async` 의미 체계 &ndash; 는 `Async` Android에서 동작을 구현 합니다.) 경우는 `GoogleMap` 개체 준비 되 면 Android 앱의 호출 `OnMapReady` 메서드 (의 일부로 구현 해야 하는 `IOnMapReadyCallback` 인터페이스). 예:
+A `GoogleMap` 를 사용 하 여 획득 해야 `GetMapAsync`끝 이전 코드 예제에 표시 된 것 처럼 &ndash; 지도 시스템과 뷰에 자동으로 초기화 합니다. (참고가이 메서드를 사용 하지 않는 `await` / `async` 의미 체계 &ndash; 는 `Async` Android에서 동작을 구현 합니다.) 경우는 `GoogleMap` 개체 준비 되 면 Android 앱의 호출 `OnMapReady` 메서드 (의 일부로 구현 해야 하는 `IOnMapReadyCallback` 인터페이스). 예를 들어:
 
 ```csharp
 public void OnMapReady (GoogleMap map)

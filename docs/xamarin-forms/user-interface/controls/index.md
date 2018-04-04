@@ -1,18 +1,17 @@
 ---
-title: "컨트롤 참조"
-description: "Xamarin.Forms 응용 프로그램을 생성 하는 데 사용 되 고 모든 시각적 요소에 대 한 설명"
-ms.topic: article
+title: 컨트롤 참조
+description: Xamarin.Forms 응용 프로그램을 생성 하는 데 사용 되 고 모든 시각적 요소에 대 한 설명
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: e1e6234f0eadcbcbecc8d58a4774db88606be290
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a9fb90794ec74c46019fd2b4f41d90a2635909cd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 

@@ -1,18 +1,17 @@
 ---
-title: "통합 된 스토리 보드"
-description: "통합 된 스토리 보드를 사용 하는 iOS 장치 화면 크기의 확장 범위를 포함 하려면 여러 스토리 보드를 사용 하지 않고 단일 스토리 보드를 사용 하 여 사용자 인터페이스를 만들려면 개발자 있습니다. 이 문서는 Xamarin.iOS 내에서 통합 된 스토리 보드의 작업으로 깊은 개요를 제공 하도록 설계 되었습니다."
-ms.topic: article
+title: 통합 된 스토리 보드
+description: 통합 된 스토리 보드를 사용 하는 iOS 장치 화면 크기의 확장 범위를 포함 하려면 여러 스토리 보드를 사용 하지 않고 단일 스토리 보드를 사용 하 여 사용자 인터페이스를 만들려면 개발자 있습니다. 이 문서는 Xamarin.iOS 내에서 통합 된 스토리 보드의 작업으로 깊은 개요를 제공 하도록 설계 되었습니다.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-storyboards"></a>통합 된 스토리 보드
 
@@ -680,7 +679,7 @@ IPad 시뮬레이터에서에서 응용 프로그램이 실행 되는 요소는 
 
  [![](unified-storyboards-images/exclude05.png "누락 된 경우 요소 iPhone 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude05.png#lightbox)
 
-요소에서 제외 사례를 제거 하려면에서 요소를 선택 하기만 하면는 **디자인 화면**의 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는  **-** 제거 하는 경우 옆에 있는 단추입니다.
+요소에서 제외 사례를 제거 하려면에서 요소를 선택 하기만 하면는 **디자인 화면**의 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는 **-**제거 하는 경우 옆에 있는 단추입니다.
 
 통합 된 스토리 보드의 구현을 보려면는 `UnifiedStoryboard` 샘플 Xamarin iOS 8 응용 프로그램에이 문서에 연결 합니다.
 

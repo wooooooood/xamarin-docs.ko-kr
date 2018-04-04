@@ -1,17 +1,16 @@
 ---
-title: "트랜잭션 및 확인"
-ms.topic: article
+title: 트랜잭션 및 확인
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transactions-and-verification"></a>트랜잭션 및 확인
 
@@ -212,7 +211,7 @@ public override void RestoreCompletedTransactionsFailedWithError (SKPaymentQueue
 }
 ```
 
-HTTP POST를 JSON [https://buy.itunes.apple.com/verifyReceipt](https://buy.itunes.apple.com/verifyReceipt) 프로덕션 또는 [https://sandbox.itunes.apple.com/verifyReceipt](https://sandbox.itunes.apple.com/verifyReceipt) 테스트 합니다.   
+HTTP POST를 JSON [ https://buy.itunes.apple.com/verifyReceipt ](https://buy.itunes.apple.com/verifyReceipt) 프로덕션 또는 [ https://sandbox.itunes.apple.com/verifyReceipt ](https://sandbox.itunes.apple.com/verifyReceipt) 테스트 합니다.   
    
  JSON 응답 다음 키가 포함 됩니다.
 

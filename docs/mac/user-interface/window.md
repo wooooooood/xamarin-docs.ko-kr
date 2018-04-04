@@ -1,18 +1,17 @@
 ---
 title: Windows
 description: 이 문서에서는 windows와 패널 Xamarin.Mac 응용 프로그램에서 작업을 수행 합니다. 만드는 창과 Xcode 및 스토리 보드와.xib 파일에서 로드 하기 및 이러한 작업을 프로그래밍 방식으로 인터페이스 작성기의 패널을 설명 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
-ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
+ms.openlocfilehash: f45bc69b74d98c7b9130f2caeaee91b184c38d87
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="windows"></a>Windows
 

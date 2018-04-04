@@ -1,18 +1,17 @@
 ---
-title: "바인딩 문제 해결"
-description: "이 가이드는 Objective C 라이브러리 바인딩 문제가 있을 경우 수행할 작업을 설명 합니다."
-ms.topic: article
+title: 바인딩 문제 해결
+description: 이 가이드는 Objective C 라이브러리 바인딩 문제가 있을 경우 수행할 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: 2db7fe30f05224f6b74b4d2189606da59946bda0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ea3e3802ec2e0baf0fe8355a41e806bacabc9ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-troubleshooting"></a>바인딩 문제 해결
 
@@ -45,15 +44,15 @@ Xamarin 작동 높은 수 있도록 하는 동안 품질 및 Apple Api에 대 �
 
 여러분의 의견은 소중 합니다. Xamarin.Mac 문제가 있는지 확인 하는 경우:
 
-- 확인 된 [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/mac)
-- 검색 된 [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 
-- GitHub 문제를 전환 하기 전에 Xamarin 문제에서 추적 된 [: Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)합니다. 문제 일치에 대 한 있습니다를 검색 해 보십시오.
-- 일치 하는 문제를 찾을 수 없는 경우에 새 문제를 제출 하세요는 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)합니다.
+- [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/mac) 확인
+- [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색 
+- GitHub 문제로 전환하기 전에 Xamarin 문제가 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)에서 추적되었습니다. 여기서 일치하는 문제를 검색해 보세요.
+- 일치하는 문제를 찾을 수 없는 경우 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 제출하세요.
 
-GitHub 문제는 모든 공용입니다. 설명 또는 첨부 파일을 숨기려고 하는 것이 불가능 합니다. 
+GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다. 
 
-다음을 가능한 많이 포함 하세요.
+다음 정보를 가능한 많이 포함하세요.
 
-- 이 문제를 재현 하는 간단한 예제입니다. 이 **매우 유용한** 가능 합니다. 
-- 크래시의 전체 스택 추적입니다.
-- C# 코드 주변 충돌 합니다. 
+- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**. 
+- 크래시의 전체 스택 추적.
+- 크래시 주변의 C# 코드. 

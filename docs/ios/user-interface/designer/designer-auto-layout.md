@@ -1,18 +1,17 @@
 ---
-title: "IOS 용 Xamarin 디자이너로 자동 레이아웃"
-description: "이 가이드에서는 iOS 자동 레이아웃 및 iOS에 대 한 Xamarin 디자이너에서 사용할 수 있는 새 제약 조건 워크플로 소개합니다."
-ms.topic: article
+title: IOS 용 Xamarin 디자이너로 자동 레이아웃
+description: 이 가이드에서는 iOS 자동 레이아웃 및 iOS에 대 한 Xamarin 디자이너에서 사용할 수 있는 새 제약 조건 워크플로 소개합니다.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너로 자동 레이아웃
 

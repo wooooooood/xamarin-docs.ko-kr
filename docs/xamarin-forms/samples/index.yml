@@ -1,23 +1,23 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: "Xamarin.Forms 샘플"
+title: Xamarin.Forms 샘플
 metadata:
-  description: "모바일 개발자를 위한 Xamarin.Forms 샘플 앱 및 코드 데모입니다."
+  description: 모바일 개발자를 위한 Xamarin.Forms 샘플 앱 및 코드 데모입니다.
   author: conceptdev
   ms.author: crdun
   ms.date: 02/17/2018
-  ms.topic: article
-  ms.openlocfilehash: 2cd0a8019df09c8da0f19812b5217bcad5f0c2e9
-  ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+  ms.topic: sample
+  ms.openlocfilehash: 9a30de76dcdf1fc9c286f3511695e1468d6bfe0a
+  ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2018
+  ms.lasthandoff: 04/04/2018
 abstract:
-  description: "Xamarin.Forms를 시작하고 개념을 이해하는 데 유용한 Xamarin.Forms 샘플 앱 및 코드 데모입니다."
+  description: Xamarin.Forms를 시작하고 개념을 이해하는 데 유용한 Xamarin.Forms 샘플 앱 및 코드 데모입니다.
   menu:
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      text: "모든 Xamarin.Forms 샘플"
+      text: 모든 Xamarin.Forms 샘플
 sections:
 - title: 
   items:
@@ -26,44 +26,44 @@ sections:
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 응용 프로그램을 보여줍니다."
+      html: 이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 응용 프로그램을 보여줍니다.
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: Todo
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "기존의 익숙한 게임에 새로운 요소가 추가되었습니다. 눈금이 표시된 9x9 바둑판식 타일에 10개의 버그가 숨어있습니다. 게임에서 승리하려면 10개의 버그를 모두 찾아 플래그를 지정해야 합니다."
+      html: 기존의 익숙한 게임에 새로운 요소가 추가되었습니다. 눈금이 표시된 9x9 바둑판식 타일에 10개의 버그가 숨어있습니다. 게임에서 승리하려면 10개의 버그를 모두 찾아 플래그를 지정해야 합니다.
       image:
         src: images/bugsweeper.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
       title: BugSweeper
     - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: "RPN(역폴란드 표기법) 계산기를 사용하여 괄호 또는 등호 키 없이 숫자와 연산을 입력할 수 있습니다."
+      html: RPN(역폴란드 표기법) 계산기를 사용하여 괄호 또는 등호 키 없이 숫자와 연산을 입력할 수 있습니다.
       image:
         src: images/rpncalc.png
         href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      title: "RPN 계산기"
+      title: RPN 계산기
     - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "이 프로그램은 손가락을 터치하고 이동하여 그림을 그릴 수 있는 회전 디스크를 시뮬레이트합니다. SpinPaint는 손가락 아래에 선을 그리며 터치에 응답합니다. 또한 해당 선을 3개의 디스크 사분면에 3개의 미러 이미지로 복제하기도 합니다."
+      html: 이 프로그램은 손가락을 터치하고 이동하여 그림을 그릴 수 있는 회전 디스크를 시뮬레이트합니다. SpinPaint는 손가락 아래에 선을 그리며 터치에 응답합니다. 또한 해당 선을 3개의 디스크 사분면에 3개의 미러 이미지로 복제하기도 합니다.
       image:
         src: images/spinpaint.png
         href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
       title: SpinPaint
     - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다."
+      html: XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다.
       image:
         src: images/xaml.png
         href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      title: "XAML 샘플"
+      title: XAML 샘플
     - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다."
+      html: XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다.
       image:
         src: images/xuzzle.png
         href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
       title: Xuzzle
     - href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      html: "Xamarin.Forms 샘플 앱 및 코드 데모의 전체 집합입니다."
+      html: Xamarin.Forms 샘플 앱 및 코드 데모의 전체 집합입니다.
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/xamarin-forms/all/
-      title: "모든 Xamarin.Forms 샘플"
+      title: 모든 Xamarin.Forms 샘플

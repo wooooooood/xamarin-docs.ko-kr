@@ -1,17 +1,16 @@
 ---
-title: "UrhoSharp Mac 지원"
-description: "Mac 특정 설치 및 UrhoSharp에 대 한 기능입니다."
-ms.topic: article
+title: UrhoSharp Mac 지원
+description: Mac 특정 설치 및 UrhoSharp에 대 한 기능입니다.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: fff96a19d5f5286f2c9483407fcaaab6d15ff2b5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4f439d8f848e84b0e775a56204a1834b55c7ad10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp-mac-support"></a>UrhoSharp Mac 지원
 
@@ -34,7 +33,7 @@ DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Cocoa)
 

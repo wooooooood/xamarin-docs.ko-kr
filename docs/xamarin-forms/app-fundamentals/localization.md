@@ -1,18 +1,17 @@
 ---
-title: "지역화"
-description: ".NET 리소스 파일을 사용 하 여 Xamarin.Forms 응용 프로그램을 지역화할 수 있습니다."
-ms.topic: article
+title: 지역화
+description: .NET 리소스 파일을 사용 하 여 Xamarin.Forms 응용 프로그램을 지역화할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -760,7 +759,7 @@ switch (Device.RuntimePlatform)
 
 ![](localization-images/ios-resources.png "iOS 지역화 프로젝트 디렉터리")
 
-각 언어 디렉터리의 복사본이 들어 **flag.png**, 해당 언어에 맞게 지역화 합니다. 이미지가 제공 되는 경우 운영 체제 이미지의 기본 언어 디렉터리의 기본값은입니다. 제공 해야 전체 레 티 나 지원에 대 한  **@2x**  및  **@3x**  각 이미지의 복사본입니다.
+각 언어 디렉터리의 복사본이 들어 **flag.png**, 해당 언어에 맞게 지역화 합니다. 이미지가 제공 되는 경우 운영 체제 이미지의 기본 언어 디렉터리의 기본값은입니다. 제공 해야 전체 레 티 나 지원에 대 한 **@2x** 및 **@3x** 각 이미지의 복사본입니다.
 
 #### <a name="app-name"></a>앱 이름
 

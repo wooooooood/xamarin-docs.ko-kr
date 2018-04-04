@@ -1,18 +1,17 @@
 ---
-title: "테이블 뷰 작업"
-description: "이 문서에서는 디자인 및 테이블 뷰 및 테이블 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다."
-ms.topic: article
+title: 테이블 뷰 작업
+description: 이 문서에서는 디자인 및 테이블 뷰 및 테이블 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: af562ac03f2cd5f293f99c7509000499ad5deaa4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-table-views"></a>테이블 뷰 작업
 
@@ -731,7 +730,7 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>모든 함께 끌어와
 
-이 문서의 시작 부분에 나와 있는 것 처럼 테이블 뷰는 일반적으로의 한 쪽에 표시 됩니다는 [분할 보기](~/ios/tvos/user-interface/split-views.md) 탐색 기능의 반대쪽에 표시 된 선택한 항목의 세부 정보를 사용 합니다. 예: 
+이 문서의 시작 부분에 나와 있는 것 처럼 테이블 뷰는 일반적으로의 한 쪽에 표시 됩니다는 [분할 보기](~/ios/tvos/user-interface/split-views.md) 탐색 기능의 반대쪽에 표시 된 선택한 항목의 세부 정보를 사용 합니다. 예를 들어: 
 
 [![](table-views-images/intro01.png "샘플 응용 프로그램 실행")](table-views-images/intro01.png#lightbox)
 

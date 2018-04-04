@@ -1,18 +1,17 @@
 ---
-title: "StoreKit에 대 한 변경"
-description: "iOS 6 저장소 키트 API에 두 가지 변경 내용이 도입 되었습니다.: iTunes (및 앱 스토어/iBookstore)를 표시 하는 기능 앱과는 새로운 앱 내에서 제품 구매 옵션 Apple 다운로드 가능한 파일을 호스트 합니다. 이 문서에서는 Xamarin.iOS와 해당 기능을 구현 하는 방법을 설명 합니다."
-ms.topic: article
+title: StoreKit에 대 한 변경
+description: 'iOS 6 저장소 키트 API에 두 가지 변경 내용이 도입 되었습니다.: iTunes (및 앱 스토어/iBookstore)를 표시 하는 기능 앱과는 새로운 앱 내에서 제품 구매 옵션 Apple 다운로드 가능한 파일을 호스트 합니다. 이 문서에서는 Xamarin.iOS와 해당 기능을 구현 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ec83bc0f62ee195884cef2f59ba701fcbf15c1da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="changes-to-storekit"></a>StoreKit에 대 한 변경
 
@@ -64,7 +63,7 @@ IOS의 새로운 앱에서 바로 구매 기능을 사용 하면 제품 정보�
 1.  보기 컨트롤러에 처리기를 할당 `Finished` 뷰 컨트롤러를 해제 해야 하는 이벤트입니다. 이 이벤트는 사용자가 취소; 라고 합니다. 또는 그렇지 않은 경우 뷰 컨트롤러 내부의 트랜잭션에 작업을 마무리 합니다. 
 1.  호출 된 `LoadProduct` 전달 메서드는 `StoreProductParameters` 및 완료 처리기입니다. 완료 처리기 해야 성공적으로 제품 요청 했음을 확인 하 고이 경우 제공 된 `SKProductViewController` 모달 형식으로. 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다. 
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 *ProductView* 프로젝트에 *StoreKit* 이 문서에 대 한 샘플 코드를 구현 하는 `Buy` 모든 제품을 허용 하는 메서드 주의 Apple ID 및 표시는 `SKStoreProductViewController`합니다. 다음 코드는 주어진된 Apple ID에 대 한 제품 정보를 표시합니다.
 

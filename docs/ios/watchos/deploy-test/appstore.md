@@ -1,18 +1,17 @@
 ---
-title: "앱 스토어에 배포"
-description: "앱 스토어에 Watch 앱 배포"
-ms.topic: article
+title: 앱 스토어에 배포
+description: 앱 스토어에 Watch 앱 배포
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploying-to-the-app-store"></a>앱 스토어에 배포
 
@@ -177,7 +176,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Mac 및에 대 한 최신 버전의 Visual Studio를 사용 해야 하면 **AppIcons.appiconset** 이미지의 전체 집합을 포함 합니다. 이 오류를 표시 여전히 되는 경우 원본을 보려면는 **Contents.json** 에 필요한 모든 이미지에 대 한 항목이 포함 되어 있는지 확인 합니다. Xamarin의 최신 버전을 사용 하는 올바른지 확인 했으면 삭제 하 고 다시 만드는 또는 **AppIcons.appiconset**합니다.
 
 > [!IMPORTANT]
-> Mac의 조사식 아이콘 지원에 대 한 Visual Studio에서 알려진된 버그가 있습니다: 88 x 88 픽셀의 이미지를 가정은  **29x29@3x**  이미지 (87 x 87 픽셀 이어야 함).
+> Mac의 조사식 아이콘 지원에 대 한 Visual Studio에서 알려진된 버그가 있습니다: 88 x 88 픽셀의 이미지를 가정은 **29x29@3x** 이미지 (87 x 87 픽셀 이어야 함).
 
 
 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).

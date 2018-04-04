@@ -1,18 +1,17 @@
 ---
-title: "조사식 장치에 대 한 테스트"
-description: "Apple Watch 테스트 앱 배포"
-ms.topic: article
+title: 조사식 장치에 대 한 테스트
+description: Apple Watch 테스트 앱 배포
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>조사식 장치에 대 한 테스트
 
@@ -26,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="devices"></a>장치
 
-실제 iPhone 또는 iPad에서 iOS 앱을 테스트 개발자 센터에 등록할 수 있도록 장치가 항상 필요 합니다. 장치 목록은 다음과 같습니다 (더하기 기호를 클릭  **+**  새 장치를 추가 하려면):
+실제 iPhone 또는 iPad에서 iOS 앱을 테스트 개발자 센터에 등록할 수 있도록 장치가 항상 필요 합니다. 장치 목록은 다음과 같습니다 (더하기 기호를 클릭 **+** 새 장치를 추가 하려면):
 
 ![](device-images/devices-sml.png "다음과 같은 장치 목록")
 

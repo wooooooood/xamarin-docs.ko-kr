@@ -1,18 +1,17 @@
 ---
-title: "조각 사용 하 여 ViewPager"
-description: "ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 조각을 사용 하 여 데이터 페이지와 ViewPager swipeable UI를 구현 하는 방법을 설명 합니다."
-ms.topic: article
+title: 조각 사용 하 여 ViewPager
+description: ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 조각을 사용 하 여 데이터 페이지와 ViewPager swipeable UI를 구현 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83b9123b24b39e2d7bda392d05c6595f5fc3af0d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-fragments"></a>조각 사용 하 여 ViewPager
 

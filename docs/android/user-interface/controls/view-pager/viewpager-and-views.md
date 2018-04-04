@@ -1,18 +1,17 @@
 ---
-title: "보기와 ViewPager"
-description: "ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 ViewPager 및 뷰를 사용 하 여 데이터 페이지와 PagerTabStrip swipeable UI를 구현 하는 방법을 설명 (후속 가이드는 페이지 조각을 사용 하는 방법에 설명)."
-ms.topic: article
+title: 보기와 ViewPager
+description: ViewPager gestural 탐색을 구현할 수 있게 하는 레이아웃 관리자입니다. Gestural 탐색 왼쪽과 오른쪽의 데이터 페이지를 통해 단계로 살짝에 사용자를 수 있습니다. 이 가이드에서는 ViewPager 및 뷰를 사용 하 여 데이터 페이지와 PagerTabStrip swipeable UI를 구현 하는 방법을 설명 (후속 가이드는 페이지 조각을 사용 하는 방법에 설명).
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39251f7cf6bc287b76b7921278853158bdb14d66
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-views"></a>보기와 ViewPager
 

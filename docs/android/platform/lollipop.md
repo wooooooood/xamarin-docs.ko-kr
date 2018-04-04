@@ -1,18 +1,17 @@
 ---
-title: "롤리팝 기능"
-description: "이 문서에서는 Android 5.0 (롤리팝)에 도입 된 새로운 기능의 간략 한 개요를 제공 합니다. 이러한 기능에는 애니메이션, 보기 그림자를 그릴 색조 등 새로운 지원 기능 뿐만 아니라 자료 테마 라는 새 사용자 인터페이스 스타일을 포함 합니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 개의 새 UI 위젯, 작업 스케줄러는 새 및 몇 가지 새로운 Api도 포함 되어 있습니다."
-ms.topic: article
+title: 롤리팝 기능
+description: 이 문서에서는 Android 5.0 (롤리팝)에 도입 된 새로운 기능의 간략 한 개요를 제공 합니다. 이러한 기능에는 애니메이션, 보기 그림자를 그릴 색조 등 새로운 지원 기능 뿐만 아니라 자료 테마 라는 새 사용자 인터페이스 스타일을 포함 합니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 개의 새 UI 위젯, 작업 스케줄러는 새 및 몇 가지 새로운 Api도 포함 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>롤리팝 기능
 

@@ -1,18 +1,17 @@
 ---
-title: "연결된 속성"
-description: "연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 하나의 클래스에 정의 되었지만 다른 개체에 연결 하는 클래스를 포함 하는 특성으로 XAML에서 인식할 수 있는 및 마침표로 구분 되는 속성 이름입니다. 이 문서에서는 연결 된 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 연결된 속성
+description: 연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 하나의 클래스에 정의 되었지만 다른 개체에 연결 하는 클래스를 포함 하는 특성으로 XAML에서 인식할 수 있는 및 마침표로 구분 되는 속성 이름입니다. 이 문서에서는 연결 된 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: 7112812c843ccbcd6c24ea028deae3c09851b03d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c903a39e5569c7ffedfff8eb8e6b0bd4071be9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="attached-properties"></a>연결된 속성
 

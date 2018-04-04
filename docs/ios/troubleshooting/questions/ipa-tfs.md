@@ -1,17 +1,17 @@
 ---
-title: "TFS 저장 폴더에 IPA 출력 파일을 복사할 수는 방법"
-ms.topic: article
+title: TFS 저장 폴더에 IPA 출력 파일을 복사할 수는 방법
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c89d81434cac43505c4f0341a10aaf4fc99407fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2139be01b95a0a4287bba43b8a2ebad537ac7a4f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>TFS 저장 폴더에 IPA 출력 파일을 복사할 수는 방법
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/27/2018
 
 -   이에 설명 된 동일한 기술을 [IPA 파일의 출력 경로 변경할 수 있나요?](~/ios/troubleshooting/questions/ipa-output-path.md)합니다. 설정 하는 두 가지 중요 한 사항 `$(TF_BUILD_BINARIESDIRECTORY)` 하므로 추가 조건을 추가 하려면 및의 대상 폴더로 `CopyIpa` TFS 빌드에 대해만 실행 됩니다.
 
--   에 대 한 설명은 `TF_BUILD_BINARIESDIRECTORY` 참조 [https://msdn.microsoft.com/en-us/library/hh850448.aspx](https://msdn.microsoft.com/en-us/library/hh850448.aspx)합니다.
+-   에 대 한 설명은 `TF_BUILD_BINARIESDIRECTORY` 참조 [ https://msdn.microsoft.com/en-us/library/hh850448.aspx ](https://msdn.microsoft.com/en-us/library/hh850448.aspx)합니다.
 
 ## <a name="additional-references"></a>추가 참조
 

@@ -1,18 +1,17 @@
 ---
-title: "로컬 데이터베이스"
-description: "Xamarin.Forms는 로드 하 고 공유 코드에 개체를 저장 가능 하 게 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다. 이 문서에서는 어떻게 Xamarin.Forms 응용 프로그램 읽고 쓸 수 데이터를 로컬 SQLite 데이터베이스 SQLite.Net를 사용 하 여 설명 합니다."
-ms.topic: article
+title: 로컬 데이터베이스
+description: Xamarin.Forms는 로드 하 고 공유 코드에 개체를 저장 가능 하 게 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다. 이 문서에서는 어떻게 Xamarin.Forms 응용 프로그램 읽고 쓸 수 데이터를 로컬 SQLite 데이터베이스 SQLite.Net를 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 29686b29a18fe409a1f778d54266cbeedea40eda
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="local-databases"></a>로컬 데이터베이스
 

@@ -1,18 +1,17 @@
 ---
-title: "렌더러의 기본 클래스와 기본 컨트롤"
-description: "Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 이 문서에서는 렌더러와 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현 하는 네이티브 컨트롤 클래스를 나열 합니다."
-ms.topic: article
+title: 렌더러의 기본 클래스와 기본 컨트롤
+description: Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 이 문서에서는 렌더러와 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현 하는 네이티브 컨트롤 클래스를 나열 합니다.
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2016
-ms.openlocfilehash: 06887e6c1a39dd695fdaddb2fade8a463d9d4580
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 9402bd53ab3bfb0b11182eb700aa560e8f962de3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러의 기본 클래스와 기본 컨트롤
 

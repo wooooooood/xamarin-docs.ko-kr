@@ -1,18 +1,17 @@
 ---
-title: "배포 및 테스트"
-description: "이 섹션에서는 배포 하는 방법과 앱을 테스트 하는 데 사용 하는 항목을 다룹니다. 이 항목에는 디버깅, 테스터 및 Apple TV 앱 스토어에 응용 프로그램을 게시 하는 방법에 대 한 배포에 사용 되는 도구 등 포함 됩니다."
-ms.topic: article
+title: 배포 및 테스트
+description: 이 섹션에서는 배포 하는 방법과 앱을 테스트 하는 데 사용 하는 항목을 다룹니다. 이 항목에는 디버깅, 테스터 및 Apple TV 앱 스토어에 응용 프로그램을 게시 하는 방법에 대 한 배포에 사용 되는 도구 등 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f781e0ad889415d75f22e7dd5fb3eae75d080a8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab5b12e13095212a070c308b7e21d008c9aa2673
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 

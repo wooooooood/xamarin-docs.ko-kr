@@ -1,18 +1,17 @@
 ---
-title: "Android API 수준 이해"
-description: "Xamarin.Android에 여러 버전의 Android 앱의 호환성을 결정 하는 몇 가지 Android API 수준 설정이 있습니다. 이러한 설정은 의미를 구성 하는 방법 및 영향을 잘 모르겠으면이 가이드에서는 설명 앱 실행 시가지고 있습니다."
-ms.topic: article
+title: Android API 수준 이해
+description: Xamarin.Android에 여러 버전의 Android 앱의 호환성을 결정 하는 몇 가지 Android API 수준 설정이 있습니다. 이러한 설정은 의미를 구성 하는 방법 및 영향을 잘 모르겠으면이 가이드에서는 설명 앱 실행 시가지고 있습니다.
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 907af0948e9d081f05cc201c49f94629a513c935
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -282,7 +281,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 
 이 예제에서는 앱의 대상 프레임 워크로 설정 되어 **Android 5.0 (API 수준 21)** 로 설정 된 최소 Android 버전 및 **Android 4.1 (API 수준 16)**합니다. 때문에 `SetCategory` 는 API 수준에서 사용할 수 `Android.OS.BuildVersionCodes.Lollipop` 이상 버전에서는이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 상태인 &ndash; 됩니다 *하지* 호출 하려고 `SetCategory` 때 API 수준은 16, 17, 18, 19, 또는 20입니다. 만 하는 알림을 제대로 (때문에 이러한 형식에서 같은 분류 되지 않은) 정렬 되지, 아직는 알림을 사용자에 게 경고할 여전히 게시 되어 이러한 이전 Android 버전에서 기능이 줄어듭니다. 앱 작동 하지만 해당 기능은 약간 떨어집니다.
 
-일반적으로 빌드 버전을 검사 하는 코드에서 이전 방식으로 비교 새로운 방식으로 작업을 수행한 간의 런타임에 결정 수 있습니다. 예:
+일반적으로 빌드 버전을 검사 하는 코드에서 이전 방식으로 비교 새로운 방식으로 작업을 수행한 간의 런타임에 결정 수 있습니다. 예를 들어:
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)

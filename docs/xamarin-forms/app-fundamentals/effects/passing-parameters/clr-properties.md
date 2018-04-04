@@ -1,18 +1,17 @@
 ---
-title: "공용 언어 런타임 속성으로 효과 매개 변수 전달"
-description: "공용 언어 런타임 (CLR) 속성은 런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수를 정의 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용 하 여 매개 변수는 효과를 전달 합니다."
-ms.topic: article
+title: 공용 언어 런타임 속성으로 효과 매개 변수 전달
+description: 공용 언어 런타임 (CLR) 속성은 런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수를 정의 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용 하 여 매개 변수는 효과를 전달 합니다.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: afe30ae87aa2e465013eb7fef3089cf701d98da6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78d14b9764ab0c7cafb9f09fa1c8acea3f45afde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 

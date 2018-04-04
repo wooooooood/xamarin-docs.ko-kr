@@ -1,18 +1,17 @@
 ---
-title: "Android 마모 소개"
-description: "Google Android 착용의 도입으로 더 이상으로 제한 됩니다 휴대폰과 태블릿 유용한 Android 앱을 개발 하는 데 있어 합니다. Xamarin.Android의 Android 쓰는 유형에서는 지원 되기 때문에 프로그램 손목에서 C# 코드를 실행할 수 있습니다! 이 소개 Android 착용의 기본적인 개요를 제공 하 고 해당 핵심 기능에 설명에서는 Android 착용 2.0에서 사용할 수 있는 기능 개요를 제공 합니다. 일부 더 인기가 쓰는 유형 Android 장치를 나열 하 고 추가 정보에 대 한 중요 한 Google Android 착용 문서에 대 한 링크를 제공 합니다."
-ms.topic: article
+title: Android 마모 소개
+description: Google Android 착용의 도입으로 더 이상으로 제한 됩니다 휴대폰과 태블릿 유용한 Android 앱을 개발 하는 데 있어 합니다. Xamarin.Android의 Android 쓰는 유형에서는 지원 되기 때문에 프로그램 손목에서 C# 코드를 실행할 수 있습니다! 이 소개 Android 착용의 기본적인 개요를 제공 하 고 해당 핵심 기능에 설명에서는 Android 착용 2.0에서 사용할 수 있는 기능 개요를 제공 합니다. 일부 더 인기가 쓰는 유형 Android 장치를 나열 하 고 추가 정보에 대 한 중요 한 Google Android 착용 문서에 대 한 링크를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ab166bb71c23d456cb70d35a2794717110642fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-android-wear"></a>Android 마모 소개
 

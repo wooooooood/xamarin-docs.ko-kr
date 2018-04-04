@@ -1,18 +1,17 @@
 ---
 title: Android Speech
 description: 이 문서에서는 매우 강력한 Android.Speech 네임 스페이스를 사용 하는 기본적인에 설명 합니다. 을 도입한 이후 Android 음성 인식 하 고 텍스트로 출력 수 있었습니다. 이 작업은 비교적 간단 합니다. 그러나 텍스트 음성 변환, 프로세스는 조금 더 복잡 뿐만 아니라 음성 엔진은 않으므로 계정으로 간주 되려면 하지만 사용 가능 하 고 개의 문자 음성 변환 TTS () 시스템에서 설치 된 언어도 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/02/2018
-ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: bdaa9bf09485c06551a2df15a2e3a4b410a53e75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-speech"></a>Android Speech
 

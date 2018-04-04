@@ -1,18 +1,17 @@
 ---
-title: "플랫폼 간 앱에서 네이티브 형식 사용"
-description: "이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 하는 플랫폼 간 응용 프로그램에서 새 iOS API 네이티브 통합 유형 (nint, nuint, nfloat)를 사용 하 여 설명 합니다."
-ms.topic: article
+title: 플랫폼 간 앱에서 네이티브 형식 사용
+description: 이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 하는 플랫폼 간 응용 프로그램에서 새 iOS API 네이티브 통합 유형 (nint, nuint, nfloat)를 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 2e177afa9124095f00edacbeb71512d5cd9bb219
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서 네이티브 형식 사용
 
@@ -59,7 +58,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 #### <a name="using-duplicate-methods"></a>중복 메서드를 사용 하 여
 
-위의 사각형 데이터에 변환을 수행 하는 작업 하는 라이브러리를 예로 들어를 보겠습니다. 라이브러리에는 하나 또는 두 개의 매우 간단한 방법만 포함 된, Xamarin.iOS 및 Xamarin.Android에 대 한 해당 방법의 중복 버전을 만들 수 있습니다. 예:
+위의 사각형 데이터에 변환을 수행 하는 작업 하는 라이브러리를 예로 들어를 보겠습니다. 라이브러리에는 하나 또는 두 개의 매우 간단한 방법만 포함 된, Xamarin.iOS 및 Xamarin.Android에 대 한 해당 방법의 중복 버전을 만들 수 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -104,7 +103,7 @@ namespace NativeShared
 
 #### <a name="using-method-overloads"></a>메서드를 사용 하는 오버 로드
 
-지금 가지도록 32 비트 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 솔루션 수 경우 `CGRect` 매개 변수 또는 반환 값으로 해당 값을 변환할는 `RectangleF` (에서 해당 변환 알고 있으면 `nfloat` 를`float` 손실 변환이), 원래 버전 실제 작업을 수행 하는 루틴의 호출 합니다. 예:
+지금 가지도록 32 비트 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 솔루션 수 경우 `CGRect` 매개 변수 또는 반환 값으로 해당 값을 변환할는 `RectangleF` (에서 해당 변환 알고 있으면 `nfloat` 를`float` 손실 변환이), 원래 버전 실제 작업을 수행 하는 루틴의 호출 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -249,7 +248,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ## <a name="related-links"></a>관련 링크
 
-- [통합된 API](~/cross-platform/macios/unified/index.md)
+- [Unified API](~/cross-platform/macios/unified/index.md)
 - [네이티브 형식](~/cross-platform/macios/nativetypes.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
 - [코드 공유 샘플](https://developer.xamarin.com/samples/mobile/SharingCode/)

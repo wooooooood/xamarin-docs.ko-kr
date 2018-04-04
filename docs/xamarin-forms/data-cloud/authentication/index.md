@@ -1,18 +1,17 @@
 ---
-title: "웹 서비스에 대 한 액세스 인증"
-description: "이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다. 다른 공급자가 제공 하는 기본 제공 인증 메커니즘을 사용 하 여 및 Xamarin.Auth 구성 요소를 사용 하 여 OAuth id 공급자에 대해 인증 하는 REST 서비스와 함께 기본 인증을 사용 하 여 주제를 다룹니다 포함 됩니다."
-ms.topic: article
+title: 웹 서비스에 대 한 액세스 인증
+description: 이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다. 다른 공급자가 제공 하는 기본 제공 인증 메커니즘을 사용 하 여 및 Xamarin.Auth 구성 요소를 사용 하 여 OAuth id 공급자에 대해 인증 하는 REST 서비스와 함께 기본 인증을 사용 하 여 주제를 다룹니다 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 0139a7a921861b5d1c9a3639ee2c7e25ee6cf5fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0e188efd2791b03a63c31b715ed1da77079230
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-access-to-web-services"></a>웹 서비스에 대 한 액세스 인증
 
@@ -34,7 +33,7 @@ Azure 모바일 앱 인증 및 응용 프로그램 사용자 권한 부여를 �
 
 Azure Active Directory B2C 연결 소비자 웹 및 모바일 응용 프로그램에 대 한 클라우드 id 관리 솔루션입니다. 이 문서에서는 Microsoft 인증 라이브러리 (MSAL) 및 Azure Active Directory B2C 소비자 id 관리를 Xamarin.Forms 응용 프로그램 통합을 사용 하는 방법을 보여줍니다.
 
-## <a name="integrating-azure-active-directory-b2c-with-azure-mobile-appsazure-ad-b2c-mobile-appmd"></a>[Azure 모바일 앱에 Azure Active Directory B2C 통합](azure-ad-b2c-mobile-app.md)
+## <a name="integrating-azure-active-directory-b2c-with-azure-mobile-appsazure-ad-b2c-mobile-appmd"></a>[Azure Mobile Apps와 Azure Active Directory B2C 통합](azure-ad-b2c-mobile-app.md)
 
 Azure Active Directory B2C Azure 모바일 앱에 대 한 인증 워크플로 관리 데 사용할 수 있습니다. 이 방법을 사용 id 관리 환경을 클라우드에 완전히 정의 하 고 모바일 응용 프로그램 코드를 변경 하지 않고 수정할 수 있습니다. 이 문서에서는 Xamarin.Forms를 사용한 인증 및 Azure 모바일 앱 인스턴스에 대 한 권한 부여를 제공 하려면 Azure Active Directory B2C를 사용 하는 방법을 보여줍니다.
 

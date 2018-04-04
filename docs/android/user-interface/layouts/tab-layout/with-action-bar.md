@@ -1,18 +1,17 @@
 ---
-title: "작업 모음으로 탭된 레이아웃"
-description: "이 가이드 소개 하 고 Xamarin.Android 응용 프로그램에서 탭된 사용자 인터페이스를 만들 작업 모음 Api를 사용 하는 방법을 설명 합니다."
-ms.topic: article
+title: 작업 모음으로 탭된 레이아웃
+description: 이 가이드 소개 하 고 Xamarin.Android 응용 프로그램에서 탭된 사용자 인터페이스를 만들 작업 모음 Api를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5956cd13708f4e7e73926fc01e6142d9cf4a8edb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>작업 모음으로 탭된 레이아웃
 

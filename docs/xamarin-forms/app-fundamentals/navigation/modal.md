@@ -1,18 +1,17 @@
 ---
-title: "모달 페이지"
-description: "Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에 모달 페이지를 탐색 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 모달 페이지
+description: Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에 모달 페이지를 탐색 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: b1e67fe355b9a84cc6832441f06c72dcd4c512ad
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modal-pages"></a>모달 페이지
 
@@ -42,7 +41,7 @@ _Xamarin.Forms 모달 페이지에 대 한 지원을 제공합니다. 모달 페
 [ `Navigation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) 속성도 노출 한 [ `ModalStack` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INavigation.ModalStack/) 모달 스택의 모달 페이지 생성 하는 데 사용 될 수 있는 속성입니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 팝하는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
 
 > [!NOTE]
-> A [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 인스턴스가 모달 페이지 탐색을 수행 하는 데 필요 하지 않습니다.
+> [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 인스턴스는 모달 페이지 탐색을 수행하는 데 필요하지 않습니다.
 
 <a name="Pushing_Pages_to_the_Modal_Stack" />
 

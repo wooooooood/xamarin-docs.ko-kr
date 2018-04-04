@@ -1,17 +1,16 @@
 ---
-title: "Android 리소스 기본 사항"
-ms.topic: article
+title: Android 리소스 기본 사항
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6be1001e5d3455a94e677f1bb5dc52ca574b873
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resource-basics"></a>Android 리소스 기본 사항
 
@@ -136,7 +135,7 @@ XML 파일의 리소스 액세스는 다음 특수 한 구문을:
 </LinearLayout>
 ```
 
-이 예제에는 [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) 라는 그릴 수 있는 리소스를 필요로 하 **플래그**합니다. `ImageView` 가 해당 `src` 특성이로 설정  **@drawable/flag** 합니다. 활동 시작 하면 Android 디렉터리 안에 보입니다 **리소스/Drawable** 라는 파일에 대 한 **flag.png** (파일 확장명 수 이미지의 다른 형식으로 같은 **flag.jpg**) 해당 파일을 로드에 표시 하는 `ImageView`합니다.
+이 예제에는 [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) 라는 그릴 수 있는 리소스를 필요로 하 **플래그**합니다. `ImageView` 가 해당 `src` 특성이로 설정 **@drawable/flag**합니다. 활동 시작 하면 Android 디렉터리 안에 보입니다 **리소스/Drawable** 라는 파일에 대 한 **flag.png** (파일 확장명 수 이미지의 다른 형식으로 같은 **flag.jpg**) 해당 파일을 로드에 표시 하는 `ImageView`합니다.
 이 응용 프로그램을 실행 하는 경우 다음 이미지와 같은 유사할 것:
 
 ![지역화 된 ImageView](android-resource-basics-images/03-localized-screenshot.png)

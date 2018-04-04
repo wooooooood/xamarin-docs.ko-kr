@@ -1,18 +1,17 @@
 ---
 title: MonoGame PipelineTool를 사용 하 여
 description: MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 Monogame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 37505b166488230be9d0e0690e415852506664f1
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 672c57aded149200b32501a6b48165ca88726ee1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 

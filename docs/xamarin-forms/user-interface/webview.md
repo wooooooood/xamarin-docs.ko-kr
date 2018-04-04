@@ -1,18 +1,17 @@
 ---
-title: "웹 보기"
-description: "로컬 또는 네트워크 웹 콘텐츠 및 문서를 제공 합니다."
-ms.topic: article
+title: 웹 보기
+description: 로컬 또는 네트워크 웹 콘텐츠 및 문서를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 7a077a3dcc47de8416abb0c51b23dc07fc1f1f12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 54c70fda22782dfa9b6617c0832f2c17f0169b57
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="webview"></a>웹 보기
 
@@ -113,7 +112,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>HTML 콘텐츠를 로컬
 
-WebView HTML, CSS에서에서 콘텐츠를 표시 하 고 Javascript 응용 프로그램 내에 포함 합니다. 예:
+WebView HTML, CSS에서에서 콘텐츠를 표시 하 고 Javascript 응용 프로그램 내에 포함 합니다. 예를 들어:
 
 ```html
 <html>
@@ -349,7 +348,7 @@ public partial class InAppDemo : ContentPage
 - **탐색** &ndash; WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
 - **탐색** &ndash; 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
 
-로드 하는 데 오랜 시간이 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 이러한 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예:
+로드 하는 데 오랜 시간이 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 이러한 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
 
 XAML이 있습니다.
 

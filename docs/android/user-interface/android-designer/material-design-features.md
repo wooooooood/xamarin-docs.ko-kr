@@ -1,18 +1,17 @@
 ---
-title: "자재 디자인 기능"
-description: "이 항목을 쉽게 디자인을 규격 자재 레이아웃을 만드는 개발자를 위한 디자이너 기능에 설명 합니다. 이 여기서 소개 하 고 자료 그리드, 자료 색상표, 인쇄 확장 및 테마 편집기를 사용 하는 방법에 설명 합니다."
-ms.topic: article
+title: 자재 디자인 기능
+description: 이 항목을 쉽게 디자인을 규격 자재 레이아웃을 만드는 개발자를 위한 디자이너 기능에 설명 합니다. 이 여기서 소개 하 고 자료 그리드, 자료 색상표, 인쇄 확장 및 테마 편집기를 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a764efe7f2cadd8c777f8427c0220e45eec662c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-design-features"></a>자재 디자인 기능
 

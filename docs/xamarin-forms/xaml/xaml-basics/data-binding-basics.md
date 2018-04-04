@@ -1,18 +1,17 @@
 ---
-title: "4 부입니다. 데이터 바인딩 기본 사항"
-description: "데이터 바인딩을 변경 하나에 다른 변경으로 인해 되도록 연결 된 두 개체의 속성을 허용 합니다. 매우 중요 한 도구 이며 코드에서 완전히 데이터 바인딩을 정의할 수 있지만 XAML에서는 바로 가기 키, 편리 함을 제공 합니다. 따라서 Xamarin.Forms의 가장 중요 한 태그 확장 중 하나는 바인딩 됩니다."
-ms.topic: article
+title: 4 부입니다. 데이터 바인딩 기본 사항
+description: 데이터 바인딩을 변경 하나에 다른 변경으로 인해 되도록 연결 된 두 개체의 속성을 허용 합니다. 매우 중요 한 도구 이며 코드에서 완전히 데이터 바인딩을 정의할 수 있지만 XAML에서는 바로 가기 키, 편리 함을 제공 합니다. 따라서 Xamarin.Forms의 가장 중요 한 태그 확장 중 하나는 바인딩 됩니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2aa6fd2f54c09921621a12af9401a6f84ae37ffa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
 

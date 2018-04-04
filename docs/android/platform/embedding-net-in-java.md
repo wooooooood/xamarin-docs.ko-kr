@@ -1,18 +1,17 @@
 ---
 title: Java에서.NET 포함
 description: Java 기반 네이티브 Android 프로젝트에서 Xamarin.NET 라이브러리를 사용 하는 방법
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/28/2018
-ms.openlocfilehash: f0da12d739c6003257d3acf9ccefdec7e36f5349
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 0ca855975db4b20fe80e98e2e818b8fde27f558c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="embedding-net-in-java"></a>Java에서.NET 포함
 

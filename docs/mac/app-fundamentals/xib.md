@@ -1,18 +1,17 @@
 ---
-title: ".xib 파일"
-description: "이 문서에서는.xib 만들고 Xamarin.Mac 응용 프로그램에 대 한 사용자 인터페이스를 유지 관리 하는 Xcode의 인터페이스 작성기에서 만든 파일에서 작업을 설명 합니다."
-ms.topic: article
+title: .xib 파일
+description: 이 문서에서는.xib 만들고 Xamarin.Mac 응용 프로그램에 대 한 사용자 인터페이스를 유지 관리 하는 Xcode의 인터페이스 작성기에서 만든 파일에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c1f575f5d3d5f0fbe82d5e0d08103b9261944602
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xib-files"></a>.xib 파일
 
@@ -575,7 +574,7 @@ private void DisplaySubview(NSViewController controller, SubviewType type) {
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-표시할 새 보기에 대 한 보기 컨트롤러의 새 인스턴스를 만들고, (지정 된 대로 프로젝트에 추가 하는 열거형에서) 해당 유형을 설정 및 사용 하 여이 고 `DisplaySubview` 메서드가 실제로 보기를 표시 하려면 창 클래스에 추가 합니다. 예:
+표시할 새 보기에 대 한 보기 컨트롤러의 새 인스턴스를 만들고, (지정 된 대로 프로젝트에 추가 하는 열거형에서) 해당 유형을 설정 및 사용 하 여이 고 `DisplaySubview` 메서드가 실제로 보기를 표시 하려면 창 클래스에 추가 합니다. 예를 들어:
 
 [![샘플 응용 프로그램을 실행](xib-images/view04.png "샘플 응용 프로그램 실행")](xib-images/view04-large.png#lightbox)
 

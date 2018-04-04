@@ -1,17 +1,17 @@
 ---
-title: "Android 에뮬레이터에 연결할 수 Mac에서 실행 하는 Windows VM에서?"
-ms.topic: article
+title: Android 에뮬레이터에 연결할 수 Mac에서 실행 하는 Windows VM에서?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2f0ef027d8a2d40ccf85e35d5a85eba4cd7c7ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Android 에뮬레이터에 연결할 수 Mac에서 실행 하는 Windows VM에서?
 
@@ -34,7 +34,7 @@ Windows 가상 컴퓨터에서 Mac에서 실행 되는 Google Android 에뮬레�
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    홀수 번호 포트에 연결 하는 데 사용 되 `adb`합니다. See also [http://developer.android.com/tools/devices/emulator.html#emulatornetworking](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    홀수 번호 포트에 연결 하는 데 사용 되 `adb`합니다. 참고 항목 [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking)합니다.
 
 4.  _옵션 1_: 사용 [ `nc` ](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html) 앞으로 인바운드 TCP 패킷 수를 외부 포트에 수신 5555 (또는 원하는 다른 모든 포트) 홀수 번호 포트 루프백 인터페이스에 (**127.0.0.1 5555** 이 예에서), 아웃 바운드 패킷의 또 다른 방법으로 다시 전달 하도록 합니다.
 
@@ -92,13 +92,13 @@ Windows 가상 컴퓨터에서 Mac에서 실행 되는 Google Android 에뮬레�
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>대체 방법을 사용 하 여 `adb -H` 아직 지원 되지 않습니다
 
-이론적으로 사용 하는 다른 방법은 것 `adb`의 기본 제공 기능에 연결 하는 `adb` 원격 컴퓨터에서 실행 중인 서버 (예를 들어 참조 [http://stackoverflow.com/a/18551325](http://stackoverflow.com/a/18551325)).
+이론적으로 사용 하는 다른 방법은 것 `adb`의 기본 제공 기능에 연결 하는 `adb` 원격 컴퓨터에서 실행 중인 서버 (예를 들어 참조 [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
 하지만 Xamarin.Android IDE 확장 해당 옵션을 구성 하는 방법이 현재 제공 하지 않습니다.
 
 ## <a name="contact-information"></a>연락처 정보
 
 이 문서에서는 2016 년 3 월을 기준으로 현재 동작에 설명 합니다. 이 문서에서 설명 하는 방법 앞으로 손상 될 수 있으므로, Xamarin에 대 한 안정적인 테스트 제품군의 일부가 아닙니다.
 
-다음 포럼에 대 한 설명과 추가할 방법을 더 이상 제대로 작동 하는지 확인 하거나 문서에 다른 오류가 발견 되 면 자유롭게: [http://forums.xamarin.com/discussion/33702/ android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm)합니다.
+다음 포럼에 대 한 설명과 추가할 방법을 더 이상 제대로 작동 하는지 확인 하거나 문서에 다른 오류가 발견 되 면 자유롭게: [ http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm ](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm)합니다.
 감사합니다.
 

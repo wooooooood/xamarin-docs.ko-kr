@@ -1,18 +1,17 @@
 ---
-title: "새로운 사용자 인터페이스 스타일"
-description: "이 문서에서는 밝은 및 어두운 UI 테마는 Apple는 tvOS에 추가 10과 Xamarin.tvOS 응용 프로그램에서 구현 하는 방법."
-ms.topic: article
+title: 새로운 사용자 인터페이스 스타일
+description: 이 문서에서는 밝은 및 어두운 UI 테마는 Apple는 tvOS에 추가 10과 Xamarin.tvOS 응용 프로그램에서 구현 하는 방법.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="new-user-interface-styles"></a>새로운 사용자 인터페이스 스타일
 
@@ -186,7 +185,7 @@ Apple이 인터페이스 작성기의 tvOS 스토리 보드를 편집할 때 다
 
 * 개발자의 사용자 인터페이스 요소에서 UI 테마에 따라 다른 버전을 지정할 수는 **특성 검사기**:
     
-    * 여러 속성에는 이제는  **+**  UI 테마 특정 버전을 추가 하려면 클릭할 수 있는 그 옆에: 
+    * 여러 속성에는 이제는 **+** UI 테마 특정 버전을 추가 하려면 클릭할 수 있는 그 옆에: 
 
         [![](user-interface-styles-images/theme08.png "UI 테마 특정 버전 추가")](user-interface-styles-images/theme08.png#lightbox) 
     

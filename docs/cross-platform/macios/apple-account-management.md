@@ -1,17 +1,16 @@
 ---
-title: "Apple 계정 관리"
-ms.topic: article
+title: Apple 계정 관리
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -50,7 +49,7 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
 
     ![Apple 개발자 계정 옵션](apple-account-management-images/image1.png)
 
-2. 키를 눌러는  **+**  아래와 같이 로그인 대화 상자에서 표시 하려면 단추: 
+2. 키를 눌러는 **+** 아래와 같이 로그인 대화 상자에서 표시 하려면 단추: 
 
     ![fastlane 대화 상자입니다.](apple-account-management-images/image2.png)
 

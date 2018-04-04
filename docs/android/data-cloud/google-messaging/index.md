@@ -1,18 +1,17 @@
 ---
-title: "Google 메시징"
-description: "이 섹션에는 Google 메시징 서비스를 사용 하 여 Xamarin.Android 앱을 구현 하는 방법에 설명 하는 지침을 포함 합니다."
-ms.topic: article
+title: Google 메시징
+description: 이 섹션에는 Google 메시징 서비스를 사용 하 여 Xamarin.Android 앱을 구현 하는 방법에 설명 하는 지침을 포함 합니다.
 ms.prod: xamarin
 ms.assetid: 85E8DF92-D160-4763-A7D3-458B4C31635F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3e36eedf720b1905d708ffe4bd6e61c96fa38cf4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f68b4dc12586d482fd9d3f8901bf3fd09469b0bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="google-messaging"></a>Google 메시징
 
@@ -26,7 +25,7 @@ Firebase 클라우드 메시징 (FCM)는 모바일 응용 프로그램 및 서�
 
 이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Firebase Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Firebase 클라우드 메시징 (FCM)와 통신에 필요한 Android 매니페스트 FCM에 대 한 액세스를 구성 하는 방법의 예제를 제공 하 고 다운스트림 메시징는 Firebase를 사용 하 여 보여 줍니다..는 다양 한 클래스를 구현 하는 방법을 보여 줍니다. 콘솔입니다.
 
-## <a name="google-cloud-messaginggoogle-cloud-messagingmd"></a>[Google 클라우드 메시징](google-cloud-messaging.md)
+## <a name="google-cloud-messaginggoogle-cloud-messagingmd"></a>[Google Cloud Messaging](google-cloud-messaging.md)
 
 이 섹션에서는 메시징 GCM (Google Cloud) 응용 프로그램 및 응용 프로그램 서버 사이 메시지를 라우팅하 하는 방법의 높은 수준의 개요를 제공 하 고 앱 GCM 서비스를 사용할 수 있도록 자격 증명을 인식 하기 위한 단계별 절차를 제공 합니다. (참고 GCM에 FCM에 의해 대체 되었습니다.)
 

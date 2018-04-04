@@ -1,7 +1,6 @@
 ---
-title: "Azure 모바일 앱에서 푸시 알림을 보내면"
-description: "Azure 알림 허브가 이와 동시에 다른 플랫폼 알림 시스템 통신할 필요가 백 엔드의 복잡성 원하는 모바일 플랫폼으로 모든 백 엔드에서 모바일 푸시 알림을 보내는 경우에 확장 가능한 푸시 인프라를 제공 합니다. 이 문서에서는 Azure 알림 허브를 사용 하 여 Azure 모바일 앱 인스턴스 Xamarin.Forms 응용 프로그램에 푸시 알림을 보낼 하는 방법을 설명 합니다."
-ms.topic: article
+title: Azure 모바일 앱에서 푸시 알림을 보내면
+description: Azure 알림 허브가 이와 동시에 다른 플랫폼 알림 시스템 통신할 필요가 백 엔드의 복잡성 원하는 모바일 플랫폼으로 모든 백 엔드에서 모바일 푸시 알림을 보내는 경우에 확장 가능한 푸시 인프라를 제공 합니다. 이 문서에서는 Azure 알림 허브를 사용 하 여 Azure 모바일 앱 인스턴스 Xamarin.Forms 응용 프로그램에 푸시 알림을 보낼 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cff0b85514d2e5995d09735d6ad99b7909bfacb4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Azure 모바일 앱에서 푸시 알림을 보내면
 

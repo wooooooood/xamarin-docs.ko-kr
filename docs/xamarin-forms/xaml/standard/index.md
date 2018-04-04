@@ -1,18 +1,17 @@
 ---
-title: "XAML 표준 (미리 보기)"
-description: "Xamarin.forms에서는 XAML 표준 미리 보기를 탐색을 시작 하는 방법"
-ms.topic: article
+title: XAML 표준 (미리 보기)
+description: Xamarin.forms에서는 XAML 표준 미리 보기를 탐색을 시작 하는 방법
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: e53df69fdfd5b5c1fc98b667d4b75d06c16c35dc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7cb2a79fffda40f09ee75a12d6287b162566741d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-standard-preview"></a>XAML 표준 (미리 보기)
 

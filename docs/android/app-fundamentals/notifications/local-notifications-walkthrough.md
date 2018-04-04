@@ -1,18 +1,17 @@
 ---
-title: "연습-Xamarin.Android에 로컬 알림을 사용 하 여"
-description: "이 연습에는 로컬 알림을 Xamarin.Android 응용 프로그램에서 사용 하는 방법을 보여 줍니다. 만들기 및 로컬 알림을 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭, 두 번째 활동을 시작 합니다."
-ms.topic: article
+title: 연습-Xamarin.Android에 로컬 알림을 사용 하 여
+description: 이 연습에는 로컬 알림을 Xamarin.Android 응용 프로그램에서 사용 하는 방법을 보여 줍니다. 만들기 및 로컬 알림을 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭, 두 번째 활동을 시작 합니다.
 ms.prod: xamarin
 ms.assetid: D8C6C9E2-3282-49D1-A2F6-78A4F3306E29
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/30/2018
-ms.openlocfilehash: b8642a1c96ee525fbd6950616fbc6da0ad0e2337
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a2ca3755e3201263584447ba47ec36d2096386da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.Android에 로컬 알림을 사용 하 여
 

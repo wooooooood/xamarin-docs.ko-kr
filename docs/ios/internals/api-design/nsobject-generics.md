@@ -1,17 +1,16 @@
 ---
-title: "NSObject의 제네릭 하위 클래스"
-ms.topic: article
+title: NSObject의 제네릭 하위 클래스
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 76c35cfb993bade324b25f86e75db7eb028a7399
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="generic-subclasses-of-nsobject"></a>NSObject의 제네릭 하위 클래스
 
@@ -118,7 +117,7 @@ class Generic<T> : NSObject where T : NSObject
 
 두 일이 생기 Objective-c에 제네릭 형식의 개념이 없기 때문에 만들 정확 하 게 제네릭 형식을 지정할 수 없습니다.
 
-제네릭 형식의 특수화 된 서브 클래스를 만들어이 문제를 해결할 수 수 있습니다.   예:
+제네릭 형식의 특수화 된 서브 클래스를 만들어이 문제를 해결할 수 수 있습니다.   예를 들어:
     
 ```
 class Generic<T> : NSObject where T : NSObject

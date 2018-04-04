@@ -1,18 +1,17 @@
 ---
-title: "3D 그래픽 꼭지점을 MonoGame에 그리기"
-description: "MonoGame 3D 개체 당 포인트 단위로 렌더링 되는 방법을 정의 하 꼭 짓 점의 배열을 사용할 수 있도록 지원 합니다. 꼭 짓 점 배열 동적 기 하 도형 만들기 특수 효과 구현 하 고 컬링을 통해 렌더링의 효율성을 개선에 활용을 취할 수 있습니다."
-ms.topic: article
+title: 3D 그래픽 꼭지점을 MonoGame에 그리기
+description: MonoGame 3D 개체 당 포인트 단위로 렌더링 되는 방법을 정의 하 꼭 짓 점의 배열을 사용할 수 있도록 지원 합니다. 꼭 짓 점 배열 동적 기 하 도형 만들기 특수 효과 구현 하 고 컬링을 통해 렌더링의 효율성을 개선에 활용을 취할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 1b139e460a4841f2174df166bf50bb276802d8d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>3D 그래픽 꼭지점을 MonoGame에 그리기
 

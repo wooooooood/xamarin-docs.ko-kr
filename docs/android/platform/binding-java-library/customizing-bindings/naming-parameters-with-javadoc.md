@@ -1,18 +1,17 @@
 ---
-title: "Javadoc와 매개 변수 이름 지정"
-description: "이 문서에서는 Java 프로젝트에서 생성 된 Javadoc를 사용 하 여 매개 변수 이름에는 Java 바인딩 프로젝트를 복구 하는 방법을 설명 합니다."
-ms.topic: article
+title: Javadoc와 매개 변수 이름 지정
+description: 이 문서에서는 Java 프로젝트에서 생성 된 Javadoc를 사용 하 여 매개 변수 이름에는 Java 바인딩 프로젝트를 복구 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7517e46c5b66123dc4e12fb5562c59f569f249aa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Javadoc와 매개 변수 이름 지정
 

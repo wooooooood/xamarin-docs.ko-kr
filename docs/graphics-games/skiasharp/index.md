@@ -1,18 +1,17 @@
 ---
-title: "2D 그리기"
-description: "크로스 플랫폼 2D 드로잉 SkiaSharp와"
-ms.topic: article
+title: 2D 그리기
+description: 크로스 플랫폼 2D 드로잉 SkiaSharp와
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: ee0625f22062fef3c27a697ce33488274abc24d9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a6249525e8a5f85284c462888a7698312321642f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="2d-drawing"></a>2D 그리기
 
@@ -74,4 +73,4 @@ Xamarin.Forms에 렌더링 하는 플랫폼 그래픽 크로스 작업할 방법
 
 SkiaSharp는 진행 중인 작업 커뮤니티와 공유 하는 것입니다. Skia API의 중요 한 부분을 바인딩한 우리 하는 동안 많은 작업을 수행 해야 하는 남아 있습니다. Skia를 노출 하는 안정적인 C API를 사용 하 고 현재 계획으로 만드는 작업의 세부적인 Api를 제공 하는 Skia C 바인딩에 참여를 계속 하려면는 합니다.
 
-하기 위한 우리의 바인딩 노력 안내선, 남겨 주세요 의견이 나 제안 문제 GitHub 리포지토리에서 [http://github.com/mono/SkiaSharp](http://github.com/mono/SkiaSharp)합니다.
+하기 위한 우리의 바인딩 노력 안내선, 남겨 주세요 의견이 나 제안 문제 GitHub 리포지토리에서 [ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp)합니다.

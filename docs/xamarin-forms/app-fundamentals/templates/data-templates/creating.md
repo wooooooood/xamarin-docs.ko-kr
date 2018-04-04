@@ -1,18 +1,17 @@
 ---
-title: "DataTemplate 만들기"
-description: "데이터 템플릿은 ResourceDictionary, 또는 사용자 정의 형식 또는 적절 한 Xamarin.Forms 셀 형식에서 인라인을 만들 수 있습니다. 이 문서는 각 기법을 탐색합니다."
-ms.topic: article
+title: DataTemplate 만들기
+description: 데이터 템플릿은 ResourceDictionary, 또는 사용자 정의 형식 또는 적절 한 Xamarin.Forms 셀 형식에서 인라인을 만들 수 있습니다. 이 문서는 각 기법을 탐색합니다.
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 5721aee95e39b56e9732129774a03f08e0db6cc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cd4266fb8e7d68a9f93bd169ca70c6a0f516a357
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-datatemplate"></a>DataTemplate 만들기
 

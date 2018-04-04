@@ -1,18 +1,17 @@
 ---
-title: "Google 클라우드 메시징"
-description: "Google 클라우드 메시징 (GCM)는 모바일 응용 프로그램 및 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 GCM 작동 하는 방법에 대 한 개요를 제공 하 고 응용 프로그램 GCM에서 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다."
-ms.topic: article
+title: Google 클라우드 메시징
+description: Google 클라우드 메시징 (GCM)는 모바일 응용 프로그램 및 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 GCM 작동 하는 방법에 대 한 개요를 제공 하 고 응용 프로그램 GCM에서 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: f44899ecf5ba2d904333b71226cdd6c7dcea8db0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 73ff82f3bf36aa54422c1693c6bf07731480b7f7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="google-cloud-messaging"></a>Google 클라우드 메시징
 

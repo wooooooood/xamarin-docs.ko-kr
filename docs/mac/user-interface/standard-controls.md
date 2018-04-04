@@ -1,18 +1,17 @@
 ---
-title: "표준 컨트롤"
-description: "이 문서는 단추, 레이블, 텍스트 필드, 확인란 등 표준 AppKit 컨트롤 관련 작업 하 고 Xamarin.Mac 응용 프로그램의 컨트롤을 분할 합니다. 인터페이스 작성기를 사용 하 여 인터페이스를 추가 하 고 코드에서 상호 작용 하 설명 합니다."
-ms.topic: article
+title: 표준 컨트롤
+description: 이 문서는 단추, 레이블, 텍스트 필드, 확인란 등 표준 AppKit 컨트롤 관련 작업 하 고 Xamarin.Mac 응용 프로그램의 컨트롤을 분할 합니다. 인터페이스 작성기를 사용 하 여 인터페이스를 추가 하 고 코드에서 상호 작용 하 설명 합니다.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e887026b4f87d2e1bf8c7647a7845765ce8b886c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="standard-controls"></a>표준 컨트롤
 
@@ -93,7 +92,7 @@ Xcode의 인터페이스 작성기의 창 디자인을 열립니다.
 
 [![](standard-controls-images/edit04.png "제약 조건 설정")](standard-controls-images/edit04.png#lightbox)
 
-사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레는 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치를 제어 합니다. 예: 
+사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레는 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치를 제어 합니다. 예를 들어: 
 
 [![](standard-controls-images/edit05.png "제약 조건 편집")](standard-controls-images/edit05.png#lightbox)
 
@@ -280,7 +279,7 @@ ButtonOutlet.Activated += (sender, e) => {
 };
 ```
 
-통해 노출 되는 단추 **동작**, `public partial` 메서드는 자동으로 생성 Xcode에서 선택한 이름으로 합니다. 에 응답 하는 **동작**, 클래스의 부분 메서드를 완료 하는 **동작** 에 정의 된 합니다. 예:
+통해 노출 되는 단추 **동작**, `public partial` 메서드는 자동으로 생성 Xcode에서 선택한 이름으로 합니다. 에 응답 하는 **동작**, 클래스의 부분 메서드를 완료 하는 **동작** 에 정의 된 합니다. 예를 들어:
 
 ```csharp
 partial void ButtonAction (Foundation.NSObject sender) {
@@ -289,7 +288,7 @@ partial void ButtonAction (Foundation.NSObject sender) {
 }
 ```
 
-단추 상태에 대 한 (같은 **에** 및 **오프**), 상태를 확인 또는으로 설정할 수는 `State` 속성에 대해는 `NSCellStateValue` 열거형입니다. 예:
+단추 상태에 대 한 (같은 **에** 및 **오프**), 상태를 확인 또는으로 설정할 수는 `State` 속성에 대해는 `NSCellStateValue` 열거형입니다. 예를 들어:
 
 ```csharp
 DisclosureButton.Activated += (sender, e) => {
@@ -326,7 +325,7 @@ AppKit 몇 가지 유형의 확인란을 선택 및 사용자 인터페이스 �
 [![](standard-controls-images/buttons02.png "사용 가능한 확인란을 선택 합니다. 형식 예")](standard-controls-images/buttons02.png#lightbox)
 
 
-확인란 및 라디오 단추 (을 통해 노출 **콘센트**) 상태 (같은 **에** 및 **오프**), 상태를 확인 또는으로 설정할 수는 `State` 속성에 대해는 `NSCellStateValue` 열거형입니다. 예:
+확인란 및 라디오 단추 (을 통해 노출 **콘센트**) 상태 (같은 **에** 및 **오프**), 상태를 확인 또는으로 설정할 수는 `State` 속성에 대해는 `NSCellStateValue` 열거형입니다. 예를 들어:
 
 ```csharp
 AdjustTime.Activated += (sender, e) => {
@@ -483,7 +482,7 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 
 [![](standard-controls-images/select01.png "선택 컨트롤 예")](standard-controls-images/select01.png#lightbox)
 
-선택 컨트롤으로 노출 하 여 사용자의 상호 작용에 추적 하는 방법은 두 가지가 **동작**합니다. 예:
+선택 컨트롤으로 노출 하 여 사용자의 상호 작용에 추적 하는 방법은 두 가지가 **동작**합니다. 예를 들어:
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -491,7 +490,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-첨부 한 **대리자** 에 `Activated` 이벤트. 예:
+첨부 한 **대리자** 에 `Activated` 이벤트. 예를 들어:
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -499,7 +498,7 @@ TickedSlider.Activated += (sender, e) => {
 };
 ```
 
-를 설정 하거나 선택 컨트롤의 값을 읽을 `IntValue` 속성입니다. 예:
+를 설정 하거나 선택 컨트롤의 값을 읽을 `IntValue` 속성입니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
@@ -528,7 +527,7 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 
 [![](standard-controls-images/level01.png "예제 표시기 컨트롤")](standard-controls-images/level01.png#lightbox)
 
-표시기 컨트롤에 사용자 상호 작용으로 노출 하거나 추적 하는 방법은 두 가지가 **동작** 또는 **콘센트** 및 연결 된 **대리자** 는 를`Activated`이벤트입니다. 예:
+표시기 컨트롤에 사용자 상호 작용으로 노출 하거나 추적 하는 방법은 두 가지가 **동작** 또는 **콘센트** 및 연결 된 **대리자** 는 를`Activated`이벤트입니다. 예를 들어:
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -536,13 +535,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-페이지를 읽거나 설정 표시기 컨트롤의 값을 사용 하 여는 `DoubleValue` 속성입니다. 예:
+페이지를 읽거나 설정 표시기 컨트롤의 값을 사용 하 여는 `DoubleValue` 속성입니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-비활성 및 비동기 진행률 표시기 애니메이션 표시 합니다. 사용 된 `StartAnimation` 메서드를 표시 될 때 애니메이션을 시작 합니다. 예:
+비활성 및 비동기 진행률 표시기 애니메이션 표시 합니다. 사용 된 `StartAnimation` 메서드를 표시 될 때 애니메이션을 시작 합니다. 예를 들어:
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -565,13 +564,13 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 - **EditingBegan** -사용자가 편집을 위해 필드를 선택할 때 발생 합니다.
 - **EditingEnded** -사용자가 필드에서 Enter 키를 누르거나 필드를 유지 하는 경우.
 
-사용 하 여는 `StringValue` 속성을 읽거나 필드의 값을 설정 합니다. 예:
+사용 하 여는 `StringValue` 속성을 읽거나 필드의 값을 설정 합니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
 ```
 
-표시 하거나 숫자 값을 편집 하는 필드에 대해 사용할 수 있습니다는 `IntValue` 속성입니다. 예:
+표시 하거나 숫자 값을 편집 하는 필드에 대해 사용할 수 있습니다는 `IntValue` 속성입니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);

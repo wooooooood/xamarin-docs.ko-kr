@@ -1,18 +1,17 @@
 ---
-title: "1 부입니다. XAML 시작"
-description: "Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠를 정의할 수 주로 사용 됩니다. XAML 파일은 항상는 C# 코드 파일의 태그에 대 한 코드 지원을 제공 하와 연결 합니다. 함께이 두 파일 속성 초기화 및 자식 뷰를 포함 하는 새 클래스 정의에 적용 됩니다. XAML 파일 내에서 XML 요소와 특성, 클래스 및 속성 참조 되 고 태그와 코드 간 연결이 설정 됩니다."
-ms.topic: article
+title: 1 부입니다. XAML 시작
+description: Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠를 정의할 수 주로 사용 됩니다. XAML 파일은 항상는 C# 코드 파일의 태그에 대 한 코드 지원을 제공 하와 연결 합니다. 함께이 두 파일 속성 초기화 및 자식 뷰를 포함 하는 새 클래스 정의에 적용 됩니다. XAML 파일 내에서 XML 요소와 특성, 클래스 및 속성 참조 되 고 태그와 코드 간 연결이 설정 됩니다.
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML 시작
 

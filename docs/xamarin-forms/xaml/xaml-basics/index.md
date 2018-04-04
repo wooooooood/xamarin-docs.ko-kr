@@ -1,31 +1,30 @@
 ---
-title: "Xamarin.Forms XAML 기본 사항"
-description: "모바일 장치에 대 한 플랫폼 간 태그 시작"
-ms.topic: article
+title: Xamarin.Forms XAML 기본 사항
+description: 모바일 장치에 대 한 플랫폼 간 태그 시작
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a3f3dbbe0f12cfa7cc1fc6606ec8bd48a96e407c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
-XAML-eXtensible Application Markup Language-개발자가 코드 보다는 태그를 사용 하 여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에 필요 하지 않지만 간결 하 고 해당 하는 코드 보다 시각적으로 일관 된 하 고 잠재적으로 높은 합니다. XAML은 인기 있는 MVVM (모델-뷰-ViewModel) 응용 프로그램 아키텍처와 함께 사용 하는 데 특히 적합: XAML XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결 된 뷰를 정의 합니다.
+XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에 필요 하지 않지만 간결 하 고 해당 하는 코드 보다 시각적으로 일관 된 하 고 잠재적으로 높은 합니다. XAML은 인기 있는 MVVM (모델-뷰-ViewModel) 응용 프로그램 아키텍처와 함께 사용 하는 데 특히 적합: XAML XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결 된 뷰를 정의 합니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 사항 내용
 
 * [개요](#Overview)
-* [1 부입니다. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-* [2 부 합니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-* [3 부 합니다. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [5 단계입니다. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+* [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+* [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+* [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+* [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 다음 XAML 기본 사항 문서 외에도 책의 장을 다운로드할 수 있습니다 [Xamarin.Forms 사용 하 여 모바일 앱 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 

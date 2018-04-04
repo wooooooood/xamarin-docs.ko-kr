@@ -1,18 +1,17 @@
 ---
-title: "추가 watchOS 3 프레임 워크 변경 내용"
-description: "이 문서에서는 추가, 부 버전 변경 또는 watchOS 3에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다."
-ms.topic: article
+title: 추가 watchOS 3 프레임 워크 변경 내용
+description: 이 문서에서는 추가, 부 버전 변경 또는 watchOS 3에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e2d14bcedd6ff5570d77da8c9b54a74b5ce0752a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 572aaff9d010ec1ec1f48db2878859e445e2fb20
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>추가 watchOS 3 프레임 워크 변경 내용
 

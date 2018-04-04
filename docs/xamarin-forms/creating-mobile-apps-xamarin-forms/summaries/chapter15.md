@@ -1,17 +1,16 @@
 ---
-title: "15 장의 요약입니다. 대화형 인터페이스"
-ms.topic: article
+title: 15 장의 요약입니다. 대화형 인터페이스
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09b999771ec500409e40dc2aef671045bf9f5565
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>15 장의 요약입니다. 대화형 인터페이스
 
@@ -91,7 +90,7 @@ ms.lasthandoff: 03/15/2018
 
 - [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) 형식의 `double`1로 초기화 된,
 
-시각적으로 `Stepper` 레이블이 지정 된 두 개의 단추 이루어져  **&ndash;**  및  **+** 합니다. 키를 누르면  **&ndash;**  감소 `Value` 여 `Increment` 최소 `Minimum`합니다. 키를 누르면  **+**  증가 `Value` 여 `Increment` 최대 `Maximum`합니다.
+시각적으로 `Stepper` 레이블이 지정 된 두 개의 단추 이루어져 **&ndash;** 및 **+**합니다. 키를 누르면 **&ndash;** 감소 `Value` 여 `Increment` 최소 `Minimum`합니다. 키를 누르면 **+** 증가 `Value` 여 `Increment` 최대 `Maximum`합니다.
 
 이 확인할는 [ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo) 샘플.
 

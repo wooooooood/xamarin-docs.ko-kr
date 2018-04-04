@@ -1,18 +1,17 @@
 ---
-title: "자재 테마"
-description: "테마 하는 방법 자료 테마와 Xamarin.Android 앱"
-ms.topic: article
+title: 자재 테마
+description: 테마 하는 방법 자료 테마와 Xamarin.Android 앱
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 479abf7fef695be156d4447592bc59dceabe3f03
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a3b5f908330833a38aad9e329835a4a437fc29f0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-theme"></a>자재 테마
 
@@ -73,7 +72,7 @@ Android 5.0 응용 프로그램 프로젝트를 구성 하는 방법을 알아�
 </application>
 ```
 
-또는 응용 프로그램을 설정할 수 `Theme` 특성 **AssemblyInfo.cs** (또는 **Properties.cs**). 예:
+또는 응용 프로그램을 설정할 수 `Theme` 특성 **AssemblyInfo.cs** (또는 **Properties.cs**). 예를 들어:
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -204,7 +203,7 @@ Android 5.0를 하면 개별 뷰 스타일 지정 수 있습니다. 만든 후 *
 </style>
 ```
 
--   레이아웃에 설정 된 `style` 이전 단계에서 선택한 스타일 사용자 이름과 일치 하도록 해당 보기에 대 한 특성입니다. 예:
+-   레이아웃에 설정 된 `style` 이전 단계에서 선택한 스타일 사용자 이름과 일치 하도록 해당 보기에 대 한 특성입니다. 예를 들어:
 
 ```xml
 <android.support.v7.widget.CardView
@@ -225,7 +224,7 @@ Android 5.0를 하면 개별 뷰 스타일 지정 수 있습니다. 만든 후 *
 
 Android 5.0에서 자료 테마를 사용 하지만 하향 호환 스타일 이전 Android 버전에는 자동으로 전환 되도록 응용 프로그램 스타일 지정, 다음 단계를 사용 합니다.
 
--   사용자 지정 테마를 정의 **Resources/values-v21/styles.xml** 자료 테마 스타일에서 파생 된 합니다. 예:
+-   사용자 지정 테마를 정의 **Resources/values-v21/styles.xml** 자료 테마 스타일에서 파생 된 합니다. 예를 들어:
 
 ```xml
 <resources>
@@ -235,7 +234,7 @@ Android 5.0에서 자료 테마를 사용 하지만 하향 호환 스타일 이�
 </resources>
 ```
 
--   사용자 지정 테마를 정의 **Resources/values/styles.xml** 하는 테마에는 이전 버전에서 파생 되지만 위와 동일한 테마 이름을 사용 합니다. 예:
+-   사용자 지정 테마를 정의 **Resources/values/styles.xml** 하는 테마에는 이전 버전에서 파생 되지만 위와 동일한 테마 이름을 사용 합니다. 예를 들어:
 
 ```xml
 <resources>
@@ -246,7 +245,7 @@ Android 5.0에서 자료 테마를 사용 하지만 하향 호환 스타일 이�
 ```
 
 -   **AndroidManifest.xml**, 사용자 지정 테마 이름으로 앱을 구성 합니다. 
-    예:
+    예를 들어:
 
 ```xml
 <application android:label="MyApp" 

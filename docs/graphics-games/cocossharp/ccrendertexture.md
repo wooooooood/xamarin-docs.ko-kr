@@ -1,17 +1,16 @@
 ---
 title: 성능 및 CCRenderTexture로 시각 효과
 description: CCRenderTexture는 개발자가 그리기 호출을 줄여서 CocosSharp 게임의 성능을 향상 시킬 수 있으며 특정 시각 효과 만드는 데 사용할 수 있습니다. 이 가이드 실습 효과적으로이 클래스를 사용 하는 방법의 예제를 제공 하도록 CCRenderTexture 샘플을 포함 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 25eba08c1c72ba6fefd39b949b504f8e6fabe983
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>성능 및 CCRenderTexture로 시각 효과
 

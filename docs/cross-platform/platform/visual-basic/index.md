@@ -1,18 +1,17 @@
 ---
-title: "휴대용 Visual Basic.NET"
-description: "이 가이드에서는 Xamarin.iOS 및 Xamarin.Android를 대상으로 하는 솔루션에서 사용할 수 있는 PCL 이식 가능한 클래스 라이브러리 () 프로젝트를 작성 하 여 Visual Basic를 사용할 수 있는 방법을 설명 합니다."
-ms.topic: article
+title: 휴대용 Visual Basic.NET
+description: 이 가이드에서는 Xamarin.iOS 및 Xamarin.Android를 대상으로 하는 솔루션에서 사용할 수 있는 PCL 이식 가능한 클래스 라이브러리 () 프로젝트를 작성 하 여 Visual Basic를 사용할 수 있는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a4ecad0b28dc4b8ba4060966ccefb678c8e6794
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="portable-visual-basicnet"></a>휴대용 Visual Basic.NET
 

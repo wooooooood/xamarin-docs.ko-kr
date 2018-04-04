@@ -1,7 +1,6 @@
 ---
-title: "C# 6 새 기능 개요"
-description: "최신 버전의 C# 언어-버전 6-계속 더 적은 상용구, 향상 된 명확성을 및 일관성이 언어를 변경 합니다. 클리너 초기화 구문을 사용 하는 기능은 catch/finally 블록 및 null 조건부에서 await? 연산자는 특히 유용 합니다."
-ms.topic: article
+title: C# 6 새 기능 개요
+description: 최신 버전의 C# 언어-버전 6-계속 더 적은 상용구, 향상 된 명확성을 및 일관성이 언어를 변경 합니다. 클리너 초기화 구문을 사용 하는 기능은 catch/finally 블록 및 null 조건부에서 await? 연산자는 특히 유용 합니다.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>C# 6 새 기능 개요
 
@@ -52,7 +51,7 @@ Mac 용 visual Studio는 자동으로 시스템에 모노 설치를 업데이트
 
 Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://www.visualstudio.com/) 코드를 컴파일하려면 C# 6 (선택한 경우에 Windows 용 Xamarin Studio IDE로) 설치 합니다.
 
-^ 또는  *[Microsoft 빌드 도구 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*  명령에 대 한 명령줄 컴파일 또는 빌드 서버 예입니다.
+^ 또는 *[Microsoft 빌드 도구 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)* 명령에 대 한 명령줄 컴파일 또는 빌드 서버 예입니다.
 
 ## <a name="using-c-6"></a>C# 6을 사용 하 여
 

@@ -1,18 +1,17 @@
 ---
-title: "데이터 바인딩"
-description: "데이터 바인딩은 하나의 속성만 변경 다른 속성에 자동으로 반영 되도록 두 개체의 속성을 연결 하는 방법입니다. 데이터 바인딩 모델-뷰-MVVM () 응용 프로그램 아키텍처의 필수적인 부분입니다."
-ms.topic: article
+title: 데이터 바인딩
+description: 데이터 바인딩은 하나의 속성만 변경 다른 속성에 자동으로 반영 되도록 두 개체의 속성을 연결 하는 방법입니다. 데이터 바인딩 모델-뷰-MVVM () 응용 프로그램 아키텍처의 필수적인 부분입니다.
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: eefff0ea23135c09d86284c0fddba9e80f50004a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee8481696b0ef85aec949c6def7767e57eb99e17
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-binding"></a>데이터 바인딩
 
@@ -45,7 +44,7 @@ Xamarin.Forms 응용 프로그램이 하나 이상의 페이지를 각각 포함
 
 바인딩 모드의 두 개체 간의 데이터 흐름을 제어 하는 방법을 검색 합니다.
 
-## <a name="string-formattingstring-formattingmd"></a>[문자열 서식 지정](string-formatting.md)
+## <a name="string-formattingstring-formattingmd"></a>[문자열 서식](string-formatting.md)
 
 데이터 바인딩을 사용 하 여 서식을 지정 하 고 개체를 문자열로 표시 합니다.
 

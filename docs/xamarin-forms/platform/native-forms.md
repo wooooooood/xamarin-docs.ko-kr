@@ -1,18 +1,17 @@
 ---
-title: "기본 형식"
-description: "기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는 PCL 이식 가능한 클래스 라이브러리 (),.NET 표준 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다."
-ms.topic: article
+title: 기본 형식
+description: 기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는 PCL 이식 가능한 클래스 라이브러리 (),.NET 표준 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-forms"></a>기본 형식
 

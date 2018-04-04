@@ -1,18 +1,17 @@
 ---
-title: "Android 리소스"
-description: "이 문서는 Xamarin.Android의 Android 리소스의 개념을 소개 하 고 사용 하는 방법에 문서화 됩니다. Android 응용 프로그램에서 응용 프로그램 지역화 및 다양 한 화면 크기 및 밀도 포함 하 여 여러 장치를 지원 하기 위해 리소스를 사용 하는 방법을 알아봅니다."
-ms.topic: article
+title: Android 리소스
+description: 이 문서는 Xamarin.Android의 Android 리소스의 개념을 소개 하 고 사용 하는 방법에 문서화 됩니다. Android 응용 프로그램에서 응용 프로그램 지역화 및 다양 한 화면 크기 및 밀도 포함 하 여 여러 장치를 지원 하기 위해 리소스를 사용 하는 방법을 알아봅니다.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: 6546870d85f7b77e60dff0cb9e6075f982c9cb8e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7b6ba9cdc222019bfa2e1cb9a61b54e290e69bba
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resources"></a>Android 리소스
 

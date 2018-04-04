@@ -1,17 +1,16 @@
 ---
-title: "그래픽 및 iOS에서 애니메이션"
-description: "응용 프로그램의 핵심 개념"
-ms.topic: article
+title: 그래픽 및 iOS에서 애니메이션
+description: 응용 프로그램의 핵심 개념
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ece988f2ba29ec4656631d993e4c4b99a276b199
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 99c05efa13027aca4935425d2a731613f250ec93
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="graphics-and-animation-in-ios"></a>그래픽 및 iOS에서 애니메이션
 
@@ -22,11 +21,11 @@ ms.lasthandoff: 02/27/2018
 
 CoreImage 다양 한 기본 제공 필터와 이미지 및 비디오, 얼굴 감지를 포함 한 적용할 효과를 제공 하는 iOS 5에에서 도입 된 새로운 프레임 워크입니다.
 
-##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[코어 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
+##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
 하위 수준 그리기 지원을 제공 하는 핵심 그래픽 iOS 프레임 워크에 설명 합니다. 기 하 도형, 이미지, Pdf를 그리려면 코어 그래픽을 사용 하는 방법을 보여 줍니다.
 
-##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[코어 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
+##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
 
 이 문서는 고성능 방법 UIKit에서 유동 애니메이션 하위 애니메이션 컨트롤에 직접 사용 하도록 사용 방법을 보여 주는 핵심 애니메이션 프레임 워크를 검사 합니다.
 

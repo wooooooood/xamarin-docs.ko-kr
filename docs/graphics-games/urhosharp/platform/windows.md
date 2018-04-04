@@ -1,17 +1,16 @@
 ---
-title: "UrhoSharp Windows 지원"
-description: "Windows 특정 설치 및 UrhoSharp에 대 한 기능입니다."
-ms.topic: article
+title: UrhoSharp Windows 지원
+description: Windows 특정 설치 및 UrhoSharp에 대 한 기능입니다.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 0deefe0e00ec96a21317bfa2e8bf4894d5deae47
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3788b6d6a9c9c9c84b8974a78f0a3c32ae6b6a3e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
 
@@ -39,7 +38,7 @@ _Windows 특정 설치 프로그램 및 기능_
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
@@ -83,7 +82,7 @@ WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
@@ -116,7 +115,7 @@ UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 

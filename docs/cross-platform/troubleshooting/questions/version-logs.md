@@ -1,17 +1,17 @@
 ---
-title: "버전 정보 및 로그 내 어디서 찾을 수 있습니까?"
-ms.topic: article
+title: 버전 정보 및 로그 내 어디서 찾을 수 있습니까?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d6ab8b939b7a6f8c7e66985a8c4238064ee1543
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그 내 어디서 찾을 수 있습니까?
 
@@ -214,7 +214,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 **창 > 장치 > ${DeviceName}**
 
-충돌 보고서는 아래에서 사용할 수는 **장치 로그 보기** 단추입니다. 공개 화살표 창의 맨 아래에 표시 되는 장치에 대 한 시스템 로그 <img alt="Disclosure arrow" src="https://kb.xamarin.com/customer/portal/attachments/382618" style="width: 15px; height: 12px;" />합니다.
+충돌 보고서는 아래에서 사용할 수는 **장치 로그 보기** 단추입니다. 공개 화살표 창의 맨 아래에 표시 되는 장치에 대 한 시스템 로그 <img alt="Disclosure arrow" src="https://kb.xamarin.com/customer/portal/attachments/382618" style="width: 15px; height: 12px;" />이어야 합니다.
 
 #### <a name="xcode-5"></a>Xcode 5
 

@@ -1,18 +1,17 @@
 ---
-title: "대상 프레임워크"
-description: "이 문서에서는 Xamarin.Mac에 사용할 수 있는 대상 프레임 (기본 클래스 라이브러리) 및 Xamarin.Mac 프로젝트에서 사용 하 여의 의미를 설명 합니다."
-ms.topic: article
+title: 대상 프레임워크
+description: 이 문서에서는 Xamarin.Mac에 사용할 수 있는 대상 프레임 (기본 클래스 라이브러리) 및 Xamarin.Mac 프로젝트에서 사용 하 여의 의미를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 053cdd2dbfc7741257e6630e5b11b77b1055428e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="target-framework"></a>대상 프레임워크
 

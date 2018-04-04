@@ -1,18 +1,17 @@
 ---
-title: "플랫폼 특성 만들기"
-description: "공급 업체 효과 함께 자신의 플랫폼 비슷하므로 만들 수 있습니다. 효과 특정 플랫폼을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다. 이 문서에는 플랫폼 특정 통해 효과 노출 하는 방법을 보여 줍니다."
-ms.topic: article
+title: 플랫폼 특성 만들기
+description: 공급 업체 효과 함께 자신의 플랫폼 비슷하므로 만들 수 있습니다. 효과 특정 플랫폼을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다. 이 문서에는 플랫폼 특정 통해 효과 노출 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 7cdc67f8ea1038226bb6ef8c8add8c03e9635e6a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6283e22d75d9e52ad3e2f300617818c98d887481
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-platform-specifics"></a>플랫폼 특성 만들기
 
@@ -274,4 +273,4 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 - [ShadowPlatformSpecific (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [효과 사용 하 여 컨트롤을 사용자 지정](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)
+- [연결된 속성](~/xamarin-forms/xaml/attached-properties.md)

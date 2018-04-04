@@ -1,18 +1,17 @@
 ---
-title: "3D MonoGame 좌표"
-description: "3D 게임 개발에 중요 한 단계는 3D 좌표계를 이해 합니다. MonoGame 다양 한 위치, 태도 및 3D 공간에서 개체 크기 조정에 대 한 클래스를 제공 합니다."
-ms.topic: article
+title: 3D MonoGame 좌표
+description: 3D 게임 개발에 중요 한 단계는 3D 좌표계를 이해 합니다. MonoGame 다양 한 위치, 태도 및 3D 공간에서 개체 크기 조정에 대 한 클래스를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: e930004a91133f391f68221473f212b7caaf1b07
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 0273b4f13c91fd766530ff7c0976096de3239dc5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="3d-coordinates-in-monogame"></a>3D MonoGame 좌표
 

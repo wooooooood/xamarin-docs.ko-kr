@@ -1,18 +1,17 @@
 ---
-title: "지도에 영역을 강조 표시"
-description: "이 문서에는 지도에 영역을 강조 표시 하려면 지도에 다각형 오버레이 추가 하는 방법을 설명 합니다. 다각형은 닫힌된 셰이프 및 해당 내부를 입력 했습니다."
-ms.topic: article
+title: 지도에 영역을 강조 표시
+description: 이 문서에는 지도에 영역을 강조 표시 하려면 지도에 다각형 오버레이 추가 하는 방법을 설명 합니다. 다각형은 닫힌된 셰이프 및 해당 내부를 입력 했습니다.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 6c116565842537f24d92a6d100ab1636f25c2e12
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d87237015b9e3d896766894d552c650047137146
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-region-on-a-map"></a>지도에 영역을 강조 표시
 
@@ -31,7 +30,7 @@ _이 문서에는 지도에 영역을 강조 표시 하려면 지도에 다각�
 1. [사용자 지정](#Customizing_the_Map) 지도 지도 대 한 사용자 지정 렌더러는 각 플랫폼에서 만들어 합니다.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 참조 [ `Maps Control` ](~/xamarin-forms/user-interface/map.md)합니다.
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map.md)를 참조하세요.
 
 사용자 지정 렌더러를 사용 하 여 지도 사용자 지정 하는 방법에 대 한 정보를 참조 하십시오. [지도 핀을 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)합니다.
 
@@ -307,5 +306,5 @@ namespace MapOverlay.UWP
 ## <a name="related-links"></a>관련 링크
 
 - [다각형 맵 오버레이 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
-- [지도 핀을 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [지도 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

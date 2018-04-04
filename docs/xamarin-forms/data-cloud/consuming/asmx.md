@@ -1,18 +1,17 @@
 ---
-title: "ASP.NET 웹 서비스 (ASMX)를 사용합니다."
-description: "ASMX 웹 서비스는 SOAP Simple Object Access Protocol ()를 사용 하 여 메시지를 보내는 작성 하는 기능을 제공 합니다. SOAP는 빌드하고 웹 서비스에 액세스 하기 위한 플랫폼 독립적, 언어 독립적인 프로토콜입니다. 소비자는 ASMX 서비스의 플랫폼, 개체 모델 또는 서비스를 구현 하는 데 사용 되는 프로그래밍 언어에 대 한 어떠한 정보도 알 필요가 없습니다. SOAP 메시지를 송수신 하는 방법을 이해 하려면 하기만 합니다. 이 문서는 ASMX SOAP 서비스 Xamarin.Forms 응용 프로그램에서 사용 하는 방법을 보여 줍니다."
-ms.topic: article
+title: ASP.NET 웹 서비스 (ASMX)를 사용합니다.
+description: ASMX 웹 서비스는 SOAP Simple Object Access Protocol ()를 사용 하 여 메시지를 보내는 작성 하는 기능을 제공 합니다. SOAP는 빌드하고 웹 서비스에 액세스 하기 위한 플랫폼 독립적, 언어 독립적인 프로토콜입니다. 소비자는 ASMX 서비스의 플랫폼, 개체 모델 또는 서비스를 구현 하는 데 사용 되는 프로그래밍 언어에 대 한 어떠한 정보도 알 필요가 없습니다. SOAP 메시지를 송수신 하는 방법을 이해 하려면 하기만 합니다. 이 문서는 ASMX SOAP 서비스 Xamarin.Forms 응용 프로그램에서 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>ASP.NET 웹 서비스 (ASMX)를 사용합니다.
 

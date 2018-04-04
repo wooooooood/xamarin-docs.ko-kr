@@ -1,18 +1,17 @@
 ---
-title: "샌드 박싱 Xamarin.Mac 응용 프로그램"
-description: "이 문서에서는 샌드 박싱 앱 스토어에서 릴리스에 대 한 Xamarin.Mac 응용 프로그램에 설명 합니다. 모든 컨테이너 디렉터리, 권한 부여, 사용자가 지정한 사용 권한, 권한 분할 및 커널 적용 같은 샌드 박싱 속하게 될 요소를 처리 합니다."
-ms.topic: article
+title: 샌드 박싱 Xamarin.Mac 응용 프로그램
+description: 이 문서에서는 샌드 박싱 앱 스토어에서 릴리스에 대 한 Xamarin.Mac 응용 프로그램에 설명 합니다. 모든 컨테이너 디렉터리, 권한 부여, 사용자가 지정한 사용 권한, 권한 분할 및 커널 적용 같은 샌드 박싱 속하게 될 요소를 처리 합니다.
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 71f076bb0dc7d552a041d48a6ce531dcff444de6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a02d7639975de092b05f31bacedd6bde4c9392f9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>샌드 박싱 Xamarin.Mac 응용 프로그램
 

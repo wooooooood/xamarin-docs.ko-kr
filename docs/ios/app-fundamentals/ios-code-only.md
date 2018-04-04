@@ -1,18 +1,17 @@
 ---
-title: "코드에서 iOS 사용자 인터페이스 만들기"
-description: "Xamarin.iOS 앱에 대 한 – 또는 코드를 iOS 용 Xamarin 디자이너를 사용 하 여 사용자 인터페이스를 만드는 두 가지 방법을 제공 합니다. 이 문서 전체를 코드로 iOS 사용자 인터페이스를 만드는 방법을 검사 합니다. 컨트롤러에는 응용 프로그램 화면 UIKit에서 보기의 계층 구조를 만들어 만들려는 프로젝트 템플릿으로 시작 하는 방법을 보여 줍니다. 그런 다음는 컨트롤러에서 로드할 수 있는 사용자 지정 보기를 만드는 방법을 설명 합니다."
-ms.topic: article
+title: 코드에서 iOS 사용자 인터페이스 만들기
+description: Xamarin.iOS 앱에 대 한 – 또는 코드를 iOS 용 Xamarin 디자이너를 사용 하 여 사용자 인터페이스를 만드는 두 가지 방법을 제공 합니다. 이 문서 전체를 코드로 iOS 사용자 인터페이스를 만드는 방법을 검사 합니다. 컨트롤러에는 응용 프로그램 화면 UIKit에서 보기의 계층 구조를 만들어 만들려는 프로젝트 템플릿으로 시작 하는 방법을 보여 줍니다. 그런 다음는 컨트롤러에서 로드할 수 있는 사용자 지정 보기를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
 

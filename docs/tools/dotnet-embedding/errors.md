@@ -1,24 +1,23 @@
 ---
-title: "오류를 포함 하는.NET"
-ms.topic: article
+title: 오류를 포함 하는.NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx: 바인딩 오류 메시지
 
 예: 매개 변수, 환경
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
-<h3><a name="EM0000"/>EM0000: 예기치 않은 오류-https://github.com/mono/Embeddinator-4000/issues에 버그 보고서를 채우십시오.</h3>
+<h3><a name="EM0000"/>EM0000: 예기치 않은 오류-에 버그 보고서를 채우십시오. https://github.com/mono/Embeddinator-4000/issues</h3>
 
 예기치 않은 오류가 발생 했습니다. 하십시오 [문제를 제출](https://github.com/mono/Embeddinator-4000/issues) 최대한 많은 정보를 포함 합니다.
 
@@ -68,7 +67,7 @@ ms.lasthandoff: 02/27/2018
 
 도구는 일반 파일을 서로 있기 때문에 오류 메시지에 언급 된 프레임 워크를 병합할 수 없습니다.
 
-이 Embeddinator 4000;의 버그를 나타낼 수 있습니다. 에 버그 보고서를 제출 하세요 [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
+이 Embeddinator 4000;의 버그를 나타낼 수 있습니다. 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
 
 <h3><a name="EM0011"/>: EM0011 어셈블리 `X` 존재 하지 않습니다.</h3>
 
@@ -100,11 +99,11 @@ ms.lasthandoff: 02/27/2018
 
 명령줄 옵션에 대 한 구문 `A` 도구에서 분석할 수 없습니다. 가능성이, 잘못 된 문서 또는 올바른 구문에 대 한 도움말을 확인 하십시오.
 
-<h3><a name="EM0099"/>: EM0099 내부 오류 * 합니다. 테스트 사례 (https://github.com/mono/Embeddinator-4000/issues)를 사용 하 여 버그 보고서를 제출 하세요.</h3>
+<h3><a name="EM0099"/>: EM0099 내부 오류 * 합니다. 테스트 사례와 버그 보고서를 제출 하세요 (https://github.com/mono/Embeddinator-4000/issues)합니다.</h3>
 
 Embeddinator 4000에서 내부 일관성 확인 작업을 실패 한 경우이 오류 메시지가 보고 됩니다.
 
-이 Embeddinator 4000;의 버그를 나타냅니다. 에 버그 보고서를 제출 하세요 [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
+이 Embeddinator 4000;의 버그를 나타냅니다. 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
 
 
 <!-- 1xxx: code processing -->

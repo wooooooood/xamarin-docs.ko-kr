@@ -1,18 +1,17 @@
 ---
-title: "메뉴"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설명 합니다. 만들기 및 메뉴 및 메뉴 항목 Xcode 및 인터페이스 작성기에서 유지 관리 및 이러한 작업을 프로그래밍 방식으로 설명 합니다."
-ms.topic: article
+title: 메뉴
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설명 합니다. 만들기 및 메뉴 및 메뉴 항목 Xcode 및 인터페이스 작성기에서 유지 관리 및 이러한 작업을 프로그래밍 방식으로 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="menus"></a>메뉴
 
@@ -226,7 +225,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 앱을 사용 하지 않는 경우에 `NSDocuments`, 여전히 사용는 `NSDocumentController` 유지 관리 하는 **열기** 전송 하 여 메뉴는 `NSUrl` 파일의 위치와는 `NoteNewRecentDocumentURL` 의 메서드는 `SharedDocumentController`합니다.
 
-재정의 해야 하는 다음으로 `OpenFile` 앱에서 사용자가 선택한 파일을 열 대리자의 메서드는 **최근** 메뉴. 예:
+재정의 해야 하는 다음으로 `OpenFile` 앱에서 사용자가 선택한 파일을 열 대리자의 메서드는 **최근** 메뉴. 예를 들어:
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -425,7 +424,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 마찬가지로 다음 기본 제공 **첫 번째 응답자** 표준 메뉴 항목에 미리 유선 도착 하는 작업을 새로 만들고, 사용자 지정 작업 있고 인터페이스 작성기의 메뉴 항목에이 연결 합니다.
 
-먼저, 응용 프로그램의 창 컨트롤러 중 하나에서 사용자 지정 작업을 정의 합니다. 예:
+먼저, 응용 프로그램의 창 컨트롤러 중 하나에서 사용자 지정 작업을 정의 합니다. 예를 들어:
 
 ```csharp
 [Action("defineKeyword:")]
@@ -439,7 +438,7 @@ public void defineKeyword (NSObject sender) {
 
 ![속성 검사자](menu-images/action01.png "특성 검사기")
 
-클릭는  **+**  의 맨 아래에 있는 단추는 **특성 검사기** 새 사용자 지정 동작을 추가 하려면:
+클릭는 **+** 의 맨 아래에 있는 단추는 **특성 검사기** 새 사용자 지정 동작을 추가 하려면:
 
 ![새 동작 추가](menu-images/action02.png "새 동작 추가")
 

@@ -1,18 +1,17 @@
 ---
-title: "아이스크림 샌드위치 기능"
-description: "이 문서에서는 Android 4 api-아이스크림 샌드위치 응용 프로그램 개발자가 사용할 수 있는 새로운 기능인을 설명 합니다. 여러 가지 새로운 사용자 인터페이스 기술에 설명 하 고 다양 한 Android 4는 장치 및 응용 프로그램 간의 데이터를 공유 하는 새로운 기능을 검토 합니다."
-ms.topic: article
+title: 아이스크림 샌드위치 기능
+description: 이 문서에서는 Android 4 api-아이스크림 샌드위치 응용 프로그램 개발자가 사용할 수 있는 새로운 기능인을 설명 합니다. 여러 가지 새로운 사용자 인터페이스 기술에 설명 하 고 다양 한 Android 4는 장치 및 응용 프로그램 간의 데이터를 공유 하는 새로운 기능을 검토 합니다.
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: c2e7f9fabd462faf813299021d5f84ef0a62f790
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c5412629f6dcd31fb0a82634ef530569eef459a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ice-cream-sandwich-features"></a>아이스크림 샌드위치 기능
 

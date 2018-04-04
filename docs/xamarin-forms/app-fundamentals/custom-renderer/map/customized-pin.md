@@ -1,18 +1,17 @@
 ---
-title: "지도 핀을 사용자 지정"
-description: "이 문서에는 각 플랫폼에 사용자 지정 된 pin과 pin 데이터의 사용자 지정된 보기를 사용 하 여 네이티브 map을 표시 하는 맵 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다."
-ms.topic: article
+title: 지도 핀을 사용자 지정
+description: 이 문서에는 각 플랫폼에 사용자 지정 된 pin과 pin 데이터의 사용자 지정된 보기를 사용 하 여 네이티브 map을 표시 하는 맵 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 312bda44a6b390c6ba486d5a3d60dfe4fb770a2e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀을 사용자 지정
 
@@ -33,7 +32,7 @@ _이 문서에는 각 플랫폼에 사용자 지정 된 pin과 pin 데이터의 
 각 항목 이제 살펴봅니다 차례로 구현 하는 `CustomMap` 렌더러는 각 플랫폼에서 사용자 지정 된 pin과 pin 데이터의 사용자 지정된 보기를 사용 하 여 네이티브 map을 표시 하는 합니다.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 참조 [ `Maps Control` ](~/xamarin-forms/user-interface/map.md)합니다.
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map.md)를 참조하세요.
 
 <a name="Creating_the_Custom_Map" />
 

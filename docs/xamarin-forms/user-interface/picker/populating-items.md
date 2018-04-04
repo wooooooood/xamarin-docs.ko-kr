@@ -1,18 +1,17 @@
 ---
-title: "선택 항목 컬렉션에 대 한 추가 데이터"
-description: "선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다. 이 문서에는 Items 컬렉션에 추가 하 여 선택기를 데이터로 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다."
-ms.topic: article
+title: 선택 항목 컬렉션에 대 한 추가 데이터
+description: 선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다. 이 문서에는 Items 컬렉션에 추가 하 여 선택기를 데이터로 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3468e38d8ef46dfef870a05bf72d93c28195dae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 63a72861895f79d2d0154297f88610ddb8bb8beb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택 항목 컬렉션에 대 한 추가 데이터
 
@@ -86,4 +85,4 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [선택기 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
-- [Picker](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)
+- [선택기](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)

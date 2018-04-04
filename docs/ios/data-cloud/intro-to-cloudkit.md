@@ -1,18 +1,17 @@
 ---
 title: CloudKit
-description: "icloud와 사용자의 계정을 통해 자동 동기화를 지 원하는 iCloud에 데이터를 저장할 iOS 8 응용 프로그램 Api를 사용 합니다. ICloud 사용 장치에서 사용자에 게 일관 되 고 완벽 한 경험을 제공 CloudKit를 사용 하 여 합니다. 이 문서에서는 CloudKit 편의 API를 사용 하 여 iOS 8 응용 프로그램에서 사용 하도록 설정 합니다."
-ms.topic: article
+description: icloud와 사용자의 계정을 통해 자동 동기화를 지 원하는 iCloud에 데이터를 저장할 iOS 8 응용 프로그램 Api를 사용 합니다. ICloud 사용 장치에서 사용자에 게 일관 되 고 완벽 한 경험을 제공 CloudKit를 사용 하 여 합니다. 이 문서에서는 CloudKit 편의 API를 사용 하 여 iOS 8 응용 프로그램에서 사용 하도록 설정 합니다.
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: c4ee5c0457dd1faea74cbbc30dd2d0f42087a8d0
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 

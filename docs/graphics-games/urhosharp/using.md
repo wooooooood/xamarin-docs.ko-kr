@@ -1,17 +1,16 @@
 ---
-title: "UrhoSharp를 사용 하 여"
-description: "UrhoSharp 엔진 개요"
-ms.topic: article
+title: UrhoSharp를 사용 하 여
+description: UrhoSharp 엔진 개요
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: cd30f17d631216a3ea119a262aca6d294394a77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cdb32c0fe9aa1a267bda5768b9026667723d694c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-urhosharp"></a>UrhoSharp를 사용 하 여
 
@@ -218,7 +217,7 @@ await cloud.RunActionAsync (
 사용자 [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) 하위 클래스, 구성 동작을 준비 하 고 기능에 대 한 드라이브 하는 비동기 메서드를 도입 해야 합니다.
 C#을 사용 하 여이 메서드를 호출 하는 다음 `await` 프로그램의 다른 부분에서 키워드 중 하나에 `Application.Start` 메서드 또는 응용 프로그램에서 사용자 또는 스토리 포인트에 대 한 응답에서입니다.
 
-예:
+예를 들어:
 
 ```csharp
 class Robot : Component {
@@ -497,7 +496,7 @@ healthBar.SetTexture(ResourceCache.GetTexture2D("Textures/HealthBarBorder.png"))
 
 가능한 경우 항상 기존 파일 형식을 사용 하 고 반드시 필요한 경우가 아니면와 같은 모델에 대 한 사용자 지정 파일 형식 정의 하려고 시도 Urho3D (*.mdl) 및 애니메이션에 대 한 (*.ani). 이러한 유형의 자산에 대 한 Urho 제공 변환기- [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) fbx, 디지털 오디오, 3ds, 및 obj 등과 같은 여러 인기 있는 3D 형식에 사용할 수 있는 합니다.
 
-이기도 한 편리한 용 추가 기능에 블렌더 [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) 블렌더 자산 Urho3D에 대 한 적합 한 형식으로 내보낼 수입니다.
+이기도 한 편리한 용 추가 기능에 블렌더 [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) 블렌더 자산 Urho3D에 대 한 적합 한 형식으로 내보낼 수입니다.
 
 ## <a name="background-loading-of-resources"></a>리소스의 백그라운드에 로드
 
@@ -529,7 +528,7 @@ soundSource.AutoRemove = true;
 
 # <a name="particles"></a>파티클
 
-파티클 응용 프로그램에 몇 가지 단순 하 고 저렴 한 효과 추가 하는 간단한 방법을 제공 합니다.  와 같은 도구를 사용 하 여 PEX 형식으로 저장 하는 입자 소비할 수 있는 [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/)합니다.
+파티클 응용 프로그램에 몇 가지 단순 하 고 저렴 한 효과 추가 하는 간단한 방법을 제공 합니다.  와 같은 도구를 사용 하 여 PEX 형식으로 저장 하는 입자 소비할 수 있는 [ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/)합니다.
 
 파티클은 노드를 추가할 수 있는 구성 요소.  노드를 호출 하면 `CreateComponent<ParticleEmitter2D>` 파티클이 만들고 다음 2 차원 효과로 효과 속성을 설정 하 여 파티클이 구성 하는 메서드는 리소스 캐시에서 로드 합니다.
 

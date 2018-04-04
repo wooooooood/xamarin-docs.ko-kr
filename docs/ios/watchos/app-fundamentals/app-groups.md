@@ -1,17 +1,16 @@
 ---
-title: "앱 그룹 작업"
-ms.topic: article
+title: 앱 그룹 작업
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9365bc2707876816419bb5d136a6a1011cf129d7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 341f6b4f5049a39817f2923901472f35b254bead
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-app-groups"></a>앱 그룹 작업
 
@@ -26,7 +25,7 @@ ms.lasthandoff: 03/12/2018
 
 공유 위치를 사용 하 여 구성 된는 [App 그룹](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)에 구성 되어 있는 **인증서, 식별자 및 프로필** 섹션에서 [iOS Dev Center](https://developer.apple.com/devcenter/ios/)합니다. 이 값이 각 프로젝트에서 참조 해야 **Entitlements.plist**합니다.
 
-### <a name="provisioning"></a>프로 비전
+### <a name="provisioning"></a>프로비전
 
 앱 그룹 식별자는 일반적으로 번들 ID를 마다와 `group.` 접두사입니다. 예를 들어, 번들 ID를 사용할 수 म `com.xamarin.WatchSettings` 및 응용 프로그램 그룹 `group.com.xamarin.WatchSettings`합니다.
 

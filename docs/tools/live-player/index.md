@@ -1,18 +1,17 @@
 ---
 title: Xamarin.Forms에 대 한 라이브 플레이어
 description: Xamarin을 신속 하 게 학습, 구축 및 Android 또는 iOS 장치에서 실행 중인 응용 프로그램을 시작 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: bd594204c90fb020f089fefc0e1341ee441caf63
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 64b4e2b9ba7911f872edbaea8a71b4b2d542ad95
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms에 대 한 Xamarin 라이브 플레이어
 

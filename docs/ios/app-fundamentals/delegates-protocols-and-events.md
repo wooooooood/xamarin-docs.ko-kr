@@ -1,18 +1,17 @@
 ---
-title: "이벤트, 프로토콜 및 대리자"
-description: "이 문서에서는 콜백을 받으려면 하 고 사용자 인터페이스 컨트롤을 데이터로 채우는 데 사용 되는 키 iOS 기술을 제공 합니다. 이러한 기술에는 이벤트, 프로토콜 및 대리자입니다. 이 문서에 대해 설명 이러한 각 이며, 각 어떻게 사용 되는지 C#에서. Xamarin.iOS 이벤트를 노출할 친숙 한.NET도 Xamarin.iOS 프로토콜, 대리자 등 Objective-c 개념에 대 한 지원을 제공 하는 방법에 따라 iOS 컨트롤을 사용 하는 방법을 보여 줍니다 (Objective-c 대리자 혼동 해서는 안 C# 대리자와 함께). 또한이 문서는 프로토콜을 사용 – 모두 Objective-c 대리자에 대 한 비 대리자 시나리오에서의 기초로 방식을 보여 주는 예제를 제공 합니다."
-ms.topic: article
+title: 이벤트, 프로토콜 및 대리자
+description: 이 문서에서는 콜백을 받으려면 하 고 사용자 인터페이스 컨트롤을 데이터로 채우는 데 사용 되는 키 iOS 기술을 제공 합니다. 이러한 기술에는 이벤트, 프로토콜 및 대리자입니다. 이 문서에 대해 설명 이러한 각 이며, 각 어떻게 사용 되는지 C#에서. Xamarin.iOS 이벤트를 노출할 친숙 한.NET도 Xamarin.iOS 프로토콜, 대리자 등 Objective-c 개념에 대 한 지원을 제공 하는 방법에 따라 iOS 컨트롤을 사용 하는 방법을 보여 줍니다 (Objective-c 대리자 혼동 해서는 안 C# 대리자와 함께). 또한이 문서는 프로토콜을 사용 – 모두 Objective-c 대리자에 대 한 비 대리자 시나리오에서의 기초로 방식을 보여 주는 예제를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="events-protocols-and-delegates"></a>이벤트, 프로토콜 및 대리자
 

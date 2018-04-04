@@ -1,18 +1,17 @@
 ---
-title: "웹 태그를 사용 하 여 검색"
-description: "응용 프로그램에 다시 연결할 수 있는 웹 기반 검색 결과 추가 합니다."
-ms.topic: article
+title: 웹 태그를 사용 하 여 검색
+description: 응용 프로그램에 다시 연결할 수 있는 웹 기반 검색 결과 추가 합니다.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-web-markup"></a>웹 태그를 사용 하 여 검색
 
@@ -63,7 +62,7 @@ IOS 앱 이미 모바일 직접 링크를 지원 하며 웹 사이트 딥 링크
 
 ## <a name="using-twitter-cards"></a>Twitter 카드를 사용 하 여
 
-딥 링크 Twitter 카드를 사용 하는 응용 프로그램의 콘텐츠를 제공할 수 있습니다. 예:
+딥 링크 Twitter 카드를 사용 하는 응용 프로그램의 콘텐츠를 제공할 수 있습니다. 예를 들어:
 
 ```xml
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -75,7 +74,7 @@ IOS 앱 이미 모바일 직접 링크를 지원 하며 웹 사이트 딥 링크
 
 ## <a name="using-facebook-app-links"></a>Facebook 응용 프로그램 링크를 사용 하 여
 
-딥 링크는 Facebook 앱의 링크를 사용 하 여 응용 프로그램의 콘텐츠를 제공할 수 있습니다. 예:
+딥 링크는 Facebook 앱의 링크를 사용 하 여 응용 프로그램의 콘텐츠를 제공할 수 있습니다. 예를 들어:
 
 ```xml
 <meta property="al:ios:app_name" content="AppName">
@@ -87,7 +86,7 @@ IOS 앱 이미 모바일 직접 링크를 지원 하며 웹 사이트 딥 링크
 
 ## <a name="opening-deep-links"></a>딥 링크 열기
 
-열기 및 Xamarin.iOS 앱의 딥 링크를 표시 하기 위한 지원을 추가 해야 합니다. 편집 된 **AppDelegate.cs** 파일을 재정의 `OpenURL` 사용자 지정 URL 형식을 처리 하려면 메서드. 예:
+열기 및 Xamarin.iOS 앱의 딥 링크를 표시 하기 위한 지원을 추가 해야 합니다. 편집 된 **AppDelegate.cs** 파일을 재정의 `OpenURL` 사용자 지정 URL 형식을 처리 하려면 메서드. 예를 들어:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -121,7 +120,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 서식 있는 결과가 더 많은 참여 되 고 향상 시킬 수 있습니다 클라우드에서 순위와 상호 작용 하는 더 많은 사용자가 유인 하 여 검색 인덱스를 기반으로 합니다.
 
-구조적 데이터 태그를 제공 하는 한 가지 옵션을 오픈 그래프를 사용 합니다. 예:
+구조적 데이터 태그를 제공 하는 한 가지 옵션을 오픈 그래프를 사용 합니다. 예를 들어:
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -131,7 +130,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 자세한 내용은 참조 하십시오는 [오픈 그래프](http://ogp.me) 웹 사이트입니다.
 
-구조화 된 데이터 표시를 위해 또 다른 일반적인 형식은 schema.org의 마이크로 데이터 형식이입니다. 예:
+구조화 된 데이터 표시를 위해 또 다른 일반적인 형식은 schema.org의 마이크로 데이터 형식이입니다. 예를 들어:
 
 ```xml
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">

@@ -1,18 +1,17 @@
 ---
-title: "재사용 가능한 EventToCommandBehavior"
-description: "동작을 사용 하 여 명령을와 상호 작용 하도록 설계 되지 않은 컨트롤 명령을 연관 시킬 수 있습니다. 이 문서는 이벤트가 발생할 때 명령을 호출 하려면 Xamarin.Forms 동작을 사용 하 여 보여줍니다."
-ms.topic: article
+title: 재사용 가능한 EventToCommandBehavior
+description: 동작을 사용 하 여 명령을와 상호 작용 하도록 설계 되지 않은 컨트롤 명령을 연관 시킬 수 있습니다. 이 문서는 이벤트가 발생할 때 명령을 호출 하려면 Xamarin.Forms 동작을 사용 하 여 보여줍니다.
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: d82a1391feca9187cf2aca4394509447aeac6a18
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 530c47703d72a3d199a35dbf04f4a0b3851921b9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 

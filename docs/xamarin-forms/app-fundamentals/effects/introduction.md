@@ -1,18 +1,17 @@
 ---
-title: "효과 소개"
-description: "효과를 사용자 지정할 수는 각 플랫폼에서 네이티브 컨트롤을 사용할 수 있으며 작은 스타일 변경 내용에 일반적으로 사용 됩니다. 이 문서에서는 효과를 소개 하 고 효과 사용자 지정 렌더러 사이의 경계에 간략하게 설명 PlatformEffect 클래스를 설명 합니다."
-ms.topic: article
+title: 효과 소개
+description: 효과를 사용자 지정할 수는 각 플랫폼에서 네이티브 컨트롤을 사용할 수 있으며 작은 스타일 변경 내용에 일반적으로 사용 됩니다. 이 문서에서는 효과를 소개 하 고 효과 사용자 지정 렌더러 사이의 경계에 간략하게 설명 PlatformEffect 클래스를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 037c82aa31c167e44a88619cba91a5be8035d0fa
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 598136f43a23070d8bab04c18106738c9e6b0a52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-effects"></a>효과 소개
 

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Forms는 기존 앱을 업데이트합니다."
-description: "및 버전 1.3.1 업데이트 통합 API를 사용 하는 기존 Xamarin.Forms 응용 프로그램을 업데이트 하려면 다음이 단계를 수행 합니다."
-ms.topic: article
+title: Xamarin.Forms는 기존 앱을 업데이트합니다.
+description: 및 버전 1.3.1 업데이트 통합 API를 사용 하는 기존 Xamarin.Forms 응용 프로그램을 업데이트 하려면 다음이 단계를 수행 합니다.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d2f14510e5968ebe24bd297365416fa8aa5a0c59
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 49614dddf05d692d94d28b29729e7b2038be31e7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Xamarin.Forms는 기존 앱을 업데이트합니다.
 

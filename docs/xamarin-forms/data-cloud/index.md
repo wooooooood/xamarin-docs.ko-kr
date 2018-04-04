@@ -1,18 +1,17 @@
 ---
 title: 데이터 및 클라우드 서비스
 description: Xamarin.Forms 응용 프로그램이 다양 한 기술 사용 하 여 구현 하는 웹 서비스를 사용할 수 있습니다 하 고이 가이드에는이 작업을 수행 하는 방법을 검사 합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 54313c3e8808ee9e563d6b55e3bf034c543a48e5
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: f20042b9599f7b4dde699a125e63c5ce435f6bc5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data--cloud-services"></a>데이터 및 클라우드 서비스
 

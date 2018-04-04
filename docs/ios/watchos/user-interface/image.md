@@ -1,17 +1,16 @@
 ---
-title: "이미지 컨트롤"
-ms.topic: article
+title: 이미지 컨트롤
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4184d7babc396a6b6179e6876dced34b773474b4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="image-control"></a>이미지 컨트롤
 
@@ -21,7 +20,7 @@ watchOS 제공는 [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 자산 카탈로그 이미지를 사용 하 여 조사식 키트 앱에 이미지를 추가 합니다.
-만  **@2x**  장치 레 티 나 디스플레이 감시 하는 모든 이후 버전은 필요 합니다.
+만 **@2x** 장치 레 티 나 디스플레이 감시 하는 모든 이후 버전은 필요 합니다.
 
 ![](image-images/asset-universal-sml.png "2 x 버전 되므로 필요한 경우 모든 시청 레 티 나 디스플레이 장치")
 

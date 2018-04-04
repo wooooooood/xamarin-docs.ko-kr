@@ -1,18 +1,17 @@
 ---
-title: "Android 서비스 만들기"
-description: "이 가이드에서는 활성 사용자 인터페이스 없이 수행할 작업을 허용 하는 Android 구성 요소인 Xamarin.Android 서비스. 서비스 음악 재생 파일을 다운로드 하는 시간이 오래 걸리는 계산과 같은 백그라운드에서 수행 되는 작업에 대 한 매우 일반적으로 사용 하는 등에입니다. 서비스에 대 한 적합 한 다양 한 시나리오를 설명 하 고 장기 실행 백그라운드 작업을 수행 하기 위한 물론 원격 프로시저 호출에 대 한 인터페이스를 제공 하는 데이 구현 하는 방법을 보여 줍니다."
-ms.topic: article
+title: Android 서비스 만들기
+description: 이 가이드에서는 활성 사용자 인터페이스 없이 수행할 작업을 허용 하는 Android 구성 요소인 Xamarin.Android 서비스. 서비스 음악 재생 파일을 다운로드 하는 시간이 오래 걸리는 계산과 같은 백그라운드에서 수행 되는 작업에 대 한 매우 일반적으로 사용 하는 등에입니다. 서비스에 대 한 적합 한 다양 한 시나리오를 설명 하 고 장기 실행 백그라운드 작업을 수행 하기 위한 물론 원격 프로시저 호출에 대 한 인터페이스를 제공 하는 데이 구현 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-android-services"></a>Android 서비스 만들기
 
@@ -45,7 +44,7 @@ Android 서비스의 네 가지 유형이 있습니다.
 
 * **서비스에 바인딩된** &ndash; A _서비스 바인딩된_ 는 몇 가지 다른 구성 요소 (일반적으로 활동)에 연결 되도록 하는 서비스입니다. 바인딩된 서비스 바인딩된 구성 및 서비스를 서로 상호 작용을 허용 하는 인터페이스를 제공 합니다. 더 이상의 클라이언트 서비스에 바인딩된 일단 Android 종료 됩니다 서비스. 
 
-* **`IntentService`** &ndash;  _`IntentService`_  의 특수화 된 서브 클래스는 `Service` 서비스 만들기 및 사용을 간소화 하는 클래스입니다. `IntentService` 은 개별 자치 호출을 처리 하기 위한 것입니다. 여러 호출을 동시에 처리할 수, 서비스와 달리는 `IntentService` 비슷합니다는 _큐 프로세서 작업_ &ndash; 작업 큐에 저장 및 `IntentService` 단일 작업자 스레드에 대해 한 번에 하나의 각 작업을 처리 합니다. 일반적으로`IntentService` 활동 또는 조각에 바인딩되어 있지 않습니다. 
+* **`IntentService`** &ndash; _`IntentService`_ 의 특수화 된 서브 클래스는 `Service` 서비스 만들기 및 사용을 간소화 하는 클래스입니다. `IntentService` 은 개별 자치 호출을 처리 하기 위한 것입니다. 여러 호출을 동시에 처리할 수, 서비스와 달리는 `IntentService` 비슷합니다는 _큐 프로세서 작업_ &ndash; 작업 큐에 저장 및 `IntentService` 단일 작업자 스레드에 대해 한 번에 하나의 각 작업을 처리 합니다. 일반적으로`IntentService` 활동 또는 조각에 바인딩되어 있지 않습니다. 
 
 * **서비스를 시작 했습니다** &ndash; A _서비스를 시작 했습니다_ 다른 Android 같은 일부 구성 요소 (활동) 하 여 시작 된 무언가 명시적으로 지시 될 때까지 계속 해 서 백그라운드에서 실행 하는 서비스는 서비스를 중지 합니다. 바인딩된 서비스와는 달리 시작된 되는 서비스에 없는 직접 바인딩된 모든 클라이언트입니다. 이러한 이유로 것은 정상적으로 다시 시작 될 수 필요에 따라 시작된 된 서비스를 디자인 해야 합니다.
 

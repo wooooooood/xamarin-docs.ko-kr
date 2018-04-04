@@ -1,18 +1,17 @@
 ---
-title: "활동 수명 주기"
-description: "활동은 Android 응용 프로그램의 기본 빌딩 블록 및 서로 다른 상태의 수에 존재할 수 있습니다. 활동 수명 주기 인스턴스화로 시작 하 고으로 소멸 끝나며 사이 많은 상태가 포함 됩니다. 활동 상태 변경 되 면 올바르지 않은 상태 변경의 작업을 알리는 하므로 해당 변경 내용에 맞게 코드를 실행 하 고 적절 한 수명 주기 이벤트 메서드 호출 됩니다. 이 문서를 활동의 수명 주기를 검사 하 고 책임에 설명 활동 각 제대로 작동 하 고 신뢰할 수 있는 응용 프로그램의 일부로 이러한 상태 변경 중에 있습니다."
-ms.topic: article
+title: 활동 수명 주기
+description: 활동은 Android 응용 프로그램의 기본 빌딩 블록 및 서로 다른 상태의 수에 존재할 수 있습니다. 활동 수명 주기 인스턴스화로 시작 하 고으로 소멸 끝나며 사이 많은 상태가 포함 됩니다. 활동 상태 변경 되 면 올바르지 않은 상태 변경의 작업을 알리는 하므로 해당 변경 내용에 맞게 코드를 실행 하 고 적절 한 수명 주기 이벤트 메서드 호출 됩니다. 이 문서를 활동의 수명 주기를 검사 하 고 책임에 설명 활동 각 제대로 작동 하 고 신뢰할 수 있는 응용 프로그램의 일부로 이러한 상태 변경 중에 있습니다.
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f35f3e59d8b669795ade3d370894e45866cea1ff
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 

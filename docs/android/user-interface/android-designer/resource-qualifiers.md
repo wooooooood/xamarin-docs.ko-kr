@@ -1,18 +1,17 @@
 ---
-title: "리소스 한정자 및 시각화 옵션"
-description: "이 항목에서는 일부 한정자 값 일치 하는 경우에 사용할 수 있는 리소스를 정의 하는 방법을 설명 합니다. 간단한 예는 언어 한정 된 문자열 리소스입니다. 추가 언어에 사용할 정의 된 다른 대체 리소스와 기본적으로 문자열 리소스를 정의할 수 있습니다. 자체 레이아웃을 포함 하 여 모든 리소스 종류 정규화 할 수 있습니다."
-ms.topic: article
+title: 리소스 한정자 및 시각화 옵션
+description: 이 항목에서는 일부 한정자 값 일치 하는 경우에 사용할 수 있는 리소스를 정의 하는 방법을 설명 합니다. 간단한 예는 언어 한정 된 문자열 리소스입니다. 추가 언어에 사용할 정의 된 다른 대체 리소스와 기본적으로 문자열 리소스를 정의할 수 있습니다. 자체 레이아웃을 포함 하 여 모든 리소스 종류 정규화 할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc9eb145b6d9ed7bd441d625f533c5cbbd87fccd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>리소스 한정자 및 시각화 옵션
 

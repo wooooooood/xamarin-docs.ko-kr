@@ -1,18 +1,17 @@
 ---
-title: "컨트롤"
-description: "Xamarin.iOS는 Apple에서 제공한 모든 기본 사용자 인터페이스 개체를 노출 합니다. IOS 디자이너 Xcode의 인터페이스 작성기를 사용 하 여 Xamarin.iOS 앱에 추가 될 쉽게 또는 프로그래밍 방식으로 합니다. Xamarin.iOS 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다."
-ms.topic: article
+title: 컨트롤
+description: Xamarin.iOS는 Apple에서 제공한 모든 기본 사용자 인터페이스 개체를 노출 합니다. IOS 디자이너 Xcode의 인터페이스 작성기를 사용 하 여 Xamarin.iOS 앱에 추가 될 쉽게 또는 프로그래밍 방식으로 합니다. Xamarin.iOS 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d661cf873baad43a51b40fb59fecd5bc298bcac4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>컨트롤
 
@@ -78,7 +77,7 @@ UISearchBar 값의 목록을 검색 하는 데 사용 됩니다.
 
 사용자 텍스트 입력을 적용 하 여 수행 됩니다는 `UITextField` 입력과 UITextView 여러 줄 편집 가능한 텍스트를 한 줄에 대 한 합니다. 이러한 컨트롤의 화면으로 끌 수 있으며 초기 텍스트를 설정 하려면 두 번 클릭.
 
-## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[탭 모음 및 탭 표시줄 컨트롤러](creating-tabbed-applications.md)
+## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[탭 표시줄 및 탭 표시줄 컨트롤러](creating-tabbed-applications.md)
 
 iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클래스를 사용 하 여 작성 됩니다. 이 문서의 여러 컨트롤러와 뷰를 포함 하는 탭된 응용 프로그램을 설정 하는 방법을 살펴봅니다. 그런 다음는 UITabBarController 후에 루트 컨트롤러와 같은 로그인 화면이 때 로드 하는 방법을 검토 합니다.
 

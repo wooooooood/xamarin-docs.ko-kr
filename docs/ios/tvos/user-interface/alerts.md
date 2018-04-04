@@ -1,18 +1,17 @@
 ---
-title: "경고 사용"
-description: "이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경고 메시지를 표시 하려면 작업을 설명 합니다."
-ms.topic: article
+title: 경고 사용
+description: 이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경고 메시지를 표시 하려면 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-alerts"></a>경고 사용
 
@@ -161,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-`AddTextField` 메서드를 다음 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 종류 자리 표시자와 같은 속성을 설정 하 여 구성할 수 있는 경고에 새 텍스트 필드를 추가 합니다. 예:
+`AddTextField` 메서드를 다음 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 종류 자리 표시자와 같은 속성을 설정 하 여 구성할 수 있는 경고에 새 텍스트 필드를 추가 합니다. 예를 들어:
 
 ```csharp
 // Initialize field
@@ -193,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 보기 컨트롤러 도우미 클래스
 
-간단 하 고 일반적인 유형의 사용 하 여 경고를 표시 하기 때문에 `UIAlertViewController` 많은 양의 중복 되는 코드에서 발생할 수 있습니다, 도우미 클래스를 사용 하 여 반복 되는 코드의 양을 줄일 수 있습니다. 예:
+간단 하 고 일반적인 유형의 사용 하 여 경고를 표시 하기 때문에 `UIAlertViewController` 많은 양의 중복 되는 코드에서 발생할 수 있습니다, 도우미 클래스를 사용 하 여 반복 되는 코드의 양을 줄일 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

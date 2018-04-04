@@ -1,17 +1,16 @@
 ---
 title: Apple Pay
-description: "이 가이드에는 멤버 자격 응용 프로그램을 통해 식품, 엔터테인먼트 등 물리적 상품 비용을 지불 하려면 Apple Pay와 함께 사용할 Xamarin.iOS 환경 설정을 탐색 합니다. 필요한 식별자, 인증서 및 권한에 대 한 정보를 포함합니다."
-ms.topic: article
+description: 이 가이드에는 멤버 자격 응용 프로그램을 통해 식품, 엔터테인먼트 등 물리적 상품 비용을 지불 하려면 Apple Pay와 함께 사용할 Xamarin.iOS 환경 설정을 탐색 합니다. 필요한 식별자, 인증서 및 권한에 대 한 정보를 포함합니다.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: af899bb1c5708e3fc0be88db6224d9127f5a5c6d
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: fc7c247e5edcdc25d53c34c922801a5497b8c367
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="apple-pay"></a>Apple Pay
 

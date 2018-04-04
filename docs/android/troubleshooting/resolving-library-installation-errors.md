@@ -1,18 +1,18 @@
 ---
-title: "라이브러리 설치 오류 해결"
-description: "경우에 따라 Android 지원 라이브러리를 설치 하는 동안 오류가 발생할 수 있습니다. 이 가이드는 몇 가지 일반적인 오류에 대 한 대안을 제공합니다."
-ms.topic: article
+title: 라이브러리 설치 오류 해결
+description: 경우에 따라 Android 지원 라이브러리를 설치 하는 동안 오류가 발생할 수 있습니다. 이 가이드는 몇 가지 일반적인 오류에 대 한 대안을 제공합니다.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolving-library-installation-errors"></a>라이브러리 설치 오류 해결
 
@@ -104,7 +104,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    경우는 **m2repository** 보관 파일에에서 표시 되지 않습니다이 테이블 앞에 추가 하 여 다운로드 URL을 만들 수 있습니다  **https://dl-ssl.google.com/android/repository/**  의 이름에는 **m2repository** 를 다운로드 합니다. 사용 예를 들어  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** 다운로드 **android\_m2repository\_r10.zip**합니다.
+    경우는 **m2repository** 보관 파일에에서 표시 되지 않습니다이 테이블 앞에 추가 하 여 다운로드 URL을 만들 수 있습니다 **https://dl-ssl.google.com/android/repository/** 의 이름에는 **m2repository** 를 다운로드 합니다. 사용 예를 들어  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** 다운로드 **android\_m2repository\_r10.zip**합니다.
 
 2.  위 표에 나와 있는 것 처럼 다운로드 URL에 해당 MD5 해시를 파일을 이름을 바꿉니다. 예를 들어, 다운로드 한 경우 **android\_m2repository\_r25.zip**,이 파일 이름을 **0B3F1796C97C707339FB13AE8507AF50.zip**합니다. 다운로드 된 파일의 다운로드 URL에 대 한 MD5 해시 테이블에 표시 되지 않는 경우 사용할 수 있습니다는 [온라인 MD5 생성기](http://www.webconfs.com/online-md5-generator.php) URL MD5 해시 문자열로 변환 합니다. 
 

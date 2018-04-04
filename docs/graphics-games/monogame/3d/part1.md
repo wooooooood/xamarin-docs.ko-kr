@@ -1,18 +1,17 @@
 ---
-title: "모델 클래스를 사용 하 여"
-description: "모델 클래스는 3D 그래픽을 렌더링 하는 기존의 방법에 비해 복잡 한 3D 개체 렌더링 크게 단순화 합니다. 모델 개체는 사용자 지정 코드 없이 콘텐츠를 간단 하 게 통합할 수 있는 콘텐츠 파일에서 생성 됩니다."
-ms.topic: article
+title: 모델 클래스를 사용 하 여
+description: 모델 클래스는 3D 그래픽을 렌더링 하는 기존의 방법에 비해 복잡 한 3D 개체 렌더링 크게 단순화 합니다. 모델 개체는 사용자 지정 코드 없이 콘텐츠를 간단 하 게 통합할 수 있는 콘텐츠 파일에서 생성 됩니다.
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: dd0f97f450d131bcbddff43ffc778b91bff6b12e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 871e4b1ad058dd97635dab228522620850b229b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-model-class"></a>모델 클래스를 사용 하 여
 

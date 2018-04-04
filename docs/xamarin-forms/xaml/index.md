@@ -1,18 +1,17 @@
 ---
 title: XAML eXtensible Application Markup Language)
-description: "XAML은 사용자 인터페이스를 정의 하는 데 사용할 수 있는 선언적 태그 언어입니다. 사용자 인터페이스는 별도 코드 숨김 파일에서 런타임 동작이 정의 되는 동안 XAML 구문을 사용 하 여 XML 파일에 정의 됩니다."
-ms.topic: article
+description: XAML은 사용자 인터페이스를 정의 하는 데 사용할 수 있는 선언적 태그 언어입니다. 사용자 인터페이스는 별도 코드 숨김 파일에서 런타임 동작이 정의 되는 동안 XAML 구문을 사용 하 여 XML 파일에 정의 됩니다.
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/24/2016
-ms.openlocfilehash: a6e31fa9da7a5764d9a7fd04aa73d7d246143384
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML eXtensible Application Markup Language)
 
@@ -55,7 +54,7 @@ XAML은 기본값이 아닌 생성자 또는 팩터리 메서드에 인수를 �
 
 Xamarin.forms에 공용 언어 런타임 (CLR) 속성의 기능을 바인딩할 수 있는 속성에 의해 확장 됩니다. 바인딩 가능한 속성은 속성의 값 Xamarin.Forms 속성 시스템에 의해 추적 되는 위치는 특수 한 유형의 속성. 이 문서에서는 바인딩 가능 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다.
 
-## <a name="attached-propertiesattached-propertiesmd"></a>[연결 된 속성](attached-properties.md)
+## <a name="attached-propertiesattached-propertiesmd"></a>[연결된 속성](attached-properties.md)
 
 연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 하나의 클래스에 정의 되었지만 다른 개체에 연결 하는 클래스를 포함 하는 특성으로 XAML에서 인식할 수 있는 및 마침표로 구분 되는 속성 이름입니다. 이 문서에서는 연결 된 속성을 소개 하 고 만들고 하 게 사용 하는 방법을 보여 줍니다.
 

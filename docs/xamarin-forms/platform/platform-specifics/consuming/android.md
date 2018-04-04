@@ -1,18 +1,17 @@
 ---
-title: "Android 플랫폼-세부 사항"
-description: "플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 플랫폼-세부 사항 Xamarin.Forms에 기본 제공 되는 사용 하는 방법을 보여줍니다."
-ms.topic: article
+title: Android 플랫폼-세부 사항
+description: 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 플랫폼-세부 사항 Xamarin.Forms에 기본 제공 되는 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼-세부 사항
 

@@ -1,18 +1,17 @@
 ---
-title: "행 작업 사용"
-description: "이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction 테이블 행에 대 한 사용자 지정의 통과 작업을 만드는 방법을 보여 줍니다."
-ms.topic: article
+title: 행 작업 사용
+description: 이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction 테이블 행에 대 한 사용자 지정의 통과 작업을 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c257406f3ad81e8144b47e099c9a00f3fdae30cb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-row-actions"></a>행 작업 사용
 
@@ -119,7 +118,7 @@ public UIContextualAction ContextualFlagAction(int row)
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-하나 이상의 행을 사용자 지정 동작을 정의할 수는 `UITableView`, 인스턴스의 생성 해야 합니다는 `UITableViewDelegate` 클래스 및 재정의 `EditActionsForRow` 메서드. 예:
+하나 이상의 행을 사용자 지정 동작을 정의할 수는 `UITableView`, 인스턴스의 생성 해야 합니다는 `UITableViewDelegate` 클래스 및 재정의 `EditActionsForRow` 메서드. 예를 들어:
 
 ```csharp
 using System;
@@ -163,7 +162,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 새 메서드는 `UITableViewRowAction` 을 표시할는 **Hi** 사용자 천공 기와 왼쪽 테이블의 행에 가로로 단추입니다. 나중의 새 인스턴스는 `TableDelegate` 만들고 첨부 된 `UITableView`합니다. 예:
+정적 `UITableViewRowAction.Create` 새 메서드는 `UITableViewRowAction` 을 표시할는 **Hi** 사용자 천공 기와 왼쪽 테이블의 행에 가로로 단추입니다. 나중의 새 인스턴스는 `TableDelegate` 만들고 첨부 된 `UITableView`합니다. 예를 들어:
 
 ```csharp
 TableDelegate tableDelegate;

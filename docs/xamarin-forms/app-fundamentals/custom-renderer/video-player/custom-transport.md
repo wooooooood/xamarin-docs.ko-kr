@@ -1,17 +1,16 @@
 ---
-title: "사용자 지정 비디오 전송 컨트롤"
-ms.topic: article
+title: 사용자 지정 비디오 전송 컨트롤
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5463a91dba5840ebe655aa1509d9f98e73643d26
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -521,19 +520,19 @@ namespace FormsVideoLibrary.UWP
 
 유니코드 문자를 사용 하 여 기호화 된 **재생**, **일시 중지**, 및 **중지** 이미지는 문제가 될 수 있습니다. [기타 기술](https://unicode-table.com/en/blocks/miscellaneous-technical/) 이 목적을 위해 적절 한 것 처럼 보이는 3 개 기호 문자를 정의 하는 유니코드 표준의 섹션입니다. 이러한 항목은 다음과 같습니다.
 
-- 0x23F5 (검정 중간 오른쪽 방향 삼각형) 또는 & #x23F5; 에 대 한 **재생**
-- 0x23F8 (이중 세로 막대) 또는 & #x23F8; 에 대 한 **일시 중지**
-- 0x23F9 (검은 사각형) 또는 & #x23F9; 에 대 한 **중지**
+- 0x23F5 (검정 중간 오른쪽 방향 삼각형) 또는 &#x23F5; 에 대 한 **재생**
+- 0x23F8 (이중 세로 막대) 또는 &#x23F8; 에 대 한 **일시 중지**
+- 0x23F9 (검은 사각형) 또는 &#x23F9; 에 대 한 **중지**
 
 에 관계 없이이 기호 브라우저에 나타납니다 (방법과 다른 브라우저에서에서 처리 하는 다양 한 방법), Xamarin.Forms에서 지 원하는 플랫폼에서 일관 되 게 표시 되지 않습니다. IOS 및 UWP 장치에서의 **일시 중지** 및 **중지** 문자 파란색 3D 배경이 흰색 전경와 그래픽 모양이 합니다. 이 기호는 단순히 파란색 Android에서 대/소문자 아닙니다. 그러나에 대 한 0x23F5 codepoint **재생** UWP에 동일한 모양을 iOS 및 Android에서 지원 하지도 않습니다가 없습니다.
 
 이런 이유로 0x23F5 코드 포인트에 사용할 수 없습니다 **재생**합니다. 좋은 대체 값은입니다.
 
-- 0x25B6 (검정 오른쪽 방향 삼각형) 또는 & #x25B6; 에 대 한 **재생**
+- 0x25B6 (검정 오른쪽 방향 삼각형) 또는 &#x25B6; 에 대 한 **재생**
 
 않는다는 점을 제외 하면 3D 모양 비슷하지 않을 일반 검정색 삼각형 세 플랫폼 모두에서 지원 됩니다 **일시 중지** 및 **중지**합니다. 한 가지 가능한을 variant 코드로 0x25B6 코드 포인트를 따르는 것입니다.
 
-- 0x25B6 뒤 0xFE0F (variant 형식 16) 또는 & #x25B6; & #xFE0F; 에 대 한 **재생**
+- 0x25B6 뒤 0xFE0F (variant 형식 16) 또는 &#x25B6; &#xFE0F; 에 대 한 **재생**
 
 아래에 표시 된 태그에서 사용 되는 것입니다. Ios에서 제공는 **재생** 동일한 3D 모양으로 기호는 **일시 중지** 및 **중지** 단추, 하지만 variant Android 및 UWP에서 작동 하지 않습니다.
 

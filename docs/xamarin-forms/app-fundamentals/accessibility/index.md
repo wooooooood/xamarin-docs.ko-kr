@@ -1,18 +1,17 @@
 ---
-title: "액세스 가능성"
-description: "기반 응용 프로그램 빌드를 사용 하면 응용 프로그램 요구 사항 및 경험의 범위를 사용자 인터페이스에 접근 하는 사람에 의해 사용할 수 있습니다."
-ms.topic: article
+title: 액세스 가능성
+description: 기반 응용 프로그램 빌드를 사용 하면 응용 프로그램 요구 사항 및 경험의 범위를 사용자 인터페이스에 접근 하는 사람에 의해 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 54ca72669926822e84cdb96b5195e7cffbe39b52
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e4fb151b9664df7236d2c22ed54db09bf7bc65b8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="accessibility"></a>액세스 가능성
 
@@ -38,4 +37,4 @@ Xamarin.Forms 응용 프로그램 플랫폼에 따라 내게 필요한 옵션 �
 ## <a name="related-links"></a>관련 링크
 
 - [플랫폼 간 내게 필요한 옵션](~/cross-platform/app-fundamentals/accessibility.md)
-- [사용자 인터페이스 요소에 내게 필요한 옵션 값을 설정합니다.](~/xamarin-forms/app-fundamentals/accessibility/setting-accessibility-values.md)
+- [사용자 인터페이스 요소의 액세스 가능성 값 설정](~/xamarin-forms/app-fundamentals/accessibility/setting-accessibility-values.md)

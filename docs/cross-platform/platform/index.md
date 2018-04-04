@@ -1,18 +1,17 @@
 ---
-title: "플랫폼 기능"
-description: "플랫폼 간 응용 프로그램 기능 및 개념입니다."
-ms.topic: article
+title: 플랫폼 기능
+description: 플랫폼 간 응용 프로그램 기능 및 개념입니다.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 26b33b1fbf546f734e6661380f63b574cccbcae5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 

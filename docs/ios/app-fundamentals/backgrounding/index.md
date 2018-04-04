@@ -1,17 +1,16 @@
 ---
 title: Backgrounding
-description: "백그라운드 처리 또는 backgrounding은 응용 프로그램이 전경에 다른 응용 프로그램을 실행 하는 동안 백그라운드에서 작업을 수행할 수 있도록 하는 과정입니다. 이 가이드는 백그라운드 처리에 iOS에 대 한 기본적인 사용 됩니다."
-ms.topic: article
+description: 백그라운드 처리 또는 backgrounding은 응용 프로그램이 전경에 다른 응용 프로그램을 실행 하는 동안 백그라운드에서 작업을 수행할 수 있도록 하는 과정입니다. 이 가이드는 백그라운드 처리에 iOS에 대 한 기본적인 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2bba7c0908fb78ca199cc654adad645afaf47a02
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backgrounding"></a>Backgrounding
 
@@ -25,10 +24,10 @@ IOS에서 응용 프로그램 상태 backgrounding가 인식 하 고는 응용 �
 
 ## <a name="contents"></a>목차
 
-1.  [IOS에서 Backgrounding 소개](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1.  [iOS의 Backgrounding 소개](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
 1.  [응용 프로그램 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
 1.  [iOS Backgrounding 기술](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [연습: Backgrounding iOS에서](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1.  [연습: iOS의 Backgrounding](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
 1.  [iOS Backgrounding 지침](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## <a name="summary"></a>요약

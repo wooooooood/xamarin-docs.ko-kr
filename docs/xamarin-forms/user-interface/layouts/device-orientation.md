@@ -1,18 +1,17 @@
 ---
-title: "장치 방향"
-description: "레이아웃 가로 세로 방향에서 제대로 표시 하는 응용 프로그램을 지정 하는 방법을 이해 합니다."
-ms.topic: article
+title: 장치 방향
+description: 레이아웃 가로 세로 방향에서 제대로 표시 하는 응용 프로그램을 지정 하는 방법을 이해 합니다.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -88,9 +87,9 @@ Xamarin.Android는 방향을 지정 하기 위한 몇 가지 옵션을 지원 �
 - **ReversePortrait** &ndash; 세로 방향에서 일반적인 "180도 회전 합니다."를 표시 하기 위해 반대쪽으로 연결을 사용 하도록 응용 프로그램
 - **FullSensor** &ndash; 응용 프로그램이 올바른 방향 (부족 가능한 4)을 선택 하는 센서 데이터를 사용 합니다.
 - **FullUser** &ndash; 응용 프로그램이 사용자의 방향 기본 설정을 사용 합니다. 자동 회전 사용 하는 경우 모든 4 방향 사용할 수 있습니다.
-- **UserLandscape** &ndash;  _\[지원 되지 않습니다\]_  인해 가로 방향으로 사용 하도록 응용 프로그램이 없을 경우 사용 하도록 설정 하는 자동 회전 사용할지는 쿼리에서 방향을 결정 하는 센서입니다. 이 옵션은 컴파일을 중단 됩니다.
-- **UserPortrait** &ndash;  _\[지원 되지 않습니다\]_  없을 경우 사용 하도록 설정 하는 자동 회전 됩니다 사용할 경우 세로 방향을 사용 하 여 응용 프로그램이 방향을 결정 하는 센서입니다. 이 옵션은 컴파일을 중단 됩니다.
-- **잠긴** &ndash;  _\[지원 되지 않습니다\]_  화면 방향을 사용 하 여 응용 프로그램이 무엇이 든, 실행 시 장치에 변경 내용에 응답 하지 않고의 실제 방향입니다. 이 옵션은 컴파일을 중단 됩니다.
+- **UserLandscape** &ndash; _\[지원 되지 않습니다\]_ 인해 가로 방향으로 사용 하도록 응용 프로그램이 없을 경우 사용 하도록 설정 하는 자동 회전 사용할지는 쿼리에서 방향을 결정 하는 센서입니다. 이 옵션은 컴파일을 중단 됩니다.
+- **UserPortrait** &ndash; _\[지원 되지 않습니다\]_ 없을 경우 사용 하도록 설정 하는 자동 회전 됩니다 사용할 경우 세로 방향을 사용 하 여 응용 프로그램이 방향을 결정 하는 센서입니다. 이 옵션은 컴파일을 중단 됩니다.
+- **잠긴** &ndash; _\[지원 되지 않습니다\]_ 화면 방향을 사용 하 여 응용 프로그램이 무엇이 든, 실행 시 장치에 변경 내용에 응답 하지 않고의 실제 방향입니다. 이 옵션은 컴파일을 중단 됩니다.
 
 네이티브 Android Api 많이 방향 관리 하는 방법에 대 한 제어를 제공 하는 참고를 명시적으로 사용자의 일치 하지 않는 옵션을 포함 하 여 기본 설정 표현 됩니다.
 

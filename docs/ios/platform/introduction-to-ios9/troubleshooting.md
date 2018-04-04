@@ -1,18 +1,17 @@
 ---
-title: "문제 해결"
-description: "이 문서에서는 Xamarin.iOS 앱에서 iOS 9 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다."
-ms.topic: article
+title: 문제 해결
+description: 이 문서에서는 Xamarin.iOS 앱에서 iOS 9 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -137,7 +136,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>신뢰할 수 없는 엔터프라이즈 개발자
 
-IOS 9 버전 Xamarin.iOS 앱의 실제 iOS 하드웨어에서 실행을 시도할 때 개발자 계정이 장치에서 신뢰 하지 못했다는 메시지가 발생할 수 있습니다. 예:
+IOS 9 버전 Xamarin.iOS 앱의 실제 iOS 하드웨어에서 실행을 시도할 때 개발자 계정이 장치에서 신뢰 하지 못했다는 메시지가 발생할 수 있습니다. 예를 들어:
 
 [![](troubleshooting-images/untrusted01.png "신뢰할 수 없는 엔터프라이즈 개발자 경고")](troubleshooting-images/untrusted01.png#lightbox)
 
@@ -150,7 +149,7 @@ IOS 9 버전 Xamarin.iOS 앱의 실제 iOS 하드웨어에서 실행을 시도�
 3. 아래는 **장치** 패널 측면을 사용자의 장치를 마우스 오른쪽 단추 클릭 및 선택 선택 **프로 비전 프로필 보기...** : 
 
     [![](troubleshooting-images/untrusted03.png "SShow 프로 비전 프로필")](troubleshooting-images/untrusted03.png#lightbox)
-4. 각 프로 비전 프로필 클릭 장치에서 현재 선택의  **-**  삭제 하는 단추: 
+4. 각 프로 비전 프로필 클릭 장치에서 현재 선택의 **-** 삭제 하는 단추: 
 
     [![](troubleshooting-images/untrusted04.png "프로 비전 프로필을 삭제합니다.")](troubleshooting-images/untrusted04.png#lightbox)
 5. **Xcode** 메뉴 선택 **기본 설정 중...**  및 **계정**: 

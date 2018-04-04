@@ -1,17 +1,16 @@
 ---
-title: "문서 선택"
-description: "문서 선택 뷰 컨트롤러 샌드박스 응용 프로그램의 외부 파일에 대 한 사용자 액세스 권한을 부여합니다. 것은 앱 간의 문서를 공유 하기 위한 간단한 메커니즘입니다. 또한 사용자가 여러 응용 프로그램으로 단일 문서를 편집할 수 있으므로 보다 복잡 한 워크플로가 있습니다. 이 문서에서는 Xamarin.iOS 응용 프로그램에서 문서 선택기를 사용 하 여를 소개 하 고 지 원하는 데 필요한 icloud와 문서에 변경 합니다."
-ms.topic: article
+title: 문서 선택
+description: 문서 선택 뷰 컨트롤러 샌드박스 응용 프로그램의 외부 파일에 대 한 사용자 액세스 권한을 부여합니다. 것은 앱 간의 문서를 공유 하기 위한 간단한 메커니즘입니다. 또한 사용자가 여러 응용 프로그램으로 단일 문서를 편집할 수 있으므로 보다 복잡 한 워크플로가 있습니다. 이 문서에서는 Xamarin.iOS 응용 프로그램에서 문서 선택기를 사용 하 여를 소개 하 고 지 원하는 데 필요한 icloud와 문서에 변경 합니다.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 33a6dc7294db74c3c8ab451f147c941124db8982
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="document-picker"></a>문서 선택
 

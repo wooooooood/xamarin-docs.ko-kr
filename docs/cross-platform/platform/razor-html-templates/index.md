@@ -1,18 +1,17 @@
 ---
-title: "Razor 서식 파일을 사용 하 여 빌드 HTML 뷰"
+title: Razor 서식 파일을 사용 하 여 빌드 HTML 뷰
 description: " HTML을 렌더링 하는 전체 화면 웹 페이지를 사용 하 여 특히 이미 있는 경우 HTML, Javascript 및 CSS 웹 사이트 프로젝트에서 플랫폼 간 방식으로 복합 서식 지정을 렌더링 하는 간단 하 고 효율적인 방법을 수 있습니다."
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5c69b8e71cac5d9f0385728ca75a5f311cb24fc0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 서식 파일을 사용 하 여 빌드 HTML 뷰
 

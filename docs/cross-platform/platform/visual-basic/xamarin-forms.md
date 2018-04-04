@@ -1,18 +1,17 @@
 ---
-title: "Visual basic.net을 사용 하 여 Xamarin.Forms"
-description: "Xamarin.Forms PCL 프로젝트 템플릿은 효과적으로 VB.NET를 사용 하 여 플랫폼 간 모바일 앱을 빌드할 수 있도록 하는 주 어셈블리에 대 한 Visual Basic을 사용 하도록 수정할 수 있습니다."
-ms.topic: article
+title: Visual basic.net을 사용 하 여 Xamarin.Forms
+description: Xamarin.Forms PCL 프로젝트 템플릿은 효과적으로 VB.NET를 사용 하 여 플랫폼 간 모바일 앱을 빌드할 수 있도록 하는 주 어셈블리에 대 한 Visual Basic을 사용 하도록 수정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 84240b6ac384c79c732abc783de84bfa1289f599
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e26d330d62e6ffdfdb3f9b8eab59e57a6377a86c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Visual basic.net을 사용 하 여 Xamarin.Forms
 

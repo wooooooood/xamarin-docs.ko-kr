@@ -1,18 +1,17 @@
 ---
-title: "대화 상자"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램에서 모달 창 및 대화 상자를 사용 합니다. 표준 대화 상자를 사용 하 고 C# 코드에서 이러한 컨트롤와 상호 작용 Xcode 및 인터페이스 작성기에서 모달 창을 만드는 설명 합니다."
-ms.topic: article
+title: 대화 상자
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 모달 창 및 대화 상자를 사용 합니다. 표준 대화 상자를 사용 하 고 C# 코드에서 이러한 컨트롤와 상호 작용 Xcode 및 인터페이스 작성기에서 모달 창을 만드는 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dialogs"></a>대화 상자
 

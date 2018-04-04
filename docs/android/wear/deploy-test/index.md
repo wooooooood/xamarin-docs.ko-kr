@@ -1,18 +1,17 @@
 ---
-title: "배포 및 테스트"
-description: "Android 장치 (또는 에뮬레이터)에 마모 응용 프로그램을 테스트 및 배포를 준비 하는 방법."
-ms.topic: article
+title: 배포 및 테스트
+description: Android 장치 (또는 에뮬레이터)에 마모 응용 프로그램을 테스트 및 배포를 준비 하는 방법.
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/19/2017
-ms.openlocfilehash: f80be1c61d28ce73342399a0b4f2346007cd14de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e6472b3bf07750338d9ada7ca62f0a5c9e2c8a7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 02/27/2018
 
 Android SDK 에뮬레이터에서 Xamarin.Android 마모 응용 프로그램을 디버깅 하는 방법.
 
-## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[마모 장치에서 디버깅](~/android/wear/deploy-test/debug-on-device.md)
+## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Wear 장치에서 디버그](~/android/wear/deploy-test/debug-on-device.md)
 
 Xamarin.Android 마모 응용 프로그램 배포 수 있도록 수를 Visual Studio 또는 Visual Studio에서 직접 Mac.에 대 한 Android 장치를 구성 하는 방법
 

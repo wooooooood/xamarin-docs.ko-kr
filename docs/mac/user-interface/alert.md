@@ -1,18 +1,17 @@
 ---
-title: "경고"
-description: "이 문서에서는 Xamarin.Mac 응용 프로그램에서 알림이 있는 작업을 설명합니다. 만들기 및 C# 코드에서 발생 한 경고를 표시 하 고, 사용자 상호 작용에 응답을 설명 합니다."
-ms.topic: article
+title: 경고
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 알림이 있는 작업을 설명합니다. 만들기 및 C# 코드에서 발생 한 경고를 표시 하 고, 사용자 상호 작용에 응답을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8901bb57ace4f05e8c26fdc43dfe8c476927903a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alerts"></a>경고
 

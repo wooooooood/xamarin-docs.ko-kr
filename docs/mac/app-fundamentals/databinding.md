@@ -1,18 +1,17 @@
 ---
-title: "데이터 바인딩 및 키-값 코딩"
-description: "이 문서에서는 키-값 코딩 및 관찰 Xcode의 인터페이스 작성기에서 UI 요소에 대 한 데이터 바인딩을 허용 하는 키-값을 사용 하 여 설명 합니다."
-ms.topic: article
+title: 데이터 바인딩 및 키-값 코딩
+description: 이 문서에서는 키-값 코딩 및 관찰 Xcode의 인터페이스 작성기에서 UI 요소에 대 한 데이터 바인딩을 허용 하는 키-값을 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>데이터 바인딩 및 키-값 코딩
 
@@ -70,7 +69,7 @@ namespace MacDatabinding
 
 첫째, 고 `[Register("PersonModel")]` 특성 클래스를 등록 하 고 목표 없습니다.에 노출 클래스에서 상속 해야 그런 다음 `NSObject` (또는 해당 서브 클래스에서 상속 되는 `NSObject`), 여러 기본 클래스에 KVC 호환 되도록 허용 하는 메서드 추가 합니다. 다음으로 `[Export("Name")]` 노출 특성는 `Name` 속성 KVC 및 KVO 기술을 통해 속성에 액세스 하 여 나중에 사용할 키 값을 정의 합니다. 
 
-마지막으로 관찰 된 키-값 속성의 값으로 변경 될 수 있으려면 접근자 래핑해야 해당 값의 변경 `WillChangeValue` 및 `DidChangeValue` 메서드 호출 (같은 키로 지정 하는 `Export` 특성).  예:
+마지막으로 관찰 된 키-값 속성의 값으로 변경 될 수 있으려면 접근자 래핑해야 해당 값의 변경 `WillChangeValue` 및 `DidChangeValue` 메서드 호출 (같은 키로 지정 하는 `Export` 특성).  예를 들어:
 
 ```csharp
 set {
@@ -159,7 +158,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 ### <a name="observing-value-changes"></a>관찰 값이 변경
 
-KVC 규격 클래스의 특정 키에 관찰자를 연결할 수 있으며 (KVC 기술을 사용 하 여 또는 C# 코드에서 지정된 된 속성에 직접 액세스) 그 키에 대 한 값을 수정 하 든 지 알림을 받을 (KVO)을 관찰 하는 키-값을 사용 하 여, 있습니다. 예:
+KVC 규격 클래스의 특정 키에 관찰자를 연결할 수 있으며 (KVC 기술을 사용 하 여 또는 C# 코드에서 지정된 된 속성에 직접 액세스) 그 키에 대 한 값을 수정 하 든 지 알림을 받을 (KVO)을 관찰 하는 키-값을 사용 하 여, 있습니다. 예를 들어:
 
 ```csharp
 // Watch for the name value changing

@@ -1,18 +1,17 @@
 ---
-title: "바인딩는 합니다. AAR"
-description: "이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. AAR 파일입니다."
-ms.topic: article
+title: 바인딩는 합니다. AAR
+description: 이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. AAR 파일입니다.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ae209f8099925cc160e16cb5365625e48e6c384d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-an-aar"></a>바인딩는 합니다. AAR
 
@@ -276,7 +275,7 @@ namespace BindingTest
 <ImageView android:src="@drawable/image" ... />
 ```
 
-에 있는 리소스 레이아웃에 액세스할 수도 있습니다는 합니다. AAR 합니다. 이 위해 사용 하는 **Resource.Layout** 패키지 된 레이아웃에 대 한 이름에서. AAR 합니다. 예:
+에 있는 리소스 레이아웃에 액세스할 수도 있습니다는 합니다. AAR 합니다. 이 위해 사용 하는 **Resource.Layout** 패키지 된 레이아웃에 대 한 이름에서. AAR 합니다. 예를 들어:
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
@@ -284,7 +283,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 **textanalyzer.aar** 예제에 있는 이미지 파일에 포함 되어 **res/drawable/monkey.png**합니다. 이 이미지 리소스에 액세스 하 고 예제 앱에서 사용 보겠습니다.
 
-편집 된 **BindingTest** 레이아웃 (**Main.axml**) 추가 하 고는 `ImageView` 의 끝에는 `LinearLayout` 컨테이너. 이 `ImageView` 에 이미지 표시  **@drawable/monkey** ;이 이미지의 리소스 섹션에서 로드 됩니다. **textanalyzer.aar**:
+편집 된 **BindingTest** 레이아웃 (**Main.axml**) 추가 하 고는 `ImageView` 의 끝에는 `LinearLayout` 컨테이너. 이 `ImageView` 에 이미지 표시 **@drawable/monkey**;이 이미지의 리소스 섹션에서 로드 됩니다. **textanalyzer.aar**:
 
 ```xml
     ...

@@ -1,18 +1,17 @@
 ---
-title: "모양 API"
-description: "iOS 응용 프로그램에서 해당 컨트롤의 모든 인스턴스에 적용 됩니다 되도록 시각적 속성 설정이 아니라 개별 개체에 대 한 정적 클래스 수준에서 적용할 수 있습니다."
-ms.topic: article
+title: 모양 API
+description: iOS 응용 프로그램에서 해당 컨트롤의 모든 인스턴스에 적용 됩니다 되도록 시각적 속성 설정이 아니라 개별 개체에 대 한 정적 클래스 수준에서 적용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="appearance-api"></a>모양 API
 

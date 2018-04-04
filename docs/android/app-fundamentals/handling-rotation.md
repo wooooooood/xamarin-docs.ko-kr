@@ -1,18 +1,17 @@
 ---
-title: "처리 회전"
-description: "이 항목에서는 Xamarin.Android에 장치 방향 변경 내용을 처리 하는 방법을 설명 합니다. 프로그래밍 방식으로 처리할 방향 변경 하는 방식에서는 특정 장치 방향에 대 한 리소스를 자동으로 로드 하려면 Android 리소스 시스템에서 사용 하는 방법을 알아봅니다."
-ms.topic: article
+title: 처리 회전
+description: 이 항목에서는 Xamarin.Android에 장치 방향 변경 내용을 처리 하는 방법을 설명 합니다. 프로그래밍 방식으로 처리할 방향 변경 하는 방식에서는 특정 장치 방향에 대 한 리소스를 자동으로 로드 하려면 Android 리소스 시스템에서 사용 하는 방법을 알아봅니다.
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: c31dbfeea3134de95f3275a7fa79c508a94d6a91
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1cdc7928c45b99cdd8c8149b3ae9b06e790deeca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handling-rotation"></a>처리 회전
 

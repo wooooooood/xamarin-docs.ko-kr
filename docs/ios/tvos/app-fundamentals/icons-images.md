@@ -1,18 +1,17 @@
 ---
-title: "아이콘 및 이미지 작업"
-description: "이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이미지 작업을 설명 합니다."
-ms.topic: article
+title: 아이콘 및 이미지 작업
+description: 이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이미지 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-icons-and-images"></a>아이콘 및 이미지 작업
 
@@ -122,7 +121,7 @@ Apple에서는 계층화 된 이미지를 디자인 하기 위한 다음 방법�
 
 [![](icons-images-images/layered03.png "시차 미리 보기")](icons-images-images/layered03.png#lightbox)
 
-계층화 된 이미지를 미리 볼 때 이미지 회전를 시차 효과 미리 보려면 마우스를 사용할 수 있습니다. 사용 하 여는  **+**  (더하기) 및  **-**  (빼기) 단추를 추가 하 고 계층을 제거 합니다.
+계층화 된 이미지를 미리 볼 때 이미지 회전를 시차 효과 미리 보려면 마우스를 사용할 수 있습니다. 사용 하 여는 **+** (더하기) 및 **-** (빼기) 단추를 추가 하 고 계층을 제거 합니다.
 
 새 계층에 이미지를 만들 때 LSR 형식 하 고 앱의 번들에 포함 된 수 수 있습니다.
 

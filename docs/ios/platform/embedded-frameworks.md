@@ -1,17 +1,16 @@
 ---
-title: "포함 된 프레임 워크"
-description: "이 문서에서는 응용 프로그램 개발자가 자신의 앱에서 사용자 프레임 워크를 포함할 수는 방법을 설명 합니다."
-ms.topic: article
+title: 포함 된 프레임 워크
+description: 이 문서에서는 응용 프로그램 개발자가 자신의 앱에서 사용자 프레임 워크를 포함할 수는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 62ddf665431a14ce7f4fe8db52cc6ee7a2c4635a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f223d8ef6e89cc44822b8a831dbba3cf71d727c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="embedded-frameworks"></a>포함 된 프레임 워크
 

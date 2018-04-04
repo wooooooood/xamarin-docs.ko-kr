@@ -1,18 +1,17 @@
 ---
-title: "탭 모음 및 탭 표시줄 컨트롤러"
-description: "iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클래스를 사용 하 여 작성 됩니다. 이 문서의 여러 컨트롤러와 뷰를 포함 하는 탭된 응용 프로그램을 설정 하는 방법을 살펴봅니다. 그런 다음는 UITabBarController 후에 루트 컨트롤러와 같은 로그인 화면이 때 로드 하는 방법을 검토 합니다."
-ms.topic: article
+title: 탭 모음 및 탭 표시줄 컨트롤러
+description: iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클래스를 사용 하 여 작성 됩니다. 이 문서의 여러 컨트롤러와 뷰를 포함 하는 탭된 응용 프로그램을 설정 하는 방법을 살펴봅니다. 그런 다음는 UITabBarController 후에 루트 컨트롤러와 같은 로그인 화면이 때 로드 하는 방법을 검토 합니다.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 702a5986c9249eec38868895f55ef6f63b534b9b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tab-bars-and-tab-bar-controllers"></a>탭 모음 및 탭 표시줄 컨트롤러
 

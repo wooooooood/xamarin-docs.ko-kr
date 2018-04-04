@@ -1,18 +1,17 @@
 ---
-title: "시작 화면"
-description: "이 문서에서는 모든 해상도와 방향으로 하나의 통합 된 스토리 보드를 사용 하 여 모든 iOS 장치에 대 한 응용 프로그램 시작 화면을 만드는 방법을 설명 합니다."
-ms.topic: article
+title: 시작 화면
+description: 이 문서에서는 모든 해상도와 방향으로 하나의 통합 된 스토리 보드를 사용 하 여 모든 iOS 장치에 대 한 응용 프로그램 시작 화면을 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: e07a6b72f2821e8cc65e0b0d690dbadf1a6713b6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 991c2f30bcca1969e336f7269ad2a22ce6245b95
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="launch-screens"></a>시작 화면
 

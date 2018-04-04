@@ -1,16 +1,16 @@
 ---
-title: "어떻게 수행 하나요를 수동으로 다시 동기화 Xamarin 라이선스?"
-ms.topic: article
+title: 어떻게 수행 하나요를 수동으로 다시 동기화 Xamarin 라이선스?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D0BD93E9-3A1F-4E5B-8EE8-36ADC33DCFE4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 2413b6b7563a6ed1e17a8db61d2d61ddc85e71ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b06a1a7d525c91d7c3973b2b02d3d2835ce482f9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-do-i-manually-resynchronize-xamarin-licenses"></a>어떻게 수행 하나요를 수동으로 다시 동기화 Xamarin 라이선스?
 
@@ -49,7 +49,7 @@ Windows에서 iOS 개발자 Mac;에 대 한 Visual Studio에 대 한 이러한 �
 
 4.  한 쌍의 컴퓨터 이름이 중복 표시를 사용 하 여는 **비활성화** 제거할 드롭 다운 메뉴 항목 _둘 다_ 쌍의 구성원:
     
-    ![라이선스 https://store.xamarin.com/account/my/subscription/computers에서 비활성화를->](resync-licenses-images/deactivate.png "Deactivate 드롭 다운 메뉴 항목을 사용 하 여 쌍의 두 구성원을 제거 하려면")
+    ![라이선스에 Deactivate를-> https://store.xamarin.com/account/my/subscription/computers ] (resync-licenses-images/deactivate.png "Deactivate 드롭 다운 메뉴 항목을 사용 하 여 쌍의 두 구성원을 제거 하려면")
 
 5.  디스크에 남아 있는 라이선스 파일의 나머지 복사본을 모두 삭제 합니다.
     -   Windows

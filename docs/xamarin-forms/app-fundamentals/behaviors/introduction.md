@@ -1,18 +1,17 @@
 ---
-title: "동작 소개"
-description: "동작을 통해 하위 클래스에 하지 않고도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 대신 기능 동작 클래스에서 구현 되 고 컨트롤 자체의 일부 하는 경우 해당 컨트롤에 연결. 이 문서에서는 동작에 대 한 소개를 제공 합니다."
-ms.topic: article
+title: 동작 소개
+description: 동작을 통해 하위 클래스에 하지 않고도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 대신 기능 동작 클래스에서 구현 되 고 컨트롤 자체의 일부 하는 경우 해당 컨트롤에 연결. 이 문서에서는 동작에 대 한 소개를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 9a92a80bae49a20b276e0d985845fbf08fe92bec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b5aa0d3de7092ac87d511ab8d59c329471fa6a28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-behaviors"></a>동작 소개
 

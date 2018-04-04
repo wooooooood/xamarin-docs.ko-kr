@@ -1,18 +1,17 @@
 ---
-title: "지도에서 경로 강조 표시"
-description: "이 문서에는 지도에 선을 폴리라인으로 오버레이 추가 하는 방법을 설명 합니다. 폴리라인 오버레이 일련의 일반적으로 지도에서 경로 표시 하거나 필요한 모든 셰이프를 형성 하는 데 사용 되는 연결 된 선 세그먼트입니다."
-ms.topic: article
+title: 지도에서 경로 강조 표시
+description: 이 문서에는 지도에 선을 폴리라인으로 오버레이 추가 하는 방법을 설명 합니다. 폴리라인 오버레이 일련의 일반적으로 지도에서 경로 표시 하거나 필요한 모든 셰이프를 형성 하는 데 사용 되는 연결 된 선 세그먼트입니다.
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c7becef16009596148b4de28e4e8f6892cb44fe1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f781a472a63d97c8859aff36b28e0fd4fa0c7756
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-route-on-a-map"></a>지도에서 경로 강조 표시
 
@@ -31,7 +30,7 @@ _이 문서에는 지도에 선을 폴리라인으로 오버레이 추가 하는
 1. [사용자 지정](#Customizing_the_Map) 지도 지도 대 한 사용자 지정 렌더러는 각 플랫폼에서 만들어 합니다.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 참조 [ `Maps Control` ](~/xamarin-forms/user-interface/map.md)합니다.
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 초기화 하 고 사용 하기 전에 구성 해야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map.md)를 참조하세요.
 
 사용자 지정 렌더러를 사용 하 여 지도 사용자 지정 하는 방법에 대 한 정보를 참조 하십시오. [지도 핀을 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)합니다.
 
@@ -303,5 +302,5 @@ namespace MapOverlay.UWP
 ## <a name="related-links"></a>관련 링크
 
 - [폴리라인 맵 Ovlerlay (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
-- [지도 핀을 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [지도 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

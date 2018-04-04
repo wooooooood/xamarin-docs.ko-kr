@@ -1,18 +1,17 @@
 ---
-title: "응용 프로그램 기본 사항"
-description: "탐색 Xamarin.Forms 개발의 기본 사항"
-ms.topic: article
+title: 응용 프로그램 기본 사항
+description: 탐색 Xamarin.Forms 개발의 기본 사항
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: afa3bf25b1448d98c49c95a66bd0f4dc55bde39e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>응용 프로그램 기본 사항
 
@@ -20,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin.Forms를 사용한 (예: 보조 화면 읽기 도구가) 액세스할 수 있는 기능을 통합 하기 위한 팁입니다.
 
-## <a name="app-classapplication-classmd"></a>[App 클래스](application-class.md)
+## <a name="app-classapplication-classmd"></a>[앱 클래스](application-class.md)
 
 `Application` 클래스는 Xamarin.Forms에 대 한 시작 지점을 – 하위 클래스를 구현 해야 하는 모든 응용 프로그램 `App` 에 초기 페이지를 설정 합니다. 또한 제공 된 `Properties` 단순 데이터 저장소에 대 한 컬렉션입니다. C# 또는 XAML 정의할 수 있습니다.
 

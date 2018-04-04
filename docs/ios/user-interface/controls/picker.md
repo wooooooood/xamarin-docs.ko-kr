@@ -1,18 +1,17 @@
 ---
-title: "선택"
-description: "이 가이드에서는 디자인 하 고 선택 Xamarin.iOS 앱에서 작업을 설명 합니다."
-ms.topic: article
+title: 선택
+description: 이 가이드에서는 디자인 하 고 선택 Xamarin.iOS 앱에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: b92bdc365cae524cee1f586b293c4638225c6178
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="picker"></a>선택
 
@@ -188,7 +187,7 @@ datePickerView.MinimumDate = minDate;
 datePickerView.MaximumDate = NSDate.Now;
 ```
 
-또는 최소 및 최대 날짜 범위를 설정 하려면.NET 컨트롤을 사용할 수도 있습니다. 예:
+또는 최소 및 최대 날짜 범위를 설정 하려면.NET 컨트롤을 사용할 수도 있습니다. 예를 들어:
 
 ```csharp
 DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -205,7 +204,7 @@ datePickerView.MinuteInterval = 10;
 
 #### <a name="time"></a>시간
 
-시간 모드 시간 및 분 선택기와 선택적 AM 또는 PM 지정 시간을 표시 합니다. 으로 설정 된는 `UIDatePickerMode.Time` 속성입니다. 예:
+시간 모드 시간 및 분 선택기와 선택적 AM 또는 PM 지정 시간을 표시 합니다. 으로 설정 된는 `UIDatePickerMode.Time` 속성입니다. 예를 들어:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
@@ -219,7 +218,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 
 #### <a name="date"></a>날짜
 
-날짜 모드 월, 일 및 연도 선택기를 사용 하 여 날짜를 표시합니다. 으로 설정 된는 `UIDatePickerMode.Date` 속성입니다. 예:
+날짜 모드 월, 일 및 연도 선택기를 사용 하 여 날짜를 표시합니다. 으로 설정 된는 `UIDatePickerMode.Date` 속성입니다. 예를 들어:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
@@ -240,7 +239,7 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 
 #### <a name="date-and-time"></a>날짜 및 시간
 
-날짜 및 시간 모드는 12 또는 24 시간 형식을 사용 하는 경우에 날짜, 시간 및 분 및 선택적 AM 또는 PM 지정 dependings에 시간 shortend 뷰로를 표시 됩니다. 으로 설정 된는 `UIDatePickerMode.DateAndTime` 속성입니다. 예:
+날짜 및 시간 모드는 12 또는 24 시간 형식을 사용 하는 경우에 날짜, 시간 및 분 및 선택적 AM 또는 PM 지정 dependings에 시간 shortend 뷰로를 표시 됩니다. 으로 설정 된는 `UIDatePickerMode.DateAndTime` 속성입니다. 예를 들어:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
@@ -254,7 +253,7 @@ datePickerView.Mode = UIDatePickerMode.DateAndTime;
 
 #### <a name="countdown-timer"></a>카운트다운 타이머
 
-카운트다운 타이머 모드는 시간 및 분 값을 표시합니다. 으로 설정 된는 `UIDatePickerMode.CountDownTimer` 속성입니다. 예:
+카운트다운 타이머 모드는 시간 및 분 값을 표시합니다. 으로 설정 된는 `UIDatePickerMode.CountDownTimer` 속성입니다. 예를 들어:
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;

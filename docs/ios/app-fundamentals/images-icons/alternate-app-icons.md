@@ -1,18 +1,17 @@
 ---
-title: "대체 앱 아이콘"
-description: "이 문서에서는 Xamarin.iOS에 대체 앱 아이콘을 사용 하 여 설명 합니다."
-ms.topic: article
+title: 대체 앱 아이콘
+description: 이 문서에서는 Xamarin.iOS에 대체 앱 아이콘을 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: ff24a1411a7ddf2ca78c7997f1dc37744013ece4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8d9f27d58a881878aabeda4326805eec726c247c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alternate-app-icons"></a>대체 앱 아이콘
 
@@ -111,7 +110,7 @@ Apple이 iOS 10.3 해당 아이콘을 관리 하는 응용 프로그램을 사�
 
 Xamarin.iOS 프로젝트에 포함 된 아이콘 이미지와 및 **Info.plist** 올바르게 구성 파일을 개발자 중 하나를 사용 많은 새로운 기능이 추가 10.3 iOS 응용 프로그램의 아이콘을 제어할 수 있습니다.
 
-`SupportsAlternateIcons` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 응용 프로그램에서 다른 아이콘을 지원 하는지 확인 합니다. 예:
+`SupportsAlternateIcons` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 응용 프로그램에서 다른 아이콘을 지원 하는지 확인 합니다. 예를 들어:
 
 ```csharp
 // Can the app select a different icon?
@@ -119,14 +118,14 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-`ApplicationIconBadgeNumber` 속성은 `UIApplication` 클래스를 사용 하면 개발자는 Springboard에서 앱 아이콘의 현재 배지 번호를 설정 합니다. 기본값은 영(0)입니다. 예:
+`ApplicationIconBadgeNumber` 속성은 `UIApplication` 클래스를 사용 하면 개발자는 Springboard에서 앱 아이콘의 현재 배지 번호를 설정 합니다. 기본값은 영(0)입니다. 예를 들어:
 
 ```csharp
 // Set the badge number to 1
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-`AlternateIconName` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 없거나 반환 `null` 응용 프로그램의 기본 아이콘을 사용 하는 경우. 예:
+`AlternateIconName` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 없거나 반환 `null` 응용 프로그램의 기본 아이콘을 사용 하는 경우. 예를 들어:
 
 ```csharp
 // Get the name of the currently selected alternate
@@ -138,7 +137,7 @@ if (name != null ) {
 }
 ```
 
-`SetAlternameIconName` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 응용 프로그램 아이콘을 변경할 수 있습니다. 선택 하려면 아이콘의 이름을 전달 또는 `null` 기본 아이콘으로 돌아갑니다. 예:
+`SetAlternameIconName` 의 속성은 `UIApplication` 클래스를 사용 하면 개발자가 응용 프로그램 아이콘을 변경할 수 있습니다. 선택 하려면 아이콘의 이름을 전달 또는 `null` 기본 아이콘으로 돌아갑니다. 예를 들어:
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)

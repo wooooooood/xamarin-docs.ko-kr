@@ -1,18 +1,17 @@
 ---
 title: 문서 데이터베이스에 데이터를 저장합니다.
 description: Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F050E9D0-8CC3-4E75-8960-0D8273769E7C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: d09e5188cb4d37c1db5bb0fce1c4689bcb961b11
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: d39625d28d2e9bb8f6f3e35241adb520104047b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storing-data-in-a-document-database"></a>문서 데이터베이스에 데이터를 저장합니다.
 

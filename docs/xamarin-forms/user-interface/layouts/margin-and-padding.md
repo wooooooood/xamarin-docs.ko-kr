@@ -1,18 +1,17 @@
 ---
-title: "여백 및 안쪽 여백"
-description: "여백 및 안쪽 여백 속성 사용자 인터페이스에서 요소를 렌더링할 때 레이아웃 동작을 제어 합니다. 이 문서에서는 두 개의 속성 및 속성을 설정 하는 방법의 차이 보여줍니다."
-ms.topic: article
+title: 여백 및 안쪽 여백
+description: 여백 및 안쪽 여백 속성 사용자 인터페이스에서 요소를 렌더링할 때 레이아웃 동작을 제어 합니다. 이 문서에서는 두 개의 속성 및 속성을 설정 하는 방법의 차이 보여줍니다.
 ms.prod: xamarin
 ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 461430ba27b5d6008338019e5feaebed7b09d4cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 545468d3b02f9651c45fcaebe159351aafea6432
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="margin-and-padding"></a>여백 및 안쪽 여백
 

@@ -1,18 +1,17 @@
 ---
-title: "Google Cloud Messaging을 사용 하 여 원격 알림"
-description: "이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Google Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Google 클라우드 메시징 (GCM)와 통신 하기 위해 구현 해야 하는 다양 한 클래스를 설명 하 고 Android manifest GCM에 대 한 액세스 권한을 설정 하는 방법을 설명 종단 간 샘플 테스트 프로그램 메시징 코드를 보여 줍니다."
-ms.topic: article
+title: Google Cloud Messaging을 사용 하 여 원격 알림
+description: 이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Google Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Google 클라우드 메시징 (GCM)와 통신 하기 위해 구현 해야 하는 다양 한 클래스를 설명 하 고 Android manifest GCM에 대 한 액세스 권한을 설정 하는 방법을 설명 종단 간 샘플 테스트 프로그램 메시징 코드를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
@@ -401,7 +400,7 @@ namespace ClientApp
 
 #### <a name="test-registration-with-gcm"></a>GCM 사용 하 여 테스트 등록
 
-보겠습니다 완전히 다시 작성 하 고 응용 프로그램을 실행 합니다. 성공적으로 GCM에서 등록 토큰을 수신 하는 경우 등록 토큰 출력 창에 표시 됩니다. 예: 
+보겠습니다 완전히 다시 작성 하 고 응용 프로그램을 실행 합니다. 성공적으로 GCM에서 등록 토큰을 수신 하는 경우 등록 토큰 출력 창에 표시 됩니다. 예를 들어: 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2

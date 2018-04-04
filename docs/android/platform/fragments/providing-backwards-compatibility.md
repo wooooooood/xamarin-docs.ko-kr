@@ -1,17 +1,16 @@
 ---
-title: "이전 버전과 Android 지원 패키지와의 호환성을 제공"
-ms.topic: article
+title: 이전 버전과 Android 지원 패키지와의 호환성을 제공
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 07aec6f5fb66d4efcc114f92f0fb85d5b5b99c6f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>이전 버전과 Android 지원 패키지와의 호환성을 제공
 
@@ -37,7 +36,7 @@ Android 지원 패키지 Xamarin.Android 응용 프로그램에 자동으로 추
 
 -   **네임 스페이스 업데이트** &ndash; 에서 상속 된 클래스 `Android.App.Fragment` 에서 상속 해야 `Android.Support.V4.App.Fragment` 합니다. 사용 하 여 제거 문을 " `using Android.App;` " 소스 코드의 맨 위쪽에 파일을 사용 하 여 대체 " `using Android.Support.V4.App` "입니다. 
 
--   **SupportFragmentManager를 사용 하 여** &ndash; `Android.Support.V4.App.FragmentActivity` 노출 한 `SupportingFragmentManager` 속성에 대 한 참조를 가져오는 데 사용할 수 있어야 하는 `FragmentManager` 합니다. 예: 
+-   **SupportFragmentManager를 사용 하 여** &ndash; `Android.Support.V4.App.FragmentActivity` 노출 한 `SupportingFragmentManager` 속성에 대 한 참조를 가져오는 데 사용할 수 있어야 하는 `FragmentManager` 합니다. 예를 들어: 
 
 ```csharp
 FragmentTransaction fragmentTx = this.SupportingFragmentManager.BeginTransaction();

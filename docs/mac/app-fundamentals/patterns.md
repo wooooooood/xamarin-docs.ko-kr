@@ -1,18 +1,17 @@
 ---
-title: "일반적인 패턴 및 관용구"
-description: "이 문서에서는 모델-뷰-컨트롤러 패턴, 데이터 원본 및 대리자 패턴 및 프로토콜에 설명 합니다."
-ms.topic: article
+title: 일반적인 패턴 및 관용구
+description: 이 문서에서는 모델-뷰-컨트롤러 패턴, 데이터 원본 및 대리자 패턴 및 프로토콜에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: 4926670a0cd0960c9a390bd388d3530929634153
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="common-patterns-and-idioms"></a>일반적인 패턴 및 관용구
 

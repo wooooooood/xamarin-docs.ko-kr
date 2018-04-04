@@ -1,18 +1,17 @@
 ---
-title: "iOS 플랫폼 세부 사항"
-description: "플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms에 기본 제공 되는 iOS 플랫폼 특성을 사용 하는 방법을 보여줍니다."
-ms.topic: article
+title: iOS 플랫폼 세부 사항
+description: 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms에 기본 제공 되는 iOS 플랫폼 특성을 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/16/2017
-ms.openlocfilehash: 798bb2b15534a620acbe76080e171af1a548ac25
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7826962cd3bf9595a63841e3f2d9fb377d1a0574
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-platform-specifics"></a>iOS 플랫폼 세부 사항
 

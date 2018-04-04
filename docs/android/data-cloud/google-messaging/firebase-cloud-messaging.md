@@ -1,18 +1,17 @@
 ---
-title: "Firebase 클라우드 메시징"
-description: "Firebase 클라우드 메시징 (FCM)는 모바일 응용 프로그램 및 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 FCM 작동 하는 방법에 대 한 개요를 제공 하 고 앱 FCM를 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다."
-ms.topic: article
+title: Firebase 클라우드 메시징
+description: Firebase 클라우드 메시징 (FCM)는 모바일 응용 프로그램 및 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 FCM 작동 하는 방법에 대 한 개요를 제공 하 고 앱 FCM를 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: ef073999e10e184806089bed3ef9ab93e2f28dd6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef2c23d16545d03dc267054a96f8b0f8883afcf1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="firebase-cloud-messaging"></a>Firebase 클라우드 메시징
 

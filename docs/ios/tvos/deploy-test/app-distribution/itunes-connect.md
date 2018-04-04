@@ -1,18 +1,17 @@
 ---
-title: "응용 프로그램 tvOS iTunes Connect에서 구성"
-description: "이 문서에서는 iOS 앱 tvOS 특정 구성에 대 한 iTunes Connect에서에서 구성에 대 한 추가 지침을 제공 합니다."
-ms.topic: article
+title: 응용 프로그램 tvOS iTunes Connect에서 구성
+description: 이 문서에서는 iOS 앱 tvOS 특정 구성에 대 한 iTunes Connect에서에서 구성에 대 한 추가 지침을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d082a980572349da1b7e6155b3aa4de41512796f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>응용 프로그램 tvOS iTunes Connect에서 구성
 

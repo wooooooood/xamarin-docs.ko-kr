@@ -1,18 +1,17 @@
 ---
-title: "ContentProviders 소개"
-description: "Android 운영 체제를 미디어 파일, 연락처 및 일정 정보 등의 공유 데이터에 대 한 액세스를 쉽게 콘텐츠 공급자를 사용 합니다. 이 문서는 ContentProvider 클래스를 소개 하 고 사용 하는 방법의 두 가지 예제를 제공 합니다."
-ms.topic: article
+title: ContentProviders 소개
+description: Android 운영 체제를 미디어 파일, 연락처 및 일정 정보 등의 공유 데이터에 대 한 액세스를 쉽게 콘텐츠 공급자를 사용 합니다. 이 문서는 ContentProvider 클래스를 소개 하 고 사용 하는 방법의 두 가지 예제를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 53408220f1bbd3b0aa97e0c54bd8f4c09847b448
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e534c02820bfeab3a5bc1211bf0cbb20b9821af3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="intro-to-contentproviders"></a>ContentProviders 소개
 

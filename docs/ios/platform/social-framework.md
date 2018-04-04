@@ -1,18 +1,17 @@
 ---
-title: "소셜 프레임 워크"
-description: "소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국에서 사용자에 대 한 포함 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다."
-ms.topic: article
+title: 소셜 프레임 워크
+description: 소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국에서 사용자에 대 한 포함 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7a190014abd3386a3a675d50ce6a89101d0588a7
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="social-framework"></a>소셜 프레임 워크
 

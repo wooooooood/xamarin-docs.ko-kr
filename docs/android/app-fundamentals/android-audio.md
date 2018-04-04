@@ -1,18 +1,17 @@
 ---
 title: Android Audio
-description: "Android OS 광범위 한 지원을 제공 멀티미디어, 오디오 및 비디오를 모두 포함 합니다. 이 가이드 Android에서 오디오를 중점적으로 다루며 재생 하 고 하위 수준 오디오 API 뿐 아니라 기본 제공 오디오 플레이어 레코더 클래스를 사용 하 여 오디오 녹음에 대해 설명 합니다. 또한 개발자는 올바르게 동작 응용 프로그램을 빌드할 수 있도록 다른 응용 프로그램에 의해 브로드캐스팅 오디오 이벤트 작업에 다룹니다."
-ms.topic: article
+description: Android OS 광범위 한 지원을 제공 멀티미디어, 오디오 및 비디오를 모두 포함 합니다. 이 가이드 Android에서 오디오를 중점적으로 다루며 재생 하 고 하위 수준 오디오 API 뿐 아니라 기본 제공 오디오 플레이어 레코더 클래스를 사용 하 여 오디오 녹음에 대해 설명 합니다. 또한 개발자는 올바르게 동작 응용 프로그램을 빌드할 수 있도록 다른 응용 프로그램에 의해 브로드캐스팅 오디오 이벤트 작업에 다룹니다.
 ms.prod: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 91bd5ae83cd0d59872e11a6b1bdc7b84c751e64f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aff0d67549707129bfc85246318c33c522e4f1f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-audio"></a>Android Audio
 

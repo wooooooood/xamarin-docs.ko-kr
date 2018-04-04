@@ -1,18 +1,17 @@
 ---
-title: "사용자 지정 컨트롤 만들기"
-description: "이 문서에서는 사용자 지정 컨트롤을 만들고 인터페이스 작성기에서 사용 하는 방법을 설명 합니다."
-ms.topic: article
+title: 사용자 지정 컨트롤 만들기
+description: 이 문서에서는 사용자 지정 컨트롤을 만들고 인터페이스 작성기에서 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-custom-controls"></a>사용자 지정 컨트롤 만들기
 
@@ -185,7 +184,7 @@ private void Initialize() {
 }
 ```
 
-이 메서드는 각 컨트롤 올바르게 구성 되어 있는지 확인 하기 위해 컨트롤의 생성자에서 호출 됩니다. 예:
+이 메서드는 각 컨트롤 올바르게 구성 되어 있는지 확인 하기 위해 컨트롤의 생성자에서 호출 됩니다. 예를 들어:
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)

@@ -1,18 +1,17 @@
 ---
-title: "IOS 용 Xamarin 디자이너에서 사용자 지정 컨트롤"
-description: "IOS 용 Xamarin 디자이너 프로젝트에서 생성 되거나 Xamarin 구성 요소 저장소와 같은 외부 소스에서 참조 된 사용자 지정 컨트롤 렌더링을 지원 합니다."
-ms.topic: article
+title: IOS 용 Xamarin 디자이너에서 사용자 지정 컨트롤
+description: IOS 용 Xamarin 디자이너 프로젝트에서 생성 되거나 Xamarin 구성 요소 저장소와 같은 외부 소스에서 참조 된 사용자 지정 컨트롤 렌더링을 지원 합니다.
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83ec11ab6a17717dd9556122745afc8d87959186
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 113fab2fd0d1a055d566606885cefbafe3185529
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너에서 사용자 지정 컨트롤
 

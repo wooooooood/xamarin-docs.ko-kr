@@ -1,18 +1,17 @@
 ---
 title: CardView
-description: "Cardview 위젯은 뷰에서 카드 유사한 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. 이 가이드를 사용 하 고 이전 버전의 Android와 이전 버전과 호환성을 유지 하면서 CardView Xamarin.Android 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다."
-ms.topic: article
+description: Cardview 위젯은 뷰에서 카드 유사한 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. 이 가이드를 사용 하 고 이전 버전의 Android와 이전 버전과 호환성을 유지 하면서 CardView Xamarin.Android 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 21e2a2e8ef04936664344cb4fb758bc2af3b4d05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cardview"></a>CardView
 

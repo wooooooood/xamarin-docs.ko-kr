@@ -1,18 +1,17 @@
 ---
-title: "사용자 인터페이스"
-description: "UI (사용자 인터페이스) 컨트롤을 포함 하는 일반 사용자 환경 (UX) 검사 Xamarin.tvOS 작업할 때 Xcode의 작성기 인터페이스 및 UX 디자인 원칙을 사용 합니다."
-ms.topic: article
+title: 사용자 인터페이스
+description: UI (사용자 인터페이스) 컨트롤을 포함 하는 일반 사용자 환경 (UX) 검사 Xamarin.tvOS 작업할 때 Xcode의 작성기 인터페이스 및 UX 디자인 원칙을 사용 합니다.
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c77cc6f9954c5fb7d1a303748efc5c3182a0c138
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a30bd02a9545717175daf1381730afce6b72218d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 

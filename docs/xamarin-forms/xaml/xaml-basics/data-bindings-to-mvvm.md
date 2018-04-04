@@ -1,18 +1,17 @@
 ---
-title: "5 단계입니다. MVVM에 대 한 데이터 바인딩을에서"
-description: "모델-뷰-MVVM () 아키텍처 패턴 염두에서 XAML과 고안 된 합니다. 세 가지 소프트웨어 계층을 분리를 적용 하는 패턴-; 뷰라고 XAML 사용자 인터페이스 내부 데이터, 모델 고 보기와 모델 간에 중간자 ViewModel 라고 합니다. 뷰와 ViewModel 종종 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰에 대 한 BindingContext ViewModel의 인스턴스는 일반적으로 합니다."
-ms.topic: article
+title: 5 단계입니다. MVVM에 대 한 데이터 바인딩을에서
+description: 모델-뷰-MVVM () 아키텍처 패턴 염두에서 XAML과 고안 된 합니다. 세 가지 소프트웨어 계층을 분리를 적용 하는 패턴-; 뷰라고 XAML 사용자 인터페이스 내부 데이터, 모델 고 보기와 모델 간에 중간자 ViewModel 라고 합니다. 뷰와 ViewModel 종종 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰에 대 한 BindingContext ViewModel의 인스턴스는 일반적으로 합니다.
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 207bf7649d588f973b400cb452d9d8b246955cdb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5 단계입니다. MVVM에 대 한 데이터 바인딩을에서
 

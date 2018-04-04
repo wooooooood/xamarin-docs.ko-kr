@@ -1,18 +1,17 @@
 ---
-title: "IOS 디자이너에서에서 테이블 작업"
-description: "이전 섹션에서 테이블을 사용 하 여 개발을 탐색 합니다. 이 경우의 다섯 번째 및 마지막 섹션에서 지금까지 학습 한 내용 집계 하 고 합니다 스토리 보드를 사용 하 여 기본 작업 목록 응용 프로그램을 만듭니다."
-ms.topic: article
+title: IOS 디자이너에서에서 테이블 작업
+description: 이전 섹션에서 테이블을 사용 하 여 개발을 탐색 합니다. 이 경우의 다섯 번째 및 마지막 섹션에서 지금까지 학습 한 내용 집계 하 고 합니다 스토리 보드를 사용 하 여 기본 작업 목록 응용 프로그램을 만듭니다.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>IOS 디자이너에서에서 테이블 작업
 
@@ -115,7 +114,7 @@ Visual Studio를 사용 하 여 새 솔루션을 만들어 **(만들기) 새 프
 다음을 수행합니다. 
 
 -  끌어서는 **표시줄 단추 항목** 도구 상자에서는 _의 탐색 모음 오른쪽_합니다.
--  에 **속성 패드**아래 **표시줄 단추 항목** 선택 **식별자: 추가** (있도록는  *+*  더하기 단추). 
+-  에 **속성 패드**아래 **표시줄 단추 항목** 선택 **식별자: 추가** (있도록는 *+* 더하기 단추). 
 -  이후 단계에서 코드에서 식별할 수 있도록 이름을 지정 합니다. 참고 루트 뷰 컨트롤러 클래스 이름을 지정 해야 합니다 (예를 들어 **ItemViewController**) 막대 단추 항목의 이름을 설정할 수 있도록 합니다.
 
 

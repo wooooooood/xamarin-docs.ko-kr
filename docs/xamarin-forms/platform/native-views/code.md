@@ -1,18 +1,17 @@
 ---
-title: "C#에서 기본 뷰"
-description: "C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 네이티브 iOS, Android 및 UWP 뷰를 직접 참조할 수 있습니다. 이 문서에서는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 기본 뷰를 추가 하는 방법과 해당 측정 API 사용을 해결 하려면 사용자 지정 보기의 레이아웃을 재정의 하는 방법을 보여 줍니다."
-ms.topic: article
+title: C#에서 기본 뷰
+description: C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 네이티브 iOS, Android 및 UWP 뷰를 직접 참조할 수 있습니다. 이 문서에서는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 기본 뷰를 추가 하는 방법과 해당 측정 API 사용을 해결 하려면 사용자 지정 보기의 레이아웃을 재정의 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7979e43cdde60b1b0248118e591c096295847acb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-c"></a>C#에서 기본 뷰
 

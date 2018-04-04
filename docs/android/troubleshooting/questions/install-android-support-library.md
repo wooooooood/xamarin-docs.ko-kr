@@ -1,17 +1,17 @@
 ---
-title: "수동으로 Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 설치할 수는 방법"
-ms.topic: article
+title: 수동으로 Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 설치할 수는 방법
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 26dd7e23352bf0911c2a7268518ddebf6626596a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e760a87cbd1e0220ed5cf3a350d3539ffe29650e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>수동으로 Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 설치할 수는 방법
 
@@ -52,7 +52,7 @@ $url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zi
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-복사 **android\_m2repository.zip** 에 **% LOCALAPPDATA %\\Xamarin\\이동\\**  폴더입니다. 이전 MD5 해시 계산 단계에서에서 MD5 해시를 사용 하는 파일을 이름을 바꿉니다. 예:
+복사 **android\_m2repository.zip** 에 **% LOCALAPPDATA %\\Xamarin\\이동\\**  폴더입니다. 이전 MD5 해시 계산 단계에서에서 MD5 해시를 사용 하는 파일을 이름을 바꿉니다. 예를 들어:
 
 **%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
@@ -104,7 +104,7 @@ csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2rep
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-복사 **android\_m2repository.zip** 에 **$HOME/.local/share/Xamarin/zips/** 폴더입니다. 이전 MD5 해시 계산 단계에서에서 MD5 해시를 사용 하는 파일을 이름을 바꿉니다. 예:
+복사 **android\_m2repository.zip** 에 **$HOME/.local/share/Xamarin/zips/** 폴더입니다. 이전 MD5 해시 계산 단계에서에서 MD5 해시를 사용 하는 파일을 이름을 바꿉니다. 예를 들어:
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 

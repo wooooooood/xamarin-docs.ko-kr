@@ -1,18 +1,17 @@
 ---
 title: CallKit
-description: "이 문서에서는 해당 Apple iOS 10과 Xamarin.iOS VOIP 응용 프로그램에서 구현 하는 방법에서 릴리스는 새로운 CallKit API를 설명 합니다."
-ms.topic: article
+description: 이 문서에서는 해당 Apple iOS 10과 Xamarin.iOS VOIP 응용 프로그램에서 구현 하는 방법에서 릴리스는 새로운 CallKit API를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 67c761aa6656b571f16632dd1a076ff11737a424
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="callkit"></a>CallKit
 

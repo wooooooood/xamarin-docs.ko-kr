@@ -1,18 +1,17 @@
 ---
-title: "ListView에 사용자 지정"
-description: "Xamarin.Forms ListView 세로 목록으로 데이터의 컬렉션을 표시 하는 뷰입니다. 이 문서를 만드는 사용자 지정 렌더러 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 컨트롤 성능에 비해 더 많은 제어를 허용 하는 방법을 보여줍니다."
-ms.topic: article
+title: ListView에 사용자 지정
+description: Xamarin.Forms ListView 세로 목록으로 데이터의 컬렉션을 표시 하는 뷰입니다. 이 문서를 만드는 사용자 지정 렌더러 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 컨트롤 성능에 비해 더 많은 제어를 허용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: eb4cf0285585351db5c45dc34a382236e6805c99
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-listview"></a>ListView에 사용자 지정
 

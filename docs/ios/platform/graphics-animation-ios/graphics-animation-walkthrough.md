@@ -1,18 +1,17 @@
 ---
-title: "연습-CoreGraphics 및 CoreAnimation 사용 하 여"
-description: "이 문서에서는 과정을 단계별로 코어 그래픽 및 코어 애니메이션을 사용 하는 응용 프로그램을 만드는 방법을 설명 합니다. 이미지 경로 따라 이동 하는 애니메이션 효과 적용 하는 방법 뿐만 아니라 사용자 터치에 대 한 응답의 화면에 그리는 방법을 보여 줍니다."
-ms.topic: article
+title: 연습-CoreGraphics 및 CoreAnimation 사용 하 여
+description: 이 문서에서는 과정을 단계별로 코어 그래픽 및 코어 애니메이션을 사용 하는 응용 프로그램을 만드는 방법을 설명 합니다. 이미지 경로 따라 이동 하는 애니메이션 효과 적용 하는 방법 뿐만 아니라 사용자 터치에 대 한 응답의 화면에 그리는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c62601ff446c114e97e9d4c2ded3727d08220095
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-and-animating-along-a-path"></a>그리기 및 경로 따라 애니메이션 적용
 
@@ -183,6 +182,6 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="related-links"></a>관련 링크
 
-- [코어 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
-- [코어 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [코어 애니메이션 레시피](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

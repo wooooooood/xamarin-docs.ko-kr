@@ -1,17 +1,17 @@
 ---
-title: "Windows에서 Android 디버그에 어떤 USB 드라이버 필요 합니까?"
-ms.topic: article
+title: Windows에서 Android 디버그에 어떤 USB 드라이버 필요 합니까?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: 97803c0496c7f5f6ea40e86023caad66c675037e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5799d3bd40effcad4404532c47bdab73bc6cfc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Windows에서 Android 디버그에 어떤 USB 드라이버 필요 합니까?
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 Windows;에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되는 USB 드라이버를 설치 해야 합니다. 여기에 설명 된 대로 Nexus 장치에 대 한 지원을 추가 하는 기본적으로 "Google USB 드라이버"를 포함 하는 Android SDK Manager: [http://developer.android.com/sdk/win-usb.html](http://developer.android.com/sdk/win-usb.html)
 
-다른 장치에는 장치 제조업체에서 구체적으로 게시 하는 USB 드라이버가 필요 합니다. 가장 일반적인 제조업체에 대 한 일부 링크는이 가이드에서 다루지: [http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
+다른 장치에는 장치 제조업체에서 구체적으로 게시 하는 USB 드라이버가 필요 합니다. 가장 일반적인 제조업체에 대 한 일부 링크는이 가이드에 포함 됩니다. [http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>대체 방법
 

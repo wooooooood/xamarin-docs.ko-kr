@@ -1,18 +1,17 @@
 ---
-title: "향상 된 사용자 알림"
-description: "이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다."
-ms.topic: article
+title: 향상 된 사용자 알림
+description: 이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enhanced-user-notifications"></a>향상 된 사용자 알림
 
@@ -169,7 +168,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 2. 전환 하는 **소스** 보기: 
 
     [![](enhanced-user-notifications-images/setup01.png "소스 뷰")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. 클릭는  **+**  단추를 새 키를 추가 합니다.
+3. 클릭는 **+** 단추를 새 키를 추가 합니다.
 4. 입력 `aps-environment` 에 대 한는 **속성**, 둡니다는 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한는 **값**: 
 
     [![](enhanced-user-notifications-images/setup02.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -178,7 +177,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 두 번 클릭는 `Entitlements.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
-3. 클릭는  **+**  단추를 새 키를 추가 합니다.
+3. 클릭는 **+** 단추를 새 키를 추가 합니다.
 4. 입력 `aps-environment` 에 대 한는 **속성**, 둡니다는 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한는 **값**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Aps 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
