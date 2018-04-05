@@ -7,11 +7,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 9f7e3f64122f3b95291973d032aaf507dfbc8fab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95c023d702d165b7a8a0ba392b2f87af58bfae07
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="finger-painting"></a>손가락 그리기
 
@@ -27,7 +27,7 @@ Xamarin.Forms에 터치 조작 지원 하므로 Xamarin.Forms 터치 추적 효�
 
 **손가락 페인트** 페이지 **SkiaSharpFormsDemos** 손가락 그리기의 간단한 구현입니다. 색을 선택할 수 있도록 하거나 스트로크 너비 하지 않습니다, 캔버스를 지울 수 있는 방법이 및 물론 아트 워크를 저장할 수 없습니다.
 
-[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) 배치 파일의 `SKCanvasView` 단일 셀에 `Grid` 연결는 `TouchEffect` 되도록 `Grid`:
+[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) 배치 파일의 `SKCanvasView` 단일 셀에 `Grid` 연결는 `TouchEffect` 되도록 `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -50,7 +50,7 @@ Xamarin.Forms에 터치 조작 지원 하므로 Xamarin.Forms 터치 추적 효�
 
 연결 된 `TouchEffect` 에 직접는 `SKCanvasView` 모든 플랫폼에서 작동 하지 않습니다.
 
-[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) 코드 숨김 파일을 저장 하기 위한 두 개의 컬렉션 정의 `SKPath` 개체 물론 `SKPaint` 이러한 경로 렌더링 하기 위한 개체:
+[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) 코드 숨김 파일을 저장 하기 위한 두 개의 컬렉션 정의 `SKPath` 개체 물론 `SKPaint` 이러한 경로 렌더링 하기 위한 개체:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage

@@ -7,11 +7,11 @@ ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 177437ef016a25849e7c34d0a26270ce14173b7d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 354844f69c0b8755a15a3325c39e35b97d44f94d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-rotate-transform"></a>회전 변환
 
@@ -39,7 +39,7 @@ x' = x•cos(α) – y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 
-**기본 회전** 페이지에서는 `RotateDegrees` 메서드. [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) 와 해당 페이지의 중앙에 일부 텍스트를 표시 하 고 기반으로 회전 하는 파일을 `Slider` 360 –360의 범위를 합니다. 다음의 관련 부분을은 `PaintSurface` 처리기:
+**기본 회전** 페이지에서는 `RotateDegrees` 메서드. [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) 와 해당 페이지의 중앙에 일부 텍스트를 표시 하 고 기반으로 회전 하는 파일을 `Slider` 360 –360의 범위를 합니다. 다음의 관련 부분을은 `PaintSurface` 처리기:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -141,7 +141,7 @@ canvas.DrawText(Title, 0, 0, textPaint);
 
 [![](rotate-images/rotatedtext-small.png "회전 된 텍스트 페이지의 삼중 스크린샷")](rotate-images/rotatedtext-large.png#lightbox "회전 된 텍스트 페이지의 삼중 스크린 샷")
 
-다음은 `PaintSurface` 의 처리기는 [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) 클래스:
+다음은 `PaintSurface` 의 처리기는 [ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) 클래스:
 
 ```csharp
 static readonly string text = "    ROTATE";

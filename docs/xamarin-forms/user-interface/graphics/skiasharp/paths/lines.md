@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 32eefb0607bc06602098fdc5cfb11aa5e46c80d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -35,7 +35,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-이러한 샘플 프로그램에 가장 잘 설명 되어 있습니다. 홈 페이지의 두 번째 섹션은 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 라는 페이지와 프로그램을 시작 **스트로크 단면** 기반는 [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) 클래스입니다. 이 페이지에서는 정의 `PaintSurface` 의 세 멤버를 반복 하는 이벤트 처리기는 `SKStrokeCap` 열거형에서 열거형 멤버의 이름을 표시 하 고 해당 선 단면을 사용 하 여 선 그리기:
+이러한 샘플 프로그램에 가장 잘 설명 되어 있습니다. 홈 페이지의 두 번째 섹션은 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 라는 페이지와 프로그램을 시작 **스트로크 단면** 기반는 [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) 클래스입니다. 이 페이지에서는 정의 `PaintSurface` 의 세 멤버를 반복 하는 이벤트 처리기는 `SKStrokeCap` 열거형에서 열거형 멤버의 이름을 표시 하 고 해당 선 단면을 사용 하 여 선 그리기:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,7 +107,7 @@ DrawPoints (SKPointMode mode, points, paint)
 - [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) 각 쌍의 위치를 연결 하려면
 - [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) 모든 연속 점 연결 하려면
 
-**여러 줄** 페이지에는이 방법을 보여 줍니다. [ `MultipleLinesPage` XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) 두 개를 인스턴스화하고 `Picker` 수 있는 보기 선택의 멤버는 `SKPointMode` 열거형 및의 구성원은 `SKStrokeCap` 열거형:
+**여러 줄** 페이지에는이 방법을 보여 줍니다. [ `MultipleLinesPage` XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) 두 개를 인스턴스화하고 `Picker` 수 있는 보기 선택의 멤버는 `SKPointMode` 열거형 및의 구성원은 `SKStrokeCap` 열거형:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

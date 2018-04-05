@@ -7,11 +7,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 7435807e77a9a79d7fc3821675c1d959a16caa8f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859677a3dcfcddd0b333c9ddf60c01e2093b6a5b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="basic-animation"></a>기본 애니메이션
 
@@ -24,7 +24,7 @@ _SkiaSharp 그래픽 애니메이션 효과 적용 하는 방법을 알아봅니
 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수를 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 속도:
 
 
-[ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일 인스턴스화하는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 보기와:
+[ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일 인스턴스화하는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 보기와:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -149,7 +149,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
  이 경우 더 나은 솔루션은 두 개 만든 수 `SKPaint` 필드로 저장 하 고 한 번 개체입니다.
 
-바로 **확장 원** 애니메이션 않습니다. [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) 클래스를 포함 하 여 여러 필드를 정의 하 여 시작 된 `SKPaint` 개체:
+바로 **확장 원** 애니메이션 않습니다. [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) 클래스를 포함 하 여 여러 필드를 정의 하 여 시작 된 `SKPaint` 개체:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

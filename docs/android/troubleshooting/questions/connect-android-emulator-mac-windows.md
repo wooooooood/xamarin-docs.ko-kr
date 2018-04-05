@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4afe2b9fab8eeebb3f0451379b8e3937cc8d8f55
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Android 에뮬레이터에 연결할 수 Mac에서 실행 하는 Windows VM에서?
 
@@ -41,7 +41,7 @@ Windows 가상 컴퓨터에서 Mac에서 실행 되는 Google Android 에뮬레�
     ```bash
     cd /tmp
     mkfifo backpipe
-    nc -kl 5555 0 < backpipe | nc 127.0.0.1 5555 > backpipe
+    nc -kl 5555 0<backpipe | nc 127.0.0.1 5555 > backpipe
     ```
 
     으로 `nc` 터미널 창에서 명령을 실행 중인 상태로 유지, 예상 대로 패킷을 전달 됩니다. 제어 C를 종료 하는 터미널 창에 입력할 수 있습니다는 `nc` 명령을 완료 하 고 나면 에뮬레이터를 사용 합니다.

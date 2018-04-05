@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="fonts"></a>글꼴
 
@@ -135,7 +135,7 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-다중 지정 하려면 `Font` 설정, 단일 글꼴 특성 문자열에 필요한 설정을 결합 합니다. 글꼴 특성 문자열으로 서식을 지정 하는 `"[font-face],[attributes],[size]"`합니다. 매개 변수 순서는 중요, 모든 매개 변수는 선택 사항 및 여러 `attributes` 예를 들어 지정할 수 있습니다.
+여러 개 지정 하려면 `Font` 설정, 단일 글꼴 특성 문자열에 필요한 설정을 결합 합니다. 글꼴 특성 문자열으로 서식을 지정 하는 `"[font-face],[attributes],[size]"`합니다. 매개 변수 순서는 중요, 모든 매개 변수는 선택 사항 및 여러 개의 `attributes` 예를 들어 지정할 수 있습니다.
 
 ```xaml
 <Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />

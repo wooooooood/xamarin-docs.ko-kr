@@ -7,11 +7,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 47daca2ab94f718aeb5ce474c87edce3c3bd77a4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="3d-rotations"></a>3D 회전
 
@@ -221,7 +221,7 @@ y" = y / ((sin(α)/depth)·x + 1)
 
 사용 하는 경우 `SKMatrix44`, 다양 한 곱하여 모든 3D 회전 및 큐브 뷰 작업을 수행할 `SKMatrix44` 값입니다. 4-4에서는 2 차원 3 x 3 매트릭스를 추출할 수 있습니다 다음 매트릭스를 사용 하 여는 [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) 의 속성은 `SKMatrix44` 클래스. 이 속성은 익숙한 반환 `SKMatrix` 값입니다.
 
-**회전 3D** 페이지 3D 회전을 실험할 수 있습니다. [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) 파일 X, Y 및 Z 축 중심으로 회전을 설정 하 고 깊이 값을 설정 하는 4 개의 슬라이더를 인스턴스화합니다.
+**회전 3D** 페이지 3D 회전을 실험할 수 있습니다. [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) 파일 X, Y 및 Z 축 중심으로 회전을 설정 하 고 깊이 값을 설정 하는 4 개의 슬라이더를 인스턴스화합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -302,7 +302,7 @@ y" = y / ((sin(α)/depth)·x + 1)
 
 에 `depthSlider` 사용 하 여 초기화는 `Minimum` 250의 값입니다. 이 여기 회전 되 고 2 차원 개체에는 원점 250 픽셀 radius에 정의 된 circle에 제한 된 X 및 Y 좌표를 의미 합니다. 3D 공간에서이 개체의 모든 회전 좌표 값 250 보다 작은 항상 발생 합니다.
 
-[ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) 비트맵 너비가 300 픽셀이 고 정사각형을 코드 숨김 파일을 로드 합니다.
+[ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) 비트맵 너비가 300 픽셀이 고 정사각형을 코드 숨김 파일을 로드 합니다.
 
 ```csharp
 public partial class Rotation3DPage : ContentPage

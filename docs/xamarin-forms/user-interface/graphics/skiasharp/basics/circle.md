@@ -7,11 +7,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a718d051c2bf04e75c87b0e4a18aced4824802ba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e5b18bd6a565639e2ca22f4637a67c4f48717f6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="drawing-a-simple-circle"></a>단순 원 그리기
 
@@ -19,11 +19,11 @@ _SkiaSharp 그리기를 캔버스 및 그리기를 포함 하 여 기본 사항 
 
 그래픽 SkiaSharp를 만드는 등을 사용 하 여 Xamarin.Forms에 그리기의 개념을 소개 하는이 문서는 `SKCanvasView` 개체를 처리 하는 그래픽을 호스팅하는 `PaintSurface` 이벤트를 사용 하는 `SKPaint` 색 및 기타 그리기를 지정 하는 개체 특성입니다.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 이러한 일련의 SkiaSharp 문서에 대 한 모든 샘플 코드를 포함 합니다. 첫 번째 페이지의 이름이 **단순 원을** page 클래스를 호출 하 고 [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)합니다. 이 코드는 100 픽셀의 radius와 페이지의 가운데에 원을 그리려면 하는 방법을 보여 줍니다. 원의 개요는 빨간색 이며 원의 내부는 파란색입니다.
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 이러한 일련의 SkiaSharp 문서에 대 한 모든 샘플 코드를 포함 합니다. 첫 번째 페이지의 이름이 **단순 원을** page 클래스를 호출 하 고 [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)합니다. 이 코드는 100 픽셀의 radius와 페이지의 가운데에 원을 그리려면 하는 방법을 보여 줍니다. 원의 개요는 빨간색 이며 원의 내부는 파란색입니다.
 
 ![](circle-images/circleexample.png "빨간색으로 윤곽선 처리 파란색 원")
 
-[ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page 클래스에서 파생 `ContentPage` 두 개가 포함 및 `using` SkiaSharp 네임 스페이스에 대 한 지시문:
+[ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page 클래스에서 파생 `ContentPage` 두 개가 포함 및 `using` SkiaSharp 네임 스페이스에 대 한 지시문:
 
 ```csharp
 using SkiaSharp;

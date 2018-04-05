@@ -7,11 +7,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1e8ad47867fb1821df1e427aa777ead1a7da19a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4ef9f1b634d2ecfa73a94bfd562a68593dfdc575
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 
@@ -23,7 +23,7 @@ _렌더링된 텍스트 SkiaSharp 그래픽 텍스트를 통합 하는 문자열
 
 SkiaSharp `Canvas` 클래스 사각형을 그릴 수 있는 메서드가 포함 되어 ([`DrawRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRect/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)) 모퉁이가 둥근 사각형 ([`DrawRoundRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRoundRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPaint/)). 이러한 방법으로 정의할 수 사각형 필요는 `SKRect` 값입니다.
 
-**묶을 텍스트** 페이지는 짧은 텍스트 문자열은 페이지 프레임으로 모퉁이가 둥근된 사각형의 쌍으로 구성 항목에서 가운데에 맞춥니다. [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) 클래스가 수행 하는 방법을 보여 줍니다.
+**묶을 텍스트** 페이지는 짧은 텍스트 문자열은 페이지 프레임으로 모퉁이가 둥근된 사각형의 쌍으로 구성 항목에서 가운데에 맞춥니다. [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) 클래스가 수행 하는 방법을 보여 줍니다.
 
 SkiaSharp 사용 하 여는 `SKPaint` 글꼴 및 텍스트 특성 설정 하는 클래스도 사용할 수 텍스트의 렌더링 된 크기를 구합니다. 다음의 시작 부분 `PaintSurface` 이벤트 처리기 호출 두 개의 다른 `MeasureText` 메서드. 첫 번째 [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) 호출에는 간단한 `string` 인수와 현재 글꼴 특성을 기준으로 하는 텍스트의 픽셀 너비 반환 합니다. 프로그램이 다음 새 계산 `TextSize` 속성은 `SKPaint` 해당 렌더링된 너비 현재를 기준으로 개체 `TextSize` 속성과 표시 영역의 너비로 합니다. 설정 하기 위한 용도가이 `TextSize` 화면의 너비의 90%로 렌더링 해야 하는 텍스트 문자열 있도록:
 

@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: dd9694a05632cd5f37cb583d15bc93311a49cfdc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀과 장치 독립적 단위
 
@@ -31,7 +31,7 @@ _탐색 SkiaSharp 좌표 및 좌표 Xamarin.Forms 간의 차이점_
 - [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) 의 속성은 `SKCanvasView` 개체입니다.
 - [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) 속성은 `SKImageInfo` 와 일치 하는 값은 `Width` 및 `Height` 두 이전 페이지에 사용 되는 속성입니다.
 
-[ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) 클래스에는 이러한 값을 표시 하는 방법을 보여 줍니다. 생성자 저장은 `SKCanvasView` 개체에 액세스할 수 있도록를 필드로 `PaintSurface` 이벤트 처리기.
+[ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) 클래스에는 이러한 값을 표시 하는 방법을 보여 줍니다. 생성자 저장은 `SKCanvasView` 개체에 액세스할 수 있도록를 필드로 `PaintSurface` 이벤트 처리기.
 
 ```csharp
 SKCanvasView canvasView;
@@ -114,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
 ```
 
-표시 화면을 채우는 타원을 그릴 수는? **타원 채우기** 페이지에서는 방법을 합니다. `PaintSurface` 의 이벤트 처리기는 [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) 클래스 뺍니다의 스트로크 너비는 `xRadius` 및 `yRadius` 전체 타원에 맞게 값 및 해당 디스플레이 화면 내에서 간략히 설명 합니다.
+표시 화면을 채우는 타원을 그릴 수는? **타원 채우기** 페이지에서는 방법을 합니다. `PaintSurface` 의 이벤트 처리기는 [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) 클래스 뺍니다의 스트로크 너비는 `xRadius` 및 `yRadius` 전체 타원에 맞게 값 및 해당 디스플레이 화면 내에서 간략히 설명 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

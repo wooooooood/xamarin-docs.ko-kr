@@ -7,11 +7,11 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 836f404e25679f01e1bd330582cf469299c73243
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a94e1011557a5c7487315681e6e7c4d106ae4ba1
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
@@ -48,7 +48,7 @@ SkiaSharp 변환은의 왼쪽 위 모퉁이 기준으로 `SKCanvas` Xamarin.Form
 
 매우 큰 차이점은 SKiaSharp 변환 않는다는 *메서드* Xamarin.Forms 변환은 동안 *속성*합니다. 이 구문상의 차이 외는 의미 체계 차이가: SkiaSharp 변환 Xamarin.Forms 변환 상태를 설정 하는 동안 작업을 수행 합니다. SkiaSharp 변환 그래픽 개체에는 변환이 적용 되기 전에 그려진 아닌 이후에 그려지는 그래픽 개체에 적용 합니다. 반면, 속성을 설정 하는 즉시 Xamarin.Forms 변환 이전에 렌더링 된 요소에 적용 합니다. 이라고 하는 메서드는; SkiaSharp 변환 누적 됩니다. Xamarin.Forms 변환 속성을 다른 값으로 대체 됩니다.
 
-이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **변환** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 및는 [ **변환** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **변환** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 및는 [ **변환** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 솔루션의 폴더입니다.
 
 ## <a name="the-translate-transformtranslatemd"></a>[좌표 이동 변환](translate.md)
 

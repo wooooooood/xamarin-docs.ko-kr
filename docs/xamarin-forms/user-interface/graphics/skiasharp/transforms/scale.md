@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 4c2650d4586f210b121c4c72b79e92ce72d135fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -60,7 +60,7 @@ public void Scale (SKPoint size)
 
 네 번째 `Scale` 메서드를 간략하게 설명 합니다.
 
-**기본 배율** 페이지에서는 `Scale` 메서드. [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 파일에는 두 개의 `Slider` 수 있는 요소는 0과 10 사이의 가로 및 세로 배율 인수를 선택 합니다. [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) 호출 하려면 해당 값을 사용 하는 코드 숨김 파일 `Scale` 선이 서로 파선 및 일부 텍스트를 왼쪽 상단에에서 맞게 크기 조정 된 모퉁이가 둥근된 사각형을 표시 하기 전에 캔버스의 모서리:
+**기본 배율** 페이지에서는 `Scale` 메서드. [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 파일에는 두 개의 `Slider` 수 있는 요소는 0과 10 사이의 가로 및 세로 배율 인수를 선택 합니다. [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) 호출 하려면 해당 값을 사용 하는 코드 숨김 파일 `Scale` 선이 서로 파선 및 일부 텍스트를 왼쪽 상단에에서 맞게 크기 조정 된 모퉁이가 둥근된 사각형을 표시 하기 전에 캔버스의 모서리:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -120,7 +120,7 @@ public void Scale (Single sx, Single sy, Single px, Single py)
 
 `px` 및 `py` 매개 변수는이 라고도 하는 지점을 정의 *센터 배율* 는 SkiaSharp에 설명서 라고 하지만 *피벗 지점*합니다. 이 크기 조정에 영향을 받지 않는 캔버스의 왼쪽 위 모퉁이 기준으로 점입니다. 모든 확장에 해당 가운데를 기준으로 발생합니다.
 
-[ **가운데 배율** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) 이 페이지에 표시 합니다. `PaintSurface` 처리기는 비슷합니다는 **기본 배율** 점을 제외 하 고 프로그램의 `margin` 텍스트를 가로로 가운데에 프로그램에에서 가장 적합 세로 모드를 의미 하는 값은 계산:
+[ **가운데 배율** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) 이 페이지에 표시 합니다. `PaintSurface` 처리기는 비슷합니다는 **기본 배율** 점을 제외 하 고 프로그램의 `margin` 텍스트를 가로로 가운데에 프로그램에에서 가장 적합 세로 모드를 의미 하는 값은 계산:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -216,7 +216,7 @@ canvas.Scale(sx, sy, px, py);
 
 `SKPath` 클래스 정의 읽기 전용 [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) 속성을 반환 하는 `SKRect` 경로에 좌표가 범위를 정의 합니다. 예를 들어는 `Bounds` 앞에서 만든 hendecagram 경로에서 속성을 가져오는 `Left` 및 `Top` 사각형의 속성은 약-100는 `Right` 및 `Bottom` 속성은 약 100 및 `Width` 및 `Height` 속성은 약 200 개. (대부분의 실제 값은 거의 없는 별표 포인트 100의 반지름 원과 정의 되어 있지만 상위 지점에만 가로 또는 세로 축이 있는 병렬 때문에.)
 
-이 정보의 가용성 눈금 파생 해 서 캔버스의 크기에 대 한 경로 크기 조정에 대 한 적합 한 요소를 변환 해야 것을 의미 합니다. [ **이방성 배율** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) 페이지는 11 점이 별이 보여 줍니다. *이방성* 배율 것 하지 않음을 가로 및 세로 방향 즉, 별은 원래 가로 세로 비율을 유지 되지 않습니다. 여기는 관련 코드는 `PaintSurface` 처리기:
+이 정보의 가용성 눈금 파생 해 서 캔버스의 크기에 대 한 경로 크기 조정에 대 한 적합 한 요소를 변환 해야 것을 의미 합니다. [ **이방성 배율** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) 페이지는 11 점이 별이 보여 줍니다. *이방성* 배율 것 하지 않음을 가로 및 세로 방향 즉, 별은 원래 가로 세로 비율을 유지 되지 않습니다. 여기는 관련 코드는 `PaintSurface` 처리기:
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -261,7 +261,7 @@ pathBounds.Inflate(strokePaint.StrokeWidth / 2,
 
 이렇게 하면 증가 `pathBounds` 네 면에서 모두 1.5 단위에서 사각형입니다. 선 조인을 반올림 하는 경우에 이것이 적절 한 솔루션입니다. 이 음 더 길 수 및 계산 하기가 어렵습니다.
 
-으로 텍스트와 비슷한 기법을 사용할 수도 있습니다는 **이방성 텍스트** 페이지를 보여 줍니다. 다음의 관련 부분을은 `PaintSurface` 에서 처리기는 [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) 클래스:
+으로 텍스트와 비슷한 기법을 사용할 수도 있습니다는 **이방성 텍스트** 페이지를 보여 줍니다. 다음의 관련 부분을은 `PaintSurface` 에서 처리기는 [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) 클래스:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -297,7 +297,7 @@ using (SKPaint textPaint = new SKPaint
 - 그래픽 개체 크기를 나눈 가로 및 세로 페이지 치수의 최소에 따라 개체의 크기를 조정 합니다.
 - 페이지의 가운데에 크기 조정 된 개체의 중심을 변환 합니다.
 
-[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) 반대 순서로 별을 표시 하기 전에 다음이 단계를 수행 합니다.
+[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) 반대 순서로 별을 표시 하기 전에 다음이 단계를 수행 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

@@ -7,11 +7,11 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0bd13cc58d4f15b46edc03eda35f04d7ca866dec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
@@ -19,7 +19,7 @@ _곡선 그리기 및 경로 기능을 사용 하 여 SkiaSharp를 사용 하는
 
 탐색 [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 에서 시작 하는 메서드 및 속성의 [SkiaSharp 선과 경로](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) 문서. 여기에 문서를 계속 곡선을 추가 하는 메서드는 `SKPath` 개체, 및 기타 강력한 경로 기능을 사용 합니다. 간결한 텍스트 문자열의 전체 경로 지정 하는 방법, 경로 효과 사용 하는 방법 및 경로 내부 자세히 검토 하는 방법을 볼 수 있습니다.
 
-이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **곡선과 추가 경로** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램을 및는 [ **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **곡선과 추가 경로** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램을 및는 [ **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[원호를 그리는 3가지 방법](arcs.md)
 

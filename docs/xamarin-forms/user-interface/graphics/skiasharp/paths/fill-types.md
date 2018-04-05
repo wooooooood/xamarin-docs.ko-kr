@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 88b9dacef7a77d5f18908bdcb696e5172ceaa8c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
@@ -32,7 +32,7 @@ _SkiaSharp 경로 채우기 유형으로 가능한 다양 한 효과 검색 합�
 
 많은 라우팅 경로가 포함 된 굴곡 알고리즘 종종 경로의 모든 포함 된 영역을 채웁니다. 일반적으로 홀수 알고리즘 더 흥미로운 결과 생성합니다.
 
-와 같이 전형적인 예로 점이 5 별은 **Five-Pointed 별모양** 페이지. [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) 파일 두 개를 인스턴스화하고 `Picker` 경로 선택 하는 뷰 유형 및 경로 스트로크 또는 채워진 여부 또는 둘 다를 채우는 순서:
+와 같이 전형적인 예로 점이 5 별은 **Five-Pointed 별모양** 페이지. [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) 파일 두 개를 인스턴스화하고 `Picker` 경로 선택 하는 뷰 유형 및 경로 스트로크 또는 채워진 여부 또는 둘 다를 채우는 순서:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

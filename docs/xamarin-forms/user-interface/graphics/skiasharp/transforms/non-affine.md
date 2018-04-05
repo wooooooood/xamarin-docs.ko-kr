@@ -7,11 +7,11 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 52bed94724d330b74a9604c54fcfebad1e562267
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="non-affine-transforms"></a>유사 형식이 아닌 변형
 
@@ -95,7 +95,7 @@ y' = y / (0.01·x + 1)
 
 `Persp` 뷰어 먼 오른쪽의 상자 기울어진 이제는 제안 된 단축법 때문에 이러한 셀 이름의 부분은 "관점"를 의미 합니다.
 
-**테스트 큐브 뷰** 페이지의 값을 실험할 수 있습니다 `Persp0` 및 `Pers1` 작동 방식을 이해할 수 있도록 합니다. 이러한 행렬 셀의 적절 한 값은 매우 작으므로 하는 `Slider` 유니버설 Windows 플랫폼에서 없습니다 올바르게 처리 합니다. 두 UWP 문제에 맞게 `Slider` 요소에는 [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) – 1을 1로 범위를 초기화할 필요:
+**테스트 큐브 뷰** 페이지의 값을 실험할 수 있습니다 `Persp0` 및 `Pers1` 작동 방식을 이해할 수 있도록 합니다. 이러한 행렬 셀의 적절 한 값은 매우 작으므로 하는 `Slider` 유니버설 Windows 플랫폼에서 없습니다 올바르게 처리 합니다. 두 UWP 문제에 맞게 `Slider` 요소에는 [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) – 1을 1로 범위를 초기화할 필요:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -149,7 +149,7 @@ y' = y / (0.01·x + 1)
 </ContentPage>
 ```
 
-슬라이더에 대 한 이벤트 처리기는 [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) –0.01 및 0.01 사이 있도록 코드 숨김 파일 100으로 값을 나눕니다. 또한 생성자는 비트맵에 로드합니다.
+슬라이더에 대 한 이벤트 처리기는 [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) –0.01 및 0.01 사이 있도록 코드 숨김 파일 100으로 값을 나눕니다. 또한 생성자는 비트맵에 로드합니다.
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -240,7 +240,7 @@ z` = Persp0·x + Persp1·y + 1
 
 ![](non-affine-images/tapertransform.png "테이퍼 변환의 대상 상자")
 
-[ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) 클래스는 이러한 매개 변수에 따라 유사 형식이 아닌 변환의 일반화 된 계산을 수행 합니다.
+[ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) 클래스는 이러한 매개 변수에 따라 유사 형식이 아닌 변환의 일반화 된 계산을 수행 합니다.
 
 - 변환 중인 이미지의 사각형 크기
 - 점점 가늘어지거나, 하는 사각형의 면을 지정 하는 열거형
@@ -349,7 +349,7 @@ static class TaperTransform
 }
 ```
 
-이 클래스에서 사용 되는 **테이퍼 변환** 페이지. XAML 파일이 두 개를 인스턴스화하고 `Picker` 요소를 사용 하는 열거형 값을 선택 및 `Slider` 테이퍼 분수를 선택 합니다. [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) 처리기 결합 하 여 두 개의 테이퍼 변환 번역 확인 비트맵의 왼쪽 위 모퉁이 기준으로 변환 하는 변환을:
+이 클래스에서 사용 되는 **테이퍼 변환** 페이지. XAML 파일이 두 개를 인스턴스화하고 `Picker` 요소를 사용 하는 열거형 값을 선택 및 `Slider` 테이퍼 분수를 선택 합니다. [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) 처리기 결합 하 여 두 개의 테이퍼 변환 번역 확인 비트맵의 왼쪽 위 모퉁이 기준으로 변환 하는 변환을:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -398,7 +398,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](non-affine-images/shownonaffinematrix-small.png "비 Affine 행렬 표시 페이지의 삼중 스크린샷")](non-affine-images/shownonaffinematrix-large.png#lightbox "비 Affine 행렬 표시 페이지의 삼중 스크린샷")
 
-프로그램에서이 메서드를 사용 하 여 변환을 성공적으로 계산으로 비트맵의 모서리 중 하나의 내부가 각도 180도 보다 큰지 확인 하거나 양쪽이 서로 교차 하지 마세요는 [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) 클래스:
+프로그램에서이 메서드를 사용 하 여 변환을 성공적으로 계산으로 비트맵의 모서리 중 하나의 내부가 각도 180도 보다 큰지 확인 하거나 양쪽이 서로 교차 하지 마세요는 [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) 클래스:
 
 ```csharp
 static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint ptLL, SKPoint ptLR)
@@ -459,7 +459,7 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 
 오른쪽에 있는 마지막 좌표는 4 개의 터치 포인트와 관련 된 네 개의 점입니다. 이들은 비트맵의 모서리 중 마지막 좌표입니다.
 
-W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환 (`S`) 단순히 1 픽셀 사각형으로 비트맵 크기를 조정 합니다. 두 번째 변환이 유사 형식이 아닌 변형 `N`, 세 번째는 3x3 유사 변환 및 `A`합니다. 이전 관계 처럼가 되도록 해당 유사 변환 점이 3 개 기반의 [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드 및와 네 번째 행이 포함 되어 있지는 (a, b) 지점입니다.
+W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환 (`S`) 단순히 1 픽셀 사각형으로 비트맵 크기를 조정 합니다. 두 번째 변환이 유사 형식이 아닌 변형 `N`, 세 번째는 3x3 유사 변환 및 `A`합니다. 이전 관계 처럼가 되도록 해당 유사 변환 점이 3 개 기반의 [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드 및와 네 번째 행이 포함 되어 있지는 (a, b) 지점입니다.
 
 `a` 및 `b` 세 번째 변환이 유사 하 값이 계산 됩니다. 코드 유사 변환의 역 수를 가져오고이 사용 하 여 오른쪽 아래 모서리에 매핑할 합니다. (A, b) 지점입니다.
 

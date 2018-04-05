@@ -7,11 +7,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 312d487111f8e36170c97ca7a29fb91556c72569
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c5142a3abcc6d461bc277faeb02e3aacd9727bca
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선으로 분할
 
@@ -46,7 +46,7 @@ public void CubicTo (Single x1, Single y1, Single x2, Single y2, Single x3, Sing
 
 결과 곡선 시작 지점에서 시작 하 고 끝점에서 끝납니다. 곡선은 일반적으로 통과 하지 않으므로 두 개의 제어점입니다. 대신 like 많은 자석과 자신 들을 위한 곡선을 작동 합니다.
 
-입방 형 3 차원 곡선에 대해 가장 좋은 방법은 실험을 통해 됩니다. 이의 용도 **베 지 어 곡선** 에서 파생 되는 페이지를 `InteractivePage`합니다. [ **BezierCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) 파일 인스턴스화하는 `SKCanvasView` 및 `TouchEffect`합니다. [ **BezierCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) 코드 숨김 파일 네 개를 만듭니다 `TouchPoint` 해당 생성자에 있는 개체입니다. `PaintSurface` 이벤트 처리기를 만듭니다는 `SKPath` 4에 따라 베 지 어 곡선을 렌더링 하 `TouchPoint` 개체, 및도 끝점에는 제어점에서 점선된 접선을 그립니다.
+입방 형 3 차원 곡선에 대해 가장 좋은 방법은 실험을 통해 됩니다. 이의 용도 **베 지 어 곡선** 에서 파생 되는 페이지를 `InteractivePage`합니다. [ **BezierCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) 파일 인스턴스화하는 `SKCanvasView` 및 `TouchEffect`합니다. [ **BezierCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) 코드 숨김 파일 네 개를 만듭니다 `TouchPoint` 해당 생성자에 있는 개체입니다. `PaintSurface` 이벤트 처리기를 만듭니다는 `SKPath` 4에 따라 베 지 어 곡선을 렌더링 하 `TouchPoint` 개체, 및도 끝점에는 제어점에서 점선된 접선을 그립니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -128,7 +128,7 @@ L = 4 × tan(α / 4) / 3
 
 그림에서는 45도 각도 1 L 0.265와 같습니다. 코드에서 해당 값은 원의 원하는 반지름이 곱할 합니다.
 
-**베 지 어 원호** 페이지에서는 정의 근사치를 구하려면 최대 180도 범위의 각도 대 한 원호를 베 지 어 곡선을 확인할 수 있습니다. [ **BezierCircularArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml) 파일 인스턴스화하는 `SKCanvasView` 및 `Slider` 각도 선택 하기 위한 합니다. `PaintSurface` 의 이벤트 처리기는 [ **BezierCircularArgPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml.cs) 코드 숨김 파일 변환을 사용 하 여 캔버스의 가운데에 점 (0, 0)을 설정 합니다. 비교를 위해 해당 지점에 중심이 원을 그리고 베 지 어 곡선의 두 개의 제어점을 계산 합니다.
+**베 지 어 원호** 페이지에서는 정의 근사치를 구하려면 최대 180도 범위의 각도 대 한 원호를 베 지 어 곡선을 확인할 수 있습니다. [ **BezierCircularArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml) 파일 인스턴스화하는 `SKCanvasView` 및 `Slider` 각도 선택 하기 위한 합니다. `PaintSurface` 의 이벤트 처리기는 [ **BezierCircularArgPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCircularArcPage.xaml.cs) 코드 숨김 파일 변환을 사용 하 여 캔버스의 가운데에 점 (0, 0)을 설정 합니다. 비교를 위해 해당 지점에 중심이 원을 그리고 베 지 어 곡선의 두 개의 제어점을 계산 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -216,7 +216,7 @@ Windows Mobile 화면에 치중 하 고 각도 180도 있지만 iOS 화면에는
 
 원의 반지름은 100, *L* 55 이며 기억 하기 쉬운는 번호입니다.
 
-**원 더하거나 제곱** 페이지 원형 및 사각형 사이의 그림 애니메이션 효과 적용 합니다. 원이 있는 좌표에서이 배열 정의의 첫 번째 열에 표시 된 네 개의 베 지 어 커브에서 근접할는 [ `SquaringTheCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/SquaringTheCirclePage.cs) 클래스:
+**원 더하거나 제곱** 페이지 원형 및 사각형 사이의 그림 애니메이션 효과 적용 합니다. 원이 있는 좌표에서이 배열 정의의 첫 번째 열에 표시 된 네 개의 베 지 어 커브에서 근접할는 [ `SquaringTheCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/SquaringTheCirclePage.cs) 클래스:
 
 ```csharp
 public class SquaringTheCirclePage : ContentPage
@@ -292,7 +292,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이러한 애니메이션이 있는 원호 및 직선으로 렌더링할 수 있을 정도로 유연 알고리즘 방식으로 곡선 없이 수 없습니다.
 
-**베 지 어 무한대** 페이지에는 또한 근사치를 구하려면 원호를 베 지 어 곡선의 기능을 사용 합니다. 다음은 `PaintSurface` 에서 처리기는 [ `BezierInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) 클래스:
+**베 지 어 무한대** 페이지에는 또한 근사치를 구하려면 원호를 베 지 어 곡선의 기능을 사용 합니다. 다음은 `PaintSurface` 에서 처리기는 [ `BezierInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -359,7 +359,7 @@ public void QuadTo (Single x1, Single y1, Single x2, Single y2)
 
 메서드를 현재 위치에서 곡선 추가 `point2` 와 `point1` 제어 지점으로 합니다.
 
-정방형 베 지 어 곡선을 시험해 볼 수 있습니다는 **정방형 곡선** 매우 비슷하지만 페이지는 **베 지 어 곡선** 페이지 3 개만 터치 포인트를 되었다는 점만 제외 합니다. 다음은 `PaintSurface` 의 처리기는 [ **QuadraticCurve.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/QuadraticCurvePage.xaml.cs) 코드 숨김 파일:
+정방형 베 지 어 곡선을 시험해 볼 수 있습니다는 **정방형 곡선** 매우 비슷하지만 페이지는 **베 지 어 곡선** 페이지 3 개만 터치 포인트를 되었다는 점만 제외 합니다. 다음은 `PaintSurface` 의 처리기는 [ **QuadraticCurve.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/QuadraticCurvePage.xaml.cs) 코드 숨김 파일:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -436,7 +436,7 @@ public void ConicTo (Single x1, Single y1, Single x2, Single y2, Single weight)
 
 최종 확인 `weight` 매개 변수입니다.
 
-**원추형 곡선** 페이지에서는 이러한 곡선을 실험할 수 있습니다. `ConicCurvePage` 클래스는 `InteractivePage`에서 파생됩니다. [ **ConicCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) 파일 인스턴스화하는 `Slider` -2에서 2 사이의 가중치 값을 선택 합니다. [ **ConicCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) 코드 숨김 파일 세 개를 만들며 `TouchPoint` 개체 및 `PaintSurface` 처리기 컨트롤에 탄젠트 줄이 포함 된 결과 곡선 렌더링 사항:
+**원추형 곡선** 페이지에서는 이러한 곡선을 실험할 수 있습니다. `ConicCurvePage` 클래스는 `InteractivePage`에서 파생됩니다. [ **ConicCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml) 파일 인스턴스화하는 `Slider` -2에서 2 사이의 가중치 값을 선택 합니다. [ **ConicCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCurvePage.xaml.cs) 코드 숨김 파일 세 개를 만들며 `TouchPoint` 개체 및 `PaintSurface` 처리기 컨트롤에 탄젠트 줄이 포함 된 결과 곡선 렌더링 사항:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -490,7 +490,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 삼각 함수를 사용 하 여 제어 포인트 원 중심에서의 거리를 결정: 절반 각도 α의 코사인 값을 나눈 원의 반지름을 됩니다. 원호 시작점과 끝점 간의 그리려면 절반 각도의 코사인 해당 동일한 값에 가중치를 설정 합니다. 고 해당 각도 180도 이면 다음 탄젠트 선 충족 하지 가중치는 0이 됩니다. 하지만 각도 180도 보다 작은 경우에 대 한 계산 제대로 작동 합니다.
 
-**원추형 원호** 이 페이지를 보여 줍니다. [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) 파일 인스턴스화합니다는 `Slider` 각도 선택 합니다. `PaintSurface` 의 처리기는 [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) 제어점 및 무게를 계산 하는 코드 숨김 파일:
+**원추형 원호** 이 페이지를 보여 줍니다. [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) 파일 인스턴스화합니다는 `Slider` 각도 선택 합니다. `PaintSurface` 의 처리기는 [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) 제어점 및 무게를 계산 하는 코드 숨김 파일:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

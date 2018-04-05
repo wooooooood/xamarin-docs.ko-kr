@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 4097aea4079555b26b586db5ec63fa261d5e7946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 47f5a6fdcfb6ee795f84ca8e19c0954b68a2fae9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-effects"></a>경로 효과
 
@@ -50,7 +50,7 @@ public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 
 [![](effects-images/animateddottedtext-small.png "애니메이션을 점으로 구분 된 텍스트 페이지의 삼중 스크린샷")](effects-images/animateddottedtext-large.png#lightbox "점으로 구분 된 텍스트에 애니메이션을 페이지의 삼중 스크린 샷")
 
-[ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 클래스 일부 상수를 정의 하 여 시작 하 고 재정의 `OnAppearing` 및 `OnDisappearing` 애니메이션에 대 한 메서드:
+[ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 클래스 일부 상수를 정의 하 여 시작 하 고 재정의 `OnAppearing` 및 `OnDisappearing` 애니메이션에 대 한 메서드:
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -158,7 +158,7 @@ public class AnimatedDottedTextPage : ContentPage
 
 [![](effects-images/dotdashmorph-small.png "점 대시 Morph 페이지의 삼중 스크린샷")](effects-images/dotdashmorph-large.png#lightbox "점 대시 Morph 페이지의 삼중 스크린샷")
 
-[ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 재정의 `OnAppearing` 및 `OnDisappearing` 이전 프로그램 하지만 클래스를 정의 하는 같은 방법으로 메서드는 `SKPaint` 필드로 개체:
+[ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 재정의 `OnAppearing` 및 `OnDisappearing` 이전 프로그램 하지만 클래스를 정의 하는 같은 방법으로 메서드는 `SKPaint` 필드로 개체:
 
 ```csharp
 public class DotDashMorphPage : ContentPage
@@ -287,7 +287,7 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 
 `Translate` 멤버의 경로를 선 또는 곡선을 따라 복제 되는 동일한 방향에 유지 하면 됩니다. 에 대 한 `Rotate`, 경로 접선 곡선을 기준으로 회전 합니다. 경로 가로선에 대 한 일반 방향이 있습니다. `Morph` 유사한 `Rotate` 제외 하 고 경로 자체 스트로크 되 고 선의 곡률에 맞게 곡선도 합니다.
 
-**1 D 경로 효과** 페이지에서는 이러한 세 가지 옵션을 보여 줍니다. [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) 파일에 해당 하는 열거형의 세 멤버 3 개 항목을 포함 하는 선택을 정의:
+**1 D 경로 효과** 페이지에서는 이러한 세 가지 옵션을 보여 줍니다. [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) 파일에 해당 하는 열거형의 세 멤버 3 개 항목을 포함 하는 선택을 정의:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -323,7 +323,7 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 </ContentPage>
 ```
 
-[ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) 코드 숨김 파일 3 개 정의 `SKPathEffect` 필드로 개체입니다. 이러한 모두 사용 하 여 만들어지며 `SKPathEffect.Create1DPath` 와 `SKPath` 개체를 사용 하 여 만든 `SKPath.ParseSvgPathData`합니다. 첫 번째는 간단한 상자, 두 번째는 다이아몬드 모양 및 세 번째 사각형입니다. 이러한 세 가지 효과 스타일을 보여 주기 위해 사용 됩니다.
+[ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) 코드 숨김 파일 3 개 정의 `SKPathEffect` 필드로 개체입니다. 이러한 모두 사용 하 여 만들어지며 `SKPathEffect.Create1DPath` 와 `SKPath` 개체를 사용 하 여 만든 `SKPath.ParseSvgPathData`합니다. 첫 번째는 간단한 상자, 두 번째는 다이아몬드 모양 및 세 번째 사각형입니다. 이러한 세 가지 효과 스타일을 보여 주기 위해 사용 됩니다.
 
 ```csharp
 public partial class OneDimensionalPathEffectPage : ContentPage
@@ -422,7 +422,7 @@ y = a · cosh(x / a)
 
 cosh(w / 2 / a) = 1 + h / a
 
-다음 메서드는 [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) 클래스는 두 식 왼쪽 및 오른쪽으로 등호를 참조 하 여 해당 같음 통합 `left` 및 `right`합니다. 값이 작으면 *는*, `left` 보다 크면 `right`;의 값이 크면 *는*, `left` 는 보다 작은 `right`합니다. `while` 루프에서의 최적의 값에 좁힙니다 *는*:
+다음 메서드는 [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) 클래스는 두 식 왼쪽 및 오른쪽으로 등호를 참조 하 여 해당 같음 통합 `left` 및 `right`합니다. 값이 작으면 *는*, `left` 보다 크면 `right`;의 값이 크면 *는*, `left` 는 보다 작은 `right`합니다. `while` 루프에서의 최적의 값에 좁힙니다 *는*:
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -551,7 +551,7 @@ public class LinkedChainPage : ContentPage
 
 (0, 0)의 버킷 경로 이므로 핸들, 그럴 경우에는 `phase` 인수 애니메이션 효과가 적용 되어, 버킷의 아마도 scooping 물 아래쪽에서 위쪽 및 맨 위에 있는 덤프 아웃 컨베이어 벨트를 중심으로 하는 것 같습니다.
 
-[ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) 클래스 구현 재정의 애니메이션은 `OnAppearing` 및 `OnDisappearing` 메서드. 집합에 대 한 경로 페이지의 생성자에 정의 됩니다.
+[ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) 클래스 구현 재정의 애니메이션은 `OnAppearing` 및 `OnDisappearing` 메서드. 집합에 대 한 경로 페이지의 생성자에 정의 됩니다.
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -712,7 +712,7 @@ public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 
 기본적으로 해치 선은 가로입니다. 경우는 `matrix` 매개 변수에 포함 회전, 해치 선은 시계 방향으로 회전 합니다.
 
-**채우기 해치** 페이지에서는이 경로 효과 보여 줍니다. [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 더 나타내는 배율 요소와 함께 3 픽셀 너비와 가로 평행선에 대 한 첫 번째 간격을 더 많이 떨어져 있는 6 픽셀, 클래스 필드로 3 경로 효과 정의 합니다. 따라서 3 픽셀은이 줄 구분이 됩니다. 두 번째 경로 효과 너비가 6 픽셀인 세로 평행선 간격을 더 많이 떨어져 있는 (따라서 분리는 18 픽셀은) 24 픽셀에 대 한 및 빗금 줄 12 넓은 공백이 포함 된 36 픽셀 더 많이 떨어져 있는 세 번째입니다. 
+**채우기 해치** 페이지에서는이 경로 효과 보여 줍니다. [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 더 나타내는 배율 요소와 함께 3 픽셀 너비와 가로 평행선에 대 한 첫 번째 간격을 더 많이 떨어져 있는 6 픽셀, 클래스 필드로 3 경로 효과 정의 합니다. 따라서 3 픽셀은이 줄 구분이 됩니다. 두 번째 경로 효과 너비가 6 픽셀인 세로 평행선 간격을 더 많이 떨어져 있는 (따라서 분리는 18 픽셀은) 24 픽셀에 대 한 및 빗금 줄 12 넓은 공백이 포함 된 36 픽셀 더 많이 떨어져 있는 세 번째입니다. 
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -812,7 +812,7 @@ public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 
 일반적으로 복제 된 경로 채워질 영역 대신 화면의 왼쪽 및 위쪽 가장자리에 맞춥니다. 0에서 왼쪽 및 위쪽 측면에서 가로 및 세로 오프셋을 지정 하는 배율 인수 사이의 변환 요소를 제공 하 여이 동작을 재정의할 수 있습니다.
 
-**경로 타일 채우기** 페이지에서는이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 된 경로에 필드로 정의 됩니다는 [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표-40부터 범위 40, 즉,이 경로 80 픽셀로: 
+**경로 타일 채우기** 페이지에서는이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 된 경로에 필드로 정의 됩니다는 [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표-40부터 범위 40, 즉,이 경로 80 픽셀로: 
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -868,7 +868,7 @@ public static SKPathEffect CreateCorner (Single radius)
 
 단일 인수 라는 있지만 `radius` 절반 원하는 모서리 반지름으로 설정 해야 합니다. (기본 Skia 코드의 특성입니다.)
 
-다음은 `PaintSurface` 의 처리기는 [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) 클래스:
+다음은 `PaintSurface` 의 처리기는 [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -944,7 +944,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 [![](effects-images/jitterexperiment-small.png "삼중 지터 실험 페이지의 스크린샷")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-프로그램이 straightfoward입니다. [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소 및 `SKCanvasView`:
+프로그램이 straightfoward입니다. [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소 및 `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1000,7 +1000,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 </ContentPage>
 ```
 
-`PaintSurface` 의 처리기는 [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) 코드 숨김 파일을 호출 될 때마다는 `Slider` 값이 변경 합니다. 호출 `SKPathEffect.CreateDiscrete` 두를 사용 하 여 `Slider` 값 및이 사용 하 여 사각형을 스트로크 하려면:
+`PaintSurface` 의 처리기는 [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) 코드 숨김 파일을 호출 될 때마다는 `Slider` 값이 변경 합니다. 호출 `SKPathEffect.CreateDiscrete` 두를 사용 하 여 `Slider` 값 및이 사용 하 여 사각형을 스트로크 하려면:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1031,7 +1031,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-임의 이러한 차이 따라 채워진 영역의 윤곽선 인 경우에을 채우기 위한이 영향을 사용할 수 있습니다. **지터 텍스트** 페이지가 경로 효과 사용 하 여 텍스트를 표시 하는 방법을 보여 줍니다. 대부분의 코드는 `PaintSurface` 의 처리기는 [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) 클래스 되는 텍스트를 가운데 맞춤 및 크기 조정:
+임의 이러한 차이 따라 채워진 영역의 윤곽선 인 경우에을 채우기 위한이 영향을 사용할 수 있습니다. **지터 텍스트** 페이지가 경로 효과 사용 하 여 텍스트를 표시 하는 방법을 보여 줍니다. 대부분의 코드는 `PaintSurface` 의 처리기는 [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) 클래스 되는 텍스트를 가운데 맞춤 및 크기 조정:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 예를 들어 경우는 `src` 경로 간단한 원의 반지름 500, 및 `SKPaint` 100의 스트로크 너비를 지정 하는 개체는 다음 `dst` 경로 두 개의 동심원, 550 반지름이 인 450 및 다른 radius를 사용 됩니다. 메서드는 `GetFillPath` 이 채우기 때문에 `dst` 경로 따라 그려지는와 같은지는 `src` 경로입니다. 또한 스트로크 수 있지만 `dst` 경로 윤곽선 참조에 대 한 경로입니다.
 
-**경로 개요 탭** 이 보여 줍니다. `SKCanvasView` 및 `TapGestureRecognizer` 인스턴스화된는 [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) 파일입니다. [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) 코드 숨김 파일 3 개 정의 `SKPaint` 개체와 선 그리기에 대 한 두 개의 필드로 100 및 20 및 채우기에 대 한 제 3의 너비를 스트로크:
+**경로 개요 탭** 이 보여 줍니다. `SKCanvasView` 및 `TapGestureRecognizer` 인스턴스화된는 [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) 파일입니다. [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) 코드 숨김 파일 3 개 정의 `SKPaint` 개체와 선 그리기에 대 한 두 개의 필드로 100 및 20 및 채우기에 대 한 제 3의 너비를 스트로크:
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1239,7 +1239,7 @@ public static SKPathEffect CreateCompose (SKPathEffect outer, SKPathEffect inner
 
 [![](effects-images/catsinframe-small.png "프레임의 Cats 페이지의 삼중 스크린샷")](effects-images/catsinframe-large.png#lightbox "프레임의 Cats 페이지의 삼중 스크린샷")
 
-[ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) 클래스 여러 필드를 정의 하 여 시작 합니다. 첫 번째 필드를 인식할 수는 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 에서 클래스는 [ **SVG 경로 데이터** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 문서. 두 번째 경로 선과 호 프레임의 조개 패턴에 대 한 기반으로 합니다.
+[ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) 클래스 여러 필드를 정의 하 여 시작 합니다. 첫 번째 필드를 인식할 수는 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 에서 클래스는 [ **SVG 경로 데이터** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 문서. 두 번째 경로 선과 호 프레임의 조개 패턴에 대 한 기반으로 합니다.
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1353,7 +1353,7 @@ public class CatsInFramePage : ContentPage
 
 일반적으로 사용 하는 `SKPathEffect.CreateCompose` 일부 지터 다른 경로 효과를 추가 합니다. 직접 확실히 테스트할 수 있습니다 하지만 약간 다른 예제는 다음과 같습니다.
 
-**해치 파선** 파선 해치 줄이 포함 된 타원을 채웁니다. 작업의 대부분의 [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) 클래스를 수행 하는 필드 정의에서 바로 합니다. 이러한 필드는 대시 효과 해치 효과 정의합니다. 로 정의 된 `static` 후에서 참조 하기 때문에 `SKPathEffect.CreateCompose` 호출는 `SKPaint` 정의:
+**해치 파선** 파선 해치 줄이 포함 된 타원을 채웁니다. 작업의 대부분의 [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) 클래스를 수행 하는 필드 정의에서 바로 합니다. 이러한 필드는 대시 효과 해치 효과 정의합니다. 로 정의 된 `static` 후에서 참조 하기 때문에 `SKPathEffect.CreateCompose` 호출는 `SKPaint` 정의:
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage

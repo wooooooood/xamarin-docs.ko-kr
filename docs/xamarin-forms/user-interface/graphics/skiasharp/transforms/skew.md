@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c9f5f9f20296b1c2443a8addeebd4d12ccaa1ab4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-skew-transform"></a>시간차 변환
 
@@ -39,7 +39,7 @@ public void Skew (SKPoint skew)
 
 그러나 그럴 가능성은 있는지 사용할 것이 두 가지 방법 중 하나 분리에서 합니다.
 
-**실험 기울이기** – 10에서 10 사이의 범위에 값이 왜곡을 시도할 때 페이지 수 있습니다. 텍스트 문자열을 배치 하는 페이지의 왼쪽 위 모서리에 두 개에서 얻은 값을 시간차 `Slider` 요소입니다. 다음은 `PaintSurface` 의 처리기는 [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) 클래스:
+**실험 기울이기** – 10에서 10 사이의 범위에 값이 왜곡을 시도할 때 페이지 수 있습니다. 텍스트 문자열을 배치 하는 페이지의 왼쪽 위 모서리에 두 개에서 얻은 값을 시간차 `Slider` 요소입니다. 다음은 `PaintSurface` 의 처리기는 [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,7 +109,7 @@ y' ySkew · = (x-px) + y
 
 이 예에서 해당 각도의 탄젠트 100 픽셀 세로 150 픽셀 작업의 비율을은 56.3도입니다.
 
-XAML 파일은 **각도 실험 기울이기** 페이지는 비슷합니다는 **각도 왜곡 시킬** 점을 제외 하 고 페이지는 `Slider` 요소 –90에서 90도 사이입니다. [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 코드 숨김 파일 페이지에서 텍스트를 가운데 정렬 하 고 사용 하 여 `Translate` 페이지의 가운데에 기울이기의 중심을 설정할 수 있습니다. 짧은 `SkewDegrees` 메서드 코드 맨 아래에 각도를 기울입니다 값으로 변환 합니다.
+XAML 파일은 **각도 실험 기울이기** 페이지는 비슷합니다는 **각도 왜곡 시킬** 점을 제외 하 고 페이지는 `Slider` 요소 –90에서 90도 사이입니다. [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 코드 숨김 파일 페이지에서 텍스트를 가운데 정렬 하 고 사용 하 여 `Translate` 페이지의 가운데에 기울이기의 중심을 설정할 수 있습니다. 짧은 `SkewDegrees` 메서드 코드 맨 아래에 각도를 기울입니다 값으로 변환 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -154,7 +154,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 [![](skew-images/skewangleexperiment-small.png "각도 실험 기울이기 페이지의 삼중 스크린샷")](skew-images/skewangleexperiment-large.png#lightbox "각도 실험 기울이기 페이지의 삼중 스크린샷")
 
-작은 음수 수평 기울이기도 기울임꼴 또는 오블리크 텍스트를 모방 하면는 **오블리크 텍스트** 페이지를 보여 줍니다. [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) 클래스가 수행 하는 방법을 보여 줍니다.
+작은 음수 수평 기울이기도 기울임꼴 또는 오블리크 텍스트를 모방 하면는 **오블리크 텍스트** 페이지를 보여 줍니다. [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) 클래스가 수행 하는 방법을 보여 줍니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

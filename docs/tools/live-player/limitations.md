@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: 0068540ec385ab3be56865c7728eb3128154a2ea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43699e77bc8b7365c6d5f7fbf27e19a945e69e22
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="limitations"></a>제한 사항
 
@@ -51,7 +51,7 @@ Xamarin Player 라이브 아래 항목을 포함 하 여 실행할 수는 작업
 - 반사를 제한적으로 지원 (현재 영향을 줌 SQLite 및 Json.NET와 같은 일부 인기 있는 NuGets). 다른 NuGets 계속 지원할 수 있습니다.
 - 일부 시스템 클래스는 재정의할 수 없습니다 (예를 들어 서브 클래스를 구현할 수 없습니다).
 - 그러나 프로 비전 해야 하는 일부 플랫폼 기능 (구성 된 사진 갤러리 액세스과 같은 일반적인 작업에 대 한) Xamarin Player 라이브 앱에서 작동 하지 않습니다.
-- 사용자 지정 대상 및 빌드 단계는 무시 됩니다. 예를 들어 도구 Fody, Retit, AutoFac, 및 같은 AutoMapper 통합 될 수 없습니다.
+- 사용자 지정 대상 및 빌드 단계는 무시 됩니다. 예를 들어 Fody, Refit, AutoFac, 및 AutoMapper와 같은 도구를 통합 될 수 없습니다.
 - F # 프로젝트는 Android에서 지원 되지 않습니다 및 제한적으로 iOS에서 지원
 - 사용자 정의 제네릭 클래스와 인터페이스를 사용 하는 고급 시나리오를 지원할 수 있습니다.
 

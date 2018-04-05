@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 998c804f02eed808c0a1493b054e754a7670aa70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -31,7 +31,7 @@ _경로 대 한 정보를 가져오고 내용 열거_
 
 [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 클래스 수입니다. [생성자](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) 허용는 `SKPath` 인수 및 [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) 속성의 길이 보여 줍니다.
 
-이 확인할는 **경로 길이** 예제를 기반으로 하는 **베 지 어 곡선** 페이지. [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) 파일에서 파생 `InteractivePage` 터치 인터페이스를 포함 합니다.
+이 확인할는 **경로 길이** 예제를 기반으로 하는 **베 지 어 곡선** 페이지. [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) 파일에서 파생 `InteractivePage` 터치 인터페이스를 포함 합니다.
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -52,7 +52,7 @@ _경로 대 한 정보를 가져오고 내용 열거_
 </local:InteractivePage>
 ```
 
-[ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) 코드 숨김 파일을 사용 하면 끝점을 정의 하 고 있는 입방 형 3 차원 곡선의 제어점을 4 개의 터치 포인트를 이동할 수 있습니다. 세 필드는 텍스트 문자열을 정의 `SKPaint` 개체 및 텍스트의 너비를 계산된 합니다.
+[ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) 코드 숨김 파일을 사용 하면 끝점을 정의 하 고 있는 입방 형 3 차원 곡선의 제어점을 4 개의 터치 포인트를 이동할 수 있습니다. 세 필드는 텍스트 문자열을 정의 `SKPaint` 개체 및 텍스트의 너비를 계산된 합니다.
 
 ```csharp
 public partial class PathLengthPage : InteractivePage
@@ -242,7 +242,7 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 문제가 있는 동사 인데 `Close`합니다. 이 명령은 현재 위치에서 의해 이미 설정 된 윤곽선의 시작 부분에 직선을 그립니다는 `Move` 명령입니다. 이상적으로 `Close` 동사 한 지점 보다는이 두 지점을 제공 해야 합니다. 더욱 심각한 지점 함께 제공 되는 `Close` 동사는 항상 (0, 0). 즉, 경로 열거할 때 필요가 있다는 것 아마도 유지 하는 `Move` 지점과 현재 위치입니다.
 
-정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 일련의 작은 직선 곡선을 계산 하는 세 가지 종류의 베 지 어 곡선으로 변환 하는 여러 메서드가 포함 되어 있습니다. (파라메트릭 수식 문서에 제공 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) `Interpolate` 메서드 하나만 단위 길이에 있는 많은 짧은 줄에 직선을 나눕니다.
+정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 일련의 작은 직선 곡선을 계산 하는 세 가지 종류의 베 지 어 곡선으로 변환 하는 여러 메서드가 포함 되어 있습니다. (파라메트릭 수식 문서에 제공 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) `Interpolate` 메서드 하나만 단위 길이에 있는 많은 짧은 줄에 직선을 나눕니다.
 
 ```csharp
 static class PathExtensions
@@ -426,7 +426,7 @@ static class PathExtensions
 
 [![](information-images/globulartext-small.png "Globular 텍스트 페이지의 삼중 스크린샷")](information-images/globulartext-large.png#lightbox "Globular 텍스트 페이지의 삼중 스크린 샷")
 
-[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드: 
+[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드: 
 
 ```csharp
 public class GlobularTextPage : ContentPage

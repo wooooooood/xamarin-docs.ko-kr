@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 77005665d163e7f9f62325b94cc5c779a7873f78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c0b793a495278d91429045d7e396917d02c1412e
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="paths-and-text"></a>경로 및 텍스트
 
@@ -45,7 +45,7 @@ public SKPath GetTextPath (String text, Single x, Single y)
 
 [![](text-paths-images/clippingtext-small.png "클리핑 텍스트 페이지의 삼중 스크린샷")](text-paths-images/clippingtext-large.png#lightbox "클리핑 텍스트 페이지의 삼중 스크린 샷")
 
-[ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) 에 포함 리소스로 저장 되어 있는 비트맵을 로드 하는 클래스 생성자는 **미디어** 솔루션의 폴더:
+[ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) 에 포함 리소스로 저장 되어 있는 비트맵을 로드 하는 클래스 생성자는 **미디어** 솔루션의 폴더:
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -126,7 +126,7 @@ public class ClippingTextPage : ContentPage
 
 [![](text-paths-images/textpatheffect-small.png "경로 텍스트 효과 페이지의 삼중 스크린샷")](text-paths-images/textpatheffect-large.png#lightbox "텍스트 경로 효과 페이지의 삼중 스크린샷")
 
-작업의 많은 [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 클래스 필드와 생성자에 발생 합니다. 두 `SKPaint` 필드는 두 개의 서로 다른 용도로 사용 되 고 정의 된 개체: 첫 번째 (라는 `textPathPaint`)와 앰퍼샌드를 변환 하는 데 사용 되는 `TextSize` 1d 경로 효과 대 한 경로로 50입니다. 두 번째 (`textPaint`)는 해당 경로 영향을 주지 않고 앰퍼샌드의 더 큰 버전을 표시 하는 데 사용 됩니다. 이런 이유로 `Style` 이 두 번째 페인트 개체가으로 설정 되 `Stroke`, 하지만 `StrokeWidth` 1d 경로 효과 사용 하는 경우 해당 속성은 필요 하기 때문에 속성이 설정 되지 않은:
+작업의 많은 [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 클래스 필드와 생성자에 발생 합니다. 두 `SKPaint` 필드는 두 개의 서로 다른 용도로 사용 되 고 정의 된 개체: 첫 번째 (라는 `textPathPaint`)와 앰퍼샌드를 변환 하는 데 사용 되는 `TextSize` 1d 경로 효과 대 한 경로로 50입니다. 두 번째 (`textPaint`)는 해당 경로 영향을 주지 않고 앰퍼샌드의 더 큰 버전을 표시 하는 데 사용 됩니다. 이런 이유로 `Style` 이 두 번째 페인트 개체가으로 설정 되 `Stroke`, 하지만 `StrokeWidth` 1d 경로 효과 사용 하는 경우 해당 속성은 필요 하기 때문에 속성이 설정 되지 않은:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -213,7 +213,7 @@ public class TextPathEffectPage : ContentPage
 
 호출할 수도 있습니다 `GetFillPath` 에서 반환 된 경로에 `GetTextPath` 되지만 처음에 있습니다 아닐 완전히 있는지 하 모양을 있을 것입니다.
 
-**문자 개요 윤곽선** 페이지에는 기술을 보여 줍니다. 에 모든 관련 코드는 `PaintSurface` 의 처리기는 [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) 클래스.
+**문자 개요 윤곽선** 페이지에는 기술을 보여 줍니다. 에 모든 관련 코드는 `PaintSurface` 의 처리기는 [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) 클래스.
 
 생성자는 먼저 만듭니다는 `SKPaint` 라는 개체 `textPaint` 와 `TextSize` 속성 페이지의 크기에 따라 합니다. 이 사용 하 여 경로로 변환 되는 `GetTextPath` 메서드. 좌표에 대 한 인수 `GetTextPath` 효과적으로 가운데 맞춤 화면에서 경로:
 
@@ -287,7 +287,7 @@ public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOf
 
 이 메서드는 설정에 지침을 제공 하는 기능이 없는 `TextSize` 속성의 `SKPaint` 끝에는 경로의 시작 부분에서 실행 되도록 완벽 하 게 크기의 텍스트입니다. 경우에 따라 텍스트 크기에 직접 알아낼 수 있습니다. 다른 시간 해야 경로 측정 함수를 사용 하 여 향후 기사에서 이해 해야 합니다.
 
-**순환 텍스트** 프로그램 원 주위 텍스트를 배치 합니다. 정확 하 게 맞게 텍스트 크기를 조정 쉽게 원의 원주를 결정 하는 것이 쉽습니다. `PaintSurface` 의 처리기는 [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) 클래스는 페이지의 크기에 따라 원의 반지름을 계산 합니다. 해당 원의 되 `circularPath`:
+**순환 텍스트** 프로그램 원 주위 텍스트를 배치 합니다. 정확 하 게 맞게 텍스트 크기를 조정 쉽게 원의 원주를 결정 하는 것이 쉽습니다. `PaintSurface` 의 처리기는 [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) 클래스는 페이지의 크기에 따라 원의 반지름을 계산 합니다. 해당 원의 되 `circularPath`:
 
 ```csharp
 public class CircularTextPage : ContentPage

@@ -7,11 +7,11 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a6a1787b6bdb54f66aa5214bdd9193af354cebb1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d602a03d7ac5943e45fd502981b39aefc4e8bc06
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 그리기 기본 사항
 
@@ -19,7 +19,7 @@ _SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보기_
 
 Xamarin.Forms 응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 SkiaSharp 그래픽을 사용 하 여 시작할 수 있습니다. [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 솔루션 SkiaSharp 점차적으로 더 많은 고급 단원에서 프로그래밍 기법을 보여 주는 여러 페이지에 포함 됩니다.
 
-이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **SkiaSharp 기본 사항** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 및는 [ **기본 사항** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램 머리글 아래에 나타나고 **SkiaSharp 기본 사항** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 및는 [ **기본 사항** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) 솔루션의 폴더입니다.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[단순 원 그리기](circle.md)
 

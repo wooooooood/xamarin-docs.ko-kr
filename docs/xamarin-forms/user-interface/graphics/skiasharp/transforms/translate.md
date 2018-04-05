@@ -7,11 +7,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 573848186a8f389ac18e22ea4c3b7d4fe1503449
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98bf81df3eed951893c6bb717d933cfb61e029d3
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-translate-transform"></a>이동 변환
 
@@ -35,7 +35,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-**번역 누적** 의 페이지는 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 예제를 여러 번 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 되어 증가 합니다. [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 같은 사각형의 20 버전을 표시 하는 클래스, 각 오프셋 이전 사각형에서 데 필요한 만큼만 대각선 따라 스트레치은 하도록 합니다. 다음은 `PaintSurface` 이벤트 처리기.
+**번역 누적** 의 페이지는 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 예제를 여러 번 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 되어 증가 합니다. [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 같은 사각형의 20 버전을 표시 하는 클래스, 각 오프셋 이전 사각형에서 데 필요한 만큼만 대각선 따라 스트레치은 하도록 합니다. 다음은 `PaintSurface` 이벤트 처리기.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -78,7 +78,7 @@ y' y + dy =
 
 이 라고는 *수식 변환* 번역에 대 한 합니다. 기본값 `dx` 및 `dy` 새 `SKCanvas` 는 0입니다.
 
-일반적으로 기호로 이동 변환을 그림자 효과 유사한 방법을 사용 하는 **텍스트 효과 번역** 페이지를 보여 줍니다. 다음의 관련 부분을은 `PaintSurface` 의 처리기는 [ `TranslateTextEffectsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs) 클래스:
+일반적으로 기호로 이동 변환을 그림자 효과 유사한 방법을 사용 하는 **텍스트 효과 번역** 페이지를 보여 줍니다. 다음의 관련 부분을은 `PaintSurface` 의 처리기는 [ `TranslateTextEffectsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs) 클래스:
 
 ```csharp
 float textSize = 150;
@@ -137,7 +137,7 @@ using (SKPaint textPaint = new SKPaint())
 
 그러나 한 번의 호출의에서 통해 수행 하는 변환에 대 한 중요 하지 않은 `PaintSurface` 다음 처리기입니다. 호출할 때마다 새 `PaintSurface` 새 배달 `SKCanvas` 기본 변환 사용 하 여 개체입니다.
 
-또 다른 일반적인 용도 `Translate` 시각적 개체를 렌더링 하는 원래 만든는 그리기에 편리 하 게 하는 좌표를 사용 하 여 변환입니다. 예를 들어 다음 지점 (0, 0)에 센터와 아날로그 시계의 좌표를 지정 하는 것이 좋습니다. 사용할 수 있습니다 다음 변환 하 여 표시할 원하는 위치. 이 확인할는 [**Hendecagram 배열**] 페이지. [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) 클래스를 만들어 시작 프로그램 `SKPath` 11 점이 별에 대 한 개체입니다. `HendecagramPath` 개체 이루어집니다 public, static, 및 읽기 전용으로 다른 데모 프로그램에서 액세스할 수 있도록 합니다. 정적 생성자에는 것이 만들어집니다.
+또 다른 일반적인 용도 `Translate` 시각적 개체를 렌더링 하는 원래 만든는 그리기에 편리 하 게 하는 좌표를 사용 하 여 변환입니다. 예를 들어 다음 지점 (0, 0)에 센터와 아날로그 시계의 좌표를 지정 하는 것이 좋습니다. 사용할 수 있습니다 다음 변환 하 여 표시할 원하는 위치. 이 확인할는 [**Hendecagram 배열**] 페이지. [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) 클래스를 만들어 시작 프로그램 `SKPath` 11 점이 별에 대 한 개체입니다. `HendecagramPath` 개체 이루어집니다 public, static, 및 읽기 전용으로 다른 데모 프로그램에서 액세스할 수 있도록 합니다. 정적 생성자에는 것이 만들어집니다.
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -211,7 +211,7 @@ public class HendecagramArrayPage : ContentPage
 
 [![](translate-images/hendecagramarray-small.png "Hendecagram 배열 페이지의 삼중 스크린샷")](translate-images/hendecagramarray-large.png#lightbox "Hendecagram 배열 페이지의 삼중 스크린샷")
 
-애니메이션에 변환을 포함 되는 경우도 있습니다. **Hendecagram 애니메이션** 페이지 원 안에 11 점이 개인 별을 이동 합니다. [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) 클래스 일부 필드부터 시작 하 고의 재정의 `OnAppearing` 및 `OnDisappearing` 시작 하 고 Xamarin.Forms 타이머를 중지 하는 메서드:
+애니메이션에 변환을 포함 되는 경우도 있습니다. **Hendecagram 애니메이션** 페이지 원 안에 11 점이 개인 별을 이동 합니다. [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) 클래스 일부 필드부터 시작 하 고의 재정의 `OnAppearing` 및 `OnDisappearing` 시작 하 고 Xamarin.Forms 타이머를 중지 하는 메서드:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage

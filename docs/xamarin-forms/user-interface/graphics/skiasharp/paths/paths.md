@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-basics"></a>경로 기본 사항
 
@@ -50,7 +50,7 @@ _연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐�
 
 윤곽선 다른 호출으로 끝나는 `MoveTo` 또는 `RMoveTo`, 호출이 나 새 윤곽선 시작 `Close`, 윤곽 닫습니다는 합니다. `Close` 메서드 자동으로 추가 하 고 첫 번째는 곡선의 현재 위치에서 직선 하 고 닫힌 것으로 경로 표시 즉, 모든 스트로크 단면 없이 렌더링 되도록 합니다.
 
-열려 있는 트랜잭션과 닫혀 윤곽선 간의 차이를 보여 줍니다는 **두 개의 삼각형 윤곽선** 페이지를 사용 하는 `SKPath` 두 개의 삼각형을 렌더링 하는 두 개의 윤곽선 인 개체입니다. 첫 번째 윤곽선 열려 있고 두 번째 닫힙니다. 다음은 [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) 클래스:
+열려 있는 트랜잭션과 닫혀 윤곽선 간의 차이를 보여 줍니다는 **두 개의 삼각형 윤곽선** 페이지를 사용 하는 `SKPath` 두 개의 삼각형을 렌더링 하는 두 개의 윤곽선 인 개체입니다. 첫 번째 윤곽선 열려 있고 두 번째 닫힙니다. 다음은 [ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -122,7 +122,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) 둥근된 조인에 대 한
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) 되었다고 해 오프 조인에 대 한
 
-**획 조인** 페이지와 유사한 코드를 있는 조인은 이러한 세 개의 선을 표시는 **스트로크 단면** 페이지. 이는 `PaintSurface` 의 이벤트 처리기는 [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) 클래스:
+**획 조인** 페이지와 유사한 코드를 있는 조인은 이러한 세 개의 선을 표시는 **스트로크 단면** 페이지. 이는 `PaintSurface` 의 이벤트 처리기는 [ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

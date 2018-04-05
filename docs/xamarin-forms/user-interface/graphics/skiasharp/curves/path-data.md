@@ -7,11 +7,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 7ea99612f85a853bcd045b773df0a01f33427a89
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="svg-path-data"></a>SVG 경로 데이터입니다.
 
@@ -147,7 +147,7 @@ SVG 경로 데이터 정의의 범위입니다. 반복 되는 명령 그룹 또�
 
 [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) 메서드는 기존에서 SVG 경로 데이터를 가져오기 하는 데 편리 `SKPath` 개체를 다른 프로그램으로 전송 또는 XML과 같은 텍스트 기반 파일 형식으로 저장 합니다. (의 `ToSvgPathData` 이 문서에 대 한 샘플 코드에서 메서드를 설명 하지 않음.) 수행 *하지* 예상 `ToSvgPathData` 경로 생성 하는 메서드 호출에 정확 하 게 해당 문자열을 반환 합니다. 특히, 배워 호 배수 값으로 변환 됩니다 `QuadTo` 명령에서 반환 된 경로 데이터에 표시 되는 방식 즉 `ToSvgPathData`합니다.
 
-**경로 데이터 Hello** 페이지 마법 해당 단어 "HELLO" SVG 경로 데이터를 사용 하 여 합니다. 둘 다는 `SKPath` 및 `SKPaint` 개체의 필드로 정의 되는 [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) 클래스:
+**경로 데이터 Hello** 페이지 마법 해당 단어 "HELLO" SVG 경로 데이터를 사용 하 여 합니다. 둘 다는 `SKPath` 및 `SKPaint` 개체의 필드로 정의 되는 [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) 클래스:
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -218,7 +218,7 @@ public class PathDataHelloPage : ContentPage
 
 [![](path-data-images/pathdatahello-small.png "경로 데이터 Hello 페이지의 삼중 스크린샷")](path-data-images/pathdatahello-large.png#lightbox "경로 데이터 Hello 페이지의 삼중 스크린 샷")
 
-**경로 데이터 Cat** 페이지는와 유사 합니다. 경로 및 그리기 개체 모두에 필드로 정의 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 클래스:
+**경로 데이터 Cat** 페이지는와 유사 합니다. 경로 및 그리기 개체 모두에 필드로 정의 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 클래스:
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -291,7 +291,7 @@ public class PathDataCatPage : ContentPage
 
 일반적으로, 한 `SKPath` 개체 필드로 정의 되 면 경로의 윤곽선 생성자 나 다른 방법에 정의 되어야 합니다. 그러나 SVG 경로 데이터를 사용할 때 살펴보았습니다 필드 정의에 전체 경로 지정할 수 있습니다.
 
-이전 **까다로운 아날로그 클록** 샘플는 [ **The 회전 변환** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) 문서 단순 선으로 시계 바늘을 표시 합니다. **아날로그 클록 꽤** 아래 프로그램 대체 된 이러한 줄 `SKPath` 에 필드로 정의 된 개체는 [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) 클래스와 함께 `SKPaint` 개체:
+이전 **까다로운 아날로그 클록** 샘플는 [ **The 회전 변환** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) 문서 단순 선으로 시계 바늘을 표시 합니다. **아날로그 클록 꽤** 아래 프로그램 대체 된 이러한 줄 `SKPath` 에 필드로 정의 된 개체는 [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) 클래스와 함께 `SKPaint` 개체:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
