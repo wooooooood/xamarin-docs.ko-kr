@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 274c8e9a79fa3fadff14f1174d86aad04d902b05
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dots-and-dashes"></a>점, 대시
 
@@ -29,7 +29,7 @@ SkiaSharp에서는 실선은 아니라 점과 대시의으로 구성 되며, 대
 
 그러나는 `StrokeCap` 설정인는 `SKPaint` 개체도 영향을 줍니다 이러한 점과 대시 합니다. 곧, 알게이 배열의 요소에 영향을 미칩니다입니다.
 
-점 표기법에 따른 및 파선에서 보여지는 **점선 및 대시** 페이지. [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) 파일 두 개를 인스턴스화하고 `Picker` 획 cap 및 dash 배열을 선택 하 고 두 번째 선택할 수에 대 한 뷰:
+점 표기법에 따른 및 파선에서 보여지는 **점선 및 대시** 페이지. [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) 파일 두 개를 인스턴스화하고 `Picker` 획 cap 및 dash 배열을 선택 하 고 두 번째 선택할 수에 대 한 뷰:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -92,7 +92,7 @@ SkiaSharp에서는 실선은 아니라 점과 대시의으로 구성 되며, 대
 
 처음 세 항목은 `dashArrayPicker` 스트로크 너비 10 픽셀 것으로 가정 합니다. {10, 10} 배열이 점선에 대 한 {30, 10}가 파선 및 {10, 10, 30, 10}에 대 한 점 파선입니다. (다른 3 개가 살펴봅니다 곧.)
 
-[ `DotsAndDashesPage` 코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) 포함는 `PaintSurface` 이벤트 처리기 및 몇 가지에 액세스 하기 위한 도우미 루틴의 `Picker` 보기:
+[ `DotsAndDashesPage` 코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) 포함는 `PaintSurface` 이벤트 처리기 및 몇 가지에 액세스 하기 위한 도우미 루틴의 `Picker` 보기:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -168,7 +168,7 @@ Android 화면 점선 {10, 10} 배열을 사용 하 여 표시 되는 또한 하
 
 지금까지 언급 되지 이루어졌을 두 번째 매개 변수는 `SKPathEffect.CreateDash` 메서드. 이 매개 변수 이름이 `phase` 하는 줄의 시작 부분에 대 한 점 대시 패턴 내의 오프셋을 지칭 합니다. 예를 들어, 대시 배열이 {10, 10} 및 `phase` 은 10이 고 다음 줄 점 대신 간격으로 시작 합니다.
 
-한 가지 흥미로운 적용은 `phase` 매개 변수는 애니메이션에서 합니다. **애니메이션 나선** 페이지는 비슷합니다는 **Archimedean 나선** 점을 제외 하 고 페이지는 [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) 클래스 애니메이션 효과 적용는 `phase` 매개 변수입니다. 페이지에는 애니메이션에 또 다른 방법을 보여 줍니다. 이전 예는 [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) 사용 되는 `Task.Delay` 애니메이션을 제어 하는 메서드. 이 예에서는 대신 Xamarin.Forms는 `Device.Timer` 메서드:
+한 가지 흥미로운 적용은 `phase` 매개 변수는 애니메이션에서 합니다. **애니메이션 나선** 페이지는 비슷합니다는 **Archimedean 나선** 점을 제외 하 고 페이지는 [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) 클래스 애니메이션 효과 적용는 `phase` 매개 변수입니다. 페이지에는 애니메이션에 또 다른 방법을 보여 줍니다. 이전 예는 [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) 사용 되는 `Task.Delay` 애니메이션을 제어 하는 메서드. 이 예에서는 대신 Xamarin.Forms는 `Device.Timer` 메서드:
 
 
 ```csharp

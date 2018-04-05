@@ -7,11 +7,11 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: b86068c2ed5063c25f76e81fdf477550b1437984
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="bitmap-basics"></a>비트맵 기본 사항
 
@@ -29,7 +29,7 @@ SkiaSharp 비트맵은 형식의 개체로 [ `SKBitmap` ](https://developer.xama
 - 실행 파일에 포함 된 리소스에서
 - 사용자의 사진 라이브러리에서
 
-세 가지 `SKBitmap` 에 필드로 정의 된 다음 세 가지 원본에 대 한 개체는 [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) 클래스:
+세 가지 `SKBitmap` 에 필드로 정의 된 다음 세 가지 원본에 대 한 개체는 [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) 클래스:
 
 ```csharp
 public class BasicBitmapsPage : ContentPage

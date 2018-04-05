@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 668b1f437b78535bd4cdf3bb3f80154dbf281a02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 다음 세 가지 방법
 
@@ -73,7 +73,7 @@ path.ArcTo (oval, startAngle, sweepAngle, false);
 
 이 버전의 `ArcTo` 호의 시작 부분에 현재 위치에서 하는 선을 그립니다. 즉, 더 큰 윤곽선 가운데에 호 어딘가에 수 있습니다.
 
-**각도 호** 페이지에서는 두 개의 슬라이더를 사용 하 여 시작이 지정 스윕 각도를 수 있습니다. XAML 파일이 두 개를 인스턴스화하고 `Slider` 요소 및 `SKCanvasView`합니다. `PaintCanvas` 의 처리기는 [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) 파일 타원과 두 개를 사용 하 여 호를 그립니다 `SKPaint` 필드로 정의 된 개체:
+**각도 호** 페이지에서는 두 개의 슬라이더를 사용 하 여 시작이 지정 스윕 각도를 수 있습니다. XAML 파일이 두 개를 인스턴스화하고 `Slider` 요소 및 `SKCanvasView`합니다. `PaintCanvas` 의 처리기는 [ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs) 파일 타원과 두 개를 사용 하 여 호를 그립니다 `SKPaint` 필드로 정의 된 개체:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -110,7 +110,7 @@ y = 타원입니다. MidY + (타원형 합니다. 높이 / 2) * sin(angle)
 
 `angle` 값 `startAngle` 또는 `startAngle + sweepAngle`합니다.
 
-호를 정의 하는 두 개의 각도의 사용은 그리기, 예를 들어, 원형 차트 만들기를 원하는 호의 각도 길이 알고 있는 경우에 가장 적합 합니다. **쪼개진 원형 차트** 이 페이지를 보여 줍니다. [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) 클래스는 내부 클래스를 사용 하 여 일부 맞추어진된 데이터 및 색을 정의 합니다.
+호를 정의 하는 두 개의 각도의 사용은 그리기, 예를 들어, 원형 차트 만들기를 원하는 호의 각도 길이 알고 있는 경우에 가장 적합 합니다. **쪼개진 원형 차트** 이 페이지를 보여 줍니다. [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs) 클래스는 내부 클래스를 사용 하 여 일부 맞추어진된 데이터 및 색을 정의 합니다.
 
 ```csharp
 class ChartData
@@ -259,7 +259,7 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 
 두 번째 탄젠트 점에서 윤곽을 계속할 수 있습니다.
 
-**탄젠트 호** 페이지에서는 탄젠트 호 실험할 수 있습니다. 파생 되는 여러 페이지의 첫 번째 [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/InteractivePage.cs), 유용한 몇 가지를 정의 하는 `SKPaint` 개체 하 고 수행 `TouchPoint` 처리:
+**탄젠트 호** 페이지에서는 탄젠트 호 실험할 수 있습니다. 파생 되는 여러 페이지의 첫 번째 [ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs), 유용한 몇 가지를 정의 하는 `SKPaint` 개체 하 고 수행 `TouchPoint` 처리:
 
 ```csharp
 public class InteractivePage : ContentPage
@@ -309,7 +309,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-`TangentArcPage` 클래스는 `InteractivePage`에서 파생됩니다. 생성자는 [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) 파일 인스턴스화 및 초기화에 대 한 책임은 `touchPoints` 배열과 설정 `baseCanvasView` (에서 `InteractivePage`)에 `SKCanvasView` 에서 개체를 인스턴스화할는 [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) 파일:
+`TangentArcPage` 클래스는 `InteractivePage`에서 파생됩니다. 생성자는 [ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs) 파일 인스턴스화 및 초기화에 대 한 책임은 `touchPoints` 배열과 설정 `baseCanvasView` (에서 `InteractivePage`)에 `SKCanvasView` 에서 개체를 인스턴스화할는 [ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml) 파일:
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -419,7 +419,7 @@ Windows Mobile 장치에서 세 점 모두가 거의 동일 선상의 및 호 �
 
 탄젠트 호는 둥근된 사각형 같은 둥근된 모서리를 만드는 데 적합 합니다. 때문에 `SKPath` 이미 포함 되어는 `AddRoundedRect` 메서드를는 **반올림 Heptagon** 페이지를 사용 하는 방법을 보여 줍니다 `ArcTo` 7 면 다각형의 모서리를 반올림 합니다. (코드는 모든 일반 다각형에 대 한 범용 화) 합니다.
 
-`PaintSurface` 의 처리기는 [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) 클래스를 포함 하나 `for` heptagon, 및이 항목에서 7 개의 변의 중간점을 계산 하는 두 번째 7 정점을 계산 하는 루프 꼭지점입니다. 이러한 중간점은 다음 경로 생성 하는 데 사용 됩니다.
+`PaintSurface` 의 처리기는 [ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs) 클래스를 포함 하나 `for` heptagon, 및이 항목에서 7 개의 변의 중간점을 계산 하는 두 번째 7 정점을 계산 하는 루프 꼭지점입니다. 이러한 중간점은 다음 경로 생성 하는 데 사용 됩니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -543,7 +543,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 호를 정의 합니다.이 방법은 처음에 복잡 한 말 있지만 회전 된 타원으로 호를 정의할 수 있습니다 하는 유일한 방법은 되며 것이 가장 쉬운 방법으로 호 윤곽선의 다른 부분과 통합 해야 하는 경우.
 
-**타원형 호** 페이지를 사용 하면 대화형으로 두 개의 점을 크기, 타원의 회전을 설정할 수 있습니다. `EllipticalArcPage` 클래스에서 파생 됩니다 `InteractivePage`, 및 `PaintSurface` 의 처리기는 [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) 코드 숨김 파일 4 개 호를 그립니다.
+**타원형 호** 페이지를 사용 하면 대화형으로 두 개의 점을 크기, 타원의 회전을 설정할 수 있습니다. `EllipticalArcPage` 클래스에서 파생 됩니다 `InteractivePage`, 및 `PaintSurface` 의 처리기는 [ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs) 코드 숨김 파일 4 개 호를 그립니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -613,7 +613,7 @@ y = 112·sin(41.8) = 75
 
 ![](arcs-images/infinitycoordinates.png "탄젠트 선 좌표가와 두 개의 원")
 
-`PaintSurface` 처리기에는 [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) 클래스 무한대 기호를 배치 하는 (0, 0) 지점 페이지의 가운데에 배치 하 고 화면 크기에 대 한 경로 조정:
+`PaintSurface` 처리기에는 [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) 클래스 무한대 기호를 배치 하는 (0, 0) 지점 페이지의 가운데에 배치 하 고 화면 크기에 대 한 경로 조정:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
