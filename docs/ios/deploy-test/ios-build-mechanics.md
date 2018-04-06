@@ -1,18 +1,17 @@
 ---
-title: "iOS 빌드 메커니즘"
-description: "이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른 빌드를 위해 모든 빌드 구성에 사용 가능한 메서드를 사용하는 방법을 설명합니다."
-ms.topic: article
+title: iOS 빌드 메커니즘
+description: 이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른 빌드를 위해 모든 빌드 구성에 사용 가능한 메서드를 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 

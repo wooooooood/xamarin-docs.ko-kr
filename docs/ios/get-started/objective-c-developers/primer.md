@@ -1,17 +1,16 @@
 ---
-title: "Objective-C 개발자용 C# 입문서"
-description: "Xamarin.iOS를 사용하면 C#에서 작성된 플랫폼 제약 없는 코드를 플랫폼 간에 공유할 수 있습니다. 그러나 기존 iOS 응용 프로그램은 이미 만들어진 Objective-C 코드를 활용하려 할 수 있습니다. 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다."
-ms.topic: article
+title: Objective-C 개발자용 C# 입문서
+description: Xamarin.iOS를 사용하면 C#에서 작성된 플랫폼 제약 없는 코드를 플랫폼 간에 공유할 수 있습니다. 그러나 기존 iOS 응용 프로그램은 이미 만들어진 Objective-C 코드를 활용하려 할 수 있습니다. 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다.
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfc91ba92b2ed62e61d7ba99dec03784933295bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 717e131dd4025ea07780f6e52d8171fd15272dac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Objective-C 개발자용 C# 입문서
 

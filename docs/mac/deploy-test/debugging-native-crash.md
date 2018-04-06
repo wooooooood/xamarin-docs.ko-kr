@@ -1,18 +1,17 @@
 ---
-title: "네이티브 크래시 디버깅"
-description: "이 가이드에서는 Objective-C 런타임에서 발생하는 예외를 디버그하는 방법을 설명합니다."
-ms.topic: article
+title: 네이티브 크래시 디버깅
+description: 이 가이드에서는 Objective-C 런타임에서 발생하는 예외를 디버그하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: d8633a3f575b51d4eeac326cc5ea418fcbf5bd20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f85c32fae3ed947e01890916e0a646981a51b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debugging-a-native-crash"></a>네이티브 크래시 디버깅
 
@@ -183,7 +182,7 @@ new System.Threading.Thread (() =>
 
 그 다음 단계는 향후 릴리스에서 바인딩을 수정할 수 있도록 Xamarin에 문제를 보고하는 것입니다. 비즈니스 또는 엔터프라이즈 라이선스 소유자인 경우 
 
-[http://xamarin.com/support](http://xamarin.com/support)에서 티켓을 엽니다.
+[http://xamarin.com/support](http://xamarin.com/support)
 
 그렇지 않으면 다음 단계에 따라 기존 문제를 검색합니다.
 

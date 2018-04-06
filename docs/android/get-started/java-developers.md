@@ -1,18 +1,17 @@
 ---
-title: "Java 개발자를 위한 Xamarin"
-description: "Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다."
-ms.topic: article
+title: Java 개발자를 위한 Xamarin
+description: Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 

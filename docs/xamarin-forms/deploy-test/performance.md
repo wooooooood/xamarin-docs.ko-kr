@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Forms 성능"
-description: "Xamarin.Forms 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다."
-ms.topic: article
+title: Xamarin.Forms 성능
+description: Xamarin.Forms 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: a750167cb9e6bde3a4a9abe11c5386497f9a12ae
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5cc35dde80e4a0c28315589f4db127a922ba5a41
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 성능
 

@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.iOS 성능"
-description: "Xamarin.iOS로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다."
-ms.topic: article
+title: Xamarin.iOS 성능
+description: Xamarin.iOS로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: 79dbf9001572662e66e7af635ab91c4adf7483d5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3fc6263aa99edb94ae69f1ce8f87835043477392
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 

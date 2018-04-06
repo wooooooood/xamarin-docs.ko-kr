@@ -1,18 +1,17 @@
 ---
-title: "연습 - Apple의 계측 도구 사용"
-description: "이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드된 iOS 응용 프로그램의 메모리 문제를 진단하는 방법을 설명합니다. 계측을 시작하고, 힙 스냅숏을 만들고, 메모리 증가를 분석하는 방법을 보여 줍니다. 또한 계측을 사용하여 메모리 문제가 발생하는 정확한 코드 줄을 표시하여 찾아내는 방법을 보여 줍니다."
-ms.topic: article
+title: 연습 - Apple의 계측 도구 사용
+description: 이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드된 iOS 응용 프로그램의 메모리 문제를 진단하는 방법을 설명합니다. 계측을 시작하고, 힙 스냅숏을 만들고, 메모리 증가를 분석하는 방법을 보여 줍니다. 또한 계측을 사용하여 메모리 문제가 발생하는 정확한 코드 줄을 표시하여 찾아내는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 949a2ea4d5838b664e19251e69a32efccc98d496
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0142cf90fbe7eff5beacf58897d5b3672f6ff55b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 

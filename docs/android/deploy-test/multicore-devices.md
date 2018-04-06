@@ -1,18 +1,17 @@
 ---
-title: "다중 코어 장치 및 Xamarin.Android"
-description: "Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습니다. 이 문서에서는 Xamarin.Android 응용 프로그램에 대해 사용할 수 있는 여러 CPU 아키텍처에 설명합니다. 이 문서에서는 또한 여러 CPU 아키텍처를 지원하도록 Android 응용 프로그램을 패키징하는 방법도 설명합니다. ABI(응용 프로그램 이진 인터페이스)를 소개하고, Xamarin.Android 응용 프로그램에서 사용할 ABI에 대한 지침을 제공합니다."
-ms.topic: article
+title: 다중 코어 장치 및 Xamarin.Android
+description: Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습니다. 이 문서에서는 Xamarin.Android 응용 프로그램에 대해 사용할 수 있는 여러 CPU 아키텍처에 설명합니다. 이 문서에서는 또한 여러 CPU 아키텍처를 지원하도록 Android 응용 프로그램을 패키징하는 방법도 설명합니다. ABI(응용 프로그램 이진 인터페이스)를 소개하고, Xamarin.Android 응용 프로그램에서 사용할 ABI에 대한 지침을 제공합니다.
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ac525805fce99f44ea1efb132fb99f6d3a01f2f3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0288ba6aa8a3c9eb89208161f60ba831723444c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 장치 및 Xamarin.Android
 

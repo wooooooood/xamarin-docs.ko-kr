@@ -1,18 +1,17 @@
 ---
-title: "개발자 ID로 서명"
-description: "이 가이드에서는 게시할 Xamarin.Mac 앱을 개발자 ID로 서명하는 방법을 안내합니다."
-ms.topic: article
+title: 개발자 ID로 서명
+description: 이 가이드에서는 게시할 Xamarin.Mac 앱을 개발자 ID로 서명하는 방법을 안내합니다.
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 46d5527a33b82a795029f62900e782d644671f0d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sign-with-developer-id"></a>개발자 ID로 서명
 

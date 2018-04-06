@@ -1,18 +1,17 @@
 ---
-title: "Visual Studio용 Xamarin.iOS 소개"
-description: "이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 응용 프로그램을 빌드하고 테스트하는 방법을 보여줍니다. Visual Studio를 사용하여 새 iOS 프로젝트를 만들고, iOS 응용 프로그램을 빌드하고, Apple의 컴파일러 및 시뮬레이터를 호스트하도록 네트워크에 연결된 Mac과 Xamarin 빌드 도구 체인을 사용하여 응용 프로그램을 컴파일, 테스트, 디버그하는 방법을 설명합니다."
-ms.topic: article
+title: Visual Studio용 Xamarin.iOS 소개
+description: 이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 응용 프로그램을 빌드하고 테스트하는 방법을 보여줍니다. Visual Studio를 사용하여 새 iOS 프로젝트를 만들고, iOS 응용 프로그램을 빌드하고, Apple의 컴파일러 및 시뮬레이터를 호스트하도록 네트워크에 연결된 Mac과 Xamarin 빌드 도구 체인을 사용하여 응용 프로그램을 컴파일, 테스트, 디버그하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e958b4e48767e0c2246b9f237c681fbc362f6b00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
 

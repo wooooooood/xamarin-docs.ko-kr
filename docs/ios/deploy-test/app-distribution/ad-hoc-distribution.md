@@ -1,18 +1,17 @@
 ---
 title: 임시 배포
 description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9b862a39d8fb8fe079b83b8842281fad5ec903e4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ad-hoc-distribution"></a>임시 배포
 

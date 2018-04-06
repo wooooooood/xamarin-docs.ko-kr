@@ -7,11 +7,11 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 67c4330d8e446a407dec7792fe5f40cdd9d23c22
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3ebe153ead2bb62b19ad6b25bf0093e20bf15c04
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms를 사용한 통합
 
@@ -22,9 +22,9 @@ SkiaSharp 그래픽 여러 가지 방법으로 Xamarin.Forms의 나머지와 통
 ![](integration-images/integrationexample.png "슬라이더와 색을 선택 하면")
 
 Xamarin.Forms에 대화형 SkiaSharp 그래픽 만들기를 다른 하나는 터치 합니다.
-두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 단순 원을 두 가지 방법으로 그릴 &mdash; 채우기 없이 및 채우기가 적용 된 &mdash; 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
+두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램은 조직이 권한을 부여 받은 **토글 채우기 탭**합니다. 단순 원을 두 가지 방법으로 그릴 &mdash; 채우기 없이 및 채우기가 적용 된 &mdash; 탭으로 전환 합니다. [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스는 사용자 입력에 대 한 응답으로 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
 
-이 페이지에 대 한는 `SKCanvasView` 클래스 인스턴스화되고는 [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 또한 Xamarin.Forms는 설정 된 파일을 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 보기:
+이 페이지에 대 한는 `SKCanvasView` 클래스 인스턴스화되고는 [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 또한 Xamarin.Forms는 설정 된 파일을 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 보기:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -99,7 +99,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 두 경우 모두는 `h` 인수 범위는 0에서 360 사이입니다. `s`, `l`, 및 `v` 인수 0에서 100 사이입니다. `a` (알파 또는 불투명도) 인수 범위는 0에서 255입니다.
 
-[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일에서는 두 개의 `SKCanvasView` 개체에 `StackLayout` 나란히 있는 `Slider` 및 `Label` HSL을 선택 하는 데 사용할 수 있는 보기 및 HSV 색상 값:
+[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일에서는 두 개의 `SKCanvasView` 개체에 `StackLayout` 나란히 있는 `Slider` 및 `Label` HSL을 선택 하는 데 사용할 수 있는 보기 및 HSV 색상 값:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -181,7 +181,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 두 `SKCanvasView` 단일 셀에 있는 요소가 `Grid` 와 `Label` 결과 RGB 색상 값을 표시 하기 위한 맨 위에 있는 것입니다.
 
-[ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) 코드 숨김 파일은 상대적으로 간단 합니다. 공유 `ValueChanged` 3 개에 대 한 처리기 `Slider` 요소 단순히 모두 무효화 `SKCanvasView` 요소입니다. `PaintSurface` 처리기도 표시 된 색으로 캔버스의 선택을 취소는 `Slider` 요소도 설정 하 고는 `Label` 위쪽에 있는 것은 `SKCanvasView` 요소:
+[ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) 코드 숨김 파일은 상대적으로 간단 합니다. 공유 `ValueChanged` 3 개에 대 한 처리기 `Slider` 요소 단순히 모두 무효화 `SKCanvasView` 요소입니다. `PaintSurface` 처리기도 표시 된 색으로 캔버스의 선택을 취소는 `Slider` 요소도 설정 하 고는 `Label` 위쪽에 있는 것은 `SKCanvasView` 요소:
 
 ```csharp
 public partial class ColorExplorePage : ContentPage

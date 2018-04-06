@@ -1,18 +1,18 @@
 ---
 title: Hello, iOS 멀티스크린
 description: 두 부분으로 구성된 이 가이드에서는 Hello, iOS 가이드에서 만든 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 모델-뷰-컨트롤러 디자인 패턴을 소개하고, 첫 번째 iOS 탐색을 구현하고, iOS 응용 프로그램의 구조 및 기능에 대한 심층적인 이해를 개발합니다.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 0c21fbd86fc9069d52f5f5935f66500e9477ca02
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS 멀티스크린 심층 분석
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/22/2018
 
 ### <a name="benefits-of-the-mvc-pattern"></a>MVC 패턴의 이점
 
-모델-뷰-컨트롤러는 *디자인 패턴*입니다. 코드의 일반적인 문제 또는 사용 사례에 대한 재사용 가능한 아키텍처 솔루션입니다. MVC는 *GUI(그래픽 사용자 인터페이스)*를 포함하는 응용 프로그램에 대한 아키텍처입니다. 세 가지 역할 중 하나에 응용 프로그램의 개체를 할당합니다(*모델*(데이터 또는 응용 프로그램 논리), *뷰*(사용자 인터페이스) 및 *컨트롤러*(코드 숨김)). 아래 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여줍니다.
+모델-뷰-컨트롤러는 *디자인 패턴*입니다. 코드의 일반적인 문제 또는 사용 사례에 대한 재사용 가능한 아키텍처 솔루션입니다. MVC는 *GUI(그래픽 사용자 인터페이스)*를 포함하는 응용 프로그램에 대한 아키텍처입니다. 세 가지 역할 중 하나에 응용 프로그램의 개체를 할당합니다(*모델*(데이터 또는 응용 프로그램 논리), *뷰*(사용자 인터페이스) 및 *컨트롤러*(코드 숨김)). 아래 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여 줍니다.
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "이 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 

@@ -1,18 +1,17 @@
 ---
-title: "장치 프로비전"
-description: "Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다."
-ms.topic: article
+title: 장치 프로비전
+description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3ff77e909c86e627a6a1ea4875d8bef7db3f8d63
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e04ebd041c64d474fafe12c387f558e740773c98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-provisioning"></a>장치 프로비전
 

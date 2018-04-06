@@ -1,18 +1,17 @@
 ---
 title: iTunes Connect에서 앱 구성
 description: 이 문서에서는 앱 스토어에서 배포를 위해 릴리스될 수 있도록 iTunes Connect에서 Xamarin.iOS 응용 프로그램을 설정하고 유지 관리하는 데 필요한 단계를 설명합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b54313668a2cb87a6cce0b8c519a06247524df81
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -82,7 +81,7 @@ iOS 응용 프로그램을 iTunes Connect에 추가하려면 **팀 에이전트*
 
 ## <a name="managing-app-videos-and-screenshots"></a>앱 비디오 및 스크린샷 관리
 
-앱 스토어에서 iOS 응용 프로그램을 성공적으로 마케팅하기 위한 가장 중요한 요소 중 하나는 훌륭한 스크린샷 집합이며, 비디오 미리 보기는 선택 사항입니다. 사용자 상호 작용을 강조하고 고유한 기능을 보여주는 응용 프로그램 실행의 실제 보기를 사용합니다. 응용 프로그램 미리 보기 비디오를 사용하여 사용자에게 응용 프로그램을 사용하는 것과 같은 느낌을 제공합니다.
+앱 스토어에서 iOS 응용 프로그램을 성공적으로 마케팅하기 위한 가장 중요한 요소 중 하나는 훌륭한 스크린샷 집합이며, 비디오 미리 보기는 선택 사항입니다. 사용자 상호 작용을 강조하고 고유한 기능을 보여 주는 응용 프로그램 실행의 실제 보기를 사용합니다. 응용 프로그램 미리 보기 비디오를 사용하여 사용자에게 응용 프로그램을 사용하는 것과 같은 느낌을 제공합니다.
 
 스크린샷을 만들 때 Apple에서 권장하는 제안 사항은 다음과 같습니다.
 
@@ -92,7 +91,7 @@ iOS 응용 프로그램을 iTunes Connect에 추가하려면 **팀 에이전트*
 - 항상 스크린샷에서 상태 표시줄을 제거합니다. 그러면 iTunes Connect에서 해당 영역을 제외한 크기의 스크린샷이 제공됩니다.
 - 가능한 경우 iOS 시뮬레이터 대신 실제 고해상도 Retina iOS 하드웨어( 제외)에서 스크린샷을 만듭니다.
 - 앱 미리 보기 비디오를 사용할 수 없는 경우 첫 번째 스크린샷이 iPhone 및 iPad 앱 스토어에서 검색 결과로 표시되므로 최상의 스크린샷을 먼저 배치합니다.
-- 5개의 스크린샷을 모두 사용하여 응용 프로그램의 스토리를 보여주는 동시에 해당 응용 프로그램을 매력으로 만드는 순간을 강조합니다.
+- 5개의 스크린샷을 모두 사용하여 응용 프로그램의 스토리를 보여 주는 동시에 해당 응용 프로그램을 매력으로 만드는 순간을 강조합니다.
 
 Apple에서는 응용 프로그램이 지원하는 모든 화면 크기와 해상도의 스크린샷과 비디오를 제공하도록 요구합니다. 또한 지원되는 방향에 따라 가로 및 세로 버전을 제공해야 합니다.
 
@@ -200,7 +199,7 @@ iTunes Connect 응용 프로그램 레코드의 이 섹션에서는 응용 프�
 > [!IMPORTANT]
 >  앱 아이콘은 더 이상 iTunes Connect를 통해 제출되지 않습니다. 프로젝트의 **Assets.xcassets** 파일에 있는 **AppIcon** 이미지 집합을 통해 제출해야 합니다. 자세한 내용은 [앱 스토어 아이콘](~/ios/app-fundamentals/images-icons/app-store-icon.md) 가이드를 참조하세요.
 
-앱 아이콘은 사용자에게 보여주는 응용 프로그램의 얼굴이므로 기억하기 쉽고 작은 크기로 잘 표시되어야 합니다. 기억하기 쉬운 아이콘은 명확하고 간단하며 즉시 인식할 수 있습니다.
+앱 아이콘은 사용자에게 보여 주는 응용 프로그램의 얼굴이므로 기억하기 쉽고 작은 크기로 잘 표시되어야 합니다. 기억하기 쉬운 아이콘은 명확하고 간단하며 즉시 인식할 수 있습니다.
 
 응용 프로그램 아이콘을 디자인할 때 Apple에서 제안하는 지침은 다음과 같습니다.
 

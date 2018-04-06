@@ -1,18 +1,17 @@
 ---
-title: "무료 프로비전"
-description: "Apple의 Xcode 7 릴리스가 발표되면서 모든 iOS 및 Mac 개발자들에게 중요한 변화가 있으니, 그것은 바로 무료 프로비전입니다."
-ms.topic: article
+title: 무료 프로비전
+description: Apple의 Xcode 7 릴리스가 발표되면서 모든 iOS 및 Mac 개발자들에게 중요한 변화가 있으니, 그것은 바로 무료 프로비전입니다.
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 03/19/2017
-ms.openlocfilehash: 26ac40360b4e706180f4154f4fddcd9c992ad94b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 09244ebaefedb991289e5a1f67b59491ee84ed28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="free-provisioning"></a>무료 프로비전
 

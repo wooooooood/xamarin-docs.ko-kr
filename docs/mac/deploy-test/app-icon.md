@@ -1,18 +1,17 @@
 ---
 title: 응용 프로그램 아이콘
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘에 필요한 이미지를 만들고, 그 이미지를 .icns 파일로 묶고, Xamarin.Mac 프로젝트에 아이콘을 포함하는 방법을 다룹니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ceeb0d33b00288e2a50dc7f758902c1dbc7ab04a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 3603e43b4b98d1387c718d0a6010d38aa01440c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-icon"></a>응용 프로그램 아이콘
 

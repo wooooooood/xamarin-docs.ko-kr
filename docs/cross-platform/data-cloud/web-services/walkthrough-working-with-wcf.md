@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 7f6885415e1b5e0c988d13fe331703213b9b8fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b317c4c82ec736c7f4c8306036e43cf04086a82
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>연습-WCF 작업
 
@@ -167,7 +167,6 @@ Us 하기 전에 첫 번째 작업와 통신 하는 모바일 응용 프로그�
 1. 외부 요청 수신 하기 위해 IIS Express를 구성 하 여 시작 해 보겠습니다. IIS Express에 대 한 구성 파일을 편집 하 여 이렇게 하려면 `[solutiondirectory]\.vs\config\applicationhost.config`다음 스크린샷에 표시 된 것 처럼:
 
     [![](walkthrough-working-with-wcf-images/image05.png "이렇게 하려면 solutiondirectory.vsconfigapplicationhost.config에서 IIS Express에 대 한 구성 파일을 편집 하 여이 스크린 샷에 표시 된 것 처럼")](walkthrough-working-with-wcf-images/image05.png#lightbox)
-
 
     찾을 `site` 이름의 요소 `HelloWorldWcfHost`합니다. 다음 XML 조각 같은 같아야 합니다.
 

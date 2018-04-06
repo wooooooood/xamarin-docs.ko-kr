@@ -1,22 +1,21 @@
 ---
 title: 앱 스토어에 게시
-description: 이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다.
-ms.topic: article
+description: 이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: ef8fafb923dcad936ce0a049e715cdd163ea7222
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
 
-_이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다._
+_이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다._
 
 Apple은 응용 프로그램을 모든 iOS 장치에 배포하기 위해 *앱 스토어*를 통해 앱을 게시해야 하므로 앱 스토어를 iOS 응용 프로그램을 위한 원 스톱 쇼핑 위치로 만들었습니다. 여러 유형의 응용 프로그램 개발자는 스토어에 있는 50만 개가 넘는 응용 프로그램과 함께 이 단일 배포 지점에서 엄청난 성공을 거두었습니다. 앱 스토어는 턴키 솔루션으로, 앱 개발자에게 배포 및 결제 시스템을 모두 제공합니다.
 

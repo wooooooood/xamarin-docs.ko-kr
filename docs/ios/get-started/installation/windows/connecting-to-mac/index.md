@@ -1,18 +1,17 @@
 ---
 title: Mac에 연결
 description: Visual Studio용 Xamarin.iOS는 개발자가 Visual Studio IDE를 사용하여 Windows 컴퓨터에서 iOS 응용 프로그램을 만들고 빌드하고 디버그할 수 있게 해줍니다. 이 가이드에서는 Visual Studio용 Xamarin.iOS에서 제공하는 기능과 Mac 빌드 호스트에 연결하는 방법을 설명합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e4f7b55fa859473e84298151bc08878bc2161192
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5a76c443521276a66e820fa0b1877ae2a4cce8f0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="connecting-to-the-mac"></a>Mac에 연결
 

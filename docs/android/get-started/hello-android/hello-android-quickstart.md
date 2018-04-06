@@ -1,18 +1,18 @@
 ---
 title: 'Hello, Android: 빠른 시작'
 description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고, Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: c5937cc86a8a1f8506b14774b0429bee3c8aa594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -476,7 +476,7 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-**빌드 > 모두 빌드**를 선택(하거나 **&#8984; + B** 키를 눌러)하여 작업 내용을 저장하고 응용 프로그램을 빌드합니다. 응용 프로그램을 컴파일하는 경우 Mac용 Visual Studio 맨 위에서 성공 메시지가 표시됩니다.
+**빌드 > 모두 빌드**를 선택(하거나 **& #8984; + B** 키를 눌러)하여 작업 내용을 저장하고 응용 프로그램을 빌드합니다. 응용 프로그램을 컴파일하는 경우 Mac용 Visual Studio 맨 위에서 성공 메시지가 표시됩니다.
 
 오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 및 Mac용 Visual Studio 업데이트를 설치했는지 확인합니다.
 

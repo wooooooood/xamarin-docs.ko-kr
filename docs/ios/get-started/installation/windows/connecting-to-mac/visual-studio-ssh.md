@@ -1,18 +1,17 @@
 ---
-title: "내 Mac 위치"
-description: "Xamarin.iOS 프로젝트를 빌드하도록 Visual Studio에 대해 Mac을 구성하는 방법에 대한 지침"
-ms.topic: article
+title: 내 Mac 위치
+description: Xamarin.iOS 프로젝트를 빌드하도록 Visual Studio에 대해 Mac을 구성하는 방법에 대한 지침
 ms.prod: xamarin
 ms.assetid: 4f792690-b3b1-4d56-a5e2-363b4f246059
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 491d7cea4b88fa44bb15e76dd92ecd5216ce9984
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f3e2988c9700549db24ad69277df9e412c99caed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wheres-my-mac"></a>내 Mac 위치
 

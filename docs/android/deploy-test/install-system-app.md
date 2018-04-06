@@ -1,18 +1,17 @@
 ---
-title: "시스템 앱으로 Xamarin.Android 설치"
-description: "이 가이드에서는 시스템 앱과 사용자 앱의 차이점, 그리고 Xamarin.Android 응용 프로그램을 시스템 응용 프로그램으로 설치하는 방법을 설명합니다. 이 가이드는 사용자 지정 Android ROM 이미지 작성자에게 적용됩니다. 사용자 지정 ROM을 만드는 방법은 설명하지 않습니다."
-ms.topic: article
+title: 시스템 앱으로 Xamarin.Android 설치
+description: 이 가이드에서는 시스템 앱과 사용자 앱의 차이점, 그리고 Xamarin.Android 응용 프로그램을 시스템 응용 프로그램으로 설치하는 방법을 설명합니다. 이 가이드는 사용자 지정 Android ROM 이미지 작성자에게 적용됩니다. 사용자 지정 ROM을 만드는 방법은 설명하지 않습니다.
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ad2080c61c9cc7fb376997bc56668b6db135dbae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 94f2108a55cea520782aa5eac959195be09929b5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>시스템 앱으로 Xamarin.Android 설치
 

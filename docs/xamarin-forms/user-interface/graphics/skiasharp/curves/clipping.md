@@ -7,11 +7,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 0451653b4ee5c85b9bcf884b6b5609a251cf577c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 영역을 사용 하 여 클리핑
 
@@ -23,7 +23,7 @@ _클립 그래픽 경로 사용 하 여 특정 영역을 영역을 만드는 데
 
 *클리핑 영역* 그래픽 렌더링 되는 화면 영역입니다. 클리핑 영역 외부에 표시 되는 아무 것도 렌더링 되지 않습니다. 클리핑 영역이 정의한 일반적으로 [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 있지만 개체 수 또는 정의할 사용 하 여 오려낸 영역은 [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) 개체입니다. 이러한 두 가지 유형의 개체에 우선 하므로 것 처럼 보일 관련 경로에서 영역을 만들 수 있습니다. 그러나는 지역에서 경로 만들 수 없습니다 및 내부적으로 매우 다른 지: 경로 일련의 가로 스캐닝선 정의 되는 영역 동안 일련의 선 및 곡선을 구성 합니다.
 
-위 이미지에서 만들어진는 **구멍을 통해 원숭이** 페이지. [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) 클래스 SVG 데이터를 사용 하 여 경로 정의 하 고 프로그램 리소스에서 비트맵을 로드 하는 생성자를 사용 하 여:
+위 이미지에서 만들어진는 **구멍을 통해 원숭이** 페이지. [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) 클래스 SVG 데이터를 사용 하 여 경로 정의 하 고 프로그램 리소스에서 비트맵을 로드 하는 생성자를 사용 하 여:
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -118,7 +118,7 @@ public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.In
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-기본적으로 결과 클리핑 영역은 기존 클리핑 영역의 교집합 및 `SKPath` 또는 `SKRect` 에 지정 된 된 `ClipPath` 또는 `ClipRect` 메서드. 이 확인할는 **4 개의 원 교차 클립** 페이지. `PaintSurface` 의 처리기는 [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) 클래스를 다시 사용 동일한 `SKPath` 연속 호출을 통해 클리핑 영역 축소는 4 개의 겹치는 원 만들 개체 `ClipPath`:
+기본적으로 결과 클리핑 영역은 기존 클리핑 영역의 교집합 및 `SKPath` 또는 `SKRect` 에 지정 된 된 `ClipPath` 또는 `ClipRect` 메서드. 이 확인할는 **4 개의 원 교차 클립** 페이지. `PaintSurface` 의 처리기는 [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) 클래스를 다시 사용 동일한 `SKPath` 연속 호출을 통해 클리핑 영역 축소는 4 개의 겹치는 원 만들 개체 `ClipPath`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -183,7 +183,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](clipping-images//clipoperations-small.png "클립 작업 페이지의 삼중 스크린 샷")](clipping-images/clipoperations-large.png#lightbox "클립 작업 페이지의 삼중 스크린 샷")
 
-[ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) 두 클래스 정의 `SKPaint` 필드로 개체를 다음 두 개의 사각형 영역으로 화면 나눕니다. 이러한 영역 전화가 세로 또는 가로 모드 인지에 따라 다릅니다. `DisplayClipOp` 클래스에는 다음 텍스트와 호출 표시 `ClipPath` 각 잘라내기 작업을 설명 하기 위해 두 개의 원 경로:
+[ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) 두 클래스 정의 `SKPaint` 필드로 개체를 다음 두 개의 사각형 영역으로 화면 나눕니다. 이러한 영역 전화가 세로 또는 가로 모드 인지에 따라 다릅니다. `DisplayClipOp` 클래스에는 다음 텍스트와 호출 표시 `ClipPath` 각 잘라내기 작업을 설명 하기 위해 두 개의 원 경로:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -286,7 +286,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 이러한 모든 가능성을 결합 하 여 이러한 두 개의 원을?합니다 결과 이미지 자체에 표시 되는 세 가지 구성의 조합으로 고려는 `Difference`, `Intersect`, 및 `ReverseDifference` 작업 합니다. 조합 총 수를 3 제곱 2 개 또는 8은 합니다. 누락 된 두 가지 원본 영역 (에서 호출 하지 줄어들고 결과적 `Op` 전혀) 및 완전히 빈 지역입니다.
 
-먼저 해당 경로에서 경로 및 영역을 만드는 한 후 여러 영역을 결합 해야 하기 때문에 캡처에 대 한 영역을 사용 하기가 더 어렵습니다. 전체 구조는 **영역 작업** 페이지는 매우 비슷합니다 **클립 작업** 있지만 [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) 클래스 6 개의 영역으로 화면을 분할 하 고 이 작업에 대 한 영역을 사용 하는 데 필요한 추가 작업을 보여 줍니다.
+먼저 해당 경로에서 경로 및 영역을 만드는 한 후 여러 영역을 결합 해야 하기 때문에 캡처에 대 한 영역을 사용 하기가 더 어렵습니다. 전체 구조는 **영역 작업** 페이지는 매우 비슷합니다 **클립 작업** 있지만 [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) 클래스 6 개의 영역으로 화면을 분할 하 고 이 작업에 대 한 영역을 사용 하는 데 필요한 추가 작업을 보여 줍니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -370,7 +370,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 그러나 일련의 검사 영역 축소 된 경우 정렬, 특정 픽셀 치수를 기반으로 하는 줄이이 검색 됩니다. 엄격히 말해서, 지역 벡터 그래픽 개체가 아닙니다. 것과 경로 보다 압축된 단색 비트맵에에서 가깝습니다. 따라서 영역 크기가 조정 하거나 충실도 유지 하면서 및 클리핑 영역에 사용 되는 경우 변환 되지 않습니다는 이러한 이유로 회전할 수 없습니다.
 
-그러나 그리기 위해 지역에 변환을 적용할 수 있습니다. **지역 페인트** 프로그램 생생하게 영역의 내부 특성을 보여 줍니다. [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) 클래스를 만듭니다는 `SKRegion` 기반 개체는 `SKPath` 10 단위 radius 원의 합니다. 변환은 다음 페이지를 채우기에 해당 원의 확장 합니다.
+그러나 그리기 위해 지역에 변환을 적용할 수 있습니다. **지역 페인트** 프로그램 생생하게 영역의 내부 특성을 보여 줍니다. [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) 클래스를 만듭니다는 `SKRegion` 기반 개체는 `SKPath` 10 단위 radius 원의 합니다. 변환은 다음 페이지를 채우기에 해당 원의 확장 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -427,7 +427,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 지역은 일련의 개별 좌표입니다.
 
-오려낸 영역을 관련 하 여 변환을 사용 하 여 필요 하지 않으면,으로 사용할 수 있습니다 영역 클리핑에는 **네-리프 Clover** 페이지를 보여 줍니다. [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) 클래스 순환 4 개 지역에서 복합 영역을 생성, 클리핑 영역으로 복합 해당 영역을 설정 하 고 다음 일련의 시작 페이지의 가운데에서 360 직선을 그립니다.
+오려낸 영역을 관련 하 여 변환을 사용 하 여 필요 하지 않으면,으로 사용할 수 있습니다 영역 클리핑에는 **네-리프 Clover** 페이지를 보여 줍니다. [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) 클래스 순환 4 개 지역에서 복합 영역을 생성, 클리핑 영역으로 복합 해당 영역을 설정 하 고 다음 일련의 시작 페이지의 가운데에서 360 직선을 그립니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

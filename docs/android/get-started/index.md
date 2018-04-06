@@ -1,7 +1,6 @@
 ---
-title: "Android 시작"
-description: "Xamarin.Android를 사용하면 Java에서와 마찬가지이지만 최신 언어(C#)의 유연성 및 간결함, .NET BCL(기본 클래스 라이브러리)의 기능 및 첫 번째 클래스 IDE(Visual Studio)를 활용한 동일한 UI 컨트롤을 사용하여 Android 응용 프로그램을 만들 수 있습니다. 이 시리즈에서는 Xamarin.Android 개발의 기본 사항을 소개합니다. 설정 및 설치부터 첫 번째 응용 프로그램을 빌드하는 작업까지 설명합니다."
-ms.topic: article
+title: Android 시작
+description: Xamarin.Android를 사용하면 Java에서와 마찬가지이지만 최신 언어(C#)의 유연성 및 간결함, .NET BCL(기본 클래스 라이브러리)의 기능 및 첫 번째 클래스 IDE(Visual Studio)를 활용한 동일한 UI 컨트롤을 사용하여 Android 응용 프로그램을 만들 수 있습니다. 이 시리즈에서는 Xamarin.Android 개발의 기본 사항을 소개합니다. 설정 및 설치부터 첫 번째 응용 프로그램을 빌드하는 작업까지 설명합니다.
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
-ms.openlocfilehash: c07ab37bc88b52bbff0ddc0fb7bf1faa4d97bb2a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8a9abb7e9a5640994d67c1fb33d15d8405442b6c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-series"></a>시리즈 시작
 

@@ -1,18 +1,18 @@
 ---
 title: Hello, Mac
 description: 이 지침에서는 첫 번째 Xamarin.Mac 앱을 만드는 단계를 안내하고, 그 과정에서 Mac용 Visual Studio, Xcode 및 Interface Builder를 포함한 개발 도구 체인을 소개합니다. 또한 코드에 UI 컨트롤을 표시하는 출선 및 작업을 소개하고, 마지막으로 Xamarin.Mac 응용 프로그램을 빌드, 실행 및 테스트하는 방법을 보여줍니다.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 635577bbc35d9e80147ecf7e1a59540099f85b9d
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: e5d87d42765480c97da392cf07b6599108895321
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-mac"></a>Hello, Mac
 
@@ -594,7 +594,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 이 예제의 경우 디버그 빌드를 사용할 예정이므로 **디버그**를 선택합니다. **⌘B**를 누르거나 **빌드** 메뉴에서 **모두 빌드**를 선택하여 우선 앱을 빌드합니다.
 
-오류가 없으면 Mac용 Visual Studio의 상태 표시줄에 **빌드 성공** 메시지가 표시됩니다. 오류가 있으면 프로젝트를 검토하여 위의 단계를 올바르게 수행되었는지 확인합니다. 먼저 코드(Xcode의 코드와 Mac용 Visual Studio의 코드 모두)가 자습서의 코드와 일치하는지 확인합니다.
+오류가 없으면  Mac용 Visual Studio의 상태 표시줄에 **빌드 성공** 메시지가 표시됩니다. 오류가 있으면 프로젝트를 검토하여 위의 단계를 올바르게 수행되었는지 확인합니다. 먼저 코드(Xcode의 코드와 Mac용 Visual Studio의 코드 모두)가 자습서의 코드와 일치하는지 확인합니다.
 
 <a name="Running_the_Application" />
 

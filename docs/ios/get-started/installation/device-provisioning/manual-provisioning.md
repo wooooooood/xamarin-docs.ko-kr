@@ -1,18 +1,17 @@
 ---
 title: 수동 프로비전
 description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ecda5823636a1b2d7e31a39e29f1d46cdf7118b6
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3f321366b3afc814aef1c586af2707b1caeef4c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="manual-provisioning"></a>수동 프로비전
 

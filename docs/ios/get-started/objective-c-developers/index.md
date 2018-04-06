@@ -1,17 +1,16 @@
 ---
-title: "Objective-C 개발자용 Xamarin"
-description: "Objective-C 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드를 다시 사용할 수 있습니다. 이 섹션은 Xamarin.iOS의 진입점 역할을 하며, C#에서 기존 Objective-C 코드를 사용하는 방법에 대한 다양한 정보를 알려줍니다."
-ms.topic: article
+title: Objective-C 개발자용 Xamarin
+description: Objective-C 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드를 다시 사용할 수 있습니다. 이 섹션은 Xamarin.iOS의 진입점 역할을 하며, C#에서 기존 Objective-C 코드를 사용하는 방법에 대한 다양한 정보를 알려줍니다.
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e29762fb258f7d796878c85bfe6f7aaa93207c5e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Objective-C 개발자용 Xamarin
 

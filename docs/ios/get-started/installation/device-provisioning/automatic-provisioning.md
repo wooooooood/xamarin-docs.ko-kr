@@ -1,18 +1,17 @@
 ---
 title: 자동 프로비저닝
 description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 Mac용 Visual Studio의 자동 서명을 사용하여 개발 인증서와 프로필을 요청합니다.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: 271d9e3f7ae04f03a132ae2fd0ebf531fe52578c
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 01818d2870c7cf59a0f15385dbb3565f07400ff0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="automatic-provisioning"></a>자동 프로비저닝
 

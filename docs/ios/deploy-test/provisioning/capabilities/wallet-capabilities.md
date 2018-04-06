@@ -1,18 +1,17 @@
 ---
-title: "Wallet 기능"
-description: "응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다."
-ms.topic: article
+title: Wallet 기능
+description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 952fa7dfa93c1dcb45eafe4eec08c73d2a8571eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f41ba2b693b37f39ea49f62e322932537014a317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wallet-capabilities"></a>Wallet 기능
 

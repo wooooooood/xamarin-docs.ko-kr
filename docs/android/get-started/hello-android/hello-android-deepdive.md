@@ -1,18 +1,18 @@
 ---
-title: "Hello, Android: 심층 분석"
-description: "두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고 Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다."
-ms.topic: article
+title: 'Hello, Android: 심층 분석'
+description: 두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고 Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: e9e554da80218d2e89ff79c6e89886d707b1ed95
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bae3e7323596cc88f2b76aceeb5a4d1df4ce2d0c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 

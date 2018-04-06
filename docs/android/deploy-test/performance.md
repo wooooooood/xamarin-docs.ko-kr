@@ -1,18 +1,17 @@
 ---
 title: Xamarin.Android Performance
-description: "Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다."
-ms.topic: article
+description: Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: a22190adc97cb80f5900dda4a073bdcdf80ef99b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 

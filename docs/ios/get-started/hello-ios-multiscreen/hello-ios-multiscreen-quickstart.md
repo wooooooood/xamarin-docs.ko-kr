@@ -1,18 +1,18 @@
 ---
-title: "Hello, iOS 멀티스크린"
-description: "두 부분으로 구성된 이 가이드에서는 Hello, iOS 가이드에서 만든 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 모델-뷰-컨트롤러 디자인 패턴을 소개하고, 첫 번째 iOS 탐색을 구현하고, iOS 응용 프로그램의 구조 및 기능에 대한 심층적인 이해를 개발합니다."
-ms.topic: article
+title: Hello, iOS 멀티스크린
+description: 두 부분으로 구성된 이 가이드에서는 Hello, iOS 가이드에서 만든 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 모델-뷰-컨트롤러 디자인 패턴을 소개하고, 첫 번째 iOS 탐색을 구현하고, iOS 응용 프로그램의 구조 및 기능에 대한 심층적인 이해를 개발합니다.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: d4b7439448d5c25aacf991c89a188086c95a44ac
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="helloios-multiscreen-quickstart"></a>Hello.iOS 멀티스크린 빠른 시작
 

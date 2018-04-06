@@ -1,18 +1,17 @@
 ---
-title: "응용 프로그램 패키지 크기"
-description: "이 아티클에서는 배포의 디버그 및 릴리스 단계에서 효율적인 패키지 배포에 사용할 수 있는 관련 전략과 Xamarin.Android 응용 프로그램 패키지의 구성 요소를 살펴봅니다."
-ms.topic: article
+title: 응용 프로그램 패키지 크기
+description: 이 아티클에서는 배포의 디버그 및 릴리스 단계에서 효율적인 패키지 배포에 사용할 수 있는 관련 전략과 Xamarin.Android 응용 프로그램 패키지의 구성 요소를 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 8D70CDDD-3D3C-9949-8045-AB8F93D18E74
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: babe45c39f6a69dd9384f3bce8fe28ada31ebfdf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-package-size"></a>응용 프로그램 패키지 크기
 
