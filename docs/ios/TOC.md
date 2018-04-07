@@ -189,7 +189,6 @@
 ##### [원격 알림](platform/user-notifications/deprecated/remote-notifications-in-ios.md)
 ### [와이드 컬러](platform/wide-color.md)
 ## [데이터 및 클라우드 서비스](data-cloud/index.md)
-### [Azure 연결된 서비스](~/cross-platform/data-cloud/connected-services.md?context=xamarin/ios)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [시작](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [1단계. 레지스터](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)

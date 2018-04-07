@@ -166,7 +166,6 @@
 ### [네이티브 라이브러리 사용](platform/native-libraries.md)
 ### [Renderscript](platform/renderscript.md)
 ## [데이터 및 클라우드 서비스](data-cloud/index.md)
-### [Azure 연결된 서비스](~/cross-platform/data-cloud/connected-services.md?context=xamarin/android)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android)
 #### [시작](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/android)
 ##### [1단계. 레지스터](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android)
