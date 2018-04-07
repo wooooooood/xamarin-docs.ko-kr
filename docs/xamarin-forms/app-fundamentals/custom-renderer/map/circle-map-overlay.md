@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: a70c8fdca457e386a1490ca974e1a1ea5da2f6db
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 23f36bfbdc4638bb8f35dd2a55124a1438e1d441
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>지도에 순환 영역을 강조 표시
 
@@ -290,17 +290,40 @@ namespace MapOverlay.UWP
                 nativeMap.MapElements.Add(polygon);
             }
         }
-        ...
+        // GenerateCircleCoordinates helper method (below)
     }
 }
 ```
 
 사용자 지정 렌더러 새 Xamarin.Forms 요소에 연결 되어 있는 경우이 메서드는 다음 작업을 수행 합니다.
 
-- 원 위치와 반지름에서 검색 되며는 `CustomMap.Circle` 속성에 전달 하 고는 `GenerateCircleCoordinates` 위도 및 경도 생성 하는 방법을 좌표의 원 둘레를 합니다.
+- 원 위치와 반지름에서 검색 되며는 `CustomMap.Circle` 속성에 전달 하 고는 `GenerateCircleCoordinates` 위도 및 경도 생성 하는 방법을 좌표의 원 둘레를 합니다. 이 도우미 메서드에 대 한 코드는 다음과 같습니다.
 - 로 변환 하는 원 경계 좌표는 `List` 의 `BasicGeoposition` 좌표입니다.
 - 원 인스턴스화하여 만들어집니다는 `MapPolygon` 개체입니다. `MapPolygon` 클래스로 설정 하 여 다중 지점 도형 지도에 표시할 해당 `Path` 속성을는 `Geopath` 셰이프 좌표가 포함 된 개체입니다.
 - 다각형은 지도에 추가 하 여 렌더링 되는 `MapControl.MapElements` 컬렉션입니다.
+
+
+```
+List<Position> GenerateCircleCoordinates(Position position, double radius)
+{
+    double latitude = position.Latitude.ToRadians();
+    double longitude = position.Longitude.ToRadians();
+    double distance = radius / EarthRadiusInMeteres;
+    var positions = new List<Position>();
+
+    for (int angle = 0; angle <=360; angle++)
+    {
+        double angleInRadians = ((double)angle).ToRadians();
+        double latitudeInRadians = Math.Asin(Math.Sin(latitude) * Math.Cos(distance) + Math.Cos(latitude) * Math.Sin(distance) * Math.Cos(angleInRadians));
+        double longitudeInRadians = longitude + Math.Atan2(Math.Sin(angleInRadians) * Math.Sin(distance) * Math.Cos(latitude), Math.Cos(distance) - Math.Sin(latitude) * Math.Sin(latitudeInRadians));
+
+        var pos = new Position(latitudeInRadians.ToDegrees(), longitudeInRadians.ToDegrees());
+        positions.Add(pos);
+    }
+
+    return positions;
+}
+```
 
 ## <a name="summary"></a>요약
 

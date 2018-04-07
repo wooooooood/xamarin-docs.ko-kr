@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: db8b767d6e7a6c5e5badc1c74703825a66ea2ab8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="app-class"></a>App 클래스
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 04/04/2018
 * 영구 [ `Properties` 사전](#Properties_Dictionary) 주기 상태 변경을 통해 간단한 값을 저장할 수 있습니다.
 * 정적 `Current` 현재 응용 프로그램 개체에 대 한 참조를 포함 하는 속성입니다.
 
-경우도 노출 [수명 주기 메서드](~/xamarin-forms/app-fundamentals/app-lifecycle.md) 같은 `OnStart`, `OnSleep`, 및 `OnResume` 모달 탐색 이벤트 뿐만 아니라 합니다.
+또한 노출 [수명 주기 메서드](~/xamarin-forms/app-fundamentals/app-lifecycle.md) 같은 `OnStart`, `OnSleep`, 및 `OnResume` 모달 탐색 이벤트 뿐만 아니라 합니다.
 
 템플릿에 따라 선택는 `App` 두 가지 방법 중 하나에서 클래스를 정의할 수 있습니다.
 

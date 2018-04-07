@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>목록 모양
 
@@ -117,14 +117,12 @@ x:Class="DemoListView.GroupingViewPage"
 - 변경 된 `ListView`의 `ItemsSource` 그룹화 된 목록에
 
 ### <a name="customizing-grouping"></a>그룹화를 사용자 지정
-ListView에서 그룹화 기본 구현 하는 방법을 살펴본 했으므로 그룹 머리글 표시를 사용자 지정 하는 방법을 살펴보겠습니다.
 
-방식과 유사한 `ListView` 에 `ItemTemplate` 행 표시 되는 방식을 정의 하기 위한 `ListView` 에 `GroupHeaderTemplate`합니다. 다음은 사용자 지정 된 그룹 머리글 템플릿 사용 하 여 위쪽에서 ListView의 예입니다.
+목록에서 그룹화 활성화 되어 있는 그룹 머리글 사용자 지정할 수도 있습니다.
 
-![](customizing-list-appearance-images/grouping-depth.png "사용자 지정 된 GroupHeaderTemplate 있는 ListView")
+방식과 유사한 `ListView` 에 `ItemTemplate` 행 표시 되는 방식을 정의 하기 위한 `ListView` 에 `GroupHeaderTemplate`합니다. 
 
-
-XAML에서 해당 디자인을 수행 하는 방법을 다음과 같습니다.
+XAML의 그룹 머리글을 사용자 지정의 예는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

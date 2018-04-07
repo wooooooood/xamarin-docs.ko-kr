@@ -6,17 +6,13 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: cdddc66df4da22654e44b5b72d4b0b1c659c1fde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 579393a8830e73f7ab64f750c0176eb4c4e36029
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="general-frequently-asked-questions"></a>일반에 대 한 질문과 대답
-
-## <a name="visual-studio-2017-release-candidate"></a>Visual Studio 2017 릴리스 후보
-### <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarinvisualstudio-2017-rcmd"></a>[Xamarin에서 Visual Studio 2017 릴리스 후보를 사용할 수 있나요?](visualstudio-2017-rc.md)
-에 대 한 설명은 구문과 Visual Studio2017 RC에서 Xamarin을 설치 하는 방법에 대 한 정보를 Visual Studio 2017 RC (릴리스 후보)도 Xamarin을 사용 하 여의 현재 의미 합니다.
 
 ## <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리
 ### <a name="how-can-i-view-what-libraries-are-supported-in-a-pclpcl-support-librariesmd"></a>[PCL에서 지원되는 라이브러리를 어떻게 볼 수 있나요?](pcl-support-libraries.md)

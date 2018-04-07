@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ec46a5e098ba14925102211a27fcce8c27970e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="touch-id"></a>Touch ID
 
@@ -121,47 +121,46 @@ API는 두 개의 기능을 제공 하는 현재: 첫째, 새로운 키 집합 �
 
 따라서 살펴보겠습니다 Touch ID 인증 일부 응용 프로그램에 추가 합니다. 이 연습에서 하겠습니다 사용 하 여 [스토리 보드 테이블](https://developer.xamarin.com/samples/StoryboardTable/) 샘플. 장치 소유자는이 목록에 추가할 수 있습니다만 않으려는 모든 항목을 추가 하도록 하 여 불필요 하 고 있는지 확인 하려고!
 
-1.  이 샘플을 다운로드 하 고 Mac. 용 Visual Studio 실행
-2.  두 번 클릭 하면 `MainStoryboard.Storyboard` 를 iOS 디자이너에서에서이 샘플을 엽니다. 이 샘플에는 인증을 제어 하는 샘플 응용 프로그램에서는 새 화면 추가 하려고 합니다. 이것은 현재 이동 `MasterViewController`합니다.
-3.  새 끌어 **뷰-컨트롤러** 에서 **도구 상자** 에 **디자인 화면**합니다. 설정으로이 **뷰-컨트롤러 루트** 여 **Ctrl + 드래그** 에서 **탐색 컨트롤러**:
+1. 이 샘플을 다운로드 하 고 Mac. 용 Visual Studio 실행
+2. 두 번 클릭 하면 `MainStoryboard.Storyboard` 를 iOS 디자이너에서에서이 샘플을 엽니다. 이 샘플에는 인증을 제어 하는 샘플 응용 프로그램에서는 새 화면 추가 하려고 합니다. 이것은 현재 이동 `MasterViewController`합니다.
+3. 새 끌어 **뷰-컨트롤러** 에서 **도구 상자** 에 **디자인 화면**합니다. 설정으로이 **뷰-컨트롤러 루트** 여 **Ctrl + 드래그** 에서 **탐색 컨트롤러**:
 
     [![](touchid-images/image4.png "루트 뷰 컨트롤러 설정")](touchid-images/image4.png#lightbox)
 4.  새 보기 컨트롤러 이름을 `AuthenticationViewController`합니다.
-5.  그런 다음 단추를 끌어에 배치 하는 `AuthenticationViewController`합니다. 이 메서드를 호출 `AuthenticateButton`, 텍스트를 지정 하 고 `Add a Chore`합니다.
-6.  에 이벤트를 만들려면는 `AuthenticateButton` 호출 `AuthenticateMe`합니다.
-7.  설명서와 함께 만들기에서 segue `AuthenticationViewController` 아래쪽의 검은색 표시줄을 클릭 하 여 및 **Ctrl + 드래그** 표시줄에서는 `MasterViewController` 선택한 **푸시** (또는 **표시** 크기 클래스 사용):
+5. 그런 다음 단추를 끌어에 배치 하는 `AuthenticationViewController`합니다. 이 메서드를 호출 `AuthenticateButton`, 텍스트를 지정 하 고 `Add a Chore`합니다.
+6. 에 이벤트를 만들려면는 `AuthenticateButton` 호출 `AuthenticateMe`합니다.
+7. 설명서와 함께 만들기에서 segue `AuthenticationViewController` 아래쪽의 검은색 표시줄을 클릭 하 여 및 **Ctrl + 드래그** 표시줄에서는 `MasterViewController` 선택한 **푸시** (또는 **표시** 크기 클래스 사용):
 
     [![](touchid-images/image5.png "도구 모음에서 푸시를 선택 하 고 MasterViewController 끌거나 표시")](touchid-images/image6.png#lightbox)
-8.  클릭는 새로 만든 segue 하 고 식별자 `AuthenticationSegue`아래 그림과 같이,:
+8. 클릭는 새로 만든 segue 하 고 식별자 `AuthenticationSegue`아래 그림과 같이,:
 
     [![](touchid-images/image7.png "AuthenticationSegue를 segue 식별자를 설정 합니다.")](touchid-images/image7.png#lightbox)
-9.  다음 코드를 `AuthenticationViewController`에 추가합니다.
+9. 다음 코드를 `AuthenticationViewController`에 추가합니다.
 
-    ```
+    ```csharp
     partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
     ```
 
 Touch ID 인증 로컬 인증을 사용 하 여 구현에 필요한 모든 코드입니다. 아래 그림에 강조 표시 된 줄 로컬 인증의 사용을 보여 줍니다.
