@@ -83,7 +83,6 @@
 ### [HttpClient 스택 및 SSL/TLS 구현 선택기](macios/http-stack.md)
 ## [문제 해결](troubleshooting/index.md)
 ### [질문과 대답](troubleshooting/questions/index.md)
-#### [Xamarin에서 Visual Studio 2017 릴리스 후보를 사용할 수 있나요?](troubleshooting/questions/visualstudio-2017-rc.md)
 #### [PCL에서 지원되는 라이브러리를 어떻게 볼 수 있나요?](troubleshooting/questions/pcl-support-libraries.md)
 #### [PCL 리플렉션 API](troubleshooting/questions/pcl-reflection.md)
 #### [PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 해야 하나요?](troubleshooting/questions/pcl-case-study.md)
@@ -96,6 +95,14 @@
 #### [버그 보고서를 언제 어떻게 제출해야 하나요?](troubleshooting/questions/howto-file-bug.md)
 #### [Xamarin에서 Jenkins가 지원되지 않는 이유는 무엇인가요?](troubleshooting/questions/xamarin-jenkins.md)
 #### [디버거에 필요한 프로젝트 설정은 무엇인가요?](troubleshooting/questions/debugger-settings.md)
+
+### Visual Studio 질문
+#### [Configuration Manager에서 비활성화된 확인란 배포](troubleshooting/questions/deploy-checkboxes.md)
+#### [설치 후 Visual Studio 확장 누락](troubleshooting/questions/missing-vs-extensions.md)
+#### [Visual Studio용 Xamarin을 완전히 제거하려면 어떻게 하나요?](troubleshooting/questions/uninstall-xamarin-vs.md)
+#### [Visual Studio 프로세스의 현재 호출 스택을 수집하려면 어떻게 하나요?](troubleshooting/questions/vs-callstack.md)
+#### [Visual Studio에서 내 참조된 라이브러리 프로젝트를 빌드에 포함시키지 않는 이유는 무엇인가요?](troubleshooting/questions/vs-config-manager.md)
+
 ### [구성 요소 참조를 NuGet으로 업데이트](troubleshooting/component-nuget.md)
 ### [지원 옵션](troubleshooting/support-options.md)
 ### [레거시 라이선스 질문](troubleshooting/legacy-licenses/index.md)

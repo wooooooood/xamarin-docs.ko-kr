@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: e7776ed249307e7a6ba4401bfb409f749c4581e8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: babdce968dc74117a19d64755790da57c32d26aa
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -28,21 +28,8 @@ NuGet 패키지에 구성 요소 참조를 변경 하려면 기존 Xamarin 솔�
 
 Xamarin 제품에 대 한 옵션을 지원 합니다.
 
-### <a name="legacy-license-questionslegacy-licensesindexmd"></a>[레거시 라이선스 질문](legacy-licenses/index.md)
-
-레거시 플랫폼 라이선스와 함께 Xamarin 사용자에 대 한 문제 해결 문서입니다. (MSDN 라이선스 소유자에 게가를 참조 해야 [라이선스 옵션을 안내](~/cross-platform/get-started/requirements.md) 대신 합니다.)
-
 ## <a name="product-specific-questions"></a>제품 관련 질문
 
 - [Android](~/android/troubleshooting/questions/index.md)
 - [iOS](~/ios/troubleshooting/questions/index.md)
 - [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)
-
-
-
-## <a name="related-links"></a>관련 링크
-
-- [Android Faq](~/android/troubleshooting/questions/index.md)
-- [iOS Faq](~/ios/troubleshooting/questions/index.md)
-- [Xamarin.Forms Faq](~/xamarin-forms/troubleshooting/questions/index.md)
-- [Xamarin.UITest Faq](https://developer.xamarin.com~/testcloud/uitest/questions/)

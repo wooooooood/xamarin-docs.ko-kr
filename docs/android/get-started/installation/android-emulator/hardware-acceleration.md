@@ -6,12 +6,12 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
-ms.openlocfilehash: f074bca7571188b14a36bd4e6c59a6fdf8df9339
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/04/2018
+ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android Emulator 하드웨어 가속
 
@@ -20,13 +20,14 @@ Android SDK 에뮬레이터는 하드웨어 가속이 없으면 매우 느려질
 
 ## <a name="haxm-overview"></a>HAXM 개요
 
-HAXM은 Intel VT(가상화 기술)를 사용하여 호스트 컴퓨터에서Android 앱 에뮬레이션 속도를 높이는 하드웨어 기반 가상화 엔진(하이퍼바이저)입니다. HAXM은 Intel에서 제공하는 Android x86 에뮬레이터 이미지와 공식 Android SDK Manager와 함께 VT 지원 시스템에서 더 빠른 Android 에뮬레이션을 지원합니다 VT 기능이 있는 Intel CPU가 탑재된 컴퓨터에서 개발 중인 경우 HAXM을 활용하여 Android SDK 에뮬레이터의 속도를 크게 높일 수 있습니다(사용 중인 CPU가 VT를 지원하는지 확인하려면 [프로세서가 Intel 가상화 기술을 지원하는지 확인](https://www.intel.com/content/www/us/en/support/processors/000005486.html) 참조).
+HAXM은 Intel VT(가상화 기술)를 사용하여 호스트 컴퓨터에서Android 앱 에뮬레이션 속도를 높이는 하드웨어 기반 가상화 엔진(하이퍼바이저)입니다. HAXM은 Intel에서 제공하는 Android x86 에뮬레이터 이미지와 공식 Android SDK Manager와 함께 VT 지원 시스템에서 더 빠른 Android 에뮬레이션을 지원합니다 
 
-HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 이를 사용합니다. ([구성 및 사용](~/android/deploy-test/debugging/android-sdk-emulator/index.md)에 설명된 대로) **x86** 기반 가상 장치를 선택하면 가상 장치에서 하드웨어 가속을 위해 HAXM을 사용합니다. Android SDK 에뮬레이터를 처음으로 사용하기 전에 HAXM이 설치되어 있고 Android SDK 에뮬레이터에서 사용할 수 있는지 확인하는 것이 좋습니다.
+VT 기능이 있는 Intel CPU가 탑재된 컴퓨터에서 개발 중인 경우 HAXM을 활용하여 Android SDK 에뮬레이터의 속도를 크게 높일 수 있습니다(사용 중인 CPU가 VT를 지원하는지 확인하려면 [프로세서가 Intel 가상화 기술을 지원하는지 확인](https://www.intel.com/content/www/us/en/support/processors/000005486.html) 참조).
 
 > [!NOTE]
-> 가상 머신에서 HAXM을 실행할 수 없습니다.
+> VM 가속화된 에뮬레이터는 VirtualBox, VMWare 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Google Android 에뮬레이터를 실행해야 합니다.
 
+HAXM을 사용할 수 있는 경우 Android SDK 에뮬레이터는 자동으로 이를 사용합니다. ([구성 및 사용](~/android/deploy-test/debugging/android-sdk-emulator/index.md)에 설명된 대로) **x86** 기반 가상 장치를 선택하면 가상 장치에서 하드웨어 가속을 위해 HAXM을 사용합니다. Android SDK 에뮬레이터를 처음으로 사용하기 전에 HAXM이 설치되어 있고 Android SDK 에뮬레이터에서 사용할 수 있는지 확인하는 것이 좋습니다.
 
 ## <a name="verifying-haxm-installation"></a>HAXM 설치 확인
 
@@ -180,6 +181,11 @@ Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니�
 8. 컴퓨터가 다시 부팅된 후 (이전 단계에 설명된 대로) Hyper-V가 비활성화되었는지 다시 확인하세요.
 
 Hyper-V가 아직 비활성화되지 않은 경우 도메인 가입 컴퓨터의 정책으로 인해 Device Guard 또는 Credential Guard가 비활성화되지 않을 수 있습니다. 이 경우 도메인 관리자에게 Credential Guard를 사용하지 않을 수 있도록 예외를 요청할 수 있습니다. 또는 도메인에 가입되지 않은 컴퓨터를 사용하여 HAXM을 사용할 수 있습니다.
+
+## <a name="hardware-acceleration-and-amd-cpus"></a>하드웨어 가속 및 AMD CPU
+
+현재 Google Android 에뮬레이터는 [Linux에서만](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies) AMD 하드웨어 가속을 지원하므로 Windows를 실행하는 AMD 기반 컴퓨터에는 하드웨어 가속을 사용할 수 없습니다.
+
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

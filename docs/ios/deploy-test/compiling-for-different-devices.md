@@ -1,17 +1,16 @@
 ---
-title: "다른 장치용으로 컴파일"
-ms.topic: article
+title: 다른 장치용으로 컴파일
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 12b8f51156c2ed750c59ef79522121c6c5d2c03c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 039e0a931613ec79ccd6f2b13bc18ae6b80f5195
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="compiling-for-different-devices"></a>다른 장치용으로 컴파일
 

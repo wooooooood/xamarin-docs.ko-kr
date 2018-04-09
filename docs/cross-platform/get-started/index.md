@@ -1,7 +1,6 @@
 ---
-title: "시작"
-description: "이러한 심층 가이드를 사용하여 처음부터 배포까지 모바일 응용 프로그램을 개발하는 방법에 대해 알아봅니다."
-ms.topic: article
+title: 시작
+description: 이러한 심층 가이드를 사용하여 처음부터 배포까지 모바일 응용 프로그램을 개발하는 방법에 대해 알아봅니다.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 8d9acbf5fa53c2fa94d1a15d51de9d3db48a16fe
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started"></a>시작
 
@@ -23,11 +22,13 @@ _이러한 심층 가이드를 사용하여 처음부터 배포까지 모바일 
 
 ## <a name="build-your-first-app"></a>첫 번째 앱 빌드
 
-바로 코딩을 시작하려면 첫 번째 앱을 빌드할 수 있도록 빠른 시작 가이드를 선택합니다.
+> [!div class="nextstepaction"]
+> [Xamarin.Forms 빠른 시작](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+
+Android XML 또는 Xcode Storyboard와 같은 기본 UI 기술을 사용하여 앱을 제작하려면 다음 플랫폼별 가이드 중 하나를 사용합니다.
 
 * [Android 빠른 시작](~/android/get-started/hello-android/hello-android-quickstart.md)
 * [iOS 빠른 시작](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-* [Xamarin.Forms 빠른 시작](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
 * [Mac 시작](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>모바일 개발 시작하기
@@ -47,7 +48,7 @@ Xamarin 작동 방법 및 모바일 앱 개발 프로젝트에 접근하는 방�
 이 문서에서는 Mac용 Visual Studio의 개요, IDE(통합 개발 환경)를 제공합니다.
 
 
-## <a name="xamarin-university-video"></a>Xamarin University 비디오
+## <a name="get-started-with-xamarin-university"></a>Xamarin University 시작
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 

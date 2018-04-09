@@ -6,11 +6,11 @@ ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 8112f9bfc8975b12e3c300c0c981d21749173f7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: befcdcbee3114e760cec94a61a84106fddc72cf9
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>Jenkins는 Xamarin에서 지원 되지 않는 이유는?
 
@@ -51,7 +51,3 @@ SDK 위치를 설정 하기 위한 옵션; 사용 중인 정확한 Jenkins Andro
 > 오류: 스타터 버전의 Xamarin.iOS Xamarin Studio 외부에서 빌드를 지원 하지 않습니다. 
 
 이 시나리오의 가장 일반적인 원인은 Xamarin 라이선스와 연결 되지 않은 사용자 계정으로 로그인 하 여 Jenkins의 사용을입니다. 이 해결 하는 가장 간단한 방법은 사용자 계정을 통해 직접 앱을 Jenkins를 설치 하는 것입니다. 해당 프로세스 및 일부 추가적인 고려 사항이 아래에서 설명 됩니다. [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
-
-또 다른 원인은 어떤 방식으로든 손상 Xamarin 라이선스 정보를 사용할 수 있습니다는 [Xamarin 라이선스를 다시 동기화 가이드](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md) 이 시나리오의 문제를 해결 하려면.
-
-

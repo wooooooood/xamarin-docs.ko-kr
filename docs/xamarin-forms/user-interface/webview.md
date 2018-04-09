@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 54c70fda22782dfa9b6617c0832f2c17f0169b57
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96c57b66e5debbbb7318c22e33a21eb9b998395
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="webview"></a>웹 보기
 
@@ -399,6 +399,8 @@ void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 최근 발전 기술을 채택 하 여 하드웨어 가속 렌더링 및 JavaScript 컴파일와 같은 인기 있는 웹 브라우저의 각 살펴보았습니다. 안타깝게도, 보안 제한 때문에 대부분의 이러한 고급 기능을 통해 사용할 수 없었습니다에서의 iOS equaivalent `WebView`, `UIWebView`합니다. Xamarin.Forms `WebView` 사용 하 여 `UIWebView`합니다. 사용자 지정 렌더러를 사용 하 여 작성 해야 하는 문제가 경우 `WKWebView`, 더 빠른 검색을 지 원하는입니다. `WKWebView` iOS 8 이상 버전 에서만 지원 됩니다.
 
 기본적으로 Android에서 WebView은 약 기본 제공 브라우저 만큼 빠릅니다.
+
+[UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치 자체 Edge 브라우저를 사용 하 여 동일한 성능을 표시 됩니다.
 
 `WebBrowser` 컨트롤에 Windows Phone 8 및 Windows Phone 8.1에서는 최신 HTML5 지원 기능 하지 및 종종는 성능이 저하 될 수 있습니다. Windows Phone 사이트 표시 되는 방법을 알고 있어야 `WebView`합니다. Internet Explorer에서 테스트할 충분 하지 않습니다.
 
