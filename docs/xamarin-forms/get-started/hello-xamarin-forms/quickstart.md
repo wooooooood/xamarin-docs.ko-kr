@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: a1adaa20bb649dd51547e3bff74e60e0d5c001af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e8d1064e76c2ccdeb14302d30428cd932444a0f5
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
@@ -822,7 +822,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -843,6 +843,9 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     ```
 
     **파일 > 저장**을 선택하여(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml.cs** 파일에 저장하고 파일을 닫습니다.
+
+    > [!NOTE]
+    > 샘플 코드는 이전 템플릿을 기반으로 하기 때문에 `Theme="@style/MainTheme"`을 사용합니다. 테마 이름에 대한 컴파일러 오류가 발생하면 **Phoneword/Droid/Resources/values/styles.xml**에서 올바른 스타일 이름을 확인할 수 있습니다.
 
 26. **Solution Pad**에서 **속성** 폴더를 확장한 다음 **AndroidManifest.xml** 파일을 두 번 클릭합니다.
 
