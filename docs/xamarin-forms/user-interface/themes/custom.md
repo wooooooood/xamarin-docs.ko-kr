@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 647ed1723bcc98b97c03ad824fbae0060854d6a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-custom-theme"></a>사용자 지정 테마 만들기
 
@@ -74,7 +74,7 @@ xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 모서리 반지름을 사용 하 여 적용 되는 `BindableProperty` 적용 하 여 구현 됩니다는 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다. 효과에 플랫폼 관련 코드가 필요는 [iOS](#ios) 및 [Android](#android) 프로젝트 (아래 표시).
 
 ```csharp
-namemspace ThemesDemo
+namespace ThemesDemo
 {
   public static class ThemeEffects
   {

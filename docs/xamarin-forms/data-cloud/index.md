@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f20042b9599f7b4dde699a125e63c5ce435f6bc5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e67820fa83ddea46f934b4eaedde2c6334f9cc6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data--cloud-services"></a>데이터 및 클라우드 서비스
 
@@ -25,11 +25,11 @@ Xamarin 플랫폼에서 플랫폼 간 웹 서비스 사용에 대 한 소개를 
 
 ## <a name="consuming-web-servicesxamarin-formsdata-cloudconsumingindexmd"></a>[웹 서비스 사용](~/xamarin-forms/data-cloud/consuming/index.md)
 
-이 가이드에 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. 세션에서 다루게 통신할 [ASMX 서비스](consuming/asmx.md), [WCF 서비스](consuming/wcf.md), [REST 서비스](consuming/rest.md), [Azure 모바일 앱](consuming/azure.md), 및 [ Amazon 웹 서비스](consuming/aws.md)합니다.
+이 가이드에 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. 세션에서 다루게 통신할 [ASMX 서비스](consuming/asmx.md), [WCF 서비스](consuming/wcf.md), [REST 서비스](consuming/rest.md), 및 [Azure 모바일 앱](consuming/azure.md)합니다.
 
 ## <a name="authenticating-access-to-web-servicesxamarin-formsdata-cloudauthenticationindexmd"></a>[웹 서비스에 대한 액세스 인증](~/xamarin-forms/data-cloud/authentication/index.md)
 
-이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다. 주제를 다룹니다 [기본 인증을 사용 하 여 REST 서비스와](authentication/rest.md), [Xamarin.Auth 구성 요소를 사용 하 여 OAuth id 공급자에 대 한 인증](authentication/oauth.md), 기본 제공 된 인증을 사용 하 고 제공 되는 메커니즘 [Azure 모바일 앱](authentication/azure.md), 및 [Amazon 웹 서비스](authentication/aws.md)합니다.
+이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다. 주제를 다룹니다 [기본 인증을 사용 하 여 REST 서비스와](authentication/rest.md), [Xamarin.Auth 구성 요소를 사용 하 여 OAuth id 공급자에 대 한 인증](authentication/oauth.md), 기본 제공 된 인증을 사용 하 고 제공 되는 메커니즘 [Azure 모바일 앱](authentication/azure.md)합니다.
 
 ## <a name="synchronizing-data-with-web-servicessyncindexmd"></a>[웹 서비스와 데이터 동기화](sync/index.md)
 

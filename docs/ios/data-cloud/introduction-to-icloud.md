@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a62d4621a8f3ace64401d64e35c806317a591c03
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -30,6 +30,9 @@ IOS 5에서에서 iCloud 저장소 API 응용 프로그램을 사용자 문서 �
 - **개별 파일 및 디렉터리** -파일 시스템에서 직접 다 수의 서로 다른 파일을 관리 합니다.
 
 이 문서는 처음 두-키-값 쌍 및 UIDocument 하위 클래스-형식과 Xamarin.iOS의 이러한 기능을 사용 하는 방법을 설명 합니다.
+
+> [!IMPORTANT]
+> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -437,4 +440,4 @@ Apple 제공 [iOS 데이터 저장소 지침](http://developer.apple.com/icloud/
 - [iCloud 세미나 샘플 코드](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud 세미나 슬라이드](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [iCloud Storage](http://support.apple.com/kb/HT4847)
+- [iCloud 저장소](http://support.apple.com/kb/HT4847)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -33,9 +33,17 @@ Xamarin.Forms는 확장 가능 하 고 사용 하 여 플랫폼 특정 기능을
 
 일부 iOS 스타일 지정을 통해 수행할 수 **Info.plist** 및 `UIAppearance` API입니다. 이 가이드에서는 iOS 앱의 핵심 스포트라이트 검색을 포함 하는 Xamarin.Forms 솔루션에 iOS 9 기능을 포함 하는 방법의 예입니다.
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin.Forms는 GTK # 응용 프로그램에 대 한 미리 보기 지원이 되었습니다.
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin.Forms는 macOS 앱에 대 한 미리 보기 지원이 되었습니다.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms에는 Windows Presentation Foundation (WPF) 응용 프로그램에 대 한 미리 보기 지원이 되었습니다.
 
 ## <a name="native-formsnative-formsmd"></a>[네이티브 양식](native-forms.md)
 

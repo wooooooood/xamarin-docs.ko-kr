@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: df0e188efd2791b03a63c31b715ed1da77079230
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authenticating-access-to-web-services"></a>웹 서비스에 대 한 액세스 인증
 
@@ -36,11 +36,6 @@ Azure Active Directory B2C 연결 소비자 웹 및 모바일 응용 프로그�
 ## <a name="integrating-azure-active-directory-b2c-with-azure-mobile-appsazure-ad-b2c-mobile-appmd"></a>[Azure Mobile Apps와 Azure Active Directory B2C 통합](azure-ad-b2c-mobile-app.md)
 
 Azure Active Directory B2C Azure 모바일 앱에 대 한 인증 워크플로 관리 데 사용할 수 있습니다. 이 방법을 사용 id 관리 환경을 클라우드에 완전히 정의 하 고 모바일 응용 프로그램 코드를 변경 하지 않고 수정할 수 있습니다. 이 문서에서는 Xamarin.Forms를 사용한 인증 및 Azure 모바일 앱 인스턴스에 대 한 권한 부여를 제공 하려면 Azure Active Directory B2C를 사용 하는 방법을 보여줍니다.
-
-## <a name="authenticating-users-with-an-amazon-simpledb-serviceawsmd"></a>[Amazon SimpleDB 서비스와 사용자 인증](aws.md)
-
-Amazon SimpleDB 자체 사용 권한 리소스 기반의 시스템을 제공 하지 않습니다. 대신, id 공급자에 대 한 인증 갖도록 하는 데 사용자만 자신의 데이터에 대 한 액세스 SimpleDB 도메인에 사용할 수 있습니다. 이 문서에서는 자신의 SimpleDB 데이터에 대 한 사용자 액세스를 제한 하는 방법에 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

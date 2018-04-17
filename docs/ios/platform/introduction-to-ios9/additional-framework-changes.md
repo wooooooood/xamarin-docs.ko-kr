@@ -6,11 +6,11 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5561cccfd0968c309526aae1e5dc90831ca681b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -64,6 +64,9 @@ CloudKit 프레임 워크는 해당 액세스 iCloud 응용 프로그램 개발�
 - [CloudKit JS 참조](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -Apple의 CloudKit JS 설명서입니다.
 - [웹 서비스 참조 CloudKit](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -CloudKit HTTP 인터페이스를 설명 하는 Apple의 참조 합니다.
 - [CloudKit 카탈로그의 경우: 소개 (Cocoa 및 JavaScript) CloudKit](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -CloudKit 및 CloudKit JS를 사용 하 여 Apple의 샘플 응용 프로그램입니다.
+
+> [!IMPORTANT]
+> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
 
 ## <a name="foundation-framework-additions"></a>Foundation 프레임 워크 추가
 

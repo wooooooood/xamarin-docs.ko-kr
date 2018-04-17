@@ -6,16 +6,20 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: f4a1451cb848f4da1f595c15d946f4e05292900d
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
 _이 연습에서는 Xamarin.Android 응용 프로그램에서 푸시 알림을 라고도 하는 원격 알림을 구현 하려면 Google Cloud Messaging을 사용 하는 방법에 대 한 단계별 설명은 제공 합니다. Google 클라우드 메시징 (GCM)와 통신 하기 위해 구현 해야 하는 다양 한 클래스를 설명 하 고 Android manifest GCM에 대 한 액세스 권한을 설정 하는 방법을 설명 종단 간 샘플 테스트 프로그램 메시징 코드를 보여 줍니다._
+
+> [!NOTE]
+> GCM에 의해 대체 되었습니다 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM 서버 및 클라이언트 Api [사용이 중단 된](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) 는 더 이상 사용할 수 2019 년 4 월 11 빨리 합니다.
 
 ## <a name="gcm-notifications-overview"></a>GCM 알림 개요
 

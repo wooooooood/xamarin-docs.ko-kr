@@ -7,11 +7,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3b8211e4c38fd37040fab5b35be4709d4b926c91
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS 시에라 소개
 
@@ -64,6 +64,9 @@ Apple Safari 웹 브라우저, 페이지 워드 프로세서 및 숫자 스프�
 사용자에 게 레코드에 대 한 액세스 권한이 있는 사람에 대 한 전체 읽기/쓰기 제어 및 CloudKit 보내고 레코드 공유 초대를 수락 하는 것에 대 한 전체 UI를 제공 합니다.
 
 자세한 내용은 Apple의를 참조 하십시오 [CloudKit 프레임 워크 참조](https://developer.apple.com/reference/clockkit) 및 [CloudKit JS 프레임 워크 참조](https://developer.apple.com/reference/cloudkitjs)합니다.
+
+> [!IMPORTANT]
+> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
 
 <a name="Safari-App-Extensions-Support" />
 

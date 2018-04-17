@@ -6,12 +6,12 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 73ff82f3bf36aa54422c1693c6bf07731480b7f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: 29cccf414759a79a8ba74dfc35b7ba9f6a1cc5d6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="google-cloud-messaging"></a>Google 클라우드 메시징
 
@@ -21,6 +21,9 @@ _Google 클라우드 메시징 (GCM)는 모바일 응용 프로그램 및 서버
 
 이 항목에서는 방법을 응용 프로그램 및 응용 프로그램 서버 사이 메시지를 라우팅하 Google Cloud Messaging에 대 한 높은 수준의 개요를 제공 하 고 앱 GCM 서비스를 사용할 수 있도록 자격 증명을 인식 하기 위한 단계별 절차를 제공 합니다.
 
+> [!NOTE]
+> GCM에 의해 대체 되었습니다 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM 서버 및 클라이언트 Api [사용이 중단 된](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) 는 더 이상 사용할 수 2019 년 4 월 11 빨리 합니다.
 
 ## <a name="overview"></a>개요
 

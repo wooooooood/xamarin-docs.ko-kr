@@ -6,12 +6,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: e2f25504b971a0332dc51dc9b017c9c83222ec57
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 사용 하 여 원격 알림을 클라우드 메시징
 
@@ -427,7 +427,7 @@ if (Intent.Extras != null)
 긴 문자열 붙이지 **토큰** Firebase 콘솔 붙여넣으면 하는 인스턴스 ID 토큰 &ndash; 선택 하 고이 문자열을 클립보드에 복사 합니다. 인스턴스 ID 토큰을 표시 되지 않으면 다음 줄의 맨 위에 추가 `OnCreate` 되었는지 확인 하는 메서드 **google services.json** 올바르게 구문 분석:
 
 ```csharp
-Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
+Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
 `google_app_id` 출력 창에 기록 된 값과 일치 해야는 `mobilesdk_app_id` 에 기록 된 값 **google services.json**합니다. 
@@ -683,6 +683,27 @@ SendNotification(message.GetNotification().Body, message.Data);
 알림을 열면 Firebase 콘솔 알림 GUI에서 보낸 마지막 메시지를 표시 됩니다. 
 
 [![전경 알림 전경 아이콘과 함께 표시](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
+
+
+## <a name="disconnecting-from-fcm"></a>FCM에서 연결 끊기
+
+항목에서 구독을 취소 하려면 호출는 [UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29) 에서 메서드는 [FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging) 클래스입니다. 등록을 취소 하기 위해는 _뉴스_ 항목 구독을 이전에 **Unsubscribe** 다음 처리기 코드를 사용 하 여 레이아웃에 단추를 추가할 수 없습니다:
+
+```csharp
+var unSubscribeButton = FindViewById<Button>(Resource.Id.unsubscribeButton);
+unSubscribeButton.Click += delegate {
+    FirebaseMessaging.Instance.UnsubscribeFromTopic("news");
+    Log.Debug(TAG, "Unsubscribed from remote notifications");
+};
+```
+
+FCM 모두에서 장치를 등록 해제 하려면 인스턴스 ID를 호출 하 여 삭제는 [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 에서 메서드는 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스입니다. 예를 들어:
+
+```csharp
+FirebaseInstanceId.Instance.DeleteInstanceId();
+```
+
+이 메서드 호출은 삭제는 인스턴스 ID와 연결 된 데이터가 있습니다. 결과적으로, FCM 데이터를 장치로 정기적으로 보낼 중단 됩니다.
 
  
 ## <a name="troubleshooting"></a>문제 해결

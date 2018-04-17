@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -20,6 +20,9 @@ _icloud와 사용자의 계정을 통해 자동 동기화를 지 원하는 iClou
 CloudKit 프레임 워크는 해당 액세스 iCloud 응용 프로그램 개발을 간소화합니다. 여기에 응용 프로그램 데이터 및 자산 권한으로 응용 프로그램 정보를 안전 하 게 저장할 수를 검색 합니다. 이 키트 개인 정보를 공유 하지 않고 자신의 iCloud Id와 응용 프로그램에 대 한 액세스를 허용 하 여 사용자에 게 익명의 계층을 제공 합니다.
 
 개발자는 클라이언트 쪽 응용 프로그램에 집중 하 고 서버 쪽 응용 프로그램 논리를 작성할 필요가 없도록 iCloud 수 수 있습니다. CloudKit 인증, 개인 및 공용 데이터베이스 및 구조화 된 데이터 및 자산 저장소 서비스를 제공합니다.
+
+> [!IMPORTANT]
+> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -276,7 +279,7 @@ newRecord ["name"] = asset;
 
 이제 CloudKit 내의 기본 개체의 모든 설명 했습니다. 컨테이너와 연결 된 응용 프로그램 및 데이터베이스를 포함 합니다. 데이터베이스에 레코드를 레코드 영역으로 그룹화 되 고 레코드 식별자가 가리키는 포함 합니다. 참조를 사용 하는 레코드 간의 부모-자식 관계 정의 됩니다. 마지막으로, 큰 파일 업로드 및 자산을 사용 하 여 레코드에 연결 된 수 있습니다.
 
-## <a name="cloudkit-convenience-api"></a>CloudKit Convenience API
+## <a name="cloudkit-convenience-api"></a>CloudKit 편의 API
 
 Apple는 CloudKit 사용 하기 위한 두 개의 다른 API 집합을 제공 합니다.
 

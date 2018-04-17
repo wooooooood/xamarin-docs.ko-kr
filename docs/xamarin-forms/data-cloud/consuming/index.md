@@ -1,21 +1,21 @@
 ---
 title: 웹 서비스 사용
-description: 이 가이드에 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. 주제를 다룹니다 ASMX 서비스, WCF 서비스, REST 서비스, Azure 모바일 앱 및 Amazon 웹 서비스와의 통신을 포함 합니다.
+description: 이 가이드에 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. Azure 모바일 앱 ASMX 서비스, WCF 서비스, REST 서비스와 통신 포함 하는 주제를 다룹니다.
 ms.prod: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 530b57c009a1f76d3756d7315856f74b6cda2f66
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a4c842ea7fd37ade9be0a9cb3e3ff7e50a6d1491
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consuming-web-services"></a>웹 서비스 사용
 
-_이 가이드에 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. 주제를 다룹니다 ASMX 서비스, WCF 서비스, REST 서비스, Azure 모바일 앱 및 Amazon 웹 서비스와의 통신을 포함 합니다._
+(_T) 가이드를 제공 하기 위해 다른 웹 서비스와 통신 하는 방법을 보여 줍니다 생성, 읽기, 업데이트 및 삭제 (CRUD) 기능을 Xamarin.Forms 응용 프로그램입니다. Azure 모바일 앱 ASMX 서비스, WCF 서비스, REST 서비스와 통신 포함 하는 주제를 다룹니다.
 
 ## <a name="consuming-an-aspnet-web-service-asmxxamarin-formsdata-cloudconsumingasmxmd"></a>[ASP.NET 웹 서비스 (ASMX)를 사용합니다.](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
@@ -32,11 +32,6 @@ REPRESENTATIONAL State Transfer ()은 웹 서비스를 구축 하기 위한 아�
 ## <a name="consuming-an-azure-mobile-appxamarin-formsdata-cloudconsumingazuremd"></a>[Azure 모바일 앱 사용](~/xamarin-forms/data-cloud/consuming/azure.md)
 
 Azure 모바일 앱을 사용 하 여 확장 가능한 백 엔드 모바일 인증, 오프 라인 동기화 및 푸시 알림을 지 원하는 Azure 앱 서비스에서 호스트 된 앱을 개발할 수 있습니다. Node.js 백 엔드를 사용 하는 Azure 모바일 앱에 적용할 수만,이 문서에서는 쿼리, 삽입, 업데이트 및 Azure 모바일 앱 인스턴스 테이블에 저장 된 데이터를 삭제 하는 방법을 설명 합니다.
-
-## <a name="consuming-an-amazon-simpledb-servicexamarin-formsdata-cloudconsumingawsmd"></a>[Amazon SimpleDB 서비스 사용](~/xamarin-forms/data-cloud/consuming/aws.md)
-
-Amazon SimpleDB 저장 하 고 Amazon의 클라우드의 데이터를에서 쿼리 하는 기능을 제공 하는 웹 서비스입니다. 이 문서는 쿼리, 만들기 및 바꾸기, AWS SDK for.NET을 사용 하며 SimpleDB 서비스에 저장 된 데이터를 삭제 하는 방법을 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

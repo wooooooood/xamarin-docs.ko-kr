@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 703441e3fc58beeb33e519f3781387a59c1c1cef
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-sample"></a>이 샘플 이해
 
@@ -86,7 +86,7 @@ public class TodoItem
 
 일부 샘플 응용 프로그램에 추가 메서드를 포함 하는 또한는 `TodoItemManager` 클래스는 사용자 인증 프로세스를 관리 하는 데 사용 됩니다.
 
-웹 서비스 작업을 직접 호출 하지 않고는 `TodoItemManager` 에 삽입 하는 종속 클래스에서 메서드를 호출 하는 메서드는 `TodoItemManager` 생성자입니다. 샘플 응용 프로그램 하나를 삽입 합니다. 예를 들어는 `SimpleDBStorage` 클래스에 `TodoItemManager` Amazon의 SimpleDB 서비스에 대 한 작업을 호출 하는 구현을 제공 하는 생성자입니다.
+웹 서비스 작업을 직접 호출 하지 않고는 `TodoItemManager` 에 삽입 하는 종속 클래스에서 메서드를 호출 하는 메서드는 `TodoItemManager` 생성자입니다. 샘플 응용 프로그램 하나를 삽입 합니다. 예를 들어는 `RestService` 클래스에 `TodoItemManager` REST Api를 사용 하 여 데이터에 액세스 하는 구현을 제공 하는 생성자입니다.
 
 ### <a name="translating-text-to-speech"></a>Text to Speech 변환
 
@@ -113,4 +113,3 @@ void OnSpeakActivated (object sender, EventArgs e)
 - [WCF 버전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
 - [REST 버전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
 - [Azure 버전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure)
-- [Amazon 웹 서비스 버전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS)

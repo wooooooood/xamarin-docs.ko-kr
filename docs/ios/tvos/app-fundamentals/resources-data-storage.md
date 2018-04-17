@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-and-data-storage"></a>리소스 및 데이터 저장소
 
@@ -55,6 +55,9 @@ Apple TV에 저장소 제한 되므로 뿐만 아니라는 있는 매우 제한 
 
 - **키-값 저장소 (은 KVS) iCloud** -소량의 정보 (1MB 미만)는 응용 프로그램 필요할 수 있습니다 (예: 사용자 기본 설정), iCloud은 KVS 저장소를 사용할 수 있습니다. iCloud은 KVS 데이터 클라우드와 동일한 응용 프로그램을 실행 하는 사용자의 장치를 모두 자동으로 동기화 됩니다. 자세한 내용은 참조 하십시오는 [키-값 저장소](~/ios/data-cloud/introduction-to-icloud.md) 의 섹션 우리의 [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md) 문서 또는 Apple의 [iCloud에 키 / 값 데이터에 대 한 디자인](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7) 설명서입니다.
 - **CloudKit** -Apple의 CloudKit 프레임 워크를 사용 하는 정보 (1MB 보다 큼), 큰 조각으로 저장 합니다. KVS 저장소 iCloud와 달리 CloudKit 데이터 응용 프로그램 (으로 단일 사용자에 게 개인 되 고)의 모든 사용자 간에 공유할 수 있습니다. 자세한 내용은 양식에서 참조 하세요 우리의 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 설명서 또는 Apple의 [CloudKit 빠른 시작](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987)합니다.
+
+> [!IMPORTANT]
+> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
 
 <a name="On-Demand-Resources" />
 

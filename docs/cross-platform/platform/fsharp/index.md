@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: ed934e4a5896a004e0f226d156109df182cfebd3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 20d5a81a6a33465e5b883e495600b57400adf199
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="f35"></a>F&AMP;#35;
 
@@ -21,7 +21,7 @@ F # succinctness, 표현할 수, 및의 함수형 프로그래밍 형식 유추,
 
 F #은 모든 Xamarin 지원 플랫폼에서 Xamarin 사용자에 게는 프로그래밍 언어로 사용할 수 있는: iOS 및 Android, macOS 등입니다.
 
-- [F# 가이드](https://docs.microsoft.com/en-us/dotnet/fsharp/)
+- [F# 가이드](https://docs.microsoft.com/dotnet/fsharp/)
 - [F # 및 Xamarin 시작](overview.md)
 - [F # Mobile 샘플](samples.md)
 
@@ -36,4 +36,3 @@ F #는 Mac.에 대 한 Visual Studio에서 지원 되는 언어 지원 되는 �
 - F # Interactive에서 구문 강조 표시
 - Xamarin.Forms, iOS 및 Android 용 F # 템플릿
 - [*그 밖의 기능*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
-
