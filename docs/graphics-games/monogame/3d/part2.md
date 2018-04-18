@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4736bedd413663af098bbad522cc56f432e36ea0
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>3D 그래픽 꼭지점을 MonoGame에 그리기
 
@@ -29,19 +29,18 @@ _MonoGame 3D 개체 당 포인트 단위로 렌더링 되는 방법을 정의 �
 
 이 연습에서는 다음 항목을 설명 합니다.
 
- - 프로젝트 만들기
- - 꼭 짓 점을 만들기
- - 그리기 코드를 추가합니다.
- - 질감을 사용 하 여 렌더링
- - 질감 좌표를 수정합니다.
- - 모델과 함께 꼭지점을 렌더링
+- 프로젝트 만들기
+- 꼭 짓 점을 만들기
+- 그리기 코드를 추가합니다.
+- 질감을 사용 하 여 렌더링
+- 질감 좌표를 수정합니다.
+- 모델과 함께 꼭지점을 렌더링
 
 완료 된 프로젝트에는 꼭 짓 점 배열을 사용 하 여 그려진 바둑판된 층을 포함 됩니다.
 
 ![](part2-images/image3.png "완료 된 프로젝트에는 꼭 짓 점 배열을 사용 하 여 그려진 바둑판된 층 포함 됩니다.")
 
-
-# <a name="creating-a-project"></a>프로젝트 만들기
+## <a name="creating-a-project"></a>프로젝트 만들기
 
 첫째, 우리의 시작 지점으로 사용할 프로젝트를 다운로드 합니다 했습니다. 모델 프로젝트에서는 [있는 여기](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/)합니다.
 
@@ -51,12 +50,11 @@ _MonoGame 3D 개체 당 포인트 단위로 렌더링 되는 방법을 정의 �
 
 이 프로젝트의 끝에서 우리 합니다 수 고유한 사용자 지정 꼭지점 렌더링 함께 사용 하면 로봇 `Model`이므로 로봇 렌더링 코드를 삭제 하지 않겠습니다. 대신 삭제 조금 합니다는 `Game1.Draw` 지금은 드로잉 6 로봇의 제거를 호출 합니다. 이 작업을 수행 하려면 엽니다는 **Game1.cs** 파일를 찾습니다는 `Draw` 메서드. 다음 코드를 포함 하도록 수정 합니다.
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
-    GraphicsDevice.Clear(Color.CornflowerBlue);
-    base.Draw(gameTime);
+  GraphicsDevice.Clear(Color.CornflowerBlue);
+  base.Draw(gameTime);
 }
 ```
 
@@ -64,36 +62,33 @@ protected override void Draw(GameTime gameTime)
 
 ![](part2-images/image5.png "이 빈 파란색 화면을 표시 하는 게임 결과")
 
-
-# <a name="creating-the-vertices"></a>꼭 짓 점을 만들기
+## <a name="creating-the-vertices"></a>꼭 짓 점을 만들기
 
 이 기 하 도형을 정의 하는 꼭지점 배열을 만듭니다. 이 연습에서는 만들게 됩니다를 3D 평면 (3D 공간에서 사각형, 비행기 없습니다). 이 평면 네 면 및 네 모서리에으로 세 개의 꼭 짓 필요 하며 각 하는 두 개의 삼각형 중 구성 됩니다. 따라서 여기서 정의 합니다 총 6 개의 점입니다.
 
 지금까지 논의해 왔습니다 일반적인 의미에서 정점에 대 한 하지만 MonoGame 꼭 짓 점에 대해 사용할 수 있는 몇 가지 표준 구조체를 제공 합니다.
 
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
 
 각 종류의 이름이 포함 된 구성 요소를 나타냅니다. 예를 들어 `VertexPositionColor` 위치 및 색에 대 한 값을 포함 합니다. 각 구성 요소에 살펴보겠습니다.
 
- - 위치 – 모든 꼭 짓 점 형식에는 한 `Position` 구성 요소입니다. `Position` 값 (X, Y 및 Z) 3D 공간에서의 꼭 짓 점 위치를 정의 합니다.
- - 색 – 꼭지점 선택적으로 지정할 수는 `Color` 색조 사용자 지정을 수행 하는 값입니다.
- - 보통-법선 개체의 표면을 마주보는 어떤 방식으로 정의 합니다. 정규 분포는 표면 얼마나 밝은 영향 받은 향하도록 조명 방향 이후을 가진 개체를 렌더링 하는 경우 필요 합니다. 정규 분포는 일반적으로로 지정 되는 *단위 벡터* – 1의 길이가 3 차원 벡터입니다.
- - 질감 – 질감 질감 좌표 – 즉,: 질감의 부분을 지정 된 꼭 짓 점에 배치를 참조 합니다. 질감 값은 3D 질감으로 개체를 렌더링 하는 경우에 필요 합니다. 질감 좌표는 정규화 된 좌표 값은 0과 1 사이 해당 됩니다. 질감 좌표가이 가이드의 뒷부분에 자세히 설명 합니다.
+- 위치 – 모든 꼭 짓 점 형식에는 한 `Position` 구성 요소입니다. `Position` 값 (X, Y 및 Z) 3D 공간에서의 꼭 짓 점 위치를 정의 합니다.
+- 색 – 꼭지점 선택적으로 지정할 수는 `Color` 색조 사용자 지정을 수행 하는 값입니다.
+- 보통-법선 개체의 표면을 마주보는 어떤 방식으로 정의 합니다. 정규 분포는 표면 얼마나 밝은 영향 받은 향하도록 조명 방향 이후을 가진 개체를 렌더링 하는 경우 필요 합니다. 정규 분포는 일반적으로로 지정 되는 *단위 벡터* – 1의 길이가 3 차원 벡터입니다.
+- 질감 – 질감 질감 좌표 – 즉,: 질감의 부분을 지정 된 꼭 짓 점에 배치를 참조 합니다. 질감 값은 3D 질감으로 개체를 렌더링 하는 경우에 필요 합니다. 질감 좌표는 정규화 된 좌표 값은 0과 1 사이 해당 됩니다. 질감 좌표가이 가이드의 뒷부분에 자세히 설명 합니다.
 
 우리의 평면 층, 역할을 수행 하며이 렌더링을 수행 하는 경우 질감을 적용 하고자는 `VertexPositionTexture` 우리의 꼭지점을 정의 하는 형식입니다.
 
 첫째, 구성원 Game1 클래스를 추가 합니다.
-
 
 ```csharp
 VertexPositionTexture[] floorVerts; 
 ```
 
 다음으로 우리의 정점에 정의 `Game1.Initialize`합니다. 이 문서의 앞부분에서 참조 되는 제공된 템플릿을 포함 하지 않는 통지는 `Game1.Initialize` 전체 메서드를 추가 해야 하므로 `Game1`:
-
 
 ```csharp
 protected override void Initialize ()
@@ -116,8 +111,7 @@ protected override void Initialize ()
 
 렌더링 코드 구현 완료 될 때까지 꼭 짓 점을 시각화 하려면 다이어그램을 사용 해야 합니다.
 
-
-# <a name="adding-drawing-code"></a>그리기 코드를 추가합니다.
+## <a name="adding-drawing-code"></a>그리기 코드를 추가합니다.
 
 정의 된 우리의 y 위치를 만들었으므로 이제 해당 렌더링 코드를 작성할 수 있습니다.
 
@@ -128,11 +122,10 @@ protected override void Initialize ()
 ...
 VertexPositionTexture[] floorVerts;
 // new code:
-BasicEffect effect; 
+BasicEffect effect;
 ```
 
 다음으로 수정 된 `Initialize` 효과 정의 하는 메서드:
-
 
 ```csharp
 protected override void Initialize ()
@@ -150,11 +143,10 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 이제 그리기를 수행 하는 코드를 추가할 수 있습니다.
-
 
 ```csharp
 void DrawGround()
@@ -193,7 +185,7 @@ void DrawGround()
             // The number of triangles to draw
             2);
     }
-} 
+}
 ```
 
 호출 해야 `DrawGround` 에 우리의 `Game1.Draw`:
@@ -215,13 +207,11 @@ protected override void Draw (GameTime gameTime)
 
 위의 코드에서 세부 정보 중 일부에 대해 살펴보겠습니다.
 
-
-## <a name="view-and-projection-properties"></a>보기 및 프로젝션 속성
+### <a name="view-and-projection-properties"></a>보기 및 프로젝션 속성
 
 `View` 및 `Projection` 장면에서는 보는 방법을 제어 하는 속성입니다. म 수정이 코드 나중에 다시 모델 렌더링 코드를 추가 했습니다. 특히, `View` 위치 및 카메라의 방향을 제어 하 고 `Projection` 컨트롤은 *시야* (사용할 수 있는 카메라를 확대/축소) 합니다.
 
-
-## <a name="techniques-and-passes"></a>기술 및 전달
+### <a name="techniques-and-passes"></a>기술 및 전달
 
 한 번 할당 되어 속성을 수행할 수 있습니다이 효과 대해 실제 렌더링 합니다. 
 
@@ -229,8 +219,7 @@ protected override void Draw (GameTime gameTime)
 
 염두에 두어야 하는 `foreach` 루프 내부의 복잡성에 관계 없이 모든 효과 렌더링 동일한 C# 코드를 사용 하면 `BasicEffect`합니다.
 
-
-## <a name="drawuserprimitives"></a>DrawUserPrimitives
+### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
 `DrawUserPrimitives` 꼭 짓 점을 렌더링 됩니다. 첫 번째 매개 변수 구성 방법 및 우리는 우리의 꼭지점 메서드를 알려 줍니다. 사용 하도록 각 삼각형 세 개의 정렬 된 꼭 짓 정의한 있도록 구조화 있는 우리는 `PrimitiveType.TriangleList` 값입니다.
 
@@ -240,15 +229,13 @@ protected override void Draw (GameTime gameTime)
 
 마지막으로 렌더링할 수 삼각형 지정 합니다. 꼭 짓 점 배열에는 두 개의 삼각형 포함 하므로 값이 2 전달 합니다.
 
-
-# <a name="rendering-with-a-texture"></a>질감을 사용 하 여 렌더링
+## <a name="rendering-with-a-texture"></a>질감을 사용 하 여 렌더링
 
 이 시점에서 앱을 흰색 축 (관점)를 렌더링합니다. 그런 다음 질감 우리의 평면을 렌더링할 때 사용할이 프로젝트에 추가 합니다. 
 
 간단 하 게 유지 하 고.png MonoGame 파이프라인 도구를 사용 하지 않고이 프로젝트에 직접 추가 합니다. 이 작업을 수행 하려면 다운로드 [이.png 파일](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) 컴퓨터에 있습니다. 를 다운로드 한 후 마우스 오른쪽 단추로 클릭는 **콘텐츠** 솔루션 패드 고에서 폴더 **추가 > 파일 추가 중...**  . Android를 사용 하는 경우 다음이 폴더는 아래에 있을 수는 **자산** 관련 Android 프로젝트의 폴더에에서 있습니다. Ios, 그런 다음이 폴더에에서 있을 경우 iOS 프로젝트의 루트입니다. 위치로 이동 하 여 여기서 **checkerboard.png** 저장 되 고이 파일을 선택 합니다. 디렉터리에 파일을 복사 하려면 선택 합니다.
 
 다음으로 만드는 코드를 추가 하겠습니다 우리의 `Texture2D` 인스턴스. 먼저 추가 하는 `Texture2D` 의 구성원으로 `Game1` 아래에서 `BasicEffect` 인스턴스:
-
 
 ```csharp
 ...
@@ -274,11 +261,10 @@ protected override void LoadContent()
     {
         checkerboardTexture = Texture2D.FromStream (this.GraphicsDevice, stream);
     }
-} 
+}
 ```
 
 다음으로 수정 된 `DrawGround` 메서드. 지정 하는 데 필요한 유일한 수정 `effect.TextureEnabled` 를 `true` 설정할 수는 `effect.Texture` 를 `checkerboardTexture`:
-
 
 ```csharp
 void DrawGround()
@@ -315,7 +301,7 @@ void DrawGround()
             0,
             2);
     }
-} 
+}
 ```
 
 마지막으로 수정 해야는 `Game1.Initialize` 우리의 꼭지점도 질감을 할당 하는 메서드를 조정 합니다.
@@ -353,8 +339,7 @@ protected override void Initialize ()
 
 ![](part2-images/image8.png "평면 체크 무늬 패턴 표시")
 
-
-# <a name="modifying-texture-coordinates"></a>조정 텍스처를 수정 합니다.
+## <a name="modifying-texture-coordinates"></a>조정 텍스처를 수정 합니다.
 
 MonoGame 사용 하 여 질감 좌표 0 및 질감의 너비 또는 높이 사이 있지 않고 0과 1 사이의 좌표를 정규화 합니다. 다음 다이어그램은 정규화 된 좌표를 시각화 하는 데 도움이 됩니다.
 
@@ -391,7 +376,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 이 인해 20 회 반복 질감:
@@ -399,10 +384,9 @@ protected override void Initialize ()
 ![](part2-images/image10.png "이 인해 20 회 반복 질감")
 
 
-# <a name="rendering-vertices-with-models"></a>모델과 함께 꼭지점을 렌더링
+## <a name="rendering-vertices-with-models"></a>모델과 함께 꼭지점을 렌더링
 
 우리의 평면 제대로 렌더링 하 고, 했으므로 모든 항목을 함께 보려면 모델 다시 추가할 수 있습니다. 첫째, 모델 코드를 다시 추가 하겠습니다 우리의 `Game1.Draw` 메서드 (수정 된 위치):
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -425,7 +409,6 @@ protected override void Draw(GameTime gameTime)
 
 또한 만듭니다는 `Vector3` 에 `Game1` 우리의 카메라의 위치를 나타내는 합니다. 아래 필드를 추가 하겠습니다 우리의 `checkerboardTexture` 선언 합니다.
 
-
 ```csharp
 ...
 Texture2D checkerboardTexture;
@@ -434,7 +417,6 @@ Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 다음으로 로컬 제거 `cameraPosition` 에서 변수는 `DrawModel` 메서드:
-
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -458,7 +440,6 @@ void DrawModel(Vector3 modelPosition)
 
 마찬가지로 로컬 제거 `cameraPosition` 에서 변수는 `DrawGround` 메서드:
 
-
 ```csharp
 void DrawGround()
 {
@@ -478,7 +459,6 @@ void DrawGround()
 
 카메라 위치를 수정 했습니다 (등 해당 X 값을 늘려는 예에서 카메라를 왼쪽으로 이동) 값은 명확 하 게 및 모델 둘 다 영향을 있는지 확인할 수 있습니다.
 
-
 ```csharp
 Vector3 cameraPosition = new Vector3(15, 10, 10);
 ```
@@ -487,8 +467,7 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 ![](part2-images/image3.png "이 보기에이 코드에서는 발생")
 
-
-# <a name="summary"></a>요약
+## <a name="summary"></a>요약
 
 이 연습에서는 사용자 지정 렌더링을 수행 하려면 꼭 짓 점 배열을 사용 하는 방법을 배웠습니다. 이 경우 바둑판된 층 우리의 꼭 짓 점 기반 렌더링 질감으로 결합 하 여 만든 및 `BasicEffect`, 코드는 여기에 제시 된 하는 데 사용 모든 3D 렌더링에 대 한 기반으로 하지만 합니다. 했죠 동일한 장면의 모델을 기반으로 하는 꼭 짓 점 렌더링을 함께 사용할 수 있습니다.
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 243498e1d5a24a0a6b8d1e911b374df61dfa6971
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6c46d7648d1f1bb8863abe092bae5c44850d3cf1
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="an-introduction-to-urhosharp"></a>UrhoSharp 소개
 
 _이렇게 하면 UrhoSharp 개념에 대 한 간략 한 소개_
 
-![](introduction-images/urhosharp-icon.png "UrhoSharp는 Xamarin 및.NET 개발자를 위한 강력한 3D 게임 엔진은")
+![UrhoSharp 로고](introduction-images/urhosharp-icon.png)
 
 UrhoSharp는 Xamarin 및.NET 개발자를 위한 강력한 3D 게임 엔진입니다.  작업은 Apple의 SceneKit 및 SpriteKit를 하 고 물리학 포함, 탐색, 네트워킹 및 대부분의 플랫폼 크로스 여전히 되 고 있지만 더 합니다.
 
@@ -25,7 +25,7 @@ UrhoSharp는 Xamarin 및.NET 개발자를 위한 강력한 3D 게임 엔진입�
 
 UrhoSharp는 기능을 많이 게임 엔진:
 
- - 강력한 3D 그래픽 렌더링
+- 강력한 3D 그래픽 렌더링
 - [시뮬레이션 물리학](https://developer.xamarin.com/api/namespace/Urho.Physics/) (글머리 기호 라이브러리 사용)
 - [장면 처리](https://developer.xamarin.com/api/type/Urho.Scene/)
 - Await/비동기 지원
@@ -38,15 +38,15 @@ UrhoSharp는 기능을 많이 게임 엔진:
 - [충돌 감지에 대 한 볼록 집합 생성](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (StanHull 사용)
 - [오디오 재생](https://developer.xamarin.com/api/namespace/Urho.Audio/) (으로 **libvorbis**)
 
-# <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작
 
 UrhoSharp로 편리 하 게 배포는 [NuGet 패키지](https://www.nuget.org/) 수 추가 C# 또는 F # 프로젝트에 대상으로 하는 Windows, Mac, Android 또는 iOS입니다.  NuGet 엔진에서 사용 되는 기본 자산 (대 한 CoreData)와 프로그램을 실행 하는 데 필요한 라이브러리가 모두 포함 되어 있습니다.
 
-## <a name="urho-as-a-portable-class-library"></a>이식 가능한 클래스 라이브러리로 Urho
+### <a name="urho-as-a-portable-class-library"></a>이식 가능한 클래스 라이브러리로 Urho
 
 Urho 패키지 또는 플랫폼 특정 프로젝트에서 모든 플랫폼에서 모든 코드를 다시 사용할 수 있도록 이식 가능한 클래스 라이브러리 프로젝트에서 사용할 수 있습니다.  이 프로그램 플랫폼 특정 진입점을 작성 한 다음 공유 게임 코드에 제어를 전송 하는 모든 각 플랫폼에서 작업을 수행 하는 것을 의미 합니다.
 
-## <a name="samples"></a>샘플
+### <a name="samples"></a>샘플
 
 Mac 용 Visual Studio 또는 Visual Studio에서에서 샘플 솔루션을 열어 Urho의 기능에 대 한 경험을 얻을 수 있습니다.
 
@@ -68,7 +68,7 @@ Android, iOS에 대 한 프로젝트를 포함 하는 기본 솔루션 창과 Ma
 
 다른 샘플 각 샘플의 개별 속성을 표시 합니다.
 
-# <a name="basic-structure"></a>기본 구조
+## <a name="basic-structure"></a>기본 구조
 
 게임의 서브 클래스 여야는 [ `Application` ](https://developer.xamarin.com/api/type/Urho.Application/) 클래스는 게임을 설치 하는 것이 이것이 (에 [ `Setup` ](https://developer.xamarin.com/api/member/Urho.Application.Setup/) 메서드) 하 여 게임을 시작 하 고 (에 [ `Start` ](https://developer.xamarin.com/api/member/Urho.Application.Start) 메서드).  다음 기본 사용자 인터페이스를 작성 합니다.  3D 장면, 일부 UI 요소 및 동작이 단순한 연결을 설정 하는 Api를 보여 주는 일부 예제를 진행 하기 위해 하겠습니다.
 
@@ -98,7 +98,7 @@ class MySample : Application {
         UI.Root.AddChild(helloText);
 
         // Create a top-level scene, must add the Octree
-    // to visualize any 3D content.
+        // to visualize any 3D content.
         var scene = new Scene();
         scene.CreateComponent<Octree>();
         // Box
@@ -133,7 +133,9 @@ class MySample : Application {
 
 응용 프로그램을 시작 하려면 다음과 같이 응용 프로그램 클래스의 새 인스턴스를 만들어 다음 엔진 초기화 함수를 호출할 수 있습니다.
 
-    new MySample().Run();
+```csharp
+new MySample().Run();
+```
 
 런타임에서 호출 됩니다는 `Setup` 및 `Start` 메서드.  재정의 하는 경우 `Setup` 엔진 매개 변수 (이 샘플에 표시 하지 않으려면)를 구성할 수 있습니다.
 
@@ -141,50 +143,56 @@ class MySample : Application {
 
 코드의 다음 부분에서는 UI 프레임 워크를 사용 하 여 텍스트 요소를 만들고 응용 프로그램에 추가 합니다.
 
-        // UI text
-        var helloText = new Text()
-        {
-            Value = "Hello World from UrhoSharp",
-            HorizontalAlignment = HorizontalAlignment.Center,
-            VerticalAlignment = VerticalAlignment.Center
-        };
-        helloText.SetColor(new Color(0f, 1f, 1f));
-        helloText.SetFont(
-            font: ResourceCache.GetFont("Fonts/Font.ttf"),
-            size: 30);
-        UI.Root.AddChild(helloText);
+```csharp
+// UI text
+var helloText = new Text()
+{
+    Value = "Hello World from UrhoSharp",
+    HorizontalAlignment = HorizontalAlignment.Center,
+    VerticalAlignment = VerticalAlignment.Center
+};
+helloText.SetColor(new Color(0f, 1f, 1f));
+helloText.SetFont(
+    font: ResourceCache.GetFont("Fonts/Font.ttf"),
+    size: 30);
+UI.Root.AddChild(helloText);
+```
 
 UI 프레임 워크는 매우 간단한 게임 사용자 인터페이스를 제공 하 고 새 노드를 추가 하 여 작동는 [ `UI.Root` ](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) 노드.
 
-이 샘플의 설치의 두 번째 부분 주 장면 합니다.  3D 장면 화면의 3D 상자 만들기 광원, 카메라 및 뷰포트 추가 만들기 단계 수가 포함 됩니다.  섹션에서 더 자세하게에 대해서는 이러한 "[장면, 노드, 구성 요소 및 카메라](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras)"
+이 샘플의 설치의 두 번째 부분 주 장면 합니다.  3D 장면 화면의 3D 상자 만들기 광원, 카메라 및 뷰포트 추가 만들기 단계 수가 포함 됩니다.  섹션에서 더 자세하게에 대해서는 이러한 [장면, 노드, 구성 요소 및 카메라](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras)합니다.
 
 세 번째 부분은 샘플 몇을 가지 작업을 트리거합니다.  작업을 호출 하 여 필요에 따라 노드에서 레시피 있습니다를 만든 후 및 특정 효과 설명 하는 실행할 수 있습니다는 [ `RunActionAsync` ](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync) 에서 메서드는 `Node`합니다.
 
 첫 번째 동작인 바운스 효과 사용 하 여 상자 크기를 조정 하 고 두 번째 상자를 영원히 회전:
 
-    await boxNode.RunActionsAsync(
-        new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```csharp
+await boxNode.RunActionsAsync(
+    new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
+```
 
 작성 하는 첫 번째 작업은 어떻게 위의 표시는 [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/) 속성 노드의 경우 1 값 방향으로 두 번째에 대 한 확장 되도록 나타내는 레시피 단순히이 작업을 합니다.  이 작업에 래핑하는 감속/가속 작업은 [ `EaseBounceOut` ](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/) 동작 합니다.  감속/가속 작업 동작의 선형 실행 왜곡 및 효과 적용,이 경우 아웃 반송 효과 제공 합니다.
 따라서이 조리법으로 작성할 수 있습니다.
 
-    var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```csharp
+var recipe = new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1));
+```
 
 레시피가 만들어지면 레시피 실행.
 
-    await boxNode.RunActionsAsync (recipe)
+```csharp
+await boxNode.RunActionsAsync (recipe)
+```
 
 Await 나타냅니다는 작업이 완료 될 때이 줄 다음 실행을 다시 시작 하려고 합니다.  작업이 완료 되 면 두 번째 애니메이션을 트리거 했습니다.
 
 [를 사용 하 여 UrhoSharp](~/graphics-games/urhosharp/using.md) 문서 Urho 및 게임 작성 하는 코드를 구성 하는 방법의 개념에 자세히 살펴봅니다.
 
-# <a name="copyrights"></a>저작권
+## <a name="copyrights"></a>저작권
 
 이 설명서 Xamarin Inc에서 원래 콘텐츠가 포함 되어 있고 Urho3D 프로젝트에 대 한 오픈 소스 문서에서 광범위 하 게 그립니다 Cocos2D 프로젝트에서 한 스크린샷을 제공 합니다.
 
-
-
-## <a name="related-links"></a>관련 링크
+### <a name="related-links"></a>관련 링크
 
 - [지구 표면 통합 문서](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)
 - [좌표 통합 문서를 탐색합니다.](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)

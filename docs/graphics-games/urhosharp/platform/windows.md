@@ -6,11 +6,12 @@ ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 3788b6d6a9c9c9c84b8974a78f0a3c32ae6b6a3e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/29/2017
+ms.openlocfilehash: 47ac762e472e6c45e40f8b0a3b47b53b550c5da7
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
 
@@ -24,7 +25,7 @@ _Windows 특정 설치 프로그램 및 기능_
 
 이 사용 하는 방법을 보여 주는 전체 예제를 볼 수는 [샘플](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
-# <a name="standalone-project"></a>독립 실행형 프로젝트
+## <a name="standalone-project"></a>독립 실행형 프로젝트
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
@@ -38,6 +39,7 @@ _Windows 특정 설치 프로그램 및 기능_
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
+
 ### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
@@ -128,4 +130,3 @@ Windows.Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는�
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>구성 및 Urho Windows.Forms에서 시작
 
 폼의 Urho를 시작, 참조 [전체 샘플](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
-

@@ -7,25 +7,25 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 564d106cc0192e818b87342ae0590e20afe507ae
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp-3D/2D 엔진
 
 _UrhoSharp는 플랫폼 간 높은 수준의 2D 및 3D 엔진 있는 기 하 도형, 자료, lights 및 카메라를 사용 하 여 응용 프로그램에 대 한 애니메이션된 2D 및 3D 장면을 만드는 데 사용할 수 있습니다._
 
-![](images/video.gif "샘플 UrhoSharp 게임")
+![샘플 UrhoSharp 게임](images/video.gif)
 
 Mac 용 Visual Studio 또는 Visual Studio에 설치할 수 있으며 다음 플랫폼을 대상으로 사용할 수 있는 NuGet 패키지로 배포 UrhoSharp: Android, MacOS, iOS, tvOS 및 Windows.
 
-##  <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[UrhoSharp 소개](~/graphics-games/urhosharp/introduction.md)
+## <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[UrhoSharp 소개](~/graphics-games/urhosharp/introduction.md)
 
 이 문서에서는 UrhoSharp 및 3D 시각화에 대 한 및 단순한 3D 게임에서 사용 하기 위해 해당 기능을 간략하게 설명 합니다.
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[UrhoSharp 사용](~/graphics-games/urhosharp/using.md)
+## <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[UrhoSharp 사용](~/graphics-games/urhosharp/using.md)
 
 이 문서에서는 게임을 작성 하거나 응용 프로그램에 대 한 3D 시각화를 만들 데 사용할 수 있는 UrhoSharp의 핵심 개념에 설명 합니다.
 
@@ -54,7 +54,6 @@ Mac 용 Visual Studio 또는 Visual Studio에 설치할 수 있으며 다음 플
 모든 샘플 실행에 Android, iOS, Mac 및 Windows.
 또한 UrhoSharp의 여러 가지 [통합 문서](https://developer.xamarin.com/workbooks/) 포함 하 여 [지구 표면](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook) 및 [조정 탐색](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)합니다.
 
-
 ## <a name="copyright"></a>Copyright
 
 이 설명서 Xamarin Inc에서 원래 콘텐츠가 포함 되어 있고 Urho3D 프로젝트에 대 한 오픈 소스 문서에서 광범위 하 게 그립니다 Cocos2D 프로젝트에서 한 스크린샷을 제공 합니다.
@@ -62,8 +61,6 @@ Mac 용 Visual Studio 또는 Visual Studio에 설치할 수 있으며 다음 플
 ## <a name="license"></a>라이선스
 
 UrhoSharp 라이선스에서 제공 되는 [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
-
-
 
 ## <a name="related-links"></a>관련 링크
 

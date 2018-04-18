@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 6a721eedc278864b79d5f2b3cb16fb7075bfb15d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c1d8e24ecea2e1606f7f134aaa5ecf619e155c6
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Player 라이브 설치
 
@@ -37,7 +37,7 @@ Xamarin 라이브 플레이어를 통해 사용할 수 있는 Google Play 없이
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="2-get-visual-studio-2017"></a>2. Get Visual Studio 2017
+## <a name="2-get-visual-studio-2017"></a>2. Visual Studio 2017 가져오기
 
 Xamarin Player 라이브에 다음 사항이 필요합니다.
 
@@ -129,4 +129,4 @@ Xamarin Player 라이브에 다음 사항이 필요합니다.
 
 - [제한 사항](~/tools/live-player/limitations.md)
 - [문제 해결](~/tools/live-player/troubleshooting.md)
-- [Xamarin Player 라이브 샘플](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin Player 라이브 샘플](~/tools/live-player/samples.md)

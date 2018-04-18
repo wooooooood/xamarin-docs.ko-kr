@@ -1,17 +1,17 @@
 ---
 title: SkiaSharp 플랫폼 특정 세부 정보
-description: 'SkiaSharp를 사용 하 여 사용 중인 플랫폼에 대 한 세부 정보입니다. 간략 한: SkSurface 내용을 네이티브 응용 프로그램으로 가져오는 방법에 대해 자세히 설명 합니다.'
+description: 네이티브 응용 프로그램에 SKSurface 내용을 바인딩할 하는 방법에 대 한 세부 정보입니다.
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 3f3eedc58284ffd10fb0352dd24e1605913f58c1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8dd5fcd6e8ad7817a26dc310f76451874a18d134
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="platform-specific-integration"></a>특정 통합 플랫폼
 
@@ -71,7 +71,7 @@ using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Con
 }
 ```
 
-## <a name="os-x"></a>OS X
+## <a name="macos"></a>macOS
 
 ```csharp
 var screenScale = (int)NSScreen.MainScreen.BackingScaleFactor * 2;
@@ -119,7 +119,6 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
 SkiaSharp 여 Xamarin.Forms에 포함할 응용 프로그램 가이드를 참조 [xamarin.forms에서를 사용 하 여 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

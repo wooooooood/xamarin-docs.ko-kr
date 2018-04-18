@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9fb19b86ca303f8be3506d267dd75dc9db6cfca6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame와 게임 개발 소개
 
@@ -27,16 +27,16 @@ MonoGame는 플랫폼 간, 하드웨어 가속 자산 가져오기에 대 한 �
 
 다음은이 연습의 결과입니다.
 
-![](images/image1.gif "연습에서 빌드되는 응용 프로그램")
+![마우스를 다음 샘플 게임 문자의 애니메이션](images/image1.gif)
 
-# <a name="monogame-and-xna"></a>Monogame 및 XNA
+## <a name="monogame-and-xna"></a>Monogame 및 XNA
 
 MonoGame 라이브러리 구문 및 기능이 모두에서 Microsoft XNA 라이브러리를 모방 하는 데 사용 됩니다.  대부분 XNA 코드 수정 하지 않을 MonoGame에 사용할 수 있게 – Microsoft.Xna 네임 스페이스 아래의 모든 MonoGame 개체가 존재 합니다. 
 
 XNA에 익숙한 개발자 이미 익숙할 것 MonoGame의 구문 및 MonoGame 사용에 대 한 추가 정보를 찾고 개발자는 기존 온라인 XNA 연습, API 설명서 및 토론을 참조할 수 있습니다.
 
 
-# <a name="walkthrough-parts"></a>연습 부분
+## <a name="walkthrough-parts"></a>연습 부분
 
 - [크로스 플랫폼 MonoGame 프로젝트 만들기-1 부](~/graphics-games/monogame/introduction/part1.md)
 - [Part 2-는 WalkingGame 구현](~/graphics-games/monogame/introduction/part2.md)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f78b16a99d8bc828e26bb6aecdb67d4ba07e18d4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7dcf3cba72a07b06236e29ddf2603745fd348596
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="map"></a>맵
 
@@ -95,8 +95,9 @@ Xamarin 문서의 지침에 따라 [Google 맵 API v2 키를 얻을](~/android/p
 이러한 지침을 따랐다면에서 API 키를 붙여는 **Properties/AndroidManifest.xml** 파일 (소스 보기 및 찾기/업데이트는 다음 요소가):
 
 ```xml
-<meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AbCdEfGhIjKlMnOpQrStUvWValueGoesHere" />
+<meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="YOUR_API_KEY"/>
 ```
 
 올바른 API 키가 없는 지도 컨트롤에는 Android에서 회색 상자로 표시 됩니다.

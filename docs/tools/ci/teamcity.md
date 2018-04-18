@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin을 사용한 팀 도시를 사용 하 여
 
@@ -39,7 +39,7 @@ TeamCity 설정와 관련 된 여러 단계가 있습니다.
 
 - **A TeamCity 프로젝트 만들기** -메타 데이터를 모두 포함 될 TeamCity 프로젝트를 만들어야 앞의 세 단계 완료 되 면 소스 코드를 가져올 프로젝트를 컴파일하고 테스트 Xamarin 테스트 클라우드를 제출 하는 데 필요한 합니다.
 
-# <a name="requirements"></a>요구 사항
+## <a name="requirements"></a>요구 사항
 
 경험이 [Xamarin 테스트 클라우드](https://developer.xamarin.com/guides/testcloud) 가 필요 합니다.
 
@@ -88,7 +88,6 @@ TeamCity 컴파일 및 테스트 클라우드로 모바일 응용 프로그램 �
 - [**가짜** ](http://fsharp.github.io/FAKE/) – 필요한 경우에 기존.NET 라이브러리를 활용 하 여 수 있는 F #에서 기반으로 하는 DSL입니다.
 
 스크립팅 언어에 사용 되는 기본 설정 및 요구 사항에 따라 달라 집니다. [TaskyPro Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) Rake로 사용 하는 예제를 포함 하는 예제는 [빌드 스크립트](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile)합니다.
-
 
 > [!NOTE]
 > 표현성 및 소프트웨어를 작성 하도록 지정 된 DSL의 유지 관리 용이성 MSBuild 또는 코 버 넌 트, 하지만 이러한 부족 같은 XML 기반 빌드 시스템을 사용 하는 것이 불가능 합니다.
@@ -166,35 +165,35 @@ TeamCity가 설치 하 고 Mac 용 Visual Studio 프로젝트를 빌드할 수, 
 
 1. 웹 브라우저를 통해 TeamCity에 로그인 하 여 시작 합니다. 루트 프로젝트로 이동 합니다.
 
-    ![](teamcity-images/image2.png "루트 프로젝트 이동") 루트 프로젝트 아래 새 하위 프로젝트를 만듭니다.
+    ![루트 프로젝트로 이동](teamcity-images/image2.png "Root 프로젝트를 탐색") 루트 프로젝트 아래 새 하위 프로젝트를 만듭니다.
 
-    ![](teamcity-images/image3.png "루트 프로젝트 아래에서 루트 프로젝트로 이동, 새 하위 프로젝트 만들기")
+    ![루트 프로젝트 아래에서 루트 프로젝트를 탐색, 새 하위 프로젝트를 만들](teamcity-images/image3.png "Navigate 루트 프로젝트 아래에서 루트 프로젝트에 새 하위 프로젝트 만들기")
 2. 하위 프로젝트를 만든 후에 새 빌드 구성을 추가 합니다.
 
-    ![](teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가합니다")
+    ![하위 프로젝트를 만든 후 새 빌드 구성을 추가](teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가")
 3. VC 프로젝트 빌드 구성에 연결 합니다. 이 작업은 버전 제어 설정을 화면을 통해 수행 됩니다.
 
-    ![](teamcity-images/image6.png "이 버전 제어 설정을 화면을 통해 작업 수행")
+    ![버전 제어 설정을 화면을 통해 이렇게](teamcity-images/image6.png "버전 제어 설정을 화면을 통해 이렇게")
 
     만든 VCS 프로젝트가 없습니다, 있는지를 아래 표시 된 새 VCS 루트 페이지에서 하나를 만드는 옵션:
 
-    ![](teamcity-images/image7.png "새 VCS 루트 페이지에서 하나를 만들 수 있는 옵션이 있는 VCS 프로젝트가 만든 경우")
+    ![새 VCS 루트 페이지에서 하나를 만들 수 있는 옵션이 있는 만든 VCS 프로젝트가 없으면](teamcity-images/image7.png "새 VCS 루트 페이지에서 하나를 만들 수 있는 옵션이 있는 VCS 프로젝트가 만든 경우")
 
     VCS 루트, 한번 자동으로 시도 TeamCity가 체크 아웃 프로젝트 빌드 단계를 검색 합니다. TeamCity에 익숙한 경우 선택할 수 있습니다는 검색 된 빌드 단계 중 하나입니다. 지금은 검색 된 빌드 단계에는 무시 해도 됩니다.
 
 4. 그런 다음 빌드 트리거를 구성 합니다. 이 값은 사용자 저장소에 코드를 커밋합니다 하는 경우 등 특정 조건이 충족 되는 경우 빌드를 대기 됩니다. 다음 스크린 샷에서 빌드 트리거를 추가 하는 방법을 보여 줍니다.
 
-    ![](teamcity-images/image8.png "이 스크린샷은 빌드 트리거를 추가 하는 방법을 보여 줍니다") 빌드 트리거 구성의 예는 다음 스크린 샷에서에서 볼 수 있습니다.
+    ![이 스크린샷은 빌드 트리거를 추가 하는 방법을 보여 줍니다](teamcity-images/image8.png "이 스크린샷은 빌드 트리거를 추가 하는 방법을 보여 줍니다") 빌드 트리거 구성의 예는 다음 스크린 샷에서에서 볼 수 있습니다.
 
-    ![](teamcity-images/image9.png "이 스크린 샷에서 빌드 트리거 구성의 예를 볼 수 있습니다.")
+    ![이 스크린 샷에서 빌드 트리거 구성의 예를 볼 수](teamcity-images/image9.png "빌드 트리거 구성의 예는이 스크린샷에서에서 볼 수 있습니다")
 
 5. 빌드 스크립트를 매개 변수화의 이전 섹션에서 제안 환경 변수로 일부 값을 저장 합니다. 이러한 변수는 매개 변수 화면을 통해 빌드 구성에 추가할 수 있습니다. 테스트 클라우드 API 키, iOS 장치 ID 및 아래 스크린샷에 표시 된 대로 Android 장치 ID에 대 한 변수를 추가 합니다.
 
-    ![](teamcity-images/image11.png "테스트 클라우드 API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.")
+    ![테스트 클라우드 API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가](teamcity-images/image11.png "테스트 클라우드 API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.")
 
 6. 마지막 단계는 응용 프로그램 및 테스트 클라우드로 응용 프로그램 큐에 삽입 하는 빌드 스크립트를 호출 하는 빌드 단계를 추가 하는 것입니다. 다음 스크린 샷에서 응용 프로그램을 빌드하는 Rakefile를 사용 하는 빌드 단계의 예시:
 
-    ![](teamcity-images/image12.png "이 스크린 샷은 응용 프로그램을 빌드하는 Rakefile를 사용 하는 빌드 단계의 예")
+    ![이 스크린샷에서 응용 프로그램을 빌드하는 Rakefile를 사용 하는 빌드 단계의 예로](teamcity-images/image12.png "이 스크린샷은 응용 프로그램을 빌드하는 Rakefile를 사용 하는 빌드 단계의 예")
 
 7. 이 시점에서 빌드 구성이 완료 되었습니다. 프로젝트가 올바르게 구성 되어 있는지 확인 하려면 빌드를 트리거 하는 것이 좋습니다. 이렇게 하려면 저장소에 작은, 불필요 한 변경 내용을 커밋하는 것이 좋습니다. TeamCity는 커밋이 감지 하 고 빌드를 시작 해야 합니다.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: 721266e1ddfe927b33529a9f4d0eb55a008dd4e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c96777666d7601412c1d2e3be1c7fe23131fc9d4
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xaml-live-previewing"></a>XAML 라이브 미리 보기
 
@@ -150,4 +150,4 @@ Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Vi
 
 - [Xamarin Player 라이브 개요](https://xamarin.com/live)
 - [블로그 게시물](https://blog.xamarin.com/live-player/)
-- [Xamarin Player 라이브 샘플](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin Player 라이브 샘플](~/tools/live-player/samples.md)

@@ -5,17 +5,18 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bc8ae0304e5b044cc1a898820d0ac33e33dfec0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/30/2017
+ms.openlocfilehash: ad7341776c2f37d4eb6238a26d5b12ee9e340ff7
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Xamarin 통합 문서 SDK 시작
 
 이 문서에서는 Xamarin 통합 문서에 대 한 통합 개발 시작 하기 위한 요약 가이드가 제공 합니다. 이 중 상당 부분이 안정적인 Xamarin 통합 문서와 함께 작동 하지만 **로드 NuGet 패키지를 통해 통합은 통합 문서 1.3에서 에서만 지원 됩니다**, 알파 채널 작성 시에 있습니다.
 
-# <a name="general-overview"></a>일반 개요
+## <a name="general-overview"></a>일반 개요
 
 Xamarin 통합 문서 통합은 사용 하는 작은 라이브러리는 [ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] 향상 된 환경을 제공 하도록 에이전트 Xamarin 통합 문서 및 관리자와 통합 하는 SDK입니다.
 
