@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a54c69ff708ff7438ef1a8fd14c17e77b5375039
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="resolving-library-installation-errors"></a>라이브러리 설치 오류 해결
 
@@ -161,7 +161,8 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 8.  통해 모든 파일이 복사 됩니다 있는지 확인 합니다. **포함** 디렉터리 파일 같은 포함 이제 **.jar**, **.aar**, 및 **.pom**합니다.
 
-9.  추출 된 모든 압축을 풀 **.aar** 파일입니다. Windows에서는 추가 **.zip** 확장을는 **.aar** 파일을 마우스 오른쪽 단추로 클릭 한 다음 선택 **모두 추출...** , 다음 제거는 **.zip** 확장 합니다. MacOS 등에서 압축을 풀는 **.aar** 사용 하 여 파일은 **의 압축을 푸는** 명령에 터미널 (예를 들어 **file.aar의 압축을 푸는**).
+9.  추출 된 모든 내용의 압축을 풀 **.aar** 파일에 **포함** 디렉터리입니다. Windows에서는 추가 **.zip** 확장을는 **.aar** 파일를 열고 콘텐츠를 복사는 **포함** 디렉터리입니다.
+    MacOS 등에서 압축을 풀는 **.aar** 사용 하 여 파일은 **의 압축을 푸는** 명령에 터미널 (예를 들어 **file.aar의 압축을 푸는**).
 
 이 시점에서 누락 된 구성 요소를 직접 설치 하 고 프로젝트가 오류 없이 빌드되어야 합니다. 그렇지 않은 경우 다운로드 한 확인은 **m2repository** **.zip** 정확 하 게 오류 메시지에 대 한 버전에 해당 하는 버전을 보관 하 고에서 해당 콘텐츠를 설치 했는지 확인 하십시오.는 위의 단계에 설명 된 대로 위치를 수정 합니다. 
 

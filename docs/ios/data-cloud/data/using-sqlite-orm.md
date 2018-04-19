@@ -1,16 +1,17 @@
 ---
-title: SQLite.NET를 사용 하 여
+title: IOS SQLite.NET 사용
+description: SQLite.NET PCL NuGet 라이브러리 Xamarin.iOS 앱에 대 한 단순 데이터 액세스 메커니즘을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/18/2018
-ms.openlocfilehash: 8d68df2c29afe828482da7c5747b30dc5d30a5de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e7287a4f6b4e3f1203f6181c900c05565d9b5050
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-sqlitenet"></a>SQLite.NET를 사용 하 여
 
@@ -21,32 +22,47 @@ ORM는 개체 관계형 매핑-SQL 문을 작성 하지 않고도 데이터베�
 
 ## <a name="usage"></a>사용법
 
-추가 [SQLite.net PCL NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/),-프로젝트에 다양 한 iOS, Android 및 Windows를 포함 하는 플랫폼을 지원 합니다.
+Xamarin 앱에 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet 패키지를 프로젝트에 추가 합니다.
 
-  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
+- **패키지 이름:** SQLite net PCL
+- **작성자:** Frank A. Krueger
+- **Id:** sqlite net pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+[![SQLite.NET NuGet 패키지](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
+
+> [!TIP]
+> 서로 다른 SQLite 패키지의 여러 가지 – (하지 것이 검색에 상위 결과) 올바른 템플릿을 선택 해야 합니다.
 
 SQLite.NET 라이브러리를 사용할 수 있으면 데이터베이스에 액세스 하려면 사용 하려면 다음 세 가지 단계를 따르십시오.
 
-
 1. **사용 하 여 추가 문을** -데이터 액세스는 필요한 C# 파일에 다음 문을 추가 합니다.
 
-        using SQLite;
+    ```csharp
+    using SQLite;
+    ```
 
 1. **빈 데이터베이스를** -SQLiteConnection 클래스 생성자의 파일 경로 전달 하 여 데이터베이스 참조를 만들 수 있습니다. 필수, 그렇지 않으면 기존 데이터베이스 파일이 열립니다 파일이 이미 있는 경우 자동으로 생성 됩니다 확인 하려면 필요가 없습니다.
 
-        var db = new SQLiteConnection (dbPath);
+    ```csharp
+    var db = new SQLiteConnection (dbPath);
+    ```
 
     DbPath 변수는이 문서 앞부분에서 설명한 규칙에 따라 결정 해야 합니다.
 
 1. **데이터 저장** -CreateTable 및 다음과 같은 Insert와 같이 해당 메서드를 호출 하 여 명령이 실행 될 데이터베이스 SQLiteConnection 개체를 만든 후:
 
-        db.CreateTable<Stock> ();
-        db.Insert (newStock); // after creating the newStock object
+    ```csharp
+    db.CreateTable<Stock> ();
+    db.Insert (newStock); // after creating the newStock object
+    ```
 
 1. **데이터를 검색** -검색 하는 개체 (또는 개체의 목록)에 다음 구문을 사용 합니다.
 
-        var stock = db.Get<Stock>(5); // primary key id of 5
-        var stockList = db.Table<Stock>();
+    ```csharp
+    var stock = db.Get<Stock>(5); // primary key id of 5
+    var stockList = db.Table<Stock>();
+    ```
 
 ## <a name="basic-data-access-sample"></a>기본 데이터 액세스 예제
 
@@ -54,14 +70,13 @@ SQLite.NET 라이브러리를 사용할 수 있으면 데이터베이스에 액�
 
 **iOS**
 
- ![](using-sqlite-orm-images/image2.png "iOS SQLite.NET 샘플")
+ [![iOS SQLite.NET 샘플](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 다음 코드 예제에서는 기본 데이터베이스 액세스를 캡슐화 SQLite.NET 라이브러리를 사용 하 여 전체 데이터베이스 상호 작용을 보여 줍니다. 표시 됩니다.
 
 1.  데이터베이스 파일 만들기
 1.  개체를 만들고 다음 저장 하 여 일부 데이터를 삽입 합니다.
 1.  데이터 쿼리
-
 
 이러한 네임 스페이스를 포함 해야 합니다.
 
@@ -187,7 +202,6 @@ SQLite는 서로 다른 세 가지 스레딩 모드가 지원: *단일 스레드
 ```csharp
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
-
 
 ## <a name="related-links"></a>관련 링크
 

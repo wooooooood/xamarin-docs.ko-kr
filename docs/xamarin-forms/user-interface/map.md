@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 7dcf3cba72a07b06236e29ddf2603745fd348596
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 050e37d208c3ba5a330d7ecc6df9d106e14f8bb9
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="map"></a>맵
 
@@ -72,15 +72,26 @@ NuGet 패키지 추가 되 고 각 응용 프로그램 내에서 초기화 메�
 
 ### <a name="ios"></a>iOS
 
-IOS 7에서 지도 컨트롤의 "정당한 작동" 수준으로 `FormsMaps.Init()` 호출이 수행 되었습니다.
+IOS에서 위치 서비스에 액세스 하려면에서 다음 키를 설정 해야 **Info.plist**:
 
-IOS 8 두 개의 키에 추가할을 위해는 **Info.plist** 파일: [ `NSLocationAlwaysUsageDescription` ](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) 및 [ `NSLocationWhenInUseUsageDescription` ](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)합니다. XML 표현은 다음과 같습니다.-업데이트 해야는 `string` 응용 프로그램에서 위치 정보를 사용 하는 방식을 반영 하는 값:
+- iOS 11
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) -위치 확인 서비스를 사용 하 여 앱 사용 중인 경우에 대 한
+    - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) -위치 확인 서비스를 사용 하 여 언제 든에 대 한
+- 10 및 이전 버전 iOS
+    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) -위치 확인 서비스를 사용 하 여 앱 사용 중인 경우에 대 한
+    - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) -위치 확인 서비스를 사용 하 여 언제 든에 대 한    
+    
+IOS 11 및 이전 버전을 지원 하려면 모든 세 개의 키를 포함할 수 있습니다: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, 및 `NSLocationAlwaysUsageDescription`합니다.
+
+이러한 키에 대 한 XML 표현 **Info.plist** 아래에 표시 됩니다. 업데이트 해야는 `string` 응용 프로그램에서 위치 정보를 사용 하는 방식을 반영 하는 값:
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
-    <string>Can we use your location</string>
+<string>Can we use your location at all times?</string>
 <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We are using your location</string>
+<string>Can we use your location when your app is being used?</string>
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Can we use your location at all times?</string>
 ```
 
 **Info.plist** 항목에 추가할 수도 있습니다 **소스** 편집 하는 동안 보기는 **Info.plist** 파일:

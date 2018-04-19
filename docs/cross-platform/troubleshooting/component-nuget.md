@@ -7,28 +7,21 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 11/22/2017
-ms.openlocfilehash: a76adab41e9f7de5abb391e69a5b27783e0c3a63
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e3adee1b56b833442a8c927672cf903d45d03e84
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet 구성 요소 참조를 업데이트합니다.
 
-_앱을 미래 보증 NuGet 패키지와 구성 요소 참조를 대체 합니다._
+> [!NOTE]
+> Xamarin 구성 요소 Visual Studio에서 더 이상 지원 되지 NuGet 패키지에 의해 교체 해야 합니다. 프로젝트에서 구성 요소 참조를 수동으로 제거 하려면 다음 지침을 따릅니다.
 
-이 가이드에서는 NuGet 패키지에 구성 요소 참조를 변경 하려면 기존 Xamarin 솔루션을 업데이트 하는 방법에 설명 합니다.
+NuGet 패키지에 추가 하는 데 이러한 지침을 참조 [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
 
-- [NuGet 패키지를 포함 하는 구성 요소](#contain)
-- [NuGet 대체 된 구성 요소](#replace)
-
-대부분의 구성 요소에서 위 범주 중 하나에 해당 합니다.
-해당 하는 NuGet 패키지를 갖고, 읽기에 표시 되지 않는 구성 요소를 사용 하는 경우는 [NuGet 마이그레이션 경로가 없는 구성 요소](#require-update) 아래 섹션.
-
-자세한 지침은 NuGet 패키지에 추가 하기 위한 이러한 페이지를 참조 [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
-
-## <a name="opening-a-project-containing-a-component"></a>구성 요소를 포함 하는 프로젝트 열기
+## <a name="manually-removing-component-references"></a>구성 요소 참조를 수동으로 제거
 
 2017 년 1 년 11 월에서는 있었습니다 [발표](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) Xamarin 구성 요소 저장소가 사용이 중지 될 것입니다. Sunsetting 구성 요소와 함께 앞으로 이동 하기 위해, 15.6 버전의 Visual Studio 및 Mac 용 Visual Studio의 7.4 릴리스에서 더 이상 프로젝트에서 구성 요소 지원 합니다. 
 
@@ -40,7 +33,7 @@ Visual Studio에는 프로젝트를 로드 하는 경우는 수동으로 제거 
 
 제거 하려면 구성 요소 프로젝트에서:
 
-1. .Csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **프로젝트 언로드**합니다. 
+1. 열기는 **.csproj** 파일입니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **프로젝트 언로드**합니다. 
 
 2. 언로드된 프로젝트에 다시를 마우스 오른쪽 단추로 클릭 하 고 선택 **{your-프로젝트-name}.csproj 편집**합니다.
 
@@ -100,9 +93,21 @@ Mac 용 Visual Studio에는 프로젝트를 로드 하는 경우는 수동으로
 
 3. 에 대 한 참조를 제거 `XamarinComponentReference` 파일을 저장 합니다. 위의 예에서 것이 안전 전체를 제거 하려면 `ItemGroup`
 
-4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다. 
+4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
 
 -----
+
+> [!WARNING]
+> 다음 지침에서는 이전 버전의 Visual Studio 에서만 작동합니다.
+> **구성 요소** 노드 Visual Studio 2017 또는 Mac.에 대 한 Visual Studio의 현재 릴리스에서 사용할 수 없게 됩니다.
+
+다음 섹션에는 NuGet 패키지에 구성 요소 참조를 변경 하려면 기존 Xamarin 솔루션을 업데이트 하는 방법을 설명 합니다.
+
+- [NuGet 패키지를 포함 하는 구성 요소](#contain)
+- [NuGet 대체 된 구성 요소](#replace)
+
+대부분의 구성 요소에서 위 범주 중 하나에 해당 합니다.
+해당 하는 NuGet 패키지를 갖고, 읽기에 표시 되지 않는 구성 요소를 사용 하는 경우는 [NuGet 마이그레이션 경로가 없는 구성 요소](#require-update) 아래 섹션.
 
 <a name="contain" />
 
@@ -147,14 +152,12 @@ NuGet 패키지에 나열 된 상태로 유지 됩니다는 **패키지** 노드
 
 _NuGet 종속성 포함 될 수 있지만 이러한 무시 될 수 있습니다._
 
-
 검색 한 대체 NuGet 패키지가 있는지를 확인 하려면 [NuGet.org](https://www.nuget.org/packages), 구성 요소 이름을 사용 하 여 또는 또는 만든이가 있습니다.
 
 예를 들어, 찾을 수 있습니다는 인기 있는 **sqlite net pcl** 검색 하 여 패키지:
 
 - [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) -제품 이름입니다.
 - [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) -작성자의 프로필입니다.
-
 
 ### <a name="updating-the-solution"></a>솔루션을 업데이트합니다.
 
