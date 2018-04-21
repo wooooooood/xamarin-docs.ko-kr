@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a4bab44cfa260060c990949b45d3f5e6b103d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 오류 메시지 (mmp)
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 04/04/2018
 
 #### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091:이 버전의 Xamarin.Mac 필요는 * SDK (Xcode와 함께 제공 *). 경우 필요한 헤더 파일을 가져오거나 동적 등록을 사용 하 여 또는 링크 플랫폼 또는 프레임 워크 Sdk를만 링크 (으로 새로운 Api를 방지 하기 위해 시도)의 관리 되는 링커 동작을 설정 하는 Xcode를 업그레이드 합니다.
 
-헤더 파일에서 정적 등록 기관에 응용 프로그램을 빌드하고 오류 메시지에 지정 된 SDK 버전을 필요로 하는 Xamarin.Mac... 이 오류를 해결 하는 권장된 방법은 필요한 SDK를 가져오려는 Xcode를 업그레이드 하는, 여기에 모든 필수 헤더 파일 포함 됩니다. 여러 버전의 Xcode 설치 했거나는 Xcode 기본이 아닌 위치에서 사용할 경우에 IDE의 기본 설정에서 올바른 Xcode 위치를 설정 해야 합니다.
+Xamarin.Mac 헤더 파일 정적 등록 기관에 응용 프로그램을 빌드하고 오류 메시지에 지정 된 SDK 버전에서 필요 합니다. 이 오류를 해결 하는 권장된 방법은 필요한 SDK를 가져오려는 Xcode를 업그레이드 하는, 여기에 모든 필수 헤더 파일 포함 됩니다. 여러 버전의 Xcode 설치 했거나는 Xcode 기본이 아닌 위치에서 사용할 경우에 IDE의 기본 설정에서 올바른 Xcode 위치를 설정 해야 합니다.
 
 하나의 잠재적인, 대체 솔루션에서 관리 되는 링커는 있습니다. 사용 되지 않는 API 등 대부분의 경우 헤더 파일이 없습니다 (또는 불완전) 있는 새로운 API 제거 합니다. 그러나가 제공이 프로젝트에서 프로그램 Xcode 1 보다 최신 SDK에 도입 된 API를 사용 하는 경우를 작동 하지 않습니다.
 
@@ -435,7 +435,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="mm8xxx-runtime"></a>MM8xxx: 런타임
 
-### <a name="mm800x-misc"></a>MM800x: misc
+### <a name="mm800x-misc"></a>MM800x: 기타
 
 <!-- 8000 used by mtouch -->
 <!-- 8001 used by mtouch -->

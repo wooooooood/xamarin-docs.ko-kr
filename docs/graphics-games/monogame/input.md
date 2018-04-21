@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: e7ce8320441f6b248b183a8698a4f41c78bf2d64
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: ac87ee44163d53b11c15538f382379aae962cbb2
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame 게임 패드 참조
 
@@ -25,7 +25,7 @@ _게임 패드 MonoGame에서 입력된 장치에 액세스 하기 위한 표준
 
 ## <a name="reading-input-from-gamepad"></a>게임 패드에서 입력을 읽기
 
-`GameController` 모든 MonoGame 플랫폼에서 입력을 읽기의 표준화 된 방법을 제공 합니다. 두 개의 메서드를 통해 정보를 제공합니다.
+`GamePad` 모든 MonoGame 플랫폼에서 입력을 읽기의 표준화 된 방법을 제공 합니다. 두 개의 메서드를 통해 정보를 제공합니다.
 
 - `GetState` – 컨트롤러의 단추, 아날로그 스틱 및 패드의 현재 상태를 반환 합니다.
 - `GetCapabilities` – 단추 또는 지원 진동 컨트롤러 특정에 있는지 여부와 같은 하드웨어의 기능에 대 한 정보를 반환 합니다.

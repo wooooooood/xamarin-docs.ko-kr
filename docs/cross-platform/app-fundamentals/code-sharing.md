@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec3cb08b227b268c4c755545e8bc76b9e234d093
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharing-code-options"></a>코드 공유 옵션
 
@@ -136,7 +136,7 @@ _이 문서 비교 하 여 플랫폼 간 프로젝트 간에 코드 공유의 �
 
 선택 하는 전략을 공유 하는 코드는 대상 플랫폼에 의해 구현 됩니다. 프로젝트에 가장 적합 한 방법을 선택 합니다.
 
-PCL 또는 표준.NET에는 공유 코드 라이브러리 (특히 NuGet에 게시)를 구축 하기 위한 좋은 선택 됩니다. 공유 프로젝트는 응용 프로그램 개발자가 자신의 간 platforma 앱에서 다양 한 플랫폼 관련 기능을 사용 하려는 잘 작동 합니다.
+PCL 또는 표준.NET에는 공유 코드 라이브러리 (특히 NuGet에 게시)를 구축 하기 위한 좋은 선택 됩니다. 공유 프로젝트는 응용 프로그램 개발자는 플랫폼 간 앱에서 다양 한 플랫폼 관련 기능을 사용 하려는 잘 작동 합니다.
 
 
 ## <a name="related-links"></a>관련 링크
