@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ad18382a7143c7b1cc6bbecb3867c042512eb562
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6de16095d9e1267587a050e8081f87f896f3153e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -23,7 +23,7 @@ _이 가이드에는 다른 웹 서비스 기술을 사용 하는 방법을 보�
 
 - [REST 서비스](#rest)
 - [ASP.Net 웹 서비스 (ASMX)](#asmx)
-- [WCF Services](#wcf)
+- [WCF 서비스](#wcf)
 
 Xamarin.Forms를 사용 하 여 고객에 대 한 전체 예는 각에 이러한 기술을 사용 하 여 [Xamarin.Forms 웹 서비스](~/xamarin-forms/data-cloud/index.md) 설명서입니다.
 
@@ -337,7 +337,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 TPL 작업 병렬 라이브러리 () 같은 비동기 작업을 캡슐화 하 여 한 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 `Task` 개체입니다. 이 캡슐화는 여러 오버 로드에서 제공 되는 `Task.Factory.FromAsync` 메서드. 이 메서드를 만듭니다는 `Task` 를 실행 하는 `TodoService.EndGetTodoItems` 메서드를 한 번의 `TodoService.BeginGetTodoItems` 메서드가 완료 되 면와 `null` 나타내는 데이터가 없는에 전달 되는 매개 변수는 `BeginGetTodoItems` 위임 합니다. 마지막으로, 값은 `TaskCreationOptions` 열거형을 만들고 작업의 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
 
-APM 하는 방법에 대 한 자세한 내용은 참조 [비동기 프로그래밍 모델](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) 및 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) msdn 합니다.
+APM 하는 방법에 대 한 자세한 내용은 참조 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) msdn 합니다.
 
 ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 [ASP.NET 웹 서비스 (ASMX)를 사용해](~/xamarin-forms/data-cloud/consuming/asmx.md)합니다.
 
@@ -364,7 +364,7 @@ Xamarin 플랫폼을 사용 하 여 WCF를 사용 하는 방법에 대 한 자�
 
 A *프록시* 를 응용 프로그램이 서비스에 연결할 수 있는 WCF 서비스를 생성 해야 합니다. 프록시는 메서드 및 연결 된 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 구성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 되는 WSDL 웹 서비스 설명 언어 () 문서의 형태로 표시 됩니다. .NET 표준 라이브러리에는 웹 서비스에 대 한 서비스 참조를 추가 하려면 Visual Studio 2017에 Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 프록시를 빌드할 수 있습니다.
 
-Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)합니다.
+Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)합니다.
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -416,7 +416,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 TPL 작업 병렬 라이브러리 () 같은 비동기 작업을 캡슐화 하 여 한 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 `Task` 개체입니다. 이 캡슐화는 여러 오버 로드에서 제공 되는 `Task.Factory.FromAsync` 메서드. 이 메서드를 만듭니다는 `Task` 를 실행 하는 `TodoServiceClient.EndGetTodoItems` 메서드를 한 번의 `TodoServiceClient.BeginGetTodoItems` 메서드가 완료 되 면와 `null` 나타내는 데이터가 없는에 전달 되는 매개 변수는 `BeginGetTodoItems` 위임 합니다. 마지막으로, 값은 `TaskCreationOptions` 열거형을 만들고 작업의 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
 
-APM 하는 방법에 대 한 자세한 내용은 참조 [비동기 프로그래밍 모델](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx) 및 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx) msdn 합니다.
+APM 하는 방법에 대 한 자세한 내용은 참조 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) msdn 합니다.
 
 WCF 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 [Windows Communication Foundation (WCF) 웹 서비스 사용](~/xamarin-forms/data-cloud/consuming/wcf.md)합니다.
 
@@ -462,5 +462,5 @@ HTTP 기본 인증에 대 한 자세한 내용은 참조에 REST 웹 서비스�
 
 - [웹 서비스 예제](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Xamarin.Forms에 웹 서비스](~/xamarin-forms/data-cloud/index.md)
-- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/en-us/library/system.servicemodel.basichttpbinding.aspx)
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

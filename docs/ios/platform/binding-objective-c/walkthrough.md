@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a25aa1043dcaf52406059d3fa184da36dc4875e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: 바인딩 iOS Objective C 라이브러리
 
@@ -735,4 +735,4 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 형식에 대 한 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Objective-C 개발자용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
-- [프레임워크 디자인 지침](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+- [프레임워크 디자인 지침](http://msdn.microsoft.com/library/ms229042.aspx)

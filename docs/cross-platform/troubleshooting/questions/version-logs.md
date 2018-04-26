@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdbe480c45e9c0117f1437b1ee632f6ea8f142e0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그 내 어디서 찾을 수 있습니까?
 
@@ -103,7 +103,7 @@ SDK Manager 도구 모음 아이콘을 선택 합니다.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-참조: [명령줄 옵션](http://msdn.microsoft.com/en-us/library/aa367988.aspx)
+참조: [명령줄 옵션](http://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />자세한 로그 visual Studio 시작
 
@@ -111,7 +111,7 @@ msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-참조: [/Log (devenv.exe)](http://msdn.microsoft.com/en-us/library/ms241272.aspx)
+참조: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Mac 로그
 
@@ -218,4 +218,4 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 #### <a name="xcode-5"></a>Xcode 5
 
-**Window > Organizer > Devices [tab] > ${DeviceName}**
+**창 > 구성 > [tab] 장치 > ${DeviceName}**

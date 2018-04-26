@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 33551a924af1b7ca9c465514c704a0c1445fc2c4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76b0e9ea6e13ed053a53971b6dbe9f65bb436a4e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>1 – 모바일 Xamarin 플랫폼 이해
 
@@ -18,7 +18,7 @@ Xamarin 플랫폼 iOS 및 Android 용 응용 프로그램을 개발할 수 있�
 
 -   **C# 언어** – 친숙 한 구문 및 제네릭, LINQ 및 병렬 작업 라이브러리와 같은 복잡 한 기능을 사용할 수 있습니다.
 -   **.NET framework 모노** – Microsoft의.NET framework의 광범위 한 기능의 플랫폼 구현을 제공 합니다.
--   **컴파일러** -플랫폼에 따라 (예: 네이티브 응용 프로그램을 생성 합니다. iOS) 나 통합 된.NET 응용 프로그램 및 런타임 않음 (예: Android). 또한 컴파일러는 사용된 하지 않는 코드를 트래버스하여 연결과 같은 모바일 배포에 대 한 많은 최적화를 수행 합니다.
+-   **컴파일러** -플랫폼에 따라 (예: 네이티브 응용 프로그램을 생성 합니다. iOS) 나 통합 된.NET 응용 프로그램 및 런타임 않음 (예: Android)입니다. 또한 컴파일러는 사용된 하지 않는 코드를 트래버스하여 연결과 같은 모바일 배포에 대 한 많은 최적화를 수행 합니다.
 -   **IDE 도구** – Mac 및 Windows에서 Visual Studio를 사용 하면 만들기, 빌드 및 Xamarin 프로젝트를 배포할 수 있습니다.
 
 
@@ -173,7 +173,7 @@ Xamarin을 사용 하 여의 주요 이점은 응용 프로그램 사용자 인�
 
 -   **iOS** – [Apple Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
 -   **Android** – [Google의 사용자 인터페이스 지침](http://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** – [Windows에 대 한 사용자 환경 디자인 지침](https://developer.microsoft.com/en-us/windows/design)
+-   **Windows** – [Windows에 대 한 사용자 환경 디자인 지침](https://developer.microsoft.com/windows/design)
 
 
  <a name="Library_and_Code_Re-use" />

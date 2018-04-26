@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: e27ad3469a37634f5829f9c4c903808a74e4d6ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a80a23e8c3a41b7a06e1bbcb33d171ed2dc30fd2
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="available-assemblies"></a>사용 가능한 어셈블리
 
@@ -46,30 +46,30 @@ Xamarin 프로젝트도 사용할 수 있는 [.NET 이식 가능한 클래스 �
 > |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
 > |Mono.Security.dll|암호화 Api입니다.|✓|✓|✓|
 > |monotouch.dll|이 어셈블리에는 C# 바인딩 CocoaTouch API에 포함 되어 있습니다. 이것이 기본 iOS 프로젝트 내에서 사용할 수만 있습니다.|✓| | |
-> |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
+> |MonoTouch 합니다. &#8203;1.dll 대화 상자| |✓| | |
 > |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
-> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|OpenGL/OpenAL 개체 지향 Api, iPhone 장치를 지원 하도록 확장 합니다.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security 합니다. &#8203;암호화<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security 합니다. &#8203;암호화<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
-> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx) 와 [일부 기능이 제거](~/ios/data-cloud/system.data.md)합니다.|✓|✓|✓|
+> |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) 와 [일부 기능이 제거](~/ios/data-cloud/system.data.md)합니다.|✓|✓|✓|
 > |System.Data.&#8203;Services.&#8203;Client.dll|전체 oData 클라이언트입니다.|✓|✓|✓|
 > |System.IO.&#8203;Compression| |✓|✓|✓|
 > |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|에 있는 WCF 스택에 [Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|에 있는 WCF 스택에 [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및: <br />시스템<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |System.&#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx);의 일부로 [System.Data](~/ios/data-cloud/system.data.md) 지원 합니다.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및: <br />시스템<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |시스템입니다. &#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx);의 일부로 [System.Data](~/ios/data-cloud/system.data.md) 지원 합니다.|✓|✓|✓|
 > |System.Web.&#8203;Services.dll|제거 된 서버 기능 사용 하 여.NET 3.5 프로필에서 기본 웹 서비스입니다.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/en-us/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|이 어셈블리에는 C# 바인딩 CocoaTouch API에 포함 되어 있습니다. 이 통합 iOS 프로젝트에만 사용 됩니다.|✓| | |
 > |Java.Interop.dll| | |✓| |
@@ -80,4 +80,4 @@ Xamarin 프로젝트도 사용할 수 있는 [.NET 이식 가능한 클래스 �
 > |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices.&#8203;SymbolWriter.dll|에 대 한 컴파일러 작성기입니다.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |System.&#8203;Drawing.dll|System.Drawing API-클래식 API만 합니다. System.Drawing은 Xamarin.Mac.NET 4.5 또는 모바일 프레임 워크에 대 한 통합 API에서 지원 되지 않습니다. IOS 및 OS X를 사용 하 여 System.Drawing 지원을 추가할 수 있습니다는 [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) 라이브러리|✓| |✓|
+> |시스템입니다. &#8203;Drawing.dll|System.Drawing API-클래식 API만 합니다. System.Drawing은 Xamarin.Mac.NET 4.5 또는 모바일 프레임 워크에 대 한 통합 API에서 지원 되지 않습니다. IOS 및 OS X를 사용 하 여 System.Drawing 지원을 추가할 수 있습니다는 [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) 라이브러리|✓| |✓|

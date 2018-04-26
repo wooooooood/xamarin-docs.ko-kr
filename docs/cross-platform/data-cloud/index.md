@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -26,12 +26,12 @@ _Azure에 대 한 설명서 및 샘플 코드를 다운로드 합니다._
 새 [연결 된 서비스](connected-services.md) Mac 용 Visual Studio의 기능 개발자가 쉽고 빠르게 IDE 내에서 모바일 응용 프로그램에 Azure 기능을 추가 하는 데 도움이 됩니다. 알파 채널에서 테스트를 위해 현재 사용할 수 있습니다.
 
 
-## <a name="azure-app-services"></a>Azure App Services
+## <a name="azure-app-services"></a>Azure 앱 서비스
 
 컬렉션은 [Azure 모바일 앱 설명서](~/cross-platform/data-cloud/mobile-apps.md) 하는 과정을 안내해의 구현 과정에서 [Azure 모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)합니다.
 Xamarin Azure 메시징 NuGet 패키지로 제공 [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) 및 [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) 플랫폼 간 푸시 알림을 구현할 수 있도록 합니다.
 
-앱에서 구성의 [Azure 앱 서비스 포털](https://portal.azure.com/) 모바일 앱, 웹 Api, 저장소, 등에 액세스할 수 있습니다. 에 대 한 자세한 내용은 [응용 프로그램 서비스는 다른 방법을](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) 에서 감시 하 고 [Microsoft에서 이러한 비디오](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/)합니다.
+앱에서 구성의 [Azure 앱 서비스 포털](https://portal.azure.com/) 모바일 앱, 웹 Api, 저장소, 등에 액세스할 수 있습니다. 에 대 한 자세한 내용은 [응용 프로그램 서비스는 다른 방법을](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) 에서 감시 하 고 [Microsoft에서 이러한 비디오](http://azure.microsoft.com/campaigns/azure-march-announcement/)합니다.
 
 ## <a name="active-directory-authentication"></a>Active Directory 인증
 
@@ -58,7 +58,7 @@ Microsoft의 웹 API Xamarin 응용 프로그램에서 쉽게 사용할 수 있�
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -Azure 모바일 앱입니다.
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) –에 대 한 예제는 [아키텍처 시리즈](https://www.microsoft.com/net/learn/architecture) 전자책의 합니다.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT 빌드 2016에서 샘플링할 합니다.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT 빌드 2016에서 샘플링할 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

@@ -7,18 +7,18 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 1b317c4c82ec736c7f4c8306036e43cf04086a82
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 297aac4ba4a564e4506d841d3e11718ad79307e2
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>연습-WCF 작업
 
 _이 연습에서는 Xamarin으로 빌드된 모바일 응용 프로그램 수 BasicHttpBinding 클래스를 사용 하 여 WCF 웹 서비스를 사용 하는 방법을 설명 합니다._
 
 
-것은 모바일 응용 프로그램을 백 엔드 시스템과 통신할 수에 대 한 일반적인 요구 사항입니다. 많은 선택 항목 및 그 중 하나는 백 엔드 프레임 워크에 대 한 옵션 [Windows Communication Foundation](http://msdn.microsoft.com/en-us/library/ms731082.aspx) (WCF). 이 연습에서는 어떻게 Xamarin 모바일 응용 프로그램을 사용 하 여 WCF 서비스 소비할 수 있는의 예로 제공는 `BasicHttpBinding` 클래스입니다. 이 연습에서는 다음 항목을 다룹니다.
+것은 모바일 응용 프로그램을 백 엔드 시스템과 통신할 수에 대 한 일반적인 요구 사항입니다. 많은 선택 항목 및 그 중 하나는 백 엔드 프레임 워크에 대 한 옵션 [Windows Communication Foundation](http://msdn.microsoft.com/library/ms731082.aspx) (WCF). 이 연습에서는 어떻게 Xamarin 모바일 응용 프로그램을 사용 하 여 WCF 서비스 소비할 수 있는의 예로 제공는 `BasicHttpBinding` 클래스입니다. 이 연습에서는 다음 항목을 다룹니다.
 
 1.  **WCF 서비스 만들기** -이 섹션에 있는 두 가지 방법으로 매우 기본적인 WCF 서비스 만듭니다. 첫 번째 메서드는 C# 개체를 수행 하는 또 다른 방법은 동안 문자열 매개 변수를, 걸립니다. 이 섹션에는 WCF 서비스에 대 한 원격 액세스를 허용 하는 개발자의 워크스테이션을 구성 하는 방법을 설명도 합니다.
 1.  **Xamarin.Android 응용 프로그램 만들기** -WCF 서비스를 만든 후 WCF 서비스를 사용 하는 간단한 Xamarin.Android 응용 프로그램을 만듭니다. 이 섹션은 WCF 서비스와의 통신을 용이 하 게 하려면 WCF 서비스 프록시 클래스를 만드는 방법을 설명 합니다.
@@ -228,7 +228,7 @@ Us 하기 전에 첫 번째 작업와 통신 하는 모바일 응용 프로그�
 1. 빌드는 `HelloWorldServiceProxy` 프로젝트.
 
 > [!NOTE]
-> Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)합니다.
+> Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)합니다.
 
 <a name="Creating_a_Xamarin_Android_Application" />
 
@@ -535,6 +535,6 @@ WCF 서비스 프록시 Xamarin.iOS 응용 프로그램에 의해 다음과 같�
 ## <a name="related-links"></a>관련 링크
 
 - [HelloWorld (샘플)](https://developer.xamarin.com/samples/mobile/WCF-Walkthrough/)
-- [Wcf 서비스 지향 응용 프로그램 개발](https://docs.microsoft.com/en-us/dotnet/framework/wcf/index)
-- [방법: Windows Communication Foundation 클라이언트 만들기](https://docs.microsoft.com/en-us/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [Wcf 서비스 지향 응용 프로그램 개발](https://docs.microsoft.com/dotnet/framework/wcf/index)
+- [방법: Windows Communication Foundation 클라이언트 만들기](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

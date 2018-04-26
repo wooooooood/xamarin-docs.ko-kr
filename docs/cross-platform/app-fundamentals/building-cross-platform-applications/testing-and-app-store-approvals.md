@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 67f61da09861fac6f45faf80efde40302c05bfed
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: efe0f20207f6e4ec990af736f1d8e930445e59b9
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6-부 테스트 및 앱 스토어 승인
 
@@ -75,7 +75,7 @@ Apple 및 Microsoft 작동 해당 플랫폼에서 유일한 저장소: 앱 스�
 
 - [Apple iOS 앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Google Play에 대 한 응용 프로그램 준비](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
-- 방문 하 여 Windows 개발자는 [Windows 개발자 센터](https://developer.microsoft.com/en-us/windows/windows-apps) 가 앱을 제출 하는 방법에 대 한 읽을 수 있습니다.
+- 방문 하 여 Windows 개발자는 [Windows 개발자 센터](https://developer.microsoft.com/windows/windows-apps) 가 앱을 제출 하는 방법에 대 한 읽을 수 있습니다.
 
 이 섹션의 나머지를 고려 하기 위해 취해야 할 모든 끊겨 없이 앱 승인 되도록 작업을 설명 합니다.
 

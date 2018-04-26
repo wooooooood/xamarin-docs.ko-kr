@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="api-design"></a>API 디자인
 
@@ -693,7 +693,7 @@ Xamarin.iOS 하므로 더 이상 사용 중인 경우 사용자에 대 한 리�
 
 노출 된 `IDisposable` 인터페이스는 편리한 방법 큰 메모리 블록을 캡슐화 할 수 있는 개체 해제의 개발자 지원입니다 (예를 들어 한 `UIImage` 문제 없는 포인터 것 처럼 보이지만 2mb 이미지를 가리킬 수 없습니다 ) 및 기타 중요 한 한정 된 리소스 (예: 비디오 디코딩 버퍼).
 
-NSObject IDisposable 인터페이스를 구현 하 고는 [.NET Dispose 패턴](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx)합니다. 이렇게 하면 개발자가 NSObject 삭제 동작을 재정의 하 고 필요에 따라 사용자의 리소스를 해제 하려면 해당 하위 클래스입니다. 예를 들어 다양 한 이미지 주위에 유지 하는이 보기 컨트롤러:
+NSObject IDisposable 인터페이스를 구현 하 고는 [.NET Dispose 패턴](http://msdn.microsoft.com/library/fs2xkftw.aspx)합니다. 이렇게 하면 개발자가 NSObject 삭제 동작을 재정의 하 고 필요에 따라 사용자의 리소스를 해제 하려면 해당 하위 클래스입니다. 예를 들어 다양 한 이미지 주위에 유지 하는이 보기 컨트롤러:
 
 ```csharp
 class MenuViewController : UIViewController {

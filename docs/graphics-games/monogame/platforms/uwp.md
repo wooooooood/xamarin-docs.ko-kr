@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: ee4ee83c07cf01d1324b5f127d4f77ced0df2afe
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: e28823165188d1046142e31490967367d3246422
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
@@ -31,9 +31,9 @@ MonoGame UWP 앱 개발에 필요 합니다.
 - 장치가 개발자 모드 설정
 - [Visual Studio에 대 한 MonoGame 3.5](http://www.monogame.net/2016/03/17/monogame-3-5/) 이상 버전
 
-이 참조에 대 한 자세한 내용은 [Windows 10 UWP 개발을 위한 설정에 대 한 페이지](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-set-up)합니다.
+이 참조에 대 한 자세한 내용은 [Windows 10 UWP 개발을 위한 설정에 대 한 페이지](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up)합니다.
 
-소매 Xbox One 하드웨어에서 Xbox One 게임을 개발할 수 있습니다. 추가 소프트웨어 개발 PC 및 Xbox One 모두에 필요 합니다. 이 페이지를 참조는 Xbox One 게임 개발에 대 한 구성에 대 한 [는 Xbox One 설정](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index)합니다.
+소매 Xbox One 하드웨어에서 Xbox One 게임을 개발할 수 있습니다. 추가 소프트웨어 개발 PC 및 Xbox One 모두에 필요 합니다. 이 페이지를 참조는 Xbox One 게임 개발에 대 한 구성에 대 한 [는 Xbox One 설정](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)합니다.
 
 ## <a name="creating-an-empty-template"></a>빈 템플릿 만들기
 

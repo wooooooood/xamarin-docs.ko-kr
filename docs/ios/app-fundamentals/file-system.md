@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>파일 시스템 작업
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-에 대 한 MSDN 설명서를 참조는 [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml.aspx) 네임 스페이스에 대 한 자세한 내용은 [serialization](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx)합니다. 도 검토 해야는 [Xamarin.iOS 설명서](~/ios/deploy-test/linker.md) 링커 – 일반적으로 해야 합니다 추가 하는 `[Preserve]` serialize 하려는 클래스에 특성입니다.
+에 대 한 MSDN 설명서를 참조는 [System.Xml](http://msdn.microsoft.com/library/system.xml.aspx) 네임 스페이스에 대 한 자세한 내용은 [serialization](http://msdn.microsoft.com/library/system.xml.serialization.aspx)합니다. 도 검토 해야는 [Xamarin.iOS 설명서](~/ios/deploy-test/linker.md) 링커 – 일반적으로 해야 합니다 추가 하는 `[Preserve]` serialize 하려는 클래스에 특성입니다.
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-System.IO 네임 스페이스에 대 한 자세한 내용은 참조는 [MSDN 설명서](http://msdn.microsoft.com/en-us/library/system.io.aspx)합니다.
+System.IO 네임 스페이스에 대 한 자세한 내용은 참조는 [MSDN 설명서](http://msdn.microsoft.com/library/system.io.aspx)합니다.
 
 
 ### <a name="serializing-json"></a>Json 직렬화

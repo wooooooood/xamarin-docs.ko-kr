@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: ae1300936a24ac1381496eaaf78aefb875bd5ed6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>2D 수학 CocosSharp와
 
@@ -264,7 +264,7 @@ private void HandleInput(System.Collections.Generic.List<CCTouch> touches, CCEve
 
 `System.Math.Atan2` 사용 하 오프셋 각도를 변환할 수 있습니다. 함수 이름 `Atan2` 삼각 함수 아크탄젠트에서 가져옵니다. "2" 접미사는 표준에서이 함수를 구분할 `Atan` 아크탄젠트의 수학 동작에 엄격 하 게 일치 하는 함수입니다. 아크탄젠트 값은-90 사이의 값을 반환 하는 함수 및 + 90도 (또는 해당 라디안에서)입니다. 일반적으로 컴퓨터 게임을 비롯 한 대부분의 응용 프로그램의 값을 전체 360도 필요 하므로 `Math` 클래스를 포함 `Atan2` 이 요구를 충족 하기 위해 합니다.
 
-위의 코드를 통과 하는지 Y 매개 변수를 먼저 다음 X 매개 변수를 호출 하는 경우 확인 된 `Atan2` 메서드. 이 이전 버전과 X, Y 위치 좌표의 순서는 일반적인에서입니다. 자세한 내용은 [Atan2 문서 참조](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx)합니다.
+위의 코드를 통과 하는지 Y 매개 변수를 먼저 다음 X 매개 변수를 호출 하는 경우 확인 된 `Atan2` 메서드. 이 이전 버전과 X, Y 위치 좌표의 순서는 일반적인에서입니다. 자세한 내용은 [Atan2 문서 참조](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx)합니다.
 
 주목할 만한 이기도에서 반환 된 값을 `Atan2` 라디안으로 각도 측정 하는 데 사용 되는 다른 단위인 됩니다. 이 가이드 라디안의 세부 정보를 포함 하지 않지만 염두에서에 둬야 하의 모든 삼각 함수는 `System.Math` 네임 스페이스 사용 하 여 radians, 모든 값도 CocosSharp 개체에 사용 되기 전에 변환 해야 합니다. 라디안에서 자세한 정보를 찾을 수 [라디안 Wikipedia 페이지에서](http://en.wikipedia.org/wiki/Radian)합니다.
 

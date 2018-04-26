@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: d5f639cffc8ff2d134731374bd72663fec81c6a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6f6b88bf29e94a221b2ef58b3299348eb08d33fa
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5 부-전략을 공유 하는 실제 코드
 
@@ -200,7 +200,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 그는 Xamarin.iOS 및 Xamarin.Android 쓸 일반적인 가져온 파일 액세스 코드에서 구현 된 Windows Phone (Silverlight)에서 파일 액세스를 위한 기본 메커니즘입니다. `System.IO.IsolatedStorage` 클래스에는 세 플랫폼 모두에서 참조할 수 있습니다는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)합니다.
 
-참조는 [Windows Phone 대 한 격리 된 저장소 개요](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402541(v=vs.105).aspx) 자세한 정보에 대 한 합니다.
+참조는 [Windows Phone 대 한 격리 된 저장소 개요](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) 자세한 정보에 대 한 합니다.
 
 격리 된 저장소 Api에서 사용할 수 없는 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)합니다. PCL에 대 한 대체 방법 중 하나로 [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 

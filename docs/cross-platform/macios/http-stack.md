@@ -6,81 +6,88 @@ ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 06/12/2017
-ms.openlocfilehash: ba9eb6a062ce91db5f1597de6f9a2b01ad18a367
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/20/2018
+ms.openlocfilehash: a1cf4340a2d9e26490f0e605f47ca43a14ae4c72
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
 
-## <a name="httpclient-stack-selector"></a>HttpClient 스택 선택기
-
-Xamarin.iOS, Xamarin.tvOS, 및 Xamarin.Mac에 사용할 수 있는:이 제어는 `HttpClient` 사용할 구현입니다. 기본적으로 작동 HttpClient 계속 `HttpWebRequest`, iOS, tvOS, 또는 macOS 네이티브 전송 방식을 사용 하는 구현에 필요에 따라 전환 이제 w (`NSUrlSession` 또는 `CFNetwork` 운영 체제에 따라). 장점은 작은 이진 파일 및 다운로드 속도 더, 단점은 실행할 비동기 작업에 대해 실행 되 고 이벤트 루프 필요 하다는 것입니다.
+**HttpClient 구현 선택기** Xamarin.iOS, Xamarin.tvOS, 및 Xamarin.Mac 제어는 `HttpClient` 사용할 구현입니다. IOS, tvOS, 또는 macOS 네이티브 전송 방식을 사용 하는 구현으로 전환할 수 있습니다 (`NSUrlSession` 또는 `CFNetwork`운영 체제에 따라). 장점은은 TLS 1.2 지원, 더 작은 이진 이며 더 빨리 다운로드; 단점은은 이벤트 루프를 실행할 수 있는 비동기 작업에 대 한 실행 되 고 필요 하다는 것입니다.
 
 프로젝트를 참조 해야 합니다는 **System.Net.Http** 어셈블리입니다.
+
+> [!WARNING]
+> **년 4 월 2018** 보안 향상된으로 인해 – PCI 준수를 포함 하는 요구 사항을 주요 클라우드 공급자 및 웹 서버 지원을 TLS 버전 1.2 보다 이전 버전이 중지 해야 합니다.  이전 버전의 TLS 사용 하도록 기본 Visual Studio의 이전 버전에서 만든 Xamarin 프로젝트.
+>
+> 응용 프로그램으로 계속 작업 하려면 이러한 서버 및 서비스를 보장 하기 위해 **Xamarin 프로젝트를 업데이트 해야는 `NSUrlSession` 아래에 표시 된 설정, 다음 다시 빌드하고 다시 배포 앱** 사용자에 게 있습니다.
 
 <a name="Selecting-a-HttpClient-Stack" />
 
 ### <a name="selecting-a-httpclient-stack"></a>HttpClient 스택 선택
 
-응용 프로그램에서 사용 하 고 HttpClient를 조정 합니다.
+조정 하는 `HttpClient` 앱에서 사용 하 고 있습니다.
 
 1. 두 번 클릭는 **프로젝트 이름** 에 **솔루션 탐색기** 프로젝트 옵션을 엽니다.
 2. 전환 하는 **빌드** 프로젝트에 대 한 설정 (예를 들어 **iOS 빌드** Xamarin.iOS 앱에 대 한).
-3. **HttpClient 구현** 드롭다운을 선택 된 HttpClient 다음 중 하나로 입력: **관리**, **CFNetwork** 또는 **NSUrlSession**.
+3. **HttpClient 구현** 드롭다운을 선택 된 `HttpClient` 다음 중 하나로 입력: **NSUrlSession** (권장), **CFNetwork**, 또는  **관리 되는**합니다.
 
 [![관리, CFNetwork, 또는 NSUrlSession HttpClient 구현을 선택합니다](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
-<a name="Managed" />
-
-### <a name="managed-default"></a>관리 되는 (기본값)
-
-관리 되는 처리기에는 이전 버전의 Xamarin 선적 완전히 관리 되는 HttpClient 처리기가입니다.
-
-#### <a name="pros"></a>전문가:
-
- - 기능이 호환 가능성이 가장 높은 Microsoft.NET 및 이전 Xamarin 버전을 사용 하 여 설정 합니다.
-
-#### <a name="cons"></a>단점:
-
- - Apple Os와 완벽 하 게 통합 되지 않은 하 고 TLS 1.0으로 제한 됩니다.
- - 이 일반적으로 보다 훨씬 더 느리기 암호화 등의 작업에서 네이티브 Api입니다.
- - 따라서 배포 가능한 큰 앱을 만드는 관리 코드 더 필요 합니다.
-
-<a name="CFNetwork" />
-
-### <a name="cfnetwork"></a>CFNetwork
-
-CFNetwork 기반 처리기는 네이티브 기반 `CFNetwork` iOS 6에서에서 사용할 수 있는 버전과 새 버전의 프레임 워크입니다.
-
-#### <a name="pros"></a>전문가:
-
- - 더 나은 성능과 더 작은 실행 파일 크기에 대 한 네이티브 Api를 사용합니다.
- - TLS 1.2와 같은 최신 표준에 대 한 지원입니다.
-
-#### <a name="cons"></a>단점:
-
- - IOS 6 이상 필요합니다.
- - WatchOS에 사용할 수 없습니다.
- - 일부 HttpClient 기능/옵션은 사용할 수 없습니다.
+> [!TIP]
+> TLS 1.2 지원에 대 한는 `NSUrlSession` 옵션은 권장 됩니다.
 
 <a name="NSUrlSession" />
 
 ### <a name="nsurlsession"></a>NSUrlSession
 
-NSURLSession 기반 처리기는 네이티브 기반 `NSURLSession` iOS 7에서에서 사용할 수 있는 버전과 새 버전의 프레임 워크입니다.
+`NSURLSession`-기반된 처리기는 네이티브 기반 `NSURLSession` iOS 7에서에서 사용할 수 있는 버전과 새 버전의 프레임 워크입니다. 
+**이것이 권장된 설정입니다.**
 
-#### <a name="pros"></a>전문가:
+#### <a name="pros"></a>전문가
 
- - 더 나은 성능과 더 작은 실행 파일 크기에 대 한 네이티브 Api를 사용합니다.
- - TLS 1.2와 같은 최신 표준에 대 한 지원.
+- 더 나은 성능과 더 작은 실행 파일 크기에 대 한 네이티브 Api를 사용합니다.
+- TLS 1.2와 같은 최신 표준 지원 합니다.
 
-#### <a name="cons"></a>단점:
+#### <a name="cons"></a>단점
 
- - IOS 7 이상 필요합니다.
- - 일부 HttpClient 기능/옵션은 사용할 수 없습니다.
+- IOS 7 이상 필요합니다.
+- 일부 `HttpClient` 기능/옵션은 사용할 수 없습니다.
+
+<a name="CFNetwork" />
+
+### <a name="cfnetwork"></a>CFNetwork
+
+`CFNetwork`-기반된 처리기는 네이티브 기반 `CFNetwork` iOS 6에서에서 사용할 수 있는 버전과 새 버전의 프레임 워크입니다.
+
+#### <a name="pros"></a>전문가
+
+- 더 나은 성능과 더 작은 실행 파일 크기에 대 한 네이티브 Api를 사용합니다.
+- TLS 1.2 같은 최신 표준 지원 합니다.
+
+#### <a name="cons"></a>단점
+
+- IOS 6 이상 필요합니다.
+- WatchOS에 사용할 수 없습니다.
+- 일부 HttpClient 기능/옵션은 사용할 수 없습니다.
+
+<a name="Managed" />
+
+### <a name="managed"></a>관리
+
+관리 되는 처리기에는 이전 버전의 Xamarin 선적 완전히 관리 되는 HttpClient 처리기가입니다.
+
+#### <a name="pros"></a>전문가
+
+- 기능이 호환 가능성이 가장 높은 Microsoft.NET 및 이전 Xamarin 버전을 사용 하 여 설정 합니다.
+
+#### <a name="cons"></a>단점
+
+- Apple Os와 완벽 하 게 통합 되지 않은 하 고 TLS 1.0으로 제한 됩니다. 보안 웹 서버 또는 나중에 클라우드 서비스에 연결할 수 없습니다.
+- 이 일반적으로 보다 훨씬 더 느리기 암호화 등의 작업에서 네이티브 Api입니다.
+- 따라서 배포 가능한 큰 앱을 만드는 관리 코드 더 필요 합니다.
 
 ### <a name="programmatically-setting-the-httpmessagehandler"></a>프로그래밍 방식으로 HttpMessageHandler 설정
 
@@ -104,14 +111,9 @@ HttpClient client = new HttpClient(new NSUrlSessionHandler());
 <a name="Selecting-a-SSL-TLS-implementation" />
 <a name="Apple-TLS" />
 
-## <a name="ssltls-implementation-build"></a>SSL/TLS 구현 빌드
+## <a name="ssltls-implementation"></a>SSL/TLS 구현
 
 SSL (Secure Socket Layer) 및 그 후속 TLS (전송 계층 보안), HTTP 및를 통해 다른 네트워크 연결에 대 한 지원을 제공 `System.Net.Security.SslStream`합니다. Xamarin.iOS, Xamarin.tvOS 또는 Xamarin.Mac의 `System.Net.Security.SslStream` 구현 모노에서 제공 하는 관리 되는 구현을 사용 하는 대신 Apple의 네이티브 SSL/TLS 구현을 호출 합니다. Apple의 native 구현 TLS 1.2를 지원합니다.
-
-<a name="Mono" />
-
-> [!WARNING]
-> **모노/관리** TLS 공급자 v3 SSL 및 TLS v 1로 제한 됩니다. 이 TLS 공급자 사용 되지 않으며을 Xamarin.iOS 응용 프로그램에 대해 사용할 수 없습니다. 
 
 <a name="App-Transport-Security" />
 

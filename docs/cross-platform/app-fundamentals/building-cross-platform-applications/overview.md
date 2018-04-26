@@ -6,17 +6,17 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 48aa53595d7ab0ccd5fb8f3dab57198199d65b8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b3b15736b5ec750e0b8db078cf428a7f573bc435
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-cross-platform-applications-overview"></a>크로스 플랫폼 응용 프로그램 개요 문서
 
 이 가이드에서는 Xamarin 플랫폼 및 코드 다시 사용을 최대화 하 고 모든 주요 모바일 플랫폼에 높은 품질 네이티브 경험을 제공 하는 플랫폼 간 응용 프로그램을 설계 하는 방법을 소개: iOS, Android 및 Windows Phone 합니다.
 
-이 문서에서는 이러한 방식을 사용 생산성과 유틸리티 (비 게임 응용 프로그램)에 포커스가 있는 이지만 생산성 앱 및 게임 앱 모두에 일반적으로 적용 합니다. 참조는 [MonoGame 문서 소개](https://developer.xamarin.com/guides/cross-platform/game_development/monogame/introduction/) 하거나 체크 아웃 [Visual Studio Tools for Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/visual-studio-tools-for-unity) 플랫폼 간 게임 개발 지침에 대 한 합니다.
+이 문서에서는 이러한 방식을 사용 생산성과 유틸리티 (비 게임 응용 프로그램)에 포커스가 있는 이지만 생산성 앱 및 게임 앱 모두에 일반적으로 적용 합니다. 참조는 [MonoGame 문서 소개](~/graphics-games/monogame/introduction/index.md) 하거나 체크 아웃 [Visual Studio Tools for Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) 플랫폼 간 게임 개발 지침에 대 한 합니다.
 
 구 "쓰기-어디에서 나 한 번 실행할" 하는 대개 단일 얻을 수 있는 장점 실행 여러 플랫폼에서 수정 되지 않은 코드 베이스 합니다. 코드 다시 사용의 이점은 있으면, 해당 접근 하면 종종 최저 공통 분모 기능 집합에 있는 응용 프로그램와 맞지 않는 제네릭 수준의 사용자 인터페이스 원활 하 게는 대상 플랫폼 중 하나로 합니다.
 

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.iOS errors
+title: Xamarin.iOS 오류
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -7,13 +7,13 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="xamarinios-errors"></a>Xamarin.iOS errors
+# <a name="xamarinios-errors"></a>Xamarin.iOS 오류
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: mtouch 오류 메시지
 
@@ -135,7 +135,7 @@ SGen (-sgen) 프로 파일링 하는 경우에 사용할 수 있어야 합니다
 
 <a name="MT0015" />
 
-### <a name="mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: Invalid ABI: *. 지원 되는 ABIs 됩니다: i386, x86_64, armv7, armv7 + 원하는 llvm, armv7 + 원하는 llvm + thumb2, armv7s, armv7s + 원하는 llvm, armv7s + 원하는 llvm + thumb2, arm64 및 arm64 + 원하는 llvm 합니다.
+### <a name="mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: 잘못 된 ABI: * 합니다. 지원 되는 ABIs 됩니다: i386, x86_64, armv7, armv7 + 원하는 llvm, armv7 + 원하는 llvm + thumb2, armv7s, armv7s + 원하는 llvm, armv7s + 원하는 llvm + thumb2, arm64 및 arm64 + 원하는 llvm 합니다.
 
 잘못 된 ABI mtouch에 전달 되었습니다. 유효한 ABI를 지정 하십시오.
 
@@ -167,8 +167,8 @@ Mtouch 오류 메시지에 명령줄 인수를 인식 하지 못합니다.
 -  --installdev
 -  -killdev
 -  -launchdev
--  --launchdebug
--  --launchsim
+-  -launchdebug
+-  -launchsim
 
 <a name="MT0020" />
 
@@ -396,7 +396,7 @@ Xamarin.iOS 경우 배포 대상 8.0 이상 (이전 버전 iOS 포함 된 프레
 
 <a name="MT0067" />
 
-### <a name="mt0067-invalid-registrar-"></a>MT0067: Invalid registrar: *
+### <a name="mt0067-invalid-registrar-"></a>MT0067: 잘못 된 등록 기관: *
 
 이것은 보통 Xamarin.iOS;의 버그를 나타냅니다. 에 버그 보고서를 제출 하세요 [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 테스트 사례와 합니다.
 
@@ -631,7 +631,7 @@ Xamarin.iOS에 내부 일관성 확인 작업을 실패 한 경우이 오류 메
 
 <a name="MT0109" />
 
-### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: 어셈블리 ' {'이 (가) 제공된 된 경로 다른 경로에서 로드 된 (경로 제공: {1 \}, 실제 경로: {2 \}).
+### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109: 어셈블리 '{0}' 제공된 된 경로 다른 경로에서 로드 된 (경로 제공: {1}, 실제 경로: {2}).
 
 이 응용 프로그램에서 참조 하는 어셈블리 요청 된 수보다 다른 위치에서 로드 되었음을 나타내는 경고입니다.
 
@@ -968,13 +968,13 @@ Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [ http:/
 
 <a name="MT1021" />
 
-### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: 파일을 복사할 수 없습니다 '\*'to'\*': {2 \}
+### <a name="mt1021-could-not-copy-the-file--to--2"></a>MT1021: 파일을 복사할 수 없습니다 '\*'to'\*': {2}
 
 파일을 복사할 수 없습니다. 복사 작업에서 오류 메시지에는 오류에 대 한 자세한 내용은 있습니다.
 
 <a name="MT1022" />
 
-### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: 디렉터리를 복사할 수 없습니다. '\*'to'\*': {2 \}
+### <a name="mt1022-could-not-copy-the-directory--to--2"></a>MT1022: 디렉터리를 복사할 수 없습니다. '\*'to'\*': {2}
 
 디렉터리를 복사할 수 없습니다. 복사 작업에서 오류 메시지에는 오류에 대 한 자세한 내용은 있습니다.
 
@@ -1653,11 +1653,11 @@ Parameter name: instruction
 
 <a name="MT2104" />
 
-### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: 혼합 모드 어셈블리 ' {'이 (가)에 연결할 수 없습니다.
+### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104: 어셈블리에 연결할 수 없습니다. '{0}' 혼합 모드에 있기 때문입니다.
 
 혼합 모드 어셈블리 링커에 의해 처리할 수 없습니다.
 
-참조 https://msdn.microsoft.com/en-us/library/x0w2664k.aspx 혼합 모드 어셈블리에 대 한 자세한 내용은 합니다.
+참조 https://msdn.microsoft.com/library/x0w2664k.aspx 혼합 모드 어셈블리에 대 한 자세한 내용은 합니다.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: AOT 오류 메시지
 
@@ -2060,7 +2060,7 @@ Objectice C 클래스의 이름을 됨을 의미 있는 공백을 포함할 수 
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: 등록자는 지원 되지 않는 구조를 찾을 수 '\*': 구조체의 모든 필드에는 구조 여야 합니다. (필드 '\*' 유형 '{2 \}'는 구조체).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: 등록자는 지원 되지 않는 구조를 찾을 수 '\*': 구조체의 모든 필드에는 구조 여야 합니다. (필드 '\*'w i t y p e{2}' 구조체 않습니다).
 
 등록자 지원 되지 않는 필드가 있는 구조체를 찾을 수 있습니다.
 
@@ -2068,7 +2068,7 @@ Objective C에 노출 되는 구조체의 모든 필드에는 구조 (클래스)
 
 <a name="MT4162" />
 
-### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162: 형식을 '\*' (으로 사용 * {2 \})에서 사용할 수 없으면 * * (에 도입 된 * *)\* 새로운 구축 하십시오 * SDK (일반적으로 Xcode의 가장 최신 버전을 사용 하 여 수행 합니다.
+### <a name="mt4162-the-type--used-as--2-is-not-available-in---it-was-introduced-in---please-build-with-a-newer--sdk-usually-done-by-using-the-most-recent-version-of-xcode"></a>MT4162: 형식을 '\*' (으로 사용 * {2})에서 사용할 수 없으면 * * (에 도입 된 * *)\* 새로운 구축 하십시오 * SDK (일반적으로 Xcode의 가장 최신 버전을 사용 하 여 수행 합니다.
 
 등록자의 현재 SDK에 포함 되어 있지 않은 형식이 있습니다.
 
@@ -2929,7 +2929,7 @@ Dsymutil 디버그 기호를 만들려면 최종.app 디렉터리에서 실행 �
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드에 대 한 반환 값에 대 한 대리자 블록 변환 특성 ([DelegateProxy])를 찾을 수 없습니다 *.*합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드에 대 한 반환 값에 대 한 대리자 블록 변환 특성 ([DelegateProxy])를 찾을 수 없습니다 *.* 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
 
 Xamarin.iOS (변환할 대리자를 블록)는 런타임 시 필요한 메서드를 찾을 수 없습니다.
 
@@ -2945,7 +2945,7 @@ Xamarin.iOS (변환할 대리자를 블록)는 런타임 시 필요한 메서드
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: DelegateType ({2 \}) 'Handler' 필드 없는 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: DelegateType ({2}) 없이 'Handler' 필드 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2953,7 +2953,7 @@ Xamarin.iOS (변환할 대리자를 블록)는 런타임 시 필요한 메서드
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: The DelegateType의 ({2 \}) 'Handler' 필드가 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: The DelegateType ({2}) 'Handler' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2961,7 +2961,7 @@ Xamarin.iOS (변환할 대리자를 블록)는 런타임 시 필요한 메서드
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: The DelegateType의 ({2 \}) 'Handler' 필드 대리자가 아닌, 이기는 *입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: The DelegateType ({2})는, 대리자가 아닌 'Handler' 필드는 * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2969,7 +2969,7 @@ Xamarin.iOS (변환할 대리자를 블록)는 런타임 시 필요한 메서드
 
 <a name="MT8016" />
 
-### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 대리자는 메서드에 대 한 반환 값에 대 한 차단를 변환할 수 없습니다 *.*입력 대리자, 아니어서, 이기는 * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 대리자는 메서드에 대 한 반환 값에 대 한 차단를 변환할 수 없습니다 *.* 입력 대리자, 아니어서, 이기는 * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 

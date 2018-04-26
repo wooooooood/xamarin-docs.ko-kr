@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 930b52e5b2a532e71594f26af79035db2cc5fb25
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ios-architecture"></a>iOS 아키텍처
 
@@ -23,14 +23,14 @@ Xamarin.iOS 응용 프로그램 모노 실행 환경 내에서 실행 하 고 C#
 
 ## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 코드: An 설명
 
-Xamarin에 대 한 개발 하는 경우 약관 *네이티브 및 관리* 코드는 종종 사용 됩니다. [관리 코드](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) 는에서는에서 관리 하는 실행 하는 코드는 [.NET Framework 공용 언어 런타임](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx), 또는 Xamarin의 경우: 모노 런타임. 중간 언어 주기입니다.
+Xamarin에 대 한 개발 하는 경우 약관 *네이티브 및 관리* 코드는 종종 사용 됩니다. [관리 코드](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) 는에서는에서 관리 하는 실행 하는 코드는 [.NET Framework 공용 언어 런타임](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), 또는 Xamarin의 경우: 모노 런타임. 중간 언어 주기입니다.
 
 네이티브 코드는 코드입니다 (예를 들어 Objective-c 또는 ARM 칩의 AOT 컴파일된 코드)는 특정 플랫폼에서 기본적으로 실행 됩니다. 이 가이드 AOT 네이티브 코드로 관리 되는 코드를 컴파일하는 방법을 설명 하 고 사용 하는 것 바인딩 사용 하 여 Apple iOS Api도 동시에 대 한 액세스 Xamarin.iOS 응용 프로그램의 작동 방법을 설명 합니다. NET의 BCL 및 C#과 같은 복잡 한 언어입니다.
 
 
 ## <a name="aot"></a>AOT
 
-Xamarin 플랫폼 응용 프로그램을 컴파일할 때 모노 C# (또는 F #) 컴파일러 실행 되 고 C# 및 F # 코드에 언어 MSIL (Microsoft Intermediate) 컴파일할 됩니다. 시뮬레이터에서 Xamarin.Android는 Xamarin.Mac 응용 프로그램 또는 Xamarin.iOS 응용 프로그램 에서도 실행 하는 경우는 [.NET 공용 언어 런타임 (CLR)](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx) JIT (Time) 컴파일러에는 마법사를 사용 하 여 MSIL을 컴파일합니다. 런타임에이 네이티브 코드로 컴파일된 응용 프로그램에 대 한 올바른 아키텍처에 실행할 수 있는 합니다.
+Xamarin 플랫폼 응용 프로그램을 컴파일할 때 모노 C# (또는 F #) 컴파일러 실행 되 고 C# 및 F # 코드에 언어 MSIL (Microsoft Intermediate) 컴파일할 됩니다. 시뮬레이터에서 Xamarin.Android는 Xamarin.Mac 응용 프로그램 또는 Xamarin.iOS 응용 프로그램 에서도 실행 하는 경우는 [.NET 공용 언어 런타임 (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx) JIT (Time) 컴파일러에는 마법사를 사용 하 여 MSIL을 컴파일합니다. 런타임에이 네이티브 코드로 컴파일된 응용 프로그램에 대 한 올바른 아키텍처에 실행할 수 있는 합니다.
 
 그러나 ios에서 Apple 장치에서 동적으로 생성 된 코드의 실행을 허용 하지 않는 설정한 보안 제한이 있습니다.
 이러한 보안 프로토콜을 준수 것을 보장 하려면 Xamarin.iOS 관리 되는 코드를 컴파일하려면 앞의 시간 (AOT) 컴파일러 대신 사용 합니다. Apple의 ARM 기반 프로세서에 배포할 수 있는 장치에 대 한 원하는 LLVM로 최적화 필요에 따라 기본 iOS 이진을 생성 합니다. 아래에 함께 맞추는 방법 대 한 대략적인 다이어그램 보여 줍니다.

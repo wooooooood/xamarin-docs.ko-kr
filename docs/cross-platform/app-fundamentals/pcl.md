@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: feef0a4083d2455cc189ddab6ed22762c044d848
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>이식 가능한 클래스 라이브러리 소개
 
@@ -55,7 +55,7 @@ Xamarin 열 반영 Xamarin.iOS 및 Xamarin.Android Visual Studio와 함께 제�
 -  Windows Phone 8
 -  UWP 앱
 
-자세히 알아볼 수 있습니다에 서로 다른 프로필의 기능에 대 한 [Microsoft 웹 사이트](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 구성원의를 참조 하 고 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 포함 된 지원 되는 프레임 워크 정보 및 기타 참고 사항입니다.
+자세히 알아볼 수 있습니다에 서로 다른 프로필의 기능에 대 한 [Microsoft 웹 사이트](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 구성원의를 참조 하 고 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 포함 된 지원 되는 프레임 워크 정보 및 기타 참고 사항입니다.
 
 
 
@@ -429,4 +429,4 @@ public static Result Close(Sqlite3.sqlite3 db)
 - [휴대용 Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
-- [.NET Framework (Microsoft)로 플랫폼 간 개발](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [.NET Framework (Microsoft)로 플랫폼 간 개발](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

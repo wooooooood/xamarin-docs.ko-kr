@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 690edabd53752ff0347fdb232a4bbfcb1ba6e84d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="case-study-tasky"></a>사례 연구: Tasky
 
@@ -166,7 +166,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### <a name="locking-to-prevent-concurrent-access"></a>동시 액세스를 방지 하기 위해 잠금
 
-A [잠금](http://msdn.microsoft.com/en-us/library/c5kehkcz(v=vs.100).aspx) 내에서 구현 되는 `TaskItemDatabase` 데이터베이스에 대 한 동시 액세스를 방지 하기 위해 클래스입니다. 그러면 서로 다른 여러 스레드에서 동시 액세스는 직렬화 됩니다 (그렇지 않은 경우 UI 구성 요소를 시작할 수는 백그라운드 스레드가 업데이트를 동시에 데이터베이스를 읽기)입니다. 잠금을 구현 하는 방법의 예는 다음과 같습니다.
+A [잠금](http://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx) 내에서 구현 되는 `TaskItemDatabase` 데이터베이스에 대 한 동시 액세스를 방지 하기 위해 클래스입니다. 그러면 서로 다른 여러 스레드에서 동시 액세스는 직렬화 됩니다 (그렇지 않은 경우 UI 구성 요소를 시작할 수는 백그라운드 스레드가 업데이트를 동시에 데이터베이스를 읽기)입니다. 잠금을 구현 하는 방법의 예는 다음과 같습니다.
 
 ```csharp
 static object locker = new object ();
@@ -357,7 +357,7 @@ Tasky 사용 하 여 `MonoTouch.Dialog`의 화면을 표시 하는 리플렉션 
 
  <a name="Android_App" />
 
-## <a name="android-app"></a>Android App
+## <a name="android-app"></a>Android 앱
 
 전체 Xamarin.Android 프로젝트 아래의 설명 됩니다.
 

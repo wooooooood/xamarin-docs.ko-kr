@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Xamarin.Android에서 서비스 바인딩
 
@@ -263,7 +263,7 @@ protected override void OnStart ()
 엄격히 말해서, 클라이언트에 대해 알고 필요 하지 않습니다는 `TimestampService` 하 고 클라이언트에 해당 구체적 클래스를 노출 만들 수는 응용 프로그램 보다 불안정 하 고의 수명 주기 동안 유지 관리 하기 쉽다는 점입니다. 또 다른 방법은 노출 하는 인터페이스를 사용 하는 것은 `GetFormattedTimestamp()` 메서드를 통해 서비스에 대 한 프록시 호출은 `Binder` (또는 가능한 서비스 연결 클래스).  
 
 ```csharp
-public class TimestampBinder : Binder, IGetTimesamp
+public class TimestampBinder : Binder, IGetTimestamp
 {
     TimestampService service;
     public TimestampBinder(TimestampService service)

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 638e16a47d30e1d4d61fe9e7d19a0245261e5d7f
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -23,7 +23,7 @@ Xamarin의 비동기 지원은 모노 3.0 foundation에서 구축 되며 모바�
 
 이 문서는 새로운 비동기를 소개 하 고 await 키워드 다음 Xamarin.iOS 및 Xamarin.Android에서 비동기 메서드를 구현 하는 몇 가지 간단한 예제를 통해 탐색 합니다.
 
-자세한 내용은 C# 5 (다양 한 예제 및 여러 사용 시나리오 포함)의 새로운 비동기 기능에 대 한 MSDN 설명서를 참조 [Async 및 Await를 사용한 비동기 프로그래밍](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)합니다.
+자세한 내용은 C# 5 (다양 한 예제 및 여러 사용 시나리오 포함)의 새로운 비동기 기능에 대 한 MSDN 설명서를 참조 [Async 및 Await를 사용한 비동기 프로그래밍](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)합니다.
 
 샘플 응용 프로그램 (주 스레드를 차단) 없이 간단한 비동기 웹 요청 다음 다운로드 한 html 및 문자 수와 UI를 업데이트 합니다.
 
@@ -69,7 +69,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 작업이 완료 되는 메서드는 코드의 같은 지점에서 실행 다시 시작 합니다. 여기에 (있는 경우) try – catch – finally 블록의 try 범위를 반환 합니다. await finally 블록 또는 catch에서 사용할 수 없습니다.
 
-에 대해 자세히 알아보세요 [msdn await](http://msdn.microsoft.com/en-us/library/vstudio/hh156528.aspx)합니다.
+에 대해 자세히 알아보세요 [msdn await](http://msdn.microsoft.com/library/vstudio/hh156528.aspx)합니다.
 
 ## <a name="exception-handling"></a>예외 처리
 
@@ -85,7 +85,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 그런 다음 태스크는 자신을 취소 하 고 취소를 승인.
 
-취소에 대 한 자세한 내용은 참조 [비동기 작업을 취소 하는 방법을](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx) msdn 합니다.
+취소에 대 한 자세한 내용은 참조 [비동기 작업을 취소 하는 방법을](http://msdn.microsoft.com/library/vstudio/jj155761.aspx) msdn 합니다.
 
 ## <a name="example"></a>예제
 
@@ -202,9 +202,9 @@ Async 사용 및 await 크게 주 스레드를 차단 하지 않고 백그라운
 - [HttpClient (iOS) (샘플)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (샘플)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [웹 세미나: C# 비동기 iOS 및 Android (비디오)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [비동기 사용한 비동기 프로그래밍 및 Await (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)
-- [(MSDN) 비동기 응용 프로그램 미세 조정](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx)
+- [비동기 사용한 비동기 프로그래밍 및 Await (MSDN)](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)
+- [(MSDN) 비동기 응용 프로그램 미세 조정](http://msdn.microsoft.com/library/vstudio/jj155761.aspx)
 - [Await, 교착 상태와 UI 및! 오 내! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
 - [(MSDN) 완료 될 작업을 처리 합니다.](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
-- [TAP(작업 기반 비동기 패턴)](http://msdn.microsoft.com/en-us/library/hh873175.aspx)
+- [TAP(작업 기반 비동기 패턴)](http://msdn.microsoft.com/library/hh873175.aspx)
 - [키워드의 도입 하는 방법에 대 한 C# 5 (Eric Lippert 블로그) – 비동기](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

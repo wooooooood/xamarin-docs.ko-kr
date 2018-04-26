@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: f94959062f01a363319494eb510f1a6e42fe36b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -110,7 +110,7 @@ double.Parse("1,999.99", CultureInfo.InvariantCulture);
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-참조는 [숫자 문자열 구문 분석](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx) 및 [구문 분석 하는 날짜 및 시간 문자열](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx) 대 한 자세한 내용은 MSDN 문서.
+참조는 [숫자 문자열 구문 분석](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) 및 [구문 분석 하는 날짜 및 시간 문자열](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) 대 한 자세한 내용은 MSDN 문서.
 
 <a name="rtl" />
 
@@ -130,7 +130,7 @@ IOS 및 Android에는 오른쪽에서 왼쪽 레이아웃 및 위의 조정 하�
 
 다른 언어 동일한 문자 집합을 사용할 때에 다르게 알파벳의 정렬 순서를 정의 합니다.
 
-참조는 [문자열 비교 세부](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) 에 [.NET Framework에서 문자열 사용에 대 한 유용한](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx) 언어 (CultureInfo) 정렬 순서를 적용 하는 위치는 예입니다.
+참조는 [문자열 비교 세부](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) 에 [.NET Framework에서 문자열 사용에 대 한 유용한](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) 언어 (CultureInfo) 정렬 순서를 적용 하는 위치는 예입니다.
 
 그럴 가능성은 모바일 플랫폼에서 기본 제공 데이터베이스 기능 언어별 정렬 되므로 비즈니스 논리에 추가 코드를 구현 해야 할 수 있지만 순서 지정을 지원 합니다.
 
@@ -283,7 +283,7 @@ IOS 및 Android에는 오른쪽에서 왼쪽 레이아웃 및 위의 조정 하�
 테스트 목적으로 개발 하는 동안 앱에서 일부 지역화 된 텍스트를 포함 하도록 많은 온라인 번역 도구 중 하나로 사용할 수 있습니다.
 
 - [Bing 번역기](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Google 변환](http://translate.google.com/)
 
 다른 많은 사용할 수 있습니다. 품질 기계 번역을 일반적으로 없는 것으로 간주 응용 프로그램을 해제 하는 것으로 충분 하지 않고 검토 및 테스트 전문 변환기 또는 네이티브 스피커를 먼저 합니다.
 
@@ -312,4 +312,4 @@ Xamarin으로 사용할 수 있는 다양 한 플랫폼 및 플랫폼별 국제�
 
 - [Apple의 지역화 개요](https://developer.apple.com/internationalization/)
 - [Android의 지역화 검사 목록](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [지역화 대비 응용 프로그램 (MSDN)을 개발 하기 위한 모범 사례](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [지역화 대비 응용 프로그램 (MSDN)을 개발 하기 위한 모범 사례](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

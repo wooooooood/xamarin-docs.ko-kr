@@ -5,11 +5,11 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d178231cd45d3b251a26c47abd47bf22b6c2716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="threading"></a>스레딩
 
@@ -17,7 +17,7 @@ Xamarin.iOS 런타임에 액세스할 수 개발자는.NET Api 스레드를 사�
 
 
 
-Xamarin을 사용 하는 적극 권장는 [작업 병렬 라이브러리](http://msdn.microsoft.com/en-us/library/dd460717.aspx) TPL ()는 몇 가지 이유로 응용 프로그램을 빌드하기 위한:
+Xamarin을 사용 하는 적극 권장는 [작업 병렬 라이브러리](http://msdn.microsoft.com/library/dd460717.aspx) TPL ()는 몇 가지 이유로 응용 프로그램을 빌드하기 위한:
 -  기본 TPL 스케줄러에 동적으로 크기가 계속 커집니다 프로세스가 수행, 여기서 CPU 시간에 대 한 경쟁 너무 많은 스레드를 종료 하는 시나리오를 방지 하면서으로 필요한 스레드 수가 스레드 풀에 작업 실행을 위임 합니다. 
 -  TPL 작업 측면에서 작업에 대해 생각 하는 것이 쉽습니다. 있습니다 수 쉽게 조작할 예약, 해당 실행을 serialize 또는 풍부한 Api와 동시에 많은 시작 합니다. 
 -  새 C# 비동기 언어 확장을 사용 하 여 프로그래밍 하기 위한 기초는 

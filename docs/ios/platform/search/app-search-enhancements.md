@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="app-search-enhancements"></a>앱 검색의 향상 된 기능
 
@@ -107,7 +107,7 @@ Apple의 [앱 검색 API 유효성 검사 도구](https://search.developer.apple
 1. 메시지 앱 확장을 만듭니다.
 2. 추가 된 `com.apple.developer.associated-domains` 응용 프로그램의 자격을 메시지 앱 확장을 공유 하는 이미지를 호스팅하는 웹 도메인의 목록을 포함 합니다. 각 도메인에 대해 지정 된 `spotlight-image-search` 서비스입니다.
 3. 추가 `apple-app-site-association` 이미지를 호스팅하는 웹 사이트에는 파일입니다. 이 파일에 대 한 사전에 포함 되어는 `spotlight-image-search` 서비스 하 고 팀 ID 또는 앱 ID 접두사 뒤에 번들 id. 응용 프로그램의 ID를 포함 합니다. 파일 경로 스포트라이트에서 인덱싱되고 인기 있는 이미지 검색에 포함 되는 패턴 최대 500 개를 포함할 수 있습니다. 자세한 내용은 Apple의를 참조 하십시오 [만들기 및 연결 파일을 업로드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW4) 설명서입니다.
-4. 웹 사이트를 크롤링할 Applebot 허용 합니다. Apple의를 참조 하십시오 [에 대 한 Applebot](https://support.apple.com/en-us/HT204683) 설명서입니다.
+4. 웹 사이트를 크롤링할 Applebot 허용 합니다. Apple의를 참조 하십시오 [에 대 한 Applebot](https://support.apple.com/HT204683) 설명서입니다.
 
 참조 우리의 [메시지 응용 프로그램 통합](~/ios/platform/message-app-integration/index.md) 자세한 세부 정보에 대 한 설명서입니다.
 
