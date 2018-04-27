@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5ca2918a0348254407fcbfff030def6c36af4988
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS 자세히 알아보기
 
@@ -85,7 +85,7 @@ Visual Studio는 코드를 _솔루션_ 및 *프로젝트*로 구성합니다. �
 
 [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) 연습에서는 **Phoneword**라는 솔루션을 만들고 내부에 iOS 프로젝트인 **Phoneword_iOS**를 배치했습니다. 프로젝트 내에 있는 항목은 다음과 같습니다.
 
--  **References** - 응용 프로그램을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 디렉터리를 확장하면 Xamarin의 Xamarin.iOS 어셈블리에 대한 참조와 함께 [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core 및 [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
+-  **References** - 응용 프로그램을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 디렉터리를 확장하면 Xamarin의 Xamarin.iOS 어셈블리에 대한 참조와 함께 [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core 및 [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
 -  **Packages** - Packages 디렉터리에는 미리 만들어진 NuGet 패키지가 포함됩니다.
 -  **Resources** - Resources 폴더는 기타 미디어를 저장합니다.
 -  **Main.cs** – 여기에는 응용 프로그램의 주요 진입점이 포함됩니다. 응용 프로그램을 시작하려면 주 응용 프로그램 클래스의 이름인 `AppDelegate`가 전달됩니다.

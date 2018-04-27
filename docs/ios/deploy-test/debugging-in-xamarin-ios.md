@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8848dd20683163cd42215fe496dd7ff6a9e9f0c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e2e32170de258f46eb5a926db35bce33c0ca64de
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging"></a>디버깅
 
@@ -124,7 +124,7 @@ Visual Studio 2015에서 조건부 중단점을 설정하려면 먼저 [일반 �
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "중단점 팝업 메뉴")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
-**조건...**을 선택하여 _중단점 설정_ 메뉴를 표시합니다.
+**조건...** 을 선택하여 _중단점 설정_ 메뉴를 표시합니다.
 
  [![](debugging-in-xamarin-ios-images/image6vs.png "중단점 설정 메뉴")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
@@ -164,7 +164,7 @@ Visual Studio에서는 다음과 같이 표시됩니다.
 - **한 단계씩 코드 실행(F10)** - 다음 코드 줄을 실행합니다. 다음 줄이 함수 호출인 경우 한 단계씩 코드 실행은 함수의 첫 번째 줄에서 중지되며, 함수 디버깅을 줄 단위로 계속할 수 있도록 합니다. 다음 줄이 함수가 아닌 경우 프로시저 단위 실행과 동일하게 동작합니다.
 - **프로시저 나가기(Shift+F11)** - 현재 함수가 호출된 줄로 돌아갑니다.
 
-디버깅에 대한 자세한 설명은 [Visual Studio 디버거를 사용하여 코드 탐색](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)을 참조하세요.
+디버깅에 대한 자세한 설명은 [Visual Studio 디버거를 사용하여 코드 탐색](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)을 참조하세요.
 
 -----
 

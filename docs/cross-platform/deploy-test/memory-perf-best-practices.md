@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -211,7 +211,7 @@ double Compute(double x)
 
 처음으로 `Lazy<T>.Value` 속성에 액세스할 때 초기화 지연이 발생합니다. 처음 액세스할 때 래핑된 형식이 생성되고 반환되며 나중에 액세스하는 데 사용하기 위해 저장됩니다.
 
-초기화 지연에 대한 자세한 내용은 [초기화 지연](https://msdn.microsoft.com/en-us/library/dd997286(v=vs.110).aspx)을 참조하세요.
+초기화 지연에 대한 자세한 내용은 [초기화 지연](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx)을 참조하세요.
 
 <a name="async" />
 

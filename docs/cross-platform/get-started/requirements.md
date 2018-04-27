@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: fe15e96780df7e47ce0530acbb04605ad48bf5ee
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ed9992eb162b57cd9c0dd1bc9f4abda4235bac12
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -82,14 +82,14 @@ Visual Studio 2015 및 2017 설치 관리자에는 자동으로 Xamarin을 설�
 
 > [!NOTE]
 >
->* [Windows Phone 8.1 에뮬레이터 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=43719).
+>* [Windows Phone 8.1 에뮬레이터 다운로드](https://www.microsoft.com/download/details.aspx?id=43719).
 >* Windows Phone 10 에뮬레이터는 Visual Studio 2015 UWP SDK에 포함되어 있습니다.
 
 <a name="install" />
 
 ## <a name="installation-instructions"></a>설치 지침
 
-macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/download)에서 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) 설치 지침을 따릅니다.
+macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/download)에서 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) 설치 지침을 따릅니다.
 
 현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](http://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
 
