@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-an-entry"></a>항목을 사용자 지정
 
 _Xamarin.Forms 입력 컨트롤을 편집할 수는 텍스트 한 줄 수 있습니다. 이 문서에는 개발자가 자신의 플랫폼 관련 사용자 지정과 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다._
 
-Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤이 ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `EntryRenderer` 결과적으로 인스턴스화합니다 네이티브 클래스를 인스턴스화할 `UITextField` 제어 합니다. Android 플랫폼의 `EntryRenderer` 클래스를 인스턴스화하는 `EditText` 제어 합니다. Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 `EntryRenderer` 클래스를 인스턴스화하는 `TextBox` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤이 ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `EntryRenderer` 결과적으로 인스턴스화합니다 네이티브 클래스를 인스턴스화할 `UITextField` 제어 합니다. Android 플랫폼의 `EntryRenderer` 클래스를 인스턴스화하는 `EditText` 제어 합니다. 에 플랫폼 UWP (유니버설 Windows)는 `EntryRenderer` 클래스를 인스턴스화하는 `TextBox` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
 다음 다이어그램에서는 간의 관계는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 제어 및 구현 하는 해당 네이티브 컨트롤:
 
@@ -178,13 +178,13 @@ namespace CustomRenderer.Android
 
 기본 클래스에 대 한 호출 `OnElementChanged` 메서드를 만드는 데는 Android `EditText` 렌더러의에 할당 되는 컨트롤에 대 한 참조 컨트롤 `Control` 속성입니다. 명령 프롬프트 창의 배경색을 연한 녹색으로 설정 됩니다는 `Control.SetBackgroundColor` 메서드.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Windows Phone에서 사용자 지정 렌더러 만들기 및 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 UWP 및 Windows Phone 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

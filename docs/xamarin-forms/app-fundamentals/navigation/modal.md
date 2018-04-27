@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d52aa69372ab5ec3073e2355a43521b515ca8b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modal-pages"></a>모달 페이지
 
@@ -100,7 +100,7 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 
 ### <a name="disabling-the-back-button"></a>뒤로 단추를 사용 하지 않도록 설정
 
-Android 및 Windows Phone 사용자 항상 페이지로 이동할 수는 이전 표준 키를 눌러 *다시* 장치에서 단추입니다. 응용 프로그램을 사용 하지 않도록 해야 모달 페이지는 페이지에서 이동 하기 전에 자체 포함 된 작업을 완료 하는 사용자가 필요한 경우는 *다시* 단추입니다. 재정의 하 여이 작업을 수행할 수 있습니다는 [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) 모달 페이지 메서드. 자세한 내용은 참조 [24 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) Charles Petzold Xamarin.Forms 책의 합니다.
+Android에서는 사용자 항상 페이지로 이동할 수는 이전 표준 키를 눌러 *다시* 장치에서 단추입니다. 응용 프로그램을 사용 하지 않도록 해야 모달 페이지는 페이지에서 이동 하기 전에 자체 포함 된 작업을 완료 하는 사용자가 필요한 경우는 *다시* 단추입니다. 재정의 하 여이 작업을 수행할 수 있습니다는 [ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/) 모달 페이지 메서드. 자세한 내용은 참조 [24 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) Charles Petzold Xamarin.Forms 책의 합니다.
 
 ### <a name="animating-page-transitions"></a>이 페이지는 전환에 애니메이션 적용
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 8315f1a0056c6a6f084ebfe2c29f0c0c2bb30330
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02bea7e2ec927277a92c0732b25f590b5ae6704b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="files"></a>파일
 
@@ -99,9 +99,6 @@ var resourcePrefix = "WorkingWithFiles.iOS.";
 #if __ANDROID__
 var resourcePrefix = "WorkingWithFiles.Droid.";
 #endif
-#if WINDOWS_PHONE
-var resourcePrefix = "WorkingWithFiles.WinPhone.";
-#endif
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
@@ -142,7 +139,7 @@ Xamarin.Forms는 각각 자체 파일 시스템에 있는 여러 플랫폼에서
 
  [![저장 및 로드 텍스트](files-images/saveandload-sml.png "저장 및 응용 프로그램에서 파일 로드")](files-images/saveandload.png#lightbox "저장 및 응용 프로그램에서 파일 로드")
 
-각 플랫폼에는 약간 다른 디렉터리 구조 및 다른 파일 시스템 기능-예를 들어 Xamarin.iOS 및 Xamarin.Android 지원 대부분 `System.IO` 기능 하지만 Windows Phone 지원 `IsolatedStorage` 및 [ `Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) Api입니다.
+각 플랫폼에는 약간 다른 디렉터리 구조 및 다른 파일 시스템 기능-예를 들어 Xamarin.iOS 및 Xamarin.Android 지원 대부분 `System.IO` 기능 하지만 유니버설 Windows 플랫폼만 지원 [ `Windows.Storage` ](/uwp/api/windows.storage/) Api입니다.
 
 이 문제를 해결 하려면 샘플 응용 프로그램 로드 하 고 파일을 저장 하는 Xamarin.Forms PCL에 인터페이스를 정의 합니다. 장치에 저장 될 로드 하 고 텍스트 파일을 저장 하는 단순 API를 제공 합니다.
 
@@ -190,9 +187,9 @@ namespace WorkingWithFiles {
 }
 ```
 
-### <a name="universal-windows-platform-uwp-windows-81-and-windows-phone-81"></a>유니버설 Windows 플랫폼 (UWP), Windows 8.1 및 Windows Phone 8.1
+### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-이러한 플랫폼은 다른 파일 시스템 API- [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) – 즉 저장 하 고 파일을 로드 하는 데 사용 합니다.
+UWP에 다른 파일 시스템 API- [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) – 즉 저장 하 고 파일을 로드 하는 데 사용 합니다.
 `ISaveAndLoad` 아래와 같이 인터페이스를 구현할 수 있습니다.
 
 ```csharp
@@ -226,7 +223,6 @@ namespace WindowsApp
     }
 }
 ```
-
 
 <a name="Saving_and_Loading_in_Shared_Projects" />
 

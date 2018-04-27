@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="fonts"></a>글꼴
 
@@ -50,8 +50,8 @@ label.FontSize = 24;
 
 사용할 수도 있습니다는 `NamedSize` 에 4 개의 기본 제공 옵션이; 열거형 Xamarin.Forms는 각 플랫폼에 대 한 최적의 크기를 선택합니다.
 
--  **Micro**
--  **Small**
+-  **마이크로**
+-  **작은**
 -  **보통**
 -  **큰**
 
@@ -70,7 +70,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
 -  **없음**
 -  **굵게**
--  **Italic**
+-  **기울임꼴**
 
 `FontAttribute` 열거형을 다음과 같이 사용할 수 있습니다 (단일 특성을 지정할 수 있습니다 또는 `OR` 함께):
 
@@ -166,7 +166,7 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
 
 ## <a name="using-a-custom-font"></a>사용자 지정 글꼴을 사용 하 여
 
-기본 제공 서체 이외의 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴 스크린샷은 **바다가 재** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) iOS, Android 및 Xamarin.Forms를 사용 하 여 Windows Phone 렌더링 합니다.
+기본 제공 서체 이외의 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴 스크린샷은 **바다가 재** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) Xamarin.Forms를 사용 하 여 렌더링 합니다.
 
  [![IOS 및 Android 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예제")](fonts-images/custom.png#lightbox "사용자 지정 글꼴 예제")
 
@@ -240,7 +240,7 @@ new Label
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

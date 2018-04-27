@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>뷰를 구현합니다.
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤 레이아웃와 화면에 컨트롤을 배치 하는 데 사용 되는 뷰 클래스에서 파생 되어야 합니다. 이 문서에는 장치의 카메라에서 미리 보기 비디오 스트림을 표시 하는 데 사용 되는 Xamarin.Forms 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다._
 
-모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ios에서는 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIView` 제어 합니다. Android 플랫폼의 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `View` 제어 합니다. Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ios에서는 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIView` 제어 합니다. Android 플랫폼의 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `View` 제어 합니다. 에 플랫폼 UWP (유니버설 Windows)는 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
 다음 다이어그램에서는 간의 관계는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 및 구현 하는 해당 네이티브 컨트롤:
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 에 `Control` 속성은 `null`, `SetNativeControl` 메서드는 새 `CameraPreview` 제어에 대 한 참조 항목을 할당 하 고는 `Control` 속성입니다. `CameraPreview` 컨트롤을 사용 하는 플랫폼 특정 사용자 지정 컨트롤은 `Camera` 는 카메라의 미리 보기 스트림을 제공 하는 API입니다. `CameraPreview` 컨트롤은 다음 구성, 사용자 지정 렌더러 새 Xamarin.Forms 요소에 연결 되어 있는 경우. 이 구성은 새 네이티브를 만들어야 `Camera` 특정 하드웨어 카메라에 액세스 하려면 개체를 처리 하는 이벤트 처리기를 등록 하는 중는 `Click` 이벤트입니다. 차례로이 처리기 중지 하 고는 탭 비디오 미리 보기를 시작 합니다. `Click` Xamarin.Forms 요소 렌더러는 변경 내용에 연결 된 경우 이벤트를 구독 취소 합니다.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Windows Phone에서 사용자 지정 렌더러 만들기 및 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 UWP 및 Windows Phone 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 에 `Control` 속성은 `null`, 새 `CaptureElement` 인스턴스화될 및 `InitializeAsync` 메서드가 호출 되 면 사용 하는 `MediaCapture` 카메라에서 미리 보기 스트림을 제공 하는 API입니다. `SetNativeControl` 메서드를 호출에 대 한 참조를 할당 하는 `CaptureElement` 인스턴스는 `Control` 속성입니다. `CaptureElement` 노출 제어는 `Tapped` 에서 처리 하는 이벤트는 `OnCameraPreviewTapped` 메서드를 중지 하는 탭 비디오 미리 보기를 시작 합니다. `Tapped` 이벤트를 구독 하는 사용자 지정 렌더러를 새 Xamarin.Forms 요소에 연결 하 고 렌더러 요소 변경 내용에 추가 되 면에에서 구독 취소 했습니다.
 
 > [!NOTE]
-> 중지 하 고 Windows Phone 또는 UWP 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 하는 것이 유용 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조 및 [퀵 스타트: MediaCapture API를 사용 하 여 비디오 캡처](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) Windows 런타임 응용 프로그램에 대 한 및 [카메라 미리 보기 표시](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) UWP 응용 프로그램에 대 한 합니다.
+> 중지 하 고 UWP 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 하는 것이 유용 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조 [카메라 미리 보기 표시](/windows/uwp/audio-video-camera/simple-camera-preview-access/)합니다.
 
 ## <a name="summary"></a>요약
 

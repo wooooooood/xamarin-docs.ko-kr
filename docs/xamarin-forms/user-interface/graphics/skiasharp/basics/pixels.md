@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀과 장치 독립적 단위
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 볼 수 있듯이 `CanvasSize` 속성의는 `SKCanvasView` 및 `Size` 속성의는 `SKImageInfo` 값 픽셀 크기를 보고에서 일관성이 있습니다. `Height` 및 `Width` 의 속성은 `SKCanvasView` Xamarin.Forms 속성 및 플랫폼에 의해 정의 된 장치 독립적 단위에서 뷰의 크기를 보고 합니다.
 
-왼쪽에서 시뮬레이터가 iOS 7 장치 독립적 단위 당 2 픽셀에, 가운데에 Android Nexus 5 단위 당 3 픽셀이 많고 오른쪽 Nokia Lumia 925 단위당 2.25 픽셀입니다. 이유 간단한 circle iPhone의 동일한 크기에 대 한 이전 표시 된 검색을 Windows phone, 않고 Android 휴대폰에서 작은 합니다.
+왼쪽에서 시뮬레이터가 iOS 7 장치 독립적 단위 당 2 픽셀 많고 센터에서 Android Nexus 5 단위 당 3 픽셀입니다. 바로 이러한 이유로 원 앞에 표시 된 여러 플랫폼에 대 한 다양 한 크기입니다.
 
 장치 독립적 단위에서 모든 작업 하려는 경우 후 그렇게 설정 하 여는 `IgnorePixelScaling` 의 속성은 `SKCanvasView` 를 `true`합니다. 그러나 결과 선호 하지 수도 있습니다. SkiaSharp 장치 독립적 단위에서 보기의 크기와 같은 픽셀 크기가 더 작은 장치 화면에서 그래픽 렌더링합니다. (예를 들어 SkiaSharp가 사용 하 여 360 x 512 픽셀의 디스플레이 화면 Nexus 5.) 다음 확장 이미지 크기를 크게 비트맵 계단에 있습니다.
 

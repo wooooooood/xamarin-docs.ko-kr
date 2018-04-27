@@ -7,11 +7,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: c5142a3abcc6d461bc277faeb02e3aacd9727bca
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 7b7bd83c474c7e0d32a693e06b5f12696ec5efa2
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선으로 분할
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 수학적으로 곡선 입방 형 3 다항식입니다. 곡선 최대 세 지점에 직선을 교차 합니다. 시작 지점에서 곡선은 항상 탄젠트,와 동일한 방향으로, 처음부터 직선 가리키도록 첫 번째 제어점입니다. 끝점에서 곡선은 항상 탄젠트,와 동일한 방향으로, 두 번째 컨트롤에서 직선 가리키는 끝점입니다.
 
-입방 형 3 차원 곡선은 항상 네 개의 점을 연결 볼록 사각형에 의해 제한 됩니다. 이 라고는 *볼록 집합*합니다. 제어점 시작 및 끝 지점 사이의 직선 상에 베 지 어 곡선 직선으로 렌더링 합니다. 하지만 곡선 수도 교차 자체, Windows Mobile 장치에서 스크린 샷 설명 된 것 처럼 합니다.
+입방 형 3 차원 곡선은 항상 네 개의 점을 연결 볼록 사각형에 의해 제한 됩니다. 이 라고는 *볼록 집합*합니다. 제어점 시작 및 끝 지점 사이의 직선 상에 베 지 어 곡선 직선으로 렌더링 합니다. 하지만 곡선 수도 교차 자체를 세 번째 스크린 샷은 설명 된 것 처럼 합니다.
 
 경로 윤곽선에 여러 개의 연결 된 입방 형 3 베 지 어 곡선을 포함 될 수 있지만 두 입방 형 3 베 지 어 곡선으로 분할 간의 연결 다음 세 점 모두가 동일 선상의 하는 경우에 부드러운 됩니다 (즉, 직선 상에 있음):
 
@@ -106,7 +106,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 x(t) = (1 – t)³x₀ + 3t(1 – t)²x₁ + 3t²(1 – t)x₂ + t³x₃
 
-y(t) = (1 – t)³y₀ + 3t(1 – t)²y₁ + 3t²(1 – t)y₂ + t³y₃
+y(t) = (1-t) ³y₀ + 3t 이상 (1-t) ²y₁ + 3t² (1-t) y₂ + t³y₃
 
 3의 가장 높은 지 수 입방 형 polynomials 이들은 확인 합니다. 확인할 때 쉽게 `t` 0 이면 점이 (x₀ y₀)을 하는 시작 지점 및 시기 `t` 가 1 이면는 지점입니다 (x₃ y₃), 끝점입니다. 시작점 근처 (의 값이 낮은 `t`), (x₁, y₁) 첫 번째 제어점에 적용 하 고 근처 끝점 강력한 (높은 값 ' t ') (x₂, y₂) 두 번째 제어점에 큰 영향을 줍니다.
 
@@ -208,7 +208,7 @@ float Magnitude(SKPoint v)
 
 [![](beziers-images/beziercirculararc-small.png "베 지 어 원호 페이지의 삼중 스크린샷")](beziers-images/beziercirculararc-large.png#lightbox "베 지 어 원호 페이지의 삼중 스크린샷")
 
-Windows Mobile 화면에 치중 하 고 각도 180도 있지만 iOS 화면에는 있다는 것 각도가 90도 제대로 분기 원에 맞게 표시 베 지 어 곡선 특히 반원에서 벗어나는 표시 됩니다.
+세 번째 스크린 샷에 치중 하 고 각도 180도 있지만 iOS 화면에는 있다는 것 각도가 90도 제대로 분기 원에 맞게 표시 베 지 어 곡선 특히 반원에서 벗어나는 표시 됩니다.
 
 두 개의 제어점의 좌표를 계산 분기 원 방향 다음과 같은 경우 상당히 쉽습니다.
 
@@ -345,7 +345,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 2 차 베 지 어 곡선 하나만 제어점 개이고 곡선은 3 개의 점으로 정의: 시작점, 제어 지점 및 끝 지점입니다. 파라메트릭 수식과 매우 비슷합니다 입방 형 3 차원 곡선을 곡선 2 차 다항식 이므로 높은 지 수는 2:
 
-x(t) = (1 – t)²x₀ + 2t(1 – t)x₁ + t²x₂
+x(t) = (1-t) ²x₀ + 2t (1-t) x₁ + t²x₂
 
 y(t) = (1-t) ²y₀ + 2t (1-t) y₁ + t²y₂
 
@@ -414,7 +414,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 매개 방정식 X 및 Y는 동일한 분모를 공유 하는 비율입니다. 다음에 대 한 기준에 대 한 수식은 *t* 0에서 사이의 가중치는 1로 *w*:
 
-d(t) = (1 – t)² + 2wt(1 – t) + t²
+d(t) = (1-t) ² + 2wt(1 – t) + t²
 
 이론적으로 합리적인 quadratic 세 조건 각각에 대해 하나씩 세 개의 별도 가중치 값을 포함할 수 있지만 중간 용어에 가중치 값을 하나만 단순화할 수 있습니다.
 

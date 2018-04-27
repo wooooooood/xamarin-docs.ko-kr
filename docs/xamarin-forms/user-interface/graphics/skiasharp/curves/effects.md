@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>경로 효과
 
@@ -414,13 +414,13 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 체인 또는 가중치 균일 한 분포의 케이블은 catenary의 형태로 중단 됩니다. 반전 된 catenary의 형태로 작성 하는 아키텍처는 아키텍처의 가중치에서 압력 똑같이 배분에서 유리 합니다. catenary에 단순 수학 설명:
 
-y = a · cosh(x / a)
+y는 · = cosh(x / a)
 
 *cosh* 쌍 곡 코사인 함수입니다. 에 대 한 *x* 0 *cosh* 0이 고 *y* 같음 *는*합니다. catenary의 중심입니다. 와 같은 *코사인* 함수 *cosh* 라고 *도*, 즉 *cosh(–x)* equals *cosh(x)*, 양수 또는 음수 인수 증가 대 한 값이 증가 하 고 있습니다. 이러한 값은 catenary의 양쪽을 형성 하는 곡선에 설명 합니다.
 
 적절 한 값을 찾는 *는* catenary 휴대폰의 페이지의 크기에 맞게 않습니다 직접 계산 합니다. 경우 *w* 및 *h* 의 최적 값의 사각형의 높이 너비는 *는* 은 다음 수식을 충족 합니다.
 
-cosh(w / 2 / a) = 1 + h / a
+cosh (w/2/a) = 1 + h / a
 
 다음 메서드는 [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) 클래스는 두 식 왼쪽 및 오른쪽으로 등호를 참조 하 여 해당 같음 통합 `left` 및 `right`합니다. 값이 작으면 *는*, `left` 보다 크면 `right`;의 값이 크면 *는*, `left` 는 보다 작은 `right`합니다. `while` 루프에서의 최적의 값에 좁힙니다 *는*:
 
@@ -854,7 +854,7 @@ public class PathTileFillPage : ContentPage
 
 Android 화면에 특히 일부 왜곡을 하면 원래 스크린 샷에서 확장 됩니다.
 
-이러한 타일 항상 표시 전체 내용과 알 자를 수 없습니다. 제외 하 고 Windows 10 Mobile 화면에서 확인할 수는 없지만 채워질 영역 모퉁이가 둥근된 사각형 임을 합니다. 이 타일을 특정 영역을 자를 하려면 클리핑 패스를 사용 합니다.
+이러한 타일 항상 표시 전체 내용과 알 자를 수 없습니다. 처음 두 가지 스크린샷입니다에서 확인할 수는 없지만 채워질 영역 모퉁이가 둥근된 사각형 임을 합니다. 이 타일을 특정 영역을 자를 하려면 클리핑 패스를 사용 합니다.
 
 설정 해 보세요는 `Style` 의 속성은 `SKPaint` 개체를 `Stroke`, 입력 하지 않고 설명 된 각 타일을 볼 수 있습니다.
 

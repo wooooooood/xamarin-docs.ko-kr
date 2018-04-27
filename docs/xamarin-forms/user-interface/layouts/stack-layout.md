@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 638243958fce34871089b10185f150492dbd2b0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c27f94302037e4e19c9d72131e7137c8a4004d5c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="stacklayout"></a>StackLayout
 
 `StackLayout` 가로 또는 세로로 1 차원 줄 ("스택")에 뷰를 구성합니다. 뷰는 `StackLayout` 크기를 조정할 수 레이아웃 옵션을 사용 하 여 레이아웃에서 공간을 기초로 합니다. 위치 지정 보기는 레이아웃과 뷰의 레이아웃 옵션에 추가 된 순서에 따라 결정 됩니다.
 
-[![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](stack-layout-images/layouts-sml.png "Xamarin.Forms 레이아웃")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
 ## <a name="purpose"></a>용도
 
@@ -215,8 +215,6 @@ Title="StackLayouts">
 위의 코드는 다음과 같은 레이아웃 발생합니다.
 
 ![](stack-layout-images/stack.png "복잡 한 StackLayout")
-
-Windows Phone 단추 렌더링 방법 차이로 인해를 원 중 일부는 Windows Phone 스크린 샷에 boxviews로 대체 되었습니다.
 
 다음에 유의 `StackLayouts`경우에 따라 레이아웃에 중첩 될 수 있으므로 동일한 레이아웃 내에서 모든 요소를 제공 하는 보다 쉽게 s 중첩 됩니다. 또한 알 수 있으므로 `StackLayout` 페이지 하지 않는 일부 레이아웃 유용한 찾았을 다른 레이아웃에 대 한 페이지에 겹치는 항목을 지원 하지 않습니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 5c9eed8f48a40bc7feaadd0c644610f691713e9b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="app-class"></a>App 클래스
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/06/2018
 템플릿에 따라 선택는 `App` 두 가지 방법 중 하나에서 클래스를 정의할 수 있습니다.
 
 * **C#**, 또는
-* **XAML & C#**
+* **XAML 및 C#**
 
 만들려는 **앱** XAML에서는 기본값을 사용 하 여 클래스 **앱** 클래스는 XAML로 바꾸어야 합니다 **앱** 클래스와 관련 된 코드 숨김, 다음 코드 예제에서와 같이:
 
@@ -198,70 +198,9 @@ public class MainActivity :
 > 최신는 [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) 기본 Android 자료 디자인을 더 잘 지원 하기 위해 사용할 수 있는 클래스입니다.
 > 이것은 기본 Android 템플릿을 나중에 되지만 참고할 수 [이러한 지침](~/xamarin-forms/platform/android/appcompat.md) 기존 Android 앱을 업데이트 합니다.
 
-
-### <a name="windows-phone-project"></a>Windows Phone 프로젝트
-
-Windows Phone (Silverlight 기반) 프로젝트의 기본 페이지에서 상속 해야 `FormsApplicationPage`합니다. 즉, XAML 및 C#에 대 한 `MainPage` 참조는 `FormsApplicationPage` 표시 된 것 처럼 클래스입니다.
-
-XAML 루트 요소 반영 되도록 사용자 지정 네임 스페이스에서 사용 하 여 `FormsApplicationPage` 클래스:
-
-```xaml
-<winPhone:FormsApplicationPage
-   ...
-   xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
-    ...>
-</winPhone:FormsApplicationPage>
-```
-
-C#에서 상속 합니다.는 `FormsApplicationPage` 클래스 및 호출 `LoadApplication` 프로그램 Xamarin.Forms의 인스턴스를 만드는 `App`합니다. 명시적으로 한정 하려면 응용 프로그램 네임 스페이스를 사용 하 여 것이 좋습니다는는 `App` Windows Phone 응용 프로그램에 있으므로 또한 자신의 `App` xamarin.forms 관련 되지 않은 클래스입니다.
-
-```csharp
-public partial class MainPage :
-    global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new YOUR_APP_NAMESPACE.App()); // new in 1.3, use the correct namespace
-    }
- }
-```
-
-### <a name="windows-81-project"></a>Windows 8.1 프로젝트
-
-주 페이지의 [(WinRT 기반)는 Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) 프로젝트에서 상속 해야 `WindowsPage`합니다. 즉,에 대 한 XAML `MainPage` 참조는 `WindowsPage` 표시 된 것 처럼 클래스:
-
-XAML 루트 요소 반영 되도록 사용자 지정 네임 스페이스에서 사용 하 여 `FormsApplicationPage` 클래스:
-
-```xaml
-<forms:WindowsPage
-   ...
-   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
-   ...>
-</forms:WindowsPage>
-```
-
-C# 코드 숨김의 구조를 호출 해야 `LoadApplication` 프로그램 Xamarin.Forms의 인스턴스를 만드는 `App`합니다. 명시적으로 한정 하려면 응용 프로그램 네임 스페이스를 사용 하 여 것이 좋습니다는는 `App` UWP 응용 프로그램에 있으므로 또한 자신의 `App` Xamarin.Forms와 관련 없는 클래스입니다.
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        LoadApplication(new YOUR_APP_NAMESPACE.App());
-    }
- }
-```
-
-`Forms.Init()` 호출 해야만 **App.xaml.cs** 줄 65 합니다.
-
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Windows 10 용 유니버설 Windows 프로젝트 (UWP)
 
-[유니버설 Windows 프로젝트용](~/xamarin-forms/platform/windows/installation/universal.md) 지원 Xamarin.Forms에는 현재 미리 보기로 합니다.
+참조 [설치 Windows 프로젝트](~/xamarin-forms/platform/windows/installation/index.md) xamarin.forms에서 UWP 지원에 대 한 정보에 대 한 합니다.
 
 UWP 프로젝트에서 기본 페이지에서 상속 해야 `WindowsPage`합니다. 즉, XAML 및 C#에 대 한 `MainPage` 참조는 `FormsApplicationPage` 표시 된 것 처럼 클래스입니다.
 

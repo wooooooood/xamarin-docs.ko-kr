@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "가운데에 크기 조정 페이지의 삼중 스크린 샷")](scale-images/centeredscale-large.png#lightbox "가운데에 크기 조정 페이지의 삼중 스크린 샷")
 
-`Slider` 이 프로그램의 요소는 범위는 &ndash;10 ~ 10입니다. 볼 수 있듯이 세로 크기 조정 (예:는 Android에서 가운데에 화면)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 가로 축을 대칭 개체가 합니다. 가로 크기 조정 (예: Windows 화면 오른쪽)의 음수 값을 선택 하면 개체가 크기 조정의 중심을 통과 하는 세로 축을 대칭 이동 합니다.
+`Slider` 이 프로그램의 요소는 범위는 &ndash;10 ~ 10입니다. 볼 수 있듯이 세로 크기 조정 (예:는 Android에서 가운데에 화면)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 가로 축을 대칭 개체가 합니다. 가로 크기 조정 (예: UWP 화면 오른쪽)의 음수 값을 선택 하면 개체가 크기 조정의 중심을 통과 하는 세로 축을 대칭 이동 합니다.
 
 이 네 번째 버전의는 `Scale` 메서드는 실제로 바로 가기입니다. 대체 하 여이 과정을 확인 해야 할 수도 있습니다는 `Scale` 다음이 코드에서 메서드:
 

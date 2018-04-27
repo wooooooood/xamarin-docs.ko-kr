@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: b8392dad578f94380e90da24cbf44120d38f754d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09cd92b436be97f5490ac74890e4b0723bcd5701
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="checking-device-orientation"></a>장치 방향을 확인 하는 중
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 - **[인터페이스를 만드는 방법](#Creating_the_Interface)**  &ndash; 이해 인터페이스 하는 방법을 공유 코드에 만들어집니다.
 - **[iOS 구현](#iOS_Implementation)**  &ndash; iOS에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[Android 구현](#Android_Implementation)**  &ndash; Android 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[Windows 구현](#WindowsImplementation)**  &ndash; 네이티브 코드에 Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 대 한 인터페이스를 구현 하는 방법을 알아봅니다.
+- **[UWP 구현](#WindowsImplementation)**  &ndash; 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[공유 코드에서 구현](#Implementing_in_Shared_Code)**  &ndash; 사용 방법을 배울 `DependencyService` 공유 코드에서 네이티브 구현으로 호출할 수 있습니다.
 
 사용 하 여 응용 프로그램 `DependencyService` 다음과 같은 구조를 갖습니다.
@@ -145,9 +145,9 @@ namespace DependencyServiceSample.Droid {
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone 및 유니버설 Windows 플랫폼 구현
+## <a name="universal-windows-platform-implementation"></a>유니버설 Windows 플랫폼 구현
 
-다음 코드 구현 하는 `IDeviceOrientation` Windows Phone 및 유니버설 Windows 플랫폼 인터페이스:
+다음 코드 구현 하는 `IDeviceOrientation` 인터페이스 유니버설 Windows 플랫폼에:
 
 ```csharp
 namespace DependencyServiceSample.WindowsPhone

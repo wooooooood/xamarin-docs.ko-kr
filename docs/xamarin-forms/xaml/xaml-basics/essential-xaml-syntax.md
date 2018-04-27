@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 776b0d07de947c01761f8e8d8809b24cf7f3c3cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0129ec9872d8e5270ed8f0072cff0035d4f5255
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2 부 합니다. 필수 XAML 구문
 
@@ -484,7 +484,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-Android 및 Windows의 기본 값으로 설정 되어 있으므로 `Padding`, 태그를 제거할 수 있습니다.
+Android 및 UWP의 기본 값으로 설정 되어 있으므로 `Padding`, 태그를 제거할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 3f098e7f403a4f5e9fd924b8745348197cd4f843
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b437b42c1cb4dd8cbe7612a680032d84e852ff6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="checking-battery-status"></a>배터리 상태를 확인 하는 중
 
@@ -22,7 +22,6 @@ ms.lasthandoff: 04/04/2018
 - **[인터페이스를 만드는 방법](#Creating_the_Interface)**  &ndash; 공유 코드에서 인터페이스 만들어지는 방법을 이해 합니다.
 - **[iOS 구현](#iOS_Implementation)**  &ndash; iOS에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[Android 구현](#Android_Implementation)**  &ndash; Android 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[Windows Phone 구현](#Windows_Phone_Implementation)**  &ndash; 네이티브 코드에 Windows Phone 대 한 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[유니버설 Windows 플랫폼 구현](#UWPImplementation)**  &ndash; 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[공유 코드에서 구현](#Implementing_in_Shared_Code)**  &ndash; 사용 방법을 배울 `DependencyService` 공유 코드에서 네이티브 구현으로 호출할 수 있습니다.
 
@@ -311,74 +310,6 @@ namespace DependencyServiceSample.Droid
 
 이 특성의 구현으로 클래스를 등록는 `IBattery` 않음을 의미 하는 인터페이스 `DependencyService.Get<IBattery>` 에서 사용할 수는 공유 코드는 해당 형식의 인스턴스를 만들 수 있습니다.
 
-<a name="Windows_Phone_Implementation" />
-
-## <a name="windows-phone-implementation"></a>Windows Phone 구현
-
-이 구현은 Android 및 iOS 버전 보다 좀 더 제한적 이므로 Windows Phone 전원 API Android 및 iOS에 해당 하는 보다 적은 정보를 제공 합니다.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-namespace DependencyServiceSample.WinPhone
-{
-  public class BatteryImplementation : IBattery
-  {
-    private int last;
-    private BatteryStatus status = BatteryStatus.Unknown;
-
-    public BatteryImplementation()
-    {
-      last = DefaultBattery.RemainingChargePercent;
-    }
-
-    Windows.Phone.Devices.Power.Battery battery;
-    private Windows.Phone.Devices.Power.Battery DefaultBattery
-    {
-      get { return battery ?? (battery = Windows.Phone.Devices.Power.Battery.GetDefault()); }
-    }
-    public int RemainingChargePercent
-    {
-      get
-      { return DefaultBattery.RemainingChargePercent; }
-    }
-
-    public  BatteryStatus Status
-    {
-      get { return status; }
-    }
-
-    public PowerSource PowerSource
-    {
-      get
-      {
-        if (status == BatteryStatus.Full || status == BatteryStatus.Charging)
-          return PowerSource.Ac;
-
-        return PowerSource.Battery;
-      }
-    }
-  }
-}
-```
-
-이 추가 `[assembly]` 클래스 (위와 정의 된 모든 네임 스페이스 외부), 모든 필수 비롯 하 여 특성 `using` 문.
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (BatteryImplementation))]
-namespace DependencyServiceSample.WinPhone {
-  public class BatteryImplementation : IBattery {
-    ...
-```
-
-이 특성의 구현으로 클래스를 등록는 `IBattery` 인터페이스 즉 `DependencyService.Get<IBattery>` 해당 형식의 인스턴스를 만들려고 공유 코드에서 사용할 수 있습니다.
-
 <a name="UWPImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>유니버설 Windows 플랫폼 구현
@@ -537,7 +468,7 @@ public MainPage ()
 }
 ```
 
-장치의 현재 전원 상태를 반영 하도록 업데이트 하 여 단추 텍스트 iOS, Android 또는 Windows 플랫폼에서이 응용 프로그램을 실행 하 고 단추를 누르면 발생 합니다.
+IOS에서이 응용 프로그램 실행, Android 또는 UWP 및 단추를 누르면 장치의 현재 전원 상태를 반영 하도록 업데이트 하 여 단추 텍스트에 발생 합니다.
 
 ![](battery-info-images/battery.png "배터리 상태 예제")
 

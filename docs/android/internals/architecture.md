@@ -5,12 +5,12 @@ ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f4be88a1eabb3fa3cca733690a3f097a03516272
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9ce1d790f5dea00ac47d5639ae8424793006445a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -70,7 +70,7 @@ Xamarin.Android 응용 프로그램에도 포함 *Android 호출 가능 래퍼* 
 관리 되는 호출 가능 래퍼 하위 클래스는 모든 "흥미로운" 응용 프로그램별 논리 상주할 수 있습니다. 여기에 사용자 지정 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 서브 클래스 (같은 [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) 기본 프로젝트 템플릿에서 유형). (모든 이들은 특히 *Java.Lang.Object* 작업할 하위 클래스 *하지* 포함 한 [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) 사용자 지정 특성 또는 [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) 은 *false*, 기본값입니다.)
 
 마찬가지로 호출 가능 래퍼를 관리 하는 관리 되는 호출 가능 래퍼 하위 클래스를 통해 액세스할 수 있는 전역 참조를 포함할 수도 [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) 속성입니다. 관리 되는 호출 가능 래퍼와 전역 참조 해제할 수 있도록 명시적으로 호출 하 여 처럼 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)합니다.
-관리 되는 호출 가능 래퍼 달리 *신중* 로 이러한 인스턴스를 삭제 하기 전에 수행 해야 할 *dispose ()*인스턴스의 ing Java 인스턴스 간의 매핑을 끊긴다는 (의 인스턴스는 Android 호출 가능 래퍼) 및 관리 되는 인스턴스.
+관리 되는 호출 가능 래퍼 달리 *신중* 로 이러한 인스턴스를 삭제 하기 전에 수행 해야 할 *dispose ()* 인스턴스의 ing Java 인스턴스 간의 매핑을 끊긴다는 (의 인스턴스는 Android 호출 가능 래퍼) 및 관리 되는 인스턴스.
 
 
 ### <a name="java-activation"></a>Java 정품 인증
@@ -101,7 +101,7 @@ LogTextBox 인스턴스를 인스턴스화하고이 지원 통해는 [LogTextVie
 
 4.  *TextView* 생성자 호출 *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* 합니다.
 
-5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* invokes *LogTextBox.n_getDefaultMovementMethod()* , which invokes *TextView.n_GetDefaultMovementMethod()* , which invokes [Java.Lang.Object.GetObject&lt;TextView&gt; (handle, JniHandleOwnership.DoNotTransfer)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) .
+5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* 호출 *LogTextBox.n_getDefaultMovementMethod()* 를 호출 하 *TextView.n_GetDefaultMovementMethod()* , 호출 하 [Java.Lang.Object.GetObject&lt;TextView&gt; (처리, JniHandleOwnership.DoNotTransfer)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) 합니다.
 
 6.  *Java.Lang.Object.GetObject&lt;TextView&gt;()* 를 이미 있는지를 해당 C# 확인에 대 한 인스턴스 *처리* 합니다. 가 반환 됩니다. 이 시나리오에서는 하지 않으므로, 하므로 *Object.GetObject&lt;T&gt;()* 을 생성 해야 합니다.
 
@@ -115,11 +115,7 @@ LogTextBox 인스턴스를 인스턴스화하고이 지원 통해는 [LogTextVie
 
 11. *LogTextBox (컨텍스트, IAttributeSet, int)* 생성자가 실행 *(7)에서 만든 동일한 인스턴스에서* 합니다.
 
-12. ...
-
-
-경우 (IntPtr, JniHandleOwnership) 생성자를 찾을 수 없는 경우 [System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/) throw 됩니다.
-
+12. 경우 (IntPtr, JniHandleOwnership) 생성자를 찾을 수 없으면 다음는 System.MissingMethodException] (https://developer.xamarin.com/api/type/System.MissingMethodException/) throw 됩니다.
 
 <a name="Premature_Dispose_Calls" />
 

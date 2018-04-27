@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 268622ff8bc7ff05771096549ed694c57139366d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms Multiscreen Quickstart
 
@@ -22,11 +22,11 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Visual Studio를 실행합니다. 시작 페이지에서 **프로젝트 열기...**를 클릭하고, **프로젝트 열기** 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
+1. Visual Studio를 실행합니다. 시작 페이지에서 **프로젝트 열기...** 를 클릭하고, **프로젝트 열기** 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
 
     ![](quickstart-images/vs/open-solution.png "프로젝트 열기")
 
-2. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 클릭합니다.
+2. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item.png "새 항목 추가")
 
@@ -46,7 +46,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -164,11 +164,11 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-1. Mac용 Visual Studio. 시작 페이지에서 **프로젝트 열기...**를 클릭하고, 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
+1. Mac용 Visual Studio. 시작 페이지에서 **프로젝트 열기...** 를 클릭하고, 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
 
     ![](quickstart-images/xs/open-solution.png "솔루션 열기")
 
-2. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 선택합니다.
+2. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 
     ![](quickstart-images/xs/add-new-file.png "새 파일 추가")
 
@@ -192,7 +192,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>

@@ -7,12 +7,12 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: c5937cc86a8a1f8506b14774b0429bee3c8aa594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -108,7 +108,7 @@ Visual Studio를 시작합니다.  **파일 > 새로 만들기 > 프로젝트**�
 
 ### <a name="writing-translation-code"></a>변환 코드 작성
 
-다음 단계는 전화 번호를 영숫자에서 숫자로 변환하는 코드를 추가하는 것입니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, 아래에 표시된 대로 **추가 > 새 항목...**을 선택하여 프로젝트에 새 파일을 추가합니다.
+다음 단계는 전화 번호를 영숫자에서 숫자로 변환하는 코드를 추가하는 것입니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, 아래에 표시된 대로 **추가 > 새 항목...** 을 선택하여 프로젝트에 새 파일을 추가합니다.
 
 [![새 항목 추가](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
@@ -185,11 +185,10 @@ namespace Core
 (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가하는 것입니다. 먼저 `OnCreate` 메서드가 다음과 유사하도록 템플릿 코드를 수정합니다.
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
@@ -240,7 +239,7 @@ translateButton.Click += (sender, e) =>
 
 **파일 > 모두 저장**을 선택(하거나 **CTRL-SHIFT-S** 키를 눌러서)하여 작업을 저장하고, **빌드 > 솔루션 다시 빌드**를 선택(하거나 **CTRL-SHIFT-B** 키를 눌러서)하여 응용 프로그램을 빌드합니다. 
 
-오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 업데이트를 설치했는지 확인합니다.
+오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 업데이트를 설치했는지 확인합니다.
 
 ### <a name="setting-the-label-and-app-icon"></a>레이블 및 앱 아이콘 설정
 
@@ -258,7 +257,7 @@ namespace Phoneword
 }
 ```
 
-이제 응용 프로그램 아이콘을 설정하겠습니다. 기본적으로 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿔보겠습니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-**을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
+이제 응용 프로그램 아이콘을 설정하겠습니다. 기본적으로 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿔보겠습니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-** 을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
 
 [![mipmap- 폴더 및 Icon.png 파일](hello-android-quickstart-images/vs/21-mipmap-folders-sml.png)](hello-android-quickstart-images/vs/21-mipmap-folders.png#lightbox)
 
@@ -290,7 +289,7 @@ namespace Phoneword
 
 **응용 프로그램** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다. 
 
-**새 솔루션...**을 클릭하여 새 프로젝트를 만듭니다.
+**새 솔루션...** 을 클릭하여 새 프로젝트를 만듭니다.
 
 **새 프로젝트의 템플릿 선택** 대화 상자에서 **Android > 앱**을 클릭하고 **Android 앱** 템플릿을 선택합니다. **다음**을 클릭합니다.
 
@@ -309,7 +308,7 @@ namespace Phoneword
 
 [![Main.axml 열기](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
-**Hello World, 클릭하세요.**를 선택합니다. 디자인 화면의 **단추** 및 **삭제** 키를 눌러서 제거합니다. 
+**Hello World, 클릭하세요.** 를 선택합니다. 디자인 화면의 **단추** 및 **삭제** 키를 눌러서 제거합니다. 
 
 **도구 상자**(오른쪽 영역)에서 검색 표시줄에 `text`을 입력하고,**큰 텍스트** 위젯을 디자인 화면(가운데 영역)으로 끌어옵니다.
 
@@ -343,7 +342,7 @@ namespace Phoneword
 
 ### <a name="writing-translation-code"></a>변환 코드 작성
 
-이제 전화 번호를 영숫자에서 숫자로 변환하는 코드 추가합니다. **솔루션** 패드에서 **Phoneword** 프로젝트의 옆에 있는 기어 아이콘을 클릭하고 **추가 > 새 파일...**을 선택하하여 프로젝트에 새 파일을 추가합니다.
+이제 전화 번호를 영숫자에서 숫자로 변환하는 코드 추가합니다. **솔루션** 패드에서 **Phoneword** 프로젝트의 옆에 있는 기어 아이콘을 클릭하고 **추가 > 새 파일...** 을 선택하하여 프로젝트에 새 파일을 추가합니다.
 
 [![프로젝트에 새 파일 추가](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
@@ -420,13 +419,10 @@ namespace Core
 이벤트 처리기를 **변환** 단추에 추가하여 시작합니다. `MainActivity` 클래스에서 `OnCreate` 메서드를 찾습니다. `base.OnCreate(bundle)` 및 `SetContentView (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가합니다. `OnCreate` 메서드가 다음과 유사하도록 템플릿 단추 처리 코드를 제거합니다.
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
@@ -478,7 +474,7 @@ translateButton.Click += (sender, e) =>
 
 **빌드 > 모두 빌드**를 선택(하거나 **& #8984; + B** 키를 눌러)하여 작업 내용을 저장하고 응용 프로그램을 빌드합니다. 응용 프로그램을 컴파일하는 경우 Mac용 Visual Studio 맨 위에서 성공 메시지가 표시됩니다.
 
-오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 및 Mac용 Visual Studio 업데이트를 설치했는지 확인합니다.
+오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 및 Mac용 Visual Studio 업데이트를 설치했는지 확인합니다.
 
 ### <a name="setting-the-label-and-app-icon"></a>레이블 및 앱 아이콘 설정
 
@@ -496,7 +492,7 @@ namespace Phoneword
 }
 ```
 
-이제 응용 프로그램 아이콘을 설정하겠습니다. 기본적으로 Mac용 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿔보겠습니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-**을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
+이제 응용 프로그램 아이콘을 설정하겠습니다. 기본적으로 Mac용 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿔보겠습니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-** 을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
 
 [![mipmap- 폴더 및 Icon.png 파일](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: f1f0bb0ce282479a7b185257880244863bb67a60
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="list-appearance"></a>목록 모양
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/06/2018
 - 설정의 `ListView`의 `ItemsSource` 해당 목록에 있습니다.
 - 설정 `IsGroupingEnabled` true로 합니다.
 - 설정 [ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) 그룹의 제목으로 사용 되는 그룹의 속성에 바인딩됩니다.
-- [선택 사항] 설정 [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) 그룹에 대 한 짧은 이름으로 사용 되는 그룹의 속성에 바인딩됩니다. 약식 이름은 점프 목록 (ios, Windows Phone 타일 눈금 rigt 측 열)에 사용 됩니다.
+- [선택 사항] 설정 [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) 그룹에 대 한 짧은 이름으로 사용 되는 그룹의 속성에 바인딩됩니다. 약식 이름은 점프 목록 (iOS에 오른쪽 열)에 사용 됩니다.
 
 그룹에 대 한 클래스를 만들어 시작 합니다.
 
@@ -120,7 +120,7 @@ x:Class="DemoListView.GroupingViewPage"
 
 목록에서 그룹화 활성화 되어 있는 그룹 머리글 사용자 지정할 수도 있습니다.
 
-방식과 유사한 `ListView` 에 `ItemTemplate` 행 표시 되는 방식을 정의 하기 위한 `ListView` 에 `GroupHeaderTemplate`합니다. 
+방식과 유사한 `ListView` 에 `ItemTemplate` 행 표시 되는 방식을 정의 하기 위한 `ListView` 에 `GroupHeaderTemplate`합니다.
 
 XAML의 그룹 머리글을 사용자 지정의 예는 다음과 같습니다.
 
@@ -206,7 +206,7 @@ Xaml의 경우:
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>행 구분 기호
-사이 구분 기호 선을 표시할지 `ListView` iOS 및 Android에서 기본적으로는 요소입니다. Windows Phone 해당 플랫폼 UX 관련 지침 당 구분선을 지원 하지 않습니다. IOS 및 Android에서 구분 기호 선 숨기기를 사용 하려는 경우에 설정 된 `SeparatorVisibility` 프로그램 ListView에서 속성입니다. 에 대 한 옵션 `SeparatorVisibility` 됩니다.
+사이 구분 기호 선을 표시할지 `ListView` iOS 및 Android에서 기본적으로는 요소입니다. IOS 및 Android에서 구분 기호 선 숨기기를 사용 하려는 경우에 설정 된 `SeparatorVisibility` 프로그램 ListView에서 속성입니다. 에 대 한 옵션 `SeparatorVisibility` 됩니다.
 
 * **기본** -iOS 및 Android에서 이루어진 구분선을 표시 합니다.
 * **None** -모든 플랫폼에서 구분 기호를 숨깁니다.
@@ -219,7 +219,7 @@ C#:
 SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
-XAML:
+XAML의 경우:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
@@ -235,7 +235,7 @@ C#:
 SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
-XAML:
+XAML의 경우:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
@@ -251,7 +251,7 @@ C#:
 SepratorDemoListView.SeparatorColor = Color.Green;
 ```
 
-XAML:
+XAML의 경우:
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
@@ -280,7 +280,7 @@ C#:
 RowHeightDemoListView.RowHeight = 100;
 ```
 
-XAML:
+XAML의 경우:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
@@ -301,7 +301,7 @@ C#:
 RowHeightDemoListView.HasUnevenRows = true;
 ```
 
-XAML:
+XAML의 경우:
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />

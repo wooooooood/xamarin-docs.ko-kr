@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 58f5a64f85dbe5a6889e6ff598c14fdfd9b0a5df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da3025f2616c91488ec70e25836351b08e957494
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
 _ContentPage는 단일 보기를 표시 하는 화면의 대부분을 차지 하는 시각적 요소입니다. 이 문서에는 개발자가 자신의 플랫폼 관련 사용자 지정과 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다._
 
-Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `PageRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIViewController` 제어 합니다. Android 플랫폼의 `PageRenderer` 클래스를 인스턴스화하는 `ViewGroup` 제어 합니다. Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 `PageRenderer` 클래스를 인스턴스화하는 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+Xamarin.Forms는 모든 컨트롤에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `PageRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIViewController` 제어 합니다. Android 플랫폼의 `PageRenderer` 클래스를 인스턴스화하는 `ViewGroup` 제어 합니다. 에 플랫폼 UWP (유니버설 Windows)는 `PageRenderer` 클래스를 인스턴스화하는 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
 다음 다이어그램에서는 간의 관계는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 및 구현 하는 해당 네이티브 컨트롤:
 
@@ -197,57 +197,6 @@ namespace CustomRenderer.Droid
 기본 클래스에 대 한 호출 `OnElementChanged` 메서드를 만드는 데는 Android `ViewGroup` 컨트롤 뷰의 그룹입니다. 라이브 카메라 스트림 렌더러에서 기존 Xamarin.Forms 요소에 이미 연결 되지 않으면 사용자 지정 렌더러를 통해 렌더링 되 고 있는 페이지 인스턴스가 존재 하는 권한과만 렌더링 됩니다.
 
 일련의를 사용 하는 메서드를 호출 하 여 페이지를 사용자 지정한 다음는 `Camera` 전에 사진, 캡처할 수 있는 기능과 카메라에서 라이브 스트림을 제공 하는 API는 `AddView` 메서드를 호출 하는 라이브 카메라 추가 UI를 스트리밍하는 `ViewGroup`합니다.
-
-### <a name="creating-the-page-renderer-on-windows-phone"></a>Windows Phone 페이지 렌더러 만들기
-
-다음 코드 예제에서는 Windows Phone 플랫폼에 대 한 페이지 렌더러를 보여 줍니다.
-
-```csharp
-[assembly: ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
-namespace CustomRenderer.WinPhone81
-{
-    public class CameraPageRenderer : PageRenderer
-    {
-        ...
-
-        protected override void OnElementChanged (VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged (e);
-
-            if (e.OldElement != null || Element == null) {
-                return;
-            }
-
-            try {
-                ...
-                var container = ContainerElement as Canvas;
-
-                SetupUserInterface ();
-                SetupEventHandlers ();
-                SetupLiveCameraStream ();
-                container.Children.Add (page);
-            }
-            ...
-        }
-
-        protected override Size ArrangeOverride(Size finalSize)
-        {
-            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-            return finalSize;
-        }
-        ...
-    }
-}
-```
-
-기본 클래스에 대 한 호출 `OnElementChanged` 메서드를 만드는 데 Windows Phone `Canvas` 컨트롤, 페이지를 렌더링 합니다. 라이브 카메라 스트림 렌더러에서 기존 Xamarin.Forms 요소에 이미 연결 되지 않으면 사용자 지정 렌더러를 통해 렌더링 되 고 있는 페이지 인스턴스가 존재 하는 권한과만 렌더링 됩니다.
-
-Windows Phone 플랫폼에서 네이티브 플랫폼에서 사용 중인 페이지에 대 한 형식화 된 참조를 통해 액세스할 수 있습니다는 `ContainerElement` 속성으로는 `Canvas` 제어에 대 한 형식화 된 참조는 `FrameworkElement`합니다. 일련의를 사용 하는 메서드를 호출 하 여 페이지를 사용자 지정한 다음는 `MediaCapture` 를 사용자 지정된 된 페이지에 추가 되기 전에 사진을 캡처하는 기능과 카메라에서 라이브 스트림을 제공 하는 API는 `Canvas` 디스플레이 대 한 합니다.
-
-파생 되는 사용자 지정 렌더러를 구현 하는 경우 `PageRenderer` Windows Runtime에는 `ArrangeOverride` 기본 렌더러를 수행할지 무엇 인지 인식 하지 때문에 메서드 페이지 컨트롤을 정렬 하려면 구현도 해야 합니다. 그렇지 않은 경우 빈 페이지가 발생합니다. 따라서이 예제에에서는 `ArrangeOverride` 메서드 호출의 `Arrange` 메서드를는 `Page` 인스턴스.
-
-> [!NOTE]
-> 중지 하 고 Windows Phone 8.1 WinRT 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 하는 것이 유용 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조는 `CleanUpCaptureResourcesAsync` 샘플 솔루션에 Windows Phone 프로젝트에서 메서드 및 [퀵 스타트: MediaCapture API를 사용 하 여 비디오 캡처](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)합니다.
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>페이지 렌더러 UWP에서 만들기
 

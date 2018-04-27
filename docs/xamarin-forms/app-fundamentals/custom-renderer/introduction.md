@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -19,7 +19,7 @@ _사용자 지정 렌더러 모양 및 Xamarin.Forms 컨트롤의 동작을 사�
 
 Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-interface/controls/index.md) 플랫폼 간 모바일 사용자 인터페이스를 설명 하기 위해 공용 API를 제공 합니다. 각 페이지, 레이아웃 및 컨트롤은 다른 방식으로 렌더링 각 플랫폼에서 사용 하 여는 `Renderer` 화면에서 정렬 하 고에 지정 된 동작을 추가 하는 다시 (Xamarin.Forms 표현에 해당), 네이티브 컨트롤을 만드는 클래스는 공유 코드입니다.
 
-개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 지정된 된 형식에 대 한 사용자 지정 렌더러; 다른 플랫폼에서 기본 동작을 허용 하는 동안 한 곳에서 컨트롤을 사용자 지정할 수 하나의 응용 프로그램 프로젝트에 추가할 수 있습니다. 또는 다른 사용자 지정 렌더러를 iOS, Android 및 Windows Phone 다른 모양 및 느낌을 만들어 각 응용 프로그램 프로젝트에 추가할 수 있습니다. 그러나 단순 컨트롤 사용자 지정을 수행 하는 사용자 지정 렌더러 클래스를 구현 방식은 규모 응답 합니다. 효과이 프로세스를 간소화 하 고 작은 스타일 변경 내용에 대해 일반적으로 사용 됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
+개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 지정된 된 형식에 대 한 사용자 지정 렌더러; 다른 플랫폼에서 기본 동작을 허용 하는 동안 한 곳에서 컨트롤을 사용자 지정할 수 하나의 응용 프로그램 프로젝트에 추가할 수 있습니다. 또는 다른 사용자 지정 렌더러를 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에서 다른 모양과 느낌을 만들어 각 응용 프로그램 프로젝트에 추가할 수 있습니다. 그러나 단순 컨트롤 사용자 지정을 수행 하는 사용자 지정 렌더러 클래스를 구현 방식은 규모 응답 합니다. 효과이 프로세스를 간소화 하 고 작은 스타일 변경 내용에 대해 일반적으로 사용 됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>검사 하는 중 이유 사용자 지정 렌더러는 필요한 경우
 
@@ -51,7 +51,7 @@ public class MyEntry : Entry
 `local` 네임 스페이스 접두사는 모두 사용할 수 있습니다. 그러나는 `namespace` 및 `assembly` 값에는 사용자 지정 컨트롤의 세부 정보과 일치 해야 합니다. 네임 스페이스 선언 되 면 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
 
 > [!NOTE]
-> 정의 `xmlns` 공유 프로젝트 보다 PCLs에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 PCL는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. 공유 프로젝트를 사용할 때 XAML 등 모든 공유 자산 컴파일됩니다. iOS, Android 및 Windows Phone 의미는 참조 프로젝트의 각 프로젝트에는 자신의 *어셈블리 이름을* 수는 없습니다 작성에 `xmlns` 선언 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
+> 정의 `xmlns` 공유 프로젝트 보다 PCLs에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 PCL는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. (XAML) 모든 공유 자산 iOS, Android 및 UWP 의미는 참조 프로젝트의 각로 컴파일되는 공유 프로젝트를 사용할 경우 프로젝트에는 자신의 *어셈블리 이름을* 수 없으면를 쓸 수 `xmlns` 선언 하지 않아도 각 응용 프로그램에 대 한 값 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
 
 `MyEntry` 사용자 지정 컨트롤 다음 스크린샷에 표시 된 것 처럼 그런 다음 회색 배경으로 각 플랫폼에서 렌더링 됩니다.
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 2edd7a982d0307475933a234e7e1fbb8dd8d6a34
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 924aa88d29379c98204fd810c651de56ff757971
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` 위치 및 크기 보기 레이아웃 또는 형제 보기의 속성을 기준으로 하는 데 사용 됩니다. 와 달리 `AbsoluteLayout`, `RelativeLayout` 이동 앵커의 개념 없고 아래쪽 또는 레이아웃의 오른쪽 가장자리를 기준으로 요소를 배치 하기 위한 기능에는 없습니다. `RelativeLayout` 요소 자체의 범위를 벗어난 위치 지정 지원 하지 않습니다.
 
-[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms 레이아웃")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
 ## <a name="purpose"></a>용도
 
@@ -221,8 +221,6 @@ Title="RelativeLayout">
 위의 코드는 다음과 같은 레이아웃 발생합니다.
 
 ![](relative-layout-images/relative.png "복잡 한 RelativeLayout")
-
-Windows Phone 단추 렌더링 방법 차이로 인해를 원 중 일부는 Windows Phone 스크린 샷에 boxviews로 대체 되었습니다.
 
 다음에 유의 `RelativeLayouts`경우에 따라 레이아웃에 중첩 될 수 있으므로 동일한 레이아웃 내에서 모든 요소를 제공 하는 보다 쉽게 s 중첩 됩니다. 또한 구성 요소 개발자는 일부 요소가 `RelativeToView`수 있게 해 주는 더욱 쉽고 레이아웃 위치 뷰 간의 관계를 안내 하는 경우 때문에 있습니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: ddbcb74d34f09c7bb60891148bd50b36bc5094c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="images"></a>이미지
 
@@ -58,7 +58,6 @@ Xamarin.Forms는는 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.F
 
 - **iOS** -으로 관리 하 고 이미지를 사용 하는 iOS 9 지원 기본 **자산 카탈로그 이미지 집합**는 모든 다양 한 장치를 지원 하 고에 대 한 요소를 확장 하는 데 필요한 이미지의 버전을 포함 해야 하는 프로그램 응용 프로그램입니다. 자세한 내용은 참조 [는 자산 카탈로그 이미지를 설정 하는 추가 이미지](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 - **Android** -에 이미지를 배치는 **리소스/그릴** ड ि र ॅ **빌드 작업: AndroidResource**합니다. 이미지의 높은 및 낮은 DPI 버전을 제공할 수 있습니다 (적절 하 게 이름이 **리소스** 와 같은 하위 디렉터리 **그릴 ldpi**, **그릴 hdpi**, 및 **그릴 xhdpi**).
-- **Windows Phone** -응용 프로그램의 루트 디렉터리에 이미지를 배치 **빌드 작업: 콘텐츠**합니다.
 - **유니버설 Windows 플랫폼 (UWP)** -응용 프로그램의 루트 디렉터리에 이미지를 배치 **빌드 작업: 콘텐츠**합니다.
 
 > [!IMPORTANT]
@@ -93,7 +92,7 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>기본 해상도 (레 티 나 및 높은 DPI)
 
-iOS, Android, Windows Phone 및 UWP 다른 이미지 해상도, 운영 체제에서 장치의 기능에 따라 런타임에 적절 한 이미지를 선택 하는 위치에 대 한 지원이 포함 됩니다. Xamarin.Forms는 파일은 올바르게 라는 이며 프로젝트에 있는 경우 자동으로 대체 해상도 지원 하므로 로컬 이미지를 로드 하기 위한 네이티브 플랫폼의 Api를 사용 합니다.
+iOS, Android 및 UWP 다른 이미지 해상도, 운영 체제에서 장치의 기능에 따라 런타임에 적절 한 이미지를 선택 하는 위치에 대 한 지원이 포함 됩니다. Xamarin.Forms는 파일은 올바르게 라는 이며 프로젝트에 있는 경우 자동으로 대체 해상도 지원 하므로 로컬 이미지를 로드 하기 위한 네이티브 플랫폼의 Api를 사용 합니다.
 
 적절 한 자산 카탈로그 이미지 세트에 필요한 각 해상도 대 한 이미지를 끌기를 iOS 9 이후 이미지를 관리 하는 것이 좋습니다. 자세한 내용은 참조 [는 자산 카탈로그 이미지를 설정 하는 추가 이미지](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 
@@ -103,7 +102,7 @@ Android 대체 고해상도 이미지를 배치할 [특별 하 게 명명 된 �
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png "Android 다중 해상도 이미지 위치")](images-images/xs-highdpisolution.png#lightbox "Android 다중 해상도 이미지 위치")
 
-UWP 및 Windows Phone 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)여기서 `xxx` 예에 자산에 적용 된 확장의 비율 **myimage.scale-200.png**. 이미지 다음 참조할 수 있습니다. 예를 들어 just 코드 또는 XAML 배율 한정자 없이 **myimage.png**합니다. 플랫폼은 디스플레이 현재 DPI를 기준으로 가장 가까운 적절 한 자산 눈금자를 선택 합니다.
+UWP 이미지 파일 이름이 [붙어야 수 `.scale-xxx` 파일 확장명 앞](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)여기서 `xxx` 예에 자산에 적용 된 확장의 비율 **myimage.scale 200.png**합니다. 이미지 다음 참조할 수 있습니다. 예를 들어 just 코드 또는 XAML 배율 한정자 없이 **myimage.png**합니다. 플랫폼은 디스플레이 현재 DPI를 기준으로 가장 가까운 적절 한 자산 눈금자를 선택 합니다.
 
 ### <a name="additional-controls-that-display-images"></a>이미지를 표시 하는 추가 컨트롤
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4adff8a95f9981dbecc44bf177dcd98b7984a3a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤 레이아웃와 화면에 컨트롤을 배치 하는 데 사용 되는 뷰 클래스에서 파생 되어야 합니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼 특정 웹 컨트롤을 개선 하는 방법을 보여 주는 HybridWebView 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
-모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ios에서는 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIView` 제어 합니다. Android 플랫폼의 `ViewRenderer` 클래스를 인스턴스화하는 `View` 제어 합니다. Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) ios에서는 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UIView` 제어 합니다. Android 플랫폼의 `ViewRenderer` 클래스를 인스턴스화하는 `View` 제어 합니다. 에 플랫폼 UWP (유니버설 Windows)는 `ViewRenderer` 클래스 인스턴스화합니다 네이티브 `FrameworkElement` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
 다음 다이어그램에서는 간의 관계는 [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 및 구현 하는 해당 네이티브 컨트롤:
 
@@ -417,13 +417,13 @@ public class JSBridge : Java.Lang.Object
 > [!IMPORTANT]
 > Android Oreo 확인 Android 매니페스트를 설정 하는 **대상 Android 버전** 를 **자동**합니다. 그렇지 않은 경우 실행이 코드는 오류 메시지 "invokeCSharpAction 정의 되지 않은"에 발생 합니다.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Windows Phone에서 사용자 지정 렌더러 만들기 및 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 UWP 및 Windows Phone 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Windows.UI.Xaml.Controls.WebView>
     {

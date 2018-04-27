@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>탭된 페이지
 
@@ -39,7 +39,6 @@ _Xamarin.Forms TabbedPage 탭 목록과 큰 세부 정보 영역에서 세부 �
     > [!NOTE]
   > 참고는 AppCompat을 Android에서 사용할 경우 각 탭도 아이콘이 표시 됩니다. 또한는 `TabbedPageRenderer` for Android AppCompat에는 재정의 가능한 `SetTabIcon` 사용자 지정에서 탭 아이콘을 로드 하는 데 사용 될 방법을 `Drawable`합니다. 이 재정의 사용 하면에서 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`합니다.
 
-- Windows Phone 화면 위쪽에 표시 된 탭의 목록 및 세부 정보 영역 미만인 합니다. 한 화면에 맞게 너무 많이 있는 경우 이름은 자동으로 사용자를 소문자로 변환 탭 탭의 컬렉션을 스크롤할 수 있습니다.
 - Windows 태블릿 양식-요인에는 탭이 나타나지 항상 및 사용자가 통과 다운 해야 (또는 마우스 오른쪽 단추 클릭 마우스 연결 되어 있는 경우) 탭을 확인 하는 `TabbedPage` (아래와 같이).
 
 ![](tabbed-page-images/windows-tabs.png "Windows에서 TabbedPage 탭")
@@ -251,6 +250,6 @@ public class TabbedPageDemoPageCS : TabbedPage
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 변형](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+- [TabbedPageWithNavigationPage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 - [TabbedPage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
 - [TabbedPage](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)

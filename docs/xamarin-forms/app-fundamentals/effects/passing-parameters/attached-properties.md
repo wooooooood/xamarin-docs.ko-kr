@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c02929c49d9757f0814208d5f4fce7d258a689bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bca36189100942e21d1d750dd156dab0cf45fc4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결 된 속성으로 효과 매개 변수 전달
 
@@ -345,14 +345,14 @@ public class LabelShadowEffect : PlatformEffect
 
 `OnElementPropertyChanged` radius, 색 또는 그림자 오프셋 메서드를 업데이트 하는 적절 한 제공 `ShadowEffect` 연결 된 속성 값이 변경 합니다. 변경 된 속성에 대 한 확인을 항상을 설정 해야으로이 재정의 여러 번 호출할 수 있습니다.
 
-### <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone 및 유니버설 Windows 플랫폼 프로젝트
+### <a name="universal-windows-platform-project"></a>유니버설 Windows 플랫폼 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` Windows Phone 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
+다음 코드 예제는 `LabelShadowEffect` 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
 
 ```csharp
 [assembly: ResolutionGroupName ("MyCompany")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class LabelShadowEffect : PlatformEffect
     {
@@ -401,7 +401,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-Windows 런타임 및 유니버설 Windows 플랫폼에 그림자 효과 제공 하지 않으므로 `LabelShadowEffect` 두 플랫폼 모두에서 구현 된 두 번째 오프셋을 추가 하 여 시뮬레이션 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 주 뒤`Label`. `OnAttached` 메서드는 새 만듭니다 `Label` 일부 레이아웃 속성을 설정 하 고는 `Label`합니다. 그런 다음 사용 하 여 연결 된 속성 값을 검색 하는 메서드를 호출는 `ShadowEffect` getter를 설정 하 여 그림자를 생성 하 고는 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), 및 [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) 색과의 위치를 제어 하는 속성은 `Label`합니다. `shadowLabel` 다음 삽입은 주 뒤 오프셋 `Label`합니다. 이 기능은 요소에 래핑되는 `try` / `catch` 차단 효과에 연결 된 컨트롤에 없는 경우에 `Control.Layer` 속성. 구현 되는 `OnDetached` 메서드 정리 작업은 필요 없으므로 합니다.
+유니버설 Windows 플랫폼에 그림자 효과 제공 하지 않습니다는 `LabelShadowEffect` 두 플랫폼 모두에서 구현 된 두 번째 오프셋을 추가 하 여 시뮬레이션 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 주 뒤 `Label`합니다. `OnAttached` 메서드는 새 만듭니다 `Label` 일부 레이아웃 속성을 설정 하 고는 `Label`합니다. 그런 다음 사용 하 여 연결 된 속성 값을 검색 하는 메서드를 호출는 `ShadowEffect` getter를 설정 하 여 그림자를 생성 하 고는 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), 및 [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) 색과의 위치를 제어 하는 속성은 `Label`합니다. `shadowLabel` 다음 삽입은 주 뒤 오프셋 `Label`합니다. 이 기능은 요소에 래핑되는 `try` / `catch` 차단 효과에 연결 된 컨트롤에 없는 경우에 `Control.Layer` 속성. 구현 되는 `OnDetached` 메서드 정리 작업은 필요 없으므로 합니다.
 
 #### <a name="responding-to-property-changes"></a>속성 변경 내용에 응답
 

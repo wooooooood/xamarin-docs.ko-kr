@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>점, 대시
 
@@ -164,7 +164,7 @@ Android 화면 점선 {10, 10} 배열을 사용 하 여 표시 되는 또한 하
 - {30, 10}은 {20, 20} 파선에 대 한
 - {10, 10, 30, 10} {0, 20, 20, 20} 점선과 파선 선 되 면
 
-파선 선의 점 표기법에 따른 Windows 화면 표시 된의 캡 `Round`합니다. `Round` 선 단면 두꺼운 선에서 점, 대시의 최상의 모양을 제공 합니다.
+파선 선의 점 표기법에 따른 UWP 화면 표시 된의 캡 `Round`합니다. `Round` 선 단면 두꺼운 선에서 점, 대시의 최상의 모양을 제공 합니다.
 
 지금까지 언급 되지 이루어졌을 두 번째 매개 변수는 `SKPathEffect.CreateDash` 메서드. 이 매개 변수 이름이 `phase` 하는 줄의 시작 부분에 대 한 점 대시 패턴 내의 오프셋을 지칭 합니다. 예를 들어, 대시 배열이 {10, 10} 및 `phase` 은 10이 고 다음 줄 점 대신 간격으로 시작 합니다.
 

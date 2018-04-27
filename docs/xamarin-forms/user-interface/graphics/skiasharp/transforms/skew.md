@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-skew-transform"></a>시간차 변환
 
@@ -71,7 +71,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](skew-images/skewexperiment-small.png "기울이기 실험 페이지의 삼중 스크린샷")](skew-images/skewexperiment-large.png#lightbox "기울이기 실험 페이지의 삼중 스크린샷")
 
-경우 `xSkew` 의 음수는 `ySkew`, 결과 회전 이지만 다소 표시 창으로 조절 합니다.
+경우 `xSkew` 의 음수는 `ySkew`, 결과 회전 하지만 다소 나타나듯이 UWP 표시도 확장 합니다.
 
 변형 수식은 다음과 같습니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 01953d55a104a70b0451c9b796c732254afb081e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88821c5315fc338b5195e42ea4b2bc3e648e6ea1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 소개
 
@@ -48,53 +48,64 @@ public interface ITextToSpeech {
 
 ### <a name="implementation-per-platform"></a>플랫폼 마다 구현
 
-적절 한 인터페이스를 디자인 한 후 대상으로 하는 각 플랫폼에 대 한 프로젝트에서 해당 인터페이스를 구현 합니다. 예를 들어 다음 클래스에서는 구현 된 `ITextToSpeech` Windows Phone 인터페이스:
+적절 한 인터페이스를 디자인 한 후 대상으로 하는 각 플랫폼에 대 한 프로젝트에서 해당 인터페이스를 구현 합니다. 예를 들어 다음 클래스가 구현 하는 `ITextToSpeech` iOS에서 인터페이스:
 
 ```csharp
-namespace TextToSpeech.WinPhone
+namespace UsingDependencyService.iOS
 {
-  public class TextToSpeechImplementation : ITextToSpeech
-  {
-      public TextToSpeechImplementation() {}
+    public class TextToSpeech_iOS : ITextToSpeech
+    {
+        public void Speak (string text)
+        {
+            var speechSynthesizer = new AVSpeechSynthesizer ();
 
-      public async void Speak(string text)
-      {
-          SpeechSynthesizer synth = new SpeechSynthesizer();
-          await synth.SpeakTextAsync(text);
-      }
-  }
+            var speechUtterance = new AVSpeechUtterance (text) {
+                Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+                Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+                Volume = 0.5f,
+                PitchMultiplier = 1.0f
+            };
+
+            speechSynthesizer.SpeakUtterance (speechUtterance);
+        }
+    }
 }
 ```
 
-모든 구현에 대 한 순서 대로 기본 (매개 변수가 없는) 생성자가 있어야 `DependencyService` , 인스턴스화할 수 있습니다. 인터페이스에 의해 매개 변수가 없는 생성자를 정의할 수 없습니다.
-
 ### <a name="registration"></a>등록
 
-에 등록 해야 하는 인터페이스의 각 구현은 `DependencyService` 메타 데이터 특성을 가진 합니다. 다음 코드는 Windows Phone 대 한 구현을 등록합니다.
+에 등록 해야 하는 인터페이스의 각 구현은 `DependencyService` 메타 데이터 특성을 가진 합니다. 다음 코드에는 iOS에 대 한 구현을 등록합니다.
 
 ```csharp
-using TextToSpeech.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechImplementation))]
-namespace TextToSpeech.WinPhone {
+[assembly: Dependency (typeof (TextToSpeech_iOS))]
+namespace UsingDependencyService.iOS
+{
   ...
+}
 ```
 
 플랫폼별 구현을 모두 조합, 다음과 같이 보입니다.
 
 ```csharp
-[assembly: Xamarin.Forms.Dependency (typeof (TextToSpeechImplementation))]
-namespace TextToSpeech.WinPhone {
-  public class TextToSpeechImplementation : ITextToSpeech
-  {
-      public TextToSpeechImplementation() {}
+[assembly: Dependency (typeof (TextToSpeech_iOS))]
+namespace UsingDependencyService.iOS
+{
+    public class TextToSpeech_iOS : ITextToSpeech
+    {
+        public void Speak (string text)
+        {
+            var speechSynthesizer = new AVSpeechSynthesizer ();
 
-      public async void Speak(string text)
-      {
-          SpeechSynthesizer synth = new SpeechSynthesizer();
-          await synth.SpeakTextAsync(text);
-      }
-  }
+            var speechUtterance = new AVSpeechUtterance (text) {
+                Rate = AVSpeechUtterance.MaximumSpeechRate/4,
+                Voice = AVSpeechSynthesisVoice.FromLanguage ("en-US"),
+                Volume = 0.5f,
+                PitchMultiplier = 1.0f
+            };
+
+            speechSynthesizer.SpeakUtterance (speechUtterance);
+        }
+    }
 }
 ```
 
@@ -102,7 +113,7 @@ namespace TextToSpeech.WinPhone {
 
 #### <a name="universal-windows-platform-net-native-compilation"></a>유니버설 Windows 플랫폼.NET 네이티브 컴파일
 
-.NET 네이티브 컴파일 옵션을 사용 하는 UWP 프로젝트 따라야는 [약간 다른 구성](~/xamarin-forms/platform/windows/installation/universal.md#target-invocation-exception) Xamarin.Forms를 초기화할 때. .NET 네이티브 컴파일 종속성 서비스에 대 한 약간 다른 등록을 해야합니다.
+.NET 네이티브 컴파일 옵션을 사용 하는 UWP 프로젝트 따라야는 [약간 다른 구성](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception) Xamarin.Forms를 초기화할 때. .NET 네이티브 컴파일 종속성 서비스에 대 한 약간 다른 등록을 해야합니다.
 
 에 **App.xaml.cs** 파일을 사용 하 여 UWP 프로젝트에 정의 된 각 종속성 서비스를 수동으로 등록는 `Register<T>` 메서드를 다음과 같이 합니다.
 

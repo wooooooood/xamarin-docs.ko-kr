@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 24d9dd332275fd811c0ff60fc514ae0f84c6ee07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layouts"></a>레이아웃
 
@@ -41,7 +41,7 @@ Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 �
 
 다음 그래픽 레이아웃 컨트롤을 시각화합니다.
 
-[![](images/layouts-sml.png "Xamarin.Forms Layouts")](images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](images/layouts-sml.png "Xamarin.Forms 레이아웃")](images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
 ## <a name="choosing-the-right-layout"></a>오른쪽 레이아웃 선택
 
@@ -180,7 +180,7 @@ Xamarin.Forms 및 해당 기본 제공 레이아웃 장치 방향에서 변경 �
 
 ### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[태블릿 및 데스크톱 응용 프로그램 레이아웃](tablet.md)
 
-iOS, Android 및 Windows 태블릿 장치에서 더 큰 크기를 지 원하는 모든 플랫폼 (뿐만 아니라 노트북 및 Windows 용 데스크톱). Xamarin.Forms를 사용 하면 장치 유형 및 페이지 레이아웃을 조정 하거나 검색 하거나 큰 화면에 대 한 완전히 다른 페이지를 모두 사용 하 여 더 큰 화면에 대 한 응용 프로그램을 최적화할 수 있습니다.
+iOS, Android 및 유니버설 Windows 플랫폼 모두 지원 하 여 더 큰 화면에 태블릿 장치 (뿐만 아니라 노트북 및 Windows 용 데스크톱). Xamarin.Forms를 사용 하면 장치 유형 및 페이지 레이아웃을 조정 하거나 검색 하거나 큰 화면에 대 한 완전히 다른 페이지를 모두 사용 하 여 더 큰 화면에 대 한 응용 프로그램을 최적화할 수 있습니다.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[사용자 지정 레이아웃 만들기](custom.md)
 

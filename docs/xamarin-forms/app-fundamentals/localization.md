@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f179fcfc26dd73bf1655c786078dce1f6a02b3a9
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -201,7 +201,7 @@ myEntry.Placeholder = AppResources.NotesPlaceholder;
 myButton.Text = AppResources.AddButton;
 ```
 
-IOS, Android 및 Windows 플랫폼 렌더링 하면에서 사용자 인터페이스는 예상 텍스트 리소스에서 로드 되 고 때문에 응용 프로그램을 여러 언어로 번역할 수는 제외 이라기 보다는 하드 코딩 합니다. 다음은 UI 변환 하기 전에 각 플랫폼에서 보여 주는 스크린 샷입니다.
+IOS, Android 및 유니버설 Windows 플랫폼 (UWP) 렌더링 하면에서 사용자 인터페이스는 예상 텍스트 리소스에서 로드 되 고 때문에 응용 프로그램을 여러 언어로 번역할 수는 제외 이라기 보다는 하드 코딩 합니다. 다음은 UI 변환 하기 전에 각 플랫폼에서 보여 주는 스크린 샷입니다.
 
 ![](localization-images/simple-example-english.png "플랫폼 간 Ui 변환 하기 전에")
 
@@ -274,7 +274,7 @@ public interface ILocalize
 }
 ```
 
-둘째, 사용 된 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) xamarin.forms는 `App` 클래스를 호출 하는 인터페이스 및 올바른 값으로 취급 RESX 리소스 culture를 설정 합니다. 공지 수동으로이 값을 설정할 Windows Phone 및 유니버설 Windows 플랫폼에 대 한 리소스 프레임 워크 이후 자동으로 필요가 없습니다 해당 플랫폼에서 선택한 언어를 인식 합니다.
+둘째, 사용 된 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) xamarin.forms는 `App` 클래스를 호출 하는 인터페이스 및 올바른 값으로 취급 RESX 리소스 culture를 설정 합니다. 수동으로이 값을 설정 하려면이 범용 Windows 플랫폼에 대 한 리소스 프레임 워크 이후 자동으로 필요 하지 않습니다는 공지 해당 플랫폼에서 선택한 언어를 인식 합니다.
 
 ```csharp
 if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
@@ -326,7 +326,7 @@ public class PlatformCulture
 
 ### <a name="platform-specific-code"></a>플랫폼별 코드
 
-IOS, Android 및 Windows 플랫폼은 모두 약간 다른 방법으로이 정보를 노출 하기 때문에 표시 하는 언어를 검색 하기 위해 코드에서 플랫폼별 이어야 합니다. 에 대 한 코드는 `ILocalize` 종속성 서비스는 아래 각 플랫폼에 대 한 추가 플랫폼 관련 요구 사항이 되도록 함께 지역화 된 텍스트를 렌더링 올바르게 제공 합니다.
+IOS, Android 및 UWP 모든 약간 다른 방법으로이 정보를 노출 하기 때문에 표시 하는 언어를 검색 하기 위해 코드에서 플랫폼별 이어야 합니다. 에 대 한 코드는 `ILocalize` 종속성 서비스는 아래 각 플랫폼에 대 한 추가 플랫폼 관련 요구 사항이 되도록 함께 지역화 된 텍스트를 렌더링 올바르게 제공 합니다.
 
 플랫폼별 코드 경우 운영 체제에서 지원 되지 않는 로캘 식별자를 구성 하는 사용자를 허용 하는 여기서도 처리 해야 합니다. NET의 `CultureInfo` 클래스입니다. 이러한 경우에 지원 되지 않는 로캘을 감지 하 여 가장 적합 한 대체 사용자 지정 코드를 작성 합니다. NET 호환 로캘입니다.
 
@@ -454,7 +454,7 @@ public class Localize : UsingResxLocalization.ILocalize
 
 > [!NOTE]
 > Apple에서는 포르투갈어 보다 약간 다르게 기대 되 참고 합니다.
-> [자신의 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"사용 pt 언어 ID로 포르투갈어 사용 중 이므로 브라질과 PT-PT에서 언어 ID로 포르투갈어 포르투갈에서 사용 중 이므로"_합니다.
+> [자신의 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"사용 pt 언어 ID로 포르투갈어 사용 중 이므로 브라질과 PT-PT에서 언어 ID로 포르투갈어 포르투갈에서 사용 중 이므로"_ 합니다.
 > 즉 포르투갈어 언어를 선택한 비표준 로캘의 경우이 동작을 변경 하려면 코드를 작성 하지 않으면 대체 언어 ios, 포르투갈어 (브라질) 있게 됩니다 (같은 `ToDotnetFallbackLanguage` 위에).
 
 #### <a name="android-application-project"></a>Android 응용 프로그램 프로젝트
@@ -553,48 +553,9 @@ namespace UsingResxLocalization.Android
 > [!NOTE]
 >️ **경고:** 디버깅 하지 않음 Android 릴리스 빌드에 번역 된 문자열 작업, 마우스 오른쪽 단추로 클릭는 **Android 프로젝트** 선택 **옵션 > 빌드 > Android 빌드** 있는지 확인는 **어셈블리 배포 빠른** 하지 선택 되어 있습니다. 이 옵션은 리소스를 로드 하는 문제가 시키고 지역화 된 응용 프로그램을 테스트 하는 경우 사용 하지 않아야 합니다.
 
-#### <a name="windows-application-projects"></a>Windows 응용 프로그램 프로젝트
+#### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
-Windows 8.1 및 유니버설 Windows 플랫폼 (UWP) 프로젝트 종속성 서비스가 필요 하지 않습니다-이러한 플랫폼 자동으로 리소스의 문화권 올바르게 설정 합니다.
-
-이 문서의 뒷부분에 설명 된 XAML 태그 확장을 구현 해야 할 수 있습니다는 `ILocalize` Windows Phone 대 한 아래 표시 된 구현 합니다.
-
-##### <a name="windows-phone-80"></a>Windows Phone 8.0
-
-에 사용 되지 않지만 `App` 클래스, 여기는 대 한 Windows Phone 구현은 `ILocalize` 종속성 서비스입니다. Windows Phone 앱 프로젝트;에이 클래스를 추가 합니다. 나중에 설명 된 XAML 태그 확장을 구현 하는 경우 필요한 됩니다.
-
-```csharp
-[assembly: Dependency(typeof(UsingResxLocalization.WinPhone.Localize))]
-
-namespace UsingResxLocalization.WinPhone
-{
-    public class Localize : UsingResxLocalization.ILocalize
-    {
-        public void SetLocale (CultureInfo ci) { }
-        public System.Globalization.CultureInfo GetCurrentCultureInfo ()
-        {
-            return System.Threading.Thread.CurrentThread.CurrentUICulture;
-        }
-    }
-}
-
-```
-
-Windows Phone 8.0 프로젝트에 대 한 지역화 된 표시 될 텍스트를 제대로 구성 되어야 합니다.
-프로젝트 옵션에서 지원 되는 언어를 선택 해야 *및* 는 **WMAppManifest.xml** 파일입니다.
-이러한 설정을 업데이트 하지 않으면 지역화 된 RESX 리소스 로드 되지 것입니다.
-
-##### <a name="project-options"></a>프로젝트 옵션
-
-Windows Phone 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **응용 프로그램** 눈금 탭는 **지원 문화권** 지 원하는 응용 프로그램:
-
-[![](localization-images/winphone-projectproperties-sml.png "프로젝트 속성-지원 되는 Culture")](localization-images/winphone-projectproperties.png#lightbox "프로젝트 속성-지원 되는 Culture")
-
-##### <a name="wmappmanifestxml"></a>WMAppManifest.xml
-
-Windows Phone 프로젝트의 속성 노드를 확장 하 고 두 번 클릭 하 고 **WMAppManifest.xml** 파일입니다. 클릭는 **패키징** 탭 하 고 응용 프로그램에서 지 원하는 모든 언어로 눈금.
-
-[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml-지원 되는 언어")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml-지원 되는 언어")
+유니버설 Windows 플랫폼 (UWP) 프로젝트에 종속 서비스가 필요 하지 않습니다. 대신,이 플랫폼 자동으로 리소스의 culture를 올바르게 설정 합니다.
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
@@ -683,7 +644,7 @@ namespace UsingResxLocalization
 * `"UsingResxLocalization.Resx.AppResources"` 우리의 RESX 리소스에 대 한 리소스 식별자가입니다. 이 기본 네임 스페이스, 리소스 파일이 있는 폴더 및 기본 RESX 파일 이름이 구성 됩니다.
 * `ResourceManager` 클래스를 사용 하 여 만들어집니다 `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` 리소스를 로드 하려면 현재 어셈블리를 확인할 수 있고 정적에 캐시 된 `ResMgr` 필드입니다. 으로 생성 됩니다는 `Lazy` 을 입력 하 여 만든 처음에 사용 될 때까지 지연 됩니다는 `ProvideValue` 메서드.
 * `ci` 종속성 서비스를 사용 하 여 네이티브 운영 체제에서 사용자가 선택한 언어를 가져올 수 있습니다.
-* `GetString` 리소스 파일에서 실제 번역 된 문자열을 검색 하는 메서드입니다. Windows Phone 8.1 및 유니버설 Windows 플랫폼 `ci` null 때문에 `ILocalize` 인터페이스는 해당 플랫폼에서 구현 되지 않습니다. 이 호출에 해당 하는 `GetString` 메서드 첫 번째 매개 변수입니다. 대신 리소스 프레임 워크에서는 자동으로 로캘을 인식 하 고 적절 한 RESX 파일에서 번역된 된 문자열을 검색 합니다.
+* `GetString` 리소스 파일에서 실제 번역 된 문자열을 검색 하는 메서드입니다. 유니버설 Windows 플랫폼에서 `ci` null 때문에 `ILocalize` 인터페이스는 해당 플랫폼에서 구현 되지 않습니다. 이 호출에 해당 하는 `GetString` 메서드 첫 번째 매개 변수입니다. 대신 리소스 프레임 워크에서는 자동으로 로캘을 인식 하 고 적절 한 RESX 파일에서 번역된 된 문자열을 검색 합니다.
 * 오류 처리는 예외를 throw 하 여 누락 된 리소스 디버깅을 돕기 위해 포함 되었습니다 (에서 `DEBUG` 모드에만 해당).
 
 다음 XAML 조각에는 태그 확장을 사용 하는 방법을 보여 줍니다. 작동 하려면 두 단계가 있습니다.
@@ -809,92 +770,23 @@ Android에서는 Zh-hans 사용 하지 및 간체 및 중국어 번체;에 대 �
 
 ![](localization-images/android-imageicon.png "Android 샘플 응용 프로그램 텍스트 및 이미지 지역화")
 
-### <a name="windows-phone-80-application-project"></a>Windows Phone 8.0 응용 프로그램 프로젝트
+### <a name="universal-windows-platform-application-projects"></a>유니버설 Windows 플랫폼 응용 프로그램 프로젝트
 
-Windows Phone 응용 프로그램 이름 지역화 나이 특정 지역화 된 이미지를 선택 하는 간단한 기본 제공 방법이 없는 것입니다.
-
-#### <a name="images"></a>이미지
-
-이 제한을 해결 하기 위한 샘플 한 제안 사항을 제공 이미지 로드를 사용 하 여 지역화 구현 하는 방법에 대 한는 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) 에 대 한는 `Image` 제어 합니다.
-
--아래에 사용자 지정 렌더러 코드가 나와 원본이 `FileImageSource` 파일 이름을 추출 하 고 사용 하 여 지역화 된 이미지에 대 한 경로 `CurrentUICulture`합니다. 오류율; 예상 대로 작동 되도록 일부 언어에 특별 한 처리가 필요 예제에서 몇 가지 특별 한 경우에만 제외 하 고 두 문자 언어 코드를 사용 하도록 기본값은입니다.
-
-```csharp
-using System.IO;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinPhone;
-
-[assembly: ExportRenderer(typeof(Image), typeof(UsingResxLocalization.WinPhone.LocalizedImageRenderer))]
-namespace UsingResxLocalization.WinPhone
-{
-    public class LocalizedImageRenderer : ImageRenderer
-    {
-        protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
-        {
-            base.OnElementChanged(e);
-
-            if (e.NewElement != null)
-            {
-                var s = e.NewElement.Source as FileImageSource;
-                if (s != null)
-                {
-                    var fileName = s.File;
-                    string ci = System.Threading.Thread.CurrentThread.CurrentUICulture.ToString();
-                    // you might need some custom logic here to support particular cultures and fallbacks
-                    if (ci == "pt-BR") {
-                        // use the complete string 'as is'
-                    } else if (ci == "zh-CN") {
-                         // we could have named the image directories differently,
-                         // but this keeps them consisent with RESX file naming
-                        ci = "zh-Hans";
-                    } else if (ci == "zh-TW" || ci == "zh-HK") {
-                        ci = "zh-Hant";
-                    } else {
-                        // for all others, just use the two-character language code
-                        ci = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-                    }
-                    e.NewElement.Source = Path.Combine("Assets/" + ci + "/" + fileName);
-                }
-            }
-        }
-    }
-}
-```
-
-이 코드는 아래 표시 된 디렉터리 구조에서 지역화 된 이미지와 함께 작동 합니다. 했으면 (예: 보다 구체적인 로캘에서 처리 하 고 이미지를 사용할 수 없는 경우에 다시 떨어지는) 특정 지역화 요구 사항을 충족 하도록 코드를 수정 하는 것이 좋습니다.
-
-![](localization-images/winphone-resources.png "WinPhone 지역화 이미지 디렉터리 구조")
-
-이제 Windows Phone 이미지를 보여지는 합니다. 스페인어 및 중국어 (간체)) (에서 결과의 스크린 샷을 다음과 같습니다.
-
-![](localization-images/winphone-image-sml.png "WinPhone 샘플 응용 프로그램 텍스트 및 이미지 지역화")
-
-#### <a name="app-name"></a>앱 이름
-
-에 대 한 Microsoft의 설명서를 참조 [Windows Phone 8.0 앱 타이틀 지역화](http://msdn.microsoft.com/library/windows/apps/ff967550(v=vs.105).aspx)합니다.
-
-### <a name="windows-phone-81-and-universal-windows-platform-application-projects"></a>Windows Phone 8.1 및 유니버설 Windows 플랫폼 응용 프로그램 프로젝트
-
-Windows Phone 8.1 및 유니버설 Windows 플랫폼 둘 다의 이미지 및 응용 프로그램 이름 지역화를 간소화 하는 리소스 인프라를 소유 해야 합니다.
+유니버설 Windows 플랫폼 이미지 및 응용 프로그램 이름 지역화를 간소화 하는 리소스 인프라를 소유 합니다.
 
 #### <a name="images"></a>이미지
 
 다음 스크린샷에 표시 된 대로 이미지 리소스 관련 폴더에 배치 하 여 지역화할 수 있습니다.
 
-![](localization-images/uwp-image-folder-structure.png "WinPhone 8.1 및 UWP 이미지 지역화 폴더 구조")
+![](localization-images/uwp-image-folder-structure.png "UWP 이미지 지역화 폴더 구조")
 
 런타임 시 Windows 리소스 인프라는 사용자의 로캘에 따라 적절 한 이미지를 선택 합니다.
-
-#### <a name="app-name"></a>앱 이름
-
-에 대 한 Microsoft의 설명서를 참조 [Windows 8.1 스토어 앱: 사용자에 게 앱을 설명 하는 정보 지역화](https://msdn.microsoft.com/library/windows/apps/hh454044.aspx) 및 [앱 매니페스트에서 문자열 로드](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323.aspx#loading_strings_from_the_app_manifest.)합니다.
 
 ## <a name="summary"></a>요약
 
 RESX 파일 및.NET 세계화 클래스를 사용 하 여 Xamarin.Forms 응용 프로그램을 지역화할 수 있습니다. 적은 양의 사용자가 선호 하는 언어를 검색 하도록 플랫폼별 코드를 별도로 대부분의 지역화 작업은 공통 코드에서 중앙 집중식으로 합니다.
 
-이미지는 일반적으로 iOS 및 Android에서 제공 하는 다중 해상도 지원 활용 하기 위해 플랫폼 특정 방식으로 처리 됩니다. Windows Phone 크로스 플랫폼-친화적인 방식 이미지 필드를 지역화 하는 사용자 지정 코드를 필요 이 기능을 추가 하는 샘플 코드 제공 되었습니다.
-
+이미지는 일반적으로 iOS 및 Android에서 제공 하는 다중 해상도 지원 활용 하기 위해 플랫폼 특정 방식으로 처리 됩니다. 
 
 ## <a name="related-links"></a>관련 링크
 

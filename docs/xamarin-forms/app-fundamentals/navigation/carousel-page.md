@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d55d8c8d98828097c842cc383037db88097b963d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 035254f87e52801d5ff7419f9ad9d5503f060020
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="carousel-page"></a>회전식 페이지
 
@@ -45,7 +45,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으�
 - [채울](#Populating_a_CarouselPage_with_a_Page_Collection) 는 `CarouselPage` 자식 요소의 컬렉션으로 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스.
 - [할당](#Populating_a_CarouselPage_with_a_Template) 컬렉션에는 [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) 속성 및 할당은 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) 에 [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) 반환할속성[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 개체 컬렉션의 인스턴스.
 
-두 방법으로는 `CarouselPage` 를 표시 한 다음 각 페이지 차례로 표시 될 다음 페이지로 이동 하 여 살짝 밀어 상호 작용 합니다. 이 탐색 환경을 자연스럽 고 Windows Phone 사용자에 게 익숙한 느낄 됩니다.
+두 방법으로는 `CarouselPage` 를 표시 한 다음 각 페이지 차례로 표시 될 다음 페이지로 이동 하 여 살짝 밀어 상호 작용 합니다. 
 
 > [!NOTE]
 > A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 을 채울 수 있습니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스 또는 `ContentPage` 파생 항목입니다.
@@ -246,7 +246,7 @@ public class MainPageCS : CarouselPage
 
 ## <a name="summary"></a>요약
 
-이 문서에 사용 하는 방법을 보여 주는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 페이지의 컬렉션을 탐색할 수 있습니다. `CarouselPage` 는 갤러리와 같은 콘텐츠, 페이지 탐색 하려면 사용자가 왼쪽에서 오른쪽으로 살짝 수 있는 페이지가 고 자연스럽 고 Windows Phone 사용자에 게 익숙한 느낌 탐색 환경을 제공 합니다.
+이 문서에 사용 하는 방법을 보여 주는 [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 페이지의 컬렉션을 탐색할 수 있습니다. `CarouselPage` 갤러리 매우 유사 하 게 콘텐츠 페이지를 탐색 페이지 사용자가 왼쪽에서 오른쪽으로 살짝 수입니다.
 
 
 ## <a name="related-links"></a>관련 링크

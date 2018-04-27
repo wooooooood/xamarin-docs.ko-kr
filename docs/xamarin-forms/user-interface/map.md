@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 050e37d208c3ba5a330d7ecc6df9d106e14f8bb9
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: e296ca79ee03e7fc61532758219b65946a8d4381
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="map"></a>맵
 
@@ -50,7 +50,7 @@ Android에서와 동일한 매개 변수를 전달 해야 `Forms.Init`:
 Xamarin.FormsMaps.Init(this, bundle);
 ```
 
-유니버설 Windows 플랫폼 (UWP) 및는 WinRT (Windows 런타임)에 대 한 다음 코드를 사용 합니다.
+유니버설 Windows 플랫폼 (UWP)에 대 한 다음 코드를 사용 합니다.
 
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
@@ -60,7 +60,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 -  **iOS** -AppDelegate.cs 파일에 `FinishedLaunching` 메서드.
 -  **Android** -MainActivity.cs 파일에 `OnCreate` 메서드.
--  **WinRT 및 UWP** -MainPage.xaml.cs 파일에 `MainPage` 생성자입니다.
+-  **UWP** -MainPage.xaml.cs 파일에 `MainPage` 생성자입니다.
 
 NuGet 패키지 추가 되 고 각 응용 프로그램 내에서 초기화 메서드가 호출 되 면 `Xamarin.Forms.Maps` 일반적인 PCL 또는 공유 프로젝트 코드에서 Api를 사용할 수 있습니다.
 
@@ -132,9 +132,9 @@ Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 
 
 마지막 두는 응용 프로그램 맵 데이터를 다운로드 하려면 네트워크 연결이 필요 하기 때문에 필요 합니다. Android에 대 한 읽기 [권한을](http://developer.android.com/reference/android/Manifest.permission.html) 자세한 합니다.
 
-### <a name="windows-runtime-and-universal-windows-platform"></a>Windows 런타임 및 유니버설 Windows 플랫폼
+### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
-Windows 런타임 및 유니버설 Windows 플랫폼에서 맵을 사용 하는 권한 부여 토큰을 생성 해야 합니다. 자세한 내용은 참조 [지도 인증 키를 요청](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) msdn 합니다.
+유니버설 Windows 플랫폼에서 맵을 사용 하는 권한 부여 토큰을 생성 해야 합니다. 자세한 내용은 참조 [지도 인증 키를 요청](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) msdn 합니다.
 
 에 다음 지정 하는 인증 토큰의 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 메서드 호출에서 Bing 지도와 앱을 인증 합니다.
 
@@ -255,7 +255,7 @@ MyMap.MoveToRegion(
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms.Maps 별도 NuGet는 Xamarin.Forms 솔루션의 각 프로젝트에 추가 해야 하는입니다. 추가 초기화 코드는 일부 잘 구성 단계는 iOS, Android, WinRT, 및 UWP로 필요 합니다.
+Xamarin.Forms.Maps 별도 NuGet는 Xamarin.Forms 솔루션의 각 프로젝트에 추가 해야 하는입니다. 추가 초기화 코드는 일부 잘 구성 단계는 iOS, Android 및 UWP로 필요 합니다.
 
 구성 하면 규 단 몇 줄의 코드로 pin 표식을 사용 하 여 지도 렌더링 하 매핑합니다 API를 사용할 수 있습니다. 지도와 더 향상 될 수 있습니다는 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)합니다.
 

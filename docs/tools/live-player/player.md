@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 2ddaba4541af52ae119fbf504fdcc66ba357c113
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Player 라이브 응용 프로그램
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 Xamarin Player Live는 Google Play에서 Android 용 제공 됩니다.
 
-[ ![Google Play에서 사용 가능한](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[![Google Play에서 사용 가능한](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 Xamarin 라이브 플레이어를 통해 사용할 수 있는 Google Play 없이 Android 장치에 대 한 [HockeyApp](https://aka.ms/xlp-hockeyapp) 배포 합니다. 초기 미리 보기 Android 옵트인 하 여 Google Play에서 직접 설치에 대를 작성 하는 또한는 [열기 베타 프로그램](https://play.google.com/apps/testing/com.xamarin.live)
 
@@ -53,7 +53,7 @@ Xamarin 라이브 플레이어를 통해 사용할 수 있는 Google Play 없이
 
 정보 단추를 눌러 **(i)** 표시 하기 위해 응용 프로그램의 아래쪽에는 **옵션** 메뉴:
 
-[ ![[옵션] 메뉴의 스크린 샷](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![[옵션] 메뉴의 스크린 샷](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>로그
 
@@ -61,11 +61,11 @@ Xamarin 라이브 플레이어를 통해 사용할 수 있는 Google Play 없이
 
 ### <a name="settings"></a>설정
 
-* 컴파일 및 런타임 오류를 표시 하거나 숨깁니다.
-* 버전 정보입니다.
-* 사용자 의견 보내기
+- 컴파일 및 런타임 오류를 표시 하거나 숨깁니다.
+- 버전 정보입니다.
+- 사용자 의견 보내기
 
-[ ![설정의 스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![설정의 스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>장치 관리
 
@@ -107,9 +107,8 @@ Mac 용 Visual Studio에서 선택 **도구 > 장치를 관리 하는 (Xamarin �
 
 모든 문제 참조를 발생 하는 경우 [제한 사항 및 문제 해결](~/tools/live-player/troubleshooting.md)합니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
 - [제한 사항](~/tools/live-player/limitations.md)
 - [문제 해결](~/tools/live-player/troubleshooting.md)
-- [Xamarin Player 라이브 샘플](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin Player 라이브 샘플](samples.md)

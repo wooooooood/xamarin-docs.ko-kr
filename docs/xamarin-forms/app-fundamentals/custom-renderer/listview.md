@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-listview"></a>ListView에 사용자 지정
 
 _Xamarin.Forms ListView 세로 목록으로 데이터의 컬렉션을 표시 하는 뷰입니다. 이 문서를 만드는 사용자 지정 렌더러 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 컨트롤 성능에 비해 더 많은 제어를 허용 하는 방법을 보여줍니다._
 
-모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ListViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UITableView` 제어 합니다. Android 플랫폼의 `ListViewRenderer` 클래스 인스턴스화합니다 네이티브 `ListView` 제어 합니다. Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 `ListViewRenderer` 클래스 인스턴스화합니다 네이티브 `ListView` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 생성 하는 각 플랫폼에 대 한 함께 제공 되는 렌더러 있습니다. 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) ios에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ListViewRenderer` 네이티브 다시 인스턴스화하는 클래스를 인스턴스화할 `UITableView` 제어 합니다. Android 플랫폼의 `ListViewRenderer` 클래스 인스턴스화합니다 네이티브 `ListView` 제어 합니다. 에 플랫폼 UWP (유니버설 Windows)는 `ListViewRenderer` 클래스 인스턴스화합니다 네이티브 `ListView` 제어 합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 [렌더러 기본 클래스와 기본 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
 다음 다이어그램에서는 간의 관계는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 제어 및 구현 하는 해당 네이티브 컨트롤:
 
@@ -467,15 +467,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 메서드가의 새 인스턴스를 만듭니다.는 `NativeAndroidListViewAdapter` 는 네이티브 데이터를 제공 하는 클래스 `ListView` 을 제어 하는 바인딩 가능한 제공 `NativeListView.Items` 속성이 변경 합니다.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Windows Phone에서 사용자 지정 렌더러 만들기 및 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 UWP 및 Windows Phone 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 

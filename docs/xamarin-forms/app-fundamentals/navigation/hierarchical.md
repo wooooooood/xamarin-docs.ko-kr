@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -47,7 +47,7 @@ _NavigationPage 클래스에는 사용자가을 앞으로 및 뒤로 필요에 �
 
 - Ios에서 탐색 모음이 제목을 표시 하 고 있는 페이지의 위쪽에 있어야는 *다시* 이전 페이지로 반환 하는 단추입니다.
 - Android에서는 탐색 모음 있는지 제목, 아이콘을 표시 하는 페이지의 위쪽 및 *다시* 이전 페이지로 반환 하는 단추입니다. 아이콘에 정의 된는 `[Activity]` 를 데코레이팅하는 특성의 `MainActivity` Android 플랫폼 관련 프로젝트의 클래스.
-- Windows Phone 제목을 표시 하는 페이지의 위쪽 탐색 모음이. Windows Phone 게 없는 경우는 *다시* 때문에 탐색 모음에서 단추는 화면에 나타나는 *다시* 단추는 화면 맨 아래에 표시 되 합니다.
+- 유니버설 Windows 플랫폼에서 탐색 모음은 제목을 표시 하는 페이지의 위쪽에 있는입니다. 
 
 모든 플랫폼에서의 값은 [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) 속성 페이지 제목으로 표시 됩니다.
 

@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: aba193ca38d60db52298fdf239d936310a4ac193
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 다음 세 가지 방법
 
@@ -414,8 +414,6 @@ public partial class TangentArcPage : InteractivePage
 다음은 **탄젠트 호** 세 플랫폼 모두에서 실행 되는 페이지:
 
 [![](arcs-images/tangentarc-small.png "탄젠트 호 페이지의 삼중 스크린샷")](arcs-images/tangentarc-large.png#lightbox "탄젠트 호 페이지의 삼중 스크린샷")
-
-Windows Mobile 장치에서 세 점 모두가 거의 동일 선상의 및 호 매우 작습니다.
 
 탄젠트 호는 둥근된 사각형 같은 둥근된 모서리를 만드는 데 적합 합니다. 때문에 `SKPath` 이미 포함 되어는 `AddRoundedRect` 메서드를는 **반올림 Heptagon** 페이지를 사용 하는 방법을 보여 줍니다 `ArcTo` 7 면 다각형의 모서리를 반올림 합니다. (코드는 모든 일반 다각형에 대 한 범용 화) 합니다.
 

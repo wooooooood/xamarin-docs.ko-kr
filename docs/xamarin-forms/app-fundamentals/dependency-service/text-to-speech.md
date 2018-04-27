@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 67e392bb3672e54a1e2fe709af9cf5deb3dae5e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9cf700ea798ac316e806c40cb90eedc7ded9fa5
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-text-to-speech"></a>텍스트 음성 변환 구현
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 - **[인터페이스를 만드는 방법](#Creating_the_Interface)**  &ndash; 공유 코드에서 인터페이스 만들어지는 방법을 이해 합니다.
 - **[iOS 구현](#iOS_Implementation)**  &ndash; iOS에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[Android 구현](#Android_Implementation)**  &ndash; Android 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[Windows 구현](#WindowsImplementation)**  &ndash; 네이티브 코드에 Windows Phone 및 유니버설 Windows 플랫폼 (UWP)에 대 한 인터페이스를 구현 하는 방법을 알아봅니다.
+- **[UWP 구현](#WindowsImplementation)**  &ndash; 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
 - **[공유 코드에서 구현](#Implementing_in_Shared_Code)**  &ndash; 사용 방법을 배울 `DependencyService` 공유 코드에서 네이티브 구현으로 호출할 수 있습니다.
 
 사용 하 여 응용 프로그램 `DependencyService` 다음과 같은 구조를 갖습니다.
@@ -122,9 +122,9 @@ namespace DependencyServiceSample.Droid
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone 및 유니버설 Windows 플랫폼 구현
+## <a name="universal-windows-platform-implementation"></a>유니버설 Windows 플랫폼 구현
 
-Windows Phone 및 유니버설 Windows 플랫폼에서 음성 API에는 `Windows.Media.SpeechSynthesis` 네임 스페이스입니다. 유일한 주의할 눈금 해야 하는 것은 **마이크** 매니페스트에서 기능 그렇지 않은 경우에 대 한 액세스 Api는 차단 된 음성 합니다.
+유니버설 Windows 플랫폼에서 음성 API에는 `Windows.Media.SpeechSynthesis` 네임 스페이스입니다. 유일한 주의할 눈금 해야 하는 것은 **마이크** 매니페스트에서 기능 그렇지 않은 경우에 대 한 액세스 Api는 차단 된 음성 합니다.
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -165,7 +165,7 @@ public MainPage ()
 }
 ```
 
-IOS, Android 또는 Windows 플랫폼 및 키를 누르는 단추는 각 플랫폼에서 네이티브 음성 SDK를 사용 하 여 사용자에 게 말할 응용 프로그램에서 발생 합니다에서이 응용 프로그램을 실행 합니다.
+IOS, Android 또는 UWP에서이 응용 프로그램을 실행 하 고 버튼을 눌러서 각 플랫폼에 네이티브 음성 SDK를 사용 하 여 사용자에 게 말할 응용 프로그램에서 발생 합니다.
 
  ![iOS 및 Android 텍스트 음성 변환 단추](text-to-speech-images/running.png "개의 문자 음성 변환 예제")
 

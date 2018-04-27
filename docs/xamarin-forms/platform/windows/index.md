@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: ab6b12738028b4f3439629f334ed5429244f4d5a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5056caf9ae5d9b738ec8de8cb42b7a7d7a7b110f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
@@ -20,19 +20,10 @@ Xamarin.Forms Windows 플랫폼용으로 응용 프로그램을 개발 하려면
 
 ## <a name="platform-support"></a>플랫폼 지원
 
-기본적으로 하나의 Windows 프로젝트를 포함 하는 Xamarin.Forms 템플릿을 Visual Studio에서 사용할 수 있습니다.
-
-* **유니버설 Windows 플랫폼 앱** -Windows 10 용 Xamarin.Forms 응용 프로그램을 최적화할 수도 있습니다. 유니버설 (UWP) 앱은 전화, 태블릿 및 데스크톱 장치 실행할 수 있습니다.
-
-Visual Studio에서 올바른 개발 옵션을 설치한 경우 것도 가능 하려면 [추가](installation/index.md) 이러한 프로젝트 형식을 이전 버전의 Windows 지원 하려면:
-
-* **Windows 8.1** -Xamarin.Forms 앱 태블릿에 배포할 수 있습니다 및 Windows 8.1 앱으로 데스크톱 폼 팩터 WinRT 컨트롤을 사용 하 여 프로젝트.
-* **Windows Phone 8.1** -Xamarin.Forms는 WinRT를 사용 하 여 Windows Phone 8.1 플랫폼을 완전히 지원 합니다. Windows Phone 8.1 지원을 사용 하 여 앱의 모양과 느낌을 Silverlight 기반 하 여 이전 Xamarin.Forms Windows Phone 앱에 달라질 수 있습니다.
-
+Xamarin.Forms 템플릿을 Visual Studio에서 사용할 수 있는 유니버설 Windows 플랫폼 (UWP) 프로젝트가 포함 되어 있습니다.
 
 > [!NOTE]
-> 하지만 Xamarin.Forms 1.x와 2.x 지원 _Windows Phone 8 Silverlight_ 응용 프로그램 개발이 프로젝트 형식은 사용 되지 않습니다.
-
+> Xamarin.Forms 1.x와 2.x 지원 _Windows Phone 8 Silverlight_, _Windows Phone 8.1_, 및 _Windows 8.1_ 응용 프로그램을 개발 합니다. 그러나 이러한 프로젝트 형식 되지 않습니다.
 
 ## <a name="getting-started"></a>시작
 
@@ -41,13 +32,11 @@ Visual Studio에서 올바른 개발 옵션을 설치한 경우 것도 가능 �
 이전 Xamarin.Forms 솔루션 또는 macOS 등에서 만든는 위에 나열 된 모든 Windows 프로젝트 (그러나 수동으로 추가 하는 데 필요한).
 Windows 플랫폼을 대상으로 할 부하량 솔루션에 있지 않은 경우는 [설치 지침](installation/index.md) 원하는 Windows 프로젝트 형식/s를 추가 합니다.
 
-
 ## <a name="samples"></a>샘플
 
-[모든 샘플](https://github.com/xamarin/xamarin-forms-book-preview-2) Charles Petzold 책에 대 한 [ *Xamarin.Forms 사용 하 여 모바일 앱 만들기* ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) Windows Phone 8.1, Windows 8.1 및 Windows 10) (용 유니버설 Windows 플랫폼 프로젝트를 포함 합니다.
+[모든 샘플](https://github.com/xamarin/xamarin-forms-book-preview-2) Charles Petzold 책에 대 한 [ *Xamarin.Forms 사용 하 여 모바일 앱 만들기* ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) (Windows 10)에 대 한 유니버설 Windows 플랫폼 프로젝트를 포함 합니다.
 
 ["Scott Hanselman" 데모 앱](https://github.com/jamesmontemagno/Hanselman.Forms) 는 별도로 사용할 수 있으며 또한 Apple Watch 및 쓰는 유형 Android 프로젝트를 포함 (Xamarin.iOS 및 Xamarin.Android를 사용 하는 각각, Xamarin.Forms 실행 되지 않습니다 해당 플랫폼에서).
-
 
 ## <a name="related-links"></a>관련 링크
 

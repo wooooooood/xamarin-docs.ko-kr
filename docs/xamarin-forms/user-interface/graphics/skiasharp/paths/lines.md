@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -235,7 +235,7 @@ IPhone에서 왼쪽된에 표시 된 방법을 `SKPointMode.Points` 열거형 �
 
 대신 사용 하는 경우 `SKPointMode.Lines`Android 화면의 가운데에 표시 된 것 처럼는 `DrawPoints` 메서드의 각 쌍 사이 선을 그립니다 `SKPoint` 값,이 경우 지정 된 선 단면을 사용 하 여 `Round`합니다.
 
-Windows 모바일 장치에서는의 결과 `SKPointMode.Polygon` 값입니다. 배열에 있는 연속 점 사이의 선이 그려집니다 있지만 매우 밀접 하 게을 보면이 줄 연결 되어 있지 않은 확인할 수 있습니다. 각각이 별도 줄의 시작 되며 지정 된 선 단면으로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 줄은 연결 된 것으로 보일 수도 있지만 실제로 연결 되어 있지 않은 합니다.
+결과 표시 하는 UWP 스크린 샷은 `SKPointMode.Polygon` 값입니다. 배열에 있는 연속 점 사이의 선이 그려집니다 있지만 매우 밀접 하 게을 보면이 줄 연결 되어 있지 않은 확인할 수 있습니다. 각각이 별도 줄의 시작 되며 지정 된 선 단면으로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 줄은 연결 된 것으로 보일 수도 있지만 실제로 연결 되어 있지 않은 합니다.
 
 줄 연결 되거나 연결 되지 있는지 여부를 그래픽 경로 작업할 때 중요 한 요소입니다.
 

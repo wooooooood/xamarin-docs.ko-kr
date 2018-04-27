@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b06b17ce8f19f7f7cabe35c23de5b61db8f71dbe
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -28,9 +28,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="controlling-orientation"></a>방향을 제어합니다.
 
 Xamarin.Forms를 사용 하면 지원 되는 방법은 장치 방향을 제어의 개별 프로젝트 각각에 대 한 설정을 사용 하도록 합니다.
-
-> [!NOTE]
-> Xamarin.Forms는 것을 방지 버그가 1.5.0가 기준으로 사용자 지정 렌더러 기반 실패 하는 방향을 제어 하려고 합니다. 참조 [이 토론](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)자세한 정보에 대 한 Xamarin 포럼에서이 설명 합니다.
 
 ### <a name="ios"></a>iOS
 
@@ -57,7 +54,6 @@ Mac 용 Visual Studio에서 iOS 프로젝트를 열고 열기 **Info.plist**합�
 ![Mac 용 Visual Studio에서 장치 방향을 지원](device-orientation-images/orientation-xam-source.png)
 
 -----
-
 
 ### <a name="android"></a>Android
 
@@ -93,27 +89,9 @@ Xamarin.Android는 방향을 지정 하기 위한 몇 가지 옵션을 지원 �
 
 네이티브 Android Api 많이 방향 관리 하는 방법에 대 한 제어를 제공 하는 참고를 명시적으로 사용자의 일치 하지 않는 옵션을 포함 하 여 기본 설정 표현 됩니다.
 
-### <a name="windows-phone"></a>Windows Phone
+### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
-지원 되는 방향에 설정 된 Windows Phone RT에서의 <span class="UIItem">Package.appxmanifest</span> 파일입니다. 매니페스트를 열어 지원 되는 방향을 선택할 수 있는 구성 패널을 표시 합니다.
-
-![](device-orientation-images/vs-winrt-config.png "Package.appxmanifest Visual Editor")
-
-Windows Phone 8 (Silverlight)에서 지원 되는 방향에는 코드에 설정 되어는 <span class="UIItem">MainPage.xaml.cs</span> 파일입니다. 기본 프로젝트 파일의 값이 이미 코드의 다음 행으로 설정 됩니다.
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-```
-
-Windows Phone 방향 옵션을 지정 하려면 하는 원하는 방향 사용할 수 있도록 코드와 바꿉니다.
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-SupportedOrientations = SupportedPageOrientation.Portrait; // portrait only
-SupportedOrientations = SupportedPageOrientation.Landscape; // landscape only
-```
-
-Windows Phone 지원 가로 뷰 모두에서 (처럼 세로에서) 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 방향입니다. 사용 되는 지정 하는 것이 불가능 합니다.
+에 플랫폼 UWP (유니버설 Windows), 지원 되는 방향에 설정 된는 **Package.appxmanifest** 파일입니다. 매니페스트를 열어 지원 되는 방향을 선택할 수 있는 구성 패널을 표시 합니다.
 
 <a name="Reacting_to_Changes_in_Orientation" />
 

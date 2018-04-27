@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 97f0917e4e8670ab379aae1b2707ae08cb29bb70
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="displaying-pop-ups"></a>팝업 표시
 
@@ -45,7 +45,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 ## <a name="guiding-users-through-tasks"></a>작업을 통해 기본 사용자
 
-[UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) iOS에는 일반적인 UI 요소입니다. Xamarin.Forms는 [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) 메서드를 사용 하면 Android 및 Windows Phone 네이티브 대체 렌더링 교차 플랫폼 앱에서이 컨트롤을 포함 합니다.
+[UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) iOS에는 일반적인 UI 요소입니다. Xamarin.Forms는 [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) 메서드를 사용 하면 플랫폼 간 앱을 UWP 및 Android에서 native 대체 렌더링에이 컨트롤을 포함 합니다.
 
 작업 시트를 표시 하려면 `await` [ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/) 모든 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), 메시지 전달 및 레이블을 문자열로 단추입니다. 메서드는 사용자가 클릭 된 단추의 문자열 레이블을 반환 합니다. 간단한 예는 다음과 같습니다.
 

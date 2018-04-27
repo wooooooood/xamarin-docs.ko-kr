@@ -6,19 +6,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 응용 프로그램 레이아웃
 
 Xamarin.Forms 전화, 외에도 응용 프로그램에서 실행할 수도 있도록 지원 되는 플랫폼에서 사용할 수 있는 모든 장치 유형에 지원 합니다.
 
-* iPads,
+* Ipad,
 * Android 태블릿
-* Windows 태블릿 및 데스크톱 컴퓨터 (Windows 8.1 또는 Windows 10 실행).
+* Windows 태블릿 및 데스크톱 컴퓨터 (Windows 10 실행).
 
 이 페이지에 간략하게 설명 합니다.
 
@@ -53,12 +53,7 @@ Android 에코 시스템의 큰 태블릿까지 작은 휴대폰에서 지원 �
 
 ### <a name="windows-tablets-and-desktops"></a>Windows 태블릿 및 데스크톱용
 
-태블릿 및 Windows를 실행 하는 데스크톱 컴퓨터를 지원 하려면 두 가지 지원 되는 프로젝트 형식 중 하나를 사용 해야 합니다.
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  Windows 8.1 태블릿 및 데스크톱용에 맞게 앱을 빌드합니다.
-* [UWP Windows 지원](~/xamarin-forms/platform/windows/installation/universal.md) -
-  모두 Windows 10 휴대폰, 태블릿 및 데스크톱에서 실행 되는 유니버설 앱을 빌드합니다.
+사용 해야 태블릿 및 Windows를 실행 하는 데스크톱 컴퓨터를 지원 하려면 [UWP Windows 지원](~/xamarin-forms/platform/windows/installation/index.md), Windows 10에서 실행 되는 유니버설 앱 빌드입니다.
 
 Windows 태블릿 및 데스크톱에서 실행 되는 앱을 조정할 수 있는 임의의 차원에 뿐만 아니라 전체 화면을 실행 합니다.
 
@@ -97,5 +92,5 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin Blog](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
+- [Xamarin 블로그](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
 - [MyShoppe 샘플](https://github.com/jamesmontemagno/myshoppe)

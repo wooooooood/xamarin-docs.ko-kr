@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML 시작
 
@@ -192,7 +192,7 @@ Mac 용 Visual Studio에서 프로젝트를 빌드할 때 C# 코드 파일을 �
 
 정상적으로 생성 된 코드 파일에 많은 시간을 보낼 필요가 없습니다, 있지만 때로는 런타임 예외 발생 생성 된 파일의 코드에서 작업할 수 있도록 합니다.
 
-컴파일 및이 프로그램을 실행 하는 경우는 `Label` XAML 알 수 있듯이 요소는 페이지의 가운데에 표시 합니다. 왼쪽에서 오른쪽에는 세 플랫폼은 iOS, Android 및 Windows 10 Mobile
+컴파일 및이 프로그램을 실행 하는 경우는 `Label` XAML 알 수 있듯이 요소는 페이지의 가운데에 표시 합니다. 왼쪽에서 오른쪽에는 세 플랫폼은 iOS, Android, 및 UWP:
 
 [![](get-started-with-xaml-images/xamlsamples.png "Xamarin.Forms 디스플레이 기본")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "Xamarin.Forms 기본 표시")
 
@@ -224,7 +224,7 @@ MainPage = new MainPage();
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-다른 XAML 기반 추가 하려면 `ContentPage` 프로젝트에 클래스를 선택는 **XamlSamples** PCL 프로젝트를 마우스 호출는 **프로젝트 > 새 항목 추가** 메뉴 항목입니다. 왼쪽에는 **새 항목 추가** 대화 상자에서 **Visual C#** 및 **Xamarin.Forms**합니다. 목록에서 선택 **콘텐츠 페이지** (하지 **콘텐츠 페이지 (C#)**를 만드는 코드 전용 페이지 또는 **콘텐츠 보기**, 페이지 않습니다). 예를 들어 페이지에 이름을 지정 **HelloXamlPage.xaml**:
+다른 XAML 기반 추가 하려면 `ContentPage` 프로젝트에 클래스를 선택는 **XamlSamples** PCL 프로젝트를 마우스 호출는 **프로젝트 > 새 항목 추가** 메뉴 항목입니다. 왼쪽에는 **새 항목 추가** 대화 상자에서 **Visual C#** 및 **Xamarin.Forms**합니다. 목록에서 선택 **콘텐츠 페이지** (하지 **콘텐츠 페이지 (C#)** 를 만드는 코드 전용 페이지 또는 **콘텐츠 보기**, 페이지 않습니다). 예를 들어 페이지에 이름을 지정 **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.png "새 항목 추가 대화 상자")
 
@@ -351,11 +351,11 @@ public MainPage()
 }
 ```
 
-설정의 `Content` 속성 페이지의 설정을 대체는 `Content` XAML 파일에는 속성입니다. 컴파일하고이 프로그램의 새 버전을 배포 하는 경우 단추가 화면에 나타납니다. 이동 누르지 `HelloXamlPage`합니다. 다음 결과 페이지에 iPhone, Android 및 Windows 10 Mobile은 장치:
+설정의 `Content` 속성 페이지의 설정을 대체는 `Content` XAML 파일에는 속성입니다. 컴파일하고이 프로그램의 새 버전을 배포 하는 경우 단추가 화면에 나타납니다. 이동 누르지 `HelloXamlPage`합니다. IPhone, Android 및 UWP에서 결과 페이지는 다음과 같습니다.
 
 [![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전")
 
-다시 탐색할 수 있습니다 `MainPage` 를 사용 하 여는 **< 다시** ios, android에서는 전화 맨 아래에 또는 페이지 맨 위에 있는 왼쪽된 화살표를 사용 하 여 또는 왼쪽된 화살표를 사용 하 여 Windows 10 Mobile에 페이지의 맨 아래에 단추입니다.
+다시 탐색할 수 `MainPage` 를 사용 하 여는 **< 다시** iOS, android에서는 전화 맨 아래에 또는 페이지 맨 위에 있는 왼쪽된 화살표를 사용 하 여 또는 왼쪽된 화살표를 사용 하 여 Windows 10에서 페이지의 위쪽에 단추입니다.
 
 렌더링 하 여 다양 한 방법에 대 한 XAML과 원하는 대로 볼 수는 `Label`합니다. 텍스트에 모든 유니코드 문자를 포함 해야 할 경우 표준 XML 구문을 사용할 수 있습니다. 예를 들어 따옴표로 묶어야 인사말 스마트를 사용 합니다.
 

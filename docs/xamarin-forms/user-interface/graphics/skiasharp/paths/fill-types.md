@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
@@ -165,7 +165,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](fill-types-images/fivepointedstar-small.png "Five-Pointed 별 페이지의 삼중 스크린샷")](fill-types-images/fivepointedstar-large.png#lightbox "Five-Pointed 별 페이지의 삼중 스크린샷")
 
-Android 및 Windows 모바일 스크린 샷을 일반적인 홀수 및 굴곡 효과 표시 하지만 선 및 채우기의 순서는 결과도 영향을 줍니다.
+Android 및 UWP 스크린 샷을 일반적인 홀수 및 굴곡 효과 표시 하지만 선 및 채우기의 순서는 결과도 영향을 줍니다.
 
 굴곡 알고리즘 줄이 그려지는 방향에 따라 달라 집니다. 일반적으로 경로 만드는 경우 제어할 수 있습니다 그 방향 다른 한 지점에서 줄을 그릴는 지정한 대로. 그러나는 `SKPath` 클래스와 같은 메서드는 또한 정의 `AddRect` 및 `AddCircle` 하는 전체 윤곽선을 그립니다. 메서드를 이러한 개체를 그리는 방법을 제어 하려면 형식의 매개 변수를 포함 [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), 멤버가 두 개:
 

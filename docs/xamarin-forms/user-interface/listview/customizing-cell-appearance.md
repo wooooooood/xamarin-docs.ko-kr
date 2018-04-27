@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: df0e113f0c76ea9bde58da7a7ceccd50edd5b227
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="cell-appearance"></a>셀 모양
 
@@ -62,8 +62,6 @@ Xamarin.Forms는 대부분의 간단한 응용 프로그램에 대해 작동 하
 - `TextColor` &ndash; 텍스트의 색
 - `DetailColor` &ndash; 세부 정보 텍스트의 색
 - `ImageSource` &ndash; 텍스트 옆에 표시할 이미지를
-
-Windows Phone 8.1을 대상으로 할 때 사용자에 게 유의 `ImageCell` 기본적으로 이미지를 조정 하지 것입니다. 또한 Windows Phone 8.1 인지 되는 정보에 텍스트 표시 되는 유일한 플랫폼에 동일한 색 및 글꼴 기본 텍스트는 기본적으로 note 합니다. Windows Phone 8.0 렌더링 `ImageCell` 아래와 같이:
 
 ![](customizing-cell-appearance-images/image-cell-default.png "기본 ImageCell 예")
 

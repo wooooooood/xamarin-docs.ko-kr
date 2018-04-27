@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 8d6276a96d591363c88be4ff7edd8a9d039fb29d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71c10e1de8b94b8d9799d144fb603c82c40ca9eb
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="colors"></a>색
 
@@ -44,7 +44,7 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-이러한 색은 아래 각 플랫폼에 표시 됩니다. 최종 색-확인 `Accent` -은 iOS 및 Android; blue-ish 색 Xamarin.Forms로이 값이 정의 합니다. Windows Phone는 `Accent` 빨간색으로 표시 *해당 장치에 대 한 사용자가 선택한 강조색 이므로*; 사용자의 기본 설정에 따라이 값이 변경 합니다.
+이러한 색은 아래 각 플랫폼에 표시 됩니다. 최종 색-확인 `Accent` -은 iOS 및 Android; blue-ish 색 Xamarin.Forms로이 값이 정의 합니다.
 
  [![색 데모](colors-images/colors-sml.png "색 데모")](colors-images/colors.png#lightbox "색 데모")
 
@@ -59,8 +59,6 @@ var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accen
 색 선택을 설정 합니다.
 
 ## <a name="coloraccent"></a>Color.Accent
-
-Windows Phone 사용자가 선택한 보완 색상입니다. 좋은 Windows Phone 응용 프로그램 사용이 해당 스타일의 일환으로 네이티브 모양 및 느낌을 제공 하기.
 
 IOS 및 Android에서이 인스턴스는 기본 마스터 페이지에 표시 되지만 기본 텍스트와 같지 않습니다 대비 색으로 설정 됩니다.
 

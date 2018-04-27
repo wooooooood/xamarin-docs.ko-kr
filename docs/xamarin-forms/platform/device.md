@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 7ba3808e7b8d948d502be3f80b8830e1aaf3b52f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 471616dffc700cf93a9f6435565222d7628bf165
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="device-class"></a>장치 클래스
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 04/04/2018
 
 Xamarin.Forms 2.3.4 하기 전에 응용 프로그램에서 실행 되 고 platform를 얻을 수를 검사 하 여는 [ `Device.OS` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.OS/) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.iOS/), [ `TargetPlatform.Android` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Android/), [ `TargetPlatform.WinPhone` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.WinPhone/), 및 [ `TargetPlatform.Windows` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TargetPlatform.Windows/) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) 오버 로드를 사용 하 여 컨트롤에 플랫폼 관련 값을 제공할 수 없습니다.
 
-그러나 이후 Xamarin.Forms 2.3.4 이러한 Api는 더 이상 사용 되지 되어 대체 합니다. [ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 클래스-플랫폼을 식별 하는 공개 문자열 상수를 이제 포함 [ `Device.iOS` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), [ `Device.Android` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), [ `Device.WinPhone` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/), [ `Device.WinRT` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinRT/), [ `Device.UWP` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), 및 [ `Device.macOS` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.macOS/)합니다. 마찬가지로,는 [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) 오버 로드로 대체 되었습니다는 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) 및 [ `On` ](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) Api입니다.
+그러나 이후 Xamarin.Forms 2.3.4 이러한 Api는 더 이상 사용 되지 되어 대체 합니다. [ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 클래스-플랫폼을 식별 하는 공개 문자열 상수를 이제 포함 [ `Device.iOS` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/), [ `Device.Android` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/), [ `Device.WinPhone` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/) (사용 되지 않음), [ `Device.WinRT` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinRT/) (사용 되지 않음), [ `Device.UWP` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/), 및 [ `Device.macOS` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.macOS/)합니다. 마찬가지로,는 [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) 오버 로드로 대체 되었습니다는 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) 및 [ `On` ](https://developer.xamarin.com/api/type/Xamarin.Forms.On/) Api입니다.
 
 C#에서 플랫폼 관련 값을 제공할 수를 만들어서는 `switch` 문은 [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) 속성을 선택한 다음 제공 `case` 필요한 플랫폼에 대 한 문을:
 
@@ -36,7 +36,6 @@ switch (Device.RuntimePlatform)
     top = 20;
     break;
   case Device.Android:
-  case Device.WinPhone:
   case Device.UWP:
   default:
     top = 0;
@@ -52,7 +51,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
   <StackLayout.Margin>
     <OnPlatform x:TypeArguments="Thickness">
       <On Platform="iOS" Value="0,20,0,0" />
-      <On Platform="Android, WinPhone, UWP" Value="0,0,0,0" />
+      <On Platform="Android, UWP" Value="0,0,0,0" />
     </OnPlatform>
   </StackLayout.Margin>
   ...
@@ -70,9 +69,9 @@ layout.Margin = new Thickness(5, top, 5, 0);
 
 `Device.Idiom` 레이아웃 또는 응용 프로그램에서 실행 되는 장치에 따라 기능 변경 데 사용할 수 있습니다. [ `TargetIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/) 열거형에는 다음 값이 포함 되어 있습니다.
 
--  **전화** – iPhone, iPod touch, Windows Phone, Android 장치 600 dip 보다 좁은 ^
--  **태블릿** -600 dip 보다 더 다양 한 Android 장치, Windows 8.1 컴퓨터 iPad ^
--  **데스크톱** -에 반환 된 [UWP 앱](~/xamarin-forms/platform/windows/installation/universal.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속 시나리오에서 등의 모바일 Windows 장치에서)
+-  **전화** – iPhone, iPod touch 및 Android 장치 600 dip 보다 좁은 ^
+-  **태블릿** – iPad의 경우 Windows 장치 및 Android 장치 600 dip 보다 넓은 ^
+-  **데스크톱** -에 반환 된 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속 시나리오에서 등의 모바일 Windows 장치에서)
 -  **TV** – Tizen TV 장치
 -  **지원 되지 않는** 사용 하지 않는 –
 
@@ -149,7 +148,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-사용자 인터페이스 요소는 타이머 또는 비동기 웹 요청 작업에 대 한 완료 처리기에서 실행 되는 코드와 같은 백그라운드 스레드에서 액세스 되어서는 안 됩니다. 사용자 인터페이스를 업데이트 하는 모든 백그라운드 코드 내부 래핑해야 [ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)합니다. 이 해당 하는 `InvokeOnMainThread` ios, `RunOnUiThread` android, 및 `Dispatcher.BeginInvoke` Windows Phone 있습니다.
+사용자 인터페이스 요소는 타이머 또는 비동기 웹 요청 작업에 대 한 완료 처리기에서 실행 되는 코드와 같은 백그라운드 스레드에서 액세스 되어서는 안 됩니다. 사용자 인터페이스를 업데이트 하는 모든 백그라운드 코드 내부 래핑해야 [ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)합니다. 이 해당 하는 `InvokeOnMainThread` ios, `RunOnUiThread` android, 및 `Dispatcher.RunAsync` 유니버설 Windows 플랫폼에 있습니다.
 
 Xamarin.Forms 코드가입니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 7979e43cdde60b1b0248118e591c096295847acb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 46284fd1b0863f904e9f24f125aef75fe3eb8caa
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="native-views-in-c"></a>C#에서 기본 뷰
 
@@ -34,7 +34,6 @@ _C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 네이티브 iOS, And
 
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
-- **Windows Runtime** – Xamarin.Forms.Platform.WinRT
 - **유니버설 Windows 플랫폼 (UWP)** – Xamarin.Forms.Platform.UWP
 
 ## <a name="adding-platform-specific-views-on-each-platform"></a>각 플랫폼에서 플랫폼 관련 뷰 추가
@@ -70,7 +69,7 @@ contentView.Content = textView.ToView();
 
 이 예에서는 가정 하는 `stackLayout` 및 `contentView` XAML 또는 C#에서 이전에 만든 한 인스턴스.
 
-### <a name="windows-runtime-and-universal-windows-platform"></a>Windows 런타임 및 유니버설 Windows 플랫폼
+### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
 다음 코드 예제에서는 추가 하는 방법을 보여 줍니다.는 `TextBlock` 에 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 및 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 

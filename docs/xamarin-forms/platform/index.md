@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -63,11 +63,4 @@ Github, Nuget을 및 Xamarin.Forms 앱을 늘리기 위해 Xamarin 구성 요소
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms에는 네 가지 유형의 Windows 프로젝트에 대 한 지원이 있습니다.
-
-* Windows Phone 8 Silverlight (원래 Windows 플랫폼 Xamarin.Forms에서 지 원하는),
-* Windows Phone 8.1 (WinRT)
-* WinRT (), Windows 8.1 및
-* 유니버설 Windows 플랫폼 (Windows 10)입니다.
-
-이 섹션에 기존 Xamarin.Forms 솔루션에 추가 하는 방법 간의 차이점을 설명 합니다.
+Xamarin.Forms는 Windows 10에서 유니버설 Windows 플랫폼 (UWP)에 대 한 지원 합니다. 이 문서에 추가 하는 방법에 설명 된 UWP 프로젝트를 기존 Xamarin.Forms 솔루션입니다.

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -53,7 +53,7 @@ ListView에서 셀 사용자 지정 하는 방법에 대 한 자세한 참조 [L
 ListView에서는 다양 한 상호 작용 스타일을 포함 하 여 지원 합니다.
 
 - **[끌어오기-새로 고침](interactivity.md#Pull_to_Refresh)**  &ndash; ListView 각 플랫폼에서 끌어오기-새로 고침을 지원 합니다.
-- **[상황에 맞는 작업](interactivity.md#Context_Actions)**  &ndash; ListView 목록의 개별 항목에 기록 작업을 지원 합니다. 예를 들어 구현 살짝-액션 ios, 하거나 장기 눌러서 Android 및 Windows Phone 대 한 작업입니다.
+- **[상황에 맞는 작업](interactivity.md#Context_Actions)**  &ndash; ListView 목록의 개별 항목에 기록 작업을 지원 합니다. 예를 들어 구현 살짝-액션 ios, 하거나 장기 눌러서 Android에 대 한 작업입니다.
 - **[선택 영역](interactivity.md#selectiontaps)**  &ndash; 선택 내용 및 행의 탭이 수행 되는 경우 작업을 수행할 deselections 수신 대기할 수 있습니다.
 
 ![](images/context-default.png "상황에 맞는 작업으로 ListView")

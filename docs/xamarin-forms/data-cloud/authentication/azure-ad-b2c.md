@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627c6773c099c9cf45f871a9bb73a201bf98271a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 있는 사용자를 인증합니다.
 
@@ -60,7 +60,7 @@ Microsoft 인증 라이브러리 (MSAL) NuGet 라이브러리는 Xamarin.Forms �
 
 ### <a name="portable-class-library"></a>이식 가능한 클래스 라이브러리
 
-MSAL Windows Phone 8.1을 지원 하지 않습니다 하 고 있으므로 PCLs MSAL를 사용 하는 됩니다이 대상을 제거 해야 합니다. 이 변경 내용 대상 PCLs Profile7를 사용 하 여 수행할 수 있습니다. PCL에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리 소개](~/cross-platform/app-fundamentals/pcl.md)를 참조하세요.
+PCLs MSAL를 사용 하는 대상이 Profile7 사용로 변경 해야 합니다. PCL에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리 소개](~/cross-platform/app-fundamentals/pcl.md)를 참조하세요.
 
 ### <a name="ios"></a>iOS
 

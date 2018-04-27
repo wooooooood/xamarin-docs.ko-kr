@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 511a7052b07a853279f91211b3e3b1219f125c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview-interactivity"></a>ListView 상호 작용
 
@@ -53,12 +53,10 @@ SelectionDemoList.ItemSelected += (sender, e) => {
 
 ![](interactivity-images/selection-default.png "선택이 가능한 있는 ListView")
 
-Windows Phone 비롯 한 일부 셀에 유의 `SwitchCell` 선택 사항에 따라에서 해당 시각적 상태를 업데이트 하지 않습니다.
-
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>상황에 맞는 작업
-대개 사용자가 사용할 항목에 대해 조치를 취할는 `ListView`합니다. 예를 들어 메일 응용 프로그램에서 전자 메일 주소 목록입니다. Ios, 메시지를 삭제 하는 살짝 밉니다 수 및 Windows Phone 있습니다 수 장기 누르고 메시지를 삭제 합니다.
+대개 사용자가 사용할 항목에 대해 조치를 취할는 `ListView`합니다. 예를 들어 메일 응용 프로그램에서 전자 메일 주소 목록입니다. Ios에서 메시지를 삭제할 살짝::
 
 ![](interactivity-images/context-default.png "상황에 맞는 작업으로 ListView")
 
@@ -149,8 +147,6 @@ listView.IsPullToRefreshEnabled = true;
 ![](interactivity-images/refresh-start.png "ListView 진행 중인를 새로 고치려면 끌어오세요")
 
 끌어오기-새로 고침 사용자로 끌어오기를 출시 했습니다. 이 사용자 목록을 업데이트 하는 동안 표시: ![ ] (interactivity-images/refresh-in-progress.png "ListView 끌어오세요 전체 새로 고침")
-
-Xamarin.Forms 1.4.3 현재, 끌어오기-새로 고침 Windows Phone 8.1에서 지원 되지 않습니다. Windows phone 8에서 끌어오기-새로 고침 아니므로 네이티브 플랫폼 기능 Xamarin.Forms에서 끌어오기-새로 고침의 구현을 제공 합니다. 마지막으로, 해당 끌어오기-새로 고침 (즉, 경우 위아래로 스크롤할 필요 하지 않습니다) 목록의 모든 요소가 화면에 맞출 수 있는 경우 Windows Phone 작동 하지 것입니다.
 
 ListView는 끌어오기-새로 고침 이벤트에 응답할 수 있도록 하는 몇 가지 이벤트를 노출 합니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 773636cf879439477a6f71e44f13ae66b8f10ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -150,17 +150,17 @@ namespace EffectsDemo.Droid
 
 `OnElementPropertyChanged` 재정의 Xamarin.Forms 컨트롤에 바인딩 가능한 속성 변경에 응답 합니다. 경우는 [ `IsFocused` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsFocused/) 속성 변경 내용을 컨트롤에 포커스가 있으면 컨트롤의 배경색을 흰색 변경 되, 그렇지 않으면 연한 녹색으로 변경 됩니다. 이 기능은 요소에 래핑되는 `try` / `catch` 차단 효과에 연결 된 컨트롤에 없는 경우에 `BackgroundColor` 속성.
 
-## <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone 및 유니버설 Windows 플랫폼 프로젝트
+## <a name="universal-windows-platform-projects"></a>유니버설 Windows 플랫폼 프로젝트
 
-다음 코드 예제는 `FocusEffect` Windows Phone 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
+다음 코드 예제는 `FocusEffect` 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinRT;
+using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
 [assembly: ExportEffect(typeof(FocusEffect), "FocusEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
     {

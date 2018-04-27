@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: d07026fbcc43a43a9f26d85ad15d5a4e3165e2ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 110c608558059ba0f207b4cff343b428125e1784
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="absolutelayout"></a>AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 배치 및 크기와 위치 또는 절대 값으로 비례 자식 요소의 크기를 지정 합니다. 위치 지정 및 크기의 비례 값 또는 정적 값을 사용 하 고 비례 자식 뷰 수 있으며 정적 값을 함께 사용할 수 있습니다.
 
-[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms 레이아웃")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
 이 문서에서는 설명 합니다.
 
@@ -282,11 +282,7 @@ Title="AbsoluteLayout">
 
 ![](absolute-layout-images/abs.png "복잡 한 AbsoluteLayout")
 
-Windows Phone 단추 렌더링 방법 차이로 인해를 원 중 일부는 Windows Phone 스크린 샷에 boxviews로 대체 되었습니다.
-
 다음에 유의 `AbsoluteLayout`경우에 따라 레이아웃에 중첩 될 수 있으므로 동일한 레이아웃 내에서 모든 요소를 제공 하는 보다 쉽게 s 중첩 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 
