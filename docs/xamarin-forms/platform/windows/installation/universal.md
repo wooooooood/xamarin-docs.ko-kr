@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
 ms.openlocfilehash: f851c1ca241be9e3c94a70b1f63135a46575d471
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>유니버설 Windows 플랫폼 (UWP) 앱 추가
 
@@ -70,7 +70,7 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10 . UWP 프로젝트에서 편집 **MainPage.xaml.cs** 제거 하는 `: Page` 클래스 이름에 대 한 상속 지정자 (이제에서 상속 하므로 `WindowsPage` 이전 단계에서의 변경으로 인해):
+ 10입니다. UWP 프로젝트에서 편집 **MainPage.xaml.cs** 제거 하는 `: Page` 클래스 이름에 대 한 상속 지정자 (이제에서 상속 하므로 `WindowsPage` 이전 단계에서의 변경으로 인해):
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
@@ -95,7 +95,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12 . 로컬 리소스 (예: 추가할. 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
+12입니다. 로컬 리소스 (예: 추가할. 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
 
 <a name="troubleshooting" />
 
