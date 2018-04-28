@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>셀 모양
 
@@ -70,7 +70,7 @@ Xamarin.Forms는 대부분의 간단한 응용 프로그램에 대해 작동 하
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>사용자 지정 셀
-기본 제공 셀 필요한 레이아웃을 제공 하지 않습니다, 필요한 레이아웃 사용자 지정 셀 구현. 예를 들어 다음 동일한 가중치는 두 개의 레이블이 있는 셀을 표시 하는 것이 좋습니다. A `LabelCell` 충분 한 수 없기 때문에 `LabelCell` 작은 하나의 레이블이 있습니다. 대부분의 셀 사용자 지정 (예: 추가 레이블, 이미지 또는 다른 표시 정보) 읽기 전용 데이터를 추가 합니다.
+기본 제공 셀 필요한 레이아웃을 제공 하지 않습니다, 필요한 레이아웃 사용자 지정 셀 구현. 예를 들어 다음 동일한 가중치는 두 개의 레이블이 있는 셀을 표시 하는 것이 좋습니다. A `TextCell` 충분 한 수 없기 때문에 `TextCell` 작은 하나의 레이블이 있습니다. 대부분의 셀 사용자 지정 (예: 추가 레이블, 이미지 또는 다른 표시 정보) 읽기 전용 데이터를 추가 합니다.
 
 모든 사용자 지정 셀에서 파생 되어야 [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), 기본 제공 된 셀의 모든 사용을 입력 하는 동일한 기본 클래스입니다.
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7b1eb1289688b6152e4e854ca0f51d66932c91a1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 80c78d359761c4383f9abf9338a995e3cc486968
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="validation"></a>유효성 검사
 
@@ -189,7 +189,7 @@ public bool Validate()
 
 ### <a name="triggering-validation-when-properties-change"></a>속성이 변경 될 때 유효성 검사를 트리거하지
 
-바인딩된 속성이 변경 될 때마다 유효성 검사도 자동으로 트리거됩니다. 예를 들어에서 양방향 바인딩에 `LoginView` 설정는 `UserName` 또는 `Password` 속성, 유효성 검사가 트리거됩니다. 다음 코드 예제에서는이 발생 하는 방법을 보여 줍니다.
+바인딩된 속성이 변경 될 때마다 유효성 검사를 트리거할 수도 있습니다. 예를 들어에서 양방향 바인딩에 `LoginView` 설정는 `UserName` 또는 `Password` 속성, 유효성 검사가 트리거됩니다. 다음 코드 예제에서는이 발생 하는 방법을 보여 줍니다.
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  

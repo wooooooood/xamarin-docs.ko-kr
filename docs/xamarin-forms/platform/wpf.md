@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 51aad1643709a96c56ccad8187a53f47a65a9dac
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치 프로그램
 
@@ -27,7 +27,7 @@ Windows 7, 8 및 10 데스크톱에서 실행 되는 WPF 응용 프로그램을 
 
 1. 솔루션 이름을 마우스 오른쪽 단추로 Visual Studio 2017 년에 **솔루션 탐색기** 선택 **추가 > 새 프로젝트...** .
 
-2. 에 **새 프로젝트** 창 왼쪽된 선택에서 **Visual C#** 및 **클래식 Windows 데스크톱**합니다. 프로젝트 형식 목록에서 선택 **WPF 응용 프로그램 (.NET Framework)**합니다. 
+2. 에 **새 프로젝트** 창 왼쪽된 선택에서 **Visual C#** 및 **클래식 Windows 데스크톱**합니다. 프로젝트 형식 목록에서 선택 **WPF 응용 프로그램 (.NET Framework)** 합니다. 
 
 3. 사용 하 여 프로젝트에 대 한 이름을 입력 한 **WPF** 확장, 예를 들어 **BoxViewClock.WPF**합니다. 클릭는 **찾아보기** 단추를 선택는 **BoxViewClock** 폴더 및 키를 눌러 **폴더 선택**합니다. 솔루션의 다른 프로젝트와 동일한 디렉터리에 WPF 프로젝트를 나옵니다.
 
@@ -57,7 +57,7 @@ Windows 7, 8 및 10 데스크톱에서 실행 되는 WPF 응용 프로그램을 
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    이제 변경 하는 `Window` 태그를 `wpf:FormsApplcationPage`합니다. 변경 된 `Title` 를 응용 프로그램의 예를 들어 이름으로 설정 **BoxViewClock**합니다. 완료 된 XAML 파일은 다음과 같이 표시 됩니다.
+    이제 변경 하는 `Window` 태그를 `wpf:FormsApplicationPage`합니다. 변경 된 `Title` 를 응용 프로그램의 예를 들어 이름으로 설정 **BoxViewClock**합니다. 완료 된 XAML 파일은 다음과 같이 표시 됩니다.
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"

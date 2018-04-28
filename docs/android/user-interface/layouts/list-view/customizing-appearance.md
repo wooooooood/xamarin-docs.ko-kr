@@ -5,12 +5,12 @@ ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 71557cc0adb123cd4556c3d35add314f44f30da1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: f4d737e31304a88f3ec293f90267a35ed1f2c7a5
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>ListView의 모양 사용자 지정
 
@@ -106,7 +106,7 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItemChecked, items);
 ```
 
-`ListView` 자체에서는 표시 되 고 접근자에 관계 없이 다른 선택 모드를 사용 하 고 지원 합니다. 혼동을 피하기 위해 사용 하 여 `Single` 선택 모드와 `Checked` 및 `SingleChoice` 액세서리 및 `Multiple` 모드는 `MultipleChoice` 스타일입니다. 선택 모드에 의해 제어 되는 `ChoiceMode` 속성은 `ListView`합니다.
+`ListView` 자체에서는 표시 되 고 접근자에 관계 없이 다른 선택 모드를 사용 하 고 지원 합니다. 혼동을 피하기 위해 사용 하 여 `Single` 선택 모드와 `SingleChoice` 액세서리 및 `Checked` 또는 `Multiple` 모드는 `MultipleChoice` 스타일입니다. 선택 모드에 의해 제어 되는 `ChoiceMode` 속성은 `ListView`합니다.
 
 
 ### <a name="handling-api-level"></a>처리 API 레벨
