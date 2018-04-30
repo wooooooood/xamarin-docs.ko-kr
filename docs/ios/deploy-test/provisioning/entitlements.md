@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 6ced541ca9df6fcae1643dc14c2e19807e972822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f158ab7e51eb7610566ed052b326fecf016add8a
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-entitlements"></a>자격 사용
 
@@ -84,7 +84,7 @@ Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
 Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합니다.
 
-1.  프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 파일...**을 선택합니다.
+1.  프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 파일...** 을 선택합니다.
 
     ![파일 추가 바로 가기 메뉴](entitlements-images/image1.png)
 2.  새 파일 대화 상자에서 **iOS > 속성 목록**을 선택하고 Entitlements라고 이름을 지정합니다.
@@ -124,9 +124,12 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
         - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
 * **참고**:
-    - `$(TeamIdentifierPrefix)` 문자열은 developer.apple.com에 로그인하여 **Member Center > Your Account(계정) > Developer Account Summary(개발자 계정 요약)**로 이동하여 팀 ID(또는 단일 개발자의 개인 ID)를 얻을 수 있습니다. 10자로 된 문자열(예: A93A5CM278)입니다.
+    - `$(TeamIdentifierPrefix)` 문자열은 developer.apple.com에 로그인하여 **Member Center > Your Account(계정) > Developer Account Summary(개발자 계정 요약)** 로 이동하여 팀 ID(또는 단일 개발자의 개인 ID)를 얻을 수 있습니다. 10자로 된 문자열(예: A93A5CM278)입니다.
     - `$(CFBundleIdentifier)` 문자열은`iCloud`로 시작되며 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 가이드의 단계에 따라 iCloud 컨테이너를 만들 때 설정됩니다.
     - $`(TeamIdentifierPrefix)` 및 `$(CFBundleIdentifier)` 자리 표시자를 사용할 수 있으며 빌드 시 올바른 값으로 대체됩니다.
+
+> [!IMPORTANT]
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 ### <a name="app-groups"></a>앱 그룹
 

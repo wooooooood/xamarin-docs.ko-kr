@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 7e18bff7f32303cb0c5016e4ade4b39723921534
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e426423854e7c569576c374ea1284c4de099a2d1
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icloud-capabilities"></a>iCloud 기능
 
@@ -21,14 +21,8 @@ iCloud는 iOS 사용자에게 콘텐츠를 저장하고 장치 간에 공유할 
 
 iCloud 기능을 응용 프로그램에 추가하는 것은 _컨테이너_ 때문에 다른 App Services보다 약간 더 어렵습니다. 컨테이너는 iCloud에서 앱에 대한 정보를 저장하는 데 사용되며 단일 iCloud 계정에 포함된 모든 정보를 분리(예: 사용자 iOS 장치에서 샌드 박싱)할 수 있습니다. 컨테이너에 대한 자세한 내용은 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 가이드를 참조하세요.
 
-<!--# Xcode
-
-The steps in section [Adding App Services ](~/ios/deploy-test/provisioning/capabilities/index.md) above can be used to toggle the required iCloud capability. Depending on which means of storage is being used in your app, you may need to do additional setup. The image below shows the iCloud capabilities pane:
-
- ![iCloud Capability section](icloud-capabilities-images/image21.png)
-
-First select the required service. If iCloud Documents or CloudKit have been selected, you must select a container. Selecting the default container will create a new container that is unique to the app. Alternatively, if you have created a container either via Xcode or the developer portal, select it here.
--->
+> [!IMPORTANT]
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 <a name="icloud-developer-center" />
 
@@ -46,7 +40,7 @@ First select the required service. If iCloud Documents or CloudKit have been sel
     
      ![Apple Developer Center 기본 페이지](icloud-capabilities-images/image22.png)
 
-2.  **식별자** 아래에서 **iCloud Containers**를 선택한 다음, **+**를 선택하여 새 컨테이너를 만듭니다.  
+2.  **식별자** 아래에서 **iCloud Containers**를 선택한 다음, **+** 를 선택하여 새 컨테이너를 만듭니다.  
     
     ![iCloud Container 화면](icloud-capabilities-images/image23.png)
 

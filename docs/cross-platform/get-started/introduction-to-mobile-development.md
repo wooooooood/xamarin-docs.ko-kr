@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f3950509134d3f643f0ea63b6725c1b4fe38409
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6be97162d1c371b9215d59ef77a7a5044e04f6b1
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-mobile-development"></a>모바일 개발 소개
 
@@ -42,7 +42,7 @@ Xamarin의 강력하고 포괄적인 기능 집합으로 인해, 플랫폼 간 �
 
 
 > [!NOTE]
-> 이 시작 시리즈에서는 iOS 및 Android 응용 프로그램 빌드를 시작하는 데 중점을 둡니다. Microsoft는 Windows Phone 개발을 위한 자습서를 [여기](http://dev.windowsphone.com/en-us/develop)에서 제공합니다. Xamarin(Windows용 UWP 앱 포함)을 사용한 플랫폼 간 개발에 대한 자세한 내용은 [플랫폼 간 응용 프로그램 빌드 가이드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)를 읽어 보세요.
+> 이 시작 시리즈에서는 iOS 및 Android 응용 프로그램 빌드를 시작하는 데 중점을 둡니다. Microsoft는 태블릿 및 데스크톱용 [UWP(유니버설 Windows 플랫폼) 개발](https://docs.microsoft.com/windows/uwp/develop/)에 대한 정보를 제공합니다. Xamarin(Windows용 UWP 앱 포함)을 사용한 플랫폼 간 개발에 대한 자세한 내용은 [플랫폼 간 응용 프로그램 빌드 가이드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)를 읽어 보세요.
 
 
 

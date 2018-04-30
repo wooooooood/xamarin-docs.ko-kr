@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
 
@@ -36,39 +36,25 @@ Visual Studio에서 iOS를 개발할 때 준수해야 하는 몇 가지 요구 �
 
 사용 가능한 몇 가지 구성 옵션이 있으므로 각자 자신의 개발 요구 사항에 가장 적합한 구성을 선택하면 됩니다. 구성은 다음과 같습니다.
 
--  Mac을 주 개발용 컴퓨터로 사용하고 Visual Studio가 설치된 Windows 가상 머신을 실행합니다. [Parallels](http://www.parallels.com/products/desktop/) 또는 [VMWare](http://www.vmware.com/products/fusion/) 같은 VM 소프트웨어를 사용하는 것이 좋습니다.
--  빌드 호스트와 마찬가지로 Mac을 사용합니다. 이 시나리오에서는 [필요한](~/cross-platform/get-started/installation/windows.md#installation) 도구가 설치된 Windows 컴퓨터와 동일한 네트워크에 연결됩니다.
+-  Mac을 주 개발 컴퓨터로 사용하고 Visual Studio가 설치된 Windows 가상 머신을 실행합니다. [Parallels](http://www.parallels.com/products/desktop/) 또는 [VMWare](http://www.vmware.com/products/fusion/) 같은 VM 소프트웨어를 사용하는 것이 좋습니다.
+-  Mac을 빌드 호스트로만 사용합니다. 이 시나리오에서는 [필요한](~/cross-platform/get-started/installation/windows.md#installation) 도구가 설치된 Windows 컴퓨터와 동일한 네트워크에 연결됩니다.
 
 
 두 경우 모두 다음 단계를 수행해야 합니다.
 
-- [Mac 호스트에 Xamarin.iOS 도구 설치](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Mac 구성](~/ios/get-started/installation/windows/index.md#configuring)
+- [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Windows에 Xamarin 도구 설치](~/cross-platform/get-started/installation/windows.md)
-
-Visual Studio에서 Xamarin을 개발하려면 **최소한** Visual Studio 2015 Professional 이상을 사용해야 합니다. Xamarin은 Visual Studio Express 버전과 함께 **작동하지 않습니다**. Express 버전이 추가 기능을 지원하지 않기 때문입니다.
 
 ## <a name="connecting-to-the-mac"></a>Mac에 연결
 
-Visual Studio 도구 모음의 아이콘을 통해(iOS 응용 프로그램이 열러 있는 경우) Mac 빌드 호스트에 연결할 수 있습니다.
+Visual Studio를 Mac 빌드 호스트에 연결하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 지침을 따릅니다.
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Mac에 연결 아이콘")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-또는 Visual Studio에서 **도구 > 옵션**으로 이동하여 **Xamarin > iOS 설정**을 선택합니다.
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS 옵션")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-**Xamarin Mac Agent** 단추를 클릭하여 Mac 빌드 호스트를 변경할 수 있습니다. Mac 빌드 호스트를 업데이트하는 다음 화면이 표시됩니다.
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Xamarin Mac Agent 대화 상자")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Visual Studio 도구 모음 개요
 
 Visual Studio용 Xamarin iOS는 표준 도구 모음 및 새 iOS 도구 모음에 항목을 추가합니다.
 이러한 도구 모음의 기능은 아래에 설명되어 있습니다.
-
-
 
 ### <a name="standard-toolbar"></a>표준 도구 모음
 
@@ -174,7 +160,7 @@ Visual Studio에서 iOS 디자이너를 사용하여 스토리보드 및 .xib �
 
 ### <a name="device-logging"></a>장치 로깅
 
-Visual Studio 2015 이상에서는 Android 및 iOS 로그 패드가 통합됨
+Visual Studio 2017에서는 Android 및 iOS 로그 패드가 통합되었습니다.
 
 새로운 Visual Studio용 장치 로그 도구 창은 Android 및 iOS 장치에 대한 로그를 표시할 수 있습니다. 다음 명령 중 하나를 실행하여 표시할 수 있습니다.
 

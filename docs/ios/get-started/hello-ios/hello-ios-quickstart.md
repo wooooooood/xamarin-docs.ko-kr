@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: e4828f1ae5448a94fa1f52147d1aef3787e95521
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 빠른 시작
 
@@ -60,7 +60,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
   ![](hello-ios-quickstart-images/image2new.png "시작 화면")
 
-시작 화면에서 **새 프로젝트...**을 클릭하여 새 Xamarin.iOS 솔루션을 만듭니다.
+시작 화면에서 **새 프로젝트...** 을 클릭하여 새 Xamarin.iOS 솔루션을 만듭니다.
 
 ![](hello-ios-quickstart-images/image3new.png "iOS 솔루션")
 
@@ -133,7 +133,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
   **파일 > 저장**으로 이동하거나 **⌘+s**를 눌러 변경 내용을 저장합니다.
 
 
-17. 전화 번호를 영숫자에서 숫자로 변환하려면 일부 논리를 앱에 추가해야 합니다. **솔루션 패드**에서 **Phoneword_iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 파일...**을 선택하거나 **⌘+n**을 눌러 프로젝트에 새 파일을 추가합니다.
+17. 전화 번호를 영숫자에서 숫자로 변환하려면 일부 논리를 앱에 추가해야 합니다. **솔루션 패드**에서 **Phoneword_iOS** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 파일...** 을 선택하거나 **⌘+n**을 눌러 프로젝트에 새 파일을 추가합니다.
 
   ![](hello-ios-quickstart-images/image18.png "프로젝트에 새 파일 추가")
 
@@ -285,16 +285,17 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
 이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 응용 프로그램을 만드는 방법을 설명합니다.
 
-**참고**: 이 연습에서는 Windows 10 Virtual Machine에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
+
+  **참고**: 이 연습에서는 Windows 10 가상 머신에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
 
 > [!NOTE]
-> 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
+> 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
 
 1. **시작** 메뉴에서 Visual Studio를 시작합니다.
 
   ![](hello-ios-quickstart-images/image001-.png "시작 화면")
 
-  **새 솔루션** 아래의 검색 상자에서 _단일 뷰 앱_을 입력하고, 새 Xamarin.iOS 솔루션을 만들기 위해 **단일 뷰 앱(iPhone)**을 선택합니다.
+  **새 솔루션** 아래의 검색 상자에서 _단일 뷰 앱_을 입력하고, 새 Xamarin.iOS 솔루션을 만들기 위해 **단일 뷰 앱(iPhone)** 을 선택합니다.
 
   ![](hello-ios-quickstart-images/image002-.png "단일 뷰 앱 추가")
 
@@ -366,7 +367,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
   **파일 > 모두 저장**으로 이동하거나 **Ctrl+s**를 눌러 변경 내용을 저장합니다.
 
-15. 전화 번호를 영숫자에서 숫자로 변환하는 코드를 추가합니다. 이렇게 하려면 먼저 **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...**을 차례로 선택하거나 **Ctrl+Shift+A**를 눌러 프로젝트에 새 파일을 추가합니다.
+15. 전화 번호를 영숫자에서 숫자로 변환하는 코드를 추가합니다. 이렇게 하려면 먼저 **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...** 을 차례로 선택하거나 **Ctrl+Shift+A**를 눌러 프로젝트에 새 파일을 추가합니다.
 
   ![](hello-ios-quickstart-images/vs-image18.png "전화 번호를 영숫자에서 숫자로 변환하는 코드 추가")
 

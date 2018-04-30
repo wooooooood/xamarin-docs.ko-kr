@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f30e49122c343a967a2348c03ce4f06d9452dc76
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aac58546e51525ae22c09218f90addef911669a
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-troubleshooting"></a>연결 문제 해결
 
@@ -39,7 +39,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 > 위의 옵션 중 어떤 것도 문제 해결에 도움이 되지 않으면 [9단계](#stepnine)의 지침에 따라 새 버그 보고서를 작성합니다.
 
 1. Mac에 호환되는 Xamarin.iOS 버전이 설치되어 있는지 확인합니다. Visual Studio 2017에서 이렇게 하려면 Mac용 Visual Studio의 **안정적인** 배포 채널에 있는지 확인합니다. Visual Studio 2015 이하인 경우 두 IDE에서 동일한 배포 채널에 있는지 확인합니다.
-    * Mac용 Visual Studio인 경우 **Mac용 Visual Studio > 업데이트 확인...**으로 이동하여 **업데이트 채널**을 확인하거나 변경합니다.
+    * Mac용 Visual Studio인 경우 **Mac용 Visual Studio > 업데이트 확인...** 으로 이동하여 **업데이트 채널**을 확인하거나 변경합니다.
     * Visual Studio 2015 이하인 경우 **도구 > 옵션 > Xamarin > 기타**에서 배포 채널을 확인합니다.
 
 2. Mac에서 **원격 로그인**이 설정되었는지 확인합니다. **이 사용자만**에 대한 액세스를 설정하고, Mac 사용자를 목록 또는 그룹에 포함합니다.
@@ -114,36 +114,36 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 <a name="knownissues" />
 
-## <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
+### <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
 
 > [!NOTE]
 > 이 섹션은 위의 8단계 및 9단계에서 설명한 대로 OpenSSH SSH 클라이언트를 사용하여 Mac 사용자 이름과 암호로 Mac 빌드 호스트에 성공적으로 연결한 경우에만 적용됩니다.
 
-### <a name="invalid-credentials-please-try-again"></a>"잘못된 자격 증명입니다. 다시 시도하세요."
+#### <a name="invalid-credentials-please-try-again"></a>"잘못된 자격 증명입니다. 다시 시도하세요."
 
 알려진 원인:
 
 - **제한** – 이름에 악센트 부호가 포함된 경우 _전체 이름_ 계정을 사용하여 빌드 호스트에 로그인하려고 시도하면 이 오류가 발생할 수 있습니다. 이는 Xamarin이 SSH 연결에 사용하는 [SSH.NET 라이브러리](https://sshnet.codeplex.com/)의 제한 사항입니다. **해결 방법**: 위의 5단계를 참조하세요.
 
-### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"SSH 키를 사용하여 인증할 수 없습니다. 먼저 자격 증명으로 로그인해 보세요."
+#### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"SSH 키를 사용하여 인증할 수 없습니다. 먼저 자격 증명으로 로그인해 보세요."
 
 알려진 원인:
 
 - **SSH 보안 제한** - 이 메시지는 Mac의 정규화된 경로 **$HOME/.ssh/authorized\_keys**의 파일 또는 디렉터리 중 하나에서 _기타_ 또는 _그룹_ 구성원에 대한 쓰기 권한이 설정되었음을 의미하는 경우가 가장 많습니다. **일반적인 해결 방법**: Mac의 터미널 명령 프롬프트에서 `chmod og-w "$HOME"` 명령을 실행합니다. 문제를 일으키는 파일 또는 디렉터리에 대한 세부 정보를 보려면 터미널에서 `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` 명령을 실행하고, 데스크톱에서 **sshd.log** 파일을 연 후 "인증 거부됨: 소유권 또는 모드가 잘못됨"을 찾아봅니다.
 
-### <a name="trying-to-connect-never-completes"></a>"연결하는 중..."이 완료되지 않음
+#### <a name="trying-to-connect-never-completes"></a>"연결하는 중..."이 완료되지 않음
 
 - **버그 [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – **시스템 환경 설정 &gt; 사용자 &amp; 그룹**의 Mac 사용자에 대한 **고급 옵션** 상황에 맞는 메뉴의 **로그인 셸**이 **/bin/bash** 이외의 값으로 설정된 경우 Xamarin 4.1에서 이 문제가 발생할 수 있습니다. (Xamarin 4.2부터는 이 시나리오가 "연결할 수 없음" 오류 메시지로 연결됩니다.) **해결 방법**: **로그인 셸**을 **/bin/bash**의 원래 기본값으로 변경합니다.
 
 <a name="tryagain" />
 
-### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요."
+#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요."
 
 보고된 원인:
 
 - **버그** - 일부 사용자가 Active Directory 또는 다른 디렉터리 서비스 도메인 사용자 계정을 사용하여 빌드 호스트에 로그인하려고 시도하면 이 오류 메시지와 함께 로그 파일에 "사용자에 대해 SSH를 구성하는 동안 예기치 않은 오류가 발생했습니다. 세션 작업 시간이 초과되었습니다."라는 구체적인 오류 메시지가 표시되는 것을 목격했습니다. **해결 방법:** 로컬 사용자 계정을 사용하여 빌드 호스트에 로그인합니다.
 
-- **버그** - 일부 사용자가 [연결] 대화 상자에서 Mac 이름을 두 번 클릭하여 빌드 호스트에 연결하려고 시도하면 이 오류가 발생하는 것을 목격했습니다. **가능한 해결 방법**: IP 주소를 사용하여 [수동으로 Mac을 추가](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add)합니다.
+- **버그** - 일부 사용자가 [연결] 대화 상자에서 Mac 이름을 두 번 클릭하여 빌드 호스트에 연결하려고 시도하면 이 오류가 발생하는 것을 목격했습니다. **가능한 해결 방법**: IP 주소를 사용하여 [수동으로 Mac을 추가](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac)합니다.
 
 - **버그 [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** – 일부 사용자가 Mac 빌드 호스트와 Windows 간에 무선 네트워크 연결을 사용하는 동안 이 오류를 경험했습니다. **가능한 해결 방법**: 두 컴퓨터를 유선 네트워크 연결로 이동합니다.
 
@@ -181,7 +181,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 <a name="clearing" />
 
-### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Mac에서 브로커, IDB, 빌드 및 디자이너 에이전트 지우기
+#### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Mac에서 브로커, IDB, 빌드 및 디자이너 에이전트 지우기
 
 Mac 에이전트와 관련된 "설치", "업로드" 또는 "시작" 단계에서 로그 파일에 문제가 발생하는 경우 Visual Studio가 에이전트를 강제로 다시 시작하도록 **XMA** 캐시 폴더를 삭제하는 방법을 시도해 볼 수 있습니다.
 
@@ -201,31 +201,31 @@ Mac 에이전트와 관련된 "설치", "업로드" 또는 "시작" 단계에서
     del %localappdata%\Temp\Xamarin\XMA
     ```
     
-## <a name="warning-messages"></a>경고 메시지
+### <a name="warning-messages"></a>경고 메시지
 
 이 섹션에서는 출력 창 및 일반적으로 무시해도 되는 로그에 나타날 수 있는 몇 가지 메시지에 대해 설명합니다.
 
-### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>"...설치된 Xamarin.iOS와 로컬 Xamarin.iOS가 일치하지 않습니다."
+#### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>"...설치된 Xamarin.iOS와 로컬 Xamarin.iOS가 일치하지 않습니다."
 
 Mac과 Windows를 동일한 Xamarin 배포 채널로 업데이트한 것을 확인했다면 이 경고를 무시해도 됩니다.
 
-### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"'ls /usr/bin/mono' 실행 실패: ExitStatus=1"
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"'ls /usr/bin/mono' 실행 실패: ExitStatus=1"
 
 Mac에서 OS X 10.11(El Capitan) 이상을 실행 중이면 이 메시지를 무시해도 됩니다. OS X 10.11에서는 이 메시지가 표시되어도 아무 문제 없습니다. OS X 10.11의 `mono`에 대한 올바른 예상 위치인 **/usr/local/bin/mono**를 Xamarin에서도 검사하기 때문입니다.
 
-### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>"Bonjour 서비스 'MacBuildHost'가 IP 주소에 응답하지 않았습니다."
+#### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>"Bonjour 서비스 'MacBuildHost'가 IP 주소에 응답하지 않았습니다."
 
-[연결] 대화 상자에 Mac 빌드 호스트의 IP 주소가 표시되는 한, 이 메시지를 무시해도 됩니다. 대화 상자에 IP 주소가 _없는_ 경우 [수동으로 Mac을 추가](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add)할 수 있습니다.
+[연결] 대화 상자에 Mac 빌드 호스트의 IP 주소가 표시되는 한, 이 메시지를 무시해도 됩니다. 대화 상자에 IP 주소가 _없는_ 경우 [수동으로 Mac을 추가](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac)할 수 있습니다.
 
-### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"10.1.8.95의 사용자 a는 잘못된 사용자입니다." 및 "input\_userauth\_request: 잘못된 사용자 a [사전 인증]"
+#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"10.1.8.95의 사용자 a는 잘못된 사용자입니다." 및 "input\_userauth\_request: 잘못된 사용자 a [사전 인증]"
 
 **sshd.log**를 살펴볼 때 이 메시지를 발견할 수 있습니다. 이러한 메시지는 정상적인 연결 프로세스의 일부입니다. Xamarin이 _SSH 지문_을 검색할 때 임시로 사용자 이름 **a**를 사용하기 때문에 이러한 메시지가 표시됩니다.
 
-## <a name="output-window-and-log-files"></a>출력 창 및 로그 파일
+### <a name="output-window-and-log-files"></a>출력 창 및 로그 파일
 
 Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력 창 및 로그 파일 2곳에서 추가 메시지를 확인해야 합니다.
 
-### <a name="output-window"></a>출력 창
+#### <a name="output-window"></a>출력 창
 
 출력 창은 시작하기에 가장 좋은 위치입니다. 출력 창에는 주 연결 단계 및 오류에 대한 메시지가 표시됩니다. 출력 창에서 Xamarin 메시지를 보려면:
 
@@ -235,7 +235,7 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
 [![](troubleshooting-images/troubleshooting-image11.png "출력 탭에서 Xamarin 선택")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-### <a name="log-files"></a>로그 파일
+#### <a name="log-files"></a>로그 파일
 
 출력 창의 정보가 문제를 진단하기에 충분하지 않은 경우 그 다음으로 살펴볼 위치는 로그 파일입니다. 로그 파일에는 출력 창에 나타나지 않는 추가 진단 메시지가 포함되어 있습니다. 로그 파일을 보려면:
 
@@ -262,13 +262,13 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
 
 <a name="verboselogs" />
 
-### <a name="verbose-log-files"></a>자세한 정보 표시 로그 파일
+#### <a name="verbose-log-files"></a>자세한 정보 표시 로그 파일
 
 일반 로그 파일이 제공하는 정보가 문제를 진단하기에 충분하지 않은 경우 마지막 방법으로 자세한 정보 로깅을 사용하도록 설정합니다. 자세한 정보 로그는 버그 보고서에서도 선호되는 정보입니다.
 
 1. Visual Studio를 종료합니다.
 
-2. [**개발자 명령 프롬프트**](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx)를 시작합니다.
+2. [**개발자 명령 프롬프트**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx)를 시작합니다.
 
 3. 명령 프롬프트에서 다음 명령을 실행하여 자세한 정보 로깅으로 Visual Studio를 시작합니다.
 
@@ -287,6 +287,12 @@ Visual Studio가 빌드 호스트에 연결할 때 오류가 발생하면 출력
    ```
 
 자세한 정보 로그 파일이 제공하는 정보가 문제를 직접 해결하기에 충분하지 않은 경우 [새 버그 보고서를 작성](https://bugzilla.xamarin.com/newbug)하고 5단계의 .zip 파일과 6단계의 .log 파일을 첨부해 주세요.
+
+## <a name="troubleshooting-automatic-mac-provisioning"></a>자동 Mac 프로비전 문제 해결
+
+### <a name="ide-log-files"></a>IDE 로그 파일
+
+[자동 Mac 프로비전](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning)을 사용하는 데 문제가 발생하면 **%LOCALAPPDATA%\Xamarin\Logs\15.0**에 저장된 Visual Studio 2017 IDE 로그를 살펴보세요.
 
 ## <a name="troubleshooting-build-and-deployment-errors"></a>빌드 및 배포 오류 문제 해결
 
@@ -369,5 +375,5 @@ killall mono
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mac에 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [XMA를 사용하여 Mac을 Visual Studio 환경에 연결(비디오)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- [Xamarin Mac 빌드 에이전트 - Xamarin University 번개 강의](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
