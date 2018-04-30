@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: 11e876207285689b230bb2fada3a4c836443e360
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
+ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -31,7 +31,7 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
 * [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) 이상.
 
 ## <a name="getting-started"></a>시작
-### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio 마켓플레이스에서 라이브 다시 로드 Xamarin을 설치 합니다.
+### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio 마켓플레이스에서 라이브 다시 로드 Xamarin 설치
 
 다시 로드 라이브 Xamarin은 Visual Studio 마켓플레이스를 통해 배포 됩니다. 확장을 설치 하려면 방문는 [Visual Studio 마켓플레이스에서 Xamarin 라이브 다시 로드 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 웹 사이트와 클릭 **다운로드**합니다.
 
@@ -39,9 +39,9 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
 
 ![Visual Studio 설치 관리자 Xamarin 라이브 다시 로드 확인](images/LiveReloadVSIXInstall.png)
 
-> 또는에서 검색할 수 있습니다는 **온라인** 탭에 **확장명 및 업데이트** Visual Studio 내 대화 상자.
+또는에서 검색할 수 있습니다는 **온라인** 탭에 **확장명 및 업데이트** Visual Studio 내 대화 상자.
 
-### <a name="2-configure-your-app-to-use-live-reload"></a>2. 라이브 다시 로드를 사용 하도록 앱을 구성 합니다.
+### <a name="2-configure-your-app-to-use-live-reload"></a>2. 라이브 다시 로드를 사용 하도록 앱 구성
 
 기존 모바일 앱에 라이브 다시 로드를 추가 하는 3 단계에 따라 수행할 수 있습니다.
 
@@ -66,7 +66,7 @@ public partial class App : Application
 }
 ```
 
-### <a name="3-start-live-reloading"></a>3. 라이브 다시 로드를 시작 합니다.
+### <a name="3-start-live-reloading"></a>3. 라이브 다시 로드 시작
 
 컴파일 및 응용 프로그램을 배포 합니다. 응용 프로그램에서 배포 된 후을 XAML 파일을 열고, 일부 변경 및 파일을 저장 합니다. 변경 내용을 배포 대상에 다시 배포 됩니다.
 
@@ -110,18 +110,13 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 * .NET 표준 라이브러리 에서만 작동합니다.
 * CSS 스타일 시트를 지원 하지 않습니다.
 * UI 상태 MVVM 사용 하지 않는 유지 재배포 시, 사이 수 있습니다.
-
-## <a name="live-reload-server"></a>라이브 다시 로드 서버
-
-시나리오에서 실행 중인 응용 프로그램에서 컴퓨터 연결이 (사용 하 여 표시 된 대로 `localhost` 또는 `127.0.0.1` 에 **도구 > 옵션 > Xamarin > 라이브 다시 로드**) 수는 없습니다 (즉, 방화벽, 서로 다른 네트워크) 구성할 수 있습니다는 원격 서버 대신 있으며 IDE와 응용 프로그램 모두에 conect 합니다.
-
-표준을 사용 하 여 라이브 다시 로드 [MQTT 프로토콜](http://mqtt.org/) 에 메시지를 교환 하 고 따라서 통신할 수 있는 [타사 서버](https://github.com/mqtt/mqtt.github.io/wiki/servers)합니다. 까지 있습니다 [공용 서버](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (라고도 *브로커*) 사용할 수 있는 합니다. 라이브 다시 로드에서 테스트 되었지만 `broker.hivemq.com` 및 `iot.eclipse.org` 으로 호스트 이름을 제공 하는 서비스 [www.cloudmqtt.com](https://www.cloudmqtt.com) 및 [www.cloudamqp.com](https://www.cloudamqp.com)합니다. 배포할 수도 있습니다는 클라우드에서 사용자 고유의 MQTT 서버와 같은 [Azure에서 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) 또는 [AWS에 토끼 MQ](http://www.rabbitmq.com/ec2.html)합니다. 
-
-모든 포트를 구성할 수 있지만 일반적으로 원격 서버에 대 한 기본 1883 포트를 사용 하 합니다. 다시 로드 메시지 강력한 종단 간 AES 대칭 암호화를 사용 하 여 원격 서버에 연결 하는 데 안전 하 게 보호 되기 때문에 존재 합니다. 기본적으로 암호화 키와 초기화 벡터 (IV) 모든 Visual Studio 세션에서 다시 생성 됩니다.
+* 응용 프로그램 수준의 리소스를 다시 로드 (즉, **App.xaml** 또는 공유 리소스 사전), 응용 프로그램 탐색을 다시 설정 됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
-응용 프로그램 빌드할 때, 정보를 **도구 > 옵션 > Xamarin > 라이브 다시 로드** 하므로 (호스트 이름, 포트 및 암호화 키)는 응용 프로그램에 포함 됩니다 때 `LiveReload.Init();` 없습니다 쌍 또는 구성 실행은 연결이 성공 하려면에 대 한 필요 합니다.
+### <a name="app-doesnt-connect"></a>응용 프로그램에 연결 하지 않습니다.
+
+응용 프로그램 빌드할 때, 정보를 **도구 > 옵션 > Xamarin > 라이브 다시 로드** 하므로 (호스트 이름, 포트 및 암호화 키)는 응용 프로그램에 포함 됩니다 때 `LiveReload.Init()` 없습니다 쌍 또는 구성 실행은 연결이 성공 하려면에 대 한 필요 합니다.
 
 응용 프로그램 IDE를 성공적으로 연결 될 수는 주요 이유는 표준 네트워킹 문제 (방화벽, 다른 네트워크 장치), 제외 구성을 Visual Studio의 다르기 때문에입니다. 이 경우에 발생할 수 있습니다.
 
@@ -131,6 +126,13 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 
 이러한 경우 모두 빌드하고 응용 프로그램을 다시 배포 하 여 해결 됩니다.
 
+### <a name="uninstalling-preview-1"></a>미리 보기 1를 제거합니다.
+
+이전 미리 보기를 있고 제거 하는 데 문제가 있으면 다음이 단계를 따르십시오.
+
+1. 폴더 삭제 **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (참고: "Enterprise"에 설치 된 버전으로 바꾸고 "미리 보기"와 "2017" if 있습니다 안정적인 VS에 설치)
+2. 열기는 **개발자 명령 프롬프트** 해당 Visual Studio와 실행에 대 한 `devenv /updateconfiguration`합니다. 
+
 ## <a name="tips--tricks"></a>팁과 트릭
 
 * 라이브 다시 로드 설정을 변경 하지 않는 상태로 (암호화 키를 포함 한 경우와 같이 해제 하면 **암호화 키를 자동으로 생성할**)와 같은 컴퓨터에서 빌드, 빌드 및 초기 후 앱을 배포할 필요가 없습니다 코드 또는 종속성을 변경 하지 않는 한 배포 합니다. 시작할 수 있습니다만 다시 이전에 배포 된 앱 및 호스트 사용을 마지막으로 연결 됩니다.
@@ -138,3 +140,21 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 * 같은 Visual Studio 세션에 연결할 수 있습니다 하는 장치 수에 제한이 없습니다. 배포할 수 있으며 동시에 모든 속성에 라이브 다시 로드 작업을 참조 하는 데 필요한 만큼 장치/시뮬레이터에서 앱을 시작할 수 있습니다.
 
 * 하지만 라이브 다시 로드 응용 프로그램의 사용자 인터페이스 부분을 다시 로드만 *하지* 둘 다는 것을 대체 뷰 모델 (또는 바인딩 컨텍스트), 페이지를 다시 만듭니다. 즉,는 *전체* 삽입 된 종속성을 포함 하 여 다시 로드할 필요가 없고에서 응용 프로그램 상태가 항상 유지 합니다.
+
+## <a name="live-reload-server"></a>라이브 다시 로드 서버
+
+시나리오에서 실행 중인 응용 프로그램에서 컴퓨터 연결이 (사용 하 여 표시 된 대로 `localhost` 또는 `127.0.0.1` 에 **도구 > 옵션 > Xamarin > 라이브 다시 로드**) 수는 없습니다 (즉, 방화벽, 서로 다른 네트워크) 구성할 수 있습니다는 원격 서버 대신 있으며 IDE와 응용 프로그램 모두에 conect 합니다.
+
+표준을 사용 하 여 라이브 다시 로드 [MQTT 프로토콜](http://mqtt.org/) 에 메시지를 교환 하 고 따라서 통신할 수 있는 [타사 서버](https://github.com/mqtt/mqtt.github.io/wiki/servers)합니다. 까지 있습니다 [공용 서버](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (라고도 *브로커*) 사용할 수 있는 합니다. 라이브 다시 로드에서 테스트 되었지만 `broker.hivemq.com` 및 `iot.eclipse.org` 으로 호스트 이름을 제공 하는 서비스 [www.cloudmqtt.com](https://www.cloudmqtt.com) 및 [www.cloudamqp.com](https://www.cloudamqp.com)합니다. 배포할 수도 있습니다는 클라우드에서 사용자 고유의 MQTT 서버와 같은 [Azure에서 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) 또는 [AWS에 토끼 MQ](http://www.rabbitmq.com/ec2.html)합니다. 
+
+모든 포트를 구성할 수 있지만 일반적으로 원격 서버에 대 한 기본 1883 포트를 사용 하 합니다. 다시 로드 메시지 강력한 종단 간 AES 대칭 암호화를 사용 하 여 원격 서버에 연결 하는 데 안전 하 게 보호 되기 때문에 존재 합니다. 기본적으로 암호화 키와 초기화 벡터 (IV) 모든 Visual Studio 세션에서 다시 생성 됩니다.
+
+아마도 가장 쉬운 방법은 설치 하는 것은 [mosquitto](https://mosquitto.org) 서버에 Azure에서 빈 Ubuntu VM:
+
+1. Azure 포털에서 새 Ubuntu Server VM을 만듭니다.
+2. 네트워크 탭에서 1883 (기본 MQTT 포트)에 대 한 새 인바운드 포트 규칙을 추가 합니다.
+3. 열기는 [클라우드 셸](https://docs.microsoft.com/azure/cloud-shell/overview) (이용한 적 모드)
+4. 입력 `ssh [USERNAME]@[PUBLIC_IP]` 1에서 선택한 사용자 이름을 사용 하 여) 및 VM 개요 페이지에 표시 된 공용 IP
+5. 실행 `sudo apt-get install mosquitto`, 1에서 선택한 암호를 입력)
+
+이제 고유한 MQTT 서버에 연결 하는 데 해당 IP를 사용할 수 있습니다.
