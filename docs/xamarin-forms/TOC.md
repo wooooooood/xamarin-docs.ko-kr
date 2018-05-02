@@ -16,6 +16,7 @@
 #### [4부. 데이터 바인딩 기본 사항](xaml/xaml-basics/data-binding-basics.md)
 #### [5부. 데이터 바인딩부터 MVVM까지](xaml/xaml-basics/data-bindings-to-mvvm.md)
 ### [XAML 컴파일](xaml/xamlc.md)
+### [실시간 다시 로드](xaml/live-reload.md)
 ### [XAML 미리 보기](xaml/xaml-previewer.md)
 ### [XAML 네임스페이스](xaml/namespaces.md)
 ### [XAML 태그 확장](xaml/markup-extensions/index.md)
