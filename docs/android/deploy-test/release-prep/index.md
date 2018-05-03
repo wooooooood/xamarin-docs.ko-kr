@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 238e224a1dfbc17089c8b6d03e78043f77f3f383
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 응용 프로그램 준비
 
@@ -167,7 +167,7 @@ ProGuard 도구 사용에 대한 자세한 정보는 [ProGuard](~/android/deploy
 
 ### <a name="disable-debugging"></a>디버깅 사용 안 함
 
-Android 응용 프로그램 개발 중에는 *JDWP(Java Debug Wire Protocol)*를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 응용 프로그램의 디버그 빌드에 대해 기본적으로 켜져 있습니다.  JDWP는 개발 중에 중요하지만 릴리스된 응용 프로그램에는 보안 문제를 야기할 수 있습니다. 
+Android 응용 프로그램 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 응용 프로그램의 디버그 빌드에 대해 기본적으로 켜져 있습니다.  JDWP는 개발 중에 중요하지만 릴리스된 응용 프로그램에는 보안 문제를 야기할 수 있습니다. 
 
 > [!IMPORTANT]
 > 디버그 상태를 사용하지 않게 설정하지 않은 경우 Java 프로세스에 완전히 액세스할 수 있고 응용 프로그램의 컨텍스트에서 임의 코드를 실행할 수 있으므로(JDWP를 통해 가능) 릴리스된 응용 프로그램에서는 디버그 상태를 항상 사용하지 않게 설정합니다.
@@ -192,7 +192,7 @@ Android 매니페스트에는 응용 프로그램의 디버그 가능 여부를 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 응용 프로그램을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 응용 프로그램의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
-[Dotfuscator Community Edition(CE)](https://www.preemptive.com/products/dotfuscator/overview)을 사용하여 관리 코드를 난독 처리하고 빌드 시점에 Xamarin.Android 앱에 런타임 보안 상태 검색 코드를 삽입할 수 있습니다.
+[Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 장치에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
 
 Dotfuscator CE는 Visual Studio에 포함되지만 Visual Studio 2015 업데이트 3 이상에만 Xamarin.Android에서 작동하는 정확한 버전이 있습니다. Dotfuscator를 사용하려면 **도구 > PreEmptive Protection - Dotfuscator**를 클릭합니다.
 
@@ -202,7 +202,7 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 응용 프로그램을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 응용 프로그램의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
-Visual Studio for Mac은 지원하지 않으나 [Dotfuscator Community Edition(CE)](https://www.preemptive.com/products/dotfuscator/overview)을 Visual Studio에 사용하여 관리 코드를 난독 처리하고 빌드 시점에 Xamarin.Android 앱에 런타임 보안 상태 검색 코드를 삽입할 수 있습니다.
+Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 장치에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
 
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.
@@ -306,7 +306,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 [![보관 관리자](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
-보관 파일을 만드는 또 다른 방법은 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **모두 보관...**을 선택하는 것입니다. 그러면 솔루션을 빌드하고 보관 파일을 생성할 수 있는 모든 Xamarin 프로젝트를 보관합니다.
+보관 파일을 만드는 또 다른 방법은 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **모두 보관...** 을 선택하는 것입니다. 그러면 솔루션을 빌드하고 보관 파일을 생성할 수 있는 모든 Xamarin 프로젝트를 보관합니다.
 
 [![모두 보관](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
@@ -365,7 +365,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 [![보관 파일 보기](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-이 예제에서는 **Archive Manager**가 하나의 보관된 응용 프로그램인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관파일과 함께 저장할 수 있습니다. Xamarin.Android 응용 프로그램의 보관된 버전을 게시하려면 **Archive Manager**에서 앱을 선택하고 다음과 같이 **서명 및 배포...**를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
+이 예제에서는 **Archive Manager**가 하나의 보관된 응용 프로그램인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관파일과 함께 저장할 수 있습니다. Xamarin.Android 응용 프로그램의 보관된 버전을 게시하려면 **Archive Manager**에서 앱을 선택하고 다음과 같이 **서명 및 배포...** 를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
 
 [![서명 및 배포](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 

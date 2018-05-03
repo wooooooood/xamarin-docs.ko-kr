@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -52,7 +52,7 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 Xamarin.Android 빌드 프로세스는 Mac용 Visual Studio 및 Visual Studio에서 사용하는 프로젝트 파일 형식이기도 한 MSBuild에 기반을 두고 있습니다.
 일반적으로 사용자는 MSBuild 파일을 직접 편집할 필요가 없습니다. IDE가 완전히 작동하는 프로젝트를 만들고, 여기에 변경 사항을 업데이트하며, 필요에 따라 빌드 대상을 자동으로 호출하기 때문입니다. 
 
-고급 사용자가 IDE의 GUI에서 지원하지 않는 작업을 수행해야 하는 경우가 있으므로, 빌드 프로세스는 프로젝트 파일을 직접 편집하여 사용자 지정할 수 있습니다. 이 페이지에서는 Xamarin.Android 관련 기능과 사용자 지정만 설명하지만 일반적인 MSBuild 항목, 속성 및 대상을 사용하여 여러 가지 작업을 수행할 수 있습니다. 
+고급 사용자가 IDE의 GUI에서 지원하지 않는 작업을 수행할 수도 있으므로, 프로젝트 파일을 직접 편집하여 빌드 프로세스를 사용자 지정할 수 있습니다. 이 페이지에서는 Xamarin.Android 관련 기능과 사용자 지정만 설명하지만 일반적인 MSBuild 항목, 속성 및 대상을 사용하여 여러 가지 작업을 수행할 수 있습니다. 
 
 <a name="Build_Targets" />
 
@@ -91,7 +91,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     - **PdbOnly**: "PDB" 기호가 생성됩니다. 응용 프로그램 패키지를 디버그할 수 *없습니다*.
 
-    `DebugType`이 설정되지 않았거나 빈 문자열일 경우 `DebugSymbols` 속성은 응용 프로그램의 디버그 가능 여부를 제어합니다.
+    `DebugType`이 설정되지 않았거나 빈 문자열이면 `DebugSymbols` 속성에서 응용 프로그램의 디버그 가능 여부를 제어합니다.
 
 
 ### <a name="install-properties"></a>설치 속성
@@ -110,7 +110,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 ### <a name="packaging-properties"></a>패키징 속성
 
 패키징 속성은 Android 패키지의 생성을 제어하며, `Install` 및 `SignAndroidPackage` 대상에서 사용합니다.
-릴리스 응용 프로그램을 패키징할 경우 [서명 속성](#Signing_Properties)도 관련이 있습니다.
+릴리스 응용 프로그램을 패키지하는 경우에는 [서명 속성](#Signing_Properties)도 관련이 있습니다.
 
 
 -   **AndroidApkSigningAlgorithm** &ndash; `jarsigner -sigalg`와 함께 사용하는 서명 알고리즘을 지정하는 문자열 값입니다.
@@ -238,7 +238,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다.
 
-    `$(AndroidSdkBuildToolsVersion)` MSBuild 속성에는 권장 빌드-도구 버전이 포함됩니다. Xamarin.Android 빌드 시스템은 `Xamarin.Android.Common.targets`에 기본값을 제공하며, 사용자는 최신 aapt가 충돌하고 있고 이전 버전의 aapt는 작동하는 경우 등에 프로젝트 파일 내에서 이 기본값을 재정의하여 다른 빌드-도구 버전을 선택할 수 있습니다.
+    `$(AndroidSdkBuildToolsVersion)` MSBuild 속성에는 기본 설정 빌드 도구 버전이 포함되어 있습니다. Xamarin.Android 빌드 시스템에서 `Xamarin.Android.Common.targets`에 기본값을 제공하고, 최신 aapt가 충돌하고 있지만 이전 버전의 aapt가 작동하는 것으로 알려져 있는 경우와 같이 다른 빌드 도구 버전을 선택하기 위해 프로젝트 파일 내에서 기본값을 재정의할 수 있습니다.
 
 -   **AndroidSupportedAbis** &ndash; `.apk`에 포함되어야 하는 ABI에 대한 세미콜론(`;`)으로 구분된 목록을 포함하는 문자열 속성입니다.
 
@@ -264,9 +264,9 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     이 속성은 릴리스 빌드의 경우 `True`, 디버그 빌드의 경우 `False`여야 합니다. 빠른 배포에서 대상 장치를 지원하지 않는 경우 디버그 빌드에서 `True`가 되어야 *할 수 있습니다*.
 
-    이 속성이 `False`일 경우 `$(AndroidFastDeploymentType)` MSBuild 속성은 `.apk`에 포함될 항목도 제어하므로, 배포 및 재빌드 시간에 영향을 줍니다.
+    이 속성이 `False`이면 `$(AndroidFastDeploymentType)` MSBuild 속성에서 `.apk`에 포함될 항목도 제어하며, 이로 인해 배포 및 다시 빌드 시간에 영향을 줍니다.
 
--   **EnableLLVM** &ndash; 네이티브 코드에 대한 어셈블리 Ahead-of-Time 컴파일 시 LLVM을 사용할지 여부를 결정하는 부울 속성입니다.
+-   **EnableLLVM** &ndash; Ahead-of-Time에서 어셈블리를 네이티브 코드로 컴파일할 때 LLVM을 사용할지 여부를 결정하는 부울 속성입니다.
 
     이 속성에 대한 지원은 Xamarin.Android 5.1에 추가되었습니다.
 
@@ -326,13 +326,13 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     예를 들어 `abi`가 `armeabi`이고 매니페스트의 `versionCode`가 `123`일 경우 `{abi}{versionCode}`는 `$(AndroidCreatePackagePerAbi)`가 True일 때 `1123`의 versionCode를 생성하고, 그렇지 않을 경우 값 123을 생성합니다.
     `abi`가 `x86_64`이고 매니페스트의 `versionCode`가 `44`일 경우. `$(AndroidCreatePackagePerAbi)`가 True일 때 `544`를 생성하고, 그렇지 않을 경우 값 `44`를 생성합니다.
 
-    왼쪽 안쪽 여백 문자열 `{abi}{versionCode:0000}`을 포함할 경우 `versionCode`의 왼쪽 안쪽 여백이 `0`이므로 `50044`가 생성됩니다. 또는 이전 예와 동일한 작업을 수행하는 `{abi}{versionCode:D4}` 같은 10진 안쪽 여백을 사용할 수 있습니다.
+    왼쪽 안쪽 여백 문자열 `{abi}{versionCode:0000}`을 포함할 경우 `versionCode`의 왼쪽 안쪽 여백이 `0`이므로 `50044`가 생성됩니다. 또는 이전 예제와 동일한 작업을 수행하는 `{abi}{versionCode:D4}`와 같은 10진수 패딩을 사용할 수 있습니다.
 
     값이 정수여야 하므로 '0' 및 'Dx' 같은 안쪽 여백 형식만 지원됩니다.
     
-    사전 정의된 키 항목
+    미리 정의된 주요 항목
 
-    -   **abi** &ndash; 앱의 대상 abi를 삽입합니다.
+    -   **abi** &ndash; 앱에 대한 대상 abi를 삽입합니다.
         -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
@@ -341,7 +341,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     -   **minSDK** &ndash; 아무것도 정의되지 않은 경우 `AndroidManifest.xml` 또는 `11`에서 지원되는 최소 Sdk 값을 삽입합니다.
 
-    -   **versionCode** &ndash; `Properties\AndroidManifest.xml`에서 바로 버전 코드를 사용합니다. 
+    -   **versionCode** &ndash; `Properties\AndroidManifest.xml`에서 직접 버전 코드를 사용합니다. 
 
     `$(AndroidVersionCodeProperties)` 속성(다음에 정의됨)을 사용하여 사용자 지정 항목을 정의할 수 있습니다.
 
@@ -353,7 +353,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 7.2에 추가되었습니다.
 
--   **AndroidUseLegacyVersionCode** &ndash; 부울 속성을 사용하면 개발자가 versionCode 계산을 다시 이전의 Xamarin.Android 8.2 이전 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 응용 프로그램을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
+-   **AndroidUseLegacyVersionCode** &ndash; 부울 속성을 사용하면 개발자가 versionCode 계산을 이전의 사전 Xamarin.Android 8.2 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 응용 프로그램을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
 
     Xamarin.Android 8.2에 추가되었습니다.
 
@@ -444,7 +444,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidSigningKeyStore** &ndash; `keytool`에서 만든 키 저장소 파일의 파일 이름을 지정합니다. 이는 **keytool -keystore** 옵션에 입력된 값에 해당합니다.
 
--   **AndroidSigningStorePass** &ndash; `$(AndroidSigningKeyStore)`에 대한 암호를 지정합니다. 이는 키 저장소 파일을 만들 때 `keytool`에 제공되고 **키 저장소 암호 입력:**을 요청하는 값입니다. 
+-   **AndroidSigningStorePass** &ndash; `$(AndroidSigningKeyStore)`에 대한 암호를 지정합니다. 이는 키 저장소 파일을 만들 때 `keytool`에 제공되고 **키 저장소 암호 입력:** 을 요청하는 값입니다. 
 
 예를 들어 다음 `keytool` 호출을 살펴봅니다.
 
@@ -576,7 +576,7 @@ Android는 여러 ABI(응용 프로그램 이진 인터페이스)를 지원하�
 
 일반적인 `Content` 빌드 동작이 지원되지 않습니다(비용이 많이 드는 최초 실행 단계 없이 지원하는 방법을 파악하지 못했기 때문).
 
-Xamarin.Android 5.1부터 thw `@(Content)` 빌드 동작을 사용하려고 하면 `XA0101` 경고가 표시됩니다.
+Xamarin.Android 5.1부터 `@(Content)` 빌드 작업을 사용하려고 하면 `XA0101` 경고가 표시됩니다.
 
 ### <a name="linkdescription"></a>LinkDescription
 
@@ -606,7 +606,7 @@ Xamarin.Android 5.1부터 thw `@(Content)` 빌드 동작을 사용하려고 하�
 </PropertyGroup>
 ```
 
-이러한 대상과 속성은 모두 *Xamarin.Android.CSharp.targets*를 가져와서 C#용으로 포함할 수 있습니다. 
+C#에서는 *Xamarin.Android.CSharp.targets*를 가져와서 이러한 대상과 속성을 모두 포함할 수 있습니다. 
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

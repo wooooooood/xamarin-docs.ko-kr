@@ -6,12 +6,12 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e8d1064e76c2ccdeb14302d30428cd932444a0f5
-ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
+ms.date: 04/26/2018
+ms.openlocfilehash: f5c05ce308a10747ad3e18e4a1d141d29fd6c8a1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
@@ -35,7 +35,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     ![](quickstart-images/vs/new-project.png "플랫폼 간 프로젝트 템플릿")
 
-4. **새 플랫폼 간 앱** 대화 상자에서 **Blank App**을 클릭하고, **Xamarin.Forms**를 UI 기술로 선택하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
+4. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/new-app.png "새 플랫폼 간 앱")
 
@@ -53,7 +53,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -162,7 +162,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 선택합니다.
 
-11. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 클릭합니다.
+11. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item.png "새 항목 추가")
 
@@ -228,7 +228,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **PhoneTranslator.cs**에 저장하고 파일을 선택합니다.
 
-14. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 클릭합니다.
+14. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item.png "새 항목 추가")
 
@@ -253,7 +253,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     > [!NOTE]
     > 응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
-17. **솔루션 탐색기**에서 **Phoneword.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 선택합니다.
+17. **솔루션 탐색기**에서 **Phoneword.iOS** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 선택합니다.
 
     ![](quickstart-images/vs/add-new-item-ios.png "새 항목 추가")
 
@@ -285,7 +285,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 선택합니다.
 
-20. **솔루션 탐색기**에서 **Phoneword.Android** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 클릭합니다.
+20. **솔루션 탐색기**에서 **Phoneword.Android** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item-android.png "새 항목 추가")
 
@@ -385,7 +385,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 매니페스트에 저장하고 파일을 닫습니다.
 
-26. **솔루션 탐색기**에서 **Phoneword.UWP** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...**을 클릭합니다.
+26. **솔루션 탐색기**에서 **Phoneword.UWP** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item-uwp.png "새 항목 추가")
 
@@ -501,7 +501,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     ![](quickstart-images/xs/configure-project.png "Forms Project 구성")
 
-5. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 선택합니다.
+5. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 
     ![](quickstart-images/xs/add-new-file.png "새 파일 추가")
 
@@ -523,7 +523,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -630,9 +630,9 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     }
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **Phoneword.cs**에 저장하고 파일을 닫습니다.
+    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
 
-13. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 선택합니다.
+13. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 
     ![](quickstart-images/xs/add-new-translator-file.png "새 파일 추가")
 
@@ -698,7 +698,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **PhoneTranslator.cs**에 저장하고 파일을 닫습니다.
 
-16. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 선택합니다.
+16. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 
     ![](quickstart-images/xs/add-new-interface.png "새 파일 추가")
 
@@ -722,7 +722,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     > [!NOTE]
     > 응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
-19. **Solution Pad**에서 **Phoneword.iOS** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 마우스 오른쪽 단추로 클릭하여 선택합니다.
+19. **Solution Pad**에서 **Phoneword.iOS** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 마우스 오른쪽 단추로 클릭하여 선택합니다.
 
     ![](quickstart-images/xs/add-new-file-ios.png "새 파일 추가")
 
@@ -754,7 +754,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 닫습니다.
 
-22. **Solution Pad**에서 **Phoneword.Droid** 프로젝트를 선택한 다음, **추가 > 새 파일...**을 마우스 오른쪽 단추로 클릭하여 선택합니다.
+22. **Solution Pad**에서 **Phoneword.Droid** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 마우스 오른쪽 단추로 클릭하여 선택합니다.
 
     ![](quickstart-images/xs/add-new-file-android.png "새 파일 추가")
 

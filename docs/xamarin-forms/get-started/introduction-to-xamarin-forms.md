@@ -1,27 +1,27 @@
 ---
 title: Xamarin.Forms 소개
-description: Xamarin.Forms는 개발자가 Android, iOS, Windows 및 Windows Phone에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 하는 UI 도구 키트 추상화를 기본적으로 지원하는 크로스 플랫폼입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다. 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다.
+description: Xamarin.Forms는 개발자가 Android, iOS 및 유니버설 Windows 플랫폼에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 기본적으로 지원되는 플랫폼 간 UI 도구 키트 추상화입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다. 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다.
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 6428f1658245ec5ecf47e474bc5ffd5d49663bf2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9f7c9d1b410d9d1d699644148903fdc6cfeec4fd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 소개
 
-_Xamarin.Forms는 개발자가 Android, iOS, Windows 및 Windows Phone에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 하는 UI 도구 키트 추상화를 기본적으로 지원하는 크로스 플랫폼입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다. 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다._
+_Xamarin.Forms는 개발자가 Android, iOS, Windows 및 유니버설 Windows 플랫폼에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 기본적으로 지원되는 플랫폼 간 UI 도구 키트 추상화입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다. 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다._
 
 <a name="Overview" />
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms는 개발자가 신속하게 플랫폼 간 사용자 인터페이스를 만들 수 있도록 하는 프레임워크입니다. iOS, Android, Windows 또는 Windows Phone에서 네이티브 컨트롤을 사용하여 렌더링 되는 사용자 인터페이스에 대한 고유한 추상화를 제공합니다. 즉, 응용 프로그램은 사용자 인터페이스 코드의 많은 부분을 공유할 수 있으면서도 여전히 대상 플랫폼의 네이티브 모양 및 느낌을 유지합니다.
+Xamarin.Forms는 개발자가 신속하게 플랫폼 간 사용자 인터페이스를 만들 수 있도록 하는 프레임워크입니다. iOS, Android 또는 UWP(유니버설 Windows 플랫폼)에서 네이티브 컨트롤을 사용하여 렌더링되는 사용자 인터페이스에 대한 고유한 추상화를 제공합니다. 즉, 응용 프로그램은 사용자 인터페이스 코드의 많은 부분을 공유할 수 있으면서도 여전히 대상 플랫폼의 네이티브 모양 및 느낌을 유지합니다.
 
 Xamarin.Forms를 사용하면 시간이 지남에 따라 복잡한 응용 프로그램으로 진화할 수 있는 응용 프로그램의 프로토타입을 빠르게 만들 수 있습니다. Xamarin.Forms 응용 프로그램은 네이티브 응용 프로그램이기 때문에 다른 도구 키트가 보이는 브라우저 샌드박스, 제한된 API 또는 성능 저하와 같은 제한이 없습니다. Xamarin.Forms를 사용하여 작성된 응용 프로그램은 어떠한 API나 iOS에서 CoreMotion, PassKit 및 StoreKit, Android에서 NFC와 Google Play 서비스, Windows에서 Tiles와 같은(그러나 그것들에 국한되지 않음) 기본 플랫폼의 기능을 사용할 수 있습니다. 또한 Xamarin.Forms를 사용하여 만든 사용자 인터페이스 부분이 있는 응용 프로그램을 만드는 것이 가능한 한편 다른 부분은 네이티브 UI 도구 키트를 사용하여 만듭니다.
 
@@ -120,39 +120,6 @@ namespace HelloXamarinFormsWorld.Android
 ```
 
 `OnCreate` 재정의는 `Init` 메서드를 호출하여 Xamarin.Forms 프레임 워크를 초기화합니다. 이로 인해 Xamarin.Forms 응용 프로그램이 로드되기 전에 Xamarin.Forms의 Android 특정 구현이 응용 프로그램에 로드됩니다.
-
-<a name="Launching_in_Windows_Phone" />
-
-#### <a name="windows-phone-81-winrt"></a>Windows Phone 8.1(WinRT)
-
-Windows 런타임 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
-
-```csharp
-Xamarin.Forms.Forms.Init (e);
-
-if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-{
-  ...
-}
-```
-
-이렇게 하면 Xamarin.Forms의 Windows Phone 특정 구현이 응용 프로그램에 로드됩니다. `MainPage` 클래스는 초기 Xamarin.Forms 페이지를 다음 코드 예제에서 설명한 것처럼 시작합니다.
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-      this.InitializeComponent();
-      this.NavigationCacheMode = NavigationCacheMode.Required;
-      this.LoadApplication(new HelloXamarinFormsWorld.App());
-    }
-}
-```
-
-Xamarin.Forms 응용 프로그램은 `LoadApplication` 메서드를 사용해 로드합니다.
-
-또한 Xamarin.Forms는 Windows 8.1을 지원합니다. 이 프로젝트 형식을 구성하는 방법에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
 
 #### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
@@ -747,7 +714,7 @@ await Navigation.PopModalAsync();
 
 ## <a name="summary"></a>요약
 
-이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공했습니다. Xamarin.Forms는 개발자가 Android, iOS, Windows 및 Windows Phone에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 하는 UI 도구 키트 추상화를 기본적으로 지원하는 크로스 플랫폼입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다.
+이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공했습니다. Xamarin.Forms는 개발자가 Android, iOS 및 유니버설 Windows 플랫폼에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 기본적으로 지원되는 플랫폼 간 UI 도구 키트 추상화입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다.
 
 
 ## <a name="related-links"></a>관련 링크

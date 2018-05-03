@@ -6,19 +6,18 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/20/2018
-ms.openlocfilehash: 3dd67f25e389adda1af31f4a2b85abd4cfd751d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: 94f82c9f893e22074ba95c052b57ce6ff18eaa1e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Xamarin Android 장치 관리자
 
 _Xamarin Android 장치 관리자(현재 미리 보기 상태)는 Google의 레거시 장치 관리자를 대체합니다. 이 가이드에서는 Xamarin Android 장치 관리자를 사용하여 Android 장치를 에뮬레이트하는 AVD(Android 가상 장치)를 만들고 구성하는 방법을 설명합니다. 물리적 장치에 의존하지 않고도 이러한 가상 장치를 사용하여 앱을 실행하고 테스트할 수 있습니다._
 
 ![현재 미리 보기 상태](~/media/shared/preview.png)
-
  
 ## <a name="overview"></a>개요
 
@@ -57,25 +56,24 @@ Xamarin Studio는 Xamarin Android 장치 관리자와 호환되지 않습니다.
 
 Xamarin Android 장치 관리자를 사용하려면 다음이 필요합니다.
 
--   Visual Studio 2017 버전 15.5 이상이 필요합니다. Visual Studio Community 버전 이상이 지원됩니다.
+- Visual Studio 2017 버전 15.5 이상이 필요합니다. Visual Studio Community 버전 이상이 지원됩니다.
 
--   Visual Studio용 Xamarin 버전 4.8 이상. Xamarin을 업데이트하는 방법에 대한 자세한 내용은 [업데이트 채널 변경](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)을 참조하세요.
+- Visual Studio용 Xamarin 버전 4.8 이상. Xamarin을 업데이트하는 방법에 대한 자세한 내용은 [업데이트 채널 변경](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)을 참조하세요.
 
--   최신 버전의 Windows용 [Xamarin 장치 관리자 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865528).
+- 최신 버전의 Windows용 [Xamarin 장치 관리자 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865528).
 
--   **Android SDK** &ndash; Android SDK를 설치해야 하고([Android SDK 설치](~/android/get-started/installation/android-sdk.md) 참조), 다음 섹션에 설명된 대로 SDK Tools 버전 26.0을 설치해야 합니다. (아직 설치되지 않은 경우) **C:\\Program Files (x86)\\Android\\android-sdk**에 Android SDK를 설치해야 합니다.
+- **Android SDK** &ndash; Android SDK를 설치해야 하고([Android SDK 설치](~/android/get-started/installation/android-sdk.md) 참조), 다음 섹션에 설명된 대로 SDK Tools 버전 26.0을 설치해야 합니다. (아직 설치되지 않은 경우) **C:\\Program Files (x86)\\Android\\android-sdk**에 Android SDK를 설치해야 합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
--   Mac용 Visual Studio 7.4 이상.
+- Mac용 Visual Studio 7.4 이상.
 
--   최신 버전의 macOS용 [Xamarin 장치 관리자 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865527).
+- 최신 버전의 macOS용 [Xamarin 장치 관리자 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865527).
 
--   **Android SDK** &ndash; SDK 관리자를 통해 Android SDK 8.0(API 26) 이상을 설치해야 합니다.
+- **Android SDK** &ndash; SDK 관리자를 통해 Android SDK 8.0(API 26) 이상을 설치해야 합니다.
 
 -----
 
- 
 ## <a name="installing-the-device-manager"></a>장치 관리자 설치
 
 Xamarin Android 장치 관리자를 설치하려면 다음 단계를 따릅니다.
@@ -88,6 +86,10 @@ Xamarin Android 장치 관리자를 설치하려면 다음 단계를 따릅니�
 
     ![Xamarin Android 장치 관리자 설치 마법사](xamarin-device-manager-images/win/30-installer.png)
 
+
+> [!NOTE]
+> [Visual Studio 2017 Preview 5](https://www.visualstudio.com/vs/preview/)부터 Android 장치 관리자가 VS2017 설치 관리자의 일부로 배포됩니다. Visual Studio 2017 Preview 5와 함께 Xamarin Android 장치 관리자를 가져오기 위해 별도의 설치 관리자를 다운로드할 필요가 없습니다.
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. macOS용 [Xamarin 장치 관리자 설치 관리자](https://go.microsoft.com/fwlink/?linkid=865527)를 다운로드합니다.
@@ -97,8 +99,6 @@ Xamarin Android 장치 관리자를 설치하려면 다음 단계를 따릅니�
     [![Xamarin Android 장치 관리자 설치 마법사](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png#lightbox)
 
 -----
-
- 
 ## <a name="launching-the-device-manager"></a>장치 관리자 실행
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -125,7 +125,6 @@ Mac용 Visual Studio 7.6 미리 보기 3(현재는 알파 채널에 있음) 이�
 
 [![Finder에서 Xamarin Android 장치 관리자의 위치](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png#lightbox)
 
-
 -----
 
 Android 장치 관리자를 사용하려면 Android SDK Tools 버전 26.0.0 이상을 설치해야 합니다. Android SDK Tools 26.0.0 이상이 설치되어 있지 않으면 실행 시 이러한 오류 대화 상자가 표시됩니다.
@@ -142,7 +141,6 @@ Android 장치 관리자를 사용하려면 Android SDK Tools 버전 26.0.0 이�
 
 이 오류 대화 상자가 나타나면 **확인**을 클릭하여 Android SDK Manager를 엽니다. Android SDK Manager에서 **도구** 탭을 클릭하여 **Android SDK Tools 26.0.2** 이상, **Android SDK Platform-Tools 26.0.0** 이상, **Android SDK Build-Tools 26.0.0**(이상)을 설치합니다.
 
-
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 [![Android SDK Tools 26.0 설치](xamarin-device-manager-images/win/03-sdk-tools-sml.png)](xamarin-device-manager-images/win/03-sdk-tools.png#lightbox)
@@ -155,7 +153,6 @@ Android 장치 관리자를 사용하려면 Android SDK Tools 버전 26.0.0 이�
 
 -----
 
- 
 ## <a name="main-screen"></a>주 화면
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -181,9 +178,9 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 **재생** 단추를 클릭하여 원하는 가상 장치로 에뮬레이터를 실행합니다.
- 
+
 [![장치 이미지에 대한 시작 단추](xamarin-device-manager-images/mac/06-start-button-sml.png)](xamarin-device-manager-images/mac/06-start-button.png#lightbox)
- 
+
 -----
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -195,12 +192,11 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 선택한 가상 장치로 에뮬레이터가 시작되면 **재생** 단추가 에뮬레이터를 중지하는 데 사용할 수 있는 **중지** 단추로 변경됩니다.
- 
+
 [![실행 중인 장치에 대한 중지 단추](xamarin-device-manager-images/mac/07-stop-button-sml.png)](xamarin-device-manager-images/mac/07-stop-button.png#lightbox)
- 
+
 -----
 
- 
 ### <a name="new-device"></a>새 장치
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -212,9 +208,9 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 새 장치를 만들려면 **새 장치** 단추(화면의 오른쪽 상단에 있음)를 클릭합니다.
- 
+
 [![새 장치를 만드는 데 사용되는 새로 만들기 단추](xamarin-device-manager-images/mac/08-new-button-sml.png)](xamarin-device-manager-images/mac/08-new-button.png#lightbox)
- 
+
 -----
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -494,7 +490,7 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 3. 이 위치로 이동하고 **user.config**를 두 번 클릭하여 엽니다. 
 
-4. **user.config**에서 **&lt;UserSettings&gt;** 요소를 찾아 **AndroidSdkPath** 특성을 추가합니다. 컴퓨터에서 Android SDK를 설치한 경로에 이 특성을 저장하고 파일을 저장합니다. 예를 들어 Android SDK가 **C:\\Programs\\Android\\SDK**에 설치된 경우 **&lt;UserSettings&gt;**는 다음과 같습니다.
+4. **user.config**에서 **&lt;UserSettings&gt;** 요소를 찾아 **AndroidSdkPath** 특성을 추가합니다. 컴퓨터에서 Android SDK를 설치한 경로에 이 특성을 저장하고 파일을 저장합니다. 예를 들어 Android SDK가 **C:\\Programs\\Android\\SDK**에 설치된 경우 **&lt;UserSettings&gt;** 는 다음과 같습니다.
         
     ```xml
     <UserSettings SdkLibLastWriteTimeUtcTicks="636409365200000000" AndroidSdkPath="C:\Programs\Android\SDK" />
