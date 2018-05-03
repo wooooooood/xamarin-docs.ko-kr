@@ -28,6 +28,7 @@
 #### [샘플 통합](workbooks/sdk/samples.md)
 ## [.NET 포함](dotnet-embedding/index.md)
 ### [시작](dotnet-embedding/get-started/index.md)
+#### [설치](dotnet-embedding/get-started/install/install.md)
 #### [C](dotnet-embedding/get-started/c.md)
 #### [Java](dotnet-embedding/get-started/java/index.md)
 ##### [Android](dotnet-embedding/get-started/java/android.md)
