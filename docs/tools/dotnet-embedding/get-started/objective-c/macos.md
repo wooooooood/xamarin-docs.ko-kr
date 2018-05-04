@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f75ced921cd240e280b5dd6f7366ccceefb5e40e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 3620312ff3fbf9d7aa879ae6d318f0b39eec386a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-macos"></a>MacOS 시작
-
 
 ## <a name="what-you-will-need"></a>요구 사항
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 04/16/2018
 
 Mac 용 Visual Studio를 열고, 명명 된 새 Mac 클래스 라이브러리 프로젝트 만들기 **csharp에서 hello**, 저장 하 고 **~/Projects/hello-from-csharp**합니다.
 
-코드는 `MyClass.cs` 다음 조각을 파일:
+코드는 **MyClass.cs** 다음 조각을 파일:
 
 ```csharp
 using AppKit;
@@ -44,7 +43,9 @@ public class MyNSView : NSTextView
 
 ### <a name="bind-the-managed-assembly"></a>관리 되는 어셈블리 바인딩
 
-관리 되는 어셈블리에 대 한 네이티브 프레임 워크를 만들도록 embeddinator를 실행 합니다.
+관리 되는 어셈블리를 만든 후를 포함 하는.NET 호출 하 여 바인딩하십시오.
+
+에 설명 된 대로 [설치](~/tools/dotnet-embedding/get-started/install/install.md) 가이드, 이렇게 하려면 프로젝트의 빌드 후 단계 또는 수동으로 사용자 지정 MSBuild 대상을 사용 하 여:
 
 ```shell
 cd ~/Projects/hello-from-csharp
@@ -93,4 +94,4 @@ Xcode를 열고 새 Cocoa 응용 프로그램을 만듭니다. 이름을 **cshar
 
 ![C# 샘플 시뮬레이터에서 실행 하는 hello](macos-images/hello-from-csharp-mac.png)
 
-보다 완벽 하 고 시각적 효과가 적용 된 샘플은 사용할 수 있는 [여기](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather)합니다.
+보다 완벽 하 고 시각적 효과가 적용 된 샘플 [여기](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather)합니다.

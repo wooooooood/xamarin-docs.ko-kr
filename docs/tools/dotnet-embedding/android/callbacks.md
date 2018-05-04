@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 72786ac4bceca2635747ebcc844a98b0ce60383f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b2584d1e76c2f4ed0fb0a924beda3fd2554a57d
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="callbacks-on-android"></a>Android에서 콜백
 
@@ -44,7 +44,7 @@ public abstract class AbstractClass : Java.Lang.Object
 이 작업을 하려면 세부 정보는 다음과 같습니다.
 
 - `[Register]` 좋은 패키지 이름을 생성 하 여 java-는 자동으로 생성 된 패키지 이름 없이 발생 합니다.
-- 서브클래싱 `Java.Lang.Object` Embeddinator 클래스 Xamarin.Android의 Java 생성기를 통해 실행 되도록 신호를 보냅니다.
+- 서브클래싱 `Java.Lang.Object` .NET 포함 하는 방식에 신호를 보냅니다 Xamarin.Android의 Java 생성기를 통해 클래스를 실행 합니다.
 - 빈 생성자: Java 코드에서 사용 하 여 할 됩니다.
 - `(IntPtr, JniHandleOwnership)` 생성자:는 C#을 만들기 위한 사용 하는 Xamarin.Android-Java 개체에 해당 합니다.
 - `[Export]` Xamarin.Android java 메서드를 노출 하도록 신호를 보냅니다. 또한 메서드 이름, 소문자로 변환 메서드를 사용 하는 Java 세계 배치할 수 있으므로 변경할 수 있습니다.
@@ -64,7 +64,7 @@ public class JavaCallbacks : Java.Lang.Object
 ```
 `JavaCallbacks` 이 테스트 하려면 모든 클래스는로 사용 될 수는 `Java.Lang.Object`합니다.
 
-이제는 AAR를 생성 하 여.NET 어셈블리의 Embeddinator를 실행 합니다. 참조는 [시작 가이드](~/tools/dotnet-embedding/get-started/java/android.md) 대 한 자세한 내용은 합니다.
+이제는 AAR를 생성 하 여.NET 어셈블리의.NET 포함을 실행 합니다. 참조는 [시작 가이드](~/tools/dotnet-embedding/get-started/java/android.md) 대 한 자세한 내용은 합니다.
 
 Android Studio로 AAR 파일을 가져온 후 단위 테스트를 써 보세요.
 
@@ -153,7 +153,7 @@ class AbstractClassInvoker : AbstractClass
 
 이 클래스를 추가 하는 새 AAR 생성 후 우리의 단위 테스트가 통과 합니다. 콜백에 대 한이 패턴은 하지 볼 수 있듯이 *이상적인*, 하지만 행 할 수 있습니다.
 
-Java interop에 대 한 자세한 내용은 참조는 놀라운 [Xamarin.Android 설명서](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/) 이 주제에 있습니다.
+Java interop에 대 한 자세한 내용은 참조는 놀라운 [Xamarin.Android 설명서](~/android/platform/java-integration/working-with-jni.md) 이 주제에 있습니다.
 
 ## <a name="interfaces"></a>인터페이스
 
@@ -169,7 +169,8 @@ public interface IJavaCallback : IJavaObject
     void Send(string text);
 }
 ```
-`IJavaObject` 데이터 웨어하우스는 Xamarin.Android 인터페이스 있지만 그렇지 않은 경우이 정확히 동일 Embeddinator 신호는 `abstract` 클래스입니다.
+
+`IJavaObject` 데이터 웨어하우스는 Xamarin.Android 인터페이스 있지만 그렇지 않은 경우이 정확히 동일.NET 포함 하는 신호는 `abstract` 클래스입니다.
 
 Xamarin.Android는이 인터페이스에 대 한 Java 코드를 생성 하지 이후 C# 프로젝트에 다음이 Java를 추가 합니다.
 
@@ -180,7 +181,8 @@ public interface IJavaCallback {
     void send(String text);
 }
 ```
-파일을 어디에서 든 지 배치할 수 있지만 빌드 작업 설정 하십시오 `AndroidJavaSource`합니다. 이 AAR 파일에 컴파일된다를 적절 한 디렉터리에 복사할 Embeddinator 신호 됩니다.
+
+파일을 어디에서 든 지 배치할 수 있지만 빌드 작업 설정 하십시오 `AndroidJavaSource`합니다. 이 신호를 보내는.NET 포함 AAR 파일에 컴파일된다를 적절 한 디렉터리에 복사 합니다.
 
 다음으로 `Invoker` 동일 구현 됩니다.
 
@@ -281,15 +283,15 @@ public abstract class VirtualClass : Java.Lang.Object
     - 이렇게 하면 빌드 작업으로 Java 소스 파일을 추가할 필요가 제거 `AndroidJavaSource`합니다.
 1. Xamarin.Android 로드 하는 방법을 확인 한 `Invoker` 가상 클래스입니다.
     - 클래스를 표시할 필요가 없으므로이 우리의 `virtual` 예제 `abstract`합니다.
-1. 생성 `Invoker` Embeddinator에 대 한 자동으로 클래스
+1. 생성 `Invoker` 자동으로 포함 하는.NET에 클래스
     - 이 복잡 하지만 행 할 수 있다는 것입니다. Xamarin.Android 이미 뭔가 Java 바인딩 프로젝트에 대 한 다음과 유사 합니다.
 
-여기에서 수행할 작업을 많이 있지만 Embeddinator 이러한 향상 된이 기능 수 있습니다.
+여기에서 수행할 작업을 많이 있지만.NET 포함 하는 이러한 향상 된이 기능 수 있습니다.
 
 ## <a name="further-reading"></a>추가 정보
 
 * [Android에서 시작](~/tools/dotnet-embedding/get-started/java/android.md)
 * [사전 Android 연구](~/tools/dotnet-embedding/android/index.md)
-* [Embeddinator 제한 사항](~/tools/dotnet-embedding/limitations.md)
+* [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
 * [오픈 소스 프로젝트에 기여 하](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

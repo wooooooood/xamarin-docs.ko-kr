@@ -1,5 +1,5 @@
 ---
-title: 플랫폼 기능
+title: Xamarin.Android의 플랫폼 기능
 description: 이 단원의 문서에서는 Android에 대 한 기능을 다룹니다. 여기 조각을 사용 하 여, 지도가 포함 된 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 69a70fe399bc95a9d8b24cc839382f2f3bee553e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c26cc3af97cad26e8add248b5bf4aabcefc614b
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -38,7 +38,7 @@ Android 3.0에 조각의 휴대폰 및 태블릿에 있는 많은 다양 한 화
 
 
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[응용 프로그램 연결](~/android/platform/app-linking.md)
 
 이 가이드는 Android 6.0에서 지 원하는 방법을 설명 합니다 _앱 연결_, 모바일 앱 웹 사이트 Url에 응답할 수 있도록 허용 하는 기술입니다. Android 6.0 응용 프로그램에서 응용 프로그램 연결을 구현 하는 방법 및 응용 프로그램-도메인에 대 한 링크를 처리 하는 모바일 앱에 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다.
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 515185ca7be8b6e24c92c9f44eb6dadbaf6d9219
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 2a4a235dcb885364fdc5add5970e61f46b6e5d08
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objective-c-support"></a>Objective C 지원
 
@@ -20,7 +20,7 @@ Objective C의 생성에 주목할 만한 있는 몇 가지 특수 한 기능이
 
 ### <a name="automatic-reference-counting"></a>자동 참조 계산
 
-자동 참조 계산 (호)의 사용은 **필요한** 를 생성 된 바인딩을 호출 합니다. 로 embeddinator 기반 라이브러리를 사용 하 여 프로젝트를 컴파일해야 `-fobjc-arc`합니다.
+자동 참조 계산 (호)의 사용은 **필요한** 를 생성 된 바인딩을 호출 합니다. 로 포함 하는.NET 기반 라이브러리를 사용 하 여 프로젝트를 컴파일해야 `-fobjc-arc`합니다.
 
 ### <a name="nsstring-support"></a>NSString 지원
 

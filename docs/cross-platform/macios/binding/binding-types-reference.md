@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 9364b4c56951ac9ebd3870e4afe41a40f9e1f455
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e064eda3db9aa0156869cf1c7392823553af9bd2
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식에 대 한 가이드
 
@@ -1141,7 +1141,7 @@ public NSObject this [NSObject idx] {
 이 특성 메서드 지원 네이티브 (Objective-c) 예외를 확인 합니다.
 호출 하는 대신 `objc_msgSend` 를 직접 호출 ObjectiveC 예외를 catch 하 고 관리 되는 예외를 마샬링합니다는 사용자 지정 trampoline 설명 합니다.
 
-현재 일부만 `objc_msgSend` 서명이 지원 됩니다 (배우면 서명을 누락 monotouch_ 실패 하는 바인딩을 사용 하는 앱의 네이티브 연결 하는 경우 지원 되지 않습니다 경우*_objc_msgSend* 기호), 될 수 있습니다 더 있지만 요청에 추가 합니다.
+현재 일부만 `objc_msgSend` 서명이 지원 됩니다 (배우면 서명을 누락 monotouch_ 실패 하는 바인딩을 사용 하는 앱의 네이티브 연결 하는 경우 지원 되지 않습니다 경우 *_objc_msgSend* 기호), 될 수 있습니다 더 있지만 요청에 추가 합니다.
 
 
 ### <a name="newattribute"></a>NewAttribute
@@ -1493,7 +1493,7 @@ interface FooExplorer {
 
 Objective c:에 다음과 같이 정의 된 콜백에 일반적으로 사용 됩니다.
 
-```csharp
+```objc
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 

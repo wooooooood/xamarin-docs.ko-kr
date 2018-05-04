@@ -1,5 +1,5 @@
 ---
-title: 단추
+title: Xamarin.Android의 단추
 description: 사용자가 작업을 수행할 수 있는 UI 요소를 구현 합니다.
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: a9221504f1eda589eee51096185d47d93335a7de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b741683d7dfe80337a0085ac8d94becb0b518535
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="buttons"></a>단추
+# <a name="buttons-in-xamarinandroid"></a>Xamarin.Android의 단추
 
 `Button` 클래스는 다양 한 유형의 Android 화면에서 단추를 나타내는 데 사용 됩니다. 이 섹션에서는 Xamarin.Android 단추와 작업에 대 한 다양 한 옵션을 소개 합니다.
 

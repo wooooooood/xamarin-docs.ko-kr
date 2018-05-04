@@ -1,17 +1,17 @@
 ---
-title: ListView
+title: ListView Xamarin.Android에서 사용 하 여
 description: ListView가 Android 응용 프로그램의 중요 한 UI 요소 모든 위치에서 짧은 목록 메뉴 옵션에서 위해 사용 연락처 또는 인터넷 즐겨찾기 긴 목록을 합니다. 행 수는 기본 제공 스타일으로 서식이 지정 하거나 광범위 하 게 사용자 지정 스크롤 목록을 표시 하는 간단한 방법을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2018
-ms.openlocfilehash: 8499b9f186c12df22518893b6677cab22f0a3568
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: c5c8222df16b265f3b44f3ee3fcd9053d827cf6a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="listview"></a>ListView
 

@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 기본 사항
+title: Xamarin.Android 응용 프로그램 기본 사항
 description: 응용 프로그램의 핵심 개념
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: caa51fa0a70da1b799d56c706e6de974f61a14d9
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="application-fundamentals"></a>응용 프로그램 기본 사항
+# <a name="xamarinandroid-application-fundamentals"></a>Xamarin.Android 응용 프로그램 기본 사항
 
 이 섹션에서 일반적인 작업 작업 또는 개발자는 Android 응용 프로그램을 개발 하는 경우 고려해 야 하는 개념 중 일부는 지침을 제공 합니다.
 

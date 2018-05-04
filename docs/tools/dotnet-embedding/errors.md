@@ -1,16 +1,16 @@
 ---
-title: .NET 오류를 포함 합니다.
+title: 포함 하는.NET 오류
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 677242ea12f8fd87d82f337eafd96a1743ad806a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-errors"></a>.NET 오류를 포함 합니다.
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/26/2018
 
 도구는 일반 파일을 서로 있기 때문에 오류 메시지에 언급 된 프레임 워크를 병합할 수 없습니다.
 
-이 Embeddinator 4000;의 버그를 나타낼 수 있습니다. 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
+.NET; 포함 하는 동안 버그가 발생 했을 수 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
 
 <a name="EM0011" />
 
@@ -142,9 +142,9 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>: EM0099 내부 오류 * 합니다. 테스트 사례와 버그 보고서를 제출 하세요 (https://github.com/mono/Embeddinator-4000/issues)합니다.
 
-Embeddinator 4000에서 내부 일관성 확인 작업을 실패 한 경우이 오류 메시지가 보고 됩니다.
+내부 일관성 확인 작업을 포함 하는.NET에서 실패 한 경우이 오류 메시지가 보고 됩니다.
 
-이 Embeddinator 4000;의 버그를 나타냅니다. 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
+이.NET 포함;의 버그를 나타냅니다. 에 버그 보고서를 제출 하세요 [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) 테스트 사례와 합니다.
 
 <!-- 1xxx: code processing -->
 
@@ -236,7 +236,7 @@ public class MyType {
 
 ### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: 확장 메서드 `M` 기본 형식에서 만들 수 없기 때문에 범주 내 생성 되지 않습니다 `T`합니다. 일반, 정적 메서드 생성 되었습니다.
 
-이는 **경고** 하는 확장 메서드는 primivite에 형식 (예: `System.Int32`)를 찾을 수 있습니다. ObjC에는 기본 형식에 범주를 만들 수 없습니다. 대신 일반, 정적 메서드는 생성기 생성 됩니다.
+이는 **경고** 하는 확장 메서드는 primivite에 형식 (예: `System.Int32`)를 찾을 수 있습니다. Objective C의은 기본 형식에 범주를 만들 수 없습니다. 대신 일반, 정적 메서드는 생성기 생성 됩니다.
 
 <a name="EM1040" />
 
@@ -286,7 +286,7 @@ public class MyType {
 
 이 한 **경고** 대상으로 하는 `E` Xamarin.iOS 및 Xamarin.Mac 사용 사례에 대 한 지원 되지 않는 것으로 간주 됩니다. 
 
-정적 또는 동적 Embeddinator 라이브러리의 소비 추가 작업 단계 또는 조정 해야 할 수 있습니다 및 대부분의 경우 사용 하지 않아야 합니다.
+정적 또는 동적 포함 하는.NET 라이브러리의 소비 추가 작업 단계 또는 조정 해야 할 수 있습니다 및 대부분의 경우 사용 하지 않아야 합니다.
 
 제거 프로그램 `--target` 매개 변수 또는 pass `--target=framework` 대신 합니다.
 

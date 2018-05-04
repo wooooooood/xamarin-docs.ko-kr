@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 924aa88d29379c98204fd810c651de56ff757971
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7c12319d9e688504c87368be37edf93e7294df30
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="purpose"></a>용도
 
-`RelativeLayout` 데 사용할 수 전체 레이아웃을 기준으로 화면에는 뷰 또는 두 개의 다른 뷰 위치를 지정 합니다.
+`RelativeLayout` 데 사용할 수 전체 레이아웃을 기준으로 또는 다른 보기에는 화면에 뷰 위치를 지정 합니다.
 
 ![](relative-layout-images/flag.png "RelativeLayout 탐색")
 

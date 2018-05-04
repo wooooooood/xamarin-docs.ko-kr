@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ed37e723d4b1a7997890c41886df8d117425e270
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a1cba53223567e353194a4fcd52c8e22fa48ddf0
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="webview"></a>웹 보기
 
@@ -329,41 +329,40 @@ public partial class InAppDemo : ContentPage
 - **탐색** &ndash; WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
 - **탐색** &ndash; 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
 
-로드 하는 데 오랜 시간이 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 이러한 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
-
-XAML이 있습니다.
+로드 하는 데 오랜 시간이 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 이러한 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어 XAML는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
-    <ContentPage.Content>
+  <ContentPage.Content>
     <StackLayout>
       <Label x:Name="LoadingLabel"
         Text="Loading..."
         HorizontalOptions="Center"
-        isVisible="false" />
+        IsVisible="false" />
       <WebView x:Name="Browser"
       HeightRequest="1000"
       WidthRequest="1000"
       Navigating="webOnNavigating"
       Navigated="webOnEndNavigating" />
     </StackLayout>
-    </ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>
 ```
+
 두 개의 이벤트 처리기.
 
 ```csharp
 void webOnNavigating (object sender, WebNavigatingEventArgs e)
 {
-            LoadingLabel.IsVisible = true;
+    LoadingLabel.IsVisible = true;
 }
 
 void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 {
-            LoadingLabel.IsVisible = false;
+    LoadingLabel.IsVisible = false;
 }
 ```
 

@@ -1,18 +1,18 @@
 ---
-title: API 디자인
+title: Xamarin.Android API 디자인 원칙
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a9c0b02457f006f75dc5b6f0a52e68865d620f67
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 611046954e8ef359476d2bd12a69f04041d869f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="api-design"></a>API 디자인
+# <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 디자인 원칙
 
 
 ## <a name="overview"></a>개요
@@ -59,7 +59,6 @@ Xamarin.Android의 핵심 있습니다 interop 엔진에서 Java와 C# 브리지
     - 적절 한 및 적용 가능한 경우 단일 메서드 인터페이스 대신 C# 대리자 (람다 식, 무명 메서드 및 System.Delegate)를 노출 합니다.
 
     - 임의의 Java 라이브러리를 호출할 수 있는 메커니즘 제공 ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
-
 
 
 ## <a name="assemblies"></a>어셈블리

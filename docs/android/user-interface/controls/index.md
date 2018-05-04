@@ -1,5 +1,5 @@
 ---
-title: 컨트롤
+title: Android 컨트롤 (위젯)
 description: Xamarin.Android 사용자 인터페이스를 만들기 위한 구성 요소
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
@@ -7,14 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28418c3b3fedcd24963008eb3b59ffa782d791f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="controls"></a>컨트롤
-
+# <a name="android-controls-widgets"></a>Android 컨트롤 (위젯)
 
 Xamarin.Android는 Android에서 제공 네이티브 사용자 인터페이스 컨트롤 (위젯)의 모든 노출 합니다. Android 디자이너를 사용 하 여 Xamarin.Android 앱 또는 XML 레이아웃 파일을 통해 프로그래밍 방식으로 이러한 컨트롤 쉽게 추가할 수 있습니다. Xamarin.Android를 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다. 다음 섹션에서는 가장 일반적인 Android 사용자 인터페이스 컨트롤을 소개 하 고 Xamarin.Android 앱에 통합 하는 방법에 설명 합니다.
 

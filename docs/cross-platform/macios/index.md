@@ -1,5 +1,5 @@
 ---
-title: iOS 및 Mac
+title: Apple 플랫폼 (iOS 및 Mac)
 description: 이 섹션에서는 Xamarin.iOS 및 Xamarin.Mac 프로젝트 간에 코드를 공유 하는 전략을 다룹니다.
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
@@ -7,13 +7,13 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 032b740a08af2c871aaec3db1076f3221e8008f3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a842e89b74419a03e4ea8f4355162960d9109f9b
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ios-and-mac"></a>iOS 및 Mac
+# <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
 
 _이 섹션에서는 Xamarin.iOS 및 Xamarin.Mac 프로젝트 간에 코드를 공유 하는 전략을 다룹니다._
 

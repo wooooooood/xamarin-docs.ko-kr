@@ -1,17 +1,17 @@
 ---
-title: 플랫폼 기능
-description: Android의 주요 구성 요소 착용 플랫폼
+title: Xamarin.Android와 마모 운영 체제의 플랫폼 기능
+description: 마모 OS 플랫폼의 주요 구성 요소
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4b22c55f3f30c880df2369e904c80dd76c81663d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 3e703ebb3d4705980785ec8fea6003ffc1442b54
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="platform-features"></a>플랫폼 기능
 

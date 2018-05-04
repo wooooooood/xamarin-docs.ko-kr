@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b3b15736b5ec750e0b8db078cf428a7f573bc435
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e4a55829e35329a50b2e121311b0102328e6fea9
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cross-platform-applications-overview"></a>크로스 플랫폼 응용 프로그램 개요 문서
 
@@ -25,7 +25,7 @@ Xamarin은 하지 방금는 "쓰기-어디에서 나 한 번 실행할" 플랫�
 Xamarin 플랫폼 간 앱을 만들기 위한 요점이 요약 다음과 같습니다.
 
 -   **C#을 사용 하 여** -C#에서 응용 프로그램을 작성 합니다. C#에서 작성 된 기존 코드 수로 iOS 및 Android를 매우 쉽게 Xamarin을 사용 하 여 포트 있고 Windows 앱에서 분명히 사용 합니다.
--   **MVC 또는 MVVVM 디자인 패턴을 활용** -모델/뷰/컨트롤러 패턴을 사용 하 여 응용 프로그램의 사용자 인터페이스를 개발 합니다. 모델/뷰/컨트롤러 방법이 나 모델/뷰/ViewModel 접근 방식을 사용 하 여 응용 프로그램을 설계는 "모델"와 나머지 명확히 구분 합니다. 응용 프로그램의 어느 부분 및 각 플랫폼 (iOS, Android, Windows, Mac)의 기본 사용자 인터페이스 요소를 사용 하 여 사용 하 여이 지침으로 분할 하면 응용 프로그램을 두 가지 구성 요소를 확인: "Core" 및 "사용자 인터페이스"입니다.
+-   **MVC 또는 MVVM 디자인 패턴을 활용** -모델/뷰/컨트롤러 패턴을 사용 하 여 응용 프로그램의 사용자 인터페이스를 개발 합니다. 모델/뷰/컨트롤러 방법이 나 모델/뷰/ViewModel 접근 방식을 사용 하 여 응용 프로그램을 설계는 "모델"와 나머지 명확히 구분 합니다. 응용 프로그램의 어느 부분 및 각 플랫폼 (iOS, Android, Windows, Mac)의 기본 사용자 인터페이스 요소를 사용 하 여 사용 하 여이 지침으로 분할 하면 응용 프로그램을 두 가지 구성 요소를 확인: "Core" 및 "사용자 인터페이스"입니다.
 -   **네이티브 Ui 빌드** -각 운영 체제 관련 응용 프로그램은 다양 한 사용자 인터페이스 계층 (에서 구현 된 C# 사용 하 여 네이티브 UI 디자인 도구)를 제공 합니다.
 
 1.  Ios에서 필요에 따라 Xamarin iOS 디자이너 UI를 시각적으로 만들를 활용 하는 기본 수준의 응용 프로그램을 만드는 UIKit Api를 사용 합니다.

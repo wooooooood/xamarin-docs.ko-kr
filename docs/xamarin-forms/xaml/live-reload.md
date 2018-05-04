@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
-ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
+ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -106,13 +106,33 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 ## <a name="limitations"></a>제한 사항
 
 * XAML의 다시 로드만 지원 됩니다.
-* Visual Studio에서 에서만 지원 됩니다.
-* .NET 표준 라이브러리 에서만 작동합니다.
-* CSS 스타일 시트를 지원 하지 않습니다.
 * UI 상태 MVVM 사용 하지 않는 유지 재배포 시, 사이 수 있습니다.
-* 응용 프로그램 수준의 리소스를 다시 로드 (즉, **App.xaml** 또는 공유 리소스 사전), 응용 프로그램 탐색을 다시 설정 됩니다.
+
+## <a name="known-issues"></a>알려진 문제
+
+* Visual Studio에서 에서만 지원 됩니다.
+* .NET 표준 라이브러리 에서만 작동합니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
+* CSS 스타일 시트를 지원 하지 않습니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
+* 응용 프로그램 수준의 리소스를 다시 로드 (즉, **App.xaml** 또는 공유 리소스 사전), 응용 프로그램 탐색을 다시 설정 됩니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
+* UWP 디버깅 인해 런타임 충돌 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 **(Ctrl + F5) 디버깅 하지 않고 시작** 대신 **디버깅 시작 (F5)** 합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
+
+### <a name="error-codes"></a>오류 코드
+
+* **XLR001**: *Xamarin 라이브 다시 로드 확장 버전 [VERSION]에 필요 하지만 현재 프로젝트 참조 'Xamarin.LiveReload' NuGet 패키지 버전 [VERSION].*
+
+  신속 하 게 반복 및 라이브 다시 로드 기능의 변화를 허용 하려면 nuget 패키지와 Visual Studio 확장명 정확히 일치 해야 합니다. Nuget 패키지를 설치한 후 확장의 동일한 버전으로 업데이트 합니다.
+
+* **XLR002**: *명령줄에서 빌드할 때 다시 로드 라이브 필요 이상 'MqttHostname' 속성입니다. 또는 'EnableLiveReload' 기능을 비활성화 하는 'false'를 설정 합니다.*
+
+  라이브 다시 로드 하 여 필요한 속성 사용할 수 없는 경우 명령줄에서 (또는 연속 통합), 빌드 및 따라서 명시적으로 제공 해야 합니다. 
+
+* **XLR003**: *nuget 패키지를 다시 로드 라이브 Xamarin 라이브 다시 로드 Visual Studio 확장을 설치 해야 합니다.*
+
+  다시 로드 라이브 nuget 패키지를 참조 하는 프로젝트를 빌드하려고 시도 하지만 Visual 확장 설치 되어 있지 않습니다.  
+
+
 
 ### <a name="app-doesnt-connect"></a>응용 프로그램에 연결 하지 않습니다.
 
@@ -145,7 +165,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 
 시나리오에서 실행 중인 응용 프로그램에서 컴퓨터 연결이 (사용 하 여 표시 된 대로 `localhost` 또는 `127.0.0.1` 에 **도구 > 옵션 > Xamarin > 라이브 다시 로드**) 수는 없습니다 (즉, 방화벽, 서로 다른 네트워크) 구성할 수 있습니다는 원격 서버 대신 있으며 IDE와 응용 프로그램 모두에 conect 합니다.
 
-표준을 사용 하 여 라이브 다시 로드 [MQTT 프로토콜](http://mqtt.org/) 에 메시지를 교환 하 고 따라서 통신할 수 있는 [타사 서버](https://github.com/mqtt/mqtt.github.io/wiki/servers)합니다. 까지 있습니다 [공용 서버](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (라고도 *브로커*) 사용할 수 있는 합니다. 라이브 다시 로드에서 테스트 되었지만 `broker.hivemq.com` 및 `iot.eclipse.org` 으로 호스트 이름을 제공 하는 서비스 [www.cloudmqtt.com](https://www.cloudmqtt.com) 및 [www.cloudamqp.com](https://www.cloudamqp.com)합니다. 배포할 수도 있습니다는 클라우드에서 사용자 고유의 MQTT 서버와 같은 [Azure에서 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) 또는 [AWS에 토끼 MQ](http://www.rabbitmq.com/ec2.html)합니다. 
+표준을 사용 하 여 라이브 다시 로드 [MQTT 프로토콜](http://mqtt.org/) 에 메시지를 교환 하 고 따라서 통신할 수 있는 [타사 서버](https://github.com/mqtt/mqtt.github.io/wiki/servers)합니다. 까지 있습니다 [공용 서버](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (라고도 *브로커*) 사용할 수 있는 합니다. 라이브 다시 로드에서 테스트 되었지만 `broker.hivemq.com` 및 `iot.eclipse.org` 으로 호스트 이름을 제공 하는 서비스 [www.cloudmqtt.com](https://www.cloudmqtt.com) 및 [www.cloudamqp.com](https://www.cloudamqp.com)합니다. 배포할 수도 있습니다는 클라우드에서 사용자 고유의 MQTT 서버와 같은 [Azure에서 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud)합니다.
 
 모든 포트를 구성할 수 있지만 일반적으로 원격 서버에 대 한 기본 1883 포트를 사용 하 합니다. 다시 로드 메시지 강력한 종단 간 AES 대칭 암호화를 사용 하 여 원격 서버에 연결 하는 데 안전 하 게 보호 되기 때문에 존재 합니다. 기본적으로 암호화 키와 초기화 벡터 (IV) 모든 Visual Studio 세션에서 다시 생성 됩니다.
 
