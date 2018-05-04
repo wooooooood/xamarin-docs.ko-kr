@@ -1,18 +1,18 @@
 ---
-title: Embeddinator 4000 ObjC에 대 한 모범 사례
+title: Objective C 용 모범 사례를 포함 하는.NET
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>Embeddinator 4000 ObjC에 대 한 모범 사례
+# <a name="net-embedding-best-practices-for-objective-c"></a>Objective C 용 모범 사례를 포함 하는.NET
 
 초안 이며 지원 되지 않는 기능을 통해 동기화 현재 도구에서. 이 문서는 개별적으로 발전 하 고 결국 최종 도구 일치, 장기 가장 좋은 방법을 하지 즉시 해결 방법을 제안 합니다 즉, 하시기 바랍니다.
 
@@ -106,7 +106,7 @@ Objective C 개발자의 관점에서를 사용 하 여 메서드는 `Get` 접�
 
 ## <a name="exceptions"></a>예외
 
-광범위 하 게 오류를 보고 하는 예외를 사용 하도록.net에서 quite commont 이며 그러나 이들 프로토콜은 느리고 ObjC에서 매우 동일 하지는 않습니다. 가능 하면 항상 Objective-c 개발자 로부터 숨겨야 합니다.
+것이 매우 광범위 하 게 오류를 보고 하는 예외를 사용 하도록.net에서 일반적입니다. 그러나 이들 프로토콜은 느리고 Objective c에서 매우 동일 하지는 않습니다. 가능 하면 항상 Objective-c 개발자 로부터 숨겨야 합니다.
 
 예를 들어.NET `Try` 패턴은 훨씬 쉽게 Objective C 코드에서 사용할 수 없습니다.
 
@@ -138,6 +138,6 @@ Objective C 허용 하는 반면, `init*` 반환할 `nil` 인스턴스를 만들
 
 Objective C 연산자를 오버 로드할 수 마찬가지로 C#, 되므로 변환 되 면 클래스 선택기를 허용 하지 않습니다.
 
-["친숙 한"](/dotnet/standard/design-guidelines/operator-overloads/) 명명된 메서드 연산자 오버 로드 대신 생성 된 때 발견 하 고 API를 사용 하는 보다 쉽게 생성할 수 있습니다.
+["친숙 한"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) 명명 된 메서드는 연산자 오버 로드 대신 생성 된 때 발견 하 고 API를 사용 하는 보다 쉽게 생성할 수 있습니다.
 
 연산자를 재정의 하는 클래스 `==` 및/또는 `!=` 표준 Equals (Object) 메서드를 재정의 해야 합니다.

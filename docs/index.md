@@ -5,11 +5,11 @@ title: Xamarin 설명서
 description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다.
 featureFlags:
 - clicktale
-ms.openlocfilehash: de03c1bd1b7874e6a837fbbb9e88a353f19afca5
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a2f8c6ddedcff89f357ed8a984954d9f91c0477f
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -831,12 +831,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>응용 프로그램 기본 사항</h3>
-                                                    <p>파일 처리, 이미지 등과 같은 기본적인 작업에 대한 공유 가능 코드 작성의 기본 사항에 대해 알아봅니다.</p>
+                                                    <h3>코드 공유</h3>
+                                                    <p>Android, iOS 및 Windows 간의 코드 및 라이브러리 공유에 대한 다양한 옵션에 대해 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -850,12 +850,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>플랫폼 기능</h3>
-                                                    <p>FaceID 및 ARKit과 같은 플랫폼별 기능 작업 및 iOS의 최신 추가 기능입니다.</p>
+                                                    <h3>언어 지원</h3>
+                                                    <p>Xamarin 프로젝트는 C# 및 F#로 작성할 수 있으며, VB로 작성된 라이브러리를 사용할 수 있습니다. Razor 템플릿도 지원됩니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -873,8 +873,8 @@ ms.lasthandoff: 04/03/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>배포 및 테스트</h3>
-                                                    <p>다중 플랫폼용 앱을 빌드하고 배포합니다.</p>
+                                                    <h3>디버깅 및 성능</h3>
+                                                    <p>대상 플랫폼과 관계없이 앱을 개선하는 데 도움이 되는 팁입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
