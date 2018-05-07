@@ -6,12 +6,12 @@ ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/30/2018
-ms.openlocfilehash: bcc88ba4c46aa9abe9038d6ea65bc9c17f337da6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: 29e35d0dee614d28eed08fbe8799fc74c5ad1eba
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Visual Studio Android Emulator
 
@@ -103,7 +103,7 @@ Visual Studio가 Xamarin.Android 응용 프로그램을 시작할 때 에뮬레�
 
 Microsoft Android 에뮬레이터에는 출시된 Android 장치의 가장 인기 있는 Android 버전, 화면 크기, 하드웨어 속성을 나타내는 장치 프로필 집합이 포함되어 있습니다. 또한 이러한 장치 프로필은 이미 KitKat, Lollipop 및 Marshmallow 등과 같은 여러 Android 버전용으로 구성되어 있습니다.
 
-*Emulator Manager*는 장치 프로필을 설치, 제거, 시작하는 데 사용됩니다. 이 스크린 샷에 표시된 것처럼 **도구** 메뉴에서 **Visual Studio Emulator for Android...**를 선택합니다.
+*Emulator Manager*는 장치 프로필을 설치, 제거, 시작하는 데 사용됩니다. 이 스크린 샷에 표시된 것처럼 **도구** 메뉴에서 **Visual Studio Emulator for Android...** 를 선택합니다.
 
 [![도구 메뉴에서 에뮬레이터 시작](visual-studio-android-emulator-images/06-launch-emulator-manager-vs-sml.png)](visual-studio-android-emulator-images/06-launch-emulator-manager-vs.png#lightbox)
 
@@ -167,7 +167,7 @@ Visual Studio **디버그 대상** 드롭다운 메뉴가 열리면 새로 설�
 
 2.  프로젝트 **속성**을 두 번 클릭합니다.
 
-3.  **Android 옵션**을 클릭하고 **빠른 배포 사용(디버그 모드에만 해당)**을 선택 취소합니다.
+3.  **Android 옵션**을 클릭하고 **빠른 배포 사용(디버그 모드에만 해당)** 을 선택 취소합니다.
 
     [![빠른 배포 옵션 사용 선택 취소](visual-studio-android-emulator-images/18-fast-deployment-vs-sml.png)](visual-studio-android-emulator-images/18-fast-deployment-vs.png#lightbox)
 
@@ -191,5 +191,5 @@ Visual Studio **디버그 대상** 드롭다운 메뉴가 열리면 새로 설�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/explore/msft-android-emulator-vs.aspx)
+- [Visual Studio Emulator for Android](https://www.visualstudio.com/vs/msft-android-emulator/)
 - [Visual Studio Emulator for Android 소개](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/12/introducing-visual-studios-emulator-for-android/)

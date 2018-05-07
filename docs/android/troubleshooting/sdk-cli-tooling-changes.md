@@ -7,25 +7,20 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 4156d712b91ad069d482debdf0731be8b649287a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
 _설치 하는 API 수준 및 AVDs Android SDK가 관리 하는 방법을 변경 합니다._
 
-## <a name="changes-to--android-sdk-tooling"></a>Android SDK 도구에 대 한 변경
+## <a name="changes-to-android-sdk-tooling"></a>Android SDK 도구에 대 한 변경
 
-최신 버전의 Android 용 SDK 도구, Google은 새 CLI (명령줄 인터페이스) 도구 in favour of 기존 AVD 및 SDK 관리자를 제거 합니다. 전자 **android** 프로그램을 제거 하 고 Mac 및 이전 버전의 Xamarin for Visual Studio 용 Visual Studio에서 GUI (그래픽 사용자 인터페이스) 관리자는 더 이상 작동 하지 이전 버전과 25.2.5 Android SDK 도구입니다.
-
-
-![Visual Studio에서 android IDE 메뉴](sdk-cli-tooling-changes-images/android-ide-menu.png)
-
-사용 하려고 하면는 **android** 프로그램 명령줄을 통해 다음과 같은 오류 메시지가 발생 합니다.
+Android 용 SDK 도구의 최신 버전의 Google 새 CLI (명령줄 인터페이스) 도구를 위해 기존 AVD 및 SDK 관리자를 제거 했습니다. **android** 프로그램을 제거 하 고 Mac 및 이전 버전의 Xamarin for Visual Studio 용 Visual Studio에서 Google GUI (그래픽 사용자 인터페이스) 관리자는 더 이상 작동 하지 이전 버전과 25.2.5 Android SDK 도구입니다. 예를 들어 사용 하려고는 **android** 프로그램 명령줄을 통해 다음과 같은 오류 메시지가 발생 합니다.
 
 ```shell
 The "android" command is deprecated.
@@ -34,11 +29,21 @@ For command-line tools, use tools\bin\sdkmanager.bat
 and tools\bin\avdmanager.bat
 ```
 
-따라서 CLI 도구를 사용 하 여 관리 하 고 에뮬레이터 및 Android SDK를 업데이트 해야 합니다.
+다음 섹션에서는 Android SDK 및 Android SDK 25.3.0를 사용 하 여 Android 가상 장치를 관리 하는 방법 및 이후 버전입니다.
+
+### <a name="ui-tools"></a>UI 도구
+
+Visual Studio 및 Mac 용 Visual Studio 이제 Xamarin 대체 함수는 지원 되지 않는 Google GUI 기반 관리자를 제공합니다.
+
+-   Android SDK 도구, 플랫폼 및 Xamarin.Android 앱 개발을 위한 해야 하는 다른 구성 요소를 다운로드 하려면 사용 된 [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) 레거시 Google SDK Manager 대신 합니다.
+
+-   사용 하 여 만들고 Android 가상 장치를 구성 하는 [Xamarin Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) 레거시 Google 에뮬레이터 관리자 대신 합니다.
+
+이러한 도구는 기능적으로 Google GUI 기반 관리자를 대체 합니다.
 
 ### <a name="cli-tools"></a>CLI 도구
 
-다음 프로그램은 이제 Android SDK 도구에 대 한 명령줄 인터페이스를 구성합니다.
+또는, 관리 및 에뮬레이터 및 Android SDK를 업데이트 하려면 CLI 도구를 사용할 수 있습니다. 다음 프로그램은 이제 Android SDK 도구에 대 한 명령줄 인터페이스를 구성합니다.
 
 #### <a name="sdkmanager"></a>sdkmanager
 
@@ -64,6 +69,7 @@ and tools\bin\avdmanager.bat
 ## <a name="related-links"></a>관련 링크
 
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
+- [Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
 - [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)
 - [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

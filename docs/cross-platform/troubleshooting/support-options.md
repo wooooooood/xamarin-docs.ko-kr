@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 500b4c63131ab850b4b9d7c6a0aec49b313ec426
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 47480adfdff5ee3282c1c7fa422260184f91c071
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>어떤 지원 옵션은 Xamarin에 대 한 사용할 수 있습니까?
 
@@ -33,8 +33,6 @@ Xamarin 지원 팀에 이러한 각 옵션을 모니터링 하는 데 도움이 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Visual Studio 전자 메일 인시던트를 Xamarin 항목에 대 한 지원
 
 일부로 Xamarin SDK 및 IDE 기능을 기술 지원에 대 한 적격 [Visual Studio 구독자 혜택](https://msdn.microsoft.com/subscriptions/bb266240) 및 [Microsoft 프리미어 지원](https://www.microsoft.com/microsoftservices/support.aspx)합니다.  이 일치 하는 UWP 및 ASP.NET와 같은 Visual Studio에서 다른 개발 플랫폼에 대 한 정책입니다.  Xamarin 인시던트 제출 이러한 방식으로 Xamarin 지원 팀에 할당 됩니다.  참조는 [Microsoft 지원 FAQ](https://support.microsoft.com/gp/offerprophone) 이러한 사고에 대 한 정책에 대 한 자세한 내용은 합니다.
-
-Xamarin 테스트 클라우드에 대 한 지원 사건을로 이동 하 여 제출 수는 [테스트 클라우드 로그인 페이지](https://testcloud.xamarin.com/login) 및 열기는 **지원** 링크 합니다.
 
 ### <a name="information-for-users-migrating-from-expired-xamarin-subscriptions-to-visual-studio-subscriptions"></a>Visual Studio 구독에 만료 된 Xamarin 구독에서 마이그레이션하는 사용자에 대 한 정보
 
