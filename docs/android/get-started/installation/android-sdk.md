@@ -1,5 +1,5 @@
 ---
-title: Android SDK 설정
+title: Xamarin.Android에 대한 Android SDK 설정
 description: Visual Studio에는 Google의 독립 실행형 SDK Manager를 대체하는 Android SDK Manager가 포함되어 있습니다. 이 가이드에서는 SDK Manager를 사용하여 Android SDK 도구, 플랫폼 및 Xamarin.Android 앱 개발에 필요한 기타 구성 요소를 다운로드하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 45ab1930300ac704da0a1fee25c08d40aa35ac5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5c2259ad32f341094f6cdc440edb2053987374b1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="android-sdk-setup"></a>Android SDK 설정
+# <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
 _Visual Studio에는 Google의 독립 실행형 SDK Manager를 대체하는 Android SDK Manager가 포함되어 있습니다. 이 가이드에서는 SDK Manager를 사용하여 Android SDK 도구, 플랫폼 및 Xamarin.Android 앱 개발에 필요한 기타 구성 요소를 다운로드하는 방법을 설명합니다._
 
@@ -36,7 +36,7 @@ _Visual Studio에는 Google의 독립 실행형 SDK Manager를 대체하는 Andr
 Xamarin Android SDK Manager를 사용하여 Xamarin.Android 앱 개발에 필요한 최신 Android 구성 요소를 다운로드할 수 있습니다.
 이는 더 이상 사용되지 않는 Google의 독립 실행형 SDK Manager를 대체합니다.
 
-Android SDK에 포함되어 있는 SDK Manager 대신 Xamarin Android SDK Manager를 사용해야 하는 이유는 무엇일까요? Android SDK Tools 패키지 버전 25.2.3에서 Google은 Android SDK를 유지하기 위해 새로운 도구를 도입했습니다. **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)**라는 이 새 도구는 Android SDK의 독립 실행형 UI 관리자를 대체하는 명령줄 유틸리티입니다. 따라서 SDK Tools 버전 26.0.1(Android 8.0에 필요) 이상으로 업데이트하고 UI 인터페이스를 통해 Android SDK를 계속 관리하려는 경우 Xamarin Android SDK Manager를 사용해야 합니다.
+Android SDK에 포함되어 있는 SDK Manager 대신 Xamarin Android SDK Manager를 사용해야 하는 이유는 무엇일까요? Android SDK Tools 패키지 버전 25.2.3에서 Google은 Android SDK를 유지하기 위해 새로운 도구를 도입했습니다. **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)** 라는 이 새 도구는 Android SDK의 독립 실행형 UI 관리자를 대체하는 명령줄 유틸리티입니다. 따라서 SDK Tools 버전 26.0.1(Android 8.0에 필요) 이상으로 업데이트하고 UI 인터페이스를 통해 Android SDK를 계속 관리하려는 경우 Xamarin Android SDK Manager를 사용해야 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -165,7 +165,7 @@ SDK Manager가 기본 위치에 있는 SDK, NDK 및 JDK를 찾도록 하려면 *
 -----
 
 
-_일부 구성 요소를 업데이트할 수 있습니다. 지금 업데이트하시겠습니까?_라는 메시지가 포함된 대화 상자가 표시될 수 있습니다. **예**를 클릭합니다. 그러면 라이선스 승인 대화 상자가 표시됩니다.
+_일부 구성 요소를 업데이트할 수 있습니다. 지금 업데이트하시겠습니까?_ 라는 메시지가 포함된 대화 상자가 표시될 수 있습니다. **예**를 클릭합니다. 그러면 라이선스 승인 대화 상자가 표시됩니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -202,7 +202,7 @@ _일부 구성 요소를 업데이트할 수 있습니다. 지금 업데이트�
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 플랫폼의 왼쪽에 있는 **+** 상자를 클릭하면 플랫폼을 확장하여 구성 요소(및 설치된 구성 요소)를 볼 수 있습니다.
-플랫폼의 구성 요소 목록 확장을 취소하려면 **-**를 클릭합니다.
+플랫폼의 구성 요소 목록 확장을 취소하려면 **-** 를 클릭합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

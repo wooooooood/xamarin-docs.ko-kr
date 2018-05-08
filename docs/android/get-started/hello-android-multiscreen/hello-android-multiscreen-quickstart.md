@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
@@ -74,7 +74,7 @@ Visual Studio에서 **Phoneword** 응용 프로그램을 열고 **솔루션 탐�
 
 ### <a name="creating-the-second-activity"></a>두 번째 작업 만들기
 
-두 번째 화면에 전원을 공급하는 두 번째 작업을 만듭니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...**을 선택합니다.
+두 번째 화면에 전원을 공급하는 두 번째 작업을 만듭니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...** 을 선택합니다.
 
 [![새 파일 추가](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
@@ -108,10 +108,11 @@ namespace Phoneword
 
 ### <a name="adding-translation-history-code"></a>변환 기록 코드 추가
 
-이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록을 지원하려면 다음 `using` 지시문을 `MainActivity` 클래스의 맨 위에 추가합니다.
+이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록(및 나중에 사용되는 의도)을 지원하려면 다음 `using` 지시문을 **MainActivity.cs** 맨 위에 추가합니다.
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 다음으로 전화 번호로 채울 수 있는 빈 목록을 만듭니다.
@@ -214,7 +215,7 @@ Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패�
 
 ### <a name="creating-the-second-activity"></a>두 번째 작업 만들기
 
-두 번째 화면에 전원을 공급하는 두 번째 작업을 만듭니다. **솔루션 패드**에서 **Phoneword** 프로젝트 옆에 있는 회색 기어 아이콘을 클릭하고 **추가 > 새 파일...**을 선택합니다.
+두 번째 화면에 전원을 공급하는 두 번째 작업을 만듭니다. **솔루션 패드**에서 **Phoneword** 프로젝트 옆에 있는 회색 기어 아이콘을 클릭하고 **추가 > 새 파일...** 을 선택합니다.
 
 **새 파일** 대화 상자에서 **Android > 작업**을 선택하고 작업 이름을 `TranslationHistoryActivity`로 지정한 다음, **추가**를 클릭합니다.
 
@@ -246,10 +247,11 @@ namespace Phoneword
 
 ### <a name="adding-translation-history-code"></a>변환 기록 코드 추가
 
-이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록을 지원하려면 다음 `using` 지시문을 `MainActivity` 클래스의 맨 위에 추가합니다.
+이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록(및 나중에 사용되는 의도)을 지원하려면 다음 `using` 지시문을 **MainActivity.cs** 맨 위에 추가합니다.
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 다음으로 전화 번호로 채울 수 있는 빈 목록을 만듭니다. `MainActivity` 클래스는 다음과 같습니다.

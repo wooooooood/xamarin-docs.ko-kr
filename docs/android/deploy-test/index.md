@@ -1,17 +1,17 @@
 ---
-title: 배포 및 테스트
+title: Xamarin.Android 앱 테스트, 최적화 및 배포
 description: 이 섹션에는 응용 프로그램을 테스트하고, 해당 성능을 최적화하고, 릴리스할 준비를 하고, 인증서를 사용하여 서명하고, 앱 스토어에 게시하는 방법을 설명하는 가이드가 포함되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d7453af3721cbdb6b93d884322cee1cd5115c317
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 5b3061f30f6f120cf8edb41ccf5e70ae853aeb9e
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 

@@ -1,23 +1,24 @@
 ---
-title: 디버깅
+title: 장치 및 에뮬레이터에서 Xamarin.Android 디버깅
 description: Xamarin.Android 앱을 테스트하고 디버그하는 방법
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/16/2018
-ms.openlocfilehash: 429a369ddcd11829920f9fb932a737d1a53cec10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 4b51b10965f3f6e77420d657bc0f7f7d25fc6569
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging"></a>디버깅
 
+이 섹션에서는 장치 또는 에뮬레이터에서 Xamarin.Android 앱을 디버깅하는 방법을 설명합니다.
 ## <a name="debugging-overview"></a>디버깅 개요
 
-Android 응용 프로그램을 개발하려면 물리적 하드웨어에서 또는 에뮬레이터나 시뮬레이터를 사용하여 응용 프로그램을 실행하는 과정이 필요합니다. 하드웨어를 사용하는 것이 가장 좋은 방법이지만 이것이 실용적이지 않은 경우가 있습니다. 많은 경우 아래 설명되어 있는 에뮬레이터 중 하나를 사용하여 Android 하드웨어를 시뮬레이션/에뮬레이션하는 것이 더 간단하고 비용 효율적일 수 있습니다.
+Android 응용 프로그램을 개발하려면 물리적 하드웨어에서 또는 에뮬레이터를 사용하여 응용 프로그램을 실행하는 과정이 필요합니다. 하드웨어를 사용하는 것이 가장 좋은 방법이지만 이것이 실용적이지 않은 경우가 있습니다. 많은 경우 아래 설명되어 있는 에뮬레이터 중 하나를 사용하여 Android 하드웨어를 시뮬레이션/에뮬레이션하는 것이 더 간단하고 비용 효율적일 수 있습니다.
 
 
 ### <a name="android-sdk-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Android SDK 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)

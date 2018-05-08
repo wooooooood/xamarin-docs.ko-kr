@@ -1,5 +1,5 @@
 ---
-title: Xamarin Android 장치 관리자
+title: Xamarin Android 장치 관리자로 Android 에뮬레이터 관리
 description: Xamarin Android 장치 관리자(현재 미리 보기 상태)는 Google의 레거시 장치 관리자를 대체합니다. 이 가이드에서는 Xamarin Android 장치 관리자를 사용하여 Android 장치를 에뮬레이트하는 AVD(Android 가상 장치)를 만들고 구성하는 방법을 설명합니다. 물리적 장치에 의존하지 않고도 이러한 가상 장치를 사용하여 앱을 실행하고 테스트할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/26/2018
-ms.openlocfilehash: 94f82c9f893e22074ba95c052b57ce6ff18eaa1e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2b41c23bb880ca6150fa5f3f487eb00d8a7a19d8
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Xamarin Android 장치 관리자
 
