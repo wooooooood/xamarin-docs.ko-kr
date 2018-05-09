@@ -6,12 +6,12 @@ ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 8afc15a75b6d34d9b3f094fe2c92f2b6623ee63f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/24/2018
+ms.openlocfilehash: f1f733fa91be7bf76e19896e78809d18494891d3
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="displaying-an-image"></a>이미지 표시
 
@@ -66,6 +66,7 @@ IOS 7에 추가 된 **자산 카탈로그 이미지 집합** 모든 버전 또�
 1. Asset Catalog에서 열고는 **솔루션 탐색기**, 왼쪽된 위 모서리에서 클릭 하 고는 **플러스** 단추:
 
     ![](displaying-an-image-images/asset5.png "더하기 클릭 단추")
+
 2. 선택 **이미지 집합 추가** 새 이미지 집합에 대 한 이미지 설정 편집기를 표시 됩니다. 여기에서 끌어 이미지의 다양 한 장치 각각에 대해 및 및 해상도 필요 합니다. (참고: 이러한 해결 방법에 지정 된 해상도에 일치 하는 [이미지 크기와 파일 이름을](~/ios/app-fundamentals/images-icons/displaying-an-image.md) 문서):
 
     ![](displaying-an-image-images/asset7.png "이미지 편집기 설정")

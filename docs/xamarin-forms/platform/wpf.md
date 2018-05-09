@@ -4,14 +4,15 @@ description: Xamarin.Forms에 WPF 플랫폼에 대 한 미리 보기 지원
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: 416e33f131c6e1ef144608f98964fd8372f454f8
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치 프로그램
 
@@ -20,6 +21,12 @@ ms.lasthandoff: 04/28/2018
 Xamarin.Forms에는 Windows Presentation Foundation (WPF)에 대 한 미리 보기 지원이 되었습니다. 이 문서는 Xamarin.Forms 솔루션에 WPF 프로젝트를 추가 하는 방법을 보여 줍니다.
 
 시작 하기 전이나, Visual Studio 2017에서 새 Xamarin.Forms 솔루션을 만들어 예를 들어 기존 Xamarin.Forms 솔루션을 사용 하 여 [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)합니다. Windows에서 Xamarin.Forms 솔루션에 WPF 앱만 추가할 수 있습니다.
+
+## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>WPF 프로젝트 Xamarin.University로 Xamarin.Forms 앱 추가
+
+> [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
+
+**Xamarin.Forms 3.0 WPF 지원으로, [Xamarin 대학](https://university.xamarin.com/)**
 
 ## <a name="adding-a-wpf-app"></a>WPF 응용 프로그램 추가
 

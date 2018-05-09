@@ -6,12 +6,12 @@ ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/02/2017
+ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: 바인딩 iOS Objective C 라이브러리
 
@@ -128,6 +128,7 @@ InfColorPicker 프로젝트를 다운로드 해 보겠습니다 [GitHub](https:/
 3. 선택 **프레임 워크 및 라이브러리**, **Cocoa 터치 정적 라이브러리** 템플릿과 클릭은 **다음** 단추:
 
     [![](walkthrough-images/image05.png "정적 라이브러리 Cocoa 터치 템플릿 선택")](walkthrough-images/image05.png#lightbox)
+
 4. 입력 `InfColorPicker` 에 대 한는 **프로젝트 이름** 클릭는 **다음** 단추:
 
     [![](walkthrough-images/image06.png "프로젝트 이름에 대 한 InfColorPicker 입력")](walkthrough-images/image06.png#lightbox)
@@ -276,11 +277,11 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. **파일** 메뉴 선택 **새로** > **프로젝트...** :
 
-    ![](walkthrough-images/bind01vs.png "새 프로젝트를 시작합니다.")
+    ![새 프로젝트를 시작](walkthrough-images/bind01vs.png "새 프로젝트를 시작 합니다.")
 
-1. 새 프로젝트 대화 상자에서 선택 **iOS** > **바인딩 라이브러리**:
+1. 새 프로젝트 대화 상자에서 선택 **Visual C# > iPhone 및 iPad > iOS 바인딩 라이브러리 (Xamarin)**:
 
-    ![](walkthrough-images/bind02vs.png "IOS 바인딩 라이브러리를 선택 합니다.")
+    [![IOS 바인딩 라이브러리를 선택 합니다.](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
 1. "InfColorPickerBinding"으로 입력은 **이름** 클릭는 **확인** 솔루션을 만드는 단추입니다.
 
@@ -289,8 +290,6 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 ![](walkthrough-images/bind03vs.png "솔루션 탐색기에서 솔루션 구조")
 
 -----
-
-
 
 - **ApiDefinition.cs** -이 파일은 Objective-c API의 C#에서 래핑 방법을 정의 하는 계약을 포함 합니다.
 - **Structs.cs** -이 파일을 모든 구조를 보유할 또는 열거형 값을 하는 인터페이스 및 대리자에 필요한 합니다.
@@ -332,8 +331,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 -----
 
-
-Xamarin.iOS은 자동으로 설정.a 파일이 프로젝트에 추가 되는 경우는 **빌드 작업** 파일의 **ObjcBindingNativeLibrary**, 라는 특수 파일을 만들고 `libInfColorPickerSDK.linkwith.cs`합니다.
+경우는 **.a** Xamarin.iOS은 자동으로 설정 파일을 프로젝트에 추가 됩니다는 **빌드 작업** 파일의 **ObjcBindingNativeLibrary**, 특수 파일을 만듭니다 호출 `libInfColorPickerSDK.linkwith.cs`합니다.
 
 
 이 파일에 포함 된 `LinkWith` 핸들 실제로 정적 라이브러리 추가 하는 방법과 Xamarin.iOS 알리는 특성이 필요 합니다. 이 파일의 내용은 다음 코드 조각에 나와 있습니다.
@@ -536,6 +534,7 @@ Europa:Resources kmullins$
 1. **IPhone 사용자 인터페이스 만들기** -두 번 클릭 하는 **MainStoryboard.storyboard** 파일에 **InfColorPickerSample** iOS 디자이너에서에서 편집 하는 프로젝트입니다. 추가 **단추** 보기로 버전을 호출 `ChangeColorButton`다음에 나온 것 처럼:
 
     ![](walkthrough-images/use03.png "보기에 단추 추가")
+
 1. **추가 InfColorPickerView.xib** -The InfColorPicker Objective-c 라이브러리에 포함 되어는 **.xib** 파일입니다. Xamarin.iOS이 포함 되지 것입니다 **.xib** 바인딩 프로젝트에 샘플 응용 프로그램에서 런타임 오류가 발생 합니다. 이 대 한 해결 방법은 추가 하는 것은 **.xib** 우리의 Xamarin.iOS 프로젝트에 파일입니다. Xamarin.iOS 프로젝트, 마우스 오른쪽 단추 클릭 및 선택 선택 **추가 > 파일 추가**, 추가 하 고는 **.xib** 다음 스크린샷에 표시 된 대로 파일:
 
     ![](walkthrough-images/use04.png "InfColorPickerView.xib 추가")
@@ -544,10 +543,11 @@ Europa:Resources kmullins$
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
+1. **Xamarin.iOS 프로젝트 만들기** -라는 새로운 Xamarin.iOS 프로젝트에 추가 **InfColorPickerSample** 를 사용 하는 **단일 앱 보기** 템플릿:
 
-1. **Xamarin.iOS 프로젝트 만들기** -라는 새 Xamarin.iOS 프로젝트를 추가 **InfColorPickerSample** 다음 스크린샷에 표시 된 대로 솔루션에:
+    [![iOS 앱 (Xamarin) 프로젝트](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
-    ![](walkthrough-images/use01vs.png "Xamarin.iOS 프로젝트 만들기")
+    [![템플릿 선택](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
 1. **바인딩 프로젝트 참조를 추가할** -업데이트에서 **InfColorPickerSample** 에 대 한 참조를 프로젝트는 **InfColorPickerBinding** 프로젝트:
 
@@ -559,10 +559,7 @@ Europa:Resources kmullins$
 
 1. **추가 InfColorPickerView.xib** -The InfColorPicker Objective-c 라이브러리에 포함 되어는 **.xib** 파일입니다. Xamarin.iOS이 포함 되지 것입니다 **.xib** 바인딩 프로젝트에 샘플 응용 프로그램에서 런타임 오류가 발생 합니다. 이 대 한 해결 방법은 추가 하는 것은 **.xib** 에서 우리의 Xamarin.iOS 프로젝트에 파일 우리의 **Mac 빌드 호스트**합니다. Xamarin.iOS 프로젝트, 마우스 오른쪽 단추 클릭 및 선택 선택 **추가** > **기존 항목...** 를 추가 하 고는 **.xib** 파일입니다.
 
-
 -----
-
-
 
 다음에 살펴보겠습니다 프로토콜 Objective-c 및 처리 방식으로 바인딩 및 C# 코드를 빠르게 확인 합니다.
 

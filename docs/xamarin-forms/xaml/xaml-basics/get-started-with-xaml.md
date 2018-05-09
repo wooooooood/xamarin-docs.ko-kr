@@ -6,12 +6,12 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: bc535160816ad186baaa5e802eceb6ae40347d75
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML 시작
 
@@ -23,9 +23,9 @@ _Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Windows에서 선택 하려면 Visual Studio를 사용 **파일 > 새로 만들기 > 프로젝트** 메뉴에서 합니다. 에 **새 프로젝트** 대화 상자에서 **Visual C# > 크로스 플랫폼** 왼쪽 차례로 **교차 플랫폼 앱 (Xamarin.Forms 또는 네이티브)** 가운데 있는 목록에서. 
+Windows에서 선택 하려면 Visual Studio를 사용 **파일 > 새로 만들기 > 프로젝트** 메뉴에서 합니다. **새 프로젝트** 대화 상자에서 **Visual C# > 크로스 플랫폼** 왼쪽 차례로 **모바일 앱 (Xamarin.Forms)** 가운데 있는 목록에서. 
 
-![](get-started-with-xaml-images/win/newprojectdialog.png "새 프로젝트 대화 상자")
+![](get-started-with-xaml-images/win/newprojectdialog.w157.png "새 프로젝트 대화 상자")
 
 솔루션에 대 한 위치를 선택의 이름을 지정 **XamlSamples** (또는 원하는 대로)를 누르고 **확인**합니다.
 
@@ -226,7 +226,7 @@ MainPage = new MainPage();
 
 다른 XAML 기반 추가 하려면 `ContentPage` 프로젝트에 클래스를 선택는 **XamlSamples** PCL 프로젝트를 마우스 호출는 **프로젝트 > 새 항목 추가** 메뉴 항목입니다. 왼쪽에는 **새 항목 추가** 대화 상자에서 **Visual C#** 및 **Xamarin.Forms**합니다. 목록에서 선택 **콘텐츠 페이지** (하지 **콘텐츠 페이지 (C#)** 를 만드는 코드 전용 페이지 또는 **콘텐츠 보기**, 페이지 않습니다). 예를 들어 페이지에 이름을 지정 **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.png "새 항목 추가 대화 상자")
+![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "새 항목 추가 대화 상자")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

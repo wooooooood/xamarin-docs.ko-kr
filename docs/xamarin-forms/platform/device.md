@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 471616dffc700cf93a9f6435565222d7628bf165
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-class"></a>장치 클래스
 
@@ -86,6 +86,28 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+## <a name="deviceflowdirection"></a>Device.FlowDirection
+
+[ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) 검색 값을 [ `FlowDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) 장치에서 사용 하 고 현재 흐름 방향을 나타내는 열거형 값입니다. 흐름 방향은 눈 하 여 페이지의 UI 요소 ֻ 방향입니다. 열거형 값은 다음과 같습니다.
+
+- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
+- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
+- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+
+Xaml에서는 [ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) 값을 사용 하 여 검색할 수는 `x:Static` 태그 확장:
+
+```xaml
+<ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
+```
+
+다음은 C#에서 해당 하는 코드가입니다.
+
+```csharp
+this.FlowDirection = Device.FlowDirection;
+```
+
+흐름 방향에 대 한 자세한 내용은 참조 [오른쪽에서 왼쪽으로 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)합니다.
 
 <a name="Device_Styles" />
 

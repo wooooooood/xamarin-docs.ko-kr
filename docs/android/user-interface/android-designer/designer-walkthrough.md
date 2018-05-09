@@ -6,12 +6,12 @@ ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/29/2018
-ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/10/2018
+ms.openlocfilehash: 8d1dc410d5336d9c2505a18720cc7f734e838c39
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-android-designer"></a>Android 디자이너를 사용 하 여
 
@@ -36,9 +36,9 @@ Android 사용자 인터페이스 XML 파일을 사용 하 여 또는 프로그�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-Visual Studio를 시작 하 고 클릭 **새 프로젝트...**  선택 합니다는 **Visual C\# > Android > 비어 있는 앱 (Android)** 템플릿:
+Visual Studio를 시작 하 고 클릭 **새 프로젝트...**  선택 합니다는 **Visual C\# > Android > Android 앱 (Xamarin)** 템플릿:
 
-[![새 android 응용 프로그램](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
+[![새 android 응용 프로그램](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -74,7 +74,7 @@ Mac 및 클릭에 대 한 Visual Studio를 시작 **새 솔루션 중...** . 선
 
 Visual Studio에서 마우스 오른쪽 단추로 클릭 **리소스/레이아웃** 에 **솔루션 탐색기** 선택 **추가 > 새 항목...** . 에 **새 항목 추가** 대화 상자에서 **Android 레이아웃**합니다. 파일 이름을 **ListItem.axml** 클릭 **추가**:
 
-[![새 레이아웃](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
+[![새 레이아웃](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
 
 새 **ListItem** 레이아웃이 디자이너에 표시 됩니다.
 

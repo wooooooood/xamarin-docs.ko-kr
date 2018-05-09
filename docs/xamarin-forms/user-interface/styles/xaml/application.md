@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
 ms.openlocfilehash: a505720e5fef8fe9e9ef82d03e53370210772f45
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="global-styles"></a>전역 스타일
 
@@ -159,5 +159,5 @@ public class ApplicationStylesPageCS : ContentPage
 - [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 - [스타일 (샘플) 작업을](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
 - [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
+- [스타일](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
 - [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)

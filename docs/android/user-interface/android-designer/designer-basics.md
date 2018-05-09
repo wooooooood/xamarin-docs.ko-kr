@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6bac16a8ce9859e819299689489d9aad982c1f7f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8201301fc0437ecb79a81f40e865f14dc6af020
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="designer-basics"></a>디자이너의 기본 사항
 
@@ -37,7 +37,7 @@ _이 항목 디자이너 기능을 소개, 디자이너를 시작 하는 방법�
 
 마찬가지로, 마우스 오른쪽 단추로 클릭 하 여 새 레이아웃을 추가할 수 있습니다는 **레이아웃** 폴더에는 **솔루션 탐색기** 선택 하 고 **추가 > 새 항목 … > Android 레이아웃**:
 
-[![새 항목 추가 대화 상자](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[![새 항목 추가 대화 상자](designer-basics-images/vs/02-add-new-layout-sml.w157.png)](designer-basics-images/vs/02-add-new-layout.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

@@ -1,65 +1,55 @@
 ---
-title: 조각을 사용 하 여 구현
-description: Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다.
+title: 조각-연습 구현
+description: 이 문서 조각 Xamarin.Android 응용 프로그램을 개발을 사용 하는 방법을 안내 합니다.
+ms.topic: tutorial
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/26/2018
+ms.openlocfilehash: 92c68298d7abd2570efd89e12d7cfb6364e90972
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="implementing-with-fragments"></a>조각을 사용 하 여 구현
+# <a name="implementing-fragments---walkthrough"></a>조각-연습 구현
 
-_Android 3.0에 조각의 도입 되었습니다. 조각은 다양한 크기의 화면에서 실행될 수 있는 응용 프로그램 쓰기의 복잡성을 해결하는 데 사용되는 자체 포함 모듈식 구성 요소입니다. 이 문서 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법과 조각 3.0 미리 Android 장치에서 지 원하는 방법에 안내 합니다._
-
+_조각은 다양 한 화면 크기와 장치를 대상으로 하는 Android 앱의 복잡성을 해결 하는 데 도움이 되는 자체 포함 된, 모듈형 구성 요소입니다. 이 문서를 만들고 Xamarin.Android 응용 프로그램을 개발 하는 경우 조각을 사용 하는 방법을 안내 합니다._
 
 ## <a name="overview"></a>개요
 
-이 섹션의 역할 및 각 선택한 play에서 따옴표의 목록을 표시 하는 응용 프로그램을 만드는 방법을 살펴봅니다. 앱 म 우리의 UI 구성 요소를 한 곳에서 정의할 수 있지만 다음 다양 한 폼에서 사용할 수 있도록 조각이 사용 됩니다. 예를 들어 다음 스크린 샷과 10"태블릿 뿐 아니라 휴대폰 실행 응용 프로그램을 보여 줍니다.
+이 섹션에서는 만들고 조각 Xamarin.Android 응용 프로그램에서 사용 하는 방법을 단계별로 설명 합니다. 이 응용 프로그램 목록에 William 셰익스피어 하 여 여러 재생 타이틀을 표시 됩니다. 사용자는 재생의 제목에 누르면 다음 응용 프로그램에에서 표시 됩니다 해당 play에서 따옴표를 별도 동작:
 
-[![태블릿 및 전화에서 실행 되는 예제 앱의 스크린 샷](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
+[![Android 휴대폰 세로 모드에서 실행 중인 앱](./images/intro-screenshot-phone-sml.png)](./images/intro-screenshot-phone.png#lightbox)
 
-이 섹션에서는 다음 항목을 설명 합니다.
+전화를 가로 모드로 회전할 때 앱의 모양을 변경 됩니다: 재생 목록을 따옴표 모두 동일한 동작에 나타납니다. 재생 옵션을 선택 하면 견적 동일한 동작에서 표시 됩니다.
 
-- **조각을 만드는** &ndash; 의 재생 목록을 표시 하는 조각 및 각 play에서 견적을 표시 하려면 다른 조각을 만드는 방법을 보여 줍니다.
+[![Android 휴대폰에서 가로 모드에서 실행 중인 앱](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-- **다양 한 화면 크기를 지 원하는** &ndash; 표시 더 큰 크기를 활용 하도록 응용 프로그램 레이아웃 하는 방법.
+마지막으로, 태블릿 컴퓨터에서 앱을 실행 하는 경우:
 
-- **Android 지원 패키지를 사용 하 여** &ndash; 하므로 이전 버전의 Android에서 실행 하는 응용 프로그램에서 활동을 몇 가지 사소한 변경 하 한 다음 Android 지원 패키지를 구현 합니다.
+[![Android 태블릿에서 실행 중인 앱](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
 
+이 샘플 응용 프로그램 조각을 사용 하 여 다양 한 폼 팩터 및 최소한의 코드 변경 내용으로 방향에 적용할 수 쉽게 및 [대체 레이아웃](/xamarin/android/app-fundamentals/resources-in-android/alternate-resources)합니다.
 
-## <a name="requirements"></a>요구 사항
+응용 프로그램에 대 한 데이터는 C# 문자열 배열로 사용 되는 응용 프로그램에서 하드 코딩 된 두 문자열 배열에 존재 합니다. 배열의 각 항목은 하나의 조각에 대 한 데이터 소스로 역할 합니다.  한 배열을 셰익스피어에서 일부 역할의 이름을 누른 다른 배열의 해당 play에서 견적을 보유 합니다. 응용 프로그램 시작 되 면에 있는 재생 이름이 표시 됩니다는 `ListFragment`합니다. 사용자의 재생을 클릭할 때는 `ListFragment`, 하면 앱이 인용 표시 하는 다른 활동을 시작 합니다.
 
-이 연습에서는 Xamarin.Android 4.0 이상이 필요 합니다. 또한 됩니다 Android 지원 패키지를 설치 하는 데 필요한 조각 설명서에 설명 된 대로 합니다.
+응용 프로그램에 대 한 사용자 인터페이스는 두 개의 레이아웃, 세로 및 가로 모드에 대 한 단계로 구성 됩니다. 런타임 시 Android 장치의 방향에 따라 로드 하는 레이아웃을 결정 합니다 및 렌더링 작업에 해당 레이아웃을 제공 합니다. 모든 사용자가 클릭에 응답 하 고 데이터를 표시 하기 위한 논리는 조각에 포함 됩니다. 응용 프로그램의 활동은이 조각 들을 호스팅할 컨테이너로 존재 합니다.
 
+이 연습에서는 두 명의 가이드로 세분화 됩니다. [첫 번째 부분](./walkthrough.md) 응용 프로그램의 핵심 부분에 집중 합니다. 두 조각 및 두 개의 활동 함께 (세로 모드에 대 한 최적화) 레이아웃의 단일 집합 생성 됩니다.
 
-## <a name="introduction"></a>소개
+1. `MainActivity` &nbsp; 응용 프로그램에 대 한 시작 작업입니다.
+1. `TitlesFragment` &nbsp; 이 조각의 William 셰익스피어로 작성 된 재생의 타이틀의 목록을 표시 됩니다. 의해 호스트 될 `MainActivity`합니다.
+1. `PlayQuoteActivity` &nbsp; `TitlesFragment` 시작 됩니다는 `PlayQuoteActivity` 에서 재생을 선택 하면 사용자에 대 한 응답에서 `TitlesFragment`합니다.
+1. `PlayQuoteFragment` &nbsp; 이 조각의 William 셰익스피어 하 여 재생에서 견적을 표시 됩니다. 의해 호스트 될 `PlayQuoteActivity`합니다.
 
-이 섹션에서는 빌드합니다 예제에서는 활동 목록을 로드, 사용자 선택에 응답 또는 선택한 재생에 대 한 따옴표를 표시 하기 위한 논리를 포함 하지 않습니다. 이 논리는 개별 조각에 존재합니다.
-자체 조각에서이 논리를 배치 하 여 각 활동에 대 한 다른 논리를 작성할 필요 없이 하나의 작업 또는 여러 작업을 작은 화면 큰 화면을 지원 하도록 응용 프로그램의 워크플로를 분석할 수 있습니다. 태블릿에서는 두 조각 한 작업에 있게 됩니다. 휴대폰의 조각 서로 다른 동작에 호스트 됩니다.
-
-이 응용 프로그램에는 다음과 같은 부분이 포함 됩니다.
-
- **MainActivity** – 화면 크기에 따라 조각 중 하나 또는 모두 표시 됩니다. 활동의 시작입니다.
-
- **TitlesFragment** – 사용자가 선택할 수 있는 재생 목록이 표시 됩니다.
-
- **DetailsFragment** – 선택한 play에서 견적을 표시 합니다.
-
- **DetailsActivity** –를 호스트 하 고는 DetailsFragment 표시 됩니다.
-이 작업은 휴대폰 등의 작은 화면을 사용 하 여 장치에서 사용 됩니다.
-
-
+[이 연습에서는의 두 번째 부분](./walkthrough-landscape.md) 추가 두 조각 화면에 표시 하는 대체 레이아웃 (가로 모드에 대 한 최적화)에 대해 설명 합니다. 또한 몇 가지 사소한 코드 변경이 걸 수 코드를 응용 프로그램을 동시에 화면에 표시 되는 조각 수를 해당 동작을 적용할 수 있도록.
 
 ## <a name="related-links"></a>관련 링크
 
 - [FragmentsWalkthrough (샘플)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [디자이너 개요](~/android/user-interface/android-designer/index.md)
-- [Xamarin.Android 샘플: Honeycomb 갤러리](https://developer.xamarin.com/samples/HoneycombGallery/)
 - [조각 구현](http://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [지원 패키지](http://developer.android.com/sdk/compatibility-library.html)

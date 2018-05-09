@@ -6,12 +6,12 @@ ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="implementing-sirikit"></a>SiriKit 구현
 
@@ -95,7 +95,7 @@ MonkeyChat 예제 앱의 경우 데이터 모델 및 처리 코드 네트워크 
 2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트...** .
 3. 선택 **Visual C#** > **공유 프로젝트** 클릭는 **다음** 단추: 
 
-    [![](implementing-sirikit-images/prep02w.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02w.png#lightbox)
+    [![](implementing-sirikit-images/prep02.w157-sml.png "클래스 라이브러리를 선택 합니다.")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. 입력 `MonkeyChatCommon` 에 대 한는 **이름** 클릭는 **만들기** 단추입니다.
 5. 마우스 오른쪽 단추로 클릭는 **참조** 에서 기본 응용 프로그램의 폴더는 **솔루션 탐색기** 선택 **참조 편집...** . 확인 된 **MonkeyChatCommon** 프로젝트는 **확인** 단추: 
 
@@ -459,7 +459,7 @@ namespace MonkeyChat
 
 1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 파일...**   >  **iOS**:
 
-    [![](implementing-sirikit-images/plist01.png "속성 목록 추가")](implementing-sirikit-images/plist01.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.png "속성 목록 추가")](implementing-sirikit-images/plist01.png#lightbox)
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 3. 클릭는 **+** 설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
@@ -521,9 +521,10 @@ namespace MonkeyChat
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 파일...**   >  **iOS**:
+1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가 > 새 항목 … > Apple > 속성 목록 > Info.plist**:
 
-    [![](implementing-sirikit-images/plist01w.png "새 Info.plist 추가")](implementing-sirikit-images/plist01w.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.w157-sml.png "새 Info.plist 추가")](implementing-sirikit-images/plist01.w157.png#lightbox)
+
 2. 두 번 클릭는 `AppIntentVocabulary.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 3. 클릭는 **+** 설정 키를 추가 하는 **이름** 를 `ParameterVocabularies` 및 **형식** 를 `Array`:
 
@@ -625,11 +626,11 @@ namespace MonkeyChat
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 마우스 오른쪽 단추로 클릭는 **솔루션 이름** 에 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가...** .
-2. 대화 상자에서 선택 **iOS** > **확장** > **의도 확장** 클릭는 **다음** button: 
+2. 대화 상자에서 선택 **Visual C# > 확장 iOS > 의도 확장** 클릭는 **다음** 단추:
 
-    [![](implementing-sirikit-images/intents05w.png "의도 확장 선택")](implementing-sirikit-images/intents05w.png#lightbox)
+    [![](implementing-sirikit-images/intents05.w157-sml.png "의도 확장 선택")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. 그 다음 입력 한 **이름** 의도 확장과 클릭에 대 한는 **확인** 단추입니다.
-5. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **참조** 새로 만든된 의도 확장 폴더입니다. (즉 응용 프로그램은 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 하 고 **확인** 단추: 
+1. 에 **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **참조** 의도 새로 만든 확장 폴더를 선택 하 고 **추가 > 참조**합니다. (즉 응용 프로그램은 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 하 고 **확인** 단추:
 
     [![](implementing-sirikit-images/intents08w.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08w.png#lightbox)
     

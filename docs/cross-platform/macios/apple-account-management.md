@@ -5,12 +5,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 04/05/2017
-ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/06/2018
+ms.openlocfilehash: a4ca803085f31ff0db5dd4f194b705d765447c9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -18,23 +18,20 @@ Apple 계정 관리 인터페이스 id입니다. Apple와 관련 된 모든 개�
 
 Apple ID의 인증을 사용 하 여 명령줄에서 수행 [fastlane](https://fastlane.tools/)합니다. fastlane는 성공적으로 인증 될 수 있습니다에 대 한 컴퓨터에 설치 되어야 합니다. 자세한 fastlane 및 설치 하는 방법에 대 한 자세한 내용은에 [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) 가이드입니다.
 
-Mac 용 Visual Studio에서 Apple 계정 대화 상자를 사용 하면 다음을 수행할 수 있습니다.
+Apple 계정 대화 상자를 사용 하면 다음을 수행할 수 있습니다.
 
 * **만들기 및 관리 인증서** 
 * **만들기 및 프로 비전 프로필 관리** 
 
 이 작업을 수행 하는 방법에 대 한 정보는이 가이드에 설명 되어 있습니다.
 
-또한 다음을 수행할 iOS 번들 서명 도구를 사용할 수 있습니다.
-
-* **기존 프로필을 새 서명 id를 추가 합니다.** 
-* **새 장치를 프로 비전** 
+또한 자동으로 만들고 서명 Id, 응용 프로그램 Id 및 프로비저닝 프로필을 관리 하려면 iOS 자동 프로 비전 도구를 사용할 수 있습니다.
 
 이러한 기능을 사용 하 여에 대 한 자세한 내용은 참조는 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
 ️
 ## <a name="requirements"></a>요구 사항
 
-Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현재 사용할 수 없는 경우 Visual Studio for Windows에서
+Mac 및 Visual Studio 2017 (15.7 이상 버전)에 대 한 Visual Studio에서 사용할 수는 Apple 계정 관리
 
 이 기능을 사용 하는 Apple 개발자 계정이 있어야 합니다. 자세한 내용은 Apple 개발자 계정에는에서 사용할 수는 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
 
@@ -44,6 +41,8 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
 - 시작 하기 전에 확인에서 모든 사용자 사용권 계약에 동의 하는 [개발자 포털](https://developer.apple.com/account/)합니다.
 
 ## <a name="adding-an-apple-developer-account"></a>Apple 개발자 계정 추가
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. 로 이동 계정 관리 대화 상자를 열려면 **Visual Studio > 기본 설정 > Apple 개발자 계정**:
 
@@ -57,18 +56,35 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
  
 5. 선택 **항상 허용** 자격 증명을 사용 하도록 Visual Studio를 허용 하도록 경고 대화 상자에서:
 
-    ![](apple-account-management-images/image4.png)
+    ![경고 대화 상자를 항상 허용](apple-account-management-images/image4.png)
 
 6. 계정을 성공적으로 추가 되 면 사용자의 Apple ID와 팀의 구성원 인 사용자의 Apple ID가 표시 됩니다.
 
-    ![](apple-account-management-images/image5.png)
+    ![Apple 개발자 계정 대화 상자와 추가 된 계정](apple-account-management-images/image5.png)
 
 7. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 클릭합니다. 그러면 모든 서명 Id 및 컴퓨터에 설치 된 프로비저닝 프로필의 목록이 표시 됩니다.
 
-    ![](apple-account-management-images/image6.png)
+    ![세부 정보 화면 보여 주는 뷰 서명 id 및 컴퓨터에 대 한 프로필을 프로 비전](apple-account-management-images/image6.png)
 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-<a name="managing" />
+1. Visual Studio 2017에 Apple ID 추가 시작 하기 전에 개발 환경의 인지 확인 [와 쌍으로 Mac 빌드 호스트 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
+
+1. 계정 관리 창을 열려면 이동 **도구 > 옵션 > Xamarin > Apple 계정**:
+
+    ![Apple 계정 옵션 화면](apple-account-management-images/prov1.png)
+
+1. 선택 된 **추가** 단추 및 Apple ID 및 암호 입력:
+
+    ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov1a.png)
+
+1. 계정을 성공적으로 추가 되 면 사용자의 Apple ID와 팀의 구성원 인 사용자의 Apple ID가 표시 됩니다.
+ 
+1. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 클릭합니다. 그러면 모든 서명 Id 및 컴퓨터에 설치 된 프로비저닝 프로필의 목록이 표시 됩니다.
+
+    ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov2.png)
+
+-----
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>서명 Id를 관리 하 고 프로 비전 프로필
@@ -83,21 +99,37 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
 
 * **만료** – 인증서가 만료 되었습니다. 이 키 체인에서 제거 해야 합니다.
 
-  ![](apple-account-management-images/image7.png)
+  ![팀 세부 정보 대화 상자 정보](apple-account-management-images/image7.png)
 
 ## <a name="create-a-signing-identities"></a>서명 Id 만들기
 
-새 서명 id를 만들려면 선택 된 **새 인증서 만들기** 드롭다운 단추 및 필요한 유형 선택 합니다. 새 서명 올바른 사용 권한이 있는 경우에 몇 초 후 identity가 나타납니다.
+새 서명 id를 만들려면 선택 된 **Create Certificate** 드롭다운 단추 및 필요한 유형 선택 합니다. 새 서명 올바른 사용 권한이 있는 경우에 몇 초 후 identity가 나타납니다.
 
-드롭다운 목록에서 옵션을 회색으로 표시 하 고 하지 않은 경우 아래 그림과 같이, 이러한 종류의 인증서를 만들 수 있는 올바른 팀 권한을 않았는지 의미 합니다.
+드롭다운 목록에서 옵션을 회색을 선택 하지 않은 경우 이러한 종류의 인증서를 만들 수 있는 올바른 팀 권한을 않았는지 의미 합니다.
 
-![](apple-account-management-images/image8.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+![만들기 인증서 옵션](apple-account-management-images/image8.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![만들기 인증서 옵션](apple-account-management-images/prov3.png)
+
+-----
 
 ## <a name="download-provisioning-profiles"></a>프로 비전 프로필을 다운로드 합니다.
 
 팀 세부 정보 대화 상자에는 개발자 계정에 연결 된 모든 프로 비전 프로필의 목록이 표시 됩니다. 키를 눌러 로컬 컴퓨터에 모든 프로 비전 프로필을 다운로드할 수 있습니다는 **모든 프로필을 다운로드** 단추
 
-![](apple-account-management-images/image9.png)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+![프로 비전 프로필 섹션 다운로드](apple-account-management-images/image9.png)
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![프로 비전 프로필 섹션 다운로드](apple-account-management-images/prov4.png)
+
+-----
 
 ## <a name="ios-bundle-signing"></a>iOS 번들 서명
 
@@ -120,13 +152,10 @@ Apple 계정 관리를 Mac.에 대 한 Visual Studio에서 사용할 수 이 현
 ### <a name="failed-to-create-new-certificate"></a>새 인증서를 만들지 못했습니다.
 "이러한 종류의 인증서에 대 한 제한을 도달 했습니다"
 
-![](apple-account-management-images/image10.png)
+![인증서 제한 대화 상자](apple-account-management-images/image10.png)
 
 허용 되는 인증서의 최대 수 생성 되었습니다. 이 해결 하려면로 이동 된 [Apple 개발자 센터](https://developer.apple.com/account/ios/certificate/distribution) 및 프로덕션 인증서 중 하나를 취소 합니다.
 
 ## <a name="known-issues"></a>알려진 문제
 
-* 경우에 따라 세부 정보 보기 대화 상자는 엄청난 서명 id 및 프로필을 인출 하는 시간이 걸릴 수 있습니다.
-* 종종 포커스 수를 반환 하지 Visual Studio Mac 용 일으키는를 추가할 계정 세부 정보를 입력 한 후. 이 경우 프로세스를 다시 시도 하십시오.
-* Mac용 Visual Studio에서 만든 프로비전 프로필은 프로젝트에서 선택한 계정 자격(Entitlements.plist)을 고려하지 않습니다. 이 기능은 향후 버전의 IDE에 추가됩니다.
 * 기본적으로 프로비전 프로필 배포는 앱 스토어를 대상으로 합니다. 하우스 또는 임시 프로필은 수동으로 만들어야 합니다.

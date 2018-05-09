@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>바인딩는 합니다. JAR
 
@@ -81,7 +81,7 @@ Picasso.With (this)
 
 먼저 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac 또는 Visual Studio 용 Visual Studio에서 새 솔루션을 만들고 선택 된 *Android 바인딩 라이브러리* 템플릿. (Visual Studio를 사용 하는이 연습에서 스크린 샷 있지만 Mac 용 Visual Studio는 매우 유사). 솔루션 이름을 **JarBinding**: 
 
-[![JarBinding 라이브러리 프로젝트 만들기](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![JarBinding 라이브러리 프로젝트 만들기](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 템플릿에 포함 되어는 **단지** 폴더를 추가 하면 합니다. 바인딩 라이브러리 프로젝트에 JAR(s) 합니다. 마우스 오른쪽 단추로 클릭는 **단지** 폴더와 선택 **추가 > 기존 항목**: 
 
@@ -130,9 +130,9 @@ Java 바인딩 라이브러리 프로젝트를 만들 때 지정 해야 하는�
 
 먼저 바인딩 라이브러리를 사용 하는 새 Xamarin.Android 앱을 만듭니다. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **새 프로젝트 추가**; 새 프로젝트의 이름을 **BindingTest**합니다. 이 연습에서는; 간소화 하기 위해 바인딩을 라이브러리와 동일한 솔루션에이 응용 프로그램을 만들으십시오 그러나 바인딩 라이브러리를 사용 하는 앱 다른 솔루션에 있는 대신 수 있습니다.: 
 
-[![새 BindingTest 프로젝트 추가](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![새 BindingTest 프로젝트 추가](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
-마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가... **:
+마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가...** :
 
 [![오른쪽 참조를 추가 합니다.](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 

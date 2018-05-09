@@ -5,12 +5,12 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
-ms.openlocfilehash: d1e0fdb1c4b159b6db283d7b9b3be673b73a0ee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: 00785ad161f5f05fd70b059bb0a3f1c8d6c31f97
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
@@ -82,8 +82,8 @@ Android에서 서비스를 시작 하려면 가장 기본적인 방법은 디스
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **암시적 의도** &ndash; 느슨하게이 이와 같은 의도 식별 하는 동작의를 수행 해야, 되지만 해당 작업을 완료 하려면 서비스를 알 수 없습니다. 다음은 문자는 "To Whom It 년 5 월 문제가..." 배달의 암시적 의도 생각할 수 있습니다.
-    Android 의도 일치 하는 기존 서비스인 경우 즉, 및 확인 폴더의 내용을 검사 합니다.
+-   **암시적 의도** &ndash; 느슨하게이 이와 같은 의도 식별 하는 작업을 수행 하려면 사용자가 있지만 해당 작업을 완료 하려면 서비스를 알 수 없습니다. 다음은 문자는 "To Whom It 년 5 월 문제가..." 배달의 암시적 의도 생각할 수 있습니다.
+    Android 의미를 가지는의 내용을 검사 되며 의도 일치 하는 기존 서비스 인지 확인 합니다.
 
     _의도 필터_ 등록된 서비스와 함께 암시적 의도 충족할 수 있도록 하는 데 사용 됩니다. 의도 한 필터에 추가 하는 XML 요소는 **AndroidManifest.xml** 암시적 의도 가진 서비스를 충족할 수 있도록 하는 데 필요한 메타 데이터가 들어 있는입니다.
 

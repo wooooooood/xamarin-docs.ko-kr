@@ -6,12 +6,12 @@ ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
 
@@ -33,9 +33,7 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 
 [![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰가, 및 뷰-컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
-
 그러나 사용 하 여 이러한 보기 계층을 생성할 수는 [iOS에 대 한 Xamarin 디자이너](~/ios/user-interface/designer/index.md) Mac 용 Visual Studio에서 좋네요 코드에서 완전히 작동 하는 방법에 대 한 기본적인 이해 합니다. 이 문서 코드 전용 사용자 인터페이스 개발 실행 되 고 작동 하는 기본 가리키는 몇 가지 안내 합니다.
-
 
 -----
 
@@ -45,16 +43,17 @@ IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램
 
 ## <a name="ios-blank-project-template"></a>iOS 빈 프로젝트 템플릿
 
-첫째, iPhone을 사용 하 여 Visual Studio에서 iOS 프로젝트를 만들 **빈 프로젝트** 서식 파일을 아래 표시 된는 컨트롤러와 뷰를 추가 하려면 확장 합니다.
+먼저 다음을 사용 하 여 Visual Studio에서 iOS 프로젝트를 만듭니다는 **파일 > 새 프로젝트 > Visual C# > iPhone 및 iPad > iOS 앱 (Xamarin)** 아래에 표시 된 프로젝트:
 
+[![새 프로젝트 대화 상자](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
-[![](ios-code-only-images/blankapp-vs.png "새 프로젝트 대화 상자")](ios-code-only-images/blankapp-vs.png#lightbox)
+다음을 선택 된 **비어 있는 앱** 프로젝트 템플릿:
 
+[![서식 대화 상자를 선택 합니다.](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
 빈 프로젝트 템플릿을 프로젝트에 4 개 파일을 추가합니다.
 
-
-[![](ios-code-only-images/empty-project.png "프로젝트 파일")](ios-code-only-images/empty-project.png#lightbox)
+[![프로젝트 파일](ios-code-only-images/empty-project.w157-sml.png "프로젝트 파일")](ios-code-only-images/empty-project.w157.png#lightbox)
 
 
 1. **AppDelegate.cs** -를 포함 한 `UIApplicationDelegate` 하위 클래스 `AppDelegate` , iOS에서 응용 프로그램 이벤트를 처리 하는 데 사용 되는 합니다. 응용 프로그램 창에 만들어집니다는 `AppDelegate`의 `FinishedLaunching` 메서드.
@@ -99,18 +98,12 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
             return true;
         }
 
+에 추가 된 코드는 `FinishedLaunching` 위의 5 단계에는 iOS 응용 프로그램에 대 한 창을 만드는 데 필요한 코드의 최소 크기입니다.
+
 
 -----
 
-## <a name="creating-a-window"></a>창 만들기
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-에 추가 된 코드는 `FinishedLaunching` 위의 3 단계에는 iOS 응용 프로그램에 대 한 창을 만드는 데 필요한 코드의 최소 크기입니다.  
-
------
 
 iOS 응용 프로그램을 사용 하 여 빌드됩니다는 [MVC 패턴](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller)합니다. 응용 프로그램에 표시 되는 첫 번째 화면 창의 루트 뷰-컨트롤러에서 만들어집니다. 참조는 [Hello, iOS 멀티 스크린](~/ios/get-started/hello-ios-multiscreen/index.md) MVC에 대 한 자세한 내용은 패턴 자체에 대 한 안내 합니다.
 
@@ -223,7 +216,7 @@ public class AppDelegate : UIApplicationDelegate
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](ios-code-only-images/customviewcontroller.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/customviewcontroller.png#lightbox)
+[![](ios-code-only-images/customviewcontroller.w157-sml.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

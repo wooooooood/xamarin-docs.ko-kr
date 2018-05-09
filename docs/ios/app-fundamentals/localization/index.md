@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ios-localization"></a>iOS 지역화
 
@@ -137,8 +137,8 @@ IOS의 다음 기능을 사용자에 게 표시 하기 위한 지역화 된 리�
 문자열의 다음 문자를 이스케이프 처리 해야 합니다.
 
 * `\"`  따옴표
-* `\\`  backslash
-* `\n`  newline
+* `\\`  백슬래시
+* `\n`  줄 바꿈
 
 이 예는 **es/Localizable.strings** (즉, 이 샘플에서 파일을 스페인어):
 
@@ -359,5 +359,5 @@ someControl.Text = localizedString;
 - [(지역화 된 스토리 보드) Tasky (샘플)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Apple 지역화 가이드](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [플랫폼 간 지역화 개요](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization.md)
+- [Xamarin.Forms 지역화](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Android 지역화](~/android/app-fundamentals/localization.md)

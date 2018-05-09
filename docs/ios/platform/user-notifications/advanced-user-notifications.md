@@ -6,12 +6,12 @@ ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9958682ce9e356692f451900d7dca0e343b244da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-user-notifications"></a>고급 사용자 알림
 
@@ -181,10 +181,10 @@ Xamarin.iOS 앱에서 UI는 사용자 지정 사용자 알림을 구현 하려�
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Mac.에 대 한 Visual Studio에서 응용 프로그램의 솔루션을 열으십시오
-2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
-3. 선택 **iOS** > **확장** > **알림 콘텐츠 확장이**: 
+2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가 > 새 프로젝트...** .
+3. 선택 **Visual C# > 확장 iOS > 알림 콘텐츠 확장**:
 
-    [![](advanced-user-notifications-images/notify01w.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01w.png#lightbox)
+    [![](advanced-user-notifications-images/notify01.w157-sml.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **확인** 단추입니다.
 
 -----

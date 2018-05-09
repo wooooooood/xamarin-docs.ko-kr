@@ -4,14 +4,14 @@ description: 원본과 대상 간의 정보 흐름을 제어 합니다.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>바인딩 모드
 
@@ -58,6 +58,7 @@ ms.lasthandoff: 04/04/2018
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; 데이터가 원본과 대상 간의 양방향 이동
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; 데이터 소스에서 대상으로 이동
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 데이터 소스에 대상에서 이동합니다.
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 대상으로 하지만 경우에만 소스에서 데이터 이동은 `BindingContext` 변경 된 사항을 (Xamarin.Forms 3.0)
 
 모든 바인딩 가능한 속성에는 기본 바인딩 가능 속성 만들어질 때 설정 되는 모드를 바인딩 및에서 사용할 수는 [ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) 의 속성은 `BindableProperty` 개체입니다. 이 기본 바인딩 모드 속성은 데이터 바인딩 대상 때 적용 모드를 나타냅니다.
 
@@ -94,6 +95,15 @@ ViewModel 클래스는 데이터 바인딩 소스 및 보기와 같은 보기의
 - `SelectedItem` 속성 `ListView`
 
 도입한 이유는 바인딩의 `SelectedItem` 속성을 설정 하 여 바인딩 소스 유발 합니다. 이 문서 뒷부분의 예는 해당 동작을 재정의합니다.
+
+### <a name="one-time-bindings"></a>일회성 바인딩
+
+여러 속성의 기본 바인딩 모드에는 `OneTime`합니다. 이러한 항목은 다음과 같습니다.
+
+- `IsTextPredictionEnabled` 속성 `Entry`
+- `Text``BackgroundColor`, 및 `Style` 의 속성 `Span`합니다.
+
+바인딩 모드를 사용 하 여 속성을 대상 `OneTime` 바인딩 컨텍스트가 변경 될 때만 업데이트 됩니다. 이 대 한 이러한 대상 속성에 바인딩 소스 속성의 변경 내용을 모니터링할 필요가 없기 때문에 바인딩 인프라를 단순해 집니다.
 
 ## <a name="viewmodels-and-property-change-notifications"></a>Viewmodel 및 속성이 변경 알림
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 때는 `Color` 속성 변경, 정적 `GetNearestColorName` 에서 메서드는 `NamedColor` 클래스 (에 포함는 **DataBindingDemos** 솔루션) 가장 가까운 명명 된 색을 가져오고 설정 하는 `Name` 속성입니다. 이 `Name` 속성에는 개인 `set` 접근자를 클래스 외부에서 설정할 수 없습니다.
 
 바인딩 인프라에 처리기를 연결 된 ViewModel 바인딩 소스 개체로 설정 된 경우는 `PropertyChanged` 이벤트입니다. 이러한 방식으로 바인딩 속성을 알림을 받을 수와 그런 다음 대상 속성에서 변경 된 값에서 설정할 수 있습니다.
+
+그러나 때 대상 속성 (또는 `Binding` 대상 속성에 정의)에 `BindingMode` 의 `OneTime`, 처리기를 연결에 바인딩 인프라는 필요 하지 않습니다는 `PropertyChanged` 이벤트입니다. 대상 속성을 업데이트 경우에만 `BindingContext` 변경과 자체 source 속성 변경 될 때 하지 않습니다. 
 
 **간단한 색 선택기** XAML 파일에서 인스턴스화하는 `HslColorViewModel` 페이지의 리소스 사전 및 초기화에는 `Color` 속성입니다. `BindingContext` 의 속성은 `Grid` 로 설정 되는 `StaticResource` 바인딩 해당 리소스를 참조 하는 확장:
 

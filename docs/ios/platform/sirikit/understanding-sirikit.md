@@ -6,12 +6,12 @@ ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/16/2017
-ms.openlocfilehash: 7140747307c15b51fb330a41b496079dc680e5fa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해
 
@@ -293,7 +293,7 @@ SiriKit 구현의 마지막 부분 필요한 어휘를 제공 하 여 응용 프
 - **매개 변수** -응용 프로그램에 특정 비표준 매개 변수 형식 집합을 제공 합니다. 예를 들어 워크 아웃 이름을 MonkeyFit 앱에 대 한 합니다. 이러한 구성 됩니다.
     - **구** -앱의 앱에 대 한 고유한 용어를 정의할 수 있습니다. 예를 들어: MonkeyFit 앱에 대 한 "Bananarific" 워크 아웃 유형입니다. 
     - **발음** -특정된 구문에 대 한 간단한 발음 맞춤법으로 Siri에 발음 힌트를 제공 합니다. 예를 들어 "ba nana ri fic"입니다.
-    - **예제** -응용 프로그램에서 특정된 구문을 사용 하는 예제를 제공 합니다. 예를 들어 *"시작 정도 Bananarific에 MonkeyFit"*합니다.
+    - **예제** -응용 프로그램에서 특정된 구문을 사용 하는 예제를 제공 합니다. 예를 들어 *"시작 정도 Bananarific에 MonkeyFit"* 합니다.
 
 자세한 내용은 Apple의를 참조 하십시오 [앱 어휘 파일 형식 참조](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1)합니다.
 
@@ -341,7 +341,7 @@ IOS 10에서에서 지도 앱 안에서 공유 사용자 지도 UI 내에서 직
 
 ## <a name="designing-a-great-siri-experience"></a>Siri 경험 디자인
 
-Siri에 응용 프로그램을 통합 하는 경우 유용한 사용자 환경을 디자인 하는 것은 좋은 응용 프로그램의 사용자 인터페이스 디자인 다릅니다. 정상적인 상황에서 사용자가 응용 프로그램에 대해 직접 상호 작용 하는 위치와 달리 화면에서 Siri 있습니다 사용할 때는 여러 번 경우 시각적 인터페이스가 없는 표시 전혀 있습니다. 예를 들어 시작 될 때 사용자가 대화를 *"Hey Siri"*합니다.
+Siri에 응용 프로그램을 통합 하는 경우 유용한 사용자 환경을 디자인 하는 것은 좋은 응용 프로그램의 사용자 인터페이스 디자인 다릅니다. 정상적인 상황에서 사용자가 응용 프로그램에 대해 직접 상호 작용 하는 위치와 달리 화면에서 Siri 있습니다 사용할 때는 여러 번 경우 시각적 인터페이스가 없는 표시 전혀 있습니다. 예를 들어 시작 될 때 사용자가 대화를 *"Hey Siri"* 합니다.
 
 ### <a name="how-siri-helps-the-developer"></a>Siri 개발자를 통해 하는 방법
 
@@ -449,7 +449,7 @@ Siri 및 요청을 사용 하 여 대화를 시작 하 여 사용자 응용 프�
 - 응용 프로그램 지역화 된 예제를 제공 하는지 확인 합니다.
 - 각 예에서는 응용 프로그램 내에서 예상 대로 작동 제공 되도록 합니다.
 - Siri 같은 텍스트를 포함 하지 않는 예제에서 주소 지정을 피합니다 *"Hey Siri..."*
-- 와 같은 모든 불필요 한 pleasantries 방지 *"하십시오"* 또는 *"감사 합니다."*합니다.
+- 와 같은 모든 불필요 한 pleasantries 방지 *"하십시오"* 또는 *"감사 합니다."* 합니다.
 
 탐색 하 고 앱 Siri 대신 하 여 사용자와 중인 대화 모양을 지정할 수 있는 방법에 대 한 실험 적절 한 보세요. 와 상호 작용으로 프로세스 중에 일반 사용자에 게 문의 해야 하 고 응용 프로그램의 예상 시간이 지남에 따라 변경 될 수 있습니다.
 

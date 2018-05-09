@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 83fb7a03b3426631fcf772bcb3605fea44fd4f2b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 
@@ -51,7 +51,7 @@ Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 �
 
 ## <a name="layoutslayoutsindexmd"></a>[레이아웃](layouts/index.md)
 
-Xamarin.Forms에는 몇 가지 레이아웃 구성을 위한 화면 내용을 있습니다. `StackLayout``Grid`, `AbsoluteLayout`, `ScrollView`, 및 `RelativeLayout` 각 beautiful 및 응답성이 뛰어난 사용자 인터페이스를 만드는 사용할 수 있습니다.
+Xamarin.Forms에는 몇 가지 레이아웃 구성을 위한 화면 내용을 있습니다. `StackLayout``Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, 및 `RelativeLayout` 각 beautiful 및 응답성이 뛰어난 사용자 인터페이스를 만드는 사용할 수 있습니다.
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
@@ -84,6 +84,10 @@ Xamarin.Forms에 제공 하 고 텍스트를 받기에 대 한 몇 가지 뷰가
 ## <a name="themesthemesindexmd"></a>[테마](themes/index.md)
 
 Xamarin.Forms 테마 표준 컨트롤에 대 한 특정 시각적 모양을 정의합니다. 응용 프로그램의 리소스 사전에 테마를 추가 하면 표준 컨트롤의 모양을 변경 합니다.
+
+## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
+
+Visual State Manager를 장치 방향 또는 크기의 변화에 따라 맞출 수 있는 레이아웃을 포함 하 여 코드에서 사용자 인터페이스에 대 한 변경 내용을 트리거하는 구조적된 방법을 제공 합니다.
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 

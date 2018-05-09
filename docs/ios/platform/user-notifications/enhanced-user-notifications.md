@@ -6,12 +6,12 @@ ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="enhanced-user-notifications"></a>향상 된 사용자 알림
 
@@ -548,10 +548,10 @@ Xamarin.iOS 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Visual Studio에서 응용 프로그램의 솔루션을 엽니다.
-2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가** > **새 프로젝트 추가**합니다.
-3. 선택 **iOS** > **확장** > **알림 서비스 확장**: 
+2. 솔루션 이름을 마우스 오른쪽 단추로 클릭는 **솔루션 탐색기** 선택 **추가 > 새 프로젝트...** .
+3. 선택 **Visual C# > 확장 iOS > 알림 서비스 확장**:
 
-    [![](enhanced-user-notifications-images/extension01w.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension01w.png#lightbox)
+    [![](enhanced-user-notifications-images/extension01.w157-sml.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. 입력 한 **이름** 확장과 클릭에 대 한는 **확인** 단추입니다.
 
 -----

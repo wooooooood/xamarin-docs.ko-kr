@@ -6,12 +6,12 @@ ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 54708a7cfd071f77968991c9fe4e52938697c9bb
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-an-aar"></a>바인딩는 합니다. AAR
 
@@ -82,7 +82,7 @@ public class TextCounter
 
 1.  Android 바인딩 라이브러리 템플릿을 사용 하 여 시작 하는 새 바인딩을 라이브러리 프로젝트를 만듭니다. Mac 용 Visual Studio 또는 Visual Studio (아래 스크린샷과 Visual Studio를 표시 하지만 Mac 용 Visual Studio는 매우 유사)을 사용할 수 있습니다. 솔루션 이름을 **AarBinding**:
 
-    [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
+    [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
 2.  템플릿에 포함 되어는 **단지** 폴더를 추가 하면 합니다. 바인딩 라이브러리 프로젝트에 AAR(s) 합니다. 마우스 오른쪽 단추로 클릭는 **단지** 폴더와 선택 **추가 > 기존 항목**:
 
@@ -118,7 +118,7 @@ public class TextCounter
 
 1.  이 연습을 단순화 하기 위해 바인딩을 라이브러리와 동일한 솔루션에이 응용 프로그램을 만들고 있습니다. (바인딩 라이브러리를 사용 하는 응용 프로그램은 다른 솔루션에는 있을 수도 없습니다.) 새 Xamarin.Android 앱 만들기: 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **새 프로젝트 추가**합니다. 새 프로젝트의 이름을 **BindingTest**:
 
-    [![새 BindingTest 프로젝트 만들기](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
+    [![새 BindingTest 프로젝트 만들기](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
 2.  마우스 오른쪽 단추로 클릭는 **참조** 의 노드는 **BindingTest** 프로젝트를 마우스 선택 **참조 추가...** :
 

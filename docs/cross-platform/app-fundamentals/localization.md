@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
-ms.translationtype: MT
+ms.openlocfilehash: 2e108947ce8237b9f48b201e60c2252cfb0bc376
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 04/26/2018
 
 Xamarin 앱을 지역화 하는 기술 세부 정보로 바로 이동 하려는 경우 다음 플랫폼 관련 방법 도움말 문서 중 하나를 시작 합니다.
 
-- [**Xamarin.Forms** ](~/xamarin-forms/app-fundamentals/localization.md) RESX 파일을 사용 하 여 플랫폼 간 지역화 합니다.
+- [**Xamarin.Forms** ](~/xamarin-forms/app-fundamentals/localization/index.md) RESX 파일을 사용 하 여 플랫폼 간 지역화 합니다.
 - [**Xamarin.iOS** ](~/ios/app-fundamentals/localization/index.md) 네이티브 플랫폼 지역화 합니다.
 - [**Xamarin.Android** ](~/android/app-fundamentals/localization.md) 네이티브 플랫폼 지역화 합니다.
 
@@ -302,7 +302,7 @@ Xamarin으로 사용할 수 있는 다양 한 플랫폼 및 플랫폼별 국제�
 
 에 관심이 플랫폼에 대 한 기술 세부 정보를 읽는 계속:
 
-- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md) RESX 파일을 사용 하 여 플랫폼 간 지역화 합니다.
+- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) RESX 파일을 사용 하 여 플랫폼 간 지역화 합니다.
 - [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) 네이티브 플랫폼 지역화 합니다.
 - [Xamarin.Android](~/android/app-fundamentals/localization.md) 네이티브 플랫폼 지역화 합니다.
 

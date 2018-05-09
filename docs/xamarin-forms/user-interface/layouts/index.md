@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="layouts"></a>레이아웃
 
@@ -28,6 +28,7 @@ Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 �
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; 좌표를 설정 하 여 보기를 정렬 및 절대값 또는 비율 크기 조정 하는 데 사용 합니다. AbsoluteLayout 뷰 계층 수 있을 뿐만 아니라 왼쪽, 오른쪽 또는 가운데 고정 데 사용할 수 있습니다.
 * **[RelativeLayout](relative-layout.md)**  &ndash; 부모 크기 및 위치를 기준으로 제약 조건을 설정 하 여 보기를 정렬 하는 데 사용 합니다.
 * **[그리드](grid.md)**  &ndash; 표로 보기를 정렬 하는 데 사용 합니다. 절대값 또는 비율 측면에서 행과 열을 지정할 수 있습니다.
+* **[FlexLayout](flex-layout.md)**  &ndash; 줄 바꿈이 있는 뷰를 가로 또는 세로로 정렬 하는 데 사용 합니다.
 * **[ScrollView](scroll-view.md)**  &ndash; 뷰 화면의 경계 내에 완전히 표시할 수 없을 때 스크롤을 제공 하는 데 사용 합니다.
 * **[LayoutOptions](layout-options.md)**  &ndash; 맞춤 및 부모를 기준으로 보기에 대 한 확장을 정의 합니다.
 * **[투명도 입력](#input_transparency)**  &ndash; 요소 입력을 받을지 여부를 지정 합니다.
@@ -59,6 +60,23 @@ Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 �
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
+
+`FlexLayout` 비슷합니다 `StackLayout` 가로 또는 세로로 자식 뷰를 표시 한다는 점에서:
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+그러나 단일 행 이나 열에 맞게 너무 많은 자식인 경우 `FlexLayout` 보기 래핑 수 이기도 합니다. `FlexLayout` CSS 유연한 상자 레이아웃 모듈을 기반으로 하며가 위치 지정 및 해당 자식 맞춤에 대 한 동일한 기본 제공 옵션의 많이 사용 합니다.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 
