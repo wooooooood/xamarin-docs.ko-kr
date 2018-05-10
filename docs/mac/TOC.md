@@ -84,6 +84,7 @@
 #### [64비트로 Xamarin.Mac 통합 앱 업데이트](~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/mac)
 ### [플랫폼 간 앱에서의 네이티브 형식 작업](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/mac)
 ### [HttpClient 스택 및 SSL/TLS 구현 선택기](~/cross-platform/macios/http-stack.md?context=xamarin/mac)
+### [빌드 최적화](~/cross-platform/macios/optimizations.md?context=xamarin/mac)
 ## [고급 개념 및 내부 요소](internals/index.md)
 ### [AOT](internals/aot.md)
 ### [사용 가능한 어셈블리](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)
