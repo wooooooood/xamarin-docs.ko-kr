@@ -3,15 +3,14 @@ title: CocosSharp에 여러 해상도 처리합니다.
 description: 이 가이드에는 다양 한 해상도의 장치에서 제대로 표시 하는 게임을 개발 하는 CocosSharp를 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4077af2351b8ab3ef718a71cc672add54b6ef05a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 577a3edbd106b6fba298b3ee5999265ef955f9dd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>CocosSharp에 여러 해상도 처리합니다.
 
@@ -25,7 +24,7 @@ CocosSharp 물리적 장치의 디스플레이에서 픽셀 수에 관계 없이
 | **장치** | **디스플레이 해상도** | **예제 스크린 샷** |
 |--- | --- |--- |
 |원하는 표시 오프셋|368 x 240 (된 가로 세로 비율에 대 한 검은 막대)| ![368 x 240 (된 가로 세로 비율에 대 한 검은 막대)](resolutions-images/image1.png) |
-|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960 x 640](resolutions-images/image2.png) |
 |iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
 
 이 문서에서는 위 표에 표시 된 문제를 해결 하려면 CocosSharp를 사용 하는 방법을 설명 합니다. 즉, 모든 장치 – 화면 해상도 관계 없이 첫 번째 행에 표시 된 대로 렌더링 하는 방법을 설명 합니다.
@@ -248,7 +247,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio example
+### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio 예제
 
 확인 하려면 어떻게 `DefaultTexelToContentSizeRatio` 시각적 개체의 크기 영향 요소를 위에서 설명한 코드를 고려 하세요.:
 
@@ -277,7 +276,7 @@ CCSprite.DefaultTexelToContentSizeRatio = 2;
 ![](resolutions-images/image12.png "이제는 게임을 실행 하는 경우 1000 x 1000 질감 완벽 하 게 표시 됩니다.")
 
 
-### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio 세부 정보
 
 `DefaultTexelToContentSizeRatio` 속성은 `static,` 응용 프로그램에서 모든 스프라이트를 의미 하는 동일한 값을 공유 합니다. 다른 해상도 대해 발생 자산 게임에 대 한 일반적인 방법은 각 해결 범주에 대 한 자산 전체 집합을 포함 하는 것입니다. Mac 템플릿용으로 CocosSharp Visual Studio는 기본적으로 제공 **ld** 및 **hd** 질감의 두 집합을 지 원하는 게임에 대 한 유용할 수 있는 자산에 대 한 폴더입니다. 내용으로는 예제 콘텐츠 폴더 같을 수 있습니다.
 

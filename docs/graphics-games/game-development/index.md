@@ -3,15 +3,14 @@ title: Xamarin 사용한 게임 개발 소개
 description: 특성 게임 개발에 다른 종류의 앱 개발에서 크게 다를 수 있습니다. 이 문서는 Xamarin.iOS 및 Xamarin.Android를 함께 사용할 수 있는 기술을 갖춘 게임 개발에 소개 합니다. Xamarin.iOS 및 Xamarin.Android 게임을 적용 하는 방법을 간략하게 설명 하 고 사용 하기 위해 사용할 수 있는 기술의 샘플링 모두 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 543d3e2d4e53d1b88213ac82689073a9fb925820
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin 사용한 게임 개발 소개
 

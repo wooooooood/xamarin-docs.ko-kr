@@ -3,15 +3,14 @@ title: 기존 iOS 앱을 업데이트합니다.
 description: 통합 된 API를 사용 하는 기존 Xamarin.iOS 앱을 업데이트 하려면 다음이 단계를 수행 합니다.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: ce7e269f76567f824c4cc65916bed32f0f6c08d1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 74534333bb0c4ae54dc6816312a5531f29a80ce5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="updating-existing-ios-apps"></a>기존 iOS 앱을 업데이트합니다.
 

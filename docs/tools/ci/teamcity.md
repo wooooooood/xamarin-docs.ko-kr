@@ -3,15 +3,14 @@ title: Xamarin을 사용한 팀 도시를 사용 하 여
 description: 이 가이드를 모바일 응용 프로그램을 컴파일하고 다음에 전송 하려면 Xamarin 테스트 클라우드 TeamCity 사용과 관련 된 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin을 사용한 팀 도시를 사용 하 여
 

@@ -2,15 +2,14 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: 데스크톱 응용 프로그램 포팅 가이드
 description: 기존 Windows Forms 또는 WPF 앱 macOS, iOS, Android, 뿐만 아니라 UWP/Windows 10에서 실행 하는 플랫폼 간 앱 만들기를 분리 하는 방법의 간단한 설명 했습니다.
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 35ffb9c92b5d3faf48f3e76a6702c2518ca80538
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: cdf70065893a4da268f628369fa94336291ead1f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="desktop-app-porting-guidance"></a>데스크톱 응용 프로그램 포팅 가이드
 

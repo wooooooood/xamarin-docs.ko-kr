@@ -3,15 +3,14 @@ title: BouncingGame 세부 정보
 description: 이 연습에서는 CocosSharp를 사용 하 여 간단한 바운스되 볼 게임을 구현 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: 2f25841af8cb73a7e0fe02264706404ce59cacfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d12d6fb8ecfcba5e5093b2af4790a51ef8cf8e47
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="bouncinggame-details"></a>BouncingGame 세부 정보
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 04/04/2018
 
 완성 된 게임은 다음과 같이 표시 됩니다.
 
-![BouncingGame, completed](bouncing-game-images/image1.png "BouncingGame, completed")
+![완료 BouncingGame](bouncing-game-images/image1.png "완료 BouncingGame")
 
 ## <a name="unzipping-game-content"></a>압축을 푸는 게임 콘텐츠
 

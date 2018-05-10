@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 손전등
 description: 손전등 클래스에 켜기 / 끄기 장치의 카메라 플래시 손전등으로 만들 수 있습니다.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3d867d742314f2677eeab35bbc354f696c99bf75
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: f187fa404df09e387ed870f524239d3baabfdd3f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials 손전등
 

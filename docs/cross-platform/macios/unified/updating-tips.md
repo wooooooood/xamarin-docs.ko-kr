@@ -2,14 +2,13 @@
 title: 통합 된 API에 코드를 업데이트 하기 위한 팁
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: b23a84c990eb2418e94b414cc9750b3060c572ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 640f95e0083c73288cc8e1f183b06bd28a7b4e07
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>통합 된 API에 코드를 업데이트 하기 위한 팁
 
@@ -135,7 +134,7 @@ Fix: 반환 값 및 매개 변수 형식을 변경 `nint`합니다. 일반적으
 public override nint RowsInSection (UITableView tableview, nint section) {
 ```
 
-**Error CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
+**오류 CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
 
 Fix: 반환 형식으로 변경 된 경우 `nint`, 반환 값을 캐스팅 `nint`합니다.
 

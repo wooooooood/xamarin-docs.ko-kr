@@ -3,14 +3,13 @@ title: 통합 설치 및 요구 사항
 description: 다운로드, 설치 및 Xamarin 통합 문서를 사용 하는 방법.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -103,7 +102,7 @@ IOS 또는 Android 통합 문서 연결에 문제가 이미 체크 아웃 하는
 - 장치 OS 버전
 - Android: x86를 사용 하 고 있는지 확인 하십시오. 에뮬레이터
 - Android: 에뮬레이터 플랫폼 사용 중 인가요? Google 에뮬레이터?
-  Visual Studio Android Emulator? Xamarin Android Player?
+  Visual Studio의 Android 에뮬레이터? Xamarin Android Player?
 - Windows에서 iOS: 어떤 버전의 Xamarin 원격 iOS 시뮬레이터의 수행을 설치한 상태 (확인 **프로그램 추가/제거** 에 **제어판**)?
 - Windows에서 iOS: 하십시오 Mac 빌드 호스트에도 플랫폼 버전 정보를 제공
 - 장치는 네트워크 연결 (웹 브라우저를 통해 확인)이 있습니까?

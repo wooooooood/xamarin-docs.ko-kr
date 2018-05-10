@@ -8,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -110,11 +110,11 @@ Xamarin.Android 8.0으로 프로젝트를 만들려면 먼저 사용 해야 Xama
 
 
 
-### <a name="start-a-xamarinandroid-project"></a>Start a Xamarin.Android Project
+### <a name="start-a-xamarinandroid-project"></a>Xamarin.Android 프로젝트 시작
 
 새 Xamarin.Android 프로젝트를 만듭니다. Xamarin 사용한 Android 개발을 처음 접하는 경우 참조 [Hello, Android](~/android/get-started/hello-android/index.md) Xamarin.Android 프로젝트를 만드는 방법에 대 한 자세한 내용은 합니다.
 
-Android 프로젝트를 만들 때 Android 8.0 이상을 대상으로 지정할 버전 설정을 구성 해야 합니다. 예를 들어 Android 8.0에 대 한 프로젝트를 대상으로 구성 해야 하는 프로젝트 대상 Android API 수준 **Android 8.0 (API 26)**합니다. 대상 프레임 워크 수준 이상 API 26으로 설정 하는 것이 좋습니다. Android API 수준 수준을 구성 하는 방법에 대 한 자세한 내용은 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
+Android 프로젝트를 만들 때 Android 8.0 이상을 대상으로 지정할 버전 설정을 구성 해야 합니다. 예를 들어 Android 8.0에 대 한 프로젝트를 대상으로 구성 해야 하는 프로젝트 대상 Android API 수준 **Android 8.0 (API 26)** 합니다. 대상 프레임 워크 수준 이상 API 26으로 설정 하는 것이 좋습니다. Android API 수준 수준을 구성 하는 방법에 대 한 자세한 내용은 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
 
 
 ### <a name="configure-an-emulator-or-device"></a>에뮬레이터 또는 장치를 구성 합니다.
@@ -190,7 +190,7 @@ Xamarin Android 에뮬레이터 관리자 없이 가상 장치를 만들려면 �
 
 -----
 
-테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Android SDK 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
+테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Google Android 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
 
 장소 또는 픽셀 같은 물리적 장치를 사용 하는 경우에 무선 OTA 업데이트를 통해 자동을 통해 장치를 업데이트 하거나 시스템 이미지를 다운로드 하 고 장치를 직접 업데이트 수 합니다. Android Oreo에 장치를 수동으로 업데이트 하는 방법에 대 한 자세한 내용은 참조 [Nexus 장치와 픽셀에 대 한 기본 이미지](https://developers.google.com/android/images)합니다.
 

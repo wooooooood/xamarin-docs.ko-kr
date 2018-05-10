@@ -3,15 +3,14 @@ title: Part 2-는 WalkingGame 구현
 description: 이 연습에서는 터치식 입력 게임 논리 및 콘텐츠를 사용 하 여 이동 하는 애니메이션된 sprite의 데모를 만드는 빈 MonoGame 프로젝트를 추가 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: bc4ab2e77bfce9c9ba6043533bcfda5a359d322e
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 87678d9d77f75bccc68a667d3fb0f35b641b937c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Part 2-는 WalkingGame 구현
 

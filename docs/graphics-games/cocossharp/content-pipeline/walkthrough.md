@@ -3,15 +3,14 @@ title: MonoGame PipelineTool를 사용 하 여
 description: MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 Monogame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 672c57aded149200b32501a6b48165ca88726ee1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 
@@ -69,7 +68,7 @@ MonoGame 파이프라인 도구를 실행 하 고 콘텐츠 및 게임 프로젝
 
 ## <a name="creating-a-content-project"></a>콘텐츠 프로젝트 만들기
 
-게임 프로젝트를 만들었으므로 이제 해당 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. 이렇게 하려면, MonoGame 파이프라인 도구 선택에서 **파일 > 새로 만들기...**  프로젝트의 콘텐츠 폴더를 탐색 합니다. Android, 해당 폴더에는 **[root]\BouncingGame.Android\Assets\Content 프로젝트\**합니다. IOS의 경우 해당 폴더에는 **[root]\BouncingGame.iOS\Content 프로젝트\**합니다.
+게임 프로젝트를 만들었으므로 이제 해당 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. 이렇게 하려면, MonoGame 파이프라인 도구 선택에서 **파일 > 새로 만들기...**  프로젝트의 콘텐츠 폴더를 탐색 합니다. Android, 해당 폴더에는 **[root]\BouncingGame.Android\Assets\Content 프로젝트\** 합니다. IOS의 경우 해당 폴더에는 **[root]\BouncingGame.iOS\Content 프로젝트\** 합니다.
 
 변경 된 **파일 이름** 를 **ContentProject** 클릭는 **저장** 단추:
 

@@ -2,15 +2,14 @@
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: UI 컨트롤 비교
 description: 유사성과 각 플랫폼에서 사용할 컨트롤 수 있는 차이점을 이해 합니다.
-ms.technology: xamarin-crossplatform
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 01c7f8eaa2f37b2309a47e0ee72c74f8e6427e1d
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 01dead601f1d4ba50140d5cd9d280ebd5412225a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="ui-controls-comparison"></a>UI 컨트롤 비교
 

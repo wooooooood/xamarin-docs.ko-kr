@@ -220,7 +220,7 @@
 #### [ABI 관련 APK 빌드](deploy-test/building-apps/abi-specific-apks.md)
 ### [명령줄 에뮬레이터](deploy-test/command-line-emulator.md)
 ### [디버깅](deploy-test/debugging/index.md)
-#### [Android SDK 에뮬레이터](deploy-test/debugging/android-sdk-emulator/index.md)
+#### [Google Android Emulator](deploy-test/debugging/android-sdk-emulator/index.md)
 ##### [에뮬레이터 실행](deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 ##### [문제 해결](deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 #### [Visual Studio Android Emulator](deploy-test/debugging/visual-studio-android-emulator.md)

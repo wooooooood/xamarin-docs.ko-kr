@@ -3,15 +3,14 @@ title: 'F #을 사용한 프로그래밍 UrhoSharp'
 description: '사용 하 여 F # Visual Studio에서 Mac에 대 한 간단한 UrhoSharp 응용 프로그램을 만드는 방법'
 ms.prod: xamarin
 ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 1496ff10a089829a01ad9993dfbca87d10b18991
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: d2b21204d1d328831419308827e1a2de2b6aef1c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="programming-urhosharp-with-f"></a>F #을 사용한 프로그래밍 UrhoSharp
 

@@ -3,15 +3,14 @@ title: 콘텐츠 파이프라인 소개
 description: 콘텐츠 응용 프로그램 또는 응용 프로그램의 일부 파이프라인은 데 사용 되는 파일 게임 프로젝트에서 로드할 수 있는 형식으로 변환 합니다. MonoGame 콘텐츠 파이프라인에 CocosSharp 및 MonoGame 프로젝트에 대 한 파일을 변환 하기 위한 특정 콘텐츠 파이프라인 구현입니다.
 ms.prod: xamarin
 ms.assetid: 40628B5F-FAF7-4FA7-A929-6C3FEA83F8EC
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 2c3619fac771bd7962f6940a24d7c1ff81173d75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a369c5ba61033eb61c0f188c03b21e08c71784fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-content-pipelines"></a>콘텐츠 파이프라인 소개
 

@@ -3,15 +3,14 @@ title: 대화형 통합 문서
 description: 교육 또는 탐색 교육, 실험에 대 한 C# 코드를 사용 하 여 라이브 문서를 만들려면 통합 문서를 사용 합니다.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 7577380ff78b9b94b88f5a4190df32400d2c573f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="interactive-workbooks"></a>대화형 통합 문서
 
@@ -45,7 +44,7 @@ Xamarin 통합 문서에 저장 됩니다는 `.workbook` 는 CommonMark 일부 �
   * 패키지에 따라 달라 지는 `.targets` 파일 또는 PowerShell 스크립트 예상 대로 작동 하도록 삭제가 실패 합니다.
   * 을 제거 하거나 패키지 종속성을 수정 하려면 텍스트 편집기로 통합 문서의 매니페스트를 편집 합니다. 적절 한 패키지 관리 방식에는입니다.
 
-### <a name="xamarinforms-support"></a>Xamarin.Forms Support
+### <a name="xamarinforms-support"></a>Xamarin.Forms 지원
 
 통합 문서에서 Xamarin.Forms NuGet 패키지를 참조 하는 경우 통합 문서 응용 프로그램의 주 보기를 Xamarin.Forms 기반 변경 됩니다. 통해 액세스할 수 `Xamarin.Forms.Application.Current.MainPage`합니다.
 

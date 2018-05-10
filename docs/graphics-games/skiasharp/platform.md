@@ -3,15 +3,14 @@ title: SkiaSharp 플랫폼 특정 세부 정보
 description: 네이티브 응용 프로그램에 SKSurface 내용을 바인딩할 하는 방법에 대 한 세부 정보입니다.
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 8dd5fcd6e8ad7817a26dc310f76451874a18d134
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 3f40c7ea0b118816b7be373617795db9158c1450
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="platform-specific-integration"></a>특정 통합 플랫폼
 

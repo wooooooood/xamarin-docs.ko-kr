@@ -3,15 +3,14 @@ title: 수행 하는 방법 한 철저 한 Visual Studio 용 Xamarin에 대 한 
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: c1742239-05ea-449d-9c99-611e5e5a90e4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 49577961026d9895912d2848975e71a9f7eebbd8
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>수행 하는 방법 한 철저 한 Visual Studio 용 Xamarin에 대 한 제거?
 
@@ -19,7 +18,7 @@ ms.lasthandoff: 04/06/2018
 1.  Windows 제어판에서 제공 되는 다음 중 하나를 제거 합니다.
 
     -   Xamarin
-    -   Windows 용 Xamarin
+    -   Windows용 Xamarin
     -   Xamarin.Android
     -   Xamarin.iOS
     -   Visual Studio용 Xamarin
@@ -48,7 +47,7 @@ ms.lasthandoff: 04/06/2018
 
 4.  체크 인할 수도 _VirtualStore_ 디렉터리 경우 Windows 수 저장 한 모든 참조를 오버레이 대 한 파일은 _확장\\Xamarin_ 또는 _ComponentModelCache_디렉터리에 있습니다.
 
-    _%LOCALAPPDATA%\\VirtualStore_
+    _% LOCALAPPDATA %\\VirtualStore_
 
 5.  레지스트리 편집기를 엽니다 (`regedit`).
 
@@ -56,7 +55,7 @@ ms.lasthandoff: 04/06/2018
 
     _HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\SharedDlls_
 
-7.  찾아이 패턴과 일치 하는 모든 항목을 삭제 합니다.
+7.  이 패턴과 일치하는 항목을 찾아 삭제합니다.
 
     _C:\\프로그램 파일\*\\Microsoft Visual Studio 1\*.0\\Common7\\IDE\\확장\\Xamarin_
 
@@ -64,11 +63,11 @@ ms.lasthandoff: 04/06/2018
 
     _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\\ExtensionManager\\PendingDeletions_
 
-9.  Xamarin 관련 될 수 있습니다 처럼 보이는 항목을 삭제 합니다.  예를 들어 여기의 하나 사용는 이전 버전의 Xamarin에 문제가 발생할 수 있습니다:
+9.  Xamarin과 관련된 것으로 보이는 모든 항목을 삭제합니다.  예를 들어 여기의 하나 사용는 이전 버전의 Xamarin에 문제가 발생할 수 있습니다:
 
     _Mono.VisualStudio.Shell,1.0_
 
-10. 관리자를 열고 `cmd.exe` 명령 프롬프트를 한 다음 실행에서 `devenv /setup` 및 `devenv /updateconfiguration` Visual Studio의 설치 된 각 버전에 대 한 명령입니다.  Visual Studio 2015에 대 한 예를 들어:
+10. 관리자를 열고 `cmd.exe` 명령 프롬프트를 한 다음 실행에서 `devenv /setup` 및 `devenv /updateconfiguration` Visual Studio의 설치 된 각 버전에 대 한 명령입니다.  예를 들어, Visual Studio 2015의 경우:
 
     ```
     "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" /setup

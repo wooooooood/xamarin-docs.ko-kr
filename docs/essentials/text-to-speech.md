@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 텍스트 음성 변환
 description: 장치에서 및 쿼리 엔진을 지원할 수 있는 사용 가능한 언어를 뒤로 텍스트를 텍스트 음성 변환 엔진에 응용 프로그램을 기본 제공 사용 TextToSpeech 클래스 사용 합니다.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e5ee5a324c6e753d389f7e80df106dbf4af1a8ca
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials 텍스트 음성 변환
 

@@ -3,15 +3,14 @@ title: 플랫폼 간 앱에서 네이티브 형식 사용
 description: 이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 하는 플랫폼 간 응용 프로그램에서 새 iOS API 네이티브 통합 유형 (nint, nuint, nfloat)를 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb6979691eeef6dd7436d74fdfd501c747d9b3c6
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서 네이티브 형식 사용
 
@@ -229,7 +228,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 이제 응용 프로그램의 아키텍처에 따라, 우리 생길 수 원시 데이터를 지원 하기 위해 위의 솔루션 중 하나 이상을 사용 하 여 플랫폼 간 코드에서 (필수) 되는 형식입니다.
 
 
-## <a name="xamarinforms-applications"></a>Xamarin.Forms Applications
+## <a name="xamarinforms-applications"></a>Xamarin.Forms 응용 프로그램
 
 다음은 또한 공유 하는 통합 API 응용 프로그램으로 플랫폼 간 Ui에 대 한 Xamarin.Forms를 사용 하도록 필요 합니다.
 

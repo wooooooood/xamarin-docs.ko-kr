@@ -6,12 +6,12 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 05/02/2018
-ms.openlocfilehash: ee3e4c984072fc019fe3719aab650a44d3899911
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
-ms.translationtype: HT
+ms.date: 05/07/2018
+ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -21,16 +21,16 @@ _XAML 리소스는 공유 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 �
 
 ## <a name="overview"></a>개요
 
-A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 는 Xamarin.Forms 응용 프로그램에서 사용 되는 리소스에 대 한 리포지토리입니다. 에 저장 된 리소스에는 대개는 `ResourceDictionary` 포함 [스타일](~/xamarin-forms/user-interface/styles/index.md), [컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), 색 및 변환기입니다.
+A [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 는 Xamarin.Forms 응용 프로그램에서 사용 되는 리소스에 대 한 리포지토리입니다. 에 저장 된 리소스에는 대개는 `ResourceDictionary` 포함 [스타일](~/xamarin-forms/user-interface/styles/index.md), [컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), 색 및 변환기입니다.
 
 XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를 사용 하 여 요소에 적용 된 `StaticResource` 태그 확장 합니다. C#에서 리소스도 정의할 수에 `ResourceDictionary` 다음 검색 하 고 문자열 기반 인덱서를 사용 하 여 요소에 적용 합니다. 그러나는 사용 하는 이점이 별로 한 `ResourceDictionary` C#에서 공유 개체 간단히 필드 또는 속성으로 저장 하 고 액세스할 수 하지 않고 직접 대로 첫 번째 필요 검색할 사전에서 합니다.
 
 ## <a name="creating-and-consuming-a-resourcedictionary"></a>만들기 및 ResourceDictionary 사용
 
-에 정의 된 리소스는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 다음 중 하나를 설정 합니다 즉 `Resources` 속성:
+에 정의 된 리소스는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 다음 중 하나를 설정 합니다 즉 `Resources` 속성:
 
-- [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.Resources/) 에서 파생 된 클래스의 속성 [`Application`](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/)
-- [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 속성에서 파생 된 클래스의 ['VisualElement'](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/)
+- [ `Resources` ](xref:Xamarin.Forms.Application.Resources) 에서 파생 된 클래스의 속성 [`Application`](xref:Xamarin.Forms.Application)
+- [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 속성에서 파생 된 클래스의 ['VisualElement'](xref:Xamarin.Forms.Application)
 
 파생 되는 하나의 클래스를 포함 하는 Xamarin.Forms 프로그램 `Application` 에서는 종종에서 파생 되는 많은 클래스를 활용 하지만 `VisualElement`, 페이지, 레이아웃 및 컨트롤을 포함 합니다. 이러한 개체 중 하나를 가질 수 있습니다 해당 `Resources` 속성이로 설정 된 `ResourceDictionary`합니다. 특정 넣을 위치를 선택 `ResourceDictionary` 영향 리소스를 사용할 수 있습니다.
 
@@ -58,7 +58,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 </Application>
 ```
 
-이 `ResourceDictionary` 세 정의 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 리소스 및 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 리소스입니다. 에 대 한 자세한 내용은 `App` 클래스를 참조 하십시오. [App 클래스](~/xamarin-forms/app-fundamentals/application-class.md)합니다.
+이 `ResourceDictionary` 세 정의 [ `Color` ](xref:Xamarin.Forms.Color) 리소스 및 [ `Style` ](xref:Xamarin.Forms.Style) 리소스입니다. 에 대 한 자세한 내용은 `App` 클래스를 참조 하십시오. [App 클래스](~/xamarin-forms/app-fundamentals/application-class.md)합니다.
 
 명시적 Xamarin.Forms 3.0부터 `ResourceDictionary` 태그가 필요 하지 않습니다. `ResourceDictionary` 개체는 자동으로 생성 되 고 리소스를 사이 직접 삽입할 수 있습니다는 `Resources` 속성 요소 태그:
 
@@ -77,7 +77,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 </Application>
 ```
 
-각 리소스를 사용 하 여 지정 된 키에는 `x:Key` 에 사전 키가 있는 특성에는 `ResourceDictionary`합니다. 리소스를 검색 하는 키를 사용 하는 `ResourceDictionary` 여는 [ `StaticResource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/) 내에 정의 된 추가 리소스를 보여 주는 다음 XAML 코드 예제에서와 같이 태그 확장은 `StackLayout`:
+각 리소스를 사용 하 여 지정 된 키에는 `x:Key` 에 사전 키가 있는 특성에는 `ResourceDictionary`합니다. 리소스를 검색 하는 키를 사용 하는 `ResourceDictionary` 여는 [ `StaticResource` ](xref:Xamarin.Forms.Xaml.StaticResourceExtension) 내에 정의 된 추가 리소스를 보여 주는 다음 XAML 코드 예제에서와 같이 태그 확장은 `StackLayout`:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -105,7 +105,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 </StackLayout>
 ```
 
-첫 번째 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스를 검색 하 고 사용 된 `LabelPageHeadingStyle` 응용 프로그램 수준에서 정의 된 리소스 `ResourceDictionary`, 두 번째 `Label` 인스턴스 검색 및 사용 하 여 `LabelNormalStyle`제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 마찬가지로,는 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 인스턴스를 검색 하 고 사용 된 `NormalTextColor` 응용 프로그램 수준에서 정의 된 리소스 `ResourceDictionary`, 및 `MediumBoldText` 제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
+첫 번째 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스를 검색 하 고 사용 된 `LabelPageHeadingStyle` 응용 프로그램 수준에서 정의 된 리소스 `ResourceDictionary`, 두 번째 `Label` 인스턴스 검색 및 사용 하 여 `LabelNormalStyle`제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 마찬가지로,는 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 검색 하 고 사용 된 `NormalTextColor` 응용 프로그램 수준에서 정의 된 리소스 `ResourceDictionary`, 및 `MediumBoldText` 제어 수준에 정의 된 리소스 `ResourceDictionary`합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
 
 [![](resource-dictionaries-images/screenshots-sml.png "ResourceDictionary 리소스를 소비")](resource-dictionaries-images/screenshots.png#lightbox "ResourceDictionary 리소스 사용")
 
@@ -144,7 +144,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 
 [![](resource-dictionaries-images/overridding-screenshots-sml.png "ResourceDictionary 리소스 재정의")](resource-dictionaries-images/overridding-screenshots.png#lightbox "ResourceDictionary 리소스를 재정의 합니다.")
 
-하지만의 막대는 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 은 여전히 노란색 때문에 [ `BarBackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 `ResourceDictionary`합니다.
+하지만의 막대는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 은 여전히 노란색 때문에 [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 `ResourceDictionary`합니다.
 
 다른 방법에 대해 생각 하 `ResourceDictionary` 우선 순위: 때 XAML 파서가 발견할는 `StaticResource`, 시각적 트리를 통해 위로 이동 하 여 일치 하는 키에 대 한 검색, 첫 번째 일치 항목을 사용 하 여 발견 합니다. 이 검색 페이지에서 끝나고 키 여전히 되었습니다 찾을 수 없을 경우 XAML 파서가 검색는 `ResourceDictionary` 에 연결 된는 `App` 개체입니다. 키 아직 없는 경우, 예외가 발생 합니다.
 
@@ -154,7 +154,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 
 이러한 파일을 만들려면 새 추가 **콘텐츠 보기** 또는 **콘텐츠 페이지** 항목을 프로젝트 (하지 않고는 **콘텐츠 보기** 또는 **콘텐츠 페이지** 와 C# 파일만)입니다. XAML 파일와 C# 파일을 기본 클래스의 이름을 변경 `ContentView` 또는 `ContentPage` 를 `ResourceDictionary`합니다. XAML 파일에서 기본 클래스의 이름에는 최상위 요소입니다.
 
-XAML은 다음 예제는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 라는 `MyResourceDictionary`:
+XAML은 다음 예제는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 라는 `MyResourceDictionary`:
 
 ```xaml
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
@@ -198,10 +198,10 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](https://developer.xamarin.com/
 
 ## <a name="merged-resource-dictionaries"></a>병합된 리소스 사전
 
-하나 이상의 병합 된 리소스 사전을 결합 `ResourceDictionary` 다른 파티션으로 인스턴스 `ResourceDictionary`합니다. 설정 하 여 XAML 파일에서 이렇게 하려면는 [ `MergedDictionaries` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ResourceDictionary.MergedDictionaries/) 속성을 응용 프로그램, 페이지 또는 제어 수준으로 병합 될 하나 이상의 리소스 사전 `ResourceDictionary`합니다.
+하나 이상의 병합 된 리소스 사전을 결합 `ResourceDictionary` 다른 파티션으로 인스턴스 `ResourceDictionary`합니다. 설정 하 여 XAML 파일에서 이렇게 하려면는 [ `MergedDictionaries` ](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) 속성을 응용 프로그램, 페이지 또는 제어 수준으로 병합 될 하나 이상의 리소스 사전 `ResourceDictionary`합니다.
 
 > [!IMPORTANT]
-> `ResourceDictionary` 또한 정의 [ `MergedWith` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ResourceDictionary.MergedWith/) 속성입니다. 이 속성을 사용 하지 마십시오 이 사용 되지 Xamarin.Forms 3.0을 기준으로 합니다.
+> `ResourceDictionary` 또한 정의 [ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith) 속성입니다. 이 속성을 사용 하지 마십시오 이 사용 되지 Xamarin.Forms 3.0을 기준으로 합니다.
 
 인스턴스 및 `MyResourceDictionary` 모든 응용 프로그램, 페이지 또는 제어 수준에 병합 `ResourceDictionary`합니다. 페이지 수준에 병합 하 고 다음 XAML 코드 예제에서는 표시 `ResourceDictionary` 를 사용 하 여 `MergedDictionaries` 속성:
 
@@ -247,10 +247,10 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](https://developer.xamarin.com/
 
 하나만 있을 수 있습니다 `MergedDictionaries` 섹션는 `ResourceDictionary`, 만큼 넣을 수 있습니다 하지만 `ResourceDictionary` 거기에 인스턴스를 원하는 만큼 합니다.
 
-병합할 때 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 리소스가 동일한 공유 `x:Key` Xamarin.Forms 특성 값을 다음과 같은 리소스 우선 순위를 사용 하 여:
+병합할 때 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 리소스가 동일한 공유 `x:Key` Xamarin.Forms 특성 값을 다음과 같은 리소스 우선 순위를 사용 하 여:
 
 1. 리소스 사전에 대 한 로컬 리소스입니다.
-1. 병합 된 리소스 사전에 포함 된 리소스 사용 되지 않는 통해 [ `MergedWith` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ResourceDictionary.MergedWith/) 속성입니다.
+1. 병합 된 리소스 사전에 포함 된 리소스 사용 되지 않는 통해 [ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith) 속성입니다.
 1. 통해 병합 된 리소스 사전에 포함 된 리소스는 `MergedDictionaries` 컬렉션에 나열 된 순서로 `MergedDictionaries` 속성입니다.
 
 > [!NOTE]
@@ -258,7 +258,7 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](https://developer.xamarin.com/
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>Xamarin.forms 3.0 사전 병합
 
-병합 프로세스 Xamarin.Forms 3.0 부터는 `ResourceDictionaries` 다소 더 쉽고 유연한 커졌습니다. `MergedDictionaries` 속성 요소 태그는 더 이상 필요 합니다. 대신 추가 리소스 사전에 다른 `ResourceDictionary` 새 태그 [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ResourceDictionary.Source/) 속성이 리소스를 가진 XAML 파일의 파일 이름으로 설정 합니다.
+병합 프로세스 Xamarin.Forms 3.0 부터는 `ResourceDictionaries` 다소 더 쉽고 유연한 커졌습니다. `MergedDictionaries` 속성 요소 태그는 더 이상 필요 합니다. 대신 추가 리소스 사전에 다른 `ResourceDictionary` 새 태그 [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) 속성이 리소스를 가진 XAML 파일의 파일 이름으로 설정 합니다.
 
 ```xaml
 <ContentPage ...>
@@ -298,10 +298,10 @@ Xamarin.Forms 3.0이 자동으로 인스턴스화합니다 때문에 `ResourceDi
 
 ## <a name="summary"></a>요약
 
-이 문서를 만들고 사용 하는 방법을 설명는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 및 리소스 사전은 병합 하는 방법입니다. A `ResourceDictionary` 하면 리소스를 단일 위치에서 정의 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 다시 사용할 수 있습니다.
+이 문서를 만들고 사용 하는 방법을 설명는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 및 리소스 사전은 병합 하는 방법입니다. A `ResourceDictionary` 하면 리소스를 단일 위치에서 정의 하 고 Xamarin.Forms 응용 프로그램에 걸쳐 다시 사용할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [리소스 사전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

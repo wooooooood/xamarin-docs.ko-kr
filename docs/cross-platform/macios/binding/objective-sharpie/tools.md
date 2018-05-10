@@ -3,15 +3,14 @@ title: 도구 및 명령
 description: 사용 하는 목표 Sharpie 및 명령줄 인수에 포함 된 도구에 대 한 개요입니다.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 8a307739134fe3b76692fbef5c1dc028af01017d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e333ce7c336d13c8b55326a5d51a64092885dfd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="tools--commands"></a>도구 및 명령
 

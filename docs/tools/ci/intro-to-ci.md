@@ -3,15 +3,14 @@ title: Xamarin 사용한 연속 통합 소개
 description: 연속 통합은 자동화 된 빌드 컴파일 및 코드를 추가 하거나 프로젝트의 버전 제어 리포지토리에 개발자가 변경한 경우 필요에 따라 앱을 테스트 하는 소프트웨어 엔지니어링 좋습니다. 이 문서는 연속 통합의 일반적인 개념 및 옵션 중 일부는 사용할 수 있는 연속 통합에 대 한 Xamarin 프로젝트와 함께 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 5e4720ac44876620783b32f731c44afe5a623231
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e441e3a2f967bf7bed0a236375ce708966fdb6eb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용한 연속 통합 소개
 

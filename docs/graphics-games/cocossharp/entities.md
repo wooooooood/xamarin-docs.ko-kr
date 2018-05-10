@@ -3,15 +3,14 @@ title: CocosSharp의 엔터티
 description: 엔터티 방법은 게임 코드를 구성 하는 강력한 방법입니다. 가독성을 높일 수, 코드를 보다 쉽게 유지 관리, 기본 제공 부모/자식 기능을 활용 하 고 있습니다.
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 406c416e9bbecb4726793981ae347e0172ab0dbc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 58a8d4e6fcb8a2165fafad74a5c59481d1550351
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="entities-in-cocossharp"></a>CocosSharp의 엔터티
 

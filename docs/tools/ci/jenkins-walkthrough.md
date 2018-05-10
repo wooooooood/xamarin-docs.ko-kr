@@ -3,15 +3,14 @@ title: Xamarin을 사용한 Jenkins를 사용 하 여
 description: 이 가이드에는 Jenkins 연속 통합 서버를 설정 하 고 컴파일 Xamarin을 사용 하 여 만든 모바일 응용 프로그램을 자동화 하는 방법을 보여 줍니다. Jenkins OS x 설치, 구성, 및 변경 내용이 소스 코드 관리 시스템에 커밋될 때 Xamarin.iOS 및 Xamarin.Android 응용 프로그램을 컴파일할 작업을 설정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1052507bfbf06e264f9e9da89be1e0f35fa70ce1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 
@@ -306,7 +305,7 @@ Xamarin.iOS 프로젝트를 사용 하 여 명령줄에서 컴파일할 수 `xbu
 
 [!include[](~/tools/ci/includes/commandline-compile-of-xamarin-ios-ipa.md)]
 
-### <a name="building-a-xamarinandroid-project"></a>Building a Xamarin.Android Project
+### <a name="building-a-xamarinandroid-project"></a>Xamarin.Android 프로젝트 빌드
 
 Xamarin.Android 프로젝트를 작성 하는 것은 매우 유사 Xamarin.iOS 프로젝트 빌드입니다. APK Xamarin.Android 프로젝트에서를 만들려면 다음 두 단계를 수행 하려면 Jenkins는 구성 해야 합니다.
 

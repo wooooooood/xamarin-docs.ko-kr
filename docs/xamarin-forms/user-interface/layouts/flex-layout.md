@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
-ms.date: 05/01/2018
-ms.openlocfilehash: 4aa2ea21c9cf2e9e646465ab7ad4aa0a01de433e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/07/2018
+ms.openlocfilehash: bba5007acb54852b9427c57c26aba6358c4c5771
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
 _누적 또는 자식 뷰의 컬렉션을 배치에 대 한 FlexLayout를 사용 합니다._
 
-Xamarin.Forms는 [ `FlexLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexLayout/) Xamarin.Forms 버전 3.0의에서 새로운 기능입니다. CSS에 기반 하는 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)으로 일반적으로 알려진, _레이아웃 flex_ 또는 _flex 상자_, 자식을 정렬 하는 많은 유연성 있는 옵션을 포함 하기 때문에 이렇게 부름 내 레이아웃입니다.
+Xamarin.Forms는 [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms 버전 3.0의에서 새로운 기능입니다. CSS에 기반 하는 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)으로 일반적으로 알려진, _레이아웃 flex_ 또는 _flex 상자_, 자식을 정렬 하는 많은 유연성 있는 옵션을 포함 하기 때문에 이렇게 부름 내 레이아웃입니다.
 
 `FlexLayout` Xamarin.Forms는 유사한 [ `StackLayout` ](~/xamarin-forms/user-interface/layouts/stack-layout.md) 것 수 자식을 가로 또는 세로로 정렬할 스택으로 한다는 점에서 합니다. 그러나는 `FlexLayout` 는 또한 수 있는 단일 행 이나 열에 맞게 너무 많은 경우 자식 래핑 있으며 방향, 맞춤 및 다양 한 화면 크기에 맞게 조정에 대 한 많은 옵션도 있습니다.
 
@@ -65,11 +65,11 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되 고 해당 페�
 
 세 가지 속성 `FlexLayout` 에 표시 되는 **SimpleStackPage.xaml** 파일:
 
-- [ `Direction` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/) 속성의 값으로 설정 되는 [ `FlexDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/) 열거 합니다. 기본값은 `Row`입니다. 이 속성을 설정 `Column` 하면의 하위는 `FlexLayout` 를 항목의 단일 열에 정렬 합니다.
+- [ `Direction` ](xref:Xamarin.Forms.FlexLayout.Direction) 속성의 값으로 설정 되는 [ `FlexDirection` ](xref:Xamarin.Forms.FlexDirection) 열거 합니다. 기본값은 `Row`입니다. 이 속성을 설정 `Column` 하면의 하위는 `FlexLayout` 를 항목의 단일 열에 정렬 합니다.
 
     때 항목에 `FlexLayout` 열에 정렬 되는 `FlexLayout` 세로 했다고 _주 축_ 및 가로 _축 교차_합니다.
 
-- [ `AlignItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/) 형식의 속성은 [ `FlexAlignItems` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/) 교차 축에 항목을 정렬 하는 방법을 지정 합니다. `Center` 옵션을 사용 하면 각 항목을 가로로 가운데에 맞춰야 합니다.
+- [ `AlignItems` ](xref:Xamarin.Forms.FlexLayout.AlignItems) 형식의 속성은 [ `FlexAlignItems` ](xref:Xamarin.Forms.FlexAlignItems) 교차 축에 항목을 정렬 하는 방법을 지정 합니다. `Center` 옵션을 사용 하면 각 항목을 가로로 가운데에 맞춰야 합니다.
 
     사용 하는 경우는 `StackLayout` 아닌 `FlexLayout` 이 작업을 할당 하 여 모든 항목 센터는 `HorizontalOptions` 각 항목의 속성 `Center`합니다. `HorizontalOptions` 속성의 자식에 대 한 작동 하지 않습니다는 `FlexLayout`, 하지만 단일 `AlignItems` 속성 같은 목표를 수행 합니다. 를 해야 하는 경우 사용할 수 있습니다는 `AlignSelf` 연결 된 바인딩 가능한 속성을 재정의 하 여 `AlignItems` 개별 항목에 대 한 속성:
 
@@ -81,7 +81,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되 고 해당 페�
 
     이 변경으로 인해 `Label` 의 왼쪽된 가장자리에 배치 되는 `FlexLayout` 때 읽기 순서는 왼쪽에서 오른쪽입니다.
 
-- [ `JustifyContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/) 형식의 속성은 [ `FlexJustify` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/), 기본 축에 항목이 정렬 되는 방법을 지정 합니다. `SpaceEvenly` 모든 잔여 세로 공간 모든 항목 간에 균등 하 게 하 고 첫 번째 항목을 위와 아래의 마지막 항목을 할당 하는 옵션입니다.
+- [ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent) 형식의 속성은 [ `FlexJustify` ](xref:Xamarin.Forms.FlexJustify), 기본 축에 항목이 정렬 되는 방법을 지정 합니다. `SpaceEvenly` 모든 잔여 세로 공간 모든 항목 간에 균등 하 게 하 고 첫 번째 항목을 위와 아래의 마지막 항목을 할당 하는 옵션입니다.
 
     사용 하는 경우는 `StackLayout`를 할당 해야는 `VerticalOptions` 각 항목의 속성 `CenterAndExpand` 비슷한 효과 달성 하기 위해. 하지만 `CenterAndExpand` 옵션 각 항목 사이의 보다 첫째 항목 앞과 마지막 항목 뒤 두 배 많은 공간을 할당 합니다. 모방할 수 있습니다는 `CenterAndExpand` 옵션의 `VerticalOptions` 설정 하 여는 `JustifyContent` 속성 `FlexLayout` 를 `SpaceAround`합니다.
 
@@ -112,7 +112,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되 고 해당 페�
 
 `Direction` 속성 `FlexLayout` 설정 되지 않은 경우 기본 설정인 않았으므로 `Row`, 즉 자식 행에 정렬 되 고 기본 축이 가로입니다.
 
-[ `Wrap` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/) 열거형 형식의 속성은 [ `FlexWrap` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/)합니다. 행에 너무 많은 항목이 있으면이 속성 설정 하면 항목을 다음 행으로 래핑합니다.
+[ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap) 열거형 형식의 속성은 [ `FlexWrap` ](xref:Xamarin.Forms.FlexWrap)합니다. 행에 너무 많은 항목이 있으면이 속성 설정 하면 항목을 다음 행으로 래핑합니다.
 
 에 `FlexLayout` 의 자식인는 `ScrollView`합니다. 페이지에 맞게 행이 너무 많은 경우 하면 `ScrollView` 기본 `Orientation` 속성 `Vertical` 세로 스크롤할 수 있도록 합니다.
 
@@ -398,14 +398,14 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-direction-property"></a>Direction 속성
 
-[ `Direction` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/) 형식의 속성은 [ `FlexDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/), 4 개 멤버가 포함 된 열거:
+[ `Direction` ](xref:Xamarin.Forms.FlexLayout.Direction) 형식의 속성은 [ `FlexDirection` ](xref:Xamarin.Forms.FlexDirection), 4 개 멤버가 포함 된 열거:
 
 - `Column`
 - `ColumnReverse` (또는 "열 역방향" XAML에서)
 - `Row`기본값
 - `RowReverse` (또는 "행 반복" XAML에서)
 
-Xaml에서는 열거형 멤버 이름은 소문자, 대문자, 사용 하 여이 속성의 값을 지정할 수 있습니다 또는 혼합된 대/소문자 또는 있습니다 CSS 표시기로 동일 하 게 괄호 안에 표시 하는 두 개의 추가 문자열을 사용할 수 있습니다. ("열 반복" 및 "행 반복" 문자열에 정의 된는 [ `FlexDirectionTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirectionTypeConverter/) XAML 파서에서 사용 되는 클래스입니다.)
+Xaml에서는 열거형 멤버 이름은 소문자, 대문자, 사용 하 여이 속성의 값을 지정할 수 있습니다 또는 혼합된 대/소문자 또는 있습니다 CSS 표시기로 동일 하 게 괄호 안에 표시 하는 두 개의 추가 문자열을 사용할 수 있습니다. ("열 반복" 및 "행 반복" 문자열에 정의 된는 [ `FlexDirectionTypeConverter` ](xref:Xamarin.Forms.FlexDirectionTypeConverter) XAML 파서에서 사용 되는 클래스입니다.)
 
 다음은 **실험** (왼쪽에서 오른쪽)를 보여 주는 페이지는 `Row` 방향, `Column` 방향 및 `ColumnReverse` 방향:
 
@@ -417,7 +417,7 @@ Xaml에서는 열거형 멤버 이름은 소문자, 대문자, 사용 하 여이
 
 ### <a name="the-wrap-property"></a>줄 바꿈 속성
 
-[ `Wrap` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/) 형식의 속성은 [ `FlexWrap` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/), 세 멤버가 포함 된 열거:
+[ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap) 형식의 속성은 [ `FlexWrap` ](xref:Xamarin.Forms.FlexWrap), 세 멤버가 포함 된 열거:
 
 - `NoWrap`기본값
 - `Wrap`
@@ -433,7 +433,7 @@ Xaml에서는 열거형 멤버 이름은 소문자, 대문자, 사용 하 여이
 
 ### <a name="the-justifycontent-property"></a>JustifyContent 속성
 
-[ `JustifyContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/) 형식의 속성은 [ `FlexJustify` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/), 6 개 멤버가 포함 된 열거:
+[ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent) 형식의 속성은 [ `FlexJustify` ](xref:Xamarin.Forms.FlexJustify), 6 개 멤버가 포함 된 열거:
 
 - `Start` (또는 "flex start" XAML에서) 기본값
 - `Center`
@@ -452,7 +452,7 @@ Xaml에서는 열거형 멤버 이름은 소문자, 대문자, 사용 하 여이
 
 ### <a name="the-alignitems-property"></a>AlignItems 속성
 
-[ `AlignItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/) 형식의 속성은 [ `FlexAlignItems` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/), 4 개 멤버가 포함 된 열거:
+[ `AlignItems` ](xref:Xamarin.Forms.FlexLayout.AlignItems) 형식의 속성은 [ `FlexAlignItems` ](xref:Xamarin.Forms.FlexAlignItems), 4 개 멤버가 포함 된 열거:
 
 - `Stretch`기본값
 - `Center`
@@ -471,7 +471,7 @@ IOS 스크린 샷에 모든 자식 항목의 위쪽을 맞춥니다. Android 스
 
 ### <a name="the-aligncontent-property"></a>AlignContent 속성
 
-[ `AlignContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignContent/) 형식의 속성은 [ `FlexAlignContent` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/), 7 개 멤버가 포함 된 열거:
+[ `AlignContent` ](xref:Xamarin.Forms.FlexLayout.AlignContent) 형식의 속성은 [ `FlexAlignContent` ](xref:Xamarin.Forms.FlexAlignContent), 7 개 멤버가 포함 된 열거:
 
 - `Stretch`기본값
 - `Center`
@@ -501,7 +501,7 @@ IOS screnshot에서 두 행 맨 위에 있는; Android 스크린 샷 있을 때�
 
 ### <a name="the-alignself-property"></a>AlignSelf 속성
 
-[ `AlignSelf` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignSelf/) 형식의 연결 된 바인딩 가능한 속성은 [ `FlexAlignSelf` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/), 5 개 멤버가 포함 된 열거:
+[ `AlignSelf` ](xref:Xamarin.Forms.FlexLayout.AlignSelfProperty) 형식의 연결 된 바인딩 가능한 속성은 [ `FlexAlignSelf` ](xref:Xamarin.Forms.FlexAlignContent), 5 개 멤버가 포함 된 열거:
 
 - `Auto`기본값
 - `Stretch`
@@ -525,15 +525,15 @@ FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
 
 ### <a name="the-order-property"></a>Order 속성
 
-[ `Order` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Order/) 속성은 형식이 `int`합니다. 기본값은 0입니다.
+[ `Order` ](xref:Xamarin.Forms.FlexLayout.OrderProperty) 속성은 형식이 `int`합니다. 기본값은 0입니다.
 
 `Order` 속성을 사용 하면 순서를 변경할 수 있습니다 하의 자식을 `FlexLayout` 정렬 됩니다. 자식에 일반적으로 `FlexLayout` 정렬 되는에 나타나는 순서와 동일는 `Children` 컬렉션입니다. 이 순서를 설정 하 여 재정의할 수 있습니다는 `Order` 하나 이상의 자식에서 0이 아닌 정수 값으로 연결 된 바인딩 가능한 속성입니다. `FlexLayout` 다음의 설정에 따라 자식을 정렬는 `Order` 각 자식에 있지만 동일한 자식 속성 `Order` 설정에 표시 된 순서 대로 정렬 되는 `Children` 컬렉션입니다.
 
 ### <a name="the-basis-property"></a>기본 속성
 
-[ `Basis` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Basis/) 바인딩할 수 있는 연결 된 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 주 축에 있습니다. 지정한 크기는 `Basis` 속성은 부모의 주요 축 크기 `FlexLayout`합니다. 즉, `Basis` 자식 열에 정렬 되는 경우 행 또는 높이의 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
+[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) 바인딩할 수 있는 연결 된 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 주 축에 있습니다. 지정한 크기는 `Basis` 속성은 부모의 주요 축 크기 `FlexLayout`합니다. 즉, `Basis` 자식 열에 정렬 되는 경우 행 또는 높이의 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
 
-`Basis` 형식의 속성은 [ `FlexBasis` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexBasis/)는 구조입니다. 장치 독립적 단위에서 또는 크기의 백분율로 크기를 지정할 수는 `FlexLayout`합니다. 기본값은 `Basis` 속성은 정적 속성 `FlexBasis.Auto`, 자식의 너비 또는 높이 데 사용 됩니다 요청 한다는 의미입니다.
+`Basis` 형식의 속성은 [ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis)는 구조입니다. 장치 독립적 단위에서 또는 크기의 백분율로 크기를 지정할 수는 `FlexLayout`합니다. 기본값은 `Basis` 속성은 정적 속성 `FlexBasis.Auto`, 자식의 너비 또는 높이 데 사용 됩니다 요청 한다는 의미입니다.
 
 코드에서 설정할 수는 `Basis` 속성에 대 한는 `Label` 라는 `label` 를 다음과 같이 40 장치 독립적 단위:
 
@@ -581,7 +581,7 @@ Xaml에서는 장치 독립적 단위에서 크기에 대 한 숫자를 사용�
 
 ### <a name="the-grow-property"></a>확장 속성
 
-[ `Grow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Grow/) 속성은 형식이 `int`합니다. 기본값은 0, 및 값 보다 크거나 0 이어야 합니다.
+[ `Grow` ](xref:Xamarin.Forms.FlexLayout.GrowProperty) 형식의 연결 된 바인딩 가능한 속성은 `int`합니다. 기본값은 0, 및 값 보다 크거나 0 이어야 합니다.
 
 `Grow` 때 경우에 역할을 수행 하는 속성의 `Wrap` 속성이로 설정 되어 `NoWrap` 고 자식 행의 너비 보다 작은 총 너비가 `FlexLayout`, 자식 열에 보다 짧은 높이 또는 `FlexLayout`합니다. `Grow` 속성에는 자식 항목 간에 빈 공간을 할당 하는 방법을 나타냅니다.
 
@@ -597,7 +597,7 @@ Xaml에서는 장치 독립적 단위에서 크기에 대 한 숫자를 사용�
 
 ### <a name="the-shrink-property"></a>축소 속성
 
-[ `Shrink` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Shrink/) 속성은 형식이 `int`합니다. 기본값은 1, 및 값 보다 크거나 0 이어야 합니다.
+[ `Shrink` ](xref:Xamarin.Forms.FlexLayout.ShrinkProperty) 형식의 연결 된 바인딩 가능한 속성은 `int`합니다. 기본값은 1, 및 값 보다 크거나 0 이어야 합니다.
 
 `Shrink` 속성 역할 때는 `Wrap` 속성이 `NoWrap` 자식 행의 집계 너비의 너비 보다 크면는 `FlexLayout`, 자식의 단일 열의 집계 높이 보다 큽니다. 또는 높이 `FlexLayout`합니다. 일반적으로 `FlexLayout` 크기로 constricting 하 여이 자식 컨트롤에 표시 됩니다. `Shrink` 속성이 있는 자식에 전체 크기에 표시 되 고 우선 순위가 지정 됩니다 나타낼 수 있습니다.
 

@@ -3,15 +3,14 @@ title: Xamarin.Forms는 기존 앱을 업데이트합니다.
 description: 및 버전 1.3.1 업데이트 통합 API를 사용 하는 기존 Xamarin.Forms 응용 프로그램을 업데이트 하려면 다음이 단계를 수행 합니다.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 49614dddf05d692d94d28b29729e7b2038be31e7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7b69ecb5d62a30cf6259aae1884971ad13babede
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Xamarin.Forms는 기존 앱을 업데이트합니다.
 
@@ -63,7 +62,7 @@ IOS 프로젝트를 클릭 하 여 선택 되어 선택 **프로젝트 > Xamarin
 
 추가 iOS 네이티브 코드 (예: 사용자 지정 렌더러 또는 종속성 서비스)를 추가한 경우 추가 수동 코드 문제를 해결 해야 합니다. 다시 앱을 컴파일 및 참조는 [업데이트 기존 iOS 앱 지침](~/cross-platform/macios/unified/updating-ios-apps.md) 필요할 수 있는 변경 내용에 대 한 추가 정보에 대 한 합니다. [이러한 팁](~/cross-platform/macios/unified/updating-tips.md) 필요한 변경 내용을 식별도 도움이 됩니다.
 
-## <a name="2-xamarinforms-131-update"></a>2. Xamarin.Forms 1.3.1 Update
+## <a name="2-xamarinforms-131-update"></a>2. Xamarin.Forms 1.3.1 업데이트
 
 IOS 앱 통합 API를 업데이트 한 후 솔루션의 나머지 버전 1.3.1 xamarin.forms 업데이트 해야 합니다. 여기에는 다음이 포함됩니다.
 

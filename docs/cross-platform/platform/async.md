@@ -3,15 +3,14 @@ title: 비동기 개요
 description: '최신 버전의 C# 언어-버전 5 – 비동기 작업을 표현 하는 두 개의 새 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 638e16a47d30e1d4d61fe9e7d19a0245261e5d7f
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 

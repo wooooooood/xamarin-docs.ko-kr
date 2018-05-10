@@ -3,15 +3,14 @@ title: 바인딩이 통합된 API로 마이그레이션
 description: 이 문서에서는 Xamarin.IOS 및 Xamarin.Mac 응용 프로그램에 통합 된 Api를 지원 하기 위해 기존 Xamarin 바인딩 프로젝트를 업데이트 하는 데 필요한 단계에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 25641671992a125e97bf7feff84b754423527da6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2d57f27bf0d3aaa2a7ba14f23481a8f2bb2d87f2
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩이 통합된 API로 마이그레이션
 

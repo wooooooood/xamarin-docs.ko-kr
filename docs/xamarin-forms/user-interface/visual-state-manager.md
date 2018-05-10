@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms Visual State Manager
-description: Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상태를 기반으로 하는 XAML 요소에서 변경할 수 있습니다.
+description: Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상태를 기반으로 하는 XAML 요소를 변경 해야 합니다.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: f511f5c33b947704a42df850d2772c0b26511173
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
-ms.translationtype: HT
+ms.openlocfilehash: 14553bc9484ecc236fb4ceefd687ec7742109758
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
 
-_Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상태를 기반으로 하는 XAML 요소에서 변경할 수 있습니다._
+_Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상태를 기반으로 하는 XAML 요소를 변경 해야 합니다._
 
 시각적 상태 관리자 (VSM) Xamarin.Forms 3.0의 새로운 기능입니다. VSM 코드에서 시각적 항목이 변경 된 사용자 인터페이스에 수행 하는 구조적된 방법을 제공 합니다. XAML에서 정의 된 대부분의 경우 응용 프로그램의 사용자 인터페이스와이 XAML Visual State Manager 사용자 인터페이스의 시각적 개체에 미치는 영향을 설명 하는 태그를 포함 합니다.
 
@@ -24,7 +24,7 @@ _Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상
 
 시각적 상태에 수집 됩니다. _시각적 상태 그룹_합니다. 시각적 상태 그룹 내의 모든 시각적 상태는 함께 사용할 수 없습니다. 시각적 상태와 표시 상태 그룹 모두에 게 간단한 텍스트 문자열으로 식별 됩니다.
 
-초기 릴리스 Xamarin.Florms Visual State Manager 세 시각적 상태 "CommonStates" 이라는 하나의 시각적 상태 그룹을 정의 합니다.
+Xamarin.Forms Visual State Manager 세 시각적 상태 "CommonStates" 이라는 하나의 시각적 상태 그룹을 정의 합니다.
 
 - "Normal"
 - "비활성화"
@@ -39,9 +39,9 @@ _Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상
 
 ## <a name="the-common-states"></a>일반적인 상태
 
-초기 릴리스에서 Visual State Manager를 사용 하면 보기 보통 또는 사용 안 함 되었거나에 입력된 포커스가 있는 경우 보기의 시각적 모양을 변경할 수 있는 XAML 파일의 섹션을 포함 하는 수 있습니다. 이 라고는 _일반적인 상태_합니다.
+Visual State Manager를 사용 하면 보기 보통 또는 사용 안 함 되었거나에 입력된 포커스가 있는 경우 보기의 시각적 모양을 변경할 수 있는 XAML 파일의 섹션을 포함 하는 수 있습니다. 이 라고는 _일반적인 상태_합니다.
 
-예를 들어 있다고 가정는 `Entry` 페이지 보기. 여기의 시각적 모양을 원하는 상태가 `Entry` 변경 하려면:
+예를 들어 있다고 가정는 `Entry` 페이지 보기의 시각적 모양을 중이 고는 `Entry` 다음과 같은 방법으로 변경 하려면:
 
 - `Entry` 는 pink 있어야 때 백그라운드에서 `Entry` 을 사용할 수 없습니다.
 - `Entry` 정상적으로 라임 배경 있어야 합니다.
@@ -71,9 +71,7 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 </Entry>
 ```
 
-조금 이상 해 보일 수 있습니다. 이러한 종류의 두 태그 사이 나타나는 유일한 태그 내용 또는 속성 요소에 대 한 일반적으로 및 `VisualStateManager.VisualStateGroups` 태그는 모두 합니다.
-
-법적 XAML 구문 때문에 이것이 [ `VisualStateGroups` ](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) 으로 정의 하는 연결 된 바인딩 가능한 속성의 [ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager) 클래스입니다. (연결 된 바인딩 가능한 속성에 대 한 자세한 내용은 문서 참조 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md).) 이것은 방법을 `VisualStateGroups` 속성이에 연결 된는 `Entry` 개체입니다.
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) 연결된 된 바인딩 가능한 속성으로 정의 되는 [ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager) 클래스입니다. (연결 된 바인딩 가능한 속성에 대 한 자세한 내용은 문서 참조 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md).) 이것은 방법을 `VisualStateGroups` 속성이에 연결 된는 `Entry` 개체입니다.
 
 `VisualStateGroups` 형식의 속성은 [ `VisualStateGroupList` ](xref:Xamarin.Forms.VisualStateGroupList)의 컬렉션인 [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) 개체입니다. 내에서 `VisualStateManager.VisualStateGroups` 태그를 삽입 한 쌍의 `VisualStateGroup` 각 그룹에 포함 하려는 시각적 상태에 대 한 태그:
 
@@ -93,7 +91,9 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 <VisualStateGroup Name="CommonStates">
 ```
 
-`VisualStateGroup` 라는 속성을 정의 하는 클래스 [ `States` ](xref:Xamarin.Forms.VisualStateGroup.States)의 컬렉션인 [ `VisualState` ](xref:Xamarin.Forms.VisualState) 개체입니다. `States` 콘텐츠 속성은 `VisualStateGroups` 에 사용할 수 있도록는 `VisualState` 사이 직접 태그는 `VisualStateGroup` 태그입니다.
+사용할 수 있습니다 `x:Name` 또는 `Name` 동일한 요소에서 두만 합니다.
+
+`VisualStateGroup` 라는 속성을 정의 하는 클래스 [ `States` ](xref:Xamarin.Forms.VisualStateGroup.States)의 컬렉션인 [ `VisualState` ](xref:Xamarin.Forms.VisualState) 개체입니다. `States` _contentproperty_ 의 `VisualStateGroups` 에 사용할 수 있도록는 `VisualState` 사이 직접 태그는 `VisualStateGroup` 태그입니다. (속성 문서에 설명 된 콘텐츠 [필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties).)
 
 다음 단계에서는 해당 그룹의 한 쌍의 모든 시각적 상태에 대 한 태그를 포함 하는 것입니다. 또한 식별할 수 있습니다를 사용 하 여 `x:Name` 또는 `Name`:
 
@@ -254,7 +254,7 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 
 현재 visual 상태가 "Disabled" 하므로 두 번째의 배경을 `Entry` 은 iOS 및 Android 화면의 분홍색 합니다. UWP 구현의 `Entry` 배경을 설정 하지 못하도록 때 색는 `Entry` 을 사용할 수 없습니다. 
 
-세 번째 요구 사항에 입력할 사용자 지정 하는 것 `Entry`, 두 번째 `Entry` "Normal" 상태 및 백그라운드를 스위치 라임 포함 되었습니다.
+세 번째에 텍스트를 입력 하면 `Entry`, 두 번째 `Entry` "Normal" 상태 및 백그라운드를 스위치 라임 포함 되었습니다.
 
 [![보기에는 VSM: 보통](vsm-images/VsmOnViewNormal.png "VSM 보기-일반")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
@@ -275,13 +275,13 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 </VisualState>
 ```
 
-이러한 순서로 `Setter` 올바르게 작동 하기 위해서는 개체는 `VisualStateGroup` 포함 해야 `VisualState` 해당 그룹의 모든 상태에 대 한 개체입니다. 포함 하지 않는 시각적 상태 이면 `Setter` 개체 그래도 빈 태그를 포함 합니다.
+이러한 순서로 `Setter` 올바르게 작동 하기 위해서는 개체는 `VisualStateGroup` 있어야 `VisualState` 해당 그룹의 모든 상태에 대 한 개체입니다. 포함 하지 않는 시각적 상태 이면 `Setter` 개체 그래도 빈 태그를 포함 합니다.
 
 ```xaml
 <VisualState x:Name="Normal" />
 ``` 
 
-### <a name="vsm-markup-in-a-style"></a>VSM 태그를 스타일
+### <a name="visual-state-manager-markup-in-a-style"></a>상태 관리자 태그를 스타일
 
 필요 동일한 Visual State Manager 태그를 두 개 이상의 보기 사이에서 공유 하는 경우가 많습니다. 태그에 저장 해야 하는 경우에 `Style` 정의 합니다.
 
@@ -415,13 +415,13 @@ VSM 태그의 나머지 부분에서는 이전과 동일 합니다.
 
 ## <a name="defining-your-own-visual-states"></a>사용자 고유의 시각적 상태 정의
 
-파생 되는 모든 클래스는 `VisualElement` 는 세 가지 일반적인 상태 "Normal", "포커스 있음" 및 "비활성화"를 지원 합니다. 내부적으로 [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) 범위가 사용 또는 사용 안 함 또는 포커스가 있거나 포커스가 없을, 점점 하 고 정적을 호출 하는 경우를 검색 하는 클래스 [ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/) 다음과 같이 메서드:
+파생 되는 모든 클래스는 `VisualElement` 는 세 가지 일반적인 상태 "Normal", "포커스 있음" 및 "비활성화"를 지원 합니다. 내부적으로 [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) 범위가 사용 또는 사용 안 함 또는 포커스가 있거나 포커스가 없을, 점점 하 고 정적을 호출 하는 경우를 검색 하는 클래스 [ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/) 메서드:
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");
 ```
 
-이 중요 한 방법 이며 Visual State Manager 코드만에서 확인할 수는 `VisualElement` 클래스입니다. 때문에 `GoToState` 에서 파생 되는 모든 클래스 동시에 기반 하 여 모든 개체에 대해 호출 됩니다 `VisualElement`, Visual State Manager를 사용 하 여 함께 `VisualElement` 이러한 변경에 응답 하는 개체입니다.
+이에서 확인할 수 있는 코드만 Visual State Manager는 `VisualElement` 클래스입니다. 때문에 `GoToState` 에서 파생 되는 모든 클래스에 기반 하는 모든 개체에 대 한 호출 `VisualElement`, Visual State Manager를 사용 하 여 함께 `VisualElement` 이러한 변경에 응답 하는 개체입니다.
 
 흥미롭게도 "CommonStates" 시각적 상태 그룹의 이름을 명시적으로에서 참조 되지 않은 `VisualElement`합니다. 그룹 이름은 Visual State Manager에 대 한 API의 일부가 아닙니다. 앞에서 설명한 두 개의 샘플 프로그램 중 어느 하나에 다른 모든 항목에 대 한 "CommonStates" 그룹의 이름을 변경할 수 있습니다 및 프로그램이 계속 작동 합니다. 그룹 이름은 해당 그룹의 상태에 대해 개괄적으로 설명 하기만 합니다. 시각적 상태 그룹에서 상호 배타적인은 암시적으로 인식 됩니다: 한 상태 및 하나만 상태 언제 든 지 최신 상태입니다.
 
@@ -485,9 +485,9 @@ VisualStateManager.GoToState(this, "Focused");
 </ContentPage>
 ```
 
-VSM 태그 두 번째에 연결 되어 `Label` (라는 `helpLabel`) 및 `Button` (라는 `submitButton`). "Valid" 및 "잘못 됨" 이라는 두 개의 상호 배타적인 상태 있습니다. (곧 이러한 상태를 설정 하는 코드 숨김 파일이 표시 됩니다.) 예를 들어 각각 두 개의 "ValidationState" 그룹의 표시 `VisualState` 각각의 경우에서 그 중 하나가 비어 있지만 "Valid" 및 "잘못 된" 모두에 대 한 태그입니다. 
+VSM 태그 두 번째에 연결 되어 `Label` (라는 `helpLabel`) 및 `Button` (라는 `submitButton`). "Valid" 및 "잘못 됨" 이라는 두 개의 상호 배타적인 상태 있습니다. 예를 들어 각각 두 개의 "ValidationState" 그룹의 표시 `VisualState` 각각의 경우에서 그 중 하나가 비어 있지만 "Valid" 및 "잘못 된" 모두에 대 한 태그입니다. 
 
-경우는 `Entry` 현재 상태는 "잘못 된"는 올바른 전화 번호가 없습니다. 두 번째 `Label` 표시 되 고 `Button` 을 사용할 수 없습니다.
+경우는 `Entry` 하므로에 현재 상태는 "잘못 된" 올바른 전화 번호를 포함 하지 않는 두 번째 `Label` 표시 되 고 `Button` 을 사용할 수 없습니다:
 
 [![VSM 유효성 검사: 잘못 된 상태](vsm-images/VsmValidationInvalid.png "VSM 유효성 검사-잘못 되었습니다.")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
@@ -526,19 +526,19 @@ public partial class VsmValidationPage : ContentPage
 
 호출 하 고 이러한 시각적 상태에서 코드 숨김 파일이 영향을 받는 페이지에서 모든 개체의 계정을 수행 해야 확인 `VisualStateManager.GoToState` 이러한 각 개체에 대 한 합니다. 이 예에서 두 개체는 (의 `Label` 및 `Button`)를 여러 개 있을 수 있지만 더 많은 합니다.
 
-궁금할: 코드 숨김 파일에서 이러한 시각적 상태에 영향을 받는 페이지에서 모든 개체를 참조 해야 하는 경우 이유 코드 숨김 파일 단순히 직접 액세스할 수 없는 개체? 이 분명 할 수 없습니다. 그러나 Visual State Manager를 사용 하 여 이러한 개체를 한 곳에서 모든 사용자 인터페이스 디자인 되므로 XAML에서 다른 시각적 상태에 대응 방법을 제어할 수 있습니다.
+궁금할: 코드 숨김 파일에서 이러한 시각적 상태에 영향을 받는 페이지에서 모든 개체를 참조 해야 하는 경우 이유 코드 숨김 파일 단순히 직접 액세스할 수 없는 개체? 이 분명 할 수 없습니다. 그러나는 VSM 사용 방식을 시각적 요소를 제어할 수 있습니다는 한 곳에서 모든 UI 디자인 되므로 XAML에서 여러 상태에 대응 합니다. 이렇게 하면 관련 코드에서 직접 시각적 요소에 액세스 하 여 시각적 모양을 설정 없습니다.
 
 클래스를 파생 하는 것이 좋습니다. 상자로 `Entry` 아마도 외부 유효성 검사 함수에 설정할 수 있는 속성을 정의 합니다. 파생 된 클래스 `Entry` 호출할 수는 `VisualStateManager.GoToState` 메서드. 경우에 제대로 작동할 것이 체계는 `Entry` 다른 시각적 상태에 영향을 받는 유일한 개체 되었습니다. 이 예제는 `Label` 및 `Button` 영향을 받을 수는 있습니다. 에 연결 된 VSM 태그에 대 한 방법이 있으면는 `Entry` VSM 태그 시각적 상태 변경을 다른 개체에서 참조 하는 다른 개체에 해당 연결에 대 한 페이지, 및 방법은 다른 개체를 제어할 수 있습니다.
 
 <a name="adaptive-layout" />
 
-## <a name="using-the-vsm-for-adaptive-layout"></a>레이아웃의 적응는 VSM을 사용 하 여
+## <a name="using-the-visual-state-manager-for-adaptive-layout"></a>적응 레이아웃에 대 한 Visual State Manager를 사용 하 여
 
-휴대폰에서 실행 되는 Xamarin.Forms 프로그램 일반적으로 세로 또는 가로 세로 비율로 볼 수 있습니다 및 많은 다양 한 크기 및 가로 세로 비율을 가정 하는 데스크톱에서 실행 되는 Xamarin.Forms 프로그램 크기를 조정할 수 있습니다. 잘 디자인 된 응용 프로그램 다르게 이러한 다양 한 페이지 또는 창 폼 요소 모두에 해당 콘텐츠를 표시할 수 있습니다. 
+휴대폰에서 실행 되는 응용 프로그램 세로 또는 가로 가로 세로 비율 및 바탕 화면에서 실행 되는 Xamarin.Forms 프로그램에서 일반적으로 볼 수 있는 Xamarin.Forms 가정 많은 다양 한 크기 및 가로 세로 비율을 조정할 수 있습니다. 잘 디자인 된 응용 프로그램 다르게 이러한 다양 한 페이지 또는 창 폼 요소 모두에 해당 콘텐츠를 표시할 수 있습니다. 
 
 이 기술은 라고도 _적응 레이아웃_합니다. 적응 레이아웃만을 포함 되는 프로그램의 시각적 표시 되므로 Visual State Manager의 이상적인 응용 프로그램.
 
-간단한 예는 응용 프로그램의 내용에 영향을 주는 단추의 작은 컬렉션을 표시 하는 프로그램입니다. 세로 모드의 이러한 단추 페이지 위쪽의 가로 행으로 표시 될 수 있습니다.
+간단한 예는 응용 프로그램의 내용에 영향을 주는 단추의 작은 컬렉션을 표시 하는 응용 프로그램. 세로 모드의 이러한 단추 페이지 위쪽의 가로 행으로 표시 될 수 있습니다.
 
 [![VSM 적응 레이아웃: 세로](vsm-images/VsmAdaptiveLayoutPortrait.png "VSM 적응 레이아웃-세로")](vsm-images/VsmAdaptiveLayoutPortrait-Large.png#lightbox)
 
@@ -548,9 +548,9 @@ public partial class VsmValidationPage : ContentPage
 
 위쪽에서 아래쪽, 프로그램 유니버설 Windows 플랫폼, Android 및 iOS에서 실행 됩니다.
 
-이것이 Visual State Manager에 대 한 작업입니다. **VSM 적응 레이아웃** 페이지에 [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/) 샘플 "가로"와 "세로" 라는 두 개의 시각적 상태 "OrientationStates" 라는 그룹을 정의 합니다. (여러 다른 페이지 또는 창 너비 보다 복잡 한 접근을 기준이 될 수 있습니다.) 
+**VSM 적응 레이아웃** 페이지에 [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/) 샘플 "가로"와 "세로" 라는 두 개의 시각적 상태 "OrientationStates" 라는 그룹을 정의 합니다. (여러 다른 페이지 또는 창 너비 보다 복잡 한 접근을 기준이 될 수 있습니다.) 
 
-XAML 파일의 4 개 위치에서 VSM 태그 표시 됩니다. `StackLayout` 라는 `mainStack` 메뉴와 콘텐츠를 모두 포함 한 `Image` 요소입니다. 이 `StackLayout` 세로 모드의 세로 방향 및 가로 모드에서 가로 방향이 있어야 합니다.
+VSM 태그 XAML 파일의 4 개 위치에서 발생합니다. `StackLayout` 라는 `mainStack` 메뉴와 콘텐츠를 모두 포함 한 `Image` 요소입니다. 이 `StackLayout` 세로 모드의 세로 방향 및 가로 모드에서 가로 방향이 있어야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -663,9 +663,9 @@ XAML 파일의 4 개 위치에서 VSM 태그 표시 됩니다. `StackLayout` 라
 </ContentPage>
 ```
 
-내부 `ScrollView` 라는 `menuScroll` 및 `StackLayout` 라는 `menuStack` 메뉴의 단추를 구현 합니다. 이러한 레이아웃 방향은 반대의 `mainStack`: 메뉴 세로 모드의 가로 및 세로에서 가로 모드 여야 합니다.
+내부 `ScrollView` 라는 `menuScroll` 및 `StackLayout` 라는 `menuStack` 메뉴의 단추를 구현 합니다. 이러한 레이아웃 방향은 반대의 `mainStack`합니다. 메뉴 세로 모드의 가로 및 세로에서 가로 모드 여야 합니다.
 
-네 번째 청크 VSM 태그 자체 단추에 대 한 암시적 스타일입니다. 이 태그 설정 `VerticalOptions`, `HorizontalOptions`, 및 `Margin` portait 가로 및 세로 orienations 관련 속성입니다.
+VSM 태그의 네 번째 섹션에 자체 단추에 대 한 암시적 스타일은입니다. 이 태그 설정 `VerticalOptions`, `HorizontalOptions`, 및 `Margin` portait 및 가로 방향 관련 된 속성입니다.
 
 코드 숨김 파일 세트는 `BindingContext` 속성 `menuStack` 구현 하려면 `Button` , 명령 및 처리기를 연결 합니다는 `SizeChanged` 페이지의 이벤트:
 
@@ -703,7 +703,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 
 `SizeChanged` 처리기 호출 `VisualStateManager.GoToState` 두 `StackLayout` 및 `ScrollView` 요소 및 다음 루프의 하위 항목 `menuStack` 호출할 `VisualStateManager.GoToState` 에 대 한는 `Button` 요소.
 
-처음에 코드 숨김 파일 XAML 파일에서 요소의 속성을 설정 하 여 보다 직접적 방향 변경을 처리할 수 있지만 Visual State Manager 보다 훨씬 구조화 된 방법을 분명 이벤트 처럼 보입니다. 모든 시각적 개체를 검사 하는 보다 쉽게 수 있는, XAML 파일에 보관 되는 유지 관리 하 고 수정 합니다.
+코드 숨김 파일 XAML 파일에서 요소의 속성을 설정 하 여 보다 직접적 방향 변경을 처리할 수 있지만 Visual State Manager 보다 훨씬 구조화 된 방법을 분명 이벤트 처럼 보입니다. 모든 시각적 개체를 검사 하는 보다 쉽게 수 있는, XAML 파일에 보관 되는 유지 관리 하 고 수정 합니다.
 
 ## <a name="visual-state-manager-with-xamarinuniversity"></a>Xamarin.University와 표시 상태 관리자
 

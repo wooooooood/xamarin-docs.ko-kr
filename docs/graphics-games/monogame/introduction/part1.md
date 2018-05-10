@@ -3,15 +3,14 @@ title: 크로스 플랫폼 MonoGame 만들기-1 부
 description: 이 연습에서는 MonoGame를 사용 하 여 Android 및 iOS에 대 한 새 프로젝트를 만드는 방법을 보여 줍니다. 결과 각 플랫폼에 대 한 프로젝트와 플랫폼 간 공유 코드 프로젝트를 사용 하 여 Mac 솔루션에 대 한 Visual Studio입니다. 이 프로젝트에는 실행 때 빈 파란색 화면을 표시 됩니다.
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 1c859c5a8d8c5d8b0539d4158895e816d47d3d5e
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: bd7990b94e678c205f9ce636f4eb0d28180fc6ec
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>크로스 플랫폼 MonoGame 만들기-1 부
 

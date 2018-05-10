@@ -3,15 +3,14 @@ title: 2D 수학 CocosSharp와
 description: 이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. CocosSharp를 사용 하 여 일반적인 게임 개발 작업을 수행 하는 방법을 보여 주는 하 고 수학 뒤에 이러한 작업에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 13279df69b7a22117c10d74f1a15c082aff13264
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>2D 수학 CocosSharp와
 

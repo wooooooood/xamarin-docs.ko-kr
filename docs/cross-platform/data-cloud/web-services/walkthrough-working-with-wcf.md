@@ -3,15 +3,14 @@ title: 연습-WCF 작업
 description: 이 연습에서는 Xamarin으로 빌드된 모바일 응용 프로그램 수 BasicHttpBinding 클래스를 사용 하 여 WCF 웹 서비스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D0E83342-2E79-4D25-BD57-43718F5628C4
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 297aac4ba4a564e4506d841d3e11718ad79307e2
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: b0502028985cf35498a5811ec88b9e32d74d0311
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>연습-WCF 작업
 

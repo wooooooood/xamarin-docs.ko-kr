@@ -3,15 +3,14 @@ title: Xamarin에 대 한 NuGet 패키지를 수동으로 만들기
 description: 이 페이지에는 몇 가지 팁을을 Xamarin 플랫폼을 대상으로 하는 NuGet 패키지를 작성할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: ce8003c862205ac80dfea2095009562ae7ebb23f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지를 수동으로 만들기
 

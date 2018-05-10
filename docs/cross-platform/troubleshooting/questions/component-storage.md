@@ -3,14 +3,13 @@ title: 내 컴퓨터에 구성 요소를 저장 하는 위치
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5EBB49EE-39E5-428B-866F-9FC1BB215B31
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: f0dad6e6219d373eaa9f8410aea7d96c81eceb6b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53045a6179a26b30d824976d11fd2769a84811e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="where-are-the-components-stored-on-my-machine"></a>내 컴퓨터에 구성 요소를 저장 하는 위치
 

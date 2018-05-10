@@ -3,15 +3,14 @@ title: 3D 그래픽 MonoGame 소개
 description: MonoGame 실시간 3D 그래픽을 표시 하기 위한 유연 하 고 효과적인 API를 제공 합니다. 렌더링에 대 한 보다 높은 수준의 구문을 포함 하며 하위 그래픽 리소스에 액세스할 수도 있습니다.
 ms.prod: xamarin
 ms.assetid: 8706826E-8BA5-4E00-A7D6-4072626E3292
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 603128db1df85e0dabb041d1eb79f250eb5d3872
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: b0d8a5b8ae08c460aee4748036ee171a0e84085d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-3d-graphics-with-monogame"></a>3D 그래픽 MonoGame 소개
 

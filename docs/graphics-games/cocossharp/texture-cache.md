@@ -3,15 +3,14 @@ title: CCTextureCache를 사용 하는 텍스처 캐싱
 description: CocosSharp의 CCTextureCache 클래스에는 캐시를 구성 하 고 콘텐츠를 언로드할 표준 방법을 제공 합니다. RAM, 그룹화 및 질감의 삭제 과정을 단순화 하에 전체가 들어 맞지 않을 수 있는 큰 게임에 대 한 특히 유용 합니다.
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: f0a8121d5e90d2f39fb1b0cbd8d283253c2bf76d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb75efea0914827f1d59a8e0943584597f91803a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="texture-caching-using-cctexturecache"></a>질감 CCTextureCache를 사용 하 여 캐싱
 

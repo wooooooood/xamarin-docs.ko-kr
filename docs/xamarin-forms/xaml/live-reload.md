@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 04/23/2018
-ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 05/08/2018
+ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -27,8 +27,8 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
 
 ## <a name="requirements"></a>요구 사항
 
-* [Visual Studio 2017 15.7 미리 보기 4](https://www.visualstudio.com/vs/preview/) 이상으로 **.NET을 사용한 모바일 개발** 작업 합니다.
-* [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) 이상.
+* [Visual Studio 2017 15.7 버전 이상](https://www.visualstudio.com/vs/) 이상으로 **.NET을 사용한 모바일 개발** 작업 합니다.
+* [Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/) 이상.
 
 ## <a name="getting-started"></a>시작
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio 마켓플레이스에서 라이브 다시 로드 Xamarin 설치
@@ -45,8 +45,13 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
 
 기존 모바일 앱에 라이브 다시 로드를 추가 하는 3 단계에 따라 수행할 수 있습니다.
 
-1. 모든 프로젝트를 업데이트 하는 데 [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) 이상.
-2. 설치는 **Xamarin.LiveReload** 표준.NET 2.0 라이브러리로 NuGet 합니다. 이 플랫폼 프로젝트에 따라 설치할 필요는 없습니다. 확인 하는 **패키지 소스** 로 설정 된 **모든**합니다.
+1. 모든 프로젝트를 업데이트 하는 데 [Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/) 이상.
+
+2. 추가 **Xamarin.LiveReload** NuGet 패키지:
+
+    a. **.NET 표준** – 설치는 **Xamarin.LiveReload** 표준.NET 2.0 라이브러리로 NuGet 합니다. 이 플랫폼 프로젝트에 따라 설치할 필요는 없습니다. 확인 하는 **패키지 소스** 로 설정 된 **모든**합니다.
+    
+    b. **공유 프로젝트** – 설치 된 **Xamarin.LiveReload** 모든 플랫폼 프로젝트에 NuGet (Android, iOS, UWP, 같은 등). 확인 하는 **패키지 소스** 로 설정 된 **모든**합니다.
 
 ![Xamarin 라이브 다시 로드 NuGet NuGet 패키지 관리자를 추가 합니다.](images/addlivereloadnuget.png)
 
@@ -85,7 +90,7 @@ Xamarin 라이브 다시 로드의 초기 미리 보기 릴리스는 Visual Stud
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>변경 내용을 라이브 다시 로드를 다시 배포? 
 
-라이브 다시 로드에는 변경 내용을 XAML에만 적용 됩니다. C# 파일을 변경한 경우 다시 컴파일한 해야 합니다. 이후 버전에 대 한 다시 로드 하 고 C#에 대 한 지원이 예정 되어 합니다.
+라이브 다시 로드에는 XAML 나 CSS 변경만 적용 됩니다. C# 파일을 변경한 경우 다시 컴파일한 해야 합니다. 이후 버전에 대 한 다시 로드 하 고 C#에 대 한 지원이 예정 되어 합니다.
 
 ### <a name="what-platforms-are-supported"></a>플랫폼 지원 되나요? 
 
@@ -111,8 +116,6 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 ## <a name="known-issues"></a>알려진 문제
 
 * Visual Studio에서 에서만 지원 됩니다.
-* .NET 표준 라이브러리 에서만 작동합니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
-* CSS 스타일 시트를 지원 하지 않습니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
 * 응용 프로그램 수준의 리소스를 다시 로드 (즉, **App.xaml** 또는 공유 리소스 사전), 응용 프로그램 탐색을 다시 설정 됩니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
 * UWP 디버깅 인해 런타임 충돌 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 **(Ctrl + F5) 디버깅 하지 않고 시작** 대신 **디버깅 시작 (F5)** 합니다.
 
@@ -131,8 +134,6 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 * **XLR003**: *nuget 패키지를 다시 로드 라이브 Xamarin 라이브 다시 로드 Visual Studio 확장을 설치 해야 합니다.*
 
   다시 로드 라이브 nuget 패키지를 참조 하는 프로젝트를 빌드하려고 시도 하지만 Visual 확장 설치 되어 있지 않습니다.  
-
-
 
 ### <a name="app-doesnt-connect"></a>응용 프로그램에 연결 하지 않습니다.
 

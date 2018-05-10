@@ -3,15 +3,14 @@ title: 통합 된 API 개요
 description: 새 스타일 API 쉽게 그 어느 때 보다 Mac 및 iOS로 있도록 동일한 32와 64 비트 응용 프로그램을 지원 하기 위해 이진 사이 코드를 공유할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c36682ba038c18dfb872e76f338ea1d9881cca10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0bdbf4a41ad5737603fccc7e78bc588a2f3acee3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unified-api-overview"></a>통합 된 API 개요
 
@@ -219,7 +218,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
     public virtual string ReuseIdentifier { get; }
 
-**Unified**
+**통합**
 
     public virtual NSString ReuseIdentifier { get; }
 
@@ -237,7 +236,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
-**Unified**
+**통합**
 
     public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
@@ -249,7 +248,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 
-**Unified**
+**통합**
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 

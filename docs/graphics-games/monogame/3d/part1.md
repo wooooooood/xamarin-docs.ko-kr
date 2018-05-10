@@ -3,15 +3,14 @@ title: 모델 클래스를 사용 하 여
 description: 모델 클래스는 3D 그래픽을 렌더링 하는 기존의 방법에 비해 복잡 한 3D 개체 렌더링 크게 단순화 합니다. 모델 개체는 사용자 지정 코드 없이 콘텐츠를 간단 하 게 통합할 수 있는 콘텐츠 파일에서 생성 됩니다.
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e778df7fa6dd27aee8282154c99faf5ca5791ce
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 01e000b22749acb1b5c3a3203db7f372613cca16
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-the-model-class"></a>모델 클래스를 사용 하 여
 
@@ -54,7 +53,7 @@ MonoGame API에 포함 되어는 `Model` 렌더링을 수행 하 고 콘텐츠 �
 
 ![솔루션 탐색기 콘텐츠 폴더가 xnb 파일](part1-images/xnbsinxs.png)
 
-Mac 용 visual Studio의 빌드 작업을 새로 추가 된 XNBs 설정 되지 않을 수 있습니다. Ios의 경우 파일 및 선택의 각 단추로 **빌드 작업 BundleResource->**합니다. Android의 경우 마우스 오른쪽 단추로 클릭 파일 및 선택의 각 **빌드 작업 AndroidAsset->**합니다.
+Mac 용 visual Studio의 빌드 작업을 새로 추가 된 XNBs 설정 되지 않을 수 있습니다. Ios의 경우 파일 및 선택의 각 단추로 **빌드 작업 BundleResource->** 합니다. Android의 경우 마우스 오른쪽 단추로 클릭 파일 및 선택의 각 **빌드 작업 AndroidAsset->** 합니다.
 
 ## <a name="rendering-a-3d-model"></a>3D 모델 렌더링
 

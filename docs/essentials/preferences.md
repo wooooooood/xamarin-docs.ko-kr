@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 기본 설정
 description: 응용 프로그램의 기본 키/값 저장소에 저장 하는 기본 설정 클래스 합니다.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3886432f51125508349fd7815ac374cb0339c254
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 6cca9413cee40fde5b8bb8967db52db7a3a3382f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials 기본 설정
 

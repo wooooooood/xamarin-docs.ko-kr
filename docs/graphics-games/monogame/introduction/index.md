@@ -3,15 +3,14 @@ title: MonoGame와 게임 개발 소개
 description: 이 다중 파트 연습 MonoGame를 사용 하 여 간단한 2D 응용 프로그램을 만드는 방법을 보여 줍니다.  일반적인 게임에서는 엔터티 및 물리학 게임을 입력 하 고, 그래픽 등의 프로그래밍 개념입니다.
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 46cc3a7e3bb6c58e04626c9d2cc9437c16ba19f5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame와 게임 개발 소개
 

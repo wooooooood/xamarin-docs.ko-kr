@@ -3,15 +3,14 @@ title: 설치 관리자 및 요구 사항
 description: 다운로드, 설치 및 Xamarin 검사를 사용 하는 방법.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 93f42eef8d76074f6b672bc5a663e8f8f1d2ef80
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>설치 관리자 및 요구 사항
 
@@ -126,7 +125,7 @@ Android 및 iOS에 대 한 어떤 장치에서 디버깅 하는 검사 하려는
 - IDE에 표시 된 대로 장치의 이름
 - 장치 OS 버전
 - Android: x86를 사용 하 고 있는지 확인 하십시오. 에뮬레이터
-- Android: 에뮬레이터 플랫폼 사용 중 인가요? Google 에뮬레이터? Visual Studio Android Emulator? Xamarin Android Player?
+- Android: 에뮬레이터 플랫폼 사용 중 인가요? Google 에뮬레이터? Visual Studio의 Android 에뮬레이터? Xamarin Android Player?
 - 가 제대로 디버깅 하는 응용 프로그램 표시 하 고 장치에서 작동 하는지?
 - 장치는 네트워크 연결 (웹 브라우저를 통해 확인)이 있습니까?
 

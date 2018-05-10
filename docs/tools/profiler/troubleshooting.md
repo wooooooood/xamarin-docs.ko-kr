@@ -3,15 +3,14 @@ title: Xamarin 프로파일러 문제 해결
 description: Xamarin 프로파일러 문제 해결
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 4844c999ceddcee89d4f45f6e41dd4c7f2caf054
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin 프로파일러 문제 해결
 
@@ -42,7 +41,7 @@ Windows에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Pr
 
 **.mlpd** 선택 하 여 현재 세션으로 저장할 수도 있습니다에 대 한 **파일 > 다른 이름으로 저장...** 메뉴:
 
-**Visual Studio for Mac**:
+**Mac 용 visual Studio**:
 
 ![](troubleshooting-images/image17.png "Mac 용 Visual Studio에서.mlpd 파일을 저장 하는 중")
 

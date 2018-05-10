@@ -3,15 +3,14 @@ title: 설치 후 누락 된 Visual Studio 확장
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 72870b9bf6ff6c3068ee037e6405e4ec03546cd6
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: e47cfc4de77a6310a81867eefb07c3c1e5cc7060
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>설치 후 누락 된 Visual Studio 확장
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 04/06/2018
 
     *   Xamarin
 
-    *   Windows 용 Xamarin
+    *   Windows용 Xamarin
 
     *   Xamarin.Android
 
@@ -83,7 +82,7 @@ ms.lasthandoff: 04/06/2018
 
     _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
-6.  찾아이 패턴과 일치 하는 모든 항목을 삭제 합니다.
+6.  이 패턴과 일치하는 항목을 찾아 삭제합니다.
 
     _C:\Program Files\*\Microsoft Visual Studio 1\*.0\Common7\IDE\Extensions\Xamarin_
 
@@ -91,7 +90,7 @@ ms.lasthandoff: 04/06/2018
 
     `HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\1\*.0\ExtensionManager\PendingDeletions`
 
-8.  Xamarin 관련 될 수 있습니다 처럼 보이는 항목을 삭제 합니다. 예를 들어 여기의 하나 사용는 이전 버전의 Xamarin에 문제가 발생할 수 있습니다:
+8.  Xamarin과 관련된 것으로 보이는 모든 항목을 삭제합니다. 예를 들어 여기의 하나 사용는 이전 버전의 Xamarin에 문제가 발생할 수 있습니다:
 
     _Mono.VisualStudio.Shell,1.0_
 

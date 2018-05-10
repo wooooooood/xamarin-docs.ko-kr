@@ -3,15 +3,14 @@ title: 이식 가능한 클래스 라이브러리 소개
 description: 이 문서는 PCL 이식 가능한 클래스 라이브러리 () 프로젝트를 소개 하 고 만들기 및 Mac 및 Visual Studio 용 Visual Studio의 PCL 프로젝트 사용에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: d80a4125d7447b19f001c349aff006dc4744f4a6
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>이식 가능한 클래스 라이브러리 소개
 

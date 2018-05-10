@@ -3,15 +3,14 @@ title: Xamarin Workbooks
 description: Xamarin 통합 문서에는 학습, 하 고 지침을 만들고 교육 보조 기능 설명서와 실험에는 완벽 하는 코드를 혼합 하 여 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bae0fcc5b82a2833e39d078693555634d160ffb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 57ef9cb3a45dbf1c6271a1475c27fdd38d2fd96b
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
