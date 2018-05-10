@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 지리적 위치
 description: 지리적 위치 클래스 장치의 현재 지리적 위치 좌표를 검색 하는 Api를 제공 합니다.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 51e63245cd6959f650a0aa078cc4632bc825de5b
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 399dcd54d574875bcb5e491e87731b817e840e54
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials 지 오 코딩
 
