@@ -6,15 +6,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: a9dbf77b85fe7f39c152d4dfb33bdd44c72dca40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="loading-application-resource-videos"></a>응용 프로그램 리소스 비디오를 로드합니다.
 
-에 대 한 사용자 지정 렌더러는 `VideoPlayer` 보기는 응용 프로그램 리소스로 개별 플랫폼 프로젝트에 포함 된 비디오 파일을 재생할 수 있습니다. 그러나 현재 버전의 `VideoPlayer` 이식 가능한 클래스 라이브러리에 포함 된 리소스에 액세스할 수 없습니다.
+에 대 한 사용자 지정 렌더러는 `VideoPlayer` 보기는 응용 프로그램 리소스로 개별 플랫폼 프로젝트에 포함 된 비디오 파일을 재생할 수 있습니다. 그러나 현재 버전의 `VideoPlayer` .NET 표준 라이브러리에 포함 된 리소스에 액세스할 수 없습니다.
 
 인스턴스를 만들고 이러한 리소스를 로드 하려면 `ResourceVideoSource` 설정 하 여는 `Path` 파일 이름 (또는 폴더와 파일 이름) 리소스의 속성입니다. 정적을 호출할 수 또는 `VideoSource.FromResource` 리소스를 참조 하는 메서드. 다음 설정의 `ResourceVideoSource` 개체를 `Source` 속성 `VideoPlayer`합니다. 
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 24e7f29e42607d4a2c957cf85dad15f659d3618e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-xaml"></a>XAML의 기본 뷰
 
@@ -74,7 +74,7 @@ Xamarin.Forms XAML 파일에 대 한 기본 뷰를 포함 합니다.
 Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 개체이 고 인수를 사용할 수 있도록 설정에서 정적 속성을 통해 것으로 `MainActivity` 클래스입니다. 따라서 xaml에서는 Android 위젯을 만들 때는 `Context` 개체 일반적으로 위젯의 생성자에 전달 해야 합니다를 사용 하는 `x:Arguments` 특성이 `x:Static` 태그 확장 합니다. 자세한 내용은 참조 [기본 보기에 대 한 인수를 전달](#passing_arguments)합니다.
 
 > [!NOTE]
-> 해당 이름을 지정 하 여 네이티브 뷰에 참고 `x:Name` PCL 이식 가능한 클래스 라이브러리 () 프로젝트 또는 공유 자산 프로젝트 (SAP)의 수는 없습니다. 이렇게 하면 컴파일 오류가 발생할 수 있는 네이티브 형식의 변수를 생성 합니다. 하지만 기본 보기에 래핑될 수 있습니다 `ContentView` 인스턴스 및 SAP 사용 되는 코드 숨김 파일에서 검색 합니다. 자세한 내용은 참조 [코드에서 네이티브 뷰를 참조](#native_view_code)합니다.
+> 해당 이름을 지정 하 여 네이티브 뷰에 참고 `x:Name` .NET 표준 라이브러리 프로젝트 또는 공유 자산 프로젝트 (SAP)의 수는 없습니다. 이렇게 하면 컴파일 오류가 발생할 수 있는 네이티브 형식의 변수를 생성 합니다. 하지만 기본 보기에 래핑될 수 있습니다 `ContentView` 인스턴스 및 SAP 사용 되는 코드 숨김 파일에서 검색 합니다. 자세한 내용은 참조 [코드에서 네이티브 뷰를 참조](#native_view_code)합니다.
 
 <a name="native_bindings" />
 
@@ -285,7 +285,7 @@ IOS 및 Android 네이티브 단추로 공유할지 `OnButtonTap` 이벤트 처�
 
 ## <a name="subclassing-native-views"></a>기본 뷰를 서브클래싱합니다.
 
-많은 iOS 및 Android native 뷰는 컨트롤을 설정 하려면 속성을 보다는 메서드를 사용 하기 때문에 XAML에서 인스턴스화 적합 하지 않습니다. 이 문제에 솔루션은 네이티브 뷰에 속성을 사용 하 여 컨트롤을 설치 하 고 플랫폼 독립적인 이벤트를 사용 하는 자세한 XAML 친화형 API를 정의 하는 래퍼를 하위 클래스입니다. 래핑된 네이티브 뷰 수 다음 수에 공유 자산 프로젝트 (SAP)를 배치 하 고 조건부 컴파일 지시문 또는 플랫폼별 프로젝트에 배치 묶여 PCL 이식 가능한 클래스 라이브러리 () 프로젝트에 XAML에서 참조.
+많은 iOS 및 Android native 뷰는 컨트롤을 설정 하려면 속성을 보다는 메서드를 사용 하기 때문에 XAML에서 인스턴스화 적합 하지 않습니다. 이 문제에 솔루션은 네이티브 뷰에 속성을 사용 하 여 컨트롤을 설치 하 고 플랫폼 독립적인 이벤트를 사용 하는 자세한 XAML 친화형 API를 정의 하는 래퍼를 하위 클래스입니다. 래핑된 네이티브 뷰 수 다음 수에 공유 자산 프로젝트 (SAP)를 배치 하 고 조건부 컴파일 지시문 또는 플랫폼별 프로젝트에 배치 묶여.NET 표준 라이브러리 프로젝트에 XAML에서 참조.
 
 다음 코드 예제를 사용 하는 Xamarin.Forms 페이지 서브클래싱된 네이티브 뷰를 보여 줍니다.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: e296ca79ee03e7fc61532758219b65946a8d4381
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="map"></a>맵
 
@@ -62,7 +62,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 -  **Android** -MainActivity.cs 파일에 `OnCreate` 메서드.
 -  **UWP** -MainPage.xaml.cs 파일에 `MainPage` 생성자입니다.
 
-NuGet 패키지 추가 되 고 각 응용 프로그램 내에서 초기화 메서드가 호출 되 면 `Xamarin.Forms.Maps` 일반적인 PCL 또는 공유 프로젝트 코드에서 Api를 사용할 수 있습니다.
+NuGet 패키지 추가 되 고 각 응용 프로그램 내에서 초기화 메서드가 호출 되 면 `Xamarin.Forms.Maps` Api는 공용.NET 표준 라이브러리 프로젝트 또는 공유 프로젝트 코드에서 사용할 수 있습니다.
 
 <a name="Platform_Configuration" />
 

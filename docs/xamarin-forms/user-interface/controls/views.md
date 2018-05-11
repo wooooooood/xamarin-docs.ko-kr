@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: b690b4aed315a78d95d9e0e7444257f0fc2c4a78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b370c27a212f876231764851c894bf683ae460c3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -53,7 +53,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) iOS 및 Android 프로젝트에 OpenGL 그래픽을 표시합니다. 유니버설 Windows 플랫폼에 대 한 지원은 없습니다. IOS 및 Android 프로젝트에 대 한 참조가 필요는 **OpenTK 1.0** 어셈블리 또는 **OpenTK** 버전 1.0.0.0 어셈블리입니다. `OpenGLView` 더 쉽게 공유 프로젝트;에서 사용할 수 PCL 또는 표준.NET 라이브러리에 사용 후 종속 서비스가 (으로 샘플 코드와 같이)에 필요한 수도 있습니다.<br /><br />Xamarin.Forms에 기본 제공 되는 유일한 그래픽 기능 이지만 Xamarin.Forms 응용 프로그램을 사용 하 여 그래픽을 렌더링할 수도 있습니다 [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), 또는 [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![OpenGLView 예제](views-images/OpenGLView.png "OpenGLView 예제")](views-images/OpenGLView-Large.png#lightbox "OpenGLView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) 와 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) iOS 및 Android 프로젝트에 OpenGL 그래픽을 표시합니다. 유니버설 Windows 플랫폼에 대 한 지원은 없습니다. IOS 및 Android 프로젝트에 대 한 참조가 필요는 **OpenTK 1.0** 어셈블리 또는 **OpenTK** 버전 1.0.0.0 어셈블리입니다. `OpenGLView` 더 쉽게 공유 프로젝트;에서 사용할 수 .NET 표준 라이브러리에서 사용 하면 다음 종속성 서비스 (으로 샘플 코드와 같이)에 필요한 수도 있습니다.<br /><br />Xamarin.Forms에 기본 제공 되는 유일한 그래픽 기능 이지만 Xamarin.Forms 응용 프로그램을 사용 하 여 그래픽을 렌더링할 수도 있습니다 [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), 또는 [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![OpenGLView 예제](views-images/OpenGLView.png "OpenGLView 예제")](views-images/OpenGLView-Large.png#lightbox "OpenGLView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) 와 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="map"></a>맵

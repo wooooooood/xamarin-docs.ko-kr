@@ -3,15 +3,14 @@ title: CocoaPods를 사용 하 여 실제 예제
 description: 이 문서에서에서 자동으로 생성할 C# 바인딩 정의 CocoaPod 목표 Sharpie를 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
-ms.openlocfilehash: cbcafc8d77304d117f8130cf0d6a89dd2a5ed3c8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 026b2c46f7c294d4ac4a110376131ec83c7c112e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="real-world-example-using-cocoapods"></a>CocoaPods를 사용 하 여 실제 예제
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: b394c64fe6e2bfb9e5e7ee0e00d8c0366d6bd93e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -51,7 +51,7 @@ public class MyEntry : Entry
 `local` 네임 스페이스 접두사는 모두 사용할 수 있습니다. 그러나는 `namespace` 및 `assembly` 값에는 사용자 지정 컨트롤의 세부 정보과 일치 해야 합니다. 네임 스페이스 선언 되 면 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
 
 > [!NOTE]
-> 정의 `xmlns` 공유 프로젝트 보다 PCLs에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 PCL는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. (XAML) 모든 공유 자산 iOS, Android 및 UWP 의미는 참조 프로젝트의 각로 컴파일되는 공유 프로젝트를 사용할 경우 프로젝트에는 자신의 *어셈블리 이름을* 수 없으면를 쓸 수 `xmlns` 선언 하지 않아도 각 응용 프로그램에 대 한 값 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
+> 정의 `xmlns` 공유 프로젝트 보다.NET 표준 라이브러리 프로젝트에서 훨씬 간단 합니다. 쉽게 작업을 결정 하는 표준.NET 라이브러리는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. (XAML) 모든 공유 자산 iOS, Android 및 UWP 의미는 참조 프로젝트의 각로 컴파일되는 공유 프로젝트를 사용할 경우 프로젝트에는 자신의 *어셈블리 이름을* 수 없으면를 쓸 수 `xmlns` 선언 하지 않아도 각 응용 프로그램에 대 한 값 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML에서 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름으로 구성할 필요 합니다.
 
 `MyEntry` 사용자 지정 컨트롤 다음 스크린샷에 표시 된 것 처럼 그런 다음 회색 배경으로 각 플랫폼에서 렌더링 됩니다.
 
@@ -74,7 +74,7 @@ public class MyEntry : Entry
 
 ## <a name="troubleshooting"></a>문제 해결
 
-사용자 지정 컨트롤 (즉, 하지 PCL Mac/Visual Studio Xamarin.Forms 응용 프로그램 프로젝트 템플릿에 대 한 Visual Studio에서 만든) 솔루션에 추가 된 PCL 프로젝트에 포함 되 면 사용자 지정 컨트롤에 액세스 하려고 할 때 iOS에서 예외가 발생할 수 있습니다. 사용자 지정 컨트롤에 대 한 참조를 만들어이 해결할 수 있습니다이 문제가 발생 한 경우는 `AppDelegate` 클래스:
+사용자 지정 컨트롤이 포함 된 추가 되었습니다 (예: 하지는 표준.NET 라이브러리 Mac/Visual Studio Xamarin.Forms 응용 프로그램 프로젝트 템플릿에 대 한 Visual Studio에서 만든), 솔루션에는 예외는 표준.NET 라이브러리 프로젝트 iOS에서 발생할 수 있습니다 때 사용자 지정 컨트롤에 액세스 하려고 합니다. 사용자 지정 컨트롤에 대 한 참조를 만들어이 해결할 수 있습니다이 문제가 발생 한 경우는 `AppDelegate` 클래스:
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

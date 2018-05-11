@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: c0c8a6f4736bdcbb028425296f2e05dd500294d9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5a36c6ab14fdc7bfc5916456670be9c8fe4476ff
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
 
 ## <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-packageupdate-forms-templatemd"></a>[Xamarin.Forms 기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?](update-forms-template.md)
-이 가이드에서는 예를 들어, Xamarin.Forms PCL 서식 파일을 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에 대 한 에서도 작동 합니다. 
+이 가이드에서는 예를 들어, Xamarin.Forms.NET 표준 라이브러리 템플릿을 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에 대 한 에서도 작동 합니다. 
 
 ## <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-filesforms-xaml-designermd"></a>[Visual Studio XAML 디자이너가 Xamarin.Forms XAML 파일에 대해 작동하지 않는 이유는 무엇인가요?](forms-xaml-designer.md)
 Xamarin.Forms는 XAML 파일에 대 한 비주얼 디자이너를 현재 지원 하지 않습니다.

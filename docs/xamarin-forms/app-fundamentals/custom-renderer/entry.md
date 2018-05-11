@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>항목을 사용자 지정
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-`MyEntry` 컨트롤 이식 가능한 클래스 라이브러리 (PCL) 프로젝트에서 만들어지고는 단순히는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 제어 합니다. 컨트롤의 사용자 지정을 수행할 사용자 지정 렌더러의 하므로 추가 구현이 필요는 `MyEntry` 제어 합니다.
+`MyEntry` 컨트롤은 표준.NET 라이브러리 프로젝트에서 만들어지며는 단순히 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 제어 합니다. 컨트롤의 사용자 지정을 수행할 사용자 지정 렌더러의 하므로 추가 구현이 필요는 `MyEntry` 제어 합니다.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
-`MyEntry` 컨트롤 수 XAML에서 참조할 수 PCL 프로젝트에 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤 요소에 네임 스페이스 접두사를 사용 합니다. 다음 코드 예제는 방법을 `MyEntry` 컨트롤 XAML 페이지 에서도 사용할 수 있습니다.
+`MyEntry` 컨트롤 수 XAML에서 참조할 수.NET 표준 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤 요소에 네임 스페이스 접두사를 사용 합니다. 다음 코드 예제는 방법을 `MyEntry` 컨트롤 XAML 페이지 에서도 사용할 수 있습니다.
 
 ```xaml
 <ContentPage ...

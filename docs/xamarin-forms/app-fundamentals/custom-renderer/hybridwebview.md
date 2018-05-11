@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-`HybridWebView` 사용자 지정 컨트롤 이식 가능한 클래스 라이브러리 PCL 프로젝트에 만들어지고 컨트롤에 대 한 다음과 같은 API를 정의 합니다.
+`HybridWebView` 사용자 지정 컨트롤 라이브러리 프로젝트에는 표준.NET에 만들어지고 컨트롤에 대 한 다음과 같은 API를 정의 합니다.
 
 - A `Uri` 로드 되도록 웹 페이지의 주소를 지정 하는 속성입니다.
 - A `RegisterAction` 등록 하는 메서드는 `Action` 컨트롤과 합니다. 등록 된 작업을 통해 참조 되는 HTML 파일에 포함 된 JavaScript에서 호출 됩니다는 `Uri` 속성입니다.
@@ -85,7 +85,7 @@ public class HybridWebView : View
 
 ## <a name="consuming-the-hybridwebview"></a>HybridWebView 사용
 
-`HybridWebView` 사용자 지정 컨트롤 수 XAML에서 참조할 수는 PCL 프로젝트에 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 컨트롤에는 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `HybridWebView` XAML 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
+`HybridWebView` 사용자 지정 컨트롤 수 XAML에서 참조할 수는 표준.NET 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 컨트롤에는 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `HybridWebView` XAML 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
 
 ```xaml
 <ContentPage ...

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-a-custom-theme"></a>사용자 지정 테마 만들기
 
@@ -68,7 +68,7 @@ Nuget 패키지에서 테마를 추가할 뿐만 아니라 (같은 [Light](~/xam
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-pcl-or-shared-project"></a>C# 또는에서 코드를 PCL 프로젝트 공유
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>.NET 표준 라이브러리 프로젝트 또는 공유 프로젝트의 C# 코드
 
 둥근 모퉁이 만들기 위한 코드 `BoxView` 사용 하 여 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
 모서리 반지름을 사용 하 여 적용 되는 `BindableProperty` 적용 하 여 구현 됩니다는 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다. 효과에 플랫폼 관련 코드가 필요는 [iOS](#ios) 및 [Android](#android) 프로젝트 (아래 표시).

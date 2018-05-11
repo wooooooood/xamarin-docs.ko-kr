@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-`NativeCell` 클래스 이식 가능한 클래스 라이브러리 PCL 프로젝트에 만들어지고 사용자 지정 셀에 대 한 API를 정의 합니다. 사용자 지정 셀 노출 `Name`, `Category`, 및 `ImageFilename` 데이터 바인딩을 통해 표시 될 수 있는 속성입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
+`NativeCell` 클래스 라이브러리 프로젝트에는 표준.NET에 만들어지고 사용자 지정 셀에 대 한 API를 정의 합니다. 사용자 지정 셀 노출 `Name`, `Category`, 및 `ImageFilename` 데이터 바인딩을 통해 표시 될 수 있는 속성입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>사용자 지정 셀 사용
 
-`NativeCell` 사용자 지정 셀 수 Xaml에서 참조할 수는 PCL 프로젝트에 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 셀 요소에 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `NativeCell` 사용자 지정 셀 XAML 페이지 에서도 사용할 수 있습니다.
+`NativeCell` 사용자 지정 셀 수 Xaml에서 참조할 수.NET 표준 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 셀 요소에 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `NativeCell` 사용자 지정 셀 XAML 페이지 에서도 사용할 수 있습니다.
 
 ```xaml
 <ContentPage ...

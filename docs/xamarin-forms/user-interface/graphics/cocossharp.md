@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 5fcc3405780e0c5e8a0e8d32caf35abf59808c8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7ce541134e6db9a26699f96ab3114ced2ad22244
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.forms에서 CocosSharp를 사용 하 여
 
@@ -53,13 +53,13 @@ Xamarin.Forms는 네이티브 플랫폼 특정 UI 시스템을 기반으로 합�
 ## <a name="adding-the-cocossharp-nuget-packages"></a>CocosSharp Nuget 패키지를 추가합니다.
 
 CocosSharp를 사용 하기 전에 개발자 Xamarin.Forms 프로젝트에 대 한 몇 가지 추가 확인 해야 합니다.
-이 가이드에서는 iOS, Android, 및 PCL을 사용 하 여 Xamarin.Forms 프로젝트 가정 프로젝트.
-모든 코드는 PCL 프로젝트;에 기록 됩니다. 그러나 iOS 및 Android 프로젝트에 라이브러리를 추가 합니다.
+이 가이드에서는 iOS, Android, 및 표준.NET을 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트.
+.NET 표준 라이브러리 프로젝트; 기록 되어 모든 코드 그러나 iOS 및 Android 프로젝트에 라이브러리를 추가 합니다.
 
 CocosSharp Nuget 패키지는 모든 CocosSharp 개체를 만드는 데 필요한 개체를 포함 합니다.
 CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` xamarin.forms에서 CocosSharp 호스트 하는 데 사용 되는 클래스입니다.
 추가 **CocosSharp.Forms** NuGet 및 **CocosSharp** 도 자동으로 추가 되어야 합니다.
-이렇게 하려면 마우스 오른쪽 단추로 클릭 하는 PCL의 <span class="UIItem">패키지</span> 폴더를 선택 <span class="UIItem">패키지 추가 중... </span>. 검색어를 입력 <span class="UIItem">CocosSharp.Forms</span>선택, <span class="UIItem">CocosSharp Xamarin.Forms에 대해</span>, 클릭 <span class="UIItem">패키지 추가</span>합니다.
+이렇게 하려면 마우스 오른쪽 단추로 클릭는 <span class="UIItem">패키지</span> 고 표준.NET 라이브러리 프로젝트에서 폴더 <span class="UIItem">패키지 추가 중... </span>. 검색어를 입력 <span class="UIItem">CocosSharp.Forms</span>선택, <span class="UIItem">CocosSharp Xamarin.Forms에 대해</span>, 클릭 <span class="UIItem">패키지 추가</span>합니다.
 
 ![](cocossharp-images/image1.png "추가 패키지 대화 상자")
 
@@ -198,7 +198,7 @@ void HandleViewCreated (object sender, EventArgs e)
 
 하나의 `CCScene` 한 번에 활성화 될 수 있습니다. 대부분의 게임 여러 개 사용 `CCLayer` 인스턴스 정렬 콘텐츠 있지만 응용 프로그램을 하나만 사용 합니다. 마찬가지로, 대부분의 게임 여러 시각적 개체를 사용 했지만 앱에서 하나가 합니다. 시각적 계층에 있습니다 CocosSharp에 대 한 토론에 대 한 세부는 [BouncingGame 연습](~/graphics-games/cocossharp/bouncing-game.md)합니다.
 
-처음에 `GameScene` 클래스 거의 비어 있게 됩니다에 대 한 참조를 충족 시키기 위해 방금 만들 것 – `HomePage`합니다. 새 클래스 라는 프로그램 PCL에 추가 `GameScene`합니다. 상속 해야는 `CCScene` 클래스를 다음과 같이 합니다.
+처음에 `GameScene` 클래스 거의 비어 있게 됩니다에 대 한 참조를 충족 시키기 위해 방금 만들 것 – `HomePage`합니다. 이라는.NET 표준 라이브러리 프로젝트에 새 클래스를 추가 `GameScene`합니다. 상속 해야는 `CCScene` 클래스를 다음과 같이 합니다.
 
 
 ```csharp

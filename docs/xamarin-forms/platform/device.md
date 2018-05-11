@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>장치 클래스
 
@@ -155,7 +155,7 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-`Device` 클래스에는 `StartTimer` Xamarin.Forms 공통 코드 (PCLs 포함)에서 작동 하는 시간에 종속 작업을 트리거하여 하는 간단한 방법을 제공 하는 메서드. 전달는 `TimeSpan` 간격을 설정 하 고 반환 `true` 실행 되는 타이머를 유지 하 또는 `false` 현재 호출 후 중지할 수 있습니다.
+`Device` 클래스에는 `StartTimer` .NET 표준 라이브러리를 포함 하 여 Xamarin.Forms 공통 코드를 사용할 수 있는 시간에 종속 작업을 트리거하여 하는 간단한 방법을 제공 하는 메서드. 전달는 `TimeSpan` 간격을 설정 하 고 반환 `true` 실행 되는 타이머를 유지 하 또는 `false` 현재 호출 후 중지할 수 있습니다.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Device.BeginInvokeOnMainThread ( () => {
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms는 `Device` 플랫폼 별로 세분화 된 제어 기능 및 레이아웃을 통해 클래스를 사용 하면 공통 코드 (PCL 또는 공유 프로젝트)에-합니다.
+Xamarin.Forms는 `Device` 플랫폼 별로 세분화 된 제어 기능 및 레이아웃을 통해 클래스를 사용 하면 공통 코드 (.NET 표준 라이브러리 프로젝트 또는 프로젝트 공유)에-합니다.
 
 
 ## <a name="related-links"></a>관련 링크

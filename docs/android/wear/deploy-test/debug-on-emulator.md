@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Android 에뮬레이터 마모 디버그
 
@@ -21,9 +21,9 @@ _이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램�
 
 실제 하드웨어에서 응용 프로그램을 실행 또는 에뮬레이터 또는 시뮬레이터를 사용 하 여 필요 쓰는 유형 Android 응용 프로그램을 개발 합니다. 하드웨어를 사용하는 것이 가장 좋은 방법이지만 이것이 실용적이지 않은 경우가 있습니다. 대부분의 경우에서 보다 간단 하 고 시뮬레이션/하드웨어를 에뮬레이트하 쓰는 유형 Android 에뮬레이터를 사용 하 여 아래 설명 된 대로 더 비용 효율적인 수 있습니다. 실행 및 배포 프로세스에 잘 쓰는 유형 Android 앱 참조 아직 없는 경우 [안녕하세요, 마모](~/android/wear/get-started/hello-wear.md)합니다.
 
-## <a name="configure-the-android-sdk-emulator"></a>Android SDK 에뮬레이터 구성
+## <a name="configure-the-google-android-emulator"></a>Google Android 에뮬레이터 구성
 
-마모 앱에서 에뮬레이터를 실행 하려면 Android SDK Android 에뮬레이터를 설치 하 고 쓰는 유형 Android에 맞게 구성 해야 합니다. 전체 Android SDK 에뮬레이터 설치 및 구성 정보를 참조 하십시오. [Android SDK 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
+마모 앱에서 에뮬레이터를 실행 하려면 Android SDK Android 에뮬레이터를 설치 하 고 쓰는 유형 Android에 맞게 구성 해야 합니다. 전체 Android SDK 에뮬레이터 설치 및 구성 정보를 참조 하십시오. [Google Android 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
 
 마모 가상 장치를 만들 때 Android 착용 장치 프로필을 선택 합니다. (예: **Android 마모 정사각형**). 성능 향상된을 위해 사용 된 마모 **x86** 이 예제와 같이 CPU/ABI:
 
@@ -47,4 +47,4 @@ Android 에뮬레이터 시작 된 후 Xamarin.Android 에뮬레이터에 마모
  
 ## <a name="summary"></a>요약
  
-이 가이드는 마모 개발을 위한 Android SDK 에뮬레이터를 구성 하 고 디버깅을 위해 마모 가상 장치 시작 하는 방법을 설명 합니다.
+이 가이드는 마모 개발을 위한 Google Android 에뮬레이터를 구성 하 고 디버깅을 위해 마모 가상 장치 시작 하는 방법을 설명 합니다.

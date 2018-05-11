@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 04d3d99a5d85dd77c93e9b926e8952cc3d8a771e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀을 사용자 지정
 
@@ -47,7 +47,7 @@ public class CustomMap : Map
 }
 ```
 
-`CustomMap` 제어 이식 가능한 클래스 라이브러리 (PCL) 프로젝트에서 생성 및 사용자 지정 지도 대 한 API를 정의 합니다. 사용자 지정 지도 표시의 `CustomPins` 속성의 컬렉션을 나타내는 `CustomPin` 각 플랫폼에 네이티브 지도 컨트롤에서 렌더링 되는 개체입니다. `CustomPin` 클래스는 다음 코드 예제에 표시 됩니다.
+`CustomMap` 컨트롤 표준.NET 라이브러리 프로젝트에서 만들어지고 사용자 지정 지도 대 한 API를 정의 합니다. 사용자 지정 지도 표시의 `CustomPins` 속성의 컬렉션을 나타내는 `CustomPin` 각 플랫폼에 네이티브 지도 컨트롤에서 렌더링 되는 개체입니다. `CustomPin` 클래스는 다음 코드 예제에 표시 됩니다.
 
 ```csharp
 public class CustomPin : Pin
@@ -62,7 +62,7 @@ public class CustomPin : Pin
 
 ## <a name="consuming-the-custom-map"></a>사용자 지정 맵 사용
 
-`CustomMap` 컨트롤 수 XAML에서 참조할 수는 PCL 프로젝트에 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 지도 컨트롤에서 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `CustomMap` 컨트롤 XAML 페이지 에서도 사용할 수 있습니다.
+`CustomMap` 컨트롤 수 XAML에서 참조할 수는 표준.NET 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 사용자 지정 지도 컨트롤에서 네임 스페이스 접두사를 사용 하 여 합니다. 다음 코드 예제는 방법을 `CustomMap` 컨트롤 XAML 페이지 에서도 사용할 수 있습니다.
 
 ```xaml
 <ContentPage ...
@@ -322,7 +322,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `CustomMKAnnotationView.Url` 속성입니다. 에 주소를 만들 때 정의 된는 `CustomPin` PCL 프로젝트에는 컬렉션입니다.
+이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `CustomMKAnnotationView.Url` 속성입니다. 에 주소를 만들 때 정의 된는 `CustomPin` .NET 표준 라이브러리 프로젝트에는 컬렉션입니다.
 
 <a name="Deselecting_the_Annotation" />
 
@@ -499,7 +499,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `Url` 검색 된 속성 `CustomPin` 에 대 한 인스턴스는 `Marker`합니다. 에 주소를 만들 때 정의 된는 `CustomPin` PCL 프로젝트에는 컬렉션입니다.
+이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `Url` 검색 된 속성 `CustomPin` 에 대 한 인스턴스는 `Marker`합니다. 에 주소를 만들 때 정의 된는 `CustomPin` .NET 표준 라이브러리 프로젝트에는 컬렉션입니다.
 
 사용자 지정 하는 방법에 대 한 자세한 내용은 `MapView` 인스턴스를 참조 [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)합니다.
 
@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `Url` 의 속성은 `CustomPin` 인스턴스. 에 주소를 만들 때 정의 된는 `CustomPin` PCL 프로젝트에는 컬렉션입니다.
+이 메서드는 웹 브라우저를 열고에 저장 된 주소로 이동는 `Url` 의 속성은 `CustomPin` 인스턴스. 에 주소를 만들 때 정의 된는 `CustomPin` .NET 표준 라이브러리 프로젝트에는 컬렉션입니다.
 
 사용자 지정 하는 방법에 대 한 자세한 내용은 `MapControl` 인스턴스를 참조 [지도 위치 개요](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) msdn 합니다.
 
@@ -657,6 +657,6 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [지도 컨트롤](~/xamarin-forms/user-interface/map.md)
-- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
+- [iOS 맵](~/ios/user-interface/controls/ios-maps/index.md)
 - [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)
 - [사용자 지정 된 Pin (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)

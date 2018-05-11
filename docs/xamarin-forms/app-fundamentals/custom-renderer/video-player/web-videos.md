@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8326c142207e90f9b7d4bced7effd88ec88d8fa8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 322ae03fc813d180a6678f63b04488a17705523d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="playing-a-web-video"></a>웹 비디오를 재생
 
@@ -120,7 +120,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-형식의 개체를 처리 `ResourceVideoSource` 문서에서 설명 [응용 프로그램 리소스 비디오 로드](loading-resources.md)합니다. `VideoPlayer` 클래스에는 이식 가능한 클래스 라이브러리에 리소스로 저장 비디오 파일을 로드 기능이 없습니다.
+형식의 개체를 처리 `ResourceVideoSource` 문서에서 설명 [응용 프로그램 리소스 비디오 로드](loading-resources.md)합니다. `VideoPlayer` 클래스에 표준.NET 라이브러리에 리소스로 저장 비디오 파일을 로드할 수 있는 기능이 없습니다.
 
 `FileVideoSource` 클래스 파일에 액세스할 수 비디오 장치의 비디오 라이브러리에서 사용 됩니다. 또한 단일 속성은 형식의 `string`:
 

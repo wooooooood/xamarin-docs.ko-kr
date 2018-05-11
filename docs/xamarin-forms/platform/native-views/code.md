@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 46284fd1b0863f904e9f24f125aef75fe3eb8caa
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c3a79947b02e0f877fd4ea1b0ddb72486c222719
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-c"></a>C#에서 기본 뷰
 
@@ -19,7 +19,7 @@ _C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 네이티브 iOS, And
 
 ## <a name="overview"></a>개요
 
-수 있는 모든 Xamarin.Forms 컨트롤 `Content` 를 설정할 수에 또는 끝점이 `Children` 컬렉션 플랫폼 특정 보기를 추가할 수 있습니다. 예를 들어 iOS `UILabel` 에 직접 추가할 수는 [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) 속성 또는 [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) 컬렉션입니다. 그러나이 기능을 사용 해야는 메모 `#if` Xamarin.Forms 공유 프로젝트 솔루션에서 정의 하 고 Xamarin.Forms 이식 가능한 클래스 라이브러리 (PCL) 솔루션에서 사용할 수 없습니다.
+수 있는 모든 Xamarin.Forms 컨트롤 `Content` 를 설정할 수에 또는 끝점이 `Children` 컬렉션 플랫폼 특정 보기를 추가할 수 있습니다. 예를 들어 iOS `UILabel` 에 직접 추가할 수는 [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) 속성 또는 [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) 컬렉션입니다. 그러나이 기능을 사용 해야는 메모 `#if` Xamarin.Forms 공유 프로젝트 솔루션에서 정의 하 고 Xamarin.Forms.NET 표준 라이브러리 솔루션에서 사용할 수 없습니다.
 
 다음 스크린샷에서 보여 플랫폼 관련 뷰는 xamarin.forms 추가 되어 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 

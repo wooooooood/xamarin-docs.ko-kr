@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4ae3b42c5c926749310da6e36b6f4e9754d398c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3807ac6a91d3bf650922a01d9111dc34513d62b3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 
@@ -151,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` XAML 파일에 이식 가능한 클래스 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일을 액세스 해야 할 때 유용 합니다. 사용 하 여는 `Source` 정적을 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. `ImageResourceExtension` 하지 않는 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 즉,이 XAML 리소스 확장 없습니다 외부 라이브러리의 일부 이미지가 아닌 해당 라이브러리에도 이상 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조는 [ **포함 이미지** ](~/xamarin-forms/user-interface/images.md#embedded_images) 비트맵 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.) 
+`ImageResourceExtension` XAML 파일에 표준.NET 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일을 액세스 해야 할 때 유용 합니다. 사용 하 여는 `Source` 정적을 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. `ImageResourceExtension` 하지 않는 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 즉,이 XAML 리소스 확장 없습니다 외부 라이브러리의 일부 이미지가 아닌 해당 라이브러리에도 이상 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조는 [ **포함 이미지** ](~/xamarin-forms/user-interface/images.md#embedded_images) 비트맵 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.) 
 
 하지만 `ImageResourceExtension` 필요는 `Source` 속성을 설정할 수는 `Source` 클래스의 콘텐츠 속성으로 속성 특성에 표시 됩니다. 즉는 `Source=` 중괄호 안에 있는 식의 부분을 생략할 수 있습니다. 에 **이미지 리소스 데모** 페이지는 `Image` 요소 인출 폴더 이름과 마침표로 구분 된 파일 이름을 사용 하 여 두 가지 이미지:
 

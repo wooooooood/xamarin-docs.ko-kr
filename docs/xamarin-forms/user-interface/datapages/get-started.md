@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d06c3f95f55edb4870279bfc7d5326be4af4b3bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -26,7 +26,7 @@ DataPages 미리 보기를 사용 하 여 간단한 데이터 드라이브 페�
 
 ## <a name="1-add-nuget-packages"></a>1. NuGet 패키지 추가
 
-Xamarin.Forms PCL 및 응용 프로그램 프로젝트에 이러한 Nuget 패키지를 추가 합니다.
+Xamarin.Forms.NET 표준 라이브러리 및 응용 프로그램 프로젝트에 이러한 Nuget 패키지를 추가 합니다.
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base

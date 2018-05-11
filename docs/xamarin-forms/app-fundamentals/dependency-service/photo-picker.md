@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 6945d64e37bc7e0de930093d8a3f71590026182d
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: e552a0bf76572d50eb0d4618af69fc1179979f97
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 그림 라이브러리에서 선택
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="creating-the-interface"></a>인터페이스 만들기
 
-원하는 기능을 표현 하는 공유 코드에서 인터페이스를 먼저 만듭니다. 사진 선정 응용 프로그램의 경우 하나의 방법이 필요 합니다. 이것은에 정의 된 [ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) 인터페이스는 샘플 코드의 이식 가능한 클래스 라이브러리에:
+원하는 기능을 표현 하는 공유 코드에서 인터페이스를 먼저 만듭니다. 사진 선정 응용 프로그램의 경우 하나의 방법이 필요 합니다. 이것은에 정의 된 [ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) 샘플 코드의 표준.NET 라이브러리의 인터페이스:
 
 ```csharp
 namespace DependencyServiceSample
@@ -261,7 +261,7 @@ namespace DependencyServiceSample.UWP
 
 ## <a name="implementing-in-shared-code"></a>공유 코드에서 구현
 
-각 플랫폼에 대 한 인터페이스를 구현한 했으므로 공통 이식 가능한 클래스 라이브러리에 응용 프로그램의 사용할 수 있습니다.
+각 플랫폼에 대 한 인터페이스를 구현한 했으므로.NET 표준 라이브러리의 응용 프로그램을 사용할 수 있습니다.
 
 [ `App` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/DependencyServiceSample.cs) 클래스를 만듭니다는 `Button` 사진을 선택:
 

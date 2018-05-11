@@ -6,12 +6,12 @@ ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 05/10/2018
+ms.openlocfilehash: 757cd9c0b3b8414b5a8c01af0cf4ffc9b9b8afc4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-view"></a>뷰를 구현합니다.
 
@@ -268,45 +268,50 @@ namespace CustomRenderer.Droid
 다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
 
 ```csharp
-[assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
+[assembly: ExportRenderer(typeof(CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
-        MediaCapture mediaCapture;
-        CaptureElement captureElement;
-        CameraOptions cameraOptions;
-        Application app;
-        bool isPreviewing = false;
+        ...
+        CaptureElement _captureElement;
+        bool _isPreviewing;
 
-        protected override void OnElementChanged (ElementChangedEventArgs<CameraPreview> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)
         {
-            base.OnElementChanged (e);
+            base.OnElementChanged(e);
 
-            if (Control == null) {
+            if (Control == null)
+            {
                 ...
-                captureElement = new CaptureElement ();
-                captureElement.Stretch = Stretch.UniformToFill;
+                _captureElement = new CaptureElement();
+                _captureElement.Stretch = Stretch.UniformToFill;
 
-                InitializeAsync ();
-                SetNativeControl (captureElement);
+                SetupCamera();
+                SetNativeControl(_captureElement);
             }
-            if (e.OldElement != null) {
+            if (e.OldElement != null)
+            {
                 // Unsubscribe
                 Tapped -= OnCameraPreviewTapped;
+                ...
             }
-            if (e.NewElement != null) {
+            if (e.NewElement != null)
+            {
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }
         }
 
-        async void OnCameraPreviewTapped (object sender, TappedRoutedEventArgs e)
+        async void OnCameraPreviewTapped(object sender, TappedRoutedEventArgs e)
         {
-            if (isPreviewing) {
-                await StopPreviewAsync ();
-            } else {
-                await StartPreviewAsync ();
+            if (_isPreviewing)
+            {
+                await StopPreviewAsync();
+            }
+            else
+            {
+                await StartPreviewAsync();
             }
         }
         ...
@@ -314,7 +319,7 @@ namespace CustomRenderer.UWP
 }
 ```
 
-에 `Control` 속성은 `null`, 새 `CaptureElement` 인스턴스화될 및 `InitializeAsync` 메서드가 호출 되 면 사용 하는 `MediaCapture` 카메라에서 미리 보기 스트림을 제공 하는 API입니다. `SetNativeControl` 메서드를 호출에 대 한 참조를 할당 하는 `CaptureElement` 인스턴스는 `Control` 속성입니다. `CaptureElement` 노출 제어는 `Tapped` 에서 처리 하는 이벤트는 `OnCameraPreviewTapped` 메서드를 중지 하는 탭 비디오 미리 보기를 시작 합니다. `Tapped` 이벤트를 구독 하는 사용자 지정 렌더러를 새 Xamarin.Forms 요소에 연결 하 고 렌더러 요소 변경 내용에 추가 되 면에에서 구독 취소 했습니다.
+에 `Control` 속성은 `null`, 새 `CaptureElement` 인스턴스화될 및 `SetupCamera` 메서드가 호출 되 면 사용 하는 `MediaCapture` 카메라에서 미리 보기 스트림을 제공 하는 API입니다. `SetNativeControl` 메서드를 호출에 대 한 참조를 할당 하는 `CaptureElement` 인스턴스는 `Control` 속성입니다. `CaptureElement` 노출 제어는 `Tapped` 에서 처리 하는 이벤트는 `OnCameraPreviewTapped` 메서드를 중지 하는 탭 비디오 미리 보기를 시작 합니다. `Tapped` 이벤트를 구독 하는 사용자 지정 렌더러를 새 Xamarin.Forms 요소에 연결 하 고 렌더러 요소 변경 내용에 추가 되 면에에서 구독 취소 했습니다.
 
 > [!NOTE]
 > 중지 하 고 UWP 응용 프로그램에서 카메라에 대 한 액세스를 제공 하는 개체를 삭제 하는 것이 유용 합니다. 이렇게 하지 않으면 장치의 카메라를 액세스 하려고 하는 다른 응용 프로그램을 방해할 수 있습니다. 자세한 내용은 참조 [카메라 미리 보기 표시](/windows/uwp/audio-video-camera/simple-camera-preview-access/)합니다.

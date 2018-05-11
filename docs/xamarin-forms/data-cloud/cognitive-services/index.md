@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 2600b52b6e044ca9a3a8387bcf719dd1632c406d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 86253e42db7da2da6eb8b03e2d4a4b3c943b7e17
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Cognitive 서비스를 사용 하 여 인텔리전스 추가
 
@@ -70,9 +70,7 @@ PCL 프로젝트에는 몇 가지 중요 한 파일이 들어 있습니다.
 
 샘플 응용 프로그램에서는 다음과 같은 NuGet 패키지를 사용합니다.
 
-- `Microsoft.Net.Http` – 제공 된 `HttpClient` HTTP를 통해 요청을 만들기 위한 클래스입니다.
 - `Newtonsoft.Json` –.NET에 대 한 JSON 프레임 워크를 제공 합니다.
-- `Microsoft.ProjectOxford.Face` – Face API에 액세스 하기 위한 클라이언트 라이브러리입니다.
 - `PCLStorage` – 플랫폼 간 로컬 파일 IO Api 집합을 제공 합니다.
 - `sqlite-net-pcl` – SQLite 데이터베이스 저장소를 제공 합니다.
 - `Xam.Plugin.Media` – 제공 플랫폼 간 사진 기록 및 Api를 선택 합니다.
@@ -116,7 +114,7 @@ public class TodoItem
 
 샘플 응용 프로그램은 다음 Microsoft Cognitive 서비스를 호출합니다.
 
-- Microsoft Speech API. 자세한 내용은 참조 [Microsoft 음성 API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
+- Microsoft 음성 API입니다. 자세한 내용은 참조 [Microsoft 음성 API를 사용 하 여 음성 인식](speech-recognition.md)합니다.
 - Bing 맞춤법 검사 API입니다. 자세한 내용은 참조 [Bing 맞춤법 검사 API를 사용 하 여 맞춤법 검사](spell-check.md)합니다.
 - API를 변환 합니다. 자세한 내용은 참조 [변환기 API를 사용 하 여 텍스트 번역](text-translation.md)합니다.
 - Face API입니다. 자세한 내용은 참조 [Face API를 사용 하 여 Emotion 인식](emotion-recognition.md)합니다.

@@ -3,15 +3,14 @@ title: 크로스 플랫폼 응용 프로그램 빌드
 description: 이 섹션에 요약 외에 여섯 부분에서 모바일 앱을 디자인 한 다음 테스트와 다양 한 응용 프로그램 저장소에 배포 하려면 Xamarin 작동 방식 이해 – Xamarin 개발 플랫폼을 사용 하 여 응용 프로그램을 빌드할 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: b9d167d8874ecfde9094bacc26cff3e7d1b10bab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sharing-code-options"></a>코드 공유 옵션
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 7b859dd58551675c121c5600ba9c691e4280a03b
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-effects"></a>효과 소개
 
@@ -21,7 +21,7 @@ Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-inter
 
 개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 그러나 단순 컨트롤 사용자 지정을 수행 하는 사용자 지정 렌더러 클래스를 구현 방식은 규모 응답 합니다. 효과를 보다 쉽게 사용자 지정할 수는 각 플랫폼에서 네이티브 컨트롤 수 있도록이 프로세스를 간소화 합니다.
 
-효과 서브클래싱하 여 플랫폼별 프로젝트에 생성 됩니다는 `PlatformEffect` 제어 및 효과 적절 한 컨트롤 Xamarin.Forms PCL 이식 가능한 클래스 라이브러리 () 또는 라이브러리 공유 프로젝트에 연결 하 여 사용 합니다.
+효과 서브클래싱하 여 플랫폼별 프로젝트에 생성 됩니다는 `PlatformEffect` 제어 및 효과 적절 한 컨트롤 Xamarin.Forms.NET 표준 라이브러리 또는 라이브러리 공유 프로젝트에 연결 하 여 사용 합니다.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>사용자 지정 렌더러를 통해 비슷한 효과 사용 해야 하는 이유
 

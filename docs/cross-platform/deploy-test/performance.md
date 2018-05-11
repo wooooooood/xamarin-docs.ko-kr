@@ -3,15 +3,14 @@ title: 성능 및 보안
 description: 앱 성능을 향상시키고, 보안 통신을 보장하기 위한 팁입니다.
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-ms.technology: xamarin-cross-platform
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2017
-ms.openlocfilehash: a81f37b821b336c2c204484ff5b33648855006b7
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 507175cd73aa008c1bb120b0e42d9e98fc4c849a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="performance-and-security"></a>성능 및 보안
 

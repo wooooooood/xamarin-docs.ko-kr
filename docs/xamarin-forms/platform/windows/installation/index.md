@@ -7,39 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b6ea988aa8c058fe5a92a17e9b72f81e0ccb12db
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-windows-projects"></a>설치 Windows 프로젝트
 
 _기존 Xamarin.Forms 솔루션에 새 Windows 프로젝트를 추가합니다._
 
 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든) 유니버설 Windows 플랫폼 (UWP) 응용 프로그램 프로젝트를 갖지 않습니다. 따라서 Windows 10 (UWP) 앱을 빌드하기 위해 UWP 프로젝트를 수동으로 추가 해야 합니다.
-
-<a name="pcl" />
-
-## <a name="update-the-pcl-profile"></a>PCL 프로필 업데이트
-
-기존 Xamarin.Forms 앱 PCL 이식 가능한 클래스 라이브러리 () 템플릿을 사용 하는 경우 해당 프로필을 업데이트 해야 합니다.
-
-1. **마우스 오른쪽 단추로 클릭 > 속성** (기존 설정이 다를 수 있습니다)
-
-  ![](images/targets.png "PCL 대상")
-
-2. 클릭는 **변경 중...**  단추
-
-3. 확인 된 **Windows 8** 및 **Windows Phone 8.1** 옵션을 선택 (및 **Windows Phone Silveright** 은 *선택 취소*):
-
-  ![](images/pcl.png "PCL 대상 옵션")
-
-4. 키를 눌러 **확인** 변경 내용을 저장 합니다.
-
-이 **프로필 111** 구성 하는 경우 프로그램 PCL Visual Studio에서 드롭 다운 목록을 사용 하 여 Mac에 대 한 합니다.
-
-  ![](images/pcl-xs.png "PCL 프로필 111")
 
 ## <a name="add-a-universal-windows-platform-app"></a>추가 유니버설 Windows 플랫폼 앱
 
@@ -65,7 +43,7 @@ Windows 10 휴대폰, 태블릿 및 데스크톱에서 실행 되는 UWP 앱을 
 
   [![](universal-images/configuration-sml.png "구성 관리자 창")](universal-images/configuration.png#lightbox "구성 관리자 창")
 
- 5 . 선택한 프로젝트를 마우스 오른쪽 단추로 클릭 **추가 > 참조** Xamarin.Forms 응용 프로그램 프로젝트 (PCL,.NET 표준 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
+ 5 . 선택한 프로젝트를 마우스 오른쪽 단추로 클릭 **추가 > 참조** Xamarin.Forms 응용 프로그램 프로젝트 (.NET 표준 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
 
   ![](universal-images/addref-sml.png "참조 관리자 대화 상자")
 

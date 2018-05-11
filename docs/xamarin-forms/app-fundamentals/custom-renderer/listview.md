@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 0d1afc2c14b19bbd03244affed494405776a3c99
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-listview"></a>ListView에 사용자 지정
 
@@ -59,13 +59,13 @@ public class NativeListView : ListView
 }
 ```
 
-`NativeListView` 이식 가능한 클래스 라이브러리 PCL 프로젝트에 만들어지고 사용자 지정 컨트롤에 대 한 API를 정의 합니다. 이 컨트롤을 노출 한 `Items` 채우는 데 사용 되는 속성의 `ListView` 데이터 및 수 있는 데이터에 대 한 바인딩된 표시 목적으로 합니다. 또한 노출 된 `ItemSelected` 플랫폼 특정 네이티브 목록 컨트롤에서 항목을 선택할 때마다 발생 하는 이벤트입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
+`NativeListView` .NET 표준 라이브러리 프로젝트에서 생성 하 고 사용자 지정 컨트롤에 대 한 API를 정의 합니다. 이 컨트롤을 노출 한 `Items` 채우는 데 사용 되는 속성의 `ListView` 데이터 및 수 있는 데이터에 대 한 바인딩된 표시 목적으로 합니다. 또한 노출 된 `ItemSelected` 플랫폼 특정 네이티브 목록 컨트롤에서 항목을 선택할 때마다 발생 하는 이벤트입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
-`NativeListView` 사용자 지정 컨트롤 수 Xaml에서 참조할 수 PCL 프로젝트에 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤에 네임 스페이스 접두사를 사용 합니다. 다음 코드 예제는 방법을 `NativeListView` XAML 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
+`NativeListView` 사용자 지정 컨트롤 수 Xaml에서 참조할 수.NET 표준 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤에 네임 스페이스 접두사를 사용 합니다. 다음 코드 예제는 방법을 `NativeListView` XAML 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
 
 ```xaml
 <ContentPage ...

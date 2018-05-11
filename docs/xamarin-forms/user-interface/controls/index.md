@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: a9fb90794ec74c46019fd2b4f41d90a2635909cd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb6620e160af4c2c844fa694649c95abdac123f9
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 
 _Xamarin.Forms 응용 프로그램을 생성 하는 데 사용 되 고 모든 시각적 요소에 대 한 설명_
 
-Xamarin.Forms 응용 프로그램의 시각적 인터페이스는 각 대상 플랫폼의 네이티브 컨트롤에 매핑되는 개체의 구성 됩니다. 이 통해 Xamarin.Forms 코드에 포함 된 사용 하 여 iOS, Android 및 유니버설 Windows 플랫폼에 대 한 플랫폼 관련 응용 프로그램을 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md), [.NET 표준 라이브러리](~/cross-platform/app-fundamentals/net-standard.md), 또는 [ 프로젝트 공유](~/cross-platform/app-fundamentals/shared-projects.md)합니다.
+Xamarin.Forms 응용 프로그램의 시각적 인터페이스는 각 대상 플랫폼의 네이티브 컨트롤에 매핑되는 개체의 구성 됩니다. 이 통해 Xamarin.Forms 코드에 포함 된 사용 하 여 iOS, Android 및 유니버설 Windows 플랫폼에 대 한 플랫폼 관련 응용 프로그램을 [.NET 표준 라이브러리](~/cross-platform/app-fundamentals/net-standard.md) 또는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)합니다.
 
 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만들기 위해 사용 되는 4 개의 주 제어 그룹은 다음 4 개의 문서에 나와 있습니다.
 

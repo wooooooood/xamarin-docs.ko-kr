@@ -7,15 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 6aea0faa65944f33783940178a1d2ce3ef65df1a
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fc479b4b0651e3312b855673730be21c2076d833
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>최신 NuGet 패키지에 Xamarin.Forms 기본 서식 파일을 업데이트할 수 있습니까?
 
-이 가이드에서는 예를 들어, Xamarin.Forms PCL 서식 파일을 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에 대 한 에서도 작동 합니다. Xamarin.Forms 2.1.0.6529 1.5.1.6471에서에서 업데이트 하는 예제와이 가이드는 있지만 동일한 단계를 다른 버전을 대신 기본값으로 설정 수 있습니다.
+이 가이드에서는 예를 들어, Xamarin.Forms.NET 표준 라이브러리 템플릿을 사용 하지만 동일한 일반 메서드는 Xamarin.Forms 공유 프로젝트 템플릿에 대 한 에서도 작동 합니다. Xamarin.Forms 2.1.0.6529 1.5.1.6471에서에서 업데이트 하는 예제와이 가이드는 있지만 동일한 단계를 다른 버전을 대신 기본값으로 설정 수 있습니다.
 
 1.  원래 템플릿을 복사 `.zip` 에서:
 

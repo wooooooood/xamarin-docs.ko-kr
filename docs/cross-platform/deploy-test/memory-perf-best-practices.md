@@ -3,15 +3,14 @@ title: 플랫폼 간 성능
 description: Xamarin 플랫폼으로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -168,7 +167,7 @@ public class Subscriber : IDisposable
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>약한 참조를 사용하여 유한 개체 방지
 
 > [!NOTE]
-> iOS 개발자는 [iOS에서 순환 참조를 방지](~/ios/deploy-test/performance.md#avoidcircularreferences)하는 방법에 대한 설명서를 검토하여 해당 앱이 메모리를 효율적으로 사용하도록 해야 합니다.
+> iOS 개발자는 [iOS에서 순환 참조를 방지](~/ios/deploy-test/performance.md#avoid-strong-circular-references)하는 방법에 대한 설명서를 검토하여 해당 앱이 메모리를 효율적으로 사용하도록 해야 합니다.
 
 <a name="lazy" />
 

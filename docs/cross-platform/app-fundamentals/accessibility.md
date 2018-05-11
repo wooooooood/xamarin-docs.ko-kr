@@ -3,15 +3,14 @@ title: 액세스 가능성
 description: 앱 상당히 폭넓은 대상에서 사용할 수 있는지 확인
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 3b7912f7875e9d07de51861e573065b3d1b73de0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48e9d760362e47d7046528c819959bfb14f71f91
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accessibility"></a>액세스 가능성
 
@@ -76,4 +75,4 @@ IOS, Android 및 Windows 등의 데스크톱 및 모바일 플랫폼 제공 개�
 - [Android 내게 필요한 옵션](~/android/app-fundamentals/accessibility.md)
 - [iOS 내게 필요한 옵션](~/ios/app-fundamentals/accessibility.md)
 - [OS X 내게 필요한 옵션](~/mac/app-fundamentals/accessibility.md)
-- [Xamarin.Forms Accessibility](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [Xamarin.Forms 내게 필요한 옵션](~/xamarin-forms/app-fundamentals/accessibility/index.md)

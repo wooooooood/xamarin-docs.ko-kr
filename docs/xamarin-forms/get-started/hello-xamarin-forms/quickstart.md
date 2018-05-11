@@ -6,12 +6,12 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/26/2018
-ms.openlocfilehash: f5c05ce308a10747ad3e18e4a1d141d29fd6c8a1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 05/03/2018
+ms.openlocfilehash: 6a0107ec11955f99c62a6f59f9bf82291dee9224
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
@@ -33,7 +33,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
 3. **새 프로젝트** 대화 상자에서 **플랫폼 간**을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름 및 솔루션 이름을 `Phoneword`로 설정하고, 프로젝트에 대한 적절한 위치를 선택하고, **확인** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/new-project.png "플랫폼 간 프로젝트 템플릿")
+    ![](quickstart-images/vs/new-project.w157.png "플랫폼 간 프로젝트 템플릿")
 
 4. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
 
@@ -168,7 +168,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
 12. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Class**를 선택하고, 새 파일에 **PhoneTranslator**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/add-translator-class.png "새 클래스 추가")
+    ![](quickstart-images/vs/add-translator-class.w157.png "새 클래스 추가")
 
 13. **PhoneTranslator.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 전화 단어를 전화번호로 변환합니다.
 
@@ -234,7 +234,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
 15. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Interface**를 선택하고, 새 파일에 **IDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/add-idialer-interface.png "새 인터페이스 추가")
+    ![](quickstart-images/vs/add-idialer-interface.w157.png "새 인터페이스 추가")
 
 16. **IDialer.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 변환된 전화번호로 전화를 걸기 위해 각 플랫폼에 구현되어야 하는 `Dial` 메서드를 정의합니다.
 
@@ -257,9 +257,9 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
     ![](quickstart-images/vs/add-new-item-ios.png "새 항목 추가")
 
-18. **새 항목 추가** 대화 상자에서 **Apple > Code > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
+18. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/new-phone-dialer-ios.png "새 클래스 추가")
+    ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "새 클래스 추가")
 
 19. **PhoneDialer.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 변환된 전화번호로 전화를 걸기 위해 iOS 플랫폼에서 사용될 <code>Dial</code> 메서드를 만듭니다.
 
@@ -291,7 +291,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
 21. **새 항목 추가** 대화 상자에서 **Visual C# > Android > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/new-phone-dialer-android.png "새 클래스 추가")
+    ![](quickstart-images/vs/new-phone-dialer-android.w157.png "새 클래스 추가")
 
 22. **PhoneDialer.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 변환된 전화번호로 전화를 걸기 위해 Android 플랫폼에서 사용될 `Dial` 메서드를 만듭니다.
 
@@ -391,7 +391,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
 
 27. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
-    ![](quickstart-images/vs/new-phone-dialer-uwp.png "새 클래스 추가")
+    ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "새 클래스 추가")
 
 28. **PhoneDialer.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 변환된 전화번호로 전화를 걸기 위해 유니버설 Windows 플랫폼에서 사용될 `Dial` 메서드와 도우미 메서드를 만듭니다.
 
@@ -523,7 +523,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, UWP" Value="20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -630,7 +630,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     }
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
+    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **Phoneword.cs**에 저장하고 파일을 닫습니다.
 
 13. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 

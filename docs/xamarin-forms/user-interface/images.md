@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: caa7884920e842a8f83e2b0fdb5e0fa4b358ca8e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="images"></a>이미지
 
@@ -39,7 +39,7 @@ Xamarin.Forms는는 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.F
 
 - [`FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) -파일 이름 또는 파일 경로 각 플랫폼에서 확인 될 수 있는 필요 합니다.
 - [`FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) -예: Uri 개체가 필요 합니다.  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) -응용 프로그램이 나 PCL에 포함 된 이미지 파일에 리소스 식별자 필요는 **빌드 동작: 포함 리소스**합니다.
+- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) -응용 프로그램이 나 표준.NET 라이브러리 프로젝트에 포함 된 이미지 파일에 리소스 식별자 필요는 **빌드 동작: 포함 리소스**합니다.
 - [`FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) -이미지 데이터를 제공 하는 스트림이 필요 합니다.
 
 [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) 속성 이미지는 표시 영역에 맞게 크기가 조정 방법을 결정 합니다.

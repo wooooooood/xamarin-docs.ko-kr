@@ -5,12 +5,12 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
-ms.openlocfilehash: ae4d5b0b8cd384a11d130bc9258894e1cf4cfa36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>연습-터치를 사용 하 여 Android에서
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/04/2018
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -344,13 +344,11 @@ ms.lasthandoff: 04/04/2018
 
     이제 화면에서 확인 표시를 그립니다 하 고 스크린샷에 표시와 같은 화면이 표시 되는 비트맵은 표시 됩니다.
 
-    [![확인 표시를 그리는](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![인식 확인 표시](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![확인 표시가 그려지는 확인 표시는 인식](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     마지막으로, 화면에 자유 곡선을 그립니다. 이 스크린 샷에 표시 된 것 처럼를 원래 이미지로 다시 확인란을 변경 해야 합니다.
 
-    [![화면에 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![원래 이미지가 표시 됩니다](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![Scribble 원본 이미지 화면에 표시 됩니다.](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 터치 및 제스처 Xamarin.Android를 사용 하 여 Android 응용 프로그램에 통합 하는 방법 이해를 해야 합니다.
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: eb3d66630613225c9b2becaa20f73a82f409ce7e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0f58a4a53d41c23e993f8b8b89b3fca44e0733d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accessing-the-devices-video-library"></a>장치의 비디오 라이브러리 액세스
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 
 세 플랫폼 각각 사용자가 장치의 이미지 라이브러리에서 사진이 나 비디오를 선택할 수 있게 하는 기능을 포함 합니다. 장치 이미지 라이브러리에서 비디오를 재생 하는 첫 번째 단계는 각 플랫폼에서 이미지 선택기를 호출 하는 종속성 서비스를 만드는 중입니다. 아래에 설명 된 종속 서비스가 매우 비슷합니다에 정의 된 하나는 [ **사진 그림 라이브러리에서 선택** ](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md) 문서, 비디오 선택기는 아닌파일이름을반환한다는`Stream`개체입니다.
 
-이라는 인터페이스를 정의 하는 PCL 프로젝트 `IVideoPicker` 종속성 서비스에 대 한:
+이라는 인터페이스를 정의 하는 표준.NET 라이브러리 프로젝트 `IVideoPicker` 종속성 서비스에 대 한:
 
 ```csharp
 namespace FormsVideoLibrary

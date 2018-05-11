@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: cf0e7cab0c879f8fb286c87b2aaadab2dc1453f8
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="localization"></a>지역화
 
@@ -32,7 +32,7 @@ _.NET 리소스 파일을 사용 하 여 Xamarin.Forms 응용 프로그램을 �
 
 TodoLocalized 샘플에 포함 되어는 [공유 프로젝트 데모](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) 빌드 시스템의 제한으로 인해 리소스 파일을 얻지 못한 있지만 **. designer.cs** 액세스 하는 기능을 중단 시키는 생성 된 파일 코드에서 강력한 형식의 번역 된 문자열입니다.
 
-이 문서의 나머지 부분에서는 PCL Xamarin.Forms 템플릿을 사용 하 여 프로젝트와 관련이 있습니다.
+이 문서의 나머지 부분에서는 Xamarin.Forms.NET 표준 라이브러리 템플릿을 사용 하 여 프로젝트와 관련이 있습니다.
 
 ## <a name="globalizing-xamarinforms-code"></a>Xamarin.Forms 코드 전역화
 
@@ -46,7 +46,7 @@ TodoLocalized 샘플에 포함 되어는 [공유 프로젝트 데모](https://gi
 
 ### <a name="adding-resources"></a>리소스 추가
 
-Xamarin.Forms PCL 응용 프로그램을 전역화 하는 첫 번째 단계는 응용 프로그램에 사용 되는 모든 텍스트를 저장 하는 데 사용 될 RESX 리소스 파일 추가 하는 것입니다. 기본 텍스트를 포함 하는 RESX 파일을 추가 하 고 다음을 지 원하는 각 언어에 대 한 추가 RESX 파일을 추가 해야 합니다.
+Xamarin.Forms.NET 표준 라이브러리 응용 프로그램을 전역화 하는 첫 번째 단계는 응용 프로그램에 사용 되는 모든 텍스트를 저장 하는 데 사용 될 RESX 리소스 파일 추가 하는 것입니다. 기본 텍스트를 포함 하는 RESX 파일을 추가 하 고 다음을 지 원하는 각 언어에 대 한 추가 RESX 파일을 추가 해야 합니다.
 
 #### <a name="base-language-resource"></a>기본 언어 리소스
 
@@ -98,7 +98,7 @@ Xamarin.Forms PCL 응용 프로그램을 전역화 하는 첫 번째 단계는 �
 
 -----
 
-이러한 변경에는 선택적 이며만 (예를 들어 경우 코드를 다른 어셈블리에 RESX 파일을 저장할) 지역화 된 문자열을 다른 어셈블리에서 참조 하고자 하는 경우 필요 합니다. 이 항목에 대 한 샘플 유지 문자열 `internal` 사용 된 동일한 Xamarin.Forms PCL 어셈블리에 정의 되기 때문입니다.
+이러한 변경에는 선택적 이며만 (예를 들어 경우 코드를 다른 어셈블리에 RESX 파일을 저장할) 지역화 된 문자열을 다른 어셈블리에서 참조 하고자 하는 경우 필요 합니다. 이 항목에 대 한 샘플 유지 문자열 `internal` 사용 된 동일한 Xamarin.Forms.NET 표준 라이브러리 어셈블리에 정의 되기 때문입니다.
 
 위에 표시 된 대로 기본 RESX 파일에서 사용자 지정 도구를 설정 하기만 하면 설정할 필요가 없습니다 *모든* 다음 섹션에 설명 된 특정 언어 관련 RESX 파일에서 빌드 도구입니다.
 
@@ -559,7 +559,7 @@ namespace UsingResxLocalization.Android
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-클래스 라이브러리 PCL (이식 가능한) 프로젝트의 속성 노드를 확장 하 고 두 번 클릭 하 고 **AssemblyInfo.cs** 파일입니다. 중립 리소스 어셈블리 언어를 영어로 설정 하려면 파일에 다음 줄을 추가 합니다.
+.NET 표준 라이브러리 프로젝트의 속성 노드를 확장 하 고 두 번 클릭 하 고 **AssemblyInfo.cs** 파일입니다. 중립 리소스 어셈블리 언어를 영어로 설정 하려면 파일에 다음 줄을 추가 합니다.
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]

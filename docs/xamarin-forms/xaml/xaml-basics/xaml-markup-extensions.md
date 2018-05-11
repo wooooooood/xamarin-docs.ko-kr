@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부 합니다. XAML 태그 확장
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-다른 클래스에 액세스 하려면 추가 XML 네임 스페이스 선언이 필요 합니다. 각 추가 XML 네임 스페이스 선언을 새 접두사를 정의합니다. 클래스에 액세스 하려면 로컬 공유 응용 프로그램 PCL에 같은 `AppConstants`, XAML 프로그래머 접두사 자주 사용 하 여 `local`합니다. 네임 스페이스 선언 하기 위해 CLR (공용 언어 런타임) 네임 스페이스 이름 라고도.NET 네임 스페이스 이름,이 C#에 표시 되는 이름을 지정 해야 `namespace` 정의 또는 `using` 지시문:
+다른 클래스에 액세스 하려면 추가 XML 네임 스페이스 선언이 필요 합니다. 각 추가 XML 네임 스페이스 선언을 새 접두사를 정의합니다. 클래스에 액세스 하려면 로컬 공유 응용 프로그램 표준.NET 라이브러리에 같은 `AppConstants`, XAML 프로그래머 접두사 자주 사용 하 여 `local`합니다. 네임 스페이스 선언 하기 위해 CLR (공용 언어 런타임) 네임 스페이스 이름 라고도.NET 네임 스페이스 이름,이 C#에 표시 되는 이름을 지정 해야 `namespace` 정의 또는 `using` 지시문:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-PCL 참조 하는 모든 어셈블리에서.NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음은 한 `sys` 표준.NET에 대 한 접두사 `System` 에 있는 네임 스페이스는 **mscorlib** "Microsoft 일반적인 개체 런타임 라이브러리에 대 한" 한 번 서 하지만 이제 "다국어 표준를 의미 하는 어셈블리를 공통 개체 런타임 Library "입니다. 다른 어셈블리 이기 때문에 지정 해야 하는 어셈블리 이름이 경우 **mscorlib**:
+표준.NET 라이브러리를 참조 하는 모든 어셈블리에.NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음은 한 `sys` 표준.NET에 대 한 접두사 `System` 에 있는 네임 스페이스는 **mscorlib** "Microsoft 일반적인 개체 런타임 라이브러리에 대 한" 한 번 서 하지만 이제 "다국어 표준를 의미 하는 어셈블리를 공통 개체 런타임 Library "입니다. 다른 어셈블리 이기 때문에 지정 해야 하는 어셈블리 이름이 경우 **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

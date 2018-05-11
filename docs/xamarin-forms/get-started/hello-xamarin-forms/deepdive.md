@@ -6,12 +6,12 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e254aa14f5889cee6b5bee452f5275fd579eb8fc
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: 9bb368ca72909489ca267794035a4c4d0883f109
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 심층 분석
 
@@ -54,7 +54,7 @@ Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는
 
 프로젝트는 다음과 같습니다.
 
-- Phoneword - 이 프로젝트는 모든 공유 코드와 공유 UI를 보관하는 PCL(이식 가능한 클래스 라이브러리) 프로젝트입니다.
+- Phoneword - 이 프로젝트는 모든 공유 코드와 공유 UI를 보관하는 .NET 표준 라이브러리 프로젝트입니다.
 - Phoneword.Droid - 이 프로젝트는 Android 관련 코드를 보관하며 Android 응용 프로그램의 진입점입니다.
 - Phoneword.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 응용 프로그램의 진입점입니다.
 
@@ -94,7 +94,7 @@ Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 PCL(이식 가능한 클래스 라이브러리)에 배치되며, 플랫폼 관련 응용 프로그램은 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 이 관계의 개요를 보여줍니다.
+Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 .NET 표준 라이브러리에 배치되고 플랫폼 관련 응용 프로그램은 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 이 관계의 개요를 보여줍니다.
 
 ![](deepdive-images/xs/architecture.png "Phoneword 아키텍처")
 

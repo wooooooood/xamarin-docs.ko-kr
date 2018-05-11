@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 41bd79b22aa193dd5303847997bc07e8e8d12e58
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 259be743a706c9316e2e275ff305a0fe5ad97906
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing 맞춤법 검사 API를 사용 하 여 맞춤법 검사
 
@@ -90,7 +90,7 @@ async Task<string> SendRequestAsync(string url)
 }
 ```
 
-이 메서드는 GET 요청 API 키의 값으로 추가 하 여 작성 된 `Ocp-Apim-Subscription-Key` 헤더입니다. GET 요청에 전송 됩니다는 `SpellCheck` 변환 해야 하는 텍스트를 지정 하는 요청 URL과 맞춤법 검사 모드를 사용 하 여의 API입니다. 그런 다음 응답은 읽고 호출 하는 메서드로 반환 됩니다.
+이 메서드는 GET 요청을 보냅니다는 `SpellCheck` 변환 해야 하는 텍스트를 지정 하는 요청 URL과 맞춤법 검사 모드를 사용 하 여의 API입니다. 그런 다음 응답은 읽고 호출 하는 메서드로 반환 됩니다.
 
 `SpellCheck` API에서 HTTP 상태 코드 200 (정상) 요청이 올바른지는 요청이 성공 했음을 나타내는 응답에 요청 된 정보를 제공 하 고 응답을 보냅니다. 응답 개체의 목록에 대 한 참조 [응답 개체](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects)합니다.
 

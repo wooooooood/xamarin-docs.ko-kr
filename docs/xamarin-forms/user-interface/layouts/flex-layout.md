@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: bba5007acb54852b9427c57c26aba6358c4c5771
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
-ms.translationtype: HT
+ms.openlocfilehash: 7585138cd6c33c2a5dc537ba28101a84e1c4b7ae
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -24,11 +24,11 @@ Xamarin.Forms는 [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms �
 
 `FlexLayout` 파생 [ `Layout<View>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) 상속는 [ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) 형식의 속성이 `IList<View>`합니다.
 
-`FlexLayout` 6 개의 바인딩 가능 속성을 공개 및 5 개의 연결 된 바인딩 가능한 속성을 정의합니다. (연결 된 바인딩 가능한 속성 모르는 경우 문서를 참조  **[연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)**.) 이러한 모든 속성 아래 섹션에서 자세히 설명 되어 **[바인딩 가능 속성 6 개가](#bindable-properties)** 및 **[5 개의 연결 된 바인딩 가능한 속성](#attached-properties)**. 이 문서에서 일부 섹션으로 시작 하는 반면 **[일반적인 응용 프로그램이](#common-applications)** 의 `FlexLayout` 를 설명 하는 이러한 속성 중 상당수 비공식적으로 더 합니다. 문서의 끝으로 결합 하는 방법을 확인할 `FlexLayout` 와 [CSS 스타일 시트](~/xamarin-forms/user-interface/styles/css/index.md)합니다.
+`FlexLayout` 6 개의 바인딩 가능 속성을 공개 및 크기, 방향 및 해당 자식 요소의 맞춤에 영향을 주는 다섯 개의 연결 된 바인딩 가능한 속성을 정의 합니다. (연결 된 바인딩 가능한 속성 모르는 경우 문서를 참조  **[연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)**.) 이러한 속성에 아래 섹션에서 자세히 설명 되어 **[자세히 바인딩 가능 속성](#bindable-properties)** 및  **[세부정보에서연결된된바인딩가능한속성](#attached-properties)**. 이 문서에서 일부 섹션으로 시작 하는 반면 **[일반적인 사용 시나리오](#common-scenarios)** 의 `FlexLayout` 를 설명 하는 이러한 속성 중 상당수 비공식적으로 더 합니다. 문서의 끝으로 결합 하는 방법을 확인할 `FlexLayout` 와 [CSS 스타일 시트](~/xamarin-forms/user-interface/styles/css/index.md)합니다.
 
-<a name="common-applications" />
+<a name="common-scenarios" />
 
-## <a name="common-applications"></a>일반 응용 프로그램
+## <a name="common-usage-scenarios"></a>일반적인 사용 시나리오
 
 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플 프로그램에 여러 페이지의 몇 가지 일반적인 사용 하 여 해당 demonstate `FlexLayout` 해당 속성을 시험해 볼 수 있습니다.
 
@@ -85,7 +85,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되 고 해당 페�
 
     사용 하는 경우는 `StackLayout`를 할당 해야는 `VerticalOptions` 각 항목의 속성 `CenterAndExpand` 비슷한 효과 달성 하기 위해. 하지만 `CenterAndExpand` 옵션 각 항목 사이의 보다 첫째 항목 앞과 마지막 항목 뒤 두 배 많은 공간을 할당 합니다. 모방할 수 있습니다는 `CenterAndExpand` 옵션의 `VerticalOptions` 설정 하 여는 `JustifyContent` 속성 `FlexLayout` 를 `SpaceAround`합니다.
 
-이러한 `FlexLayout` 속성 섹션에서 자세하게에서 설명 **[바인딩 가능 속성 6 개가](#bindable-properties)** 아래 합니다.
+이러한 `FlexLayout` 속성 섹션에서 자세하게에서 설명 **[자세히 바인딩 가능 속성](#bindable-properties)** 아래 합니다.
 
 ### <a name="using-flexlayout-for-wrapping-items"></a>FlexLayout를 사용 하 여 항목을 배치에 대 한
 
@@ -190,7 +190,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 [![사진 래핑 페이지](flex-layout-images/PhotoWrapping.png "사진 래핑 페이지")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
-### <a name="holy-grail-layout-with-flexlayout"></a>FlexLayout 있는 신성 grail 레이아웃
+### <a name="page-layout-with-flexlayout"></a>FlexLayout 포함 된 페이지 레이아웃
 
 웹 디자인 호출 중인 표준 레이아웃의 [ _신성 grail_ ](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) 매우 효과적 이지만 자주 하드 완벽 하 게 구워진을 나타내려고 하 되는 레이아웃 형식 이므로 합니다. 레이아웃은 페이지의 위쪽에는 머리글 및 바닥글이 페이지의 전체 너비로 확장 맨 아래에 구성 됩니다. 콘텐츠 및 보충 정보의 왼쪽에 열 메뉴와 않지만 종종 주 콘텐츠는 사용 하 여 페이지의 가운데 (라고도 _따로_ 영역) 오른쪽에 있습니다. [CSS 유연한 상자 레이아웃 사양의 섹션 5.4.1](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) flex 상자가 신성 grail 레이아웃 수 구현 하는 방법을 설명 합니다.
 
@@ -377,16 +377,16 @@ public partial class PhotoWrappingPage : ContentPage
 
 `Order` 설정인 &ndash;1 원인은 `Image` 요소는 중첩 된 각 처음에 표시를 `FlexLayout` children 컬렉션 내에서 위치에 관계 없이 뷰. `AlignSelf` 속성 `Center` 하면는 `Image` 내에서 가운데 맞춤 될는 `FlexLayout`합니다. 이 옵션의 설정을 재정의 `AlignItems` 에 기본값이 있는 속성의 `Stretch`즉, 하는 `Label` 및 `Button` 자식을 확장 하 여의 전체 너비는 `FlexLayout`합니다.
 
-세 개의 각 내 `FlexLayout` 는 빈 값을 볼 `Label` 앞에 `Button`, 했으나는 `Grow` 1을 설정 합니다. 즉,이 빈에 모든 여분의 세로 spae가 할당 되는 `Label`는 효과적으로 푸시는 `Button` 맨 아래에 있습니다.
+세 개의 각 내 `FlexLayout` 는 빈 값을 볼 `Label` 앞에 `Button`, 했으나는 `Grow` 1을 설정 합니다. 모든 여분의 세로 공간을이 공백으로 할당은 의미 `Label`는 효과적으로 푸시는 `Button` 맨 아래에 있습니다.
 
 <a name="bindable-properties" />
 
-## <a name="the-six-bindable-properties"></a>여섯 개의 바인딩 가능한 속성
+## <a name="the-bindable-properties-in-detail"></a>세부 정보에 바인딩 가능한 속성
 
 일반적인 몇 가지를 살펴 보았으며 했으므로 `FlexLayout`, 속성을 `FlexLayout` 자세히 탐색할 수 있습니다. 
-`FlexLayout` 에 설정 된 6 개의 바인딩 가능한 속성 정의 `FlexLayout` 자체, 코드 또는 XAML을 되지만 `Position` 속성은이 문서에서는 다루지 않습니다.
+`FlexLayout` 에 설정한 여섯 개의 바인딩 가능한 속성 정의 `FlexLayout` 코드 또는 XAML 컨트롤 orientatin 및 맞춤을 자체입니다. (이러한 속성 중 하나 [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position),이 문서에서는 다루지 않습니다.)
 
-5 개를 사용 하 여 바인딩 가능한 속성 남은 작동이 테스트할 수 있습니다는 **실험** 의 페이지는 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플. 이 페이지에서는 추가 또는 자식을에서 제거할 수 있습니다는 `FlexLayout` 의 5 개 바인딩 가능한 속성 조합을 설정할 수 있습니다. 모든 자식은 `FlexLayout` 는 `Label` 다양 한 색 및 크기의 보기와는 `Text` 속성이 숫자에 해당 하는에서 위치를 설정의 `Children` 컬렉션입니다.
+실험할 수 바인딩 가능 속성을 사용 하 여 남은 5는 **실험** 의 페이지는 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플. 이 페이지에서는 추가 또는 자식을에서 제거할 수 있습니다는 `FlexLayout` 의 5 개 바인딩 가능한 속성 조합을 설정할 수 있습니다. 모든 자식은 `FlexLayout` 는 `Label` 다양 한 색 및 크기의 보기와는 `Text` 속성이 숫자에 해당 하는에서 위치를 설정의 `Children` 컬렉션입니다.
 
 프로그램이 시작 될 때, 포함 된 5 `Picker` 이러한 5의 기본 값을 표시 하는 뷰 `FlexLayout` 속성입니다. `FlexLayout` 세 명의 자식을 포함 하는 화면 아래쪽으로 이동 합니다.
 
@@ -493,7 +493,7 @@ IOS screnshot에서 두 행 맨 위에 있는; Android 스크린 샷 있을 때�
 
 <a name="attached-properties" />
 
-## <a name="the-five-attached-bindable-properties"></a>5 개의 연결 된 바인딩 가능한 속성
+## <a name="the-attached-bindable-properties-in-detail"></a>세부 정보에서 연결된 된 바인딩 가능한 속성
 
 `FlexLayout` 5 개의 연결 된 바인딩 가능한 속성을 정의합니다. 자식에이 속성이 설정 된는 `FlexLayout` 및 특정 자식에만 해당 합니다.
 
@@ -531,7 +531,7 @@ FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
 
 ### <a name="the-basis-property"></a>기본 속성
 
-[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) 바인딩할 수 있는 연결 된 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 주 축에 있습니다. 지정한 크기는 `Basis` 속성은 부모의 주요 축 크기 `FlexLayout`합니다. 즉, `Basis` 자식 열에 정렬 되는 경우 행 또는 높이의 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
+[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) 바인딩할 수 있는 연결 된 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 주 축에 있습니다. 지정한 크기는 `Basis` 속성은 부모의 주요 축 크기 `FlexLayout`합니다. 따라서 `Basis` 자식 열에 정렬 되는 경우 행 또는 높이의 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
 
 `Basis` 형식의 속성은 [ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis)는 구조입니다. 장치 독립적 단위에서 또는 크기의 백분율로 크기를 지정할 수는 `FlexLayout`합니다. 기본값은 `Basis` 속성은 정적 속성 `FlexBasis.Auto`, 자식의 너비 또는 높이 데 사용 됩니다 요청 한다는 의미입니다.
 
@@ -611,11 +611,11 @@ Android 스크린 샷에 `Shrink` 두 번째에 대 한 값 `Label` 0이 고, �
 
 ## <a name="css-styling-with-flexlayout"></a>FlexLayout 된 CSS 스타일 지정
 
-사용할 수는 [CSS 스타일이](~/xamarin-forms/user-interface/styles/css/index.md) 연결 하 여 Xamarin.Forms 3.0에 도입 된 기능 `FlexLayout`합니다. **CSS 카탈로그 항목** 의 페이지는 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 의 레이아웃을 복제 하는 예제는 **카탈로그 항목** 페이지 하지만 CSS 스타일 시트 스타일:
+사용할 수는 [CSS 스타일이](~/xamarin-forms/user-interface/styles/css/index.md) 연결 하 여 Xamarin.Forms 3.0에 도입 된 기능 `FlexLayout`합니다. **CSS 카탈로그 항목** 의 페이지는 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 의 레이아웃을 복제 하는 예제는 **카탈로그 항목** 페이지 하지만 CSS 스타일 시트 스타일에 대 한:
 
 [![CSS 카탈로그 항목 페이지](flex-layout-images/CssCatalogItems.png "CSS 카탈로그 항목 페이지")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
-원래 **CatalogItemsPage.xaml** 파일에 포함 된 5 `Style` 정의에서 해당 `Resources` 15 사용 하 여 섹션 `Setter` 개체입니다. 에 **CssCatalogItemsPage.xaml** 파일을 2로 축소 되었습니다을 `Style` 방금 4와 함께 정의 `Setter` 개체입니다. 이러한 스타일 Xamarin.Forms CSS 스타일 지정 기능은 현재 처리할 수 없는 속성에 대 한 CSS 스타일 시트를 보완 합니다.
+원래 **CatalogItemsPage.xaml** 파일에 포함 된 5 `Style` 정의에서 해당 `Resources` 15 사용 하 여 섹션 `Setter` 개체입니다. 에 **CssCatalogItemsPage.xaml** 파일을 2로 축소 되었습니다을 `Style` 방금 4와 함께 정의 `Setter` 개체입니다. 이러한 스타일 Xamarin.Forms CSS 스타일 지정 기능은 현재 지원 하지 않는 속성에 대 한 CSS 스타일 시트를 보완 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -734,7 +734,7 @@ button {
 
 여러 `FlexLayout` 연결 된 바인딩 가능한 속성은 여기 참조 됩니다. 에 `label.empty` 선택기를 표시는 `flex-grow` 빈 스타일을 특성 `Label` 위의 빈 공간을 제공 하는 `Button`합니다. `image` 선택기 포함는 `order` 특성 및 `align-self` 는 모두에 해당 특성 `FlexLayout` 바인딩 가능 속성을 연결 합니다.
 
-지금까지 살펴본에서 직접 속성을 설정할 수는 `FlexLayout` 의 자식에 대해 연결 된 바인딩 가능한 속성을 설정할 수 있습니다는 `FlexLayout`합니다. 또는 이러한 속성을 사용 하 여 직접 하지 XAML 기반 전통적인 스타일 또는 CSS 스타일을 설정할 수 있습니다. 알려진 하는 것 하 고 이러한 속성을 이해 하는 것이 중요 합니다. 이유는 `FlexLayout` 기능이 더 유연 합니다. 
+지금까지 살펴본에서 직접 속성을 설정할 수는 `FlexLayout` 의 자식에 대해 연결 된 바인딩 가능한 속성을 설정할 수 있습니다는 `FlexLayout`합니다. 또는 이러한 속성을 사용 하 여 직접 하지 XAML 기반 전통적인 스타일 또는 CSS 스타일을 설정할 수 있습니다. 중요 한 것은을 알고 있어야 하며 이러한 속성을 이해 합니다. 이러한 속성은 어떤 원리에 의해는 `FlexLayout` 기능이 더 유연 합니다. 
 
 ## <a name="flexlayout-with-xamarinuniversity"></a>FlexLayout Xamarin.University와
 

@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: de08e686fc07595b75016b9266f57b12831e9822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0985fb533969a331ceee62f490bae600de9f189c
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 
@@ -41,7 +41,7 @@ Mac 앱 Mac.에 대 한 Visual Studio를 사용 하 여 추가할 수 있습니�
 
 5. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가 중...**  추가 하는 [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet 합니다. 또한이 버전을 다른 프로젝트를 업데이트 해야 합니다.
 
-6. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **참조** Xamarin.Forms 프로젝트 (공유 프로젝트 또는 PCL)에 대 한 참조를 추가 합니다.
+6. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **참조** Xamarin.Forms 프로젝트 (프로젝트 공유 또는 표준.NET 라이브러리 프로젝트)에 대 한 참조를 추가 합니다.
 
   ![Xamarin.Forms 공유 코드 프로젝트에 대 한 참조를 추가 합니다.](mac-images/references-sml.png)
 

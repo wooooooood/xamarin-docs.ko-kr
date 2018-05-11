@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 316a6b9e9ce65dfb3c19d611f1b4976709546b5f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9efdc8376d9970cb429654e3d3aa2eef75ac2996
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어를 만들기
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="the-video-player"></a>비디오 플레이어
 
-[ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) 클래스는의 일부는 **VideoPlayerDemos** 플랫폼 간에 공유 되는 이식 가능한 클래스 라이브러리 (PCL). 파생 `View`:
+[ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) 클래스는의 일부는 **VideoPlayerDemos** 플랫폼 간에 공유 되는 표준.NET 라이브러리입니다. 파생 `View`:
 
 ```csharp
 using System;

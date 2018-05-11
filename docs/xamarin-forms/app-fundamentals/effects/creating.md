@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 12b8906dd4562e58dede181e773e4046b8434214
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -188,7 +188,7 @@ namespace EffectsDemo.UWP
 
 ## <a name="consuming-the-effect"></a>효과 사용합니다.
 
-Xamarin.Forms PCL 이식 가능한 클래스 라이브러리 () 또는 라이브러리 공유 프로젝트에서 효과 사용 하기 위한 프로세스는 다음과 같습니다.
+Xamarin.Forms.NET 표준 라이브러리 또는 라이브러리 공유 프로젝트에서 효과 사용 하기 위한 프로세스는 다음과 같습니다.
 
 1. 효과 의해 사용자 지정 될 컨트롤을 선언 합니다.
 1. 컨트롤의에 추가 하 여 결과 컨트롤에 연결 [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) 컬렉션입니다.
@@ -209,7 +209,7 @@ Xamarin.Forms PCL 이식 가능한 클래스 라이브러리 () 또는 라이브
 </Entry>
 ```
 
-`FocusEffect` PCL에 클래스 XAML에서 효과 소비를 지원 하며 다음 코드 예제에 표시 됩니다.
+`FocusEffect` .NET 표준 라이브러리의 클래스 XAML에서 효과 사용을 지원 하 고 다음 코드 예제에 표시 됩니다.
 
 ```csharp
 public class FocusEffect : RoutingEffect

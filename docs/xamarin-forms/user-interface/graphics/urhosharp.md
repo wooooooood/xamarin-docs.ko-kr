@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: 8421355e0630a637589cb4f08c2fec4ea9cdab24
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1a982078f7a3fb2ba462cd7d6f1420b1d27618f7
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Xamarin.forms에서 UrhoSharp를 사용 하 여
 
@@ -27,10 +27,10 @@ UrhoSharp는 Xamarin.Forms 응용 프로그램에서 그래픽 렌더링 데 사
 
 ## <a name="adding-the-urhosharp-nuget-packages"></a>UrhoSharp Nuget 패키지를 추가합니다.
 
-UrhoSharp를 사용 하기 전에 개발자는 솔루션에 UrhoSharp Nuget 패키지를 추가 해야 합니다. 이 가이드에서는 iOS, Android, 및 PCL을 사용 하 여 Xamarin.Forms 프로젝트 가정 프로젝트. 모든 코드는 PCL 프로젝트;에 기록 됩니다. 하지만 너무 UrhoSharp Nuget iOS 및 Android 프로젝트에 추가 해야 합니다.
+UrhoSharp를 사용 하기 전에 개발자는 솔루션에 UrhoSharp Nuget 패키지를 추가 해야 합니다. 이 가이드에서는 iOS, Android, 및 표준.NET을 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트. .NET 표준 라이브러리 프로젝트; 기록 되어 모든 코드 하지만 너무 UrhoSharp Nuget iOS 및 Android 프로젝트에 추가 해야 합니다.
 
 UrhoSharp.Forms Nuget 패키지는 모든 UrhoSharp 개체를 만드는 데 필요한 개체를 포함 합니다. UrhoSharp.Forms nuget 패키지에 포함 된 `UrhoSurface` xamarin.forms에서 UrhoSharp 호스트 하는 데 사용 되는 클래스입니다.
-를 시작 하려면 마우스 오른쪽 단추로 클릭 하는 PCL의 **패키지** 폴더를 선택 **패키지 추가 중...** . 검색어를 입력 **UrhoSharp.Forms**선택, **UrhoSharp Xamarin.Forms에 대해**, 클릭 **패키지 추가**합니다.
+를 시작 하려면 마우스 오른쪽 단추로 클릭는 **패키지** 고 표준.NET 라이브러리 프로젝트에서 폴더 **패키지 추가 중...** . 검색어를 입력 **UrhoSharp.Forms**선택, **UrhoSharp Xamarin.Forms에 대해**, 클릭 **패키지 추가**합니다.
 
 [![](urhosharp-images/add-package-sml.png "추가 패키지 대화 상자")](urhosharp-images/add-package.png#lightbox "패키지 대화 상자를 추가 합니다.")
 

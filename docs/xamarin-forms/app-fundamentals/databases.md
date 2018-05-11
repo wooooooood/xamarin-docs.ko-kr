@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-databases"></a>로컬 데이터베이스
 
@@ -19,7 +19,7 @@ _Xamarin.Forms는 로드 하 고 공유 코드에 개체를 저장 가능 하 �
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms 응용 프로그램이 사용할 수는 [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) 데이터베이스 작업을 통합 하는 패키지를 참조 하 여 코드를 공유는 `SQLite` NuGet에 함께 제공 되는 클래스입니다. 데이터베이스 작업에 데이터베이스를 저장할 경로 반환 하는 플랫폼별 프로젝트를 사용 하 여 Xamarin.Forms 솔루션의 클래스 라이브러리 PCL (이식 가능한) 프로젝트에 정의할 수 있습니다.
+Xamarin.Forms 응용 프로그램이 사용할 수는 [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) 데이터베이스 작업을 통합 하는 패키지를 참조 하 여 코드를 공유는 `SQLite` NuGet에 함께 제공 되는 클래스입니다. 데이터베이스 작업에 데이터베이스를 저장할 경로 반환 하는 플랫폼 특정 프로젝트와 함께 Xamarin.Forms 솔루션의 표준.NET 라이브러리 프로젝트에 정의할 수 있습니다.
 
 함께 제공 되 [샘플 응용 프로그램](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) 는 간단한 Todo 목록 응용 프로그램입니다. 다음 스크린샷에서 샘플 각 플랫폼에 어떻게 표시 되는지를 보여 줍니다.
 
@@ -42,8 +42,8 @@ SQLite 지원 Xamarin.Forms PCL 프로젝트를 추가 하려면 사용 하 여 
 NuGet 패키지는 이름이 비슷한 여러 가지, 올바른 패키지에 이러한 특성:
 
 - **만든:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
-- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Id:** sqlite net pcl
+- **NuGet 링크:** [sqlite net pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 참조가 추가 되 면 데이터베이스 파일의 위치를 확인 하는 플랫폼 특정 기능을 추상화 하는 인터페이스를 작성 합니다. 샘플에 사용 되는 인터페이스에는 하나의 메서드를 정의 합니다.
 
