@@ -5,17 +5,17 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b2c9ed50c48aee6343a20ddb28c49e1bd05d2153
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials 텍스트 음성 변환
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
-**TextToSpeech** 응용 프로그램 클래스를 사용 하면 장치에서 및 쿼리 엔진을 지원할 수 있는 사용 가능한 언어를 뒤로 텍스트를 텍스트 음성 변환 엔진에 기본 제공을 사용 합니다.
+**TextToSpeech** 클래스를 사용 하면 장치에서 및 쿼리 엔진을 지원할 수 있는 사용 가능한 언어를 뒤로 텍스트를 텍스트 음성 변환 엔진에 기본 제공 활용 하 여 응용 프로그램입니다.
 
 ## <a name="using-text-to-speech"></a>텍스트 음성 변환 사용
 
@@ -45,7 +45,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-선택적 CancellationToken에 시작 하나 utterance 중지 하려면이 메서드를 사용 합니다. 
+선택적 CancellationToken에 일단 시작 된 utterance를 중지 하려면이 메서드를 사용 합니다. 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -143,5 +143,5 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [TextToSpeech 소스 코드](https://github.com/xamarin/Essentials/tree/master/Essentials/TextToSpeech)
+- [TextToSpeech 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [TextToSpeech API 설명서](xref:Xamarin.Essentials.TextToSpeech)

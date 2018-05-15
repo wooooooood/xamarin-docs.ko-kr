@@ -93,7 +93,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 
 #### <a name="uninstall-android-sdk-and-java-sdk"></a>Android SDK 및 Java SDK 제거
 
-Android SDK는 Android 응용 프로그램 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **~/Library/Developer/Xamarin/** 에서 해당 파일을 찾아 **휴지통**으로 이동합니다.
+Android SDK는 Android 응용 프로그램 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **\~/Library/Developer/Xamarin/** 에서 해당 파일을 찾아 **휴지통** 으로 이동합니다.
 
 Java SDK(JDK)는 이미 Mac OS X에 포함되어 있으므로 제거할 필요가 없습니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/08/2018
-ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/11/2018
+ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -53,7 +53,7 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
     
     b. **공유 프로젝트** – 설치 된 **Xamarin.LiveReload** 모든 플랫폼 프로젝트에 NuGet (Android, iOS, UWP, 같은 등). 확인 하는 **패키지 소스** 로 설정 된 **모든**합니다.
 
-![Xamarin 라이브 다시 로드 NuGet NuGet 패키지 관리자를 추가 합니다.](images/addlivereloadnuget.png)
+    [![Xamarin 라이브 다시 로드 NuGet NuGet 패키지 관리자를 추가 합니다.](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
 3. 추가 `LiveReload.Init();` 생성자에 `Application` 다음 코드 조각에 나와 있는 것 처럼 클래스:
 

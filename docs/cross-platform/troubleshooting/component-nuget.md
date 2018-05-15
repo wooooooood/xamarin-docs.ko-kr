@@ -7,22 +7,26 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 020a5a2182458e759626b9bdbf45b62b6e13d71a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet 구성 요소 참조를 업데이트합니다.
 
-> [!NOTE]
+> [!IMPORTANT]
+> 구성 요소 저장소가 2018 년 5 월 15를 기준으로 중지 되었습니다 (이 클로저 원래 [발표](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) 2017 년 11 월에에서).
+>
 > Xamarin 구성 요소 Visual Studio에서 더 이상 지원 되지 NuGet 패키지에 의해 교체 해야 합니다. 프로젝트에서 구성 요소 참조를 수동으로 제거 하려면 다음 지침을 따릅니다.
 
 NuGet 패키지에 추가 하는 데 이러한 지침을 참조 [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
 
+인기 있는 Xamarin 목록이 [플러그 인 및 라이브러리](https://github.com/xamarin/XamarinComponents/blob/master/README.md) NuGet pacakges로 사용할 수 없는 구성 요소에 대 한 대안을 찾을 수 있도록 사용할 수 있습니다.
+
 ## <a name="manually-removing-component-references"></a>구성 요소 참조를 수동으로 제거
 
-2017 년 1 년 11 월에서는 있었습니다 [발표](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) Xamarin 구성 요소 저장소가 사용이 중지 될 것입니다. Sunsetting 구성 요소와 함께 앞으로 이동 하기 위해, 15.6 버전의 Visual Studio 및 Mac 용 Visual Studio의 7.4 릴리스에서 더 이상 프로젝트에서 구성 요소 지원 합니다. 
+15.6 버전의 Visual Studio 및 Mac 용 Visual Studio의 7.4 릴리스에서 더 이상 프로젝트에서 구성 요소를 지원 합니다. 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -199,6 +203,6 @@ NuGet 패키지는 모든 종속성과 함께 프로젝트에 추가 됩니다.
 
 
 ## <a name="related-links"></a>관련 링크
-
+- [인기 있는 Xamarin 플러그 인 및 라이브러리의 목록](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [설치 하 고 사용 NuGet 패키지 (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [NuGet 패키지 (Mac) 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

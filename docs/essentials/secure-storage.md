@@ -5,17 +5,39 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: 24d1e29ba0203aaafc3e21533478f6c505cc09b3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-secure-storage"></a>보안 저장소 Xamarin.Essentials
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
 **SecureStorage** 클래스에 안전 하 게 단순 키/값 쌍을 저장 하는 데 도움이 됩니다.
+
+## <a name="getting-started"></a>시작
+
+에 액세스 하려면는 **SecureStorage** , 다음과 같은 플랫폼별 설치는 기능이 필요 합니다.
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+추가 설치 하지 않아도 됩니다.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+IOS 시뮬레이터에서 프로젝트를 개발 하는 경우 사용 하도록 설정 된 **키 집합** 자격 응용 프로그램의 번들 식별자에 대 한 키 집합 액세스 그룹을 추가 합니다.
+
+열기는 **Entitlements.plist** 찾을 및 iOS 프로젝트는 **키 집합** 자격 했다가 사용 하도록 설정 합니다. 응용 프로그램의 식별자를 그룹으로 자동으로 추가 됩니다.
+
+프로젝트 속성에서 아래 **iOS 번들 서명** 설정는 **사용자 지정 자격** 를 **Entitlements.plist**합니다.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+추가 설치 하지 않아도 됩니다.
+
+-----
 
 ## <a name="using-secure-storage"></a>보안 저장소를 사용 하 여
 
@@ -75,5 +97,5 @@ Encryped 값에 저장 됩니다 `ApplicationData.Current.LocalSettings`, 컨테
 
 ## <a name="api"></a>API
 
-- [SecureStorage 소스 코드](https://github.com/xamarin/Essentials/tree/master/Essentials/SecureStorage)
+- [SecureStorage 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API 설명서](xref:Xamarin.Essentials.SecureStorage)

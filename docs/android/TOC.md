@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [탭 레이아웃](user-interface/layouts/tab-layout/index.md)
 ##### [작업 모음이 있는 탐색 탭](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [TabHost 개요](user-interface/layouts/tab-layout/tab-host.md)
-##### [TabHost를 사용하여 탭 UI 만들기](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [컨트롤](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [자동 완성](user-interface/controls/auto-complete.md)

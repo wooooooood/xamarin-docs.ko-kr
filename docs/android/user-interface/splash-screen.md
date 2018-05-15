@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>시작 화면
 
@@ -153,6 +153,74 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
+## <a name="landscape-mode"></a>가로 모드
+
+이전 단계에서 구현 되는 시작 화면 가로 세로 모드에서 제대로 표시 됩니다. 그러나 일부 경우에 필요는 경우이 없으면 가로 세로 모드에 대 한 별도 시작 화면 (예를 들어 시작 이미지는 전체 화면).
+
+가로 모드에 대 한 시작 화면을 추가 하려면 다음 단계를 사용 합니다.
+
+1. 에 **리소스/그릴** 폴더를 사용 하려면 시작 화면 이미지의 가로 버전을 추가 합니다. 이 예제에서는 **splash_logo_land.png** (검정 문자 대신 사용 파랑) 위 예제에서 사용 된 로고의 가로 버전입니다.
+
+2. 에 **리소스/그릴** 폴더를 가로 버전을 만듭니다는 `layer-list` 그릴는 이전에 정의 된 (예를 들어 **splash_screen_land.xml**). 이 파일의 시작 화면 이미지의 가로 버전에 비트맵 경로 설정 합니다. 다음 예에서 **splash_screen_land.xml** 사용 하 여 **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  만들기는 **리소스/값-토지** 폴더 존재 하지 않는 경우.
+
+4.  파일 추가 **colors.xml** 및 **style.xml** 를 **값 토지** (복사 및 기존 수정할 수 있습니다 이러한 **values/colors.xml**및 **values/style.xml** 파일).
+
+5.  수정 **값-토지/style.xml** 가로 버전에 대해 그릴의 구성 된 `windowBackground`합니다. 이 예제에서는 **splash_screen_land.xml** 사용 됩니다.
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  수정 **값-토지/colors.xml** 시작 화면의 가로 버전에 대 한 사용 하려는 색을 구성 하려면. 이 예제에서는 시작 화면 배경 색상은 가로 모드에 대 한 노랑으로 변경 됩니다.
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  빌드하고 앱을 다시 실행 합니다. 가로 모드로 시작 화면이 계속 표시 되는 동안 장치를 회전 합니다. 시작 화면 가로 버전 변경 내용:
+
+    [![가로 모드로 시작 화면의 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+참고 가로 모드 시작 화면을 사용 하는 항상 원활한 환경을 제공 하 고 하지 않습니다. 기본적으로 Android 세로 모드에서 앱을 시작 하 고 것도 장치에에서 이미 있으면 가로 모드 가로 모드로 전환 합니다. 결과적으로, 앱을 장치 가로 모드에 있는 동안 실행을 하는 경우 장치 세로 시작 화면을 간략하게 표시 고 회전에서 세로에서 가로 시작 화면을 다음 애니메이션입니다. 이 초기 세로-가로 전환 수행 하지만 경우에 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` 시작 활동의 플래그에 지정 합니다. 이 제한을 해결 하는 가장 좋은 방법은 가로 세로 모드에서 제대로 렌더링 하는 단일 시작 화면 이미지를 만드는 것입니다.
+
 
 ## <a name="summary"></a>요약
 
@@ -162,5 +230,5 @@ public class MainActivity : AppCompatActivity
 ## <a name="related-links"></a>관련 링크
 
 - [시작 화면 (샘플)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [layer-list Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [레이어 목록 Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ 자재 디자인 패턴-시작 화면](https://www.google.com/design/spec/patterns/launch-screens.html)

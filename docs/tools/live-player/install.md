@@ -5,12 +5,12 @@ ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
-ms.date: 11/22/2017
-ms.openlocfilehash: 0f343e253a57de33d7e19e648862e6d11fa5af5f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/14/2018
+ms.openlocfilehash: bbc935c2770fab1a853bb12fba2b7eb0283bb258
+ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Player 라이브 설치
 
@@ -30,7 +30,9 @@ Xamarin 라이브 플레이어를 통해 사용할 수 있는 Google Play 없이
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-사용자가 의견을 교환하실는 [Xamarin Player 라이브 앱 _iOS 미리 보기_ ](https://aka.ms/liveplayeralpha) 즐길 TestFlight 통해 최신 향상 기능에 빠르게 액세스할 수 있습니다.
+Xamarin Player 라이브 앱 iOS TestFlight 통해 최신 향상 기능에 대 한 빠른 액세스 사용 하려면 미리 보기 사용자가 사용 하는 것이 좋습니다. Microsoft에 동의 하는 라이브 Xamarin Player에 액세스 하 여 [사용 약관](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [개인정보취급방침](https://privacy.microsoft.com/en-us/privacystatement)합니다. Microsoft은 업데이트 및 Xamarin에 대 한 특별 행사 및 기타 Microsoft 제품 및 서비스를 제공 하기 귀하의 연락처 정보를 사용할 수 있습니다. 언제 든 지 수신을 해지할 수 있습니다.
+
+Xamarin Player 라이브 iOS 미리 보기에 액세스 하려면 따르십시오는 [TestFlight 등록 정보](https://fastring.xamarinliveplayer.com/)는 메일을 받게 됩니다는 TestFlight에서 Xamarin Player 라이브 iOS 미리 보기를 설치 하는 방법에 있습니다.
 
 -----
 
