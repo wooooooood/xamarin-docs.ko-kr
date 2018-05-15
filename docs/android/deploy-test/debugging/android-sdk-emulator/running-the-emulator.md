@@ -1,21 +1,21 @@
 ---
-title: Android SDK 에뮬레이터 실행
-description: Android SDK 에뮬레이터를 통해 앱을 디버그하는 방법
+title: Google Android Emulator 실행
+description: Google Android Emulator를 사용하여 앱을 디버그하는 방법
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e290b24c0d7a98b1abaf647fe76e56867042645
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="running-the-android-sdk-emulator"></a>Android SDK 에뮬레이터 실행
+# <a name="running-the-google-android-emulator"></a>Google Android Emulator 실행
 
-이 가이드에서는 앱 디버그 및 테스트를 위해 Android SDK 에뮬레이터에서 가상 장치를 시작하는 방법을 알아봅니다.
+이 가이드에서는 앱 디버그 및 테스트를 위해 Google Android Emulator에서 가상 장치를 시작하는 방법을 알아봅니다.
 
 ## <a name="using-a-pre-configured-virtual-device"></a>미리 구성된 가상 장치 사용
 
@@ -35,7 +35,7 @@ Visual Studio에는 장치 드롭다운 메뉴에 표시되는 미리 구성된 
 
 일반적으로 **VisualStudio\_android-23\_x86\_phone** 가상 장치를 선택하여 전화 앱을 테스트 및 디버그합니다. 미리 구성된 가상 장치 중 하나가 요구 사항에 부합할 경우(즉 앱의 대상 API 수준에 맞는 경우) [에뮬레이터 시작](#launching)으로 건너뛰어 에뮬레이터에서 앱 실행을 시작합니다. Android API 수준에 대해 아직 잘 모르겠으면 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조하세요.
 
-Xamarin.Android 프로젝트에서 사용 가능한 가상 장치와 호환되지 않는 대상 프레임워크 수준을 사용할 경우, 드롭다운 메뉴의 **지원되지 않는 장치**에 사용할 수 없는 가상 장치가 나열됩니다. 예를 들어 다음 프로젝트는 대상 프로레임워크가 **Android 7.1 Nougat(API 25)**로 설정되었는데 이는 기본 제공되는 **Android 6.0** 가상 장치와 호환되지 않습니다.
+Xamarin.Android 프로젝트에서 사용 가능한 가상 장치와 호환되지 않는 대상 프레임워크 수준을 사용할 경우, 드롭다운 메뉴의 **지원되지 않는 장치**에 사용할 수 없는 가상 장치가 나열됩니다. 예를 들어 다음 프로젝트는 대상 프로레임워크가 **Android 7.1 Nougat(API 25)** 로 설정되었는데 이는 기본 제공되는 **Android 6.0** 가상 장치와 호환되지 않습니다.
 
 [![호환되지 않는 가상 장치](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
@@ -80,13 +80,13 @@ IDE 위에는 **디버그** 또는 **릴리스** 모드를 선택하는 데 사�
 
 -----
 
-Android 에뮬레이터가 시작된 후 Xamarin.Android가 앱을 에뮬레이터에 배포하기 시작합니다. 에뮬레이터가 구성된 가상 장치 이미지로 앱을 실행합니다. Android SDK 에뮬레이터의 스크린 샷 예가 아래에 표시되어 있습니다(이 에뮬레이터는 이름이 **MyApp**인 빈 앱을 실행 중).
+Android 에뮬레이터가 시작된 후 Xamarin.Android가 앱을 에뮬레이터에 배포하기 시작합니다. 에뮬레이터가 구성된 가상 장치 이미지로 앱을 실행합니다. Google Android Emulator의 예제 스크린샷이 아래에 표시됩니다(이 에뮬레이터는 이름이 **MyApp**인 빈 앱을 실행).
 
 ![빈 앱을 실행 중인 에뮬레이터](running-the-emulator-images/emulator-running.png)
 
 에뮬레이터는 계속 실행될 수 있습니다. 즉 앱을 실행할 때마다 매번 종료하고 다시 시작하지 않아도 됩니다. 처음 Xamarin.Android 앱을 에뮬레이터에서 실행하면 대상 API 수준에 대한 Xamarin.Android 공유 런타임이 설치되고 이후 응용 프로그램이 설치됩니다. 런타임 설치에는 몇 분 정도 걸릴 수 있으므로 기다려야 합니다. 첫 번째 Xamarin.Android 앱이 에뮬레이터에 배포된 후에만 런타임 설치가 수행됩니다. &ndash; 이후의 배포는 앱만 에뮬레이터에 복사하는 것이므로 속도가 빨라집니다.
 
-Android SDK 에뮬레이터 사용에 대한 자세한 내용은 다음 Android 개발자 항목을 참조하세요.
+Google Android Emulator를 사용하는 방법에 대한 자세한 내용은 다음 Android 개발자 항목을 참조하세요.
 
 -   [화면에서 탐색](https://developer.android.com/studio/run/emulator.html#navigate)
 

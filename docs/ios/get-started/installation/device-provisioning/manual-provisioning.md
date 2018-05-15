@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3f321366b3afc814aef1c586af2707b1caeef4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f604d41990a7a592a3d5207e7a12075c35ae661f
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="manual-provisioning"></a>수동 프로비전
 
@@ -35,7 +35,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 서명 ID를 생성하려면 다음을 수행합니다.
 
-1. [개발자 포털의 Certificates, Identifiers, and Profiles(인증서, 식별자 및 프로필) 섹션](https://developer.apple.com/account/overview.action)에 로그인하여 **iOS 앱** 열에서 **인증서** 섹션을 선택합니다. 그런 다음, **+**를 눌러서 새 인증서를 만듭니다.
+1. [개발자 포털의 Certificates, Identifiers, and Profiles(인증서, 식별자 및 프로필) 섹션](https://developer.apple.com/account/overview.action)에 로그인하여 **iOS 앱** 열에서 **인증서** 섹션을 선택합니다. 그런 다음, **+** 를 눌러서 새 인증서를 만듭니다.
 
     [![](manual-provisioning-images/cert-plus.png "+를 클릭하여 새 인증서 만들기")](manual-provisioning-images/cert-plus.png#lightbox)
 
@@ -182,7 +182,7 @@ Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용
 8. **다운로드**를 눌러서 Mac에 프로비전 프로필을 다운로드합니다.
 
     [![](manual-provisioning-images/provisioning-profile06.png "프로비전 프로필 다운로드")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. 파일을 두 번 클릭하여 Xcode에 프로비전 프로필을 설치합니다. 여는 것을 제외하고 Xcode에는 프로필이 설치되었다는 시각적인 단서가 표시되지 않을 수 있습니다. 이것은 **Xcode > 기본 설정 > 계정**으로 이동하여 확인할 수 있습니다. Apple ID를 선택하고 **자세히 보기...**를 클릭합니다. 아래 그림과 같이 새 프로비전 프로필이 나열됩니다.
+9. 파일을 두 번 클릭하여 Xcode에 프로비전 프로필을 설치합니다. 여는 것을 제외하고 Xcode에는 프로필이 설치되었다는 시각적인 단서가 표시되지 않을 수 있습니다. 이것은 **Xcode > 기본 설정 > 계정**으로 이동하여 확인할 수 있습니다. Apple ID를 선택하고 **자세히 보기...** 를 클릭합니다. 아래 그림과 같이 새 프로비전 프로필이 나열됩니다.
 
       [![](manual-provisioning-images/provisioning-profile07.png "Xcode에서 프로필 보기")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
@@ -196,7 +196,7 @@ Apple Developer 포털에서 만든 인증서 및 프로비전 프로필은 Xcod
 
 1.   Mac용 Visual Studio 또는 Visual Studio를 종료합니다.
 2.   Xcode를 시작합니다.
-3.   **Xcode 메뉴 > 기본 설정...**을 선택합니다.
+3.   **Xcode 메뉴 > 기본 설정...** 을 선택합니다.
 4.   **계정** 탭을 클릭합니다.
 5.   팀을 선택하고 **수동 프로필 다운로드** 단추를 선택합니다. [![](manual-provisioning-images/selectteam1.png "수동 프로필 다운로드")](manual-provisioning-images/selectteam1.png#lightbox)
 
@@ -254,7 +254,10 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. 장치를 Mac에 연결합니다.
+> [!IMPORTANT]
+> 시작하기 전에 **프로젝트 > 속성 프로비전...** 에서 **수동 프로비전**을 선택해야 합니다.
+
+1. 장치를 Mac 빌드 호스트에 플러그 인합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다.
 
   ![](manual-provisioning-images/servicevs01.png "식별자 입력")

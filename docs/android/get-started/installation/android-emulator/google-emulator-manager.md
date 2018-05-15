@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: a399aa1c314f1e93377a7831b430e563d9fd1b13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42ebdca44e47e29ac74a263f0d11d4d4c120586
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="google-emulator-manager"></a>Google 에뮬레이터 관리자
 
-([Android 에뮬레이터 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)에 설명된 대로) 하드웨어 가속이 활성화된 것을 확인한 후 다음 단계는 앱 테스트 및 디버깅에 사용할 가상 장치를 만드는 것입니다. 레거시 Google 에뮬레이터 관리자(*AVD(Android 가상 장치) 관리자*라고도 함)를 사용하여 Android SDK 에뮬레이터에서 사용할 가상 장치를 만들 수 있습니다.
+([Android 에뮬레이터 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)에 설명된 대로) 하드웨어 가속이 활성화된 것을 확인한 후 다음 단계는 앱 테스트 및 디버깅에 사용할 가상 장치를 만드는 것입니다. 레거시 Google Emulator Manager(*AVD(Android 가상 장치) 관리자*라고도 함)를 사용하여 Google Android Emulator에서 사용할 가상 장치를 만들 수 있습니다.
 
 > [!NOTE]
 > Android 8.0 Oreo를 대상으로 하는 경우에는 [Xamarin Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)를 사용하여 가상 장치를 만들고 구성해야 합니다.
@@ -102,7 +102,7 @@ Android Wear용 앱을 개발하는 경우 다음과 같은 시스템 이미지�
 
 ### <a name="creating-a-custom-device-definition"></a>사용자 지정 장치 정의 만들기
 
-사용자 지정 장치 정의를 만들려면 **AVD(Android 가상 장치) 관리자**에서 **만들기...**를 클릭합니다. 그러면 **새 AVD(Android 가상 장치) 만들기** 대화 상자가 열립니다.
+사용자 지정 장치 정의를 만들려면 **AVD(Android 가상 장치) 관리자**에서 **만들기...** 를 클릭합니다. 그러면 **새 AVD(Android 가상 장치) 만들기** 대화 상자가 열립니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -122,7 +122,7 @@ Android Wear용 앱을 개발하는 경우 다음과 같은 시스템 이미지�
 
 -   **대상** &ndash; 가상 장치의 Android API 수준을 선택합니다. 이 설정은 앱의 최소 Android 버전보다 크거나 같아야 합니다.
 
--   **CPU/ABI** &ndash; 장치 정의에서 Google API를 사용할 수 있도록 **Google API Intel Atom(x86)**을 선택합니다.
+-   **CPU/ABI** &ndash; 장치 정의에서 Google API를 사용할 수 있도록 **Google API Intel Atom(x86)** 을 선택합니다.
 
 -   **스킨** &ndash; 가상 장치의 모양을 선택합니다. 위의 스크린샷 예제에서는 **HVGA** 스킨이 선택되었습니다(이 아티클의 끝에 있는 에뮬레이터 스크린샷은 **HVGA** 스킨의 한 예입니다).
 

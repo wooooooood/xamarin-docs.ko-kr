@@ -1,21 +1,21 @@
 ---
-title: Android SDK 에뮬레이터
-description: 이 가이드에서는 Visual Studio로 Google Android SDK 에뮬레이터를 사용하는 방법을 설명합니다.
+title: Google Android Emulator
+description: 이 가이드에서는 Visual Studio에서 Google Android Emulator를 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aca71284c7d51936ce2addf143edb9980d9536fc
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="android-sdk-emulator"></a>Android SDK 에뮬레이터
+# <a name="google-android-emulator"></a>Google Android Emulator
 
-_이 가이드에서는 Visual Studio로 Google Android SDK 에뮬레이터를 사용하는 방법을 설명합니다._
+_이 가이드에서는 Visual Studio에서 Google Android Emulator를 사용하는 방법을 설명합니다._
 
 
 ## <a name="overview"></a>개요
@@ -27,13 +27,13 @@ Google Android SDK Android 에뮬레이터를 다양한 구성으로 실행하�
 
 ### <a name="running-the-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorrunning-the-emulatormd"></a>[에뮬레이터 실행](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 
-Visual Studio에서 Android SDK 에뮬레이터를 시작하는 방법입니다.
+Visual Studio에서 Google Android Emulator를 시작하는 방법입니다.
 
 ### <a name="troubleshootingandroiddeploy-testdebuggingandroid-sdk-emulatortroubleshootingmd"></a>[문제 해결](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 
-일반적인 Android SDK 에뮬레이터 문제를 식별하여 해결하는 방법입니다.
+일반적인 Google Android Emulator 문제를 식별하고 해결하는 방법입니다.
 
-Android SDK 에뮬레이터를 구성하고 새 가상 장치를 만드는 방법에 대한 자세한 내용은 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)을 참조하세요.
+Google Android Emulator를 구성하고 새 가상 장치를 만드는 방법에 대한 자세한 내용은 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)을 참조하세요.
 
 
 

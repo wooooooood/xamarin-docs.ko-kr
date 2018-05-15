@@ -6,12 +6,12 @@ ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/19/2017
-ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2018
+ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
 
@@ -48,8 +48,6 @@ Visual Studio에서 iOS를 개발할 때 준수해야 하는 몇 가지 요구 �
 ## <a name="connecting-to-the-mac"></a>Mac에 연결
 
 Visual Studio를 Mac 빌드 호스트에 연결하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 지침을 따릅니다.
-
-
 
 ## <a name="visual-studio-toolbar-overview"></a>Visual Studio 도구 모음 개요
 
@@ -136,14 +134,17 @@ Visual Studio의 프로젝트 속성은 프로젝트 이름을 마우스 오른�
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>iOS 응용 프로그램에 대한 새 프로젝트 만들기
 
-Visual Studio 내에서 새 iOS 프로젝트를 만드는 작업은 다른 프로젝트 형식과 마찬가지 방법으로 수행됩니다. **파일 > 새 프로젝트**를 선택하면 아래 대화 상자가 열리고, 새 iOS 프로젝트를 만드는 데 사용할 수 있는 몇 가지 템플릿이 표시됩니다.
+Visual Studio 내에서 새 iOS 프로젝트를 만드는 작업은 다른 프로젝트 형식과 마찬가지 방법으로 수행됩니다. **파일 > 새 프로젝트**를 선택하면 아래 대화 상자가 열리고, 새 iOS 프로젝트를 만드는 데 사용할 수 있는 몇 가지 프로젝트 형식이 표시됩니다.
 
+![새 프로젝트 만들기](introduction-to-xamarin-ios-for-visual-studio-images/newproject.w157.png)
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/newproject.png "새 프로젝트 만들기")
+**iOS 앱(Xamarin)** 을 선택하면 새 Xamarin.iOS 응용 프로그램을 만들기 위해 다음 템플릿이 표시됩니다.
+
+![iOS 앱의 템플릿 선택](introduction-to-xamarin-ios-for-visual-studio-images/newproject-2.w157.png)
 
 Visual Studio에서 iOS 디자이너를 사용하여 스토리보드 및 .xib 파일을 편집할 수 있습니다. 스토리보드를 만들려면 스토리보드 템플릿 중 하나를 선택합니다. 그러면 아래 스크린샷처럼 **솔루션 탐색기**에 **Main.storyboard** 파일이 생성됩니다.
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.png "솔루션 탐색기의 Main.storyboard 파일")
+![솔루션 탐색기의 Main.storyboard 파일](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.w157.png)
 
 스토리보드 만들기 또는 편집을 시작하려면 `Main.storyboard`를 두 번 클릭하여 iOS 디자이너에서 엽니다.
 

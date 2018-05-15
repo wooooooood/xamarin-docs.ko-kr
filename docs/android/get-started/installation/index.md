@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 269b5a06796ae748da93f7c65b23598d9e9311df
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: b2f83c8f8ab6ab730a586b30394454f6bf6f6ba9
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -31,7 +31,7 @@ Visual Studio에는 Google의 독립 실행형 Android SDK Manager를 대체하�
 
 ## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)
 
-이 문서에서는 Xamarin.Android 응용 프로그램을 테스트하고 설정하기 위해 Android SDK 에뮬레이터를 디버깅하는 방법을 설명합니다.
+이 아티클에서는 Xamarin.Android 응용 프로그램을 테스트하고 디버깅하기 위해 Google Android Emulator를 설정하는 방법을 설명합니다.
 
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
 

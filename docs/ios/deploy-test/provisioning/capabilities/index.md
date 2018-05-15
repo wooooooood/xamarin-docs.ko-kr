@@ -4,14 +4,14 @@ description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: ff918ac104e7eab4f2e8c0d0be46df240138c97c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: asb3993
+ms.author: amburns
+ms.date: 05/06/2018
+ms.openlocfilehash: e6fc3d38fef7c7c3204d1413911ddfa9a486c67c
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="working-with-capabilities"></a>기능 사용
 
@@ -44,20 +44,18 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 * NFC 태그 읽기
 
 
-기능은 Mac용 Visual Studio를 통해 사용하도록 설정하거나 Apple Developer 포털에서 수동으로 사용하도록 설정할 수 있습니다. Wallet, Apple Pay 및 iCloud와 같은 특정 기능을 사용하려면 앱 ID를 추가로 구성해야 합니다.
+기능은 Mac용 Visual Studio 및 Visual Studio 2017을 통해 사용하도록 설정하거나 Apple Developer Portal에서 수동으로 사용하도록 설정할 수 있습니다. Wallet, Apple Pay 및 iCloud와 같은 특정 기능을 사용하려면 앱 ID를 추가로 구성해야 합니다.
 
-이 가이드에서는 Mac용 Visual Studio를 사용하여 응용 프로그램에서 각 App Services를 사용하도록 설정하는 방법과 개발자 센터를 통해 수동으로 설정하는 방법 및 필요한 추가 설정을 설명합니다. 
+이 가이드에서는 Visual Studio의 응용 프로그램에서 각 App Services를 수동으로 사용하도록 설정하는 방법과 개발자 센터를 통해 수동으로 설정하는 방법 및 필요한 추가 설정을 설명합니다. 
 
 ## <a name="adding-app-services"></a>App Services 추가
 
-기능을 사용하려면 앱에 올바른 서비스가 활성화되어 있고 앱 ID가 포함된 유효한 프로비전 프로필이 있어야 합니다. 프로비전 프로필은 Mac용 Visual Studio에서 자동으로 만들거나 Apple Developer Center에서 수동으로 만들 수 있습니다.
+기능을 사용하려면 앱에 올바른 서비스가 활성화되어 있고 앱 ID가 포함된 유효한 프로비전 프로필이 있어야 합니다. 프로비전 프로필은 Mac용 Visual Studio 및 Visual Studio 2017에서 자동으로 만들거나 Apple Developer Center에서 수동으로 만들 수 있습니다.
 
-이 섹션에서는 Mac용 Visual Studio의 자동 프로비전 또는 개발자 센터를 사용하여 대부분의 기능을 사용하도록 설정하는 방법에 대해 설명합니다. Wallet, iCloud, Apple Pay 및 앱 그룹과 같은 일부 기능은 추가 설정이 필요합니다. 이 내용은 인접한 가이드에 자세히 설명되어 있습니다.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+이 섹션에서는 Visual Studio의 자동 프로비전 또는 개발자 센터를 사용하여 대부분의 기능을 사용하도록 설정하는 방법에 대해 설명합니다. Wallet, iCloud, Apple Pay 및 앱 그룹과 같은 일부 기능은 추가 설정이 필요합니다. 이 내용은 인접한 가이드에 자세히 설명되어 있습니다.
 
 > [!IMPORTANT]
-> 일부 기능은 Mac용 Visual Studio에서 추가하고 관리할 수 없습니다. 다음 목록에는 지원되는 기능이 포함되어 있습니다.
+> 일부 기능은 자동 프로비저닝에서 추가하고 관리할 수 없습니다. 다음 목록에는 지원되는 기능이 포함되어 있습니다.
 >
 >* HealthKit 
 >* HomeKit 
@@ -72,10 +70,13 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 >
 >푸시 알림, Game Center, 앱에서 바로 구매, 맵, 키 집합 공유, 연결된 도메인 및 데이터 보호 기능은 현재 지원되지 않습니다. 이러한 기능을 추가하려면 수동 프로비전을 사용하고 [개발자 센터](#devcenter) 섹션의 단계를 수행합니다.
 
+## <a name="using-the-ide"></a>IDE 사용
 
-기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 수행합니다.
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-1. iOS 응용 프로그램의 **Info.plist** 파일을 열고 **Automatically manage signing**(자동으로 서명 관리)이 선택되어 있는지 확인합니다. 도움이 필요하면 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) 가이드의 단계를 수행합니다.
+기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
+
+1. iOS 응용 프로그램의 **Info.plist** 파일을 열고, 콤보 상자에서 **자동 프로비저닝** 구성표 및 **팀**을 선택합니다. 도움이 필요하면 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) 가이드의 단계를 수행합니다.
 
     ![자동으로 서명 관리 옵션](images/manage-signing.png)
 
@@ -93,39 +94,29 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-현재 Visual Studio 2017에서 자동 프로비전이 지원되지 않으므로 [개발자 센터](#devcenter)에서 올바른 응용 프로그램 서비스를 사용하여 앱 ID를 만들어야 합니다.
+기능은 **Entitlements.plist**에 추가됩니다. Visual Studio 2017에서 기능을 추가하려면 다음 단계를 사용합니다.
+
+1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2017을 페어링합니다.
+
+2. **프로젝트 > 속성 프로비전...** 을 선택하여 프로비전 옵션을 엽니다.
+
+3. 콤보 상자에서 **자동으로 프로비전** 구성표 및 **팀**을 선택합니다. 도움이 필요하면 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) 가이드의 단계를 수행합니다.
+
+    ![자동으로 서명 관리 옵션](images/manage-signing-vs.png)
+
+4. **Entitlements.plist** 파일을 열고 추가할 기능을 선택합니다. 파일을 저장합니다.
+
+    **Entitlement.plist**를 저장하면 다음과 같은 두 작업을 수행합니다.
+
+    * 해당 기능이 앱 ID에 추가됩니다.
+    * 자격 키/값 쌍이 Entitlements.plist 파일에 추가됩니다.
 
 -----
 
-<!--
-<a name="xcode" />
-
-## Xcode
-
-Xamarin developers can also use Xcode to quickly create a provisioning profile with a suitable App ID. This process, described below, can be used for any app service in the list:
-
-1.  Open Xcode and create a ‘dummy’ project. Give the dummy project the same name as your Xamarin.iOS project. The bundle identifier should be identical to the bundle identifier of your Xamarin.iOS project:
-
-    ![Xcode Create Project](images/image1.png)
-
-2.  Ensure **Automatically manage signing** is selected:
-
-    ![Automatically manage signing selection](images/image2.png)
-
-3.  Once the app has been created, go to the tab named **Capabilities**:
-
-    ![Xcode Capabilities tab](images/image3.png)
-
-4.  Browse to the capability that you wish to add, and move the switch to the **ON** position.
-5.  This will create a provisioning profile with an App ID that contains the capability and adds the entitlement to the profile.
-6.  In Visual Studio for Mac / Visual Studio, browse to **Project Options > Bundle Signing** and set the provisioning profile to the one that was just created in Xcode:
-
-    ![Visual Studio for Mac Project Options](images/image4.png)
--->
 
 <a name="devcenter" />
 
-## <a name="developer-center"></a>개발자 센터
+## <a name="using-the-developer-center"></a>개발자 센터 사용
 
 개발자 센터를 사용하려면 앱 ID를 만든 다음, 해당 앱 ID를 사용하여 프로비전 프로필을 작성하는 두 단계의 프로세스가 필요합니다. 이러한 단계는 아래에서 자세히 설명합니다.
 
@@ -190,7 +181,7 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
 
 8.  **다운로드** 단추를 눌러서 다운로드하고 파인더에서 파일을 두 번 클릭하여 프로비전 프로필을 설치합니다.
 
-9. Mac용 Visual Studio를 사용하는 경우 **Info.plist** 파일에서 **Automatically manage signing**(자동으로 서명 관리) 옵션 선택이 취소되어 있는지 확인합니다.
+9. Visual Studio를 사용하는 경우 **수동 프로비전** 옵션을 선택해야 합니다.
 
 10. Mac용 Visual Studio/Visual Studio에서 **프로젝트 옵션 > 번들 서명**으로 이동하여 프로비전 프로필을 방금 생성한 항목으로 설정합니다.
 

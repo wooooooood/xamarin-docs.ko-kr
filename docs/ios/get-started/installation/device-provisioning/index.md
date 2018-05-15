@@ -6,12 +6,12 @@ ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 07/15/2017
-ms.openlocfilehash: e04ebd041c64d474fafe12c387f558e740773c98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-provisioning"></a>장치 프로비전
 
@@ -47,23 +47,14 @@ Xamarin.iOS 응용 프로그램을 개발하는 동안 시뮬레이터 뿐만 �
 
 <a name="Provisioning_Profile" />
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
 ## <a name="provisioning-your-device"></a>장치 프로비전
 
-Mac용 Visual Studio를 사용하여 iOS 장치를 프로비전하는 두 가지 방법이 있습니다.
+iOS 장치를 프로비전하는 두 가지 방법이 있습니다.
 
-* **자동(권장)** – Info.plist 파일에서 **자동으로 서명 관리** 옵션을 선택하여 Mac용 Visual Studio에서 서명 ID, 앱 ID 및 프로비전 프로필을 자동으로 만들고 관리하도록 합니다.  프로비전을 자동으로 관리하는 방법에 대한 자세한 내용은 [자동 프로비전](automatic-provisioning.md) 가이드를 참조하세요. iOS 장치를 프로비전하는 권장 방법입니다.
+* **자동(권장)** – 프로젝트에서 **자동 프로비저닝** 구성표를 선택하여 Visual Studio에서 서명 ID, 앱 ID 및 프로비전 프로필을 자동으로 만들고 관리하도록 합니다. 프로비전을 자동으로 관리하는 방법에 대한 자세한 내용은 [자동 프로비전](automatic-provisioning.md) 가이드를 참조하세요. iOS 장치를 프로비전하는 권장 방법입니다.
 
 * **수동** - 서명 ID, 앱 ID 및 프로비전 프로필은 [수동 프로비전](manual-provisioning.md) 가이드에 설명된 대로 Apple 개발자 포털을 통해 만들어지고 관리될 수 있습니다. 그런 다음, 이러한 아티팩트는 [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md) 가이드에 설명된 대로 관리될 수 있습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-## <a name="provisioning-your-device"></a>장치 프로비전
-
-배포를 위해 Apple 장치를 설정하고 Windows에서 Visual Studio를 사용하여 응용 프로그램을 배포하는 방법에 대한 단계는 [수동 프로비저닝](manual-provisioning.md) 가이드의 자세한 단계를 참조하는 것이 좋습니다.
-
------
 
 <a name="appservices" />
 
@@ -74,9 +65,6 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 * 필요한 앱 서비스를 포함하는 앱 ID를 만듭니다.
 * 앱 ID를 포함하는 새로운 [프로비전 프로필](#Provisioning_Profile)을 만듭니다.
 * Xamarin.iOS 프로젝트에서 자격 설정
-
-> [!NOTE]
-> 현재 Mac용 Visual Studio에서 만든 프로비전 프로필은 프로젝트에서 선택한 계정 자격(Entitlements.plist)을 고려하지 않습니다. 이 기능은 향후 버전의 IDE에 추가됩니다. App Services를 사용해야 하는 경우 [수동 프로비전](manual-provisioning.md) 가이드의 지침을 따르는 것이 좋습니다.
 
 ## <a name="related-links"></a>관련 링크
 

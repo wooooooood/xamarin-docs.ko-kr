@@ -1,5 +1,5 @@
 ---
-title: Hello, iOS
+title: Hello, iOS 빠른 시작
 description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 ms.topic: quickstart
 ms.prod: xamarin
@@ -7,19 +7,18 @@ ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2017
+ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 빠른 시작
 
 이 가이드에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환한 다음, 해당 번호로 전화하는 응용 프로그램을 만드는 방법을 설명합니다. 최종 응용 프로그램은 다음과 같습니다.
 
  [![](hello-ios-quickstart-images/image1.png "Hello.iOS 빠른 시작 앱")](hello-ios-quickstart-images/image1.png#lightbox)
-
 
 <a name="Requirements" />
 
@@ -42,7 +41,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
 Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
--  Windows 7 이상에서 위의 사양에 맞는 Mac 빌드 호스트와 연결되는 최신 버전의 Visual Studio 2015 또는 2017 Professional 이상
+-  Windows 7의 Visual Studio 2017 Community, Professional 또는 Enterprise의 최신 버전 이상에서는 위의 사양에 맞는 Mac 빌드 호스트와 페어링됩니다.
 
 [Xamarin.iOS Windows 설치 가이드](~/ios/get-started/installation/windows/index.md)에서 단계별 설치 지침을 사용할 수 있습니다.
 
@@ -63,7 +62,6 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 시작 화면에서 **새 프로젝트...** 을 클릭하여 새 Xamarin.iOS 솔루션을 만듭니다.
 
 ![](hello-ios-quickstart-images/image3new.png "iOS 솔루션")
-
 
 2. **새 솔루션 대화 상자**에서 **iOS > 응용 프로그램 > 단일 뷰 응용 프로그램** 템플릿을 선택하여 C#이 선택되어 있는지 확인합니다. **다음**을 클릭합니다.
 
@@ -295,51 +293,42 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
   ![](hello-ios-quickstart-images/image001-.png "시작 화면")
 
-  **새 솔루션** 아래의 검색 상자에서 _단일 뷰 앱_을 입력하고, 새 Xamarin.iOS 솔루션을 만들기 위해 **단일 뷰 앱(iPhone)** 을 선택합니다.
+  **파일 > 새로 만들기 > 프로젝트... > Visual C# > iPhone 및 iPad > iOS 앱(Xamari**을 선택하여 새로운 Xamarin.iOS 솔루션을 만듭니다.
 
-  ![](hello-ios-quickstart-images/image002-.png "단일 뷰 앱 추가")
+  ![iOS 앱(Xamarin) 프로젝트 형식 선택](hello-ios-quickstart-images/image002.w157.png "iOS 앱(Xamarin) 프로젝트 형식 선택")
 
+  다음 대화 상자가 나타나면 **단일 보기 앱** 템플릿을 선택하고 **확인**을 눌러 프로젝트를 만듭니다.
 
-2. 아래 그림과 같이 프로젝트 및 솔루션의 이름을 `Phoneword`로 지정합니다.
+  ![단일 보기 프로젝트 템플릿 선택](hello-ios-quickstart-images/image002-2.w157.png "단일 보기 프로젝트 템플릿 선택")
 
-  ![](hello-ios-quickstart-images/vs-image3.png "프로젝트 이름을 PhonewordiOS로, 새 솔루션 이름을 Phoneword로 지정")
-
-
-3. **확인**을 눌러 새 프로젝트를 만듭니다.
-
-4. 도구 모음에서 Xamarin Mac 에이전트 아이콘이 녹색인지 확인합니다.
+1. 도구 모음에서 Xamarin Mac 에이전트 아이콘이 녹색인지 확인합니다.
 
     ![도구 모음에서 Xamarin Mac 에이전트 아이콘이 녹색인지 확인](hello-ios-quickstart-images/vs-image4.png)
 
     그렇지 않은 경우 Mac 빌드 호스트에 연결되지 않았다는 의미이므로 [구성 가이드](~/ios/get-started/installation/windows/connecting-to-mac/index.md)의 단계에 따라 연결합니다.
 
-
-5. **솔루션 탐색기**에서 **Main.storyboard** 파일을 두 번 클릭하여 iOS 디자이너에서 이 파일을 엽니다.
+1. **솔루션 탐색기**에서 **Main.storyboard** 파일을 두 번 클릭하여 iOS 디자이너에서 이 파일을 엽니다.
 
   ![](hello-ios-quickstart-images/vs-image7.png "iOS 디자이너")
 
-6. **도구 상자** 탭을 열고, 검색 표시줄에서 "레이블"을 입력한 다음, **레이블**을 디자인 화면(가운데 영역)으로 끌어갑니다.
+1. **도구 상자** 탭을 열고, 검색 표시줄에서 "레이블"을 입력한 다음, **레이블**을 디자인 화면(가운데 영역)으로 끌어갑니다.
 
   ![](hello-ios-quickstart-images/vs-image8.png "레이블을 가운데에 있는 디자인 화면으로 끌기")
 
-
-7. 다음으로, *컨트롤 끌기*의 핸들을 잡고 레이블을 넓게 만듭니다.
+1. 다음으로, *컨트롤 끌기*의 핸들을 잡고 레이블을 넓게 만듭니다.
 
   ![](hello-ios-quickstart-images/vs-image9.png "레이블을 넓게 만들기")
 
-
-8. 디자인 화면에서 **레이블**을 선택한 채로 **속성 창**을 사용하여 **레이블**의 **텍스트** 속성을 "Phoneword 입력"으로 변경합니다.
+1. 디자인 화면에서 **레이블**을 선택한 채로 **속성 창**을 사용하여 **레이블**의 **텍스트** 속성을 "Phoneword 입력"으로 변경합니다.
 
   ![](hello-ios-quickstart-images/vs-image10.png "레이블의 텍스트 속성을 'Phoneword 입력'으로 변경")
 
   > [!NOTE]
   > 언제든지 **보기** 메뉴로 이동하여 **속성** 또는 **도구 상자**를 가져올 수 있습니다.
 
-
-9. 도구 상자 내에서 "텍스트 필드"를 검색하고, **텍스트 필드**를 **도구 상자**에서 디자인 화면으로 끌어서 **레이블** 아래에 놓습니다. **텍스트 필드**가 **레이블**과 같은 너비가 될 때까지 조정합니다.
+1. 도구 상자 내에서 "텍스트 필드"를 검색하고, **텍스트 필드**를 **도구 상자**에서 디자인 화면으로 끌어서 **레이블** 아래에 놓습니다. **텍스트 필드**가 **레이블**과 같은 너비가 될 때까지 조정합니다.
 
   ![](hello-ios-quickstart-images/vs-image12.png "텍스트 필드가 레이블과 같은 너비가 될 때까지 조정")
-
 
 10. 디자인 화면에서 **텍스트 필드**를 선택한 채로 **속성**의 ID 섹션에서 **텍스트 필드**의 **이름** 속성을 `PhoneNumberText`로 변경하고, **텍스트** 속성을 "1-855-XAMARIN"으로 변경합니다.
 
@@ -372,9 +361,9 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
   ![](hello-ios-quickstart-images/vs-image18.png "전화 번호를 영숫자에서 숫자로 변환하는 코드 추가")
 
 
-16. **새 파일** 대화 상자에서 **Apple > 클래스**를 선택하고 새 파일의 이름을 `PhoneTranslator`로 지정합니다.
+16. **새 항목 추가** 대화 상자(프로젝트를 마우스 오른쪽 단추로 클릭하고, 추가 > 새 항목... 선택)에서 **Apple > 클래스**를 선택하고 새 파일 이름을 `PhoneTranslator`로 지정합니다.
 
-  ![](hello-ios-quickstart-images/vs-image19.png "PhoneTranslator라는 새 클래스 추가")
+  ![](hello-ios-quickstart-images/vs-image19.w157.png "PhoneTranslator라는 새 클래스 추가")
 
   > [!IMPORTANT]
   > 아이콘에 C#이 있는 '클래스' 템플릿을 선택했는지 확인합니다. 그렇지 않으면 이 새 클래스를 참조하지 못할 수 있습니다.

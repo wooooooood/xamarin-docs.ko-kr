@@ -6,12 +6,12 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 1cd9a4977aad3f3bd8d8a4e51871698a54f75eb8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/04/2018
+ms.openlocfilehash: b1cf87ed8c5614a113a03232547a6753da26bc2d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="windows-installation"></a>Windows 설치
 
@@ -67,20 +67,25 @@ Google Android SDK Manager를 사용하여 최대 Android SDK 도구 패키지�
 
 Xamarin Android SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요.
 
+### <a name="google-android-emulator"></a>Google Android Emulator
 
-### <a name="android-emulator"></a>Android 에뮬레이터
+[Google Android Emulator](https://developer.android.com/studio/run/emulator)는 Xamarin.Android 앱을 개발하고 테스트하는 유용한 도구입니다. 예를 들어 태블릿과 같은 물리적 장치가 개발 중에 지원되지 않거나 개발자가 코드를 커밋하기 전에 해당 컴퓨터에서 일부 통합 테스트를 실행하려고 할 수 있습니다.
 
-테스트에 사용할 물리적 Android 장치가 없는 경우 Android 에뮬레이터를 사용하여 앱을 테스트할 수 있습니다. Google Android 에뮬레이터에 대한 자세한 내용은 [Android SDK 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)를 참조하세요.
+컴퓨터에서 Android 장치를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
 
-Google Android 에뮬레이터는 Intel의 HAXM(Hardware Accelerated Execution Manager)를 사용합니다. 그러면 다른 에뮬레이터에서 사용하는 가상화 기술과 충돌할 수 있습니다. 세 가지 주요 가상화 기술은 다음과 같습니다.
+* **Google Android Emulator** &ndash; 개발자의 워크스테이션에서 실행하는 가상화된 장치를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
+* **에뮬레이터 이미지** &ndash; _에뮬레이터 이미지_는 가상화되어야 하는 하드웨어 및 운영 체제의 템플릿 또는 사양입니다. 예를 들어 하나의 에뮬레이터 이미지는 Google Play 서비스가 설치된 Android 7.0을 실행하는 Nexus 5X의 하드웨어 요구 사항을 식별합니다. 다른 에뮬레이터 이미지는 Android 6.0을 실행하는 특정 10" 테이블일 수 있습니다.
+* **AVD(Android 가상 장치)** &ndash; _Android 가상 장치_는 에뮬레이터 이미지에서 만들어진 에뮬레이트된 Android 장치입니다. Android 앱을 실행하고 테스트할 때 Xamarin.Android는 Android Emulator를 시작하여 특정 AVD를 시작하고, APK를 설치한 다음, 앱을 실행합니다.
 
--   **Hyper-V**(Android용 Visual Studio 에뮬레이터 및 Windows Phone 에뮬레이터에서 사용함) 
+x86 기반 컴퓨터에서 개발하는 경우 x86 아키텍처에 최적화된 두 개의 가상화 기술 중 하나인 특별한 에뮬레이터 이미지를 사용하여 성능을 크게 향상시킬 수 있습니다.
 
--   **Virtual Box**(Genymotion에서 사용함)
+1. Microsoft의 Hyper-V &ndash; Windows 4월 10일 업데이트를 실행하는 컴퓨터에서 지원됩니다.
+2. Intel의 HAXM(Hardware Accelerated Execution Manager) &ndash; OS X, macOS 또는 이전 버전의 Windows를 실행하는 x86 컴퓨터에서 지원됩니다.
 
--   **Intel HAXM**(Google Android SDK 에뮬레이터에서 사용함) 
+Google Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [Android Emulator 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md) 가이드를 참조하세요.
 
-개발 컴퓨터의 CPU가 한 번에 하나의 가상화 기술만 지원할 수 있기 때문에 개발 컴퓨터에서 하나의 기술만 사용하는 것이 좋습니다.
+> [!NOTE]
+> 이전 버전의 Windows에서 HAXM은 Hyper-V와 호환되지 않습니다. 이 시나리오에서는 [Hyper-V를 사용하지 않도록 설정](/xamarin/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md?tabs=vswin#disabling-hyper-v)하거나 x86 최적화를 사용하지 않는 느린 에뮬레이터 이미지를 사용해야 합니다.
 
 <a name="device" />
 
@@ -95,9 +100,9 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 
 ![새 프로젝트를 만드는 방법](windows-images/10-new-project.png)
 
-**새 프로젝트** 대화 상자의 **템플릿** 아래에서 **Android**를 선택하고, 오른쪽 창에서 **비어 있는 앱(Android)**을 클릭합니다. 앱의 이름을 입력한 다음(아래 스크린샷에서 앱을 **MyApp**이라고 함), **확인**을 클릭합니다.
+**새 프로젝트** 대화 상자의 **템플릿** 아래에서 **Android**를 선택하고, 오른쪽 창에서 **Android 앱**을 클릭합니다. 앱의 이름을 입력한 다음(아래 스크린샷에서 앱을 **MyApp**이라고 함), **확인**을 클릭합니다.
 
-[![새 프로젝트 대화 상자의 스크린샷, 비어 있는 Android 앱 만들기](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
+[![새 프로젝트 대화 상자의 스크린샷, 비어 있는 Android 앱 만들기](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
 정말 간단하죠. 이제 Xamarin.Android를 사용하여 Android 응용 프로그램을 만들 준비가 되었습니다.
 
@@ -115,5 +120,6 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 - [Visual Studio Tools for Xamarin 설치](~/cross-platform/get-started/installation/windows.md)
 - [시스템 요구 사항](~/cross-platform/get-started/requirements.md)
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
-- [Android SDK 에뮬레이터](~/android/get-started/installation/android-emulator/index.md)
+- [Google Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 - [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
+- [Android Emulator에서 앱 실행](https://developer.android.com/studio/run/emulator#Requirements)

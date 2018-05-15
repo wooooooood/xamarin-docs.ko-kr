@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7faf4ef090815ea799209e76816113f06889bd21
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -64,10 +64,10 @@ Visual Studio Android 에뮬레이터를 사용하는 경우 컴퓨터에서 Hyp
 
 Visual Studio를 시작합니다.  **파일 > 새로 만들기 > 프로젝트**를 클릭하여 새 프로젝트를 만듭니다.
 
-**새 프로젝트** 대화 상자에서 **비어 있는 앱(Android)** 템플릿을 클릭합니다.
+**새 프로젝트** 대화 상자에서 **Android 앱** 템플릿을 클릭합니다.
 새 프로젝트의 이름을 `Phoneword`로 지정합니다. **확인**을 클릭하여 새 프로젝트를 만듭니다.
 
-[![새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png#lightbox)
+[![새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>레이아웃 만들기
 
@@ -112,9 +112,9 @@ Visual Studio를 시작합니다.  **파일 > 새로 만들기 > 프로젝트**�
 
 [![새 항목 추가](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
-**새 항목 추가** 대화 상자에서 **Visual C# > 코드**를 선택하고, 새 코드 파일에 **PhoneTranslator.cs**라는 이름을 지정합니다.
+**새 항목 추가** 대화 상자에서 **Visual C# > 코드 > 코드 파일**을 선택하고, 새 코드 파일에 **PhoneTranslator.cs**라는 이름을 지정합니다.
 
-[![PhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png#lightbox)
+[![PhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
 
 그러면 비어 있는 새 C# 클래스가 만들어집니다. 다음 코드를 파일에 삽입합니다.
 
@@ -185,10 +185,11 @@ namespace Core
 (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가하는 것입니다. 먼저 `OnCreate` 메서드가 다음과 유사하도록 템플릿 코드를 수정합니다.
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {
@@ -419,10 +420,13 @@ namespace Core
 이벤트 처리기를 **변환** 단추에 추가하여 시작합니다. `MainActivity` 클래스에서 `OnCreate` 메서드를 찾습니다. `base.OnCreate(bundle)` 및 `SetContentView (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가합니다. `OnCreate` 메서드가 다음과 유사하도록 템플릿 단추 처리 코드를 제거합니다.
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {
