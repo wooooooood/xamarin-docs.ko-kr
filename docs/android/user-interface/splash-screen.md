@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/11/2018
-ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
-ms.translationtype: HT
+ms.date: 05/14/2018
+ms.openlocfilehash: 6200a04bb4d82174d36a48beab7c63709ac39187
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="splash-screen"></a>시작 화면
 
@@ -159,7 +159,7 @@ public class MainActivity : AppCompatActivity
 
 가로 모드에 대 한 시작 화면을 추가 하려면 다음 단계를 사용 합니다.
 
-1. 에 **리소스/그릴** 폴더를 사용 하려면 시작 화면 이미지의 가로 버전을 추가 합니다. 이 예제에서는 **splash_logo_land.png** (검정 문자 대신 사용 파랑) 위 예제에서 사용 된 로고의 가로 버전입니다.
+1. 에 **리소스/그릴** 폴더를 사용 하려면 시작 화면 이미지의 가로 버전을 추가 합니다. 이 예제에서는 **splash_logo_land.png** (흰색 문자 대신 사용 파랑) 위 예제에서 사용 된 로고의 가로 버전입니다.
 
 2. 에 **리소스/그릴** 폴더를 가로 버전을 만듭니다는 `layer-list` 그릴는 이전에 정의 된 (예를 들어 **splash_screen_land.xml**). 이 파일의 시작 화면 이미지의 가로 버전에 비트맵 경로 설정 합니다. 다음 예에서 **splash_screen_land.xml** 사용 하 여 **splash_logo_land.png**:
 
@@ -176,7 +176,6 @@ public class MainActivity : AppCompatActivity
             android:gravity="center"/>
       </item>
     </layer-list>
-
     ```
 
 3.  만들기는 **리소스/값-토지** 폴더 존재 하지 않는 경우.
@@ -201,7 +200,7 @@ public class MainActivity : AppCompatActivity
     </resources>
     ```
 
-6.  수정 **값-토지/colors.xml** 시작 화면의 가로 버전에 대 한 사용 하려는 색을 구성 하려면. 이 예제에서는 시작 화면 배경 색상은 가로 모드에 대 한 노랑으로 변경 됩니다.
+6.  수정 **값-토지/colors.xml** 시작 화면의 가로 버전에 대 한 사용 하려는 색을 구성 하려면. 이 예제에서는 시작 화면 배경 색은 가로 모드에 대 한 파란색으로 변경 됩니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +209,7 @@ public class MainActivity : AppCompatActivity
       <color name="primaryDark">#1976D2</color>
       <color name="accent">#FFC107</color>
       <color name="window_background">#F5F5F5</color>
-      <color name="splash_background">#FFFF00</color>
+      <color name="splash_background">#3498DB</color>
     </resources>
     ```
 
