@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -35,7 +35,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 파생 되는 하나의 클래스를 포함 하는 Xamarin.Forms 프로그램 `Application` 에서는 종종에서 파생 되는 많은 클래스를 활용 하지만 `VisualElement`, 페이지, 레이아웃 및 컨트롤을 포함 합니다. 이러한 개체 중 하나를 가질 수 있습니다 해당 `Resources` 속성이로 설정 된 `ResourceDictionary`합니다. 특정 넣을 위치를 선택 `ResourceDictionary` 영향 리소스를 사용할 수 있습니다.
 
 - 리소스는 `ResourceDictionary` 와 같은 보기에 연결 된 `Button` 또는 `Label` 이 기능은 매우 유용 하므로 해당 특정 개체에 적용할만 있습니다.
-- 리소스는 `ResourceDictionary` 와 같은 레이아웃에 연결 된 `StackLayout` 또는 `Grid` 레이아웃 및 해당 레이아웃의 모든 자식에 적용할 수 있습니다. 
+- 리소스는 `ResourceDictionary` 와 같은 레이아웃에 연결 된 `StackLayout` 또는 `Grid` 레이아웃 및 해당 레이아웃의 모든 자식에 적용할 수 있습니다.
 - 리소스는 `ResourceDictionary` 정의 페이지에서 수준 수에 적용할 수 페이지에 있는 모든 자식을 합니다.
 - 리소스는 `ResourceDictionary` 정의 된 응용 프로그램에서 수준은 응용 프로그램에 걸쳐 적용 수 있습니다.
 
@@ -187,7 +187,7 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDic
         <local:MyResourceDictionary />
     </ContentPage.Resources>
     ...
-</ContentPage>  
+</ContentPage>
 ```
 
 인스턴스 `MyResourceDictionary` 로 설정 되는 `Resources` 속성은 `ContentPage` 개체입니다.
@@ -258,7 +258,7 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDic
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>Xamarin.forms 3.0 사전 병합
 
-병합 프로세스 Xamarin.Forms 3.0 부터는 `ResourceDictionaries` 다소 더 쉽고 유연한 커졌습니다. `MergedDictionaries` 속성 요소 태그는 더 이상 필요 합니다. 대신 추가 리소스 사전에 다른 `ResourceDictionary` 새 태그 [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) 속성이 리소스를 가진 XAML 파일의 파일 이름으로 설정 합니다.
+병합 프로세스 Xamarin.Forms 3.0 부터는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 다소 더 쉽고 유연한 인스턴스 커졌습니다. `MergedDictionaries` 속성 요소 태그는 더 이상 필요 합니다. 대신 추가 리소스 사전에 다른 `ResourceDictionary` 새 태그 [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) 속성이 리소스를 가진 XAML 파일의 파일 이름으로 설정 합니다.
 
 ```xaml
 <ContentPage ...>
@@ -294,7 +294,7 @@ Xamarin.Forms 3.0이 자동으로 인스턴스화합니다 때문에 `ResourceDi
 </ContentPage>
 ```
 
-이 새로운 구문의 않습니다 _하지_ 인스턴스화하는 `MyResourceDictionary` 클래스입니다. 대신, XAML 파일을 참조합니다. 코드 숨김 파일을 이유로입니다 (**MyResourceDictionary.xaml.cs**)는 더 이상 필요 합니다. 제거할 수도 있습니다는 `x:Class` 의 루트 태그에서 특성은 **MyResourceDictionary.xaml** 파일입니다. 
+이 새로운 구문의 않습니다 _하지_ 인스턴스화하는 `MyResourceDictionary` 클래스입니다. 대신, XAML 파일을 참조합니다. 코드 숨김 파일을 이유로입니다 (**MyResourceDictionary.xaml.cs**)는 더 이상 필요 합니다. 제거할 수도 있습니다는 `x:Class` 의 루트 태그에서 특성은 **MyResourceDictionary.xaml** 파일입니다.
 
 ## <a name="summary"></a>요약
 

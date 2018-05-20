@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 15e1f53d053046b4a51666647ac846366d3c858b
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: 바인딩 iOS Objective C 라이브러리
 
@@ -420,7 +420,7 @@ sdk: macosx10.11     arch: x86_64  i386
 sdk: watchos2.2      arch: armv7
 ```
 
-있는지 확인할 수 있습니다 위의 `iphoneos8.1` SDK 컴퓨터에 설치 합니다. 위치에이 정보를 사용 준비가 InfColorPicker 프로젝트를 구문 분석 `.h` 초기로 파일 **ApiDefinition.cs** 및 `StructsAndEnums.cs` InfColorPicker 프로젝트에 대 한 합니다.
+있는지 확인할 수 있습니다 위의 `iphoneos9.3` SDK 컴퓨터에 설치 합니다. 위치에이 정보를 사용 준비가 InfColorPicker 프로젝트를 구문 분석 `.h` 초기로 파일 **ApiDefinition.cs** 및 `StructsAndEnums.cs` InfColorPicker 프로젝트에 대 한 합니다.
 
 다음 명령을 입력 하 고 터미널 앱:
 

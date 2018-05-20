@@ -1,21 +1,21 @@
 ---
 title: 기본 형식
-description: 기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는.NET 표준 라이브러리를.NET 표준 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다.
+description: 기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는.NET 표준 라이브러리, 표준.NET 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: bb7aa9a7071f9ac7bef0dce5790a3fe74302cfb4
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="native-forms"></a>기본 형식
 
-_기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는.NET 표준 라이브러리를.NET 표준 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다._
+_기본 형식 Xamarin.Forms ContentPage 파생 페이지 네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는.NET 표준 라이브러리, 표준.NET 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용할 수 있습니다. 이 문서는 네이티브 프로젝트에 직접 추가 된 ContentPage 파생 된 페이지를 사용 하는 방법 및 간에 탐색 하는 방법을 설명 합니다._
 
 Xamarin.Forms 응용 프로그램에서 파생 되는 하나 이상의 페이지를 포함 하는 일반적으로 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), 이러한 페이지는 표준.NET 라이브러리 프로젝트 또는 공유 프로젝트에서 모든 플랫폼에서 공유 되 고 있습니다. 그러나 기본 형식에서는 `ContentPage`-네이티브 Xamarin.iOS, Xamarin.Android, 및 UWP 응용 프로그램에 직접 추가 될 페이지를 파생 합니다. 지정 하는 네이티브 프로젝트 사용에 비해 `ContentPage`-.NET 표준 라이브러리 프로젝트 또는 공유 프로젝트를 네이티브 프로젝트에 직접 페이지를 추가할 경우의 장점은에서 파생 된 페이지는 페이지 기본 보기와 확장 될 수 있습니다. 기본 뷰로 XAML 다음 이름을 지정할 수 `x:Name` 및 코드 숨김 파일에서 참조 합니다. 기본 보기에 대 한 자세한 내용은 참조 [네이티브 뷰](~/xamarin-forms/platform/native-views/index.md)합니다.
 

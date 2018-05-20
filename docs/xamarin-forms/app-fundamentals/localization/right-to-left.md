@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 3201c3161d66163cabffdb36465356192bdd3843
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 지역화
 
@@ -105,7 +105,7 @@ this.FlowDirection = Device.FlowDirection;
 </Resources>
 ```
 
-또한 UWP 응용 프로그램의 기본 문화권.NET 표준 라이브러리에 정의 된 명시적으로 필요 합니다. 이 설정 하 여 수행할 수 있습니다는 `NeutralResourcesLanguage` 특성 `AssemblyInfo.cs`, 또는 기본 문화권으로 다른 클래스에서:
+또한 UWP 응용 프로그램의 기본 문화권 표준.NET 라이브러리에 정의 된 명시적으로 필요 합니다. 이 설정 하 여 수행할 수 있습니다는 `NeutralResourcesLanguage` 특성 `AssemblyInfo.cs`, 또는 기본 문화권으로 다른 클래스에서:
 
 ```csharp
 using System.Resources;
@@ -149,6 +149,6 @@ Xamarin.Forms 오른쪽에서 왼쪽으로 지역화 현재는 많은 제한 사
 
 **Xamarin.Forms 3.0 오른쪽에서 왼쪽으로 의해 지원 [Xamarin 대학](https://university.xamarin.com/)**
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [TodoLocalizedRTL 샘플 응용 프로그램](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)

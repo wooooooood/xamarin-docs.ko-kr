@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>CPU 아키텍처
 
@@ -29,7 +29,7 @@ _Xamarin.Android 32 비트 및 64 비트 장치를 포함 하 여 여러 CPU 아
 
 일반적으로 명시적으로 선택 하는 아키텍처 (또는 아키텍처) 응용 프로그램에 대해 구성 된 경우 **릴리스**합니다. 응용 프로그램에 대해 구성 된 경우 **디버그**, **공유 런타임 사용** 및 **빠른 배포 사용** 옵션이 설정 되었으면는 명시적 아키텍처 선택 영역을 사용 하지 않도록 설정 합니다.
 
-Visual Studio에서 두 번 클릭 **속성** 에서 프로젝트 아래의 **솔루션 탐색기** 선택 하 고는 **Android 옵션** 페이지. 클릭는 **패키징** 탭 하 고 있는지 확인 **공유 런타임 사용** 사용 되지 않는지 (해제 하면이 선택할 수 있습니다 명시적으로 지원 하기 위해 어떤 ABIs). 클릭는 **고급** 탭 고 **고급 속성**를 지원 하 고 아키텍처 확인:
+Visual Studio에서 마우스 오른쪽 단추로 클릭 아래 프로젝트에는 **솔루션 탐색기** 선택 **속성**합니다. 아래는 **Android 옵션** 확인 페이지에서 **패키징 속성** 섹션 하 고 있는지 확인 **공유 런타임 사용** 을 사용할 수 없습니다 (이 기능을 해제 하면를 명시적으로 지원 하기 위해 어떤 ABIs 선택). 클릭는 **고급** 단추 고 **지원 되는 아키텍처**를 지원 하 고 아키텍처 확인:
 
 [![Armeabi 및 armeabi v7a 선택](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 

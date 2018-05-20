@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Windows Communication Foundation (WCF) 웹 서비스 사용
 
@@ -52,7 +52,7 @@ WCF 서비스는 다음 작업을 제공합니다.
 > [!NOTE]
 > 샘플 응용 프로그램 웹 서비스에 대 한 읽기 전용 액세스를 제공 하는 Xamarin에서 호스팅되는 WCF 서비스를 사용 합니다. 따라서 생성, 업데이트 및 데이터를 삭제 하는 작업은 응용 프로그램에서 사용 하는 데이터가 변경 하지 않습니다. 그러나 ASMX 서비스의 호스팅 가능한 버전은 영어로 **TodoWCFService** 함께 제공 된 샘플 응용 프로그램의 폴더입니다. 이 호스팅 가능 버전 전체 WCF 서비스 사용의 만들기, 업데이트, 읽기 및 데이터에 대 한 액세스를 삭제 합니다.
 
-A *프록시* 를 응용 프로그램이 서비스에 연결할 수 있는 WCF 서비스를 생성 해야 합니다. 프록시는 메서드 및 연결 된 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 구성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 되는 WSDL 웹 서비스 설명 언어 () 문서의 형태로 표시 됩니다. .NET 표준 라이브러리에는 웹 서비스에 대 한 서비스 참조를 추가 하려면 Visual Studio 2017에 Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 프록시를 빌드할 수 있습니다. Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)합니다.
+A *프록시* 를 응용 프로그램이 서비스에 연결할 수 있는 WCF 서비스를 생성 해야 합니다. 프록시는 메서드 및 연결 된 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 구성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 되는 WSDL 웹 서비스 설명 언어 () 문서의 형태로 표시 됩니다. 프록시 웹 서비스에 대 한 서비스 참조를 라이브러리에 추가 하는 표준.NET에서 Visual Studio 2017 Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 작성할 수 있습니다. Microsoft WCF 웹 서비스 참조 공급자를 사용 하 여 Visual Studio 2017에 프록시를 만드는 대신 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 참조 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)합니다.
 
 생성 된 프록시 클래스는 비동기 프로그래밍 모델 (APM) 디자인 패턴을 사용 하는 웹 서비스를 사용 하기 위한 메서드를 제공 합니다. 이 패턴에서는 비동기 작업을 라는 두 가지 방법으로 구현 *BeginOperationName* 및 *EndOperationName*를 시작 하 고 비동기 작업을 종료 합니다.
 

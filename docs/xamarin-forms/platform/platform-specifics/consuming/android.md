@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aa17c868ce1d0343eab6758c03aaf042c27130e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼-세부 사항
 
@@ -135,7 +135,7 @@ On<Android>().SetOffscreenPageLimit(2)
 
 ## <a name="controlling-the-elevation-of-visual-elements"></a>상승의 경우 시각적 요소를 제어합니다.
 
-이 플랫폼별 크거나 API 21를 대상으로 하는 권한 상승 또는 응용 프로그램에 대 한 시각적 요소의 Z 순서를 제어 하는 데 사용 합니다. 시각적 요소 상승 Z 값이 높은 Z 값이 낮은 시각적 요소 occluding 시각적 요소와의 그리기 순서를 결정 합니다. 설정 하 여 XAML에서 사용 되는 `Elevation.Elevation` 연결 된 속성을는 `boolean` 값:
+이 플랫폼별 크거나 API 21를 대상으로 하는 권한 상승 또는 응용 프로그램에 대 한 시각적 요소의 Z 순서를 제어 하는 데 사용 합니다. 시각적 요소 상승 Z 값이 높은 Z 값이 낮은 시각적 요소 occluding 시각적 요소와의 그리기 순서를 결정 합니다. 설정 하 여 XAML에서 사용 되는 `VisualElement.Elevation` 연결 된 속성을는 `boolean` 값:
 
 ```xaml
 <ContentPage ...
@@ -147,7 +147,7 @@ On<Android>().SetOffscreenPageLimit(2)
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>        
         <Grid Margin="0,20,0,0">
-            <Button Text="Button Above BoxView - Click Me" android:Elevation.Elevation="10"/>
+            <Button Text="Button Above BoxView - Click Me" android:VisualElement.Elevation="10"/>
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
         </Grid>
     </StackLayout>
@@ -196,7 +196,7 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-`Button.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. `Elevation.SetElevation` 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) 네임 스페이스에는 시각적 요소의 null 허용으로 설정 하는 데 사용 됩니다 `float`합니다. 또한는 `Elevation.GetElevation` 시각적 요소 상승 값을 검색할 메서드를 사용할 수 있습니다.
+`Button.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. `VisualElement.SetElevation` 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/) 네임 스페이스에는 시각적 요소의 null 허용으로 설정 하는 데 사용 됩니다 `float`합니다. 또한는 `VisualElement.GetElevation` 시각적 요소 상승 값을 검색할 메서드를 사용할 수 있습니다.
 
 결과 상승의 경우 시각적 요소의 Z 값이 높은 시각적 요소 채워집니다 Z 값이 낮은 시각적 요소를 제어할 수 있습니다. 따라서이 예제에서에서 두 번째 [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 위에 렌더링 되는 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 상승 값이 높을수록 있기 때문에:
 
