@@ -39,7 +39,7 @@ _이 문서에서는 Xamarin의 tvOS 지원 팀과 작업 하는 동안 발생�
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>잘못 된 실행 파일-실행 파일에 없는 bitcode
 
-Apple TV 앱 스토어에 Xamarin.tvOS 응용 제출 하려고 시도할 때, 형태로 오류 메시지가 표시 될 수 있습니다 _"잘못 된 실행 파일-실행 파일에 없는 bitcode"_합니다.
+Apple TV 앱 스토어에 Xamarin.tvOS 응용 제출 하려고 시도할 때, 형태로 오류 메시지가 표시 될 수 있습니다 _"잘못 된 실행 파일-실행 파일에 없는 bitcode"_ 합니다.
 
 이 문제를 해결 하려면 다음을 수행 합니다.
 

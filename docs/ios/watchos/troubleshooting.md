@@ -37,7 +37,7 @@ ms.lasthandoff: 04/04/2018
 - Mac 용 Visual Studio의 이전 릴리스에서 잘못 표시 하 고 중 하나는 **AppleCompanionSettings** 아이콘 88 x 88 픽셀; 결과적으로 **누락 아이콘 오류** 앱을 제출 하려는 경우 저장소입니다.
     이 아이콘 87 x 87 픽셀 이어야 합니다. (29 단위에 대 한 **@3x** 레 티 나 화면). 이 문제는 해결 Visual Studio에서 Mac-중 하나가 편집 Xcode에서 이미지 자산 수 없거나 수동으로 편집 하는 **Contents.json** 파일 (일치 하도록 [이 샘플](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
 
-- 경우 조사식 확장 프로젝트 **Info.plist > WKApp 번들 ID** 않습니다 [올바르게 설정](~/ios/watchos/get-started/project-references.md) Watch 앱에 맞게 **번들 ID**, 디버거를 연결 하지 못합니다 및 시각적 Mac 용 studio 메시지와 대기 *"디버거를 연결할 때까지 기다리는"*합니다.
+- 경우 조사식 확장 프로젝트 **Info.plist > WKApp 번들 ID** 않습니다 [올바르게 설정](~/ios/watchos/get-started/project-references.md) Watch 앱에 맞게 **번들 ID**, 디버거를 연결 하지 못합니다 및 시각적 Mac 용 studio 메시지와 대기 *"디버거를 연결할 때까지 기다리는"* 합니다.
 
 - 디버깅은 지원 **알림** 모드 이지만 안정적 수 있습니다. 다시 시도 하는 경우에 따라 작동 합니다. 있는지 확인 Watch 앱 **Info.plist** `WKCompanionAppBundleIdentifier` iOS 부모/컨테이너 응용 프로그램의 번들 식별자와 일치 하도록 설정 됩니다 (ie. iPhone에서 실행 되는 것).
 

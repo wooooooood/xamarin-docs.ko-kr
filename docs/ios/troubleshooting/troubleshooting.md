@@ -354,7 +354,7 @@ actionSheet.Clicked += delegate (sender, args){
 
 IPhone SDK 4.0 installer 2 Sdk-iPad 으로만 이동 가능한 앱을 빌드하기 위한 3.2 SDK와 문서 iPhone 및 범용 앱 용 4.0 SDK를 설치 합니다. 또한만 iPad를 시뮬레이트하는 3.2 시뮬레이터에서 및 4.0 시뮬레이트하는 시뮬레이터를 iPhone 또는 iPhone 4도 설치 합니다. Sdk 및 시뮬레이터에 대 한 모든 이전 제거 됩니다.
 
-Mac iPhone 프로젝트 빌드 옵션에 대 한 visual Studio 응용 프로그램 작성 사용 되는 SDK 버전에 대 한 설정이 포함 됩니다. 이 설정을 확인할 수 있습니다 **프로젝트 옵션에는 빌드-> iPhone 빌드->**합니다.
+Mac iPhone 프로젝트 빌드 옵션에 대 한 visual Studio 응용 프로그램 작성 사용 되는 SDK 버전에 대 한 설정이 포함 됩니다. 이 설정을 확인할 수 있습니다 **프로젝트 옵션에는 빌드-> iPhone 빌드->** 합니다.
 
 Mac 용 Visual Studio에서 새 프로젝트의 기본 SDK 설정으로 가장 오래 된 설치 된 SDK를 사용 하 고 지정 하는 SDK가 없는 경우 Mac 용 Visual Studio 합니다 가장 가까운 응용 프로그램을 찾을 수 있습니다. 이 프로젝트는 항상 최신 SDK requre 있도록 수행 되었습니다. 그러나이 현재 발생 되 고 있는 3.2 SDK에서 사용 된-줄어들고 결과적 iPad 시뮬레이터를 사용 하 고 있습니다.
 

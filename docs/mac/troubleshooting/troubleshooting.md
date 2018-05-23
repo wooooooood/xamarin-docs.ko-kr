@@ -68,7 +68,7 @@ ms.lasthandoff: 04/04/2018
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>샌드 박싱된 응용 프로그램에 디버거를 연결할 수 없습니다.
 
-기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"*합니다. 
+기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"* 합니다. 
 
 [![자격 편집](troubleshooting-images/debug01.png "자격 편집")](troubleshooting-images/debug01-large.png#lightbox)
 
