@@ -5,13 +5,13 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ead498113f432e766fbd77ae2f01bc67c2273b60
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: bf0fa7d2caf7c8857bc1272f4471def04100383f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials 지 오 코딩
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials 지리적 위치
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/12/2018
 
 ## <a name="getting-started"></a>시작
 
-액세스는 **지리적 위치** 는 다음과 같은 플랫폼 특정 설치 기능이 필요 합니다.
+액세스는 **지리적 위치** , 다음과 같은 플랫폼별 설치 기능은 필요:
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/12/2018
 
 또는 Android 매니페스트를 업데이트 합니다.
 
-열기는 **AndroidManifest.xml** 아래 파일는 **속성** 폴더 내에 다음 코드를 추가 하 고는 **매니페스트** 노드.
+열기는 **AndroidManifest.xml** 에서 파일의 **속성** 폴더 내에 다음 코드를 추가 하 고는 **매니페스트** 노드:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,11 +47,11 @@ ms.lasthandoff: 05/12/2018
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 **필요한 권한:** 영역 및 검사는 **ACCESS_COARSE_LOCATION** 및 **ACCESS_FINE_LOCATION**사용 권한. 이 자동으로 업데이트는 **AndroidManifest.xml** 파일입니다.
+또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 **필요한 권한:** 영역 및 검사는 **ACCESS_COARSE_LOCATION** 및 **ACCESS_FINE_LOCATION**사용 권한. 이 자동으로 업데이트는 **AndroidManifest.xml** 파일입니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-앱 키를 포함 해야 합니다. 프로그램 **Info.plist** 장치의 위치에 액세스 하기 위해 NSLocationWhenInUseUsageDescription에 대 한 합니다.
+앱의 **Info.plist** 포함 해야 합니다는 `NSLocationWhenInUseUsageDescription` 장치의 위치에 액세스 하려면 키입니다.
 
 Plist 편집기를 열고 추가 **개인정보 취급 방침-위치 때에 사용 하 여 사용 설명** 속성 및 사용자를 표시 하려면 값을 입력 합니다.
 
@@ -64,7 +64,7 @@ Plist 편집기를 열고 추가 **개인정보 취급 방침-위치 때에 사�
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-설정 해야 합니다는 `Location` 응용 프로그램에 대 한 권한이 있습니다. Open으로이 작업을 수행할 수 있습니다는 **Package.appxmanifest** 를 선택 하 고는 **기능** 탭 및 검사 **위치**합니다.
+설정 해야 합니다는 `Location` 응용 프로그램에 대 한 권한이 있습니다. 열어이 작업을 수행할 수 있습니다는 **Package.appxmanifest** 를 선택 하 고는 **기능** 탭 및 검사 **위치**합니다.
 
 -----
 
@@ -104,7 +104,7 @@ catch (Exception ex)
 }
 ```
 
-현재 장치를 쿼리하려면 [위치](xref:Xamarin.Essentials.Location) 좌표는 `GetLocationAsync` 사용할 수 있습니다. 전체를 전달 하는 것이 좋습니다. `GeolocationRequest` 및 `CancellationToken` 장치의 위치를 가져오는 데 약간의 시간이 걸릴 수 있기 때문입니다.
+현재 장치를 쿼리하려면 [위치](xref:Xamarin.Essentials.Location) 좌표는 `GetLocationAsync` 사용할 수 있습니다. 전체를 전달 하는 것이 좋습니다 `GeolocationRequest` 및 `CancellationToken` 장치의 위치를 가져오는 데 약간의 시간이 걸릴 수 있기 때문입니다.
 
 ```csharp
 try
@@ -133,7 +133,7 @@ catch (Exception ex)
 
 ## <a name="geolocation-accuracy"></a>지리적 위치 정확도
 
-다음 표에서 플랫폼 마다 정확도 설명
+다음 표에서 플랫폼 마다 정확도 설명합니다.
 
 ### <a name="lowest"></a>가장 낮음
 

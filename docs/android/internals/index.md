@@ -6,14 +6,16 @@ ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/13/2017
-ms.openlocfilehash: 517e21f2decd0dabbd03d752f13831a891ad7138
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/21/2018
+ms.openlocfilehash: 79e61db4c27a2d29b4ee0a9d39f2d25ea5d93303
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="advanced-concepts-and-internals"></a>고급 개념 및 내부 기능
+
+_이 섹션에서는 아키텍처, API 디자인 및 Xamarin.Android의 제한 사항에 설명 하는 항목이 포함 되어 있습니다. 가비지 컬렉션 구현 및 Xamarin.Android에서 사용할 수 있는 어셈블리를 설명 하는 항목이 포함 됩니다. Xamarin.Android 이므로 [오픈 소스](https://github.com/xamarin/xamarin-android), 해당 소스 코드를 검사 하 여 Xamarin.Android의 내부 작업을 이해할 수 이기도 합니다._
 
 
 ##  <a name="architectureandroidinternalsarchitecturemd"></a>[아키텍처](~/android/internals/architecture.md)

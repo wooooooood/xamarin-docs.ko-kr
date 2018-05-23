@@ -5,11 +5,11 @@ ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 871d164df982d1d170e8ba5bffd3bd6600a4cdda
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 14aabc319fefdbad86f29a9d27ce39b59da35e3e
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials 파일 시스템 도우미
 
@@ -31,7 +31,7 @@ using Xamarin.Essentials;
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-사용자 데이터 파일이 없는 모든 파일에 대 한 응용 프로그램의 최상위 diredctory를 가져오려고 합니다. 이러한 파일은 프레임 워크를 동기화 하는 중 운영 체제와 백업 됩니다. 플랫폼 구현 세부 아래를 참조 하십시오.
+사용자 데이터 파일이 없는 모든 파일에 대 한 응용 프로그램의 최상위 디렉터리를 가져오려면 합니다. 이러한 파일은 프레임 워크를 동기화 하는 중 운영 체제와 백업 됩니다. 플랫폼 구현 세부 아래를 참조 하십시오.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
@@ -54,7 +54,7 @@ var mainDir = FileSystem.AppDataDirectory;
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - **CacheDirectory** – 반환 된 [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir) 현재 컨텍스트의 합니다.
-- **AppDataDirectory** – 반환 된 [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) 되며 현재 컨텍스트에서의 사용 하 여 백업 [Autu 백업](https://developer.android.com/guide/topics/data/autobackup.html) API 23 이상 시작 합니다.
+- **AppDataDirectory** – 반환 된 [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir) 되며 현재 컨텍스트에서의 사용 하 여 백업 [자동 백업](https://developer.android.com/guide/topics/data/autobackup.html) API 23 이상 시작 합니다.
 
 파일에 추가 된 **자산** 폴더에는 Android 프로젝트를 빌드 작업으로 표시 **AndroidAsset** 와 함께 사용 하 `OpenAppPackageFileAsync`합니다.
 

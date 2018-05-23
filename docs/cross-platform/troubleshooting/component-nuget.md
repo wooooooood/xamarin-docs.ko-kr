@@ -7,11 +7,11 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
-ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.openlocfilehash: e9c056d37577a280b66bb3aa7ded19e966bca43b
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet 구성 요소 참조를 업데이트합니다.
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/14/2018
 
 NuGet 패키지에 추가 하는 데 이러한 지침을 참조 [Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package) 또는 [Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
 
-인기 있는 Xamarin 목록이 [플러그 인 및 라이브러리](https://github.com/xamarin/XamarinComponents/blob/master/README.md) NuGet pacakges로 사용할 수 없는 구성 요소에 대 한 대안을 찾을 수 있도록 사용할 수 있습니다.
+인기 있는 Xamarin 목록이 [플러그 인 및 라이브러리](https://github.com/xamarin/XamarinComponents/blob/master/README.md) NuGet 패키지로 사용할 수 없는 구성 요소에 대 한 대안을 찾을 수 있도록 사용할 수 있습니다.
 
 ## <a name="manually-removing-component-references"></a>구성 요소 참조를 수동으로 제거
 

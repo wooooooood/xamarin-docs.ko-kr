@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: ff9814291d5a28ec9e0bbb3c2a6fc6cce5d8ee25
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 92ca58374292c829df4098274abae870b355a7b0
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 지역화
 
@@ -24,7 +24,7 @@ _오른쪽에서 왼쪽으로 지역화 Xamarin.Forms 응용 프로그램에 오
 흐름 방향은 눈 하 여 페이지의 UI 요소 ֻ 방향입니다. 아랍어 및 히브리어와 같은 일부 언어에서는 UI 요소는 오른쪽에서 왼쪽 방향으로 레이아웃 필요 합니다. 이 작업을 설정 하 여 수행할 수는 [ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성입니다. 이 속성 중 하나를 설정 해야 하 고 해당 레이아웃을 제어 하는 부모 요소 안에서 UI 요소 흐름 방향을 설정 하거나 가져옵니다는 [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) 열거형 값:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 설정의 [ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 [ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft) 요소에 일반적으로 설정 하는 맞춤 오른쪽, 오른쪽에서 왼쪽 읽기 순서 및 컨트롤의 레이아웃을 보내므로 오른쪽에서 왼쪽:

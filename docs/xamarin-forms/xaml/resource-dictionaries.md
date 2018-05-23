@@ -6,12 +6,12 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 05/07/2018
-ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/21/2018
+ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -30,7 +30,7 @@ XAML에 저장 된 리소스에는 `ResourceDictionary` 다음 검색 및 수를
 에 정의 된 리소스는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 다음 중 하나를 설정 합니다 즉 `Resources` 속성:
 
 - [ `Resources` ](xref:Xamarin.Forms.Application.Resources) 에서 파생 된 클래스의 속성 [`Application`](xref:Xamarin.Forms.Application)
-- [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 속성에서 파생 된 클래스의 ['VisualElement'](xref:Xamarin.Forms.Application)
+- [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 에서 파생 된 클래스의 속성 [`VisualElement`](xref:Xamarin.Forms.Application)
 
 파생 되는 하나의 클래스를 포함 하는 Xamarin.Forms 프로그램 `Application` 에서는 종종에서 파생 되는 많은 클래스를 활용 하지만 `VisualElement`, 페이지, 레이아웃 및 컨트롤을 포함 합니다. 이러한 개체 중 하나를 가질 수 있습니다 해당 `Resources` 속성이로 설정 된 `ResourceDictionary`합니다. 특정 넣을 위치를 선택 `ResourceDictionary` 영향 리소스를 사용할 수 있습니다.
 

@@ -4,11 +4,11 @@ title: 'WPF 및 합니다. Xamarin.Forms: 유사점 및 차이점'
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 21ffca65ee72308d1340a1db43471228b2adbe91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 합니다. Xamarin.Forms: 유사점 및 차이점
 
@@ -33,7 +33,7 @@ XAML은 선언적 태그 언어로 WPF 및 Xamarin.Forms에 사용 됩니다. �
 
 - Xamarin.Forms 지원는 [XAML 2009 사양](/dotnet/framework/xaml-services/xaml-2009-language-features/); 이렇게 하면 데이터와 같은 정의를 쉽게 `string`s, `int`s, 등도 같이 정의 된 제네릭 형식 및 인수 생성자에 전달 합니다.
 
-- 현재 방법이 있으면 dyanmically 부하 XAML WPF와 처럼 `XamlReader`합니다. 와 같은 기본 기능을 얻을 수는 [NuGet 패키지](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) 있지만 합니다.
+- WPF와 처럼 XAML을 동적으로 로드할 수 없으므로 현재는 `XamlReader`합니다. 와 같은 기본 기능을 얻을 수는 [NuGet 패키지](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) 있지만 합니다.
 
 ### <a name="markup-extensions"></a>태그 확장
 

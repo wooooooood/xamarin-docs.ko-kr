@@ -6,11 +6,11 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -24,33 +24,12 @@ Xamarin 프로파일러는 프로 파일링 하기 위해 사용할 수 있는 �
 
 이 가이드를 프로 파일링 하는 일반적인 시나리오를 검사 하 고 분석 하 고 iOS 및 Android 응용 프로그램을 최적화 하는 도구로 프로파일러 소개 합니다.
 
-## <a name="contents"></a>목차
-
-- [다운로드 및 설치](#Download_and_Install)
-- [프로파일러 및 프로 파일링](#Profilers_and_Profiling)
-- [Xamarin Profiler](#Xamarin_Profiler)
-- [프로파일러 지원](#Profiler_Support)
-- [프로파일러 기본 사항](#Profiler_Basics)
-    - [앱에서 프로 파일링 허용](#Allowing_Profiling_in_your_App)
-    - [프로파일러를 시작합니다.](#Launching_the_Profiler)
-        - [Mac 용 Visual Studio에서 시작](#Launching_from_Xamarin_Studio)
-        - [Visual Studio에서 시작](#Launching_from_Visual_Studio)
-        - [저장 하 고 프로파일러 세션을 로드](#Saving_and_Loading_Profiler_Sessions)
-        - [Profiler 기능 및 계기](#Profiler_Features)
-    - [할당](#Allocations)
-    - [시간 프로파일러](#Time_Profiler)
-    - [주기](#Cycles)
-- [응용 프로그램 프로 파일링](#Profiling_Applications)
-- [요약](#Summary)
-
 ## <a name="download-and-install"></a>다운로드 및 설치
 
 > [!NOTE]
-> **참고:** 해야 합니다는 [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) mac에서 Mac 용 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
+> 해야 합니다는 [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) mac에서 Mac 용 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
 
 Xamarin 프로파일러는 독립 실행형 응용 프로그램 되며 Mac 용 Visual Studio 및 Visual Studio IDE 내에서 프로 파일링 할 수 있도록 통합 됩니다.
-
-### <a name="download"></a>다운로드
 
 플랫폼에 대 한 설치 패키지를 다운로드 합니다.
 
@@ -58,7 +37,6 @@ Xamarin 프로파일러는 독립 실행형 응용 프로그램 되며 Mac 용 V
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 를 다운로드 한 설치 관리자를 시스템 Xamarin 프로파일러 추가를 시작 합니다.
-
 
 ## <a name="profilers-and-profiling"></a>프로파일러 및 프로 파일링
 
@@ -199,7 +177,6 @@ Xamarin 프로파일러는 iOS 또는 Android 응용 프로그램 프로 파일�
 
 자세한 내용은 참조 [.mlpd 파일 생성 ](~/tools/profiler/troubleshooting.md#gen_mlpd)합니다.
 
-
 ## <a name="profiler-features"></a>Profiler 기능
 
 Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 됩니다.
@@ -298,7 +275,6 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 -----
 
-
 - **호출 트리** – 각 방법에 소요 된 시간의 양을 보여 줍니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
@@ -340,24 +316,7 @@ C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 
 
 -----
 
-
 선택 **업데이트** 를 계속 합니다.
-
-<!---
-## Profiling Android Applications
-
-
-Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
-
-You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
-
-
-## Profiling iOS Applications
-
-### Profiling tvOS
-
-## Profiling Mac Applications
--->
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>SGen 가비지 수집기 및 프로 파일링
 
@@ -374,7 +333,6 @@ Xamarin.iOS 응용 프로그램에서 클래식 API를 사용 하 여 Boehm GC �
 ## <a name="summary"></a>요약
 
 이 가이드에는 프로 파일링 하 고 개발자에 게 유용 방법을 살펴보았습니다. 다음 일부 기록 및 작동 방법에 대 한 정보를 제공 하는 Xamarin 프로파일러 도입 되었습니다. 마지막 내용을 Xamarin 프로파일러 기능 하 고 할당 및 시간 프로파일러 수단을 탐색 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

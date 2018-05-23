@@ -6,11 +6,11 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: b5301e499a3b85087f19449f8a25b107b8ec1e4b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms에 대 한 Xamarin 라이브 플레이어
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/09/2018
 
 [![Xamarin 라이브 플레이어: 코드를 검사, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. 이동 하 여 앱을 다운로드는 [Xamarin Player 라이브 설치](install.md) 지침.
+1. 수행 하 여 앱을 다운로드는 [Xamarin Player 라이브 설치](install.md) 지침.
 2. 활성화는 *Xamarin Player 라이브* 에 **기본 설정**에서 장치를 선택 합니다는 **장치** 목록입니다.
 2. 장치에 Visual Studio와 쌍으로 연결 하 여 QR 코드 스캔에 라이브 플레이어 장치를 관리 합니다.
 3. 휴대폰 이나 태블릿에 앱 바로 실행 됩니다.
