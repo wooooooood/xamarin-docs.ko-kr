@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: dc83defcb3eb69cf53c205793ce77029c0947c2f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="editor"></a>편집기
 
@@ -19,8 +19,8 @@ _여러 줄 텍스트 입력_
 
 `Editor` 컨트롤은 여러 줄 입력을 허용 하는 데 사용 됩니다. 이 문서에서는 설명 합니다.
 
-- **[사용자 지정](#Customization)**  &ndash; 키보드 및 색 옵션입니다.
-- **[상호 작용](#Interactivity)**  &ndash; 대화형 작업을 제공 하기에 대 한 수신 대기할 수 있는 이벤트입니다.
+- **[사용자 지정](#customization)**  &ndash; 키보드 및 색 옵션입니다.
+- **[상호 작용](#interactivity)**  &ndash; 대화형 작업을 제공 하기에 대 한 수신 대기할 수 있는 이벤트입니다.
 
 ## <a name="customization"></a>사용자 지정
 

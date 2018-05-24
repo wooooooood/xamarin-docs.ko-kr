@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -63,8 +63,10 @@ public partial class App : Application
     public App ()
     {
         // Initialize Live Reload.
+        #if DEBUG
         LiveReload.Init();
-    
+        #endif
+        
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -134,6 +136,10 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 * **XLR003**: *nuget 패키지를 다시 로드 라이브 Xamarin 라이브 다시 로드 Visual Studio 확장을 설치 해야 합니다.*
 
   다시 로드 라이브 nuget 패키지를 참조 하는 프로젝트를 빌드하려고 시도 하지만 Visual 확장 설치 되어 있지 않습니다.  
+
+* *어셈블리를 로드 하는 동안 예외: System.IO.FileNotFoundException: 어셈블리를 로드할 수 없습니다 ' Xamarin.Live.Reload, 버전 0.3.27.0, Culture = neutral, PublicKeyToken = ='.*
+
+  호스트 프로젝트를 사용 해야 `PackageReference` 대신 `packages.config`
 
 ### <a name="app-doesnt-connect"></a>응용 프로그램에 연결 하지 않습니다.
 
