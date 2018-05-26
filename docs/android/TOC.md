@@ -232,6 +232,7 @@
 ### [사용자 지정 링커 설정](deploy-test/linker.md)
 ### [다중 코어 장치](deploy-test/multicore-devices.md)
 ### [성능](deploy-test/performance.md)
+### [프로파일링](deploy-test/profiling.md)
 ### [릴리스 준비](deploy-test/release-prep/index.md)
 #### [ProGuard](deploy-test/release-prep/proguard.md)
 ### [APK 서명](deploy-test/signing/index.md)
