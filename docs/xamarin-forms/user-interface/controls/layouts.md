@@ -1,25 +1,25 @@
 ---
-title: Xamarin.Forms Layouts
+title: Xamarin.Forms 레이아웃
 description: Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트롤을 작성 하는 데 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: e9a4a661e694b5a885f202a36f9a2916c6c339fd
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.date: 05/21/2018
+ms.openlocfilehash: ca48ad6fb7d5aae53f972f6e3b5257919d140a8d
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="xamarinforms-layouts"></a>Xamarin.Forms Layouts
+# <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
 _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트롤을 작성 하는 데 사용 됩니다._
 
 [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) 및 [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) Xamarin.Forms의 클래스 뷰 및 기타 레이아웃에 대 한 컨테이너 역할을 하는 뷰의 특수 하위 유형이 됩니다. `Layout` 클래스 자체에서 파생 [ `View` ](views.md)합니다. A `Layout` 파생 클래스에는 일반적으로 Xamarin.Forms 응용 프로그램에서 자식 요소의 크기와 위치를 설정 하기 위한 논리가 포함 됩니다.
 
- [ ![](layouts-images/layouts-sml.png "Xamarin.Forms Layout Types")](layouts-images/layouts.png#lightbox "Xamarin.Forms Layout Types")
+[![Xamarin.Forms 레이아웃 형식을](layouts-images/layouts-sml.png "Xamarin.Forms 레이아웃 형식을")](layouts-images/layouts.png#lightbox "Xamarin.Forms 레이아웃 형식")
 
 파생 된 클래스 `Layout` 두 가지 범주로 나눌 수 있습니다.
 
@@ -101,7 +101,14 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) 기준으로 자식 요소는 `RelativeLayout` 자체 또는 해당 형제입니다. 사용 하 여 자녀의 위치가 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 형식의 개체에 설정 됩니다는 [ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/) 및 [ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)합니다.<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)/ [가이드](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 예제](layouts-images/RelativeLayout.png "RelativeLayout 예제")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) 기준으로 자식 요소는 `RelativeLayout` 자체 또는 해당 형제입니다. 사용 하 여 자녀의 위치가 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 형식의 개체에 설정 됩니다는 [ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/) 및 [ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)합니다.<br /><br />[API 설명서](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) / [가이드](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 예제](layouts-images/RelativeLayout.png "RelativeLayout 예제")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+|     |     |
+
+### <a name="flexlayout"></a>FlexLayout
+
+|     |     |
+| --- | --- |
+| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) CSS에 따라 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)으로 일반적으로 알려진, _레이아웃 flex_ 또는 _flex 상자_합니다. `FlexLayout` 여섯 개의 바인딩 가능한 속성 및 자식을 누적 하거나 많은 맞춤 및 방향 옵션을 사용 하 여 둘러쌀 수를 사용할 수 있는 5 개의 연결 된 바인딩 가능한 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.FlexLayout) / [가이드](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/) | [![FlexLayout 예제](layouts-images/FlexLayout.png "FlexLayout 예제")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>관련 링크

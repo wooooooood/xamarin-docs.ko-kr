@@ -6,12 +6,12 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/16/2017
-ms.openlocfilehash: 7826962cd3bf9595a63841e3f2d9fb377d1a0574
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/23/2018
+ms.openlocfilehash: cc6cb282565e08f7ce4401e5317fba518a74a8f3
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="ios-platform-specifics"></a>iOS 플랫폼 세부 사항
 
@@ -28,6 +28,7 @@ Ios, Xamarin.Forms 다음 플랫폼-세부 정보가 들어 있습니다.
 - 항목 선택에서 발생 하는 경우 제어는 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)합니다. 자세한 내용은 참조 [선택 항목 선택 제어](#picker_update_mode)합니다.
 - 상태 표시줄 표시 여부에 설정 된 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)합니다. 자세한 내용은 참조 [페이지에서 상태 표시줄 표시 유형을 설정](#set_status_bar_visibility)합니다.
 - 제어 여부는 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 터치 제스처를 처리 하거나 해당 내용에 전달 합니다. 자세한 내용은 참조 [를 ScrollView에 지연 콘텐츠 터치](#delay_content_touches)합니다.
+- 구분 기호 스타일을 설정는 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 참조 [ListView에서 구분 기호 스타일을 설정](#listview-separatorstyle)합니다.
 
 <a name="blur" />
 
@@ -302,7 +303,6 @@ IsPresentedChanged += (sender, e) =>
 이 플랫폼별은의 글꼴 크기를 확장 하는 데 사용 되는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 입력된 텍스트 컨트롤에 맞는지 되도록 합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.AdjustsFontSizeToFitWidth` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty/) 연결 된 속성을는 `boolean` 값:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     <StackLayout Margin="20">
@@ -393,7 +393,6 @@ switch (picker.On<iOS>().UpdateMode())
 이 플랫폼별은에서 상태 표시줄의 표시 유형을 설정 하는 데 사용 되는 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), 상태 표시줄 들어오거나 나갈 제어 하는 기능이 포함 된 `Page`합니다. 설정 하 여 XAML에서 사용 되는 `Page.PrefersStatusBarHidden` 연결 된 속성의 값에는 `StatusBarHiddenMode` 열거형 및 필요에 따라는 `Page.PreferredStatusBarUpdateAnimation` 연결 된 속성의 값에는 `UIStatusBarAnimation` 열거형:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersStatusBarHidden="True"
@@ -468,6 +467,45 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 결과 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 콘텐츠 터치 하므로 수신 연기를 비활성화할 수는이 시나리오에서는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 제스처를 받는 보다는 [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) 의 페이지는 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
 [![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 플랫폼별와 연결")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+
+<a name="listview-separatorstyle" />
+
+## <a name="setting-the-separator-style-on-a-listview"></a>ListView에서 구분 기호 스타일을 설정
+
+이 플랫폼별 사이 구분 기호 셀에 있는지 여부를 제어는 [ `ListView` ](xref:Xamarin.Forms.ListView) 의 전체 너비를 사용 하 여는 `ListView`합니다. 설정 하 여 XAML에서 사용 되는 [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) 연결 된 속성의 값에는 [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 열거형:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+        <ListView ... ios:ListView.SeparatorStyle="FullWidth">
+            ...
+        </ListView>
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
+```
+
+`ListView.On<iOS>` 메서드 지정이 플랫폼별 iOS에만 실행 됩니다. [ `ListView.SetSeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SetSeparatorStyle(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.ListView},Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 사이 구분 기호 셀에 있는지 여부를 네임 스페이스 제어에 사용 되는 [ `ListView` ](xref:Xamarin.Forms.ListView) 전체를 사용 하 여 너비는 `ListView`와 [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 두 개의 가능한 값을 제공 하는 열거형.
+
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default) – 기본 iOS 구분 기호 동작을 나타냅니다. 이것이 Xamarin.Forms에 기본 동작입니다.
+- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth) – 구분 기호의 한쪽 가장자리에서 그려짐을 나타냅니다는 `ListView` 다른 합니다.
+
+결과 지정 된 [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 값에 적용 됩니다는 [ `ListView` ](xref:Xamarin.Forms.ListView), 셀 사이 구분선의 너비를 제어 합니다.
+
+![](ios-images/listview-separatorstyle.png "ListView SeparatorStyle 플랫폼별")
+
+> [!NOTE]
+> 구분 기호 스타일 설정 되 면 `FullWidth`,으로 다시 변경할 수 없습니다 `Default` 런타임에 합니다.
 
 ## <a name="summary"></a>요약
 

@@ -6,12 +6,12 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/17/2017
-ms.openlocfilehash: 8aa17c868ce1d0343eab6758c03aaf042c27130e
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/23/2018
+ms.openlocfilehash: 8d7ec3f2f64fdb8be903fd13bd72bcf545265a3d
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼-세부 사항
 
@@ -24,6 +24,8 @@ Android에서는 Xamarin.Forms 다음 플랫폼-세부 정보가 들어 있습�
 - 넘기기가에서 페이지 사이 사용 하도록 설정 된 [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)합니다. 자세한 내용은 참조 [활성화 넘기기가 사이에서 페이지는 TabbedPage](#enable_swipe_paging)합니다.
 - Z-순서 제어 시각적 요소 그리기 순서를 결정 합니다. 자세한 내용은 참조 [시각적 요소 상승 제어](#elevation)합니다.
 - 사용 하지 않도록 설정 된 [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 및 [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 일시 중지에 수명 주기 이벤트 페이지 하 고 각각 AppCompat를 사용 하는 응용 프로그램에 대 한 다시 시작 합니다. 자세한 내용은 참조 [Disappearing 및 페이지 수명 주기 이벤트가 표시 해제](#disable_lifecycle_events)합니다.
+- 제어 여부는 [ `WebView` ](xref:Xamarin.Forms.WebView) 혼합 된 콘텐츠를 표시할 수 있습니다. 자세한 내용은 참조 [혼합 된 콘텐츠 보기에서 사용 하도록 설정](#webview-mixed-content)합니다.
+- 입력된 방법에 대 한 소프트 키보드에 대 한 편집기 옵션 설정는 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 자세한 내용은 참조 [설정 항목 입력 방법 편집기 옵션](#entry-imeoptions)합니다.
 
 <a name="soft_input_mode" />
 
@@ -245,10 +247,88 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 [![](android-images/keyboard-on-resume.png "수명 주기 이벤트 플랫폼별")](android-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 플랫폼별")
 
+<a name="webview-mixed-content" />
+
+## <a name="enabling-mixed-content-in-a-webview"></a>보기에서 혼합 된 콘텐츠를 사용 하도록 설정
+
+이 플랫폼별 제어 여부는 [ `WebView` ](xref:Xamarin.Forms.WebView) 수 표시 혼합 된 콘텐츠로 응용 프로그램에서 API 21 이상를 대상으로 하는 합니다. 혼합된 콘텐츠는 HTTPS 연결을 통해 처음 로드 된 하지만 HTTP 연결을 통해 리소스 (예: 이미지, 오디오, 비디오, 스타일 시트, 스크립트)를 로드 하는 콘텐츠입니다. 설정 하 여 XAML에서 사용 되는 [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) 연결 된 속성의 값에는 [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 열거형:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <WebView ... android:WebView.MixedContentMode="AlwaysAllow" />
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
+```
+
+`WebView.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. [ `WebView.SetMixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.SetMixedContentMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.WebView},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 혼합 된 콘텐츠를 표시할 수 있는 네임 스페이스 제어에 사용 되기와 [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 세 가지 가능한 값을 제공 하는 열거형:
+
+- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow) – 나타냅니다는 [ `WebView` ](xref:Xamarin.Forms.WebView) HTTPS origin HTTP 원본에서 콘텐츠를 로드할 수 있습니다.
+- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow) – 나타냅니다는 [ `WebView` ](xref:Xamarin.Forms.WebView) HTTPS origin HTTP 원본에서 콘텐츠를 로드할 수 없습니다.
+- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode) – 나타냅니다는 [ `WebView` ](xref:Xamarin.Forms.WebView) 최신 장치 웹 브라우저의 접근 방식을과 호환 가능 하도록 시도 합니다. HTTPS origin에서 로드할 일부 HTTP 콘텐츠를 사용할 수 있습니다 및 다른 콘텐츠 형식의 차단 됩니다. 차단 또는 허용 되는 콘텐츠 유형의 각 운영 체제 릴리스에서 변경 될 수 있습니다.
+
+결과 지정 된 [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 값에 적용 됩니다는 [ `WebView` ](xref:Xamarin.Forms.WebView)를 혼합 된 콘텐츠를 표시할 수 있는지 여부를 제어 합니다.
+
+[![WebView 혼합 콘텐츠 처리 플랫폼별](android-images/webview-mixedcontent.png "WebView 혼합 콘텐츠 처리 플랫폼별")](android-images/webview-mixedcontent-large.png#lightbox "WebView 혼합 콘텐츠 처리 플랫폼별")
+
+<a name="entry-imeoptions" />
+
+## <a name="setting-entry-input-method-editor-options"></a>설정 항목 입력 방법 편집기 옵션
+
+이 플랫폼별 입력된 방법에 대 한 소프트 키보드에 대 한 (입력기) 옵션을 설정는 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 사용자 작업 단추는 소프트 키보드와의 상호 작용 아래에 설정 된 `Entry`합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 연결 된 속성의 값에는 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 열거형:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout ...>
+        <Entry ... android:Entry.ImeOptions="Send" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+entry.On<Android>().SetImeOptions(ImeFlags.Send);
+```
+
+`Entry.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 대 한 소프트 키보드에 대 한 입력된 방법 작업 옵션을 설정 하는 [ `Entry` ](xref:Xamarin.Forms.Entry), 와 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 다음 값을 제공 하는 열거 합니다.
+
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) – 나타냅니다는 특정 동작 키가 필요 하며, 수 있는 내부 컨트롤 자체를 생성 합니다.
+- [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) – 작업 키는 사용할 수 있도록 나타냅니다.
+- [`Go`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Go) – 동작 키 "이동" 작업을 수행 합니다, 텍스트의 대상으로 지정할 사용자 라인 때 입력 한을 나타냅니다.
+- [`Search`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Search) – "검색" 연산을 수행 하는 동작 키, 라인 텍스트 검색의 결과를 사용자 입력을 나타냅니다.
+- [`Send`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Send) – 동작 키가 대상에 텍스트를 제공 하는 "send" 작업을 수행 하는 것을 나타냅니다.
+- [`Next`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Next) – 나타냅니다 동작 키 텍스트를 허용 하는 다음 필드에 사용자를 수행 하는 "다음" 작업을 수행 합니다.
+- [`Done`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Done) – 나타냅니다 동작 키 소프트 키보드 닫는 "완료" 작업을 수행 합니다.
+- [`Previous`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Previous) – 나타냅니다 동작 키 텍스트를 허용 하는 이전 필드에 사용자를 수행 하는 "이전" 작업을 수행 합니다.
+- [`ImeMaskAction`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.ImeMaskAction) – 작업 옵션을 선택 하는 마스크입니다.
+- [`NoPersonalizedLearning`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoPersonalizedLearning) –는 맞춤법 검사기는 사용자에서 배울 아니고 올바른 사용자가 이전에 입력 한 내용에 따라 값을 제안 나타냅니다.
+- [`NoFullscreen`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoFullscreen) – UI 해야 전체 화면 올리지 나타냅니다.
+- [`NoExtractUi`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoExtractUi) – 추출 된 텍스트에 대 한 UI가 표시를 나타냅니다.
+- [`NoAccessoryAction`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.NoAccessoryAction) – 사용자 지정 작업에 대 한 UI 표시 됨을 나타냅니다.
+
+결과 지정 된 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 값에 대 한 소프트 키보드에 적용 되는 [ `Entry` ](xref:Xamarin.Forms.Entry), 입력된 방법 편집기 옵션 설정:
+
+[![항목이 입력 방법 편집기 플랫폼별](android-images/entry-imeoptions.png "항목 입력 방법 편집기 플랫폼별")](android-images/entry-imeoptions-large.png#lightbox "항목 입력 방법 편집기 플랫폼별")
+
 ## <a name="summary"></a>요약
 
 이 문서에는 Android 플랫폼-세부 사항 Xamarin.Forms에 기본 제공 되는 사용 하는 방법을 보여 줍니다. 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,12 +6,12 @@ ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: d1610e4c9e6a8799362ff955061953962dd755ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/23/2018
+ms.openlocfilehash: d4ddb662bf167a0c80561cce097104a7f5fc8096
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="windows-platform-specifics"></a>Windows 플랫폼 특성
 
@@ -19,8 +19,9 @@ _플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구�
 
 에 플랫폼 UWP (유니버설 Windows), Xamarin.Forms 플랫폼 다음 내용을 포함 되어 있습니다.
 
-- 도구 모음 배치 옵션입니다. 자세한 내용은 참조 [도구 모음 배치를 바꾸기](#toolbar_placement)합니다.
-- 부분적으로 축소 가능한 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) 탐색 모음입니다. 자세한 내용은 참조 [MasterDetailPage 탐색 모음 축소](#collapsable_navigation_bar)합니다.
+- 도구 모음 배치 옵션을 설정 합니다. 자세한 내용은 참조 [도구 모음 배치를 바꾸기](#toolbar_placement)합니다.
+- 축소 된 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) 탐색 모음입니다. 자세한 내용은 참조 [MasterDetailPage 탐색 모음 축소](#collapsable_navigation_bar)합니다.
+- 사용 하도록 설정 된 [ `WebView` ](xref:Xamarin.Forms.WebView) UWP 메시지 대화 상자에서 JavaScript 경고를 표시 하도록 합니다. 자세한 내용은 참조 [JavaScript 경고 표시](#webview-javascript-alert)합니다.
 
 <a name="toolbar_placement" />
 
@@ -34,7 +35,6 @@ _플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구�
             windows:Page.ToolbarPlacement="Bottom">
   ...
 </TabbedPage>
-
 ```
 
 또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
@@ -85,10 +85,52 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 [![](windows-images/collapsed-navigation-bar.png "탐색 모음 플랫폼별 축소")](windows-images/collapsed-navigation-bar-large.png#lightbox "탐색 모음 플랫폼별 축소")
 
+<a name="webview-javascript-alert" />
+
+## <a name="displaying-javascript-alerts"></a>JavaScript 경고 표시
+
+이 플랫폼별 사용 하면 한 [ `WebView` ](xref:Xamarin.Forms.WebView) UWP 메시지 대화 상자에서 JavaScript 경고를 표시 하도록 합니다. 설정 하 여 XAML에서 사용 되는 [ `WebView.IsJavaScriptAlertEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView.IsJavaScriptAlertEnabledProperty) 연결 된 속성을는 `boolean` 값:
+
+```xaml
+<ContentPage ...
+             xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        <WebView ... windows:WebView.IsJavaScriptAlertEnabled="true" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+...
+
+var webView = new Xamarin.Forms.WebView
+{
+  Source = new HtmlWebViewSource
+  {
+    Html = @"<html><body><button onclick=""window.alert('Hello World from JavaScript');"">Click Me</button></body></html>"
+  }
+};
+webView.On<Windows>().SetIsJavaScriptAlertEnabled(true);
+```
+
+`WebView.On<Windows>` 메서드 지정이 플랫폼별 유니버설 Windows 플랫폼에만 실행 됩니다. [ `WebView.SetIsJavaScriptAlertEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView.SetIsJavaScriptAlertEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Windows,Xamarin.Forms.WebView},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.WindowsSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) 네임 스페이스, JavaScript 경고를 설정할지 여부를 제어에 사용 됩니다. 또한는 `WebView.SetIsJavaScriptAlertEnabled` 메서드를 호출 하 여 JavaScript 경고를 설정/해제를 사용할 수는 [ `IsJavaScriptAlertEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.WebView.IsJavaScriptAlertEnabled*) 메서드를 사용 하는지 여부를 반환 합니다.
+
+```csharp
+_webView.On<Windows>().SetIsJavaScriptAlertEnabled(!_webView.On<Windows>().IsJavaScriptAlertEnabled());
+```
+
+결과 경고 JavaScript UWP 메시지 대화 상자에 표시할 수 있습니다.
+
+![WebView JavaScript 경고 플랫폼별](windows-images/webview-javascript-alert.png "플랫폼별 WebView JavaScript 경고")
+
 ## <a name="summary"></a>요약
 
 이 문서 Xamarin.Forms에 기본 제공 되는 Windows 플랫폼 특성을 사용 하는 방법을 보여 줍니다. 플랫폼 비슷하므로 허용 사용자 지정 렌더러 또는 효과 구현 하지 않고도 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

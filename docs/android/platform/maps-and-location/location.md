@@ -6,12 +6,12 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/22/2018
+ms.openlocfilehash: b509f6892b27afa053a6ee913826d913d7ad54a8
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="location-services"></a>위치 서비스
 
@@ -83,9 +83,15 @@ else
  
 퓨즈 위치 공급자 API는 다양 한 지 오 펜싱 및 활동 모니터링을 포함 하 여 위치를 인식 응용 프로그램 권한을 부여 하는 다른 도구를 제공 합니다. 이 섹션에서는 하겠습니다 초점을 설정 하는 기본는 `LocationClient`, 공급자, 설정 및 사용자의 위치를 가져오는 중입니다.
 
-퓨즈 위치 공급자의 일부인 [Google Play 서비스](http://developer.android.com/google/play-services/index.html)합니다. Google Play 서비스 패키지를 설치 하 고 작동 하도록 하는 퓨즈 위치 공급자 API에 대 한 응용 프로그램에서 제대로 구성 해야 하 고 Google 재생 서비스 APK 설치 되어 있어야 합니다.
+퓨즈 위치 공급자의 일부인 [Google Play 서비스](http://developer.android.com/google/play-services/index.html)합니다.
+Google Play 서비스 패키지를 설치 하 고 작동 하도록 하는 퓨즈 위치 공급자 API에 대 한 응용 프로그램에서 제대로 구성 해야 하 고 Google 재생 서비스 APK 설치 되어 있어야 합니다.
 
-Xamarin.Android 하기 전에 퓨즈 위치 공급자를 사용 해야 추가 **Xamarin.GooglePlayServices.Maps** 프로젝트에 있습니다.
+Xamarin.Android 하기 전에 퓨즈 위치 공급자를 사용 해야 추가 **Xamarin.GooglePlayServices.Maps** 프로젝트에 패키지 합니다. 또한 다음 `using` 문 아래에 설명 된 클래스를 참조 하는 모든 소스 파일에 추가 해야 합니다.
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### <a name="checking-if-google-play-services-is-installed"></a>Google Play 서비스가 설치 되어 있는지 확인 하는 중
 
