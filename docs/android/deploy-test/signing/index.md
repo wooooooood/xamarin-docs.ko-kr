@@ -5,12 +5,12 @@ ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/26/2018
-ms.openlocfilehash: ba936137dd868e9ba5eabc6df89bb98a0a178ba2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/21/2018
+ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 
@@ -113,9 +113,9 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 [![서명 암호 대화 상자](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
-서명 프로세스가 완료되면 **폴더 열기**를 클릭합니다.
+서명 프로세스가 완료되면 **배포 열기**를 클릭합니다.
 
-[![폴더 열기 단추](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
+[![배포 열기 단추](images/vs/08-open-distribution-sml.png)](images/vs/08-open-distribution.png#lightbox)
 
 이렇게 하면 Windows 탐색기에 생성된 APK 파일을 포함하는 폴더가 열립니다. 이때 Visual Studio는 Xamarin.Android 응용 프로그램을 배포 준비가 된 APK로 컴파일했습니다.
 다음 스크린샷에서는 게시 준비가 된 응용 프로그램의 예 **MyApp.MyApp.apk**를 보여 줍니다.

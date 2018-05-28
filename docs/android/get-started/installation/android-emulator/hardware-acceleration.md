@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/10/2018
-ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 2f0bb6f1371b9ce1b925b876851d58f3c4d01419
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android Emulator 하드웨어 가속
 
@@ -46,7 +46,7 @@ Hyper-V 및 Google Android Emulator를 사용하여 시작하려면:
 
     Hyper-V 및 Windows 하이퍼바이저 플랫폼을 사용하도록 설정한 후에 Windows를 다시 부팅해야 할 수도 있습니다.
 
-3. **[Visual Studio 15.8 미리 보기 1](https://aka.ms/hyperv-emulator-dl)** 설치&ndash; 이 버전의 Visual Studio에서는 Hyper-V를 지원하는 Google Android Emulator를 시작하기 위해 IDE 지원을 제공합니다.
+3. **[Visual Studio 15.8 미리 보기 1 이상](https://www.visualstudio.com/vs/preview/)** 설치&ndash; 이 버전의 Visual Studio에서는 Hyper-V를 지원하는 Google Android Emulator를 시작하기 위해 IDE 지원을 제공합니다.
 
 4. **Google Android Emulator 패키지 27.2.7 이상 설치** &ndash; 이 패키지를 설치하려면 Visual Studio에서 **도구 > Android > Android SDK Manager**로 이동합니다. **도구** 탭을 선택하고 Android Emulator 구성 요소가 적어도 버전 27.2.7인지 확인합니다.
 
