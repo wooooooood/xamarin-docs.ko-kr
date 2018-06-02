@@ -6,12 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2017
-ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.date: 05/31/2018
+ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689450"
 ---
 # <a name="local-databases"></a>로컬 데이터베이스
 
@@ -33,17 +34,20 @@ Xamarin.Forms 응용 프로그램이 사용할 수는 [SQLite.NET PCL NuGet](htt
 
 <a name="XamarinForms_PCL_Project" />
 
-### <a name="xamarinsforms-pcl-project"></a>Xamarins.Forms PCL Project
+### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms.NET Standard 또는 PCL 프로젝트
 
-SQLite 지원 Xamarin.Forms PCL 프로젝트를 추가 하려면 사용 하 여 NuGet의 검색 기능 찾으려고 **sqlite net pcl** 패키지를 설치 하 고:
+SQLite 지원 Xamarin.Forms 프로젝트를 추가 하려면 사용 하 여 NuGet의 검색 기능 찾으려고 **sqlite net pcl** 패키지를 설치 하 고:
 
-![](databases-images/vs2017-sqlite-pcl-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
+![NuGet SQLite.NET PCL 패키지 추가](databases-images/vs2017-sqlite-pcl-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
 NuGet 패키지는 이름이 비슷한 여러 가지, 올바른 패키지에 이러한 특성:
 
 - **만든:** Frank A. Krueger
 - **Id:** sqlite net pcl
 - **NuGet 링크:** [sqlite net pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!TIP]
+> 사용 하 여는 **sqlite net pcl** NuGet 표준.NET 프로젝트에도 합니다.
 
 참조가 추가 되 면 데이터베이스 파일의 위치를 확인 하는 플랫폼 특정 기능을 추상화 하는 인터페이스를 작성 합니다. 샘플에 사용 되는 인터페이스에는 하나의 메서드를 정의 합니다.
 
@@ -130,7 +134,7 @@ public Task<int> DeleteItemAsync(TodoItem item)
 
 IOS 응용 프로그램을 구성 하려면 같은 NuGet 패키지를 사용 하 여 iOS 프로젝트 추가 *NuGet* 창:
 
-![](databases-images/vsmac-sqlite-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
+![NuGet SQLite.NET PCL 패키지 추가](databases-images/vsmac-sqlite-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
 필요한 유일한 코드는는 `IFileHelper` 데이터 파일 경로 결정 하는 구현 합니다. 다음 코드에서 SQLite 데이터베이스 파일을 배치는 **라이브러리/데이터베이스** 샌드박스 응용 프로그램의 내 폴더. 참조는 [iOS 파일 시스템 작업](~/ios/app-fundamentals/file-system.md) 저장소에 사용할 수 있는 다른 디렉터리에 대 한 자세한 내용은 설명서입니다.
 
@@ -138,21 +142,21 @@ IOS 응용 프로그램을 구성 하려면 같은 NuGet 패키지를 사용 하
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.iOS
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
 
-            if (!Directory.Exists(libFolder))
-            {
-                Directory.CreateDirectory(libFolder);
-            }
+      if (!Directory.Exists(libFolder))
+      {
+        Directory.CreateDirectory(libFolder);
+      }
 
-            return Path.Combine(libFolder, filename);
-        }
+      return Path.Combine(libFolder, filename);
     }
+  }
 }
 ```
 
@@ -172,14 +176,14 @@ Android 응용 프로그램을 구성 하려면 같은 NuGet 패키지를 사용
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.Droid
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            return Path.Combine(path, filename);
-        }
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        return Path.Combine(path, filename);
     }
+  }
 }
 ```
 
@@ -189,7 +193,7 @@ namespace Todo.Droid
 
 UWP 응용 프로그램을 구성 하려면 사용 하 여 UWP 프로젝트를 같은 NuGet 패키지에 추가 된 *NuGet* 창:
 
-![](databases-images/vs2017-sqlite-uwp-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
+![NuGet SQLite.NET PCL 패키지 추가](databases-images/vs2017-sqlite-uwp-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
 참조가 추가 되 면 구현는 `IFileHelper` 플랫폼 관련을 사용 하 여 인터페이스 `Windows.Storage` 데이터 파일 경로 확인 하는 API입니다.
 
@@ -200,23 +204,21 @@ using Windows.Storage;
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.UWP
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-        }
+      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
     }
+  }
 }
-
 ```
 
 ## <a name="summary"></a>요약
 
 Xamarin.Forms는 로드 하 고 공유 코드에 개체를 저장 가능 하 게 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다.
 
-이 문서에 초점을 맞춘 **액세스** Xamarin.Forms를 사용 하 여 SQLite 데이터베이스입니다. 작업 SQLite.Net 자체에 대 한 자세한 내용은 참조는 [데이터 액세스:를 사용 하 여 SQLite.NET](~/cross-platform/app-fundamentals/index.md) 설명서입니다. 모든 플랫폼; 대부분 SQLite.Net 코드는 공유 가능 만 SQLite 데이터베이스 파일의 위치를 구성 하려면 플랫폼별 기능 합니다.
-
+이 문서에 초점을 맞춘 **액세스** Xamarin.Forms를 사용 하 여 SQLite 데이터베이스입니다. 작업 SQLite.Net 자체에 대 한 자세한 내용은 참조는 [SQLite.NET Android에서](~/android/data-cloud/data-access/using-sqlite-orm.md) 또는 [SQLite.NET iOS에서](~/ios/data-cloud/data/using-sqlite-orm.md) 설명서입니다. 모든 플랫폼; 대부분 SQLite.Net 코드는 공유 가능 만 SQLite 데이터베이스 파일의 위치를 구성 하려면 플랫폼별 기능 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

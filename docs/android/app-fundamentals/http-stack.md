@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689476"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 스택 및 Android에 대 한 SSL/TLS 구현 선택기
 
@@ -89,9 +90,9 @@ AndroidClientHandler는 관리 코드에서 모든 항목을 구현 하는 대�
 
 Xamarin.Android 8.3 부터는 `HttpClientHandler` 지루한 SSL에는 기본값 (`btls`) 기본 TLS 공급자로 합니다. SSL TLS 지루한 공급자에는 다음과 같은 이점이 있습니다.
 
--   TLS 1.2를 지원합니다.
+-   TLS 1.2 +을 지원합니다.
 -   모든 Android 버전을 지원합니다.
--   모두에 대 한 TLS 1.2 지원 제공 `HttpClient` 및 `WebClient`합니다.
+-   TLS 1.2 + 모두에 대 한 지원 제공 `HttpClient` 및 `WebClient`합니다.
 
 지루한 SSL을 사용 하 여 기본 TLS 공급자로 단점은 결과 APK (지원 되는 ABI 당 추가 APK 크기의 약 1MB 추가)의 크기를 늘릴 수 있는 것입니다.
 

@@ -6,11 +6,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 78783089303eba09b0ee36534b0078b82674a1c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689543"
 ---
 # <a name="touch-in-ios"></a>IOS에서 터치
 
@@ -117,7 +118,7 @@ IOS에서 터치 이벤트의 이해를 만들었으므로 이제 해당 제스�
 
 클래스를 제공 하는 Xamarin.iOS `UIGestureRecognizer` 다음 기본 제공 제스처 인식기에 대 한 기본 클래스로:
 
--  *UITapGesturesRecognizer* – 하나 이상의 탭입니다.
+-  *UITapGestureRecognizer* – 하나 이상의 탭입니다.
 -  *UIPinchGestureRecognizer* – Pinching 및 더 많이 떨어져 있는 손가락을 분배 합니다.
 -  *UIPanGestureRecognizer* – 패닝 또는 드래그 합니다.
 -  *UISwipeGestureRecognizer* – 어느 방향으로든에서 넘기기가 합니다.
