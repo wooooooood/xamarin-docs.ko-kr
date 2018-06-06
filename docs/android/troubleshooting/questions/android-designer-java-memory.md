@@ -6,18 +6,19 @@ ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 32d98efd644fb033785fbae0d9689494e42b2809
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 691be280b80e379863cc09d0f1bba0ff5882cf21
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732923"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android 디자이너에 대 한 Java 메모리 매개 변수를 조정합니다.
 
 시작할 때 사용 되는 기본 메모리 매개 변수는 `java` Android 디자이너 일부 시스템 구성에 호환 되지 않을 수 있습니다에 대 한 처리 합니다.
 
-Xamarin Studio 5.7.2.7 (및 Mac 용 이상, Visual Studio)로 시작 하 고 Xamarin for Visual Studio 3.9.344 프로젝트 수준이에 이러한 설정을 사용자 지정할 수 있습니다.
+Xamarin Studio 5.7.2.7 (및 Mac 용 이상, Visual Studio)로 시작 하 고 3.9.344 Xamarin 용 도구 Visual Studio, 프로젝트 수준이에 이러한 설정을 사용자 지정할 수 있습니다.
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>새 Android 디자이너 속성 및 해당 Java 옵션
 
