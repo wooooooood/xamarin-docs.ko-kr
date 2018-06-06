@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding 기술
+description: '이 문서에서 iOS backgrounding 다양 한 기술을 설명 하는 지침에 연결: 백그라운드 작업, 백그라운드 전송 서비스, 백그라운드 가져오기 및 원격 알림입니다.'
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 261507e8cbca8e94f5cabbb010dcd444c432d96c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebf3c07a319a79994093f89f8e54f4cba7402533
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783757"
 ---
 # <a name="ios-backgrounding-techniques"></a>iOS Backgrounding 기술
 

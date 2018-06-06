@@ -1,18 +1,20 @@
 ---
-title: 사용자 인터페이스 개체 만들기
+title: Xamarin.iOS에서 사용자 인터페이스 개체 만들기
+description: 이 문서를 Xamarin.iOS의 사용자 인터페이스를 만드는 방법에 대 한 개요를 제공 합니다. IOS 디자이너, Xcode 인터페이스 작성기, C#, 및 스토리 보드에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5229beb7a882049daf58d3a3e62da6fed25a1f48
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c688dcdf7498b0a2860d1878d893beae4f5cf8fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790154"
 ---
-# <a name="creating-user-interface-objects"></a>사용자 인터페이스 개체 만들기
+# <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.iOS에서 사용자 인터페이스 개체 만들기
 
 Apple 그룹 관련 부분에 "프레임 워크" Xamarin.iOS 네임 스페이스에 있는 기능을 합니다. `UIKit` iOS에 대 한 모든 사용자 인터페이스 컨트롤이 포함 된 네임 스페이스가입니다.
 
@@ -21,7 +23,6 @@ Apple 그룹 관련 부분에 "프레임 워크" Xamarin.iOS 네임 스페이스
 ```csharp
 using UIKit;
 ```
-
 
 이 장에서 설명한 모든 컨트롤 UIKit 네임 스페이스에 있으며 각각 사용자 컨트롤의 클래스 이름에는 `UI` 접두사입니다.
 

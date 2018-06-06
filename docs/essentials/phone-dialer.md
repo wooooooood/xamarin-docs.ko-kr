@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 전화 걸기
-description: PhoneDialer 클래스에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용을 프로그램을 수 있습니다.
+title: 'Xamarin.Essentials: 전화 걸기'
+description: PhoneDialer 클래스 Xamarin.Essentials에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용을 프로그램을 수 있습니다.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 112cc305457413ad057e390d46c5a765ea29514f
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782852"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials 전화 걸기
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

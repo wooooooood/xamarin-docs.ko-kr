@@ -1,16 +1,17 @@
 ---
 title: BouncingGame 세부 정보
-description: 이 연습에서는 CocosSharp를 사용 하 여 간단한 바운스되 볼 게임을 구현 하는 방법을 보여 줍니다.
+description: 이 문서는 BouncingGame, CocosSharp를 사용 하 여 빌드한 간단한 바운스되 볼 게임 만들기에 대 한 연습을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: d12d6fb8ecfcba5e5093b2af4790a51ef8cf8e47
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1a2423fcbeec0c3414b766a6c9e6f64ab53f4bf9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783109"
 ---
 # <a name="bouncinggame-details"></a>BouncingGame 세부 정보
 
@@ -419,7 +420,7 @@ if (doesBallOverlapPaddle && isMovingDownward)
 
 이 연습에서는 CocosSharp 게임 엔진에서 제공 하는 기능 중 작은 부분만 다룹니다. 정보 및 다른 CocosSharp 주제에 대 한 연습을 참조 하세요. [CocosSharp 가이드의 나머지 부분](~/graphics-games/cocossharp/index.md)합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [완료 된 게임 (샘플)](https://developer.xamarin.com/samples/mobile/BouncingGame/)
 - [게임 콘텐츠 (샘플)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Content.zip?raw=true)

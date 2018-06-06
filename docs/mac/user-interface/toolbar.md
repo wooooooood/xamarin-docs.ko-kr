@@ -1,5 +1,5 @@
 ---
-title: 도구 모음
+title: Xamarin.Mac의 도구 모음
 description: 이 문서에서는 작업 Xamarin.Mac 응용 프로그램에서 도구 모음을 설명 합니다. Xcode 및 코드에 노출 하 고 이러한 작업을 프로그래밍 방식으로 인터페이스 작성기에서 작성 및 유지 관리 도구 모음을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 729c5c69d80c52047585d1026d7c675f3267f34e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 11c01a2b2378ddc519185996deb78ba5bcbd2d1a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792890"
 ---
-# <a name="toolbars"></a>도구 모음
+# <a name="toolbars-in-xamarinmac"></a>Xamarin.Mac의 도구 모음
 
 _이 문서에서는 작업 Xamarin.Mac 응용 프로그램에서 도구 모음을 설명 합니다. Xcode 및 코드에 노출 하 고 이러한 작업을 프로그래밍 방식으로 인터페이스 작성기에서 작성 및 유지 관리 도구 모음을 설명 합니다._
 

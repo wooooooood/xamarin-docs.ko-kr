@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Mac 오류 메시지 (mmp)
-description: Mmp에 대 한 오류 참조 가이드입니다.
+description: 이 문서는 mmp, 실행 가능한 Mac 응용 프로그램에 컴파일된 어셈블리를 패키지 하는 데 사용 하는 도구에서 생성 된 오류를 나열 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
@@ -8,11 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 7f0d40e4adb16e47db18d0796afa42c66af096ce
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f5cf4a9003d3fb468ffcf337c33730cb12238c44
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792761"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 오류 메시지 (mmp)
 

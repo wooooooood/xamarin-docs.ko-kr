@@ -1,5 +1,5 @@
 ---
-title: 이미지
+title: Xamarin.Mac의 이미지
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 이미지와 작업을 수행 합니다. 만들기 및 응용 프로그램의 아이콘을 만드는 데 필요한 및 C# 코드와 Xcode의 인터페이스 작성기에서 이미지를 사용 하 여 이미지를 유지 관리를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ae0a42051d56eb8bf002c61dfbc60c99924ff301
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792098"
 ---
-# <a name="images"></a>이미지
+# <a name="images-in-xamarinmac"></a>Xamarin.Mac의 이미지
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 이미지와 작업을 수행 합니다. 만들기 및 응용 프로그램의 아이콘을 만드는 데 필요한 및 C# 코드와 Xcode의 인터페이스 작성기에서 이미지를 사용 하 여 이미지를 유지 관리를 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 

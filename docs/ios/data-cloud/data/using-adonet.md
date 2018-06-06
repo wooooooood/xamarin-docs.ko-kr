@@ -1,18 +1,20 @@
 ---
-title: ADO.NET을 사용 하 여 ios
+title: Xamarin.iOS ADO.NET 사용
+description: 이 문서에서는 SQLite Xamarin.iOS 응용 프로그램에서 액세스 하는 방법으로 ADO.NET을 사용 하는 방법에 설명 합니다. 어셈블리 참조, Mono.Data.Sqlite, 및 BasicDataAccess 샘플에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7d8478c363da1e4362a8a837dafba7f9cf85872e
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 8240e3052b4deb4bfdf0ec94e67fbd6827a34dab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784831"
 ---
-# <a name="using-adonet-with-ios"></a>ADO.NET을 사용 하 여 ios
+# <a name="using-adonet-with-xamarinios"></a>Xamarin.iOS ADO.NET 사용
 
 Xamarin은 iOS의 경우 익숙한 ADO.NET와 유사한 구문을 사용 하 여 노출에 사용할 수 있는 SQLite 데이터베이스에 대 한 기본 제공 지원. 와 같은 SQLite에서 처리 하는 SQL 문을 작성 해야 이러한 Api를 사용 하 여 `CREATE TABLE`, `INSERT` 및 `SELECT` 문.
 

@@ -1,19 +1,20 @@
 ---
-title: 선택
-description: 이 가이드에서는 디자인 하 고 선택 Xamarin.iOS 앱에서 작업을 설명 합니다.
+title: Xamarin.iOS에 선택 컨트롤
+description: 이 문서에는 디자인 Xamarin.iOS 앱에서 선택 컨트롤을 사용 하는 방법을 설명 합니다. IOS 디자이너 및 코드에 선택기를 구현 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789914"
 ---
-# <a name="picker"></a>선택
+# <a name="picker-control-in-xamarinios"></a>Xamarin.iOS에 선택 컨트롤
 
 선택 컨트롤 강조 표시 되 고 선택한 값을 사용 하 여 값의 스크롤 가능한 목록을 포함 하는 ' 휠 형식 ' 컨트롤을 표시 합니다. 사용자가 휠을 원하는 옵션을 선택 합니다.
 
@@ -216,7 +217,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 
 
 
-#### <a name="date"></a>날짜
+#### <a name="date"></a>Date
 
 날짜 모드 월, 일 및 연도 선택기를 사용 하 여 날짜를 표시합니다. 으로 설정 된는 `UIDatePickerMode.Date` 속성입니다. 예를 들어:
 

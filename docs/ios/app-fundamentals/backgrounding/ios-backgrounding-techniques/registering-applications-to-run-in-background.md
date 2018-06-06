@@ -1,18 +1,20 @@
 ---
-title: 백그라운드에서 실행 되도록 응용 프로그램 등록
+title: Xamarin.iOS 앱은 백그라운드에서 실행을 등록 하는 중
+description: 이 문서에서는 백그라운드에서 실행 되도록 Xamarin.iOS 응용 프로그램을 등록 하는 방법을 설명 합니다. 오디오 앱, VoIP 앱, 외부 액세서리 bluetooth, 및에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783677"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>백그라운드에서 실행 되도록 응용 프로그램 등록
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Xamarin.iOS 앱은 백그라운드에서 실행을 등록 하는 중
 
 GPS 통해 사용자에 대 한 지침을 얻는 등의 중요 한, 장기 실행 작업을 수행 하는 응용 프로그램 지속적으로 요청할 경우 어떤 일이 생기 하지만 일부 응용 프로그램에 대 한 배경 권한이 작동에 대 한 개별 작업을 등록 하는? 이러한 응용 프로그램 대신 알려진된 배경 필요한 응용 프로그램으로 등록 해야 합니다.
 

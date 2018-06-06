@@ -1,18 +1,20 @@
 ---
-title: .xib 코드 생성
+title: Xamarin.iOS에서.xib 코드 생성
+description: 이 문서에서는 Xamarin.iOS 시각적 컨트롤을 프로그래밍 방식으로 액세스할 수 있도록 C# 맵.xib 파일에 코드를 생성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b887dbf09693452f62f744669ad9713927020cea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 064e17393747a36cd761cb2464e3239cfc17141c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786150"
 ---
-# <a name="xib-code-generation"></a>.xib 코드 생성
+# <a name="xib-code-generation-in-xamarinios"></a>Xamarin.iOS에서.xib 코드 생성
 
 > [!IMPORTANT]
 >  이 문서에서는 Mac의 Xcode의 인터페이스 작성기만을 통합 하기 위해 Visual Studio 설명 동작과 콘센트에에서 사용 되지 않는 Xamarin 디자이너 iOS 용으로 합니다. IOS 디자이너에서 자세한 정보를 검토 하십시오는 [iOS 디자이너](~/ios/user-interface/designer/index.md) 문서.
@@ -31,7 +33,7 @@ Cocoa 터치 기존 형식을 사용 하 여, 뿐만 아니라 사용자 지정 
 
 ## <a name="generating-code"></a>코드 생성
 
-에 대 한 **{0}.xib** 파일 빌드 작업으로 *페이지*경우는 **{0}.xib.designer.cs** Mac 용 Visual Studio에서의 부분 클래스를 생성, 파일은 프로젝트에도 있는 모든에서 찾을 수 있는 사용자 클래스에 대 한 디자이너 파일에서 **.xib** 콘센트가 대 한 속성 및 모든 작업에 대 한 부분 메서드와 함께 파일입니다. 이 파일의 존재 하 여 코드 생성이 사용 됩니다.
+에 대 한  **{0}.xib** 파일 빌드 작업으로 *페이지*경우는  **{0}. xib.designer.cs** 파일이 Mac 용 Visual Studio 프로젝트에도 있습니다. 찾을 수 있는 모든 사용자 클래스에 대 한 디자이너 파일에서 partial 클래스를 생성할는 **.xib** 콘센트가 대 한 속성 및 모든 작업에 대 한 부분 메서드와 함께 파일입니다. 이 파일의 존재 하 여 코드 생성이 사용 됩니다.
 
 디자이너 파일은 자동으로 업데이트 될 때는 **.xib** Mac 유실 포커스에 대 한 파일 변경 내용 및 Visual Studio입니다. 변경 내용이 됩니다 Mac 업데이트에 대 한 다음 덮어쓸된 때 Visual Studio 파일 에서도 디자이너 파일을 수동으로 수정 하지 해야 합니다.
 
@@ -45,11 +47,11 @@ Objective C 런타임에서 클래스 검색 가능 하 게, Mac 용 Visual Stud
 
 ## <a name="non-designer-class-parts"></a>비 디자이너 클래스 부분
 
-Partial 클래스 디자이너는으로 사용할 수 없습니다-됩니다. 콘센트는 private 이며 없는 기본 클래스를 지정 합니다. 각 클래스는 해당 "비 디자이너" 클래스 부분에에서 있는 다른 파일을 표시 하는 클래스를 기본 설정, 사용 하 여 또는 예로 로드할때네이티브코드에서클래스를인스턴스화하는데필요한생성자를정의것으로예상**.xib**합니다. 기본 **.xib** 템플릿이 작업을 수행 하지만에서 정의 하는 추가 사용자 지정 클래스는 **.xib**, 비 디자이너 부분을 수동으로 추가 해야 합니다.
+Partial 클래스 디자이너는으로 사용할 수 없습니다-됩니다. 콘센트는 private 이며 없는 기본 클래스를 지정 합니다. 각 클래스는 해당 "비 디자이너" 클래스 부분에에서 있는 다른 파일을 표시 하는 클래스를 기본 설정, 사용 하 여 또는 예로 로드할때네이티브코드에서클래스를인스턴스화하는데필요한생성자를정의것으로예상 **.xib**합니다. 기본 **.xib** 템플릿이 작업을 수행 하지만에서 정의 하는 추가 사용자 지정 클래스는 **.xib**, 비 디자이너 부분을 수동으로 추가 해야 합니다.
 
 이유는 유연성을 위해 필요 합니다. 예를 들어 여러 코드 숨김 클래스 하위 클래스는 공통 관리 되는 추상 클래스는 서브 클래스는 클래스 IB 여 서브클래싱 할 수 있습니다.
 
-규칙에 따른 이러한에 저장 하는 한 **{0}.xib.cs** 옆에 있는 파일의 **{0}.xib.designer.cs** 디자이너 파일입니다.
+규칙에 따른 이러한에 저장 하는 한  **{0}. xib.cs** 옆에 있는 파일의  **{0}. xib.designer.cs** 디자이너 파일입니다.
 
 <a name="generated" />
 

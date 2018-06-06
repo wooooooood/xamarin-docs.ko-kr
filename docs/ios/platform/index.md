@@ -1,34 +1,32 @@
 ---
-title: 플랫폼 기능
-description: 이 섹션의 문서 iOS에 대 한 기능을 다룹니다.
+title: iOS 플랫폼 기능
+description: IOS의 다양 한 버전에 도입 된 기능 및 기타 iOS 플랫폼 기능에 설명 하는 다양 한 지침은이 문서 연결 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95053faa4bab0a65660772aeea39405e4a80a042
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787089"
 ---
-# <a name="platform-features"></a>플랫폼 기능
+# <a name="ios-platform-features"></a>iOS 플랫폼 기능
 
 ##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md)
 
 설치 하 고 Xcode 9 베타, Xamarin iOS 11 지원 미리 보기 시작 하는 방법.
 
-
 ##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[iOS 10 소개](~/ios/platform/introduction-to-ios10/index.md)
 
 Apple iOS 10 몇 가지 새로운 Api 및 새로운 특징과 기능을 사용 하 여 앱을 개발할 수 있도록 하는 서비스를 포함 합니다. 10 iOS 앱은 맵, 메시지, 전화 번호, Siri를 확장 하는 등 새로운 능력 수 있습니다. 이 섹션에서는 Xamarin.iOS 앱에서 이러한 기능을 활용 하려면 보여 줍니다.
 
-
 ##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 
 이 섹션에서는 Xamarin.iOS 앱에서 이러한 기능을 사용 하는 방법 및 iOS 8에서 업그레이드할 경우 iOS 9에서에서 변경한 내용을 정의 합니다.
-
 
 ##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 
@@ -147,8 +145,6 @@ Touch ID-암호 비슷한 사용자를 인증 하는 방법으로 iOS 7에서에
 ##  <a name="wide-coloriosplatformwide-colormd"></a>[와이드 컬러](~/ios/platform/wide-color.md)
 
 iOS 10와 macOS 시에라 확장 범위 픽셀 형식 및 코어 그래픽, Core 이미지, 금속 및 AVFoundation 등의 프레임 워크를 비롯 하 여 시스템 전체에서 광범위 한 색상 공간에 대 한 지원을 향상 시킵니다. 전체 전체 그래픽 스택에서이 동작을 제공 하 여 광범위 한 색 표시를 사용 하 여 장치에 대 한 지원은 쉽게 할 추가 합니다.
-
-
 
 ##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Objective-C 바인딩](binding-objective-c/index.md)
 

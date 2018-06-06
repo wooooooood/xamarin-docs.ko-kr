@@ -1,18 +1,19 @@
 ---
-title: 포함 된 프레임 워크
-description: 이 문서에서는 응용 프로그램 개발자가 자신의 앱에서 사용자 프레임 워크를 포함할 수는 방법을 설명 합니다.
+title: Xamarin.iOS에서 포함 된 프레임 워크
+description: 이 문서에 포함 된 프레임 워크 Xamarin.iOS 응용 프로그램에서 코드를 공유 하는 방법을 설명 합니다. Mtouch 도구 또는 네이티브 참조와이 수행할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f223d8ef6e89cc44822b8a831dbba3cf71d727c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e42f0940fe3fc132c9d381907aad5afbe474c4ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787294"
 ---
-# <a name="embedded-frameworks"></a>포함 된 프레임 워크
+# <a name="embedded-frameworks-in-xamarinios"></a>Xamarin.iOS에서 포함 된 프레임 워크
 
 _이 문서에서는 응용 프로그램 개발자가 자신의 앱에서 사용자 프레임 워크를 포함할 수는 방법을 설명 합니다._
 

@@ -1,5 +1,5 @@
 ---
-title: 메뉴
+title: Xamarin.Mac의 메뉴
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설명 합니다. 만들기 및 메뉴 및 메뉴 항목 Xcode 및 인터페이스 작성기에서 유지 관리 및 이러한 작업을 프로그래밍 방식으로 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cb89d1df60bafe14dcc989666f0eeb5d757e4017
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792923"
 ---
-# <a name="menus"></a>메뉴
+# <a name="menus-in-xamarinmac"></a>Xamarin.Mac의 메뉴
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴 작업에 설명 합니다. 만들기 및 메뉴 및 메뉴 항목 Xcode 및 인터페이스 작성기에서 유지 관리 및 이러한 작업을 프로그래밍 방식으로 설명 합니다._
 

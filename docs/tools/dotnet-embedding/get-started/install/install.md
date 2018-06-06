@@ -1,15 +1,17 @@
 ---
 title: 포함 하는.NET 설치
+description: 이 문서에 포함 하는.NET을 설치 하는 방법에 설명 합니다. 직접, 도구를 실행 하는 방법에 설명 바인딩을 생성 하는 방법을 사용자 지정 MSBuild 대상 및 필요한 빌드 후 단계를 사용 하는 방법을 자동으로 합니다.
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 4/18/2018
-ms.openlocfilehash: 1675889dceb1d364abe74461b32aa4c895a144a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 057a1f3f662b2dbe2f8aee277505e1d6e8798084
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793797"
 ---
 # <a name="installing-net-embedding"></a>포함 하는.NET 설치
 

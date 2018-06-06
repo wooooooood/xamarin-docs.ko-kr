@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 자이로스코프가
-description: 자이로스코프가 클래스를 사용 하면 해당 장치의 세 가지 기본 축 회전 각도 장치의 자이로스코프가 센서를 모니터링할 수 있습니다.
+title: 'Xamarin.Essentials: 자이로스코프가'
+description: Xamarin.Essentials에서 자이로스코프가 클래스 장치의 세 가지 기본 축 회전을 측정 하는 장치의 자이로스코프가 센서를 모니터링할 수 있습니다.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a987978882a928ad50578d3a0031bce07e60fb6e
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 2f2961c6cb78293891e186e7e0f749a7aa2fb8fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783017"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials 자이로스코프가
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: 자이로스코프가
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

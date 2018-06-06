@@ -1,16 +1,17 @@
 ---
 title: Xamarin Player 라이브 샘플
-description: Xamarin Player Live와 실행 해 주는 몇 가지 예제는 다음과 같습니다.
+description: 이 문서는 라이브 Xamarin Player를 테스트할 때 사용 하는 샘플 응용 프로그램에 연결 됩니다. 연결 된 샘플 기본 계산기 및 버그 스위퍼 게임 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 67c734a76e78973aa1acf8eb2b5dec720701d3d7
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793731"
 ---
 # <a name="xamarin-live-player-samples"></a>Xamarin Player 라이브 샘플
 
@@ -31,8 +32,6 @@ Xamarin.Forms 앱이 Android 또는 iOS 장치에서 사용할 수는 간단한 
 기존의 익숙한 게임에 새로운 요소가 추가되었습니다. 눈금이 표시된 9x9 바둑판식 타일에 10개의 버그가 숨어있습니다. 게임에서 승리하려면 10개의 버그를 모두 찾아 플래그를 지정해야 합니다.
 
 ![Android에서 BugSweeper 앱](samples-images/bugsweeper-sml.png)
-
-
 
 ## <a name="related-links"></a>관련 링크
 

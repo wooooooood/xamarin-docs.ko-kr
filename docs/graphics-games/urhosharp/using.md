@@ -1,20 +1,19 @@
 ---
-title: UrhoSharp를 사용 하 여
-description: UrhoSharp 엔진 개요
+title: 3D 게임 작성을 UrhoSharp를 사용 하 여
+description: 이 문서 장면, 구성 요소, 셰이프, 카메라, 작업, 사용자 입력, 소리 등을 설명 하는 UrhoSharp의 개요를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 8eed81817620b3f68510ab2e043c3aeaafb6e78a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: eb1e93e47528e801da08f402f452e0e8ce5014d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784041"
 ---
-# <a name="using-urhosharp"></a>UrhoSharp를 사용 하 여
-
-_UrhoSharp 엔진 개요_
+# <a name="using-urhosharp-to-build-a-3d-game"></a>3D 게임 작성을 UrhoSharp를 사용 하 여
 
 기본 사항을 파악 한 다음 가져올 하려는 첫 번째 게임을 작성 하기 전에: 장면이 설정 하는 방법, 리소스 (아트 워크 포함)를 로드 하는 방법 및 게임에 대 한 간단한 상호 작용 하는 방법입니다.
 

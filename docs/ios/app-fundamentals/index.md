@@ -1,19 +1,20 @@
 ---
-title: 응용 프로그램 기본 사항
-description: 응용 프로그램의 핵심 개념
+title: Xamarin.iOS 응용 프로그램 기본 사항
+description: 이 문서는 다양 한 설명서를 앱 전송 보안과 같은 Xamarin.iOS 개발, 기본 개념을 설명 하는 스레딩 및 backgrounding, 이벤트를 링크 합니다.
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: d8dc1e25de527357fe6ad3ad1328a930e0e4dc70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdace50d851b2c99f9241b869f248e58d5b93377
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784499"
 ---
-# <a name="application-fundamentals"></a>응용 프로그램 기본 사항
+# <a name="xamarinios-application-fundamentals"></a>Xamarin.iOS 응용 프로그램 기본 사항
 
 이 섹션에서 일반적인 작업 작업 또는 개발자가 Xamarin.iOS (이전의 MonoTouch) 응용 프로그램을 개발할 때 알고 있어야 하는 개념 중 일부는 지침을 제공 합니다.
 

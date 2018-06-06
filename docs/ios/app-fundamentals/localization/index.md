@@ -1,19 +1,20 @@
 ---
-title: iOS 지역화
-description: 이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용한에 액세스 하는 방법을 설명 합니다.
+title: Xamarin.iOS 지역화
+description: 이 문서에는 iOS 지역화 기능 및 Xamarin.iOS 앱에서 이러한 기능을 사용 하는 방법을 설명 합니다. 언어, 로캘, 문자열 파일, 시작 이미지 및 자세히 설명합니다.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785268"
 ---
-# <a name="ios-localization"></a>iOS 지역화
+# <a name="localization-in-xamarinios"></a>Xamarin.iOS 지역화
 
 _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용한에 액세스 하는 방법을 설명 합니다._
 

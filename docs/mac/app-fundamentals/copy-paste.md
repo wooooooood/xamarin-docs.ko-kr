@@ -1,5 +1,5 @@
 ---
-title: 복사 및 붙여넣기
+title: Xamarin.Mac에서 복사 및 붙여넣기
 description: 이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그램에서 여 붙여 넣는 지에 설명 합니다. 작업 하는 방법을 보여 줍니다 지정된 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법 및 여러 앱 간에 공유할 수 있는 표준 데이터 형식입니다.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: becdec771949584919595c84b13ae9e05bfd377b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791899"
 ---
-# <a name="copy-and-paste"></a>복사 및 붙여넣기
+# <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.Mac에서 복사 및 붙여넣기
 
 _이 문서에 작업 복사본을 제공 하 여 Xamarin.Mac 응용 프로그램에서 여 붙여 넣는 지에 설명 합니다. 작업 하는 방법을 보여 줍니다 지정된 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법 및 여러 앱 간에 공유할 수 있는 표준 데이터 형식입니다._
 

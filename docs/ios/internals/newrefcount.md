@@ -1,17 +1,19 @@
 ---
-title: 새 참조 계산 시스템
+title: 새 참조 시스템에 Xamarin.iOS 횟수
+description: 이 문서에서는 시스템에서 기본적으로 모든 Xamarin.iOS 응용 프로그램에서 활성화를 사용한 Xamarin의 향상 된 참조를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 00a792fb6ee55d5937046ebb321ffcb3aa8bdbd5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786254"
 ---
-# <a name="new-reference-counting-system"></a>새 참조 계산 시스템
+# <a name="new-reference-counting-system-in-xamarinios"></a>새 참조 시스템에 Xamarin.iOS 횟수
 
 Xamarin.iOS 9.2.1 도입 향상 된 참조 기본적으로 모든 응용 프로그램에는 시스템을 계산 합니다. 메모리 문제를 추적 하 고 이전 버전의 Xamarin.iOS 수정할 어려웠습니다 해결할를 사용할 수 있습니다.
 

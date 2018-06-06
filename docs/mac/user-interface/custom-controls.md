@@ -1,21 +1,20 @@
 ---
-title: 사용자 지정 컨트롤 만들기
-description: 이 문서에서는 사용자 지정 컨트롤을 만들고 인터페이스 작성기에서 사용 하는 방법을 설명 합니다.
+title: Xamarin.Mac에서 사용자 지정 컨트롤 만들기
+description: 이 문서에서는 Xamarin.Mac에서 사용자 지정 컨트롤을 빌드하는 방법을 설명 합니다. 사용자 지정 컨트롤을 작성, 해당 상태를 추적, 해당 인터페이스를 그리기, 사용자 입력에 응답 및 응용 프로그램에서 컨트롤을 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e4c2b2c9ee7bae3d6489fec6b22881653ec53043
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792680"
 ---
-# <a name="creating-custom-controls"></a>사용자 지정 컨트롤 만들기
-
-_이 문서에서는 사용자 지정 컨트롤을 만들고 인터페이스 작성기에서 사용 하는 방법을 설명 합니다._
+# <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.Mac에서 사용자 지정 컨트롤 만들기
 
 C# 및.NET Xamarin.Mac 응용 프로그램에서에서 작업할 때는 동일 하 게 액세스할 수 있습니다 하는 사용자의 작업 개발자를 제공 하는 컨트롤 *Objective-c*, *Swift* 및 *Xcode* 않습니다 . Xamarin.Mac Xcode에 직접 통합을 사용 하면 Xcode의 _인터페이스 작성기_ 만들기 및 사용자 정의 컨트롤을 유지 관리 (또는 C# 코드에서 직접 만들 필요에 따라).
 

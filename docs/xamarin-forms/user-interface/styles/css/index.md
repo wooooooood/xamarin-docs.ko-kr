@@ -1,5 +1,5 @@
 ---
-title: 연계 스타일 시트를 사용 하 여 Xamarin.Forms 앱 스타일 지정
+title: 스타일 (CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱을 지정 합니다.
 description: Xamarin.Forms는 스타일 (CSS 스타일 시트)를 사용 하는 시각적 요소를 지원 합니다.
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 811abacff330bf7b6e6240691cb6a15ebbd9d242
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 76ca67f7ac8a8e27e5f502455d48874c775fc172
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794087"
 ---
-# <a name="styling-xamarinforms-apps-using-cascading-style-sheets"></a>연계 스타일 시트를 사용 하 여 Xamarin.Forms 앱 스타일 지정
+# <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>스타일 (CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱을 지정 합니다.
 
 _Xamarin.Forms는 스타일 (CSS 스타일 시트)를 사용 하는 시각적 요소를 지원 합니다._
 
@@ -332,7 +333,7 @@ stacklayout>image {
 
 다음 CSS 선택기 Xamarin.Forms 지원 합니다.
 
-|선택기|예제|설명|
+|선택기|예|설명|
 |---|---|---|
 |`.class`|`.header`|와 모든 요소를 선택는 `StyleClass` '머리글'을 포함 하는 속성입니다. 이 선택기는 대/소문자 구분을 참고 합니다.|
 |`#id`|`#email`|요소를 모두 선택 `StyleId` 로 설정 `email`합니다. 경우 `StyleId` 설정 되지 않은 경우 대체 인증 방법 `x:Name`합니다. XAML을 사용 하는 경우 `x:Name` 보다 선호 `StyleId`합니다. 이 선택기는 대/소문자 구분을 참고 합니다.|
@@ -363,7 +364,7 @@ stacklayout>image {
 
 다음과 같은 CSS 속성 Xamarin.Forms에서 지원 됩니다 (에 **값** 열 유형은 _기울임꼴_문자열 리터럴은 반면, `gray`):
 
-|속성|적용 대상|값|예제|
+|속성|적용 대상|값|예|
 |---|---|---|---|
 |`background-color`|`VisualElement`|_색_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_문자열_ \| `initial` |`background-image: bg.png;`|
@@ -372,7 +373,7 @@ stacklayout>image {
 |`color`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`|_색_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_문자열_ \| `initial` |`font-family: Consolas;`|
-|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_이중_ \| _namedsize_  \| `initial` |`font-size: 12;`|
+|`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_이중_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
 |`margin`|`View`|_두께_ \| `initial` |`margin: 6 12;`|
@@ -447,4 +448,4 @@ stacklayout>image {
 ## <a name="related-links"></a>관련 링크
 
 - [MonkeyAppCSS (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
-- [XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

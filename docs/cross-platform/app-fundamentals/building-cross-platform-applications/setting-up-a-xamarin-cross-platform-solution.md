@@ -1,15 +1,17 @@
 ---
 title: -3 부 Xamarin 크로스 플랫폼 솔루션 설정
+description: 이 문서에서는 Xamarin의 플랫폼 간 솔루션을 설정 하는 방법을 설명 합니다. 그 discuses와 같은 전략을 공유 하는 다양 한 코드 프로젝트 및.NET 표준 공유 합니다.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: a13765805a3bc6be05522700960b032acbc864b5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781274"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>-3 부 Xamarin 크로스 플랫폼 솔루션 설정
 
@@ -98,7 +100,7 @@ ms.lasthandoff: 05/09/2018
 <a name="Example" />
 
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 이 다이어그램에는 응용 프로그램 아키텍처를 보여 줍니다.
 

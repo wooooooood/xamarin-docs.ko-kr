@@ -1,21 +1,20 @@
 ---
-title: 맵
-description: iOS 응용 프로그램에 쉽게 추가할 수 있는 프레임 워크 매핑됩니다 MapKit 포함 되어 있습니다. 지도 키트를 사용 하 여 iOS 응용 프로그램 이동 및 확대/축소, 지도에 사용자 위치와 쌓기 풍부한 그래픽 표시 등의 기능을 지 원하는 대화형 지도 추가할 수 있습니다. 이 문서는 일부의 지도 키트의 기능을 활용 하도록 응용 프로그램으로 지리적 기능을 작성 하는 방법을 보여 주는 자세하게
+title: Xamarin.iOS의 지도
+description: 이 문서에는 iOS MapKit 프레임 워크 및 Xamarin.iOS 함께 사용 하는 방법을 설명 합니다. 지도, 이동 및 확대/축소 고 작업을 사용자 위치, 주석 추가, 설명선 및 오버레이, 작업을 로컬 검색을 수행 하는 스타일을 추가 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790232"
 ---
-# <a name="maps"></a>맵
-
-_iOS 응용 프로그램에 쉽게 추가할 수 있는 프레임 워크 매핑됩니다 MapKit 포함 되어 있습니다. 지도 키트를 사용 하 여 iOS 응용 프로그램 이동 및 확대/축소, 지도에 사용자 위치와 쌓기 풍부한 그래픽 표시 등의 기능을 지 원하는 대화형 지도 추가할 수 있습니다. 이 문서는 일부의 지도 키트의 기능을 활용 하도록 응용 프로그램으로 지리적 기능을 작성 하는 방법을 보여 주는 자세하게_
+# <a name="maps-in-xamarinios"></a>Xamarin.iOS의 지도
 
 지도 모바일 운영 체제의 일반적인 기능입니다. iOS는 기본적으로 지도 키트 프레임 워크를 통해 매핑을 지원 합니다. 지도 키트 응용 프로그램 다양 하 고 대화형 지도 쉽게 추가할 수 있습니다. 다양 한 방법으로 지도에 위치를 표시 하는 주석을 추가 하 고 그래픽의 임의 셰이프를 겹치게 등 이러한 맵은 사용자 지정할 수 있습니다. 도 맵 키트에는 장치의 현재 위치를 표시 하는 데 기본적으로 지원 합니다.
 

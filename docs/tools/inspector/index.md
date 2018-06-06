@@ -1,19 +1,19 @@
 ---
 title: Xamarin Inspector
-description: 시각화 하 고 라이브 앱 디버그
+description: 이 문서는 설치 하 고 탐색 하 고 응용 프로그램을 디버깅할 Xamarin 검사를 사용 하는 방법을 설명 하는 지침에 연결 합니다.
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 87e78cb7a7b2d310bc77c1fd638a1cf32dad75a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8f33f61cd3c38dbce16f9a7afa103836aa454a0c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793089"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
-
 
 Xamarin 통합 문서 및 관리자 사용자를 도구로 대화식 C# 콘솔을 가져옵니다. 검사기 실행 중인 앱을 검사할 때 디버깅 또는 진단 보조 역할을 수행 하면 IDE의 워크플로 디버깅 하는 앱과 통합 됩니다.
 

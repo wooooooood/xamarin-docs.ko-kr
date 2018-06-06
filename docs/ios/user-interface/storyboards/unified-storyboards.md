@@ -1,21 +1,20 @@
 ---
-title: 통합 된 스토리 보드
-description: 통합 된 스토리 보드를 사용 하는 iOS 장치 화면 크기의 확장 범위를 포함 하려면 여러 스토리 보드를 사용 하지 않고 단일 스토리 보드를 사용 하 여 사용자 인터페이스를 만들려면 개발자 있습니다. 이 문서는 Xamarin.iOS 내에서 통합 된 스토리 보드의 작업으로 깊은 개요를 제공 하도록 설계 되었습니다.
+title: Xamarin.iOS의 통합 된 스토리 보드
+description: 이 문서에서는 Xamarin.iOS의 통합 된 스토리 보드에 설명 합니다. 통합 된 스토리 보드를 단일 인터페이스 정의로 여러 한 화면 크기를 지원할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d3324a6485f2d240ec339f6ce7f03aafe51c80c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792023"
 ---
-# <a name="unified-storyboards"></a>통합 된 스토리 보드
-
-_통합 된 스토리 보드를 사용 하는 iOS 장치 화면 크기의 확장 범위를 포함 하려면 여러 스토리 보드를 사용 하지 않고 단일 스토리 보드를 사용 하 여 사용자 인터페이스를 만들려면 개발자 있습니다. 이 문서는 Xamarin.iOS 내에서 통합 된 스토리 보드의 작업으로 깊은 개요를 제공 하도록 설계 되었습니다._
+# <a name="unified-storyboards-in-xamarinios"></a>Xamarin.iOS의 통합 된 스토리 보드
 
 iOS 8 사용자 인터페이스를 만들기 위한 새, 사용 가능한 더 간단한 메커니즘을 포함-통합 된 스토리 보드 합니다. 모든 다른 하드웨어 화면 크기 처리 하려면 단일 스토리 보드와 뷰를 신속 하 고 응답에서 만들 수는 "디자인-한 번, 사용 하 여 다" 스타일입니다.
 
@@ -679,7 +678,7 @@ IPad 시뮬레이터에서에서 응용 프로그램이 실행 되는 요소는 
 
  [![](unified-storyboards-images/exclude05.png "누락 된 경우 요소 iPhone 시뮬레이터에서에서 실행 중인 응용 프로그램")](unified-storyboards-images/exclude05.png#lightbox)
 
-요소에서 제외 사례를 제거 하려면에서 요소를 선택 하기만 하면는 **디자인 화면**의 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는 **-**제거 하는 경우 옆에 있는 단추입니다.
+요소에서 제외 사례를 제거 하려면에서 요소를 선택 하기만 하면는 **디자인 화면**의 아래쪽으로 스크롤하여는 **속성 탐색기** 클릭는 **-** 제거 하는 경우 옆에 있는 단추입니다.
 
 통합 된 스토리 보드의 구현을 보려면는 `UnifiedStoryboard` 샘플 Xamarin iOS 8 응용 프로그램에이 문서에 연결 합니다.
 

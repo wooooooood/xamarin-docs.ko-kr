@@ -1,5 +1,5 @@
 ---
-title: HomeKit
+title: Xamarin.iOS에 HomeKit
 description: HomeKit은 홈 자동화 장치 제어에 대 한 Apple의 프레임 워크. 이 문서는 HomeKit를 소개 하 고 이러한 액세서리와 상호 작용할 수 HomeKit 액세서리 시뮬레이터 및 간단한 Xamarin.iOS 앱 작성에 테스트 액세서리 구성에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0dfc6e9ba5098df66a72292d6c8b89ea1bbd1f97
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787463"
 ---
-# <a name="homekit"></a>HomeKit
+# <a name="homekit-in-xamarinios"></a>Xamarin.iOS에 HomeKit
 
 _HomeKit은 홈 자동화 장치 제어에 대 한 Apple의 프레임 워크. 이 문서는 HomeKit를 소개 하 고 이러한 액세서리와 상호 작용할 수 HomeKit 액세서리 시뮬레이터 및 간단한 Xamarin.iOS 앱 작성에 테스트 액세서리 구성에 대해 설명 합니다._
 
@@ -425,7 +426,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다�
  - 제조업체
  - 모델
  - MotionDetected
- - 이름
+ - name
  - ObstructionDetected
  - OccupancyDetected
  - OutletInUse

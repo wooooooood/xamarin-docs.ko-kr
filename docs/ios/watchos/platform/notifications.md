@@ -1,18 +1,20 @@
 ---
-title: 알림
+title: Xamarin에서 알림 watchOS
+description: 이 문서에서는 Xamarin의 watchOS 알림 사용 방법을 설명 합니다. 알림을 생성 하 고 알림을 테스트할 만드는 알림 컨트롤러에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 1a681c2bda941d8fe015a8d4da8b99f4d85e441b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42b0354f19a9e0c31b7a859d598526fddad726cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791912"
 ---
-# <a name="notifications"></a>알림
+# <a name="watchos-notifications-in-xamarin"></a>Xamarin에서 알림 watchOS
 
 포함 하는 iOS 앱이 지 원하는 경우 조사식 앱에서 알림을 받을 수 있습니다. 그러나 내장 된 알림 처리 하지 않으면 하므로 *필요* 아래에 설명 된 추가 알림 지원을 추가 하려면 알림 동작을 사용자 지정할 모양에 다음 읽기 하는 경우.
 

@@ -1,19 +1,20 @@
 ---
-title: 설정 및 설치
-description: WatchOS 용으로 개발 설정
+title: 설치 및 Xamarin에서 watchOS 사용
+description: 이 문서에는 설치 및 Xamarin을 사용한 watchOS를 사용 하는 방법을 설명 합니다. 설치, watchOS 프로젝트에 설명 구조, iOS 디자이너, Xcode 통합을 사용 하는 방법 및 문제 해결 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: 976b7a78b70522e6ca9942c286792b53e4f11ae5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea0c7b6a68077cde83fa211e4e6f3432b3e39d5c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791240"
 ---
-# <a name="installation"></a>설치
+# <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 Xamarin에서 watchOS 사용
 
 4 watchOS macOS Xcode 9로 시에라 (10.12) 필요합니다.
 
@@ -211,7 +212,7 @@ Mac 용 Visual Studio와 Visual Studio에서 디버깅은 지원 됩니다.
 
 ![](installation-images/debug-sml.png "이 스크린샷은 watch 앱에서 적중 되 고 디버그 중단점")
 
-시작 지침을 따랐다면 됩니다 /fd watch 앱에서 실행 되는 **iOS 시뮬레이터 (조사식)**합니다.
+시작 지침을 따랐다면 됩니다 /fd watch 앱에서 실행 되는 **iOS 시뮬레이터 (조사식)** 합니다.
 알림 모드 선택 **디버그 > 시스템 로그를 열기** (**CMD + /**) 사용 하 여 `Console.WriteLine` 코드에서.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>수명 주기 이벤트 처리기를 디버깅합니다.

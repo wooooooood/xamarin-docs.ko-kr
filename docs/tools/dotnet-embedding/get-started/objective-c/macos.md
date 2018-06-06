@@ -1,15 +1,17 @@
 ---
 title: MacOS 시작
+description: 이 문서에서는 설명 방법을 포함 하는.NET을 사용 하 여 macOS로 시작 합니다. 요구 사항에 설명 하 고 관리 되는 어셈블리를 바인딩하고 Xcode 프로젝트에서 생성 된 출력을 사용 하는 방법을 보여 주는 샘플 응용 프로그램 수를 표시 합니다.
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 85510168f37e724563eae59dfca438177b4feffe
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 38049eae5e420e5f3610341c2682fa92d2ac426e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793691"
 ---
 # <a name="getting-started-with-macos"></a>MacOS 시작
 

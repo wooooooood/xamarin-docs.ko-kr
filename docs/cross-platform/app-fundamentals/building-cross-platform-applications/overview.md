@@ -1,15 +1,17 @@
 ---
 title: 크로스 플랫폼 응용 프로그램 개요 문서
+description: '이 문서에는 플랫폼 간 응용 프로그램을 구축 상위 수준 개요를 제공 합니다. C#, 예: MVC/MVVM 및 네이티브 Ui 디자인 패턴의 값에 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e6e2b4f9d5a482a3c8c24dc5b059db2457b0f301
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1eb308e0095c29d8ab0d0bdf1f74b807fd2ab97f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780785"
 ---
 # <a name="building-cross-platform-applications-overview"></a>크로스 플랫폼 응용 프로그램 개요 문서
 

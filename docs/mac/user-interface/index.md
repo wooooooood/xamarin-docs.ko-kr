@@ -1,19 +1,20 @@
 ---
-title: macOS 사용자 인터페이스
-description: 이 문서는 다양 한 macOS UI 컨트롤에 설명 하는 지침에 연결 합니다.
+title: Xamarin.Mac에서 macOS 사용자 인터페이스 컨트롤
+description: 이 문서는 Xamarin.Mac 개발자에 게 사용할 수 있는 다양 한 사용자 인터페이스 컨트롤에 설명 하는 지침에 연결 합니다. 연결 된 콘텐츠에 창, 대화 상자, 경고, 메뉴, 도구 모음, 표 보기, 개요 보기 및 자세히 살펴보겠습니다.
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: d40faa29f2fe278377bf4eae42a032f3dc9086ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 231d3a935cf251d0b2a1a3e6947abcb1c2133b90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792956"
 ---
-# <a name="macos-user-interface"></a>macOS 사용자 인터페이스
+# <a name="macos-user-interface-controls-in-xamarinmac"></a>Xamarin.Mac에서 macOS 사용자 인터페이스 컨트롤
 
 _이 문서는 다양 한 macOS UI 컨트롤에 설명 하는 지침에 연결 합니다._
 
@@ -71,6 +72,6 @@ _이 문서는 다양 한 macOS UI 컨트롤에 설명 하는 지침에 연결 �
 
 에 제안 된 [Mac 샘플 갤러리](https://developer.xamarin.com/samples/mac/all/)합니다. 다양 한 단계 Xamarin.Mac 프로젝트를 빠르게 시작 하는 데 도움이 되는 즉시 사용할 코드를 포함 합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [Human Interface Guidelines macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

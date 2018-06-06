@@ -1,18 +1,20 @@
 ---
-title: UI 스레드 작업
+title: Xamarin.iOS에 UI 스레드 작업
+description: 이 문서에서는 Xamarin.iOS에 UI 스레드를 사용 하는 방법을 설명 합니다. 이 UI 스레드 실행에 설명, 백그라운드 스레드 예제를 제공를 async/await 검사 합니다.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 72f161001509519fb02a652f23eaa7805a55f7ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4328b84625aff4c92d6e97029ced7dde747d4fc4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790411"
 ---
-# <a name="working-with-the-ui-thread"></a>UI 스레드 작업
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.iOS에 UI 스레드 작업
 
 응용 프로그램 사용자 인터페이스는 항상 단일 스레드, 다중 스레드 장치 에서도 – 화면에 하나의 표현인 하 고 표시 되는 내용 변경 내용이 단일 '액세스 지점'를 통해 조정 해야 합니다. 이 예를 들어 동시에 같은 픽셀을 업데이트 하는 동안에서 여러 스레드를 차단 합니다.
 

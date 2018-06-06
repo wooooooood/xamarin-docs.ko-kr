@@ -1,19 +1,20 @@
 ---
-title: 끌어서 놓기
-description: 끌어서 놓기 iOS 11에 대 한 구현
+title: 끌어서 놓기 Xamarin.iOS에
+description: 이 문서에서는 끌어서를 구현 하 고 iOS 11에에서 도입 된 Api를 사용 하 여 Xamarin.iOS 앱에서 삭제 하는 방법을 설명 합니다. 사용 설명 특히 UITableView에 놓습니다.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/05/2016
-ms.openlocfilehash: fa6fcb2c4f5f17011307b31e4644889d066b71a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7c41f96dae88047e64ec1e74838e3efab55958cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786966"
 ---
-# <a name="drag-and-drop"></a>끌어서 놓기
+# <a name="drag-and-drop-in-xamarinios"></a>끌어서 놓기 Xamarin.iOS에
 
 _끌어서 놓기 iOS 11에 대 한 구현_
 

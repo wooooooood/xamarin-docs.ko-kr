@@ -1,21 +1,20 @@
 ---
-title: 백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
-description: 이 연습에서는 사용 하 여 백그라운드 전송 서비스와 NSURLSession API을 백그라운드에서 앱이 다운로드는 계속 큰 이미지를 다운로드를 시작 합니다.
+title: 백그라운드 전송 및 NSURLSession Xamarin.iOS에
+description: 이 문서에서는 백그라운드 전송 및 NSUrlSession 큰 이미지에 대 한 다운로드를 시작 하 고 백그라운드에서 응용 프로그램을 배치 하면 해당 다운로드 계속를 사용 하는 방법을 보여 주는 연습을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 51e1ae0a4314d0b23ec9e3236656321bd3dcb4e4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 08a0ba1337c0d28d1f0d60d04394ccaf4a9ccfc7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783741"
 ---
-# <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>백그라운드 전송 서비스 및 NSURLSession를 사용 하 여 연습-
-
-_이 연습에서는 사용 하 여 백그라운드 전송 서비스와 NSURLSession API을 백그라운드에서 앱이 다운로드는 계속 큰 이미지를 다운로드를 시작 합니다._
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>백그라운드 전송 및 NSURLSession Xamarin.iOS에
 
 백그라운드 전송은 배경을 구성 하 여 시작 됩니다 `NSURLSession` 및 업로드 또는 다운로드 작업 큐에 삽입 합니다. IOS 응용 프로그램의 완료 처리기를 호출 하 여 응용 프로그램에 알리는 응용 프로그램 backgrounded, 일시 중단 또는 종료 하는 동안 태스크가 완료 되 면 경우 *AppDelegate*합니다. 다음 다이어그램에서는 작업에서이 보여 줍니다.
 

@@ -1,17 +1,19 @@
 ---
-title: 유형 등록 기관
+title: Xamarin.iOS에 대 한 형식 등록
+description: 이 문서에서는 C# 클래스를 Objective-c 런타임에 사용할 수 있도록 Xamarin.iOS 유형 등록자를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9d4d2e5f3e1c2dc1233b466c00dd60340552fed0
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: e818d6a2092f408823e4a635a70c4f6666e3a7a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786176"
 ---
-# <a name="type-registrar"></a>유형 등록 기관
+# <a name="type-registrar-for-xamarinios"></a>Xamarin.iOS에 대 한 형식 등록
 
 이 문서에서는 Xamarin.iOS에서 사용 하는 형식 등록 시스템에 설명 합니다.
 

@@ -1,5 +1,5 @@
 ---
-title: 개요 보기
+title: Xamarin.Mac의 개요 보기
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 개요 보기와 작업을 설명합니다. 및 작성 하 고, Xcode 및 인터페이스 작성기의 개요 보기를 유지 관리 하 고, 이러한 작업을 프로그래밍 방식으로 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 82cb3afadf7615fdd92476371e9ab80cd1228b02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a12eee5f473ffdc6a235faeb55c0a3d6754f4629
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792829"
 ---
-# <a name="outline-views"></a>개요 보기
+# <a name="outline-views-in-xamarinmac"></a>Xamarin.Mac의 개요 보기
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램의 개요 보기와 작업을 설명합니다. 및 작성 하 고, Xcode 및 인터페이스 작성기의 개요 보기를 유지 관리 하 고, 이러한 작업을 프로그래밍 방식으로 설명 합니다._
 

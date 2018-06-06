@@ -1,18 +1,20 @@
 ---
-title: 제한 사항
+title: Xamarin.iOS의 제한 사항
+description: 이 문서에서는 제네릭, NSObjects, 제네릭 개체에서 P/Invoke 등의 일반 하위 클래스에 논의 Xamarin.iOS의 제한 사항을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/09/2018
-ms.openlocfilehash: 8bd4ce464adf316517e2e1f2299006913bc68736
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 8eb2cd5a749beab6f089479f5992fe3fbc16dd0a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786231"
 ---
-# <a name="limitations"></a>제한 사항
+# <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 
 Xamarin.iOS를 사용 하 여 iPhone에 있는 응용 프로그램은 정적 코드에 컴파일됩니다 되므로 런타임에 코드 생성을 필요로 하는 모든 기능을 사용할 수 없습니다.
 

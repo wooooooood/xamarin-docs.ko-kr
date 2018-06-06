@@ -1,21 +1,20 @@
 ---
-title: 파일 시스템 작업
-description: Xamarin.iOS 모든.NET 응용 프로그램에서 사용할 수 있는 iOS의 파일 및 디렉터리를 사용 하는 동일한 System.IO 클래스를 사용할 수 있습니다. 그러나 친숙 한 클래스 및 메서드를 불구 하 고 iOS 생성 하거나 액세스할 수 있는 파일에 몇 가지 제한 사항이 구현 및 특별 한 기능도 제공 특정 디렉터리. 이 문서에서는 이러한 제한 사항 및 기능에 설명 하 고 파일 액세스 Xamarin.iOS 응용 프로그램에서 작동 하는 방법을 보여 줍니다.
+title: Xamarin.iOS에 파일 시스템 작업
+description: 이 문서에서는 Xamarin.iOS에 파일 시스템으로 작업 하는 방법을 설명 합니다. 디렉터리, 파일, XML 및 JSON serialization, iTunes 등을 통해 파일을 공유 하는 응용 프로그램 샌드박스 읽기에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 5bcfac7911ac589e08cd6c5db8c8ea15a3497eca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784243"
 ---
-# <a name="working-with-the-file-system"></a>파일 시스템 작업
-
-_Xamarin.iOS 모든.NET 응용 프로그램에서 사용할 수 있는 iOS의 파일 및 디렉터리를 사용 하는 동일한 System.IO 클래스를 사용할 수 있습니다. 그러나 친숙 한 클래스 및 메서드를 불구 하 고 iOS 생성 하거나 액세스할 수 있는 파일에 몇 가지 제한 사항이 구현 및 특별 한 기능도 제공 특정 디렉터리. 이 문서에서는 이러한 제한 사항 및 기능에 설명 하 고 파일 액세스 Xamarin.iOS 응용 프로그램에서 작동 하는 방법을 보여 줍니다._
+# <a name="working-with-the-file-system-in-xamarinios"></a>Xamarin.iOS에 파일 시스템 작업
 
 Xamarin.iOS를 사용할 수 있습니다 및 `System.IO` 에 있는 클래스는 *.NET 클래스 라이브러리 BCL (기본)* iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스 사용 생성, 삭제 및 파일을 읽을 수 있습니다 및 `Directory` 클래스 만들기, 삭제 또는 디렉터리의 내용을 열거할 수 있습니다. 사용할 수도 있습니다 `Stream` 높은 수준의 파일 작업 (예: 파일 내에서 압축 또는 위치 검색)에 대 한 제어를 제공할 수 있는 하위 클래스입니다.
 
@@ -29,15 +28,13 @@ iOS 파일 시스템 관련 기능도 일부 있으며: 특정 디렉터리 백�
 
  <a name="General_File_Access" />
 
-
 ## <a name="general-file-access"></a>일반 파일 액세스
 
 Xamarin.iOS.NET을 사용 하면 `System.IO` iOS에서 파일 시스템 작업에 대 한 클래스입니다.
 
 다음 코드 조각은 몇 가지 일반적인 파일 작업을 보여 줍니다. 찾을 수에서 아래 모든 해당는 `SampleCode.cs` 이 문서에 대 한 샘플 응용 프로그램에서 파일입니다.
 
- <a name="Working_with_directories" />
-
+<a name="Working_with_directories" />
 
 ### <a name="working-with-directories"></a>디렉터리 작업
 

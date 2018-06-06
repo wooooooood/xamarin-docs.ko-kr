@@ -1,19 +1,20 @@
 ---
-title: 스토리 보드와 작업
-description: Xcode를 사용 하 여 스토리 보드와 macOS 사용자 인터페이스를 작성 합니다.
+title: Xamarin.Mac의 스토리 보드와 작업
+description: 이 문서 코드, 보기 컨트롤러 수명 주기, 응답자 체인에서 로드 하는 방법을 검사 Xamarin.Mac의 스토리 보드를 사용 하는 방법을 설명, segues 창 컨트롤러, 제스처 인식기 등입니다.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792842"
 ---
-# <a name="storyboards"></a>스토리보드
+# <a name="working-with-storyboards-in-xamarinmac"></a>Xamarin.Mac의 스토리 보드와 작업
 
 스토리 보드 모든 컨트롤러 해당 보기의 기능 개요로 분리 하는 지정된 된 앱에 대 한 UI를 정의 합니다. Xcode의 인터페이스 작성기에서 이러한 컨트롤러 각각 자체 장면에서 실행 됩니다.
 

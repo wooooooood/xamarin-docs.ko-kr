@@ -1,23 +1,21 @@
 ---
 title: Xamarin 사용한 연속 통합 소개
-description: 연속 통합은 자동화 된 빌드 컴파일 및 코드를 추가 하거나 프로젝트의 버전 제어 리포지토리에 개발자가 변경한 경우 필요에 따라 앱을 테스트 하는 소프트웨어 엔지니어링 좋습니다. 이 문서는 연속 통합의 일반적인 개념 및 옵션 중 일부는 사용할 수 있는 연속 통합에 대 한 Xamarin 프로젝트와 함께 설명 합니다.
+description: Xamarin 사용한 연속 통합에 설명 하는 지침은이 문서 연결 되어 있습니다. 연결 된 콘텐츠는 연속 통합의 개요를 제공 하 고 앱 센터 빌드, TeamCity, 및 Jenkins를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: topgenorth
 ms.author: toopge
 ms.date: 05/04/2017
-ms.openlocfilehash: 34838a1527cb3661e8e5ed51b5950f26026e9433
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1a38160b4f1536c0e0e393cb9ec3482624a40681
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793746"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용한 연속 통합 소개
 
-_연속 통합은 자동화 된 빌드 컴파일 및 코드를 추가 하거나 프로젝트의 버전 제어 리포지토리에 개발자가 변경한 경우 필요에 따라 앱을 테스트 하는 소프트웨어 엔지니어링 좋습니다. 이 문서는 연속 통합의 일반적인 개념 및 옵션 중 일부는 사용할 수 있는 연속 통합에 대 한 Xamarin 프로젝트와 함께 설명 합니다._
-
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
-
 
 ##  <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[연속 통합 소개](~/tools/ci/intro-to-ci.md)
 
@@ -26,7 +24,6 @@ _연속 통합은 자동화 된 빌드 컴파일 및 코드를 추가 하거나 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
 ## <a name="working-with-continuous-integration-environments"></a>연속 통합 환경 작업
-
 
 ### <a name="using-app-center-build-with-xamarinappcenterbuildxamarin"></a>[Xamarin에서 App Center 빌드 사용](/appcenter/build/xamarin/)
 

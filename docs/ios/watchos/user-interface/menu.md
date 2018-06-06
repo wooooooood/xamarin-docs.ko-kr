@@ -1,18 +1,20 @@
 ---
-title: Menu 컨트롤 (강제 터치)
+title: watchOS Xamarin에서 Menu 컨트롤 (강제 터치)
+description: 이 문서에서는 Xamarin의 watchOS force 터치 제스처를 사용 하는 방법을 설명 합니다. Force 터치에 응답 하는 방법에 설명 추가 메뉴 및 메뉴 항목을 변경 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4895f140acbc8a622cfb91c2fe9db6c5e9d9d1d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b973b925b99189416087224644c376864c56871
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791347"
 ---
-# <a name="menu-control-force-touch"></a>Menu 컨트롤 (강제 터치)
+# <a name="watchos-menu-control-force-touch-in-xamarin"></a>watchOS Xamarin에서 Menu 컨트롤 (강제 터치)
 
 조사식 키트 watch 앱 화면에서 구현 되는 경우 메뉴를 트리거하는 Force 터치 제스처를 제공 합니다.
 

@@ -1,18 +1,20 @@
 ---
-title: 편집
+title: Xamarin.iOS와 테이블 편집
+description: 이 문서에서는 Xamarin.iOS의 테이블을 편집 하는 방법을 설명 합니다. 삭제, 편집 모드 및 행을 삽입을 살짝 밉니다에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789992"
 ---
-# <a name="editing"></a>편집
+# <a name="editing-tables-with-xamarinios"></a>Xamarin.iOS와 테이블 편집
 
 메서드를 재정의 하 여 테이블 편집 기능을 사용할 수는 `UITableViewSource` 하위 클래스입니다. 가장 간단한 편집 동작에는 단일 메서드를 재정의할으로 구현할 수 있는 삭제 하려면 살짝 밀기입니다.
 더 복잡 한 (포함 하 여 행 이동)을 편집 하는 테이블과 함께 편집 모드에 수행할 수 있습니다.

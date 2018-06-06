@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Mac 확장 프로그램별 지원 기능
-description: 이 문서에서는 Xamarin.Mac 버전 2.10 (이상)의 확장 프로그램별 지원 기능에 설명 합니다.
+description: 이 문서에는 Finder, 공유 및 오늘 확장에 대 한 Xamarin.Mac의 지원을 설명합니다. 이 제한 사항 및 알려진된 문제, 연습 및 샘플 앱에 대 한 링크를 확인 하 고 확장을 사용 하기 위한 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 03936c75d31bfd01e741ad2c09096c925dc9dbfc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4cef6e89b89ef41a0c93b687c9df11a8aa971ed5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792380"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 프로그램별 지원 기능
 

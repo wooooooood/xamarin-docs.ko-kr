@@ -1,19 +1,20 @@
 ---
-title: 프로젝트 참조
-description: IOS 응용 프로그램, watch 앱 및 조사식 확장 간의 관계를 설명 합니다.
+title: watchOS Xamarin의 프로젝트 참조
+description: 이 문서는 iOS 앱, watch 앱 및 조사식 응용 프로그램 확장 간의 관계를 설명 합니다. 프로젝트 참조 및 번들에 설명 식별자입니다.
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: f3573e8b578ca567ea9d7360eb132aead4c24f37
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1bd950d0929beae7133b0eb8ef6b2a69bc116f50
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791490"
 ---
-# <a name="project-references"></a>프로젝트 참조
+# <a name="watchos-project-references-in-xamarin"></a>watchOS Xamarin의 프로젝트 참조
 
 _IOS 응용 프로그램, watch 앱 및 조사식 확장 간의 관계를 설명 합니다._
 

@@ -1,19 +1,20 @@
 ---
-title: 스토리 보드 빠른 시작
-description: 스토리 보드와 사용자 인터페이스 시작된 건물 macOS를 가져오는 중입니다.
+title: Xamarin.Mac-빠른 시작의에서 스토리 보드
+description: 이 문서 작성 macOS Xamarin.Mac의 스토리 보드와 사용자 인터페이스에 대 한 빠른 시작 소개를 제공 합니다. segue를 만들고 기본 설정 창 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bf91a51a55583e2ba8ca1fc09eb3dcd0d9986cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792574"
 ---
-# <a name="starting-a-new-storyboard-based-project"></a>프로젝트를 기반으로 새 스토리 보드를 시작 합니다.
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Xamarin.Mac-빠른 시작의에서 스토리 보드
 
 스토리 보드를 사용 하 여 Xamarin.Mac 응용 프로그램의 사용자 인터페이스를 정의 하려면 간략 한 소개를으로 새 Xamarin.Mac 프로젝트를 시작 하겠습니다. **Mac** > **앱** > **Cocoa 앱**을 선택하고 **다음** 단추를 클릭합니다.
 

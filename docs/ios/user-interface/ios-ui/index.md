@@ -1,19 +1,20 @@
 ---
 title: IOS의 사용자 인터페이스
-description: Xamarin.iOS 앱의 iOS 사용자 인터페이스 작업을 다룹니다.
+description: Xamarin.iOS 앱에서 사용자 인터페이스를 작성 하는 방법에 설명 하는 지침은이 문서 연결 되어 있습니다. 연결 된 가이드 모양 API를 만드는 사용자 인터페이스 개체 및 레이아웃 옵션을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: dd07ba6853901c93ad26b371ea88b7d39c37d3f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a51d3f57106a282ed72b45dedf356739244e247f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790369"
 ---
-# <a name="user-interface-in-ios"></a>IOS의 사용자 인터페이스
+# <a name="user-interfaces-in-ios"></a>IOS의 사용자 인터페이스
 
 ## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[모양 API](introduction-to-the-appearance-api.md)
 

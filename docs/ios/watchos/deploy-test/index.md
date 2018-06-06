@@ -1,19 +1,20 @@
 ---
-title: 배포 및 테스트
-description: 장치에서 테스트 및 앱 스토어에 업로드
+title: 배포 및 Xamarin 사용한 watchOS 앱 테스트
+description: 이 문서에서는 배포 및 Xamarin을 사용 하 여 빌드한 watchOS 앱을 테스트 하는 방법에 설명 합니다. 배포 검사 목록에서는 명시적 설명 및 와일드 카드 응용 프로그램 Id, 앱 그룹을 참조 하며 합니다.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 47c63a01d435626fd1637b6ed5f5bb1755c717af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 778583456e74bb7ed3a85dce96bcdbc487aef57a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790944"
 ---
-# <a name="deployment-and-testing"></a>배포 및 테스트
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>배포 및 Xamarin 사용한 watchOS 앱 테스트
 
 ## <a name="deployment-checklist"></a>배포 검사 목록
 

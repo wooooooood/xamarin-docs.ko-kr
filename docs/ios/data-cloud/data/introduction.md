@@ -1,18 +1,20 @@
 ---
-title: IOS에서 데이터 저장소 소개
+title: Xamarin.iOS 앱에서 데이터 저장소 소개
+description: 이 문서는 Xamarin.iOS 응용 프로그램의 데이터 저장소를 위한 다양 한 방법에 설명 하 고 SQLite의 이점에 대 한 특정 정보를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 0da267502629ba30da59c26600ef0e7c605640aa
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 3fc82e2a1a2cf8d25d934ca2194ecd7de1b8b7df
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784705"
 ---
-# <a name="introduction"></a>소개
+# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 데이터 저장소 소개
 
 ## <a name="when-to-use-a-database"></a>데이터베이스를 사용 하는 경우
 

@@ -7,17 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: be1a3274ff4c9a15b7ee13c29d3176229a70642c
-ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
+ms.openlocfilehash: 4d1699f95d39fcd43a4d8da8404beac8cbf0158e
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733024"
 ---
 # <a name="grid"></a>표
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 행과 열으로 뷰를 정렬 하는 지원 합니다. 행과 열을 비례 크기 또는 절대 크기를 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블와 혼동 해서는 안 하며 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식의 개념을 없습니다. HTML 테이블과 달리 `Grid` 콘텐츠도 배치 하기 위한 순수 하 게 됩니다.
 
-[![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](grid-images/layouts-sml.png "Xamarin.Forms 레이아웃")](grid-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
 이 문서에서는 설명 합니다.
 
@@ -130,7 +131,7 @@ var bottomLeft = new Label { Text = "Bottom Left" };
 var bottomRight = new Label { Text = "Bottom Right" };
 
 grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0;
+grid.Children.Add(topRight, 1, 0);
 grid.Children.Add(bottomLeft, 0, 1);
 grid.Children.Add(bottomRight, 1, 1);
 ```

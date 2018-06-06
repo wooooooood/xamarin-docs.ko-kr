@@ -1,18 +1,20 @@
 ---
-title: 연습-배경 위치를 사용 하 여
+title: 연습-Xamarin.iOS에서 배경 위치
+description: 이 문서에서는 backgrounded Xamarin.iOS 응용 프로그램에서 위치 정보를 사용 하는 방법 안내 합니다. 필요한 설정, 사용자 인터페이스 및 응용 프로그램 상태를 설명합니다.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e6c74d9ffba4f63682a905d6ebc06d02be81abf4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784096"
 ---
-# <a name="walkthrough---using-background-location"></a>연습-배경 위치를 사용 하 여
+# <a name="walkthrough---background-location-in-xamarinios"></a>연습-Xamarin.iOS에서 배경 위치
 
 이 예제에서는 하겠습니다 iOS 우리의 현재 위치에 대 한 정보를 인쇄 하는 위치 응용 프로그램을 빌드: 위도, 경도 및 화면에 다른 매개 변수입니다. 이 응용 프로그램에서는 응용 프로그램이 있는 동안 액티브 또는 Backgrounded 위치 업데이트를 제대로 수행 하는 방법을 보여 줍니다.
 
@@ -21,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 ## <a name="application-set-up"></a>응용 프로그램 설정
 
 
-1. 먼저 새 만듭니다 **iOS > 앱 > 단일 보기 응용 프로그램 (C#)**합니다. 호출 _위치_ iPad 및 iPhone을 모두 선택 되어 있는지 확인 합니다.
+1. 먼저 새 만듭니다 **iOS > 앱 > 단일 보기 응용 프로그램 (C#)** 합니다. 호출 _위치_ iPad 및 iPhone을 모두 선택 되어 있는지 확인 합니다.
 
 1. 위치 응용 프로그램에서 iOS 배경 필요한 응용 프로그램으로 한정합니다. 응용 프로그램을 편집 하 여 위치 응용 프로그램으로 등록는 **Info.plist** 프로젝트 파일입니다.
 

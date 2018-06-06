@@ -7,11 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 4e3e090d826aa46d503f8c612250fd5122bc703e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733037"
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
 
@@ -388,7 +389,7 @@ namespace XamlSamples
 
 [![](data-binding-basics-images/listview3.png "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")](data-binding-basics-images/listview3-large.png#lightbox "DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩")
 
-`ListView` 은 매우 정교 내부에서 동적으로 발생할 수 있는 변경 내용 처리의 경우에만 아니라 데이터가 특정 단계를 수행 합니다. 항목의 컬렉션에 할당 된 경우는 `ItemsSource` 속성은 `ListView` 런타임 중에 변경-하는 항목에 추가할 수 있는 경우 또는 컬렉션에서 제거-사용 하 여는 `ObservableCollection` 이러한 항목에 대 한 클래스입니다. `ObservableCollection` 구현 하는 `INotifyCollectionChanged` 인터페이스 및 `ListView` 에 대 한 처리기를 설치 합니다는 `CollectionChanged` 이벤트입니다.
+`ListView` 은 특정 단계를 수행 하는 경우에 기본 제공 데이터에 동적으로 발생할 수 있는 변경 내용 처리에서 매우 정교 합니다. 항목의 컬렉션에 할당 된 경우는 `ItemsSource` 속성은 `ListView` 런타임 중에 변경-하는 항목에 추가할 수 있는 경우 또는 컬렉션에서 제거-사용 하 여는 `ObservableCollection` 이러한 항목에 대 한 클래스입니다. `ObservableCollection` 구현 하는 `INotifyCollectionChanged` 인터페이스 및 `ListView` 에 대 한 처리기를 설치 합니다는 `CollectionChanged` 이벤트입니다.
 
 런타임 중 자체의 속성을 변경한 후 컬렉션의 항목을 구현 해야 하는 경우는 `INotifyPropertyChanged` 인터페이스 및 신호 변경 내용을 사용 하 여 속성 값은 `PropertyChanged` 이벤트입니다. 이 시리즈의 다음 부분에서이 확인할 [5 부 합니다. MVVM에 데이터 바인딩에서](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)합니다.
 

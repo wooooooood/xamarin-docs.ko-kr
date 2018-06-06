@@ -1,5 +1,5 @@
 ---
-title: 테이블 뷰
+title: 표 보기에서 Xamarin.Mac
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 테이블 뷰를 사용 하는 작업을 설명합니다. Xcode 및 작성기 인터페이스 및 코드에서 상호 작용 하에서 만드는 테이블 뷰를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da26810869f23b8861ffb4409248c56bff12a521
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793232"
 ---
-# <a name="table-views"></a>테이블 뷰
+# <a name="table-views-in-xamarinmac"></a>표 보기에서 Xamarin.Mac
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에서 테이블 뷰를 사용 하는 작업을 설명합니다. Xcode 및 작성기 인터페이스 및 코드에서 상호 작용 하에서 만드는 테이블 뷰를 설명 합니다._
 

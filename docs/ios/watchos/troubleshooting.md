@@ -1,6 +1,6 @@
 ---
 title: watchOS 문제 해결
-description: 알려진된 문제 및 watchOS 개발 문제에 대 한 대안입니다.
+description: 이 문서에서는 알려진된 문제 및 Xamarin 사용한 watchOS 개발에 대 한 대안을 설명합니다. 이미지, 명령줄에서 watch 앱을 시작 되는 인터페이스 컨트롤러를 수동으로 추가 하는 문제를 설명 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4e84028336669738c40da9e37cd22f32ba11dfc1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791767"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -226,7 +227,7 @@ IOS 시뮬레이터를 제어 하려면 명령줄을 사용할 수도 있습니�
 
 응용 프로그램에 맞게 업데이트 해야 할 매개 변수는 `launchsimwatch`:
 
-### <a name="--launchsimwatch"></a>--launchsimwatch
+### <a name="--launchsimwatch"></a>-launchsimwatch
 
 기본 응용 프로그램 번들의 전체 경로 *watch 앱 및 확장을 포함 하는 iOS 앱에 대 한*합니다.
 
@@ -267,7 +268,7 @@ IOS 시뮬레이터를 제어 하려면 명령줄을 사용할 수도 있습니�
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--device
+### <a name="--device"></a>-장치
 
 시뮬레이터 장치 실행입니다. 이 런타임 및 장치 유형의 조합을 사용 하 여 하거나 특정 장치 udid를 사용 하 여 두 가지 방법으로 지정할 수 있습니다.
 

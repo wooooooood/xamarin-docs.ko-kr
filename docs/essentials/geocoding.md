@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 지 오 코딩
-description: 지 오 코딩 클래스는 Api를 제공 geocode를 위치 좌표로 placemark geocode coordincates는 placemark을 반전 합니다.
+title: 'Xamarin.Essentials: 지 오 코딩'
+description: Xamarin.Essentials에 지 오 코딩 클래스는 Api를 제공 두 geocode를 위치 좌표로 placemark geocode 좌표는 placemark을 반전 합니다.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 95301dad847887e867b220997ea9c34dba827982
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 0b6cbf9ee5621466285656a5efee68ccc2c85211
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783030"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials 지 오 코딩
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지 오 코딩
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

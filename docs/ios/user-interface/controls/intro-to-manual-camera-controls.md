@@ -1,21 +1,20 @@
 ---
-title: 수동 카메라 컨트롤
-description: AVFoundation 프레임 워크를 사용 하면 사용자가 수동 카메라 컨트롤에 대 한 허용 하 여 멋진 사진을 하기가 매우 편리 합니다. 이 프레임 워크를 사용 하 여 응용 프로그램 카메라 포커스, 흰색 균형 및 노출 설정을 직접 제어할을 걸릴 수 있습니다. 응용 프로그램를 자동으로 다른 노출 설정 사용 하 여 이미지를 캡처할 대괄호로 묶은 노출 캡처 사용할 수도 있습니다. 이 문서를 수동 카메라 컨트롤을 사용 하 여 간단한 iOS 8 모바일 응용 프로그램에서 개요를 걸립니다.
+title: Xamarin.iOS의 수동 카메라 컨트롤
+description: 이 문서에서는 수동 카메라 컨트롤을 사용 하려면 Xamarin.iOS을 iOS AVFoundation 프레임 워크에 사용할 수는 방법을 설명 합니다. 수동 카메라 컨트롤에 사용자를 제어 포커스, 흰색 균형 노출 설정 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 8545dce1b9232e396c4c9e71ad5f20649eef2417
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a0f605a38117df87a03801c3b9d86b0b7361c232
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790827"
 ---
-# <a name="manual-camera-controls"></a>수동 카메라 컨트롤
-
-_AVFoundation 프레임 워크를 사용 하면 사용자가 수동 카메라 컨트롤에 대 한 허용 하 여 멋진 사진을 하기가 매우 편리 합니다. 이 프레임 워크를 사용 하 여 응용 프로그램 카메라 포커스, 흰색 균형 및 노출 설정을 직접 제어할을 걸릴 수 있습니다. 응용 프로그램를 자동으로 다른 노출 설정 사용 하 여 이미지를 캡처할 대괄호로 묶은 노출 캡처 사용할 수도 있습니다. 이 문서를 수동 카메라 컨트롤을 사용 하 여 간단한 iOS 8 모바일 응용 프로그램에서 개요를 걸립니다._
+# <a name="manual-camera-controls-in-xamarinios"></a>Xamarin.iOS의 수동 카메라 컨트롤
 
 제공 하는 수동 카메라 컨트롤은 `AVFoundation Framework` iOS 8, iOS 장치의 카메라를 통해 완전히 제어 하는 모바일 응용 프로그램을 허용 합니다. 이 세분화 된 수준의 제어 여전히 이미지 나 비디오 촬영 하는 동안 카메라의 매개 변수를 조정 하 여 아티스트 컴포지션 설명과 전문 수준 카메라 응용 프로그램을 만드는 데 사용할 수 있습니다.
 

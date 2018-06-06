@@ -1,21 +1,20 @@
 ---
-title: 부모 응용 프로그램 사용
-description: WatchOS 1에서에서 iOS 및 조사식 앱 간에 데이터 공유
+title: WatchOS Xamarin에서 부모 응용 프로그램 사용
+description: 이 문서에서는 Xamarin watchOS 부모 응용 프로그램을 사용 하는 방법을 설명 합니다. 응용 프로그램 확장 WatchKit, iOS 앱, 공유 저장소 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 769847cccb3e21fea4d8f45d8e5d0c0fb59bdd43
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3af2cce0d84e3934eeb89917990f111d29aadef1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790694"
 ---
-# <a name="working-with-the-parent-application"></a>부모 응용 프로그램 사용
-
-_WatchOS 1에서에서 iOS 및 조사식 앱 간에 데이터 공유_
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>WatchOS Xamarin에서 부모 응용 프로그램 사용
 
 > [!IMPORTANT]
 > 아래 예제를 사용 하 여만 부모 응용 프로그램에 액세스 watchOS 1 조사식 앱에서 작동 합니다.

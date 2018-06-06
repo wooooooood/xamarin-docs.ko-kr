@@ -1,18 +1,19 @@
 ---
-title: 연습-요소 API를 사용 하 여 응용 프로그램 만들기
+title: Xamarin.iOS 요소 API를 사용 하 여 응용 프로그램 만들기
 description: 이 문서 MonoTouch 대화 문서의에 제공 된 정보를 기준으로 작성 합니다. MonoTouch.Dialog (산 사용 하는 방법을 보여 주는 연습을 제공 D) 요소 API 빠르게 시작 하려면 산 사용한 응용 프로그램 빌드 4.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e4fbf744c6f967d09e0033212024c2e2398fb768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64f407288da72dbf51fb3388ddf36caea377f09c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790434"
 ---
-# <a name="walkthrough---creating-an-application-using-the-elements-api"></a>연습-요소 API를 사용 하 여 응용 프로그램 만들기
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Xamarin.iOS 요소 API를 사용 하 여 응용 프로그램 만들기
 
 _이 문서 MonoTouch 대화 문서의에 제공 된 정보를 기준으로 작성 합니다. MonoTouch.Dialog (산 사용 하는 방법을 보여 주는 연습을 제공 D) 요소 API 빠르게 시작 하려면 산 사용한 응용 프로그램 빌드 4._
 

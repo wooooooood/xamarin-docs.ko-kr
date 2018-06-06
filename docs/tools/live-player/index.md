@@ -1,16 +1,17 @@
 ---
-title: Xamarin.Forms에 대 한 라이브 플레이어
-description: Xamarin을 신속 하 게 학습, 구축 및 Android 또는 iOS 장치에서 실행 중인 응용 프로그램을 시작 합니다.
+title: Xamarin.Forms에 대 한 Xamarin 라이브 플레이어
+description: 이 문서에서는 Xamarin.Forms를 설치, Xamarin Player 라이브 응용 프로그램, Xamarin 라이브 선수, 제한를 사용 하는 예제를 설명 하 고 문제 해결에 대 한 라이브 Xamarin Player를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 79cf2c790789963189d3eedd6645a6b6ae6503b6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793140"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms에 대 한 Xamarin 라이브 플레이어
 
@@ -46,7 +47,6 @@ Xamarin Player 라이브 지원할 수 있는 어떤 기능에 몇 가지 제한
 ## <a name="troubleshootingtroubleshootingmd"></a>[문제 해결](troubleshooting.md)
 
 무언가 잘못 된 경우 도움말을 찾습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

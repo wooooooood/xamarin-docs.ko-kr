@@ -1,18 +1,20 @@
 ---
-title: 에서 사용할 제품 구매
+title: Xamarin.iOS의 제품에서 사용할 구매
+description: 이 문서는 계속 장치에 관계 없이 무제한으로 사용할 수 있는 사용자가 구매 기능이 있는 Xamarin.iOS에서 사용할 제품을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786953"
 ---
-# <a name="purchasing-non-consumable-products"></a>에서 사용할 제품 구매
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Xamarin.iOS의 제품에서 사용할 구매
 
 비-사용 가능한 제품 ' 소유 '는 고객이 합니다. 항상 액세스할 수 있는, 자신의 장치를 분실 또는 도난당 하거나 새를 구입 하는 경우에으로 예상이 됩니다. 설명서, 잡지 문제, 게임 수준, 사진 필터, ' pro 기능 ' 등 유용합니다. 사용자가 아닌 소모품 제품 구입 후 다시 지불할 필요가 있습니다. 실수로 코드를 사용 하면 사용 하도록 해보세요 있습니다, StoreKit 이미 구매 하는 메시지를 표시 됩니다.
 

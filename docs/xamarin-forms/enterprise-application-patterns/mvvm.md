@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793959"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -175,7 +176,7 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, object o
 
 모든 모델 보기 및 보기에 액세스할 수 있는 모델 클래스를 구현 해야는 `INotifyPropertyChanged` 인터페이스입니다. 기본 속성 값이 변경 될 때 보기에서 데이터 바인딩된 컨트롤에 대 한 변경 알림을 제공 하기 위해 클래스를 허용 보기 모델 또는 모델 클래스에서이 인터페이스를 구현 합니다.
 
-다음 요구 사항을 충족 하 여 응용 프로그램의 속성 변경 알림의 올바른 사용에 대 한 설계 해야 합니다.
+다음 요구 사항을 충족 하 여 앱 속성 변경 알림의 올바른 사용에 대 한 설계 해야 합니다.
 
 -   항상 발생 한 `PropertyChanged` 이벤트 공용 속성의 값을 변경 합니다. 해당를 발생 시키는 가정 하지 않습니다는 `PropertyChanged` XAML 바인딩이 발생 하는 방법에 대 한 지식이 때문에 이벤트를 무시할 수 있습니다.
 -   항상 발생 한 `PropertyChanged` 이벤트에 대 한 해당 값은 보기에서 다른 속성에 의해 사용 되는 속성 계산 모델 또는 모델입니다.

@@ -1,15 +1,17 @@
 ---
 title: Java 시작
+description: 이 문서에서는.NET 포함을 사용 하 여 Java를 사용 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: e88e3c8d2dbabebcfff22687d8ea341233a776b5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 84ef5d047b3f70635d74ef5bee7741a7447db677
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793219"
 ---
 # <a name="getting-started-with-java"></a>Java 시작
 

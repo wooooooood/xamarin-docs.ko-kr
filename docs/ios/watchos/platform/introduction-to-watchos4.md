@@ -1,21 +1,20 @@
 ---
 title: WatchOS 4 소개
-description: Xamarin을 사용 하 여 watchOS 4에 대 한 개발자에 게 사용할 수 있는 새로운 기능입니다.
+description: 이 문서에서는 이제 Xamarin 개발자에 게 사용할 수 있는 새로운 기능을 설명 하는 4, watchOS 간략하게 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
-ms.openlocfilehash: d3377b503273dc84cfe07227c4b007c8e073f1a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 550cf57f6b89a8fd5726ae55cb5eaaa54d6d2692
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791269"
 ---
 # <a name="introduction-to-watchos-4"></a>WatchOS 4 소개
-
-_Xamarin을 사용 하 여 watchOS 4에 대 한 개발자에 게 사용할 수 있는 새로운 기능입니다._
 
 Access 앱에서 watchOS 4의 새로운 기능:
 
@@ -29,7 +28,6 @@ WatchOS 3 이후 변경 내용:
 
 * 응용 프로그램 코드 및 UI 단일 프로세스에서 실행 됩니다.
 * 조사식 (전화 번호에 허용 하는 사용자에 게 필요 없음)에 위치 권한을 부여할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

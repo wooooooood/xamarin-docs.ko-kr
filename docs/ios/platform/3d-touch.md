@@ -1,19 +1,20 @@
 ---
-title: 3D 터치 소개
-description: 이 문서에서는 새를 사용 하 여 응용 프로그램에서 iPhone 6s 및 iPhone 6s Plus 3D 터치 제스처입니다.
+title: 3D 터치 Xamarin.iOS 소개
+description: 이 문서에서는 iPhone 6s 및 iPhone 6s 도입 3D 터치 제스처를 사용 하는 방법을 설명 및 합니다. 이러한 제스처 누르는, 미리 보기 및 pop, 활성화 및 빠른 작업입니다.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a0d89315b82f4931538cdabe64aade7986b2a42e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6eb71409317661cdd571c708db062e06e63ff55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786585"
 ---
-# <a name="introduction-to-3d-touch"></a>3D 터치 소개
+# <a name="introduction-to-3d-touch-in-xamarinios"></a>3D 터치 Xamarin.iOS 소개
 
 _이 문서에서는 새를 사용 하 여 응용 프로그램에서 iPhone 6s 및 iPhone 6s Plus 3D 터치 제스처입니다._
 

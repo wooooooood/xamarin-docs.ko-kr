@@ -1,15 +1,16 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: WPF 및 합니다. Xamarin.Forms 앱 수명 주기
-description: 앱 시작 프로세스를 이해 하 고 상태는 백그라운드 처리
+description: 이 문서를 비교는 공통점과 차이점 Xamarin.Forms 및 WPF 응용 프로그램에 대 한 응용 프로그램 수명 주기 사이입니다. 시각적 트리, 그래픽, 리소스 및 스타일에 대해서도 설명 합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: b4f9aebbbcab48290d37c5732c69267897238272
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: abb7773873fa181085464b5985cc8233715cc4be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781584"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및 합니다. Xamarin.Forms 앱 수명 주기
 

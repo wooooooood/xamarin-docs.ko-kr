@@ -1,21 +1,20 @@
 ---
-title: AVAudioPlayer와 소리 재생
-description: 이 문서는 AVAudioPlayer를 사용 하 여 소리 재생을 제어 하는 도우미 클래스를 사용 하는 방법을 보여 줍니다.
+title: Xamarin.Mac에 AVAudioPlayer와 소리 재생
+description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 AVAudioPlayer 소리를 재생 하는 방법에 설명 합니다. AVAudioPlayer 높은 수준 및 보다 완전 하 게 설명 하는 다른 문서 링크에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 25e3285a1da1b6a112629001d5412fdd0788c705
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e5b9ec43189999f8a0aee29eb50221b494e2133
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791857"
 ---
-# <a name="playing-sound-with-avaudioplayer"></a>AVAudioPlayer와 소리 재생
-
-_이 문서는 AVAudioPlayer를 사용 하 여 소리 재생을 제어 하는 도우미 클래스를 사용 하는 방법을 보여 줍니다._
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Xamarin.Mac에 AVAudioPlayer와 소리 재생
 
 ## <a name="about-the-avaudioplayer"></a>AVAudioPlayer에 대 한
 
@@ -34,8 +33,6 @@ _이 문서는 AVAudioPlayer를 사용 하 여 소리 재생을 제어 하는 �
 ## <a name="playing-sounds-in-macos"></a>MacOS에서 소리 재생
 
 MacOS iOS 하므로 동일한 오디오 도구 상자 클래스를 지원 하므로 iOS를 참조 하십시오 [AVAudioPlayer와 소리 재생](https://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/) Xamarin.Mac 앱에서 오디오 재생의 전체 세부 정보에 대 한 설명서입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

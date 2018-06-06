@@ -1,5 +1,5 @@
 ---
-title: 코어 그래픽
+title: Xamarin.iOS의 핵심 그래픽
 description: 핵심 그래픽 iOS 프레임 워크에 설명 합니다. 기 하 도형, 이미지, Pdf를 그리려면 코어 그래픽을 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e7b28ae8014928d82628bd8069d30ca88a4be05f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d7124c7d09ca4e36ce22d60f578ea4a75d4a05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786758"
 ---
-# <a name="core-graphics"></a>코어 그래픽
+# <a name="core-graphics-in-xamarinios"></a>Xamarin.iOS의 핵심 그래픽
 
 _핵심 그래픽 iOS 프레임 워크에 설명 합니다. 기 하 도형, 이미지, Pdf를 그리려면 코어 그래픽을 사용 하는 방법을 보여 줍니다._
 
@@ -204,7 +205,7 @@ public override void Draw (CGRect rect)
 
  ![](core-graphics-images/03-upside-down-monkey.png "180도 회전 그려지는 이미지")
 
-이 대 한 원인은 보기의 원점이 홈페이지에서 이미지 그리기에 대 한 핵심 그래픽 원점이 왼쪽 아래에 있고입니다. 따라서 이미지를 올바르게 표시 하려면 시작을 수정할 필요가, 수정 하 여 수행할 수 있습니다는 *현재 변환 매트릭스* *(CTM)*합니다. CTM 정의 지점 거주 라고도 *사용자 공간*합니다. Y 방향의 CTM 반전 경계 높이 음수 y 방향에서으로 이동 하는 이미지 대칭 이동 합니다.
+이 대 한 원인은 보기의 원점이 홈페이지에서 이미지 그리기에 대 한 핵심 그래픽 원점이 왼쪽 아래에 있고입니다. 따라서 이미지를 올바르게 표시 하려면 시작을 수정할 필요가, 수정 하 여 수행할 수 있습니다는 *현재 변환 매트릭스* *(CTM)* 합니다. CTM 정의 지점 거주 라고도 *사용자 공간*합니다. Y 방향의 CTM 반전 경계 높이 음수 y 방향에서으로 이동 하는 이미지 대칭 이동 합니다.
 
 그래픽 컨텍스트에는 CTM 변환 하는 도우미 메서드가 있습니다. 이 경우 `ScaleCTM` "대칭 이동" 그리기 및 `TranslateCTM` 아래와 같이 왼쪽 위의으로 이동 합니다.
 

@@ -1,17 +1,19 @@
 ---
 title: 포함 하는.NET 오류
+description: 이 문서에서는.NET 포함 하 여 생성 된 오류를 설명 합니다. 오류 및 코드 나열 된 문제 해결을 지원 하기 위해 설명 됩니다.
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: fcfeaa2d98a28723f95a9bf417e4bed81fe0dec3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5aa95379b18fb9412e7888c79a2cd19997f7258f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793720"
 ---
-# <a name="net-embedding-errors"></a>.NET 오류를 포함 합니다.
+# <a name="net-embedding-errors"></a>포함 하는.NET 오류
 
 ## <a name="em0xxx-binding-error-messages"></a>EM0xxx: 바인딩 오류 메시지
 

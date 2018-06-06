@@ -1,33 +1,35 @@
 ---
-title: SpriteKit
+title: Xamarin.iOS에 SpriteKit
+description: 이 문서에서는 SpriteKit, SceneKit와 통합 되어, 물리학을 통합 하는 애니메이션, 조명 음영, 등에 대 한 지원을 포함 하는 Apple의 2 차원 그래픽 프레임 워크를 설명 합니다. SpriteKit 2D 게임을 만드는 데 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 967fd5b25213478c89d1ab849b6c0b7ac66d0e20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b74b5a722aab240b55ed96bea2a33b162d7817eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786771"
 ---
-# <a name="spritekit"></a>SpriteKit
+# <a name="spritekit-in-xamarinios"></a>Xamarin.iOS에 SpriteKit
 
-Sprite 키트, Apple에서 2D 게임 프레임 워크는 iOS 8 및 OS X Yosemite의 몇 가지 흥미로운 새로운 기능에 있습니다. 여기에 장면 키트, 셰이더 지원, 조명, 그림자, 제약 조건, 기본 맵 생성 및 물리학 향상 된 기능 통합을 포함 합니다. 특히, 새로운 물리 기능 매우 쉽게 게임에 실제 효과를 추가 합니다.
+SpriteKit, Apple에서 2 차원 그래픽 프레임 워크는 iOS 8 및 OS X Yosemite의 몇 가지 흥미로운 새로운 기능에 있습니다. 여기에 SceneKit, 셰이더 지원, 조명, 그림자, 제약 조건, 기본 맵 생성 및 물리학 향상 된 기능 통합을 포함 합니다. 특히, 새로운 물리 기능 매우 쉽게 게임에 실제 효과를 추가 합니다.
 
 ## <a name="physics-bodies"></a>물리 본문
 
-Sprite 키트 2D, 고정 된 관계로 본문 물리학 API 포함합니다. 모든 sprite 관련된 물리학 본문이 (`SKPhysicsBody`) 물리학 세계에서 본문의 기 하 도형을 뿐만 아니라 mass 마찰와 같은 물리 속성을 정의 하 합니다.
+SpriteKit 2D, 고정 된 관계로 본문 물리학 API 포함합니다. 모든 sprite 관련된 물리학 본문이 (`SKPhysicsBody`) 물리학 세계에서 본문의 기 하 도형을 뿐만 아니라 mass 마찰와 같은 물리 속성을 정의 하 합니다.
 
 ## <a name="creating-a-physics-body-from-a-texture"></a>질감에서 물리 본문 만들기
-Sprite 키트는 이제 해당 질감에서 스프라이트 물리학 본문 파생을 지원 합니다. 이렇게 하면 더 자연 스러운 보이는 충돌 구현 하기가 쉽습니다.
+SpriteKit는 이제 해당 질감에서 스프라이트 물리학 본문 파생을 지원 합니다. 이렇게 하면 더 자연 스러운 보이는 충돌 구현 하기가 쉽습니다.
 
 다음 충돌의 각 이미지의 표면에서 거의 바나나 및 원숭이 충돌 하는 방법을 확인 예를 들어 합니다.
  
 ![](spritekit-images/image13.png "각 이미지의 표면에서 거의 바나나 및 원숭이 충돌")
 
-Sprite 키트 가능 하 게 물리학 본문을 만드는 코드의 한 줄으로 합니다. 호출 하기만 하면 `SKPhysicsBody.Create` 질감 및 크기와: sprite 합니다. PhysicsBody = SKPhysicsBody.Create (sprite 합니다. 질감, sprite 합니다. 크기).
+SpriteKit은 물리학 본문을 만드는 가능 하 게 한 줄의 코드입니다. 호출 하기만 하면 `SKPhysicsBody.Create` 질감 및 크기와: sprite 합니다. PhysicsBody = SKPhysicsBody.Create (sprite 합니다. 질감, sprite 합니다. 크기).
 
 ## <a name="alpha-threshold"></a>Alpha 임계값
 
@@ -45,7 +47,7 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
  
 ## <a name="physics-fields"></a>물리 필드
 
-또 다른 훌륭한 추가 Sprite 키트에 새 물리 필드 지원입니다. 보 텍 필드 등을 추가할 수 있도록 이러한 방사형 중력 필드와 군에 스프링 필드입니다.
+SpriteKit에 또 다른 훌륭한 추가 새 물리 필드 지원입니다. 보 텍 필드 등을 추가할 수 있도록 이러한 방사형 중력 필드와 군에 스프링 필드입니다.
 
 물리 필드를 다른와 마찬가지로 장면에 추가 된 SKFieldNode 클래스를 사용 하 여 만들어집니다 `SKNode`합니다. 에 다양 한 팩터리 메서드 `SKFieldNode` 다른 물리학 필드를 만들 수 있습니다. 호출 하 여 스프링 필드를 만들 수 있습니다 `SKFieldNode.CreateSpringField()`를 호출 하 여 방사형 중력 필드 `SKFieldNode.CreateRadialGravityField()`등입니다.
 

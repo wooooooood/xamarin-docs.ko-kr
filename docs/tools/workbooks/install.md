@@ -1,15 +1,16 @@
 ---
 title: 통합 설치 및 요구 사항
-description: 다운로드, 설치 및 Xamarin 통합 문서를 사용 하는 방법.
+description: 이 문서에서는 다운로드 하 고 지원 되는 플랫폼 및 시스템 요구 사항에 논의 Xamarin 통합 문서를 설치 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793823"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 

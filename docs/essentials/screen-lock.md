@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 화면 잠금
-description: ScreenLock 클래스 화면 떨어지는 응용 프로그램이 실행 중일 때 절전 모드가 되지 않도록 요청할 수 있습니다.
+title: 'Xamarin.Essentials: 화면 잠금'
+description: 이 문서에 속하는 응용 프로그램이 실행 중일 때 절전 모드가에서 화면을 유지 하도록 요청할 수 있는 Xamarin.Essentials ScreenLock 클래스를 설명 합니다.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0bdf75825d9c6dc594749fe7aa1e133207cfa0fa
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782910"
 ---
-# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials 화면 잠금
+# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials: 화면 잠금
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
@@ -32,7 +33,7 @@ public class ScreenLockTest
 {
     public void ToggleScreenLock()
     {
-        if (ScreenLock.IsActive)
+        if (!ScreenLock.IsActive)
             ScreenLock.RequestActive();
         else
             ScreenLock.RequestRelease();

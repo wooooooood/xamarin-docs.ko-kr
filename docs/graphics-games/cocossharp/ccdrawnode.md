@@ -1,16 +1,17 @@
 ---
 title: CCDrawNode로 기 하 도형 그리기
-description: CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 합니다.
+description: 이 문서에서는 CCDrawNode 선, 원, 삼각형 등 기본 개체를 그리기 위한 메서드를 제공 하는 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 46A3C3CE-74CC-4A3A-AB05-B694AE182ADB
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 83d973ed013d1448915ee553069c1366922d28b6
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 00ccf089e88d726aff09605aa88076139399a7dc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782887"
 ---
 # <a name="drawing-geometry-with-ccdrawnode"></a>CCDrawNode로 기 하 도형 그리기
 
@@ -434,7 +435,7 @@ drawNode.DrawTriangleList (verts);
 
 이 가이드를 만드는 방법을 설명는 `CCDrawNode` 및 기본 형식 기반 렌더링을 수행 합니다. 각 그리기 호출의 예를 제공 합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [CCDrawNode API](https://developer.xamarin.com/api/type/CocosSharp.CCDrawNode/)
 - [전체 샘플](https://developer.xamarin.com/samples/mobile/CCDrawNode/)

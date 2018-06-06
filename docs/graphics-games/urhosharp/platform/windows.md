@@ -1,20 +1,19 @@
 ---
 title: UrhoSharp Windows 지원
-description: Windows 특정 설치 및 UrhoSharp에 대 한 기능입니다.
+description: 이 문서에서는 UrhoSharp에 대 한 Windows 지원에 설명 합니다. 프로젝트를 만들고 구성 하는 방법을 설명 하 고 및 Urho 시작, wpf, 통합 및 UWP와 통합 합니다.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: ac563e18c714a276ebe94a491999e61630d53ef3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783235"
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
-
-_Windows 특정 설치 프로그램 및 기능_
 
 플랫폼 특정 기능을 활용 하려는 Urho 이식 가능한 클래스 라이브러리는 고 게임 논리를 다양 한 플랫폼 전반에 걸쳐 사용할 동일한 API를 사용 하면 여전히 초기화 해야 Urho 플랫폼 특정 드라이버에서 한 경우에 따라, 장치 .
 
@@ -39,7 +38,7 @@ DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
@@ -83,7 +82,7 @@ WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
@@ -116,7 +115,7 @@ UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 

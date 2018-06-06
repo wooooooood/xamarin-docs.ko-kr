@@ -1,20 +1,19 @@
 ---
 title: UrhoSharp 플랫폼 지원
-description: 크로스 플랫폼 3D/2D 게임 및 시각화 엔진
+description: 이 문서는 Urho 특정 플랫폼에 대 한 기존 네이티브 프로젝트에 추가 하는 방법을 설명 하는 다양 한 설명서를 링크 합니다. Android, iOS, tvOS, macOS, 창 및 Xamarin.Forms에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: b9fdb205148824282d527f2483e027b14d786ff2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9179b0913566ee5c70fbbfabe4c17ee3b98fbeca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783387"
 ---
 # <a name="urhosharp-platform-support"></a>UrhoSharp 플랫폼 지원
-
-_크로스 플랫폼 3D/2D 게임 및 시각화 엔진_
 
 이 섹션에서는 Urho 플랫폼에 대 한 기존 네이티브 프로젝트에 추가 하는 방법 및 특정 통합 플랫폼을 활용 하는 방법에서는 합니다.
 

@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 버전 추적
-description: VersionTracking 클래스를 사용 하면 응용 프로그램 버전을 확인 및 빌드 번호 첫 번째 경우 처럼 이러한 추가 정보를 보면 응용 프로그램이 적이 시작 시간 또는 최신 버전은 이전 빌드 정보, 및을 가져올 합니다.
+title: 'Xamarin.Essentials: 버전 추적'
+description: Xamarin.Essentials에서 VersionTracking 클래스를 사용 하면 응용 프로그램 버전을 확인 및 빌드 번호는 첫 번째 하는 경우 이러한 추가 정보를 표시와 함께 응용 프로그램이 적이 시작 시간 또는 최신 버전은 이전 빌드를 가져옵니다. 정보 및 더 합니다.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f6ab63c44307fca860ccb73744b35c006f25a9ed
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783004"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials 버전 추적
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: 버전 추적
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
