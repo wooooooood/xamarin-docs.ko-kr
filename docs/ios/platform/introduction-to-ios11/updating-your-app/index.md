@@ -1,21 +1,20 @@
 ---
 title: IOS 11에 응용 프로그램 업데이트
-description: IOS 11의 새로운 기능 탐색
+description: 이 문서는 iOS 11 릴리스의 Xamarin.iOS 개발자에 게 사용할 수 있는 새로운 기능을 설명 하는 다양 한 설명서를 링크 합니다. 예를 들어 시각적 디자인 업데이트 App Store 변경 되 고 앱 아이콘을 업데이트 합니다.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2581f729d85787021763f50f005e84d6bbb5db01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea57acbd6165f7b1abd8b9bd69873670c179f411
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787574"
 ---
 # <a name="updating-your-app-to-ios-11"></a>IOS 11에 응용 프로그램 업데이트
-
-_IOS 11의 새로운 기능 탐색_
 
 11 ios에서는 Apple 아키텍처 업데이트, 새 시각적 항목이 변경 및 업데이트 된 iTunes Connect 프로세스를 소개 했습니다. 이 가이드 Xamarin.iOS 앱 iOS 11에 대 한 업데이트를 활용할 수 있도록 돕는 각 이러한 변경 내용을 탐색 합니다.
 

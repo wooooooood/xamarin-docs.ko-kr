@@ -1,19 +1,20 @@
 ---
-title: 일반적인 패턴 및 관용구
-description: 이 문서에서는 모델-뷰-컨트롤러 패턴, 데이터 원본 및 대리자 패턴 및 프로토콜에 설명 합니다.
+title: 일반적인 패턴 및 Xamarin.Mac에 관용구
+description: 이 문서에서는 Xamarin.Mac 앱을 빌드할 때 사용 되는 일반적인 디자인 패턴에 설명 합니다. 모델-뷰-컨트롤러 패턴, 데이터 원본 및 대리자 패턴 및 프로토콜에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6bba5575edf2dcbddbd354b590e03f9fed06291
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791539"
 ---
-# <a name="common-patterns-and-idioms"></a>일반적인 패턴 및 관용구
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>일반적인 패턴 및 Xamarin.Mac에 관용구
 
 C#을 통해 노출 되는 Apple Api 전체에서 특정 관용구와 패턴 대로 반복 됩니다. Xamarin.iOS 사용한 프로그래밍 경험이 있는 경우 이러한 친숙 한 보일 수 있습니다. 설명서 자주 참조 합니다 이러한 패턴 및 관용구를 반복 해 서 그중에서 확실 하 게 이해 하지 찾았으면 설명서의 결과 이해 하면 도움이 됩니다.
 

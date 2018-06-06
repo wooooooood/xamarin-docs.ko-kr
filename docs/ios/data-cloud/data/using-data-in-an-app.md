@@ -1,16 +1,18 @@
 ---
 title: IOS 앱의 데이터를 사용 하 여
+description: 이 문서에서는 사용자 입력을 수집 하 고 수행 하는 방법을 보여 주는 샘플 만들 DataAccess_Adv 설명, 읽기, 업데이트 및 삭제 (CRUD) 데이터베이스 Xamarin.iOS 앱에서 작업 합니다.
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: eded0918c6994481cdc82fe7662a985ea243b24d
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 5c9eab9316539ecf5988c8768bef9ef2cd61513e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784542"
 ---
 # <a name="using-data-in-an-ios-app"></a>IOS 앱의 데이터를 사용 하 여
 

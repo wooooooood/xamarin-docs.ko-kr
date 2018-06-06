@@ -1,14 +1,16 @@
 ---
 title: 통합 된 API에 코드를 업데이트 하기 위한 팁
+description: 이 문서에서는 Xamarin의 통합 API를 사용 하도록 응용 프로그램을 업데이트할 때 일반적인 오류 및 유용한 다양 한 팁을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 640f95e0083c73288cc8e1f183b06bd28a7b4e07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cab27d5dc38eeab65728f242c6f11fd445601a88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782120"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>통합 된 API에 코드를 업데이트 하기 위한 팁
 
@@ -20,7 +22,6 @@ Mac은 iOS 및 Mac 프로젝트는 통합 API (Xamarin.iOS.dll 또는 Xamarin.Ma
 
 ```console
 Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not find a storyboard named 'xxx' in bundle NSBundle...
-
 ```
 
 다음 빌드 대상 파일을 찾을이 문제를 해결 하려면 다음을 수행할 수 있습니다.
@@ -82,9 +83,9 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
- * NSObject `.ctor(IntPtr)` 생성자에서 변경 된 공용으로 보호 된 ([부적절 하 게 사용 하지 않으려면](~/cross-platform/macios/unified/index.md#NSObject_ctor)).
+ * NSObject `.ctor(IntPtr)` 생성자에서 변경 된 공용으로 보호 된 ([부적절 하 게 사용 하지 않으려면](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` 되었습니다 [대체](~/cross-platform/macios/unified/index.md#NSAction) starndard.NET와 `Action`합니다. 또한 몇 가지 간단한 (단일 매개 변수) 대리자로 대체 되었습니다 `Action<T>`합니다.
+ * `NSAction` 되었습니다 [대체](~/cross-platform/macios/unified/overview.md#NSAction) starndard.NET와 `Action`합니다. 또한 몇 가지 간단한 (단일 매개 변수) 대리자로 대체 되었습니다 `Action<T>`합니다.
 
 마지막으로, 참조는 [클래식 v 통합 API 차이점](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 코드에서 Api의 변경 사항을 조회 하 합니다. 검색 [이 페이지](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 클래식 Api에 대 한 어떤 했으므로 된 업데이트를 찾을 하는 데 도움이 됩니다.
 

@@ -1,21 +1,20 @@
 ---
 title: Apple TV 앱 스토어에 게시
-description: 이 문서에서는 구성, 빌드 및 Apple TV 앱 스토어를 통해 배포에 대 한 Xamarin.tvOS 앱을 게시 하는 방법을 보여 줍니다. 배포에 대 한 앱을 준비 하는 방법, Apple의 도구를 사용 하 여 검토를 위해 앱을 제출 하는 방법 및, 마지막으로, TV Apple 앱 스토어에 앱을 게시 하는 방법에 설명 하는 단계별 지침을 포함 합니다.
+description: 이 문서에서는 Apple TV 앱 스토어에 앱을 게시 하는 방법에 설명 합니다. 구성, 프로 비전, 빌드 및 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램을 제출 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789306"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV 앱 스토어에 게시
-
-_이 문서에서는 구성, 빌드 및 Apple TV 앱 스토어를 통해 배포에 대 한 Xamarin.tvOS 앱을 게시 하는 방법을 보여 줍니다. 배포에 대 한 앱을 준비 하는 방법, Apple의 도구를 사용 하 여 검토를 위해 앱을 제출 하는 방법 및, 마지막으로, TV Apple 앱 스토어에 앱을 게시 하는 방법에 설명 하는 단계별 지침을 포함 합니다._
 
 순서로 모든 Apple TV 장치에 응용 프로그램을 배포할 사과에서는 통해 게시할 앱은 *Apple TV 앱 스토어*, tvOS 앱에 대 한 원스톱 쇼핑 위치 앱 스토어를 수행 합니다. 다양 한 유형의 앱의 개발자 수 대규모 이러한 단일 배포 지점에 성공한 횟수에 대문자로 시작 합니다. Apple TV 앱 스토어는 응용 프로그램 배포 및 결제 시스템 모두 응용 프로그램 개발자를 제공 턴키 솔루션입니다.
 

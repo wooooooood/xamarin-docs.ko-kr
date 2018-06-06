@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 기본 사항
+title: tvOS 응용 프로그램 기본 사항
 description: 이 섹션에서는 가장 일반적인 작업 및 개발자가 Xamarin.tvOS 응용 프로그램을 작성할 때 알고 있어야 하는 개념을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4ab06bd7de0b0e847d0ca31bcac9ecdefe79854e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cc9c0d26dfb9f5c97acd1d2a794ed1a9798b2eaf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788864"
 ---
-# <a name="application-fundamentals"></a>응용 프로그램 기본 사항
+# <a name="tvos-application-fundamentals"></a>tvOS 응용 프로그램 기본 사항
 
 _이 섹션에서는 가장 일반적인 작업 및 개발자가 Xamarin.tvOS 응용 프로그램을 작성할 때 알고 있어야 하는 개념을 제공 합니다._
 

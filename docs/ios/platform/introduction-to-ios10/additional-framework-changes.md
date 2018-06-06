@@ -1,17 +1,18 @@
 ---
 title: 10 추가 iOS 프레임 워크 변경 내용
-description: 이 문서에서는 추가, 부 버전 변경 또는 10 iOS에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다.
+description: 이 문서는 사소한 변경 및 향상 된 iOS 10에서에서 기존 프레임 워크에 설명 하 고 확인 하는 방법을 설명 Xamarin.iOS에서 이러한 업데이트를 사용 합니다.
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 33852ef62bd00368ef6544d07e60dd6de4c3b7d3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b9a230157593b66446e2949e57a925d94208752
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787561"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>10 추가 iOS 프레임 워크 변경 내용
 

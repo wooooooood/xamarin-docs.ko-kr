@@ -1,17 +1,18 @@
 ---
 title: 미리 컴파일 Xamarin.Mac
-description: 앞의 시간 (AOT) 컴파일 및 고려 사항
+description: 미리 컴파일 Xamarin.Mac에이 문서에 설명합니다. AOT 컴파일 JIT 컴파일으로 비교 하 여, AOT, 사용 하도록 설정 하는 방법을 설명 하 고 하이브리드 AOT에서는 합니다.
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: d6be1d6e4a3cccef827862fb1fd54b202b0ce5fd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec8474293fbb7372529e0f850e2d16db7ebf17be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792241"
 ---
 # <a name="xamarinmac-ahead-of-time-compilation"></a>미리 컴파일 Xamarin.Mac
 

@@ -1,18 +1,20 @@
 ---
-title: 이미지 표시
+title: Xamarin.iOS 사용 하 여 이미지를 표시합니다.
+description: 이 문서에서는 Xamarin.iOS에 이미지를 표시 하는 방법에 설명 합니다. 프로그래밍 방식으로 또는 디자이너를 통해 앱에 추가할 이미지를 처리합니다.
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 406cfe813cbb58111769203f3b6c3fb0c2edad3c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f42cc5e4ab26c4c53d96e96420cbbba8036d6b5d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789832"
 ---
-# <a name="displaying-images"></a>이미지 표시
+# <a name="displaying-images-with-xamarinios"></a>Xamarin.iOS 사용 하 여 이미지를 표시합니다.
 
 앱에 이미지를 추가 하려면 두 단계가 필요 합니다: 먼저 프로젝트;에 이미지를 추가 컨트롤 및 화면에 표시 하려면 코드를 추가 합니다. 참조는 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) Xamarin.iOS에서 처리 하는 이미지의 범위 보다 자세한 문서.
 

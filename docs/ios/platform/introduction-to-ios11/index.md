@@ -1,17 +1,18 @@
 ---
 title: IOS 11 소개
-description: 새로운 iOS 11 시도 Api와 Xamarin 함께 사용 합니다.
+description: IOS 11, ARKit, 등 CoreML, MapKit, PDFKit, SiriKit, 비전 프레임 워크의 기능을 설명 하는 다양 한 지침은이 문서 연결 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 0b3993f09b6516c9c0d4f13a82d97d3cf289330c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dca4d9889d90f10626840dfc722e439fd60c5756
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787509"
 ---
 # <a name="introduction-to-ios-11"></a>IOS 11 소개
 

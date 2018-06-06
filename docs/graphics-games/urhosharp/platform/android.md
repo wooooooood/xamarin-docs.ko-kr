@@ -1,16 +1,17 @@
 ---
 title: UrhoSharp Android 지원
-description: Android 특정 설정 및 UrhoSharp에 대 한 기능입니다.
+description: 이 문서에서는 Android 관련 설정 및 UrhoSharp에 대 한 정보 관련 기능을 설명 합니다. 지원 되는 아키텍처에 설명 특히, 구성 및 Urho, 사용자 지정의 및 포함 Urho 시작 프로젝트를 만드는 방법.
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 008afb060729b6d1badf47db7eafedbe631326df
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783784"
 ---
 # <a name="urhosharp-android-support"></a>UrhoSharp Android 지원
 

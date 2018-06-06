@@ -1,18 +1,20 @@
 ---
-title: watchOS 사용자 인터페이스
+title: watchOS Xamarin에서 사용자 인터페이스 컨트롤
+description: 이 문서에서는 watchOS 사용자 인터페이스에서 사용 하기 위해 사용할 수 있는 다양 한 컨트롤에 설명 합니다. 레이블, 단추, 스위치, 슬라이더, 이미지, 구분 기호, 맵 등의 설명을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 73099768d876cad08571c3d0bf8340535eb1307b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b56cfed8f045d824996a004539533b27d66c8cb1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791412"
 ---
-# <a name="watchos-user-interface"></a>watchOS 사용자 인터페이스
+# <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS Xamarin에서 사용자 인터페이스 컨트롤
 
 [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) 샘플에서는 다양 한 watchOS 컨트롤을 보여 줍니다. 응용 프로그램의 스토리 보드는 다음과 같습니다 (확대/축소 하려면 클릭).
 

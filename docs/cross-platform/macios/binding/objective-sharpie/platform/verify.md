@@ -1,18 +1,19 @@
 ---
-title: 특성 확인
+title: 목표 Sharpie 특성 확인
+description: 이 문서에서는 목표 Sharpie에 의해 생성 된 [확인] 특성에 설명 합니다. [확인] 특성 목표 Sharpie 출력 확인 수동으로 해야 하는 개발자에 게 강조 표시 합니다.
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: b9409b4351ed9233db0edf8e2dd9f516b9727fe0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780713"
 ---
-# <a name="verify-attributes"></a>특성 확인
-
+# <a name="objective-sharpie-verify-attributes"></a>목표 Sharpie 특성 확인
 
 목표 Sharpie에서 생성 된 바인딩으로 주석을 달아야 합니다 하기가 `[Verify]` 특성입니다. 이러한 특성 표시 해야 하는 _확인_ 목표 Sharpie 원래 C/Objective-c 선언 (바인딩된 선언 위에 주석에서 제공 됩니다)를 사용 하 여 바인딩을 비교 하 여 올바른 동작인을가 하 합니다.
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/09/2018
 
 아래 문서를 사용 하 여 참조 특성에 제공 된 힌트 인수가 교차 수 있습니다. 생성 된 모든 작업에 대 한 설명서 `[Verify]` 특성 바인딩을 완료 된 후 콘솔도 제공 됩니다.
 
-|힌트를 확인 합니다.|설명|
+|`[Verify]` 힌트|설명|
 |---|---|
 |InferredFromPreceedingTypedef|이 선언의 이름에서 일반적인 규칙에 의해 유추 된의 바로 앞에 오는 `typedef` 원래 네이티브 소스 코드에 있습니다. 유추 된 이름이이 규칙은 모호 합니다. 정확한 지 확인 합니다.|
 |ConstantsInterfaceAssociation|Objective C 인터페이스와 extern 변수 선언은 연결 될 수 있습니다를 결정 하는 절대 확실 한 것 방식은 없습니다. 이러한 인스턴스 바인딩된 `[Field]` 근처에서 구체적인 인터페이스에 가능한 '상수'를 제거 하는 보다 직관적인 API를 생성 하기 위해 부분 인터페이스의 속성에에서는 모두 인터페이스입니다.|

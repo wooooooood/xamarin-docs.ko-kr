@@ -1,20 +1,21 @@
 ---
-title: MonoGame PipelineTool를 사용 하 여
-description: MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 Monogame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다.
+title: MonoGame 파이프라인 도구를 사용 하 여
+description: MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 MonoGame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783301"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 
-_MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 Monogame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다._
+_MonoGame 파이프라인 도구는 MonoGame 콘텐츠 프로젝트 만들기 및 관리 하는 데 사용 됩니다. 콘텐츠 프로젝트에 있는 파일 MonoGame 파이프라인 도구에 의해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다._
 
 MonoGame 파이프라인 도구에 대 한 콘텐츠 파일을 변환 하기 위한 사용 하기 쉬운 환경을 제공 **.xnb** CocosSharp 및 MonoGame 응용 프로그램에서 사용할 파일입니다. 참조 콘텐츠 파이프라인 및 이유에서 사용 되는 게임 개발에 대 한 내용은 [콘텐츠 파이프라인에 대 한이 소개](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
@@ -238,7 +239,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 
 이 연습에서는 파일을 만드는.xnb 입력된.png 파일에서 MonoGame 파이프라인 도구를 사용 하는 방법 뿐만 아니라.sprintefont 새로 만든 파일에서 새.xnb 파일을 만드는 방법을 배웠습니다. 에서도 CocosSharp.xnb 파일을 사용 하는 프로젝트를 구성 하는 방법 및 런타임에 이러한 파일을 로드 하는 방법을 설명 합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [MonoGame 다운로드](http://www.monogame.net/downloads/)
 - [MonoGame 파이프라인 설명서](http://www.monogame.net/documentation/?page=Pipeline)

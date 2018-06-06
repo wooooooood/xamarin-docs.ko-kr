@@ -7,12 +7,13 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/02/2018
-ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.date: 06/02/2018
+ms.openlocfilehash: b0d9458238c4b3ac9ceeeb7d7ce4e2ca8b0b6de3
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732868"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
@@ -20,7 +21,7 @@ _설치 하는 API 수준 및 AVDs Android SDK가 관리 하는 방법을 변경
 
 ## <a name="changes-to-android-sdk-tooling"></a>Android SDK 도구에 대 한 변경
 
-Android 용 SDK 도구의 최신 버전의 Google 새 CLI (명령줄 인터페이스) 도구를 위해 기존 AVD 및 SDK 관리자를 제거 했습니다. **android** 프로그램을 제거 하 고 Mac 및 이전 버전의 Xamarin for Visual Studio 용 Visual Studio에서 Google GUI (그래픽 사용자 인터페이스) 관리자는 더 이상 작동 하지 이전 버전과 25.2.5 Android SDK 도구입니다. 예를 들어 사용 하려고는 **android** 프로그램 명령줄을 통해 다음과 같은 오류 메시지가 발생 합니다.
+Android 용 SDK 도구의 최신 버전의 Google 새 CLI (명령줄 인터페이스) 도구를 위해 기존 AVD 및 SDK 관리자를 제거 했습니다. **android** 프로그램을 제거 하 고 Google GUI (그래픽 사용자 인터페이스) 관리자 Mac 및 이전 버전의 Xamarin 용 도구 Visual Studio 용 Visual Studio에서 더 이상 작동 이전 버전과 25.2.5 Android SDK 도구입니다. 예를 들어 사용 하려고는 **android** 프로그램 명령줄을 통해 다음과 같은 오류 메시지가 발생 합니다.
 
 ```shell
 The "android" command is deprecated.
@@ -37,7 +38,7 @@ Visual Studio 및 Mac 용 Visual Studio 이제 Xamarin 대체 함수는 지원 �
 
 -   Android SDK 도구, 플랫폼 및 Xamarin.Android 앱 개발을 위한 해야 하는 다른 구성 요소를 다운로드 하려면 사용 된 [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) 레거시 Google SDK Manager 대신 합니다.
 
--   사용 하 여 만들고 Android 가상 장치를 구성 하는 [Xamarin Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) 레거시 Google 에뮬레이터 관리자 대신 합니다.
+-   사용 하 여 만들고 Android 가상 장치를 구성 하는 [Android 장치 관리자](~/android/get-started/installation/android-emulator/device-manager.md) 레거시 Google 에뮬레이터 관리자 대신 합니다.
 
 이러한 도구는 기능적으로 Google GUI 기반 관리자를 대체 합니다.
 
@@ -69,7 +70,7 @@ Visual Studio 및 Mac 용 Visual Studio 이제 Xamarin 대체 함수는 지원 �
 ## <a name="related-links"></a>관련 링크
 
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
-- [Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+- [Android 장치 관리자](~/android/get-started/installation/android-emulator/device-manager.md)
 - [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)
 - [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

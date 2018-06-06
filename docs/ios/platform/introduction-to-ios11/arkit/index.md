@@ -1,19 +1,20 @@
 ---
-title: ARKit 소개
-description: IOS 11에 대 한 보강 된 현실
+title: Xamarin.iOS에 ARKit 소개
+description: 이 문서 보강 된 현실 ARKit와 iOS 11에에서 설명합니다. 3D 모델 응용 프로그램을 추가, 보기를 구성, 세션 대리자 구현, 세계에서 3D 모델을 배치 및 보강 된 현실 세션을 일시 중지 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: f48cdd48e63131fe234fef1bb60b555724dd8a92
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 55ef2004f66cb808f878b2215dfdd59a45015877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787173"
 ---
-# <a name="introduction-to-arkit"></a>ARKit 소개
+# <a name="introduction-to-arkit-in-xamarinios"></a>Xamarin.iOS에 ARKit 소개
 
 _IOS 11에 대 한 보강 된 현실_
 

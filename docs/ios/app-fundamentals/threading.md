@@ -1,17 +1,19 @@
 ---
-title: 스레딩
+title: Xamarin.iOS에서 스레딩
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램에서 System.Threading Api를 사용 하는 방법에 설명 합니다. 작업 병렬 라이브러리에서는 응답성이 뛰어난 응용 프로그램 및 가비지 수집 빌드에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784919"
 ---
-# <a name="threading"></a>스레딩
+# <a name="threading-in-xamarinios"></a>Xamarin.iOS에서 스레딩
 
 Xamarin.iOS 런타임에 액세스할 수 개발자는.NET Api 스레드를 사용 하는 경우에 명시적으로 둘 다 스레딩 (`System.Threading.Thread, System.Threading.ThreadPool`)는 전체 범위의 Api를 지 원하는 뿐만 아니라 비동기 대리자 패턴 또는 BeginXXX 메서드를 사용 하는 경우에 암시적으로 및에서 작업 병렬 라이브러리입니다.
 

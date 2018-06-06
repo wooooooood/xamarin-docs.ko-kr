@@ -1,18 +1,20 @@
 ---
-title: UrhoSharp ARKit 사용
+title: Xamarin.iOS에 UrhoSharp ARKit 사용
+description: 이 문서에, Xamarin.iOS ARKit 응용 프로그램을 설정 하는 방법에 설명 후 프레임이 렌더링 되는 방법, 카메라를 조정 하는 방법을 살펴봅니다 감지 하는 방법을 평면, 조명 등을 사용 하는 방법입니다. 또한 UrhoSharp 및 HoloLens에 대 한 코드 작성에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/01/2016
-ms.openlocfilehash: 95c9c602d0bfe1b77fda453a137dfdfc12a975c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0d70b1f751d5aa6b6c8fa578f53ba1ac8260cfa1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787105"
 ---
-# <a name="using-arkit-with-urhosharp"></a>UrhoSharp ARKit 사용
+# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Xamarin.iOS에 UrhoSharp ARKit 사용
 
 도입으로 [ARKit](https://developer.apple.com/arkit/), 사과 아무런 상관이 보강 된 현실 응용 프로그램을 만드는 개발자를 위한 간단한 합니다. ARKit 장치의 정확한 위치를 추적 하 고 전 세계에 다양 한 화면을 검색할 수 및은 다음 코드에 ARKit에서 들어오는 데이터를 혼합 하려면 개발자의 책임입니다.
 

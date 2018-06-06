@@ -1,23 +1,22 @@
 ---
-title: SiriKit 구현
-description: 이 문서에 Xamarin.iOS 앱 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다.
+title: Xamarin.iOS에서 SiriKit 구현
+description: 이 문서에서는 Xamarin.iOS 앱에 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다. 의도 확장 및 의도 UI 확장에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f0e5e05828305bd3656d70105b6e2ad06f9fdc81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788851"
 ---
-# <a name="implementing-sirikit"></a>SiriKit 구현
+# <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.iOS에서 SiriKit 구현
 
 _이 문서에 Xamarin.iOS 앱 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다._
-
-
 
 새로운 iOS 10 SiriKit iOS 장치에서 Siri와 지도 응용 프로그램을 사용 하는 사용자에 액세스할 수 있는 서비스를 제공 하도록 Xamarin.iOS 앱을 허용 합니다. 이 문서에서는 필요한 의도 확장, 의도 UI 확장 및 어휘를 추가 하 여 Xamarin.iOS 앱에 SiriKit 지원을 구현 하는 데 필요한 단계에 설명 합니다.
 

@@ -1,29 +1,26 @@
 ---
-title: 네이티브 참조
-description: 네이티브 참조 Xamarin.iOS 또는 Xamarin.Mac 프로젝트 또는 바인딩 프로젝트에 네이티브 프레임 워크를 포함 하는 기능을 제공 합니다.
+title: 네이티브 참조 iOS, Mac 및 바인딩 프로젝트
+description: 네이티브 참조 Xamarin.iOS, Xamarin.Mac, 또는 바인딩 프로젝트에 네이티브 프레임 워크를 포함 하는 기능을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c56e392420debb21998363cfffa288aec51691ea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781720"
 ---
-# <a name="native-references"></a>네이티브 참조
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>IOS, Mac 및 바인딩 프로젝트에서 네이티브 참조
 
 _네이티브 참조 Xamarin.iOS 또는 Xamarin.Mac 프로젝트 또는 바인딩 프로젝트에 네이티브 프레임 워크를 포함 하는 기능을 제공 합니다._
-
 
 IOS 8.0 이후 응용 프로그램 확장과 Xcode에서 주 앱 간에 코드를 공유 하는 포함 된 프레임 워크를 만들 수 있었지만 했습니다. 네이티브 참조 기능 사용를 Xamarin.iOS에 이러한 포함 된 프레임 워크 (Xcode를 사용 하 여 만든)을 사용할 수 있습니다.
  
 > [!IMPORTANT]
 > Xamarin.iOS 또는 Xamarin.Mac 프로젝트의 모든 형식에서 포함 된 프레임 워크를 만들 수 없습니다, 네이티브 참조만 허용 기존 네이티브 (Objective-c) 프레임 워크의 소비 합니다.
-
-
-
 
 <a name="Terminology" />
 

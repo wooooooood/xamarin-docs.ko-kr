@@ -1,21 +1,20 @@
 ---
-title: 향상 된 사용자 알림
-description: 이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다.
+title: Xamarin.iOS에서 향상 된 사용자 알림
+description: 이 문서에서는 iOS 10에에서 도입 된 사용자 알림을 프레임 워크를 설명 합니다. 로컬 알림, 원격 알림, 알림, 관리, 알림 작업 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 29c529d57d35b0ab2b7bf2e80f8d295a8d059c5e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788656"
 ---
-# <a name="enhanced-user-notifications"></a>향상 된 사용자 알림
-
-_이 문서에는 모든 사용자가 알림 iOS 10 및 Xamarin.iOS 앱에서 사용 하는 방법으로 향상 된 방법을 설명 합니다._
+# <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 향상 된 사용자 알림
 
 10, 배달 및 로컬 및 원격 알림 처리를 위한 프레임 워크에서는 사용자 알림 iOS를 처음 사용 합니다. 응용 프로그램 또는 응용 프로그램 확장은이 프레임 워크를 사용 하 여 위치와 같은 조건 집합이 또는 시간을 지정 하 여 로컬 알림 배달을 예약할 수 있습니다.
 

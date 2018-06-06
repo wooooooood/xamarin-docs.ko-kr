@@ -1,15 +1,17 @@
 ---
 title: 어떤 지원 옵션은 Xamarin에 대 한 사용할 수 있습니까?
+description: 이 문서에서는 Xamarin 개발자를 위해 사용할 수 있는 다양 한 지원 옵션에 설명 합니다. 전자 메일 지원, 스택 오버플로 및 추가 리소스에 설명 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ccd19a628d5bb50212a2a6b737689cdaf7aaad76
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a18998c6ff36a453d22b5cbe84179d70662693ba
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782309"
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>어떤 지원 옵션은 Xamarin에 대 한 사용할 수 있습니까?
 

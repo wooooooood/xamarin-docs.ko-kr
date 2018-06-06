@@ -6,12 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: cc6cb282565e08f7ce4401e5317fba518a74a8f3
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 762a604186cf8657ce2f3732081cd82612b1b7ef
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732998"
 ---
 # <a name="ios-platform-specifics"></a>iOS 플랫폼 세부 사항
 
@@ -29,6 +30,7 @@ Ios, Xamarin.Forms 다음 플랫폼-세부 정보가 들어 있습니다.
 - 상태 표시줄 표시 여부에 설정 된 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)합니다. 자세한 내용은 참조 [페이지에서 상태 표시줄 표시 유형을 설정](#set_status_bar_visibility)합니다.
 - 제어 여부는 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 터치 제스처를 처리 하거나 해당 내용에 전달 합니다. 자세한 내용은 참조 [를 ScrollView에 지연 콘텐츠 터치](#delay_content_touches)합니다.
 - 구분 기호 스타일을 설정는 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 참조 [ListView에서 구분 기호 스타일을 설정](#listview-separatorstyle)합니다.
+- 지원 되는 레거시 색 모드를 해제 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 참조 [레거시 색 모드 해제](#legacy-color-mode)합니다.
 
 <a name="blur" />
 
@@ -506,6 +508,47 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 > [!NOTE]
 > 구분 기호 스타일 설정 되 면 `FullWidth`,으로 다시 변경할 수 없습니다 `Default` 런타임에 합니다.
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>레거시 색 모드를 사용 하지 않도록 설정
+
+일부 Xamarin.Forms 뷰 기능을 레거시 색 모드. 이 모드에서는 때는 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 보기의 속성이로 설정 되어 `false`, 보기에는 사용할 수 없는 상태에 대 한 기본 네이티브 색을 사용 하 여 사용자가 설정한 색 보다 우선 합니다. 이전 버전과 호환성을이 레거시 색 모드의 기본 동작을 지원 되는 뷰 상태가 유지 됩니다.
+
+이 플랫폼별 보기를 사용 하지 않도록 설정 하는 경우에 사용자가 설정한 뷰에 색 유지 되도록이 레거시 색 모드를 해제 합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) 연결 된 속성을 `false`:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                ios:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+_legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
+```
+
+`VisualElement.On<iOS>` 메서드 지정이 플랫폼별 iOS에만 실행 됩니다. [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스, 레거시 색 모드 사용 되지 않는지 여부를 제어에 사용 됩니다. 또한는 [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})) 메서드를 사용 하 여 레거시 색 모드 되지 않는지 여부를 반환할 수 있습니다.
+
+결과 보기 사용 하지 않는 경우 사용자가 설정한 뷰에 색도 계속 되도록 레거시 색 모드를 비활성화할 수 있습니다.
+
+![](ios-images/legacy-color-mode-disabled.png "레거시 색 모드 사용 안 함")
+
+> [!NOTE]
+> 설정할 때는 [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) 레거시 모드는 완전히 보기에서는 무시 됩니다. 시각적 상태에 대 한 자세한 내용은 참조 [The Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
 
 ## <a name="summary"></a>요약
 

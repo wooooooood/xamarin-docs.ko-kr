@@ -1,15 +1,17 @@
 ---
 title: IOS에서 Backgrounding 소개
+description: '이 문서에서 설명 하는 iOS에서 backgrounding: 응용 프로그램 상태, 응용 프로그램 수명 주기 메서드 및 백그라운드 응용 프로그램 새로 고침 합니다.'
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3a82a34a37e53e0c6922ef47717a4100576c2277
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c8084d8e218ba8e3468529795aaa5fd4eae30947
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783641"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>IOS에서 Backgrounding 소개
 

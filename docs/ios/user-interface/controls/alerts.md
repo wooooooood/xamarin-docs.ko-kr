@@ -1,18 +1,20 @@
 ---
-title: 경고 표시
+title: Xamarin.iOS에서 경고를 표시합니다.
+description: 이 문서에서 Xamarin.iOS UIAlertController iOS 8에에서 도입 된 Api를 사용 하 여 경고를 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b15afa55f170ce86fd66e17209c6db172b1db740
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88233cb1ac31b2669fdc38bbc9b0835a45c6b0ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789598"
 ---
-# <a name="displaying-alerts"></a>경고 표시
+# <a name="displaying-alerts-in-xamarinios"></a>Xamarin.iOS에서 경고를 표시합니다.
 
 IOS 8 이상에서는 UIAlertController 완료 된 대체 UIActionSheet 개이고 UIAlertView는 이제 사용 되지 않습니다.
 

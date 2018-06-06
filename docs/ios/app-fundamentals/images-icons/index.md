@@ -1,5 +1,5 @@
 ---
-title: 이미지 및 아이콘
+title: 이미지 및 Xamarin.iOS의 아이콘
 description: 이 섹션에는 다양 한 화면을 시작할 이미지 아이콘으로 사용할 때 처럼 Xamarin.iOS 앱에서는 작업을 포함 하는 문서에 포함 하 여 컨트롤 및 사용자 지정 문서 유형에 대 한 아이콘을 제공 하 합니다.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 444e3cbd88dfd3ff50153d858367ecd0310d240a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784054"
 ---
-# <a name="images-and-icons"></a>이미지 및 아이콘
+# <a name="images-and-icons-in-xamarinios"></a>이미지 및 Xamarin.iOS의 아이콘
 
 _이 섹션에는 다양 한 화면을 시작할 이미지 아이콘으로 사용할 때 처럼 Xamarin.iOS 앱에서는 작업을 포함 하는 문서에 포함 하 여 컨트롤 및 사용자 지정 문서 유형에 대 한 아이콘을 제공 하 합니다._
 

@@ -1,17 +1,18 @@
 ---
 title: IOS 11 시작
-description: 다운로드 및 설치 Xcode 9
+description: 이 문서에서는 11 iOS 앱 개발을 시작 하기 위해 완료 해야 하는 단계를 설명 합니다. Xcode를 다운로드 하 고 Visual Studio 2017을 업데이트 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 2982e8acd27207452b74320cb3ea17d2ffc7375e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 494ffa4ffef09eedf2ce38f33e2e2b216a9417bb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786914"
 ---
 # <a name="getting-started-with-ios-11"></a>IOS 11 시작
 

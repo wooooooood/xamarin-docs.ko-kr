@@ -1,5 +1,5 @@
 ---
-title: 주석 및 오버레이
+title: 주석 및 Xamarin.iOS 오버레이
 description: 이 문서에서는 맵 키트의 주석 및 오버레이 기능과 함께 작동 하는 방법을 보여 주는 단계별 연습을 제공 합니다. Xamarin 발전 2013 컨퍼런스에서의 위치에 주석 및 오버레이 표시 하는 응용 프로그램에 맵을 추가 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9defbade6fafefb26d87e88665c491b3a559c1ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d224f034afc9b841bbf82b2b15b92db2d7820c7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789582"
 ---
-# <a name="annotations-and-overlays--walkthrough"></a>주석 및 오버레이 – 연습
+# <a name="annotations-and-overlays-in-xamarinios"></a>주석 및 Xamarin.iOS 오버레이
 
 이 연습에서 작성 하 여 응용 프로그램은 다음과 같습니다.
 
@@ -288,4 +289,4 @@ ms.lasthandoff: 04/04/2018
 ## <a name="related-links"></a>관련 링크
 
 - [지도 데모 (샘플)](https://developer.xamarin.com/samples/monotouch/MapDemo/)
-- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
+- [iOS 맵](~/ios/user-interface/controls/ios-maps/index.md)

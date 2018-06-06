@@ -1,21 +1,20 @@
 ---
-title: iCloud
-description: Apple 응용 프로그램을 Apple 서버에서 데이터를 저장 하 고 (의 Apple ID)를 통해 동일한 사용자가 사용 되는 모든 장치 간에 동기화 할 수 있도록 서비스로 iCloud를 iOS 5에서에서 도입 되었습니다. 백업 구성 요소를 여기서 하 여 장치의 데이터 백업 Apple의 서버에도 있습니다. 이 문서에서는 Apple에서 제공 되는 Api iCloud 중 일부를 사용 하 여 저장 하 고 해당 서버와 C# 문서를 저장 한 키-값의 작은 데이터 쌍을 저장 하기 위한 샘플에서에서 데이터를 검색 하는 방법에 설명 합니다. 또한 iCloud 백업 응용 프로그램의 설계 영향을 줄 수는 방법을 설명 합니다.
+title: Xamarin.iOS iCloud 사용
+description: ICloud와 Xamarin.iOS 응용 프로그램에서의 사용이이 문서에 설명 합니다. 키-값 저장소, 문서 저장 및 iCloud 백업에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: a62d4621a8f3ace64401d64e35c806317a591c03
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 032d5f01ae63e5aececa14390300c28623c4f371
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785546"
 ---
-# <a name="icloud"></a>iCloud
-
-_Apple 응용 프로그램을 Apple 서버에서 데이터를 저장 하 고 (의 Apple ID)를 통해 동일한 사용자가 사용 되는 모든 장치 간에 동기화 할 수 있도록 서비스로 iCloud를 iOS 5에서에서 도입 되었습니다. 백업 구성 요소를 여기서 하 여 장치의 데이터 백업 Apple의 서버에도 있습니다. 이 문서에서는 Apple에서 제공 되는 Api iCloud 중 일부를 사용 하 여 저장 하 고 해당 서버와 C# 문서를 저장 한 키-값의 작은 데이터 쌍을 저장 하기 위한 샘플에서에서 데이터를 검색 하는 방법에 설명 합니다. 또한 iCloud 백업 응용 프로그램의 설계 영향을 줄 수는 방법을 설명 합니다._
+# <a name="using-icloud-with-xamarinios"></a>Xamarin.iOS iCloud 사용
 
 IOS 5에서에서 iCloud 저장소 API 응용 프로그램을 사용자 문서 및 응용 프로그램 관련 데이터를 중앙 위치를 저장 하는 사용자의 모든 장치에서 해당 항목에 액세스할 수 있습니다.
 
@@ -32,7 +31,7 @@ IOS 5에서에서 iCloud 저장소 API 응용 프로그램을 사용자 문서 �
 이 문서는 처음 두-키-값 쌍 및 UIDocument 하위 클래스-형식과 Xamarin.iOS의 이러한 기능을 사용 하는 방법을 설명 합니다.
 
 > [!IMPORTANT]
-> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 ## <a name="requirements"></a>요구 사항
 

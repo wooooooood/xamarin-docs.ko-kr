@@ -1,32 +1,32 @@
 ---
-title: TextKit
-description: 텍스트 키트 API는 강력한 텍스트 Xamarin.iOS의 레이아웃 및 렌더링 기능을 제공합니다.
+title: Xamarin.iOS에 TextKit
+description: 이 문서에서는 TextKit Xamarin.iOS에서 사용 하는 방법을 설명 합니다. TextKit 강력한 텍스트 레이아웃 및 렌더링 기능을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 78ca0d9505c9f56dc6476bd04dab560a70b2c4b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac80d1d07f5649d377dd6fdefcb4911ba9ec2dcb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788337"
 ---
-# <a name="text-kit"></a>텍스트 키트
+# <a name="textkit-in-xamarinios"></a>Xamarin.iOS에 TextKit
 
-텍스트 키트는 강력한 텍스트 레이아웃 및 렌더링 기능을 제공 하는 새로운 API입니다. 낮은 수준 코어 텍스트 프레임 워크 위에 빌드됩니다. 따라서 하 있지만 핵심 텍스트 보다 사용 하기가 훨씬 쉽습니다.
+TextKit 강력한 텍스트 레이아웃 및 렌더링 기능을 제공 하는 새로운 API입니다. 하위 수준 코어 텍스트 프레임 워크 위에 빌드됩니다. 따라서 하 있지만 핵심 텍스트 보다 사용 하기가 훨씬 쉽습니다.
 
-텍스트 키트의 기능을 표준 컨트롤에 사용할 수 있도록 하려면 여러 개의 iOS 텍스트 컨트롤이 텍스트 키트를 포함 하 여 사용 하도록 다시 구현 되었습니다.
+TextKit의 기능을 표준 컨트롤에 사용할 수 있도록 하려면 여러 iOS 텍스트 컨트롤 TextKit, 사용 하도록 다시 구현 되었을 포함 하 여:
 
 -  UITextView
 -  UITextField
 -  UILabel
 
-
 ## <a name="architecture"></a>아키텍처
 
-텍스트 키트 레이아웃과 다음 클래스를 포함 하 여 디스플레이에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
+TextKit 레이아웃과 다음 클래스를 포함 하 여 디스플레이에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
 
 -  `NSTextContainer` – 좌표계 및 레이아웃 텍스트에 사용 되는 기 하 도형을 제공 합니다.
 -  `NSLayoutManager` – 문자 모양에 텍스트를 설정 하 여 텍스트 배치 합니다. 
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/04/2018
 
 다음 그림에서는이 아키텍처를 보여 줍니다.
 
- ![](textkit-images/textkitarch.png "이 그림 텍스트 키트 아키텍처를 보여 줍니다.")
+ ![](textkit-images/textkitarch.png "이 그림 TextKit 아키텍처를 보여 줍니다.")
 
 ## <a name="text-storage-and-attributes"></a>텍스트를 저장 및 특성
 
@@ -56,7 +56,7 @@ textView.TextStorage.EndEditing ();
 
 ## <a name="layout-with-exclusion-path"></a>제외 경로 있는 레이아웃
 
-레이아웃을 지원 하며 라는 다중 열 텍스트와 지정 된 경로 주위의 이동을 텍스트와 같은 복잡 한 시나리오에 대 한 허용 텍스트 키트 *제외 경로*합니다. 제외 경로 지정된 된 경로 주위에 텍스트가 텍스트 레이아웃의 기 하 도형을 수정 하는 텍스트 컨테이너에 적용 됩니다.
+레이아웃을 지원 하며 라는 다중 열 텍스트와 지정 된 경로 주위의 이동을 텍스트와 같은 복잡 한 시나리오에 대 한 허용 TextKit *제외 경로*합니다. 제외 경로 지정된 된 경로 주위에 텍스트가 텍스트 레이아웃의 기 하 도형을 수정 하는 텍스트 컨테이너에 적용 됩니다.
 
 제외 경로는 추가 하려면 설정 해야는 `ExclusionPaths` 레이아웃 관리자에는 속성입니다. 이 속성을 설정 하면 레이아웃 관리자 하 텍스트 레이아웃을 무효화 하 고 제외 경로 앞뒤 텍스트를 전달 합니다.
 
@@ -139,10 +139,10 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-이 코드는 코어 그래픽을 사용 하 여 텍스트 보기에 그리기에 대 한 지원을 추가 합니다. 이후는 `UITextView` 클래스 이제 레이아웃과 텍스트 렌더링에 대 한 텍스트 키트를 사용 하도록 기본 제공, 텍스트 키트 제외 경로 설정 하는 등의 모든 기능을 사용할 수 있습니다.
+이 코드는 코어 그래픽을 사용 하 여 텍스트 보기에 그리기에 대 한 지원을 추가 합니다. 이후는 `UITextView` 클래스 이제 TextKit 텍스트 렌더링 및 레이아웃에 대해 사용 하도록 기본 제공, TextKit 제외 경로 설정 하는 등의 모든 기능을 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 예에서는 하위 클래스 `UITextView` 그리기 지원 터치를 추가 합니다. 서브클래싱 `UITextView` 텍스트 키트의 기능을 가져올 필요가 없습니다.
+> 이 예에서는 하위 클래스 `UITextView` 그리기 지원 터치를 추가 합니다. 서브클래싱 `UITextView` TextKit의 기능을 가져올 필요가 없습니다.
 
 
 

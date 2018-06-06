@@ -1,20 +1,19 @@
 ---
-title: Microsoft Azure
-description: Azure에 대 한 설명서 및 샘플 코드를 다운로드 합니다.
+title: Microsoft Azure 및 Xamarin
+description: 이 문서는 Mac, Azure 모바일 앱, Active Directory 인증 및 WebAPI Visual Studio에서 연결 된 서비스에 대 한 설명서에 연결 합니다.
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 5a7c2e4e1bc8beff40984e66760a332e8b00f87d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 25eec247a0cb664897541a0e6e818a77018fda43
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781080"
 ---
-# <a name="microsoft-azure"></a>Microsoft Azure
-
-_Azure에 대 한 설명서 및 샘플 코드를 다운로드 합니다._
+# <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
 [ ![](images/evolve-mikej-azure-sml.png "Azure 앱 서비스 기능을 쉽게 클라우드 데이터 저장소 및 플랫폼 간 푸시 알림을 포함 하는 Xamarin 앱에 추가할 수")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -23,7 +22,6 @@ _Azure에 대 한 설명서 및 샘플 코드를 다운로드 합니다._
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 연결된 서비스
 
 새 [연결 된 서비스](connected-services.md) Mac 용 Visual Studio의 기능 개발자가 쉽고 빠르게 IDE 내에서 모바일 응용 프로그램에 Azure 기능을 추가 하는 데 도움이 됩니다. 알파 채널에서 테스트를 위해 현재 사용할 수 있습니다.
-
 
 ## <a name="azure-app-services"></a>Azure 앱 서비스
 

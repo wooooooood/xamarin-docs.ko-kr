@@ -1,21 +1,20 @@
 ---
-title: iOS 데이터 액세스
-description: 대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구를 사항이 있습니다. 많으면 데이터의 양이 다르거나 일반적으로,이 일반적으로 필요 데이터베이스 및 데이터 계층 응용 프로그램에 데이터베이스 액세스를 관리 합니다. iOS는 "기본 제공" SQLite 데이터베이스 엔진이 및 데이터 저장 및 검색에 대 한 액세스 Xamarin 플랫폼을 통해 간소화 되었습니다. 이 문서에는 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다.
+title: Xamarin.iOS 데이터 액세스
+description: Xamarin.iOS 응용 프로그램에서 로컬 데이터베이스와 함께 작업 하는 방법에 설명 하는 지침은이 문서 연결 되어 있습니다. 연결 된 내용을 SQLite.NET, ADO.NET 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 47f2567d81f61568aad639330dc5133856e31936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a986ea9931f62497e5a6863c84bd4041983d66d9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784578"
 ---
-# <a name="ios-data-access"></a>iOS 데이터 액세스
-
-_대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구를 사항이 있습니다. 많으면 데이터의 양이 다르거나 일반적으로,이 일반적으로 필요 데이터베이스 및 데이터 계층 응용 프로그램에 데이터베이스 액세스를 관리 합니다. iOS는 "기본 제공" SQLite 데이터베이스 엔진이 및 데이터 저장 및 검색에 대 한 액세스 Xamarin 플랫폼을 통해 간소화 되었습니다. 이 문서에는 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다._
+# <a name="xamarinios-data-access"></a>Xamarin.iOS 데이터 액세스
 
 Xamarin.iOS와 같은 데이터베이스 액세스 Api를 지원합니다.
 
@@ -40,7 +39,6 @@ Xamarin.Forms 응용 프로그램에 대 한 읽기 [데이터베이스 작업](
 -  [SQLite.NET ORM 사용](using-sqlite-orm.md)
 -  [ADO.NET 사용](using-adonet.md)
 -  [앱에서 데이터 사용](using-data-in-an-app.md)
-
 
 ## <a name="summary"></a>요약
 

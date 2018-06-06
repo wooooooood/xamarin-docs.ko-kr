@@ -1,17 +1,19 @@
 ---
-title: Objective C 선택기
+title: Objective C Xamarin.iOS 선택기
+description: 이 문서에서는 C#에서 Objective-c 선택기와 상호 작용 하는 방법에 설명 합니다. 이렇게 할 때 고려해 야 하는 기술 고려 사항 및 선택기를 호출 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60f107bda29b351c119f5702b0ca797d7d16b0b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25276851879ba828361d3236cbf7896cf748588c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787044"
 ---
-# <a name="objective-c-selectors"></a>Objective C 선택기
+# <a name="objective-c-selectors-in-xamarinios"></a>Objective C Xamarin.iOS 선택기
 
 Objective C 언어를 기반으로 *선택기*합니다. 선택 기가 개체에 보낼 수 있는 메시지 또는 *클래스*합니다. [Xamarin.iOS](~/ios/internals/api-design/index.md) 맵 인스턴스 인스턴스 메서드에 선택기 및 정적 메서드와 선택기 클래스입니다.
 
@@ -22,7 +24,7 @@ Objective C 언어를 기반으로 *선택기*합니다. 선택 기가 개체에
 
 <a name="Example" />
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 호출 하려는 경우 다음과 같이 [-[NSString sizeWithFont:forWidth:lineBreakMode:]](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/NSString_UIKit_Additions/Reference/Reference.html#//apple_ref/occ/instm/NSString/sizeWithFont:forWidth:lineBreakMode:) 선택기입니다.
 Apple 설명서) (에서 선언이입니다.

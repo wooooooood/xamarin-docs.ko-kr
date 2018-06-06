@@ -1,17 +1,19 @@
 ---
-title: 시작
+title: 목표 Sharpie 시작
+description: 이 문서에서는 목표 Sharpie, Objective C 코드에 대 한 바인딩 C#의 만들기를 자동화 하는 데 사용 하는 도구에 대 한 고급 개요를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 5f61d0794e1f5a38370f0d840504720043f69590
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a0431f8952055a55be24ae5f85381a4295206a40
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781818"
 ---
-# <a name="getting-started"></a>시작
+# <a name="getting-started-with-objective-sharpie"></a>목표 Sharpie 시작
 
 > [!IMPORTANT]
 > 목표 Sharpie는 고급 정보 Objective C의 (및 확장명, C)로 숙련 된 Xamarin 개발자를 위한 도구입니다. Objective C 라이브러리를 바인딩하는 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 작성 하는 방법 확실히 알고가 있어야 합니다.

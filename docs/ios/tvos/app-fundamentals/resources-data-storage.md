@@ -1,19 +1,20 @@
 ---
-title: 리소스 및 데이터 저장소
-description: 이 문서에서는 리소스와 Xamarin.tvOS 응용 프로그램에서 영구 데이터 저장소 작업을 수행 합니다.
+title: 리소스 및 데이터 저장소에 Xamarin tvOS
+description: 이 문서에서는 리소스 및 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램의 영구 데이터 저장소를 사용 하 여 작업 하는 방법을 설명 합니다. Icloud와 데이터 저장소 및 요청 시 리소스에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: aa14ac08763a48b5f4f9a9522e8b10c652e513c4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788838"
 ---
-# <a name="resources-and-data-storage"></a>리소스 및 데이터 저장소
+# <a name="tvos-resources-and-data-storage-in-xamarin"></a>리소스 및 데이터 저장소에 Xamarin tvOS
 
 _이 문서에서는 리소스와 Xamarin.tvOS 응용 프로그램에서 영구 데이터 저장소 작업을 수행 합니다._
 
@@ -57,7 +58,7 @@ Apple TV에 저장소 제한 되므로 뿐만 아니라는 있는 매우 제한 
 - **CloudKit** -Apple의 CloudKit 프레임 워크를 사용 하는 정보 (1MB 보다 큼), 큰 조각으로 저장 합니다. KVS 저장소 iCloud와 달리 CloudKit 데이터 응용 프로그램 (으로 단일 사용자에 게 개인 되 고)의 모든 사용자 간에 공유할 수 있습니다. 자세한 내용은 양식에서 참조 하세요 우리의 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 설명서 또는 Apple의 [CloudKit 빠른 시작](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987)합니다.
 
 > [!IMPORTANT]
-> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 <a name="On-Demand-Resources" />
 

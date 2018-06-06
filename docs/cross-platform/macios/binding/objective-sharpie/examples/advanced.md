@@ -1,21 +1,21 @@
 ---
 title: 고급 (수동) 실제 예제
+description: 이 문서에서는 목표 Sharpie 목표 Sharpie 내부에서 수행 하는 작업에 대 한 정보를 제공 하는 입력으로 xcodebuild의 출력을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781258"
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예제
 
-
 **사용 하 여이 예제는 [Facebook에서 POP 라이브러리](https://github.com/facebook/pop)합니다.**
-
 
 이 섹션에서는 Apple의를 사용 하는 바인딩 대 한 고급 액세스 `xcodebuild` POP 프로젝트를 빌드하 도구 클릭 한 다음 수동으로 Sharpie 목표에 대 한 입력을 추론 합니다. 기본적으로 이전 섹션의 내부에서 수행 하는 목표 Sharpie 다룹니다.
 

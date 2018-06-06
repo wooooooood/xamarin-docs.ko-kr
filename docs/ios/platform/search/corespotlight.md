@@ -1,18 +1,20 @@
 ---
-title: 스포트라이트 코어를 사용 하 여 검색
+title: Xamarin.iOS에 집중 조명 코어를 사용 하 여 검색
+description: 이 문서에서는 앱에서 콘텐츠에 대 한 링크를 제공 하 코어 스포트라이트 Xamarin.iOS 응용 프로그램에서 사용 하는 방법을 설명 합니다. 만들기, 복원, 업데이트 및 검색 가능한 항목을 삭제 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788041"
 ---
-# <a name="search-with-core-spotlight"></a>스포트라이트 코어를 사용 하 여 검색
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.iOS에 집중 조명 코어를 사용 하 여 검색
 
 코어 스포트라이트는 ios 9 추가, 편집 또는 앱 내에서 콘텐츠에 대 한 링크를 삭제 하는 데이터베이스와 비슷한 API를 표시 하는 새로운 프레임 워크입니다. 스포트라이트 코어를 사용 하 여 추가 된 항목을 iOS 장치에서 스포트라이트 검색에서 사용할 수 있습니다.
 

@@ -1,15 +1,16 @@
 ---
-title: Xamarin.Essentials
+title: Xamarin.Essentials 시작
 description: Xamarin.Essentials iOS, Android 또는 UWP 작동 하는 단일 플랫폼 API를 제공 합니다. 응용 프로그램에서 액세스할 수 있는 사용자 인터페이스를 만드는 방법을 관계 없이 코드를 공유 합니다.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2e0abff4d0408d3db11ab95f1debc6621f609d86
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783076"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 

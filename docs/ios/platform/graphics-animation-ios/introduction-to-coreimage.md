@@ -1,23 +1,24 @@
 ---
-title: CoreImage
-description: CoreImage ios 5 이미지 처리를 제공 하 고 라이브 비디오 향상 기능을 도입 하는 새로운 프레임 워크입니다. 이 문서에서는 Xamarin.iOS 샘플으로 이러한 기능을 소개 합니다.
+title: Xamarin.iOS에 core 이미지
+description: Core 이미지는 ios 5 이미지 처리를 제공 하 고 라이브 비디오 향상 기능을 도입 하는 새로운 프레임 워크입니다. 이 문서에서는 Xamarin.iOS 샘플으로 이러한 기능을 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786634"
 ---
-# <a name="coreimage"></a>CoreImage
+# <a name="core-image-in-xamarinios"></a>Xamarin.iOS에 core 이미지
 
-_CoreImage ios 5 이미지 처리를 제공 하 고 라이브 비디오 향상 기능을 도입 하는 새로운 프레임 워크입니다. 이 문서에서는 Xamarin.iOS 샘플으로 이러한 기능을 소개 합니다._
+_Core 이미지는 ios 5 이미지 처리를 제공 하 고 라이브 비디오 향상 기능을 도입 하는 새로운 프레임 워크입니다. 이 문서에서는 Xamarin.iOS 샘플으로 이러한 기능을 소개 합니다._
 
-CoreImage 다양 한 기본 제공 필터와 이미지 및 비디오, 얼굴 감지를 포함 한 적용할 효과를 제공 하는 iOS 5에에서 도입 된 새로운 프레임 워크입니다.
+Core 이미지는 다양 한 기본 제공 필터와 이미지 및 비디오, 얼굴 감지를 포함 한 적용할 효과를 제공 하는 iOS 5에에서 도입 된 새로운 프레임 워크입니다.
 
 이 문서에는 간단한 예를를 들어 있습니다.
 
@@ -26,7 +27,7 @@ CoreImage 다양 한 기본 제공 필터와 이미지 및 비디오, 얼굴 감
 -  사용 가능한 필터를 나열 합니다.
 
 
-이 예제에서는 Xamarin.iOS 응용 프로그램에 통합 CoreImage 기능을 시작 하는 데 도움이 됩니다.
+이 예제에서는 Xamarin.iOS 응용 프로그램에 통합 Core 이미지 기능을 시작 하는 데 도움이 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -34,7 +35,7 @@ Xcode의 최신 버전을 사용 해야 합니다.
 
 ## <a name="face-detection"></a>얼굴 감지
 
-CoreImage 얼굴 감지 기능이 수행 하는 바로 언급 한 내용을 우수한 사진에 면을 식별 하려고 인식 하는 모든 면의 좌표를 반환 합니다. 이 정보를 이미지에는 사용자의 수를 계산 하 고 이미지에 표시기를 않음 (예: 그리기를 사용할 수 있습니다. '태그 지정' 사용자의 사진)에 대 한 요소 라도 생각할 수 있습니다.
+Core 이미지 얼굴 감지 기능이 수행 하는 바로 언급 한 내용을 우수한 사진에 면을 식별 하려고 인식 하는 모든 면의 좌표를 반환 합니다. 이 정보를 이미지에는 사용자의 수를 계산 하 고 이미지에 표시기를 않음 (예: 그리기를 사용할 수 있습니다. '태그 지정' 사용자의 사진)에 대 한 요소 라도 생각할 수 있습니다.
 
 CoreImage\SampleCode.cs에서이 코드에 포함된 된 이미지에 만들고 얼굴 감지 하는 방법을 보여 줍니다.
 
@@ -219,11 +220,11 @@ foreach (var filter in filters){
 
 ## <a name="summary"></a>요약
 
-이 문서는 얼굴 감지 및 이미지에 필터를 적용 하는 같은 새로운 iOS 5 CoreImage 프레임 워크 기능 중 일부를 사용 하는 방법을 보여 주었습니다. 사용할 수 있는 프레임 워크에서 사용할 수 있는 다른 이미지 필터: 여러 가지가 있습니다.
+이 문서는 얼굴 감지 및 이미지에 필터를 적용 하는 같은 새로운 iOS 5 Core 이미지 프레임 워크 기능 중 일부를 사용 하는 방법을 보여 주었습니다. 사용할 수 있는 프레임 워크에서 사용할 수 있는 다른 이미지 필터: 여러 가지가 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Core 이미지 (샘플)](https://developer.xamarin.com/samples/CoreImage/)
 - [계약 및 이미지 조리법의 밝기를 조정 합니다.](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [CoreImage 필터를 사용 하 여](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [이미지 필터: 코어를 사용 하 여](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter 클래스 참조](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

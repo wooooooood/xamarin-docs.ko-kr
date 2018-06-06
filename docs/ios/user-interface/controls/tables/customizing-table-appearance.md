@@ -1,18 +1,20 @@
 ---
-title: 테이블의 모양 사용자 지정
+title: Xamarin.iOS에 테이블의 모양 사용자 지정
+description: 이 문서에서는 Xamarin.iOS에 테이블의 모양을 사용자 지정 하는 방법에 설명 합니다. 셀 스타일, 보조 프로그램, 셀 구분 기호 및 사용자 지정 셀 레이아웃에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: a447c59e7384ce7da168efdd018bc23c2abb25c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03383c69afb6afa9282d44751475d74fdcd92d4a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789956"
 ---
-# <a name="customizing-a-tables-appearance"></a>테이블의 모양 사용자 지정
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>Xamarin.iOS에 테이블의 모양 사용자 지정
 
 테이블의 모양을 변경 하는 가장 간단한 방법은 다른 셀 스타일을 사용 하도록 됩니다. 각 셀을 만들 때 어떤 셀 스타일 사용 되는 변경할 수 있습니다는 `UITableViewSource`의 `GetCell` 메서드.
 

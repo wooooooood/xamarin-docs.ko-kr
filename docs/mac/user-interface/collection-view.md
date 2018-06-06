@@ -1,5 +1,5 @@
 ---
-title: 컬렉션 뷰
+title: Xamarin.Mac의 컬렉션 뷰
 description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 컬렉션 뷰를 사용 하는 작업을 설명 합니다. 만들기 및 Xcode 및 인터페이스 작성기에 대 한 컬렉션 뷰를 유지 관리 및 프로그래밍 방식으로 작업 하는 내용을 다룹니다.
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: f391a9df8a0d4012637c503bc95c6de2185dd2f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8e354b1ce273b10758a7d8c1361055b972839943
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792559"
 ---
-# <a name="collection-views"></a>컬렉션 뷰
+# <a name="collection-views-in-xamarinmac"></a>Xamarin.Mac의 컬렉션 뷰
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에서 컬렉션 뷰를 사용 하는 작업을 설명 합니다. 만들기 및 Xcode 및 인터페이스 작성기에 대 한 컬렉션 뷰를 유지 관리 및 프로그래밍 방식으로 작업 하는 내용을 다룹니다._
 

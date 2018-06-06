@@ -1,19 +1,20 @@
 ---
-title: 멀티 터치 손가락 추적
-description: 이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 방법을 보여 줍니다.
+title: 멀티 터치 손가락 Xamarin.iOS에서 추적
+description: 이 문서에서는 Xamarin.iOS 앱에서 멀티 터치 제스처에 개별 손가락을 추적 하는 방법에 설명 합니다. Finger-painting 앱 예제를 중심으로 것입니다.
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 178bd0a68166f033293b2d807fea449355c1c584
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dbd3c158408026f4ecef5fb2b01c265747140e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784405"
 ---
-# <a name="multi-touch-finger-tracking"></a>멀티 터치 손가락 추적
+# <a name="multi-touch-finger-tracking-in-xamarinios"></a>멀티 터치 손가락 Xamarin.iOS에서 추적
 
 _이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 방법을 보여 줍니다._
 

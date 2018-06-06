@@ -1,28 +1,26 @@
 ---
 title: 추가 tvOS 10 프레임 워크 변경 내용
-description: 이 문서에서는 추가, 부 버전 변경 또는 10 tvOS에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다.
+description: 이 문서 사소한 변경 및 iOS 10에서에서 기존 프레임 워크에 향상 된 기능을 설명 합니다. AVFoundation, AVKit, 핵심 데이터, 핵심 그래픽, Foundation, GameKit, GameplayKit, 등에 대 한 업데이트에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c53726b91a0cd3e79041b9b1d51e9f7fbb1c79bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 326fb6a23048ba3d3e1d33f42c8da2fff8544c25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788877"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경 내용
-
-_이 문서에서는 추가, 부 버전 변경 또는 10 tvOS에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다._
-
 
 TvOS에 주요 변경 내용 외에도 Apple가 한 수정 및 여러 기존 프레임 워크의 향상 된 기능 tvOS 10입니다.
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="av-foundation-framework-additions"></a>AV Foundation 프레임 워크 추가
+## <a name="avfoundation-framework-additions"></a>AVFoundation 프레임 워크 추가
 
 AVFoundation 프레임 워크에는 다음과 같은 향상 기능이 포함 됩니다.
 

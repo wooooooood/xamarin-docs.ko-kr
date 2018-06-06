@@ -1,22 +1,22 @@
 ---
-title: 플랫폼 기능
-description: MacOS 플랫폼의 키 구성 요소
+title: macOS 플랫폼 기능
+description: '이 문서는 중요 한 macOS 및 Xamarin.Mac 플랫폼 기능에 설명 하는 지침에 연결: OpenTK, 스토리 보드, 확장 및 더 합니다.'
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792226"
 ---
-# <a name="platform-features"></a>플랫폼 기능
+# <a name="macos-platform-features"></a>macOS 플랫폼 기능
 
 이 섹션의 문서 작업 macOS Xamarin.Mac 응용 프로그램에서의 키, 플랫폼 특정 기능을 설명합니다.
-
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[macOS Sierra 소개](~/mac/platform/introduction-to-macos-sierra/index.md)
 

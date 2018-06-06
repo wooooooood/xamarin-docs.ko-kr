@@ -1,19 +1,20 @@
 ---
-title: 앱 스토어에 배포
-description: 앱 스토어에 Watch 앱 배포
+title: 앱 스토어에 watchOS 앱 배포
+description: 이 문서에서는 앱 스토어에 Xamarin을 사용 하 여 빌드한 watchOS 앱을 배포 하는 방법에 설명 합니다. 프로 비전 프로필을 배포 및 iTunes Connect 살펴보고 되 고 또한 몇 가지 문제 해결 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 70613c79c2ec0c81f1dbdc218b747f809f859767
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790986"
 ---
-# <a name="deploying-to-the-app-store"></a>앱 스토어에 배포
+# <a name="deploying-watchos-apps-to-the-app-store"></a>앱 스토어에 watchOS 앱 배포
 
 > [!IMPORTANT]
 > 검토 해야 [Apple Watch 키트 제출 가이드](https://developer.apple.com/app-store/watch/), 참조 및는 [문제 해결](#Troubleshooting) 섹션의 모든 문제를 할 수 있습니다.

@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
-ms.date: 10/27/2017
-ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 06/03/2018
+ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793877"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -289,13 +290,15 @@ Xamarin 프로파일러는 아래 그림과 같이 5 개의 섹션으로 구성 
 
 ### <a name="cycles"></a>주기
 
-C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 매우 쉽게 삭제 되지 않을 개체에 대 한 참조를 만들 수 수 있습니다. 이 intrument 해당 개체를 식별 및 응용 프로그램에서 참조 하는 주기를 표시할 수 있습니다.
+C# 및 F # 관리 코드를 사용 하 여 매우 일반적이 고 아쉽게도 매우 쉽게 삭제 되지 않을 개체에 대 한 참조를 만들 수 수 있습니다. 이 계기를 사용 하면 해당 개체를 식별 및 응용 프로그램에서 참조 하는 주기를 표시할 수 있습니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
+[![주기 계측](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![주기 계측](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
+[![주기 계측](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 

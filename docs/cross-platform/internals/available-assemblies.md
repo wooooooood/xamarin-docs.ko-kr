@@ -1,20 +1,19 @@
 ---
 title: 사용 가능한 어셈블리
-description: Xamarin.iOS, Xamarin.Android, 및 Xamarin.Mac에 사용할 수 있는 어셈블리
+description: 이 문서는 Xamarin.iOS, Xamarin.Android, 및 Xamarin.Mac에 사용할 수 있는 어셈블리를 나열합니다. .NET 표준 라이브러리 및 이식 가능한 클래스 라이브러리에 대 한 설명서에도 연결합니다.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ef1dde061ffce4082922cc2eb2af1ae9b045aedd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781909"
 ---
 # <a name="available-assemblies"></a>사용 가능한 어셈블리
-
-_Xamarin.iOS, Xamarin.Android, 및 Xamarin.Mac에 사용할 수 있는 어셈블리_
 
 Xamarin.iOS, Xamarin.Android, 및 Xamarin.Mac까지 여러 어셈블리에 모두 제공 합니다. Silverlight는 데스크톱.NET 어셈블리의는 확장 된 하위 집합, 처럼 Xamarin 플랫폼의 몇 가지 Silverlight 및 데스크톱.NET 어셈블리는 확장 된 하위 집합 이기도 합니다.
 

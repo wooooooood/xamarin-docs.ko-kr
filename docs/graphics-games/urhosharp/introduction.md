@@ -1,20 +1,19 @@
 ---
 title: UrhoSharp 소개
-description: 이렇게 하면 UrhoSharp 개념에 대 한 간략 한 소개
+description: 이 문서에서는 UrhoSharp 응용 프로그램 및 다양 한 안내서와 UrhoSharp를 사용 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 링크의 기본 구조에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 6fb53aa6d4bad8f8fcae8608ab0192af15fe87b1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d39faabc0851e3e89b03ad58a7f1ead3894efc15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783557"
 ---
 # <a name="an-introduction-to-urhosharp"></a>UrhoSharp 소개
-
-_이렇게 하면 UrhoSharp 개념에 대 한 간략 한 소개_
 
 ![UrhoSharp 로고](introduction-images/urhosharp-icon.png)
 

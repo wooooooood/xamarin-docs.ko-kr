@@ -1,5 +1,6 @@
 ---
 title: Xamarin.iOS 오류
+description: 이 문서에서는 mtouch, Xamarin.iOS 응용 프로그램 번들로 사용 되는 도구에서 생성 된 다양 한 오류에 설명 합니다. 오류 및 코드 나열 된 전체 설명 됩니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e9332ba34f113f56859065c74c24c116a331eceb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789449"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 오류
 

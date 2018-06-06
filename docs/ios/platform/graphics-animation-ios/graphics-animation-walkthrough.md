@@ -1,5 +1,5 @@
 ---
-title: 연습-CoreGraphics 및 CoreAnimation 사용 하 여
+title: Xamarin.iOS에 코어 그래픽 및 애니메이션 코어를 사용 하 여
 description: 이 문서에서는 과정을 단계별로 코어 그래픽 및 코어 애니메이션을 사용 하는 응용 프로그램을 만드는 방법을 설명 합니다. 이미지 경로 따라 이동 하는 애니메이션 효과 적용 하는 방법 뿐만 아니라 사용자 터치에 대 한 응답의 화면에 그리는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787057"
 ---
-# <a name="drawing-and-animating-along-a-path"></a>그리기 및 경로 따라 애니메이션 적용
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Xamarin.iOS에 코어 그래픽 및 애니메이션 코어를 사용 하 여
 
 이 연습을 하겠습니다 터치식 입력에 대 한 응답으로 코어 그래픽을 사용 하 여 패스를 그립니다. 그런 다음 추가 됩니다 한 `CALayer` 경로 따라 애니메이션는 이미지가 포함 된 합니다.
 

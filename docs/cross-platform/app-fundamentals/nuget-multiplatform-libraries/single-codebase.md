@@ -1,15 +1,17 @@
 ---
 title: NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
+description: 이 문서에는 NuGet을 사용 하기 위해 다중 플랫폼 라이브러리를 만드는 방법을 설명 합니다. 이 방법은 비즈니스 논리 및.NET 기본 클래스 라이브러리에서 전적으로 표현 될 수 있습니다 및 따라서 플랫폼별 코드 없이 모든 대상 플랫폼에서 실행 되는 알고리즘에 적합 합니다.
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ee508d40423e3757f7e2934b7682f840ebf8b86a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b59450ac949bffdf927475598d3678564f09f8cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781330"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 

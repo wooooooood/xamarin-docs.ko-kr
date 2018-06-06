@@ -1,15 +1,17 @@
 ---
 title: 시기와 방법을 I 파일을 않도록 버그 보고서를?
+description: 이 문서에서는 설명 시기, 위치, 방법 및 버그 보고서를 파일에 있습니다. 또한 문제를 진단 하는 가장 엔지니어 수 있도록 하는 모범 사례는 버그 보고서를 제공 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d5471195b5051725b41b8f28b3959db362297669
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 08a782e9637442a43e9c63305ddf161403519169
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781945"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>시기와 방법을 I 파일을 않도록 버그 보고서를?
 

@@ -1,19 +1,20 @@
 ---
-title: 진행률 표시기 작업
-description: 이 문서에서는 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
+title: Xamarin에 진행률 표시기 tvOS 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램에서 진행률 표시기와 함께 작업 하는 방법을 설명 합니다. 진행률 표시줄 및 활동 표시기를 둘 다에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/25/2018
-ms.openlocfilehash: d512dfddb3a6c81767f937272a4ffb1ab1a35372
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f8812f6b3f8a461487dcaf548637c84b16631d6b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789218"
 ---
-# <a name="working-with-progress-indicators"></a>진행률 표시기 작업
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Xamarin에 진행률 표시기 tvOS 작업
 
 _이 문서에서는 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내에서 작업을 설명 합니다._
 
@@ -132,7 +133,7 @@ ActivityIndicator.StopAnimating();
 
 이 문서의 디자인 하 고 진행률 표시기 Xamarin.tvOS 앱 내에서 작업 검사가 수행 합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [tvOS 샘플](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)

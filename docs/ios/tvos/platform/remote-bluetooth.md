@@ -1,22 +1,20 @@
 ---
-title: Siri 원격 인스턴스 및 Bluetooth 컨트롤러
-description: 이 문서에서는 Xamarin.tvOS 응용 프로그램에서 새 Siri 원격 인스턴스 및 Bluetooth 게임 컨트롤러를 지 원하는 설명 합니다.
+title: Siri 원격 인스턴스 및 Xamarin에는 tvOS에 대 한 Bluetooth 컨트롤러
+description: 이 문서에서는 Siri 원격 및 Bluetooth 게임 컨트롤러 Xamarin으로 작성 된 tvOS 앱에서 사용 하 여 작업 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789192"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri 원격 인스턴스 및 Bluetooth 컨트롤러
-
-_이 문서에서는 Xamarin.tvOS 응용 프로그램에서 새 Siri 원격 인스턴스 및 Bluetooth 게임 컨트롤러를 지 원하는 설명 합니다._
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri 원격 인스턴스 및 Xamarin에는 tvOS에 대 한 Bluetooth 컨트롤러
 
 Xamarin.tvOS 응용 프로그램의 사용자의 인터페이스를 직접으로 ios 여기서은 탭 하지 장치의 화면에 나타나는 이미지 하지만 직접에서 사용 하 여 대화방에서 상호 작용 하지 것입니다는 [Siri 원격](#The-Siri-Remote)합니다.
 
@@ -42,7 +40,7 @@ Siri 원격에는 다음 기능 및 tvOS 앱 내 예상된 사용:
 |---|---|---|
 |**화면을 터치**<br />탐색, 키를 선택 하 고 상황에 맞는 메뉴를 눌러을 살짝 밉니다.|**Tap의 통과 /**<br />포커스를 받을 수 항목 간 탐색 UI입니다.<br /><br />**클릭**<br />선택한 (포커스 내) 항목을 활성화합니다.|**Tap의 통과 /**<br />게임 디자인에 따라 다르며 가장자리 탭 하 여 방향 패드도 사용할 수 있습니다.<br /><br />**클릭**<br />기본 단추가 기능을 수행 합니다.|
 |**메뉴**<br />메뉴 또는 이전 화면으로 돌아가려면 키를 누릅니다.|이전 화면으로 반환 하 고 기본 응용 프로그램 화면에서 Apple TV 홈 화면을 종료 합니다.|일시 중지 하 고 게임 플레이 이전 화면으로 반환 하 고 기본 응용 프로그램 화면에서 Apple TV 홈 화면으로 종료 되거나 다시 시작 합니다.|
-|**Siri/Search**<br />Siri와 국가에서 단추를 누르고 음성 제어 모든 다른 국가에서 검색 화면에 표시 됩니다.|N/A|N/A|
+|**Siri/검색**<br />Siri와 국가에서 단추를 누르고 음성 제어 모든 다른 국가에서 검색 화면에 표시 됩니다.|N/A|N/A|
 |**재생/일시 중지**<br />재생 하 고 미디어를 일시 중지 또는 응용 프로그램에서 보조 함수를 제공 합니다.|미디어 재생, 일시 중지/다시 시작 재생을 시작합니다.|보조 단추 함수를 수행 하는지, 아니면 소개 비디오를 건너뜁니다 (하는 경우 존재).|
 |**Home**<br />홈 화면으로 돌아가려면 키를 눌러, 실행 중인 응용 프로그램을 표시, 누르고에 장치를 절전 모드를 두 번 클릭 합니다.|N/A|N/A|
 |**볼륨**<br />컨트롤은 오디오/비디오 장치 볼륨을 연결 합니다.|N/A|N/A|
@@ -75,9 +73,6 @@ Apple 화면 터치 제스처를 사용 하기 위한 다음 제안 사항을 �
 
 > [!IMPORTANT]
 > 수행 해야 **항상** 원격에서 재생/일시 중지 단추에 함수를 할당 합니다. 작동 하지 않는 단추가 끊어진 최종 사용자에 게 확인 앱을 만들 수 있습니다. 이 단추에 대 한 올바른 함수를 설정 하지 않은 경우 (터치 화면 클릭) 하 고 기본 단추와 동일한 기능을 할당 합니다.
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

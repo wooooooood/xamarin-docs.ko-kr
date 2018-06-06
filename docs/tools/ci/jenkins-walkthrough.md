@@ -1,16 +1,17 @@
 ---
 title: Xamarin을 사용한 Jenkins를 사용 하 여
-description: 이 가이드에는 Jenkins 연속 통합 서버를 설정 하 고 컴파일 Xamarin을 사용 하 여 만든 모바일 응용 프로그램을 자동화 하는 방법을 보여 줍니다. Jenkins OS x 설치, 구성, 및 변경 내용이 소스 코드 관리 시스템에 커밋될 때 Xamarin.iOS 및 Xamarin.Android 응용 프로그램을 컴파일할 작업을 설정 하는 방법을 설명 합니다.
+description: 이 문서에는 Jenkins 연속 통합 Xamarin 응용 프로그램을 위해 사용 하는 방법을 설명 합니다. 설치, 구성 및 Jenkins를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 1052507bfbf06e264f9e9da89be1e0f35fa70ce1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793952"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 

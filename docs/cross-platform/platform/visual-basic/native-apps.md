@@ -1,16 +1,17 @@
 ---
 title: Xamarin iOS 및 Android visual Basic.NET
-description: X이 연습에서는 Visual basic.net으로 작성 된 비즈니스 논리를 사용 하는 네이티브 Xamarin.iOS 및 Xamarin.Android 앱을 빌드하는 방법을 보여 줍니다.
+description: 이 연습에서는 Visual basic.net으로 작성 된 비즈니스 논리를 사용 하는 네이티브 Xamarin.iOS 및 Xamarin.Android 앱을 빌드하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 3b92442668f6bd86c1c521dd6b476e4bbb43c1ec
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a3e63f6c8d9b35a8158e2db6a48734b2205fe54c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782283"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Xamarin iOS 및 Android visual Basic.NET
 

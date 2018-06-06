@@ -1,18 +1,20 @@
 ---
-title: NSUserActivity 사용 하 여 검색
+title: Xamarin.iOS에 NSUserActivity 사용 하 여 검색
+description: 이 문서에서는 스포트라이트 및 Safari에서 검색 하는 NSUserActivity 인덱스 하는 방법을 설명 합니다. 검색 결과에서 NSUserActivity 선택에 응답 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 803fcce359bbe27ea19901afa766f5b7f4692e0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b053f66e9b6b7715cbe52c4e43d9db32db48f4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788210"
 ---
-# <a name="search-with-nsuseractivity"></a>NSUserActivity 사용 하 여 검색
+# <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.iOS에 NSUserActivity 사용 하 여 검색
 
 `NSUserActivity` iOS 8에에서 도입 된 및 전달 하기 위해 데이터를 제공 하는 데 사용 됩니다.
 다른 iOS 장치에서 실행 되는 앱의 다른 인스턴스에 전달 될 수 있는 응용 프로그램의 특정 부분에 활동을 만들 수 있습니다. 그런 다음 받는 장치 사용자 중단 오른쪽을 넘겨 이전 장치에서 시작 하는 활동을 계속할 수 있습니다. 전달 하기를 사용 하는 방법은 참조 하십시오 우리의 [핸드 오프 소개](~/ios/platform/handoff.md) 설명서입니다.

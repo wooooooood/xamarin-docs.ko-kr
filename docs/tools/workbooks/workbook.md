@@ -1,20 +1,19 @@
 ---
 title: 대화형 통합 문서
-description: 교육 또는 탐색 교육, 실험에 대 한 C# 코드를 사용 하 여 라이브 문서를 만들려면 통합 문서를 사용 합니다.
+description: 이 문서에서는 실험, 강의 교육, 또는 탐색에 대 한 C# 코드를 포함 하는 라이브 문서를 만드는 Xamarin 통합 문서를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa79aae9af2cd90741a54a5b3abc17910fcb181d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794178"
 ---
 # <a name="interactive-workbooks"></a>대화형 통합 문서
-
-_교육 또는 탐색 교육, 실험에 대 한 C# 코드를 사용 하 여 라이브 문서를 만들려면 통합 문서를 사용 합니다._
 
 독립 실행형 응용 프로그램으로, IDE에서 별도 통합 문서를 사용할 수 있습니다.
 

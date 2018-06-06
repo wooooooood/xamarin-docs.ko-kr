@@ -1,18 +1,20 @@
 ---
-title: 이미지 컨트롤
+title: watchOS Xamarin에서 이미지 컨트롤
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 watchOS 응용 프로그램에서 이미지 컨트롤을 사용 하는 방법을 설명 합니다. 이미지 조사식 확장, 애니메이션 및에 추가 SetImage 메서드 WKInterfaceImage 컨트롤에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb58c587f737a5991a21f0efe9964353a8ab0399
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791253"
 ---
-# <a name="image-control"></a>이미지 컨트롤
+# <a name="watchos-image-controls-in-xamarin"></a>watchOS Xamarin에서 이미지 컨트롤
 
 watchOS 제공는 [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) 이미지 및 간단한 애니메이션 표시 하는 컨트롤입니다. 일부 컨트롤 (예: 단추, 그룹 및 인터페이스 컨트롤러)의 배경 이미지를 포함할 수도 있습니다.
 

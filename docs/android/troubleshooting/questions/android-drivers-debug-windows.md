@@ -6,12 +6,13 @@ ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/19/2017
-ms.openlocfilehash: 9b249c67395c98c73526d741f442b7779a871873
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 7b3a4c2f807839897a099959fe3a6ea9ec25df78
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732751"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Windows에서 Android 디버그에 어떤 USB 드라이버 필요 합니까?
 
@@ -29,5 +30,5 @@ Windows;에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되
 
 - [Visual Studio Emulator for Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
 
-- [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [Google Android 에뮬레이터를 사용 하 여 디버깅](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 

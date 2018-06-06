@@ -1,20 +1,19 @@
 ---
 title: Microsoft Azure Active Directory
-description: Active Directory를 사용 하 여 Xamarin 모바일 응용 프로그램에서 사용자를 인증 합니다.
+description: 이 문서에서는 Azure Active Directory를 사용 하 여 Xamarin으로 빌드된 모바일 응용 프로그램에서 사용자를 인증 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7182b0ff308b952205c0d89ecb929695b0183e53
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9d34b38cf30a9d5a21f5d106f78823a2b077ef7c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780573"
 ---
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
-
-_Active Directory를 사용 하 여 Xamarin 모바일 응용 프로그램에서 사용자를 인증 합니다._
 
 
 Azure Active Directory에는 파일, 링크 및 Web Api, Office 365 등과 같은 직원이 사용 하 여 시스템에 로그인 하거나 자신의 전자 메일을 확인 하는 동일한 조직 계정을 사용 하 여 리소스를 보호 하는 개발자 수 있습니다.

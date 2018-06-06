@@ -1,21 +1,20 @@
 ---
-title: 탭 표시줄 컨트롤러 작업
-description: 이 문서에서는 디자인 하 고 탭 모음 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
+title: Xamarin의 탭 모음 컨트롤러 tvOS 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 tvOS 앱의 탭 모음 컨트롤러와 작업 하는 방법을 설명 합니다. 탭 막대의 보기를 통해 한 높은 수준의 제공 하며 탭 모음 항목, 스토리 보드 통합 및 탭 모음 항목에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789322"
 ---
-# <a name="working-with-tab-bar-controller"></a>탭 표시줄 컨트롤러 작업
-
-_이 문서에서는 디자인 하 고 탭 모음 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다._
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Xamarin의 탭 모음 컨트롤러 tvOS 작업
 
 TvOS 앱의 여러 형식에 대 한 주요 탐색 화면 위쪽에서 실행 되는 탭 막대로 표시 됩니다. 사용자 천공 기와 왼쪽 및 오른쪽에서 사용자의 선택 가능한 범주 및 변경 내용이 아래 콘텐츠 영역 목록.
 

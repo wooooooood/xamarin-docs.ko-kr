@@ -1,15 +1,17 @@
 ---
 title: NuGet에 대 한 새 플랫폼 관련 라이브러리 프로젝트 만들기
+description: 이 문서에서는 여러 플랫폼에 대 한 플랫폼별 코드를 포함 하는 단일 NuGet 패키지를 만드는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 901dbe032d62047668f265e8c7f79593b3fbfcce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 00a02973d6016ad63e4317279515acc2b4e2e81b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780645"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>NuGet에 대 한 새 플랫폼 관련 라이브러리 프로젝트 만들기
 
@@ -17,7 +19,7 @@ IOS 및 Android 등의 특정 플랫폼을 대상으로 하는 다중 플랫폼 
 
 NuGet으로 iOS 및 Android 관련 코드 모두에 공통적인.NET 코드를 포함할 수 있습니다.
 
-여러 어셈블리 생성 및 단일 NuGet 패키지에 기본 제공 됩니다. NuGet 표준 Xamarin iOS 및 Android 프로젝트와 같은 모든 지원 되는 프로젝트 형식에는 패키지를 추가할 수 있는지 확인 합니다.
+여러 어셈블리 생성 및 단일 NuGet 패키지에 기본 제공 됩니다. NuGet 표준 Xamarin.iOS 및 Android 프로젝트와 같은 모든 지원 되는 프로젝트 형식에 패키지를 추가할 수 있는지 확인 합니다.
 
 ## <a name="steps-to-create-a-cross-platform-library-nuget"></a>플랫폼 간 라이브러리 NuGet을 만드는 단계
 

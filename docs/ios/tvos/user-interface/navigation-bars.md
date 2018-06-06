@@ -1,21 +1,20 @@
 ---
-title: 탐색 컨트롤러 작업
-description: 이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작업을 설명 합니다.
+title: Xamarin에 탐색 모음 tvOS 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 tvOS 앱에서 탐색 모음을 사용 하는 방법을 설명 합니다. 스토리 보드의 탐색 모음을 설정 하 고 이러한 단추에서 이벤트에 응답에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8a9a1c852137a2bcc0d46615e69eef0a245a9768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b6c8ff8551c91578b9399b88e90e94c6af12ac68
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789293"
 ---
-# <a name="working-with-navigation-controllers"></a>탐색 컨트롤러 작업
-
-_이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작업을 설명 합니다._
+# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Xamarin에 탐색 모음 tvOS 작업
 
 제목과 선택적 탐색 모음 단추를 표시 하는 보기의 맨 위에 탐색 모음을 추가할 수 있습니다. 일반적으로 테이블 뷰, 컬렉션 또는 하위 선택한 항목의 세부 정보를 보여 주는 뷰 메뉴와 같은 기본 페이지에서 사용자가 탐색 하는 경우 사용 됩니다.
 
@@ -26,9 +25,6 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 > [!IMPORTANT]
 > 탐색 모음은 기본적으로 완전히 투명 합니다. 유지 하 고 탐색 모음의 내용을 읽을 수 있는 그 아래에 있는 내용을 주의 해야 합니다. 예를 들어 때 표 보기 또는 컬렉션의 콘텐츠 스크롤 그 아래에서입니다.
 
-
-
-
 <a name="Navigation-Bars-and-Storyboards" />
 
 ## <a name="navigation-bars-and-storyboards"></a>스토리 보드와 탐색 모음
@@ -36,7 +32,6 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 탐색 모음 Xamarin.tvOS 응용 프로그램에서 사용 하는 가장 쉬운 방법은 iOS 디자이너를 사용 하 여 응용 프로그램의 UI를에 추가 하는 합니다.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
 
 1. 에 **솔루션 패드**를 두 번 클릭 `Main.storyboard` 파일을 열어 편집 합니다.
 1. 끌어서는 **탐색 모음** 에서 **도구 상자** 화면 맨 위에 있는 보기에 놓습니다. 
@@ -77,9 +72,6 @@ _이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 탐색 모음 작�
 
 > [!IMPORTANT]
 > 이벤트를 할당할 수 있지만 `TouchUpInside` 를 UI 요소 (예: UIButton) iOS 디자이너에서에서이 호출 되지 것입니다 있으므로 Apple TV 터치 스크린 또는 터치 이벤트를 지원 하지 않습니다. 항상 사용 해야는 `Primary Action` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
-
-
-
 
 다음 코드는 세 가지 다른 BarButtonItems에 이벤트 처리기의 예를 제공: `ShowFirstHotel`, `ShowSecondHotel`, 및 `ShowThirdHotel`합니다. 각 항목을 클릭할 때, 배경 이미지 `HotelImage` 변경 됩니다. 이 뷰 컨트롤러에서 편집 (예제 `ViewController.cs`) 파일:
 

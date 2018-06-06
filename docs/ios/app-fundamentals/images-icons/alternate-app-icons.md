@@ -1,19 +1,20 @@
 ---
-title: 대체 앱 아이콘
-description: 이 문서에서는 Xamarin.iOS에 대체 앱 아이콘을 사용 하 여 설명 합니다.
+title: Xamarin.iOS의 대체 앱 아이콘
+description: 이 문서에서는 Xamarin.iOS에서 대체 앱 아이콘을 사용 하는 방법에 설명 합니다. 이러한 아이콘 Xamarin.iOS 프로젝트에 추가 하는 방법, Info.plist 파일을 수정 하는 방법 및 응용 프로그램의 아이콘을 프로그래밍 방식으로 관리 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 8d9f27d58a881878aabeda4326805eec726c247c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1d37a29982454367c35bfdfad205abce0eb025af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784112"
 ---
-# <a name="alternate-app-icons"></a>대체 앱 아이콘
+# <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.iOS의 대체 앱 아이콘
 
 _이 문서에서는 Xamarin.iOS에 대체 앱 아이콘을 사용 하 여 설명 합니다._
 

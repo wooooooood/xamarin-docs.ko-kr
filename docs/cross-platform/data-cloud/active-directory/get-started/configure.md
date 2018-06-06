@@ -1,15 +1,17 @@
 ---
 title: 2단계. 모바일 응용 프로그램에 대 한 서비스 액세스를 구성 합니다.
+description: 이 문서에서는 Azure Active Directory에 의해 보호 되는 Azure 응용 프로그램에 액세스할 수 있는 Xamarin 응용 프로그램을 제공 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: fd6436a664fde7a610b29bba31d0baf35cf88dad
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2a9baab9215ae2d30e4daf6800a116c95165da42
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780102"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>2단계. 모바일 응용 프로그램에 대 한 서비스 액세스를 구성 합니다.
 

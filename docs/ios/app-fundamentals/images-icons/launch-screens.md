@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 0fbd38b643e7806932ba262becc72be2bae6ba4b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784623"
 ---
-# <a name="launch-screens"></a>시작 화면
+# <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대 한 화면을 시작합니다
 
 _이 문서에서는 모든 해상도와 방향으로 하나의 통합 된 스토리 보드를 사용 하 여 모든 iOS 장치에 대 한 응용 프로그램 시작 화면을 만드는 방법을 설명 합니다._
 

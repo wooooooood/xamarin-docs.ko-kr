@@ -1,18 +1,20 @@
 ---
-title: 보기 컨트롤러 전환
+title: Xamarin.iOS 컨트롤러 전환 보기
+description: 이 문서에는 애니메이션된 전환을 Xamarin.iOS 응용 프로그램의 컨트롤러 보기를 사용자 지정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 253a2556872ea9186eec832a84f4cfff9cb1c209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 35795002310cd79a1897061fe6e3e41b48b45b4d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790450"
 ---
-# <a name="view-controller-transitions"></a>보기 컨트롤러 전환
+# <a name="view-controller-transitions-in-xamarinios"></a>Xamarin.iOS 컨트롤러 전환 보기
 
 UIKit은 컨트롤러 보기를 표시할 때 발생 하는 애니메이션된 변환 사용자 지정에 대 한 지원을 추가 합니다. 이 지원은으로 기본 제공 컨트롤러에서 직접 상속 하는 모든 사용자 지정 컨트롤러에 포함 된 `UIViewController`합니다. 또한 `UICollectionViewController` 컨트롤러 전환 애니메이션된 전환을 컬렉션 보기 레이아웃에서을 활용 하는 사용자 지정 기능을 활용 합니다.
 

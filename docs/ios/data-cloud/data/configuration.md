@@ -1,18 +1,20 @@
 ---
-title: 구성
+title: Xamarin.iOS에서 SQLite 구성
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램에서 SQLite 데이터베이스 파일의 위치를 결정 하는 방법에 설명 합니다. 이러한 개념은 선택한 데이터 액세스 메커니즘에 관계 없이 해당 됩니다.
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: f4a1bc65fbba68b59196702978633eaf46bc44c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 57645c0bb947a60a3d74436b752210d1bac18124
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784383"
 ---
-# <a name="configuration"></a>구성
+# <a name="configuring-sqlite-in-xamarinios"></a>Xamarin.iOS에서 SQLite 구성
 
 SQLite Xamarin.iOS 응용 프로그램에서 사용 하 여 데이터베이스 파일에 대 한 올바른 파일 위치를 확인 해야 합니다.
 

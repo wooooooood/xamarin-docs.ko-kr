@@ -1,15 +1,17 @@
 ---
 title: 포함 하는.NET 시작
+description: 이 문서에 C, Java, Android를 포함 하는.NET을 사용 하는 방법을 설명 하는 다양 한 안내선에 링크 Objective-c, iOS 및 macOS 프로젝트.
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: af73de4c9f27cfab34b22e726248723da3d1ee58
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9829881dcb374b141bdf7fc578266ec66d90315b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793060"
 ---
 # <a name="getting-started-with-net-embedding"></a>포함 하는.NET 시작
 

@@ -1,17 +1,18 @@
 ---
 title: SiriKit 개념 이해
-description: 이 문서에서는 필요한 SiriKit Xamarin.iOS 앱에서 사용 하기 위한 주요 개념을 설명 합니다.
+description: 이 문서에서는 SiriKit Xamarin.iOS 앱에서 작업 하는 데 필요한 핵심 개념을 설명 합니다. 예를 들어 의도 설명 및 유용한 경험 등 의도 UI 확장, SiriKit 권한을 디자인 합니다.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 62b612f2e2725e5856a39e1d4d3fc1288282167a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788932"
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해
 
@@ -118,7 +119,7 @@ Siri의 구두 요청 하면 이러한 값은 단계 Siri을 따를 것입니다
 2. **응용 프로그램 논리** -이 작업 및 응용 프로그램을 수행 하는 응답 의도 주어진 기반으로 합니다.
 3. **사용자 인터페이스** -응용 프로그램에서의 응답을 제공할 수 있는 옵션, 사용자 지정 사용자 인터페이스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 위의 정보는 다음과 같은 대화 MonkeyChat 앱과 상호 작용 하는 방법을 없는지 확인 합니다.
 

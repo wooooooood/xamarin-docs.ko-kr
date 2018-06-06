@@ -1,18 +1,20 @@
 ---
-title: 화면 크기와 작업
+title: Xamarin에 대 한 화면 크기 watchOS 작업
+description: 이 문서에서는 다양 한 watchOS 화면 크기와 작업 하는 방법에 설명 합니다. WatchOS watchOS 시뮬레이터 인터페이스 디자이너에 설명 하 고 리소스 이미지입니다.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 600b3de6cbf31bd4c3221eb1bf81eda7b4678c09
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 30866c70879950acd8f43fd5880b1b24ba127fa4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790713"
 ---
-# <a name="working-with-screen-sizes"></a>화면 크기와 작업
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Xamarin에 대 한 화면 크기 watchOS 작업
 
 Apple Watch 두 개의 화면 크기에서 제공 됩니다.
 

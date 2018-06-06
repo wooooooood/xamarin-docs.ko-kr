@@ -1,23 +1,20 @@
 ---
-title: 텍스트 및 검색 필드 작업
-description: 이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 텍스트 및 일치 작업을 설명 합니다.
+title: 텍스트 및 Xamarin 검색 필드가 tvOS 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램에서 텍스트 및 검색 필드를 사용 하는 방법을 설명 합니다. 텍스트 및 검색 필드의 상위 수준 개요를 제공 하 고 키보드, 스토리 보드 통합, 검색 데이터 모델 등을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bf71df62bd6ffd88f42d31809444cd7b3350b66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789724"
 ---
-# <a name="working-with-text-and-search-fields"></a>텍스트 및 검색 필드 작업
-
-_이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 텍스트 및 일치 작업을 설명 합니다._
-
-
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>텍스트 및 Xamarin 검색 필드가 tvOS 작업
 
 Xamarin.tvOS 앱 (예: 사용자 Id와 암호) 사용자에서 작은 조각 텍스트를 요청할 수 필요한 경우 텍스트 필드를 사용 하 고 화상 키보드:
 

@@ -1,19 +1,20 @@
 ---
-title: iOS 아키텍처
-description: Xamarin.iOS 낮은 수준에서 탐색
+title: iOS 응용 프로그램 아키텍처
+description: 이 문서에서는 AOT 컴파일, 선택기, 기관, 응용 프로그램을 시작 및 생성기 설명, 낮은 수준의 어떻게 네이티브 모듈과 관리 코드 상호 작용에 Xamarin.iOS를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 89b4e8bde43b34c50c1cba54a4c7d8d4ff183c66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786124"
 ---
-# <a name="ios-architecture"></a>iOS 아키텍처
+# <a name="ios-app-architecture"></a>iOS 응용 프로그램 아키텍처
 
 Xamarin.iOS 응용 프로그램 모노 실행 환경 내에서 실행 하 고 C# 코드를 ARM 어셈블리 언어를 컴파일하는 데 전체 앞의 시간 (AOT) 컴파일을 사용. 그러면-병렬 실행으로 [Objective C 런타임](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/)합니다. 특히 두 런타임 환경 UNIX 방식 커널 위에서 실행 [XNU](https://en.wikipedia.org/wiki/XNU), 때문에 개발자가 기본 네이티브 또는 관리 되는 시스템에 액세스 하려면 사용자 코드에 다양 한 Api를 노출 합니다.
 
@@ -26,7 +27,6 @@ Xamarin.iOS 응용 프로그램 모노 실행 환경 내에서 실행 하 고 C#
 Xamarin에 대 한 개발 하는 경우 약관 *네이티브 및 관리* 코드는 종종 사용 됩니다. [관리 코드](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) 는에서는에서 관리 하는 실행 하는 코드는 [.NET Framework 공용 언어 런타임](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), 또는 Xamarin의 경우: 모노 런타임. 중간 언어 주기입니다.
 
 네이티브 코드는 코드입니다 (예를 들어 Objective-c 또는 ARM 칩의 AOT 컴파일된 코드)는 특정 플랫폼에서 기본적으로 실행 됩니다. 이 가이드 AOT 네이티브 코드로 관리 되는 코드를 컴파일하는 방법을 설명 하 고 사용 하는 것 바인딩 사용 하 여 Apple iOS Api도 동시에 대 한 액세스 Xamarin.iOS 응용 프로그램의 작동 방법을 설명 합니다. NET의 BCL 및 C#과 같은 복잡 한 언어입니다.
-
 
 ## <a name="aot"></a>AOT
 
@@ -62,10 +62,10 @@ Xamarin 플랫폼 응용 프로그램을 컴파일할 때 모노 C# (또는 F #)
 
 ```csharp
  class MyViewController : UIViewController{
-    [Export ("myFunc")]
-    public void MyFunc ()
-    {
-    }
+     [Export ("myFunc")]
+     public void MyFunc ()
+     {
+     }
  }
 ```
 

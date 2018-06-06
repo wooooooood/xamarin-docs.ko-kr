@@ -1,21 +1,20 @@
 ---
-title: 응용 프로그램 아이콘
-description: 응용 프로그램 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다.
+title: Xamarin.iOS의 응용 프로그램 아이콘
+description: '이 문서에서는 Xamarin.iOS의 다양 한 응용 프로그램 아이콘을 사용 하는 방법을 설명: 자체 응용 프로그램 아이콘, 스포트라이트 아이콘, 설정 아이콘 및 iTunes 아트 워크.'
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783999"
 ---
-# <a name="application-icons"></a>응용 프로그램 아이콘
-
-_응용 프로그램 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다._
+# <a name="application-icons-in-xamarinios"></a>Xamarin.iOS의 응용 프로그램 아이콘
 
 다음 항목에 대해 자세히 설명합니다.
 
@@ -114,7 +113,7 @@ UI 컨트롤에 대 한 및 문서 아이콘으로 Xamarin.iOS 앱 이미지 자
 
 1. 두 번 클릭는 `Info.plist` 파일에 **솔루션 탐색기** 를 편집 하기 위해 엽니다.
 2. 으로 아래로 스크롤하여는 **앱 아이콘** 섹션.
-3. **소스** 드롭다운 목록에서 확인 **AppIcons** 을 선택 합니다. 
+3. **소스** 드롭다운 목록에서 확인 **AppIcon** 을 선택 합니다. 
 
     ![](app-icons-images/migrate01.png "AppIcons 선택 되어 있는지 확인")
 4. **솔루션 탐색기**, 두 번 클릭는 `Assets.xcassets` 편집을 위해 열 파일입니다. 

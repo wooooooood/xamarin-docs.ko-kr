@@ -1,20 +1,19 @@
 ---
-title: 문서 선택
-description: 문서 선택 뷰 컨트롤러 샌드박스 응용 프로그램의 외부 파일에 대 한 사용자 액세스 권한을 부여합니다. 것은 앱 간의 문서를 공유 하기 위한 간단한 메커니즘입니다. 또한 사용자가 여러 응용 프로그램으로 단일 문서를 편집할 수 있으므로 보다 복잡 한 워크플로가 있습니다. 이 문서에서는 Xamarin.iOS 응용 프로그램에서 문서 선택기를 사용 하 여를 소개 하 고 지 원하는 데 필요한 icloud와 문서에 변경 합니다.
+title: Xamarin.iOS에 문서 선택
+description: 이 문서는 문서 선택 iOS를 설명 하 고 Xamarin.iOS에서 사용 하는 방법에 설명 합니다. Icloud와 문서, 공용 설치가 코드, 문서 공급자 확장 등를 살펴보면이 필요합니다.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786888"
 ---
-# <a name="document-picker"></a>문서 선택
-
-_문서 선택 뷰 컨트롤러 샌드박스 응용 프로그램의 외부 파일에 대 한 사용자 액세스 권한을 부여합니다. 것은 앱 간의 문서를 공유 하기 위한 간단한 메커니즘입니다. 또한 사용자가 여러 응용 프로그램으로 단일 문서를 편집할 수 있으므로 보다 복잡 한 워크플로가 있습니다. 이 문서에서는 Xamarin.iOS 응용 프로그램에서 문서 선택기를 사용 하 여를 소개 하 고 지 원하는 데 필요한 icloud와 문서에 변경 합니다._
+# <a name="document-picker-in-xamarinios"></a>Xamarin.iOS에 문서 선택
 
 문서 선택기에는 문서를 앱 간에 공유할 수 있습니다. 이러한 문서는 다른 응용 프로그램 디렉터리 또는 iCloud에 저장할 수 있습니다. 문서 집합을 통해 공유 [문서 공급자 확장](~/ios/platform/extensions.md) 사용자가 자신의 장치에 설치 합니다. 
 
@@ -39,7 +38,7 @@ Apple의 iCloud 서비스에 문서 선택의 새로운 기능을 구현 하려�
 -  iOS 장치는 Mac OS iCloud 폴더의 콘텐츠를 액세스할 수 있습니다.
 
 > [!IMPORTANT]
-> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 ## <a name="what-is-a-document"></a>문서는 무엇입니까?
 

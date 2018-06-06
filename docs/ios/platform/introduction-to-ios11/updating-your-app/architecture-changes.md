@@ -1,21 +1,20 @@
 ---
-title: 아키텍처 변경
-description: IOS 11의 새로운 기능 탐색
+title: IOS 11에에서 대 한 아키텍처 변경
+description: 이 문서에서는 iOS 11에서에서 32 비트 응용 프로그램의 사용 중단에 설명 합니다. 대상 64 비트 아키텍처에 대 한 응용 프로그램을 업데이트 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 6dd874fd803d2b3de21b0b604cbc2bafa5bf1aec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09d528ceb0654debd7c0ac8818f19c622775eac2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787437"
 ---
-# <a name="architecture-changes"></a>아키텍처 변경
-
-_IOS 11의 새로운 기능 탐색_
+# <a name="architecture-changes-in-ios-11"></a>IOS 11에에서 대 한 아키텍처 변경
 
 IOS 11에 알고 있어야 하는 가장 중요 한 변경 중 하나는에 설명 된 대로 앱에 대 한 32 비트 지원의 사용 중단 [Apple의](https://developer.apple.com/news/?id=06282017b) 보도 자료. 모든 새 앱 및 앱에 대 한 업데이트는 64 비트를 지원 해야 합니다. 32 비트 응용 프로그램 **시작 되지 않는** iOS 11에서에서.
 

@@ -1,19 +1,20 @@
 ---
-title: 복잡성
-description: watchOS는 조사식에 대해 사용자 지정 복잡성을 작성 하는 개발자를 수 있습니다.
+title: Xamarin에 watchOS
+description: 이 문서에서는 Xamarin의 watchOS 복잡성을 사용 하는 방법을 설명 합니다. Complication, 템플릿, 작성 한 complication 추가 하는 방법에 설명 하 고 샘플 코드를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: c058922f97183359122a1bfa2b0e162e4ce344f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c69f65091e7d6c83afe34c6d8c06477cc5d133b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791841"
 ---
-# <a name="complications"></a>복잡성
+# <a name="watchos-complications-in-xamarin"></a>Xamarin에 watchOS
 
 _watchOS는 조사식에 대해 사용자 지정 복잡성을 작성 하는 개발자를 수 있습니다._
 

@@ -1,15 +1,17 @@
 ---
 title: TinyRenderer 통합 문서
+description: 이 문서에서는 OpenGL과 함께 작동 TinyRenderer 통합 문서를 설명 합니다. 이러한 통합 문서 창과 Mac. 둘 다에서 실행
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: fc0716fc3babd0b2ee835b839ae816f2cb815b0f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 10704044042ea38dd3a5297c46371f9f9c27936c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794139"
 ---
 # <a name="tinyrenderer-workbooks"></a>TinyRenderer 통합 문서
 
@@ -31,7 +33,6 @@ ms.lasthandoff: 05/09/2018
 [![](tinyrenderer-images/tinyrenderer-sml.png "와이어 프레임 렌더링 예제")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 이 오픈 소스를 기반으로 하는 이러한 통합 문서에 C# 코드 [c + + 코드](https://github.com/ssloy/tinyrenderer) 이 텍스트는 [wiki](https://github.com/ssloy/tinyrenderer/wiki/)합니다. 원래 작업의 통합 문서 집합으로 바꿀 수 있도록 해 주는 라이선스에 따라 사용할 수 있는 감사 드립니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

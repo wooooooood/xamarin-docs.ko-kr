@@ -1,18 +1,20 @@
 ---
-title: 지원 되는 / 지원 되지 않는 프레임 워크
+title: TvOS에서 지원 되는 / 지원 되지 않는 프레임 워크
+description: 'TvOS 응용 프로그램에 사용할 수 있는 기능을 명확 하 게를 도움이 되도록이 문서에서는 Apple 프레임 워크의 두 목록: tvOS에서 지원 되 고 다른 하나 tvOS에서 지원 되지 않습니다.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4b368a8e4d449d8fa8d0d29dab19d227bb6eee4c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789124"
 ---
-# <a name="supported-and-unsupported-frameworks"></a>지원 되는 / 지원 되지 않는 프레임 워크
+# <a name="supported-and-unsupported-frameworks-in-tvos"></a>TvOS에서 지원 되는 / 지원 되지 않는 프레임 워크
 
 <a name="Supported-Frameworks" />
 

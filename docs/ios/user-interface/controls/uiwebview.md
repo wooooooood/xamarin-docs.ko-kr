@@ -1,19 +1,20 @@
 ---
-title: 웹 보기
-description: 구체화 iOS 웹 보기 옵션
+title: Xamarin.iOS의 웹 보기
+description: 이 문서에서는 Xamarin.iOS 앱에서 웹 콘텐츠를 표시할 수는 다양 한 방법을 설명 합니다. UIWebView, WKWebView, SFSafariViewController, Safari, 및 앱 전송 보안에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790498"
 ---
-# <a name="web-views"></a>웹 보기
+# <a name="web-views-in-xamarinios"></a>Xamarin.iOS의 웹 보기
 
 Apple는 iOS의 수명 동안 다양 한 방법으로 앱에서 웹 보기 기능을 통합 하는 응용 프로그램 개발자에 대 한를 출시 했습니다. 대부분의 사용자는 iOS 장치에서 기본 제공 Safari 웹 브라우저를 사용 하며 따라서 다른 앱의 기능을 웹 보기는이 환경과 일치를 바랍니다. 동일 하 게 par, 및 기능에 대 한 성능 작동 하도록 하는 동일한 제스처 기대 합니다.
 

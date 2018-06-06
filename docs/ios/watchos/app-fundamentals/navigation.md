@@ -1,18 +1,20 @@
 ---
-title: 탐색이 있는 작업
+title: WatchOS Xamarin에서 탐색 사용
+description: 이 문서에서는 탐색 watchOS 응용 프로그램에서 작업 하는 방법을 설명 합니다. 모달 인터페이스, 계층적 탐색 및 페이지 기반 인터페이스에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3cef621479db89bfe30c1e82bf5e12f18d0e46af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9bcfc388164060549ca7010d11671abfa8230ac
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790642"
 ---
-# <a name="working-with-navigation"></a>탐색이 있는 작업
+# <a name="working-with-watchos-navigation-in-xamarin"></a>WatchOS Xamarin에서 탐색 사용
 
 시계에 사용할 수 있는 가장 간단한 탐색 옵션은 단순 [모달 팝업](#modal) 현재 장면 맨 위에 나타나는 합니다.
 

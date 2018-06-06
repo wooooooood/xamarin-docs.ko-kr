@@ -1,5 +1,5 @@
 ---
-title: 앱 배포 개요
+title: tvOS 응용 프로그램 배포 개요
 description: 이 문서는 Xamarin.tvOS 응용 프로그램에 사용할 수 있는 배포 기술에 대 한 개요를 제공 하 고 역할을 항목에 있는 더 자세한 문서에 대 한 포인터.
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: e5be0bef158c87fe06516d9a58e34c741e6e14b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 440d980c39434165ba9a59ccf67850977c8f75c3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788747"
 ---
-# <a name="app-distribution-overview"></a>앱 배포 개요
+# <a name="tvos-app-distribution-overview"></a>tvOS 응용 프로그램 배포 개요
 
 _이 문서는 Xamarin.tvOS 응용 프로그램에 사용할 수 있는 배포 기술에 대 한 개요를 제공 하 고 역할을 항목에 있는 더 자세한 문서에 대 한 포인터._
 

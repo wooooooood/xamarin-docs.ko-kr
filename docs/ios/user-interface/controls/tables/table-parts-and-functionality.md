@@ -1,18 +1,20 @@
 ---
-title: 테이블 파트 및 기능
+title: 파트 및 Xamarin.iOS의 기능 테이블
+description: 이 문서에서는 ios에서 UITableView의 다양 한 부분을 설명 합니다. 섹션 헤더, 셀, 섹션 바닥글, 인덱스 및 편집 모드에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: be8ad21847aed3d8ad9bda7ac45b070e5ad868bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c7c9f810798c3d02078b48e17a2ab951cb36aa12
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789878"
 ---
-# <a name="table-parts-and-functionality"></a>테이블 파트 및 기능
+# <a name="table-parts-and-functionality-in-xamarinios"></a>파트 및 Xamarin.iOS의 기능 테이블
 
 UITableView '그룹화' 또는 '일반' 스타일을 가질 수 있습니다 및 다음과 같은 부분으로 구성 됩니다.
 

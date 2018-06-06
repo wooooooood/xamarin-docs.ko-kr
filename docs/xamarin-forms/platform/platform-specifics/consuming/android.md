@@ -6,12 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 8d7ec3f2f64fdb8be903fd13bd72bcf545265a3d
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 05f1fc6158e9a20892ab4a4b49b33e4eac6bc5e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733063"
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼-세부 사항
 
@@ -26,6 +27,8 @@ Android에서는 Xamarin.Forms 다음 플랫폼-세부 정보가 들어 있습�
 - 사용 하지 않도록 설정 된 [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 및 [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 일시 중지에 수명 주기 이벤트 페이지 하 고 각각 AppCompat를 사용 하는 응용 프로그램에 대 한 다시 시작 합니다. 자세한 내용은 참조 [Disappearing 및 페이지 수명 주기 이벤트가 표시 해제](#disable_lifecycle_events)합니다.
 - 제어 여부는 [ `WebView` ](xref:Xamarin.Forms.WebView) 혼합 된 콘텐츠를 표시할 수 있습니다. 자세한 내용은 참조 [혼합 된 콘텐츠 보기에서 사용 하도록 설정](#webview-mixed-content)합니다.
 - 입력된 방법에 대 한 소프트 키보드에 대 한 편집기 옵션 설정는 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 자세한 내용은 참조 [설정 항목 입력 방법 편집기 옵션](#entry-imeoptions)합니다.
+- 지원 되는 레거시 색 모드를 해제 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 참조 [레거시 색 모드 해제](#legacy-color-mode)합니다.
+- 기본 안쪽 여백은 Android 단추의 섀도 값을 사용 합니다. 자세한 내용은 참조 [Android 단추를 사용 하 여](#button-padding-shadow)합니다.
 
 <a name="soft_input_mode" />
 
@@ -308,7 +311,7 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 
 `Entry.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 대 한 소프트 키보드에 대 한 입력된 방법 작업 옵션을 설정 하는 [ `Entry` ](xref:Xamarin.Forms.Entry), 와 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 다음 값을 제공 하는 열거 합니다.
 
-- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) – 나타냅니다는 특정 동작 키가 필요 하며, 수 있는 내부 컨트롤 자체를 생성 합니다.
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) – 나타냅니다는 특정 동작 키가 필요 하며, 수 있는 내부 컨트롤 자체를 생성 합니다. 이거나 `Next` 또는 `Done`합니다.
 - [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) – 작업 키는 사용할 수 있도록 나타냅니다.
 - [`Go`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Go) – 동작 키 "이동" 작업을 수행 합니다, 텍스트의 대상으로 지정할 사용자 라인 때 입력 한을 나타냅니다.
 - [`Search`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Search) – "검색" 연산을 수행 하는 동작 키, 라인 텍스트 검색의 결과를 사용자 입력을 나타냅니다.
@@ -325,6 +328,83 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 결과 지정 된 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 값에 대 한 소프트 키보드에 적용 되는 [ `Entry` ](xref:Xamarin.Forms.Entry), 입력된 방법 편집기 옵션 설정:
 
 [![항목이 입력 방법 편집기 플랫폼별](android-images/entry-imeoptions.png "항목 입력 방법 편집기 플랫폼별")](android-images/entry-imeoptions-large.png#lightbox "항목 입력 방법 편집기 플랫폼별")
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>레거시 색 모드를 사용 하지 않도록 설정
+
+일부 Xamarin.Forms 뷰 기능을 레거시 색 모드. 이 모드에서는 때는 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 보기의 속성이로 설정 되어 `false`, 보기에는 사용할 수 없는 상태에 대 한 기본 네이티브 색을 사용 하 여 사용자가 설정한 색 보다 우선 합니다. 이전 버전과 호환성을이 레거시 색 모드의 기본 동작을 지원 되는 뷰 상태가 유지 됩니다.
+
+이 플랫폼별 보기를 사용 하지 않도록 설정 하는 경우에 사용자가 설정한 뷰에 색 유지 되도록이 레거시 색 모드를 해제 합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) 연결 된 속성을 `false`:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                android:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
+```
+
+`VisualElement.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스, 레거시 색 모드 사용 되지 않는지 여부를 제어에 사용 됩니다. 또한는 [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement})) 메서드를 사용 하 여 레거시 색 모드 되지 않는지 여부를 반환할 수 있습니다.
+
+결과 보기 사용 하지 않는 경우 사용자가 설정한 뷰에 색도 계속 되도록 레거시 색 모드를 비활성화할 수 있습니다.
+
+![](android-images/legacy-color-mode-disabled.png "레거시 색 모드 사용 안 함")
+
+> [!NOTE]
+> 설정할 때는 [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) 레거시 모드는 완전히 보기에서는 무시 됩니다. 시각적 상태에 대 한 자세한 내용은 참조 [The Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
+
+<a name="button-padding-shadow" />
+
+## <a name="using-android-buttons"></a>Android 단추 사용
+
+이 플랫폼별 Xamarin.Forms 단추 기본 안쪽 여백 및 Android 단추의 그림자의 값을 사용 하는지 여부를 제어 합니다. 설정 하 여 XAML에서 사용 되는 [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) 및 [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) 연결 된 속성을 `boolean` 값:
+
+```xaml
+<ContentPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button ...
+                android:Button.UseDefaultPadding="true"
+                android:Button.UseDefaultShadow="true" />         
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용 될 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
+```
+
+`Button.On<Android>` 메서드 지정이 플랫폼별 Android에만 실행 됩니다. [ `Button.SetUseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) 및[ `Button.SetUseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 기본값을 사용 하 여 Xamarin.Forms 단추가 있는지 여부를 제어 하는 데 사용 됩니다 안쪽 여백 및 Android 단추의 그림자의 값입니다. 또한는 [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) 및 [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) 메서드를 사용 하 여 단추 기본 각각 값과 기본값 그림자를 안쪽 사용 하는지 여부를 반환할 수 있습니다.
+
+결과 기본 안쪽 여백 및 Android 단추의 그림자 값 Xamarin.Forms 단추를 사용할 수 있습니다.
+
+![](android-images/button-padding-and-shadow.png "레거시 색 모드 사용 안 함")
+
+위에 스크린샷에서 사항에 유의 [ `Button` ](xref:Xamarin.Forms.Button) 점을 제외 하 고 동일한 정의 갖추고 오른쪽 `Button` 기본 안쪽 여백 및 Android 단추의 섀도 값을 사용 합니다.
 
 ## <a name="summary"></a>요약
 

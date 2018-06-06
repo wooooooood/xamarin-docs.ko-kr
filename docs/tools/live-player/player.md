@@ -1,16 +1,17 @@
 ---
 title: Xamarin Player 라이브 응용 프로그램
-description: 편집 하 고 iOS 또는 Android 장치에서 실시간으로에서 앱을 테스트 합니다.
+description: 이 문서에서는 코드 변경 내용 미리 보기를 사용할 수 있는 앱을 장치에 라이브 Xamarin 라이브 플레이어를 설명 합니다. 설치, 샘플, 로그, 장치 관리 설정에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2017
-ms.openlocfilehash: 3d4d34c6945387f5878ea708faf630d2545a750e
-ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
+ms.openlocfilehash: 88f7f62650484007c221aa7baaa684f872e0a8e9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794152"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Player 라이브 응용 프로그램
 

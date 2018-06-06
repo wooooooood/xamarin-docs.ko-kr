@@ -1,16 +1,17 @@
 ---
 title: 'F # 시작'
-description: 'F #은 강력한 형식의 함수형 프로그래밍 언어로 서.NET에서 실행 되도록 디자인'
+description: '이 문서에서는 F # 배우고 Mac. Visual Studio 2017 및 Visual Studio와 Xamarin 응용 프로그램을 개발을 사용 하는 방법을 설명합니다'
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 07082ed68e1257679b6296470d276b61a9f39f00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781779"
 ---
 # <a name="getting-started-with-f35"></a>F 시작&#35;
 

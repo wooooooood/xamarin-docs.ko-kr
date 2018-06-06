@@ -1,15 +1,17 @@
 ---
 title: Objective-C 바인딩
+description: 이 문서는 C# 바인딩을 만들 Objective C 코드로 개발자가 Xamarin 응용 프로그램에서 기본 제공 라이브러리를 사용할 수 있도록 하는 방법을 설명 하는 다양 한 안내선에 링크를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 721036993061d08dadf8b279e13981caaa51f91f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 55c28387424dd7397280ffa255d94a950618d5ab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781009"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 

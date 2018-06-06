@@ -1,22 +1,20 @@
 ---
-title: 단추와 작업
-description: 이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 단추가 포함 된 작업을 설명 합니다.
+title: Xamarin tvOS 단추와 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램 단추와 작업 하는 방법을 설명 합니다. 스토리 보드 및 코드에서 단추와 함께 작업 하는 방법에 설명 하 고 단추 스타일을 지정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: e915e96690fe67f0e704ec558313427f01753438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3de732e9eee696ce21ffc5526afd44f29695a313
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789387"
 ---
-# <a name="working-with-buttons"></a>단추와 작업
-
-_이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 단추가 포함 된 작업을 설명 합니다._
-
+# <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin tvOS 단추와 작업
 
 인스턴스를 사용 하 여는 `UIButton` tvOS 창에 포커스를 받을 수, 선택할 수 있는 단추를 만드는 클래스입니다. 대상 개체에 동작 메시지를 보낼 사용자가 단추를 선택 하는 경우 사용자에 게 응답 하 여 Xamarin.tvOS 응용 프로그램의 입력을 허용 합니다.
 

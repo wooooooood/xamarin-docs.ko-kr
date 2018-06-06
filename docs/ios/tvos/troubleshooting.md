@@ -1,6 +1,6 @@
 ---
-title: 문제 해결
-description: 이 문서에서는 Xamarin의 tvOS 지원 팀과 작업 하는 동안 발생할 수 있는 문제를 알고 있습니다.
+title: Xamarin으로 빌드된 tvOS 앱 문제 해결
+description: 이 문서에서는 Xamarin으로 빌드된 tvOS 응용 프로그램을 개발 하는 동안 문제를 해결 하기 위한 다양 한 팁을 제공 합니다. 알려진된 문제 및 특정 오류를 설명합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e69157cf9c8a9b9405e31edb2906754328653ccb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789205"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin으로 빌드된 tvOS 앱 문제 해결
 
 _이 문서에서는 Xamarin의 tvOS 지원 팀과 작업 하는 동안 발생할 수 있는 문제를 알고 있습니다._
 
@@ -177,11 +178,11 @@ Siri 원격에 대 한 지원을 추가 하는 솔루션 (`GCMicroGamepad`) 응�
 
 자세한 내용은 참조 하십시오 우리의 [게임 컨트롤러 작업](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers) 의 섹션 우리의 [Siri 원격 인스턴스 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 설명서입니다.
 
-### <a name="incompatible-target-framework-netportable-versionv45-profileprofile78"></a>Incompatible target framework: .NetPortable, Version=v4.5, Profile=Profile78
+### <a name="incompatible-target-framework-netportable-versionv45-profileprofile78"></a>호환 되지 않는 대상 프레임 워크: 합니다. NetPortable, Version = v4.5, 프로필 Profile78 =
 
 이식 가능한 클래스 라이브러리 (PCL) Xamarin.tvOS 프로젝트에 포함 하려고 할 때 형성 하는 메시지 발생할 수 있습니다.
 
-_Incompatible target framework: .NetPortable, Version=v4.5, Profile=Profile78_
+_호환 되지 않는 대상 프레임 워크: 합니다. NetPortable, Version = v4.5, 프로필 Profile78 =_
 
 이 문제를 해결 하려면 라는 XML 파일을 추가 ` Xamarin.TVOS.xml` 다음 내용을 사용 하 여:
 

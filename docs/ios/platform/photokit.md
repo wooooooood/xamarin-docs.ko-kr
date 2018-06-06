@@ -1,30 +1,31 @@
 ---
-title: PhotoKit
-description: 사진 키트 앱을 시스템 이미지 라이브러리를 쿼리하고 보고 내용을 수정 하는 사용자 지정 UI를 만들 수 있습니다.
+title: Xamarin.iOS에 PhotoKit
+description: 이 문서에서는 해당 모델 개체에 논의 PhotoKit 모델 데이터를 쿼리하거나 하는 방법과 사진 라이브러리에 대 한 변경 내용을 저장 합니다.
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: c721064f62f8e2255de2b4ea2d0438e3ed630d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787899"
 ---
-# <a name="photokit"></a>PhotoKit
+# <a name="photokit-in-xamarinios"></a>Xamarin.iOS에 PhotoKit
 
-_사진 키트 앱을 시스템 이미지 라이브러리를 쿼리하고 보고 내용을 수정 하는 사용자 지정 UI를 만들 수 있습니다._
-
-사진 키트는 응용 프로그램 시스템 이미지 라이브러리를 쿼리하고 보고 내용을 수정 하는 사용자 지정 사용자 인터페이스를 만들 수 있도록 하는 새로운 프레임 워크입니다. 다양 한 이미지 및 비디오 자산으로 앨범 및 폴더와 같은 자산 컬렉션을 나타내는 클래스를 포함 합니다.
+PhotoKit 응용 프로그램 시스템 이미지 라이브러리를 쿼리하고 보고 내용을 수정 하는 사용자 지정 사용자 인터페이스를 만들 수 있도록 하는 새로운 프레임 워크입니다. 다양 한 이미지 및 비디오 자산으로 앨범 및 폴더와 같은 자산 컬렉션을 나타내는 클래스를 포함 합니다.
 
 ## <a name="model-objects"></a>모델 개체
-사진 키트에서는 모델 개체에서 이러한 자산을 나타냅니다. 사진 및 비디오 자신을 나타내는 모델 개체는 유형 `PHAsset`합니다. A `PHAsset` 자산의 미디어 유형 및 만든 날짜와 같은 메타 데이터를 포함 합니다.
+
+PhotoKit에서는 모델 개체에서 이러한 자산을 나타냅니다. 사진 및 비디오 자신을 나타내는 모델 개체는 유형 `PHAsset`합니다. A `PHAsset` 자산의 미디어 유형 및 만든 날짜와 같은 메타 데이터를 포함 합니다.
 마찬가지로,는 `PHAssetCollection` 및 `PHCollectionList` 클래스 각각 자산 컬렉션 및 컬렉션 목록에 대 한 메타 데이터를 포함 합니다. 자산 컬렉션은 그룹 사진 및 비디오 특정 연도의 등의 자산입니다. 마찬가지로, 컬렉션 목록은 사진과 동영상 연도별로 그룹화 같은 자산 컬렉션의 그룹입니다.
 
 ## <a name="querying-model-data"></a>모델 데이터 쿼리
-사진 키트 쉽게 쿼리 모델 데이터를 다양 한 인출 메서드를 통해 있습니다. 예를 들어 모든 이미지를 검색 하려면 호출 하는 것 `PFAsset.Fetch`전달 하는 `PHAssetMediaType.Image` 미디어 유형입니다.
+
+PhotoKit 쉽게 쿼리 모델 데이터를 다양 한 인출 메서드를 통해 있습니다. 예를 들어 모든 이미지를 검색 하려면 호출 하는 것 `PFAsset.Fetch`전달 하는 `PHAssetMediaType.Image` 미디어 유형입니다.
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 

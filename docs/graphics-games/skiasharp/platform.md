@@ -1,18 +1,19 @@
 ---
-title: SkiaSharp 플랫폼 특정 세부 정보
-description: 네이티브 응용 프로그램에 SKSurface 내용을 바인딩할 하는 방법에 대 한 세부 정보입니다.
+title: SkiaSharp 플랫폼 관련 참고 사항
+description: 이 문서에서는 SkiaSharp 관련이 플랫폼 관련 세부 정보를 설명 합니다. IOS, Android, macOS, 창 및 Xamarin.Forms에 대 한 샘플 코드를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 3f40c7ea0b118816b7be373617795db9158c1450
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783531"
 ---
-# <a name="platform-specific-integration"></a>특정 통합 플랫폼
+# <a name="skiasharp-platform-specific-notes"></a>SkiaSharp 플랫폼 관련 참고 사항
 
 다음 예제에서는 이미지 버퍼를 수동으로 할당, 플랫폼에서 제공 하는 기존 RBGA 버퍼에 그리기 하는 플랫폼의 일반적인 패턴을 설명 하기 위해이 작업 수행 됩니다.
 

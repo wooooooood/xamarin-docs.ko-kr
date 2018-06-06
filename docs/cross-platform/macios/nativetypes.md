@@ -1,25 +1,27 @@
 ---
-title: 네이티브 형식
+title: IOS 및 macOS 네이티브 형식
+description: 컴파일 대상 아키텍처에 따라 Xamarin 통합 API 매핑되는 방법을.NET 형식 필요에 따라 32 비트 및 64 비트 네이티브 형식이이 문서에서 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 4d11d053cf4471a98cbba0f7c97be3bef39276fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fc2b91a9265fcf09e4f58d5de27a1fdef9350b2d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781106"
 ---
-# <a name="native-types"></a>네이티브 형식
+# <a name="native-types-for-ios-and-macos"></a>IOS 및 macOS 네이티브 형식
 
-차이의 핵심인 Mac와 iOS Api 사용 하 여 32 비트 및 64 비트 플랫폼에서 64 비트 32 비트 플랫폼에서 항상 되는 아키텍처별 데이터 형식입니다.
+Mac 및 iOS Api는 항상 32 비트 플랫폼 및 64 비트 플랫폼에서 64 비트의 32 비트 아키텍처 관련 데이터 형식을 사용 합니다.
 
-예를 들어 Objective-c 매핑하는 `NSInteger` 데이터 형식입니다 `int32_t` 32 비트 시스템 및 `int64_t` 64 비트 시스템에서 합니다.
+예를 들어 Objective-c 매핑하는 `NSInteger` 데이터 형식입니다 `int32_t` 32 비트 시스템에서 및 `int64_t` 64 비트 시스템에서 합니다.
 
-통합된 API에서이 동작에 맞게을 교체 하는 이전을 사용 하는 `int` (.net에서으로 정의 되 고 항상 `System.Int32`)을 새 데이터 형식: `System.nint`합니다.  생각할 수 있습니다 "n" 같은 의미로 "네이티브" 플랫폼의 기본 정수를 입력 합니다.
+통합된 API에서이 동작에 맞게을 교체 하는 이전을 사용 하는 `int` (.net에서으로 정의 되 고 항상 `System.Int32`)을 새 데이터 형식: `System.nint`합니다. 생각할 수 있습니다 "n" 같은 의미로 "네이티브" 플랫폼의 기본 정수를 입력 합니다.
 
-이러한 새 데이터 형식으로 32 비트, 32 비트 및 64 비트 또는 64 비트 컴파일 플래그에 따라 동일한 소스 코드는 컴파일됩니다.
+이러한 새 데이터 형식으로 동일한 소스 코드 컴파일 플래그에 따라 32 비트 및 64 비트 아키텍처에 대해 컴파일됩니다.
 
 ## <a name="new-data-types"></a>새 데이터 형식
 

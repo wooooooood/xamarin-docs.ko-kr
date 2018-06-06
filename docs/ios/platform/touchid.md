@@ -1,19 +1,20 @@
 ---
-title: Touch ID
-description: 터치 ID에는 Apple의 지문 생체 인식 인증 기술입니다.
+title: Xamarin.iOS에 touch ID
+description: 이 문서에서는 Xamarin.iOS 앱에서 Touch ID, Apple의 지문 생체 인식 인증 기술을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: b5db80d280d7ad3c43a438d5caae57fbd1928896
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788591"
 ---
-# <a name="touch-id"></a>Touch ID
+# <a name="touch-id-in-xamarinios"></a>Xamarin.iOS에 touch ID
 
 Touch ID-암호 비슷한 사용자를 인증 하는 방법으로 iOS 7에서에서 도입 되었습니다. 그러나 장치를 잠금 해제, 앱 스토어를 사용 하 여 iTunes를 사용 하 여 및 iCloud 키 집합에만 인증 개로 제한 되었습니다.
 

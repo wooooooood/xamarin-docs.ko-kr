@@ -1,16 +1,17 @@
 ---
 title: MonoGame 게임 패드 참조
-description: 게임 패드 MonoGame에서 입력된 장치에 액세스 하기 위한 표준, 플랫폼 간 클래스입니다.
+description: 이 문서에서는 게임 패드, MonoGame에서 입력된 장치에 액세스 하기 위한 플랫폼 간 클래스에 설명 합니다. 게임 패드에서 입력을 읽는 방법에 설명 하 고 예제 코드를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0746cc0153e9e00309b7227ff3e8a683cdc46835
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f8a833dbab2b8a69f328cd26cb69db84f3083222
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783326"
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame 게임 패드 참조
 

@@ -1,23 +1,22 @@
 ---
-title: 컨트롤
-description: Xamarin.iOS는 Apple에서 제공한 모든 기본 사용자 인터페이스 개체를 노출 합니다. IOS 디자이너 Xcode의 인터페이스 작성기를 사용 하 여 Xamarin.iOS 앱에 추가 될 쉽게 또는 프로그래밍 방식으로 합니다. Xamarin.iOS 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다.
+title: Xamarin.iOS에서 사용자 인터페이스 컨트롤
+description: 이 문서는 다양 한 iOS 사용자 인터페이스 컨트롤 Xamarin.iOS 개발자에 게 제공을 설명 하는 설명서를 링크 합니다. 연결 된 콘텐츠는 경고, 단추, 컬렉션 뷰, 이미지, 수동 카메라 컨트롤, 지도, 레이블, 선택, 날짜 선택 및 자세히 설명합니다.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 477cb4e479224b9e795f3460e0f59e0aa2038630
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790044"
 ---
-# <a name="controls"></a>컨트롤
+# <a name="user-interface-controls-in-xamarinios"></a>Xamarin.iOS에서 사용자 인터페이스 컨트롤
 
-_Xamarin.iOS는 Apple에서 제공한 모든 기본 사용자 인터페이스 개체를 노출 합니다. IOS 디자이너 Xcode의 인터페이스 작성기를 사용 하 여 Xamarin.iOS 앱에 추가 될 쉽게 또는 프로그래밍 방식으로 합니다. Xamarin.iOS 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다._
-
-이 문서에서는 가장 일반적인 iOS 사용자 인터페이스 컨트롤 및을 사용 하는 방법을 소개 합니다.
+이 문서에는 가장 일반적인 iOS 사용자 인터페이스 컨트롤 및 사용 하는 방법 소개 합니다.
 
 ## <a name="alertsalertsmd"></a>[경고](alerts.md)
 

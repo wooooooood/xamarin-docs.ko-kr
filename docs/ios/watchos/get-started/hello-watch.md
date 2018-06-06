@@ -1,19 +1,20 @@
 ---
-title: Hello, 조사식
-description: Xamarin 및 watchOS 시작
+title: Hello, watchOS – 연습
+description: 이 문서에서는 Xamarin을 사용 하는 간단한 watchOS 응용 프로그램을 구축 안내 합니다. Mac 용 Visual Studio와 Visual Studio 모두에서 작동 스토리 보드와 작업 하 고, 코드의 이벤트에 응답 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 2281fa801d32e8d8934767ae090503ca523d7eff
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d6080429450dce2c0491fa385cf4f179befba6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790999"
 ---
-# <a name="hello-watch"></a>Hello, 조사식
+# <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
 단계에 따라 솔루션을 만든 후 [설정 및 설치](~/ios/watchos/get-started/installation.md), 프로젝트 3 해야 합니다.
 
@@ -130,13 +131,11 @@ partial class InterfaceController
 
 ```csharp
 int clickCount = 0;
-
 partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 {
   var msg = String.Format("Clicked {0} times", ++clickCount);
   myLabel.SetText(msg);
 }
-
 ```
 
 이 코드는 투명 하 게 유지 해야 합니다.: 인스턴스 변수 `clickCount` 은 될 때마다 증가 하는 함수 `OnButtonPress` 호출 됩니다. 텍스트 `myLabel` ;이 수를 반영 하도록 변경 `myLabel`은 물론, XCode에서 만든 콘센트 중 하나의 이름입니다. `partial` 함수는 지정한 작업의 이름과 연결 된 함수를 구현 합니다.

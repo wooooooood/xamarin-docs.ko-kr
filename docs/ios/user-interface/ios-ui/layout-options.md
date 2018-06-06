@@ -1,24 +1,25 @@
 ---
-title: 레이아웃 옵션
+title: Xamarin.iOS에서 레이아웃 옵션
+description: 이 문서에는 Xamarin.iOS의 사용자 인터페이스의 레이아웃에 여러 가지 방법을 설명 합니다. 크기 자동 조정 및 자동 레이아웃에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f197bbffeabb708769c48f0130aa27a86b14386
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790118"
 ---
-# <a name="layout-options"></a>레이아웃 옵션
+# <a name="layout-options-in-xamarinios"></a>Xamarin.iOS에서 레이아웃 옵션
 
 보기를 조정 하거나 회전할 때 레이아웃을 제어 하기 위한 두 가지 다른 메커니즘 가지가 있습니다.
 
 -  **크기 자동 조정** –의 크기 자동 조정 검사기는 디자이너에서 설정 하는 방법을 제공는 `AutoresizingMask` 속성입니다. 이 해당 컨테이너의 가장자리에 고정 및/또는 크기를 수정 하는 컨트롤을 수 있습니다. 크기 자동 조정 iOS의 모든 버전에서 작동합니다. 이 내용이 아래에서 자세히 설명 되어
--  **자동 레이아웃** – iOS6 UI 컨트롤의 관계를 보다 세부적으로 제어 하는에 도입 된 기능을 합니다. 디자인 화면에 컨트롤의 다른 요소를 기준으로 요소의 위치는 허용 됩니다. 이 항목에서 자세히 설명 되는 [Xamarin ios 디자이너 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md) 가이드입니다.
-
+-  **자동 레이아웃** -UI 컨트롤의 관계를 보다 세부적으로 제어 하는 iOS 6에에서 도입 된 기능을 합니다. 디자인 화면에 컨트롤의 다른 요소를 기준으로 요소의 위치는 허용 됩니다. 이 항목에서 자세히 설명 되는 [Xamarin ios 디자이너 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md) 가이드입니다.
 
 ## <a name="autosizing"></a>크기 자동 조정
 

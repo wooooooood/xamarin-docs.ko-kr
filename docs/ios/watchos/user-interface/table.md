@@ -1,18 +1,20 @@
 ---
-title: Table 컨트롤
+title: watchOS Xamarin의 표 컨트롤
+description: 이 문서에서는 Xamarin의 watchOS 테이블 컨트롤을 사용 하는 방법을 설명 합니다. 테이블을 추가, 행 컨트롤러 추가, 만들기 및 채우기 탭, 등 응답 행에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3f596b424292dd0f4db08429bc7c5d4a885d3954
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791360"
 ---
-# <a name="table-control"></a>Table 컨트롤
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS Xamarin의 표 컨트롤
 
 watchOS `WKInterfaceTable` 제어가 해당 iOS 정수 보다 훨씬 간단 하지만 비슷한 역할을 수행 합니다. 터치 이벤트에 응답 하 고 사용자 지정 레이아웃을 사용할 수 있는 행에 나열 된 스크롤 목록을 만듭니다.
 

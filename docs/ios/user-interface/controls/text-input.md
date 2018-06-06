@@ -1,18 +1,20 @@
 ---
-title: 텍스트 입력
+title: Xamarin.iOS에 텍스트 입력
+description: 이 문서에서는 Xamarin.iOS 앱에서 텍스트 입력을 설명 합니다. 프로그래밍 방식으로 iOS 디자이너에서에서 UITextField 및 UITextVIew를 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 43f1f0318bceb3da8a3d6216a49ec2af48ac155c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5d8648f5830a7adcd32d253b92fae45098f12a83
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790216"
 ---
-# <a name="text-input"></a>텍스트 입력
+# <a name="text-input-in-xamarinios"></a>Xamarin.iOS에 텍스트 입력
 
 사용자 텍스트 입력을 적용 하 여 수행 됩니다는 `UITextField` 입력과 UITextView 여러 줄 편집 가능한 텍스트를 한 줄에 대 한 합니다. 이러한 컨트롤의 화면으로 끌 수 있으며 초기 텍스트를 설정 하려면 두 번 클릭.
 

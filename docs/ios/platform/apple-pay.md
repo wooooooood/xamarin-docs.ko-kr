@@ -1,24 +1,23 @@
 ---
-title: Apple Pay
+title: Apple Pay Xamarin.iOS
 description: 이 가이드에는 멤버 자격 응용 프로그램을 통해 식품, 엔터테인먼트 등 물리적 상품 비용을 지불 하려면 Apple Pay와 함께 사용할 Xamarin.iOS 환경 설정을 탐색 합니다. 필요한 식별자, 인증서 및 권한에 대 한 정보를 포함합니다.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: fc7c247e5edcdc25d53c34c922801a5497b8c367
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7033373cddb2503e5912eb17b1e72ece759cc3ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786693"
 ---
-# <a name="apple-pay"></a>Apple Pay
+# <a name="apple-pay-in-xamarinios"></a>Apple Pay Xamarin.iOS
 
 _이 가이드에는 멤버 자격 응용 프로그램을 통해 식품, 엔터테인먼트 등 물리적 상품 비용을 지불 하려면 Apple Pay와 함께 사용할 Xamarin.iOS 환경 설정을 탐색 합니다. 필요한 식별자, 인증서 및 권한에 대 한 정보를 포함합니다._
 
-
 Apple Pay 도입 되었습니다 8, iOS 함께 식품, 엔터테인먼트 및 iOS 장치를 통해 멤버 자격 같은 물리적 상품 비용을 지불 하려면 사용자가 사용 하도록 설정 합니다. IPhone 6 및 iPhone 6에 있는 더하기 및 스토어의 구입에 대 한 Apple Watch도 연결할 수 있습니다. IPhone에서 사용 되는, Touch ID를 확인 하 고 트랜잭션을 사용자의 신용 또는 직불 카드에 권한을 부여 하는 방법으로 사용 합니다.
-
 
 ## <a name="requirements"></a>요구 사항
 
@@ -41,7 +40,6 @@ Apple Pay 사이의 주요 차이점은 및 *앱에서 바로 구매* (IAP) 제�
 
 Apple Pay, 사과와 [상태](https://developer.apple.com/apple-pay/Getting-Started-with-Apple-Pay.pdf) 있는지 것 "[] 충전 되지 않습니다. 결제에 대 한 Apple Pay를 사용 하 여 사용자, merchants 또는 개발자가"입니다. 이 비해 IAP 각 트랜잭션에 대해 30% 충전을 있습니다. 또한 Apple Pay와 트랜잭션을 통과 하지 않으므로 Apple 전혀, 지불 플랫폼 거치 대신 합니다.
 
-
 ## <a name="using-a-payment-processor-platform"></a>결제 프로세서 플랫폼을 사용 하 여
 
 Apple Pay의 기본 구성 요소 중 하나는 지불을 처리 합니다. 암호화의 중요 한 지식이 있어야이 직접 수행 하는 가능 하지만
@@ -53,7 +51,6 @@ Apple Pay의 기본 구성 요소 중 하나는 지불을 처리 합니다. 암�
 - **Stripe** -에서 등록 [Stripe.com](https://stripe.com/) 해당 Api에 액세스할 수 있습니다.
 
 - **JudoPay** -체크 아웃의 [github에서 Xamarin 샘플 코드](https://github.com/Judopay/Xamarin-Sample-App), 및에서 등록 한 다음 [JudoPay.com](https://www.judopay.com/)합니다.
-
 
 ## <a name="provisioning-for-apple-pay"></a>Apple Pay에 대 한 프로 비전
 
@@ -70,13 +67,11 @@ Apple Pay 사용 하도록 앱을 구성 하려면 및 앱 내 Apple 개발자 �
 5. Apple Pay 자격을 추가 합니다.
     - 에 설명 된 대로 Apple pay 자격 선택 [여기](~/ios/deploy-test/provisioning/entitlements.md), 수동으로에서 파일에 키/값 쌍을 추가 또는 [여기](~/ios/deploy-test/provisioning/entitlements.md)
 
-
 ## <a name="working-with-apple-pay"></a>Apple Pay 작업
 
 Apple 웹 사이트에서 및 Siri 및 지도와 상호 작용을 통해 보안 상환를 사용할 수 있는 iOS 10에서에서 Apple 지불을 위해 여러 개선 된 기능을 했습니다.
 
 10 ios 몇 가지 새로운 Api가 iOS 및 watchOS 동적 지불 네트워크와 새 샌드박스 테스트 환경을 지원 하기 위해 둘 다에서 작동 하는 추가 되었습니다.
-
 
 ### <a name="apple-pay-website-integration"></a>Apple Pay 웹 사이트 통합
 
@@ -122,7 +117,6 @@ IOS 10, 사과 도입 했는데 개발자가 iOS 장치에서 직접 테스트 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 Apple Pay 앱 내에서 사용 하는 데 필요한 다양 한 항목에서 살펴본 합니다. 판매 업체 ID를 만드는 방법 및에서 사용 되는 방법을 살펴보았습니다는 **Entitlements.plist**는 수동으로 수정 해야 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

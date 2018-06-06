@@ -1,21 +1,20 @@
 ---
-title: 문제 해결
-description: 이 문서에서는 iOS 11 Xamarin.iOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다.
+title: Ios 11 Xamarin.iOS를 사용 하 여 빌드한 앱
+description: 이 문서는 Xamarin.iOS 응용 프로그램을 개발 하는 경우 문제 해결을 위해 사용할 수 있는 리소스에 설명 합니다. 버그 보고에 대해 설명 릴리스 정보, Xamarin 릴리스 블로그 및 옵션을 지원 합니다.
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 181f0a1c66d05e0adf2b682f2df971f5d7d67dfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787548"
 ---
-# <a name="troubleshooting"></a>문제 해결
-
-_이 문서에서는 iOS 11 Xamarin.iOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다._
+# <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>Ios 11 Xamarin.iOS를 사용 하 여 빌드한 앱
 
 다음 섹션에 나열 되어 Xamarin.iOS와 iOS 11을 사용 하는 경우 및를 사용할 수 있는 발생할 수 있는 몇 가지 알려진된 문제가 해당 문제를 해결 합니다.
 

@@ -1,18 +1,20 @@
 ---
-title: 어셈블리
+title: Xamarin tvOS에 대 한 가능한 어셈블리
+description: TvOS 응용 프로그램에 사용할 수 있는 기능을 명확 하 게 하는 데 도움이 되도록이 문서에는 tvOS 개발에 대 한 Xamarin에서 지원 되는 어셈블리의 목록을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 7d0ee27cfa2ae153ef481f943402f5fcfc5d04e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 217ec5ea81b304555bcaf19e53c8132628628627
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788825"
 ---
-# <a name="assemblies"></a>어셈블리
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Xamarin tvOS에 대 한 가능한 어셈블리
 
 ## <a name="supported-assemblies"></a>지원 되는 어셈블리
 
@@ -46,8 +48,6 @@ Xamarin.tvOS 앱에 대 한 Xamarin에서 지원 되는 어셈블리의 목록�
 ## <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리
 
 Xamarin.tvOS 소비할 수 있는 Mac 바인딩 뿐만 아니라 [.NET 이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

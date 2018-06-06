@@ -1,20 +1,19 @@
 ---
-title: '사례 연구: Tasky'
-description: 이 문서에서는 Tasky 휴대용 샘플 응용 프로그램에서 플랫폼 간 응용 프로그램 빌드 원칙 적용 된 방식을 설명 합니다. 그와 모바일 응용 프로그램 디자인을 다시 사용에 대 한 공통 코드를 작성 하 고 구현 하는 iOS, Android 및 Windows Phone 플랫폼을 대상으로 하는 플랫폼별 프로젝트에 연결 합니다.
+title: '플랫폼 간 앱 사례 연구: Tasky'
+description: 이 문서에서는 Tasky 휴대용 샘플 응용 프로그램을 설계 하 고 플랫폼 간 모바일 응용 프로그램으로 작성 하는 방법에 대해 설명 합니다. 응용 프로그램의 요구 사항, 인터페이스, 데이터 모델, 핵심 기능, 구현 및 자세히 설명합니다.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f8325bbc6b3f8aa40a08ca2c57605544ab0bc85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 48650445d06ad3bc7ca6d4da84c9b8837f8a0f88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782237"
 ---
-# <a name="case-study-tasky"></a>사례 연구: Tasky
-
-_이 문서에서는 Tasky 휴대용 샘플 응용 프로그램에서 플랫폼 간 응용 프로그램 빌드 원칙 적용 된 방식을 설명 합니다. 그와 모바일 응용 프로그램 디자인을 다시 사용에 대 한 공통 코드를 작성 하 고 구현 하는 iOS, Android 및 Windows Phone 플랫폼을 대상으로 하는 플랫폼별 프로젝트에 연결 합니다._
+# <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
 *Tasky* *휴대용* 는 단순한 할 일 목록 응용 프로그램입니다. 이 문서에서는 어떻게을 설계 하 고 지침에 따라 작성 된 [플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) 문서. 토론에서는 다음과 같은 영역을 다룹니다.
 

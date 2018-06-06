@@ -1,21 +1,20 @@
 ---
-title: 탭 모음 및 탭 표시줄 컨트롤러
-description: iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클래스를 사용 하 여 작성 됩니다. 이 문서의 여러 컨트롤러와 뷰를 포함 하는 탭된 응용 프로그램을 설정 하는 방법을 살펴봅니다. 그런 다음는 UITabBarController 후에 루트 컨트롤러와 같은 로그인 화면이 때 로드 하는 방법을 검토 합니다.
+title: 탭 막대와 Xamarin.iOS의 탭 모음 컨트롤러
+description: 이 문서에서는 iOS 탭 모음 컨트롤러 및 Xamarin.iOS 그러한 형식을 사용 하는 방법을 설명 합니다. UITabBarController 설정, 이미지와 함께 작동 배지 값, 이벤트와 작업 등을 설정 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789760"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>탭 모음 및 탭 표시줄 컨트롤러
-
-_iOS 응용 프로그램 탭 탐색 UI를 사용 하 여 UITabBarController 클래스를 사용 하 여 작성 됩니다. 이 문서의 여러 컨트롤러와 뷰를 포함 하는 탭된 응용 프로그램을 설정 하는 방법을 살펴봅니다. 그런 다음는 UITabBarController 후에 루트 컨트롤러와 같은 로그인 화면이 때 로드 하는 방법을 검토 합니다._
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 막대와 Xamarin.iOS의 탭 모음 컨트롤러
 
 탭된 응용 프로그램은 iOS에 임의의 순서로 여러 화면에 액세스할 수 있는 사용자 인터페이스를 지원 하기 위해 사용 됩니다. 통해는 `UITabBarController` 클래스에는 이러한 다중 화면 시나리오에 대 한 지원을 쉽게 포함 될 수 있습니다. `UITabBarController` 각 화면에 대 한 세부 정보에 초점을 응용 프로그램 개발자는 다중 화면 관리를 담당 합니다.
 

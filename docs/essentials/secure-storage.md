@@ -1,17 +1,18 @@
 ---
-title: 보안 저장소 Xamarin.Essentials
-description: SecureStorage 클래스는 단순 키/값 쌍을 안전 하 게 저장 하는 데 도움이 됩니다.
+title: '보안 저장소 Xamarin.Essentials:'
+description: 이 문서에서 안전 하 게 단순 키/값 쌍을 저장 하는 데 도움이 Xamarin.Essentials SecureStorage 클래스를 설명 합니다. 클래스, 플랫폼 구현 세부 사항 및 제한 사항을 사용 하는 방법을 설명 합니다.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d9fd5b5fd0d4dc29f4d2531521370618f97e3846
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783160"
 ---
-# <a name="xamarinessentials-secure-storage"></a>보안 저장소 Xamarin.Essentials
+# <a name="xamarinessentials-secure-storage"></a>보안 저장소 Xamarin.Essentials:
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

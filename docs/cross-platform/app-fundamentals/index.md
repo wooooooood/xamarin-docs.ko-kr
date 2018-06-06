@@ -1,18 +1,19 @@
 ---
-title: 코드 공유
-description: 응용 프로그램의 핵심 개념
+title: 여러 플랫폼에서 코드 공유
+description: 이 문서는 이식 가능한 클래스 라이브러리, 공유 프로젝트, 표준.NET 및 NuGet을 포함 하 여 코드를 공유 하는 기술을 설명 하는 다양 한 설명서를 링크 합니다.
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 4cca202627d1b901e00532c92598ffddd48b4853
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 61377afa61e2c2006c2fdf8ef9b21fe7d567b3de
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780073"
 ---
-# <a name="sharing-code"></a>코드 공유
+# <a name="sharing-code-on-multiple-platforms"></a>여러 플랫폼에서 코드 공유
 
 이 섹션에서 일반적인 작업 작업 또는 개발자가 모바일 응용 프로그램을 개발할 때 알고 있어야 하는 개념 중 일부는 지침을 제공 합니다.
 

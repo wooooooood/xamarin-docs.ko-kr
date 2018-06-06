@@ -1,14 +1,16 @@
 ---
 title: 알려진된 문제 및 해결 방법
+description: 이 문서에서는 Xamarin 통합 문서에 대해 알려진된 문제 및 해결 방법을 설명 합니다. CultureInfo 문제, JSON 문제 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794035"
 ---
 # <a name="known-issues--workarounds"></a>알려진된 문제 및 해결 방법
 
@@ -56,7 +58,7 @@ Newtonsoft.Json 10에 따라 명시적으로 또는 최신 NuGet 패키지는 �
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>통합 문서 1.3에서 누락 된 SkiaSharp 렌더러는
 
-통합 문서 1.3 부터는 없어졌습니다 처음 출시 된 SkiaSharp 렌더러 SkiaSharp 우리의 [SDK]를 사용 하 여에 자체는 렌더러를 제공 하기 위해 0.99.0, 통합 문서에서 [/ 안내선/크로스-플랫폼/통합 문서/sdk /].
+통합 문서 1.3 부터는 없어졌습니다 처음 출시 된 SkiaSharp 렌더러 SkiaSharp 사용 하 여에 자체는 렌더러를 제공 하기 위해 0.99.0, 통합 문서에서 우리의 [SDK](~/tools/workbooks/sdk/index.md)합니다.
 
 ### <a name="workaround"></a>해결 방법
 

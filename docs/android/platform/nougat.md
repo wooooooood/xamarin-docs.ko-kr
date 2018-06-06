@@ -6,12 +6,13 @@ ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 15698767ae71b68a26138169771f7f397bddd95a
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732520"
 ---
 # <a name="nougat-features"></a>Nougat 기능
 
@@ -46,7 +47,7 @@ Android Nougat 다른 많은 향상 된 기능을 제공 하는 또한 이동 �
 
 다음은 Xamarin 기반 앱에서 새 Android Nougat 기능을 사용 하려면 필요 합니다.
 
--   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; 4.2.0.628 버전 Visual Studio를 사용 하는 경우 또는 Xamarin for Visual Studio의 이후이 필요 합니다. 사용 중인 경우 Visual Studio 버전 6.1.0, Mac 용 또는 나중에 Visual Studio의 Mac가 필요 합니다.
+-   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; 4.2.0.628 버전 Visual Studio를 사용 하는 경우 또는 Xamarin 용 도구 Visual Studio의 이후이 필요 합니다. 사용 중인 경우 Visual Studio 버전 6.1.0, Mac 용 또는 나중에 Visual Studio의 Mac가 필요 합니다.
 
 -   **Xamarin.Android** &ndash; 7.0 이상 Xamarin.Android를 설치 하 고 Mac.에 대 한 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야
 
@@ -106,11 +107,11 @@ Xamarin Android 7.0을 사용 하 여 프로젝트를 만들려면 먼저 사용
 
 
 
-### <a name="start-a-xamarinandroid-project"></a>Start a Xamarin.Android Project
+### <a name="start-a-xamarinandroid-project"></a>Xamarin.Android 프로젝트 시작
 
 새 Xamarin.Android 프로젝트를 만듭니다. Xamarin 사용한 Android 개발을 처음 접하는 경우 참조 [Hello, Android](~/android/get-started/hello-android/index.md) Xamarin.Android 프로젝트를 만드는 방법에 대 한 자세한 내용은 합니다.
 
-Android 프로젝트를 만들 때 대상 Android 7.0 이상 버전 설정을 구성 해야 합니다. 예를 들어 Android 7.0에 대 한 프로젝트를 대상으로 구성 해야 하는 프로젝트 대상 Android API 수준 **Android 7.0 (API 24-Nougat)**합니다. 대상 프레임 워크 수준 이상으로 API 24를 설정 하는 것이 좋습니다. Android API 수준 수준을 구성 하는 방법에 대 한 자세한 내용은 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
+Android 프로젝트를 만들 때 대상 Android 7.0 이상 버전 설정을 구성 해야 합니다. 예를 들어 Android 7.0에 대 한 프로젝트를 대상으로 구성 해야 하는 프로젝트 대상 Android API 수준 **Android 7.0 (API 24-Nougat)** 합니다. 대상 프레임 워크 수준 이상으로 API 24를 설정 하는 것이 좋습니다. Android API 수준 수준을 구성 하는 방법에 대 한 자세한 내용은 [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)합니다.
 
 
 > [!NOTE]

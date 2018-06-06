@@ -1,17 +1,18 @@
 ---
 title: iOS 보안 및 개인 정보 보호 기능
-description: 이 문서에서는 보안 및 개인 정보 iOS 및 Xamarin.iOS 앱에 미치는 영향에 포함 된 작업을 설명 합니다.
+description: 이 문서는 보안 및 iOS의 개인 정보 보호 기능을 설명 하 고 Xamarin.iOS 그러한 형식을 사용 하는 방법을 설명 합니다. IOS 10 및 개인 사용자 데이터에 액세스 하는 방법에서 수행 된 업데이트를 확인이 필요 합니다.
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2ce6dadf2236c326fcbc2021509795182329010e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd50e42536aabe16de3e44146d28950970dd801d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784418"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 보호 기능
 

@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 장치 디스플레이 정보
-description: DeviceDisplay 클래스에서 실행 되는 장치 화면 메트릭 응용 프로그램에 대 한 정보를 제공 합니다.
+title: 'Xamarin.Essentials: 장치 디스플레이 정보'
+description: 이 문서에서 응용 프로그램이 실행 되는 장치에 대 한 화면 메트릭을 제공 하는 Xamarin.Essentials DeviceDisplay 클래스를 설명 합니다.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 05701ff2bc9fceac8a0a490989e52d0327079d46
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 830b96bcc21397047cb5aaacb5c568bc2ee863c4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782374"
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials 장치 디스플레이 정보
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 디스플레이 정보
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

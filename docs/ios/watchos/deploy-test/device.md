@@ -1,19 +1,20 @@
 ---
-title: 조사식 장치에 대 한 테스트
-description: Apple Watch 테스트 앱 배포
+title: Apple Watch 장치에 대 한 테스트
+description: 이 문서는 실제 Apple Watch 대 한 테스트에 대 한 Xamarin으로 빌드된 watchOS 앱을 배포 하는 방법에 설명 합니다. 장치를 프로 비전 프로필을 테스트에 대해 설명 하 고 몇 가지 문제 해결 팁을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790863"
 ---
-# <a name="testing-on-watch-devices"></a>조사식 장치에 대 한 테스트
+# <a name="testing-on-apple-watch-devices"></a>Apple Watch 장치에 대 한 테스트
 
 한 후의 [배포 단계](~/ios/watchos/deploy-test/index.md) 이 페이지에 지침을 사용 합니다 (필요한 경우)의 앱 Id와 응용 프로그램 그룹을 만듭니다.
 

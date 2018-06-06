@@ -1,15 +1,17 @@
 ---
 title: Objective C 시작
+description: 이 문서에서는 설명 방법을 포함 하는.NET을 사용 하 여 목표 없습니다. 사용 시작 요구 사항, NuGet에서 지원 되는 플랫폼을 포함 하는.NET 설치에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 0c2d92f52000bbc6d9d4ea3b07112795aa98bd0a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c5db0a55cc1d2597837ae5feb2c5167a0a21b494
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792982"
 ---
 # <a name="getting-started-with-objective-c"></a>Objective C 시작
 
@@ -61,6 +63,6 @@ TvOS에 대 한 지원은 tvOS 프로젝트 iOS 프로젝트 대신 (Visual Stud
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)
 * [대상 플랫폼](~/tools/dotnet-embedding/objective-c/platforms.md)
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [날씨 샘플 (iOS & macOS)](https://github.com/jamesmontemagno/embeddinator-weather)

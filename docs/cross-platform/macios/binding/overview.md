@@ -1,17 +1,18 @@
 ---
-title: 개요
-description: 바인딩 프로세스의 작동 방식에 대 한 세부 정보
+title: Objective C 바인딩 개요
+description: 이 문서는 C# 명령줄 바인딩, 바인딩 프로젝트 목표 Sharpie 등 Objective-c 코드용 바인딩을 만드는 다양 한 방법의 개요를 제공 합니다. 또한 바인딩의 작동 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce2e45a1985c64b5c479bd41140d7270fae97aee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f9f981a9024ad9b1f780efbadeeb7e1f1636a8ae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781746"
 ---
-# <a name="overview"></a>개요
+# <a name="overview-of-objective-c-bindings"></a>Objective C 바인딩 개요
 
 _바인딩 프로세스의 작동 방식에 대 한 세부 정보_
 

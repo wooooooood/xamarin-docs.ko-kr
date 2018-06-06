@@ -1,15 +1,17 @@
 ---
 title: MonoTouch.Dialog Json 태그
+description: 이 문서에서는 MonoTouch.Dialog를 사용 하 여 Xamarin.iOS 사용자 인터페이스를 만드는 데 사용할 수 있는 JSON 구문을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc3f4ea87bbd381a4a1767fb9179fb1bcf0c56d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790759"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -249,7 +251,7 @@ Background 속성 셀에 대 한 배경색을 설정 합니다. 값은 이미지
  <a name="caption" />
 
 
-### <a name="caption"></a>caption
+### <a name="caption"></a>캡션
 
 렌더링 요소에 대해 표시할 기본 문자열입니다. 글꼴 및 색을 설정 하 여 사용자 지정할 수는 `"textcolor"` 및 `"font"` 속성입니다. 렌더링 스타일에 따라 결정 됩니다는 `"style"` 속성입니다.
 
@@ -421,7 +423,7 @@ class Foo {
  <a name="autocorrect" />
 
 
-### <a name="autocorrect"></a>autocorrect
+### <a name="autocorrect"></a>자동 고침
 
 항목에 대해 사용 하도록 자동 수정 스타일을 결정 합니다. 가능한 값은 true 또는 false (또는 문자열 `"yes"` 및 `"no"`).
 
@@ -441,7 +443,7 @@ class Foo {
  <a name="caption" />
 
 
-### <a name="caption"></a>caption
+### <a name="caption"></a>캡션
 
 항목에 사용할 캡션
 

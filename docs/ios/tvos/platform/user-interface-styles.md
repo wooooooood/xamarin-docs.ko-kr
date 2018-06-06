@@ -1,5 +1,5 @@
 ---
-title: 새로운 사용자 인터페이스 스타일
+title: tvOS Xamarin에서 사용자 인터페이스 스타일
 description: 이 문서에서는 밝은 및 어두운 UI 테마는 Apple는 tvOS에 추가 10과 Xamarin.tvOS 응용 프로그램에서 구현 하는 방법.
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43bfac29acb8b465fd1f3cdfd53c7664adeae18f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789173"
 ---
-# <a name="new-user-interface-styles"></a>새로운 사용자 인터페이스 스타일
+# <a name="tvos-user-interface-styles-in-xamarin"></a>tvOS Xamarin에서 사용자 인터페이스 스타일
 
 _이 문서에서는 밝은 및 어두운 UI 테마는 Apple는 tvOS에 추가 10과 Xamarin.tvOS 응용 프로그램에서 구현 하는 방법._
 
 tvOS 10 지원이 자동으로 제어에 빌드 UIKit의 모든 Light 사용자 인터페이스와 어두운 테마 여건에 맞춰 적용, 이제 사용자의 기본 설정을 기반으로 합니다. 또한 개발자는 사용자가 선택한 테마에 따라 UI 요소를 수동으로 조정할 수 하 고 지정 된 테마를 재정의할 수 있습니다.
-
 
 <a name="About-the-New-User-Interface-Styles" />
 

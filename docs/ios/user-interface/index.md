@@ -1,24 +1,24 @@
 ---
-title: 사용자 인터페이스
-description: 컨트롤, 디자이너 및 UX 디자인 원칙을 포함 하 여 일반 사용자 환경 (UX) 검사 합니다.
+title: Xamarin.iOS와 사용자 인터페이스
+description: 이 문서에서는 Xamarin.iOS 앱에서 사용자 인터페이스를 작성 하는 방법에 설명 합니다. 인터페이스 컨트롤 iOS 디자이너, 스토리 보드, 일반 iOS 인터페이스 개념 및 iOS 사용자에 대 한 가이드 링크도 제공합니다.
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: a3d88c2698ebd290929ceca842c28b3a43aed6e0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1ea39fcc29752337d89c4a0e4a1869f0a3948f1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790271"
 ---
-# <a name="user-interface"></a>사용자 인터페이스
+# <a name="building-user-interfaces-with-xamarinios"></a>Xamarin.iOS와 사용자 인터페이스
 
 ## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[iOS Designer](~/ios/user-interface/designer/index.md)
 
 Mac.에 대 한 Visual Studio에 완벽 하 게 통합 하 여 iOS 스토리 보드 형식에 대 한 디자이너를 구축 했으므로 IOS 디자이너 Mac.에 대 한 Xcode 또는 Visual Studio에서 파일을 편집할 수 있습니다 완전히 호환 스토리 보드 형식으로 유지 관리 또한 편집기는 편집기에서 디자인 타임에 렌더링 하는 사용자 지정 컨트롤 같은 고급 기능을 지원 합니다.
-
 
 ## <a name="introduction-to-storyboardsiosuser-interfacestoryboardsindexmd"></a>[Storyboards 소개](~/ios/user-interface/storyboards/index.md)
 
@@ -31,5 +31,3 @@ Mac.에 대 한 Visual Studio에 완벽 하 게 통합 하 여 iOS 스토리 보
 ## <a name="user-interface-controlsiosuser-interfacecontrolsindexmd"></a>[사용자 인터페이스 컨트롤](~/ios/user-interface/controls/index.md)
 
 Xamarin.iOS는 Apple에서 제공한 모든 기본 사용자 인터페이스 개체를 노출 합니다. IOS 디자이너 Xcode의 인터페이스 작성기를 사용 하 여 Xamarin.iOS 응용 프로그램에 추가 된 쉽게 또는 프로그래밍 방식으로 합니다. Xamarin.iOS 선택 하는 방법에 관계 없이 모든 사용자 인터페이스 개체 속성 및 C#에서 메서드를 노출 합니다.
-
-

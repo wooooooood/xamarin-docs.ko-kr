@@ -6,12 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732985"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Android 에뮬레이터 마모 디버그
 
@@ -23,7 +24,7 @@ _이 문서에서는 에뮬레이터 Xamarin.Android 마모 응용 프로그램�
 
 ## <a name="configure-the-google-android-emulator"></a>Google Android 에뮬레이터 구성
 
-마모 앱에서 에뮬레이터를 실행 하려면 Android SDK Android 에뮬레이터를 설치 하 고 쓰는 유형 Android에 맞게 구성 해야 합니다. 전체 Android SDK 에뮬레이터 설치 및 구성 정보를 참조 하십시오. [Google Android 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
+마모 앱에서 에뮬레이터를 실행 하려면 Android SDK Android 에뮬레이터를 설치 하 고 쓰는 유형 Android에 맞게 구성 해야 합니다. 전체 Android SDK 에뮬레이터 설치 및 구성 정보를 참조 하십시오. [Android 에뮬레이터 설정](~/android/get-started/installation/android-emulator/index.md)합니다.
 
 마모 가상 장치를 만들 때 Android 착용 장치 프로필을 선택 합니다. (예: **Android 마모 정사각형**). 성능 향상된을 위해 사용 된 마모 **x86** 이 예제와 같이 CPU/ABI:
 

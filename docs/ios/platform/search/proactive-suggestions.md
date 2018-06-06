@@ -1,5 +1,5 @@
 ---
-title: 사전 제안 소개
+title: Xamarin.iOS에서 사전 제안 소개
 description: 이 문서에서는 시스템을 적극적으로 사용자에 게 유용한 정보를 자동으로 표시 함으로써 Xamarin.iOS 앱 드라이브 engagement에 제안을 자동 관리를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f736e9dda00546ddef7cf03457813c7e3d10882b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788021"
 ---
-# <a name="introduction-to-proactive-suggestions"></a>사전 제안 소개
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.iOS에서 사전 제안 소개
 
 _이 문서에서는 시스템을 적극적으로 사용자에 게 유용한 정보를 자동으로 표시 함으로써 Xamarin.iOS 앱 드라이브 engagement에 제안을 자동 관리를 사용 하는 방법을 설명 합니다._
 

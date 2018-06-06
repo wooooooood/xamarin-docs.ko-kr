@@ -1,16 +1,17 @@
 ---
 title: 32/64 비트 플랫폼 고려 사항
-description: 응용 프로그램에 대 한 32 비트 및 64 비트 아키텍처를 대상으로 할 때의 고려 사항
+description: 이 문서는 Xamarin.iOS 또는 Xamarin.Mac 응용 프로그램에 대 한 32 비트 및 64 비트 아키텍처를 대상으로 할 때 염두에 다양 한 고려 사항을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c722efc0bc6e8a4ea29af603f88c0e0644c2ed8c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781551"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 비트 플랫폼 고려 사항
 
@@ -105,6 +106,6 @@ Mac에서 Mac을 사용 중인 대부분 현재 64 비트 모드를 지원 하 �
 
 Xamarin.Mac를 사용 하 여 64 비트 응용 프로그램을 작성 하는 방법에 대 한 정보를 참조 하십시오는 [64 비트 응용 프로그램 업데이트 Xamarin.Mac 통합](~/cross-platform/macios/32-and-64/mac-64-bit.md) 가이드입니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [클래식 vs 통합 API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

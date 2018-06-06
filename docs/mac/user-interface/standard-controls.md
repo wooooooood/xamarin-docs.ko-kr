@@ -1,5 +1,5 @@
 ---
-title: 표준 컨트롤
+title: Xamarin.Mac에서 표준 컨트롤
 description: 이 문서는 단추, 레이블, 텍스트 필드, 확인란 등 표준 AppKit 컨트롤 관련 작업 하 고 Xamarin.Mac 응용 프로그램의 컨트롤을 분할 합니다. 인터페이스 작성기를 사용 하 여 인터페이스를 추가 하 고 코드에서 상호 작용 하 설명 합니다.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9d110d0d7a46d431ea6fca50caffe05903ddce2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793047"
 ---
-# <a name="standard-controls"></a>표준 컨트롤
+# <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac에서 표준 컨트롤
 
 _이 문서는 단추, 레이블, 텍스트 필드, 확인란 등 표준 AppKit 컨트롤 관련 작업 하 고 Xamarin.Mac 응용 프로그램의 컨트롤을 분할 합니다. 인터페이스 작성기를 사용 하 여 인터페이스를 추가 하 고 코드에서 상호 작용 하 설명 합니다._
 

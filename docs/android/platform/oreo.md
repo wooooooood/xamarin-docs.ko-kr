@@ -7,12 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732764"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -133,8 +134,8 @@ Android SDK 도구 26.0를 설치한 후 기본 Google GUI 기반 AVD 관리자�
 
 Google 실행형 26.0 이상은 API를 지 원하는 GUI AVD 관리자를 더 이상 제공 하기 때문에이 메시지가 표시 됩니다. Android 8.0 Oreo에 대 한 Xamarin Android Emulator Manager 나 명령줄 중 하나를 사용 해야 `avdmanager` 도구 Android Oreo에 대 한 가상 장치를 사용 합니다.
 
-Xamarin Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 참조 [Xamarin Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)합니다.
-Xamarin Android 에뮬레이터 관리자 없이 가상 장치를 만들려면 다음 섹션의 단계를 수행 합니다.
+Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 참조 [가상 장치 관리는 Android 장치 관리자](~/android/get-started/installation/android-emulator/device-manager.md)합니다.
+가상 장치 없이 Android 장치 관리자를 만들려면 다음 섹션의 단계를 수행 합니다.
 
 
 #### <a name="creating-virtual-devices-using-avdmanager"></a>Avdmanager 사용 하 여 가상 장치 만들기
@@ -190,7 +191,7 @@ Xamarin Android 에뮬레이터 관리자 없이 가상 장치를 만들려면 �
 
 -----
 
-테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Google Android 에뮬레이터](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
+테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Google Android 에뮬레이터를 사용 하 여 디버깅](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
 
 장소 또는 픽셀 같은 물리적 장치를 사용 하는 경우에 무선 OTA 업데이트를 통해 자동을 통해 장치를 업데이트 하거나 시스템 이미지를 다운로드 하 고 장치를 직접 업데이트 수 합니다. Android Oreo에 장치를 수동으로 업데이트 하는 방법에 대 한 자세한 내용은 참조 [Nexus 장치와 픽셀에 대 한 기본 이미지](https://developers.google.com/android/images)합니다.
 

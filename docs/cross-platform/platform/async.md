@@ -1,20 +1,21 @@
 ---
-title: 비동기 개요
-description: '최신 버전의 C# 언어-버전 5 – 비동기 작업을 표현 하는 두 개의 새 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다.'
+title: 비동기 지원 개요
+description: 이 문서를 사용한 비동기 프로그래밍에 설명 하 고 비동기 코드를 작성할 쉽게 C# 5에 도입 된 개념을 기다립니다.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 22878695d93ae79bbbfe1b99961587ff0bf957be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782010"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
-_최신 버전의 C# 언어-버전 5 – 비동기 작업을 표현 하는 두 개의 새 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다._
+_C# 5는 비동기 프로그래밍을 간소화 하기 위해 두 개의 키워드가 도입: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다._
 
 Xamarin의 비동기 지원은 모노 3.0 foundation에서 구축 되며 모바일에서 잘 작동 Silverlight 버전을 모바일에서 잘 작동 버전의.NET 4.5가 되도록 되는 API 프로 파일을 업그레이드 합니다.
 
@@ -86,7 +87,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 취소에 대 한 자세한 내용은 참조 [비동기 작업을 취소 하는 방법을](http://msdn.microsoft.com/library/vstudio/jj155761.aspx) msdn 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다운로드는 [예제 Xamarin 솔루션을](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (에 대 한 iOS 및 Android)의 작업 예제를 보려면 `async` 및 `await` 모바일 앱에서 합니다. 예제 코드는이 섹션에서 자세히 설명 합니다.
 

@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733050"
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 
@@ -24,6 +25,10 @@ Xamarin.Forms에는 간단 하면서도 용도가 넓은 함수로 충분히 복
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
 `BoxView` 만 간단한 색이 지정 된 사각형을 하지만 장식, 기초적인 그래픽 항목과 interative 터치식 입력을 얻기 위해 사용할 수 있습니다.
+
+## <a name="buttonbuttonmd"></a>[Button](button.md)
+
+`Button` tap 또는 특정 작업을 수행 하는 응용 프로그램에 지시 하는 클릭에 응답 합니다.
 
 ## <a name="colorscolorsmd"></a>[색](colors.md)
 
@@ -85,7 +90,7 @@ Xamarin.Forms에 제공 하 고 텍스트를 받기에 대 한 몇 가지 뷰가
 
 Xamarin.Forms 테마 표준 컨트롤에 대 한 특정 시각적 모양을 정의합니다. 응용 프로그램의 리소스 사전에 테마를 추가 하면 표준 컨트롤의 모양을 변경 합니다.
 
-## <a name="visual-state-managervisual-state-managermd"></a>[Visual State Manager](visual-state-manager.md)
+## <a name="visual-state-managervisual-state-managermd"></a>[시각적 상태 관리자](visual-state-manager.md)
 
 Visual State Manager를 장치 방향 또는 크기의 변화에 따라 맞출 수 있는 레이아웃을 포함 하 여 코드에서 사용자 인터페이스에 대 한 변경 내용을 트리거하는 구조적된 방법을 제공 합니다.
 

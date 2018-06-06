@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 지자기 센터
-description: 지자기 센터 클래스를 사용 하면 지표의 자기 필드를 기준으로 장치의 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
+title: 'Xamarin.Essentials: 지자기 센터'
+description: Xamarin.Essentials에서 지자기 센터 클래스 지표의 자기 필드를 기준으로 장치의 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 054a3081aab3b0337336ad7f856532caa41d70fe
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 78ed943a0fa7ca0cb249a4ac030ea6b52dcfb537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782939"
 ---
-# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials 지자기 센터
+# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

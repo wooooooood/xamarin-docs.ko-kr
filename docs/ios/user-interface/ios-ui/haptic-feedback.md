@@ -1,21 +1,20 @@
 ---
-title: Haptic 사용자 의견 제공
-description: 이 문서에서는 새로운 유형의 haptic 피드백 Xamarin.iOS에 구현 하는 방법과 iOS 10에서 사용할 수 있는 설명 합니다.
+title: Xamarin.iOS에 Haptic 사용자 의견 제공
+description: 이 문서에서는 Xamarin.iOS 앱에서 haptic 피드백을 제공 하는 방법에 설명 합니다. UIImpactFeedbackGenerator, UINotificationFeedbackGenerator, 및 UISelectionFeedbackGenerator에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f2d1bd73ea764cd5bf56775abd7c7357b039bc79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0dae6d6f50423474fbfebad5d630000e2160f6a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790190"
 ---
-# <a name="providing-haptic-feedback"></a>Haptic 사용자 의견 제공
-
-_이 문서에서는 새로운 유형의 haptic 피드백 Xamarin.iOS에 구현 하는 방법과 iOS 10에서 사용할 수 있는 설명 합니다._
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Xamarin.iOS에 Haptic 사용자 의견 제공
 
 <a name="Overview" />
 

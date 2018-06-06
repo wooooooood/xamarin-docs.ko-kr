@@ -1,20 +1,19 @@
 ---
 title: 기존 Mac 응용 프로그램 업데이트
-description: 통합 된 API를 사용 하는 기존 Xamarin.Mac 응용 프로그램을 업데이트 하려면 다음이 단계를 수행 합니다.
+description: 이 문서는 통합 API에 클래식 API에서 Xamarin.Mac 앱을 업데이트 하려면 준수 해야 하는 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a2e3df4db13ccbf8001b762bf29a3eb53cacd35a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5e6034b079bba5e884872e4f2096d677fd3641d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782413"
 ---
 # <a name="updating-existing-mac-apps"></a>기존 Mac 응용 프로그램 업데이트
-
-_통합 된 API를 사용 하는 기존 Xamarin.Mac 응용 프로그램을 업데이트 하려면 다음이 단계를 수행 합니다._
 
 통합 된 API를 사용 하는 기존 응용 프로그램 업데이트는 프로젝트 파일 자체에 네임 스페이스 및 응용 프로그램 코드에서 사용 되는 Api에 대 한 변경 해야 합니다.
 

@@ -1,18 +1,20 @@
 ---
-title: 네이티브 라이브러리 참조
+title: Xamarin.iOS의 네이티브 라이브러리 참조
+description: 이 문서에서는 네이티브 C 라이브러리 Xamarin.iOS 응용 프로그램에 연결 하는 방법에 설명 합니다. C#에서 유니버설 네이티브 라이브러리 및 액세스 방법 C 메서드를 작성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 4d58e869dc1357faef71ea88ed6b5ea30aaf960d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb27ba8b2d9c1b66448f22b7f80f17ba2e483544
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787729"
 ---
-# <a name="referencing-native-libraries"></a>네이티브 라이브러리 참조
+# <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.iOS의 네이티브 라이브러리 참조
 
 Xamarin.iOS 네이티브 C 라이브러리와 Objective-c 라이브러리를 모두 사용 하 여 링크를 지원 합니다. 이 문서에서는 네이티브 C 라이브러리 Xamarin.iOS 프로젝트와 연결 하는 방법을 설명 합니다. Objective C 라이브러리에 대해 동일 하 게 이러한 작업에 대 한 정보를 참조 하십시오. 우리의 [바인딩 Objective C 형식](~/ios/platform/binding-objective-c/index.md) 문서.
 

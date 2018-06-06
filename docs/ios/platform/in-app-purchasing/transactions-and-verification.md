@@ -1,18 +1,20 @@
 ---
-title: 트랜잭션 및 확인
+title: 트랜잭션 및 Xamarin.iOS 확인
+description: 이 문서에서는 Xamarin.iOS 앱에서 이전 구매 항목 복원에 대 한 허용 하는 방법에 설명 합니다. 또한 구매 및 서버 배달 제품을 보호 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786927"
 ---
-# <a name="transactions-and-verification"></a>트랜잭션 및 확인
+# <a name="transactions-and-verification-in-xamarinios"></a>트랜잭션 및 Xamarin.iOS 확인
 
 ## <a name="restoring-past-transactions"></a>트랜잭션 지난 복원
 

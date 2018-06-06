@@ -1,14 +1,16 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF 및 합니다. Xamarin.Forms: 유사점 및 차이점'
+description: 이 문서를 비교 하 고 xamarin.forms는 WPF을 대조 합니다. 컨트롤 템플릿, XAML, 바인딩 인프라, 데이터 템플릿, ItemsControl, UserControl, 탐색 및으로 URL 탐색에 설명 합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 232ddd5ea06891c70125adc9b8bf77f3e857dbd6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781971"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 합니다. Xamarin.Forms: 유사점 및 차이점
 

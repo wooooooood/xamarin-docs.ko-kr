@@ -2,7 +2,7 @@
 ## [게임 개발](game-development/index.md)
 ## [SkiaSharp](skiasharp/index.md)
 ### [소개](skiasharp/introduction.md)
-### [플랫폼별 설명](skiasharp/platform.md)
+### [플랫폼 관련 참고 사항](skiasharp/platform.md)
 
 
 

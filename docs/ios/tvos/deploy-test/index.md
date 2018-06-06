@@ -1,5 +1,5 @@
 ---
-title: 배포 및 테스트
+title: 배포 및 Xamarin에서 tvOS 앱 테스트
 description: 이 섹션에서는 배포 하는 방법과 앱을 테스트 하는 데 사용 하는 항목을 다룹니다. 이 항목에는 디버깅, 테스터 및 Apple TV 앱 스토어에 응용 프로그램을 게시 하는 방법에 대 한 배포에 사용 되는 도구 등 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: ab5b12e13095212a070c308b7e21d008c9aa2673
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b810d7cef05a4d4e26677eb0b18b9b72ca3995fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788598"
 ---
-# <a name="deployment-and-testing"></a>배포 및 테스트
+# <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>배포 및 Xamarin에서 tvOS 앱 테스트
 
 ## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[앱 배포](~/ios/tvos/deploy-test/app-distribution/index.md)
 

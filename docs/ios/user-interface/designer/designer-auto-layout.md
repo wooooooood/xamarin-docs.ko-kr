@@ -1,21 +1,20 @@
 ---
 title: IOS 용 Xamarin 디자이너로 자동 레이아웃
-description: 이 가이드에서는 iOS 자동 레이아웃 및 iOS에 대 한 Xamarin 디자이너에서 사용할 수 있는 새 제약 조건 워크플로 소개합니다.
+description: 이 가이드는 iOS 자동 레이아웃을 소개 하 고 디자이너를 사용 하 여 Xamarin iOS에 대 한 만들고 제약 조건을 사용 하 여 레이아웃을 편집 하는 방법에 설명 합니다. 또한 코드에서 제약 조건 변경 내용 및 더 애니메이션 수정 하 고 제약 조건을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790203"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너로 자동 레이아웃
-
-_이 가이드에서는 iOS 자동 레이아웃 및 iOS에 대 한 Xamarin 디자이너에서 사용할 수 있는 새 제약 조건 워크플로 소개합니다._
 
 자동 레이아웃 ("레이아웃 adaptive" 라고도 함)는 반응 형 디자인 방법입니다. 여기서 각 요소의 위치에는 화면에서 지점으로 하드 코딩, 전환 레이아웃 시스템에서와 달리 자동 레이아웃에 대 한는 *관계* -디자인 화면에서 다른 요소를 기준으로 요소의 위치입니다. 자동 레이아웃의 핵심 개념의 제약 조건 또는 규칙의 다른 요소를 화면에 컨텍스트에서 요소 배치 또는 요소 집합을 정의 하는 경우 요소 화면에서 특정 위치에 고정 되지 않은, 때문에 제약 조건을 다양 한 화면 크기와 방향 장치에서 제대로 보이는 적응 레이아웃을 만들 수 있습니다.
 

@@ -1,15 +1,17 @@
 ---
 title: Xamarin 통합 문서 SDK 시작
+description: 이 문서에서는 Xamarin 통합 문서에 대 한 통합 개발 하는 데 사용할 수 있는 통합 문서 Xamarin SDK와 함께 시작 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 2951075f5917d26d19b05eee3d4908a33799352e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7a077923741cb93a1277a55e6657f688b130e810
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793933"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>Xamarin 통합 문서 SDK 시작
 

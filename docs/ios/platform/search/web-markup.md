@@ -1,19 +1,20 @@
 ---
-title: 웹 태그를 사용 하 여 검색
-description: 응용 프로그램에 다시 연결할 수 있는 웹 기반 검색 결과 추가 합니다.
+title: Xamarin.iOS에 웹 태그를 사용 하 여 검색
+description: 이 문서에서는 Xamarin.iOS 앱으로 다시 연결 되는 웹 기반 검색 결과 생성 하는 방법에 설명 합니다. 인덱싱, 스마트 앱 배너, 범용 링크 등을 사용 하 여 검색 가능한 응용 프로그램의 웹 사이트를 만드는 웹 콘텐츠를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787996"
 ---
-# <a name="search-with-web-markup"></a>웹 태그를 사용 하 여 검색
+# <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.iOS에 웹 태그를 사용 하 여 검색
 
 웹 사이트를 통해 해당 콘텐츠에 대 한 액세스를 제공 하는 앱에 대 한 (뿐 아니라 앱 내에서), Apple에서 탐색 하 고 사용자의 iOS 9 장치에 앱에 대 한 직접 링크를 제공 하는 특별 한 링크와 함께 웹 콘텐츠 표시할 수 있습니다.
 

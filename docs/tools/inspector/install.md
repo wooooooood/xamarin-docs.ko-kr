@@ -1,21 +1,21 @@
 ---
 title: 설치 관리자 및 요구 사항
-description: 다운로드, 설치 및 Xamarin 검사를 사용 하는 방법.
+description: 이 문서에서 Xamarin 검사기를 설치 하는 방법에 설명 하 고 지원 되는 운영 체제, Ide 및 응용 프로그램 플랫폼을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793810"
 ---
 # <a name="inspector-installation-and-requirements"></a>설치 관리자 및 요구 사항
 
 ## <a name="download-and-installation"></a>다운로드 및 설치
-
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -55,7 +55,6 @@ ms.lasthandoff: 05/09/2018
 |iOS (통합)|XS Visual Studio에서 지원 됨|Windows에서 iOS 앱 검사도 Mac 빌드 호스트에 설치 되는 관리자의 동일한 버전이 필요 합니다.|
 |Android|XS Visual Studio에서 지원 됨|Android를 대상으로 해야 > 4.0.3, = **fastdev** 사용 하도록 설정 합니다.<br />Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 합니다. Android 에뮬레이터는 7이 이번에는 검사를 사용할 수 없습니다.|
 |WPF|Windows에서 Visual Studio 에서만 지원 됩니다.|
-
 
 <a name="reporting-bugs" />
 
@@ -167,6 +166,5 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 1. `"/Applications/Xamarin Workbooks.app"`에서 Workbooks 앱 삭제
 2. `"Applications/Xamarin Inspector.app"`에서 Inspector 앱 삭제
-2. `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 및 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` 추가 기능 삭제
-3. `/Library/Frameworks/Xamarin.Interactive.framework` 및 `/Library/Frameworks/Xamarin.Inspector.framework`에서 Inspector 및 지원 파일 삭제
-
+3. `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 및 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` 추가 기능 삭제
+4. `/Library/Frameworks/Xamarin.Interactive.framework` 및 `/Library/Frameworks/Xamarin.Inspector.framework`에서 Inspector 및 지원 파일 삭제

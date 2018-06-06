@@ -1,5 +1,5 @@
 ---
-title: 테이블 뷰 작업
+title: TvOS Xamarin의 테이블 뷰 작업
 description: 이 문서에서는 디자인 및 테이블 뷰 및 테이블 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789569"
 ---
-# <a name="working-with-table-views"></a>테이블 뷰 작업
+# <a name="working-with-tvos-table-views-in-xamarin"></a>TvOS Xamarin의 테이블 뷰 작업
 
 _이 문서에서는 디자인 및 테이블 뷰 및 테이블 뷰 컨트롤러 Xamarin.tvOS 앱 내에서 작업을 설명 합니다._
 

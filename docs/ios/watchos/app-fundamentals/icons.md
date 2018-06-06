@@ -1,17 +1,19 @@
 ---
-title: 작업 아이콘
+title: Xamarin의 아이콘 watchOS 작업
+description: 이 문서에서는 이러한 아이콘을 포함 하도록 솔루션을 설정 하는 방법과 watchOS 응용 프로그램에 필요한 다양 한 아이콘을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a7cdecaa2ba6a8c9f28ef8598fec31506eee6852
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 150cca754de26edffcf97bb5d39b26166662c75b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790668"
 ---
-# <a name="working-with-icons"></a>작업 아이콘
+# <a name="working-with-watchos-icons-in-xamarin"></a>Xamarin의 아이콘 watchOS 작업
 
 Apple Watch 솔루션 아이콘을 두 개의 집합이 필요합니다.
 

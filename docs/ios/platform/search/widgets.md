@@ -1,22 +1,22 @@
 ---
-title: 검색 및 홈 화면 위젯 향상 된 기능
-description: 이 문서에서는 Apple iOS 10에서에서 위젯 시스템에 대가 향상 된 기능을 설명 합니다.
+title: 검색 및 iOS 10에서에서 위젯 향상 홈 화면
+description: 이 문서에서는 향상 된 Apple에 10, 검색 및 위젯 홈 화면에 대 한 업데이트를 포함 하 여 iOS에서 위젯의 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8383f167f8c85459e996b83368281fa243317948
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788113"
 ---
-# <a name="search-and-home-screen-widget-enhancements"></a>검색 및 홈 화면 위젯 향상 된 기능
+# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>검색 및 iOS 10에서에서 위젯 향상 홈 화면
 
 _이 문서에서는 Apple iOS 10에서에서 위젯 시스템에 대가 향상 된 기능을 설명 합니다._
-
 
 Apple에 위젯 10 잠금 화면 새 iOS에 있는 모든 백그라운드에서 잘 한지 확인 하기 위하여 위젯 시스템에 여러 개선 된 기능이 도입 되었습니다. 또한 위젯을 포함 이제는 [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) 얼마나 많은 콘텐츠를 사용할 수를 설명 하는 개발자 및 확장 하 고 콘텐츠를 축소할 수 있도록 하는 속성입니다.
 

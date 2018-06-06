@@ -1,19 +1,20 @@
 ---
-title: CoreML 소개
-description: IOS 11에서 모바일 앱에 대 한 학습 하는 컴퓨터
+title: Xamarin.iOS에 CoreML 소개
+description: 이 문서에서는 기계 학습에서 iOS 매핑함으로써 CoreML를 설명 합니다. 이 문서에서는 CoreML 시작 하는 방법과 비전 framework와 함께 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 412a534829349dbbc3f3b76b166882fa6e0e1cd1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b893fe5e56cc2d43a71870ffbbd20f0b8c6cfd18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787498"
 ---
-# <a name="introduction-to-coreml"></a>CoreML 소개
+# <a name="introduction-to-coreml-in-xamarinios"></a>Xamarin.iOS에 CoreML 소개
 
 _IOS 11에서 모바일 앱에 대 한 학습 하는 컴퓨터_
 

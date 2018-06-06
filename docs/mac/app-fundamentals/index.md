@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 기본 사항
+title: Xamarin.Mac 응용 프로그램 기본 사항
 description: 이 문서는 Xamarin.Mac 응용 프로그램을 개발 하는 경우를 이해 하는 데 필요한 다양 한 개념을 설명 하는 설명서를 링크 합니다.
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/17/2015
-ms.openlocfilehash: 807cf0e16cafc00483cecfc578367bc110657672
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c807e97d5218e93c4eb991a9bd80219c9745c2b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791503"
 ---
-# <a name="application-fundamentals"></a>응용 프로그램 기본 사항
+# <a name="xamarinmac-application-fundamentals"></a>Xamarin.Mac 응용 프로그램 기본 사항
 
 ## <a name="common-patterns-and-idiomsmacapp-fundamentalspatternsmd"></a>[일반적인 패턴 및 관용구](~/mac/app-fundamentals/patterns.md)
 

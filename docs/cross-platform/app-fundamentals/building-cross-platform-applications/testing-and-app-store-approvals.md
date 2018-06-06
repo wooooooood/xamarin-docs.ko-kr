@@ -1,15 +1,17 @@
 ---
 title: 6-부 테스트 및 앱 스토어 승인
+description: 이 문서에는 장치에 플랫폼 간 응용 프로그램 테스트, 테스트 사례 관리, 테스트 자동화, 단위 테스트를 실행 및 응용 프로그램 제출 프로세스를 진행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cae577ffb901f4c1196b0e997561825526409117
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 0faf7c9e4ff7c96cdfd25ab6d6658726ef247b32
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781649"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6-부 테스트 및 앱 스토어 승인
 

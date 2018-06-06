@@ -1,15 +1,17 @@
 ---
 title: 바인딩 Objective C 라이브러리
+description: 이 문서를 만드는 C#에 대 한 바인딩을 Objective C 코드에서 이벤트, 메서드, 사용자 지정 컨트롤을 바인딩하는 방법을 설명 하는 방법에 대 한 고급 개요를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: fddde9dbef0e4dfb03707a970d4263983d4cf85d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f7c4be4254ce3e3301c0c1e98d37134f5524c23b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782322"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 Objective C 라이브러리
 
@@ -1368,6 +1370,6 @@ Xamarin.iOS v3.2 기준으로 표시 하는 프로토콜에서 상속 지원는 
 
 모든 구현 하는 프로토콜 복사 요구 지금까지 하지만 이러한 경우 이제 수 있으며 이러한 시각화는 `MKShape` 클래스에서 상속 된 `MKOverlay` 프로토콜과 것에서 필요한 메서드를 모두 자동으로 생성 합니다.
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [바인딩 예제](https://developer.xamarin.com/samples/BindingSample/)

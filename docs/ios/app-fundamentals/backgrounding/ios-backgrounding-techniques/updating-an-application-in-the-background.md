@@ -1,18 +1,20 @@
 ---
-title: 백그라운드에서 응용 프로그램 업데이트
+title: 백그라운드에서 Xamarin.iOS 앱 업데이트
+description: 이 문서에서는 영역 모니터링, 백그라운드 가져오기를 원격 알림 등 백그라운드에 있는 Xamarin.iOS 앱을 업데이트 하는 다양 한 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 370d1cba71fa695e4e01dfb93241536a8df01b11
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 973c18528eee2096b29ba86e82ceff31ecf3e207
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784067"
 ---
-# <a name="updating-an-application-in-the-background"></a>백그라운드에서 응용 프로그램 업데이트
+# <a name="updating-a-xamarinios-app-in-the-background"></a>백그라운드에서 Xamarin.iOS 앱 업데이트
 
 백그라운드 새로 고침을 일시 중단 하는 응용 프로그램을 다시 시작 또는 실행 중이 고를 새 내용으로 업데이트는 프로세스입니다. iOS는 백그라운드에서 콘텐츠를 새로 고치기 위한 세 가지 옵션을 제공 합니다.
 
@@ -99,7 +101,7 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 
 ## <a name="remote-notifications-ios-7-and-greater"></a>원격 알림 (iOS 7 이상)
 
-푸시 알림은 통해 장치에는 공급자에서 전송 하는 JSON 메시지는 *Apple 푸시 알림 서비스 (APNs)*합니다.
+푸시 알림은 통해 장치에는 공급자에서 전송 하는 JSON 메시지는 *Apple 푸시 알림 서비스 (APNs)* 합니다.
 
 IOS 6에에서는 들어오는 푸시 알림을 응용 프로그램에서 발생 하는 흥미로운 사용자에 게 알리도록 하려면 시스템에 알려줍니다. 알림 클릭 응용 프로그램 일시 중단 또는 종료 된 상태에서 끌어와 앱 콘텐츠 업데이트를 시작 합니다. iOS 7 (및 큰) 응용 프로그램을 백그라운드에서 콘텐츠를 업데이트할 수를 지정 하 여 일반 푸시 알림을 확장 *전에* 사용자 응용 프로그램을 열 수 고를 새 내용으로 표시할 수 있도록 사용자에 게 알리는 즉시 합니다.
 

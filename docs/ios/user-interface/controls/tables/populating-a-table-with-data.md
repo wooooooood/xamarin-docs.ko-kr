@@ -1,18 +1,20 @@
 ---
-title: 데이터로 테이블 채우기
+title: Xamarin.iOS의 데이터로 테이블 채우기
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램에서 데이터가 있는 테이블을 채우는 방법을 설명 합니다. UITableViewSource, 셀 재사용, 인덱스 및 머리글 및 바닥글 추가 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c139b96adfc325e7c251f8093eab338ddf0c6337
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 77167bb8938ec0b3dcd30b80235ee5d9a60b4ce0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790070"
 ---
-# <a name="populating-a-table-with-data"></a>데이터로 테이블 채우기
+# <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.iOS의 데이터로 테이블 채우기
 
 행을 추가 하는 `UITableView` 구현 해야는 `UITableViewSource` 하위 클래스와 자체를 채우는 데 테이블 보고 하는 메서드를 호출 하는 재정의 합니다.
 

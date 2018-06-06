@@ -1,17 +1,19 @@
 ---
-title: System.Data
+title: Xamarin.iOS System.Data
+description: 이 문서에서는 System.Data 및 Mono.Data.Sqlite.dll SQLite 데이터 Xamarin.iOS 응용 프로그램에 액세스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b141dfac49e2cfa2dc80b7c0e4ca3a93968590a6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f20bdbdb9fe0d25e1ba545633e271af912aab3ba
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784718"
 ---
-# <a name="systemdata"></a>System.Data
+# <a name="systemdata-in-xamarinios"></a>Xamarin.iOS System.Data
 
 에 대 한 지원을 추가 하는 Xamarin.iOS 8.10 [System.Data](https://developer.xamarin.com/api/namespace/System.Data/)를 포함 하 여는 `Mono.Data.Sqlite.dll` ADO.NET 공급자입니다. 지원 됩니다. 다음의 추가 [어셈블리](~/cross-platform/internals/available-assemblies.md):
 
@@ -21,10 +23,9 @@ ms.lasthandoff: 04/04/2018
 -  `Mono.Data.Tds.dll`
 -  `Mono.Data.Sqlite.dll`
 
-
 <a name="Example" />
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 프로그램에서 데이터베이스를 만듭니다. `Documents/mydb.db3`, 하는 경우는 이전에 데이터베이스가 없습니다 것 및 샘플 데이터로 채워집니다. 데이터베이스를 쿼리 한 다음의 출력에 기록 `stderr`합니다.
 

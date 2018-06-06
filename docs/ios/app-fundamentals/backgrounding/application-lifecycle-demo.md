@@ -1,18 +1,20 @@
 ---
-title: 응용 프로그램 수명 주기 데모
+title: Xamarin.iOS에 대 한 응용 프로그램 수명 주기 데모
+description: 이 문서에서는 이러한 이벤트가 처리 되는 시기와 방법을 보여 주는 iOS 응용 프로그램의 응용 프로그램 대리자에서 처리 하는 다양 한 수명 주기 이벤트를 검사 합니다.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f03cd7d74d09fc40b88cfbf44bf54c6da5f4c149
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64c695065012e4bf796c219c260324d9b6278ca5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783586"
 ---
-# <a name="application-lifecycle-demo"></a>응용 프로그램 수명 주기 데모
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Xamarin.iOS에 대 한 응용 프로그램 수명 주기 데모
 
 이 섹션에서는 하겠습니다 4 개의 응용 프로그램 상태와의 역할을 보여 주는 응용 프로그램을 검사 하는 `AppDelegate` 상태 가져오기 변경 하는 경우의 응용 프로그램에 게 알리는 메서드. 응용 프로그램의 상태가 변경 될 때마다 응용 프로그램 콘솔에 대 한 업데이트를 인쇄 합니다.
 

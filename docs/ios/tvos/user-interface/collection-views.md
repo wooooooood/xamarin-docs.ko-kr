@@ -1,21 +1,20 @@
 ---
-title: 컬렉션 뷰 작업
-description: 이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
+title: Xamarin에 대 한 컬렉션 뷰 tvOS 작업
+description: 이 문서에서는 Xamarin으로 빌드된 tvOS 응용 프로그램에서 컬렉션 뷰를 사용 하는 방법을 설명 합니다. 셀 및 사용자 이벤트에 응답 하는 보충 보기 만드는 컬렉션 보기 레이아웃을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b411ac6bb8d1492511f9e5d2234731ae64c3a82
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789280"
 ---
-# <a name="working-with-collection-views"></a>컬렉션 뷰 작업
-
-_이 문서에서는 디자인 하 고 컬렉션 뷰 Xamarin.tvOS 앱 내에서 작업을 설명 합니다._
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Xamarin에 대 한 컬렉션 뷰 tvOS 작업
 
 임의의 레이아웃을 사용 하 여 표시 콘텐츠의 그룹에 대 한 컬렉션 뷰를 통해. 사용자 지정 레이아웃을 지원 하면서 쉽게 만들기 표 모양의 또는 선형 레이아웃에 대 한 허용 기본 제공 지원을 사용 하 여, 합니다.
 

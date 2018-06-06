@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 88821c5315fc338b5195e42ea4b2bc3e648e6ea1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 6a0544a58245efed696b92c543fbaf5e7e1b8365
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732829"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 소개
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="how-dependencyservice-works"></a>DependencyService의 작동 원리
 
-Xamarin.Forms 앱 사용 하는 세 가지 구성 요소 필요 `DependencyService`:
+Xamarin.Forms 앱 사용 하려면 네 가지 구성 요소가 필요 `DependencyService`:
 
 - **인터페이스** &ndash; 필요한 기능 공유 코드에서 인터페이스에 의해 정의 됩니다.
 - **구현 당 플랫폼** &ndash; 인터페이스를 구현 하는 클래스는 각 플랫폼 프로젝트에 추가 해야 합니다.

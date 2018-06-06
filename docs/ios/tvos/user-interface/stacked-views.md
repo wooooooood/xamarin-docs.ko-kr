@@ -1,22 +1,20 @@
 ---
-title: 누적된 보기 사용
-description: 이 문서에서는 디자인 및 보기 누적 Xamarin.tvOS 응용 프로그램 내 사용을 설명 합니다.
+title: Xamarin에서 tvOS 누적 뷰 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 앱에서 누적된 뷰 tvOS와 협력 하는 방법을 설명 합니다. 누적된 보기의 상위 수준 개요를 제공 하 고 배치 및 누적된 보기, 일반적인 용도, 스토리 보드와의 통합 등을 크기 조정 자동 레이아웃에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789374"
 ---
-# <a name="working-with-stacked-view"></a>누적된 보기 사용
-
-_이 문서에서는 디자인 및 보기 누적 Xamarin.tvOS 응용 프로그램 내 사용을 설명 합니다._
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 뷰 작업
 
 스택 뷰 컨트롤 (`UIStackView`) 이용 하 여 가로 또는 세로로 하위 뷰가, 스택을 관리 하려면 자동 레이아웃 및 크기 클래스의 콘텐츠 변경 내용 및 Apple TV 장치의 화면 크기에 동적으로 응답 하 합니다.
 

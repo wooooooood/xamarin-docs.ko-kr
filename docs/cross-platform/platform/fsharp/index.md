@@ -1,18 +1,19 @@
 ---
-title: F#
-description: 'F #은 강력한 형식의 함수형 프로그래밍 언어로 서.NET에서 실행 되도록 디자인'
+title: 'Xamarin을 사용한 F #을 사용'
+description: 'F#은 .NET에서 실행되도록 설계된 강력한 형식의 함수형 프로그래밍 언어입니다. 이 문서 언어의 기능 및 F #을 사용 하 여 빌드한 샘플에 대 한 링크의 대략적인 개요를 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: 506410BD-F89C-4FEB-8915-760FE250A206
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 1679c0fa561a5b96463050d82fca3854bb819b52
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2a6c666878c16cbb4aca6fbaa3c9f8d0c656d0bc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781151"
 ---
-# <a name="f35"></a>F&AMP;#35;
+# <a name="using-f-with-xamarin"></a>Xamarin을 사용한 F #을 사용
 
 F #는.net 오픈 소스, 크로스 플랫폼, 함수형 프로그래밍 언어입니다.
 

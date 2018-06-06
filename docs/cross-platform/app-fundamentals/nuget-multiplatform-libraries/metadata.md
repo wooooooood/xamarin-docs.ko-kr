@@ -1,16 +1,17 @@
 ---
 title: NuGet 메타 데이터 편집
-description: 프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리에 대 한 NuGet 메타 데이터를 편집 하려면
+description: 이 문서에서는 프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리에 대 한 NuGet 메타 데이터를 편집 하는 방법을 설명 합니다. 필수 및 선택적 메타 데이터에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: dc2bd64339aa3deacd640cc982af5ee52d76ff07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3680b02003a844668b0b5c97e5d4c0d296ae3500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779972"
 ---
 # <a name="editing-nuget-metadata"></a>NuGet 메타 데이터 편집
 

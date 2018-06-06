@@ -1,21 +1,20 @@
 ---
-title: 앱 스토어 변경 내용
-description: IOS 11의 새로운 기능 탐색
+title: 11 iOS에서 앱 스토어 변경 내용
+description: 이 문서는 11 iOS에서 앱 스토어에 변경 내용을 탐색합니다. 응용 프로그램의 저장소 아이콘, 승격 된 앱에서 바로 구매, 다시 디자인 된 제품 페이지, 고객 통신 및 단계적된 릴리스 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 9c9355c047d2e7083ca787f473515163d8e6f5f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787392"
 ---
-# <a name="app-store-changes"></a>앱 스토어 변경 내용
-
-_IOS 11의 새로운 기능 탐색_
+# <a name="app-store-changes-in-ios-11"></a>11 iOS에서 앱 스토어 변경 내용
 
 IOS 앱 스토어에 뿐만 아니라 사용자가 저장소를 효율적으로 탐색할 수 있지만 수도 있습니다를 사용자에 게 앱을 승격 하려면 개발자가 완전히 다시 디자인이 되어 있습니다. 이러한 승격 앱에서 바로 구매에 대 한 업데이트 및 제품 페이지에 대 한 업데이트를 포함 합니다. 또한 11 iOS 사용자와 통신 하는 방법, 응용 프로그램 아이콘을 추가 하는 방법 및 공개적으로 응용 프로그램을 해제 하는 방법에 대 한 업데이트를 추가 합니다.
 

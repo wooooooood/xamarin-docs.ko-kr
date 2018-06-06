@@ -1,23 +1,24 @@
 ---
 title: 통합 된 API에는 기존 앱 업데이트
+description: 이 문서는 통합 API에 Xamarin 응용 프로그램을 업데이트 하는 방법을 설명 하는 다양 한 설명서를 링크 합니다. Xamarin.iOS 응용 프로그램, Xamarin.Mac 응용 프로그램에 설명 합니다. Xamarin.Forms 응용 프로그램, 플랫폼 간 앱 및 바인딩 프로젝트의 네이티브 형식입니다.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 588c01ef9f9ee014592c9d8dc72f2b8be20dfee3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781633"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>통합 된 API에는 기존 앱 업데이트
 
 > [!IMPORTANT]
-> **클래식 프로필 사용 중단:** 클래식 프로필 (monotouch.dll)에서 기능을 사용 하지 않으려는 점진적으로 시작 되며 새 플랫폼 Xamarin.iOS에 추가 됩니다. 예를 들어 비 NRC (새-ref-개수) 옵션이 제거 되었습니다. NRC 모두 통합 된 응용 프로그램을 항상 사용할 수 있는 (즉, 비 NRC 않은 옵션) 및에 알려진된 문제가 없습니다. 이후 릴리스에서 가비지 수집기 Boehm를 사용 하는 옵션이 제거 됩니다. 절대 통합 된 응용 프로그램에 사용할 수 없는 옵션 이기도 합니다. 클래식 지원을 완전히 제거할 Xamarin.iOS 10.0 릴리스와 함께 다음 지원은 예약 됩니다.
-
-
-
+> 앞에 통합 API를 사용 하는 Xamarin 클래식 API는 더 이상 사용 되지 않습니다. 
+> - 마지막 버전의 클래식 API (monotouch.dll)를 지원 하기 위해 Xamarin.iOS Xamarin.iOS 9.10 했습니다.
+> - Xamarin.Mac 클래식 API를 계속 지원 하지만 더 이상으로 업데이트 됩니다. 사용 되지 있으므로 개발자가 자신의 응용 프로그램 통합 API을 이동 해야 합니다.
 
 ## <a name="how-to-update-your-apps"></a>앱을 업데이트 하는 방법
 
@@ -31,7 +32,7 @@ Xamarin University 무료로 사용할 수 있는 비디오에 **iOS 통합 API�
 
 2. Mac 용 Visual Studio에 기본 제공 마이그레이션 도구를 사용 하 여 프로젝트 파일 및 네임 스페이스를 업데이트 합니다.
 
-3. 컴파일러 오류와 관련 된 새로운 남은 수정 [64 형식](~/cross-platform/macios/nativetypes.md) 및 [다른 Api](~/cross-platform/macios/unified/index.md#deprecated-typos) 변경 된 합니다. 체크 아웃 [이러한 팁](~/cross-platform/macios/unified/updating-tips.md) 필요할 수 있는 수동 업데이트에 대 한 자세한 내용은 합니다.
+3. 컴파일러 오류와 관련 된 새로운 남은 수정 [64 형식](~/cross-platform/macios/nativetypes.md) 및 [다른 Api](~/cross-platform/macios/unified/overview.md#deprecated-typos) 변경 된 합니다. 체크 아웃 [이러한 팁](~/cross-platform/macios/unified/updating-tips.md) 필요할 수 있는 수동 업데이트에 대 한 자세한 내용은 합니다.
 
 통합 API 및 64 비트 지원 앱을 업데이트할 수 있도록 각 제품에 대 한 특정 지침이 있습니다.
 
@@ -55,9 +56,6 @@ Xamarin University 무료로 사용할 수 있는 비디오에 **iOS 통합 API�
 
 Objective C 라이브러리에 대 한 바인딩을 만든 사용자는 API (여기서 일부 형식은 이제 됩니다 64 비트)에서 변경 내용을 반영 하 여 바인딩 프로젝트를 업데이트 해야 합니다.
 다음이 지침에 따라 [통합 API를 지원 하기 위해 기존 바인딩 프로젝트를 업데이트](~/cross-platform/macios/unified/update-binding.md)합니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

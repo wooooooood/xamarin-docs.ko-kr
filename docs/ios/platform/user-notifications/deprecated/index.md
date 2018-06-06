@@ -1,26 +1,25 @@
 ---
-title: 사용 되지 않는 알림 기술
+title: Xamarin.iOS의 사용 되지 않는 알림 기술
+description: 이 문서에는 iOS 10에에서 도입 된 사용자 알림을 프레임 워크를 위해 사용 되지 않는 iOS 알림 기술을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: eff1d999e705aa493d0481e34ead3b9b81d434f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4becc5e296fb6e2496d9ffd863f7137419480262
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788555"
 ---
-# <a name="deprecated-notification-technologies"></a>사용 되지 않는 알림 기술
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>Xamarin.iOS의 사용 되지 않는 알림 기술
 
 이 섹션에는 로컬 구현 및 Xamarin.iOS에 대 한 푸시 알림 방법을 보여 줍니다. IOS 알림의 다양 한 UI 요소에 설명 하 고 API에 설명 합니다의 관련 만들기 및 알림을 표시 합니다.
 
 > [!IMPORTANT]
 > IOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
-
-
-
 
 ## <a name="sections"></a>섹션
 

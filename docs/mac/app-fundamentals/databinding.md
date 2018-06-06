@@ -1,5 +1,5 @@
 ---
-title: 데이터 바인딩 및 키-값 코딩
+title: 데이터 바인딩 및 키-값 Xamarin.Mac에서 코딩
 description: 이 문서에서는 키-값 코딩 및 관찰 Xcode의 인터페이스 작성기에서 UI 요소에 대 한 데이터 바인딩을 허용 하는 키-값을 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88567e47f488a94fcf7334584a678c9689b83306
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792140"
 ---
-# <a name="data-binding-and-key-value-coding"></a>데이터 바인딩 및 키-값 코딩
+# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>데이터 바인딩 및 키-값 Xamarin.Mac에서 코딩
 
 _이 문서에서는 키-값 코딩 및 관찰 Xcode의 인터페이스 작성기에서 UI 요소에 대 한 데이터 바인딩을 허용 하는 키-값을 사용 하 여 설명 합니다._
 

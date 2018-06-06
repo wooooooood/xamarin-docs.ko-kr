@@ -1,15 +1,17 @@
 ---
 title: watchOS 응용 프로그램 기본 사항
+description: 이 문서에서는 Xamarin을 사용 하 여 watchOS 응용 프로그램 개발에 대 한 핵심 개념을 설명 하는 다양 한 문서의 링크를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a21f45a954ffe937ebfb785aa6b0fbc6b468309f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 379b86c46f1d3ba8653c9f41750bce78bae945b5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790580"
 ---
 # <a name="watchos-application-fundamentals"></a>watchOS 응용 프로그램 기본 사항
 

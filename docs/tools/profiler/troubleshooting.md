@@ -1,20 +1,19 @@
 ---
 title: Xamarin 프로파일러 문제 해결
-description: Xamarin 프로파일러 문제 해결
+description: 이 문서에서는 Xamarin 프로파일러와 관련 된 문제 해결 정보를 제공 합니다. 로깅 및 진단, IDE, 및 기타 항목에 관련 된 문제를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793857"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin 프로파일러 문제 해결
-
-_Xamarin 프로파일러 문제 해결_
 
 ## <a name="logging-and-diagnostics"></a>로깅 및 진단
 
@@ -25,6 +24,7 @@ Xamarin 팀은 우리 정보를 제공 하는 경우 문제를 추적 하는 데
 - **.mlpd** 프로 파일링 세션 (아래 참조)에 대해 생성 되 고 있습니다.
 
 ### <a name="getting-log-outputs"></a>로그 출력 가져오기
+
 Mac에서 로그에 저장 됩니다 `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`합니다.
 
 Windows에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` 문제를 제출 때마다 최신 로그를 포함 하세요.
@@ -49,7 +49,6 @@ Windows에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Pr
 
 ![](troubleshooting-images/image17-vs.png "Visual Studio에서.mlpd 파일을 저장합니다.")
 
-
 사항에 유의 해야 **.mlpd** 많은 정보를 포함 하 고 파일 크기는 큰 됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결
@@ -70,7 +69,6 @@ Windows에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Pr
 - 인증에 고 적절히 로그온 했는지 확인 합니다.
 - [Visual Studio] 사용 해야 [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) 및 Enterprise 라이선스를가지고 있습니다.
 
-
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>프로파일러를 시작 하려고 할 때 오류가 발생
 
 Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자를 실행 합니다.
@@ -83,14 +81,11 @@ Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자를 
 
 특히 시청 하고자 하는 스레드를 사용 하도록 설정한 경우 것이 이상적는 매우 시작 하 고 생성 get 얻을 수 있도록에 스레드 이름을 `ThreadName` 대신 `0x0`합니다. 예를 들어 ui 스레드 이름을 설정 하려면, 다음 코드를 사용할 수 있습니다.
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

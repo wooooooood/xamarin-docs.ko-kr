@@ -1,5 +1,6 @@
 ---
 title: Xamarin.iOS 분석 규칙
+description: 이 문서를 사용할 수 있는 더/better optimized 설정은 파악 Xamarin.iOS 프로젝트 설정을 확인 하는 분석 규칙 집합을 설명 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d942e21208d5a66da3dd849d217be2489311b9a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25d2936f70981ed239626193ba6e4993f1378108
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788900"
 ---
 # <a name="xamarinios-analysis-rules"></a>Xamarin.iOS 분석 규칙
 

@@ -1,18 +1,20 @@
 ---
-title: 비전 프레임 워크
+title: Xamarin.iOS 비전 프레임 워크
+description: 이 문서에서는 11 iOS를 사용 하는 방법을 설명 Xamarin.iOS에 비전 프레임 워크입니다. 사각형 검색에 설명 특히 검색 직면 하 고 있습니다.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2016
-ms.openlocfilehash: 698bf829128cff1263e98b49d29a77b75ec32ad9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44c4b3ab12c1ba448f1befb6f831f5ad9119f18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787421"
 ---
-# <a name="vision-framework"></a>비전 프레임 워크
+# <a name="vision-framework-in-xamarinios"></a>Xamarin.iOS 비전 프레임 워크
 
 비전 프레임 워크 다양 한 기능을 포함 하 여 11 iOS 처리 하는 새 이미지를 추가 합니다.
 

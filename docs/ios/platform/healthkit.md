@@ -1,21 +1,20 @@
 ---
-title: HealthKit
-description: HealthKit 상태 관련 정보에 대 한 중앙 집중화 하 고, 통합, 안전한 데이터 저장소를 제공 하는 iOS 8에에서 도입 된 프레임 워크입니다. 운영 체제는 개인 정보 및 상태 정보 및 보안, 상태 앱을 사용자에 대 한 대시보드를 확인합니다. 사용자의 권한이 있는 응용 프로그램 읽고 다양 한 상태 정보를 쓸 수 있습니다.
+title: Xamarin.iOS에 HealthKit
+description: 이 문서에서는 HealthKit, 상태 관련 정보에 대 한 중앙 집중화 하 고, 통합, 안전한 데이터 저장소를 제공 하는 iOS 8에에서 도입 된 프레임 워크에 설명 합니다. HealthKit 앱 프로 비전 하는 방법과 HealthKit 프레임 워크를 사용 하는 코드를 작성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06c0231bbb9aa7b82b92e0a8c2157b8be9c8b05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787535"
 ---
-# <a name="healthkit"></a>HealthKit
-
-_HealthKit 상태 관련 정보에 대 한 중앙 집중화 하 고, 통합, 안전한 데이터 저장소를 제공 하는 iOS 8에에서 도입 된 프레임 워크입니다. 운영 체제는 개인 정보 및 상태 정보 및 보안, 상태 앱을 사용자에 대 한 대시보드를 확인합니다. 사용자의 권한이 있는 응용 프로그램 읽고 다양 한 상태 정보를 쓸 수 있습니다._
+# <a name="healthkit-in-xamarinios"></a>Xamarin.iOS에 HealthKit
 
 상태 키트는 사용자의 상태 관련 정보에 대 한 보안 데이터 저장소를 제공합니다. 상태 키트 앱을 사용자의 명시적 사용 권한을 가진이 데이터 저장소에 선택한 관련 데이터를 추가할 때 알림이 제공 합니다. 앱에서 데이터를 제공할 수 또는 사용자의 사용 상태 응용 프로그램을 제공된 하는 Apple의 모든 데이터의 대시보드를 볼 수 있습니다.
 

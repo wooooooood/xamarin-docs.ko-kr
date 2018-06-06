@@ -1,5 +1,5 @@
 ---
-title: IPad 용 멀티태스킹
+title: 멀티태스킹 Xamarin.iOS 방향의 iPad 용
 description: iOS 9에 동시, 통해 슬라이드를 사용 하 여 또는 분할 된 뷰를 실행 하는 두 개의 앱을 지원 합니다. 또한 비디오 재생 그림에서 그림을 지원 합니다.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7eacd9ece067d2ddf6363c0551055daa3df4433a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787957"
 ---
-# <a name="multitasking-for-ipad"></a>IPad 용 멀티태스킹
+# <a name="multitasking-for-ipad-in-xamarinios"></a>멀티태스킹 Xamarin.iOS 방향의 iPad 용
 
 _iOS 9에 동시, 통해 슬라이드를 사용 하 여 또는 분할 된 뷰를 실행 하는 두 개의 앱을 지원 합니다. 또한 비디오 재생 그림에서 그림을 지원 합니다._
 

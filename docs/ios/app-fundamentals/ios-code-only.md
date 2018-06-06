@@ -1,21 +1,20 @@
 ---
-title: 코드에서 iOS 사용자 인터페이스 만들기
-description: Xamarin.iOS 앱에 대 한 – 또는 코드를 iOS 용 Xamarin 디자이너를 사용 하 여 사용자 인터페이스를 만드는 두 가지 방법을 제공 합니다. 이 문서 전체를 코드로 iOS 사용자 인터페이스를 만드는 방법을 검사 합니다. 컨트롤러에는 응용 프로그램 화면 UIKit에서 보기의 계층 구조를 만들어 만들려는 프로젝트 템플릿으로 시작 하는 방법을 보여 줍니다. 그런 다음는 컨트롤러에서 로드할 수 있는 사용자 지정 보기를 만드는 방법을 설명 합니다.
+title: Xamarin.iOS의 코드에서 iOS 사용자 인터페이스 만들기
+description: 이 문서에서는 Xamarin.iOS 앱에 대 한 사용자 인터페이스를 만드는 코드를 사용 하는 방법을 설명 합니다. 컨트롤러 보기 처리에 회전 등 뷰 계층 구조에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 5e8abc2cea2e2ca8abfada8bc85379d93d183768
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784636"
 ---
-# <a name="creating-ios-user-interfaces-in-code"></a>코드에서 iOS 사용자 인터페이스 만들기
-
-_Xamarin.iOS 앱에 대 한 – 또는 코드를 iOS 용 Xamarin 디자이너를 사용 하 여 사용자 인터페이스를 만드는 두 가지 방법을 제공 합니다. 이 문서 전체를 코드로 iOS 사용자 인터페이스를 만드는 방법을 검사 합니다. 컨트롤러에는 응용 프로그램 화면 UIKit에서 보기의 계층 구조를 만들어 만들려는 프로젝트 템플릿으로 시작 하는 방법을 보여 줍니다. 그런 다음는 컨트롤러에서 로드할 수 있는 사용자 지정 보기를 만드는 방법을 설명 합니다._
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS의 코드에서 iOS 사용자 인터페이스 만들기
 
 IOS 앱의 사용자 인터페이스는는 storefront와 – 응용 프로그램은 일반적으로 한 창의 가져옵니다 하지만 것으로 채울 수 창에 많은 개체가 필요 하 고 개체와 배열을 표시 하려고 하는 응용 프로그램에 따라 변경할 수 있습니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 빌드합니다 뷰는 서로 위에 쌓입니다 콘텐츠 뷰 계층 구조에서 및 단일 보기 컨트롤러에서 관리 하는 계층입니다. 여러 화면이 있는 응용 프로그램은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 응용 프로그램은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
 

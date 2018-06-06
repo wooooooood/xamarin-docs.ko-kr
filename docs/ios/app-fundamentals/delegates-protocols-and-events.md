@@ -1,21 +1,20 @@
 ---
-title: 이벤트, 프로토콜 및 대리자
-description: 이 문서에서는 콜백을 받으려면 하 고 사용자 인터페이스 컨트롤을 데이터로 채우는 데 사용 되는 키 iOS 기술을 제공 합니다. 이러한 기술에는 이벤트, 프로토콜 및 대리자입니다. 이 문서에 대해 설명 이러한 각 이며, 각 어떻게 사용 되는지 C#에서. Xamarin.iOS 이벤트를 노출할 친숙 한.NET도 Xamarin.iOS 프로토콜, 대리자 등 Objective-c 개념에 대 한 지원을 제공 하는 방법에 따라 iOS 컨트롤을 사용 하는 방법을 보여 줍니다 (Objective-c 대리자 혼동 해서는 안 C# 대리자와 함께). 또한이 문서는 프로토콜을 사용 – 모두 Objective-c 대리자에 대 한 비 대리자 시나리오에서의 기초로 방식을 보여 주는 예제를 제공 합니다.
+title: 이벤트, 프로토콜 및 Xamarin.iOS의 대리자
+description: 이 문서 이벤트, 프로토콜로 작업 하는 방법을 설명 하 고 Xamarin.iOS에 위임 합니다. 이러한 기본 개념은 어디에서 나 Xamarin.iOS 개발에서 합니다.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0e4c23bffe689c9218da2f43b97d98f348513ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784012"
 ---
-# <a name="events-protocols-and-delegates"></a>이벤트, 프로토콜 및 대리자
-
-_이 문서에서는 콜백을 받으려면 하 고 사용자 인터페이스 컨트롤을 데이터로 채우는 데 사용 되는 키 iOS 기술을 제공 합니다. 이러한 기술에는 이벤트, 프로토콜 및 대리자입니다. 이 문서에 대해 설명 이러한 각 이며, 각 어떻게 사용 되는지 C#에서. Xamarin.iOS 이벤트를 노출할 친숙 한.NET도 Xamarin.iOS 프로토콜, 대리자 등 Objective-c 개념에 대 한 지원을 제공 하는 방법에 따라 iOS 컨트롤을 사용 하는 방법을 보여 줍니다 (Objective-c 대리자 혼동 해서는 안 C# 대리자와 함께). 또한이 문서는 프로토콜을 사용 – 모두 Objective-c 대리자에 대 한 비 대리자 시나리오에서의 기초로 방식을 보여 주는 예제를 제공 합니다._
+# <a name="events-protocols-and-delegates-in-xamarinios"></a>이벤트, 프로토콜 및 Xamarin.iOS의 대리자
 
 Xamarin.iOS 대부분 사용자 상호 작용에 대 한 이벤트를 노출 하도록 컨트롤을 사용 합니다.
 Xamarin.iOS 응용 프로그램으로 기존.NET 응용 프로그램 거의 동일한 방법으로 이러한 이벤트를 사용 합니다. 예를 들어 Xamarin.iOS UIButton 클래스 TouchUpInside 라는 이벤트가 있습니다 하 고 하면.NET 응용 프로그램에서이 클래스와 이벤트 것 처럼이 이벤트를 사용 합니다.
@@ -28,15 +27,13 @@ Xamarin.iOS 응용 프로그램으로 기존.NET 응용 프로그램 거의 동�
 -  **프로토콜** – 되는 정보와 사용 방법을 프로토콜 기능을 학습 하 고 지도 주석에 대 한 데이터를 제공 하는 예제를 만듭니다.
 -  **대리자** – 강력 하 고 약한 대리자와 이러한 각를 사용 하는 경우의 차이점을 학습 한 다음 주석을 포함 하는 사용자 상호 작용을 처리 하는 지도 예제 확장 하 여 Objective-c 대리자에 대 한 학습 합니다.
 
-
 프로토콜 및 대리자를 보여 주기 위해 다음 그림과 같이 지도에 주석을 추가 하는 단순 맵 응용 프로그램을 빌드합니다.
 
  [![](delegates-protocols-and-events-images/01-map.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "지도에 추가 하는 예 주석")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 이 앱을 수행 하는 작업량과, 하기 전에 시작 하겠습니다.NET 이벤트는 UIKit 아래를 살펴보면 합니다.
 
- <a name=".NET_Events_with_UIKit" />
-
+<a name=".NET_Events_with_UIKit" />
 
 ## <a name="net-events-with-uikit"></a>UIKit 사용 하 여.NET 이벤트
 
@@ -47,7 +44,6 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
-
 C# 2.0 스타일 익명 메서드에서이 이와 같은 구현할 수 있습니다.
 
 ```csharp

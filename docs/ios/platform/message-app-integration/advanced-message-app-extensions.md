@@ -1,5 +1,5 @@
 ---
-title: 고급 메시지 응용 프로그램 확장
+title: Xamarin.iOS에서 고급 메시지 응용 프로그램 확장
 description: 이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게 새로운 기능을 제공 하는 Xamarin.iOS 솔루션에서 메시지 앱 확장을 사용 하기 위한 고급 기술을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788026"
 ---
-# <a name="advanced-message-app-extensions"></a>고급 메시지 응용 프로그램 확장
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Xamarin.iOS에서 고급 메시지 응용 프로그램 확장
 
 _이 문서에서는 메시지 앱 뿐 아니라 통합 하 고 사용자에 게 새로운 기능을 제공 하는 Xamarin.iOS 솔루션에서 메시지 앱 확장을 사용 하기 위한 고급 기술을 보여 줍니다._
 

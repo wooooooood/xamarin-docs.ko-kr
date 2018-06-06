@@ -1,16 +1,17 @@
 ---
 title: 추가 iOS 9 프레임 워크 변경 내용
-description: 이 문서에서는 추가, 부 버전 변경 또는 iOS 9에 대 한 기존 프레임 워크의 향상 된 기능에 설명 합니다.
+description: 이 문서에서는 iOS 9에서에서 소개 된 추가 프레임 워크 변경에 설명 합니다. AVFoundation, AVKit, 및 CloudKit에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 15c9364cf3bdcb8c797882cc9ac76219959de439
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787710"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -20,9 +21,9 @@ _이 문서에서는 추가, 부 버전 변경 또는 iOS 9에 대 한 기존 �
 
 IOS에 주요 변경 내용 외에도 Apple가 한 수정 및 여러 기존 프레임 워크의 향상 된 기능 iOS 9입니다.
 
-## <a name="av-foundation-framework-additions"></a>AV Foundation 프레임 워크 추가
+## <a name="avfoundation-framework-additions"></a>AVFoundation 프레임 워크 추가
 
-AV Foundation 프레임 워크에는 [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) 클래스 이제 지정할 수 있습니다는 음성 언어 외에도 식별자가 있습니다.
+AVFoundation 프레임 워크에는 [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) 클래스 이제 있습니다 음성 언어 외에도 식별자로 지정할 수 있습니다.
 
 예를 들어 다음 코드는 모든 가능한 음성 목록을 가져옵니다.
 
@@ -66,7 +67,7 @@ CloudKit 프레임 워크는 해당 액세스 iCloud 응용 프로그램 개발�
 - [CloudKit 카탈로그의 경우: 소개 (Cocoa 및 JavaScript) CloudKit](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) -CloudKit 및 CloudKit JS를 사용 하 여 Apple의 샘플 응용 프로그램입니다.
 
 > [!IMPORTANT]
-> Apple [도구 제공](https://developer.apple.com/support/allowing-users-to-manage-data/) 제대로 유럽 연합 일반 데이터 보호 규정 (GDPR)를 처리 하는 개발자가 수 있도록 합니다.
+> Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
 
 ## <a name="foundation-framework-additions"></a>Foundation 프레임 워크 추가
 

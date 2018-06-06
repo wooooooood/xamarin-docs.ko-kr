@@ -1,18 +1,20 @@
 ---
-title: 자동 크기 조정 행 높이
+title: Xamarin.iOS에서 자동 크기 조정 행 높이
+description: 이 문서에 따라 콘텐츠 인 높이 따라 변경 테이블 뷰 행 Xamarin.iOS 앱에 추가 하는 방법을 설명 합니다. IOS 디자이너에에서 셀 레이아웃 및 크기 자동 조정 설정 높이 설명합니다.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 73e16c3381b639645463e3e8aaeed35224b67861
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c6beb112947f5423de200fd5c8957ef28dd48f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789969"
 ---
-# <a name="auto-sizing-row-height"></a>자동 크기 조정 행 높이
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Xamarin.iOS에서 자동 크기 조정 행 높이
 
 Apple iOS 8 이상에서는 테이블 뷰를 작성 하는 기능 추가 (`UITableView`) 자동으로 증가 하 고 자동 레이아웃 및 크기 클래스 제약 조건을 사용 하 여 해당 콘텐츠의 크기에 따라 지정된 된 행의 높이 축소할 수입니다.
 

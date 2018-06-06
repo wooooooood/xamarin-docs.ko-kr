@@ -1,17 +1,18 @@
 ---
 redirect_url: /xamarin/tools/live-player/
 title: XAML 라이브 미리 보기
-description: IOS 또는 Android 장치에서 실시간으로에서 응용 프로그램은 코드 변경 테스트
+description: 이 문서에서는 미리 보기 XAML 페이지를 라이브, XAML을 변경 하 고 장치에 즉시 표시 변경 내용을 확인할를 라이브 Xamarin Player를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: e485ea596d9c6c7aee378d50ae41d13faa7c0a80
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cc68044342fca84e62e3b17770170e1d7a23f677
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793704"
 ---
 # <a name="xaml-live-previewing"></a>XAML 라이브 미리 보기
 
@@ -30,8 +31,6 @@ ms.lasthandoff: 05/09/2018
 2. Visual Studio 이상 Mac 7.2에 대 한 합니다. 최신 버전을 사용 하는 것이 좋습니다.
 
 -----
-
-
 
 <a name="deploydevice" />
 
@@ -69,13 +68,6 @@ Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Vi
 
 -----
 
-
-
-
-
-
-
-
 ## <a name="deploying-to-android-emulator"></a>Android 에뮬레이터에 배포
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -108,10 +100,6 @@ Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Vi
 
 -----
 
-
-
-
-
 ## <a name="deploying-to-ios-simulator"></a>IOS 시뮬레이터에 배포
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -137,13 +125,6 @@ Xamarin Player 라이브 앱을 다운로드 하 여 쌍에 설명 된 대로 Vi
     ![](live-view-images/image5.png)  
 
 -----
-
-
-
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,18 +1,20 @@
 ---
-title: SiriKit
+title: IOS 11에서에서 SiriKit 업데이트
+description: 이 문서에서는 SiriKit iOS 11에서에서 작동 하는 방법에 설명 합니다. 특히, 작업, 메모와 작업 하는 방법 및 응용 프로그램에 대 한 대체 이름을 제공 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: a712f7da0d57e81872d7f779cf0eb52c30ee3bc2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28160b40c97b8cc62fae95d3643801f1c4cc5e93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787587"
 ---
-# <a name="sirikit"></a>SiriKit
+# <a name="sirikit-updates-in-ios-11"></a>IOS 11에서에서 SiriKit 업데이트
 
 SiriKit은 서비스 도메인 (체력 단련, 안에서, 예약 및 호출 포함)의 수를 10, iOS에서 도입 되었습니다. 참조는 [SiriKit 섹션](~/ios/platform/sirikit/index.md) SiriKit 개념과 SiriKit 응용 프로그램에서 구현 하는 방법에 대 한 합니다.
 

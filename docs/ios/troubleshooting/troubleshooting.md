@@ -1,5 +1,6 @@
 ---
-title: 문제 해결
+title: Xamarin.iOS에 대 한 문제 해결 팁
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램을 개발 하는 동안 문제 해결에 유용한 다양 한 팁을 제공 합니다. 다른 잠재적 문제가 뿐만 아니라 특정 오류 메시지를 설명합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
@@ -7,15 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/0201
-ms.openlocfilehash: 6a179c1d63e9b5a7b8a42705d5c112a7b71a4906
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 26fe2fb848fb81940bc01a34c69b1b28897005dc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789355"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.iOS에 대 한 문제 해결 팁 
 
-## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.iOS cannot resolve System.ValueTuple
+## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.iOS System.ValueTuple를 확인할 수 없습니다.
 
 이 오류는 Visual Studio와의 비 호환성으로 인해 발생합니다.
 

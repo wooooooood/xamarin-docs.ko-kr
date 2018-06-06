@@ -1,19 +1,21 @@
 ---
-title: .NET Standard
+title: .NET 표준 라이브러리를 사용 하 여 코드를 공유
+description: 이 문서에서는.NET 표준 라이브러리를 사용 하 여 코드를 공유 하는 방법에 설명 합니다. .NET 표준 라이브러리를 만들고 해당 설정을 편집 응용 프로그램에서 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: c70a1cb1aa05426ba6d54d8af3787f014883bfa1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781035"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="using-net-standard-libraries-to-share-code"></a>.NET 표준 라이브러리를 사용 하 여 코드를 공유
 
-## <a name="using-net-standard-library-projects-to-share-code"></a>.NET 표준 라이브러리 프로젝트를 사용 하 여 코드를 공유
+## <a name="net-standard"></a>.NET Standard
 
 .NET 표준 라이브러리는 모든 .NET 런타임에서 사용할 수 있는 .NET API의 공식 사양입니다. 표준 라이브러리는 .NET 에코시스템의 균일성을 높이기 위한 것입니다.
 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 런타임 동작에 대한 균일성을 계속 설정하지만 .NET 라이브러리 구현의 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.

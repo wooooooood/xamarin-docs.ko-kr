@@ -1,18 +1,20 @@
 ---
-title: 진행률 및 활동 표시기
+title: 진행률 및 Xamarin.iOS 활동 표시기
+description: 이 문서에서는 Xamarin.iOS의 진행 상태 및 활동 표시기를 사용 하는 방법을 설명 합니다. 프로그래밍 방식으로 고 스토리 보드를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 58a492bed81a1d96a482c1396718da1c5e4af589
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 27ee788ec40bfd158dbc0d9926245b166e2954a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790057"
 ---
-# <a name="progress-and-activity-indicators"></a>진행률 및 활동 표시기
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>진행률 및 Xamarin.iOS 활동 표시기
 
 응용 프로그램 해야 long을 수행 하는 것은 로드 하거나 데이터와이 지연 UI를 업데이트 하는 중 지연이 발생할 수 있는지를 처리 하는 등의 작업을 실행 합니다. 이 시간 동안 항상 사용자가 작업을 수행 중 원할 것을 진행률 표시기를 사용 해야 합니다. 이렇게 하면 자신의 요청의 의견을 기다리고 있지 않으면 하 여 앱이 작동 하는 사용자 정의 컨트롤을 대기 해야 정확히 기간에 대해 자세히 설명 하는 방법을 제공할 수 있습니다.
 

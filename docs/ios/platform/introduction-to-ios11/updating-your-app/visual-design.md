@@ -1,21 +1,20 @@
 ---
-title: 시각적 디자인 업데이트
-description: IOS 11의 새로운 기능 탐색
+title: IOS 11에서에서 시각적 개체 디자인 업데이트
+description: 이 문서에서는 iOS 11에에서 도입 된 업데이트 하는 시각적 디자인을 설명 합니다. 탐색 모음, 검색 컨트롤러, 여백, 전체 화면 콘텐츠 및 표 보기에 대 한 변경에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 50858592ec6246fe825e80a3039f3640ebf708a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc29e021e30910c7fcc4c3b451d0a4dfe187d05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787853"
 ---
-# <a name="visual-design-updates"></a>시각적 디자인 업데이트
-
-_IOS 11의 새로운 기능 탐색_
+# <a name="visual-design-updates-in-ios-11"></a>IOS 11에서에서 시각적 개체 디자인 업데이트
 
 IOS 11, 사과 탐색 모음, 검색 표시줄을 및 테이블 보기에 대 한 업데이트를 포함 하 여 새 시각적 항목이 변경을 도입 했습니다. 또한 향상 된 기능에 적용 된 여백 및 전체 화면 콘텐츠를 통해 더욱 유연 하 게 허용 합니다. 이러한 변경 내용은이 가이드에 나와 있습니다.
 

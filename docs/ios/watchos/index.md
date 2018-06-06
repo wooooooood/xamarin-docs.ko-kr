@@ -1,21 +1,20 @@
 ---
-title: watchOS
-description: Xamarin 사용한 Apple Watch 용 앱 빌드
+title: WatchOS Xamarin 사용한 앱 빌드
+description: 이 문서는 Xamarin 사용한 watchOS 응용 프로그램을 빌드하는 방법을 설명 하는 다양 한 설명서를 링크 합니다. 링크 된 지침 시작, watchOS 사용자 인터페이스 컨트롤, watchOS 기능, 배포 및 테스트 및 문제 해결 설명
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 407c1648bef6e1ca84922a8186fbcfbc76c2c7a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791399"
 ---
-# <a name="watchos"></a>watchOS
-
-_Xamarin 사용한 Apple Watch 용 앱 빌드_
+# <a name="building-watchos-apps-with-xamarin"></a>WatchOS Xamarin 사용한 앱 빌드
 
 ![Apple Watch 선택기 인터페이스](images/watch1.png) ![Apple Watch 단추](images/watch2.png) ![Apple Watch 지도 인터페이스](images/watch3.png)
 

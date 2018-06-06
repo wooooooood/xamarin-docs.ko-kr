@@ -1,21 +1,19 @@
 ---
-title: MonoTouch.Dialog 소개
-description: (산 MonoTouch.Dialog D) toolkit은 신속한 응용 프로그램 UI 개발 Xamarin.iOS에 대 한 필수적인 프레임입니다. 산 D를 사용 하면 빠르고 쉽게 복잡 한 응용 프로그램 탐색 컨트롤러, 테이블 등의 덜어 보다는 선언적 방식을 사용 하 여 UI를 정의할 수 있습니다. 또한 산 D 유연한 전체 컨트롤이 나 넘깁니다 접근 방식으로 끌어오기-새로 고침, 배경 이미지를 로드 하는 등의 추가 기능을 개발자에 게 제공, 지원 및 JSON 데이터를 통해 동적 UI 생성을 검색 하는 Api 집합을 있습니다. 이 가이드에서는 산 사용 하는 여러 가지 방법을 소개합니다 D 및 고급 사용 심층적으로 소개 합니다.
+title: Xamarin.iOS MonoTouch.Dialog 소개
+description: 이 문서에서는 MonoTouch.Dialog (산 설명 D), Xamarin.iOS로 신속 하 고 선언적 UI 개발 하기 위한 프레임 워크입니다. 코드 또는 JSON 인터페이스를 만들고 끌어오기-새로 고침, 검색, 배경 이미지 로드 등의 기능을 사용 하는 MonoTouch.Dialog Api를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6511d8deed1800a8ae655f749feccd249bf4a8c0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790840"
 ---
-# <a name="introduction-to-monotouchdialog"></a>MonoTouch.Dialog 소개
-
-_(산 MonoTouch.Dialog D) toolkit은 신속한 응용 프로그램 UI 개발 Xamarin.iOS에 대 한 필수적인 프레임입니다. 산 D를 사용 하면 빠르고 쉽게 복잡 한 응용 프로그램 탐색 컨트롤러, 테이블 등의 덜어 보다는 선언적 방식을 사용 하 여 UI를 정의할 수 있습니다. 또한 산 D 유연한 전체 컨트롤이 나 넘깁니다 접근 방식으로 끌어오기-새로 고침, 배경 이미지를 로드 하는 등의 추가 기능을 개발자에 게 제공, 지원 및 JSON 데이터를 통해 동적 UI 생성을 검색 하는 Api 집합을 있습니다. 이 가이드에서는 산 사용 하는 여러 가지 방법을 소개합니다 D 및 고급 사용 심층적으로 소개 합니다._
-
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Xamarin.iOS MonoTouch.Dialog 소개
 
 산 라고 MonoTouch.Dialog 줄여서 D 응용 프로그램 화면 및 덜어 컨트롤러 보기, 테이블 등을 만드는 것이 아니라 정보를 사용 하 여 탐색을 빌드하기 위해 개발자가 사용할 수 있는 신속한 UI 개발 도구 키트입니다. 따라서 UI 코드와 개발 감소의 중요 한 단순화를 제공합니다. 예를 들어 다음 스크린 샷에서를 것이 좋습니다.
 

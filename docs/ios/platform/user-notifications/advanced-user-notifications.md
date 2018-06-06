@@ -1,21 +1,20 @@
 ---
-title: 고급 사용자 알림
-description: 이 문서에서는 활용 전체 Xamarin.iOS 앱에서 하는 방법과 새 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다.
+title: Xamarin.iOS에서 고급 사용자 알림
+description: 이 문서에서는 iOS 10에에서 도입 된 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다. 사용자 알림, 사용자 알림 인터페이스, 미디어 첨부 파일, 사용자 지정 사용자 인터페이스 및 자세히 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788532"
 ---
-# <a name="advanced-user-notifications"></a>고급 사용자 알림
-
-_이 문서에서는 활용 전체 Xamarin.iOS 앱에서 하는 방법과 새 사용자 알림을 프레임 워크를 자세히 살펴보겠습니다._
+# <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 고급 사용자 알림
 
 10, 배달 및 로컬 및 원격 알림 처리를 위한 프레임 워크에서는 사용자 알림 iOS를 처음 사용 합니다. 응용 프로그램 또는 응용 프로그램 확장은이 프레임 워크를 사용 하 여 위치와 같은 조건 집합이 또는 시간을 지정 하 여 로컬 알림 배달을 예약할 수 있습니다.
 

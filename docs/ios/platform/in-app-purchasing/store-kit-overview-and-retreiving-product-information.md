@@ -1,18 +1,20 @@
 ---
-title: 키트 개요 및 제품 정보를 검색 저장
+title: StoreKit 개요 및 Xamarin.iOS의 제품 정보 검색
+description: 이 문서에서는 StoreKit의 개요를 제공 합니다. StoreKit, StoreKit 상호 작용을 테스트, 제품 판매에 대 한를 표시 하 고, 잘못 된 제품을 처리 하 고 지역화 된 가격을 표시에 사용 되는 클래스를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4ecd2942a99f80854fd340be454f9d8fefa5a36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964b97e82db8e79cb32598d0c955fac3ab122314
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787226"
 ---
-# <a name="store-kit-overview-and-retrieving-product-information"></a>키트 개요 및 제품 정보를 검색 저장
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>StoreKit 개요 및 Xamarin.iOS의 제품 정보 검색
 
 앱에서 바로 구매에 대 한 사용자 인터페이스는 아래 스크린샷과에 표시 됩니다.
 트랜잭션 수행 되기 전에 응용 프로그램은 제품의 가격 및 표시에 대 한 검색 해야 합니다. 그런 다음 사용자가 누르면 **구입**, 응용 프로그램 StoreKit 확인 대화 상자 및 Apple ID 로그인을 관리 하는 요청 하 합니다. 트랜잭션이 성공 하면 StoreKit 응용 프로그램 코드에 게 알리는 것으로 가정 하 트랜잭션 결과 저장 하 고 사용자에 게 구매에 대 한 액세스 제공 해야 합니다.   

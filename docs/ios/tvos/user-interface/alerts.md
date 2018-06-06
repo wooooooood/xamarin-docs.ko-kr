@@ -1,22 +1,22 @@
 ---
-title: 경고 사용
-description: 이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경고 메시지를 표시 하려면 작업을 설명 합니다.
+title: Xamarin에 tvOS 경고 사용
+description: 이 문서에서는 Xamarin의 tvOS 경고를 사용 하는 방법을 설명 합니다. 설명 텍스트 필드 및 도우미 클래스 추가 경고를 표시 합니다.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789085"
 ---
-# <a name="working-with-alerts"></a>경고 사용
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에 tvOS 경고 사용
 
 _이 문서에서는 UIAlertController Xamarin.tvOS에서 사용자에 게 경고 메시지를 표시 하려면 작업을 설명 합니다._
-
 
 사용 하 여 경고 메시지를 제공할 수는 tvOS 사용자의 참여를 요청 하거나 파괴적 동작 (예: 파일을 삭제)를 수행할 수 있는 권한을 요청 해야 하는 경우는 `UIAlertViewController`:
 

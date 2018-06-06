@@ -1,18 +1,20 @@
 ---
-title: 앱에서 바로 구매 기본 사항 및 구성
+title: 앱에서 바로 구매 기본 사항 및 구성에 Xamarin.iOS
+description: 이 문서에서 규칙, 구성 및 iTunes Connect에 대 한 관련 정보에 논의 Xamarin.iOS 앱에서 바로 구매를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c08d27ce2f5d41b7de1d08ea73232e92f9fa8144
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ded160ad4b31346c400e63d739a3dc21f6304d3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787245"
 ---
-# <a name="in-app-purchase-basics-and-configuration"></a>앱에서 바로 구매 기본 사항 및 구성
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>앱에서 바로 구매 기본 사항 및 구성에 Xamarin.iOS
 
 앱에서 바로 구매를 구현 하려면 응용 프로그램을 장치에는 StoreKit API를 사용 합니다. StoreKit 제품 정보를 가져오고 트랜잭션을 수행 하는 Apple iTunes 서버와의 모든 통신을 관리 합니다. 앱에서 바로 구매에 대 한 프로 비전 프로필을 구성 해야 하 고 iTunes Connect에서에서 제품 정보를 입력 해야 합니다.
 

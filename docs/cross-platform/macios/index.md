@@ -1,20 +1,19 @@
 ---
 title: Apple 플랫폼 (iOS 및 Mac)
-description: 이 섹션에서는 Xamarin.iOS 및 Xamarin.Mac 프로젝트 간에 코드를 공유 하는 전략을 다룹니다.
+description: '이 문서에서는 Xamarin.iOS 및 Xamarin.Mac 개발과 관련 된 다양 한 주제: 코드 공유, 통합 API, 바인딩 Objective-c 라이브러리, 네이티브 참조, 네이티브 유형 및 더 합니다.'
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3c01ff4af699dd0374729b638470d1ef34aa7022
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781535"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
-
-_이 섹션에서는 Xamarin.iOS 및 Xamarin.Mac 프로젝트 간에 코드를 공유 하는 전략을 다룹니다._
 
 ## <a name="code-sharing"></a>코드 공유
 
@@ -48,8 +47,6 @@ Xamarin은 바인딩을 사용 하는 앱으로 네이티브 라이브러리를 
 
 ## <a name="native-referencesnative-referencesmd"></a>[네이티브 참조](native-references.md)
 
-
-
 ##  <a name="macios-native-typesnativetypesmd"></a>[Mac/iOS 네이티브 형식](nativetypes.md)
 
 32와 C# 및 F #에서 투명 하 게 64 비트 코드를 지원 하기 위해 새로운 데이터 형식을 도입 했습니다.   여기에 대해 알아봅니다.
@@ -62,7 +59,6 @@ Xamarin은 바인딩을 사용 하는 앱으로 네이티브 라이브러리를 
 
 이 문서에서는 새 iOS 통합 API 네이티브 형식을 사용 하 여 (`nint`, `nuint`, `nfloat`) Android 또는 Windows Phone Os와 같은 비 iOS 장치 코드는 공유 하는 플랫폼 간 응용 프로그램에서 합니다.
 네이티브 형식을 사용 해야 하는 시기에 대 한 정보를 제공 하 고 새 형식의 플랫폼 간 코드를 함께 사용 해야 하는 위치 하는 경우에 몇 가지 가능한 해결 방법을 제공 합니다.
-
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[HttpClient 스택 및 SSL/TLS 구현 선택기](http-stack.md)
 

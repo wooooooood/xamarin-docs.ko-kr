@@ -1,20 +1,20 @@
 ---
-title: IOS SQLite.NET 사용
-description: SQLite.NET PCL NuGet 라이브러리 Xamarin.iOS 앱에 대 한 단순 데이터 액세스 메커니즘을 제공합니다.
+title: Xamarin.iOS SQLite.NET 사용
+description: SQLite.NET PCL NuGet 라이브러리 Xamarin.iOS 앱에 대 한 단순 데이터 액세스 메커니즘을 제공합니다. 이 문서는이 라이브러리를 사용 하는 방법의 개요를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/18/2018
-ms.openlocfilehash: 861b024a7ff5dd07752662cc45306b6533cd38bd
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 2a96a7c3f9bf02110bc5e2b21e26e71fe9d84d83
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689503"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784987"
 ---
-# <a name="using-sqlitenet-with-ios"></a>IOS SQLite.NET 사용
+# <a name="using-sqlitenet-with-xamarinios"></a>Xamarin.iOS SQLite.NET 사용
 
 Xamarin에서 권장 하는 SQLite.NET 라이브러리는 iOS 장치에서 로컬 SQLite 데이터베이스에 개체를 검색 하 고 저장할 수 있는 기본 ORM입니다.
 ORM는 개체 관계형 매핑-SQL 문을 작성 하지 않고도 데이터베이스에서 "개체"를 검색 하 고 저장할 수 있는 API를 나타냅니다.

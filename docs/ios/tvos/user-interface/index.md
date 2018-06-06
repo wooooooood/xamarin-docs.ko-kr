@@ -1,5 +1,5 @@
 ---
-title: 사용자 인터페이스
+title: TvOS Xamarin 사용한 사용자 인터페이스 작성
 description: UI (사용자 인터페이스) 컨트롤을 포함 하는 일반 사용자 환경 (UX) 검사 Xamarin.tvOS 작업할 때 Xcode의 작성기 인터페이스 및 UX 디자인 원칙을 사용 합니다.
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
@@ -7,17 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: a30bd02a9545717175daf1381730afce6b72218d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc29510b90a3651f7547f38c234b6e2904016f83
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789069"
 ---
-# <a name="user-interface"></a>사용자 인터페이스
+# <a name="building-tvos-user-interfaces-with-xamarin"></a>TvOS Xamarin 사용한 사용자 인터페이스 작성
 
 _UI (사용자 인터페이스) 컨트롤을 포함 하는 일반 사용자 환경 (UX) 검사 Xamarin.tvOS 작업할 때 Xcode의 작성기 인터페이스 및 UX 디자인 원칙을 사용 합니다._
 
-를 사용할 때 C# 및.NET Xamarin.tvOS 응용 프로그램에서 Objective-c 또는 Swift 및 Xcode 작업 하는 개발자가 동일한 사용자 인터페이스 컨트롤에는 액세스할을 수 있습니다. Xamarin.tvOS Xcode에 직접 통합, 때문에 만들기 및 사용자 인터페이스를 유지 관리 (또는 필요에 따라 C# 코드에서 직접 만들) Xcode의 인터페이스 작성기를 사용할 수 있습니다.
+를 사용할 때 C# 및.NET Xamarin 기반 tvOS에 Objective-c 또는 Swift 및 Xcode 작업 하는 개발자가 동일한 사용자 인터페이스 컨트롤에는 액세스할을 수 있습니다. Xcode의 인터페이스 작성기 만들기 및 사용자 인터페이스를 유지 관리 (또는 필요에 따라 C# 코드에서 직접 만들) 데 사용할 수 있습니다.
 
 아래에 나열 된 가이드 tvOS UI 요소 Xamarin.tvOS 응용 프로그램에서 작업 하는 방법에 대 한 자세한 정보가 표시 됩니다. 통해 작업 하는 매우 좋습니다는 [Hello, tvOS 퀵 스타트 가이드](~/ios/tvos/get-started/hello-tvos.md) 모든 문서에 사용할 예정 있는 주요 개념 및 기술을 설명 하는 대로 먼저 합니다.
 

@@ -1,19 +1,20 @@
 ---
-title: 예외 마샬링
-description: Xamarin.iOS 특히 네이티브 코드에서에서 예외에 응답 하는 데 도움이 되는 새 이벤트가 포함 되어 있습니다.
+title: Xamarin.iOS 마샬링 예외
+description: 이 문서에서는 Xamarin.iOS 앱의 네이티브 및 관리 되는 예외를 사용 하는 방법에 설명 합니다. 발생할 수 있는 문제와 이러한 문제에 대 한 솔루션에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786745"
 ---
-# <a name="exception-marshaling"></a>예외 마샬링
+# <a name="exception-marshaling-in-xamarinios"></a>Xamarin.iOS 마샬링 예외
 
 _Xamarin.iOS 특히 네이티브 코드에서에서 예외에 응답 하는 데 도움이 되는 새 이벤트가 포함 되어 있습니다._
 
@@ -108,7 +109,7 @@ Xamarin.iOS' 확인할 수 없는 Objective C 예외 콜백을 호출 스택은 
 
 코드 예:
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ Xamarin.iOS' 확인할 수 없는 Objective C 예외 콜백을 호출 스택은 
 
 이 변형 관리 코드와 네이티브 프레임 가져오려는 통해 해제 한 다음에 관리 되는 예외를 throw 하는 것은 첫 번째 관리 `catch` 절:
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

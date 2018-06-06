@@ -1,19 +1,20 @@
 ---
-title: NFC 코어
-description: 11 iOS를 사용 하 여 읽기 근처 NFC (근거리 통신) 태그
+title: Xamarin.iOS의 NFC 코어
+description: 이 문서에서는 iOS 11에에서 도입 된 Api를 사용 하 여 Xamarin.iOS에서 필드 통신 태그 근처 읽는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: db0c417c1c79a988821a93b1cf20d94161f5c47a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787379"
 ---
-# <a name="core-nfc"></a>NFC 코어
+# <a name="core-nfc-in-xamarinios"></a>Xamarin.iOS의 NFC 코어
 
 _11 iOS를 사용 하 여 읽기 근처 NFC (근거리 통신) 태그_
 

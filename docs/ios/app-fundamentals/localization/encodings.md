@@ -1,17 +1,19 @@
 ---
-title: 국제화 인코딩
+title: Xamarin.iOS의 국제화 인코딩
+description: 이 문서에서는 사용할 수 있는 인코딩 및 응용 프로그램에 추가 하는 방법에 논의 Xamarin.iOS의 국제화 인코딩을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60cfc5ac8238c853cc066afe2978f91ab9c0755e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784128"
 ---
-# <a name="internationalization-encodings"></a>국제화 인코딩
+# <a name="internationalization-encodings-in-xamarinios"></a>Xamarin.iOS의 국제화 인코딩
 
 모든 인코딩 기본적으로 Xamarin.iOS 클래스 라이브러리에 포함 됩니다.
 

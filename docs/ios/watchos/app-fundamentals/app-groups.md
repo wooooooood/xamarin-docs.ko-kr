@@ -1,18 +1,20 @@
 ---
-title: 앱 그룹 작업
+title: WatchOS에서 Xamarin 앱 그룹 작업
+description: 이 문서에서는 응용 프로그램 그룹 및 watchOS 응용 프로그램에서 사용 되는 설명 합니다. 요구 사항, Entitlements.plist 고려 사항 및 배포를 프로 비전 하는 응용 프로그램 그룹을 구성 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 341f6b4f5049a39817f2923901472f35b254bead
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5736b25af3993e2da794422a1a6f040461532497
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790681"
 ---
-# <a name="working-with-app-groups"></a>앱 그룹 작업
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>WatchOS에서 Xamarin 앱 그룹 작업
 
 
 앱 그룹을 사용하면 서로 다른 응용 프로그램(또는 응용 프로그램과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.

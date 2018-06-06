@@ -1,21 +1,20 @@
 ---
-title: 앱 스토어 아이콘
-description: 앱 스토어 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다.
+title: Xamarin.iOS 앱 스토어 아이콘
+description: 이 문서에서는 앱 스토어 아이콘 Xamarin.iOS 응용 프로그램을 관리 하려면 자산 카탈로그를 사용 하는 방법을 설명 합니다. 이전에 응용 프로그램 스토어 아이콘 iTunes Connect으로 관리 되었습니다.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/26/2017
-ms.openlocfilehash: f8d993ccb23817e237b9cef8074b881f3ea4b3a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783612"
 ---
-# <a name="app-store-icon"></a>앱 스토어 아이콘
-
-_앱 스토어 아이콘으로 사용할 Xamarin.iOS 앱의 이미지 자산 관리 및 포함 하 여이 문서 다룹니다._
+# <a name="app-store-icons-in-xamarinios"></a>Xamarin.iOS 앱 스토어 아이콘
 
 Xcode 9 하기 전에 모든 앱 스토어 아이콘 iTunes Connect 통해 추가 되었습니다. 그러나이 경우 더 이상는 합니다. 앱 스토어 아이콘 이제 프로젝트 번들의 일부분으로 포함와 자산 카탈로그 내에 추가 합니다. 앱 스토어 아이콘을 포함 하지 않는 앱을 Apple에 의해 거부 됩니다.
 

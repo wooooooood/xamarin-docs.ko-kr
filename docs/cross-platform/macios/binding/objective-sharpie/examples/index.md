@@ -1,17 +1,19 @@
 ---
-title: 예제
+title: 목표 Sharpie 예제
+description: 이 문서는 C# Objective C 코드로 바인딩을 만드는 과정을 자동화 하는 데 사용 되는 목표 Sharpie 도구를 사용 하는 방법을 설명 하는 다양 한 설명서를 링크 합니다.
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 5120626f6b95328108ecebfd3be4dff2b816006b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2c988e1399a3d8a1ec698c7cce44e73747bd22b7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780519"
 ---
-# <a name="examples"></a>예제
+# <a name="objective-sharpie-examples"></a>목표 Sharpie 예제
 
 목표 Sharpie 작동 하는 방식을 더 잘 이해 하려면 이러한 예제를 수행 합니다.
 

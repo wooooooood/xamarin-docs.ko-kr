@@ -1,20 +1,21 @@
 ---
-title: 새 검색 Api
+title: Xamarin.iOS의 검색 Api
 description: 이 문서에서는 사용자가 정보 및 Xamarin.iOS 앱 내 기능을 검색할 수 있도록 iOS 9에서 제공 하는 새 응용 프로그램 검색 Api를 사용 하 여 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc62ad34af0b9b98f0475599a08946122badd21e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788178"
 ---
-# <a name="new-search-apis"></a>새 검색 Api
+# <a name="search-apis-in-xamarinios"></a>Xamarin.iOS의 검색 Api
 
-_이 문서에서는 사용자가 정보 및 Xamarin.iOS 앱 내 기능을 검색할 수 있도록 iOS 9에서 제공 하는 새 응용 프로그램 검색 Api를 사용 하 여 설명 합니다._
+_이 문서에서는 사용자 정보와 Xamarin.iOS 앱 내 기능을 검색할 수 있도록 iOS 9에서 제공 하는 응용 프로그램 검색 Api를 사용 하 여 설명 합니다._
 
 검색에서 iOS 9 다양 한 방법으로 정보 및 Xamarin.iOS 앱 내 기능에 액세스할 수 있도록 확장 되었습니다. 새 응용 프로그램 검색 Api를 사용 하 여 응용 프로그램 콘텐츠 스포트라이트 및 Safari 검색 결과 전달 하 고 Siri 미리 알림 및 제안을 통해 검색할 수 있는 구성 됩니다. 따라서 사용자가 활동 및 응용 프로그램에서 세부적인 정보를 신속 하 게 액세스할 수 있습니다.
 

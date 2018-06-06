@@ -1,18 +1,20 @@
 ---
-title: NSObject의 제네릭 하위 클래스
+title: Xamarin.iOS에 NSObject의 제네릭 하위 클래스
+description: 이 문서를 만드는 방법을 설명 NSObject의 제네릭 하위 클래스를 만듭니다. 대상 수 및 수행할 수 없습니다, 정적 등록 기관에 설명 및 성능에서는 검사 합니다.
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9caad9d4990225a0468be8ee4987eaa9fea0c118
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786485"
 ---
-# <a name="generic-subclasses-of-nsobject"></a>NSObject의 제네릭 하위 클래스
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.iOS에 NSObject의 제네릭 하위 클래스
 
 ## <a name="using-generics-with-nsobjects"></a>NSObjects 제네릭을 사용
 

@@ -1,5 +1,5 @@
 ---
-title: 소셜 프레임 워크
+title: Xamarin.iOS에 소셜 프레임 워크
 description: 소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국에서 사용자에 대 한 포함 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788197"
 ---
-# <a name="social-framework"></a>소셜 프레임 워크
+# <a name="social-framework-in-xamarinios"></a>Xamarin.iOS에 소셜 프레임 워크
 
 _소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국에서 사용자에 대 한 포함 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다._
-
 
 소셜 프레임 워크를 사용 하 여 응용 프로그램을을 인증을 관리 하지 않고도 단일 API에서 소셜 네트워크와 상호 작용할 수 있습니다. HTTP를 통해 각 소셜 네트워크 API를 사용한 허용 하는 추상적 표현 뿐만 아니라 게시물을 작성 하기 위한 뷰-컨트롤러를 제공 하는 시스템을 포함 합니다.
 

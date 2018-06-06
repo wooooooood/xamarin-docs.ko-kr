@@ -1,20 +1,23 @@
 ---
-title: 문제 해결
+title: Xamarin 문제 해결
+description: Xamarin 개발에 대 한 질문과 대답 NuGet 구성 요소 참조를 업데이트 하는 방법에 설명 하는 콘텐츠를이 쿼리는 문서 연결에는 제품 관련 질문에 답변 하 지원 옵션을 설명 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5e8a28f85e947cffeaf6a0aac544e10f7e4eae8a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7a10a20290872005233bfffd5ec861f7372be4a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782065"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="xamarin-troubleshooting"></a>Xamarin 문제 해결
 
 ## <a name="general-issues"></a>일반적인 문제
+
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[질문과 대답](questions/index.md)
 
 에 대 한 질문과 Xamarin 플랫폼 및 Visual Studio에 대 한 답변만 사용 합니다.

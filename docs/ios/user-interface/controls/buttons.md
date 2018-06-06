@@ -1,5 +1,5 @@
 ---
-title: 단추
+title: Xamarin.iOS의 단추
 description: UIButton 클래스는 다양 한 유형의 iOS 화면에서 단추를 나타내는 데 사용 됩니다. 이 섹션에서는 iOS의 단추를 사용 하기 위한 다양 한 옵션을 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c2c33103c005a5ed567b1c4703846f887d824ac4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf9a36c63e0c153ed950f4c3531e99e6baf77687
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789481"
 ---
-# <a name="buttons"></a>단추
+# <a name="buttons-in-xamarinios"></a>Xamarin.iOS의 단추
 
 _UIButton 클래스는 다양 한 유형의 iOS 화면에서 단추를 나타내는 데 사용 됩니다. 이 섹션에서는 iOS의 단추를 사용 하기 위한 다양 한 옵션을 소개 합니다._
 

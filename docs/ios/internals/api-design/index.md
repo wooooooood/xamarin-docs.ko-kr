@@ -1,19 +1,20 @@
 ---
-title: API 디자인
-description: Xamarin.iOS API 디자인에 대 한 큐브 뷰
+title: Xamarin.iOS API 디자인
+description: 이 문서 Xamarin.iOS Api 및 이러한 관계에 없습니다. 목표를 설계 하는 데 사용 하는 원칙은 중 일부를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: a7e508ddd086936a3ffea9d76cde7d896fe4d1f3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787356"
 ---
-# <a name="api-design"></a>API 디자인
+# <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
 핵심 모노의 일부인 기본 클래스 라이브러리 뿐만 아니라 [Xamarin.iOS](http://www.xamarin.com/iOS) 함께 다양 한 iOS 개발자가 모노도 기본 iOS 응용 프로그램 만들기를 허용 하도록 Api에 대 한 바인딩을 제공 합니다.
 

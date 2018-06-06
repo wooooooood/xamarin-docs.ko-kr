@@ -1,5 +1,5 @@
 ---
-title: 스택 보기
+title: Xamarin.iOS에서 스택 뷰
 description: 이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackView 컨트롤의 하위 집합을 관리 하는 가로 또는 세로로 정렬 되지 않습니다.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: aec1c4ceb562f528d6bcef7e4de0f2708952d2a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790102"
 ---
-# <a name="stack-view"></a>스택 보기
+# <a name="stack-views-in-xamarinios"></a>Xamarin.iOS에서 스택 뷰
 
 _이 문서에서는 스택을 사용 중 Xamarin.iOS 앱의 새로운 UIStackView 컨트롤의 하위 집합을 관리 하는 가로 또는 세로로 정렬 되지 않습니다._
 

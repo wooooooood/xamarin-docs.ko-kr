@@ -1,15 +1,17 @@
 ---
 title: Android 시작
+description: 이 문서에서는.NET 포함을 사용 하 여 Android와 시작 하는 방법을 설명 합니다. .NET 포함를 Android 라이브러리 프로젝트를 만드는 Android Studio 프로젝트와 기타 고려 사항에서 생성 된 출력을 사용 하 여 설치에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 57bedba786de82094ef43a6982d2df1bcab1de9c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6fbd46578f07692f266d97279031f1893bb96a1f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793919"
 ---
 # <a name="getting-started-with-android"></a>Android 시작
 
@@ -281,6 +283,6 @@ dependencies {
 * [오픈 소스 프로젝트에 기여 하](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [날씨 샘플 (Android)](https://github.com/jamesmontemagno/embeddinator-weather)

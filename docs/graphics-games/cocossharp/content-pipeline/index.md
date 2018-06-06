@@ -1,15 +1,16 @@
 ---
 title: CocosSharp 콘텐츠 파이프라인
-description: 이 문서는 CocosSharp 콘텐츠 파이프라인을 설명 하는 설명서를 링크 합니다.
+description: 이 특히 일반적인 콘텐츠 파이프라인에 설명 하는 지침 및 CocosSharp 콘텐츠 파이프라인에 대 한 링크를 문서화 합니다.
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 7cf4d5cd60da1703b6047f6840222946010c9300
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 908baef3a73fe1596ec5fe809f2ce45635dd9a7b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782955"
 ---
 # <a name="cocossharp-content-pipeline"></a>CocosSharp 콘텐츠 파이프라인
 

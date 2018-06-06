@@ -1,17 +1,18 @@
 ---
 title: NuGet 구성 요소 참조를 업데이트합니다.
-description: 앱을 미래 보증 NuGet 패키지와 구성 요소 참조를 대체 합니다.
+description: 이 문서에서는 대체 하는 방법을 구성 요소 참조를 미래 보증 NuGet 패키지와 응용 프로그램 Xamarin 구성 요소 저장소가 사용이 중단 된 후에 대해 설명 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: e9c056d37577a280b66bb3aa7ded19e966bca43b
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 34f2f5149be63af6abe5aaab197472d067122069
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782036"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet 구성 요소 참조를 업데이트합니다.
 

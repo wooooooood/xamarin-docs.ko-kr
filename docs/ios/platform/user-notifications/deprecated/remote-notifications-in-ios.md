@@ -1,28 +1,27 @@
 ---
 title: IOS에 대 한 푸시 알림
-description: 이 섹션은 iOS에 푸시 알림을 설명 합니다. Apple 푸시 알림 게이트웨이 서비스 및 iOS 응용 프로그램에 게시 알림에서 수행 하는 역할을 소개 합니다. 이 작업에서는 푸시 알림을 사용 하도록 설정 하 고 논의 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로이 섹션은 응용 프로그램 서버에 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 관리 작업 중 일부 설명 합니다.
+description: 이 문서에는 iOS 9 및 이전 버전에서 푸시 알림을 사용 하는 방법을 설명 합니다. 인증서를 사용 하 여 푸시 알림 게이트웨이 서비스 APNS (Apple), 등록에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7bb2a250b9d3cc0c8df02f432330f9fe1dc58f94
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788669"
 ---
 # <a name="push-notifications-in-ios"></a>IOS에 대 한 푸시 알림
-
-_이 섹션은 iOS에 푸시 알림을 설명 합니다. Apple 푸시 알림 게이트웨이 서비스 및 iOS 응용 프로그램에 게시 알림에서 수행 하는 역할을 소개 합니다. 이 작업에서는 푸시 알림을 사용 하도록 설정 하 고 논의 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로이 섹션은 응용 프로그램 서버에 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 관리 작업 중 일부 설명 합니다._
 
 > [!IMPORTANT]
 > IOS 9에 관련 된이 섹션의 정보 및 prior 되지 않았습니다 여기 이전 iOS 버전을 지원 하도록 합니다. IOS 10 이상에서 참조 하십시오는 [사용자 알림 프레임 워크 가이드](~/ios/platform/user-notifications/index.md) iOS 장치에서 로컬 및 원격 알림 지원에 대 한 합니다.
 
 푸시 알림을 간략하게 유지 해야 하 고만 업데이트에 대 한 서버 응용 프로그램을 문의 해야 해당 모바일 응용 프로그램에 알리기 위해 충분 한 데이터를 포함 합니다. 예를 들어 새 전자 메일 도착, 서버 응용 프로그램이 새 전자 메일 도착 한 모바일 응용 프로그램에 알리는 것입니다. 알림 자체는 새 전자 메일을 포함 되지 않을 것입니다. 모바일 응용 프로그램을 검색 합니다는 새 전자 메일 서버에서 적절 한 되었을 때
 
-IOS에서 알림을 푸시의 가운데에는 *푸시 알림 게이트웨이 서비스 APNS (Apple)*합니다. IOS 장치에 응용 프로그램 서버에서 라우팅 알림 담당 하는 Apple에서 제공한 서비스입니다.
+IOS에서 알림을 푸시의 가운데에는 *푸시 알림 게이트웨이 서비스 APNS (Apple)* 합니다. IOS 장치에 응용 프로그램 서버에서 라우팅 알림 담당 하는 Apple에서 제공한 서비스입니다.
 다음 그림에서는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다: ![ ] (remote-notifications-in-ios-images/image4.png "iOS에 대 한 푸시 알림 토폴로지를 보여 주는이 이미지")
 
 원격 알림 자체는 JSON 형식의 형식을 준수 하는 문자열에 지정 된 프로토콜 및 [The 알림 페이로드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) 의 섹션은 [로컬 및 푸시 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)에 [iOS 개발자 설명서](https://developer.apple.com/devcenter/ios/index.action)합니다.

@@ -1,22 +1,22 @@
 ---
-title: 언어 지원
-description: 플랫폼 간 응용 프로그램 기능 및 개념입니다.
+title: Xamarin의 언어 지원 프로그래밍
+description: '이 문서에서는 Xamarin에서 지원 되는 다양 한 프로그래밍 언어에 설명 합니다. C#, F #, Visual Basic.NET 휴대용 및 Razor 템플릿 설명합니다.'
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 18d7e93d686f369dec4a98b5b5f6c77679119091
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 715f63a0be54ba3342bd63c1c76d89656313359a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781678"
 ---
-# <a name="language-support"></a>언어 지원
-
-이 섹션에는 몇 가지 고급 플랫폼 간 응용 프로그램 기능 및 개념을 설명 하는 문서가 포함 되어 있습니다.
+# <a name="programming-language-support-in-xamarin"></a>Xamarin의 언어 지원 프로그래밍
 
 ## <a name="c"></a>C# 
+
 ###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[비동기 지원 개요](~/cross-platform/platform/async.md)
 
 도입 된 비동기 작업을 표현 하는 두 개의 새 키워드의 C# 버전 5: async 및 await 합니다. 이러한 키워드를 사용 하 여 다른 스레드가에서 장기 실행 작업 (예: 네트워크 액세스)를 실행 하려면 작업 병렬 라이브러리를 활용 하는 간단한 코드를 작성 하 고 완료 시 결과 쉽게 액세스할 수 있도록 합니다. 최신 버전의 Xamarin.iOS 및 Xamarin.Android 지원 async 및 await-이 문서에서는 설명 및 Xamarin을 사용한 새 구문을 사용 하는 예제를 제공 합니다.

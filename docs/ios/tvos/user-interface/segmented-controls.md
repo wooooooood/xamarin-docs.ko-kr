@@ -1,22 +1,20 @@
 ---
-title: 분할 된 컨트롤을 사용한 작업
-description: 이 문서에서는 디자인 하 고 세그먼트 컨트롤 Xamarin.tvOS 앱 내에서 작업을 설명 합니다.
+title: Xamarin에서 tvOS 세그먼트 컨트롤 작업
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 앱에서 조각화 된 컨트롤 tvOS와 작업 하는 방법을 설명 합니다. 세그먼트 아이콘 및 텍스트, 컨트롤의 모양을 수정 하는 이벤트에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4eac932c7fad628a0a65127bceb641f34ea5d79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8980f9fbf6996217dbcaec869e4c81598ac36552
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789241"
 ---
-# <a name="working-with-segmented-controls"></a>분할 된 컨트롤을 사용한 작업
-
-_이 문서에서는 디자인 하 고 세그먼트 컨트롤 Xamarin.tvOS 앱 내에서 작업을 설명 합니다._
-
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트 컨트롤 작업
 
 분할 된 컨트롤 아이콘 또는 텍스트를 포함할 수 있습니다 및 관련 된 선택 항목 집합이 사용자에 게 제공 하는 데 사용 되는 각각의 선형 요소 집합을 제공 합니다.
 

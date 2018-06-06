@@ -1,29 +1,28 @@
 ---
-title: 문제 해결
-description: 이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다.
+title: Xamarin으로 빌드된 앱 tvOS 10 문제 해결
+description: 이 문서는 tvOS 10 Xamarin 앱에서을 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다. 및 관련 된 문제는 앱 스토어, 이진 호환성는 CFNetwork HttpProtocol, CloudKit, Core 이미지, NSUserActivity, UIKit 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8875e658ead17820655a2401079627875c14958b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4332caca2804da52bb565fe382932af691c39dab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788812"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Xamarin으로 빌드된 앱 tvOS 10 문제 해결
 
-_이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다._
-
-다음 섹션에서는 tvOS 10 Xamarin.tvOS 및 이러한 문제와 솔루션 함께 사용할 때 발생할 수 있는 몇 가지 알려진된 문제를 나열 합니다.
+다음 섹션에서는 Xamarin 및 이러한 문제와 솔루션 tvOS 10을 사용할 때 발생할 수 있는 몇 가지 알려진된 문제를 나열 합니다.
 
 - [App Store](#App-Store)
 - [이진 호환성](#Binary-Compatibility)
-- [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
+- [CFNetwork HTTP 프로토콜](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Core 이미지](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
@@ -62,7 +61,7 @@ _이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 �
 
 <a name="CoreImage" />
 
-## <a name="coreimage"></a>CoreImage
+## <a name="core-image"></a>Core 이미지
 
 `CIImageProcessor` API 이제 임의의 입력된 이미지 수를 지원 합니다. `CIImageProcessor` 10 tvOS 베타 1에에서 포함 된 API 제거 됩니다.
 
@@ -84,10 +83,6 @@ _이 문서는 tvOS 10 Xamarin.tvOS 앱에서 사용 하기 위한 몇 가지 �
  - 10 tvOS 위해서 호출 하려면 개발자 `base.AwakeFromNib` 서브클래싱 할 경우 `UIViewController` 재정의 `AwakeFromNib` 메서드.
  - 사용자 지정을 사용 하 여 앱 `UIView` 재정의 하는 서브 클래스 `LayoutSubviews` 호출 하기 전에 레이아웃 작성 `base.LayoutSubviews` tvOS 10에에서는 레이아웃 무한 루프를 트리거할 수 있습니다.
  - 특정 방향 또는 flippable 이미지 자산은에 할당 된 경우를 대칭 이동 안 `UIButton` 개체입니다.
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

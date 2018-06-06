@@ -1,15 +1,17 @@
 ---
 title: 2 부-아키텍처
+description: 이 문서에서는 플랫폼 간 응용 프로그램을 구축 하는 데 도움이 아키텍처 패턴을 설명 합니다. 일반적인 응용 프로그램 계층 (데이터 계층, 데이터 액세스 계층, 등) 및 모바일 소프트웨어 (MVVM, MVC 등)에 대해 설명
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: 94cd2ae09da2e36f8855d95dda883cd3b7819e5b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ebcfe8880a826c552d55e7a5567271a5a764fa1d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780877"
 ---
 # <a name="part-2---architecture"></a>2 부-아키텍처
 

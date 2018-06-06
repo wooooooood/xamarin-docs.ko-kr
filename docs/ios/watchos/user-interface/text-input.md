@@ -1,18 +1,20 @@
 ---
-title: 텍스트 입력 사용
+title: Xamarin에 입력 한 텍스트가 watchOS 작업
+description: 이 문서에서는 Xamarin의 watchOS 텍스트 입력을 설명합니다. PresentTextInputController 메서드, 자유, 일반 텍스트, emojis, 및 받아쓰기에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9dec6f754590abf6db8829f555376b423b7a7da7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da668333b3549c92264af7d4da4941ac6b5bf865
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791386"
 ---
-# <a name="working-with-text-input"></a>텍스트 입력 사용
+# <a name="working-with-watchos-text-input-in-xamarin"></a>Xamarin에 입력 한 텍스트가 watchOS 작업
 
 Apple Watch 조사식 친화적인 대체할은 지원 되지만 사용자가 텍스트, 입력에 대 한 키보드를 제공 하지 않습니다.
 

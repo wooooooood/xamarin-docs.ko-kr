@@ -1,18 +1,19 @@
 ---
-title: HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
-description: 구현 선택기 SSL/TLS 및 HttpClient 스택의 Xamarin iOS, tvOS, 또는 macOS 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다.
+title: HttpClient 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
+description: SSL/TLS 및 HttpClient 스택의 구현 선택기 Xamarin iOS, tvOS, 또는 macOS 앱에서 사용 됩니다 하는 SSL/TLS 및 HttpClient 구현을 결정 합니다.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: dcbdb4d20bca9764731b08e551a4d3b8a26a2ab4
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9de2c97933bd33111a751be51e06dffe09794f15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782270"
 ---
-# <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 스택 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
+# <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 및 iOS/macOS에 대 한 SSL/TLS 구현 선택기
 
 **HttpClient 구현 선택기** Xamarin.iOS, Xamarin.tvOS, 및 Xamarin.Mac 제어는 `HttpClient` 사용할 구현입니다. IOS, tvOS, 또는 macOS 네이티브 전송 방식을 사용 하는 구현으로 전환할 수 있습니다 (`NSUrlSession` 또는 `CFNetwork`운영 체제에 따라). 장점은은 TLS 1.2 지원, 더 작은 이진 이며 더 빨리 다운로드; 단점은은 이벤트 루프를 실행할 수 있는 비동기 작업에 대 한 실행 되 고 필요 하다는 것입니다.
 

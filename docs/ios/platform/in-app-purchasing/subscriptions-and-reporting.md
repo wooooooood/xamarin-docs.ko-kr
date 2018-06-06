@@ -1,26 +1,26 @@
 ---
-title: 구독 및 보고
+title: 구독 및 Xamarin.iOS의 보고 기능
+description: 이 문서에서는 구독 갱신 아닌, 무료 구독, 자동 갱신 가능한 구독 및 iTunes Connect를 사용 하 여 이러한 항목에 대해 보고 하려면 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787033"
 ---
-# <a name="subscriptions-and-reporting"></a>구독 및 보고
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>구독 및 Xamarin.iOS의 보고 기능
 
 ## <a name="about-non-renewing-subscriptions"></a>비-갱신 구독에 대 한
 
 서비스에 대 한 제한 시간 (1 주일에 대 한 액세스 탐색 응용 프로그램) 또는 데이터 보관에 대 한 시간이 제한 된 액세스 등의 판매를 나타내는 제품에 대 한 비 갱신 구독 사용 됩니다.   
    
-   
-   
- 비 갱신 구독 및 기타 제품 형식 간의 주요 차이점:
+비 갱신 구독 및 기타 제품 형식 간의 주요 차이점:
 
 -  ITunes Connect에서에서 제품 정의 용어를 포함 하지 않습니다. 응용 프로그램 코드는 id입니다. 제품의 유효 기간을 유추할 수 있어야 합니다. 
 -  여러 번 (예: 사용 될 제품) 구입할 수 있습니다. 응용 프로그램은 구독 용어/만료 및 갱신을 관리 하 고 사용자 겹치는 구독 구입 하는 것을 금지 해야 합니다. 

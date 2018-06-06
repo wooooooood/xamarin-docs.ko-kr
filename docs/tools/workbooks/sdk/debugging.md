@@ -1,15 +1,17 @@
 ---
 title: 디버깅 통합
+description: 이 문서에서는 에이전트 쪽 및 클라이언트 쪽 창과 Mac.에서 모두 Xamarin 통합 문서 통합, 디버깅 하는 방법을 설명합니다
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: f36ce595a739667a91d557c4cd896146c5614f51
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794022"
 ---
 # <a name="debugging-integrations"></a>디버깅 통합
 

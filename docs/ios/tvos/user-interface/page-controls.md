@@ -1,21 +1,20 @@
 ---
-title: 페이지 컨트롤 사용
-description: 이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 페이지 제어를 사용한 작업을 설명 합니다.
+title: TvOS Xamarin에서 페이지 컨트롤 사용
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 앱에서 tvOS 페이지 컨트롤을 사용 하는 방법을 설명 합니다. 제공 페이지 컨트롤에 대 한 자세한 설명, 스토리 보드에 설정 하는 방법에 설명 하 고 페이지 변경 이벤트에 응답을 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cb07c050aeb2ee72e34048baab991df2d5775d0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf020f230afc2eb2a09d863424bd4eb56ea1bde6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789160"
 ---
-# <a name="working-with-page-control"></a>페이지 컨트롤 사용
-
-_이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 페이지 제어를 사용한 작업을 설명 합니다._
+# <a name="working-with-tvos-page-controls-in-xamarin"></a>TvOS Xamarin에서 페이지 컨트롤 사용
 
 경우에 따라 Xamarin.tvOS 앱에 일련의 페이지 또는 이미지를 표시 해야 합니다. 페이지 컨트롤 명확 하 게는 사용자가 최대 페이지 수가 초과 하는 페이지를 표시 하도록 설계 되었습니다. 페이지 컨트롤에는 일련의 점 진한 합니다 타원형 배경 모양에 대해 표시 됩니다. 현재 페이지는 채워진된 점이 표시 됩니다, 그리고 빈 점으로 다른 모든 페이지를 표시 합니다. 페이지 컨트롤은 항목이 너무 많아의 배경 영역에 맞지 않을 경우 외부 대부분 점을 자릅니다.
 
@@ -72,9 +71,6 @@ Apple는 페이지 컨트롤을 사용 하는 경우 다음 제안에 있습니�
 
 > [!IMPORTANT]
 > 이벤트를 할당할 수 있지만 `TouchUpInside` 를 UI 요소 (예: UIButton) iOS 디자이너에서에서이 호출 되지 것입니다 있으므로 Apple TV 터치 스크린 또는 터치 이벤트를 지원 하지 않습니다. 항상 사용 해야는 `Primary Action` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
-
-
-
 
 편집 뷰 컨트롤러 (예제 `ViewController.cs`) 파일을 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예를 들어:
 

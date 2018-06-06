@@ -1,18 +1,20 @@
 ---
-title: 레이블
+title: Xamarin.iOS 레이블
+description: 이 문서에서는 Xamarin.iOS에 레이블을 사용 하는 방법을 설명 합니다. 프로그래밍 방식으로 및 iOS 디자이너 레이블을 만들 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 8a5b2c12cfbca18280a8044d3d8c599d848de91d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 653c6cf8e7d0d3499402ec4f0d62cdd118707176
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789891"
 ---
-# <a name="labels"></a>레이블
+# <a name="labels-in-xamarinios"></a>Xamarin.iOS 레이블
 
 `UILabel` 읽기 전용 텍스트 컨트롤은 단일 행 삽입과 다중 행을 표시 하기 위해 사용 됩니다. 
 

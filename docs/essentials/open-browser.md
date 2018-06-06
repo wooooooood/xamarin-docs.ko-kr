@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Essentials 열기 브라우저
-description: 브라우저 클래스에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용을 프로그램을 수 있습니다.
+description: 브라우저 클래스 Xamarin.Essentials에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용을 프로그램을 수 있습니다.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2a95d0b89b78ce8b0ddfdc94d86c284a6f8b2bbe
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 563d3899cffb80c0215d90e8e4392046c4635256
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783137"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials 브라우저
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 

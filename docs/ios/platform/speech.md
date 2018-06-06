@@ -1,5 +1,5 @@
 ---
-title: 음성 인식
+title: Xamarin.iOS의 음성 인식
 description: 이 문서는 새로운 음성 API를 표시 하 고 연속 음성 인식을 지원 및 음성 (라이브 또는 기록 된 오디오 스트림)에서 텍스트로 변환 하도록 Xamarin.iOS 응용 프로그램에서 구현 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fa010f57d163cabe544176608cff2eb6efe872ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00841a73f9da3c4c434419cdb37726b17c08cf31
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788363"
 ---
-# <a name="speech-recognition"></a>음성 인식
+# <a name="speech-recognition-in-xamarinios"></a>Xamarin.iOS의 음성 인식
 
 _이 문서는 새로운 음성 API를 표시 하 고 연속 음성 인식을 지원 및 음성 (라이브 또는 기록 된 오디오 스트림)에서 텍스트로 변환 하도록 Xamarin.iOS 응용 프로그램에서 구현 하는 방법을 보여 줍니다._
 

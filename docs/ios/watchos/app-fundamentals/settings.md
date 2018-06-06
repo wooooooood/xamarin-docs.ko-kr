@@ -1,18 +1,20 @@
 ---
-title: 설정 작업
+title: WatchOS Xamarin의 설정 작업
+description: 이 문서에서는 Xamarin의 watchOS 설정과 함께 작동 하는 방법을 설명 합니다. Watch 앱 솔루션에는 앱과 Apple Watch 앱에서 이러한 설정을 사용 하 여 iPhone의 추가 설정을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6de70eae1eb1c498336a62b4d7be5e2805de11f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6cfbcf3b4383588819490838c2a54cdb4faf9403
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790879"
 ---
-# <a name="working-with-settings"></a>설정 작업
+# <a name="working-with-watchos-settings-in-xamarin"></a>WatchOS Xamarin의 설정 작업
 
 Apple Watch 앱 iOS 앱으로 동일한 설정 기능을 사용할 수 있습니다-사용자 인터페이스에 표시 되는 **Apple Watch** iPhone 앱 하지만 값은 모두 iPhone 앱 그리고 조사식 확장에서 액세스할 수 있습니다.
 

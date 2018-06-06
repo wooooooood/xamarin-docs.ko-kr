@@ -1,17 +1,19 @@
 ---
-title: 부동 소수점
+title: Xamarin.iOS에서 부동 소수점 연산
+description: 이 문서는 Xamarin.iOS에서 32 비트 및 64 비트 정밀도 부동 소수점 연산을 처리 하는 방법을 설명 하 고 성능에 영향을 미치는 연결된을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 67fcf459747152346d32eb5836fa22b99719af12
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea5d69b52cbd4c76abb236bd1a272633dde440b7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786163"
 ---
-# <a name="floating-point"></a>부동 소수점
+# <a name="floating-point-operations-in-xamarinios"></a>Xamarin.iOS에서 부동 소수점 연산
 
 Xamarin.iOS는 기본적으로 수행 합니다 32 비트 및 64 비트 부동 소수점 연산 ARM에서 64 비트 전체 자릿수를 사용 하 여 합니다.  
 

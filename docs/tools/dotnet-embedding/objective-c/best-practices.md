@@ -1,15 +1,17 @@
 ---
 title: Objective C 용 모범 사례를 포함 하는.NET
+description: 이 문서에서는 다양 한 유용한 정보 Objective 없습니다. 사용.NET 포함에 대 한 설명 관리 코드의 하위 집합을 노출, chunkier API 노출, 이름 지정 등을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: e592a76e428d23881f1fe2dc5c7254999bece517
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b4b0df6f1c7c1d5931c0c18a1508747a7c570bea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793497"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Objective C 용 모범 사례를 포함 하는.NET
 

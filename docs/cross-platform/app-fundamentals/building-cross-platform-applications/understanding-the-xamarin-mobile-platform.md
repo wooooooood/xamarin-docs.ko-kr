@@ -1,15 +1,17 @@
 ---
 title: 1 – 모바일 Xamarin 플랫폼 이해
+description: 이 문서에서는 컴파일 프로세스, 플랫폼 SDK 액세스, 코드 공유, 사용자 인터페이스 만들기, 비주얼 디자이너 등에 보면 상위 수준에서 Xamarin 플랫폼에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 10d1b0786d5ca0b42b6e6c3e2f2a08edb7a37591
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 40183e5f18ee589adaf2ea903f6948293c8680f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781896"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>1 – 모바일 Xamarin 플랫폼 이해
 

@@ -1,15 +1,17 @@
 ---
 title: 바인딩 네이티브 프레임 워크
+description: 이 문서에서는 목표 Sharpie를 사용 하는 방법을 설명의-프레임 워크로 분산 라이브러리에는 바인딩을 만드는 프레임 워크 옵션입니다.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 219295ad9299b36a763289c4aef8e52cd859ceea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 02ee21ce58ecf945893f7e4f94763731abe92018
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781447"
 ---
 # <a name="binding-native-frameworks"></a>바인딩 네이티브 프레임 워크
 

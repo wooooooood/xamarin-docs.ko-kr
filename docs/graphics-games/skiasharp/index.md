@@ -1,18 +1,19 @@
 ---
-title: 2D 그리기
-description: 크로스 플랫폼 2D 드로잉 SkiaSharp와
+title: SkiaSharp 사용 하 여 2D 그리기
+description: 이 문서 SkiaSharp를 사용 하 여 그리기 플랫폼 2D의 개요를 제공 합니다. SkiaSharp 설명 하는 다양 한 안내선 및 다양 한 Api에 연결 합니다.
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: f1a40b48ecfb7244aae77cf1b4110ae53490d98c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 962fe657f25976f9b5069f2d434e92f816d249ca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783294"
 ---
-# <a name="2d-drawing"></a>2D 그리기
+# <a name="2d-drawing-with-skiasharp"></a>SkiaSharp 사용 하 여 2D 그리기
 
 SkiaSharp 2 차원 그래픽을 수행 하기 위한 강력한 C# API를 제공 합니다. 으로 작동 하는 [Google의 Skia 라이브러리](http://skia.org), Google Chrome, Firefox 및 Android의 그래픽 스택을 구동 하는 라이브러리입니다.
 

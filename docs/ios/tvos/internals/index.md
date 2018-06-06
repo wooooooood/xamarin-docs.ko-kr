@@ -1,22 +1,20 @@
 ---
-title: tvOS 내부 기능
-description: Xamarin.tvOS는 tvOS 제품 iOS 제품에 대 한 생성 하는 고급 문서 거의 동일 하므로 동일한 DNA Xamarin.iOS 제품으로 공유 합니다.
+title: Xamarin – 내부에서 tvOS
+description: Xamarin.iOS을 기반으로 하는 Xamarin에 tvOS의 내부 작업을 설명 하는 문서 수입니다. 링크 대상 프레임 워크 어셈블리에 설명 내용과 관련 iOS 개념입니다.
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 83b8d5b6dc4e73f05160960f0e2547284de57799
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0132eac4edd4ecb9f693828bd58288dfbcb1c008
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789147"
 ---
-# <a name="tvos-internals"></a>tvOS 내부 기능
-
-_Xamarin.tvOS는 tvOS 제품 iOS 제품에 대 한 생성 하는 고급 문서 거의 동일 하므로 동일한 DNA Xamarin.iOS 제품으로 공유 합니다._
-
+# <a name="tvos-in-xamarin--internals"></a>Xamarin – 내부에서 tvOS 
 
 ##  <a name="assembliesiostvosinternalsassembliesmd"></a>[어셈블리](~/ios/tvos/internals/assemblies.md)
 
@@ -73,8 +71,6 @@ Xamarin.iOS 네이티브 C 라이브러리와 Objective-c 라이브러리를 모
 ###  <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[XIB 코드 생성](~/ios/internals/xib-code-generation.md)
 
 어떻게 Xcode의 인터페이스 작성기 인터페이스 작성기 디자인 UI 사용할 수 있도록 Mac 용 Visual Studio 통합 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

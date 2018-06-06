@@ -1,6 +1,6 @@
 ---
-title: TvOS 소개
-description: 이 문서에서는 건물을 소개 Xamarin 사용한 tvOS 앱.
+title: Xamarin에는 tvOS 소개
+description: 이 문서는 다양 한 안내선 및 Xamarin 사용한 tvOS 앱을 빌드하는 방법을 보여 주는 샘플에 링크 합니다. 이러한 가이드는 사용자 인터페이스 개발, 데이터 저장소, 아이콘 등과 같은 다양 한 기능을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 457e1c01365017f699c5902376cdb44b9127d88e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 45a509f6ee86e42279ec7877272965e8f6d7338f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788688"
 ---
-# <a name="introduction-to-tvos"></a>TvOS 소개
+# <a name="introduction-to-tvos-in-xamarin"></a>Xamarin에는 tvOS 소개
 
 ## <a name="introducing-tvos"></a>TvOS 소개
 

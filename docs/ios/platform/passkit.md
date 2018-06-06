@@ -1,5 +1,5 @@
 ---
-title: PassKit
+title: Xamarin.iOS에 PassKit
 description: 작은 저장 하 고 바코드 및 고객의 거래 '실제 세계' 전화에 연결할 기타 정보를 표시 하는 시스템 iOS 앱입니다.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0a4fd39e312cf96ac59eae97b1212f001c4ef799
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788350"
 ---
-# <a name="passkit"></a>PassKit
+# <a name="passkit-in-xamarinios"></a>Xamarin.iOS에 PassKit
 
 _작은 저장 하 고 바코드 및 고객의 거래 '실제 세계' 전화에 연결할 기타 정보를 표시 하는 시스템 iOS 앱입니다._
 
@@ -462,7 +463,7 @@ Installation failed: Your code signing/provisioning profiles are not correctly c
 -  **PKAddPassesViewControllerDelegate** – Xamarin.iOS 개발자
 
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 문서에 대 한 샘플 코드에서 PassLibrary 프로젝트를 참조 하십시오. 작은 도우미 응용 프로그램에 필요한 다음과 같은 공통 기능을 보여 줍니다.
 

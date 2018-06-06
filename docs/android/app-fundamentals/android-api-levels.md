@@ -6,12 +6,13 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/01/2018
+ms.openlocfilehash: b942bb1be3441b1fb1a8bd65016914b3ecddbb26
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732322"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -29,6 +30,10 @@ Xamarin.Android 세 Android API 수준 프로젝트 설정을 노출합니다.
 -   [Android 버전을 대상](#target) &ndash; 에서 실행 하기 위해 앱이 Android 버전을 지정 합니다. 이 API 수준이에 사용 되는 *실행* Android에서 시간입니다.
 
 프로젝트에 대 한 API 레벨을 구성할 수 있습니다, 전에 해당 API 수준에 대 한 SDK 플랫폼 구성 요소를 설치 해야 합니다. 다운로드 하 고 Android SDK 구성 요소를 설치 하는 방법에 대 한 자세한 내용은 참조 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)합니다.
+
+> [!NOTE]
+> 2018 년 8 월부터, Google 재생 콘솔을 새 응용 프로그램 대상 API 레벨 26 (Android 8.0) 해야 합니다 또는 이상.
+기존 응용 프로그램 API 수준 26 또는 2018 년 11 월에서에서 시작 하는 더 높은 대상으로 해야 합니다. 자세한 내용은 참조 [앱 보안 및 년에 대 한 상태가 될 때까지 Google Play에서 성능 향상](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -174,10 +179,6 @@ Android의 각 릴리스 여러 이름으로 진행 됩니다.
 
 사용 하 여 항상 컴파일하는 것이 좋습니다는 *최신* 대상 프레임 워크 버전을 사용할 수 있습니다. 이렇게 하면 코드에서 호출할 수 있는 사용 되지 않는 Api에 대 한 유용한 경고 메시지와 함께 제공 합니다. 최신 대상 프레임 워크 버전을 사용 하는 최신 지원 라이브러리 릴리스를 사용 하는 경우 특히 중요 &ndash; 각 라이브러리에서는 해당 지원 라이브러리의 최소 API 수준에서 컴파일된 클 수 있는 응용 프로그램입니다. 
 
-> [!NOTE]
-> 2018 년 8 월부터, Google 재생 콘솔을 새 응용 프로그램 대상 API 레벨 26 (Android 8.0) 해야 합니다 또는 이상.
-기존 응용 프로그램 API 수준 26 또는 2018 년 11 월에서에서 시작 하는 더 높은 대상으로 해야 합니다. 자세한 내용은 참조 [앱 보안 및 년에 대 한 상태가 될 때까지 Google Play에서 성능 향상](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)합니다.
-
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -279,7 +280,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 }
 ```
 
-이 예제에서는 앱의 대상 프레임 워크로 설정 되어 **Android 5.0 (API 수준 21)** 로 설정 된 최소 Android 버전 및 **Android 4.1 (API 수준 16)**합니다. 때문에 `SetCategory` 는 API 수준에서 사용할 수 `Android.OS.BuildVersionCodes.Lollipop` 이상 버전에서는이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 상태인 &ndash; 됩니다 *하지* 호출 하려고 `SetCategory` 때 API 수준은 16, 17, 18, 19, 또는 20입니다. 만 하는 알림을 제대로 (때문에 이러한 형식에서 같은 분류 되지 않은) 정렬 되지, 아직는 알림을 사용자에 게 경고할 여전히 게시 되어 이러한 이전 Android 버전에서 기능이 줄어듭니다. 앱 작동 하지만 해당 기능은 약간 떨어집니다.
+이 예제에서는 앱의 대상 프레임 워크로 설정 되어 **Android 5.0 (API 수준 21)** 로 설정 된 최소 Android 버전 및 **Android 4.1 (API 수준 16)** 합니다. 때문에 `SetCategory` 는 API 수준에서 사용할 수 `Android.OS.BuildVersionCodes.Lollipop` 이상 버전에서는이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 상태인 &ndash; 됩니다 *하지* 호출 하려고 `SetCategory` 때 API 수준은 16, 17, 18, 19, 또는 20입니다. 만 하는 알림을 제대로 (때문에 이러한 형식에서 같은 분류 되지 않은) 정렬 되지, 아직는 알림을 사용자에 게 경고할 여전히 게시 되어 이러한 이전 Android 버전에서 기능이 줄어듭니다. 앱 작동 하지만 해당 기능은 약간 떨어집니다.
 
 일반적으로 빌드 버전을 검사 하는 코드에서 이전 방식으로 비교 새로운 방식으로 작업을 수행한 간의 런타임에 결정 수 있습니다. 예를 들어:
 

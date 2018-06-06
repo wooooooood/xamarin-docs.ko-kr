@@ -1,21 +1,20 @@
 ---
-title: 아이콘 및 이미지 작업
-description: 이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이미지 작업을 설명 합니다.
+title: TvOS 아이콘 및 Xamarin에서 이미지 작업
+description: 이 문서에서는 아이콘 및 Xamarin을 사용 하 여 빌드한 tvOS 응용 프로그램에서 이미지를 사용 하는 방법에 설명 합니다. 시작 이미지, 계층화 된 이미지, 응용 프로그램 아이콘 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59cbc53acf3ab7da12826b9d3cffb821631a0500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788799"
 ---
-# <a name="working-with-icons-and-images"></a>아이콘 및 이미지 작업
-
-_이 문서에서는 디자인 및 아이콘과 Xamarin.tvOS 앱 내에서 이미지 작업을 설명 합니다._
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>TvOS 아이콘 및 Xamarin에서 이미지 작업
 
 영상을 만들기 아이콘 및 이미지는 Apple TV 앱에 대 한 풍부한 사용자 환경을 개발의 중요 한 부분입니다. 이 가이드에서는 만들고 Xamarin.tvOS 앱에 대 한 필요한 그래픽 자산을 포함 하는 데 필요한 단계를 설명 합니다.
 

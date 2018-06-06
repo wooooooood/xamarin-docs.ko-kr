@@ -1,16 +1,17 @@
 ---
-title: 코드 공유 옵션
+title: 공유 코드 개요
 description: '이 문서 비교 하 여 플랫폼 간 프로젝트 간에 코드 공유의 다양 한 방법: 공유 프로젝트, 이식 가능한 클래스 라이브러리 및.NET Standard, 이점 및 단점이 각각의 포함 합니다.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: de2e24b1746568510c84fb163efa8562ab47cf00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 37b6465c06361f8e33c0ed191d08dbcc22cb16ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781434"
 ---
 # <a name="sharing-code-overview"></a>공유 코드 개요
 
@@ -43,7 +44,7 @@ _이 문서 비교 하 여 플랫폼 간 프로젝트 간에 코드 공유의 �
  ![](code-sharing-images/sharedassetproject.png "공유 프로젝트 다이어그램")
 
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 플랫폼 간 응용 프로그램을 지 원하는 iOS, Android 및 Windows Phone 응용 프로그램 프로젝트 각 플랫폼에 대해 필요 합니다. 공통 코드 공유 프로젝트에서 실행 됩니다.
 

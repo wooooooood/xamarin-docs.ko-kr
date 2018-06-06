@@ -1,17 +1,18 @@
 ---
 title: MacOS에서 내게 필요한 옵션
-description: 이 가이드에서는 Xamarin.Mac 기반 응용 프로그램을 구축 하기 위한 기능을 설명 합니다.
+description: 이 문서에서는 Xamarin.Mac 앱 macOS 내게 필요한 옵션 기능을 사용 하는 방법을 설명 합니다. 스토리 보드 및 코드, 사용자 지정 컨트롤 및 테스트 내게 필요한 옵션 설명 하는 UI 요소에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ad04e0276c046f133a6f71abb38912343d2d86b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2406654a46428e8c22284f5c7d114b07a463251
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791165"
 ---
 # <a name="accessibility-on-macos"></a>MacOS에서 내게 필요한 옵션
 

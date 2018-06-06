@@ -1,21 +1,20 @@
 ---
-title: 백그라운드 작업
-description: 새 백그라운드 작업 watchOS 3을 사용 하 여 watch 앱에는 항상 최신 데이터 및 도킹 스냅숏을 포함 되도록 합니다.
+title: watchOS Xamarin에서 백그라운드 작업
+description: 이 문서에서는 Xamarin 백그라운드 작업의 형식에 살펴보겠습니다, 리소스를 사용 하 여 백그라운드 작업, 일정, 모범 사례 등 구현에 watchOS로 백그라운드 작업을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792049"
 ---
-# <a name="background-tasks"></a>백그라운드 작업
-
-_새 백그라운드 작업 watchOS 3을 사용 하 여 watch 앱에는 항상 최신 데이터 및 도킹 스냅숏을 포함 되도록 합니다._
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS Xamarin에서 백그라운드 작업
 
 WatchOS 3는 watch 앱 정보를 유지할 수는 최신 크게 세 가지가 있습니다. 
 
@@ -544,7 +543,7 @@ snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 
 - 지정된 된 태스크를 완료 하려면 몇 초만 지정 됩니다. 시스템에서는 전달 된 시간의 양 뿐만 아니라이 한도 파생 하는 앱이 사용 CPU 전력이 얼마나도를 고려 합니다.
 - 제한을 초과 하는 모든 앱 다음 오류 코드와 함께 종료 됩니다.
-    - **CPU** - 0xc51bad01
+    - **CPU** -0xc51bad01
     - **시간** -0xc51bad02
 - 시스템에는 수행 하는 응용 프로그램을 요청 하는 백그라운드 작업의 유형에 따라 서로 다른 제한이 적용 됩니다. 예를 들어 `WKApplicationRefreshBackgroundTask` 및 `WKURLSessionRefreshBackgroundTask` 작업 다른 유형의 백그라운드 작업 보다 시간이 약간 더 런타임을 제공 됩니다.
 

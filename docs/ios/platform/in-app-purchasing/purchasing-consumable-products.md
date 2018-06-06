@@ -1,18 +1,20 @@
 ---
-title: 사용 될 제품을 구입
+title: Xamarin.iOS에 사용 될 제품을 구입
+description: 이 문서에서는 Xamarin.iOS에 사용 될 제품을 설명 합니다. 소모품은 일회용 조각 게임 통화 등의 기능입니다.
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c2c84c044ff41cced2c97e414502faff45341ec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9c53af1055736512c42f83a58011b7b3a42bcd5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786979"
 ---
-# <a name="purchasing-consumable-products"></a>사용 될 제품을 구입
+# <a name="purchasing-consumable-products-in-xamarinios"></a>Xamarin.iOS에 사용 될 제품을 구입
 
 사용 될 제품은 'restore' 않아도 이므로 구현 하기 가장 간단한입니다. 게임 내에서 통화 또는 일회용 궁극적으로 같은 제품에 대 한 유용합니다. 다시 사용자가 사용 될 제품 over 조치를 다시 구매할 수 있습니다.
 
@@ -23,8 +25,6 @@ ms.lasthandoff: 04/04/2018
 [![구매 프로세스 시각화](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  기본 워크플로.   
-   
-   
    
  1. 앱 추가 `SKPayment` 큐에 있습니다. 사용자의 Apple ID를 묻는 메시지가 표시 되며 지불 확인 하도록 요청 필요한 경우.   
    

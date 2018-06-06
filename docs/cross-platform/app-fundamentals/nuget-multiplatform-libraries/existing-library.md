@@ -1,15 +1,17 @@
 ---
 title: 기존 라이브러리 프로젝트에서 NuGet을 만드는
+description: 이 문서에는 코드를 다른 개발자와 공유할 수 있도록 기존 라이브러리 프로젝트에서 NuGet 패키지를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 466ec405d4951de2d47d075c748cbc20ac5074e6
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779985"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>기존 라이브러리 프로젝트에서 NuGet을 만드는
 

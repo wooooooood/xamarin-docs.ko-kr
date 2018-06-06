@@ -1,16 +1,17 @@
 ---
 title: 64 비트로 업데이트 Xamarin.Mac 통합 응용 프로그램
-description: 이 가이드에서는 64 비트 대상에 Xamarin.Mac 응용 프로그램을 업데이트 하는 방법을 설명합니다
+description: 이 가이드에서는 64 비트 대상에 Xamarin.Mac 응용 프로그램을 업데이트 하는 방법에 설명 합니다. 또한이 변경 사항을 때 발생할 수 있는 오류 종류의 예를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/22/2018
-ms.openlocfilehash: 558edbdee5adfe57205c7f76b35a0538c78b927f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: aa97f9a68ea4acc4234233a22d10c99cde3e6d6c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780700"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>64 비트로 업데이트 Xamarin.Mac 통합 응용 프로그램
 

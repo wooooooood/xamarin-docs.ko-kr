@@ -1,19 +1,20 @@
 ---
-title: 문제 해결
-description: 이 문서에서는 Xamarin.iOS 앱에서 iOS 9 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다.
+title: Xamarin.iOS 9-문제 해결
+description: 이 문서에서 iOS 9 Xamarin.iOS에 사용 하기 위한 다양 한 문제 해결 팁을 제공 합니다. 팁은 XML 구문 분석, 시뮬레이터, 레이아웃 제약 조건, 네트워크 문제 및 기타 여러 항목을 다룹니다.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787665"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9-문제 해결
 
 _이 문서에서는 Xamarin.iOS 앱에서 iOS 9 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다._
 
@@ -190,8 +191,6 @@ iOS 9에서 시작 하는 이미지 방향을 다른 인터페이스를 지원 �
 Xamarin.iOS 이므로 iOS 디자인을 중단 하지만 관리 코드에 노출 되는 것 이라고 하는 생성자 내부 보기 또는 뷰-컨트롤러 초기화를 만들 수 있습니다.
 
 일반적 하지 초기화 해야 코드 호출할 수 있는 다시 Objective-c 생성자에서 확인할 수 없습니다 이후 아무 것도 호출 때. 또한은 더 나은 환경 (다른.ctor) 또는 (Objective-c에 이벤트가)으로 재정의 하는 호출이이 초기화 해야 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

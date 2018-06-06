@@ -1,19 +1,20 @@
 ---
-title: IOS에서 터치
+title: 터치 이벤트 및 Xamarin.iOS에서 제스처
+description: 이 문서에서는 터치 이벤트, 멀티 터치, 제스처, 여러 제스처 및 Xamarin.iOS 응용 프로그램에서 사용자 지정 제스처를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 34073474ef3ef74f2fddbf487b3377224dc1aa3e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689543"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784591"
 ---
-# <a name="touch-in-ios"></a>IOS에서 터치
+# <a name="touch-events-and-gestures-in-xamarinios"></a>터치 이벤트 및 Xamarin.iOS에서 제스처
 
 반드시 터치 이벤트를 이해 하 고 iOS 응용 프로그램에서 Api 터치 장치에서 모든 물리적 상호 작용의 중심으로 합니다. 모든 터치 상호 작용을 포함 한 `UITouch` 개체입니다. 이 문서에서 사용 하는 방법을 배웁니다는 `UITouch` 클래스 및 해당 Api 터치를 지원 하도록 합니다. 나중 제스처를 지 원하는 방법에 자세한 기술에 확장 됩니다.
 
