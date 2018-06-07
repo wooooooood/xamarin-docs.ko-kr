@@ -6,12 +6,12 @@ ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781035"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806792"
 ---
 # <a name="using-net-standard-libraries-to-share-code"></a>.NET 표준 라이브러리를 사용 하 여 코드를 공유
 
@@ -37,7 +37,7 @@ ms.locfileid: "34781035"
 
   **참고:** 이 서식 파일을 이름이 변경 될 `.NET Standard` Mac.에 대 한 Visual Studio의 이후 버전에서
 
-  ![.NET Core 클래스 라이브러리 만들기](net-standard-images/vsm01.png)
+  ![.NET Core 클래스 라이브러리를 만드는](net-standard-images/vsm01.png "새.NET 핵심 클래스 라이브러리 만들기")
 
 2. .NET 표준 라이브러리 프로젝트는 솔루션 탐색기에 표시 된 대로 표시 됩니다. 사용 하 여 라이브러리 종속성 노드에 표시 됩니다는 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "34781035"
 
 .NET 표준 라이브러리 설정 확인 및 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 변경할 수 `Options` 이 스크린 샷에 표시 된 것 처럼:
 
-![프로젝트 옵션에는 표준.NET 대상 프레임 워크를 편집 합니다.](net-standard-images/vsm03.png)
+![표준.NET 대상 프레임 워크 프로젝트 옵션에서 편집](net-standard-images/vsm03.png "프로젝트 옵션에서 표준 대상.NET Framework의 버전을 편집")
 
 버전을 변경할 수는 내부 `netstandard` 변경 하 여는 `Target Framework` 드롭다운 값입니다.
 
@@ -67,17 +67,17 @@ ms.locfileid: "34781035"
 
 1. 새 프로젝트 추가 대화 상자에서 선택 된 `.NET Standard` 범주 및 선택 `Class Library(.NET Standard)`합니다.
 
-  ![](net-standard-images/vs01.png "새 표준.NET 클래스 라이브러리 만들기")
+  ![새.NET 표준 클래스 라이브러리를 만드는](net-standard-images/vs01.png ".NET 표준 새 클래스 라이브러리 만들기")
 
 2. .NET 표준 라이브러리 프로젝트는 솔루션 탐색기에 표시 된 대로 표시 됩니다. 사용 하 여 라이브러리 종속성 노드에 표시 됩니다는 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)합니다.
 
-  ![](net-standard-images/vs02.png "솔루션의 표준.NET 프로젝트")
+  ![프로젝트 폴더의 NETStandard.Library](net-standard-images/vs02.png "솔루션의 표준.NET 프로젝트")
 
 #### <a name="editing-net-standard-library-settings"></a>.NET 표준 라이브러리 설정 편집
 
 .NET 표준 라이브러리 설정 확인 및 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 변경할 수 `Properties` 이 스크린 샷에 표시 된 것 처럼:
 
-![](net-standard-images/vs03.png "다른 프로젝트와 동일한 방식으로.NET 표준 라이브러리를 참조 합니다.")
+![프로젝트 속성에서.NET 표준 대상 프레임 워크 편집](net-standard-images/vs03.png "다른 프로젝트와 동일한 방식으로.NET 표준 라이브러리를 참조 합니다.")
 
 버전을 변경할 수는 내부 `netstandard` 변경 하 여는 `Target Framework` 드롭다운 값입니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "34781035"
 
 .NET 표준 라이브러리를 만든 후 일반적으로 참조를 추가 같은 방식으로 호환 되는 모든 응용 프로그램 또는 라이브러리 프로젝트에 대 한 참조를 추가할 수 있습니다. Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 `Add Reference...` 다음 전환 하는 `Solution : Projects` 표시 된 것 처럼 탭:
 
-![](net-standard-images/vs04.png "Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 선택한 참조 추가... 다음 표시 된 것 처럼 솔루션 프로젝트 탭으로 전환")
+![.NET 표준 라이브러리 참조](net-standard-images/vs04.png "Nvisual Studio에서는 참조 노드를 마우스 오른쪽 단추로 클릭 하 고... 참조 추가 선택한 후 표시 된 것 처럼 솔루션 프로젝트 탭으로 전환")
 
 -----
 

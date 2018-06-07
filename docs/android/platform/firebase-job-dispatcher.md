@@ -6,18 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
-ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/05/2018
+ms.openlocfilehash: 0d512342f1c978c84341d20c298a9fa750800d84
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806805"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
 _이 가이드에는 Google에서 Firebase 작업 발송자 라이브러리를 사용 하 여 백그라운드 작업을 예약 하는 방법을 설명 합니다._
 
-![미리 보기에서 firebase 작업 디스패처](~/media/shared/preview.png)
 
 ## <a name="overview"></a>개요
 
@@ -65,9 +65,6 @@ Firebase 작업 발송자 Android API 수준 9 이상이 필요합니다. Google
 Firebase 작업 발송자를 시작 하려면 먼저 추가 [Xamarin.Firebase.JobDispatcher NuGet 패키지](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) Xamarin.Android 프로젝트에 있습니다. 에 대 한 NuGet 패키지 관리자 검색는 **Xamarin.Firebase.JobDispatcher** 패키지 (내에 있는 사전 릴리스).
 
 작업 디스패처 Firebase 라이브러리를 추가한 후 만들기는 `JobService` 클래스 및 다음의 인스턴스를 사용 하 여 실행 되도록 예약할는 `FirebaseJobDispatcher`합니다.
-
-> [!NOTE]
-> 현재 바인딩이 Firebase 작업 발송자에 대 한 이전 버전의 라이브러리를 대상 으로합니다. 되는 [알려진된 버그 [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] Firebase 작업 발송자의 최신 버전을 대상 바인딩을 업데이트할 수 없습니다.
 
 
 ### <a name="creating-a-jobservice"></a>JobService 만들기
@@ -293,7 +290,6 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 
 ## <a name="related-links"></a>관련 링크
 
-- [바인딩 생성기 심각한 오류 처리 되지 않은 예외와 함께 실패: System.ArgumentNullException: 값은 null 일 수 없습니다.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [NuGet에 Xamarin.Firebase.JobDispatcher](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [GitHub의 디스패처-firebase-작업](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Xamarin.Firebase.JobDispatcher 바인딩](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
