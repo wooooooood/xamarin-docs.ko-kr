@@ -1,17 +1,18 @@
 ---
 title: IOS 6 소개
-description: iOS 6 다양 한 Xamarin.iOS 6 C# 개발자에 게 표시 하는 앱 개발을 위한 새로운 기술이 포함 되어 있습니다.
+description: IOS 6에에서 도입 된 기능에 설명 하는 지침은이 문서 연결 되어 있습니다. 컬렉션 뷰, PassKit, 소셜 프레임 워크 StoreKit 변경 내용을 모두 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787617"
 ---
 # <a name="introduction-to-ios-6"></a>IOS 6 소개
 
@@ -28,12 +29,12 @@ IOS 6 및 6 Xamarin.iOS 개발자 개발자에서 해당 대상 iPhone 5는 스�
 컬렉션 뷰에서 임의의 레이아웃을 사용 하 여 표시할 콘텐츠를 허용 합니다. 사용자 지정 레이아웃도 지원 하면서 기본적으로 표 형식 레이아웃을 쉽게 만들 수 있습니다. 자세한 내용은 참조는, [컬렉션 뷰 소개](~/ios/user-interface/controls/uicollectionview.md) [ ](~/ios/user-interface/controls/uicollectionview.md)가이드입니다.
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[전달 키트 소개](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[PassKit 소개](~/ios/platform/passkit.md)
 
-전달 키트 프레임 워크 게 Passbook 앱에서 관리 되는 디지털 전달 상호 작용할 수 있습니다. 자세한 내용은 참조는, [전달 키트 가이드 소개](~/ios/platform/passkit.md)합니다.
+PassKit 프레임 워크 게 Passbook 앱에서 관리 되는 디지털 전달 상호 작용할 수 있습니다. 자세한 내용은 참조는, [전달 키트 가이드 소개](~/ios/platform/passkit.md)합니다.
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[이벤트 키트 소개](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[EventKit 소개](~/ios/platform/eventkit.md)
 
 EventKit 프레임 워크에는 달력, 일정 이벤트 및 미리 알림을 달력 데이터베이스에 저장 된 데이터를 액세스 하는 방법을 제공 합니다. 액세스 일정 및 일정에 이벤트가 사용할 수 있는 iOS 4, 이후 이었지만, iOS 6 이제 미리 알림 데이터에 대 한 액세스를 노출 합니다. 자세한 내용은 참조는 [I](~/ios/platform/eventkit.md) [EventKit ntroduction](~/ios/platform/eventkit.md) 가이드입니다.
 
@@ -43,7 +44,7 @@ EventKit 프레임 워크에는 달력, 일정 이벤트 및 미리 알림을 �
 소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook, 중국에서 사용자에 대 한 포함 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다. 자세한 내용은 참조는, [소셜 Framework 소개](~/ios/platform/social-framework.md) 가이드입니다.
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[키트 저장에 대 한 변경](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[StoreKit 변경 내용](changes-to-storekit.md)
 
 Apple에 저장소 키트에 두 가지 새로운 기능이 도입 되었습니다: 구매 및 iTunes App Store에서 내에서 또는 콘텐츠 응용 프로그램을 다운로드 하 고 앱에서 바로 구매에 대 한 콘텐츠 파일을 호스팅!입니다. 자세한 내용은 참조는, [저장소 키트로 변경](changes-to-storekit.md) 가이드입니다.
 
