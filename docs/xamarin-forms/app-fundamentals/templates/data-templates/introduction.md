@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 6b71e1cb5f45a580aaf04c267028af1740cb560e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: beb1633919a1d4d5bc2f5a8b0452b535a5cc8f3f
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847114"
 ---
 # <a name="introduction"></a>소개
 
@@ -136,4 +137,4 @@ A [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTe
 
 - [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
 - [데이터 템플릿 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
-- [DataTemplate](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)
+- [데이터 템플릿](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)

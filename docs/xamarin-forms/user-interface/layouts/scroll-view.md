@@ -7,19 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 13f3d5c02b8451bcd52b355fb89f7931f50a0d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847539"
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 레이아웃을 포함 하 고 스크롤 스크린 수 있습니다. `ScrollView` 키보드 표시 될 때 자동으로 화면에 보이는 부분을 이동 하는 보기를 허용 하도록도 사용 됩니다.
 
-[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms 레이아웃")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
-이 문서에서는 다룹니다.
+이 문에서는 다음과 같은 내용을 설명합니다.
 
 - **[용도](#Purpose)**  &ndash; 의 목적은 `ScrollView` 및 사용 하는 경우.
 - **[사용 현황](#Usage)**  &ndash; 사용 하는 방법을 `ScrollView` 실제로 합니다.
@@ -55,7 +56,7 @@ C#:
 var scroll = new ScrollView();
 Content = scroll;
 var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,   HeightRequest = 600, WidthRequest = 600 });
+stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
 stack.Children.Add(new Entry());
 ```
 

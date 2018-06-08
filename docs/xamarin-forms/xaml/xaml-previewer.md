@@ -6,12 +6,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
-ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.date: 05/31/2018
+ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848358"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms에 대 한 XAML 미리 보기
 
@@ -55,6 +56,17 @@ _입력할 때 렌더링 Xamarin.Forms 레이아웃을 참조 하세요!_
 일부 레이아웃 없이 사용자 인터페이스 컨트롤에 바인딩된 모든 데이터를 시각화 하기 어려울 수 있습니다. 미리 보기를 보다 유용 하도록 하려면 몇 가지 정적 데이터 컨트롤에 할당 하드 코딩 하 여 바인딩 컨텍스트 (코드 숨김 또는 XAML을 사용 하 여 하나).
 
 James Montemagno의를 참조 [디자인 타임 데이터를 추가 하는 방법에 대 한 블로그 게시물](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) XAML에서 정적 ViewModel에 바인딩하는 방법을 볼 수 있습니다.
+
+## <a name="detecting-design-mode"></a>디자인 모드를 검색합니다.
+
+정적 [ `DesignMode.IsDesignModeEnabled` ](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) 응용 프로그램의 미리 보기에서 실행 되 고 있는지 확인 하려면 속성을 검사할 수 있습니다. 이 응용 프로그램의 미리 보기에서 실행 중일 때만 실행 되는 코드를 지정할 수 있습니다.
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## <a name="troubleshooting"></a>문제 해결
 

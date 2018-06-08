@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848202"
 ---
 # <a name="localization"></a>지역화
 
@@ -386,7 +387,7 @@ public class Localize : UsingResxLocalization.ILocalize
             switch (iOSLanguage)
             {
                 case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-                case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
+                case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
                 case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
@@ -567,7 +568,7 @@ namespace UsingResxLocalization.Android
 
 이 언어 중립 RESX 파일에 정의 된 문자열 확인 하므로 응용 프로그램의 기본 문화권의 리소스 관리자를 통해 알립니다 (**AppResources.resx**) 영어 로캘에 응용 프로그램 하나에서 실행 중인 경우에 표시 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 플랫폼별 프로젝트에 표시 된 대로 위의 업데이트 하 고 번역 된 RESX 파일 사용 응용 프로그램을 다시 컴파일하지 후 업데이트 된 번역을 각 응용 프로그램에서는 사용할 수 있습니다. 중국어 (간체)로 변환 하는 샘플 코드의 스크린 샷을 다음과 같습니다.
 

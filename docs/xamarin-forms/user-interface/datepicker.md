@@ -6,24 +6,28 @@ ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 03/12/2018
-ms.openlocfilehash: 0ab9d3c83b849e5ab5aac8bce9c581abd0312237
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/04/2018
+ms.openlocfilehash: 09b0bd788d9ac436e0270b447556ad2b0a848f99
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848566"
 ---
 # <a name="using-datepicker"></a>DatePicker를 사용 하 여
 
 _날짜를 선택할 수 있도록 하는 Xamarin.Forms 보기_
 
-Xamarin.Forms는 [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 날짜를 선택할 수 있습니다. `DatePicker` 5 가지 속성을 정의합니다.
+Xamarin.Forms는 [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 날짜를 선택할 수 있습니다. `DatePicker` 8 가지 속성을 정의합니다.
 
 - [`MinimumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/) 형식의 [ `DateTime` ](https://developer.xamarin.com/api/type/System.DateTime/), 1900 년의 첫 번째 날 데이터베이스가 기본 인 합니다.
 - [`MaximumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/) 형식의 `DateTime`, 2100 연도의 마지막 날에는 기본값입니다.
 - [`Date`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/) 형식의 `DateTime`, 선택된 된 날짜 값을 기본값으로 사용 하는 [ `DateTime.Today` ](https://developer.xamarin.com/api/property/System.DateTime.Today/)합니다.
 - [`Format`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Format/) 형식의 `string`, [표준](/dotnet/standard/base-types/standard-date-and-time-format-strings/) 또는 [사용자 지정](/dotnet/standard/base-types/custom-date-and-time-format-strings/) 를 "D"로 기본 설정 된 문자열의 서식을 지정 하는.NET long 날짜 패턴입니다.
 - [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.TextColor/) 형식의 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/), 기본값은 선택한 날짜를 표시 하는 데 사용 하는 색 [ `Color.Default` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)합니다.
+- [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) 형식의 [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes), 데이터베이스가 기본 인 [ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None)합니다.
+- [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) 형식의 `string`, 데이터베이스가 기본 인 `null`합니다.
+- [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) 형식의 `double`,-1.0 데이터베이스가 기본 인 합니다.
 
 `DatePicker` 발생은 [ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/) 이벤트 사용자가 날짜를 선택 합니다.
 
@@ -32,7 +36,7 @@ Xamarin.Forms는 [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin
 
 내부적으로 `DatePicker` 되도록 `Date` 사이의 `MinimumDate` 및 `MaximumDate`(포함). 경우 `MinimumDate` 또는 `MaximumDate` 설정 되어 있도록 `Date` 서로 않습니다 `DatePicker` 의 값을 조정 합니다 `Date`합니다.
 
-모든 5 속성에 의해 지원 됩니다 [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) 개체 즉, 이러한 스타일을 지정할 수 속성에는 데이터 바인딩의 대상이 될 수 있습니다. `Date` 속성의 기본 바인딩 모드에 [ `BindingMode.TwoWay` ](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/), 대상을 사용 하는 응용 프로그램에서 데이터 바인딩을 사용할 수 있다는 의미는 [모델-뷰-MVVM ()](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처입니다.
+모든 8 가지 속성에 의해 지원 됩니다 [ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/) 개체 즉, 이러한 스타일을 지정할 수 속성에는 데이터 바인딩의 대상이 될 수 있습니다. `Date` 속성의 기본 바인딩 모드에 [ `BindingMode.TwoWay` ](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/), 대상을 사용 하는 응용 프로그램에서 데이터 바인딩을 사용할 수 있다는 의미는 [모델-뷰-MVVM ()](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처입니다.
 
 ## <a name="initializing-the-datetime-properties"></a>날짜/시간 속성을 초기화
 
@@ -67,13 +71,15 @@ DatePicker datePicker = new DatePicker
 
 경우는 `DatePicker` 에 대 한 바인딩을 포함 하지 않습니다는 `Date` 속성을 응용 프로그램에 대 한 처리기를 연결 해야는 `DateSelected` 이벤트 수를 사용자가 새 날짜를 선택 하는 경우 정보.
 
+글꼴 속성을 설정 하는 방법에 대 한 정보를 참조 하십시오. [글꼴](~/xamarin-forms/user-interface/text/fonts.md)합니다.
+
 ## <a name="datepicker-and-layout"></a>DatePicker 및 레이아웃
 
 와 같은 제한 되지 않은 가로 레이아웃 옵션을 사용 하는 것이 불가능 `Center`, `Start`, 또는 `End` 와 `DatePicker`:
 
 ```xaml
-<DatePicker ··· 
-            HorizontalOptions="Center" 
+<DatePicker ···
+            HorizontalOptions="Center"
             ··· />
 ```
 
@@ -138,7 +144,7 @@ DatePicker datePicker = new DatePicker
 </ContentPage>
 ```
 
-각 `DatePicker` 할당 되는 `Format` 자세한 날짜 형식에 대 한 "D"의 속성입니다. 또한는 `endDatePicker` 개체의 대상으로 하는 바인딩을 해당 `MinimumDate` 속성입니다. 바인딩 소스는 선택한 `Date` 의 속성은 `startDatePicker` 개체입니다. 이렇게 하면 하는 종료 날짜 보다 나중에 항상 보다 크거나 시작 날짜입니다. 두 외에도 `DatePicker` 개체는 `Switch` "총에서 두 일 Include" 레이블이 지정 됩니다. 
+각 `DatePicker` 할당 되는 `Format` 자세한 날짜 형식에 대 한 "D"의 속성입니다. 또한는 `endDatePicker` 개체의 대상으로 하는 바인딩을 해당 `MinimumDate` 속성입니다. 바인딩 소스는 선택한 `Date` 의 속성은 `startDatePicker` 개체입니다. 이렇게 하면 하는 종료 날짜 보다 나중에 항상 보다 크거나 시작 날짜입니다. 두 외에도 `DatePicker` 개체는 `Switch` "총에서 두 일 Include" 레이블이 지정 됩니다.
 
 두 `DatePicker` 보기에 연결 하는 처리기가는 `DateSelected` 이벤트 및 `Switch` 처리기에 연결 된 해당 `Toggled` 이벤트입니다. 이러한 이벤트 처리기 코드 숨김 파일에 있으며 두 날짜 사이의 일 새 계산을 트리거할:
 
@@ -183,7 +189,7 @@ public partial class MainPage : ContentPage
 
 [![결과 날짜 사이의 일](datepicker-images/DaysBetweenDatesResult.png "결과 날짜 사이의 일")](datepicker-images/DaysBetweenDatesResult-Large.png#lightbox "결과 날짜 사이의 일")
 
-## <a name="related-links"></a>관련된 링크
+## <a name="related-links"></a>관련 링크
 
 - [DaysBetweenDates 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
 - [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)

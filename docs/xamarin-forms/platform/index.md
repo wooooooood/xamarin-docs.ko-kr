@@ -6,12 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
-ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/06/2018
+ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847633"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -41,10 +42,6 @@ Xamarin.Forms는 GTK # 응용 프로그램에 대 한 미리 보기 지원이 �
 
 Xamarin.Forms는 macOS 앱에 대 한 미리 보기 지원이 되었습니다.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin.Forms에는 Windows Presentation Foundation (WPF) 응용 프로그램에 대 한 미리 보기 지원이 되었습니다.
-
 ## <a name="native-formsnative-formsmd"></a>[네이티브 양식](native-forms.md)
 
 Xamarin.Forms를 허용 하는 기본 형식 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-네이티브 Xamarin.iOS, Xamarin.Android, 및 유니버설 Windows 플랫폼 (UWP) 프로젝트에서 사용할 수 있도록 페이지를 파생 합니다.
@@ -61,6 +58,14 @@ Xamarin.Forms에서 iOS, Android 및 유니버설 Windows 플랫폼에서 네이
 
 Github, Nuget을 및 Xamarin.Forms 앱을 늘리기 위해 Xamarin 구성 요소 저장소에서 사용 가능한 다양 한 오픈 소스 플러그 인 있습니다.
 
+## <a name="tizentizenmd"></a>[Tizen](tizen.md)
+
+Tizen.NET을 사용 하 여 Xamarin.Forms과 Tizen.NET framework는.NET 응용 프로그램을 빌드할 수 있습니다.
+
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
 Xamarin.Forms는 Windows 10에서 유니버설 Windows 플랫폼 (UWP)에 대 한 지원 합니다. 이 문서에 추가 하는 방법에 설명 된 UWP 프로젝트를 기존 Xamarin.Forms 솔루션입니다.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms에는 Windows Presentation Foundation (WPF) 응용 프로그램에 대 한 미리 보기 지원이 되었습니다.

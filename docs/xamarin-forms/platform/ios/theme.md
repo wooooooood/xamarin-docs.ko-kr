@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: 280ca523d3e3b4f5037d626cc5fd0bd5b31d0e8b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f14479d353d24910f66afd35f968a232ec31657c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847285"
 ---
 # <a name="adding-ios-specific-formatting"></a>IOS 전용 서식 추가
 
@@ -43,7 +44,7 @@ nav.BarTextColor = Color.White;
 
 이상적으로 상태 표시줄 수도 흰색-iOS 프로젝트에서 직접 수행할 수 있는 म 문제가 있습니다. 다음 항목을 추가 **Info.plist** 흰색 되도록 상태 표시줄을 강제로:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![](theme-images/info-plist.png "iOS Info.plist 항목")
 
 또는 해당 편집 **Info.plist** 직접 포함 하도록 파일:
 

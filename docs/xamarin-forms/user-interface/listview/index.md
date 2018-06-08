@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848540"
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +42,8 @@ ListView에 다양 한 구성 요소는 각 플랫폼의 기본 기능을 실행
 
 - **[셀](customizing-cell-appearance.md)**  &ndash; ListView에서 데이터 셀에 표시 됩니다. 각 셀의 데이터 행에 해당 합니다. 선택할 수 있는 기본 제공 된 셀 또는 사용자 고유의 사용자 지정 셀을 정의할 수 있습니다. 기본 및 사용자 지정 셀 XAML 또는 코드에 사용 되 는/정의 될 수 있습니다.
   - **[기본 제공](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; 셀 TextCell과 ImageCell, 특히 기본 제공 될 수 있습니다, 성능에 좋지 있으므로 각 플랫폼에서 네이티브 컨트롤에 해당 합니다.
-    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; 정보 텍스트가 있는 필요에 따라 텍스트 문자열을 표시 합니다. 세부 정보 텍스트가 강조 색으로 더 작은 글꼴의 두 번째 줄으로 렌더링 됩니다.
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; 텍스트와 이미지를 표시 합니다. 왼쪽에 있는 이미지와 TextCell으로 나타납니다.
+       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; 정보 텍스트가 있는 필요에 따라 텍스트 문자열을 표시 합니다. 세부 정보 텍스트가 강조 색으로 더 작은 글꼴의 두 번째 줄으로 렌더링 됩니다.
+       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; 텍스트와 이미지를 표시 합니다. 왼쪽에 있는 이미지와 TextCell으로 나타납니다.
   - **[사용자 지정 셀](customizing-cell-appearance.md#customcells)**  &ndash; 사용자 지정 셀은 복잡 한 데이터를 제공 해야 하는 경우에 유용 합니다. 예를 들어 앨범 및 아티스트를 포함 하 여 음악의 목록을 표시할 사용자 지정 보기를 사용할 수 있습니다.
 
 ![](images/image-cell-default.png "ImageCells 있는 ListView")

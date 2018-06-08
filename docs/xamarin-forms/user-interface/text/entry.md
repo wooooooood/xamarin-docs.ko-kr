@@ -6,24 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 2e40effa7bc54b7b7cf73edaa882256fed521a95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/31/2018
+ms.openlocfilehash: a45a4edb93920cfe1d0289da44ee664e41c25cf1
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847850"
 ---
 # <a name="entry"></a>입력
 
 _한 줄 텍스트 또는 암호 입력_
 
-Xamarin.Forms `Entry` 한 줄 텍스트 입력에 사용 됩니다. `Entry`를 편집기 보기와 같은 다양 한 키보드 형식을 지원 합니다. 또한 `Entry` 암호 필드로 사용할 수 있습니다.
+Xamarin.Forms는 `Entry` 한 줄 텍스트 입력에 사용 됩니다. `Entry`처럼는 `Editor` 보기에서 다양 한 키보드 형식을 지원 합니다. 또한는 `Entry` 암호 필드로 사용할 수 있습니다.
 
 ## <a name="display-customization"></a>사용자 지정 표시
 
 ### <a name="setting-and-reading-text"></a>설정 하 고 텍스트 읽기
 
-항목 텍스트 표시를 다른 뷰와 마찬가지로 노출 된 `Text` 속성입니다. `Text` 설정 하 고 제공한 텍스트를 읽는 데 사용할 수는 `Entry`합니다. 다음 예제에서는 XAML의 텍스트를 설정 하는 방법을 보여 줍니다.
+`Entry`, 텍스트 표시를 다른 뷰와 마찬가지로 노출 된 `Text` 속성입니다. 이 속성을 설정 하 고에서 제공 된 텍스트를 읽고 사용할 수는 `Entry`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -44,6 +45,20 @@ var text = MyEntry.Text;
 > [!NOTE]
 > 너비는 `Entry` 설정 하 여 정의할 수는 `WidthRequest` 속성입니다. 너비에 의존 하지 않는 한 `Entry` 의 값에 따라 정의 되 고 해당 `Text` 속성입니다.
 
+### <a name="limiting-input-length"></a>입력된 길이 제한합니다.
+
+[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성에 허용 되는 입력된 길이 제한 하려면 사용할 수는 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 이 속성 양의 정수로 설정 해야 합니다.
+
+```xaml
+<Entry ... MaxLength="10" />
+```
+
+```csharp
+var entry = new Entry { ... MaxLength = 10 };
+```
+
+A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 입력 하지 않고 사용할 수 있습니다 및 값 `int.MaxValue`에 대 한 기본 값인는 [ `Entry` ](xref:Xamarin.Forms.Entry), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
+
 ### <a name="keyboards"></a>키보드
 
 사용자가 상호 작용할 때 표시 되는 키보드는 `Entry` 를 통해 프로그래밍 방식으로 설정할 수는 `Keyboard` 속성입니다.
@@ -58,6 +73,23 @@ var text = MyEntry.Text;
 - **Url** &ndash; 파일 경로 웹 주소를 입력 하는 데
 
 한 [각 키보드의 예](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 레시피 섹션에서.
+
+### <a name="enabling-and-disabling-spell-checking"></a>설정 및 해제 맞춤법 검사
+
+[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성 컨트롤 여부 맞춤법 검사를 사용할 수 있습니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 맞춤법 오류가 표시 됩니다.
+
+그러나 사용자 이름, 입력 하는 등 일부 텍스트 항목 시나리오 맞춤법 검사 제공 음수 경험 등 않도록 설정 하 여는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`:
+
+```xaml
+<Entry ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> 경우는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`, 및 사용자 지정 키보드 사용 되 고 있지, 네이티브 맞춤법 검사기를 사용할 수 없습니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 가 된 맞춤법을 비활성화 하는 집합 검사와 같은 [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), `IsSpellCheckEnabled` 속성은 무시 됩니다. 따라서 맞춤법에 대 한 확인을 사용 하는 속성을 사용할 수 없습니다는 `Keyboard` 하가 명시적으로 비활성화 합니다.
 
 ### <a name="placeholders"></a>자리 표시자
 

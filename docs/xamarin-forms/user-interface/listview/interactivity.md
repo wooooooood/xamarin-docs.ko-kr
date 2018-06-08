@@ -6,12 +6,13 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 06/01/2018
+ms.openlocfilehash: 5fe821e7e5254da8febbbde518b9fd42526bf262
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848124"
 ---
 # <a name="listview-interactivity"></a>ListView 상호 작용
 
@@ -111,7 +112,7 @@ ContextActions.Add (deleteAction);
                Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
-             <Label Text="{Binding title}" />
+              <Label Text="{Binding title}" />
          </StackLayout>
       </ViewCell>
     </DataTemplate>
@@ -132,6 +133,9 @@ public void OnDelete (object sender, EventArgs e) {
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
 ```
+
+> [!NOTE]
+> `NavigationPageRenderer` for Android에는 재정의 가능한 `UpdateMenuItemIcon` 사용자 지정에서 아이콘을 로드 하는 데 사용할 수 있는 메서드 `Drawable`합니다. 이 재정의 사용 하면에 아이콘으로 SVG 이미지를 사용 하 여 `MenuItem` Android에서 인스턴스.
 
 <a name="Pull_to_Refresh" />
 

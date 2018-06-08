@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 3b0cba75c8a62d571e82abb3bd2e27cac1e0d075
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af5912736e2a2bd7d3347d4aa199faa3fdfe41c7
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846447"
 ---
 # <a name="triggers"></a>트리거
 
@@ -163,7 +164,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 
 트리거를 공유 하는 경우 주의 해야는 `ResourceDictionary`, 한 번만 구성 된 모든 상태는 모두에 적용 됩니다 하나의 인스턴스만 컨트롤 간에 공유 됩니다.
 
-이벤트 트리거를 지원 하지 않는 `EnterActions` 및 `ExitActions` [아래에 설명 된](#enterexit)합니다.
+이벤트 트리거를 지원 하지 않는 `EnterActions` 및 `ExitActions` [아래에 설명 된](#enterexit)합니다.    
 
 <a name="multi" />
 
@@ -211,7 +212,7 @@ public class MultiTriggerConverter : IValueConverter
         if ((int)value > 0) // length > 0 ?
             return true;            // some data has been entered
         else
-            return false;           // input is empty
+            return false;            // input is empty
     }
 
     public object ConvertBack(object value, Type targetType,

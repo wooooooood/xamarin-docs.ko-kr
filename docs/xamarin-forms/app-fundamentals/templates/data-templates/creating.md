@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: cd4266fb8e7d68a9f93bd169ca70c6a0f516a357
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c04f33f5956eadb677c55e01bea836815ad15462
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848501"
 ---
 # <a name="creating-a-datatemplate"></a>DataTemplate 만들기
 
@@ -291,4 +292,4 @@ public class WithDataTemplatePageCS : ContentPage
 
 - [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
 - [데이터 템플릿 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
-- [DataTemplate](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)
+- [데이터 템플릿](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)

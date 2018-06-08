@@ -6,12 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.date: 05/31/2018
+ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848319"
 ---
 # <a name="editor"></a>편집기
 
@@ -26,7 +27,7 @@ _여러 줄 텍스트 입력_
 
 ### <a name="setting-and-reading-text"></a>설정 하 고 텍스트 읽기
 
-편집기에서 텍스트 표시를 다른 뷰와 마찬가지로 노출 된 `Text` 속성입니다. `Text` 설정 하 고 제공한 텍스트를 읽는 데 사용할 수는 `Editor`합니다. 다음 예제에서는 XAML에서는 텍스트를 설정을 보여 줍니다.
+`Editor`, 텍스트 표시를 다른 뷰와 마찬가지로 노출 된 `Text` 속성입니다. 이 속성을 설정 하 고에서 제공 된 텍스트를 읽고 사용할 수는 `Editor`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -44,6 +45,20 @@ var MyEditor = new Editor { Text = "I am an Editor" };
 var text = MyEditor.Text;
 ```
 
+### <a name="limiting-input-length"></a>입력된 길이 제한합니다.
+
+[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성에 허용 되는 입력된 길이 제한 하려면 사용할 수는 [ `Editor` ](xref:Xamarin.Forms.Editor)합니다. 이 속성 양의 정수로 설정 해야 합니다.
+
+```xaml
+<Editor ... MaxLength="10" />
+```
+
+```csharp
+var editor = new Editor { ... MaxLength = 10 };
+```
+
+A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 입력 하지 않고 사용할 수 있습니다 및 값 `int.MaxValue`에 대 한 기본 값인는 [ `Editor` ](xref:Xamarin.Forms.Editor), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
+
 ### <a name="keyboards"></a>키보드
 
 사용자가 상호 작용할 때 표시 되는 키보드는 `Editor` 를 통해 프로그래밍 방식으로 설정할 수는 [ ``Keyboard`` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) 속성입니다.
@@ -58,6 +73,23 @@ var text = MyEditor.Text;
 - **Url** &ndash; 파일 경로 및 웹 주소를 입력 하는 데
 
 한 [각 키보드의 예](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 레시피 섹션에서.
+
+### <a name="enabling-and-disabling-spell-checking"></a>설정 및 해제 맞춤법 검사
+
+[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성 컨트롤 여부 맞춤법 검사를 사용할 수 있습니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 맞춤법 오류가 표시 됩니다.
+
+그러나 사용자 이름, 입력 하는 등 일부 텍스트 항목 시나리오 맞춤법 검사 제공 음수 경험 등 않도록 설정 하 여는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`:
+
+```xaml
+<Editor ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var editor = new Editor { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> 경우는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`, 및 사용자 지정 키보드 사용 되 고 있지, 네이티브 맞춤법 검사기를 사용할 수 없습니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 가 된 맞춤법을 비활성화 하는 집합 검사와 같은 [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), `IsSpellCheckEnabled` 속성은 무시 됩니다. 따라서 맞춤법에 대 한 확인을 사용 하는 속성을 사용할 수 없습니다는 `Keyboard` 하가 명시적으로 비활성화 합니다.
 
 ### <a name="colors"></a>색
 
