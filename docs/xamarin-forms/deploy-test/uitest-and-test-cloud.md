@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: f671f31dcc0aaf339a7c9f3d6465f4777a8f7f7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71084aaaaf335473a425bc988c2bb17437cfbb70
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847357"
 ---
 # <a name="automate-xamarinforms-testing-with-xamarinuitest-and-app-center"></a>Xamarin.UITest 및 App Center를 사용하여 Xamarin.Forms 테스트 자동화
 
@@ -19,7 +20,7 @@ _Xamarin UITest 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우�
 
 ## <a name="overview"></a>개요
 
-**[App Center 테스트](/appcenter/test-cloud/)**는 개발자가 iOS 및 Android 앱에 대한 자동화된 사용자 인터페이스 테스트를 작성할 수 있게 해줍니다. 동일한 테스트 코드를 공유하는 등의 사소한 변경으로 Xamarin.UITest를 사용하여 Xamarin.Forms 앱을 테스트할 수 있습니다. 이 아티클에서는 Xamarin.UITest가 Xamarin.Forms와 함께 작동하도록 하기 위한 자세한 팁을 소개합니다.
+**[App Center 테스트](/appcenter/test-cloud/)** 는 개발자가 iOS 및 Android 앱에 대한 자동화된 사용자 인터페이스 테스트를 작성할 수 있게 해줍니다. 동일한 테스트 코드를 공유하는 등의 사소한 변경으로 Xamarin.UITest를 사용하여 Xamarin.Forms 앱을 테스트할 수 있습니다. 이 아티클에서는 Xamarin.UITest가 Xamarin.Forms와 함께 작동하도록 하기 위한 자세한 팁을 소개합니다.
 
 이 가이드에서는 Xamarin.UITest에 익숙하다고 가정합니다. Xamarin.UITest에 익숙해지려면 다음 가이드를 참조하는 것이 좋습니다.
 
