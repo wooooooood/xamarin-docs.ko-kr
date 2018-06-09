@@ -1,16 +1,18 @@
 ---
 title: 요약 장 23입니다. 트리거 및 동작
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 23 장의 요약 합니다. 트리거 및 동작'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: f83a93fb5d101a7acd0a67903813dba1ba2bf8b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e5609a3df94914594d6547d9a1887078d282127
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241285"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 장 23입니다. 트리거 및 동작
 

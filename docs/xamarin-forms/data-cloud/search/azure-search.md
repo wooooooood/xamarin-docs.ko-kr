@@ -1,17 +1,18 @@
 ---
 title: Azure 검색 데이터를 검색합니다.
-description: Azure 검색은 인덱싱 및 쿼리 업로드 된 데이터에 대 한 기능을 제공 하는 클라우드 서비스입니다. 인프라 요구 사항 및 응용 프로그램에서 검색 기능을 구현 하는과 관련 된 검색 알고리즘 복잡성 제거 합니다. 이 문서에서는 Azure 검색 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure 검색 라이브러리를 사용 하는 방법을 보여줍니다.
+description: 이 문서에서는 Azure 검색 Xamarin.Forms 응용 프로그램에 통합 하는 Microsoft Azure 검색 라이브러리를 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: b0542b330e54a41a0cbe6ffe364def78ab6386b8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb1ebec25d747f1188f39e9c9032145bcdc3cb97
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242130"
 ---
 # <a name="searching-data-with-azure-search"></a>Azure 검색 데이터를 검색합니다.
 

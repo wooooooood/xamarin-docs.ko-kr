@@ -1,5 +1,5 @@
 ---
-title: 모달 페이지
+title: Xamarin.Forms 모달 페이지
 description: Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에 모달 페이지를 탐색 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 30d0371e0eaa31673561ae12c7a46b7a7819a647
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 4540ac006993a46cb0ead9346c1cb960ac631926
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847421"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240140"
 ---
-# <a name="modal-pages"></a>모달 페이지
+# <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
 _Xamarin.Forms 모달 페이지에 대 한 지원을 제공합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에 모달 페이지를 탐색 하는 방법을 보여 줍니다._
 

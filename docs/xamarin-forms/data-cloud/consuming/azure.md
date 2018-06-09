@@ -1,17 +1,18 @@
 ---
 title: Azure 모바일 앱 사용
-description: Azure 모바일 앱을 사용 하 여 확장 가능한 백 엔드 모바일 인증, 오프 라인 동기화 및 푸시 알림을 지 원하는 Azure 앱 서비스에서 호스트 된 앱을 개발할 수 있습니다. Node.js 백 엔드를 사용 하는 Azure 모바일 앱에 적용할 수만,이 문서에서는 쿼리, 삽입, 업데이트 및 Azure 모바일 앱 인스턴스 테이블에 저장 된 데이터를 삭제 하는 방법을 설명 합니다.
+description: Node.js 백 엔드를 사용 하는 Azure 모바일 앱에 적용할 수만,이 문서에서는 쿼리, 삽입, 업데이트 및 Azure 모바일 앱 인스턴스 테이블에 저장 된 데이터를 삭제 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241333"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Azure 모바일 앱 사용
 

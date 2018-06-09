@@ -1,20 +1,20 @@
 ---
-title: 앱 수명 주기
-description: 응용 프로그램 수명 주기에 응답 하는 방법
+title: Xamarin.Forms 앱 수명 주기
+description: 이 문서에서는 수명 주기 메서드, 페이지 탐색 이벤트 및 모달 탐색 이벤트를 포함 하 여 응용 프로그램 수명 주기에 응답 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 69B416CF-B243-4790-AB29-F030B32465BE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: a22ad8f3f272212f5c7f088ba2112f2771ff4a7f
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: fb651494b63a77ede47dd246ee054b5c67af2a35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846346"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240271"
 ---
-# <a name="app-lifecycle"></a>앱 수명 주기
+# <a name="xamarinforms-app-lifecycle"></a>Xamarin.Forms 앱 수명 주기
 
 [ `Application` ](xref:Xamarin.Forms.Application) 기본 클래스는 다음과 같은 기능을 제공 합니다.
 

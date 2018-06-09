@@ -1,19 +1,20 @@
 ---
-title: 매트릭스 변환
-description: 자세하게 다양 한 변환 매트릭스와 SkiaSharp 변환
+title: SkiaSharp의 매트릭스 변환
+description: 이 문서에 다양 한 변환 매트릭스와 SkiaSharp 변환 깊은 다이브 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90fadf0081f86e7739d75c0710caeaf1775c423e
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 816a5f47a4a4f5c01a1fb20b5c8e7a2fc83a64b0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244879"
 ---
-# <a name="matrix-transforms"></a>매트릭스 변환
+# <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 매트릭스 변환
 
 _자세하게 다양 한 변환 매트릭스와 SkiaSharp 변환_
 
@@ -129,9 +130,9 @@ y' ySkew · = x + y
 
 다음은 변형 수식입니다.
 
-x' = cos(α) · x - sin(α) · y
+x' cos(α) · = x-sin(α) · y
 
-y' = sin(α) · x - cos(α) · y
+y' sin(α) · = x-cos(α) · y
 
 Α 0도 이면 id 행렬 인지 합니다. Α 180도 이면 변환 매트릭스는 다음과 같습니다.
 
@@ -227,7 +228,7 @@ canvas.Translate(–px, –py);
 
 x' ScaleX · = x + SkewX · y + TransX
 
-y' = SkewX · x + ScaleY · y + TransY
+y' SkewX · = x + ScaleY · y + TransY
 
 z' = 1
 
@@ -358,7 +359,7 @@ SKMatrix.PostConcat(ref A, C);
 
 이므로 일련 연속 곱하기의 결과 다음과 같습니다.
 
-A × B × C
+× B × C
 
 연속 된 곱하기 각 변환을 수행 하는 작업을 이해 하는 데 도움이 됩니다. 배율 변환을 좌표 –300에서 300 사이 있으므로 3 배 경로 좌표의 크기를 늘립니다. 회전 변환을 별 원본 주위를 회전합니다. 이동 변환 후 이동 및 양의 될 모든 좌표의 아래쪽 300 픽셀 오른쪽 여 합니다.
 

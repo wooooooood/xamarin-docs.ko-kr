@@ -1,17 +1,18 @@
 ---
 title: 유사 형식이 아닌 변형
-description: 변환 행렬의 세 번째 열이 있는 테이퍼 효과 및 큐브 만들기
+description: 이 문서를 변환 매트릭스의 세 번째 열으로 테이퍼 효과 및 큐브를 만드는 방법을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 03c5b0dcbb7870e38991d7e0f4c7ac4feebfcf4e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244235"
 ---
 # <a name="non-affine-transforms"></a>유사 형식이 아닌 변형
 
@@ -39,7 +40,7 @@ x' = ScaleX·x + SkewX·y + TransX
 
 y' = SkewY·x + ScaleY·y + TransY
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y + Persp2
 
 2 차원 변환에는 3 x 3 매트릭스를 사용 하 여의 기본 규칙은 모든 하 게 유지 되도록 평면에 Z = 1입니다. 하지 않는 한 `Persp0` 및 `Persp1` 는 0으로, 및 `Persp2` 가 1 이면 변환을 Z 좌표 평면 오프 이동 되었습니다.
 
@@ -59,7 +60,7 @@ z" = z' / z' = 1
 
 이 수식에 원하지 않는 z 값 ' 0이 되 고 있습니다.
 
-z` = Persp0·x + Persp1·y + Persp2
+z' = Persp0·x + Persp1·y + Persp2
 
 `Persp2` 0 또는 0이 아니면 셀 일 수 있습니다. 경우 `Persp2` 가 0 이면 z' 지점 (0, 0)에 대 한 0이 고 없는 일반적으로 바람직하지 해당 지점 2 차원 그래픽에서 매우 흔히 이므로 합니다. 경우 `Persp2` 경우 generality 손실 없이 0과 같지 않은 `Persp2` 1로 고정 됩니다. 예를 들어 판단 하 `Persp2` 수 단순히 행렬의 모든 셀으로 나누면 5, 낮추는 다음 5, 해야 `Persp2` 1로 동일 하며 결과 동일 합니다.
 
@@ -87,7 +88,7 @@ y' = y / (0.01·x + 1)
 
 (100, 0) → (50, 0)
 
-(100, 100) → (50, 50)
+(100, 100) (50, 50) →
 
 때 x가 100, z' 분모 이므로 2, x 및 y 좌표는 반으로 축소 합니다. 오른쪽 상자의 왼쪽 보다 짧은 됩니다.
 
@@ -230,7 +231,7 @@ public partial class TestPerspectivePage : ContentPage
 
 슬라이더를 시도할 때 –0.0066 이하일 0.0066 이외의 값은 이미지의 갑자기 분열 된 및 일관 되지 않도록 찾을 수 있습니다. 변환할 비트맵 300 픽셀 사각형입니다. 비트맵의 좌표에서에서 까지의 –150 150 하므로 중심을 기준으로 변환 됩니다. 이전에 설명한 대로 z 값 ' 됩니다.
 
-z` = Persp0·x + Persp1·y + 1
+z' Persp0·x + Persp1·y + 1 =
 
 경우 `Persp0` 또는 `Persp1` 0.0066 보다 크면 –0.0066, 아래의 다음은 언제나 있기 마련 a에서 z 발생 하는 비트맵의 일부 좌표 또는 ' 값이 0입니다. 0으로 나누기 일으키는 되 고 렌더링 복잡해 됩니다. 유사 형식이 아닌 변형을 사용할 때 렌더링 하는 0으로 나누기 발생 하는 좌표를 사용 하 여 작업을 방지 하려고 합니다.
 

@@ -1,20 +1,20 @@
 ---
-title: BoxView
-description: 장식, 그래픽 및 상호 작용에 대 한 색이 지정 된 사각형을 사용 합니다.
+title: Xamarin.Forms BoxView
+description: 이 문서에 장식, 그래픽 및 Xamarin.Forms 응용 프로그램에서 상호 작용에 대 한 색이 지정 된 사각형을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 356d0effe55638902b6ee599a0d9fb7e9b8ade2d
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: edb2785362f2cc7377d9adb0c1a89a6fa2b08111
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848410"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244317"
 ---
-# <a name="boxview"></a>BoxView
+# <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
 [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 지정 된 너비, 높이 및 색상의 간단한 사각형을 렌더링합니다. 사용할 수 있습니다 `BoxView` 데코레이션에 기초적인 그래픽 및 터치를 통해 사용자와 상호 작용 합니다.
 
@@ -45,7 +45,7 @@ Xamarin.Forms에 기본 제공 벡터 그래픽 시스템 없기 때문에 `BoxV
 
 `WidthRequest` 및 `HeightRequest` 속성만 역할을 하는 경우는 `BoxView` 은 *무제한* 레이아웃에서 합니다. 레이아웃 컨테이너를 자식의, 예를 들어 시 크기를 알고 있어야 하는 경우이 대/소문자는 `BoxView` 의 자동 크기 셀 자식인는 `Grid` 레이아웃 합니다. A `BoxView` 하지 않으면 제약 조건이 지정 된 경우 해당 `HorizontalOptions` 및 `VerticalOptions` 속성이 아닌 다른 값으로 설정 된 `LayoutOptions.Fill`합니다. 경우는 `BoxView` , 제약을 받지 않는 있지만 `WidthRequest` 및 `HeightRequest` 속성이 설정 되지 않은 다음 너비 또는 높이가 40 단위 또는 약 1/4 인치 모바일 장치에서의 기본 값으로 설정 됩니다.
 
-`WidthRequest` 및 `HeightRequest` 속성은 무시 됩니다는 `BoxView` 은 *제한* 경우 레이아웃 컨테이너 자체 크기에 부과 레이아웃에는 `BoxView`합니다. 
+`WidthRequest` 및 `HeightRequest` 속성은 무시 됩니다는 `BoxView` 은 *제한* 경우 레이아웃 컨테이너 자체 크기에 부과 레이아웃에는 `BoxView`합니다.
 
 A `BoxView` 에서 하나 이상의 차원을 제한 하 고 다른 제약 받지 않을 수 있습니다. 예를 들어 경우는 `BoxView` 세로의 자식인 `StackLayout`의 세로 크기는 `BoxView` 은 제약 없이 및 가로 크기는 일반적으로 제한 됩니다. 되지만 가로 해당 차원에 대 한 예외가: 경우는 `BoxView` 가 해당 `HorizontalOptions` 아닌 다른 값으로 설정 하는 속성 `LayoutOptions.Fill`, 가로 방향도 제한 되지 않습니다. 에 대 한도 가능는 `StackLayout` 자체는 쿼리에서 제한 되지 않은 가로 차원에는 `BoxView` 됩니다 가로 방향으로 제한 합니다.
 
@@ -60,7 +60,7 @@ A `BoxView` 에서 하나 이상의 차원을 제한 하 고 다른 제약 받�
     <BoxView Color="CornflowerBlue"
              WidthRequest="160"
              HeightRequest="160"
-             VerticalOptions="Center" 
+             VerticalOptions="Center"
              HorizontalOptions="Center" />
 
 </ContentPage>
@@ -149,7 +149,7 @@ XAML 파일에는 `AbsoluteLayout` 나옵니다는 `Label` 설명 하는 텍스�
 <BoxView HeightRequest="3" />
 ```
 
-둘 다 포함 하 여 텍스트 단락을의 한 쪽에 세로 선이 그릴 수는 마지막으로 `BoxView` 및 `Label` 를 수평 `StackLayout`합니다. 이 경우의 높이 `BoxView` 의 높이와 같습니다 `StackLayout`의 높이 의해 관리 하는 `Label`: 
+둘 다 포함 하 여 텍스트 단락을의 한 쪽에 세로 선이 그릴 수는 마지막으로 `BoxView` 및 `Label` 를 수평 `StackLayout`합니다. 이 경우의 높이 `BoxView` 의 높이와 같습니다 `StackLayout`의 높이 의해 관리 하는 `Label`:
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -242,7 +242,7 @@ public class NamedColor
 }
 ```
 
-프로그램 시각적 개체는 XAML 파일에 설명 되어 있습니다. `ItemsSource` 속성의는 `ListView` static로 설정 되어 `NamedColor.All` 속성 즉는 `ListView` 모든 개별 표시 `NamedColor` 개체: 
+프로그램 시각적 개체는 XAML 파일에 설명 되어 있습니다. `ItemsSource` 속성의는 `ListView` static로 설정 되어 `NamedColor.All` 속성 즉는 `ListView` 모든 개별 표시 `NamedColor` 개체:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -290,7 +290,7 @@ public class NamedColor
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentPage> 
+</ContentPage>
 ```
 
 `NamedColor` 하 여 서식이 지정 된 개체는 `ViewCell` 의 데이터 템플릿으로 설정 된 개체는 `ListView`합니다. 이 템플릿에는 `BoxView` 인 `Color` 속성이 바인딩되는 `Color` 속성은 `NamedColor` 개체입니다.
@@ -388,15 +388,15 @@ public partial class MainPage : ContentPage
     static readonly int[, ,] numberPatterns = new int[10, 7, 5]
     {
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1},
             { 1, 1, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, 
+            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0},
             { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0},
             { 0, 0, 1, 0, 0}, { 0, 1, 0, 0, 0}, { 1, 1, 1, 1, 1}
         },
         {
@@ -404,27 +404,27 @@ public partial class MainPage : ContentPage
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0}, 
+            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0},
             { 1, 1, 1, 1, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 0, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1}, 
+            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1},
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, 
+            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0}, 
+            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0},
             { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1},
             { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 1, 1, 0, 0}
         },
     };
@@ -528,24 +528,24 @@ public partial class MainPage : ContentPage
 }
 ```
 
-이 프로그램에 상대 위치 및 크기 조정 기능을 사용 하 여 `AbsoluteLayout`합니다. 너비와 높이는 각 `BoxView` 소수 자릿수 값, 특히 85 %1의 가로 및 세로 점 수로 나눈 값으로 설정 됩니다. 위치 소수 값으로 설정 됩니다. 
+이 프로그램에 상대 위치 및 크기 조정 기능을 사용 하 여 `AbsoluteLayout`합니다. 너비와 높이는 각 `BoxView` 소수 자릿수 값, 특히 85 %1의 가로 및 세로 점 수로 나눈 값으로 설정 됩니다. 위치 소수 값으로 설정 됩니다.
 
 모든 위치 및 크기의 전체 크기를 기준으로 때문에 `AbsoluteLayout`, `SizeChanged` 페이지에 대 한 처리기만 설정할 필요는 `HeightRequest` 의 `AbsoluteLayout`:
 
 ```csharp
 public partial class MainPage : ContentPage
 {
-    
+
     ···
-    
+
     void OnPageSizeChanged(object sender, EventArgs args)
     {
         // No chance a display will have an aspect ratio > 41:7
         absoluteLayout.HeightRequest = vertDots * Width / horzDots;
     }
-    
+
     ···
-    
+
 }
 ```
 
@@ -556,9 +556,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
-   
+
     ···
- 
+
     bool OnTimer()
     {
         DateTime dateTime = DateTime.Now;
@@ -596,7 +596,7 @@ public partial class MainPage : ContentPage
 
 [![BoxView 클록](boxview-images/boxviewclock-small.png "BoxView 클록")](boxview-images/boxviewclock-large.png#lightbox "BoxView 클록")
 
-모든 시각적 개체는 [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) 프로그램 자식 요소인는 `AbsoluteLayout`합니다. 사용 하 여 이러한 요소는 크기는 `LayoutBounds` 연결 된 속성을 사용 하 여 회전 및는 `Rotation` 속성입니다. 
+모든 시각적 개체는 [ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/) 프로그램 자식 요소인는 `AbsoluteLayout`합니다. 사용 하 여 이러한 요소는 크기는 `LayoutBounds` 연결 된 속성을 사용 하 여 회전 및는 `Rotation` 속성입니다.
 
 세 개의 `BoxView` 시계 바늘에 대 한 요소는 XAML 파일에서 인스턴스화될 배치 또는 안 크기:
 
@@ -613,13 +613,13 @@ public partial class MainPage : ContentPage
 
     <AbsoluteLayout x:Name="absoluteLayout"
                     SizeChanged="OnAbsoluteLayoutSizeChanged">
-        
+
         <BoxView x:Name="hourHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="minuteHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="secondHand"
                  Color="Black" />
     </AbsoluteLayout>
@@ -631,9 +631,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
-      
+
     ···
- 
+
     BoxView[] tickMarks = new BoxView[60];
 
     public MainPage()
@@ -649,9 +649,9 @@ public partial class MainPage : ContentPage
 
         Device.StartTimer(TimeSpan.FromSeconds(1.0 / 60), OnTimerTick);
     }
-  
+
     ···
- 
+
 }
 ```
 
@@ -678,9 +678,9 @@ public partial class MainPage : ContentPage
     static readonly HandParams secondParams = new HandParams(0.02, 1.1, 0.85);
     static readonly HandParams minuteParams = new HandParams(0.05, 0.8, 0.9);
     static readonly HandParams hourParams = new HandParams(0.125, 0.65, 0.9);
- 
+
     ···
- 
+
  }
 ```
 
@@ -689,9 +689,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
- 
+
     void OnAbsoluteLayoutSizeChanged(object sender, EventArgs args)
     {
         // Get the center and radius of the AbsoluteLayout.
@@ -729,9 +729,9 @@ public partial class MainPage : ContentPage
         // Set the AnchorY property for rotations.
         boxView.AnchorY = handParams.Offset;
     }
- 
+
     ···
- 
+
 }
 ```
 
@@ -742,9 +742,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
-     
+
     bool OnTimerTick()
     {
         // Set rotation angles for hour and minute hands.

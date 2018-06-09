@@ -1,16 +1,18 @@
 ---
 title: 장치의 비디오 라이브러리 액세스
+description: 이 문서에서는 Xamarin.Forms를 사용 하는 비디오 플레이어 응용 프로그램에서 장치의 비디오 라이브러리 액세스 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0f58a4a53d41c23e993f8b8b89b3fca44e0733d
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7e9f7ad93ae8828155847b923cb2779b3146f63e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240702"
 ---
 # <a name="accessing-the-devices-video-library"></a>장치의 비디오 라이브러리 액세스
 

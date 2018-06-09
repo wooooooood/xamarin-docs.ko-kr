@@ -1,17 +1,18 @@
 ---
 title: XAML (미리 보기) 표준 컨트롤
-description: Xamarin.forms에서는 XAML 표준 미리 보기를 탐색을 시작 하는 방법
+description: 이 문서는 Xamarin.Forms에 사용할 수 있는 XAML 표준 컨트롤을 탐색합니다.
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 2fc7fb9581f344e0d54bd9f690d334eda78cc97a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b01d0773f0c2150db575875b770957eb6452f41
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245573"
 ---
 # <a name="xaml-standard-preview-controls"></a>XAML (미리 보기) 표준 컨트롤
 
@@ -39,14 +40,14 @@ ms.lasthandoff: 04/04/2018
 
 |업데이트 된 속성을 사용 하 여 Xamarin.Forms 컨트롤|Xamarin.Forms 속성 또는 열거형|XAML 표준 해당 키|
 |--- |--- |--- |
-|Button, Entry, Label, DatePicker, Editor, SearchBar, TimePicker|TextColor|Foreground|
+|단추, 항목, 레이블, DatePicker, 편집기, SearchBar, TimePicker|TextColor|Foreground|
 |VisualElement|BackgroundColor|배경 *|
 |코드 조각 선택기 단추|BorderColor, OutlineColor|BorderBrush|
 |단추|BorderWidth|BorderThickness|
 |ProgressBar|진행률|값|
-|단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributesBold, Italic, None|FontStyleItalic, Normal|
-|단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributes|FontWeights *Bold, Normal|
-|InputView|KeyboardDefault, Url, 숫자, 전화, 텍스트, 채팅을 전자 메일로 보내기|InputScopeNameValue *Default, Url, Number, TelephoneNumber, Text, Chat, EmailNameOrAddress|
+|단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributesBold, 기울임꼴, 없음|FontStyleItalic, 보통|
+|단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributes|FontWeights * 굵게, 일반|
+|InputView|KeyboardDefault, Url, 숫자, 전화, 텍스트, 채팅을 전자 메일로 보내기|InputScopeNameValue * 기본, Url, 숫자, TelephoneNumber, 텍스트, 채팅, EmailNameOrAddress|
 |StackPanel|StackOrientation|방향 *|
 
 > [!IMPORTANT]

@@ -1,17 +1,18 @@
 ---
 title: 3 부 합니다. XAML 태그 확장
-description: XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값을 설정 하는 속성을 허용 하는 XAML에 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하기 위해 특히 중요 하지만 활용도 가장 큰 데이터 바인딩을 찾습니다.
+description: XAML 태그 확장 개체 또는 다른 소스에서 직접 참조 되는 값을 설정 하는 속성을 허용 하는 XAML에 중요 한 기능을 구성 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245913"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부 합니다. XAML 태그 확장
 
@@ -321,8 +322,8 @@ Xamarin.Forms는 가장 일반적인 유형의 리소스 사전에 저장 된 �
 
 - 공용 정적 필드
 - 공용 정적 속성
-- 공용 상수 필드 
-- 열거형 멤버입니다. 
+- 공용 상수 필드
+- 열거형 멤버입니다.
 
 `StaticResource` 리소스 사전 정의 하는 XAML 구현에서 태그 확장은 지원 동안 `x:Static` 은 XAML의 내장 부분으로는 `x` 접두사를 보여 줍니다.
 
@@ -366,7 +367,7 @@ namespace XamlSamples
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(40, FontAttributes.Bold);
                     break;
-                    
+
                 case Device.UWP:
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(50, FontAttributes.Bold);

@@ -1,20 +1,20 @@
 ---
-title: DataTemplateSelector 만들기
-description: 데이터 바인딩된 속성의 값에 따라 런타임에 DataTemplate을 선택 하는 DataTemplateSelector는 사용할 수 있습니다. 이렇게 하면 여러 DataTemplates 동일한 유형의 특정 개체의 모양을 사용자 지정할 개체에 적용 될 수 있습니다. 이 문서를 만들고는 DataTemplateSelector를 사용 하는 방법을 보여 줍니다.
+title: Xamarin.Forms DataTemplateSelector 만들기
+description: 이 문서를 만들고 데이터 바인딩된 속성의 값에 따라 런타임에 DataTemplate을 선택 하는 데 사용할 수 있는 DataTemplateSelector를 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ad8cce32cb9cfe2ea5e78f11b1250440371a9851
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5e1f9e4ef3aa7f9c415427e280d9bdd05dfbd13c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847194"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240654"
 ---
-# <a name="creating-a-datatemplateselector"></a>DataTemplateSelector 만들기
+# <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
 
 _데이터 바인딩된 속성의 값에 따라 런타임에 DataTemplate을 선택 하는 DataTemplateSelector는 사용할 수 있습니다. 이렇게 하면 여러 DataTemplates 동일한 유형의 특정 개체의 모양을 사용자 지정할 개체에 적용 될 수 있습니다. 이 문서를 만들고는 DataTemplateSelector를 사용 하는 방법을 보여 줍니다._
 

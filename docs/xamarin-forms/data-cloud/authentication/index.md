@@ -1,17 +1,18 @@
 ---
 title: 웹 서비스에 대 한 액세스 인증
-description: 이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다. 다른 공급자가 제공 하는 기본 제공 인증 메커니즘을 사용 하 여 및 Xamarin.Auth 구성 요소를 사용 하 여 OAuth id 공급자에 대해 인증 하는 REST 서비스와 함께 기본 인증을 사용 하 여 주제를 다룹니다 포함 됩니다.
+description: 이 가이드에서는 사용자가 백 엔드만 자신의 데이터에 대 한 액세스 권한을 보유 함으로써 공유할 수 있도록 Xamarin.Forms 응용 프로그램에 인증 서비스를 통합 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: d598a9b3de31ea6823530f911c3544bf3cebb37f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240689"
 ---
 # <a name="authenticating-access-to-web-services"></a>웹 서비스에 대 한 액세스 인증
 

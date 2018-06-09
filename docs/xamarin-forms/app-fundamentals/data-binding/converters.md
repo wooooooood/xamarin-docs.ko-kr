@@ -1,19 +1,20 @@
 ---
-title: 바인딩 값 변환기
-description: 캐스팅 하거나 데이터 바인딩 내에서 값으로 변환
+title: Xamarin.Forms 바인딩 값 변환기
+description: 이 문서에서는 캐스팅 하거나 (이 라고도 바인딩 변환기 또는 바인딩 값 변환기)는 값 변환기를 구현 하 여 Xamarin.Forms 데이터 바인딩 내에서 값을 변환 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241831"
 ---
-# <a name="binding-value-converters"></a>바인딩 값 변환기
+# <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
 
 데이터 바인딩은 일반적으로 데이터 원본 속성의 대상 속성에 및 전송 소스 속성에 대상 속성에서 일부 경우에 합니다. 이 이전은 한 형식 변환 하는 암시적 변환을 통해 다른 형식으로 변환할 수 있을 경우 또는 동일한 유형의 원본 및 대상 속성 때 간단 합니다. 하지 않은 경우 형식 변환을 수행 해야 합니다.
 

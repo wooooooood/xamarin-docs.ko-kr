@@ -1,19 +1,20 @@
 ---
-title: 사용자 지정 렌더러
-description: Xamarin.Forms 사용자 인터페이스는 각 플랫폼에 대 한 적절 한 모양 및 느낌을 유지 하려면 Xamarin.Forms 응용 프로그램의 대상 플랫폼에 네이티브 컨트롤을 사용 하 여 렌더링 됩니다. 사용자 지정 렌더러 모양 및 Xamarin.Forms는 각 플랫폼에 있는 컨트롤의 동작을 사용자 지정 하려면이 프로세스를 재정의 하는 개발자를 수 있습니다.
+title: Xamarin.Forms 사용자 지정 렌더러
+description: 사용자 지정 렌더러 모양 및 Xamarin.Forms 컨트롤의 동작을 사용자 지정 하려면 각 플랫폼에서 네이티브 컨트롤의 렌더링을 재정의 하는 개발자를 수 있습니다.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239892"
 ---
-# <a name="custom-renderers"></a>사용자 지정 렌더러
+# <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러
 
 _Xamarin.Forms 사용자 인터페이스는 각 플랫폼에 대 한 적절 한 모양 및 느낌을 유지 하려면 Xamarin.Forms 응용 프로그램의 대상 플랫폼에 네이티브 컨트롤을 사용 하 여 렌더링 됩니다. 사용자 지정 렌더러 모양 및 Xamarin.Forms는 각 플랫폼에 있는 컨트롤의 동작을 사용자 지정 하려면이 프로세스를 재정의 하는 개발자를 수 있습니다._
 
@@ -55,7 +56,7 @@ Xamarin.Forms 사용자 지정 사용자 인터페이스 정의에서 파생 되
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[비디오 플레이어를 구현합니다.](video-player/index.md)
 
-이 문서에서는 사용자 지정을 구현 하는 렌더러를 작성 하는 방법을 보여 줍니다. `VideoPlayer` 웹, 응용 프로그램 리소스로 포함 하는 비디오 또는 사용자의 장치에서 비디오 라이브러리에 저장 된 비디오의 비디오를 재생할 수 있는 컨트롤입니다. 몇 가지 기법을 구현 하는 메서드 및 바인딩 가능한 읽기 전용 속성을 포함 하 여 보여 줍니다. 
+이 문서에서는 사용자 지정을 구현 하는 렌더러를 작성 하는 방법을 보여 줍니다. `VideoPlayer` 웹, 응용 프로그램 리소스로 포함 하는 비디오 또는 사용자의 장치에서 비디오 라이브러리에 저장 된 비디오의 비디오를 재생할 수 있는 컨트롤입니다. 몇 가지 기법을 구현 하는 메서드 및 바인딩 가능한 읽기 전용 속성을 포함 하 여 보여 줍니다.
 
 
 ## <a name="related-links"></a>관련 링크

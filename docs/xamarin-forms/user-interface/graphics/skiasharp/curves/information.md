@@ -1,17 +1,18 @@
 ---
 title: 경로 정보 및 열거형
-description: 경로 대 한 정보를 가져오고 내용 열거
+description: 이 문서는 SkiaSharp 경로 대 한 정보를 가져오고의 내용을 열거 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243794"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -27,7 +28,7 @@ _경로 대 한 정보를 가져오고 내용 열거_
 
 ## <a name="getting-the-path-length"></a>경로 길이 가져오기
 
-문서에서 [ **경로 및 텍스트** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) 사용 하는 방법을 알아보았습니다는 [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) 메서드 인 초기 패스의 과정을 따릅니다 텍스트 문자열을 그립니다. 하지만 경로 정확 하 게 맞도록 텍스트 크기를 조정 하면 어떨까요? 원 주위 텍스트를 그리기 위한 쉽게 때문에 이것이 원의 원주를 계산 하기는 합니다. 하지만 되는 타원의 원 둘레 또는 베 지 어 곡선의 길이로 그리 간단 하지 않습니다. 
+문서에서 [ **경로 및 텍스트** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) 사용 하는 방법을 알아보았습니다는 [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) 메서드 인 초기 패스의 과정을 따릅니다 텍스트 문자열을 그립니다. 하지만 경로 정확 하 게 맞도록 텍스트 크기를 조정 하면 어떨까요? 원 주위 텍스트를 그리기 위한 쉽게 때문에 이것이 원의 원주를 계산 하기는 합니다. 하지만 되는 타원의 원 둘레 또는 베 지 어 곡선의 길이로 그리 간단 하지 않습니다.
 
 [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 클래스 수입니다. [생성자](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) 허용는 `SKPath` 인수 및 [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) 속성의 길이 보여 줍니다.
 
@@ -151,7 +152,7 @@ public class UnicycleHalfPipePage : ContentPage
     };
 
     SKPath unicyclePath = SKPath.ParseSvgPathData(
-        "M 0 0" + 
+        "M 0 0" +
         "A 25 25 0 0 0 0 -50" +
         "A 25 25 0 0 0 0 0 Z" +
         "M 0 -25 L 0 -100" +
@@ -179,7 +180,7 @@ public class UnicycleHalfPipePage : ContentPage
         using (SKPath pipePath = new SKPath())
         {
             pipePath.MoveTo(50, 50);
-            pipePath.CubicTo(0, 1.25f * info.Height, 
+            pipePath.CubicTo(0, 1.25f * info.Height,
                              info.Width - 0, 1.25f * info.Height,
                              info.Width - 50, 50);
 
@@ -197,7 +198,7 @@ public class UnicycleHalfPipePage : ContentPage
                 t = (float)((1 - Math.Cos(t * 2 * Math.PI)) / 2);
 
                 SKMatrix matrix;
-                pathMeasure.GetMatrix(t * length, out matrix, 
+                pathMeasure.GetMatrix(t * length, out matrix,
                                       SKPathMeasureMatrixFlags.GetPositionAndTangent);
 
                 canvas.SetMatrix(matrix);
@@ -426,7 +427,7 @@ static class PathExtensions
 
 [![](information-images/globulartext-small.png "Globular 텍스트 페이지의 삼중 스크린샷")](information-images/globulartext-large.png#lightbox "Globular 텍스트 페이지의 삼중 스크린 샷")
 
-[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드: 
+[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드:
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -453,9 +454,9 @@ public class GlobularTextPage : ContentPage
 
                 globePath = textPath.CloneWithTransform((SKPoint pt) =>
                 {
-                    double longitude = (Math.PI / textPathBounds.Width) * 
+                    double longitude = (Math.PI / textPathBounds.Width) *
                                             (pt.X - textPathBounds.Left) - Math.PI / 2;
-                    double latitude = (Math.PI / textPathBounds.Height) * 
+                    double latitude = (Math.PI / textPathBounds.Height) *
                                             (pt.Y - textPathBounds.Top) - Math.PI / 2;
 
                     longitude *= 0.75;

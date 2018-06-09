@@ -1,5 +1,5 @@
 ---
-title: 애니메이션
+title: Xamarin.Forms에는 애니메이션
 description: Xamarin.Forms에는 간단 하면서도 용도가 넓은 함수로 충분히 복잡 한 애니메이션을 만드는 간단한 애니메이션을 만들기 위한 자체 애니메이션 인프라에 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 7cff122e7ecc24f5ad93bd863ee422981871f857
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc04f638168a10266c20e278481fc0c513afe48
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245028"
 ---
-# <a name="animation"></a>애니메이션
+# <a name="animation-in-xamarinforms"></a>Xamarin.Forms에는 애니메이션
 
 _Xamarin.Forms에는 간단 하면서도 용도가 넓은 함수로 충분히 복잡 한 애니메이션을 만드는 간단한 애니메이션을 만들기 위한 자체 애니메이션 인프라에 포함 됩니다._
 
@@ -30,4 +31,3 @@ Xamarin.Forms에 포함 되어는 [ `Easing` ](https://developer.xamarin.com/api
 ## <a name="custom-animationscustommd"></a>[사용자 지정 애니메이션](custom.md)
 
 [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) 클래스는의 확장 방법 사용 하 여 모든 Xamarin.Forms 애니메이션의 빌딩 블록의 [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) 하나 이상의 클래스 `Animation` 개체입니다. 이 문서에서는 방법을 사용 하는 `Animation` 을 생성 및 애니메이션 취소, 여러 애니메이션 동기화 속성은 기존 애니메이션 메서드에서 애니메이션을 효과 적용 하는 사용자 지정 애니메이션을 만드는 클래스입니다.
-

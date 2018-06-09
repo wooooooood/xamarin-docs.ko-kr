@@ -1,18 +1,18 @@
 ---
 title: 계층적 탐색
-description: NavigationPage 클래스에는 사용자가을 앞으로 및 뒤로 필요에 따라 페이지를 탐색할 수 계층적 탐색 환경을 제공 합니다. 클래스는 페이지 개체 lifo (후입선출) 방식으로 스택에서으로 탐색을 구현합니다. 이 문서에서 페이지의 스택을 탐색을 수행 하는 NavigationPage 클래스를 사용 하는 방법을 보여 줍니다.
+description: 이 문서에서는 방식으로 lifo (후입선출) 페이지의 스택에 탐색을 수행 하려면 NavigationPage 클래스를 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847165"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242458"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -48,7 +48,7 @@ _NavigationPage 클래스에는 사용자가을 앞으로 및 뒤로 필요에 �
 
 - Ios에서 탐색 모음이 제목을 표시 하 고 있는 페이지의 위쪽에 있어야는 *다시* 이전 페이지로 반환 하는 단추입니다.
 - Android에서는 탐색 모음 있는지 제목, 아이콘을 표시 하는 페이지의 위쪽 및 *다시* 이전 페이지로 반환 하는 단추입니다. 아이콘에 정의 된는 `[Activity]` 를 데코레이팅하는 특성의 `MainActivity` Android 플랫폼 관련 프로젝트의 클래스.
-- 유니버설 Windows 플랫폼에서 탐색 모음은 제목을 표시 하는 페이지의 위쪽에 있는입니다. 
+- 유니버설 Windows 플랫폼에서 탐색 모음은 제목을 표시 하는 페이지의 위쪽에 있는입니다.
 
 모든 플랫폼에서의 값은 [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) 속성 페이지 제목으로 표시 됩니다.
 

@@ -1,19 +1,20 @@
 ---
-title: 밝은 테마
+title: Xamarin.Forms 밝은 테마
+description: 이 문서에서는 앱에서 Xamarin.Forms 밝은 테마를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 87c2a1a1003868aba10c7c1ec50856f307cc5bff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 7f40e375d653acec60f8848627234ab46fcce8de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848007"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245249"
 ---
-# <a name="light-theme"></a>밝은 테마
+# <a name="xamarinforms-light-theme"></a>Xamarin.Forms 밝은 테마
 
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 
@@ -68,4 +69,3 @@ XAML 파일의 예는 다음과 같습니다.
 ```
 
 [기본 제공 클래스의 전체 목록은](~/xamarin-forms/user-interface/themes/index.md) 몇 가지 공용 컨트롤에 대 한 사용할 수 있는 스타일을 보여 줍니다.
-

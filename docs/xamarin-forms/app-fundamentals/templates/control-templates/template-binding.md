@@ -1,5 +1,5 @@
 ---
-title: ControlTemplate에서 바인딩
+title: Xamarin.Forms ControlTemplate에서 바인딩
 description: 템플릿 바인딩을 쉽게 변경할 수에 대 한 컨트롤 템플릿에 컨트롤에서 속성 값을 사용 하도록 설정 데이터에 컨트롤 템플릿의 컨트롤 공용 속성에 바인딩할 수 있도록 합니다. 이 문서에 컨트롤 서식 파일에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b2904d06d0982fb30e9a989f03f22b726b9772e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 99d798ce2c74da0cf7fa0d497128db628a12ead5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847178"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241583"
 ---
-# <a name="binding-from-a-controltemplate"></a>ControlTemplate에서 바인딩
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Xamarin.Forms ControlTemplate에서 바인딩
 
 _템플릿 바인딩을 쉽게 변경할 수에 대 한 컨트롤 템플릿에 컨트롤에서 속성 값을 사용 하도록 설정 데이터에 컨트롤 템플릿의 컨트롤 공용 속성에 바인딩할 수 있도록 합니다. 이 문서에 컨트롤 서식 파일에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여줍니다._
 

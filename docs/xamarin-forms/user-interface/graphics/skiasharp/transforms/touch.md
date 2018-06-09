@@ -1,17 +1,18 @@
 ---
 title: 터치 조작
-description: 터치 끌어, 모으는, 및 회전을 구현 하 사용 하 여 매트릭스 변환
+description: 이 문서는 행렬 변형을 사용 하 여 터치 끌기, 모으는, 및 회전을 구현 하는 방법을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244288"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-이 `SKMatrix` 개체는 아래 표시 된 터치 논리에 의해 수정 됩니다. 
+이 `SKMatrix` 개체는 아래 표시 된 터치 논리에 의해 수정 됩니다.
 
-코드 숨김 파일의 나머지 부분이 `TouchEffect` 이벤트 처리기입니다. 손가락으로의 현재 위치를 변환 하 여 시작 되는 `SKPoint` 값입니다. 에 대 한는 `Pressed` 동작 유형, 처리기에서는 없는 다른 손가락은 화면을 터치 할 때 및 손가락 비트맵의 범위 내에 있는 합니다. 
+코드 숨김 파일의 나머지 부분이 `TouchEffect` 이벤트 처리기입니다. 손가락으로의 현재 위치를 변환 하 여 시작 되는 `SKPoint` 값입니다. 에 대 한는 `Pressed` 동작 유형, 처리기에서는 없는 다른 손가락은 화면을 터치 할 때 및 손가락 비트맵의 범위 내에 있는 합니다.
 
 코드의 중요 한 부분은 `if` 를 두 번 호출 문에서 `Math.Pow` 메서드. 이 수학 경우 손가락 위치는 바깥쪽 비트맵을 입력 하 되는 타원을 확인 합니다. 그렇다면 크기 조정 작업은입니다. 손가락 근처 비트맵의 모서리 중 하나 이며 반대 모퉁이 된 피벗 점이 결정 됩니다. 손가락이이 타원 내에 있으면 일반 이동 작업은:
 

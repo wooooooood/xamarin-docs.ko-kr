@@ -1,20 +1,20 @@
 ---
-title: 사용자 인터페이스
-description: Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법
+title: Xamarin.Forms 사용자 인터페이스 보기
+description: 이 문서에서는 컨트롤 및 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 만들 때 사용할 수 있는 개념을 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 55c461a7dee26462e0b9daebeb10e47afa4e5f6f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733050"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244372"
 ---
-# <a name="user-interface"></a>사용자 인터페이스
+# <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
 _Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법_
 

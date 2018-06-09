@@ -1,17 +1,18 @@
 ---
 title: 폴리라인 및 파라메트릭 수식
-description: SkiaSharp 매개 방정식을 정의할 수 있는 줄을 사용 하 여
+description: 이 문서는 모든 줄을 렌더링을 사용 하 여 SkiaSharp를 정의 하는 방법을 파라메트릭 수식이 포함을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: efd2dbac0f4a1190fac646d8e9e3120ee4d245a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245311"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 

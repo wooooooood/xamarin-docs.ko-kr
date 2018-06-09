@@ -1,19 +1,20 @@
 ---
-title: 3D 회전
-description: 사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 변형 합니다.
+title: SkiaSharp의 3D 회전
+description: 이 문서는 회전 2D 개체 3D 공간에서 유사 형식이 아닌 변환을 사용 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244301"
 ---
-# <a name="3d-rotations"></a>3D 회전
+# <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
 _사용 하 여 유사 형식이 아닌 3D 공간에서 개체를 2D 회전을 변형 합니다._
 
@@ -74,9 +75,9 @@ w' = M14·x + M24·y + M34·z + M44
 
 x" = x' / w'
 
-y" = y' / w'
+'y = y' /w '
 
-z" = z' / w'
+z"z =' /w '
 
 w" = w' / w' = 1
 
@@ -172,7 +173,7 @@ w' = M14·x + M24·y + M44
 
 x" = x' / w'
 
-y" = y' / w'
+'y = y' /w '
 
 즉, 세 번째 행 *및* 4-4 행렬의 세 번째 열을 무시할 수 있습니다.
 
@@ -215,7 +216,7 @@ z' = (sin(α)/depth)·x + 1
 
 "x = cos (α) ·x / (((α) sin / 깊이) ·x + 1)
 
-y" = y / ((sin(α)/depth)·x + 1)
+"y = y / (((α) sin / 깊이) ·x + 1)
 
 2D 개체 양각 양의 다음 Y 축을 중심으로 회전 하는 경우 X 값 오목 하 게 표시 부정 하는 동안 백그라운드에 X 값은 전경으로와 야 합니다. X 값 좌표로 Y 축에서 가장 먼 곳 (코사인 값에 의해 제어 되)이 표시는 Y 축에 가깝게 이동 하는 작은 또는 뷰어 먼 이동 하는 동안 큰 나 가깝게 것 같습니다.
 

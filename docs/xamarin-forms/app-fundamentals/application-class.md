@@ -1,20 +1,20 @@
 ---
-title: App 클래스
-description: C# 또는 XAML 수 있는 기본 App 클래스의 기능
+title: Xamarin.Forms App 클래스
+description: 이 문서는 앱에 대 한 초기 페이지를 설정 하는 속성을 포함 하는 기본 App 클래스의 기능에 설명 하 고는 영구 사전에 대 한 모든 주기 상태 변경 내용에서 간단한 값을 저장 합니다.
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 4b502b0d6eea37e0b5b374cfd4740cf6a5ced478
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15fb866d2cde9409f401d6d021b22b8cb0468795
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846392"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240543"
 ---
-# <a name="app-class"></a>App 클래스
+# <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
 
 `Application` 노출 되는 기본 프로젝트에에서는 다음 기능을 제공 하는 기본 클래스 `App` 서브 클래스:
 

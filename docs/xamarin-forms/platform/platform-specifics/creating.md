@@ -1,18 +1,18 @@
 ---
 title: 플랫폼 특성 만들기
-description: 공급 업체 효과 함께 자신의 플랫폼 비슷하므로 만들 수 있습니다. 효과 특정 플랫폼을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다. 이 문서에는 플랫폼 특정 통해 효과 노출 하는 방법을 보여 줍니다.
+description: 이 문서에는 플랫폼 특정 통해 효과 노출 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: dcd22dd0d4e281245a1f6598d9a58d24a97b1f20
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a07ff2e206a08ee40355733ab2c1026f29de2f2f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848150"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242786"
 ---
 # <a name="creating-platform-specifics"></a>플랫폼 특성 만들기
 

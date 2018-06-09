@@ -1,19 +1,20 @@
 ---
-title: 바인딩 모드
-description: 원본과 대상 간의 정보 흐름을 제어 합니다.
+title: Xamarin.Forms 바인딩 모드
+description: 이 문서에서는 원본과 BindingMode 열거형의 멤버와 지정 된 바인딩 모드를 사용 하 여 대상 간의 정보 흐름을 제어 하는 방법을 설명 합니다. 바인딩 가능한 속성이 모든 해당 속성은 데이터 바인딩 대상 때 적용 모드를 나타내고 기본 바인딩 모드를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 12e6416eee989b0d36a7b9fe0ca4dcd9b18b0ade
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241818"
 ---
-# <a name="binding-mode"></a>바인딩 모드
+# <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
 에 [이전 문서](basic-bindings.md), **대체 코드 바인딩** 및 **대신 XAML 바인딩** 갖춘 페이지는 `Label` 와 해당 `Scale` 속성 에 바인딩된는 `Value` 속성은 `Slider`합니다. 때문에 `Slider` 초기 값은 0, 때문일는 `Scale` 속성의는 `Label` 1이 아닌 0으로 설정 됩니다 및 `Label` 사라졌습니다.
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/07/2018
              Title="Reverse Binding">
     <StackLayout Padding="10, 0">
 
-        <Label x:Name="label" 
+        <Label x:Name="label"
                Text="TEXT"
                FontSize="80"
                HorizontalOptions="Center"
@@ -52,9 +53,9 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="the-default-binding-mode"></a>기본 바인딩 모드
 
-멤버와 지정 된 바인딩 모드는 [ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) 열거형: 
+멤버와 지정 된 바인딩 모드는 [ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/) 열거형:
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/) 
+- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/)
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; 데이터가 원본과 대상 간의 양방향 이동
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; 데이터 소스에서 대상으로 이동
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 데이터 소스에 대상에서 이동합니다.
@@ -78,11 +79,11 @@ ms.lasthandoff: 05/07/2018
 - `SelectedItem` 속성 `MultiPage`
 - `SelectedIndex` 및 `SelectedItem` 의 속성 `Picker`
 - `Value` 속성의 `Slider` 및 `Stepper`
-- `IsToggled` 속성 `Switch` 
+- `IsToggled` 속성 `Switch`
 - `On` 속성 `SwitchCell`
 - `Time` 속성 `TimePicker`
 
-이러한 특정 속성으로 정의 된 `TwoWay` 매우 좋은 이유: 
+이러한 특정 속성으로 정의 된 `TwoWay` 매우 좋은 이유:
 
 ViewModel 클래스는 데이터 바인딩 소스 및 보기와 같은 보기의 구성 된 데이터 바인딩 모델-뷰-MVVM () 응용 프로그램 아키텍처와 함께 사용 되는 경우 `Slider`, 데이터 바인딩 대상입니다. MVVM 바인딩 유사는 **바인딩 역방향** 이전 샘플에서 바인딩 보다 더 많은 샘플입니다. 각 페이지의 보기에는 ViewModel에서 해당 속성의 값으로 초기화 하지만 보기에서 변경 내용을 ViewModel 속성에는 영향을 줄은 매우 높습니다.
 
@@ -117,7 +118,7 @@ ViewModel에 데이터 바인딩 소스입니다. ViewModel 않습니다 *하지
 public class HslColorViewModel : INotifyPropertyChanged
 {
     Color color;
-    string name; 
+    string name;
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -130,7 +131,7 @@ public class HslColorViewModel : INotifyPropertyChanged
                 Color = Color.FromHsla(value, color.Saturation, color.Luminosity);
             }
         }
-        get 
+        get
         {
             return color.Hue;
         }
@@ -209,7 +210,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 바인딩 인프라에 처리기를 연결 된 ViewModel 바인딩 소스 개체로 설정 된 경우는 `PropertyChanged` 이벤트입니다. 이러한 방식으로 바인딩 속성을 알림을 받을 수와 그런 다음 대상 속성에서 변경 된 값에서 설정할 수 있습니다.
 
-그러나 때 대상 속성 (또는 `Binding` 대상 속성에 정의)에 `BindingMode` 의 `OneTime`, 처리기를 연결에 바인딩 인프라는 필요 하지 않습니다는 `PropertyChanged` 이벤트입니다. 대상 속성을 업데이트 경우에만 `BindingContext` 변경과 자체 source 속성 변경 될 때 하지 않습니다. 
+그러나 때 대상 속성 (또는 `Binding` 대상 속성에 정의)에 `BindingMode` 의 `OneTime`, 처리기를 연결에 바인딩 인프라는 필요 하지 않습니다는 `PropertyChanged` 이벤트입니다. 대상 속성을 업데이트 경우에만 `BindingContext` 변경과 자체 source 속성 변경 될 때 하지 않습니다.
 
 **간단한 색 선택기** XAML 파일에서 인스턴스화하는 `HslColorViewModel` 페이지의 리소스 사전 및 초기화에는 `Color` 속성입니다. `BindingContext` 의 속성은 `Grid` 로 설정 되는 `StaticResource` 바인딩 해당 리소스를 참조 하는 확장:
 
@@ -221,7 +222,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:HslColorViewModel x:Key="viewModel" 
+            <local:HslColorViewModel x:Key="viewModel"
                                      Color="MediumTurquoise" />
 
             <Style TargetType="Slider">
@@ -229,7 +230,7 @@ public class HslColorViewModel : INotifyPropertyChanged
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-        
+
     <Grid BindingContext="{StaticResource viewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -246,7 +247,7 @@ public class HslColorViewModel : INotifyPropertyChanged
                    HorizontalTextAlignment="Center" />
 
             <Slider Value="{Binding Hue}" />
-    
+
             <Slider Value="{Binding Saturation}" />
 
             <Slider Value="{Binding Luminosity}" />
@@ -257,7 +258,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 `BoxView`, `Label`, 및 세 개의 `Slider` 에서 바인딩 컨텍스트를 상속 하는 뷰는 `Grid`합니다. 이러한 뷰는 원본 속성을 ViewModel 참조 하는 모든 바인딩 대상입니다. 에 대 한는 `Color` 속성은 `BoxView`, 및 `Text` 속성은 `Label`, 데이터 바인딩은 `OneWay`: ViewModel 속성에서 보기에는 속성이 설정 됩니다.
 
-`Value` 의 속성은 `Slider`, 인데 `TwoWay`합니다. 이렇게 하면 각 `Slider` ViewModel에서 및를 각각 설정할 ViewModel 설정할 `Slider`합니다. 
+`Value` 의 속성은 `Slider`, 인데 `TwoWay`합니다. 이렇게 하면 각 `Slider` ViewModel에서 및를 각각 설정할 ViewModel 설정할 `Slider`합니다.
 
 프로그램을 처음 실행할 때의 `BoxView`, `Label`, 3 및 `Slider` 요소는 초기에 따라 ViewModel에서 모두 설정 `Color` 속성이 ViewModel를 인스턴스화할 때 설정 합니다. 이 iOS 스크린샷에서 왼쪽에 표시 됩니다.
 
@@ -272,7 +273,7 @@ public class HslColorViewModel : INotifyPropertyChanged
     <Grid.BindingContext>
         <local:HslColorViewModel Color="MediumTurquoise" />
     </Grid.BindingContext>
-        
+
     ···
 
 </Grid>
@@ -408,9 +409,9 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-각 응용 프로그램 설정 라는 메서드에서 Xamarin.Forms 속성 사전에 저장 되는 속성은 `SaveState` 생성자에서 해당 사전에서 로드 합니다. 클래스의 아래쪽으로 이동 하는 두 Viewmodel 간소화 하 고 오류가 발생할 가능성이 적으므로 있도록 메서드입니다. `OnPropertyChanged` 맨 아래에 메서드는이 호출 속성으로 설정 하는 선택적 매개 변수입니다. 이 문자열 속성의 이름을 지정할 때는 맞춤법 오류를 방지 합니다. 
+각 응용 프로그램 설정 라는 메서드에서 Xamarin.Forms 속성 사전에 저장 되는 속성은 `SaveState` 생성자에서 해당 사전에서 로드 합니다. 클래스의 아래쪽으로 이동 하는 두 Viewmodel 간소화 하 고 오류가 발생할 가능성이 적으므로 있도록 메서드입니다. `OnPropertyChanged` 맨 아래에 메서드는이 호출 속성으로 설정 하는 선택적 매개 변수입니다. 이 문자열 속성의 이름을 지정할 때는 맞춤법 오류를 방지 합니다.
 
-`SetProperty` 클래스의 메서드는 훨씬 더 많은: 속성에는 필드와 저장 된 값으로 설정 되는 값과 비교 하 고 호출 `OnPropertyChanged` 두 값이 동일 하지 않습니다. 
+`SetProperty` 클래스의 메서드는 훨씬 더 많은: 속성에는 필드와 저장 된 값으로 설정 되는 값과 비교 하 고 호출 `OnPropertyChanged` 두 값이 동일 하지 않습니다.
 
 `SampleSettingsViewModel` 배경색에 대 한 두 개의 속성을 정의 하는 클래스:는 `BackgroundNamedColor` 형식의 속성은 `NamedColor`, 하는 클래스에도 포함 되어는 **DataBindingDemos** 솔루션입니다. `BackgroundColor` 형식의 속성은 `Color`에서 얻은 및는 `Color` 의 속성은 `NamedColor` 개체입니다.
 
@@ -649,7 +650,7 @@ public partial class App : Application
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-에 대 한 기본 바인딩 모드 `SelectedItem` 은 `OneWayToSource`, 선택한 항목에서 ViewModel 속성을 설정 하는 합니다. `TwoWay` 모드에서는 `SelectedItem` ViewModel에서 초기화 합니다. 
+에 대 한 기본 바인딩 모드 `SelectedItem` 은 `OneWayToSource`, 선택한 항목에서 ViewModel 속성을 설정 하는 합니다. `TwoWay` 모드에서는 `SelectedItem` ViewModel에서 초기화 합니다.
 
 그러나 때는 `SelectedItem` 이러한 방식으로 설정 되어는 `ListView` 선택한 항목을 표시 하도록 자동으로 스크롤되지 않습니다. 코드 숨김 파일에는 작은 코드는 해야 합니다.
 
@@ -662,13 +663,13 @@ public partial class SampleSettingsPage : ContentPage
 
         if (colorListView.SelectedItem != null)
         {
-            colorListView.ScrollTo(colorListView.SelectedItem, 
-                                   ScrollToPosition.MakeVisible, 
+            colorListView.ScrollTo(colorListView.SelectedItem,
+                                   ScrollToPosition.MakeVisible,
                                    false);
         }
     }
 }
-``` 
+```
 
 왼쪽에 iOS 스크린 샷을 처음 실행할 때 프로그램을 보여 줍니다. 생성자 `SampleSettingsViewModel` 초기화 배경색을 흰색으로 되며, 그에서 선택 된 항목의 `ListView`:
 

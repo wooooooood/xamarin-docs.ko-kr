@@ -1,17 +1,18 @@
 ---
 title: Tap 제스처 제스처 인식기를 추가합니다.
-description: 탭 제스처 tap 검색에 사용 되 고 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다.
+description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 tap 검색을 위한 탭 제스처를 사용 하는 방법을 설명 합니다. Tap 검색 TapGestureRecognizer 클래스로 구현 됩니다.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: c015ce4b24a1e00b4369a8e98d1381b570557a9c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bbe4ca7a1080459b8aeb33640be5158b15e97715
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240667"
 ---
 # <a name="adding-a-tap-gesture-gesture-recognizer"></a>Tap 제스처 제스처 인식기를 추가합니다.
 

@@ -1,19 +1,20 @@
 ---
-title: SVG 경로 데이터입니다.
-description: 텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다.
+title: SkiaSharp에서 SVG 경로 데이터
+description: 이 문서는 텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 SkiaSharp 경로 정의 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0453374c59c3b12842b7fb1524cc150329d84b7f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243976"
 ---
-# <a name="svg-path-data"></a>SVG 경로 데이터입니다.
+# <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
 
 _텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다._
 

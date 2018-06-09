@@ -1,18 +1,20 @@
 ---
-title: 장치 클래스
+title: Xamarin.Forms 장치 클래스
+description: 이 문서에서는 플랫폼으로 기능 및 레이아웃 보다 세분화 된 제어 Xamarin.Forms 장치 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: cdcd4bb08b9dac84d264f7c0c41e16d68380e1d0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242546"
 ---
-# <a name="device-class"></a>장치 클래스
+# <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
 [ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 개발자가 레이아웃과 플랫폼으로 기능을 사용자 지정할 수 있도록 메서드와 속성의 수를 포함 하는 클래스입니다.
 

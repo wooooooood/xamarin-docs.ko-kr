@@ -1,5 +1,5 @@
 ---
-title: 컨트롤 템플릿
+title: Xamarin.Forms 컨트롤 템플릿
 description: 컨트롤 템플릿 페이지의 모양 및 해당 콘텐츠를 쉽게 테마를 적용할 수 있는 페이지를 만들 수 명확한 구분을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 836C8D57-ABBC-4D5A-B3CF-0B723E069A2B
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 7062962b1aeb397e61de769ef1e3c9aaea942147
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239973"
 ---
-# <a name="control-templates"></a>컨트롤 템플릿
+# <a name="xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 
 _컨트롤 템플릿 페이지의 모양 및 해당 콘텐츠를 쉽게 테마를 적용할 수 있는 페이지를 만들 수 명확한 구분을 제공 합니다._
 
@@ -28,4 +29,3 @@ Xamarin.Forms 컨트롤 템플릿은 쉽게 테마 및 re 테마 하는 기능�
 ## <a name="binding-from-a-controltemplatetemplate-bindingmd"></a>[ControlTemplate에서 바인딩](template-binding.md)
 
 템플릿 바인딩을 쉽게 변경할 수에 대 한 컨트롤 템플릿에 컨트롤에서 속성 값을 사용 하도록 설정 데이터에 컨트롤 템플릿의 컨트롤 공용 속성에 바인딩할 수 있도록 합니다. 이 문서에 컨트롤 서식 파일에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여줍니다.
-

@@ -1,18 +1,18 @@
 ---
 title: 뷰를 구현합니다.
-description: Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤 레이아웃와 화면에 컨트롤을 배치 하는 데 사용 되는 뷰 클래스에서 파생 되어야 합니다. 이 문서에는 장치의 카메라에서 미리 보기 비디오 스트림을 표시 하는 데 사용 되는 Xamarin.Forms 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.
+description: 이 문서에서는 장치의 카메라에서 미리 보기 비디오 스트림을 표시 하는 데 사용 되는 Xamarin.Forms 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: d270a23fb2fee67e5e3dd415771c975aeb682854
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: eb0bc199bfd31ac631ca9d131796b606960d76aa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848488"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240488"
 ---
 # <a name="implementing-a-view"></a>뷰를 구현합니다.
 

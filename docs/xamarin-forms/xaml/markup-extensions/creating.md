@@ -1,22 +1,22 @@
 ---
 title: XAML 태그 확장명 만들기
-description: 사용자 고유의 사용자 지정 XAML 태그 확장을 정의 합니다.
+description: 이 문서에서는 사용자 고유의 사용자 지정 Xamarin.Forms XAML 태그 확장을 정의 하는 방법을 설명 합니다. XAML 태그 확장은 IMarkupExtension IMarkupExtension 인터페이스를 구현 하는 클래스입니다.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 1a484aa4a19473c5a4f60b3d7bab78af7a20eecd
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b185ea3b7260ff2be8a4dec5dc713f24dc6e6095
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848254"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245705"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 
-프로그래밍 방식으로 수준에서 XAML 태그 확장은 구현 하는 클래스는 [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) 또는 [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) 인터페이스입니다. 아래에 설명 된 표준 태그 확장의 소스 코드를 탐색할 수 있습니다는 [ **MarkupExtensions** 디렉터리](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) Xamarin.Forms GitHub 리포지토리의 합니다. 
+프로그래밍 방식으로 수준에서 XAML 태그 확장은 구현 하는 클래스는 [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) 또는 [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) 인터페이스입니다. 아래에 설명 된 표준 태그 확장의 소스 코드를 탐색할 수 있습니다는 [ **MarkupExtensions** 디렉터리](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) Xamarin.Forms GitHub 리포지토리의 합니다.
 
 파생 하 여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수 이기도 `IMarkupExtension` 또는 `IMarkupExtension<T>`합니다. 일반 양식을 사용 하면 특정 형식의 값을 가져오면 태그 확장 사용 합니다. 이 여러 가지 Xamarin.Forms 태그 확장의 경우:
 
@@ -26,7 +26,7 @@ ms.locfileid: "34848254"
 - `BindingExtension` 파생 `IMarkupExtension<BindingBase>`
 - `ConstraintExpression` 파생 `IMarkupExtension<Constraint>`
 
-두 `IMarkupExtension` 각각 하나의 메서드를 정의 하는 인터페이스 이름이 `ProvideValue`: 
+두 `IMarkupExtension` 각각 하나의 메서드를 정의 하는 인터페이스 이름이 `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -92,7 +92,7 @@ public class HslColorExtension : IMarkupExtension<Color>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout>
         <BoxView>
             <BoxView.Color>
@@ -121,7 +121,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>비트맵에 액세스 하기 위한 태그 확장
 
-에 대 한 인수 `ProvideValue` 구현 하는 개체는 [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) .NET에 정의 된 인터페이스 `System` 네임 스페이스입니다. 이 인터페이스에 멤버를 라는 메서드 하나 `GetService` 와 `Type` 인수입니다. 
+에 대 한 인수 `ProvideValue` 구현 하는 개체는 [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) .NET에 정의 된 인터페이스 `System` 네임 스페이스입니다. 이 인터페이스에 멤버를 라는 메서드 하나 `GetService` 와 `Type` 인수입니다.
 
 `ImageResourceExtension` 아래에 표시 된 클래스의 가능한 용도 중 하나를 보여 줍니다. `IServiceProvider` 및 `GetService` 얻으려고는 `IXmlLineInfoProvider` 특정 오류 검색 되었습니다 나타내는 줄과 문자 정보를 제공할 수 있는 개체입니다. 이 경우 예외가 발생 하는 경우는 `Source` 속성이 설정 되지 않았습니다:
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` XAML 파일에 표준.NET 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일을 액세스 해야 할 때 유용 합니다. 사용 하 여는 `Source` 정적을 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. `ImageResourceExtension` 하지 않는 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 즉,이 XAML 리소스 확장 없습니다 외부 라이브러리의 일부 이미지가 아닌 해당 라이브러리에도 이상 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조는 [ **포함 이미지** ](~/xamarin-forms/user-interface/images.md#embedded_images) 비트맵 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.) 
+`ImageResourceExtension` XAML 파일에 표준.NET 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일을 액세스 해야 할 때 유용 합니다. 사용 하 여는 `Source` 정적을 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더 이름 및 마침표로 구분 된 파일 이름으로 구성 되는 정규화 된 리소스 이름이 필요 합니다. `ImageResourceExtension` 하지 않는 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 즉,이 XAML 리소스 확장 없습니다 외부 라이브러리의 일부 이미지가 아닌 해당 라이브러리에도 이상 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조는 [ **포함 이미지** ](~/xamarin-forms/user-interface/images.md#embedded_images) 비트맵 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
 
 하지만 `ImageResourceExtension` 필요는 `Source` 속성을 설정할 수는 `Source` 클래스의 콘텐츠 속성으로 속성 특성에 표시 됩니다. 즉는 `Source=` 중괄호 안에 있는 식의 부분을 생략할 수 있습니다. 에 **이미지 리소스 데모** 페이지는 `Image` 요소 인출 폴더 이름과 마침표로 구분 된 파일 이름을 사용 하 여 두 가지 이미지:
 
@@ -167,7 +167,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Image Source="{local:ImageResource Images.SeatedMonkey.jpg}"
                Grid.Row="0" />
 
@@ -198,7 +198,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 
 ## <a name="conclusion"></a>결론
 
-XAML 태그 확장 다양 한 소스에서에서 특성을 설정 하는 기능을 확장 하 여 XAML에서 중요 한 역할을 재생 합니다. 또한 기존 XAML 태그 확장은 필요한 정보가 제공 하지를 작성할 수도 있습니다 직접 합니다. 
+XAML 태그 확장 다양 한 소스에서에서 특성을 설정 하는 기능을 확장 하 여 XAML에서 중요 한 역할을 재생 합니다. 또한 기존 XAML 태그 확장은 필요한 정보가 제공 하지를 작성할 수도 있습니다 직접 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

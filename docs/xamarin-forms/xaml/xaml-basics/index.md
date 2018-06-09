@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Forms XAML 기본 사항
-description: 모바일 장치에 대 한 플랫폼 간 태그 시작
+description: 이 가이드에는 모바일 장치에 대 한 플랫폼 간 XAML로 시작 하는 방법을 설명 합니다. XAML 코드 보다는 태그를 사용 하 여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의 하는 개발자를 있습니다.
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627267b95bb2d810a60f84c51e38bf5387fe1f99
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245965"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 

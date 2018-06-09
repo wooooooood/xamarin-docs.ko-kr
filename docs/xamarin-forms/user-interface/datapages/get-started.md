@@ -1,17 +1,18 @@
 ---
 title: DataPages 시작
+description: 이 문서에서는 DataPages Xamarin.Forms를 사용 하 여 간단한 데이터 기반 페이지 작성을 시작 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846843"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243079"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -21,7 +22,7 @@ ms.locfileid: "34846843"
 > DataPages 필요는 [Xamarin.Forms 테마](~/xamarin-forms/user-interface/themes/index.md) 렌더링에 대 한 참조입니다.
 
 
-DataPages 미리 보기를 사용 하 여 간단한 데이터 드라이브 페이지 구성 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 미리 보기에서 하드 코드 된 스타일 ("이벤트") 빌드에 코드에서 특정 JSON 형식 에서만 작동 합니다.
+DataPages 미리 보기를 사용 하 여 간단한 데이터 기반 페이지 구성 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 미리 보기에서 하드 코드 된 스타일 ("이벤트") 빌드에 코드에서 특정 JSON 형식 에서만 작동 합니다.
 
 [![](get-started-images/demo-sml.png "DataPages 샘플 응용 프로그램")](get-started-images/demo.png#lightbox "DataPages 샘플 응용 프로그램")
 

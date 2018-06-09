@@ -1,20 +1,20 @@
 ---
-title: StackLayout
-description: StackLayout를 사용 하 여 하나의 차원에 대해 뷰 컬렉션을 제공 합니다.
+title: Xamarin.Forms StackLayout
+description: 이 문서는 뷰 컬렉션을 하나의 차원에 대해 제공 하는 Xamarin.Forms StackLayout 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 412ea71df2d13338725246704b342e9b93109709
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847827"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244599"
 ---
-# <a name="stacklayout"></a>StackLayout
+# <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
 `StackLayout` 가로 또는 세로로 1 차원 줄 ("스택")에 뷰를 구성합니다. 뷰는 `StackLayout` 크기를 조정할 수 레이아웃 옵션을 사용 하 여 레이아웃에서 공간을 기초로 합니다. 위치 지정 보기는 레이아웃과 뷰의 레이아웃 옵션에 추가 된 순서에 따라 결정 됩니다.
 

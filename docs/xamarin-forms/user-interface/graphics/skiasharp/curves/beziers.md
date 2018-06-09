@@ -1,17 +1,18 @@
 ---
 title: 세 가지 유형의 베 지 어 곡선으로 분할
-description: 탐색 SkiaSharp 렌더링 입방 형 3, 정방형, 및 원추형 베 지 어 곡선을 사용 하는 방법
+description: 이 문서는 입방 형 3, 정방형, 및 원추형 베 지 어 곡선 Xamarin.Forms 응용 프로그램에서 렌더링 하기 위해 SkiaSharp를 사용 하는 방법을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 7b7bd83c474c7e0d32a693e06b5f12696ec5efa2
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 4a1b86035f9ce31b6e9fafac06cd0090a516b542
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244008"
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선으로 분할
 

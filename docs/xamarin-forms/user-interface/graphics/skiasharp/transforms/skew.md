@@ -1,17 +1,18 @@
 ---
 title: 시간차 변환
-description: 로 인해 기울이기 변환을 SkiaSharp의 기운된 그래픽 개체를 만들 수는 방법을 참조 하세요.
+description: 이 문서는로 인해 기울이기 변환을 SkiaSharp의 기운된 그래픽 개체를 만들 수는 방법에 대해 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 8a0d17f5cdc790aed2bd8fd671563378d5d523b1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244083"
 ---
 # <a name="the-skew-transform"></a>시간차 변환
 

@@ -1,20 +1,20 @@
 ---
-title: TableView
-description: 스크롤 메뉴, 설정 및 입력된 양식 처럼를 제공 합니다.
+title: Xamarin.Forms TableView
+description: 이 문서에서는 응용 프로그램에 설정, 입력된 양식 처럼, 스크롤 메뉴를 표시 하는 Xamarin.Forms TableView 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 312472fdfae65bc62b76f4295a13760236dededc
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5ad1db6a073b5a6d0199aa586230cb55a9d4a925
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847661"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244860"
 ---
-# <a name="tableview"></a>TableView
+# <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
 [TableView](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) 스크롤할 수 있는 데이터 또는 선택 목록 표시에 대 한 뷰는 행이 같은 서식 파일을 공유 하지 않는 경우. 와 달리 [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView의 개념이 없는 `ItemsSource`이므로 수동으로 항목 자식으로 추가 해야 합니다.
 

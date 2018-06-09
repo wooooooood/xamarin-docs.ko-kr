@@ -1,20 +1,20 @@
 ---
-title: 색
-description: Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공합니다.
+title: Xamarin.Forms에 색
+description: Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공합니다. 이 문서에서는 Color class를 사용 하는 방법을 제공 하는 기능을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 7a304790213bcebe50a3f39295b5b1d1fb052879
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 45adcb8a0fe25e729211e8b166be51ce2c4d93bd
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848345"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243020"
 ---
-# <a name="colors"></a>색
+# <a name="colors-in-xamarinforms"></a>Xamarin.Forms에 색
 
 _Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공합니다._
 

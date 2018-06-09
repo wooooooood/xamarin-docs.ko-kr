@@ -1,28 +1,24 @@
 ---
 title: ListView 성능
-description: ListView 기반 앱과 함께 뛰어난 성능을 확인 합니다.
+description: ListView에 데이터를 표시 하기 위한 강력한 보기 되어도 몇 가지 제한이 있습니다. 이 문서에서는 응용 프로그램에서 Xamarin.Forms ListView로 뛰어난 성능을 보장 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dcd4881e2ad7f1bb4af5455805da1dd2cade3605
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4803a612e2b06e458f2859dbbbd30b970f0fc8ea
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244905"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
 모바일 응용 프로그램을 작성할 때 성능에 중요 합니다. 부드러운 스크롤 및 빠른 로드 시간을 기대 하는 사용자가 발견 했을 합니다. 사용자의 요구에 맞게 실패 하면 응용 프로그램 저장소에 대 한 등급 비용 되거나는 기간 업무 응용 프로그램의 경우 조직 시간과 비용 비용 됩니다.
 
 하지만 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 강력한 보기는 몇 가지 제한이 있기 때문에 데이터를 표시 합니다. 많이 중첩 된 보기 계층 구조를 포함 하거나 측정 많이 필요로 하는 특정 레이아웃을 사용 하는 경우에 특히 사용자 지정 셀을 사용 하는 경우 스크롤 성능 저하 될 수 있습니다. 다행히도 기술을 성능 저하를 방지 하는 데 사용할 수 있습니다.
-
-다음 항목은이 문서에 설명 합니다.
-
-- **[캐싱 전략](#cachingstrategy)**
-- **[ListView 성능 향상](#improving-performance)**
 
 <a name="cachingstrategy" />
 

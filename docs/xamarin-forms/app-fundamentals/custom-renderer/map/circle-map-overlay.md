@@ -1,18 +1,18 @@
 ---
 title: 지도에 순환 영역을 강조 표시
-description: 이 문서 순환 오버레이 순환 지도의 영역을 강조 표시 하는 지도를 추가 하는 방법을 설명 합니다.
+description: 이 문서 순환 오버레이 순환 지도의 영역을 강조 표시 하는 지도를 추가 하는 방법을 설명 합니다. IOS 및 Android를 순환 오버레이 지도를 추가 하기 위한 Api를 제공, UWP에 오버레이 다각형으로 렌더링 됩니다.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1bec7a318bebc40c050104a51408473d89f483a5
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 06ea1e788add0064571f01dc1080147e64bb8397
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846525"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240287"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>지도에 순환 영역을 강조 표시
 

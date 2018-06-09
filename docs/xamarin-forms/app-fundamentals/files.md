@@ -1,5 +1,5 @@
 ---
-title: 파일
+title: Xamarin.forms에서 파일 처리
 description: 포함된 리소스를 사용 하 여 또는 네이티브 파일 시스템 Api에 대 한 쓰기 파일 xamarin.forms 처리를 수행할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 02bea7e2ec927277a92c0732b25f590b5ae6704b
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 80fdedd6c5df15272e36e6ac9c1414a4f731123a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241935"
 ---
-# <a name="files"></a>파일
+# <a name="file-handling-in-xamarinforms"></a>Xamarin.forms에서 파일 처리
 
 _포함된 리소스를 사용 하 여 또는 네이티브 파일 시스템 Api에 대 한 쓰기 파일 xamarin.forms 처리를 수행할 수 있습니다._
 

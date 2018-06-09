@@ -1,19 +1,20 @@
 ---
-title: 탐색
-description: Xamarin.Forms는 다양 한 다른 페이지 탐색 환경 사용 하 고 페이지 유형에 따라 도어의 제공 합니다.
+title: Xamarin.Forms 탐색
+description: 이 가이드에서는 Xamarin.Forms 앱에서 탐색을 수행 하는 방법에 설명 합니다. Xamarin.Forms는 다양 한 다른 페이지 탐색 환경 사용 하 고 페이지 유형에 따라 도어의 제공 합니다.
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1a184e1ebfd9d87ba82642ebdfc30a8d3f92cce1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 90aedee42af7ed1788110e832fb3b435d870ee77
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241958"
 ---
-# <a name="navigation"></a>탐색
+# <a name="xamarinforms-navigation"></a>Xamarin.Forms 탐색
 
 _Xamarin.Forms는 다양 한 다른 페이지 탐색 환경 사용 하 고 페이지 유형에 따라 도어의 제공 합니다._
 
@@ -42,4 +43,3 @@ Xamarin.Forms는 모달 페이지에 대 한 지원도 제공 합니다. 모달 
 ## <a name="displaying-pop-upspop-upsmd"></a>[팝업 표시](pop-ups.md)
 
 두 개의 pop up와 같은 사용자 인터페이스 요소를 제공 하는 Xamarin.Forms: 경고 및 작업 시트입니다. 사용자에 게 간단한 질문을 요청 하 고 작업을 통해 사용자가 이러한 인터페이스 요소를 사용할 수 있습니다.
-

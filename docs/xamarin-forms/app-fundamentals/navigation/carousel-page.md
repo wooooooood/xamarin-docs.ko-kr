@@ -1,5 +1,5 @@
 ---
-title: 회전식 페이지
+title: Xamarin.Forms 회전식 페이지
 description: Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으로 살짝 수 있는 갤러리와 같은 콘텐츠 페이지를 탐색 합니다. 이 문서를 사용 하는 CarouselPage 페이지의 컬렉션을 탐색 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9259e2a85a7375106891eaae5fe22d6babfa2fcf
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: daf19dbed2e98429280758125a19efce2d7fd9a1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846460"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241753"
 ---
-# <a name="carousel-page"></a>회전식 페이지
+# <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
 _Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으로 살짝 수 있는 갤러리와 같은 콘텐츠 페이지를 탐색 합니다. 이 문서를 사용 하는 CarouselPage 페이지의 컬렉션을 탐색 하는 방법을 보여줍니다._
 
@@ -46,7 +46,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자가 왼쪽에서 오른쪽으�
 - [채울](#Populating_a_CarouselPage_with_a_Page_Collection) 는 `CarouselPage` 자식 요소의 컬렉션으로 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스.
 - [할당](#Populating_a_CarouselPage_with_a_Template) 컬렉션에는 [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) 속성 및 할당은 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) 에 [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) 반환할속성[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 개체 컬렉션의 인스턴스.
 
-두 방법으로는 `CarouselPage` 를 표시 한 다음 각 페이지 차례로 표시 될 다음 페이지로 이동 하 여 살짝 밀어 상호 작용 합니다. 
+두 방법으로는 `CarouselPage` 를 표시 한 다음 각 페이지 차례로 표시 될 다음 페이지로 이동 하 여 살짝 밀어 상호 작용 합니다.
 
 > [!NOTE]
 > A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 을 채울 수 있습니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 인스턴스 또는 `ContentPage` 파생 항목입니다.

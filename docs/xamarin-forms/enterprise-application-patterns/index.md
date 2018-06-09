@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Forms eBook를 사용 하 여 엔터프라이즈 응용 프로그램 패턴
-description: 융통성 있는, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침
+description: 이 eBook 적응형, 관리 및 테스트 가능한 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발 하기 위한 아키텍처 지침을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c401465d8a57abe1d5a1cfaf9ee2616888332ea3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242165"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms eBook를 사용 하 여 엔터프라이즈 응용 프로그램 패턴
 

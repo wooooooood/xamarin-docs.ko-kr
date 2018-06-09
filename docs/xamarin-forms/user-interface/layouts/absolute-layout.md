@@ -1,20 +1,20 @@
 ---
-title: AbsoluteLayout
-description: 픽셀 완벽 하 게 Ui를 만들 AbsoluteLayout를 사용 합니다.
+title: Xamarin.Forms AbsoluteLayout
+description: 이 문서에서는 픽셀 완벽 하 게 Ui를 만들 Xamarin.Forms AbsoluteLayout 클래스를 사용 하는 방법을 설명 합니다. 이 클래스는 배치 하 고 자식 요소의 크기와 위치 또는 절대 값에 비례하여 크기를 지정 합니다.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 506a9a4916cf2cf9105d59f56648e339d664a3d2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848394"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244459"
 ---
-# <a name="absolutelayout"></a>AbsoluteLayout
+# <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 배치 및 크기와 위치 또는 절대 값으로 비례 자식 요소의 크기를 지정 합니다. 위치 지정 및 크기의 비례 값 또는 정적 값을 사용 하 고 비례 자식 뷰 수 있으며 정적 값을 함께 사용할 수 있습니다.
 

@@ -1,18 +1,20 @@
 ---
-title: 접두사
+title: 엔터프라이즈 응용 프로그램 개발에 대 한 접두사
+description: 이 장에서 Xamarin.Forms를 사용 하 여 엔터프라이즈 응용 프로그램 패턴을 접두사를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242370"
 ---
-# <a name="preface"></a>접두사
+# <a name="preface-to-enterprise-app-development"></a>엔터프라이즈 응용 프로그램 개발에 대 한 접두사
 
 이 eBook Xamarin.Forms를 사용 하 여 플랫폼 간 엔터프라이즈 앱 개발에 지침을 제공 합니다. Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)를 포함 하 여 플랫폼 간에 공유할 수 있는 인터페이스 레이아웃 기본 사용자를 쉽게 만들 수 있는 플랫폼 간 UI 도구 키트입니다. 기업 간 (B2E) 직원에 게 비즈니스 (B2B) 및 모든 대상 플랫폼에서 코드를 공유 하는 기능을 제공 하 고 (tco)의 총 비용을 낮추는 데 (B2C) 소비자 앱과 비즈니스에 대 한 종합적인 솔루션을 제공 합니다.
 

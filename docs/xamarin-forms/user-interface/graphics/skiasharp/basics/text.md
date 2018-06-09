@@ -1,17 +1,18 @@
 ---
 title: 텍스트와 그래픽 통합
-description: 렌더링된 텍스트 SkiaSharp 그래픽 텍스트를 통합 하는 문자열의 크기를 결정 하는 방법을 참조 하십시오.
+description: 이 문서는 SkiaSharp 그래픽 Xamarin.Forms 응용 프로그램에 텍스트를 통합 하는 렌더링 된 텍스트 문자열의 크기를 결정 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: dec1997d16afa1cb8235c47b125b113d7ff80a4d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: eb3724c3520153a83e37932f8be0735337e27a4f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243660"
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
 

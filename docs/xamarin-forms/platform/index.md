@@ -1,20 +1,20 @@
 ---
-title: 플랫폼 기능
-description: Xamarin.forms는 플랫폼 특정 기능 활용
+title: Xamarin.Forms 플랫폼 기능
+description: 이 가이드에서는 다양 한 기술 사용 하 여 Xamarin.Forms 응용 프로그램의 플랫폼 관련 기능을 활용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2e8eb19411799e7723be338e9e3f6df35058eb8c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847633"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242802"
 ---
-# <a name="platform-features"></a>플랫폼 기능
+# <a name="xamarinforms-platform-features"></a>Xamarin.Forms 플랫폼 기능
 
 Xamarin.Forms는 확장 가능 하 고 사용 하 여 플랫폼 특정 기능을 통합 하면 [효과](~/xamarin-forms/app-fundamentals/effects/index.md), [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)는 [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md), 등입니다.
 

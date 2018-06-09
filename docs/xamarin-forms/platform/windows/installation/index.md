@@ -1,17 +1,18 @@
 ---
 title: 설치 Windows 프로젝트
-description: 기존 Xamarin.Forms 솔루션에 새 Windows 프로젝트를 추가합니다.
+description: 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든) 유니버설 Windows 플랫폼 프로젝트 없으며 하므로이 문서 기존 Xamarin.Forms 솔루션에 새 UWP 프로젝트를 추가 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 81cad7b178948ebfcf6f424be9ab62d6b6be5b92
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242639"
 ---
 # <a name="setup-windows-projects"></a>설치 Windows 프로젝트
 

@@ -1,28 +1,22 @@
 ---
 title: 장치 방향
-description: 레이아웃 가로 세로 방향에서 제대로 표시 하는 응용 프로그램을 지정 하는 방법을 이해 합니다.
+description: 이 문서에서는 설명 세로 및 가로 방향에서 보기 좋게 레이아웃 Xamarin.Forms 응용 프로그램 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 95049e2d44b369bfa879226e17d2bad20b7b5408
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9245a17423d97887d2032856b10427685b25c29b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848137"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244353"
 ---
 # <a name="device-orientation"></a>장치 방향
 
 응용 프로그램 사용 방법 및 사용자 환경을 개선 하기 위해 가로 방향을 통합 하는 방법을 고려 하는 것이 유용 합니다. 여러 방향을 수용 하기 위해 개별 레이아웃을 디자인할 수 있습니다 및 가장 사용 가능한 공간을 사용 합니다. 응용 프로그램 수준에서 회전 비활성화 되거나 활성화 될 수 있습니다.
-
-이 문서 장치 방향 기능을 활용 하는 앱을 만드는 과정을 안내 하 고 다음과 같은 섹션이 있습니다.
-
-- **[방향을 제어](#Controlling_Orientation)**  &ndash; 방향 앱 수준에서 각 플랫폼에서 제어 하는 방법을 이해 합니다.
-- **[방향에서 변경 내용에 응답할](#Reacting_to_Changes_in_Orientation)**  &ndash; , 메시지가 표시 되며이에 대응 하는 방법을 알아보려면, 방향으로 변경 합니다.
-- **[반응 형 레이아웃](#Responsive_Layout)**  &ndash; 가로 및 세로 방향에서 자동으로 작동 하는 레이아웃을 만드는 방법에 알아봅니다.
 
 <a name="Controlling_Orientation" />
 

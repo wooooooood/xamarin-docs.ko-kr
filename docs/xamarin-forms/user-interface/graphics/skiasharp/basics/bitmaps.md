@@ -1,19 +1,20 @@
 ---
-title: 비트맵 기본 사항
-description: 다양 한 소스에서 비트맵을 로드 하 고 표시 합니다.
+title: SkiaSharp의 비트맵 기본 사항
+description: 이 문서에서는 다양 한 소스에서 SkiaSharp에서 비트맵을 로드 하 고 Xamarin.Forms 응용 프로그램에 표시 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 291f08afb95c70e9f9fccc02e1fd7353cf107213
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244388"
 ---
-# <a name="bitmap-basics"></a>비트맵 기본 사항
+# <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
 _다양 한 소스에서 비트맵을 로드 하 고 표시 합니다._
 

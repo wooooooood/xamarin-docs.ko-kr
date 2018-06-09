@@ -1,19 +1,20 @@
 ---
-title: 경로 기본 사항
-description: 연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 합니다.
+title: SkiaSharp의 경로 기본 사항
+description: 이 문서는 연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 2fc492f723a7a009da506d241ddf2e8459908633
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244047"
 ---
-# <a name="path-basics"></a>경로 기본 사항
+# <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
 _연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 합니다._
 

@@ -1,5 +1,5 @@
 ---
-title: 이미지
+title: Xamarin.Forms에는 이미지
 description: Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 대해 구체적으로 로드 될 수 또는 표시를 위해 다운로드할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: caa7884920e842a8f83e2b0fdb5e0fa4b358ca8e
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 6d3e5e61069723b0910b092da6631d5dc4ad8629
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244547"
 ---
-# <a name="images"></a>이미지
+# <a name="images-in-xamarinforms"></a>Xamarin.Forms에는 이미지
 
 _Xamarin.forms는 플랫폼에서 이미지를 공유할 수, 각 플랫폼에 대해 구체적으로 로드 될 수 또는 표시를 위해 다운로드할 수 있습니다._
 
@@ -179,7 +180,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
-   
+
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 

@@ -1,19 +1,20 @@
 ---
-title: 문자열 서식 지정
-description: 데이터 바인딩을 사용 서식을 지정 하 고 개체를 문자열로 표시 하 여
+title: Xamarin.Forms 문자열 서식 지정
+description: 이 문서에 서식을 지정 하 고 개체의 문자열 표시를 Xamarin.FOrms 데이터 바인딩을 사용 하는 방법을 설명 합니다. 이 바인딩의 StringFormat을 자리 표시자는 표준.NET 서식 문자열을 설정 하 여 이루어집니다.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4e143f650c3cde7577def1a95e53b207608a088a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bdac74e4ec14797ec373f86b8a94c7af4d480951
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240303"
 ---
-# <a name="string-formatting"></a>문자열 서식 지정
+# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
 
 경우에 따라 개체 또는 값의 문자열 표현을 표시 하려면 데이터 바인딩을 사용 하면 편리 합니다. 예를 들어 데 사용할 수는 `Label` 의 현재 값을 표시 하는 `Slider`합니다. 이 데이터 바인딩에서는 `Slider` 소스가 고 대상이 `Text` 의 속성은 `Label`합니다.
 

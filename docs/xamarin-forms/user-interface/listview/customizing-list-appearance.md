@@ -1,20 +1,20 @@
 ---
-title: 목록 모양
-description: 머리글, 바닥글, 그룹 및 가변 높이 셀을 사용 하 여 Listview에 사용자 지정 합니다.
+title: ListView 모양 사용자 지정
+description: 이 문서에는 머리글, 바닥글, 그룹 및 가변 높이 셀을 사용 하 여 Listview Xamarin.Forms는 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b460e25aa5b97953069caa5456003b6cab2c8a8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848391"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245142"
 ---
-# <a name="list-appearance"></a>목록 모양
+# <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
 `ListView` 에 기본 외에도 전체 목록 표시를 제어 하기 위한 옵션이 `ViewCell`s입니다. 다음 옵션을 사용할 수 있습니다.
 

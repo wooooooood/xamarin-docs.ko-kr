@@ -1,16 +1,18 @@
 ---
 title: 구성 요소를 결합 된 느슨하게 간의 통신
+description: '이 장에서 설명 eShopOnContainers 모바일 앱 게시를 구현 하는 방법-구독 패턴, 개체 및 형식 참조 하 여 연결 편리한 되지 않는 구성 요소 간의 메시지 기반 통신을 허용 합니다. '
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 01669573f215c5a13bb918c9f9ba80aa5ca528c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 797032d17babe986de1357c6ac3291a4960d87ff
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245083"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>구성 요소를 결합 된 느슨하게 간의 통신
 

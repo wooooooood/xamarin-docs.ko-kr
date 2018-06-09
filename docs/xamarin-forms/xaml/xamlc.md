@@ -1,19 +1,20 @@
 ---
-title: XAML 컴파일
-description: 필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다.
+title: Xamarin.forms에서는 XAML 컴파일
+description: 이 문서에서는 어떻게 XAML 필요에 따라 컴파일될 수 (XAMLC) Xamarin.Forms XAML 컴파일러로 중간 언어 (IL)에 직접 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/21/2016
-ms.openlocfilehash: fc4c7df6011fdf8d263b9fca88a5ffb551ec78e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0128fecebe9f6ba8f55e965a8fa65787d03d9ded
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245747"
 ---
-# <a name="xaml-compilation"></a>XAML 컴파일
+# <a name="xaml-compilation-in-xamarinforms"></a>Xamarin.forms에서는 XAML 컴파일
 
 _IL (중간 언어) XAML 컴파일러 (XAMLC)에 직접 XAML은 선택적으로 컴파일할 수 있습니다._
 

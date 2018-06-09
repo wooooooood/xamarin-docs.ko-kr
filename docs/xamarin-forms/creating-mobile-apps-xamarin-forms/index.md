@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Forms 책 첫 번째 버전을 사용 하 여 모바일 앱 만들기
-description: Charles Petzold로 모바일 앱 만들기 책의 전자 버전과 Xamarin.Forms에 알아봅니다.
+description: Charles Petzold로 모바일 앱 만들기 책의 전자 버전과 Xamarin.Forms 응용 프로그램 개발에 알아봅니다.
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/03/2016
-ms.openlocfilehash: 6e98adc4cc9dbf1ef6483d552d859b4925d51fe9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 84ed08419c49617ee0fcde57682e512ecb9ee6d7
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241704"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book-first-edition"></a>Xamarin.Forms 책 첫 번째 버전을 사용 하 여 모바일 앱 만들기
 
@@ -24,9 +25,9 @@ ms.lasthandoff: 04/04/2018
 
 Microsoft Virtual Academy에서 기본 eBook 형식을 다운로드 하세요.
 
-*    [**PDF (56Mb)**](https://aka.ms/xamebook)
+*    [**PDF (56 Mb)**](https://aka.ms/xamebook)
 
-*    [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
+*    [**ePub (151 Mb)**](https://aka.ms/xamebook/epub)
 
 *    [**Kindle edition (325mb)**](https://aka.ms/xamebook/mobi)
 
@@ -127,7 +128,7 @@ Microsoft Virtual Academy에서 기본 eBook 형식을 다운로드 하세요.
 </tr>
 <tr style="background:#ecf0f1">
   <td style="border:0px;">
-    <h4>장 13입니다. Bitmaps</h4>
+    <h4>장 13입니다. 비트맵</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="summaries/chapter13.md">요약</a></td>

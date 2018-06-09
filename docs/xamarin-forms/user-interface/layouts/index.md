@@ -1,6 +1,6 @@
 ---
-title: 레이아웃
-description: 보기 화면에 배치 합니다.
+title: Xamarin.Forms에는 레이아웃
+description: Xamarin.Forms 화면의 콘텐츠를 구성 하기 위한 몇 가지 기능과 레이아웃 않았으며이 문서에 설명 됩니다.
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -8,15 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d11e0e286c25f11c24dc788be8d1c29155261b7a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244892"
 ---
-# <a name="layouts"></a>레이아웃
+# <a name="layouts-in-xamarinforms"></a>Xamarin.Forms에는 레이아웃
 
-Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 구성 하는 데 있습니다. 
+Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 구성 하는 데 있습니다.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
@@ -69,7 +70,7 @@ Xamarin.Forms에는 몇 가지 레이아웃 및 기능 화면의 콘텐츠를 �
 <FlexLayout Direction="Column"
             AlignItems="Center"
             JustifyContent="SpaceEvenly">
-        
+
     <Label Text="FlexLayout in Action" />
     <Button Text="Button" />
     <Label Text="Another Label" />

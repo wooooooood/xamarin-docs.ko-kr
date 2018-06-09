@@ -1,17 +1,18 @@
 ---
 title: 고급 개념 및 내부 요소
-description: Xamarin.Forms에 및 고급 팁과 트릭에 대 한 세부 정보를 구현 합니다.
+description: 이 가이드 Xamarin.Forms에 대 한 고급 개념 및 내부 기능을 소개합니다. 현재 빠른 렌더러 하 고 표준.NET에 대 한 문서를 포함합니다.
 ms.prod: xamarin
 ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2017
-ms.openlocfilehash: c19dca3701b2915625ac8ac8566abf5796a28547
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 53e833da405596bf2503851ac9e12648d17ea032
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243468"
 ---
 # <a name="advanced-concepts--internals"></a>고급 개념 및 내부 요소
 

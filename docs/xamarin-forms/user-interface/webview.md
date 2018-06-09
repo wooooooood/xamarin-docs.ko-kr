@@ -1,20 +1,20 @@
 ---
-title: 웹 보기
-description: 로컬 또는 네트워크 웹 콘텐츠 및 문서를 제공 합니다.
+title: Xamarin.Forms 웹 보기
+description: 이 문서에서는 사용자에 게 로컬 표시 하는 Xamarin.Forms WebView 클래스를 사용 하는 방법 또는 네트워크 웹 콘텐츠 및 문서를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 7ce48e48e41c3554094a12a220ae197cc4ec3fff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: df004bd2a580e48137162d28ca3974521266ae7a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847994"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245646"
 ---
-# <a name="webview"></a>웹 보기
+# <a name="xamarinforms-webview"></a>Xamarin.Forms 웹 보기
 
 [WebView](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) 웹 및 HTML을 표시 하기 위한 뷰는 응용 프로그램의 콘텐츠입니다. 와 달리 `OpenUri`, 사용자 장치에서 웹 브라우저를 사용 하는 `WebView` 앱 내에서 HTML 콘텐츠를 표시 합니다.
 

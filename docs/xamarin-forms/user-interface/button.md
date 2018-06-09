@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/01/2018
-ms.openlocfilehash: 1fed439ecb4bd79bd84974ea1397ca0ed1336b62
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d74e0b2aa5be6e8eee2ce5cb54572dd4113d4d7d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847955"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244918"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
-_단추 탭 하거나 특정 태스크를 수행 하는 응용 프로그램에 지시 하는 클릭에 응답 합니다._ 
+_단추 탭 하거나 특정 태스크를 수행 하는 응용 프로그램에 지시 하는 클릭에 응답 합니다._
 
 [ `Button` ](xref:Xamarin.Forms.Button) 모든 Xamarin.Forms의 가장 기본적인 대화형 컨트롤입니다. `Button` 표시 하지만 명령을 나타내는 짧은 텍스트 문자열 수도 비트맵 이미지 또는 텍스트의 조합을 이미지를 표시 하는 일반적으로 합니다. 사용자가 `Button` 손가락으로 또는 해당 명령을 시작 하는 마우스 클릭 합니다.
 
@@ -24,7 +24,7 @@ _단추 탭 하거나 특정 태스크를 수행 하는 응용 프로그램에 �
 
 ## <a name="handling-button-clicks"></a>클릭할 단추 처리
 
-`Button` 정의 [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) 사용자가 누를 때 발생 하는 이벤트는 `Button` 손가락 또는 마우스 포인터를 가진 합니다. 화면에서 손가락 또는 마우스 단추를 놓을 때 이벤트가 `Button`합니다. `Button` 있어야 해당 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성이로 설정 `true` 탭에 응답 하기에 대 한 합니다. 
+`Button` 정의 [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) 사용자가 누를 때 발생 하는 이벤트는 `Button` 손가락 또는 마우스 포인터를 가진 합니다. 화면에서 손가락 또는 마우스 단추를 놓을 때 이벤트가 `Button`합니다. `Button` 있어야 해당 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성이로 설정 `true` 탭에 응답 하기에 대 한 합니다.
 
 **기본 단추 클릭** 페이지에 [ **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플에서는 인스턴스화하는 방법을 보여 줍니다.는 `Button` XAML 핸들에 해당 `Clicked` 이벤트입니다. **BasicButtonClickPage.xaml** 파일에 포함 되어는 `StackLayout` 둘 다와 함께 한 `Label` 및 `Button`:
 
@@ -34,18 +34,18 @@ _단추 탭 하거나 특정 태스크를 수행 하는 응용 프로그램에 �
              x:Class="ButtonDemos.BasicButtonClickPage"
              Title="Basic Button Click">
     <StackLayout>
-        
+
         <Label x:Name="label"
                Text="Click the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Click to Rotate Text!"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked" />
-     
+
     </StackLayout>
 </ContentPage>
 ```
@@ -136,7 +136,8 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>단추 비활성화
 
-경우에 따라 응용 프로그램은 특정 상태에서에 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 않도록 설정 하 여 해당 `IsEnabled` 속성을 `false`합니다. 기본적인 예로 `Entry` 파일 열기와 함께 파일 이름에 대 한 제어 `Button`:는 `Button` 에 일부 텍스트를 입력 하는 경우에 사용 하도록 설정할 수는 `Entry`합니다. 사용할 수는 `DataTrigger` 와 같이이 작업에 대 한는 [ **데이터 트리거** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) 문서.
+경우에 따라 응용 프로그램은 특정 상태에서에 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 않도록 설정 하 여 해당 `IsEnabled` 속성을 `false`합니다. 기본적인 예로 `Entry` 파일 열기와 함께 파일 이름에 대 한 제어 `Button`:는 `Button` 에 일부 텍스트를 입력 하는 경우에 사용 하도록 설정할 수는 `Entry`합니다.
+사용할 수는 `DataTrigger` 와 같이이 작업에 대 한는 [ **데이터 트리거** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) 문서.
 
 ## <a name="using-the-command-interface"></a>인터페이스 사용
 
@@ -199,15 +200,15 @@ class CommandDemoViewModel : INotifyPropertyChanged
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.BasicButtonCommandPage"
              Title="Basic Button Command">
-    
+
     <ContentPage.BindingContext>
         <local:CommandDemoViewModel />
     </ContentPage.BindingContext>
-    
+
     <StackLayout>
         <Label Text="{Binding Number, StringFormat='Value is now {0}'}"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Multiply by 2"
@@ -355,7 +356,7 @@ public partial class MainPage : ContentPage
         <Label x:Name="label"
                Text="Press and hold the Button below"
                FontSize="Large"
-               VerticalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand"
                HorizontalOptions="Center" />
 
         <Button Text="Press to Rotate Text!"
@@ -406,7 +407,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 [![단추를 눌렀다](button-images/PressAndReleaseButton.png "단추를 눌렀다")](button-images/PressAndReleaseButton-Large.png)
 
-이러한 종류의 동작에는 게임을 위한 응용 프로그램이: 보유 하 고 손가락은 `Button` on 화면 개체가 특정 방향으로 이동 확인 될 수 있습니다. 
+이러한 종류의 동작에는 게임을 위한 응용 프로그램이: 보유 하 고 손가락은 `Button` on 화면 개체가 특정 방향으로 이동 확인 될 수 있습니다.
 
 <a name="button-appearance" />
 
@@ -420,7 +421,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 - [`FontFamily`](xref:Xamarin.Forms.Button.FontFamily) 텍스트에 글꼴 패밀리를 사용 하 시겠습니까
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 텍스트의 크기
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 기울임꼴 또는 굵은 텍스트 인지 여부를 나타냅니다.
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) 테두리의 너비 
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) 테두리의 너비
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 둥글게 합니다.
 
 이러한 속성 중 여섯 개의 효과 (제외 `FontFamily` 및 `FontAttributes`)에서 보여지는 **단추 모양을** 페이지. 다른 속성 [ `Image` ](xref:Xamarin.Forms.Button.Image), 섹션에서 설명한 [ **비트맵을 사용 하 여 단추와**](#image-button)합니다.
@@ -447,7 +448,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
         <StackLayout BindingContext="{x:Reference button}"
                      Padding="10">
-            
+
             <Slider x:Name="fontSizeSlider"
                     Maximum="48"
                     Minimum="1"
@@ -462,8 +463,8 @@ public partial class PressAndReleaseButtonPage : ContentPage
                     Minimum="-1"
                     Maximum="12"
                     Value="{Binding BorderWidth}" />
-            
-            <Label Text="{Binding Source={x:Reference borderWidthSlider}, 
+
+            <Label Text="{Binding Source={x:Reference borderWidthSlider},
                                   Path=Value,
                                   StringFormat='BorderWidth = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -473,7 +474,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
                     Maximum="24"
                     Value="{Binding CornerRadius}" />
 
-            <Label Text="{Binding Source={x:Reference cornerRadiusSlider}, 
+            <Label Text="{Binding Source={x:Reference cornerRadiusSlider},
                                   Path=Value,
                                   StringFormat='CornerRadius = {0:F0}'}"
                    HorizontalTextAlignment="Center" />
@@ -484,7 +485,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -586,13 +587,13 @@ class ToggleButton : Button
 }
 ```
 
-`ToggleButton` 에 처리기를 연결 하는 생성자는 `Clicked` 한다는의 값을 변경할 수 있도록 이벤트는 `IsToggled` 속성입니다. `OnIsToggledChanged` 발생 합니다. 메서드는 `Toggled` 이벤트입니다. 
+`ToggleButton` 에 처리기를 연결 하는 생성자는 `Clicked` 한다는의 값을 변경할 수 있도록 이벤트는 `IsToggled` 속성입니다. `OnIsToggledChanged` 발생 합니다. 메서드는 `Toggled` 이벤트입니다.
 
-마지막 줄은 `OnIsToggledChanged` 정적 메서드를 호출 `VisualStateManager.GoToState` "ToggledOn" 및 "ToggledOff" 메서드를 두 개의 텍스트 문자열입니다. 읽을 수 있습니다이 방법과 응용 프로그램 응답 하는 방법을 시각적 상태 문서에 대 한 [ **The Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md)합니다. 
+마지막 줄은 `OnIsToggledChanged` 정적 메서드를 호출 `VisualStateManager.GoToState` "ToggledOn" 및 "ToggledOff" 메서드를 두 개의 텍스트 문자열입니다. 읽을 수 있습니다이 방법과 응용 프로그램 응답 하는 방법을 시각적 상태 문서에 대 한 [ **The Xamarin.Forms Visual State Manager**](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
 
-때문에 `ToggleButton` 를 호출할 `VisualStateManager.GoToState`, 클래스 자체를 기반으로 하는 단추의 모양을 변경 하는 모든 추가 기능이 포함 되어 필요가 해당 `IsToggled` 상태입니다. 호스트 하는 XAML의 책임 즉는 `ToggleButton`합니다. 
+때문에 `ToggleButton` 를 호출할 `VisualStateManager.GoToState`, 클래스 자체를 기반으로 하는 단추의 모양을 변경 하는 모든 추가 기능이 포함 되어 필요가 해당 `IsToggled` 상태입니다. 호스트 하는 XAML의 책임 즉는 `ToggleButton`합니다.
 
-**토글 단추 데모** 의 두 인스턴스를 포함 하는 페이지 `ToggleButton`, 포함 하 여 Visual State Manager를 설정 하는 `Text`, `BackgroundColor`, 및 `TextColor` 시각적 상태에 따라 단추: 
+**토글 단추 데모** 의 두 인스턴스를 포함 하는 페이지 `ToggleButton`, 포함 하 여 Visual State Manager를 설정 하는 `Text`, `BackgroundColor`, 및 `TextColor` 시각적 상태에 따라 단추:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -601,7 +602,7 @@ class ToggleButton : Button
              xmlns:local="clr-namespace:ButtonDemos"
              x:Class="ButtonDemos.ToggleButtonDemoPage"
              Title="Toggle Button Demo">
-    
+
     <ContentPage.Resources>
         <Style TargetType="local:ToggleButton">
             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
@@ -620,7 +621,7 @@ class ToggleButton : Button
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Italic On " />
@@ -642,7 +643,7 @@ class ToggleButton : Button
                             <Setter Property="TextColor" Value="Black" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                     <VisualState Name="ToggledOn">
                         <VisualState.Setters>
                             <Setter Property="Text" Value=" Bold On " />
@@ -710,9 +711,9 @@ public partial class ToggleButtonDemoPage : ContentPage
 
 `Button` 클래스 정의 [ `Image` ](xref:Xamarin.Forms.Button.Image) 속성에 비트맵 이미지를 표시할 수 있도록는 `Button`를 단독으로 또는 텍스트와 함께 사용 합니다. 텍스트 및 이미지 정렬 되는 방식을 지정할 수 있습니다.
 
-`Image` 형식의 속성은 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), 즉, 비트맵 개별 플랫폼 프로젝트에서 하 고 표준.NET 라이브러리 프로젝트에 리소스 그룹으로 저장 되어야 합니다. 
+`Image` 형식의 속성은 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), 즉, 비트맵 개별 플랫폼 프로젝트에서 하 고 표준.NET 라이브러리 프로젝트에 리소스 그룹으로 저장 되어야 합니다.
 
-Xamarin.Forms에서 지 원하는 각 플랫폼에는 이미지를의 다양 한 장치에 응용 프로그램이 실행 될 수 있는 다른 픽셀 해상도 대해 여러 크기에 저장 될 수 있습니다. 이러한 여러 비트맵의 비디오 장치에 대 한 운영 체제 가장 일치 하는 중 선택할 수는 방식에 저장 되거나 라는 되 디스플레이 해상도입니다. 
+Xamarin.Forms에서 지 원하는 각 플랫폼에는 이미지를의 다양 한 장치에 응용 프로그램이 실행 될 수 있는 다른 픽셀 해상도 대해 여러 크기에 저장 될 수 있습니다. 이러한 여러 비트맵의 비디오 장치에 대 한 운영 체제 가장 일치 하는 중 선택할 수는 방식에 저장 되거나 라는 되 디스플레이 해상도입니다.
 
 비트맵에 대 한는 `Button`, 최적의 크기는 일반적으로 장치 독립적 단위 32에서 64 사이, 크기에 따라 원하는 되도록 합니다. 이 예에서 사용 되는 이미지 48 장치 독립적 단위의 크기를 기반으로 합니다.
 
@@ -801,7 +802,7 @@ UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그
     <FlexLayout Direction="Column"
                 JustifyContent="SpaceEvenly"
                 AlignItems="Center">
-        
+
         <FlexLayout.Resources>
             <Style TargetType="Button">
                 <Setter Property="Image">
@@ -833,7 +834,7 @@ UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그
         <Button Text="Right - 20"
                 ContentLayout="Right, 20" />
 
-        <Button Text="Bottom - 20" 
+        <Button Text="Bottom - 20"
                 ContentLayout="Bottom, 20" />
     </FlexLayout>
 </ContentPage>

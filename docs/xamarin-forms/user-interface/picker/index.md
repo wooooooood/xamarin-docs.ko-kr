@@ -1,20 +1,20 @@
 ---
-title: 선택
-description: 선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다.
+title: Xamarin.Forms 선택
+description: Xamarin.Forms 선택 사용자 항목을 선택할 수 있는 항목의 짧은 목록을 표시 합니다. 이 문서에서는 항목을 선택할 텍스트 데이터의 목록에서 선택 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 7f0050351ca28d7f8afeb82a85e82e51d399824b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847500"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245041"
 ---
-# <a name="picker"></a>선택
+# <a name="xamarinforms-picker"></a>Xamarin.Forms 선택
 
 _선택기 보기에는 데이터의 목록에서 텍스트 항목을 선택 하기 위한 컨트롤입니다._
 

@@ -1,17 +1,18 @@
 ---
 title: 경로 및 영역을 사용 하 여 클리핑
-description: 클립 그래픽 경로 사용 하 여 특정 영역을 영역을 만드는 데
+description: 이 문서에서는 특정 영역으로 SkiaSharp 클립 그래픽 경로 사용 하 고 영역을 생성 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0d246dc4a5304b56560deb1095149e52c1f82335
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243891"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 영역을 사용 하 여 클리핑
 

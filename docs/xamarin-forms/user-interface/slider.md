@@ -1,23 +1,24 @@
 ---
-title: 슬라이더를 사용 하 여
-description: 연속 값의 범위에서를 선택 하는 슬라이더를 사용 합니다.
+title: Xamarin.Forms 슬라이더
+description: Xamarin.Forms 슬라이더는 연속 된 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 연속 값의 범위에서 값을 선택 하려면 슬라이더 클래스를 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/16/2018
-ms.openlocfilehash: 99109f6377037ffb9f622b7ddb237b42d241e505
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33c26abe2de017b6d8070053baf917cdd7a0dfc6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245809"
 ---
-# <a name="using-slider"></a>슬라이더를 사용 하 여
+# <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
 _연속 값의 범위에서를 선택 하는 슬라이더를 사용 합니다._
 
-Xamarin.Forms는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 은 선택 하는 사용자가 조작할 수 있는 가로 막대는 `double` 연속 된 범위에서 값입니다. 
+Xamarin.Forms는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 은 선택 하는 사용자가 조작할 수 있는 가로 막대는 `double` 연속 된 범위에서 값입니다.
 
 `Slider` 유형의 세 가지 속성을 정의 `double`:
 
@@ -25,14 +26,14 @@ Xamarin.Forms는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.For
 - [`Maximum`](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) 기본값은 1에서 범위의 최대값이입니다.
 - [`Value`](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Value/) 슬라이더의 값을 지정할 수 있습니다 이므로 `Minimum` 및 `Maximum` 이며 0의 기본값은입니다.
 
-모든 세 가지 속성에 의해 지원 됩니다 `BindableProperty` 개체입니다. `Value` 속성의 기본 바인딩 모드에 `BindingMode.TwoWay`를 사용 하는 응용 프로그램에서 바인딩 소스로는 [모델-뷰-MVVM ()](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처. 
+모든 세 가지 속성에 의해 지원 됩니다 `BindableProperty` 개체입니다. `Value` 속성의 기본 바인딩 모드에 `BindingMode.TwoWay`를 사용 하는 응용 프로그램에서 바인딩 소스로는 [모델-뷰-MVVM ()](~/xamarin-forms/enterprise-application-patterns/mvvm.md) 아키텍처.
 
 > [!WARNING]
 > 내부적으로 `Slider` 되도록 `Minimum` 는 보다 작은 `Maximum`합니다. 경우 `Minimum` 또는 `Maximum` 적이 설정 되어 있도록 `Minimum` 은 보다 작지 않음 `Maximum`, 예외가 발생 합니다. 참조는 [ **예방 조치** ](#precautions) 설정에 대 한 자세한 내용은 아래 섹션에서 `Minimum` 및 `Maximum` 속성입니다.
 
-`Slider` 강제 변환의 `Value` 한다는 범위에 속함 속성 `Minimum` 및 `Maximum`(포함). 경우는 `Minimum` 속성이 보다 큰 값으로 설정 된는 `Value` 속성에는 `Slider` 설정는 `Value` 속성을 `Minimum`합니다. 마찬가지로, 경우 `Maximum` 값으로 설정 보다 작은 `Value`, 다음 `Slider` 설정는 `Value` 속성을 `Maximum`합니다. 
+`Slider` 강제 변환의 `Value` 한다는 범위에 속함 속성 `Minimum` 및 `Maximum`(포함). 경우는 `Minimum` 속성이 보다 큰 값으로 설정 된는 `Value` 속성에는 `Slider` 설정는 `Value` 속성을 `Minimum`합니다. 마찬가지로, 경우 `Maximum` 값으로 설정 보다 작은 `Value`, 다음 `Slider` 설정는 `Value` 속성을 `Maximum`합니다.
 
-`Slider` 정의 [ `ValueChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Slider.ValueChanged/) 는 발생 이벤트는 `Value` 사용자 조작을 통해 변경 내용을 `Slider` 설정 되므로 또는 `Value` 속성을 직접 합니다. A `ValueChanged` 도 이벤트가 실행 될 때는 `Value` 속성에 이전 단락에 설명 된 대로 강제 변환 됩니다. 
+`Slider` 정의 [ `ValueChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Slider.ValueChanged/) 는 발생 이벤트는 `Value` 사용자 조작을 통해 변경 내용을 `Slider` 설정 되므로 또는 `Value` 속성을 직접 합니다. A `ValueChanged` 도 이벤트가 실행 될 때는 `Value` 속성에 이전 단락에 설명 된 대로 강제 변환 됩니다.
 
 [ `ValueChangedEventArgs` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ValueChangedEventArgs/) 함께 제공 되는 개체는 `ValueChanged` 이벤트에 두 가지 속성 형식의 둘 다 `double`: [ `OldValue` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ValueChangedEventArgs.OldValue/) 및 [ `NewValue` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ValueChangedEventArgs.NewValue/). 시간에는 이벤트가 발생의 값 `NewValue` 동일는 `Value` 속성의는 `Slider` 개체입니다.
 
@@ -92,7 +93,7 @@ public class BasicSliderCodePage : ContentPage
 }
 ```
 
-`Slider` 있어야 초기화는 `Maximum` 360의 속성입니다. `ValueChanged` 의 처리기는 `Slider` 사용 하 여는 `Value` 속성의는 `slider` 설정할 개체는 `Rotation` 첫 번째 속성 `Label` 사용 하 여는 `String.Format` 사용 하 여 메서드는 `NewValue` 속성의는 설정 하는 이벤트 인수는 `Text` 두 번째 속성 `Label`합니다. 이 두 가지 방법의 현재 값을 가져옵니다는 `Slider` 은 서로 전환이 가능 합니다. 
+`Slider` 있어야 초기화는 `Maximum` 360의 속성입니다. `ValueChanged` 의 처리기는 `Slider` 사용 하 여는 `Value` 속성의는 `slider` 설정할 개체는 `Rotation` 첫 번째 속성 `Label` 사용 하 여는 `String.Format` 사용 하 여 메서드는 `NewValue` 속성의는 설정 하는 이벤트 인수는 `Text` 두 번째 속성 `Label`합니다. 이 두 가지 방법의 현재 값을 가져옵니다는 `Slider` 은 서로 전환이 가능 합니다.
 
 다음은 장치, iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에서 실행 되는 프로그램입니다.
 
@@ -111,7 +112,7 @@ public class BasicSliderCodePage : ContentPage
              Title="Basic Slider XAML"
              Padding="10, 0">
     <StackLayout>
-        <Label x:Name="rotatingLabel" 
+        <Label x:Name="rotatingLabel"
                Text="ROTATING TEXT"
                FontSize="Large"
                HorizontalOptions="Center"
@@ -171,7 +172,7 @@ double value = slider.Value;
              Padding="10, 0">
     <StackLayout>
         <Label Text="ROTATING TEXT"
-               Rotation="{Binding Source={x:Reference slider}, 
+               Rotation="{Binding Source={x:Reference slider},
                                   Path=Value}"
                FontSize="Large"
                HorizontalOptions="Center"
@@ -181,8 +182,8 @@ double value = slider.Value;
                 Maximum="360" />
 
         <Label x:Name="displayLabel"
-               Text="{Binding Source={x:Reference slider}, 
-                              Path=Value, 
+               Text="{Binding Source={x:Reference slider},
+                              Path=Value,
                               StringFormat='The Slider value is {0:F0}'}"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
@@ -244,7 +245,7 @@ Slider slider = new Slider
 
 대신,는 `Value` 속성으로 강제 변환 되는 `Maximum` 값이 1입니다.
 
-위에 표시 된 코드 조각은 다음과 같습니다. 
+위에 표시 된 코드 조각은 다음과 같습니다.
 
 ```csharp
 Slider slider = new Slider
@@ -254,9 +255,9 @@ Slider slider = new Slider
 };
 ```
 
-때 `Minimum` 를 10으로 설정한 후 `Value` 10로 설정 됩니다. 
+때 `Minimum` 를 10으로 설정한 후 `Value` 10로 설정 됩니다.
 
-경우는 `ValueChanged` 때 이벤트 처리기가 연결 하는 `Value` 속성은 기본값인 0 이외의 값으로 강제 변환 되는 `ValueChanged` 이벤트가 발생 합니다. XAML의 코드 조각은 다음과 같습니다. 
+경우는 `ValueChanged` 때 이벤트 처리기가 연결 하는 `Value` 속성은 기본값인 0 이외의 값으로 강제 변환 되는 `ValueChanged` 이벤트가 발생 합니다. XAML의 코드 조각은 다음과 같습니다.
 
 ```xaml
 <Slider ValueChanged="OnSliderValueChanged"
@@ -272,15 +273,15 @@ Slider slider = new Slider
 
 값을 표시 하는 앞에 표시 된 스크린샷을 보려면은 `Slider` 다른 수가 소수점이 하입니다. 이 방법을 관련이 `Slider` UWP 및 Android 플랫폼에 구현 됩니다.
 
-### <a name="the-android-implementation"></a>Android 구현 
+### <a name="the-android-implementation"></a>Android 구현
 
-Android 구현의 `Slider` Android 기반 [ `SeekBar` ](https://developer.xamarin.com/api/type/Android.Widget.SeekBar/) 항상 설정 하 고는 [ `Max` ](https://developer.xamarin.com/api/property/Android.Widget.ProgressBar.Max/) 1000 속성입니다. 즉는 `Slider` android에 1,001 불연속 값입니다. 설정 하는 경우는 `Slider` 있어야는 `Minimum` 0 및 `Maximum` 5000을 다음으로 `Slider` 조작 되는 `Value` 속성에 0, 5, 10, 15, 등의 값입니다. 
+Android 구현의 `Slider` Android 기반 [ `SeekBar` ](https://developer.xamarin.com/api/type/Android.Widget.SeekBar/) 항상 설정 하 고는 [ `Max` ](https://developer.xamarin.com/api/property/Android.Widget.ProgressBar.Max/) 1000 속성입니다. 즉는 `Slider` android에 1,001 불연속 값입니다. 설정 하는 경우는 `Slider` 있어야는 `Minimum` 0 및 `Maximum` 5000을 다음으로 `Slider` 조작 되는 `Value` 속성에 0, 5, 10, 15, 등의 값입니다.
 
 ### <a name="the-uwp-implementation"></a>UWP 구현
 
-UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 설정 되는 `Maximum` 및 `Minimum` 속성 10, 하지만 1 보다 크지 않음로 나눈 값입니다. 
+UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 설정 되는 `Maximum` 및 `Minimum` 속성 10, 하지만 1 보다 크지 않음로 나눈 값입니다.
 
-0-1의 기본 범위에 대 한 예를 들어는 `StepFrequency` 0.1 속성이 설정 되어 있습니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 분명 하 게는 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 다음 속성은 10 이상 `StepFrequency` 1로 설정 및 `Value` 속성에는 정수 계열 값입니다. 
+0-1의 기본 범위에 대 한 예를 들어는 `StepFrequency` 0.1 속성이 설정 되어 있습니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 분명 하 게는 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 다음 속성은 10 이상 `StepFrequency` 1로 설정 및 `Value` 속성에는 정수 계열 값입니다.
 
 ### <a name="the-stepslider-solution"></a>StepSlider 솔루션
 
@@ -288,9 +289,9 @@ UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls
 
 ## <a name="sliders-for-color-selection"></a>색 선택에 대 한 슬라이더
 
-마지막 두 페이지에 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 둘 다 사용 하 여 3 개 샘플 `Slider` 색 선택에 대 한 인스턴스. 첫 번째 페이지의 두 번째 페이지는 ViewModel와 데이터 바인딩을 사용 하는 방법을 표시 하는 동안 코드 숨김 파일의 모든 상호 작용을 처리 합니다. 
+마지막 두 페이지에 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 둘 다 사용 하 여 3 개 샘플 `Slider` 색 선택에 대 한 인스턴스. 첫 번째 페이지의 두 번째 페이지는 ViewModel와 데이터 바인딩을 사용 하는 방법을 표시 하는 동안 코드 숨김 파일의 모든 상호 작용을 처리 합니다.
 
-### <a name="handling-sliders-in-the-code-behind-file"></a>코드 숨김 파일에서 슬라이더를 처리합니다. 
+### <a name="handling-sliders-in-the-code-behind-file"></a>코드 숨김 파일에서 슬라이더를 처리합니다.
 
 **RGB 색 슬라이더** 페이지를 인스턴스화하는 `BoxView` 색을 표시 하려면 세 개의 `Slider` 인스턴스 세 개와 표시 되는 색의 빨강, 녹색 및 파랑 구성 요소를 선택할 `Label` 해당 색을 표시 하기 위한 요소 값:
 
@@ -304,7 +305,7 @@ UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls
             <Style TargetType="Slider">
                 <Setter Property="Maximum" Value="255" />
             </Style>
-            
+
             <Style TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
@@ -321,12 +322,12 @@ UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls
 
         <Label x:Name="redLabel" />
 
-        <Slider x:Name="greenSlider" 
+        <Slider x:Name="greenSlider"
                 ValueChanged="OnSliderValueChanged" />
 
         <Label x:Name="greenLabel" />
 
-        <Slider x:Name="blueSlider" 
+        <Slider x:Name="blueSlider"
                 ValueChanged="OnSliderValueChanged" />
 
         <Label x:Name="blueLabel" />
@@ -390,7 +391,7 @@ public class HslColorViewModel : INotifyPropertyChanged
                 Color = Color.FromHsla(value, color.Saturation, color.Luminosity);
             }
         }
-        get 
+        get
         {
             return color.Hue;
         }
@@ -483,7 +484,7 @@ Viewmodel 및 `INotifyPropertyChanged` 인터페이스는 문서에서 설명한
         <Slider Value="{Binding Luminosity}" />
         <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
     </StackLayout>
-</ContentPage> 
+</ContentPage>
 ```
 
 로 `Slider` 요소를 조작할는 `BoxView` 및 `Label` ViewModel에서 요소가 업데이트 됩니다.

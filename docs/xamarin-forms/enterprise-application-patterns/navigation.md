@@ -1,18 +1,20 @@
 ---
-title: 탐색
+title: 엔터프라이즈 응용 프로그램 탐색
+description: 이 장에서 eShopOnContainers 모바일 앱 모델 보기에서에서 보기 중심 모델 탐색을 수행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: aa2e2858e3bb8e435ec3f38bb3d5b249eaa6cba4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ac9f3200440001752c07ad45fdaaf2b1d9ba6a5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243683"
 ---
-# <a name="navigation"></a>탐색
+# <a name="enterprise-app-navigation"></a>엔터프라이즈 응용 프로그램 탐색
 
 Xamarin.Forms에는 일반적으로 UI와 사용자의 상호 작용 또는 내부 논리 기반 상태 변경으로 인해 응용 프로그램 자체에서 간격은 페이지 탐색에 대 한 지원이 포함 되어 있습니다. 그러나 탐색 다음 과제를 충족 해야 하는 대로 모델-뷰-MVVM () 패턴을 사용 하는 앱에서 구현 하는 복잡 한 하나일 수 있습니다.
 

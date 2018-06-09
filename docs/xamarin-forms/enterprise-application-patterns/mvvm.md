@@ -1,19 +1,20 @@
 ---
-title: MVVM
+title: 모델-뷰-ViewModel 패턴
+description: 이 장에서 eShopOnContainers 모바일 앱 MVVM 패턴을 사용 하 여 해당 사용자 인터페이스에서 앱의 프레젠테이션 및 비즈니스 논리를 명확 하 게 구분 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fe2cace6a0fc3a1d901f55556eed09380f8f2006
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793959"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245434"
 ---
-# <a name="mvvm"></a>MVVM
+# <a name="the-model-view-viewmodel-pattern"></a>모델-뷰-ViewModel 패턴
 
 Xamarin.Forms 개발자 환경에는 일반적으로 XAML 사용자 인터페이스를 만들고 다음 사용자 인터페이스에 작동 하는 코드 숨김을 추가 포함 됩니다. 응용 프로그램은 수정 되 고 크기 및 범위를 처럼 복잡 한 유지 관리 문제가 발생할 수 있습니다. 이러한 문제는 UI 컨트롤 및 UI 수정 및 이러한 코드 단위 테스트의 어려움의 비용을 향상 시키는 비즈니스 논리 간의 긴밀 한 연결을 포함 합니다.
 

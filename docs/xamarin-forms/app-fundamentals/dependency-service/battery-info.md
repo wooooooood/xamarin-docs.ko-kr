@@ -1,18 +1,18 @@
 ---
 title: 배터리 상태를 확인 하는 중
-description: 각 플랫폼에 대해 고유 하 게 배터리 정보에 액세스할 수 DependencyService를 사용 하 여
+description: 이 문서에서는 기본적으로 각 플랫폼에 대 한 배터리 정보에 액세스 하려면 Xamarin.Forms DependencyService 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 35c70b0074af170a9df29ea7d19a5f9db492af96
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74e191cd6a87626e887d45f823e65d57000d7463
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846788"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241086"
 ---
 # <a name="checking-battery-status"></a>배터리 상태를 확인 하는 중
 

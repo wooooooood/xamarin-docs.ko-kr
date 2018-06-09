@@ -1,5 +1,5 @@
 ---
-title: 소개
+title: Xamarin.Forms 컨트롤 서식 파일 소개
 description: Xamarin.Forms 컨트롤 템플릿은 쉽게 테마 및 re 테마 하는 기능에서 런타임에 응용 프로그램 페이지를 제공합니다. 이 문서에 컨트롤 템플릿에 대 한 소개를 제공합니다.
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 744419cbc457ffb6dab6b46d690151c08ca35d42
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8e5c84bfa2525a28e9af5343be0ee156564bdd6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242520"
 ---
-# <a name="introduction"></a>소개
+# <a name="introduction-to-xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 서식 파일 소개
 
 _Xamarin.Forms 컨트롤 템플릿은 쉽게 테마 및 re 테마 하는 기능에서 런타임에 응용 프로그램 페이지를 제공합니다. 이 문서에 컨트롤 템플릿에 대 한 소개를 제공합니다._
 

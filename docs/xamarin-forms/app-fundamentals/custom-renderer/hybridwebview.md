@@ -1,18 +1,18 @@
 ---
 title: HybridWebView 구현
-description: Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤 레이아웃와 화면에 컨트롤을 배치 하는 데 사용 되는 뷰 클래스에서 파생 되어야 합니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼 특정 웹 컨트롤을 개선 하는 방법을 보여 주는 HybridWebView 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
+description: 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼 특정 웹 컨트롤을 개선 하는 방법을 보여 주는 HybridWebView 사용자 지정 컨트롤에 대 한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3926fd5c19ad187deef16c4beb0812b3947e9544
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d2cce7598fde4cf59a91940161e605860847623e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847243"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241301"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 

@@ -1,5 +1,5 @@
 ---
-title: 암시적 스타일
+title: Xamarin.Forms에 암시적 스타일
 description: 암시적 스타일은 스타일을 참조 하려면 각 컨트롤을 요구 하지 않고 동일한 TargetType의 모든 컨트롤에서 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 08f1edf807e0f76b2ca1ced023e7725b24122831
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9444d6d8d743fb63496de31e23291b24d9d09993
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848232"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245398"
 ---
-# <a name="implicit-styles"></a>암시적 스타일
+# <a name="implicit-styles-in-xamarinforms"></a>Xamarin.Forms에 암시적 스타일
 
 _암시적 스타일은 스타일을 참조 하려면 각 컨트롤을 요구 하지 않고 동일한 TargetType의 모든 컨트롤에서 사용 됩니다._
 

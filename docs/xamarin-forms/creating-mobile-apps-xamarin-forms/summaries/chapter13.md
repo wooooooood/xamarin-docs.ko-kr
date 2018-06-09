@@ -1,18 +1,20 @@
 ---
-title: 13 장의 요약입니다. Bitmaps
+title: 13 장의 요약입니다. 비트맵
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 13 장 요약 합니다. 비트맵'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241557"
 ---
-# <a name="summary-of-chapter-13-bitmaps"></a>13 장의 요약입니다. Bitmaps
+# <a name="summary-of-chapter-13-bitmaps"></a>13 장의 요약입니다. 비트맵
 
 Xamarin.Forms는 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 요소 비트맵이 표시 됩니다. 모든 Xamarin.Forms 플랫폼에는 JPEG, PNG, GIF, 및 BMP 파일 형식을 지원합니다.
 
@@ -156,7 +158,7 @@ Windows 런타임 프로젝트는 비트맵 이름 지정으로 구성 된 장�
 
 - MyImage.scale 200.jpg 정사각형 320 픽셀
 
-일부 백분율만 올바른지 확인 하십시오입니다. 이 책에 대 한 샘플 프로그램 이미지를 포함 **배율 200** 접미사 하지만 포함 하는 현재 Xamarin.Forms 솔루션 템플릿을 **배율 100**, **배율 125**, **배율 150**, 및 **배율 400**합니다. 
+일부 백분율만 올바른지 확인 하십시오입니다. 이 책에 대 한 샘플 프로그램 이미지를 포함 **배율 200** 접미사 하지만 포함 하는 현재 Xamarin.Forms 솔루션 템플릿을 **배율 100**, **배율 125**, **배율 150**, 및 **배율 400**합니다.
 
 플랫폼 프로젝트에 비트맵 추가 하는 경우는 **빌드 작업** 이어야 합니다.
 

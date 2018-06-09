@@ -1,16 +1,18 @@
 ---
 title: 종속성 주입
+description: 이 장에서 eShopOnContainers 모바일 앱을 이러한 형식에 의존 하는 코드에서 구체적인 형식을 분리 하려면 종속성 주입을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 8db8e5b756fe770bdf292ec03c28eb5ed54acf9e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb225349b9ffb1c950486a817897b3c26c6ffbe4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242572"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 

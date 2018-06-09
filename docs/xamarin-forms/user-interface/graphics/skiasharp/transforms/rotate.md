@@ -1,17 +1,18 @@
 ---
 title: 회전 변환
-description: 및 SkiaSharp 회전 변환을 사용 하 여 가능한 애니메이션 효과 탐색 합니다.
+description: 이 문서 및 SkiaSharp 회전 변환을 사용 하 여 가능한 애니메이션 효과 탐색 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 354844f69c0b8755a15a3325c39e35b97d44f94d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 514ecd16fedd7d3fda39fe20641cf0ee9ecb119e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244622"
 ---
 # <a name="the-rotate-transform"></a>회전 변환
 
@@ -35,7 +36,7 @@ public Void RotateRadians (Single radians)
 
 회전에 대 한 변형 수식은 번역 및 크기 조정에 대 한 보다 더 복잡 합니다. Α 각도로 변환 수식은 다음과 같습니다.
 
-x' = x•cos(α) – y•sin(α)   
+x' x•cos(α) – = y•sin(α)   
 
 y` = x•sin(α) + y•cos(α)
 

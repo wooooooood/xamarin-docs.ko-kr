@@ -1,17 +1,18 @@
 ---
 title: SkiaSharp 곡선 및 경로
-description: 곡선 그리기 및 경로 기능을 사용 하 여 SkiaSharp를 사용 하는 방법에 알아봅니다
+description: 이 문서를 사용 하 SkiaSharp 곡선 그리기 및 Xamarin.Forms 응용 프로그램의 경로 기능을 사용 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 9bfab147b526a6c67aa295c61e334d75627f3ca3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243862"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 

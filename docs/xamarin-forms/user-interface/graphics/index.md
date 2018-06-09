@@ -1,19 +1,20 @@
 ---
-title: 그래픽
-description: Xamarin.Forms 응용 프로그램에 그래픽 및 게임 엔진 시각적 개체를 통합 하는 방법입니다.
+title: Xamarin.Forms에는 그래픽
+description: 이 가이드 CocosSharp, SkiaShap, 및 UrhoSharp를 사용 하 여 그래픽 및 게임 엔진 시각적 개체를 Xamarin.Forms 응용 프로그램에 통합 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 167ec01a-fb9e-431e-a44d-a10eaf62bf39
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/01/2018
-ms.openlocfilehash: 51ab772e0e15c227094ce5b5e50d516ad09637bf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a632cdab5cd67f8e0c94d5b200fe78bf1bf5310
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243108"
 ---
-# <a name="graphics"></a>그래픽
+# <a name="graphics-in-xamarinforms"></a>Xamarin.Forms에는 그래픽
 
 _Xamarin.Forms 응용 프로그램에 그래픽 및 게임 엔진 시각적 개체를 통합 하는 방법입니다._
 

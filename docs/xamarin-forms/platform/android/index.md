@@ -1,17 +1,18 @@
 ---
 title: Android 플랫폼 기능
-description: Xamarin.Forms 앱에 Android 관련 기능을 추가합니다.
+description: 이 문서에서는 Xamarin.Forms 앱과 Android 관련 기능을 추가 하는 방법에 설명 하 고 자료 디자인에 중점을 둡니다.
 ms.prod: xamarin
 ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: 3648f6f5f576a77bf7887668352c4f3d11f3906d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2eada518586f222d200ec19aeddc65107d7603b3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242406"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 

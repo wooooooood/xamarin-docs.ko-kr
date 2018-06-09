@@ -1,17 +1,18 @@
 ---
 title: 사진 그림 라이브러리에서 선택
-description: DependencyService를 사용 하 여 휴대폰의 그림 라이브러리에서 사진을 선택합니다
+description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용 하 여 휴대폰의 그림 라이브러리에서 사진을 선택 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: e552a0bf76572d50eb0d4618af69fc1179979f97
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: af5f499687e1ef0b7c245ca524e33cd9d31683cb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242471"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 그림 라이브러리에서 선택
 

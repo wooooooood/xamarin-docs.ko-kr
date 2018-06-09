@@ -1,17 +1,18 @@
 ---
 title: Xamarin.forms에서 SkiaSharp를 사용 하 여
-description: SkiaSharp Xamarin.Forms 응용 프로그램에서 2 차원 그래픽을 사용 하 여
+description: SkiaSharp는.NET 및 C# Google 제품에서 광범위 하 게 사용 되는 오픈 소스 Skia 그래픽 엔진을 통해 수행에 대 한 2 차원 그래픽 시스템입니다. 이 가이드에서는 SkiaSharp Xamarin.Forms 응용 프로그램에서 2 차원 그래픽을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: e3444411c80ecaee105cce7c10f7bec7583dc2a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 272e70af83c8946d0c3eacadac9726487121ac0f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243940"
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Xamarin.forms에서 SkiaSharp를 사용 하 여
 

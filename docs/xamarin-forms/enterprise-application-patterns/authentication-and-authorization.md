@@ -1,16 +1,18 @@
 ---
 title: 인증 및 권한 부여
+description: 이 장에서 eShopOnContainers 모바일 앱 인증 및 권한 부여 색인화 microservices에 대해 수행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 9c6f3ae19b3e1b89220cbdf0985f4bdf789f2209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e6cfa566ab455841b3f11e4a857dcf678083417
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242430"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -93,7 +95,7 @@ public void ConfigureServices(IServiceCollection services)
 -   서명에 사용 되는 자격 증명입니다.
 -   사용자가 요청할 수 있는 API 및 identity 리소스에 대 한 액세스.
 -   클라이언트가 연결 요청 토큰입니다.
--   ASP.NET Core Identity.
+-   ASP.NET Core Id입니다.
 
 >💡 **팁**: IdentityServer 4 구성을 동적으로 로드 합니다. IdentityServer 4 Api IdentityServer 구성 개체의 메모리 내 목록에서 구성할 수 있습니다. EShopOnContainers 참조 응용 프로그램 이러한 메모리 내 컬렉션은 응용 프로그램에 하드 코드 되어 있습니다. 그러나 프로덕션 시나리오에서 이러한 로드할 수 동적으로 데이터베이스 또는 구성 파일에서.
 
@@ -385,7 +387,7 @@ private async Task NavigateAsync(string url)
 
 <a name="authorization" />
 
-## <a name="authorization"></a>권한 부여
+## <a name="authorization"></a>Authorization
 
 ASP.NET Core 웹 Api 액세스 권한을 부여 해야 할 필요가 인증 후에 모두 그렇지는 않지만 일부 인증 된 사용자에 게 사용할 수 있는 서비스를 Api를 수 있습니다.
 

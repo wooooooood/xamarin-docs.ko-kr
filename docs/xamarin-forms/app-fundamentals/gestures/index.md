@@ -1,19 +1,20 @@
 ---
-title: 제스처
-description: 사용자는 Xamarin.Forms 응용 프로그램의 많은 요소와 상호 작용을 감지 하 제스처 인식기를 사용할 수 있습니다.
+title: Xamarin.Forms 제스처
+description: 이 가이드에서는 사용자 Xamarin.Forms 응용 프로그램의 많은 요소와 상호 작용을 감지 하 Xamarin.Forms 제스처 인식기를 사용할 수 있는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 621110686e52c1558f74108789aa216c349436bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1c055d7ab02ad3233c38f2123793c4a4f49479cb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240368"
 ---
-# <a name="gestures"></a>제스처
+# <a name="xamarinforms-gestures"></a>Xamarin.Forms 제스처
 
 _사용자는 Xamarin.Forms 응용 프로그램의 많은 요소와 상호 작용을 감지 하 제스처 인식기를 사용할 수 있습니다._
 
@@ -30,4 +31,3 @@ Xamarin.Forms는 [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/
 ## <a name="adding-a-pan-gesture-recognizerpanmd"></a>[팬 제스처 인식기를 추가합니다.](pan.md)
 
 팬 제스처 끌어 감지 하는 데 사용 되 고 사용 하 여 구현 된 [ `PanGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/) 클래스입니다.
-

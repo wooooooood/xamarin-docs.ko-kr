@@ -1,17 +1,18 @@
 ---
 title: 경로 채우기 유형
-description: SkiaSharp 경로 채우기 유형으로 가능한 다양 한 효과 검색 합니다.
+description: 이 문서 SkiaSharp 경로 채우기 형식과 가능한 다양 한 효과 검사 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: d54ebd157fcc76b0fcc15bf89c72edbcd88b42f2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243709"
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 

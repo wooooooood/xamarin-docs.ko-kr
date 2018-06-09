@@ -1,5 +1,5 @@
 ---
-title: 스타일 소개
+title: Xamarin.Forms 스타일 소개
 description: 스타일 모양을 사용자 지정할 수 있는 시각적 요소의 허용 합니다. 스타일 특정 형식에 대해 정의 및 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다.
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f878641f9266da74d61eda8a85d4e16de193be0e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 071cfa2ba145775c179bc85dce4fac29ba0bd8fa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847968"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245822"
 ---
-# <a name="introduction-to-styles"></a>스타일 소개
+# <a name="introduction-to-xamarinforms-styles"></a>Xamarin.Forms 스타일 소개
 
 _스타일 모양을 사용자 지정할 수 있는 시각적 요소의 허용 합니다. 스타일 특정 형식에 대해 정의 및 해당 형식에 사용할 수 있는 속성에 대 한 값을 포함 합니다._
 

@@ -1,20 +1,20 @@
 ---
-title: ListView
-description: Beautiful, 대화형 목록에 데이터를 제공 합니다.
+title: Xamarin.Forms ListView
+description: 이 가이드는 아름 다운, 대화형 목록에 데이터를 표시 하는 데 사용할 수 있는 Xamarin.Forms ListView를 소개 합니다.
 ms.prod: xamarin
 ms.assetid: FEFDF7E0-720F-4BD1-863F-4477226AA695
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f73e7b70749a7a6913856d8c753db63a6d0a2bbe
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848540"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245002"
 ---
-# <a name="listview"></a>ListView
+# <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
 ListView 스크롤이 필요한 긴 목록 특히, 데이터 목록을 표시 하기 위한 뷰입니다. 이 가이드에서는 ListView를 사용 하는 방법을 설명 합니다.
 

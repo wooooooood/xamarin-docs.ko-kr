@@ -1,20 +1,20 @@
 ---
-title: 입력
-description: 한 줄 텍스트 또는 암호 입력
+title: Xamarin.Forms 항목
+description: 이 문서에서는 Xamarin.Forms 항목 클래스를 사용 하 여 한 줄 텍스트 또는 암호 입력 응용 프로그램에서 수락 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: a45a4edb93920cfe1d0289da44ee664e41c25cf1
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b6188b986589a56229ad2e092d4100ff3f75dbe4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847850"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245555"
 ---
-# <a name="entry"></a>입력
+# <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
 _한 줄 텍스트 또는 암호 입력_
 

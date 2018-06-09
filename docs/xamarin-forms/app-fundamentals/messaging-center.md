@@ -1,19 +1,20 @@
 ---
-title: MessagingCenter
-description: Xamarin.Forms는 메시지를 받거나 보내기 위해 간단한 메시징 서비스를 포함 합니다.
+title: Xamarin.Forms MessagingCenter
+description: 이 문서에서는 Xamarin.Forms MessagingCenter 모델 보기와 같은 클래스 간의 결합을 줄이기 위해 메시지를 받거나 보내기 위해 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e8145847f3c91683aa7433208d70198998cda87f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71f526f87a2536110a6d2292cd66a0f4d81c0bfc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240339"
 ---
-# <a name="messagingcenter"></a>MessagingCenter
+# <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
 _Xamarin.Forms는 메시지를 받거나 보내기 위해 간단한 메시징 서비스를 포함 합니다._
 

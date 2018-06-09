@@ -1,17 +1,18 @@
 ---
 title: 2 부 합니다. 필수 XAML 구문
-description: XAML은 주로 위한 것 인스턴스화 및 개체를 초기화 합니다. 하지만 XML 문자열로 쉽게 표현할 수 없는 복잡 한 개체에 속성을 설정 해야 하 고 하나의 클래스에 의해 정의 된 속성을 자식 클래스에 설정 해야 하는 경우에 따라 경우가 많습니다. 이러한 두 보안 요구 사항 속성 요소와 연결 된 속성의는 중요 한 XAML 구문 기능이 필요합니다.
+description: 이 문서 속성 요소의 필수 XAML 구문 기능에 설명 하 고 연결 된 속성입니다.
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: d0129ec9872d8e5270ed8f0072cff0035d4f5255
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 62223a4c56198271513b0b15587bb588e71b28cc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245848"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2 부 합니다. 필수 XAML 구문
 

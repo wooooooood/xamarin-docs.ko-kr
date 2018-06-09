@@ -1,18 +1,18 @@
 ---
 title: 4 부입니다. 데이터 바인딩 기본 사항
-description: 데이터 바인딩을 변경 하나에 다른 변경으로 인해 되도록 연결 된 두 개체의 속성을 허용 합니다. 매우 중요 한 도구 이며 코드에서 완전히 데이터 바인딩을 정의할 수 있지만 XAML에서는 바로 가기 키, 편리 함을 제공 합니다. 따라서 Xamarin.Forms의 가장 중요 한 태그 확장 중 하나는 바인딩 됩니다.
+description: 데이터 바인딩을 변경 하나에 다른 변경으로 인해 되도록 연결 된 두 개체의 속성을 허용 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733037"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245952"
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
 
@@ -86,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 한 줄에 있을 수 이나 여러 줄으로 구분 된 속성:
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -102,13 +102,13 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 [![](data-binding-basics-images/sliderbinding.png "보기-바인딩")](data-binding-basics-images/sliderbinding-large.png#lightbox "보기-바인딩 ")
 
-## <a name="the-binding-mode"></a>바인딩 모드 
+## <a name="the-binding-mode"></a>바인딩 모드
 
 단일 보기에는 일부의 속성에 데이터 바인딩을 가질 수 있습니다. 그러나 각 보기 하나만 가질 수 있습니다 `BindingContext`이므로 해당 보기에 여러 개의 데이터 바인딩이 해야 모두 같은 개체의 속성을 참조 합니다.
 
 이 및 다른 문제에 솔루션에서는 `Mode` 의 구성원으로 설정 된 속성은 `BindingMode` 열거형:
 
-- `Default` 
+- `Default`
 - `OneWay` -값이 소스에서 대상으로 전송 됩니다
 - `OneWayToSource` -값은 적용할 대상에서 소스
 - `TwoWay` -값 원본과 대상 간의 양방향 전송 됩니다
@@ -324,7 +324,7 @@ XamlSamples에 포함 된 프로젝트는 라는 클래스 `NamedColor`합니다
 </ContentPage>
 ```
 
-사용 `OnPlatform` 의 크기를 정의 하는 `BoxView` 및의 높이 `ListView` 행. 세 플랫폼 모두에 대 한 값이 동일 하지만 태그를 쉽게 디스플레이 세밀 하 게 조정 다른 값에 적용할 수 있습니다. 
+사용 `OnPlatform` 의 크기를 정의 하는 `BoxView` 및의 높이 `ListView` 행. 세 플랫폼 모두에 대 한 값이 동일 하지만 태그를 쉽게 디스플레이 세밀 하 게 조정 다른 값에 적용할 수 있습니다.
 
 ## <a name="binding-value-converters"></a>바인딩 값 변환기
 
@@ -366,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-`ConvertBack` 메서드에서에서 재생 되지 않으면 역할이이 프로그램 바인딩에 있기 때문에 한 가지 방법은 소스에서 대상으로 합니다. 
+`ConvertBack` 메서드에서에서 재생 되지 않으면 역할이이 프로그램 바인딩에 있기 때문에 한 가지 방법은 소스에서 대상으로 합니다.
 
 바인딩 바인딩 변환기를 참조 하는 `Converter` 속성입니다. 바인딩 변환기와 지정 된 매개 변수도 받아들일 수 있습니다는 `ConverterParameter` 속성입니다. 몇 가지 다양 한 기능에 대 한 승수를 지정 하는 방법을입니다. 올바른 변환기 매개 변수를 확인 하는 바인딩 변환기 `double` 값입니다.
 

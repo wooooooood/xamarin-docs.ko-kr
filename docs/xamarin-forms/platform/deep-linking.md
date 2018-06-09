@@ -1,6 +1,6 @@
 ---
 title: 응용 프로그램 인덱싱 및 직접 링크
-description: 응용 프로그램 인덱싱을 그렇지 않은 경우 무시 될 후 몇 가지 사용 하 여 검색 결과에 표시 하 여 관련 상태를 유지 하는 응용 프로그램 수 있습니다. 직접 링크 수 딥 링크에서 참조 하는 페이지로 이동 하 여 일반적으로 응용 프로그램 데이터를 포함 하는 검색 결과에 응답할 수 있습니다. 이 문서에서는 응용 프로그램 인덱싱을 사용 하는 방법과 Xamarin.Forms 응용 프로그램 콘텐츠를 iOS 및 Android 장치에서 검색할 수 있도록 하는 직접 링크를 보여줍니다.
+description: 이 문서에서는 응용 프로그램 인덱싱을 사용 하는 방법과 Xamarin.Forms 응용 프로그램 콘텐츠를 iOS 및 Android 장치에서 검색할 수 있도록 하는 직접 링크를 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: d302e24ee74290eecd3dd9ad3f81921d6654cc10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9cc5177a585af1569385840ab8c370993984ca2b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242494"
 ---
 # <a name="application-indexing-and-deep-linking"></a>응용 프로그램 인덱싱 및 직접 링크
 

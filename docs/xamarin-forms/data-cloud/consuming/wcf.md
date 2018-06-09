@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation (WCF) 웹 서비스 사용
-description: WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합된 프레임 워크입니다. 개발자가 보안, 신뢰할 수 있는, 트랜잭션 및 상호 운용할 수 있는 분산된 응용 프로그램을 빌드할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서는 WCF SOAP Simple Object Access Protocol () 서비스를 사용 하는 방법을 보여줍니다.
+description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서는 WCF SOAP Simple Object Access Protocol () 서비스를 사용 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 05092a3648ac4c37dfd8d712184176a544979ede
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241206"
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Windows Communication Foundation (WCF) 웹 서비스 사용
 

@@ -1,19 +1,20 @@
 ---
-title: 경로 효과
-description: 경로 따라 그려지는 고 채움으로써에 사용할 수 있는 다양 한 경로 효과 검색
+title: SkiaSharp 시에서 경로 작업
+description: 이 문서는 샘플 코드와 함께 이러한 부하 분산 방식이 고 선 그리기 및 채우기, 사용할 경로 사용할 수 있는 다양 한 SkiaSharp 경로 효과 설명 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2071a2fb140d0e9c78d4c86d6aa70d3606dc1f98
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244112"
 ---
-# <a name="path-effects"></a>경로 효과
+# <a name="path-effects-in-skiasharp"></a>SkiaSharp 시에서 경로 작업
 
 _경로 따라 그려지는 고 채움으로써에 사용할 수 있는 다양 한 경로 효과 검색_
 
@@ -400,7 +401,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 에 지정 된 경로 `SKPathEffect.Create1DPath` 메서드는 항상 채워집니다. 에 지정 된 경로 `DrawPath` 경우 메서드를 그릴지 항상는 `SKPaint` 개체에 해당 `PathEffect` 속성이 1 D 경로 효과로 설정 합니다. 다음에 유의 `pathPaint` 개체에 `Style` 기본값은 일반적으로 설정 `Fill`, 경로 관계 없이 스트로크 하지만 합니다.
 
-사용 하는 상자는 `Translate` 예제는 정사각형, 20 픽셀이 및 `advance` 인수를 24로 설정 합니다. 이러한 차이 수평 또는 수직, 줄 대략 되 었 상자의 대각선은 28.3 픽셀 때문에 줄 대각선 경우 상자 약간 겹칠 경우 상자 사이의 간격이 발생 합니다. 
+사용 하는 상자는 `Translate` 예제는 정사각형, 20 픽셀이 및 `advance` 인수를 24로 설정 합니다. 이러한 차이 수평 또는 수직, 줄 대략 되 었 상자의 대각선은 28.3 픽셀 때문에 줄 대각선 경우 상자 약간 겹칠 경우 상자 사이의 간격이 발생 합니다.
 
 다이아몬드 모양에는 `Rotate` 예제에서는 너비가 20 픽셀 이기도 합니다. `advance` 는 지점이 다이아몬드 선의 곡률 함께 회전 되는지 그린 계속 되도록 20으로 설정 합니다.
 
@@ -585,9 +586,9 @@ public class ConveyorBeltPage : ContentPage
         bucketPath.AddRect(new SKRect(-5, -3, 25, 3));
 
         // Sides
-        bucketPath.AddRoundedRect(new SKRect(25, -19, 27, 18), 10, 10, 
+        bucketPath.AddRoundedRect(new SKRect(25, -19, 27, 18), 10, 10,
                                   SKPathDirection.CounterClockwise);
-        bucketPath.AddRoundedRect(new SKRect(63, -19, 65, 18), 10, 10, 
+        bucketPath.AddRoundedRect(new SKRect(63, -19, 65, 18), 10, 10,
                                   SKPathDirection.CounterClockwise);
 
         // Five slats
@@ -595,20 +596,20 @@ public class ConveyorBeltPage : ContentPage
         {
             bucketPath.MoveTo(25, -19 + 8 * i);
             bucketPath.LineTo(25, -13 + 8 * i);
-            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                              SKPathDirection.CounterClockwise, 65, -13 + 8 * i);
             bucketPath.LineTo(65, -19 + 8 * i);
-            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                              SKPathDirection.Clockwise, 25, -19 + 8 * i);
             bucketPath.Close();
         }
 
         // Arc to suggest the hidden side
         bucketPath.MoveTo(25, -17);
-        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                          SKPathDirection.Clockwise, 65, -17);
         bucketPath.LineTo(65, -19);
-        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                          SKPathDirection.CounterClockwise, 25, -19);
         bucketPath.Close();
 
@@ -619,7 +620,7 @@ public class ConveyorBeltPage : ContentPage
     ...
 ```
 
-버킷 생성 코드를 약간 크게 버킷을 확인 하 고 옆으로 설정 하는 두 개의 변환을 완료 합니다. 이러한 변환 적용 앞의 코드에 있는 모든 좌표를 조정 하는 보다 쉽게 했습니다. 
+버킷 생성 코드를 약간 크게 버킷을 확인 하 고 옆으로 설정 하는 두 개의 변환을 완료 합니다. 이러한 변환 적용 앞의 코드에 있는 모든 좌표를 조정 하는 보다 쉽게 했습니다.
 
 `PaintSurface` 처리기 자체가 컨베이어 벨트에 대 한 경로 정의 하 여 시작 합니다. 이 단순히 한 쌍의 선 및 20 픽셀 너비 진한 회색 선으로 그려진 세미콜론 원의 쌍:
 
@@ -642,10 +643,10 @@ public class ConveyorBeltPage : ContentPage
         {
             // Straight verticals capped by semicircles on top and bottom
             conveyerPath.MoveTo(width, verticalMargin);
-            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large, 
+            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large,
                                SKPathDirection.Clockwise, 2 * width, verticalMargin);
             conveyerPath.LineTo(2 * width, info.Height - verticalMargin);
-            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large, 
+            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large,
                                SKPathDirection.Clockwise, width, info.Height - verticalMargin);
             conveyerPath.Close();
 
@@ -665,8 +666,8 @@ public class ConveyorBeltPage : ContentPage
             float phase = -t * spacing;
 
             // Create the buckets PathEffect
-            using (SKPathEffect bucketsPathEffect = 
-                        SKPathEffect.Create1DPath(bucketPath, spacing, phase, 
+            using (SKPathEffect bucketsPathEffect =
+                        SKPathEffect.Create1DPath(bucketPath, spacing, phase,
                                                   SKPath1DPathEffectStyle.Rotate))
             {
                 // Set it to the Paint object and draw the path again
@@ -680,7 +681,7 @@ public class ConveyorBeltPage : ContentPage
 
 그리기 컨베이어 벨트에 대 한 논리 가로 모드에서 작동 하지 않습니다.
 
-버킷의는 컨베이어 벨트에 200 픽셀에 대 한 배치 해야 합니다. 그러나 컨베이어 벨트가 되지 않았을 수로 한 long, 200 픽셀의 배수가 `phase` 의 인수 `SKPathEffect.Create1DPath` 은 애니메이션 효과가 적용 버킷 팝업 내부 / 외부로 존재 합니다. 
+버킷의는 컨베이어 벨트에 200 픽셀에 대 한 배치 해야 합니다. 그러나 컨베이어 벨트가 되지 않았을 수로 한 long, 200 픽셀의 배수가 `phase` 의 인수 `SKPathEffect.Create1DPath` 은 애니메이션 효과가 적용 버킷 팝업 내부 / 외부로 존재 합니다.
 
 이러한 이유로 프로그램 먼저 계산 라는 값을 `length` 컨베이어 벨트의 길이입니다. 컨베이어 벨트로 구성 된 직선 및 세미콜론 원 이므로 간단한 계산 합니다. 그런 다음 버킷 수가 나눈 `length` 200 여 합니다. 이것은 가장 가까운 정수로 반올림 하 고 나뉩니다 번호가 다음 인지 `length`합니다. 결과 버킷 수는 정수 계열에 대 한 간격입니다. `phase` 인수는 단순히 소수 부분입니다.
 
@@ -708,11 +709,11 @@ canvas.DrawPath(newPath, newPaint);
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 ```
 
-`width` 인수 해치 줄의 스트로크 너비를 지정 합니다. `matrix` 매개 변수는 크기 조정 및 선택적 회전의 조합입니다. 배율 인수 Skia 해치 줄 간격을 사용 하는 픽셀 단위로를 나타냅니다. 줄 구분은 뺀 배율 인수는 `width` 인수입니다. 배율 인수 보다 작거나 같은 경우는 `width` 값 해치 줄 사이 공백이 없어야 됩니다 및 채울 영역 표시 됩니다. 가로 및 세로 크기 조정에 대 한 동일한 값을 지정 합니다. 
+`width` 인수 해치 줄의 스트로크 너비를 지정 합니다. `matrix` 매개 변수는 크기 조정 및 선택적 회전의 조합입니다. 배율 인수 Skia 해치 줄 간격을 사용 하는 픽셀 단위로를 나타냅니다. 줄 구분은 뺀 배율 인수는 `width` 인수입니다. 배율 인수 보다 작거나 같은 경우는 `width` 값 해치 줄 사이 공백이 없어야 됩니다 및 채울 영역 표시 됩니다. 가로 및 세로 크기 조정에 대 한 동일한 값을 지정 합니다.
 
 기본적으로 해치 선은 가로입니다. 경우는 `matrix` 매개 변수에 포함 회전, 해치 선은 시계 방향으로 회전 합니다.
 
-**채우기 해치** 페이지에서는이 경로 효과 보여 줍니다. [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 더 나타내는 배율 요소와 함께 3 픽셀 너비와 가로 평행선에 대 한 첫 번째 간격을 더 많이 떨어져 있는 6 픽셀, 클래스 필드로 3 경로 효과 정의 합니다. 따라서 3 픽셀은이 줄 구분이 됩니다. 두 번째 경로 효과 너비가 6 픽셀인 세로 평행선 간격을 더 많이 떨어져 있는 (따라서 분리는 18 픽셀은) 24 픽셀에 대 한 및 빗금 줄 12 넓은 공백이 포함 된 36 픽셀 더 많이 떨어져 있는 세 번째입니다. 
+**채우기 해치** 페이지에서는이 경로 효과 보여 줍니다. [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 더 나타내는 배율 요소와 함께 3 픽셀 너비와 가로 평행선에 대 한 첫 번째 간격을 더 많이 떨어져 있는 6 픽셀, 클래스 필드로 3 경로 효과 정의 합니다. 따라서 3 픽셀은이 줄 구분이 됩니다. 두 번째 경로 효과 너비가 6 픽셀인 세로 평행선 간격을 더 많이 떨어져 있는 (따라서 분리는 18 픽셀은) 24 픽셀에 대 한 및 빗금 줄 12 넓은 공백이 포함 된 36 픽셀 더 많이 떨어져 있는 세 번째입니다.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -721,10 +722,10 @@ public class HatchFillPage : ContentPage
 
     SKPathEffect horzLinesPath = SKPathEffect.Create2DLine(3, SKMatrix.MakeScale(6, 6));
 
-    SKPathEffect vertLinesPath = SKPathEffect.Create2DLine(6, 
+    SKPathEffect vertLinesPath = SKPathEffect.Create2DLine(6,
         Multiply(SKMatrix.MakeRotationDegrees(90), SKMatrix.MakeScale(24, 24)));
 
-    SKPathEffect diagLinesPath = SKPathEffect.Create2DLine(12, 
+    SKPathEffect diagLinesPath = SKPathEffect.Create2DLine(12,
         Multiply(SKMatrix.MakeScale(36, 36), SKMatrix.MakeRotationDegrees(45)));
 
     SKPaint strokePaint = new SKPaint
@@ -761,14 +762,14 @@ public class HatchFillPage : ContentPage
 
         using (SKPath roundRectPath = new SKPath())
         {
-            // Create a path 
+            // Create a path
             roundRectPath.AddRoundedRect(
                 new SKRect(50, 50, info.Width - 50, info.Height - 50), 100, 100);
 
             // Horizontal hatch marks
             fillPaint.PathEffect = horzLinesPath;
             fillPaint.Color = SKColors.Red;
-            canvas.DrawPath(roundRectPath, fillPaint); 
+            canvas.DrawPath(roundRectPath, fillPaint);
 
             // Vertical hatch marks
             fillPaint.PathEffect = vertLinesPath;
@@ -808,18 +809,18 @@ Android 화면 매우 ै 그렇게: 씬 빨강 선 및 넓어짐 겉보기 빨�
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 ```
 
-`SKMatrix` 배율 인수는 복제 된 경로의 가로 및 세로 간격을 나타냅니다. 이 사용 하 여 경로 회전할 수 있지만 `matrix` 인수; 회전 경로 사용할 경우 경로 자체 회전를 사용 하 여는 `Transform` 정의한 메서드 `SKPath`합니다. 
+`SKMatrix` 배율 인수는 복제 된 경로의 가로 및 세로 간격을 나타냅니다. 이 사용 하 여 경로 회전할 수 있지만 `matrix` 인수; 회전 경로 사용할 경우 경로 자체 회전를 사용 하 여는 `Transform` 정의한 메서드 `SKPath`합니다.
 
 일반적으로 복제 된 경로 채워질 영역 대신 화면의 왼쪽 및 위쪽 가장자리에 맞춥니다. 0에서 왼쪽 및 위쪽 측면에서 가로 및 세로 오프셋을 지정 하는 배율 인수 사이의 변환 요소를 제공 하 여이 동작을 재정의할 수 있습니다.
 
-**경로 타일 채우기** 페이지에서는이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 된 경로에 필드로 정의 됩니다는 [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표-40부터 범위 40, 즉,이 경로 80 픽셀로: 
+**경로 타일 채우기** 페이지에서는이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 된 경로에 필드로 정의 됩니다는 [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표-40부터 범위 40, 즉,이 경로 80 픽셀로:
 
 ```csharp
 public class PathTileFillPage : ContentPage
 {
     SKPath tilePath = SKPath.ParseSvgPathData(
-        "M -20 -20 L 2 -20, 2 -40, 18 -40, 18 -20, 40 -20, " + 
-        "40 -12, 20 -12, 20 12, 40 12, 40 40, 22 40, 22 20, " + 
+        "M -20 -20 L 2 -20, 2 -40, 18 -40, 18 -20, 40 -20, " +
+        "40 -12, 20 -12, 20 12, 40 12, 40 40, 22 40, 22 20, " +
         "-2 20, -2 40, -20 40, -20 8, -40 8, -40 -8, -20 -8 Z");
     ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -840,7 +841,7 @@ public class PathTileFillPage : ContentPage
                 paint.PathEffect = pathEffect;
 
                 canvas.DrawRoundRect(
-                    new SKRect(50, 50, info.Width - 50, info.Height - 50), 
+                    new SKRect(50, 50, info.Width - 50, info.Height - 50),
                     100, 100, paint);
             }
         }
@@ -935,7 +936,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
 ```
 
-선 그리기 또는 작성에 대 한이 경로 효과 사용할 수 있습니다. 줄은 연결 된 단위로 구분-하 여 지정 된 길이 대략적인 `segLength` -하 고 다양 한 방향으로 확장 합니다. 원래 줄과에서의 편차 범위 지정 된 `deviation`합니다. 
+선 그리기 또는 작성에 대 한이 경로 효과 사용할 수 있습니다. 줄은 연결 된 단위로 구분-하 여 지정 된 길이 대략적인 `segLength` -하 고 다양 한 방향으로 확장 합니다. 원래 줄과에서의 편차 범위 지정 된 `deviation`합니다.
 
 마지막 인수에는 효과 위해 사용 되는 의사 난수 시퀀스를 생성 하는 데 사용 하는 초기값입니다. 지터 효과 다른 초기값에 대 한 약간 다르게 표시 됩니다. 기본값은 0 이며이 효과 동일 프로그램을 실행할 때마다 인수가 있습니다. 화면 다시 표시 될 때마다 다른 지터를 원하는 경우는 초기값을 설정할 수 있습니다는 `Millisecond` 속성은 `DataTime.Now` 값 (예:).
 
@@ -1016,7 +1017,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     using (SKPaint paint = new SKPaint())
     {
-        paint.Style = SKPaintStyle.Stroke; 
+        paint.Style = SKPaintStyle.Stroke;
         paint.StrokeWidth = 5;
         paint.Color = SKColors.Blue;
 
@@ -1144,7 +1145,7 @@ public partial class TapToOutlineThePathPage : ContentPage
         using (SKPath circlePath = new SKPath())
         {
             circlePath.AddCircle(info.Width / 2, info.Height / 2,
-                                 Math.Min(info.Width / 2, info.Height / 2) - 
+                                 Math.Min(info.Width / 2, info.Height / 2) -
                                  redThickStroke.StrokeWidth);
 
             if (!outlineThePath)
@@ -1217,9 +1218,9 @@ using (SKPath linkPath = new SKPath())
 }
 ```
 
-`outlinePath` 개체는 다음의 윤곽선 팜과 `linkPath` 에 지정 된 속성을 사용 하 여 스트로크 때 `strokePaint`합니다. 
+`outlinePath` 개체는 다음의 윤곽선 팜과 `linkPath` 에 지정 된 속성을 사용 하 여 스트로크 때 `strokePaint`합니다.
 
-이 방법을 사용 하는 또 다른 예에 사용 되는 경로 대 한 다음에 나오는 `SKPathEffect.Create2DPath` 메서드. 
+이 방법을 사용 하는 또 다른 예에 사용 되는 경로 대 한 다음에 나오는 `SKPathEffect.Create2DPath` 메서드.
 
 ## <a name="combining-path-effects"></a>경로 효과 결합합니다.
 
@@ -1270,7 +1271,7 @@ public class CatsInFramePage : ContentPage
         StrokeWidth = 5
     };
 
-    SKPath scallopPath = 
+    SKPath scallopPath =
         SKPath.ParseSvgPathData("M 0 0 L 50 0 A 60 60 0 0 1 -50 0 Z");
 
     SKPaint framePaint = new SKPaint
@@ -1316,7 +1317,7 @@ public class CatsInFramePage : ContentPage
             outlinedCatPath);
 
         // Create a 1D path effect from the scallop path
-        SKPathEffect strokeEffect = 
+        SKPathEffect strokeEffect =
             SKPathEffect.Create1DPath(scallopPath, 75, 0, SKPath1DPathEffectStyle.Rotate);
 
         // Set the sum the effects to frame paint
@@ -1358,11 +1359,11 @@ public class CatsInFramePage : ContentPage
 ```csharp
 public class DashedHatchLinesPage : ContentPage
 {
-    static SKPathEffect dashEffect = 
+    static SKPathEffect dashEffect =
         SKPathEffect.CreateDash(new float[] { 30, 30 }, 0);
 
     static SKPathEffect hatchEffect = SKPathEffect.Create2DLine(20,
-        Multiply(SKMatrix.MakeScale(60, 60), 
+        Multiply(SKMatrix.MakeScale(60, 60),
                  SKMatrix.MakeRotationDegrees(45)));
 
     SKPaint paint = new SKPaint()
@@ -1395,8 +1396,8 @@ public class DashedHatchLinesPage : ContentPage
 
         canvas.Clear();
 
-        canvas.DrawOval(info.Width / 2, info.Height / 2, 
-                        0.45f * info.Width, 0.45f * info.Height, 
+        canvas.DrawOval(info.Width / 2, info.Height / 2,
+                        0.45f * info.Width, 0.45f * info.Height,
                         paint);
     }
     ...

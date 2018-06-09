@@ -1,20 +1,20 @@
 ---
-title: 레이블
-description: Xamarin.Forms에 텍스트를 표시 합니다.
+title: Xamarin.Forms 레이블
+description: 이 문서에서는 Xamarin.Forms 레이블 클래스를 사용 하 여 응용 프로그램에 단일 및 여러 줄 텍스트를 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e0caa12136feb84d22ec4b90b84f3f92a601e0c0
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: e9f99ace64e013dfa681e497b9d33376d79555ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847513"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245500"
 ---
-# <a name="label"></a>레이블
+# <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
 _Xamarin.Forms에 텍스트를 표시 합니다._
 

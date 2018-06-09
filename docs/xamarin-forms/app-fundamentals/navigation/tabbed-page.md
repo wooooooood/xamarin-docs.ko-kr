@@ -1,5 +1,5 @@
 ---
-title: 탭된 페이지
+title: Xamarin.Forms 탭된 페이지
 description: Xamarin.Forms TabbedPage 탭 목록과 큰 세부 정보 영역에서 세부 정보 영역에 콘텐츠를 로드 하는 각 탭으로 구성 됩니다. 이 문서를 사용 하는 TabbedPage 페이지의 컬렉션을 탐색 하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 7af9248e706e615ea3e693a58a5f7664e8dc4daa
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b7e3eb8539704fccd713af45490c35a6196b072f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847814"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240381"
 ---
-# <a name="tabbed-page"></a>탭된 페이지
+# <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 탭된 페이지
 
 _Xamarin.Forms TabbedPage 탭 목록과 큰 세부 정보 영역에서 세부 정보 영역에 콘텐츠를 로드 하는 각 탭으로 구성 됩니다. 이 문서를 사용 하는 TabbedPage 페이지의 컬렉션을 탐색 하는 방법을 보여줍니다._
 

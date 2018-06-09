@@ -1,19 +1,20 @@
 ---
-title: 맵
-description: Xamarin.Forms는 각 플랫폼에서 네이티브 지도 Api를 사용합니다.
+title: Xamarin.Forms 맵
+description: 이 문서에서는 익숙한 맵 사용자를 위한 환경을 제공 하는 각 플랫폼에서 네이티브 맵을 Api를 사용 하도록 Xamarin.Forms Map 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245477"
 ---
-# <a name="map"></a>맵
+# <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
 _Xamarin.Forms는 각 플랫폼에서 네이티브 지도 Api를 사용합니다._
 
@@ -80,7 +81,7 @@ IOS에서 위치 서비스에 액세스 하려면에서 다음 키를 설정 해
 - 10 및 이전 버전 iOS
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) -위치 확인 서비스를 사용 하 여 앱 사용 중인 경우에 대 한
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) -위치 확인 서비스를 사용 하 여 언제 든에 대 한    
-    
+
 IOS 11 및 이전 버전을 지원 하려면 모든 세 개의 키를 포함할 수 있습니다: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, 및 `NSLocationAlwaysUsageDescription`합니다.
 
 이러한 키에 대 한 XML 표현 **Info.plist** 아래에 표시 됩니다. 업데이트 해야는 `string` 응용 프로그램에서 위치 정보를 사용 하는 방식을 반영 하는 값:

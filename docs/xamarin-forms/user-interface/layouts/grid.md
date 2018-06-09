@@ -1,20 +1,20 @@
 ---
-title: 표
-description: 표에서 뷰를 제공 합니다.
+title: Xamarin.Forms 표
+description: 이 문서에서는 Xamarin.Forms 그리드 클래스를 사용 하 여 표에서 행과 열을 갖고 있는 뷰를 제공 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848111"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245155"
 ---
-# <a name="grid"></a>표
+# <a name="xamarinforms-grid"></a>Xamarin.Forms 표
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 행과 열으로 뷰를 정렬 하는 지원 합니다. 행과 열을 비례 크기 또는 절대 크기를 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블와 혼동 해서는 안 하며 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식의 개념을 없습니다. HTML 테이블과 달리 `Grid` 콘텐츠도 배치 하기 위한 순수 하 게 됩니다.
 

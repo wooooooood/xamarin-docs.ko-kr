@@ -1,17 +1,18 @@
 ---
 title: 장치 방향을 확인 하는 중
-description: 공유 코드에서 액세스 장치 방향을를 DependencyService를 사용 하 여
+description: 이 문서에서는 장치 방향을 공유 코드에서 액세스 하는 Xamarin.Forms DependencyService 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 09cd92b436be97f5490ac74890e4b0723bcd5701
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: e21531b7f39d3876d91eea8fa6cb9e409a9deffa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240058"
 ---
 # <a name="checking-device-orientation"></a>장치 방향을 확인 하는 중
 

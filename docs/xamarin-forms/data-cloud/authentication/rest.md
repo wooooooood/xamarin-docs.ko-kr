@@ -1,17 +1,18 @@
 ---
 title: RESTful 웹 서비스를 인증합니다.
-description: HTTP은 리소스에 대 한 액세스를 제어 하는 여러 가지 인증 메커니즘의 사용을 지원 합니다. 기본 인증을 올바른 자격 증명을 가진 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법을 보여줍니다.
+description: 기본 인증을 올바른 자격 증명을 가진 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3160fcced190f74fcfb44c6259451e00995de0fa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42680ed8b79560f6f4f9f12892f7da5637a7af16
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240963"
 ---
 # <a name="authenticating-a-restful-web-service"></a>RESTful 웹 서비스를 인증합니다.
 

@@ -1,33 +1,25 @@
 ---
-title: 스타일
-description: Xamarin.Forms에 텍스트 스타일
+title: Xamarin.Forms 텍스트 스타일
+description: 이 문서에서는 설명 Xamarin.Forms는 응용 프로그램에서 텍스트 스타일 지정 하는 방법입니다. 스타일을 두 번 정의 하 고 많은 보기에서 사용 하는 수는 있지만 한 종류의 뷰로 구성 된 스타일 에서만 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848449"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245324"
 ---
-# <a name="styles"></a>스타일
+# <a name="xamarinforms-text-styles"></a>Xamarin.Forms 텍스트 스타일
 
-_Xamarin.Forms에 텍스트 스타일_
-
+_Xamarin.Forms에 텍스트 스타일 지정_
 
 스타일은 레이블, 항목 및 편집기의 모양을 조정할 데 사용할 수 있습니다. 스타일을 두 번 정의 하 고 많은 보기에서 사용 하는 수는 있지만 한 종류의 뷰로 구성 된 스타일 에서만 사용할 수 있습니다.
 스타일을 지정할 수는 `Key` 특정 컨트롤을 사용 하 여 선택적으로 적용 하 고 `Style` 속성입니다.
-
-이 문서에서는 다음 항목을 다룹니다.
-
-- **[기본 제공 스타일](#Built-In_Styles)**  &ndash; 응용 프로그램 전체에서 텍스트 기반 보기 스타일에 기본 제공 스타일을 사용 합니다.
-- **[사용자 지정 스타일](#Custom_Styles)**  &ndash; 기본 제공 옵션 충분 하지 때 사용자 지정 스타일을 정의 합니다.
-- **[스타일 적용](#Applying_Styles)**  &ndash; 보기에는 사용자 정의 함수와 기본 제공 스타일을 적용 합니다.
-- **[내게 필요한 옵션](#Accessibility)**  &ndash; 텍스트 내게 필요한 옵션 설정을 고려 하는지 확인 합니다.
 
 <a name="Built-In_Styles" />
 

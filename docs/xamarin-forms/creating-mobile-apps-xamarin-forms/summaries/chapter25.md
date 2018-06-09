@@ -1,16 +1,18 @@
 ---
 title: 25 장의 요약입니다. 페이지 변형
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 25 장 요약 합니다. 페이지 변형'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 951ae41763d8338d5adf73fb46ebc6defa64f8f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ecee7866f4bf9ac1a4f706853434dce2b9cef7f6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241157"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>25 장의 요약입니다. 페이지 변형
 
@@ -58,7 +60,7 @@ XAML 파일을 설정 하는 [ `IsPresented` ](https://developer.xamarin.com/api
 
 ### <a name="your-own-user-interface"></a>사용자 고유의 사용자 인터페이스
 
-Xamarin.Forms를 마스터 및 세부 정보 뷰 사이 전환 하기 위한 사용자 인터페이스를 제공 하지만 있습니다를 직접 제공할 수 있습니다. 이렇게 하려면
+Xamarin.Forms를 마스터 및 세부 정보 뷰 사이 전환 하기 위한 사용자 인터페이스를 제공 하지만 있습니다를 직접 제공할 수 있습니다. 이를 수행하려면:
 
 - 설정의 [ `IsGestureEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/) 속성을 `false` 넘기기가 사용 하지 않으려면
 - 재정의 [ `ShouldShowToolbarButton` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/) 메서드 및 반환 `false` Windows 8.1 및 Windows Phone 8.1에서 도구 모음 단추를 숨기려면 합니다.

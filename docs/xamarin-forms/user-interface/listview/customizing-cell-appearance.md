@@ -1,20 +1,20 @@
 ---
-title: 셀 모양
-description: ListView에서 편리 하 게 활용 하는 동안 데이터를 표시 하기 위한 옵션을 탐색 합니다.
+title: ListView 셀 모양 사용자 지정
+description: 이 문서 Xamarin.Forms 응용 프로그램에서 ListView 컨트롤에서 편리 하 게 활용 하는 동안 데이터를 표시 하기 위한 옵션을 탐색 합니다.
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 14ef4abe773512f76d9823809270f27b1a0ad1a3
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 86447afbabca1384f9e46f5128a9dc00253a798c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848462"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244758"
 ---
-# <a name="cell-appearance"></a>셀 모양
+# <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
 ListView를 스크롤할 수 있는 그룹을 사용 하 여 사용자 지정할 수 있는 표시 `ViewCell`s입니다. `ViewCells` 텍스트 및 이미지를 표시, true/false 상태를 나타내는 사용자 입력을 받는 데 사용할 수 있습니다.
 

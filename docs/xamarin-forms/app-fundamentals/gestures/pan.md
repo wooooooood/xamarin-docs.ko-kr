@@ -1,18 +1,18 @@
 ---
 title: 팬 제스처 인식기를 추가합니다.
-description: 팬 제스처 끌어 감지 하는 데 사용 되 고 PanGestureRecognizer 클래스를 사용 하 여 구현 됩니다. 팬 제스처에 대 한 일반적인 시나리오는 가로 또는 세로로 끌어 이미지 되므로 이미지 크기 보다 작은 뷰포트에 표시 되는 때 모든 이미지 콘텐츠를 볼 수 있습니다. 이 뷰포트 내 이미지를 이동 하 여 수행 됩니다 하며이 문서에 나와 있습니다.
+description: 이 문서에서는 이미지 크기 보다 작은 뷰포트에 표시 되는 경우 모든 이미지 콘텐츠를 볼 수 있습니다 가로로 팬 제스처를 사용 하 여 이미지를 세로로 끌어 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 1f564fe14be0bcda08722bad11c9c5bd8152687a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d3e4dfc57678ff75fb8f9761360748d94aeefcc2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846333"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239986"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>팬 제스처 인식기를 추가합니다.
 

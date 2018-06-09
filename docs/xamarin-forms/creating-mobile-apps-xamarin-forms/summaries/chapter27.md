@@ -1,16 +1,18 @@
 ---
 title: 요약 장 27입니다. 사용자 지정 렌더러
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 27 장 요약 합니다. 사용자 지정 렌더러'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7a117373a11a057afabbad3c0c6005a9c2a49c3a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 844c9be72071cd307bd2330b54f8d70ddf28b9a3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240884"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>요약 장 27입니다. 사용자 지정 렌더러
 

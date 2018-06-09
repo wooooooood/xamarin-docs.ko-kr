@@ -1,25 +1,26 @@
 ---
-title: 경로 및 텍스트
-description: 경로 및 텍스트의 교차점에 알아보고
+title: 경로 및 SkiaSharp 텍스트
+description: 이 문서는 SkiaSharp 경로 및 텍스트의 교차 부분을 탐색 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 9b3f906a23ed0d51237a244f3944104acc76e259
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 305ee2946d3a291e6237d5a2860eda7331193b23
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243907"
 ---
-# <a name="paths-and-text"></a>경로 및 텍스트
+# <a name="paths-and-text-in-skiasharp"></a>경로 및 SkiaSharp 텍스트
 
 _경로 및 텍스트의 교차점에 알아보고_
 
-최신 그래픽 시스템의 텍스트 글꼴은 일반적으로 정방형 베 지 어 곡선으로 분할 하 여 정의 되는 문자 윤곽선의 컬렉션. 따라서 대부분의 최신 그래픽 시스템 텍스트 문자 그래픽 경로로 변환할 수 있는 기능을 포함 합니다. 
+최신 그래픽 시스템의 텍스트 글꼴은 일반적으로 정방형 베 지 어 곡선으로 분할 하 여 정의 되는 문자 윤곽선의 컬렉션. 따라서 대부분의 최신 그래픽 시스템 텍스트 문자 그래픽 경로로 변환할 수 있는 기능을 포함 합니다.
 
-있는지 있습니다 수 텍스트 문자의 윤곽선 스트로크으로 채우는 이미 살펴보았습니다. 에 설명 된 대로 특정 스트로크 너비와 경로 효과 이러한 문자 윤곽선을 표시할 수 있습니다는 [ **경로 효과** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 문서. 에 문자열을 변환할 수 이기도 하지만 `SKPath` 개체입니다. 에 설명 된 기술로 클리핑에 대 한 텍스트 윤곽선을 사용할 수 있다는 의미이 고 [ **경로 및 영역을 사용 하 여 클리핑** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) 문서. 
+있는지 있습니다 수 텍스트 문자의 윤곽선 스트로크으로 채우는 이미 살펴보았습니다. 에 설명 된 대로 특정 스트로크 너비와 경로 효과 이러한 문자 윤곽선을 표시할 수 있습니다는 [ **경로 효과** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 문서. 에 문자열을 변환할 수 이기도 하지만 `SKPath` 개체입니다. 에 설명 된 기술로 클리핑에 대 한 텍스트 윤곽선을 사용할 수 있다는 의미이 고 [ **경로 및 영역을 사용 하 여 클리핑** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) 문서.
 
 경로 효과 사용 하 여 문자 개요 스트로크를 외에도 효과 경로 기반으로 하는 문자열에서 파생 되는 경로 만들 수도 있습니다 하 고 두 효과 결합할 수도 있습니다.
 
@@ -37,7 +38,7 @@ _경로 및 텍스트의 교차점에 알아보고_
 public SKPath GetTextPath (String text, Single x, Single y)
 ```
 
-`x` 및 `y` 인수는 텍스트의 왼쪽 기준의 시작 지점을 나타냅니다. 와 같이 동일한 역할 여기 재생 되는 `DrawText` 방식의 `SKCanvas`합니다. 경로 내에서 텍스트의 왼쪽의 기준선 (x, y) 좌표를 갖습니다. 
+`x` 및 `y` 인수는 텍스트의 왼쪽 기준의 시작 지점을 나타냅니다. 와 같이 동일한 역할 여기 재생 되는 `DrawText` 방식의 `SKCanvas`합니다. 경로 내에서 텍스트의 왼쪽의 기준선 (x, y) 좌표를 갖습니다.
 
 `GetTextPath` 메서드는 개념을 세우는 단순히을 채우거 나 결과 경로 스트로크 하려는 경우. 법선의 `DrawText` 메서드를 사용 하면 작업을 수행할 수 있습니다. `GetTextPath` 메서드는 경로 관련 된 다른 작업에 더 유용 합니다.
 
@@ -114,7 +115,7 @@ public class ClippingTextPage : ContentPage
 
         // Display bitmap to fill window but maintain aspect ratio
         SKRect rect = new SKRect(0, 0, info.Width, info.Height);
-        canvas.DrawBitmap(bitmap, 
+        canvas.DrawBitmap(bitmap,
             rect.AspectFill(new SKSize(bitmap.Width, bitmap.Height)));
     }
 }
@@ -141,7 +142,7 @@ public class TextPathEffectPage : ContentPage
         TextSize = littleSize
     };
 
-    SKPaint textPaint = new SKPaint 
+    SKPaint textPaint = new SKPaint
     {
         Style = SKPaintStyle.Stroke,
         Color = SKColors.Black
@@ -160,7 +161,7 @@ public class TextPathEffectPage : ContentPage
         textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
         // Create textPath centered around (0, 0)
-        SKPath textPath = textPathPaint.GetTextPath(character, 
+        SKPath textPath = textPathPaint.GetTextPath(character,
                                                     -textPathPaintBounds.MidX,
                                                     -textPathPaintBounds.MidY);
         // Create the path effect
@@ -324,7 +325,7 @@ public class CircularTextPage : ContentPage
 
 [![](text-paths-images/circulartext-small.png "순환 텍스트 페이지의 삼중 스크린샷")](text-paths-images/circulartext-large.png#lightbox "순환 텍스트 페이지의 삼중 스크린 샷")
 
-텍스트 자체도 다소 순환 되도록 선택 되었습니다: "circle" 단어는 모두 문장에는 제목 및 전치사 구의 개체가 있습니다. 
+텍스트 자체도 다소 순환 되도록 선택 되었습니다: "circle" 단어는 모두 문장에는 제목 및 전치사 구의 개체가 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

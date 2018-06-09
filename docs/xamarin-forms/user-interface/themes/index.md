@@ -1,19 +1,20 @@
 ---
-title: 테마
+title: Xamarin.Forms 테마
+description: 이 문서에서는 표준 보기에는 특정 시각적 모양을 정의 하는 Xamarin.Forms 테마를 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 3DFB7C55-69F6-4980-A501-588719143482
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: fca5a0cb2e188df822efb15b090ef7986cf4a2d8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f49eeba072d6aeb7ead40d5d56d4af9e9bf5e27
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848098"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245734"
 ---
-# <a name="themes"></a>테마
+# <a name="xamarinforms-themes"></a>Xamarin.Forms 테마
 
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 

@@ -1,5 +1,5 @@
 ---
-title: 전역 스타일
+title: Xamarin.Forms에 전역 스타일
 description: 스타일 있습니다 사용할 수 전체적으로 응용 프로그램의 리소스 사전에 추가 하 여 합니다. 페이지나 컨트롤 스타일의 중복을 방지할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 219973e26c5ee25accec57f1bebbd1753391e6de
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: c5ce0f3e4ff906f9bdef06e605e71d4ed64d2a68
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847906"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245350"
 ---
-# <a name="global-styles"></a>전역 스타일
+# <a name="global-styles-in-xamarinforms"></a>Xamarin.Forms에 전역 스타일
 
 _스타일 있습니다 사용할 수 전체적으로 응용 프로그램의 리소스 사전에 추가 하 여 합니다. 페이지나 컨트롤 스타일의 중복을 방지할 수 있습니다._
 

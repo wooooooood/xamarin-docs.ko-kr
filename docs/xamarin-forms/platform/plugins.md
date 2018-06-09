@@ -1,19 +1,20 @@
 ---
-title: 플러그 인
-description: Xamarin.Forms 응용 프로그램에 기본 기능을 쉽게 추가합니다
+title: 사용 및 Xamarin.Forms 플러그 인 만들기
+description: 이 문서에 사용 하 고 Xamarin.Forms 플러그 인을 만드는 방법을 설명 합니다. 플러그 인은 쉽게 네이티브 플랫폼 기능을 노출 하 일반적으로 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dff9fad0da30475a0fb91c0af76a25ea50d34439
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242559"
 ---
-# <a name="plugins"></a>플러그 인
+# <a name="consuming-and-creating-xamarinforms-plugins"></a>사용 및 Xamarin.Forms 플러그 인 만들기
 
 약간 다른 Api 설치 했지만 모든 플랫폼 간에 존재 하는 네이티브 플랫폼 기능이 많이 있습니다. 개발자는 다른 사용자와 공유할 수도 수 있는 이러한 기능에 대 한 추상 플랫폼 간 인터페이스를 만들려면 플러그 인을 작성 합니다.
 

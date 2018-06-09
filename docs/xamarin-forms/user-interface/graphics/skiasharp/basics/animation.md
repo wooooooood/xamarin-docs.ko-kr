@@ -1,19 +1,20 @@
 ---
-title: 기본 애니메이션
-description: SkiaSharp 그래픽 애니메이션 효과 적용 하는 방법을 알아봅니다.
+title: SkiaSharp에서 기본 애니메이션
+description: 이 문서는 해당 SkiaSharp 그래픽 Xamarin.Forms 응용 프로그램에서 애니메이션을 적용 하는 방법을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 859677a3dcfcddd0b333c9ddf60c01e2093b6a5b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 08583a62719927b900c6aeede1b3b4398ed803de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243345"
 ---
-# <a name="basic-animation"></a>기본 애니메이션
+# <a name="basic-animation-in-skiasharp"></a>SkiaSharp에서 기본 애니메이션
 
 _SkiaSharp 그래픽 애니메이션 효과 적용 하는 방법을 알아봅니다._
 

@@ -1,16 +1,18 @@
 ---
 title: 요약 장 14입니다. 절대 레이아웃
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 14 장 요약 합니다. 절대 레이아웃'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 87feb17f79dadb0eb8da271f7c072e4a9753381c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8fe8f8bb0ba3204a312f3d91bc59b8fa3f7c03a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241405"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 장 14입니다. 절대 레이아웃
 
@@ -83,7 +85,7 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1-layoutBounds.Height))
 
 ## <a name="overlays"></a>오버레이
 
-사용할 수 있습니다 `AbsoluteLayout` 생성 하는 *오버레이*, 사용자 페이지에 일반 컨트롤와 상호 작용을 방지 하기 위해 아마도 다른 제어 기능과 함께 페이지를 포함 하 합니다. 
+사용할 수 있습니다 `AbsoluteLayout` 생성 하는 *오버레이*, 사용자 페이지에 일반 컨트롤와 상호 작용을 방지 하기 위해 아마도 다른 제어 기능과 함께 페이지를 포함 하 합니다.
 
 [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) 샘플이이 기술을 보여 줍니다 방법과 보여 줍니다는 [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), 프로그램 완료 된 범위를 표시 하는 작업입니다.
 

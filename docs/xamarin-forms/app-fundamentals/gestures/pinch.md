@@ -1,18 +1,18 @@
 ---
 title: 축소 제스처 인식기를 추가합니다.
-description: 축소 제스처 대화형 확대/축소를 수행 하는 데 사용 되 고 PinchGestureRecognizer 클래스를 사용 하 여 구현 됩니다. 축소 제스처에 대 한 일반적인 시나리오는 축소 위치에서 이미지의 대화형 확대/축소를 수행 하는 것입니다. 이 뷰포트의 콘텐츠를 조정 하 여 수행 됩니다 하며이 문서에 나와 있습니다.
+description: 이 문서에서는 축소 위치에서 이미지의 대화형 확대/축소를 수행 하는 축소 제스처를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: b2348a1f0dfacc4a7a0e37f5c9041a07217ff802
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 3600a8bf059bf29429cce35a233cc6618daa4d79
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846115"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241779"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>축소 제스처 인식기를 추가합니다.
 

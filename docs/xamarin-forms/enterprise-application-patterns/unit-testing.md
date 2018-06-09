@@ -1,18 +1,20 @@
 ---
-title: 단위 테스트
+title: 단위 테스트 엔터프라이즈 앱
+description: 이 장에서 eShopOnContainers 모바일 앱에서 단위 테스트를 수행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242533"
 ---
-# <a name="unit-testing"></a>단위 테스트
+# <a name="unit-testing-enterprise-apps"></a>단위 테스트 엔터프라이즈 앱
 
 모바일 응용 프로그램 문제가 고유 데스크톱 및 웹 응용 프로그램에 걱정할 필요가 없습니다. 모바일 사용자에 게 사용 하 여 네트워크 연결 서비스의 가용성 및 기타 요인의 범위에서 장치에 따라 다릅니다. 따라서 모바일 앱의 품질, 안정성 및 성능을 개선 하기 위해 실제 상황에서 사용 될 되므로 테스트 되어야 합니다. 단위 테스트, 테스트, 통합 및 테스트, 단위 테스트의 가장 일반적인 형태 되 고 테스트 하는 사용자 인터페이스를 포함 하 여 응용 프로그램에서 수행 해야 하는 여러 종류의 테스트 있습니다.
 

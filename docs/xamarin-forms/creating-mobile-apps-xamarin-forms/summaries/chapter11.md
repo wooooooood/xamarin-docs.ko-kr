@@ -1,16 +1,18 @@
 ---
 title: 요약 장 11입니다. 바인딩 가능한 인프라
+description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 11 장의 요약입니다. 바인딩 가능한 인프라'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9a35388f9ddd3adbefc3401352874a774376655b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a878be4cf43e2168c37fdfd8e6fcdb79feb1602
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241541"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 장 11입니다. 바인딩 가능한 인프라
 

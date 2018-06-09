@@ -1,20 +1,20 @@
 ---
-title: RelativeLayout
-description: 모든 화면 크기에 맞게 확장할 수 있는 Ui를 만들 RelativeLayout를 사용 합니다.
+title: Xamarin.Forms RelativeLayout
+description: 이 문서에서는 모든 화면 크기에 맞게 확장할 수 있는 Ui를 만들 Xamarin.Forms RelativeLayout 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: f23c00fb40ba661cbc1633b61a898a9437fdee98
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 712092e58a7a7358ba1fa808614822c7988e6105
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847022"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245057"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
 `RelativeLayout` 위치 및 크기 보기 레이아웃 또는 형제 보기의 속성을 기준으로 하는 데 사용 됩니다. 와 달리 `AbsoluteLayout`, `RelativeLayout` 이동 앵커의 개념 없고 아래쪽 또는 레이아웃의 오른쪽 가장자리를 기준으로 요소를 배치 하기 위한 기능에는 없습니다. `RelativeLayout` 요소 자체의 범위를 벗어난 위치 지정 지원 하지 않습니다.
 

@@ -1,16 +1,18 @@
 ---
 title: 원격 데이터 액세스
+description: 이 장에서 eShopOnContainers 모바일 앱에서 컨테이너 화 된 microservices 데이터에 액세스 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: f1e15d31f11c6845ad61882996f01fb16e80ed95
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a140560731cc68dd85c97dc5a89aedcb32abd405
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242091"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터 액세스
 

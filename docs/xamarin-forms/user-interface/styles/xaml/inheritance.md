@@ -1,20 +1,20 @@
 ---
-title: 스타일 상속
-description: 스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타일에서 상속할 수 있습니다.
+title: Xamarin.Forms에 스타일 상속
+description: 스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타일에서 상속할 수 있습니다. 이 문서에서는 스타일 상속 Xamarin.Forms 응용 프로그램에서 수행 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 67A3A39C-8CC0-446D-8162-FFA73582D3B8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7b489e90daec2659a6d11b2776731582bdf368ff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: aff47769fad065e03de4c62af1be1d67b903eb0a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848423"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245096"
 ---
-# <a name="style-inheritance"></a>스타일 상속
+# <a name="style-inheritance-in-xamarinforms"></a>Xamarin.Forms에 스타일 상속
 
 _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타일에서 상속할 수 있습니다._
 

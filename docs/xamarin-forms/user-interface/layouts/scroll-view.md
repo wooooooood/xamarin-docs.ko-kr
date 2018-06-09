@@ -1,20 +1,20 @@
 ---
-title: ScrollView
-description: ScrollView 한 화면에 맞출 수 없으며 키보드의 공간을 만들기 위해 콘텐츠가 있는 레이아웃을 사용 하 여 합니다.
+title: Xamarin.Forms ScrollView
+description: 이 문서에서는 한 화면에 맞출 수 없는 하 고 키보드에 대 한 공간을 만들기 위해 콘텐츠가 있는 레이아웃을 표시 하는 Xamarin.Forms ScrollView 클래스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 72897013842d464ff9d46825e2b111efbaeb79b8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847539"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245236"
 ---
-# <a name="scrollview"></a>ScrollView
+# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 레이아웃을 포함 하 고 스크롤 스크린 수 있습니다. `ScrollView` 키보드 표시 될 때 자동으로 화면에 보이는 부분을 이동 하는 보기를 허용 하도록도 사용 됩니다.
 

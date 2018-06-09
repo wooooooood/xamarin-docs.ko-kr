@@ -1,18 +1,18 @@
 ---
 title: 사용자 지정 레이아웃 만들기
-description: Xamarin.Forms 4 개의 레이아웃 클래스 – StackLayout, AbsoluteLayout, RelativeLayout, 및 눈금을 정의 하 고 자식을 다른 방식으로 정렬 하는 각 키를 누릅니다. 그러나 경우에 레이아웃 Xamarin.Forms에서 제공 하지 않는 사용 하 여 페이지 콘텐츠를 구성 하기 위해 합니다. 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 자식을 페이지에 걸쳐 가로로 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향/반자 WrapLayout 클래스를 보여 줍니다.
+description: 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 자식을 페이지에 걸쳐 가로로 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향/반자 WrapLayout 클래스를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f2a443ded0d6b41db237e9842cd80e016bb5251
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f225a80a1c386668b71d1cdd47409eb017f19033
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847749"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244937"
 ---
 # <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
 

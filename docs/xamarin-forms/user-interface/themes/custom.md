@@ -1,24 +1,26 @@
 ---
-title: 사용자 지정 테마 만들기
+title: 사용자 지정 Xamarin.Forms 테마 만들기
+description: 이 문서에서는 앱에서 참조 하기 위한 사용자 지정 테마를 Xamarin.Forms를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245581"
 ---
-# <a name="creating-a-custom-theme"></a>사용자 지정 테마 만들기
+# <a name="creating-a-custom-xamarinforms-theme"></a>사용자 지정 Xamarin.Forms 테마 만들기
 
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 
 Nuget 패키지에서 테마를 추가할 뿐만 아니라 (같은 [Light](~/xamarin-forms/user-interface/themes/light.md) 및 [어두운](~/xamarin-forms/user-interface/themes/dark.md) 테마), 응용 프로그램에서 사용자 고유의 리소스 참조 될 수 있는 사전 테마를 만들 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 세 개의 `BoxView`s에 표시 되는 [테마 페이지](~/xamarin-forms/user-interface/themes/index.md) 하 여 두 개의 다운로드할 수 있는 테마에 정의 된 세 개의 클래스에 따라 구현 합니다.
 

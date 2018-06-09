@@ -1,16 +1,18 @@
 ---
 title: 컨테이너 화 된 Microservices
+description: 이 장에서 agile, 확장성을 만들려는 microservices 및 컨테이너를 사용 하는 방법 및 신뢰할 수 있는 최신 클라우드 응용 프로그램을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 461a1310ff430c16e49fa0ed6037a77b1302f769
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33be84bc17f72c8b70d117a0742b001f1f763d3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242263"
 ---
 # <a name="containerized-microservices"></a>컨테이너 화 된 Microservices
 

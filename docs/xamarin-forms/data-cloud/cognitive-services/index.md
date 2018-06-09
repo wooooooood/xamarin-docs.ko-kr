@@ -1,17 +1,18 @@
 ---
 title: Cognitive 서비스를 사용 하 여 인텔리전스 추가
-description: Microsoft 인식 서비스는 Api, Sdk 및 안 면 인식, 음성 인식 및 언어 이해 같은 기능을 추가 하 여 응용 프로그램 지능적인을 개발자에 게 사용할 수 있는 서비스의 집합입니다. 이 문서는 일부의 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 소개를 제공 합니다.
+description: 이 문서는 일부의 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 소개를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 86253e42db7da2da6eb8b03e2d4a4b3c943b7e17
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: c577aaf1991082baaf34248ee31899902f692d0b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241525"
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Cognitive 서비스를 사용 하 여 인텔리전스 추가
 

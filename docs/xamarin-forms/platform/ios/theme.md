@@ -1,17 +1,18 @@
 ---
 title: IOS 전용 서식 추가
+description: 이 문서에서는 Xamarin.Forms 사용자 지정 렌더러를 사용 하지 않고 iOS 특정 모양을 설정 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CE50E207-D092-4D88-8439-1B51F178E7ED
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: f14479d353d24910f66afd35f968a232ec31657c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74a3cdc340cb09e8adf15ed0dd09315c985d18b5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847285"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243534"
 ---
 # <a name="adding-ios-specific-formatting"></a>IOS 전용 서식 추가
 

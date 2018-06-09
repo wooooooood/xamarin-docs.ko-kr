@@ -1,17 +1,18 @@
 ---
 title: XAML 태그 확장
-description: 원본 특성이 설정 되는 XAML에서 범위 확장
+description: 문서 리터럴 텍스트 문자열 이외의 원본에서 요소 특성을 허용 하 여 성능과 유연성 XAML 확장 하려면 Xamarin.Forms XAML 태그 확장을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c6f1853c5864eed8484e7746755c6fa80a28a49b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245887"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
@@ -33,7 +34,7 @@ XAML 태그 확장 리터럴 텍스트 문자열 이외의 원본에서 요소 �
 
 하려고 할 때 대신 설정는 `Color` 리소스 사전에 저장 된 값 또는 만든 하는 클래스의 정적 속성의 값 또는 형식의 속성을 특성 `Color` 페이지에서 다른 요소에서 생성 된 또는 색상, 채도 및 명도 값을 구분 합니다.
 
-이러한 모든 옵션은 XAML 태그 확장을 사용 하 여 합니다. 구를 잊지 마십시오 "태그 확장" 두려워: XAML 태그 확장은 *하지* XML에 대 한 확장입니다. XAML 태그 확장 된 경우에이 XAML은 항상 xml이 유효한 XML입니다. 
+이러한 모든 옵션은 XAML 태그 확장을 사용 하 여 합니다. 구를 잊지 마십시오 "태그 확장" 두려워: XAML 태그 확장은 *하지* XML에 대 한 확장입니다. XAML 태그 확장 된 경우에이 XAML은 항상 xml이 유효한 XML입니다.
 
 태그 확장은 실제로 다른 방식으로 요소의 특성을 표현할 수 있습니다. XAML 태그 확장은 중괄호로 묶인 특성 설정에 의해 일반적으로 식별 됩니다.
 
@@ -49,7 +50,7 @@ XAML 태그 확장 리터럴 텍스트 문자열 이외의 원본에서 요소 �
 
 Xamarin.Forms에 정의 된 XAML 태그 확장을 사용 합니다.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[XAML 태그 확장 만들기](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[XAML 태그 확장 만들기](creating.md)
 
 사용자 고유의 사용자 지정 XAML 태그 확장을 씁니다.
 

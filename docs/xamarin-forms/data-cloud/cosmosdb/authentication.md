@@ -1,17 +1,18 @@
 ---
 title: Azure DB Cosmos 문서 데이터베이스와 사용자 인증
-description: Azure DB Cosmos 문서 데이터베이스에는 여러 서버 및 파티션 저장소 및 처리량을 지원 하면서 확장할 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 사용자가 자신의 문서 Xamarin.Forms 응용 프로그램에만 액세스할 수 있도록 분할 된 컬렉션을 사용한 액세스 제어를 결합 하는 방법을 설명 합니다.
+description: 이 문서에서는 사용자가 자신의 문서 Xamarin.Forms 응용 프로그램에만 액세스할 수 있도록 Azure Cosmos DB 분할 된 컬렉션을 사용한 액세스 제어를 결합 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0132f849a066976896295da8b8b67ed8bf3c3e8d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 031a48e5e10100b2c57ac067a0dda916c93d20da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241613"
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스와 사용자 인증
 
@@ -274,4 +275,4 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 - [SQL API의 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)합니다.
 - [파티션 및 Azure Cosmos DB에 크기 조정 하는 방법](/azure/cosmos-db/partition-data/)
 - [Azure DB Cosmos 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [Azure DB Cosmos API](https://msdn.microsoft.com/library/azure/dn948556.aspx)

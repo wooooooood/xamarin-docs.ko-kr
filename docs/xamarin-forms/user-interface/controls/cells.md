@@ -1,23 +1,24 @@
 ---
-title: Xamarin.Forms Cells
-description: Xamarin.Forms 셀 Listview 및 TableViews에 추가할 수 있습니다.
+title: Xamarin.Forms 셀
+description: Xamarin.Forms 셀 Listview 및 TableViews에 추가할 수 있습니다. 이 문서에서는 Xamarin.Forms에 포함 된 셀을 나열 합니다.
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: dbc28f3d58b43bb53db39da2dcdf1ba722169264
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0947027b43eacd0bac269ebf7a779746e0d22866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243358"
 ---
-# <a name="xamarinforms-cells"></a>Xamarin.Forms Cells
+# <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
 _Xamarin.Forms 셀 Listview 및 TableViews에 추가할 수 있습니다._
 
-A *셀* 는 테이블에 있는 항목에 사용 되는 특수 요소가 고 목록의 각 항목을 렌더링 해야 하는 방법에 대해 설명 합니다. [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) 클래스에서 파생 [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), 올 [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) 에서도 파생 됩니다. 셀이 자체 시각적 요소입니다. 호스팅하려는 시각적 요소를 만들기 위한 템플릿입니다. 
+A *셀* 는 테이블에 있는 항목에 사용 되는 특수 요소가 고 목록의 각 항목을 렌더링 해야 하는 방법에 대해 설명 합니다. [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) 클래스에서 파생 [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), 올 [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) 에서도 파생 됩니다. 셀이 자체 시각적 요소입니다. 호스팅하려는 시각적 요소를 만들기 위한 템플릿입니다.
 
 `Cell` 제품에만 사용 되는 [ `ListView` ](views.md#listView) 및 [ `TableView` ](views.md#tableView) 컨트롤입니다. 사용 및 셀 사용자 지정 하는 방법에 자세한 참조는 [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) 및 [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) 설명서입니다.
 

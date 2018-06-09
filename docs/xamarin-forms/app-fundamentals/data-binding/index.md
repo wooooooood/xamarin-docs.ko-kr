@@ -1,5 +1,5 @@
 ---
-title: 데이터 바인딩
+title: Xamarin.Forms 데이터 바인딩
 description: 데이터 바인딩은 하나의 속성만 변경 다른 속성에 자동으로 반영 되도록 두 개체의 속성을 연결 하는 방법입니다. 데이터 바인딩 모델-뷰-MVVM () 응용 프로그램 아키텍처의 필수적인 부분입니다.
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ee8481696b0ef85aec949c6def7767e57eb99e17
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5ea5dcb5b108da52634f131fd36a91ba82f7da4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240355"
 ---
-# <a name="data-binding"></a>데이터 바인딩
+# <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
 
 _데이터 바인딩은 하나의 속성만 변경 다른 속성에 자동으로 반영 되도록 두 개체의 속성을 연결 하는 방법입니다. 데이터 바인딩 모델-뷰-MVVM () 응용 프로그램 아키텍처의 필수적인 부분입니다._
 

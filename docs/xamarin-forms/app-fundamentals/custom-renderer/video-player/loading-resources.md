@@ -1,22 +1,24 @@
 ---
 title: 응용 프로그램 리소스 비디오를 로드합니다.
+description: 이 문서에서는 Xamarin.Forms를 사용 하 여 비디오 플레이어 응용 프로그램에서는 응용 프로그램 리소스로 저장 되는 비디오를 로드 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241034"
 ---
 # <a name="loading-application-resource-videos"></a>응용 프로그램 리소스 비디오를 로드합니다.
 
 에 대 한 사용자 지정 렌더러는 `VideoPlayer` 보기는 응용 프로그램 리소스로 개별 플랫폼 프로젝트에 포함 된 비디오 파일을 재생할 수 있습니다. 그러나 현재 버전의 `VideoPlayer` .NET 표준 라이브러리에 포함 된 리소스에 액세스할 수 없습니다.
 
-인스턴스를 만들고 이러한 리소스를 로드 하려면 `ResourceVideoSource` 설정 하 여는 `Path` 파일 이름 (또는 폴더와 파일 이름) 리소스의 속성입니다. 정적을 호출할 수 또는 `VideoSource.FromResource` 리소스를 참조 하는 메서드. 다음 설정의 `ResourceVideoSource` 개체를 `Source` 속성 `VideoPlayer`합니다. 
+인스턴스를 만들고 이러한 리소스를 로드 하려면 `ResourceVideoSource` 설정 하 여는 `Path` 파일 이름 (또는 폴더와 파일 이름) 리소스의 속성입니다. 정적을 호출할 수 또는 `VideoSource.FromResource` 리소스를 참조 하는 메서드. 다음 설정의 `ResourceVideoSource` 개체를 `Source` 속성 `VideoPlayer`합니다.
 
 ## <a name="storing-the-video-files"></a>비디오 파일을 저장합니다.
 
@@ -30,13 +32,13 @@ IOS 프로젝트에 비디오를 저장할 수 있습니다는 **리소스** 폴
 
 ### <a name="android-video-resources"></a>Android 비디오 리소스
 
-Android 프로젝트, 비디오의 하위 폴더에 저장 되어 있어야 **리소스** 라는 **원시**합니다. **원시** 폴더 하위 폴더를 포함할 수 없습니다. 비디오 파일는 `Build Action` 의 `AndroidResource`합니다. 설정의 `Path` 속성 `ResourceVideoSource` 파일 이름으로, 예를 들어 **MyFile.mp4**합니다. 
+Android 프로젝트, 비디오의 하위 폴더에 저장 되어 있어야 **리소스** 라는 **원시**합니다. **원시** 폴더 하위 폴더를 포함할 수 없습니다. 비디오 파일는 `Build Action` 의 `AndroidResource`합니다. 설정의 `Path` 속성 `ResourceVideoSource` 파일 이름으로, 예를 들어 **MyFile.mp4**합니다.
 
-**VideoPlayerDemos.Android** 프로젝트의 하위 폴더 포함 **리소스** 라는 **원시**, 라는 파일에 포함 된 **AndroidApiVideo.mp4**. 
+**VideoPlayerDemos.Android** 프로젝트의 하위 폴더 포함 **리소스** 라는 **원시**, 라는 파일에 포함 된 **AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>UWP 비디오 리소스
 
-유니버설 Windows 플랫폼 프로젝트에서는 프로젝트의 모든 폴더에서 비디오를 저장할 수 있습니다. 파일을 `Build Action` 의 `Content`합니다. 설정의 `Path` 속성 `ResourceVideoSource` 폴더와 파일 이름, 예를 들어 **MyFolder/MyVideo.mp4**합니다. 
+유니버설 Windows 플랫폼 프로젝트에서는 프로젝트의 모든 폴더에서 비디오를 저장할 수 있습니다. 파일을 `Build Action` 의 `Content`합니다. 설정의 `Path` 속성 `ResourceVideoSource` 폴더와 파일 이름, 예를 들어 **MyFolder/MyVideo.mp4**합니다.
 
 **VideoPlayerDemos.UWP** 프로젝트 라는 폴더가 **비디오** 파일 **UWPApiVideo.mp4**합니다.
 
@@ -169,7 +171,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-IOS 리소스에 저장 된 경우는 **리소스** 폴더, 리소스 UWP 프로젝트의 루트 폴더에 저장 된 경우 세 플랫폼에 같은 파일 이름을 사용할 수 있습니다. 경우에 해당 되는 경우 다음에 직접 해당 이름을 설정할 수 있습니다는 `Source` 속성 `VideoPlayer`합니다. 
+IOS 리소스에 저장 된 경우는 **리소스** 폴더, 리소스 UWP 프로젝트의 루트 폴더에 저장 된 경우 세 플랫폼에 같은 파일 이름을 사용할 수 있습니다. 경우에 해당 되는 경우 다음에 직접 해당 이름을 설정할 수 있습니다는 `Source` 속성 `VideoPlayer`합니다.
 
 세 가지 플랫폼에서 실행 되 고 해당 페이지는 다음과 같습니다.
 

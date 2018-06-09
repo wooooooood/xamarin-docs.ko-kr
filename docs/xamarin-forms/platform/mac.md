@@ -1,6 +1,6 @@
 ---
 title: Mac 플랫폼 설정
-description: Xamarin.Forms에는 Mac 플랫폼에 대 한 미리 보기 지원
+description: 이 문서에서는 Mac 프로젝트 macOS 시에라와 macOS El Capitan에서 실행할 수 있는 앱을 생성 하는 Xamarin.Forms 프로젝트를 추가 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: c3a2c36463b2934254c54f3f2250ee253d57798b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: ae0fbfc7862a0d2147b2c3bbdbae7dd53dfce78f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848233"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242598"
 ---
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 
@@ -28,7 +28,7 @@ Mac 앱 Mac.에 대 한 Visual Studio를 사용 하 여 추가할 수 있습니�
 
 ## <a name="adding-a-mac-app"></a>Mac 앱 추가
 
-시에라 및 Mac OS X El Capitan macOS에서 실행 되는 Mac 응용 프로그램을 추가 하려면 다음이 지침을 따릅니다.
+MacOS 시에라와 macOS El Capitan에서 실행 되는 Mac 응용 프로그램을 추가 하려면 다음이 지침을 따릅니다.
 
 1. Mac 용 Visual Studio에서 기존 Xamarin.Forms 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > 새 프로젝트 추가...**
 
