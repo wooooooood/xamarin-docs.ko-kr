@@ -1,6 +1,6 @@
 ---
 title: Hello, Xamarin.Forms
-description: 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio 사용한 Xamarin.Forms 응용 프로그램 개발과 Xamarin.Forms를 사용한 응용 프로그램 개발의 핵심을 소개합니다. Xamarin.Forms 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 다룹니다.
+description: 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio 사용한 Xamarin.Forms 응용 프로그램 개발과 Xamarin.Forms를 사용한 응용 프로그램 개발의 핵심을 소개합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: af79e4ef-99c6-4a17-b5d1-95ab652ac7ab
@@ -8,11 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: a06bd03d7df45719b132f7cb1d9a46455dc75ddf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b017f282a1295dba4b2a051928b54fc16ff746b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35243742"
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
 

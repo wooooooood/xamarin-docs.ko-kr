@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms 소개
-description: Xamarin.Forms는 개발자가 Android, iOS 및 유니버설 Windows 플랫폼에서 공유할 수 있는 사용자 인터페이스를 쉽게 만들 수 있도록 기본적으로 지원되는 플랫폼 간 UI 도구 키트 추상화입니다. 사용자 인터페이스는 Xamarin.Forms 응용 프로그램이 각 플랫폼에 맞게 적절한 모양 및 느낌을 유지할 수 있도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링 됩니다. 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다.
+description: 이 아티클에서는 Xamarin.Forms에 대한 소개 및 그것을 사용해 응용 프로그램을 작성하기 시작하는 방법을 제공합니다.
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 43282196b1c5b6e43927554d2189e54fc532915a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15a26ce633e8321e9101289276c9da302e5bd8cc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848527"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35243696"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 소개
 
