@@ -1,16 +1,18 @@
 ---
 title: Windows 플랫폼 기능
+description: 이 문서에서는 Xamarin.Forms에서 사용할 수 있는 Windows 플랫폼 지원을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 5056caf9ae5d9b738ec8de8cb42b7a7d7a7b110f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 26511f6e3e0ba09830bb85d1ad6ec30072d53866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242936"
 ---
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 

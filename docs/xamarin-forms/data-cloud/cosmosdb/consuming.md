@@ -1,6 +1,6 @@
 ---
 title: Azure DB Cosmos 문서 데이터베이스 사용
-description: Azure Cosmos DB 문서 데이터베이스는 대기 시간이 짧은 원활한 배율과 전역 복제 해야 하는 응용 프로그램에 대 한 빠르고, 항상 사용 가능한 확장 가능한 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 액세스를 제공 하는 NoSQL 데이터베이스입니다. 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다.
+description: 이 문서에서는 Azure Cosmos DB 문서 데이터베이스 Xamarin.Forms 응용 프로그램에 통합 하는 Azure Cosmos DB 표준.NET 클라이언트 라이브러리를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a4656b5eb9a8159f1b3dc39c8cf62509101d219e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e797eaad98f6fac66876aaebecd7ae53ad9dbab
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242507"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure DB Cosmos 문서 데이터베이스 사용
 
@@ -230,4 +231,4 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 - [Todo Azure Cosmos DB (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
 - [Azure DB Cosmos 설명서](/azure/cosmos-db/)
 - [Azure Cosmos DB 표준.NET 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)
+- [Azure DB Cosmos API](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)
