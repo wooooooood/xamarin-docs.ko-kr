@@ -7,22 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/31/2018
-ms.openlocfilehash: eadc2147a44d6077436e394a4757d367ce42e5fa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a931373a6abba3084af3c7aefcdddc903ad1b577
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790005"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209234"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Ios 디자이너 사용자 인터페이스 빌드
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-=======
-# <a name="ios-designer"></a>iOS 디자이너
-
 _IOS 용 Xamarin 디자이너에는 Mac 및 Visual Studio 용 Visual Studio와 완벽 하 게 통합 하는 iOS 스토리 보드 및 작성기 인터페이스 형식에 대 한 비주얼 디자이너는입니다. 디자이너 iOS 스토리 보드 및.xib 형식과 완전히 호환을 유지 하 Mac 용 Visual Studio 또는 Xcode의 인터페이스 작성기 외에도 Visual Studio에서 파일을 편집할 수 있습니다. 또한 iOS 용 Xamarin 디자이너는 사용자 지정 컨트롤 편집기에서 디자인 타임에 렌더링 하는 등의 고급 기능을 지원 합니다._
->>>>>>> master
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

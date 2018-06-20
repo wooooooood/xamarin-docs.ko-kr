@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 07/10/2017
-ms.openlocfilehash: faa4998869b918caaf5bc4252dc81a5745199c93
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/18/2018
+ms.openlocfilehash: 25299bc3b56c2fbb748db202e43e75be183cce66
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245835"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209299"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.forms에서는 XAML 네임 스페이스
 
@@ -43,11 +43,12 @@ XAML 네임 스페이스 내에서 형식을 참조할 때 사용 되는 접두�
 |`x:Arguments`|기본이 아닌 생성자 또는 팩터리 메서드 개체 선언에 대 한 생성자 인수를 지정합니다.|
 |`x:Class`|XAML에서 정의 된 클래스에 대 한 네임 스페이스 및 클래스 이름을 지정 합니다. 클래스 이름에는 코드 숨김 파일의 클래스 이름을 일치 해야 합니다. 이 생성자는 XAML 파일의 루트 요소에만 나타날 수 있는 참고 합니다.|
 |`x:FactoryMethod`|개체를 초기화 하는 데 사용할 수 있는 팩터리 메서드를 지정 합니다.|
+|`x:FieldModifier`|명명 된 XAML 요소에 대 한 생성 된 필드에 대 한 액세스 수준을 지정합니다.|
 |`x:Key`|각 리소스에 대 한 사용자 지정 고유 키에 지정 된 `ResourceDictionary`합니다. 키의 값 XAML 리소스를 검색 하는 데 사용 되 고에 대 한 인수로 일반적으로 사용 되는 `StaticResource` 태그 확장 합니다.|
 |`x:Name`|XAML 요소에 대 한 런타임 개체 이름을 지정합니다. 설정 `x:Name` 코드에서 변수를 선언 하는 것과 비슷합니다.|
 |`x:TypeArguments`|제네릭 형식의 생성자에 대 한 제네릭 형식 인수를 지정합니다.|
 
-에 대 한 자세한 내용은 `x:Arguments`, `x:FactoryMethod`, 및 `x:TypeArguments` 특성 참조 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)합니다.
+에 대 한 자세한 내용은 `x:FieldModifier` 특성을 참조 하십시오. [필드 한정자](~/xamarin-forms/xaml/field-modifiers.md)합니다. 에 대 한 자세한 내용은 `x:Arguments`, `x:FactoryMethod`, 및 `x:TypeArguments` 특성 참조 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)합니다.
 
 Xaml에서는 자식 요소에 네임 스페이스 선언을 부모 요소 로부터 상속합니다. 따라서 XAML 파일의 루트 요소에서 네임 스페이스를 정의 하면 해당 파일 내의 모든 요소는 네임 스페이스 선언을 상속 합니다.
 

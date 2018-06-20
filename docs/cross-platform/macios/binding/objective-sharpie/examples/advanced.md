@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781258"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209403"
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예제
 
@@ -19,7 +19,7 @@ ms.locfileid: "34781258"
 
 이 섹션에서는 Apple의를 사용 하는 바인딩 대 한 고급 액세스 `xcodebuild` POP 프로젝트를 빌드하 도구 클릭 한 다음 수동으로 Sharpie 목표에 대 한 입력을 추론 합니다. 기본적으로 이전 섹션의 내부에서 수행 하는 목표 Sharpie 다룹니다.
 
-```csharp
+```
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 POP 라이브러리 Xcode 프로젝트에 있기 때문에 (`pop.xcodeproj`)만 사용할 수 `xcodebuild` POP 빌드할 수 있습니다. 이 프로세스는 목표 Sharpie 구문 분석 해야 하는 헤더 파일을 생성할 차례로 수 있습니다. 이 때문에 바인딩을 중요 하기 전에 작성 합니다. 통해 빌드할 때 `xcodebuild` 전달 SDK 식별자와 동일한 아키텍처를 확인 하려면 목표 Sharpie에 전달할 (및 기억 목표 Sharpie 3.0에서 일반적으로 이렇게 하려면!):
 
-```csharp
+```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 
 이제 POP 바인딩할 준비가 되었습니다. 회원님의 SDK에 대 한 빌드 한다고 `iphoneos8.1` 와 `arm64` 아키텍처 및 헤더 파일에 관심 있는 `build/Headers` 아래 POP git 체크 아웃 합니다. 대해는 `build/Headers` 디렉터리 헤더 파일의 수를 살펴보겠습니다.
 
-```csharp
+```
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 보면 `POP.h`, 것이 라이브러리의 기본 최상위 헤더 파일을 볼 수 있습니다 `#import`s 다른 파일입니다. 이 인해만 하면 전달 `POP.h` 목표 Sharpie를 clang 나머지 백그라운드에서 수행 될 작업:
 
-```csharp
+```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64

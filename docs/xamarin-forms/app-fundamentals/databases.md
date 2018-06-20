@@ -6,13 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 91df4d36dd8d98712063a30773f927a82676b18e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/18/2018
+ms.openlocfilehash: 123e65f1efe31935167ca8684e89e7c0b4505443
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243612"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209221"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
@@ -36,7 +36,7 @@ Xamarin.Forms 응용 프로그램이 사용할 수는 [SQLite.NET PCL NuGet](htt
 
 ### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms.NET Standard 또는 PCL 프로젝트
 
-SQLite 지원 Xamarin.Forms 프로젝트를 추가 하려면 사용 하 여 NuGet의 검색 기능 찾으려고 **sqlite net pcl** 패키지를 설치 하 고:
+SQLite 지원 Xamarin.Forms 프로젝트를 추가 하려면 사용 하 여 NuGet의 검색 기능 찾으려고 **sqlite net pcl** 최신 패키지를 설치 하 고:
 
 ![NuGet SQLite.NET PCL 패키지 추가](databases-images/vs2017-sqlite-pcl-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
@@ -47,7 +47,7 @@ NuGet 패키지는 이름이 비슷한 여러 가지, 올바른 패키지에 이
 - **NuGet 링크:** [sqlite net pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!TIP]
-> 사용 하 여는 **sqlite net pcl** NuGet 표준.NET 프로젝트에도 합니다.
+> 사용 하 여는 **sqlite net pcl** 표준.NET 프로젝트에도 NuGet 패키지 합니다.
 
 참조가 추가 되 면 데이터베이스 파일의 위치를 확인 하는 플랫폼 특정 기능을 추상화 하는 인터페이스를 작성 합니다. 샘플에 사용 되는 인터페이스에는 하나의 메서드를 정의 합니다.
 
@@ -126,15 +126,11 @@ public Task<int> DeleteItemAsync(TodoItem item)
 > [!NOTE]
 > 비동기 SQLite.Net API 사용 시의 이점은 작업을 백그라운드 스레드로 이동 해당 데이터베이스입니다. 또한 추가 동시성 처리 API의 처리를 사용 하기 때문에 코드를 작성할 필요가 없습니다 있습니다.
 
-모든는 모든 플랫폼에서 공유를 PCL 프로젝트에 데이터 액세스 코드를 작성 합니다. 데이터베이스에 대 한 로컬 파일 경로 가져오는 다음 섹션에 설명 된 대로 플랫폼별 코드를 필요 합니다.
+모든 데이터 액세스 코드를 모든 플랫폼에서 공유할 수는 표준.NET 라이브러리 프로젝트에 기록 됩니다. 데이터베이스에 대 한 로컬 파일 경로 가져오는 다음 섹션에 설명 된 대로 플랫폼별 코드를 필요 합니다.
 
 <a name="PCL_iOS" />
 
 ### <a name="ios-project"></a>iOS 프로젝트
-
-IOS 응용 프로그램을 구성 하려면 같은 NuGet 패키지를 사용 하 여 iOS 프로젝트 추가 *NuGet* 창:
-
-![NuGet SQLite.NET PCL 패키지 추가](databases-images/vsmac-sqlite-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
 필요한 유일한 코드는는 `IFileHelper` 데이터 파일 경로 결정 하는 구현 합니다. 다음 코드에서 SQLite 데이터베이스 파일을 배치는 **라이브러리/데이터베이스** 샌드박스 응용 프로그램의 내 폴더. 참조는 [iOS 파일 시스템 작업](~/ios/app-fundamentals/file-system.md) 저장소에 사용할 수 있는 다른 디렉터리에 대 한 자세한 내용은 설명서입니다.
 
@@ -166,11 +162,7 @@ namespace Todo.iOS
 
 ### <a name="android-project"></a>Android 프로젝트
 
-Android 응용 프로그램을 구성 하려면 같은 NuGet 패키지를 사용 하 여 Android 프로젝트에 추가 된 *NuGet* 창:
-
-![](databases-images/vsmac-sqlite-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
-
-이 참조를 추가한 후에 필요한 유일한 코드를는 `IFileHelper` 데이터 파일 경로 결정 하는 구현 합니다.
+필요한 유일한 코드는는 `IFileHelper` 데이터 파일 경로 결정 하는 구현:
 
 ```csharp
 [assembly: Dependency(typeof(FileHelper))]
@@ -191,11 +183,7 @@ namespace Todo.Droid
 
 ### <a name="windows-10-universal-windows-platform-uwp"></a>Windows 10 UWP(유니버설 Windows 플랫폼)
 
-UWP 응용 프로그램을 구성 하려면 사용 하 여 UWP 프로젝트를 같은 NuGet 패키지에 추가 된 *NuGet* 창:
-
-![NuGet SQLite.NET PCL 패키지 추가](databases-images/vs2017-sqlite-uwp-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
-
-참조가 추가 되 면 구현는 `IFileHelper` 플랫폼 관련을 사용 하 여 인터페이스 `Windows.Storage` 데이터 파일 경로 확인 하는 API입니다.
+구현 된 `IFileHelper` 플랫폼 관련을 사용 하 여 인터페이스 `Windows.Storage` 데이터 파일 경로 확인 하는 API:
 
 ```csharp
 using Windows.Storage;

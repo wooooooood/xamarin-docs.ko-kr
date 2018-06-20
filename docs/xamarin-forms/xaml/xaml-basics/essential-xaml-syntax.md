@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 62223a4c56198271513b0b15587bb588e71b28cc
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ea448708403478cdaf565bc7abbed2af28c7a9bf
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245848"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268851"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2 부 합니다. 필수 XAML 구문
 
@@ -430,7 +430,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-이제 추가 `On` 요소입니다. 각 onem 설정는 `Platform` 속성 및 `Value` 속성에 대 한 태그는 `Thickness` 속성:
+이제 추가 `On` 요소입니다. 각각에 대 한 설정에서 `Platform` 속성 및 `Value` 속성에 대 한 태그는 `Thickness` 속성:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

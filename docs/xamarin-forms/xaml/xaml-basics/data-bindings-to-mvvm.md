@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e83f8a585c4badc31bffaea53bb2f183e7b11fc9
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245773"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268864"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5 단계입니다. MVVM에 대 한 데이터 바인딩을에서
 
@@ -290,7 +290,7 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-각 바인딩 `Label` 기본값이 `OneWay`합니다. 만 값을 표시 해야 합니다. 하지만 각 바인딩 `Slider` 은 `TwoWay`합니다. 이 통해는 `Slider` ViewModel에서 초기화 합니다. 다음에 유의 `Color` 속성이 `Blue` ViewModel 인스턴스화될 때. 하지만 변경에는 `Slider` 도 다음 새 색을 계산 하는 ViewModel에서 속성에 대 한 새 값을 설정 해야 합니다.
+각 바인딩 `Label` 기본값이 `OneWay`합니다. 만 값을 표시 해야 합니다. 하지만 각 바인딩 `Slider` 은 `TwoWay`합니다. 이 통해는 `Slider` ViewModel에서 초기화 합니다. 다음에 유의 `Color` 속성이 `Aqua` ViewModel 인스턴스화될 때. 하지만 변경에는 `Slider` 도 다음 새 색을 계산 하는 ViewModel에서 속성에 대 한 새 값을 설정 해야 합니다.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "양방향 데이터 바인딩을 사용 하 여 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용 하 여 MVVM")
 

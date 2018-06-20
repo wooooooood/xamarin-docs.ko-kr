@@ -6,12 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/24/2016
-ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: c040c12829708418d0a705b8e9f930989900c678
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209429"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML eXtensible Application Markup Language)
 
@@ -45,6 +46,10 @@ XAML에서 사용 하 여 `xmlns` 네임 스페이스 선언에 대 한 XML 특�
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[XAML 태그 확장](markup-extensions/index.md)
 
 XAML 특성 값 이나 간단한 문자열로 표현 될 수 있는 다음 개체를 설정 하기 위한 태그 확장에 포함 되어 있습니다. 여기에 참조 하는 상수, 정적 속성 및 필드, 리소스 및 데이터 바인딩을 포함 합니다.
+
+## <a name="field-modifiersfield-modifiersmd"></a>[필드 한정자](field-modifiers.md)
+
+`x:FieldModifier` 네임 스페이스 특성 명명 된 XAML 요소에 대 한 생성 된 필드에 대 한 액세스 수준을 지정 합니다.
 
 ## <a name="passing-argumentspassing-argumentsmd"></a>[인수 전달](passing-arguments.md)
 

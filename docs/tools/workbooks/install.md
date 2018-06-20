@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793823"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268994"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -43,8 +44,8 @@ ms.locfileid: "34793823"
 
 |응용 프로그램 플랫폼|운영 체제 지원|노트|
 |--- |--- |--- |
-|Mac (통합)|Mac 에서만 지원 됩니다.|
-|iOS (통합)|Mac 및 Windows에서 지원|Xamarin.iOS 11.0 및 Xcode 9.0 이상 mac 설치 되어야 합니다. Windows에서 iOS 통합 문서를 실행 하려면 위의 모든 실행 하는 Mac 빌드 호스트 및 [원격 iOS 시뮬레이터](~/tools/ios-simulator.md) Windows에 설치 합니다.|
+|Mac|Mac 에서만 지원 됩니다.|
+|iOS|Mac 및 Windows에서 지원|Xamarin.iOS 11.0 및 Xcode 9.0 이상 mac 설치 되어야 합니다. Windows에서 iOS 통합 문서를 실행 하려면 위의 모든 실행 하는 Mac 빌드 호스트 및 [원격 iOS 시뮬레이터](~/tools/ios-simulator.md) Windows에 설치 합니다.|
 |Android|Mac 및 Windows에서 지원|가상 장치에 Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 > = 5.0 인 경우|
 |WPF|Windows 에서만 지원 됩니다.|
 |콘솔 (.NET Framework)|Mac 및 Windows에서 지원|
@@ -114,7 +115,7 @@ IOS 또는 Android 통합 문서 연결에 문제가 이미 체크 아웃 하는
 
 ### <a name="windows"></a>Windows
 
-어떻게 통합 문서 및 관리자를 구입한 따라 두 제거 절차를 수행 해야 할 수 있습니다. 둘 다에 소프트웨어를 완전히 제거 하려면 해당 파일을 확인 하십시오.
+통합 문서를 구입한 방법을 따라 두 제거 절차를 수행 해야 할 수 있습니다. 둘 다에 소프트웨어를 완전히 제거 하려면 해당 파일을 확인 하십시오.
 
 #### <a name="visual-studio-installer"></a>Visual Studio 설치 관리자
 
@@ -122,19 +123,19 @@ Visual Studio 2017 있으면 열 **Visual Studio 설치 관리자**, 찾는 위�
 
 #### <a name="system-uninstall"></a>시스템 제거
 
-를 설치한 경우 통합 문서 및 관리자 사용자가 직접 다운로드 한 설치 관리자와을 통해 제거 해야 합니다는 **응용 프로그램 및 기능** 시스템 설정 페이지를 통해 또는 Windows 10에서 **프로그램 추가/제거**이전 버전의 Windows의 제어판에서.
+를 설치한 경우 통합 문서 사용자가 직접 다운로드 한 설치 관리자와을 통해 제거 해야 합니다는 **응용 프로그램 및 기능** 시스템 설정 페이지를 통해 또는 Windows 10에서 **프로그램 추가/제거** 컨트롤에서 이전 버전의 Windows에서 패널입니다.
 
 > **시작 > 설정 > 시스템 > 응용 프로그램 및 기능**
 
-![](install-images/windows-remove.png "Xamarin 통합 문서 및 관리자에 나열 된 &quot;앱 &amp; 기능&quot;")
+![](install-images/windows-remove.png "Xamarin 통합 문서에 나열 된 &quot;앱 &amp; 기능&quot;")
 
-**통합 문서가 있는지를 확인 하려면 Visual Studio 설치 관리자에 대 한 절차에 따라 계속 해야 & 검사기 사용자 모르게 다시 가져올 설치 되지 않습니다.**
+**여전히 통합 문서 사용자 모르게 다시 가져올 설치 되지 않는 고유 하도록 Visual Studio 설치 관리자에 대 한 절차를 수행 해야 합니다.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-부터는 [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/)를 실행 하 여 Xamarin 통합 문서 및 검사기 터미널에서 제거할 수 있습니다.
+부터는 [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), Xamarin 통합 문서를 실행 하 여 터미널에서 제거할 수 있습니다.
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -153,7 +154,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 ## <a name="downgrading"></a>다운 그레이드
 
-에 대 한 번들 식별자 **응용 프로그램/Xamarin Workbooks.app** 에서 변경 `com.xamarin.Inspector` 를 `com.xamarin.Workbooks` 1.4 릴리스에서 Xamarin 통합 문서 및 검사기 설치 관리자의 향후 분할을 용이 하 게 합니다.
+에 대 한 번들 식별자 **응용 프로그램/Xamarin Workbooks.app** 에서 변경 `com.xamarin.Inspector` 를 `com.xamarin.Workbooks` 1.4 릴리스에서 통합 문서 및 검사기도 이제 완벽 하 게 분할 됩니다.
 
 이전 설치 관리자의 버그 때문에는 1.3.2 또는 이전 설치 관리자를 사용 하 여 1.4 이상 릴리스를 다운 그레이드할 수 없습니다.
 

@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 275ec851a2fd8e96adecfeca5daf6a66add7bd92
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209192"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치 프로그램
 
@@ -42,7 +43,7 @@ Windows 바탕 화면에서 실행 되는 GTK # 앱을 추가 하려면 다음�
 
     키를 눌러는 **확인** 단추 프로젝트를 만듭니다.
 
-4. 에 **솔루션 탐색기**새 GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **NuGet 패키지 관리**합니다. 선택은 **찾아보기** 탭을 클릭는 **Include 시험판** 확인란을 검색 한 **Xamarin.Forms** 3.0 이상이 합니다.
+4. 에 **솔루션 탐색기**새 GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **NuGet 패키지 관리**합니다. 선택 된 **찾아보기** 탭을 검색할 **Xamarin.Forms** 3.0 이상이 있습니다.
 
     ![Xamarin.Forms NuGet 패키지를 선택](gtk-images/win/select-forms-nuget-package.png "Xamarin.Forms NuGet 패키지를 선택 합니다.")
 

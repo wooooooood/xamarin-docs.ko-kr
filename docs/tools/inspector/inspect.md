@@ -5,19 +5,18 @@ ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 16a0474c7fc9a496409e2133714b6d4374691dbc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 67cc6b42901521226322d964514f19b4b639148b
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793481"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268825"
 ---
 # <a name="inspecting-live-applications"></a>라이브 응용 프로그램을 검사합니다.
 
 기업 고객에 대 한 라이브 앱 검사 ´ ù입니다.
 
-1. [Xamarin 통합 문서 및 관리자를 설치 합니다.](~/tools/inspector/install.md)
 1. 아무 것 이나 열고 [지원 응용 프로그램 프로젝트](~/tools/inspector/install.md#supported-platforms) Mac 또는 Visual Studio 용 Visual Studio에서.
 1. 디버그 모드에서 앱을 실행합니다.
 1. 클릭는 **검사** IDE 도구 모음 단추 (Visual Studio에서의 **검사 현재 앱....**  메뉴 항목에서 제공 됩니다.는 **도구** 또는 **디버그** 메뉴).

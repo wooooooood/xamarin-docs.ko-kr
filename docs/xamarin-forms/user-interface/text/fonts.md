@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: fd45528446c9d3d4bdfa1b8f9f4010babb2ad044
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3d5fe936da9086dd7201b7ee7d91185b81eb65a1
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245633"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269033"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms에는 글꼴
 
-이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (가중치, 크기 등)을 지정할 수 있습니다 어떻게을 설명 합니다. 글꼴 정보 수 [코드에 지정 된](#Setting_Font_in_Code) 또는 [Xaml에 지정 된](#Setting_Font_in_Xaml)합니다.
+이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (가중치, 크기 등)을 지정할 수 있습니다 어떻게을 설명 합니다. 글꼴 정보 수 [코드에 지정 된](#Setting_Font_in_Code) 또는 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다.
 사용 하 여 이기도 한 [사용자 지정 글꼴](#Using_a_Custom_Font)합니다.
 
 <a name="Setting_Font_in_Code" />
@@ -55,7 +55,6 @@ label.FontSize = 24;
 -  **작은**
 -  **보통**
 -  **큰**
-
 
 `NamedSize` 열거형 될 수 있습니다 아무 곳에 나 사용을 `FontSize` 를 사용 하 여 지정할 수 있습니다는 `Device.GetNamedSize` 를 값으로 변환 하는 메서드는 `double`:
 
@@ -103,7 +102,6 @@ fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, Font
 labelFormatted.FormattedText = fs;
 ```
 
-
 ### <a name="setting-font-info-per-platform"></a>플랫폼 마다 글꼴 정보 설정
 
 또는 `Device.RuntimePlatform` 이 코드에서와 같이 각 플랫폼에서 다른 글꼴 이름을 설정 하려면 속성을 사용할 수 있습니다.
@@ -119,16 +117,16 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
 
 <a name="Setting_Font_in_Xaml" />
 
-## <a name="setting-the-font-in-xaml"></a>Xaml에서 글꼴을 설정합니다.
+## <a name="setting-the-font-in-xaml"></a>XAML에서 글꼴을 설정합니다.
 
-모든 해당 표시 텍스트를 제어 하는 Xamarin.Forms는 `Font` Xaml에서 설정할 수 있는 속성입니다. 이 예에서 표시 된 것과 같이 명명 된 크기 열거형 값을 사용 하도록 Xaml에서 글꼴을 설정 하는 가장 간단한 방법은입니다.
+모든 해당 표시 텍스트를 제어 하는 Xamarin.Forms는 `Font` XAML에서 설정할 수 있는 속성입니다. 이 예에서 표시 된 것과 같이 명명 된 크기 열거형 값을 사용 하도록 XAML에서 글꼴을 설정 하는 가장 간단한 방법은입니다.
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-에 대 한 기본 제공 변환기는는 `Font` 속성을 사용 하는 Xaml에서 문자열 값으로 표시할 수 있는 모든 글꼴 설정 합니다. 다음 예제에서는 Xaml의 글꼴 특성 및 크기를 지정 하는 방법을 보여 줍니다.
+에 대 한 기본 제공 변환기는는 `Font` 속성을 사용 하는 XAML에서 문자열 값으로 표시할 수 있는 모든 글꼴 설정 합니다. 다음 예제에서는 XAML의 글꼴 특성 및 크기를 지정 하는 방법을 보여 줍니다.
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -136,11 +134,12 @@ IOS에 대 한 글꼴 정보의 좋은 소스는 [iosfonts.com](http://iosfonts.
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-여러 개 지정 하려면 `Font` 설정, 단일 글꼴 특성 문자열에 필요한 설정을 결합 합니다. 글꼴 특성 문자열으로 서식을 지정 하는 `"[font-face],[attributes],[size]"`합니다. 매개 변수 순서는 중요, 모든 매개 변수는 선택 사항 및 여러 개의 `attributes` 예를 들어 지정할 수 있습니다.
+여러 개 지정 하려면 `Font` 설정을 결합을 단일 필요한 설정을 `Font` 문자열 특성. 글꼴 특성 문자열으로 서식을 지정 하는 `"[font-face],[attributes],[size]"`합니다. 매개 변수 순서는 중요, 모든 매개 변수는 선택 사항 및 여러 개의 `attributes` 예를 들어 지정할 수 있습니다.
 
 ```xaml
-<Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />
-<Label Text="Really big italic text" FontAttributes="Italic" FontSize="72" />
+<Label Text="Small bold text" Font="Bold, Micro" />
+<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
+<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 `FormattedString` 여기에 표시 된 대로 클래스 XAML에서 사용할 수도 있습니다.
@@ -253,7 +252,7 @@ new Label
 
 Xamarin.Forms는 간단한 기본 설정 하는 데 제공 쉽게 지원 되는 모든 플랫폼에 대 한 텍스트 크기를 조정 합니다. 또한 글꼴 및 크기를 지정할 수 있습니다 &ndash; 각 플랫폼에 대해 다르게도 &ndash; 보다 세부적인 제어가 필요한 경우. `FormattedString` 클래스를 사용 하 여 다른 글꼴 사양을 포함 하는 문자열을 만드는 데 사용할 수는 `Span` 클래스입니다.
 
-글꼴 정보에서 올바른 형식의 글꼴 특성을 사용 하 여 Xaml 지정할 수도 있습니다 또는 `FormattedString` 요소 `Span` 자식입니다.
+글꼴 정보에서 올바른 형식의 글꼴 특성을 사용 하 여 XAML 지정할 수도 있습니다 또는 `FormattedString` 요소 `Span` 자식입니다.
 
 
 ## <a name="related-links"></a>관련 링크
