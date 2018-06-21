@@ -113,7 +113,6 @@
 ## [플랫폼 기능](platform/index.md)
 ### [Android Beam](platform/android-beam.md)
 ### [Android 매니페스트](platform/android-manifest.md)
-### [Java에 포함된 .NET](platform/embedding-net-in-java.md)
 ### [지문 인증](platform/fingerprint-authentication/index.md)
 #### [시작](platform/fingerprint-authentication/get-started.md)
 #### [지문 검사](platform/fingerprint-authentication/scanning.md)
