@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 6d3e5e61069723b0910b092da6631d5dc4ad8629
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b0fd644f1f3b49a949a3a9ba9aca4c0770f17013
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244547"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291353"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms에는 이미지
 
@@ -153,8 +153,11 @@ IDE 연결 하 여이 기본값에서 생성 된 **기본 Namespace** 파일 이
 포함된 된 이미지를 로드 하는 코드 그대로 전달는 **리소스 ID** 에 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) 아래와 같이 메서드:
 
 ```csharp
-var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg") };
+var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
 ```
+
+> [!NOTE]
+> 를 지원 하기 위해 유니버설 Windows 플랫폼에서 릴리스 모드에서 포함 된 이미지를 표시 해야 하는 오버 로드를 사용 하 여 `ImageSource.FromResource` 이미지에 대 한 검색 하려는 원본 어셈블리를 지정 하는 합니다.
 
 현재 리소스 식별자에 대 한 암시적 변환이 있습니다. 를 대신 사용 해야 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) 또는 `new ResourceImageSource()` 포함 된 이미지를 로드 합니다.
 
@@ -182,12 +185,15 @@ public class ImageResourceExtension : IMarkupExtension
    }
 
    // Do your translation lookup here, using whatever method you require
-   var imageSource = ImageSource.FromResource(Source);
+   var imageSource = ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
 
    return imageSource;
  }
 }
 ```
+
+> [!NOTE]
+> 를 지원 하기 위해 유니버설 Windows 플랫폼에서 릴리스 모드에서 포함 된 이미지를 표시 해야 하는 오버 로드를 사용 하 여 `ImageSource.FromResource` 이미지에 대 한 검색 하려는 원본 어셈블리를 지정 하는 합니다.
 
 이 확장을 사용 하려면 사용자 지정 추가 `xmlns` 는 XAML에는 프로젝트에 대 한 올바른 네임 스페이스와 어셈블리 값을 사용 하 합니다. 이미지 원본을 설정할 수 있습니다이 구문을 사용 하 여: `{local:ImageResource WorkingWithImages.beach.jpg}`합니다. 전체 XAML 예제는 다음과 같습니다.
 
@@ -224,9 +230,15 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-#### <a name="images-embedded-in-other-projects-dont-appear"></a>다른 프로젝트에 포함 된 이미지에 표시 되지 않습니다.
+#### <a name="images-embedded-in-other-projects"></a>다른 프로젝트에 포함 된 이미지
 
-`Image.FromResource` 호출 하는 코드와 동일한 어셈블리의 이미지에 대해 모양만 `FromResource`합니다. 변경 하 여 특정 리소스를 포함 하는 어셈블리를 확인할 수 있습니다 위에 디버그 코드를 사용 하는 `typeof()` 문을 `Type` 각 어셈블리에 대 한 것으로 알려져 있습니다.
+기본적으로는 `ImageSource.FromResource` 메서드와 이미지 호출 하는 코드와 같은 어셈블리에 대 한 모양만 `ImageSource.FromResource` 메서드. 변경 하 여 특정 리소스를 포함 하는 어셈블리를 확인할 수 있습니다 위에 디버그 코드를 사용 하는 `typeof()` 문을 `Type` 각 어셈블리에 대 한 것으로 알려져 있습니다.
+
+그러나, 포함된 된 이미지에 대 한 검색 되는 소스 어셈블리에 대 한 인수로 지정할 수 있습니다는 `ImageSource.FromResource` 메서드:
+
+```csharp
+var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
+```
 
 <a name="Downloading_Images" />
 
@@ -316,7 +328,6 @@ IOS 및 UWP 응용 프로그램 (시작 화면 또는 기본 이미지 라고도
 Xamarin.Forms는 다양 한 이미지를 지정 하는 플랫폼 특정 이미지 또는 플랫폼에서 사용할 동일한 이미지에 대 한 허용 되는 플랫폼 간 응용 프로그램에 포함할 다른 방법으로 제공 합니다. 다운로드 한 이미지도 자동으로 캐시 되며 코딩 하는 일반적인 시나리오를 자동화 합니다.
 
 응용 프로그램 아이콘 및 시작 화면 이미지 등 설치 되며 플랫폼 관련 응용 프로그램에 사용 되는 동일한 지침에 따라 구조의 Xamarin.Forms 아닌 응용 프로그램-구성.
-
 
 ## <a name="related-links"></a>관련 링크
 

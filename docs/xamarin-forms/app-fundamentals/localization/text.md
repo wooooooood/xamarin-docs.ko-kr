@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 47ea437be8a1570517f37cc59aab17431c5af7f0
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848202"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291327"
 ---
 # <a name="localization"></a>지역화
 
@@ -44,6 +44,9 @@ TodoLocalized 샘플에 포함 되어는 [공유 프로젝트 데모](https://gi
 이 문서에 이러한 문자열을 저장 하 고이 검색할 사용자의 기본 설정에 따라 화면에 RESX 파일을 사용 하는 방법을 검토 합니다.
 
 영어, 프랑스어, 스페인어, 독일어, 중국어, 일본어, 러시아어, 포르투갈어 (브라질) 언어를 대상으로 샘플. 응용 프로그램 필요에 따라 적은 또는 만큼 언어로 번역할 수 있습니다.
+
+> [!NOTE]
+> 유니버설 Windows 플랫폼에서 RESW 파일에 사용할 RESX 파일 보다는 푸시 알림 지역화 합니다. 자세한 내용은 참조 [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)합니다.
 
 ### <a name="adding-resources"></a>리소스 추가
 
@@ -458,6 +461,8 @@ public class Localize : UsingResxLocalization.ILocalize
 > [자신의 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"사용 pt 언어 ID로 포르투갈어 사용 중 이므로 브라질과 PT-PT에서 언어 ID로 포르투갈어 포르투갈에서 사용 중 이므로"_ 합니다.
 > 즉 포르투갈어 언어를 선택한 비표준 로캘의 경우이 동작을 변경 하려면 코드를 작성 하지 않으면 대체 언어 ios, 포르투갈어 (브라질) 있게 됩니다 (같은 `ToDotnetFallbackLanguage` 위에).
 
+IOS 지역화 하는 방법에 대 한 자세한 내용은 참조 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)합니다.
+
 #### <a name="android-application-project"></a>Android 응용 프로그램 프로젝트
 
 Android를 통해 현재 선택 된 로캘 노출 `Java.Util.Locale.Default`, 밑줄 구분 기호는 대시 (다음 코드에 의해 대체) 되는 대신 사용 합니다. 이 종속성 서비스 구현을 Android 응용 프로그램 프로젝트에 추가 합니다.
@@ -548,11 +553,12 @@ namespace UsingResxLocalization.Android
 >
 > 개발자가 수정 해야는 `iOSToDotnetLanguage` 및 `ToDotnetFallbackLanguage` 메서드는 지원 되는 언어에 필요한 특정 경우를 처리 합니다.
 
-
 이 코드는 Android 응용 프로그램 프로젝트에 추가 되 면 번역 된 문자열을 자동으로 표시 됩니다.
 
 > [!NOTE]
 >️ **경고:** 디버깅 하지 않음 Android 릴리스 빌드에 번역 된 문자열 작업, 마우스 오른쪽 단추로 클릭는 **Android 프로젝트** 선택 **옵션 > 빌드 > Android 빌드** 있는지 확인는 **어셈블리 배포 빠른** 하지 선택 되어 있습니다. 이 옵션은 리소스를 로드 하는 문제가 시키고 지역화 된 응용 프로그램을 테스트 하는 경우 사용 하지 않아야 합니다.
+
+Android 지역화 하는 방법에 대 한 자세한 내용은 참조 [Android 지역화](~/android/app-fundamentals/localization.md)합니다.
 
 #### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
@@ -573,6 +579,8 @@ namespace UsingResxLocalization.Android
 플랫폼별 프로젝트에 표시 된 대로 위의 업데이트 하 고 번역 된 RESX 파일 사용 응용 프로그램을 다시 컴파일하지 후 업데이트 된 번역을 각 응용 프로그램에서는 사용할 수 있습니다. 중국어 (간체)로 변환 하는 샘플 코드의 스크린 샷을 다음과 같습니다.
 
 ![](text-images/simple-example-hans.png "중국어 (간체)로 변환 하는 플랫폼 간 Ui")
+
+UWP 지역화 하는 방법에 대 한 자세한 내용은 참조 [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)합니다.
 
 ## <a name="localizing-xaml"></a>XAML 지역화
 
@@ -713,7 +721,7 @@ switch (Device.RuntimePlatform)
 
 ### <a name="ios-application-project"></a>iOS 응용 프로그램 프로젝트
 
-지역화 프로젝트 라는 이름의 명명 규칙을 사용 하 여 iOS 또는 **.lproj** 이미지와 문자열 리소스를 포함 하는 디렉터리입니다. 이 디렉터리는 응용 프로그램에서 사용 되는 이미지의 지역화 된 버전을 포함할 수 있습니다 및는 **InfoPlist.strings** 응용 프로그램 이름 필드를 지역화 하는 데 사용할 수 있는 파일입니다.
+지역화 프로젝트 라는 이름의 명명 규칙을 사용 하 여 iOS 또는 **.lproj** 이미지와 문자열 리소스를 포함 하는 디렉터리입니다. 이 디렉터리는 응용 프로그램에서 사용 되는 이미지의 지역화 된 버전을 포함할 수 있습니다 및는 **InfoPlist.strings** 응용 프로그램 이름 필드를 지역화 하는 데 사용할 수 있는 파일입니다. IOS 지역화 하는 방법에 대 한 자세한 내용은 참조 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)합니다.
 
 #### <a name="images"></a>이미지
 
@@ -737,7 +745,7 @@ switch (Device.RuntimePlatform)
 
 ### <a name="android-application-project"></a>Android 응용 프로그램 프로젝트
 
-Android 다른를 사용 하 여 지역화 된 이미지를 저장 하기 위한 다른 체계를 따릅니다 **그릴** 및 **문자열** 언어 코드 접미사를 사용 하 여 디렉터리입니다. Android에서는 추가 참고 4 문자로 로캘 코드 (예: ZH-TW 또는 PT-BR) 필요한 경우 **r** 대시/앞 다음 로캘 코드 (예:. 글꼴 rTW 또는 pt rBR).
+Android 다른를 사용 하 여 지역화 된 이미지를 저장 하기 위한 다른 체계를 따릅니다 **그릴** 및 **문자열** 언어 코드 접미사를 사용 하 여 디렉터리입니다. Android에서는 추가 참고 4 문자로 로캘 코드 (예: ZH-TW 또는 PT-BR) 필요한 경우 **r** 대시/앞 다음 로캘 코드 (예:. 글꼴 rTW 또는 pt rBR). Android 지역화 하는 방법에 대 한 자세한 내용은 참조 [Android 지역화](~/android/app-fundamentals/localization.md)합니다.
 
 #### <a name="images"></a>이미지
 
@@ -773,7 +781,7 @@ Android에서는 Zh-hans 사용 하지 및 간체 및 중국어 번체;에 대 �
 
 ### <a name="universal-windows-platform-application-projects"></a>유니버설 Windows 플랫폼 응용 프로그램 프로젝트
 
-유니버설 Windows 플랫폼 이미지 및 응용 프로그램 이름 지역화를 간소화 하는 리소스 인프라를 소유 합니다.
+유니버설 Windows 플랫폼 이미지 및 응용 프로그램 이름 지역화를 간소화 하는 리소스 인프라를 소유 합니다. UWP 지역화 하는 방법에 대 한 자세한 내용은 참조 [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)합니다.
 
 #### <a name="images"></a>이미지
 
@@ -796,5 +804,6 @@ RESX 파일 및.NET 세계화 클래스를 사용 하 여 Xamarin.Forms 응용 �
 - [플랫폼 간 지역화](~/cross-platform/app-fundamentals/localization.md)
 - [iOS 지역화](~/ios/app-fundamentals/localization/index.md)
 - [Android 지역화](~/android/app-fundamentals/localization.md)
+- [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)
 - [CultureInfo class (MSDN)을 사용 하 여](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
 - [찾기 및 리소스를 사용 하 여 특정 문화권 (MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
