@@ -12,6 +12,7 @@ ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34049911"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing 맞춤법 검사 API를 사용 하 여 맞춤법 검사
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921666"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Part 2-는 WalkingGame 구현
 

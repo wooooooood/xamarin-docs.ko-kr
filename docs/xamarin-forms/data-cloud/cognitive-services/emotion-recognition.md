@@ -12,6 +12,7 @@ ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34049768"
 ---
 # <a name="emotion-recognition-using-the-face-api"></a>Face API를 사용 하 여 emotion 인식
 
