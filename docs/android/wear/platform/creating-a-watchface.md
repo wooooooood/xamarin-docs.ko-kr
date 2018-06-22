@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30772941"
 ---
 # <a name="creating-a-watch-face"></a>Watch 화면 만들기
 
@@ -75,7 +76,7 @@ _이 가이드에서는 Android 착용에 대 한 사용자 지정 조사식 얼
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-최소 Android 버전을 설정 **Android 5.1 (API 수준 22)**합니다. 또한 가능 하 게는 **인터넷** 및 **WakeLock** 사용 권한:
+최소 Android 버전을 설정 **Android 5.1 (API 수준 22)** 합니다. 또한 가능 하 게는 **인터넷** 및 **WakeLock** 사용 권한:
 
 [![필요한 권한](creating-a-watchface-images/05-required-permissions-xs.png "인터넷을 사용 하도록 설정 및 WakeLock 사용 권한")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31646783"
 ---
 # <a name="using-adonet-with-android"></a>Android와 ADO.NET를 사용 하 여
 

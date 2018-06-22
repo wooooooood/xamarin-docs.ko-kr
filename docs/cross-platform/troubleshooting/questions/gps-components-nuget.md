@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919874"
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>Google Play를 통합 서비스 구성 요소 및 NuGet
 

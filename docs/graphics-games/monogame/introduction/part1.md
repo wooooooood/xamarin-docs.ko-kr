@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921991"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>크로스 플랫폼 MonoGame 만들기-1 부
 

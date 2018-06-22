@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30766584"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.Android에 로컬 알림을 사용 하 여
 

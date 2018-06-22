@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917865"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Visual basic.net을 사용 하 여 Xamarin.Forms
 

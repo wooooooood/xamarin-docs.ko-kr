@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30773994"
 ---
 # <a name="local-notifications"></a>로컬 알림
 
@@ -802,7 +803,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 }
 ```
 
-이 예제에서는 앱의 **대상 프레임 워크** Android 5.0로 설정 된 및 **최소 Android 버전** 로 설정 된 **Android 4.1 (API 수준 16)**합니다. 때문에 `SetCategory` 는 API 수준 21 이상에서 사용할 수 있는,이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 &ndash; 호출 하지 것입니다 `SetCategory` API 수준 경우 미만
+이 예제에서는 앱의 **대상 프레임 워크** Android 5.0로 설정 된 및 **최소 Android 버전** 로 설정 된 **Android 4.1 (API 수준 16)** 합니다. 때문에 `SetCategory` 는 API 수준 21 이상에서 사용할 수 있는,이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있는 &ndash; 호출 하지 것입니다 `SetCategory` API 수준 경우 미만
 21.
 
 

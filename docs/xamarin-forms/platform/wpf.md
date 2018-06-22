@@ -13,6 +13,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33799349"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치 프로그램
 

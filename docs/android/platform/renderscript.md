@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30772018"
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 소개
 
@@ -45,7 +46,7 @@ Renderscripts Android 응용 프로그램에서 사용 하기 위한 세 가지 
 
 2. **A _계산 커널_**  &ndash; 라고도 _루트 커널_ 또는 _커널_,이 작업을 수행 하는 루틴입니다. 커널 매우 비슷합니다 C 독립적입니다. 이 할당 된 메모리에 모든 데이터에 대해 실행 되는 병렬화 루틴입니다.
 
-3. **할당 된 메모리** &ndash; 데이터와 커널을 통해 전달 되는  _[할당](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_합니다. 에 대 한 커널은 하나의 입력이 될 수 있습니다 및/또는 출력 1 개인 할당
+3. **할당 된 메모리** &ndash; 데이터와 커널을 통해 전달 되는  _[할당](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_ 합니다. 에 대 한 커널은 하나의 입력이 될 수 있습니다 및/또는 출력 1 개인 할당
 
 [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) 네임 스페이스 Renderscript 런타임과 상호 작용 하기 위한 클래스를 포함 합니다. 특히는 [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) 클래스는 수명 주기 및 리소스 Renderscript 엔진을 관리 합니다. 하나 이상의 Android 앱 초기화 해야 [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) 개체입니다. 할당은 할당 및 Android 앱 및 Renderscript 런타임 간에 공유 되는 메모리에 액세스 하는 일을 담당 하는 관리 되는 API입니다. 일반적으로 중 하나의 할당 입력의 경우 만들어지고 필요에 따라 다른 할당 커널의 출력을 만듭니다. Renderscript 런타임 엔진과 연결 된 관리 되는 래퍼 클래스는 할당에 의해 사용 되는 메모리에 대 한 액세스 관리, 추가 작업을 수행 하는 Android 응용 프로그램 개발자에 대 한 필요가 없습니다.
 

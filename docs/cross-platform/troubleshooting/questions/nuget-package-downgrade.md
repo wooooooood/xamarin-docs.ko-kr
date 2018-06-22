@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33947523"
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>NuGet 패키지를 다운 그레이드 하는 합니까?
 

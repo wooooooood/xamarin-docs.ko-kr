@@ -11,6 +11,7 @@ ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458803"
 ---
 # <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 

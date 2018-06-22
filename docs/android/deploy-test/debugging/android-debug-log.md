@@ -11,6 +11,7 @@ ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/05/2018
+ms.locfileid: "30822884"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30767208"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>시스템 앱으로 Xamarin.Android 설치
 
@@ -25,7 +26,7 @@ _이 가이드에서는 시스템 앱과 사용자 앱의 차이점, 그리고 X
 
 시스템 앱은 사용자 앱과 똑같이 동작할 수 있지만 다음과 같은 주목할 만한 예외가 있습니다.
 
-- 시스템 앱은 일반 _사용자 앱_처럼 업그레이드할 수 있습니다. 그러나 앱의 사본이 항상 **/system/app/**에 있으므로 응용 프로그램을 원래 버전으로 항상 롤백할 수 있습니다.
+- 시스템 앱은 일반 _사용자 앱_처럼 업그레이드할 수 있습니다. 그러나 앱의 사본이 항상 **/system/app/** 에 있으므로 응용 프로그램을 원래 버전으로 항상 롤백할 수 있습니다.
 
 - 시스템 앱에는 사용자 앱에 제공되지 않는 특정 시스템 전용 권한이 부여될 수 있습니다. 시스템 전용 권한의 예로 사용자 상호 작용 없이 응용 프로그램을 Bluetooth 장치와 연결할 수 있게 해주는 [`BLUETOOTH_PRIVILEGED`](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)가 있습니다.
 

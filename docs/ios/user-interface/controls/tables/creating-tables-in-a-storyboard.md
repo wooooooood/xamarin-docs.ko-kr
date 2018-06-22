@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30780725"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>IOS 디자이너에서에서 테이블 작업
 

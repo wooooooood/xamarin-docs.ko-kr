@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921562"
 ---
 # <a name="fruity-falls-game-details"></a>게임 정보 Fruity 위치 합니다.
 

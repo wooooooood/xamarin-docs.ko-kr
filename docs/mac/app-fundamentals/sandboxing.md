@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30787911"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>샌드 박싱 Xamarin.Mac 응용 프로그램
 
@@ -225,7 +226,7 @@ public override void AwakeFromNib ()
 
 ### <a name="debugging-a-sandboxed-app"></a>샌드 박싱된 응용 프로그램 디버깅
 
-기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"*합니다. 
+기본적으로 샌드 박싱을 사용 하도록 설정 하면 해당 하지 않음을 응용 프로그램에 연결할 수, TCP 통해 Xamarin.Mac 앱에 디버거 연결 적절 한 권한을 사용 하지 않고 앱을 실행 하려고 하면 오류가 발생 하므로 *"연결할 수 없습니다. 디버거"* 합니다. 
 
 [![필요한 옵션 설정](sandboxing-images/debug01.png "필요한 옵션 설정")](sandboxing-images/debug01-large.png#lightbox)
 

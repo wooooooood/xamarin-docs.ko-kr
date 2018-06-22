@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30763867"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>이전 버전과 Android 지원 패키지와의 호환성을 제공
 

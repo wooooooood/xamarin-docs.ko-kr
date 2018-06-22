@@ -12,6 +12,7 @@ ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458356"
 ---
 # <a name="advanced-concepts-and-internals"></a>고급 개념 및 내부 기능
 

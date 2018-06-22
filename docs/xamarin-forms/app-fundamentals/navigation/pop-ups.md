@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32018881"
 ---
 # <a name="displaying-pop-ups"></a>팝업 표시
 

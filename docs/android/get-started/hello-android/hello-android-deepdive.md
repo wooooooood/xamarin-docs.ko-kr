@@ -13,6 +13,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774384"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -318,7 +319,7 @@ Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-장치를 구성한 후에 플러그 인하고, **시작(플레이)**를 누르고, **장치 선택** 대화 상자에서 선택하고, **확인**을 눌러서 배포할 수 있습니다.
+장치를 구성한 후에 플러그 인하고, **시작(플레이)** 를 누르고, **장치 선택** 대화 상자에서 선택하고, **확인**을 눌러서 배포할 수 있습니다.
 
 [![디버그 장치 선택](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
@@ -390,7 +391,7 @@ Android는 적절한 밀도의 아이콘을 선택합니다.
 _Google Play 서비스_는 Android 개발자가 Google 맵, Google Cloud Messaging 및 앱 내 청구 등 Google에서 최신 기능을 활용할 수 있도록 하는 추가 기능 라이브러리 집합입니다.
 이전에는 모든 Google Play 서비스 라이브러리에 대한 바인딩을 Xamarin에서 단일 패키지의 형태로 제공했습니다. &ndash; Mac용 Visual Studio부터 앱에 포함할 Google Play 서비스를 패키지하도록 선택하는 새 프로젝트 대화 상자가 제공됩니다.
 
-하나 이상의 Google Play 서비스 라이브러리를 추가하려면 프로젝트 트리에서 **패키지** 노드를 마우스 오른쪽 단추로 클릭하고, **Google Play 서비스 추가...**를 클릭합니다.
+하나 이상의 Google Play 서비스 라이브러리를 추가하려면 프로젝트 트리에서 **패키지** 노드를 마우스 오른쪽 단추로 클릭하고, **Google Play 서비스 추가...** 를 클릭합니다.
 
 [![Google Play 서비스 추가](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 

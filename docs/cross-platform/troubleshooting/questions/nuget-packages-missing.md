@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917384"
 ---
 # <a name="missing-packages-error-after-updating-nuget-packages"></a>Nuget 패키지를 업데이트 한 후 누락 된 패키지 오류
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32019687"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러의 기본 클래스와 기본 컨트롤
 

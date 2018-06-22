@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921484"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>3D 그래픽 꼭지점을 MonoGame에 그리기
 
