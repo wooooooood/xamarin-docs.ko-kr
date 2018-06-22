@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30773740"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -554,7 +555,7 @@ class HceService : HostApduService
 }
 ```
 
-위의 서비스 NFC 판독기 응용 프로그램을 상호 작용할 수 있는 방법을 제공 하지만 NFC 판독기에는 아직이 서비스를 검색 하는 데 필요한 NFC 카드를 에뮬레이션 하는 경우 알 수 없습니다. 서비스를 식별 하는 NFC 판독기를 하려면 म 할당할 수는 서비스는 고유한 *응용 프로그램 ID (보조)*합니다. म 지정 HCE 서비스에 대 한 다른 메타 데이터와 함께 보다 쉽게 xml 리소스 파일에 등록 된 `MetaData` 특성 (위의 코드 예제 참조). 이 리소스 파일 하나 이상의 보조 필터를-하나 이상의 NFC 판독기 장치의 보조 기능에 해당 하는 16 진수 형식의 고유 식별자 문자열을 지정 합니다.
+위의 서비스 NFC 판독기 응용 프로그램을 상호 작용할 수 있는 방법을 제공 하지만 NFC 판독기에는 아직이 서비스를 검색 하는 데 필요한 NFC 카드를 에뮬레이션 하는 경우 알 수 없습니다. 서비스를 식별 하는 NFC 판독기를 하려면 म 할당할 수는 서비스는 고유한 *응용 프로그램 ID (보조)* 합니다. म 지정 HCE 서비스에 대 한 다른 메타 데이터와 함께 보다 쉽게 xml 리소스 파일에 등록 된 `MetaData` 특성 (위의 코드 예제 참조). 이 리소스 파일 하나 이상의 보조 필터를-하나 이상의 NFC 판독기 장치의 보조 기능에 해당 하는 16 진수 형식의 고유 식별자 문자열을 지정 합니다.
 
 ```xml
 <host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"

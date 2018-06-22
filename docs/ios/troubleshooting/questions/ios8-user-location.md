@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30776068"
 ---
 # <a name="user-location-not-working-in-ios-8"></a>IOS 8에서에서 작동 하지 않을 사용자 위치
 

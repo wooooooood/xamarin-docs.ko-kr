@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918775"
 ---
 # <a name="build-optimizations"></a>빌드 최적화
 

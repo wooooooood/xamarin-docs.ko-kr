@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919542"
 ---
 # <a name="how-can-i-view-what-libraries-are-supported-in-a-pcl"></a>어떻게 어떤 라이브러리는 PCL에 지원 됩니다 볼 수 있습니까?
 
