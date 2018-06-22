@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f843f4b1c20daba2a504bd0e70ae51f4d0405c06
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d75cac7a21b2c74a6627845cdda8e4c04e72bddc
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240248"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309777"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 응용 프로그램 기본 사항
 
@@ -47,6 +47,10 @@ Xamarin.Forms를 사용한 (예: 보조 화면 읽기 도구가) 액세스할 �
 ## <a name="effectseffectsindexmd"></a>[효과](effects/index.md)
 
 효과를 사용자 지정할 수는 각 플랫폼에서 네이티브 컨트롤을 사용할 수 있으며 작은 스타일 변경 내용에 일반적으로 사용 됩니다.
+
+## <a name="filesfilesmd"></a>[파일](files.md)
+
+.NET 표준 라이브러리 또는 포함 된 리소스를 사용 하 여 코드를 사용 하 여 파일 xamarin.forms 처리를 구현할 수 있습니다.
 
 ## <a name="gesturesgesturesindexmd"></a>[제스처](gestures/index.md)
 
