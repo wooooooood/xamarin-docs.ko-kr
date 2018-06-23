@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: d9fd5b5fd0d4dc29f4d2531521370618f97e3846
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4909cb3b874b1397fad10c92d8d655fadcbe8d85
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783160"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321342"
 ---
 # <a name="xamarinessentials-secure-storage"></a>보안 저장소 Xamarin.Essentials:
 
@@ -78,13 +78,13 @@ var oauthToken = await SecureStorage.GetAsync("oauth_token");
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[키 집합](https://developer.xamarin.com/api/type/Android.Security.KeyChain/) iOS 장치에서 값을 안전 하 게 저장 하는 데 사용 됩니다.  `SecRecord` 값을 저장 하는 데에 `Service` 값으로 설정 **[귀하가-응용 프로그램-번들-ID].xamarinessentials**합니다.
+[키 집합](https://developer.xamarin.com/api/type/Security.SecKeyChain/) iOS 장치에서 값을 안전 하 게 저장 하는 데 사용 됩니다.  `SecRecord` 값을 저장 하는 데에 `Service` 값으로 설정 **[귀하가-응용 프로그램-번들-ID].xamarinessentials**합니다.
 
 일부 경우에 키 집합 데이터를 iCloud와 동기화 됩니다 응용 프로그램 제거 수 제거 / 하지 안전한 값 iCloud와 사용자의 다른 장치에서 합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/en-us/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) encryped 값 UWP 장치에서 안전 하 게 하는 데 사용 됩니다.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) encryped 값 UWP 장치에서 안전 하 게 하는 데 사용 됩니다.
 
 Encryped 값에 저장 됩니다 `ApplicationData.Current.LocalSettings`, 컨테이너의 이름으로 내부 **[귀하가 앱 ID].xamarinessentials**합니다.
 

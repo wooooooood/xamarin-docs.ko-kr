@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0b6cbf9ee5621466285656a5efee68ccc2c85211
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783030"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321446"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지 오 코딩
 
@@ -32,7 +32,7 @@ ms.locfileid: "34783030"
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Bing maps API 키를 지 오 코딩 funcationality 사용 하려면 필요 합니다. 무료 등록 [Bing Maps](https://www.bingmapsportal.com/) 계정. 아래 **내 계정 > 내 키** 새 키를 만들고 응용 프로그램 종류에 따라 정보를 입력 합니다.
+Bing maps API 키를 지 오 코딩 funcationality 사용 하려면 필요 합니다. 무료 등록 [Bing Maps](https://www.bingmapsportal.com/) 계정. 아래 **내 계정 > 내 키** 새 키를 만들고 응용 프로그램 종류에 따라 정보를 채울 (해야 **공용 Windows 앱 (UWP, 8.x, 및 이전 버전)** UWP 앱 용).
 
 호출 하기 전에 응용 프로그램의 수명에 초기에 **지 오 코딩** 메서드 API 키를 설정 합니다.
 
