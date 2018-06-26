@@ -7,13 +7,13 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: b0d9458238c4b3ac9ceeeb7d7ce4e2ca8b0b6de3
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/21/2018
+ms.openlocfilehash: 4e808736fd92fa40ecbf0c24938c0fedd7afcff9
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732868"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935453"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
@@ -56,7 +56,7 @@ Visual Studio 및 Mac 용 Visual Studio 이제 Xamarin 대체 함수는 지원 �
 
 **에 추가 되었습니다:** Android SDK 도구 25.3.0 (2017 년 3 월) 이상.
 
-라는 새 프로그램은 **avdmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 AVDs Google Android 에뮬레이터에 대 한 유지 하기 위해 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)합니다.
+라는 새 프로그램은 **avdmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 AVDs Android 에뮬레이터에 대 한 유지 하기 위해 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)합니다.
 
 ### <a name="downgrading"></a>다운 그레이드
 

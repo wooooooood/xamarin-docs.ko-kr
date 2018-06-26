@@ -1,19 +1,20 @@
 ---
-title: 지도 API
+title: 응용 프로그램에서 Google 맵 API를 사용 하 여
+description: Xamarin.Android 응용 프로그램에서 Google 지도 API v2 기능을 구현 하는 방법.
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: fc16178a4068b2dcf22fc19047e0ef403e83633f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a0e010a8300eb4b4452737e34d2f55a35ab95428
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30773526"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935141"
 ---
-# <a name="maps-api"></a>지도 API
+# <a name="using-the-google-maps-api-in-your-application"></a>응용 프로그램에서 Google Maps API를 사용 하 여
 
 지도 응용 프로그램을 사용 하는 뛰어나지만 응용 프로그램에 직접 지도 포함 하려는 경우가 있습니다. 맵 응용 프로그램을 기본 제공 외에도 Google 또한 제공 하는 [Android 용 네이티브 매핑 API](https://developers.google.com/maps/documentation/android/)합니다.
 지도 API는 더 많이 제어할 매핑 환경 유지 하려는 경우에 적합 합니다. 지도 API와 함께 사용할 수 있는 사항은 다음과 같습니다.
@@ -315,7 +316,7 @@ Android 지도 API API의 관점을 변경 하거나, 표식을 추가 하거나
 
 지도 메 르 카 토르 도법에 따라 화면에 플랫 평면으로 모델링 됩니다. 지도 보기는의 *카메라* 이 평면에 수직으로 찾고 있습니다. 카메라의 위치를 변경 하 여 위치, 확대/축소, 기울기, 영향을 주지 제어할 수 있습니다. [CameraUpdate](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdate) 클래스 카메라 위치를 이동 하는 데 사용 됩니다. `CameraUpdate` 개체가 직접 인스턴스화될, 지도 API 대신 제공 하는 [CameraUpdateFactory](http://developer.android.com/reference/com/google/android/gms/maps/CameraUpdateFactory.html) 클래스입니다.
 
-한 번는 `CameraUpdate` 개체가 생성 되었음을를 매개 변수로 전달 된 [GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera(com.google.maps.CameraUpdate)) 또는 [GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera(com.google.maps.CameraUpdate)) 메서드. `MoveCamera` 메서드 동안 즉시 맵 업데이트는 `AnimateCamera` 메서드 부드러운, 애니메이션 전환을 제공 합니다.
+한 번는 `CameraUpdate` 개체가 생성 되었음을를 매개 변수로 전달 된 [GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera%28com.google.maps.CameraUpdate%29) 또는 [GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera%28com.google.maps.CameraUpdate%29) 메서드. `MoveCamera` 메서드 동안 즉시 맵 업데이트는 `AnimateCamera` 메서드 부드러운, 애니메이션 전환을 제공 합니다.
 
 이 코드 조각은 사용 하는 방법의 간단한 예제는 `CameraUpdateFactory` 만들려는 `CameraUpdate` 하는 map의 확대/축소 수준을 1 씩:
 
@@ -328,7 +329,7 @@ if (_map != null) {
 }
 ```
 
-지도 API를 제공는 [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 카메라 위치에 대 한 가능한 값의 모든 집계입니다. 이 클래스의 인스턴스를 지정할 수는 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition(com.google.android.gms.maps.model.CameraPosition)) 을 반환 하는 메서드는 `CameraUpdate` 개체입니다. 지도 API도 포함 되어는 [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 작성용 fluent API를 제공 하는 클래스 `CameraPosition` 개체입니다.
+지도 API를 제공는 [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 카메라 위치에 대 한 가능한 값의 모든 집계입니다. 이 클래스의 인스턴스를 지정할 수는 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) 을 반환 하는 메서드는 `CameraUpdate` 개체입니다. 지도 API도 포함 되어는 [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 작성용 fluent API를 제공 하는 클래스 `CameraPosition` 개체입니다.
 다음 코드 조각을 만드는 예를 보여 줍니다.는 `CameraUpdate` 에서 `CameraPosition` 하는 카메라 위치에서 변경 하는 데 사용 된 `GoogleMap`:
 
 ```csharp
@@ -372,7 +373,7 @@ Android 지도 API를 지도에 다음 항목을 그리기 위한 API를 제공 
 
 ##### <a name="adding-a-marker"></a>표식을 추가
 
-표시자 지도 추가 하려면 새 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체와 호출 후의 [AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker(com.google.android.gms.maps.model.MarkerOptions)) 메서드를는 `GoogleMap` 인스턴스. 이 메서드는 반환 된 [표식](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker) 개체입니다.
+표시자 지도 추가 하려면 새 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체와 호출 후의 [AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) 메서드를는 `GoogleMap` 인스턴스. 이 메서드는 반환 된 [표식](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker) 개체입니다.
 
 ```csharp
 MapFragment mapFrag = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.my_mapfragment_container);
@@ -382,7 +383,7 @@ if (_map != null) {
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -402,7 +403,7 @@ if (_map != null) {
 
 -   `FromBitmap(Bitmap image)` &ndash; 지정한 비트맵에서 아이콘으로 사용 합니다.
 
--   `FromFile(string fileName` &ndash; 지정된 된 경로에 파일에서 사용자 지정 아이콘을 만듭니다.
+-   `FromFile(string fileName)` &ndash; 지정된 된 경로에 파일에서 사용자 지정 아이콘을 만듭니다.
 
 -   `FromResource(int resourceId)` &ndash; 지정된 된 리소스에서 사용자 지정 아이콘을 만듭니다.
 
@@ -417,7 +418,7 @@ if (_map != null)
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
     markerOpt1.InvokeIcon(BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan));
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -515,7 +516,7 @@ myMap.AddPolygon(rectOptions);
 CircleOptions circleOptions = new CircleOptions ();
 circleOptions.InvokeCenter (new LatLng(37.4, -122.1));
 circleOptions.InvokeRadius (1000);
-_map.AddCircle (CircleOptions);
+_map.AddCircle (circleOptions);
 ```
 
 
@@ -614,4 +615,3 @@ private void MapOnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEvent
 - [Google Android API v2 맵](https://developers.google.com/maps/documentation/android/)
 - [Google Play 서비스 APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Google 맵 API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [하지 업데이트 AVD 되지만 문제 57880: Google Play 서비스](https://code.google.com/p/android/issues/detail?id=57880)

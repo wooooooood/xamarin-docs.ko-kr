@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8094f1ab78252e6d6bd8f5991bcb567b36ed1e9b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793952"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935348"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin을 사용한 Jenkins를 사용 하 여
 
@@ -385,7 +385,7 @@ APK 파일에 대 한 환경 변수 중 일부 작성 된 것을 알는 `WORKSPA
 
 ### <a name="submitting-tests-to-test-cloud"></a>테스트 테스트 클라우드를 제출합니다.
 
-자동화 된 테스트 셸 명령을 사용 하 여 테스트 클라우드로 제출할 수 있습니다. Xamarin 테스트 클라우드에서 테스트 실행 설정에 대 한 자세한 내용은 사용 하기 위한 가이드 있는 [Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) 또는 [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)합니다.
+자동화 된 테스트 셸 명령을 사용 하 여 테스트 클라우드로 제출할 수 있습니다. Xamarin 테스트 클라우드에서 테스트 실행 설정에 대 한 자세한 내용은이 가이드를 사용 하기 위한 참조 [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/)합니다.
 
 
 ## <a name="summary"></a>요약

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848306"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935430"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -119,6 +119,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터를 디버그 하는 경우 �
 ## <a name="known-issues"></a>알려진 문제
 
 * Visual Studio에서 에서만 지원 됩니다.
+* 연결로 설정 해야 **링크 하지 않는** 또는 **프레임 워크 Sdk를만 링크** 
 * 응용 프로그램 수준의 리소스를 다시 로드 (즉, **App.xaml** 또는 공유 리소스 사전), 응용 프로그램 탐색을 다시 설정 됩니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
 * UWP 디버깅 인해 런타임 충돌 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 **(Ctrl + F5) 디버깅 하지 않고 시작** 대신 **디버깅 시작 (F5)** 합니다.
 

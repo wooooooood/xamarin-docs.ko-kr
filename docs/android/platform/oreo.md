@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a23072427a74119bfa339fea8a695cd13b775685
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732764"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935105"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -191,7 +191,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 -----
 
-테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Google Android 에뮬레이터를 사용 하 여 디버깅](~/android/deploy-test/debugging/android-sdk-emulator/index.md)합니다.
+테스트 및 디버깅에 대 한 Android 에뮬레이터를 구성 하는 방법에 대 한 자세한 내용은 참조 [Android 에뮬레이터에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)합니다.
 
 장소 또는 픽셀 같은 물리적 장치를 사용 하는 경우에 무선 OTA 업데이트를 통해 자동을 통해 장치를 업데이트 하거나 시스템 이미지를 다운로드 하 고 장치를 직접 업데이트 수 합니다. Android Oreo에 장치를 수동으로 업데이트 하는 방법에 대 한 자세한 내용은 참조 [Nexus 장치와 픽셀에 대 한 기본 이미지](https://developers.google.com/android/images)합니다.
 

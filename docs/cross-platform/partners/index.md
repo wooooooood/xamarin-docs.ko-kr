@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 06/19/2017
-ms.openlocfilehash: 8f52c6783335bd7bc26bc9886dee670489ffba09
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.date: 06/25/2018
+ms.openlocfilehash: 4a3045b6f35930b61598f7038974722801c38c2e
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935518"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공 하기 컨설팅 파트너를 공인 된
 
@@ -56,7 +56,6 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[Ciber 미국](http://www.ciber.com/)|숲 Village, 미국|클라우드 첫 번째 디지털 변환 서비스, 고유한 액셀러레이터 키와 포커스가 인력 서비스를 만들 것 미래 가능한입니다.|
 |[Cie 디지털 랩](http://www.ciedigital.com/)|로스앤젤레스, 미국; Irvine, 미국|Cie 디지털 Labs은 비즈니스 우리의 파트너 직면 과제를 이해 하 고 다룬 엔터프라이즈 값 가져오기는 새 소프트웨어 솔루션 혁신 열 중|
 |[명확성 벤처](https://www.clarity-ventures.com)|Austin 텍사스주|쉽게 구별할 수 있도록 적절히 조합 된, professional, 비즈니스의 모든 서비스 확장입니다. 디자인 화면에서 화면에 비즈니스 본인에 이르는 창조적인 팀...|
-|[코드 밀 기술](https://codemilltech.com/)|Madison, 미국|코드 밀 며 boutique 컨설팅 교육 회사가 Microsoft 및 Xamarin MVP Matt Soucoup 기초로 합니다. Xamarin과 Azure 개발 특수화 |
 |[인식 하 고 기술 솔루션](http://www.cognizant.com)|부에노스아이레스, 아르헨티나; 오클랜드, 뉴질랜드; 멜버른, 오스트레일리아; 오스트레일리아 시드니; Brisbane, 오스트레일리아; 벨기에, Brussels; San 파울로, 브라질; 토론토 캐나다; 상하이, 중국; Heredia, 코스타리카; Jersey City, NJ, 미국; 샌프란시스코, CA, 미국; Teaneck, NJ, 미국|클라이언트 만족, 기술 혁신, 심층 업계 및 비즈니스 프로세스 전문 기술 및 작업의 미래를 구체화 하는 공동 작업, 글로벌 직원에 대 한 열 정의 인식 하 고 결합|
 |[일관 된 솔루션, inc.](http://www.coherentsolutions.com)|뉴욕 주의; 보스턴, MA; 민스크, 벨로루시|일관 된 솔루션은 컨설팅 및 글로벌 기술력과 혁신 창의성을 결합 하 여 고객 비즈니스 문제를 해결 하는 회사 아웃소싱 소프트웨어 개발|
 |[Cruxlab](https://cruxlab.com/)|로스앤젤레스, 미국|최종 사용자와 비즈니스 업체 및 엔터프라이즈에 대 한 사용자 지정 디지털 제품 만듭니다.|
@@ -65,10 +64,10 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[도](http://www.degdigital.com)|Overland Park, 미국|도 스마트 디지털 마케팅, 상업 및 공동 작업 하는 전략을 확인 하면 해당 경쟁력을 강화 하 고 자신의 목적을 달성 수 있는 권한 부여를 만듭니다.|
 |[DevRabbit](http://www.devrabbit.com)|San Ramon, 미국|DevRabbit은 미국 기반 기술 컨설팅 회사는 Enterprise Mobility, 웹 응용 프로그램 개발 및 클라우드 컨설팅에 대 한 최신 상태 솔루션을 제공 합니다.|
 |[Digineer](http://www.digineer.com)|Plymouth, MN|Enterprise 프로젝트 관리, 비즈니스 분석, 응용 프로그램 개발자 및 비즈니스 인텔리전스 및 서비스 직원 배치 Digineer 제공|
-|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|보스턴, MA; 유럽; 아시아-Pasific;  중동; 아프리카|DigitasLBi는 디지털 세상을 탐색 하는 회사는 데 도움이 되는 국제 통신 기관|
+|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|보스턴, MA; 유럽; 아시아 태평양;  중동; 아프리카|DigitasLBi는 디지털 세상을 탐색 하는 회사는 데 도움이 되는 국제 통신 기관|
 |[DMI](https://dminc.com/)|Bethesda, MD|기업에서는 연결 된 환경에 대 한 자체 불필요 한 작업을 하도록 디자인 되었습니다, 기능 및 연료 혁신 하도록 설계 된 새로운 태도 고유 혼합 하 여 제공 합니다.|
 |[DOOR3](http://door3.com/)|New York, 미국|큰 컨설팅 회사 및 특수 구현과 창조적인 기관 세계 우리는 다릅니다. 비즈니스, 신경을 하지만 더 고객에 대 한 중요 합니다.|
-|[DreamTeam 모바일](http://dreamteam-mobile.com)|Washington D.C., 미국|DreamTeam Moible 네이티브 iOS, Android, Windows 및 Mac 응용 프로그램의 Swift Xamarin을 사용 하 여 및 네이티브 반응 만듭니다. 여러 플랫폼용 네이티브 앱을 제작할에서는 공유 코드 베이스|
+|[DreamTeam 모바일](http://dreamteam-mobile.com)|Washington D.C., 미국|DreamTeam 모바일 네이티브 iOS, Android, Windows 및 Mac 응용 프로그램의 Swift Xamarin을 사용 하 여 및 네이티브 반응 만듭니다. 여러 플랫폼용 네이티브 앱을 제작할에서는 공유 코드 베이스|
 |[Durwella](http://www.durwella.com)|휴스턴, 미국|Durwella는 과학 및 엔지니어링 프로젝트에 대 한 소프트웨어 솔루션 회사|
 |[EastBanc 기술](http://www.eastbanctech.com)|Washington D.C., 미국|유연한 기술 솔루션을 제공 하는 플랫폼 제약 없는 전체 수명 주기 소프트웨어 개발 회사 EastBanc 기술|
 |[가장자리 Webware, inc.](https://edgewebware.com)|Miamisburg, OH|가장자리 Webware, Inc. 웹 및 모바일 앱 디자인 및/또는 개발 서비스 제공|
@@ -79,7 +78,7 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[정도 소프트웨어 Inc.](http://www.techendeavour.com)|Austin 텍사스주|컨설턴트 정도 엔터프라이즈 모바일 완성도 평가 하 고 조직의 모든 수준에서 전략적 mobility 요구 사항을 해결 하는 데 도움이|
 |[향상 된 시스템 컨설팅](http://www.enhancedsystems.com)|Johnson City, TN|향상 된 시스템 컨설팅, Inc. 새로운 비즈니스 응용 프로그램을 만들거나 기존 관계를 검색 하는 회사에 대 한 전문 디자인, 개발 및 통합 서비스를 제공 합니다.|
 |[Envoc](http://envoc.com/)|배턴루지, LA|창의 성과 제공 우수한 환경 및 혁신의 교집합에서 존재 했습니다.|
-|[EPAM 시스템](https://www.epam.com)|Newtown, PA|EPAM 시스템, Inc은 선행 글로벌 제품 개발 및 디지털 플랫폼 엔지니어링 서비스 회사|
+|[EPAM 시스템](https://www.epam.com)|Newtown, PA; New York City; 필라델피아; 시카고; 샌프란시스코; Los Angeles; 런던; 민스크; 파리; 부다페스트|EPAM 시스템, Inc은 선행 글로벌 제품 개발 및 디지털 플랫폼 엔지니어링 서비스 회사|
 |[Experis Ciber 합니다.](http://www.ciber.com)|트로이, MI |Ciber은 북미 지역 및 인도에서 넘는 2900 직원과 사무실 있는 글로벌 IT 컨설팅 회사|
 |[빨리 감기 LLC](http://www.fastforward.sh/)|Salem, MA|빨리 감기 모든 장치 유형에 모든 주요 네이티브 운영 체제에서 응용 프로그램을 개발 하 고 사물 인터넷 작업|
 |[Fincons 그룹](http://www.finconsgroup.com)|캘리포니아주 로스앤젤레스; 뉴욕 주의; 영국 런던,|Fincoins 그룹 서비스 및 솔루션 대형 고객 및 Sme, 모두 기술 및 프로세스에 필요한 혁신 보장 하는 것의 실제 요구 사항에 대 한 구체적인 응답을 제공 합니다.|
@@ -88,7 +87,7 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[FusionComputing, inc.](http://www.fusioncomputing.com)|Douglasville, 조지아|모든 장치에서 고객에 도달할 수 있도록 크로스 플랫폼 네이티브 응용 프로그램을 개발 했습니다.|
 |[Griffin 솔루션 그룹](http://griffinsolutionsgroup.com)|Alpharetta, GA|비즈니스 문제 해결에 대 한 열 정의 지정 했으므로 Griffin 솔루션 그룹 설립 수 있습니다. 다양 한 적합 한 기술을 결정을 내리는 고객을 지원 하기 위해 산업의에서 경력 적용|
 |[Harman 연결 서비스, inc.](http://www.harman.com)|Mountain 뷰 캘리포니아; Hartford, CT; 워싱턴주 시애틀; 뉴저지주 뉴어크; 런던, 영국; 베를린, 독일; 모스크바|연결 된 제품 및 자동차 생산 업체가, 소비자 및 기업에서는 연결 된 자동차 시스템, 오디오 및 비디오 제품, 엔터프라이즈 자동화 솔루션; 포함 하 여 전 세계 솔루션을 Harman 디자인과 엔지니어 와 연결 된 서비스|
-|[HCL 기술](https://www.hcltech.com/)|Noida, 인도, Uttar 프라 데 시; Mississauga, ON, 캐나다; New York, NY, 미국; San 파울로, 브라질; 싱가포르 CDMX, 멕시코; 런던, 영국; 오스트레일리아 시드니|HCL 기술 하는 차세대 글로벌 기술 회사 디지털 시대에 대 한 비즈니스 reimagine 높일 수입니다.|
+|[HCL 기술](https://www.hcltech.com/)|Noida, 인도, Uttar 프라 데 시; Mississauga, ON, 캐나다; New York, NY, 미국; San 파울로, 브라질; 싱가포르 CDMX, 멕시코; 런던, 영국; 오스트레일리아 시드니|HCL 기술 하는 차세대 글로벌 기술 회사 비즈니스 디지털 시대 다시 가용 높일 수입니다.|
 |[Hexaware 기술 Ltd](http://hexaware.com/)|Iselin을 New Jersey|Hexaware 글로벌 기업입니다는 IT, BPO 컨설팅 서비스 및 |
 |[첨단 기술 그룹, LLC](http://hightg.com)|315 사, 롯데|사용자 지정 소프트웨어 개발 회사|
 |[Hitcents](http://hitcents.com)|볼링 녹색, 키; 로스앤젤레스, CA, 미국; 샌프란시스코, CA, 미국; 상하이, 상하이, 중국|Hitcents 앱; 구축 하지 않습니다. 가 하나의 플랫폼만 초과 되는 상태로 넓히고 합니다. 또한 앱 7/24, 모든 사용자를 어디서 나 응용 프로그램에 액세스할 수 있도록 지원 합니다.|
@@ -239,7 +238,7 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[파일럿 CVBA 흐름](http://www.flowpilots.com)|누악쇼트, 벨기|파일럿 디자인 흐름, 빌드, 배포 및 수익을 늘리거나 비용 절감, 직원의 자유로움 / 유연성 상태로 고객에 게는 데 도움이 되는 디지털 도구를 관리 합니다.|
 |[KENZE](http://www.kenze.be)|Mechelen, 벨기|Microsoft.NET projecten en gerelateerde technologieën 합니다.  De drie belangrijkste pijlers binnen de organisatie zijn mensen, kennis en mensenkennis zij vormen de 별로 voor kwalitatieve, succesvolle projecten en tevreden klanten 합니다. |
 |[Levelapp](http://www.levelapp.be)|Hoeilaart, 벨기|전체 모바일 에이전시 Levelapp 있습니다. 우리는 소프트웨어 개발자로 동작 합니다. 크로스 플랫폼 응용 프로그램 넘치는 전략적 비전 날 려 보내는 부분을 만듭니다. 고객, 파트너 및 직원을 위해 가치를 제공 합니다. |
-|[Realdolmen](http://www.realdolmen.com/)|벨기에, Huizingen; 벨기에, Kontich; 벨기에, Lummen; 벨기에, 겐트; 벨기에, Harelbeke; 벨기에, Namur; Mons, 벨기|모바일은 새 표준 합니다. 거의 모든 회사는 모바일 서비스 또는 경쟁력을 유지 하도록 응용 프로그램에 필요 합니다. 하지만 자체적으로 모바일 전략 부족할 수 있습니다. 모든 항목 수 등의 보안을 ERP 클라우드를 포함 하 여 일반 ICT 인프라를 완벽 하 게 통합 되어 있어야 합니다. Realdolmen에서 이라고이 연결 된 비즈니스 합니다. <link>|
+|[Realdolmen](http://www.realdolmen.com/)|벨기에, Huizingen; 벨기에, Kontich; 벨기에, Lummen; 벨기에, 겐트; 벨기에, Harelbeke; 벨기에, Namur; Mons, 벨기|모바일은 새 표준 합니다. 거의 모든 회사는 모바일 서비스 또는 경쟁력을 유지 하도록 응용 프로그램에 필요 합니다. 하지만 자체적으로 모바일 전략 부족할 수 있습니다. 모든 항목 수 등의 보안을 ERP 클라우드를 포함 하 여 일반 ICT 인프라를 완벽 하 게 통합 되어 있어야 합니다. Realdolmen에서 이라고이 연결 된 비즈니스 합니다.|
 
 
 ## <a name="brazil"></a>브라질
@@ -574,7 +573,7 @@ _기본 위치에 따라 나열 많은 파트너 외부로 서비스를 제공 �
 |[Billennium](http://billennium.pl/)|바르샤바, 폴란드 |Billennium 혁신적인 비즈니스 도구 및 솔루션을 개발에서 여러 해에 있습니다.|
 |[하나의 솔루션 Sp. z o.o. 가장자리](http://www.edge1s.com)|바르샤바, 폴란드 |기술 및 고도로 정규화 된 IT 컨설턴트의 경험 제공합니다. 우리의 포트폴리오의 각 서비스에서는 클라이언트의 요구와 기대치를 유연 하 게|
 |[NETBULLS Sp. z o.o.](http://www.netbulls.io)|Bialystok, 폴란드|Skilfully 출시 아이디어를 가져옵니다. 낭비 £$ €, 시간 또는 변명 없이. |
-|[Sii](http://www.sii.pl/en)|바르샤바, 폴란드; 파리, 프랑스; 마드리드, 스페인; 베를린, 독일; 암스테르담, 네덜란드; 벨기에, Brussels; 룩셈부르크 City, 룩셈부르크; 스위스 제네바; Marrakesh, 모로코; 프라하, Czechia; 부카레스트, 루마니아; 토론토, ON, 캐나다; 산티아고, 산티아고 대도시 지역, 칠레; 부에노스아이레스 자치 부에노스아이레스, 아르헨티나; Bogot√ °, 보고타, 콜롬비아; Delhi, 인도|Sii 선행 IT 서비스 회사에 폴란드 해당 개념에서 성공적으로 배달와 같거나 이보다 뒤 디지털 변환 프로그램을 지 원하는입니다. 먼저 장치 통신, 빅 데이터 처리 및 오프 라인을 사용 하도록 설정 하는 엔터프라이즈 및 소비자 응용 프로그램을 제공 하는 전문 지식을 제공 합니다.|
+|[Sii](http://www.sii.pl/en)|바르샤바, 폴란드; 파리, 프랑스; 마드리드, 스페인; 베를린, 독일; 암스테르담, 네덜란드; 벨기에, Brussels; 룩셈부르크 City, 룩셈부르크; 스위스 제네바; Marrakesh, 모로코; 프라하, Czechia; 부카레스트, 루마니아; 토론토, ON, 캐나다; 산티아고, 산티아고 대도시 지역, 칠레; 부에노스아이레스 자치 부에노스아이레스, 아르헨티나; 보고타, 보고타, 콜롬비아; Delhi, 인도|Sii 선행 IT 서비스 회사에 폴란드 해당 개념에서 성공적으로 배달와 같거나 이보다 뒤 디지털 변환 프로그램을 지 원하는입니다. 먼저 장치 통신, 빅 데이터 처리 및 오프 라인을 사용 하도록 설정 하는 엔터프라이즈 및 소비자 응용 프로그램을 제공 하는 전문 지식을 제공 합니다.|
 
 
 ## <a name="portugal"></a>포르투갈
