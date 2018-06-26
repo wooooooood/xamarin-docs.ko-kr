@@ -49,7 +49,7 @@ Xamarin.Forms 테마 Evolve 2016에서 발표 된 되며 시도 하 고 피드�
 * 밝은 테마 (미묘한 차이 만큼만를 가지도록 테마 없음)
 * 어두운 테마
 
-![](images/standard-none-sml.png "테마 설정 사용 하지 않고 컨트롤") ![ ] (images/standard-light-sml.png "밝은 테마를 사용 하 여 컨트롤") ![ ] (images/standard-dark-sml.png "어두운 테마를 사용 하 여 컨트롤")
+![](images/standard-none-sml.png "테마 설정 사용 하지 않고 컨트롤") ![](images/standard-light-sml.png "밝은 테마를 사용 하 여 컨트롤") ![](images/standard-dark-sml.png "어두운 테마를 사용 하 여 컨트롤")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ Xamarin.Forms 테마 Evolve 2016에서 발표 된 되며 시도 하 고 피드�
 
 이 렌더링 밝은 영역과 어두운 다음과 같이 합니다.
 
-![](images/boxview-light-sml.png "밝은 테마 StyleClass와 BoxView") ![ ] (images/boxview-dark-sml.png "BoxView 어두운 테마 StyleClass와")
+![](images/boxview-light-sml.png "밝은 테마 StyleClass와 BoxView") ![](images/boxview-dark-sml.png "BoxView 어두운 테마 StyleClass와")
 
 <a name="builtin" />
 
