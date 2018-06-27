@@ -1,18 +1,20 @@
 ---
-title: Info.plist 참조
+title: Xamarin.iOS에 대한 Info.plist 참조
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램의 Info.plist 파일에서 설정할 수 있는 다양한 키/값 쌍을 설명합니다. 이러한 키는 앱에서 위치, 사진, 마이크 또는 카메라에 액세스와 같은 특정 작업을 수행하는 경우에 필요합니다.
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2017
-ms.openlocfilehash: 8ad2c5e8137dede71d9858aa144e440d984c1a75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fa40add67155bd982041b829264a10b9764aa950
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785478"
 ---
-# <a name="infoplist-reference"></a>Info.plist 참조
+# <a name="infoplist-reference-for-xamarinios"></a>Xamarin.iOS에 대한 Info.plist 참조
 
 Info.Plist 키 작업에 대한 자세한 내용은 [보안 및 개인 정보 작업](~/ios/app-fundamentals/security-privacy.md) 가이드를 참조하세요. 
 

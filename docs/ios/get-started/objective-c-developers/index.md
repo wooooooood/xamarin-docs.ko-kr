@@ -1,20 +1,19 @@
 ---
 title: Objective-C 개발자용 Xamarin
-description: Objective-C 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드를 다시 사용할 수 있습니다. 이 섹션은 Xamarin.iOS의 진입점 역할을 하며, C#에서 기존 Objective-C 코드를 사용하는 방법에 대한 다양한 정보를 알려줍니다.
+description: 이 문서에서는 Objective-C 개발자용 Xamarin.iOS의 설명을 제공합니다. Objective-C에서 C#으로 전환하는 방법, C#에서 사용을 위해 Objective-C 라이브러리를 바인딩하는 방법 및 플랫폼 간 모바일 응용 프로그램을 빌드하는 방법을 설명하는 설명서에 연결합니다.
 ms.prod: xamarin
 ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e29762fb258f7d796878c85bfe6f7aaa93207c5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 027ef8cabc55ace41bcf201b8355aab8ca6ec625
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786053"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Objective-C 개발자용 Xamarin
-
-_Objective-C 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. 이 섹션은 Xamarin.iOS의 진입점 역할을 하며, C#에서 기존 Objective-C 코드를 사용하는 방법에 대한 다양한 정보를 알려줍니다._
 
 Xamarin은 iOS를 대상으로 하는 개발자가 비 사용자 인터페이스 코드를 플랫폼 제약 없는 C#으로 이동할 수 있는 경로를 제공하며, 여기에는 Xamarin.Android 통한 Android 및 Windows의 다양한 버전을 포함하여 C#을 사용할 수 있는 모든 곳이 포함됩니다. 그러나 Xamarin에 C#을 사용한다고 해서 기존 기술과 Objective-C 코드를 활용할 수 없는 것은 아닙니다. 사실, Xamarin은 UIKit, Core Animation, Core Foundation, Core Graphics를 포함하여 개발자들이 잘 알고 있고 애용하는 모든 네이티브 iOS 및 OS X 플랫폼을 노출하므로 Objective-C를 알고 있으면 Xamarin.iOS를 개발하는 데 많은 도움이 됩니다. 뿐만 아니라 LINQ 및 제네릭 같은 기능을 비롯한 C# 언어와 풍부한 .NET 기본 클래스 라이브러리의 강력한 성능을 기본 응용 프로그램에 사용할 수 있습니다.
 

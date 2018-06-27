@@ -1,21 +1,20 @@
 ---
 title: Visual Studio용 Xamarin.iOS 소개
-description: 이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 응용 프로그램을 빌드하고 테스트하는 방법을 보여줍니다. Visual Studio를 사용하여 새 iOS 프로젝트를 만들고, iOS 응용 프로그램을 빌드하고, Apple의 컴파일러 및 시뮬레이터를 호스트하도록 네트워크에 연결된 Mac과 Xamarin 빌드 도구 체인을 사용하여 응용 프로그램을 컴파일, 테스트, 디버그하는 방법을 설명합니다.
+description: 이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 응용 프로그램을 빌드하고 테스트하는 방법을 설명합니다. 프로젝트 만들기, 앱 실행 및 디버깅 및 Windows에서 Mac 빌드 호스트에 연결을 설명합니다.
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: e07119bee6478a503ca6c586fa3348206ccd16f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786202"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
-
-_이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 응용 프로그램을 빌드하고 테스트하는 방법을 보여줍니다. Visual Studio를 사용하여 새 iOS 프로젝트를 만들고, iOS 응용 프로그램을 빌드하고, Apple의 컴파일러 및 시뮬레이터를 호스트하도록 네트워크에 연결된 Mac과 Xamarin 빌드 도구 체인을 사용하여 응용 프로그램을 컴파일, 테스트, 디버그하는 방법을 설명합니다._
 
 Windows용 Xamarin을 사용하면 Visual Studio 내에서 iOS 응용 프로그램을 작성 및 테스트하고, 네트워크에 연결된 Mac으로 빌드 및 배포 서비스를 제공할 수 있습니다.
 
@@ -27,7 +26,6 @@ Visual Studio 내부에서 iOS를 개발하면 다음과 같은 여러 가지 �
 -  iOS 소스 코드를 포함한 모든 플랫폼 간 프로젝트에 자신이 선호하는 Visual Studio 도구(예: **Resharper** 및 **Team Foundation Server**)를 사용합니다.
 -  익숙한 IDE를 사용하면서도 모든 Apple API의 Xamarin.iOS 바인딩을 활용합니다.
 
-
 <a name="Requirements_and_Installation" />
 
 ## <a name="requirements-and-installation"></a>요구 사항 및 설치
@@ -38,7 +36,6 @@ Visual Studio에서 iOS를 개발할 때 준수해야 하는 몇 가지 요구 �
 
 -  Mac을 주 개발 컴퓨터로 사용하고 Visual Studio가 설치된 Windows 가상 머신을 실행합니다. [Parallels](http://www.parallels.com/products/desktop/) 또는 [VMWare](http://www.vmware.com/products/fusion/) 같은 VM 소프트웨어를 사용하는 것이 좋습니다.
 -  Mac을 빌드 호스트로만 사용합니다. 이 시나리오에서는 [필요한](~/cross-platform/get-started/installation/windows.md#installation) 도구가 설치된 Windows 컴퓨터와 동일한 네트워크에 연결됩니다.
-
 
 두 경우 모두 다음 단계를 수행해야 합니다.
 
@@ -64,7 +61,6 @@ Xamarin iOS 개발과 관련된 컨트롤은 빨간색 원으로 표시되어 �
 -  **솔루션 구성** – 사용할 구성을 선택할 수 있습니다(예: 디버그, 릴리스).
 -  **솔루션 플랫폼** - iPhone 또는 iPhoneSimulator를 배포하기로 선택할 수 있습니다.
 
-
 ### <a name="ios-toolbar"></a>iOS 도구 모음
 
 Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하게 생겼으며 아래에 전부 나열되어 있습니다.
@@ -77,10 +73,7 @@ Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하�
 -  **iOS 시뮬레이터 표시** – iOS 시뮬레이터 창을 Mac 앞으로 불러옵니다.
 -  **빌드 서버에 IPA 파일 표시** – Mac에서 Finder를 응용 프로그램의 IPA 출력 파일 위치로 엽니다.
 
-
-
 ## <a name="ios-output-options"></a>iOS 출력 옵션
-
 
 ### <a name="output-window"></a>출력 창
 
@@ -108,29 +101,23 @@ Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하�
 
     [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild 출력")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
-
 ## <a name="ios-project-properties"></a>iOS 프로젝트 속성
 
 Visual Studio의 프로젝트 속성은 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 *속성*을 클릭하여 액세스할 수 있습니다. 그러면 아래 스크린샷처럼 iOS 응용 프로그램을 구성할 수 있습니다.
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "iOS 응용 프로그램 구성")
 
 -  *iOS 번들 서명* – Mac에 연결하여 코드 서명 ID 및 프로비전 프로필을 채웁니다.
 
-
  ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "코드 서명 ID 및 프로비전 프로필 채우기")
 
 -  *iOS IPA 옵션* – IPA 파일은 Mac의 파일 시스템에 저장됩니다.
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "iOS IPA 옵션")
 
 -  *iOS 실행 옵션* – 추가 매개 변수를 구성합니다.
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "iOS 실행 옵션")
-
-
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>iOS 응용 프로그램에 대한 새 프로젝트 만들기
 
@@ -156,7 +143,6 @@ Visual Studio에서 iOS 디자이너를 사용하여 스토리보드 및 .xib �
 
  iOS 디자이너 사용에 대한 자세한 내용은 [디자이너](~/ios/user-interface/designer/index.md) 지침을 참조하세요.
 
-
 ## <a name="running--debugging-ios-applications"></a>iOS 응용 프로그램 실행 및 디버그
 
 ### <a name="device-logging"></a>장치 로깅
@@ -175,7 +161,6 @@ Visual Studio 2017에서는 Android 및 iOS 로그 패드가 통합되었습니�
 
 이 도구 창은 로그 항목 테이블, 장치를 선택할 수 있는 드롭다운, 로그 항목을 지우는 방법, 검색 상자 및 재생/중지/일시 중지 단추를 제공합니다.
 
-
 ### <a name="set-debugging-stops"></a>디버깅 중지 설정
 
 응용 프로그램의 어느 위치에나 프로그램 실행을 일시적으로 중지하라고 디버거에 신호를 보내는 중단점을 설정할 수 있습니다. Visual Studio에서 중단점을 설정하려면 편집기의 여백 영역에서 중단하려는 코드의 줄 번호 옆을 클릭합니다.
@@ -185,7 +170,6 @@ Visual Studio 2017에서는 Android 및 iOS 로그 패드가 통합되었습니�
 디버깅을 시작하고, 시뮬레이터 또는 장치를 사용하여 응용 프로그램을 중단점으로 이동합니다. 중단점에 도착하면 줄이 강조 표시되고 Visual Studio의 일반적인 디버깅 동작이 사용됩니다. 코드를 한 단계씩 실행하거나 프로시저 단위로 실행하거나 코드에서 나갈 수 있고, 지역 변수를 검사할 수 있고, 직접 실행 창을 사용할 수 있습니다.
 
 다음 스크린샷은 OS X에서 Parallels를 사용하여 Visual Studio 옆에서 실행되는 iOS 시뮬레이터를 보여줍니다.
-
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "OS X에서 Parallels를 사용하여 Visual Studio 옆에서 실행되는 iOS 시뮬레이터를 보여주는 스크린샷")
 

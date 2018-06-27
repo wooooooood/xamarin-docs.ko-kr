@@ -1,16 +1,18 @@
 ---
 title: Xamarin.Forms Multiscreen Quickstart
+description: 이 문서에서는 응용 프로그램에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 응용 프로그램을 확장하는 방법을 설명합니다.
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c931b4f74fbfbbb7396e492cb7ad7ae5d0097bad
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242393"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms Multiscreen Quickstart
 
@@ -57,7 +59,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 선택합니다.
 
-5. **솔루션 탐색기r**에서 **App.xaml.cs**을 두 번 클릭하여 엽니다.
+5. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **App.xaml.cs** 파일을 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/vs/open-app-class.png "App.xaml.cs 열기")
 
@@ -88,7 +90,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 선택합니다.
 
-7. **솔루션 탐색기**에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
+7. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **MainPage.xaml** 파일을 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "MainPage.xaml 열기")
 

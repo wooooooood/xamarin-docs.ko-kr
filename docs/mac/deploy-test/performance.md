@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Mac 성능
-description: 이 문서에서는 Xamarin.Mac 앱에 대한 몇 가지 성능 고려 사항 정보를 제공합니다.
+description: 이 문서에서는 Xamarin.Mac 앱에 대한 몇 가지 성능 고려 사항 정보를 제공합니다. 최신 대상 프레임워크, 링커, AOT, 대리자, 뷰를 재사용하기 위한 Cocoa API 및 동기화 코드를 설명합니다.
 ms.prod: xamarin
 ms.assetid: 54B07DED-FDF2-49B2-A5FB-3A9357E65922
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: 273fb1980695a3dcd4a4fc2123b1ebafef1756a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab02fd5048503d73390c2d64892dbec411dfd5a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791815"
 ---
 # <a name="xamarinmac-performance"></a>Xamarin.Mac 성능
 

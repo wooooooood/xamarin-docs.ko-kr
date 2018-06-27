@@ -1,5 +1,5 @@
 ---
-title: 자동 프로비저닝
+title: Xamarin.iOS에 대한 자동 프로비저닝
 description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: d324e469ba392b14c635990d607bf04c949ad5db
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 323174b4a37a12828a32acb398fef63cd9b849e3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785819"
 ---
-# <a name="automatic-provisioning"></a>자동 프로비저닝
+# <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
 _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다._
 

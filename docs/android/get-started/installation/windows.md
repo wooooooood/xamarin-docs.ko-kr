@@ -6,12 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/17/2018
-ms.openlocfilehash: ca88159e8bcbcd4665e29b4ad8df9ffe00cfec67
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/30/2018
+ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732608"
 ---
 # <a name="windows-installation"></a>Windows 설치
 
@@ -82,7 +83,7 @@ x86 기반 컴퓨터에서 개발하는 경우 x86 아키텍처에 최적화된 
 1. Microsoft의 Hyper-V &ndash; Windows 4월 10일 업데이트를 실행하는 컴퓨터에서 지원됩니다.
 2. Intel의 HAXM(Hardware Accelerated Execution Manager) &ndash; OS X, macOS 또는 이전 버전의 Windows를 실행하는 x86 컴퓨터에서 지원됩니다.
 
-Google Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [Android Emulator 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md) 가이드를 참조하세요.
+Google Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md) 가이드를 참조하세요.
 
 > [!NOTE]
 > 이전 버전의 Windows에서 HAXM은 Hyper-V와 호환되지 않습니다. 이 시나리오에서는 [Hyper-V를 사용하지 않도록 설정](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v)하거나 x86 최적화를 사용하지 않는 느린 에뮬레이터 이미지를 사용해야 합니다.
@@ -121,6 +122,6 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 - [Visual Studio Tools for Xamarin 설치](~/cross-platform/get-started/installation/windows.md)
 - [시스템 요구 사항](~/cross-platform/get-started/requirements.md)
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
-- [Google Android Emulator](~/android/get-started/installation/android-emulator/index.md)
+- [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)
 - [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
 - [Android Emulator에서 앱 실행](https://developer.android.com/studio/run/emulator#Requirements)

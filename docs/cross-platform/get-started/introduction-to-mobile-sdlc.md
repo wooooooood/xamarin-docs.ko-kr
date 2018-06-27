@@ -1,20 +1,19 @@
 ---
 title: 모바일 소프트웨어 개발 수명 주기 소개
-description: 이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 개발 수명 주기와 모바일 프로젝트를 빌드할 때 필요한 몇 가지 고려 사항에 대해 설명합니다. 바로 시작하여 빌드를 시작하려는 개발자는 이 가이드를 건너뛰어도 되며 모바일 개발에 대한 보다 자세한 이해를 위해 나중에 읽어도 됩니다.
+description: 이 문서에서는 모바일 소프트웨어 개발 수명 주기, UX 디자인 살펴보기, UI 디자인, 개발, 안정화, 배포 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782335"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기 소개
-
-_이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 개발 수명 주기와 모바일 프로젝트를 빌드할 때 필요한 몇 가지 고려 사항에 대해 설명합니다. 바로 시작하여 빌드를 시작하려는 개발자는 이 가이드를 건너뛰어도 되며 모바일 개발에 대한 보다 자세한 이해를 위해 나중에 읽어도 됩니다._
 
 모바일 응용 프로그램 빌드는 IDE를 열고, 함께 준비하고, 신속히 테스트하며 앱 스토어에 제출하는 것처럼 손쉽게 수행할 수 있습니다. 모든 작업이 그 날 완료됩니다. 또는 엄격한 사전 설계, 유용성 테스트, 수천 대의 장치에서 QA 테스트, 전체 베타 주기 및 여러 가지 다른 방식의 배포가 포함된 매우 복잡한 프로세스일 수 있습니다.
 
@@ -78,7 +77,7 @@ UX는 일반적으로 여러 [디자인 도구 키트](https://docs.microsoft.co
 UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인터페이스 지침을 고려하는 것이 중요합니다. 앱은 각 플랫폼에서 “익숙한 방식”이어야 합니다. 각 플랫폼의 공식 디자인 지침은 다음과 같습니다.
 
 1.   **Apple** -  [휴먼 인터페이스 지침](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** –  [디자인 지침](http://developer.android.com/design/index.html)
+1.   **Android** – [디자인 지침](http://developer.android.com/design/index.html)
 1.   **UWP** – [UWP 디자인 기본 내용](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 예를 들어, 각 앱에는 응용 프로그램의 섹션 간 전환을 위한 메타포가 있습니다. iOS는 화면 하단에 탭 표시줄을 사용하고 Android는 화면 상단에 탭 표시줄을 사용하며 UWP는 [Pivot 또는 탭](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) 뷰를 사용합니다.

@@ -1,16 +1,18 @@
 ---
 title: iOS용 fastlane – cert
+description: 이 문서에서는 iOS 응용 프로그램 프로비저닝 프로세스, 인증서 요청, Apple의 개발자 포털에 장치 추가, 앱 ID 만들기 등의 많은 부분을 자동화하는 도구인 fastlane을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0b9db3d7b8f28e4b3e1bbb1ec167c73414845be3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fac90f4738046f91183a1acd080a0d0e480c6cbf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785199"
 ---
 # <a name="fastlane-for-ios--cert"></a>iOS용 fastlane – cert
 

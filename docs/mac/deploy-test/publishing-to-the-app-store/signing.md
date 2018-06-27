@@ -1,19 +1,20 @@
 ---
-title: 개발자 ID로 서명
-description: 이 가이드에서는 게시할 Xamarin.Mac 앱을 개발자 ID로 서명하는 방법을 안내합니다.
+title: 개발자 ID를 사용하여 Xamarin.Mac 앱 서명
+description: 이 문서에서는 Mac App Store 외부에 배포될 수 있도록 개발자 ID를 사용하여 Xamarin.Mac 앱을 서명하는 방법을 설명합니다. 코드 서명 옵션 및 빌드를 설명합니다.
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 130766ef7f9ab8e311db97a7209f4ec62a2ceee4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792306"
 ---
-# <a name="sign-with-developer-id"></a>개발자 ID로 서명
+# <a name="signing-xamarinmac-apps-with-a-developer-id"></a>개발자 ID를 사용하여 Xamarin.Mac 앱 서명
 
 개발자가 macOS 사용자에게 직접 앱을 배포하려는 경우 Apple에서는 **게이트키퍼**가 설정된 macOS 시스템에 설치할 수 있도록 개발자 ID로 앱을 코드 서명할 것을 권장합니다. 앱이 서명되지 않은 경우 **게이트키퍼**는 사용자가 앱을 설치하지 못하게 차단하고 경고 메시지를 표시합니다(시작할 때 Control 키를 길게 눌러 이 제한을 무시할 수 있음).
 

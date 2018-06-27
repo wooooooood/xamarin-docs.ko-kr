@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 5b3061f30f6f120cf8edb41ccf5e70ae853aeb9e
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: ce86590b2d05f3b9141d1a5ba42df9274544f9ae
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549238"
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 
@@ -57,6 +58,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="xamarinandroid-performanceandroiddeploy-testperformancemd"></a>[Xamarin.Android Performance](~/android/deploy-test/performance.md)
 
 Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
+
+## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Android 앱 프로파일링](~/android/deploy-test/profiling.md)
+
+이 가이드에서는 프로파일러 도구를 사용하여 Android 앱의 성능 및 메모리 사용을 검사하는 방법을 설명합니다.
+
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[릴리스할 응용 프로그램 준비](~/android/deploy-test/release-prep/index.md)
 

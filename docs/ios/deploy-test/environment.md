@@ -1,17 +1,19 @@
 ---
-title: 환경
+title: Xamarin.iOS 앱에 대한 실행 환경
+description: 이 문서에서는 Xamarin.iOS 앱에 대한 임시 및 영구 환경 변수를 설정하는 방법을 설명합니다. 프로젝트의 속성에서 또는 mtouch 패키징 도구에 불필요한 인수로 변수를 지정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bc06ce3f3a26842340ce6e19741a8a7dfe8f086d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 246c65729f9327dd1ccf549603b4c2b1feb023e8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784968"
 ---
-# <a name="environment"></a>환경
+# <a name="execution-environment-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 실행 환경
 
 *실행 환경*은 프로그램 실행에 영향을 주는 환경 변수의 집합입니다. 환경 변수는 프로젝트의 속성에서 임시로 설정할 수도 있고, mtouch 패키징 도구에 추가 인수를 지정하여 영구적으로 설정할 수도 있습니다.
 

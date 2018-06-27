@@ -1,18 +1,20 @@
 ---
-title: iOS에서 연결
+title: Xamarin.iOS 앱 연결
+description: 이 문서에서는 해당 크기를 줄이기 위해 Xamarin.iOS 응용 프로그램에서 사용되지 않는 코드를 제거하는 데 사용되는 Xamarin.iOS 링커를 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: 1d83a152c0949abe0221f6eb6dfb42f4e79eaf38
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f80faa961fe4bef45df33c411d914ba80e605c75
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785582"
 ---
-# <a name="linking-on-ios"></a>iOS에서 연결
+# <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
 
 응용 프로그램을 빌드할 때 Mac용 Visual Studio 또는 Visual Studio는 관리 코드에 대한 링커를 포함하고 있는 **mtouch**라는 도구를 호출합니다. 이 도구는 응용 프로그램에서 사용되지 않는 기능을 클래스 라이브러리에서 제거하는 데 사용됩니다. 목표는 꼭 필요한 비트만 제공하여 응용 프로그램의 크기를 줄이는 것입니다.
 

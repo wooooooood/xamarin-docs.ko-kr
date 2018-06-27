@@ -1,5 +1,5 @@
 ---
-title: TestFlight 사용
+title: TestFlight를 사용하여 Xamarin.iOS 앱 배포
 description: TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베타 테스트하는 기본 방법입니다. 이 문서에서는 앱 업로드부터 iTunes Connect 사용에 이르기까지 TestFlight 프로세스의 모든 단계를 안내합니다.
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5a6e90aab3aae408d4daace81875e44f075818bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785689"
 ---
-# <a name="using-testflight"></a>TestFlight 사용
+# <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
 _TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베타 테스트하는 기본 방법입니다. 이 문서에서는 앱 업로드부터 iTunes Connect 사용에 이르기까지 TestFlight 프로세스의 모든 단계를 안내합니다._
 
@@ -110,7 +111,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
 ###  <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
- 보관을 만들면 **보관 보기**가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 앱에 서명하고 배포할 준비를 하려면 아래 그림과 같이 **서명 및 배포...**를 선택합니다.
+ 보관을 만들면 **보관 보기**가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 앱에 서명하고 배포할 준비를 하려면 아래 그림과 같이 **서명 및 배포...** 를 선택합니다.
 
 [![](testflight-images/archive-view.png "보관을 만들면 자동으로 열리는 보관 보기")](testflight-images/archive-view.png#lightbox)
 

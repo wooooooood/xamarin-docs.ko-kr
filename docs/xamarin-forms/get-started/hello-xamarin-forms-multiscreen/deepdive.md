@@ -1,5 +1,6 @@
 ---
 title: Xamarin.Forms 멀티스크린 심층 분석
+description: 이 문서에서는 페이지 탐색 및 데이터 바인딩을 Xamarin.Forms 응용 프로그램에 도입하고 다중 화면 플랫폼 간 응용 프로그램에서의 용도를 설명합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: e4faa36c-6600-48c0-94c4-b4431103a4
@@ -7,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 2bf76a42fa05dce0d76cfd2169e8310d76216282
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1c7edff3c71b9d7530b2acf21acaa06149156d43
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847035"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242237"
 ---
 # <a name="xamarinforms-multiscreen-deep-dive"></a>Xamarin.Forms 멀티스크린 심층 분석
 

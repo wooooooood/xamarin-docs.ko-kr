@@ -1,6 +1,6 @@
 ---
-title: 'Hello, iOS: 자세히 알아보기'
-description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
+title: Hello, iOS - 심층 분석
+description: 이 문서에서는 Hello, iOS 샘플 응용 프로그램, 고려할 해당 아키텍처, 사용자 인터페이스, 콘텐츠 보기 계층 구조, 테스트, 배포 등에 대해 심층적으로 살펴봅니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786402"
 ---
-# <a name="hello-ios-deep-dive"></a>Hello, iOS 자세히 알아보기
+# <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
 빠른 시작 연습에서는 기본 Xamarin.iOS 응용 프로그램의 빌드 및 실행을 소개하였습니다. 이제, 더 복잡한 프로그램을 빌드할 수 있도록 iOS 응용 프로그램의 작동 방식을 심층적으로 알아볼 시간입니다. 이 가이드에서는 iOS 응용 프로그램 개발의 기본 개념을 이해할 수 있도록 Hello, iOS 연습에 있는 단계를 검토합니다.
 
 이 문서에서는 다음과 같은 주제를 살펴봅니다.
-
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

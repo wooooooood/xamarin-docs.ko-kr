@@ -1,21 +1,20 @@
 ---
-title: 앱 스토어에 게시
-description: 이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다.
+title: App Store에 Xamarin.iOS 앱 게시
+description: 이 문서에서는 App Store에 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785702"
 ---
-# <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
-
-_이 문서에서는 앱 스토어를 통해 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여 줍니다. 여기에는 배포를 위해 응용 프로그램을 준비하는 방법, 검토를 위해 Apple 도구를 사용하여 응용 프로그램을 제출하는 방법, 마지막으로 응용 프로그램을 앱 스토어에 게시하는 방법에 대해 설명하는 단계별 지침이 포함되어 있습니다._
+# <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
 Apple은 응용 프로그램을 모든 iOS 장치에 배포하기 위해 *앱 스토어*를 통해 앱을 게시해야 하므로 앱 스토어를 iOS 응용 프로그램을 위한 원 스톱 쇼핑 위치로 만들었습니다. 여러 유형의 응용 프로그램 개발자는 스토어에 있는 50만 개가 넘는 응용 프로그램과 함께 이 단일 배포 지점에서 엄청난 성공을 거두었습니다. 앱 스토어는 턴키 솔루션으로, 앱 개발자에게 배포 및 결제 시스템을 모두 제공합니다.
 
@@ -112,7 +111,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 3.  드롭다운 목록에서 배포 프로필을 만들려는 **앱 ID**를 선택합니다.
 4.  응용 프로그램에 서명할 유효한 프로덕션(배포) 인증서를 선택합니다.
 5.  새 **배포 프로필**에 대한 **이름**을 입력하고 해당 프로필을 생성합니다.
-6.  Mac에서 Xcode를 열고 **기본 설정 > [Apple ID 선택]> 세부 정보 보기...**로 차례로 이동합니다. Mac의 Xcode에서 사용 가능한 모든 프로필을 다운로드합니다.
+6.  Mac에서 Xcode를 열고 **기본 설정 > [Apple ID 선택]> 세부 정보 보기...** 로 차례로 이동합니다. Mac의 Xcode에서 사용 가능한 모든 프로필을 다운로드합니다.
 7.  IDE로 돌아가서 **iOS 번들 서명** 옵션 아래에서 올바른 _빌드 구성_(**앱 스토어** 또는 **릴리스** 중 하나)에 대한 배포 프로비전 프로필을 선택합니다.
 
 자세한 지침은 [배포 프로필 만들기](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) 및 [Xamarin.iOS 프로젝트에서 배포 프로필 선택](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile)을 참조하세요.
@@ -195,7 +194,7 @@ Xamarin.iOS 응용 프로그램을 올바르게 구성했으므로 검토 및 �
  앱에 서명하고 배포할 준비를 하려면 다음을 수행합니다.
 
 
-1. 아래 그림과 같이 **서명 및 배포...**를 선택합니다.
+1. 아래 그림과 같이 **서명 및 배포...** 를 선택합니다.
 
     ![](publishing-to-the-app-store-images/buildxs04new.png "서명 및 배포... 선택")
 

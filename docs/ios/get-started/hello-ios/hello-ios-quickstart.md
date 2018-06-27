@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS 빠른 시작
-description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 기본 Xamarin.iOS 응용 프로그램을 빌드하고, Xamarin을 사용하여 iOS 응용 프로그램 개발에 대한 기본 사항을 이해하는 방법을 설명합니다. Xamarin.iOS 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
+title: Hello, iOS - 빠른 시작
+description: 이 연습에서는 Hello, iOS라는 간단한 Xamarin.iOS 응용 프로그램을 빌드하는 방법을 보여줍니다. 이 과정에서 Xamarin.iOS 응용 프로그램을 빌드하기 위해 이해해야 하는 기본 도구 및 개념을 소개합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785988"
 ---
-# <a name="helloios-quickstart"></a>Hello.iOS 빠른 시작
+# <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
 이 가이드에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환한 다음, 해당 번호로 전화하는 응용 프로그램을 만드는 방법을 설명합니다. 최종 응용 프로그램은 다음과 같습니다.
 
@@ -283,8 +284,7 @@ Xamarin.iOS는 다음 설치 중 하나를 사용하여 작동합니다.
 
 이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 응용 프로그램을 만드는 방법을 설명합니다.
 
-
-  **참고**: 이 연습에서는 Windows 10 가상 머신에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
+**참고**: 이 연습에서는 Windows 10 가상 머신에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
 
 > [!NOTE]
 > 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.

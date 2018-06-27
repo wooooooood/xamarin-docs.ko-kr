@@ -1,21 +1,20 @@
 ---
 title: 앱 스토어 배포
-description: 이 문서에서는 Apple 앱 스토어에 배포하기 위한 요구 사항에 대해 설명합니다.
+description: 이 문서에서는 App Store에 Xamarin.iOS 응용 프로그램을 배포하는 방법을 설명합니다. 배포 인증서를 만드는 방법, 배포 프로비저닝 프로필을 만드는 방법 및 iTunes Connect를 구성하고 앱을 제출하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 7a38c77dde7a66f2db194cd8888a2c32a3529a9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42d287285fc9b8842dfb0c86b627d1d5c84189e1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784818"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
-
-_이 문서에서는 Apple 앱 스토어에 배포하기 위한 요구 사항에 대해 설명합니다._
 
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 iTunes 앱 스토어를 사용하여 사용자에게 앱을 배포하는 것입니다. 이는 응용 프로그램을 배포하는 가장 일반적인 방법입니다. Apple의 앱 스토어에 응용 프로그램을 게시하면 전 세계의 소비자가 해당 응용 프로그램을 사용할 수 있습니다.
 
@@ -61,7 +60,7 @@ Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-1.   팀을 선택하고, **인증서 관리...**를 클릭합니다. [ ![](images/selectteam.png "팀 및 세부 정보 보기 선택")](images/selectteam.png#lightbox)
+1.   팀을 선택하고, **인증서 관리...** 를 클릭합니다. [ ![](images/selectteam.png "팀 및 세부 정보 보기 선택")](images/selectteam.png#lightbox)
 
 2.   다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다. [ ![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
 

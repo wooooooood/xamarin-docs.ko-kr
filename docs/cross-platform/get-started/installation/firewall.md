@@ -1,16 +1,17 @@
 ---
 title: Xamarin 방화벽 구성 지침
-description: Xamarin의 플랫폼을 회사에서 실행할 수 있도록 방화벽에서 허용 목록을 지정해야 하는 호스트 목록입니다.
+description: 이 문서에서는 Xamarin이 기업 환경에서 작업하도록 방화벽에서 허용해야 하는 호스트의 목록을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 34ac0b0eb2563b2122d7b093b19ac3a6ac78cbe5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dab4aeccd58da22736aea3139f11cbdff259ef7b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781093"
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Xamarin 방화벽 구성 지침
 

@@ -1,5 +1,5 @@
 ---
-title: 임시 배포
+title: Xamarin.iOS 앱에 대한 임시 배포
 description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b862a39d8fb8fe079b83b8842281fad5ec903e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0907c3bcca9e0955e5ad9f8ed48adac03202cbaa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784805"
 ---
-# <a name="ad-hoc-distribution"></a>임시 배포
+# <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
 _이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다._
 
@@ -66,7 +67,7 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-1.   팀을 선택하고 **인증서 관리...**를 클릭합니다. [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
+1.   팀을 선택하고 **인증서 관리...** 를 클릭합니다. [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
 2.   다음으로 **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다. [![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png#lightbox)
 

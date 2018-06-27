@@ -1,15 +1,17 @@
 ---
 title: Windows에서 Xamarin 미리 보기 설치
+description: 이 문서에서는 미리 보기 릴리스 채널을 사용하여 Visual Studio 2017에 Xamarin의 미리 보기 버전을 설치하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: 20b9bbfcdcc698f19c6400cd738ba7f6d5db7e44
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 17deacf115042a2fcd6bad9e22a630eadb432d44
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269020"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Windows에서 Xamarin 미리 보기 설치
 
@@ -27,7 +29,8 @@ Visual Studio의 미리 보기 버전에는 다음을 비롯한 Xamarin 기능�
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks/검사기
+- Xamarin Workbooks
+- Xamarin Inspector
 - Xamarin 원격 iOS 시뮬레이터
 
 아래의 **Preview 설치 관리자** 스크린샷은 [미리 보기] 옵션과 [릴리스] 옵션을 모두 보여줍니다(회색 버전 번호: 버전 15.0은 릴리스이고 버전 15.1은 미리 보기임).

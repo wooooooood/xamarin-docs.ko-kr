@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS 멀티스크린
-description: 두 부분으로 구성된 이 가이드에서는 Hello, iOS 가이드에서 만든 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 모델-뷰-컨트롤러 디자인 패턴을 소개하고, 첫 번째 iOS 탐색을 구현하고, iOS 응용 프로그램의 구조 및 기능에 대한 심층적인 이해를 개발합니다.
+title: Hello, iOS 멀티스크린 – 빠른 시작
+description: 이 문서에서는 Phoneword 샘플 응용 프로그램을 확장하여 모델-뷰-컨트롤러, iOS 탐색 및 기타 핵심 iOS 개념을 설명하는 두 번째 화면을 추가하는 방법을 설명합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785673"
 ---
-# <a name="helloios-multiscreen-quickstart"></a>Hello.iOS 멀티스크린 빠른 시작
+# <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
 이 연습의 부분은 앱으로 호출된 전화번호의 기록을 표시하는 두 번째 화면을 Phoneword 응용 프로그램에 추가합니다. 다음 스크린샷에 표시된 것처럼 최종 응용 프로그램에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.
 

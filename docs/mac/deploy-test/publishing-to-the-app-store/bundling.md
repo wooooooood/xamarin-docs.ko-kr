@@ -1,19 +1,20 @@
 ---
 title: Mac 앱 스토어용으로 묶기
-description: 이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 묶는 방법을 안내합니다.
+description: 이 문서에서는 Mac App Store에 게시할 Xamarin.Mac 앱을 묶는 방법을 설명합니다. 코드 서명 옵션 및 빌드를 설명합니다.
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 88d813331dfce437f3668ada8f008bbbd5fdc3de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3aeda97fa4a5a63d51623335c0721026b2394d2f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792062"
 ---
-# <a name="bundle-for-mac-app-store"></a>Mac 앱 스토어용 번들
+# <a name="bundling-for-the-mac-app-store"></a>Mac 앱 스토어용으로 묶기
 
 이 섹션에서는 Mac용 Visual Studio를 사용하여 Mac 앱 스토어에 릴리스할 응용 프로그램을 빌드하는 기본 사항을 설명합니다. 추가 기능(예: iCloud 액세스 및 푸시 알림)에 따라 이 문서의 범위를 벗어나는 추가 설치가 필요할 수 있습니다.
 

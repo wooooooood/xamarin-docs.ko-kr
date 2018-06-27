@@ -1,19 +1,20 @@
 ---
-title: Mac에 페어링
-description: 이 가이드에서는 Mac에 페어링을 사용하여 Visual Studio 2017을 Mac 빌드 호스트에 연결하는 방법에 대해 설명합니다.
+title: Xamarin.iOS 개발을 위해 Mac에 페어링
+description: 이 가이드에서는 Mac에 페어링을 사용하여 Visual Studio 2017을 Mac 빌드 호스트에 연결하는 방법에 대해 설명합니다. Mac에서 원격 로그인을 활성화하고, Visual Studio 2017에서 Mac에 연결하고, Mac 빌드 호스트를 Windows 컴퓨터에 수동으로 추가하는 등의 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 04/16/2018
-ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 05/29/2018
+ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786079"
 ---
-# <a name="pair-to-mac"></a>Mac에 페어링
+# <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
 _이 가이드에서는 Mac에 페어링을 사용하여 Visual Studio 2017을 Mac 빌드 호스트에 연결하는 방법에 대해 설명합니다._
 
@@ -38,6 +39,7 @@ Mac에 페어링을 사용하면 다음과 같은 개발 워크플로를 수행�
 - Windows 명령줄을 사용하여 iOS 응용 프로그램을 빌드할 수 있습니다.
 
 > [!NOTE]
+> 
 > 이 가이드의 지침을 수행하기 전에 먼저 다음 단계를 완료합니다. 
 > 
 > - Windows 컴퓨터에서 [Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)을 설치합니다.
@@ -161,6 +163,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
 > [!IMPORTANT]
 > - Mac에 페어링은 Xcode를 설치할 수 없으므로 Mac 빌드 호스트에 수동으로 설치해야 합니다. 이 호스트는 Xamarin.iOS 개발에 필요합니다.
 > - 자동 Mac 프로비전을 사용하려면 Mac에서 원격 로그인을 사용하도록 설정하고 네트워크를 통해 Windows 컴퓨터에 액세스할 수 있어야 합니다. 자세한 내용은 [Mac에서 원격 로그인을 사용하도록 설정](#enable-remote-login-on-the-mac)을 참조하세요.
+> - 자동 Mac 프로비전에는 Xamarin.iOS를 설치하기 위해 Mac에 3GB의 사용 가능한 공간이 필요합니다.
 
 Visual Studio 2017이 [Mac에 연결](#connect-to-the-mac-from-visual-studio-2017)되면 Mac에 페어링에서 필요한 소프트웨어 설치/업데이트를 수행합니다.
 

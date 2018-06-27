@@ -1,16 +1,17 @@
 ---
 title: Xamarin 제거
-description: 컴퓨터에서 Xamarin 제품 제거
+description: 이 문서에서는 Mac 및 Windows 모두에서 Xamarin을 제거하는 방법을 설명합니다. Mono, Xamarin.Android, Xamarin.iOS 및 기타 도구 제거에 대한 특정 지침을 제공합니다.
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d1b88ad97a1cecaadd84226bca61c7f2b262438d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d5cf15b8ecd225fb75a3cfa0017cb84bc13cce1b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782023"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
