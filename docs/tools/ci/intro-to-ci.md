@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 333e672b054c38370847338e9a4ffad94c90bb5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 67fc32fc9f79d54274642fbab2d0c2f8afd14d8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793664"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066509"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용한 연속 통합 소개
 
@@ -48,14 +48,14 @@ CI 지원 하도록 설계 상용 및 오픈 소스 도구는 광범위 한 에�
 
 ### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services 및 Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) 및 [Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS)는 연속 통합을 위한 Microsoft의 공동 작업 도구는 서비스, 작업 추적, agile 계획 및 보고 도구, 및 버전 빌드 컨트롤입니다. 버전 제어 VSTS 및 TFS (Team Foundation 버전 제어 또는 TFVC) 자체 시스템과 또는 GitHub에서 호스트 되는 프로젝트와 함께 작업할 수 있습니다.
+[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) 및 [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS)는 연속 통합을 위한 Microsoft의 공동 작업 도구는 서비스, 작업 추적, agile 계획 및 보고 도구, 및 버전 빌드 컨트롤입니다. 버전 제어 VSTS 및 TFS (Team Foundation 버전 제어 또는 TFVC) 자체 시스템과 또는 GitHub에서 호스트 되는 프로젝트와 함께 작업할 수 있습니다.
 
  - Visual Studio Team Services를 통해 클라우드 서비스를 제공합니다. 주요 이점은 없거나 전용된 하드웨어 인프라 필요 하며에서 액세스할 수 있습니다 위치 하 고 있어 매력적인 지리적으로 분산 하는 팀에 대 한 Visual Studio와 같은 인기 있는 개발 도구를 통해 웹 브라우저를 통해 배포 됩니다. 인지 5 개발자 팀에 대 한 무료 간단한 후 증가 하 고 팀 수용 하기 위해 어떤 추가 라이선스를 구입할 수 있습니다.
  - TFS 온-프레미스 Windows 서버를 위한 것 이며 로컬 네트워크 또는 해당 네트워크에 VPN 연결을 통해 액세스 됩니다. 주요 이점은 완벽 하 게 빌드 서버의 구성을 제어 하는 필요한 모든 추가 소프트웨어 또는 서비스를 설치할 수입니다. TFS 소규모 팀에 대 한 초급 무료 Express 버전을 있습니다.
 
 TFS 및 VSTS Visual Studio와 긴밀 하 게 통합 하 고 개발자가 여러 버전 제어 및 편안 하 게 하나의 IDE 내에서 CI 작업을 수행할 수 있게 합니다. Team Explorer Everywhere Eclipse 용 플러그 인 (아래 참조)도 제공 됩니다. Mac 용 visual Studio TFS 또는 VSTS에 대 한 모든 지원을 제공 하지 않습니다.
 
-Visual Studio 팀 서비스의 빌드 시스템에 있는 대상 (Android, iOS 및 Windows)를 각 플랫폼에 대 한 빌드 정의 만들 되는 Xamarin 프로젝트에 대 한 직접 지원 합니다. 각 빌드 정의 대 한 적절 한 Xamarin 라이선스 필요 합니다. 로컬 연결 수 이기도, Xamarin 지원 TFS 빌드 서버에이 목적을 위해 Visual Studio Team Services. 이 설치 프로그램 VSTS를 대기 중인 빌드가 로컬 서버에 위임 합니다. 자세한 내용은 참조 [배포 빌드 서버를 구성 하 고](https://msdn.microsoft.com/library/ms181712.aspx)합니다. 또는 Jenkins 또는 팀 도시와 같은 다른 빌드 도구를 사용할 수 있습니다.
+Visual Studio 팀 서비스의 빌드 시스템에 있는 대상 (Android, iOS 및 Windows)를 각 플랫폼에 대 한 빌드 정의 만들 되는 Xamarin 프로젝트에 대 한 직접 지원 합니다. 각 빌드 정의 대 한 적절 한 Xamarin 라이선스 필요 합니다. 로컬 연결 수 이기도, Xamarin 지원 TFS 빌드 서버에이 목적을 위해 Visual Studio Team Services. 이 설치 프로그램 VSTS를 대기 중인 빌드가 로컬 서버에 위임 합니다. 자세한 내용은 참조 [배포 빌드 서버를 구성 하 고](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts)합니다. 또는 Jenkins 또는 팀 도시와 같은 다른 빌드 도구를 사용할 수 있습니다.
 
 Visual Studio, Visual Studio Team Services 및 Team Foundation Server 참조의 모든 관리 ALM (Application Lifecycle) 기능을 완벽 하 게 요약 [애플리케이션 수명 주기 관리 및 Xamarin 앱](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx) msdn 합니다.
 
@@ -107,7 +107,7 @@ VSTS 빌드는 로컬 서버에 위임 됩니다 있도록 Visual Studio Team Se
 
 ### <a name="visual-studio-team-services-and-jenkins"></a>Visual Studio Team Services 및 Jenkins
 
-앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장할 수 있으며 계속 Jenkins CI 빌드에 사용 합니다. 팀 프로젝트의 Git 리포지토리 또는 체크 인할 때는 코드 TFVC에 코드를 푸시할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services를 통해 Jenkins](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins)합니다.
+앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장할 수 있으며 계속 Jenkins CI 빌드에 사용 합니다. 팀 프로젝트의 Git 리포지토리 또는 체크 인할 때는 코드 TFVC에 코드를 푸시할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 참조 [Visual Studio Team Services를 통해 Jenkins](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts)합니다.
 
 [![](intro-to-ci-images/intro04-small.png "앱을 빌드 해 Jenkins를 사용 하는 경우 Visual Studio Team Services 나 Team Foundation Server에 코드를 저장 하 고 계속 Jenkins CI 빌드에 대 한 사용 수 있습니다.")](intro-to-ci-images/intro04.png#lightbox)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935430"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066652"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -28,7 +28,7 @@ Xamarin 라이브 다시 로드를 사용 하면 **XAML를 변경 하 고 다른
 
 ## <a name="requirements"></a>요구 사항
 
-* [Visual Studio 2017 15.7 버전 이상](https://www.visualstudio.com/vs/) 이상으로 **.NET을 사용한 모바일 개발** 작업 합니다.
+* [Visual Studio 2017 15.7 버전 이상](https://visualstudio.microsoft.com/vs/) 이상으로 **.NET을 사용한 모바일 개발** 작업 합니다.
 * [Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/) 이상.
 
 ## <a name="getting-started"></a>시작

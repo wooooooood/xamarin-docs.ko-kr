@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 06/19/2018
-ms.openlocfilehash: f7c5217a9c2d3881ca29094c3186e448975db6a3
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 690329aa1577c66b3aa2794342a8e367477d3a74
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268971"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066925"
 ---
 # <a name="inspector-installation-and-requirements"></a>설치 관리자 및 요구 사항
 
@@ -19,13 +19,13 @@ ms.locfileid: "36268971"
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-1. 다운로드 및 설치 [Visual Studio Enterprise](https://www.visualstudio.com/vs/) 선택 하 고는 **.NET을 사용한 모바일 개발** 작업 합니다.
+1. 다운로드 및 설치 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) 선택 하 고는 **.NET을 사용한 모바일 개발** 작업 합니다.
 1. [로그인](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) 엔터프라이즈 구독할 수 있도록 합니다.
 1. [검사](~/tools/inspector/inspect.md) 위해 자신의 앱!
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. 다운로드 및 설치 [Mac 용 Visual Studio](https://www.visualstudio.com/vs/mac/)합니다.
+1. 다운로드 및 설치 [Mac 용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/)합니다.
 1. [로그인](https://docs.microsoft.com/visualstudio/mac/activation) 엔터프라이즈 구독할 수 있도록 합니다.
 1. [검사](~/tools/inspector/inspect.md) 위해 자신의 앱!
 

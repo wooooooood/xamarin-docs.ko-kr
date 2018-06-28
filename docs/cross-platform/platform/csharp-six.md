@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: e120b917a106d01067e073219bbe2688c2811448
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fffb78d6f2599c231617ed025d41282beffd319b
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33918762"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066457"
 ---
 # <a name="c-6-new-features-overview"></a>C# 6 새 기능 개요
 
@@ -49,7 +49,7 @@ _최신 버전의 C# 언어-버전 6-계속 더 적은 상용구, 향상 된 명
 모노 C# 6 컴파일러는 모노 4.0 이상에 포함 된 [무료로 다운로드할 수](http://www.mono-project.com/download/)합니다.
 Mac 용 visual Studio는 자동으로 시스템에 모노 설치를 업데이트합니다.
 
-Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://www.visualstudio.com/) 코드를 컴파일하려면 C# 6 (선택한 경우에 Windows 용 Xamarin Studio IDE로) 설치 합니다.
+Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://visualstudio.microsoft.com/) 코드를 컴파일하려면 C# 6 (선택한 경우에 Windows 용 Xamarin Studio IDE로) 설치 합니다.
 
 ^ 또는 *[Microsoft 빌드 도구 2015](http://www.microsoft.com/download/details.aspx?id=48159)* 명령에 대 한 명령줄 컴파일 또는 빌드 서버 예입니다.
 

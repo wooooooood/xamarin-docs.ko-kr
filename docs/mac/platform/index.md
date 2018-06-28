@@ -7,16 +7,27 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 539ec976e3ea28aa2e017318022bd102f2c03ae5
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792226"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066886"
 ---
 # <a name="macos-platform-features"></a>macOS 플랫폼 기능
 
 이 섹션의 문서 작업 macOS Xamarin.Mac 응용 프로그램에서의 키, 플랫폼 특정 기능을 설명합니다.
+
+## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[MacOS Mojave 소개](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> Xamarin의 macOS Mojave 지원은 현재 미리 보기로, 것 버그를 포함할 수 있습니다, 기능을 완료 하지는 않으며 변경 될 수 있습니다. 실험용만 사용 합니다.
+
+이 문서에서는 macOS Mojave Xamarin.Mac 응용 프로그램을 빌드할 때 사용 하기 위해 사용할 수 있는의 새로운 기능과 업데이트 된 기능을 간략하게 설명 합니다.
+
+## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[높은 시에라 macOS 소개](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+이 문서는 높은 시에라 macOS에서 새로운 기능과 향상 된 기능을 설명합니다.
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[macOS Sierra 소개](~/mac/platform/introduction-to-macos-sierra/index.md)
 
@@ -30,7 +41,6 @@ Objective C Mac 라이브러리 Xamarin.Mac 프로젝트에 바인딩하는 방�
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[OpenTK 소개](~/mac/platform/opentk.md)
 
 OpenTK (The Open Toolkit)은 고급, 하위 수준 C# 라이브러리 OpenAL, OpenGL 및 OpenCL와 작업을 쉽게 합니다. OpenTK 게임, 과학 응용 프로그램 또는 다른 3D 그래픽을 필요로 하는 프로젝트, 오디오 또는 계산 기능에 사용할 수 있습니다. 이 문서에서는 OpenTK Xamarin.Mac 응용 프로그램에서 사용 하 여에 대 한 간략 한 소개를 제공 합니다.
-
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[Storyboards 소개](~/mac/platform/storyboards/index.md)
 

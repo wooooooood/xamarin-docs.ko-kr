@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d8672a111faf7c45d9d8eb7f9d7dd5f993c578a1
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787548"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067016"
 ---
 # <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>Ios 11 Xamarin.iOS를 사용 하 여 빌드한 앱
 
@@ -25,7 +25,7 @@ ms.locfileid: "34787548"
 
 > [!IMPORTANT]
 > Xamarin Studio Xcode 9로 작동 하지 않습니다.
-> [Mac 용 Visual Studio를 업그레이드 하세요.](https://www.visualstudio.com/vs/)합니다.
+> [Mac 용 Visual Studio를 업그레이드 하세요.](https://visualstudio.microsoft.com/vs/)합니다.
 
 <a name="Reporting-Bugs" />
 
