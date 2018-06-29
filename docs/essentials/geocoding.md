@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321446"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080328"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지 오 코딩
 
@@ -61,7 +61,7 @@ try
     var location = locations?.FirstOrDefault();
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -73,6 +73,8 @@ catch (Exception ex)
     // Handle exception that may have occured in geocoding
 }
 ```
+
+고도 항상 사용할 수 없습니다. 를 사용할 수 없는 경우는 `Altitude` 속성 수 `null` 값 0이 될 수도 있습니다. 고도 사용할 수 있는 바다 수준 위의 위에 미터는 값은입니다. 
 
 가져오기 [placemarks](xref:Xamarin.Essentials.Placemark) 기존의 좌표 집합에 대 한:
 
@@ -111,6 +113,10 @@ catch (Exception ex)
     // Handle exception that may have occurred in geocoding
 }
 ```
+
+## <a name="distance-between-two-locations"></a>두 위치 사이의 거리
+
+[ `Location` ](xref:Xamarin.Essentials.Location) 및 [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) 클래스 두 위치 사이의 거리를 계산 하는 메서드를 정의 합니다. 문서 참조 [ **Xamarin.Essentials: 지리적 위치** ](geolocation.md#calculate-distance) 예제입니다.
 
 ## <a name="api"></a>API
 

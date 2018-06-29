@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: d5dfdcb11754b1e08e7768a17003a14117e795ea
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 11749107403fc99e1d49b63ee3b50ff105abaa57
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783193"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080289"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
@@ -88,7 +88,7 @@ try
 
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -105,6 +105,8 @@ catch (Exception ex)
 }
 ```
 
+고도 항상 사용할 수 없습니다. 를 사용할 수 없는 경우는 `Altitude` 속성 수 `null` 값 0이 될 수도 있습니다. 고도 사용할 수 있는 바다 수준 위의 위에 미터는 값은입니다. 
+
 현재 장치를 쿼리하려면 [위치](xref:Xamarin.Essentials.Location) 좌표는 `GetLocationAsync` 사용할 수 있습니다. 전체를 전달 하는 것이 좋습니다 `GeolocationRequest` 및 `CancellationToken` 장치의 위치를 가져오는 데 약간의 시간이 걸릴 수 있기 때문입니다.
 
 ```csharp
@@ -115,7 +117,7 @@ try
 
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -175,6 +177,22 @@ catch (Exception ex)
 | Android | 0-100 |
 | iOS | ~0 |
 | UWP | < = 10 |
+
+<a name="calculate-distance" />
+
+## <a name="distance-between-two-locations"></a>두 위치 사이의 거리
+
+[ `Location` ](xref:Xamarin.Essentials.Location) 및 [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) 클래스 정의 `CalculateDistance` 두 개의 지리적 위치 사이의 거리를 계산에 사용할 수 있는 메서드가 있습니다. 이 계산 거리의 계정으로도 또는 다른 경로 사용 하지 않는 및이 지구 표면에 따라 두 점 사이의 최단 거리 단순히 라고도 _좋은 원 거리_ 또는 등과,는 "crow 덮어쓰는." 다른 이름으로 거리
+
+예를 들면 다음과 같습니다.
+
+```csharp
+Location boston = new Location(42.358056, -71.063611);
+Location sanFrancisco = new Location(37.783333, -122.416667);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
+```
+
+`Location` 생성자에 해당 순서로 위도 및 경도 인수가 있습니다. 위도 값은 적도 북쪽 및 자오선의 동쪽 양의 경도 값이 양수입니다. 마지막 인수를 사용 하 여 `CalculateDistance` 마일 또는 킬로미터 지정할 수 있습니다. `Location` 클래스도 정의 `KilometersToMiles` 및 `MilesToKilometers` 두 단위 간의 변환 하기 위한 메서드.
 
 ## <a name="api"></a>API
 

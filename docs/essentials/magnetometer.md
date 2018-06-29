@@ -5,12 +5,12 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 78ed943a0fa7ca0cb249a4ac030ea6b52dcfb537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782939"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080494"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
 
@@ -77,6 +77,8 @@ Microteslas 모든 데이터가 반환 됩니다.
 - **게임** – (UI 스레드에서 반환 하는 보장 되지) 게임에 대 한 적합 한 비율입니다.
 - **보통** – 급여 화면 방향 변경을에 적합 합니다.
 - **Ui** – 일반 사용자 인터페이스에 대 한 적합 한 비율입니다.
+
+이벤트 처리기는 UI 스레드에서 실행 하 고 이벤트 처리기가 사용자 인터페이스 요소에 액세스 해야 하는 경우 사용할 보장 되지 않습니다는 [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) 메서드를 UI 스레드에서 해당 코드를 실행 합니다.
 
 ## <a name="api"></a>API
 

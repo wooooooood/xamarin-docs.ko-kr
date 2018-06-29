@@ -5,12 +5,12 @@ ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 830b96bcc21397047cb5aaacb5c568bc2ee863c4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3060d56e14fb0d3801a96ec0fe6e24c9efda4dac
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782374"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080315"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 디스플레이 정보
 
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-**DeviceDisplay** 클래스도 노출 및 이벤트를 구독할 수 있는 화면 메트릭이 변경 될 때마다 이벤트를 트리거하는:
+**DeviceDisplay** 클래스도 모든 화면 메트릭이 변경 될 때마다 트리거되는 구독할 수 있는 이벤트를 노출 합니다.
 
 ```csharp
 public class ScreenMetricsTest
@@ -61,7 +61,7 @@ public class ScreenMetricsTest
         DeviceDisplay.ScreenMetricsChanaged += OnScreenMetricsChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChanagedEventArgs  e)
+    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
     {
         // Process changes
         var metrics = e.Metrics;

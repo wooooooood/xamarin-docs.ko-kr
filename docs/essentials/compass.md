@@ -5,12 +5,12 @@ ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 30ef4c7c155b09c06c8bc36404b92c2a91b7eb0d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 63818014a9b3bdbef479055cbbcfbf8d348080fc
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782296"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080501"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
 
@@ -74,6 +74,8 @@ public class CompassTest
 - **게임** – (UI 스레드에서 반환 하는 보장 되지) 게임에 대 한 적합 한 비율입니다.
 - **보통** – 급여 화면 방향 변경을에 적합 합니다.
 - **Ui** – 일반 사용자 인터페이스에 대 한 적합 한 비율입니다.
+
+이벤트 처리기는 UI 스레드에서 실행 하 고 이벤트 처리기가 사용자 인터페이스 요소에 액세스 해야 하는 경우 사용할 보장 되지 않습니다는 [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) 메서드를 UI 스레드에서 해당 코드를 실행 합니다.
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 사항
 

@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 5fec06fd6f0c13a75040d940a11811ef97c3bcc3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782741"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080486"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,8 +44,11 @@ Android, iOS 및 UWP 고유의 운영 체제 및 플랫폼 개발자 Xamarin을 
 * [지리적 위치](geolocation.md?context=xamarin/xamarin-forms) – 장치의 GPS 위치를 검색 합니다.
 * [자이로스코프가](gyroscope.md?context=xamarin/xamarin-forms) – 장치의 세 가지 기본 축 회전 각도 추적 합니다.
 * [지자기 센터](magnetometer.md?context=xamarin/xamarin-forms) – 지표의 자기 필드를 기준으로 장치의 방향을 검색 합니다.
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – 응용 프로그램의 주 스레드에서 코드를 실행 합니다. 
 * [브라우저를 열고](open-browser.md?context=xamarin/xamarin-forms) – 빠르고 쉽게 특정 웹 사이트에 브라우저를 엽니다.
+* [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) – 세 가지 차원 공간에서 장치의 방향을 검색 합니다.
 * [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) -전화 걸기를 열려면 합니다.
+* [전원](power.md?context=xamarin/xamarin-forms) – 장치의 에너지 보호기 상태를 가져옵니다.
 * [기본 설정](preferences.md?context=xamarin/xamarin-forms) – 쉽고 빠르게 영구 기본 설정을 추가 합니다.
 * [화면 잠금](screen-lock.md?context=xamarin/xamarin-forms) –은 장치 화면 절전 모드 해제 상태로 유지 합니다.
 * [안전한 저장](secure-storage.md?context=xamarin/xamarin-forms) – 안전 하 게 데이터를 저장 합니다.
