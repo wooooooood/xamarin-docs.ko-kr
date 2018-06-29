@@ -1,5 +1,5 @@
 ---
-title: MacOS 시에라 소개
+title: MacOS Mojave 소개
 description: 이 문서에 높은 수준의 어떤 Xamarin 미리 보기에 대 한 릴리스 현재 C# 바인딩을 제공 macOS Mojave에 새로 추가 되거나 업데이트 된 기능의 개요를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: b711cc92680e94734f0077f2aa03c1d32944af09
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 810614bc5877b0bfa6e5295fac507da76af0b797
+ms.sourcegitcommit: 4939748d537cbb1934a3b5b22add39ef3d9aa64d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/28/2018
-ms.locfileid: "37067343"
+ms.locfileid: "37091534"
 ---
 # <a name="introduction-to-macos-mojave"></a>MacOS Mojave 소개
 

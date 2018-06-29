@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: 419addde14d5be99833b4611a4af2a1be8756b9d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6c2fe10b9b29901dfbb6173df131d093fe726bff
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781480"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066954"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 설치
 
@@ -36,7 +36,7 @@ Xamarin을 설치하고 사용하기 위한 필수 구성 요소에 대한 자�
 Xamarin은 새로운 Visual Studio 2017 설치의 일부로 설치할 수 있습니다.
 이렇게 하려면 다음 단계를 따릅니다.
 
-1. [Visual Studio](https://www.visualstudio.com/vs/) 페이지에서 Visual Studio 2017 Community, Visual Studio Professional 또는 Visual Studio Enterprise를 다운로드합니다(아래쪽에 다운로드 링크가 제공됨).
+1. [Visual Studio](https://visualstudio.microsoft.com/vs/) 페이지에서 Visual Studio 2017 Community, Visual Studio Professional 또는 Visual Studio Enterprise를 다운로드합니다(아래쪽에 다운로드 링크가 제공됨).
 
 2. 다운로드한 패키지를 두 번 클릭하여 설치를 시작합니다.
 

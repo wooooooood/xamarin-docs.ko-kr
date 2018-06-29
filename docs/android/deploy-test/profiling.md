@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/03/2018
-ms.openlocfilehash: e62ac290423db1c18e7e50d55b2b3550f99d1533
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: fd9ebc7922428d2779e6985379c3118274a46aff
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34549270"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066665"
 ---
 # <a name="profiling-android-apps"></a>Android 앱 프로파일링
 
@@ -30,7 +30,7 @@ ms.locfileid: "34549270"
 Xamarin Profiler는 IDE 내에서 Xamarin 앱을 프로파일링하기 위해 Visual Studio 및 Mac용 Visual Studio와 통합되는 독립 실행형 응용 프로그램입니다. Xamarin Profiler 사용에 대한 자세한 내용은 [Xamarin Profiler](~/tools/profiler/index.md)를 참조하세요.
 
 > [!NOTE]
-> Windows의 Visual Studio Enterprise 또는 Mac용 Visual Studio에서 Xamarin Profiler 기능을 잠금 해제하려면 [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) 구독자여야 합니다.
+> Windows의 Visual Studio Enterprise 또는 Mac용 Visual Studio에서 Xamarin Profiler 기능을 잠금 해제하려면 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 구독자여야 합니다.
  
 ## <a name="android-studio-profiler"></a>Android Studio Profiler
 

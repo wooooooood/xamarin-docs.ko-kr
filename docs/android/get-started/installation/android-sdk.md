@@ -6,13 +6,13 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: 0af0ef56630103498041ad61f7c5ce900358b055
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: 6a3f3f79e81339cc903d85081ca173a7ac707f6a
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732855"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935479"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -280,6 +280,5 @@ SDK만 설치하려면 플랫폼 옆에 있는 상자를 한 번 클릭합니다
 
 - [Android SDK Tools에 대한 변경 내용](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Android API 수준 이해](~/android/app-fundamentals/android-api-levels.md)
-- [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

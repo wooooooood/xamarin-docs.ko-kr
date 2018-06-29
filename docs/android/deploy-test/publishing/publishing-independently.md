@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: f7ba0620a4639ff62e2d75d7cf8f02fcc01faac5
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: 2cb2167f534251e15455e11b6a2c85f53fb48b8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33113475"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067003"
 ---
 # <a name="publishing-independently"></a>독립적으로 게시
 
@@ -28,7 +28,7 @@ Xamarin.Android 앱의 개발, 배포 및 보급에 4가지 라이선스를 사�
 
 -   **Visual Studio Enterprise** &ndash; (Windows에만 해당) 모든 규모의 팀용. 이 라이선스에는 엔터프라이즈 기능, 표준 또는 클라우드 구독이 포함됩니다.
 
-Community Edition을 다운로드하거나 Professional 및 Enterprise Edition 구매에 대한 자세한 내용을 알아보려면 [visualstudio.com](https://www.visualstudio.com/xamarin/)을 방문하세요.
+Community Edition을 다운로드하거나 Professional 및 Enterprise Edition 구매에 대한 자세한 내용을 알아보려면 [visualstudio.com](https://visualstudio.microsoft.com/xamarin/)을 방문하세요.
 
 
 ## <a name="allow-installation-from-unknown-sources"></a>알 수 없는 원본에서의 설치 허용
