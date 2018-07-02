@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 444559672f25b13b7d3a769d6de4bd6384174965
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268890"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066470"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -269,7 +269,7 @@ Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 및 이전 버전
 
-Visual Studio 2015를 완전히 제거하려면 [visualstudio.com에서 Support Answer](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/)를 사용합니다.
+Visual Studio 2015를 완전히 제거하려면 [visualstudio.com에서 Support Answer](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/)를 사용합니다.
 
 **제어판**을 통해 Windows 컴퓨터에서 Xamarin을 제거할 수 있습니다. 아래 그림과 같이 **프로그램 및 기능** 또는 **프로그램 > 프로그램 제거**로 이동합니다.
 
