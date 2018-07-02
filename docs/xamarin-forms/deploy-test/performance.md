@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: bcc265c4d8410bb1aa2305f8a137c96a63c60fae
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 37d99add473203d90cb1b420536827e34e834a2b
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847721"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209325"
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 성능
 
@@ -59,7 +59,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 ## <a name="choose-the-correct-layout"></a>올바른 레이아웃 선택
 
-여러 자식 요소를 표시할 수 있지만 단일 자식만 있어 불필요한 레이아웃입니다. 예를 들어 다음 코드 예제는 단일 자식이 있는 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)을 보여줍니다.
+여러 자식 요소를 표시할 수 있지만 단일 자식만 있어 불필요한 레이아웃입니다. 예를 들어 다음 코드 예제는 단일 자식이 있는 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)을 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -210,7 +210,7 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 
 페이지의 요소 수를 줄이면 페이지 렌더러의 속도가 더 빨라집니다. 이는 크게 두 가지 방법으로 구현할 수 있습니다. 첫 번째는 표시되지 않는 요소를 숨기는 것입니다. 각 요소의 [`IsVisible`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/) 속성은 해당 요소가 시각적 트리의 일부가 되어야 하는지 여부를 결정합니다. 따라서 요소가 다른 요소 뒤에 숨겨져 있어 표시되지 않을 경우 해당 요소를 제거하거나 `IsVisible` 속성을 `false`로 설정합니다.
 
-두 번째 방법은 불필요한 요소를 제거하는 것입니다. 예를 들어 다음 코드 예제는 일련의 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 요소를 표시하는 페이지 레이아웃을 보여줍니다.
+두 번째 방법은 불필요한 요소를 제거하는 것입니다. 예를 들어 다음 코드 예제는 일련의 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 요소를 표시하는 페이지 레이아웃을 보여 줍니다.
 
 ```xaml
 <ContentPage.Content>
@@ -314,7 +314,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 }
 ```
 
-`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 사용자 지정 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 도입하면 메모리 누수의 영향을 받지 않으며 효율적으로 작동하는 사용자 지정 렌더러를 만들 수 있습니다.
+`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 요소 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야만 합니다. 이러한 방식을 도입하면 메모리 누수의 영향을 받지 않으며 효율적으로 작동하는 사용자 지정 렌더러를 만들 수 있습니다.
 
 사용자 지정 렌더러에 대한 자세한 내용은 [각 플랫폼에서 컨트롤 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)을 참조하세요.
 

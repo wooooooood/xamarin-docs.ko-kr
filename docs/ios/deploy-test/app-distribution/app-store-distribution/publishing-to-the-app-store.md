@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 489d9fa569b083f5cb655dc503ab4fa551810b6d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785702"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209480"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
+
+> [!IMPORTANT]
+> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
 
 Apple은 응용 프로그램을 모든 iOS 장치에 배포하기 위해 *앱 스토어*를 통해 앱을 게시해야 하므로 앱 스토어를 iOS 응용 프로그램을 위한 원 스톱 쇼핑 위치로 만들었습니다. 여러 유형의 응용 프로그램 개발자는 스토어에 있는 50만 개가 넘는 응용 프로그램과 함께 이 단일 배포 지점에서 엄청난 성공을 거두었습니다. 앱 스토어는 턴키 솔루션으로, 앱 개발자에게 배포 및 결제 시스템을 모두 제공합니다.
 
@@ -231,7 +234,7 @@ Visual Studio용 Xamarin 플러그 인은 현재 iOS 응용 프로그램을 앱 
 1. **iOS 번들 서명**을 선택하고 프로비전 프로필을 앱 스토어 프로비전 프로필로 변경합니다.
 
     ![](publishing-to-the-app-store-images/ipa01.png "iOS 번들 서명을 선택하고 프로비전 프로필을 앱 스토어 프로비전 프로필로 변경")
-1. **iOS IPA 옵션**을 선택하고 **구성** 드롭다운 목록에서 **임시**를 선택합니다(임시가 표시되지 않으면 대신 **릴리스** 선택).
+1. **iOS IPA 옵션> 구성> Ad-Hoc** (**Ad-Hoc**이 선택 사항이 아닌 경우 대신 **Release**을 선택)하고 IPA 파일 작성의 확인란을 선택합니다.
 
     ![](publishing-to-the-app-store-images/imagevs02.png "구성 드롭다운 목록에서 임시 선택")
 

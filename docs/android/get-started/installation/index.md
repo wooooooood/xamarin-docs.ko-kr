@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Android 설치 및 설정
+description: Visual Studio에서 작동하도록 Xamarin.Android를 설치하고 구성하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 4BE549B8-5696-2BA7-DA32-8C0EE90A879D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
-ms.openlocfilehash: b2f83c8f8ab6ab730a586b30394454f6bf6f6ba9
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/22/2018
+ms.openlocfilehash: 5991c907b85188581db105a8db9d17460954f56f
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33947510"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935492"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -32,7 +33,7 @@ Visual Studio에는 Google의 독립 실행형 Android SDK Manager를 대체하�
 
 ## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)
 
-이 아티클에서는 Xamarin.Android 응용 프로그램을 테스트하고 디버깅하기 위해 Google Android Emulator를 설정하는 방법을 설명합니다.
+이 아티클에서는 Xamarin.Android 응용 프로그램을 테스트하고 설정하기 위해 Android Emulator를 디버깅하는 방법을 설명합니다.
 
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
 

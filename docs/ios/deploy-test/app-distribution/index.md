@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 83c58fa430a0cf21e8b86e56b9dea04b3cad6d82
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 815277e9a4f9384d92bf17376f426cacd40dbc9f
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784770"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209442"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Xamarin.iOS 앱 배포 개요
 
@@ -35,6 +35,9 @@ Xamarin.iOS에서 지원하는 iOS 응용 프로그램을 배포하기 위해 Ap
 <a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>앱 스토어 배포
+
+> [!IMPORTANT]
+> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
 
 iOS 응용 프로그램이 iOS 장치의 소비자에게 배포되는 기본 방법입니다. 앱 스토어에 제출된 모든 앱에는 Apple의 승인이 필요합니다.
 

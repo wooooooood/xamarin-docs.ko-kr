@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d5cf15b8ecd225fb75a3cfa0017cb84bc13cce1b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 444559672f25b13b7d3a769d6de4bd6384174965
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782023"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268890"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -27,7 +27,7 @@ ms.locfileid: "34782023"
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [검사기 및 Workbooks](#uninstallworkbooks)
+- [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
 - [설치 프로그램](#uninstallinstaller)
 
@@ -146,9 +146,9 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-### <a name="uninstall-workbooks-and-inspector"></a>Workbooks 및 Inspector 제거
+### <a name="uninstall-workbooks"></a>통합 문서 제거
 
-Xamarin 검사기 및 Workbooks 버전 1.2.2 이상을 제거하려면 터미널에서 다음 명령을 사용합니다.
+Xamarin Workbooks 버전 1.2.2 이상을 제거하려면 터미널에서 다음 명령을 사용합니다.
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall

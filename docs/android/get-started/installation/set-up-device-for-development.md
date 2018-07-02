@@ -6,13 +6,13 @@ ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2017
-ms.openlocfilehash: 16716db67067f07166fa35df7e539cdf3ed1de5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/22/2018
+ms.openlocfilehash: 838e0df80334d6865466b189a65a3f7c590bb590
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30768284"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935362"
 ---
 # <a name="set-up-device-for-development"></a>개발용 장치 설정
 
@@ -112,7 +112,7 @@ Windows 7에서 드라이버를 설치하려면:
 
 6.  **컴퓨터에서 드라이버 소프트웨어 찾아보기**를 선택하고 **다음**을 클릭합니다.
 
-7.  **찾아보기**를 클릭하고 USB 드라이버 폴더를 찾습니다. Google USB 드라이버는 **[Android SDK install path]\extras\google\usb_driver**에 위치합니다.
+7.  **찾아보기**를 클릭하고 USB 드라이버 폴더를 찾습니다. Google USB 드라이버는 **[Android SDK 설치 경로]\extras\google\usb_driver**에 위치합니다.
 
 8.  **다음**을 클릭하여 드라이버를 설치합니다.
 

@@ -6,13 +6,13 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: 888f126d3e58b0300ba7ce3ad1cb5a8001fc545a
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a7c1aeafd94d7e2639617cda13312ee8a09e2c94
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935330"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 장치 관리
 
@@ -28,7 +28,7 @@ _이 문서에서는 Android Device Manager를 사용하여 물리적 Android �
 
 [![장치 탭에 있는 Android Device Manager의 스크린샷](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
 
-Android Device Manager를 사용하여 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)에서 실행되는 AVD(_Android 가상 장치_)를 만들고 구성합니다.
+Android Device Manager를 사용하여 [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)에서 실행되는 AVD(_Android 가상 장치_)를 만들고 구성합니다.
 각 AVD는 실제 Android 장치를 시뮬레이션하는 에뮬레이터 구성입니다. 이를 통해 여러 실제 Android 장치를 시뮬레이션하는 다양한 구성에서 앱을 실행하고 테스트할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
@@ -48,7 +48,7 @@ Android Device Manager를 사용하려면 다음이 필요합니다.
 
 [![도구 메뉴에서 실행](device-manager-images/win/04-tools-menu-sml.png)](device-manager-images/win/04-tools-menu.png#lightbox)
 
-실행 시 다음과 같은 오류 대화 상자가 표시될 경우 해결 방법 지침은 [에뮬레이터 설정 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)을 참조하세요.
+실행 시 다음과 같은 오류 대화 상자가 표시될 경우 해결 방법 지침은 [Android Emulator 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)을 참조하세요.
 
 ![Android SDK 인스턴스 오류](device-manager-images/win/32-sdk-error.png)
 
@@ -165,7 +165,7 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
     [![탐색기에 표시 클릭 후 결과](device-manager-images/win/24-reveal-in-explorer-sml.png)](device-manager-images/win/24-reveal-in-explorer.png#lightbox)
 
--   **공장 재설정** &ndash; 선택된 장치를 기본 설정으로 재설정하여 장치가 실행 중일 때 사용자가 변경한 장치의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 장치에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **사용자 데이터 지우기**를 클릭하여 재설정을 확인합니다.
+-   **공장 재설정** &ndash; 선택된 장치를 기본 설정으로 재설정하여 장치가 실행 중일 때 사용자가 변경한 장치의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 장치에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **사용자 데이터 지우기**를 클릭하여 재설정을 확인합니다.
 
 -   **삭제** &ndash; 선택된 가상 장치를 영구적으로 삭제합니다.
     장치 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 장치를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
@@ -181,7 +181,7 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 > 이 가이드는 Mac용 Visual Studio에만 적용됩니다.
 Xamarin Studio는 Android Device Manager와 호환되지 않습니다.
 
-Android Device Manager를 사용하여 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)에서 실행되는 AVD(*Android 가상 장치*)를 만들고 구성합니다.
+Android Device Manager를 사용하여 [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)에서 실행되는 AVD(*Android 가상 장치*)를 만들고 구성합니다.
 각 AVD는 실제 Android 장치를 시뮬레이션하는 에뮬레이터 구성입니다. 이를 통해 여러 실제 Android 장치를 시뮬레이션하는 다양한 구성에서 앱을 실행하고 테스트할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
@@ -320,15 +320,113 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 -----
 
+## <a name="troubleshooting"></a>문제 해결
+
+다음 섹션에서는 Android Device Manager를 사용하여 가상 장치를 구성할 때 발생할 수 있는 문제를 진단하고 해결하는 방법을 설명합니다.
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+### <a name="android-sdk-in-non-standard-location"></a>표준이 아닌 위치의 Android SDK
+
+일반적으로 Android SDK는 다음 위치에 설치됩니다.
+
+**C:\\Program Files (x86)\\Android\\android-sdk**
+
+이 위치에 SDK가 설치되지 않은 경우 Android Device Manager를 실행할 때 이 오류가 나타날 수 있습니다.
+
+![Android SDK 인스턴스 오류](troubleshooting-images/win/01-sdk-error.png)
+
+이 문제를 해결하려면 다음을 수행합니다.
+
+1. Windows 바탕 화면에서 **C:\\Users\\*username*\\AppData\\Roaming\\XamarinDeviceManager**로 이동합니다.
+
+    ![Android Device Manager 로그 파일 위치](troubleshooting-images/win/02-log-files.png)
+
+2. 로그 파일 중 하나를 두 번 클릭하여 열고 **구성 파일 경로**를 찾습니다. 예:
+
+    [![로그 파일의 구성 파일 경로](troubleshooting-images/win/03-config-file-path-sml.png)](troubleshooting-images/win/03-config-file-path.png#lightbox)
+
+3. 이 위치로 이동하고 **user.config**를 두 번 클릭하여 엽니다. 
+
+4. **user.config**에서 **&lt;UserSettings&gt;** 요소를 찾아 **AndroidSdkPath** 특성을 추가합니다. 컴퓨터에서 Android SDK를 설치한 경로에 이 특성을 저장하고 파일을 저장합니다. 예를 들어 Android SDK가 **C:\\Programs\\Android\\SDK**에 설치된 경우 **&lt;UserSettings&gt;** 는 다음과 같습니다.
+        
+    ```xml
+    <UserSettings SdkLibLastWriteTimeUtcTicks="636409365200000000" AndroidSdkPath="C:\Programs\Android\SDK" />
+    ```
+
+**user.config**를 이와 같이 변경한 후에는 Android Device Manager를 실행할 수 있어야 합니다.
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+
+이 문제를 해결하려면 다음과 같이 합니다.
+
+1. Android Device Manager에서 AVD를 선택합니다.
+
+2. 추가 옵션 메뉴에서 **탐색기에 표시**를 클릭합니다.
+
+3. **스냅숏 > default_boot**로 이동합니다.
+
+4. **snapshot.pb** 파일을 삭제합니다.
+
+    ![snapshot.pb 파일의 위치](troubleshooting-images/win/05-delete-snapshot.png)
+
+5. AVD를 다시 시작합니다. 
+
+이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+
+이 문제를 해결하려면 다음과 같이 합니다.
+
+1. Android Device Manager에서 AVD를 선택합니다.
+
+2. 추가 옵션 메뉴에서 **Finder에 표시**를 클릭합니다.
+
+3. **스냅숏 > default_boot**로 이동합니다.
+
+4. **snapshot.pb** 파일을 삭제합니다.
+
+    [![snapshot.pb 파일의 위치](troubleshooting-images/mac/02-delete-snapshot-sml.png)](troubleshooting-images/mac/02-delete-snapshot.png#lightbox)
+
+5. AVD를 다시 시작합니다. 
+
+이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
+
+-----
+
+### <a name="generating-a-bug-report"></a>버그 보고서 생성
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **버그 보고서 생성**을 선택하여 버그 보고서를 제출하세요.
+
+[![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](troubleshooting-images/win/04-bug-report-sml.png)](troubleshooting-images/win/04-bug-report.png#lightbox)
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 **도움말 > 버그 보고서 생성**을 클릭하여 버그 보고서를 제출하세요.
+
+[![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](troubleshooting-images/mac/01-bug-report-sml.png)](troubleshooting-images/mac/01-bug-report.png#lightbox)
+
+
+-----
+
 ## <a name="summary"></a>요약
 
-이 가이드에서는 Mac용 Visual Studio 및 Visual Studio Tools for Xamarin에서 사용할 수 있는 Android Device Manager를 소개했습니다. Android 에뮬레이터를 시작 및 중지하고, 실행할 AVD(Android 가상 장치)를 선택하고, 새 가상 장치를 만드는 기능과 같은 필수 기능과 가상 장치를 편집하는 방법을 설명했습니다. 또한 추가 사용자 지정을 위해 프로필 하드웨어 속성을 편집하는 방법을 설명 했습니다.
+이 가이드에서는 Mac용 Visual Studio 및 Visual Studio Tools for Xamarin에서 사용할 수 있는 Android Device Manager를 소개했습니다. Android 에뮬레이터를 시작 및 중지하고, 실행할 AVD(Android 가상 장치)를 선택하고, 새 가상 장치를 만드는 기능과 같은 필수 기능과 가상 장치를 편집하는 방법을 설명했습니다. 추가 사용자 지정에 대한 프로필 하드웨어 속성을 편집하는 방법을 설명하고 일반적인 문제에 대한 문제 해결 팁을 제공했습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [Android SDK Tools에 대한 변경 내용](~/android/troubleshooting/sdk-cli-tooling-changes.md)
-- [Android SDK 에뮬레이터를 사용하여 디버깅](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)
 - [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

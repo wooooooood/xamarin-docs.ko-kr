@@ -7,21 +7,24 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 42d287285fc9b8842dfb0c86b627d1d5c84189e1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b763407797cf635908cf34cce4f1a6a06325000d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784818"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209261"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 iTunes 앱 스토어를 사용하여 사용자에게 앱을 배포하는 것입니다. 이는 응용 프로그램을 배포하는 가장 일반적인 방법입니다. Apple의 앱 스토어에 응용 프로그램을 게시하면 전 세계의 소비자가 해당 응용 프로그램을 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> iTunes Connect를 사용하는 것이 **중요**합니다. 따라서 앱 스토어에 앱을 게시하려면 사용자가 개인 또는 조직의 Apple Developer Program에 **반드시** 속해야 합니다. Apple Developer **Enterprise** Program의 구성원인 경우 이 페이지의 단계를 수행할 수 없습니다.
+> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
 
 응용 프로그램을 배포하는 경우와 마찬가지로 응용 프로그램을 배포하려면 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 장치에 대한 정보도 포함되어 있습니다.
+
+> [!IMPORTANT]
+> iTunes Connect를 사용하는 것이 **중요**합니다. 따라서 앱 스토어에 앱을 게시하려면 사용자가 개인 또는 조직의 Apple Developer Program에 **반드시** 속해야 합니다. Apple Developer **Enterprise** Program의 구성원인 경우 이 페이지의 단계를 수행할 수 없습니다.
 
 <a name="provisioning" />
 

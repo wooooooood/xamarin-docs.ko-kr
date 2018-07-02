@@ -6,13 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: 1eb8d4ec9ad60f0f9e81676920df4d950a875088
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732608"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066444"
 ---
 # <a name="windows-installation"></a>Windows 설치
 
@@ -68,9 +68,9 @@ Google Android SDK Manager를 사용하여 최대 Android SDK 도구 패키지�
 
 Xamarin Android SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요.
 
-### <a name="google-android-emulator"></a>Google Android Emulator
+### <a name="android-emulator"></a>Android 에뮬레이터
 
-[Google Android Emulator](https://developer.android.com/studio/run/emulator)는 Xamarin.Android 앱을 개발하고 테스트하는 유용한 도구입니다. 예를 들어 태블릿과 같은 물리적 장치가 개발 중에 지원되지 않거나 개발자가 코드를 커밋하기 전에 해당 컴퓨터에서 일부 통합 테스트를 실행하려고 할 수 있습니다.
+[Android Emulator](https://developer.android.com/studio/run/emulator)는 Xamarin.Android 앱을 개발하고 테스트하는 유용한 도구입니다. 예를 들어 태블릿과 같은 물리적 장치가 개발 중에 지원되지 않거나 개발자가 코드를 커밋하기 전에 해당 컴퓨터에서 일부 통합 테스트를 실행하려고 할 수 있습니다.
 
 컴퓨터에서 Android 장치를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
 
@@ -83,10 +83,10 @@ x86 기반 컴퓨터에서 개발하는 경우 x86 아키텍처에 최적화된 
 1. Microsoft의 Hyper-V &ndash; Windows 4월 10일 업데이트를 실행하는 컴퓨터에서 지원됩니다.
 2. Intel의 HAXM(Hardware Accelerated Execution Manager) &ndash; OS X, macOS 또는 이전 버전의 Windows를 실행하는 x86 컴퓨터에서 지원됩니다.
 
-Google Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md) 가이드를 참조하세요.
+Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md) 가이드를 참조하세요.
 
 > [!NOTE]
-> 이전 버전의 Windows에서 HAXM은 Hyper-V와 호환되지 않습니다. 이 시나리오에서는 [Hyper-V를 사용하지 않도록 설정](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v)하거나 x86 최적화를 사용하지 않는 느린 에뮬레이터 이미지를 사용해야 합니다.
+> 이전 버전의 Windows에서 HAXM은 Hyper-V와 호환되지 않습니다. 이 시나리오에서는 [Hyper-V를 사용하지 않도록 설정](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv)하거나 x86 최적화를 사용하지 않는 느린 에뮬레이터 이미지를 사용해야 합니다.
 
 
 <a name="device" />
@@ -118,7 +118,7 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Visual Studio 다운로드](https://www.visualstudio.com/vs/)
+- [Visual Studio 다운로드](https://visualstudio.microsoft.com/vs/)
 - [Visual Studio Tools for Xamarin 설치](~/cross-platform/get-started/installation/windows.md)
 - [시스템 요구 사항](~/cross-platform/get-started/requirements.md)
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)

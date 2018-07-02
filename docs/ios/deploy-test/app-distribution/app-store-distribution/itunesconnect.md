@@ -7,15 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: b54313668a2cb87a6cce0b8c519a06247524df81
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 05492f866bb083326ef1eccb8db3d624d8dc4806
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209312"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
-_이 문서에서는 앱 스토어에서 배포를 위해 릴리스될 수 있도록 iTunes Connect에서 Xamarin.iOS 응용 프로그램을 설정하고 유지 관리하는 데 필요한 단계를 설명합니다._
+> [!IMPORTANT]
+> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
 
 iTunes Connect는 특히 앱 스토어에서 iOS 응용 프로그램을 관리하는 웹 기반 도구 모음입니다. 먼저 iTunes Connect에서 Xamarin.iOS 응용 프로그램을 제대로 설정하고 구성한 후에, 이를 검토하여 궁극적으로 앱 스토어에서 판매하거나 무료 앱으로 릴리스할 수 있도록 Apple에 제출해야 합니다.
 
@@ -61,7 +63,7 @@ iOS 응용 프로그램을 iTunes Connect에 추가하려면 **팀 에이전트*
 1. **My Apps**를 클릭합니다.
 
     [![](itunesconnect-images/add01.png "My Apps 클릭")](itunesconnect-images/add01.png#lightbox)
-2. 왼쪽 위 모서리에서 **+**를 클릭하고 **새 iOS 앱**을 선택합니다.
+2. 왼쪽 위 모서리에서 **+** 를 클릭하고 **새 iOS 앱**을 선택합니다.
 
     [![](itunesconnect-images/add02.png "새 iOS 앱 추가")](itunesconnect-images/add02.png#lightbox)
 3. iTunes Connect에서 **새 iOS 앱** 대화 상자가 표시됩니다.
