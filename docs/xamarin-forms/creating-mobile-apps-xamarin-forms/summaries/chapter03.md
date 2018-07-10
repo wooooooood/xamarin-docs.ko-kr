@@ -1,54 +1,54 @@
 ---
-title: 요약 Chapter 3입니다. 텍스트를 자세하게
-description: 'Xamarin.Forms를 사용 하 여 모바일 응용 프로그램 만들기: 3 장 요약 합니다. 텍스트를 자세하게'
+title: 요약 3 장입니다. 텍스트 더 자세히
+description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 3 장 요약 합니다. 텍스트 더 자세히'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: f0e6063b6ce6038a6f6def67c27347ca024e72f6
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 5843147b82837f1a8677d8be48a8e1ca92db1a75
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241489"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935418"
 ---
-# <a name="summary-of-chapter-3-deeper-into-text"></a>요약 Chapter 3입니다. 텍스트를 자세하게
+# <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
 
-이 장에서 설명는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 서식 지정 및 색, 글꼴을 포함 하 여 더 자세히 보기.
+이 장에서 설명 합니다 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 글꼴, 색 등 서식을 더 자세히 보기입니다.
 
 ## <a name="wrapping-paragraphs"></a>단락 줄 바꿈
 
-경우는 [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) 속성 `Label` 긴 텍스트를 포함 `Label` 자동으로에 나타난 것 처럼 여러 줄으로 래핑하는 [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) 샘플. Em 대시 또는 C#을 새 줄을 중단 하려면 '\r' 등의 문자에 대 한 '\u2014'와 같은 유니코드 코드를 포함할 수 있습니다.
+경우는 [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) 속성을 `Label` 긴 텍스트를 포함 `Label` 자동으로 나타난 것 처럼 여러 줄으로 래핑하는 [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) 샘플입니다. Em dash 또는 C# 문자를 새 줄 구분 '\r' 같은 '\u2014'와 같은 유니코드 코드를 포함할 수 있습니다.
 
-경우는 [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) 및 [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 의 속성은 `Label` 로 설정 `LayoutOptions.Fill`의 전체 크기는 `Label` 공간에 의해 제어 됩니다는 해당 컨테이너 사용할 수 있게 합니다. `Label` 라고 *제한*합니다. 크기는 `Label` 해당 컨테이너의 크기입니다.
+경우는 [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) 및 [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 의 속성을 `Label` 로 설정 됩니다 `LayoutOptions.Fill`의 전체 크기는 `Label` 공간에 의해 제어 됩니다는 해당 컨테이너 사용할 수 있도록 설정 합니다. 합니다 `Label` 이라고 *제한*합니다. 크기는 `Label` 해당 컨테이너의 크기입니다.
 
-때는 `HorizontalOptions` 및 `VerticalOptions` 속성이 아닌 다른 값으로 설정 된 `LayoutOptions.Fill`, 크기는 `Label` 해당 컨테이너에 대해 사용할 수 있도록 크기까지 텍스트를 렌더링 하는 데 필요한 공간에 의해 관리는 `Label`합니다. `Label` 라고 *무제한* 자체 크기를 결정 합니다.
+경우는 `HorizontalOptions` 및 `VerticalOptions` 속성 이외의 값으로 설정 됩니다 `LayoutOptions.Fill`의 크기를 `Label` 최대 크기가 해당 컨테이너를 사용할 수 있도록 하는 텍스트를 렌더링 하는 데 필요한 공간에 의해 관리 됩니다는 `Label`. 합니다 `Label` 이라고 *비제한* 와 자체 크기를 결정 합니다.
 
-(참고: 용어 *제한* 및 *무제한* 때문일 수, 비 직관적인 제한 되지 않은 보기는 일반적으로 제한 된 보기 보다 작습니다. 또한 이러한 용어 사용 되지 않습니다 지속적으로 책의 초기 장에서.)
+(참고: 용어 *제한* 하 고 *비제한* 때문일, 직관적이 지는 무제한 뷰는 일반적으로 제약 된 뷰를 보다 작습니다. 또한 이러한 용어는 사용 되지 않음 일관 되 게 책의 초기 챕터에서.)
 
-와 같은 보기는 `Label` 에서 하나 이상의 차원을 제한 하 고 다른 제약 받지 않을 수 있습니다. A `Label` 가로 방향으로 제한 되는 텍스트 여러 줄에 배치만 됩니다.
+같은 보기를 `Label` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다. `Label` 가로 방향으로 제한 되는 텍스트 여러 줄에 배치만 됩니다.
 
-경우는 `Label` 은 제한, 텍스트에 필요한 것 보다 더 많은 공간 차지할 수 것입니다. 텍스트의 전체 영역 내에 배치 될 수 있습니다는 `Label`합니다. 설정의 [ `HorizontalTextAlignment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.HorizontalTextAlignment/) 속성의 멤버에는 [ `TextAlignment` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TextAlignment/) 열거형 ([`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.Start/), [ `Center` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.Center/), 또는 [ `End` ](https://developer.xamarin.com/api/field/Xamarin.Forms.TextAlignment.Center/)) 단락의 모든 줄 맞춤을 제어 하 합니다. 기본값은 `Start` 되 고 텍스트를 왼쪽 정렬 합니다.
+경우는 `Label` 는 제한 된 텍스트에 필요한 것 보다 더 많은 공간 차지할 수 것입니다. 텍스트의 전체 영역 내 배치 될 수 있습니다는 `Label`합니다. 설정 된 [ `HorizontalTextAlignment` ](xref:Xamarin.Forms.Label.HorizontalTextAlignment) 속성의 멤버에는 [ `TextAlignment` ](xref:Xamarin.Forms.TextAlignment) 열거형 ([`Start`](xref:Xamarin.Forms.TextAlignment.Start)를 [ `Center` ](xref:Xamarin.Forms.TextAlignment.Center), 또는 [ `End` ](xref:Xamarin.Forms.TextAlignment.Center)) 단락 모든 줄의 맞춤을 제어할 수 있습니다. 기본값은 `Start` 텍스트 왼쪽 맞춤입니다.
 
-설정는 [ `VerticalTextAlignment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) 속성의 멤버에는 `TextAlignment` 위쪽, 가운데 또는 차지한 영역이 아래쪽에 있는 텍스트를 배치 하는 열거형은 `Label`합니다.
+설정 합니다 [ `VerticalTextAlignment` ](xref:Xamarin.Forms.Label.VerticalTextAlignment) 속성의 멤버에는 `TextAlignment` 위쪽, 가운데 또는 차지한 영역이 아래쪽에 있는 텍스트를 배치 하는 열거형을 `Label`.
 
-설정의 [ `LineBreakMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.LineBreakMode/) 속성의 멤버에는 [ `LineBreakMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LineBreakMode/) 열거형 ([`WordWrap`](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.WordWrap/), [ `CharacterWrap` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.CharacterWrap/), [ `NoWrap` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.NoWrap/), [ `HeadTruncation` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.HeadTruncation/), [ `MiddleTruncation` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.MiddleTruncation/), 또는 [ `TailTruncation` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.TailTruncation/))를 배수 단락 나누기에서 줄 또는 잘립니다 방법을 제어 합니다.
+설정 된 [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) 속성의 멤버에는 [ `LineBreakMode` ](xref:Xamarin.Forms.LineBreakMode) 열거형 ([`WordWrap`](xref:Xamarin.Forms.LineBreakMode.WordWrap)를 [ `CharacterWrap` ](xref:Xamarin.Forms.LineBreakMode.CharacterWrap), [ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode.NoWrap)합니다 [ `HeadTruncation` ](xref:Xamarin.Forms.LineBreakMode.HeadTruncation)를 [ `MiddleTruncation` ](xref:Xamarin.Forms.LineBreakMode.MiddleTruncation), 또는 [ `TailTruncation` ](xref:Xamarin.Forms.LineBreakMode.TailTruncation))를 컨트롤은 여러 단락 나누기에서 줄 또는 잘립니다 하는 방법입니다.
 
-## <a name="text-and-background-colors"></a>텍스트 색과 배경색
+## <a name="text-and-background-colors"></a>텍스트 및 배경색
 
-설정의 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) 및 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) 의 속성 `Label` 를 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 텍스트 및 배경 색을 제어 하는 값입니다.
+설정 합니다 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) 및 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) 의 속성 `Label` 하 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 텍스트와 배경 색을 제어 하는 값입니다.
 
-`BackgroundColor` 를 사용 하는 전체 영역 배경 적용 되는 `Label`합니다. 에 따라는 `HorizontalOptions` 및 `VerticalOptions` 속성, 크기 텍스트를 표시 하는 데 필요한 영역 보다 훨씬 큰 수 있습니다. 색을 사용 하 여의 다양 한 값으로 시험 `HorizontalOptions`, `VerticalOptions`, `HorizontalExeAlignment`, 및 `VerticalTextAlignment` 어떻게 바뀌는지 크기 및 위치에는 `Label`에서 텍스트의 위치와 크기는 `Label`합니다.
+합니다 `BackgroundColor` 차지 하는 전체 영역의 배경을에 적용 됩니다는 `Label`합니다. 에 따라 합니다 `HorizontalOptions` 고 `VerticalOptions` 속성, 크기를 텍스트를 표시 하는 데 필요한 영역 보다 훨씬 클 수 있습니다. 색을 사용 하 여 다양 한 값을 사용 하 여 실험 `HorizontalOptions`, `VerticalOptions`, `HorizontalExeAlignment`, 및 `VerticalTextAlignment` 어떻게 바뀌는지 확인할 크기와 위치에는 `Label`, 내에서 텍스트의 위치와 크기를 `Label`.
 
 ## <a name="the-color-structure"></a>색 구조체
 
-[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 구조 또는 색 이름 빨간색-녹색-파란색 (RGB) 값 또는 색상-채도-명도 (HSL) 값으로 색을 지정할 수 있습니다. 알파 채널 투명도 나타내는 데 사용할 수도 있습니다.
+합니다 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) 구조를 사용 하면 색 이름 또는 빨간색-녹색-파란색 (RGB) 값 또는 색상-채도-명도 (HSL) 값으로 색을 지정 합니다. 알파 채널을 투명도 나타내기 위해 사용할 수도 있습니다.
 
-사용 하 여 한 `Color` 생성자를 지정 합니다.
+사용 하 여를 `Color` 생성자를 지정 합니다.
 
-- [회색 음영으로 표시](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/)
+- [회색 음영](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/)
 - [RGB 값](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/)
 - [투명도 사용 하 여 RGB 값](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/System.Double/)
 
@@ -57,14 +57,14 @@ ms.locfileid: "35241489"
 만드는 몇 가지 정적 메서드를 사용할 수도 있습니다 `Color` 값:
 
 - [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Double/System.Double/System.Double/) 에 대 한 `double` 0에서 1 사이의 RGB 값
-- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Int32/System.Int32/System.Int32/) 0에서 255 정수 RGB 값에 대 한
+- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Int32/System.Int32/System.Int32/) 0에서 255 정수 RGB 값
 - [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Double/System.Double/System.Double/System.Double/) 에 대 한 `double` 투명도 사용 하 여 RGB 값
 - [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) 투명도 사용 하 여 정수 RGB 값
 - [`Color.FromHsla`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) 에 대 한 `double` 투명도 사용 하 여 HSL 값
-- [`Color.FromUint`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromUint/p/System.UInt32/) 에 대 한는 `uint` 값으로 계산 됩니다 (B + 256 * (256 + G * (256 + R * A)))
-- [`Color.FromHex`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) 에 대 한는 `string` 형태로 16 진수 숫자의 형식을 "#AARRGGBB" 또는 "#RRGGBB" 또는 "#ARGB" 또는 "#RGB", 여기서 각 문자는 16 진수에 해당에 알파, 빨간색, 녹색 및 파란색 채널입니다. 이 메서드는에 설명 된 대로 XAML 색 변환에 사용 되는 기본 [7 장, XAML 코드와 비교](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md)합니다.
+- [`Color.FromUint`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromUint/p/System.UInt32/) 에 대 한는 `uint` 값으로 계산 (B + 256 * (G + 256 * (256 + R *는)))
+- [`Color.FromHex`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) 에 대 한는 `string` 형태로 16 진수 형식의 "#AARRGGBB" 또는 "#RRGGBB" 또는 "#ARGB" 또는 "#RGB"에 있는 각 문자에 해당 하는 알파, 빨강에 대 한 16 진수 녹색 및 파란색 채널입니다. 이 메서드는에 설명 된 대로 XAML 색 변환에 사용 되는 기본 [7 장, 코드 및 XAML](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md)합니다.
 
-일단 만들어지면는 `Color` 값은 변경할 수 있습니다. 색의 특징은 다음 속성에서 가져올 수 있습니다.
+일단 만들어지면는 `Color` 값은 변경할 수 없습니다. 색의 특징은 다음 속성에서 가져올 수 있습니다.
 
 - [`R`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.R/)
 - [`G`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.G/)
@@ -76,13 +76,13 @@ ms.locfileid: "35241489"
 
 이 모든 항목은 `double` 0에서 1 사이의 값입니다.
 
-`Color` 또한 240 공용 정적 읽기 전용 필드에 대 한 일반적인 색을 정의합니다. 일반적인 색만 17 책 작성 된 시간에 사용할 수 없었습니다.
+`Color` 또한 240 공용 정적 읽기 전용 필드에 대 한 일반적인 색을 정의합니다. 책 기록 된 시간에만 17 일반적인 색 사용할 수 있었습니다.
 
-다른 공용 정적 읽기 전용 필드를 0으로 설정 하는 모든 색 채널 색을 정의 합니다.
+다른 공용 정적 읽기 전용 필드를 0으로 설정 하는 모든 색 채널을 사용 하 여 색을 정의 합니다.
 
-- [`Color.Transparent`](https://developer.xamarin.com/api/field/Xamarin.Forms.Color.Transparent/)
+- [`Color.Transparent`](xref:Xamarin.Forms.Color.Transparent)
 
-여러 인스턴스 메서드와 새 색을 만들려면 기존 색 수정 허용:
+여러 인스턴스 메서드는 새 색을 만들려면 기존 색 수정 허용:
 
 - [`AddLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.AddLuminosity/p/System.Double/)
 - [`MultiplyAlpha`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.MultiplyAlpha/p/System.Double/)
@@ -90,50 +90,50 @@ ms.locfileid: "35241489"
 - [`WithLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithLuminosity/p/System.Double/)
 - [`WithSaturation`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithSaturation/p/System.Double/)
 
-마지막으로, 두 개의 정적 읽기 전용 속성 특별 한 색상 값을 정의합니다.
+마지막으로 두 개의 정적 읽기 전용 속성 특수 색 값을 정의합니다.
 
 - [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)을로 설정 된 모든 채널 &ndash;1
 - [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
 
-`Color.Default` 플랫폼의 색 구성표를 적용 되며 결과적으로 서로 다른 플랫폼에서 다양 한 상황에서 다른 의미를 합니다. 기본적으로 플랫폼 색 구성표 있습니다.
+`Color.Default` 플랫폼의 색 구성표를 적용 하기 위한 것 및 결과적으로 서로 다른 플랫폼에서 다양 한 상황에서 다른 의미를 갖습니다. 기본적으로 플랫폼 색 구성표는 다음과 같습니다.
 
-- iOS: 연한 배경에 어두운 텍스트
-- Android: 연한 책) (에 어두운 화면에 텍스트 또는 연한 배경에 어두운 텍스트 (에서 AppCompat 통해 자료 디자인에 대 한는 **마스터** 의 샘플 코드 리포지토리 분기)
-- 연한 배경에 UWP: 어두운 텍스트
-- Windows 8.1: 연한 텍스트에 어두운 화면에서
-- 에 어두운 화면에서 Windows Phone 8.1: 연한 텍스트
+- iOS: 밝은 배경에 어두운 텍스트
+- Android: Light (책)에 있는 어두운 배경에 텍스트 또는 어두운는 밝은 배경의 텍스트 (재료 디자인에서 AppCompat 통해는 **마스터** 샘플 코드 리포지토리의 분기)
+- 밝은 배경에 UWP: 어두운 텍스트
+- Windows 8.1: 어두운 배경 밝은 텍스트
+- Windows Phone 8.1: 어두운 배경 밝은 텍스트
 
-`Color.Accent` 어둡게 또는 밝게 배경에 표시 되는 플랫폼 특정 (및 경우에 따라 사용자가 선택할 수 있는) 색의 결과 값입니다.
+`Color.Accent` 결과 어둡게 또는 밝게 배경에 표시 되는 플랫폼 특정 (및 경우에 따라 사용자가 선택할 수 있는) 색 값입니다.
 
 ## <a name="changing-the-application-color-scheme"></a>응용 프로그램 색 구성표 변경
 
-다양 한 플랫폼에 기본 색 구성표 위 목록에 표시 된 것 처럼 존재 합니다.
+위 목록에 표시 된 대로 기본 색 구성표를가 하는 다양 한 플랫폼.
 
-Android.Manifest.xml 파일 또는 여 밝은 테마를 지정 하 여 light에 어두운 구성표로 전환 수는 Android을 대상으로 지정 하는 경우 [AppCompat 추가 및 자료 디자인](~/xamarin-forms/platform/android/appcompat.md)합니다.
+광원에서 어둡게 체계를 Android.Manifest.xml 파일에서 또는에서 밝은 테마를 지정 하 여 전환할 수 있기 Android를 대상으로 하는 경우 [추가 AppCompat 및 재질 디자인](~/xamarin-forms/platform/android/appcompat.md)합니다.
 
-Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 있지만 추가할 수는 `RequestedTheme` 특성 중 하나로 설정 `Light` 또는 `Dark` 플랫폼의 App.xaml 파일에 있습니다. UWP 프로젝트에서 App.xaml 파일은 기본적으로 포함 된 `RequestedTheme` 특성이로 설정 `Light`합니다.
+Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 있지만 추가할 수 있습니다는 `RequestedTheme` 특성 중 하나로 설정할 `Light` 또는 `Dark` 플랫폼의 App.xaml 파일에 있습니다. 기본적으로 UWP 프로젝트에서 App.xaml 파일에 포함 된 `RequestedTheme` 특성이로 설정 `Light`합니다.
 
 ## <a name="font-sizes-and-attributes"></a>글꼴 크기 및 특성
 
-설정의 [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontFamily/) 속성 `Label` "Times Roman" 글꼴 패밀리를 선택 하려면 같은 문자열로 합니다. 그러나 특정 플랫폼에서 지원 되는 글꼴 패밀리를 지정 해야 하 고 이런 점에서 플랫폼 일치 하지 않습니다.
+설정 된 [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontFamily/) 속성의 `Label` "Times Roman" 글꼴 패밀리 선택과 같은 문자열을 합니다. 그러나 특정 플랫폼에서 지원 되는 글꼴 패밀리를 지정 해야 하 고 이런 점에서 플랫폼 일치 하지 않습니다.
 
-설정의 [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontSize/) 속성 `Label` 에 `double` 글꼴의 대략적인 높이 지정 하기 위한 합니다. 참조 [5 장 크기를 다루는](chapter05.md)에 대 한 자세한 내용은 지능적으로 글꼴 크기를 선택 합니다.
+설정 합니다 [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontSize/) 의 속성 `Label` 에 `double` 글꼴의 대략적인 높이 지정 하는 데 합니다. 참조 [5 장의 크기를 사용 하 여 처리](chapter05.md), 자세한 지능적으로 글꼴 크기를 선택 합니다.
 
-또는 여러 미리 설정 된 플랫폼에 종속 된 글꼴 크기 중 하나를 가져올 수 있습니다. 정적 [ `Device.GetNamedSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/) 메서드 및 [오버 로드](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/Xamarin.Forms.Element/) 둘 다 반환는 `double` 플랫폼에 적합 한 글꼴 크기 값의 멤버에 따라는 [ `NamedSize` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/)열거형 ([`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.NamedSize.Default/), [ `Micro` ](https://developer.xamarin.com/api/field/Xamarin.Forms.NamedSize.Micro/), [ `Small` ](https://developer.xamarin.com/api/field/Xamarin.Forms.NamedSize.Small/), [ `Medium` ](https://developer.xamarin.com/api/field/Xamarin.Forms.NamedSize.Medium/),  및 [ `Large` ](https://developer.xamarin.com/api/field/Xamarin.Forms.NamedSize.Large/)). 반환 된 값은 `Medium` 멤버가 아닐 동일 `Default`합니다. [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 샘플 이러한 명명 된 크기와 텍스트를 표시 합니다.
+또는 미리 설정 된 플랫폼에 종속 된 글꼴을 여러 가지 크기 중 하나를 가져올 수 있습니다. 정적 [ `Device.GetNamedSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/) 메서드 및 [오버 로드](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/Xamarin.Forms.Element/) 둘 다 반환을 `double` 의 멤버에 따라 플랫폼에 적합 한 글꼴 크기 값을 [ `NamedSize` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/)열거형 ([`Default`](xref:Xamarin.Forms.NamedSize.Default)하십시오 [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro)를 [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  및 [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). 반환 되는 값을 `Medium` 멤버가 아닐 동일 `Default`합니다. 합니다 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 샘플 이러한 명명 된 크기를 사용 하 여 텍스트를 표시 합니다.
 
-설정의 [ `FontAttributes` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontAttributes/) 속성 `Label` 이러한 멤버에 [ `FontAttributes` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FontAttributes/) 열거형 [ `Bold` ](https://developer.xamarin.com/api/field/Xamarin.Forms.FontAttributes.Bold/), [ `Italic` ](https://developer.xamarin.com/api/field/Xamarin.Forms.FontAttributes.Italic/), 또는 [ `None` ](https://developer.xamarin.com/api/field/Xamarin.Forms.FontAttributes.None/)합니다. 결합할 수는 `Bold` 및 `Italic` C# 비트 OR 연산자를 가진 멤버입니다.
+설정 된 [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) 속성을 `Label` 이러한 멤버에 [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) 열거형 [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), 또는 [ `None` ](xref:Xamarin.Forms.FontAttributes.None)합니다. 결합할 수 있습니다 합니다 `Bold` 고 `Italic` C#의 비트 OR 연산자를 사용 하 여 멤버입니다.
 
 ## <a name="formatted-text"></a>서식 있는 텍스트
 
-모든 예제에서는 지금까지,으로 표시 하는 전체 텍스트는 `Label` 균일 하 게 형식이 지정 되어 있습니다. 설정 하지 않으면 텍스트 문자열에서 서식 지정을 변경 하는 `Text` 속성 `Label`합니다. 대신, 설정는 [ `FormattedText` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FormattedText/) 속성 형식의 개체로 [ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/)합니다.
+모든 지금 까지의 예제에서 전체 텍스트에서 표시를 `Label` 균일 하 게 형식이 지정 되어 있습니다. 에 텍스트 문자열 내에서 서식을 변경 하려면 설정 하지 않은 합니다 `Text` 속성의 `Label`합니다. 대신 설정 합니다 [ `FormattedText` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FormattedText/) 형식의 개체에 속성 [ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/)합니다.
 
-`FormattedString` 에 [ `Spans` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FormattedString.Spans/) 의 컬렉션인 속성 [ `Span` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Span/) 개체입니다. 각 `Span` 개체에는 자체 [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.Text/), [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontFamily/), [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontSize/), [ `FontAttributes` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontAttributes/), [ `ForegroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.ForegroundColor/), 및 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.BackgroundColor/) 속성입니다.
+`FormattedString` 에 [ `Spans` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FormattedString.Spans/) 속성의 컬렉션을 나타내는 [ `Span` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Span/) 개체입니다. 각 `Span` 개체에는 자체 [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.Text/), [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontFamily/)를 [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontSize/)하십시오 [ `FontAttributes` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontAttributes/)하십시오 [ `ForegroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.ForegroundColor/), 및 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.BackgroundColor/) 속성입니다.
 
-[ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) 샘플 사용을 보여 줍니다.는 `FormattedText` 의 텍스트를 한 줄에 대 한 속성 및 [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) 다음과 같이 단락 전체 기법을 보여 줍니다.
+합니다 [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) 샘플에서는 합니다 `FormattedText` 텍스트 한 줄에 대 한 속성 및 [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) 다음과 같이 전체 단락에 대 한 기술을 보여 줍니다.
 
-[![변수의 세 스크린 샷 단락 서식이 지정 된](images/ch03fg06-small.png "변수 형식의 레이블 텍스트")](images/ch03fg06-large.png#lightbox "변수 형식의 레이블 텍스트")
+[![변수의 세 번 스크린 샷 단락 서식이 지정 된](images/ch03fg06-small.png "변수 형식이 지정 된 레이블 텍스트")](images/ch03fg06-large.png#lightbox "변수 형식이 지정 된 레이블 텍스트")
 
-[ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 프로그램 하나를 사용 하 여 `Label` 및 `FormattedString` 모든 각 플랫폼에 대 한 명명 된 글꼴 크기를 표시 하는 개체입니다.
+합니다 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 프로그램에서는 단일 `Label` 및 `FormattedString` 모든 각 플랫폼에 대해 명명 된 글꼴 크기를 표시 하는 개체입니다.
 
 
 
@@ -141,6 +141,6 @@ Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 �
 
 - [3 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [3 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [Chapter 3 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [3 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [레이블](~/xamarin-forms/user-interface/text/label.md)
 - [색 작업](~/xamarin-forms/user-interface/colors.md)
