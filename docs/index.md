@@ -6,11 +6,11 @@ description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인�
 featureFlags:
 - clicktale
 ms.openlocfilehash: 8f7f1432ab0dfc7a44a6b688ea998ec01812609a
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831360"
 ---
 <div id="main" class="v2">
     <div class="container">
