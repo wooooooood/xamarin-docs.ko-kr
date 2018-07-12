@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: 버전 추적'
-description: Xamarin.Essentials에서 VersionTracking 클래스를 사용 하면 응용 프로그램 버전을 확인 및 빌드 번호는 첫 번째 하는 경우 이러한 추가 정보를 표시와 함께 응용 프로그램이 적이 시작 시간 또는 최신 버전은 이전 빌드를 가져옵니다. 정보 및 더 합니다.
+description: Xamarin.Essentials VersionTracking 클래스를 사용 하면 응용 프로그램 버전을 확인 하 고 첫 번째 것 처럼 이러한 추가 정보를 표시와 함께 빌드 번호 응용 프로그램이 어느 시작 시간 또는 최신 버전은 이전 빌드를 가져오기 정보 및 더 합니다.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783004"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815650"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: 버전 추적
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**VersionTracking** 클래스를 사용 하면 응용 프로그램 버전을 확인 및 빌드 번호는 첫 번째 하는 경우 이러한 추가 정보를 표시와 함께 응용 프로그램이 적이 시작 시간 또는 최신 버전은 이전 가져오기 빌드 정보 및 더 합니다.
+합니다 **VersionTracking** 클래스를 사용 하면 응용 프로그램 버전을 확인 하 고 첫 번째 것 처럼 이러한 추가 정보를 표시와 함께 빌드 번호 응용 프로그램이 어느 시작 시간 또는 최신 버전은 이전 가져오기 빌드 정보 및 기타 정보
 
 ## <a name="using-version-tracking"></a>버전 추적을 사용 하 여
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-처음 사용할 때의 **VersionTracking** 클래스 현재 버전을 추적 시작 됩니다. 호출 해야 `Track` 초기 현재 버전 정보를 추적 하도록 로드 될 때마다 응용 프로그램에:
+처음 사용 하 여 합니다 **VersionTracking** 클래스 현재 버전을 추적 시작 됩니다. 호출 해야 `Track` 초기 현재 버전 정보를 추적 하도록 로드 될 때마다 응용 프로그램에만:
 
 ```csharp
 VersionTracking.Track();
@@ -70,11 +70,11 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 사항
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
 
-모든 버전 정보를 사용 하 여 저장 됩니다는 [기본 설정](preferences.md) Xamarin.Essentials API의 파일 이름으로 저장 하 고 **[귀하가-응용 프로그램-패키지-ID].xamarinessentials**합니다.
+모든 버전 정보를 사용 하 여 저장 됩니다는 [기본 설정](preferences.md) Xamarin.Essentials에서 API의 파일 이름으로 저장 됩니다 **[YOUR-앱-패키지-ID].xamarinessentials**합니다.
 
-응용 프로그램 제거는 _LocalSettings_, 및 추적 정보를 삭제 하는 모든 버전.
+응용 프로그램을 제거 하면 합니다 _LocalSettings_, 및 추적 정보를 삭제 하는 모든 버전.
 
 ## <a name="api"></a>API
 

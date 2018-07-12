@@ -1,26 +1,26 @@
 ---
-title: 'Xamarin.Essentials: 장치 디스플레이 정보'
-description: 이 문서에서 응용 프로그램이 실행 되는 장치에 대 한 화면 메트릭을 제공 하는 Xamarin.Essentials DeviceDisplay 클래스를 설명 합니다.
+title: 'Xamarin.Essentials: 장치 정보 표시'
+description: 이 문서에서 Xamarin.Essentials 응용 프로그램이 실행 되는 장치에 대 한 화면 메트릭을 제공 DeviceDisplay 클래스를 설명 합니다.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 3060d56e14fb0d3801a96ec0fe6e24c9efda4dac
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080315"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38816518"
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 디스플레이 정보
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 정보 표시
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**DeviceDisplay** 클래스 응용 프로그램에서 실행 되는 장치의 화면 메트릭에 대 한 정보를 제공 합니다.
+합니다 **DeviceDisplay** 클래스 응용 프로그램에서 실행 되는 장치의 화면 메트릭에 대 한 정보를 제공 합니다.
 
 ## <a name="using-devicedisplay"></a>DeviceDisplay를 사용 하 여
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
@@ -28,7 +28,7 @@ using Xamarin.Essentials;
 
 ## <a name="screen-metrics"></a>화면 메트릭
 
-기본 장치 정보 외에 **DeviceDisplay** 클래스 장치의 화면와 방향에 대 한 정보가 포함 되어 있습니다.
+기본 장치 정보 외에도 합니다 **DeviceDisplay** 장치의 화면 및 방향에 대 한 정보를 포함 하는 클래스입니다.
 
 ```csharp
 // Get Metrics
@@ -50,7 +50,7 @@ var height = metrics.Height;
 var density = metrics.Density;
 ```
 
-**DeviceDisplay** 클래스도 모든 화면 메트릭이 변경 될 때마다 트리거되는 구독할 수 있는 이벤트를 노출 합니다.
+합니다 **DeviceDisplay** 클래스도 모든 화면 메트릭이 변경 될 때마다 트리거되는 구독할 수 있는 이벤트를 제공 합니다.
 
 ```csharp
 public class ScreenMetricsTest

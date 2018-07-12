@@ -1,6 +1,6 @@
 ---
 title: 사용자 지정 Xamarin.Forms 테마 만들기
-description: 이 문서에서는 앱에서 참조 하기 위한 사용자 지정 테마를 Xamarin.Forms를 만드는 방법을 설명 합니다.
+description: 이 문서에서는 앱에서 참조 하기 위해 Xamarin.Forms 사용자 지정 테마를 만드는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245581"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38838172"
 ---
 # <a name="creating-a-custom-xamarinforms-theme"></a>사용자 지정 Xamarin.Forms 테마 만들기
 
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 
-Nuget 패키지에서 테마를 추가할 뿐만 아니라 (같은 [Light](~/xamarin-forms/user-interface/themes/light.md) 및 [어두운](~/xamarin-forms/user-interface/themes/dark.md) 테마), 응용 프로그램에서 사용자 고유의 리소스 참조 될 수 있는 사전 테마를 만들 수 있습니다.
+Nuget 패키지에서 테마를 추가 하는 것 외에도 (같은 합니다 [Light](~/xamarin-forms/user-interface/themes/light.md) 및 [어두운](~/xamarin-forms/user-interface/themes/dark.md) 테마), 앱에서 사용자 고유의 리소스 참조할 수 있는 사전 테마를 만들 수 있습니다.
 
 ## <a name="example"></a>예
 
-세 개의 `BoxView`s에 표시 되는 [테마 페이지](~/xamarin-forms/user-interface/themes/index.md) 하 여 두 개의 다운로드할 수 있는 테마에 정의 된 세 개의 클래스에 따라 구현 합니다.
+세 가지 `BoxView`s에 표시 합니다 [테마 페이지](~/xamarin-forms/user-interface/themes/index.md) 는 두 개의 다운로드 가능한 테마에 정의 된 세 가지 클래스에 따라 스타일이 지정 합니다.
 
-이러한 작업을 이해 하려면 다음 태그 만듭니다는 해당 하는 스타일에 직접 추가할 수 있는 프로그램 **App.xaml**합니다.
+작동 방식을 이해, 다음 태그에 직접 추가할 수는 해당 하는 스타일을 만듭니다 하 **App.xaml**합니다.
 
-참고는 `Class` 특성 `Style` (반대인는 [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms의 이전 버전에서 사용할 수 있는 특성).
+참고를 `Class` 특성에 대 한 `Style` (반대인 합니다 [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms의 이전 버전에서 사용할 수 있는 특성).
 
 ```xml
 <ResourceDictionary>
@@ -63,17 +63,17 @@ Nuget 패키지에서 테마를 추가할 뿐만 아니라 (같은 [Light](~/xam
 </ResourceDictionary>
 ```
 
-함을 알 수 있습니다는 `Rounded` 클래스 효과를 참조 하는 사용자 지정 `CornerRadius`합니다.
-이 효과 대 한 코드는 참조할 수 올바르게 사용자 지정-아래 제공 된 `xmlns` 에 추가 되어야 합니다는 **App.xaml**의 루트 요소:
+있다는 사실을 알 수는 `Rounded` 클래스는 사용자 지정 효과을 참조 `CornerRadius`합니다.
+이 효과 대 한 코드는 아래에 나와-참조 올바르게 사용자 지정 `xmlns` 에 추가 해야 합니다 **App.xaml**의 루트 요소:
 
 ```csharp
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>.NET 표준 라이브러리 프로젝트 또는 공유 프로젝트의 C# 코드
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>.NET Standard 라이브러리 프로젝트 또는 공유 프로젝트에서 C# 코드
 
 둥근 모퉁이 만들기 위한 코드 `BoxView` 사용 하 여 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
-모서리 반지름을 사용 하 여 적용 되는 `BindableProperty` 적용 하 여 구현 됩니다는 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다. 효과에 플랫폼 관련 코드가 필요는 [iOS](#ios) 및 [Android](#android) 프로젝트 (아래 표시).
+모퉁이 반경을 사용 하 여 적용 되는 `BindableProperty` 적용 하 여 구현 됩니다는 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다. 효과에 플랫폼별 코드가 필요 합니다 [iOS](#ios) 하 고 [Android](#android) 프로젝트 (아래 참조).
 
 ```csharp
 namespace ThemesDemo
@@ -128,7 +128,7 @@ namespace ThemesDemo
 
 <a name="ios" />
 
-### <a name="c-code-in-the-ios-project"></a>IOS 프로젝트에 C# 코드
+### <a name="c-code-in-the-ios-project"></a>IOS 프로젝트에서 C# 코드
 
 ```csharp
 using System;
@@ -257,8 +257,8 @@ namespace ThemesDemo.Droid
 
 ## <a name="summary"></a>요약
 
-사용자 지정 모양을 필요로 하는 각 컨트롤에 대 한 스타일을 정의 하 여 사용자 지정 테마를 만들 수 있습니다. 여러 스타일을 컨트롤에 대 한 다른으로 구별할 수 해야 `Class` 리소스 사전에 특성을 설정 하 여 다음 적용는 `StyleClass` 컨트롤에는 특성입니다.
+사용자 지정 모양을 필요한 각 컨트롤에 대 한 스타일을 정의 하 여 사용자 지정 테마를 만들 수 있습니다. 다른 컨트롤에 대 한 여러 스타일을 구별할 수 해야 `Class` 리소스 사전에 특성을 설정 하 여 다음 적용을 `StyleClass` 컨트롤에는 특성입니다.
 
-스타일을 사용할 수 있습니다 [효과](~/xamarin-forms/app-fundamentals/effects/index.md) 추가 컨트롤의 모양을 사용자 지정할 수 있습니다.
+스타일을 활용할 수도 [효과](~/xamarin-forms/app-fundamentals/effects/index.md) 추가 컨트롤의 모양을 사용자 지정할 수 있습니다.
 
-[암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md) (포함 하지 않고는 `x:Key` 또는 `Style` 특성) 계속 일치 하는 모든 컨트롤에 적용 된 `TargetType`합니다.
+[암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md) (포함 하지 않고는 `x:Key` 또는 `Style` 특성) 계속 일치 하는 모든 컨트롤에 적용 됩니다는 `TargetType`합니다.
