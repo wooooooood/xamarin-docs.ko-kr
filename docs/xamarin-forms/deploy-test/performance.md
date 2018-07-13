@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 37d99add473203d90cb1b420536827e34e834a2b
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209325"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998619"
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 성능
 
@@ -59,7 +59,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 ## <a name="choose-the-correct-layout"></a>올바른 레이아웃 선택
 
-여러 자식 요소를 표시할 수 있지만 단일 자식만 있어 불필요한 레이아웃입니다. 예를 들어 다음 코드 예제는 단일 자식이 있는 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)을 보여 줍니다.
+여러 자식 요소를 표시할 수 있지만 단일 자식만 있어 불필요한 레이아웃입니다. 예를 들어 다음 코드 예제는 단일 자식이 있는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 보여줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -73,7 +73,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 </ContentPage>
 ```
 
-이는 불필요하며, 다음 코드 예제에 나와 있는 것처럼 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 요소를 제거해야 합니다.
+이는 불필요하며, 다음 코드 예제에 나와 있는 것처럼 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 요소를 제거해야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -85,7 +85,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 </ContentPage>
 ```
 
-또한 다른 레이아웃의 조합을 사용하여 특정 레이아웃의 모양을 재현하려고 하지 마세요. 불필요한 레이아웃 계산이 수행됩니다. 예를 들어 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 인스턴스의 조합을 사용하여 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 레이아웃을 재현하려고 하지 마세요. 다음 코드 예제는 이러한 나쁜 사례의 예를 보여 줍니다.
+또한 다른 레이아웃의 조합을 사용하여 특정 레이아웃의 모양을 재현하려고 하지 마세요. 불필요한 레이아웃 계산이 수행됩니다. 예를 들어 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 인스턴스의 조합을 사용하여 [`Grid`](xref:Xamarin.Forms.Grid) 레이아웃을 재현하려고 하지 마세요. 다음 코드 예제는 이러한 나쁜 사례의 예를 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -115,7 +115,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 </ContentPage>
 ```
 
-불필요한 레이아웃 계산이 수행되기 때문에 이는 불필요합니다. 대신에 다음 코드 예제에 나와 있는 것처럼 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)를 사용하면 원하는 레이아웃을 더 잘 구현할 수 있습니다.
+불필요한 레이아웃 계산이 수행되기 때문에 이는 불필요합니다. 대신에 다음 코드 예제에 나와 있는 것처럼 [`Grid`](xref:Xamarin.Forms.Grid)를 사용하면 원하는 레이아웃을 더 잘 구현할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -163,7 +163,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 ## <a name="reduce-unnecessary-bindings"></a>불필요한 바인딩 줄이기
 
-정적으로 쉽게 설정할 수 있는 콘텐츠에 바인딩을 사용하지 마세요. 바인딩할 필요가 없는 데이터를 바인딩할 경우 어떠한 이점도 없습니다. 바인딩은 비용 효율적이지 않기 때문입니다. 예를 들어 `Button.Text = "Accept"`를 설정하는 것은 "Accept" 값을 사용하여 ViewModel `string` 속성에 [`Button.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Text/)를 바인딩하는 것보다 오버헤드가 적습니다.
+정적으로 쉽게 설정할 수 있는 콘텐츠에 바인딩을 사용하지 마세요. 바인딩할 필요가 없는 데이터를 바인딩할 경우 어떠한 이점도 없습니다. 바인딩은 비용 효율적이지 않기 때문입니다. 예를 들어 `Button.Text = "Accept"`를 설정하는 것은 "Accept" 값을 사용하여 ViewModel `string` 속성에 [`Button.Text`](xref:Xamarin.Forms.Button.Text)를 바인딩하는 것보다 오버헤드가 적습니다.
 
 <a name="optimizelayout" />
 
@@ -171,36 +171,36 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된 레이아웃 엔진이 도입되었습니다. 최적의 레이아웃 성능을 얻으려면 다음 지침을 따르세요.
 
-- 더 적은 래핑 뷰를 사용하여 레이아웃을 만들 수 있는 [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) 속성 값을 지정하여 레이아웃 계층의 깊이를 줄입니다. 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
-- [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)를 사용할 경우 가능한 한 적은 행과 열을 [`Auto`](https://developer.xamarin.com/api/property/Xamarin.Forms.GridLength.Auto/) 크기로 설정하도록 하세요. 자동으로 크기가 조정된 행이나 열은 레이아웃 엔진이 추가적인 레이아웃 계산을 수행하도록 합니다. 가능한 경우 고정된 크기의 행과 열을 대신 사용하세요. 또는 부모 트리가 이러한 레이아웃 지침을 따르는 경우 [`GridUnitType.Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) 열거 값을 사용하여 행과 열이 일정한 비율의 공간을 차지하도록 하세요.
-- 필요하지 않은 경우 레이아웃의 [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 및 [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 속성을 설정하지 마세요. [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) 및 [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)의 기본값은 최고의 레이아웃 최적화를 지원합니다. 이러한 속성을 변경하는 경우 기본값으로 설정하더라도 비용이 들고 메모리가 소모됩니다.
-- 가능한 경우 [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)을 사용하지 마세요. 그러면 CPU가 훨씬 더 많은 작업을 수행해야 합니다.
-- [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/)을 사용할 경우 가능하다면 [`AbsoluteLayout.AutoSize`](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) 속성을 사용하지 마세요.
-- [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)을 사용할 경우 하나의 자식만 [`LayoutOptions.Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/)로 설정되도록 합니다. 이 속성은 지정된 자식 요소가 `StackLayout`에서 허용하는 최대의 공간을 차지하도록 하며, 이는 이러한 계산이 두 번 이상 수행되도록 하여 불필요합니다.
-- [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) 클래스의 메서드를 호출하지 마세요. 비용이 많이 드는 레이아웃 계산이 수행됩니다. 대신에 [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) 및 [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) 속성을 설정하면 원하는 레이아웃 동작을 구현할 가능성이 높습니다. 또는 [`Layout<View>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) 클래스를 서브클래스로 지정하여 원하는 레이아웃 동작을 구현할 수 있습니다.
-- [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스를 필요 이상으로 자주 업데이트하지 마세요. 레이블의 크기가 변경되면 전체 화면 레이아웃이 다시 계산될 수 있습니다.
-- 필요하지 않은 경우 [`Label.VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) 속성을 설정하지 마세요.
-- 가능할 때마다 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스의 [`LineBreakMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.LineBreakMode/)를 [`NoWrap`](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.NoWrap/)으로 설정합니다.
+- 더 적은 래핑 뷰를 사용하여 레이아웃을 만들 수 있는 [`Margin`](xref:Xamarin.Forms.View.Margin) 속성 값을 지정하여 레이아웃 계층의 깊이를 줄입니다. 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
+- [`Grid`](xref:Xamarin.Forms.Grid)를 사용할 경우 가능한 한 적은 행과 열을 [`Auto`](xref:Xamarin.Forms.GridLength.Auto) 크기로 설정하도록 하세요. 자동으로 크기가 조정된 행이나 열은 레이아웃 엔진이 추가적인 레이아웃 계산을 수행하도록 합니다. 가능한 경우 고정된 크기의 행과 열을 대신 사용하세요. 또는 부모 트리가 이러한 레이아웃 지침을 따르는 경우 [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) 열거 값을 사용하여 행과 열이 일정한 비율의 공간을 차지하도록 하세요.
+- 필요하지 않은 경우 레이아웃의 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 및 [`HorizontalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 설정하지 마세요. [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) 및 [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)의 기본값은 최고의 레이아웃 최적화를 지원합니다. 이러한 속성을 변경하는 경우 기본값으로 설정하더라도 비용이 들고 메모리가 소모됩니다.
+- 가능한 경우 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)을 사용하지 마세요. 그러면 CPU가 훨씬 더 많은 작업을 수행해야 합니다.
+- [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)을 사용할 경우 가능하다면 [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) 속성을 사용하지 마세요.
+- [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 사용할 경우 하나의 자식만 [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands)로 설정되도록 합니다. 이 속성은 지정된 자식 요소가 `StackLayout`에서 허용하는 최대의 공간을 차지하도록 하며, 이는 이러한 계산이 두 번 이상 수행되도록 하여 불필요합니다.
+- [`Layout`](xref:Xamarin.Forms.Layout) 클래스의 메서드를 호출하지 마세요. 비용이 많이 드는 레이아웃 계산이 수행됩니다. 대신에 [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 및 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) 속성을 설정하면 원하는 레이아웃 동작을 구현할 가능성이 높습니다. 또는 [`Layout<View>`](xref:Xamarin.Forms.Layout`1) 클래스를 서브클래스로 지정하여 원하는 레이아웃 동작을 구현할 수 있습니다.
+- [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 필요 이상으로 자주 업데이트하지 마세요. 레이블의 크기가 변경되면 전체 화면 레이아웃이 다시 계산될 수 있습니다.
+- 필요하지 않은 경우 [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) 속성을 설정하지 마세요.
+- 가능할 때마다 [`Label`](xref:Xamarin.Forms.Label) 인스턴스의 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode)를 [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap)으로 설정합니다.
 
 <a name="optimizelistview" />
 
 ## <a name="optimize-listview-performance"></a>ListView 성능 최적화
 
-[`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 컨트롤을 사용할 때 최적화해야 하는 여러 가지 사용자 환경이 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤을 사용할 때 최적화해야 하는 여러 가지 사용자 환경이 있습니다.
 
 - **초기화** - 컨트롤을 만들 때부터 항목이 화면에 표시될 때까지의 시간 간격입니다.
 - **스크롤** - 목록을 스크롤하는 기능이며, UI가 터치 제스처보다 지연되지 않도록 합니다.
 - **상호 작용** - 항목을 추가, 삭제 및 선택합니다.
 
-[`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 컨트롤을 사용하려면 응용 프로그램이 데이터 및 셀 템플릿을 제공해야 합니다. 이것이 구현되는 방식은 컨트롤의 성능에 큰 영향을 줍니다. 자세한 내용은 [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)을 참조하세요.
+[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤을 사용하려면 응용 프로그램이 데이터 및 셀 템플릿을 제공해야 합니다. 이것이 구현되는 방식은 컨트롤의 성능에 큰 영향을 줍니다. 자세한 내용은 [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)을 참조하세요.
 
 <a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
-이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 응용 프로그램에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 예를 들어 응용 프로그램이 스트림에서 데이터를 읽어 이미지를 표시하는 경우, 필요할 경우에만 스트림이 생성되도록 하고, 더 이상 필요 없는 경우에는 스트림이 해제되도록 합니다. 이는 페이지가 생성될 때나 [`Page.Appearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 이벤트가 실행될 때 스트림을 만든 후 [`Page.Disappearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Disappearing/) 이벤트가 실행될 때 스트림을 폐기하는 방식으로 구현할 수 있습니다.
+이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 응용 프로그램에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 예를 들어 응용 프로그램이 스트림에서 데이터를 읽어 이미지를 표시하는 경우, 필요할 경우에만 스트림이 생성되도록 하고, 더 이상 필요 없는 경우에는 스트림이 해제되도록 합니다. 이는 페이지가 생성될 때나 [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) 이벤트가 실행될 때 스트림을 만든 후 [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) 이벤트가 실행될 때 스트림을 폐기하는 방식으로 구현할 수 있습니다.
 
-[`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) 메서드를 사용하여 표시할 이미지를 다운로드할 때는 [`UriImageSource.CachingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CachingEnabled/) 속성을 `true`로 설정하여 다운로드된 이미지를 캐시에 저장합니다. 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md)을 참조하세요.
+[`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 메서드를 사용하여 표시할 이미지를 다운로드할 때는 [`UriImageSource.CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) 속성을 `true`로 설정하여 다운로드된 이미지를 캐시에 저장합니다. 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md)을 참조하세요.
 
 자세한 내용은 [이미지 리소스 최적화](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)를 참조하세요.
 
@@ -208,9 +208,9 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 
 ## <a name="reduce-the-visual-tree-size"></a>시각적 트리 크기 줄이기
 
-페이지의 요소 수를 줄이면 페이지 렌더러의 속도가 더 빨라집니다. 이는 크게 두 가지 방법으로 구현할 수 있습니다. 첫 번째는 표시되지 않는 요소를 숨기는 것입니다. 각 요소의 [`IsVisible`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/) 속성은 해당 요소가 시각적 트리의 일부가 되어야 하는지 여부를 결정합니다. 따라서 요소가 다른 요소 뒤에 숨겨져 있어 표시되지 않을 경우 해당 요소를 제거하거나 `IsVisible` 속성을 `false`로 설정합니다.
+페이지의 요소 수를 줄이면 페이지 렌더러의 속도가 더 빨라집니다. 이는 크게 두 가지 방법으로 구현할 수 있습니다. 첫 번째는 표시되지 않는 요소를 숨기는 것입니다. 각 요소의 [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 속성은 해당 요소가 시각적 트리의 일부가 되어야 하는지 여부를 결정합니다. 따라서 요소가 다른 요소 뒤에 숨겨져 있어 표시되지 않을 경우 해당 요소를 제거하거나 `IsVisible` 속성을 `false`로 설정합니다.
 
-두 번째 방법은 불필요한 요소를 제거하는 것입니다. 예를 들어 다음 코드 예제는 일련의 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 요소를 표시하는 페이지 레이아웃을 보여 줍니다.
+두 번째 방법은 불필요한 요소를 제거하는 것입니다. 예를 들어 다음 코드 예제는 일련의 [`Label`](xref:Xamarin.Forms.Label) 요소를 표시하는 페이지 레이아웃을 보여줍니다.
 
 ```xaml
 <ContentPage.Content>
@@ -330,5 +330,5 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 - [빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)
 - [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Xamarin.Forms 이미지 크기 조정 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
-- [XamlCompilation](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilation/)
-- [XamlCompilationOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationOptions/)
+- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

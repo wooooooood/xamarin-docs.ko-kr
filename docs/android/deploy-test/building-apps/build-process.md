@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019713"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998261"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -76,7 +76,7 @@ Xamarin.Android 프로젝트에는 다음 빌드 대상이 정의됩니다.
 
 ## <a name="build-properties"></a>빌드 속성
 
-MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup 요소](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx) 내 프로젝트 파일(예: **MyApp.csproj**)에 지정됩니다. 
+MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup 요소](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild) 내 프로젝트 파일(예: **MyApp.csproj**)에 지정됩니다.
 
 -   **Configuration** &ndash; "디버그" 또는 "릴리스"와 같이 사용할 빌드 구성을 지정합니다. Configuration 속성은 대상 동작을 결정하는 다른 속성에 대한 기본값을 결정하는 데 사용됩니다. IDE 내에 추가 구성을 만들 수 있습니다.
 
@@ -86,7 +86,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **DebugSymbols** &ndash; `$(DebugType)` 속성과 함께 사용되며, Android 패키지가 *디버그 가능*한지 결정하는 부울 값입니다. 디버그 가능한 패키지는 디버그 기호를 포함하고, `//application/@android:debuggable` 특성을 `true`로 설정하며, 디버거가 프로세스에 연결할 수 있도록 `INTERNET` 권한을 자동으로 추가합니다. `DebugSymbols`가 `True`*이고* `DebugType`이 빈 문자열이거나 `Full`일 경우 응용 프로그램을 디버그할 수 있습니다.
 
--   **DebugType** &ndash; 빌드의 일부로 생성할 [디버그 기호의 유형](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx)을 지정하며, 응용 프로그램의 디버그 가능 여부에도 영향을 줍니다. 가능한 값은 다음과 같습니다.
+-   **DebugType** &ndash; 빌드의 일부로 생성할 [디버그 기호의 유형](https://docs.microsoft.com/visualstudio/msbuild/csc-task)을 지정하며, 응용 프로그램의 디버그 가능 여부에도 영향을 줍니다. 가능한 값은 다음과 같습니다.
 
     - **Full**: 전체 기호가 생성됩니다. `DebugSymbols` MSBuild 속성도 `True`일 경우 응용 프로그램 패키지를 디버그할 수 있습니다.
 
@@ -484,7 +484,7 @@ Enter key password for keystore.alias
 
 ## <a name="build-actions"></a>빌드 작업
 
-*빌드 동작*은 프로젝트 내 [파일에 적용](http://msdn.microsoft.com/en-us/library/bb629388.aspx)되며, 파일이 처리되는 방식을 제어합니다. 
+*빌드 동작*은 프로젝트 내 [파일에 적용](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)되며, 파일이 처리되는 방식을 제어합니다. 
 
 <a name="AndroidEnvironment" />
 

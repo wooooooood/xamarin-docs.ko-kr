@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 538ca831e51069f345a8a7a53aa844352c207faa
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268838"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996183"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms Multiscreen Quickstart
 
@@ -63,7 +63,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/vs/open-app-class.png "App.xaml.cs 열기")
 
-6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 속성이 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -94,7 +94,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "MainPage.xaml 열기")
 
-8. **MainPage.xaml**에서 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤을 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
+8. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"
@@ -209,7 +209,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/xs/open-app-class.png "App.xaml.cs 열기")
 
-7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 속성이 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -240,7 +240,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "MainPage.xaml 열기")
 
-9. **MainPage.xaml**에서 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤을 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
+9. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"

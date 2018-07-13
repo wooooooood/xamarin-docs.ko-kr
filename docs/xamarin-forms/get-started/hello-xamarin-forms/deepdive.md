@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 7c8eee5fc7075f23221c06dab29b83b1d5e01ffc
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: f51992ec5311bdf0c7df7478651398f6ed8491a9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269071"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996235"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 심층 분석
 
@@ -118,7 +118,7 @@ namespace Phoneword
 }
 ```
 
-이 코드는 `App` 클래스의 `MainPage` 속성을 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 클래스의 새 인스턴스로 설정합니다. 또한 [`XamlCompilation`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationAttribute/) 특성은 XAML이 중간 언어로 직접 컴파일되도록 컴파일러를 켭니다. 자세한 내용은 [XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)을 참조하세요.
+이 코드는 `App` 클래스의 `MainPage` 속성을 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 클래스의 새 인스턴스로 설정합니다. 또한 [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성은 XAML이 중간 언어로 직접 컴파일되도록 컴파일러를 켭니다. 자세한 내용은 [XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)을 참조하세요.
 
 ## <a name="launching-the-application-on-each-platform"></a>각 플랫폼에서 응용 프로그램 시작
 
@@ -214,14 +214,14 @@ Xamarin.Forms 응용 프로그램은 `LoadApplication` 메서드를 사용해 �
 
 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 사용되는 4개의 주 제어 그룹이 있습니다.
 
-1. **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. Phoneword 응용 프로그램은 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 클래스를 사용하여 단일 화면을 표시합니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
-1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용된 컨테이너입니다. Phoneword 응용 프로그램은 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 클래스를 사용하여 컨트롤을 가로 스택에 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
-1. **뷰** – Xamarin.Forms 뷰는 레이블, 단추 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. Phoneword 응용 프로그램은 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/), [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 및 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤을 사용합니다. 보기에 대한 자세한 내용은 [Xamarin.Forms 보기](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
+1. **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. Phoneword 응용 프로그램은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 클래스를 사용하여 단일 화면을 표시합니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
+1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용된 컨테이너입니다. Phoneword 응용 프로그램은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스를 사용하여 컨트롤을 가로 스택에 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
+1. **뷰** – Xamarin.Forms 뷰는 레이블, 단추 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. Phoneword 응용 프로그램은 [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry) 및 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 사용합니다. 보기에 대한 자세한 내용은 [Xamarin.Forms 보기](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
 1. **셀** – Xamarin.Forms 셀은 목록에 있는 항목에 사용되는 특수한 요소이며, 목록의 각 항목이 어떻게 그려져야 하는지를 설명합니다. Phoneword 응용 프로그램은 어떤 셀도 사용하지 않습니다. 셀에 대한 자세한 내용은 [Xamarin.Forms 셀](~/xamarin-forms/user-interface/controls/cells.md)을 참조하세요.
 
 런타임 시 각 컨트롤은 렌더링될 것이기도 한 해당 네이티브에 매핑됩니다.
 
-아무 플랫폼에서 Phoneword 응용 프로그램이 실행되면 Xamarin.Forms의 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)에 해당하는 단일 화면이 표시됩니다. `Page`는 Android에서 *ViewGroup*, iOS에서 *보기 컨트롤러* 또는 유니버설 Windows 플랫폼에서 *페이지*를 나타냅니다. 또한 Phoneword 응용 프로그램은 `MainPage` 클래스를 나타내는 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 개체를 인스턴스화하며, 다음 코드 예제에 XAML 태그가 나와 있습니다.
+아무 플랫폼에서 Phoneword 응용 프로그램이 실행되면 Xamarin.Forms의 [`Page`](xref:Xamarin.Forms.Page)에 해당하는 단일 화면이 표시됩니다. `Page`는 Android에서 *ViewGroup*, iOS에서 *보기 컨트롤러* 또는 유니버설 Windows 플랫폼에서 *페이지*를 나타냅니다. 또한 Phoneword 응용 프로그램은 `MainPage` 클래스를 나타내는 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체를 인스턴스화하며, 다음 코드 예제에 XAML 태그가 나와 있습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -238,13 +238,13 @@ Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
 </ContentPage>
 ```
 
-`MainPage` 클래스는 화면 크기에 관계없이 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 컨트롤을 사용하여 자동으로 화면의 컨트롤을 정렬합니다. 각 자식 요소는 추가된 순서대로 세로 방향으로 차례로 배치됩니다. `StackLayout` 컨트롤은 페이지에 텍스트를 표시하는 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 컨트롤, 텍스트 사용자 입력을 수락하는 [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤, 터치 이벤트에 응답하여 코드를 실행하는 데 사용되는 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤 2개를 포함합니다.
+`MainPage` 클래스는 화면 크기에 관계없이 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤을 사용하여 자동으로 화면의 컨트롤을 정렬합니다. 각 자식 요소는 추가된 순서대로 세로 방향으로 차례로 배치됩니다. `StackLayout` 컨트롤은 페이지에 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label) 컨트롤, 텍스트 사용자 입력을 수락하는 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤, 터치 이벤트에 응답하여 코드를 실행하는 데 사용되는 [`Button`](xref:Xamarin.Forms.Button) 컨트롤 2개를 포함합니다.
 
 Xamarin.Forms의 XAML에 대한 자세한 내용은 [Xamarin.Forms XAML 기본 사항](~/xamarin-forms/xaml/xaml-basics/index.md)을 참조하세요.
 
 ### <a name="responding-to-user-interaction"></a>사용자 상호 작용에 응답
 
-XAML에 정의된 개체는 코드 숨김 파일에서 처리되는 이벤트를 발생시킬 수 있습니다. 다음 코드 예제는 *변환* 단추에서 발생하는 [`Clicked`](https://developer.xamarin.com/api/event/Xamarin.Forms.Button.Clicked/) 이벤트에 응답하여 실행되는 `MainPage` 클래스에 대한 코드 숨김의 `OnTranslate` 메서드를 보여줍니다.
+XAML에 정의된 개체는 코드 숨김 파일에서 처리되는 이벤트를 발생시킬 수 있습니다. 다음 코드 예제는 *변환* 단추에서 발생하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 응답하여 실행되는 `MainPage` 클래스에 대한 코드 숨김의 `OnTranslate` 메서드를 보여줍니다.
 
 ```csharp
 void OnTranslate(object sender, EventArgs e)
@@ -272,13 +272,13 @@ void OnTranslate(object sender, EventArgs e)
 
 Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다루지 않은 몇 가지 개념이 도입되었습니다. 이러한 개념은 다음과 같습니다.
 
-- 단추 사용 및 사용 안 함. [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) 속성을 변경하여 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)을 켜거나 끌 수 있습니다. 예를 들어 다음 코드 예제에서는 `callButton`을 사용하지 않습니다.
+- 단추 사용 및 사용 안 함. [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성을 변경하여 [`Button`](xref:Xamarin.Forms.Button)을 켜거나 끌 수 있습니다. 예를 들어 다음 코드 예제에서는 `callButton`을 사용하지 않습니다.
 
     ```csharp
     callButton.IsEnabled = false;
     ```
 
-- 경고 대화 상자 표시. 사용자가 통화 **단추**를 누르면 Phoneword 응용 프로그램은 *경고 대화 상자*를 표시하고 전화를 걸거나 취소하는 옵션을 제공합니다. [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) 메서드는 다음 코드 예제와 같이 대화 상자를 만드는 데 사용됩니다.
+- 경고 대화 상자 표시. 사용자가 통화 **단추**를 누르면 Phoneword 응용 프로그램은 *경고 대화 상자*를 표시하고 전화를 걸거나 취소하는 옵션을 제공합니다. [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String,System.String)) 메서드는 다음 코드 예제와 같이 대화 상자를 만드는 데 사용됩니다.
 
     ```csharp
     await this.DisplayAlert (
@@ -288,7 +288,7 @@ Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다
             "No");
     ```
 
-- [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 클래스를 통해 네이티브 기능에 액세스. Phoneword 응용 프로그램은 Phoneword 프로젝트의 다음 코드 예제와 같이 `DependencyService` 클래스를 사용하여 `IDialer` 인터페이스를 플랫폼 관련 전화 걸기 구현으로 해결합니다.
+- [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 네이티브 기능에 액세스. Phoneword 응용 프로그램은 Phoneword 프로젝트의 다음 코드 예제와 같이 `DependencyService` 클래스를 사용하여 `IDialer` 인터페이스를 플랫폼 관련 전화 걸기 구현으로 해결합니다.
 
     ```csharp
     async void OnCall (object sender, EventArgs e)
@@ -299,7 +299,7 @@ Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다
     }
     ```
 
-  [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 클래스에 대한 자세한 내용은 [DependencyService를 통한 네이티브 기능에 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
+  [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스에 대한 자세한 내용은 [DependencyService를 통한 네이티브 기능에 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 
 - URL로 전화 걸기. Phoneword 응용 프로그램은 `OpenURL`을 사용하여 시스템 전화 앱을 시작합니다. iOS 프로젝트의 다음 코드 예제와 같이, URL은 `tel:` 접두사 뒤에 전화를 걸 전화 번호가 붙습니다.
 
@@ -307,7 +307,7 @@ Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다
     return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
     ```
 
-- 플랫폼 레이아웃 조정. 여러 플랫폼에서 여러 [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) 값을 사용하여 각 페이지를 올바르게 표시하는 다음 코드 예제처럼, 개발자는 [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 클래스를 사용하여 플랫폼별로 응용 프로그램 레이아웃 및 기능을 사용자 지정할 수 있습니다.
+- 플랫폼 레이아웃 조정. 여러 플랫폼에서 여러 [`Padding`](xref:Xamarin.Forms.Layout.Padding) 값을 사용하여 각 페이지를 올바르게 표시하는 다음 코드 예제처럼, 개발자는 [`Device`](xref:Xamarin.Forms.Device) 클래스를 사용하여 플랫폼별로 응용 프로그램 레이아웃 및 기능을 사용자 지정할 수 있습니다.
 
     ```xaml
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >

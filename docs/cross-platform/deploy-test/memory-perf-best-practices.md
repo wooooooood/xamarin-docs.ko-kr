@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781984"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997441"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -87,7 +87,7 @@ public void ReadText (string filename)
 
 `StreamReader` 클래스는 `IDisposable`을 구현하고, `finally` 블록은 `StreamReader.Dispose` 메서드를 호출하여 리소스를 릴리스합니다.
 
-자세한 내용은 [IDisposable 인터페이스](https://developer.xamarin.com/api/type/System.IDisposable/)를 참조하세요.
+자세한 내용은 [IDisposable 인터페이스](xref:System.IDisposable)를 참조하세요.
 
 <a name="events" />
 
@@ -379,5 +379,5 @@ Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍
 - [Xamarin Profiler 소개](~/tools/profiler/index.md)
 - [Xamarin.Forms 성능](~/xamarin-forms/deploy-test/performance.md)
 - [비동기 지원 개요](~/cross-platform/platform/async.md)
-- [IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/)
+- [IDisposable](xref:System.IDisposable)
 - [Xamarin 앱에서 일반적인 문제 방지(비디오)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

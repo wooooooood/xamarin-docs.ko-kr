@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: a168e285358fff51b923200e55784b566df29d9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6979d1f221a8b06b5d04d7a7f738dee86c4392e9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763737"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998397"
 ---
 # <a name="hello-android-multiscreen"></a>Hello, Android 멀티스크린
 
@@ -31,5 +31,5 @@ _두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에�
 ## <a name="related-links"></a>관련 링크
 
 - [Android 시작](http://developer.android.com/training/index.html)
-- [Visual Studio의 디버깅](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [Visual Studio의 디버깅](https://docs.microsoft.com/visualstudio/debugger/)
 - [Mac용 Visual Studio 작성법-디버깅](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
