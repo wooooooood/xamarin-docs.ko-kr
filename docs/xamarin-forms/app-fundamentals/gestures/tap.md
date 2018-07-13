@@ -1,26 +1,26 @@
 ---
-title: Tap 제스처 제스처 인식기를 추가합니다.
-description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 tap 검색을 위한 탭 제스처를 사용 하는 방법을 설명 합니다. Tap 검색 TapGestureRecognizer 클래스로 구현 됩니다.
+title: 탭 제스처 제스처 인식기를 추가합니다.
+description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 탭 검색을 위한 탭 제스처를 사용 하는 방법을 설명 합니다. Tap 검색 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: bbe4ca7a1080459b8aeb33640be5158b15e97715
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240667"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994856"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>Tap 제스처 제스처 인식기를 추가합니다.
+# <a name="adding-a-tap-gesture-gesture-recognizer"></a>탭 제스처 제스처 인식기를 추가합니다.
 
-_탭 제스처 tap 검색에 사용 되 고 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다._
+_탭 제스처 탭 검색에 사용 되 고 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다._
 
 ## <a name="overview"></a>개요
 
-사용자 인터페이스 요소를 탭 제스처를 클릭할 수 있도록 만들는 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 인스턴스를 처리는 [ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) 이벤트를 새 제스처 인식기를 추가 하 고는 [ `GestureRecognizers` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) 사용자 인터페이스 요소의 컬렉션입니다. 다음 코드 예제는 `TapGestureRecognizer` 에 연결 된 프로그램 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 요소:
+탭 제스처를 사용 하 여 클릭할 수 있는 사용자 인터페이스 요소를 확인, 만들려면를 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 인스턴스를 처리 합니다 [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) 이벤트 새 제스처 인식기를 추가 하 고는 [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) 사용자 인터페이스 요소에는 컬렉션입니다. 다음 코드 예제는 `TapGestureRecognizer` 에 연결을 [ `Image` ](xref:Xamarin.Forms.Image) 요소:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -30,19 +30,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-기본적으로 이미지는 단일 탭에 응답 합니다. 설정의 [ `NumberOfTapsRequired` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/) 속성을 두 번 누르면 (또는 필요한 경우 더 많은 탭) 때까지 대기 합니다.
+기본적으로 이미지는 단일 탭에 응답 합니다. 설정 된 [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) 속성을 두 번 눌러서 (또는 필요한 경우 더 많은 탭) 때까지 기다립니다.
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-때 [ `NumberOfTapsRequired` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/) 설정, 하나 이상의 이벤트 처리기만 실행 됩니다 누르기가 설정된 일정 기간 (기간 이것이 구성 가능) 내에서 발생 하는 경우. 두 번째 (또는 후속) 탭 기간 내에 발생 하지 않습니다는 효과적으로 무시 되 고 'tap count' 다시 시작 합니다.
+때 [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) 설정 된 하나 이상의 이벤트 처리기만 실행 됩니다 누르기가 (이 기간 아닙니다 구성 가능한) 설정된 기간 내에 발생 합니다. 두 번째 (또는 후속) 탭 해당 기간에 발생 하지 않은 경우는 실질적으로 무시 됩니다 및 '탭 수'를 다시 시작 합니다.
 
 <a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>Xaml을 사용 하 여
 
-제스처 인식기에서 연결 된 속성을 사용 하 여 Xaml 컨트롤에 추가할 수 있습니다. 추가 하는 구문은 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 이미지에는 다음과 같습니다 (이 경우 정의 *두 번 탭* 이벤트):
+제스처 인식기는 연결 된 속성을 사용 하 여 Xaml에서 컨트롤에 추가할 수 있습니다. 추가할 구문을 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 이미지에는 다음과 같습니다 (이 경우 정의 *두 번 탭* 이벤트):
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -54,7 +54,7 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 </Image>
 ```
 
-(샘플)의 이벤트 처리기에 대 한 코드 카운터를 증가 시키고 이미지에서 색을 검정으로 변경 &amp; 흰색입니다.
+(샘플)에서 이벤트 처리기의 코드를 카운터를 증가 및 색에서을 검정으로 이미지를 변경 &amp; 흰색입니다.
 
 ```csharp
 void OnTapGestureRecognizerTapped(object sender, EventArgs args)
@@ -72,7 +72,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>ICommand를 사용 하 여
 
-일반적으로 Mvvm 패턴을 사용 하는 응용 프로그램 사용 `ICommand` 직접 배선 이벤트 처리기를 대신 합니다. [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 쉽게 지원할 수 `ICommand` 바인딩을 코드에 설정 중 하나:
+일반적으로 Mvvm 패턴을 사용 하는 응용 프로그램 사용 `ICommand` 이벤트 처리기를 직접 연결 하는 대신 합니다. [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 쉽게 지원할 수 있습니다 `ICommand` 코드에서 바인딩을 설정 합니다.
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -92,7 +92,7 @@ image.GestureRecognizers.Add(tapGestureRecognizer);
 </Image>
 ```
 
-이 보기 모델에 대 한 전체 코드 샘플에 있습니다. 관련 `Command` 구현 세부 내용은 다음과 같습니다.
+이 보기 모델에 대 한 전체 코드 샘플에 있습니다. 관련 `Command` 구현 세부 정보는 다음과 같습니다.
 
 ```csharp
 public class TapViewModel : INotifyPropertyChanged
@@ -116,11 +116,11 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## <a name="summary"></a>요약
 
-탭 제스처 tap 검색에 사용 되 고 사용 하 여 구현 된 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) 클래스입니다. 탭의 수를 두 번 누르면 인식 하도록 지정할 수 있습니다 (또는 세 번 누르기 이상의 탭) 동작 합니다.
+탭 제스처 탭 검색에 사용 되 고 사용 하 여 구현 되는 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 클래스입니다. 두 번 눌러서 인식 하도록 탭의 수를 지정할 수 있습니다 (세 번 누르기 또는 자세히 탭) 동작 합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [TapGesture (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [TapGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

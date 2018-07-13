@@ -1,21 +1,21 @@
 ---
 title: Xamarin.iOS System.Data
-description: 이 문서에서는 System.Data 및 Mono.Data.Sqlite.dll SQLite 데이터 Xamarin.iOS 응용 프로그램에 액세스를 사용 하는 방법을 설명 합니다.
+description: 이 문서에는 System.Data 및 Mono.Data.Sqlite.dll Xamarin.iOS 응용 프로그램에서 SQLite 데이터 액세스를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f20bdbdb9fe0d25e1ba545633e271af912aab3ba
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 183079c150ad4df05424d4dbf2980a307a889352
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784718"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997200"
 ---
 # <a name="systemdata-in-xamarinios"></a>Xamarin.iOS System.Data
 
-에 대 한 지원을 추가 하는 Xamarin.iOS 8.10 [System.Data](https://developer.xamarin.com/api/namespace/System.Data/)를 포함 하 여는 `Mono.Data.Sqlite.dll` ADO.NET 공급자입니다. 지원 됩니다. 다음의 추가 [어셈블리](~/cross-platform/internals/available-assemblies.md):
+에 대 한 지원을 추가 하는 Xamarin.iOS 8.10 [System.Data](xref:System.Data)등는 `Mono.Data.Sqlite.dll` ADO.NET 공급자입니다. 지원에 다음 추가 포함 [어셈블리](~/cross-platform/internals/available-assemblies.md):
 
 -  `System.Data.dll`
 -  `System.Data.Service.Client.dll`
@@ -27,17 +27,17 @@ ms.locfileid: "34784718"
 
 ## <a name="example"></a>예
 
-다음 프로그램에서 데이터베이스를 만듭니다. `Documents/mydb.db3`, 하는 경우는 이전에 데이터베이스가 없습니다 것 및 샘플 데이터로 채워집니다. 데이터베이스를 쿼리 한 다음의 출력에 기록 `stderr`합니다.
+다음 프로그램에서 데이터베이스를 만듭니다 `Documents/mydb.db3`, 경우 데이터베이스가 이전에 존재 하지 하 고 샘플 데이터로 채워집니다. 에 쓴 출력을 사용 하 여 데이터베이스를 쿼리 한 다음 `stderr`합니다.
 
 ### <a name="add-references"></a>참조 추가
 
-첫째, 마우스 오른쪽 단추로 클릭는 **참조** 노드 선택 **참조 편집...**  다음 선택 `System.Data` 및 `Mono.Data.Sqlite`:
+첫째, 마우스 오른쪽 단추로 클릭 합니다 **참조** 노드 선택 **참조 편집...**  선택한 `System.Data` 고 `Mono.Data.Sqlite`:
 
 [![](system.data-images/edit-references-sml.png "새 참조 추가")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>샘플 코드
 
-다음 코드에서는 테이블 만들기 및 포함 된 SQL 명령을 사용 하 여 행 삽입의 간단한 예를 보여 줍니다.
+다음 코드 예제에서는 테이블 만들기 및 포함 된 SQL 명령을 사용 하 여 행 삽입을 보여 줍니다.
 
 ```csharp
 using System;
@@ -107,12 +107,12 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> 위의 코드 예제에서 설명 했 듯이 것은 코드에 노출 하면 문자열 SQL 명령에 포함할 적절 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
+> 것은 바람직하지 만들므로 코드에 취약 한 SQL 명령에서 문자열을 포함 하 고 위의 코드 샘플에서 설명 했 듯이 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
 
 
 ### <a name="using-command-parameters"></a>명령 매개 변수를 사용 하 여
 
-다음 코드에는 명령 매개 변수 (있는 경우에 텍스트 단일 아포스트로피와 같은 특수 SQL 문자가) 데이터베이스에 안전 하 게 사용자가 입력 한 텍스트 삽입을 사용 하는 방법을 보여 줍니다.
+다음 코드 (경우에 단일 아포스트로피 같은 특수 SQL 문자를 포함 하는 텍스트) 데이터베이스에 사용자가 입력 한 텍스트를 안전 하 게 삽입 하려면 명령 매개 변수를 사용 하는 방법을 보여 줍니다.
 
 ```csharp
 // user input from Textbox control
@@ -133,7 +133,7 @@ using (var addCmd = conn.CreateCommand ()) {
 
 ## <a name="missing-functionality"></a>누락 된 기능
 
-둘 다 **System.Data** 및 **Mono.Data.Sqlite** 일부 기능이 없습니다.
+둘 다 **System.Data** 하 고 **Mono.Data.Sqlite** 일부 기능이 누락 됩니다.
 
 <a name="System.Data" />
 
@@ -141,28 +141,28 @@ using (var addCmd = conn.CreateCommand ()) {
 
 누락 된 기능 **System.Data.dll** 이루어져 있습니다.
 
--  어느 것에 필요한 [System.CodeDom](https://developer.xamarin.com/api/namespace/System.CodeDom/) (예:  [System.Data.TypedDataSetGenerator](https://developer.xamarin.com/api/type/System.Data.TypedDataSetGenerator/) )
--  XML 구성 파일 (예: 지원  [System.Data.Common.DbProviderConfigurationHandler](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderConfigurationHandler/) )
--   [System.Data.Common.DbProviderFactories](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderFactories/) (XML 구성 파일 지원에 따라 다름)
--   [System.Data.OleDb](https://developer.xamarin.com/api/namespace/System.Data.OleDb/)
--   [System.Data.Odbc](https://developer.xamarin.com/api/namespace/System.Data.Odbc/)
--  `System.EnterpriseServices.dll` 종속성은 *제거* 에서 `System.Data.dll` 로 제거 하 고는 [SqlConnection.EnlistDistributedTransaction(ITransaction)](https://developer.xamarin.com/api/member/System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction/(System.EnterpriseServices.ITransaction)) 메서드.
+-  아무 것도 필요한 [System.CodeDom](xref:System.CodeDom) (예:  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+-  XML 구성 파일 (예: 지원  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+-   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (XML 구성 파일 지원에 따라 다름)
+-   [System.Data.OleDb](xref:System.Data.OleDb)
+-   [System.Data.Odbc](xref:System.Data.Odbc)
+-  합니다 `System.EnterpriseServices.dll` 종속성 되었습니다 *제거* 에서 `System.Data.dll` 제거에서 결과, 합니다 [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) 메서드.
 
 
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono.Data.Sqlite
 
-한편, **Mono.Data.Sqlite.dll** 소스 코드 변경 없이 발생 하지만 대신 다양 한 호스트를 수 있습니다 *런타임* 이후에 발급 `Mono.Data.Sqlite.dll` SQLite 3.5에 바인딩합니다. 8, iOS는 한편, SQLite 3.8.5 함께 제공 됩니다. 말할 살펴보겠지만 일부의 원인 두 버전 간에 변경 되었습니다.
+한편 **Mono.Data.Sqlite.dll** 소스 코드 변경 없이 발생 하지만 대신 다양 한 호스트 될 수 있습니다 *런타임* 이후에 발급 `Mono.Data.Sqlite.dll` SQLite 3.5를 바인딩합니다. 한편, 8, iOS 3.8.5 SQLite를 사용 하 여 제공 됩니다. 말할 필요도 없이 몇 가지 작업은 두 버전 간에 변경 되었습니다.
 
-이전 버전 iOS의 다음 버전의 SQLite 함께 제공:
+이전 버전 iOS의 다음 버전의 SQLite 사용 하 여 제공:
 
 - **iOS 7** -3.7.13 버전입니다.
 - **iOS 6** -3.7.13 버전입니다.
 - **iOS 5** -3.7.7 버전입니다.
 - **iOS 4** -3.6.22 버전입니다.
 
-예를 들어 열와 같은 지정된 된 테이블에 존재 하는 런타임 시 결정 데이터베이스 스키마는 쿼리 하 나와 관련 되어야 하는 가장 일반적인 문제 표시 `Mono.Data.Sqlite.SqliteConnection.GetSchema` (재정의 [DbConnection.GetSchema](https://developer.xamarin.com/api/member/System.Data.Common.DbConnection.GetSchema/)) 및 `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` 드 ( 재정의 [DbDataReader.GetSchemaTable](https://developer.xamarin.com/api/member/System.Data.Common.DbDataReader.GetSchemaTable/)). 즉, 모두를 사용 하 여 보이는 [DataTable](https://developer.xamarin.com/api/type/System.Data.DataTable/) 작동 되지 않습니다.
+예를 들어 열과 같은 지정된 된 테이블에 존재 하는 런타임 시 결정 데이터베이스 스키마는 쿼리를 관련 된 것으로 표시 되는 가장 일반적인 문제 `Mono.Data.Sqlite.SqliteConnection.GetSchema` (재정의 [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) 고 `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (재정의 [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable)합니다. 즉,에 아무 것도 사용 하 여 보입니다 [DataTable](xref:System.Data.DataTable) 작동할 것입니다.
 
 <a name="Data_Binding" />
 

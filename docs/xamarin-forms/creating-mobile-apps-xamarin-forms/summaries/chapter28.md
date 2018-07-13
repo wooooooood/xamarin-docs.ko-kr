@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c10a3c1a0ed2755734fe351df39caadc88dd61c4
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: a02239906f5a30c068cb7eebd31308ad188696b3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935129"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998100"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
-Xamarin.Forms 지원를 [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) 에서 파생 된 요소 `View`합니다. 맵을 사용 하 여 관련 된 위에 표시 되는 특별 한 플랫폼 요구 사항으로 인해 별도 어셈블리에 구현 됩니다 **Xamarin.Forms.Maps**를 다른 네임 스페이스를 포함 하 고: `Xamarin.Forms.Maps`합니다.
+Xamarin.Forms 지원를 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 에서 파생 된 요소 `View`합니다. 맵을 사용 하 여 관련 된 위에 표시 되는 특별 한 플랫폼 요구 사항으로 인해 별도 어셈블리에 구현 됩니다 **Xamarin.Forms.Maps**를 다른 네임 스페이스를 포함 하 고: `Xamarin.Forms.Maps`합니다.
 
 ## <a name="the-geographic-coordinate-system"></a>지리 좌표계
 
@@ -118,13 +118,13 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 [ **MapDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/MapDemos) 이루어져 있습니다 샘플을 [MapsDemoHomePage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml) 파일 및 [MapsDemoHomePage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml.cs) 코드 숨김 파일 다양 한 데모 프로그램을 이동할 수 있습니다.
 
-합니다 [BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) 파일을 표시 하는 방법을 보여 줍니다 합니다 [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) 보기. 마시는, 기본적으로 표시 되지만 사용자가 지도 조작할 수 있습니다.
+합니다 [BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) 파일을 표시 하는 방법을 보여 줍니다 합니다 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 보기. 마시는, 기본적으로 표시 되지만 사용자가 지도 조작할 수 있습니다.
 
-가로 및 세로 스크롤을 사용 하지 않으려면 다음을 설정 합니다 [ `HasScrollEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasScrollEnabled/) 속성을 `false`입니다. 확대/축소를 사용 하지 않으려면 설정할 [ `HasZoomEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasZoomEnabled/) 하려면 `false`합니다. 이러한 속성 모든 플랫폼에서 작동 하지 않을 수 있습니다.
+가로 및 세로 스크롤을 사용 하지 않으려면 다음을 설정 합니다 [ `HasScrollEnabled` ](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) 속성을 `false`입니다. 확대/축소를 사용 하지 않으려면 설정할 [ `HasZoomEnabled` ](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) 하려면 `false`합니다. 이러한 속성 모든 플랫폼에서 작동 하지 않을 수 있습니다.
 
 ### <a name="streets-and-terrain"></a>거리와 지형
 
-설정 하 여 다양 한 유형의 지도 표시할 수 있습니다 합니다 `Map` 속성 [ `MapType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.MapType/) 형식의 [ `MapType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapType/), 세 가지 멤버로 구성 된 열거형:
+설정 하 여 다양 한 유형의 지도 표시할 수 있습니다 합니다 `Map` 속성 [ `MapType` ](xref:Xamarin.Forms.Maps.Map.MapType) 형식의 [ `MapType` ](xref:Xamarin.Forms.Maps.MapType), 세 가지 멤버로 구성 된 열거형:
 
 - [`Street`](xref:Xamarin.Forms.Maps.MapType.Street)기본값
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
@@ -134,32 +134,32 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 ### <a name="map-coordinates"></a>지도 좌표
 
-프로그램을 가져오면 현재 영역은 합니다 `Map` 를 통해 표시 되는 [ `VisibleRegion` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.VisibleRegion/) 속성입니다. 이 속성은 *되지* 바인딩 가능한 속성으로 지원 하도록 지정 하는 변경 된 경우, 속성을 모니터링 하고자 하는 프로그램은 해당 목적을 위해 타이머를 사용 아마도 알림 메커니즘이 없습니다.
+프로그램을 가져오면 현재 영역은 합니다 `Map` 를 통해 표시 되는 [ `VisibleRegion` ](xref:Xamarin.Forms.Maps.Map.VisibleRegion) 속성입니다. 이 속성은 *되지* 바인딩 가능한 속성으로 지원 하도록 지정 하는 변경 된 경우, 속성을 모니터링 하고자 하는 프로그램은 해당 목적을 위해 타이머를 사용 아마도 알림 메커니즘이 없습니다.
 
-`VisibleRegion` 유형의 [ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/), 4 개의 읽기 전용 속성을 사용 하 여 클래스:
+`VisibleRegion` 유형의 [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), 4 개의 읽기 전용 속성을 사용 하 여 클래스:
 
-- [`Center`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Center/) 형식의 [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/)
-- [`LatitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LatitudeDegrees/) 형식의 `double`, 지도의 표시 영역 높이 나타내는
-- [`LongitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LongitudeDegrees/) 형식의 `double`, 지도의 표시 영역 너비를 나타내는
-- [`Radius`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Radius/) 형식의 [ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/), 지도 가장 큰 순환 영역 크기를 나타내는
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) 형식의 [`Position`](xref:Xamarin.Forms.Maps.Position)
+- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) 형식의 `double`, 지도의 표시 영역 높이 나타내는
+- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 형식의 `double`, 지도의 표시 영역 너비를 나타내는
+- [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) 형식의 [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), 지도 가장 큰 순환 영역 크기를 나타내는
 
-`Position` 및 `Distance` 두 구조입니다. `Position` 통해 설정 하는 두 개의 읽기 전용 속성을 정의 합니다 [ `Position` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Position.Position/p/System.Double/System.Double/):
+`Position` 및 `Distance` 두 구조입니다. `Position` 통해 설정 하는 두 개의 읽기 전용 속성을 정의 합니다 [ `Position` 생성자](xref:Xamarin.Forms.Maps.Position.%23ctor(System.Double,System.Double)):
 
-- [`Latitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Latitude/)
-- [`Longitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Longitude/)
+- [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude)
+- [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude)
 
 `Distance` 미터법과 영국식 단위 간의 변환 하 여 거리 단위에 관계 없이 제공 됩니다. `Distance` 여러 가지 방법으로 값을 만들 수 있습니다.
 
-- [`Distance` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Distance.Distance/p/System.Double/) 미터에서 거리를 사용 하 여
-- [`Distance.FromMeters`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMeters/p/System.Double/) 정적 메서드
-- [`Distance.FromKilometers`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromKilometers/p/System.Double/) 정적 메서드
-- [`Distance.FromMiles`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMiles/p/System.Double/) 정적 메서드
+- [`Distance` 생성자](xref:Xamarin.Forms.Maps.Distance.%23ctor(System.Double)) 미터에서 거리를 사용 하 여
+- [`Distance.FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters(System.Double)) 정적 메서드
+- [`Distance.FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers(System.Double)) 정적 메서드
+- [`Distance.FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles(System.Double)) 정적 메서드
 
 값은 세 가지 속성에서 사용할 수 있습니다.
 
-- [`Meters`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Meters/) 형식의 `double`
-- [`Kilometers`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Kilometers/) 형식의 `double`
-- [`Miles`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Miles/) 형식의 `double`
+- [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters) 형식의 `double`
+- [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers) 형식의 `double`
+- [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles) 형식의 `double`
 
 합니다 [MapCoordinatesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml) 파일에는 몇 `Label` 표시에 대 한 요소는 `MapSpan` 정보입니다. 합니다 [MapCoordinatesPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml.cs) 코드 숨김 파일 타이머를 사용 하 여 지도 조작 하는 사용자에 따라 업데이트 정보를 유지 합니다.
 
@@ -169,16 +169,16 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 ### <a name="setting-an-initial-location"></a>초기 위치를 설정합니다.
 
-호출할 수 있습니다 합니다 [ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion/p/Xamarin.Forms.Maps.MapSpan/) 메서드의 `Map` 프로그래밍 방식으로 지도에 위치 및 확대/축소 수준을 설정 하려면. 형식 인수가 `MapSpan`합니다. 만들 수는 `MapSpan` 다음 중 하나를 사용 하 여 개체:
+호출할 수 있습니다 합니다 [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) 메서드의 `Map` 프로그래밍 방식으로 지도에 위치 및 확대/축소 수준을 설정 하려면. 형식 인수가 `MapSpan`합니다. 만들 수는 `MapSpan` 다음 중 하나를 사용 하 여 개체:
 
-- [`MapSpan` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.MapSpan.MapSpan/p/Xamarin.Forms.Maps.Position/System.Double/System.Double/) 사용 하 여는 `Position`, 및 위 도와 경도 범위
-- [`MapSpan.FromCenterAndRadius`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius/p/Xamarin.Forms.Maps.Position/Xamarin.Forms.Maps.Distance/) 사용 하 여를 `Position` 및 radius
+- [`MapSpan` 생성자](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double)) 사용 하 여는 `Position`, 및 위 도와 경도 범위
+- [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance)) 사용 하 여를 `Position` 및 radius
 
-새 수 이기도 `MapSpan` 메서드를 사용 하 여 기존에서 [ `ClampLatitude` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.ClampLatitude/p/System.Double/System.Double/) 하거나 [ `WithZoom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.WithZoom/p/System.Double/)합니다.
+새 수 이기도 `MapSpan` 메서드를 사용 하 여 기존에서 [ `ClampLatitude` ](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) 하거나 [ `WithZoom` ](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double))합니다.
 
 [WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) 파일 및 [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) 코드 숨김 파일을 사용 하는 방법에 설명 합니다 `MoveToRegion` 와이오밍 상태를 표시 하는 방법입니다.
 
-사용할 수 있습니다 합니다 [ `Map` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Map.Map/p/Xamarin.Forms.Maps.MapSpan/) 사용 하 여를 `MapSpan` map의 위치를 초기화할 개체입니다. 합니다 [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일 샌프란시스코에 Xamarin의 본사를 표시 하는 XAML에서 전체적으로이 작업을 수행 하는 방법을 보여 줍니다.
+사용할 수 있습니다 합니다 [ `Map` 생성자](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) 사용 하 여를 `MapSpan` map의 위치를 초기화할 개체입니다. 합니다 [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일 샌프란시스코에 Xamarin의 본사를 표시 하는 XAML에서 전체적으로이 작업을 수행 하는 방법을 보여 줍니다.
 
 ### <a name="dynamic-zooming"></a>동적 확대/축소
 
@@ -188,7 +188,7 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 ### <a name="the-phones-location"></a>휴대폰의 위치
 
-[ `IsShowingUser` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.IsShowingUser/) 의 속성 `Map` 약간으로 세 가지 플랫폼에서 다르게 작동 합니다 [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일을 보여 줍니다.
+[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) 의 속성 `Map` 약간으로 세 가지 플랫폼에서 다르게 작동 합니다 [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일을 보여 줍니다.
 
 - IOS에서 파랑 점 휴대폰의 위치를 나타내는 있지만 있습니다에 수동으로 이동 해야 합니다.
 - Android에서는 아이콘이 표시 됩니다 때 푸시 이동 휴대폰의 위치에 매핑
@@ -200,12 +200,12 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 ### <a name="pins-and-science-museums"></a>Pin 및 과학 박물관
 
-마지막으로, 합니다 `Map` 클래스 정의 [ `Pins` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.Pins/) 형식의 속성 `IList<Pin>`합니다. 합니다 [ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) 클래스 네 가지 속성을 정의 합니다.
+마지막으로, 합니다 `Map` 클래스 정의 [ `Pins` ](xref:Xamarin.Forms.Maps.Map.Pins) 형식의 속성 `IList<Pin>`합니다. 합니다 [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) 클래스 네 가지 속성을 정의 합니다.
 
-- [`Label`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Label/) 형식의 `string`, 필수 속성
-- [`Address`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Address/) 형식의 `string`, 사람이 읽을 수는 선택적 주소
-- [`Position`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Position/) 형식의 `Position`, pin 지도에 표시 되는 위치를 나타내는
-- [`Type`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Type/) 형식의 [ `PinType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.PinType/), 사용 되지 않는 열거형
+- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label) 형식의 `string`, 필수 속성
+- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address) 형식의 `string`, 사람이 읽을 수는 선택적 주소
+- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 형식의 `Position`, pin 지도에 표시 되는 위치를 나타내는
+- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) 형식의 [ `PinType` ](xref:Xamarin.Forms.Maps.PinType), 사용 되지 않는 열거형
 
 합니다 **MapDemos** 프로젝트 파일이 [ScienceMuseums.xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml), 미국에 과학 박물관을 나열 하는 및 [ `Locations` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) 및 [ `Site` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) 이 데이터를 역직렬화 하는 동안에 클래스입니다.
 
@@ -223,7 +223,7 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 ## <a name="geocoding-and-back-again"></a>지 오 코딩 한 후 다시 돌아오기
 
-[ **Xamarin.Forms.Maps** ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 어셈블리 포함는 [ `Geocoder` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Geocoder/) 클래스를 [ `GetPositionsForAddressAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync/p/System.String/) 변환 하는 메서드 0 또는 보다 가능한 지리적 위치 및 다른 메서드는 텍스트 주소 [ `GetAddressesForPositionAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync/p/Xamarin.Forms.Maps.Position/) 반대 방향에서으로 변환 하는 합니다.
+[ **Xamarin.Forms.Maps** ](xref:Xamarin.Forms.Maps) 어셈블리 포함는 [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 변환 하는 메서드 0 또는 보다 가능한 지리적 위치 및 다른 메서드는 텍스트 주소 [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 반대 방향에서으로 변환 하는 합니다.
 
 합니다 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) 파일 및 [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) 코드 숨김 파일에서이 기능을 보여 줍니다.
 

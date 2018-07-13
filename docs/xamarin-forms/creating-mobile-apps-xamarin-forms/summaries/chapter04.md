@@ -7,36 +7,36 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7860df998fbfe580362aff0f4f01374a4ae1f923
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 3571774ddec4182f35cac6f13d4582235e2ff31a
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935555"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997428"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 4 장입니다. 스택 스크롤
 
 이 장에서 주로 전용으로 지정 개념을 도입 *레이아웃*, 있으며 클래스 및 Xamarin.Forms 페이지의 여러 보기의 시각적 표시를 구성 하는 데 사용 하는 방법에 대 한 전체 용어입니다.
 
-레이아웃에서 파생 되는 여러 클래스를 포함 [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) 하 고 [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/)합니다. 이 장에서 중점적 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)합니다.
+레이아웃에서 파생 되는 여러 클래스를 포함 [ `Layout` ](xref:Xamarin.Forms.Layout) 하 고 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)합니다. 이 장에서 중점적 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)합니다.
 
-이 챕터에 도입 되었습니다은 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/)를 [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/), 및 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 클래스입니다.
+이 챕터에 도입 되었습니다은 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)를 [ `Frame` ](xref:Xamarin.Forms.Frame), 및 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 클래스입니다.
 
 ## <a name="stacks-of-views"></a>스택 뷰
 
-[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 파생 `Layout<View>` 상속 된 [ `Children` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) 형식의 속성 `IList<View>`합니다. 이 컬렉션에 여러 보기 항목을 추가 하 고 `StackLayout` 가로 또는 세로 스택을 표시 합니다.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) 파생 `Layout<View>` 상속 된 [ `Children` ](xref:Xamarin.Forms.Layout`1) 형식의 속성 `IList<View>`합니다. 이 컬렉션에 여러 보기 항목을 추가 하 고 `StackLayout` 가로 또는 세로 스택을 표시 합니다.
 
 설정 합니다 [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) 속성을 `StackLayout` 의 멤버에는 [ `StackOrientation` ](xref:Xamarin.Forms.StackOrientation) 열거형 중 하나 [ `Vertical` ](xref:Xamarin.Forms.StackOrientation.Vertical) 또는 [ `Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal). 기본값은 `Vertical`입니다.
 
-설정 합니다 [ `Spacing` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) 의 속성 `StackLayout` 에 `double` 자식 간의 간격을 지정 하는 값. 기본값은 6입니다.
+설정 합니다 [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) 의 속성 `StackLayout` 에 `double` 자식 간의 간격을 지정 하는 값. 기본값은 6입니다.
 
 코드에서 항목을 추가할 수 있습니다는 `Children` 의 컬렉션 `StackLayout` 에 `for` 또는 `foreach` 에 설명 된 대로 루프를 [ **ColorLoop** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) 샘플에서는 하거나 초기화할 수 있습니다는 `Children` 목록 사용 하 여 컬렉션에서 설명한 것 처럼 개별 뷰 [ **ColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList)합니다. 자식에서 파생 되어야 합니다 `View` 기타를 포함할 수 있지만 `StackLayout` 개체입니다.
 
 ## <a name="scrolling-content"></a>콘텐츠 스크롤
 
-경우는 `StackLayout` 페이지에 표시할 너무 많은 자식이 포함 넣을 수 있습니다를 `StackLayout` 에 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 스크롤을 허용 하도록 합니다.
+경우는 `StackLayout` 페이지에 표시할 너무 많은 자식이 포함 넣을 수 있습니다를 `StackLayout` 에 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 스크롤을 허용 하도록 합니다.
 
-설정 된 [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) 속성의 `ScrollView` 스크롤하려면 원하는 보기를 합니다. 이 방식은 비용를 `StackLayout`, 이지만 모든 보기 수 있습니다.
+설정 된 [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) 속성의 `ScrollView` 스크롤하려면 원하는 보기를 합니다. 이 방식은 비용를 `StackLayout`, 이지만 모든 보기 수 있습니다.
 
 설정 합니다 [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) 의 속성 `ScrollView` 의 멤버에는 [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) 속성인 [ `Vertical` ](xref:Xamarin.Forms.ScrollOrientation.Vertical), [ `Horizontal` ](xref:Xamarin.Forms.ScrollOrientation.Horizontal), 또는 [ `Both` ](xref:Xamarin.Forms.ScrollOrientation.Both)합니다. 기본값은 `Vertical`입니다. 경우 내용의 `ScrollView` 는 `StackLayout`, 두 방향을 일치 해야 합니다.
 
@@ -53,14 +53,14 @@ ms.locfileid: "37935555"
 
 사용자 편의 위해 합니다 `LayoutOptions` 구조 형식의 8 개의 정적 읽기 전용 필드가 정의 `LayoutOptions` 두 인스턴스 속성의 모든 조합을 포함 하는:
 
-- [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`LayoutOptions.End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`LayoutOptions.StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`LayoutOptions.CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`LayoutOptions.End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`LayoutOptions.StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`LayoutOptions.CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 다음 논의에서는 `StackLayout` 기본 세로 방향으로 합니다. 가로 `StackLayout` 것과 유사 합니다.
 
@@ -78,21 +78,21 @@ ms.locfileid: "37935555"
 
 이러한 두 사각형 뷰 프레젠테이션을 위해 자주 사용 됩니다.
 
-합니다 [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) 표시와 같은 레이아웃을 수 있는 다른 뷰 주위에 사각형 프레임 `StackLayout`합니다. `Frame` 상속을 [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) 속성을 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 사용자가 설정한 뷰에 내에 표시할 수는 `Frame`합니다. `Frame` 기본적으로 이루어집니다. 프레임의 모양을 사용자 지정 하는 다음 세 가지 속성을 설정 합니다.
+합니다 [ `Frame` ](xref:Xamarin.Forms.Frame) 표시와 같은 레이아웃을 수 있는 다른 뷰 주위에 사각형 프레임 `StackLayout`합니다. `Frame` 상속을 [ `Content` ](xref:Xamarin.Forms.ContentView.Content) 속성을 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 사용자가 설정한 뷰에 내에 표시할 수는 `Frame`합니다. `Frame` 기본적으로 이루어집니다. 프레임의 모양을 사용자 지정 하는 다음 세 가지 속성을 설정 합니다.
 
-- 합니다 [ `OutlineColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/) 속성을 볼 수 있도록 합니다. 일반적으로 설정할 `OutlineColor` 에 `Color.Accent` 기본 색 구성표를 알 수 없는 경우.
-- [ `HasShadow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.HasShadow/) 속성 설정할 수 있습니다 `true` iOS 장치에서 검은색 그림자를 표시 합니다.
-- 설정 된 [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) 속성을는 `Thickness` 공백을 프레임과 프레임 사이 남길 값의 콘텐츠입니다. 기본값은 모든 면에서 20 명의 단위입니다.
+- 합니다 [ `OutlineColor` ](xref:Xamarin.Forms.Frame.OutlineColor) 속성을 볼 수 있도록 합니다. 일반적으로 설정할 `OutlineColor` 에 `Color.Accent` 기본 색 구성표를 알 수 없는 경우.
+- [ `HasShadow` ](xref:Xamarin.Forms.Frame.HasShadow) 속성 설정할 수 있습니다 `true` iOS 장치에서 검은색 그림자를 표시 합니다.
+- 설정 된 [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) 속성을는 `Thickness` 공백을 프레임과 프레임 사이 남길 값의 콘텐츠입니다. 기본값은 모든 면에서 20 명의 단위입니다.
 
 `Frame` 기본값이 `HorizontalOptions` 및 `VerticalOptions` 의 값 `LayoutOptions.Fill`, 즉는 `Frame` 해당 컨테이너를 입력 합니다. 다른 설정의 크기에는 `Frame` 내용의 크기를 기반으로 하는 합니다.
 
 합니다 `Frame` 에 설명 되어 합니다 [ **FramedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FramedText) 샘플입니다.
 
-합니다 [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 지정 되는 색의 사각형 영역을 표시 합니다. 해당 [ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) 속성입니다.
+합니다 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 지정 되는 색의 사각형 영역을 표시 합니다. 해당 [ `Color` ](xref:Xamarin.Forms.BoxView.Color) 속성입니다.
 
 경우는 `BoxView` 제한 됩니다 (해당 `HorizontalOptions` 하 고 `VerticalOptions` 속성의 해당 기본 설정을 `LayoutOptions.Fill`), `BoxView` 에 대 한 사용 가능한 공간을 채웁니다. 경우는 `BoxView` 제약을 받지 않는 (사용 하 여 `HorizontalOptions` 하 고 `LayoutOptions` 의 설정을 `Start`, `Center`, 또는 `End`), 40 단위 정사각형의 기본 차원이 합니다. `BoxView` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다.
 
-설정 종종를 [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) 및 [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) 의 속성 `BoxView` 특정 크기를 제공 합니다. 자세히 설명 합니다 [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) 샘플입니다.
+설정 종종를 [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성 `BoxView` 특정 크기를 제공 합니다. 자세히 설명 합니다 [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) 샘플입니다.
 
 여러 인스턴스를 사용할 수 있습니다 `StackLayout` 결합 하는 `BoxView` 및 여러 `Label` 인스턴스를 `Frame` 특정 색을 표시 한 다음 각각에서 이러한 보기를 배치 하는 `StackLayout` 에 `ScrollView` 매력적인를 만들려면 에 표시 된 색 목록을 합니다 [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) 샘플:
 

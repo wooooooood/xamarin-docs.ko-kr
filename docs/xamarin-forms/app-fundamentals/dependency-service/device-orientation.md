@@ -1,41 +1,41 @@
 ---
-title: 장치 방향을 확인 하는 중
-description: 이 문서에서는 장치 방향을 공유 코드에서 액세스 하는 Xamarin.Forms DependencyService 클래스를 사용 하는 방법을 설명 합니다.
+title: 장치 방향 확인
+description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용 하 여 공유 코드에서 장치 방향에 액세스 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: e21531b7f39d3876d91eea8fa6cb9e409a9deffa
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240058"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995643"
 ---
-# <a name="checking-device-orientation"></a>장치 방향을 확인 하는 중
+# <a name="checking-device-orientation"></a>장치 방향 확인
 
-사용 하는이 문서에서는 안내 [ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 에서 공유 코드는 각 플랫폼에서 네이티브 Api를 사용 하 여 장치 방향을 확인 합니다. 이 연습에서는 기존 기반 `DeviceOrientation` 알리 Özgür 별로 플러그 인 합니다. 참조는 [GitHub 리포지토리](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 정보에 대 한 합니다.
+이 문서를 사용 하도록 안내 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 네이티브 Api를 사용 하 여 각 플랫폼에서 공유 코드에서 장치 방향 확인 합니다. 이 연습은 기존 기반 `DeviceOrientation` Ali Özgür 별로 플러그 인입니다. 참조를 [GitHub 리포지토리에서](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 내용은 합니다.
 
-- **[인터페이스를 만드는 방법](#Creating_the_Interface)**  &ndash; 이해 인터페이스 하는 방법을 공유 코드에 만들어집니다.
-- **[iOS 구현](#iOS_Implementation)**  &ndash; iOS에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[Android 구현](#Android_Implementation)**  &ndash; Android 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[UWP 구현](#WindowsImplementation)**  &ndash; 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
-- **[공유 코드에서 구현](#Implementing_in_Shared_Code)**  &ndash; 사용 방법을 배울 `DependencyService` 공유 코드에서 네이티브 구현으로 호출할 수 있습니다.
+- **[인터페이스를 만드는](#Creating_the_Interface)**  &ndash; 이해 인터페이스에는 공유 코드에서 생성 됩니다.
+- **[iOS 구현](#iOS_Implementation)**  &ndash; iOS 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
+- **[Android 구현을](#Android_Implementation)**  &ndash; Android 용 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
+- **[UWP 구현을](#WindowsImplementation)**  &ndash; 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 코드에서 인터페이스를 구현 하는 방법을 알아봅니다.
+- **[공유 코드에서 구현](#Implementing_in_Shared_Code)**  &ndash; 사용 하는 방법을 알아봅니다 `DependencyService` 공유 코드에서 기본 구현을 호출 합니다.
 
-사용 하 여 응용 프로그램 `DependencyService` 다음과 같은 구조를 갖습니다.
+사용 하 여 응용 프로그램 `DependencyService` 같은 구조를 가집니다.
 
 ![](device-orientation-images/orientation-diagram.png "DependencyService 응용 프로그램 구조")
 
 > [!NOTE]
-> 와 같이 공유 코드에는 장치가 세로 또는 가로 방향 인지 여부를 검색할 수 있기에 [장치 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
+> 설명 된 대로 장치 공유 코드에 세로 또는 가로 방향 인지 여부를 검색할 수 있기에 [장치 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>인터페이스 만들기
 
-먼저 구현 하려는 기능에 따라 표시 되는 공유 코드에서 인터페이스를 만듭니다. 이 예제에서는 인터페이스 메서드 하나가 포함 됩니다.
+먼저 구현 하려는 기능을 표현 하는 공유 코드에서 인터페이스를 만듭니다. 예를 들어 인터페이스는 단일 메서드를 포함 합니다.
 
 ```csharp
 namespace DependencyServiceSample.Abstractions
@@ -54,16 +54,16 @@ namespace DependencyServiceSample.Abstractions
 }
 ```
 
-공유 코드에서이 인터페이스에 대 한 코딩 하면 Xamarin.Forms 앱 각 플랫폼에서 장치 방향을 Api에 액세스할 수 있습니다.
+공유 코드에서이 인터페이스에 대 한 코딩 하면 Xamarin.Forms 앱에서 각 플랫폼 장치 방향 Api에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 인터페이스를 구현 하는 클래스를 작성 하려면 매개 변수가 없는 생성자가 있어야는 `DependencyService`합니다.
+> 인터페이스를 구현 하는 클래스를 사용 하려면 매개 변수가 없는 생성자가 있어야 합니다 `DependencyService`합니다.
 
 <a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>iOS 구현
 
-각 플랫폼 관련 응용 프로그램 프로젝트에서 인터페이스를 구현 해야 합니다. 매개 변수가 없는 생성자는 클래스에 있도록는 `DependencyService` 새 인스턴스를 만들 수:
+각 플랫폼 관련 응용 프로그램 프로젝트에는 인터페이스를 구현 해야 합니다. 클래스는 매개 변수가 없는 생성자에 있도록는 `DependencyService` 새 인스턴스를 만들 수 있습니다.
 
 ```csharp
 using UIKit;
@@ -87,7 +87,7 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-마지막으로,이 추가 `[assembly]` 클래스 (위와 정의 된 모든 네임 스페이스 외부), 모든 필수 비롯 하 여 특성 `using` 문:
+마지막으로,이 추가 `[assembly]` 특성 클래스 위에 (및 정의 된 모든 네임 스페이스 외부)에 필요한 모든 포함 `using` 문:
 
 ```csharp
 using UIKit;
@@ -99,7 +99,7 @@ namespace DependencyServiceSample.iOS {
     ...
 ```
 
-이 특성의 구현으로 클래스를 등록는 `IDeviceOrientation` 인터페이스 즉 `DependencyService.Get<IDeviceOrientation>` 해당 형식의 인스턴스를 만들려고 공유 코드에서 사용할 수 있습니다.
+이 특성의 구현으로 클래스를 등록 합니다 `IDeviceOrientation` 즉 인터페이스 `DependencyService.Get<IDeviceOrientation>` 의 인스턴스를 만드는 공유 코드에 사용할 수 있습니다.
 
 <a name="Android_Implementation" />
 
@@ -131,7 +131,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-이 추가 `[assembly]` 클래스 (위와 정의 된 모든 네임 스페이스 외부), 모든 필수 비롯 하 여 특성 `using` 문:
+이 추가 `[assembly]` 특성 클래스 위에 (및 정의 된 모든 네임 스페이스 외부)에 필요한 모든 포함 `using` 문:
 
 ```csharp
 using DependencyServiceSample.Droid; //enables registration outside of namespace
@@ -142,13 +142,13 @@ namespace DependencyServiceSample.Droid {
     ...
 ```
 
-이 특성의 구현으로 클래스를 등록는 `IDeviceOrientaiton` 않음을 의미 하는 인터페이스 `DependencyService.Get<IDeviceOrientation>` 에서 사용할 수는 공유 코드는 해당 형식의 인스턴스를 만들 수 있습니다.
+이 특성의 구현으로 클래스를 등록 합니다 `IDeviceOrientaiton` 즉 인터페이스 `DependencyService.Get<IDeviceOrientation>` 에서 사용할 수 있습니다 공유 코드를 해당 인스턴스를 만들 수 있습니다.
 
 <a name="WindowsImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>유니버설 Windows 플랫폼 구현
 
-다음 코드 구현 하는 `IDeviceOrientation` 인터페이스 유니버설 Windows 플랫폼에:
+다음 구현 코드를 `IDeviceOrientation` 유니버설 Windows 플랫폼에서 인터페이스:
 
 ```csharp
 namespace DependencyServiceSample.WindowsPhone
@@ -171,7 +171,7 @@ namespace DependencyServiceSample.WindowsPhone
 }
 ```
 
-추가 `[assembly]` 클래스 (위와 정의 된 모든 네임 스페이스 외부), 모든 필수 비롯 하 여 특성 `using` 문:
+추가 된 `[assembly]` 특성 클래스 위에 (및 정의 된 모든 네임 스페이스 외부)에 필요한 모든 포함 `using` 문:
 
 ```csharp
 using DependencyServiceSample.WindowsPhone; //enables registration outside of namespace
@@ -181,13 +181,13 @@ namespace DependencyServiceSample.WindowsPhone {
     ...
 ```
 
-이 특성의 구현으로 클래스를 등록는 `DeviceOrientationImplementation` 않음을 의미 하는 인터페이스 `DependencyService.Get<IDeviceOrientation>` 에서 사용할 수는 공유 코드는 해당 형식의 인스턴스를 만들 수 있습니다.
+이 특성의 구현으로 클래스를 등록 합니다 `DeviceOrientationImplementation` 즉 인터페이스 `DependencyService.Get<IDeviceOrientation>` 에서 사용할 수 있습니다 공유 코드를 해당 인스턴스를 만들 수 있습니다.
 
 <a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>공유 코드에서 구현
 
-작성 하 고 공유 코드에 액세스 하는 테스트에서는 이제는 `IDeviceOrientation` 인터페이스입니다. 이 간단한 페이지 장치 방향을 기준으로 자체 텍스트를 업데이트 하는 단추를 포함 합니다. 사용 하 여는 `DependencyService` 의 인스턴스를 가져오려면는 `IDeviceOrientation` 인터페이스 &ndash; 런타임 시이 인스턴스가 네이티브 SDK에 대 한 모든 권한이 있는 플랫폼별으로 구현 됩니다.
+작성 하 고 공유 코드에 액세스 하는 테스트에서는 이제는 `IDeviceOrientation` 인터페이스입니다. 이 간단한 페이지에는 장치 방향에 따라 고유한 텍스트를 업데이트 하는 단추가 포함 됩니다. 사용 하 여는 `DependencyService` 의 인스턴스를 가져옵니다는 `IDeviceOrientation` 인터페이스 &ndash; 런타임 시이 인스턴스 네이티브 SDK에 대 한 전체 액세스 권한이 있는 플랫폼 전용 구현 됩니다.
 
 ```csharp
 public MainPage ()
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-IOS, Android 또는 Windows 플랫폼에서이 응용 프로그램을 실행 하 고 단추를 누르면 발생 합니다는 장치 방향을 사용 하는 업데이트 하는 단추의 텍스트입니다.
+IOS, Android 또는 Windows 플랫폼에서이 응용 프로그램을 실행 하 고 단추를 누르면는 장치 방향으로 업데이트 하는 단추의 텍스트입니다.
 
 ![](device-orientation-images/orientation.png "장치 방향 샘플")
 

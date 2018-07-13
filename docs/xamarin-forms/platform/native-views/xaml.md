@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4afdf1210a435e4631b1fe43e9415f4f9f599350
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b7ea75c13d84cf9fe74d7a606f6127aaa6bbe3b2
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935493"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996336"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -44,7 +44,7 @@ Xamarin.Forms XAML 파일에 대 한 기본 보기를 포함 합니다.
 
 ## <a name="consuming-native-views"></a>네이티브 뷰를 사용합니다.
 
-다음 코드 예제에서는 각 플랫폼은 Xamarin.Forms에 대 한 기본 뷰를 사용 하는 방법을 보여 줍니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/):
+다음 코드 예제에서는 각 플랫폼은 Xamarin.Forms에 대 한 기본 뷰를 사용 하는 방법을 보여 줍니다 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -63,11 +63,11 @@ Xamarin.Forms XAML 파일에 대 한 기본 보기를 포함 합니다.
 </ContentPage>
 ```
 
-지정 뿐만 아니라 합니다 `clr-namespace` 및 `assembly` 네이티브 뷰 네임 스페이스의 경우는 `targetPlatform` 도 지정 해야 합니다. 값 중 하나로 설정 해야 합니다 [ `TargetPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/) 열거형 일반적으로 설정 됩니다 `iOS`를 `Android`, 또는 `Windows`합니다. 런타임 시 XAML 파서 있는 모든 XML 네임 스페이스 접두사를 무시 합니다는 `targetPlatform` 응용 프로그램이 실행 되는 플랫폼 일치 하지 않습니다.
+지정 뿐만 아니라 합니다 `clr-namespace` 및 `assembly` 네이티브 뷰 네임 스페이스의 경우는 `targetPlatform` 도 지정 해야 합니다. 값 중 하나로 설정 해야 합니다 [ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform) 열거형 일반적으로 설정 됩니다 `iOS`를 `Android`, 또는 `Windows`합니다. 런타임 시 XAML 파서 있는 모든 XML 네임 스페이스 접두사를 무시 합니다는 `targetPlatform` 응용 프로그램이 실행 되는 플랫폼 일치 하지 않습니다.
 
 지정된 된 네임 스페이스에서 클래스 또는 구조체를 참조 하려면 각 네임 스페이스 선언을 사용할 수 있습니다. 예를 들어 합니다 `ios` 네임 스페이스 선언은 iOS에서 클래스 또는 구조체 참조에 사용할 수 있습니다 `UIKit` 네임 스페이스입니다. XAML을 통해 기본 보기의 속성을 설정할 수 있지만 속성 및 개체 형식은 일치 해야 합니다. 예를 들어 합니다 `UILabel.TextColor` 속성이로 설정 되어 `UIColor.Red` 를 사용 하 여는 `x:Static` 태그 확장 및 `ios` 네임 스페이스입니다.
 
-바인딩 가능한 속성 및 연결 된 바인딩 가능한 속성 설정할 수도 있습니다 기본 보기에서 사용 하 여는 `Class.BindableProperty="value"` 구문입니다. 각 기본 보기는 플랫폼별 래핑됩니다 `NativeViewWrapper` 에서 파생 되는 인스턴스를 [ `Xamarin.Forms.View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) 클래스입니다. 래퍼에 속성 값을 전송 기본 뷰에 바인딩 가능한 속성 또는 연결 된 바인딩 가능한 속성을 설정 합니다. 가운데 맞춤된 가로 레이아웃을 설정 하 여 지정할 수 있습니다 예를 들어 `View.HorizontalOptions="Center"` 기본 보기에 있습니다.
+바인딩 가능한 속성 및 연결 된 바인딩 가능한 속성 설정할 수도 있습니다 기본 보기에서 사용 하 여는 `Class.BindableProperty="value"` 구문입니다. 각 기본 보기는 플랫폼별 래핑됩니다 `NativeViewWrapper` 에서 파생 되는 인스턴스를 [ `Xamarin.Forms.View` ](xref:Xamarin.Forms.View) 클래스입니다. 래퍼에 속성 값을 전송 기본 뷰에 바인딩 가능한 속성 또는 연결 된 바인딩 가능한 속성을 설정 합니다. 가운데 맞춤된 가로 레이아웃을 설정 하 여 지정할 수 있습니다 예를 들어 `View.HorizontalOptions="Center"` 기본 보기에 있습니다.
 
 > [!NOTE]
 > 네이티브 뷰를 사용 하 여 스타일을 사용할 수 없음을 참고 스타일 수만 지 속성을 대상으로 하기 때문에 `BindableProperty` 개체입니다.
@@ -113,14 +113,14 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 인수�
 
 ```
 
-이 페이지에는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 인 [ `IsEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) 속성에 바인딩합니다를 `NativeSwitchPageViewModel.IsSwitchOn` 속성입니다. [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 페이지의 새 인스턴스로 설정 되어 합니다 `NativeSwitchPageViewModel` ViewModel 클래스 구현 하 여 코드 숨김 파일에서 클래스를 `INotifyPropertyChanged` 인터페이스입니다.
+이 페이지에는 [ `Entry` ](xref:Xamarin.Forms.Entry) 인 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성에 바인딩합니다를 `NativeSwitchPageViewModel.IsSwitchOn` 속성입니다. [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 페이지의 새 인스턴스로 설정 되어 합니다 `NativeSwitchPageViewModel` ViewModel 클래스 구현 하 여 코드 숨김 파일에서 클래스를 `INotifyPropertyChanged` 인터페이스입니다.
 
 페이지에는 각 플랫폼에 대 한 기본 스위치 포함 되어 있습니다. 각 기본 스위치를 사용 하는 [ `TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay) 의 값을 업데이트 하는 바인딩은 `NativeSwitchPageViewModel.IsSwitchOn` 속성입니다. 따라서 경우 스위치를 off는 `Entry` 비활성화 된 시점과 스위치가 켜져는 `Entry` 사용 가능 합니다. 다음 스크린샷에서 각 플랫폼에서이 기능을 표시합니다.
 
 ![](xaml-images/native-switch-disabled.png "네이티브 스위치 사용 안 함")
 ![](xaml-images/native-switch-enabled.png "기본 스위치를 사용 하도록 설정")
 
-기본 속성을 구현 하는 양방향 바인딩이 자동으로 지원 되 `INotifyPropertyChanged`, 또는 키-값을 관찰 (KVO) iOS에서 지원 되거나는 `DependencyProperty` UWP의 합니다. 그러나 많은 네이티브 뷰 속성 변경 알림을 지원 하지 않습니다. 이러한 뷰를 지정할 수 있습니다는 [ `UpdateSourceEventName` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.UpdateSourceEventName/) 바인딩 식의 일부인 속성 값입니다. 이 속성은 대상 속성이 변경 되 면 신호를 보내는 기본 보기에서 이벤트의 이름으로 설정 되어야 합니다. 그런 다음 변경 되는 경우 기본 스위치의 값을 `Binding` 클래스는 사용자가 스위치 값을 변경 하는 알림이 전송 됩니다 및 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 됩니다.
+기본 속성을 구현 하는 양방향 바인딩이 자동으로 지원 되 `INotifyPropertyChanged`, 또는 키-값을 관찰 (KVO) iOS에서 지원 되거나는 `DependencyProperty` UWP의 합니다. 그러나 많은 네이티브 뷰 속성 변경 알림을 지원 하지 않습니다. 이러한 뷰를 지정할 수 있습니다는 [ `UpdateSourceEventName` ](xref:Xamarin.Forms.Binding.UpdateSourceEventName) 바인딩 식의 일부인 속성 값입니다. 이 속성은 대상 속성이 변경 되 면 신호를 보내는 기본 보기에서 이벤트의 이름으로 설정 되어야 합니다. 그런 다음 변경 되는 경우 기본 스위치의 값을 `Binding` 클래스는 사용자가 스위치 값을 변경 하는 알림이 전송 됩니다 및 `NativeSwitchPageViewModel.IsSwitchOn` 속성 값이 업데이트 됩니다.
 
 <a name="passing_arguments" />
 
@@ -199,12 +199,12 @@ XAML의 인수 전달에 대 한 자세한 내용은 참조 하세요. [XAML의 
 
 ## <a name="referring-to-native-views-from-code"></a>코드에서 네이티브 뷰를 참조
 
-이름을 사용 하 여 네이티브 뷰일 수는 없지만 `x:Name` 네이티브 뷰를 의자식인제공한액세스공유프로젝트에서코드숨김파일에서XAML파일에선언된기본보기인스턴스를검색할가능성이특성인[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 지정 하는 `x:Name` 특성 값입니다. 그런 다음 코드 숨김 파일에 조건부 컴파일 지시문 내 해야합니다.
+이름을 사용 하 여 네이티브 뷰일 수는 없지만 `x:Name` 네이티브 뷰를 의자식인제공한액세스공유프로젝트에서코드숨김파일에서XAML파일에선언된기본보기인스턴스를검색할가능성이특성인[ `ContentView` ](xref:Xamarin.Forms.ContentView) 지정 하는 `x:Name` 특성 값입니다. 그런 다음 코드 숨김 파일에 조건부 컴파일 지시문 내 해야합니다.
 
-1. 검색 된 [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) 속성 값 및 플랫폼 특정 캐스팅 `NativeViewWrapper` 형식입니다.
+1. 검색 된 [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) 속성 값 및 플랫폼 특정 캐스팅 `NativeViewWrapper` 형식입니다.
 1. 검색 된 `NativeViewWrapper.NativeElement` 속성 네이티브 뷰 형식으로 캐스팅 합니다.
 
-원하는 작업을 수행 하려면 기본 보기에서 네이티브 API는 호출할 수 있습니다. 이 방법은 또한 수 있다는 이점이 다양 한 플랫폼에 대 한 여러 XAML 네이티브 뷰 같은 자식의 수 있음을 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)합니다. 다음 코드 예제에는이 기술을 보여 줍니다.
+원하는 작업을 수행 하려면 기본 보기에서 네이티브 API는 호출할 수 있습니다. 이 방법은 또한 수 있다는 이점이 다양 한 플랫폼에 대 한 여러 XAML 네이티브 뷰 같은 자식의 수 있음을 [ `ContentView` ](xref:Xamarin.Forms.ContentView)합니다. 다음 코드 예제에는이 기술을 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -234,7 +234,7 @@ XAML의 인수 전달에 대 한 자세한 내용은 참조 하세요. [XAML의 
 </ContentPage>
 ```
 
-위의 예제에서는 각 플랫폼에 대 한 기본 뷰는 자식의 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 컨트롤을 사용 하 여 합니다 `x:Name` 특성 값을 검색 하는 데 사용 되는 `ContentView` 코드 숨김에서:
+위의 예제에서는 각 플랫폼에 대 한 기본 뷰는 자식의 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 컨트롤을 사용 하 여 합니다 `x:Name` 특성 값을 검색 하는 데 사용 되는 `ContentView` 코드 숨김에서:
 
 ```csharp
 public partial class NativeViewInsideContentViewPage : ContentPage
@@ -276,9 +276,9 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 }
 ```
 
-합니다 [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) 속성에 액세스 하는 플랫폼별으로 래핑된 네이티브 뷰 검색할 `NativeViewWrapper` 인스턴스. `NativeViewWrapper.NativeElement` 해당 네이티브 형식으로 기본 뷰를 검색할 속성에 액세스 합니다. 기본 보기의 API는 원하는 작업을 수행 하려면 다음 호출 됩니다.
+합니다 [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) 속성에 액세스 하는 플랫폼별으로 래핑된 네이티브 뷰 검색할 `NativeViewWrapper` 인스턴스. `NativeViewWrapper.NativeElement` 해당 네이티브 형식으로 기본 뷰를 검색할 속성에 액세스 합니다. 기본 보기의 API는 원하는 작업을 수행 하려면 다음 호출 됩니다.
 
-동일한 iOS 및 Android 네이티브 단추를 공유 `OnButtonTap` 이벤트 처리기에서 각 기본 단추를 사용 하므로 `EventHandler` 터치 이벤트에 대 한 응답으로 위임 합니다. 그러나, 유니버설 Windows 플랫폼 (UWP)에서는 별도 `RoutedEventHandler`, 다시 사용 되는 `OnButtonTap` 이 예제의 이벤트 처리기입니다. 따라서 기본 단추를 클릭할 때, 합니다 `OnButtonTap` 확장 하 고 내에 포함 된 네이티브 컨트롤을 회전 하는 이벤트 처리기가 실행 합니다 [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 라는 `contentViewTextParent`. 다음 스크린샷에서 각 플랫폼에서이 발생 하는 방법을 보여 줍니다.
+동일한 iOS 및 Android 네이티브 단추를 공유 `OnButtonTap` 이벤트 처리기에서 각 기본 단추를 사용 하므로 `EventHandler` 터치 이벤트에 대 한 응답으로 위임 합니다. 그러나, 유니버설 Windows 플랫폼 (UWP)에서는 별도 `RoutedEventHandler`, 다시 사용 되는 `OnButtonTap` 이 예제의 이벤트 처리기입니다. 따라서 기본 단추를 클릭할 때, 합니다 `OnButtonTap` 확장 하 고 내에 포함 된 네이티브 컨트롤을 회전 하는 이벤트 처리기가 실행 합니다 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 라는 `contentViewTextParent`. 다음 스크린샷에서 각 플랫폼에서이 발생 하는 방법을 보여 줍니다.
 
 ![](xaml-images/contentview.png "네이티브 컨트롤을 포함 하는 ContentView")
 
@@ -319,7 +319,7 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 </ContentPage>
 ```
 
-이 페이지에는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 네이티브 컨트롤에서 사용자가 선택한 과일을 표시 하는 합니다. 합니다 `Label` 바인딩되는 `SubclassedNativeControlsPageViewModel.SelectedFruit` 속성입니다. [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 페이지의 새 인스턴스로 설정 되어 합니다 `SubclassedNativeControlsPageViewModel` ViewModel 클래스 구현 하 여 코드 숨김 파일에서 클래스를 `INotifyPropertyChanged` 인터페이스입니다.
+이 페이지에는 [ `Label` ](xref:Xamarin.Forms.Label) 네이티브 컨트롤에서 사용자가 선택한 과일을 표시 하는 합니다. 합니다 `Label` 바인딩되는 `SubclassedNativeControlsPageViewModel.SelectedFruit` 속성입니다. [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 페이지의 새 인스턴스로 설정 되어 합니다 `SubclassedNativeControlsPageViewModel` ViewModel 클래스 구현 하 여 코드 숨김 파일에서 클래스를 `INotifyPropertyChanged` 인터페이스입니다.
 
 페이지는 또한 각 플랫폼에 대 한 기본 선택 뷰를 포함합니다. 바인딩하여 과일의 컬렉션을 표시 하는 각 기본 뷰에 해당 `ItemSource` 속성을는 `SubclassedNativeControlsPageViewModel.Fruits` 컬렉션입니다. 그러면 다음 스크린샷과에서 같이 사용자에 게는 과일 선택:
 

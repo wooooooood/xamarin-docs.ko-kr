@@ -7,16 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f9b9e27afd5dbbf52f3653995470136e794f17b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935201"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995471"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
 
-Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 비트맵을 표시 하는 요소입니다. 모든 Xamarin.Forms 플랫폼 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) 비트맵을 표시 하는 요소입니다. 모든 Xamarin.Forms 플랫폼 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
 
 Xamarin.Forms에서 비트맵 네 곳에서 제공합니다.
 
@@ -27,30 +27,30 @@ Xamarin.Forms에서 비트맵 네 곳에서 제공합니다.
 
 PCL에서 비트맵 리소스 플랫폼 독립적인은 플랫폼 프로젝트에서는 비트맵 리소스가 플랫폼 마다 다릅니다.
 
-비트맵을 설정 하 여 지정 합니다 [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/) 의 속성 `Image` 형식의 개체에 [ `ImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/), 세 개의 파생을 사용 하 여 추상 클래스:
+비트맵을 설정 하 여 지정 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 의 속성 `Image` 형식의 개체에 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 세 개의 파생을 사용 하 여 추상 클래스:
 
-- [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체 집합 해당 [ `Uri` ](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.Uri/) 속성
-- [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/) 로 설정 하는 폴더 및 파일 경로에 따라 플랫폼 응용 프로그램 프로젝트에 저장 하는 비트맵에 액세스 하기 위한 해당 [ `File` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FileImageSource.File/) 속성
-- [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/) .NET을 사용 하 여 비트맵을 로드 하기 위한 `Stream` 를 반환 하 여 지정 된 개체를 `Stream` 에서 `Func` 로 해당 [ `Stream` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StreamImageSource.Stream/) 속성
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체 집합 해당 [ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri) 속성
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 로 설정 하는 폴더 및 파일 경로에 따라 플랫폼 응용 프로그램 프로젝트에 저장 하는 비트맵에 액세스 하기 위한 해당 [ `File` ](xref:Xamarin.Forms.FileImageSource.File) 속성
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) .NET을 사용 하 여 비트맵을 로드 하기 위한 `Stream` 를 반환 하 여 지정 된 개체를 `Stream` 에서 `Func` 로 해당 [ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream) 속성
 
 다음 정적 메서드를 사용할 수 있습니다 또는 (및 자주)는 `ImageSource` 클래스를 반환 하는 모든 `ImageSource` 개체:
 
-- [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체
-- [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) PCL, 응용 프로그램에 포함 리소스로 저장 된 비트맵에 액세스 하기 위한 또는 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Type/) 하거나 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Reflection.Assembly/) 다른 원본 어셈블리에서 비트맵을 액세스 하려면
-- [`ImageSource.FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) 플랫폼 응용 프로그램 프로젝트에서 비트맵에 액세스 하기 위한
-- [`ImageSource.FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) 에 따라 비트맵을 로드 한 `Stream` 개체
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) PCL; 응용 프로그램에 포함 리소스로 저장 된 비트맵에 액세스 하기 위한 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) 하거나 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) 다른 원본 어셈블리에서 비트맵을 액세스 하려면
+- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) 플랫폼 응용 프로그램 프로젝트에서 비트맵에 액세스 하기 위한
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) 에 따라 비트맵을 로드 한 `Stream` 개체
 
 동등한 옵션이 없습니다 클래스는 `Image.FromResource` 메서드. `UriImageSource` 클래스는 캐싱을 제어 하는 경우에 유용 합니다. `FileImageSource` 클래스는 XAML에서 유용 합니다. `StreamImageSource` 비동기 로딩을 유용 `Stream` 반면 개체 `ImageSource.FromStream` 동기화 됩니다.
 
 ## <a name="platform-independent-bitmaps"></a>플랫폼 독립적 비트맵
 
-합니다 [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) 사용 하 여 웹을 통해 비트맵을 로드 하는 프로젝트 `ImageSource.FromUri`합니다. `Image` 로 설정 된를 `Content` 의 속성을 `ContentPage`이므로 페이지의 크기로 제한 됩니다. 제한 된 비트맵의 크기에 관계 없이 `Image` 요소는 해당 컨테이너의 크기를 채우도록 확장 하 고 비트맵 내에서 최대 크기에 표시 되는 `Image` 비트맵의 가로 세로 비율을 유지 하면서 요소입니다. 영역의 합니다 `Image` 외에 비트맵으로 색이 지정 될 수 있습니다 [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/)합니다.
+합니다 [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) 사용 하 여 웹을 통해 비트맵을 로드 하는 프로젝트 `ImageSource.FromUri`합니다. `Image` 로 설정 된를 `Content` 의 속성을 `ContentPage`이므로 페이지의 크기로 제한 됩니다. 제한 된 비트맵의 크기에 관계 없이 `Image` 요소는 해당 컨테이너의 크기를 채우도록 확장 하 고 비트맵 내에서 최대 크기에 표시 되는 `Image` 비트맵의 가로 세로 비율을 유지 하면서 요소입니다. 영역의 합니다 `Image` 외에 비트맵으로 색이 지정 될 수 있습니다 [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor)합니다.
 
-[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) 예제와 유사 하지만 간단히 설정는 `Source` 속성을 URL입니다. 변환에서 처리 되는 [ `ImageSourceConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSourceConverter/) 클래스입니다.
+[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) 예제와 유사 하지만 간단히 설정는 `Source` 속성을 URL입니다. 변환에서 처리 되는 [ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter) 클래스입니다.
 
 ### <a name="fit-and-fill"></a>맞춤 및 채우기
 
-설정 하 여 비트맵은 늘이는 방법을 제어할 수 있습니다.는 [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) 의 속성을 `Image` 의 다음 멤버 중 하나에 [ `Aspect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/) 열거형:
+설정 하 여 비트맵은 늘이는 방법을 제어할 수 있습니다.는 [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) 의 속성을 `Image` 의 다음 멤버 중 하나에 [ `Aspect` ](xref:Xamarin.Forms.Aspect) 열거형:
 
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): 가로 세로 비율 (기본값)를 준수 합니다.
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill): 영역을 채우는, 가로 세로 비율을 고려 하지 않습니다
@@ -84,7 +84,7 @@ PCL, 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. 지
 
 합니다 [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) 샘플 Xamarin 웹 사이트에 저장 하는 스톡 이미지를 탐색할 수 있습니다. .NET을 사용 하 여 `WebRequest` 비트맵의 목록 사용 하 여 JSON 파일을 다운로드 하는 클래스입니다.
 
-프로그램을 사용 하는 [ `ActivityIndicator` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) 진행을 나타냅니다. 각 비트맵 로드의 읽기 전용 [ `IsLoading` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.IsLoading/) 속성을 `Image` 는 `true`합니다. 합니다 `IsLoading` 속성이 있으므로 바인딩 가능한 속성으로 지원 되는 `PropertyChanged` 해당 속성이 변경 될 때 이벤트가 발생 합니다. 프로그램이이 이벤트 처리기를 연결 하 고 현재 설정을 사용 `IsLoaded` 설정 하는 [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) 의 속성을 `ActivityIndicator`합니다.
+프로그램을 사용 하는 [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) 진행을 나타냅니다. 각 비트맵 로드의 읽기 전용 [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) 속성을 `Image` 는 `true`합니다. 합니다 `IsLoading` 속성이 있으므로 바인딩 가능한 속성으로 지원 되는 `PropertyChanged` 해당 속성이 변경 될 때 이벤트가 발생 합니다. 프로그램이이 이벤트 처리기를 연결 하 고 현재 설정을 사용 `IsLoaded` 설정 하는 [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) 의 속성을 `ActivityIndicator`합니다.
 
 ## <a name="streaming-bitmaps"></a>스트리밍 비트맵
 
@@ -102,11 +102,11 @@ PCL, 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. 지
 
 ## <a name="platform-specific-bitmaps"></a>플랫폼별 비트맵
 
-모든 Xamarin.Forms 플랫폼 플랫폼 응용 프로그램 어셈블리에서 비트맵을 저장할 수 있습니다. 이러한 플랫폼 비트맵 형식의 Xamarin.Forms 응용 프로그램에 의해 가져오면 [ `FileImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/)합니다. 에 대 한 사용:
+모든 Xamarin.Forms 플랫폼 플랫폼 응용 프로그램 어셈블리에서 비트맵을 저장할 수 있습니다. 이러한 플랫폼 비트맵 형식의 Xamarin.Forms 응용 프로그램에 의해 가져오면 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)합니다. 에 대 한 사용:
 
-- 합니다 [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) 속성 [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
-- 합니다 [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) 속성 [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
-- 합니다 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 속성 `Button`
+- 합니다 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 속성 [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- 합니다 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 속성 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- 합니다 [ `Image` ](xref:Xamarin.Forms.Button) 속성 `Button`
 
 플랫폼 어셈블리에는 이미 아이콘 및 시작 화면에 대 한 비트맵에
 
@@ -170,23 +170,23 @@ Windows 런타임 프로젝트 이름 지정 체계 구성 된 장치 독립적 
 
 ### <a name="toolbars-and-their-icons"></a>도구 모음 및 해당 아이콘
 
-플랫폼별 비트맵의 주요 용도 중 하나는 추가 하 여 생성 된 Xamarin.Forms 도구 모음 [ `ToolbarItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) 개체를 [ `ToolbarItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.ToolbarItems/) 정의한컬렉션`Page`. `ToobarItem` 파생 [ `MenuItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) 하는 일부 속성을 상속 합니다.
+플랫폼별 비트맵의 주요 용도 중 하나는 추가 하 여 생성 된 Xamarin.Forms 도구 모음 [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) 개체를 [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) 정의한컬렉션`Page`. `ToobarItem` 파생 [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) 하는 일부 속성을 상속 합니다.
 
 가장 중요 한 `ToolbarItem` 속성입니다.
 
-- [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) 플랫폼에 따라 표시 될 수 있는 텍스트 및 `Order`
-- [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) 형식의 `FileImageSource` 플랫폼에 따라 표시 될 수 있는 이미지 및 `Order`
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) 플랫폼에 따라 표시 될 수 있는 텍스트 및 `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) 형식의 `FileImageSource` 플랫폼에 따라 표시 될 수 있는 이미지 및 `Order`
 - [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) 형식의 [ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder)는 세 멤버가 포함 된 열거형 [ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default)하십시오 [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary), 및 [ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
 수가 `Primary` 항목 3 또는 4로 제한 되어야 합니다. 포함 해야는 `Text` 모든 항목에 대 한 설정입니다. 만 대부분의 플랫폼에 대 한는 `Primary` 항목의 필요를 `Icon` Windows 8.1 필요 하지만 `Icon` 모든 항목에 대 한 합니다. 아이콘에는 32 장치 독립적 단위 정사각형 이어야 합니다. `FileImageSource` 형식은 플랫폼별 지를 나타냅니다.
 
-합니다 `ToolbarItem` 발생을 [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) 변하는데, 비슷한 이벤트를 `Button`입니다. `ToolbarItem` 또한 지원 [ `Command` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/) 하 고 [ `CommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/) MVVM과 관련 하 여 자주 사용 되는 속성입니다. (참조 [18 장, MVVM](chapter18.md)).
+합니다 `ToolbarItem` 발생을 [ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked) 변하는데, 비슷한 이벤트를 `Button`입니다. `ToolbarItem` 또한 지원 [ `Command` ](xref:Xamarin.Forms.MenuItem.Command) 하 고 [ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter) MVVM과 관련 하 여 자주 사용 되는 속성입니다. (참조 [18 장, MVVM](chapter18.md)).
 
-IOS 및 Android 도구 모음을 표시 하는 페이지가 되도록 요구할를 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 또는 탐색 페이지는 `NavigationPage`합니다. [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) 집합을 프로그래밍 합니다 `MainPage` 속성 해당 `App` 클래스를 [ `NavigationPage` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/) 사용 하 여를 `ContentPage` 인수를 도구 모음 생성 및 이벤트 처리기를 보여 줍니다.
+IOS 및 Android 도구 모음을 표시 하는 페이지가 되도록 요구할를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 또는 탐색 페이지는 `NavigationPage`합니다. [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) 집합을 프로그래밍 합니다 `MainPage` 속성 해당 `App` 클래스를 [ `NavigationPage` 생성자](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) 사용 하 여를 `ContentPage` 인수를 도구 모음 생성 및 이벤트 처리기를 보여 줍니다.
 
 ### <a name="button-images"></a>단추 이미지
 
-설정에 플랫폼 전용 비트맵을 사용할 수도 있습니다는 [ `Image` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Image/) 속성을 `Button` 나타난 것 처럼 32 장치 독립적 단위 정사각형 비트맵에는 [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) 샘플입니다.
+설정에 플랫폼 전용 비트맵을 사용할 수도 있습니다는 [ `Image` ](xref:Xamarin.Forms.Button.Image) 속성을 `Button` 나타난 것 처럼 32 장치 독립적 단위 정사각형 비트맵에는 [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) 샘플입니다.
 
 
 

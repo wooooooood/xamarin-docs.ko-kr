@@ -1,33 +1,33 @@
 ---
-title: Xamarin.Forms에 장치 스타일
-description: Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일 라는 6 개의 동적 스타일을 포함 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 장치 스타일을 사용 하는 방법을 설명 합니다.
+title: Xamarin.Forms에서 장치 스타일
+description: Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일으로 알려진 6 동적 스타일을 포함 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 장치 스타일을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6b5d4623bb331f4bf52faa096afeacb21d6d7489
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bba42c966c6a606790655751db8b294d9ca7b6f9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245597"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994379"
 ---
-# <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms에 장치 스타일
+# <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms에서 장치 스타일
 
-_Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일 라는 6 개의 동적 스타일을 포함 합니다._
+_Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일으로 알려진 6 동적 스타일을 포함 합니다._
 
-*장치* 스타일은:
+합니다 *장치* 스타일은:
 
-- [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)
-- [`CaptionStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyle/)
-- [`ListItemDetailTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyle/)
-- [`ListItemTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyle/)
-- [`SubtitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyle/)
-- [`TitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyle/)
+- [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
+- [`CaptionStyle`](xref:Xamarin.Forms.Device.Styles.CaptionStyle)
+- [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
+- [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
+- [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
+- [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-모든 6 개의 스타일에만 적용할 수 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스. 예를 들어는 `Label` 단락의 본문에 표시 되는 설정할 수는 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성을 [ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)합니다.
+모든 6 스타일에만 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 예를 들어, 한 `Label` 단락의 본문을 표시 하는 설정할 수 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을 [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle)합니다.
 
 다음 코드 예제는 *장치* XAML 페이지의 스타일:
 
@@ -63,11 +63,11 @@ _Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일 라는 6 개의
 </ContentPage>
 ```
 
-사용 하 여 바인딩된 장치 스타일은 `DynamicResource` 태그 확장 합니다. 스타일의 동적 특성을 변경 하 여 iOS에서 볼 수 있습니다는 **내게 필요한 옵션** 텍스트 크기에 대 한 설정입니다. 모양을 *장치* 스타일 달라 지는 각 플랫폼에 다음 스크린샷에서 같이:
+장치 스타일을 사용 하 여 바인딩된는 `DynamicResource` 태그 확장 합니다. 스타일의 동적 특성을 변경 하 여 iOS에서 볼 수 있습니다 합니다 **내게 필요한 옵션** 텍스트 크기에 대 한 설정입니다. 모양의 합니다 *장치* 스타일은 다음 스크린샷과에서 같이 각 플랫폼 마다 다르게 합니다.
 
-![](device-images/device-styles.png "각 플랫폼에서 장치 스타일")
+![](device-images/device-styles.png "각 플랫폼에 대 한 장치 스타일")
 
-*장치* 스타일을 설정 하 여도 파생 수 있습니다는 [ `BaseResourceKey` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/) 장치 스타일에 대 한 키 이름 속성입니다. 위의 코드 예에서 `myBodyStyle` 에서 상속 [ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/) 강조 된 텍스트 색을 가져오거나 설정 합니다. 동적 스타일 상속에 대 한 자세한 내용은 참조 [동적 스타일 상속](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance)합니다.
+*장치* 스타일을 설정 하 여도 파생 수 합니다 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 장치 스타일의 키 이름 속성입니다. 위의 코드 예제의 `myBodyStyle` 에서 상속 [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle) 악센트 부호가 있는 텍스트 색을 가져오거나 설정 합니다. 동적 스타일 상속에 대 한 자세한 내용은 참조 하세요. [동적 스타일 상속](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance)합니다.
 
 다음 코드 예제에서는 C#의 해당 페이지를 보여 줍니다.
 
@@ -107,23 +107,23 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 각 속성 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스가에서 적절 한 속성으로 설정 되는 [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) 클래스입니다.
+[ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 의 각 속성 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스가에서 적절 한 속성에 설정 되어 합니다 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다.
 
 ## <a name="accessibility"></a>액세스 가능성
 
-*장치* 스타일 존중 내게 필요한 옵션 기본 설정 글꼴 크기는 각 플랫폼에서 변경 되는 내게 필요한 옵션 기본 설정으로 변경 됩니다. 따라서, 액세스할 수 있는 텍스트를 지원 하기 위해 확인 해야 하는 *장치* 스타일 응용 프로그램 내에서 한 텍스트 스타일에 대 한 기초로 사용 됩니다.
+합니다 *장치* 스타일 준수 내게 필요한 옵션 기본 설정, 글꼴 크기는 각 플랫폼에서 변경 되는 내게 필요한 옵션 기본 설정으로 변경 됩니다. 따라서 액세스할 수 있는 텍스트를 지원 하려면 있는지를 확인 합니다 *장치* 스타일 응용 프로그램 내에서 모든 텍스트 스타일에 대 한 기초로 사용 됩니다.
 
-다음 스크린샷에서 가장 작은 액세스할 수 있는 글꼴 크기와 각 플랫폼에서 장치 스타일을 보여 줍니다.
+다음 스크린샷에서 가장 작은 액세스할 수 있는 글꼴 크기를 사용 하 여 각 플랫폼에서 장치 스타일을 보여 줍니다.
 
 [![](device-images/minimum-size.png "각 플랫폼에 액세스할 수 있는 소형 장치 스타일")](device-images/minimum-size-large.png#lightbox "각 플랫폼에 액세스할 수 있는 소형 장치 스타일")
 
-다음 스크린샷에서 가장 큰 액세스할 수 있는 글꼴 크기와 각 플랫폼에서 장치 스타일을 보여 줍니다.
+다음 스크린샷에서 가장 큰 액세스할 수 있는 글꼴 크기를 사용 하 여 각 플랫폼에서 장치 스타일을 보여 줍니다.
 
-![](device-images/maximum-size.png "각 플랫폼에 액세스할 수 있는 대형 장치 스타일")
+![](device-images/maximum-size.png "각 플랫폼에 액세스할 수 있는 큰 장치 스타일")
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms 포함 6 *동적* 라고 스타일 *장치* 스타일에 [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) 클래스입니다. 모든 6 개의 스타일에만 적용할 수 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스.
+Xamarin.Forms는 6 개 포함 되어 있습니다 *동적* 스타일 이라고 *장치* 스타일에 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다. 모든 6 스타일에만 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스.
 
 
 ## <a name="related-links"></a>관련 링크
@@ -131,8 +131,8 @@ Xamarin.Forms 포함 6 *동적* 라고 스타일 *장치* 스타일에 [ `Device
 - [텍스트 스타일](~/xamarin-forms/user-interface/text/styles.md)
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [동적 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [스타일 (샘플) 작업을](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Device.Styles](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [스타일](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Device.Styles](xref:Xamarin.Forms.Device.Styles)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [스타일](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

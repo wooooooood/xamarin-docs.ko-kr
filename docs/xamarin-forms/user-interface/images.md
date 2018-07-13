@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: ea7ec0d297e144966f8ff7545e6b12160f66c9b0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 47fbe67561ea9150d0fdc0b41eb5c70edbeac75e
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935542"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996271"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -31,19 +31,19 @@ _Xamarin.Forms 사용 하 여 플랫폼 이미지를 공유할 수 있습니다 
 
 ## <a name="displaying-images"></a>이미지 표시
 
-Xamarin.Forms를 사용 합니다 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 페이지에 이미지를 표시 하려면 보기. 두 가지 중요 한 속성을 가집니다.
+Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이지에 이미지를 표시 하려면 보기. 두 가지 중요 한 속성을 가집니다.
 
-- [`Source`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/) -An [ `ImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/) 인스턴스, 파일, Uri 또는 리소스에 표시할 이미지를 설정 합니다.
-- [`Aspect`](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) -(것인지 stretch, 자르기 또는 레터 박스) 내에 표시 되는 범위 내에 있는 이미지의 크기를 조정 하는 방법입니다.
+- [`Source`](xref:Xamarin.Forms.Image.Source) -An [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) 인스턴스, 파일, Uri 또는 리소스에 표시할 이미지를 설정 합니다.
+- [`Aspect`](xref:Xamarin.Forms.Image.Aspect) -(것인지 stretch, 자르기 또는 레터 박스) 내에 표시 되는 범위 내에 있는 이미지의 크기를 조정 하는 방법입니다.
 
-[`ImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/) 이미지 원본의 각 유형에 대 한 정적 메서드를 사용 하 여 인스턴스를 가져올 수 있습니다.
+[`ImageSource`](xref:Xamarin.Forms.ImageSource) 이미지 원본의 각 유형에 대 한 정적 메서드를 사용 하 여 인스턴스를 가져올 수 있습니다.
 
-- [`FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) -파일 이름 또는 파일 경로 각 플랫폼에서 확인할 수 있는 필요 합니다.
-- [`FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) -예를 들어 Uri 개체를 필요합니다.  `new Uri("http://server.com/image.jpg")` .
-- [`FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) -리소스 식별자를 사용 하 여 응용 프로그램 또는.NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일을 필요는 **빌드 작업: EmbeddedResource**합니다.
-- [`FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) -이미지 데이터를 제공 하는 스트림이 필요 합니다.
+- [`FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) -파일 이름 또는 파일 경로 각 플랫폼에서 확인할 수 있는 필요 합니다.
+- [`FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) -예를 들어 Uri 개체를 필요합니다.  `new Uri("http://server.com/image.jpg")` .
+- [`FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) -리소스 식별자를 사용 하 여 응용 프로그램 또는.NET Standard 라이브러리 프로젝트에 포함 된 이미지 파일을 필요는 **빌드 작업: EmbeddedResource**합니다.
+- [`FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) -이미지 데이터를 제공 하는 스트림이 필요 합니다.
 
-합니다 [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) 속성 표시 영역에 맞게 이미지를 조정 하는 방법을 결정 합니다.
+합니다 [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) 속성 표시 영역에 맞게 이미지를 조정 하는 방법을 결정 합니다.
 
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill) -이미지를 완전히 정확 하 게 표시 영역을 채우도록 확장 됩니다. 이 이미지 왜곡 되지 될 수 있습니다.
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -을 측면을 유지 하면서 표시 영역을 채우도록 이미지를 자릅니다 (ie. 왜곡).
@@ -109,13 +109,13 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 
 일부 컨트롤에 같은 이미지를 표시 하는 속성이 있습니다.
 
-- [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) -형식에서 파생 되는 페이지 any `Page` 가 [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Icon/) 및 [ `BackgroundImage` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.BackgroundImage/) 속성을 로컬 파일 참조를 할당할 수 있습니다. 때와 같이 특정 상황을 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 표시 되는 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/), 플랫폼에서 지원 되는 경우 아이콘이 표시 됩니다.
+- [`Page`](xref:Xamarin.Forms.Page) -형식에서 파생 되는 페이지 any `Page` 가 [ `Icon` ](xref:Xamarin.Forms.Page.Icon) 및 [ `BackgroundImage` ](xref:Xamarin.Forms.Page.BackgroundImage) 속성을 로컬 파일 참조를 할당할 수 있습니다. 때와 같이 특정 상황을 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 표시 되는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), 플랫폼에서 지원 되는 경우 아이콘이 표시 됩니다.
 
   > [!IMPORTANT]
-  > Ios의 경우는 [ `Page.Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Icon/) 이미지 자산 카탈로그 이미지 집합에서 속성을 채울 수 없습니다. 대신에 대 한 아이콘 이미지를 로드 합니다 `Page.Icon` 속성을 **리소스** iOS 프로젝트의 폴더.
+  > Ios의 경우는 [ `Page.Icon` ](xref:Xamarin.Forms.Page.Icon) 이미지 자산 카탈로그 이미지 집합에서 속성을 채울 수 없습니다. 대신에 대 한 아이콘 이미지를 로드 합니다 `Page.Icon` 속성을 **리소스** iOS 프로젝트의 폴더.
 
-- [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) -는 [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) 로컬 파일 참조로 설정할 수 있는 속성입니다.
-- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) -는 [ `ImageSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ImageCell.ImageSource/) 속성 이미지를 설정할 수 있는 로컬 파일, 포함된 된 리소스 또는 URI에서 검색 합니다.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) -는 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 로컬 파일 참조로 설정할 수 있는 속성입니다.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) -는 [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) 속성 이미지를 설정할 수 있는 로컬 파일, 포함된 된 리소스 또는 URI에서 검색 합니다.
 
 <a name="embedded_images" />
 
@@ -150,7 +150,7 @@ IDE에 연결 하 여이 기본값을 생성 합니다 **기본 Namespace** 파�
 
 프로젝트 내에서 폴더에 포함 된 이미지를 배치 하는 경우 폴더 이름은 또한 마침표로 구분 하 여 (.)의 리소스 id입니다. 이동 합니다 **beach.jpg** 라는 폴더에 이미지 **MyImages** 의 리소스 ID를 초래 **WorkingWithImages.MyImages.beach.jpg**
 
-포함 된 이미지를 로드 하는 코드는 단순히 전달 된 **리소스 ID** 에 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) 아래와 같이 메서드:
+포함 된 이미지를 로드 하는 코드는 단순히 전달 된 **리소스 ID** 에 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource*) 아래와 같이 메서드:
 
 ```csharp
 var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
@@ -159,7 +159,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 > [!NOTE]
 > 를 지원 하기 위해 유니버설 Windows 플랫폼에서 릴리스 모드에서 포함 된 이미지를 표시 해야 하는 오버 로드를 사용 하 여 `ImageSource.FromResource` 이미지에 대 한 검색 하는 소스 어셈블리를 지정 하는 합니다.
 
-현재 리소스 식별자에 대 한 암시적 변환이 있습니다. 대신 사용 해야 합니다 [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) 또는 `new ResourceImageSource()` 포함 된 이미지를 로드 합니다.
+현재 리소스 식별자에 대 한 암시적 변환이 있습니다. 대신 사용 해야 합니다 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource*) 또는 `new ResourceImageSource()` 포함 된 이미지를 로드 합니다.
 
 다음 스크린샷은 각 플랫폼에 포함 된 이미지를 표시 하는 결과 보여 줍니다.
 
@@ -265,7 +265,7 @@ var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTy
 var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")) };
 ```
 
-합니다 [ `ImageSource.FromUri` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) 메서드를 사용 하려면를 `Uri` 개체를 반환 된 새 [ `UriImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) 에서 읽어오는 `Uri`합니다.
+합니다 [ `ImageSource.FromUri` ](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 메서드를 사용 하려면를 `Uri` 개체를 반환 된 새 [ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource) 에서 읽어오는 `Uri`합니다.
 
 또한는 암시적 변환이 URI 문자열의 경우 다음 예제에서는 에서도 작동 하므로:
 
@@ -281,10 +281,10 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 ### <a name="downloaded-image-caching"></a>다운로드 한 이미지 캐싱
 
-A [ `UriImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) 는 또한 다음 속성을 통해 구성 하는 다운로드 한 이미지의 캐싱을 지원 합니다.
+A [ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource) 는 또한 다음 속성을 통해 구성 하는 다운로드 한 이미지의 캐싱을 지원 합니다.
 
-- [`CachingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CachingEnabled/) -캐싱 사용 여부 (`true` 기본적으로).
-- [`CacheValidity`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CacheValidity/) - `TimeSpan` 는 이미지를 로컬로 저장할 수는 기간을 정의 합니다.
+- [`CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) -캐싱 사용 여부 (`true` 기본적으로).
+- [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) - `TimeSpan` 는 이미지를 로컬로 저장할 수는 기간을 정의 합니다.
 
 캐싱 기본적으로 활성화 되 고 24 시간 동안 로컬 이미지를 저장 합니다. 특정 이미지에 대 한 캐싱을 사용 하지 않으려면 이미지 소스를 다음과 같이 인스턴스화하십시오.
 
@@ -309,7 +309,7 @@ webImage.Source = new UriImageSource
 
 ## <a name="icons-and-splashscreens"></a>아이콘 및 시작 화면
 
-관련이 없는 동안 합니다 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 보기, 응용 프로그램 아이콘 및 시작 화면 이미지 Xamarin.Forms 프로젝트에서 사용 하면 중요 한도입니다.
+관련이 없는 동안 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 보기, 응용 프로그램 아이콘 및 시작 화면 이미지 Xamarin.Forms 프로젝트에서 사용 하면 중요 한도입니다.
 
 설정 아이콘 및 시작 화면 Xamarin.Forms 앱에 대 한 각 응용 프로그램 프로젝트에서 수행 됩니다. 즉, iOS, Android 및 UWP에 대 한 이미지 크기 올바르게 생성 합니다. 이러한 이미지 이름이 있고 각 플랫폼의 요구 사항에 따라 배치 합니다.
 

@@ -7,29 +7,29 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 31422f1067473ccb49a681098bd0809c451e7369
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935360"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994928"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 _날짜를 선택할 수 있도록 하는 Xamarin.Forms 뷰_
 
-Xamarin.Forms [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 사용자가 날짜를 선택할 수 있습니다. `DatePicker` 8 가지 속성을 정의합니다.
+Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 사용자가 날짜를 선택할 수 있습니다. `DatePicker` 8 가지 속성을 정의합니다.
 
-- [`MinimumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/) 형식의 [ `DateTime` ](https://developer.xamarin.com/api/type/System.DateTime/), 1900 년의 첫 번째 날에는 기본값입니다.
-- [`MaximumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/) 형식의 `DateTime`, 2100 연도의 마지막 날에 기본값.
-- [`Date`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/) 형식의 `DateTime`, 선택한 날짜를 기본값 [ `DateTime.Today` ](https://developer.xamarin.com/api/property/System.DateTime.Today/)합니다.
-- [`Format`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Format/) 형식의 `string`, a [표준](/dotnet/standard/base-types/standard-date-and-time-format-strings/) 또는 [사용자 지정](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .NET 형식 문자열 "D"로 기본 설정, 긴 날짜 패턴입니다.
-- [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.TextColor/) 형식의 [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/), 기본값은 선택한 날짜를 표시 하는데 사용 된 색 [ `Color.Default` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)합니다.
+- [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate) 형식의 [ `DateTime` ](xref:System.DateTime), 1900 년의 첫 번째 날에는 기본값입니다.
+- [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate) 형식의 `DateTime`, 2100 연도의 마지막 날에 기본값.
+- [`Date`](xref:Xamarin.Forms.DatePicker.Date) 형식의 `DateTime`, 선택한 날짜를 기본값 [ `DateTime.Today` ](xref:System.DateTime.Today)합니다.
+- [`Format`](xref:Xamarin.Forms.DatePicker.Format) 형식의 `string`, a [표준](/dotnet/standard/base-types/standard-date-and-time-format-strings/) 또는 [사용자 지정](/dotnet/standard/base-types/custom-date-and-time-format-strings/) .NET 형식 문자열 "D"로 기본 설정, 긴 날짜 패턴입니다.
+- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor) 형식의 [ `Color` ](xref:Xamarin.Forms.Color), 기본값은 선택한 날짜를 표시 하는데 사용 된 색 [ `Color.Default` ](xref:Xamarin.Forms.Color.Default)합니다.
 - [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) 형식의 [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes), 기본값은 [ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None)합니다.
 - [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) 형식의 `string`, 기본값은 `null`합니다.
 - [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) 형식의 `double`,-1.0 기본값은입니다.
 
-`DatePicker` 발생을 [ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/) 이벤트 사용자가 날짜를 선택 합니다.
+`DatePicker` 발생을 [ `DateSelected` ](xref:Xamarin.Forms.DatePicker.DateSelected) 이벤트 사용자가 날짜를 선택 합니다.
 
 > [!WARNING]
 > 설정 하는 경우 `MinimumDate` 및 `MaximumDate`, 했는지 `MinimumDate` 보다 작거나 같음은 항상 `MaximumDate`합니다. 그렇지 않으면 `DatePicker` 예외가 발생 합니다.
@@ -192,4 +192,4 @@ public partial class MainPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [DaysBetweenDates 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
-- [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)
+- [DatePicker API](xref:Xamarin.Forms.DatePicker)

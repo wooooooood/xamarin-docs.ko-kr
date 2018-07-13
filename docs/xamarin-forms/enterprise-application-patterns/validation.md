@@ -1,36 +1,36 @@
 ---
 title: 엔터프라이즈 앱의 유효성 검사
-description: 이 장에서 eShopOnContainers 모바일 앱에서 사용자 입력의 유효성 검사를 수행 하는 방법을 설명 합니다. 유효성 검사 규칙 지정, 유효성 검사를 트리거하지 및 유효성 검사 오류 표시이 포함 됩니다.
+description: 이 장에서 eShopOnContainers 모바일 앱에서 사용자 입력의 유효성 검사를 수행 하는 방법을 설명 합니다. 여기에 유효성 검사 규칙을 지정 하 고, 유효성 검사를 트리거하지 유효성 검사 오류를 표시 합니다.
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 6a7f244b78d5b48dd219f59f1191993d62663bbf
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 2b4be17e3c96ee223433b435a7b1011eafa8e9db
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243179"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995829"
 ---
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
-사용자 로부터 입력을 허용 하는 모든 앱의 입력이 올바른지 확인 해야 합니다. 예를 들어 응용 프로그램 수를 특정 범위의 문자만 포함, 특정 길이 또는 특정 형식과 일치 하는 입력에 대 한 확인 됩니다. 유효성 검사 없이 사용자는 응용 프로그램에서 실패를 발생 시키는 데이터를 제공할 수 있습니다. 비즈니스 규칙을 적용 하 고는 공격자가 악성 데이터를 삽입 하지 않도록 설정 하는 유효성 검사 합니다.
+사용자 로부터 입력을 허용 하는 모든 앱에 유효한 입력 되었는지 확인 해야 합니다. 앱 특정 범위에 있는 문자만 포함, 특정 길이입니다. 또는 특정 형식과 일치 하는 입력에 대 한 확인 예를 들어 수 있습니다. 유효성 검사 없이 사용자는 응용 프로그램에서 실패를 발생 시키는 데이터를 제공할 수 있습니다. 비즈니스 규칙을 적용 하 고 공격자가 악성 데이터 주입 하지 않도록 설정 하는 유효성 검사 합니다.
 
-ViewModel 모델 (MVVM)의 컨텍스트에서 패턴을 보기 모델 또는 모델 데이터 유효성 검사를 수행 하 고 보기에 유효성 검사 오류를 해결할 수 있도록 신호를 자주 필요 합니다. EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 고는 사용자에 게 알리는 오류 메시지를 표시 하 여 유효성 검사 오류가 발생 하는 사용자를 게 알립니다. 이유는 데이터가 올바르지 않습니다. 그림 6-1은 eShopOnContainers 모바일 앱에서 유효성 검사를 수행 하는 클래스를 보여줍니다.
+ViewModel 모델 (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모델 종종 해야 데이터 유효성 검사를 수행 하 고 사용자 해결할 수 있도록 보기로 유효성 검사 오류를 알립니다. EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 사용자를 제공 하는 오류 메시지를 표시 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 유효성 검사 오류가 발생 하는 사용자에 게 알립니다. 데이터를 잘못 된 이유입니다. 그림 6-1 eShopOnContainers 모바일 앱에서 유효성 검사를 수행과 관련 된 클래스를 보여 줍니다.
 
-[![](validation-images/validation.png "EShopOnContainers 모바일 앱의 유효성 검사 클래스")](validation-images/validation-large.png#lightbox "eShopOnContainers 모바일 앱의 유효성 검사 클래스")
+[![](validation-images/validation.png "EShopOnContainers 모바일 앱에서 유효성 검사 클래스")](validation-images/validation-large.png#lightbox "eShopOnContainers 모바일 앱에서 유효성 검사 클래스")
 
-**그림 6-1**: eShopOnContainers 모바일 앱의 유효성 검사 클래스
+**그림 6-1**: eShopOnContainers 모바일 앱에서 유효성 검사 클래스
 
-유효성 검사를 요구 하는 보기 모델 속성은 형식의 `ValidatableObject<T>`, 및 각 `ValidatableObject<T>` 인스턴스에 유효성 검사 규칙에 추가 된 해당 `Validations` 속성. 호출 하 여 뷰 모델에서 유효성 검사가 호출 되는 `Validate` 의 메서드는 `ValidatableObject<T>` 유효성 검사를 검색 하는 인스턴스 및 규칙에 대해 실행는 `ValidatableObject<T>` `Value` 속성. 유효성 검사 오류에 배치 됩니다는 `Errors` 속성의는 `ValidatableObject<T>` 인스턴스 및 `IsValid` 속성의는 `ValidatableObject<T>` 인스턴스 유효성 검사의 성공 여부를 나타내는 데 업데이트 됩니다.
+유효성 검사를 요구 하는 보기 모델 속성은 `ValidatableObject<T>`, 및 각 `ValidatableObject<T>` 인스턴스를 추가 하는 유효성 검사 규칙에 해당 `Validations` 속성입니다. 유효성 검사를 호출 하 여 뷰 모델에서 호출를 `Validate` 메서드의 `ValidatableObject<T>` 인스턴스 유효성 검사를 검색 하는 규칙 및에 대해 실행 합니다 `ValidatableObject<T>` `Value` 속성입니다. 유효성 검사 오류에 배치 됩니다는 `Errors` 의 속성을 `ValidatableObject<T>` 인스턴스를 및 `IsValid` 의 속성은 `ValidatableObject<T>` 인스턴스 유효성 검사의 성공 여부를 나타내도록 업데이트 됩니다.
 
-속성 변경 알림을 제공는 `ExtendedBindableObject` 클래스를 사용 하 고 있어서는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤에 바인딩할 수는 `IsValid` 속성의 `ValidatableObject<T>` 여부에 알림이 표시 하려면 보기 모델 클래스에서 인스턴스 입력 한 데이터가 유효합니다.
+속성 변경 알림을 제공 하는 `ExtendedBindableObject` 클래스 등을 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤에 바인딩할 수는 `IsValid` 속성 `ValidatableObject<T>` 설정할지 여부를 알릴 보기 모델 클래스의 인스턴스 입력 한 데이터가 유효합니다.
 
 ## <a name="specifying-validation-rules"></a>유효성 검사 규칙 지정
 
-파생 되는 클래스를 만들어 지정 된 유효성 검사 규칙은 `IValidationRule<T>` 다음 코드 예제에 표시 된 인터페이스:
+파생 되는 클래스를 만들어 지정 된 유효성 검사 규칙을 `IValidationRule<T>` 다음 코드 예제에 나와 있는 인터페이스:
 
 ```csharp
 public interface IValidationRule<T>  
@@ -40,9 +40,9 @@ public interface IValidationRule<T>
 }
 ```
 
-유효성 검사 규칙 클래스를 제공 하는이 인터페이스를 지정 된 `boolean` `Check` 필요한 유효성 검사를 수행 하는 데 사용 되는 메서드 및 `ValidationMessage` 속성 값이 인 경우 표시 되는 유효성 검사 오류 메시지 유효성 검사에 실패 합니다.
+이 인터페이스에 유효성 검사 규칙 클래스를 제공 하는 지정 된 `boolean` `Check` 필요한 유효성 검사를 수행 하는 데 사용 되는 메서드 및 `ValidationMessage` 속성 값인 경우 표시 되는 유효성 검사 오류 메시지 유효성 검사에 실패 합니다.
 
-다음 코드 예제는 `IsNotNullOrEmptyRule<T>` 유효성 검사 규칙 사용자 이름 및 암호 사용자가 입력의 유효성 검사를 수행 하는 데 사용 되는 `LoginView` eShopOnContainers 모바일 앱에서 모의 서비스를 사용 하는 경우:
+다음 코드 예제는 `IsNotNullOrEmptyRule<T>` 사용자 이름 및 암호에 사용자가 입력의 유효성을 검사 하는 데 사용 되는 유효성 검사 규칙을 `LoginView` eShopOnContainers 모바일 앱에서 모의 서비스를 사용 하는 경우:
 
 ```csharp
 public class IsNotNullOrEmptyRule<T> : IValidationRule<T>  
@@ -62,7 +62,7 @@ public class IsNotNullOrEmptyRule<T> : IValidationRule<T>
 }
 ```
 
-`Check` 메서드가 반환 되는 `boolean` 값 인수 인지를 나타내는 `null`이거나 비어 있거나 공백 문자로 구성 되어 있습니다.
+`Check` 메서드가 반환 되는 `boolean` 값 인수 인지 여부를 나타내는 `null`이거나 비어 있거나 공백 문자로 구성 되어 합니다.
 
 EShopOnContainers 모바일 앱에서 사용 되지 않지만 다음 코드 예제에서는 전자 메일 주소 유효성 검사에 대 한 유효성 검사 규칙을 보여 줍니다.
 
@@ -87,14 +87,14 @@ public class EmailRule<T> : IValidationRule<T>
 }
 ```
 
-`Check` 메서드가 반환 되는 `boolean` 값 인수에 유효한 전자 메일 주소 인지 여부를 나타내는입니다. 값 인수에 지정 된 정규식 패턴의 첫 번째 검색 하 여 이렇게는 `Regex` 생성자입니다. 값을 확인 하 여 입력된 문자열에서 정규식 패턴을 찾았는지 여부를 확인할 수 있습니다는 `Match` 개체의 `Success` 속성입니다.
+합니다 `Check` 메서드가 반환 되는 `boolean` 값 인수를 유효한 전자 메일 주소 인지 여부를 나타내는입니다. 에 지정 된 정규식 패턴의 첫 번째 값 인수를 검색 하 여 이렇게는 `Regex` 생성자입니다. 값을 검사 하 여 입력된 문자열에서 정규식 패턴을 찾을 수 있는지 여부를 확인할 수 있습니다 합니다 `Match` 개체의 `Success` 속성입니다.
 
 > [!NOTE]
-> 경우에 따라 속성 유효성 검사에는 종속 속성 포함 될 수 있습니다. 2. 속성에 설정 된 특정 값에 따라 속성 A에 대 한 유효한 값 집합이 때 종속 속성의 예는 A 속성 값을 허용 되는 값 중 하나 인지 확인 하는 과정이 필요 2. 속성의 값을 검색 또한 B 속성의 값이 변경 될 때 속성 A 유효성 재검사 해야 합니다.
+> 경우에 따라 속성 유효성 검사에는 종속 속성 포함 될 수 있습니다. 종속 속성의 예로 속성에 대 한 유효한 값 집합이 2. 속성에 설정 된 특정 값에 따라 다른 경우 2. 속성의 값을 검색 관련는 속성의 값이 허용 되는 값 중 하나를 확인 하려면 또한 B 속성의 값이 변경 되는 속성 유효성 재검사 해야 합니다.
 
 ## <a name="adding-validation-rules-to-a-property"></a>속성에 유효성 검사 규칙 추가
 
-EShopOnContainers 모바일 앱에서 유효성 검사를 요구 하는 뷰 모델 속성 형식으로 선언 된 `ValidatableObject<T>`여기서 `T` 데이터 유효성 검사의 유형입니다. 다음 코드 예제에서는 이러한 두 속성의 예를 보여 줍니다.
+EShopOnContainers 모바일 앱에서 유효성 검사를 요구 하는 보기 모델 속성 형식으로 선언 된 `ValidatableObject<T>`여기서 `T` 유효성을 검사할 데이터의 형식입니다. 다음 코드 예제에서는 이러한 두 속성의 예를 보여 줍니다.
 
 ```csharp
 public ValidatableObject<string> UserName  
@@ -124,7 +124,7 @@ public ValidatableObject<string> Password
 }
 ```
 
-유효성 검사를 실행, 유효성 검사 규칙에 추가 해야 합니다는 `Validations` 각 컬렉션 `ValidatableObject<T>` 다음 코드 예제에서와 같이 인스턴스:
+유효성 검사를 실행, 유효성 검사 규칙에 추가 해야 합니다 `Validations` 각 컬렉션 `ValidatableObject<T>` 다음 코드 예제에 설명 된 대로 인스턴스:
 
 ```csharp
 private void AddValidations()  
@@ -140,15 +140,15 @@ private void AddValidations()
 }
 ```
 
-이 메서드는 추가 `IsNotNullOrEmptyRule<T>` 유효성 검사 규칙에는 `Validations` 각 컬렉션 `ValidatableObject<T>` 유효성 검사 규칙에 대 한 값을 지정 하는 인스턴스를 `ValidationMessage` 경우 표시 되는 유효성 검사 오류 메시지를 지정 하는 속성 유효성 검사에 실패 합니다.
+이 메서드를 추가 합니다 `IsNotNullOrEmptyRule<T>` 유효성 검사 규칙을를 `Validations` 각 컬렉션 `ValidatableObject<T>` 유효성 검사 규칙의 값을 지정 하는 인스턴스를 `ValidationMessage` 경우 표시 되는 유효성 검사 오류 메시지를 지정 하는 속성 유효성 검사에 실패 합니다.
 
 ## <a name="triggering-validation"></a>유효성 검사를 트리거하지
 
-EShopOnContainers 모바일 앱에서 사용 하는 유효성 검사 방법 수동으로 트리거할 수 있습니다는 속성의 유효성을 검사 하 고 자동으로 트리거 유효성 검사 속성이 변경 되는 경우.
+EShopOnContainers 모바일 앱에서 사용 된 유효성 검사 방법은 수동으로 트리거할 수 속성의 유효성 검사 및 자동으로 트리거 유효성 검사 속성을 변경 하는 경우.
 
-### <a name="triggering-validation-manually"></a>수동으로 유효성 검사를 트리거하지
+### <a name="triggering-validation-manually"></a>유효성 검사를 수동으로 트리거
 
-보기 모델 속성에 대 한 유효성 검사를 수동으로 트리거할 수 있습니다. 예를 들어이 발생 eShopOnContainers 모바일 앱에서 사용자가 누르면는 **로그인** 단추는 `LoginView`모의 서비스를 사용 하는 경우. 명령 대리자 호출은 `MockSignInAsync` 에서 메서드는 `LoginViewModel`를 실행 하 여 유효성 검사를 호출 하는 `Validate` 다음 코드 예제에 표시 된 메서드:
+보기 모델 속성에 대 한 유효성 검사를 수동으로 트리거할 수 있습니다. 예를 들어,이 경우 eShopOnContainers 모바일 앱에서 사용자 탭의 **로그인** 단추를 `LoginView`모의 서비스를 사용 하는 경우. 명령 대리자 호출을 `MockSignInAsync` 에서 메서드를 `LoginViewModel`를 실행 하 여 유효성 검사를 호출 하는 `Validate` 메서드를 다음 코드 예제에 나와 있는:
 
 ```csharp
 private bool Validate()  
@@ -169,7 +169,7 @@ private bool ValidatePassword()
 }
 ```
 
-`Validate` 사용자 이름 및 암호 사용자가 입력의 유효성 검사를 수행 하는 메서드는 `LoginView`, 각 Validate 메서드를 호출 하 여 `ValidatableObject<T>` 인스턴스. 다음 코드 예제에서 유효성 검사 메서드를 보여 줍니다.는 `ValidatableObject<T>` 클래스:
+합니다 `Validate` 사용자 이름 및 암호에 사용자가 입력의 유효성 검사를 수행 하는 메서드를 `LoginView`, 각 유효성 검사 메서드를 호출 하 여 `ValidatableObject<T>` 인스턴스. 다음 코드 예제에서 유효성 검사 메서드를 보여 줍니다.는 `ValidatableObject<T>` 클래스:
 
 ```csharp
 public bool Validate()  
@@ -187,11 +187,11 @@ public bool Validate()
 }
 ```
 
-이 메서드는 `Errors` 컬렉션을 검색 하는 개체의 추가 된 모든 유효성 검사 규칙을 마우스 `Validations` 컬렉션입니다. `Check` 각 검색 된 유효성 검사 규칙에 대 한 메서드를 실행 하 고 `ValidationMessage` 데이터 유효성 검사에 실패 하는 모든 유효성 검사 규칙에 대 한 속성 값에 추가 되는 `Errors` 의 컬렉션은 `ValidatableObject<T>` 인스턴스. 마지막으로 `IsValid` 속성을 설정 하 고 해당 값이 호출 하는 메서드의 유효성 검사의 성공 여부를 나타내는을 반환 합니다.
+이 메서드는 `Errors` 컬렉션 및 검색 하는 개체의 추가 된 모든 유효성 검사 규칙 `Validations` 컬렉션입니다. `Check` 각 검색된 유효성 검사 규칙에 대 한 메서드를 실행 하 및 `ValidationMessage` 데이터 유효성 검사에 실패 하는 모든 유효성 검사 규칙에 대 한 속성 값을 추가 합니다 `Errors` 컬렉션을 `ValidatableObject<T>` 인스턴스. 마지막으로 `IsValid` 속성을 설정 하 고 해당 값이 유효성 검사의 성공 여부를 나타내는 호출 메서드로 반환 합니다.
 
 ### <a name="triggering-validation-when-properties-change"></a>속성이 변경 될 때 유효성 검사를 트리거하지
 
-바인딩된 속성이 변경 될 때마다 유효성 검사를 트리거할 수도 있습니다. 예를 들어에서 양방향 바인딩에 `LoginView` 설정는 `UserName` 또는 `Password` 속성, 유효성 검사가 트리거됩니다. 다음 코드 예제에서는이 발생 하는 방법을 보여 줍니다.
+바인딩된 속성이 변경 될 때마다 유효성 검사를 트리거할 수도 있습니다. 등의 경우 양방향 바인딩 합니다 `LoginView` 설정 합니다 `UserName` 또는 `Password` 속성, 유효성 검사가 트리거됩니다. 다음 코드 예제에서는이 발생 하는 방법을 보여 줍니다.
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
@@ -204,23 +204,23 @@ public bool Validate()
 </Entry>
 ```
 
-[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤에 바인딩되는 `UserName.Value` 속성은 `ValidatableObject<T>` 인스턴스 및 컨트롤의 `Behaviors` 컬렉션에는 `EventToCommandBehavior` 인스턴스 여기에 추가 합니다. 이 동작은 실행는 `ValidateUserNameCommand` 대 한 응답으로 [`TextChanged`] 이벤트 발생에 `Entry`, 어떤 발생할 때의 텍스트는 `Entry` 변경 합니다. 차례로 `ValidateUserNameCommand` 대리자를 실행는 `ValidateUserName` 메서드를 실행 하는 `Validate` 에서 메서드는 `ValidatableObject<T>` 인스턴스. 따라서 될 때마다 사용자가 입력의 문자는 `Entry` 사용자 이름 입력 한 데이터의 유효성 검사에 대 한 제어를 수행 합니다.
+[ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤에 바인딩되는 `UserName.Value` 속성을 `ValidatableObject<T>` 인스턴스 및 컨트롤의 `Behaviors` 컬렉션에는 `EventToCommandBehavior` 인스턴스를 추가 합니다. 이 동작은 실행를 `ValidateUserNameCommand` 대 한 응답으로 [`TextChanged`] 이벤트에서 발생 합니다 `Entry`는 발생할 때의 텍스트를는 `Entry` 변경. 차례로 `ValidateUserNameCommand` 대리자를 실행 합니다 `ValidateUserName` 메서드를 실행 하는 `Validate` 메서드를는 `ValidatableObject<T>` 인스턴스. 따라서 될 때마다 사용자가 입력의 문자는 `Entry` 사용자 이름, 입력된 데이터의 유효성 검사에 대 한 제어 수행 됩니다.
 
-동작에 대 한 자세한 내용은 참조 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)합니다.
+동작에 대 한 자세한 내용은 참조 하세요. [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)합니다.
 
 <a name="displaying_validation_errors" />
 
-## <a name="displaying-validation-errors"></a>유효성 검사 오류 표시
+## <a name="displaying-validation-errors"></a>유효성 검사 오류를 표시합니다.
 
-EShopOnContainers 모바일 앱 빨강 선으로 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 유효성 검사 오류가 발생 하는 사용자에 게 알릴지를 포함 하는 컨트롤 아래 유효 하지 않은 데이터 이유 사용자에 게 알리는 오류 메시지가 표시 하 여는 데이터가 잘못 되었습니다. 잘못 된 데이터를 수정한 경우 줄을 검정으로 변경 하 고 오류 메시지가 제거 됩니다. 그림 6-2 유효성 검사 오류가 있는지 때 eShopOnContainers 모바일 앱에는 LoginView를 보여 줍니다.
+EShopOnContainers 모바일 앱 사용자에 게 모든 유효성 검사 오류는 빨간색 선이 사용 하 여 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 알리고 이유를 알리는 오류 메시지를 표시 하 여 데이터를 올바르지 포함 하는 컨트롤 아래는 데이터가 잘못 되었습니다. 잘못 된 데이터를 수정 하는 줄을 검정으로 변경 하 고 오류 메시지가 제거 됩니다. 그림 6-2 유효성 검사 오류가 있을 때 eShopOnContainers 모바일 앱에서 LoginView를 보여 줍니다.
 
-![](validation-images/validation-login.png "로그인 하는 동안 유효성 검사 오류 표시")
+![](validation-images/validation-login.png "로그인 하는 동안 유효성 검사 오류를 표시합니다.")
 
-**그림 6-2:** 로그인 하는 동안 유효성 검사 오류 표시
+**그림 6-2:** 로그인 하는 동안 유효성 검사 오류를 표시 합니다.
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>잘못 된 데이터를 포함 하는 컨트롤을 강조 표시
 
-`LineColorBehavior` 연결 된 동작을 사용을 강조 표시를 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤 유효성 검사 오류가 발생 했습니다. 다음 코드 예제는 방법을 `LineColorBehavior` 연결 된 동작에 연결 되어 있는 `Entry` 컨트롤:
+합니다 `LineColorBehavior` 연결 된 동작을 강조 표시 되 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤 유효성 검사 오류가 발생 했습니다. 다음 코드 예제에서는 하는 방법을 `LineColorBehavior` 연결 된 동작에 연결 되는 `Entry` 제어:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
@@ -234,7 +234,7 @@ EShopOnContainers 모바일 앱 빨강 선으로 잘못 된 데이터를 포함 
 </Entry>
 ```
 
-[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤 다음 코드 예제에 표시 된 명시적 스타일을 사용 합니다.
+합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤에는 다음 코드 예제에 나와 있는 명시적 스타일을 사용 합니다.
 
 ```xaml
 <Style x:Key="EntryStyle"  
@@ -248,9 +248,9 @@ EShopOnContainers 모바일 앱 빨강 선으로 잘못 된 데이터를 포함 
 </Style>
 ```
 
-이 스타일 설정는 `ApplyLineColor` 및 `LineColor` 의 연결 된 속성은 `LineColorBehavior` 연결 된 동작을는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 제어 합니다. 스타일에 대 한 자세한 내용은 참조 [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
+이 스타일 설정를 `ApplyLineColor` 및 `LineColor` 의 연결 된 속성을 `LineColorBehavior` 동작에 연결 합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤입니다. 스타일에 대 한 자세한 내용은 참조 하세요. [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
 
-때의 값은 `ApplyLineColor` 집합 또는 변경 내용, 연결 된 속성을는 `LineColorBehavior` 연결 된 동작 실행는 `OnApplyLineColorChanged` 다음 코드 예제에 나와 있는 메서드:
+때 값을 `ApplyLineColor` 연결 된 속성은 집합 또는 변경 합니다 `LineColorBehavior` 연결 된 동작을 실행는 `OnApplyLineColorChanged` 메서드를 다음 코드 예제에 나와 있는:
 
 ```csharp
 public static class LineColorBehavior  
@@ -283,9 +283,9 @@ public static class LineColorBehavior
 }
 ```
 
-동작에, 연결 된 컨트롤의 인스턴스 및의 이전 및 새 값을 제공 하는이 메서드에 대 한 매개 변수는 `ApplyLineColor` 연결 된 속성입니다. `EntryLineColorEffect` 를 컨트롤의 클래스가 추가 됩니다 [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) 컬렉션 하는 경우는 `ApplyLineColor` 연결 된 속성을 `true`, 컨트롤의에서 제거 되 고, 그렇지 `Effects` 컬렉션입니다. 동작에 대 한 자세한 내용은 참조 [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)합니다.
+동작에 연결 된 컨트롤의 인스턴스 및 이전 및 새 값을 제공 하는이 메서드의 매개 변수는 `ApplyLineColor` 연결 된 속성입니다. `EntryLineColorEffect` 클래스가 컨트롤에 추가 됩니다 [ `Effects` ](xref:Xamarin.Forms.Element.Effects) 컬렉션 경우 합니다 `ApplyLineColor` 연결 된 속성은 `true`, 컨트롤에서 제거 됩니다 그렇지 않으면 `Effects` 컬렉션. 동작에 대 한 자세한 내용은 참조 하세요. [동작 구현](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors)합니다.
 
-`EntryLineColorEffect` 하위 클래스는 [ `RoutingEffect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/) 클래스 하 고 다음 코드 예제에 표시 됩니다.
+합니다 `EntryLineColorEffect` 서브 클래스를 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스 하 고 다음 코드 예제에 표시 됩니다.
 
 ```csharp
 public class EntryLineColorEffect : RoutingEffect  
@@ -296,9 +296,9 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-[ `RoutingEffect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/) 클래스를 래핑하는 플랫폼별으로 설정 하는 내부 효과 플랫폼 독립적인 효과 나타냅니다. 플랫폼별 효과 대 한 형식 정보에 액세스할 수 없습니다 컴파일 타임 하므로 효과 제거 프로세스를 보다 간단 합니다. `EntryLineColorEffect` 해상도 그룹 이름 및 각 플랫폼 특정 효과 클래스에 지정 된 고유 ID의 연결으로 구성 된 매개 변수를 전달 하는 기본 클래스 생성자를 호출 합니다.
+합니다 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스 내부 효과 플랫폼별으로를 래핑하는 플랫폼 독립적인 효과 나타냅니다. 이 플랫폼별 효과 대 한 형식 정보에 액세스할 수 없는 컴파일 시간 이후 효과 제거 프로세스를 간소화 합니다. `EntryLineColorEffect` 확인 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID를 연결으로 구성 된 매개 변수를 전달 하는 기본 클래스 생성자를 호출 합니다.
 
-다음 코드 예제는 `eShopOnContainers.EntryLineColorEffect` iOS에 대 한 구현:
+다음 코드 예제는 `eShopOnContainers.EntryLineColorEffect` iOS에 대 한 구현 합니다.
 
 ```csharp
 [assembly: ResolutionGroupName("eShopOnContainers")]  
@@ -374,15 +374,15 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-`OnAttached` 메서드는 Xamarin.Forms에 대 한 기본 컨트롤 검색 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤을 호출 하 여 선 색 업데이트는 `UpdateLineColor` 메서드. `OnElementPropertyChanged` 에 바인딩 가능한 속성 변경에 응답 하는 재정의 `Entry` 제어 하는 경우 선 색을 업데이트 하 여 연결 된 `LineColor` 속성 변경 내용을 또는 [ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 는 속성`Entry`변경 합니다. 효과 대 한 자세한 내용은 참조 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
+합니다 `OnAttached` Xamarin.Forms에 대 한 네이티브 컨트롤을 검색 하는 메서드 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤을 호출 하 여 선 색을 업데이트 합니다 `UpdateLineColor` 메서드. `OnElementPropertyChanged` 에 바인딩 가능한 속성 변경에 응답 하는 재정의 `Entry` 제어 하는 경우 선 색을 업데이트 하 여 연결 된 `LineColor` 속성이 변경 또는 [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) 속성을 `Entry`변경 합니다. 효과 대 한 자세한 내용은 참조 하세요. [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
 
-에 올바른 데이터가 입력 된 경우는 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤을이 유효성 검사 오류가 발생 하지 않음을 나타내기 위해 컨트롤의 아래쪽에는 검은색 줄 적용 됩니다. 그림 6-3에서는 이러한 예제를 보여 줍니다.
+에 유효한 데이터를 입력 하는 경우는 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤 유효성 검사 오류가 없는지를 나타내기 위해 컨트롤의 아래쪽에 검은색 줄 적용 됩니다. 그림 6-3의 예를 보여 줍니다.
 
-![](validation-images/validation-blackline.png "유효성 검사 오류가 발생 하지 나타내는 검은색 줄")
+![](validation-images/validation-blackline.png "유효성 검사 오류가 없는지를 나타내는 검은 선")
 
-**그림 6-3**: 없는 유효성 검사 오류를 나타내는 검은색 줄
+**그림 6-3**: 유효성 검사 오류가 없는지를 나타내는 검은 선
 
-[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤에는 한 [ `DataTrigger` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) 에 추가 된 해당 [ `Triggers` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Triggers/) 컬렉션입니다. 다음 코드 예제는 `DataTrigger`:
+[ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤을 [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) 추가할 해당 [ `Triggers` ](xref:Xamarin.Forms.VisualElement.Triggers) 컬렉션입니다. 다음 코드 예제는 `DataTrigger`:
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
@@ -399,35 +399,35 @@ namespace eShopOnContainers.iOS.Effects
 </Entry>
 ```
 
-이 [ `DataTrigger` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTrigger/) 모니터는 `UserName.IsValid` 속성을 값 이면 매핑되며 `false`, 실행 하는 [ `Setter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/), 변경 내용을 `LineColor` 연결 속성은 `LineColorBehavior` 빨강으로 동작을 연결 합니다. 그림 6-4에서는 이러한 예제를 보여 줍니다.
+이 [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) 모니터를 `UserName.IsValid` 속성을 값인 경우 되며 `false`를 실행 합니다 [ `Setter` ](xref:Xamarin.Forms.Setter), 변경 내용을 `LineColor` 연결 속성의는 `LineColorBehavior` 빨간색 동작을 연결 합니다. 그림 6-4의 예를 보여 줍니다.
 
-![](validation-images/validation-redline.png "유효성 검사 오류를 나타내는 빨강 선")
+![](validation-images/validation-redline.png "유효성 검사 오류를 나타내는 빨간색 선")
 
-**그림 6-4**: 유효성 검사 오류를 나타내는 빨강 선
+**그림 6-4**: 유효성 검사 오류를 나타내는 빨간색 선
 
-에 있는 줄의 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 컨트롤이 입력 한 데이터가 잘못 된 빨간색 유지 되, 그렇지 않으면를 입력 한 데이터가 유효한 지를 나타내는 검정색으로 변경 됩니다.
+줄을 [ `Entry` ](xref:Xamarin.Forms.Entry) 입력 한 데이터가 잘못 되었습니다. 하는 동안 컨트롤을 빨간색 남아, 입력 한 데이터가 유효한 지를 나타내기 위해 검정색으로 변경 됩니다 그렇지 않은 경우.
 
-트리거에 대 한 자세한 내용은 참조 [트리거](~/xamarin-forms/app-fundamentals/triggers.md)합니다.
+트리거에 대 한 자세한 내용은 참조 하세요. [트리거](~/xamarin-forms/app-fundamentals/triggers.md)합니다.
 
-### <a name="displaying-error-messages"></a>오류 메시지 표시
+### <a name="displaying-error-messages"></a>오류 메시지를 표시합니다.
 
-UI는 데이터 유효성 검사에 실패 하는 각 컨트롤 아래 레이블 컨트롤에 유효성 검사 오류 메시지를 표시 합니다. 다음 코드 예제는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 사용자가 올바른 사용자 이름을 입력 하지 경우 유효성 검사 오류 메시지를 표시 하는:
+UI는 데이터 유효성 검사에 실패 하는 각 컨트롤 아래 레이블 컨트롤에 유효성 검사 오류 메시지를 표시 합니다. 다음 코드 예제는 [ `Label` ](xref:Xamarin.Forms.Label) 표시 하는 유효성 검사 오류 메시지를 사용자가 올바른 사용자 이름을 입력 하지 하는 경우:
 
 ```xaml
 <Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
-각 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 바인딩되는 `Errors` 유효성 검사 중인 보기 모델 개체의 속성입니다. `Errors` 속성에서 제공 되는 `ValidatableObject<T>` 클래스 형식이 고 `List<string>`합니다. 때문에 `Errors` 속성에는 여러 유효성 검사 오류가 포함 될 수 있습니다는 `FirstValidationErrorConverter` 표시를 위해 컬렉션에서 첫 번째 오류를 검색 하 인스턴스가 사용 됩니다.
+각 [ `Label` ](xref:Xamarin.Forms.Label) 바인딩되는 `Errors` 유효성 검사 중인 뷰 모델 개체의 속성입니다. 합니다 `Errors` 에서 제공 하는 속성을 `ValidatableObject<T>` 클래스 및 형식입니다 `List<string>`합니다. 때문에 합니다 `Errors` 속성에는 여러 유효성 검사 오류가 포함 될 수 있습니다는 `FirstValidationErrorConverter` 인스턴스 표시에 대 한 컬렉션에서 첫 번째 오류를 검색 하는 합니다.
 
 ## <a name="summary"></a>요약
 
-EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 고는 사용자에 게 알리는 오류 메시지를 표시 하 여 유효성 검사 오류가 발생 하는 사용자를 게 알립니다. 이유는 데이터가 올바르지 않습니다.
+EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 사용자를 제공 하는 오류 메시지를 표시 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 유효성 검사 오류가 발생 하는 사용자에 게 알립니다. 이유는 데이터가 올바르지 않습니다.
 
-유효성 검사를 요구 하는 보기 모델 속성은 형식의 `ValidatableObject<T>`, 및 각 `ValidatableObject<T>` 인스턴스에 유효성 검사 규칙에 추가 된 해당 `Validations` 속성. 호출 하 여 뷰 모델에서 유효성 검사가 호출 되는 `Validate` 의 메서드는 `ValidatableObject<T>` 유효성 검사를 검색 하는 인스턴스 및 규칙에 대해 실행는 `ValidatableObject<T>` `Value` 속성. 유효성 검사 오류에 배치 됩니다는 `Errors` 속성의는 `ValidatableObject<T>`인스턴스 및 `IsValid` 속성의는 `ValidatableObject<T>` 인스턴스 유효성 검사의 성공 여부를 나타내는 데 업데이트 됩니다.
+유효성 검사를 요구 하는 보기 모델 속성은 `ValidatableObject<T>`, 및 각 `ValidatableObject<T>` 인스턴스를 추가 하는 유효성 검사 규칙에 해당 `Validations` 속성입니다. 유효성 검사를 호출 하 여 뷰 모델에서 호출를 `Validate` 메서드의 `ValidatableObject<T>` 인스턴스 유효성 검사를 검색 하는 규칙 및에 대해 실행 합니다 `ValidatableObject<T>` `Value` 속성입니다. 유효성 검사 오류에 배치 됩니다는 `Errors` 의 속성을 `ValidatableObject<T>`인스턴스를 및 `IsValid` 의 속성은 `ValidatableObject<T>` 인스턴스 유효성 검사의 성공 여부를 나타내도록 업데이트 됩니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [EBook (2mb PDF)를 다운로드 합니다.](https://aka.ms/xamarinpatternsebook)
+- [2mb PDF 전자책 다운로드](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (샘플)](https://github.com/dotnet-architecture/eShopOnContainers)
