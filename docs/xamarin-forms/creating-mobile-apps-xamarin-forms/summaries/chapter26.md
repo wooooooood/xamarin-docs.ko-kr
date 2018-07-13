@@ -7,16 +7,16 @@ ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b6ef23364cac0dd1459681aa92c7a7db58bc81f0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 1fc42207d26f2e2154c7bd6634cc90fead4b0b17
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935643"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998936"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 26 장입니다. 사용자 지정 레이아웃
 
-파생 된 여러 클래스를 포함 하는 Xamarin.Forms [ `Layout<View>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/):
+파생 된 여러 클래스를 포함 하는 Xamarin.Forms [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1):
 
 * `StackLayout`,
 * `Grid`,
@@ -35,74 +35,74 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 체제가 없는
 
 ### <a name="sizing-and-positioning"></a>크기 조정 및 위치 지정
 
-레이아웃은 페이지를 사용 하 여 시각적 트리의 맨 위에 있는 시작 하 고 모든 분기가 진행 됩니다. 레이아웃에서 가장 중요 한 공용 메서드는 [ `Layout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Layout/p/Xamarin.Forms.Rectangle/) 정의한 `VisualElement`합니다. 모든 요소가 다른 요소 호출에 부모인 `Layout` 각 크기 및 형식의 자체를 기준으로 위치를 자식 있도록 자식에 대 한는 [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/) 값. 이러한 `Layout` 호출 시각적 트리를 통해 전파 합니다.
+레이아웃은 페이지를 사용 하 여 시각적 트리의 맨 위에 있는 시작 하 고 모든 분기가 진행 됩니다. 레이아웃에서 가장 중요 한 공용 메서드는 [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 정의한 `VisualElement`합니다. 모든 요소가 다른 요소 호출에 부모인 `Layout` 각 크기 및 형식의 자체를 기준으로 위치를 자식 있도록 자식에 대 한는 [ `Rectangle` ](xref:Xamarin.Forms.Rectangle) 값. 이러한 `Layout` 호출 시각적 트리를 통해 전파 합니다.
 
 에 대 한 호출 `Layout` 화면에 표시할 요소에 대 한 필수 항목이 며 하면 다음 읽기 전용 속성을 설정 해야 합니다. 일치는 `Rectangle` 메서드에 전달 합니다.
 
-- [`Bounds`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Bounds/) 형식의 `Rectangle`
-- [`X`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.X/) 형식의 `double`
-- [`Y`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Y/) 형식의 `double`
-- [`Width`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/) 형식의 `double`
-- [`Height`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/) 형식의 `double`
+- [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) 형식의 `Rectangle`
+- [`X`](xref:Xamarin.Forms.VisualElement.X) 형식의 `double`
+- [`Y`](xref:Xamarin.Forms.VisualElement.Y) 형식의 `double`
+- [`Width`](xref:Xamarin.Forms.VisualElement.Width) 형식의 `double`
+- [`Height`](xref:Xamarin.Forms.VisualElement.Height) 형식의 `double`
 
 이전에 `Layout` 를 호출 `Height` 하 고 `Width` 모의 값이 있는 &ndash;1입니다.
 
 에 대 한 호출 `Layout` 도 다음 보호 된 메서드에 대 한 호출을 트리거합니다.
 
-- [`SizeAllocated`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.SizeAllocated/p/System.Double/System.Double/)를 호출 하는
-- [`OnSizeAllocated`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnSizeAllocated/p/System.Double/System.Double/)를 재정의할 수 있습니다.
+- [`SizeAllocated`](xref:Xamarin.Forms.VisualElement.SizeAllocated(System.Double,System.Double))를 호출 하는
+- [`OnSizeAllocated`](xref:Xamarin.Forms.VisualElement.OnSizeAllocated(System.Double,System.Double))를 재정의할 수 있습니다.
 
 마지막으로 다음 이벤트가 발생 합니다.
 
-- [`SizeChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/)
+- [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
 합니다 `OnSizeAllocated` 메서드를 재정의 하 여 `Page` 및 `Layout`, 자식을 가질 수 있는 Xamarin.Forms의 두 클래스는 합니다. 재정의 된 메서드 호출
 
-- [`UpdateChildrenLayout`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.UpdateChildrenLayout()/) 에 대 한 `Page` 파생물와 [ `UpdateChildrenLayout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.UpdateChildrenLayout()/) 에 대 한 `Layout` 파생 항목을 호출 하는
-- [`LayoutChildren`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.LayoutChildren/p/System.Double/System.Double/System.Double/System.Double/) 에 대 한 `Page` 파생물와 [ `LayoutChildren` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LayoutChildren/p/System.Double/System.Double/System.Double/System.Double/) 에 대 한 `Layout` 파생형입니다.
+- [`UpdateChildrenLayout`](xref:Xamarin.Forms.Page.UpdateChildrenLayout) 에 대 한 `Page` 파생물와 [ `UpdateChildrenLayout` ](xref:Xamarin.Forms.Layout.UpdateChildrenLayout) 에 대 한 `Layout` 파생 항목을 호출 하는
+- [`LayoutChildren`](xref:Xamarin.Forms.Page.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 에 대 한 `Page` 파생물와 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 에 대 한 `Layout` 파생형입니다.
 
 `LayoutChildren` 그런 다음 호출 `Layout` 각 자식 요소에 대 한 합니다. 새 자식이 하나 이상 있으면 `Bounds` 다음 이벤트가 발생 하는 다음을 설정 합니다.
 
-- [`LayoutChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.LayoutChanged/) 에 대 한 `Page` 파생물와 [ `LayoutChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Layout.LayoutChanged/) 에 대 한 `Layout` 파생형
+- [`LayoutChanged`](xref:Xamarin.Forms.Page.LayoutChanged) 에 대 한 `Page` 파생물와 [ `LayoutChanged` ](xref:Xamarin.Forms.Layout.LayoutChanged) 에 대 한 `Layout` 파생형
 
 ### <a name="constraints-and-size-requests"></a>제약 조건 및 요청 크기
 
 에 대 한 `LayoutChildren` 지능적으로 호출 하 `Layout` 모든 자식에서 알고 있어야 합니다를 *선호* 또는 *원하는* 자식에 대해 크기입니다. 따라서 호출 `Layout` 각 자식에 대 한 일반적으로 앞에 호출 하 여
 
-- [`GetSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/)
+- [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double))
 
 책 게시 된 후에 `GetSizeRequest` 메서드를 사용 하 여 대체 않으며
 
-- [`Measure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/)
+- [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))
 
-`Measure` 메서드를 수용 합니다 [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) 속성 형식의 인수를 포함 하 고 [ `MeasureFlag` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MeasureFlags/), 멤버가 두:
+`Measure` 메서드를 수용 합니다 [ `Margin` ](xref:Xamarin.Forms.View.Margin) 속성 형식의 인수를 포함 하 고 [ `MeasureFlag` ](xref:Xamarin.Forms.MeasureFlags), 멤버가 두:
 
 - [`IncludeMargins`](xref:Xamarin.Forms.MeasureFlags.IncludeMargins)
 - [`None`](xref:Xamarin.Forms.MeasureFlags.None) 여백을 포함 하지 않으려면
 
 여러 요소에 대 한 `GetSizeRequest` 또는 `Measure` 해당 렌더러에에서 요소의 기본 크기를 가져옵니다. 두 방법 모두 너비와 높이 대 한 매개 변수 *제약 조건*합니다. 예를 들어, 한 `Label` 를 사용 하 여 너비 제약 조건을 여러 줄의 텍스트를 줄 바꿈 하는 방법을 결정 합니다.
 
-둘 다 `GetSizeRequest`하 고 `Measure` 형식의 값을 반환 [ `SizeRequest` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SizeRequest/), 두 개의 속성이 있는:
+둘 다 `GetSizeRequest`하 고 `Measure` 형식의 값을 반환 [ `SizeRequest` ](xref:Xamarin.Forms.SizeRequest), 두 개의 속성이 있는:
 
-- [`Request`](https://developer.xamarin.com/api/property/Xamarin.Forms.SizeRequest.Request/) 형식의 `Size`
-- [`Minimum`](https://developer.xamarin.com/api/property/Xamarin.Forms.SizeRequest.Minimum/) 형식의 `Size`
+- [`Request`](xref:Xamarin.Forms.SizeRequest.Request) 형식의 `Size`
+- [`Minimum`](xref:Xamarin.Forms.SizeRequest.Minimum) 형식의 `Size`
 
 자주이 두 값은 동일 하며 `Minimum` 값을 일반적으로 무시할 수 있습니다.
 
 `VisualElement` 또한 처럼 보호 된 메서드를 정의 `GetSizeRequest` 에서 호출 되는 `GetSizeRequest`:
 
-- [`OnSizeRequest`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnSizeRequest/p/System.Double/System.Double/) 반환 된 `SizeRequest` 값
+- [`OnSizeRequest`](xref:Xamarin.Forms.VisualElement.OnSizeRequest(System.Double,System.Double)) 반환 된 `SizeRequest` 값
 
 해당 메서드는 이제 사용 되지 않으며 바뀝니다.
 
-- [`OnMeasure`](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.OnMeasure/p/System.Double/System.Double/)
+- [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double))
 
 파생 되는 모든 클래스 `Layout` 나 `Layout<T>` 재정의 해야 `OnSizeRequest` 또는 `OnMeasure`합니다. 이 레이아웃 클래스는 일반적으로 크기를 기준으로 호출 하 여 가져온 자식에 자체 크기를 결정 하는 위치 `GetSizeRequest` 또는 `Measure` 자식에 대해 합니다. 호출 전후 `OnSizeRequest` 나 `OnMeasure`, `GetSizeRequest` 또는 `Measure` 다음 속성을 기반으로 조정 합니다.
 
-- [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)형식의 `double`에 영향을 줍니다는 `Request` 속성 `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) 형식의 `double`에 영향을 줍니다는 `Request` 속성 `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) 형식의 `double`에 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) 형식의 `double`에 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest)형식의 `double`에 영향을 줍니다는 `Request` 속성 `SizeRequest`
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 형식의 `double`에 영향을 줍니다는 `Request` 속성 `SizeRequest`
+- [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest) 형식의 `double`에 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
+- [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest) 형식의 `double`에 영향을 줍니다는 `Minimum` 속성 `SizeRequest`
 
 ### <a name="infinite-constraints"></a>무한 제약 조건
 
@@ -131,23 +131,23 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 체제가 없는
 
 ### <a name="vertical-and-horizontal-positioning-simplified"></a>간소화 된 세로 및 가로 위치
 
-작업 중 하나는 `VerticalStack` 수행 해야 하는 동안 발생는 `LayoutChildren` 재정의 합니다. 메서드는 자식의 사용 `HorizontalOptions` 자식에서 슬롯 내에 배치 하는 방법을 결정 하는 속성을 `VerticalStack`입니다. 대신 정적 메서드를 호출할 수 있습니다 [ `Layout.LayoutChildIntoBoundingRect` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion/p/Xamarin.Forms.VisualElement/Xamarin.Forms.Rectangle/)합니다. 이 메서드를 호출 `Measure` 자식에 사용 하 여 해당 `HorizontalOptions` 및 `VerticalOptions` 속성을 지정된 된 사각형 내의 자식 위치 합니다.
+작업 중 하나는 `VerticalStack` 수행 해야 하는 동안 발생는 `LayoutChildren` 재정의 합니다. 메서드는 자식의 사용 `HorizontalOptions` 자식에서 슬롯 내에 배치 하는 방법을 결정 하는 속성을 `VerticalStack`입니다. 대신 정적 메서드를 호출할 수 있습니다 [ `Layout.LayoutChildIntoBoundingRect` ](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle))합니다. 이 메서드를 호출 `Measure` 자식에 사용 하 여 해당 `HorizontalOptions` 및 `VerticalOptions` 속성을 지정된 된 사각형 내의 자식 위치 합니다.
 
 ### <a name="invalidation"></a>무효화
 
 종종 요소의 속성 변경 요소 레이아웃에 표시 되는 방식을 영향을 줍니다. 레이아웃을 트리거하는 새 레이아웃 유효성을 검사 하지 않아야 합니다.
 
-`VisualElement` 보호 된 메서드를 정의 [ `InvalidateMeasure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.InvalidateMeasure()/), 요소의 크기에 영향을 줍니다가 일반적으로 호출 하는 바인딩 가능한 속성의 속성 변경 처리기를 변경 합니다. 합니다 `InvalidateMeasure` 메서드 실행을 [ `MeasureInvalidated` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.MeasureInvalidated/) 이벤트입니다.
+`VisualElement` 보호 된 메서드를 정의 [ `InvalidateMeasure` ](xref:Xamarin.Forms.VisualElement.InvalidateMeasure), 요소의 크기에 영향을 줍니다가 일반적으로 호출 하는 바인딩 가능한 속성의 속성 변경 처리기를 변경 합니다. 합니다 `InvalidateMeasure` 메서드 실행을 [ `MeasureInvalidated` ](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) 이벤트입니다.
 
-`Layout` 라는 비슷한 보호 된 메서드를 정의 하는 클래스 [ `InvalidateLayout` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.InvalidateLayout()/)는 `Layout` 파생 배치 및 자식의 크기를 조정 하는 방법에 영향을 주는 모든 변경에 대 한 호출 해야 합니다.
+`Layout` 라는 비슷한 보호 된 메서드를 정의 하는 클래스 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout)는 `Layout` 파생 배치 및 자식의 크기를 조정 하는 방법에 영향을 주는 모든 변경에 대 한 호출 해야 합니다.
 
 ### <a name="some-rules-for-coding-layouts"></a>레이아웃 코딩에 대 한 몇 가지 규칙
 
 1. 속성에서 정의한 `Layout<T>` 파생형 바인딩 가능한 속성에 의해 백업 해야 하 고 속성 변경 처리기를 호출 해야 `InvalidateLayout`합니다.
 
-2. `Layout<T>` 연결 된 바인딩 가능한 속성을 정의 하는 파생 클래스에서 재정의 해야 [ `OnAdded` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout%3CT%3E.OnAdded/p/T/) 자식에 속성 변경 처리기를 추가 하 고 [ `OnRemoved` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout%3CT%3E.OnRemoved/p/T/) 는 제거할 처리기입니다. 이러한 변경 내용을 연결 된 바인딩 가능한 속성에 대 한 확인 처리기를 호출 하 여 응답 `InvalidateLayout`합니다.
+2. `Layout<T>` 연결 된 바인딩 가능한 속성을 정의 하는 파생 클래스에서 재정의 해야 [ `OnAdded` ](xref:Xamarin.Forms.Layout`1.OnAdded*) 자식에 속성 변경 처리기를 추가 하 고 [ `OnRemoved` ](xref:Xamarin.Forms.Layout`1.OnRemoved*) 는 제거할 처리기입니다. 이러한 변경 내용을 연결 된 바인딩 가능한 속성에 대 한 확인 처리기를 호출 하 여 응답 `InvalidateLayout`합니다.
 
-3. A `Layout<T>` 자식 크기의 캐시를 구현 하는 파생 클래스에서 재정의 해야 `InvalidateLayout` 하 고 [ `OnChildMeasureInvalidated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.OnChildMeasureInvalidated()/) 이러한 메서드가 호출 되 면 캐시의 선택을 취소 하 고 있습니다.
+3. A `Layout<T>` 자식 크기의 캐시를 구현 하는 파생 클래스에서 재정의 해야 `InvalidateLayout` 하 고 [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 이러한 메서드가 호출 되 면 캐시의 선택을 취소 하 고 있습니다.
 
 ### <a name="a-layout-with-properties"></a>속성을 사용 하 여 레이아웃
 
@@ -169,8 +169,8 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 체제가 없는
 
 `Layout` 클래스의 자식 컬렉션 내에서 이동할 수 있도록 두 개의 메서드를 정의 합니다.
 
-- [`LowerChild`](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LowerChild/p/Xamarin.Forms.View/) 자식 컬렉션의 시작 부분으로 이동 하려면
-- [`RaiseChild`](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.RaiseChild/p/Xamarin.Forms.View/) 자식 컬렉션의 끝에 이동 하려면
+- [`LowerChild`](xref:Xamarin.Forms.Layout.LowerChild(Xamarin.Forms.View)) 자식 컬렉션의 시작 부분으로 이동 하려면
+- [`RaiseChild`](xref:Xamarin.Forms.Layout.RaiseChild(Xamarin.Forms.View)) 자식 컬렉션의 끝에 이동 하려면
 
 겹치는 자식에 대 한 자식 컬렉션의 끝에 시각적으로 자식 컬렉션의 시작 부분 맨 위에 표시 합니다.
 

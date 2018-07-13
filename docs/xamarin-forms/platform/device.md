@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: ff707cdf73665ae07881d2d17ec837a4cfacaca0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935373"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998269"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
@@ -24,11 +24,11 @@ ms.locfileid: "37935373"
 
 ## <a name="providing-platform-specific-values"></a>플랫폼 특정 값을 제공합니다.
 
-2.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
+2.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
 
-그러나 이후 Xamarin.Forms 2.3.4 이러한 Api가 더 이상 사용 되지 되어 대체 합니다. 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 플랫폼을 식별 하는 공용 문자열 상수를 이제 포함 하는 클래스 [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)를 [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( 사용 되지 않음), `Device.WinRT` (사용 되지 않음), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), 및 [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)합니다. 마찬가지로, 합니다 [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/) 오버 로드로 대체 되었습니다 합니다 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) 및 [ `On` ](xref:Xamarin.Forms.On) Api.
+그러나 이후 Xamarin.Forms 2.3.4 이러한 Api가 더 이상 사용 되지 되어 대체 합니다. 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 플랫폼을 식별 하는 공용 문자열 상수를 이제 포함 하는 클래스 [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)를 [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( 사용 되지 않음), `Device.WinRT` (사용 되지 않음), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), 및 [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)합니다. 마찬가지로, 합니다 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드로 대체 되었습니다 합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) Api.
 
-C#으로 플랫폼별 값을 제공할 수 만들어를 `switch` 의 문 합니다 [ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/) 속성을 선택한 다음 제공 `case` 필요한 플랫폼에 대 한 문:
+C#으로 플랫폼별 값을 제공할 수 만들어를 `switch` 의 문 합니다 [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) 속성을 선택한 다음 제공 `case` 필요한 플랫폼에 대 한 문:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-[ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) 하 고 [ `On` ](xref:Xamarin.Forms.On) 클래스는 XAML에서 동일한 기능을 제공 합니다.
+[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 하 고 [ `On` ](xref:Xamarin.Forms.On) 클래스는 XAML에서 동일한 기능을 제공 합니다.
 
 ```xaml
 <StackLayout>
@@ -60,7 +60,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 </StackLayout>
 ```
 
-합니다 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/) 클래스는 제네릭 클래스와 사용 하 여 인스턴스화할 수 해야 합니다는 `x:TypeArguments` 대상 형식과 일치 하는 특성입니다. 에 [ `On` ](xref:Xamarin.Forms.On) 클래스를 [ `Platform` ](xref:Xamarin.Forms.On.Platform) 특성에는 단일 수락할 수 있습니다 `string` 값 또는 쉼표로 구분 된 여러 `string` 값입니다.
+합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 클래스는 제네릭 클래스와 사용 하 여 인스턴스화할 수 해야 합니다는 `x:TypeArguments` 대상 형식과 일치 하는 특성입니다. 에 [ `On` ](xref:Xamarin.Forms.On) 클래스를 [ `Platform` ](xref:Xamarin.Forms.On.Platform) 특성에는 단일 수락할 수 있습니다 `string` 값 또는 쉼표로 구분 된 여러 `string` 값입니다.
 
 > [!IMPORTANT]
 > 잘못 된 제공 `Platform` 특성 값을 `On` 클래스 오류가 발생 하지 것입니다. 대신 코드 적용 되는 플랫폼 특정 값 없이 실행 됩니다.
@@ -75,6 +75,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 -  **태블릿** -iPad, Windows 장치 및 Android 장치 600 dip 보다 넓은 ^
 -  **데스크톱** – 반환 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속성 시나리오에 포함 하 여 모바일 Windows 장치의)
 -  **TV** – Tizen TV 장치
+-  **조사식** – Tizen watch 장치
 -  **지원 되지 않는** – 사용 되지 않는
 
 *^ dip가 반드시 물리적 픽셀 수*
@@ -172,7 +173,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-사용자 인터페이스 요소는 타이머 또는 웹 요청와 같은 비동기 작업 완료 처리기에서 실행 되는 코드와 같은 백그라운드 스레드에서 액세스 되어서는 안 됩니다. 사용자 인터페이스를 업데이트 해야 하는 모든 백그라운드 코드 내에서 래핑되어야 [ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)합니다. 에 해당 하는 이것이 `InvokeOnMainThread` ios의 경우 `RunOnUiThread` android에서 및 `Dispatcher.RunAsync` 유니버설 Windows 플랫폼에서 합니다.
+사용자 인터페이스 요소는 타이머 또는 웹 요청와 같은 비동기 작업 완료 처리기에서 실행 되는 코드와 같은 백그라운드 스레드에서 액세스 되어서는 안 됩니다. 사용자 인터페이스를 업데이트 해야 하는 모든 백그라운드 코드 내에서 래핑되어야 [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))합니다. 에 해당 하는 이것이 `InvokeOnMainThread` ios의 경우 `RunOnUiThread` android에서 및 `Dispatcher.RunAsync` 유니버설 Windows 플랫폼에서 합니다.
 
 Xamarin.Forms 코드는 다음과 같습니다.
 

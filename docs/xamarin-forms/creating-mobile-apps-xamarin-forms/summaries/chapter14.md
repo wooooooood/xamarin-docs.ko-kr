@@ -7,16 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2dd94d5fb8eecc5cf4a3e376bc67c2cb6afb153b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 54238b46b759497bc6c6738673b98db833399752
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935441"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998363"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 14 장입니다. 절대 레이아웃
 
-와 같은 `StackLayout`, [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 에서 파생 `Layout<View>` 상속을 `Children` 속성입니다. `AbsoluteLayout` 프로그래머가 해당 자식이 있고 선택적으로 해당 크기의 위치를 지정 하는 레이아웃 시스템을 구현 합니다. 왼쪽 위 모퉁이 기준으로 자식 항목의 왼쪽 위 모퉁이에서 위치 지정을 `AbsoluteLayout` 장치 독립적 단위에서입니다. `AbsoluteLayout` 또한 비례 위치 및 크기 조정 기능을 구현합니다.
+와 같은 `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) 에서 파생 `Layout<View>` 상속을 `Children` 속성입니다. `AbsoluteLayout` 프로그래머가 해당 자식이 있고 선택적으로 해당 크기의 위치를 지정 하는 레이아웃 시스템을 구현 합니다. 왼쪽 위 모퉁이 기준으로 자식 항목의 왼쪽 위 모퉁이에서 위치 지정을 `AbsoluteLayout` 장치 독립적 단위에서입니다. `AbsoluteLayout` 또한 비례 위치 및 크기 조정 기능을 구현합니다.
 
 `AbsoluteLayout` 프로그래머는 자식에 대해 크기를 적용할 수 있는 경우에 사용할 특수 한 용도의 레이아웃 시스템으로 간주 됩니다 (예를 들어 `BoxView` 요소) 때 요소의 크기에 영향을 주지 다른 하위 항목의 위치 또는 합니다. 합니다 `HorizontalOptions` 하 고 `VerticalOptions` 속성의 자식에 영향을 주지는 `AbsoluteLayout`합니다.
 
@@ -24,9 +24,9 @@ ms.locfileid: "37935441"
 
 ## <a name="absolutelayout-in-code"></a>코드에서 AbsoluteLayout
 
-자식으로 추가할 수 있습니다는 `Children` 의 컬렉션을 `AbsoluteLayout` 표준을 사용 하 여 [ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/) 메서드를 하지만 `AbsoluteLayout` 도 확장을 제공 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) 지정할 수 있는 메서드를 [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/)합니다. 다른 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) 하기만 메서드를 [ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/), 자식 제약을 받지 않는 하 고 크기가 자동으로 조정 하는 경우.
+자식으로 추가할 수 있습니다는 `Children` 의 컬렉션을 `AbsoluteLayout` 표준을 사용 하 여 [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) 메서드를 하지만 `AbsoluteLayout` 도 확장을 제공 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) 지정할 수 있는 메서드를 [ `Rectangle` ](xref:Xamarin.Forms.Rectangle)합니다. 다른 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) 하기만 메서드를 [ `Point` ](xref:Xamarin.Forms.Point), 자식 제약을 받지 않는 하 고 크기가 자동으로 조정 하는 경우.
 
-만들 수 있습니다는 `Rectangle` 값을 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) 네 가지 값을 지정 해야 하는 &mdash; 부모에 상대적인 자식 항목의 왼쪽 위 모퉁이 위치를 나타내는 첫 번째 두 및 나타내는 두는 자식의 크기입니다. 사용할 수 있습니다는 [생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) 필요로 하는 `Point` 및 [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) 값입니다.
+만들 수 있습니다는 `Rectangle` 값을 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) 네 가지 값을 지정 해야 하는 &mdash; 부모에 상대적인 자식 항목의 왼쪽 위 모퉁이 위치를 나타내는 첫 번째 두 및 나타내는 두는 자식의 크기입니다. 사용할 수 있습니다는 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) 필요로 하는 `Point` 및 [ `Size` ](xref:Xamarin.Forms.Size) 값입니다.
 
 이러한 `Add` 방법에서 설명 됩니다 [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo)에 위치 `BoxView` 요소를 사용 하 여 `Rectangle` 값 및 `Label` 에만사용하여요소`Point` 값입니다.
 
@@ -34,15 +34,15 @@ ms.locfileid: "37935441"
 
 ## <a name="attached-bindable-properties"></a>연결 된 바인딩 가능한 속성
 
-것도 가능 위치 및 필요에 따라 자식의 크기를 설정 하는 `AbsoluteLayout` 에 추가 된 후 합니다 `Children` 정적 메서드를 사용 하 여 컬렉션 [ `AbsoluteLayout.SetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutBounds/p/Xamarin.Forms.BindableObject/Xamarin.Forms.Rectangle/)합니다. 첫 번째 인수는 자식; 두 번째는 `Rectangle` 개체입니다. 자식 크기 자체 가로 및/또는 세로로 너비 및 높이 값을 설정 하 여 지정할 수 있습니다 합니다 [ `AbsoluteLayout.AutoSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) 상수입니다.
+것도 가능 위치 및 필요에 따라 자식의 크기를 설정 하는 `AbsoluteLayout` 에 추가 된 후 합니다 `Children` 정적 메서드를 사용 하 여 컬렉션 [ `AbsoluteLayout.SetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle))합니다. 첫 번째 인수는 자식; 두 번째는 `Rectangle` 개체입니다. 자식 크기 자체 가로 및/또는 세로로 너비 및 높이 값을 설정 하 여 지정할 수 있습니다 합니다 [ `AbsoluteLayout.AutoSize` ](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) 상수입니다.
 
 [ **ChessboardDynamic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) put 샘플를 `AbsoluteLayout` 에 `ContentView` 사용 하 여를 `SizeChanged` 호출할 처리기입니다 `AbsoluteLayout.SetLayoutBounds` 최대한 크게 있도록 모든 자식에 대해.  
 
-연결된 된 바인딩 가능한 속성입니다 `AbsoluteLayout` 정의 형식의 정적 읽기 전용 필드 `BindableProperty` 라는 [ `AbsoluteLayout.LayoutBoundsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty/)합니다. 정적 `AbsoluteLayout.SetLayoutBounds` 메서드를 호출 하 여 구현 됩니다 `SetValue` 자식으로 `AbsoluteLayout.LayoutBoundsProperty`합니다. 자식 연결된 된 바인딩 가능한 속성 및 해당 값 저장 되는 사전을 포함 합니다. 레이아웃 중 합니다 `AbsoluteLayout` 를 호출 하 여 해당 값을 가져올 수 [ `AbsoluteLayout.GetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutBounds/p/Xamarin.Forms.BindableObject/),으로 구현 되는 `GetValue` 호출 합니다.
+연결된 된 바인딩 가능한 속성입니다 `AbsoluteLayout` 정의 형식의 정적 읽기 전용 필드 `BindableProperty` 라는 [ `AbsoluteLayout.LayoutBoundsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty)합니다. 정적 `AbsoluteLayout.SetLayoutBounds` 메서드를 호출 하 여 구현 됩니다 `SetValue` 자식으로 `AbsoluteLayout.LayoutBoundsProperty`합니다. 자식 연결된 된 바인딩 가능한 속성 및 해당 값 저장 되는 사전을 포함 합니다. 레이아웃 중 합니다 `AbsoluteLayout` 를 호출 하 여 해당 값을 가져올 수 [ `AbsoluteLayout.GetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject)),으로 구현 되는 `GetValue` 호출 합니다.
 
 ## <a name="proportional-sizing-and-positioning"></a>가변 크기 조정 및 위치 지정
 
-`AbsoluteLayout` 비례하여 크기 조정 및 위치 기능을 구현 합니다. 두 번째 연결된 바인딩 가능한 속성을 정의 하는 클래스 [ `LayoutFlagsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty/), 관련 된 정적 메서드를 사용 하 여 [ `AbsoluteLayout.SetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutFlags/p/Xamarin.Forms.BindableObject/Xamarin.Forms.AbsoluteLayoutFlags/) 고 [ `AbsoluteLayout.GetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutFlags/p/Xamarin.Forms.BindableObject/)합니다.
+`AbsoluteLayout` 비례하여 크기 조정 및 위치 기능을 구현 합니다. 두 번째 연결된 바인딩 가능한 속성을 정의 하는 클래스 [ `LayoutFlagsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty), 관련 된 정적 메서드를 사용 하 여 [ `AbsoluteLayout.SetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) 고 [ `AbsoluteLayout.GetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject))합니다.
 
 인수 `AbsoluteLayout.SetLayoutFlags` 의 반환 값과 `AbsoluteLayout.GetLayoutFlags` 형식의 값인 [ `AbsoluteLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayoutFlags)를 다음 멤버로 구성 된 열거형:
 
@@ -87,7 +87,7 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1-layoutBounds.Height))
 
 사용할 수 있습니다 `AbsoluteLayout` 생성 하는 *오버레이*, 페이지의 일반 컨트롤 상호 작용에서 사용자를 보호 하기 위해 아마도 다른 컨트롤을 사용 하 여 페이지를 포함 합니다.
 
-합니다 [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) 샘플이이 기술을 보여 줍니다 및 방법도 보여 줍니다 합니다 [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), 프로그램을 완료 하는 정도 표시 하는 작업입니다.
+합니다 [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) 샘플이이 기술을 보여 줍니다 및 방법도 보여 줍니다 합니다 [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar), 프로그램을 완료 하는 정도 표시 하는 작업입니다.
 
 ## <a name="some-fun"></a>재미
 

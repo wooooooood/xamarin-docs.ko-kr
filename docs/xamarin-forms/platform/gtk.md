@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830482"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998206"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
 
@@ -211,7 +211,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>네이티브 양식
 
-네이티브 양식 허용 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-GTK # 프로젝트를 비롯 한 네이티브 프로젝트에서 사용할 수 있도록 페이지를 파생 합니다. 인스턴스를 만들어이 수행할 수 있습니다 합니다 [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-파생 페이지 및 네이티브 GTK # 형식을 사용 하 여 변환 된 `CreateContainer` 확장 메서드:
+네이티브 양식 허용 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-GTK # 프로젝트를 비롯 한 네이티브 프로젝트에서 사용할 수 있도록 페이지를 파생 합니다. 인스턴스를 만들어이 수행할 수 있습니다 합니다 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 페이지 및 네이티브 GTK # 형식을 사용 하 여 변환 된 `CreateContainer` 확장 메서드:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

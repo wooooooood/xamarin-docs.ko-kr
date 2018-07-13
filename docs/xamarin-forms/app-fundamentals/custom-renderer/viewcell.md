@@ -7,36 +7,36 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3cb4d7f152e0f9540275f12f0ade568cd0552784
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b1ebe2694ad5fa996b8b679cfb31a203588de05c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935578"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999001"
 ---
 # <a name="customizing-a-viewcell"></a>Viewcell 사용자 지정
 
 _Xamarin.Forms ViewCell은 ListView 또는 개발자 정의 보기를 포함 하는 TableView에 추가할 수 있는 셀입니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내에서 호스트 되는 ViewCell에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다. ListView 스크롤 하는 동안 반복 해 서 호출에서 Xamarin.Forms 레이아웃 계산이 중지 됩니다._
 
-모든 Xamarin.Forms 셀은 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대 한는 함께 제공 되는 렌더러. 경우는 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) iOS에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewCellRenderer` 클래스가 인스턴스화되면 네이티브를 다시 인스턴스화하는 `UITableViewCell` 컨트롤입니다. Android 플랫폼에는 `ViewCellRenderer` 클래스에는 네이티브 인스턴스화합니다 `View` 컨트롤입니다. Windows 플랫폼 (UWP (유니버설)을 합니다 `ViewCellRenderer` 클래스에는 네이티브 인스턴스화합니다 `DataTemplate`합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 하세요. [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+모든 Xamarin.Forms 셀은 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대 한는 함께 제공 되는 렌더러. 경우는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) iOS에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ViewCellRenderer` 클래스가 인스턴스화되면 네이티브를 다시 인스턴스화하는 `UITableViewCell` 컨트롤입니다. Android 플랫폼에는 `ViewCellRenderer` 클래스에는 네이티브 인스턴스화합니다 `View` 컨트롤입니다. Windows 플랫폼 (UWP (유니버설)을 합니다 `ViewCellRenderer` 클래스에는 네이티브 인스턴스화합니다 `DataTemplate`합니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 하세요. [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
 
-다음 다이어그램 간의 관계는 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 및 구현 하는 해당 네이티브 컨트롤:
+다음 다이어그램 간의 관계는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 및 구현 하는 해당 네이티브 컨트롤:
 
 ![](viewcell-images/viewcell-classes.png "ViewCell 컨트롤 구현 네이티브 컨트롤 간의 관계")
 
-렌더링 프로세스를 수행할 수 활용에 대 한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현 하는 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 각 플랫폼에서 합니다. 이 수행 하는 프로세스는 다음과 같습니다.
+렌더링 프로세스를 수행할 수 활용에 대 한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현 하는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 각 플랫폼에서 합니다. 이 수행 하는 프로세스는 다음과 같습니다.
 
 1. [만들](#Creating_the_Custom_Cell) Xamarin.Forms 사용자 지정 셀입니다.
 1. [사용할](#Consuming_the_Custom_Cell) Xamarin.Forms에서 사용자 지정 셀입니다.
 1. [만들](#Creating_the_Custom_Renderer_on_each_Platform) 각 플랫폼에서 셀에 대 한 사용자 지정 렌더러.
 
-각 항목 이제 살펴봅니다를 구현 하는 `NativeCell` 는 Xamarin.Forms 내에서 호스팅되는 각 셀에 대 한 플랫폼 특정 레이아웃의 이점을 활용 하는 렌더러 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 제어 합니다. 이렇게 하면 Xamarin.Forms 레이아웃 계산 중 반복적으로 호출 되 고 중지 `ListView` 스크롤.
+각 항목 이제 살펴봅니다를 구현 하는 `NativeCell` 는 Xamarin.Forms 내에서 호스팅되는 각 셀에 대 한 플랫폼 특정 레이아웃의 이점을 활용 하는 렌더러 [ `ListView` ](xref:Xamarin.Forms.ListView) 제어 합니다. 이렇게 하면 Xamarin.Forms 레이아웃 계산 중 반복적으로 호출 되 고 중지 `ListView` 스크롤.
 
 <a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>사용자 지정 셀 만들기
 
-사용자 지정 셀 컨트롤을 서브클래싱하 여 만들 수 있습니다 합니다 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 클래스에 다음 코드 예제 에서처럼:
+사용자 지정 셀 컨트롤을 서브클래싱하 여 만들 수 있습니다 합니다 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 클래스에 다음 코드 예제 에서처럼:
 
 ```csharp
 public class NativeCell : ViewCell
@@ -143,9 +143,9 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView) 컨트롤은 데이터를 통해 채워진 목록을 표시 하는 데 사용 합니다 [ `ItemSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemsSource/) 속성입니다. 합니다 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 최소화 하려고 캐싱 전략을 `ListView` 목록 셀을 재활용 하 여 메모리 사용 공간 및 실행 속도입니다. 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)합니다.
+Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView) 컨트롤은 데이터를 통해 채워진 목록을 표시 하는 데 사용 합니다 [ `ItemSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성입니다. 합니다 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 최소화 하려고 캐싱 전략을 `ListView` 목록 셀을 재활용 하 여 메모리 사용 공간 및 실행 속도입니다. 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)합니다.
 
-목록의 각 행에는 이름, 범주 및 이미지 파일 이름에는 데이터의 세 가지 항목이 있습니다. 목록의 각 행의 레이아웃은 정의한를 `DataTemplate` 를 통해 참조 되는 합니다 [ `ListView.ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemTemplate/) 바인딩 가능 속성. 합니다 `DataTemplate` 목록에서 데이터의 각 행 되도록 정의 `NativeCell` 표시 하는 해당 `Name`, `Category`, 및 `ImageFilename` 데이터 바인딩을 통해 속성입니다. 에 대 한 자세한 내용은 합니다 `ListView` 제어를 참조 하십시오 [ListView](~/xamarin-forms/user-interface/listview/index.md)합니다.
+목록의 각 행에는 이름, 범주 및 이미지 파일 이름에는 데이터의 세 가지 항목이 있습니다. 목록의 각 행의 레이아웃은 정의한를 `DataTemplate` 를 통해 참조 되는 합니다 [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 바인딩 가능 속성. 합니다 `DataTemplate` 목록에서 데이터의 각 행 되도록 정의 `NativeCell` 표시 하는 해당 `Name`, `Category`, 및 `ImageFilename` 데이터 바인딩을 통해 속성입니다. 에 대 한 자세한 내용은 합니다 `ListView` 제어를 참조 하십시오 [ListView](~/xamarin-forms/user-interface/listview/index.md)합니다.
 
 사용자 지정 렌더러는 이제 각 셀에 대 한 플랫폼 특정 레이아웃에 맞게 각 응용 프로그램 프로젝트에 추가할 수 있습니다.
 
@@ -315,9 +315,9 @@ internal class NativeiOSCell : UITableViewCell, INativeElementView
 }
 ```
 
-이 클래스는 셀의 내용 및 해당 레이아웃을 렌더링 하는 데 사용 하는 컨트롤을 정의 합니다. 클래스를 구현 하는 합니다 [ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/) 필수 인터페이스를를 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략. 이 인터페이스는 클래스를 구현 해야 하는 지정 된 [ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/) 재활용된 셀에 대 한 사용자 지정 셀 데이터를 반환 해야 하는 속성입니다.
+이 클래스는 셀의 내용 및 해당 레이아웃을 렌더링 하는 데 사용 하는 컨트롤을 정의 합니다. 클래스를 구현 하는 합니다 [ `INativeElementView` ](xref:Xamarin.Forms.INativeElementView) 필수 인터페이스를를 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략. 이 인터페이스는 클래스를 구현 해야 하는 지정 된 [ `Element` ](xref:Xamarin.Forms.INativeElementView.Element) 재활용된 셀에 대 한 사용자 지정 셀 데이터를 반환 해야 하는 속성입니다.
 
-`NativeiOSCell` 생성자의 모양을 초기화 합니다 `HeadingLabel`, `SubheadingLabel`, 및 `CellImageView` 속성입니다. 저장 된 데이터를 표시 하려면 이러한 속성을 사용 합니다 `NativeCell` 인스턴스를 사용 하 여는 `UpdateCell` 메서드가 각 속성의 값을 설정 하려면 호출 됩니다. 또한 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략을 표시 하는 데이터를 `HeadingLabel`, `SubheadingLabel`, 및 `CellImageView` 속성 일 수 있습니다 에 의해 업데이트 된 `OnNativeCellPropertyChanged` 사용자 지정 렌더러에 메서드.
+`NativeiOSCell` 생성자의 모양을 초기화 합니다 `HeadingLabel`, `SubheadingLabel`, 및 `CellImageView` 속성입니다. 저장 된 데이터를 표시 하려면 이러한 속성을 사용 합니다 `NativeCell` 인스턴스를 사용 하 여는 `UpdateCell` 메서드가 각 속성의 값을 설정 하려면 호출 됩니다. 또한 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략을 표시 하는 데이터를 `HeadingLabel`, `SubheadingLabel`, 및 `CellImageView` 속성 일 수 있습니다 에 의해 업데이트 된 `OnNativeCellPropertyChanged` 사용자 지정 렌더러에 메서드.
 
 셀 레이아웃 수행 되는 `LayoutSubviews` 재정의의 좌표를 설정 하는 `HeadingLabel`, `SubheadingLabel`, 및 `CellImageView` 셀 내에서.
 
@@ -358,19 +358,19 @@ namespace CustomRenderer.Droid
 }
 ```
 
-`GetCellCore` 메서드는 표시할 각 셀을 만들려고 합니다. 각 셀에는 한 `NativeAndroidCell` 셀 및 해당 데이터의 레이아웃을 정의 하는 인스턴스입니다. 작업을 `GetCellCore` 종속 된 메서드를 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 캐싱 전략:
+`GetCellCore` 메서드는 표시할 각 셀을 만들려고 합니다. 각 셀에는 한 `NativeAndroidCell` 셀 및 해당 데이터의 레이아웃을 정의 하는 인스턴스입니다. 작업을 `GetCellCore` 종속 된 메서드를 [ `ListView` ](xref:Xamarin.Forms.ListView) 캐싱 전략:
 
-- 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 는 캐싱 전략 [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement), `GetCellCore` 각 셀에 대 한 메서드가 호출 됩니다. A `NativeAndroidCell` 각각에 대해 만들어집니다 `NativeCell` 처음 화면에 표시 되는 인스턴스. 통해 사용자가 스크롤하면 합니다 `ListView`, `NativeAndroidCell` 인스턴스는 다시 사용할 수 있습니다. Android 셀이 다시 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md)합니다.
+- 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 는 캐싱 전략 [ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement), `GetCellCore` 각 셀에 대 한 메서드가 호출 됩니다. A `NativeAndroidCell` 각각에 대해 만들어집니다 `NativeCell` 처음 화면에 표시 되는 인스턴스. 통해 사용자가 스크롤하면 합니다 `ListView`, `NativeAndroidCell` 인스턴스는 다시 사용할 수 있습니다. Android 셀이 다시 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md)합니다.
 
   > [!NOTE]
-  > 참고가 사용자 지정 렌더러 코드 일부 셀 다시 사용 하 여 수행 되는 경우에 합니다 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 은 셀을 유지 하도록 설정 합니다.
+  > 참고가 사용자 지정 렌더러 코드 일부 셀 다시 사용 하 여 수행 되는 경우에 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 은 셀을 유지 하도록 설정 합니다.
 
   각각 사용 하 여 표시 되는 데이터 `NativeAndroidCell` 인스턴스를 새로 만들거나 다시 사용을 업데이트할지 각 데이터로 `NativeCell` 하 여 인스턴스를 `UpdateCell` 메서드.
 
   > [!NOTE]
-  > 있는 동안는 `OnNativeCellPropertyChanged` 메서드에서 될 때 호출 합니다 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 는 셀을 유지 하도록 설정, 업데이트 되지 것입니다는 `NativeAndroidCell` 속성 값.
+  > 있는 동안는 `OnNativeCellPropertyChanged` 메서드에서 될 때 호출 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 는 셀을 유지 하도록 설정, 업데이트 되지 것입니다는 `NativeAndroidCell` 속성 값.
 
-- 경우는 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 는 캐싱 전략 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)는 `GetCellCore` 처음 화면에 표시 되는 각 셀에 대 한 메서드를 호출할 합니다. A `NativeAndroidCell` 각각에 대 한 인스턴스를 만들 수는 `NativeCell` 처음 화면에 표시 되는 인스턴스. 각각 사용 하 여 표시 되는 데이터 `NativeAndroidCell` 데이터로 업데이트할 인스턴스를 `NativeCell` 하 여 인스턴스를 `UpdateCell` 메서드. 그러나 합니다 `GetCellCore` 사용자가 스크롤할으로 메서드를 호출할 수 없습니다는 `ListView`합니다. 대신는 `NativeAndroidCell` 인스턴스는 다시 사용할 수 있습니다.  `PropertyChanged` 이벤트에서 발생 합니다 `NativeCell` 해당 데이터가 변경 될 때 인스턴스 및 `OnNativeCellPropertyChanged` 이벤트 처리기에 다시 사용 되는 각 데이터를 업데이트 `NativeAndroidCell` 인스턴스.
+- 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 는 캐싱 전략 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)는 `GetCellCore` 처음 화면에 표시 되는 각 셀에 대 한 메서드를 호출할 합니다. A `NativeAndroidCell` 각각에 대 한 인스턴스를 만들 수는 `NativeCell` 처음 화면에 표시 되는 인스턴스. 각각 사용 하 여 표시 되는 데이터 `NativeAndroidCell` 데이터로 업데이트할 인스턴스를 `NativeCell` 하 여 인스턴스를 `UpdateCell` 메서드. 그러나 합니다 `GetCellCore` 사용자가 스크롤할으로 메서드를 호출할 수 없습니다는 `ListView`합니다. 대신는 `NativeAndroidCell` 인스턴스는 다시 사용할 수 있습니다.  `PropertyChanged` 이벤트에서 발생 합니다 `NativeCell` 해당 데이터가 변경 될 때 인스턴스 및 `OnNativeCellPropertyChanged` 이벤트 처리기에 다시 사용 되는 각 데이터를 업데이트 `NativeAndroidCell` 인스턴스.
 
 다음 코드 예제는 `OnNativeCellPropertyChanged` 가 호출 하는 메서드를 `PropertyChanged` 이벤트가 발생:
 
@@ -474,7 +474,7 @@ internal class NativeAndroidCell : LinearLayout, INativeElementView
 }
 ```
 
-이 클래스는 셀의 내용 및 해당 레이아웃을 렌더링 하는 데 사용 하는 컨트롤을 정의 합니다. 클래스를 구현 하는 합니다 [ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/) 필수 인터페이스를를 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략. 이 인터페이스는 클래스를 구현 해야 하는 지정 된 [ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/) 재활용된 셀에 대 한 사용자 지정 셀 데이터를 반환 해야 하는 속성입니다.
+이 클래스는 셀의 내용 및 해당 레이아웃을 렌더링 하는 데 사용 하는 컨트롤을 정의 합니다. 클래스를 구현 하는 합니다 [ `INativeElementView` ](xref:Xamarin.Forms.INativeElementView) 필수 인터페이스를를 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략. 이 인터페이스는 클래스를 구현 해야 하는 지정 된 [ `Element` ](xref:Xamarin.Forms.INativeElementView.Element) 재활용된 셀에 대 한 사용자 지정 셀 데이터를 반환 해야 하는 속성입니다.
 
 `NativeAndroidCell` 생성자를 확장 합니다 `NativeAndroidCell` 레이아웃 및 초기화를 `HeadingTextView`, `SubheadingTextView`, 및 `ImageView` 배포용된 레이아웃의 컨트롤에 속성입니다. 저장 된 데이터를 표시 하려면 이러한 속성을 사용 합니다 `NativeCell` 인스턴스를 사용 하 여는 `UpdateCell` 메서드가 각 속성의 값을 설정 하려면 호출 됩니다. 또한 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 사용 하는 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략을 표시 하는 데이터를 `HeadingTextView`, `SubheadingTextView`, 및 `ImageView` 속성 일 수 있습니다 에 의해 업데이트 된 `OnNativeCellPropertyChanged` 사용자 지정 렌더러에 메서드.
 
@@ -569,7 +569,7 @@ namespace CustomRenderer.UWP
 
 ## <a name="summary"></a>요약
 
-이 문서에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 주었습니다를 [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 는 Xamarin.Forms 내에서 호스팅되고 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 컨트롤입니다. 이렇게 하면 Xamarin.Forms 레이아웃 계산 중 반복적으로 호출 되 고 중지 `ListView` 스크롤.
+이 문서에 대 한 사용자 지정 렌더러를 만드는 방법을 보여 주었습니다를 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 는 Xamarin.Forms 내에서 호스팅되고 [ `ListView` ](xref:Xamarin.Forms.ListView) 컨트롤입니다. 이렇게 하면 Xamarin.Forms 레이아웃 계산 중 반복적으로 호출 되 고 중지 `ListView` 스크롤.
 
 
 ## <a name="related-links"></a>관련 링크
