@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: 03841306ba54e511dbf2f2b86a7c17e9f4669bcd
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e45d9944a2f4fc392b5a78efb4a7751d19641c73
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38847563"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030667"
 ---
 # <a name="introduction-to-tvos-12"></a>TvOS 12 소개
 
@@ -23,7 +23,7 @@ ms.locfileid: "38847563"
 
 > [!NOTE]
 > - 검토 합니다 [시작](~/ios/platform/introduction-to-ios12/get-started.md) 12 iOS 및 Xamarin 사용 하 여 12 tvOS 앱 구축을 시작 하는 방법에 대 한 지침은 가이드입니다.
-> - 자세한 내용은 합니다 [릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta/) Xamarin에 대 한 미리 보기 릴리스 합니다.
+> - 자세한 내용은 Xamarin 미리 보기를 읽을 [블로그 게시물을 릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)합니다.
 
 이 문서는 Xamarin의 preview 릴리스 현재 C# 바인딩을 제공 하는 12 기능 새롭고 업데이트 된 tvOS의 대략적인 개요를 제공 합니다.
 
@@ -41,4 +41,4 @@ tvOS 12 어떻게 렌더링 되며, 포커스 엔진과 상호 작용에 관계 
 - [tvOS – Apple Developer (Apple)](https://developer.apple.com/tvos/)
 - [TvOS 12 (Apple) (비디오)의 새로운 기능](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Xamarin 미리 보기 [릴리스 정보](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin 미리 보기 [릴리스 블로그 게시물](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

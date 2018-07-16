@@ -6,13 +6,13 @@ ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: ee5269bf314401328d0184631e817b37ce091479
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 07/08/2018
+ms.openlocfilehash: cf2725eafa18330a07a08db4235bad1a1ecd47b6
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831347"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030627"
 ---
 # <a name="getting-started-with-macos-mojave"></a>MacOS Mojave 시작
 
@@ -23,7 +23,7 @@ ms.locfileid: "38831347"
 > 실험 용도로 사용 합니다.
 
 > [!NOTE]
-> 자세한 내용은 합니다 [릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta/) Xamarin에 대 한 미리 보기 릴리스 합니다.
+> 자세한 내용은 Xamarin 미리 보기를 읽을 [블로그 게시물을 릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)합니다.
 
 이 문서에는 최대 빌드 macOS Mojave Xamarin.Mac 앱을 설정 하는 방법을 설명 합니다. Xcode 10을 다운로드 하 고 mac 용 Visual Studio를 업데이트 하는 방법에 설명
 
@@ -36,7 +36,7 @@ ms.locfileid: "38831347"
 
 2. **Xcode 10을 실행** –; Mac 용 Visual Studio를 실행 하 고 업데이트 하기 전에 Xcode 10 실행 Xamarin 필요한 몇 가지 도구를 설치 합니다.
 
-3. **Mac 용 Visual Studio 업데이트** –의 지침에 따라 합니다 [릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta/) Xamarin 미리 보기를 설치 하려면.
+3. **Mac 용 Visual Studio 업데이트** –의 지침에 따라 합니다 [블로그를 릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta-3/) Xamarin 미리 보기를 설치 하려면.
 
 4. _(선택 사항)_  **Mac에서 최신 macOS Mojave 베타를 설치** – 새로 도입 된 macOS 등록 된 Apple 개발자 수 Mojave Api를 사용 하는 Xamarin.Mac 앱을 테스트 하려면 [다운로드](https://developer.apple.com/download/) 하 고 설치 합니다 최신 macOS Mojave 개발자 베타 버전입니다.
 
@@ -46,9 +46,9 @@ ms.locfileid: "38831347"
    > [!IMPORTANT]
    > Mac을 빌드 및 새 macOS Mojave Api를 호출 하는 Xamarin.Mac 응용 프로그램을 테스트할 Mojave macOS에 업그레이드 하기 전에:
    > - 읽기 [Apple 릴리스](https://developer.apple.com/download/) 운영 체제 업데이트에 대 한 합니다.
-   > - 읽기를 [릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta/) Xamarin에 대 한 미리 보기 릴리스 합니다. 참고가 첫 번째 미리 보기에 새 macOS Mojave AppKit Api (예: 어두운 모드)에 대 한 바인딩을 포함 되지 않습니다.
+   > - Xamarin 미리 보기를 읽을 [블로그 게시물을 릴리스](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xcode 10 다운로드](https://developer.apple.com/download/)
-- Xamarin 미리 보기 [릴리스 정보](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin 미리 보기 [릴리스 블로그 게시물](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
