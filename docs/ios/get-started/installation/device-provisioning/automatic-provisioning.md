@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: 323174b4a37a12828a32acb398fef63cd9b849e3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785819"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38986189"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -71,9 +71,9 @@ IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합�
 
 1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2017을 페어링합니다.
 
-2. **프로젝트 > 속성 프로비전...** 을 선택하여 프로비전 옵션을 엽니다.
+2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 그런 다음, **iOS 번들 서명** 탭으로 이동합니다.
 
-3. **자동 프로비저닝** 구성표를 선택합니다.
+3. **자동 프로비전** 구성표를 선택합니다.
 
     ![자동 구성표 선택](automatic-provisioning-images/prov4.png)
 
