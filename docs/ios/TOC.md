@@ -370,6 +370,7 @@
 #### [메뉴(Force Touch)](watchos/user-interface/menu.md)
 #### [텍스트 입력](watchos/user-interface/text-input.md)
 ### [플랫폼 기능](watchos/platform/index.md)
+#### [watchOS 5 소개](watchos/platform/introduction-to-watchos5/index.md)
 #### [watchOS 4 소개](watchos/platform/introduction-to-watchos4.md)
 #### [watchOS 3 소개](watchos/platform/introduction-to-watchos3/index.md)
 ##### [watchOS 3 프레임워크 추가 변경 내용](watchos/platform/introduction-to-watchos3/additional-framework-changes.md)
