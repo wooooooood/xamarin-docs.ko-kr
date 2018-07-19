@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30778164"
 ---
 # <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--"></a>이유는 내 응용 프로그램 제출 실패:...에서 발견 되는 경로 (iTunesMetadata.plist) 허용 되지 않습니다.
 

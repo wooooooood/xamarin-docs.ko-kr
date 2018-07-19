@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30769031"
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 

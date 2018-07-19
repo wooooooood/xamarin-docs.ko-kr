@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33922550"
 ---
 # <a name="improving-frame-rate-with-ccspritesheet"></a>프레임 속도와 CCSpriteSheet 향상
 

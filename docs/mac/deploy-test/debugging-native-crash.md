@@ -1,19 +1,20 @@
 ---
-title: 네이티브 크래시 디버깅
-description: 이 가이드에서는 Objective-C 런타임에서 발생하는 예외를 디버그하는 방법을 설명합니다.
+title: Xamarin.Mac 앱에서 네이티브 크래시 디버깅
+description: 이 문서에서는 Objective-C 런타임에서 발생하는 예외를 디버그하는 방법을 설명합니다. 어설션 오류, 콜백의 문제, 예외 버블링 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 211f85c32fae3ed947e01890916e0a646981a51b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66ef76c4305e572d5cc45c142f38d89d6f17eeb0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792127"
 ---
-# <a name="debugging-a-native-crash"></a>네이티브 크래시 디버깅
+# <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
 ## <a name="overview"></a>개요
 

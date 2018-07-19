@@ -1,24 +1,23 @@
 ---
-title: 설치
-description: 이 자습서에서는 Xamarin.iOS의 설치 경로를 보여줍니다.
+title: Mac에서 Xamarin.iOS 설치 및 구성
+description: 이 가이드는 Mac용 Visual Studio를 설정하여 Mac에서 Xamarin.iOS를 설치 및 구성하는 방법을 설명하는 지침으로 연결합니다.
 ms.prod: xamarin
 ms.assetid: 625A0933-47A5-6184-3AD5-7E1C8464AEBD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f8a494da3cf9b84c20c91bd81c2585cfb8f4a6f1
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 8aa0c74a066c1a6bc6f57f8f3c829dedb8ed62b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785647"
 ---
-# <a name="installing-and-configuring-xamarinios-on-mac"></a>Mac에 Xamarin.iOS 설치 및 구성
+# <a name="installing-and-configuring-xamarinios-on-a-mac"></a>Mac에서 Xamarin.iOS 설치 및 구성
 
 > [!NOTE]
 > 이 콘텐츠는 [docs.microsoft.com](https://docs.microsoft.com/visualstudio/mac/installation)의 Mac용 Visual Studio 설치 지침으로 이동되었습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

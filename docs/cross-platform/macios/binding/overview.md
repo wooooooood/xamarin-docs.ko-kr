@@ -1,42 +1,42 @@
 ---
-title: Objective C 바인딩 개요
-description: 이 문서는 C# 명령줄 바인딩, 바인딩 프로젝트 목표 Sharpie 등 Objective-c 코드용 바인딩을 만드는 다양 한 방법의 개요를 제공 합니다. 또한 바인딩의 작동 하는 방법을 설명 합니다.
+title: Objective-c 바인딩 개요
+description: 이 문서는 C# 명령줄 바인딩, 바인딩 프로젝트 목표 Sharpie 등 Objective-c 코드에 대 한 바인딩을 만드는 다양 한 방법의 개요를 제공 합니다. 또한 바인딩의 작동 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: f9f981a9024ad9b1f780efbadeeb7e1f1636a8ae
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 97d0c5b9f61d4dafe144d2b2f22df6d465cbbccb
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781746"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855275"
 ---
-# <a name="overview-of-objective-c-bindings"></a>Objective C 바인딩 개요
+# <a name="overview-of-objective-c-bindings"></a>Objective-c 바인딩 개요
 
-_바인딩 프로세스의 작동 방식에 대 한 세부 정보_
+_바인딩 프로세스의 작동 원리의 세부 정보_
 
-Xamarin 사용한 사용에 대 한 Objective C 라이브러리 바인딩 다음 세 단계로 수행 합니다.
+Xamarin 사용에 대 한 Objective-c 라이브러리 바인딩 세 단계로 수행 합니다.
 
-1. C# "정의 API" 작성 설명 하기 위해 어떻게 네이티브 API에 노출 된.NET 및 기본 목표 C.에 매핑되는 방식 이 작업은 수행 같은 구문을 사용 하 여 표준 C# `interface` 및 다양 한 바인딩 **특성** (이 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. C# "API 정의" 작성 설명 하기 위해 네이티브 API 노출 되는 방식을.NET 및 기본 목표 C에 매핑하는 방법 이렇게 같은 구문을 사용 하 여 표준 C# `interface` 및 다양 한 바인딩 **특성** (이 참조 하십시오 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
-2. 한 번을 작성 했습니다 "API 정의" C#에서는 "바인딩" 어셈블리를 생성 하기 위해 컴파일합니다. 이 작업을 수행할 수 있습니다는 [ **명령줄** ](#commandline) 또는 사용 하 여 한 [ **바인딩 프로젝트** ](#bindingproject) Mac 또는 Visual Studio 용 Visual Studio에서.
+2. 작성 한 후 "API 정의" C#에서 "바인딩" 어셈블리를 생성 하기 위해를 컴파일합니다. 이 작업을 수행할 수 있습니다는 [ **명령줄** ](#commandline) 사용 하 여 또는 [ **바인딩 프로젝트** ](#bindingproject) Mac 또는 Visual Studio 용 Visual Studio에서.
 
-3. 그러면 사용자가 정의한 API를 사용 하는 기본 기능에 액세스할 수 있도록 해당 "바인딩" 어셈블리 Xamarin 응용 프로그램 프로젝트에 추가 됩니다.
-  바인딩 프로젝트가 응용 프로그램 프로젝트와에서 완전히 분리 됩니다.
+3. 해당 "바인딩" 어셈블리는 정의한 API를 사용 하는 기본 기능에 액세스할 수 있도록 다음 Xamarin 응용 프로그램 프로젝트에 추가 됩니다.
+  바인딩 프로젝트는 응용 프로그램 프로젝트와 완전히 별개입니다.
 
-**참고:** 사용 하 여 1 단계를 자동화할 수 있습니다 [ **목표 Sharpie**](#objectivesharpie)합니다. Objective-c API를 검사 하 고 생성 하는 제안 된 C# ""API 정의 합니다. 목표 Sharpie에서 생성 된 파일을 사용자 지정할 수 있으며 바인딩 프로젝트 (또는 명령줄에서) 사용할 수 바인딩 어셈블리를 만들려고 합니다. 목표 Sharpie 단독으로 바인딩을 만들지 않습니다를 단순히 더 큰 프로세스의 선택적 부분.
+**참고:** 이용을 사용 하 여 1 단계를 자동화할 수 있습니다 [ **목표 Sharpie**](#objectivesharpie)합니다. Objective C API를 검사 하 고 생성 하 고 제안 된 C# "API 정의입니다." 목표 Sharpie에서 만든 파일을 사용자 지정 하 고 바인딩 프로젝트 (또는 명령줄)에서 사용할 수 있습니다에 바인딩 어셈블리를 만들 수 있습니다. 목표 Sharpie 자체적으로 바인딩을 만들지 않으므로 단순히 대규모 프로세스의 선택적 부분입니다.
 
-자세한 기술 세부 정보를 읽을 수 있습니다 [방식과](#howitworks), 도움이 되는 값은 바인딩이 작성할 수 있습니다.
+자세한 기술 정보를 참조할 수 있습니다 [작동 방식](#howitworks), 바인딩을 작성 하는 데 도움이 됩니다입니다.
 
 <a name="Command_Line_Bindings" /><a name="commandline" />
 
 ## <a name="command-line-bindings"></a>명령줄 바인딩
 
-사용할 수 있습니다는 `btouch-native` Xamarin.iOS에 대 한 (또는 `bmac-native` Xamarin.Mac를 사용 하는 경우) 바인딩을 직접 작성 합니다. 사용자가 직접 만든 C# API 정의 전달 하 여 작동 (또는 목표 Sharpie를 사용 하 여) 명령줄 도구에 (`btouch-native` iOS에 대 한 또는 `bmac-native` Mac 용).
+사용할 수는 `btouch-native` Xamarin.iOS 용 (또는 `bmac-native` Xamarin.Mac을 사용 하는 경우) 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 전달 하 여 작동 하는지 (또는 목표 Sharpie를 사용 하 여) 명령줄 도구 (`btouch-native` iOS 용 또는 `bmac-native` Mac 용).
 
 
-이러한 도구를 호출 하기 위한 일반 구문은 다음과 같습니다.
+이러한 도구를 호출 하는 것에 대 한 일반 구문은 다음과 같습니다.
 
 ```csharp
 # Use this for Xamarin.iOS:
@@ -48,34 +48,34 @@ bash$ /Developer/MonoTouch/usr/bin/btouch-native -e cocos2d.cs -s:enums.cs -x:ex
 bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
-위의 명령 파일을 생성 합니다 `cocos2d.dll` 현재 디렉터리에 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리를 포함 합니다. 이 도구는 Mac에 대 한 Visual Studio에서 바인딩 프로젝트를 사용 하는 경우 사용자 바인딩을 만드는 데 사용할 도구 (설명 [아래](#bindingproject)).
+위의 명령은 파일을 생성 `cocos2d.dll` 현재 디렉터리의 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리 포함 됩니다. 바인딩 프로젝트를 사용 하는 경우 바인딩을 만들려면 Mac 용 Visual Studio를 사용 하는 도구입니다 (설명 [아래](#bindingproject)).
 
 
 <a name="bindingproject" />
 
-## <a name="binding-project"></a>바인딩 프로젝트
+## <a name="binding-project"></a>프로젝트 바인딩
 
-바인딩 프로젝트 Mac 또는 Visual Studio (Visual Studio에서는 iOS 바인딩을을 지원)에 대 한 Visual Studio에서 만들 수 있으며 쉽게를 편집 하 여 빌드 명령줄을 사용 하 여) (아닌 바인딩에 대 한 API 정의 합니다.
+바인딩 프로젝트 Mac 또는 Visual Studio (Visual Studio에서는 iOS 바인딩을을 지원)에 대 한 Visual Studio에서 만들 수 있으며 쉽게 편집 및 빌드 (명령줄을 사용 하 여) 및 바인딩에 대 한 API 정의 합니다.
 
-이 따라 [시작 가이드](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started) 만들고 바인딩을 생성 하는 바인딩 프로젝트를 사용 하는 방법을 보려면 합니다.
+이 따라 [시작 가이드](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started) 만들고 바인딩을 생성할 바인딩 프로젝트를 사용 하는 방법을 확인 합니다.
 
 <a name="objectivesharpie" />
 
 ## <a name="objective-sharpie"></a>목표 Sharpie
 
-목표 Sharpie는 바인딩을 만드는 초기 단계에 도움이 되는 다른, 별도 명령줄 도구입니다. 단독으로 바인딩의 생성 하지 않습니다, 그리고 대신 대상 네이티브 라이브러리에 대 한 API 정의 생성 하는 초기 단계를 자동화 합니다.
+목표 Sharpie는 바인딩을 만드는 방법의 초기 단계를 사용 하 여는 데 도움이 되는 다른, 별도 명령줄 도구입니다. 자체적으로 바인딩을 만들지 않습니다, 그리고 대신 대상 네이티브 라이브러리에 대 한 API 정의 생성의 초기 단계를 자동화 합니다.
 
-읽기는 [목표 Sharpie docs](~/cross-platform/macios/binding/objective-sharpie/index.md) 바인딩을에 빌드할 수 있는 API 정의 네이티브 라이브러리, 네이티브 프레임 워크 및 CocoaPods 구문 분석 하는 방법을 배울 수 있습니다.
+읽기를 [목표 Sharpie docs](~/cross-platform/macios/binding/objective-sharpie/index.md) 바인딩에 빌드할 수 있는 API 정의를 네이티브 라이브러리, 네이티브 프레임 워크 및 CocoaPods를 구문 분석 하는 방법을 알아보려면.
 
 <a name="howitworks" />
 
-## <a name="how-binding-works"></a>바인딩의 작동 방식
+## <a name="how-binding-works"></a>바인딩의 작동 방법
 
-사용할 수는 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) 특성 [[내보내기]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 특성 및 [수동 Objective-c 선택기 호출](~/ios/internals/objective-c-selectors.md) 함께 바인딩할 수동으로 new (이전에 Objective C 형식 바인딩 안 됨된)입니다.
+사용 하는 것이 가능 합니다 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) 특성인 [[내보내기]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 특성인 및 [수동 Objective-c 선택기 호출](~/ios/internals/objective-c-selectors.md) 함께 바인딩할 수동으로 새 (이전에 바인딩되지 않은) Objective-c 형식입니다.
 
-먼저 바인딩할 하는 형식을 찾습니다. 토론 목적으로 (및 단순)에서는 바인딩합니다는 [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 유형 (에 바인딩된 이미 있는 [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); 목적으로 예를 들어 바로 아래 구현을).
+먼저, 바인딩할 하려는 형식을 찾습니다. 바인딩한에서는 설명을 위해 (및 단순성)는 [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 (에서 이미 바인딩 되었으면 하는 [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); 아래 구현은 예를 들어 방금 목적).
 
-둘째, C# 형식을 만드는 데 필요 합니다. 이 네임 스페이스를 포함할 가능성이 하고자 사용 하도록 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` Objective C 런타임 Xamarin.iOS 등록 하는 형식 이름을 변경할 특성입니다. C# 형식에서 상속 되어야 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+둘째, C# 형식 생성 해야 합니다. 네임 스페이스에 배치 해야 할 수 있습니다. 사용 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성 Xamarin.iOS Objective-c 런타임에 등록 하는 형식 이름을 변경할 수 있습니다. C# 형식에서 상속 되어야 합니다 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
 
 ```csharp
 namespace Example.Binding {
@@ -87,7 +87,7 @@ namespace Example.Binding {
 }
 ```
 
-셋째, Objective-c 설명서를 검토 하 고 만들 [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) 사용 하려는 각 선택기에 대 한 인스턴스. 클래스 본문 내에서이 배치 합니다.
+셋째, Objective-c로 설명서를 검토 및 만들기 [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) 사용 하려는 각 선택기에 대 한 인스턴스. 클래스 본문 내에서이 배치 합니다.
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -95,7 +95,7 @@ static Selector selAllObjects = new Selector("allObjects");
 static Selector selNextObject = new Selector("nextObject");
 ```
 
-넷째, 형식 생성자를 제공 해야 합니다. 하면 *해야* 기본 클래스 생성자에 프로그램 생성자 호출을 연결 합니다. `[Export]` 특성에 지정 된 선택기 이름으로 생성자를 호출 하는 Objective C 코드 허용:
+넷째, 형식 생성자를 제공 해야 합니다. 있습니다 *해야* 기본 클래스 생성자에 생성자 호출을 연결 합니다. `[Export]` 특성 이름 지정 된 선택기를 사용 하 여 생성자를 호출 하는 Objective-c 코드를 허용 합니다.
 
 ```csharp
 [Export("init")]
@@ -115,7 +115,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-다섯째, 3 단계에서에서 선언 된 각 선택기에 대 한 메서드를 제공 합니다. 이러한 ´ ֲ `objc_msgSend()` 네이티브 개체에 선택기를 호출 합니다. 사용 하 여 [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) 변환 하는 `IntPtr` 에 적절 하 게 형식화 된 `NSObject` (sub) 형식입니다. 멤버를 Objective C 코드에서 호출할 수 있으려면 메서드로 *해야* 수 **가상**합니다.
+다섯째, 3 단계에서에서 선언 된 각 선택기에 대 한 메서드를 제공 합니다. 이러한 사용할지 `objc_msgSend()` 네이티브 개체에서 선택기를 호출 합니다. 사용 하 여 [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) 변환 하는 `IntPtr` 에 적절 하 게 형식화 된 `NSObject` (sub) 형식입니다. Objective C 코드에서 멤버를 호출할 수 있으려면 메서드로 *해야 합니다* 될 **가상**합니다.
 
 ```csharp
 [Export("nextObject")]
@@ -137,7 +137,7 @@ public virtual NSArray AllObjects {
 }
 ```
 
-정리:
+전체 과정:
 
 ```csharp
 using System;
@@ -186,3 +186,7 @@ namespace Example.Binding {
 }
 ```
 
+## <a name="related-links"></a>관련 링크
+
+- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

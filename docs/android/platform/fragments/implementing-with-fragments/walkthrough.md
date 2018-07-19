@@ -12,6 +12,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33798488"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>연습에 조각의 &ndash; 전화]
 

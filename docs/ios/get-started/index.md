@@ -1,6 +1,6 @@
 ---
-title: iOS 시작
-description: Hello World에서 Hello 앱 스토어로
+title: Xamarin.iOS 시작
+description: 이 문서는 Xamarin.iOS 설정 방법 및 첫 번째 응용 프로그램을 빌드하는 방법을 설명하고, Xamarin에 대한 정보를 Objective-C 개발자에게 제공하는 설명서로 연결합니다.
 ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/23/2016
-ms.openlocfilehash: be25d976cc58d6c1dd0154cbdc06aab7039c544e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 237480c91a40e6ee08481664ce3981af10f97599
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785603"
 ---
-# <a name="getting-started-with-ios"></a>iOS 시작
+# <a name="getting-started-with-xamarinios"></a>Xamarin.iOS 시작
 
 Xamarin.iOS를 사용하는 경우 최신 언어(C#)의 유연성과 간결함, .NET BCL(기본 클래스 라이브러리)의 능력 및 최상의 두 가지 IDE(Mac용 Visual Studio 및 Visual Studio)를 제외하고는, 개발자가 Objective-C 및 Xcode에서 사용할 수 있는 동일한 UI 컨트롤을 사용하여 네이티브 iOS 응용 프로그램을 만들 수 있습니다. 이 시리즈에서는 Xamarin.iOS를 설정 및 설치하는 방법을 소개하고, Xamarin.iOS 개발에 대한 기본 사항을 설명합니다.
 

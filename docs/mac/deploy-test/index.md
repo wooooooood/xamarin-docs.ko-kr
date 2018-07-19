@@ -1,19 +1,20 @@
 ---
-title: 배포 및 테스트
-description: 이 문서는 아이콘, 성능 및 앱 스토어에 게시에 대해 설명하는 지침과 연결됩니다.
+title: Xamarin.Mac 앱 배포 및 테스트
+description: 이 문서는 Xamarin.Mac 앱을 배포 및 테스트하는 방법을 설명하는 다양한 설명서로 연결합니다. 연결된 설명서에서는 응용 프로그램 아이콘, 성능 및 App Store에 게시에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/17/2018
-ms.openlocfilehash: 7e0af30b412a0a4c9d73009dad5d66d7762edbb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bf1643be8c7a8fc5371c2dda5cf8d5bf1b5ec1f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792087"
 ---
-# <a name="deployment-and-testing"></a>배포 및 테스트
+# <a name="deploying-and-testing-xamarinmac-apps"></a>Xamarin.Mac 앱 배포 및 테스트
 
 ## <a name="application-iconapp-iconmd"></a>[응용 프로그램 아이콘](app-icon.md)
 

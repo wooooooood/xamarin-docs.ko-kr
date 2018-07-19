@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764010"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>내 Android SDK 위치 설정
 
@@ -62,6 +63,6 @@ Mac 용 Visual Studio에서로 이동 **기본 설정 > 프로젝트 > SDK 위�
 
 참고 하 여 NDK의 버전 번호가 다를 수 있습니다. 예를 들어 대신의 **android-ndk-r14b**와 같은 이전 버전을 수 있습니다 **android-ndk-r10e**합니다.
 
-Android SDK 위치를 설정 하려면 Android SDK 디렉터리의 전체 경로 입력의 **Android SDK 위치** 상자입니다. Finder에서 키를 눌러 Android SDK 폴더를 선택 하면 **CTRL +&#8984;+ I** 폴더 정보를 보려면 클릭 하 고 오른쪽의 경로 끕니다 **여기서:**를 복사한 다음 붙여 넣어를 **Android SDK 위치** 상자에 **위치** 탭 합니다. 예를 들어, Android SDK 위치에 있으면 **~/Library/Developer/Android/Sdk**, 이전 경로에서 선택을 취소는 **Android SDK 위치** 상자이 경로에 붙여 넣고 클릭 **확인**.
+Android SDK 위치를 설정 하려면 Android SDK 디렉터리의 전체 경로 입력의 **Android SDK 위치** 상자입니다. Finder에서 키를 눌러 Android SDK 폴더를 선택 하면 **CTRL +&#8984;+ I** 폴더 정보를 보려면 클릭 하 고 오른쪽의 경로 끕니다 **여기서:** 를 복사한 다음 붙여 넣어를 **Android SDK 위치** 상자에 **위치** 탭 합니다. 예를 들어, Android SDK 위치에 있으면 **~/Library/Developer/Android/Sdk**, 이전 경로에서 선택을 취소는 **Android SDK 위치** 상자이 경로에 붙여 넣고 클릭 **확인**.
 
 -----

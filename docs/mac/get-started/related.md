@@ -1,19 +1,20 @@
 ---
-title: 관련 설명서
-description: macOS 개발자를 위한 추가 설명서로 이동합니다.
+title: Xamarin.Mac - 관련 설명서
+description: '이 문서에서는 Xamarin.Mac 개발자를 위한 관련 설명서: Xamarin.iOS 설명서, Apple의 Mac 개발자 센터 및 Xamarin.Mac으로 사용자 인터페이스를 작성하는 방법을 설명하는 다양한 설명서에 대한 연결을 제공합니다.'
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: ff26747a395b48163dbabf0b058f28427182d41a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1bef756d89a92d082bd5ee29e18047bc4bed2498
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792530"
 ---
-# <a name="related-documentation"></a>관련 설명서
+# <a name="xamarinmac--related-documentation"></a>Xamarin.Mac - 관련 설명서
 
 [developer.xamarin.com](~/mac/get-started/index.md)의 Mac 섹션 외에도 Xamarin.Mac과 관련된 의문을 해결할 수 있는 세 가지 좋은 자료가 있습니다.
 

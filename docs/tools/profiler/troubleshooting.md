@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 71faf79ef9b783480dbb6ff4674859a9148abca3
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793857"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066912"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin 프로파일러 문제 해결
 
@@ -67,7 +67,7 @@ Windows에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Pr
 - 플랫폼은 확인 [지원](~/tools/profiler/index.md#Profiler_Support)합니다.
 - 올바른 라이선스가 있는지 확인 합니다.
 - 인증에 고 적절히 로그온 했는지 확인 합니다.
-- [Visual Studio] 사용 해야 [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) 및 Enterprise 라이선스를가지고 있습니다.
+- [Visual Studio] 사용 해야 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/) 및 Enterprise 라이선스를가지고 있습니다.
 
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>프로파일러를 시작 하려고 할 때 오류가 발생
 

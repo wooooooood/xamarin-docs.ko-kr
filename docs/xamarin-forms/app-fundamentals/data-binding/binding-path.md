@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms 바인딩 경로
-description: 이 문서에서는 하위 속성 및 바인딩 클래스의 경로 속성으로 컬렉션 멤버에 액세스 하려면 Xamarin.Forms 데이터 바인딩을 사용 하는 방법에 설명 합니다.
+description: 이 문서에서는 데이터 바인딩을 Xamarin.Forms를 사용 하 여 하위 속성 및 바인딩 클래스의 Path 속성을 사용 하 여 컬렉션 멤버를 액세스 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 887a20f1791a190c182e6d179cfabb46c6e0eb48
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240475"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998949"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
-모든 이전 데이터 바인딩 예제에는 [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) 속성의는 `Binding` 클래스 (또는 [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) 의 속성은 `Binding` 태그 확장) 설정 된 에 단일 속성입니다. 실제로 설정 수는 `Path` 에 *하위 속성* (속성이 속성) 또는 컬렉션의 멤버입니다.
+모든 이전 데이터 바인딩 예제에서를 [ `Path` ](xref:Xamarin.Forms.Binding.Path) 의 속성을 `Binding` 클래스 (또는 [ `Path` ](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성은 `Binding` 태그 확장) 설정한 단일 속성입니다. 실제로 설정 수 있기 `Path` 에 *하위 속성* (속성을 속성) 또는 컬렉션의 멤버입니다.
 
 예를 들어, 페이지에는 `TimePicker`:
 
@@ -24,16 +24,16 @@ ms.locfileid: "35240475"
 <TimePicker x:Name="timePicker">
 ```
 
-`Time` 속성 `TimePicker` 유형의 `TimeSpan`, 하지만 아마도 참조 하는 데이터 바인딩 만들기는 `TotalSeconds` 속성의 `TimeSpan` 값입니다. 데이터 바인딩은 다음과 같습니다.
+`Time` 의 속성 `TimePicker` 형식입니다 `TimeSpan`를 참조 하는 데이터 바인딩 만들기 하려는 아마도 `TotalSeconds` 속성의 `TimeSpan` 값. 데이터 바인딩에 다음과 같습니다.
 
 ```xaml
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
 
-`Time` 형식의 속성은 `TimeSpan`을는 `TotalSeconds` 속성입니다. `Time` 및 `TotalSeconds` 속성은 마침표로 simply 연결 합니다. 에 있는 항목의 `Path` 이러한 속성의 형식은 아니라 속성에는 항상 문자열 참조 합니다.
+`Time` 형식의 속성은 `TimeSpan`에 있는 `TotalSeconds` 속성. 합니다 `Time` 고 `TotalSeconds` 속성은 연결 됩니다 마침표를 사용 하 여 합니다. 항목을 `Path` 문자열에는 항상 이러한 속성의 형식은 아닌 속성에 참조 합니다.
 
-예제 및 여러 다른 에서처럼는 **경로 변형** 페이지:
+예제 및 여러 다른 에서처럼 합니다 **경로 변형** 페이지:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,11 +89,11 @@ ms.locfileid: "35240475"
 </ContentPage>
 ```
 
-두 번째에서 `Label`, 바인딩 소스 자체 페이지입니다. `Content` 형식의 속성은 `StackLayout`가 `Children` 형식의 속성이 `IList<View>`가 `Count` 자식의 수를 나타내는 속성입니다.
+두 번째에서 `Label`, 바인딩 소스 자체 페이지입니다. 합니다 `Content` 형식의 속성은 `StackLayout`, 있는 `Children` 형식의 속성 `IList<View>`, 있는 `Count` 자식의 수를 나타내는 속성입니다.
 
-## <a name="paths-with-indexers"></a>경로 인덱서를
+## <a name="paths-with-indexers"></a>인덱서를 사용 하 여 경로
 
-세 번째에서 바인딩 `Label` 에 **경로 변형** 참조 페이지의 [ `CultureInfo` ](https://developer.xamarin.com/api/type/System.Globalization.CultureInfo/) 클래스에 `System.Globalization` 네임 스페이스:
+세 번째에서 바인딩을 `Label` 에 **경로 변형** 참조 페이지를 [ `CultureInfo` ](xref:System.Globalization.CultureInfo) 클래스를 `System.Globalization` 네임 스페이스:
 
 ```xaml
 <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
@@ -101,9 +101,9 @@ ms.locfileid: "35240475"
                       StringFormat='The middle day of the week is {0}'}" />
 ```
 
-정적으로 설정 되어 `CultureInfo.CurrentCulture` 형식의 개체에 해당 하는 속성이 `CultureInfo`합니다. 클래스 속성을 정의 `DateTimeFormat` 형식의 [ `DateTimeFormatInfo` ](https://developer.xamarin.com/api/type/System.Globalization.DateTimeFormatInfo/) 를 포함 하는 `DayNames` 컬렉션입니다. 네 번째 항목을 선택 하는 인덱스입니다.
+소스는 정적으로 설정 되어 `CultureInfo.CurrentCulture` 형식의 개체 속성 `CultureInfo`합니다. 클래스 라는 속성을 정의 하 `DateTimeFormat` 형식의 [ `DateTimeFormatInfo` ](xref:System.Globalization.DateTimeFormatInfo) 포함 하는 `DayNames` 컬렉션입니다. 네 번째 항목을 선택 하는 인덱스입니다.
 
-네 번째 `Label` 비슷한 프랑스와 관련 된 문화권에 있지만 특정 작업을 수행 합니다. `Source` 바인딩의 속성이로 설정 되어 `CultureInfo` 생성자가 있는 개체:
+네 번째 `Label` 이와 비슷하게 프랑스 연관 되지만 문화권입니다. 합니다 `Source` 바인딩의 속성 `CultureInfo` 생성자를 사용 하 여 개체:
 
 ```xaml
 <Label>
@@ -122,9 +122,9 @@ ms.locfileid: "35240475"
 </Label>
 ```
 
-참조 [생성자 인수를 전달](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) 에 대 한 자세한 내용은 XAML에서 생성자 인수를 지정 합니다.
+참조 [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) 자세한 XAML에서 생성자 인수를 지정 합니다.
 
-마지막으로, 마지막 예제에서 두 번째 한다는 점을 제외 비슷합니다의 자식 중 하나를 참조 하는 `StackLayout`:
+마지막으로, 마지막 예제는 자식 중 하나를 참조 하는 점을 제외 하 고 두 번째 비슷합니다는 `StackLayout`:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
@@ -132,22 +132,22 @@ ms.locfileid: "35240475"
                       StringFormat='The first Label has {0} characters'}" />
 ```
 
-해당 자식이 `Label`가 `Text` 형식의 속성이 `String`가 `Length` 속성입니다. 첫 번째 `Label` 보고서는 `TimeSpan` 에 설정 된 `TimePicker`하므로 해당 텍스트가 변경 될 때 최종 `Label` 도 변경 합니다.
+해당 자식이 `Label`, 있는 `Text` 형식의 속성 `String`에 있는 `Length` 속성. 첫 번째 `Label` 보고서를 `TimeSpan` 에 설정 합니다 `TimePicker`이므로 해당 텍스트가 변경 되 면 최종 `Label` 도 변경 합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램입니다.
+다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
 
-[![경로 변형](binding-path-images/pathvariations-small.png "경로 변형")](binding-path-images/pathvariations-large.png#lightbox "경로 변형")
+[![경로 변형을](binding-path-images/pathvariations-small.png "경로 변형")](binding-path-images/pathvariations-large.png#lightbox "경로 변형")
 
-## <a name="debugging-complex-paths"></a>복잡 한 경로 디버깅합니다.
+## <a name="debugging-complex-paths"></a>복잡 한 경로 디버깅
 
-복합 경로 정의 생성 하기 어려운 수 있습니다: 각 하위 속성의 형식이 나 올바르게 다음 하위 속성을 추가 하는 컬렉션에 있는 항목의 형식을 알아야 하지만 형식 자체의 경로에 표시 되지 않습니다. 좋은 방법 중 하나는 증분 빌드 경로 구성 하 고 중간 결과 확인 하는 것입니다. 마지막 그 예에서 없이 시작할 수 있습니다 `Path` 전혀 정의:
+복잡 한 경로 정의 생성 하기 어려울 수 있습니다: 각 하위 속성의 형식이 나 다음 하위 속성을 제대로 추가할 컬렉션의 항목 형식을 알아야 하지만 형식 자체는 경로에 표시 되지 않습니다. 좋은 방법 중 하나는 증분 빌드 경로 구성 하 고 중간 결과 확인 하는 것입니다. 예: 해당 마지막 없이 시작할 수 있습니다 `Path` 전혀 정의:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
                       StringFormat='{0}'}" />
 ```
 
-바인딩 소스의 형식을 표시 하는 또는 `DataBindingDemos.PathVariationsPage`합니다. 알고 있는 `PathVariationsPage` 에서 파생 `ContentPage`아니므로 `Content` 속성:
+바인딩 소스의 형식을 표시 하는 또는 `DataBindingDemos.PathVariationsPage`합니다. 알고 `PathVariationsPage` 에서 파생 되 `ContentPage`것이 아니므로 `Content` 속성:
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},
@@ -155,11 +155,11 @@ ms.locfileid: "35240475"
                       StringFormat='{0}'}" />
 ```
 
-종류는 `Content` 속성은 이제 번도 공개 될 `Xamarin.Forms.StackLayout`합니다. 추가 `Children` 속성을는 `Path` 이며 형식만 `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, 내부 Xamarin.Forms에 있지만 분명히 컬렉션 형식에 클래스인 합니다. 에 인덱스를 추가 하 고 형식이 `Xamarin.Forms.Label`합니다. 이러한 방식으로 계속 합니다.
+형식의 합니다 `Content` 되도록 이제 작아 속성 `Xamarin.Forms.StackLayout`합니다. 추가 합니다 `Children` 속성을를 `Path` 형식이 고 `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, Xamarin.Forms 있지만 확실히 컬렉션 형식의 내부 클래스인. 인덱스를 추가 하 고 형식이 `Xamarin.Forms.Label`합니다. 이러한 방식으로 계속 합니다.
 
-설치 바인딩 경로 처리 하는 Xamarin.Forms는 `PropertyChanged` 구현 하는 경로에 있는 개체에 대 한 처리기는 `INotifyPropertyChanged` 인터페이스입니다. 마지막 바인딩 첫 번째 범위에서 변경에 반응 하는 예를 들어 `Label` 때문에 `Text` 속성 변경 합니다.
+Xamarin.Forms 바인딩 경로 처리 하는 대로 설치를 `PropertyChanged` 처리기를 구현 하는 경로에 모든 개체에는 `INotifyPropertyChanged` 인터페이스입니다. 마지막 바인딩 첫 번째 변경에 반응 하는 예를 들어 `Label` 때문에 `Text` 속성 변경 합니다.
 
-바인딩 경로에 속성 구현 하지 않는 경우 `INotifyPropertyChanged`, 해당 속성에 변경 내용을 무시 됩니다. 일부 변경 내용은 바인딩 경로 인해 무효화 완전히 있으므로 속성 및 하위 속성의 문자열 되지 유효 하지 않게 하는 경우에이 방법을 사용 해야 합니다.
+바인딩 경로에서 속성을 구현 하지 않는 경우 `INotifyPropertyChanged`, 해당 속성에 변경 내용을 무시 됩니다. 완전히 일부 변경 내용이 있으므로 속성 및 하위 속성의 문자열 되지 무효화 하는 경우에이 기술을 사용 해야 바인딩 경로 무효화할 수 있습니다.
 
 
 

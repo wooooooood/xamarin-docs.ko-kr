@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: 손전등'
-description: 이 문서에서는 Xamarin.Essentials 켜기 / 끄기 장치의 카메라 플래시 손전등으로 만들 수 있으며를에서 손전등 클래스를 설명 합니다.
+description: 이 문서에서 Xamarin.Essentials 켜기 / 끄기 장치의 카메라 플래시 손전등으로 변환할 수 있는 손전등 클래스를 설명 합니다.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782426"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831413"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**손전등** 클래스 켜기 / 끄기 장치의 카메라 플래시 손전등으로 만들 수 있습니다.
+합니다 **손전등** 클래스 켜기 / 끄기 장치의 카메라 플래시 손전등으로 변환할 수 있습니다.
 
 ## <a name="getting-started"></a>시작
 
-액세스는 **손전등** 는 다음과 같은 플랫폼 특정 설치 기능이 필요 합니다.
+액세스 하는 **손전등** 플랫폼 특정 설정 기능은 필요 합니다.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-카메라 권한과 손전등 필수 필드 이며 Android 프로젝트에서 구성 해야 합니다. 다음과 같은 방법으로 추가할 수 있습니다.
+손전등 및 카메라 필요한 사용 권한과 Android 프로젝트에 구성 되어야 합니다. 이 다음과 같은 방법으로 추가할 수 있습니다.
 
-열기는 **AssemblyInfo.cs** 에서 파일의 **속성** 폴더 추가:
+엽니다는 **AssemblyInfo.cs** 파일을 **속성** 폴더 추가:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
@@ -35,16 +35,16 @@ ms.locfileid: "34782426"
 
 또는 Android 매니페스트를 업데이트 합니다.
 
-열기는 **AndroidManifest.xml** 아래 파일는 **속성** 폴더 내에 다음 코드를 추가 하 고는 **매니페스트** 노드.
+열기를 **AndroidManifest.xml** 파일을 **속성** 폴더 내부에 다음 줄을 추가 합니다 **매니페스트** 노드.
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 **필요한 권한:** 영역 및 검사는 **손전등** 및 **카메라** 사용 권한. 이 자동으로 업데이트는 **AndroidManifest.xml** 파일입니다.
+또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 **필요한 권한:** 영역 및 확인 합니다 **손전등** 및 **카메라** 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
 
-이러한 권한을 추가 하 여 [장치 필터링 하 고 자동으로 Google Play](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) 특정 하드웨어 없이 합니다. Android 프로젝트의 AssemblyInfo.cs 파일에 추가 하 여이 문제를 해결할 수 있습니다.
+이러한 권한을 추가 하 여 [Google Play 장치 자동으로 필터링](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) 특정 하드웨어 없이 합니다. Android 프로젝트의 AssemblyInfo.cs 파일에 다음을 추가 하 여이 문제를 해결할 수 있습니다.
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -53,23 +53,23 @@ ms.locfileid: "34782426"
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-추가 설치 하지 않아도 됩니다.
+추가 설정이 필요 없습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-추가 설치 하지 않아도 됩니다.
+추가 설정이 필요 없습니다.
 
 -----
 
 ## <a name="using-flashlight"></a>손전등을 사용 하 여
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-손전등 설정할 수 있습니다 및 해제를 통해는 `TurnOnAsync` 및 `TurnOffAsync` 메서드:
+손전등 설정할 수 있습니다 및 해제를 통해 합니다 `TurnOnAsync` 고 `TurnOffAsync` 메서드:
 
 ```csharp
 try
@@ -94,7 +94,7 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 사항
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
 
 ### <a name="androidtabandroid-specifics"></a>[Android](#tab/android-specifics)
 
@@ -102,19 +102,19 @@ catch (Exception ex)
 
 #### <a name="api-level-23-and-higher"></a>API 수준 23 이상
 
-새 API 수준에서 [다 모드](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) 켜기 / 끄기는 장치의 플래시 단위를 사용 합니다.
+최신 API 수준에 [Torch 모드](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode) 장치의 플래시 단위를 켜거나 하 게 됩니다.
 
-#### <a name="api-level-22-and-lower"></a>API 수준 22 및 하 한
+#### <a name="api-level-22-and-lower"></a>API 레벨 22 및 하 한
 
-카메라 표면 질감 켜기 / 끄기 하기 위해 만들어지는 `FlashMode` 카메라 단위입니다. 
+카메라 표면 텍스처를 켜거나 끄려면 만들어집니다는 `FlashMode` 카메라 단위입니다. 
 
 ### <a name="iostabios-specifics"></a>[iOS](#tab/ios-specifics)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) 설정 및 다 및 장치의 플래시 모드를 해제 하는 데 사용 됩니다.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) 켜고 Torch 및 장치의 플래시 모드를 해제 하는 데 사용 됩니다.
 
 ### <a name="uwptabuwp-specifics"></a>[UWP](#tab/uwp-specifics)
 
-[램프](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) 설정 하거나 해제 하려면 장치 뒷면에서 첫 번째 램프 검색 하는 데 사용 됩니다.
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) 켜기 / 끄기 장치의 뒷면에 첫 번째 lamp 검색에 사용 됩니다.
 
 -----
 

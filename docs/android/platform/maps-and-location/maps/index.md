@@ -1,19 +1,20 @@
 ---
-title: 맵
+title: Google 맵 및 위치 Xamarin.Android를 사용 하는 방법
 description: 이 문서에서는 Xamarin.Android와 지도 위치를 사용 하는 방법을 설명 합니다. Google 맵 Android API V2를 직접 사용 하 여 기본 제공 지도 응용 프로그램을 활용 하의 모든 정보를 처리 합니다.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e57dc07aefbd1c80a53f4225f5f44fe72a9ddb9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935375"
 ---
-# <a name="maps"></a>맵
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Google 맵 및 위치 Xamarin.Android를 사용 하는 방법
 
 _이 문서에서는 Xamarin.Android와 지도 위치를 사용 하는 방법을 설명 합니다. Google 맵 Android API V2를 직접 사용 하 여 기본 제공 지도 응용 프로그램을 활용 하의 모든 정보를 처리 합니다._
 
@@ -34,6 +35,5 @@ _이 문서에서는 Xamarin.Android와 지도 위치를 사용 하는 방법을
 - [MapsAndLocationDemo_v3 (샘플)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Google Api 추가 기능](http://code.google.com/android/add-ons/google-apis/reference/index.html?com/google/android/maps/package-summary.html)
 - [Android 장치에서 Google 응용 프로그램을 호출 하는 의도 목록:](http://developer.android.com/guide/appendix/g-app-intents.html)
 - [위치 및 지도](http://developer.android.com/guide/topics/location/index.html)

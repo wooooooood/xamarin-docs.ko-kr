@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919991"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>어떤 프로젝트 설정은 디버거에서 필요?
 

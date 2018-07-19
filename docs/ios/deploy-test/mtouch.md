@@ -1,23 +1,23 @@
 ---
-title: mtouch
+title: mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램을 번들로 묶고, 시뮬레이터에서 실행하고, 물리적 장치에 배포하는 데 필요한 많은 단계를 제공하는 도구인 mtouch를 설명합니다.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 933ad24a8778ffbee3a1b6089c6ebcf33d26bf84
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9aaa79f929898f6765b97ab0a0c4a30a271d945a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784955"
 ---
-# <a name="mtouch"></a>mtouch
-
+# <a name="using-mtouch-to-bundle-xamarinios-apps"></a>mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
 
 iPhone 응용 프로그램은 응용 프로그램 번들로 제공됩니다. 응용 프로그램 번들은 iPhone이 응용 프로그램에 대해 배우기 위해 사용하는 코드, 데이터, 구성 파일 및 매니페스트를 포함하는 `.app` 확장이 포함된 디렉터리 입니다.
 
 .NET 실행 파일을 응용 프로그램으로 바꾸는 프로세스는 대부분 응용 프로그램을 번들로 바꾸는 데 필요한 여러 단계를 통합하는 도구인 `mtouch` 명령을 통해 이루어집니다. 이 도구는 시뮬레이터에서 응용 프로그램을 시작하고 실제 iPhone 또는 iPod Touch 장치에 소프트웨어를 배포할 때도 사용됩니다.
-
 
 ## <a name="detailed-instructions"></a>자세한 지침
 
@@ -38,7 +38,7 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 ```
 
 > [!WARNING]
-> `mtouch`를 사용하려면 **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**을 가리키는 바로 가기 링크인 **/Developer/MonoTouch/usr/bin**을 사용하지 마세요. 이 바로 가기 링크는 **/Library/Frameworks/...**에 설치되지 않은 이전 MonoTouch 릴리스와 호환성을 유지하기 위해서만 존재하며, 향후 릴리스에서는 사라집니다.
+> `mtouch`를 사용하려면 **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**을 가리키는 바로 가기 링크인 **/Developer/MonoTouch/usr/bin**을 사용하지 마세요. 이 바로 가기 링크는 **/Library/Frameworks/...** 에 설치되지 않은 이전 MonoTouch 릴리스와 호환성을 유지하기 위해서만 존재하며, 향후 릴리스에서는 사라집니다.
 
 ## <a name="building"></a>빌드
 

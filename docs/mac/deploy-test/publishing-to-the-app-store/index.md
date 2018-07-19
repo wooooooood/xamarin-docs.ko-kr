@@ -1,21 +1,20 @@
 ---
-title: 앱 스토어에 게시
-description: 이 가이드에서는 Mac용 Visual Studio를 사용하여 Xamarin.Mac 앱을 배포하는 방법을 안내합니다. Mac 개발자 계정을 설정하는 방법을 설명하고, 코드 서명에 사용할 인증서를 만드는 프로세스를 안내하고, 이러한 인증서를 사용하여 직접 또는 Mac 앱 스토어를 통해 배포할 수 있는 Mac 앱을 빌드하는 방법을 보여줍니다.
+title: Mac App Store에 Xamarin.Mac 앱 게시
+description: 이 문서에서는 Mac용 Visual Studio를 사용하여 Xamarin.Mac 앱을 배포하는 방법을 설명합니다. Mac 개발자 계정을 설정하는 방법, 코드 서명을 위해 인증서를 만드는 방법 및 이를 사용하여 직접 또는 Mac App Store를 통해 배포할 수 있는 Mac 앱을 빌드하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b21dd0adfd96e1190660aa97b2850f968b5473f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eba359dac70e31325235f6145fe06902e25df7af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791968"
 ---
-# <a name="publishing-to-the-app-store"></a>앱 스토어에 게시
-
-_이 가이드에서는 Mac용 Visual Studio를 사용하여 Xamarin.Mac 앱을 배포하는 방법을 안내합니다. Mac 개발자 계정을 설정하는 방법을 설명하고, 코드 서명에 사용할 인증서를 만드는 과정을 안내하고, 이러한 인증서를 사용하여 직접 또는 Mac 앱 스토어를 통해 배포할 수 있는 Mac 앱을 빌드하는 방법을 보여줍니다._
+# <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Mac App Store에 Xamarin.Mac 앱 게시
 
 ## <a name="overview"></a>개요
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33946722"
 ---
 # <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>Xamarin을 사용한 Visual Studio 2017 릴리스 후보를 사용할 수 있습니까?
 

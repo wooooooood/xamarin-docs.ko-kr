@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS 멀티스크린
-description: 두 부분으로 구성된 이 가이드에서는 Hello, iOS 가이드에서 만든 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 모델-뷰-컨트롤러 디자인 패턴을 소개하고, 첫 번째 iOS 탐색을 구현하고, iOS 응용 프로그램의 구조 및 기능에 대한 심층적인 이해를 개발합니다.
+title: Hello, iOS 멀티스크린 - 심층 분석
+description: 이 문서에서는 확장된 Phoneword 응용 프로그램, 더 고려할 모델-뷰-컨트롤러, iOS 탐색 및 기타 iOS 개발 개념을 심층적으로 살펴봅니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785660"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS 멀티스크린 심층 분석
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
 빠른 시작 연습에서는 첫 번째 멀티스크린 Xamarin.iOS 응용 프로그램을 빌드하고 실행했습니다. 이제 iOS 탐색 및 아키텍처에 대한 깊은 이해를 개발할 시간입니다.
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/04/2018
 
 ### <a name="benefits-of-the-mvc-pattern"></a>MVC 패턴의 이점
 
-모델-뷰-컨트롤러는 *디자인 패턴*입니다. 코드의 일반적인 문제 또는 사용 사례에 대한 재사용 가능한 아키텍처 솔루션입니다. MVC는 *GUI(그래픽 사용자 인터페이스)*를 포함하는 응용 프로그램에 대한 아키텍처입니다. 세 가지 역할 중 하나에 응용 프로그램의 개체를 할당합니다(*모델*(데이터 또는 응용 프로그램 논리), *뷰*(사용자 인터페이스) 및 *컨트롤러*(코드 숨김)). 아래 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여 줍니다.
+모델-뷰-컨트롤러는 *디자인 패턴*입니다. 코드의 일반적인 문제 또는 사용 사례에 대한 재사용 가능한 아키텍처 솔루션입니다. MVC는 *GUI(그래픽 사용자 인터페이스)* 를 포함하는 응용 프로그램에 대한 아키텍처입니다. 세 가지 역할 중 하나에 응용 프로그램의 개체를 할당합니다(*모델*(데이터 또는 응용 프로그램 논리), *뷰*(사용자 인터페이스) 및 *컨트롤러*(코드 숨김)). 아래 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여 줍니다.
 
  [![](hello-ios-multiscreen-deepdive-images/00.png "이 다이어그램에서는 세 가지의 MVC 패턴과 사용자 간의 관계를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 

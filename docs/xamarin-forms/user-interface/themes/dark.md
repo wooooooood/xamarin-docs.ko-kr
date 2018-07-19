@@ -8,18 +8,18 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245926"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38853247"
 ---
 # <a name="xamarinforms-dark-theme"></a>Xamarin.Forms 어두운 테마
 
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 
 > [!NOTE]
-> 테마는 Xamarin.Forms 2.3 미리 보기 버전에 필요 합니다. 확인 된 [문제 해결 팁](~/xamarin-forms/user-interface/themes/index.md) 오류가 발생 한 경우.
+> 테마는 Xamarin.Forms 2.3 미리 보기 릴리스의 경우에 필요 합니다. 확인 합니다 [문제 해결 팁](~/xamarin-forms/user-interface/themes/index.md) 오류가 발생 한 경우.
 
 어두운 테마를 사용 합니다 하:
 
@@ -30,7 +30,7 @@ ms.locfileid: "35245926"
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2. 리소스 사전에 추가
 
-에 **App.xaml** 파일에 새 사용자 지정 추가 `xmlns` 는 테마에 대 한 응용 프로그램의 리소스 사전을 사용 하 여 병합 테마의 리소스를 확인 합니다.
+에 **App.xaml** 파일을 새 사용자 지정 추가 `xmlns` 테마에 대 한 테마의 리소스는 응용 프로그램의 리소스 사전과 병합을 확인 합니다.
 XAML 파일의 예는 다음과 같습니다.
 
 ```xaml
@@ -45,13 +45,13 @@ XAML 파일의 예는 다음과 같습니다.
 
 ## <a name="3-load-theme-classes"></a>3. 테마 클래스를 로드 합니다.
 
-이 따라 [단계 문제 해결](~/xamarin-forms/user-interface/themes/index.md) iOS 및 Android 응용 프로그램 프로젝트에 필요한 코드를 추가 합니다.
+이 따라 [문제 해결 단계](~/xamarin-forms/user-interface/themes/index.md) iOS 및 Android 응용 프로그램 프로젝트에서 필요한 코드를 추가 합니다.
 
-## <a name="4-use-styleclass"></a>4. StyleClass 사용
+## <a name="4-use-styleclass"></a>4. 사용 하 여 StyleClass
 
-단추와 레이블의 생성 하는 태그와 함께 어두운 테마의 예를 들면 다음과 같습니다.
+단추 및 레이블을 생성 하는 태그와 함께 어두운 테마에서의 예는 다음과 같습니다.
 
-[![](dark-images/dark-theme-sml.png "단추 및 어두운 테마의 레이블")](dark-images/dark-theme.png#lightbox "단추 및 어두운 테마의 레이블")
+[![](dark-images/dark-theme-sml.png "단추 및 어두운 테마에서 레이블을")](dark-images/dark-theme.png#lightbox "단추 및 어두운 테마의 레이블")
 
 ```xaml
 <StackLayout Padding="20">
@@ -69,4 +69,4 @@ XAML 파일의 예는 다음과 같습니다.
 </StackLayout>
 ```
 
-[기본 제공 클래스의 전체 목록은](~/xamarin-forms/user-interface/themes/index.md) 몇 가지 공용 컨트롤에 대 한 사용할 수 있는 스타일을 보여 줍니다.
+합니다 [기본 제공 클래스의 전체 목록은](~/xamarin-forms/user-interface/themes/index.md) 어떤 스타일은 일부 공용 컨트롤을 보여 줍니다.

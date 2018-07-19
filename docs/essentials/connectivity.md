@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: 연결'
-description: Xamarin.Essentials에서 연결 클래스를 사용 하 여 장치의 네트워크 상태 변화에 대 한 모니터링, 현재 네트워크 액세스와 현재 연결 된 방식을 확인 수 있습니다.
+description: Xamarin.Essentials 연결 클래스를 사용 하 여 장치의 네트워크 상태 변화에 대 한 모니터링는 현재 네트워크 액세스 및 현재 연결 된 방식을 확인할 수 있습니다.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 54c165e15e725caaecb1573b74cfe295170db141
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848611"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: 연결
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**연결** 클래스 통해 장치의 네트워크 상태 변화에 대 한 모니터링 현재 네트워크 액세스와 현재 연결 된 방식을 확인 합니다.
+합니다 **연결** 장치의 네트워크 상태 변화에 대 한 모니터링 클래스 사용의 현재 네트워크 액세스 및 현재 연결 된 방식을 확인 합니다.
 
 ## <a name="getting-started"></a>시작
 
-액세스는 **연결** 는 다음과 같은 플랫폼 특정 설치 기능이 필요 합니다.
+액세스 하는 **연결** 플랫폼 특정 설정 기능은 필요 합니다.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-`AccessNetworkState` 권한이 필요 하 고 Android 프로젝트에서 구성 해야 합니다. 다음과 같은 방법으로 추가할 수 있습니다.
+`AccessNetworkState` 권한이 필요 하며 Android 프로젝트에 구성 되어야 합니다. 이 다음과 같은 방법으로 추가할 수 있습니다.
 
-열기는 **AssemblyInfo.cs** 에서 파일의 **속성** 폴더 추가:
+엽니다는 **AssemblyInfo.cs** 파일을 **속성** 폴더 추가:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
@@ -34,27 +34,27 @@ ms.locfileid: "34782868"
 
 또는 Android 매니페스트를 업데이트 합니다.
 
-열기는 **AndroidManifest.xml** 아래 파일는 **속성** 폴더 내에 다음 코드를 추가 하 고는 **매니페스트** 노드.
+열기를 **AndroidManifest.xml** 파일을 **속성** 폴더 내부에 다음 줄을 추가 합니다 **매니페스트** 노드.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 **필요한 권한:** 영역 및 검사는 **액세스 네트워크 상태** 권한. 이 자동으로 업데이트는 **AndroidManifest.xml** 파일입니다.
+또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 합니다 **필요한 권한:** 영역과 확인을 **액세스 네트워크 상태** 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-추가 설치 하지 않아도 됩니다.
+추가 설정이 필요 없습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-추가 설치 하지 않아도 됩니다.
+추가 설정이 필요 없습니다.
 
 -----
 
 ## <a name="using-connectivity"></a>연결을 사용 하 여
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
@@ -71,15 +71,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[네트워크 액세스](xref:Xamarin.Essentials.NetworkAccess) 다음 범주에 속합니다.
+[네트워크 액세스](xref:Xamarin.Essentials.NetworkAccess) 다음 범주에 해당 합니다.
 
-* **인터넷** – 로컬 및 인터넷 액세스 합니다.
-* **ConstrainedInternet** – 인터넷 액세스를 제한 합니다. 여기서는 웹 포털에 대 한 로컬 액세스를 사용 하지만 특정 자격 증명 포털을 통해 제공 되는 인터넷에 액세스할 수 있어야 고정 포털 연결을 나타냅니다.
+* **인터넷** -로컬 및 인터넷 액세스 합니다.
+* **ConstrainedInternet** – 인터넷 액세스를 제한 합니다. 웹 포털에 대 한 로컬 액세스를 사용 하지만 구체적인 자격 증명에 포털을 통해 제공 되는 인터넷에 액세스할 필요는 captive 포털 연결을 나타냅니다.
 * **로컬** – 로컬 네트워크만 액세스 합니다.
 * **None** – 없는 연결을 사용할 수 있습니다.
 * **알 수 없는** – 인터넷 연결을 확인할 수 없습니다.
 
-어떤 유형의 확인할 수 있습니다 [연결 프로필](xref:Xamarin.Essentials.ConnectionProfile) 적극적으로 사용 하는 장치:
+유형을 확인할 수 있습니다 [연결 프로필](xref:Xamarin.Essentials.ConnectionProfile) 장치에서 적극적으로 사용 합니다.
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-연결 프로필 또는 네트워크 변경 내용에 액세스 될 때마다 트리거되는 경우의 이벤트를 받을 수 있습니다.
+연결 프로필 또는 네트워크 변경 내용에 액세스할 때마다 트리거될 때 이벤트를 받을 수 있습니다.
 
 ```csharp
 public class ConnectivityTest
@@ -110,7 +110,7 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>제한 사항
 
-수 있다는 것에 유의 해야 하는 `Internet` 을 보고 `NetworkAccess` 하지만 웹에 대 한 모든 권한을 사용할 수 없습니다. 각 플랫폼에서 연결을 작동 하는 방식으로 인해만 연결을 사용할 수 보장할 수 있습니다. 장치가 Wi-fi 네트워크에 연결 수는 예를 들어 있지만 라우터가 인터넷에서 연결이 끊어졌습니다. 이 인스턴스의 인터넷 보고 될 수 있습니다, 하지만 활성 연결에 사용할 수 없습니다.
+수 있다는 것을 확인 해야 하는 `Internet` 에 의해 보고 됩니다 `NetworkAccess` 하지만 전체 웹 액세스를 사용할 수 없습니다. 연결 각 플랫폼에서 작동 하는 방식으로 인해 것만 보장할 수 연결을 사용할 수 있습니다. Wi-fi 네트워크에 장치를 연결할 수 있습니다 예를 들어 있지만 라우터가 인터넷에서 연결이 끊어졌습니다. 활성 연결을 사용할 수 없는 않고 이런에서 인터넷으로 보고 될 수 있습니다.
 
 ## <a name="api"></a>API
 

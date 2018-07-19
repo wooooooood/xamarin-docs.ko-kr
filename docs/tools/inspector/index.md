@@ -5,17 +5,17 @@ ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 8f33f61cd3c38dbce16f9a7afa103836aa454a0c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 823905c425b74659bbc0733ebb1f86eb1ce5fa11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793089"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268793"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
-Xamarin 통합 문서 및 관리자 사용자를 도구로 대화식 C# 콘솔을 가져옵니다. 검사기 실행 중인 앱을 검사할 때 디버깅 또는 진단 보조 역할을 수행 하면 IDE의 워크플로 디버깅 하는 앱과 통합 됩니다.
+Xamarin 검사기 통합 앱의 C# 코드를 대화형으로 실행 하거나 실행 중인 앱을 검사할 때 디버깅 또는 진단 보조 역할을 수행 하면 UI의 속성을 검사할 수 있도록 IDE에 워크플로 디버깅 합니다.
 
 기업 고객에 대 한 라이브 앱 검사 ´ ù입니다. 있을 경우 알려주십시오 있습니다 [버그에](~/tools/inspector/install.md#reporting-bugs)합니다. 한 [포럼](https://forums.xamarin.com/categories/inspector) 너무!
 
@@ -23,7 +23,7 @@ Xamarin 통합 문서 및 관리자 사용자를 도구로 대화식 C# 콘솔�
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[설치 및 요구사항](~/tools/inspector/install.md)
 
-Windows 또는 Mac 컴퓨터에 설치 된 관리자 및 Xamarin 통합 문서를 가져오는 방법에 대 한 정보입니다.
+Xamarin 검사기를 가져오는 방법에 대 한 정보 Mac 또는 Windows 컴퓨터에 설치 합니다.
 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[라이브 응용 프로그램 검사](~/tools/inspector/inspect.md)
 

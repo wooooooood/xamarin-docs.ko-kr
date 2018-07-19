@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
-ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: c2e6a5624baba251061bcd324fcb849e3d95ebfd
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291037"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -251,7 +252,7 @@ XAML은 다음 예제는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDic
 
 1. 리소스 사전에 대 한 로컬 리소스입니다.
 1. 병합 된 리소스 사전에 포함 된 리소스 사용 되지 않는 통해 [ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith) 속성입니다.
-1. 통해 병합 된 리소스 사전에 포함 된 리소스는 `MergedDictionaries` 컬렉션에 나열 된 순서로 `MergedDictionaries` 속성입니다.
+1. 통해 병합 된 리소스 사전에 포함 된 리소스는 `MergedDictionaries` 컬렉션에 나열 된 순서와 반대로 `MergedDictionaries` 속성입니다.
 
 > [!NOTE]
 > 리소스 사전 검색 될 수 있습니다는 계산이 많은 작업 응용 프로그램에 여러 포함 된 경우 큰 리소스 사전입니다. 따라서 불필요 한 검색을 방지 하려면 응용 프로그램에서 각 페이지에만 페이지에 적절 한 리소스 사전을 사용 확인 해야 합니다.

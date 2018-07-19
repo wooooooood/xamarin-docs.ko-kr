@@ -6,11 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e7279c03c730e95f211b555e5b832942c19ea8aa
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935417"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin을 사용한 팀 도시를 사용 하 여
 
@@ -141,7 +142,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 테스트 결과 테스트를 실행 하는 경우 라는 NUnit 스타일 XML 파일의 형태로 반환 됩니다 **아래에 있는 report.xml**합니다. TeamCity 빌드 로그에 정보를 표시 됩니다.
 
-UITests 테스트 클라우드를 제출 하는 방법에 대 한 자세한 내용은 Xamarin의 설명서를 참조 [테스트 클라우드로 전송 테스트](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)합니다.
+UITests 테스트 클라우드를 제출 하는 방법에 대 한 자세한 내용은이 가이드를 참조에 [업로드에 대 한 준비 Xamarin.UITests](/appcenter/test-cloud/preparing-for-upload/uitest/)합니다.
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Calabash 테스트 클라우드 테스트를 제출 합니다.
 
@@ -206,6 +207,5 @@ TeamCity가 설치 하 고 Mac 용 Visual Studio 프로젝트를 빌드할 수, 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin 테스트 클라우드 (UITest)로 테스트를 제출합니다.](https://developer.xamarin.com~/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)
-- [Xamarin 테스트 클라우드 (Calabash)로 테스트를 제출합니다.](https://developer.xamarin.com~/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)
+- [Xamarin.UITests fpr 업로드 준비](/appcenter/test-cloud/preparing-for-upload/uitest/)
 - [설치 및 구성 TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

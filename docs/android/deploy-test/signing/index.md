@@ -1,31 +1,30 @@
 ---
 title: Android 응용 프로그램 패키지에 서명
+description: 게시할 APK(Android 응용 프로그램 패키지)에 서명하는 방법
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
-ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 07/02/2018
+ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403314"
 ---
 # <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+[릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
 
-이 섹션에서는 Visual Studio에서 제공하는 APK에 서명하는 통합 게시 워크플로에 대해 설명합니다. [릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다.
-앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 [게시를 위해 보관](~/android/deploy-test/release-prep/index.md#archive)에서 **배포 채널** 대화 상자에는 두 가지 배포 옵션이 제공됩니다. **임시**를 선택합니다.
 
 [![배포 채널 대화 상자](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-이 섹션에서는 Mac용 Visual Studio의 통합 게시 워크플로를 사용하여 APK에 서명합니다. [릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 알아봅니다. 앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
 
 [게시를 위해 보관](~/android/deploy-test/release-prep/index.md#archive)에서 **서명 및 배포...** 대화 상자에는 두 가지 배포 옵션이 제공됩니다. **임시**를 선택하고 **다음**을 클릭합니다.
 
@@ -57,14 +56,14 @@ ms.lasthandoff: 05/23/2018
 
 결과 키 저장소는 다음 위치에 있습니다.
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*ALIAS*\\*ALIAS*.keystore**
 
-예를 들어 위의 단계는 다음 위치에 새 서명 키를 만들 수 있습니다.
+예를 들어 위의 단계는 **chimp**를 별명으로 사용하여 다음 위치에 새 서명 키를 만듭니다.
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> 결과 키 저장소 파일은 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 Windows를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
+> 결과 키 저장소 파일 및 암호는 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 Windows를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
 
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 
@@ -88,7 +87,7 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 
 > [!NOTE]
-> 결과 키 저장소 파일은 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 Mac를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
+> 결과 키 저장소 파일 및 암호는 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 macOS를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
 
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 

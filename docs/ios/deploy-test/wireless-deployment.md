@@ -1,19 +1,20 @@
 ---
-title: 무선 배포
-description: 이 기능을 사용하면 네트워크 연결을 통해 iOS 또는 Apple TV 장치에 배포할 수 있습니다.
+title: Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
+description: 이 문서에서는 Mac용 Visual Studio 또는 Visual Studio 2017에서 iOS 장치에 Xamarin.iOS 앱을 무선으로 배포하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: b331ea61915b4f202aa971658a5a54d1a8038d64
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785520"
 ---
-# <a name="wireless-deployment"></a>무선 배포
+# <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
 개발자 워크플로에서 중요한 부분은 장치에 배포하는 것입니다. Xcode 9은 앱을 배포하고 디버그할 때마다 장치를 유선으로 연결하지 않고 네트워크를 통해 iOS 장치 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 Mac용 Visual Studio 7.4 및 Visual Studio 15.6 릴리스에 도입되었습니다.
 

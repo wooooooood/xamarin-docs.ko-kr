@@ -7,30 +7,30 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f439e3ba888b67ac1752eae95149adcf55055943
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245874"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995077"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
 ## <a name="introductionintroductionmd"></a>[소개](introduction.md)
 
-Xamarin.Forms 응용 프로그램에 동일한 모양을 갖도록 하는 여러 컨트롤 포함 되는 경우가 많습니다. 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일 여 만들 수 있습니다 컨트롤 모양을 사용자 지정 하는 그룹화 및 설정 속성 컨트롤 형식에 사용할 수 있습니다.
+Xamarin.Forms 응용 프로그램은 종종 동일한 모양이 있는 여러 컨트롤을 포함 합니다. 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일 여 만들 수 있습니다 컨트롤 모양을 사용자 지정 하는 그룹화 및 컨트롤 형식에 사용할 수 있는 설정 속성입니다.
 
 ## <a name="explicit-stylesexplicitmd"></a>[명시적 스타일](explicit.md)
 
-*명시적* 선택적으로 설정 하 여 컨트롤에 적용 된 스타일은 해당 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다.
+*명시적* 스타일을 설정 하 여 선택적으로 컨트롤에 적용 된 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
 
 ## <a name="implicit-stylesimplicitmd"></a>[암시적 스타일](implicit.md)
 
-*암시적* 하나는 동일한 모든 컨트롤에서 사용 되는 스타일은 [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), 각 컨트롤에 스타일을 참조 하지 않고도 합니다.
+*암시적* 스타일은 동일한 모든 컨트롤에서 사용 되는 하나 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType), 각 컨트롤에 스타일을 참조 하지 않고도 합니다.
 
 ## <a name="global-stylesapplicationmd"></a>[글로벌 스타일](application.md)
 
-스타일 사용할 수 있도록 설정 전체적으로 응용 프로그램을 추가 하 여 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)합니다. 페이지나 컨트롤 스타일의 중복을 방지할 수 있습니다.
+스타일 사용할 수 있습니다 전체적으로 응용 프로그램을 추가 하 여 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)합니다. 이를 페이지 또는 컨트롤에서 스타일의 중복을 방지할 수 있습니다.
 
 ## <a name="style-inheritanceinheritancemd"></a>[스타일 상속](inheritance.md)
 
@@ -42,4 +42,4 @@ Xamarin.Forms 응용 프로그램에 동일한 모양을 갖도록 하는 여러
 
 ## <a name="device-stylesdevicemd"></a>[장치 스타일](device.md)
 
-Xamarin.Forms 포함 6 *동적* 라고 스타일 *장치* 스타일에 [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) 클래스입니다. 6 가지 모든 스타일을 적용할 수 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스만 있습니다.
+Xamarin.Forms는 6 개 포함 되어 있습니다 *동적* 스타일 이라고 *장치* 스타일에 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다. 에 모든 6 가지 스타일을 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스에만 있습니다.

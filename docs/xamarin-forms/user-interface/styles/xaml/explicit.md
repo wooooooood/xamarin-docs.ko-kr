@@ -1,28 +1,28 @@
 ---
 title: Xamarin.Forms에 명시적 스타일
-description: 명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 됩니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 명시적 스타일을 사용 하는 방법을 설명 합니다.
+description: 명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 되는 경우 이 문서에서는 Xamarin.Forms 응용 프로그램에 명시적 스타일을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: fd42eae9f70b1a44ee1c844264d1c0cda1fdb734
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: fba00120ed9f5c74bec7622ae1914c43533e8579
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245200"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998572"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms에 명시적 스타일
 
-_명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 됩니다._
+_명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 되는 경우_
 
 ## <a name="creating-an-explicit-style-in-xaml"></a>XAML에 명시적 스타일 만들기
 
-선언 하는 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 페이지 수준에서 한 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 페이지 다음 하나 이상의에 추가 해야 `Style` 선언에 포함 될 수는 `ResourceDictionary`합니다. A `Style` 이루어집니다 *명시적* 선언 제공 하 여는 `x:Key` 특성에 설명이 포함 된 키를 제공 하는 `ResourceDictionary`합니다. *명시적* 스타일 다음에 적용 해야 특정 시각적 요소를 설정 하 여 자신의 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다.
+선언 하는 [ `Style` ](xref:Xamarin.Forms.Style) 페이지 수준에 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 페이지 및 다음 하나 이상의 추가 해야 합니다 `Style` 선언에 포함 될 수는 `ResourceDictionary`. A `Style` 이루어집니다 *명시적* 선언을 제공 하 여는 `x:Key` 특성에 설명이 포함 된 키를 제공 하는 `ResourceDictionary`. *명시적* 스타일 다음에 적용 해야 특정 한 시각적 요소를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
 
-다음 코드 예제와 *명시적* 스타일 페이지의 XAML에 선언 된 `ResourceDictionary` 는 페이지에 적용 하 고 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스:
+다음 코드 예와 *명시적* 페이지의 XAML에 선언 된 스타일 `ResourceDictionary` 페이지에 적용 하 고 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
@@ -62,15 +62,15 @@ _명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으�
 </ContentPage>
 ```
 
-[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 세 정의 *명시적* 스타일의 페이지에 적용 되는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 `Label` 설정 하 여 해당 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 사용 하 여 속성의 `StaticResource` 태그 확장 합니다. 다음 스크린샷에 표시 된 모양 결과이 됩니다.
+합니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 3 정의 *명시적* 페이지에 적용 되는 스타일 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 됩니다 `Label` 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 사용 하 여 속성을 `StaticResource` 태그 확장 합니다. 이 인해 다음 스크린샷에 표시 된 모양:
 
 [![](explicit-images/explicit-styles.png "명시적 스타일 예제")](explicit-images/explicit-styles-large.png#lightbox "명시적 스타일 예제")
 
-또한 최종 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 에 [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 적용 하지만 재정의 [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) 속성을 다른 `Color`값입니다.
+또한 최종 [ `Label` ](xref:Xamarin.Forms.Label) 에 [ `Style` ](xref:Xamarin.Forms.Style) 적용 하지만 또한 재정의 [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) 속성을 다른 `Color`값입니다.
 
 ### <a name="creating-an-explicit-style-at-the-control-level"></a>컨트롤에 명시적 스타일 수준 만들기
 
-생성 될 뿐만 아니라 *명시적* 페이지 수준에서 스타일을 만들 수 있습니다도 제어 수준에 다음 코드 예제에 나와 있는 것 처럼:
+외에도 *명시적* 페이지 수준에서 스타일도 만들 수 있습니다 제어 수준에서 다음 코드 예제 에서처럼:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
@@ -91,13 +91,13 @@ _명시적 스타일은 해당 스타일 속성을 설정 하 여 선택적으�
 </ContentPage>
 ```
 
-이 예제에서는 *명시적* [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 에 할당 된 인스턴스는 [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 의 컬렉션은 [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 제어 합니다. 그런 다음 컨트롤과 해당 자식 컨트롤에 스타일을 적용할 수 있습니다.
+이 예제에서는 *명시적* [ `Style` ](xref:Xamarin.Forms.Style) 에 할당 된 인스턴스를 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 의 컬렉션을 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 제어 합니다. 그런 다음 컨트롤과 해당 자식 컨트롤에 스타일을 적용할 수 있습니다.
 
-응용 프로그램에서 스타일을 만드는 방법은 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 참조 [글로벌 스타일](~/xamarin-forms/user-interface/styles/application.md)합니다.
+응용 프로그램에서 스타일을 만드는 방법은 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 참조 하십시오 [글로벌 스타일](~/xamarin-forms/user-interface/styles/application.md).
 
 ## <a name="creating-an-explicit-style-in-c35"></a>C에서 명시적 스타일 만들기&#35;
 
-[`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스는 페이지에 추가할 수 있습니다 [ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) 새 C#에서 컬렉션 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/), 고 추가 하 여 다음의 `Style` 인스턴스는 `ResourceDictionary`에 나타난 것 처럼는 다음 코드 예제
+[`Style`](xref:Xamarin.Forms.Style) 인스턴스 페이지를 추가할 수 있습니다 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 새 C#에서 컬렉션 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 추가 하 여 다음을 `Style` 인스턴스를 `ResourceDictionary`에서처럼는 다음 코드 예제:
 
 ```csharp
 public class ExplicitStylesPageCS : ContentPage
@@ -145,9 +145,9 @@ public class ExplicitStylesPageCS : ContentPage
 }
 ```
 
-세 개의 생성자 정의 *명시적* 스타일의 페이지에 적용 되는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스. 각 *명시적* [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 에 추가 되는 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 를 사용 하는 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ResourceDictionary.Add/p/System.String/System.Object/) 메서드를 지정 하는 `key` 을 가리키는 문자열은 `Style` 인스턴스. 각 `Style` 다른 적용 `Label` 설정 하 여 자신의 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다.
+생성자 정의 세 *명시적* 페이지에 적용 되는 스타일 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 각 *명시적* [ `Style` ](xref:Xamarin.Forms.Style) 에 추가 되는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 를 사용 하 여를 [ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) 메서드를 지정 하는 `key` 를 참조 하는 문자열을 `Style` 인스턴스. 각 `Style` 다른 적용 됩니다 `Label` 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
 
-그러나 사용 하는 장점이 있습니다. 한 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) 여기 합니다. 대신, [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 인스턴스에 직접 할당할 수는 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 필요한 시각적 요소의 속성 및 `ResourceDictionary` 다음에 표시 된 대로 제거할 수 있습니다 코드 예:
+그러나은 아무 이점이 없습니다 사용 하는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 여기 있습니다. 대신 [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스를 직접 할당할 수 있습니다 합니다 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 필요한 시각적 요소의 속성 및 `ResourceDictionary` 다음에 표시 된 대로 제거할 수 있습니다 코드 예제:
 
 ```csharp
 public class ExplicitStylesPageCS : ContentPage
@@ -177,11 +177,11 @@ public class ExplicitStylesPageCS : ContentPage
 }
 ```
 
-세 개의 생성자 정의 *명시적* 스타일의 페이지에 적용 되는 [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 `Label` 설정 하 여 해당 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다. 또한 최종 `Label` 에 `Style` 적용 하지만 재정의 `TextColor` 속성을 다른 `Color` 값입니다.
+생성자 정의 세 *명시적* 페이지에 적용 되는 스타일 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 됩니다 `Label` 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다. 또한 최종 `Label` 에 `Style` 적용 하지만 또한 재정의 `TextColor` 속성을 다른 `Color` 값입니다.
 
 ## <a name="summary"></a>요약
 
-A [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 이루어집니다 *명시적* 선언 제공 하 여 프로그램 `x:Key` 특성을 선택한 다음 선택적으로 컨트롤에 적용을 설정 하 여 자신의 [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) 속성입니다.
+A [ `Style` ](xref:Xamarin.Forms.Style) 이루어집니다 *명시적* 선언을 제공 하 여를 `x:Key` 특성을 적용 한 다음 선택적으로 해당 컨트롤에 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
 
 
 
@@ -189,7 +189,7 @@ A [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 이�
 
 - [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [스타일 (샘플) 작업을](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [스타일](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [스타일](xref:Xamarin.Forms.Style)
+- [Setter](xref:Xamarin.Forms.Setter)

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30783570"
 ---
 # <a name="storing-data-in-a-document-database"></a>문서 데이터베이스에 데이터를 저장합니다.
 

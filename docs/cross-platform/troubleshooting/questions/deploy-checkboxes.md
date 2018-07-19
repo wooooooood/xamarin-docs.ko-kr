@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919516"
 ---
 # <a name="deploy-checkboxes-disabled-in-configuration-manager"></a>Configuration Manager에서 사용 하지 않도록 설정 하는 확인란 배포
 

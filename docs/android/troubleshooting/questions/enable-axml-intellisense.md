@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774885"
 ---
 # <a name="how-do-i-enable-intellisense-in-android-axml-files"></a>Android.axml 파일에서 Intellisense는 어떻게 사용 합니까?
 

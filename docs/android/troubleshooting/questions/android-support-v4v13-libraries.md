@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30763958"
 ---
 # <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>더 효율적인 Xamarin Android v4 지원 / v13 NuGet 패키지
 

@@ -1,21 +1,20 @@
 ---
-title: 시작
-description: 이러한 심층 가이드를 사용하여 처음부터 배포까지 모바일 응용 프로그램을 개발하는 방법에 대해 알아봅니다.
+title: Xamarin 시작
+description: 이 문서는 Xamarin 개발을 시작하는 방법을 설명하는 다양한 설명서로 연결합니다. 연결된 콘텐츠에서는 첫 번째 앱을 빌드하는 방법을 설명하고, 모바일 개발에 대한 일반 소개를 제공하고, Xamarin University로 교육을 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: de5b1499f95e6703e0c11adb1f76e1717a494e33
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3873236c64f1288a896c40d468f06b60f532a431
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780798"
 ---
-# <a name="getting-started"></a>시작
-
-_이러한 심층 가이드를 사용하여 처음부터 배포까지 모바일 응용 프로그램을 개발하는 방법에 대해 알아봅니다._
+# <a name="getting-started-with-xamarin"></a>Xamarin 시작
 
 시작하기 전에 [시스템 요구 사항](requirements.md) 및 [설치 지침](installation/index.md)을 확인하여 모든 항목을 사용할 준비가 되도록 합니다.
 

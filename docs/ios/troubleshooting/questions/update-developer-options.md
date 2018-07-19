@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30775486"
 ---
 # <a name="how-can-i-reenable-developer-options-after-updating-ios"></a>IOS를 업데이트 한 후 개발자 옵션을 다시 수는 방법
 

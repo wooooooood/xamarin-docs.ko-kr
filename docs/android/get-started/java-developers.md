@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 92bcfc888c52f9f74c8484295666da8f5ef7a14c
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209338"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
@@ -50,7 +51,7 @@ Java 및 C#는 모두 관리되는 실행 환경에서 실행되는 중간 언�
 
 -   Java는 `#define`과 같은 전처리기 지시문을 지원하지 않습니다.
 
--   Java는 부호 없는 정수 형식을 지원하지 않지만, C는 `ulong`, `uint`, `ushort` 및 `byte`와 같은 부호 없는 정수 형식을 제공합니다.
+-   Java는 부호 없는 정수 형식을 지원하지 않지만, C#은 `ulong`, `uint`, `ushort` 및 `byte`와 같은 부호 없는 정수 형식을 제공합니다.
 
 -   Java는 연산자 오버로딩을 지원하지 않지만, C#에서는 연산자와 변환을 오버로드할 수 있습니다.
 
@@ -484,7 +485,7 @@ C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.A
 
 -  **Java 바인딩 라이브러리 만들기** &ndash; 이 방법을 사용하면 Xamarin 도구를 사용하여 Java 형식에 대한 C# 래퍼를 생성할 수 있습니다. 이러한 래퍼를 *바인딩*이라고 합니다. 따라서 Xamarin.Android 응용 프로그램은 이러한 래퍼로 호출하여 *.jar* 파일을 사용할 수 있습니다.
 
--  **Java 기본 인터페이스** &ndash; *JNI(Java 기본 인터페이스)*는 C# 앱에서 Java 코드로 호출하거나 호출할 수 있게 하는 프레임워크입니다.
+-  **Java 기본 인터페이스** &ndash; *JNI(Java 기본 인터페이스)* 는 C# 앱에서 Java 코드로 호출하거나 호출할 수 있게 하는 프레임워크입니다.
 
 이러한 방법에 대한 자세한 내용은 [Java 통합 개요](~/android/platform/java-integration/index.md)를 참조하세요.
 

@@ -6,12 +6,13 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/19/2018
-ms.openlocfilehash: 2deeb4309be44c1c5f8d78980707336ac8301761
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/21/2018
+ms.openlocfilehash: bbb1e92596fe69246a608eb0758e789f5b99e954
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935466"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -49,7 +50,7 @@ Windows;에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되
 
 ### <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vmconnect-android-emulator-mac-windowsmd"></a>[Windows VM에서 Mac에서 실행 중인 Android 에뮬레이터에 연결할 수 있나요?](connect-android-emulator-mac-windows.md)
 
-이 가이드에서는 Google Android 에뮬레이터에서 앱을 사용 하는 경우 메서드를 설명 합니다.
+이 가이드에서는 Android 에뮬레이터를 사용 하는 경우 메서드를 설명 합니다.
 
 ## <a name="general-questions"></a>일반적인 질문
 

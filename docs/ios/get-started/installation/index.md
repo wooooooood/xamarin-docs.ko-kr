@@ -1,16 +1,18 @@
 ---
 title: Xamarin.iOS 설치
+description: 이 문서는 Mac 및 Windows에 Xamarin.iOS 설치하는 방법 및 테스트를 위해 장치를 프로비전하는 방법을 설명하는 설명서로 연결합니다.
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 10b9e4e1abd97a82390d81ab740d753389b410b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 58eb2c348530e6ed3caa04c5a367e01d3b98beaa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785940"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 설치
 

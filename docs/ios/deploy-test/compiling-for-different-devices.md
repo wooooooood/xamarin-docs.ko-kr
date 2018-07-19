@@ -1,18 +1,20 @@
 ---
-title: 다른 장치용으로 컴파일
+title: Xamarin.iOS에서 다른 장치용으로 컴파일
+description: 이 문서에서는 다양한 장치에 대한 Xamarin.iOS 빌드를 사용자 지정하는 데 사용할 수 있는 다양한 빌드 구성 옵션을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 039e0a931613ec79ccd6f2b13bc18ae6b80f5195
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b1bfab36646256eee706316c70004aef8399994
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784847"
 ---
-# <a name="compiling-for-different-devices"></a>다른 장치용으로 컴파일
+# <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 장치용으로 컴파일
 
 프로젝트의 **iOS 빌드** 속성 페이지에서 실행 파일의 빌드 속성을 구성할 수 있으며, 이 페이지는 Mac용 Visual Studio에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **옵션 > iOS 빌드**를 찾거나 Visual Studio의 **속성**에서 찾을 수 있습니다.
 

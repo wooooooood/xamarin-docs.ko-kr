@@ -1,19 +1,20 @@
 ---
-title: Mac 시작
-description: Xamarin.Mac 소개
+title: Xamarin.Mac 시작
+description: 이 문서는 Xamarin.Mac을 설치하는 방법을 설명하고 샘플 Xamarin.Mac 앱을 빌드하는 방법의 연습을 제공하는 설명서에 연결합니다.
 ms.prod: xamarin
 ms.assetid: 6CE7C634-6495-3517-B004-21C9EBF4C462
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 66bd2509c6b35d4391a9d04ad955b4a22cd9d39a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1ef978abac220f4ea20264922a85fc6dd0a006c3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792260"
 ---
-# <a name="getting-started-with-mac"></a>Mac 시작
+# <a name="getting-started-with-xamarinmac"></a>Xamarin.Mac 시작
 
 ##  <a name="installationmacget-startedinstallationmd"></a>[설치](~/mac/get-started/installation.md)
 

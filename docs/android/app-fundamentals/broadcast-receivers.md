@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 6b2e316eaf67e51801be4fcd670e80ec81c8ff08
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935401"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Xamarin.Android 브로드캐스트 수신기
 
@@ -24,7 +25,7 @@ A _브로드캐스트 수신기_ 는 메시지에 응답 하도록 응용 프로
 Android에는 두 가지 유형의 브로드캐스트 식별합니다.
 
 * **명시적 브로드캐스트** &ndash; 브로드캐스트 이러한 유형의 특정 응용 프로그램을 대상으로 합니다. 명시적 브로드캐스트의 가장 일반적인 용도 활동이 시작 되려고 합니다. 앱에서 전화 걸기; 해야 할 경우에 명시적 브로드캐스트의 예 Android 및 전화 번호와 함께 전달 전화를 걸어야 전화 앱을 대상으로 하는 의도 전달 하는 것입니다. Android는 휴대폰 앱에 의도 라우팅할 됩니다.
-* **암시적 broadcase** &ndash; 이 브로드캐스트 이러한 장치에서 모든 앱으로 디스패치 됩니다. 암시적 브로드캐스트의 예로 `ACTION_POWER_CONNECTED` 의도 합니다. 이 의도 Android 장치에서 배터리를 충전 감지 될 때마다 게시 됩니다. Android은이 이벤트에 대해 등록 된 모든 앱에 이러한 의도를 라우팅합니다.
+* **암시적 브로드캐스트** &ndash; 이 브로드캐스트 이러한 장치에서 모든 앱으로 디스패치 됩니다. 암시적 브로드캐스트의 예로 `ACTION_POWER_CONNECTED` 의도 합니다. 이 의도 Android 장치에서 배터리를 충전 감지 될 때마다 게시 됩니다. Android은이 이벤트에 대해 등록 된 모든 앱에 이러한 의도를 라우팅합니다.
 
 브로드캐스트 수신기가의 서브 클래스는 `BroadcastReceiver` 유형 이므로 재정의 해야 합니다는 [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) 메서드. Android에서 실행 될 `OnReceive` 주 스레드에서 하므로이 메서드를 디자인 해야 신속 하 게 실행 합니다. 스레드를 생성할 때 주의 해야 `OnReceive` 하므로 Android 메서드가 종료 되는 프로세스를 종료할 수 있습니다. 브로드캐스트 수신기 장기 실행 작업을 수행 해야 하는 경우 다음을 예약 하는 것이 좋습니다.는 _작업_ 를 사용 하는 `JobScheduler` 또는 _Firebase 작업 발송자_합니다. 별도 지침에는 작업과 작업 일정을 설명 합니다.
 

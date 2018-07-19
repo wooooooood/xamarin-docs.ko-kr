@@ -1,44 +1,52 @@
 ---
 title: Android Emulator 설정
-description: 이 섹션에서는 앱을 테스트하기 위해 Google Android Emulator를 준비하는 방법을 설명합니다. 최상의 성능을 위해 에뮬레이터를 가속화하는 방법을 설명하고, 에뮬레이터 관리자를 사용하여 가상 장치를 만들고 사용자 지정하는 방법을 보여줍니다.
+description: Android Emulator를 다양한 구성으로 실행하여 다양한 장치를 시뮬레이션할 수 있습니다. 이 가이드에서는 앱 테스트를 위해 Android Emulator를 준비하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/25/2018
-ms.openlocfilehash: 215e298068b7a3a23b2e469e923f172c8303bbcb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/22/2018
+ms.openlocfilehash: f281227ae6ee17548e9c4653d52c7ae6d2bfff2d
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935037"
 ---
 # <a name="android-emulator-setup"></a>Android Emulator 설정
 
-_이 섹션에서는 앱을 테스트하기 위해 Google Android Emulator를 준비하는 방법을 설명합니다. 최상의 성능을 위해 에뮬레이터를 가속화하는 방법을 설명하고, 에뮬레이터 관리자를 사용하여 가상 장치를 만들고 사용자 지정하는 방법을 보여줍니다._
+_이 가이드에서는 앱을 테스트하기 위해 Android Emulator를 준비하는 방법을 설명합니다._
 
 
 ## <a name="overview"></a>개요
 
-Google Android SDK 에뮬레이터를 다양한 구성으로 실행하여 다양한 장치를 시뮬레이션할 수 있습니다. 이러한 구성은 각각 _가상 장치_로 생성됩니다. 이 가이드에서는 성능 개선을 위해 Android Emulator를 가속화하고, Xamarin Android Emulator 관리자 또는 기존의 Google 에뮬레이터 관리자를 사용하여 가상 장치를 만드는 방법을 알아봅니다.
+Android Emulator를 다양한 구성으로 실행하여 다양한 장치를 시뮬레이션할 수 있습니다. _가상 장치_에서 각 구성이 호출됩니다. 에뮬레이터에서 앱을 배포하고 테스트하는 경우 Nexus 또는 Pixel 전화기와 같은 물리적 Android 장치를 시뮬레이션하는 미리 구성되거나 사용자 지정 가상 장치를 선택합니다.
 
-
-> [!NOTE]
-> Android SDK Tools 버전 **26.0.1** 이상부터 Google은 새로운 CLI(명령줄 인터페이스) 도구를 위해 기존의 AVD/SDK 관리자에 대한 지원을 중단했습니다. 이러한 사용 중단 변경으로 인해 이제 Android Tools 26.0.1 이상에서 Google SDK/에뮬레이터 관리자 대신 Xamarin SDK/장치 관리자가 사용됩니다. (Xamarin SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요).
-
+아래에 나열된 섹션에서는 최대 성능을 위해 Android Emulator를 가속화하는 방법, Android Device Manager를 사용하여 가상 장치를 만들고 사용자 지정하는 방법 및 가상 장치의 프로필 속성을 사용자 지정하는 방법을 설명합니다. 또한 문제 해결 섹션에서는 일반적인 에뮬레이터 문제 및 해결 방법을 설명합니다.
 
 ## <a name="sections"></a>섹션
 
-### <a name="hardware-accelerationandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
+### <a name="hardware-acceleration-for-emulator-performanceandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-Google Android Emulator 성능을 최대화하기 위해 컴퓨터를 준비하는 방법입니다. Google Android Emulator는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 Google Android Emulator를 사용하기 전에 컴퓨터에 하드웨어 가속을 활성화하는 것이 좋습니다.
+Android Emulator 성능을 최대화하기 위해 컴퓨터를 준비하는 방법입니다.
+Android Emulator는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 이 에뮬레이터를 사용하기 전에 컴퓨터에 하드웨어 가속을 활성화하는 것이 좋습니다.
 
-### <a name="xamarin-android-device-managerandroidget-startedinstallationandroid-emulatorxamarin-device-managermd"></a>[Xamarin Android 장치 관리자](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+### <a name="managing-virtual-devices-with-the-android-device-managerandroidget-startedinstallationandroid-emulatordevice-managermd"></a>[Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md)
 
-Xamarin Android Device Manager를 사용하여 Google Android Emulator 가상 장치를 만들고 사용자 지정하는 방법입니다. **Xamarin Android 장치 관리자**(현재 미리 보기 상태)는 레거시 Google 에뮬레이터 관리자를 대체하기 위해 고안되었습니다. Android Oreo 8.0 이상을 대상으로 하는 경우 Google 에뮬레이터 관리자 대신 Xamarin Android 장치 관리자를 사용해야 합니다.
+Android Device Manager를 사용하여 가상 장치를 만들고 사용자 지정하는 방법입니다.
 
-### <a name="google-emulator-managerandroidget-startedinstallationandroid-emulatorgoogle-emulator-managermd"></a>[Google 에뮬레이터 관리자](~/android/get-started/installation/android-emulator/google-emulator-manager.md)
+### <a name="editing-android-virtual-device-propertiesandroidget-startedinstallationandroid-emulatordevice-propertiesmd"></a>[Android 가상 장치 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)
 
-레거시 Google Emulator Manager를 사용하여 Google Android Emulator 가상 장치를 만들고 사용자 지정하는 방법입니다. Android SDK Tools 버전 25.2.5 이하를 유지하면 원래 Google 에뮬레이터 관리자와 Google Android 에뮬레이터를 계속 함께 실행할 수 있습니다.
+Android Device Manager를 사용하여 가상 장치의 프로필 속성을 편집하는 방법입니다.
 
-Android SDK 에뮬레이터를 구성한 후 에뮬레이터를 시작하고 앱 테스트 및 디버깅에 사용하는 방법에 대한 자세한 내용은 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)를 참조하세요.
+### <a name="android-emulator-troubleshootingandroidget-startedinstallationandroid-emulatortroubleshootingmd"></a>[Android Emulator 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)
+
+이 아티클에서는 Android Emulator를 실행하는 동안 발생하는 가장 일반적인 경고 메시지 및 문제가 해결 방법 및 설명과 함께 설명됩니다.
+
+Android Emulator를 구성한 후 에뮬레이터를 시작하고 앱 테스트 및 디버깅에 사용하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조하세요.
+
+
+> [!NOTE]
+> Android SDK Tools 버전 **26.0.1** 이상부터 Google은 새로운 CLI(명령줄 인터페이스) 도구를 위해 기존의 AVD/SDK 관리자에 대한 지원을 중단했습니다. 이러한 사용 중단 변경으로 인해 이제 Android Tools 26.0.1 이상에서 Google SDK/Device Manager 대신 Xamarin SDK/Device Manager가 사용됩니다. Xamarin SDK Manager에 대한 자세한 내용은 [Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md)을 참조하세요.
+

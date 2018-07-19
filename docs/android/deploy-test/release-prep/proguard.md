@@ -1,26 +1,27 @@
 ---
 title: ProGuard
-description: ProGuard는 Java 클래스 파일 축소, 최적화, 난독화 및 사전 검증 도구입니다. 사용되지 않는 코드를 검색 및 제거하고, 바이트 코드를 분석 및 최적화한 후 클래스와 클래스 멤버를 난독 처리합니다. 이 가이드에서는 ProGuard가 작동하는 방법, ProGuard를 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 또한 ProGuard 구성의 몇 가지 예를 제공합니다.
+description: Xamarin.Android ProGuard는 Java 클래스 파일 축소, 최적화 및 사전 검증 도구입니다. 사용되지 않는 코드를 검색 및 제거하고, 바이트 코드를 분석 및 최적화합니다. 이 가이드에서는 ProGuard가 작동하는 방법, ProGuard를 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 또한 ProGuard 구성의 몇 가지 예를 제공합니다.
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321378"
 ---
 # <a name="proguard"></a>ProGuard
 
-_ProGuard는 Java 클래스 파일 축소, 최적화, 난독화 및 사전 검증 도구입니다. 사용되지 않는 코드를 검색 및 제거하고, 바이트 코드를 분석 및 최적화한 후 클래스와 클래스 멤버를 난독 처리합니다. 이 가이드에서는 ProGuard가 작동하는 방법, ProGuard를 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 또한 ProGuard 구성의 몇 가지 예를 제공합니다._
+_Xamarin.Android ProGuard는 Java 클래스 파일 축소, 최적화 및 사전 검증 도구입니다. 사용되지 않는 코드를 검색 및 제거하고, 바이트 코드를 분석 및 최적화합니다. 이 가이드에서는 ProGuard가 작동하는 방법, ProGuard를 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 또한 ProGuard 구성의 몇 가지 예를 제공합니다._
 
 
 ## <a name="overview"></a>개요
 
-ProGuard는 패키지 응용 프로그램에서 사용되지 않는 클래스, 필드, 메서드 및 특성을 검색하고 제거합니다. 참조된 라이브러리에 대해서도 동일한 작업을 수행할 수 있습니다(64k 참조 제한에 도달하지 않도록 하는 데 도움이 됨). 또한 Android SDK의 ProGuard 도구는 바이트 코드를 최적화하고, 사용되지 않는 코드 명령을 제거하고, 나머지 클래스, 필드 및 메서드를 더 짧은 이름으로 난독 처리합니다. ProGuard는 **입력 jar**를 읽은 후 축소, 최적화, 난독 처리, 사전 검증한 후 하나 이상의**출력 jar**에 결과를 기록합니다. 
+ProGuard는 패키지 응용 프로그램에서 사용되지 않는 클래스, 필드, 메서드 및 특성을 검색하고 제거합니다. 참조된 라이브러리에 대해서도 동일한 작업을 수행할 수 있습니다(64k 참조 제한에 도달하지 않도록 하는 데 도움이 됨). 또한 Android SDK에서 ProGuard 도구는 바이트 코드를 최적화하고 사용되지 않는 코드 지침을 제거합니다. ProGuard는 **입력 jar**를 읽은 다음, 축소, 최적화, 사전 검증하고, 하나 이상의**출력 jar**에 결과를 기록합니다. 
 
 ProGuard는 다음 단계를 통해 입력 APK를 처리합니다. 
 
@@ -29,7 +30,7 @@ ProGuard는 다음 단계를 통해 입력 APK를 처리합니다.
 2.  **최적화 단계** &ndash; ProGuard가 코드를 추가로 최적화합니다. 
     여러 가지 최적화 중에서도 진입점이 아닌 클래스 및 메서드를 비공개, 정적 또는 최종으로 만들 수 있고, 사용하지 않는 매개 변수를 제거할 수 있으며, 일부 메서드를 인라인할 수 있습니다. 
 
-3.  **난독 처리 단계** &ndash; ProGuard가 진입점이 아닌 클래스 및 클래스 멤버의 이름을 바꿉니다. 진입점을 그대로 유지하면 원래 이름으로 여전히 액세스할 수 있습니다. 
+3.  **난독 처리 단계** &ndash; 네이티브 Android 개발에서 ProGuard가 진입점이 아닌 클래스 및 클래스 멤버의 이름을 바꿉니다. 진입점을 그대로 유지하면 원래 이름으로 여전히 액세스할 수 있습니다. 그러나 앱이 IL(중간 언어)로 컴파일되기 때문에 이 단계는 Xamarin.Android에서 지원되지 않습니다.
 
 4.  **사전 검증 단계** &ndash; 런타임 전에 Java 바이트 코드에 대한 검사를 수행하고 Java VM을 위해 클래스 파일에 주석을 추가합니다. 이는 진입점을 알 필요가 없는 유일한 단계입니다. 
 

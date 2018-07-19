@@ -8,11 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: da6dabed58bedcbcaf1191c16a790e055184c95a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 188d4b89354f97341c22036d90b55924650203ce
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996631"
 ---
 # <a name="hello-android"></a>Hello, Android
 
@@ -30,5 +31,5 @@ _두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 V
 ## <a name="related-links"></a>관련 링크
 
 - [Android 시작](http://developer.android.com/training/index.html)
-- [Visual Studio의 디버깅](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [Visual Studio의 디버깅](https://docs.microsoft.com/visualstudio/debugger/)
 - [Mac용 Visual Studio 작성법-디버깅](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)

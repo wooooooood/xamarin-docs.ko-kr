@@ -1,16 +1,17 @@
 ---
 title: Xamarin 제거
-description: 컴퓨터에서 Xamarin 제품 제거
+description: 이 문서에서는 Mac 및 Windows 모두에서 Xamarin을 제거하는 방법을 설명합니다. Mono, Xamarin.Android, Xamarin.iOS 및 기타 도구 제거에 대한 특정 지침을 제공합니다.
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d1b88ad97a1cecaadd84226bca61c7f2b262438d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066470"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/09/2018
 - [Xamarin.Android](#uninstallandroid)
 - [Xamarin.iOS](#uninstallios)
 - [Xamarin.Mac](#uninstallmac)
-- [검사기 및 Workbooks](#uninstallworkbooks)
+- [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
 - [설치 프로그램](#uninstallinstaller)
 
@@ -145,9 +146,9 @@ rm -rf ~/Library/Xamarin.Mac
 
 <a name="uninstallworkbooks" />
 
-### <a name="uninstall-workbooks-and-inspector"></a>Workbooks 및 Inspector 제거
+### <a name="uninstall-workbooks"></a>통합 문서 제거
 
-Xamarin 검사기 및 Workbooks 버전 1.2.2 이상을 제거하려면 터미널에서 다음 명령을 사용합니다.
+Xamarin Workbooks 버전 1.2.2 이상을 제거하려면 터미널에서 다음 명령을 사용합니다.
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -268,7 +269,7 @@ Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 및 이전 버전
 
-Visual Studio 2015를 완전히 제거하려면 [visualstudio.com에서 Support Answer](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/)를 사용합니다.
+Visual Studio 2015를 완전히 제거하려면 [visualstudio.com에서 Support Answer](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/)를 사용합니다.
 
 **제어판**을 통해 Windows 컴퓨터에서 Xamarin을 제거할 수 있습니다. 아래 그림과 같이 **프로그램 및 기능** 또는 **프로그램 > 프로그램 제거**로 이동합니다.
 

@@ -1,16 +1,18 @@
 ---
 title: Xamarin.Forms Multiscreen Quickstart
+description: 이 문서에서는 응용 프로그램에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 응용 프로그램을 확장하는 방법을 설명합니다.
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 06/13/2018
+ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996183"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms Multiscreen Quickstart
 
@@ -57,11 +59,11 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 선택합니다.
 
-5. **솔루션 탐색기r**에서 **App.xaml.cs**을 두 번 클릭하여 엽니다.
+5. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **App.xaml.cs** 파일을 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/vs/open-app-class.png "App.xaml.cs 열기")
 
-6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 속성이 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -88,11 +90,11 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 선택합니다.
 
-7. **솔루션 탐색기**에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
+7. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **MainPage.xaml** 파일을 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "MainPage.xaml 열기")
 
-8. **MainPage.xaml**에서 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤을 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
+8. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"
@@ -207,7 +209,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/xs/open-app-class.png "App.xaml.cs 열기")
 
-7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 속성이 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -238,7 +240,7 @@ Phoneword 응용 프로그램을 다음과 같이 확장합니다.
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "MainPage.xaml 열기")
 
-9. **MainPage.xaml**에서 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 컨트롤을 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
+9. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤의 끝에 추가합니다. 단추는 호출 기록 페이지로 이동하기 위해 사용됩니다.
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"

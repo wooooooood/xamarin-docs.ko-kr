@@ -1,5 +1,5 @@
 ---
-title: 프로비전 프로필
+title: Xamarin.Mac 앱에 대한 프로비저닝 프로필
 description: 이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요한 프로비전 프로필을 만드는 방법을 안내합니다.
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f3120c45de5022dca1e522be251f453f9f5b4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9660d5373cc5213f648b145ef38ddbf25c7633ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792153"
 ---
-# <a name="provisioning-profiles"></a>프로비전 프로필
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 프로비저닝 프로필
 
 개발자는 프로비전 프로필을 통해 몇 가지 macOS(이전 이름: Mac OS X) 특정 기능(예: iCloud 및 푸시 알림)을 Xamarin.Mac 앱에 통합시킬 수 있습니다. 이러한 기능을 사용하는 개발 중인 각 응용 프로그램에 대해 Mac 프로비전 프로필을 만들고 다운로드하고 설치해야 합니다.
 

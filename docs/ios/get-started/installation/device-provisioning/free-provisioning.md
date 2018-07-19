@@ -1,19 +1,20 @@
 ---
-title: 무료 프로비전
-description: Apple의 Xcode 7 릴리스가 발표되면서 모든 iOS 및 Mac 개발자들에게 중요한 변화가 있으니, 그것은 바로 무료 프로비전입니다.
+title: Xamarin.iOS 앱에 대한 무료 프로비전
+description: 이 문서에서는 Xamarin.iOS 개발자가 Apple의 유료 개발자 프로그램에 등록하지 않고도 물리적 장치에서 앱을 테스트할 수 있는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 03/19/2017
-ms.openlocfilehash: 09244ebaefedb991289e5a1f67b59491ee84ed28
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 623f79f482170c6b1d8ecdb642afb2fc7acf061d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786024"
 ---
-# <a name="free-provisioning"></a>무료 프로비전
+# <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 무료 프로비전
 
 _Apple의 Xcode 7 릴리스가 발표되면서 모든 iOS 및 Mac 개발자들에게 중요한 변화가 있으니, 그것은 바로 무료 프로비전입니다._
 

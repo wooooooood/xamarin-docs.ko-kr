@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 73d74b59ef6e59028eec7cad19feec21908b6329
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241333"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269046"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Azure 모바일 앱 사용
 
 _Azure 모바일 앱을 사용 하 여 확장 가능한 백 엔드 모바일 인증, 오프 라인 동기화 및 푸시 알림을 지 원하는 Azure 앱 서비스에서 호스트 된 앱을 개발할 수 있습니다. Node.js 백 엔드를 사용 하는 Azure 모바일 앱에 적용할 수만,이 문서에서는 쿼리, 삽입, 업데이트 및 Azure 모바일 앱 인스턴스 테이블에 저장 된 데이터를 삭제 하는 방법을 설명 합니다._
+
+> [!NOTE]
+> 월 30 일에 시작, 모든 새 Azure 모바일 앱 만들어질 수 TLS 1.2와 기본적으로 있습니다. 또한 것에 좋습니다 기존 Azure 모바일 앱 TLS 1.2를 사용 하도록 구성 합니다. Azure 모바일 앱에서 TLS 1.2를 적용 하는 방법에 대 한 정보를 참조 하십시오. [TLS 1.2 적용](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112)합니다. Xamarin 프로젝트에서 TLS 1.2 사용을 구성 하는 방법에 대 한 정보를 참조 하십시오. [보안 TLS (전송 계층) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)합니다.
 
 Xamarin.Forms가 사용할 수 있는 Azure 모바일 앱 인스턴스를 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [Xamarin.Forms 앱 만들기](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/)합니다. 다음이 지침을 따랐다면 다운로드 가능한 샘플 응용 프로그램 하도록 구성할 수 있습니다 설정 하 여 Azure 모바일 앱 인스턴스를 사용할는 `Constants.ApplicationURL` Azure 모바일 앱 인스턴스의 URL로 합니다. 그런 다음 샘플 응용 프로그램을 실행할 때 해당 인스턴스에 연결 됩니다는 Azure 모바일 앱, 다음 스크린샷에 표시 된 것 처럼:
 

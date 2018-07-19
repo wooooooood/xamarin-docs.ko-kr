@@ -1,19 +1,20 @@
 ---
-title: 문제 해결
-description: 부드러운 배포를 만들기 위한 팁과 요령
+title: Xamarin.iOS 테스트 및 배포 - 문제 해결
+description: 이 문서에서는 코드 서명, 프로비저닝, TestFlight 및 Mac 빌드 호스트에서 Windows로 iOS 앱 번들 복사와 관련된 문제 해결 팁을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: fe7425bbf6440317cc856d2c727874298f66bc33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 056b9ba5c1625093cd7fdd2914fa5df919a2f426
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785387"
 ---
-# <a name="troubleshooting"></a>문제 해결
+# <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Xamarin.iOS 테스트 및 배포 - 문제 해결
 
 ## <a name="code-signing--provisioning"></a>코드 서명 및 프로비전
 
@@ -32,7 +33,6 @@ iOS를 통한 코드 서명 및 프로비전은 매우 어려울 수 있으므�
 * 필요한 모든 인증서와 해당 개인 키를 사용할 수 있는지 확인합니다. 각 팀마다 개발자 인증서(자체 장치에 앱을 설치함)와 배포 인증서(다른 장치에 설치함)가 필요합니다.
 
 * 새 프로비전 프로필 또는 인증서가 설치되면 Mac/Visual Studio용 Xcode와 Visual Studio를 다시 시작합니다.
-
 
 ## <a name="testflight"></a>TestFlight
 

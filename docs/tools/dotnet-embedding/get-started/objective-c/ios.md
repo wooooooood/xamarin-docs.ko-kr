@@ -6,12 +6,12 @@ ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 3da76e650281cbf7320b88fa9c76948865d7a2fb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 683f448c3e0cdba1bbe3ba68f0db3225675f5830
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793563"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066899"
 ---
 # <a name="getting-started-with-ios"></a>IOS를 시작 하기
 
@@ -19,7 +19,7 @@ ms.locfileid: "34793563"
 
 요구 사항 뿐 아니라 우리의 [Objective-c 시작](~/tools/dotnet-embedding/get-started/objective-c/index.md) 가이드도 필요 합니다.
 
-* [Xamarin.iOS 10.11](https://www.visualstudio.com/xamarin/) 이상 버전
+* [Xamarin.iOS 10.11](https://visualstudio.microsoft.com/xamarin/) 이상 버전
 
 ## <a name="hello-world"></a>Hello World
 

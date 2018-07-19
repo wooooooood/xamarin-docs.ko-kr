@@ -1,5 +1,5 @@
 ---
-title: IPA 지원
+title: Xamarin.iOS에서 IPA 지원
 description: 이 문서에서는 테스트 또는 내부 응용 프로그램의 사내 배포를 위해 임시 배포를 사용하여 응용 프로그램을 배포하는 데 사용할 수 있는 IPA 파일을 만드는 방법에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d63624ed486079f44e9756ee84612863e6176d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4fd64a1ebf05dd149304f49d8282ee1b38bfcf03
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321365"
 ---
-# <a name="ipa-support"></a>IPA 지원
+# <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS에서 IPA 지원
 
 _이 문서에서는 테스트 또는 내부 응용 프로그램의 사내 배포를 위해 임시 배포를 사용하여 응용 프로그램을 배포하는 데 사용할 수 있는 IPA 파일을 만드는 방법에 대해 설명합니다._
 
@@ -131,10 +132,10 @@ CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수
 
      ![](ipa-support-images/imagexs03.png "목록에서 iTunesMetadata.plist 선택")
 
-1. Classic API의 경우 **xbuild**(또는 **mdtool**)를 직접 호출하고 이 속성을 명령줄에 전달합니다.
+1. **msbuild**를 직접 호출하고 명령줄에서 이 속성을 전달합니다.
 
     ```bash
-    /Library/Frameworks/Mono.framework/Commands/xbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
+    /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -177,7 +178,7 @@ CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수
 
 새 속성을 사용하는 방법에는 여러 가지가 있습니다.
 
-예를 들어 **.ipa** 파일을 이전의 기본 디렉터리(Xamarin.iOS 9.6 이하)로 출력하려면 다음 방법 중 하나를 사용하여 `IpaPackageDir` 속성을 `$(OutputPath)`로 설정할 수 있습니다. 두 방법 모두는 IDE 빌드 및 **xbuild**, **msbuild** 또는 **mdtool**을 사용하는 명령줄 빌드를 포함하여 모든 통합 API Xamarin.iOS 빌드와 호환됩니다.
+예를 들어 **.ipa** 파일을 이전의 기본 디렉터리(Xamarin.iOS 9.6 이하)로 출력하려면 다음 방법 중 하나를 사용하여 `IpaPackageDir` 속성을 `$(OutputPath)`로 설정할 수 있습니다. 두 방법은 모두 IDE 빌드 및 **msbuild**, **xbuild** 또는 **mdtool**을 사용하는 명령줄 빌드를 포함하여 모든 Unified API Xamarin.iOS 빌드와 호환됩니다.
 
 - 첫 번째 옵션은 **MSBuild** 파일의 `<PropertyGroup>` 요소 내에 `IpaPackageDir` 속성을 설정하는 것입니다. 예를 들어 다음 `<PropertyGroup>`을 **.csproj** iOS 앱 프로젝트 파일의 아래쪽(닫은 `</Project>` 태그 바로 앞)에 추가할 수 있습니다.
 
@@ -211,19 +212,17 @@ CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수
     </PropertyGroup>
     ```
 
-**msbuild** 또는 **xbuild** 명령줄 빌드에 대한 또 다른 방법은 `/p:` 명령줄 인수를 추가하여 `IpaPackageDir` 속성을 설정하는 것입니다. 이 경우 **msbuild**는 명령줄에서 전달된 `$()` 식을 확장하지 않으므로 `$(OutputPath)` 구문을 사용할 수 없습니다. 대신 전체 경로 이름을 제공해야 합니다. Mono의 **xbuild** 명령은 `$()` 식을 확장하지만, 이후 릴리스에서는 [플랫폼 간 버전의 **msbuild**](http://www.mono-project.com/docs/about-mono/releases/4.4.0/#msbuild-preview-for-os-x)를 지지하여 **xbuild**는 결국 사용 중단될 예정이므로 전체 경로 이름을 사용하는 것이 좋습니다.
+**msbuild** 또는 **xbuild** 명령줄 빌드에 대한 또 다른 방법은 `/p:` 인수를 추가하여 `IpaPackageDir` 속성을 설정하는 것입니다. 이 경우 **msbuild**는 명령줄에서 전달된 `$()` 식을 확장하지 않으므로 `$(OutputPath)` 구문을 사용할 수 없습니다. 대신 전체 경로 이름을 제공해야 합니다. Mono의 **xbuild** 명령은 `$()` 식을 확장하지만 [플랫폼 간 버전의 **msbuild**](https://www.mono-project.com/docs/about-mono/releases/5.0.0/#msbuild)를 선호하여 **xbuild**는 사용 중단되었므로 전체 경로 이름을 사용하는 것이 좋습니다.
 
 이 방법을 사용하는 전체 예제는 Windows에서 다음과 비슷하게 보일 수 있습니다.
-
 
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
-
 또는 Mac에서 다음과 같습니다.
 
 ```bash
-xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
+msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
 <a name="installipa" />

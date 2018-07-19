@@ -1,19 +1,20 @@
 ---
-title: 코드 서명 및 프로비전
-description: 향상된 기능
+title: Xamarin.iOS 앱에 대한 코드 서명 및 프로비전
+description: 이 문서는 장치 프로비저닝, 기능 사용, 자격 사용, Info.plist 파일 및 fastlane을 설명하는 설명서로 연결합니다.
 ms.prod: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2017
-ms.openlocfilehash: ff9d9e779f246c0cd2fde4332f6c80aae4b43d49
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cfbb36dc7298563987bcd688927649366094ae89
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785538"
 ---
-# <a name="code-signing-and-provisioning"></a>코드 서명 및 프로비전
+# <a name="code-signing-and-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 코드 서명 및 프로비전
 
 ## <a name="device-provisioning--introductioniosget-startedinstallationdevice-provisioningindexmd"></a>[장치 프로비저닝 - 소개](~/ios/get-started/installation/device-provisioning/index.md)
 
@@ -24,7 +25,6 @@ Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 
 앱 서비스를 사용하여 iOS 앱 기능 확장
 
 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다.
-
 
 ## <a name="working-with-entitlementsentitlementsmd"></a>[자격 사용](entitlements.md)
 
@@ -37,4 +37,3 @@ Info.plist 키에 대한 참조 설명서입니다.
 ## <a name="introduction-to-fastlane-for-iosiosdeploy-testprovisioningfastlaneindexmd"></a>[iOS에 대한 Fastlane 소개](~/ios/deploy-test/provisioning/fastlane/index.md)
 
 이 가이드에서는 iOS 응용 프로그램 서명을 코드하는데 사용할 수 있는 다양한 fastlane 도구를 소개합니다.
-

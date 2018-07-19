@@ -1,17 +1,18 @@
 ---
 title: Windows에 Xamarin.iOS 설치
-description: 이 문서에서는 Xamarin.iOS 개발을 위해 Windows 컴퓨터와 Mac 빌드 호스트를 설정하는 방법에 대해 설명합니다.
+description: 이 문서에서는 Windows 컴퓨터, Mac 빌드 호스트를 설정하고, Xamarin.iOS 개발을 위해 Windows를 Mac으로 페어링하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: e6f50a48481be3ca5c64332f5a182e44715740c0
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.openlocfilehash: 2bff37aba9b961b7308bf261377951dc96bd8e34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786066"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Windows에 Xamarin.iOS 설치
 

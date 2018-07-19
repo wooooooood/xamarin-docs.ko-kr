@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785268"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268812"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.iOS 지역화
 
@@ -55,6 +55,16 @@ Xamarin을 사용한 두 Apple iOS 클래스에 액세스 했는지 (`NSNumberFo
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 첫 번째 값 운영 체제에서 캐시할 수 있습니다 및 하므로 항상에 반영 되지 않을 사용자의 현재 선택 된 로캘 합니다. 두 번째 값을 사용 하 여 현재 선택 된 로캘 얻으려고 합니다.
+
+> [!NOTE]
+> 모노 (Xamarin.iOS 기반.NET 런타임) Apple iOS Api 언어/지역 조합의 동일한 집합을 지원 하지 않습니다.
+> 이 인해 iOS에서 언어/지역 조합을 선택할 수는 **설정을** 모노에 유효한 값에 매핑되지 않는 응용 프로그램입니다. 예를 들어 영어로 iPhone의 언어와 해당 지역 스페인을 설정 하면 다른 값을 산출 하는 다음 Api:
+> 
+> - `CurrentThead.CurrentCulture`: EN-US (모노 API)
+> - `CurrentThread.CurrentUICulture`: EN-US (모노 API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
+>
+> 모노 사용 하므로 `CurrentThread.CurrentUICulture` 선택할 수 있으며 및 `CurrentThread.CurrentCulture` (.resx 파일)과 같이 모노 기반 지역화 날짜 및 통화 형식을 이러한 언어/지역 조합에 대 한 예상된 결과 생성 하지 않을 수 있습니다. 이러한 상황에서는 필요에 따라 지역화 하려면 Apple의 Api를 사용 합니다.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

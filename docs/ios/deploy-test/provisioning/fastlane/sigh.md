@@ -1,16 +1,18 @@
 ---
 title: iOS용 fastlane – sigh
+description: 이 문서에서는 모든 Xamarin.iOS 빌드 구성에 대해 프로비저닝 프로필을 만들고, 갱신하고 복구하는 데 사용되는 fastlane의 sigh 명령을 설명합니다.
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ee04569fbfff84eafc5f813e6a25cbf6ad53f033
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785504"
 ---
 # <a name="fastlane-for-ios--sigh"></a>iOS용 fastlane – sigh
 

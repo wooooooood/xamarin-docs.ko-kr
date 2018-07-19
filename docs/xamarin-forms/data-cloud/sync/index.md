@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30789438"
 ---
 # <a name="synchronizing-data-with-web-services"></a>웹 서비스와의 데이터 동기화
 

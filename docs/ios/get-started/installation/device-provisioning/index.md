@@ -1,21 +1,20 @@
 ---
-title: 장치 프로비전
-description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다.
+title: Xamarin.iOS에 대한 장치 프로비저닝
+description: 이 문서에서는 응용 프로그램 테스트에 사용할 수 있도록 장치를 프로비전하는 방법을 설명합니다. 또한 푸시 알림과 같은 기능을 사용할 수 있도록 앱을 구성하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785790"
 ---
-# <a name="device-provisioning"></a>장치 프로비전
-
-_Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다._
+# <a name="device-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 장치 프로비저닝
 
 Xamarin.iOS 응용 프로그램을 개발하는 동안 시뮬레이터 뿐만 아니라 물리적 장치에 앱을 배포하여 테스트하는 것은 필수적입니다. 장치 전용 버그 및 성능 문제는 메모리 또는 네트워크 연결과 같은 하드웨어 용량 제한으로 인해 장치에서 실행할 때 발생할 수 있습니다. 물리적 장치에서 테스트하려면 장치는 *프로비전*되어야 하며 장치가 테스트용으로 사용되는 것을 Apple에 알려야 합니다.
 

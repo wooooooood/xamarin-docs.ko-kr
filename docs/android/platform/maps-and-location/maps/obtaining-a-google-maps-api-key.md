@@ -1,16 +1,18 @@
 ---
 title: API 키를 매핑하는 Google 얻기
+description: 추가 하기 위한 Google 맵 API 키를 가져오는 방법을 응용 프로그램에 기능을 매핑합니다.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c37fce491b2e6f5e0211fcc6aa7906643a1bac2a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: 365bc56c70ef903622c3a4583a30460f907b4ec9
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935056"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>API 키를 매핑하는 Google 얻기
 
@@ -42,7 +44,7 @@ JDK에서 `keytool` 명령을 실행하면 키 저장소에 대한 정보를 가
 
 응용 프로그램 수 Xamarin.Android의 디버그 버전에 서명 하는 데 사용 되는 키 저장소 기본적으로 다음 위치에서 찾을 수 있습니다:
 
-**/Users/[USERNAME]/.local/share/Xamarin/Mono for Android/debug.keystore**
+**/Users/[USERNAME]/.local/share/Xamarin/Mono Android/debug.keystore에 대 한**
 
 JDK에서 `keytool` 명령을 실행하면 키 저장소에 대한 정보를 가져올 수 있습니다. 이 도구는 일반적으로 Java bin 디렉터리에 있습니다.
 
@@ -104,45 +106,41 @@ Certificate fingerprints:
 
 s h A-1 지문을 사용 하 여 (후 나열 **SHA1**)이이 가이드의 뒷부분에 나오는 합니다.
 
-
 ## <a name="creating-an-api-project"></a>API 프로젝트 만들기
 
 서명 키 저장소는 s h A-1 지문의 검색 한 후에 Google Api 콘솔에서 새 프로젝트를 만듭니다 (또는 기존 프로젝트에 Google 맵 Android API v2 서비스를 추가) 하는 데 필요한 합니다.
 
-1. 브라우저에서로 이동 된 [Google 개발자 콘솔](https://console.developers.google.com/): 클릭 **프로젝트 만들기**:
+1. 브라우저에서로 이동 된 [Google 개발자 콘솔 API 및 서비스 대시보드](https://console.developers.google.com/apis/dashboard/) 클릭 **프로젝트를 선택**합니다. 프로젝트 이름을 클릭 하거나 클릭 하 여 새로 만들 **새 프로젝트**:
 
    [![Google 개발자 콘솔 만들 프로젝트 단추](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
-2. 에 **새 프로젝트** 나타나는 대화 상자에 프로젝트 이름을 입력 하십시오.
-   이 예제에 표시 된 대로 대화 상자에 프로젝트 이름을 기반으로 하는 고유한 프로젝트 ID를 제조할 것:
+2. 새 프로젝트를 만든 경우에 프로젝트 이름을 입력 된 **새 프로젝트** 표시 되는 대화 상자. 이 대화 상자에 프로젝트 이름을 기반으로 하는 고유한 프로젝트 ID 제조할 것입니다. 그런 다음 클릭는 **만들기** 이 예제에 표시 된 대로 단추:
 
    [![새 프로젝트 XamarinMapsDemo 라고 합니다.](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
-3. **만들기** 단추를 클릭합니다. 1 분 정도 지난 후 프로젝트가 생성 되 고 이동 합니다는 **API 관리자** 페이지. 에 **라이브러리** 섹션에서 클릭 **Google 맵 Android API**:
+3. 1 분 정도 지난 후 프로젝트가 생성 되 고 이동 합니다는 **대시보드** 프로젝트의 페이지입니다. 여기에서 클릭 **API 및 서비스 사용**:
 
    [![Google Android API 라이브러리 섹션에서 지도 클릭 하면](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
-4. 맨 위에 있는 **Google 맵 Android API** 페이지 **사용** 이 프로젝트에 대 한 서비스를 활성화 하:
+4. **API 라이브러리** 페이지 **Maps SDK for Android**합니다. 다음 페이지에서 클릭 **사용** 이 프로젝트에 대 한 서비스를 활성화 하려면:
 
    [![대시보드 섹션에서 설정 단추를 클릭 하면](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-
-이 시점에서 API 프로젝트를 만든 및 Google 맵 Android API v 2에 추가 되었습니다. 그러나에 대 한 자격 증명을 만들 때까지 프로젝트에서이 API를 사용할 수 없습니다. 그런 다음이 키를 사용 하도록 권한이 부여 된 있도록 API 키 및 허용 목록 Xamarin.Android 응용 프로그램을 만드는 방법을 살펴보겠습니다.
-
+이 시점에서 API 프로젝트를 만든 및 Google 맵 Android API v 2에 추가 되었습니다. 그러나에 대 한 자격 증명을 만들 때까지 프로젝트에서이 API를 사용할 수 없습니다. 다음 섹션에는이 키를 사용 하도록 권한이 부여 된 있도록 API 키 및 허용 목록 Xamarin.Android 응용 프로그램을 만드는 방법을 설명 합니다.
 
 ## <a name="obtaining-the-api-key"></a>API 키 가져오기
 
 이후에 **Google 개발자 콘솔** API 프로젝트 되었습니다 생성 해야 하는 Android API 키를 만듭니다. Android 지도 API v 2에 대 한 액세스를 부여 Xamarin.Android 응용 프로그램 API 키가 있어야 합니다.
 
-1. 에 **Google 맵 Android API** 표시 되는 페이지 (클릭 한 후 **사용** 이전 단계에서)를 클릭는 **자격 증명으로 이동** 단추:
+1. 에 **Maps SDK for Android** 표시 되는 페이지 (클릭 한 후 **사용** 이전 단계에서)로 이동는 **자격 증명** 탭을 클릭는 **만들기 자격 증명** 단추:
 
-   [![이 API를 사용할 수 있습니다. 메시지](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![Android 자격 증명 메시지에 대 한 맵을 SDK](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
-2. 에 **자격 증명** 페이지는 **하는 자격 증명 필요 합니까?** 단추:
+2. 클릭 **API 키**:
 
    [![자격 증명을 대화 상자에 프로젝트 추가](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
-3. 이 단추를 클릭 하면 API 키가 생성 됩니다. 다음은 앱에만이 키와 Api를 호출할 수 있도록이 키를 제한 해야 합니다. 클릭 **Restrict 키**:
+3. 이 단추를 클릭 하면 API 키가 생성 됩니다. 다음은 앱에만이 키와 Api를 호출할 수 있도록이 키를 제한 해야 합니다. 클릭 **RESTRICT 키**:
 
    [![자격 증명 페이지에서 제한 키를 클릭 하면](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
@@ -166,7 +164,17 @@ s h A-1 지문을 사용 하 여 (후 나열 **SHA1**)이이 가이드의 뒷부
 
    [![XamarinMapsDemoKey는 API 키 목록에 표시 됩니다.](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
+## <a name="connect-the-project-to-a-billable-account"></a>프로젝트 청구 계정에 연결
 
+API 키 년 6 월 11 2018를 시작 하 고 프로젝트 (경우에이 서비스는 여전히 모바일 앱에 대 한) 청구 계정에 연결 되지 않은 경우 되지 않습니다.
+
+1. 햄버거 메뉴 단추를 클릭 하 고 선택 된 **청구** 페이지:
+
+   [![햄버거 메뉴 청구 섹션을 선택 하면](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+
+2. 프로젝트를 클릭 하 여 요금 청구 계정에 연결 **요금 청구 계정을 연결** 이어서 **요금 청구 계정 만들기** 표시 된 팝업에서 (계정이 없으면 안내를 새로 만들):
+
+   [![요금 청구 계정에 연결 프로젝트](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## <a name="adding-the-key-to-your-project"></a>프로젝트에 키를 추가합니다.
 
@@ -177,15 +185,13 @@ s h A-1 지문을 사용 하 여 (후 나열 **SHA1**)이이 가이드의 뒷부
     android:versionName="4.10" package="com.xamarin.docs.android.mapsandlocationdemo"
     android:versionCode="10">
 ...
-
   <application android:label="@string/app_name">
     <!-- Put your Google Maps V2 API Key here. -->
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>
 </manifest>
 ```
-
 
 ## <a name="related-links"></a>관련 링크
 

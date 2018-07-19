@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 06/03/2018
-ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8882cb9cd84940e12865a730f75e36ecbaf9b6f0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793877"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066678"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -28,7 +28,7 @@ Xamarin 프로파일러는 프로 파일링 하기 위해 사용할 수 있는 �
 ## <a name="download-and-install"></a>다운로드 및 설치
 
 > [!NOTE]
-> 해야 합니다는 [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) mac에서 Mac 용 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
+> 해야 합니다는 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) mac에서 Mac 용 Windows의 어느 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
 
 Xamarin 프로파일러는 독립 실행형 응용 프로그램 되며 Mac 용 Visual Studio 및 Visual Studio IDE 내에서 프로 파일링 할 수 있도록 통합 됩니다.
 

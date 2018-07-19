@@ -1,22 +1,22 @@
 ---
-title: 배포 및 테스트
-description: 안정화 및 배포 가이드
+title: Xamarin.iOS 앱 배포 및 테스트
+description: 이 문서는 Xamarin.iOS 응용 프로그램 배포 및 테스트와 관련된 항목을 설명하는 다양한 설명서로 연결합니다. 예를 들어 앱 배포, .ipa 파일, 프로비전, 무선 배포, TestFlight 및 디버깅입니다.
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 515ea8e63f8309c46a7d802af1daafcb0c483762
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96eeefa631eb4055d8bd0af5b89160ab0899907
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785186"
 ---
-# <a name="deployment-and-testing"></a>배포 및 테스트
+# <a name="deploying-and-testing-xamarinios-apps"></a>Xamarin.iOS 앱 배포 및 테스트
 
 이 섹션에서는 응용 프로그램을 배포하는 방법과 테스트에 사용되는 토픽에 대해 설명합니다. 이 토픽에는 디버깅에 사용되는 도구, 테스터에게 배포하는 방법 및 App Store에 응용 프로그램을 게시하는 방법이 포함됩니다.
-
 
 ##  <a name="app-distributioniosdeploy-testapp-distributionindexmd"></a>[앱 배포](~/ios/deploy-test/app-distribution/index.md)
 
@@ -46,19 +46,14 @@ TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베�
 
 Mac IDE용 Visual Studio 및 Visual Studio는 iOS 시뮬레이터 및 iOS 장치 모두에서 Xamarin.iOS 응용 프로그램 디버깅을 지원합니다. 이 아티클에서는 디버거를 사용하는 방법과 지원되는 다양한 옵션을 구성하는 방법을 보여줍니다.
 
-
 ##  <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
 이 문서에서는 Xamarin.iOS 프로젝트의 단위 테스트를 만드는 방법을 설명합니다.
 Xamarin.iOS의 단위 테스트는 iOS Test Runner와 단위 테스트 작성을 위한 친숙한 API 집합을 제공하는 [NUnitLite](http://www.nunitlite.com/) 프레임워크의 수정된 버전을 모두 포함하는 Touch.Unit 프레임워크를 사용하여 수행합니다.
 
-
-
 ##  <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[MarkHeap을 사용하여 네이티브 누수를 검색하는 기기 사용](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
 이 아티클에서는 모든 iOS 장치 및 모든 Xamarin.iOS 응용 프로그램에 기기를 사용하는 방법을 설명합니다. 또한 시뮬레이터에서 응용 프로그램을 프로파일링하는 방법을 설명합니다.
-
-
 
 ##  <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[연습 - Apple의 계측 도구 사용](~/ios/deploy-test/walkthrough-apples-instrument.md)
 

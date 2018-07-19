@@ -1,5 +1,5 @@
 ---
-title: 자동 프로비저닝
+title: Xamarin.iOS에 대한 자동 프로비저닝
 description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: d324e469ba392b14c635990d607bf04c949ad5db
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38986189"
 ---
-# <a name="automatic-provisioning"></a>자동 프로비저닝
+# <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
 _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다._
 
@@ -70,9 +71,9 @@ IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합�
 
 1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2017을 페어링합니다.
 
-2. **프로젝트 > 속성 프로비전...** 을 선택하여 프로비전 옵션을 엽니다.
+2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 그런 다음, **iOS 번들 서명** 탭으로 이동합니다.
 
-3. **자동 프로비저닝** 구성표를 선택합니다.
+3. **자동 프로비전** 구성표를 선택합니다.
 
     ![자동 구성표 선택](automatic-provisioning-images/prov4.png)
 

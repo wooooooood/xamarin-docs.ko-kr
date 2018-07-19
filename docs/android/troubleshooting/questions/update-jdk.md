@@ -7,12 +7,13 @@ ms.assetid: 4b3ac51d-18dd-4034-87b4-4365194e4ece
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: dcfc5e406e60ac72fb1ca1e9cfb0395d17074b2c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: 979bf4572e0e0865c2254c3e1c2f707c8eecae8d
+ms.sourcegitcommit: 57f9a9ba2f199697cb75e7be67f1a372c35a861b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36269662"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>키트 JDK (Java Development) 버전을 업데이트 하려면 어떻게 해야 합니까?
 
@@ -38,7 +39,7 @@ Xamarin.Android (JDK (Java Development Kit)를 사용 하 여 Android 앱을 빌
 
 4.  Visual Studio를 열고 업데이트는 **Java 개발 키트 위치** 아래에서 새 JDK를 가리키도록 **도구 > 옵션 > Xamarin > Android 설정 > Java 개발 키트 위치 > 변경**:
 
-    ![IDE 옵션 Android 설정 페이지에서 JDK에 대 한 경로 설정](update-jdk-images/image4.png)
+    [![IDE 옵션 Android 설정 페이지에서 JDK에 대 한 경로 설정](update-jdk-images/image4-sml.png)](update-jdk-images/image4.png#lightbox)
 
 위치를 업데이트 한 후 Visual Studio를 다시 시작 해야 합니다.
 

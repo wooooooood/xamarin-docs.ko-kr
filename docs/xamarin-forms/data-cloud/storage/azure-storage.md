@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30789874"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>Azure 저장소에 데이터 저장 및 액세스
 

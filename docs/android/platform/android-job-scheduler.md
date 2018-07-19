@@ -1,6 +1,6 @@
 ---
-title: "Android 작업 스케줄러"
-description: "이 가이드에서는 Android 작업 스케줄러 API를 사용 하 여 백그라운드 작업을 예약 하는 방법에 설명 합니다."
+title: Android 작업 스케줄러
+description: 이 가이드에서는 Android 작업 스케줄러 API를 사용 하 여 백그라운드 작업을 예약 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 673BB8C3-C5CC-43EC-BA8F-758F15D986C9
 ms.technology: xamarin-android
@@ -12,6 +12,7 @@ ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/21/2018
+ms.locfileid: "30005689"
 ---
 # <a name="android-job-scheduler"></a>Android 작업 스케줄러
 

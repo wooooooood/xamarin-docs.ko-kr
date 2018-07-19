@@ -89,5 +89,4 @@
 #### [Visual Studio에서 내 참조된 라이브러리 프로젝트를 빌드에 포함시키지 않는 이유는 무엇인가요?](troubleshooting/questions/vs-config-manager.md)
 
 ### [구성 요소 참조를 NuGet으로 업데이트](troubleshooting/component-nuget.md)
-### [지원 옵션](troubleshooting/support-options.md)
 ## [샘플](samples/index.yml)

@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: 전화 걸기'
-description: PhoneDialer 클래스 Xamarin.Essentials에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용을 프로그램을 수 있습니다.
+description: 전화 번호를 걸기에서 열려는 응용 프로그램을 사용 하도록 설정 Xamarin.Essentials PhoneDialer 클래스
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782852"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130795"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**PhoneDialer** 클래스에 최적화 된 시스템 기본 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용 프로그램을 사용 하도록 설정 합니다.
+합니다 **PhoneDialer** 클래스를 사용 하면 응용 프로그램을 걸기에서 전화 번호를 엽니다.
 
 ## <a name="using-phone-dialer"></a>전화 걸기 사용
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-호출 하 여 전화 걸기 기능이 작동 하는 `Open` 와 걸기를 열려면 전화 번호를 사용 하 여 메서드. 때 `Open` API에서 자동으로 지정 된 경우에 국가 코드를 기반으로 숫자의 서식을 지정 하려면 시도 요청 합니다.
+전화 걸기 기능을 호출 하 여 작동 합니다 `Open` 전화 번호를 사용 하 여 걸기를 열려면 메서드. 때 `Open` API는 지정 된 경우에 국가 코드를 기반으로 숫자 형식을 지정 하려고 자동으로 요청 합니다.
 
 ```csharp
 public class PhoneDialerTest

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34546140"
 ---
 # <a name="location-services"></a>위치 서비스
 

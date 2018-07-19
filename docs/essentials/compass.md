@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: 나침반'
-description: 이 문서에서 Xamarin.Essentials 장치의 자기 북부 머리글을 모니터링할 수 있는 나침반 클래스를 설명 합니다.
+description: 이 문서에서 Xamarin.Essentials 장치의 자기장의 북쪽 머리글을 모니터링할 수 있는 나침반 클래스를 설명 합니다.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 30ef4c7c155b09c06c8bc36404b92c2a91b7eb0d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: cf41948c55c742140896bfb48d9bb4abf25c8d68
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782296"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947415"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
 
-![시험판 NuGet](~/media/shared/pre-release.png)
+![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-**나침반** 클래스 장치의 자기 북부 머리글을 모니터링할 수 있습니다.
+합니다 **나침반** 클래스를 사용 하면 장치의 자기장의 북쪽 머리글을 모니터링 합니다.
 
-## <a name="using-compass"></a>나침반을 사용 하 여
+## <a name="using-compass"></a>Compass를 사용 하 여
 
-클래스에 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-호출 하 여 나침반 기능이 작동 하는 `Start` 및 `Stop` 나침반에 변경 내용을 수신 대기 하는 메서드. 모든 변경 내용이 통해 다시 전송 되는 `ReadingChanged` 이벤트입니다. 예를 들면 다음과 같습니다.
+나침반 기능을 호출 하 여 작동 합니다 `Start` 고 `Stop` 나침반에 변경 내용을 수신 대기 하는 방법입니다. 변경 내용을 통해 다시 전송 되는 `ReadingChanged` 이벤트입니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public class CompassTest
@@ -68,22 +68,17 @@ public class CompassTest
 }
 ```
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[센서 속도](xref:Xamarin.Essentials.SensorSpeed)
+[!include[](~/essentials/includes/sensor-speed.md)]
 
-- **가장 빠른** – (UI 스레드에서 반환 하는 보장 되지)는 가능한 한 빠르게 센서 데이터를 가져옵니다.
-- **게임** – (UI 스레드에서 반환 하는 보장 되지) 게임에 대 한 적합 한 비율입니다.
-- **보통** – 급여 화면 방향 변경을에 적합 합니다.
-- **Ui** – 일반 사용자 인터페이스에 대 한 적합 한 비율입니다.
-
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 사항
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android 나침반 머리글을 검색 하기 위한 API를 제공 하지 않습니다. 가 속도계 및 Google에서 권장 하는 자기 북부 머리글, 계산에 지자기 센터를 사용할 했습니다. 
+Android는 나침반을 검색 하는 API를 제공 하지 않습니다. 가 속도계 및 Google에서 권장 되지 않는 자기장의 북쪽 머리글을 계산 하려면 지자기 센터를 활용 합니다. 
 
-경우에 따라에서 미정 일관성 없는 결과가 표시 보정 해야 센서 필요 하기 때문에 그림 8 동작에서 장치를 이동 하는 것입니다. 열고 Google 맵, 탭에 사용자의 위치에 있는 점을 선택 이것이 수행 하는 가장 좋은 방법은 **보정 나침반**합니다.
+드물지만에서 있을 수 있습니다 표시 일관성 없는 결과가 센서 보정 해야 해야 하기 때문에 그림 8 동작에서 장치를 전환 포함 됩니다. 이렇게 하는 가장 좋은 방법은이 방법은 Google 맵을 열고, 사용자 위치에 대 한 점을 탭 및 선택 **보정 나침반**합니다.
 
-센서 속도 조정 될 수 있습니다 동시에 여러 센서 응용 프로그램에서 실행 된다는 점에 유의.
+앱에서 여러 센서를 실행 하는 동시에 센서 속도 조정할 수에 유의 합니다.
 
 --------------
 

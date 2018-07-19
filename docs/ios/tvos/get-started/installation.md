@@ -7,18 +7,21 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: a278a4715ffbcd4b1457f846be6bdf8394143cb4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9168b84b169d2f7919acaf88597919a48cd6710c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788984"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066847"
 ---
 # <a name="installing-tvos-support-in-xamarin"></a>Xamarin에 tvOS 지원 설치
 
+> [!TIP]
+> IOS 12 및 12 tvOS에 대 한 Xamarin의 미리 보기 지원 작업할 수 있도록 하려면 읽기는 [iOS 12 시작된 가이드](~/ios/platform/introduction-to-ios12/get-started.md)합니다.
+
 Apple의 Apple TV 4k 및 tvOS 11 출시 했습니다. Apple TV 플랫폼은 다양 한 앱을 만들고 Apple TV 기본 제공 앱 스토어를 통해 해제할 수 있도록 개발자에 게 열기.
 
-Xamarin.iOS 11 이상 tvOS 11 지원 Apple의 Xcode 9와 함께 제공 되는 SDK입니다. 
+Xamarin.iOS 11 이상 tvOS 11 지원 Apple의 Xcode 9와 함께 제공 되는 SDK입니다.
 
 - [Xamarin.iOS에 대 한 릴리스 정보](https://developer.xamarin.com/releases/ios/)
 - [Xcode에 대 한 릴리스 정보](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)

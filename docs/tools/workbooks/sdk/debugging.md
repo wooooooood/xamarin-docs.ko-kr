@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794022"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269059"
 ---
 # <a name="debugging-integrations"></a>디버깅 통합
 
@@ -23,8 +23,8 @@ MacOS 등에서 로그 메시지가 모두 로그 뷰어 메뉴에 나타나는 
 
 클라이언트 로그는 macOS 및 창에 다음 위치에서:
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 한 알아야 할 점은 일반적인를 통해 통합을 로드할 때 `#r` 개발 하는 동안 메커니즘을 통합 어셈블리 선택 않을 것으로 _종속성_ 통합 문서의 경우 절대 경로와 패키지 사용 되지 않습니다. 이 인해 변경 nothing에서 통합을 다시 작성 하는 경우에 따라 전파 하지으로 나타날 수 있습니다.
 
@@ -39,7 +39,7 @@ MacOS 등에서 로그 메시지가 모두 로그 뷰어 메뉴에 나타나는 
 Mac에서 Xamarin 통합 문서에 대 한 개발자 도구를 사용 하려면 터미널에 다음 명령을 실행 합니다.
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 및 다음 Xamarin 통합 문서를 다시 시작 합니다. 이렇게 하면 표시 되어야 **검사 요소** 에 나타나고 오른쪽 클릭 상황에 맞는 메뉴를 사용 하 여 새 **개발자** 창 통합 문서 기본 설정에서 사용할 수 있습니다. 이 옵션을 사용 하면 개발자 도구 시작 시 열 여부를 선택할 수 있습니다.

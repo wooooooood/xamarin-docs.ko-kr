@@ -1,21 +1,20 @@
 ---
 title: 계측을 사용하여 Xamarin.iOS 응용 프로그램 프로파일링
-description: 장치 또는 시뮬레이터에서 Xamarin.iOS 응용 프로그램에 대해 계측을 사용하는 방법
+description: 이 문서에서는 Apple의 계측 앱을 사용하여 장치 또는 시뮬레이터에 설치된 Xamarin.iOS 응용 프로그램을 프로파일링하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a5c44531a8f05529b169390f25b2946133411098
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785614"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 응용 프로그램 프로파일링
-
-_장치 또는 시뮬레이터에서 Xamarin.iOS 응용 프로그램에 대해 계측을 사용하는 방법_
 
 Xcode **계측**은 장치 또는 시뮬레이터에서 Xamarin.iOS 앱을 프로파일링하는 데 사용할 수 있는 도구입니다. Mono는 JIT(Just-in-Time) 모델을 사용하여 코드를 컴파일하고 계측은 이러한 종류의 데이터를 잘 해석하지 않으므로, 계측을 사용하는 시뮬레이터 기반 응용 프로그램의 출력 작업이 어려울 수 있습니다.
 이 문제로 인해 이 가이드에서는 개발자 앱을 사용하여 이 문서의 계측 출력을 해석하는 방법에 집중합니다.

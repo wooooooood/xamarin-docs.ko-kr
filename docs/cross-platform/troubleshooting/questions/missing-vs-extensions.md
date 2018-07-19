@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917891"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>설치 후 누락 된 Visual Studio 확장
 

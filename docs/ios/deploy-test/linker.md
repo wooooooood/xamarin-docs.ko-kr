@@ -1,18 +1,20 @@
 ---
-title: iOS에서 연결
+title: Xamarin.iOS 앱 연결
+description: 이 문서에서는 해당 크기를 줄이기 위해 Xamarin.iOS 응용 프로그램에서 사용되지 않는 코드를 제거하는 데 사용되는 Xamarin.iOS 링커를 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: 1d83a152c0949abe0221f6eb6dfb42f4e79eaf38
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bcfc821359e74b34dc2ee11419e8ee86f8cccee
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321459"
 ---
-# <a name="linking-on-ios"></a>iOS에서 연결
+# <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
 
 응용 프로그램을 빌드할 때 Mac용 Visual Studio 또는 Visual Studio는 관리 코드에 대한 링커를 포함하고 있는 **mtouch**라는 도구를 호출합니다. 이 도구는 응용 프로그램에서 사용되지 않는 기능을 클래스 라이브러리에서 제거하는 데 사용됩니다. 목표는 꼭 필요한 비트만 제공하여 응용 프로그램의 크기를 줄이는 것입니다.
 
@@ -157,9 +159,7 @@ Xamarin 링커는 실제 형식이 아닌 이름을 기준으로 `LinkerSafe` �
 ```csharp
 [assembly:LinkerSafe]
 // ... assembly attribute should be at top, before source
-class LinkerSafeAttribute : System.Attribute {
-    public LinkerSafeAttribute : System.base {}
-}
+class LinkerSafeAttribute : System.Attribute {}
 ```
 
 ## <a name="custom-linker-configuration"></a>사용자 지정 링커 구성

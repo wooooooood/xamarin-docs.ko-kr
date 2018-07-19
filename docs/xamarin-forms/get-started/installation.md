@@ -12,6 +12,7 @@ ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34470332"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 

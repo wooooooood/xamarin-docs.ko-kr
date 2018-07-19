@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33922680"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
