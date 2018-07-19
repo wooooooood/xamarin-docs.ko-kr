@@ -1,22 +1,22 @@
 ---
 title: 'Xamarin.Essentials: 전화 걸기'
-description: Xamarin.Essentials PhoneDialer 클래스는 최적화 된 시스템 기본 설정된 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용 프로그램을 수 있습니다.
+description: 전화 번호를 걸기에서 열려는 응용 프로그램을 사용 하도록 설정 Xamarin.Essentials PhoneDialer 클래스
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831399"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130795"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
 ![시험판 버전 NuGet](~/media/shared/pre-release.png)
 
-합니다 **PhoneDialer** 클래스를 사용 하면 최적화 된 시스템 기본 설정된 브라우저 나 외부 브라우저에서 웹 링크를 열도록 응용 프로그램입니다.
+합니다 **PhoneDialer** 클래스를 사용 하면 응용 프로그램을 걸기에서 전화 번호를 엽니다.
 
 ## <a name="using-phone-dialer"></a>전화 걸기 사용
 
