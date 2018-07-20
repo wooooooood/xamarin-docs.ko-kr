@@ -6,19 +6,22 @@ ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3571774ddec4182f35cac6f13d4582235e2ff31a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997428"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156719"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 4 장입니다. 스택 스크롤
 
 이 장에서 주로 전용으로 지정 개념을 도입 *레이아웃*, 있으며 클래스 및 Xamarin.Forms 페이지의 여러 보기의 시각적 표시를 구성 하는 데 사용 하는 방법에 대 한 전체 용어입니다.
 
 레이아웃에서 파생 되는 여러 클래스를 포함 [ `Layout` ](xref:Xamarin.Forms.Layout) 하 고 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)합니다. 이 장에서 중점적 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)합니다.
+
+> [!NOTE]
+> 합니다 [ `FlexLayout` ](~/xamarin-forms/user-interface/layouts/flex-layout.md) 에 도입 된 Xamarin.Forms 3.0과 비슷한 방법으로 사용할 수 있습니다 `StackLayout` 하지만 더 유연 하 게 합니다.
 
 이 챕터에 도입 되었습니다은 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)를 [ `Frame` ](xref:Xamarin.Forms.Frame), 및 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 클래스입니다.
 
@@ -104,7 +107,7 @@ ms.locfileid: "38997428"
 
 트릭을 제공 하는 것을 `ScrollView` 자식의 `StackLayout` 는 `VerticalOptions` 설정 `FillAndExpand`합니다. 에 설명 되어이 [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) 샘플입니다.
 
-합니다 **BlackCat** 샘플 정의 하 고 이식 가능한 클래스 라이브러리 (PCL)에 포함 된 프로그램 리소스에 액세스 하는 방법을 보여 줍니다. 또한 공유 자산 프로젝트 SAPs ()를 사용 하 여 수행할 수 있습니다 하지만 프로세스는으로 조금 더 까다롭습니다 합니다 [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) 샘플을 보여 줍니다.
+합니다 **BlackCat** 샘플 정의 공유 라이브러리에 포함 된 프로그램 리소스에 액세스 하는 방법을 보여 줍니다. 또한 공유 자산 프로젝트 SAPs ()를 사용 하 여 수행할 수 있습니다 하지만 프로세스는으로 조금 더 까다롭습니다 합니다 [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) 샘플을 보여 줍니다.
 
 
 
@@ -115,3 +118,4 @@ ms.locfileid: "38997428"
 - [4 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [BoxView](~/xamarin-forms/user-interface/boxview.md)

@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 02e4ea44d87360deed361d161759fa3a2808100f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995159"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156914"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>요약 7 장입니다. 코드 및 XAML
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms는 XML 기반 태그 언어인 Extensible Application Markup Language 또는 XAML (자 멜 "")를 지원 합니다. XAML 대신 C# Xamarin.Forms 응용 프로그램의 사용자 인터페이스의 레이아웃을 정의 및 사용자 인터페이스 요소 간의 바인딩을 정의 하 고 기본 데이터를 제공 합니다.
 
@@ -35,6 +38,9 @@ XAML, 클래스 및에서 생성 되는 개체는 XML 요소로 표현 됩니다
 ## <a name="adding-a-xaml-page-to-your-project"></a>프로젝트에 XAML 페이지 추가
 
 Xamarin.Forms 이식 가능한 클래스 라이브러리를 기존 프로젝트에 XAML 페이지를 추가할 수 있습니다 또는 처음 만들어질 때 XAML 페이지를 포함할 수 있습니다. 새 항목을 추가 하려면 대화 상자에서 XAML 페이지를 가리키는 항목을 선택 또는 `ContentPage` 및 XAML입니다. (하지는 `ContentView`.)
+
+> [!NOTE] 
+> Visual Studio 옵션은이 챕터에서 작성 된 이후 변경 되었습니다.
 
 두 개의 파일이 만들어집니다: XAML 파일을 파일 이름 확장명이.xaml 및 C# 파일 확장명이. xaml.cs. C# 파일은 라고도 합니다 *코드 숨김* XAML 파일의 합니다. 코드 숨김 파일에서 파생 되는 partial 클래스 정의 `ContentPage`합니다. 빌드 시에는 XAML 구문 분석 하 고 다른 partial 클래스 정의 동일한 클래스에 대 한 생성 됩니다. 이렇게 생성 된 클래스 라는 메서드가 포함 되어 `InitializeComponent` 코드 숨김 파일의 생성자에서 호출 되는 합니다.
 
@@ -72,10 +78,9 @@ XAML에 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 플랫폼에 종속 �
 
  [![공유 텍스트 변형의 삼중 스크린 샷](images/ch07fg03-small.png "서식이 지정 된 텍스트 변형")](images/ch07fg03-large.png#lightbox "텍스트 변형 형식")
 
-
-
 ## <a name="related-links"></a>관련 링크
 
 - [7 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [7 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [7 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [XAML 기본 사항](~/xamarin-forms/xaml/xaml-basics/index.md)

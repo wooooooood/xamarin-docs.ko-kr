@@ -6,26 +6,32 @@ ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995471"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156628"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) 비트맵을 표시 하는 요소입니다. 모든 Xamarin.Forms 플랫폼 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
 
 Xamarin.Forms에서 비트맵 네 곳에서 제공합니다.
 
 - URL에 지정 된 대로 웹을 통해
-- 일반적인 이식 가능한 클래스 라이브러리에 리소스로 포함
+- 공유 라이브러리에 리소스로 포함
 - 플랫폼 응용 프로그램 프로젝트에 리소스로 포함
 - .NET에서 참조할 수 있는 어디서 `Stream` 개체를 포함 하 여 `MemoryStream`
 
-PCL에서 비트맵 리소스 플랫폼 독립적인은 플랫폼 프로젝트에서는 비트맵 리소스가 플랫폼 마다 다릅니다.
+공유 라이브러리에서 비트맵 리소스 플랫폼 독립적인은 플랫폼 프로젝트에서는 비트맵 리소스가 플랫폼 마다 다릅니다.
+
+> [!NOTE] 
+> 책의 텍스트는.NET Standard 라이브러리 바뀌었습니다는 이식 가능한 클래스 라이브러리에 대 한 참조를 만듭니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다.
 
 비트맵을 설정 하 여 지정 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 의 속성 `Image` 형식의 개체에 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 세 개의 파생을 사용 하 여 추상 클래스:
 
@@ -63,7 +69,7 @@ PCL, 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. 지
 프로그램 집합을 `VerticalOptions` 및 `HorizontalOptions` 의 속성을 `Image` 에 `LayoutOptions.Center`, 그러면는 `Image` 비제한 요소. `Image` 비트맵은 동일한 크기 및:
 
 - IOS 및 Android에는 `Image` 비트맵의 픽셀 크기입니다. 비트맵 픽셀과 화면의 픽셀 간에 일대일 매핑이 있습니다.
-- Windows 런타임 플랫폼에서의 `Image` 장치 독립적 단위 비트맵의 픽셀 크기입니다. 대부분의 장치에서 각 비트맵 픽셀 여러 화면 픽셀을 차지합니다.
+- 유니버설 Windows 플랫폼에는 `Image` 장치 독립적 단위 비트맵의 픽셀 크기입니다. 대부분의 장치에서 각 비트맵 픽셀 여러 화면 픽셀을 차지합니다.
 
 합니다 [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) put 샘플을 `Image` 세로에서 `StackLayout` XAML에서. 명명 된 태그 확장 [ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) XAML에 포함 된 리소스를 참조 하는 데 도움이 됩니다. 이 클래스는에서 어셈블리에서 리소스를 로드만 있는 라이브러리에 배치 될 수 없습니다.
 
@@ -82,7 +88,10 @@ PCL, 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. 지
 
 ### <a name="browsing-and-waiting"></a>검색 및 대기
 
-합니다 [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) 샘플 Xamarin 웹 사이트에 저장 하는 스톡 이미지를 탐색할 수 있습니다. .NET을 사용 하 여 `WebRequest` 비트맵의 목록 사용 하 여 JSON 파일을 다운로드 하는 클래스입니다.
+합니다 [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) 샘플 Xamarin 웹 사이트에 저장 하는 스톡 이미지를 탐색할 수 있습니다. .NET을 사용 하 여 [ `WebRequest` ](xref:System.Net.WebRequest) 비트맵의 목록 사용 하 여 JSON 파일을 다운로드 하는 클래스입니다.
+
+> [!NOTE]
+> Xamarin.Forms 프로그램을 사용할지 [ `HttpClient` ](xref:System.Net.Http.HttpClient) 대신 [ `WebRequest` ](xref:System.Net.WebRequest) 인터넷을 통해 파일에 액세스 합니다. 
 
 프로그램을 사용 하는 [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) 진행을 나타냅니다. 각 비트맵 로드의 읽기 전용 [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) 속성을 `Image` 는 `true`합니다. 합니다 `IsLoading` 속성이 있으므로 바인딩 가능한 속성으로 지원 되는 `PropertyChanged` 해당 속성이 변경 될 때 이벤트가 발생 합니다. 프로그램이이 이벤트 처리기를 연결 하 고 현재 설정을 사용 `IsLoaded` 설정 하는 [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) 의 속성을 `ActivityIndicator`합니다.
 
@@ -154,7 +163,7 @@ Android 비트맵의 다양 한 하위 폴더에 저장 합니다 **리소스** 
 
 비트맵은 항상 160 장치 독립적 단위에 렌더링 합니다. (표준 Xamarin.Forms 솔루션 템플릿을 포함 hdpi, xhdpi, 및 xxhdpi 폴더.)
 
-Windows 런타임 프로젝트 이름 지정 체계 구성 된 장치 독립적 단위 당 픽셀 수 크기 조정 비율을 백분율로 예를 들어 비트맵을 지원 합니다.
+UWP 프로젝트에 구성 된 장치 독립적 단위 당 픽셀 수 크기 조정 비율을 백분율로 예를 들어 비트맵 이름 지정 체계를 지원 합니다.
 
 - 320 픽셀 사각형 MyImage.scale 200.jpg
 
@@ -164,7 +173,7 @@ Windows 런타임 프로젝트 이름 지정 체계 구성 된 장치 독립적 
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- Windows 런타임: **콘텐츠**
+- UWP: **콘텐츠**
 
 [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) 샘플으로 구성 된 두 개의 단추와 유사한 개체를 만듭니다 `Image` 사용 하 여 요소를 `TapGestureRecognizer` 설치 합니다. 개체 1 인치의 사각형 되도록 작성 되었습니다. 합니다 `Source` 속성을 `Image` 사용 하도록 설정 됩니다 `OnPlatform` 및 `On` 플랫폼에서 잠재적으로 서로 다른 파일 이름을 참조 하는 개체입니다. 비트맵 이미지는 크기 비트맵을 검색 하 고 렌더링을 볼 수 있도록 해당 픽셀 크기를 나타내는 숫자를 포함 합니다.
 
@@ -188,10 +197,12 @@ IOS 및 Android 도구 모음을 표시 하는 페이지가 되도록 요구할�
 
 설정에 플랫폼 전용 비트맵을 사용할 수도 있습니다는 [ `Image` ](xref:Xamarin.Forms.Button.Image) 속성을 `Button` 나타난 것 처럼 32 장치 독립적 단위 정사각형 비트맵에는 [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) 샘플입니다.
 
-
+> [!NOTE]
+> 단추의 이미지를 사용 하는 향상 되었습니다. 참조 [단추를 사용 하 여 비트맵을 사용 하 여](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)입니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [13 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
 - [13 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [이미지 작업](~/xamarin-forms/user-interface/images.md)
+- [단추를 사용 하 여 비트맵을 사용 하 여](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

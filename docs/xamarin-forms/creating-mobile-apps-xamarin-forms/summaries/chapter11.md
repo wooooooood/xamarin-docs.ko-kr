@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 78a0a7d4ce3a3de52f281237429cebb38f3b8e52
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 9f3c077d7bae3557178236b81073afaf4892a272
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998783"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156563"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 11 장입니다. 바인딩할 수 있는 인프라
 
@@ -89,9 +89,8 @@ ms.locfileid: "38998783"
 
 에 설명 되어이 [ `CountedLabel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) 에서 사용 되는 클래스를 [ **BaskervillesCount** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) 샘플입니다.
 
-
-
 ## <a name="related-links"></a>관련 링크
 
 - [11 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
 - [11 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+- [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)

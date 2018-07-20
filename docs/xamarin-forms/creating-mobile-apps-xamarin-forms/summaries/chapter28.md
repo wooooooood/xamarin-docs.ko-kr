@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: a02239906f5a30c068cb7eebd31308ad188696b3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: da8ce02a0185364c2b833238ee04ebc29e8d3bb2
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998100"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156615"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms 지원를 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 에서 파생 된 요소 `View`합니다. 맵을 사용 하 여 관련 된 위에 표시 되는 특별 한 플랫폼 요구 사항으로 인해 별도 어셈블리에 구현 됩니다 **Xamarin.Forms.Maps**를 다른 네임 스페이스를 포함 하 고: `Xamarin.Forms.Maps`합니다.
 
@@ -48,6 +51,9 @@ Xamarin.Forms 지원를 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 에서 파생 된
 
 Xamarin.Forms `Map` 클래스에서 사용자의 지리적 위치를 가져올 수 있는 기능을 포함 하지는 않지만이 바람직한 경우가 많습니다 처리 해야 하므로 종속성 서비스 맵 작업 하는 경우.
 
+> [!NOTE]
+> Xamarin.Forms 응용 프로그램을 대신 사용할 수는 [ `Geolocation` ](~/essentials/geolocation.md) Xamarin.Essentials에 포함 하는 클래스입니다.
+
 ### <a name="the-location-tracker-api"></a>위치 추적기 API
 
 합니다 [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션 위치 추적기 API에 대 한 코드를 포함 합니다. 합니다 [ `GeographicLocation` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) 구조 위도 및 경도 캡슐화 합니다. 합니다 [ `ILocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) 인터페이스 시작 및 일시 중지 위치 추적기 및 이벤트를 새 위치로 사용할 수 있는 경우 두 개의 메서드를 정의 합니다.
@@ -60,9 +66,9 @@ IOS 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com
 
 Android 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) Android 이용 하는 클래스 [ `LocationManager` ](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/) 클래스입니다.
 
-#### <a name="the-windows-runtime-geo-locator"></a>Windows 런타임 지역 로케이터
+#### <a name="the-uwp-geo-locator"></a>UWP 지역 로케이터
 
-Windows 런타임 구현의 `ILocationTracker` 은 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) UWP를 사용 하는 클래스 [ `Geolocator` ](https://msdn.microsoft.com/library/windows/apps/br225534)합니다.
+유니버설 Windows 플랫폼 구현의 `ILocationTracker` 은 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) UWP를 사용 하는 클래스 [ `Geolocator` ](/uwp/api/Windows.Devices.Geolocation.Geolocator)합니다.
 
 ### <a name="display-the-phones-location"></a>휴대폰의 위치를 표시 합니다.
 
@@ -82,9 +88,9 @@ Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가�
 
 사용자의 위치는 android 응용 프로그램에는 AndroidManifest.xml 파일에는 ACCESS_FILE_LOCATION 권한이 있어야 합니다.
 
-#### <a name="location-permissions-for-the-windows-runtime"></a>Windows 런타임에 대 한 위치 권한
+#### <a name="location-permissions-for-the-uwp"></a>UWP에 대 한 위치 권한
 
-Windows 또는 Windows Phone 응용 프로그램에 있어야는 `location` 장치 기능이 Package.appxmanifest 파일을 표시 합니다.
+유니버설 Windows 플랫폼 응용 프로그램을 있어야를 `location` Package.appxmanifest 파일에서 장치 기능이 표시 합니다.
 
 ## <a name="working-with-xamarinformsmaps"></a>Xamarin.Forms.Maps 사용
 
@@ -110,9 +116,9 @@ Windows 또는 Windows Phone 응용 프로그램에 있어야는 `location` 장�
 
 권한 부여 키는 Google 지도 서비스를 사용 하기 위해 필요 합니다. 이 키에 삽입 되는 **AndroidManifest.xml** 파일입니다. 또한 합니다 **AndroidManifest.xml** 파일에 필요한 `manifest` 사용자의 위치 가져오기에 관련 된 태그입니다.
 
-#### <a name="enabling-windows-runtime-maps"></a>Windows 런타임 사용 하도록 설정 하면 맵
+#### <a name="enabling-uwp-maps"></a>UWP를 사용 하도록 설정 하면 맵
 
-Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부여 키가 필요 합니다. 이 키에 대 한 인수로 전달 되는 `Xamarin.FormsMaps.Init` 메서드. 위치 서비스에 대 한 응용 프로그램을 사용할 수도 있어야 합니다.
+유니버설 Windows 플랫폼 응용 프로그램을 Bing Maps를 사용 하 여 권한 부여 키가 필요 합니다. 이 키에 대 한 인수로 전달 되는 `Xamarin.FormsMaps.Init` 메서드. 위치 서비스에 대 한 응용 프로그램을 사용할 수도 있어야 합니다.
 
 ### <a name="the-unadorned-map"></a>표시 되지 않은 맵
 
@@ -233,4 +239,4 @@ Windows 런타임 응용 프로그램을 Bing Maps를 사용 하 여 권한 부�
 
 - [28 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [28 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [지도 컨트롤](~/xamarin-forms/user-interface/map.md)
+- [Xamarin.Forms 맵](~/xamarin-forms/user-interface/map.md)
