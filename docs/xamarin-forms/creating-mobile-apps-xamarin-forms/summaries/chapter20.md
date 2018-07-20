@@ -6,21 +6,27 @@ ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 2ff54b65b1dca9798c91f147da7e8482649e40d2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996284"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156732"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
  그래픽 사용자 인터페이스를 순차적으로 사용자 입력 이벤트에 응답 해야 합니다. 즉, 모든 사용자 입력 이벤트 처리 라고도 하는 한 스레드에서 발생 해야 한다고 합니다 *주 스레드에서* 또는 *UI 스레드*합니다.
 
 사용자가 응답 그래픽 사용자 인터페이스를 기대 합니다. 이 프로그램을 사용자 입력 이벤트를 신속 하 게 처리 해야 한다는 것을 의미 합니다. 가능 하지 않은 처리 한 후 보조 스레드 실행에 있어 해야 합니다.
 
 이 가이드의 몇 가지 샘플 프로그램 사용 합니다 [ `WebRequest` ](xref:System.Net.WebRequest) 클래스입니다. 이 클래스에는 [ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) 메서드 완료 되 면 콜백 함수를 호출 하는 작업자 스레드를 시작 합니다. 그러나 프로그램을 호출 해야 하므로 해당 콜백 함수가 작업자 스레드에서 실행 [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) 메서드가 사용자 인터페이스에 액세스 하도록 합니다.
+
+> [!NOTE]
+> Xamarin.Forms 프로그램을 사용할지 [ `HttpClient` ](xref:System.Net.Http.HttpClient) 대신 [ `WebRequest` ](xref:System.Net.WebRequest) 인터넷을 통해 파일에 액세스 합니다. `HttpClient` 비동기 작업을 지원합니다.
 
 비동기 처리 하는 최신 방법을.NET 및 C#에서 제공 됩니다. 여기에 [ `Task` ](xref:System.Threading.Tasks.Task) 및 [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) 클래스 및 기타 형식에는 [ `System.Threading` ](xref:System.Threading) 및 [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) 네임 스페이스와 C# 5.0 `async` 및 `await` 키워드입니다. 이 장에서 중점적입니다.
 
@@ -74,13 +80,16 @@ Xamarin.iOS 및 Xamarin.Android 라이브러리에는 Xamarin에 명시적으로
 
 즉, 사용 해야 합니다 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (먼저 나오는 [ **9 장에서 합니다. 플랫폼별 API 호출** ](chapter09.md) 파일 I/O를 구현 합니다.
 
+> [!NOTE]
+> .NET Standard 2.0 지원 및.NET Standard 2.0 라이브러리를 사용 하 여 이식 가능한 클래스 Libaries 바뀌었습니다 [ `System.IO` ](xref:System.IO) 모든 Xamarin.Forms 플랫폼에 대 한 형식입니다. 더 이상 사용 하는 데 필요한 것을 `DependencyService` 대부분 파일 I/O 작업에 대 한 합니다. 참조 [Xamarin.Forms 파일 처리](~/xamarin-forms/app-fundamentals/files.md) 파일 I/O에는 최신 방법에 대 한 합니다.
+
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>플랫폼 간 파일 I/O에 첫 번째 샷
 
 합니다 [ **TextFileTryout** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TextFileTryout) 샘플 정의 [ `IFileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/TextFileTryout/TextFileTryout/TextFileTryout/IFileHelper.cs) 파일 I/O 및 모든 플랫폼에서이 인터페이스의 구현에 대 한 인터페이스입니다. 그러나 Windows 런타임 파일 I/O 메서드는 비동기 Windows 런타임 구현이이 인터페이스에서 메서드를 사용 하 여 작동 하지 않습니다.
 
 ### <a name="accommodating-windows-runtime-file-io"></a>Windows 런타임 파일 I/O를 수용합니다.
 
-Windows 런타임에서 실행 되는 프로그램의 클래스를 사용 합니다 [ `Windows.Storage` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 하 고 [ `Windows.Storage.Streams` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.aspx) I/O, 응용 프로그램 로컬 저장소를 포함 하 여 파일에 대 한 네임 스페이스. Microsoft를 결정 하는 50 밀리초 이상 UI 스레드를 차단 하지 않으려면 비동기 여야 합니다. 필요한 모든 작업을 하기 때문에 이러한 파일 I/O 메서드는 비동기 대부분입니다.
+Windows 런타임에서 실행 되는 프로그램의 클래스를 사용 합니다 [ `Windows.Storage` ](/uwp/api/Windows.Storage) 하 고 [ `Windows.Storage.Streams` ](/uwp/api/Windows.Storage.Streams) I/O, 응용 프로그램 로컬 저장소를 포함 하 여 파일에 대 한 네임 스페이스. Microsoft를 결정 하는 50 밀리초 이상 UI 스레드를 차단 하지 않으려면 비동기 여야 합니다. 필요한 모든 작업을 하기 때문에 이러한 파일 I/O 메서드는 비동기 대부분입니다.
 
 다른 응용 프로그램에서 사용할 수 있도록 라이브러리에서 이러한 새 방법을 보여 주는 코드가 됩니다.
 
@@ -94,8 +103,6 @@ Windows 런타임에서 실행 되는 프로그램의 클래스를 사용 합니
 - [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), iOS 클래스 라이브러리를
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), Android 클래스 라이브러리를
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), 유니버설 Windows 클래스 라이브러리
-- [**Xamarin.FormsBook.Platform.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Windows), Windows 8.1 대 한 PCL입니다.
-- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone), Windows Phone 8.1에 대 한 PCL
 - [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), 모든 Windows 플랫폼에 공통 된 코드에 대 한 공유 프로젝트
 
 모든 개별 플랫폼 프로젝트가 (제외 **Xamarin.FormsBook.Platform.WinRT**)에 대 한 참조가 **Xamarin.FormsBook.Platform**합니다. 세 개의 Windows 프로젝트에 대 한 참조가 **Xamarin.FormsBook.Platform.WinRT**합니다.

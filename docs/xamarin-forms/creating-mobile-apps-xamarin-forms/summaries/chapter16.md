@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997454"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156667"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>요약 16 장입니다. 데이터 바인딩
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 프로그래머가 자주 한 개체의 속성을 변경 될 때 검색 하는 이벤트 처리기를 작성 하 고 다른 개체의 속성 값을 변경 하는 데는 있습니다. 기술을 사용 하 여이 프로세스를 자동화할 수 있습니다 *증상*합니다. 데이터 바인딩은 대개 XAML에서 정의 및 사용자 인터페이스 정의의 일부가 됩니다.
 
@@ -85,6 +88,9 @@ ms.locfileid: "38997454"
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 원본 및 대상에 변경 내용을 서로 영향을 줄 수 있도록
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default) 사용 하는 [ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) 시기를 지정 된 대상 `BindableProperty` 만들어진 합니다. 에 지정 된 경우 기본값은 `OneWay` 일반적인 바인딩 가능한 속성에 대 한 및 `OneWayToSource` 읽기 전용으로 바인딩할 수 있는 속성에 대 한 합니다.
 
+> [!NOTE]
+> 합니다 `BindingMode` 이제 열거형도 포함 되어 있습니다 `OnTime` 바인딩 컨텍스트를 변경 하는 경우에 한 때가 아니라 바인딩을 적용 하는 것에 대 한 소스 속성이 변경 합니다.
+
 일반적으로 MVVM 시나리오의 데이터 바인딩에의 대상이 될 가능성이 있는 속성을 `DefaultBindingMode` 의 `TwoWay`합니다. 이러한 항목은 다음과 같습니다.
 
 - `Value` 속성의 `Slider` 및 `Stepper`
@@ -137,3 +143,4 @@ MVVM의 바인딩을 정의 하는 방법을 비슷합니다 이며 이러한 �
 
 - [16 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
 - [16 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
+- [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)

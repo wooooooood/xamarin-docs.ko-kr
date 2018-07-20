@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 36d208f2326c7584bc03c351b4a5b05a3f3928c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995455"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156498"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 5 장입니다. 크기를 사용 하 여 처리
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms의 몇 가지 크기로 지금 발생 했습니다.
 
@@ -36,7 +39,10 @@ Apple iPhone 및 iPad 장치를 대상으로 하는 프로그래머의 단위에
 
 Android는 유사 합니다. 프로그래머의 단위로 작동 *밀도 독립적 픽셀* (dps) dps 픽셀 사이의 관계는 1/96 인치 160 dps 기반으로 합니다.
 
-Windows 런타임 160 장치 독립적인 1/96 인치 단위 가까운 내재 된 배율 설정도 했습니다.
+Windows 휴대폰 및 모바일 장치 160 장치 독립적인 1/96 인치 단위 가까운 내재 된 배율 설정도 있습니다.
+
+> [!NOTE]
+> Xamarin.Forms는 모든 Windows 기반 전화 또는 모바일 장치에 더 이상 지원합니다.
 
 요약 하자면, 휴대폰 및 태블릿을 대상으로 하는 Xamarin.Forms 프로그래머 모든 측정 단위는 다음 조건을 기반으로 한다는 가정할 수 있습니다.
 

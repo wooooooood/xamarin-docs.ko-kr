@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998337"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156576"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
 
@@ -100,8 +100,6 @@ ms.locfileid: "38998337"
 - iOS: 밝은 배경에 어두운 텍스트
 - Android: Light (책)에 있는 어두운 배경에 텍스트 또는 어두운는 밝은 배경의 텍스트 (재료 디자인에서 AppCompat 통해는 **마스터** 샘플 코드 리포지토리의 분기)
 - 밝은 배경에 UWP: 어두운 텍스트
-- Windows 8.1: 어두운 배경 밝은 텍스트
-- Windows Phone 8.1: 어두운 배경 밝은 텍스트
 
 `Color.Accent` 결과 어둡게 또는 밝게 배경에 표시 되는 플랫폼 특정 (및 경우에 따라 사용자가 선택할 수 있는) 색 값입니다.
 

@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: a04f72d0577c7b8bf467ee73df233e483f6aa401
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 01985cf253c0f33c52128386b36c11af50381ee1
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996427"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156693"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>요약 19 장입니다. 컬렉션 뷰
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms는 컬렉션을 유지 관리 하 고 해당 요소를 표시 하는 세 가지 뷰를 정의 합니다.
 
@@ -39,6 +42,9 @@ Xamarin.Forms는 컬렉션을 유지 관리 하 고 해당 요소를 표시 하�
 ### <a name="data-binding-the-picker"></a>데이터 바인딩 선택기
 
 `SelectedIndex` 바인딩 가능한 속성으로 속성을 지원 하지만 `Items` 사용 하 여 데이터 바인딩을 사용 하 여 되지 않습니다는 `Picker` 어렵습니다. 하나의 솔루션은 사용 하는 `Picker` 와 함께에서 [ `ObjectToIndexConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs) 같은 합니다 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리. 합니다 [ **PickerBinding** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding) 작동 방식을 보여 줍니다.
+
+> [!NOTE] 
+> Xamarin.Forms `Picker` 이제 `ItemsSource` 고 `SelectedItem` 데이터 바인딩을 지 원하는 속성입니다. 참조 [선택기](~/xamarin-forms/user-interface/picker/index.md)합니다.
 
 ## <a name="rendering-data-with-listview"></a>ListView 사용 하 여 데이터를 렌더링합니다.
 
@@ -224,5 +230,6 @@ XAML에서 설정할 수는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 에 `Dat
 
 - [19 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf)
 - [19 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
+- [선택기](~/xamarin-forms/user-interface/picker/index.md)
 - [ListView](~/xamarin-forms/user-interface/listview/index.md)
 - [TableView](~/xamarin-forms/user-interface/tableview.md)

@@ -1,5 +1,4 @@
 # [Xamarin.Forms 책으로 모바일 앱 만들기](index.md)
-## [챕터 요약](summaries/index.md)
 ## [1. Xamarin.Forms가 왜 적합한가요?](summaries/chapter01.md)
 ## [2. 앱 분석](summaries/chapter02.md)
 ## [3. 텍스트 더 자세히 알아보기](summaries/chapter03.md)

@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: cbce6f414586597dc2b2788aa18b03228c128018
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5a535d60dd01e32dc1d888d3372db13312cc069a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130961"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156966"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
@@ -21,6 +21,8 @@ _다양 한 원본에서 비트맵을 로드 하 고 표시 합니다._
 SkiaSharp 비트맵의 지원이 매우 광범위 하 게 됩니다. 이 문서에서는 기본 사항을 &mdash; 비트맵을 로드 하는 방법 및 표시 방법:
 
 ![](bitmaps-images/bitmapssample.png "두 비트맵의 표시")
+
+비트맵의 많은 심층적 탐색을 섹션에서 찾을 수 있습니다 [SkiaSharp 비트맵](../bitmaps/index.md)합니다.
 
 SkiaSharp 비트맵 형식의 개체인 [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)합니다. 여러 가지 방법으로 비트맵을 만들 수 있지만이 문서에서는 자체를 제한 합니다 [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) .NET에서 비트맵을 로드 하는 메서드를 `Stream` 개체입니다.
 

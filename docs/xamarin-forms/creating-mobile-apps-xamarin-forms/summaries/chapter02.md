@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: d1daceba29e45adf64947c89555cc4e75a850d32
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/17/2018
+ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995279"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156686"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>요약 2 장입니다. 앱 분석
+
+> [!NOTE] 
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개체 라고 *시각적 요소*하 여 캡슐화 된, 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스입니다. 시각적 요소는 이러한 클래스에 해당 하는 세 가지 범주로 분할 될 수 있습니다.
 
@@ -28,7 +31,12 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 
 ## <a name="say-hello"></a>살펴보기
 
-설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac 합니다 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 대 한 이식 가능한 클래스 라이브러리를 사용 합니다. 수정 하지 않고도 Visual Studio에서 만들어진 Xamarin.Forms 솔루션을 보여 줍니다. 솔루션은 6 개 프로젝트 (현재 Xamarin.Forms 솔루션 템플릿을 사용 하 여 만들어지지 두 마지막):
+설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac 합니다 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 대 한 이식 가능한 클래스 라이브러리를 사용 합니다. 
+
+> [!NOTE] 
+> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다.
+
+이 샘플에는 수정 하지 않고도 Visual Studio에서 만들어진 Xamarin.Forms 솔루션을 보여 줍니다. 솔루션은 6 개 프로젝트:
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), 다른 프로젝트에서 공유 하는 이식 가능한 클래스 라이브러리 (PCL)
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), Android 용 응용 프로그램 프로젝트
@@ -37,13 +45,19 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), Windows 8.1 대 한 응용 프로그램 프로젝트
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), Windows Phone 8.1에 대 한 응용 프로그램 프로젝트
 
+> [!NOTE] 
+> Xamarin.Forms는 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile 더 이상 지원 하지만 Windows 10 데스크톱에서 Xamarin.Forms 응용 프로그램을 실행 합니다. 
+
 수의 응용 프로그램 프로젝트 시작 프로젝트 및 다음 빌드를 장치 또는 시뮬레이터에서 프로그램을 실행 합니다.
 
-Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝트를 수정 하지 않습니다. 이러한 프로그램을 시작 하려면 방금 작은 스텁 종종 남아 있습니다. 대부분 포커스의 이식 가능한 클래스 라이브러리는 모든 응용 프로그램에 공통적으로 적용 됩니다.
+Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝트를 수정 하지 않습니다. 이러한 프로그램을 시작 하려면 방금 작은 스텁 종종 남아 있습니다. 대부분의 집중 라이브러리는 모든 응용 프로그램에 공통적으로 적용 됩니다.
 
 ## <a name="inside-the-files"></a>파일 내에서
 
 표시 하 여 시각적 개체를 **Hello** 프로그램의 생성자에 정의 된 합니다 [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) 클래스입니다. `App` Xamarin.Forms 클래스에서 파생 [ `Application` ](xref:Xamarin.Forms.Application)합니다.
+
+> [!NOTE] 
+> Xamarin.Forms에 대 한 Visual Studio 솔루션 템플릿 XAML 파일을 사용 하 여 페이지를 만듭니다. XAML 될 때까지이 가이드에서 다루지 [7 장](chapter07.md)합니다.
 
 합니다 **참조** 섹션을 **Hello** PCL 프로젝트에 다음 Xamarin.Forms 어셈블리에 포함:
 
@@ -60,21 +74,20 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
+> [!NOTE] 
+> 합니다 **참조가** 섹션에서는 이러한 프로젝트의 어셈블리를 더 이상 나열 합니다. 대신 프로젝트 파일에는 **PackageReference** Xamarin.Forms NuGet 패키지를 참조 하는 태그입니다. 합니다 **참조** Visual Studio 목록의 섹션의 **Xamarin.Forms** Xamarin.Forms 어셈블리 대신 패키지 합니다. 
+
 정적 호출이 포함 되어 응용 프로그램 프로젝트의 각 `Forms.Init` 의 메서드는 `Xamarin.Forms` 네임 스페이스입니다. 이 Xamarin.Forms 라이브러리를 초기화합니다. 다른 버전의 `Forms.Init` 각 플랫폼에 대해 정의 됩니다. 다음 클래스에이 메서드의 호출을 찾을 수 있습니다.
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - : UWP [ `App` 클래스인 `OnLaunched` 메서드](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
-- Windows 8.1: [ `App` 클래스인 `OnLaunched` 메서드](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/App.xaml.cs#L65)
-- Windows Phone 8.1: [ `App` 클래스인 `OnLaunched` 메서드](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WinPhone/App.xaml.cs#L67)
 
-각 플랫폼 인스턴스화해야 또한는 `App` 클래스 PCL에 위치 합니다. 이에 대 한 호출에서 발생 `LoadApplication` 다음 클래스에:
+또한 각 플랫폼을 인스턴스화해야 합니다 `App` 공유 라이브러리의 위치를 클래스. 이에 대 한 호출에서 발생 `LoadApplication` 다음 클래스에:
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.UWP/MainPage.xaml.cs)
-- Windows 8.1: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/MainPage.xaml.cs)
-- Windows Phone 8.1: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WindowsPhone/MainPage.xaml.cs)
 
 그렇지 않으면 이러한 응용 프로그램 프로젝트는 일반 "아무 작업도 수행" 프로그램입니다.
 
@@ -82,30 +95,20 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 
 이식 가능한 클래스 라이브러리 (PCL) 또는 공유 자산 프로젝트 (SAP)에서 공통 코드를 사용 하 여 Xamarin.Forms 솔루션을 만들 수는 것입니다. SAP 솔루션을 만들려면 Visual Studio에서 공유 옵션을 선택 합니다. 합니다 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) 솔루션은 수정 하지 않고도 SAP 템플릿을 보여 줍니다.
 
-모든 일반적인 코드 플랫폼 응용 프로그램 프로젝트에서 참조 하는 라이브러리 프로젝트에서 PCL 접근 방식 번들. SAP 방식의 경우 공통 코드는 효과적으로 모든 플랫폼 응용 프로그램 프로젝트에 존재 하 고 그 중 공유 됩니다.
+> [!NOTE] 
+> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다. 그렇지 않은 경우 PCL 및.NET Standard 라이브러리는 개념적으로 유사 합니다.
 
-대부분의 개발자 들은 Xamarin.Forms PCL 접근 방식을 선호합니다. 이 책에이 나온 솔루션의 대부분에는 PCL입니다. SAP를 사용 하는 포함 된 **Sap** 프로젝트 이름에서 접미사.
+모든 일반적인 플랫폼 응용 프로그램 프로젝트에서 참조 하는 라이브러리 프로젝트에서 코드 라이브러리 접근 방식 번들입니다. SAP 방식의 경우 공통 코드는 효과적으로 모든 플랫폼 응용 프로그램 프로젝트에 존재 하 고 그 중 공유 됩니다.
 
-모든 Xamarin.Forms 플랫폼을 지원 하려면 PCL에서 사용 하는.NET 버전을 다음 플랫폼을 수용 해야 합니다.
-
-- .NET Framework 4.5
-- Windows 8
-- Windows Phone 8.1
-- Xamarin.Android
-- Xamarin.iOS
-- Xamarin.IOS (클래식)
-
-이 PC 프로필 111 이라고 합니다.
+대부분의 개발자 들은 Xamarin.Forms 라이브러리 접근 방식을 선호합니다. 이 책에이 나온 대부분의 솔루션이 라이브러리를 사용 합니다. SAP를 사용 하는 포함 된 **Sap** 프로젝트 이름에서 접미사.
 
 SAP 접근 방식을 사용 하 여 코드 공유 프로젝트에서 코드를 실행할 수 다른 다양 한 플랫폼에 대 한 C# 전처리기 지시문을 사용 하 여 (`#if`, #`elif`, 및 `#endif`) 이러한 미리 정의 된 식별자:
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
 - UWP: `WINDOWS_UWP`
-- Windows 8.1: `WINDOWS_APP`
-- Windows Phone 8.1: `WINDOWS_PHONE_APP`
 
-PCL의이 장 뒷부분에서 살펴보겠지만 런타임 시 실행 중인 플랫폼을 확인할 수 있습니다.
+공유 라이브러리의이 장 뒷부분에서 살펴보겠지만 런타임 시 실행 중인 플랫폼을 확인할 수 있습니다.
 
 ## <a name="labels-for-text"></a>텍스트에 대 한 레이블
 
@@ -138,17 +141,13 @@ Xamarin.forms 책에 사용 되는 버전에는 `Padding` 를 사용 하는 PCL 
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
-- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) Windows 8.1, Windows Phone 8.1, 및 모든 UWP 장치에 대 한
-- [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)를 이전에 Windows Phone 8.0을 식별 하는 데 이지만 이제 사용 되지 않은
-- [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) 사용 되지 않습니다.
+- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) UWP 장치용입니다.
 
 합니다 `Device.OnPlatform` 메서드를 `Device.OS` 속성인 및 `TargetPlatform` 열거형은 이제 사용 되지 않는 모든 합니다. 대신 사용 하 여는 [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) 속성과 비교는 `string` 다음 정적 필드를 사용 하 여 값을 반환 합니다.
 
 - [`iOS`](xref:Xamarin.Forms.Device.iOS)"iOS" 문자열
 - [`Android`](xref:Xamarin.Forms.Device.Android)"Android" 문자열
-- [`UWP`](xref:Xamarin.Forms.Device.UWP)Windows 런타임 플랫폼에 대 한 참조 "UWP" 문자열
-- `Windows`"Windows" (Windows 8.1 및 Windows Phone 8.1, 사용 되지 않음) Windows 런타임에 대 한 문자열
-- `WinPhone`"WinPhone" (사용 되지 않음) Windows Phone 8.0에 대 한 문자열
+- [`UWP`](xref:Xamarin.Forms.Device.UWP)"UWP", 유니버설 Windows 플랫폼에 참조 문자열
 
 합니다 [ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom) 정적 읽기 전용 속성 관련 됩니다. 멤버를 반환 하는이 [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom), 이러한 멤버에는:
 
@@ -157,7 +156,7 @@ Xamarin.forms 책에 사용 되는 버전에는 `Padding` 를 사용 하는 PCL 
 - [`Phone`](xref:Xamarin.Forms.TargetIdiom.Phone)
 - [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) 사용 되지 않습니다.
 
-IOS 및 Android 간에 구분 `Tablet` 및 `Phone` 600 단위는 세로 너비입니다. Windows 플랫폼용 `Desktop` Windows 10에서 실행 되는 UWP 응용 프로그램을 나타냅니다 `Tablet` Windows 8.1 프로그램이 및 `Phone` Windows 10 또는 Windows Phone 8.1 응용 프로그램을 실행 하는 UWP 응용 프로그램을 나타냅니다.
+IOS 및 Android 간에 구분 `Tablet` 및 `Phone` 600 단위는 세로 너비입니다. Windows 플랫폼용 `Desktop` Windows 10에서 실행 되는 UWP 응용 프로그램을 나타내는 및 `Phone` Windows 10 응용 프로그램에서 실행 되는 UWP 응용 프로그램을 나타냅니다.
 
 ## <a name="solution-3a-set-margin-on-the-label"></a>솔루션 3a 합니다. 레이블에 여백 설정
 
@@ -199,8 +198,6 @@ Center 수를 `Label` 내에서 `Page` (또는 다른 위치를 8 중 하나에 
 - [`End`](xref:Xamarin.Forms.TextAlignment.End)즉 오른쪽 또는 아래쪽 (방향)에 따라 다름
 
 이러한 두 속성 에서만 정의 됩니다 `Label`반면 합니다 `HorizontalAlignment` 및 `VerticalAlignment` 속성으로 정의 된 `View` 모든 상속 `View` 파생형입니다. Visual 결과 수 비슷해 보이지만 다음 장에서 보여 주듯이 매우 다릅니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 
