@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 5ed11e4afb4c061eb7b9dd8f10c67090b4134888
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
+ms.openlocfilehash: faec35ec9eb579327972471e7747ad8a38504850
+ms.sourcegitcommit: 3697c2aa4208fe2ac954a8c0297394d3bcb53ede
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996388"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175179"
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼별
 
@@ -65,7 +65,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 ## <a name="enabling-fast-scrolling-in-a-listview"></a>빠른 스크롤 하는 ListView를 사용 하도록 설정
 
-데이터를 통해 빠른 스크롤을 사용 하려면이 플랫폼별 되는 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 이 플랫폼별 제어 상태 표시줄의 텍스트 색에 있는지 여부를 `ListView.IsFastScrollEnabled` `boolean`  탐색 모음의 광도 맞게 조정 됩니다.
+데이터를 통해 빠른 스크롤을 사용 하려면이 플랫폼별 되는 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 설정 하 여 XAML에서 사용 되는 `ListView.IsFastScrollEnabled` 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <ContentPage ...
@@ -109,7 +109,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 ## <a name="enabling-swiping-between-pages-in-a-tabbedpage"></a>TabbedPage 내에서 페이지 간 살짝 사용 하도록 설정
 
-이 플랫폼별 살짝는 페이지 사이의 가로 손가락 제스처를 사용 하 여 사용 하도록 설정 되는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)합니다. 따라서이 플랫폼별 제어 하는지 여부를 [ 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다.
+이 플랫폼별 살짝는 페이지 사이의 가로 손가락 제스처를 사용 하 여 사용 하도록 설정 되는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <TabbedPage ...
@@ -141,7 +141,7 @@ On<Android>().SetOffscreenPageLimit(2)
 
 ## <a name="controlling-the-elevation-of-visual-elements"></a>시각적 요소의 높이 제어합니다.
 
-이 플랫폼별 API 21를 대상으로 하는 권한 상승 또는 응용 프로그램에 대 한 시각적 요소의 Z 순서를 제어 하는 데가 큰 경우 시각적 요소 상승 Z 값이 높을수록 occluding Z 값이 낮은 시각적 요소를 사용 하 여 시각적 요소를 사용 하 여 해당 그리기 순서를 결정 합니다. 이 플랫폼별 제어 상태 표시줄의 텍스트 색에 있는지 여부를 `VisualElement.Elevation` `boolean`  탐색 모음의 광도 맞게 조정 됩니다.
+이 플랫폼별 API 21를 대상으로 하는 권한 상승 또는 응용 프로그램에 대 한 시각적 요소의 Z 순서를 제어 하는 데가 큰 경우 시각적 요소 상승 Z 값이 높을수록 occluding Z 값이 낮은 시각적 요소를 사용 하 여 시각적 요소를 사용 하 여 해당 그리기 순서를 결정 합니다. 설정 하 여 XAML에서 사용 되는 `VisualElement.Elevation` 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <ContentPage ...
@@ -255,7 +255,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 ## <a name="enabling-mixed-content-in-a-webview"></a>WebView에서 혼합 된 콘텐츠를 사용 하도록 설정
 
-이 플랫폼별 제어 여부를 [ `WebView` ](xref:Xamarin.Forms.WebView) 수 표시 혼합 된 콘텐츠가 응용 프로그램에서 API 21 이상를 대상으로 하는 합니다. 혼합 된 콘텐츠는 HTTPS 연결을 통해 처음 로드 되는 하지만 HTTP 연결을 통해 리소스 (예: 이미지, 오디오, 비디오, 스타일 시트, 스크립트)를 로드 하는 콘텐츠입니다. 합니다 [ 하 고 `WebView.MixedContentMode` 장치 방향에 관계 없이 상태 표시줄 표시 여부를 설정 하는 값 및 ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) 값 세로로 compact 환경에서 상태 표시줄을 숨깁니다.
+이 플랫폼별 제어 여부를 [ `WebView` ](xref:Xamarin.Forms.WebView) 수 표시 혼합 된 콘텐츠가 응용 프로그램에서 API 21 이상를 대상으로 하는 합니다. 혼합 된 콘텐츠는 HTTPS 연결을 통해 처음 로드 되는 하지만 HTTP 연결을 통해 리소스 (예: 이미지, 오디오, 비디오, 스타일 시트, 스크립트)를 로드 하는 콘텐츠입니다. 설정 하 여 XAML에서 사용 되는 [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) 연결 된 속성의 값에는 [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -288,7 +288,7 @@ webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 
 ## <a name="setting-entry-input-method-editor-options"></a>항목 입력 방법 편집기 옵션 설정
 
-이 플랫폼별 입력된 방법에 대 한 소프트 키보드 (입력기) 옵션을 설정 된 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 소프트 키보드와의 상호 작용의 아래쪽 모서리에서 사용자 작업 단추를 설정 하는 것이 여기는 `Entry`합니다. 합니다 [ 하 고 `Entry.ImeOptions` 장치 방향에 관계 없이 상태 표시줄 표시 여부를 설정 하는 값 및 ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 값 세로로 compact 환경에서 상태 표시줄을 숨깁니다.
+이 플랫폼별 입력된 방법에 대 한 소프트 키보드 (입력기) 옵션을 설정 된 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 소프트 키보드와의 상호 작용의 아래쪽 모서리에서 사용자 작업 단추를 설정 하는 것이 여기는 `Entry`합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 연결 된 속성의 값에는 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -411,7 +411,7 @@ button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
 
 ## <a name="setting-tabbedpage-toolbar-placement-and-color"></a>TabbedPage 도구 모음 배치 및 색 설정
 
-이러한 플랫폼별 되에서 배치 및 도구 모음 색을 설정 하는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.ToolbarPlacement` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.toolbarplacementproperty?view=xamarin-forms) 연결 된 속성의 값을는 [ `ToolbarPlacement` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement?view=xamarin-forms) 열거형 및 [ `TabbedPage.BarItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.baritemcolorproperty?view=xamarin-forms) 및 [ `TabbedPage.BarSelectedItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.barselecteditemcolorproperty?view=xamarin-forms) 연결 된 속성에는 [ `Color` ](xref:Xamarin.Forms.Color):
+이러한 플랫폼별 되에서 배치 및 도구 모음 색을 설정 하는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) 연결 된 속성의 값을는 [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) 열거형 및 [ `TabbedPage.BarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) 및 [ `TabbedPage.BarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) 연결 된 속성에는 [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
 <TabbedPage ...
@@ -435,16 +435,16 @@ On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom)
              .SetBarSelectedItemColor(Color.Red);
 ```
 
-`TabbedPage.On<Android>` 메서드 이러한 플랫폼별 Android에만 실행 되도록 지정 합니다. [ `TabbedPage.SetToolbarPlacement` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.settoolbarplacement?view=xamarin-forms) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 도구 모음 배치를 설정 하는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)를 사용 하 여는 [ `ToolbarPlacement` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement?view=xamarin-forms) 열거형은 다음 값을 제공 합니다.
+`TabbedPage.On<Android>` 메서드 이러한 플랫폼별 Android에만 실행 되도록 지정 합니다. [ `TabbedPage.SetToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetToolbarPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 도구 모음 배치를 설정 하는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)를 사용 하 여는 [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) 열거형은 다음 값을 제공 합니다.
 
-- [`Default`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Default) – 도구 모음 페이지에서 기본 위치에 배치 됩니다 함을 나타냅니다. 휴대폰에서는 페이지의 맨 위에 다른 장치 관용구의 경우 페이지의 맨 아래입니다.
-- [`Top`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Top) – 페이지의 맨 위에 있는 도구 모음 배치는 함을 나타냅니다.
-- [`Bottom`](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.toolbarplacement#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_ToolbarPlacement_Bottom) – 도구 모음 페이지의 맨 아래에 배치 됩니다 함을 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement.Default) – 도구 모음 페이지에서 기본 위치에 배치 됩니다 함을 나타냅니다. 휴대폰에서는 페이지의 맨 위에 다른 장치 관용구의 경우 페이지의 맨 아래입니다.
+- [`Top`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement.Top) – 페이지의 맨 위에 있는 도구 모음 배치는 함을 나타냅니다.
+- [`Bottom`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement.Bottom) – 도구 모음 페이지의 맨 아래에 배치 됩니다 함을 나타냅니다.
 
-또한 합니다 [ `TabbedPage.SetBarItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.setbaritemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_SetBarItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__Xamarin_Forms_Color_) 하 고 [ `TabbedPage.SetBarSelectedItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.setbarselecteditemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_SetBarSelectedItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__Xamarin_Forms_Color_) 메서드 각각 도구 모음 항목 및 선택한 도구 모음 항목의 색을 설정 하는 데 사용 됩니다.
+또한 합니다 [ `TabbedPage.SetBarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetBarItemColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage},Xamarin.Forms.Color)) 하 고 [ `TabbedPage.SetBarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetBarSelectedItemColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage},Xamarin.Forms.Color)) 메서드 각각 도구 모음 항목 및 선택한 도구 모음 항목의 색을 설정 하는 데 사용 됩니다.
 
 > [!NOTE]
-> 합니다 [ `GetToolbarPlacement` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.gettoolbarplacement?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetToolbarPlacement_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__)를 [ `GetBarItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.getbaritemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetBarItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__), 및 [ `GetBarSelectedItemColor` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.androidspecific.tabbedpage.getbarselecteditemcolor?view=xamarin-forms#Xamarin_Forms_PlatformConfiguration_AndroidSpecific_TabbedPage_GetBarSelectedItemColor_Xamarin_Forms_IPlatformElementConfiguration_Xamarin_Forms_PlatformConfiguration_Android_Xamarin_Forms_TabbedPage__) 메서드를 사용 하 여 배치 및 색을 검색할 수는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 도구 모음입니다.
+> 합니다 [ `GetToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.GetToolbarPlacement(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage}))를 [ `GetBarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.GetBarItemColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})), 및 [ `GetBarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.GetBarSelectedItemColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})) 메서드를 사용 하 여 배치 및 색을 검색할 수는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 도구 모음입니다.
 
 결과 도구 모음 배치, 도구 모음 항목의 색 및 선택한 도구 모음 항목의 색으로 설정할 수 있도록를 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage):
 

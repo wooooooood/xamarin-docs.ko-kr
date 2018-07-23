@@ -7,12 +7,12 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 885a281d57a8ec83a949eba199667ea95679c5eb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
+ms.openlocfilehash: 16fcdb345fd9aeb9201a00a0bb98d143e6468f01
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998298"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156771"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
 
@@ -67,23 +67,23 @@ Xamarin.forms에 크기 조정은 등방성; 영향을 너비와 높이 균일 �
 
 실험해 볼 수 있습니다 합니다 `Scale` 사용 하 여 속성을 [ **SimpleScaleDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/SimpleScaleDemo) 샘플입니다.
 
-합니다 [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonScaler) 사용 하 여 `Scale` 더 광범위 한 그래픽에 대 한 눈금 클록의 글꼴 관련 표시 등 회전는 거의 거리의 끝에서 전달 합니다. 삼중 스크린샷 BoxView 클록`Scale`아날로그 시계 앞면아날로그 시계 앞면
+[**ButtonScaler**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ButtonScaler) 샘플은 `Scale` 속성의 `Button` 애니메이션 효과와 `FontSize` 속성 애니메이션의 차이점을 보여줍니다. `FontSize` 속성은 `Button`가 레이아웃에서 어떻게 인식되는지에 영향을줍니다. `Scale` 속성은 그렇지 않습니다.
 
-또한를 [ ****  클래스 ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ScaleToSize)Xamarin.FormsBook.Toolkit`Scale` 를 진행 하기 전에 잠시 달릴 표시할 초침 하면 올바른 위치로 다시 이동 합니다.
+[**ScaleToSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ScaleToSize) 샘플은 `Scale` 요소에 적용되는 `Label` 속성을 계산하여 가능한 한 큰 값으로 만듭니다.
 
 ### <a name="anchoring-the-scale"></a>세로 슬라이더?
 
 합니다  VerticalSliders  샘플을 보여 줍니다  요소 90도 회전 된 수와 작동 합니다. 그러나 어렵습니다 위치로 회전 이러한  가로 것으로 표시 해야 하며 레이아웃에 있으므로 요소입니다. 문제 3D 회전
 
-합니다 [ `AnchorX` ](xref:Xamarin.Forms.VisualElement.AnchorX) 속성 요소의 아래쪽과 위쪽 방향으로 또는 뷰어에서 떨어져 이동 보일를 3D 축 주위 요소를 회전 하 여 표시 됩니다. 마찬가지로, 합니다    왼쪽과 오른쪽 요소를 향해 또는 뷰어에서 떨어져 이동할 것 처럼 보일 수 있도록 y 축을 요소를 회전 하는 것 같습니다. 합니다 `AnchorX` 속성에 영향을 줍니다  있지만 합니다. 실험해 볼 수 있습니다 합니다 `AnchorY` ThreeDeeRotationDemo  이러한 속성의 상호 작용을 탐색 하는 샘플입니다. Xamarin.Forms 사용 권한에 포함 된 3D 좌표 시스템의 왼쪽입니다.
+[`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) 및 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) 속성을 설정하여 크기 조정의 중심을 변경할 수 있습니다. 마찬가지로, 합니다    왼쪽과 오른쪽 요소를 향해 또는 뷰어에서 떨어져 이동할 것 처럼 보일 수 있도록 y 축을 요소를 회전 하는 것 같습니다. 합니다 `AnchorX` 속성에 영향을 줍니다  있지만 합니다. 실험해 볼 수 있습니다 합니다 `AnchorY` ThreeDeeRotationDemo  이러한 속성의 상호 작용을 탐색 하는 샘플입니다. Xamarin.Forms 사용 권한에 포함 된 3D 좌표 시스템의 왼쪽입니다.
 
-가리키는 경우 증가 x 방향의 왼쪽 손 엄지와 (오른쪽)를 조정 하 고 손가락은 증가 y 방향에서 (아래쪽), 다음에 thumb 포인트 Z 좌표 (화면)에서 증가 하는 방향으로 조정 합니다.
+[**AnchoredScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/AnchoredScaleDemo) 샘플을 사용하면 `AnchorX` 및 `AnchorY` 속성뿐만 아니라 `Scale` 속성을 실험 할 수 있습니다.
 
-또한 세 개의 축에 대해 왼쪽 엄지 손가락 값 증가 방향을 가리키면 다음 손가락의 곡선의 방향을 나타냅니다 양의 회전 각도 회전 합니다.
+iOS에서 기본값이 아닌 `AnchorX` 및 `AnchorY` 속성을 사용하면 일반적으로 휴대 전화 방향 변경과 호환되지 않습니다.
 
 ## <a name="the-rotation-transform"></a>21 장 전체 텍스트 (PDF)
 
-21 장 샘플 합니다 [ **PlaneRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) 이러한 세 가지 속성을 사용 하 여 실험할 수 있습니다.
+[`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) 속성은도 단위로 지정되며 `AnchorX` 및 `AnchorY`로 정의 된 요소의 점을 중심으로 시계 방향으로 회전을 나타냅니다. 합니다 [ **PlaneRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) 이러한 세 가지 속성을 사용 하 여 실험할 수 있습니다.
 
 ### <a name="rotated-text-effects"></a>회전 된 텍스트 효과
 
