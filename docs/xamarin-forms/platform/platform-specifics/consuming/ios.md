@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/30/2018
-ms.openlocfilehash: be378a60a9d9a7b206b64f07ee70edb432cec8e3
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.date: 07/11/2018
+ms.openlocfilehash: 68a38fc43cd744e0382f35baa83643a9f0f7e53d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935656"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998988"
 ---
 # <a name="ios-platform-specifics"></a>플랫폼별 iOS
 
@@ -20,23 +20,25 @@ _플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 �
 
 Xamarin.Forms는 ios의 경우 다음 플랫폼별 포함 됩니다.
 
-- 에 대 한 지원 흐리게 [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/)합니다. 자세한 내용은 [흐리게 적용](#blur)합니다.
+- 에 대 한 지원 흐리게 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [흐리게 적용](#blur)합니다.
 - 페이지 탐색 모음에서 큰 제목으로 페이지 제목이 표시 되는지 여부를 제어 합니다. 자세한 내용은 [큰 제목 표시](#large_title)합니다.
 - 콘텐츠 페이지를 확인 합니다. 모든 iOS 장치에 대 한 안전한 화면 영역에 배치 됩니다. 자세한 내용은 [안전 영역 레이아웃 안내선을 사용 하도록 설정 하면](#safe_area_layout)합니다.
 - 반투명 탐색 모음입니다. 자세한 내용은 [탐색 표시줄 반투명 하](#translucent_navigation_bar)합니다.
-- 제어 상태 표시줄 텍스트의 색 여부는 [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 탐색 모음의 광도 맞게 조정 됩니다. 자세한 내용은 [상태 표시줄 텍스트 색 모드를 조정](#status_bar_color_mode)합니다.
-- 에 적합 한 텍스트를 입력 하는 보장 된 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 글꼴 크기를 조정 하 여 합니다. 자세한 내용은 [항목의 글꼴 크기를 조정](#adjust_font_size)합니다.
-- 선택 항목에서 발생 하는 경우 제어는 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)합니다. 자세한 내용은 [선택 항목 선택 제어](#picker_update_mode)입니다.
-- 상태 표시줄 표시 여부 설정 된 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)합니다. 자세한 내용은 [페이지에서 상태 표시줄 표시 여부 설정을](#set_status_bar_visibility)합니다.
-- 제어 여부는 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 자세한 내용은 [는 ScrollView에서 콘텐츠 터치 지연](#delay_content_touches)합니다.
+- 제어 상태 표시줄 텍스트의 색 여부는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 탐색 모음의 광도 맞게 조정 됩니다. 자세한 내용은 [상태 표시줄 텍스트 색 모드를 조정](#status_bar_color_mode)합니다.
+- 에 적합 한 텍스트를 입력 하는 보장 된 [ `Entry` ](xref:Xamarin.Forms.Entry) 글꼴 크기를 조정 하 여 합니다. 자세한 내용은 [항목의 글꼴 크기를 조정](#adjust_font_size)합니다.
+- 선택 항목에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker)합니다. 자세한 내용은 [선택 항목 선택 제어](#picker_update_mode)입니다.
+- 상태 표시줄 표시 여부 설정 된 [ `Page` ](xref:Xamarin.Forms.Page)합니다. 자세한 내용은 [페이지에서 상태 표시줄 표시 여부 설정을](#set_status_bar_visibility)합니다.
+- 제어 여부는 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 자세한 내용은 [는 ScrollView에서 콘텐츠 터치 지연](#delay_content_touches)합니다.
 - 구분 기호 스타일을 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [구분 기호 스타일을 ListView에서 설정](#listview-separatorstyle)합니다.
 - 지원 되는 레거시 색 모드 사용 안 함 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [레거시 색 모드 사용 안 함](#legacy-color-mode)합니다.
+- 에 그림자를 사용 하도록 설정 된 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [그림자를 사용 하도록 설정 하면](#drop-shadow)합니다.
+- 사용을 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰에서 수집 하 고 스크롤 뷰를 사용 하 여 pan 제스처를 공유 합니다. 자세한 내용은 [동시 팬 제스처 인식 사용](#simultaneous-pan-gesture)합니다.
 
 <a name="blur" />
 
 ## <a name="applying-blur"></a>흐리게 효과 적용합니다.
 
-이 플랫폼별, 아래에 계층화 된 콘텐츠를 흐리게 표시 하는 데 사용 되 고 설정 하 여 XAML에서 사용 되는 [ `VisualElement.BlurEffect` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty/) 연결 된 속성의 값에는 [ `BlurEffectStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) 열거형:
+이 플랫폼별, 아래에 계층화 된 콘텐츠를 흐리게 표시 하는 데 사용 되 고 설정 하 여 XAML에서 사용 되는 [ `VisualElement.BlurEffect` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.BlurEffectProperty) 연결 된 속성의 값에는 [ `BlurEffectStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -60,11 +62,14 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 boxView.On<iOS>().UseBlurEffect(BlurEffectStyle.ExtraLight);
 ```
 
-`BoxView.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 합니다 [ `VisualElement.UseBlurEffect` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.UseBlurEffect/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스를 사용 하 여 흐린 효과 적용 하는 합니다 [ `BlurEffectStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 4 개를 제공 하는 열거형 값: [ `None` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None), [ `ExtraLight` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight)하십시오 [ `Light` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light), 및 [ `Dark` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark).
+`BoxView.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 합니다 [ `VisualElement.UseBlurEffect` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.UseBlurEffect(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스를 사용 하 여 흐린 효과 적용 하는 합니다 [ `BlurEffectStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 4 개를 제공 하는 열거형 값: [ `None` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.None), [ `ExtraLight` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.ExtraLight)하십시오 [ `Light` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Light), 및 [ `Dark` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle.Dark).
 
-이 플랫폼별 탐색 표시줄의 투명도 변경 하는 데 사용 되 고 설정 하 여 XAML에서 사용 되는 [ `BlurEffectStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle/) 연결 된 속성을 [ 값:
+이 플랫폼별 탐색 표시줄의 투명도 변경 하는 데 사용 되 고 설정 하 여 XAML에서 사용 되는 [ `BlurEffectStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.BlurEffectStyle) 연결 된 속성을 [ 값:
 
 ![](ios-images/blur-effect.png "![ ] (ios-images/blur-effect.png " 메서드를를 ")   네임 스페이스 탐색 모음을 반투명 하 하기 위해 사용 됩니다.")
+
+> [!NOTE]
+> 흐림 효과를 추가 하는 경우는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)에서 터치 이벤트를 수신 여전히는 `VisualElement`합니다.
 
 <a name="large_title" />
 
@@ -93,7 +98,7 @@ var navigationPage = new Xamarin.Forms.NavigationPage(new iOSLargeTitlePageCS())
 navigationPage.On<iOS>().SetPrefersLargeTitles(true);
 ```
 
-`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `NavigationPage.SetPrefersLargeTitle` [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` 메서드는 ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)   네임 스페이스를 제어 상태 표시줄의 텍스트 색에 있는지 여부를    에 맞게 조정 됩니다는 탐색 모음의 명도와 합니다    가능한 두 값을 제공 하는 열거형:
+`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `NavigationPage.SetPrefersLargeTitle` [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` 메서드는 ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)   네임 스페이스를 제어 상태 표시줄의 텍스트 색에 있는지 여부를    에 맞게 조정 됩니다는 탐색 모음의 명도와 합니다    가능한 두 값을 제공 하는 열거형:
 
 -상태 표시줄 텍스트 색을 변경 하지 말아야 나타냅니다. -상태 표시줄 텍스트 색의 탐색 모음 광도 일치 해야 함을 나타냅니다.
 
@@ -147,7 +152,7 @@ switch (On<iOS>().LargeTitleDisplay())
 }
 ```
 
-설정 하 여 XAML에서 사용 되는 `LargeTitleDisplayMode` [ `Page` 연결 된 속성을 ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 값:
+설정 하 여 XAML에서 사용 되는 `LargeTitleDisplayMode` [ `Page` 연결 된 속성을 ](xref:Xamarin.Forms.Page) 값:
 
 ![](ios-images/large-title.png "![ ] (ios-images/large-title.png " 메서드를를 ")   네임 스페이스 탐색 모음을 반투명 하 하기 위해 사용 됩니다.")
 
@@ -187,7 +192,7 @@ On<iOS>().SetUseSafeArea(true);
 > [!NOTE]
 > 설정 하 여 XAML에서 사용 되는 [ 연결 된 속성의 값으로는 `Page.Padding` 열거형:
 
-[ 메서드는 `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/) `Page.SafeAreaInsets` 네임 스페이스에는 제어 하는 데 항목을 선택할 경우 사용 하 여를 [ 가능한 두 값을 제공 하는 열거형: – 사용자가 항목을 탐색할 때 항목 선택이 발생 합니다 [ `OnAppearing` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/)합니다.
+[ 메서드는 `Thickness` ](xref:Xamarin.Forms.Thickness) `Page.SafeAreaInsets` 네임 스페이스에는 제어 하는 데 항목을 선택할 경우 사용 하 여를 [ 가능한 두 값을 제공 하는 열거형: – 사용자가 항목을 탐색할 때 항목 선택이 발생 합니다 [ `OnAppearing` ](xref:Xamarin.Forms.Page.OnAppearing)합니다.
 
 ```csharp
 protected override void OnAppearing()
@@ -204,7 +209,7 @@ protected override void OnAppearing()
 
 ## <a name="making-the-navigation-bar-translucent"></a>이것이 Xamarin.Forms의 기본 동작입니다.
 
-– 항목 선택 눌렀음을 후에 발생 합니다 `NavigationPage.IsNavigationBarTranslucent`수행](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty/) 단추를 `boolean`  합니다.
+– 항목 선택 눌렀음을 후에 발생 합니다 `NavigationPage.IsNavigationBarTranslucent`수행](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) 단추를 `boolean`  합니다.
 
 ```xaml
 <NavigationPage ...
@@ -226,7 +231,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 (App.Current.MainPage as Xamarin.Forms.NavigationPage).On<iOS>().EnableTranslucentNavigationBar();
 ```
 
-`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 결과 지정한 [ 에 적용 되는 `NavigationPage.EnableTranslucentNavigationBar` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.EnableTranslucentNavigationBar/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}/) [, 항목을 선택할 경우 제어: 선택기 UpdateMode 플랫폼별
+`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 결과 지정한 [ 에 적용 되는 `NavigationPage.EnableTranslucentNavigationBar` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.EnableTranslucentNavigationBar(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) [, 항목을 선택할 경우 제어: 선택기 UpdateMode 플랫폼별
 
 ```csharp
 (App.Current.MainPage as Xamarin.Forms.NavigationPage)
@@ -242,7 +247,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 ## <a name="adjusting-the-status-bar-text-color-mode"></a>설정 하 여 XAML에서 사용 되는  연결 된 속성의 값을 합니다  열거형 및 필요에 따라 합니다  연결 된 속성의 값을는  열거형:
 
-[ 메서드, 합니다 `NavigationPage` 네임 스페이스는 상태 표시줄의 표시 유형을 설정 하는 데 사용 됩니다는 ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)   중 하나를 지정 하 여를  열거형 값: ,  또는 합니다. 합니다 [ 하 고 `NavigationPage.StatusBarTextColorMode` 장치 방향에 관계 없이 상태 표시줄 표시 여부를 설정 하는 값 및 ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty/) 값 세로로 compact 환경에서 상태 표시줄을 숨깁니다.
+[ 메서드, 합니다 `NavigationPage` 네임 스페이스는 상태 표시줄의 표시 유형을 설정 하는 데 사용 됩니다는 ](xref:Xamarin.Forms.NavigationPage)   중 하나를 지정 하 여를  열거형 값: ,  또는 합니다. 합니다 [ 하 고 `NavigationPage.StatusBarTextColorMode` 장치 방향에 관계 없이 상태 표시줄 표시 여부를 설정 하는 값 및 ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty) 값 세로로 compact 환경에서 상태 표시줄을 숨깁니다.
 
 ```xaml
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -287,14 +292,14 @@ IsPresentedChanged += (sender, e) =>
 };
 ```
 
-`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 결과 상태 표시줄의 표시 여부는 [ `NavigationPage.SetStatusBarTextColorMode` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetStatusBarTextColorMode/p/Xamarin.Forms.IPlatformElementConfiguration%7BXamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage%7D/Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode/) 설정할 수 있습니다.
+`NavigationPage.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 결과 상태 표시줄의 표시 여부는 [ `NavigationPage.SetStatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage},Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode)) 설정할 수 있습니다.
 
 - [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust) 상태 표시줄 표시 플랫폼별
 - [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity) 에 [ `MatchNavigationBarTextLuminosity` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity)에 지정 된  열거형 값에는 모든 자식 페이지에 상태 표시줄도 업데이트 됩니다.
 
-다른 모든 [ `GetStatusBarTextColorMode` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.GetStatusBarTextColorMode/p/Xamarin.Forms.IPlatformElementConfiguration%7BXamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage%7D/)-파생 된 형식이 지정된 된 [ 열거형 값에는 현재 페이지의 상태 표시줄만 업데이트 됩니다.
+다른 모든 [ `GetStatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.GetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage}))-파생 된 형식이 지정된 된 [ 열거형 값에는 현재 페이지의 상태 표시줄만 업데이트 됩니다.
 
-[ 메서드 상태 표시줄의 진입 하거나 떠납니다 어떻게 설정 되는 `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)  중 하나를 지정 하 여는  열거형 값: 를 , 또는 합니다. 경우는 [ 또는 `Master` 애니메이션 실행 상태 표시줄 진입 하거나 떠납니다 0.25 초는 열거형 값을 지정 합니다 ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/)합니다.
+[ 메서드 상태 표시줄의 진입 하거나 떠납니다 어떻게 설정 되는 `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)  중 하나를 지정 하 여는  열거형 값: 를 , 또는 합니다. 경우는 [ 또는 `Master` 애니메이션 실행 상태 표시줄 진입 하거나 떠납니다 0.25 초는 열거형 값을 지정 합니다 ](xref:Xamarin.Forms.MasterDetailPage.Master)합니다.
 
 ![](ios-images/status-bar-text-color-mode.png "지연 콘텐츠 터치를 ScrollView에서")
 
@@ -327,13 +332,13 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 entry.On<iOS>().EnableAdjustsFontSizeToFitWidth();
 ```
 
-`Entry.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. [ 메서드, 합니다 `Entry.EnableAdjustsFontSizeToFitWidth` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.EnableAdjustsFontSizeToFitWidth/p/Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry}/) [ 네임 스페이스에는 컨트롤에 있는지 여부를 `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) [ 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 또한 합니다 [ 메서드를 호출 하 여 콘텐츠 터치 지연 설정/해제를 사용할 수는 `Entry` 콘텐츠 터치 지연 되 고 있는지 여부를 반환 하는 방법.
+`Entry.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. [ 메서드, 합니다 `Entry.EnableAdjustsFontSizeToFitWidth` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.EnableAdjustsFontSizeToFitWidth(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Entry})) [ 네임 스페이스에는 컨트롤에 있는지 여부를 `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) [ 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 또한 합니다 [ 메서드를 호출 하 여 콘텐츠 터치 지연 설정/해제를 사용할 수는 `Entry` 콘텐츠 터치 지연 되 고 있는지 여부를 반환 하는 방법.
 
 ```csharp
 entry.On<iOS>().SetAdjustsFontSizeToFitWidth(!entry.On<iOS>().AdjustsFontSizeToFitWidth());
 ```
 
-결과 [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는    제스처를 받는 대신    페이지의   :
+결과 [ `Entry` ](xref:Xamarin.Forms.Entry) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는    제스처를 받는 대신    페이지의   :
 
 ![](ios-images/entry-font-size.png "ScrollView 지연 콘텐츠 건드리면 플랫폼별")
 
@@ -341,7 +346,7 @@ entry.On<iOS>().SetAdjustsFontSizeToFitWidth(!entry.On<iOS>().AdjustsFontSizeToF
 
 ## <a name="controlling-picker-item-selection"></a>구분 기호 스타일을 ListView에서 설정
 
-이 플랫폼별 사이의 구분 기호 셀에 있는지 여부를 제어를 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 의 전체 너비를 사용 하는 **합니다. `Picker.UpdateMode` `UpdateMode`  메서드는    사이의 구분 기호 셀에 있는지 여부를 네임 스페이스를 제어 하는 합니다    전체를 사용 하 여 너비를 를 사용 하 여 합니다    가능한 두 값을 제공 하는 열거형:
+이 플랫폼별 사이의 구분 기호 셀에 있는지 여부를 제어를 [ `Picker` ](xref:Xamarin.Forms.Picker) 의 전체 너비를 사용 하는 **합니다. `Picker.UpdateMode` `UpdateMode`  메서드는    사이의 구분 기호 셀에 있는지 여부를 네임 스페이스를 제어 하는 합니다    전체를 사용 하 여 너비를 를 사용 하 여 합니다    가능한 두 값을 제공 하는 열거형:
 
 ```xaml
 <ContentPage ...
@@ -367,7 +372,7 @@ picker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 `Picker.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. – 기본 iOS 구분 동작을 나타냅니다.
 
-- `Immediately` -구분 기호의 한쪽 가장자리에서 그려짐을 나타냅니다는 ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) 다른 합니다. 결과 지정한    값이 적용 되는   , 셀 사이 있는 구분선의 너비를 제어 하는:
+- `Immediately` -구분 기호의 한쪽 가장자리에서 그려짐을 나타냅니다는 ](xref:Xamarin.Forms.Picker) 다른 합니다. 결과 지정한    값이 적용 되는   , 셀 사이 있는 구분선의 너비를 제어 하는:
 - `WhenFinished` ListView SeparatorStyle 플랫폼별
 
 이 플랫폼별의 글꼴 크기를 조정할 되는 `SetUpdateMode` `UpdateMode` `UpdateMode` 입력된 텍스트 컨트롤에 맞는지 확인 합니다.
@@ -392,7 +397,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="setting-the-status-bar-visibility-on-a-page"></a>Xamarin.Forms 뷰의 일부 레거시 색 모드를 기능입니다.
 
-이 모드에서는 때 합니다 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 뷰의 속성 `Page`, 보기에는 색 사용 안 함된 상태에 대 한 기본 네이티브 색을 사용 하 여 사용자 설정 보다 우선 합니다. 이전 버전과 호환성을 위해이 레거시 색 모드는 지원 되는 보기에 대 한 기본 동작을 유지 합니다.
+이 모드에서는 때 합니다 [ `Page` ](xref:Xamarin.Forms.Page) 뷰의 속성 `Page`, 보기에는 색 사용 안 함된 상태에 대 한 기본 네이티브 색을 사용 하 여 사용자 설정 보다 우선 합니다. 이전 버전과 호환성을 위해이 레거시 색 모드는 지원 되는 보기에 대 한 기본 동작을 유지 합니다.
 
 ```xaml
 <ContentPage ...
@@ -416,7 +421,7 @@ On<iOS>().SetPrefersStatusBarHidden(StatusBarHiddenMode.True)
 
 `Page.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 이 플랫폼별 뷰를 사용 하지 않도록 설정 하는 경우에 사용자가 설정한 뷰에 색 유지 되도록이 레거시 색 모드를 해제 합니다. 설정 하 여 XAML에서 사용 되는 `StatusBarHiddenMode.True` `StatusBarHiddenMode.False` `StatusBarHiddenMode.Default` 연결 된 속성을 :
 
-합니다 [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 메서드는    레거시 색 모드가 비활성화 되어 있는지 여부를 제어 하려면 네임 스페이스는 합니다.
+합니다 [ `Page` ](xref:Xamarin.Forms.Page) 메서드는    레거시 색 모드가 비활성화 되어 있는지 여부를 제어 하려면 네임 스페이스는 합니다.
 
 ![](ios-images/hide-status-bar.png "또한 합니다 ![ ] (ios-images/hide-status-bar.png " 메서드를 사용 하 여 레거시 색 모드를 비활성화 되었는지 여부를 반환할 수 있습니다.")
 
@@ -460,13 +465,13 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 ```
 
-`ScrollView.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `ScrollView.SetShouldDelayContentTouches` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/) 네임 스페이스에는 컨트롤에 있는지 여부를 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 또한 합니다 `SetShouldDelayContentTouches` 메서드를 호출 하 여 콘텐츠 터치 지연 설정/해제를 사용할 수는 `ShouldDelayContentTouches` 콘텐츠 터치 지연 되 고 있는지 여부를 반환 하는 방법.
+`ScrollView.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `ScrollView.SetShouldDelayContentTouches` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스에는 컨트롤에 있는지 여부를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 또한 합니다 `SetShouldDelayContentTouches` 메서드를 호출 하 여 콘텐츠 터치 지연 설정/해제를 사용할 수는 `ShouldDelayContentTouches` 콘텐츠 터치 지연 되 고 있는지 여부를 반환 하는 방법.
 
 ```csharp
 scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDelayContentTouches());
 ```
 
-결과 [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는 [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) 제스처를 받는 대신 [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) 페이지의 [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
+결과 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는 [ `Slider` ](xref:Xamarin.Forms.Slider) 제스처를 받는 대신 [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) 페이지의 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
 
 [![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 건드리면 플랫폼별")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
@@ -550,13 +555,101 @@ _legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
 > [!NOTE]
 > 설정 하는 경우는 [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) 레거시 색 모드는 완전히 뷰에서 무시 됩니다. 시각적 상태에 대 한 자세한 내용은 참조 하세요. [은 Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
 
+<a name="drop-shadow" />
+
+## <a name="enabling-a-drop-shadow"></a>그림자를 사용 하도록 설정
+
+이 플랫폼별에서 그림자를 사용 하도록 설정 되는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) 연결 된 속성을 `true`, 연결 된 그림자를 제어 하는 속성을 비롯 하 여 많은 추가 선택 사항:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+        <BoxView ...
+                 ios:VisualElement.IsShadowEnabled="true"
+                 ios:VisualElement.ShadowColor="Purple"
+                 ios:VisualElement.ShadowOpacity="0.7"
+                 ios:VisualElement.ShadowRadius="12">
+            <ios:VisualElement.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </ios:VisualElement.ShadowOffset>
+         </BoxView>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+var boxView = new BoxView { Color = Color.Aqua, WidthRequest = 100, HeightRequest = 100 };
+boxView.On<iOS>()
+       .SetIsShadowEnabled(true)
+       .SetShadowColor(Color.Purple)
+       .SetShadowOffset(new Size(10,10))
+       .SetShadowOpacity(0.7)
+       .SetShadowRadius(12);
+```
+
+`VisualElement.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. 합니다 [ `VisualElement.SetIsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 그림자에 사용 되는지 여부를 제어 하려면 네임 스페이스는는 `VisualElement`합니다. 또한 그림자를 제어 하려면 다음 메서드를 호출할 수 있습니다.
+
+- [`SetShadowColor`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Color)) – 그림자의 색을 설정 합니다. 기본 색은 [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*)합니다.
+- [`SetShadowOffset`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},Xamarin.Forms.Size)) – 그림자의 오프셋을 설정 합니다. 그림자 캐스팅 된 및로 지정 된 방향을 변경 하는 오프셋 된 [ `Size` ](xref:Xamarin.Forms.Size) 값입니다. `Size` 구조 값의 첫 번째 값 (음수) 왼쪽 또는 오른쪽 (양수) 까지의 거리와 두 번째 되 위의 거리 값 (음수 값) 또는 (양수) 아래 장치 독립적 단위 표현 됩니다 . 이 속성의 기본값은 (0.0, 0.0)의 모든 관련 캐스팅은 섀도 있으며 그 결과 `VisualElement`합니다.
+- [`SetShadowOpacity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) –는 범위의 0.0 (투명) 1.0 (불투명) 값을 사용 하 여 그림자의 불투명도 설정 합니다. 기본 불투명도 값은 0.5입니다.
+- [`SetShadowRadius`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Double)) – 그림자를 렌더링 하는 데 흐리게 반경이 설정 합니다. Radius 기본값은 10.0입니다.
+
+> [!NOTE]
+> 호출 하 여 그림자의 상태를 쿼리할 수 있습니다 합니다 [ `GetIsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsShadowEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}))를 [ `GetShadowColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowColor(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}))를 [ `GetShadowOffset` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOffset(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}))를 [ `GetShadowOpacity` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowOpacity(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})), 및 [ `GetShadowRadius` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetShadowRadius(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement})) 메서드.
+
+결과에서 그림자를 사용할 수 있습니다는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement):
+
+![](ios-images/drop-shadow.png "사용 하도록 설정 하는 그림자")
+
+<a name="simultaneous-pan-gesture" />
+
+## <a name="enabling-simultaneous-pan-gesture-recognition"></a>사용 하도록 설정 하면 동시 팬 제스처 인식
+
+경우는 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰를 모든 제스처에 의해 캡처되는 pan의 내 보기에 연결할 때를 `PanGestureRecognizer` 스크롤 보기에 전달 되지 않습니다. 따라서 스크롤 뷰가 더 이상 스크롤됩니다.
+
+이 플랫폼별 수 있도록를 `PanGestureRecognizer` 스크롤 뷰에서 수집 하 고 스크롤 뷰를 사용 하 여 pan 제스처를 공유 합니다. 설정 하 여 XAML에서 사용 되는 [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.pangesturerecognizershouldrecognizesimultaneouslyproperty?view=xamarin-forms) 연결 된 속성을 `true`:
+
+```xaml
+<Application ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Application.PanGestureRecognizerShouldRecognizeSimultaneously="true">
+    ...
+</Application>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
+```
+
+`Application.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) 메서드를 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 스크롤 보기에서 이동 제스처 인식기는 팬 제스처를 캡처 또는 캡처 및 이동을 공유 하는지 여부를 네임 스페이스를 제어 하는 스크롤 뷰를 사용 하 여 제스처입니다. 또한 합니다 [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.getpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) 팬 제스처를 포함 하는 스크롤 뷰를 사용 하 여 공유 되는지 여부를 반환 하려면 메서드를 사용할 수는 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)합니다.
+
+따라서이 플랫폼별 경우 활성화를 사용 하 여는 [ `ListView` ](xref:Xamarin.Forms.ListView) 포함을 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)두는 `ListView` 및 `PanGestureRecognizer` 팬 제스처를 받게 됩니다 및 이 처리 합니다. 그러나 플랫폼 특정을 사용할 수 없을 때이 사용 하 여는 `ListView` 포함을 `PanGestureRecognizer`의 `PanGestureRecognizer` 팬 제스처를 캡처 및 처리 됩니다 및 `ListView` 팬 제스처를 받지 않습니다.
+
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms에 내장 된 iOS 플랫폼별을 사용 하는 방법을 보여 줍니다. 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
-- [iOSSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)
+- [iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

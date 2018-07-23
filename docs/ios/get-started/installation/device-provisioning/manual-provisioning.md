@@ -1,5 +1,5 @@
 ---
-title: Xamarin.iOS에 대한 수동 프로비저닝
+title: Xamarin.iOS에 대한 수동 프로비전
 description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 수동 프로비저닝을 사용하여 개발 인증서와 프로필을 설정하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786105"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111188"
 ---
-# <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비저닝
+# <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
 _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 수동 프로비저닝을 사용하여 개발 인증서와 프로필을 설정하는 방법을 설명합니다._
 
-<a name="signingidentity" />
+> [!NOTE]
+> 이 페이지에서 지침은 Apple 개발자 프로그램에 대한 유료 액세스 권한을 가진 개발자와 관련이 있습니다. 무료 계정이 있는 경우 장치 테스트에 대한 자세한 내용은 [무료 프로 비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 살펴보세요.
 
 ## <a name="creating-a-signing-identity"></a>서명 ID 만들기
 
@@ -27,9 +28,9 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 - 개발 인증서
 - 개인 키
 
-개발 인증서 및 연결된 [키](#keypairs)는 iOS 개발자에게 중요합니다. Apple의 ID를 설정하여 응용 프로그램에 디지털 서명을 넣는 것처럼 개발용 특정 장치 및 프로필에 연결합니다. Apple은 인증서를 확인하여 배포하도록 허용된 장치에 대한 액세스를 제어합니다.
+개발 인증서 및 연결된 [키](#understanding-certificate-key-pairs)는 iOS 개발자에게 중요합니다. Apple의 ID를 설정하여 응용 프로그램에 디지털 서명을 넣는 것처럼 개발용 특정 장치 및 프로필에 연결합니다. Apple은 인증서를 확인하여 배포하도록 허용된 장치에 대한 액세스를 제어합니다.
 
-개발 팀, 인증서 및 프로필의 Apple Members Center의 [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action)(인증서, 식별자 및 프로필) 섹션에 액세스하여 관리할 수 있습니다. 장치 또는 시뮬레이터용 코드를 빌드하려면 Apple에 서명 ID가 필요합니다.  
+개발 팀, 인증서 및 프로필의 Apple Members Center의 [인증서, 식별자 및 프로필](https://developer.apple.com/account/overview.action)(로그인 필수) 섹션에 액세스하여 관리할 수 있습니다. 장치 또는 시뮬레이터용 코드를 빌드하려면 Apple에 서명 ID가 필요합니다.  
 
 > [!IMPORTANT]
 > 한 번에 iOS 개발 인증서 두 개만 가질 수 있다는 점에 유의해야 합니다. 더 만들어야 하는 경우에는 기존 인증서를 해지해야 합니다. 해지된 인증서를 사용하는 모든 컴퓨터는 앱에 서명할 수 없습니다.
@@ -69,8 +70,6 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 8. 다운로드한 인증서를 두 번 클릭하여 키 집합 액세스를 시작하고 **My Certificates**(내 인증서) 패널을 열어서 새 인증서 및 연결된 개인 키를 표시합니다.
 
     [![](manual-provisioning-images/keychain.png "키 집합 액세스의 인증서")](manual-provisioning-images/keychain.png#lightbox)
-
-<a name="keypairs" />
 
 ### <a name="understanding-certificate-key-pairs"></a>인증서 키 쌍 이해
 
@@ -135,7 +134,6 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 장치�
 Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용할 iOS 장치에 위의 단계를 반복합니다.
 
 개발자 포털에 장치를 추가한 후에는 프로비전 프로필을 만들어서 이 프로필에 장치를 추가해야 합니다.
-
 
 <a name="provisioningprofile" />
 
@@ -228,8 +226,6 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 * 앱 ID를 포함하는 새로운 [프로비전 프로필](#provisioningprofile)을 만듭니다.
 * Xamarin.iOS 프로젝트에서 자격 설정
 
-<a name="deploy" />
-
 ## <a name="deploying-to-a-device"></a>장치에 배포
 
 이 시점에서 프로비전은 완료되고, 장치에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
@@ -276,7 +272,6 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Xamarin.iOS용 개발 환경을 설정하는 데 필요한 단계를 설명했습니다. 개발자, 개발자 팀, 앱을 실행할 수 있는 장치 및 개별 앱 ID에 대한 정보로 응용 프로그램을 코드 서명하는 방법을 알아보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

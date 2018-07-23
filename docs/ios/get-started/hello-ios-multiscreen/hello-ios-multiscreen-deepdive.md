@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785660"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111227"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -24,7 +24,7 @@ ms.locfileid: "34785660"
 
 <a name="Model_View_Controller" />
 
-## <a name="model-view-controller-mvc"></a>MVC(모델 뷰 컨트롤러)
+## <a name="model-view-controller-mvc"></a>MVC(모델-뷰-컨트롤러)
 
 [Hello, iOS](~/ios/get-started/hello-ios/index.md) 자습서에서는 iOS 응용 프로그램에 뷰 컨트롤러가 해당 *콘텐츠 뷰 계층 구조*를 창으로 로딩할 책임이 있는 하나의 *창*만 있다는 것을 배웠습니다. 두 번째 Phoneword 연습에서는 응용 프로그램에 두 번째 화면을 추가하고 아래 다이어그램에 표시된 것처럼 두 개의 화면 간에 일부 데이터(전화번호 목록)를 전달했습니다.
 
@@ -43,7 +43,6 @@ MVC 패턴은 GUI 응용 프로그램의 다른 부분 간의 논리 분리를 �
 > [!NOTE]
 > MVC 패턴은 ASP.NET 페이지 또는 WPF 응용 프로그램의 구조와 대략 비슷합니다. 이러한 예제에서 뷰는 실제로 UI를 설명할 책임이 있는 구성 요소이며, ASP.NET에서 ASPX(HTML) 페이지 또는 WPF 응용 프로그램에서 XAML에 해당합니다. 컨트롤러는 뷰를 관리할 책임이 있는 구성 요소입니다. 이는 ASP.NET 또는 WPF에서 코드 숨김에 해당합니다.
 
-
 ### <a name="model"></a>모델
 
 모델 개체는 일반적으로 뷰로 표시되거나 입력되는 데이터의 응용 프로그램별 표현입니다. 모델은 종종 느슨하게 정의됩니다. 예를 들어 **Phoneword_iOS** 앱에서 전화번호 목록(문자열 목록으로 표시됨)이 모델입니다. 플랫폼 간 응용 프로그램을 빌드한 경우 iOS와 Android 응용 프로그램 사이에 **PhonewordTranslator** 코드를 공유하도록 선택할 수 있습니다. 해당 공유 코드를 모델로도 고려해 볼 수 있습니다.
@@ -54,7 +53,6 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 
 > [!NOTE]
 > 일부 문서에서 MVC 패턴의 모델 부분은 UI에 표시되는 데이터뿐 아니라 전체 응용 프로그램 백 엔드를 참조할 수 있습니다. 이 가이드에서는 모델의 최신 해석을 사용하지만 차이는 특별히 중요하지 않습니다.
-
 
 ### <a name="view"></a>보기
 
@@ -68,7 +66,7 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 
 ## <a name="navigation-controller"></a>탐색 컨트롤러
 
-Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 *탐색 컨트롤러*를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 컨트롤러 뷰 계층 구조를 관리합니다.
+Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 컨트롤러 뷰 계층 구조를 관리합니다.
 
 탐색 컨트롤러는 iOS 응용 프로그램에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 응용 프로그램에 대한 탐색을 제공합니다.
 
@@ -86,27 +84,24 @@ Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 
     [![](hello-ios-multiscreen-deepdive-images/03.png "이 다이어그램은 스택에서 카드 '꺼내기'를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **제목 표시줄을 제공합니다.** – **탐색 컨트롤러**의 윗 부분은 *제목 표시줄*이라고 합니다. 아래 다이어그램에 표시된 것처럼 뷰 컨트롤러 제목을 표시합니다.  
+-  **제목 표시줄을 제공합니다.** – 탐색 컨트롤러의 윗 부분은 *제목 표시줄*이라고 합니다. 아래 다이어그램에 표시된 것처럼 뷰 컨트롤러 제목을 표시합니다.  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "제목 표시줄은 보기 컨트롤러 제목을 표시합니다.")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
-
-
-
 ### <a name="root-view-controller"></a>루트 뷰 컨트롤러
 
-**탐색 컨트롤러**는 콘텐츠 뷰 계층 구조를 관리하지 않으므로 표시할 항목이 없습니다.
-대신 **탐색 컨트롤러**는 *루트 뷰 컨트롤러*와 쌍을 이룹니다.
+탐색 컨트롤러는 콘텐츠 뷰 계층 구조를 관리하지 않으므로 표시할 항목이 없습니다.
+대신 탐색 컨트롤러는 *루트 뷰 컨트롤러*와 쌍을 이룹니다.
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "탐색 컨트롤러는 루트 보기 컨트롤러와 쌍을 이룹니다.")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-루트 뷰 컨트롤러는 **탐색 컨트롤러의** 스택에 첫 번째 뷰 컨트롤러를 나타내며 루트 뷰 컨트롤러의 콘텐츠 뷰 계층 구조는 창에 로드되는 첫 번째 콘텐츠 뷰 계층 구조입니다. 전체 응용 프로그램을 탐색 컨트롤러의 스택에 배치하고자 하는 경우 원본 없는 Segue를 **탐색 컨트롤러**로 이동하고 Phoneword 앱에서 수행한 것처럼 첫 번째 화면의 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정할 수 있습니다.
+루트 뷰 컨트롤러는 탐색 컨트롤러의 스택에서 첫 번째 뷰 컨트롤러를 나타내고, 루트 뷰 컨트롤러의 콘텐츠 뷰 계층 구조는 창에 로드되는 첫 번째 콘텐츠 뷰 계층 구조입니다. 전체 응용 프로그램을 탐색 컨트롤러의 스택에 배치하고자 하는 경우 원본 없는 Segue를 탐색 컨트롤러로 이동시키고 Phoneword 앱에서 수행한 것처럼 첫 번째 화면의 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정할 수 있습니다.
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "원본 없는 Segue는 첫 번째 화면 보기 컨트롤러를 루트 보기 컨트롤러로 설정합니다.")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>추가 탐색 옵션
 
-**탐색 컨트롤러**는 iOS에서 탐색을 처리하는 일반적인 방법이지만 유일한 옵션은 아닙니다. [탭 모음 컨트롤러](~/ios/user-interface/controls/creating-tabbed-applications.md)는 응용 프로그램을 서로 다른 기능 영역으로 나눌 수 있습니다. [분할 뷰 컨트롤러](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)는 마스터/세부 뷰를 만들 수 있으며 [플라이아웃 탐색 컨트롤러](http://components.xamarin.com/view/flyoutnavigation)는 사용자가 측면에서 살짝 밀 수 있는 탐색을 만듭니다. 이러한 모든 항목은 콘텐츠를 제공하는 직관적인 방법을 위해 **탐색 컨트롤러**로 결합될 수 있습니다.
+탐색 컨트롤러는 iOS에서 탐색을 처리하는 일반적인 방법이지만 유일한 옵션은 아닙니다. 예를 들어, [탭 표시줄 컨트롤러](~/ios/user-interface/controls/creating-tabbed-applications.md)는 서로 다른 기능 영역으로 응용 프로그램을 분할할 수 있고, [분할 뷰 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)는 마스터/세부 정보 보기를 만드는 데 사용될 수 있습니다. 이러한 다른 탐색 패러다임을 사용하여 탐색 컨트롤러를 결합하면 iOS에서 콘텐츠를 나타내고 탐색하는 여러 유연한 방법을 제공할 수 있습니다.
 
 ## <a name="handling-transitions"></a>전환 처리
 
@@ -202,7 +197,6 @@ Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가
 -  **테이블 뷰 컨트롤러** – `CallHistoryController`는 테이블 뷰 컨트롤러입니다. 테이블 뷰 컨트롤러는 iOS에서 가장 일반적인 레이아웃 및 데이터 표시 도구인 테이블 뷰를 포함합니다. 테이블은 이 가이드의 범위를 벗어납니다. 테이블 뷰 컨트롤러에 대한 자세한 내용은 [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md) 가이드를 참조하세요.
 -   **Storyboard ID** – Storyboard ID를 설정하면 Storyboard에서 뷰 컨트롤러에 대한 코드 숨김을 포함하는 Objective-C에서 뷰 컨트롤러 클래스를 만듭니다. Storyboard ID를 사용하여 Objective-C 클래스를 찾고 Storyboard에서 뷰 컨트롤러를 인스턴스화합니다. Storyboard ID에 대한 자세한 내용은 [스토리보드 소개](~/ios/user-interface/storyboards/index.md) 가이드를 참조하세요.
 
-
 ## <a name="summary"></a>요약
 
 첫 번째 멀티스크린 iOS 응용 프로그램을 완성한 것을 축하합니다!
@@ -210,7 +204,6 @@ Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가
 이 가이드에서는 MVC 패턴을 소개했고 이를 사용하여 멀티스크린 응용 프로그램을 만들었습니다. 또한 탐색 컨트롤러 및 iOS 탐색을 구동하는 해당 역할을 살펴봤습니다. 이제 고유한 Xamarin.iOS 응용 프로그램 개발을 시작할 견고한 기반이 마련되었습니다.
 
 다음으로 [모바일 개발 소개](~/cross-platform/get-started/introduction-to-mobile-development.md) 및 [플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) 가이드를 사용하여 Xamarin으로 플랫폼 간 응용 프로그램 빌드를 알아보겠습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 241f38cbfe013776b2e36b8102ae4b90cf610d80
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 1d13a3dae509fea4a2e955c4ad206a81a57e75ed
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935284"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067336"
 ---
 # <a name="android-emulator-troubleshooting"></a>Android Emulator 문제 해결
 
@@ -87,7 +87,7 @@ SERVICE_NAME: intelhaxm
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-Mac용 Visual Studio 빌드 7.2(빌드 559)부터는 앱을 Android Emulator에 처음 배포할 때 성능 경고 대화 상자가 표시될 수 있습니다. 이러한 경고 대화 상자는 아래에 설명되어 있습니다.
+Mac용 Visual Studio 버전 7.2(빌드 559)부터는 앱을 Android Emulator에 처음 배포할 때 성능 경고 대화 상자가 표시될 수 있습니다. 이러한 경고 대화 상자는 아래에 설명되어 있습니다.
 
 ### <a name="haxm-is-not-installed"></a>HAXM이 설치되어 있지 않음
 
