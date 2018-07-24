@@ -6,13 +6,13 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 95afdfde878759d4a598e200d16fe6fb1fa2005e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/16/2018
+ms.openlocfilehash: 57304f2f07a0834c31e32bb89a4742a2de7e861c
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998247"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202996"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -59,26 +59,98 @@ var entry = new Entry { ... MaxLength = 10 };
 
 A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력 하지 않고 사용할 수 있습니다 값 `int.MaxValue`에 대 한 기본 값인는 [ `Entry` ](xref:Xamarin.Forms.Entry), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
 
-### <a name="keyboards"></a>키보드
+### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
 
-사용자가 상호 작용할 때 표시 되는 키보드를 `Entry` 를 통해 프로그래밍 방식으로 설정할 수 있습니다는 `Keyboard` 속성입니다.
+사용자가 상호 작용할 때 표시 되는 키보드를 [ `Entry` ](xref:Xamarin.Forms.Entry) 를 통해 프로그래밍 방식으로 설정할 수 있습니다 합니다 [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) 합니다 에서다음속성중하나에속성을[ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스:
 
-키보드 형식에 대 한 옵션은 같습니다.
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 문자 보내기에 대 한 사용을 모 지 유용 합니다.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – 기본 키보드를 합니다.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) -전자 메일 주소를 입력할 때 사용 합니다.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) -숫자를 입력할 때 사용 합니다.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – 사용 하지 않고 텍스트를 입력할 때 [ `KeyboardFlags` ](xref:Xamarin.Forms.KeyboardFlags) 지정 합니다.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – 전화 번호를 입력할 때 사용 합니다.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용 합니다.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 사용 파일 경로 & 웹 주소를 입력 합니다.
 
-- **기본** &ndash; 기본 키보드
-- **채팅** &ndash; 문자 보내기 및 위치에 사용 되는 모 지 유용
-- **전자 메일** &ndash; 전자 메일 주소를 입력할 때 사용
-- **숫자** &ndash; 숫자를 입력할 때 사용
-- **전화** &ndash; 전화 번호를 입력할 때 사용
-- **Url** &ndash; 파일 경로 및 웹 주소를 입력 하는 데
+이렇게 하려면 XAML에서 다음과 같이 합니다.
 
-[예제에서는 각 키보드](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 레시피 섹션에서.
+```xaml
+<Entry Keyboard="Chat" />
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+var entry = new Entry { Keyboard = Keyboard.Chat };
+```
+
+각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 리포지토리.
+
+합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값 사용자 지정 된 메서드에 인수로 지정 된 대로 `Keyboard` 반환 합니다. `KeyboardFlags` 열거형 다음 값을 포함 합니다.
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 기능이 없는 키보드에 추가 됩니다.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) -입력 한 각 문장의 첫 번째 단어의 첫 번째 문자는 자동으로 대문자 여야 나타냅니다.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) -입력 한 텍스트에 해당 맞춤법 검사를 수행할지를 나타냅니다.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) -입력 한 텍스트 완성 제공 되는 해당 단어를 나타냅니다.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – 각 단어의 첫 번째 문자는 자동으로 대문자 여야 나타냅니다.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – 모든 문자를 자동으로 대문자를 나타냅니다.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – 없습니다 자동 대/소문자가 발생 함을 나타냅니다.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – spellcheck, 단어 완성 및 문장의 첫 글자를 대문자로 입력 한 텍스트의 발생을 나타냅니다.
+
+다음 XAML 코드 예제에서는 기본 사용자 지정 하는 방법을 보여 줍니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 단어 완성을 제공 하 고 모든 입력된 문자를 대문자로 표시 하 고 있습니다.:
+
+```xaml
+<Entry Placeholder="Enter text here">
+    <Entry.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Entry.Keyboard>
+</Entry>
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+var entry = new Entry { Placeholder = "Enter text here" };
+entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+#### <a name="customizing-the-return-key"></a>Return 키를 사용자 지정
+
+즉 소프트 키보드에서 return 키의 모양을 때 표시 되는 [ `Entry` ](xref:Xamarin.Forms.Entry) 포커스가, 설정 하 여 사용자 지정할 수 있습니다 합니다 [ `ReturnType` ](xref:Xamarin.Forms.Entry.ReturnType) 속성 값을 [ `ReturnType` ](xref:Xamarin.Forms.ReturnType) 열거형:
+
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) – 특정 반환 키 없음 필수임을 나타내고 된 플랫폼 기본값이 사용 됩니다.
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) –를 "완료" return 키를 나타냅니다.
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) -"이동" return 키를 나타냅니다.
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) – "다음" return 키를 나타냅니다.
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) – "검색" return 키를 나타냅니다.
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) – "송신" return 키를 나타냅니다.
+
+다음 XAML 예제에는 return 키를 설정 하는 방법을 보여 줍니다.
+
+```xaml
+<Entry ReturnType="Send" />
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+var entry = new Entry { ReturnType = ReturnType.Send };
+```
+
+> [!NOTE]
+> Return 키의 정확한 모양을 플랫폼에 따라 달라 집니다. IOS에서 return 키 텍스트를 기반으로 단추입니다. 그러나 Android 및 유니버설 Windows 플랫폼에서 return 키는 아이콘 기반 단추.
+
+Return 키를 누르면 합니다 [ `Completed` ](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생 하 고 모든 `ICommand` 에 지정 된는 [ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand) 속성 실행 됩니다. 또한 모든 `object` 에 지정 된 합니다 [ `ReturnCommandParameter` ](xref:Xamarin.Forms.Entry.ReturnCommandParameter) 속성에 전달 될는 `ICommand` 매개 변수로 합니다. 명령에 대 한 자세한 내용은 참조 하세요. [The 명령 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)합니다.
 
 ### <a name="enabling-and-disabling-spell-checking"></a>설정 및 맞춤법 검사 사용 안 함
 
 합니다 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성 컨트롤 여부 맞춤법 검사 사용 가능 합니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 맞춤법 오류가 표시 됩니다.
 
-그러나 사용자 이름을 입력 하는 등의 일부 텍스트 항목 시나리오에 대 한 맞춤법 검사에서는 음수 환경 등을 설정 하 여 비활성화 해야 합니다 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`:
+그러나 사용자 이름을 입력 하는 등의 일부 텍스트 항목 시나리오에 대 한 맞춤법 검사 음수 환경을 제공 하 고 설정 하 여 비활성화 해야 합니다 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`:
 
 ```xaml
 <Entry ... IsSpellCheckEnabled="false" />
@@ -90,6 +162,23 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 
 > [!NOTE]
 > 경우는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`, 사용자 지정 키보드를 사용 하지 않을, 네이티브 맞춤법 검사기를 사용할 수 없습니다. 그러나 경우에 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 가 된 맞춤법 검사를 사용 하지 않도록 설정 하는 집합 검사와 같은 [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), `IsSpellCheckEnabled` 속성은 무시 됩니다. 에 대 한 맞춤법 검사를 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
+
+### <a name="enabling-and-disabling-text-prediction"></a>설정 및 텍스트 자동 완성을 사용 하지 않도록 설정
+
+합니다 [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) 속성 컨트롤 여부를 텍스트 예측 및 자동 텍스트 보정을 사용할 수 있습니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 하는 대로 word 예측 표시 됩니다.
+
+그러나 일부 텍스트 항목 시나리오에 대 한 사용자 이름, 텍스트 자동 완성 및 자동 텍스트를 입력 하는 등 수정 음수 환경을 제공 하 고 설정 하 여 비활성화 해야 합니다 [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) 속성을 `false`:
+
+```xaml
+<Entry ... IsTextPredictionEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsTextPredictionEnabled = false };
+```
+
+> [!NOTE]
+> 경우는 [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) 속성 `false`,이 고 사용자 지정 키보드 가장 되지 않습니다 텍스트 자동 완성 및 자동 사용 텍스트 수정 되지 합니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
 
 ### <a name="placeholders"></a>자리 표시자
 
@@ -141,7 +230,6 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![](entry-images/passwordplaceholder.png "항목 IsPassword 및 자리 표시자 예제")
 
-
 ### <a name="colors"></a>색
 
 항목은 사용자 지정 배경 및 텍스트 색의 다음 바인딩 가능한 속성을 통해 사용 하도록 설정할 수 있습니다.
@@ -191,12 +279,12 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 두 이벤트를 노출 하는 항목:
 
-- [TextChanged](xref:Xamarin.Forms.Entry.TextChanged) &ndash; 항목의 텍스트 변경 될 때 발생 합니다. 전과 변경 후에 텍스트를 제공합니다.
-- [완료](xref:Xamarin.Forms.Entry.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
+- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; 항목의 텍스트 변경 될 때 발생 합니다. 전과 변경 후에 텍스트를 제공합니다.
+- [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
 
 ### <a name="completed"></a>완료
 
-`Completed` 이벤트 진입점와의 상호 작용의 완료에 대응 하는 데 사용 됩니다. `Completed` 키보드에서 return 키를 입력 하 여 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
+`Completed` 이벤트 진입점와의 상호 작용의 완료에 대응 하는 데 사용 됩니다. `Completed` 키보드에서 return 키를 눌러 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -217,6 +305,8 @@ XAML에서 completed 이벤트를 구독할 수 있습니다.
 var entry = new Entry ();
 entry.Completed += Entry_Completed;
 ```
+
+후 합니다 [ `Completed` ](xref:Xamarin.Forms.Entry.Completed) 어떤 이벤트가 발생 `ICommand` 에 지정 된를 [ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand) 속성 실행 되 면 사용 하 여를 `object` 에 지정 된는 [ `ReturnCommandParameter` ](xref:Xamarin.Forms.Entry.ReturnCommandParameter) 속성에 전달 되는 `ICommand`합니다.
 
 ### <a name="textchanged"></a>TextChanged
 

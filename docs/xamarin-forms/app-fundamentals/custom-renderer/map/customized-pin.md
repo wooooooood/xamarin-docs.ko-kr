@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998318"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203087"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -240,7 +240,7 @@ namespace CustomRenderer.iOS
 `GetViewForAnnotation` 메서드는 `IMKAnnotation` 주석 데이터를 포함 하 고 반환 하는 `MKAnnotationView` 지도에 표시 하기 위해 다음 코드 예제에 표시 됩니다:
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotatio
 1. `GetCustomPin` 메서드를 호출 하는 주석에 대 한 사용자 지정 고정 데이터를 반환 합니다.
 1. 메모리를 절약 하는 주석의 보기에 대 한 호출을 사용 하 여 다시 사용할 수 있도록 풀링되 [ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/)합니다.
 1. `CustomMKAnnotationView` 클래스를 확장 합니다 `MKAnnotationView` 클래스와 `Id` 및 `Url` 속성에서 동일한 속성에 해당 하는 `CustomPin` 인스턴스. 새 인스턴스를 `CustomMKAnnotationView` 주석이 것임 만들어집니다 `null`:
-  - `CustomMKAnnotationView.Image` 맵에 주석을 나타내는 이미지 속성이 있습니다.
-  - 합니다 `CustomMKAnnotationView.CalloutOffset` 속성을 `CGPoint` 설명선이 주석 위에 가운데 맞춤 될를 지정 하는 합니다.
-  - `CustomMKAnnotationView.LeftCalloutAccessoryView` 주석 제목 및 주소를 왼쪽에 표시 되는 monkey 이미지 속성이 있습니다.
-  - `CustomMKAnnotationView.RightCalloutAccessoryView` 속성을 *정보* 주석 제목과 주소의 오른쪽에 표시 되는 단추입니다.
-  - 합니다 `CustomMKAnnotationView.Id` 속성을 `CustomPin.Id` 속성에서 반환 되는 `GetCustomPin` 메서드. 이렇게 하면 갖도록 식별할 수에 대 한 주석을 [설명선 추가로 사용자 지정할 수 있습니다](#Selecting_the_Annotation)필요한 경우.
-  - 합니다 `CustomMKAnnotationView.Url` 속성을 `CustomPin.Url` 속성에서 반환 되는 `GetCustomPin` 메서드. 때 URL을 이동 하 게 될 사용자 [가 올바른 설명선 액세서리 뷰에 표시 단추를 누를](#Tapping_on_the_Right_Callout_Accessory_View)합니다.
+    - `CustomMKAnnotationView.Image` 맵에 주석을 나타내는 이미지 속성이 있습니다.
+    - 합니다 `CustomMKAnnotationView.CalloutOffset` 속성을 `CGPoint` 설명선이 주석 위에 가운데 맞춤 될를 지정 하는 합니다.
+    - `CustomMKAnnotationView.LeftCalloutAccessoryView` 주석 제목 및 주소를 왼쪽에 표시 되는 monkey 이미지 속성이 있습니다.
+    - `CustomMKAnnotationView.RightCalloutAccessoryView` 속성을 *정보* 주석 제목과 주소의 오른쪽에 표시 되는 단추입니다.
+    - 합니다 `CustomMKAnnotationView.Id` 속성을 `CustomPin.Id` 속성에서 반환 되는 `GetCustomPin` 메서드. 이렇게 하면 갖도록 식별할 수에 대 한 주석을 [설명선 추가로 사용자 지정할 수 있습니다](#Selecting_the_Annotation)필요한 경우.
+    - 합니다 `CustomMKAnnotationView.Url` 속성을 `CustomPin.Url` 속성에서 반환 되는 `GetCustomPin` 메서드. 때 URL을 이동 하 게 될 사용자 [가 올바른 설명선 액세서리 뷰에 표시 단추를 누를](#Tapping_on_the_Right_Callout_Accessory_View)합니다.
 1. 합니다 [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) 속성이 `true` 설명선 주석을 탭 할 때 표시 되도록 합니다.
 1. 주석이 지도에 표시 하기 위해 반환 됩니다.
 

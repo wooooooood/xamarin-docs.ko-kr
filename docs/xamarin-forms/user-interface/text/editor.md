@@ -6,19 +6,19 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 4879ff88d5bbdab5aa92024bee7f50239a141e3b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/13/2018
+ms.openlocfilehash: 2ec9ba6e39673b5a60911f9a9ae70474dbe2443b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995869"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203113"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
 _여러 줄 텍스트 입력_
 
-`Editor` 컨트롤은 여러 줄 입력을 허용 하는 데 사용 합니다. 이 문서에서는 설명 합니다.
+합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 컨트롤은 여러 줄 입력을 허용 하는 데 사용 합니다. 이 문에서는 다음과 같은 내용을 설명합니다.
 
 - **[사용자 지정](#customization)**  &ndash; 키보드 및 색 옵션입니다.
 - **[상호 작용](#interactivity)**  &ndash; 에 대 한 상호 작용을 위해 수신 대기할 수 있는 이벤트입니다.
@@ -27,7 +27,7 @@ _여러 줄 텍스트 입력_
 
 ### <a name="setting-and-reading-text"></a>텍스트를 읽고 설정
 
-`Editor`, 다른 텍스트 표시 보기를 노출 합니다 `Text` 속성입니다. 이 속성을 설정 하 고 제공한 텍스트 읽기를 사용할 수 있습니다는 `Editor`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
+[ `Editor` ](xref:Xamarin.Forms.Editor), 기타 텍스트 표시 보기와 같이 표시를 `Text` 속성입니다. 이 속성을 설정 하 고 제공한 텍스트 읽기를 사용할 수 있습니다는 `Editor`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -59,20 +59,86 @@ var editor = new Editor { ... MaxLength = 10 };
 
 A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력 하지 않고 사용할 수 있습니다 값 `int.MaxValue`에 대 한 기본 값인는 [ `Editor` ](xref:Xamarin.Forms.Editor), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
 
-### <a name="keyboards"></a>키보드
+### <a name="auto-sizing-an-editor"></a>자동 크기 조정 편집기
 
-사용자가 상호 작용할 때 표시 되는 키보드를 `Editor` 를 통해 프로그래밍 방식으로 설정할 수 있습니다 합니다 [ ``Keyboard`` ](xref:Xamarin.Forms.Keyboard) 속성입니다.
+[ `Editor` ](xref:Xamarin.Forms.Editor) 설정 하면 크기를 자동으로 해당 콘텐츠를 지정할 수는 [ `Editor.AutoSize` ](xref:Xamarin.Forms.Editor.AutoSize) 속성을 [ `TextChanges` ](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), 합니다 의값인[ `EditoAutoSizeOption` ](xref:Xamarin.Forms.EditorAutoSizeOption) 열거형입니다. 이 열거형에는 두 값에 있습니다.
 
-키보드 형식에 대 한 옵션은 같습니다.
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) 자동 크기 조정을 해제 되 고 값은 기본값을 나타냅니다.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) 자동 크기 조정 사용 됨을 나타냅니다.
 
-- **기본** &ndash; 기본 키보드
-- **채팅** &ndash; 문자 보내기 및 위치에 사용 되는 모 지 유용
-- **전자 메일** &ndash; 전자 메일 주소를 입력할 때 사용
-- **숫자** &ndash; 숫자를 입력할 때 사용
-- **전화** &ndash; 전화 번호를 입력할 때 사용
-- **Url** &ndash; 파일 경로 & 웹 주소를 입력 하는 데
+이렇게 하려면 코드에서 다음과 같이 합니다.
 
-[예제에서는 각 키보드](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 레시피 섹션에서.
+```xaml
+<Editor Text="Enter text here" AutoSize="TextChanges" />
+```
+
+```csharp
+var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOption.TextChanges };
+```
+
+자동 크기 조정 설정 된 경우, 높이 [ `Editor` ](xref:Xamarin.Forms.Editor) 사용자 텍스트를 사용 하 여 채웁니다 고 높이 사용자는 텍스트를 삭제 하는 경우 늘어납니다.
+
+> [!NOTE]
+> [ `Editor` ](xref:Xamarin.Forms.Editor) 는 자동 크기가 아닌 경우는 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성이 설정 되어 있습니다.
+
+### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
+
+사용자가 상호 작용할 때 표시 되는 키보드를 [ `Editor` ](xref:Xamarin.Forms.Editor) 를 통해 프로그래밍 방식으로 설정할 수 있습니다 합니다 [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) 합니다 에서다음속성중하나에속성을[ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스:
+
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 문자 보내기에 대 한 사용을 모 지 유용 합니다.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – 기본 키보드를 합니다.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) -전자 메일 주소를 입력할 때 사용 합니다.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) -숫자를 입력할 때 사용 합니다.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – 사용 하지 않고 텍스트를 입력할 때 [ `KeyboardFlags` ](xref:Xamarin.Forms.KeyboardFlags) 지정 합니다.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – 전화 번호를 입력할 때 사용 합니다.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용 합니다.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 사용 파일 경로 & 웹 주소를 입력 합니다.
+
+이렇게 하려면 XAML에서 다음과 같이 합니다.
+
+```xaml
+<Editor Keyboard="Chat" />
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+var editor = new Editor { Keyboard = Keyboard.Chat };
+```
+
+각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 리포지토리.
+
+합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값 사용자 지정 된 메서드에 인수로 지정 된 대로 `Keyboard` 반환 합니다. `KeyboardFlags` 열거형 다음 값을 포함 합니다.
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 기능이 없는 키보드에 추가 됩니다.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) -입력 한 각 문장의 첫 번째 단어의 첫 번째 문자는 자동으로 대문자 여야 나타냅니다.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) -입력 한 텍스트에 해당 맞춤법 검사를 수행할지를 나타냅니다.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) -입력 한 텍스트 완성 제공 되는 해당 단어를 나타냅니다.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – 각 단어의 첫 번째 문자는 자동으로 대문자 여야 나타냅니다.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – 모든 문자를 자동으로 대문자를 나타냅니다.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – 없습니다 자동 대/소문자가 발생 함을 나타냅니다.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – spellcheck, 단어 완성 및 문장의 첫 글자를 대문자로 입력 한 텍스트의 발생을 나타냅니다.
+
+다음 XAML 코드 예제에서는 기본 사용자 지정 하는 방법을 보여 줍니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 단어 완성을 제공 하 고 모든 입력된 문자를 대문자로 표시 하 고 있습니다.:
+
+```xaml
+<Editor>
+    <Editor.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Editor.Keyboard>
+</Editor>
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+var editor = new Editor();
+editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
 
 ### <a name="enabling-and-disabling-spell-checking"></a>설정 및 맞춤법 검사 사용 안 함
 
