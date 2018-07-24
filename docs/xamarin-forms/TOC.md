@@ -310,6 +310,7 @@
 ## [고급 개념 및 내부 요소](internals/index.md)
 ### [빠른 렌더러](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
+### [종속성 확인](internals/dependency-resolution.md)
 ## [문제 해결](troubleshooting/index.md)
 ### [질문과 대답](troubleshooting/questions/index.md)
 #### [Xamarin.Forms 기본 템플릿을 최신 NuGet 패키지로 업데이트할 수 있나요?](troubleshooting/questions/update-forms-template.md)
