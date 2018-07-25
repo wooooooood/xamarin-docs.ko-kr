@@ -113,6 +113,8 @@
 ## [플랫폼 기능](platform/index.md)
 ### [Android Beam](platform/android-beam.md)
 ### [Android 매니페스트](platform/android-manifest.md)
+### [Xamarin.Android를 사용하여 파일 액세스](platform/files/index.md)
+#### [외부 저장소](platform/files/external-storage.md)
 ### [지문 인증](platform/fingerprint-authentication/index.md)
 #### [시작](platform/fingerprint-authentication/get-started.md)
 #### [지문 검사](platform/fingerprint-authentication/scanning.md)
