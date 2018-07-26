@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/16/2018
-ms.openlocfilehash: 57304f2f07a0834c31e32bb89a4742a2de7e861c
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 272887f0abb0785f959c542e65789d7645a583f1
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202996"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241227"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -84,7 +84,7 @@ A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력
 var entry = new Entry { Keyboard = Keyboard.Chat };
 ```
 
-각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) 리포지토리.
+각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) 리포지토리.
 
 합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값 사용자 지정 된 메서드에 인수로 지정 된 대로 `Keyboard` 반환 합니다. `KeyboardFlags` 열거형 다음 값을 포함 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: f6ca8f0900c8bc325cc49a7484dabe5bf2534257
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999092"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241213"
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -91,7 +91,7 @@ Windows 플랫폼 (UWP (유니버설), 지원 되는 방향에 설정 된 **Pack
 
 ## <a name="reacting-to-changes-in-orientation"></a>방향에서 변경에 대응
 
-Xamarin.Forms 앱 공유 코드의 방향 변경 내용을 알리는 대 한 기본 이벤트를 제공 하지 않습니다. 그러나를 `SizeChanged` 의 이벤트를 `Page` 될 때 발생 너비 또는 높이 `Page` 변경 합니다. 때의 너비는 `Page` 높이 보다 큽니다 장치가 가로 모드입니다. 자세한 내용은 [화면 방향에 따라 이미지를 표시할](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)합니다.
+Xamarin.Forms 앱 공유 코드의 방향 변경 내용을 알리는 대 한 기본 이벤트를 제공 하지 않습니다. 그러나를 `SizeChanged` 의 이벤트를 `Page` 될 때 발생 너비 또는 높이 `Page` 변경 합니다. 때의 너비는 `Page` 높이 보다 큽니다 장치가 가로 모드입니다. 자세한 내용은 [화면 방향에 따라 이미지를 표시할](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)합니다.
 
 > [!NOTE]
 > 공유 코드에서 방향 변경 알림 받기에 대 한 기존에 사용 가능한 NuGet 패키지가 있습니다. 참조를 [GitHub 리포지토리에서](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 내용은 합니다.
@@ -475,4 +475,4 @@ protected override void OnSizeAllocated (double width, double height){
 - [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [반응 형 레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [화면 방향에 따라 이미지를 표시 합니다.](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [화면 방향에 따라 이미지를 표시 합니다.](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

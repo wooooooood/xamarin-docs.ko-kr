@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms에서 종속성 확인
-description: 이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms 종속성 확인 메서드를 삽입 하는 방법에 설명 .
+description: 이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: b9e49d32dd4b0b02c742cd829eafabd1c55230f0
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203190"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242383"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms에서 종속성 확인
 
-_이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms 종속성 확인 메서드를 삽입 하는 방법에 설명 . 코드 예제에서 수행 되는 [종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) 샘플입니다._
+_이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다. 코드 예제에서 수행 되는 [종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) 샘플입니다._
 
 모델-뷰-ViewModel (MVVM) 패턴을 사용 하는 Xamarin.Forms 응용 프로그램의 컨텍스트에서 서비스를 등록 하 고 모델 보기에 주입 하 한 및 보기 모델을 해결 하는 등록에 대 한 종속성 주입 컨테이너를 사용할 수 있습니다. 뷰 모델을 만드는 동안 컨테이너는 필요한 모든 종속성을 삽입 합니다. 해당 종속성을 만들지 않은 경우 컨테이너를 만들고 먼저 종속성을 확인 합니다. 종속성 주입을 모델 보기에 종속성 주입의 예제를 포함 하는 방법에 대 한 자세한 내용은 참조 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)합니다.
 
@@ -170,7 +170,7 @@ void RegisterTypes()
 }
 ```
 
-이 예제에서는 `App.RegisterTypeWithParameters` 메서드 레지스터를 `VideoPlayerRenderer` 종속성 주입 컨테이너를 사용 하 여 등록 메서드를 사용 하 여 확인 합니다 `MainActivity` 인스턴스도 삽입 되는 `Context` 하 고 인수를 합니다 `Logger`유형으로 삽입할는 `ILogger` 인수입니다.
+이 예제는 `App.RegisterTypeWithParameters` 메서드 레지스터는 `VideoPlayerRenderer` 종속성 주입 컨테이너를 사용 하 여 합니다. 등록 메서드를 사용 하면를 `MainActivity` 인스턴스도 삽입 되는 `Context` 인수를 지정 하 고 있는 `Logger` 형식으로 삽입 되는 `ILogger` 인수.
 
 ### <a name="registering-effects"></a>효과 등록합니다.
 

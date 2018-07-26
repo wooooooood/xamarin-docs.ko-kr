@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: 5e9bf9555d10c8b34ad9323529d4af5ea66110f8
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 688457ab25398e8c5b9848a7e58f6163db4c0a05
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156784"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242396"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
@@ -607,7 +607,7 @@ Apple에.xib 또는 스토리 보드 파일은 iOS 8을 대상으로 하는 응�
 
 시작 화면을 만드는 방법에 대 한 자세한 내용은 아래 문서를 참조 하세요.
 
-- [.xib을 사용 하 여 시작 화면 만들기](https://developer.xamarin.com/recipes/ios/general/templates/launchscreen-xib/)
+- [.xib을 사용 하 여 시작 화면 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/templates/launchscreen-xib)
 - [시작 화면 스토리 보드를 사용 하 여 관리](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]

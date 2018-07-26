@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: b593815df9ce942a98496806116bacfa63e2a2d9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: dafa60ff57f34bd4169af48e380079d9637d8d26
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999087"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241109"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 그림 라이브러리에서 선택
 
@@ -48,7 +48,7 @@ namespace DependencyServiceSample
 
 ## <a name="ios-implementation"></a>iOS 구현
 
-IOS 구현의 합니다 `IPicturePicker` 사용 하 여 인터페이스를 [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) 에 설명 된 대로 [ **갤러리에서 사진을 선택** ](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/) 작성법 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)합니다.
+IOS 구현의 합니다 `IPicturePicker` 사용 하 여 인터페이스를 [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) 에 설명 된 대로 [ **갤러리에서 사진을 선택** ](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) 작성법 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)합니다.
 
 IOS 구현에 포함 된 [ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) 샘플 코드의 iOS 프로젝트에서 클래스. 이 클래스를 볼 수 있도록 합니다 `DependencyService` 관리자를 사용 하 여 클래스를 식별 해야는 [`assembly`] 유형의 특성입니다 `Dependency`, 클래스는 public 이어야 하며 명시적으로 구현 하 고는 `IPicturePicker` 인터페이스:
 
@@ -146,7 +146,7 @@ IOS 응용 프로그램에 휴대폰의 사진 라이브러리에 액세스 하�
 
 ## <a name="android-implementation"></a>Android 구현
 
-Android 구현에 설명 된 기술을 사용 합니다 [ **이미지를 선택** ](https://developer.xamarin.com/recipes/android/other_ux/pick_image/) 작성법 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)합니다. 그러나는 사용자가 그림 라이브러리에서 이미지를 선택 하는 경우 호출 되는 메서드를 `OnActivityResult` 에서 파생 된 클래스에서 재정의 `Activity`합니다. 따라서 수직 [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) Android 프로젝트에 클래스 필드, 속성 및 재정의 사용 하 여 보완 되었습니다에 `OnActivityResult` 메서드:
+Android 구현에 설명 된 기술을 사용 합니다 [ **이미지를 선택** ](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image) 작성법 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)합니다. 그러나는 사용자가 그림 라이브러리에서 이미지를 선택 하는 경우 호출 되는 메서드를 `OnActivityResult` 에서 파생 된 클래스에서 재정의 `Activity`합니다. 따라서 수직 [ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) Android 프로젝트에 클래스 필드, 속성 및 재정의 사용 하 여 보완 되었습니다에 `OnActivityResult` 메서드:
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -314,6 +314,6 @@ pickPictureButton.Clicked += async (sender, e) =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [(IOS) 갤러리에서 사진을 선택합니다](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/)
-- [(Android) 이미지를 선택 합니다.](https://developer.xamarin.com/recipes/android/other_ux/pick_image/)
+- [(IOS) 갤러리에서 사진을 선택합니다](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)
+- [(Android) 이미지를 선택 합니다.](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)
 - [DependencyService (샘플)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)

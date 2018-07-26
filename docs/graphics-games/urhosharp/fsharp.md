@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: a4e1a31a2591c799a153e1333e4a4a4a0719a107
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 430c4eca7c6dbd7107692246b70ff93bafa44d01
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111201"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241836"
 ---
 # <a name="programming-urhosharp-with-f"></a>F #으로 UrhoSharp 프로그래밍
 
@@ -19,11 +19,11 @@ UrhoSharp 동일한 라이브러리 및 C# 프로그래머가 사용 되는 개�
 
 C + + 세계에서 발생 하는 여러 라이브러리와 같은 많은 UrhoSharp 함수 부울 또는 성공 또는 실패를 나타내는 정수를 반환 합니다. 사용 해야 `|> ignore` 이러한 값을 무시 합니다.
 
-합니다 [샘플 프로그램](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) UrhoSharp F #에서 "Hello World"입니다.
+합니다 [샘플 프로그램](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) UrhoSharp F #에서 "Hello World"입니다.
 
 ## <a name="creating-an-empty-project"></a>빈 프로젝트 만들기
 
-UrhoSharp에 대 한 F # 템플릿이 없습니다 아직 고유한 UrhoSharp 프로젝트를 만들 수 있으므로 사용할 수 있습니다 하거나 시작 합니다 [샘플](https://github.com/xamarin/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) 이러한 단계를 따르세요.
+UrhoSharp에 대 한 F # 템플릿이 없습니다 아직 고유한 UrhoSharp 프로젝트를 만들 수 있으므로 사용할 수 있습니다 하거나 시작 합니다 [샘플](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) 이러한 단계를 따르세요.
 
 1. Mac 용 Visual Studio에서 새를 만들 **솔루션**합니다. 선택할 **iOS > 앱 > 단일 뷰 앱** 선택한 **F #** 구현 언어입니다. 
 1. 삭제 된 **Main.storyboard** 파일입니다. 열기는 **Info.plist** 파일 및를 **iPhone / iPod 배포 정보** 창 삭제를 `Main` 문자열을 **주 인터페이스** 드롭다운 합니다.
@@ -114,4 +114,4 @@ type AppDelegate () =
 
 ## <a name="related-links"></a>관련 링크
 
-- [(샘플) GitHub에서 찾아보기](https://github.com/xamarinhttps://developer.xamarin.com/recipes/tree/master/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)
+- [(샘플) GitHub에서 찾아보기](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp)
