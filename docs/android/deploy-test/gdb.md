@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 1292db3534570dace90639958a3d5be9f6466716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 886cc1de87bd8225bd0389d2e7b84b546ffb39d7
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765248"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241499"
 ---
 # <a name="gdb"></a>GDB
 
@@ -145,7 +145,7 @@ GNU gdb (GDB) 7.3.1-gg2
 2.  앱 디버깅 활성화.
 3.  액세스 가능한 `gdbserver`.
 
-디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 응용 프로그램에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/)을 편집하여 추가할 수 있습니다.
+디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 응용 프로그램에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)을 편집하여 추가할 수 있습니다.
 
 앱 디버깅은 [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) 사용자 지정 특성 속성을 `true`로 설정하거나 **속성/AndroidManifest.xml**을 편집하고 `//application/@android:debuggable` 특성을 `true`로 설정하여 활성화할 수 있습니다.
 

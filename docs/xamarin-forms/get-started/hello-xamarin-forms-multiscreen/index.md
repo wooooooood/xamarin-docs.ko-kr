@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 2132e1d0732a727d90e3eb7f36085f13c78c2e7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a7d3b29bd9d3ab3cfee07a30bb23daab76de22a
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30789516"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241720"
 ---
 # <a name="hello-xamarinforms-multiscreen"></a>Hello, Xamarin.Forms 멀티스크린
 
@@ -32,6 +32,6 @@ _이 가이드는 Hello, Xamarin.Forms 가이드에서 만들어진 Phoneword �
 
 - [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Visual Studio의 디버깅](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Mac용 Visual Studio 작성법-디버깅](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Mac용 Visual Studio 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [무료 사용자 진행 방식 학습(비디오)](https://university.xamarin.com/self-guided)
 - [Xamarin 시작(비디오)](https://developer.xamarin.com/videos/)

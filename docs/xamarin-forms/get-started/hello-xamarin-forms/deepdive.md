@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: f51992ec5311bdf0c7df7478651398f6ed8491a9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996235"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242227"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 심층 분석
 
@@ -79,7 +79,7 @@ Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는
 - **MainPage.xaml.cs** – `MainPage` 클래스의 코드 숨김으로, 사용자가 페이지와 상호 작용할 때 실행되는 비즈니스 논리를 포함하고 있습니다.
 - **PhoneTranslator.cs** – 전화 단어를 전화 번호로 변환하는 역할을 담당하는 비즈니스 논리로, **MainPage.xaml.cs**에서 호출됩니다.
 
-Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응용 프로그램 분석](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy)을 참조하세요. Xamarin.Android 응용 프로그램에 대한 자세한 내용은 [Xamarin.Android 응용 프로그램 분석](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)을 참조하세요.
+Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응용 프로그램 분석](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application)을 참조하세요. Xamarin.Android 응용 프로그램에 대한 자세한 내용은 [Xamarin.Android 응용 프로그램 분석](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)을 참조하세요.
 
 ## <a name="architecture-and-application-fundamentals"></a>아키텍처 및 응용 프로그램 기본 사항
 
@@ -325,7 +325,7 @@ Xamarin.Forms에 대한 Phoneword 응용 프로그램에는 이 문서에서 다
 
 ## <a name="testing-and-deployment"></a>테스트 및 배포
 
-Mac용 Visual Studio와 Visual Studio는 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 응용 프로그램 디버그는 응용 프로그램 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/), [단계별 코드 실행](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/) 및 [로그 창에 정보 출력](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)을 참조하세요.
+Mac용 Visual Studio와 Visual Studio는 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 응용 프로그램 디버그는 응용 프로그램 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [단계별 코드 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) 및 [로그 창에 정보 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)을 참조하세요.
 
 시뮬레이터는 응용 프로그램 배포 및 테스트를 시작하기에 좋은 위치이며, 응용 프로그램을 테스트하는 유용한 기능을 제공합니다. 그러나 사용자가 최종 응용 프로그램을 시뮬레이터에서 사용하지는 않으므로 초기에 자주 실제 장치에서 응용 프로그램을 테스트해야 합니다. iOS 장치 프로비전에 대한 자세한 내용은 [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md)을 참조하세요. Android 장치 프로비전에 대한 자세한 내용은 [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하세요.
 

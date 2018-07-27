@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 1b017f282a1295dba4b2a051928b54fc16ff746b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 4f5f3ab00b55de270c209d6fa7082c3acc40b5ef
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243742"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241307"
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
 
@@ -34,7 +34,7 @@ _이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio 사용한 Xama
 
 - [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Visual Studio의 디버깅](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Mac용 Visual Studio 작성법-디버깅](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Mac용 Visual Studio 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [무료 사용자 진행 방식 학습(비디오)](https://university.xamarin.com/self-guided)
 - [Xamarin 시작(비디오)](https://developer.xamarin.com/videos/)
 - [Hello, Xamarin.Forms iOS 통합 문서](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)

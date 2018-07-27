@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997441"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242409"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -340,7 +340,7 @@ Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
-이미지는 응용 프로그램에서 사용하는 가장 비싼 리소스 중 일부이며, 고해상도로 캡처되는 경우가 많습니다. 여기에서 활발하게 세부적인 전체 이미지를 만드는 동안 해당 이미지를 표시하는 응용 프로그램에는 일반적으로 이미지를 디코딩할 더 많은 CPU 사용량 및 디코딩된 이미지를 저장할 더 많은 메모리가 필요합니다. 표시하기 위해 더 작은 크기로 축소하는 경우 메모리에서 고해상도 이미지를 디코딩할 필요가 없습니다. 대신, 예측된 디스플레이 크기에 가까운 저장된 이미지의 여러 해상도 버전을 만들어서 CPU 사용량 및 메모리 사용 공간을 줄입니다. 예를 들어 목록 보기에 표시되는 이미지는 전체 화면에 표시되는 이미지보다 해상도가 더 낮을 가능성이 높습니다. 또한 메모리 영향을 최소화하여 효율적으로 표시하도록 축소된 버전의 고해상도 이미지를 로드할 수 있습니다. 자세한 내용은 [효율적으로 큰 비트맵 로드](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently/)를 참조하세요.
+이미지는 응용 프로그램에서 사용하는 가장 비싼 리소스 중 일부이며, 고해상도로 캡처되는 경우가 많습니다. 여기에서 활발하게 세부적인 전체 이미지를 만드는 동안 해당 이미지를 표시하는 응용 프로그램에는 일반적으로 이미지를 디코딩할 더 많은 CPU 사용량 및 디코딩된 이미지를 저장할 더 많은 메모리가 필요합니다. 표시하기 위해 더 작은 크기로 축소하는 경우 메모리에서 고해상도 이미지를 디코딩할 필요가 없습니다. 대신, 예측된 디스플레이 크기에 가까운 저장된 이미지의 여러 해상도 버전을 만들어서 CPU 사용량 및 메모리 사용 공간을 줄입니다. 예를 들어 목록 보기에 표시되는 이미지는 전체 화면에 표시되는 이미지보다 해상도가 더 낮을 가능성이 높습니다. 또한 메모리 영향을 최소화하여 효율적으로 표시하도록 축소된 버전의 고해상도 이미지를 로드할 수 있습니다. 자세한 내용은 [효율적으로 큰 비트맵 로드](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently)를 참조하세요.
 
 이미지 해상도와 관계 없이 이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 응용 프로그램에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다.
 
