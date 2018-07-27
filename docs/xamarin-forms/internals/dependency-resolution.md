@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242383"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270490"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms에서 종속성 확인
 
@@ -111,7 +111,7 @@ public partial class App : Application
 
 플랫폼 프로젝트에서 형식 등록을 수행 합니다 `IContainer` 호출 하 여 수행 되는 개체를 빌드해야 합니다 `BuildContainer` 메서드. 이 메서드는 Autofac의 호출 `Build` 메서드를 `ContainerBuilder` 적용 된 등록을 포함 하는 새 종속성 주입 컨테이너를 빌드하는 경우.
 
-이어지는 섹션에는 `Logger` 클래스를 구현 하는 `ILogger` 인터페이스, 클래스 생성자에 주입 됩니다. `Logger` 사용 하 여 클래스 구현 간단한 로깅 기능을 `Debug.WriteLine` 메서드를 사용자 지정 렌더러의 경우 효과에 서비스를 삽입할 수 있습니다 하는 방법을 보여 주기 위해 사용 됩니다 및 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 구현 합니다.
+이어지는 섹션에는 `Logger` 클래스를 구현 하는 `ILogger` 인터페이스 클래스 생성자에 주입 됩니다. `Logger` 사용 하 여 클래스 구현 간단한 로깅 기능을 `Debug.WriteLine` 메서드를 사용자 지정 렌더러의 경우 효과에 서비스를 삽입할 수 있습니다 하는 방법을 보여 주기 위해 사용 됩니다 및 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 구현 합니다.
 
 ### <a name="registering-custom-renderers"></a>사용자 지정 렌더러를 등록합니다.
 

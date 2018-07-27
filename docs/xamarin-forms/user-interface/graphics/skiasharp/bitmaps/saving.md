@@ -2,17 +2,17 @@
 title: SkiaSharp 비트맵 파일을 저장 하는 중
 description: 사용자의 사진 라이브러리에 비트맵을 저장 하기 위한 SkiaSharp에서 지 원하는 다양 한 파일 형식을 살펴봅니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms++++++
+ms.technology: xamarin-forms
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2018
-ms.openlocfilehash: ee9690d52d18c1b0da2b35144b41ae856d64a85d
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5ef18728bbf417750575bad88b3498f66fa585c4
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131523"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276017"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵 파일을 저장 하는 중
 

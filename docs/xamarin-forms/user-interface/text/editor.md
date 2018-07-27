@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/13/2018
-ms.openlocfilehash: 9774dcad14c2e2fc7e1203ef887a19f4b96218ba
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241477"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270458"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -108,7 +108,7 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 
 각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) 리포지토리.
 
-합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값 사용자 지정 된 메서드에 인수로 지정 된 대로 `Keyboard` 반환 합니다. `KeyboardFlags` 열거형 다음 값을 포함 합니다.
+합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 사용자 지정 된 메서드에 인수로 지정 된 열거형 값 `Keyboard` 반환 합니다. `KeyboardFlags` 열거형 다음 값을 포함 합니다.
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 기능이 없는 키보드에 추가 됩니다.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) -입력 한 각 문장의 첫 번째 단어의 첫 번째 문자는 자동으로 대문자 여야 나타냅니다.
