@@ -6,6 +6,7 @@
 ## [응용 프로그램 기본 사항](app-fundamentals/index.md)
 ### [액세스 가능성](app-fundamentals/accessibility.md)
 ### [공통 패턴 및 관용구](app-fundamentals/patterns.md)
+### [콘솔 앱](app-fundamentals/console.md)
 ### [macOS API](app-fundamentals/mac-apis.md)
 ### [.xib 파일](app-fundamentals/xib.md)
 ### [.storyboard/.xib-less 사용자 인터페이스 디자인](app-fundamentals/xibless-ui.md)
