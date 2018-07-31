@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 6a49f16f935f058b002d260825cfb005df0c6eef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831555"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353765"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,7 +44,8 @@ Android, iOS 및 UWP 고유 운영 체제 및 플랫폼 Api 개발자가 모든 
 * [지리적 위치](geolocation.md?context=xamarin/xamarin-forms) – 장치의 GPS 위치를 검색 합니다.
 * [자이로스코프가](gyroscope.md?context=xamarin/xamarin-forms) – 추적 장치의 세 가지 기본 축 기준으로 회전 합니다.
 * [지자기 센터](magnetometer.md?context=xamarin/xamarin-forms) – 지구 자기장을 기준으로 장치의 방향을 검색 합니다.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – 응용 프로그램의 주 스레드에서 코드 실행 합니다. 
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – 응용 프로그램의 주 스레드에서 코드 실행 합니다.
+* [맵](maps.md?content=xamarin/xamarin-forms) – 특정 위치에 지도 응용 프로그램을 엽니다.
 * [브라우저를 열고](open-browser.md?context=xamarin/xamarin-forms) – 빠르고 쉽게 특정 웹 사이트에 브라우저를 엽니다.
 * [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) – 3 차원 공간에서 장치의 방향을 검색 합니다.
 * [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) – 전화 걸기를 열려면 합니다.

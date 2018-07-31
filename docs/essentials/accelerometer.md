@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 15e2cb69806f281e88e226b7bcd87a20e149d508
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947311"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353843"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials:가 속도계
 
@@ -33,7 +33,7 @@ using Xamarin.Essentials;
 public class AccelerometerTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public AccelerometerTest()
     {
@@ -41,7 +41,7 @@ public class AccelerometerTest
         Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
     }
 
-    void Accelerometer_ReadingChanged(AccelerometerChangedEventArgs e)
+    void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: X: {data.Acceleration.X}, Y: {data.Acceleration.Y}, Z: {data.Acceleration.Z}");
@@ -81,7 +81,7 @@ X 축이 가로 및 오른쪽에 Y 축이 세로 및 지점 지점과 Z 축 화�
 
 * 가속 가치가 +1.00 G 장치 플랫 테이블에 있으면, 또는 (+ 9.81 m/s ^2), 해당 장치의 가속도 하는 (0 m/s ^2) 중력의 빼기 (-9.81 m/s ^2) 및 7.와 같이 정규화 된
 
-* 장치 플랫 테이블에서 및는 m/s는 가속을 사용 하 여 무한대 방향으로 푸시 될 때 ^ + 9.81 장치의 가속에 해당 하는 2, 가속 값은 (+ m 초당 ^2) 중력의 빼기 (-9.81 m/s ^2) 및 7.에서 정규화 
+* 장치 플랫 테이블에서 및는 m/s는 가속을 사용 하 여 무한대 방향으로 푸시 될 때 ^ + 9.81 장치의 가속에 해당 하는 2, 가속 값은 (+ m 초당 ^2) 중력의 빼기 (-9.81 m/s ^2) 및 7.에서 정규화
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

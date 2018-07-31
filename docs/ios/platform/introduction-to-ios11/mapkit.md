@@ -1,41 +1,41 @@
 ---
 title: IOS 11에서 MapKit의 새로운 기능
-description: '이 문서에서는 iOS 11의에서 새로운 MapKit 기능 설명: 표식, 나침반 단추, 눈금 보기 및 사용자 추적 단추를 그룹화 합니다.'
+description: '이 문서에서는 iOS 11의에서 새로운 MapKit 기능 설명: 표식, 나침반 단추, 확장 보기 및 사용자 추적 단추를 그룹화 합니다.'
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
-ms.openlocfilehash: f73078a2dcbaeefeb5608ce7ec1e2c12b261acad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/30/2017
+ms.openlocfilehash: c060a7bbc8d5968aeaca5f84743cdf22513dfbec
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787408"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350588"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>IOS 11에서 MapKit의 새로운 기능
 
-iOS 11 MapKit에 다음과 같은 새로운 기능을 추가합니다.
+iOS 11 MapKit를 다음과 같은 새로운 기능을 추가합니다.
 
-- [클러스터링 주석](#clustering)
+- [클러스터링 하는 주석](#clustering)
 - [나침반 단추](#compass)
 - [확장 보기](#scale)
 - [사용자 추적 단추](#user-tracking)
 
-![나침반 단추 및 클러스터 된 마커를 보여 주는 지도](mapkit-images/cyclemap-heading.png)
+![나침반 단추 및 클러스터형된 마커를 보여 주는 지도](mapkit-images/cyclemap-heading.png)
 
 <a name="clustering" />
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>확대/축소 하는 동안 자동으로 그룹화 표식
 
-샘플 [MapKit 샘플 "Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) 새 iOS 11 주석 클러스터링 기능을 구현 하는 방법을 보여 줍니다.
+샘플 [MapKit 샘플 "Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) 새 iOS 11 주석의 클러스터링 기능을 구현 하는 방법을 보여 줍니다.
 
-### <a name="1-create-an-mkpointannotation-subclass"></a>1. 만들기는 `MKPointAnnotation` 하위 클래스
+### <a name="1-create-an-mkpointannotation-subclass"></a>1. 만들기는 `MKPointAnnotation` 서브 클래스
 
-지점 주석 클래스에는 각 표식을 지도에 나타냅니다. 사용 하 여 개별적으로 추가할 수 `MapView.AddAnnotation()` 사용 하 여 배열 또는 `MapView.AddAnnotations()`합니다.
+지점 annotation 클래스 맵에서 각 표식을 나타냅니다. 개별적으로 사용 하 여 추가할 수 있습니다 `MapView.AddAnnotation()` 사용 하 여 배열 또는 `MapView.AddAnnotations()`합니다.
 
-지점 주석 클래스 시각적 필요는 없으며, 표식과 연결 된 데이터를 나타내는 필요 (가장 중요 한 점은 `Coordinate` 위 도와 경도 지도에 해당 하는 속성이), 및 사용자 지정 속성:
+시각적 지점 주석을 클래스에 없는, 표식과 연결 된 데이터를 나타내는 필요 (가장 중요 한 점은 `Coordinate` 해당 위도 및 경도 맵에서 속성), 및 사용자 지정 속성:
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -57,18 +57,18 @@ public class Bike : MKPointAnnotation
 }
 ```
 
-### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. 만들기는 `MKMarkerAnnotationView` 단일 표식에 대 한 하위 클래스
+### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. 만들기는 `MKMarkerAnnotationView` 단일 표식에 대 한 하위 클래스입니다.
 
-표식 주석 각 주석의 시각적 뷰와 같은 속성을 사용 하 여 스타일 지정:
+표식 주석 각 주석의 시각적 표시는 뷰와 같은 속성을 사용 하 여 스타일 지정:
 
-- **MarkerTintColor** – 표식 색입니다.
-- **GlyphText** – 표식의에 텍스트를 표시 합니다.
-- **GlyphImage** – 표식의에 표시 되는 이미지를 설정 합니다.
-- **DisplayPriority** – z-순서 (스택 동작) 결정 구조란 표식을 사용 하 여 복잡 합니다. 중 하나를 사용 하 여 `Required`, `DefaultHigh`, 또는 `DefaultLow`합니다.
+- **MarkerTintColor** – 표식의 색입니다.
+- **GlyphText** – 표식에 텍스트를 표시 합니다.
+- **GlyphImage** – 표식에 표시 되는 이미지를 설정 합니다.
+- **DisplayPriority** – z-순서 (스택 동작)를 결정 지도 표식으로 꽉 찰 경우. 중 하나를 사용 `Required`하십시오 `DefaultHigh`, 또는 `DefaultLow`합니다.
 
 자동 클러스터링을 지원 하려면 설정 해야 합니다.
 
-- **ClusteringIdentifier** – 어떤 표식 함께 클러스터링 get를 제어 합니다. 모든 표식에 동일한 식별자를 사용 하거나 서로 다른 식별자를 사용 하 여 함께 그룹화 하는 방식을 제어할 수 있습니다.
+- **ClusteringIdentifier** – 마커 함께 클러스터를 제어 합니다. 동일한 식별자를 사용 하 여 모든 표식에 수도 있고 서로 다른 식별자를 사용 하 여 함께 그룹화 하는 방식을 제어할 수 있습니다.
 
 ```csharp
 [Register("BikeView")]
@@ -104,15 +104,15 @@ public class BikeView : MKMarkerAnnotationView
   }
 ```
 
-### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. 만들기는 `MKAnnotationView` 마커의 클러스터를 나타내기 위해
+### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. 만들기는 `MKAnnotationView` 표식의 클러스터를 나타내는
 
-표식의 클러스터 나타내는 주석 보기 동안 _수_ 단순 이미지 될, 사용자가 기대 응용 프로그램에서 개수 표식에 함께 그룹화 된에 대 한 시각적 표시를 제공 합니다.
+표식의 클러스터를 나타내는 주석을 보기 동안 _수_ 단순 이미지 수를 사용자가 예상 응용 프로그램에서 얼마나 많은 표식에 함께 그룹화 된 하는 방법에 대 한 시각 신호를 제공 합니다.
 
-[샘플 코드](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) CoreGraphics를 사용 하 여 표식으로 클러스터의 각 표식 유형 비율을 원 그래프 표현에 번호를 렌더링 합니다.
+합니다 [샘플 코드](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) CoreGraphics를 사용 하 여 각 표식 유형의 비율을 원 그래프 표현 뿐만 아니라 클러스터 표식의 수를 렌더링 합니다.
 
-설정 해야 합니다.
+또한 설정 해야 합니다.
 
-- **DisplayPriority** – z-순서 (스택 동작) 결정 구조란 표식을 사용 하 여 복잡 합니다. 중 하나를 사용 하 여 `Required`, `DefaultHigh`, 또는 `DefaultLow`합니다.
+- **DisplayPriority** – z-순서 (스택 동작)를 결정 지도 표식으로 꽉 찰 경우. 중 하나를 사용 `Required`하십시오 `DefaultHigh`, 또는 `DefaultLow`합니다.
 - **CollisionMode** – `Circle` 또는 `Rectangle`합니다.
 
 ```csharp
@@ -181,7 +181,7 @@ public class ClusterView : MKAnnotationView
 
 ### <a name="4-register-the-view-classes"></a>4. 뷰 클래스를 등록 합니다.
 
-맵 뷰 컨트롤이 만들어집니다 하 고 지도 축소 및 확대/축소 하는 대로 자동 클러스터링 동작을 사용 하도록 설정 하려면 주석 보기 유형 등록 보기에 추가 된 경우:
+경우 지도 보기 컨트롤 만들어집니다와 지도 입출력 확대/축소 하는 대로 자동 클러스터링 동작을 사용 하도록 설정 하려면 주석 보기 유형에 등록 보기에 추가 합니다.
 
 ```csharp
 MapView.Register(typeof(BikeView), MKMapViewDefault.AnnotationViewReuseIdentifier);
@@ -190,19 +190,19 @@ MapView.Register(typeof(ClusterView), MKMapViewDefault.ClusterAnnotationViewReus
 
 ### <a name="5-render-the-map"></a>5. 지도 렌더링!
 
-지도 렌더링할 때 주석 마커 클러스터 되거나 확대/축소 수준에 따라 렌더링 됩니다. 확대/축소 수준을 변경 될 때 표식 클러스터 아웃 애니메이션을 적용 합니다.
+지도 렌더링할 때 위에 주석 마커가 클러스터형 또는 확대/축소 수준에 따라 렌더링 됩니다. 확대/축소 수준을 변경 되 면 클러스터 내부 및 외부로 표식 애니메이트합니다.
 
-![시뮬레이터 클러스터형된 표식 지도에 표시](mapkit-images/cyclemap-sml.png)
+![클러스터 된 표식 지도에서 보여 주는 시뮬레이터](mapkit-images/cyclemap-sml.png)
 
-참조는 [섹션 매핑합니다](~/ios/user-interface/controls/ios-maps/index.md) MapKit 사용 하 여 데이터 표시에 대 한 자세한 내용은 합니다.
+참조를 [섹션을 매핑합니다](~/ios/user-interface/controls/ios-maps/index.md) MapKit 사용 하 여 데이터를 표시 하는 방법은 합니다.
 
 <a name="compass" />
 
 ## <a name="compass-button"></a>나침반 단추
 
-iOS 11 지도 부족 나침반 팝 하 고 다른 위치 보기에서 렌더링할 수 있는 기능을 추가 합니다. 참조는 [Tandm 샘플 응용 프로그램](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) 예에 대 한 합니다.
+iOS 11 지도에서 나침반 꺼내고 뷰의 다른 위치를 렌더링 하는 기능을 추가 합니다. 참조 된 [Tandm 샘플 앱](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) 예입니다.
 
-만들기 (지도 방향을 변경 되 면 라이브 애니메이션 포함), 컴퍼스 처럼 보이는 단추 다른 컨트롤에 렌더링 합니다.
+컴퍼스 (맵 방향이 변경 될 때 실시간 애니메이션 포함), 같은 단추를 만들려면 다른 컨트롤에 렌더링 합니다.
 
 ![탐색 모음에서 나침반 단추](mapkit-images/compass-sml.png)
 
@@ -215,15 +215,15 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-`ShowsCompass` 지도 보기 내 기본 나침반의 표시 유형을 제어 하려면 속성을 사용할 수 있습니다.
+`ShowsCompass` 지도 보기 내에서 기본 나침반의 표시 유형을 제어 하려면 속성을 사용할 수 있습니다.
 
 <a name="scale" />
 
 ## <a name="scale-view"></a>확장 보기
 
-사용 하 여 보기에 있는 눈금 추가 `MKScaleView.FromMapView()` 메서드 뷰 계층 구조에서 다른 위치에서 추가를 눈금 보기의 인스턴스를 가져옵니다.
+뷰를 통해 다른 위치에 확장을 추가 합니다 `MKScaleView.FromMapView()` 메서드 뷰 계층 구조에서 다른 곳에서 추가할 눈금 뷰의 인스턴스를 가져옵니다.
 
-![지도에 오버레이 배율 보기](mapkit-images/scale-sml.png)
+![지도에 오버레이 하는 확장 보기](mapkit-images/scale-sml.png)
 
 ```csharp
 var scale = MKScaleView.FromMapView(MapView);
@@ -233,15 +233,15 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-`ShowsScale` 지도 보기 내 기본 나침반의 표시 유형을 제어 하려면 속성을 사용할 수 있습니다.
+`ShowsScale` 지도 보기 내에서 기본 나침반의 표시 유형을 제어 하려면 속성을 사용할 수 있습니다.
 
 <a name="user-tracking" />
 
 ## <a name="user-tracking-button"></a>사용자 추적 단추
 
-사용자 추적 단추에는 사용자의 현재 위치에서 지도 가운데 맞춤합니다. 사용 하 여는 `MKUserTrackingButton.FromMapView()` 메서드를 단추의 인스턴스를 가져오고, 서식 변경 내용을 적용 하 고 뷰 계층 구조에서 다른 위치를 추가 합니다.
+사용자 추적 단추를 사용자의 현재 위치에서 지도를 가운데로 맞춥니다. 사용 된 `MKUserTrackingButton.FromMapView()` 단추 인스턴스를 가져올 서식 변경 사항을 적용 하 고 뷰 계층 구조에서 다른 곳에서 추가 방법입니다.
 
-![지도에 오버레이 사용자 위치 단추](mapkit-images/user-location-sml.png)
+![지도에 오버레이 하는 사용자 위치 단추](mapkit-images/user-location-sml.png)
 
 ```csharp
 var button = MKUserTrackingButton.FromMapView(MapView);
@@ -256,6 +256,6 @@ View.AddSubview(button); // constraints omitted for simplicity
 
 ## <a name="related-links"></a>관련 링크
 
-- ['Tandm' MapKit 샘플](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)
+- [MapKit 샘플 'Tandm'](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
-- [새로 만들기에 MapKit (WWDC) (비디오)는 무엇입니까](https://developer.apple.com/videos/play/wwdc2017/237/)
+- [새로운 기능에 MapKit (WWDC) (비디오)](https://developer.apple.com/videos/play/wwdc2017/237/)

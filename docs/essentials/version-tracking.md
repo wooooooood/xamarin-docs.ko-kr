@@ -5,12 +5,12 @@ ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 81dc67fa5a4975f31d0fbf9f7219637596a827ce
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815650"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353661"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: 버전 추적
 
@@ -72,9 +72,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
 
-모든 버전 정보를 사용 하 여 저장 됩니다는 [기본 설정](preferences.md) Xamarin.Essentials에서 API의 파일 이름으로 저장 됩니다 **[YOUR-앱-패키지-ID].xamarinessentials**합니다.
-
-응용 프로그램을 제거 하면 합니다 _LocalSettings_, 및 추적 정보를 삭제 하는 모든 버전.
+모든 버전 정보를 사용 하 여 저장 됩니다는 [기본 설정](preferences.md) Xamarin.Essentials에서 API의 파일 이름으로 저장 됩니다 **[YOUR-앱-패키지-ID].xamarinessentials.versiontracking** 와 동일 에 설명 된 데이터 지 속성을 [기본 설정](preferences.md#persistence) 설명서.
 
 ## <a name="api"></a>API
 

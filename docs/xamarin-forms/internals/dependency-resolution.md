@@ -1,33 +1,33 @@
 ---
 title: Xamarin.Forms에서 종속성 확인
-description: 이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다.
+description: 이 문서에서는 응용 프로그램의 종속성 주입 컨테이너 만들기 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/23/2018
-ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270490"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351587"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms에서 종속성 확인
 
-_이 문서에서는 응용 프로그램의 종속성 주입 컨테이너에 생성 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다. 코드 예제에서 수행 되는 [종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/) 샘플입니다._
+_이 문서에서는 응용 프로그램의 종속성 주입 컨테이너 만들기 및 사용자 지정 렌더러, 효과 및 DependencyService 구현을의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 합니다. 이 문서의 코드 예제에서 수행 되는 [컨테이너를 사용 하 여 종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) 샘플입니다._
 
 모델-뷰-ViewModel (MVVM) 패턴을 사용 하는 Xamarin.Forms 응용 프로그램의 컨텍스트에서 서비스를 등록 하 고 모델 보기에 주입 하 한 및 보기 모델을 해결 하는 등록에 대 한 종속성 주입 컨테이너를 사용할 수 있습니다. 뷰 모델을 만드는 동안 컨테이너는 필요한 모든 종속성을 삽입 합니다. 해당 종속성을 만들지 않은 경우 컨테이너를 만들고 먼저 종속성을 확인 합니다. 종속성 주입을 모델 보기에 종속성 주입의 예제를 포함 하는 방법에 대 한 자세한 내용은 참조 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)합니다.
 
-만들기에 대 한 제어 플랫폼 프로젝트에서 형식의 수명 Xamarin.Forms를 사용 하 여 일반적으로 수행 되 고는 `Activator.CreateInstance` 사용자 지정 렌더러의 경우 효과의 인스턴스를 만드는 방법 및 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 구현입니다. 안타깝게도이 개발자를 만들고 이러한 형식과에 종속성을 주입할 수 있는 기간을 제어할을 제한 됩니다. 그러나이 동작을 제어 하는 방법을 형식 만들어집니다 – Xamarin.Forms에서 또는 응용 프로그램의 종속성 주입 컨테이너에 의해 Xamarin.Forms에는 종속성 확인 메서드를 삽입 하 여 변경할 수 있습니다.
+만들기에 대 한 제어 플랫폼 프로젝트에서 형식의 수명 Xamarin.Forms를 사용 하 여 일반적으로 수행 되 고는 `Activator.CreateInstance` 사용자 지정 렌더러의 경우 효과의 인스턴스를 만드는 방법 및 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 구현입니다. 안타깝게도이 개발자를 만들고 이러한 형식과에 종속성을 주입할 수 있는 기간을 제어할을 제한 됩니다. 이 동작을 제어 하는 방법을 형식 만들어집니다 – Xamarin.Forms에서 또는 응용 프로그램의 종속성 주입 컨테이너에 의해 Xamarin.Forms에는 종속성 확인 메서드를 삽입 하 여 변경할 수 있습니다. 그러나 종속성 해결 방법을 Xamarin.Forms에 삽입 하는 요구 사항이 있는지 note 합니다. Xamarin.Forms를 만들고 종속성 해결 방법을 삽입 되지 않습니다 하는 경우 플랫폼 프로젝트에서 형식의 수명 관리 계속 됩니다.
 
 > [!NOTE]
-> Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 요구 사항이 있습니다. Xamarin.Forms를 만들고 종속성 해결 방법을 삽입 되지 않습니다 하는 경우 플랫폼 프로젝트에서 형식의 수명 관리 계속 됩니다.
+> 이 문서에 종속성 주입 컨테이너를 사용 하 여 등록 된 형식을 확인 하는 Xamarin.Forms에는 종속성 해결 방법을 삽입 중점는 것도 해결 하려면 팩터리 메서드를 사용 하는 종속성 확인 메서드를 주입할 수 등록 된 형식입니다. 자세한 내용은 참조는 [팩터리 메서드를 사용 하 여 종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/FactoriesDemo/) 샘플입니다.
 
 ## <a name="injecting-a-dependency-resolution-method"></a>종속성 확인 메서드를 삽입합니다.
 
-합니다 [ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) 클래스 중 하나를 사용 하 여 Xamarin.Forms 종속성 확인 메서드를 삽입 하는 기능 제공 합니다 [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드. 그런 다음 Xamarin.Forms에서 특정 형식의 인스턴스를 필요한 경우, 종속성 확인 메서드가 인스턴스를 제공 하는 데 지정 됩니다. 종속성 확인 메서드를 반환 하는 경우 `null` 요청 된 형식에 대 한 Xamarin.Forms 대체 형식을 만들려고 하를 사용 하 여 자체 인스턴스를 `Activator.CreateInstance` 메서드.
+[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) Xamarin.Forms를 종속성 확인 메서드를 삽입 하는 기능을 제공 하는 클래스를 사용 하는 [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드. 그런 다음 Xamarin.Forms에서 특정 형식의 인스턴스를 필요한 경우, 종속성 확인 메서드가 인스턴스를 제공 하는 데 지정 됩니다. 종속성 확인 메서드를 반환 하는 경우 `null` 요청 된 형식에 대 한 Xamarin.Forms 대체 형식을 만들려고 하를 사용 하 여 자체 인스턴스를 `Activator.CreateInstance` 메서드.
 
 다음 예제에서는 사용 하 여 종속성 확인 메서드를 설정 하는 방법을 보여 줍니다 합니다 [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드:
 
@@ -97,6 +97,18 @@ public partial class App : Application
                 (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
                 (pi, ctx) => ctx.Resolve(param2Type))
         });
+    }
+
+    public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
+    {
+        builder.RegisterType<T>()
+               .WithParameters(new List<Parameter>()
+        {
+            new TypedParameter(param1Type, param1Value),
+            new ResolvedParameter(
+                (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
+                (pi, ctx) => ctx.Resolve(param2Type))
+        }).As<TInterface>();
     }
 
     public static void BuildContainer()
@@ -219,7 +231,7 @@ public interface IPhotoPicker
 
 각 플랫폼 프로젝트에는 `PhotoPicker` 구현 클래스는 `IPhotoPicker` 플랫폼 Api를 사용 하 여 인터페이스입니다. 이러한 종속성 서비스에 대 한 자세한 내용은 참조 하세요. [사진 그림 라이브러리에서 선택](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)합니다.
 
-세 플랫폼 모두에 `PhotoPicker` 클래스에 필요한 다음 생성자는 `ILogger` 인수:
+IOS 및 UWP 합니다 `PhotoPicker` 클래스에 필요한 다음 생성자는 `ILogger` 인수:
 
 ```csharp
 public PhotoPicker(ILogger logger)
@@ -239,7 +251,32 @@ void RegisterTypes()
 }
 ```
 
-이 예제는 `Logger` 구체적인 형식이 해당 인터페이스 형식에 대 한 매핑을 통해 등록 된 및 `PhotoPicker` 형식 인터페이스 매핑을 통해도 등록 합니다. 사용자의 사진 선택 페이지를 탐색 하 고 사진을 선택 하기로 합니다 `OnSelectPhotoButtonClicked` 처리기가 실행 됩니다.
+이 예제는 `Logger` 구체적인 형식이 해당 인터페이스 형식에 대 한 매핑을 통해 등록 된 및 `PhotoPicker` 형식 인터페이스 매핑을 통해도 등록 합니다.
+
+합니다 `PhotoPicker` Android 플랫폼에는 생성자가 필요 하므로 조금 더 복잡 한는 `Context` 외에 인수는 `ILogger` 인수:
+
+```csharp
+public PhotoPicker(Context context, ILogger logger)
+{
+    _context = context ?? throw new ArgumentNullException(nameof(context));
+    _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+}
+```
+
+다음 예제는 `RegisterTypes` Android 플랫폼에서 메서드:
+
+```csharp
+void RegisterTypes()
+{
+    App.RegisterType<ILogger, Logger>();
+    App.RegisterTypeWithParameters<IPhotoPicker, Services.Droid.PhotoPicker>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
+    App.BuildContainer();
+}
+```
+
+이 예제는 `App.RegisterTypeWithParameters` 메서드 레지스터는 `PhotoPicker` 종속성 주입 컨테이너를 사용 하 여 합니다. 등록 메서드를 사용 하면를 `MainActivity` 인스턴스도 삽입 되는 `Context` 인수를 지정 하 고 있는 `Logger` 형식으로 삽입 되는 `ILogger` 인수.
+
+사용자의 사진 선택 페이지를 탐색 하 고 사진을 선택 하기로 합니다 `OnSelectPhotoButtonClicked` 처리기가 실행 됩니다.
 
 ```csharp
 async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
@@ -262,7 +299,7 @@ async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [종속성 확인 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)
+- [컨테이너 (샘플)를 사용 하 여 종속성 확인](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [비디오 플레이어 구현](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [효과의 이벤트를 호출합니다.](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

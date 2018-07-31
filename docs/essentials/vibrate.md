@@ -5,12 +5,12 @@ ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 530273543c6cb71038613c22fa4a6bfbde4928d7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 622689342dd961a63318a88f098dea4d1a60e277
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947259"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353869"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: 진동
 
@@ -40,7 +40,7 @@ ms.locfileid: "37947259"
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-또는 Anroid 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 합니다 **필요한 권한:** 영역과 확인을 **진동** 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
+또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 합니다 **필요한 권한:** 영역과 확인을 **진동** 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

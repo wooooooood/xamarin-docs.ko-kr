@@ -5,12 +5,12 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 563d3899cffb80c0215d90e8e4392046c4635256
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7e58d439f5a6eaafe9b1b5e7ca874a986e468cb9
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815708"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353284"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
@@ -26,7 +26,7 @@ ms.locfileid: "38815708"
 using Xamarin.Essentials;
 ```
 
-브라우저 기능을 호출 하 여 작동 합니다 `OpenAsync` 메서드를 `Uri` 및 `BrowserLaunchType`합니다.
+브라우저 기능을 호출 하 여 작동 합니다 `OpenAsync` 메서드를 `Uri` 및 `BrowserLaunchMode`합니다.
 
 ```csharp
 
@@ -34,7 +34,7 @@ public class BrowserTest
 {
     public async Task OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchType.SystemPreferred);
+        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
@@ -43,7 +43,7 @@ public class BrowserTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-시작 유형 브라우저를 시작 하는 방법을 결정 합니다.
+시작 모드는 브라우저가 시작 되는 방식을 결정 합니다.
 
 ## <a name="system-preferred"></a>시스템 기본 설정
 
@@ -65,7 +65,7 @@ public class BrowserTest
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-사용자의 기본 브라우저에 관계 없이 항상 실행을 `BrowserLaunchType`입니다.
+사용자의 기본 브라우저에 관계 없이 항상 실행을 `BrowserLaunchMode`입니다.
 
 --------------
 

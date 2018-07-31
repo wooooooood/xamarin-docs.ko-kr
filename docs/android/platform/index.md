@@ -6,13 +6,13 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
-ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.date: 07/27/2018
+ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212006"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351566"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -45,6 +45,10 @@ Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크�
 
 이 가이드에서는 Android 6.0에서 지 원하는 방법 설명 _앱 연결_, 모바일 앱 웹 사이트에서 Url에 응답할 수 있는 기술입니다. Android 6.0 응용 프로그램에 앱 연결을 구현 하는 방법 및 도메인에 대 한 앱 링크를 처리 하도록 모바일 앱에 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다.
 
+
+##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Android P 미리 보기](~/android/platform/android-p.md)
+
+이 문서에서는 Android P 미리 보기의 새로운 기능에 대 한 개요를 제공 하 고, Xamarin.Android Android P 개발, 준비 하는 방법에 설명, Xamarin.Android 앱에서 주요 Android P 기능을 사용 하는 방법을 보여 주는 예제 코드를 제공 합니다.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)

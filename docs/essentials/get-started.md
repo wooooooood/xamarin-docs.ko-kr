@@ -5,12 +5,12 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 7e371a6125d223d354b75ce7e09dcc28efb3dffa
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: c72c1c66a465075770ce739270cb4b1f2c6fba7a
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855236"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353778"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
@@ -47,7 +47,7 @@ Xamarin.Essentials는 Visual Studio를 사용 하 여 모든 기존 또는 새 �
 
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-    솔루션 탐색기 창에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > NuGet 패키지 추가... **. 검색할 **Xamarin.Essentials** 패키지를 설치 하 고 **모든** Android, iOS 및.NET Standard 라이브러리를 포함 한 프로젝트입니다.
+    솔루션 탐색기 창에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > NuGet 패키지 추가...** . 검색할 **Xamarin.Essentials** 패키지를 설치 하 고 **모든** Android, iOS 및.NET Standard 라이브러리를 포함 한 프로젝트입니다.
 
     > [!TIP]
     > 확인 합니다 **시험판 패키지 표시** 하는 동안 상자 합니다 [ **Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials) 미리 보기 상태인 합니다.

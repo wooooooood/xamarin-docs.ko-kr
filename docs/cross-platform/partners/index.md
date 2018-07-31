@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270204"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351745"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
 
@@ -112,6 +112,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Interknowlogy](http://www.interknowlogy.com/)|샌디에이고, CA, 미국|사용자 지정 앱 개발에 전 세계 선두 InterKnowlogy 터치, 제스처 및 음성을 통해 연결 된 환경을 제공 하기 위해 현재와 미래의 기술을 활용 하 여|
 |[Intouch 솔루션](http://www.intouchsol.com )|Overland Park, KS, 미국. 런던, 영국; 시카고, IL, 미국. 뉴욕, NY, 미국|제약 및 의료 공간 내에서 선행 디지털 에이전시를 기꺼이|
 |[iTexico](http://www.itexico.com)|오스틴, 텍사스, 미국|iTexico는 글로벌 소프트웨어 기술 회사에서는 프로젝트 내내 모바일 개발을 사용 하 여는 데 집중 하는 ' Äôs 수명 주기를 nearshore 아웃소싱 합니다.|
+|[JBS](https://www.jbssolutions.com)|펜실베이니아, 미국|JBS는 사용자 지정 소프트웨어 솔루션 공급자입니다.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, 미국. 시카고, IL, 미국. 톨레도, OH, 미국. Seongnam-si Gyeonggi 수행, 대한민국|Kaonsoft는 enterprise mobility 응용 프로그램을 만드는 대 한 플랫폼 간 완전 한 종단 간 솔루션을 제공 하는 혁신적인 소프트웨어 회사입니다.|
 |[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, 미국. 애틀랜타, GA, 미국. 뭄바이, 인도, Maharashtra; 바드, Telangana, 인도; 푸 네, Maharashtra, 인도|Katalyst에서 기술을 실제로 조력자 수 하는 것이 믿습니다. 에 선행 회사 뿐 아니라를 신뢰 하는 이유를 제공 하는 제품 및 서비스, 하지만 자신의 핵심 업무 엔터프라이즈에 걸쳐 있는 사용자 지정, 강력한 솔루션을 통해 작동 하는 방식 변경.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm Beach, FL|일반적으로 교육, 브랜드, Id 및 협력 했습니다. 클라이언트의 비즈니스 문제를 연구 했습니다 디자인, UX 및 콘텐츠 전략의 주소입니다. 클라이언트 요구 사항에 도달 하 고 수익성에 bussiness 도울|

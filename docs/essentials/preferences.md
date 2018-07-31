@@ -5,12 +5,12 @@ ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ca6d4f1ec60a80b483c79dd75267144e67d80c0b
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 4a45587c79cfbbcd1198f100915e698289f74950
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831766"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353752"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
@@ -83,6 +83,10 @@ Preferences.Clear();
 [ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer) 장치의 값을 저장 하는 데 사용 됩니다. 없으면 `sharedName` 지정 합니다 `LocalSettings` 는 사용 하면 다른 이름이 사용 됩니다 내에 새 컨테이너를 만들려면 `LocalSettings`합니다.
 
 --------------
+
+## <a name="persistence"></a>지속성
+
+응용 프로그램을 제거 하면 모든 _기본 설정_ 제거 합니다. 사용 하는 대상 (API 레벨 23) Android 6.0 이상에서 실행 하는 앱에는이 한 가지 예외가 [ __자동 백업__](https://developer.android.com/guide/topics/data/autobackup)합니다. 이 기능은 기본적으로 켜져 있으며 포함 하 여 앱 데이터를 유지 __공유 기본 설정__, 하는 것은 **기본 설정** API를 활용 합니다. 다음 Google에서 비활성화할 수 있습니다 [설명서](https://developer.android.com/guide/topics/data/autobackup)합니다.
 
 ## <a name="limitations"></a>제한 사항
 
