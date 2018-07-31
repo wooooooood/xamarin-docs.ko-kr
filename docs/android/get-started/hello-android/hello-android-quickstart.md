@@ -7,13 +7,13 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 9e4349b807c98e6f5cfbc55fa57153f99054d474
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 07/20/2018
+ms.openlocfilehash: beb90587e0d720de7770056c8b51264099edecdc
+ms.sourcegitcommit: fb55eba393e43bcc9e9d1fef9ef1f1310e99f620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732468"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189023"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -49,15 +49,8 @@ _두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 V
 
 ## <a name="configuring-emulators"></a>에뮬레이터 구성
 
-Google Android SDK 에뮬레이터를 사용하는 경우 하드웨어 가속을 사용하도록 에뮬레이터를 구성하는 것이 좋습니다. 하드웨어 가속을 구성하는 지침은 [에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)에서 제공됩니다.
+Android Emulator를 사용하는 경우 하드웨어 가속을 사용하도록 에뮬레이터를 구성하는 것이 좋습니다. 하드웨어 가속을 구성하는 지침은 [에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)에서 제공됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-Visual Studio Android 에뮬레이터를 사용하는 경우 컴퓨터에서 Hyper-V를 사용할 수 있어야 합니다. Visual Studio Android 에뮬레이터를 구성하는 방법에 대한 자세한 내용은 [Android용 Visual Studio 에뮬레이터에 대한 시스템 요구 사항](https://msdn.microsoft.com/en-us/library/mt228280.aspx)을 참조하세요.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
------
 
 ## <a name="walkthrough"></a>연습
 
@@ -66,16 +59,20 @@ Visual Studio Android 에뮬레이터를 사용하는 경우 컴퓨터에서 Hyp
 Visual Studio를 시작합니다.  **파일 > 새로 만들기 > 프로젝트**를 클릭하여 새 프로젝트를 만듭니다.
 
 **새 프로젝트** 대화 상자에서 **Android 앱** 템플릿을 클릭합니다.
-새 프로젝트의 이름을 `Phoneword`로 지정합니다. **확인**을 클릭하여 새 프로젝트를 만듭니다.
+새 프로젝트의 이름을 `Phoneword`로 지정합니다. **확인**을 클릭합니다.
 
-[![새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
+[![새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/01-new-project-name-w157-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w157.png#lightbox)
+
+**새 Android 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고 **확인**을 클릭하여 새 프로젝트를 만듭니다.
+
+[![비어 있는 앱 템플릿 선택](hello-android-quickstart-images/vs/02-blank-app-w157-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>레이아웃 만들기
 
 새 프로젝트를 만든 후에 **솔루션 탐색기**에서 **리소스** 폴더 및 **레이아웃** 폴더를 차례로 확장합니다.
-**Main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. 앱의 화면에 대한 레이아웃 파일입니다.
+**activity_main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. 앱의 화면에 대한 레이아웃 파일입니다.
 
-[![Main.axml 열기](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
+[![activity_main.axml 열기](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
 **도구 상자**(왼쪽 영역)에서 검색 표시줄에 `text`을 입력하고,**큰 텍스트** 위젯을 디자인 화면(가운데 영역)으로 끌어옵니다.
 
@@ -115,7 +112,7 @@ Visual Studio를 시작합니다.  **파일 > 새로 만들기 > 프로젝트**�
 
 **새 항목 추가** 대화 상자에서 **Visual C# > 코드 > 코드 파일**을 선택하고, 새 코드 파일에 **PhoneTranslator.cs**라는 이름을 지정합니다.
 
-[![PhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
+[![PhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-sml-w157.png)](hello-android-quickstart-images/vs/14-add-class-w157.png#lightbox)
 
 그러면 비어 있는 새 C# 클래스가 만들어집니다. 다음 코드를 파일에 삽입합니다.
 
@@ -287,6 +284,8 @@ namespace Phoneword
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
+
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 **응용 프로그램** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다. 
@@ -418,7 +417,7 @@ namespace Core
 다음 단계는 `MainActivity` 클래스에 백업 코드를 추가하여 사용자 인터페이스를 연결하는 코드를 추가하는 것입니다.
 **Solution Pad**에서 **MainActivity.cs**를 두 번 클릭하여 엽니다.
 
-이벤트 처리기를 **변환** 단추에 추가하여 시작합니다. `MainActivity` 클래스에서 `OnCreate` 메서드를 찾습니다. `base.OnCreate(bundle)` 및 `SetContentView (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가합니다. `OnCreate` 메서드가 다음과 유사하도록 템플릿 단추 처리 코드를 제거합니다.
+이벤트 처리기를 **변환** 단추에 추가하여 시작합니다. `MainActivity` 클래스에서 `OnCreate` 메서드를 찾습니다. `base.OnCreate(bundle)` 및 `SetContentView (Resource.Layout.Main)` 호출 아래의 `OnCreate` 내부에 단추 코드를 추가합니다. `OnCreate` 메서드가 다음과 유사하도록 기존 단추 처리 코드(`Resource.Id.myButton`을 참조하고 클릭 처리기를 만드는 코드)를 제거합니다.
 
 ```csharp
 using System;

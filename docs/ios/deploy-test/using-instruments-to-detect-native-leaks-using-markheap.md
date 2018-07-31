@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785614"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182210"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 응용 프로그램 프로파일링
 
@@ -27,11 +27,11 @@ Xcode 계측은 Mac에서만 실행됩니다.
 
 장치를 선택하고 계측 앱을 실행합니다.
 
-1.  Mac용 Visual Studio에서 Xamarin.iOS 프로젝트를 엽니다.
-2.  **디버그 | iPhone** 구성을 선택합니다.
-3.  컴퓨터에 iOS 장치를 연결합니다.
-4.  **실행** 메뉴에서 **장치에 업로드**를 선택합니다. 이제 응용 프로그램이 빌드되어 장치에 업로드됩니다.
-5.  **도구** 메뉴에서 **계측 시작**을 선택합니다.
+1. Mac용 Visual Studio에서 Xamarin.iOS 프로젝트를 엽니다.
+2. **디버그 | iPhone** 구성을 선택합니다.
+3. 컴퓨터에 iOS 장치를 연결합니다.
+4. **실행** 메뉴에서 **장치에 업로드**를 선택합니다. 이제 응용 프로그램이 빌드되어 장치에 업로드됩니다.
+5. **도구** 메뉴에서 **계측 시작**을 선택합니다.
 
 
 이제 계측이 열리고 다음 대화 상자가 표시됩니다.
@@ -65,4 +65,4 @@ iOS 장치는 창 위쪽의 메뉴에서 선택해야 하며, 프로비전할 �
 ## <a name="related-links"></a>관련 링크
 
 - [계측 연습](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS 가비지 수집](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS 가비지 수집(블로그 게시물)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

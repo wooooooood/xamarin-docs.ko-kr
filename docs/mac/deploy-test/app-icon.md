@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 685a29eea4b03361b185e25ae0e146be7b5e69b6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9c81138aea57c0027ad0f53e3116878ffb800eae
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792038"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276043"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 응용 프로그램 아이콘
 
@@ -23,9 +23,9 @@ _이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘에 필요한 �
 
 Xamarin.Mac 응용 프로그램에서 C# 및 .NET을 작업할 때 개발자는 *Objective-C* 및 *Xcode*에서 작업하는 개발자와 동일한 이미지 및 아이콘 도구에 액세스할 수 있습니다.
 
-좋은 아이콘이란 Xamarin.Mac 앱의 주 목적을 달성해야 하며 사용자가 앱을 사용할 때 예상하는 경험을 제공해야 합니다. 이 문서에서는 아이콘에 필요한 이미지 자산을 만들고, 해당 자산을 `AppIcons.appiconset` 파일에 패키징하고, Xamarin.Mac 앱에서 해당 파일을 사용하기 위한 모든 단계를 다룹니다.
+좋은 아이콘이란 Xamarin.Mac 앱의 주 목적을 달성해야 하며 사용자가 앱을 사용할 때 예상하는 경험을 제공해야 합니다. 이 문서에서는 아이콘에 필요한 이미지 자산을 만들고, 해당 자산을 `AppIcon.appiconset` 파일에 패키징하고, Xamarin.Mac 앱에서 해당 파일을 사용하기 위한 모든 단계를 다룹니다.
 
-![AppIcons.appiconset 편집기](app-icon-images/intro01.png "AppIcons.appiconset 편집기")
+![AppIcon.appiconset 편집기](app-icon-images/intro01.png "AppIcon.appiconset 편집기")
 
 
 ## <a name="application-icon"></a>응용 프로그램 아이콘
@@ -85,7 +85,7 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 1. **Solution Pad**에서 **Assets.xcassets** > **AppIcons.appiconset**을 엽니다. 
 
-    ![AppIcons.appiconset 편집](app-icon-images/intro01.png "AppIcons.appiconset 편집")
+    ![AppIcon.appiconset 편집](app-icon-images/intro01.png "AppIcon.appiconset 편집")
 2. 필요한 각 아이콘 크기에서, 아이콘을 클릭하고 위에서 만든 해당 이미지 파일을 선택합니다. 
 
     [![아이콘 이미지 선택](app-icon-images/intro02.png "아이콘 이미지 선택")](app-icon-images/intro02-large.png#lightbox)
@@ -94,12 +94,12 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 ## <a name="using-the-icon"></a>아이콘 사용
 
-`AppIcons.appiconset` 파일을 작성한 후에는 Mac용 Visual Studio의 Xamarin.Mac 프로젝트에 할당해야 합니다.
+`AppIcon.appiconset` 파일을 작성한 후에는 Mac용 Visual Studio의 Xamarin.Mac 프로젝트에 할당해야 합니다.
 
 다음을 수행합니다.
 
 1. **Solution Pad**에서 **Info.plist**를 두 번 클릭하여 **프로젝트 옵션**을 엽니다.
-2. **Mac OS X 응용 프로그램 대상** 섹션에서 **앱 아이콘**을 클릭하여 `AppIcons.appiconset` 파일을 선택합니다. 
+2. **Mac OS X 응용 프로그램 대상** 섹션에서 **앱 아이콘**을 클릭하여 `AppIcon.appiconset` 파일을 선택합니다. 
 
     [![아이콘 집합 설정](app-icon-images/icon01.png "아이콘 집합 설정")](app-icon-images/icon01-large.png#lightbox)
 3. 변경 내용을 저장합니다.

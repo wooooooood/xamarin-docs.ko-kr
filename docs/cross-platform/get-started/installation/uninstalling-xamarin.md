@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 87f59e9f0c2150291a43cdfee4fe6c5dfc2058f8
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066470"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203126"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -260,7 +260,7 @@ Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 
 >
 > 특정 조건에서 SxS 인스턴스 중 하나를 제거하면 이러한 기능을 잘못 제거할 수 있습니다. SxS 인스턴스를 제거한 후에 시스템에 남아 있는 Visual Studio 인스턴스에서 Xamarin 플랫폼의 성능이 저하될 수 있습니다.
 >
->Visual Studio 설치 관리자에서 **복구** 옵션을 실행하여 해결합니다. 그러면 누락된 구성 요소를 다시 설치합니다.
+>Visual Studio 설치 관리자에서 **복구** 옵션을 실행하여 해결합니다. 그러면 누락된 구성 요소가 다시 설치됩니다.
 
 
 ## <a name="uninstalling-older-and-unsupported-products"></a>이전 버전 및 지원되지 않는 제품 제거

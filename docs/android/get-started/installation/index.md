@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
-ms.openlocfilehash: 5991c907b85188581db105a8db9d17460954f56f
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 776e2b52d6b8860c5fb5fa16253c2e1d42aa962a
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935492"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241417"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -38,3 +38,7 @@ Visual Studio에는 Google의 독립 실행형 Android SDK Manager를 대체하�
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
 
 이 문서에서는 장치를 사용하여 Xamarin.Android 응용 프로그램을 실행하고 디버깅할 수 있도록 물리적 Android 장치를 설정하고 개발 컴퓨터에 연결하는 방법을 설명합니다.
+
+## <a name="microsoft-openjdk-previewandroidget-startedinstallationopenjdkmd"></a>[Microsoft OpenJDK 미리 보기](~/android/get-started/installation/openjdk.md)
+
+이 가이드에서는 Microsoft의 OpenJDK 배포의 미리 보기 릴리스로 전환하는 단계를 설명합니다.

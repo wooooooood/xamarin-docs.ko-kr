@@ -8,38 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786402"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203025"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
 빠른 시작 연습에서는 기본 Xamarin.iOS 응용 프로그램의 빌드 및 실행을 소개하였습니다. 이제, 더 복잡한 프로그램을 빌드할 수 있도록 iOS 응용 프로그램의 작동 방식을 심층적으로 알아볼 시간입니다. 이 가이드에서는 iOS 응용 프로그램 개발의 기본 개념을 이해할 수 있도록 Hello, iOS 연습에 있는 단계를 검토합니다.
-
-이 문서에서는 다음과 같은 주제를 살펴봅니다.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-- **Mac용 Visual Studio 소개** – Mac용 Visual Studio 및 새로운 응용 프로그램 만들기를 소개합니다.
-- **Xamarin.iOS 응용 프로그램 분석** - Xamarin.iOS 응용 프로그램의 핵심 부분을 안내합니다.
-- **아키텍처 및 앱의 기본** – iOS 응용 프로그램의 파트들을 검토하고 파트 간 관계를 알아봅니다.
-- **UI(사용자 인터페이스)** – iOS 디자이너를 통해 사용자 인터페이스를 만듭니다.
-- **뷰 컨트롤러 및 뷰 수명 주기** – 뷰 수명 주기 및 뷰 컨트롤러로 콘텐츠 뷰 계층 구조 관리에 대해 소개합니다.
-- **테스트, 배포 및 마무리** - 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 응용 프로그램을 완성합니다.
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- **Visual Studio 소개** – Visual Studio 및 새로운 응용 프로그램 만들기를 소개합니다.
-- **Xamarin.iOS 응용 프로그램 분석** - Xamarin.iOS 응용 프로그램의 핵심 부분을 안내합니다.
-- **아키텍처 및 앱의 기본** – iOS 응용 프로그램의 파트들을 검토하고 파트 간 관계를 알아봅니다.
-- **UI(사용자 인터페이스)** – iOS 디자이너를 통해 사용자 인터페이스를 만듭니다.
-- **뷰 컨트롤러 및 뷰 수명 주기** – 뷰 수명 주기 및 뷰 컨트롤러로 콘텐츠 뷰 계층 구조 관리에 대해 소개합니다.
-- **테스트, 배포 및 마무리** - 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 응용 프로그램을 완성합니다.
-
------
 
 이 가이드는 단일 화면 iOS 응용 프로그램을 빌드하는 데 필요한 기술 및 정보를 개발하는 데 유용합니다. 이를 통해 Xamarin.iOS 응용 프로그램의 서로 다른 파트들을 이해하고 어떻게 서로 맞도록 조정하는지에 대해 습득합니다.
 
@@ -64,8 +42,6 @@ Visual Studio는 코드를 _솔루션_ 및 *프로젝트*로 구성합니다. �
 ![](hello-ios-deepdive-images/vs-image30.png "초기 솔루션의 스크린샷")
 
 -----
-
-<a name="anatomy" />
 
 ## <a name="anatomy-of-a-xamarinios-application"></a>Xamarin.iOS 응용 프로그램 분석
 
@@ -322,7 +298,7 @@ public partial class ViewController : UIViewController
 
 사용자 지정 코드가 수명 주기의 단계에서 추가되는 경우 해당 수명 주기 메서드의 *기본 구현*은 *재정의되어야* 합니다. 이는 일부 코드가 이미 연결되어 있는 기존 수명 주기 메서드를 이용하고 추가 코드로 확장하여 달성됩니다. 원본 코드가 새 코드보다 먼저 실행되도록 메서드 내에서 기본 구현을 호출합니다. 다음 섹션에서 이러한 예제를 설명합니다.
 
-뷰 컨트롤러 작업에 대한 자세한 내용은 Apple의 [iOS에 대한 뷰 컨트롤러 프로그래밍 가이드](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html) 및 [UIViewController 참조](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html)를 확인하세요.
+뷰 컨트롤러 작업에 대한 자세한 내용은 Apple의 [iOS에 대한 뷰 컨트롤러 프로그래밍 가이드](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) 및 [UIViewController 참조](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc)를 확인하세요.
 
 ### <a name="responding-to-user-interaction"></a>사용자 상호 작용에 응답
 
@@ -379,7 +355,7 @@ Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 - **설정/해제 단추** – **단추**는 `Enabled` 또는 `Disabled` 상태일 수 있습니다. 사용하지 않도록 설정된 **단추**는 사용자 입력에 응답하지 않습니다. 예를 들어 CallButton.Enabled = false 코드는 `CallButton`을 사용하지 않도록 설정합니다. 단추에 대한 자세한 내용은 [단추](~/ios/user-interface/controls/buttons.md) 가이드를 참조하세요.
-- **키보드 해제** – 사용자가 텍스트 필드를 탭하면 iOS는 사용자가 입력할 수 있도록 키보드를 표시합니다. 그러나 키보드를 해제할 수 있는 기본 제공 기능은 없습니다. 사용자가 `TranslateButton`를 누를 때 키보드를 해제하도록 PhoneNumberText.ResignFirstResponder () 코드가 `TranslateButton`에 추가됩니다. 키보드 해제의 또 다른 예제는 [키보드 해제](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard) 조리법을 참조하세요.
+- **키보드 해제** – 사용자가 텍스트 필드를 탭하면 iOS는 사용자가 입력할 수 있도록 키보드를 표시합니다. 그러나 키보드를 해제할 수 있는 기본 제공 기능은 없습니다. 사용자가 `TranslateButton`를 누를 때 키보드를 해제하도록 PhoneNumberText.ResignFirstResponder () 코드가 `TranslateButton`에 추가됩니다. 키보드 해제의 또 다른 예제는 [키보드 해제](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard) 조리법을 참조하세요.
 - **URL로 전화 걸기** – Phoneword 앱에서는 시스템 전화 앱을 실행하는 데 Apple URL 구성표가 사용됩니다. 사용자 지정 URL 구성표는 아래 코드에 표시된 것처럼 “tel:” 접두사와 번역된 전화 번호로 구성됩니다.
 
     ```csharp
@@ -399,7 +375,7 @@ Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가
                 }
     ```
 
-iOS 경고 보기에 대한 자세한 내용은 [경고 컨트롤러 레시피](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)를 참조하세요.
+iOS 경고 보기에 대한 자세한 내용은 [경고 컨트롤러 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)를 참조하세요.
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
@@ -407,11 +383,11 @@ Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
-경우에 따라 응용 프로그램 코드의 문제는 진단하기가 어렵습니다. 복잡한 코드 문제를 진단하려면 [중단점을 설정](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)하거나, [코드를 단계별 실행](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)하거나, [로그 창에 정보를 출력](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)합니다.
+경우에 따라 응용 프로그램 코드의 문제는 진단하기가 어렵습니다. 복잡한 코드 문제를 진단하려면 [중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하거나, [코드를 단계별 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)하거나, [로그 창에 정보를 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)합니다.
 
 ### <a name="deploy-to-a-device"></a>장치에 배포
 
-iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 장치에서 테스트해야 합니다.
+iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 장치에서 테스트해야 합니다.
 
 장치를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침이 나와 있습니다.
 
@@ -464,5 +440,5 @@ iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방�
 ## <a name="related-links"></a>관련 링크
 
 - [Hello, iOS(샘플)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS 휴먼 인터페이스 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)
+- [iOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [iOS 프로비전 포털](http://developer.apple.com/account/#/overview)

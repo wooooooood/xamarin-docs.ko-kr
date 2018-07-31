@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: fae5f5f0f15d80e2f3bdce26b8beb5f6fae2f81f
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 2dfdb7051b269e73c68290a557849b9ae606c165
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830455"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353297"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 저장소
 
@@ -51,13 +51,27 @@ using Xamarin.Essentials;
 에 대 한 값을 저장 하는 주어진 _키_ 보안 저장소에서:
 
 ```csharp
-await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+try
+{
+  await SecureStorage.SetAsync("oauth_token", "secret-oauth-token-value");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 보안 저장소에서 값을 검색 합니다.
 
 ```csharp
-var oauthToken = await SecureStorage.GetAsync("oauth_token");
+try
+{
+  var oauthToken = await SecureStorage.GetAsync("oauth_token");
+}
+catch (Exception ex)
+{
+  // Possible that device doesn't support secure storage on device.
+}
 ```
 
 > [!NOTE]
@@ -80,7 +94,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Android KeyStore](https://developer.android.com/training/articles/keystore.html) 에 저장 되기 전에 값을 암호화 하는 데 암호화 키를 저장 하는 데 사용 되는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html) 의 파일 이름을 가진 **[YOUR-앱-패키지-ID].xamarinessentials** .  공유 기본 설정 파일에서 사용 된 키가 한 _MD5 해시_ 에 전달 된 키의는 `SecureStorage` API.
+[Android KeyStore](https://developer.android.com/training/articles/keystore.html) 에 저장 되기 전에 값을 암호화 하는 데 암호화 키를 저장 하는 데 사용 되는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html) 의 파일 이름을 가진 **[YOUR-앱-패키지-ID].xamarinessentials** .  공유 기본 설정 파일에서 사용 된 키가 한 _MD5 해시_ 에 전달 된 키의는 `SecureStorage` Api.
 
 ## <a name="api-level-23-and-higher"></a>API 수준 23 이상
 
@@ -90,7 +104,7 @@ SecureStorage.RemoveAll();
 
 이전 API 수준에서 Android 키 저장소만 지원 저장 **RSA** 와 함께 사용 되며 키를 **PKCS1Padding/RSA/ECB** 암호를 암호화 하는 **AES** (임의로 키 런타임에 생성) 키 아래에 있는 공유 기본 설정 파일에 저장 _SecureStorageKey_아직 생성 되지 않은 한 경우.
 
-암호화 된 모든 값은 장치에서 앱을 제거할 때 제거 됩니다.
+**SecureStorage** 사용 합니다 [기본 설정](preferences.md) API와 동일한 데이터 지 속성에 설명 된 다음과 같이 [기본 설정](preferences.md#persistence) 설명서. 이 유형의 암호화 앱은 제거 하지 않는 한 사용할 계속 장치 API 레벨 22 이하로에서 API 수준 23 이상으로 업그레이드를 하는 경우 또는 **RemoveAll** 라고 합니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -104,7 +118,7 @@ SecureStorage.RemoveAll();
 
 암호화 된 값에 저장 됩니다 `ApplicationData.Current.LocalSettings`, 라는 이름의 컨테이너 안에 **[YOUR-앱-ID].xamarinessentials**합니다.
 
-응용 프로그램을 제거 하면 합니다 _LocalSettings_, 및 암호화 된 모든 값도 제거 됩니다.
+**SecureStorage** 사용 합니다 [기본 설정](preferences.md) API와 동일한 데이터 지 속성에 설명 된 다음과 같이 [기본 설정](preferences.md#persistence) 설명서.
 
 -----
 

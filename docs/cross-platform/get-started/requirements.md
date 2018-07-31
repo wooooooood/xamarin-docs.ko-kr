@@ -3,19 +3,17 @@ title: 시스템 요구 사항
 description: 이 문서에서는 Mac 및 Windows 컴퓨터에 Xamarin을 사용하여 앱을 빌드하기 위한 시스템 요구 사항을 나열합니다. 설치 지침으로 연결합니다.
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
-author: asb3993
-ms.author: amburns
-ms.date: 08/28/2017
-ms.openlocfilehash: 04db2fe4e3385c55ecf653b002b909f16e99a101
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.date: 07/24/2018
+ms.openlocfilehash: 6d16f01965b6b3bcba35cf14d4000f53a4400653
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780726"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241980"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
-
-_Xamarin 사용을 위한 필수 구성 요소_
 
 Xamarin 제품은 Apple 및 Google의 플랫폼 SDK를 사용하여 iOS 또는 Android를 대상으로 설계되었으므로 시스템 요구 사항이 Microsoft와 일치합니다. 이 페이지에서는 Xamarin 플랫폼의 시스템 호환성과 권장 개발 환경 및 SDK 버전을 간략히 설명합니다.
 
@@ -54,36 +52,27 @@ Xamarin 개발에 Mac 컴퓨터를 사용하려면 다음 소프트웨어/SDK �
 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
-
 <a name="windows" />
 
 ## <a name="windows-requirements"></a>Windows 요구 사항
 
 Xamarin 개발에 Windows 컴퓨터를 사용하려면 다음 소프트웨어/SDK 버전이 필요합니다.
 운영 체제 버전을 확인하세요. (그리고 Visual Studio의 *Express* 버전을 사용하고 있지 않은지 확인하세요. 그렇다면 *Community* 버전으로 업데이트하는 것이 좋습니다.)
-Visual Studio 2015 및 2017 설치 관리자에는 자동으로 Xamarin을 설치하는 옵션이 있습니다.
+Visual Studio 2017 설치 관리자에는 Xamarin을 자동으로 설치하는 옵션이 포함되어 있습니다(**.NET을 사용한 모바일 개발**).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
-
 > [!NOTE]
 >
->* Visual Studio용 Xamarin은 모든 Visual Studio 2015 또는 2017(Community, Professional 및 Enterprise)을 지원합니다.
+>- Visual Studio용 Xamarin은 모든 Visual Studio 2017(Community, Professional 및 Enterprise)을 지원합니다.
 >
->* UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱을 개발하려면 Visual Studio 2015 또는 2017이 설치된 Windows 10이 필요합니다.
-
+>- UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱을 개발하려면 Visual Studio 2017이 설치된 Windows 10이 필요합니다.
 
 ### <a name="testing--debugging-on-windows"></a>Windows에서 테스트 및 디버깅
 
 테스트하고 디버깅할 Xamarin 모바일 응용 프로그램을 USB를 통해 실제 장치에 배포할 수 있습니다(iOS 장치는 Visual Studio를 실행 중인 컴퓨터가 아니라, Mac 컴퓨터에 연결해야 함).
 
 [!include[](~/cross-platform/includes/windows-testing.md)]
-
-
-> [!NOTE]
->
->* [Windows Phone 8.1 에뮬레이터 다운로드](https://www.microsoft.com/download/details.aspx?id=43719).
->* Windows Phone 10 에뮬레이터는 Visual Studio 2015 UWP SDK에 포함되어 있습니다.
 
 <a name="install" />
 
@@ -101,8 +90,7 @@ macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/d
 
 또한 [Xamarin.Forms 요구 사항 및 지원되는 플랫폼](~/xamarin-forms/get-started/installation.md)에 대한 추가 정보가 있습니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin 다운로드](https://xamarin.com/download/)
+- [Xamarin 다운로드](https://visualstudio.microsoft.com/xamarin/)
 - [현재 릴리스](https://developer.xamarin.com/releases/current/)

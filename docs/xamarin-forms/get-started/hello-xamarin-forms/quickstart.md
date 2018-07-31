@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 5b5f8c80e49d66ed3bd8b008c975d1cfeda93ed4
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7399cab611b726eb7bb72928f504086fb842fb74
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38832386"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242435"
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
@@ -306,7 +306,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 선택합니다.
+    이 코드는 최신 Android API를 사용한다고 가정합니다. **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 선택합니다.
 
 21. **솔루션 탐색기**의 **Phoneword.Android** 프로젝트에서 **MainActivity.cs**를 두 번 클릭하여 열고, 모든 템플릿 코드를 제거한 후 다음 코드로 바꿉니다.
 
@@ -729,7 +729,7 @@ Phoneword 응용 프로그램을 다음과 같이 만듭니다.
     }
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 닫습니다.
+    이 코드는 최신 Android API를 사용한다고 가정합니다. **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 닫습니다.
 
 21. **Solution Pad**의 **Phoneword.Droid** 프로젝트에서 **MainActivity.cs**를 두 번 클릭하여 열고, 모든 템플릿 코드를 제거한 후 다음 코드로 바꿉니다.
 
