@@ -6,13 +6,13 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
-ms.openlocfilehash: abc21c3830126346ffb877639657c973da474812
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+ms.date: 07/30/2018
+ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038393"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360840"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
@@ -368,7 +368,15 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 [![사진 보기 사진 카드를 세로 방향으로 스크롤 하는 앱의 두 가지 스크린샷](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+(처럼 위의 스크린샷에) 그림자를 그릴 되 고, 편집할 **Properties/AndroidManifest.xml** 에 다음 특성 설정을 추가 하 고는 `<application>` 요소:
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 이 기본 앱 사진 앨범의 검색만 지원 합니다. 항목-터치 이벤트에 응답 하지 않는 것도 기본 데이터의 변경 내용을 처리 합니다. 이 기능이 추가 됨 [RecyclerView 예제 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md)합니다.
+
+
 
 
 ### <a name="changing-the-layoutmanager"></a>LayoutManager 변경

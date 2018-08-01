@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997363"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360814"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
@@ -22,11 +22,11 @@ ms.locfileid: "38997363"
 
 이 문에서는 다음과 같은 내용을 설명합니다.
 
-- **[목적은](#Purpose)**  &ndash; 목적 `ScrollView` 및 사용 하는 경우.
-- **[사용 현황](#Usage)**  &ndash; 사용 하는 방법을 `ScrollView` 실제로 합니다.
-- **[속성](#Properties)**  &ndash; 읽고 수정할 수 있는 공용 속성입니다.
-- **[메서드](#Methods)**  &ndash; 스크롤 뷰를 호출할 수 있는 공용 메서드.
-- **[이벤트](#Events)**  &ndash; 뷰 상태의 변경 내용을 수신 하는 이벤트입니다.
+- **[목적은](#purpose)**  &ndash; 목적 `ScrollView` 및 사용 하는 경우.
+- **[사용 현황](#usage)**  &ndash; 사용 하는 방법을 `ScrollView` 실제로 합니다.
+- **[속성](#properties)**  &ndash; 읽고 수정할 수 있는 공용 속성입니다.
+- **[메서드](#methods)**  &ndash; 스크롤 뷰를 호출할 수 있는 공용 메서드.
+- **[이벤트](#events)**  &ndash; 뷰 상태의 변경 내용을 수신 하는 이벤트입니다.
 
 ## <a name="purpose"></a>용도
 
