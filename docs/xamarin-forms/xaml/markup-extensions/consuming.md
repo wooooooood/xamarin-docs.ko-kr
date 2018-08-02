@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 6f0c15976871129362fb3d6d3287215d1fba2cb9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995984"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393674"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -24,12 +24,12 @@ XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허�
 - [`x:Array`](#array) &ndash; 특정 형식의 개체 배열을 생성 합니다.
 - [`x:Null`](#null) &ndash; 특성으로 설정 된 `null` 값입니다.
 
-다른 세 가지 XAML 태그 확장 지금까지 다른 XAML 구현에서 지 원하는 및 Xamarin.Forms 에서도 지원 됩니다. 이러한 다른 문서에 자세히 설명 된:
+추가 XAML 태그 확장 지금까지 다른 XAML 구현에서 지 원하는 및 Xamarin.Forms 에서도 지원 됩니다. 이러한 다른 문서에 자세히 설명 된:
 
 - `StaticResource` &ndash; 이 문서에 설명 된 대로 리소스 사전에서 개체를 참조 [ **리소스가**](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
 - `DynamicResource` &ndash; 이 문서에 설명 된 대로 리소스 사전에 있는 개체에 대 한 변경 내용에 응답할 [ **동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)합니다.
 - `Binding` &ndash; 이 문서에 설명 된 대로 두 개체의 속성 사이의 연결을 설정할 [ **데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)합니다.
-- `TemplateBinding` &ndash; 문서에 설명 된 대로 데이터 바인딩 컨트롤 템플릿에서 수행 [**컨트롤 템플릿에서 바인딩**] / 안내선/xamarin forms/응용 프로그램-기본 사항/템플릿/제어-템플릿/템플릿-바인딩 /)
+- `TemplateBinding` &ndash; 문서에 설명 된 대로 데이터 바인딩 컨트롤 템플릿에서 수행 [ **바인딩 컨트롤 템플릿에서**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/)합니다.
 
 합니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃 사용자 지정 태그 확장 사용 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)합니다. 이 태그 확장은 문서에서 설명한 [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)합니다.
 
