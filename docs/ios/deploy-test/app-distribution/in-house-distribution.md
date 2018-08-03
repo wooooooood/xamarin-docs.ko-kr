@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 657370705233e923b482b67fc5afed12631c8187
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1dff0e614943805930cf7d838110c4a42eee6f48
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785030"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353206"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
@@ -98,7 +98,7 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 포털에서 식별할 수 있는 **이름**을 제공합니다.
 3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, **명시적 앱 ID**: com.[DomainName].[AppName], **와일드카드 앱 ID**: com.[DomainName]과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다.*
-4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/index.md#appservices)를 선택합니다.
+4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)를 선택합니다.
 5. **계속** 단추를 클릭하고 화면의 지시에 따라 새 앱 ID를 만듭니다.
 
 배포 프로필을 만드는 데 필요한 필수 구성 요소가 있으면 아래 단계에 따라 해당 배포 프로필을 만듭니다.

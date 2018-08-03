@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111159"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353323"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 무료 프로비전
 
@@ -35,7 +35,7 @@ ms.locfileid: "39111159"
 - Xamarin.iOS 앱은 와일드 카드 앱 ID가 아닌 명시적 앱 ID를 사용해야 합니다.
 - Xamarin.iOS 앱에서 사용되는 번들 식별자는 고유해야 하며 이전에 다른 앱에서 사용되지 않았어야 합니다. 무료 프로비전에 사용된 번들 식별자는 다시 사용**할 수 없습니다**.
 - 이미 앱을 배포한 경우 무료 프로비전을 사용하여 해당 앱을 배포할 수 없습니다.
-- 앱에서 App Services를 사용하는 경우 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md#appservices) 가이드에 설명된 대로 프로비전 프로필을 만들어야 합니다. 
+- 앱에서 App Services를 사용하는 경우 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) 가이드에 설명된 대로 프로비전 프로필을 만들어야 합니다. 
 
 무료 프로비전과 관련된 제한 사항에 대한 자세한 내용은 이 문서의 [제한 사항](#limitations) 섹션을 살펴보고, iOS 응용 프로그램을 배포하는 방법에 대한 자세한 내용은 [앱 배포 가이드](~/ios/deploy-test/app-distribution/index.md)를 참조하세요.
 
@@ -144,4 +144,4 @@ Apple은 개발자가 *자신의* 장치에만 배포할 수 있도록 보장하
 ## <a name="related-links"></a>관련 링크
 
 - [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md)
-- [응용 프로그램 서비스 프로비전](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [응용 프로그램 서비스 프로비전](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)
