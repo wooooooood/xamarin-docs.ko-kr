@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 6c8abbdb18bcaee405f8fe7fe8c22a930435c7e5
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242448"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514533"
 ---
 # <a name="local-notifications"></a>로컬 알림
 
@@ -366,8 +366,8 @@ string message = Intent.Extras.GetString ("message", "");
 인 텐트 보류 중인 만들기에 대 한 자세한 내용은 참조 하세요. [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)합니다.
 
 
-<a name="notif-chan" />
-
+<a name="notif-chan"></a>
+<a name="notification-channels"></a>
 ## <a name="notification-channels"></a>알림 채널
 
 Android 8.0 oreo (용)부터 사용할 수는 *알림 채널* 알림 표시 하려는 각 형식에 대 한 사용자 지정 가능한 채널을 만드는 기능입니다. 알림 채널 수 있도록 하기 그룹 알림을 동작은 채널 별첨에 모든 알림 게시 되도록 합니다. 예를 들어 해야 즉각적인 주의가 필요한 알림을 위한 알림 채널 및 정보 메시지에 사용 되는 별도 "작게" 채널을 합니다.
