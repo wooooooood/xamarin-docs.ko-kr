@@ -329,6 +329,7 @@
 ### [Xamarin.iOS 분석 규칙](troubleshooting/xamarin-ios-analysis.md)
 ### [오류 메시지(mtouch)](troubleshooting/mtouch-errors.md)
 ### [질문과 대답](troubleshooting/questions/index.md)
+#### [Xcode를 사용한 디버깅](troubleshooting/questions/debugging-with-xcode.md)
 #### [Xamarin에서 Mac VM을 사용할 수 있나요?](troubleshooting/questions/mac-vm.md)
 #### [이전 버전의 Xcode 다운로드](troubleshooting/questions/previous-xcode.md)
 #### [iOS SDK 위치를 어디에 설정할 수 있나요?](troubleshooting/questions/ios-sdk.md)

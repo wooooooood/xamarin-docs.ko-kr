@@ -409,8 +409,8 @@ async Task<ImageList> GetImageListAsync()
 다음 스크린샷에서 표시 된 `WrapLayout` 가로 방향으로 회전 된 후:
 
 ![](custom-images/landscape-ios.png "샘플 iOS 응용 프로그램 가로 스크린 샷")
-![](custom-images/landscape-android.png "샘플 Android 응용 프로그램 가로 스크린 샷") 
- ![ ] (custom-images/landscape-uwp.png " 샘플 UWP 응용 프로그램 가로 스크린 샷")
+![](custom-images/landscape-android.png "샘플 Android 응용 프로그램 가로 스크린 샷")
+![](custom-images/landscape-uwp.png " 샘플 UWP 응용 프로그램 가로 스크린 샷")
 
 각 행의 열 수가 사진 크기, 화면 너비를 픽셀 장치 독립적 단위 수에 따라 달라 집니다. [ `Image` ](xref:Xamarin.Forms.Image) 사진, 비동기적으로 로드 하는 요소 및 합니다 `WrapLayout` 클래스를 자주 호출할 받을 해당 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 각 메서드 `Image` 요소에는 로드 된 사진에 따라 새 크기를 받습니다.
 
