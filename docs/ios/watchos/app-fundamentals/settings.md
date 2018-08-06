@@ -63,7 +63,7 @@ var userName = shared.StringForKey ("name_preference");
 
 사용자가 새 통해 설정을 상호 작용 **Apple Watch** 응용 프로그램의 iPhone에 액세스 합니다. 이 앱을 사용 하면 표시/숨기기 앱 watch, 및도 편집 설정을 사용 하 여 노출 하는 **설정 Watch.bundle**합니다.
 
-![](settings-images/applewatch-1.png "앱 설정의 예") ![ ] (settings-images/applewatch-2.png "앱 설정의 예")
+![](settings-images/applewatch-1.png "앱 설정의 예") ![](settings-images/applewatch-2.png "앱 설정의 예")
 
 
 

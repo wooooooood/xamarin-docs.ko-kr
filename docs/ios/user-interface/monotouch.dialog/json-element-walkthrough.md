@@ -21,7 +21,7 @@ _MonoTouch.Dialog (콜로라도 D) JSON 데이터를 통해 동적 UI 생성에 
 
 산 D 전체 다양 한 JSON을 사용 하는 경우 요소 API에서 사용할 수 있는 기능을 지원 합니다. 예를 들어 다음 스크린샷은 응용 프로그램은 JSON을 사용 하 여을 선언 완전히 됩니다.
 
-[![](json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 예를 다시 합니다 [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) JSON을 사용 하 여 작업 세부 정보 화면을 추가 하는 방법을 보여 주는 자습서입니다.
 

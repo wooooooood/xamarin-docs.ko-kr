@@ -157,7 +157,7 @@ listView.IsPullToRefreshEnabled = true;
 
 ![](interactivity-images/refresh-start.png "ListView 당겨서 새로 고침 진행률의")
 
-끌어오기-새로 고침 사용자와 끌어오기를 출시 했습니다. 이 사용자 목록을 업데이트 하는 동안 확인: ![ ] (interactivity-images/refresh-in-progress.png "ListView 당겨서 새로 고침 완료")
+끌어오기-새로 고침 사용자와 끌어오기를 출시 했습니다. 이 사용자 목록을 업데이트 하는 동안 확인: ![](interactivity-images/refresh-in-progress.png "ListView 당겨서 새로 고침 완료")
 
 ListView는 끌어오기-새로 고침 이벤트에 응답할 수 있도록 하는 몇 가지 이벤트를 노출 합니다.
 

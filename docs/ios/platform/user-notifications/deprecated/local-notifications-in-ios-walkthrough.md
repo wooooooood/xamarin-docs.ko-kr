@@ -116,7 +116,7 @@ _이 섹션에서는 Xamarin.iOS 응용 프로그램에서 로컬 알림을 사�
 
 1. 마지막으로, 응용 프로그램을 실행 합니다. Ios 8 묻는 알림을 허용 하려면. 클릭 **확인** 을 클릭 한 다음는 **알림을 추가할** 단추입니다. 잠시 후 다음 스크린샷에 표시 된 것 처럼 경고 대화 상자를 표시 됩니다.
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "알림을 전송 하는 기능을 확인") ![ ] (local-notifications-in-ios-walkthrough-images/image1.png "추가 알림 단추") ![ ] (local-notifications-in-ios-walkthrough-images/image2.png "알림 경고 대화 상자")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "알림을 전송 하는 기능을 확인") ![](local-notifications-in-ios-walkthrough-images/image1.png "추가 알림 단추") ![](local-notifications-in-ios-walkthrough-images/image2.png "알림 경고 대화 상자")
 
 ## <a name="summary"></a>요약
 

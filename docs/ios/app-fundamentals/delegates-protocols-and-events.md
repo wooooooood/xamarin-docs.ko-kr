@@ -29,7 +29,7 @@ Xamarin.iOS 응용 프로그램으로 기존.NET 응용 프로그램 거의 동�
 
 프로토콜 및 대리자를 보여 주기 위해 다음 그림과 같이 지도에 주석을 추가 하는 단순 맵 응용 프로그램을 빌드합니다.
 
- [![](delegates-protocols-and-events-images/01-map.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "지도에 추가 하는 예 주석")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/01-map.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로")](delegates-protocols-and-events-images/01-map.png#lightbox) [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "지도에 추가 하는 예 주석")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 이 앱을 수행 하는 작업량과, 하기 전에 시작 하겠습니다.NET 이벤트는 UIKit 아래를 살펴보면 합니다.
 

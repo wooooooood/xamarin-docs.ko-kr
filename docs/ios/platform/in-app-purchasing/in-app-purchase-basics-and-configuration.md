@@ -109,8 +109,8 @@ Apple에 판매 – 이름, 설명 되는 것 이며 'product'의 스크린샷�
 
 새 제품을 추가 하는 프로세스에 두 개의 단계가 있습니다.
 
-1.   제품 유형 선택: [ ![ ] (in-app-purchase-basics-and-configuration-images/image8.png "제품 종류를 선택 합니다.")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   가격 책정 계층 및 지역화 된 설명, 제품 Id를 포함 한 제품의 속성을 입력: [ ![ ] (in-app-purchase-basics-and-configuration-images/image9.png "제품 특성을 입력")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   제품 유형 선택: [![](in-app-purchase-basics-and-configuration-images/image8.png "제품 종류를 선택 합니다.")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   가격 책정 계층 및 지역화 된 설명, 제품 Id를 포함 한 제품의 속성을 입력: [![](in-app-purchase-basics-and-configuration-images/image9.png "제품 특성을 입력")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 각 앱에서 바로 구매 제품에 필요한 필드는 다음과 같습니다.
 

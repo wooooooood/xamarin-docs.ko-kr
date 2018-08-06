@@ -121,7 +121,7 @@ ms.locfileid: "34781274"
 
 응용 프로그램 프로젝트 각각 공유 프로젝트를 참조 하 고이 스크린 샷에 표시 된 것 처럼 사용자에 게 있는 기능에 필요한 사용자 인터페이스 코드를 포함 합니다.
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트") ![ ] (setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트")
 
 
 구체적인 예제는 프로젝트 구성 방법을 사례 연구에서 제공 됩니다.

@@ -62,11 +62,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스에 포함
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Android에서 HeroImage 컨트롤") ![ ] (controls-images/heroimage-dark-android.png "Android에서 HeroImage 컨트롤")
+![](controls-images/heroimage-light-android.png "Android에서 HeroImage 컨트롤") ![](controls-images/heroimage-dark-android.png "Android에서 HeroImage 컨트롤")
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "IOS에서 HeroImage 컨트롤") ![ ] (controls-images/heroimage-dark-ios.png "iOS에서 HeroImage 컨트롤")
+![](controls-images/heroimage-light-ios.png "IOS에서 HeroImage 컨트롤") ![](controls-images/heroimage-dark-ios.png "iOS에서 HeroImage 컨트롤")
 
 
 <a name="listitem" />
@@ -97,11 +97,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스에 포함
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Android에서 ListItem 컨트롤") ![ ] (controls-images/listitem-dark-android.png "Android에서 ListItem 컨트롤")
+![](controls-images/listitem-light-android.png "Android에서 ListItem 컨트롤") ![](controls-images/listitem-dark-android.png "Android에서 ListItem 컨트롤")
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "IOS에서 ListItem 컨트롤") ![ ] (controls-images/listitem-dark-ios.png "iOS에서 ListItem 컨트롤")
+![](controls-images/listitem-light-ios.png "IOS에서 ListItem 컨트롤") ![](controls-images/listitem-dark-ios.png "iOS에서 ListItem 컨트롤")
 
 
 ## <a name="custom-control-example"></a>사용자 지정 컨트롤 예제
@@ -128,11 +128,11 @@ XAML에서 이러한 컨트롤을 사용 하려면 네임 스페이스에 포함
 
 **Android**
 
-![](controls-images/cardview-light-android.png "Android에서 CardView 사용자 지정 컨트롤") ![ ] (controls-images/cardview-dark-android.png "Android에서 CardView 사용자 지정 컨트롤")
+![](controls-images/cardview-light-android.png "Android에서 CardView 사용자 지정 컨트롤") ![](controls-images/cardview-dark-android.png "Android에서 CardView 사용자 지정 컨트롤")
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "IOS에서 사용자 지정 컨트롤 CardView") ![ ] (controls-images/cardview-dark-ios.png "iOS에서 CardView 사용자 지정 컨트롤")
+![](controls-images/cardview-light-ios.png "IOS에서 사용자 지정 컨트롤 CardView") ![](controls-images/cardview-dark-ios.png "iOS에서 CardView 사용자 지정 컨트롤")
 
 <a name="custom" />
 

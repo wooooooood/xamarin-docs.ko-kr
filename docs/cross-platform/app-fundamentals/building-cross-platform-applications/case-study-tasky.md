@@ -479,7 +479,7 @@ MainPage 클래스에서 사용 하 여 `TaskListViewModel` XAML의 데이터 �
 
 'Add' 단추와 같은 iOS 표준 사용자 인터페이스 디자인을 사용 하 여 응용 프로그램의 탐색 모음에 배치 되 고 기본 제공을 사용 하 여 **더하기 (+)** 아이콘입니다. 기본 사용 `UINavigationController` '뒤로' 테이블의 ' 살짝 delete' 지원 및 동작을 단추입니다.
 
- [![](case-study-tasky-images/ios-taskylist.png "또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블에서의 통과 / 삭제를 지원") ](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/ios-taskylist.png "UINavigationController 기본값 사용 단추 동작을 백업 하 고 표에 통과 / 삭제를 지원 합니다.")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "또한 기본 UINavigationController 뒤로 단추 동작을 사용 하 고 테이블에서의 통과 / 삭제를 지원")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "UINavigationController 기본값 사용 단추 동작을 백업 하 고 표에 통과 / 삭제를 지원 합니다.")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ Android 앱 '틱' 표시 필요로 하는 행에 대 한 기본 제공 레이아
 
 Windows Phone 응용 프로그램 위쪽 탐색 모음 대신 화면 맨 아래에 있는 앱 표시줄을 채울 표준 레이아웃을 사용 합니다.
 
- [![](case-study-tasky-images/wp-taskylist.png "위쪽 탐색 모음 대신 화면 맨 아래에 있는 앱 표시줄을 채울 표준 레이아웃을 사용 하 여 Windows Phone 앱") ](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "The Windows Phone 앱의 표준 사용 하 여 위쪽 탐색 모음 대신 화면 맨 아래에 있는 앱 표시줄을 채울 레이아웃")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "위쪽 탐색 모음 대신 화면 맨 아래에 있는 앱 표시줄을 채울 표준 레이아웃을 사용 하 여 Windows Phone 앱")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "The Windows Phone 앱의 표준 사용 하 여 위쪽 탐색 모음 대신 화면 맨 아래에 있는 앱 표시줄을 채울 레이아웃")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

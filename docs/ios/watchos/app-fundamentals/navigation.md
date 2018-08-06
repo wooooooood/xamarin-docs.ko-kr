@@ -49,7 +49,7 @@ DismissController();
 
 표시를 통해 다시 탐색, 방식과 유사 하 게 될 수 있는 스택 처럼 장면 `UINavigationController` iOS에서 작동 합니다. 장면 수 탐색 스택에 밀어 넣은 있고 (프로그래밍 방식으로 또는 사용자 선택 하 여) 팝 합니다.
 
-![](navigation-images/hierarchy-1.png "장면 탐색 스택으로 푸시 될 수 있는") ![ ] (navigation-images/hierarchy-2.png "장면 탐색 스택에서 팝 될 수 있습니다")
+![](navigation-images/hierarchy-1.png "장면 탐색 스택으로 푸시 될 수 있는") ![](navigation-images/hierarchy-2.png "장면 탐색 스택에서 팝 될 수 있습니다")
 
 IOS의 경우와 마찬가지로 왼쪽 가장자리 살짝 계층 탐색 스택의 상위 컨트롤러를 다시 탐색 합니다.
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 페이지 기반 인터페이스 살짝 왼쪽-오른쪽, 방식과 유사 하 게 `UIPageViewController` iOS에서 작동 합니다. 표시기 점 현재 표시 되는 페이지를 표시 하려면 화면 아래쪽을 따라 표시 됩니다.
 
-![](navigation-images/paged-1.png "샘플의 첫 번째 페이지") ![ ] (navigation-images/paged-2.png "샘플 두 번째 페이지") ![ ] (navigation-images/paged-5.png "샘플 다섯 번째 페이지")
+![](navigation-images/paged-1.png "샘플의 첫 번째 페이지") ![](navigation-images/paged-2.png "샘플 두 번째 페이지") ![](navigation-images/paged-5.png "샘플 다섯 번째 페이지")
 
 
 페이지 기반 인터페이스를 watch 앱에 대 한 기본 UI를 만들려면 사용 `ReloadRootControllers` 인터페이스 컨트롤러 및 컨텍스트 배열을 사용 하 여:

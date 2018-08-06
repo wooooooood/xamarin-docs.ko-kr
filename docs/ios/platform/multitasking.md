@@ -19,7 +19,7 @@ ms.locfileid: "34787957"
 
 _iOS 9에 동시, 통해 슬라이드를 사용 하 여 또는 분할 된 뷰를 실행 하는 두 개의 앱을 지원 합니다. 또한 비디오 재생 그림에서 그림을 지원 합니다._
 
-![](multitasking-images/about02-sml.png "화면 예제 분할") ![ ] (multitasking-images/about03-sml.png "그림에서 그림 예제")
+![](multitasking-images/about02-sml.png "화면 예제 분할") ![](multitasking-images/about03-sml.png "그림에서 그림 예제")
 
 iOS 9 iPad 특정 하드웨어에 동시에 두 개의 응용 프로그램을 실행 하기 위한 멀티태스킹 지원을 추가 합니다. 멀티태스킹 iPad에 대 한 다음과 같은 기능을 통해 사용할 수 있습니다.
 
