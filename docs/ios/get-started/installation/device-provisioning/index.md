@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f0d6d2343350455a101033aced7cec0c31695503
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785790"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353232"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 장치 프로비저닝
 
@@ -29,7 +29,6 @@ Xamarin.iOS 응용 프로그램을 개발하는 동안 시뮬레이터 뿐만 �
 - **Apple 개발자 프로그램** – 개인이거나 조직을 대표하는지 여부에 관계 없이 Apple 개발자 프로그램을 통해 앱을 개발하고, 테스트하고, 배포할 수 있습니다.
 - **Apple 개발자 엔터프라이즈 프로그램** – 엔터프라이즈 프로그램은 사내에서만 앱을 개발하고 배포하려는 조직에 가장 적합합니다. 엔터프라이즈 프로그램의 구성원은 iTunes Connect에 액세스할 수 없고 만든 앱을 앱 스토어에 게시할 수 없습니다.
 
-
 이러한 프로그램 중 하나를 등록하려면 [Apple 개발자 포털](https://developer.apple.com/programs/enroll/)을 방문하여 등록합니다. Apple 개발자로서 등록하려면 [Apple ID](https://appleid.apple.com/)가 필요합니다. 이 가이드는 사용자가 Apple 개발자 프로그램의 구성원**이라는** 가정으로 만들어졌습니다.
 
 또는 Apple은 Apple의 개발자 프로그램의 구성원일 필요 *없이* 단일 응용 프로그램을 단일 장치에서 실행할 수 있도록 하는 Xcode 7에서 [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)을 도입했습니다. [여기](~/ios/get-started/installation/device-provisioning/free-provisioning.md#limitations)에서 설명된 대로 이러한 방식으로 프로비전할 때 여러 제한 사항이 있습니다.
@@ -44,9 +43,7 @@ Xamarin.iOS 응용 프로그램을 개발하는 동안 시뮬레이터 뿐만 �
 
 이러한 단계는 응용 프로그램 및 장치를 포함하여 개발 프로세스 중에 만들어지거나 사용된 모든 항목이 Apple 개발자 계정에 대해 역추적될 수 있도록 합니다.
 
-<a name="Provisioning_Profile" />
-
-## <a name="provisioning-your-device"></a>장치 프로비전
+## <a name="provisioning-your-device"></a>장치 프로비저닝
 
 iOS 장치를 프로비전하는 두 가지 방법이 있습니다.
 
@@ -54,15 +51,12 @@ iOS 장치를 프로비전하는 두 가지 방법이 있습니다.
 
 * **수동** - 서명 ID, 앱 ID 및 프로비전 프로필은 [수동 프로비전](manual-provisioning.md) 가이드에 설명된 대로 Apple 개발자 포털을 통해 만들어지고 관리될 수 있습니다. 그런 다음, 이러한 아티팩트는 [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md) 가이드에 설명된 대로 관리될 수 있습니다.
 
-
-<a name="appservices" />
-
 ## <a name="provisioning-for-application-services"></a>응용 프로그램 서비스 프로비전
 
 Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 응용 프로그램 서비스(다른 이름: 기능)를 제공합니다. 이러한 응용 프로그램 서비스는 **앱 ID**를 만들 때 iOS 프로비전 포털에서 구성하고 Xamarin.iOS 응용 프로그램 프로젝트에 속하는 **Entitlements.plist** 파일에서도 구성해야 합니다. 앱에 응용 프로그램 서비스를 추가하는 방법에 대한 자세한 내용은 [기능 소개](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드 및 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
 * 필요한 앱 서비스를 포함하는 앱 ID를 만듭니다.
-* 앱 ID를 포함하는 새로운 [프로비전 프로필](#Provisioning_Profile)을 만듭니다.
+* 앱 ID를 포함하는 새로운 [프로비전 프로필](#provisioning-your-device)을 만듭니다.
 * Xamarin.iOS 프로젝트에서 자격 설정
 
 ## <a name="related-links"></a>관련 링크
