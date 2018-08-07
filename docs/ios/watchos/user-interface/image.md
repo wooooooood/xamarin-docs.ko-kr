@@ -18,7 +18,7 @@ ms.locfileid: "34791253"
 
 watchOS 제공는 [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) 이미지 및 간단한 애니메이션 표시 하는 컨트롤입니다. 일부 컨트롤 (예: 단추, 그룹 및 인터페이스 컨트롤러)의 배경 이미지를 포함할 수도 있습니다.
 
-![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![ ] (image-images/image-animation.png "간단한 애니메이션으로 Apple Watch")
+![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![](image-images/image-animation.png "간단한 애니메이션으로 Apple Watch")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 자산 카탈로그 이미지를 사용 하 여 조사식 키트 앱에 이미지를 추가 합니다.

@@ -254,7 +254,7 @@ Xamarin.Mac 헤더 파일 정적 등록 기관에 응용 프로그램을 빌드�
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009:에서 참조 하 {0}.{1}     * *이 메시지는 MM2006 관련이 * *
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009:에서 참조 하 {0}.{1}     **이 메시지는 MM2006 관련이 **
 
 <a name="MM2010" />
 
@@ -266,7 +266,7 @@ Xamarin.Mac 헤더 파일 정적 등록 기관에 응용 프로그램을 빌드�
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012:만 첫 번째 {0} 의 {1} "참조" 경고를 표시 합니다. * * 2009이이 메시지와 관련 된 * *
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012:만 첫 번째 {0} 의 {1} "참조" 경고를 표시 합니다. * * 2009이이 메시지와 관련 된 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Xamarin.Mac 헤더 파일 정적 등록 기관에 응용 프로그램을 빌드�
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>Xamarin.Mac 확장 MM2014: 연결 지원 하지 않습니다. 요청 연결 무시 됩니다. * *이 메시지는 XM 3.6 이상에서 사용 되지 않음 * *
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>Xamarin.Mac 확장 MM2014: 연결 지원 하지 않습니다. 요청 연결 무시 됩니다. * *이 메시지는 XM 3.6 이상에서 사용 되지 않음 \*\*
 
 <!-- 2015 used by mtouch -->
 
