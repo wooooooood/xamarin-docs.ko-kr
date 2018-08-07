@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
-ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 08/06/2018
+ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
+ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270474"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39520287"
 ---
 # <a name="sharing-code-overview"></a>공유 코드 개요
 
@@ -19,7 +19,7 @@ _이 문서는 플랫폼 간 프로젝트 간에 코드 공유의 다양 한 방
 
 플랫폼 간 응용 프로그램 간에 코드를 공유 하는 방법은 세 가지가 있습니다.
 
-- [**.NET 표준 라이브러리** ](#Net_Standard) –.NET Standard 프로젝트는 여러 플랫폼 간에 공유할 수 있는 코드를 구현할 수 있습니다 하 고 (버전)에 따라 많은.NET Api에 액세스할 수 있습니다. .NET Standard 2.0의 가장 범위를 제공 하는 동안.NET 표준 1.0 ~ 1.6 구현 커지는 api를 설정 합니다.
+- [**.NET 표준 라이브러리** ](#Net_Standard) –.NET Standard 프로젝트는 여러 플랫폼 간에 공유할 수 있는 코드를 구현할 수 있습니다 하 고 (버전)에 따라 많은.NET Api에 액세스할 수 있습니다. .NET 표준 1.0 ~ 1.6.NET BCL (Xamarin 앱에서 사용할 수 있는.NET Api 포함)의 최상의 검사를 제공 하는.NET Standard 2.0 점점 더 커지는 Api 집합을 구현 합니다.
 - [**프로젝트를 공유** ](#Shared_Projects) – 공유 자산 프로젝트 유형을 사용 하 여 소스 코드를 구성 하 고 사용 하 여 `#if` 플랫폼 특정 요구 사항을 관리 하는 데 필요한 만큼 컴파일러 지시문입니다.
 - [**이식 가능한 클래스 라이브러리** ](#Portable_Class_Libraries) (사용 되지 않음) – 이식 가능한 클래스 라이브러리 (Pcl) 공용 API 화면을 사용 하 여 여러 플랫폼을 대상 하 인터페이스를 사용 하 여 플랫폼 특정 기능을 제공 합니다. 최신 버전의 Visual Studio에서 Pcl 사용 되지 않는 &ndash; 대신.NET Standard를 사용 합니다.
 
