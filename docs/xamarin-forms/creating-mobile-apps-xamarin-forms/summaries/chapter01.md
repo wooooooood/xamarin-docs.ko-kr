@@ -21,7 +21,7 @@ ms.locfileid: "39156485"
 
 해당 플랫폼에는 다른 프로그래밍 언어를 포함 하는 경우에 특히 다른 플랫폼에서 기본 코드를 이식가 프로그래밍에서 가장 원하지 않는 작업 중 하나입니다. 유혹도 리팩터링 하는 코드를 이식 하는 경우 있지만 두 플랫폼 모두 병렬로 유지 해야 하는 경우 다음 두 코드 베이스의 차이점은 어려워질 향후 유지 관리 합니다.
 
-## <a name="cross-platform-mobile-development"></a>플랫폼 간 모바일 개발
+## <a name="cross-platform-mobile-development"></a>크로스 플랫폼 모바일 개발
 
 모바일 플랫폼을 대상으로 하는 경우이 문제가 일반적입니다. 현재 두 가지 주요 모바일 플랫폼, iOS 운영 체제 및 다양 한 휴대폰과 태블릿에서 실행 되는 Android 운영 체제를 실행 하는 Ipad 및 Iphone의 Apple 제품군 존재 합니다. 다른 중요 한 플랫폼은 Microsoft의 Windows 플랫폼 (UWP (유니버설), Windows 10 Mobile 및 Windows 10을 대상으로 한 개의 프로그램을 수 있습니다.
 
