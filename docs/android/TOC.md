@@ -9,7 +9,7 @@
 ##### [장치 속성](get-started/installation/android-emulator/device-properties.md)
 ##### [문제 해결](get-started/installation/android-emulator/troubleshooting.md)
 #### [Android 장치 설정](get-started/installation/set-up-device-for-development.md)
-#### [Microsoft OpenJDK 미리 보기](get-started/installation/openjdk.md)
+#### [Microsoft Mobile OpenJDK 미리 보기](get-started/installation/openjdk.md)
 ### [Hello, Android](get-started/hello-android/index.md)
 #### [1부: 빠른 시작](get-started/hello-android/hello-android-quickstart.md)
 #### [2부: 심층 분석](get-started/hello-android/hello-android-deepdive.md)
