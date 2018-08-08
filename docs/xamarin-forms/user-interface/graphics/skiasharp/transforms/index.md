@@ -2,17 +2,17 @@
 title: SkiaSharp 변환
 description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSharp 그래픽을 표시 하기 위한 변환 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e2f83e3de574d11052b5301f1832988b7f4166bf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 89aa29d5bf03b1d6f9668ef2aee6ce0c1a277cc5
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998648"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615862"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 

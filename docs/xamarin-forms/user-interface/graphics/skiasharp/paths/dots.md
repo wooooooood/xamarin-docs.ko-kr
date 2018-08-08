@@ -1,36 +1,36 @@
 ---
-title: 점과 SkiaSharp에 대시가
-description: 이 문서 탐색 SkiaSharp에 점선과 파선 선 그리기의 복잡성을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
+title: 점 및 대시 SkiaSharp에서
+description: 이 문서에서 SkiaSharp, 점선과 파선 선 그리기의 복잡성을 마스터 하는 방법에 살펴봅니다 및 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5571f2d1824cef72e192a19d15f9af03276f7523
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7c336e6b5224f61ff84eb39652788b23f52b806e
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615420"
 ---
-# <a name="dots-and-dashes-in-skiasharp"></a>점과 SkiaSharp에 대시가
+# <a name="dots-and-dashes-in-skiasharp"></a>점 및 대시 SkiaSharp에서
 
-_마스터 SkiaSharp에 점선과 파선 선 그리기의 고급 기능_
+_SkiaSharp에서 점선과 파선 선 그리기의 복잡성을 마스터_
 
-SkiaSharp에서는 실선은 아니라 점과 대시의으로 구성 되며, 대신 있는 선을 그릴 수 있습니다.
+SkiaSharp solid 되지 않지만 대신 점 및 대시 구성 되는 줄을 그릴 수 있습니다.
 
 ![](dots-images/dottedlinesample.png "점선")
 
-이 작업을 수행는 *경로 효과*의 인스턴스인는 [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) 로 설정 하는 클래스는 [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) 속성 `SKPaint`합니다. 경로 만들 수 있습니다는 정적을 사용 하 여 효과 (또는 결합 되어 감사가 만들어집니다 경로 효과) `Create` 정의한 메서드 `SKPathEffect`합니다.
+이 작업을 수행을 *경로 효과*의 인스턴스인 합니다 [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) 로 설정 하는 클래스를 [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) 속성 `SKPaint`. 경로 만들 수 있습니다 사용 하는 정적 효과 (또는 결합 경로 효과) `Create` 정의한 메서드 `SKPathEffect`합니다.
 
-점선된 또는 파선된 그리기를 사용 하는 [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) 정적 메서드입니다. 두 인수는: 배열을이 먼저는 `float` 점과 대시의 길이 및 사이 공백의 길이 나타내는 값입니다. 이 배열의 요소 수는 짝수 있고 둘 이상의 요소가 있어야 합니다. (있을 수는 배열의 요소 개수가 0 있지만 실선에서 발생 시키는.) 두 요소가 있는 경우 첫 번째는 점 또는 대시의 길이 이며 두 번째 점 또는 대시 다음 앞에서 간격의 길이 합니다. 두 개 이상의 요소 있으면이 순서로 되어: 대시 길이 "," 간격 길이 "," 대시 길이 "," 간격 길이 "및" 등입니다.
+사용할 점선된 또는 파선된을 그리려면 합니다 [ `SKPathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) 정적 메서드입니다. 두 개의 인수: 배열을 먼저 이것이 `float` 점 및 대시의 길이 사이 공백의 길이 나타내는 값입니다. 이 배열 요소 수는 짝수 있고 둘 이상의 요소가 있어야 합니다. (있을 수는 배열의 요소가 있지만 실선에서 발생 하는.) 두 개의 요소가 있는 경우 첫 번째 점 또는 대시의 길이 이며 두 번째 간격의 길이 다음 점 또는 대시 하기 전에 합니다. 이 순서 있는 경우 두 개 이상의 요소가: 대시 길이 "," 간격 길이 "," 대시 길이 "," 간격 길이 "및" 등입니다.
 
-일반적으로 스트로크 너비의 배수 대시와 간격 길이 확인 합니다. 스트로크 너비는 10 픽셀, 예를 들어 다음 배열 {10, 10} 그립니다 점선 점 및 간격이 있는 선 두께와 같은 길이.
+일반적으로 스트로크 너비의 배수로 대시 및 간격 길이 확인 해야 합니다. 스트로크 너비는 10 픽셀, 예를 들어, 다음 배열은 {10, 10} 그립니다 점선 점과 간격이 있는 스트로크 두께와 같은 길이.
 
-그러나는 `StrokeCap` 설정인는 `SKPaint` 개체도 영향을 줍니다 이러한 점과 대시 합니다. 곧, 알게이 배열의 요소에 영향을 미칩니다입니다.
+그러나 합니다 `StrokeCap` 설정의 `SKPaint` 개체도 영향을 줍니다 이러한 점 및 대시 합니다. 곧 확인 하겠지만 대로이 배열의 요소에 영향을 주게입니다.
 
-점 표기법에 따른 및 파선에서 보여지는 **점선 및 대시** 페이지. [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) 파일 두 개를 인스턴스화하고 `Picker` 획 cap 및 dash 배열을 선택 하 고 두 번째 선택할 수에 대 한 뷰:
+점 및에 파선 설명 되어는 **점 및 대시** 페이지입니다. 합니다 [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) 파일은 두 `Picker` 스트로크 단면 및 dash 배열을 선택 하 고 두 번째 선택할 수에 대 한 뷰:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,9 +91,9 @@ SkiaSharp에서는 실선은 아니라 점과 대시의으로 구성 되며, 대
 </ContentPage>
 ```
 
-처음 세 항목은 `dashArrayPicker` 스트로크 너비 10 픽셀 것으로 가정 합니다. {10, 10} 배열이 점선에 대 한 {30, 10}가 파선 및 {10, 10, 30, 10}에 대 한 점 파선입니다. (다른 3 개가 살펴봅니다 곧.)
+처음 세 개의 항목을 `dashArrayPicker` 스트로크 너비 10 픽셀 것으로 가정 합니다. {10, 10} 배열이 dotted 줄에 대 한 {30, 10} 점선으로 및 {10, 10, 30, 10}는 점 파선입니다. (다른 3 개는 잠시 후에 설명 합니다.)
 
-[ `DotsAndDashesPage` 코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) 포함는 `PaintSurface` 이벤트 처리기 및 몇 가지에 액세스 하기 위한 도우미 루틴의 `Picker` 보기:
+[ `DotsAndDashesPage` 코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) 포함 된 `PaintSurface` 이벤트 처리기와 도우미 루틴에 액세스 하기 위한 몇은 `Picker` 뷰:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -153,23 +153,23 @@ float[] GetPickerArray(Picker picker)
 }
 ```
 
-다음 스크린샷에서 왼쪽 끝에 iOS 화면 점선을 보여 줍니다.
+다음 스크린샷에서 맨 왼쪽에 있는 iOS 화면에는 점선을 표시 됩니다.
 
-[![](dots-images/dotsanddashes-small.png "점, 대시 페이지의 삼중 스크린샷")](dots-images/dotsanddashes-large.png#lightbox "점과 대시 페이지의 삼중 스크린 샷")
+[![](dots-images/dotsanddashes-small.png "점 및 대시 페이지 스크린샷 삼중")](dots-images/dotsanddashes-large.png#lightbox "Triple 점 및 대시 페이지 스크린샷")
 
-Android 화면 점선 {10, 10} 배열을 사용 하 여 표시 되는 또한 하지만 대신 선은 단색입니다. 어떻게 된 것입니까? 문제는 Android 화면에서는 스트로크 caps 설정이 있는지 `Square`합니다. 모든 대시 간격 모두 채울 그 결과, 절반 스트로크 너비를 확장 합니다.
+그러나 Android 화면 표시 {10, 10} 배열을 사용 하 여 점선 할 수도 아니지만 줄 실선입니다. 어떻게 된 것입니까? 문제는 Android 화면에서는 스트로크 cap 설정이 `Square`합니다. 이 간격을 채우도록을 일으킨 절반 스트로크 너비에서 모든 대시를 확장 합니다.
 
-스트로크 cap를 사용 하는 경우이 문제를 해결 하려면 `Square` 또는 `Round`, (경우에 따라 결과 대시의 길이가 0), stroke 길이 의해 배열에서 대시 길이 감소 하며 스트로크 길이 의해 간격 길이 늘립니다. 이것은 어떻게 최종 3 대시 배열에는 `Picker` 계산 된 XAML 파일에:
+스트로크 단면을 사용 하는 경우이 문제를 해결 하려면 `Square` 또는 `Round`, 대시 길이 배열 (경우에 따라 결과 대시의 길이가 0), 스트로크 길이로 감소 하며 스트로크 길이로 간격 길이 늘립니다. 이것이, 어떻게 최종 세 가지 대시의 배열은 `Picker` 계산 된 XAML 파일에:
 
-- {10, 10}은 {0, 20} 점선에 대 한
-- {30, 10}은 {20, 20} 파선에 대 한
-- {10, 10, 30, 10} {0, 20, 20, 20} 점선과 파선 선 되 면
+- {10, 10} 수 {0, 20} 점선의
+- {30, 10} 됩니다 {20, 20} 점선에 대 한
+- {10, 10, 30, 10} {0, 20, 20, 20} 점선과 파선 줄은
 
-파선 선의 점 표기법에 따른 UWP 화면 표시 된의 캡 `Round`합니다. `Round` 선 단면 두꺼운 선에서 점, 대시의 최상의 모양을 제공 합니다.
+스트로크에 대 한 줄 점과 점선는 UWP 화면 표시의 상한을 `Round`합니다. `Round` 스트로크 단면 두꺼운 선에서 점 및 대시의 최적 모양을 제공 합니다.
 
-지금까지 언급 되지 이루어졌을 두 번째 매개 변수는 `SKPathEffect.CreateDash` 메서드. 이 매개 변수 이름이 `phase` 하는 줄의 시작 부분에 대 한 점 대시 패턴 내의 오프셋을 지칭 합니다. 예를 들어, 대시 배열이 {10, 10} 및 `phase` 은 10이 고 다음 줄 점 대신 간격으로 시작 합니다.
+지금까지 언급 되지 된 내용이 두 번째 매개 변수는 `SKPathEffect.CreateDash` 메서드. 이 매개 변수의 이름은 `phase` 줄의 시작 부분에 대 한 점 및 대시 패턴 내의 오프셋을 지칭 합니다. 예를 들어 dash 배열은 {10, 10} 및 `phase` 은 10이 고 다음 줄 점 보다는 간격을 시작 합니다.
 
-한 가지 흥미로운 적용은 `phase` 매개 변수는 애니메이션에서 합니다. **애니메이션 나선** 페이지는 비슷합니다는 **Archimedean 나선** 점을 제외 하 고 페이지는 [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) 클래스 애니메이션 효과 적용는 `phase` 매개 변수입니다. 페이지에는 애니메이션에 또 다른 방법을 보여 줍니다. 이전 예는 [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) 사용 되는 `Task.Delay` 애니메이션을 제어 하는 메서드. 이 예에서는 대신 Xamarin.Forms는 `Device.Timer` 메서드:
+한 가지 흥미로운 적용 된 `phase` 매개 변수는 애니메이션입니다. **나선형 애니메이션** 비슷합니다는 **Archimedean 나선형** 는 제외 하 고 페이지를 [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs) 클래스가 애니메이션을 적용를 `phase` 매개 변수. 페이지에는 또 다른 방법은 애니메이션을 보여 줍니다. 이전 예제는 [ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs) 사용 된 `Task.Delay` 애니메이션을 제어 하는 방법. 이 예제에서는 대신 Xamarin.Forms `Device.Timer` 메서드:
 
 
 ```csharp
@@ -213,9 +213,9 @@ protected override void OnAppearing()
 
 물론, 실제로 애니메이션을 확인 하기 위해 프로그램을 실행 해야 합니다.
 
-[![](dots-images/animatedspiral-small.png "애니메이션을 나선 페이지의 삼중 스크린샷")](dots-images/animatedspiral-large.png#lightbox "애니메이션 나선 페이지의 삼중 스크린샷")
+[![](dots-images/animatedspiral-small.png "애니메이션 나선형 페이지 스크린샷 삼중")](dots-images/animatedspiral-large.png#lightbox "삼중 애니메이션 나선형 페이지 스크린샷")
 
-이제 선을 그리는 파라메트릭 수식을 사용 하 여 곡선을 정의 하는 방법을 살펴보았습니다. 나중에 게시할는 섹션은 다양 한 종류의 곡선을 설명 하는 `SKPath` 지원 합니다.
+이제 선을 그리려면 매개 방정식을 사용 하 여 곡선을 정의 하는 방법을 살펴봤습니다. 나중에 게시할 섹션에서는 다양 한 종류의 곡선을 설명 하는 `SKPath` 지원 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

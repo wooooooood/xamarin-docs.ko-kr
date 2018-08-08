@@ -1,38 +1,38 @@
 ---
 title: 경로 정보 및 열거형
-description: 이 문서는 SkiaSharp 경로 대 한 정보를 가져오고의 내용을 열거 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
+description: 이 문서에서는 콘텐츠를 열거 및 SkiaSharp 경로 대 한 정보를 제공 하는 방법을 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 65c614e9a6eb26bc0d027a4a67bec19b036d0a70
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243794"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615277"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
-_경로 대 한 정보를 가져오고 내용 열거_
+_경로 대 한 정보를 가져오고 내용을 열거 합니다._
 
-[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 여러 속성 및 메서드는 경로 대 한 정보를 얻을 수 있도록 하는 클래스를 정의 합니다. [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) 및 [ `TightBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.TightBounds/) 경로의 metrical 치수를 확인할 속성 (및 관련된 메서드). [ `Contains` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Contains/p/System.Single/System.Single/) 메서드를 사용 하면 특정 시점 경로 내 인지 확인 합니다.
+합니다 [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 여러 속성 및 메서드는 경로 대 한 정보를 얻을 수 있도록 하는 클래스를 정의 합니다. 합니다 [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) 하 고 [ `TightBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.TightBounds/) 속성 (및 관련된 메서드) 경로의 metrical 크기를 가져옵니다. 합니다 [ `Contains` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Contains/p/System.Single/System.Single/) 메서드를 사용 하면 경로 내에서 특정 지점 인지 확인 합니다.
 
-경우에 따라 모든 선과 경로 구성 하는 곡선의 총 길이 확인 하는 것이 유용 합니다. 이 아니므로 간단한 알고리즘 방식으로 작업을 전체 클래스 라는 [ `PathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 에 이루어집니다.
+경우에 따라 모든 줄 및 경로 구성 하는 곡선의 총 길이 확인 하는 것이 유용 합니다. 이 아니므로 간단한 알고리즘 방식으로 태스크를 명명 된 전체 클래스 [ `PathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 를 전용으로 지정 됩니다.
 
-도 유용 경우에 따라 모든 그리기 작업 및 경로 구성 하는 요소를 가져올 수 있습니다. 처음에이 기능은 불필요 한 보이기는: 프로그램 내용을 이미 알고 있는 프로그램이 경로 만든 경우. 그러나를 살펴 보았으며 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 및 변환 하 여 [경로로 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 가능한 모든 지점에 알고리즘 변환을 적용 하는 것입니다. 이렇게 하면 반구 주위에 텍스트를 배치 하는 기법:
+또한 유용한 경우가 모든 그리기 작업 및 경로 구성 하는 요소를 가져오려고 합니다. 처음에이 기능은 불필요 한 보일 수 있습니다: 프로그램 내용을 이미 알고 있는 프로그램에서 경로 만든 경우. 그러나 지금까지 살펴본 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 변환 하 [경로에 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 방법은 모든 요소에는 알고리즘 변환을 적용 하는 것입니다. 이렇게 하면 반구 주위의 텍스트 줄 바꿈 등의 기술을 수 있습니다.
 
-![](information-images/pathenumerationsample.png "텍스트 반구에 줄 바꿈")
+![](information-images/pathenumerationsample.png "반구에서 텍스트")
 
 ## <a name="getting-the-path-length"></a>경로 길이 가져오기
 
-문서에서 [ **경로 및 텍스트** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) 사용 하는 방법을 알아보았습니다는 [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) 메서드 인 초기 패스의 과정을 따릅니다 텍스트 문자열을 그립니다. 하지만 경로 정확 하 게 맞도록 텍스트 크기를 조정 하면 어떨까요? 원 주위 텍스트를 그리기 위한 쉽게 때문에 이것이 원의 원주를 계산 하기는 합니다. 하지만 되는 타원의 원 둘레 또는 베 지 어 곡선의 길이로 그리 간단 하지 않습니다.
+문서의 [ **경로 및 텍스트** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) 사용 하는 방법을 살펴보았습니다 합니다 [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) 해당 기준을 따릅니다 경로의 과정 텍스트 문자열을 그리는 방법입니다. 그러나 경로 정확 하 게 맞도록 텍스트의 크기를 원하는 경우? 텍스트를 원 주위 그릴, 이것이 쉽게 원의 원주를 계산 하는 간단한 이므로입니다. 하지만 타원의 일부 또는 베 지 어 곡선의 길이 그리 간단 하지 않습니다.
 
-[ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 클래스 수입니다. [생성자](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) 허용는 `SKPath` 인수 및 [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) 속성의 길이 보여 줍니다.
+합니다 [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) 클래스는 데 도움이 됩니다. 합니다 [생성자](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) 허용는 `SKPath` 인수를 및 [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) 속성 길이 표시 합니다.
 
-이 확인할는 **경로 길이** 예제를 기반으로 하는 **베 지 어 곡선** 페이지. [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) 파일에서 파생 `InteractivePage` 터치 인터페이스를 포함 합니다.
+에 설명 되어이 **경로 길이** 샘플을 기반으로 하는 합니다 **베 지 어 곡선** 페이지입니다. 합니다 [ **PathLengthPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml) 에서 파생 되는 파일 `InteractivePage` 터치 인터페이스를 포함 합니다.
 
 ```xaml
 <local:InteractivePage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -53,7 +53,7 @@ _경로 대 한 정보를 가져오고 내용 열거_
 </local:InteractivePage>
 ```
 
-[ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) 코드 숨김 파일을 사용 하면 끝점을 정의 하 고 있는 입방 형 3 차원 곡선의 제어점을 4 개의 터치 포인트를 이동할 수 있습니다. 세 필드는 텍스트 문자열을 정의 `SKPaint` 개체 및 텍스트의 너비를 계산된 합니다.
+합니다 [ **PathLengthPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathLengthPage.xaml.cs) 코드 숨김 파일을 사용 하면 끝점을 정의 하 고 입방 형 3 차원 큐빅 곡선의 제어점을 4 개의 터치 포인트를 이동할 수 있습니다. 세 개의 필드가 정의 텍스트 문자열을 `SKPaint` 개체 및 텍스트의 너비를 계산된 합니다.
 
 ```csharp
 public partial class PathLengthPage : InteractivePage
@@ -72,9 +72,9 @@ public partial class PathLengthPage : InteractivePage
 }
 ```
 
-`baseTextWidth` 필드는 기반으로 하는 텍스트의 너비는 `TextSize` 10을 설정 합니다.
+합니다 `baseTextWidth` 필드를 기준으로 텍스트의 너비를 `TextSize` 10의 설정 합니다.
 
-`PaintSurface` 처리기 베 지 어 곡선을 그리는 데 및 다음의 전체 길이 따라 맞게 텍스트 크기를 조정 합니다.
+`PaintSurface` 처리기 베 지 어 곡선을 그리고 다음 전체 길이 따라 맞게 텍스트 크기:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -108,15 +108,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-`Length` 속성을 새로 만든 `SKPathMeasure` 개체의 경로 길이 가져옵니다. 이 나눈는 `baseTextWidth` (변수인 10의 텍스트 크기에 따라 텍스트의 너비) 값 및 다음 10의 기본 텍스트 크기와 곱하면 합니다. 결과 해당 경로의 텍스트를 표시 하기 위한 새 텍스트 크기:
+합니다 `Length` 속성을 새로 만든 `SKPathMeasure` 경로의 길이 가져옵니다. 이 나눈는 `baseTextWidth` (인 10의 텍스트 크기에 따라 텍스트의 너비) 값 및 10의 기본 텍스트 크기를 곱한 후 합니다. 결과 해당 경로 상에 텍스트를 표시 하기 위한 새 텍스트 크기:
 
-[![](information-images/pathlength-small.png "경로 길이 페이지의 삼중 스크린샷")](information-images/pathlength-large.png#lightbox "경로 길이 페이지의 삼중 스크린샷")
+[![](information-images/pathlength-small.png "경로 길이 페이지 스크린샷 삼중")](information-images/pathlength-large.png#lightbox "삼중 경로 길이 페이지 스크린샷")
 
-베 지 어 곡선을 더 길거나 더 짧은 가져옵니다, 텍스트 크기 변경 볼 수 있습니다.
+베 지 어 곡선을 더 길거나 더 짧은 가져옵니다를 변경 하는 텍스트 크기를 볼 수 있습니다.
 
-## <a name="traversing-the-path"></a>경로 통과합니다.
+## <a name="traversing-the-path"></a>경로 트래버스합니다.
 
-`SKPathMeasure` 둘 이상의 측정값의 경로 길이 수행할 수 있습니다. 경로 길이 0 사이의 모든 값에 대 한 프로그램 `SKPathMeasure` 개체는 해당 지점에서 경로 및 경로 곡선 탄젠트에 위치를 가져올 수 있습니다. 탄젠트 형식의 벡터로 제공 됩니다는 `SKPoint` 개체나에 캡슐화 된 회전을으로 프로그램 `SKMatrix` 개체입니다. 메서드를 다음은 `SKPathMeasure` 다양 하 고 융통성 있는 방법으로이 정보를 얻으려면입니다.
+`SKPathMeasure` 이상의 측정값 경로의 길이 수행할 수 있습니다. 0과 경로 길이 사이의 모든 값에 대 한는 `SKPathMeasure` 개체는 해당 지점에서 경로 및 경로 곡선 탄젠트의 위치를 가져올 수 있습니다. 탄젠트 벡터의 형태로 제공 됩니다는 `SKPoint` 개체 또는 회전으로 캡슐화를 `SKMatrix` 개체입니다. 여기의 가지가 `SKPathMeasure` 다양 하 고 유연한 방식으로이 정보를 가져오고:
 
 ```csharp
 Boolean GetPosition (Single distance, out SKPoint position)
@@ -128,17 +128,17 @@ Boolean GetPositionAndTangent (Single distance, out SKPoint position, out SKPoin
 Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlags flag)
 ```
 
-[ `SKPathMeasureMatrixFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasureMatrixFlags/) 됩니다.
+합니다 [ `SKPathMeasureMatrixFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasureMatrixFlags/) 됩니다.
 
 - [`GetPosition`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPosition/)
 - [`GetTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
 - [`GetPositionAndTangent`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathMeasureMatrixFlags.GetPositionAndTangent/)
 
-**자전거 절반 파이프** 페이지 사람 모양 아이콘이 있는 입방 형 3 차원 곡선을 따라 전달 자전거로 자전거에 애니메이션 효과 적용 합니다.
+합니다 **자전거 절반 파이프** 페이지 사람 모양 아이콘이 입방 형 3 차원 큐빅 곡선을 따라 앞뒤로를 보이는 자전거에 애니메이션 효과 줍니다.
 
-[![](information-images/unicyclehalfpipe-small.png "자전거 절반 파이프 페이지의 삼중 스크린샷")](information-images/unicyclehalfpipe-large.png#lightbox "자전거 절반 파이프 페이지의 삼중 스크린샷")
+[![](information-images/unicyclehalfpipe-small.png "삼중 자전거 절반 파이프 페이지 스크린샷")](information-images/unicyclehalfpipe-large.png#lightbox "삼중 자전거 절반 파이프 페이지 스크린샷")
 
-`SKPaint` 절반 파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다는 [ `UnicycleHalfPipePage` ]() 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
+합니다 `SKPaint` 절반-파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다 합니다 [ `UnicycleHalfPipePage` ]() 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -163,7 +163,7 @@ public class UnicycleHalfPipePage : ContentPage
 }
 ```
 
-표준 재정의 포함 하는 클래스는 `OnAppearing` 및 `OnDisappearing` 애니메이션에 대 한 메서드. `PaintSurface` 처리기 절반 파이프에 대 한 경로 만들고 다음에 그립니다. `SKPathMeasure` 개체는 다음이 경로에 따라 만들어집니다.
+클래스의 표준 재정의 포함 합니다 `OnAppearing` 고 `OnDisappearing` 애니메이션에 대 한 메서드. `PaintSurface` 처리기 절반 파이프에 대 한 경로 만들고 다음을 그립니다. `SKPathMeasure` 개체는 다음이 경로에 따라 만들어집니다.
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -209,15 +209,15 @@ public class UnicycleHalfPipePage : ContentPage
 }
 ```
 
-`PaintSurface` 의 값을 계산 하는 처리기 `t` 하는 라인 0에서 1로 5 초 마다. 다음 사용 하 여는 `Math.Cos` 하는 값을 변환 하려면 함수 `t` 하는 범위는 0에서 1, 0, 다시로 여기서 0은에 해당 왼쪽, 위쪽에서 시작 부분에서 자전거 1은 오른쪽 상단에 자전거에 해당 하는 동안 합니다. 코사인 함수 때문에 파이프의 맨 성과 맨 아래에 가장 빠른 속도입니다.
+합니다 `PaintSurface` 의 값을 계산 하는 처리기 `t` 는 이동 0에서 1 5 초 마다. 사용 하 여는 `Math.Cos` 함수는 값으로 변환할 `t` 는 범위는 0에서 1을 0으로 다시 1은 오른쪽 맨 위에 있는 자전거에 해당 하는 동안 0에서 왼쪽, 위쪽에서 시작 하는 자전거를 해당 위치 합니다. 코사인 함수는 파이프의 맨 위에 있는 가장 느린 고 맨 아래에서 가장 빠른 속도 하면 됩니다.
 
-이 값의 `t` 첫 번째 인수에 대 한 경로 길이 곱한 수 해야 `GetMatrix`합니다. 행렬에 적용 되는 `SKCanvas` 자전거 경로 그리기 위한 개체입니다.
+이 값 `t` 첫 번째 인수에 대 한 경로 길이 곱한 수 해야 `GetMatrix`합니다. 행렬에 적용 되는 `SKCanvas` 자전거 패스 그리기에 대 한 개체입니다.
 
 ## <a name="enumerating-the-path"></a>경로 열거합니다.
 
-클래스의 두 개의 포함 `SKPath` 경로의 내용을 열거할 수 있습니다. 이러한 클래스는 [ `SKPath.Iterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+Iterator/) 및 [ `SKPath.RawIterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+RawIterator/)합니다. 두 클래스는 매우 유사 하지만 `SKPath.Iterator` 경로 길이 0을, 또는 길이가 0 가까이 요소를 제거할 수 있습니다. `RawIterator` 아래 예에 사용 됩니다.
+클래스를 포함 하는 두 개의 `SKPath` 경로의 내용을 열거할 수 있습니다. 이러한 클래스는 [ `SKPath.Iterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+Iterator/) 하 고 [ `SKPath.RawIterator` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath+RawIterator/)합니다. 두 클래스는 매우 유사 하지만 `SKPath.Iterator` 경로 길이가 0 인, 또는 길이가 0에 가까운 요소를 제거할 수 있습니다. `RawIterator` 아래 예제에 사용 됩니다.
 
-형식의 개체를 가져올 수 있습니다 `SKPath.RawIterator` 호출 하 여는 [ `CreateRawIterator` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CreateRawIterator()/) 방식의 `SKPath`합니다. 반복적으로 호출 하 여 수행 되는 경로 전체를 열거 하는 [ `Next` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.Next/p/SkiaSharp.SKPoint[]/) 메서드. 개의 전달 `SKPoint` 값:
+형식의 개체를 가져올 수 있습니다 `SKPath.RawIterator` 를 호출 하 여 합니다 [ `CreateRawIterator` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CreateRawIterator()/) 메서드의 `SKPath`합니다. 반복적으로 호출 하 여 수행 됩니다 경로 통해 열거 합니다 [ `Next` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.Next/p/SkiaSharp.SKPoint[]/) 메서드. 4 개의 배열을 전달 `SKPoint` 값:
 
 ```csharp
 SKPoint[] points = new SKPoint[4];
@@ -225,25 +225,25 @@ SKPoint[] points = new SKPoint[4];
 SKPathVerb pathVerb = rawIterator.Next(points);
 ```
 
-`Next` 의 멤버를 반환 하는 메서드는 [ `SKPathVerb` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathVerb/) 열거 합니다. 이러한 값을 경로에서 특정 그리기 명령을 나타냅니다. 배열에 삽입 하는 유효한 점 개수가이 동사에 따라 달라 집니다.
+합니다 `Next` 의 멤버를 반환 하는 메서드를 [ `SKPathVerb` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathVerb/) 열거형입니다. 이러한 값을 경로에 특정 그리기 명령을 나타냅니다. 배열에 삽입 하는 유효한 점 개수가이 동사에 따라 달라 집니다.
 
-- [`Move`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Move/) 단일 지점과
+- [`Move`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Move/) 단일 지점
 - [`Line`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Line/) 두 점과 함께
-- [`Cubic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Cubic/) 4 개의 점이 있는
-- [`Quad`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Quad/) 세 개의 점을 사용
-- [`Conic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Conic/) 세 개의 점을 사용 (호출 또한는 [ `ConicWeight` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.ConicWeight/) 가중치 메서드)
+- [`Cubic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Cubic/) 점이 4 개를 사용 하 여
+- [`Quad`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Quad/) 세 개의 점을 사용 하 여
+- [`Conic`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Conic/) 세 개의 점을 사용 하 여 (또한 호출을 [ `ConicWeight` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath+RawIterator.ConicWeight/) 가중치에 대 한 메서드)
 - [`Close`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Close/) 하나의 점에서
 - [`Done`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathVerb.Done/)
 
 `Done` 동사 열거형 완료 되었음을 나타냅니다.
 
-있으며 없는 `Arc` 동사입니다. 이 나타냅니다 모든 원호 경로에 추가 될 때 곡선을 베 지 어 곡선으로 변환 됩니다.
+있으며 없습니다 `Arc` 동사입니다. 이 모든 원호 경로에 추가 하는 경우에 베 지 어 곡선으로 변환 됩니다 것을 나타냅니다.
 
-에 정보 중 일부는 `SKPoint` 배열 중복 됩니다. 예를 들어 경우는 `Move` 동사 뒤는 `Line` 동사를 다음 두 개의 점을 함께 사용 해야 하는 중 첫 번째는 `Line` 동일는 `Move` 지점입니다. 실제로 이러한 중복 매우 유용합니다. 가져올 때는 `Cubic` 동사, 헤더와 함께 입방 형 3 차원 곡선을 정의 하는 모든 점이 4 개. 이전 동사에서 설정 된 현재 위치를 유지 하지 않아도 됩니다.
+에 있는 정보의 일부를 `SKPoint` 배열 중복 됩니다. 예를 들어 경우는 `Move` 뒤에 동사를 `Line` 동사를 수반 되는 두 요소의 첫 번째는 `Line` 와 같습니다는 `Move` 지점. 실제로이 중복 매우 유용합니다. 표시 되는 경우는 `Cubic` 동사 입방 형 3 차원 큐빅 곡선을 정의 하는 모든 네 가지 요소와 함께 합니다. 이전 동사 설정한 현재 위치를 유지할 필요가 없습니다.
 
-문제가 있는 동사 인데 `Close`합니다. 이 명령은 현재 위치에서 의해 이미 설정 된 윤곽선의 시작 부분에 직선을 그립니다는 `Move` 명령입니다. 이상적으로 `Close` 동사 한 지점 보다는이 두 지점을 제공 해야 합니다. 더욱 심각한 지점 함께 제공 되는 `Close` 동사는 항상 (0, 0). 즉, 경로 열거할 때 필요가 있다는 것 아마도 유지 하는 `Move` 지점과 현재 위치입니다.
+문제가 있는 동사에 것 인데, `Close`합니다. 이 명령은 현재 위치에서에서 이전에 설정 된 윤곽선의 시작 부분에 직선을 그립니다는 `Move` 명령입니다. 이상적으로 `Close` 동사를 하나의 지점 보다는이 두 지점을 제공 해야 합니다. 더욱 심각한 함께 제공 되는 지점에는 `Close` 동사는 항상 (0, 0). 즉,는 경로 전체를 열거 하는 경우 아마도 해야 유지는 `Move` 지점과 현재 위치입니다.
 
-정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 일련의 작은 직선 곡선을 계산 하는 세 가지 종류의 베 지 어 곡선으로 변환 하는 여러 메서드가 포함 되어 있습니다. (파라메트릭 수식 문서에 제공 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) `Interpolate` 메서드 하나만 단위 길이에 있는 많은 짧은 줄에 직선을 나눕니다.
+정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스에 일련의 작은 직선 곡선 근사치는 세 가지 유형의 베 지 어 곡선으로 변환 하는 여러 메서드가 포함 되어 있습니다. (문서의 파라메트릭 수식에 표시 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) `Interpolate` 메서드 하나만 단위 길이에 다양 한 짧은 줄에 직선을 세분화 합니다.
 
 ```csharp
 static class PathExtensions
@@ -328,9 +328,9 @@ static class PathExtensions
 }
 ```
 
-이러한 모든 방법을 확장 메서드에서 참조 `CloneWithTransform` 아래에 표시 합니다. 이 메서드는 경로 명령을 열거 하 고 데이터를 기반으로 새 경로 생성 하 여 경로 복제 합니다. 그러나 새 경로 구성 되어 `MoveTo` 및 `LineTo` 호출 합니다. 모든 곡선과 직선 일련의 작은 선으로 세분화 됩니다.
+이러한 모든 메서드는 확장 메서드에서 참조 `CloneWithTransform` 아래에 표시 합니다. 이 메서드는 경로 명령을 열거 하 고 데이터를 기반으로 새 경로 생성 하 여 경로 복제 합니다. 그러나 새 경로 으로만 이루어진 `MoveTo` 고 `LineTo` 호출 합니다. 모든 곡선 및 직선 일련의 작은 줄으로 세분화 됩니다.
 
-호출할 때 `CloneWithTransform`, 메서드에 전달할는 `Func<SKPoint, SKPoint>`를 사용 하는 함수는는 `SKPaint` 반환 하는 매개 변수는 `SKPoint` 값입니다. 이 함수는 사용자 지정 알고리즘 변환을 적용 하려면 모든 지점에 대 한 호출 됩니다.
+호출할 때 `CloneWithTransform`, 메서드에 전달할를 `Func<SKPoint, SKPoint>`를 사용 하는 함수는는 `SKPaint` 반환 하는 매개 변수는 `SKPoint` 값. 이 함수는 사용자 지정 알고리즘 변환을 적용 하려면 모든 지점에 대 한 호출 됩니다.
 
 ```csharp
 static class PathExtensions
@@ -419,15 +419,15 @@ static class PathExtensions
 }
 ```
 
-복제 된 경로 아주 작은 일직선으로 감소 하기 때문에 변환 함수에 직선 선을 곡선으로 변환 하는 기능이 있습니다.
+복제 경로 작은 직선에 감소 하기 때문에 변환 함수에 직선 곡선으로 변환 하는 기능이 있습니다.
 
-메서드 호출 변수에 각 윤곽선에 첫 번째 지점을 유지 하도록 통지 `firstPoint` 변수에 현재 위치 각 그리기 명령 및 `lastPoint`합니다. 다음은 마지막 닫는 생성 하는 데 필요한 경우 줄는 `Close` 동사 발생 합니다.
+메서드를 각 윤곽선 이라는 변수에 있는 첫 번째 지점에서 유지 하는 공지 `firstPoint` 변수에 현재 위치 각 그리기 명령 및 `lastPoint`합니다. 다음은 마지막 닫는 생성 하는 데 필요한 경우 줄을 `Close` 동사 발생 합니다.
 
-**GlobularText** 샘플이 확장 메서드를 사용 하 여 것 처럼 보이는 3 차원 효과에 반구 주위의 텍스트를 줄 바꿈 합니다.
+합니다 **GlobularText** 샘플이 확장 메서드를 사용 하 여 보이는 텍스트 주위에 배치할 반구 3D 효과 냅니다.
 
-[![](information-images/globulartext-small.png "Globular 텍스트 페이지의 삼중 스크린샷")](information-images/globulartext-large.png#lightbox "Globular 텍스트 페이지의 삼중 스크린 샷")
+[![](information-images/globulartext-small.png "삼중 Globular 텍스트 페이지 스크린샷")](information-images/globulartext-large.png#lightbox "삼중 Globular 텍스트 페이지 스크린샷")
 
-[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자에는이 변환을 수행 합니다. 생성 된 `SKPaint` 를 획득 하 고 개체의 텍스트에 대 한는 `SKPath` 에서 개체는 `GetTextPath` 메서드. 이것이에 전달 된 경로 `CloneWithTransform` 변형 함수 이며 함께 확장 메서드:
+합니다 [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) 클래스 생성자는이 변환을 수행 합니다. 만듭니다는 `SKPaint` 텍스트에 대해 개체를 가져오는 다음을 `SKPath` 에서 개체를 `GetTextPath` 메서드. 이 전달 된 경로 `CloneWithTransform` 변환 함수를 함께 확장 메서드:
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -474,9 +474,9 @@ public class GlobularTextPage : ContentPage
 }
 ```
 
-변환 함수는 먼저 라는 두 개의 값을 계산 `longitude` 및 `latitude` -π/2는 위와 맨 아래에 텍스트의 왼쪽에서 오른쪽 및 텍스트의 맨 아래에 π/2에 이르는 합니다. 이러한 값의 범위는 시각적으로 만족 스러운 하지 않으므로 0.75를 곱하여 감소 됩니다. (이러한 조정 되지 않은 코드를 사용해 보십시오. 텍스트가 북부 및 남 극 지방에서 모호 측면에서 씬.) 이러한 3 차원 구형 좌표를 2 차원 변환할지 `x` 및 `y` 표준 수식에서 좌표입니다.
+변환 함수는 먼저 라는 두 개의 값을 계산 `longitude` 고 `latitude` – π/2 맨 위 및 텍스트의 왼쪽에서에서 오른쪽 텍스트의 맨 아래에서 π/2 사이의 합니다. 이러한 값의 범위는 시각적으로 만족 하지 않으므로 0.75를 곱하여 인하 됩니다. (이러한 조정 하지 않고 코드를 사용해 보십시오. 텍스트가 너무 북부 및 중남부 극 지방에서 모호한 측면에서 씬.) 이러한 3 차원 구형 좌표에 2 차원 변환 됩니다 `x` 고 `y` 표준 수식 좌표입니다.
 
-새 경로 필드로 저장 됩니다. `PaintSurface` 처리기 다음 단순히 해야 가운데 맞추고 화면에 표시 하는 경로 확장 합니다.
+새 경로 필드로 저장 됩니다. `PaintSurface` 처리기 다음 단순히 해야 중심 및 화면에 표시 하는 경로 확장 합니다.
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -506,7 +506,7 @@ public class GlobularTextPage : ContentPage
 }
 ```
 
-이 매우 다양 한 방법입니다. 에 설명 된 경로가 효과의 배열 하는 경우는 [ **경로 효과** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 문서 포함 되어야 할지 더 쉬워집니다 무언가 포괄할 매우 하지 않습니다 채울 하는 방법입니다.
+이 매우 다양 한 기술입니다. 경로 효과의 배열에서 설명 하는 경우는 [ **경로 효과** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 문서 항목을 포함 시켜야 느낌 둘러싸지 매우 않습니다 채울 방법이이 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

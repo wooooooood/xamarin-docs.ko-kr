@@ -2,17 +2,17 @@
 title: 터치 조작
 description: 이 문서는 터치, 펴서를 끌어서 회전 구현 매트릭스 변환을 사용 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: 2de5b9a3a6bf0d36330212a52ba5c7278b970efc
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: e2c1529980681ed1013c53343c2d077297352b95
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130909"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615394"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 

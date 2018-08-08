@@ -2,16 +2,17 @@
 title: SkiaSharp 사용 하 여 2D 그리기
 description: 이 문서는 SkiaSharp 사용 하 여 그리기 플랫폼 간 2D의 개요를 제공 합니다. SkiaSharp를 설명 하는 다양 한 가이드 및 다양 한 Api에 연결 합니다.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: 0c8cbc14308c8c4131e5aaa2bcc0ddfa798af610
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130922"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615524"
 ---
 # <a name="2d-drawing-with-skiasharp"></a>SkiaSharp 사용 하 여 2D 그리기
 
@@ -61,11 +62,11 @@ Xamarin.Forms에서 렌더링 되는 플랫폼 그래픽 간 사용 하는 방�
   * [경로 및 텍스트](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [경로 정보 및 열거형](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 - [비트맵](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
-  * [비트맵을 표시합니다.](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [만들고 비트맵에 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [비트맵을 자르기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [비트맵의 분할된 된 표시](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [비트맵 파일에 저장](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [비트맵 표시하기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
+  * [비트맵에서 만들기 및 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
+  * [비트맵 자르기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
+  * [분할된 비트맵 표시](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
+  * [파일에 비트맵 저장](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
   * [비트맵 픽셀 비트에 액세스](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
   * [비트맵에 애니메이션 적용](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 

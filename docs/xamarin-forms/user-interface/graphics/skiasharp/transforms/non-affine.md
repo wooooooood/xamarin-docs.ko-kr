@@ -2,17 +2,17 @@
 title: 비 관계 변환
 description: 이 문서는 변환 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효과 만드는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: f4b1926fd21f7df4ea9231887032742fdc96f465
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130883"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615654"
 ---
 # <a name="non-affine-transforms"></a>비 관계 변환
 

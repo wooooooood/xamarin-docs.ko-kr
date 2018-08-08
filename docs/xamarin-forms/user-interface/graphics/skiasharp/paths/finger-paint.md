@@ -1,34 +1,34 @@
 ---
-title: SkiaSharp에 손가락 그리기
-description: 이 문서는 손가락 Xamarin.Forms 응용 프로그램에서 SkiaSharp 캔버스에 그리는 데 사용 하는 방법에 설명 하 고 샘플 코드와 함께이 보여 줍니다.
+title: SkiaSharp에서 손가락 페인팅
+description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSharp 캔버스에 그릴 손가락을 사용 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: f4c3d2ef2f6d1253f58b95559ef83af291f87b03
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b0f28cd3e8a928a6da3169dee96ec089178a64e2
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243781"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615823"
 ---
-# <a name="finger-painting-in-skiasharp"></a>SkiaSharp에 손가락 그리기
+# <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 페인팅
 
-_손가락을 사용 하 여 캔버스에 그릴 합니다._
+_캔버스에 그릴 손가락을 사용 합니다._
 
-`SKPath` 개체를 지속적으로 업데이트 하 고 표시할 수 있습니다. 이 기능에는 경로를 finger-painting 프로그램에서와 같은 대화형 그리기에 사용할 수 있습니다.
+`SKPath` 개체를 지속적으로 업데이트 하 고 표시할 수 있습니다. 이 기능은 손가락 프로그램에서와 같은 대화형 그리기에 사용할 경로입니다.
 
-![](finger-paint-images/fingerpaintsample.png "손가락 그리기에서의 실행")
+![](finger-paint-images/fingerpaintsample.png "손가락 페인팅 연습")
 
-Xamarin.Forms에 터치 조작 지원 하므로 Xamarin.Forms 터치 추적 효과 추가 터치 지원을 제공 하기 위해 개발 되었습니다 화면의 개별 손가락을 추적 하는 것을 허용 하지 않습니다. 이 효과 문서에 설명 되어 [ **호출 이벤트 효과를**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)합니다. 샘플 프로그램 [ **터치 추적 효과 데모** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) finger-painting 프로그램을 포함 하 여 SkiaSharp를 사용 하는 두 개의 페이지가 포함 됩니다.
+Xamarin.Forms의 터치 지원을 Xamarin.Forms 터치 추적 효과 추가 터치 지원을 제공 하기 위해 개발 되었습니다 하므로 화면의 각 손가락을 추적 하는 것을 허용 하지 않습니다. 이 효과 문서에서 설명한 [ **효과의 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)합니다. 샘플 프로그램 [ **터치 추적 효과 데모** ](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/) SkiaSharp, 손가락 프로그램을 포함 하 여 사용 하는 두 개의 페이지가 포함 됩니다.
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 솔루션에이 터치 추적 이벤트를 포함 합니다. .NET 표준 라이브러리 프로젝트에 포함 되어는 `TouchEffect` 클래스는 `TouchActionType` 열거형은 `TouchActionEventHandler` 대리자 및 `TouchActionEventArgs` 클래스입니다. 각 플랫폼 프로젝트를 포함 한 `TouchEffect` 해당 플랫폼에 대 한 클래스; iOS 프로젝트에 포함 됩니다는 `TouchRecognizer` 클래스입니다.
+합니다 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 솔루션이 터치 추적 이벤트를 포함 합니다. .NET Standard 라이브러리 프로젝트에는 `TouchEffect` 클래스를 `TouchActionType` 열거형을 `TouchActionEventHandler` 대리자 및 `TouchActionEventArgs` 클래스. 각 플랫폼 프로젝트를 포함 한 `TouchEffect` 플랫폼에 대해 클래스; iOS 프로젝트도 포함 되어 있습니다를 `TouchRecognizer` 클래스.
 
-**손가락 페인트** 페이지 **SkiaSharpFormsDemos** 손가락 그리기의 간단한 구현입니다. 색을 선택할 수 있도록 하거나 스트로크 너비 하지 않습니다, 캔버스를 지울 수 있는 방법이 및 물론 아트 워크를 저장할 수 없습니다.
+합니다 **손가락으로 그리기** 페이지에서 **SkiaSharpFormsDemos** 손가락 페인팅의 간단한 구현입니다. 색을 선택할 수 있게 하거나 너비를 그리지 않습니다, 캔버스를 지울 수 및 물론 아트 워크를 저장할 수 없습니다.
 
-[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) 배치 파일의 `SKCanvasView` 단일 셀에 `Grid` 연결는 `TouchEffect` 되도록 `Grid`:
+[ **FingerPaintPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml) puts 파일를 `SKCanvasView` 단일 셀에서 `Grid` 연결 합니다 `TouchEffect` 는 `Grid`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -49,9 +49,9 @@ Xamarin.Forms에 터치 조작 지원 하므로 Xamarin.Forms 터치 추적 효�
 </ContentPage>
 ```
 
-연결 된 `TouchEffect` 에 직접는 `SKCanvasView` 모든 플랫폼에서 작동 하지 않습니다.
+연결 된 `TouchEffect` 직접는 `SKCanvasView` 모든 플랫폼에서 작동 하지 않습니다.
 
-[ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) 코드 숨김 파일을 저장 하기 위한 두 개의 컬렉션 정의 `SKPath` 개체 물론 `SKPaint` 이러한 경로 렌더링 하기 위한 개체:
+합니다 [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) 저장 하기 위한 두 개의 컬렉션을 정의 하는 코드 숨김 파일을 `SKPath` 개체 뿐만 `SKPaint` 이러한 경로 렌더링 하는 것에 대 한 개체:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -76,9 +76,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-이름이 제안으로는 `inProgressPaths` 사전에 하나 이상의 손가락으로 그려진 되 고 현재 경로 저장 합니다. 사전 키는 터치 이벤트와 함께 제공 되는 터치 ID를 설정 합니다. `completedPaths` 필드는 경우 리프트 경로 화면에서 그리기 손가락 완료 된 경로 컬렉션입니다.
+이름 제안으로는 `inProgressPaths` 사전 현재 하나 이상의 손가락으로 그려지는 경로 저장 합니다. 사전 키에는 터치 이벤트와 함께 제공 되는 터치 ID입니다. `completedPaths` 필드는 경우 리프트 경로 화면에서 그리기 손가락 완료 된 경로의 컬렉션입니다.
 
-`TouchAction` 처리기는이 두 컬렉션을 관리 합니다. 손가락이 먼저 화면을 터치 하면 새 `SKPath` 에 추가 `inProgressPaths`합니다. 해당 손가락 이동 경로에 추가 점은 추가 됩니다. 으로 전송 되는 경로 손가락 출시 되 면는 `completedPaths` 컬렉션입니다. 동시에 여러 손가락으로 채울 수 있습니다. 경로 또는 컬렉션 중 하나에 변경 될 때마다는 `SKCanvasView` 무효화 됩니다.
+`TouchAction` 처리기는 이러한 두 컬렉션을 관리 합니다. 손가락 처음 화면을 터치 하는 경우 새 `SKPath` 추가할 `inProgressPaths`합니다. 손가락 이동 경로에 추가 점은 추가 됩니다. 경로 전송할 손가락을 놓으면는 `completedPaths` 컬렉션입니다. 동시에 여러 손가락으로 그릴 수 있습니다. 경로 또는 컬렉션 중 하나에 각 변경 후의 `SKCanvasView` 무효화 됩니다.
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -134,7 +134,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-터치 추적 이벤트를 함께 나타날 사항이 Xamarin.Forms 좌표; 이러한 SkiaSharp 좌표 (픽셀)를으로 변환 해야 합니다. 용도 하는 `ConvertToPixel` 메서드.
+터치 추적 이벤트를 함께 제공 되는 지점은 Xamarin.Forms 좌표입니다. 이러한 SkiaSharp 좌표 (픽셀)를 변환할 수 있어야 합니다. 용도는 `ConvertToPixel` 메서드.
 
 `PaintSurface` 처리기 다음 렌더링 두 컬렉션의 경로입니다. 완료 된 이전 경로 진행에서 경로 아래에 나타납니다.
 
@@ -161,9 +161,9 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-손가락 그림 프로그램 인력에 의해서만 제한 됩니다.
+에 손가락 회화 재능에 의해서만 제한 됩니다.
 
-[![](finger-paint-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](finger-paint-images/fingerpaint-large.png#lightbox "손가락 페인트 페이지의 삼중 스크린샷")
+[![](finger-paint-images/fingerpaint-small.png "손가락으로 그리기 페이지 스크린샷 삼중")](finger-paint-images/fingerpaint-large.png#lightbox "삼중 손가락으로 그리기 페이지 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크

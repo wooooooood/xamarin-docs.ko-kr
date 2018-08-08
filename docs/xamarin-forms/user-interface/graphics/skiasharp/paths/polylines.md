@@ -1,40 +1,40 @@
 ---
 title: 폴리라인 및 파라메트릭 수식
-description: 이 문서는 모든 줄을 렌더링을 사용 하 여 SkiaSharp를 정의 하는 방법을 파라메트릭 수식이 포함을 설명 하 고 샘플 코드와 함께이 보여 줍니다.
+description: 이 문서는 모든 줄 렌더링을 사용 하 여 SkiaSharp를 정의 하는 방법을 매개 방정식을 사용 하 여 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245311"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615797"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
-_SkiaSharp 매개 방정식을 정의할 수 있는 줄을 사용 하 여_
+_SkiaSharp 매개 방정식을 사용 하 여 정의한 모든 줄을 렌더링 하는 데_
 
-이 가이드의 뒷부분에 나오는 부분에서는 다양 한 메서드를 볼 수 있습니다는 `SKPath` 렌더링 특정 종류의 곡선을 정의 합니다. 그러나는 유형의에서 직접 지원 하지 않는 곡선을 그리는 데 필요한 때이 `SKPath`합니다. 이러한 경우를 수학적으로 정의할 수 있는 모든 곡선을 그리는 폴리라인 (연결 된 선 컬렉션)를 사용할 수 있습니다. 줄 만큼 작지 않아서 만들고 다양 한 충분히 결과 버리면 곡선입니다. 이 나선은 3, 600 작은 선이 실제로입니다.
+이 가이드의 뒷부분에 나오는 부분을 살펴보겠습니다 다양 한 메서드는 `SKPath` 렌더링 특정 종류의 곡선을 정의 합니다. 그러나 경우가 유형의에서 직접 지원 하지 않는 곡선을 그리는 데 필요한 `SKPath`합니다. 이런 경우, 수학적으로 정의할 수 있는 모든 곡선을 그릴 다중선 (연결 된 선 컬렉션)를 사용할 수 있습니다. 줄을 충분히 작게를 다양 한 충분히 결과 모양은 곡선입니다. 이 나선형 3,600 거의 줄 실제로 같습니다.
 
-![](polylines-images/spiralexample.png "나선")
+![](polylines-images/spiralexample.png "나선형")
 
-일반적으로 파라메트릭 수식 쌍 측면에서 곡선을 정의 하는 것이 좋습니다. X 및 Y 좌표는 대 한 수식을 이들은 라고도 하는 세 번째 변수가 의존 `t` 시간에 대 한 합니다. 다음 파라메트릭 수식에 대 한은 1 (0, 0) 하는 지점에 중심이 있는 원을 정의 하는 예를 들어 *t* 0에서 1:
+일반적으로 매개 방정식의 쌍을 기준으로 곡선을 정의 하는 것이 좋습니다. X 및 Y 좌표는 수식 됩니다 라고도, 세 번째 변수가 종속 `t` 시간에 대 한 합니다. 다음 파라메트릭 수식에 대 한 원 중심 점 (0, 0)에 1의 반지름을 정의 하는 예를 들어 *t* 0에서 1:
 
  x = y cos(2πt) sin(2πt) =
 
- radius를 지정 하려면 1 보다 큰 단순히 해당 radius 사인과 코사인 값을 곱해 추가 하는 중앙의 다른 위치로 이동 해야 하는 경우 해당 값:
+ 반지름을 1 보다 큰 하려는 경우 단순히 해당 radius 사인 및 코사인 값을 곱한를 중앙의 다른 위치로 이동 해야 하는 경우 해당 값을 추가:
 
  x = xCenter + radius·cos(2πt) y = yCenter + radius·sin(2πt)
 
-가로 및 세로 축 병렬을 타원에 대 한 두 개의 반지름은 다음과 같습니다.
+가로 및 세로 축 병렬을 사용 하 여 타원에 대 한 두 개의 반지름 관련 됩니다.
 
 x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
 
-그런 다음 다양 한 포인트를 계산 하 고 경로 확인란을 추가 하는 루프에 해당 하는 SkiaSharp 코드를 넣을 수 있습니다. 다음 SkiaSharp 코드 만듭니다는 `SKPath` 표시 화면을 채우는 타원에 대 한 개체입니다. 루프는 직접 360도을 순환합니다. 중심은 절반 너비와 높이 디스플레이 화면의 함께 두 개의 반지름:
+그런 다음 다양 한 지점을 계산한 다음 경로에 추가 하는 루프에 해당 하는 SkiaSharp 코드를 넣을 수 있습니다. 다음 SkiaSharp 코드는 `SKPath` 화면을 채우는 타원에 대 한 개체입니다. 루프는 직접 360도 통해 주기입니다. 가운데 너비와 높이 디스플레이 화면의 절반 이며 되므로 두 반지름.
 
 ```csharp
 SKPath path = new SKPath();
@@ -59,9 +59,9 @@ path.Close();
 
 이 인해 360 거의 선으로 정의 되는 타원입니다. 렌더링 될 때 부드러운 나타납니다.
 
-물론, 때문에 다중선을 사용 하 여 타원 만들 필요가 없습니다 `SKPath` 포함는 `AddOval` 을 수행 하는 메서드입니다. 그러나에서 제공 하지 않는 시각적 개체를 그리는 데 경우가 `SKPath`합니다.
+물론 있으므로 다중선을 사용 하 여 타원을 만들 필요가 없습니다 `SKPath` 포함는 `AddOval` 를 수행 하는 메서드가 있습니다. 제공 하지 않는 시각적 개체를 그릴 수도 있습니다 하지만 `SKPath`합니다.
 
-**Archimedean 나선** 페이지와 유사한 코드의 타원 코드 하지만 중요 한 차이점입니다. 반복 360도 원의 중심 10 번 반지름을 지속적으로 조정:
+합니다 **Archimedean 나선형** 페이지에는 다음과 같은 코드 타원 코드 하지만 중요 한 차이가 있습니다. 이 루프 원의 360도 10 번 반지름을 지속적으로 조정:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -107,11 +107,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-결과 라고도 *산술 나선* 각 루프 간의 오프셋도 상수 이므로:
+결과 라고는 *산술 나선형* each 사이의 오프셋 상수 이므로:
 
-[![](polylines-images/archimedeanspiral-small.png "Archimedean 나선 페이지의 삼중 스크린샷")](polylines-images/archimedeanspiral-large.png#lightbox "Archimedean 나선 페이지의 삼중 스크린샷")
+[![](polylines-images/archimedeanspiral-small.png "삼중 Archimedean 나선형 페이지 스크린샷")](polylines-images/archimedeanspiral-large.png#lightbox "삼중 Archimedean 나선형 페이지 스크린샷")
 
-에 `SKPath` 에서 만든는 `using` 블록입니다. 이 `SKPath` 보다 더 많은 메모리를 소비는 `SKPath` 를 제안 하는 이전 프로그램의 개체는 `using` 블록은 모든 관리 되지 않는 리소스를 삭제 하기 위해 더 적합 합니다.
+있음을 합니다 `SKPath` 만들어집니다는 `using` 블록입니다. 이 `SKPath` 보다 더 많은 메모리를 사용 합니다 `SKPath` 제안 하는 이전 프로그램에서 개체를 `using` 블록은 모든 관리 되지 않는 리소스를 삭제 하는 것이 적합 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

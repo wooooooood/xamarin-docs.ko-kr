@@ -2,17 +2,17 @@
 title: SkiaSharp 픽셀 비트에 액세스
 description: 액세스 하 고 SkiaSharp 비트맵의 픽셀 비트를 수정 하는 다양 한 기술을 검색 합니다.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: charlespetzold
 ms.author: chape
 ms.date: 07/11/2018
-ms.openlocfilehash: 51252a1c18602c704b87f7b01efe7cc5a7549ac1
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5d79dd89b5313d5d7ead665c54e9a27026cea38c
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131478"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615628"
 ---
 # <a name="accessing-skiasharp-pixel-bits"></a>SkiaSharp 픽셀 비트에 액세스
 
