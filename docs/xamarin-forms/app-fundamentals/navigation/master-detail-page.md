@@ -239,7 +239,7 @@ public partial class MainPage : MasterDetailPage
 
 - 검색 된 [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) 에서 [ `ListView` ](xref:Xamarin.Forms.ListView) 인스턴스를 선택한 것을 제공 `null`, 세부 정보 페이지를 에저장된종류의새인스턴스를설정합니다`TargetType`의 속성을 `MasterPageItem`입니다. 페이지 형식에 래핑됩니다를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 아이콘을 통해 참조 하도록 인스턴스를 [ `Icon` ](xref:Xamarin.Forms.Page.Icon) 속성에는 `MasterPage` iOS에서 세부 정보 페이지에 표시 됩니다.
 - 선택한 항목을 [ `ListView` ](xref:Xamarin.Forms.ListView) 로 설정 되어 `null` 하나도 되도록를 `ListView` 항목을 선택할 수는 다음 시간을 `MasterPage` 표시 됩니다.
-- 세부 정보 페이지를 설정 하 여 사용자에 게 표시 되는 [ `MasterDetailPage.IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) 속성을 `false`입니다. 이 속성의 마스터 / 세부 정보 페이지 표시 되 고 있는지 여부를 제어 합니다. 로 설정 해야 `true` 마스터 페이지를 표시 하려면 및 `false` 세부 정보 페이지를 표시 합니다.
+- 세부 정보 페이지를 설정하여 사용자에게 표시되는 [ `MasterDetailPage.IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) 속성은 `false`입니다. 이 속성의 마스터/세부 정보 페이지가 표시되는지 여부를 제어합니다. 마스터 페이지를 표시하려면 `true`로 설정하고, 세부 정보 페이지를 표시하려면 `false`로 설정합니다.
 
 다음 스크린샷에서 표시 된 `ContactPage` 마스터 페이지에서 선택 된 된 후 표시 되는 세부 정보 페이지에서:
 
