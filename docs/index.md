@@ -3,14 +3,15 @@ layout: HubPage
 hide_bc: true
 title: Xamarin 설명서
 description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다.
+ms.date: 05/07/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 8f7f1432ab0dfc7a44a6b688ea998ec01812609a
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: bf679629f8ffa28275f32671ed87146fc0ef0a1f
+ms.sourcegitcommit: ef04a4ae1b19c1854a8e4e8315516d4030f4bbd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831360"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39654843"
 ---
 <div id="main" class="v2">
     <div class="container">
