@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: afff9d3924c673edc363292efa1a9b7df43a9218
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798592"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514465"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -107,7 +107,7 @@ container.AddSubview (new MyView (container));
 
 #### <a name="weak-attribute"></a>약한 특성
 
-[Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`과 마찬가지로 더 적은 코드로 [강력한 순환 참조](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/performance#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
+[Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`와 마찬가지로 더 적은 코드로 [강력한 순환 참조](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/performance#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
 
 `WeakReference <T>`를 사용하는 다음 코드를 살펴봅니다.
 
