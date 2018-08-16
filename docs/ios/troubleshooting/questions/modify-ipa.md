@@ -46,7 +46,7 @@ ms.locfileid: "39350984"
 
 9.  원하는 파일을 삭제 합니다 `.ipa`합니다. Finder를 사용 하 여 휴지통으로 이동 하거나 사용 하 여 명령줄에서 삭제할 `Terminal.app`합니다. 내용을 보려고 합니다 `Payload/iPhone` 파일을 컨트롤 클릭 Finder에서 파일을 선택 **패키지 내용 표시**.
 
-10.  3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾을 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![ ] (modify-ipa-images/build-log.png "파인더에서 프로젝트 빌드 로그를 찾으려면")
+10.  3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾을 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![](modify-ipa-images/build-log.png "파인더에서 프로젝트 빌드 로그를 찾으려면")
 
 11.  두 번 클릭 하 여 10 단계에서 빌드 로그를 예를 들어 엽니다.
 
