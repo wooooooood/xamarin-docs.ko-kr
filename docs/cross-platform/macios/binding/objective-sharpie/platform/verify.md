@@ -33,7 +33,7 @@ ms.locfileid: "37855031"
 |InferredFromPreceedingTypedef|일반적인 규칙에 따라이 선언의 이름을 유추 된는 바로 앞의 `typedef` 원래 기본 소스 코드에서입니다. 이 규칙은 모호한 올바른 유추 된 이름 인지 확인 합니다.|
 |ConstantsInterfaceAssociation|바보 증명 확인할 방법은 없으며 Objective-c 인터페이스를 사용 하 여 extern 변수 선언은 연결할 수 있습니다. 이러한 인스턴스의 바인딩된 `[Field]` 속성 근처에서 구체적인 인터페이스에 가능한 경우 '상수'를 제거는 보다 직관적인 API를 생성 하기 위해 일부 인터페이스에서 완전히 인터페이스입니다.|
 |MethodToProperty|Objective-c 메서드로 없는 매개 변수 및 반환 값 (void가 아닌 반환)와 같은 규칙으로 인해 C# 속성으로 바인딩 되었습니다. 이러한 방법을 자주 바인딩할 속성으로 편리한 API를 노출 하지만 가양성 발생 하는 경우도 있습니다 및 바인딩 메서드를 실제로 이어야 합니다.|
-|StronglyTypedNSArray|네이티브 `NSArray*` 으로 바인딩 `NSObject[]`합니다. 예상 API 설명서 (예: 헤더 파일에 주석)를 통해 설정에 따라 바인딩에 배열을 더욱 강력 하 게 입력할 수 있습니다 또는 테스트를 통해 배열 내용을 검사 하 여 합니다. 예를 들어는 NSArray * NSNumber*만 포함 된 instancescan 변수로 바인딩되어야 `NSNumber[]` 대신 `NSObject[]`합니다.|
+|StronglyTypedNSArray|네이티브 `NSArray*` 으로 바인딩 `NSObject[]`합니다. 예상 API 설명서 (예: 헤더 파일에 주석)를 통해 설정에 따라 바인딩에 배열을 더욱 강력 하 게 입력할 수 있습니다 또는 테스트를 통해 배열 내용을 검사 하 여 합니다. 예를 들어는 NSArray* NSNumber* 만 포함 된 instancescan 변수로 바인딩되어야 `NSNumber[]` 대신 `NSObject[]`합니다.|
 
 사용 하 여 힌트에 대 한 설명서를 신속 하 게도 받을 수 있습니다는 `sharpie verify-docs` 도구, 예를 들어:
 
