@@ -1,4 +1,4 @@
-﻿---
+---
 title: 실시간 다시 로드
 description: XAML에 변경 내용을 다른 컴파일 없이 실시간으로 반영 되었는지 확인 하 고 배포 합니다.
 ms.prod: xamarin
@@ -18,7 +18,7 @@ ms.locfileid: "38860669"
 
 ![미리 보기](~/media/shared/preview.png)
 
-Xamarin 라이브 다시 로드 수 있습니다 **에 XAML을 변경 하 고 다른 컴파일 없이 실시간으로 반영 배포**합니다. 에 XAML에 대 한 변경 내용을 다시 배포 됩니다에 저장 하 고 배포 대상에 반영 합니다.
+Xamarin Live Reload는 **XAML을 변경할 때 따로 컴파일 혹은 배포 과정 없이 실시간으로 변경 사항을 확인할 수** 있습니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
 
 라이브 다시 로드를 사용 하는 경우 앱은 컴파일되어 있으므로 모든 라이브러리 및 타사 컨트롤을 사용 하 여 작동 합니다. Xamarin.Forms는 Android, iOS 및 UWP 등 지 원하는 및 시뮬레이터, 에뮬레이터 및 물리적 장치를 비롯 한 모든 유효한 배포 대상, 작동 하는 모든 플랫폼에서 다시 로드 작동을 live입니다.
 
@@ -42,7 +42,7 @@ Xamarin 라이브 다시 로드는 Visual Studio Marketplace를 통해 배포 �
 
 또는에서 검색할 수 있습니다는 **Online** 탭에 **확장 및 업데이트** Visual Studio 내에서 대화 합니다.
 
-### <a name="2-configure-your-app-to-use-live-reload"></a>2. Xamarin Live Reload를 사용하도록 앱 구성
+### <a name="2-configure-your-app-to-use-live-reload"></a>2. 라이브 다시 로드를 사용 하도록 앱 구성
 
 기존 모바일 앱에 라이브 다시 로드를 추가 하는 세 단계로 수행할 수 있습니다.
 
@@ -74,7 +74,7 @@ public partial class App : Application
 }
 ```
 
-### <a name="3-start-live-reloading"></a>3. Live Reload 시작
+### <a name="3-start-live-reloading"></a>3. 라이브 다시 로드 시작
 
 컴파일 및 응용 프로그램을 배포 합니다. 앱이 배포 된 XAML 파일을 열고, 일부 내용을 변경 후 파일을 저장 합니다. 변경 내용을 배포 대상에 다시 배포 됩니다.
 
