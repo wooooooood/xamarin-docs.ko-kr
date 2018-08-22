@@ -1,29 +1,29 @@
 ---
-title: Xamarin Player 라이브 샘플
-description: 이 문서는 라이브 Xamarin Player를 테스트할 때 사용 하는 샘플 응용 프로그램에 연결 됩니다. 연결 된 샘플 기본 계산기 및 버그 스위퍼 게임 포함 됩니다.
+title: Xamarin Live Player 샘플
+description: 이 문서는 Xamarin Live Player를 테스트할 때 사용할 샘플 응용 프로그램에 연결 합니다. 연결 된 샘플에는 기본 계산기 및 버그 sweeper 게임 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
-ms.date: 06/20/2017
-ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/08/2017
+ms.openlocfilehash: 6f9f2ed97e03862fc7e77e4a7ff67f456dfde277
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793731"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251054"
 ---
-# <a name="xamarin-live-player-samples"></a>Xamarin Player 라이브 샘플
+# <a name="xamarin-live-player-samples"></a>Xamarin Live Player 샘플
 
-## <a name="get-started-with-xamarinforms"></a>Xamarin.Forms로 시작
+## <a name="get-started-with-xamarinforms"></a>Xamarin.Forms를 사용 하 여 시작
 
-방문는 [샘플 갤러리](https://developer.xamarin.com/samples/xamarin-live-player/all/) Xamarin.Forms Xamarin 라이브 플레이어에서 작동 하는 샘플에 대 한 합니다.
+방문 합니다 [샘플 갤러리](https://developer.xamarin.com/samples/xamarin-live-player/all/) Xamarin.Forms 샘플 Xamarin Live Player를 사용 하 여 해당 작업에 대 한 합니다.
 
-## <a name="featured-samples"></a>추천된 샘플
+## <a name="featured-samples"></a>주요 샘플
 
 ### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[기본 계산기](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-Xamarin.Forms 앱이 Android 또는 iOS 장치에서 사용할 수는 간단한 계산기를 제공 합니다.
+Xamarin.Forms 앱이 Android 장치에서 사용할 수 있습니다 하는 간단한 계산기를 제공 합니다.
 
 ![기본 계산기 샘플 스크린 샷](samples-images/basic-calculator-sml.png)
 
@@ -35,4 +35,4 @@ Xamarin.Forms 앱이 Android 또는 iOS 장치에서 사용할 수는 간단한 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 라이브 플레이어 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Live Player Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
