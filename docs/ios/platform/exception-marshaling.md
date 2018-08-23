@@ -76,7 +76,7 @@ try {
 
 관리 되는 정보 Objective C 스택 해제기 모르기 때문에 이것이 `catch` 절과 두 됩니다는 `finally` 절이 실행 될 합니다.
 
-때 위의 코드 샘플 _은_ 효과적으로 있기 때문에 처리 되지 않은 Objective C 예외를 알리는의 메서드를 Objective C [ `NSSetUncaughtExceptionHandler` ] [ 2]이며 Xamarin.iOS 및 Xamarin.Mac 사용 및 해당 지점에서 모든 Objective C 예외는 관리 되는 예외를 변환 하려고 합니다.
+때 위의 코드 샘플 _은_ 효과적으로 있기 때문에 처리 되지 않은 Objective C 예외를 알리는의 메서드를 Objective C [`NSSetUncaughtExceptionHandler`][2]이며 Xamarin.iOS 및 Xamarin.Mac 사용 및 해당 지점에서 모든 Objective C 예외는 관리 되는 예외를 변환 하려고 합니다.
 
 ## <a name="scenarios"></a>시나리오
 
