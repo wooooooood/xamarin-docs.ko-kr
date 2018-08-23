@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 `PaintSurface` 처리기에 여러 번 표시의 행과 열 비트맵을 렌더링 합니다. 있음을 `Clear` 에서 메서드를 `PaintSurface` 처리기의 인수에 `SKColors.Aqua`, 화면 배경의 색입니다.
 
-[![Hello, 비트맵! ] (drawing-images/HelloBitmap.png "Hello, 비트맵!")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello, 비트맵! ](drawing-images/HelloBitmap.png "Hello, 비트맵!")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 바다색 백그라운드 모양의 텍스트를 제외 하 고 투명 한 비트맵 임을 알 수 있습니다.
 
