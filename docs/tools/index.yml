@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: a466a6591316b908ca26cb20906fd7866a20fca2
+ms.sourcegitcommit: 00a3505a73ce2213ba35bc85c06738edd1155060
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751872"
 documentType: LandingData
 title: Xamarin 도구
 metadata:
   description: Xamarin 개발 환경을 개선하는 데 도움이 되는 도구입니다.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02-17-2018
+  ms.date: 08/08/2018
   ms.topic: landing-page
-  ms.openlocfilehash: b1f47f67677c2618b89b52ab2c015a8a4da48f95
-  ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
-  ms.translationtype: HT
-  ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/04/2018
-  ms.locfileid: "33112474"
 abstract:
   description: Xamarin 개발 환경을 개선하는 데 도움이 되는 도구입니다.
   menu:
@@ -28,36 +28,30 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/tools/live-player/index.md
-      html: Visual Studio에서 Live Player 앱을 사용하여 몇 분 만에 Xamarin을 시작하세요.
-      image:
-        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
-        href: ~/tools/live-player/index.md
-      title: Xamarin Live Player
-    - href: ~/tools/inspector/index.md
-      html: 사용자 인터페이스를 이해하고 디버그합니다.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/workbooks/index.md
-      html: C# 및 Xamarin 플랫폼을 대화형으로 학습할 수 있습니다.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
     - href: ~/tools/ios-simulator.md
       html: Windows에서 Visual Studio를 사용하여 iOS 시뮬레이터와 상호 작용합니다.
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
         href: ~/tools/ios-simulator.md
       title: Windows용 iOS 시뮬레이터
+    - href: ~/tools/inspector/index.md
+      html: 사용자 인터페이스를 이해하고 디버그합니다.
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
     - href: ~/tools/profiler/index.md
       html: 성능 문제를 식별하고 해결합니다.
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
       title: Xamarin Profiler
+    - href: ~/tools/workbooks/index.md
+      html: C# 및 Xamarin 플랫폼을 대화형으로 학습할 수 있습니다.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
     - href: ~/tools/dotnet-embedding/index.md
       html: 다른 프로그래밍 언어에서 기존 .NET 코드를 사용하도록 허용합니다.
       image:
