@@ -762,7 +762,7 @@ void OpenDialog (NSObject sender)
 5. 패널을 끌어서 기존 창을 삭제 합니다 **라이브러리 검사기** 에 합니다 **인터페이스 편집기**: 
 
     [![](window-images/panels01.png "기존 창을 삭제")](window-images/panels01.png#lightbox)
-6. 패널을 최대 후크는 **파일의 소유자*-**창*- **콘센트**: 
+6. 패널을 최대 후크는 **파일의 소유자*- **창*- **콘센트**: 
 
     [![](window-images/panels02.png "패널을 실시간으로 끌어")](window-images/panels02.png#lightbox)
 7. 으로 전환 합니다 **검사기** 패널의 클래스 설정 하 고 `DocumentPanel`: 
