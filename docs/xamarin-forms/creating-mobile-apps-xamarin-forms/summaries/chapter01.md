@@ -1,6 +1,6 @@
 ---
-title: 1 장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 1 장 요약 합니다. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?'
+title: 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
+description: 'Xamarin.Forms를 사용하여 모바일 앱 만들기: 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
@@ -14,22 +14,22 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/19/2018
 ms.locfileid: "39156485"
 ---
-# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1 장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
+# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
 
 > [!NOTE] 
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
-해당 플랫폼에는 다른 프로그래밍 언어를 포함 하는 경우에 특히 다른 플랫폼에서 기본 코드를 이식가 프로그래밍에서 가장 원하지 않는 작업 중 하나입니다. 유혹도 리팩터링 하는 코드를 이식 하는 경우 있지만 두 플랫폼 모두 병렬로 유지 해야 하는 경우 다음 두 코드 베이스의 차이점은 어려워질 향후 유지 관리 합니다.
+프로그래밍에서 가장 즐겁지 않은 작업 중 하나는 다른 플랫폼으로 코드를 포팅하는 작업입니다. 특히 다른 프로그래밍 언어로 포팅하는 작업은 쉽지 않은 작업입니다. 포팅 과정에서 리팩토링 충동을 느낄 수 있으며 포팅된 코드와 기존 코드는 동시에 유지보수 되어야 하기 때문에 두 코드베이스 간의 차이점들은 앞으로의 유지보수 작업을 더욱 힘들게 할 것입니다.
 
 ## <a name="cross-platform-mobile-development"></a>크로스 플랫폼 모바일 개발
 
-모바일 플랫폼을 대상으로 하는 경우이 문제가 일반적입니다. 현재 두 가지 주요 모바일 플랫폼, iOS 운영 체제 및 다양 한 휴대폰과 태블릿에서 실행 되는 Android 운영 체제를 실행 하는 Ipad 및 Iphone의 Apple 제품군 존재 합니다. 다른 중요 한 플랫폼은 Microsoft의 Windows 플랫폼 (UWP (유니버설), Windows 10 Mobile 및 Windows 10을 대상으로 한 개의 프로그램을 수 있습니다.
+이 문제는 모바일 플렛폼을 타겟으로 개발할 때 일반적으로 발생합니다. 현재 두개의 메이저 모바일 플렛폼이 존재합니다. iOS 운영체제를 사용하는 아이폰, 아이패드 애플 제품군과 안드로이드 운영체제를 사용하는 수많은 스마트폰과 태블릿이 있습니다. 그밖에 중요한 플랫폼으로 마이크로소프트의 Universal Windows Platform (UWP)이 있으며 Windows 10과 Windows 10 Mobile을 타겟으로 하는 단일 프로그램을 개발할 수 있습니다.
 
 이러한 세 플랫폼을 대상으로 하려는 소프트웨어 공급업체는 서로 다른 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스 &mdash;아마도 가장 껄끄러운 부분인&mdash; 세 가지 프로그래밍 언어(iPhone, iPad의 Objective-C, Android의 Java, Windows의 C#)를 다루어야 합니다.
 
 ## <a name="the-c-and-net-solution"></a>C#과 .NET 솔루션
 
-Objective-c, Java 및 C#은 모두 C 프로그래밍 언어에서 파생 됩니다, 있지만 매우 다른 경로 의해 발전 했습니다. C#은 이러한 언어 중 가장 최근 및 매우 유용한 방식으로 환경의 성숙을 통해 되었습니다. 또한 C#은 밀접 하 게 연결 수학, 디버깅, 리플렉션, 컬렉션, 세계화, 파일 I/O, 네트워킹, 보안, 스레딩, 웹 서비스, 데이터 처리 및 XML에 대 한 지원을 제공 하는.NET 호출 하는 전체 프로그래밍 인프라 및 읽기 및 쓰기 JSON입니다.
+Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었지만, 서로 다른 방향으로 발전하였습니다. C#은 이들 언어 중 가장 최신 언어이며 매우 유용한 방향으로 성장해 왔습니다. 또한 C#은 .NET이라는 프로그래밍 인프라와 밀접하게 관련되어 있습니다. .NET은 수학, 디버깅, 리플렉션, 컬렉션, 세계화, 파일 I/O, 네트워킹, 보안, 스레딩, 웹 서비스, 데이터 처리 및 XML과 JSON 읽기와 쓰기를 지원합니다.
 
 현재 Xamarin은 네이티브 Mac, iOS 및 Android API를 지원하는 C#, .NET 도구들을 제공합니다. 이러한 도구는 Xamarin.Mac, Xamarin.iOS 및 Xamarin.Android라고 불리며 Xamarin 플랫폼이라고 통칭합니다. Xamarin은 각 플랫폼의 Native API를 .NET 관용어구로 표현하는 라이브러리와 바인딩을 제공합니다.
 
