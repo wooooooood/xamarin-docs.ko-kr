@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "40251112"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.Mac의 Windows
@@ -762,7 +762,7 @@ void OpenDialog (NSObject sender)
 5. 패널을 끌어서 기존 창을 삭제 합니다 **라이브러리 검사기** 에 합니다 **인터페이스 편집기**: 
 
     [![](window-images/panels01.png "기존 창을 삭제")](window-images/panels01.png#lightbox)
-6. 패널을 최대 후크는 **파일의 소유자*- **창*- **콘센트**: 
+6. 최대 패널을 연결 합니다 **파일의 소유자** - **창** - **콘센트**: 
 
     [![](window-images/panels02.png "패널을 실시간으로 끌어")](window-images/panels02.png#lightbox)
 7. 으로 전환 합니다 **검사기** 패널의 클래스 설정 하 고 `DocumentPanel`: 

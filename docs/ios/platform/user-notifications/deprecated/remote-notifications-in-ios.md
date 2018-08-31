@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
 ms.openlocfilehash: f11f5d1cbde0f5eae27215af8eb6544be46c0206
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "39654817"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
@@ -81,12 +81,10 @@ Apple APNS의 두 가지 환경 유지 관리:는 *샌드박스* 와 *프로덕�
 
 8.  로 이동 하는 개발 프로 비전 프로필을 만들려면 합니다 **프로 비전 프로필** 섹션 및 방금 만든 앱 Id를 사용 하 여를 만드는 단계를 수행 합니다.
 
-9.  프로 비전 프로필을 만든 후 열어 **Xcode 구성 도우미** 고 새로 고칩니다. 프로 비전 프로필을 만든 경우는 것은 iOS 프로 비전 포털에서에서 프로필을 다운로드 하 고 수동으로 가져올 필요가 표시 되지 않습니다. 다음 스크린 샷은 추가 프로 비전 프로필을 사용 하 여 구성의 예를 보여 줍니다.
-
+9.  프로 비전 프로필을 만든 후 열어 **Xcode 구성 도우미** 고 새로 고칩니다. 프로 비전 프로필을 만든 경우는 것은 iOS 프로 비전 포털에서에서 프로필을 다운로드 하 고 수동으로 가져올 필요가 표시 되지 않습니다. 다음 스크린 샷은 추가 프로 비전 프로필을 사용 하 여 구성의 예를 보여 줍니다.  
     [![](remote-notifications-in-ios-images/image13new.png "이 스크린 샷 추가 프로 비전 프로필을 사용 하 여 구성의 예를 보여 줍니다.")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  이 시점에서 새로 프로 비전 프로필을 만든이 사용 하 여 Xamarin.iOS 프로젝트를 구성 해야 합니다. 이렇게 **프로젝트 옵션** 대화 상자에서 **iOS 번들 서명** 다음 스크린 샷에서 처럼 탭:
-
+10.  이 시점에서 새로 프로 비전 프로필을 만든이 사용 하 여 Xamarin.iOS 프로젝트를 구성 해야 합니다. 이렇게 **프로젝트 옵션** 대화 상자에서 **iOS 번들 서명** 다음 스크린 샷에서 처럼 탭:  
     [![](remote-notifications-in-ios-images/image11.png "새로 프로 비전 프로필을 만든이 사용 하 여 Xamarin.iOS 프로젝트 구성")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 이 시점에서 응용 프로그램 푸시 알림과 작동 하도록 구성 됩니다. 그러나 인증서를 사용 하 여 필요한 몇 단계가 더 계속 됩니다. 이 인증서는 DER 형식으로 개인 정보 교환 (PKCS12) 인증서를 요구 하는 PushSharp와 호환 되지 않습니다. PushSharp에서 사용할 수 있도록 인증서 변환할 최종 단계를 수행 합니다.
