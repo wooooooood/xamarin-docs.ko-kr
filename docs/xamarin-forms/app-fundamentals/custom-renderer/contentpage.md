@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995744"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 기본 클래스에 대 한 호출 `OnElementChanged` 메서드를 만드는 데 Android `ViewGroup` 컨트롤 보기의 그룹입니다. 카메라 라이브 스트림은 렌더러에서 기존 Xamarin.Forms 요소에 이미 연결 되지 않습니다 및 사용자 지정 렌더러에 의해 렌더링 되는 페이지에 인스턴스가 제공한에 렌더링 됩니다.
 
-일련의를 사용 하는 메서드를 호출 하 여는 페이지를 사용자 지정한 다음를 `Camera` 전에 사진을 캡처하는 기능과 카메라에서 라이브 스트림을 제공 하기 위해 API를 `AddView` 메서드를 호출 하는 라이브 카메라 추가 UI를 스트림는 `ViewGroup`.
+일련의를 사용 하는 메서드를 호출 하 여는 페이지를 사용자 지정한 다음를 `Camera` 전에 사진을 캡처하는 기능과 카메라에서 라이브 스트림을 제공 하기 위해 API를 `AddView` 메서드를 호출 하는 라이브 카메라 추가 UI를 스트림는 `ViewGroup`. Android에서 것도 재정의 하는 데 필요한는 `OnLayout` 뷰에 측정값 및 레이아웃 작업을 수행 하는 방법입니다. 자세한 내용은 참조는 [ContentPage 렌더러 샘플](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)합니다.
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>UWP의 페이지 렌더러를 만들
 

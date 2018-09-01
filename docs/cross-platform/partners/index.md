@@ -9,10 +9,10 @@ ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
 ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "39351745"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
@@ -431,7 +431,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Sasken 통신 기술 제한](http://www.sasken.com)|뭄바이, 인도|Sasken 있든지 연결 된 더 잘 유지 되는 사용자는 데 도움이 됩니다. 자동 electronics를 비롯 한 더 많은 업계, 소비자 가전 제품, 소매점 및 의료 표시 되는 클라우드에 연결 기반 데이터와 함께 필수적으로 실시간 의사 결정 합니다. 통신 및 미디어 처리의 뛰어난된 도메인 역량을 사용 하 여 업계 매니페스트는 중요 한 문제에 대해 수행 하도록 준비 됩니다. 연결 된 장치의 진화 하는 새 환경에서 매우 서비스를 제공 하는 에코 시스템의 대응 항목과 작동 합니다.|
 |[ServPRO 기술 Pvt Ltd](http://www.servpro.in)|뭄바이, 인도|ServPRO, "사전 처리"를 의미 브랜드 Mr. Pushpinder Bhatia 여 2009 년에 설립 된 합니다. ServPRO는 선도적인 IT 솔루션 및 서비스 공급자 전용된 방식으로 & Garments, 소매, 오일 및 가스, Pharmaceuticals, 제조, 뱅킹, Agro를 비롯 한 많은 세로 세그먼트에서 중요 한 비즈니스 및 혁신적인 IT 솔루션을 제공 합니다. FMCG/CPG, Bullion, EXIM 및 다양 한 다른 버티 컬 산업입니다.|
 |[Taritas 소프트웨어 솔루션 Pvt 합니다. Ltd.](http://www.taritas.com/)|Bengaluru, Karnataka, 인도; Jabalpur, Madhya 프라 데 시, 인도|Taritas에 많은 업계를 위한 첨단 솔루션을 제공 하는 소프트웨어 아웃소싱 회사입니다. 해외 비용 혜택을 사용 하 여 결합 하는 소프트웨어 및 응용 프로그램 개발의 포괄적인 기술 프로젝트 비용을 최소화 하 고 클라이언트의 수익을 극대화에 중점을 두고 고품질 개발 서비스를 제공할 수 있습니다. "시간 및 예산에 처음으로 오른쪽" 접근 방식을 따릅니다. |
-|[기술 Mahindra](https://techmahindra.com)|Bengaluru|기술 Mahindra 나타내는 연결 된 전 세계 기업, 연결 및 Society 증가를 사용 하도록 설정 하면 정보 기술 서비스 및 솔루션, 혁신적이 고 고객 중심 제공 ' Ñ 있습니다. 기꺼이 117,600 + 전문가와 USD 4.4 십억 회사 90 개국에서 840 + 글로벌 고객에 게 Fortune 선정 500 대 기업 등을 통해 수 있도록 지원 합니다.|
+|[기술 Mahindra](https://techmahindra.com)|Bengaluru|기술 Mahindra Associates 기업과 Society Rise™ 사용 하도록 설정 하면 정보 기술 서비스 및 솔루션, 혁신적이 고 고객 중심 제공 연결 된 전 세계를 나타냅니다. 기꺼이 117,600 + 전문가와 USD 4.4 십억 회사 90 개국에서 840 + 글로벌 고객에 게 Fortune 선정 500 대 기업 등을 통해 수 있도록 지원 합니다.|
 |[TechAhead 소프트웨어 Pvt 합니다. Ltd.](http://www.techaheadcorp.com)|프린스턴 뉴어크; 노 이다, 인도|Workplace 디지털 변환을 가속화, 생산성을 높이, 보안, 적용 및 언제 든 지 언제 어디에서 나 작업할 권한을 부여 하는 이동성 솔루션을 만들었습니다. 엔터프라이즈 모델에 대 한 최적된 이동성 솔루션을 개발 하 고 브랜드 인식, 시장 침투, 서비스 통합, 고객의 기대치와 완벽 하 게 겪고 있는 비즈니스 목표입니다.|
 |[컨설팅 서비스 트리를 탐색합니다.](http://www.walkingtree.in/)|바드, 인도|트리를 탐색 하기는 기술에 대 한 해당 열 정의 대 한 인식 하는 IT 소프트웨어 및 서비스 공급자입니다. 로 작동 하는 제품 개발 팀 또는 백 엔드 엔지니어링 팀 고객에 대 한 전 세계에 걸쳐 있습니다.|
 |[웹 스파이더](http://www.webspiders.com)|뉴욕, NY; 런던, 영국; 싱가포르; 인도|거미 WS (웹)는 마케팅에 대 한 제품을 개발 하는 엔터프라이즈 소프트웨어 회사 및 드라이브에는 HR '사용자 참여' 모바일 및 인공 지능 주도 봇을 사용 하 여 전달 합니다.|
@@ -719,7 +719,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[거의 불가능](http://www.rarelyimpossible.com)|Bournemouth, 영국|거의 불가능 한 도움말 회사 빌드에 대 한 모바일 앱 및 사용자 환경 디자인 및 개발 단계에 중점을 둔 비즈니스 문제를 해결 하기 위해 IoT 클라우드 솔루션입니다. 프로젝트 및 제품을 만들겠습니다.이 클라이언트에 대 한 우리의 목표는 매일에 도움이 되는 도구를 사용 하 여 조직 내 모든 사람의 역량 강화입니다.|
 |[Rock 확실히 알고](http://www.rocksolidknowledge.com)|Bristol, 영국|Xamarin 파트너를 Xamarin.forms와 네이티브 UI를 사용 하 여 iOS 및 Android에서 플랫폼 모바일 솔루션을 교차 합니다. 네이티브 UI 느낌, 공유 하는 동안 또는 다양 한 플랫폼 간에 코드를 제공 하는 솔루션을 개발 경험이 있습니다.|
 |[Screenmedia](http://www.screenmedia.co.uk)|글래스고, 영국|클라이언트 및 최종 사용자에 대 한 사람이 centred 솔루션을 만들려면 해야 한다는 휴먼 centred 비즈니스 Screenmedia 한다고 생각 합니다. 비전과 값 완벽 하 게 반영 하 고 물론 이렇게 인력입니다. Screenmedia의 연습 문화권이 해당 성공의 열쇠입니다. 해당 ' Äôs 드라이브 내용과; 새로운 기술에는 지속적인 혁신을 유지 사용 하면 클라이언트를 사용 하 여 agile 파트너 관계를 만듭니다. 하며 ' 것이 매우 어려울 점에서 Äôs 즐거운 작동 합니다.|
-|[시퀀스](https://www.sequence.co.uk/)|카디프, 영국; 런던, 영국|시퀀스는 creative 디지털 에이전시 1995 년에 설정 됩니다. 디자인, 전략 및 사용자 환경에서 참여를 작업에서 까지의 제조 여행 및 관광 산업 분야에서 가장 큰 조직은 영국의의 일부입니다. 열정 및 혁신을 통해 고객과 브랜드를 연결 합니다.|
+|[Sequence](https://www.sequence.co.uk/)|카디프, 영국; 런던, 영국|시퀀스는 creative 디지털 에이전시 1995 년에 설정 됩니다. 디자인, 전략 및 사용자 환경에서 참여를 작업에서 까지의 제조 여행 및 관광 산업 분야에서 가장 큰 조직은 영국의의 일부입니다. 열정 및 혁신을 통해 고객과 브랜드를 연결 합니다.|
 |[ShinobiSolutions](https://www.shinobicontrols.com/shinobienterprise)|Newcastle에 딘 버 러, 영국|2011 년에서 초창기 Shinobicontrols iOS 및 Android 개발자를 위한 포괄적이 고 강력한 대화형 UI 컨트롤 만들에 있습니다. 2012에서 시작한 shinobicharts, 첫 번째 제품입니다. 그 이후로 ' Äôve 빠르게 성장 하며 이제 제품을 신속 하 게 확장 포트폴리오를 사용 하 여 고객에 게 수천 UI 솔루션을 제공 합니다.|
 |[Skillweb](http://www.skillweb.co.uk)|높은 Wycombe, 영국|Skillweb은 개인적으로 소유한, 영국 기반 비즈니스 조직 모바일 작업을 관리 하 고 상품의 움직임을 추적할 수 있도록 하는 기술 솔루션을 제공 하는 경우 회사는 영국 및 유럽 1999 관리 배포 이후 운영에 하 고 매월 최대 100 백만 트랜잭션에 대 한 책임 및 증가 하는.|
 |[해결 하는 소프트웨어](http://www.softwaresolved.com/)|Exeter, 영국; 런던, 영국; 맨체스터, 영국|트러스트 및 우수한 소프트웨어를 배달에 따라 클라이언트를 사용 하 여 장기 파트너 관계를 구축 했습니다. 우리는 Microsoft Gold Partner 되며 프로세스 ISO 9001 인증 합니다.  이 소프트웨어 개발에서 가장 높은 품질 표준 공인 된 것을 의미 합니다.|
