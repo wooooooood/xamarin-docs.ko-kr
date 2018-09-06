@@ -45,7 +45,7 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 
 시작 화면을 렌더링하고 표시하는 가장 빠른 방법은 사용자 정의 테마를 생성하고 시작 화면을 표시하는 액티비티에 그것을 적용하는 것입니다. 액티비티는 렌더링 될 때 테마를 로드하고 액티비티의 배경에 그림 리소스(테마에 의해 참조 됨)를 적용 합니다. 이 방법은 레이아웃 파일을 만들 필요가 없습니다.
 
-시작 화면은 브랜드 그림 표시, 모든 초기화 수행 및 모든 작업을 시작하는 액티비티로 구현 됩니다. 앱이 부트스트랩되면 시작 화면 액티비티는 메인 액티비티를 시작하고 응용 프로그램 백 스택에서 자신을 제거 합니다.
+시작 화면은 브랜드 그림 표시, 모든 초기화 수행 및 모든 작업 시작 액티비티로 구현 됩니다. 앱이 부트스트랩되면 시작 화면 액티비티는 메인 액티비티를 시작하고 응용 프로그램 백 스택에서 자신을 제거 합니다.
 
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>시작 화면용 그림 생성
@@ -76,7 +76,7 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 
 ### <a name="implementing-a-theme"></a>테마 구현
 
-시작 화면 액티비티에 대한 사용자 정의 테마를 만들려면 **values/styles.xml** 파일을 편집(또는 추가)하고 시작 화면에 대한 새 `style` 요소를 만듭니다 `style` 시작 화면에 대 한 요소입니다. 샘플 **values/style.xml** 파일은 다음과 같이 **MyTheme.Splash** 이름을 가진 `style`을 가지고 있습니다 :
+시작 화면 액티비티에 대한 사용자 정의 테마를 만들려면 **values/styles.xml** 파일을 편집(또는 추가)하고 시작 화면에 대한 새 `style` 요소를 만듭니다. 샘플 **values/style.xml** 파일은 다음과 같이 **MyTheme.Splash** 이름을 가진 `style`을 가지고 있습니다 :
 
 ```xml
 <resources>
@@ -94,12 +94,12 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 </resources>
 ```
 
-**MyTheme.Splash** 은 엄격한 스파르타식 입니다 &ndash; 창 배경을 선언, 명시적으로 창에서 제목 표시줄을 제거하고 전체 화면 임을 선언 합니다. 액티비티의 첫 번째 레이아웃을 올리기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우, 자신의 스타일 정의에 `windowContentOverlay` 대신 `windowBackground` 를 사용할 수 있습니다. 이 경우 UI의 에뮬레이션 표시 되도록 **splash_screen.xml** 그리기를 수정해야 합니다.
+**MyTheme.Splash** 은 엄격한 스파르타식 입니다 &ndash; 창 배경을 선언, 명시적으로 창에서 제목 표시줄을 제거하고 전체 화면 임을 선언 합니다. 액티비티의 첫 번째 레이아웃을 올리기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우, 자신의 스타일 정의에 `windowContentOverlay` 대신 `windowBackground`를 사용할 수 있습니다. 이 경우 UI 에뮬레이션이 표시 되도록 **splash_screen.xml** 그리기를 수정해야 합니다.
 
 
 ### <a name="create-a-splash-activity"></a>시작 액티비티 생성
 
-이제 시작 이미지 및 모든 시작 작업을 수행이 포함된 Android 용 새 액티비티가 필요 합니다. 다음 코드는 완전한 시작 화면 구현의 예제 입니다:
+이제 시작 이미지 및 모든 시작 작업 수행이 포함된 Android 용 새 액티비티가 필요 합니다. 다음 코드는 완전한 시작 화면 구현의 예제 입니다 :
 
 ```csharp
 [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
@@ -140,7 +140,7 @@ public class SplashActivity : AppCompatActivity
 public override void OnBackPressed() { }
 ```
 
-시작 작업 `OnResume`에서 비동기적으로 수행 됩니다. 이는 시작 작업이 시작 화면이 나타나는 것을 느리게 하거나 연기하지 않도록 하기 위해 필요합니다. 작업 속도가 저하 하지 않거나 시작 화면의 모양을 지연 시킬 수 있도록 합니다. 작업이 완료되면 `SplashActivity`는 `MainActivity`를 시작하고 사용자와 앱 간의 상호작용이 시작될 것입니다.
+시작 작업은 `OnResume`에서 비동기적으로 수행 됩니다. 이는 작업이 시작 화면 표시를 느리게 하거나 연기하지 않도록 하기 위해 필요합니다. 작업이 완료되면 `SplashActivity`는 `MainActivity`를 시작하고 사용자와 앱 간의 상호작용이 시작될 것입니다.
 
 이 새로운 `SplashActivity`는 `MainLauncher` 특성을 `true`로 설정하여 응용 프로그램에 대한 시작 관리자 액티비티로 설정 됩니다. 이제 `SplashActivity`가 시작 관리자 액티비티이므로 `MainActivity.cs`를 편집하고, `MainActivity`에서 `MainLauncher` 특성을 제거해야 합니다 :
 
@@ -217,12 +217,12 @@ public class MainActivity : AppCompatActivity
     [![가로 모드로 시작 화면의 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 
-참고로 가로 모드 시작 화면을 사용은 항상 매끄러운 환경을 제공하지는 않습니다. 기본적으로 Android 앱은 장치가 이미 가로 모드 일지라도 세로 모드로 시작하고 그것을 가로 모드 가로 모드로 전환 합니다. 결과적으로, 장치가 가로 모드에 있는 동안 앱을 실행 하는 경우, 장치는 세로 시작 화면을 간략하게 표시한 다음 세로에서 가로 시작 화면으로 애니메이션하면서 회전합니다. 불행하게도, 이 초기 세로-가로 전환은 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`이 시작 액티비티의 플래그에 지정되어 있을지라도 일어납니다. 이 제한을 해결하는 가장 좋은 방법은 가로 세로 모드 모두 제대로 렌더링 하는 단일 시작 화면 이미지를 만드는 것입니다.
+참고로 가로 모드 시작 화면을 사용은 항상 매끄럽지 못한 환경을 제공합니다. 기본적으로 Android 앱은 장치가 이미 가로 모드 일지라도 세로 모드로 시작하고 그것을 가로 모드로 전환 합니다. 결과적으로, 장치가 가로 모드에 있는 동안 앱을 실행 하는 경우, 장치는 세로 시작 화면을 간략하게 표시한 다음 세로에서 가로 시작 화면으로 애니메이션하면서 회전합니다. 불행하게도, 이 초기 세로-가로 전환은 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`이 시작 액티비티의 플래그에 지정되어 있을지라도 일어납니다. 이 제한을 해결하는 가장 좋은 방법은 가로 세로 모드 모두 제대로 렌더링 가능한 단일 시작 화면 이미지를 만드는 것입니다.
 
 
 ## <a name="summary"></a>요약
 
-이 가이드는 Xamarin.Android 응용 프로그램의 시작 화면을 구현하는 한가지 방법, 다시말해 시작 액티비티에 사용자 정의 테마를 적용하기를 설명하였습니다.
+이 가이드는 Xamarin.Android 응용 프로그램의 시작 화면을 구현하는 한가지 방법, 다시말해 시작 액티비티에 사용자 정의 테마 적용하기를 설명하였습니다.
 
 
 ## <a name="related-links"></a>관련 링크
