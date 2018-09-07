@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772359"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780495"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -97,7 +97,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 - 추가 팁
   - 다시 빌드는 빌드 전에 정리되므로 다시 빌드보다는 빌드를 사용합니다. 정리 시에는 사용 가능한 참조가 제거되므로 정리에 시간이 오래 걸릴 수 있습니다.
   - 시뮬레이터는 샌드박스를 적용하지 않는다는 사실을 활용합니다. 비디오 또는 프로젝트에 포함된 기타 자산처럼 크기가 큰 리소스는 시뮬레이터에서 앱이 시작될 때마다 비용이 많이 드는 파일 복사 작업을 만들 수 있습니다. 이러한 파일을 홈 디렉터리에 배치하고 응용 프로그램에서 전체 파일 경로로 참조하면 이처럼 비용이 많이 드는 작업을 방지할 수 있습니다.  
-  - 확실하지 않은 경우 `–time –time` 플래그를 사용하여 변경 내용을 측정합니다.
+  - 확실하지 않은 경우 `--time --time` 플래그를 사용하여 변경 내용을 측정합니다.
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
@@ -137,7 +137,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 다음과 같은 항목을 피해야 합니다.
 
 - Fat 이진 파일(디버그) 
-- 링커 `–nolink` 사용 안 함 
+- 링커 `--nolink` 사용 안 함 
 - 제거 사용 안 함 
   - 기호 `--nosymbolstrip` 
   - IL(릴리스) `--nostrip`.  
@@ -151,7 +151,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 - 모든 빌드(디버그)에 큰 정적 파일을 배포하지 마세요. 
   - UIFileSharingEnabled(info.plist)를 사용합니다. 
     - 자산을 한 번만 업로드하면 됩니다. 
-- 확실하지 않은 경우 `–time –time` 플래그를 사용하여 변경 내용을 측정합니다.
+- 확실하지 않은 경우 `--time --time` 플래그를 사용하여 변경 내용을 측정합니다.
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
