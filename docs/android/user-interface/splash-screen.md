@@ -1,4 +1,4 @@
----
+﻿---
 title: 시작 화면
 description: Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때 다소 시간이 걸릴 수 있습니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다.
 ms.prod: xamarin
@@ -16,7 +16,7 @@ ms.locfileid: "34153199"
 ---
 # <a name="splash-screen"></a>시작 화면
 
-_Android 앱 다소 시간이 걸릴 수 특히 앱을 처음 시작할 때 장치를 시작 합니다. 시작 화면이 시작 표시 될 수 있습니다를 사용자에 게 또는 브랜드를 나타내는 진행률입니다._
+_Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때 다소 시간이 걸릴 수 있습니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
 
 
 ## <a name="overview"></a>개요
@@ -69,8 +69,7 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 </layer-list>
 ```
 
-이 `layer-list` 시작 화면 이미지 화면 가운데 **splash.png** 로 지정 된 배경는 `@color/splash_background` 리소스입니다.
-이 파일에 배치 된 **리소스/그릴 수 있는** 폴더 (예를 들어 **Resources/drawable/splash_screen.xml**).
+이 `layer-list`는 `@color/splash_background` 리소스에 의해 지정 된 배경에 시작 화면 이미지 **splash.png**를 가운데 표시하게 됩니다. 이 파일을  **Resources/drawable** 폴더에 둡니다(예를 들어 **Resources/drawable/splash_screen.xml**).
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
 
@@ -95,7 +94,7 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 </resources>
 ```
 
-**MyTheme.Splash** 은 매우 스파르타식 &ndash; 것 선언 창 배경, 명시적으로 창에서 제목 표시줄을 제거 하 고 전체 화면 임을 선언 합니다. 활동의 첫 번째 레이아웃을 확장 하기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우 사용할 수 있습니다 `windowContentOverlay` 대신 `windowBackground` 스타일 정의에 있습니다. 이 경우 수정 해야는 **splash_screen.xml** 그릴 UI의 에뮬레이션 표시 되도록 합니다.
+**MyTheme.Splash**은 엄격한 스파르타식입니다. 창 배경을 선언, 명시적으로 창에서 제목 표시줄을 제거하고 전체 화면임을 선언합니다. 액티비티의 첫 번째 레이아웃을 올리기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우, 자신의 스타일 정의에 `windowContentOverlay` 대신 `windowBackground`를 사용할 수 있습니다. 이 경우 UI 에뮬레이션이 표시되도록 **splash_screen.xml** 그리기를 수정해야 합니다.
 
 
 ### <a name="create-a-splash-activity"></a>시작 액티비티 생성
@@ -133,8 +132,7 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity` 명시적으로 재정의 기본 테마 응용 프로그램의 이전 섹션에서 작성 된 테마를 사용 합니다.
-레이아웃에 로드할 필요가 없습니다 `OnCreate` 테마는 배경으로 그릴 선언으로 합니다.
+`SplashActivity`는 명시적으로 응용 프로그램의 기본 테마를 재정의하는 이전 절에서 생성한 테마를 사용합니다. 그릴 테마를 백그라운드로 선언하고 있기 때문에 `OnCreate`에 레이아웃을 로드할 필요가 없습니다.
 
 백 스택에서 액티비티를 제거하기 위한 `NoHistory=true` 특성을 설정하는 것이 중요합니다. 시작 프로세스를 취소시키는 뒤로 가기 버튼을 막기 위해서 `OnBackPressed` 역시 재정의하고 아무 작업도 수행하지 않습니다.
 
