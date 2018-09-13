@@ -1,4 +1,4 @@
-﻿---
+---
 title: 시작 화면
 description: Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때 다소 시간이 걸릴 수 있습니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다.
 ms.prod: xamarin
@@ -16,7 +16,7 @@ ms.locfileid: "34153199"
 ---
 # <a name="splash-screen"></a>시작 화면
 
-_Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때 다소 시간이 걸릴 수 있습니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
+_Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때 다소 시간이 걸릴 수 있습니다.  시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
 
 
 ## <a name="overview"></a>개요
@@ -69,7 +69,8 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 </layer-list>
 ```
 
-이 `layer-list`는 `@color/splash_background` 리소스에 의해 지정 된 배경에 시작 화면 이미지 **splash.png**를 가운데 표시하게 됩니다. 이 파일을  **Resources/drawable** 폴더에 둡니다(예를 들어 **Resources/drawable/splash_screen.xml**).
+이 `layer-list` 시작 화면 이미지 화면 가운데 **splash.png** 로 지정 된 배경는 `@color/splash_background` 리소스입니다.
+이 파일에 배치 된 **리소스/그릴 수 있는** 폴더 (예를 들어 **Resources/drawable/splash_screen.xml**).
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
 
@@ -132,7 +133,8 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity`는 명시적으로 응용 프로그램의 기본 테마를 재정의하는 이전 절에서 생성한 테마를 사용합니다. 그릴 테마를 백그라운드로 선언하고 있기 때문에 `OnCreate`에 레이아웃을 로드할 필요가 없습니다.
+`SplashActivity` 명시적으로 재정의 기본 테마 응용 프로그램의 이전 섹션에서 작성 된 테마를 사용 합니다.
+레이아웃에 로드할 필요가 없습니다 `OnCreate` 테마는 배경으로 그릴 선언으로 합니다.
 
 백 스택에서 액티비티를 제거하기 위한 `NoHistory=true` 특성을 설정하는 것이 중요합니다. 시작 프로세스를 취소시키는 뒤로 가기 버튼을 막기 위해서 `OnBackPressed` 역시 재정의하고 아무 작업도 수행하지 않습니다.
 
