@@ -69,8 +69,8 @@ Android 앱은 시작 시, 특히 앱이 기기에서 처음으로 실행될 때
 </layer-list>
 ```
 
-이 `layer-list` 시작 화면 이미지 화면 가운데 **splash.png** 로 지정 된 배경는 `@color/splash_background` 리소스입니다.
-이 파일에 배치 된 **리소스/그릴 수 있는** 폴더 (예를 들어 **Resources/drawable/splash_screen.xml**).
+이 `layer-list`는 `@color/splash_background` 리소스에 의해 지정 된 배경에 시작 화면 이미지 **splash.png**를 가운데 표시하게 됩니다.
+이 파일을  **Resources/drawable** 폴더에 둡니다(예를 들어 **Resources/drawable/splash_screen.xml**).
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
 
