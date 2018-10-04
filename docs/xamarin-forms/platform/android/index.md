@@ -9,9 +9,9 @@ ms.author: dabritch
 ms.date: 01/13/2016
 ms.openlocfilehash: 2eada518586f222d200ec19aeddc65107d7603b3
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 06/08/2018
 ms.locfileid: "35242406"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
@@ -30,6 +30,7 @@ Xamarin.Forms 안드로이드 프로젝트들은 이제 `FormsAppCompatActivity`
 
 [![](images/before-appcompat-sml.png "AppCompat을 사용하지 않은 Todo 샘플 앱")](images/before-appcompat.png#lightbox "AppCompat 없이 Todo 샘플 응용 프로그램")
 
+
 그리고 다음은 동일한 코드를 `FormsAppCompatActivity`를 사용하게 하고, 추가 테마 정보를 추가하여 프로젝트를 업그레이드한 결과입니다.
 
 [![](images/post-appcompat-sml.png "AppCompat과 테마를 사용한 Todo 샘플 앱")](images/post-appcompat.png#lightbox "AppCompat 및 테마 설정 Todo 샘플 응용 프로그램")
@@ -40,4 +41,4 @@ Xamarin.Forms 안드로이드 프로젝트들은 이제 `FormsAppCompatActivity`
 
 ## <a name="related-links"></a>관련 링크
 
-- [머티리얼 디자인 지원 추가하기](appcompat.md)
+- [자재 디자인 지원 추가](appcompat.md)
