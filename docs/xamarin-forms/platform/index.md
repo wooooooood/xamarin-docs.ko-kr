@@ -24,7 +24,7 @@ Xamarin.Forms는 확장이 용이하고,  [Effects](~/xamarin-forms/app-fundamen
 
 ## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[응용 프로그램 인덱싱 및 딥 링크 설정](deep-linking.md)
 
-앱 인덱싱은 몇 번 사용 후 잊어버려질 것을 검색 결과에 표시합니다. 딥 링크는 앱이 검색 기록에 앱 정보를 포함하고 있을 때 응답할 수 있도록 도와줍니다. 이는 주로 딥 링크로부터 참조된 페이지로 이동할 때입니다.
+응용 프로그램 인덱싱 몇 가지 사용 하 여 검색 결과에 표시 하 여 인재를 후 잊어버린 그렇지 않은 경우는 응용 프로그램을 수 있습니다. 딥 링크 설정 응용 프로그램을 딥 링크에서 참조 하는 페이지로 이동 하 여 일반적으로 응용 프로그램 데이터를 포함 하는 검색 결과에 응답할 수 있습니다.
 
 ## <a name="device-classdevicemd"></a>[장치 클래스](device.md)
 
@@ -54,7 +54,7 @@ Xamarin.Forms에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티
 
 Platform-Specifics는 특정 플랫폼에서만 가능한 기능들을 Custom renderer 또는 Effects 등을 사용하지 않고도 구현할 수 있게 합니다.
 
-## <a name="pluginspluginsmd"></a>[플러그인](plugins.md)
+## <a name="pluginspluginsmd"></a>[플러그 인](plugins.md)
 
 Xamarin.Forms 앱을 확장할 수 있도록 도와주는 다양한 오픈소스 플러그인들을 Github, Nuget 및 Xamarin Component Store에서 찾을 수 있습니다.
 
