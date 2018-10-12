@@ -1,4 +1,4 @@
----
+﻿---
 title: Tizen.NET
 description: Tizen.NET을 사용 하면 Tv, 착용 식 장치, 모바일 장치 및 다른 IoT 장치를 포함 하 여 Samsung 장치에서 실행 되는 Tizen 운영 체제에 대 한 응용 프로그램을 개발할 수 있습니다.
 ms.prod: xamarin
