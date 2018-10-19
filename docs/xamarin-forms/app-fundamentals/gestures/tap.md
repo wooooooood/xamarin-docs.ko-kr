@@ -1,5 +1,5 @@
 ---
-title: 탭 제스처 제스처 인식기를 추가합니다.
+title: 탭 제스처 인식기를 추가합니다.
 description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 탭 검색을 위한 탭 제스처를 사용 하는 방법을 설명 합니다. Tap 검색 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994856"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>탭 제스처 제스처 인식기를 추가합니다.
+# <a name="adding-a-tap-gesture-recognizer"></a>탭 제스처 인식기를 추가합니다.
 
 _탭 제스처 탭 검색에 사용 되 고 TapGestureRecognizer 클래스를 사용 하 여 구현 됩니다._
-
-## <a name="overview"></a>개요
 
 탭 제스처를 사용 하 여 클릭할 수 있는 사용자 인터페이스 요소를 확인, 만들려면를 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 인스턴스를 처리 합니다 [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) 이벤트 새 제스처 인식기를 추가 하 고는 [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) 사용자 인터페이스 요소에는 컬렉션입니다. 다음 코드 예제는 `TapGestureRecognizer` 에 연결을 [ `Image` ](xref:Xamarin.Forms.Image) 요소:
 
@@ -72,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>ICommand를 사용 하 여
 
-일반적으로 Mvvm 패턴을 사용 하는 응용 프로그램 사용 `ICommand` 이벤트 처리기를 직접 연결 하는 대신 합니다. [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 쉽게 지원할 수 있습니다 `ICommand` 코드에서 바인딩을 설정 합니다.
+일반적으로 모델-뷰-ViewModel (MVVM) 패턴을 사용 하는 응용 프로그램 사용 `ICommand` 이벤트 처리기를 직접 연결 하는 대신 합니다. [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 쉽게 지원할 수 있습니다 `ICommand` 코드에서 바인딩을 설정 합니다.
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -113,10 +111,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## <a name="summary"></a>요약
-
-탭 제스처 탭 검색에 사용 되 고 사용 하 여 구현 되는 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 클래스입니다. 두 번 눌러서 인식 하도록 탭의 수를 지정할 수 있습니다 (세 번 누르기 또는 자세히 탭) 동작 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

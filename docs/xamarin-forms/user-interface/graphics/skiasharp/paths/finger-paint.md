@@ -4,14 +4,14 @@ description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSha
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: b0f28cd3e8a928a6da3169dee96ec089178a64e2
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 03a6de3b6297e57620655e3697fe729e6fb06501
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615823"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 페인팅
@@ -76,7 +76,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-이름 제안으로는 `inProgressPaths` 사전 현재 하나 이상의 손가락으로 그려지는 경로 저장 합니다. 사전 키에는 터치 이벤트와 함께 제공 되는 터치 ID입니다. `completedPaths` 필드는 경우 리프트 경로 화면에서 그리기 손가락 완료 된 경로의 컬렉션입니다.
+이름에서 알 수 있듯이 `inProgressPaths` 사전 현재 하나 이상의 손가락으로 그려지는 경로 저장 합니다. 사전 키에는 터치 이벤트와 함께 제공 되는 터치 ID입니다. `completedPaths` 필드는 화면에서 리프트 된 경로 그리기는 손가락을 움직일 때 완료 된 경로의 컬렉션입니다.
 
 `TouchAction` 처리기는 이러한 두 컬렉션을 관리 합니다. 손가락 처음 화면을 터치 하는 경우 새 `SKPath` 추가할 `inProgressPaths`합니다. 손가락 이동 경로에 추가 점은 추가 됩니다. 경로 전송할 손가락을 놓으면는 `completedPaths` 컬렉션입니다. 동시에 여러 손가락으로 그릴 수 있습니다. 경로 또는 컬렉션 중 하나에 각 변경 후의 `SKCanvasView` 무효화 됩니다.
 
@@ -141,7 +141,7 @@ public partial class FingerPaintPage : ContentPage
 ```csharp
 public partial class FingerPaintPage : ContentPage
 {
-    ,,,
+    ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         SKCanvas canvas = args.Surface.Canvas;
@@ -165,10 +165,11 @@ public partial class FingerPaintPage : ContentPage
 
 [![](finger-paint-images/fingerpaint-small.png "손가락으로 그리기 페이지 스크린샷 삼중")](finger-paint-images/fingerpaint-large.png#lightbox "삼중 손가락으로 그리기 페이지 스크린샷")
 
+이제 선을 그리려면 매개 방정식을 사용 하 여 곡선을 정의 하는 방법을 살펴봤습니다. 이후 섹션에서 [ **SkiaSharp 곡선 및 경로** ](../curves/index.md) 다양 한 종류 곡선에 설명 하는 `SKPath` 지원 합니다. 유용한 필수 구성 요소에 이지만 [ **SkiaSharp 변환**](../transforms/index.md)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [터치 추적 효과 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [효과의 이벤트를 호출합니다.](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

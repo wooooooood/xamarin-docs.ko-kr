@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 37befdcd4ccbcd49e3cebda92d55ae6f70da2ad6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998704"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>축소 제스처 인식기를 추가합니다.
 
 _축소 제스처 대화형 확대/축소를 수행 하는 데 사용 되 고 PinchGestureRecognizer 클래스를 사용 하 여 구현 됩니다. 축소 제스처의 일반적인 시나리오는 축소 위치에서 이미지의 대화형 확대/축소를 수행 하는 것입니다. 뷰포트의 콘텐츠를 확장 하 여 수행 됩니다 하 고이 문서에서 설명 됩니다._
-
-## <a name="overview"></a>개요
 
 축소 제스처를 사용 하 여 가능한 사용자 인터페이스 요소를 확인, 만들려면를 [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) 인스턴스를 처리 합니다 [ `PinchUpdated` ](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) 이벤트를 새 제스처 인식기를 추가 하 고는 [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) 사용자 인터페이스 요소에는 컬렉션입니다. 다음 코드 예제는 `PinchGestureRecognizer` 에 연결을 [ `Image` ](xref:Xamarin.Forms.Image) 요소:
 
@@ -161,11 +159,6 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 ```
 
 이 메서드는 사용자의 축소 제스처에 따라 래핑된 사용자 인터페이스 요소의 확대/축소 수준을 업데이트 합니다. 값을 사용 하 여 이렇게 합니다 [ `Scale` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [ `ScaleOrigin` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) 및 [ `Status` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) 속성을는 [ `PinchGestureUpdatedEventArgs` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) 인스턴스 축소 제스처의 원점에 적용할 크기 조정 비율을 계산 합니다. 래핑된 사용자 정의 요소 값이 축소 제스처의 원점을 설정 하 여 확대 한 다음 해당 [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX)하십시오 [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY), 및 [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) 계산된 된 값으로 속성입니다.
-
-## <a name="summary"></a>요약
-
-축소 제스처 대화형 확대/축소를 수행 하는 데 사용 되 고 사용 하 여 구현 되는 [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) 클래스입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

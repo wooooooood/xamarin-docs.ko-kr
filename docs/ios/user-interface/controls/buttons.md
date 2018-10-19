@@ -4,14 +4,14 @@ description: UIButton 클래스는 다양 한 유형의 iOS 화면에서 단추�
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/11/2018
-ms.openlocfilehash: 32f6330ad2fddc2e8386d6e574918a011f3bebad
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 35fc743944c04dd1fdb8e035ba94ad6aeb6156ea
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38986006"
 ---
 # <a name="buttons-in-xamarinios"></a>Xamarin.iOS에서 단추
@@ -90,7 +90,8 @@ button.TouchUpInside += (sender, e) => {
 `UIButton` 컨트롤은 몇몇 다른 주에에서 있을 수 있습니다, 각각 지정 하는 `UIControlState` 값 `Normal`를 `Disabled`, `Focused`, `Highlighted`등입니다. 각 상태에는 iOS 디자이너를 사용 하 여 프로그래밍 방식으로 지정 된 고유 스타일을 지정할 수 있습니다.
 
 > [!NOTE]
-> 모든 전체 목록은 `UIControlState` 값을 살펴보시기 바랍니다 합니다 [ `UIKit.UIControlState enumeration` ](https://developer.xamarin.com/api/type/UIKit.UIControlState/) 설명서.
+> 모든 목록은 `UIControlState` 값을 살펴보시기 바랍니다 합니다 [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> 설명서입니다.
 
 예를 들어 제목 색 및 그림자 색을 설정 하려면 `UIControlState.Normal`:
 
@@ -127,6 +128,3 @@ button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlStat
 
 사용자 지정 단추를 사용 하 여 작업에 대 한 자세한 내용은 참조는 [이미지를 사용 하 여 단추에 대 한](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) 레시피입니다.
 
-## <a name="related-links"></a>관련 링크
-
-- [UIButton 통합 문서](https://developer.xamarin.com/workbooks/ios/user-interface/UIbutton/uibutton.workbook)

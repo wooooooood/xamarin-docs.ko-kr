@@ -4,23 +4,19 @@ description: 이 문서는 Apple Pay, 알림, 복잡성, 자동 제안, 운동 �
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: e915ec38ed29b6ef2a0710c9dad10cf339c3a3ab
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 09200ba5968838edf829b30a50a8ad0f4a3ab3aa
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39030680"
 ---
 # <a name="watchos-platform-features"></a>watchOS 플랫폼 기능
 
-## <a name="introduction-to-watchos-5introduction-to-watchos5indexmd"></a>[WatchOS 5 소개](introduction-to-watchos5/index.md)
-
-> [!WARNING]
-> Xamarin의 watchOS 5는 현재 미리 보기 상태, 버그를 포함할 수 있음을 의미를 없는 완벽 한 기능이 지원과 변경 될 수 있습니다.
-> 실험 용도로 사용 합니다.
+## <a name="introduction-to-watchos-5introduction-to-watchos5indexmd"></a>[watchOS 5 소개](introduction-to-watchos5/index.md)
 
 이 문서는 Xamarin 사용 하 여 watchOS 앱을 빌드할 때 사용 하 여 사용할 수 있는 watchOS 5의에서 새로운 기능과 업데이트 된 기능에 대 한 개략적인 개요를 제공 합니다.
 

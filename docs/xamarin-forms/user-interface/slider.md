@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2018
-ms.openlocfilehash: c0c433ab44c5b16fda6a01d520c41b31cb94bcc7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 0069e59c1c09e242a74573ae66c8efade7d7f2a5
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998243"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
@@ -44,8 +44,8 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) 막대는 왼쪽 엄지 단추의 색입니다.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) 막대는 오른쪽에 있는 엄지 단추의 색입니다.
-- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) thumb 색이 됩니다. 이 속성은 유니버설 Windows 플랫폼에서 지원 되지 않습니다.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) 형식의 thumb을 사용 하는 이미지인 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)합니다. 이 속성은 유니버설 Windows 플랫폼에서 지원 되지 않습니다.
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) thumb 색이 됩니다.
+- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) 형식의 thumb을 사용 하는 이미지인 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)합니다.
 
 > [!NOTE]
 > 합니다 `ThumbColor` 고 `ThumbImage` 속성은 함께 사용할 수 없습니다. 두 속성을 설정 하는 경우는 `ThumbImage` 속성 우선 적용 됩니다.
@@ -109,7 +109,7 @@ public class BasicSliderCodePage : ContentPage
 
 [![기본 슬라이더 코드](slider-images/BasicSliderCode.png "기본 슬라이더 코드")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-두 번째 `Label` 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 합니다 `Slider` 조작 되 첫 번째 경우는 `ValueChanged` 이벤트를 발생 합니다. 표시 되는 소수 자릿수는 세 가지 플랫폼에 대해 다른 인지 확인 합니다. 이러한 차이점의 플랫폼 구현에 관련 된 합니다 `Slider` 섹션에서이 문서의 뒷부분에서 설명 하 고 [플랫폼 구현 차이로](#implementations)합니다.
+두 번째 `Label` 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 합니다 `Slider` 조작 되 하면 첫 번째 `ValueChanged` 이벤트를 발생 합니다. 표시 되는 소수 자릿수는 세 가지 플랫폼에 대해 다른 인지 확인 합니다. 이러한 차이점의 플랫폼 구현에 관련 된 합니다 `Slider` 섹션에서이 문서의 뒷부분에서 설명 하 고 [플랫폼 구현 차이로](#implementations)합니다.
 
 ### <a name="creating-a-slider-in-xaml"></a>XAML에서 슬라이더를 만들기
 
@@ -228,7 +228,7 @@ Slider slider = new Slider
 };
 ```
 
-설정 `Maximum` 20으로 문제가 되지 않습니다 기본값 보다 큰 이므로 `Minimum` 0을 설정 합니다. 때 `Minimum` 값이 설정 보다 작은 `Maximum` 값은 20입니다.
+설정 `Maximum` 20으로 문제가 되지 않습니다 기본값 보다 큰 이므로 `Minimum` 값이 0입니다. 때 `Minimum` 값이 설정 보다 작은 `Maximum` 값은 20입니다.
 
 XAML에 동일한 문제가 있습니다. 되도록 하는 순서에에서 속성을 설정 `Maximum` 보다 항상 큽니다 `Minimum`:
 
@@ -292,8 +292,6 @@ Android 구현의 `Slider` Android 기반 [ `SeekBar` ](https://developer.xamari
 UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 `Maximum` 및 `Minimum` 10, 하지만 1 보다 크지 않음로 나눈 값 속성입니다.
 
 예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 명백 합니다 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 한 다음 속성은 10 이상이 `StepFrequency` 1로 설정 됩니다 및 `Value` 속성이 정수 계열 값입니다.
-
-또한 합니다 [ `ThumbColor` ](xref:Xamarin.Forms.Slider.ThumbColorProperty) 하 고 [ `ThumbImage` ](xref:Xamarin.Forms.Slider.ThumbImageProperty) UWP의 속성이 지원 되지 않습니다.
 
 ### <a name="the-stepslider-solution"></a>StepSlider 솔루션
 

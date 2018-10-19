@@ -4,14 +4,14 @@ description: 이 문서에서는 SkiaSharp 경로 채우기 유형, 사용 가�
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 17043054c920a69570f38b227d05980494e29139
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d16f6f6023c1db0223d5d5863e19116147f948d1
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615472"
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
@@ -22,24 +22,25 @@ _SkiaSharp 경로 채우기 유형으로 가능한 다른 결과 검색 합니�
 
 ![](fill-types-images/filltypeexample.png "점이 5 filles 부분적으로 별")
 
-이 통해 약간 제어할 수 있습니다. 채우기 알고리즘에 의해 제어 됩니다는 [ `SKFillType` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.FillType/) 속성을 `SKPath`의 멤버로 설정 합니다 [ `SKPathFillType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathFillType/) 열거형:
+이 통해 약간 제어할 수 있습니다. 채우기 알고리즘에 의해 제어 됩니다는 [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) 속성을 `SKPath`의 멤버로 설정 합니다 [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) 열거형:
 
-- [`Winding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.Winding/)기본값
-- [`EvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.EvenOdd/)
-- [`InverseWinding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseWinding/)
-- [`InverseEvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseEvenOdd/)
+- `Winding`기본값
+- `EvenOdd`
+- `InverseWinding`
+- `InverseEvenOdd`
 
 권선과 홀수 알고리즘을 모두 포함 된 모든 영역 채워진 인지 채워지지 무한대로 해당 영역에서 가져온 가상 줄에 따라 결정 합니다. 해당 줄 경로 구성 하는 하나 이상의 경계 줄과 교차 합니다. 감기 모드를 사용 하 여 경계 줄 방향으로 영역에 그릴 줄 수가 단방향 분산에 그릴 수 없는 경우 채워집니다. 그렇지 않은 경우 영역에 채워집니다. 홀수 알고리즘 경계선의 숫자가 홀수 이면 영역을 채웁니다.
 
 많은 일상적인 경로 사용 하 여 감기 알고리즘 종종 경로의 모든 포함 된 영역을 채웁니다. 일반적으로 홀수 알고리즘 보다 흥미로운 결과 생성합니다.
 
-에 설명 된 대로 전형적인 예로 점이 5 별 합니다 **Five-Pointed 별** 페이지입니다. 합니다 [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) 파일은 두 `Picker` 뷰 경로 선택 하려면 입력 형식 및 경로 스트로크 아니면 채워진 여부 또는 둘 다를 어떤 순서로:
+에 설명 된 대로 전형적인 예로 점이 5 별 합니다 **Five-Pointed 별** 페이지입니다. 합니다 [ **FivePointedStarPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) 파일은 두 `Picker` 뷰 경로 선택 하려면 입력 형식 및 경로 스트로크 아니면 채워진 여부 또는 둘 다를 어떤 순서로:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="SkiaSharpFormsDemos.FivePointedStarPage"
+             xmlns:skia="clr-namespace:SkiaSharp;assembly=SkiaSharp"
+             xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Paths.FivePointedStarPage"
              Title="Five-Pointed Star">
     <Grid>
         <Grid.RowDefinitions>
@@ -58,12 +59,14 @@ _SkiaSharp 경로 채우기 유형으로 가능한 다른 결과 검색 합니�
                 Grid.Column="0"
                 Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Winding</x:String>
-                <x:String>EvenOdd</x:String>
-                <x:String>InverseWinding</x:String>
-                <x:String>InverseEvenOdd</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type skia:SKPathFillType}">
+                    <x:Static Member="skia:SKPathFillType.Winding" />
+                    <x:Static Member="skia:SKPathFillType.EvenOdd" />
+                    <x:Static Member="skia:SKPathFillType.InverseWinding" />
+                    <x:Static Member="skia:SKPathFillType.InverseEvenOdd" />
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
@@ -75,22 +78,24 @@ _SkiaSharp 경로 채우기 유형으로 가능한 다른 결과 검색 합니�
                 Grid.Column="1"
                 Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Fill only</x:String>
-                <x:String>Stroke only</x:String>
-                <x:String>Stroke then Fill</x:String>
-                <x:String>Fill then Stroke</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Fill only</x:String>
+                    <x:String>Stroke only</x:String>
+                    <x:String>Stroke then Fill</x:String>
+                    <x:String>Fill then Stroke</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
         </Picker>
 
-        <skia:SKCanvasView x:Name="canvasView"
-                           Grid.Row="1"
-                           Grid.Column="0"
-                           Grid.ColumnSpan="2"
-                           PaintSurface="OnCanvasViewPaintSurface" />
+        <skiaforms:SKCanvasView x:Name="canvasView"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                PaintSurface="OnCanvasViewPaintSurface" />
     </Grid>
 </ContentPage>
 ```
@@ -111,8 +116,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     SKPath path = new SKPath
     {
-        FillType = (SKPathFillType)Enum.Parse(typeof(SKPathFillType),
-                        fillTypePicker.Items[fillTypePicker.SelectedIndex])
+        FillType = (SKPathFillType)fillTypePicker.SelectedItem
     };
     path.MoveTo(info.Width / 2, info.Height / 2 - radius);
 
@@ -120,7 +124,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         // angle from vertical
         double angle = i * 4 * Math.PI / 5;
-        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle),
+        path.LineTo(center + new SKPoint(radius * (float)Math.Sin(angle), 
                                         -radius * (float)Math.Cos(angle)));
     }
     path.Close();
@@ -139,22 +143,22 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         Color = SKColors.Blue
     };
 
-    switch (drawingModePicker.SelectedIndex)
+    switch ((string)drawingModePicker.SelectedItem)
     {
-        case 0:
+        case "Fill only":
             canvas.DrawPath(path, fillPaint);
             break;
 
-        case 1:
+        case "Stroke only":
             canvas.DrawPath(path, strokePaint);
             break;
 
-        case 2:
+        case "Stroke then Fill":
             canvas.DrawPath(path, strokePaint);
             canvas.DrawPath(path, fillPaint);
             break;
 
-        case 3:
+        case "Fill then Stroke":
             canvas.DrawPath(path, fillPaint);
             canvas.DrawPath(path, strokePaint);
             break;
@@ -168,10 +172,10 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 스크린샷에서 Android 및 UWP 일반적인 홀수 및 감기 효과 보여주지만 스트로크 및 채우기의 순서는 결과도 영향을 줍니다.
 
-감기 알고리즘은 줄이 그려지는 방향에 따라 달라 집니다. 일반적으로 경로 만들 때, 제어할 수 있습니다 그 방향에서 다른 한 지점에서 줄을 그릴는 지정한. 그러나 합니다 `SKPath` 클래스와 같은 메서드 정의 `AddRect` 및 `AddCircle` 전체 윤곽을 그리는입니다. 메서드를 이러한 개체는 그리는 방법을 제어 하려면 형식 매개 변수를 포함 [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), 두 명의 멤버가 있는 합니다.
+감기 알고리즘은 줄이 그려지는 방향에 따라 달라 집니다. 일반적으로 경로 만들 때, 제어할 수 있습니다 그 방향에서 다른 한 지점에서 줄을 그릴는 지정한. 그러나 합니다 `SKPath` 클래스와 같은 메서드 정의 `AddRect` 및 `AddCircle` 전체 윤곽을 그리는입니다. 메서드를 이러한 개체는 그리는 방법을 제어 하려면 형식 매개 변수를 포함 [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), 두 명의 멤버가 있는 합니다.
 
-- [`Clockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.Clockwise/)
-- [`CounterClockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.CounterClockwise/)
+- `Clockwise`
+- `CounterClockwise`
 
 메서드 `SKPath` 포함 하는 `SKPathDirection` 매개 변수 기본값은 지정 `Clockwise`합니다.
 
@@ -222,5 +226,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,24 +1,24 @@
 ---
-title: SkiaSharp 소개
+title: SkiaSharp 플랫폼 독립적인 예제
 description: 이 문서에서는 핵심 SkiaSharp 개념에 대 한 간략 한 소개를 제공 합니다. 특히, 가져오기 및 SKCanvas를 토대로 설명 합니다.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
-author: charlespetzold
-ms.author: chape
-ms.date: 09/14/2017
-ms.openlocfilehash: eb4a391c52c598c6d276b75028337bf54455e7b4
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
+ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615498"
 ---
-# <a name="an-introduction-to-skiasharp"></a>SkiaSharp 소개
+# <a name="skiasharp-platform-independent-examples"></a>SkiaSharp 플랫폼 독립적인 예제
 
-_SkiaSharp 개념에 대 한 간략 한 소개를 제공_
+_SkiaSharp 개념에 플랫폼 독립적인 간략하게 제공_
 
-SkiaSharp 풍부 하 고 강력한 2D 그래픽 2D 버퍼로 렌더링에 사용할 수 있는 API를 제공 합니다.  사용자 지정 사용자 인터페이스 요소 및 응용 프로그램에 통합할 수 있는 2 차원 그래픽을 구현 하려면 사용할 수 있습니다.  SkiaSharp 바인딩됩니다.NET 합니다 [Skia](https://skia.org) 라이브러리 기능 및이 라이브러리의 기능을 상속 합니다.
+SkiaSharp 풍부 하 고 강력한 2D 그래픽 2D 버퍼로 렌더링에 사용할 수 있는 API를 제공 합니다.  사용자 지정 사용자 인터페이스 요소 및 응용 프로그램에 통합할 수 있는 2 차원 그래픽을 구현 하려면 사용할 수 있습니다. SkiaSharp 바인딩됩니다.NET 합니다 [Skia](https://skia.org) 라이브러리 기능 및이 라이브러리의 기능을 상속 합니다.
 
 플랫폼 간 라이브러리 현재 제품은 [NuGet 패키지](https://www.nuget.org/packages/SkiaSharp), NuGet 참조를 추가 하 여 프로젝트에 추가할 수 있습니다.
 
@@ -135,9 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>추가 정보
 
-SkiaSharp 사용에 대 한 자세한 내용은에서 확인할 수 있습니다는 [온라인으로 API 설명서](https://developer.xamarin.com/api/namespace/SkiaSharp/)
-
-
-## <a name="related-links"></a>관련 링크
-
-- [SkiaSharp iOS 통합 문서](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+SkiaSharp 사용에 대 한 자세한 정보를 찾을 수 있습니다는 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp)

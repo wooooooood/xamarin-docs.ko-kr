@@ -6,25 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
-ms.openlocfilehash: 5ccd2a653e5190df11a58477905e868b25878e44
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 08eb77878dad9c89754585b87394d2c33900fe83
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39270114"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
 _한 줄 텍스트 또는 암호 입력_
 
-Xamarin.Forms `Entry` 한 줄 텍스트 입력에 사용 됩니다. 합니다 `Entry`같은 `Editor` 보기에서 다양 한 키보드 형식을 지원 합니다. 또한는 `Entry` 암호 필드를 사용할 수 있습니다.
+Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry) 한 줄 텍스트 입력에 사용 됩니다. 합니다 `Entry`같은 합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 보기에서 다양 한 키보드 형식을 지원 합니다. 또한는 `Entry` 암호 필드를 사용할 수 있습니다.
 
 ## <a name="display-customization"></a>사용자 지정 표시
 
 ### <a name="setting-and-reading-text"></a>텍스트를 읽고 설정
 
-`Entry`, 다른 텍스트 표시 보기를 노출 합니다 `Text` 속성입니다. 이 속성을 설정 하 고 제공한 텍스트 읽기를 사용할 수 있습니다는 `Entry`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
+`Entry`, 다른 텍스트 표시 보기를 표시 합니다 [ `Text` ](xref:Xamarin.Forms.Entry.Text) 속성. 이 속성을 설정 하 고 제공한 텍스트 읽기를 사용할 수 있습니다는 `Entry`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -58,6 +58,32 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력 하지 않고 사용할 수 있습니다 값 `int.MaxValue`에 대 한 기본 값인는 [ `Entry` ](xref:Xamarin.Forms.Entry), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
+
+### <a name="setting-the-cursor-position-and-text-selection-length"></a>커서 위치 및 텍스트 선택 길이 설정합니다.
+
+합니다 [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) 속성을 반환 하거나 설정 위치는 다음 문자를 삽입할에 저장 된 문자열을 사용할 수 있습니다 합니다 [ `Text` ](xref:Xamarin.Forms.Entry.Text) 속성:
+
+```xaml
+<Entry Text="Cursor position set" CursorPosition="5" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position set", CursorPosition = 5 };
+```
+
+기본값을 [ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition) 속성은 텍스트의 시작 부분에 삽입 되는 여부를 나타내는 0을 `Entry`입니다.
+
+또한 합니다 [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) 를 반환 하거나 선택한 텍스트의 길이 설정 하려면 속성을 사용할 수 있습니다는 `Entry`:
+
+```xaml
+<Entry Text="Cursor position and selection length set" CursorPosition="2" SelectionLength="10" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position and selection length set", CursorPosition = 2, SelectionLength = 10 };
+```
+
+기본값은 [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength) 속성이 0으로, 텍스트가 선택 되어 있는지를 나타냅니다.
 
 ### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
 
@@ -180,21 +206,17 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > 경우는 [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) 속성 `false`,이 고 사용자 지정 키보드 가장 되지 않습니다 텍스트 자동 완성 및 자동 사용 텍스트 수정 되지 합니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
 
-### <a name="placeholders"></a>자리 표시자
+### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
 
-`Entry` 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 실제로이 주로 표시 됩니다 형태로 지정된 된 필드에 적절 한 콘텐츠를 명확 하 게. 자리 표시자 텍스트 색을 사용자 지정할 수 없습니다과 관계 없이 동일 합니다 `TextColor` 설정 합니다. 으로 대체 해야 디자인 사용자 지정 자리 표시자 색에 대 한 호출을 하는 경우는 [사용자 지정 렌더러]()합니다. 다음 만들어집니다는 `Entry` XAML에 자리 표시자로 "Username"을 사용 하 여:
+합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Entry`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
-<Entry Placeholder="Username" />
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
 ```
-
-C#:
 
 ```csharp
-var MyEntry = new Entry { Placeholder = "Username" };
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
 ```
-
-![](entry-images/placeholder.png "항목 자리 표시자 예")
 
 ### <a name="password-fields"></a>암호 필드
 

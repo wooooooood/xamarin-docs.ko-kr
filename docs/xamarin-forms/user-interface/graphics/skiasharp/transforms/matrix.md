@@ -4,29 +4,29 @@ description: 이 문서에서는 다양 한 변형 매트릭스를 사용 하 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: 8d5f1a08f7e1bff5ca2f9b696463bc03340476af
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 07b6a13a8bba1e30db1d69e49aa87420bbbdf601
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615433"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 행렬 변환
 
 _SkiaSharp 변환 다양 한 변환 매트릭스를 사용 하 여 본격적으로 활용 하기_
 
-에 적용 되는 모든 변환 합니다 `SKCanvas` 개체의 단일 인스턴스에서 통합 됩니다 합니다 [ `SKMatrix` ](https://developer.xamarin.com/api/type/SkiaSharp.SKMatrix/) 구조입니다. 모든 최신 2D 그래픽 시스템에서와 비슷한 표준 3-3에서 변환 행렬입니다.
+에 적용 되는 모든 변환 합니다 `SKCanvas` 개체의 단일 인스턴스에서 통합 됩니다 합니다 [ `SKMatrix` ](xref:SkiaSharp.SKMatrix) 구조입니다. 모든 최신 2D 그래픽 시스템에서와 비슷한 표준 3-3에서 변환 행렬입니다.
 
 지금까지 살펴본 대로에서 사용할 수 있습니다 변환을 SkiaSharp 행렬 있지만 변환 매트릭스 이론적인 측면에서 중요 한 이며 중요 경로 수정 변환을 사용 하는 경우 변환에 대 한 알 필요 없이 또는 둘 다의 복잡 한 터치식 입력을 처리 하기 위한 이 문서에서는 다음에 설명 되어 있습니다.
 
 ![](matrix-images/matrixtransformexample.png "비트맵 유사 변환 적용")
 
-현재 변환 매트릭스에 적용 된 `SKCanvas` 읽기 전용 액세스 하 여 언제 든 지 사용할 수는 [ `TotalMatrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.TotalMatrix/) 속성입니다. 사용 하 여 새 변환 행렬을 설정할 수 있습니다 합니다 [ `SetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.SetMatrix/p/SkiaSharp.SKMatrix/) 메서드를 복원할 수는 변환 행렬을 기본값으로 호출 하 여 [ `ResetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix/)합니다.
+현재 변환 매트릭스에 적용 된 `SKCanvas` 읽기 전용 액세스 하 여 언제 든 지 사용할 수는 [ `TotalMatrix` ](xref:SkiaSharp.SKCanvas.TotalMatrix) 속성입니다. 사용 하 여 새 변환 행렬을 설정할 수 있습니다 합니다 [ `SetMatrix` ](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) 메서드를 복원할 수는 변환 행렬을 기본값으로 호출 하 여 [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix)합니다.
 
-경우에 다른 `SKCanvas` 캔버스의 매트릭스 변환을 직접 작동 하는 멤버가 [ `Concat` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Concat/p/SkiaSharp.SKMatrix@/) 곱하여 해당 함께 두 매트릭스를 연결 하는 합니다.
+경우에 다른 `SKCanvas` 캔버스의 매트릭스 변환을 직접 작동 하는 멤버가 [ `Concat` ](xref:SkiaSharp.SKCanvas.Concat(SkiaSharp.SKMatrix@)) 곱하여 해당 함께 두 매트릭스를 연결 하는 합니다.
 
 기본 변환 매트릭스를 항등 행렬 및 대각선 셀과 0의 다른 곳에서 1 구성 됩니다.
 
@@ -36,7 +36,7 @@ _SkiaSharp 변환 다양 한 변환 매트릭스를 사용 하 여 본격적으�
 | 0  0  1 |
 </pre>
 
-사용 하는 정적 id 행렬을 만들 수 있습니다 [ `SKMatrix.MakeIdentity` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeIdentity()/) 메서드:
+사용 하는 정적 id 행렬을 만들 수 있습니다 [ `SKMatrix.MakeIdentity` ](xref:SkiaSharp.SKMatrix.MakeIdentity) 메서드:
 
 ```csharp
 SKMatrix matrix = SKMatrix.MakeIdentity();
@@ -142,15 +142,15 @@ y' sin(α)? = x-cos(α)? y
 |  0   0   1 |
 </pre>
 
-180도 회전은 개체를 가로로 대칭 이동 방향과 세로 방향으로 또한-1의 배율 인수를 설정 하 여 수행 됩니다.
+180도 회전은 가로 또는 세로로 대칭 이동은 개체는 또한-1의 배율 인수를 설정 하 여 수행 됩니다.
 
-이러한 모든 유형의 변환으로 분류 됩니다 *affine* 변환 합니다. 되지 affine 변환만는 0, 0 및 1의 기본값을 유지 하는 행렬의 셋째 열에 포함 됩니다. 이 문서 [비 관계 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md) 비 관계 변환에 설명 합니다.
+이러한 모든 유형의 변환으로 분류 됩니다 *affine* 변환 합니다. 되지 affine 변환만는 0, 0 및 1의 기본값을 유지 하는 행렬의 셋째 열에 포함 됩니다. 이 문서 [ **비 관계 변환** ](non-affine.md) 비 관계 변환에 설명 합니다.
 
 ## <a name="matrix-multiplication"></a>행렬 곱
 
-변환 매트릭스를 사용 하 여 큰 장점 중 하나는 복합 변환으로 SkiaSharp 설명서에서 자주 참조 되는 매트릭스 곱하기를 통해 가져올 수 있음을 *연결*합니다. 변환 관련 메서드 중 많은 `SKCanvas` "사전 연결" 또는 "pre-concat."를 참조 하세요. 이 곱하기 행렬 곱셈 가환 적 이므로 반드시 순서 나타냅니다.
+변환 매트릭스를 사용 하 여 중요 한 장점 중 하나는 복합 변환으로 SkiaSharp 설명서에서 자주 참조 되는 매트릭스 곱하기를 통해 가져올 수 있음을 *연결*합니다. 변환 관련 메서드 중 많은 `SKCanvas` "사전 연결" 또는 "pre-concat."를 참조 하세요. 이 곱하기 행렬 곱셈 가환 적 이므로 반드시 순서 나타냅니다.
 
-예를 들어, 설명서는 [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) 방법에 대 한 설명서는 동안 해당 it "Pre-concats 지정된 된 이동 사용 하 여 현재 행렬" 라는 합니다 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) 메서드는 it "Pre-concats 지정한 소수 자릿수를 사용 하 여 현재 행렬입니다." 라는
+예를 들어, 설명서는 [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) 방법에 대 한 설명서는 동안 해당 it "Pre-concats 지정된 된 이동 사용 하 여 현재 행렬" 라는 합니다 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) 메서드는 it "Pre-concats 지정한 소수 자릿수를 사용 하 여 현재 행렬입니다." 라는
 
 즉, 메서드 호출에서 지정 된 변환을 승수 (왼쪽 피연산자)는 현재 변환 매트릭스는 피 승수 (오른쪽 피연산자).
 
@@ -206,7 +206,7 @@ canvas.Translate(–px, –py);
 | –px  –py  1 |   |  0   0   1 |   | px  py  1 |   | px–px·sx  py–py·sy  1 |
 </pre>
 
-### <a name="the-skmatrix-structure"></a>SKMatrix 구조
+## <a name="the-skmatrix-structure"></a>SKMatrix 구조
 
 `SKMatrix` 형식의 9 읽기/쓰기 속성을 정의 하는 구조 `float` 변환 행렬의 셀 9에 해당 합니다.
 
@@ -216,9 +216,9 @@ canvas.Translate(–px, –py);
 │ TransX  TransY  Persp2 │
 </pre>
 
-`SKMatrix` 또한 라는 속성을 정의 [ `Values` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix.Values/) 형식의 `float[]`합니다. 순서 대로 한 번에 9 개의 값을 가져오거나 설정 하려면이 속성을 사용할 수 있습니다 `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`를 `TransY`, `Persp0`, `Persp1`, 및 `Persp2`합니다.
+`SKMatrix` 또한 라는 속성을 정의 [ `Values` ](xref:SkiaSharp.SKMatrix.Values) 형식의 `float[]`합니다. 순서 대로 한 번에 9 개의 값을 가져오거나 설정 하려면이 속성을 사용할 수 있습니다 `ScaleX`, `SkewX`, `TransX`, `SkewY`, `ScaleY`를 `TransY`, `Persp0`, `Persp1`, 및 `Persp2`합니다.
 
-합니다 `Persp0`, `Persp1`, 및 `Persp2` 셀 문서에 설명 되어 [비 관계 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)합니다. 이러한 셀 0, 0 및 1의 기본값으로 변환의 같이 좌표 지점으로 곱합니다.
+합니다 `Persp0`, `Persp1`, 및 `Persp2` 셀 문서에서 설명 됩니다 [ **비 관계 변환**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)합니다. 이러한 셀 0, 0 및 1의 기본값으로 변환의 같이 좌표 지점으로 곱합니다.
 
 <pre>
               │ ScaleX  SkewY   0 │
@@ -236,16 +236,16 @@ z' = 1
 
 합니다 `SKMatrix` 구조를 만드는 몇 가지 정적 메서드를 정의 `SKMatrix` 값입니다. 이러한 모든 반환 `SKMatrix` 값:
 
-- [`MakeTranslation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeTranslation/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/)
-- [`MakeScale`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeScale/p/System.Single/System.Single/System.Single/System.Single/) 피벗 점을 사용 하 여
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/) 라디안에서 각도
-- [`MakeRotation`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotation/p/System.Single/System.Single/System.Single/) 피벗 점 사용 하 여 라디안 각도
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/)
-- [`MakeRotationDegrees`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeRotationDegrees/p/System.Single/System.Single/System.Single/) 피벗 점을 사용 하 여
-- [`MakeSkew`](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.MakeSkew/p/System.Single/System.Single/)
+- [`MakeTranslation`](xref:SkiaSharp.SKMatrix.MakeTranslation(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single))
+- [`MakeScale`](xref:SkiaSharp.SKMatrix.MakeScale(System.Single,System.Single,System.Single,System.Single)) 피벗 점을 사용 하 여
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single)) 라디안에서 각도
+- [`MakeRotation`](xref:SkiaSharp.SKMatrix.MakeRotation(System.Single,System.Single,System.Single)) 피벗 점 사용 하 여 라디안 각도
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single))
+- [`MakeRotationDegrees`](xref:SkiaSharp.SKMatrix.MakeRotationDegrees(System.Single,System.Single,System.Single)) 피벗 점을 사용 하 여
+- [`MakeSkew`](xref:SkiaSharp.SKMatrix.MakeSkew(System.Single,System.Single))
 
-`SKMatrix` 또한 정의 두 매트릭스를 연결 하는 몇 가지 정적 메서드 곱한 결과를 의미 합니다. 이러한 메서드 이름은 `Concat`, `PostConcat`, 및 `PreConcat`, 두 가지 버전의 각 및 합니다. 이러한 메서드는 반환 값이 없습니다. 기존 참조는 대신 `SKMatrix` 값을 통해 `ref` 인수입니다. 다음 예에서 `A`, `B`, 및 `R` ("결과")은 모든 `SKMatrix` 값입니다.
+`SKMatrix` 또한 정의 두 매트릭스를 연결 하는 몇 가지 정적 메서드 곱한 결과를 의미 합니다. 이러한 메서드 이름은 [ `Concat` ](xref:SkiaSharp.SKMatrix.Concat*), [ `PostConcat` ](xref:SkiaSharp.SKMatrix.PostConcat*), 및 [ `PreConcat` ](xref:SkiaSharp.SKMatrix.PreConcat*), 두 가지 버전의 각 및 합니다. 이러한 메서드는 반환 값이 없습니다. 기존 참조는 대신 `SKMatrix` 값을 통해 `ref` 인수입니다. 다음 예에서 `A`, `B`, 및 `R` ("결과")은 모든 `SKMatrix` 값입니다.
 
 두 `Concat` 다음과 같은 메서드를 호출 합니다.
 
@@ -283,7 +283,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 A = B × A
 
-이러한 메서드 호출으로 모든 버전 `ref` 인수는 기본 구현을 호출에서 약간 더 효율적 이지만 코드를 읽고 사용 하 여 아무 것도 가정 하 고 다른 사용자에 게 혼동을 줄 수 있습니다는 `ref` 인수가 메서드에 의해 수정 합니다. 또한 것 중 하나를 결과로 생성 되는 인수를 전달 하면 편리 합니다 `Make` 메서드와 같은:
+모두를 사용 하 여 이러한 메서드의 버전 `ref` 인수는 기본 구현을 호출에서 약간 더 효율적 이지만 코드를 읽고 사용 하 여 아무 것도 가정 하 고 다른 사용자에 게 혼동을 줄 수 있습니다는 `ref` 인수를 수정 하 여 메서드입니다. 또한 것 중 하나를 결과로 생성 되는 인수를 전달 하면 편리 합니다 `Make` 메서드와 같은:
 
 ```csharp
 SKMatrix result;
@@ -299,7 +299,7 @@ SKMatrix.Concat(result, SKMatrix.MakeTranslation(100, 100),
 │ 100  100  1 │
 </pre>
 
-좌표 이동 변환 곱한 배율 변환입니다. 이 경우에는 `SKMatrix` 구조는 라는 메서드를 사용 하 여 바로 가기를 제공 [ `SetScaleTranslate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.SetScaleTranslate/p/System.Single/System.Single/System.Single/System.Single/):
+좌표 이동 변환 곱한 배율 변환입니다. 이 경우에는 `SKMatrix` 구조는 라는 메서드를 사용 하 여 바로 가기를 제공 [ `SetScaleTranslate` ](xref:SkiaSharp.SKMatrix.SetScaleTranslate(System.Single,System.Single,System.Single,System.Single)):
 
 ```csharp
 SKMatrix R = new SKMatrix();
@@ -322,7 +322,7 @@ SKMatrix.RotateDegrees(ref R, degrees, px, py);
 
 이 메서드에서 수행 *되지* 기존 변환에 회전 변환을 연결 합니다. 메서드는 행렬의 모든 셀을 설정합니다. 기능적으로 동일 합니다 `MakeRotation` 및 `MakeRotationDegrees` 메서드 제외 하 고 인스턴스화할 하지는 `SKMatrix` 값입니다.
 
-이 있다고 가정해 봅시다는 `SKPath` 개체를 표시 하려고 하지만 약간 다른 방향으로 또는 다른 중심점을 포함할 것을 선호 합니다. 호출 하 여 해당 경로의 모든 좌표를 수정할 수 있습니다 합니다 [ `Transform` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Transform/p/SkiaSharp.SKMatrix/) 메서드의 `SKPath` 사용 하 여는 `SKMatrix` 인수입니다. 합니다 **경로 변환** 페이지가 작업을 수행 하는 방법에 설명 합니다. [ `PathTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) 참조 클래스는 `HendecagramPath` 개체 필드에 해당 경로에 변환을 적용 하려면 하지만 해당 생성자를 사용 합니다.
+이 있다고 가정해 봅시다는 `SKPath` 개체를 표시 하려고 하지만 약간 다른 방향으로 또는 다른 중심점을 포함할 것을 선호 합니다. 호출 하 여 해당 경로의 모든 좌표를 수정할 수 있습니다 합니다 [ `Transform` ](xref:SkiaSharp.SKPath.Transform(SkiaSharp.SKMatrix)) 메서드의 `SKPath` 사용 하 여는 `SKMatrix` 인수입니다. 합니다 **경로 변환** 페이지가 작업을 수행 하는 방법에 설명 합니다. [ `PathTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/PathTransformPage.cs) 참조 클래스는 `HendecagramPath` 개체 필드에 해당 경로에 변환을 적용 하려면 하지만 해당 생성자를 사용 합니다.
 
 ```csharp
 public class PathTransformPage : ContentPage
@@ -347,7 +347,7 @@ public class PathTransformPage : ContentPage
 }
 ```
 
-`HendecagramPath` 개체에는 중심이 (0, 0) 별모양의 11 개 점 모든 방향으로 100 단위로 해당 중심에서 바깥쪽으로 확장 하 고 있습니다. 이 경로 긍정 및 부정 좌표는 것을 의미 합니다. 합니다 **경로 변환** 페이지 3 배 정도 클 별이 있는 모든 양의 좌표를 사용 하 여 작업을 선호 합니다. 또한 하나의 수직으로 가리키도록 별 점에서 하지. 하려고 대신 별표의 한 위치에 대 한 바로 아래로 가리키도록 합니다. (별 11 개 점 있어서 가질 수 없습니다 둘 다 합니다.) 이 22로 나눈 값으로 360도 별 회전 필요 합니다.
+`HendecagramPath` 개체에는 중심이 (0, 0) 11 별 요소 모든 방향으로 100 단위로 해당 중심에서 바깥쪽으로 확장 하 고 있습니다. 이 경로 긍정 및 부정 좌표는 것을 의미 합니다. 합니다 **경로 변환** 페이지 3 배 정도 클 별이 있는 모든 양의 좌표를 사용 하 여 작업을 선호 합니다. 또한 하나의 수직으로 가리키도록 별 점에서 하지. 하려고 대신 별표의 한 위치에 대 한 바로 아래로 가리키도록 합니다. (하므로 별 11 포인트에 해당 없습니다 둘 다.) 이 22로 나눈 값으로 360도 별 회전 필요 합니다.
 
 생성자 작성을 `SKMatrix` 를 사용 하 여 세 가지 별도 변환에서 개체를 `PostConcat` 여기서 A, B 및 C의 인스턴스는 다음 패턴을 사용 하면 메서드 `SKMatrix`:
 
@@ -410,7 +410,7 @@ public class PathTransformPage : ContentPage
 transformedPath.Transform(matrix);
 ```
 
-경로 *되지* 속성으로이 매트릭스를 유지 합니다. 대신 모든 경로의 좌표에 변환을 적용 됩니다. 경우 `Transform` 라고 다시 변환이 다시 적용 됩니다 및 변환을 실행 취소 하는 다른 매트릭스를 적용 하 여 뒤로 이동할 수는 유일한 방법은 합니다. 다행 스럽게도 합니다 `SKMatrix` 구조 정의 [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) 메서드는 행렬을 가져옵니다는 지정된 된 매트릭스를 반대로 바꿉니다.
+경로 *되지* 속성으로이 매트릭스를 유지 합니다. 대신 모든 경로의 좌표에 변환을 적용 됩니다. 경우 `Transform` 라고 다시 변환이 다시 적용 됩니다 및 변환을 실행 취소 하는 다른 매트릭스를 적용 하 여 뒤로 이동할 수는 유일한 방법은 합니다. 다행 스럽게도 합니다 `SKMatrix` 구조 정의 [ `TryInvert` ](xref:SkiaSharp.SKMatrix.TryInvert*) 메서드는 행렬을 가져옵니다는 지정된 된 매트릭스를 반대로 바꿉니다.
 
 ```csharp
 SKMatrix inverse;
@@ -435,7 +435,7 @@ SKRect transformedRect = matrix.MapRect(rect);
 
 마지막으로 메서드를 사용 하는 경우에 유의 합니다 `SKRect` 구조체가 회전된의 사각형을 나타내는 수. 만 적합 메서드는 `SKMatrix` 번역을 나타내는 및 크기 조정 값입니다.
 
-### <a name="interactive-experimentation"></a>대화형 실험
+## <a name="interactive-experimentation"></a>대화형 실험
 
 대화형으로 화면에서 이리저리 비트맵의 세 모퉁이 이동 하 고 어떤 변환 결과 표시를 하는 유사 변환에 대해 한 가지 방법입니다. 이 개념을 **Affine 행렬 표시** 페이지입니다. 이 페이지에도 다른 데모에서 사용 되는 다른 두 클래스를 필요 합니다.
 
@@ -592,9 +592,9 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 이 처럼 터치 포인트 비트맵의 모퉁이 끌어 처럼 보이지만, 감을입니다. 터치 포인트에서 계산 된 행렬 모서리 터치 포인트를 맞춰 있도록 비트맵을 변환 합니다.
 
-사용자가 이동, 크기 조정 및 모서리를 끌어가 아니라 비트맵 회전에 대 한 더 자연 스러운 있지만 사용 하 여 하나 또는 두 손가락 직접을 개체에 손가락 모으기, 회전 합니다. 다음 문서에서 다룹니다 [터치 조작](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)합니다.
+사용자가 이동, 크기 조정 및 모서리를 끌어가 아니라 비트맵 회전에 대 한 더 자연 스러운 있지만 사용 하 여 하나 또는 두 손가락 직접을 개체에 손가락 모으기, 회전 합니다. 다음 문서에서 다룹니다 [ **터치 조작**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)합니다.
 
-### <a name="the-reason-for-the-3-by-3-matrix"></a>3-3 하 여 행렬에 대 한 이유
+## <a name="the-reason-for-the-3-by-3-matrix"></a>3-3 하 여 행렬에 대 한 이유
 
 2 차원 그래픽 시스템만-2-2에서 변환 행렬을 필요는 정상일 수 있습니다.
 
@@ -646,10 +646,10 @@ public partial class ShowAffineMatrixPage : ContentPage
               │ TransX  TransY  Persp2 │
 </pre>
 
-0이 아닌 값 `Persp0` 고 `Persp1` Z = 1 2 차원 평면 해제 하는 개체를 이동 하는 변환에서 발생 합니다. 문서에 대해서는 해당 개체를 평면 다시 이동할 때 어떻게 될까요 [비 관계 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)합니다.
+0이 아닌 값 `Persp0` 고 `Persp1` Z = 1 2 차원 평면 해제 하는 개체를 이동 하는 변환에서 발생 합니다. 문서에 대해서는 해당 개체를 평면 다시 이동할 때 어떻게 될까요 [ **비 관계 변환**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

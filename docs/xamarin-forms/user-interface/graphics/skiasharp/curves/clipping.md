@@ -4,14 +4,14 @@ description: 이 문서는 특정 영역에 SkiaSharp 클립 그래픽 경로 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0c07d68535349004eeefeaa18daa9c59b889a6a7
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615290"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
@@ -22,7 +22,7 @@ _클립 그래픽에 대 한 경로 사용 하 여 특정 영역을 영역을 �
 
 ![](clipping-images/clippingsample.png "Monkey 구멍을 통해")
 
-합니다 *클리핑 영역* 그래픽 렌더링 되는 화면 영역입니다. 클리핑 영역 외부에 표시 되는 아무 것도 렌더링 되지 않습니다. 클리핑 영역에서 일반적으로 정의 됩니다는 [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 개체 있지만 정의할 수 있습니다 또는 사용 하 여 클리핑 영역을 [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) 개체입니다. 이러한 두 가지 유형의 개체에서 먼저 하므로 것 처럼 보일 관련 경로에서 영역을 만들 수 있습니다. 그러나 지역에서 경로 만들 수 없습니다 하 고 내부적으로 매우 다른 지: 경로 일련의 가로 스캐닝선 지역 정의 되는 동안 일련의 선과 곡선을 구성 합니다.
+합니다 *클리핑 영역* 그래픽 렌더링 되는 화면 영역입니다. 클리핑 영역 외부에 표시 되는 아무 것도 렌더링 되지 않습니다. 클리핑 영역을 사각형에 의해 일반적으로 정의 됩니다 요소나 [ `SKPath` ](xref:SkiaSharp.SKPath) 수 있지만 개체를 정의할 수 있습니다 또는 사용 하 여 클리핑 영역을 [ `SKRegion` ](xref:SkiaSharp.SKRegion) 개체. 이러한 두 가지 유형의 개체에서 먼저 하므로 것 처럼 보일 관련 경로에서 영역을 만들 수 있습니다. 그러나 지역에서 경로 만들 수 없습니다 하 고 내부적으로 매우 다른 지: 경로 일련의 가로 스캐닝선 지역 정의 되는 동안 일련의 선과 곡선을 구성 합니다.
 
 위의 이미지에서 만든 합니다 **구멍 통해 Monkey** 페이지입니다. 합니다 [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) 클래스 SVG 데이터를 사용 하 여 경로 정의 하 고 프로그램 리소스에서 비트맵을 로드 하는 생성자를 사용 합니다.
 
@@ -104,15 +104,15 @@ canvas.ClipPath(keyholePath);
 
 ## <a name="combining-clipping-paths"></a>클리핑 패스 결합
 
-엄격히 말해, 클리핑 영역 설정 되지 않습니다""는 `ClipPath` 메서드. 대신, 화면 크기가 같은 사각형으로 시작 하는 기존 클리핑 패스를 함께 사용 됩니다. 사용 하 여 클리핑 영역의 사각형 범위를 가져올 수 있습니다 합니다 [ `ClipBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipBounds/) 속성 또는 [ `ClipDeviceBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipDeviceBounds/) 속성입니다. 합니다 `ClipBounds` 속성이 반환을 `SKRect` 반영 하는 모든 변환 하는 값이 적용 되는 합니다. `ClipDeviceBounds` 속성에서 반환 된 `RectI` 값입니다. 정수 치수를 사용 하 여 사각형 이며 실제 픽셀 크기의 클리핑 영역을 설명 합니다.
+엄격히 말해, 클리핑 영역 설정 되지 않습니다""는 `ClipPath` 메서드. 대신, 캔버스 크기가 같은 사각형으로 시작 하는 기존 클리핑 패스를 함께 사용 됩니다. 사용 하 여 클리핑 영역의 사각형 범위를 가져올 수 있습니다 합니다 [ `ClipBounds` ](xref:SkiaSharp.SKCanvas.ClipBounds) 속성 또는 [ `ClipDeviceBounds` ](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) 속성입니다. 합니다 `ClipBounds` 속성이 반환을 `SKRect` 반영 하는 모든 변환 하는 값이 적용 되는 합니다. `ClipDeviceBounds` 속성에서 반환 된 `RectI` 값입니다. 정수 치수를 사용 하 여 사각형 이며 실제 픽셀 크기의 클리핑 영역을 설명 합니다.
 
-호출 하 여 `ClipPath` 새 영역을 사용 하 여 클리핑 영역을 결합 하 여 클리핑 영역을 축소 합니다. 전체 구문은 합니다 [ `ClipPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipPath/p/SkiaSharp.SKPath/SkiaSharp.SKClipOperation/System.Boolean/) 메서드는:
+호출 하 여 `ClipPath` 새 영역을 사용 하 여 클리핑 영역을 결합 하 여 클리핑 영역을 축소 합니다. 전체 구문은 합니다 [ `ClipPath` ](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) 메서드는:
 
 ```csharp
 public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-이기도 한 [ `ClipRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRect/p/SkiaSharp.SKRect/SkiaSharp.SKClipOperation/System.Boolean/) 사각형을 사용 하 여 클리핑 영역을 결합 하는 메서드:
+이기도 한 [ `ClipRect` ](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean)) 사각형을 사용 하 여 클리핑 영역을 결합 하는 메서드:
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
@@ -167,11 +167,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](clipping-images//fourcircleintersectclip-small.png "삼중 원 네 개의 교차 클립 페이지 스크린샷")](clipping-images/fourcircleintersectclip-large.png#lightbox "삼중 원 네 개의 교차 클립 페이지 스크린샷")
 
-합니다 [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) 열거형에는 두 명의 멤버:
+합니다 [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) 열거형에는 두 명의 멤버:
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Difference/) 기존 클리핑 영역에서 지정 된 경로 또는 사각형을 제거합니다.
+- `Difference` 기존 클리핑 영역에서 지정 된 경로 또는 사각형을 제거합니다.
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Intersect/) 지정 된 경로 또는 기존 클리핑 영역을 사용 하 여 사각형을 교차
+- `Intersect` 지정 된 경로 또는 기존 클리핑 영역을 사용 하 여 사각형을 교차
 
 4를 대체 하는 경우 `SKClipOperation.Intersect` 인수에는 `FourCircleIntersectClipPage` 클래스 `SKClipOperation.Difference`, 다음과 같이 표시 됩니다.
 
@@ -248,33 +248,31 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKClipOperation clipOp)
 
 ## <a name="exploring-regions"></a>지역 살펴보기
 
-에 대 한 API 설명서를 탐색 하는 경우 `SKCanvas`, 오버 로드를 보았을 수 있습니다 합니다 `ClipPath` 하 고 `ClipRect` 메서드 대신 위에서 설명한 메서드와 비슷합니다를 명명 된 매개 변수가 [ `SKRegionOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegionOperation/) 대신 `SKClipOperation`합니다. `SKRegionOperation` 에 폼 클리핑 영역에 대 한 경로 결합 하 여 약간 더 많은 유연성을 제공 하는 6 명의 멤버가 있습니다.
+클리핑 영역을 정의할 수도 있습니다는 [ `SKRegion` ](xref:SkiaSharp.SKRegion) 개체입니다.
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Difference/)
+새로 만든 `SKRegion` 빈 영역을 설명 하는 개체입니다. 일반적으로 개체의 첫 번째 호출은 [ `SetRect` ](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) 는 지역에 있는 사각형 영역에 설명 합니다. 매개 변수를 `SetRect` 은 `SKRectI` 값 &mdash; 픽셀 측면에서 사각형을 지정 하기 때문에 정수를 사용 하 여 사각형을 조정 합니다. 호출할 수 있습니다 [ `SetPath` ](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) 사용 하 여는 `SKPath` 개체입니다. 이 경로의 내부와 동일 하지만 잘린 초기 사각형 영역의 영역을 만듭니다.
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Intersect/)
-
-- [`Union`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Union/)
-
-- [`XOR`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.XOR/)
-
-- [`ReverseDifference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.ReverseDifference/)
-
-- [`Replace`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Replace/)
-
-그러나 오버 로드 `ClipPath` 하 고 `ClipRect` 사용 하 여 `SKRegionOperation` 매개 변수는 사용 되지 않으며 사용할 수 없습니다.
-
-계속 사용할 수 있습니다 합니다 `SKRegionOperation` 의 측면에서 클리핑 영역을 정의 하는 열거형 하지만 필요를 [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) 개체입니다.
-
-새로 만든 `SKRegion` 빈 영역을 설명 하는 개체입니다. 일반적으로 개체의 첫 번째 호출은 [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) 사각형 영역을 설명 하는 지역에 있도록 합니다. 매개 변수를 `SetRect` 는 한는 `SKRectI` 값 &mdash; 정수 속성을 사용 하 여 사각형 값입니다. 호출할 수 있습니다 [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) 사용 하 여는 `SKPath` 개체입니다. 이 경로의 내부와 동일 하지만 잘린 초기 사각형 영역의 영역을 만듭니다.
-
-`SKRegionOperation` 열거형만 고려해 야 중 하나를 호출 하는 경우는 [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) 이 0.09716216215와 같은 메서드 오버 로드 합니다.
+지역 중 하나를 호출 하 여 수정할 수도 있습니다는 [ `Op` ](xref:SkiaSharp.SKRegion.Op*) 이 0.09716216215와 같은 메서드 오버 로드 합니다.
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
 
-수행 하면 해당 지역 합니다 `Op` 에 따라 매개 변수로 지정 된 지역에 대 한 호출이 함께 `SKRegionOperation` 멤버입니다. 마지막으로 가져올 때 지역 클리핑에 대 한 적합 한, 사용 하 여 캔버스 클리핑 영역으로 설정할 수 있습니다 합니다 [ `ClipRegion` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRegion/p/SkiaSharp.SKRegion/SkiaSharp.SKClipOperation/) 메서드의 `SKCanvas`:
+합니다 [ `SKRegionOperation` ](xref:SkiaSharp.SKRegionOperation) 열거형은 유사한 `SKClipOperation` 더 많은 멤버가 있지만:
+
+- `Difference`
+
+- `Intersect`
+
+- `Union`
+
+- `XOR`
+
+- `ReverseDifference`
+
+- `Replace`
+
+수행 하면 해당 지역 합니다 `Op` 에 따라 매개 변수로 지정 된 지역에 대 한 호출이 함께 `SKRegionOperation` 멤버입니다. 마지막으로 가져올 때 지역 클리핑에 대 한 적합 한, 사용 하 여 캔버스 클리핑 영역으로 설정할 수 있습니다 합니다 [ `ClipRegion` ](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation)) 메서드의 `SKCanvas`:
 
 ```csharp
 public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperation.Intersect)
@@ -364,9 +362,9 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 이러한 차이 대 한 근거를 이해 하려면 이해 하면 도움이 됩니다 어떤 지역이 있습니다. 클립 작업 또는 지역 작업 수 구현 방법을 내부적으로 하는 방법에 대 한 고려 하는 경우 아마도 것이 매우 복잡 합니다. 여러 잠재적으로 매우 복잡 한 경로 결합 및 결과 경로의 윤곽선을 알고리즘 악몽 될 수입니다.
 
-하지만 각 경로 가로 검색, 여러 줄 구식 진공 tube Tv의에서 함수와 같이 축소 된 경우이 작업은 상당히 단순화 합니다. 각 스캐닝선은 시작점 및 끝점을 사용 하 여 가로줄 하기만 하면 됩니다. 예를 들어 10 radius 사용 하 여 원은 원의 왼쪽된 부분에서 시작 하 고 오른쪽 부분에서 끝납니다 각각 20 가로 검색 선으로 분해할 수 있습니다. 영역 작업을 사용 하 여 두 개의 원을 결합 됩니다 해당 스캐닝선의 각 쌍의 시작 및 끝 좌표를 검사 하는 단순히 이기 때문에 매우 간단 합니다.
+이 작업은 각 경로 가로 검색, 여러 줄 구식 진공 tube Tv의에서 함수와 같이 축소 된 경우 상당히 간소화 됩니다. 각 스캐닝선은 시작점 및 끝점을 사용 하 여 가로줄 하기만 하면 됩니다. 예를 들어 10 픽셀의 radius 사용 하 여 원은 원의 왼쪽된 부분에서 시작 하 고 오른쪽 부분에서 끝납니다 각각 20 가로 검색 선으로 분해할 수 있습니다. 영역 작업을 사용 하 여 두 개의 원을 결합 됩니다 해당 스캐닝선의 각 쌍의 시작 및 끝 좌표를 검사 하는 단순히 이기 때문에 매우 간단 합니다.
 
-이것이 지역이: 영역을 정의 하는 일련의 가로 검색 선입니다.
+이것이 지역이: 영역을 정의 하는 가로 스캐닝선의 시리즈입니다.
 
 그러나 일련의 검색 영역 축소 된 경우 줄 줄 특정 픽셀 크기를 기반으로 이러한 검색 합니다. 엄격히 말해서, 지역 벡터 그래픽 개체가 아닙니다. 경로 보다 압축 된 흑백 비트맵에 본질적으로 더 가까운 것입니다. 따라서 지역 크기를 조정 하거나 회전 클리핑 영역에 사용 되는 경우 변환 되지 않습니다이 따라서 한 충실도 유지 하면서 수 없습니다.
 
@@ -514,5 +512,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

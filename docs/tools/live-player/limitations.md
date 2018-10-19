@@ -3,14 +3,14 @@ title: Xamarin Live Player의 제한 사항
 description: 이 문서에는 Xamarin Live Player의 제한 사항을 설명 합니다. 장치 요구 사항에 설명, 작동, 프로젝트 형식 및 기타 다른 항목을 기능입니다.
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 99ed8d06331ac7e423791309da79d72d5a10d70f
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: aff6990df1b710190f11c2d7fa09c8399e94f8af
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "40251038"
 ---
 # <a name="limitations-of-xamarin-live-player"></a>Xamarin Live Player의 제한 사항
@@ -53,7 +53,7 @@ Live Player iOS에 대 한 제공 되지 않습니다.
 - F # 프로젝트가 지원 되지 않습니다.
 - 사용자 지정 제네릭 클래스 및 인터페이스를 사용 하 여 고급 시나리오를 지원할 수 있습니다.
 
-추가 문제를 보고 하십시오 [bugzilla](https://aka.ms/live-player-report-issue)합니다.
+사용 하 여 **문제 보고** 에 [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Mac 용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/report-a-problem) Xamarin Live Player를 사용 하 여 모든 문제를 보고 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

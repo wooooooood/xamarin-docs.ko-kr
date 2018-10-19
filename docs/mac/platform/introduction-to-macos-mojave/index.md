@@ -1,32 +1,24 @@
 ---
 title: MacOS Mojave 소개
-description: 이 문서에 높은 수준의 Xamarin의 preview 릴리스 현재 C# 바인딩을 제공 하는 macOS Mojave의 새롭고 업데이트 된 기능의 개요를 제공 합니다.
+description: 이 문서에 높은 수준의 Mojave macOS의 새롭고 업데이트 된 기능의 개요를 제공합니다.
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 07/08/2018
-ms.openlocfilehash: 916a1323127ac9be387c9465fb660dd0e7569a93
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: ce293a7c97a2cb4975baef807ded9a8fd0a90476
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615836"
 ---
 # <a name="introduction-to-macos-mojave"></a>MacOS Mojave 소개
 
-![미리 보기](~/media/shared/preview.png)
+이 문서에 높은 수준의 Mojave macOS의 새롭고 업데이트 된 기능의 개요를 제공합니다.
 
-> [!WARNING]
-> Xcode 10을 사용 하 여 분산 Mojave SDK macOS 용 Xamarin의 지원에서 현재 미리 보기, 즉 버그를 포함할 수 있습니다 아님을 기능 전체를 이며 변경 될 수 있습니다. 실험 용도로 사용 합니다.
-
-이 문서에 높은 수준의 Xamarin의 preview 릴리스 현재 C# 바인딩을 제공 하는 macOS Mojave의 새롭고 업데이트 된 기능의 개요를 제공 합니다.
-
-MacOS Xamarin 사용한 Mojave 앱을 빌드하는 방법을 살펴보세요.
-
-- [시작 가이드](~/mac/platform/introduction-to-macos-mojave/get-started.md)
-- Xamarin 미리 보기 [릴리스 블로그 게시물](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+MacOS Xamarin 사용한 Mojave 앱을 빌드하는 방법을 잠시 살펴 합니다 [시작 가이드](~/mac/platform/introduction-to-macos-mojave/get-started.md) 에 대 한 [Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)합니다.
 
 ## <a name="dark-mode"></a>어두운 모드
 
@@ -44,8 +36,16 @@ MacOS Xamarin 사용한 Mojave 앱을 빌드하는 방법을 살펴보세요.
 
 비전 프레임 워크에 다양 한 방향에서 얼굴을 검색할 수 있는 향상 된 얼굴 탐지기를 포함 합니다. 또한 요청 수정 이제 용도 특정 비전 framework 알고리즘 수정 버전을 선택 합니다.
 
+## <a name="network-framework"></a>네트워크 프레임 워크
+
+기본 네트워크 프레임 워크, 네트워크 스택는 `URLSession` iOS 응용 프로그램에서 일반적으로 사용 되는 Api은 이제 독립 실행형 프레임 워크를 쉽게 TCP, UDP, TLS, IPv4/i p v 6 등을 사용 하 여 작동 합니다.
+
+## <a name="deprecations"></a>결함
+
+Mojave macOS를 사용 하 여 Apple에 사용 되지 않는 OpenGL ES 및 OpenCL, [개발자 들에 게](https://developer.apple.com/macos/whats-new/) 및 체제 미 설치 컴퓨터 성능 셰이더를 채택 해야 합니다.
+
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Mac 샘플](https://developer.xamarin.com/samples/mac/)
 - [macOS-Apple 개발자](https://developer.apple.com/macos/)
-- Xamarin 미리 보기 [릴리스 블로그 게시물](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- [Xamarin.Mac 5.0 릴리스 정보](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)
