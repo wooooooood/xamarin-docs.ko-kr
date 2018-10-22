@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 시작
-description: 이 가이드에서는 Xamarin.Forms 개발의 기본 사항을 소개하고 다중 플랫폼 및 다중 화면 응용 프로그램을 빌드하는 내용을 다룹니다.
+description: Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 앱에서 기본 사용자 인터페이스 레이아웃을 효율적으로 만들 수 있는 플랫폼 간 UI 도구 키트입니다. 이 시리즈에서는 Xamarin.Forms 개발의 기본 사항을 소개하고 다중 플랫폼 및 다중 화면 응용 프로그램을 빌드하는 내용을 다룹니다.
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 6ac76f41fc0646107102e0d5e59609c0f3969511
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35242442"
+ms.lasthandoff: 04/27/2018
+ms.locfileid: "32024328"
 ---
 # <a name="getting-started-with-xamarinforms"></a>Xamarin.Forms 시작
 
