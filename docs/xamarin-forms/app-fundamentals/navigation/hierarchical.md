@@ -6,25 +6,17 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: f8f8f9b4e5755e8b1707178fef633321b64e4e94
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/14/2018
+ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994678"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
 _NavigationPage 클래스에는 사용자가 앞으로 및 뒤로 필요에 따라 페이지를 탐색할 수 있는 계층적 탐색 환경을 제공 합니다. 클래스는 페이지 개체의 마지막에 lifo (후입선출) 스택으로 탐색을 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용 하 여 페이지의 스택으로 탐색을 수행 하는 방법에 설명 합니다._
-
-이 문서에서는 다음 내용을 다룹니다.
-
-- [탐색을 수행](#Performing_Navigation) – 루트 페이지 만들기, 페이지 탐색 스택으로 푸시, 페이지 탐색 스택에서 팝 및 페이지 전환 애니메이션을 적용 합니다.
-- [탐색할 때 데이터를 전달](#Passing_Data_when_Navigating) – 데이터 페이지 생성자를 통해 전달는 `BindingContext`합니다.
-- [탐색 스택에서 조작](#Manipulating_the_Navigation_Stack) – 스택에 삽입 하거나 페이지를 제거 하 여 조작 합니다.
-
-## <a name="overview"></a>개요
 
 다른 한 페이지에서 이동할 응용 프로그램이 푸시합니다 탐색 스택에 새 페이지 되 게 활성 페이지는 다음 다이어그램과에서 같이:
 
@@ -312,10 +304,58 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 사용자의 자격 증명이 잘못 된는 `MainPage` 인스턴스가 탐색 스택에서 현재 페이지 앞에 삽입 됩니다. 합니다 [ `PopAsync` ](xref:Xamarin.Forms.NavigationPage.PopAsync) 방법을 사용 하 여 탐색 스택에서 현재 페이지를 제거 합니다는 `MainPage` 활성 페이지가 되는 인스턴스.
 
-## <a name="summary"></a>요약
+## <a name="displaying-views-in-the-navigation-bar"></a>탐색 모음에서 뷰를 표시합니다.
 
-이 문서에 사용 하는 방법을 설명 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 페이지의 스택으로 탐색을 수행 하는 클래스입니다. 이 클래스는 사용자가 앞으로 및 뒤로 필요에 따라 페이지를 탐색할 수 있는 계층적 탐색 환경을 제공 합니다. 이 모델은 탐색을 [`Page`](xref:Xamarin.Forms.Page) 개체의 LIFO(후입선출) 스택으로 구현합니다.
+모든 Xamarin.Forms [ `View` ](xref:Xamarin.Forms.View) 의 탐색 모음에서 표시할 수는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)합니다. 설정 하 여 이렇게 합니다 [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결 된 속성을 `View`입니다. 이 연결 된 속성에 설정할 수 있습니다 [ `Page` ](xref:Xamarin.Forms.Page), 및 시기를 `Page` 로 푸시됩니다를 `NavigationPage`, `NavigationPage` 속성의 값을 적용 합니다.
 
+가져온 다음 예제에서는 합니다 [제목 뷰 샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)를 설정 하는 방법을 보여 줍니다는 [ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) XAML에서 연결 된 속성:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationPageTitleView.TitleViewPage">
+    <NavigationPage.TitleView>
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>
+    ...
+</ContentPage>
+```
+
+에 해당 하는 다음과 같습니다 C# 코드:
+
+```csharp
+public class TitleViewPage : ContentPage
+{
+    public TitleViewPage()
+    {
+        var titleView = new Slider { HeightRequest = 44, WidthRequest = 300 };
+        NavigationPage.SetTitleView(this, titleView);
+        ...
+    }
+}
+```
+
+그 결과 [ `Slider` ](xref:Xamarin.Forms.Slider) 탐색 모음에서에 표시 되는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+[![슬라이더 TitleView](hierarchical-images/titleview-small.png "슬라이더 TitleView")](hierarchical-images/titleview-large.png#lightbox "슬라이더 TitleView")
+
+> [!IMPORTANT]
+> 여러 보기와 보기의 크기를 지정 하지 않으면 탐색 모음에서 표시 되지 않습니다 합니다 [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) 하 고 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성입니다. 보기에 래핑할 수 있습니다 또는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 사용 하 여 합니다 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성이 적절 한 값으로 설정 합니다.
+
+때문에 합니다 [ `Layout` ](xref:Xamarin.Forms.Layout) 클래스에서 파생 되는 [ `View` ](xref:Xamarin.Forms.View) 클래스를 [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 레이아웃을 표시 하려면 연결 된 속성을 설정할 수 있습니다 여러 뷰를 포함 하는 클래스입니다. IOS 및 유니버설 Windows 플랫폼 (UWP)에서 탐색 막대의 높이 변경할 수 없으며, 및 클리핑 탐색 모음에 표시 된 뷰 탐색 막대의 기본 크기 보다 크면 발생 하므로 합니다. 그러나 android에서 탐색 모음의 높이 변경할 수 있습니다 설정 하 여 합니다 [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능한 속성을는 `double` 새 높이 나타내는입니다. 자세한 내용은 [탐색 막대 높이 NavigationPage 설정](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight)합니다.
+
+또는 확장 된 탐색 표시줄을 색 있습니다 탐색 모음으로 일치 하는 페이지 콘텐츠의 맨 위에 있는 탐색 모음에 있는 콘텐츠의 일부 및 일부 뷰에서 배치 하 여 제안 수 있습니다. 또한 iOS에서 구분 기호 선과 섀도 탐색 모음의 맨 아래에 제거할 수 있습니다 설정 합니다 [ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인딩 가능한 속성을 `true`입니다. 자세한 내용은 [탐색 표시줄 구분 기호는 NavigationPage 숨기기](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar)합니다.
+
+> [!NOTE]
+> 합니다 [ `BackButtonTitle` ](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty)를 [ `Title` ](xref:Xamarin.Forms.Page.Title)를 [ `TitleIcon` ](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), 및 [ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 속성 모두 정의할 수 있습니다 탐색 모음에서 공간을 차지 하는 값입니다. 플랫폼 및 화면 크기에 따라 탐색 모음 크기에 따라 다르지만, 이러한 모든 속성을 설정 하면 공간이 제한으로 인해 충돌 합니다. 이러한 속성의 조합을 사용 하는 동안에 대신 사용할 수 있습니다만 설정 하 여 원하는 탐색 표시줄 설계를 더 확보 하는 `TitleView` 속성입니다.
+
+### <a name="limitations"></a>제한 사항
+
+표시할 때 알아야 할 제한 사항이 많이 [ `View` ](xref:Xamarin.Forms.View) 의 탐색 모음에는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+- IOS에서 보기의 탐색 모음에 배치 된 `NavigationPage` 큰 제목 사용할지에 따라 다른 위치에 표시 합니다. 큰 제목을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [큰 제목 표시](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title)합니다.
+- Android에서 보기의 탐색 모음에 배치 된 `NavigationPage` 응용 프로그램 호환성을 사용 하는 앱에서 수행할 수 있습니다.
+- 와 같은 대규모 또는 복잡 한 뷰를 배치 하는 좋지에 [ `ListView` ](xref:Xamarin.Forms.ListView) 하 고 [ `TableView` ](xref:Xamarin.Forms.TableView)의 탐색 모음에서을 `NavigationPage`.
 
 ## <a name="related-links"></a>관련 링크
 
@@ -323,6 +363,7 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 - [계층 구조 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 - [PassingData (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
+- [TitleView (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
 - [(Xamarin University 비디오) Xamarin.Forms 샘플에서 흐름 화면에서에서 로그인을 만드는 방법](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [화면 흐름 Xamarin.Forms (Xamarin University 비디오)에서 로그인을 만드는 방법](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

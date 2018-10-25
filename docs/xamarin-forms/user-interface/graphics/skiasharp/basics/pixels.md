@@ -4,14 +4,14 @@ description: 이 문서에서는 Xamarin.Forms 좌표 SkiaSharp 좌표 사이의
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: b75eb1185e58de4e0524acd634a49e69142a324b
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615303"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 장치 독립적 단위
@@ -29,8 +29,8 @@ _SkiaSharp 좌표 및 Xamarin.Forms 좌표 간의 차이점을 살펴보기_
 페이지의 [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 이라는 제목의 프로그램 **화면 크기** SkiaSharp 텍스트 출력을 사용 하 여 서로 다른 세 원본의 디스플레이 화면의 크기를 표시 하려면:
 
 - 일반 Xamarin.Forms [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) 하 고 [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) 의 속성을 `SKCanvasView` 개체.
-- 합니다 [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) 의 속성을 `SKCanvasView` 개체입니다.
-- [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) 의 속성을 `SKImageInfo` 와 일치 하는 값입니다는 `Width` 및 `Height` 두 이전 페이지에서 사용 되는 속성입니다.
+- 합니다 [ `CanvasSize` ](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize) 의 속성을 `SKCanvasView` 개체입니다.
+- [ `Size` ](xref:SkiaSharp.SKImageInfo.Size) 의 속성을 `SKImageInfo` 와 일치 하는 값입니다는 `Width` 및 `Height` 두 이전 페이지에서 사용 되는 속성입니다.
 
 합니다 [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) 클래스에는 이러한 값을 표시 하는 방법을 보여 줍니다. 생성자 저장 합니다 `SKCanvasView` 개체에 액세스할 수 있도록 필드로 `PaintSurface` 이벤트 처리기:
 
@@ -47,7 +47,7 @@ public SurfaceSizePage()
 }
 ```
 
-`SKCanvas` 다른 6 개 포함 되어 있습니다 `DrawText` 메서드에만이 [ `DrawText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawText/p/System.String/System.Single/System.Single/SkiaSharp.SKPaint/) 메서드는 가장 간단 합니다.
+`SKCanvas` 다른 6 개 포함 되어 있습니다 `DrawText` 메서드에만이 [ `DrawText` ](xref:SkiaSharp.SKCanvas.DrawText(System.String,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드는 가장 간단 합니다.
 
 ```csharp
 public void DrawText (String text, Single x, Single y, SKPaint paint)
@@ -55,7 +55,7 @@ public void DrawText (String text, Single x, Single y, SKPaint paint)
 
 텍스트 문자열을 지정 하면, X 및 Y 좌표를 시작 하려면 텍스트 인 및 `SKPaint` 개체입니다. X 좌표, 주의 있지만 텍스트의 왼쪽 위치 지정: Y 좌표 위치를 지정 합니다 *기준* 텍스트의 합니다. 그 어느 때 인라인된 종이에 손으로 작성 했다면, 기준 (예: g, p, q 및 y에 해당)는 디센더와 내림차순 아래는 자 사이트에 선입니다.
 
-`SKPaint` 개체를 사용 하면 텍스트, 글꼴 패밀리 및 텍스트 크기의 색을 지정할 수 있습니다. 기본적으로 [ `TextSize` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.TextSize/) 속성이 휴대폰과 같은 고해상도 장치에서 매우 작은 텍스트의 결과 12의 값입니다. 가장 간단한 응용 프로그램을 제외 해야 표시 하는 텍스트의 크기에 대 한 정보입니다. `SKPaint` 클래스 정의 [ `FontMetrics` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontMetrics/) 속성과 여러 [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) 메서드를 하지만 덜 멋진 요구 사항에는 [ `FontSpacing` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.FontSpacing/) 속성은 텍스트의 연속 줄 간격에 대 한 권장 되는 값을 제공합니다.
+`SKPaint` 개체를 사용 하면 텍스트, 글꼴 패밀리 및 텍스트 크기의 색을 지정할 수 있습니다. 기본적으로 [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) 속성이 휴대폰과 같은 고해상도 장치에서 작은 텍스트의 결과 12의 값입니다. 가장 간단한 응용 프로그램을 제외 해야 표시 하는 텍스트의 크기에 대 한 정보입니다. `SKPaint` 클래스 정의 [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) 속성과 여러 [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) 메서드를 하지만 덜 멋진 요구 사항에는 [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) 속성은 텍스트의 연속 줄 간격에 대 한 권장 되는 값을 제공합니다.
 
 다음 `PaintSurface` 처리기를 만듭니다를 `SKPaint` 개체에 대 한는 `TextSize` 디센더와 아래쪽 어센더 위쪽에서 텍스트의 세로 높이 40 픽셀입니다. 합니다 `FontSpacing` 값을 `SKPaint` 47 픽셀에 대 한 그 보다 약간 큰 개체를 반환 합니다.
 
@@ -103,13 +103,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 알 수 있듯이 `CanvasSize` 의 속성을 `SKCanvasView` 및 `Size` 의 속성을 `SKImageInfo` 값은 픽셀 크기를 보고에 일관 되. `Height` 및 `Width` 의 속성을 `SKCanvasView` Xamarin.Forms 속성 및 플랫폼에 의해 정의 된 장치 독립적 단위에서 보기의 크기를 보고 합니다.
 
-왼쪽에서 시뮬레이터가 iOS 7 장치 독립적 단위 당 2 픽셀에 있고 센터에서 Android Nexus 5 단위당 3 픽셀입니다. 이유는 원 앞에서 살펴본 다양 한 플랫폼에 대 한 다양 한 크기입니다.
+왼쪽에서 시뮬레이터가 시작 iOS 7 장치 독립적 단위 당 두 픽셀에 있고 가운데에 Android Nexus 5 단위당 3 픽셀로 합니다. 이유는 원 앞에서 살펴본 다양 한 플랫폼에 대 한 다양 한 크기입니다.
 
-장치 독립적 단위에서 완전히 작동 하려는 경우 있습니다 이렇게 설정 합니다 `IgnorePixelScaling` 의 속성을 `SKCanvasView` 를 `true`. 그러나 결과 선호 하지 않을 수 있습니다. SkiaSharp 장치 독립적 단위에서 보기의 크기와 같은 픽셀 크기를 사용 하 여 더 작은 장치 화면에 그래픽을 렌더링합니다. (예를 들어, SkiaSharp 사용 360 x 512 픽셀의 화면 Nexus 5.) 다음 확장 이미지 크기를 눈에 띄는 비트맵 계단 발생 합니다.
+장치 독립적 단위에서 완전히 작동 하려는 경우 있습니다 이렇게 설정 합니다 `IgnorePixelScaling` 의 속성을 `SKCanvasView` 를 `true`. 그러나 결과 선호 하지 않을 수 있습니다. SkiaSharp 장치 독립적 단위에서 보기의 크기와 같은 픽셀 크기를 사용 하 여 더 작은 장치 화면에 그래픽을 렌더링합니다. (예를 들어, SkiaSharp 사용 360 x 512 픽셀의 화면 Nexus 5.) 그런 다음 확장 눈에 띄는 비트맵 계단의 크기에 해당 이미지를 구성 합니다.
 
 동일한 이미지 해상도 유지 하려면 두 개의 좌표 시스템 간에 변환 하려면 간단한 함수를 직접 작성 하는 것이 좋습니다.
 
-외에 `DrawCircle` 메서드를 `SKCanvas` 두 정의 `DrawOval` 메서드는 타원을 그립니다. 타원 단일 radius를 사용 하지 않고 두 반지름으로 정의 됩니다. 이러한 라고는 *주 radius* 하며 *부 radius*합니다. `DrawOval` 메서드 두 반지름을 사용 하 여 타원을 X 및 Y 축에 병렬 그립니다. 변환 또는 그래픽 경로 (나중에 다룰 수)를 사용 하는 제한 극복이 가능 하지만 [이 `DrawOval` 메서드](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) 두 반지름 인수 이름을 `rx` 및 `ry` 나란한 됨을 나타내려면 X 및 Y 축:
+외에 `DrawCircle` 메서드를 `SKCanvas` 두 정의 `DrawOval` 메서드는 타원을 그립니다. 타원 단일 radius를 사용 하지 않고 두 반지름으로 정의 됩니다. 이러한 라고는 *주 radius* 하며 *부 radius*합니다. `DrawOval` 메서드 두 반지름을 사용 하 여 타원을 X 및 Y 축에 병렬 그립니다. (X 및 Y 축에 병렬 없는 축을 사용 하 여 타원을 그릴 경우 문서에 설명 된 대로 회전 변환을 사용할 수 있습니다 [ **The 회전 변환** ](../transforms/rotate.md) 또는에 설명 된 대로 그래픽 경로 문서 [ **호를 그리려면 세 가지 방법으로**](../curves/arcs.md)). 이 오버 로드 된 [ `DrawOval` ](xref:SkiaSharp.SKCanvas.DrawOval(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드는 두 개의 반지름 매개 변수 이름은 `rx` 및 `ry` X 및 Y 축에 병렬 됨을 나타내려면:
 
 ```csharp
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
@@ -144,7 +144,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](pixels-images/ellipsefill-small.png "화면 크기 페이지 스크린샷 삼중")](pixels-images/ellipsefill-large.png#lightbox "삼중 화면 크기 페이지 스크린샷")
 
-합니다 [다른 `DrawOval` 메서드](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 에 [ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/) 사각형의 왼쪽 위 모퉁이 오른쪽 아래 모퉁이의 X 및 Y 좌표를 기준으로 정의 된 인수입니다. 타원을 사용할 수도 제안 하는 해당 사각형을 채우는 합니다 **타원 채우기** 이와 같은 페이지:
+다른 [ `DrawOval` ](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) 메서드가 [ `SKRect` ](xref:SkiaSharp.SKRect) 사각형의 왼쪽 위 모퉁이 오른쪽 아래 모퉁이의 X 및 Y 좌표를 기준으로 정의 되는 인수입니다. 타원을 사용할 수도 제안 하는 해당 사각형을 채우는 합니다 **타원 채우기** 이와 같은 페이지:
 
 ```csharp
 SKRect rect = new SKRect(0, 0, info.Width, info.Height);
@@ -164,5 +164,5 @@ canvas.DrawOval(rect, paint);
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

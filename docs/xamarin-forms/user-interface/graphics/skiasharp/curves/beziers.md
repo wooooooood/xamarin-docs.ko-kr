@@ -4,14 +4,14 @@ description: 이 문서에서는 SkiaSharp 사용 하 여 Xamarin.Forms 응용 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 0ad722f22cf5ed8dc06fdf0d1e063d285e2ddb2f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615342"
 ---
 # <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선
@@ -20,17 +20,19 @@ _SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡�
 
 베 지 어 곡선 피에르 베 지 어 (1910 – 1999)의 자동차 본문의 컴퓨터 기반 디자인의 곡선을 사용 하는 자동차 회사에서 프랑스어 엔지니어 후 이라고 합니다.
 
-대화형 디자인에 잘 맞는 것으로 알려져는 베 지 어 곡선: 정상적으로 작동 되기 &mdash; 즉, 무한 또는 다루기 될 곡선을 일으키는 singularities 없습니다 &mdash; 시선을 일반적으로 되며 . 컴퓨터 기반 글꼴의 문자 윤곽선은 일반적으로 베 지 어 곡선을 사용 하 여 정의 됩니다.
+대화형 디자인에 잘 맞는 것으로 알려져는 베 지 어 곡선: 정상적으로 작동 되기 &mdash; 즉, 무한 또는 다루기 될 곡선을 일으키는 singularities 없습니다 &mdash; 시선을 일반적으로 되며 :
 
 ![](beziers-images/beziersample.png "샘플 베 지 어 곡선")
 
-에 대 한 Wikipedia 문서 [베 지 어 곡선](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) 몇 가지 유용한 정보를 포함 합니다. 용어 *베 지 어 곡선* 실제로 유사한 곡선의 제품군을 가리킵니다. SkiaSharp 호출 되는 베 지 어 곡선의 세 가지 종류를 지원 합니다 *입방 형 3*의 *정방형*, 및 *원추형*합니다. 원추형이 라고도 합니다 *rational 값*합니다.
+컴퓨터 기반 글꼴의 문자 윤곽선은 일반적으로 베 지 어 곡선을 사용 하 여 정의 됩니다.
+
+에 대 한 Wikipedia 문서 [ **베 지 어 곡선** ](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) 몇 가지 유용한 배경 정보를 포함 합니다. 용어 *베 지 어 곡선* 실제로 유사한 곡선의 제품군을 가리킵니다. SkiaSharp 호출 되는 베 지 어 곡선의 세 가지 종류를 지원 합니다 *입방 형 3*의 *정방형*, 및 *원추형*합니다. 원추형이 라고도 합니다 *rational 값*합니다.
 
 ## <a name="the-cubic-bzier-curve"></a>3 차원 큐빅 곡선
 
 3 차 방정식에 베 지 어 곡선의 제목을 표시 되 면 대부분의 개발자의 생각 하는 베 지 어 곡선의 형식입니다.
 
-입방 형 3 차원 큐빅 곡선으로 추가할 수 있습니다는 `SKPath` 를 사용 하 여 개체를 [ `CubicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/SkiaSharp.SKPoint/) 3 개를 사용 하 여 메서드 `SKPoint` 매개 변수 또는 [ `CubicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/System.Single/) 별도의오버로드`x` 고 `y` 매개 변수:
+입방 형 3 차원 큐빅 곡선으로 추가할 수 있습니다는 `SKPath` 를 사용 하 여 개체를 [ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKPoint)) 3 개를 사용 하 여 메서드 `SKPoint` 매개 변수 또는 [ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)) 별도의오버로드`x` 고 `y` 매개 변수:
 
 ```csharp
 public void CubicTo (SKPoint point1, SKPoint point2, SKPoint point3)
@@ -45,7 +47,7 @@ public void CubicTo (Single x1, Single y1, Single x2, Single y2, Single x3, Sing
 - 두 번째 제어점: `point2` 에 `CubicTo` 호출
 - 끝점: `point3` 에 `CubicTo` 호출
 
-결과 곡선 시작 지점에서 시작 및 끝 지점에서 끝납니다. 곡선을 일반적으로 두 개의 제어점;를 통해 전달 되지 않습니다. 대신 like 많은 자석 자신 들을 위한 곡선을 가져오려고 작동 합니다.
+결과 곡선 시작 지점에서 시작 및 끝 지점에서 끝납니다. 곡선을 일반적으로 두 개의 제어점;를 통해 전달 되지 않습니다. 대신 컨트롤 자신 들을 위한 곡선을 가져오려고 자석 마찬가지로 함수를 가리킵니다.
 
 가장 좋은 방법은 입방 형 3 차원 큐빅 곡선에 대해 실험을 통해 됩니다. 용도이 **베 지 어 곡선** 에서 파생 되는 페이지 `InteractivePage`합니다. 합니다 [ **BezierCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml) 파일은 합니다 `SKCanvasView` 및 `TouchEffect`합니다. 합니다 [ **BezierCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs) 코드 숨김 파일 네 개를 만듭니다 `TouchPoint` 생성자에서는 개체입니다. 합니다 `PaintSurface` 이벤트 처리기를 만듭니다를 `SKPath` 기준으로 4 개의 베 지 어 곡선을 렌더링 하 `TouchPoint` 개체 이며 또한 엔드포인트로 제어 지점에서 점으로 구분 된 접선을 그립니다.
 
@@ -101,7 +103,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - 두 번째 곡선의 시작점 이기도 하는 첫 번째 곡선의 끝점
 - 두 번째 곡선의 첫째 제어점
 
-다음 문서의 [ **SVG 경로 데이터** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 부드러운 연결 된 베 지 어 곡선의 정의 쉽게 하는 기능을 살펴봅니다.
+다음 문서의 [ **SVG 경로 데이터**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md), 매끄러운 연결 된 베 지 어 곡선의 정의 쉽게 하는 기능을 살펴봅니다.
 
 경우에 따라 입방 형 3 차원 큐빅 곡선을 렌더링 하는 기본 매개 방정식을 알고는 것이 유용 합니다. 에 대 한 *t* 0에서 1 사이의 매개 방정식은 다음과 같습니다.
 
@@ -111,7 +113,7 @@ y(t) = (1-t) ³y₀ + 3t (1-t) ²y₁ + 3t² (1-t) y₂ + t³y₃
 
 3의 가장 높은 지 수 입방 형 3 polynomials 이들은 확인 합니다. 때를 확인 하기 쉽습니다 `t` 가 0 이면 요점은 (x₀ y₀) 시작 지점이 있는 시점과 `t` 가 1 이면 요점은 (x₃ y₃) 끝점에는 합니다. 시작점을 거의 (낮은 값에 대 한 `t`), (x₁, y₁) 첫 번째 제어점에 강력한 적용 하 고 근처 끝점 (높은 값 ' t ') (x₂, y₂) 두 번째 제어점 강력한 영향을 미칩니다.
 
-## <a name="bzier-curve-approximation-to-circular-arcs"></a>원호를 베 지 어 곡선 근사치
+## <a name="bezier-curve-approximation-to-circular-arcs"></a>원호를 베 지 어 곡선 근사치
 
 경우에 따라 원호를 렌더링 하는 베 지 어 곡선을 사용 하는 것이 유용 합니다. 입방 형 3 차원 큐빅 곡선 수를 추정 원호를 잘 사분기 원 최대 하므로 연결 된 4 개의 베 지 어 곡선 전체 원을 정의할 수 있습니다. 이 근사치는 25 년 전에 게시 하는 두 개의 문서에 설명 되어 있습니다.
 
@@ -203,7 +205,7 @@ float Magnitude(SKPoint v)
 
 ```
 
-시작점과 끝점 (`point0` 고 `point3`) 원에 대 한 일반 파라메트릭 수식에 따라 계산 됩니다. 원을 중심으로 하기 때문에 (0, 0) 이러한 지점이 처리 될 수도 방사형 벡터로 원의 중심에서 원주를 합니다. 제어점이 방사형 벡터에 직각 되므로 탄젠트 값은 원형에 있는 줄에 있습니다. 오른쪽 각도에 벡터는 X 및 Y 좌표는 교환, 음수 수행 중 하나를 사용 하 여 원래 벡터 하기만 하면 됩니다.
+시작점과 끝점 (`point0` 고 `point3`) 원에 대 한 일반 파라메트릭 수식에 따라 계산 됩니다. 원을 중심으로 하기 때문에 (0, 0) 이러한 지점이 처리 될 수도 방사형 벡터로 원의 중심에서 원주를 합니다. 제어점이 방사형 벡터에 직각 되므로 탄젠트 값은 원형에 있는 줄에 있습니다. 다른 직각을 이루어야 벡터는 X 및 Y 좌표는 교환, 음수 수행 중 하나를 사용 하 여 원래 벡터 하기만 하면 됩니다.
 
 세 가지 다른 각도 사용 하 여 세 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
 
@@ -350,7 +352,7 @@ x(t) = (1-t) ²x₀ + 2t (1-t) x₁ + t²x₂
 
 y(t) = (1-t) ²y₀ + 2t (1-t) y₁ + t²y₂
 
-정방형 베 지 어 곡선 경로를 추가 하려면 사용 합니다 [ `QuadTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/) 메서드 또는 [ `QuadTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/System.Single/System.Single/System.Single/System.Single/) 별도의 오버 로드 `x` 고 `y` 좌표:
+정방형 베 지 어 곡선 경로를 추가 하려면 사용 합니다 [ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint)) 메서드 또는 [ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(System.Single,System.Single,System.Single,System.Single)) 별도의 오버 로드 `x` 고 `y` 좌표:
 
 ```csharp
 public void QuadTo (SKPoint point1, SKPoint point2)
@@ -427,7 +429,7 @@ y(t) = ((1 – t) ²y₀ + 2wt (1-t) y₁ + t²y₂)) ÷ d(t)
 
 Rational 정방형 베 지 어 곡선 이라고 *conics* 원추형 섹션의 세그먼트가 정확히 나타낼 수 있으므로 &mdash; hyperbolas, parabolas, 타원, 및 원입니다.
 
-경로에 유리 정방형 베 지 어 곡선을 추가 하려면 사용 합니다 [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) 메서드 또는 [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) 별도의 오버 로드 `x` 및 `y` 좌표:
+경로에 유리 정방형 베 지 어 곡선을 추가 하려면 사용 합니다 [ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) 메서드 또는 [ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(System.Single,System.Single,System.Single,System.Single,System.Single)) 별도의 오버 로드 `x` 및 `y` 좌표:
 
 ```csharp
 public void ConicTo (SKPoint point1, SKPoint point2, Single weight)
@@ -552,5 +554,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

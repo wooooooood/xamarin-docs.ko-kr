@@ -4,21 +4,21 @@ description: Thhis 문서 탐색 SkiaSharp 배율 변환 개체, 다양 한 규�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 94105cbb83e4c6eb3558ca3fc55e505ab41f28fe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d4ab7ad5a0fc645c13388d76eb11cbd4e2dd72f8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615605"
 ---
 # <a name="the-scale-transform"></a>배율 변환
 
 _SkiaSharp 배율 변환 다양 한 크기는 개체 크기 조정에 대 한 검색_
 
-살펴본 것 처럼 [The 변환 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md) 문서 좌표 이동 변환 한 위치에서 다른에 그래픽 개체를 이동할 수 있습니다. 이와 대조적으로 배율 변환 그래픽 개체의 크기를 변경 합니다.
+살펴본 것 처럼 [ **The 변환 변환** ](translate.md) 문서 좌표 이동 변환 한 위치에서 다른에 그래픽 개체를 이동할 수 있습니다. 이와 대조적으로 배율 변환 그래픽 개체의 크기를 변경 합니다.
 
 ![](scale-images/scaleexample.png "긴 단어 크기 조정")
 
@@ -38,7 +38,7 @@ y' = sy? y
 
 Translate 요인의 기본값은 0; 배율 인수는 기본 값은 1입니다.
 
-합니다 `SKCanvas` 클래스 정의 4 `Scale` 메서드. 첫 번째 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/) 는 동일한 가로 및 세로 크기 조정 하려는 경우 단계에 대 한 메서드는:
+합니다 `SKCanvas` 클래스 정의 4 `Scale` 메서드. 첫 번째 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single)) 는 동일한 가로 및 세로 크기 조정 하려는 경우 단계에 대 한 메서드는:
 
 ```csharp
 public void Scale (Single s)
@@ -46,14 +46,14 @@ public void Scale (Single s)
 
 이 이라고 *등방성* 크기 조정 &mdash; 크기 조정 된 동일한 두 방향 모두에서. 개체의 가로 세로 비율 유지 등방성 크기 조정 합니다.
 
-두 번째 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) 메서드를 사용 하면 가로 및 세로 크기 조정에 대 한 다른 값을 지정 합니다.
+두 번째 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) 메서드를 사용 하면 가로 및 세로 크기 조정에 대 한 다른 값을 지정 합니다.
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
 이 인해 *이방성* 크기 조정 합니다.
-세 번째 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/) 메서드는 단일에서 두 배율 결합 `SKPoint` 값:
+세 번째 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint)) 메서드는 단일에서 두 배율 결합 `SKPoint` 값:
 
 ```csharp
 public void Scale (SKPoint size)
@@ -61,7 +61,7 @@ public void Scale (SKPoint size)
 
 네 번째 `Scale` 메서드 곧 설명 합니다.
 
-합니다 **기본 확장** 페이지를 보여 줍니다는 `Scale` 메서드. 합니다 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 파일에는 두 개의 `Slider` 수 있도록 하는 요소 0과 10 사이의 가로 및 세로 배율 인수를 선택 합니다. 합니다 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) 호출 하려면 해당 값을 사용 하는 코드 숨김 파일 `Scale` 스트로크 파선으로 하 고 일부 텍스트 왼쪽 위에에서 맞게 크기를 조정할 모퉁이가 둥근된 사각형을 표시 하기 전에 캔버스의 모퉁이.
+합니다 **기본 확장** 페이지를 보여 줍니다는 `Scale` 메서드. 합니다 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) 파일에는 두 개의 `Slider` 수 있도록 하는 요소 0과 10 사이의 가로 및 세로 배율 인수를 선택 합니다. 합니다 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) 호출 하려면 해당 값을 사용 하는 코드 숨김 파일 `Scale` 스트로크 파선으로 하 고 일부 텍스트 왼쪽 위에에서 맞게 크기를 조정할 모퉁이가 둥근된 사각형을 표시 하기 전에 캔버스의 모퉁이.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -113,7 +113,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 확장 하면 이방성 줄 마다 되려면 스트로크 너비 가로 및 세로 축에 맞춥니다. (도이 페이지의 첫 번째 이미지에서 알 수 있습니다.) 스트로크 너비를 크기 조정 요인을 영향을 받지 않으려면 0으로 설정 하 고 항상 관계 없이 1 픽셀로 설정 됩니다는 `Scale` 설정 합니다.
 
-조정은 캔버스의 왼쪽 위 모퉁이 기준으로 합니다. 이 수 정확 하 게 원하는 있지만 되지 않을 수 있습니다. 텍스트와 사각형을 다른 곳을 캔버스에 배치 하 고 중심을 기준으로 크기를 조정 하려는 경우 네 번째 버전을 사용할 수는 경우에 [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/) 크기 조정의 중심을 지정 하려면 두 개의 추가 매개 변수를 포함 하는 메서드:
+조정은 캔버스의 왼쪽 위 모퉁이 기준으로 합니다. 이 수 정확 하 게 원하는 있지만 되지 않을 수 있습니다. 텍스트와 사각형을 다른 곳을 캔버스에 배치 하 고 중심을 기준으로 크기를 조정 하려는 경우 네 번째 버전을 사용할 수는 경우에 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) 크기 조정의 중심을 지정 하려면 두 개의 추가 매개 변수를 포함 하는 메서드:
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
@@ -170,7 +170,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 합니다 `Slider` 이 프로그램의 요소 범위를 갖고 &ndash;10 ~ 10입니다. 알 수 있듯이 수직적 크기 조정 (예: android 화면 가운데에서)의 음수 값 개체 크기 조정의 중심을 통과 하는 가로 축을 대칭으로 배열할지 발생 합니다. 수평적 크기 조정은 (UWP 화면 오른쪽의 예)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 세로 축을 대칭으로 배열할지 개체가 합니다.
 
-이 네 번째 버전의는 `Scale` 메서드는 실제로 바로 가기입니다. 이 대체 하 여 작동 방식을 확인 하려는 경우는 `Scale` 메서드에이 코드를 다음에서:
+버전을 [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) 피벗 지점 메서드 3 개에 대 한 바로 가기입니다 `Translate` 및 `Scale` 호출 합니다. 이 대체 하 여 작동 방식을 확인 하려는 합니다 `Scale` 에서 메서드를 **가운데 확장** 다음 페이지:
 
 ```csharp
 canvas.Translate(-px, -py);
@@ -191,7 +191,7 @@ canvas.Translate(–px, –py);
 
 에서는 연속을 사용 하 여 `Scale` 고 `Translate` 호출 모퉁이가 둥근된 사각형의 중심 왼쪽 위 모서리에서 여전히 이지만 이제 모퉁이가 둥근된 사각형의 중심 이기도 캔버스의 왼쪽 위 모퉁이 기준으로 확장할 수 있습니다.
 
-이제 이전에 `Scale` 다른 호출 추가 `Translate` 가운데 맞춤 값을 사용 하 여 호출 합니다.
+이제 이전에 `Scale` 호출, 다른 추가 `Translate` 가운데 맞춤 값을 사용 하 여 호출 합니다.
 
 ```csharp
 canvas.Translate(px, py);
@@ -215,7 +215,7 @@ canvas.Scale(sx, sy, px, py);
 
 결합 하면 `Translate` 고 `Scale` 호출 순서가 중요 합니다. 경우는 `Translate` 뒤에 오는 `Scale`, 번역 요소 크기 조정 요인을 기준으로 효과적으로 조정 됩니다. 경우는 `Translate` 앞에 오는 `Scale`, 번역 요소는 배율 조정 되지 않습니다. 이 프로세스 다소 분명해 집니다 (비록 더 수학) 경우 변환 행렬의 주제는 도입 되었습니다.
 
-합니다 `SKPath` 클래스 정의 읽기 전용 [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) 반환 하는 속성을 `SKRect` 경로에 좌표가 범위를 정의 합니다. 예를 들어 경우는 `Bounds` 앞에서 만든 hendecagram 경로에서 속성을 가져오는 합니다 `Left` 및 `Top` 사각형의 속성은 약-100는 `Right` 및 `Bottom` 속성은 약 100 하며 `Width` 고 `Height` 속성은 약 200 개. (대부분의 실제 값은 거의 없는 별표 지점의 반지름은 100 원으로 정의 되어 있지만 상위 지점에만 가로 또는 세로 축이 있는 병렬 때문에.)
+합니다 `SKPath` 클래스 정의 읽기 전용 [ `Bounds` ](xref:SkiaSharp.SKPath.Bounds) 반환 하는 속성을 `SKRect` 경로에 좌표가 범위를 정의 합니다. 예를 들어 경우는 `Bounds` 앞에서 만든 hendecagram 경로에서 속성을 가져오는 합니다 `Left` 및 `Top` 사각형의 속성은 약-100는 `Right` 및 `Bottom` 속성은 약 100 하며 `Width` 고 `Height` 속성은 약 200 개. (대부분의 실제 값은 거의 없는 별표 지점의 반지름은 100 원으로 정의 되어 있지만 상위 지점에만 가로 또는 세로 축이 있는 병렬 때문에.)
 
 이 정보의 가용성 수 확장 파생 캔버스의 크기에 대 한 경로 크기 조정에 대 한 적절 한 요소를 변환 해야 것을 의미 합니다. 합니다 [ **이방성 크기 조정** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) 페이지 11 가리킨 별표를 사용 하 여이 보여 줍니다. *이방성* 확장 한 것 같은 가로 및 세로 방향으로 즉, 별 원래의 가로 세로 비율을 유지 하지는 의미입니다. 여기 관련 코드는는 `PaintSurface` 처리기:
 
@@ -337,12 +337,12 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-코드 또한 별 10 번 이상, 표시 크기를 줄이면 때마다 10% 점진적으로 빨간색에서 파란색 색을 변경 하 여 단계:
+코드 표시 별 10 번 이상, 10% 점진적으로 빨간색에서 파란색 색을 변경 하 여 요소 배율을 감소 될 때마다:
 
 [![](scale-images/isotropicscaling-small.png "삼중 등방성 크기 조정 페이지 스크린샷")](scale-images/isotropicscaling-large.png#lightbox "삼중 등방성 크기 조정 페이지 스크린샷")
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

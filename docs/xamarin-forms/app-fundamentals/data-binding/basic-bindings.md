@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 16d1970b5e9d8f9c2b7c8be875c81136525c4fb7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38998074"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
@@ -197,6 +197,9 @@ IOS 화면 왼쪽에는 페이지가 처음 나타날 때 화면 표시 되는 �
 문제는는 `Slider` 의 초기 값은 0입니다. 이 인해를 `Scale` 의 속성은 `Label` 0, 1의 기본값으로 재정의로 설정 해야 합니다. 이 인해는 `Label` 가 처음에 표시 합니다. 스크린샷에서 Android 및 유니버설 Windows 플랫폼 (UWP)에서 알 수 있듯이 조작할 수 있습니다 합니다 `Slider` 있도록는 `Label` 다시 표시 되지만 해당 초기 사라지는 혼란을 줄.
 
 수를 [다음 문서](binding-mode.md) 초기화 하 여이 문제를 방지 하는 방법의 `Slider` 의 기본 값에서를 `Scale` 속성.
+
+> [!NOTE]
+> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스도 정의 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 확장 될 수 있는 속성을 `VisualElement` 에서 다르게는 가로 및 세로 방향입니다.
 
 합니다 **대신 XAML 바인딩** XAML의 완전히 동일한 바인딩을 보여 줍니다.
 

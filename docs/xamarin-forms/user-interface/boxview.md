@@ -6,12 +6,12 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/26/2018
+ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997054"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
@@ -35,13 +35,16 @@ Xamarin.Forms에 기본 제공 벡터 그래픽 시스템에 없기 때문에 `B
 
 ## <a name="setting-boxview-color-and-size"></a>설정 BoxView 색 및 크기
 
-다음 세 가지 속성을 설정 하면 자주 `BoxView`:
+다음 속성을 설정 하면 일반적으로 `BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) 색을 설정 합니다.
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) 모퉁이 반지름을 설정 합니다.
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 너비를 설정 하 여 `BoxView` 장치 독립적 단위에서입니다.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 높이 설정 하 여 `BoxView`입니다.
 
 `Color` 형식의 속성은 `Color`; 속성에 설정할 수 있습니다 `Color` 값 141 정적 읽기 전용 필드를 포함 하 여 명명 된 색에서 사전순으로 이르기까지 `AliceBlue` 에 `YellowGreen`입니다.
+
+합니다 `CornerRadius` 형식의 속성은 [ `CornerRadius` ](xref:Xamarin.Forms.CornerRadius); 단일 속성을 설정할 수 있습니다 `double` 모퉁이 반지름 값, uniform 또는 `CornerRadius` 4 정의한 구조 `double` 에 적용 되는 값 왼쪽, 오른쪽 위 위쪽, 아래쪽, 왼쪽 및 오른쪽 아래를 `BoxView`입니다.
 
 `WidthRequest` 및 `HeightRequest` 속성만 역할을 하는 경우를 `BoxView` 됩니다 *비제한* 레이아웃에서. 레이아웃 컨테이너 자식의 크기, 예를 들어 때 알아야 할 때이 경우는 `BoxView` 자식인의 자동 크기 셀을 `Grid` 레이아웃. A `BoxView` 도 제한 된 경우 해당 `HorizontalOptions` 하 고 `VerticalOptions` 속성 이외의 값으로 설정 됩니다 `LayoutOptions.Fill`합니다. 경우는 `BoxView` 에 제한 되지 않지만 `WidthRequest` 및 `HeightRequest` 속성을 설정 하지는 않으면 너비 또는 높이가 40 개 단위 또는 모바일 장치에서 약 1/4 인치의 기본 값으로 설정 됩니다.
 
@@ -58,6 +61,7 @@ Xamarin.Forms에 기본 제공 벡터 그래픽 시스템에 없기 때문에 `B
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"

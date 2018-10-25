@@ -6,23 +6,25 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 01/05/2018
-ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
-ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
+ms.date: 08/01/2018
+ms.openlocfilehash: e483716952aa97de4411733006f4fa12c3e6da98
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39393674"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
-XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 향상 하도록 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 일반적인 XAML 파일에서 표시 `x` 되며 네임 스페이스 접두사를 흔히이 접두사를 사용 하 여 합니다. 이 아래 섹션에 설명 되어 있습니다.
+XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 향상 하도록 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 일반적인 XAML 파일에서 표시 `x` 되며 네임 스페이스 접두사를 흔히이 접두사를 사용 하 여 합니다. 다음 태그 확장에 설명 합니다.
 
-- [`x:Static`](#static) &ndash; 정적 속성, 필드 또는 열거형 멤버를 참조 합니다.
-- [`x:Reference`](#reference) &ndash; 명명 된 페이지의 요소를 참조 합니다.
-- [`x:Type`](#type) &ndash; 특성으로 설정 된 `System.Type` 개체입니다.
-- [`x:Array`](#array) &ndash; 특정 형식의 개체 배열을 생성 합니다.
-- [`x:Null`](#null) &ndash; 특성으로 설정 된 `null` 값입니다.
+- [`x:Static`](#static) – 정적 속성, 필드 또는 열거형 멤버 참조 합니다.
+- [`x:Reference`](#reference) – 명명 된 페이지의 요소 참조 합니다.
+- [`x:Type`](#type) – 특성으로는 `System.Type` 개체입니다.
+- [`x:Array`](#array) – 특정 형식의 개체 배열을 생성 합니다.
+- [`x:Null`](#null) – 특성으로는 `null` 값입니다.
+- [`OnPlatform`](#onplatform) – 플랫폼별 기준 UI 모양을 사용자 지정 합니다.
+- [`OnIdiom`](#onidiom) – 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정 합니다.
 
 추가 XAML 태그 확장 지금까지 다른 XAML 구현에서 지 원하는 및 Xamarin.Forms 에서도 지원 됩니다. 이러한 다른 문서에 자세히 설명 된:
 
@@ -453,10 +455,89 @@ public partial class TypeDemoPage : ContentPage
 
 에 대 한 공지는 4 합니다 `Label` 요소를 가질 가운데 있지만 serif 글꼴을 `Label` 기본 굴림 글꼴에.
 
+<a name="onplatform" />
+
+## <a name="onplatform-markup-extension"></a>OnPlatform 태그 확장
+
+`OnPlatform` 태그 확장을 사용 하면 플랫폼별 기준 UI 모양을 사용자 지정할 수 있습니다. 동일한 기능을 제공 합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) 클래스 하지만 보다 간결 하 게 표현 합니다.
+
+합니다 `OnPlatform` 태그 확장 되는 [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 다음 속성을 정의 하는 클래스:
+
+- `Default` 형식의 `object`, 플랫폼을 나타내는 속성에 적용할 기본 값으로 설정 합니다.
+- `Android` 형식의 `object`, Android에 적용할 값으로 설정 합니다.
+- `GTK` 형식의 `object`, GTK 플랫폼에 적용할 값으로 설정 합니다.
+- `iOS` 형식의 `object`, iOS에서 적용할 값으로 설정 합니다.
+- `macOS` 형식의 `object`를 macOS에서 적용할 값으로 설정 합니다.
+- `Tizen` 형식의 `object`, Tizen 플랫폼에 적용할 값으로 설정 합니다.
+- `UWP` 형식의 `object`, 유니버설 Windows 플랫폼에 적용할 값으로 설정 합니다.
+- `WPF` 형식의 `object`, Windows Presentation Foundation 플랫폼에 적용할 값으로 설정 합니다.
+- `Converter` 형식의 `IValueConverter`, 설정 하는 `IValueConverter` 구현 합니다.
+- `ConverterParameter` 형식의 `object`에 전달할 값으로 설정 하는 `IValueConverter` 구현 합니다.
+
+> [!NOTE]
+> XAML 파서에서 허용 합니다 [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 로 축약할 수 클래스 `OnPlatform`합니다.
+
+합니다 `Default` 속성의 콘텐츠 속성은 `OnPlatformExtension`합니다. 따라서 XAML 태그 식 중괄호를 사용 하 여 표현에서 제거할 수 있습니다는 `Default=` 첫 번째 인수는 제공 된 식의 일부입니다.
+
+> [!IMPORTANT]
+> XAML 파서를 사용 하는 속성에 올바른 형식의 값을 제공할 것는 예상 된 `OnPlatform` 태그 확장 합니다. 형식 변환이 필요한 경우는 `OnPlatform` Xamarin.Forms 제공한 기본 변환기를 사용 하 여 수행 하는 데 태그 확장 하려고 합니다. 그러나 이러한 경우 기본 변환기에서 수행할 수 없는 일부 형식 변환이 있습니다.는 `Converter` 속성에 설정할는 `IValueConverter` 구현 합니다.
+
+합니다 **OnPlatform 데모** 페이지를 사용 하는 방법을 보여 줍니다는 `OnPlatform` 태그 확장:
+
+```xaml
+<BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
+         WidthRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"  
+         HeightRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"
+         HorizontalOptions="Center" />
+```
+
+이 예제에서는 모든 세 `OnPlatform` 식의 약식된 버전을 사용 합니다 `OnPlatformExtension` 클래스 이름입니다. 세 가지 `OnPlatform` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) iOS, Android 및 UWP에서 서로 다른 값으로. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 플랫폼에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
+
+다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+
+[![OnPlatform 데모](consuming-images/onplatformdemo-small.png "OnPlatform 데모")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform 데모")
+
+<a name="onidiom" />
+
+## <a name="onidiom-markup-extension"></a>OnIdiom 태그 확장
+
+`OnIdiom` 태그 확장을 사용 하면 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정할 수 있습니다. 지원 되는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 다음 속성을 정의 하는 클래스:
+
+- `Default` 형식의 `object`, 장치 관용구를 나타내는 속성에 적용할 기본 값으로 설정 합니다.
+- `Phone` 형식의 `object`, 휴대폰에 적용할 값으로 설정 합니다.
+- `Tablet` 형식의 `object`, 태블릿에 적용할 값으로 설정 합니다.
+- `Desktop` 형식의 `object`, 데스크톱 플랫폼에 적용할 값으로 설정 합니다.
+- `TV` 형식의 `object`, TV 플랫폼에 적용할 값으로 설정 합니다.
+- `Watch` 형식의 `object`, 조사식 플랫폼에 적용할 값으로 설정 합니다.
+- `Converter` 형식의 `IValueConverter`, 설정 하는 `IValueConverter` 구현 합니다.
+- `ConverterParameter` 형식의 `object`에 전달할 값으로 설정 하는 `IValueConverter` 구현 합니다.
+
+> [!NOTE]
+> XAML 파서에서 허용 합니다 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 로 축약할 수 클래스 `OnIdiom`합니다.
+
+합니다 `Default` 속성의 콘텐츠 속성은 `OnIdiomExtension`합니다. 따라서 XAML 태그 식 중괄호를 사용 하 여 표현에서 제거할 수 있습니다는 `Default=` 첫 번째 인수는 제공 된 식의 일부입니다.
+
+> [!IMPORTANT]
+> XAML 파서를 사용 하는 속성에 올바른 형식의 값을 제공할 것는 예상 된 `OnIdiom` 태그 확장 합니다. 형식 변환이 필요한 경우는 `OnIdiom` Xamarin.Forms 제공한 기본 변환기를 사용 하 여 수행 하는 데 태그 확장 하려고 합니다. 그러나 이러한 경우 기본 변환기에서 수행할 수 없는 일부 형식 변환이 있습니다.는 `Converter` 속성에 설정할는 `IValueConverter` 구현 합니다.
+
+합니다 **OnIdiom 데모** 페이지를 사용 하는 방법을 보여 줍니다는 `OnIdiom` 태그 확장:
+
+```xaml
+<BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
+         WidthRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HeightRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HorizontalOptions="Center" />
+```
+
+이 예제에서는 모든 세 `OnIdiom` 식의 약식된 버전을 사용 합니다 `OnIdiomExtension` 클래스 이름입니다. 세 가지 `OnIdiom` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 전화, 태블릿 및 데스크톱 관용구의 다른 값입니다. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 코드에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
+
+다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+
+[![OnIdiom 데모](consuming-images/onidiomdemo-small.png "OnIdiom 데모")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom 데모")
+
 ## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장을 정의 합니다.
 
 Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장에 대 한 필요를 알리는 경우 할 수 있습니다 [직접 만들어보십시오](creating.md)합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

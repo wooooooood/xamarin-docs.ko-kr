@@ -4,14 +4,14 @@ description: SkiaSharp 비트맵 픽셀의 크기 및 가로 세로 비율을 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: cbe3166c4edb147f7179f2c719901b382db8ec80
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615316"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵을 표시합니다.
@@ -71,7 +71,7 @@ catch
 
 있음을 합니다 `Stream` 개체에서 가져온 `GetStreamAsync` 에 복사 됩니다는 `MemoryStream`합니다. Android 허용 하지 않습니다 합니다 `Stream` 에서 `HttpClient` 비동기 메서드에서 제외 하 고 주 스레드에서 처리 되도록 합니다. 
 
-[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) 은 많은 작업 수행:는 `Stream` 전달 된 개체를 일반적인 비트맵 파일 형식, 일반적으로 JPEG, PNG 또는 GIF 중 하나는 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
+[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) 은 많은 작업 수행:는 `Stream` 전달 된 개체를 일반적인 비트맵 파일 형식, 일반적으로 JPEG, PNG 또는 GIF 중 하나는 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
 
 코드 호출 후 `SKBitmap.Decode`, 아마도으로 무효화 됩니다 합니다 `CanvasView` 있도록는 `PaintSurface` 처리기 새로 로드 된 비트맵을 표시할 수 있습니다.
 
@@ -107,16 +107,16 @@ using (Stream stream = await picturePicker.GetImageStreamAsync())
 
 일반적으로 이러한 코드 무효화 합니다 `CanvasView` 있도록는 `PaintSurface` 처리기 새로운 비트맵을 표시할 수 있습니다.
 
-합니다 `SKBitmap` 클래스를 비롯 한 몇 가지 유용한 속성을 정의 [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) 하 고 [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/), 등 여러 방법 뿐만 아니라 비트맵의 픽셀 크기를 표시 하는 비트맵, 픽셀 비트를 노출 하 고 복사를 만드는 메서드를 제공 합니다. 
+합니다 `SKBitmap` 클래스를 비롯 한 몇 가지 유용한 속성을 정의 [ `Width` ](xref:SkiaSharp.SKBitmap.Width) 하 고 [ `Height` ](xref:SkiaSharp.SKBitmap.Height), 등 여러 방법 뿐만 아니라 비트맵의 픽셀 크기를 표시 하는 비트맵, 픽셀 비트를 노출 하 고 복사를 만드는 메서드를 제공 합니다. 
 
 ## <a name="displaying-in-pixel-dimensions"></a>픽셀 크기를 표시합니다.
 
-SkiaSharp [ `Canvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/) 4 클래스 정의 `DrawBitmap` 메서드. 이러한 메서드는 근본적으로 서로 다른 두 가지 방법으로 표시할 비트맵 허용: 
+SkiaSharp [ `Canvas` ](xref:SkiaSharp.SKCanvas) 4 클래스 정의 `DrawBitmap` 메서드. 이러한 메서드는 근본적으로 서로 다른 두 가지 방법으로 표시할 비트맵 허용: 
 
 - 지정 하는 `SKPoint` 값 (또는 별도 `x` 및 `y` 값) 해당 픽셀 크기의 비트맵을 표시 합니다. 비트맵의 픽셀은 비디오 디스플레이의 픽셀에 직접 매핑됩니다.
 - 사각형을 지정 하면 비트맵을 사각형 모양의 크기를 늘일 수 있습니다. 
 
-사용 하 여 해당 픽셀 크기의 비트맵을 표시 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKPoint/SkiaSharp.SKPaint/) 와 `SKPoint` 매개 변수 또는 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) 별도의 `x` 고 `y` 매개 변수:
+사용 하 여 해당 픽셀 크기의 비트맵을 표시 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKPoint,SkiaSharp.SKPaint)) 와 `SKPoint` 매개 변수 또는 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) 별도의 `x` 고 `y` 매개 변수:
 
 ```csharp
 DrawBitmap(SKBitmap bitmap, SKPoint pt, SKPaint paint = null)
@@ -126,7 +126,21 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 이러한 메서드와 기능적으로 동일 합니다. 지정된 된 지점 캔버스를 기준으로 비트맵의 왼쪽 위 모퉁이 위치를 나타냅니다. 모바일 장치의 픽셀 해상도 높아 이기 때문에 작은 비트맵은 일반적으로 이러한 장치에서 매우 작은 표시 합니다.
 
-선택적 `SKPaint` 매개 변수를 사용 하면 혼합 모드를 사용 하 여 비트맵을 표시 하거나 결과 필터링 합니다. 이러한 이후 기사에서 소개 합니다.
+선택적 `SKPaint` 매개 변수를 사용 하면 투명도 사용 하 여 비트맵을 표시할 수 있습니다. 이 작업을 수행 하려면 만듭니다는 `SKPaint` 개체 및 설정 합니다 `Color` 속성에 `SKColor` 값과 알파 채널 1 보다 작은. 예를 들어:
+
+```csharp
+paint.Color = new SKColor(0, 0, 0, 0x80);
+```
+
+마지막 인수로 전달 0x80 50% 투명도를 나타냅니다. 또한 미리 정의 된 색 중 하나에서 알파 채널을 설정할 수 있습니다.
+
+```csharp
+paint.Color = SKColors.Red.WithAlpha(0x80);
+```
+
+그러나 자체 색은 관련이 없습니다. 알파 채널에만 사용 하는 경우이 검사 됩니다 합니다 `SKPaint` 개체를 `DrawBitmap` 호출 합니다.
+
+`SKPaint` 표시 비트맵 사용 모드를 혼합 하거나 결과 필터링 하는 경우 또한 개체 역할을 수행 합니다. 문서에 설명 된 이러한 [SkiaSharp 합치기 및 혼합 모드](../effects/blend-modes/index.md) 하 고 [SkiaSharp 이미지 필터](../effects/image-filters.md)합니다.
 
 합니다 **픽셀 크기** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 320 x 240 픽셀 높은 있는 비트맵 리소스를 표시 하는 샘플 프로그램:
 
@@ -202,7 +216,7 @@ static class BitmapExtensions
 
 ## <a name="stretching-to-fill-a-rectangle"></a>사각형에 맞게 늘이기
 
-합니다 `SKCanvas` 클래스도 정의 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 사각형 및 다른 비트맵을 렌더링 하는 메서드 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 비트맵의 사각형 하위 집합을 렌더링 하는 메서드를 사각형:
+합니다 `SKCanvas` 클래스도 정의 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 사각형 및 다른 비트맵을 렌더링 하는 메서드 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 비트맵의 사각형 하위 집합을 렌더링 하는 메서드를 사각형:
 
 ```
 DrawBitmap(SKBitmap bitmap, SKRect dest, SKPaint paint = null)
@@ -242,7 +256,7 @@ public class FillRectanglePage : ContentPage
 }
 ```
 
-사용 하 여 새 `BitmapExtensions.LoadBitmapResource` 설정 하는 메서드는 `SKBitmap` 필드입니다. 대상 사각형에서 가져온 합니다 [ `Rect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Rect/) 속성의 `SKImageInfo`는 설치 화면 크기:
+사용 하 여 새 `BitmapExtensions.LoadBitmapResource` 설정 하는 메서드는 `SKBitmap` 필드입니다. 대상 사각형에서 가져온 합니다 [ `Rect` ](xref:SkiaSharp.SKImageInfo.Rect) 속성의 `SKImageInfo`는 설치 화면 크기:
 
 [![사각형을 채우는](displaying-images/FillRectangle.png "사각형 채우기")](displaying-images/FillRectangle-Large.png#lightbox)
 
@@ -649,6 +663,6 @@ public partial class ScalingModesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 

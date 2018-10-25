@@ -4,14 +4,14 @@ description: 이 문서는 효과 애니메이션 SkiaSharp 회전 변환을 사
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f34c64ca7c1bc9d0d0202f35602976364ab6075
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 3726a93ccf43fd9a2afdc2c46bb63e0f6ef7ad51
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615251"
 ---
 # <a name="the-rotate-transform"></a>회전 변환
@@ -22,7 +22,7 @@ SkiaSharp 그래픽 개체 회전 변환을 사용 하 여 가로 및 세로 축
 
 ![](rotate-images/rotateexample.png "중심으로 회전 된 텍스트")
 
-SkiaSharp 둘 다를 지 원하는 지점 (0, 0), 그래픽 개체를 회전 하는 것에 대 한는 [ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/) 메서드 및 [ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/) 메서드:
+SkiaSharp 둘 다를 지 원하는 지점 (0, 0), 그래픽 개체를 회전 하는 것에 대 한는 [ `RotateDegrees` ](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single)) 메서드 및 [ `RotateRadians` ](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single)) 메서드:
 
 ```csharp
 public void RotateDegrees (Single degrees)
@@ -30,9 +30,9 @@ public void RotateDegrees (Single degrees)
 public Void RotateRadians (Single radians)
 ```
 
-360도의 원 이므로 2 π 라디안 동일 단위 2 개와 간에 변환 하는 것이 쉽습니다. 더 편리 하 게 사용 합니다. 모든 삼각 함수는 정적에서 [ `Math` ](xref:System.Math) 라디안의 단위를 사용 하는 클래스입니다.
+360도의 원 단위 2 개와 간에 변환할 쉽게 twoπ 라디안와 같습니다. 더 편리 하 게 사용 합니다. .NET의 모든 삼각 함수 [ `Math` ](xref:System.Math) 라디안의 단위를 사용 하는 클래스입니다.
 
-회전 각도 높이기 위한 시계 방향으로 됩니다. (규칙에 따라 시계 반대 방향으로 회전 데카르트 좌표계에 경우에 시계 방향 회전은 아래로 진행을 증가 하는 Y 좌표를 사용 하 여 일관 된.) 각도 및 각도 360도 허용 되는 보다 큰 음수입니다.
+회전 각도 높이기 위한 시계 방향으로 됩니다. (규칙에 따라 시계 반대 방향으로 회전 데카르트 좌표계에 경우에 시계 방향 회전 일관성이 SkiaSharp와 같이 점차 증가 하는 Y 좌표를 사용 하 여.) 각도 및 각도 360도 허용 되는 보다 큰 음수입니다.
 
 회전 변환 수식 변환 및 확장에 대 한 것 보다 더 복잡 한 경우 Α의 각도 대 한 변환 수식은 다음과 같습니다.
 
@@ -40,7 +40,7 @@ x' x•cos(α) – = y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 
-합니다 **기본 회전** 페이지를 보여 줍니다는 `RotateDegrees` 메서드. 합니다 [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) 페이지의 가운데 기준선을 사용 하 여 일부 텍스트를 표시 하 고 기준으로 회전 하는 파일을 `Slider` 360 –360 범위를 사용 하 여 합니다. 관련 부분은 여기는 `PaintSurface` 처리기:
+합니다 **기본 회전** 페이지를 보여 줍니다는 `RotateDegrees` 메서드. 합니다 [ **BasicRotate.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) 페이지의 가운데 기준선을 사용 하 여 일부 텍스트를 표시 하 고 기준으로 회전 하는 파일을 `Slider` 360 –360 범위를 사용 하 여 합니다. 관련 부분은 여기는 `PaintSurface` 처리기:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -60,7 +60,7 @@ using (SKPaint textPaint = new SKPaint
 
 [![](rotate-images/basicrotate-small.png "기본 회전 페이지 스크린샷 삼중")](rotate-images/basicrotate-large.png#lightbox "삼중 기본 회전 페이지 스크린샷")
 
-이러한 버전을 사용 하 여 지정한 피벗 점을 중심 무언가 회전 해야 하는 자주 합니다 [ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/) 하 고 [ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/) 메서드:
+이러한 버전을 사용 하 여 지정한 피벗 점을 중심 무언가 회전 해야 하는 자주 합니다 [ `RotateDegrees` ](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single,System.Single,System.Single)) 하 고 [ `RotateRadians` ](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single,System.Single,System.Single)) 메서드:
 
 ```csharp
 public void RotateDegrees (Single degrees, Single px, Single py)
@@ -88,13 +88,13 @@ using (SKPaint textPaint = new SKPaint
 
 [![](rotate-images/centeredrotate-small.png "회전 중심 페이지 스크린샷 삼중")](rotate-images/centeredrotate-large.png#lightbox "삼중 회전 중심 페이지 스크린샷")
 
-가운데에 맞출지 버전의 경우와 마찬가지로 `Scale` 메서드, 가운데에 맞출지 버전을 `RotateDegrees` 호출 바로 가기입니다.
+가운데에 맞출지 버전과 마찬가지로 합니다 `Scale` 메서드, 가운데에 맞출지 버전을 `RotateDegrees` 호출 바로 가기입니다. 메서드는 다음과 같습니다.
 
 ```csharp
 RotateDegrees (degrees, px, py);
 ```
 
-이 식은 다음 식과 같습니다.
+호출 하는 다음과 같습니다.
 
 ```csharp
 canvas.Translate(px, py);
@@ -180,7 +180,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-합니다 `xCenter` 고 `yCenter` 값 캔버스의 중심을 나타냅니다. `yText` 값이 약간는 오프셋입니다. 이 실제로 세로 방향으로 페이지의 가운데에 배치 되도록 텍스트를 배치 하는 데 필요한 Y 좌표를 나타냅니다. `for` 루프에 설정한 중심 캔버스의 중심으로 회전 합니다. 30도 단위로 회전이 됩니다. 사용 하 여 텍스트를 그리는 `yText` 값입니다. "회전" 이라는 단어 앞에 있는 공백의 수는 `text` 값 표시를 dodecagon 이러한 12 텍스트 문자열 간의 연결을 만드는 데 알려지고 실험적으로 확인 되었습니다.
+합니다 `xCenter` 고 `yCenter` 값 캔버스의 중심을 나타냅니다. `yText` 값이 약간는 오프셋입니다. 이 값은 실제로 세로 방향으로 페이지의 가운데에 배치 되도록 텍스트를 배치 하는 데 필요한 Y 좌표입니다. `for` 루프 캔버스의 가운데에 따라 회전을 설정 합니다. 30도 단위로 회전이 됩니다. 사용 하 여 텍스트를 그리는 `yText` 값입니다. "회전" 이라는 단어 앞에 있는 공백의 수는 `text` 값 표시를 dodecagon 이러한 12 텍스트 문자열 간의 연결을 만드는 데 알려지고 실험적으로 확인 되었습니다.
 
 이 코드를 단순화 한 가지 방법으로 30도 회전 각도 후 루프가 반복 될 때마다 증가 하는 것은 `DrawText` 호출 합니다. 이에 대 한 호출에 대 한 필요가 `Save` 고 `Restore`입니다. 다음에 유의 합니다 `degrees` 변수 본문 내에서 더 이상 사용 되지를 `for` 블록:
 
@@ -253,7 +253,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-합니다 `revolveDegrees` 및 `rotateDegrees` 필드 애니메이션을 적용 합니다. 이 프로그램은 Xamarin.Forms에 따라 다양 한 애니메이션 기술을 사용 하 여 `Animation` 클래스입니다. (이 클래스에 설명 되어 [의 22 장 *Creating Mobile Apps with Xamarin.Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf))를 `OnAppearing` 재정의 만들고 두 `Animation` 콜백 메서드를 사용 하 여 개체를 설정한 다음 `Commit` 에 애니메이션 지속 시간에 대 한 합니다.
+합니다 `revolveDegrees` 및 `rotateDegrees` 필드 애니메이션을 적용 합니다. 이 프로그램은 Xamarin.Forms에 따라 다양 한 애니메이션 기술을 사용 하 여 [ `Animation` ](xref:Xamarin.Forms.Animation) 클래스입니다. (이 클래스에 설명 되어 [의 22 장 *Creating Mobile Apps with Xamarin.Forms*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf))를 `OnAppearing` 재정의 만들고 두 `Animation` 콜백 메서드를 사용 하 여 개체를 설정한 다음 `Commit` 에 애니메이션 지속 시간에 대 한 합니다.
 
 ```csharp
 protected override void OnAppearing()
@@ -271,7 +271,7 @@ protected override void OnAppearing()
 }
 ```
 
-첫 번째 `Animation` 개체에 애니메이션을 적용 `revolveDegrees` 0 ~ 360도 10 초 이상. 두 번째 애니메이션 효과 줍니다 `rotateDegrees` 360도 0에서 1 개당 그리고 두 번째 화면을 무효화 합니다에 다른 호출을 생성 하는 `PaintSurface` 처리기입니다. `OnDisappearing` 재정의 이러한 두 애니메이션을 취소 합니다.
+첫 번째 `Animation` 개체에 애니메이션을 적용 `revolveDegrees` 0도에서 360도 10 초 이상에서. 두 번째 애니메이션 효과 줍니다 `rotateDegrees` 360도 0도에서 1 개당 그리고 두 번째 화면을 무효화 합니다에 다른 호출을 생성 하는 `PaintSurface` 처리기입니다. `OnDisappearing` 재정의 이러한 두 애니메이션을 취소 합니다.
 
 ```csharp
 protected override void OnDisappearing()
@@ -311,9 +311,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         ...
     }
 }
+```
 
-```csharp
-There are 60 marks of two different sizes that must be drawn in a circle around the clock. The `DrawCircle` call draws that circle at the point (0, –90), which relative to the center of the clock corresponds to 12:00. The `RotateDegrees` call increments the rotation angle by 6 degrees after every tick mark. The `angle` variable is used solely to determine if a large circle or a small circle is drawn:
+내내 원 안에 그려져 야 하는 두 가지 크기의 60 표시가 있습니다. `DrawCircle` 호출 시계의 가운데를 기준으로 12:00에 해당 하는 지점 (0, –90)에서 해당 원을 그립니다. `RotateDegrees` 호출 마다 눈금 후 6 도씩 회전 각도 증가 시킵니다. `angle` 변수는 데만 큰 원이나 작은 원을 그릴 경우를 결정 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -366,8 +366,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](rotate-images/uglyanalogclock-small.png "Triple 까다로운 아날로그 클록 텍스트 페이지의 스크린샷")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
+더 매력적인 클록에 대 한 문서를 참조 [ **SVG 경로 데이터에서 SkiaSharp**](../curves/path-data.md)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

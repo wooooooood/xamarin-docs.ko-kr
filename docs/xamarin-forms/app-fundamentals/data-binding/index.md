@@ -6,12 +6,12 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/16/2018
-ms.openlocfilehash: 60bf0bdc5f1a4472dfd12424c3cc0375d3f34c24
-ms.sourcegitcommit: 11c1df7594064e4e141470e092e55cc50c138068
+ms.date: 10/23/2018
+ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "35240355"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
@@ -64,6 +64,10 @@ Xamarin.Forms 응용 프로그램을 하나 이상의 페이지를 호출 하는
 ## <a name="the-command-interfacecommandingmd"></a>[명령 인터페이스](commanding.md)
 
 구현 된 `Command` 데이터 바인딩 사용 하 여 속성입니다.
+
+## <a name="compiled-bindingscompiled-bindingsmd"></a>[컴파일된 바인딩](compiled-bindings.md)
+
+데이터 바인딩 성능 향상을 위해 컴파일된 바인딩을 사용 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

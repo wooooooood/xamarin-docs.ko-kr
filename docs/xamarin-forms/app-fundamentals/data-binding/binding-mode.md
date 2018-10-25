@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: a6eaf08d17f70c43f451361e27555a09c39f26a9
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 420c1de0691de419180dd497a9031ea5e7dd1054
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "37935669"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
@@ -312,6 +312,9 @@ ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리
 ```
 
 이제는 `Slider` 1로 초기화 됩니다 (기본값인 `Scale`) 하지만 조작 하기는 `Slider` 영향을 주지 않습니다는 `Scale` 속성,이 기능은 매우 유용 합니다.
+
+> [!NOTE]
+> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스도 정의 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 확장 될 수 있는 속성을 `VisualElement` 에서 다르게는 가로 및 세로 방향입니다.
 
 사용 하 여 기본 바인딩 모드를 재정의 하는 매우 유용한 응용 프로그램 `TwoWay` 포함 된 `SelectedItem` 의 속성 `ListView`합니다. 기본 바인딩 모드는 `OneWayToSource`합니다. 에 데이터 바인딩이 설정 된 경우는 `SelectedItem` 소스 속성에서 설정 됩니다는 ViewModel에 소스 속성을 참조할 속성을 `ListView` 선택 합니다. 그러나 일부 경우에 필요할 수 있습니다는 `ListView` ViewModel에서 초기화 되어야 합니다.
 

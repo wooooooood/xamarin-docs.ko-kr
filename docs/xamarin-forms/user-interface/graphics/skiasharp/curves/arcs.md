@@ -4,14 +4,14 @@ description: 이 문서에서는 SkiaSharp를 사용 하 여 세 가지 방법�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: e862a663b35124c1470ae5239c93409c298b19ba
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615407"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 세 가지 방법으로
@@ -24,11 +24,11 @@ _SkiaSharp를 사용 하 여 세 가지 방법으로 타원을 정의 하는 방
 
 해당 정의의 단순성에도 불구 하 고는 모든 요구를 충족 하는 호 그리기 함수를 정의할 수 없습니다 및 따라서는 가장 좋은 방법은 호를 그릴 그래픽 시스템 간에 합의 되지 않습니다. 이러한 이유로 `SKPath` 하나만 방법 자체를 클래스에 제한 하지 않습니다.
 
-`SKPath` 정의 `AddArc` 메서드를 서로 다른 5 `ArcTo` 메서드 및 두 명의 상대 `RArcTo` 메서드. 이러한 메서드는 호를 지정 하 세 가지 매우 다양 한 방법을 나타내는 세 가지 범주로 나뉩니다. 것을 사용할지는 호의 및이 호 다른 그래픽을 그리는 연동 하는 방법을 정의 하는 제공 되는 정보에 따라 달라 집니다.
+`SKPath` 정의 [ `AddArc` ](xref:SkiaSharp.SKPath.AddArc*) 메서드를 서로 다른 5 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo*) 메서드 및 두 명의 상대 [ `RArcTo` ](xref:SkiaSharp.SKPath.RArcTo*) 메서드. 이러한 메서드는 호를 지정 하 세 가지 매우 다양 한 방법을 나타내는 세 가지 범주로 나뉩니다. 것을 사용할지는 호의 및이 호 다른 그래픽을 그리는 연동 하는 방법을 정의 하는 제공 되는 정보에 따라 달라 집니다.
 
 ## <a name="the-angle-arc"></a>각도 호
 
-타원 그리기 각도 호 접근 방식은 타원을 제한 하는 사각형을 지정 하는 필요 합니다. 이 타원의 호는 호의 길이의 시작 부분을 만드는 타원의 중심에서 각도으로 표시 됩니다. 두 가지 방법이 각도 호를 그립니다. 이들은 합니다 [ `AddArc` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) 메서드 및 [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKRect/System.Single/System.Single/System.Boolean/) 메서드:
+타원 그리기 각도 호 접근 방식은 타원을 제한 하는 사각형을 지정 하는 필요 합니다. 이 타원의 호 시작 호 및 해당 길이 나타내는 타원의 가운데에서 각도으로 표시 됩니다. 두 가지 방법이 각도 호를 그립니다. 이들은 합니다 [ `AddArc` ](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) 메서드 및 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKRect,System.Single,System.Single,System.Boolean)) 메서드:
 
 ```csharp
 public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
@@ -44,15 +44,15 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 이 타원의 원 둘레의 일부인 호입니다.
 
-`startAngle` 인수는 오른쪽에는 타원의 중심에서 가져온 가로줄을 기준으로 시계 방향의 각도입니다. 합니다 `sweepAngle` 인수는 기준으로 `startAngle`합니다. 다음과 같습니다 `startAngle` 고 `sweepAngle` 값 60 및 100 각도 각각.
+`startAngle` 인수는 오른쪽에는 타원의 중심에서 가져온 가로줄을 기준으로 시계 방향의 각도입니다. 합니다 `sweepAngle` 인수는 기준으로 `startAngle`합니다. 다음과 같습니다 `startAngle` 고 `sweepAngle` 60도의 및 100도 각각 값:
 
 ![](arcs-images/anglearcangles.png "각도 호를 정의 하는 각도")
 
-호의 시작 각도 시작 합니다. 스윕 각도 길이가 적용 됩니다.
+호의 시작 각도 시작 합니다. 스윕 각도 길이가 적용 됩니다. 호는 빨간색으로 다음과 같습니다.
 
 ![](arcs-images/anglearchighlight.png "강조 표시 된 각도 호")
 
-곡선 경로 추가 합니다 `AddArc` 또는 `ArcTo` 메서드는 단순히 원주 타원의 빨간색에서 여기에 표시 된 부분:
+곡선 경로 추가 합니다 `AddArc` 또는 `ArcTo` 메서드는 단순히 원주 타원의 부분:
 
 ![](arcs-images/anglearc.png "자체적으로 각도 호")
 
@@ -216,7 +216,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 두 번째 호에서 지 원하는 유형의 `SKPath` 은 *탄젠트 호*, 소위 다음 호는 두 개의 연결 된 선 탄젠트 원의 원주 때문에.
 
-탄젠트 호를 호출 하 여 경로에 추가 됩니다는 [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) 두 개를 사용 하 여 메서드 `SKPoint` 매개 변수 또는 [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) 별도의 오버 로드 `Single` 에 대 한 매개 변수는 사항은 다음과 같습니다.
+탄젠트 호를 호출 하 여 경로에 추가 됩니다는 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) 두 개를 사용 하 여 메서드 `SKPoint` 매개 변수 또는 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) 별도의 오버 로드 `Single` 에 대 한 매개 변수는 사항은 다음과 같습니다.
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -224,7 +224,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-이렇게 `ArcTo` 메서드는 포스트 스크립트는 비슷합니다 [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (PDF 문서에서 페이지 532) 함수 및 iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) 메서드.
+이렇게 `ArcTo` 메서드는 포스트 스크립트는 비슷합니다 [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) (페이지 532) 함수 및 iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) 메서드.
 
 `ArcTo` 방법은 세 지점:
 
@@ -250,7 +250,7 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 
 ![](arcs-images/tangentarctangentcircle.png "두 줄 사이의 탄젠트 호 원")
 
-윤곽선에 추가 되는 곡선을 건드리지 않습니다에 지정 된 지점 중 하나는 `ArcTo` 메서드. 첫 번째 탄젠트 점, 두 번째 탄젠트 점에서 끝나는 호를 현재 위치에서 직선의 구성 됩니다.
+윤곽선에 추가 되는 곡선을 건드리지 않습니다에 지정 된 지점 중 하나는 `ArcTo` 메서드. 첫 번째 탄젠트 지점, 빨간색으로 여기 표시 된 두 번째 탄젠트 점에서 끝나는 호를 현재 위치에서 직선의 구성 됩니다.
 
 ![](arcs-images/tangentarchighlight.png "두 줄 사이의 강조 표시 된 탄젠트 호")
 
@@ -493,7 +493,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="the-elliptical-arc"></a>타원형 원호
 
-타원형 호를 호출 하 여 경로에 추가 됩니다는 [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/SkiaSharp.SKPoint/) 두 변수가 있는 메서드에 `SKPoint` 매개 변수 또는 [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/System.Single/System.Single/) 별도 X와 Y 좌표 오버 로드:
+타원형 호를 호출 하 여 경로에 추가 됩니다는 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) 두 변수가 있는 메서드에 `SKPoint` 매개 변수 또는 [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) 별도 X와 Y 좌표 오버 로드:
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -503,7 +503,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 타원형 호는 일치 하는 [타원형 호](http://www.w3.org/TR/SVG11/paths.html#PathDataEllipticalArcCommands) 확장성 SVG (벡터 그래픽) 및 유니버설 Windows 플랫폼에 포함 된 [ `ArcSegment` ](/uwp/api/Windows.UI.Xaml.Media.ArcSegment/) 클래스입니다.
 
-이러한 `ArcTo` 메서드 윤곽선의 현재 지점 인 두 점 사이의 호를 그립니다 및 마지막 매개 변수를 `ArcTo` 메서드 (합니다 `xy` 매개 변수 또는 별도 `x` 및 `y` 매개 변수):
+이러한 `ArcTo` 메서드는 윤곽선의 현재 지점 두 점 사이의 호를 그립니다 및 마지막 매개 변수를 `ArcTo` 메서드 (합니다 `xy` 매개 변수 또는 별도 `x` 및 `y` 매개 변수):
 
 ![](arcs-images/ellipticalarcpoints.png "타원형 호를 정의 하는 두 지점")
 
@@ -531,7 +531,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 ![](arcs-images/ellipticalarccolors.png "모든 4 개의 타원형 원호")
 
-이러한 4 개의 타원의 4 가지 조합으로 구분 됩니다는 [ `SKPathArcSize` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathArcSize/) 하 고 [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/) 열거형 형식 인수가 `ArcTo` 메서드:
+이러한 4 개의 타원의 4 가지 조합으로 구분 됩니다는 [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) 하 고 [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) 열거형 형식 인수가 `ArcTo` 메서드:
 
 - 빨간색: SKPathArcSize.Large 및 SKPathDirection.Clockwise
 - 녹색: SKPathArcSize.Small 및 SKPathDirection.Clockwise
@@ -662,10 +662,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](arcs-images/arcinfinitytightbounds-small.png "긴밀 하 게 범위를 사용 하 여 원호 무한대 페이지 스크린샷 삼중")](arcs-images/arcinfinitytightbounds-large.png#lightbox "삼중 긴밀 하 게 범위를 사용 하 여 원호 무한대 페이지 스크린샷")
 
-직선 원호 사이의 연결을 수학적으로 부드러운 이지만, 직선 호에서 변경 잠시 갑작스러운 보일 수 있습니다. 더 나은 무한대 기호를 다음 페이지에 표시 됩니다.
-
+직선 원호 사이의 연결을 수학적으로 부드러운 이지만, 직선 호에서 변경 잠시 갑작스러운 보일 수 있습니다. 더 나은 무한대 기호를 다음 문서에 표시 됩니다 [ **베 지 어 곡선의 세 가지 형식**](beziers.md)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

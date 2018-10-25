@@ -1,20 +1,20 @@
 ---
-title: SkiaSharp 픽셀 비트에 액세스
+title: SkiaSharp 비트맵 픽셀 비트에 액세스
 description: 액세스 하 고 SkiaSharp 비트맵의 픽셀 비트를 수정 하는 다양 한 기술을 검색 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 5d79dd89b5313d5d7ead665c54e9a27026cea38c
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615628"
 ---
-# <a name="accessing-skiasharp-pixel-bits"></a>SkiaSharp 픽셀 비트에 액세스
+# <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트에 액세스
 
 이 문서에서 볼 수 있듯이 [ **파일에 저장 SkiaSharp 비트맵**](saving.md), 비트맵은 일반적으로 압축 된 형식으로 JPEG 또는 PNG와 같은 파일에 저장 됩니다. 이와 달리 SkiaSharp 비트맵 메모리에 저장 된 압축 되지 않습니다. 픽셀의 순차적으로 저장 됩니다. 압축 되지 않은 형식으로 표시 화면에 비트맵의 전송을 지원합니다.
 
@@ -39,7 +39,7 @@ SkiaSharp는 비트맵의 픽셀 비트에 액세스 하기 위한 몇 가지 �
 
 ### <a name="the-setpixel-method"></a>SetPixel 메서드
 
-해야 할 경우만 여러 개별 픽셀을 가져오거나 설정 합니다 [ `SetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixel/p/System.Int32/System.Int32/SkiaSharp.SKColor/) 및 [ `GetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixel/p/System.Int32/System.Int32/) 방법이 적합 합니다. 이러한 두 가지 방법 중 각각에 대 한 정수 열 및 행을 지정합니다. 픽셀 형식에 관계 없이 이러한 두 가지 방법 있습니다 얻거나 설정으로 픽셀을 `SKColor` 값:
+해야 할 경우만 여러 개별 픽셀을 가져오거나 설정 합니다 [ `SetPixel` ](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) 및 [ `GetPixel` ](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) 방법이 적합 합니다. 이러한 두 가지 방법 중 각각에 대 한 정수 열 및 행을 지정합니다. 픽셀 형식에 관계 없이 이러한 두 가지 방법 있습니다 얻거나 설정으로 픽셀을 `SKColor` 값:
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -85,7 +85,7 @@ public class GradientBitmapPage : ContentPage
 
 ### <a name="the-pixels-property"></a>픽셀 속성
 
-`SKBitmap` 정의 된 [ `Pixels` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Pixels/) 배열을 반환 하는 속성 `SKColor` 전체 비트맵에 대 한 값입니다. 사용할 수도 있습니다 `Pixels` 비트맵의 색 값의 배열을 설정 합니다.
+`SKBitmap` 정의 된 [ `Pixels` ](xref:SkiaSharp.SKBitmap.Pixels) 배열을 반환 하는 속성 `SKColor` 전체 비트맵에 대 한 값입니다. 사용할 수도 있습니다 `Pixels` 비트맵의 색 값의 배열을 설정 합니다.
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -129,7 +129,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
 ### <a name="the-getpixels-pointer"></a>GetPixels 포인터
 
-비트맵 픽셀 액세스에 대 한 가장 강력한 방법은 잠재적 [ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixels()/), 혼동 해서는 합니다 `GetPixel` 메서드 또는 `Pixels` 속성. 사용 하 여 차이점을 즉시 확인할 수 있습니다 `GetPixels` 는 반환 되는 C# 프로그래밍에서 매우 흔하게 없습니다.
+비트맵 픽셀 액세스에 대 한 가장 강력한 방법은 잠재적 [ `GetPixels` ](xref:SkiaSharp.SKBitmap.GetPixels), 혼동 해서는 합니다 `GetPixel` 메서드 또는 `Pixels` 속성. 사용 하 여 차이점을 즉시 확인할 수 있습니다 `GetPixels` 는 반환 되는 C# 프로그래밍에서 매우 흔하게 없습니다.
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
@@ -145,7 +145,7 @@ byte* ptr = (byte*)pixelsAddr.ToPointer();
 
 합니다 `ptr` 형식의 변수가 _바이트 포인터_합니다. 이 `ptr` 변수를 사용 하면 비트맵의 픽셀을 저장 하는 데 사용 되는 메모리의 개별 바이트를 액세스할 수 있습니다. 이 메모리에서 바이트를 읽거나 메모리 바이트를 쓸 다음과 같은 코드를 사용 합니다.
 
-```sharp
+```csharp
 byte pixelComponent = *ptr;
 
 *ptr = pixelComponent;
@@ -282,7 +282,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 
 ### <a name="the-setpixels-method"></a>SetPixels 메서드
 
-`SKBitmap` 또한 라는 메서드를 정의 [ `SetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixels/p/System.IntPtr/)를 다음과 같이 호출 하는:
+`SKBitmap` 또한 라는 메서드를 정의 [ `SetPixels` ](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr))를 다음과 같이 호출 하는:
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -741,7 +741,55 @@ public partial class ColorAdjustmentPage : ContentPage
 
 이 방법의 성능은 다양 한 원본 및 대상 비트맵의 색 형식 조합에 대 한 별도 메서드를 만들어 훨씬 더 향상 될 수 없습니다 하 고 모든 픽셀에 대 한 형식 검사 하지 않고 가능성이 있습니다. 또 다른 옵션은 여러 개의 `for` 에 대 한 루프를 `col` 변수 형식을 기반으로 색입니다.
 
+## <a name="posterization"></a>포스터화
+
+픽셀 비트 액세스를 포함 하는 또 다른 일반적인 작업 되 _포스터화_합니다. 비트맵의 픽셀 색 인코딩된 경우 수 결과 유사한 제한 된 색상표를 사용 하 여 손으로 그린 포스터 있도록 줄어듭니다.
+
+합니다 **포스터화** 페이지 monkey 이미지 중 하나에 대해이 프로세스를 수행 합니다.
+
+```csharp
+public class PosterizePage : ContentPage
+{
+    SKBitmap bitmap =
+        BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
+                                            "SkiaSharpFormsDemos.Media.Banana.jpg");
+    public PosterizePage()
+    {
+        Title = "Posterize";
+
+        unsafe
+        {
+            uint* ptr = (uint*)bitmap.GetPixels().ToPointer();
+            int pixelCount = bitmap.Width * bitmap.Height;
+
+            for (int i = 0; i < pixelCount; i++)
+            {
+                *ptr++ &= 0xE0E0E0FF; 
+            }
+        }
+
+        SKCanvasView canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+        canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform;
+    }
+}
+```
+
+생성자의 코드 0xE0E0E0FF, 값을 사용 하 여 비트 AND 연산을 수행 하며 비트맵에 다시 결과 저장 한 다음 각 픽셀에 액세스 합니다. 0xE0E0E0FF 값 각 색 구성 요소의 상위 3 비트를 유지 하 고 하위 5 비트를 0으로 설정 합니다. 2는 대신<sup>24</sup> 16777216 색 비트맵을 2로 감소 하거나<sup>9</sup> 또는 512 색:
+
+[![포스터](pixel-bits-images/Posterize.png "포스터")](pixel-bits-images/포스터-Large.png#lightbox)
+
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

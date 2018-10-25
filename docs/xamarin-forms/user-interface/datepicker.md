@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms DatePicker
-description: DatePicker 날짜를 선택할 수 있도록 Xamarin.Forms 뷰입니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 DatePicker를 사용 하는 방법을 설명 합니다.
+description: DatePicker은 날짜를 선택할 수 있는 Xamarin.Forms 뷰입니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 DatePicker를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7917510e910223fc6ca276bf47b1878c19557a38
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994928"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-_날짜를 선택할 수 있도록 하는 Xamarin.Forms 뷰_
+_날짜를 선택할 수 있도록 하는 Xamarin.Forms 뷰._
 
 Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) 플랫폼의 날짜 선택 컨트롤을 호출 하 고 사용자가 날짜를 선택할 수 있습니다. `DatePicker` 8 가지 속성을 정의합니다.
 
@@ -184,6 +184,9 @@ public partial class MainPage : ContentPage
 탭 중 하나는 `DatePicker` 플랫폼 날짜 선택기를 호출 하는 표시 됩니다. 매우 다양 한 방식에서이 날짜 선택기를 구현 하는 세 가지 플랫폼 이지만 각 접근 방식은 해당 플랫폼의 사용자에 게 친숙 합니다.
 
 [![날짜 사이의 날짜 선택](datepicker-images/DaysBetweenDatesSelect.png "날짜 사이의 날짜 선택")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "날짜 사이의 날짜 선택")
+
+> [!TIP]
+> Android에서 `DatePicker` 재정의 하 여 대화 상자를 사용자 지정할 수 있습니다는 `CreateDatePickerDialog` 사용자 지정 렌더러에서 메서드. 이 사용 하면 예를 들어 대화 상자에 추가할 추가 단추입니다.
 
 두 날짜를 선택한 후 응용 프로그램에는 해당 날짜 사이의 일 수가 표시 됩니다.
 

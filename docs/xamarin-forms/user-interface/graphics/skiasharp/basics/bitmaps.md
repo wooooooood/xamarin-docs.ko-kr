@@ -4,14 +4,14 @@ description: 이 문서는 다양 한 원본에서 SkiaSharp 비트맵을 로드
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 92863ff9e843cabc26c568e95aab52c6d199c35e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 7732bc2ea9a9c5a896b27ca9bd73433ecdcfd9fa
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615212"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
@@ -24,7 +24,7 @@ SkiaSharp 비트맵의 지원이 매우 광범위 하 게 됩니다. 이 문서�
 
 비트맵의 많은 심층적 탐색을 섹션에서 찾을 수 있습니다 [SkiaSharp 비트맵](../bitmaps/index.md)합니다.
 
-SkiaSharp 비트맵 형식의 개체인 [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)합니다. 여러 가지 방법으로 비트맵을 만들 수 있지만이 문서에서는 자체를 제한 합니다 [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) .NET에서 비트맵을 로드 하는 메서드를 `Stream` 개체입니다.
+SkiaSharp 비트맵 형식의 개체인 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap)합니다. 여러 가지 방법으로 비트맵을 만들 수 있지만이 문서에서는 자체를 제한 합니다 [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) .NET에서 비트맵을 로드 하는 메서드를 `Stream` 개체입니다.
 
 합니다 **기본 비트맵** 페이지에 **SkiaSharpFormsDemos** 프로그램에는 세 가지 소스에서 비트맵을 로드 하는 방법을 보여 줍니다.:
 
@@ -94,13 +94,13 @@ protected override async void OnAppearing()
 }
 ```
 
-Android에서 사용 하는 경우 예외가 발생 합니다 `Stream` 에서 반환 된 `GetStreamAsync` 에 `SKBitmap.Decode` 메서드 주 스레드에서 시간이 많이 걸리는 작업을 수행 하기 때문에. 비트맵 파일의 내용을 복사할 따라서이 `MemoryStream` 개체를 사용 하 여 `CopyToAsync`입니다.
+Android 운영 체제를 사용할 때 예외가 발생 합니다 `Stream` 에서 반환 된 `GetStreamAsync` 에서 `SKBitmap.Decode` 메서드 주 스레드에서 시간이 많이 걸리는 작업을 수행 하기 때문에. 비트맵 파일의 내용을 복사할 따라서이 `MemoryStream` 개체를 사용 하 여 `CopyToAsync`입니다.
 
-정적 `SKBitmap.Decode` 메서드는 비트맵 파일 디코딩 작업을 담당 합니다. JPEG, PNG, GIF, 및 기타 여러 가지 인기 있는 비트맵 형식으로 작동 하 고 내부 SkiaSharp 형식으로 결과 저장 합니다. 이 시점에서 `SKCanvasView` 있도록 무효화 해야 하는 경우는 `PaintSurface` 처리기 디스플레이를 업데이트 합니다. 
+정적 `SKBitmap.Decode` 메서드는 비트맵 파일 디코딩 작업을 담당 합니다. 비트맵 형식으로 JPEG, PNG 및 GIF를 사용 하 여 작동 하 고 내부 SkiaSharp 형식으로 결과 저장 합니다. 이 시점에서 `SKCanvasView` 있도록 무효화 해야 하는 경우는 `PaintSurface` 처리기 디스플레이를 업데이트 합니다. 
 
 ## <a name="loading-a-bitmap-resource"></a>비트맵 리소스를 로드합니다.
 
-코드 측면에서 비트맵을 로드 하는 가장 쉬운 방법은 비트맵 리소스를 포함 하 여 응용 프로그램에서 직접 됩니다. 합니다 **SkiaSharpFormsDemos** 라는 폴더를 포함 하는 프로그램 **미디어** 비트맵 파일 이름이 포함 된 **monkey.png**합니다. 에 **속성** 대화 상자가이 파일에 대해 이러한 파일을 제공 해야 합니다는 **빌드 작업** 의 **포함 된 리소스**!
+코드 측면에서 비트맵을 로드 하는 가장 쉬운 방법은 비트맵 리소스를 포함 하 여 응용 프로그램에서 직접 됩니다. 합니다 **SkiaSharpFormsDemos** 라는 폴더를 포함 하는 프로그램 **Media** 라는 하나를 포함 하 여 파일, 비트맵 몇 개 포함 **monkey.png**합니다. 프로그램 리소스로 저장 하는 비트맵을 사용 해야 합니다 **속성** 파일에는 대화는 **빌드 작업** 의 **포함 리소스**!
 
 각 포함된 리소스에는 *리소스 ID* 프로젝트 이름, 폴더 및 마침표로 연결 된 모든 파일 이름으로 이루어진: **SkiaSharpFormsDemos.Media.monkey.png**합니다. 해당 리소스를 지정 하 여이 리소스에 대 한 액세스를 얻을 수 있습니다 인수로 ID는 [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) 메서드를 [ `Assembly` ](xref:System.Reflection.Assembly) 클래스:
 
@@ -122,7 +122,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 **IPhotoLibrary.cs** 파일을 **SkiaSharpFormsDemos** 프로젝트 및 세 가지 **PhotoLibrary.cs** 플랫폼 프로젝트에서에서 파일에 문서에서 변형 되었습니다. 또한 Android **MainActivity.cs** 문서에 설명 된 대로 파일이 수정 되었는지 및 iOS 프로젝트에 두 줄의 아래쪽에 사진 라이브러리에 액세스할 수 있는 권한이 부여 된를 **info.plist**  파일입니다.
 
-`BasicBitmapsPage` 추가 하는 생성자를 `TapGestureRecognizer` 에 `SKCanvasView` 탭의 알림을 받을. 탭에는 `Tapped` 처리기는 그림 선택 종속성 서비스 및 호출에 대 한 액세스를 가져옵니다 `GetImageStreamAsync`합니다. 경우는 `Stream` 개체가 반환 되 면 다음 내용을 복사 됩니다는 `MemoryStream`플랫폼의 일부 필요에 따라 합니다. 코드의 나머지는 다른 두 기술을 비슷합니다.
+`BasicBitmapsPage` 추가 하는 생성자를 `TapGestureRecognizer` 에 `SKCanvasView` 탭의 알림을 받을. 탭에는 `Tapped` 처리기는 그림 선택 종속성 서비스 및 호출에 대 한 액세스를 가져옵니다 `PickPhotoAsync`합니다. 경우는 `Stream` 개체가 반환 되 면 다음에 전달 되는 `SKBitmap.Decode` 메서드:
 
 ```csharp
 // Add tap gesture recognizer
@@ -144,21 +144,21 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-있음을 합니다 `Tapped` 처리기 호출을 `InvalidateSurface` 메서드의 `SKCanvasView` 개체. 이에 대 한 새 호출을 생성 합니다 `PaintSurface` 처리기입니다.
+있음을 `Tapped` 처리기도 호출 합니다 `InvalidateSurface` 메서드의 `SKCanvasView` 개체입니다. 이에 대 한 새 호출을 생성 합니다 `PaintSurface` 처리기입니다.
 
 ## <a name="displaying-the-bitmaps"></a>비트맵을 표시합니다.
 
 `PaintSurface` 처리기가 세 가지 비트맵을 표시 해야 합니다. 처리기 휴대폰 세로 모드일 캔버스를 세 부분으로 세로로 분할 되었다고 가정 합니다.
 
-첫 번째 비트맵 가장 간단한를 사용 하 여 표시 됩니다 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) 메서드. 지정 하면 다음과 같습니다. X 및 Y 좌표를 비트맵의 왼쪽 위 모퉁이 위치 하 게 되는 위치
+첫 번째 비트맵 가장 간단한를 사용 하 여 표시 됩니다 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드. 지정 하면 다음과 같습니다. X 및 Y 좌표를 비트맵의 왼쪽 위 모퉁이 위치 하 게 되는 위치
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-하지만 `SKPaint` 매개 변수를 정의 기본값은 `null` 및 무시할 수 있습니다. 일대일 매핑을 통해을 디스플레이 화면의 픽셀 비트맵의 픽셀 전송 하기만 하면 됩니다.
+하지만 `SKPaint` 매개 변수를 정의 기본값은 `null` 및 무시할 수 있습니다. 일대일 매핑을 통해을 디스플레이 화면의 픽셀 비트맵의 픽셀 전송 하기만 하면 됩니다. 이 응용 프로그램을 볼 `SKPaint` 의 다음 섹션에서 인수 [ **SkiaSharp 투명도**](transparency.md)합니다.
 
-프로그램을 사용 하 여 비트맵의 픽셀 크기를 가져올 수는 [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) 하 고 [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/) 속성입니다. 이러한 속성에 비트맵 캔버스의 위 / 3의 가운데에 배치 하는 좌표를 계산 하려면 프로그램 허용:
+프로그램을 사용 하 여 비트맵의 픽셀 크기를 가져올 수는 [ `Width` ](xref:SkiaSharp.SKBitmap.Width) 하 고 [ `Height` ](xref:SkiaSharp.SKBitmap.Height) 속성입니다. 이러한 속성에 비트맵 캔버스의 위 / 3의 가운데에 배치 하는 좌표를 계산 하려면 프로그램 허용:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -179,13 +179,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다른 두 비트맵의 버전으로 표시 됩니다 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 사용 하 여는 `SKRect` 매개 변수:
+다른 두 비트맵의 버전으로 표시 됩니다 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 사용 하 여는 `SKRect` 매개 변수:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 ```
 
-세 번째 버전의 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 에 두 개의 `SKRect` 표시 되지만 해당 버전에 비트맵의 사각형 하위 집합을 지정 하는 것에 대 한 인수는이 문서에서 사용 되지 않습니다.
+세 번째 버전의 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 에 두 개의 `SKRect` 표시 되지만 해당 버전에 비트맵의 사각형 하위 집합을 지정 하는 것에 대 한 인수는이 문서에서 사용 되지 않습니다.
 
 포함된 리소스 비트맵에서 로드 하는 비트맵을 표시 하는 코드는 다음과 같습니다.
 
@@ -243,9 +243,10 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 비트맵이 없습니다 아직 그림 라이브러리에서 로드 된 경우 해당 `else` 블록 텍스트 화면을 누릅니다 하 라는 메시지를 표시 합니다.
 
+다양 한 수준의 투명도 및에 대 한 다음 문서를 사용 하 여 비트맵을 표시할 수 있습니다 [ **SkiaSharp 투명도** ](transparency.md) 에 대해 설명 하는 방법입니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [사진 그림 라이브러리에서 선택](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

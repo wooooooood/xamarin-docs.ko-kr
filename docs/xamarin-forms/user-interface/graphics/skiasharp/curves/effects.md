@@ -4,21 +4,21 @@ description: 이 문서에서는 샘플 코드를 사용 하 여이 보여 줍�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 28f628fb4e8ab77e9c36e6e1972d7269ad0dad4d
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615680"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
 
 _선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 효과 검색 합니다._
 
-A *경로 효과* 의 인스턴스를 [ `SKPathEffect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathEffect/) 8 정적 중 하나를 사용 하 여 만든 클래스 `Create` 메서드. `SKPathEffect` 개체 설정 됩니다는 [ `PathEffect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.PathEffect/) 속성을 `SKPaint` 작은 복제 경로 사용 하 여 줄을 따라 다양 한 예를 들어, 흥미로운 효과 대 한 개체:
+A *경로 효과* 의 인스턴스를 [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) 클래스에 의해 정의 되는 8 개의 정적 생성 방법 중 하나를 사용 하 여 만든 클래스입니다. `SKPathEffect` 개체 설정 됩니다는 [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) 속성을 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 작은 복제 경로 사용 하 여 줄을 따라 다양 한 예를 들어, 흥미로운 효과 대 한 개체 :
 
 ![](effects-images/patheffectsample.png "연결 된 체인 샘플")
 
@@ -33,11 +33,11 @@ A *경로 효과* 의 인스턴스를 [ `SKPathEffect` ](https://developer.xamar
 
 또한 둘 이상의 경로 효과 결합할 수 있습니다.
 
-이 문서에 사용 하는 방법도 보여 줍니다 합니다 `GetFillPath` 메서드의 `SKPaint` 의 속성을 적용 하 여 다른 경로를 하나의 경로 변환할 `SKPaint`등 `StrokeWidth` 및 `PathEffect`합니다. 이 인해 다른 경로 대 한 개요는 경로 가져오는 것과 같은 몇 가지 흥미로운 기술입니다. `GetFillPath` 경로 효과 관련 하 여 도움이 됩니다.
+이 문서에 사용 하는 방법도 보여 줍니다 합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath*) 메서드의 `SKPaint` 의 속성을 적용 하 여 다른 경로를 하나의 경로 변환할 `SKPaint`등 `StrokeWidth` 및 `PathEffect`합니다. 이 인해 다른 경로 대 한 개요는 경로 가져오는 것과 같은 몇 가지 흥미로운 기술입니다. `GetFillPath` 경로 효과 관련 하 여 도움이 됩니다.
 
 ## <a name="dots-and-dashes"></a>점 및 대시
 
-사용 된 [ `PathEffect.CreateDash` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDash/p/System.Single[]/System.Single/) 문서에 설명 된 메서드 [ **점 및 대시**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)합니다. 메서드의 첫 번째 인수가 두 개 이상의 값을 교대로 반복 되는 대시의 길이 대시 사이 간격의 길이 사이의 짝수를 포함 하는 배열:
+사용 된 [ `PathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) 문서에 설명 된 메서드 [ **점 및 대시**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)합니다. 메서드의 첫 번째 인수가 두 개 이상의 값을 교대로 반복 되는 대시의 길이 대시 사이 간격의 길이 사이의 짝수를 포함 하는 배열:
 
 ```csharp
 public static SKPathEffect CreateDash (Single[] intervals, Single phase)
@@ -45,7 +45,7 @@ public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 
 이러한 값은 *되지* 스트로크 너비를 기준으로 합니다. 스트로크 너비는 10을 줄 사각형 대시 및 간격을 사각형으로 구성 하는 경우 예를 들어 설정 된 `intervals` 배열 {10, 10}. `phase` 대시 패턴 내에서 줄 시작 되는 인수를 나타냅니다. 이 예제에서는 사각형 격차를 사용 하 여 시작 하는 줄을 하려는 경우 설정 `phase` 10입니다.
 
-대시의 끝은 영향을 받지 합니다 `StrokeCap` 속성의 `SKPaint`합니다. 넓은 선 너비에 대 한이 속성을 설정 하는 매우 일반적 이기 `SKStrokeCap.Round` 대시의 끝을 반올림 합니다. 이 경우 값을 `intervals` 배열을 *하지* 순환 점 0의 너비를 지정 해야 한다는 것을 의미 하는 추가 길이 반올림에서 결과 포함 합니다. 10의 스트로크 너비의 사용에 순환 점과 같은 지름의 점 간의 차이 사용 하 여 줄을 만들려면는 `intervals` 배열 {0, 20}.
+대시의 끝은 영향을 받지 합니다 `StrokeCap` 속성의 `SKPaint`합니다. 넓은 선 너비에 대 한이 속성을 설정 하는 매우 일반적 이기 `SKStrokeCap.Round` 대시의 끝을 반올림 합니다. 이 경우 값을 `intervals` 배열을 *하지* 길어지는 반올림에서 결과 포함 합니다. 이 팩트 순환 점 0의 너비를 지정 해야 한다는 것을 의미 합니다. 10의 스트로크 너비의 사용에 순환 점과 같은 지름의 점 간의 차이 사용 하 여 줄을 만들려면는 `intervals` 배열 {0, 20}.
 
 **점으로 구분 된 텍스트 애니메이션** 비슷합니다는 **윤곽선이 있는 텍스트** 문서에서 설명 하는 페이지 [ **통합 텍스트와 그래픽** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) 에서 텍스트 문자를 설정 하 여 설명 표시는 `Style` 의 속성을 `SKPaint` 개체를 `SKPaintStyle.Stroke`입니다. 또한 **점으로 구분 된 텍스트 애니메이션** 사용 하 여 `SKPathEffect.CreateDash` 이 개요는 점으로 구분 된 형태를 제공 하 고 프로그램 또한 애니메이션를 `phase` 인수를 `SKPathEffect.CreateDash` 텍스트를 둘러싸는 여행을 점을 확인 하는 방법 문자입니다. 가로 모드에서 페이지가 같습니다.
 
@@ -151,9 +151,9 @@ public class AnimatedDottedTextPage : ContentPage
 
 설정할 수 있습니다 합니다 `SKPathEffect` 개체는 `SKPaint` 텍스트를 측정 하 고 페이지의 가운데 하기 전에 개체입니다. 그러나이 경우 렌더링된 된 텍스트의 크기에 애니메이션된 점 및 대시 인해 약간 달라질 및 잠시를 진동 할 텍스트는 경향이 있습니다. (지금 사용해 보세요!)
 
-텍스트 문자 주위의 애니메이션된 점 원으로 있는지 각 닫힌된 곡선의 특정 지점 존재 내부 및 외부로 팝 할 점이 보일 있는 경우도 있습니다. 이것이 문자 윤곽선을 정의 하는 경로 시작 하 고 끝나는 위치입니다. 경로 길이 대시 패턴 (이 경우 20 픽셀) 길이 대 한 정수 계열 배수가 아닌 경우 해당 패턴의 일부만 경로 끝에 맞출 수 있습니다.
+텍스트 문자 주위의 애니메이션된 점 원으로 있는지 각 닫힌된 곡선의 특정 지점 존재 내부 및 외부로 팝 할 점이 보일 있는 경우도 있습니다. 이것이 문자 윤곽선을 정의 하는 경로 시작 하 고 끝나는 위치입니다. 경로 길이 대시 패턴 (이 경우 20 픽셀) 길이 대 한 배수가 없으면 해당 패턴의 일부만 경로 끝에 맞출 수 있습니다.
 
-경로의 길이 맞게 대시 패턴의 길이를 조정할 수 있지만 수 있는 기술 경로의 길이 결정 해야 하는 향후 기사에서 설명 합니다.
+경로의 길이 맞게 대시 패턴의 길이를 조정할 수 있지만 문서에서 설명 하는 기술 경로의 길이 결정 해야 하는 [ **경로 정보 및 열거형** ](information.md).
 
 **Dot / Dash Morph** 대시 같습니다 다시 폼 대시를 결합 하는 점, 나눌 수 있도록 프로그램 애니메이션 자체는 대시 패턴을 적용 합니다.
 
@@ -241,11 +241,11 @@ public class DotDashMorphPage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 처리기 타원형 경로 만든 다음 페이지의 크기를 기준으로 설정 하는 코드는 긴 작업을 실행 합니다 `dashArray` 및 `phase` 변수입니다. 애니메이션 변수 `t` 범위는 0에서 1로는 `if` 블록 4 개 분기에 해당 분기의 각 시간 중단 `tsub` 도 범위는 0에서 1 ~입니다. 맨 끝에서 프로그램을 만듭니다는 `SKPathEffect` 설정 하는 `SKPaint` 그리기에 대 한 개체입니다.
+합니다 `PaintSurface` 처리기가 페이지의 크기를 기준으로 타원형 경로 만들고 설정 하는 코드는 긴 작업을 실행 합니다 `dashArray` 및 `phase` 변수입니다. 애니메이션 변수 `t` 범위는 0에서 1로는 `if` 블록 4 개 분기에 해당 분기의 각 시간 중단 `tsub` 도 범위는 0에서 1 ~입니다. 맨 끝에서 프로그램을 만듭니다는 `SKPathEffect` 설정 하는 `SKPaint` 그리기에 대 한 개체입니다.
 
 ## <a name="from-path-to-path"></a>경로에 대 한 경로에서
 
-합니다 [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) 메서드의 `SKPaint` 의 설정에 따라 다른 하나의 경로 설정 합니다 `SKPaint` 개체입니다. 이 과정을 보려면 대체는 `canvas.DrawPath` 다음 코드를 사용 하 여 이전 프로그램에서 호출 합니다.
+합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single)) 메서드의 `SKPaint` 의 설정에 따라 다른 하나의 경로 설정 합니다 `SKPaint` 개체입니다. 이 과정을 보려면 대체는 `canvas.DrawPath` 다음 코드를 사용 하 여 이전 프로그램에서 호출 합니다.
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -260,13 +260,13 @@ canvas.DrawPath(newPath, newPaint);
 
 이 새 코드를 `GetFillPath` 변환 호출를 `ellipsePath` (되는 타원에만)에 `newPath`를 사용 하 여 표시 되는 `newPaint`합니다. `newPaint` 개체가 모든 기본 속성 설정을 사용 하 여 만들어집니다 점을 제외 하 고는 `Style` 속성 기반은 부울 값을 반환 `GetFillPath`합니다.
 
-시각적 개체에 설정 된 색을 제외 하 고 동일 `ellipsePaint` 있지만 `newPaint`합니다. 대신에 정의 된 단순한 타원 `ellipsePath`, `newPath` 일련의 점 및 대시를 정의 하는 다양 한 경로 윤곽을 포함 합니다. 이 다양 한 속성을 적용 한 결과인 `ellipsePaint` - `StrokeWidth`, `StrokeCap`, 및 `PathEffect` -에 `ellipsePath` 결과 경로에 배치 하 고 `newPath`. 합니다 `GetFillPath` 메서드가 나타내는 부울 값을 대상 경로 입력할 수 있는지 여부 반환; 반환 값은이 예제에서는 `true` 경로 입력 하는 것에 대 한 합니다.
+시각적 개체에 설정 된 색을 제외 하 고 동일 `ellipsePaint` 있지만 `newPaint`합니다. 대신에 정의 된 단순한 타원 `ellipsePath`, `newPath` 일련의 점 및 대시를 정의 하는 다양 한 경로 윤곽을 포함 합니다. 이 다양 한 속성을 적용 한 결과인 `ellipsePaint` (특히 `StrokeWidth`, `StrokeCap`, 및 `PathEffect`)를 `ellipsePath` 결과 경로에 배치 하 고 `newPath`. 합니다 `GetFillPath` 메서드가 나타내는 부울 값을 대상 경로 입력할 수 있는지 여부 반환; 반환 값은이 예제에서는 `true` 경로 입력 하는 것에 대 한 합니다.
 
 변경해 보세요 합니다 `Style` 에서 설정 `newPaint` 에 `SKPaintStyle.Stroke` 1 픽셀 너비 선으로 설명 된 개별 경로 윤곽을 확인할 수 있습니다.
 
 ## <a name="stroking-with-a-path"></a>경로 사용 하 여 선 그리기
 
-합니다 [ `SKPathEffect.Create1DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create1DPath/p/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPath1DPathEffectStyle/) 메서드는 개념적으로 비슷합니다 `SKPathEffect.CreateDash` 제외 하 고 대시 및 간격 패턴 보다는 경로 지정 합니다. 이 경로 여러 번 줄 선이나 곡선에 복제 됩니다.
+합니다 [ `SKPathEffect.Create1DPath` ](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle)) 메서드는 개념적으로 비슷합니다 `SKPathEffect.CreateDash` 제외 하 고 대시 및 간격 패턴 보다는 경로 지정 합니다. 이 경로 여러 번 줄 선이나 곡선에 복제 됩니다.
 
 사용되는 구문은 다음과 같습니다.
 
@@ -275,16 +275,13 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
                                          Single phase, SKPath1DPathEffectStyle style)
 ```
 
-> [!IMPORTANT]
-> 주의:는 오버 로드가 `Create1DPath` 형식의 열거형 인수를 사용 하 여 정의 되는 `SkPath1DPathEffect` 소문자 'k.'를 사용 하 여 이 이름은 오류가 이며 결과적으로 열거형 및 메서드 지원 되지 않습니다. 하지만 코드의 일부로 사용 되지 않는 메서드에 대 한 매우 간단 하 어떻게 정확 하 게 표시 하기 어렵습니다 잘못 되었습니다.
+일반적으로 전달 하는 경로 `Create1DPath` 작고 (0, 0) 점을 가운데 맞춤 됩니다. `advance` 줄에 복제 되는 경로 매개 변수 경로 중심 사이의 거리를 나타냅니다. 일반적으로이 인수 경로의 대략적인 너비를 설정 합니다. `phase` 인수 수행 하므로 동일한 역할이 여기에서 수행 된 `CreateDash` 메서드.
 
-일반적으로 전달 하는 경로 `Create1DPath` 작고 (0, 0) 점을 가운데 맞춤 됩니다. `advance` 줄에 복제 되는 경로 매개 변수 경로 센터에서의 거리를 나타냅니다. 일반적으로이 인수 경로의 대략적인 너비를 설정 합니다. `phase` 인수 수행 하므로 동일한 역할이 여기에서 수행 된 `CreateDash` 메서드.
+합니다 [ `SKPath1DPathEffectStyle` ](xref:SkiaSharp.SKPath1DPathEffectStyle) 에 세 가지 멤버가 있습니다.
 
-합니다 [ `SKPath1DPathEffectStyle` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath1DPathEffectStyle/) 에 세 가지 멤버가 있습니다.
-
-- [`Translate`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Translate/)
-- [`Rotate`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Rotate/)
-- [`Morph`](https://developer.xamarin.com/api/field/SkiaSharp.SKPath1DPathEffectStyle.Morph/)
+- `Translate`
+- `Rotate`
+- `Morph`
 
 `Translate` 멤버의 경로 직선이 나 곡선을 따라 복제 되는 동일한 방향으로 유지 하면 됩니다. 에 대 한 `Rotate`, 경로 접선 곡선을 따라 회전 합니다. 경로 해당 일반 방향을 가로 선입니다. `Morph` 비슷합니다 `Rotate` 제외 하 고 경로 자체의 스트로크 되는 줄의 곡률에 맞게 곡선인 수도 있습니다.
 
@@ -307,11 +304,13 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
                 Title="Effect Style"
                 Grid.Row="0"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
-            <Picker.Items>
-                <x:String>Translate</x:String>
-                <x:String>Rotate</x:String>
-                <x:String>Morph</x:String>
-            </Picker.Items>
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Translate</x:String>
+                    <x:String>Rotate</x:String>
+                    <x:String>Morph</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
             <Picker.SelectedIndex>
                 0
             </Picker.SelectedIndex>
@@ -374,7 +373,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
                          new SKPoint(-info.Width, info.Height),
                          new SKPoint(info.Width, 0));
 
-            switch (effectStylePicker.Items[effectStylePicker.SelectedIndex])
+            switch ((string)effectStylePicker.SelectedItem))
             {
                 case "Translate":
                     pathPaint.PathEffect = translatePathEffect;
@@ -546,7 +545,7 @@ public class LinkedChainPage : ContentPage
 
 이 프로그램에 사용 된 경로가 정의 `Create1DPath` 있어야 해당 (0, 0) 센터를 지정 합니다. 이 것이 좋습니다 때문에 (0, 0) 패스의 줄 또는 표시 되는 곡선에 맞춥니다. 그러나 사용할 수는 비 중심 (0, 0) 일부 특수 효과 대 한 지점입니다.
 
-합니다 **컨베이어 벨트** 페이지 곡선된 위쪽 및 아래쪽이 창의 크기에 크기를 사용 하 여는 장방형 컨베이어 벨트와 비슷한 경로 만듭니다. 간단한을 사용 하 여 해당 경로 스트로크 `SKPaint` 20 픽셀 색이 지정 된 회색 개체 및 다른 한 다음 다시 스트로크 `SKPaint` 개체는 `SKPathEffect` 거의 버킷와 비슷한 경로 참조 하는 개체:
+합니다 **컨베이어 벨트** 페이지 곡선된 위쪽 및 아래쪽 창의 크기를 크기가 지정 된는 장방형 컨베이어 벨트와 비슷한 경로 만듭니다. 간단한을 사용 하 여 해당 경로 스트로크 `SKPaint` 20 픽셀 색이 지정 된 회색 개체 및 다른 한 다음 다시 스트로크 `SKPaint` 개체는 `SKPathEffect` 거의 버킷와 비슷한 경로 참조 하는 개체:
 
 [![](effects-images/conveyorbelt-small.png "삼중 컨베이어 벨트 페이지 스크린샷")](effects-images/conveyorbelt-large.png#lightbox "삼중 컨베이어 벨트 페이지 스크린샷")
 
@@ -703,7 +702,7 @@ canvas.DrawPath(newPath, newPaint);
 
 ## <a name="hatching-an-area"></a>영역 빗살 무늬
 
-합니다 [ `SKPathEffect.Create2DLines` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DLine/p/System.Single/SkiaSharp.SKMatrix/) 메서드 라고도 평행선이 있는 영역을 채웁니다 *줄 해치*합니다. 메서드가 다음 구문:
+합니다 [ `SKPathEffect.Create2DLines` ](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix)) 메서드 라고도 평행선이 있는 영역을 채웁니다 *줄 해치*합니다. 메서드가 다음 구문:
 
 ```csharp
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
@@ -713,7 +712,7 @@ public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 
 기본적으로 해치 선은 가로입니다. 경우는 `matrix` 회전을 포함 하는 매개 변수, 빗살 무늬 선 시계 방향으로 회전 합니다.
 
-합니다 **채우기 해치** 페이지에이 경로 효과 보여 줍니다. 합니다 [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 는 크기 조정 비율을 나타내기 위해 사용 하 여 3 픽셀 너비를 사용 하 여 가로 빗살 무늬 선에 대 한 첫 번째 간격이 6 픽셀 만큼 떨어지게, 클래스 필드로 3 경로 효과 정의 합니다. 줄 구분은 3 픽셀 때문입니다. 두 번째 경로 효과 6 픽셀 너비와 수직 빗살 무늬 선 간격이 24 픽셀 떨어진 (따라서 분리는 18 픽셀은)는 및 빗금 줄 12 픽셀 넓은 공백이 포함 된 36 픽셀 떨어진 세 번째입니다.
+합니다 **채우기 해치** 페이지에이 경로 효과 보여 줍니다. 합니다 [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 는 크기 조정 비율을 나타내기 위해 사용 하 여 3 픽셀 너비를 사용 하 여 가로 빗살 무늬 선에 대 한 첫 번째 간격이 6 픽셀 만큼 떨어지게, 클래스 필드로 3 경로 효과 정의 합니다. 줄 구분 3 픽셀로 되므로 합니다. 두 번째 경로 효과 6 개의 픽셀 너비와 수직 빗살 무늬 선 간격이 24 픽셀 떨어진 (따라서 분리는 18 픽셀은)에 대 한 및 빗금 줄 12 픽셀 넓은 공백이 포함 된 36 픽셀 떨어진 세 번째입니다.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -803,7 +802,7 @@ Android 화면 실제로 알지 못하는 활동 같은: 씬 빨간색 선과 �
 
 ## <a name="filling-with-a-path"></a>경로 사용 하 여 채우기
 
-합니다 [ `SKPathEffect.Create2DPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.Create2DPath/p/SkiaSharp.SKMatrix/SkiaSharp.SKPath/) 영역을 바둑판식 적용 영역을 가로 방향과 세로 방향으로 복제 되는 경로 채울 수 있습니다.
+합니다 [ `SKPathEffect.Create2DPath` ](xref:SkiaSharp.SKPathEffect.Create2DPath(SkiaSharp.SKMatrix,SkiaSharp.SKPath)) 영역을 바둑판식 적용 영역을 가로 방향과 세로 방향으로 복제 되는 경로 채울 수 있습니다.
 
 ```csharp
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
@@ -813,7 +812,7 @@ public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 
 일반적으로 복제 된 경로 채워질 영역 보다는 화면의 왼쪽 및 위쪽 가장자리에 맞춥니다. 0에서 왼쪽 및 위쪽 양쪽에서 가로 및 세로 오프셋을 지정 하려면 크기 조정 요인을 사이의 변환 요소를 제공 하 여이 동작을 재정의할 수 있습니다.
 
-합니다 **경로 타일 채우기** 페이지에이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 되는 경로에서 필드로 정의 되는 [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표 범위에서-40 40, 즉이 경로 80 픽셀 사각형:
+합니다 **경로 타일 채우기** 페이지에이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 되는 경로에서 필드로 정의 되는 [ `PathTileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표 범위에서-40 40, 즉이 경로 80 픽셀 사각형:
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -859,15 +858,17 @@ Android 화면에서 특히 일부 왜곡을 사용 하면 원래 스크린샷�
 
 설정 해 보세요 합니다 `Style` 의 속성을 `SKPaint` 개체를 `Stroke`를 입력 하는 것이 아니라 설명 된 개별 타일을 확인할 수 있습니다.
 
+것도 가능 영역을 채우는 바둑판식으로 배열 된 비트맵을 사용 하 여 문서에 나와 있는 것 처럼 [ **SkiaSharp 비트맵 바둑판식**](../effects/shaders/bitmap-tiling.md)합니다.
+
 ## <a name="rounding-sharp-corners"></a>날카로운 모퉁이 반올림합니다.
 
-**반올림 Heptagon** 프로그램에 표시 되는 [ **호를 그리려면 세 가지 방법으로** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 7 양면 그림의 지점 곡선을 탄젠트 호를 사용 하는 문서. **다른 반올림 Heptagon** 페이지에서 만든 경로 효과 사용 하는 훨씬 쉽게 방법을 표시 합니다 [ `SKPathEffect.CreateCorner` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCorner/p/System.Single/) 메서드:
+**반올림 Heptagon** 프로그램에 표시 되는 [ **호를 그리려면 세 가지 방법으로** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 7 양면 그림의 지점 곡선을 탄젠트 호를 사용 하는 문서. **다른 반올림 Heptagon** 페이지에서 만든 경로 효과 사용 하는 훨씬 쉽게 방법을 표시 합니다 [ `SKPathEffect.CreateCorner` ](xref:SkiaSharp.SKPathEffect.CreateCorner(System.Single)) 메서드:
 
 ```csharp
 public static SKPathEffect CreateCorner (Single radius)
 ```
 
-단일 인수 이름이 있지만 `radius` 절반 원하는 모퉁이 반경을를 설정 해야 합니다. (기본 Skia 코드의 특징입니다.)
+단일 인수 이름이 있지만 `radius`, 절반 원하는 모퉁이 반경을를 설정 해야 합니다. (기본 Skia 코드의 특징입니다.)
 
 다음은 `PaintSurface` 처리기에는 [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) 클래스:
 
@@ -930,7 +931,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="random-jitter"></a>임의 지터
 
-경우에 따라 컴퓨터 그래픽의 완벽 한 직선 매우 원하는 않으며 원하는 것이 약간의 임의성. 시도 하려는 경우에 [ `SKPathEffect.CreateDiscrete` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateDiscrete/p/System.Single/System.Single/System.UInt32/) 메서드:
+경우에 따라 컴퓨터 그래픽의 완벽 한 직선 매우 원하는 않으며 원하는 것이 약간의 임의성. 시도 하려는 경우에 [ `SKPathEffect.CreateDiscrete` ](xref:SkiaSharp.SKPathEffect.CreateDiscrete(System.Single,System.Single,System.UInt32)) 메서드:
 
 ```csharp
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
@@ -945,7 +946,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 [![](effects-images/jitterexperiment-small.png "Triple 지터 실험 페이지의 스크린샷")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-프로그램이 straightfoward입니다. 합니다 [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소와 `SKCanvasView`:
+프로그램은 간단 합니다. 합니다 [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소와 `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1073,17 +1074,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="path-outlining"></a>경로 개요
 
-두 가지 간단한 예를 이미 살펴봤습니다 합니다 [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/System.Single/) 메서드의 `SKPaint`, 또한에 있는 [오버 로드](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.GetFillPath/p/SkiaSharp.SKPath/SkiaSharp.SKPath/SkiaSharp.SKRect/System.Single/):
+두 가지 간단한 예를 이미 살펴봤습니다 합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath*) 메서드의 `SKPaint`, 존재 하는 두 가지 버전:
 
 ```csharp
-public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale)
+public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale = 1)
 
-public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale)
+public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale = 1)
 ```
 
 처음 두 인수에만 필수 이며 참조 경로 액세스 하는 메서드를 `src` 의 스트로크 속성을 기반으로 경로 데이터를 수정 하는 인수를를 `SKPaint` 개체 (포함 하 여는 `PathEffect` 속성), 다음 결과를 씁니다는 `dst` 경로입니다. 합니다 `resScale` 매개 변수를 더 작은 대상 경로 만드는 전체 자릿수를 줄일 수 있습니다 및 `cullRect` 인수 사각형 외부 윤곽을 제거할 수 있습니다.
 
-이 메서드의 기본 하나 사용 하 여 경로 효과 전혀 포함 되지 않습니다. 경우는 `SKPaint` 개체에 해당 `Style` 속성이로 설정 `SKPaintStyle.Stroke`, 및 *하지* 가 해당 `PathEffect` 설정 `GetFillPath` 나타내는 경로 만듭니다는 *개요*원본 경로의 그리기 속성에 의해 외곽선 처럼 합니다.
+이 메서드의 기본 하나 사용 하 여 경로 효과 전혀 포함 하지 않는: 경우는 `SKPaint` 개체에 해당 `Style` 속성이로 설정 `SKPaintStyle.Stroke`, 및 *하지* 가 해당 `PathEffect` 설정 `GetFillPath` 만듭니다는 나타내는 경로 *개요* 원본 경로 그리기 속성에 의해 외곽선 처럼 합니다.
 
 예를 들어 경우는 `src` 경로가 500 반지름의 단순 원 및 `SKPaint` 100 스트로크 너비를 지정 하는 개체는 `dst` 경로 두 동심원 반지름은 550 450 및 다른 반지름 하나 됩니다. 메서드를 호출 `GetFillPath` 이 채우기 때문에 `dst` 경로 선 그리기와 동일 합니다 `src` 경로입니다. 스트로크도 수 있지만 `dst` 경로를 경로 윤곽선을 참조 하세요.
 
@@ -1220,11 +1221,11 @@ using (SKPath linkPath = new SKPath())
 
 합니다 `outlinePath` 개체는 다음의 윤곽선의 받는 사람 `linkPath` 에 지정 된 속성을 사용 하 여 스트로크 할 때 `strokePaint`합니다.
 
-이 방법을 사용 하는 또 다른 예에 사용 되는 경로 대 한 다음에 나오는 `SKPathEffect.Create2DPath` 메서드.
+메서드에서 사용 되는 경로 대 한 다음이 기술을 사용 하 여 또 다른 예로 제공 됩니다.
 
 ## <a name="combining-path-effects"></a>경로 효과 결합합니다.
 
-두 가지 최종 정적 생성 방법을 `SKPathEffect` 됩니다 [ `SKPathEffect.CreateSum` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateSum/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/) 하 고 [ `SKPathEffect.CreateCompose` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPathEffect.CreateCompose/p/SkiaSharp.SKPathEffect/SkiaSharp.SKPathEffect/):
+두 가지 최종 정적 생성 방법을 `SKPathEffect` 됩니다 [ `SKPathEffect.CreateSum` ](xref:SkiaSharp.SKPathEffect.CreateSum(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)) 하 고 [ `SKPathEffect.CreateCompose` ](xref:SkiaSharp.SKPathEffect.CreateCompose(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)):
 
 ```csharp
 public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
@@ -1414,5 +1415,5 @@ public class DashedHatchLinesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

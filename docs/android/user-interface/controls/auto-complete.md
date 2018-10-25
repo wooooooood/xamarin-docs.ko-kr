@@ -3,24 +3,29 @@ title: 자동 완성
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 333264e65e814ad73eabeb7be55abb320400a59a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 08/31/2018
+ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "30764452"
 ---
 # <a name="auto-complete"></a>자동 완성
 
+`AutoCompleteTextView` 사용자가 입력 하는 동안 자동으로 완성 제안을 표시 하는 편집 가능한 텍스트 뷰 요소가입니다. 추천 단어 목록은 사용자와 입력란의 내용을 바꾸려면 항목을 선택할 수 있는 메뉴 드롭다운에 표시 됩니다.
+
+![자동 완성의 예제](images/auto-complete.png)
 
 ## <a name="overview"></a>개요
 
-자동 완성 제안 사항을 제공 하는 텍스트 항목 위젯을 만들려면 사용는 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다. 제안을 통해 widget와 연결 된 문자열의 컬렉션에서 수신 되는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)합니다.
+자동 완성 제안 사항을 제공 하는 텍스트 항목 위젯을 만들려면 사용 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯입니다. 제안을 통해 위젯과 사용 하 여 연결 문자열의 컬렉션에서 수신 되는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)합니다.
 
-이 자습서에서는 만듭니다는 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 국가 이름에 대 한 제안을 제공 하는 위젯입니다.
+이 자습서에서는 만듭니다는 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+국가 이름에 대 한 제안을 제공 하는 위젯입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -40,14 +45,15 @@ ms.locfileid: "30764452"
 </LinearLayout>
 ```
 
-[ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 소개 하는 레이블이 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다.
+합니다 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 소개 하는 레이블이 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯입니다.
 
 
 ## <a name="tutorial"></a>자습서
 
-라는 새 프로젝트를 시작 *HelloAutoComplete*합니다.
+명명 된 새 프로젝트를 시작 *HelloAutoComplete*합니다.
 
-라는 XML 파일을 만들고 `list_item.xml` 안에 저장 하 고는 **리소스/레이아웃** 폴더입니다. 이 파일의 빌드 작업 설정 `AndroidResource`합니다. 파일을 다음과 같이 편집 합니다.
+라는 XML 파일을 만듭니다 `list_item.xml` 내에서 저장 된 **리소스/레이아웃** 폴더. 이 파일의 빌드 작업 설정 `AndroidResource`합니다. 다음과 같이 파일을 편집 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -61,9 +67,9 @@ ms.locfileid: "30764452"
 </TextView>
 ```
 
-이 파일은 단순 정의 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 제안 목록에 표시 되는 각 항목에 대해 사용 되는 합니다.
+이 파일은 간단한 정의 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 제안 목록에 표시 되는 각 항목에 대해 사용할 합니다.
 
-열기 **Resources/Layout/Main.axml** 하 고 다음을 삽입 합니다.
+오픈 **Resources/Layout/Main.axml** 하 고 다음을 삽입 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -83,7 +89,8 @@ ms.locfileid: "30764452"
 </LinearLayout>
 ```
 
-열기 **MainActivity.cs** 에 대 한 다음 코드를 삽입 하 고는 [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) 메서드:
+오픈 **MainActivity.cs** 에 다음 코드를 삽입 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+방법:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -100,9 +107,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-콘텐츠 뷰 설정한 후는 `main.xml` 레이아웃의 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯을 사용 하 여 레이아웃에서 캡처된 [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/)합니다. 새 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 바인딩할 그런 후 초기화 됩니다는 `list_item.xml` 레이아웃의 각 목록 항목에는 `COUNTRIES` (다음 단계에서 정의 됨) 하는 문자열 배열입니다. 마지막으로, `SetAdapter()` 연결 하기 위해 호출 됩니다는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 와 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯 문자열 배열을 제안 목록을 채울 수 있도록 합니다.
+콘텐츠 뷰 설정한 후의 `main.xml` 레이아웃에는 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯을 사용 하 여 레이아웃에서 캡처된 [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/)합니다. 새 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 바인딩할 초기화 됩니다는 `list_item.xml` 레이아웃의 각 목록 항목에는 `COUNTRIES` (다음 단계에서 정의 됨) 하는 문자열 배열입니다. 마지막으로 `SetAdapter()` 연결할 라고 합니다 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 와 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯 제안 목록을 채울 문자열 배열 되도록 합니다.
 
-내에서 `MainActivity` 클래스, 문자열 배열을 추가 합니다.
+내부는 `MainActivity` 클래스, 문자열 배열에 추가 합니다.
 
 ```csharp
 static string[] COUNTRIES = new string[] {
@@ -150,17 +159,19 @@ static string[] COUNTRIES = new string[] {
 };
 ```
 
-이 사용자에 입력 하는 경우 드롭다운 목록에서 제공 되는 제안 목록을 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다.
+이 사용자에 입력 하는 경우 드롭다운 목록에서 제공 되는 추천 단어 목록을 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯입니다.
 
-응용 프로그램을 실행합니다. 를 입력 하면 다음과 같이 표시 됩니다.
+응용 프로그램을 실행합니다. 입력할 때 다음과 같이 표시 됩니다.
 
-[!["Ca"를 포함 하는 이름을 나열 하는 예에서는 자동 완성 스크린샷](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
+[![자동 완성 스크린샷 예제 "ca"를 포함 하는 이름을 나열 합니다.](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
 
 ## <a name="more-information"></a>추가 정보
 
-이때 하드 코드 된 문자열 배열을 사용 하 여 적절 하지 않습니다는 권장 되는 디자인 응용 프로그램 코드 동작 하지 콘텐츠에 초점을 맞추어야 합니다. 문자열과 같은 응용 프로그램 콘텐츠는 콘텐츠를 수정 내용을 더 쉽게 및 콘텐츠 지역화를 용이 하 게 하는 코드에서 표면화 될 해야 합니다. 하드 코드 된 문자열은 간단 하 게 만들고에 집중에이 자습서에 사용 되는 [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) 위젯입니다. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 이를 수행할 수 있습니다는 `<string-array>` 프로젝트 자원에에서 `res/values/strings.xml` 파일입니다. 예를 들어:
+이때 하드 코드 된 문자열 배열을 사용 하 여 응용 프로그램 코드 동작을 콘텐츠에 집중 해야 하기 때문에 권장 되는 디자인 방법은 아닙니다. 문자열과 같은 응용 프로그램 콘텐츠는 수정 내용 쉽게 및 콘텐츠 지역화를 용이 하 게 하는 코드에서 구체화 해야 합니다. 하드 코드 된 문자열에만 쉽게 집중할이 자습서에 사용 되는 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+위젯입니다. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 사용 하 여이 작업을 수행할 수 있습니다는 `<string-array>` 프로젝트에서 리소스 `res/values/strings.xml` 파일입니다. 예를 들어:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -177,7 +188,8 @@ static string[] COUNTRIES = new string[] {
 </resources>
 ```
 
-에 대 한 이러한 리소스 문자열을 사용 하는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/), 대체 원래 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 생성자 줄 다음으로:
+에 대 한 이러한 리소스 문자열을 사용 하는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)를 바꾸려면 [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
+다음을 사용 하 여 생성자 줄:
 
 ```csharp
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
@@ -187,10 +199,11 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### <a name="references"></a>참조
 
+-   [AutoCompleteTextView 레](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; 에 대 한 Xamarin.Android 샘플 프로젝트는 `AutoCompleteTextView`합니다.
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
 -   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 
-*이 페이지의 일부는 Android 열려 있는 소스 프로젝트에서 공유 하 고 만들고에 설명 된 조건에 따라 사용 작업에 따라 수정 된* 
- [ *Creative Commons 2.5 Attribution 라이선스* ](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서에 따라는* 
- [ *Android 자동 전체 자습서*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다* 
+ [ *Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서는 기반으로 합니다* 
+ [ *Android 자동 완성 자습서*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
 *합니다.*

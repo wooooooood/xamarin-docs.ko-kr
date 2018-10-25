@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997122"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 빠른 렌더러
@@ -32,6 +32,7 @@ _이 문서에서는 결과 네이티브 컨트롤 계층 구조를 평면화 �
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 기능적으로 이러한 빠른 렌더러는 원래 렌더러에 차이가 없습니다. 그러나 현재 실험적 이며 코드의 다음 줄을 추가 하 여 에서만 사용할 수 있습니다 하 `MainActivity` 클래스를 호출 하기 전에 `Forms.Init`:
 

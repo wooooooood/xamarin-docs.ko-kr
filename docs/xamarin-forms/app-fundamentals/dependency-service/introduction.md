@@ -6,12 +6,12 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
-ms.openlocfilehash: 558a05b5fdc4c4f08194b708de886bca342dd860
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 09/15/2018
+ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38995416"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 소개
@@ -20,7 +20,10 @@ ms.locfileid: "38995416"
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 앱을을 공유 코드에서 플랫폼별 기능을 호출할 수 있습니다. 이 기능은 Xamarin.Forms 앱을 네이티브 앱을 수행할 수 있는 모든 작업을 수행할 수 있습니다.
 
-`DependencyService` 종속성 확인자가입니다. 실제로 인터페이스를 정의 하 고 `DependencyService` 올바른 구현의 다양 한 플랫폼 프로젝트에서 해당 인터페이스를 찾습니다.
+`DependencyService` 서비스 로케이터가입니다. 실제로 인터페이스를 정의 하 고 `DependencyService` 올바른 구현의 다양 한 플랫폼 프로젝트에서 해당 인터페이스를 찾습니다.
+
+> [!NOTE]
+> 기본적으로 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) 매개 변수가 없는 생성자는 플랫폼 구현만 확인 됩니다. 그러나 종속성 해결 방법은 종속성 주입 컨테이너 또는 팩터리 메서드를 사용 하 여 플랫폼 구현을 확인 하는 Xamarin.Forms에 삽입할 수 있습니다. 이 방법은 매개 변수가 있는 생성자는 플랫폼 구현을 확인에 사용할 수 있습니다. 자세한 내용은 [Xamarin.Forms에서 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)합니다.
 
 ## <a name="how-dependencyservice-works"></a>DependencyService의 작동 원리
 
@@ -144,7 +147,6 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 > [!NOTE]
 > 있습니다 **해야** 모든 플랫폼 프로젝트에서 구현을 제공 합니다. 인터페이스 구현이 등록 되 면 해당 `DependencyService` 확인할 수 없습니다는 `Get<T>()` 런타임에 메서드.
-
 
 ## <a name="related-links"></a>관련 링크
 
