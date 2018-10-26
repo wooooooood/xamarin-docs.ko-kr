@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4b3d5c65ddf8be433d1f8e182774aa839f60357
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 6b61d03910d908f5fab0d946ed97c88b1e32885d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109551"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` XAML 파일을.NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우 유용 합니다. 사용 된 `Source` 정적 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더, 이름과 마침표로 구분 된 파일 이름으로 구성 된 정규화 된 리소스 이름에 필요 합니다. 합니다 `ImageResourceExtension` 하지 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 해당 라이브러리에서 이미지도 하지 않는 한이 XAML 리소스 확장에서 외부 라이브러리 포함 될 수 없습니다는 즉 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조를 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded_images) 비트맵을 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
+`ImageResourceExtension` XAML 파일을.NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우 유용 합니다. 사용 된 `Source` 정적 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더, 이름과 마침표로 구분 된 파일 이름으로 구성 된 정규화 된 리소스 이름에 필요 합니다. 합니다 `ImageResourceExtension` 하지 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 해당 라이브러리에서 이미지도 하지 않는 한이 XAML 리소스 확장에서 외부 라이브러리 포함 될 수 없습니다는 즉 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조를 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded-images) 비트맵을 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
 
 하지만 `ImageResourceExtension` 필요 합니다 `Source` 속성을 설정할 수는 `Source` 속성은 특성에서 클래스의 content 속성으로 표시 됩니다. 즉는 `Source=` 중괄호 안에 있는 식의 부분을 생략할 수 있습니다. 에 **이미지 리소스 데모** 페이지를 `Image` 요소 인출 폴더 이름과 마침표로 구분 된 파일 이름을 사용 하 여 두 개의 이미지:
 

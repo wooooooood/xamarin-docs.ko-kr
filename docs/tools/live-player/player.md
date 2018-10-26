@@ -3,15 +3,15 @@ title: Xamarin Live Player 앱
 description: 이 문서는 Xamarin Live Player 장치에서 라이브 코드 변경 내용 미리 보기를 사용할 수 있는 앱을 설명 합니다. 설치, 샘플, 로그, 장치 등을 관리 하는 설정을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: b3166aa440cbe2981d597771b360373fadc6451b
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: fdd602da932e0c36cadade50476babba51d67398
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113172"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
 

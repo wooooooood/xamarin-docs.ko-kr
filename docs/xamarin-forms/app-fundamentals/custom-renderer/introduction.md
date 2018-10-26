@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 180a196e0b95854815c8a74ef1d2df63407dd04f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108433"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -52,7 +52,7 @@ public class MyEntry : Entry
 `local` 네임 스페이스 접두사 아무 이름이 나 가능 합니다. 그러나 합니다 `namespace` 고 `assembly` 값 사용자 지정 컨트롤의 세부 정보를 일치 해야 합니다. 네임 스페이스를 선언 하는 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
 
 > [!NOTE]
-> 정의 된 `xmlns` 공유 프로젝트 보다.NET Standard 라이브러리 프로젝트에서 훨씬 간단 합니다. .NET Standard 라이브러리를 결정 하는 것이 쉽습니다 있도록는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. XAML 등 모든 공유 자산은 각 참조는 프로젝트, 즉 iOS, Android 및 UWP로 컴파일되는 공유 프로젝트를 사용 하는 경우 프로젝트 자체적인 *어셈블리 이름* 불가능에 쓸 `xmlns` 선언 각 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML의 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름을 사용 하 여 구성 해야 합니다.
+> 정의 된 `xmlns` 공유 프로젝트 보다.NET Standard 라이브러리 프로젝트에서 훨씬 간단 합니다. .NET Standard 라이브러리를 결정 하는 것이 쉽습니다 있도록는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. XAML 등 모든 공유 자산은 각 참조는 프로젝트, 즉 iOS, Android 및 UWP로 컴파일되는 공유 프로젝트를 사용 하는 경우 프로젝트 자체적인 *어셈블리 이름* 쓸 수 없는 `xmlns` 선언 각 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML의 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름을 사용 하 여 구성 해야 합니다.
 
 `MyEntry` 다음 스크린샷과에서 같이 회색 배경으로 각 플랫폼에서 사용자 지정 컨트롤 다음 렌더링 됩니다.
 

@@ -1,67 +1,67 @@
 ---
-title: C# 6 새 기능 개요
-description: 최신 버전의 C# 언어-버전 6-계속 더 적은 상용구, 향상 된 명확성을 및 일관성이 언어를 변경 합니다. 클리너 초기화 구문을 사용 하는 기능은 catch/finally 블록 및 null 조건부에서 await? 연산자는 특히 유용 합니다.
+title: C#6 새 기능 개요
+description: 최신 버전의를 C# – 버전 6 – 언어 상용구를 덜, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어 진화 계속 합니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: fffb78d6f2599c231617ed025d41282beffd319b
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 16ee512395b2658b26bc7a489eabecec3656fa93
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115759"
 ---
-# <a name="c-6-new-features-overview"></a>C# 6 새 기능 개요
+# <a name="c-6-new-features-overview"></a>C#6 새 기능 개요
 
-_최신 버전의 C# 언어-버전 6-계속 더 적은 상용구, 향상 된 명확성을 및 일관성이 언어를 변경 합니다. 클리너 초기화 구문을 사용 하는 기능은 catch/finally 블록 및 null 조건부에서 await? 연산자는 특히 유용 합니다._
+_최신 버전의를 C# – 버전 6 – 언어 상용구를 덜, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어 진화 계속 합니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다._
 
-이 문서에서는 C# 6의 새로운 기능을 소개합니다. 모노 컴파일러에서 완전히 지원 됩니다 및 개발자는 새로운 기능을 사용 하 여 모든 Xamarin 대상 플랫폼에서 시작할 수 있습니다.
+이 문서에서는의 새로운 기능을 소개 C# 6. Mono 컴파일러에서 완전히 지원 됩니다 및 새로운 기능을 사용 하 여 모든 Xamarin 대상 플랫폼에서 개발자가 시작할 수 있습니다.
 
-이 문서는 기본적인 사용을 설명 하는 간단한 C# 6 코드 조각을 포함 합니다.
-샘플 응용 프로그램은 모든 Xamarin 대상 플랫폼에서 실행 되 고 다양 한 기능을 실행 하는 명령줄 프로그램입니다.
+이 문서에는의 간략 한 조각이 포함 되어 있습니다.는 C# 기본적인 사용을 보여 주는 6 코드입니다.
+샘플 응용 프로그램에는 모든 Xamarin 대상 플랫폼에서 실행 되 고 다양 한 기능을 연습 하는 명령줄 프로그램입니다.
 
 
 > [!VIDEO https://youtube.com/embed/7UdV7zGPfMU]
 
-**C# 6의 새로운 소식 [Xamarin 대학](https://university.xamarin.com/)**
+**새로운 기능 C# 6으로 [Xamarin University](https://university.xamarin.com/)**
 
 
 ## <a name="development-environment"></a>개발 환경
 
 ### <a name="mac"></a>Mac
 
-* **Mac 용 visual Studio** C# 6에 대 한 지원: 빌드하고 C# 6 기능을 사용 하 여 Xamarin 앱을 컴파일할 수 있습니다.
+* **Mac 용 visual Studio** 지원 C# 6: 빌드하고 사용 하 여 Xamarin 앱을 컴파일할 수 있습니다 C# 6 기능입니다.
   에 대해 자세히 알아보세요 [Mac 용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/)합니다.
 
 ### <a name="windows"></a>Windows
 
-* **Visual Studio 2015 및 2017** C# 6에 대 한 완벽 하 게 지원 위에 있고 합니다. 이전 버전의 Visual Studio는 C# 6를 지원 하지 않습니다.
+* **Visual Studio 2015 및 2017** 에 대 한 전체 지원 이상 있고 C# 6입니다. 이전 버전의 Visual Studio 지원 하지 것입니다 C# 6.
 
-* **Windows 용 Xamarin Studio** 편집기에서 C# 6 기능을 지원 하지 않습니다.
+* **Windows 용 Xamarin Studio** 없습니다 C# 편집기에서 6 기능입니다.
 
 
 
 ## <a name="compiler"></a>컴파일러
 
-모노 C# 6 컴파일러는 모노 4.0 이상에 포함 된 [무료로 다운로드할 수](http://www.mono-project.com/download/)합니다.
-Mac 용 visual Studio는 자동으로 시스템에 모노 설치를 업데이트합니다.
+Mono C# 6 컴파일러는 Mono 4.0 이상에 포함 된 [무료로 다운로드할 수 있습니다](http://www.mono-project.com/download/)합니다.
+Mac 용 visual Studio는 자동으로 시스템에서 Mono 설치를 업데이트합니다.
 
-Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://visualstudio.microsoft.com/) 코드를 컴파일하려면 C# 6 (선택한 경우에 Windows 용 Xamarin Studio IDE로) 설치 합니다.
+Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://visualstudio.microsoft.com/) 컴파일하는 데 설치 C# 6 코드 (선택한 경우에 Windows 용 Xamarin Studio IDE로).
 
-^ 또는 *[Microsoft 빌드 도구 2015](http://www.microsoft.com/download/details.aspx?id=48159)* 명령에 대 한 명령줄 컴파일 또는 빌드 서버 예입니다.
+^ 또는 *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)* 명령에 대 한 줄 컴파일 또는 빌드 서버, 예를 들어 있습니다.
 
-## <a name="using-c-6"></a>C# 6을 사용 하 여
+## <a name="using-c-6"></a>사용 하 여 C# 6
 
-C# 6 컴파일러가 Mac. 모든 최신 버전의 Visual Studio에 사용
-명령줄 컴파일러를 사용 하 여 않았는지 확인 해야 `mcs --version` 4.0 이상이 반환 합니다.
-Mac 사용자 용 visual Studio 모노 4 이상 있는 경우 참조 하 여 설치를 확인할 수 **Mac 용 Visual Studio에 대 한 > Mac 용 Visual Studio > 자세한 정보 표시**합니다.
+C# 6 컴파일러는 모든 최신 버전의 Visual Studio for mac
+명령줄 컴파일러를 사용 하 여 확인 해야 `mcs --version` 4.0 이상 반환 합니다.
+Mac 사용자 용 visual Studio에서 참조 하 여 Mono 4 이상이 있는 경우 설치를 확인할 수 있습니다 **Mac 용 Visual Studio에 대 한 > Mac 용 Visual Studio > 자세한 정보 표시**합니다.
 
-## <a name="less-boilerplate"></a>더 적은 상용구
+## <a name="less-boilerplate"></a>상용구를 덜
 ### <a name="using-static"></a>using static
-열거형 및 특정 클래스와 같은 `System.Math`, 정적 값 및 함수의 소유자에 게 주로 됩니다. C# 6에서는 단일 형식의 모든 정적 멤버를 가져올 수 있습니다 `using static` 문. 5, C# 및 C# 6에서 일반적인 삼각 함수를 비교 합니다.
+열거형과 같은 특정 클래스 `System.Math`, 정적 값 및 함수의 소유자 주로 됩니다. C# 6, 단일을 사용 하 여 형식의 모든 정적 멤버를 가져올 수 있습니다 `using static` 문입니다. 일반적인 삼각 함수를 비교 C# 5 및 C# 6:
 
 ```csharp
 // Classic C#
@@ -87,16 +87,16 @@ class MyClass
 }
 ```
 
-`using static` 공용 미치지 않으며 `const` 같은 필드 `Math.PI` 및 `Math.E`, 직접 액세스할 수:
+`using static` 공용 해도 `const` 같은 필드 `Math.PI` 고 `Math.E`직접 액세스할 수 있는:
 
 ```csharp
 for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ... 
 //PI is const, not static, so requires Math.PI
 ```
 
-### <a name="using-static-with-extension-methods"></a>정적 확장 메서드를 사용 하 여
+### <a name="using-static-with-extension-methods"></a>정적 확장 메서드를 사용 하 여 사용 하 여
 
-`using static` 시설 약간 다르게 하 여 작동 확장 메서드입니다. 확장 메서드를 사용 하 여 작성 된 `static`, 연산을 수행할 인스턴스 없이도 의미를 확인 하지 않습니다. 따라서 `using static` 확장 메서드를 대상 형식에 사용할 수 있게 하는 확장 메서드를 정의 하는 형식과 함께 사용 (메서드의 `this` 유형). 예를 들어, `using static System.Linq.Enumerable` 의 API를 확장 하는 데 사용 될 `IEnumerable<T>` LINQ 종류 모두에 표시 하지 않고 개체:
+`using static` 시설 약간 다르게 작동 확장 메서드를 사용 하 여 합니다. 확장 메서드를 사용 하 여 작성 됩니다 `static`, 쉽게 작동 하는 데 기반이 인스턴스 없이도 이해 하지 않습니다. 경우에 따라서 `using static` 확장 메서드를 해당 대상 형식에서 사용할 수 있게 확장 메서드를 정의 하는 형식과 함께 사용 됩니다 (메서드의 `this` 형식). 예를 들어 `using static System.Linq.Enumerable` 의 API 확장을 사용할 수 있습니다 `IEnumerable<T>` 모든 LINQ 형식에 표시 하지 않고 개체:
 
 ```csharp
 using static System.Linq.Enumerable;
@@ -113,16 +113,16 @@ class Program
 }
 ```
 
-이전 예제에서는 동작의 차이 보여 줍니다.: 확장 메서드 `Enumerable.Where` 연결 된 정적 메서드는 동안 배열 `String.Join` 에 대 한 참조 없이 호출 될 수는 `String` 유형입니다.
+동작의 차이점을 설명 하는 이전 예제: 확장 메서드 `Enumerable.Where` 정적 메서드에 배열과 사용 하 여 연결 `String.Join` 에 대 한 참조 없이 호출할 수는 `String` 형식입니다.
 
 ### <a name="nameof-expressions"></a>nameof 식
-참조 하려는 경우에 따라 이름에는 변수 또는 필드를 지정 했기 때문입니다. C# 6에서 `nameof(someVariableOrFieldOrType)` 문자열을 반환 합니다 `"someVariableOrFieldOrType"`합니다. 예를 들어, throw 할 때는 `ArgumentException` 매우 많이 있는 인수가 잘못 되었습니다. 이름:
+참조 하려는 경우에 따라 이름에는 변수 또는 필드를 지정 했습니다. C# 6 `nameof(someVariableOrFieldOrType)` 문자열을 반환 합니다 `"someVariableOrFieldOrType"`합니다. 예를 들어 throw 할 때를 `ArgumentException` 가능성이 매우는 인수가 잘못 되었습니다. 이름을 지정 하려고 합니다.
 
 ```csharp
 throw new ArgumentException ("Problem with " + nameof(myInvalidArgument))
 ```
 
-주요 이점은 `nameof` 은 형식 검사를 리팩터링 도구에서 지 원하는와 호환 되는 식이 있습니다. 형식 검사의 `nameof` 식은 경우에 특히 유용 여기서는 `string` 형식을 동적으로 연결 하는 데 사용 됩니다. 예를 들어, iOS에서에서는 `string` 프로토타입 하는 데 사용 하는 형식을 지정 하는 데 사용 되 `UITableViewCell` 개체에 `UITableView`합니다. `nameof` 이 연결에 잘못 된 철자 또는 불량 리팩터링로 인해 실패 하지 않습니다 확인해볼 수 있습니다.:
+주된 장점은 `nameof` 식 되는 형식을 확인 하 고 있다는 리팩터링 도구 기반과 호환 됩니다. 형식 검사의 `nameof` 식을 상황에서 특히 시작 됩니다. 여기서는 `string` 형식을 동적으로 연결할 때 사용 됩니다. 예를 들어 iOS에에서는 `string` 프로토타입에 사용 된 유형을 지정 하는 데 사용 됩니다 `UITableViewCell` 개체는 `UITableView`합니다. `nameof` 이 연결 맞춤법 오류 또는 불량 리팩터링 하지 없도록 보장할 수 있습니다.
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -133,7 +133,7 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-정규화 된 이름을 전달할 수 있지만 `nameof`, 마지막 요소에만 (마지막 뒤 `.`)이 반환 됩니다. 예를 들어, 데이터 바인딩 Xamarin.Forms에 추가할 수 있습니다.
+정규화 된 이름을 전달할 수 있지만 `nameof`, 마지막 요소에만 (마지막 `.`)이 반환 됩니다. 예를 들어 데이터 바인딩을 Xamarin.Forms에 추가할 수 있습니다.
 
 ```csharp
 var myReactiveInstance = new ReactiveType ();
@@ -143,10 +143,10 @@ var myLabelOld.SetBinding (Label.TextProperty, "StringField");
 var myLabelNew.SetBinding (Label.TextProperty, nameof(ReactiveType.StringField));
 ```
 
-두 호출 `SetBinding` 동일한 값을 전달 하는: `nameof(ReactiveType.StringField)` 은 `"StringField"`이 아니라 `"ReactiveType.StringField"` 처음 예상 대로 합니다.
+두 호출 `SetBinding` 동일한 값을 전달 하는: `nameof(ReactiveType.StringField)` 됩니다 `"StringField"`아니라 `"ReactiveType.StringField"` 처음 예상한 대로입니다.
 
 ## <a name="null-conditional-operator"></a>Null 조건부 연산자
-C#에 대 한 이전 업데이트 nullable 형식 및 null 병합 연산자의 개념을 도입 `??` null 허용 값을 처리 하는 경우 기본 코드의 양을 줄일 수 있습니다. C# 6이이 테마 "null 조건부 연산자"와 함께 계속 `?.`합니다. 식의 오른쪽에 있는 개체를 사용 하는 경우 null 조건부 연산자 개체가 없으면 멤버 값을 반환 하는 `null` 및 `null` 그렇지 않은 경우:
+이전 업데이트를 C# nullable 형식 및 null 병합 연산자의 개념을 도입 `??` nullable 값을 처리 하는 경우 상용구 코드 양을 줄일 수 있습니다. C#6이이 테마 "null 조건부 연산자"를 사용 하 여 계속 `?.`합니다. 개체가 없는 경우 null 조건부 연산자 멤버 값을 반환 식의 오른쪽에 있는 개체를 사용 하면 `null` 고 `null` 그렇지 않은 경우:
 
 ```csharp
 var ss = new string[] { "Foo", null };
@@ -155,19 +155,19 @@ var length1 = ss [1]?.Length; // null
 var lengths = ss.Select (s => s?.Length ?? 0); //[3, 0]
 ```
 
-(모두 `length0` 및 `length1` 형식으로 유추 `int?`)
+(둘 다 `length0` 하 고 `length1` 형식으로 유추 됩니다 `int?`)
 
-마지막 줄에서는 이전 예제에는 `?` null 조건부 연산자와 조합 하는 `??` null 병합 연산자입니다. 새 C# 6 null 조건부 연산자는 반환 `null` 이때 null 병합 연산자 시작 되 고 0을 제공 하 여 배열에에서 두 번째 요소는 `lengths` (하는지 여부를 적절 하지 이면 물론, 문제와 관련) 배열입니다.
+에서는 이전 예제에서 마지막 줄을 `?` null 조건부 연산자와 함께에서 `??` null 병합 연산자입니다. 새 C# 6 null 조건부 연산자 반환 `null` 이때 null 병합 연산자로 시작 되 고 제공 하는 0 일 경우 배열의 두 번째 요소에는 `lengths` (여부는 적합 하지 인 물론 배열 문제에 따라 다름).
 
-Null 조건부 연산자 매우 많은 응용 프로그램에서 상용구 null 검사 필요한 양의 줄여야 합니다.
+Null 조건부 연산자 단시간 상용구 많은 응용 프로그램에 필요한 null 검사의 양을 줄여야 합니다.
 
-Null 조건부 연산자 모호성으로 인해 몇 가지 제한이 있습니다. 즉시를 따를 수 없는 한 `?` 괄호로 묶인 인수 목록을 사용 하면 가장 큰 대리자를 사용 하 여 수행할:
+Null 조건부 연산자 모호성으로 인해 일부 제한이 있습니다. 즉시를 따를 수 없습니다는 `?` 괄호로 묶인 인수 목록이 있는 때 가장 큰 대리자를 사용 하 여 수행 합니다.
 
 ```csharp
 SomeDelegate?("Some Argument") // Not allowed
 ```
 
-그러나 `Invoke` 는 구분 하는 데 사용할 수는 `?` 인수 목록에서 스타일러스가 여전히 표시 된 개선 및는 `null`-상용구 블록을 확인 하는 중:
+그러나 `Invoke` 구분 하는 데 사용할 수는 `?` 인수 목록에서 통해는 여전히 표시 된 향상 된 기능 및를 `null`-상용구 블록 검사:
 
 ```csharp
 public event EventHandler HandoffOccurred;
@@ -179,23 +179,23 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 ```
 
 ## <a name="string-interpolation"></a>문자열 보간
-`String.Format` 함수는 일반적으로 사용 되는 인덱스 형식 문자열에 자리 표시자로 예: `String.Format("Expected: {0} Received: {1}.", expected, received`). 물론, 새 값을 추가 인수를 계산, 자리 표시자, 번호 다시 매기기 및 인수 목록에서 오른쪽 순서로 새 인수를 삽입 된 번거로울 거의 작업을 관련 항상 했습니다.
+`String.Format` 함수는 일반적으로 인덱스 자리 표시자로 사용 형식 문자열의 예를 들어 `String.Format("Expected: {0} Received: {1}.", expected, received`). 물론, 새 값 추가 인수를 계산 하 고 자리 표시자를 번호 다시 매기기 인수 목록에서 올바른 시퀀스에서 새 인수 삽입 성가신 거의 작업을 관련 항상 했습니다.
 
-크게 향상 시켰습니다 C# 6의 새로운 문자열 보간 기능 `String.Format`합니다. 접두사로 추가 하는 문자열의 변수에 직접 이름을 지정할 수는 이제는 `$`합니다. 예를 들면 다음과 같습니다.
+C#6의 새로운 특징 문자열 보간 기능을 크게 향상 `String.Format`합니다. 변수 접두사로 문자열에서 직접 이름을 지정할 수는 이제는 `$`합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 $"Expected: {expected} Received: {received}."
 ```
 
-변수 물론, 체크 인 되 고 철자가 잘못 되거나 사용할 수 없는 변수 컴파일러 오류가 발생 합니다.
+변수 물론, 체크 인 되 고 철자가 잘못 되었거나, 사용할 수 없는 변수 컴파일러 오류가 발생 합니다.
 
-자리 표시자를 단순 변수 될 필요가 없습니다, 식일 수 있습니다. 이러한 자리 표시자 내에서 인용 부호를 사용할 수 있습니다 *없이* 이러한 따옴표를 이스케이프 합니다. 예를 들어, 확인 된 `"s"` 다음에서:
+자리 표시자를 단순 변수를 사용할 필요가 없습니다, 식일 수 있습니다. 이러한 자리 표시자 내의 따옴표를 사용할 수 있습니다 *없이* 해당 따옴표를 이스케이프 합니다. 예를 들어 확인 된 `"s"` 다음에서:
 
 ```csharp
 var s = $"Timestamp: {DateTime.Now.ToString ("s", System.Globalization.CultureInfo.InvariantCulture )}"
 ```
 
-문자열 보간 맞춤 및의 서식 지정 구문을 지원 `String.Format`합니다. 와 마찬가지로 이전에 작성 `{index, alignment:format}`, C# 6 작성 `{placeholder, alignment:format}`:
+문자열 보간 맞춤 및 서식 지정 구문을 지원 `String.Format`합니다. 이전에 작성 하듯이 `{index, alignment:format}`, C# 작성 하는 6 `{placeholder, alignment:format}`:
 
 ```csharp
 using static System.Linq.Enumerable;
@@ -223,13 +223,13 @@ class Program
     The value is 123,456.00.
     Minimum is 1.00.
 
-문자열 보간에 대 한 syntactic sugar는 `String.Format`: 함께 사용할 수 없습니다 `@""` 문자열 리터럴 및와 호환 되지 않는 `const`자리 표시 자가 사용 되는 경우에 합니다.
+문자열 보간은에 대 한 syntactic sugar `String.Format`: 함께 사용할 수 없습니다 `@""` 문자열 리터럴 및와 호환 되지 않습니다 `const`자리 표시 자가 되는 경우에:
 
 ```csharp
 const string s = $"Foo"; //Error : const requires value
 ```
 
-여전히 문자열 보간 사용 하 여 함수 인수를 빌드 과정의 일반적인 사용 사례에 이스케이프, 인코딩 및 문화권 문제에 대해 주의 필요 합니다. URL 및 SQL 쿼리는, 물론, 중요를 삭제 합니다. 와 마찬가지로 `String.Format`, 보간을 사용 하 여 문자열의 `CultureInfo.CurrentCulture`합니다. 사용 하 여 `CultureInfo.InvariantCulture` 좀 더 장황한 것은:
+문자열 보간 사용 하 여 함수 인수를 구축 하는 일반적인 사용 사례에서 이스케이프, 인코딩 및 문화권 문제에 대해 주의 해야 합니다. SQL 쿼리와 URL 인 물론, 삭제 하는 데 중요 합니다. 와 마찬가지로 `String.Format`, 문자열 보간을 사용 하는 `CultureInfo.CurrentCulture`합니다. 사용 하 여 `CultureInfo.InvariantCulture` 좀 더 단어는:
 
 ```csharp
 Thread.CurrentThread.CurrentCulture  = new CultureInfo ("de");
@@ -239,11 +239,11 @@ Console.WriteLine ($"Today is: {DateTime.Now.ToString(CultureInfo.InvariantCultu
 
 ## <a name="initialization"></a>초기화
 
-C# 6에는 다양 한 속성, 필드 및 멤버를 지정 하는 간단한 방법 제공 합니다.
+C#6에는 다양 한 속성, 필드 및 멤버를 지정 하는 간단한 방법 제공 합니다.
 
-### <a name="auto-property-initialization"></a>속성 자동 초기화
+### <a name="auto-property-initialization"></a>Auto 속성 초기화
 
-이제 필드와 같은 간결한 방식으로 자동 속성을 초기화할 수 있습니다. 변경할 수 없는 자동 속성 getter에만 쓸 수 있습니다.
+Auto 속성 필드와 동일한 간결한 방식으로 초기화 될 수 있습니다. 변경할 수 없는 auto 속성 getter만을 사용 하 여 작성할 수 있습니다.
 
 ```csharp
 class ToDo
@@ -267,11 +267,11 @@ class ToDo
     }
 ```
 
-자동 속성에 대해이 초기화는 일반적인 공간 절약 기능 하면서 해당 개체의 불변성 강조 하기 위해 개발자에 게 유용 하 게 있습니다.
+Auto 속성이 초기화가 일반적인 공간 절약 기능 및 해당 개체의 불변성을 강조 하기 위해 개발자에 게 유용 하 게 됩니다.
 
 ### <a name="index-initializers"></a>인덱스 이니셜라이저
 
-C# 6 인덱서가 있는 형식에 키와 값을 설정할 수 있는 인덱스 이니셜라이저를 소개 합니다. 에 대 한 일반적으로 이것이 `Dictionary`-스타일 지정 데이터 구조:
+C#6은 인덱서가 있는 형식에 키와 값을 설정할 수 있도록 하는 인덱스 이니셜라이저를 소개 합니다. 에 대 한 일반적으로 이것이 `Dictionary`-데이터 구조를 스타일:
 
 ```csharp
 partial void ActivateHandoffClicked (WatchKit.WKInterfaceButton sender)
@@ -286,23 +286,23 @@ partial void ActivateHandoffClicked (WatchKit.WKInterfaceButton sender)
 }
 ```
 
-### <a name="expression-bodied-function-members"></a>함수 식 본문이 멤버
+### <a name="expression-bodied-function-members"></a>식 본문 함수 멤버
 
-람다 함수 중 하나는 단순히 공간을 저장 하는 여러 가지 이점을 갖고 있습니다. 마찬가지로, 식 본문이 클래스 멤버에는 이전 버전의 C# 6에 비해 좀 더 간략하게 표시 해야 하는 작은 함수가 허용 합니다.
+람다 함수에는 그 중 하나는 공간 저장 하 여 몇 가지 이점을 있습니다. 클래스 식 본문 멤버를 이전 버전의 보다 좀 더 간결 하 게 표현할 수 있는 작은 함수를 허용 하는 마찬가지로, C# 6.
 
-함수 식 본문이 멤버 기존의 블록 구문을 아닌 람다 화살표 구문을 사용합니다.
+식 본문 함수 멤버는 기존의 블록 구문이 아니라 람다 화살표 구문을 사용합니다.
 
 ```csharp
 public override string ToString () => $"{FirstName} {LastName}";
 ```
 
-람다 화살표 구문에서 사용 하지 않음을 명시적 공지 `return`합니다. 함수가 반환 하는 `void`, 식 문을 수도 있어야 합니다.
+람다 화살표 구문을 사용 하지 않음을 명시적 알림 `return`합니다. 반환 하는 함수에 대 한 `void`, 식 문을 수도 있어야 합니다.
 
 ```csharp
 public void Log(string message) => System.Console.WriteLine($"{DateTime.Now.ToString ("s", System.Globalization.CultureInfo.InvariantCulture )}: {message}");
 ```
 
-멤버 식 본문이 규칙이 계속 적용 됩니다는 `async` 메서드 하지만 속성이 아니라에 대 한 지원:
+식 본문 멤버 규칙이 계속 적용 됩니다는 `async` 메서드 하지만 속성이 아니라 지원 됩니다.
 
 ```csharp
 //A method, so async is valid
@@ -313,11 +313,11 @@ public async Task<int> LeisureHours => await Task.FromResult<char> (DateTime.Now
 
 ## <a name="exceptions"></a>예외
 
-항목에 대 한 없는 두 가지 방법으로: 예외 처리는 까다로운 합니다. C# 6의 새로운 기능을 보다 유연 하 고 일관 된 예외 처리를 확인합니다.
+에 대 한 없는 두 가지 방법으로: 예외 처리 이해 하기 어렵습니다. 새로운 기능 C# 6 보다 유연 하 고 일관 된 예외 처리를 확인 합니다.
 
 ### <a name="exception-filters"></a>예외 필터
 
-기본적으로 특수 한 상황에서는 예외가 발생 한 이유 및 방법에 대 한 코드를 매우 어려울 수 있습니다 *모든* 특정 유형의 예외가 발생 하는 방법입니다. C# 6 필터를 사용 하면 런타임 평가 실행 처리기를 보호 하는 기능을 소개 합니다. 추가 하 여 이렇게는 `when (bool)` 수직 후 패턴 `catch(ExceptionType)` 선언 합니다. 다음 예제에서 필터와 관련 된 구문 분석 오류를 구별는 `date` 다른 구문 분석 오류가 아닌 매개 변수입니다.
+정의상, 특수 한 상황에서 예외가 발생 하 고 이유 및 방법에 대 한 코드는 매우 어려울 수 있습니다 *모든* 특정 유형의 예외가 발생 하는 방법입니다. C#6은 런타임 평가 필터를 사용 하 여 실행 처리기를 보호 하는 기능을 소개 합니다. 추가 하 여 이렇게를 `when (bool)` 법선 후 패턴 `catch(ExceptionType)` 선언 합니다. 다음에서 필터는와 관련 된 구문 분석 오류를 구별 합니다 `date` 다른 구문 분석 오류와 달리 매개 변수입니다.
 
 ```csharp
 public void ExceptionFilters(string aFloat, string date, string anInt)
@@ -335,9 +335,9 @@ public void ExceptionFilters(string aFloat, string date, string anInt)
 }
 ```
 
-### <a name="await-in-catchfinally"></a>... catch에서 await를 마지막으로...
+### <a name="await-in-catchfinally"></a>... catch에서 await를 마지막으로 하는 중...
 
-`async` C# 5에 도입 된 기능에는 언어에 대 한 게임 교환기 되었습니다. C# 5에서 `await` 에 허용 되지 않았습니다. `catch` 및 `finally` 의 값을 지정 하는 일을 차단 된 `async/await` 기능. C# 6 비동기 결과 다음 코드 조각에 나와 있는 것 처럼 프로그램을 통해 지속적으로 대기할 수 있도록이 제한을 제거 합니다.
+합니다 `async` 에 도입 된 기능 C# 5 언어용 판도 되었습니다. C# 5 `await` 에서 허용 되지 않았습니다 `catch` 및 `finally` 블록의 값을 지정 하는 불편 합니다 `async/await` 기능. C#6에는 비동기 결과 다음 코드 조각에 나와 있는 것 처럼 프로그램을 통해 지속적으로 대기할 수 있도록 이러한 제한을 제거 합니다.
 
 ```csharp
 async void SomeMethod()
@@ -355,9 +355,9 @@ async void SomeMethod()
 
 ## <a name="summary"></a>요약
 
-개발자가 좋은 방법 및 도구를 지 원하는 동안 생산성을 높일 수 있도록 하려면 진화 하는 C# 언어 계속 됩니다. 이 문서에 C# 6에서의 새로운 언어 기능 개요를 지정 하 고 간단 하 게 사용 하는 방법을 제시 합니다.
+C# 언어 진화 또한 모범 사례를 홍보 하 고 도구를 지원 하는 동안 개발자 생산성을 확인 하 여 계속 합니다. 이 문서에 새 언어 기능의 개요를 지정 하는 C# 6 및 사용 방법에 대해 간략하게 설명 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [C# 6의 새로운 언어 기능](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6)
-- [C# 6을 사용 하 여 통합 문서](https://developer.xamarin.com/workbooks/csharp/csharp6/csharp6.workbook)
+- [새로운 언어 기능은 C# 6](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6)
+

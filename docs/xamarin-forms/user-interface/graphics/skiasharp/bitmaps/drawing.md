@@ -4,19 +4,19 @@ description: SkiaSharp 비트맵을 만들고 그에 따라 캔버스를 만들�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: c8ddf8c0829cea319dd93dd9c3686b94ed8eb89e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615592"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109239"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
 
-살펴보았습니다 방법을 통해 응용 프로그램 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드할 수 있습니다. 응용 프로그램 내에서 새 비트맵을 만들 수 이기도 합니다. 가장 간단한 방법은의 생성자 중 하나를 포함 [ `SKBitmap` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+살펴보았습니다 방법을 통해 응용 프로그램 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드할 수 있습니다. 응용 프로그램 내에서 새 비트맵을 만들 수 이기도 합니다. 가장 간단한 방법은의 생성자 중 하나를 포함 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -37,7 +37,7 @@ SKBitmap bitmap = new SKBitmap(width, height);
 
 ## <a name="drawing-on-the-bitmap"></a>비트맵에 그리기
 
-비트맵의 화면에서 그리기 비디오 디스플레이에 그리기와 같습니다. 가져올 비디오 디스플레이에 그릴를 `SKCanvas` 에서 개체를 `PaintSurface` 이벤트 인수입니다. 만든 비트맵을 그리려면를 `SKCanvas` 를 사용 하 여 개체를 [ `SKCanvas` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/) 생성자:
+비트맵의 화면에서 그리기 비디오 디스플레이에 그리기와 같습니다. 가져올 비디오 디스플레이에 그릴를 `SKCanvas` 에서 개체를 `PaintSurface` 이벤트 인수입니다. 만든 비트맵을 그리려면를 `SKCanvas` 를 사용 하 여 개체를 [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) 생성자:
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -123,9 +123,9 @@ public partial class HelloBitmapPage : ContentPage
 
 `Clear` 두 가지 버전에 있습니다. 
 
-- 합니다 [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/) 메서드를 `SKColor` 매개 변수는 픽셀 색을 디스플레이 화면의 픽셀을 대체 합니다.
+- 합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) 메서드를 `SKColor` 매개 변수는 픽셀 색을 디스플레이 화면의 픽셀을 대체 합니다.
 
-- 합니다 [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) 메서드 매개 변수 없이 사용 하 여 픽셀을 대체 합니다 [ `SKColors.Empty` ](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/) 색 (빨강, 녹색, 파랑 및 알파) 구성 요소는 0으로 설정 하는 모든 색입니다. 이 색은 라고도 함 투명 검정입니다.
+- 합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) 메서드 매개 변수 없이 사용 하 여 픽셀을 대체 합니다 [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) 색 (빨강, 녹색, 파랑 및 알파) 구성 요소는 0으로 설정 하는 모든 색입니다. 이 색은 라고도 함 투명 검정입니다.
 
 호출 `Clear` 새 비트맵에 인수를 사용 하 여 완전히 투명 하 게 전체 비트맵을 초기화 합니다. 비트맵에 이후에 그려지는 아무것도 보통은 불투명 하 게 또는 부분적으로 불투명 합니다.
 
@@ -151,7 +151,7 @@ Color = new SKColor(0, 0, 0, 0)
 
 ## <a name="bitmap-color-types"></a>비트맵 색 형식
 
-가장 간단한 `SKBitmap` 생성자를 사용 하면 정수 픽셀 너비 및 비트맵의 높이 지정할 수 있습니다. 다른 `SKBitmap` 생성자는 더 복잡 합니다. 이 생성자에는 두 열거형 형식의 인수가 필요 합니다. [ `SKColorType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/) 하 고 [ `SKAlphaType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/)합니다. 다른 생성자를 사용 합니다 [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/) 구조는이 정보를 통합 합니다.
+가장 간단한 `SKBitmap` 생성자를 사용 하면 정수 픽셀 너비 및 비트맵의 높이 지정할 수 있습니다. 다른 `SKBitmap` 생성자는 더 복잡 합니다. 이 생성자에는 두 열거형 형식의 인수가 필요 합니다. [ `SKColorType` ](xref:SkiaSharp.SKColorType) 하 고 [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType)합니다. 다른 생성자를 사용 합니다 [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) 구조는이 정보를 통합 합니다.
 
 `SKColorType` 열거형 멤버가 9입니다. 이러한 각각의이 멤버에는 비트맵 픽셀을 저장 하는 특정 방식으로 설명 합니다.
 
@@ -161,7 +161,7 @@ Color = new SKColor(0, 0, 0, 0)
 - `Argb4444` &mdash; 각 픽셀은 16 비트를 4 각 알파, 빨강, 녹색 및 파랑
 - `Rgba8888` &mdash; 각 픽셀은 각 8 빨간색, 녹색, 파랑 및 알파에 대 한 32 비트
 - `Bgra8888` &mdash; 각 픽셀은 각 8 파랑, 녹색, 빨강 및 알파에 대 한 32 비트
-- `Index8` &mdash; 각 픽셀은 8 비트 나타내고 인덱스는 [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; 각 픽셀은 8 비트 나타내고 인덱스는 [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; 각 픽셀은 흰색으로 검정에서 회색 음영을 나타내는 8 비트
 - `RgbaF16` &mdash; 각 픽셀은 빨간색, 녹색, 파랑 및 알파는 16 비트 부동 소수점 형식에서 사용 하 여 64 비트
 
@@ -596,5 +596,5 @@ Monkey의 shirt 시 역방향된 처리에서 보듯이 대칭 이동 회전 같
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

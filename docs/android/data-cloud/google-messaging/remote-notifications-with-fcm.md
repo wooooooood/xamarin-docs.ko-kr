@@ -4,15 +4,15 @@ description: 이 연습에서는 Xamarin.Android 응용 프로그램에서 Fireb
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 36ac1be1274ff90d573aa53e5c86ae0a97709505
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105547"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>원격 알림 firebase Cloud Messaging
 
@@ -42,7 +42,7 @@ _이 연습에서는 Xamarin.Android 응용 프로그램에서 Firebase Cloud Me
 이 연습을 진행할 수 있습니다, 전에 Google의 FCM 서버를 사용 하는 데 필요한 자격 증명을 획득 해야 합니다. 이 프로세스는 설명 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#setup_fcm)합니다.
 특히 다운로드 해야 합니다 **google-services.json** 이 연습에서 예제 코드를 사용 하는 파일입니다. 경우 아직 만들지 않은 프로젝트 Firebase 콘솔에서 (아직 다운로드 하지 않은 경우 또는 합니다 **google-services.json** 파일)를 참조 하세요 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)합니다.
 
-예제 앱을 실행 하려면 Android 테스트 장치 또는 Firebase 호환 되어 있는 에뮬레이터를 해야 합니다. Android 4.0 이상에서 실행 하는 클라이언트를 지 원하는 firebase Cloud Messaging 및 있어야 이러한 장치는 Google Play 스토어 앱이 설치 (Google Play Services 9.2.1 이상이 필요). Google Play 스토어 앱이 장치에 설치 합니다. 아직 없는 경우 방문 합니다 [Google Play](https://support.google.com/googleplay) 웹 사이트를 다운로드 하 여 설치 해야 합니다. 또는 Google Play 서비스를 설치 하는 대신 (필요가 없습니다 Android SDK 에뮬레이터를 사용 하는 경우 Google Play 스토어를 설치 하려면) 테스트 장치를 사용 하 여 Android SDK 에뮬레이터를 사용할 수 있습니다.
+예제 앱을 실행 하려면 Android 테스트 장치 또는 Firebase 호환 되어 있는 에뮬레이터를 해야 합니다. Android 4.0 이상에서 실행 하는 클라이언트를 지 원하는 firebase Cloud Messaging 및 이러한 장치는 Google Play 스토어 앱이 설치 되어 있어야 합니다. (Google Play Services 9.2.1 이상이 필요). Google Play 스토어 앱이 장치에 설치 합니다. 아직 없는 경우 방문 합니다 [Google Play](https://support.google.com/googleplay) 웹 사이트를 다운로드 하 여 설치 해야 합니다. 또는 Google Play 서비스를 설치 하는 대신 (필요가 없습니다 Android SDK 에뮬레이터를 사용 하는 경우 Google Play 스토어를 설치 하려면) 테스트 장치를 사용 하 여 Android SDK 에뮬레이터를 사용할 수 있습니다.
 
 ## <a name="start-an-app-project"></a>앱 프로젝트를 시작 합니다.
 
@@ -53,7 +53,7 @@ _이 연습에서는 Xamarin.Android 응용 프로그램에서 Firebase Cloud Me
 
 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md), FCM 지원 앱에 대 한 패키지 이름을 지정 합니다. 이 패키지 이름으로도 사용 합니다 [ *응용 프로그램 ID* ](./firebase-cloud-messaging.md#fcm-in-action-app-id) 연관 된를 [API 키](firebase-cloud-messaging.md#fcm-in-action-api-key)합니다. 이 패키지 이름을 사용 하도록 앱을 구성 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  에 대 한 속성을 엽니다는 **FCMClient** 프로젝트입니다.
 
@@ -65,7 +65,7 @@ _이 연습에서는 Xamarin.Android 응용 프로그램에서 Firebase Cloud Me
 
 업데이트 하는 동안를 **Android 매니페스트**에 확인 해야 하는 `Internet` 권한을 사용 하도록 설정 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  에 대 한 속성을 엽니다는 **FCMClient** 프로젝트입니다.
 
@@ -86,7 +86,7 @@ _이 연습에서는 Xamarin.Android 응용 프로그램에서 Firebase Cloud Me
 
 Firebase Cloud Messaging Google Play 서비스에 따라 달라 지므로 합니다 [Xamarin Google Play 서비스-기본](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Base/) Xamarin.Android 프로젝트에 NuGet 패키지를 추가 해야 합니다. 버전 29.0.0.2가 필요 이상.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Visual Studio에서 마우스 오른쪽 단추로 클릭 **참조 > NuGet 패키지 관리...** .
 
@@ -96,7 +96,7 @@ Firebase Cloud Messaging Google Play 서비스에 따라 달라 지므로 합니
 
     [![Google Play Services 자료를 설치합니다.](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가...** .
 
@@ -123,7 +123,7 @@ using Android.Gms.Common;
 
 FCM에서 메시지를 수신 하는 [Xamarin Firebase-메시징](https://www.nuget.org/packages/Xamarin.Firebase.Messaging/) 앱 프로젝트에 NuGet 패키지를 추가 해야 합니다. 이 패키지 없이 Android 응용 프로그램 FCM 서버에서 메시지를 받을 수 없습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Visual Studio에서 마우스 오른쪽 단추로 클릭 **참조 > NuGet 패키지 관리...** .
 
@@ -133,7 +133,7 @@ FCM에서 메시지를 수신 하는 [Xamarin Firebase-메시징](https://www.nu
 
     [![Xamarin Firebase 메시징 설치](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가...** .
 
@@ -161,7 +161,7 @@ using Android.Util;
 
 다음 단계를 추가 하는 것은 **google-services.json** 파일을 프로젝트의 루트 디렉터리:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  복사본 **google-services.json** 프로젝트 폴더에 있습니다.
 
@@ -169,11 +169,14 @@ using Android.Util;
 
 3.  선택 **google-services.json** 에 **솔루션 탐색기** 창입니다.
 
-4.  에 **속성** 창 설정 합니다 **빌드 작업** 에 **GoogleServicesJson** (경우를 **GoogleServicesJson** 빌드 작업에 표시 되지 않으면 저장 하 고 솔루션을 닫았다가):
+4.  에 **속성** 창 설정 된 **빌드 작업** 에 **GoogleServicesJson**:
 
     [![GoogleServicesJson 빌드 작업 설정](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+    > [!NOTE] 
+    > 경우는 **GoogleServicesJson** 빌드 작업이 표시 되지 않습니다, 저장 및 솔루션을 닫은 다음 다시 여십시오.
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  복사본 **google-services.json** 프로젝트 폴더에 있습니다.
 
@@ -273,7 +276,7 @@ void CreateNotificationChannel()
         return;
     }
 
-    var channel = new NotificationChannel(MyFirebaseMessagingService.CHANNEL_ID,
+    var channel = new NotificationChannel(CHANNEL_ID,
                                           "FCM Notifications",
                                           NotificationImportance.Default)
                   {
@@ -419,7 +422,7 @@ void SendRegistrationToAppServer (string token)
 
 [![앱 화면에 추가 하는 로그 토큰 단추](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
-### <a name="log-tokes"></a>로그 tokes
+### <a name="log-tokens"></a>로그 토큰
 
 이 단계에서 추가한 코드는 설명 위해서만 제공 됩니다 &ndash; 프로덕션 클라이언트 앱 등록 토큰을 기록할 필요 없을 것입니다. 편집할 **Resources/layout/Main.axml** 다음을 추가 합니다 `Button` 선언 바로 뒤를 `TextView` 요소:
 
@@ -432,7 +435,7 @@ void SendRegistrationToAppServer (string token)
   android:text="Log Token" />
 ```
 
-끝에 다음 코드를 추가 합니다 `MainActivity.OnCreate` 메서드:
+`MainActivity.OnCreate` 메서드의 끝에 다음 코드를 추가합니다.
 
 ```csharp
 var logTokenButton = FindViewById<Button>(Resource.Id.logTokenButton);
@@ -774,7 +777,7 @@ FCM 모두에서 장치 등록을 취소 하려면 호출 하 여 인스턴스 I
 FirebaseInstanceId.Instance.DeleteInstanceId();
 ```
 
-이 메서드 호출은 삭제 된 인스턴스 ID와 연결 된 데이터입니다. 결과적으로 정기 장치로 FCM 데이터를 보내는 중지 됩니다.
+이 메서드 호출은 인스턴스 ID와 연결 된 데이터를 삭제 합니다. 결과적으로 정기 장치로 FCM 데이터를 보내는 중지 됩니다.
 
 
 ## <a name="troubleshooting"></a>문제 해결

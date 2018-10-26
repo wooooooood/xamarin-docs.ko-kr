@@ -1,124 +1,124 @@
 ---
-title: '설치 및 설정 OS onXamarin.Android 쓰는 유형 '
-description: 이 문서는 설치 단계 및 구성 세부 정보를 쓰는 유형 Android 개발에 대 한 장치 및 컴퓨터를 준비 하는 데 필요한 안내 합니다. 이 문서의 뒷부분에서 작동 중인 Xamarin.Android 마모 설치 Mac 및/또는 Microsoft Visual Studio에 대 한 Visual Studio에 통합 해야 합니다. 첫 번째 Xamarin.Android 마모 응용 프로그램 작성을 시작할 준비가 수 고 합니다.
+title: '설치 및 설정 Wear OS onXamarin.Android '
+description: 이 문서에서는 컴퓨터와 Android Wear 개발용 장치를 준비 하는 데 필요한 구성 세부 정보 및 설치 단계를 안내 합니다. 이 문서 끝으로 작동 하는 Mac 및/또는 Microsoft Visual Studio, Visual Studio에 통합 된 Xamarin.Android Wear 설치 해야 하 고 첫 번째 Xamarin.Android Wear 응용 프로그램을 빌드할 준비가 됩니다.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 14162663c518fdd1324f2b0340592fbae491d112
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: ed6d3c1cfc14bd0dece5ffe494cc02fd8f608b1b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117280"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
-_이 문서는 설치 단계 및 구성 세부 정보를 쓰는 유형 Android 개발에 대 한 장치 및 컴퓨터를 준비 하는 데 필요한 안내 합니다. 이 문서의 뒷부분에서 작동 중인 Xamarin.Android 마모 설치 Mac 및/또는 Microsoft Visual Studio에 대 한 Visual Studio에 통합 해야 합니다. 첫 번째 Xamarin.Android 마모 응용 프로그램 작성을 시작할 준비가 수 고 합니다._
+_이 문서에서는 컴퓨터와 Android Wear 개발용 장치를 준비 하는 데 필요한 구성 세부 정보 및 설치 단계를 안내 합니다. 이 문서 끝으로 작동 하는 Mac 및/또는 Microsoft Visual Studio, Visual Studio에 통합 된 Xamarin.Android Wear 설치 해야 하 고 첫 번째 Xamarin.Android Wear 응용 프로그램을 빌드할 준비가 됩니다._
 
 ## <a name="requirements"></a>요구 사항
 
-다음은 Android 착용 Xamarin 기반 앱을 만들 필요 합니다.
+다음은 Xamarin 기반 Android Wear 앱을 만드는 데 필요 합니다.
 
--   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; 하는 경우 Visual Studio, Visual Studio 2015 Professional을 사용 하거나 이상 버전이 필요 합니다.
+-   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; 하는 사용 경우 Visual Studio, Visual Studio 2015 Professional 이상 버전이 필요 합니다.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 4.17 이상을 설치 하 고 Mac.에 대 한 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야
+-   **Xamarin.Android** &ndash; 4.17 이상 Xamarin.Android를 설치 하 고 mac 용 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야
 
--   **Android SDK** -Android SDK (API 21) 5.0.1 나중에 설치 되어 있어야 Android SDK Manager를 통해 합니다.
+-   **Android SDK** -Android SDK (API 21) 5.0.1 나중에 설치 해야 Android SDK Manager를 통해 또는 합니다.
 
--   **Java 개발자 키트** &ndash; Xamarin Android 개발 시 필요한 [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 24 API 수준에 대 한 개발 또는 큰 경우 (JDK 1.8 API에서는 수준을 지원 24 보다 이전 버전).
+-   **Java Developer Kit** &ndash; Xamarin Android 개발 장치가 필요한 [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 개발 API 수준 24 이상을 있다면 (JDK 1.8에서는 API 수준 24 미만도).
 
-계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 수준 23에 맞게 개발 이하의 경우.
+계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.
 
 ## <a name="installation"></a>설치
 
-Xamarin.Android를 설치한 후 빌드 및 쓰는 유형 Android 앱을 테스트 준비가 되도록 다음 단계를 수행: 
+Xamarin.Android를 설치한 후 Android Wear 앱 빌드 및 테스트 준비가 되도록 다음 단계를 수행 합니다. 
 
 1.  필요한 Android SDK 및 도구를 설치 합니다.
 2.  테스트 장치를 구성 합니다.
-3.  첫 Android 착용 응용 프로그램을 만듭니다.
+3.  첫 번째 Android Wear 앱을 만듭니다.
 
 이러한 단계는 다음 섹션에 설명 되어 있습니다.
 
 
 ### <a name="install-android-sdk-and-tools"></a>Android SDK 및 도구 설치 
 
-시작 된 **Android SDK Manager**: 
+시작 합니다 **Android SDK Manager**: 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Visual Studio에서 Android SDK Manager를 시작 하는 방법](installation-images/vs/sdk-menu.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![Mac 용 Visual Studio에서 Android SDK Manager를 시작 하는 방법](installation-images/xs/sdk-menu.png)
 
 -----
 
 
-다음 Android SDK 및 도구가 설치 되어 있는지 확인 합니다.
+다음 Android SDK 및 도구를 설치 했는지 확인 합니다.
 
-* Android SDK 도구 v 24.0.0 또는 그 이상으로 및
+* Android SDK Tools v 24.0.0 이상 및
 * Android 4.4W (API20) 또는
-* Android 5.0.1 (API21) 이상.
+* Android 5.0.1(api (API21) 이상.
 
-최신 SDK 및 도구가 설치 된 없는 경우 필요한 SDK 도구를 다운로드 *및* API 비트 (을 비트에 스크롤해야 할 수도 &ndash; API 영역이 아래 표시): 
+최신 SDK 및 도구가 설치 되어 있지 않은, 경우에 필요한 SDK 도구를 다운로드 *하 고* API 비트 (찾기 비트 스크롤해야 할 수도 있습니다 &ndash; API 선택 영역 아래에 표시 됩니다): 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Android 5.0.1 사용의 예에서는 SDK Manager 스크린 샷 구성 요소](installation-images/vs/sdk-select.png)
+![Android 5.0.1(api 설정 스크린샷 예제에서는 SDK Manager 구성 요소](installation-images/vs/sdk-select.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![Android 4.4 및 5.0.1 사용의 예에서는 SDK Manager 스크린 샷 구성 요소](installation-images/xs/sdk-select.png)
+![Android 4.4 및 5.0.1 스크린샷 예제에서는 SDK Manager 구성 요소](installation-images/xs/sdk-select.png)
 
 -----
 
 
 ## <a name="configuration"></a>구성
 
-사용 하려면 먼저 응용 프로그램을 테스트, 쓰는 유형 Android 에뮬레이터 또는 실제 쓰는 유형 Android 장치를 구성 해야 합니다. 
+앱 테스트를 사용 하려면 먼저 Android Wear 에뮬레이터 또는 실제 Android Wear 장치를 구성 해야 합니다. 
 
 
-### <a name="android-wear-emulator"></a>Android 마모 에뮬레이터
+### <a name="android-wear-emulator"></a>Android Wear 에뮬레이터
 
-사용 하 여 쓰는 유형 Android 가상 장치 AVD (Android)를 구성 해야 쓰는 유형 Android 에뮬레이터를 사용 하려면 먼저는 **Google 에뮬레이터 관리자**:
+Android Wear 에뮬레이터를 사용 하려면 먼저 사용 하 여 Android Wear 가상 장치 AVD (Android)를 구성 해야 합니다 **Google 에뮬레이터 관리자**:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![Visual Studio에서 Android 에뮬레이터 관리자를 시작 하는 방법](installation-images/vs/emulator-menu.png)
+![Visual Studio에서 Android Emulator 관리자를 시작 하는 방법](installation-images/vs/emulator-menu.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![Mac 용 Visual Studio에서 Android 에뮬레이터 관리자를 시작 하는 방법](installation-images/xs/emulator-menu.png)
+![Mac 용 Visual Studio에서 Android Emulator 관리자를 시작 하는 방법](installation-images/xs/emulator-menu.png)
 
 -----
 
-쓰는 유형 Android 에뮬레이터를 설정 하는 방법에 대 한 자세한 내용은 참조 [에뮬레이터 Android 착용 디버그](~/android/wear/deploy-test/debug-on-emulator.md)합니다.
+Android Wear 에뮬레이터 설정에 대 한 자세한 내용은 참조 하세요. [에뮬레이터에서 Android Wear 디버그](~/android/wear/deploy-test/debug-on-emulator.md)합니다.
 
 
-### <a name="android-wear-device"></a>Android 마모 장치
+### <a name="android-wear-device"></a>Android Wear 장치
 
-Android 착용 Smartwatch 같은 쓰는 유형 Android 장치를 설정한 경우 에뮬레이터를 사용 하는 대신이 장치에서 앱을 디버깅할 수 있습니다. 마모 장치를 사용 하 여 개발 하는 방법에 대 한 정보를 참조 하십시오. [착용 장치에서 디버깅](~/android/wear/deploy-test/debug-on-device.md)합니다.
+Android Wear Smartwatch 같은 Android Wear 장치를 사용 하는 경우에 에뮬레이터를 사용 하는 대신이 장치에서 앱을 디버그할 수 있습니다. Wear 장치를 사용 하 여 개발 하는 방법에 대 한 내용은 [Wear 장치에서 디버그](~/android/wear/deploy-test/debug-on-device.md)합니다.
 
 
-## <a name="create-your-first-android-wear-app"></a>첫 번째 Android 마모 앱 만들기
+## <a name="create-your-first-android-wear-app"></a>첫 번째 Android Wear 앱 만들기
 
-에 따라는 [안녕하세요, 마모](~/android/wear/get-started/hello-wear.md) 첫 조사식 응용 프로그램을 작성 하기 위한 지침입니다.
+수행 합니다 [안녕하세요, Wear](~/android/wear/get-started/hello-wear.md) 첫 번째 watch 앱을 작성 하기 위한 지침입니다.
 
 
 ## <a name="packaging-your-app"></a>앱 패키징
 
-Android 마모 응용 프로그램은 항상 도우미 Android 휴대폰 앱으로 배포 됩니다. 
+Android wear 응용 프로그램은 항상 도우미 Android 휴대폰 앱을 사용 하 여 배포 됩니다. 
 
-기본 Android 응용 프로그램에 대 한 참조로 쓰는 유형 Android 응용 프로그램을 추가 하면 자동 Android 착용 프로젝트도 간주 됩니다를 사용자에 대 한 XML 및 메타 데이터에 대 한 모든 필요한을 발생 합니다. 또한, Google Play에 앱을 쉽게 제공할 수 있도록 패키지 및 버전 번호와 일치 하는지 확인 합니다. 
+Android Wear 응용 프로그램 기본 Android 응용 프로그램에 대 한 참조를 추가 하면 자동으로 Android Wear 프로젝트를 간주 됩니다 및 및 생성 하는 모든 필요한 XML 메타 데이터를 합니다. 또한 Google Play에 앱을 쉽게 제공할 수 있도록 패키지 및 버전 번호 일치 하는지 확인 합니다. 
 
-마모 앱 패키징 하는 방법에 대 한 자세한 참조 [패키징 작업](~/android/wear/deploy-test/packaging.md)합니다.
+Wear 앱 패키징 하는 방법에 대 한 자세한 내용은 참조 하세요 [패키징 작업](~/android/wear/deploy-test/packaging.md)합니다.
 
 
 ## <a name="related-links"></a>관련 링크

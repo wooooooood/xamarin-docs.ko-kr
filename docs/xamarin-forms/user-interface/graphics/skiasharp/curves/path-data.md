@@ -4,29 +4,29 @@ description: 이 문서는 확장성이 뛰어난 벡터 그래픽 형식으로 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: f3c06198ae9e677c667c9216b3ace8784a6056b2
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 5e059cc6ef3a127ae79bd2ed97ade7a8045958f1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116175"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
 
 _텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다._
 
-`SKPath` 클래스 형식으로 확장 가능한 SVG (벡터 그래픽) 사양에 설정 된 텍스트 문자열의 전체 경로 개체의 정의 지원 합니다. 이 문서의 뒷부분에 나오는 같은 텍스트 문자열의 전체 경로 나타낼 수는 어떻게 표시 됩니다.
+합니다 [ `SKPath` ](xref:SkiaSharp.SKPath) 클래스 형식으로 확장 가능한 SVG (벡터 그래픽) 사양에 설정 된 텍스트 문자열의 전체 경로 개체의 정의 지원 합니다. 이 문서의 뒷부분에 나오는 같은 텍스트 문자열의 전체 경로 나타낼 수는 어떻게 표시 됩니다.
 
 ![](path-data-images/pathdatasample.png "SVG 경로 데이터를 사용 하 여 정의 하는 샘플 경로")
 
 SVG는 웹 페이지에 대 한 언어를 프로그래밍 하는 XML 기반 그래픽입니다. SVG 일련의 함수 호출 보다는 태그에 정의 해야 하는 경로 허용 해야 하기 때문에 표준 SVG은 텍스트 문자열로 전체 그래픽 경로 지정 하는 매우 간단 하 게 포함 되어 있습니다.
 
-SkiaSharp, 내에서이 형식으로 라고 "SVG 경로 데이터입니다." 형식은 Windows XAML 기반 프로그래밍 환경의 Windows Presentation Foundation 등으로 알려져 있는 유니버설 Windows 플랫폼 에서도 지원 됩니다 합니다 [경로 태그 구문](https://msdn.microsoft.com/library/ms752293%28v=vs.110%29.aspx) 또는 [이동 그리기 명령 구문 및](/windows/uwp/xaml-platform/move-draw-commands-syntax/)합니다. 또한 XML과 같은 텍스트 기반 파일에서 특히 벡터 그래픽 이미지에 대 한 교환 형식으로 제공할 수 있습니다.
+SkiaSharp, 내에서이 형식으로 라고 "SVG 경로 데이터입니다." 형식은 Windows XAML 기반 프로그래밍 환경의 Windows Presentation Foundation 등으로 알려져 있는 유니버설 Windows 플랫폼 에서도 지원 됩니다 합니다 [경로 태그 구문](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) 또는 [이동 그리기 명령 구문 및](/windows/uwp/xaml-platform/move-draw-commands-syntax/)합니다. 또한 XML과 같은 텍스트 기반 파일에서 특히 벡터 그래픽 이미지에 대 한 교환 형식으로 제공할 수 있습니다.
 
-SkiaSharp 단어를 사용 하 여 두 개의 메서드를 정의 `SvgPathData` 이름에:
+합니다 [ `SKPath` ](xref:SkiaSharp.SKPath) 단어를 사용 하 여 두 개의 메서드를 정의 하는 클래스 `SvgPathData` 이름에:
 
 ```csharp
 public static SKPath ParseSvgPathData(string svgPath)
@@ -34,17 +34,17 @@ public static SKPath ParseSvgPathData(string svgPath)
 public string ToSvgPathData()
 ```
 
-정적 [ `ParseSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) 메서드를 문자열로 변환 합니다는 `SKPath` 개체를 하는 동안 [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) 변환는 `SKPath` 개체를 문자열입니다.
+정적 [ `ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드를 문자열로 변환 합니다는 `SKPath` 개체를 하는 동안 [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) 변환는 `SKPath` 개체를 문자열입니다.
 
 점이 5 별 지점을 중심으로 (0, 0)는 radius 사용 하 여 100의 SVG 문자열을 다음과 같습니다.
 
-```csharp
+```
 "M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z"
 ```
 
-문자는 구축 하는 명령은 `SKPath` 개체입니다. `M` 나타냅니다는 `MoveTo` 를 호출 `L` 은 `LineTo`, 및 `Z` 는 `Close` 윤곽선을 닫습니다. 각 번호 쌍 점의 X 및 Y 좌표를 제공합니다. 다음에 유의 합니다 `L` 명령 뒤에 쉼표로 구분 하 여 여러 지점입니다. 일련의 좌표, 지점, 쉼표 및 공백을 동일 하 게 처리 됩니다. 일부 프로그래머는 X 및 Y 좌표 간에 아니라는 점 사이 쉼표를 추가할 수 있지만 쉼표나 공백을 모호성을 피하기 위해만 필요 합니다. 이 완벽 하 게 유효합니다.
+문자는 구축 하는 명령은 `SKPath` 개체: `M` 나타냅니다는 `MoveTo` 를 호출 `L` 는 `LineTo`, 및 `Z` 는 `Close` 윤곽선을 닫습니다. 각 번호 쌍 점의 X 및 Y 좌표를 제공합니다. 다음에 유의 합니다 `L` 명령 뒤에 쉼표로 구분 하 여 여러 지점입니다. 일련의 좌표, 지점, 쉼표 및 공백을 동일 하 게 처리 됩니다. 일부 프로그래머는 X 및 Y 좌표 간에 아니라는 점 사이 쉼표를 추가할 수 있지만 쉼표나 공백을 모호성을 피하기 위해만 필요 합니다. 이 완벽 하 게 유효합니다.
 
-```csharp
+```
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
@@ -52,7 +52,7 @@ SVG 경로 데이터의 구문을 공식적으로 문서화 [SVG 사양의 섹�
 
 ## <a name="moveto"></a>**MoveTo**
 
-```csharp
+```
 M x y
 ```
 
@@ -60,7 +60,7 @@ M x y
 
 ## <a name="lineto"></a>**LineTo**
 
-```csharp
+```
 L x y ...
 ```
 
@@ -68,7 +68,7 @@ L x y ...
 
 ## <a name="horizontal-lineto"></a>**가로 LineTo**
 
-```csharp
+```
 H x ...
 ```
 
@@ -76,7 +76,7 @@ H x ...
 
 ## <a name="vertical-line"></a>**수직선**
 
-```csharp
+```
 V y ...
 ```
 
@@ -84,7 +84,7 @@ V y ...
 
 ## <a name="close"></a>**닫기**
 
-```csharp
+```
 Z
 ```
 
@@ -94,7 +94,7 @@ Z
 
 타원형 호 윤곽선을 추가 하는 명령을 전체 SVG 경로 데이터 사양에서 가장 복잡 한 명령을 단연입니다. 유일한 명령이 있는 숫자를 나타낼 수 있습니다 좌표 값 이외의 것:
 
-```csharp
+```
 A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 ```
 
@@ -108,7 +108,7 @@ A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 
 ## <a name="cubicto"></a>**CubicTo**
 
-```csharp
+```
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
@@ -118,7 +118,7 @@ C x1 y1 x2 y2 x3 y3 ...
 
 "부드러운" 베 지 어 곡선 명령이 이기도합니다.
 
-```csharp
+```
 S x2 y2 x3 y3 ...
 ```
 
@@ -126,7 +126,7 @@ S x2 y2 x3 y3 ...
 
 ## <a name="quadto"></a>**QuadTo**
 
-```csharp
+```
 Q x1 y1 x2 y2 ...
 ```
 
@@ -134,7 +134,7 @@ Q x1 y1 x2 y2 ...
 
 부드러운 정방형 곡선 명령을 이기도합니다.
 
-```csharp
+```
 T x2 y2 ...
 ```
 
@@ -144,9 +144,9 @@ T x2 y2 ...
 
 SVG 경로 데이터 정의의 범위입니다. 반복 되는 명령 그룹 또는 모든 유형의 계산을 수행 하기 위한 기능이 없습니다. 에 대 한 명령 `ConicTo` 했거나 다른 유형의 호 사양 사용할 수 없습니다.
 
-정적 [ `SKPath.ParseSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ParseSvgPathData/p/System.String/) 메서드에 SVG 명령의 유효한 문자열이 필요 합니다. 메서드가 반환 하는 경우 구문 오류가 감지 되 면 `null`합니다. 오류 표시입니다.
+정적 [ `SKPath.ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드에 SVG 명령의 유효한 문자열이 필요 합니다. 메서드가 반환 하는 경우 구문 오류가 감지 되 면 `null`합니다. 오류 표시입니다.
 
-[ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) 메서드는 기존 SVG 경로 데이터를 가져오기 위한 편리한 `SKPath` 다른 프로그램에 전송할 또는 XML과 같은 텍스트 기반 파일 형식으로 저장 하는 개체입니다. (의 `ToSvgPathData` 메서드는이 문서의 샘플 코드에서 다루지 않습니다.) 수행할 *되지* 예상 `ToSvgPathData` 경로 생성 하는 메서드 호출을 정확 하 게 해당 문자열을 반환 합니다. 여러 원호는 변환 함을 알게 하는 특히 `QuadTo` 명령에서 반환 되는 경로 데이터에 표시 되는 방식입니다 `ToSvgPathData`합니다.
+[ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) 메서드는 기존 SVG 경로 데이터를 가져오기 위한 편리한 `SKPath` 다른 프로그램에 전송할 또는 XML과 같은 텍스트 기반 파일 형식으로 저장 하는 개체입니다. (의 `ToSvgPathData` 메서드는이 문서의 샘플 코드에서 다루지 않습니다.) 수행할 *되지* 예상 `ToSvgPathData` 경로 생성 하는 메서드 호출을 정확 하 게 해당 문자열을 반환 합니다. 여러 원호는 변환 함을 알게 하는 특히 `QuadTo` 명령에서 반환 되는 경로 데이터에 표시 되는 방식입니다 `ToSvgPathData`합니다.
 
 합니다 **경로 데이터 Hello** 페이지 단어가 마법 "HELLO" SVG 경로 데이터를 사용 하 여 합니다. 모두를 `SKPath` 하 고 `SKPaint` 개체의 필드로 정의 된 합니다 [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) 클래스:
 
@@ -330,7 +330,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-시간 및 분 손에 이러한 실습 서로 구별 확인 하도록 영역 이제 포함, black 개요와 회색 채우기 사용 하 여 사용 합니다 `handStrokePaint` 및 `handFillPaint` 개체입니다.
+이제 시간 및 분 손을 영역 포함 했습니다. 이러한 실습 서로 구별을 하려면 black 개요 및 사용 하 여 회색 채우기를 사용 하 여 그릴 합니다 `handStrokePaint` 및 `handFillPaint` 개체입니다.
 
 이전 **까다로운 아날로그 클록** 샘플 작은 원을 표시 시간 및 분 루프에 그려진 합니다. 이 **아날로그 클록 상당히** 샘플에 사용 되는 완전히 다른 방법: 시간 및 분 표시는 점선으로 사용 하 여 그린 합니다 `minuteMarkPaint` 및 `hourMarkPaint` 개체:
 
@@ -359,7 +359,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-합니다 [ **점 및 대시** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 가이드 사용 하는 방법을 설명 합니다 `SKPathEffect.CreateDash` 파선을 만드는 방법. 첫 번째 인수는 `float` 일반적으로 두 개의 요소가 있는 배열: 첫 번째 요소는 대시의 길이 이며 두 번째 요소 대시 사이의 간격입니다. 경우는 `StrokeCap` 속성이 `SKStrokeCap.Round`, 둥근된 끝 대시 대시의 양쪽에서 스트로크 너비에 따라 대시 길이 효과적으로 연장 합니다. 따라서 첫 번째 배열 요소를 0으로 설정 된 점선을 만듭니다.
+합니다 [ **점 및 대시** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 문서 사용 하는 방법을 설명 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) 파선을 만드는 방법. 첫 번째 인수는 `float` 일반적으로 두 개의 요소가 있는 배열: 첫 번째 요소는 대시의 길이 이며 두 번째 요소 대시 사이의 간격입니다. 경우는 `StrokeCap` 속성이 `SKStrokeCap.Round`, 둥근된 끝 대시 대시의 양쪽에서 스트로크 너비에 따라 대시 길이 효과적으로 연장 합니다. 따라서 첫 번째 배열 요소를 0으로 설정 된 점선을 만듭니다.
 
 이러한 점 사이의 거리는 두 번째 배열 요소에 의해 제어 됩니다. 알 수 있듯이 곧 이러한 두 `SKPaint` 개체 90 단위의 반지름 원을 그리는 데 사용 됩니다. 이 원의 원주 60 분 표시 모든 3 π 단위 표시 되어야 함을 의미 합니다 180π 되므로에서 두 번째 값을 `float` 배열을 `minuteMarkPaint`합니다. 12 시간 표시 나타나야 모든 15π 단위를 두 번째에서 값인 `float` 배열입니다.
 
@@ -430,5 +430,5 @@ public class PrettyAnalogClockPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

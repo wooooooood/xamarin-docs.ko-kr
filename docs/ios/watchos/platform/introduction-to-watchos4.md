@@ -1,33 +1,33 @@
 ---
 title: WatchOS 4 소개
-description: 이 문서에서는 이제 Xamarin 개발자에 게 사용할 수 있는 새로운 기능을 설명 하는 4, watchOS 간략하게 소개 합니다.
+description: 이 문서는 이제 Xamarin 개발자에 게 사용할 수 있는 새로운 기능을 설명 하는 watchOS 4, 간략 한 소개를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: 94c931176e968ed765cbc05ddaac2fa7329107f0
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: ca922840b47899b62615bded852e66fe81b3371c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102570"
 ---
 # <a name="introduction-to-watchos-4"></a>WatchOS 4 소개
 
-Access 앱에서 watchOS 4의 새로운 기능:
+앱에서 watchOS 4의 새 기능에 액세스 합니다.
 
-* 새 Apple Watch 계열 3에서 barometric altimeter 데이터를 읽습니다.
-* 일부 Apple Watch 계열 3 모델에서 사용할 수 있는 셀룰러 데이터를 사용 하 여 네트워크 리소스에 직접 연결 합니다.
-* Bluetooth 코어 보조 프로그램에 직접 연결할 수 있습니다.
-* 워크 아웃 및 오디오 앱에 대 한 새 백그라운드 모드입니다.
-* 에 대 한 새 SiriKit 의도 [목록 및 메모](~/ios/platform/introduction-to-ios11/sirikit.md)합니다.
+* 에 새 Apple Watch 시리즈 3 barometric altimeter 데이터를 읽습니다.
+* 일부 Apple Watch 시리즈 3 모델에서 사용 가능한 셀룰러 데이터를 사용 하 여 네트워크 리소스에 직접 연결 합니다.
+* Core Bluetooth accessories에 직접 연결할 수 있습니다.
+* 오디오 및 비트 운동 앱에 대 한 새 백그라운드 모드입니다.
+* 에 대 한 새로운 SiriKit 인 텐트 [목록과 정보](~/ios/platform/introduction-to-ios11/sirikit.md)합니다.
 
 WatchOS 3 이후 변경 내용:
 
-* 응용 프로그램 코드 및 UI 단일 프로세스에서 실행 됩니다.
-* 조사식 (전화 번호에 허용 하는 사용자에 게 필요 없음)에 위치 권한을 부여할 수 있습니다.
+* 앱 코드 및 UI에는 단일 프로세스에서 실행 됩니다.
+* Watch (휴대폰에 동의 하려면 사용자에 게 필요 없음) 위치 사용 권한을 부여할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

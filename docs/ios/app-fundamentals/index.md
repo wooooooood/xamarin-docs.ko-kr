@@ -4,15 +4,15 @@ description: 이 문서는 다양 한 가이드 Xamarin.iOS 개발에 앱 전송
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110474"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Xamarin.iOS 응용 프로그램 기본 사항
 
@@ -48,7 +48,7 @@ Xamarin.iOS 모든.NET 응용 프로그램에서 사용할 수 있는 iOS의 파
 
 ## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[지역화](~/ios/app-fundamentals/localization/index.md)
 
-이 가이드에서는 설명의 인코딩 국제화 지원 하기 위해 Xamarin.iOS 응용 프로그램을 추가 합니다.
+이 가이드에서는 인코딩 국제화 지원 하기 위해 Xamarin.iOS 응용 프로그램을 추가 합니다.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[속성 목록 사용](~/ios/app-fundamentals/index.md)
 
@@ -60,7 +60,7 @@ Apple는 개발자가 앱의 보안을 강화 하 고 최종 사용자의 개인
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[스레딩](~/ios/app-fundamentals/threading.md)
 
-이 문서에서는 Xamarin.iOS 응용 프로그램에서는 스레딩에 대해 설명 하 고 잠시 이야기를.NET 스레드 풀, 응답성이 뛰어난 응용 프로그램 및 가비지 수집 합니다.
+이 문서에서는 Xamarin.iOS 응용 프로그램에서는 스레딩에 대해 설명 하 고.NET 스레드 풀, 응답성이 뛰어난 응용 프로그램 및 가비지 수집에 대 한 비트를 설명 합니다.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[터치](~/ios/app-fundamentals/touch/index.md)
 

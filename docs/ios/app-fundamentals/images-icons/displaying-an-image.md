@@ -4,15 +4,15 @@ description: 이 문서에서는 이미지 자산 또는 C# 코드를 사용 하
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 4b2bddeb6b04b5c5288f501fce0d6bb03e0b6584
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251188"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104156"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.iOS에서 이미지를 표시합니다.
 
@@ -22,7 +22,7 @@ _이 문서에서는 이미지 자산 또는 C# 코드를 사용 하 여 iOS 디
 
 개발자가 사용 하 여 Xamarin.iOS 앱에 사용할 이미지를 추가 하는 경우는 _자산 카탈로그_ 모든 iOS 장치 및 앱에 필요한 해상도 지원 하도록 합니다.
 
-IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버전 또는 다양 한 장치를 지원 하 고 앱에 대 한 요소를 확장 하는 데 필요한 이미지의 표현을 포함 합니다. 이미지 자산 파일 이름에 의존 하지 않고 (참조 [해상도 독립적인 이미지 및 이미지 명명법](~/ios/app-fundamentals/images-icons/displaying-an-image.md)), **이미지 집합** Json 파일을 사용 하 여 이미지는 장치 및/또는 해결 속한 지정 . 이것이 (iOS 9 이상)에서 iOS에서 이미지를 지원 및 관리 하는 기본 방법입니다.
+IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버전 또는 다양 한 장치를 지원 하 고 앱에 대 한 요소를 확장 하는 데 필요한 이미지의 표현을 포함 합니다. 이미지 자산 파일 이름에 의존 하지 않고 **이미지 집합** Json 파일을 사용 하 여 이미지는 장치 및/또는 해결 속한 지정 합니다. 이것이 (iOS 9 이상)에서 iOS에서 이미지를 지원 및 관리 하는 기본 방법입니다.
 
 ## <a name="adding-images-to-an-asset-catalog-image-set"></a>자산 카탈로그 이미지에 이미지 추가 설정
 
@@ -30,7 +30,7 @@ IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버�
 
 새 이미지 집합을 만들고 이미지를 추가 하려면 다음을 수행 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 에 **솔루션 탐색기**, 두 번 클릭 합니다 `Assets.xcassets` 파일을 편집 하는 것에 대 한 열:
 
@@ -48,7 +48,7 @@ IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버�
 
 ![](displaying-an-image-images/imageset06.png "이미지 집합의 이름을 드롭다운 목록에서 선택")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 자산 카탈로그를 엽니다는 **솔루션 탐색기**, 왼쪽된 위 모퉁이 클릭 합니다 **Plus** 단추:
 
@@ -88,11 +88,11 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 IOS 8, 특별 한 기준으로 **벡터** 클래스에 추가 되었습니다 **이미지 집합** 개발자가 포함할 수 있도록를 **PDF** 대신 포함 하 여 카세트에 벡터 이미지 형식 다른 해상도로 개별 비트맵 파일입니다. 에 대 한 단일 벡터 파일 제공이 메서드를 사용 하는 `@1x` 해결 방법 (벡터 PDF 파일 형식) 및 `@2x` 및 `@3x` 버전 파일의 컴파일 시간에 생성 되며 응용 프로그램의 번들에 포함 된 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](displaying-an-image-images/imageset05.png "자산 카탈로그 편집기에서 벡터 이미지")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/asset8.png "자산 카탈로그 편집기에서 벡터 이미지")
 
@@ -116,11 +116,11 @@ IOS 앱의 디자인에 따라 경우도 개발자 아이콘 또는 이미지 (�
 
 이 효과 쉽게 달성할 수 있도록 전환 합니다 _렌더링 모드_ 이미지 자산의 **템플릿 이미지**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage01.png "템플릿 이미지에는 렌더링 모드 설정")](displaying-an-image-images/templateimage01.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage01vs.png "렌더링 모드를 사용 하는 템플릿 설정")](displaying-an-image-images/templateimage01vs.png#lightbox)
 
@@ -128,11 +128,11 @@ IOS 앱의 디자인에 따라 경우도 개발자 아이콘 또는 이미지 (�
 
 IOS 디자이너에서에서 UI 컨트롤에 이미지 자산 할당을 설정 합니다 **Tint** 이미지 색을 지정 하려면:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](displaying-an-image-images/templateimage03.png "이미지 색을 지정 하려면 색조를 설정 합니다.")](displaying-an-image-images/templateimage03.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](displaying-an-image-images/templateimage03vs.png "이미지 색을 지정 하려면 색조를 설정 합니다.")](displaying-an-image-images/templateimage03vs.png#lightbox)
 
@@ -169,14 +169,14 @@ if (MyIcon.Image != null) {
 
 프로젝트에 새 자산 카탈로그 추가:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 마우스 오른쪽 단추로 클릭 합니다 **프로젝트 이름** 에 **솔루션 탐색기** 선택한 **추가** > **새 파일...**
 2. 선택 **iOS** > **자산 카탈로그**, 입력을 **이름** 컬렉션을 클릭 합니다 **새** 단추:
 
     ![](displaying-an-image-images/asset01.png "새 자산 카탈로그를 만들려면")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 솔루션 탐색기에서 마우스 오른쪽 단추로 클릭 **자산 카탈로그** 선택한 폴더 **추가 > 새 자산 카탈로그**합니다.
 2. 이름을 지정 하 고 클릭 **추가**:
@@ -219,7 +219,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 이미지에는 자산 카탈로그를 사용 하 여 Xamarin.iOS 프로젝트에 추가 된 후 쉽게 수 사용 하 여 스토리 보드에 표시 되는 `UIImageView` iOS 디자이너에서에서 합니다. 예를 들어, 다음 이미지 자산에 추가 되었습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](displaying-an-image-images/display01.png "샘플 이미지 자산 추가 되었습니다.")
 
@@ -242,7 +242,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 7. 각 가장자리에 "T" 모양 핸들을 끌어 합니다 **이미지 보기** 측면에 이미지를 "고정" 하는 화면의 해당 쪽에 있습니다. 이러한 방식으로 **이미지 보기** 축소 되며 화면 크기가 증가 합니다.
 8. 스토리 보드에 변경 내용을 저장 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](displaying-an-image-images/display01vs.png "샘플 이미지 자산 추가 되었습니다.")
 

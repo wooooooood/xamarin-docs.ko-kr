@@ -4,21 +4,24 @@ description: RelativeLayout Xamarin.Android 응용 프로그램을 사용 하는
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af8d37775a798fc6019106a66df75843a951c108
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403418"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113153"
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) 표시 하는 자식 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 상대 위치에 요소입니다. 위치를 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 등의 왼쪽에 대 한 또는 지정된 된 요소의 다음 형제 요소를 기준으로 지정 하거나의 기준으로 배치 합니다 [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) 영역 (예: 아래쪽 맞춤, center의 왼쪽).
+[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) 자식 표시 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+상대 위치에 요소입니다. 위치를 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 등의 왼쪽에 대 한 또는 지정된 된 요소의 다음 형제 요소를 기준으로 지정할 수 있습니다 또는의 상대적인 배치를 [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+영역 (예:으로 아래쪽으로 정렬 왼쪽 center)입니다.
 
-A [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) 중첩 제거할 수 있으므로 사용자 인터페이스 디자인에 매우 강력한 유틸리티 [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s입니다. 한다면 몇 가지를 사용 하 여 중첩 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 그룹을 수 있습니다 단일 바꾸거나 [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)합니다.
+A [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) 중첩 제거할 수 있으므로 사용자 인터페이스 디자인에 매우 강력한 유틸리티 [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s입니다. 여러 중첩을 사용 하는 경우 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+그룹 수 있습니다 단일 바꾸려면 [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)합니다.
 
 명명 된 새 프로젝트를 시작 **HelloRelativeLayout**합니다.
 
@@ -62,7 +65,8 @@ A [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.Rel
 
 에 정의 된 모든 사용 가능한 레이아웃 특성 [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)합니다.
 
-이 레이아웃을 로드 해야 합니다 [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) 메서드:
+이 레이아웃을 로드 해야 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+방법:
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)

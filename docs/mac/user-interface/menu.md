@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Mac 응용 프로그램에서 메뉴를
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d84910cd5c2bc72a563fb04457532d544aedf571
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: d12815c92c1f608a5df4b3869fe9a17cb604b47a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109681"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.Mac의 메뉴
 

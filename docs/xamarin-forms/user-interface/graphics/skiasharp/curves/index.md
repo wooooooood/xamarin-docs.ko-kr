@@ -4,23 +4,23 @@ description: 이 문서에서는 SkiaSharp 곡선 및 경로 기능을 사용 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 4eb56a8728607c4d6744a2b5584c8880a95ce49a
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 91cf14f531b527054b46779e571dae6eacebe765
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123429"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
 _SkiaSharp 곡선 및 경로 기능을 사용 하 여 사용 방법 알아보기_
 
-탐색 [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) 에서 시작 하는 메서드 및 속성을 [SkiaSharp 선 및 경로](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) 문서. 곡선을 추가 하는 메서드를 사용 하 여이 문서를 계속를 `SKPath` 개체 및 다른 강력한 경로 기능을 활용 합니다. 간단한 텍스트 문자열의 전체 경로 지정 하는 방법, 경로 효과 사용 하는 방법 및 내부 경로를 더 자세히 살펴보고 하는 방법을 배웁니다.
+탐색 [ `SKPath` ](xref:SkiaSharp.SKPath) 에서 시작 하는 메서드 및 속성을 [ **SkiaSharp 선 및 경로** ](../paths/index.md) 문서. 곡선을 추가 하는 메서드를 사용 하 여이 문서를 계속를 `SKPath` 개체를 다른 강력한 경로 기능을 활용 합니다. 간단한 텍스트 문자열의 전체 경로 지정 하는 방법, 경로 효과 사용 하는 방법 및 내부 경로를 더 자세히 살펴보고 하는 방법을 배웁니다.
 
-제목 아래에서이 섹션의 샘플 프로그램을 모두 표시 **곡선 및 경로 보다** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램에는 [ **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램에서 확인할 수 있습니다는 **SkiaSharp 곡선 및 경로** 페이지를 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램을 고를 [  **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[원호를 그리는 3가지 방법](arcs.md)
 
@@ -53,5 +53,5 @@ SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

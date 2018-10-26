@@ -1,25 +1,25 @@
 ---
 title: Xamarin.iOS의 국제화 인코딩
-description: 이 문서에서는 사용할 수 있는 인코딩 및 응용 프로그램에 추가 하는 방법에 논의 Xamarin.iOS의 국제화 인코딩을 설명 합니다.
+description: 이 문서에서는 Xamarin.iOS 사용할 수 있는 인코딩 및 앱에 추가 하는 방법에 설명의 국제화 인코딩을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 7c59b6f1ac269c57ab720aeb6999c0f0d178bab3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112507"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Xamarin.iOS의 국제화 인코딩
 
-모든 인코딩 기본적으로 Xamarin.iOS 클래스 라이브러리에 포함 됩니다.
+일부 인코딩에 기본적으로 Xamarin.iOS 클래스 라이브러리에 포함 됩니다.
 
-응용 프로그램의 크기를 줄이려면 Xamarin.iOS 특정 인코딩을 포함 되지 않으면 및 mtouch 필요한 인코딩에 대 한 지원이 포함 된 어셈블리를 포함 하도록 지정 해야 합니다.
+응용 프로그램의 크기를 줄이려면 Xamarin.iOS 특정 인코딩을 포함 하지 않습니다 하 고 mtouch 해야 인코딩에 대 한 지원이 포함 된 어셈블리를 포함 하도록 지시 해야 합니다.
 
-이 작업은 Mac 또는 Visual Studio에 대 한 Visual Studio에서 iOS 빌드/고급 창에서 추가 인코딩을 선택 하 여 수행 됩니다.
+Mac 또는 Visual Studio에 대 한 Visual Studio에서 iOS 빌드/고급 창에서 추가 인코딩을 선택 하면 됩니다.
 
  [![](encodings-images/00.png "추가 인코딩 선택")](encodings-images/00.png#lightbox)
 
@@ -27,11 +27,11 @@ ms.locfileid: "34784128"
 
 다음 중 하나를 선택할 수 있습니다.
 
--  cjk: Chineese, 일본어 및 한국어에 대 한
+-  한 중일: Chineese, 일본어 및 한국어
 -  mideast: 아랍어, 히브리어, 터키어 및 Latin5 합니다.
--  기타: 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
--  드문: EBCDIC 인코딩 및 기타 드문 코드 페이지
--  서쪽: 라틴어 부활절 및 서 부 유럽
+-  다른: 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
+-  드문: EBCDIC 인코딩 및 다른 드문 코드 페이지
+-  서 부: 라틴어, 이스터 및 유럽 서 부
 -  모두
 
 
@@ -81,7 +81,7 @@ ms.locfileid: "34784128"
  <a name="rare" />
 
 
-## <a name="rare"></a>드문
+## <a name="rare"></a>드물게 발생
 
 -  CP1026
 -  CP1047

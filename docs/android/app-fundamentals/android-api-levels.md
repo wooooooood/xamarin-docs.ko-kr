@@ -4,15 +4,15 @@ description: Xamarin.Android에 여러 버전의 Android 사용 하 여 앱의 �
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/02/2018
-ms.openlocfilehash: 3b060567b47395bc213627c9378de4fca9db41bb
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120062"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -35,7 +35,7 @@ Xamarin.Android는 세 개의 Android API 수준 프로젝트 설정을 노출�
 > 2018 년 8 월부터, Google Play 콘솔을 해야는 새 앱의 대상 API 수준 26 (Android 8.0) 이상.
 기존 앱 API 수준 26 또는 2018 년 11 월부터 더 높은 대상으로 해야 합니다. 자세한 내용은 [앱 보안 및 야 오랫동안 Google Play에서 성능 향상](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 일반적으로 세 Xamarin.Android API 수준 모두 동일한 값으로 설정 됩니다. 에 **응용 프로그램** 페이지에서 설정 **Android 버전 (대상 프레임 워크)를 사용 하 여 컴파일** 최신 안정적인 API 버전 (또는 모든 필요한 기능을 Android 버전 이상).
 대상 프레임 워크를로 다음 스크린 샷에서 **Android 7.1 (API 레벨 25-Nougat)**:
@@ -50,7 +50,7 @@ Xamarin.Android는 세 개의 Android API 수준 프로젝트 설정을 노출�
 
 [![API 레벨 25를 사용 하 여 컴파일 Nougat, API 수준 14로 설정 하는 최소 Android 버전](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 일반적으로 세 Xamarin.Android API 수준 모두 동일한 값으로 설정 됩니다. 설정할 **대상 프레임 워크** 최신 안정적인 API 버전 (또는 모든 필요한 기능을 Android 버전 이상). 설정 하는 **대상 프레임 워크**, 이동할 **빌드 > 일반** 에 **프로젝트 옵션**합니다. 대상 프레임 워크를로 다음 스크린 샷에서 **가장 최근에 설치 된 플랫폼 (8.0)를 사용 하 여**:
 
@@ -81,70 +81,17 @@ Xamarin.Android는 세 개의 Android API 수준 프로젝트 설정을 노출�
 
 Android의 각 릴리스 여러 이름으로 이동 합니다.
 
--   Android 버전을 같은 **Android 7.1**
--   코드와 같은 이름, _Nougat_
--   해당 API 수준에 같은 **API 레벨 25**
+-   Android 버전을 같은 **Android 9.0**
+-   코드 (또는 후 식) 이름, 같은 _원형_
+-   해당 API 수준에 같은 **API 수준 28**
 
-Android 코드명은 여러 버전 및 API 수준 (처럼 아래 목록의)에 해당할 수 있습니다 하지만 각 Android 버전은 정확히 하나의 API 수준에 해당 합니다.
+여러 버전 및 API 수준 (처럼 아래 표에서)에 Android 코드명 해당할 수 있습니다 하지만 각 Android 버전은 정확히 하나의 API 수준에 해당 합니다.
 
-또한 Xamarin.Android 정의 *버전 코드를 빌드* 는 현재 알려진된 Android API 수준에 매핑되는 합니다. 다음은 API 수준, Android 버전, 코드 이름 및 Xamarin.Android 빌드 버전 코드 사이 변환 하면 도움이 됩니다.
+또한 Xamarin.Android 정의 *버전 코드를 빌드* 는 현재 알려진된 Android API 수준에 매핑되는 합니다. 다음 표에서 도움이 될 수 있습니다 API 수준, Android 버전, 코드 이름 및 Xamarin.Android 빌드 버전 코드 사이 변환 (빌드 버전 코드에 정의 된는 `Android.OS` 네임 스페이스):
 
--   **(Android 8.1) API 27** &ndash; _Oreo_, 2017 년 12 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.OMr1`
+[!include[](~/android/includes/api-levels.md)]
 
--   **(Android 8.0) API 26** &ndash; _Oreo_, 2017 년 8 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.O`
-
--   **(Android 7.1) API 25** &ndash; _Nougat_, 2016 년 12 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.NMr1`
-
--   **(Android 7.0) API 24** &ndash; _Nougat_, 2016 년 8 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.N`
-
--   **(Android 6.0) API 23** &ndash; _Marshmallow_, 2015 년 8 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.M`
-
--   **(Android 5.1) 22** &ndash; _롤리팝_, 2015 년 3 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.LollipopMr1`
-
--   **API 21 (Android 5.0)** &ndash; _롤리팝_, 2014 년 11 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Lollipop`
-
--   **(Android 4.4W) API 20** &ndash; _Kitkat 조사식_2014 년 6 월 릴리스. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.KitKatWatch`
-
--   **(Android 4.4) API 19** &ndash; _Kitkat_, 2013 년 10 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.KitKat`
-
--   **(Android 4.3) API 18** &ndash; _Jelly Bean_, 2013 년 7 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.JellyBeanMr2`
-
--   **(Android 4.2-4.2.2) API 17** &ndash; _Jelly Bean_, 2012 년 11 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.JellyBeanMr1`
-
--   **(Android 4.1-4.1.1) API 16** &ndash; _Jelly Bean_, 2012 년 6 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.JellyBean`
-
--   **API 15 (Android 4.0.3-4.0.4)** &ndash; _Ice Cream Sandwich_, 2011 년 12 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.IceCreamSandwichMr1`
-
--   **(Android 4.0-4.0.2) API 14(android** &ndash; _Ice Cream Sandwich_, 2011 년 10 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.IceCreamSandwich`
-
--   **(Android 3.2) API 13** &ndash; _Honeycomb_2011 년 6 월 릴리스. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.HoneyCombMr2`
-
--   **(Android 3.1.x) API 12** &ndash; _Honeycomb_, 2011 년 5 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.HoneyCombMr1`
-
--   **(Android 3.0.x) API 11** &ndash; _Honeycomb_, 2011 년 2 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.HoneyComb`
-
--   **(Android 2.3.3-2.3.4) API 10** &ndash; _Gingerbread_, 2011 년 2 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.GingerBreadMr1`
-
--   **(Android 2.3-2.3.2) API 9** &ndash; _Gingerbread_, 2010 년 11 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.GingerBread`
-
--   **API 8 (Android 2.2 x)** &ndash; _Froyo_, 2010 년 6 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Froyo`
-
--   **(Android 2.1.x) API 7** &ndash; _Eclair_, 2010 년 1 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.EclairMr1`
-
--   **(Android 2.0.1) API 6** &ndash; _Eclair_2009 년 12 월 릴리스. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Eclair01`
-
--   **(Android 2.0) API 5** &ndash; _Eclair_, 2009 년 11 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Eclair`
-
--   **(Android 1.6) API 4** &ndash; _도넛형_2009 년 9 월 릴리스. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Donut`
-
--   **(Android 1.5) API 3** &ndash; _Cupcake_, 2009 년 5 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Cupcake`
-
--   **(Android 1.1) API 2** &ndash; _자료_2009 년 2 월 릴리스. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Base11`
-
--   **API 1 (Android 1.0)** &ndash; _자료_, 2008 년 10 월 출시 합니다. 버전 코드를 작성 합니다. `Android.OS.BuildVersionCodes.Base`
-
-
-새 Android 버전은 자주 출시이 목록에 표시 대로 &ndash; 연간 몇 번의 릴리스에서 경우도 있습니다. 결과적으로, 앱이 실행 될 수 있는 Android 장치의 universe의 이전 및 최신 Android 버전의 다양 한 포함 되어 있습니다. 앱에서 실행 됩니다 일관 되 고 안정적으로 많은 다양 한 버전의 Android 어떻게 보장할 수 있습니다? Android의 API 수준을이 문제를 관리할 수 있습니다.
+새 Android 버전은 자주 출시이 표에 나와 있듯이 &ndash; 연간 종종 둘 이상의 릴리스 합니다. 결과적으로, 앱이 실행 될 수 있는 Android 장치의 universe의 이전 및 최신 Android 버전의 다양 한 포함 되어 있습니다. 앱에서 실행 됩니다 일관 되 고 안정적으로 많은 다양 한 버전의 Android 어떻게 보장할 수 있습니다? Android의 API 수준을이 문제를 관리할 수 있습니다.
 
 
 ### <a name="android-api-levels"></a>Android API 수준
@@ -160,7 +107,7 @@ Android 코드명은 여러 버전 및 API 수준 (처럼 아래 목록의)에 �
 설치 시 앱을 올바르게 실행 하는 데 필요한 기능을 Android 장치에서 사용할 수 있도록 하려면 이러한 설정이 사용 됩니다. 그렇지 않은 경우 앱은 해당 장치에서 실행에서 차단 됩니다. 예를 들어 Android 장치의 API 레벨 앱에 대 한 지정 된 최소 API 수준 보다 낮은 경우 Android 장치는 앱 설치에서 사용자를 하지 것입니다.
 
 
-## <a name="project-api-level-settings"></a>프로젝트 수준 설정
+## <a name="project-api-level-settings"></a>API 프로젝트 수준 설정
 
 다음 섹션에서는 SDK Manager를 사용 하 여 뒤에 구성 하는 방법에 대 한 세부 정보를 대상으로 하려는 API 수준에 대 한 개발 환경을 준비 하는 방법에 설명 *대상 프레임 워크*, *최소 Android 버전*, 및 *대상 Android 버전* Xamarin.Android에서 설정 합니다.
 
@@ -175,12 +122,12 @@ Xamarin.android에서를 대상 또는 최소 API 수준을 선택할 수 있습
 
 합니다 *대상 프레임 워크* (라고도 `compileSdkVersion`)는 특정 Android 프레임 워크 버전 (API 레벨) 빌드 시 앱에 대해 컴파일되는입니다. 이 설정은 Api 앱 *예상* 데 실행 되었지만 Api에는 앱에 실제로 사용 가능한 설치 될 때 영향을 주지 않습니다. 결과적으로, 대상 프레임 워크 설정을 변경 해도 런타임 동작은 변경 되지 않습니다.
 
-응용 프로그램에 대해 연결 된 라이브러리 버전을 식별 하는 대상 프레임 워크 &ndash; 앱에서 사용할 수 있는 Api를 결정 합니다. 예를 들어 사용 하려는 경우는 [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) Android 5.0 Lollipop에 도입 된 메서드를 대상 프레임 워크를 설정 해야 **API 수준 21 (Lollipop)** 이상. 프로젝트의 대상 프레임 워크 API를 같은 수준으로 설정 하면 **API 수준 19 (KitKat)** 호출을 시도 하 고는 `SetCategory` 코드에서 메서드를 컴파일 오류가 발생 합니다.
+응용 프로그램에 대해 연결 된 라이브러리 버전을 식별 하는 대상 프레임 워크 &ndash; 이 설정은 앱에서 사용할 수 있는 Api를 결정 합니다. 예를 들어 사용 하려는 경우는 [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) Android 5.0 Lollipop에 도입 된 메서드를 대상 프레임 워크를 설정 해야 **API 수준 21 (Lollipop)** 이상. 프로젝트의 대상 프레임 워크 API를 같은 수준으로 설정 하면 **API 수준 19 (KitKat)** 호출을 시도 하 고는 `SetCategory` 코드에서 메서드를 컴파일 오류가 발생 합니다.
 
 사용 하 여 항상 컴파일하는 것이 좋습니다 합니다 *최신* 대상 프레임 워크 버전을 사용할 수 있습니다. 이렇게 코드에서 호출할 수 있는 모든 사용 되지 않는 Api에 대 한 유용한 경고 메시지를 제공 합니다. 최신 대상 프레임 워크 버전을 사용 하는 최신 지원 라이브러리 버전을 사용 하는 경우 특히 중요 &ndash; 각 라이브러리는 앱을 지원 라이브러리의 최소 API 수준에서 컴파일된 이상 이어야 합니다. 
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 속성에서 엽니다 **솔루션 탐색기** 선택 합니다 **응용 프로그램** 페이지:
 
@@ -188,7 +135,7 @@ Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로
 
 API 수준 아래에 있는 드롭다운 메뉴에서 선택 하 여 대상 프레임 워크를 설정 **Android 버전을 사용 하 여 컴파일** 위와 같이 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**이 열립니다 합니다 **프로젝트 옵션** 대화 합니다. 이 대화 상자에서 이동 **빌드 > 일반** 다음과 같이 합니다.
 
@@ -209,7 +156,7 @@ API 수준 오른쪽의 드롭다운 메뉴에서 선택 하 여 대상 프레�
 [Android 버전에 대 한 런타임 검사](#runtimechecks)이 가이드의 뒷부분에 나오는 코드에 이러한 런타임 검사를 추가 하는 방법에 설명 합니다.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio의 최소 Android 버전 설정에 액세스 하려면 프로젝트 속성에서 엽니다 **솔루션 탐색기** 선택 합니다 **Android 매니페스트** 페이지입니다. 드롭다운 메뉴에서 **최소 Android 버전** 응용 프로그램에 대 한 최소 Android 버전을 선택할 수 있습니다.
 
@@ -217,7 +164,7 @@ Visual Studio의 최소 Android 버전 설정에 액세스 하려면 프로젝�
 
 선택 하는 경우 **사용 하 여 SDK 버전을 사용 하 여 컴파일**, 최소 Android 버전 대상 프레임 워크와 동일 하 게 됩니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual Studio의 최소 Android 버전에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**이 열립니다 합니다 **프로젝트 옵션** 대화 합니다. 이동할 **빌드 > Android 응용 프로그램**합니다.
 오른쪽의 드롭다운 메뉴를 사용 하 여 **최소 Android 버전**, 응용 프로그램에 대 한 최소 Android 버전을 설정할 수 있습니다.
@@ -237,7 +184,7 @@ Mac 용 Visual Studio의 최소 Android 버전에 액세스 하려면 프로젝�
 
 대상 프레임 워크 및 이름이 매우 유사한 하면서 대상 Android 버전, 동일 하지 않습니다. 대상 프레임 워크 설정을 대상 API 수준 정보 xamarin.android에서 사용 하 여 통신 *컴파일 타임*대상 Android 버전에 사용할 android 대상 API 수준 정보를 통신 하는 동안,  *런타임에* (앱의 장치에 설치 및 실행).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서이 설정에 액세스 하려면 프로젝트 속성에서 엽니다 **솔루션 탐색기** 선택 합니다 **Android 매니페스트** 페이지입니다. 드롭다운 메뉴에서 **대상 Android 버전** 응용 프로그램에 대 한 대상 Android 버전을 선택할 수 있습니다.
 
@@ -245,7 +192,7 @@ Visual Studio에서이 설정에 액세스 하려면 프로젝트 속성에서 �
 
 명시적으로 설정 하는 대상 Android 버전의 Android 앱을 테스트 하는 데 사용 하는 최신 버전으로 유지 하는 것이 좋습니다. 이상적으로 최신 Android SDK 버전으로 설정 해야 &ndash; 동작 변경 내용 진행 하기 전에 새 Api를 사용할 수 있습니다. 대부분의 개발자를 위한 것 *하지 않습니다* 대상 Android 버전을 설정 하는 것이 좋습니다 **사용 하 여 SDK 버전을 사용 하 여 컴파일**합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual Studio에서이 설정에 액세스 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션**이 열립니다 합니다 **프로젝트 옵션** 대화 합니다. 이동할 **빌드 > Android 응용 프로그램**합니다. 오른쪽의 드롭다운 메뉴를 사용 하 여 **대상 Android 버전**, 응용 프로그램에 대 한 대상 Android 버전을 설정할 수 있습니다.
 
@@ -294,22 +241,22 @@ else
 }
 ```
 
-규칙은 없습니다 빠르고 간단한 줄이거나 부족 하나 이상의 Api는 이전 Android 버전에서 실행 될 때 앱의 기능을 수정 하는 방법을 설명 합니다. 경우에 따라 (예:는 `SetCategory` 위의 예제)를 사용할 수 없을 때 API 호출을 생략 하면 됩니다. 그러나 다른 경우에 해야 시기에 대 한 대체 기능을 구현 `Android.OS.Build.VERSION.SdkInt` 보다 작아야 API 앱의 최적의 환경을 제공 해야 하는 수준으로 감지 되 면 합니다.
+규칙은 없습니다 빠르고 간단한 줄이거나 부족 하나 이상의 Api는 이전 Android 버전에서 실행 될 때 앱의 기능을 수정 하는 방법을 설명 합니다. 일부 경우에 (예:는 `SetCategory` 위의 예제)를 사용할 수 없는 경우 API 호출을 생략 하는 것이 부족 합니다. 그러나 다른 경우에 해야 시기에 대 한 대체 기능을 구현 `Android.OS.Build.VERSION.SdkInt` 보다 작아야 API 앱의 최적의 환경을 제공 해야 하는 수준으로 감지 되 면 합니다.
 
 <a name="libraries" />
 
 ## <a name="api-levels-and-libraries"></a>API 수준 및 라이브러리
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 대상 프레임 워크 설정에만 구성할 수 있습니다 (예: 클래스 라이브러리 또는 바인딩 라이브러리)는 Xamarin.Android 라이브러리 프로젝트를 만들면 &ndash; 최소 Android 버전 및 대상 Android 버전 설정이 지원 되지 않습니다. 있기 때문에 이것이 없습니다 **Android 매니페스트** 페이지:
 
 [![Android 버전 옵션을 사용 하 여 컴파일만 사용할 수 있습니다](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Xamarin.Android 라이브러리 프로젝트를 만들면 방법이 없는 **Android 응용 프로그램** 최소 Android 버전 및 대상 Android 버전을 구성할 수 있는 페이지 &ndash; 최소 Android 버전 및 대상 Android 버전 설정은 사용할 수 있습니다.
-있기 때문에 이것이 없습니다 **빌드 > Android 응용 프로그램** 페이지):
+있기 때문에 이것이 없습니다 **빌드 > Android 응용 프로그램** 페이지:
 
 [![빌드 대상 및 최소 버전 옵션 없이 일반 페이지](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 

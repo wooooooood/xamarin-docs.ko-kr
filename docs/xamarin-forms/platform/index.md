@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 9bac53f71178ac321dea162d346295556a8f7adb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 070602f05170f7d37a38b184ecd3dbb7864ac73d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118762"
 ---
 # <a name="xamarinforms-platform-features"></a>Xamarin.Forms 플랫폼 기능
 
@@ -24,7 +24,7 @@ Xamarin.Forms는 확장이 용이하고,  [Effects](~/xamarin-forms/app-fundamen
 
 ## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[응용 프로그램 인덱싱 및 딥 링크 설정](deep-linking.md)
 
-응용 프로그램 인덱싱 몇 가지 사용 하 여 검색 결과에 표시 하 여 인재를 후 잊어버린 그렇지 않은 경우는 응용 프로그램을 수 있습니다. 딥 링크 설정 응용 프로그램을 딥 링크에서 참조 하는 페이지로 이동 하 여 일반적으로 응용 프로그램 데이터를 포함 하는 검색 결과에 응답할 수 있습니다.
+앱 인덱싱은 몇 번 사용 후 잊어버려질 것을 검색 결과에 표시합니다. 딥 링크는 앱이 검색 기록에 앱 정보를 포함하고 있을 때 응답할 수 있도록 도와줍니다. 이는 주로 딥 링크로부터 참조된 페이지로 이동할 때입니다.
 
 ## <a name="device-classdevicemd"></a>[장치 클래스](device.md)
 
@@ -54,17 +54,17 @@ Xamarin.Forms에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티
 
 Platform-Specifics는 특정 플랫폼에서만 가능한 기능들을 Custom renderer 또는 Effects 등을 사용하지 않고도 구현할 수 있게 합니다.
 
-## <a name="pluginspluginsmd"></a>[플러그 인](plugins.md)
+## <a name="pluginspluginsmd"></a>[플러그인](plugins.md)
 
 Xamarin.Forms 앱을 확장할 수 있도록 도와주는 다양한 오픈소스 플러그인들을 Github, Nuget 및 Xamarin Component Store에서 찾을 수 있습니다.
 
 ## <a name="tizentizenmd"></a>[Tizen](tizen.md)
 
-Tizen.NET을 사용하면 .NET 앱을 Xamarin.Forms 및 Tizen .NET Framework를 사용하여 빌드할 수 있습니다.
+Tizen.NET을 사용 하면 Xamarin.Forms 및 Tizen.NET Framework를 사용 하 여.NET 응용 프로그램을 빌드할 수 있습니다.
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms는 Windows 10에서 유니버설 Windows 플랫폼(UWP)을 지원합니다. 이 문서는 기존의 Xamarin.Forms 솔루션에 UWP 프로젝트를 어떻게 추가하는지 설명합니다.
+Xamarin.Forms는 Windows 10에서 유니버설 Windows 플랫폼(UWP)을 지원합니다. 이 문서에서는 기존 Xamarin.Forms 솔루션에 UWP 프로젝트를 추가 하는 방법을 설명 합니다.
 
 ## <a name="wpfwpfmd"></a>[WPF](wpf.md)
 

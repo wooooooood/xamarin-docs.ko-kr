@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: d74ad52a2926fb30a528aeba29156259390c3edf
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123611"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -180,7 +180,7 @@ map.MapType == MapType.Street;
 
 ### <a name="map-region-and-mapspan"></a>지도 영역 및 MapSpan
 
-위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. `MoveToRegion` 맵 클래스의 메서드를 사용할 수 지도 위치 또는 확대/축소 수준을 변경 합니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
+위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. `MoveToRegion` 지도의 위치 또는 확대/축소 수준을 변경 하려면 다음 map 클래스에서 메서드를 사용할 수 있습니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
 
 -  **MapSpan.FromCenterAndRadius()** -의 범위를 만드는 정적 메서드를를 `Position` 지정 하는 `Distance` 합니다.
 -  **새 MapSpan ()** -사용 하는 생성자를 `Position` 및 위도 및 경도 표시할 degress 합니다.

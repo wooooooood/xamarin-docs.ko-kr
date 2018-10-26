@@ -3,23 +3,25 @@ title: TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: f9a77655091e4b552bd4a9d440f50b6a3cbeabcc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763649"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114953"
 ---
 # <a name="tablelayout"></a>TableLayout
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 이 [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) 자식을 표시 하는 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 행과 열에 있는 요소입니다.
+[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 가 [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+자식 표시 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+행 및 열에 대 한 요소입니다.
 
-라는 새 프로젝트를 시작 **HelloTableLayout**합니다.
+명명 된 새 프로젝트를 시작 **HelloTableLayout**합니다.
 
-열기는 **Resources/Layout/Main.axml** 파일을 다음에 삽입 합니다.
+엽니다는 **Resources/Layout/Main.axml** 파일과 다음 삽입:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -100,9 +102,13 @@ ms.locfileid: "30763649"
 </TableLayout>
 ```
 
-확인 방법의 HTML 테이블 구조와 유사 합니다. [ `TableLayout` ](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 요소는 HTML 같은 `<table>` 요소 [ `TableRow` ](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 비슷합니다는 `<tr>` 요소로 셀을 사용할 수 있습니다 모든 종류의 있지만 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 요소입니다. 이 예제는 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 각 셀에 대해 사용 됩니다. 일부 행 사이의 이기도 기본 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/), 가로 선을 그리는 데 사용 되는 합니다.
+어떻게 HTML 테이블의 구조와 유사 알 수 있습니다. 는 [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
+요소는 HTML과 같은 `<table>` 요소 [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
+비슷합니다는 `<tr>` 요소로 셀을 사용할 수 있습니다 모든 종류의 하지만 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 요소입니다. 이 예는 [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+각 셀에 사용 됩니다. 일부 행 사이 이기도 기본 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)는 가로줄을 그리기 하는 데 사용 됩니다.
 
-있는지 확인 하면 **HelloTableLayout** 작업 로드에이 레이아웃의 [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) 메서드:
+있는지 확인 하 **HelloTableLayout** 활동에서이 레이아웃을 로드 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+방법:
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -112,11 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) 메서드 로드에 대 한 레이아웃 파일은 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID에 지정 된 &mdash; `Resource.Layout.Main` 참조 하는 **리소스/레이아웃 / Main.axml** 레이아웃 파일.
+합니다 [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) 에 대 한 레이아웃 파일을 로드 하는 메서드를 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID 기준으로 지정 된 &mdash; `Resource.Layout.Main` 가리킵니다는 **리소스/레이아웃 / Main.axml** 레이아웃 파일입니다.
 
-응용 프로그램을 실행합니다. 다음을 참조 합니다.
+응용 프로그램을 실행합니다. 다음을 참조 해야 합니다.
 
-[![여러 테이블 행을 표시 하는 TableLayout 응용 프로그램의 예제 스크린 샷](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[![여러 테이블 행을 표시 하는 TableLayout 앱의 스크린샷 예제](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
 
@@ -128,5 +134,5 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 -   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
-*이 페이지의 일부는 Android 열려 있는 소스 프로젝트에서 공유 하 고 만들고에 설명 된 조건에 따라 사용 작업에 따라 수정 된*
-[*Creative Commons 2.5 Attribution 라이선스* ](http://creativecommons.org/licenses/by/2.5/).
+*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
+[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/).

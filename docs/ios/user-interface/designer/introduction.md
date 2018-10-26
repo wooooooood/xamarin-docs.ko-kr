@@ -4,15 +4,15 @@ description: 이 가이드에서는 Xamarin iOS 디자이너 소개 합니다. I
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 6905eddbc4488b08f9c9e896efe5f980e0e03345
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123754"
 ---
 # <a name="ios-designer-basics"></a>iOS Designer 기본 사항
 
@@ -36,13 +36,13 @@ IOS 디자이너는 개발자가 응용 프로그램의 사용자 인터페이�
 
 뷰 컨트롤러에는 두 부분이 있습니다: iOS 디자이너의에서 시각적 표현과 연결된 된 C# 클래스:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![IOS 디자이너에서에서 뷰 컨트롤러](introduction-images/1-storyboardwithviewcontroller-vsmac.png "iOS 디자이너에서에서 뷰 컨트롤러")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
 [![뷰 컨트롤러에 대 한 코드](introduction-images/2-viewcontrollercode-vsmac.png "뷰 컨트롤러에 대 한 코드")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![IOS 디자이너에서에서 뷰 컨트롤러](introduction-images/1-storyboardwithviewcontroller-vs.png "iOS 디자이너에서에서 뷰 컨트롤러")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
@@ -52,11 +52,11 @@ IOS 디자이너는 개발자가 응용 프로그램의 사용자 인터페이�
 
 뷰 컨트롤러를 해당 기본 상태인 모든 기능을 제공 하지 않습니다. 컨트롤을 사용 하 여 채워야 합니다. 이러한 컨트롤은 뷰의 뷰 컨트롤러의 모든 화면 콘텐츠를 포함 하는 사각형 영역에 배치 됩니다. 단추를 포함 하는 뷰 컨트롤러를 보여 주는 다음 스크린샷에 표시 된 것과 같이 단추, 레이블 및 텍스트 필드와 같은 일반적인 컨트롤을 포함 하는 대부분의 뷰 컨트롤러: 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![단추를 포함 하는 보기 컨트롤러](introduction-images/3-viewcontrollerwithbutton-vsmac.png "단추가 포함 된 뷰 컨트롤러")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![단추를 포함 하는 보기 컨트롤러](introduction-images/3-viewcontrollerwithbutton-vs.png "단추가 포함 된 뷰 컨트롤러")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
@@ -64,13 +64,13 @@ IOS 디자이너는 개발자가 응용 프로그램의 사용자 인터페이�
 
 정적 텍스트를 포함 하는 레이블 같은 일부 컨트롤 보기 컨트롤러에 추가 하 고 그대로 둘 수 있습니다. 그러나 더 경우가 컨트롤 사용자 지정 해야 프로그래밍 방식으로 합니다. 예를 들어 위에서 추가한 단추 이벤트 처리기 코드에 추가 해야 하므로 변하는데 것으로 수행 해야 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 에 액세스 하 고 코드에서 단추를 조작 하기 위해 고유 식별자가 있어야 합니다. 열기 단추를 선택 하 여 고유 식별자를 제공 합니다 **Properties Pad**, 및 설정을 해당 **이름** 제출 "단추"와 같은 값으로 필드:
 
 [![Properties Pad에서 단추의 이름을 설정할](introduction-images/4-settingbuttonname-vsmac.png "Properties Pad에서 단추의 이름을 설정")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 에 액세스 하 고 코드에서 단추를 조작 하기 위해 고유 식별자가 있어야 합니다. 열기 단추를 선택 하 여 고유 식별자를 제공 합니다 **속성 창**, 및 설정을 해당 **이름** 제출 "단추"와 같은 값으로 필드:
 
@@ -80,13 +80,13 @@ IOS 디자이너는 개발자가 응용 프로그램의 사용자 인터페이�
 
 단추 이름이 했으므로 코드에서 액세스할 수 있습니다. 그러나이 작업은?
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 에 **Solution Pad**로 이동 하면 **ViewController.cs** 함을 의미할 공개 표시기를 클릭 하 고 뷰 컨트롤러의 `ViewController` 각각 두 개의 클래스 정의 범위 파일 포함 된 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의:
 
 [![ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 에 **솔루션 탐색기**로 이동 하면 **ViewController.cs** 함을 의미할 공개 표시기를 클릭 하 고 뷰 컨트롤러의 `ViewController` 클래스 정의의 각 두 파일에 걸쳐 포함 하는 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의:
 
@@ -123,11 +123,11 @@ namespace Designer
 
 다음 스크린샷에서 IntelliSense 인식할 수 있게 하는 방법을 보여 줍니다 합니다 `SubmitButton` 에서 참조할 **ViewController.cs**:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![IntelliSense SubmitButton 참조 인식](introduction-images/6-submitbuttonintellisense-vsmac.png "SubmitButton 파일에 대 한 참조를 인식 하는 IntelliSense")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![IntelliSense SubmitButton 참조 인식](introduction-images/6-submitbuttonintellisense-vs.png "SubmitButton 파일에 대 한 참조를 인식 하는 IntelliSense")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
@@ -143,13 +143,13 @@ namespace Designer
 
 ### <a name="launching-the-ios-designer"></a>IOS 디자이너를 시작합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Xamarin.iOS 프로젝트 Mac 용 Visual Studio를 사용 하 여 만든 스토리 보드를 포함 합니다. 스토리 보드의 콘텐츠를 보려면에서.storyboard 파일을 두 번 클릭 합니다 **Solution Pad**:
 
 [![IOS 디자이너에서에서 스토리 보드를 엽니다](introduction-images/7-storyboardopen-vsmac.png "iOS 디자이너에서에서 스토리 보드 열기")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 대부분의 Xamarin.iOS 프로젝트를 Visual Studio 2015 또는 2017을 사용 하 여 만든 스토리 보드를 포함 합니다. 스토리 보드의 콘텐츠를 보려면에서.storyboard 파일을 두 번 클릭 합니다 **솔루션 탐색기**:
 
@@ -163,7 +163,7 @@ Xamarin.iOS 프로젝트 Mac 용 Visual Studio를 사용 하 여 만든 스토�
 
 IOS 디자이너에 6 개의 주요 섹션으로 이루어져 있습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![IOS 디자이너의 섹션](introduction-images/8-sixpartsofiosdesigner-vsmac.png "iOS 디자이너의 섹션")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
@@ -174,7 +174,7 @@ IOS 디자이너에 6 개의 주요 섹션으로 이루어져 있습니다.
 5. **문서 개요** – 편집 중인 인터페이스에 대 한 레이아웃을 구성 하는 컨트롤의 트리를 보여 줍니다. IOS 디자이너에서에서 선택 하 고에서 해당 속성을 보여 줍니다. 트리에서 항목을 클릭 하 여 **Properties Pad**합니다. 깊게 중첩 된 사용자 인터페이스에서 특정 컨트롤을 선택할 때 유용 합니다.
 6. **도구 모음을 아래쪽** – iOS 디자이너 장치, 방향 및 확대/축소를 포함 하는.storyboard 또는.xib 파일을 표시 하는 방법을 변경 하기 위한 옵션을 포함 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![IOS 디자이너의 섹션](introduction-images/8-sixpartsofiosdesigner-vs.png "iOS 디자이너의 섹션")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
@@ -193,11 +193,11 @@ IOS 디자이너에 6 개의 주요 섹션으로 이루어져 있습니다.
 
 컨트롤에 인터페이스를 추가 하려면 놓습니다 합니다 **도구 상자** 디자인 화면에 놓습니다. 에 추가 하거나 컨트롤의 위치를 지정 하는 경우 여백 세로 가운데, 가로 가운데 등 일반적으로 사용 되는 레이아웃 위치 세로 및 가로 지침에 요약 되어 있습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
  
 ![디자인 화면의 지침에는 일반적으로 사용 되는 레이아웃 위치가 강조 표시](introduction-images/9-layoutguides-vsmac.png "지침 디자인 화면에서 자주 사용 하는 레이아웃 위치를 강조 표시")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![디자인 화면의 지침에는 일반적으로 사용 되는 레이아웃 위치가 강조 표시](introduction-images/9-layoutguides-vs.png "지침 디자인 화면에서 자주 사용 하는 레이아웃 위치를 강조 표시")
 
@@ -205,25 +205,25 @@ IOS 디자이너에 6 개의 주요 섹션으로 이루어져 있습니다.
 
 위의 예제에서 파란색 점선 단추 배치 하는 데는 가로 가운데 맞춤 visual 지침을 제공 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 #### <a name="context-menu-commands"></a>상황에 맞는 메뉴 명령
 
-상황에 맞는 메뉴를 디자인 화면에서와에서 모두 사용할 수는 **문서 개요**합니다. 이 메뉴는 명령을 제공 합니다.는 선택한 컨트롤 및 해당 부모 작업의 중첩된 된 계층 구조 보기를 사용 하는 경우 유용 합니다.
+상황에 맞는 메뉴를 디자인 화면에서와에서 모두 사용할 수는 **문서 개요**합니다. 이 메뉴는 선택한 컨트롤 및 중첩된 된 계층 구조에서 뷰를 사용 하 여 작업할 때 도움이 되는 해당 부모에 대 한 명령을 제공 합니다.
 
 [![디자인 화면에서 상황에 맞는 메뉴](introduction-images/10-contextmenudesignsurface-vsmac.png "디자인 화면의 상황에 맞는 메뉴")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -----
 
 ### <a name="constraints-toolbar"></a>제약 조건 도구 모음
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
  
 [![제약 조건 도구 모음](introduction-images/11-constraintstoolbar-vsmac.png "제약 조건 도구 모음")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![제약 조건 도구 모음](introduction-images/11-constraintstoolbar-vs.png "제약 조건 도구 모음")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
@@ -237,11 +237,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 - 프레임 편집 모드:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![프레임 편집 모드 단추](introduction-images/12a-frameeditingmode-vsmac.png "프레임 편집 모드 단추")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![프레임 편집 모드 단추](introduction-images/12a-frameeditingmode-vs.png "프레임 편집 모드 단추")
 
@@ -249,11 +249,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 - 제약 조건 편집 모드:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![제약 조건 편집 모드 단추](introduction-images/12b-constrainteditingmode-vsmac.png "제약 조건 편집 모드 단추")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![제약 조건 편집 모드 단추](introduction-images/12b-constrainteditingmode-vs.png "제약 조건 편집 모드 단추")
 
@@ -270,11 +270,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 아래쪽 도구 모음의 장치, 방향 및 스토리 보드 또는.xib 파일을 보려면 iOS 디자이너에서에서 하는 데 사용 하는 확대/축소를 선택 하는 방법을 제공 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![장치 및 디자인 화면 방향을 선택 하는 데 아래쪽 도구 모음](introduction-images/13-bottomtoolbar-vsmac.png "장치 및 디자인 화면 방향을 선택 하는 데 아래쪽 도구 모음")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![장치 및 디자인 화면 방향을 선택 하는 데 아래쪽 도구 모음](introduction-images/13-bottomtoolbar-vs.png "장치 및 디자인 화면 방향을 선택 하는 데 아래쪽 도구 모음")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
@@ -284,11 +284,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 확장 하면 아래쪽 도구 모음의 모든 장치, 방향 및/또는 적응 현재 문서에 적용할 수를 표시 합니다. 클릭 하 디자인 화면에 표시 된 보기를 변경 합니다. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![아래쪽 도구 모음 확장 하 여 장치 및 방향 표시할](introduction-images/14-bottomtoolbarexpanded-vsmac.png "확장 하 여 장치 및 방향 표시할 아래쪽 도구 모음")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![아래쪽 도구 모음 확장 하 여 장치 및 방향 표시할](introduction-images/14-bottomtoolbarexpanded-vs.png "확장 하 여 장치 및 방향 표시할 아래쪽 도구 모음")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
@@ -301,11 +301,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 - 하는 경우 **iPhone SE** / **세로**에 선택한 팝 오버는 옵션을 제공 compact 너비, 높이 일반 크기 클래스는 인터페이스 변형 만들기. 
 - 하는 경우 **iPad Pro 9.7 인치** / **가로** / **전체 화면** 는 선택한 팝 오버는 옵션을 제공 된 인터페이스 변형에 대 한 만들기 일반 너비, 높이 일반 크기 클래스입니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![Size 클래스에서 인터페이스를 다를 사용 하 고 아래쪽 도구 모음의](introduction-images/15-edittraitsbutton-vsmac.png "크기 클래스에서 인터페이스를 다를 사용 하 고 아래쪽 도구 모음")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Size 클래스에서 인터페이스를 다를 사용 하 고 아래쪽 도구 모음의](introduction-images/15-edittraitsbutton-vs.png "크기 클래스에서 인터페이스를 다를 사용 하 고 아래쪽 도구 모음")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
@@ -315,11 +315,11 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 디자인 화면에서는 몇 가지 컨트롤을 통해 확대/축소를 지원 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
  
 ![아래쪽 도구 모음에서 확대/축소 컨트롤](introduction-images/16-zoomcontrols-vsmac.png "아래쪽 도구 모음에서 확대/축소 컨트롤")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![아래쪽 도구 모음에서 확대/축소 컨트롤](introduction-images/16-zoomcontrols-vs.png "아래쪽 도구 모음에서 확대/축소 컨트롤")
 
@@ -334,7 +334,7 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 이러한 컨트롤을 디자인 화면의 확대/축소를 조정 합니다. 런타임에 응용 프로그램의 사용자 인터페이스는 영향을 주지 않습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ### <a name="properties-pad"></a>Properties Pad
 
@@ -345,7 +345,7 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 
 합니다 **Properties Pad** 세 가지 섹션이 포함 되어 있습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="properties-window"></a>속성 창
 
@@ -363,7 +363,7 @@ IOS 디자이너의 이전 버전에서는 프레임 편집 모드 및 제약 �
 2.  **레이아웃** – 속성 제약 조건 및 프레임을 포함 하는 컨트롤의 크기와 위치에 추적 하는 다음과 같습니다.
 3.  **이벤트** – 이벤트 및 이벤트 처리기는 여기에 지정 합니다. 터치, 누르기, 끌기 등 이벤트를 처리 하는 데 유용 합니다. 코드에서 직접 이벤트를 처리할 수도 있습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 #### <a name="editing-properties-in-the-properties-pad"></a>Properties Pad에서 속성 편집
 
@@ -373,7 +373,7 @@ IOS 디자이너 디자인 화면에서 비주얼 편집 하는 것 외에도 �
 
 [![컨트롤러 속성 보기](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "컨트롤러 속성 보기")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 #### <a name="editing-properties-in-the-properties-window"></a>속성 창에서 속성 편집
 
@@ -390,11 +390,11 @@ IOS 디자이너 디자인 화면에서 비주얼 편집 하는 것 외에도 �
 
 #### <a name="default-values"></a>기본값
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 여러 속성을 **Properties Pad** 값 또는 기본값을 표시 합니다. 그러나 응용 프로그램의 코드는 이러한 값을 수정할 여전히 수 있습니다. 합니다 **Properties Pad** 코드에 설정 된 값이 표시 되지 않습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 여러 속성을 **속성 창** 값 또는 기본값을 표시 합니다. 그러나 응용 프로그램의 코드는 이러한 값을 수정할 여전히 수 있습니다. 합니다 **속성 창** 코드에 설정 된 값이 표시 되지 않습니다.
 
@@ -402,13 +402,13 @@ IOS 디자이너 디자인 화면에서 비주얼 편집 하는 것 외에도 �
 
 #### <a name="event-handlers"></a>이벤트 처리기
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 다양 한 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 사용 합니다 **이벤트** 탭을 **Properties Pad**. 예를 들어 아래 스크린샷에서에 `HandleClick` 메서드 버튼의 처리 **Touch 구성 내에서** 이벤트:
 
 [![단추에 대해 설정 하는 이벤트 처리기를 사용 하 여는 속성 패드](introduction-images/19-buttonpropertiespadevents-vsmac.png "단추에 대해 설정 하는 이벤트 처리기를 사용 하 여 The Properties Pad")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 다양 한 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 사용 합니다 **이벤트** 탭을 **속성 창**. 예를 들어 아래 스크린샷에서에 `HandleClick` 메서드 버튼의 처리 **Touch 구성 내에서** 이벤트:
 
@@ -418,13 +418,13 @@ IOS 디자이너 디자인 화면에서 비주얼 편집 하는 것 외에도 �
 
 이벤트 처리기가 지정 된 후 동일한 이름의 메서드는 해당 뷰 컨트롤러 클래스에 추가 되어야 합니다. 그렇지 않은 경우는 `unrecognized selector` 단추를 탭 할 때 예외가 발생 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![인식할 수 없는 선택기 예외가](introduction-images/20-unrecognizedselector-vsmac.png "인식할 수 없는 선택기 예외")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 에 지정 된 이벤트 처리기 뒤에 **Properties Pad**, iOS 디자이너는 즉시 해당 코드 파일을 열고 메서드 선언을 삽입할 제공 합니다. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![인식할 수 없는 선택기 예외가](introduction-images/20-unrecognizedselector-vs.png "인식할 수 없는 선택기 예외")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
@@ -436,11 +436,11 @@ IOS 디자이너 디자인 화면에서 비주얼 편집 하는 것 외에도 �
 
 IOS 디자이너는 윤곽선으로 컨트롤의 인터페이스 계층 구조를 표시할 수도 있습니다. 선택 하 여 윤곽선을 사용할 수는 **문서 개요** 아래와 같이 탭:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![문서 개요](introduction-images/21-buttonoutlineview-vsmac.png "문서 개요")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![문서 개요](introduction-images/21-buttonoutlineview-vs.png "문서 개요")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
@@ -448,7 +448,7 @@ IOS 디자이너는 윤곽선으로 컨트롤의 인터페이스 계층 구조�
 
 개요 뷰에서 선택 된 컨트롤에 디자인 화면에서 선택한 컨트롤을 사용 하 여 동기화 상태로 유지 됩니다.  이 기능은 깊이 중첩 된 인터페이스 계층 구조에서 항목을 선택할 때 유용 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="revert-to-xcode"></a>Xcode를 되돌리려면
 
@@ -458,7 +458,7 @@ IOS 디자이너 및 Xcode Interface Builder를 서로 교환해 서 사용할 �
 
 Xcode Interface Builder에서 편집한 후 파일을 저장 하 고 mac 용 Visual Studio로 돌아가서 Xamarin.iOS 프로젝트에 변경 내용을 동기화 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -----
 
