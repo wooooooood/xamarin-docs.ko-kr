@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 06/18/2018
-ms.openlocfilehash: 30cbb2c3aebdafe2ebf35598c520ae725e01ce65
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/21/2018
+ms.openlocfilehash: a83e31cd117689e3af2f5357331408de55edaecf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102752"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms의 XAML 네임 스페이스
 
@@ -42,13 +42,14 @@ XAML 네임 스페이스에서 형식을 참조할 때 사용 되는 접두사�
 |--- |--- |
 |`x:Arguments`|팩터리 메서드 개체 선언 또는 기본이 아닌 생성자에 대 한 생성자 인수를 지정합니다.|
 |`x:Class`|XAML에 정의 된 클래스에 대 한 네임 스페이스 및 클래스 이름을 지정 합니다. 클래스 이름에는 코드 숨김 파일의 클래스 이름과 일치 해야 합니다. 이 생성자는 XAML 파일의 루트 요소에만 나타날 수 있는 참고 합니다.|
+|`x:DataType`|XAML 요소 및 해당 하위 요소를 바인딩할 개체의 형식을 지정 합니다.|
 |`x:FactoryMethod`|개체를 초기화 하는 팩터리 메서드를 지정 합니다.|
 |`x:FieldModifier`|명명 된 XAML 요소에 대해 생성 된 필드에 대 한 액세스 수준을 지정합니다.|
 |`x:Key`|각 리소스에 대 한 고유한 사용자 정의 키 지정을 `ResourceDictionary`입니다. 키의 값 XAML 리소스를 검색 하는 데 사용 되 고에 대 한 인수로 일반적으로 `StaticResource` 태그 확장 합니다.|
 |`x:Name`|XAML 요소에 대 한 런타임 개체 이름을 지정합니다. 설정 `x:Name` 코드에서 변수를 선언 하는 것과 비슷합니다.|
 |`x:TypeArguments`|제네릭 형식의 생성자에 제네릭 형식 인수를 지정합니다.|
 
-에 대 한 자세한 내용은 합니다 `x:FieldModifier` 특성을 참조 하십시오 [필드 한정자](~/xamarin-forms/xaml/field-modifiers.md)합니다. 에 대 한 자세한 내용은 합니다 `x:Arguments`, `x:FactoryMethod`, 및 `x:TypeArguments` 특성을 참조 하세요 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)합니다.
+에 대 한 자세한 내용은 합니다 `x:DataType` 특성을 참조 하십시오 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)합니다. 에 대 한 자세한 내용은 합니다 `x:FieldModifier` 특성을 참조 하십시오 [필드 한정자](~/xamarin-forms/xaml/field-modifiers.md)합니다. 에 대 한 자세한 내용은 합니다 `x:Arguments`, `x:FactoryMethod`, 및 `x:TypeArguments` 특성을 참조 하세요 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)합니다.
 
 XAML, 네임 스페이스 선언을 부모 요소에서 자식 요소를 상속합니다. 따라서 XAML 파일의 루트 요소에서 네임 스페이스를 정의 하는 경우 해당 파일 내에서 모든 요소에 네임 스페이스 선언을 상속 합니다.
 

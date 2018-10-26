@@ -3,15 +3,15 @@ title: MonoGame 파이프라인 도구를 사용 하 여
 description: MonoGame 파이프라인 도구 콘텐츠 MonoGame 프로젝트 만들기 및 관리 됩니다. 콘텐츠 프로젝트에 있는 파일 MonoGame 파이프라인 도구를 통해 처리 되 고 CocosSharp 및 MonoGame 응용 프로그램에서 사용 하기 위해.xnb 파일로 출력 합니다.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "34783301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102986"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 
@@ -69,7 +69,7 @@ MonoGame 파이프라인 도구를 실행 중이면 콘텐츠 및 게임 프로�
 
 ## <a name="creating-a-content-project"></a>콘텐츠 프로젝트 만들기
 
-이제 게임 프로젝트로, 스토리를 만들었으므로 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. MonoGame 파이프라인 도구에서이 작업을 수행 하려면 **파일 > 새로 만들기...**  프로젝트의 Content 폴더로 이동 합니다. Android에 대 한 폴더 위치는 **[프로젝트 root]\BouncingGame.Android\Assets\Content\\** 합니다. IOS에 대 한 폴더 위치는 **[프로젝트 root]\BouncingGame.iOS\Content\\** 합니다.
+이제 게임 프로젝트로, 스토리를 만들었으므로 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. MonoGame 파이프라인 도구에서이 작업을 수행 하려면 **파일 > 새로 만들기...**  프로젝트의 Content 폴더로 이동 합니다. Android에 대 한 폴더에 위치한 **[프로젝트 root]\BouncingGame.Android\Assets\Content\\**합니다. Ios의 경우 폴더에 위치한 **[프로젝트 root]\BouncingGame.iOS\Content\\**합니다.
 
 변경 합니다 **파일 이름** 에 **ContentProject** 클릭 합니다 **저장** 단추:
 
@@ -135,24 +135,24 @@ MonoGame 파이프라인 도구는 프로젝트에 대 한 정보를 보여 프�
 
 
 ```xml
-    <!-- Modify this string to change the font that will be imported. -->
-    <FontName>Arial</FontName>
+    <!-- Modify this string to change the font that will be imported. -->
+    <FontName>Arial</FontName>
 
-    <!-- Size is a float value, measured in points. 
-    Modify this value to change the size of the font. -->
-    <Size>12</Size> 
+    <!-- Size is a float value, measured in points. 
+    Modify this value to change the size of the font. -->
+    <Size>12</Size> 
 ```
 
 에서는 임의의 텍스트 편집기에서 파일을 엽니다. 으로 우리의 **arial 36.spritefont** 이름을 제안 하 고 그대로 유지 하겠습니다 합니다 `FontName` 으로 `Arial` 변경 하지만 `Size` 값을 `36`:
 
 
 ```xml
-    <!-- Modify this string to change the font that will be imported. -->
-    <FontName>Arial</FontName>   
-  
-    <!-- Size is a float value, measured in points. 
-    Modify this value to change the size of the font. -->4/10/2016 12:57:28 PM 
-    <Size>36</Size>
+    <!-- Modify this string to change the font that will be imported. -->
+    <FontName>Arial</FontName>   
+  
+    <!-- Size is a float value, measured in points. 
+    Modify this value to change the size of the font. -->4/10/2016 12:57:28 PM 
+    <Size>36</Size>
 ```
  
 ## <a name="using-files-at-runtime"></a>파일을 사용 하 여 런타임 시
@@ -175,41 +175,41 @@ MonoGame 파이프라인 도구는 프로젝트에 대 한 정보를 보여 프�
 
 
 ```csharp
-using System;
-using CocosSharp;
+using System;
+using CocosSharp;
 
-namespace BouncingGame
+namespace BouncingGame
 {
-    public class GameScene : CCScene
-    {
-        // All visual elements must be added to a CCLayer:
-        CCLayer mainLayer;
+    public class GameScene : CCScene
+    {
+        // All visual elements must be added to a CCLayer:
+        CCLayer mainLayer;
 
-        // The CCSprite is used to display the "ball" texture
-        CCSprite sprite;
-        // The CCLabelTtf is used to display the Arial36 sprite font
-        CCLabelTtf label;
+        // The CCSprite is used to display the "ball" texture
+        CCSprite sprite;
+        // The CCLabelTtf is used to display the Arial36 sprite font
+        CCLabelTtf label;
 
-        public GameScene(CCWindow mainWindow) : base(mainWindow)
-        {
-            // Instantiate the CCLayer first:
-            mainLayer = new CCLayer ();
-            AddChild (mainLayer);
+        public GameScene(CCWindow mainWindow) : base(mainWindow)
+        {
+            // Instantiate the CCLayer first:
+            mainLayer = new CCLayer ();
+            AddChild (mainLayer);
 
-            // Now we can create the Sprite using the ball.xnb file:
-            sprite = new CCSprite ("ball");
-            sprite.PositionX = 200;
-            sprite.PositionY = 200;
-            mainLayer.AddChild (sprite);
+            // Now we can create the Sprite using the ball.xnb file:
+            sprite = new CCSprite ("ball");
+            sprite.PositionX = 200;
+            sprite.PositionY = 200;
+            mainLayer.AddChild (sprite);
 
-            // The font name (arial) and size (36) need to match 
-            // the .spritefont definition and file name.  
-            label = new CCLabelTtf ("Using font 36", "arial", 36);
-            label.PositionX = 200;
-            label.PositionY = 300;
-            mainLayer.AddChild (label);
-        }
-    }
+            // The font name (arial) and size (36) need to match 
+            // the .spritefont definition and file name.  
+            label = new CCLabelTtf ("Using font 36", "arial", 36);
+            label.PositionX = 200;
+            label.PositionY = 300;
+            mainLayer.AddChild (label);
+        }
+    }
 } 
 ```
 
@@ -219,14 +219,14 @@ namespace BouncingGame
 
 
 ```csharp
-public override void ApplicationDidFinishLaunching (CCApplication application, CCWindow mainWindow)
+public override void ApplicationDidFinishLaunching (CCApplication application, CCWindow mainWindow)
 {
-    application.PreferMultiSampling = false;
-    application.ContentRootDirectory = "Content";
+    application.PreferMultiSampling = false;
+    application.ContentRootDirectory = "Content";
 
-    // New code:
-    GameScene gameScene = new GameScene (mainWindow);
-    mainWindow.RunWithScene (gameScene);
+    // New code:
+    GameScene gameScene = new GameScene (mainWindow);
+    mainWindow.RunWithScene (gameScene);
 } 
 ```
 

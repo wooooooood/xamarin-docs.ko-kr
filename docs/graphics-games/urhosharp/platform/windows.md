@@ -1,23 +1,23 @@
 ---
 title: UrhoSharp Windows 지원
-description: 이 문서에서는 UrhoSharp에 대 한 Windows 지원에 설명 합니다. 프로젝트를 만들고 구성 하는 방법을 설명 하 고 및 Urho 시작, wpf, 통합 및 UWP와 통합 합니다.
+description: 이 문서에서는 UrhoSharp에 대 한 Windows 지원을 설명 합니다. 프로젝트를 만들고 구성 하는 방법을 설명 하 고 Urho 시작, WPF, 통합 및 UWP와 통합 합니다.
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783235"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119607"
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
 
-플랫폼 특정 기능을 활용 하려는 Urho 이식 가능한 클래스 라이브러리는 고 게임 논리를 다양 한 플랫폼 전반에 걸쳐 사용할 동일한 API를 사용 하면 여전히 초기화 해야 Urho 플랫폼 특정 드라이버에서 한 경우에 따라, 장치 .
+플랫폼 특정 기능을 활용 하려는 동안 Urho 이식 가능한 클래스 라이브러리 이며, 게임 논리에 대 한 다양 한 플랫폼에서 사용할 동일한 API를 사용 하면 여전히 초기화 해야 Urho 플랫폼 특정 드라이버에 일부 경우, .
 
-아래의 페이지 가정 `MyGame` 의 서브 클래스는 `Application` 클래스입니다.
+페이지 아래에서 가정 `MyGame` 의 서브 클래스는 `Application` 클래스.
 
 **지원 되는 아키텍처:** 64 비트 Windows입니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "34783235"
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
-콘솔 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
+콘솔 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있습니다 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
 
 ### <a name="configuring-and-launching-urho"></a>구성 및 Urho 시작
 
@@ -38,19 +38,19 @@ DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-## <a name="integrated-with-wpf"></a>WPF와 통합
+## <a name="integrated-with-wpf"></a>WPF로 통합
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
-WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
+WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있습니다 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
 
 ### <a name="configuring-and-launching-urho-from-wpf"></a>구성 및 WPF에서 Urho 시작
 
-서브 클래스를 만든 `Window` 하 고 다음과 같이 자산을 구성 합니다.
+서브 클래스를 만든 `Window` 및 다음과 같은 자산을 구성 합니다.
 
 ```csharp
     public partial class MainWindow : Window
@@ -82,7 +82,7 @@ WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
@@ -90,11 +90,11 @@ WPF 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
-UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
+UWP 프로젝트를 만들고 Urho NuGet 참조 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
 
 ### <a name="configuring-and-launching-urho-from-uwp"></a>구성 및 Urho UWP에서 시작
 
-서브 클래스를 만든 `Window` 하 고 다음과 같이 자산을 구성 합니다.
+서브 클래스를 만든 `Window` 및 다음과 같은 자산을 구성 합니다.
 
 ```csharp
 {
@@ -115,7 +115,7 @@ UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
     }
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
@@ -123,8 +123,8 @@ UWP 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
-Windows.Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있는지 자산 (데이터 디렉터리를 포함 하는 디렉터리) 되었는지 확인 합니다.
+Windows.Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있습니다 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>구성 및 Urho Windows.Forms에서 시작
 
-폼의 Urho를 시작, 참조 [전체 샘플](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
+폼에서 Urho 시작, 참조 [전체 샘플](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)

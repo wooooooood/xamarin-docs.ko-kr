@@ -3,23 +3,23 @@ title: GridViewPager
 ms.prod: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 3a0b1ec9359b1c6067c253b4d04126dbdd726cc5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112769"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
-[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) 샘플 쓰는 유형 Android에 대 한 2D 선택 탐색 패턴을 구현 하는 방법을 보여 줍니다.
+합니다 [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) 샘플 Android Wear 용 2D 선택기 탐색 패턴을 구현 하는 방법을 보여 줍니다.
 
-![정사각형 디스플레이에 GridViewPager의 예제 스크린 샷](gridviewpager-images/gridviewpager.png)
+![정사각형 화면 GridViewPager의 예에서는 스크린 샷](gridviewpager-images/gridviewpager.png)
 
-먼저 추가 [Xamarin Android 착용 지원](http://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지를 프로젝트입니다.
+먼저 추가 합니다 [Xamarin Android Wear 지원](http://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지를 프로젝트입니다.
 
 레이아웃 XML은 다음과 같습니다.
 
@@ -31,11 +31,13 @@ ms.locfileid: "30763438"
     android:keepScreenOn="true" />
 ```
 
-만들기는 [ `GridPagerAdapter` ](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html) (또는 하위 클래스와 같은 [ `FragmentGridPagerAdapter` ](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html) 을 탐색 하기 때문에 표시할 보기를 제공 합니다.
+만들기를 [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(또는와 같은 하위 클래스입니다. [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+사용자로 표시 하도록 뷰를 제공 하려면 다음을 탐색 합니다.
 
-[샘플 어댑터](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) 에 대 한 재정의 포함 하 여 필요한 메서드를 구현 하는 방법을 보여 줍니다. `RowCount`, `GetColumnCount`, `GetBackground`, 및 `GetFragment`
+합니다 [샘플 어댑터](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) 에 대 한 재정의 포함 하 여 필요한 메서드를 구현 하는 방법을 보여 줍니다 `RowCount`합니다 `GetColumnCount`, `GetBackground`, 및 `GetFragment`
 
-표시 된 대로 어댑터를 연결 합니다.
+표시 된 것 처럼 어댑터를 연결 합니다.
 
 ```csharp
 pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
@@ -45,6 +47,6 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 ## <a name="related-links"></a>관련 링크
 
-- [Google의 2D 선택 문서](https://developer.android.com/training/wearables/ui/2d-picker.html)
+- [Google의 2D 선택기 문서](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [GridViewPager (샘플)](https://developer.xamarin.com/samples/GridViewPager/)

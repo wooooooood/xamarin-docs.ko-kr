@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 52d8d5f6eb38e5cb501d6284d08f7317981e0dcf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 18/10/2018
+ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107529"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -93,7 +93,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| [`Stepper`](xref:Xamarin.Forms.Stepper) 사용자가 선택할 수 있습니다는 `double` 증분 값을 사용 하 여 지정 된 범위에서 값을 [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum)를 [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), 및 [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) 속성입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Stepper) | [![스텝 퍼 예제](views-images/Stepper.png "스텝 퍼 예제")](views-images/Stepper-Large.png#lightbox "스텝 퍼 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+| [`Stepper`](xref:Xamarin.Forms.Stepper) 사용자가 선택할 수 있습니다는 `double` 증분 값을 사용 하 여 지정 된 범위에서 값을 [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum)를 [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), 및 [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) 속성입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Stepper)  / [가이드](~/xamarin-forms/user-interface/stepper.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) | [![스텝 퍼 예제](views-images/Stepper.png "스텝 퍼 예제")](views-images/Stepper-Large.png#lightbox "스텝 퍼 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
 ### <a name="switch"></a>전환
@@ -114,7 +114,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| [`TimePicker`](xref:Xamarin.Forms.TimePicker) 플랫폼 시간 선택기를 사용 하 여 시간을 선택할 수 있습니다. 합니다 [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) 속성은 선택한 시간입니다. 응용 프로그램의 변경 내용을 모니터링할 수 있습니다 합니다 `Time` 에 대 한 처리기를 설치 하 여 속성을 [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) 이벤트입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TimePicker) | [![TimePicker 예제](views-images/TimePicker.png "TimePicker 예제")](views-images/TimePicker-Large.png#lightbox "TimePicker 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+| [`TimePicker`](xref:Xamarin.Forms.TimePicker) 플랫폼 시간 선택기를 사용 하 여 시간을 선택할 수 있습니다. 합니다 [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) 속성은 선택한 시간입니다. 응용 프로그램의 변경 내용을 모니터링할 수 있습니다 합니다 `Time` 에 대 한 처리기를 설치 하 여 속성을 [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) 이벤트입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TimePicker) / [가이드](~/xamarin-forms/user-interface/timepicker.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker) | [![TimePicker 예제](views-images/TimePicker.png "TimePicker 예제")](views-images/TimePicker-Large.png#lightbox "TimePicker 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-editing-text"></a>텍스트 편집에 대 한 보기

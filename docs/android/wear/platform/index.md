@@ -1,23 +1,23 @@
 ---
-title: Xamarin.Android와 마모 운영 체제의 플랫폼 기능
-description: 마모 OS 플랫폼의 주요 구성 요소
+title: Xamarin.Android 사용 하 여 Wear 운영 체제의 플랫폼 기능
+description: Wear OS 플랫폼의 주요 구성 요소
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 3e703ebb3d4705980785ec8fea6003ffc1442b54
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 9664da9ab00dce2a3fcc0410c9c4fff189b13bf9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436120"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118307"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
-이 섹션의 문서를 쓰는 유형 Android에 대 한 기능을 다룹니다. 여기는 WatchFace를 만드는 방법을 설명 하는 항목을 찾을 수 있습니다.
+이 섹션의 문서 Android Wear 관련 된 기능을 설명합니다. 여기서는 WatchFace를 만드는 방법을 설명 하는 항목을 찾을 수 있습니다.
  
 ##  <a name="creating-a-watch-faceandroidwearplatformcreating-a-watchfacemd"></a>[시계 모드 만들기](~/android/wear/platform/creating-a-watchface.md)
 
-Android 착용에 대 한 사용자 지정 조사식 얼굴 서비스를 구현 하기 위한 단계별 연습입니다. 디지털 조사식 얼굴 서비스를 훼손를 구축 하기 위한 지침은 하 고 추가 기능을 사용 하 여 아날로그 스타일 watch 화면을 만들려면 더 많은 코드가 추가 됩니다.
+Android Wear 용 사용자 지정 조사 얼굴 서비스를 구현 하기 위한 단계별 연습입니다. 단지 디지털 조사식 얼굴 서비스를 구축 하기 위한 지침은 및 한 코드를 더 추가 기능을 사용 하 여는 아날로그 방식의 watch 화면을 만들려면 추가 됩니다.

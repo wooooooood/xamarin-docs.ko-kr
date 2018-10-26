@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 응용 프로그램에 포함 된 �
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/05/2018
-ms.openlocfilehash: cce5356fd1d3d9a5cf16370a4843c3541b00a7c0
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: b59fd7c1a9e5f528878b90e1a76fabe5a79bab81
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108244"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Xamarin.iOS에서 포함 된 프레임 워크
 
@@ -34,13 +34,13 @@ Xamarin.iOS에서 프레임 워크를 사용 하는 방법은 두 가지 있습�
 
 - 상황에 맞는 메뉴에서 네이티브 참조를 추가 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 프로젝트 및 찾아보기 네이티브 참조를 추가 하려면 마우스 오른쪽 단추로 클릭
 
 ![](embedded-frameworks-images/xam-native-refs.png "Mac 용 Visual Studio에서 네이티브 참조 추가 선택")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 프로젝트 및 찾아보기 네이티브 참조를 추가 하려면 마우스 오른쪽 단추로 클릭
 

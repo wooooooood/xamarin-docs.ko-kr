@@ -4,14 +4,14 @@ description: 이 문서에는 System.Data 및 Mono.Data.Sqlite.dll Xamarin.iOS �
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 183079c150ad4df05424d4dbf2980a307a889352
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 4e9b782cf266a96f30c79eaf139ef88332e02dca
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997200"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119863"
 ---
 # <a name="systemdata-in-xamarinios"></a>Xamarin.iOS System.Data
 
@@ -25,7 +25,7 @@ ms.locfileid: "38997200"
 
 <a name="Example" />
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 프로그램에서 데이터베이스를 만듭니다 `Documents/mydb.db3`, 경우 데이터베이스가 이전에 존재 하지 하 고 샘플 데이터로 채워집니다. 에 쓴 출력을 사용 하 여 데이터베이스를 쿼리 한 다음 `stderr`합니다.
 

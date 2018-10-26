@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 4f80682c5d8c4f5231fbdd2e081fdcf7962aa969
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103727"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
@@ -89,7 +89,7 @@ employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) 일부인 중 4 개는 [Xamarin.Forms XAML 기본 사항 연재 기사](~/xamarin-forms/xaml/xaml-basics/index.md)합니다.
 
 ### <a name="binding-cells"></a>셀 바인딩
-셀 (및 셀의 자식) 속성에서 개체의 속성에 바인딩할 수 있습니다는 `ItemsSource`합니다. 예를 들어 이미지를 사용 하 여 직원의 목록을 표시 하는 ListView는 사용할 수 있습니다.
+셀 (및 셀의 자식) 속성에서 개체의 속성에 바인딩할 수 있습니다는 `ItemsSource`합니다. 예를 들어 직원의 목록을 표시 하는 ListView는 사용할 수 있습니다.
 
 Employee 클래스:
 

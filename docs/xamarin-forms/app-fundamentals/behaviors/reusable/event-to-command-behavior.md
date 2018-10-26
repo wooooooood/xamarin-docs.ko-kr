@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 3151179b6ff6d26b74a87ded747310646b304603
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 92d0f393ff8d96ac9c0040ab7c46a364418cf956
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109616"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
@@ -195,4 +195,4 @@ selectedItemLabel.SetBinding (Label.TextProperty, "SelectedItemText");
 
 - [EventToCommand 동작 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 - [동작](xref:Xamarin.Forms.Behavior)
-- [동작<T>](xref:Xamarin.Forms.Behavior`1)
+- [동작&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

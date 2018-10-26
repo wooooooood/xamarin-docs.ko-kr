@@ -1,19 +1,19 @@
 ---
 title: IOS 라이브러리 바인딩
-description: 이 문서에서는 C# 바인딩을 만들 Objective-c 코드를 Xamarin.iOS 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 하는 방법을 설명 합니다.
+description: 이 문서를 만드는 방법에 설명 합니다 C# 에 대 한 바인딩을 Objective-c 코드를 Xamarin.iOS 응용 프로그램에서 네이티브 라이브러리 및 CocoaPods를 사용할 수 있도록 합니다.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 75c8f9a2eea080c3da031366b314d94929080811
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855223"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123000"
 ---
 # <a name="binding-ios-libraries"></a>IOS 라이브러리 바인딩
 

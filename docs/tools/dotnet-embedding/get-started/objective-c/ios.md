@@ -3,15 +3,15 @@ title: IOS 시작
 description: 이 문서에서는.NET 포함을 사용 하 여 iOS를 사용 하 여 시작 하는 방법을 설명 합니다. 요구 사항에 설명 하 고 관리 되는 어셈블리를 바인딩하고 Xcode 프로젝트에서 출력을 사용 하는 방법을 보여 주기 위해 샘플 앱을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: D5453695-69C9-44BC-B226-5B86950956E2
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: d61eb8f1ad1def764c8552b2f047aa46cd712018
-ms.sourcegitcommit: ef04a4ae1b19c1854a8e4e8315516d4030f4bbd6
+ms.openlocfilehash: 009772ac88ad57bab53fb71c9705b71f0f8acc8b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654830"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118294"
 ---
 # <a name="getting-started-with-ios"></a>IOS 시작
 

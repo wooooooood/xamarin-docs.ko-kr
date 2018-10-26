@@ -1,81 +1,81 @@
 ---
-title: Java 시작
-description: 이 문서에서는.NET 포함을 사용 하 여 Java를 사용 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 설명 합니다.
+title: Java를 사용 하 여 시작
+description: 이 문서에서는.NET 포함을 사용 하 여 Java를 사용 하 여 시작 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 53871a5311cdba824b0bddca37dd5c416d06e272
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121752"
 ---
-# <a name="getting-started-with-java"></a>Java 시작
+# <a name="getting-started-with-java"></a>Java를 사용 하 여 시작
 
-이 지원 되는 모든 플랫폼에 대 한 기본 사항에 설명 하는 Java 용 시작된 페이지입니다.
+이 모든 지원 되는 플랫폼에 대 한 기본 사항을 다루는 Java에 대 한 시작된 페이지를 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-사용 하면.NET 포함 Java 필요 합니다.
+.NET 포함 해야 하는 Java를 사용 하 여 사용 하려면 필요 합니다.
 
 * Java 1.8 이상
-* [모노 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](http://www.mono-project.com/download/)
 
-For Mac:
+Mac:
 
-* Xcode 8.3.2 이상 버전
+* Xcode 8.3.2 이상
 
-Windows:
+Windows에 대 한:
 
-* C + +를 지 원하는 visual Studio 2017
+* Visual Studio 2017의 c + + 지원
 * Windows 10 SDK
 
 Android:
 
-* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상 버전
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) 1.8 Java와 함께
+* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상
+* [Android Studio 3.x](https://developer.android.com/studio/index.html) Java 1.8 사용 하 여
 
-사용할 수 있습니다 [Mac 용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/) 를 편집 하 여 C# 코드를 컴파일합니다.
+사용할 수 있습니다 [Mac 용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/) 편집한 컴파일에 C# 코드입니다.
 
 > [!NOTE]
-> 이전 버전의 Xcode, Visual Studio, Xamarin.Android, Android Studio 및 모노 _수_ 작동 않지만 거치지 이며 지원 되지 않습니다.
+> 이전 버전의 Xcode, Visual Studio, Xamarin.Android, Android Studio 및 Mono _수_ 작동 하지만 테스트 되지 않음 되며 지원 되지 않습니다.
 
 ## <a name="installation"></a>설치
 
-현재 사용할 수는 포함 하는.NET [NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
+.NET 포함 하는 것은 현재 사용할 수 [NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
 
 ```shell
 nuget install Embeddinator-4000
 ```
 
-이 **Embeddinator 4000.exe** 에 **패키지/Embeddinator-4000/도구** 디렉터리입니다.
+이 배치할 **Embeddinator 4000.exe** 에 **패키지/Embeddinator-4000/도구** 디렉터리입니다.
 
-빌드 소스에서 포함 하는.NET, 참조 수 또한 우리의 [git 리포지토리](https://github.com/mono/Embeddinator-4000/) 및 [기여](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md) 지침에 대 한 문서입니다.
+.NET 원본에서 포함을 빌드, 참조 수는 또한 우리의 [git 리포지토리](https://github.com/mono/Embeddinator-4000/) 하며 [영향을 주는](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md) 지침에 대 한 문서.
 
 ## <a name="platforms"></a>플랫폼
 
-Java 현재 macOS, Windows 및 Android에 대 한 미리 보기 상태입니다.
+Java는 현재 macOS, Windows, Android 용 미리 보기 상태입니다.
 
-플랫폼은 전달 하 여 선택 하는 `--platform=<platform>` 명령줄 인수를 포함 하는.NET 도구입니다. 현재 `macOS`, `Windows`, 및 `Android` 지원 됩니다.
+플랫폼을 전달 하 여 선택 된 `--platform=<platform>` .NET 포함 도구에 명령줄 인수입니다. 현재 `macOS`하십시오 `Windows`, 및 `Android` 지원 됩니다.
 
-### <a name="macos-and-windows"></a>macOS 및 창
+### <a name="macos-and-windows"></a>macOS 및 Windows
 
-개발을 위한 Java 1.8을 지 원하는 모든 Java IDE를 사용할 수 있습니다. Android Studio이 사용할 수 있습니다, 원하는 경우 [여기에서 볼](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects)합니다. 모든 표준 Java jar 파일 JAR 파일 출력을 사용할 수 있습니다.
+개발을 위한 Java 1.8을 지 원하는 Java IDE를 사용할 수 있습니다. 이 Android Studio를 사용 하도 원한다 면 [여기](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects)합니다. 모든 표준 Java jar 파일에 출력 JAR 파일을 사용할 수 있습니다.
 
 ### <a name="android"></a>Android
 
-Android 응용 프로그램을 하나를 만들기 전에 개발 되도록 이미 설정 되어 있는지 확인 하십시오.NET 포함을 사용 하 여 합니다. [지침에 따라](~/tools/dotnet-embedding/get-started/java/android.md) 있고 라고 가정 하면 이미 성공적으로 작성 된 컴퓨터에서 Android 응용 프로그램을 배포 합니다.
+만들 하려고 하기 전에 Android 응용 프로그램을 개발 하도록 이미 설정 되었는지 확인 하십시오.NET 포함을 사용 합니다. 합니다 [지침에 따라](~/tools/dotnet-embedding/get-started/java/android.md) 이미 성공적으로 빌드된 있고 컴퓨터에서 Android 응용 프로그램 배포를 가정 합니다.
 
-Android Studio는 개발, 좋지만 기타 Ide에 대 한 지원은으로 작동 해야는 [AAR 파일 형식](https://developer.android.com/studio/projects/android-library.html)합니다.
+Android Studio 개발용으로 권장 되지만 다른 Ide에 대 한 지원은으로 작동 해야 합니다 [AAR 파일 형식을](https://developer.android.com/studio/projects/android-library.html)합니다.
 
 ## <a name="further-reading"></a>추가 정보
 
-* [Android에서 시작](~/tools/dotnet-embedding/get-started/java/android.md)
+* [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
 * [Android에서 콜백](~/tools/dotnet-embedding/android/callbacks.md)
-* [사전 Android 연구](~/tools/dotnet-embedding/android/index.md)
+* [예비 Android 조사](~/tools/dotnet-embedding/android/index.md)
 * [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-* [오픈 소스 프로젝트에 기여 하](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [오픈 소스 프로젝트 기여](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

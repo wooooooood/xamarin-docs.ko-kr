@@ -3,15 +3,15 @@ title: 아키텍처
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121128"
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -71,7 +71,7 @@ Java 전역 참조를 통해 액세스할 수 있는 관리 되는 호출 가능
 관리 되는 호출 가능 래퍼 서브 클래스는 "흥미로운" 모든 응용 프로그램 관련 논리 존재할 수 있는 위치입니다. 여기에 사용자 지정 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 서브 클래스 (같은 합니다 [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) 기본 프로젝트 템플릿에 형식). (이 특히 *Java.Lang.Object* 개라면 서브 클래스 *되지* 포함는 [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) 사용자 지정 특성 또는 [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) 됩니다 *false*, 기본값입니다.)
 
 예: 관리 되는 호출 가능 래퍼를 관리 되는 호출 가능 래퍼 서브 클래스를 통해 액세스할 수 있는 전역 참조를 포함 합니다 [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) 속성입니다. 관리 되는 호출 가능 래퍼를 사용 하 여 전역 참조 명시적으로 해제할 수를 호출 하 여 처럼 [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)합니다.
-관리 되는 호출 가능 래퍼를 달리 *기울여야* 로 이러한 인스턴스를 삭제 하기 전에 수행 해야 *dispose ()* 인스턴스의 ing Java 인스턴스 간의 매핑을 중단 됩니다 (의 인스턴스는 Android 호출 가능 래퍼) 및 관리 되는 인스턴스.
+관리 되는 호출 가능 래퍼를 달리 *기울여야* 으로 이러한 인스턴스를 삭제 하기 전에 수행 해야 *dispose ()* 인스턴스의 현재 진행형 Java 인스턴스 간의 매핑을 중단 됩니다 (의 인스턴스는 Android 호출 가능 래퍼) 및 관리 되는 인스턴스.
 
 
 ### <a name="java-activation"></a>Java 활성화
@@ -88,7 +88,7 @@ Java 전역 참조를 통해 액세스할 수 있는 관리 되는 호출 가능
 
 
 (2)는 leaky 추상화 합니다. Java이 든, C#의 경우와 같이 생성자에서 가상 메서드를 호출은 항상 가장 많이 파생 된 메서드 구현을 호출 합니다. 예를 들어 합니다 [TextView (컨텍스트를 확인 하기 위해, int) 생성자](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) 가상 메서드를 호출 [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),으로 바인딩된는 [ TextView.DefaultMovementMethod 속성](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/)합니다.
-따라서 형식을 [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) (1)로 된 [TextView 하위 클래스입니다](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [TextView.DefaultMovementMethod 재정의](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45), (3) [의 인스턴스를 활성화 XML 통해 클래스](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) 재정의 된 *DefaultMovementMethod* 속성 ACW 생성자를 실행 하려면 유익한 및 C# 생성자 실행 유익한 전에 발생 하기 전에 호출 됩니다.
+따라서 형식을 [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) (1)로 된 [TextView 하위 클래스입니다](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [TextView.DefaultMovementMethod 재정의](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45), (3) [의 인스턴스를 활성화 XML 통해 클래스](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) 재정의 된 *DefaultMovementMethod* ACW 생성자를 실행 하려면 유익한 전에 하기 전에 발생 하는 속성 호출 되는 C# 생성자 유익한 실행 합니다.
 
 LogTextBox 인스턴스를 인스턴스화하고 지이 통해는 [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) ACW LogTextBox 인스턴스를 처음 실행 하는 경우 생성자에 다음 호출 하는 코드를 관리 되는 [ (상황에 맞는, IAttributeSet, int) LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) 생성자 *동일한 인스턴스에서* ACW 생성자를 실행 하는 경우.
 

@@ -1,21 +1,21 @@
 ---
 title: Objective-c 라이브러리 바인딩
-description: 이 문서에서는 C# 바인딩을 만들 Objective-c 코드를 이벤트, 메서드, 사용자 지정 컨트롤 등을 바인딩하는 방법을 설명 하는 방법의 대략적인 개요를 제공 합니다.
+description: 이 문서를 만드는 방법의 대략적인 개요를 제공 C# 이벤트, 메서드, 사용자 지정 컨트롤 등을 바인딩하는 방법을 설명 하는 Objective-c 코드에 대 한 바인딩은 합니다.
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
-author: bradumbaugh
-ms.author: brumbaug
+author: conceptdev
+ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 4c414e0e863f44045473a248576a3612b1719559
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 42e357c0fbb4b858866e15d638177d6823de0f09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112678"
 ---
 # <a name="binding-objective-c-libraries"></a>Objective-c 라이브러리 바인딩
 
-Xamarin.iOS 또는 Xamarin.Mac을 사용 하는 경우 타사 Objective-c 라이브러리를 사용 하려는 경우 발생할 수 있습니다. 이러한 상황에서는 네이티브 Objective-c 라이브러리에 대 한 C# 바인딩을 만들려면 Xamarin 바인딩 프로젝트를 사용할 수 있습니다. 프로젝트는 C#으로 iOS 및 Mac Api를 사용 하는 것과 동일한 도구를 사용 합니다.
+Xamarin.iOS 또는 Xamarin.Mac을 사용 하는 경우 타사 Objective-c 라이브러리를 사용 하려는 경우 발생할 수 있습니다. 이러한 상황에서는 만들려면 Xamarin 바인딩 프로젝트를 사용할 수 있습니다는 C# 네이티브 Objective-c 라이브러리 바인딩. 프로젝트는 iOS 및 Mac Api를 사용 하는 것과 동일한 도구를 사용 하 여 C#입니다.
 
 이 문서에서는 Objective-c로 Api를 바인딩하는 방법을 설명 C Api만을 바인딩하는 경우 표준.NET 메커니즘은이 위해 사용할지 [P/Invoke framework](http://www.mono-project.com/docs/advanced/pinvoke/)합니다.
 C 라이브러리를 정적으로 연결 하는 방법에 대 한 세부 정보에서 사용할 수는 [네이티브 라이브러리 연결](~/ios/platform/native-interop.md) 페이지입니다.
@@ -34,17 +34,17 @@ IOS 및 Mac 라이브러리 바인딩을 빌드할 수 있습니다.
 
 ## <a name="getting-started"></a>시작
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 바인딩을 만들 수는 가장 쉬운 방법은 Xamarin.iOS 바인딩 프로젝트를 만드는 경우
 할 수 있는이 Visual Studio에서 Mac에 대 한 프로젝트 형식을 선택 하 여 **iOS > 라이브러리 > 바인딩 라이브러리**:
 
 [![](objective-c-libraries-images/00-sml.png "이렇게 하려면 Visual Studio에서 Mac 용 iOS 바인딩 라이브러리 프로젝트 형식 선택")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 바인딩을 만들 수는 가장 쉬운 방법은 Xamarin.iOS 바인딩 프로젝트를 만드는 경우
-프로젝트 형식을 선택 하 여 Windows의 Visual Studio에서 이렇게 하려면 **Visual C# > iOS > 바인딩 라이브러리 (iOS)**:
+프로젝트 형식을 선택 하 여 Windows의 Visual Studio에서 이렇게 하려면 **시각적 C# > iOS > 바인딩 라이브러리 (iOS)**:
 
 [![](objective-c-libraries-images/00vs-sml.png "iOS 바인딩 라이브러리 iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -55,7 +55,7 @@ IOS 및 Mac 라이브러리 바인딩을 빌드할 수 있습니다.
 
 생성된 된 프로젝트에는 편집할 수 있는 작은 템플릿을 포함, 두 개의 파일이 포함 되어 있습니다: `ApiDefinition.cs` 및 `StructsAndEnums.cs`합니다.
 
-`ApiDefinition.cs` 는 API 계약을 정의 하는 C#으로 기본 Objective C API는 프로젝션 하는 방법을 설명 하는 파일입니다. 구문 및이 파일의 내용을이 문서의 토론의 주제는 및의 내용을 C# 인터페이스 및 C# 대리자 선언으로 제한 됩니다. `StructsAndEnums.cs` 입력할 수 있는 데 필요한 모든 정의 인터페이스 및 대리자를 여는 파일입니다. 이 열거형 값 및 코드를 사용할 수 있는 구조를 포함 합니다.
+합니다 `ApiDefinition.cs` 는 API 계약을 정의 하는 기본 Objective C API에 투영 하는 방법을 설명 하는 파일이 C#합니다. 구문 및이 파일의 내용을이 문서의 토론의 주제는 및의 내용이 제한 C# 인터페이스 및 C# 대리자 선언 합니다. `StructsAndEnums.cs` 입력할 수 있는 데 필요한 모든 정의 인터페이스 및 대리자를 여는 파일입니다. 이 열거형 값 및 코드를 사용할 수 있는 구조를 포함 합니다.
 
 <a name="Binding_an_API" />
 
@@ -63,7 +63,7 @@ IOS 및 Mac 라이브러리 바인딩을 빌드할 수 있습니다.
 
 포괄적인 바인딩을 위해 Objective-c로 API 정의 이해 하 고.NET Framework 디자인 지침을 숙지 해야 합니다.
 
-라이브러리를 바인딩하려면 일반적으로 API 정의 파일을 사용 하 여 시작 합니다. API 정의 파일을 단순히 C# 원본 파일을 C# 인터페이스는 데 도움이 되는 특성의 소수의 주석이 지정 된 바인딩을 포함 하는 경우  이 파일은 C#과 Objective-c 간의 계약에 새로운 기능을 정의 합니다.
+라이브러리를 바인딩하려면 일반적으로 API 정의 파일을 사용 하 여 시작 합니다. API 정의 파일을은 단지는 C# 포함 된 소스 파일 C# 소수의 바인딩을 드라이브 하는 데 도움이 되는 특성의 주석이 지정 된 인터페이스입니다.  이 파일은 간의 계약을 정의 C# Objective-c 이며 합니다.
 
 예를 들어 라이브러리에 대 한 간단한 api 파일입니다.
 
@@ -99,7 +99,7 @@ namespace Cocos2D {
 
 -  API 정의 파일 (`ApiDefinition.cs` 템플릿에서).
 -  선택 사항: 모든 열거형 형식, API 정의 파일을 여는 데 필요한 구조체 (`StructsAndEnums.cs` 템플릿에서).
--  생성 된 바인딩 확장 될 수 있습니다 또는 C# 친숙 한 API를 (C# 파일을 프로젝트에 추가한)을 제공 하는 선택 사항: 추가 원본입니다.
+-  선택 사항: 생성 된 바인딩 확장 하거나 더 수 있는 추가 소스 C# 친숙 한 API (모든 C# 프로젝트에 추가 하는 파일).
 -  바인딩하는 네이티브 라이브러리입니다.
 
 이 차트는 파일 간의 관계를 보여 줍니다.
@@ -116,7 +116,7 @@ public enum CameraMode {
 }
 ```
 
-합니다 `APIDefinition.cs` 파일와 결합 되는 `StructsAndEnum` 클래스 및 라이브러리의 코어 바인딩을 생성 하는 데 사용 됩니다. 결과 라이브러리를 사용할 수 있습니다-인 하지만 일반적으로 사용자를 위해 일부 C# 기능을 추가 하려면 결과 라이브러리를 조정 해야 합니다. 몇 가지 예로 구현 된 `ToString()` 메서드, C# 인덱서에 제공, 암시적 변환을 추가 하 고 몇 가지 기본 형식에서 또는 몇 가지 방법 중 강력한 형식의 버전을 제공 합니다. 이러한 향상 된이 기능 추가 C# 파일에 저장 됩니다. 단순히 프로젝트에 C# 파일을 추가 하 고 빌드 프로세스에 포함 됩니다.
+합니다 `APIDefinition.cs` 파일와 결합 되는 `StructsAndEnum` 클래스 및 라이브러리의 코어 바인딩을 생성 하는 데 사용 됩니다. 결과 라이브러리를 사용할 수 있습니다-는 하지만 일반적으로, 결과 추가할 라이브러리를 일부 조정 하려는 C# 사용자를 위해 기능입니다. 몇 가지 예로 구현 된 `ToString()` 메서드를 제공 C# 인덱서 일부 네이티브 형식에서 암시적 변환을 추가 하거나 일부 메서드의 강력한 형식의 버전을 제공 합니다. 이러한 향상 된이 기능 추가에 저장 된 C# 파일입니다. 추가 된 C# 프로젝트에 파일을이 빌드 프로세스에 포함 됩니다.
 
 코드를 구현 하는 방법을 보여 줍니다 프로그램 `Extra.cs` 파일입니다. 사용 하 게 partial 클래스의 조합에서 생성 된 partial 클래스를 보완 이러한으로 확인 합니다 `ApiDefinition.cs` 및 `StructsAndEnums.cs` 바인딩 핵심:
 
@@ -133,7 +133,7 @@ public partial class Camera {
 라이브러리 빌드 기본 바인딩이 생성 됩니다.
 
 이 바인딩은 완료 하려면 프로젝트를 네이티브 라이브러리를 추가 해야 합니다.  프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 네이티브 라이브러리를 끌어서 놓아 네이티브 라이브러리 파인더에서 솔루션 탐색기에서 프로젝트 또는 프로젝트에 추가 하 여 이렇게 **추가**  >  **파일 추가** 네이티브 라이브러리를 선택 합니다.
-규칙에 따라 네이티브 라이브러리 "lib" 단어로 시작 하 고 ".a" 확장명으로 끝나야 합니다. 이렇게 하면 Mac 용 Visual Studio 파일 두 개를 추가 합니다:.a 파일을 자동으로 채워진된 C# 파일 및 네이티브 라이브러리에 포함 하는 방법에 대 한 정보를 포함 합니다.
+규칙에 따라 네이티브 라이브러리 "lib" 단어로 시작 하 고 ".a" 확장명으로 끝나야 합니다. 이렇게 하면 Mac 용 Visual Studio 파일 두 개를 추가 합니다:.a 파일과 자동으로 채워진 C# 네이티브 라이브러리에 포함 하는 방법에 대 한 정보가 포함 된 파일:
 
  [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Word lib 및 확장.a 인 끝 사용 하 여 규칙이 시작 하기 위해 네이티브 라이브러리")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
@@ -146,7 +146,8 @@ using ObjCRuntime;
 [assembly: LinkWith ("libMagicChord.a", SmartLink = true, ForceLoad = true)]
 ```
 
-전체 사용 하는 방법에 대 한 세부 정보를 [ `[LinkWith]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 특성에 설명 되어 있습니다 합니다 [바인딩 형식 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)합니다.
+전체 사용 하는 방법에 대 한 세부 정보는 [`[LinkWith]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 
+특성에 설명 되어는 [바인딩 유형 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)합니다.
 
 프로젝트를 빌드할 때 결국 사용 하 여 이제는 `MagicChords.dll` 바인딩과 네이티브 라이브러리를 포함 하는 파일입니다. 이 프로젝트를 배포할 수 있습니다 또는 자체에 대 한 다른 개발자에 게 결과 DLL을 사용 합니다.
 
@@ -166,7 +167,9 @@ API 정의 파일 인터페이스의 숫자로 구성 됩니다. API 정의의 �
 
 ### <a name="binding-methods"></a>바인딩 메서드
 
-할 수 있는 가장 간단한 바인딩 메서드를 바인딩하는 것입니다. 방금 C# 명명 규칙을 사용 하 여 인터페이스에서 메서드를 선언 및 사용 하 여 메서드를 데코 레이트 합니다 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성입니다. 합니다 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성은 C# 이름 앞에 Xamarin.iOS 런타임은 Objective-c로 이름 링크 합니다. 매개 변수를 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성은 Objective-c 선택기의 이름입니다. 몇 가지 예:
+할 수 있는 가장 간단한 바인딩 메서드를 바인딩하는 것입니다. 사용 하 여 인터페이스의 메서드를 선언 하면 됩니다는 C# 명명 규칙 및 사용 하 여 메서드를 데코 레이트 합니다 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
+특성입니다. 합니다 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성은 링크에 C# 에 Xamarin.iOS 런타임은 Objective-c 이름의 이름입니다. 매개 변수는 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+특성은 Objective-c 선택기의 이름입니다. 몇 가지 예:
 
 ```csharp
 // A method, that takes no arguments
@@ -192,7 +195,8 @@ void Beep ();
 
 계약 인터페이스의 일부인 있고 인터페이스 개념이 없으므로 정적 및 인스턴스 선언 되므로 다시 한 번 특성에 의존 하는 데 필요한 때문에 이것이 필요 합니다. 이 메서드를 데코레이팅 할 수 있습니다 바인딩에서 특정 메서드를 숨길 하려는 경우는 [ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 특성입니다.
 
-`btouch-native` 명령에서 null이 아니어야 하는 참조 매개 변수에 대 한 검사를 소개 합니다. 특정 매개 변수에 대해 null 값을 허용 하려는 경우 사용 합니다 [ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute) 다음과 같은 매개 변수에 특성:
+`btouch-native` 명령에서 null이 아니어야 하는 참조 매개 변수에 대 한 검사를 소개 합니다. 사용 하 여 특정 매개 변수에 대해 null 값을 허용 하려는 경우는 [`[NullAllowed]`](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)
+다음과 같은 매개 변수 특성:
 
 ```csharp
 [Export ("setText:")]
@@ -205,11 +209,15 @@ string SetText ([NullAllowed] string text);
 
 ### <a name="binding-properties"></a>바인딩 속성
 
-메서드를 마찬가지로 Objective-c 속성 사용 하 여 바인딩됩니다 합니다 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 및 C# 속성에 직접 매핑됩니다. 메서드를 마찬가지로 속성으로 데코레이팅 될 수는 [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) 하며 [ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 특성입니다.
+메서드, 마찬가지로 Objective-c 속성이 바인딩된를 사용 하 여 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
+직접 매핑하고 특성 C# 속성입니다. 메서드를 마찬가지로 속성으로 데코레이팅 될 수는 [`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute)
+및 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+특성입니다.
 
-사용 하는 경우는 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 설명 u c h-네이티브 아래의 속성에 실제로 두 메서드를 바인딩합니다: getter 및 setter. 내보내기를 제공 하는 이름을 합니다 **basename** 및 setter의 첫 글자를 하면 "설정" 이라는 단어 앞에 추가 하 여 계산 됩니다는 **basename** 대문자나 소문자 및 수행 하는 선택기에는 인수입니다. 즉 `[Export ("label")]` 에 적용 된 속성은 실제로 "label" 바인딩합니다 및 "setLabel:" Objective-c 메서드.
+사용 하는 경우는 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 설명 u c h-네이티브 아래의 속성에 실제로 두 메서드를 바인딩합니다: getter 및 setter. 내보내기를 제공 하는 이름을 합니다 **basename** setter 단어의 첫 글자를 하면 "set"를 추가 하 여 계산 됩니다는 **basename** 대문자나 소문자 및 수행 하는 선택기에는 인수입니다. 즉 `[Export ("label")]` 에 적용 된 속성은 실제로 "label" 바인딩합니다 및 "setLabel:" Objective-c 메서드.
 
-Objective-c로 속성을 위에서 설명한 패턴을 따르지 않습니다 하 고 이름은 수동으로 덮어쓸 경우도 있습니다. 이러한 경우에이 바인딩을 사용 하 여 생성 되는 방식을 제어할 수 있습니다 합니다 [ `[Bind]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) getter 또는 setter를 예를 들어 특성:
+Objective-c로 속성을 위에서 설명한 패턴을 따르지 않습니다 하 고 이름은 수동으로 덮어쓸 경우도 있습니다. 이러한 경우에이 바인딩을 사용 하 여 생성 되는 방식을 제어할 수 있습니다는 [`[Bind]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) 
+예를 들어 getter 또는 setter가 특성:
 
 ```csharp
 [Export ("menuVisible")]
@@ -239,7 +247,8 @@ interface UIView_MyIn
 NSRunLoop Current { get; }
 ```
 
-메서드를 사용 하면 일부 매개 변수를 사용 하 여 플래그를 지정 하는 것 처럼 [ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)를 적용할 수 있습니다 [ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute) 는 null을 예를 들어 속성에 대 한 유효한 값으로 나타내기 위해 속성:
+메서드를 사용 하면 일부 매개 변수를 사용 하 여 플래그를 지정 하는 것 처럼 [ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)를 적용할 수 있습니다 [`[NullAllowed]`](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)
+나타내는 속성에 해당 null을 유효한 값으로 속성에 대 한 예를 들어:
 
 ```csharp
 [Export ("text"), NullAllowed]
@@ -271,11 +280,13 @@ string Text { get; [NullAllowed] set; }
 
 Objective-c 프레임 워크 일부 클래스를 변경할 수 있는 하위 클래스를 사용 하 여 변경할 수 없는 위치는 관용구를 사용 합니다. 예를 들어 `NSString` 변경할 수 없는 버전이 동안 `NSMutableString` 변이 허용 하는 서브 클래스는 합니다.
 
-이 해당 클래스에 getter, setter 같지만 속성을 포함 하는 변경할 수 없는 기본 클래스를 참조 하세요. 일반적입니다. 한 setter를 소개 하기 위해 버전을 변경할 수 있습니다. C#을 사용 하 여 실제로 가능한이 아니므로이 관용구 C#을 사용 하 여 작동 하는 방법이에 매핑 했습니다.
+이 해당 클래스에 getter, setter 같지만 속성을 포함 하는 변경할 수 없는 기본 클래스를 참조 하세요. 일반적입니다. 한 setter를 소개 하기 위해 버전을 변경할 수 있습니다. 실제로 가능한이 아니므로 C#를이 관용구를 사용 하 여 작동 하는 방법이 매핑할 했습니다 C#합니다.
 
-C#에 매핑되는이 방법은 기본 클래스에 대해 getter 및 setter를 추가 하지만와 setter에 플래그를 지정 하는 것을 [ `[NotImplemented]` ](~/cross-platform/macios/binding/binding-types-reference.md#NotImplementedAttribute) 특성입니다.
+이에 매핑되는 방법은 C# 기본 클래스에 대해 getter 및 setter를 추가 하지만와 setter에 플래그를 지정 하는 것을 [`[NotImplemented]`](~/cross-platform/macios/binding/binding-types-reference.md#NotImplementedAttribute)
+특성입니다.
 
-그런 다음 변경할 수 있는 서브 클래스를 사용 하 여 있습니다 합니다 [ `[Override]` ](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 속성 속성이 부모 동작을 재정의 하 고 실제로 확인 하기 위해 특성입니다.
+그런 다음 변경할 수 있는 서브 클래스를 사용 하 여 있습니다 합니다 [`[Override]`](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 
+속성 속성을 부모 동작을 재정의 하 고 실제로 확인 하기 위해 특성입니다.
 
 예제:
 
@@ -314,7 +325,8 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>바인딩 프로토콜
 
-API 디자인 문서 섹션에서에 설명 된 대로 [모델과 프로토콜을 설명](~/ios/internals/api-design/index.md#Models), Xamarin.iOS를 사용 하 여 플래그가 지정 된 클래스로 Objective-c 프로토콜을 매핑하는 [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 특성입니다. Objective-c 대리자 클래스를 구현할 때 일반적으로 사용 됩니다.
+API 디자인 문서 섹션에서에 설명 된 대로 [모델과 프로토콜에 설명](~/ios/internals/api-design/index.md#Models), Xamarin.iOS를 사용 하 여 플래그가 지정 된 클래스로 Objective-c 프로토콜을 매핑하는 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+특성입니다. Objective-c 대리자 클래스를 구현할 때 일반적으로 사용 됩니다.
 
 일반 바인딩된 클래스와 대리자 클래스 간의 가장 큰 차이점은 대리자 클래스가 하나 이상의 선택적 메서드를 사용할 수 있습니다.
 
@@ -329,7 +341,8 @@ interface UIAccelerometerDelegate {
 }
 ```
 
-에 대 한 정의에 하나의 선택적 방법 이므로 `UIAccelerometerDelegate` 아무 작업을 수행 하는 합니다. 프로토콜에 필요한 메서드를 추가 해야 하지만 합니다 [ `[Abstract]` ](~/cross-platform/macios/binding/binding-types-reference.md#AbstractAttribute) 특성을 메서드에 있습니다. 이렇게 하면 실제로 메서드의 본문을 제공 하기 구현의 사용자.
+에 대 한 정의에 하나의 선택적 방법 이므로 `UIAccelerometerDelegate` 아무 작업을 수행 하는 합니다. 하지만 프로토콜에 필요한 메서드를 추가 해야 합니다 [`[Abstract]`](~/cross-platform/macios/binding/binding-types-reference.md#AbstractAttribute)
+메서드 특성입니다. 이렇게 하면 실제로 메서드의 본문을 제공 하기 구현의 사용자.
 
 일반적으로 프로토콜은 메시지에 응답 하는 클래스에 사용 됩니다. 일반적으로 이렇게 objective-c에서 프로토콜의 메서드에 응답 하는 개체의 인스턴스를 "delegate" 속성에 할당 합니다.
 
@@ -384,11 +397,12 @@ MonoTouch 7.0 새롭고 향상 된 프로토콜 바인딩 기능부터 통합 �
     }
 ```
 
-합니다 **클래스 구현은** 의 개별 메서드를 재정의 하 고 전체 형식 안전성을 가져올 수 있는 완전 한 추상 클래스를 제공 합니다.  이 밖에도 C# 다중 상속을 지원 하지 않는 인해 수 있는 시나리오를 다른 기본 클래스를 포함 해야 하지만 여전히 위치 하는 인터페이스를 구현 하려는 합니다
+합니다 **클래스 구현은** 의 개별 메서드를 재정의 하 고 전체 형식 안전성을 가져올 수 있는 완전 한 추상 클래스를 제공 합니다.  하지만로 인해 C# 수 있는 시나리오를 다른 기본 클래스를 포함 해야 하지만 여전히 위치 하는 인터페이스를 구현 하려는 가지 다중 상속을 지원 하지는
 
 생성 된 **인터페이스 정의** 제공 됩니다.  이 프로토콜에서 필요한 모든 메서드를 사용 하는 인터페이스입니다.  개발자를 단순히 인터페이스를 구현 하 여 프로토콜을 구현 하려는 있습니다.  런타임은 프로토콜 도입으로 형식을 자동으로 등록 됩니다.
 
-알림 인터페이스만 필요한 메서드를 나열 하는 선택적 메서드를 노출 합니다.  즉, 프로토콜을 채택 하는 클래스 필요한 메서드를 확인 하는 전체 형식 받습니다 있지만 약한 형식 지정에 의존 해야 합니다 (사용 하 여 직접 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 및 서명 일치) 선택적 프로토콜 메서드입니다.
+알림 인터페이스만 필요한 메서드를 나열 하는 선택적 메서드를 노출 합니다.  즉, 프로토콜을 채택 하는 클래스 필요한 메서드를 확인 하는 전체 형식 받습니다 있지만 약한 형식 지정 (사용 하 여 수동으로에 의존 해야 합니다. [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+특성 및 서명 일치) 선택적 프로토콜 메서드에 대 한 합니다.
 
 바인딩 도구는 편리 하 게 프로토콜을 사용 하는 API를 사용 하려면, 모든 선택적 메서드를 노출 하는 확장 메서드 클래스도 생성 됩니다.  이 API를 사용 중인으로 수 프로토콜 메서드를 모두 있는 것으로 처리할 것을 의미 합니다.
 
@@ -448,7 +462,8 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 
 ### <a name="binding-class-extensions"></a>바인딩 클래스 확장
 
-Objective C에서 비슷하며, C#의 확장 메서드를 새 메서드로 클래스를 확장 하는 것이 같습니다. 사용할 수 있는 경우 다음이 방법 중 하나를 [ `[BaseType]` ](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 특성 Objective-c 메시지의 받는 사람으로 메서드를 플래그 합니다.
+Objective C에서 비슷하며,이를 새로운 메서드를 사용 하 여 클래스를 확장할 수는 C#의 확장 메서드입니다. 사용할 수 있는 경우 다음이 방법 중 하나는 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 
+특성 Objective-c 메시지의 받는 사람으로 메서드는 플래그입니다.
 
 예를 들어 Xamarin.iOS에서에서는 바인딩된에 정의 된 확장 메서드 `NSString` 때 `UIKit` 의 방법으로 가져온는 `NSStringDrawingExtensions`, 다음과 같은:
 
@@ -471,7 +486,7 @@ Objective-c는 variadic 인수를 지원합니다. 예를 들어:
   NS_REQUIRES_NIL_TERMINATION ;
 ```
 
-C#에서이 메서드를 호출 하려는 다음과 같은 서명을 만듭니다.
+이 메서드를 호출 하려면 C# 다음과 같은 서명을 만드는 하려는:
 
 ```csharp
 [Export ("appendWorkers"), Internal]
@@ -514,7 +529,8 @@ public void AppendWorkers(params Worker[] workers)
 NSString NSSomeEventNotification { get; }
 ```
 
-파생 되지 않은 정적 클래스에서 다양 한 필드를 배치 하려는 경우 `NSObject`를 사용할 수는 [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute_Class) 다음과 같은 클래스의 특성:
+파생 되지 않은 정적 클래스에서 다양 한 필드를 배치 하려는 경우 `NSObject`를 사용할 수는 [`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute_Class) 
+다음과 같은 클래스에 대해 특성:
 
 ```csharp
 [Static]
@@ -611,9 +627,10 @@ interface MyType {
 
 ### <a name="binding-nsvalue-nsnumber-and-nsstring-to-a-better-type"></a>바인딩 `NSValue`하십시오 `NSNumber`, 및 `NSString` 더 나은 형식
 
-[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) 특성을 사용 하면 바인딩 `NSNumber`, `NSValue` 및 `NSString`(열거형)를 보다 정확 하 게 C# 형식으로. 특성을 더 유용 하 고 정확 하 게 만드는 데 사용할 수는 네이티브 API 통한.NET API.
+[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) 특성에 바인딩할 수 있습니다 `NSNumber`, `NSValue` 및 `NSString`(열거형)를 더 정확 하 게 C# 형식입니다. 특성을 더 유용 하 고 정확 하 게 만드는 데 사용할 수는 네이티브 API 통한.NET API.
 
-(반환 값)에 대 한 메서드, 매개 변수 및 속성을 데코 레이트 [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)합니다. 단, 멤버는 **안** 내를 [ `[Protocol]` ](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 또는 [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 인터페이스입니다.
+(반환 값)에 대 한 메서드, 매개 변수 및 속성을 데코 레이트 [ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)합니다. 단, 멤버는 **안** 안에 [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
+또는 [ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 인터페이스입니다.
 
 예를 들어:
 
@@ -659,7 +676,9 @@ CAScroll [] SupportedScrollModes { get; set; }
 
 알림은에 게시 되는 메시지는 `NSNotificationCenter.DefaultCenter` 다른 응용 프로그램의 특정 부분에서 메시지를 브로드캐스트 메커니즘으로 사용 됩니다. 개발자는 일반적으로 사용 하 여 알림을 구독 합니다 [NSNotificationCenter](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/)의 [AddObserver](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/M/AddObserver/) 메서드. 에 저장 된 페이로드를 응용 프로그램에 알림 센터에 메시지를 게시 하는 경우 일반적으로 포함 된 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) 사전입니다. 이 사전은 약하게 형식화 하 고 사용자는 일반적으로 키가 사전에 사전에 저장할 수 있는 값의 형식을 사용할 수 있는 설명서에서를 읽이 필요가 발생 하기 쉬우므로 오류는 정보를 가져오기. 경우에 따라 키의 존재도 부울 값으로 사용 됩니다.
 
-Xamarin.iOS 바인딩 생성기 알림을 바인딩하는 개발자를 위한 지원을 제공 합니다. 설정 하면이 작업을 수행 하는 [ `[Notification]` ](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute) 도 되었습니다 속성에 특성으로 태그가 지정을 [ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 속성 (수 공용 또는 개인).
+Xamarin.iOS 바인딩 생성기 알림을 바인딩하는 개발자를 위한 지원을 제공 합니다. 이 작업을 수행 하려면 설정 합니다 [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
+도 되었습니다 속성에 특성으로 태그가 지정 된 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
+속성 (수 공용 또는 개인)입니다.
 
 이 특성을 하지 않는 페이로드를 전달 하는 알림에 대 한 인수 없이 사용할 수 있습니다 하거나 지정할 수 있습니다는 `System.Type` "EventArgs"로 끝나는 이름의 일반적으로 API 정의에서 다른 인터페이스를 참조 하는 합니다. 생성기 바뀝니다 인터페이스 클래스를 서브클래싱하는 `EventArgs` 여기에 나열 된 속성을 모두 포함 됩니다. 합니다 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성은 값을 인출 Objective-c로 사전 조회 하는 데 키의 이름을 나열 하는 EventArgs 클래스에 사용 해야 합니다.
 
@@ -735,7 +754,7 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
 ### <a name="binding-categories"></a>바인딩 범주
 
-범주는 클래스에서 사용 가능한 메서드와 속성 집합을 확장 하는 데 사용 하는 Objective-c 메커니즘입니다.   실제로 사용할 하거나 기본 클래스의 기능을 확장 하 (예를 들어 `NSObject`) 특정 프레임 워크에 연결 되는 경우 (예를 들어 `UIKit`), 해당 메서드를 사용할 수 있지만 새 프레임 워크에 연결 된 경우에 수행 합니다.   경우에 따라 다른 기능으로는 클래스의 기능을 구성 하려면 사용 됩니다.   비슷하며, C# 확장 메서드는 합니다. 이 범주는 모양을 주기-c:는
+범주는 클래스에서 사용 가능한 메서드와 속성 집합을 확장 하는 데 사용 하는 Objective-c 메커니즘입니다.   실제로 사용할 하거나 기본 클래스의 기능을 확장 하 (예를 들어 `NSObject`) 특정 프레임 워크에 연결 되는 경우 (예를 들어 `UIKit`), 해당 메서드를 사용할 수 있지만 새 프레임 워크에 연결 된 경우에 수행 합니다.   경우에 따라 다른 기능으로는 클래스의 기능을 구성 하려면 사용 됩니다.   이들은 비슷하며,이를 C# 확장 메서드. 이 범주는 모양을 주기-c:는
 
 ```csharp
 @interface UIView (MyUIViewExtension)
@@ -745,9 +764,11 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
 위의 예제에서는 경우에 인스턴스를 확장 하는 라이브러리는 것 `UIView` 메서드를 사용 하 여 `makeBackgroundRed`합니다.
 
-바인딩하려는 이러한 경우 사용할 수 있습니다 합니다 [ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute) 인터페이스 정의에 특성입니다.  사용 하는 경우는 [ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute) 특성의 의미를 [ `[BaseType]` ](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 특성이 기본 클래스 확장을 확장 하는 형식이 되도록 지정 하는 데 사용 되 고에서 변경 합니다.
+바인딩하려는 이러한 경우 사용할 수 있습니다 합니다 [ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute) 인터페이스 정의에 특성입니다.  사용 하는 경우는 [`[Category]`](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)
+특성의 의미는 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 
+특성 확장을 확장 하는 형식 이어야 하는 기본 클래스를 지정 하는 데 사용 되 고에서 변경 합니다.
 
-에서는 다음 방법을 `UIView` 확장은 바인딩된 있으며 C# 확장 메서드로 설정 합니다.
+에서는 다음 방법을 `UIView` 확장은 바인딩된 및 변환 C# 확장 메서드:
 
 ```csharp
 [BaseType (typeof (UIView))]
@@ -771,7 +792,8 @@ picture;
 @end
 ```
 
-사용할 수 있지만 합니다 [ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute) 특성도 선언의이 장식 스타일을 추가할 수 있습니다만 해당 클래스 정의에 모두 있습니다.  둘 다 동일한 달성 합니다.
+사용할 수 있지만 합니다 [`[Category]`](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)
+특성 또한 선언의이 장식 스타일을 추가할 수 있습니다 것도 해당 클래스 정의에 모두 있습니다.  둘 다 동일한 달성 합니다.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -810,15 +832,15 @@ interface SocialNetworking {
 
 ### <a name="binding-blocks"></a>바인딩 요소
 
-블록은 C# 무명 메서드는 이와 동일한 기능을 보여주기 위한 것입니다. 상태로 Apple에서 도입 된 새 구문을 예를 들어를 `NSSet` 클래스에는 이제이 메서드는 노출 합니다.
+블록은 새 구문을 동등한 기능을 제공 하는 Apple에서 도입 된 C# 익명 방법 보여주기 위한 것입니다. 예를 들어를 `NSSet` 클래스에는 이제이 메서드는 노출 합니다.
 
 ```csharp
 - (void) enumerateObjectsUsingBlock:(void (^)(id obj, BOOL *stop) block
 ```
 
-위의 설명 라는 메서드를 선언 `enumerateObjectsUsingBlock:` 명명 된 인수 하나를 사용 하는 `block`합니다. 이 블록 있는 현재 환경 ("this"이 포인터에 대 한 지역 변수 및 매개 변수)를 캡처를 지 원하는 C# 무명 메서드와 비슷합니다. 위의 `NSSet` 메서드는 `NSObject` (`id obj` 부분) 및 부울 (`BOOL *stop`) 부분에 대한 포인터의 두 매개 변수가있는 블록을 호출합니다.
+위의 설명 라는 메서드를 선언 `enumerateObjectsUsingBlock:` 명명 된 인수 하나를 사용 하는 `block`합니다. 이 블록은 비슷합니다는 C# 에서 현재 환경 ("this"이 포인터에 대 한 지역 변수 및 매개 변수)를 캡처를 지 원하는 무명 메서드. 위의 `NSSet` 메서드는 `NSObject` (`id obj` 부분) 및 부울 (`BOOL *stop`) 부분에 대한 포인터의 두 매개 변수가있는 블록을 호출합니다.
 
-그런 다음 인터페이스의 각 속성에는 강력한 형식의 접근자를 될 것입니다.
+U c h 사용 하 여이 종류의 API 바인딩하려면 먼저으로 블록 형식 시그니처를 선언 해야는 C# 위임 하 고 다음과 같은 API 항목 지점에서 참조 합니다.
 
 ```csharp
 // This declares the callback signature for the block:
@@ -829,7 +851,7 @@ delegate void NSSetEnumerator (NSObject obj, ref bool stop)
 void Enumerate (NSSetEnumerator enum)
 ```
 
-기본적으로 코드는 접근자를 만드는 정적 클래스의 "키" 접미사를 사용 하 여 속성의 이름을 사용 됩니다.
+이제 코드에서 함수를 호출할 수 있습니다 C#:
 
 ```csharp
 var myset = new NSMutableSet ();
@@ -840,7 +862,7 @@ s.Enumerate (delegate (NSObject obj, ref bool stop){
 });
 ```
 
-즉, 외부 파일 나 getter 및 setter 속성 마다 수동으로 만드는 것도 수동으로 키를 조회 하지 않아도 더 이상 강력한 형식의 접근자를 사용 하 여 만드는 직접.
+원하는 경우에 람다를 사용할 수 있습니다.
 
 ```csharp
 var myset = new NSMutableSet ();
@@ -855,9 +877,10 @@ s.Enumerate ((obj, stop) => {
 
 ### <a name="asynchronous-methods"></a>비동기 메서드
 
-다음은 전체 바인딩을 모양을입니다.
+바인딩 생성기 비동기 친화적인 메서드로 메서드의 특정 클래스를 설정할 수 있습니다 (작업 또는 작업을 반환 하는 메서드&lt;T&gt;).
 
-참조 해야 하는 경우에 [ 멤버 다른 필드를 (즉 이름이 아니라 접미사를 사용 하 여 속성의 `[Async]`)를 사용 하 여 속성을 데코 레이트 수는 ](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute)   는 이름 특성 사용 하려고 합니다.  When you apply this to a method, the binding generator will generate a version of that method with the suffix `Async`.  If the callback takes no parameters, the return value will be a `Task`, if the callback takes a parameter, the result will be a `Task<T>`.  If the callback takes multiple parameters, you should set the `ResultType` or `ResultTypeName` to specify the desired name of the generated type which will hold all the properties.
+사용할 수는 [`[Async]`](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute) 
+메서드는 void를 반환 하 고 해당 마지막 인수는 콜백 특성입니다.  이 메서드를 적용 하면 바인딩 생성기 접미사를 사용 하 여 해당 메서드의 버전을 생성 합니다 `Async`합니다.  매개 변수를 사용 하는 콜백, 하는 경우 반환 됩니다는 `Task`, 콜백 매개 변수, 결과 됩니다는 `Task<T>`합니다.  콜백을 여러 매개 변수를 사용 하는 경우 설정 해야 합니다 `ResultType` 또는 `ResultTypeName` 모든 속성을 포함 하는 생성 된 형식의 원하는 이름을 지정 합니다.
 
 예제:
 
@@ -867,7 +890,7 @@ s.Enumerate ((obj, stop) => {
 void LoadFile (string file, Action<string> completed);
 ```
 
-The above code will generate both the LoadFile method, as well as:
+위의 코드는 모두 있는 LoadFile 메서드를 생성 및:
 
 ```csharp
 [Export ("loadfile:completed:")]
@@ -876,13 +899,13 @@ Task<string> LoadFileAsync (string file);
 
 <a name="Surfacing_Strong_Types" />
 
-### <a name="surfacing-strong-types-for-weak-nsdictionary-parameters"></a>Surfacing strong types for weak NSDictionary parameters
+### <a name="surfacing-strong-types-for-weak-nsdictionary-parameters"></a>약한 NSDictionary 매개 변수를 강력한 형식 표시
 
-In many places in the Objective-C API, parameters are passed as weakly-typed `NSDictionary` APIs with specific keys and values, but these are error prone (you can pass invalid keys, and get no warnings; you can pass invalid values, and get no warnings) and frustrating to use as they require multiple trips to the documentation to lookup the possible key names and values.
+Objective C API의 여러 위치에서 매개 변수가 전달와 약한 형 `NSDictionary` 특정 키 및 값, 있지만 이러한 Api는 오류 (잘못 된 키를 전달 하 고 경고 없이 가져올 수 있습니다; 잘못 된 값을 전달 하 고 경고 없이 가져올 수 있습니다) 발생 하기 쉬운 불편 하 고 사용 가능한 키 이름 및 값을 조회 하려면 설명서를 여러 왕복 필요 하므로
 
-The solution is to provide a strongly-typed version that provides the strongly-typed version of the API and behind the scenes maps the various underlying keys and values.
+솔루션 강력한 버전의 API 및 백그라운드 매핑합니다 다양 한 기본 키 및 값을 제공 하는 강력한 형식의 버전을 제공 하는 것입니다.
 
-So for example, if the Objective-C API accepted an `NSDictionary` and it is documented as taking the key `XyzVolumeKey` which takes an `NSNumber` with a volume value from 0.0 to 1.0 and a `XyzCaptionKey` that takes a string, you would want your users to have a nice API that looks like this:
+따라서 예를 들어 Objective C API를 허용 하는 경우는 `NSDictionary` 키를 사용 하도록 설명 되어 있습니다 `XyzVolumeKey` 사용 하는 `NSNumber` 볼륨을 0.0에서 1.0 사용 하 여 및 `XyzCaptionKey` 문자열을 사용 하는, 사용자에 게 유용한 API를 원할 다음과 같습니다.
 
 ```csharp
 public class  XyzOptions {
@@ -891,16 +914,16 @@ public class  XyzOptions {
 }
 ```
 
-The `Volume` property is defined as nullable float, as the convention in Objective-C does not require these dictionaries to have the value, so there are scenarios where the value might not be set.
+`Volume` Objective C에서 규칙을 이러한 사전 시나리오는 값 설정 되어 있지 않습니다 되므로 값을 할 필요가 없습니다으로 속성은 nullable float으로 정의 합니다.
 
-To do this, you need to do a few things:
+이렇게 하려면 다음을 수행 해야 합니다.
 
-* Xamarin.iOS 런타임은 자동으로 변환에 C# 배열 [ 변환을 수행 하는 다시 예를 들어 허수 Objective-c 메서드는 반환 하 고는 ](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 의 :
-* Declare overloads for the methods taking `NSDictionary` to take the new strongly-typed version.
+* 강력한 형식의 클래스를 만듭니다 [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 각 속성에 대 한 다양 한 getter 및 setter를 제공 합니다.
+* 수행 방법에 대 한 오버 로드를 선언 `NSDictionary` 새 강력한 형식의 버전을 수행 합니다.
 
-사용자 추측, 또는 배열에 포함 된 개체의 실제 형식을 확인 하려면 설명서를 조회 하도록 하지 않고도 실제 형식 사용 하 여 적절 한 코드 완성 기능을 제공 하기 위해 IDE를 허용 하는이 강력한 형식의 C# 배열을 사용 하는 개념이입니다.  We first explore how to do this manually so you understand what is going on, and then the automatic approach.
+수동으로 강력한 형식의 클래스를 하거나 만들 수도 있고 생성기를 사용 하 여 작업을 수행할 수 있습니다.  먼저 이렇게 수동으로 진행 상황을 파악 하는 방법을 차례로 자동 방법을 탐색 합니다.
 
-You need to create a supporting file for this, it does not go into your contract API.  This is what you would have to write to create your XyzOptions class:
+이 대 한 지원 파일을 생성 해야, API 계약으로 이동 하지는 않습니다.  이것이 XyzOptions 클래스를 만들려면 작성 해야 합니다.
 
 ```csharp
 public class XyzOptions : DictionaryContainer {
@@ -920,7 +943,7 @@ public class XyzOptions : DictionaryContainer {
 }
 ```
 
-You then should provide a wrapper method that surfaces the high-level API, on top of the low-level API.
+다음 하위 수준 API 기반으로 상위 수준 API를 표시 하는 래퍼 메서드를 제공 해야 합니다.
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -933,11 +956,13 @@ interface XyzPanel {
 }
 ```
 
-If your API does not need to be overwritten, you can safely hide the NSDictionary-based API by using the [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) attribute.
+NSDictionary 기반 API를 사용 하 여 안전 하 게 숨길 수 API는 덮어쓸 필요가 없는 경우는 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+특성입니다.
 
-As you can see, we use the [`[Wrap]`](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute) attribute to surface a new API entry point, and we surface it using our strongly-typed `XyzOptions` class.  이며이 응용 프로그램에서 메서드는 일반적으로 사용 됩니다.
+알 수 있듯이 사용 합니다 [`[Wrap]`](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute)
+새 API 진입점을 노출 하는 특성 및이 강력한 사용 하 여 표시 `XyzOptions` 클래스입니다.  래퍼 메서드가 null을 전달할 수도 있습니다.
 
-C# 개발자에 게 편리한 바인딩을 확인, 일반적으로 제공한 사용 하는 메서드를 `XyzOptionsKeys` C# 대리자 및 람다 식 대신 사용할 수 있는 매개 변수는 합니다.  You would typically group the keys that an API surfaces in a static class like `XyzOptionsKeys`, like this:
+에서는 언급 하지 않은 것 중 하나는 이제는 `XyzOptionsKeys` 값에서 제공 합니다.  일반적으로 API와 같은 정적 클래스에서 표시 하는 키를 그룹화 할 수 `XyzOptionsKeys`를 다음과 같이 합니다.
 
 ```csharp
 [Static]
@@ -950,15 +975,15 @@ class XyzOptionKeys {
 }
 ```
 
-이제 다음과 같은 사용자 코드를 작성할 수 있습니다.  This avoids plenty of the boilerplate, and you can define the dictionary directly in your API contract, instead of using an external file.
+살펴보겠습니다 이러한 강력한 형식의 사전 만들기에 대 한 자동 지원 합니다.  이렇게 하면 다양 한 상용구 및 사전 API 계약 외부 파일을 사용 하는 대신 직접 정의할 수 있습니다.
 
-To create a strongly-typed dictionary, introduce an interface in your API and decorate it with the [StrongDictionary](~/cross-platform/macios/binding/binding-types-reference.md#StrongDictionary) attribute.  This tells the generator that it should create a class with the same name as your interface that will derive from `DictionaryContainer` and will provide strong typed accessors for it.
+강력한 형식의 사전을 만들려면 API의 인터페이스를 소개 하 고 사용 하 여 데코 레이트 합니다 [StrongDictionary](~/cross-platform/macios/binding/binding-types-reference.md#StrongDictionary) 특성입니다.  이렇게 하면 모든 속성 생성기를 만들도록 클래스에서 파생 됩니다 하는 사용자 인터페이스와 동일한 이름을 가진 `DictionaryContainer` 에 대 한 강력한 형식의 접근자를 제공 합니다.
 
-The [`[StrongDictionary]`](~/cross-platform/macios/binding/binding-types-reference.md#StrongDictionary) attribute takes one parameter, which is the name of the static class that contains your dictionary keys.  Then each property of the interface will become a strongly-typed accessor.  By default, the code will use the name of the property with the suffix "Key" in the static class to create the accessor.
+합니다 [ `[StrongDictionary]` ](~/cross-platform/macios/binding/binding-types-reference.md#StrongDictionary) 특성 하나 매개 변수를 사용 하면 사전 키를 포함 하는 정적 클래스의 이름입니다.  그런 다음 인터페이스의 각 속성에는 강력한 형식의 접근자를 될 것입니다.  기본적으로 코드는 접근자를 만드는 정적 클래스의 "키" 접미사를 사용 하 여 속성의 이름을 사용 됩니다.
 
-This means that creating your strongly-typed accessor no longer requires an external file, nor having to manually create getters and setters for every property, nor having to lookup the keys manually yourself.
+즉, 외부 파일 나 getter 및 setter 속성 마다 수동으로 만드는 것도 수동으로 키를 조회 하지 않아도 더 이상 강력한 형식의 접근자를 사용 하 여 만드는 직접.
 
-This is what your entire binding would look like:
+다음은 전체 바인딩을 모양을입니다.
 
 ```csharp
 [Static]
@@ -985,19 +1010,20 @@ interface XyzPanel {
 }
 ```
 
-In case you need to reference in your `XyzOption` members a different field (that is not the name of the property with the suffix `Key`), you can decorate the property with an [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) attribute with the name that you want to use.
+참조 해야 하는 경우에 `XyzOption` 멤버 다른 필드를 (즉 이름이 아니라 접미사를 사용 하 여 속성의 `Key`)를 사용 하 여 속성을 데코 레이트 수는 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+사용 하려는 이름으로 특성입니다.
 
 <a name="Type_mappings" />
 
-## <a name="type-mappings"></a>두 번째 방법은 방법을 보여 줍니다는 Objective-c 메서드로 수 개체를 사용 내용이 수정.
+## <a name="type-mappings"></a>형식 매핑
 
-이 순수 출력 값이 아닌 참조로 전달 되는 것입니다.
+이 섹션에서는 Objective-c로 형식에 매핑되는 방법을 설명 C# 형식입니다.
 
 <a name="Simple_Types" />
 
-### <a name="simple-types"></a>바인딩을이 같습니다.
+### <a name="simple-types"></a>단순 형식
 
-메모리 관리 특성
+다음 표에서 Objective-c와 CocoaTouch 세계에서 형식을 Xamarin.iOS 전 세계에 매핑해야 하는 방법을 보여 줍니다.
 
 |Objective-c 형식 이름|Xamarin.iOS 통합 API 형식|
 |---|---|
@@ -1029,7 +1055,7 @@ In case you need to reference in your `XyzOption` members a different field (tha
 
 ### <a name="arrays"></a>배열
 
-Xamarin.iOS 런타임은 자동으로 변환에 C# 배열 `NSArrays` 변환을 수행 하는 다시 예를 들어 허수 Objective-c 메서드는 반환 하 고는 `NSArray` 의 `UIViews`:
+Xamarin.iOS 런타임은 자동으로 변환 하는 C# 배열의 `NSArrays` 변환을 수행 하는 다시 예를 들어 허수 Objective-c 메서드는 반환 하 고는 `NSArray` 의 `UIViews`:
 
 ```csharp
 // Get the peer views - untyped
@@ -1049,7 +1075,7 @@ UIView [] GetPeerViews ();
 void SetViews (UIView [] views);
 ```
 
-사용자 추측, 또는 배열에 포함 된 개체의 실제 형식을 확인 하려면 설명서를 조회 하도록 하지 않고도 실제 형식 사용 하 여 적절 한 코드 완성 기능을 제공 하기 위해 IDE를 허용 하는이 강력한 형식의 C# 배열을 사용 하는 개념이입니다.
+아이디어는 강력한 형식의 사용 하는 C# 사용자가 추측, 또는 배열에 포함 된 개체의 실제 형식을 확인 하려면 설명서를 조회 하도록 하지 않고도 실제 형식 사용 하 여 적절 한 코드 완성 기능을 제공 하기 위해 IDE를 허용 하는이 배열 합니다.
 
 배열에 포함 된 실제 가장 많이 파생 된 형식은 다운 되지 추적할 수 없는 경우에 사용할 수 있습니다 `NSObject []` 반환 값으로.
 
@@ -1057,7 +1083,7 @@ void SetViews (UIView [] views);
 
 ### <a name="selectors"></a>선택기
 
-특수 형식으로 서의 Objective C API에 선택 기가 표시 `SEL`합니다. 형식에 매핑하는 선택기를 바인딩하는 경우 `ObjCRuntime.Selector`합니다.  일반적으로 선택기 개체, 대상 개체와 선택기를 사용 하 여 대상 개체를 호출 하는 API에서 노출 됩니다. C# 대리자에 해당 둘 다 기본적으로 제공 합니다: 메서드를 호출할 개체와 호출할 메서드를 모두 캡슐화 하는 것입니다.
+특수 형식으로 서의 Objective C API에 선택 기가 표시 `SEL`합니다. 형식에 매핑하는 선택기를 바인딩하는 경우 `ObjCRuntime.Selector`합니다.  일반적으로 선택기 개체, 대상 개체와 선택기를 사용 하 여 대상 개체를 호출 하는 API에서 노출 됩니다. 에 해당 둘 다 기본적으로 제공 하는 C# 대리자: 메서드를 호출할 개체와 호출할 메서드를 모두 캡슐화 하는 것입니다.
 
 다음은 바인딩을 모습입니다.
 
@@ -1085,7 +1111,8 @@ class DialogPrint : UIViewController {
 }
 ```
 
-C# 개발자에 게 편리한 바인딩을 확인, 일반적으로 제공한 사용 하는 메서드를 `NSAction` C# 대리자 및 람다 식 대신 사용할 수 있는 매개 변수는 `Target+Selector`합니다. 숨기기 일반적으로이 작업을 수행 하는 `SetTarget` 메서드를 사용 하 여 플래그를 [ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 특성 및 다음 다음과 같은 새로운 도우미 메서드를 노출:
+하 여 바인딩 테 더 C# 개발자에 게 일반적으로 제공 하는 메서드는 `NSAction` 매개 변수를 C# 대리자 및 람다 식 대신 사용할 합니다 `Target+Selector`합니다. 숨기기 일반적으로이 작업을 수행 하는 `SetTarget` 메서드를 사용 하 여 플래그는 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+특성 및 다음 다음과 같은 새로운 도우미 메서드를 노출 합니다.
 
 ```csharp
 // API.cs
@@ -1127,11 +1154,12 @@ class DialogPrint : UIViewController {
 
 ### <a name="strings"></a>문자열
 
-사용 하는 메서드를 바인딩하는 경우는 `NSString`에 C# 문자열 형식으로 모두 반환 형식 및 매개 변수를 대체할 수 있습니다.
+사용 하는 메서드를 바인딩하는 경우는 `NSString`를 사용 하 여 바꿀 수 있습니다는 C# 반환 형식 및 매개 변수 둘 다에서 형식 문자열입니다.
 
 경우에만 사용 하는 것이 좋습니다는 `NSString` 직접 경우 문자열을 토큰으로 사용 됩니다. 문자열에 대 한 자세한 내용은 및 `NSString`읽어보세요 합니다 [NSString에서 API 디자인](~/ios/internals/api-design/nsstring.md) 문서.
 
-일부 드문 경우에서 API는 C와 같은 문자열 노출 될 수 있습니다 (`char *`)는 Objective C 문자열 대신 (`NSString *`). 이러한 경우에 주석을 달 수 있습니다 사용 하 여 매개 변수를 [ `[PlainString]` ](~/cross-platform/macios/binding/binding-types-reference.md#plainstring) 특성입니다.
+일부 드문 경우에서 API는 C와 같은 문자열 노출 될 수 있습니다 (`char *`)는 Objective C 문자열 대신 (`NSString *`). 이러한 경우에 주석을 달 수 있습니다 사용 하 여 매개 변수는 [`[PlainString]`](~/cross-platform/macios/binding/binding-types-reference.md#plainstring)
+특성입니다.
 
 <a name="outref_parameters" />
 
@@ -1181,7 +1209,8 @@ void SomeString (ref NSObject byref);
 
 #### <a name="using-internal"></a>[내부]를 사용 하 여
 
-사용할 수는 [ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 공용 API에서 메서드를 숨기려면 특성입니다. 노출 된 API는 너무 낮은 수준 구현에서이 메서드를 기준으로 별도 파일을 제공 하려는 경우에서이 작업을 수행 하는 것이 좋습니다.
+사용할 수는 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+공용 API에서 메서드를 숨기려면 특성입니다. 노출 된 API는 너무 낮은 수준 구현에서이 메서드를 기준으로 별도 파일을 제공 하려는 경우에서이 작업을 수행 하는 것이 좋습니다.
 
 바인딩 생성기에서 한계에 부 딪 실행에서는 일부 고급 시나리오에서 바인딩되지 않은 형식을 노출할 수는 예를 들어 고유한 방식으로 바인딩할 및 래핑할 형식과 직접 고유한 방식으로 원하는 때에 다음이 사용할 수도 있습니다.
 
@@ -1191,7 +1220,7 @@ void SomeString (ref NSObject byref);
 
 Objective-c 클래스는 일반적으로 알림 브로드캐스트 또는 대리자 클래스 (Objective-c 대리자)에 메시지를 전송 하 여 정보를 요청 합니다.
 
-이 모델에서 완전히 지원 하 고 Xamarin.iOS에 표시 하는 동안 발생할 수 번거롭습니다. Xamarin.iOS에는 C# 이벤트 패턴 및 이러한 상황에서 사용할 수 있는 클래스에서 메서드 콜백 시스템을 노출 합니다. 이렇게 하면 실행 하기 위해 다음과 같은 코드.
+이 모델에서 완전히 지원 하 고 Xamarin.iOS에 표시 하는 동안 발생할 수 번거롭습니다. Xamarin.iOS를 노출 합니다 C# 이벤트 패턴과 이러한 상황에서 사용할 수 있는 클래스에 메서드 콜백 시스템입니다. 이렇게 하면 실행 하기 위해 다음과 같은 코드.
 
 ```csharp
 button.Clicked += delegate {
@@ -1199,9 +1228,9 @@ button.Clicked += delegate {
 };
 ```
 
-바인딩 생성기는 C# 패턴으로 Objective-c 패턴을 매핑할 필요한 입력을 줄일 수 있습니다.
+바인딩 생성기 Objective-c 패턴에 매핑하는 데 필요한 입력을 줄일 수는 C# 패턴입니다.
 
-Xamarin.iOS 1.4를 사용 하 여 시작을 특정 Objective-c 대리자에 대 한 바인딩을 만들어 C# 이벤트와 호스트 유형에 대 한 속성으로 대리자를 노출 하는 생성기를 지시할 수 됩니다.
+Xamarin.iOS 1.4를 사용 하 여 시작을 특정 Objective-c 대리자에 대 한 바인딩을 만들고 대리자를 노출 하는 생성기를 지시할 수 있게 됩니다 C# 이벤트 및 호스트 유형에 대 한 속성입니다.
 
 이 프로세스에 관련 된 두 클래스는, 현재는 이벤트를 내보냅니다 하 고 전송에 해당 하는 것은 호스트 클래스를 `Delegate` 또는 `WeakDelegate` 및 실제 대리자 클래스입니다.
 
@@ -1227,7 +1256,7 @@ interface MyClassDelegate {
 클래스를 래핑할 다음을 수행 해야 합니다.
 
 -  호스트 클래스에 추가 하 여 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
-   해당 대리자 및 C# 이름을 노출 하는 역할을 하는 형식 선언 합니다. 위의 예에서 `typeof (MyClassDelegate)` 고 `WeakDelegate` 각각.
+   해당 대리자 역할을 하는 형식 선언 및 C# 이름을 노출 합니다. 위의 예에서 `typeof (MyClassDelegate)` 고 `WeakDelegate` 각각.
 -  두 개 이상의 매개 변수가 있는 각 메서드에 대리자 클래스에 자동으로 생성 된 EventArgs 클래스에 대 한 사용 하려는 형식을 지정 해야 합니다.
 
 바인딩 생성기를 래핑하는 단일 이벤트 대상만 제한 되지 않습니다., 이므로 일부 Objective-c 클래스를 둘 이상의 메시지를 내보내는 대리자 가능한 배열을이 설치를 지원 하기 위해 제공 해야 합니다. 대부분의 설치 프로그램을 필요 하지 않습니다 하지만 생성기는 이러한 사례를 지원 하도록 준비 합니다.
@@ -1279,11 +1308,13 @@ c.Loaded += delegate (sender, args){
 
 콜백 이벤트 호출에서와 마찬가지로, 차이점은 여러 잠재적인 구독자는 대신 (여러 메서드를 후크 할 수는 예를 들어를 `Clicked` 이벤트 또는 `DownloadFinished` 이벤트) 콜백을 단일 구독자를 하나만 사용할 수 있습니다.
 
-유일한 차이점은 이름을 노출 하는 대신, 프로세스는 동일 합니다 `EventArgs` 실제로 EventArgs 생성 되는 클래스 이름 결과 C# 대리자 이름 하는 데 사용 됩니다.
+유일한 차이점은 이름을 노출 하는 대신, 프로세스는 동일 합니다 `EventArgs` 실제로 EventArgs 생성 되는 클래스 결과 이름을 지정 하는 데 사용 됩니다 C# 대리자 이름입니다.
 
-대리자 클래스의 메서드는 값을 반환 하는 경우 바인딩 생성기는 부모 클래스 대신 이벤트의에서 대리자 메서드를이 매핑됩니다. 이러한 경우에 반환 되어야 하는 메서드에서 사용자 연결 하지 않는 경우 대리자에 기본값을 제공 해야 합니다. 이 작업에 [ `[DefaultValue]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute) 하거나 [ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute) 특성입니다.
+대리자 클래스의 메서드는 값을 반환 하는 경우 바인딩 생성기는 부모 클래스 대신 이벤트의에서 대리자 메서드를이 매핑됩니다. 이러한 경우에 반환 되어야 하는 메서드에서 사용자 연결 하지 않는 경우 대리자에 기본값을 제공 해야 합니다. 이 작업에 [`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute)
+또는 [ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute) 특성입니다.
 
-[`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute) 반환 값을 하드 코딩 됩니다 하는 동안 [ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute) 입력된 인수를 지정 하는 데 사용 됩니다.
+[`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute) 반환 값을 하드 코딩 됩니다 하는 동안 [`[DefaultValueFromArgument]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute)
+입력된 인수를 지정 하는 데 사용 됩니다.
 
 <a name="Enumerations_and_Base_Types" />
 

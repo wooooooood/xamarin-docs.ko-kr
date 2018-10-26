@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860669"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109993"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
 
@@ -22,11 +22,10 @@ Xamarin 라이브 다시 로드 수 있습니다 **에 XAML을 변경 하 고 �
 
 Live Reload를 사용할 때 앱이 컴파일되기 때문에, 모든 라이브러리와 타사 컨트롤에서도 작동합니다. iOS, Android, UWP 등 Xamarin.Forms가 지원하는 모든 플랫폼을 지원하며 시뮬레이터, 에뮬레이터 및 물리적 장치 등 모든 유효한 배포 대상에서 사용할 수 있습니다.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-Live Reload는 현재 Visual Studio 2017에서만 사용할 수 있습니다.
-
-[![채팅에 참여 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [라이브 다시 로드 미리 보기를 마쳤습니다.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> 이 대 한 토론에 없는 [ ![채팅에 참여 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>요구 사항
 

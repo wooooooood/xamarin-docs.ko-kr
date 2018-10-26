@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: lobrien
 ms.author: laobri
-ms.date: 10/03/2018
-ms.openlocfilehash: 06392448682a5b3be02562578542919b42242c13
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/23/2018
+ms.openlocfilehash: 9171eeb461f2e4d363de6e01ea92fa448f04d41a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34793746"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121635"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용 하 여 연속 통합 소개
 
@@ -20,6 +20,10 @@ ms.locfileid: "34793746"
 ## <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[연속 통합 소개](~/tools/ci/intro-to-ci.md)
 
 이 섹션에서는 지속적인 통합 및 해당 관계와 관련 된 다양 한 구성 요소에 설명 합니다. 이 특정 섹션 아래에서 설명 하는 연속 통합 환경을 간략하게 설명 합니다.
+
+## <a name="devops-with-xamarintoolscidevopsmd"></a>[Xamarin 사용한 DevOps](~/tools/ci/devops.md)
+
+이 섹션에서는 Azure 및 Visual Studio는 Xamarin 프로젝트에서 작동 하도록 원하는 수의 DevOps 기능 식별 합니다.
 
 ## <a name="working-with-continuous-integration-environments"></a>연속 통합 환경 사용
 

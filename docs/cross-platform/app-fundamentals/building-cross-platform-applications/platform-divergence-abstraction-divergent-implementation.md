@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 4a60c99cbc9819f07b77bfe9abe046ea92a550a5
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: ef224b7410565ae15da7613c04d11e7bd6a44dcb
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117943"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>4 부-다중 플랫폼 처리
 
@@ -23,15 +23,9 @@ ms.locfileid: "37403327"
 
 플랫폼 기능에 어떻게 다른 지에 대 한 개요 플랫폼 기능 설명서를 참조 합니다.
 
- <a name="Examples_of_Platform_Divergence" />
+## <a name="examples-of-platform-divergence"></a>플랫폼 차이의 예
 
-
-### <a name="examples-of-platform-divergence"></a>플랫폼 차이의 예
-
- <a name="Fundamental_elements_that_exist_across_platforms" />
-
-
-#### <a name="fundamental-elements-that-exist-across-platforms"></a>플랫폼 간에 존재 하는 기본적인 요소
+### <a name="fundamental-elements-that-exist-across-platforms"></a>플랫폼 간에 존재 하는 기본적인 요소
 
 일부의 특성 유니버설 된 모바일 응용 프로그램입니다.
 다음은 모든 장치에 일반적으로 응용 프로그램 디자인의 기초를 형성 하므로 수를 더 높은 수준의 개념입니다.
@@ -42,13 +36,9 @@ ms.locfileid: "37403327"
 -  데이터의 단일 뷰를 편집합니다.
 -  뒤로 탐색
 
-
 고급 화면 흐름을 디자인할 때 이러한 개념에 공통 된 사용자 경험을 만들 수 있습니다.
 
- <a name="platform-specific_attributes" />
-
-
-#### <a name="platform-specific-attributes"></a>플랫폼별 특성
+### <a name="platform-specific-attributes"></a>플랫폼별 특성
 
 모든 플랫폼에 존재 하는 기본 요소를 외에도 디자인의 주요 플랫폼 차이 해결 해야 합니다. 이러한 차이점을는 것이 좋습니다 (및 처리 하기 위해 코드를 작성) 해야 할 수 있습니다.
 
@@ -58,11 +48,7 @@ ms.locfileid: "37403327"
 -   **터치 및 제스처** – 특히 이전 버전의 각 운영 체제에서에서 제스처 인식에 대 한 운영 체제 지원 달라 집니다. 이전 버전의 Android가 매우 제한적으로 지원 touch 작업의 경우 이전 버전의 장치를 지 원하는 별도 코드를 필요할 수 있음을 의미 합니다.
 -   **푸시 알림** – 각 플랫폼 (예:에 다양 한 기능/구현 라이브 타일에 Windows).
 
-
- <a name="Device-specific_features" />
-
-
-#### <a name="device-specific-features"></a>장치 관련 기능
+### <a name="device-specific-features"></a>장치 관련 기능
 
 확인할 응용 프로그램에 필요한 최소 기능 해야 합니다. 또는 경우 활용 하기 위해 각 플랫폼에서 추가 기능을 결정 합니다. 코드 검색 기능 및 기능을 사용 하지 않도록 설정 하거나 (예:에 대 한 대안을 제공 해야 지리적 위치 하는 대신 사용자가 위치를 입력 하거나 맵에서 선택 수 있음):
 
@@ -72,32 +58,18 @@ ms.locfileid: "37403327"
 -   **Twitter 및 Facebook** iOS5 iOS6에만 '기본' – 각각. 사용자 고유의 인증 기능을 제공 하 고 각와 직접 인터페이스 하 해야 이전 버전 및 기타 플랫폼에서 서비스의 API입니다.
 -   **필드 통신 (NFC) 거의** – (일부)에 대해서만 Android 휴대폰 (작성 시).
 
-
- <a name="Dealing_with_Platform_Divergence" />
-
-
-### <a name="dealing-with-platform-divergence"></a>플랫폼 차이 사용 하 여 처리
+## <a name="dealing-with-platform-divergence"></a>플랫폼 차이 사용 하 여 처리
 
 동일한 코드 베이스를 각각 장점과 단점 자체 집합에서 여러 플랫폼을 지원 하기 위해 두 가지 방법이 있습니다.
 
 -   **플랫폼 추상화** – 비즈니스 외관 패턴 플랫폼에서 통합 된 액세스를 제공 하 고 통합 된 단일 API로 플랫폼 특정 구현을 추상화 합니다.
 -   **분기 구현** – 인터페이스 및 상속 또는 조건부 컴파일 등 아키텍처 도구를 통해 분기 구현을 통해 기능을 특정 플랫폼을 호출 합니다.
 
-
- <a name="Platform_Abstraction" />
-
-
 ## <a name="platform-abstraction"></a>플랫폼 추상화
-
- <a name="Class_Abstraction" />
-
 
 ### <a name="class-abstraction"></a>클래스 추상화
 
 인터페이스 또는 기본 클래스를 사용 하 여 공유 코드에 정의 되 고 구현 또는 플랫폼별 프로젝트에 확장. 작성 하 고 확장 클래스 추상화를 사용 하 여 공유 코드는 프레임 워크를 사용할 수의 제한 된 하위 집합을가지고 있으며 플랫폼별 코드 분기를 지원 하기 위해 컴파일러 지시문을 포함할 수 없습니다 때문에 이식 가능한 클래스 라이브러리에 특히 적합 합니다.
-
- <a name="Interfaces" />
-
 
 #### <a name="interfaces"></a>인터페이스
 
@@ -115,50 +87,24 @@ ms.locfileid: "37403327"
 
 만들고 구현을 공유 코드에 전달할 필요 합니다. 공유 코드 내에서 심층 인터페이스를 사용 하는 경우 다음 종료 되 여러 메서드 매개 변수를 통해 전달 되거나 그렇지 않으면 호출 체인을 통해 푸시 다운 합니다. 공유 코드에는 다른 인터페이스를 많이 사용 하는 경우 다음 이러한 모든를 만든 다음 공유 코드 위치에서 설정 합니다.
 
- <a name="Inheritance" />
-
-
 #### <a name="inheritance"></a>상속
 
 공유 코드를 하나 이상의 플랫폼 특정 프로젝트에서 확장 될 수 있습니다. 있는 추상 또는 가상 클래스를 구현할 수 있습니다. 이 비슷한 인터페이스를 사용 하 여 하지만 이미 구현 하는 몇 가지 동작. 에 다양 한 뷰포인트 인터페이스 또는 상속 되는지 더 나은 디자인을 선택 합니다: 특히 C#에서는 단일 상속 하기 때문에 수 지정 서 앞으로 Api를 디자인할 수 있습니다. 주의 해 서 상속을 사용 합니다.
 
 장점 및 단점 인터페이스의 기본 클래스 구현 코드가 (아마도 전체 플랫폼 독립적인 구현 필요에 따라 확장할 수 있는)를 포함할 수 있는 추가적인 이점도 사용 하 여 상속에 동일 하 게 적용 됩니다.
 
-<a name="Xamarin.Forms" />
-
-### <a name="xamarinforms"></a>Xamarin.Forms
+## <a name="xamarinforms"></a>Xamarin.Forms
 
 참조 된 [Xamarin.Forms](~/xamarin-forms/get-started/index.md) 설명서.
 
-
-### <a name="plug-in-cross-platform-functionality"></a>플러그 인 플랫폼 간 기능
-
-또한 플러그 인을 사용 하 여 일관 된 방식으로 플랫폼 간 앱을 확장할 수 있습니다.
-
-연결 된 우리의 [플러그 인 github](https://github.com/xamarin/plugins), 대부분의 플러그 인은 오픈 소스 프로젝트 (일반적으로 사용할 수 있는 Nuget 통해 설치) 하는 데 도움이 되는 다양 한 설정을 사용 하 여 배터리 상태에서 플랫폼별 기능 구현를 Xamarin 플랫폼 및 Xamarin.Forms 앱에서 사용 하기 쉬운 일반적인 API입니다.
-
-
-<a name="Other_Cross-Platform_Libraries" />
-
 ### <a name="other-cross-platform-libraries"></a>다른 플랫폼 간 라이브러리
 
-사용할 수 있는 플랫폼 간 기능을 제공 하는 타사 라이브러리의 사항이 있습니다.
+이러한 라이브러리는 또한에 대 한 플랫폼 간 기능을 제공 C# 개발자:
 
--   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **통칭** (지역화를 위한)-  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** (용 XNA 게임)-  [http://www.monogame.net](http://www.monogame.net)
--   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics) 및 해당 있음을 미리 알려주는 역할 [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
+- [**Xamarin.Essentials** ](~/essentials/index.md) – 일반적인 기능에 대 한 플랫폼 간 Api.
+- [**SkiaSharp** ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) -플랫폼 간 2D 그래픽입니다.
 
-
- <a name="Divergent_Implementation" />
-
-
-### <a name="divergent-implementation"></a>분기 구현
-
- <a name="Conditional_Compilation" />
-
-
-#### <a name="conditional-compilation"></a>조건부 컴파일
+## <a name="conditional-compilation"></a>조건부 컴파일
 
 공유 코드는 클래스 또는 다르게 작동 하는 기능에 액세스할 수 있는 각 플랫폼에서 다르게 작동 하도록 해야 하는 경우가 있습니다. 조건부 컴파일 같은 소스 파일에 정의 된 다른 기호를 포함 하는 여러 프로젝트 참조 하 고 있는 공유 자산 프로젝트를 사용 하 여 가장 적합 합니다.
 
@@ -169,10 +115,7 @@ Xamarin 프로젝트를 정의 하는 `__MOBILE__` 는 iOS 및 Android 응용 �
 // Xamarin iOS or Android-specific code
 #endif
 ```
-
-<a name="iOS" />
-
-##### <a name="ios"></a>iOS
+#### <a name="ios"></a>iOS
 
 Xamarin.iOS 정의 `__IOS__` iOS 장치를 검색 하는 데 사용할 수 있는 합니다.
 
@@ -194,9 +137,7 @@ Xamarin.iOS 정의 `__IOS__` iOS 장치를 검색 하는 데 사용할 수 있�
 #endif
 ```
 
-<a name="Android" />
-
-##### <a name="android"></a>Android
+#### <a name="android"></a>Android
 
 Xamarin.Android 응용 프로그램에 컴파일만 해야 하는 코드를 다음 사용할 수 있습니다.
 
@@ -214,7 +155,7 @@ Xamarin.Android 응용 프로그램에 컴파일만 해야 하는 코드를 다�
 #endif
 ```
 
-##### <a name="mac"></a>Mac
+#### <a name="mac"></a>Mac
 
 없는 현재 Xamarin.Mac에 대 한 기본 제공 기호 있지만 Mac에서 직접 앱 프로젝트를 추가할 수 있습니다 **옵션 > 빌드 > 컴파일러** 에 **기호를 정의할** 하거나 편집 합니다 **.csproj**  파일을 추가할 수 있습니다 (예를 들어 `__MAC__`)
 
@@ -222,16 +163,17 @@ Xamarin.Android 응용 프로그램에 컴파일만 해야 하는 코드를 다�
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
 ```
 
-<a name="Windows_Phone" />
+#### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-##### <a name="windows-phone"></a>Windows Phone
+`WINDOWS_UWP`을 사용하세요. Xamarin 플랫폼 기호 문자열이 주변에 밑줄이 있습니다.
 
-– 두 기호를 정의 하는 Windows Phone 앱 `WINDOWS_PHONE` 및 `SILVERLIGHT` – 플랫폼에 코드를 대상으로 사용할 수 있습니다. 이 수행 하는 Xamarin 플랫폼 기호 같은 둘러싸인 밑줄 없습니다.
+```csharp
+#if WINDOWS_UWP
+// UWP-specific code
+#endif
+```
 
-
-<a name="Using_Conditional_Compilation" />
-
-##### <a name="using-conditional-compilation"></a>조건부 컴파일을 사용
+#### <a name="using-conditional-compilation"></a>조건부 컴파일을 사용
 
 조건부 컴파일 예제 사례 연구는 SQLite 데이터베이스 파일의 파일 위치를 설정 합니다. 세 가지 플랫폼에는 파일 위치를 지정 하는 데 약간 다른 요구 사항이 있습니다.
 
@@ -271,4 +213,3 @@ public static string DatabaseFilePath {
 ```
 
 결과 작성 하 고 각 플랫폼에서 다른 위치에 SQLite 데이터베이스 파일을 배치 하는 모든 플랫폼에서 사용할 수 있는 클래스가 생성 됩니다.
-

@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ed7bec4e25628d938218a40d157442debad8f835
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/02/2018
+ms.openlocfilehash: 8d68afaf0edf178bba6f18d3071de029e111edee
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118671"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -158,19 +158,19 @@ var source = new HtmlWebViewSource();
 source.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
 ```
 
-UWP  네트워크 콘텐츠를 표시 하는 경우 인터넷 (클라이언트 및 서버) 기능이 필요 합니다.
+각 플랫폼에 대 한 인터페이스의 구현은 다음 제공 되어야 합니다.
 
 #### <a name="ios"></a>iOS
 
-Android** *필요* 네트워크에서 콘텐츠를 표시 하는 경우에 합니다.
+Ios, 웹 콘텐츠를 프로젝트의 루트 디렉터리에 배치 해야 하거나 **리소스** 빌드 작업 디렉터리 *BundleResource*아래 설명 된 대로,:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "로컬 콘텐츠 필요한 특별 한 권한이 없습니다.")
+![](webview-images/ios-vs.png "IOS에서 로컬 파일")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "로컬 콘텐츠 필요한 특별 한 권한이 없습니다.")
+![](webview-images/ios-xs.png "IOS에서 로컬 파일")
 
 -----
 
@@ -189,13 +189,13 @@ namespace WorkingWithWebview.iOS{
 
 #### <a name="android"></a>Android
 
-다른 대부분의 Xamarin.Forms 보기와 달리 *되어 있어야* 및  StackLayout 또는 RelativeLayout에 포함 된 경우 지정 된 합니다.
+Android, HTML, CSS 및 이미지에에서 배치 빌드 작업을 사용 하 여 자산 폴더 *AndroidAsset* 아래 설명 된 대로:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](webview-images/android-vs.png "Android에서 로컬 파일")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](webview-images/android-xs.png "Android에서 로컬 파일")
 
@@ -368,9 +368,14 @@ void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 
 ## <a name="performance"></a>성능
 
-최근 발전 하드웨어 가속 렌더링 및 JavaScript 컴파일와 같은 기술 채택 각 인기 있는 웹 브라우저를 살펴보았습니다. 그러나 보안 제한 사항으로 인해 대부분의 이러한 개선 된 기능에 사용할 수 없었던는의 iOS equaivalent `WebView`, `UIWebView`합니다. Xamarin.Forms `WebView` 사용 하 여 `UIWebView`입니다. 사용자 지정 렌더러를 사용 하 여 작성 해야 문제가 되는 경우 `WKWebView`를 더 빠르게 검색 하는 것이 지 합니다. `WKWebView` iOS 8 이상 에서만 지원 됩니다.
+하드웨어 가속 렌더링 및 JavaScript 컴파일와 같은 인기 있는 웹 브라우저를 이제 기술을 채택 합니다. Ios의 경우 기본적으로 Xamarin.Forms `WebView` 에 의해 구현 됩니다는 `UIWebView` 클래스 및 이러한 여러 기술은이 구현에서 사용할 수 없는 합니다. 그러나 응용 프로그램에서 옵트인 iOS를 사용 하 여 `WkWebView` Xamarin.Forms를 구현 하는 클래스 `WebView`를 더 빠르게 검색 하는 것이 지 합니다. 다음 코드를 추가 하 여 수행할 수 있습니다 합니다 **AssemblyInfo.cs** 응용 프로그램에 대 한 iOS 플랫폼 프로젝트에서 파일:
 
-기본적으로 android WebView에 대 한 기본 제공 브라우저 빨리 됩니다.
+```csharp
+// Opt-in to using WkWebView instead of UIWebView.
+[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
+```
+
+`WebView` 기본적으로 Android에 대 한 기본 제공 브라우저 빨리입니다.
 
 합니다 [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) Microsoft Edge 렌더링 엔진을 사용 합니다. 데스크톱 및 태블릿 장치 자체 Edge 브라우저를 사용 하는 것과 같은 성능을 표시 됩니다.
 

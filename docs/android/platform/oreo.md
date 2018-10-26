@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: af560848240fec9558cc63969bcc269eedbd5424
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e4f0138c0177c046c1e967a3d3625604f73327d6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103194"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -58,7 +58,7 @@ Android Oreo Xamarin.Android와 함께 사용 하 여 시작 하려면 다운로
 
 Visual Studio에 Android Oreo 지원을 추가 하려면 다음을 수행 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 -   Visual Studio 2017을 사용 하는 경우 
 
@@ -68,7 +68,7 @@ Visual Studio에 Android Oreo 지원을 추가 하려면 다음을 수행 합니
 
 -   SDK Tools 25로 다운 그레이드 하 고 사용 하는 것이 좋습니다에서는 Visual Studio 2015를 사용 하는 경우 Google 에뮬레이터 관리자 GUI 이전 합니다. SDK 도구 25 API 26, 27, 이상 함께 계속 사용할 수 있습니다 및 새로운 플랫폼 개발에 영향을 주지 않습니다. 이렇게 하면 인터페이스 및 이전 버전에 대 한 Android SDK를 관리 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 -   에 설명 된 대로 Mac 용 Visual Studio 2017의 안정적인 최신 버전으로 업데이트 [Mac 용 Visual Studio 업데이트](https://docs.microsoft.com/visualstudio/mac/update)합니다.
 
@@ -82,7 +82,7 @@ Android Oreo 용 Xamarin 지원에 대 한 자세한 내용은 참조는 [Xamari
 
 Xamarin.Android 8.0을 사용 하 여 프로젝트를 만들려면 하면 먼저 사용 하 여 Xamarin Android SDK Manager에 대 한 SDK 플랫폼을 설치 하려면 **Android 8.0-Oreo** 이상. Android SDK Tools 26.0 이상 설치 해야 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. SDK Manager 시작 (Visual Studio에서 클릭 **도구 > Android > Android SDK Manager**).
 
@@ -94,7 +94,7 @@ Xamarin.Android 8.0을 사용 하 여 프로젝트를 만들려면 하면 먼저
 
     [![Android SDK Manager에서 Android SDK Tools 26 선택](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. SDK Manager 시작 (Mac 용 Visual Studio에서 클릭 **도구 > SDK Manager**).
 
@@ -121,11 +121,11 @@ Android 프로젝트를 만든 경우에 대상 Android 8.0 이상 버전 설정
 
 Android SDK Tools 26.0 설치 후 기본 Google GUI 기반 AVD 관리자를 시작 하려는 경우 나중에 명령줄 AVD manager 도구를 사용 하 고 다음 오류 대화 상자를 표시 될 수 있습니다 **avdmanager** 대신 :
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Android Emulator 관리자 경고 대화 상자](oreo-images/win/03-avd-warning.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![Android Emulator 관리자 경고 대화 상자](oreo-images/mac/03-avd-warning.png)
 
@@ -141,7 +141,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 사용 하도록 **avdmanager** 새 가상 장치를 만들려면 다음이 단계를 수행 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  명령 프롬프트 창을 열고 설정 `JAVA_HOME` 컴퓨터에서 Java SDK의 위치입니다. 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
@@ -168,7 +168,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 [![새 AVD 장치 풀 다운 메뉴에 추가](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  엽니다는 **터미널** 창과 mac에서 Android SDK tools 디렉터리의 위치 변경 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
@@ -182,7 +182,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  사용 하 여 메시지가 나타나면 **[아니요] 사용자 지정 하드웨어 프로필을 만들려는** 입력할 수 있습니다 **없습니다** 및 기본 하드웨어 프로필을 적용 합니다. 반응을 **예**를 **avdmanager** 묻는 사용자 지정에 대 한 질문의 목록으로는 하드웨어 프로필입니다.
+3.  사용 하 여 메시지가 나타나면 **[아니요] 사용자 지정 하드웨어 프로필을 만들려는** 입력할 수 있습니다 **없습니다** 및 기본 하드웨어 프로필을 적용 합니다. 반응을 **yes**, **avdmanager** 하드웨어 프로필을 사용자 지정에 대 한 질문의 목록으로 라는 메시지가 나타납니다.
 
 사용 하 여 **avdmanager** 가상 장치를 만들려면 장치 풀 다운 메뉴에 포함 될지 것입니다.
 

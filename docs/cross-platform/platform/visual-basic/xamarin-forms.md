@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 256d5c81475be095c8fa0ab0408cbcf673c6b301
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f397cf595a9ae151c5f105341733b2c57023fe99
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997086"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109720"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Visual Basic.NET을 사용 하 여 Xamarin.Forms
 
@@ -79,7 +79,7 @@ Visual Basic을 사용 하는 간단한 Xamarin.Forms 프로젝트를 만들려�
     ```
 
 9. 이제 새로운 Visual Basic 프로젝트에서 iOS 및 Android 프로젝트를 가리키도록 해야 합니다.
-마우스 오른쪽 단추로 클릭 합니다 **참조** iOS 및 Android 프로젝트를 열려면 노드를 **참조 관리자**합니다. 취소 눈금의 눈금 VB 이식 가능한 라이브러리를 확인 하 고 C# 이식 가능한 라이브러리 (것을 잊지 마십시오 iOS 및 Android 프로젝트에 대해이 작업을 수행).
+마우스 오른쪽 단추로 클릭 합니다 **참조** iOS 및 Android 프로젝트를 열려면 노드를 **참조 관리자**합니다. 눈금 취소는 C# 이식 가능한 라이브러리 및 VB 이식 가능한 라이브러리 (것을 잊지 마십시오 iOS 및 Android 프로젝트에 대해이 작업을 수행).
 
    [![](xamarin-forms-images/add-vb-8-sml.png "이전 프로젝트 참조를 제거, Visual Basic 참조를 추가 합니다.")](xamarin-forms-images/add-vb-8.png#lightbox)
 

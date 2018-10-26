@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 48c009b836ac109e0d54cd2fdb036c46e17c4387
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121505"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
@@ -22,7 +22,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자 측면에서 살짝 밀 수 �
 
 다음 스크린샷에서 표시 된 [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) 각 플랫폼에서:
 
-![](carousel-page-images/thirdpage.png "CarouselPage Thid 항목")
+![](carousel-page-images/thirdpage.png "CarouselPage 세 번째 항목")
 
 레이아웃을 [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) 각 플랫폼에서 동일 합니다. 컬렉션을 통해 이동 하려면 오른쪽에서 왼쪽으로 살짝 밀어 및 이전 버전과 컬렉션 탐색을 왼쪽에서 오른쪽을 살짝 밀어를 통해 페이지를 탐색할 수 있습니다. 다음 스크린샷에서 표시의 첫 페이지에는 [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) 인스턴스:
 
@@ -81,7 +81,7 @@ _Xamarin.Forms CarouselPage 페이지인 사용자 측면에서 살짝 밀 수 �
 </CarouselPage>
 ```
 
-다음 코드 예제에서는 C#에서 해당 UI를 보여 줍니다.
+다음 코드 예제에 해당 하는 UI를 보여 줍니다. C#:
 
 ```csharp
 public class MainPageCS : CarouselPage
@@ -186,7 +186,7 @@ public MainPage ()
 }
 ```
 
-다음 코드 예제에서는 해당 [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) C#에서 만든:
+다음 코드 예제에서는 해당 [ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) 생성 C#:
 
 ```csharp
 public class MainPageCS : CarouselPage

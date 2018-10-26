@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 도구 모�
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 06faaf16ffd0adc64063bfa5a264c1895b9ca9cb
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120257"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Xamarin.Mac의 도구 모음
 
@@ -168,7 +168,7 @@ Xcode의 Interface Builder에서 도구 모음을 설정 하는 경우 개발자
 - **레이블** -도구 모음에서 항목에 대해 표시할 텍스트
 - **색상표 레이블을** -항목에 대해 표시할 텍스트를 **도구 모음 항목 허용** 영역
 - **태그** -코드에서 항목을 식별 하는 데 도움이 되는 선택적 고유 식별자입니다.
-- **식별자** -정의 된 도구 모음 항목 유형입니다. 코드에서 도구 모음 항목을 선택 하려면 사용자 지정 값을 사용할 수 있습니다.
+- **식별자** -도구 모음 항목 형식을 정의 합니다. 코드에서 도구 모음 항목을 선택 하려면 사용자 지정 값을 사용할 수 있습니다.
 - **선택 가능한** -항목 켜기/끄기 단추를 같은 역할을 선택 하는 경우 합니다.
 
 > [!IMPORTANT]

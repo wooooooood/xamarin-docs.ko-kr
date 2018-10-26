@@ -4,15 +4,15 @@ description: 이 문서에서는 기울이기 변환에서 SkiaSharp, 기운된 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 951fc02dfff1721c1391c5d0c8a21452a156cfdb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: ecb07c69b7720f77401bf9bf454ee4b0248ad238
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113822"
 ---
 # <a name="the-skew-transform"></a>기울이기 변환
 
@@ -22,17 +22,17 @@ SkiaSharp, 기울이기 변환 그림자가 그림과에서 같은 그래픽 개
 
 ![](skew-images/skewexample.png "그림자 텍스트 기울이기 프로그램에서 기울이기의 예")
 
-오차 parallelograms,으로 사각형을 변환 하지만 불균형된 타원은 타원 계속 합니다.
+오차는 평행 사변형에 사각형을 설정 하지만 불균형된 타원은 타원 계속 합니다.
 
 Xamarin.Forms 변환, 배율 및 회전에 대 한 속성을 정의 하지만 해당 속성이 없는 Xamarin.Forms의 오차에 대 한 합니다.
 
-합니다 [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) 메서드의 `SKCanvas` 기울이기 세로 및 가로 기울이기를 대 한 두 개의 인수를 허용 합니다.
+합니다 [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) 메서드의 `SKCanvas` 기울이기 세로 및 가로 기울이기를 대 한 두 개의 인수를 허용 합니다.
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
 ```
 
-두 번째 [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/SkiaSharp.SKPoint/) 메서드는 이러한 인수는 단일에서 결합 `SKPoint` 값:
+두 번째 [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) 메서드는 이러한 인수는 단일에서 결합 `SKPoint` 값:
 
 ```csharp
 public void Skew (SKPoint skew)
@@ -72,7 +72,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](skew-images/skewexperiment-small.png "기울이기 실험 페이지의 3 배가 스크린 샷")](skew-images/skewexperiment-large.png#lightbox "삼중 기울이기 실험 페이지 스크린샷")
 
-하는 경우 `xSkew` 은의 음수 `ySkew`, 결과 회전 되지만 UWP 표시를 표시 하는 대로 어느 정도 확장 합니다.
+경우는 `xSkew` 값은 음수를 `ySkew` 값 결과 회전 이지만으로 다소 비율도 UWP 표시를 나타냅니다.
 
 변환 수식에는 다음과 같습니다.
 
@@ -102,7 +102,7 @@ x' = x + xSkew? (y-py)
 
 y' ySkew? = (x-px) + y
 
-하는 경우 `ySkew` 가 0이 고 0이 아닌 값만 지정 하는 `xSkew`, 다음 `px` 값은 사용 되지 않습니다. 값을 관련 되지 않습니다 및 마찬가지로 `ySkew` 고 `py`입니다.
+하는 경우 `ySkew` 가 0 이면 해당 `px` 값은 사용 되지 않습니다. 값을 관련 되지 않습니다 및 마찬가지로 `ySkew` 고 `py`입니다.
 
 수 편하다면 기울기 각도 α가 다이어그램과에서 같은 기울기 각도를 지정 합니다.
 
@@ -110,7 +110,7 @@ y' ySkew? = (x-px) + y
 
 100 픽셀 세로 150 픽셀 shift의 비율은이 예에서 해당 각도의 탄젠트 56.3 (도).
 
-XAML 파일을를 **각도 실험 기울이기** 비슷합니다는 **기울이기 각도** 는 제외 하 고 페이지를 `Slider` 요소 –90에서 90도 사이입니다. [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 코드 숨김 파일 페이지에서 텍스트를 가운데 정렬 하 고 사용 하 여 `Translate` 기울이기 페이지의 가운데를 중심을 설정 합니다. 짧은 `SkewDegrees` 메서드 코드의 맨 아래에서 각도 값 기울이기 변환 합니다.
+XAML 파일을를 **각도 실험 기울이기** 비슷합니다는 **기울이기 각도** 는 제외 하 고 페이지를 `Slider` 요소 인에서 90도 사이입니다. [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 코드 숨김 파일 페이지에서 텍스트를 가운데 정렬 하 고 사용 하 여 `Translate` 기울이기 페이지의 가운데를 중심을 설정 합니다. 짧은 `SkewDegrees` 메서드 코드의 맨 아래에서 각도 값 기울이기 변환 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -224,11 +224,11 @@ using (SKPaint textPaint = new SKPaint())
 
 [![](skew-images/skewshadowtext1-small.png "기울이기 섀도 텍스트 페이지의 3 배가 스크린샷")](skew-images/skewshadowtext1-large.png#lightbox "삼중 기울이기 섀도 텍스트 페이지 스크린샷")
 
-에 전달 하는 세로 좌표는 `DrawText` 메서드 기준선을 기준으로 텍스트의 위치를 나타냅니다. 기울이기의 중심에 사용 되는 동일한 세로 좌표입니다. 텍스트 문자열 디센더를 포함 하는 경우에이 기술은 작동 하지 않습니다. 예를 들어, 대체 단어 "섀도" 여기에 "마구"의 결과:
+에 전달 하는 세로 좌표는 `DrawText` 메서드 기준선을 기준으로 텍스트의 위치를 나타냅니다. 기울이기의 중심에 사용 되는 동일한 세로 좌표입니다. 텍스트 문자열 디센더를 포함 하는 경우에이 기술은 작동 하지 않습니다. 예를 들어, "섀도"에 대 한 "마구" 라는 단어를 대체 하 고 결과 다음과 같습니다.
 
 [![](skew-images/skewshadowtext2-small.png "삼중 디센더를 사용 하 여 대체 단어를 사용 하 여 섀도 텍스트 기울이기 페이지 스크린샷")](skew-images/skewshadowtext2-large.png#lightbox "삼중 디센더를 사용 하 여 대체 단어를 사용 하 여 섀도 텍스트 기울이기 페이지 스크린샷")
 
-섀도 및 텍스트는 기준선에 맞춘 여전히 있지만 효과 깔 잘못 된 합니다. 해결 하려면 텍스트 범위를 가져오려고 합니다.
+섀도 및 텍스트는 기준선에 맞춘 여전히 있지만 효과 깔 잘못 된 합니다. 이 문제를 해결 하려면 텍스트 범위를 가져오려고 합니다.
 
 ```csharp
 SKRect textBounds = new SKRect();
@@ -251,5 +251,5 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,48 +1,48 @@
 ---
-title: Xamarin.iOS에 행 작업 사용
-description: 이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction 테이블 행에 대 한 사용자 지정의 통과 작업을 만드는 방법을 보여 줍니다.
+title: Xamarin.iOS에서 행 작업
+description: 이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction를 사용 하 여 테이블 행에 대 한 사용자 지정 안쪽으로 살짝 밀어 작업을 만드는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 4be8b6dc66c9c047e6662067e7e3ecf81ab22893
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6d41f37d4a63db710bb04e35e6e1a4be0dd4f7a4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105911"
 ---
-# <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.iOS에 행 작업 사용
+# <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.iOS에서 행 작업
 
-_이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction 테이블 행에 대 한 사용자 지정의 통과 작업을 만드는 방법을 보여 줍니다._
+_이 가이드에 UISwipeActionsConfiguration 또는 UITableViewRowAction를 사용 하 여 테이블 행에 대 한 사용자 지정 안쪽으로 살짝 밀어 작업을 만드는 방법을 보여 줍니다._
 
-![행에서의 통과 작업을 보여 주는](row-action-images/action02.png)
+![행에 대 한 안쪽으로 살짝 밀어 작업을 보여 주는](row-action-images/action02.png)
 
-테이블에서 작업을 수행 하는 두 가지를 제공 하는 iOS: `UISwipeActionsConfiguration` 및 `UITableViewRowAction`합니다.
+iOS는 테이블에서 작업을 수행 하려면 두 가지 방법을 제공 합니다. `UISwipeActionsConfiguration` 고 `UITableViewRowAction`입니다.
 
-`UISwipeActionsConfiguration` iOS 11에서에서 도입 되었으며 집합을 정의 하는 데 사용 되 곳에서 작업을 수행 해야 사용자 천공 기와 _어느 방향으로든에서_ 표 보기에서 한 행에 있습니다. 이 동작은 네이티브 Mail.app 유사 하지만 
+`UISwipeActionsConfiguration` iOS 11에서에서 도입 되었으며의 집합을 정의 하는 경우 수행할 작업을 배치 사용자 천공 기와 _어느 방향으로든에서_ 테이블 뷰의 행에. 이 동작의 네이티브 Mail.app 비슷합니다. 
 
-`UITableViewRowAction` 클래스는 사용자 천공 기와 표 보기에서 한 행에 가로로 남아 있는 경우 발생 하는 동작을 정의 하는 데 사용 됩니다.
-예를 들어 표시 될 때 행에 남아 있는 넘기기가 테이블 편집는 **삭제** 기본적으로는 단추입니다. 여러 인스턴스를 연결 하 여는 `UITableViewRowAction` 클래스는 `UITableView`, 여러 사용자 지정 동작을 정의 하려면 각각 자체 텍스트, 서식 및 동작 합니다.
+`UITableViewRowAction` 클래스 사용자 천공 기와 표 뷰의 행에 가로 방향으로 남아 있는 경우 발생 하는 동작을 정의 하는 데 사용 됩니다.
+예를 들어, 표시 되는 경우 편집 살짝 행에는 왼쪽 테이블을 **삭제** 기본 단추입니다. 여러 인스턴스를 연결 하 여는 `UITableViewRowAction` 클래스는 `UITableView`, 여러 사용자 지정 작업을 정의할 수 있습니다, 자체 텍스트, 서식 및 동작을 사용 하 여 각 합니다.
 
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
-사용 하 여 동작의 통과 구현 하는 데 다음 세 단계 `UISwipeActionsConfiguration`:
+사용 하 여 살짝 밀기 동작을 구현 하는 데 필요한 3 단계가 `UISwipeActionsConfiguration`:
 
 1. 재정의 `GetLeadingSwipeActionsConfiguration` 및/또는 `GetTrailingSwipeActionsConfiguration` 메서드. 이러한 메서드는 반환 된 `UISwipeActionsConfiguration`합니다. 
-2. 인스턴스화하는 `UISwipeActionsConfiguration` 반환 됩니다. 이 클래스는 배열을 사용 `UIContextualAction`합니다.
+2. 인스턴스화하는 `UISwipeActionsConfiguration` 반환할 합니다. 이 클래스는 배열을 `UIContextualAction`합니다.
 3. `UIContextualAction`를 만듭니다.
 
-이러한 작업은 다음 섹션에서 자세히 설명 되어 있습니다.
+이러한 경우 다음 섹션에 자세히 설명 되어 있습니다.
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. SwipeActionsConfigurations 메서드 구현
 
-`UITableViewController` (그리고 `UITableViewSource` 및 `UITableViewDelegate`) 메서드가 2 개 포함: `GetLeadingSwipeActionsConfiguration` 및 `GetTrailingSwipeActionsConfiguration`, 표 보기 행에 살짝 작업 집합을 구현 하는 데 사용 되는 합니다. 화면 왼쪽에서 오른쪽 언어에서의 왼쪽 및 오른쪽에서 왼쪽 언어에서 화면 오른쪽에서는 살짝 선행 살짝 작업 참조합니다. 
+`UITableViewController` (그리고 `UITableViewSource` 하 고 `UITableViewDelegate`) 두 메서드가 포함 되어: `GetLeadingSwipeActionsConfiguration` 및 `GetTrailingSwipeActionsConfiguration`, 테이블 뷰 행 안쪽으로 살짝 밀어 작업 집합을 구현 하는 데 사용 되는 합니다. 선행 살짝 밀기 동작 왼쪽-오른쪽 언어로 화면 왼쪽에서 오른쪽에서 왼쪽 언어에서 화면의 오른쪽을 살짝 밀기를 가리킵니다. 
 
-다음 예제에서는 (에서 [TableSwipeActions](https://developer.xamarin.com/samples/monotouch/TableSwipeActions) 샘플) 선행 살짝 구성을 구현 하는 방법을 보여 줍니다. 다음 두 가지 동작 설명 하는 상황에 맞는 동작에서 만들어진 [아래](#create-uicontextualaction)합니다. 에 그런 다음 이러한 작업은 전달 하는 새롭게 초기화 된 [ `UISwipeActionsConfiguration` ](#create-uiswipeactionsconfigurations), 반환 값으로 사용 됩니다.
+다음 예제에서는 (에서 합니다 [TableSwipeActions](https://developer.xamarin.com/samples/monotouch/TableSwipeActions) 샘플) 선행 안쪽으로 살짝 밀어 구성을 구현 하는 방법을 보여 줍니다. 두 작업은 상황에 맞는 작업에서 만들어진 [아래](#create-uicontextualaction)합니다. 이러한 작업은 다음에 전달 새로 초기화 [ `UISwipeActionsConfiguration` ](#create-uiswipeactionsconfigurations), 반환 값으로 사용 됩니다.
 
 
 ```csharp
@@ -65,7 +65,7 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
 ### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2. 인스턴스화하는 `UISwipeActionsConfiguration`
 
-인스턴스화하는 `UISwipeActionsConfiguration` 를 사용 하 여는 `FromActions` 이루어진 새 배열을 추가 하는 방법을 `UIContextualAction`s, 다음 코드 조각에 나와 있는 것 처럼:
+인스턴스화하는 `UISwipeActionsConfiguration` 를 사용 하 여는 `FromActions` 의 새 배열을 추가 하는 방법 `UIContextualAction`s, 다음 코드 조각과에서 같이:
 
 ```csharp
 var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction })
@@ -73,23 +73,23 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-작업을 수행할 때 표시 되는 순서는 배열에 전달 되는 방법에 따라를 두는 것이 유용 합니다. 예를 들어 선행 천공 기와 대 한 위의 코드는 같이 작업 표시합니다.
+배열에 전달 되는 방식을에서 종속 작업의 표시 순서는 중요 한 것입니다. 예를 들어, 선행 천공 기와 대 한 위의 코드는 따라서으로 작업을 표시합니다.
 
-![테이블 행에 표시 된 동작의 통과 앞에](row-action-images/action03.png)
+![테이블 행에 표시 된 선행 살짝 밀기 동작](row-action-images/action03.png)
 
-천공 기와 후행에 대 한 작업은 다음 그림에 표시 된 것 처럼 표시 됩니다.
+천공 기와 후행에 대 한 작업은 다음 이미지와 같이 표시 됩니다.
 
-![테이블 행에 표시 된 동작의 통과 후행](row-action-images/action04.png)
+![테이블 행에 표시 된 후행 살짝 밀기 동작](row-action-images/action04.png)
 
-이 코드 조각은 또한를 사용 하는 새 `PerformsFirstActionWithFullSwipe` 속성입니다. 기본적으로이 속성 설정 true, 즉 때 사용자 천공 기와 완전히 행에 대해 배열의 첫 번째 작업이 실행 됩니다. 삭제 되지 않은 작업을 사용 하는 경우 (예를 들어 "Delete" 이상적인 동작 하지 않을 하 고 따라서로 설정 해야 `false`합니다.
+이 코드 조각은 새 사용도 `PerformsFirstActionWithFullSwipe` 속성입니다. 기본적으로이 속성 설정 되는 배열의 첫 번째 작업 동작이 발생 하는지에 사용자 천공 기와 완전히 행 즉 true입니다. 삭제 된 작업을 사용 하는 경우 (예를 들어 "삭제" 또는 적합 하지 않을 하 고, 따라서로 설정 해야 `false`합니다.
 
 <a name="create-uicontextualaction" />
 
-### <a name="create-a-uicontextualaction"></a>만들기는 `UIContextualAction`
+### <a name="create-a-uicontextualaction"></a>만들기를 `UIContextualAction`
 
-상황에 맞는 작업이 실제로 사용자 테이블 행 swipes 때 표시 되는 작업을 만들 것입니다.
+상황에 맞는 작업이 실제로 사용자 swipes 테이블 행을 때 표시 되는 작업을 만듭니다.
 
-제공 해야 하는 작업을 초기화 하는 `UIContextualActionStyle`, 제목 및 `UIContextualActionHandler`합니다. `UIContextualActionHandler` 세 개의 매개 변수: 작업, 작업에 표시 된 보기 및 완료 처리기:
+제공 해야 하는 작업을 초기화 하는 `UIContextualActionStyle`, 제목 및 `UIContextualActionHandler`합니다. `UIContextualActionHandler` 3 개의 매개 변수: 작업, 작업, 표시 된 보기 및 완료 처리기:
 
 ```csharp
 public UIContextualAction ContextualFlagAction(int row)
@@ -113,13 +113,13 @@ public UIContextualAction ContextualFlagAction(int row)
 }
 ```
 
-배경색 또는 동작의 이미지와 같은 다양 한 시각적 속성을 편집할 수 있습니다. 위의 코드 조각 작업으로 이미지를 추가 하 고 배경색을 파란색 설정 하는 방법을 보여 줍니다.
+배경색 또는 이미지 작업 등의 다양 한 시각적 속성을 편집할 수 있습니다. 위의 코드 조각 작업에 이미지를 추가 하 고 해당 배경 색을 파랑으로 설정 하는 방법을 보여 줍니다.
 
-초기화 하는 데 사용할 수는 상황에 맞는 작업을 만든 후의 `UISwipeActionsConfiguration` 에 `GetLeadingSwipeActionsConfiguration` 메서드.
+상황에 맞는 작업을 만든 후 초기화 하는 데 사용할 수는 `UISwipeActionsConfiguration` 에 `GetLeadingSwipeActionsConfiguration` 메서드.
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-하나 이상의 행을 사용자 지정 동작을 정의할 수는 `UITableView`, 인스턴스의 생성 해야 합니다는 `UITableViewDelegate` 클래스 및 재정의 `EditActionsForRow` 메서드. 예를 들어:
+하나 이상의 행을 사용자 지정 동작을 정의할 수는 `UITableView`, 인스턴스의 생성 해야 합니다는 `UITableViewDelegate` 클래스를 재정의 합니다 `EditActionsForRow` 메서드. 예를 들어:
 
 ```csharp
 using System;
@@ -163,7 +163,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 새 메서드는 `UITableViewRowAction` 을 표시할는 **Hi** 사용자 천공 기와 왼쪽 테이블의 행에 가로로 단추입니다. 나중의 새 인스턴스는 `TableDelegate` 만들고 첨부 된 `UITableView`합니다. 예를 들어:
+정적 `UITableViewRowAction.Create` 메서드는 새 데 `UITableViewRowAction` 표시할를 **Hi** 사용자 천공 기와 테이블의 행에 대해 가로로 왼쪽 단추입니다. 나중의 새 인스턴스를 `TableDelegate` 만들어지고 연결 된 `UITableView`. 예를 들어:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -175,11 +175,11 @@ table.Delegate = tableDelegate;
 
 ```
 
-위의 코드를 실행 하 고 테이블 행에 남아 있는 사용자 천공 기와 **Hi** 대신 단추가 표시 됩니다는 **삭제** 기본적으로 표시 되는 단추:
+위의 코드에서 실행 되 고 사용자 천공 기와 테이블의 행에 남아 있는 경우는 **Hi** 단추가 대신 표시 됩니다는 **삭제** 기본적으로 표시 되는 단추:
 
 [![](row-action-images/action01.png "삭제 단추 대신 표시 되 고 Hi 단추")](row-action-images/action01.png#lightbox)
 
-사용자가 누를 경우는 **Hi** 단추를 `Hello World!` 작성 됩니다 Visual Studio에서 콘솔에 Mac 또는 Visual Studio에 대 한 응용 프로그램 디버그 모드에서 실행 됩니다.
+사용자가 누를 경우 합니다 **Hi** 단추를 `Hello World!` 작성 됩니다 Visual Studio에서 콘솔에 Mac 또는 Visual Studio에 대 한 응용 프로그램 디버그 모드에서 실행 될 때입니다.
 
 
 

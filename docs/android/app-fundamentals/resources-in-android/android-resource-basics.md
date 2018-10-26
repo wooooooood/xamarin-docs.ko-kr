@@ -3,25 +3,25 @@ title: Android 리소스 기본 사항
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110136"
 ---
 # <a name="android-resource-basics"></a>Android 리소스 기본 사항
 
 거의 모든 Android 응용 프로그램에 이러한 일부 종류의 리소스를 갖습니다. 최소한 있는 경우가 많습니다 XML 파일 형태로 사용자 인터페이스 레이아웃 합니다. Xamarin.Android 응용 프로그램을 처음 만들어질 때 기본 리소스는 Xamarin.Android 프로젝트 템플릿에서 설치:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![리소스 파일](android-resource-basics-images/01-resource-files-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![리소스 파일](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -44,11 +44,11 @@ ms.locfileid: "39241320"
 
 리소스를 만드는 간단 하 게 해당 리소스 형식에 대 한 디렉터리에 파일을 추가 합니다. 아래 스크린샷 참조를 프로젝트에 추가 된 독일어 로캘의 문자열 리소스를 보여 줍니다. 때 **Strings.xml** 파일에 추가한 합니다 **빌드 작업** 로 자동으로 설정 되었습니다 **AndroidResource** Xamarin.Android 도구에 의해:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Strings.xml AndroidResource 설정에 대 한 작업 빌드](android-resource-basics-images/02-build-action-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![Strings.xml AndroidResource 설정에 대 한 작업 빌드](android-resource-basics-images/02-build-action-xs.png)
  

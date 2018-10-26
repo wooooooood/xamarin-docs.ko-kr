@@ -1,20 +1,21 @@
 ---
+redirect_url: /xamarin/xamarin-forms/user-interface/graphics/skiasharp/
 title: SkiaSharp 사용 하 여 2D 그리기
 description: 이 문서는 SkiaSharp 사용 하 여 그리기 플랫폼 간 2D의 개요를 제공 합니다. SkiaSharp를 설명 하는 다양 한 가이드 및 다양 한 Api에 연결 합니다.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 95f259ce054b14a2301bb9549f809d5e4f407884
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615524"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109902"
 ---
-# <a name="2d-drawing-with-skiasharp"></a>SkiaSharp 사용 하 여 2D 그리기
+# <a name="2d-drawing-with-skiasharp"></a>2D와 SkiaSharp 그리기
 
 SkiaSharp 2D 그래픽 작업을 수행 하는 강력한 C# API를 제공 합니다. 전원을 [Google의 Skia 라이브러리](http://skia.org), Google Chrome, Firefox 및 Android의 그래픽 스택을 구동 하는 라이브러리입니다.
 
@@ -30,53 +31,13 @@ SkiaSharp 및 샘플의 핵심 개념 개요 그래픽, 텍스트, 비트맵을 
 
 Xamarin.Forms에서 렌더링 되는 플랫폼 그래픽 간 사용 하는 방법에 알아봅니다.
 
-- [그리기 기본 사항](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
-  * [단순 원 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
-  * [Xamarin.Forms와 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)
-  * [픽셀 및 장치 독립적 단위](~/xamarin-forms/user-interface/graphics/skiasharp/basics/pixels.md)
-  * [기본 애니메이션](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
-  * [텍스트와 그래픽 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
-  * [비트맵 기본 사항](~/xamarin-forms/user-interface/graphics/skiasharp/basics/bitmaps.md)
-- [선 및 경로](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
-  * [선 및 스트로크 단면](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
-  * [경로 기본 사항](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md)
-  * [경로 채우기 유형](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
-  * [폴리라인 및 파라메트릭 수식](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
-  * [점 및 대시](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
-  * [손가락으로 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
-- [변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
-  * [좌표 이동 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
-  * [배율 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
-  * [회전 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)
-  * [기울이기 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/skew.md)
-  * [매트릭스 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)
-  * [터치 조작](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)
-  * [비 affine 변환만](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
-  * [3D 회전](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
-- [곡선 및 경로](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
-  * [원호를 그리는 3가지 방법](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
-  * [3가지 형식의 Bézier 곡선](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
-  * [SVG 경로 데이터](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)
-  * [경로 및 지역 클리핑](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md)
-  * [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
-  * [경로 및 텍스트](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
-  * [경로 정보 및 열거형](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
-- [비트맵](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
-  * [비트맵 표시하기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [비트맵에서 만들기 및 그리기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [비트맵 자르기](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [분할된 비트맵 표시](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [파일에 비트맵 저장](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
-  * [비트맵 픽셀 비트에 액세스](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
-  * [비트맵에 애니메이션 적용](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
-
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[플랫폼별 설명](~/graphics-games/skiasharp/platform.md)
 
 이 페이지에는 iOS, Android, macOS 및 Windows를 비롯 한 다양 한 플랫폼에서 SkiaSharp에 대 한 설치 지침을 설명 합니다.
 
-## <a name="api-documentationhttpsdeveloperxamarincomapinamespaceskiasharp"></a>[API 설명서](https://developer.xamarin.com/api/namespace/SkiaSharp/)
+## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp)
 
-찾아볼 수 있습니다 합니다 [API 설명서](https://developer.xamarin.com/api/namespace/SkiaSharp/) SkiaSharp 웹 사이트에 대 한 합니다.
+찾아볼 수 있습니다 합니다 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp) SkiaSharp에 대 한 합니다.
 
 ## <a name="work-in-progress"></a>진행 중
 

@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Android의 플랫폼 기능
-description: 이 섹션의 문서는 Android에 대 한 특정 기능을 설명합니다. 여기 조각을 사용 하 여, 맵 사용 하 여 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다.
+description: 이 섹션의 문서는 Android에 대 한 특정 기능을 설명합니다. 여기 조각을 사용 하 여, 맵 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/27/2018
-ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104702"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
-_이 섹션의 문서는 Android에 대 한 특정 기능을 설명합니다. 여기 조각을 사용 하 여, 맵 사용 하 여 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다._
+_이 섹션의 문서는 Android에 대 한 특정 기능을 설명합니다. 여기 조각을 사용 하 여, 맵 작업 및 콘텐츠 공급자를 사용 하 여 데이터를 캡슐화 합니다. 같은 항목을 찾을 수 있습니다._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
@@ -46,9 +46,9 @@ Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크�
 이 가이드에서는 Android 6.0에서 지 원하는 방법 설명 _앱 연결_, 모바일 앱 웹 사이트에서 Url에 응답할 수 있는 기술입니다. Android 6.0 응용 프로그램에 앱 연결을 구현 하는 방법 및 도메인에 대 한 앱 링크를 처리 하도록 모바일 앱에 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다.
 
 
-##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Android P 미리 보기](~/android/platform/android-p.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 원형](~/android/platform/pie.md)
 
-이 문서에서는 Android P 미리 보기의 새로운 기능에 대 한 개요를 제공 하 고, Xamarin.Android Android P 개발, 준비 하는 방법에 설명, Xamarin.Android 앱에서 주요 Android P 기능을 사용 하는 방법을 보여 주는 예제 코드를 제공 합니다.
+이 문서에서는 Android 원형의 새로운 기능에 간략하게 Xamarin.Android Android 원형 개발, 준비 하는 방법을 설명 하 고 Android 원형 표시 알림 및 잘라낸 부분의 새로운 기능을 사용 하는 방법을 보여 주는 앱의 예를 제공 Xamarin.Android 앱입니다.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
@@ -86,7 +86,7 @@ Android 4.4 (KitKat) 제공을 사용자와 개발자 모두에 대 한 기능�
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-이 문서는 Android 4.1에서 도입 된 개발자를 위한 새로운 기능의 간략 한 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한을 업데이트 하는 큰 파일을 공유 하는 Android 무선 전송에 대 한 업데이트를 강화 합니다.
+이 문서 개발자가 Android 4.1에서 도입 된 새로운 기능의 상위 수준 개요를 제공 합니다. 이러한 기능에 포함: 알림, 멀티미디어, 피어-투-피어 네트워크 검색, 애니메이션, 새 사용 권한을 업데이트 하는 큰 파일을 공유 하는 Android 무선 전송에 대 한 업데이트를 강화 합니다.
 
 
 
@@ -98,12 +98,12 @@ Android 4.4 (KitKat) 제공을 사용자와 개발자 모두에 대 한 기능�
 
 ##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[Android 매니페스트 사용](android-manifest.md)
 
-이 문서에서는 introducts AndroidManifest.xml 파일 및 아마도 것 방법 기능을 제어 하 여 Android 응용 프로그램에 대 한 Mono의 요구 사항을 설명 하는 데 사용 합니다.
+이 문서에서는 AndroidManifest.xml 파일에 있을 수 있습니다 수 사용 기능을 제어 하 고 Android 응용 프로그램에 대 한 Mono의 요구 사항을 설명 하는 방법 및 합니다.
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[콘텐츠 공급자 소개](~/android/platform/content-providers/index.md)
 
-ContentProvider는 데이터 저장소를 캡슐화 하 고 액세스 하기 위한 API를 제공 합니다. 공급자는 일반적으로 데이터 표시/관리에 대 한 UI도 제공 하는 Android 응용 프로그램의 일부로 존재 합니다. 콘텐츠 공급자를 사용 하는 주요 이점은 다른 응용 프로그램 (한 ContentResolver 라고 함) 공급자 클라이언트 개체를 사용 하 여 캡슐화 된 데이터에 쉽게 액세스할 수 있도록 합니다. 함께 콘텐츠 공급자 및 콘텐츠 확인자를 간단 하 게 빌드하고 사용 하는 데이터 액세스를 위한 일관 된 응용 프로그램 간 API를 제공 합니다. 이 문서에 액세스 하 여 Xamarin.Android 사용 하 여 ContentProviders를 구축 하는 방법을 보여 줍니다.
+ContentProvider는 데이터 저장소를 캡슐화 하 고 액세스 하기 위한 API를 제공 합니다. 공급자도 데이터 표시/관리에 대 한 UI를 제공 하는 Android 응용 프로그램의 일부로 존재 합니다. 콘텐츠 공급자를 사용 하는 주요 이점은 다른 응용 프로그램 (한 ContentResolver 라고 함) 공급자 클라이언트 개체를 사용 하 여 캡슐화 된 데이터에 쉽게 액세스할 수 있도록 합니다. 함께 콘텐츠 공급자 및 콘텐츠 확인자를 간단 하 게 빌드하고 사용 하는 데이터 액세스를 위한 일관 된 응용 프로그램 간 API를 제공 합니다. 이 문서에 액세스 하 여 Xamarin.Android 사용 하 여 ContentProviders를 구축 하는 방법을 보여 줍니다.
 
 
 

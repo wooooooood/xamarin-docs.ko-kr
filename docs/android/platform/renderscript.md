@@ -4,15 +4,15 @@ description: 이 가이드는 Renderscript를 소개 하 고 내장 Renderscript
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3331eb579f0aa2d7f29508773c588455c134f56a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241190"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108732"
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 소개
 
@@ -48,11 +48,12 @@ Renderscripts Android 응용 프로그램에서 사용 하기 위한 세 가지 
 
 3. **할당 된 메모리** &ndash; 데이터와 커널을 통해 전달 되는  _[할당](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_ 합니다. 에 대 한 커널에는 하나의 입력 수 및/또는 할당 출력
 
-합니다 [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) 네임 스페이스 Renderscript 런타임과 상호 작용 하기 위한 클래스를 포함 합니다. 특히 합니다 [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) 클래스 수명 주기 및 Renderscript 엔진의 리소스를 관리 합니다. 하나 이상의 Android 앱 초기화 해야 합니다 [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) 개체입니다. 할당은 할당 및 Android 앱 및 Renderscript 런타임 간에 공유 되는 메모리에 액세스 하는 일을 담당 하는 관리 되는 API입니다. 일반적으로 하나의 할당 입력에 대해 생성 됩니다 하 고 필요에 따라 다른 할당 커널 출력을 포함할 만들어집니다. Renderscript 런타임 엔진과 연결 된 관리 되는 래퍼 클래스 할당을 보유 한 메모리에 대 한 액세스 관리, 추가 작업을 수행 하는 Android 앱 개발자를 위한 하지 않아도 됩니다.
+합니다 [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) 네임 스페이스 Renderscript 런타임과 상호 작용 하기 위한 클래스를 포함 합니다. 특히 합니다 [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) 클래스 수명 주기 및 Renderscript 엔진의 리소스를 관리 합니다. 하나 이상의 Android 앱 초기화 해야 합니다. [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+개체입니다. 할당은 할당 및 Android 앱 및 Renderscript 런타임 간에 공유 되는 메모리에 액세스 하는 일을 담당 하는 관리 되는 API입니다. 일반적으로 하나의 할당 입력에 대해 생성 됩니다 하 고 필요에 따라 다른 할당 커널 출력을 포함할 만들어집니다. Renderscript 런타임 엔진과 연결 된 관리 되는 래퍼 클래스 할당을 보유 한 메모리에 대 한 액세스 관리, 추가 작업을 수행 하는 Android 앱 개발자를 위한 하지 않아도 됩니다.
 
 하나 이상의 할당 될 [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/)합니다.
 요소는 각 할당의 데이터를 설명 하는 특수화 된 형식입니다.
-할당 일치 해야 하는 출력의 요소 형식은 input 요소의 형식입니다. Renderscript 병렬로 입력된 할당의 각 요소에 대해 반복 되며 결과 출력에 작성을 실행할 때 할당 합니다. 요소는 다음과 같은 두 종류가 있습니다.
+요소 형식은 출력의 할당 된 입력 요소의 형식과 일치 해야 합니다. Renderscript 병렬로 입력된 할당의 각 요소에 대해 반복 되며 결과 출력에 작성을 실행할 때 할당 합니다. 요소는 다음과 같은 두 종류가 있습니다.
 
 - **단순 형식** &ndash; 개념적으로 동일 C 데이터 형식으로 `float` 또는 `char`합니다.
 
@@ -60,7 +61,8 @@ Renderscripts Android 응용 프로그램에서 사용 하기 위한 세 가지 
 
 Renderscript 엔진에는 각 할당의 요소를 사용 하 여 커널에 필요한 호환 되는지 확인에 런타임 검사를 수행 합니다. 할당에서 요소의 데이터 형식 커널 예상 되는 데이터 형식이 일치 하지 않으면, 예외가 throw 됩니다.
 
-하위 유형으로 모든 Renderscript 커널 래핑될 합니다 [ `Android.Renderscripts.Script` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/) 클래스입니다. 합니다 `Script` 클래스는 Renderscript에 대 한 매개 변수를 설정, 적절 한 설정 하는 데 사용 됩니다 `Allocations`, Renderscript를 실행 합니다. 두 개의 `Script` Android SDK의 서브 클래스:
+하위 유형으로 모든 Renderscript 커널 래핑될 합니다 [`Android.Renderscripts.Script`](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)
+포함됩니다. 합니다 `Script` 클래스는 Renderscript에 대 한 매개 변수를 설정, 적절 한 설정 하는 데 사용 됩니다 `Allocations`, Renderscript를 실행 합니다. 두 개의 `Script` Android SDK의 서브 클래스:
 
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Android SDK 묶이는 몇 가지 일반적인 Renderscript 작업 및의 서브 클래스에서 액세스할 수 있습니다 합니다 [ScriptIntrinsic](https://developer.xamarin.com/api/type/Android.Renderscripts.ScriptIntrinsic/) 클래스입니다. 이미 제공 되므로 해당 응용 프로그램에서 이러한 스크립트를 사용 하려면 추가 단계를 수행 하는 개발자에 대 한 하지 않아도가 됩니다.
@@ -107,13 +109,15 @@ Renderscript 엔진에는 각 할당의 요소를 사용 하 여 커널에 필�
 
 Renderscript를 사용 하 여 Android 응용 프로그램의 기본 단계는 다음과 같습니다.
 
-**Renderscript 컨텍스트를 만듭니다** &ndash; 는 [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) 클래스는 관리 되는 래퍼 Renderscript 컨텍스트 및 초기화, 리소스 관리를 제어 하 고 정리 됩니다. Renderscript 개체를 사용 하 여 만들어집니다는 `RenderScript.Create` 팩터리 메서드를 매개 변수로 사용 하는 Android 컨텍스트 (예: 작업)를 사용 합니다. 다음 코드 줄 Renderscript 컨텍스트를 초기화 하는 방법에 설명 합니다.
+**Renderscript 컨텍스트를 만듭니다** &ndash; 합니다 [`Renderscript`](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)
+클래스는 관리 되는 래퍼 Renderscript 컨텍스트 및 초기화, 리소스 관리를 제어 하 고 정리 됩니다. Renderscript 개체를 사용 하 여 만들어집니다는 `RenderScript.Create` 팩터리 메서드를 매개 변수로 사용 하는 Android 컨텍스트 (예: 작업)를 사용 합니다. 다음 코드 줄 Renderscript 컨텍스트를 초기화 하는 방법에 설명 합니다.
 
 ```csharp
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**할당을 만들** &ndash; 내장 스크립트에 따라 하나 또는 두 개를 만들어야 할 수 있습니다 `Allocation`s입니다. 합니다 [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) 클래스 메서드가 여러 팩터리 인스턴스화 내장 함수에 대 한 할당에 도움이 되도록 합니다. 예를 들어 다음 코드 조각에는 비트맵에 대 한 할당을 만드는 방법을 보여 줍니다.
+**할당을 만들** &ndash; 내장 스크립트에 따라 하나 또는 두 개를 만들어야 할 수 있습니다 `Allocation`s입니다. 는 [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+클래스에 내장 함수에 대 한 할당을 인스턴스화하고 사용 하는 데 여러 팩터리 메서드가 있습니다. 예를 들어 다음 코드 조각에는 비트맵에 대 한 할당을 만드는 방법을 보여 줍니다.
 
 ```csharp
 Android.Graphics.Bitmap originalBitmap;

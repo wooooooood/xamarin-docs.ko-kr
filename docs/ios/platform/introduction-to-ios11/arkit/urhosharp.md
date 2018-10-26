@@ -4,15 +4,15 @@ description: 이 문서는 ARKit 앱에서 Xamarin.iOS 설정 하는 방법에 �
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103896"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>ARKit Xamarin.iOS에서 UrhoSharp 사용
 
@@ -25,7 +25,7 @@ ms.locfileid: "39351693"
 
 ## <a name="the-basics"></a>기본 사항
 
-원하는 작업을 수행 하는 iPhone에서 볼 수 있듯이 전 세계 위에 있는 3D 콘텐츠입니다.   3D 콘텐츠를 사용 하 여 휴대폰의 카메라에서 가져온 내용을 blend는 및의 휴대폰으로 이동할 때 전시실 되도록 해당 대화방의 일부인 이러한 이전과 3D 개체-이 환경에 개체를 고정 하면 됩니다.
+원하는 작업을 수행 하는 iPhone/iPad에서 볼 수 있듯이 전 세계 위에 있는 3D 콘텐츠입니다.   3D 콘텐츠를 사용 하 여 장치의 카메라에서 가져온 내용을 blend는 및 장치의으로 이동할 때 전시실 되도록 룸의 일부인 이러한 이전과 3D 개체-이 환경에 개체를 고정 하면 됩니다.
 
 ![ARKit에 애니메이션된 그림](urhosharp-images/image1.gif)
 

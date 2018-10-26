@@ -4,15 +4,15 @@ description: 이 문서는 터치에 응답 하는 SkiaSharp 그래픽을 만드
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 23dcc6f11f40283a220aba47b33717e7e5740dbe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: bf9b0388ff3b024439cfc3488e4057ba32fdab6b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615849"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115083"
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms와 통합
 
@@ -44,7 +44,7 @@ Xamarin.Forms에서 SkiaSharp 그래픽 대화형 만드는 다른 방법은 터
 
 통지를 `skia` XML 네임 스페이스 선언 합니다.
 
-합니다 `Tapped` 에 대 한 처리기를 `TapGestureRecognizer` 개체를 토글합니다 호출 하는 부울 필드의 값을 [ `InvalidateSurface` ](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface()/) 메서드의 `SKCanvasView`:
+합니다 `Tapped` 에 대 한 처리기를 `TapGestureRecognizer` 개체를 토글합니다 호출 하는 부울 필드의 값을 [ `InvalidateSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) 메서드의 `SKCanvasView`:
 
 ```csharp
 bool showFill = true;
@@ -84,15 +84,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-`StrokeWidth` 속성이 차이 강조 하기 위해 50으로 설정 되어 있습니다. 또한 먼저 내부 그리기 및 윤곽선으로 전체 줄 너비를 볼 수 있습니다. 기본적으로 그래픽 그림의 뒷부분에 나오는 그려지는 `PaintSurface` 이벤트 처리기를가 려 서 이전 처리기에서에서 그린 것입니다.
+`StrokeWidth` 속성이 차이 강조 하기 위해 50으로 설정 되어 있습니다. 또한 먼저 내부 그리기 및 윤곽선으로 전체 줄 너비를 볼 수 있습니다. 기본적으로 그래픽 그림 나중에 그려지는 `PaintSurface` 이벤트 처리기를가 려 서 이전 처리기에서에서 그린 것입니다.
 
-합니다 **Color 탐색** 페이지 어떻게 SkiaSharp 그래픽 다른 Xamarin.Forms 요소와 통합할 수도 있습니다 보여 주고도 SkiaSharp에서 색을 정의 하기 위한 두 가지 대체 방법 간의 차이 보여 줍니다. 정적 [ `SKColor.FromHsl` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsl/p/System.Single/System.Single/System.Single/System.Byte/) 메서드를 만듭니다는 `SKColor` 색상-채도-명도 모델을 기반으로 하는 값:
+합니다 **Color 탐색** 페이지 어떻게 SkiaSharp 그래픽 다른 Xamarin.Forms 요소와 통합할 수도 있습니다 보여 주고도 SkiaSharp에서 색을 정의 하기 위한 두 가지 대체 방법 간의 차이 보여 줍니다. 정적 [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) 메서드를 만듭니다는 `SKColor` 색상-채도-명도 모델을 기반으로 하는 값:
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-정적 [ `SKColor.FromHsv` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsv/p/System.Single/System.Single/System.Single/System.Byte/) 메서드를 만듭니다는 `SKColor` 유사한 색상-채도 값 모델을 기반으로 하는 값:
+정적 [ `SKColor.FromHsv` ](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) 메서드를 만듭니다는 `SKColor` 유사한 색상-채도 값 모델을 기반으로 하는 값:
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
@@ -100,7 +100,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 두 경우 모두는 `h` 인수 범위는 0에서 360 사이입니다. 합니다 `s`, `l`, 및 `v` 인수 0에서 100 사이입니다. `a` (알파 또는 불투명도) 인수 범위는 0에서 255입니다.
 
-[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일 두 개를 만듭니다 `SKCanvasView` 개체를 `StackLayout` 나란히 사용 하 여 `Slider` 고 `Label` HSL을 선택할 수 있는 뷰 및 HSV 색 값:
+[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일 두 개를 만듭니다 `SKCanvasView` 개체를 `StackLayout` 와 함께 `Slider` 고 `Label` HSL 및 HSV 선택할 수 있는 뷰 색 값:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -240,5 +240,5 @@ HSV 모델에서 순수 색 채도 값은 100 때 발생 합니다. 값이 다�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -4,15 +4,15 @@ description: 이 문서에서는 ADO.NET SQLite Xamarin.iOS 응용 프로그램�
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 83f6059c405b2156270f4359cbba33177861af02
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 9314e1b69df4a5965dfd045d0b4ca3e44f1b9de6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241240"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122298"
 ---
 # <a name="using-adonet-with-xamarinios"></a>ADO.NET을 사용 하 여 Xamarin.iOS를 사용 하 여
 
@@ -22,11 +22,11 @@ Xamarin은 ios의 경우 익숙한 ADO.NET 같은 구문을 사용 하 여 노�
 
 SQLite를 추가 해야 하는 ADO.NET 통한 액세스를 사용 하려면 `System.Data` 고 `Mono.Data.Sqlite` (Visual Studio 및 Mac 용 Visual Studio에서 샘플)에 대 한 다음과 같은 iOS 프로젝트에 대 한 참조:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  ![](using-adonet-images/image4.png "Mac 용 Visual Studio에서 어셈블리 참조")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
   ![](using-adonet-images/image6.png "Visual Studio에서 어셈블리 참조")
 

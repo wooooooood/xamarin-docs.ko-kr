@@ -3,43 +3,43 @@ title: 지문 인증 시작
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 70d27ef3d7518619a246c25aac128b2fd1ed70c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 08/17/2018
+ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118476"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>지문 인증 시작
 
-시작 하려면 먼저 살펴보겠습니다 지문 인증을 사용 하는 응용 프로그램 있도록 Xamarin.Android 프로젝트를 구성 하는 방법:
+시작 하려면 먼저 살펴봅니다 응용 프로그램에서 지문 인증을 사용할 수 있도록 Xamarin.Android 프로젝트를 구성 하는 방법.
 
-1. 업데이트 **AndroidManifest.xml** 지문 Api 필요로 하는 권한을 선언할 수 있습니다.
-2. 에 대 한 참조는 `FingerprintManager`합니다.
+1. 업데이트 **AndroidManifest.xml** 지문 Api를 필요로 하는 권한을 선언 합니다.
+2. 에 대 한 참조를 `FingerprintManager`입니다.
 3. 장치는 지문 검색 가능 인지 확인 합니다.
 
-## <a name="requesting-permissions-in-the-application-manifest"></a>응용 프로그램에 대 한 권한을 요청 매니페스트
+## <a name="requesting-permissions-in-the-application-manifest"></a>응용 프로그램에 필요한 권한을 요청 매니페스트
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Android 응용 프로그램 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에 사용 권한입니다. 다음 스크린샷은 Visual Studio 2015에서 응용 프로그램에이 사용 권한을 추가 하는 방법을 보여 줍니다.
+Android 응용 프로그램을 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에서 권한. 다음 스크린샷은 Visual Studio 2015에서 응용 프로그램에이 권한을 추가 하는 방법을 보여 줍니다.
 
-[![사용 하도록 설정 하면\_Android 매니페스트 화면에는 지문](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
+[![사용 하도록 설정 하면\_Android 매니페스트 화면에서 지문](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-Android 응용 프로그램 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에 사용 권한입니다. 다음 스크린 샷에서 Mac 용 Visual Studio에서 응용 프로그램에이 사용 권한을 추가 하는 방법을 보여 줍니다.
+Android 응용 프로그램을 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에서 권한. 다음 스크린샷은 Mac 용 Visual Studio에서 응용 프로그램에이 권한을 추가 하는 방법을 보여 줍니다.
 
-[![Android 응용 프로그램 화면에서 사용할 수 있도록 UseFingerprint](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
+[![Android 응용 프로그램 화면에서 UseFingerprint를 사용 하도록 설정](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 
-## <a name="getting-an-instance-of-the-fingerprintmanager"></a>FingerprintManager의 인스턴스를 얻는
+## <a name="getting-an-instance-of-the-fingerprintmanager"></a>FingerprintManager의 인스턴스를 시작합니다.
 
-다음으로 응용 프로그램의 인스턴스를 가져올 해야는 `FingerprintManager` 또는 `FingerprintManagerCompat` 클래스입니다. 이전 버전의 Android와 호환 되도록 Android 응용 프로그램 호환성 API를 사용 해야의 Android 지원 v4 NuGet 패키지에서 찾을 수 있습니다. 다음 코드 조각에는 운영 체제에서 적절 한 개체를 가져오는 방법을 보여 줍니다. 
+다음으로, 응용 프로그램의 인스턴스를 가져와야 합니다 `FingerprintManager` 또는 `FingerprintManagerCompat` 클래스입니다. 와 호환 되도록 이전 버전의 Android, Android 응용 프로그램 호환성 API를 사용 해야 Android 지원 v4 NuGet 패키지에서 찾을 수 있습니다. 다음 코드 조각에 운영 체제에서 적절 한 개체를 가져오는 방법을 보여 줍니다. 
 
 ```csharp
 // Using the Android Support Library v4
@@ -49,16 +49,15 @@ FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(cont
 FingerprintManager fingerprintManager = context.GetSystemService(Context.FingerprintService) as FingerprintManager;
 ```  
 
-이전 코드 조각에는 `context` 모든 Android은 `Android.Content.Context`합니다. 일반적으로 인증을 수행 된 활동입니다.
+이전 코드 조각에는 `context` 는 모든 Android `Android.Content.Context`합니다. 일반적으로 인증을 수행 하는 작업입니다.
 
-## <a name="checking-for-eligibility"></a>자격에 대 한 확인 하는 중
+## <a name="checking-for-eligibility"></a>자격 확인
 
-응용 프로그램 지문 인증을 사용할 수 있다는 것을 확인 하려면 몇 가지 검사를 수행 해야 합니다. 전체적으로 응용 프로그램이 확인할 부착 하는 데 사용 하는 5 개의 조건 있습니다.  
- 
+응용 프로그램 지문 인증을 사용할 수 있는지 확인 하려면 몇 가지 검사를 수행 해야 합니다. 전체적으로 응용 프로그램 자격을 확인 하는 데 사용 하는 5 개의 조건  
 
-**API 수준 23** &ndash; 는 지문 Api API 수준 23 이상의 필요 합니다. `FingerprintManagerCompat` 클래스는 API 수준 검사 수에 대 한 줄 바꿈됩니다. 이러한 이유로 사용 하도록 권장 되는 **Android 지원 라이브러리 v4** 및 `FingerprintManagerCompat`; 여기에 이러한 검사 중 하나를 고려 합니다.
+**API 레벨 23** &ndash; 지문 Api API 레벨 23 이상이 필요 합니다. `FingerprintManagerCompat` 클래스는 API 수준 검사를 래핑합니다. 이러한 이유로를 사용 합니다 **Android 지원 라이브러리 v4** 및 `FingerprintManagerCompat`;이 이러한 검사 중 하나를 고려 합니다.
 
-**하드웨어** &ndash; 응용 프로그램이 시작 될 때 처음으로, 지문 스캐너의 현재 상태에 대 한 확인 합니다.
+**하드웨어** &ndash; 응용 프로그램을 처음 시작 되 면 지문 스캐너의 존재 여부 확인 해야 합니다.
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -67,8 +66,8 @@ if (!fingerprintManager.IsHardwareDetected)
     // Code omitted
 }
 ```
-    
-**장치는 보안** &ndash; 사용자 화면 잠금으로 보안이 설정 된 장치를 휴대 해야 합니다. 사용자가 화면 잠금을 사용 하 여 장치를 보호 하지 하는 경우 보안은 응용 프로그램에 중요 한 다음 사용자 사람과 알림을 받는 화면 잠금을 구성 해야 합니다. 다음 코드 조각은이 이전 requiste를 확인 하는 방법을 보여 줍니다.
+
+**장치가 보안 된** &ndash; 사용자 화면 잠금을 사용 하 여 보안 장치에 있어야 합니다. 사용자가 화면 잠금 사용 하 여 장치를 보호 하지 보안 응용 프로그램에 중요 한 경우 다음 사용자 알려야 화면 잠금을 설정 해야 합니다. 다음 코드 조각은이 필수 구성 확인 하는 방법을 보여 줍니다.
 
 ```csharp
 KeyguardManager keyguardManager = (KeyguardManager) GetSystemService(KeyguardService);
@@ -77,7 +76,7 @@ if (!keyguardManager.IsKeyguardSecure)
 }
 ```
 
-**지문을 등록** &ndash; 사용자 운영 체제에 등록 하는 하나 이상의 지문 있어야 합니다. 이 사용 권한 검사는 각 인증 시도 하기 전에 발생 합니다.
+**지문 등록** &ndash; 사용자 운영 체제를 사용 하 여 등록 하는 하나 이상의 지문 있어야 합니다. 이 권한 검사는 각 인증 시도 하기 전에 발생 합니다.
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -88,7 +87,7 @@ if (!fingerprintManager.HasEnrolledFingerprints)
 }
 ```
 
-**사용 권한** &ndash; 응용 프로그램이 응용 프로그램을 사용 하기 전에 사용자 로부터 권한을 요청 해야 합니다. Android 5.0 및 아래에 대 한 사용자는 앱을 설치 조건으로 사용 권한을 부여 합니다. Android 6.0 실행 시 사용 권한을 확인 하는 새 사용 권한 모델을 도입 했습니다. 이 코드 조각은 Android 6.0에 대 한 권한을 확인 하는 방법의 예입니다.
+**사용 권한** &ndash; 응용 프로그램이 응용 프로그램을 사용 하기 전에 사용자 로부터 권한을 요청 해야 합니다. Android 5.0 및 낮은 경우 사용자 앱을 설치 하는 조건으로 사용 권한을 부여 합니다. Android 6.0 런타임 시 사용 권한을 확인 하는 새 권한 모델을 도입 했습니다. 이 코드 조각은 다음과 같습니다. Android 6.0에 대 한 권한을 확인 하는 방법의 예
 
 ```csharp
 // The context is typically a reference to the current activity.
@@ -104,11 +103,9 @@ else
 }
 ```
 
-응용 프로그램 지문 인증을 사용 하고자 하 때마다 3, 4 및 5 조건을 확인 해야 합니다. 응용 프로그램 처음으로 결과 저장 장치에서 실행 되는 처음 두 조건은 체크 인할 수 있습니다 (공유 기본 설정 예를 들어).
+인증 옵션은 사용자가 최상의 사용자 환경을 확인 될 때마다 응용 프로그램 제공 하는 이러한 조건을 모두 확인 합니다. 변경 하거나 해당 장치 또는 운영 체제 업그레이드 지문 인증의 가용성 영향을 줄 수 있습니다. 이러한 검사의 결과 캐시 하려는 경우에 업그레이드 시나리오에 대 한 제공 해야 합니다.
 
-Android 6.0에서 사용 권한 요청 하는 방법에 대 한 자세한 내용은 Android 설명서를 참조 하십시오. [실행 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)합니다.
-
-
+Android 6.0에 대 한 권한 요청 하는 방법에 대 한 자세한 내용은 Android 가이드를 참조 하십시오 [런타임 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
@@ -117,4 +114,4 @@ Android 6.0에서 사용 권한 요청 하는 방법에 대 한 자세한 내용
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
 - [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
 - [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [실행 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)
+- [런타임 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)

@@ -4,15 +4,15 @@ description: 이 문서는 변환 행렬의 세 번째 열을 사용 하 여 큐
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: da5306ed9c301a7229d2fc5e913a4217e844bbba
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116149"
 ---
 # <a name="non-affine-transforms"></a>비 관계 변환
 
@@ -61,6 +61,8 @@ z" = z' / z' = 1
 이 수식에서 원하지 않는 z 값 ' 0이 되 고 있습니다.
 
 z' Persp0·x + Persp1·y Persp2 =
+
+따라서 이러한 값에는 몇 가지 실질적인 제한 사항이 있습니다. 
 
 `Persp2` 0 또는 0이 아니면 셀 일 수 있습니다. 경우 `Persp2` 이 0 이면 z'는 일반적으로 필요 없는 해당 지점 2 차원 그래픽에서 매우 일반적 이므로 및 점 (0, 0)에 대해서는 0입니다. 하는 경우 `Persp2` 하는 경우 일반 성의 손실 없이 0과 같지 않은 `Persp2` 1 고정 됩니다. 예를 들어 확인 된 경우 `Persp2` 나눌 수 있습니다 단순히 행렬의 모든 셀 5는 다음 5 해야 `Persp2` 1 및 결과 동일 합니다.
 
@@ -360,8 +362,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     canvas.Clear();
 
-    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
     float taperFraction = (float)taperFractionSlider.Value;
 
     SKMatrix taperMatrix =
@@ -392,9 +394,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](non-affine-images/tapertransform-small.png "삼중 테이퍼 변환 페이지 스크린샷")](non-affine-images/tapertransform-large.png#lightbox "삼중 테이퍼 변환 페이지 스크린샷")
 
-다른 유형의 일반화 된 비 관계 변환은 다음 기사에서 설명 하는 3D 회전 [3D 회전](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)합니다.
+다른 유형의 일반화 된 비 관계 변환은 다음 기사에서 설명 하는 3D 회전 [ **3D 회전**](3d-rotation.md)합니다.
 
-비 관계 변환 모든 볼록 사변형에 사각형을 변환할 수 있습니다. 이 확인할 합니다 **비 Affine 행렬 표시** 페이지입니다. 매우 유사 합니다 **Affine 행렬 표시** 에서 페이지를 [행렬 변환](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) 네 번째 있는 점을 제외 하 고 문서 `TouchPoint` 비트맵의 네 모퉁이 조작 하는 개체:
+비 관계 변환 모든 볼록 사변형에 사각형을 변환할 수 있습니다. 이 확인할 합니다 **비 Affine 행렬 표시** 페이지입니다. 매우 유사 합니다 **Affine 행렬 표시** 에서 페이지를 [ **매트릭스 변환** ](matrix.md) 네 번째 있는 점을 제외 하 고 문서 `TouchPoint` 네 번째를 조작 하는 개체 비트맵의 모퉁이.
 
 [![](non-affine-images/shownonaffinematrix-small.png "비 Affine 행렬 표시 페이지 스크린샷 삼중")](non-affine-images/shownonaffinematrix-large.png#lightbox "삼중 비 Affine 행렬 표시 페이지 스크린샷")
 
@@ -459,14 +461,14 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 
 오른쪽에 있는 마지막 좌표 지점은 4 4 개의 터치 포인트를 사용 하 여 연결 합니다. 이들은 비트맵의 모서리 중 마지막 좌표입니다.
 
-W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환을 (`S`) 1 픽셀 사각형으로 비트맵 크기를 조정 하기만 하면 됩니다. 두 번째 변환이 비 관계 변환 `N`, 세 번째 유사 변환 이며 `A`합니다. 이전 affine 마찬가지로 있으므로 해당 유사 변환 세 가지 요소에 기반 [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드 및 네 번째 행이 포함 되어 있지는 (a, b) 지점입니다.
+W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환을 `S` 1 픽셀 사각형으로 비트맵 크기를 조정 하기만 하면 됩니다. 두 번째 변환이 비 관계 변환 `N`, 세 번째 유사 변환 이며 `A`합니다. 이전 affine 마찬가지로 있으므로 해당 유사 변환 세 가지 요소에 기반 [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드 및 네 번째 행이 포함 되어 있지는 (a, b) 지점입니다.
 
 합니다 `a` 고 `b` 세 번째 변환이 유사 변환이 있도록 값이 계산 됩니다. 코드는 유사 변환의 역함수 값을 가져옵니다 하 고 오른쪽 아래 모서리를 매핑하는. (A, b) 지점입니다.
 
-3 차원 그래픽을 모방 하는 데 비 관계 변환의 다른 사용이 됩니다. 다음 문서에서는 [3D 회전](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md) 3D 공간에서 2 차원 그래픽을 회전 하는 방법을 참조 하세요.
+3 차원 그래픽을 모방 하는 데 비 관계 변환의 다른 사용이 됩니다. 다음 문서에서는 [ **3D 회전** ](3d-rotation.md) 3D 공간에서 2 차원 그래픽을 회전 하는 방법을 참조 하세요.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

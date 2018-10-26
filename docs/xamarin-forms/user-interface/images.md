@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 47fbe67561ea9150d0fdc0b41eb5c70edbeac75e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f79ee7af9106eea8a4792c0e4bb10c5ad5a367a9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111079"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -21,13 +21,6 @@ _Xamarin.Forms 사용 하 여 플랫폼 이미지를 공유할 수 있습니다 
 이미지는 응용 프로그램 탐색, 유용성 및 브랜딩의 중요 한 부분입니다. Xamarin.Forms 응용 프로그램 수는 각 플랫폼에서 다양 한 이미지를 표시할 수도 있지만 모든 플랫폼 이미지를 공유 해야 합니다.
 
 플랫폼 특정 이미지도 아이콘 및 시작 화면; 필요 이러한 플랫폼별으로 구성 해야 합니다.
-
-이 문서에서는 다음 내용을 다룹니다.
-
-- [ **로컬 이미지** ](#Local_Images) -iOS는 이미지의 높은 DPI 버전 레 티 나, Android 또는 UWP 같은 기본 해상도 확인을 포함 하 여 응용 프로그램을 함께 이미지를 표시 합니다.
-- [ **포함 된 이미지가** ](#Embedded_Images) -어셈블리 리소스로 포함 된 이미지를 표시 합니다.
-- [ **이미지를 다운로드** ](#Downloading_Images) -다운로드 하 고 이미지를 표시 합니다.
-- [ **아이콘 및 시작 화면** ](#Icons_and_splashscreens) -플랫폼별 아이콘 및 시작 이미지입니다.
 
 ## <a name="displaying-images"></a>이미지 표시
 
@@ -49,13 +42,13 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -을 측면을 유지 하면서 표시 영역을 채우도록 이미지를 자릅니다 (ie. 왜곡).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -레터 박스 이미지 (필요한 경우) 여부에 따라 양쪽 위쪽/아래쪽에 추가 공백이 있는 가로 또는 세로 이미지는 전체 이미지에 표시 영역에 적합 한 수 있도록 합니다.
 
-이미지를 로드할 수는 [로컬 파일](#Local_Images_in_Xaml), [포함 리소스](#embedded_images), 또는 [다운로드](#Downloading_Images)합니다.
-
-<a name="Local_Images" />
+이미지를 로드할 수는 [로컬 파일](#Local_Images), [포함 리소스](#embedded-images), 또는 [다운로드](#Downloading_Images)합니다.
 
 ## <a name="local-images"></a>로컬 이미지
 
-이미지 파일 각 응용 프로그램 프로젝트에 추가 하 고 Xamarin.Forms 공유 코드에서 참조할 수 있습니다. 모든 앱에서 단일 이미지를 사용 하 *모든 플랫폼에서 같은 파일 이름을 사용 해야*, 올바른 Android 리소스 이름을 지정 해야 (ie. 소문자, 숫자, 밑줄 및 마침표 수)입니다.
+이미지 파일 각 응용 프로그램 프로젝트에 추가 하 고 Xamarin.Forms 공유 코드에서 참조할 수 있습니다. 이미지를 배포 하는이 메서드는 다양 한 플랫폼을 약간 다른 디자인에 다른 해상도 사용 하는 경우 이미지와 같은 플랫폼 관련을 경우 필요 합니다.
+
+모든 앱에서 단일 이미지를 사용 하 *모든 플랫폼에서 같은 파일 이름을 사용 해야*, 올바른 Android 리소스 이름을 지정 해야 (ie. 소문자, 숫자, 밑줄 및 마침표 수)입니다.
 
 - **iOS** -기본 방식으로 관리 하 고 iOS 9를 사용 하는 것 이므로 이미지를 지원할 **자산 카탈로그 이미지 집합**, 다양 한 장치를 지원 하 고에 대 한 요소를 확장 하는 데 필요한 이미지의 버전 모두를 포함 해야 하는 응용 프로그램입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 - **Android** -이미지를 배치 합니다 **리소스/drawable** 디렉터리 **빌드 작업: AndroidResource**합니다. 이미지의 높은 DPI 및 낮은 버전을 제공할 수 있습니다 (적절 하 게 이름이 **리소스** 같은 하위 디렉터리 **drawable ldpi**에 **drawable hdpi**, 및 **drawable xhdpi**).
@@ -70,7 +63,7 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 <Image Source="waterfront.jpg" />
 ```
 
-해당 하는 C# 코드는 다음과 같습니다.
+에 해당 하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var image = new Image { Source = "waterfront.jpg" };
@@ -88,8 +81,6 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 > [!IMPORTANT]
 > 모든 플랫폼에서 동일한 이미지 파일 이름을 사용 하 여 이름을 모든 플랫폼에서 유효 해야 합니다. Android 드로어 블 명명 제한 – 소문자, 숫자, 밑줄 및 마침표 수 – 있고 플랫폼 간 호환성을 위해이 야 합니다. 다른 모든 플랫폼에서 너무 합니다. 파일 이름 예 **waterfront.png** 규칙은 다음과 같이 있지만 잘못 된 파일 이름의 예입니다 "WaterFront.png", "water front.png" 포함 "water-front.png" 및 "wåterfront.png"입니다.
-
-<a name="Native_Resolutions" />
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>기본 해상도 (Retina 및 높은 DPI)
 
@@ -117,15 +108,13 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 - [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) -는 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 로컬 파일 참조로 설정할 수 있는 속성입니다.
 - [`ImageCell`](xref:Xamarin.Forms.ImageCell) -는 [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) 속성 이미지를 설정할 수 있는 로컬 파일, 포함된 된 리소스 또는 URI에서 검색 합니다.
 
-<a name="embedded_images" />
-
 ## <a name="embedded-images"></a>포함 이미지
 
-포함된 이미지는도 응용 프로그램 (예: 로컬 이미지)와 함께 제공 하지만 파일 리소스 어셈블리에 포함 된 각 응용 프로그램의 파일 구조 이미지에서에서 이미지의 복사본을 대신 합니다. 이미지는 코드를 함께 제공 되는 이미지를 배포 하는이 메서드는 구성 요소를 만드는 데 특히 적합 합니다.
+포함된 이미지는도 응용 프로그램 (예: 로컬 이미지)와 함께 제공 하지만 파일 리소스 어셈블리에 포함 된 각 응용 프로그램의 파일 구조 이미지에서에서 이미지의 복사본을 대신 합니다. 이미지를 배포 하는이 메서드는 각 플랫폼에서 동일한 이미지를 사용할 때 것이 좋습니다 하며 이미지 코드를 함께 제공 되는 대로 구성 요소를 만드는 데 특히 적합입니다.
 
 이미지를 프로젝트에 포함 하려면 마우스 오른쪽 단추를 새 항목을 추가 하 고 추가 하려는 이미지/s를 선택 합니다. 기본적으로 이미지 갖습니다 **빌드 작업: None**;로 설정 해야 **빌드 작업: EmbeddedResource**합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](images-images/vs-buildaction.png "빌드 동작 설정: 포함 리소스")
 
@@ -135,7 +124,7 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 IDE에 연결 하 여이 기본값을 생성 합니다 **기본 Namespace** 파일 이름으로이 프로젝트에 대 한 각 값 사이 마침표 (.)를 사용 하 여 합니다.
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](images-images/xs-buildaction.png "빌드 동작 설정: 포함 리소스")
 
@@ -164,8 +153,6 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 다음 스크린샷은 각 플랫폼에 포함 된 이미지를 표시 하는 결과 보여 줍니다.
 
 [![ResourceImageSource](images-images/resource-sml.png "포함 된 이미지를 표시 하는 응용 프로그램 예제")](images-images/resource.png#lightbox "포함 된 이미지를 표시 하는 응용 프로그램 샘플")
-
-<a name="Embedded_Images_in_Xaml" />
 
 ### <a name="using-xaml"></a>XAML을 사용 하 여
 
@@ -213,8 +200,6 @@ public class ImageResourceExtension : IMarkupExtension
 
 ### <a name="troubleshooting-embedded-images"></a>포함된 이미지 문제 해결
 
-<a name="Debugging_Embedded_Images" />
-
 #### <a name="debugging-code"></a>코드 디버깅
 
 특정 이미지 리소스 로드 되지 이유를 이해 하기 어려운 경우가 있기 때문에 리소스를 올바르게 구성 되었는지 확인 하는 데 응용 프로그램에 일시적으로 다음 디버그 코드를 추가할 수 있습니다. 지정된 된 어셈블리에 포함 된 알려진된 모든 리소스를 출력 합니다 <span class="UIItem">콘솔</span> 리소스 로드 문제를 디버깅 하는 데 있습니다.
@@ -240,8 +225,6 @@ foreach (var res in assembly.GetManifestResourceNames())
 var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
 ```
 
-<a name="Downloading_Images" />
-
 ## <a name="downloading-images"></a>이미지를 다운로드합니다.
 
 다음 XAML과 같이 이미지 표시에 대 한 자동으로 다운로드 수 있습니다.
@@ -259,7 +242,7 @@ var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTy
 </ContentPage>
 ```
 
-해당 하는 C# 코드는 다음과 같습니다.
+에 해당 하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")) };
@@ -276,8 +259,6 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 다음 스크린샷에서 각 플랫폼에서 원격 이미지를 표시 하는 결과 보여 줍니다.
 
 [![다운로드 ImageSource](images-images/download-sml.png "샘플을 다운로드 한 이미지를 표시 하는 응용 프로그램")](images-images/download.png#lightbox "샘플 응용 프로그램을 다운로드 한 이미지를 표시 합니다.")
-
-<a name="Image_Caching" />
 
 ### <a name="downloaded-image-caching"></a>다운로드 한 이미지 캐싱
 
@@ -305,9 +286,7 @@ webImage.Source = new UriImageSource
 
 기본 제공 캐싱 매우 쉽게 하 고 셀 보기로 다시 스크롤될 때 이미지를 다시 로드 하는 주의 하는 기본 제공 캐시, 각 셀에 이미지를 하거나 수 있는 설정 (바인딩) 이미지 목록을 스크롤 하는 등의 시나리오를 지원 합니다.
 
-<a name="Icons_and_splashscreens" />
-
-## <a name="icons-and-splashscreens"></a>아이콘 및 시작 화면
+## <a name="icons-and-splash-screens"></a>아이콘 및 시작 화면
 
 관련이 없는 동안 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 보기, 응용 프로그램 아이콘 및 시작 화면 이미지 Xamarin.Forms 프로젝트에서 사용 하면 중요 한도입니다.
 
@@ -317,9 +296,9 @@ webImage.Source = new UriImageSource
 
 참조를 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)를 [Google의도 해](http://developer.android.com/design/style/iconography.html), 및 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) 이러한 응용 프로그램 리소스를 만드는 대 한 자세한 내용은 합니다.
 
-## <a name="splashscreens"></a>시작 화면
+## <a name="splash-screens"></a>시작 화면
 
-IOS 및 UWP 응용 프로그램 (시작 화면 또는 기본 이미지 라고도 함)는 splashscreen이 필요 합니다.
+IOS 및 UWP 응용 프로그램 (시작 화면 또는 기본 이미지 라고도 함)를 시작 화면이 필요 합니다.
 
 에 대 한 설명서를 참조 하세요 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 하 고 [시작 화면](/windows/uwp/launch-resume/splash-screens/) Windows 개발자 센터에서.
 

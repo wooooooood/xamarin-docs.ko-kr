@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 6de4380f2ce2d19df4ff912b7c86b75ca9e7821b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: cebdd6fafafae7d1cd6258e6200808731e3c4f29
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118814"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms 앱 클래스
 
@@ -79,7 +79,7 @@ public class App : Xamarin.Forms.Application
 
 합니다 `Properties` 사전을 사용 하는 `string` 키 및 저장소는 `object` 값입니다.
 
-예를 들어를 영구적인을 설정할 수 있습니다 `"id"` 코드에서 아무 곳 이나 속성 (항목을 선택할 경우 페이지의 `OnDisappearing` 메서드를 또는 `OnSleep` 메서드)이 같은:
+예를 들어, 설정할 수 있습니다 영구적 `"id"` 코드에서 아무 곳 이나 속성 (항목을 선택할 경우 페이지의 `OnDisappearing` 메서드를 또는 `OnSleep` 메서드) 같이:
 
 ```csharp
 Application.Current.Properties ["id"] = someClass.ID;

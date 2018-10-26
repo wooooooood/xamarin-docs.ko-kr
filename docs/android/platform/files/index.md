@@ -4,15 +4,15 @@ description: 이 가이드에서는 Xamarin.Android에서 파일 액세스에 �
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212203"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116799"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>파일 저장소 및 Xamarin.Android 사용 하 여 액세스
 
@@ -24,7 +24,7 @@ ms.locfileid: "39212203"
 이러한 그룹화는 개념 뿐 및 단일 파티션 또는 장치의 디렉터리에 반드시 참조 하지 않습니다. Android 장치는 항상 내부 및 외부 저장소에 대 한 파티션을 제공 합니다. 특정 장치 여러 파티션으로 간주 되는 외부 저장소에 있을 가능성이 있습니다. 파티션을 읽기에 대 한 Api에 관계 없이 파일을 만들거나를 작성 하는 같습니다. Xamarin.Android 응용 프로그램 파일 액세스에 사용할 수 있는 Api의 두 가지 있습니다.
 
 1. **(Mono에서 제공 하 고 Xamarin.Android에서 래핑될).NET Api** &ndash; 포함 된 [파일 시스템 도우미](~/essentials/file-system-helpers.md?context=xamarin/android) 제공한 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android)합니다. .NET Api는 플랫폼 간 호환성을 제공 하 고 이러한 Api에서이 가이드의 포커스를 같이 사용 됩니다.
-1. **네이티브 Java 파일 액세스 Api (Java 제공한 및 Xamarin.Android에서 래핑된)** &ndash; Java 파일 읽기 및 쓰기에 대 한 자체 Api를 제공 합니다. 이러한 전적으로 허용 하는 대체 방법.NET Api에는 있지만 관련이 있으며 Android 플랫폼 간 수 있는 응용 프로그램에 적합 하지 않습니다.
+1. **네이티브 Java 파일 액세스 Api (Java 제공한 및 Xamarin.Android에서 래핑된)** &ndash; Java 파일 읽기 및 쓰기에 대 한 자체 Api를 제공 합니다. 이러한.NET Api 대안을 완전히 허용 되는 있지만 관련이 있으며 Android 플랫폼 간 수 있는 응용 프로그램에 적합 하지 않습니다.
 
 다른.NET 응용 프로그램에 그대로 읽고 파일에 쓰기는 Xamarin.Android에서 거의 동일 합니다. Xamarin.Android 앱에는 다음 사용 하 여 표준.NET 관용구 파일 액세스에 대 한 파일을 조작할 수는 있는 경로를 결정합니다. Android 버전에서 Android 또는 내부 및 외부 저장소에 실제 경로 장치 마다 다를 수 있으므로 좋지 않습니다 하드 코드 된 파일의 경로를 합니다. 대신, 파일의 경로를 확인 하려면 Xamarin.Android Api를 사용 합니다. 이런 방식으로 파일 읽기 및 쓰기에 대 한.NET Api를 내부 및 외부 저장소에 파일의 경로를 지정 하는 데 도움이 되는 네이티브 Android Api를 노출 합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "39212203"
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>읽기 또는 쓰기를 내부 저장소의 파일
 
-중 하나는 [작성에 대 한 C# Api](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) 파일에는 필요한 모든 것에 할당 된 디렉터리에 있는 파일의 경로 가져오기 하는 것 만으로는 충분는 응용 프로그램입니다. .NET Api의 버전은 수 있는 문제를 최소화 하는 데 사용 되는 비동기 주 스레드를 차단 하는 파일 액세스를 사용 하 여 연결 하는 것이 좋습니다.
+중 하나는 [ C# 작성 하기 위한 Api](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) 파일에는 응용 프로그램에 할당 된 디렉터리에 있는 파일의 경로 필요한 모든 것 만으로는 충분 합니다. .NET Api의 버전은 수 있는 문제를 최소화 하는 데 사용 되는 비동기 주 스레드를 차단 하는 파일 액세스를 사용 하 여 연결 하는 것이 좋습니다.
 
 이 코드 조각은 다음과 같습니다. 응용 프로그램의 내부 저장소 디렉터리에 utf-8 텍스트 파일에는 정수를 작성 하는 한 가지 예
 

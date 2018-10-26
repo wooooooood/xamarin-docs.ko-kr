@@ -4,21 +4,21 @@ description: SkiaSharp 사용 하 여 대화형으로 설명 하는 자르기 �
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 3dd9011d19e77f52d1fe89a37e4d992c23c72ab1
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 653904da37354db52ef6bbd303355e98ddc1582f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122636"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
 합니다 [ **만들고 그리기 SkiaSharp 비트맵** ](drawing.md) 하는 방법을 설명 하는 문서를 `SKBitmap` 개체를 전달할 수는 `SKCanvas` 생성자입니다. 비트맵에 렌더링 되는 캔버스 원인 그래픽 라는 모든 그리기 메서드. 이러한 그리기 메서드를 포함 `DrawBitmap`, 즉,이 기술은 한 비트맵의 전체 또는 일부 다른 비트맵 아마도 사용 하 여 전송 적용 되는 변환을 허용함.
 
-비트맵을 호출 하 여 자르기에 대 한 해당 기법을 사용할 수는 [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 소스 및 대상 사각형을 사용 하 여 메서드:
+비트맵을 호출 하 여 자르기에 대 한 해당 기법을 사용할 수는 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 소스 및 대상 사각형을 사용 하 여 메서드:
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
@@ -744,7 +744,7 @@ public partial class PhotoPuzzlePage3 : ContentPage
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` 비트맵을 캡슐화 하는 Xamarin.Forms 기본 형식이입니다. 다행 스럽게도 SkiaSharp 비트맵 Xamarin.Forms에서 SkiaSharp 비트맵 변환할 수 있습니다. **SkiaSharp.Views.Forms** 어셈블리 정의 [ `SKBitmapImageSource` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKBitmapImageSource/) 에서 파생 된 클래스 `ImageSource` SkiaSharp을 따라 만들 수 있습니다 하지만 `SKBitmap` 개체입니다. `SKBitmapImageSource` 간의 변환도 정의 `SKBitmapImageSource` 및 `SKBitmap`, 및는 어떻게 `SKBitmap` 개체 Xamarin.Forms 비트맵으로 배열에 저장 됩니다:
+`ImageSource` 비트맵을 캡슐화 하는 Xamarin.Forms 기본 형식이입니다. 다행 스럽게도 SkiaSharp 비트맵 Xamarin.Forms에서 SkiaSharp 비트맵 변환할 수 있습니다. **SkiaSharp.Views.Forms** 어셈블리 정의 [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) 에서 파생 된 클래스 `ImageSource` SkiaSharp을 따라 만들 수 있습니다 하지만 `SKBitmap` 개체입니다. `SKBitmapImageSource` 간의 변환도 정의 `SKBitmapImageSource` 및 `SKBitmap`, 및는 어떻게 `SKBitmap` 개체 Xamarin.Forms 비트맵으로 배열에 저장 됩니다:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
@@ -762,5 +762,5 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

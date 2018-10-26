@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: d005d6c5e1dcfe7e9bcff44b308cea0ce7ab73e9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998656"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113354"
 ---
 # <a name="available-assemblies"></a>사용 가능한 어셈블리
 
@@ -21,16 +21,17 @@ Xamarin 플랫폼 ABI를 다른 프로필에 대 한 컴파일된 기존 어셈�
 
 세 가지 모드에서 Xamarin.Mac 응용 프로그램을 컴파일할 수 있습니다: Mobile Profile 큐 레이트의 Xamarin을 사용 하는, Xamarin.Mac.NET 4.5 Framework 수 있게 하는 기존 전체 데스크톱 어셈블리, 대상 및 시스템 Mono에서에서.NET API를 사용 하는 지원 되지 않는 항목을 찾을 수 설치 합니다. 자세한 내용은 참조 하십시오 우리의 [대상 프레임 워크](~/mac/platform/target-framework.md) 설명서.
 
-
 ## <a name="net-standard-libraries"></a>.NET 표준 라이브러리
 
 IOS, Android 및 Mac 하는 것 외에도 바인딩을 Xamarin 프로젝트에서 사용할 수 있습니다 [.NET Standard 라이브러리](~/cross-platform/app-fundamentals/net-standard.md)합니다.
 
 ## <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리
- 
+
 Xamarin 프로젝트를 사용할 수도 [.NET 이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)이지만.NET Standard를 위해이 기술을 사용 되지 않습니다.
 
 ## <a name="supported-assemblies"></a>지원 되는 어셈블리
+
+이들은에서 사용할 수 있는 어셈블리를 **참조 관리자 > 어셈블리 > 프레임 워크** (Visual Studio 2017) 및 **참조 편집 > 패키지** (Mac 용 Visual Studio)와 호환성 Xamarin 플랫폼입니다.
 
 > [!div class="mx-tdCol2BreakAll"]
 > |Assembly|API 호환성|Xamarin iOS|Xamarin Android|Xamarin Mac|
@@ -78,4 +79,4 @@ Xamarin 프로젝트를 사용할 수도 [.NET 이식 가능한 클래스 라이
 > |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
 > |Mono.CompilerServices.&#8203;SymbolWriter.dll|컴파일러 작성자입니다.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |시스템입니다. &#8203;Drawing.dll|System.Drawing API-클래식 API만 합니다. System.Drawing은 Xamarin.Mac.NET 4.5 또는 모바일 프레임 워크에 대 한 통합 API에서 지원 되지 않습니다. IOS 및 OS X을 사용 하 여 System.Drawing 지원을 추가할 수 있습니다 합니다 [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) 라이브러리|✓| |✓|
+> |시스템입니다. &#8203;Drawing.dll|System.Drawing은 Xamarin.Mac,.NET 4.5, 또는 모바일 프레임 워크에 대 한 통합 API에서 지원 되지 않습니다. IOS 및 macOS를 사용 하 여 System.Drawing 지원을 추가할 수 있습니다 합니다 [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) 라이브러리|✓| |✓|

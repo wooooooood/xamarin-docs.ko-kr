@@ -4,21 +4,21 @@ description: 이 문서에서는 코드를 사용 하 여 Xamarin.iOS 앱에 대
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 688457ab25398e8c5b9848a7e58f6163db4c0a05
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109538"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
 IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 일반적으로 하나의 창을 가져옵니다 비슷하지만 채울 수 창 사용 하 여 많은 개체가 필요한 개체 및 배열은 어떤 앱에 따라 변경할 수 있습니다 및 표시 하려고 하는 대로 합니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 빌드하려면 뷰는 서로 위에 쌓인 콘텐츠 뷰 계층 구조에서 및 단일 뷰 컨트롤러에서 관리 하는 계층입니다. 여러 화면이 있는 응용 프로그램은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 응용 프로그램은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
@@ -26,7 +26,7 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 그러나 사용 하 여 이러한 뷰 계층 구조를 생성할 수 있습니다 합니다 [iOS 용 Xamarin 디자이너](~/ios/user-interface/designer/index.md) Visual Studio에서는 것이 좋습니다 코드에서 완전히 작동 하는 방법에 대 한 기본적인 이해 해야 합니다. 이 문서에서는 몇 가지 기본 사항을 시작 및 코드 전용 사용자 인터페이스 개발을 사용 하 여 실행 안내 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
@@ -38,7 +38,7 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 ## <a name="creating-a-code-only-project"></a>코드 전용 프로젝트 만들기
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="ios-blank-project-template"></a>iOS 빈 프로젝트 템플릿
 
@@ -54,14 +54,13 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 [![프로젝트 파일](ios-code-only-images/empty-project.w157-sml.png "프로젝트 파일")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-
 1. **AppDelegate.cs** -포함 된 `UIApplicationDelegate` 서브 클래스에서 `AppDelegate` 는 iOS에서 응용 프로그램 이벤트를 처리 하는 데 사용 됩니다. 응용 프로그램 창은 합니다 `AppDelegate`의 `FinishedLaunching` 메서드.
 1. **Main.cs** -클래스를 지정 하는 응용 프로그램에 대 한 진입점을 포함 한를 `AppDelegate` 입니다.
 1. **Info.plist** -응용 프로그램 구성 정보를 포함 하는 속성 목록 파일.
 1. **Entitlements.plist** – 응용 프로그램의 권한과 기능에 대 한 정보를 포함 하는 속성 목록 파일입니다.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>iOS 템플릿
 
@@ -72,20 +71,20 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
 
 
 1. 단일 뷰 앱 템플릿을 사용 하 여 새 iOS 프로젝트를 만듭니다.
-    
+
     [![](ios-code-only-images/single-view-app.png "단일 뷰 앱 템플릿 사용")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. 삭제 된 `Main.Storyboard` 고 `ViewController.cs` 파일입니다. 수행 **되지** 삭제 된 `LaunchScreen.Storyboard`합니다. 뷰 컨트롤러 스토리 보드에서 만든 뷰 컨트롤러에 대 한 코드 숨김 이므로 삭제 해야 합니다.
 1. 선택 되어 있는지 확인 **삭제** 팝업 대화 상자에서:
-    
+
     [![](ios-code-only-images/delete.png "팝업 대화 상자에서 삭제를 선택 합니다.")](ios-code-only-images/delete.png#lightbox)
 
 1. Info.plist의 내부의 정보를 삭제 합니다 **배포 정보 > 주 인터페이스** 옵션:
-    
+
     [![](ios-code-only-images/main-interface.png "주 인터페이스 옵션 내에서 정보를 삭제 합니다.")](ios-code-only-images/main-interface.png#lightbox)
 
 1. 마지막으로 다음 코드를 추가 하면 `FinishedLaunching` AppDelegate 클래스의 메서드:
-        
+
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             // create a new window instance based on the screen size
@@ -102,9 +101,7 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
 
 -----
 
-
-
-사용 하 여 iOS 응용 프로그램은 빌드된 합니다 [MVC 패턴](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller)합니다. 응용 프로그램에 표시 되는 첫 번째 화면은 창의 루트 뷰 컨트롤러에서 생성 됩니다. 참조 된 [Hello, iOS 멀티 스크린](~/ios/get-started/hello-ios-multiscreen/index.md) MVC에 대 한 자세한 내용은 패턴 자체에 대 한 가이드입니다.
+사용 하 여 iOS 응용 프로그램은 빌드된 합니다 [MVC 패턴](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#model-view-controller-mvc)합니다. 응용 프로그램에 표시 되는 첫 번째 화면은 창의 루트 뷰 컨트롤러에서 생성 됩니다. 참조 된 [Hello, iOS 멀티 스크린](~/ios/get-started/hello-ios-multiscreen/index.md) MVC에 대 한 자세한 내용은 패턴 자체에 대 한 가이드입니다.
 
 에 대 한 구현을 `AppDelegate` 추가 하 여 템플릿 창을 만듭니다. 응용 프로그램에서의 며 모든 iOS 응용 프로그램에 대 한 하나만 하 고 다음 코드를 사용 하 여 표시 되도록 설정:
 
@@ -207,17 +204,17 @@ public class AppDelegate : UIApplicationDelegate
 
  [![](ios-code-only-images/image2.png "탐색 컨트롤러 내에 중첩 된 컨트롤러")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-controller"></a>뷰 컨트롤러를 만들기
+## <a name="creating-a-view-vontroller"></a>보기 vontroller 만들기
 
 이제 살펴보았으므로 다음으로 컨트롤러를 추가 하는 방법의 `RootViewController` 창의 코드에서 사용자 지정 뷰 컨트롤러를 만드는 방법을 확인해 보겠습니다.
 
 라는 새 클래스 추가 `CustomViewController` 아래와 같이:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](ios-code-only-images/customviewcontroller.w157-sml.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](ios-code-only-images/new-file.png "CustomViewController 라는 새 클래스 추가")](ios-code-only-images/new-file.png#lightbox)
 
@@ -236,8 +233,6 @@ namespace CodeOnlyDemo
     }
 }
 ```
-
-<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>뷰를 초기화합니다.
 
@@ -413,7 +408,7 @@ submitButton.Layer.CornerRadius = 5f;
 이러한 변경으로 뷰는 다음과 같이 표시 됩니다.
 
 [![](ios-code-only-images/image6.png "뷰는 예제 실행")](ios-code-only-images/image6.png#lightbox)
- 
+
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>뷰 계층 구조에 뷰 여러 개 추가
 
 여러 뷰를 사용 하 여 계층 구조 보기를 추가 하는 기능을 제공 하는 iOS `AddSubviews`합니다.
@@ -424,7 +419,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>단추 기능 추가
 
-단추를 클릭할 때 사용자에 게 어떤 항목을 예상 됩니다. 예를 들어, 경고가 표시 됩니다 또는 다른 화면으로 탐색이 수행 됩니다. 
+단추를 클릭할 때 사용자에 게 어떤 항목을 예상 됩니다. 예를 들어, 경고가 표시 됩니다 또는 다른 화면으로 탐색이 수행 됩니다.
 
 두 번째 뷰 컨트롤러를 탐색 스택으로 푸시 하려면 일부 코드를 추가 하겠습니다.
 
@@ -470,7 +465,7 @@ foreach(var subview in View.Subviews)
 
 가로 방향으로 장치를 회전할 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게 다음 스크린 샷에서 같이:
 
- [![](ios-code-only-images/image7.png "가로 방향으로 장치를 회전할 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게")](ios-code-only-images/image7.png#lightbox)
+[![](ios-code-only-images/image7.png "가로 방향으로 장치를 회전할 경우 컨트롤 크기가 조정 되지 않습니다 적절 하 게")](ios-code-only-images/image7.png#lightbox)
 
 이 문제를 해결 하는 한 가지 방법은 설정 된 경우는 `AutoresizingMask` 각 보기에는 속성입니다. 이 경우 하려고 컨트롤을 수평으로 확장 하므로 각 설정할 것 `AutoresizingMask`입니다. 다음 예제는 `usernameField`, 있지만 뷰 계층 구조에서 각 가젯은 적용할 수는 동일 합니다.
 
@@ -480,7 +475,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 이제 장치 또는 시뮬레이터를 회전 하는 것 모두 확장을 채우는 추가 공간을 아래와 같이:
 
- [![](ios-code-only-images/image8.png "모든 컨트롤을 추가 공간을 채우도록 확장")](ios-code-only-images/image8.png#lightbox)
+[![](ios-code-only-images/image8.png "모든 컨트롤을 추가 공간을 채우도록 확장")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>사용자 지정 뷰 만들기
 
@@ -585,19 +580,19 @@ submitButton.TouchUpInside += delegate
 
 이제 응용 프로그램을 실행 하 고 전송 단추 탭을 원을 사용 하 여 새 뷰에 표시 됩니다.
 
- [![](ios-code-only-images/circles.png "원을 사용 하 여 새 뷰가 표시 됩니다.")](ios-code-only-images/circles.png#lightbox)
+[![](ios-code-only-images/circles.png "원을 사용 하 여 새 뷰가 표시 됩니다.")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>시작 화면 만들기
 
-A [시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md) 앱 응답성이 뛰어난 임을 사용자에 게 표시 하는 방법으로 시작 하는 경우에 표시 됩니다. 앱이 로드 될 때에 시작 화면이 표시 되 면 되므로 응용 프로그램은 여전히 메모리로 로드 되 면 코드에서 다시 만들 수 없습니다 것입니다. 
+A [시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md) 앱 응답성이 뛰어난 임을 사용자에 게 표시 하는 방법으로 시작 하는 경우에 표시 됩니다. 앱이 로드 될 때에 시작 화면이 표시 되 면 되므로 응용 프로그램은 여전히 메모리로 로드 되 면 코드에서 다시 만들 수 없습니다 것입니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-경우에 Visual Studio, 시작 화면에서에서 프로젝트에 있는.xib 파일의 형식에 대 한 제공 iOS 만들기 합니다 **리소스** 프로젝트 내의 폴더입니다. 
+Visual Studio에서 iOS 프로젝트를 만들면 시작 화면으로 제공 됩니다.xib 파일에서 찾을 수 있는 형태로 합니다 **리소스** 프로젝트 폴더입니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-경우에 Mac, 시작 화면 스토리 보드 파일의 형식에 대 한 제공에 대 한 Visual Studio에서 iOS 프로젝트를 만듭니다. 
+Mac 용 Visual Studio에서 iOS 프로젝트를 만들면 시작 화면에서 스토리 보드 파일 형식으로 제공 됩니다.
 
 -----
 
@@ -613,7 +608,7 @@ Apple에.xib 또는 스토리 보드 파일은 iOS 8을 대상으로 하는 응�
 > [!IMPORTANT]
 > Apple는 iOS 9 기준으로 시작 화면을 만드는 기본 방법으로 스토리 보드를 사용 해야 하는 권장 합니다.
 
-### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>사전 iOS에 대 한 시작 이미지 8 응용 프로그램 만들기
+### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>시작 이미지를 사전 iOS 8 응용 프로그램 만들기
 
 이전의 iOS 8 버전의 응용 프로그램을 대상으로 하는 경우 정적 이미지를.xib 또는 시작 화면 스토리 보드를 실행 하는 것 외에도 사용할 수 있습니다. 
 
@@ -622,22 +617,17 @@ Apple에.xib 또는 스토리 보드 파일은 iOS 8을 대상으로 하는 응�
 > [!IMPORTANT]
 > 앱에 시작 화면이 없는 경우 화면을 맞지 않는 완벽 하 게 확인할 수 있습니다. 이 경우 해야 적어도 라는 640 x 1136 이미지를 포함 하려면 `Default-568@2x.png` info.plist 합니다. 
 
-
-
 ## <a name="summary"></a>요약
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 이 문서에서는 Visual Studio에서 프로그래밍 방식으로 iOS 응용 프로그램을 개발 하는 방법을 설명 합니다. 살펴보았습니다, 빈 프로젝트 템플릿에서 프로젝트를 빌드하는 방법을 만들고 창에는 루트 보기 컨트롤러를 추가 하는 방법을 설명 합니다. 그런 다음 응용 프로그램 화면을 개발 하려면 컨트롤러 내 보기 계층 구조를 만들 UIKit의 컨트롤을 사용 하는 방법을 살펴보았습니다. 보기 수 있도록 레이아웃 적절 하 게 다른 방향으로 방법과 서브클래싱하 여 사용자 지정 보기를 만드는 방법에 살펴보았습니다 검사한 다음 `UIView`방법, 컨트롤러 내 보기를 로드 합니다. 마지막으로 응용 프로그램에 시작 화면을 추가 하는 방법을 살펴보았습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 이 문서에서는 mac 용 Visual Studio에서 프로그래밍 방식으로 iOS 응용 프로그램을 개발 하는 방법 설명 살펴보았습니다 단일 보기 템플릿에서 프로젝트를 빌드하는 방법을 만들고 창에는 루트 보기 컨트롤러를 추가 하는 방법을 설명 합니다. 그런 다음 응용 프로그램 화면을 개발 하려면 컨트롤러 내 보기 계층 구조를 만들 UIKit의 컨트롤을 사용 하는 방법을 살펴보았습니다. 보기 수 있도록 레이아웃 적절 하 게 다른 방향으로 방법과 서브클래싱하 여 사용자 지정 보기를 만드는 방법에 살펴보았습니다 검사한 다음 `UIView`방법, 컨트롤러 내 보기를 로드 합니다. 마지막으로 응용 프로그램에 시작 화면을 추가 하는 방법을 살펴보았습니다.
 
 -----
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -5,13 +5,14 @@ ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: conceptdev
 ms.author: crdun
+ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: 65ba1915a2a968a14f0ce21bcada76e1b83531b0
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270662"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105833"
 ---
 # <a name="net-standard-library-code-sharing"></a>.NET 표준 라이브러리 코드 공유
 
@@ -27,7 +28,7 @@ Xamarin 및.NET Core를 포함 하 여 모든.NET 플랫폼에 대 한 균일 �
 
 ### <a name="creating-a-net-standard-library"></a>.NET 표준 라이브러리 만들기
 
-.NET Standard 라이브러리를 솔루션에 추가 매우 단순 합니다.
+다음이 단계를 사용 하 여 솔루션에.NET Standard 라이브러리를 추가할 수 있습니다.
 
 1. 에 **새 프로젝트 추가** 대화 상자에서 선택 합니다 **.NET Core** 범주 선택한 후 **.NET 표준 라이브러리**:
 
@@ -86,6 +87,10 @@ Xamarin 및.NET Core를 포함 하 여 모든.NET 플랫폼에 대 한 균일 �
 ![.NET 표준 라이브러리 참조](net-standard-images/vs04.png "Visual Studio에서 참조 노드를 마우스 오른쪽 단추로 클릭 하 고 참조 추가... 선택한 표시 된 것 처럼 솔루션 프로젝트 탭으로 전환")
 
 -----
+
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET standard 및.NET 개발자 (비디오)에 대 한 Xamarin.Forms
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## <a name="related-links"></a>관련 링크
 

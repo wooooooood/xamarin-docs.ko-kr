@@ -4,15 +4,15 @@ description: 순차적으로 일련의 비트맵을 표시 하 고 애니메이�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 45a009757d84aa98acc41f6cd2bf672c8472c5bb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 78fcbae8db70a83d7d0a643e0b27f575152e9515
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112560"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
@@ -498,15 +498,15 @@ public partial class MainPage : ContentPage
 
 애니메이션된 GIF 파일의 프레임을 추출 하려면 SkisSharp 사용 하지 않는 것 어디서 나 문서화 대 한 설명은 아래 코드는 평소 보다 더 자세한 이므로:
 
-페이지의 생성자에서 발생 하 고는 애니메이션된 GIF 파일 디코딩 합니다 `Stream` 비트맵을 참조 하는 개체를 만드는 데 사용할를 `SKManagedStream` 개체 차례로 [ `SKCodec` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/) 개체입니다. 합니다 [ `FrameCount` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameCount/) 속성 애니메이션을 구성 하는 프레임의 수를 나타냅니다. 
+페이지의 생성자에서 발생 하 고는 애니메이션된 GIF 파일 디코딩 합니다 `Stream` 비트맵을 참조 하는 개체를 만드는 데 사용할를 `SKManagedStream` 개체 차례로 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 개체입니다. 합니다 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) 속성 애니메이션을 구성 하는 프레임의 수를 나타냅니다. 
 
 이러한 프레임 생성자를 사용 하므로 결과적으로 개별 비트맵으로 저장 됩니다 `FrameCount` 형식의 배열을 할당할 `SKBitmap` 두 뿐만 아니라 `int` 누적 된 기간 동안 각 프레임의와 (보다 쉽게 애니메이션 논리) 배열 재생 시간입니다.
 
-합니다 [ `FrameInfo` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameInfo/) 속성을 `SKCodec` 클래스는 배열을 [ `SKCodecFrameInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodecFrameInfo/) 값, 각 프레임을 하지만이 프로그램은 해당 구조에서 유일한 항목에 대 한이를 [ `Duration` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodecFrameInfo.Duration/) 프레임의 시간 (밀리초)입니다.
+합니다 [ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo) 속성을 `SKCodec` 클래스는 배열을 [ `SKCodecFrameInfo` ](xref:SkiaSharp.SKCodecFrameInfo) 값, 각 프레임을 하지만이 프로그램은 해당 구조에서 유일한 항목에 대 한이를 [ `Duration` ](xref:SkiaSharp.SKCodecFrameInfo.Duration) 프레임의 시간 (밀리초)입니다.
 
-`SKCodec` 라는 속성을 정의 [ `Info` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.Info/) 형식의 [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/)하지만 `SKImageInfo` 값을 나타냅니다 (적어도이 이미지에 대 한) 색 형식이 `SKColorType.Index8`, 즉 각 픽셀이 색 유형으로 인덱스 됩니다. 색상표를 사용 하지 않으려면 프로그램을 사용 하는 [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Width/) 하 고 [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Height/) 컬러를 소유 하는 정보를 생성 하는 구조는 `ImageInfo` 값. 각 `SKBitmap` 에서 만들어집니다.
+`SKCodec` 라는 속성을 정의 [ `Info` ](xref:SkiaSharp.SKCodec.Info) 형식의 [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo)하지만 `SKImageInfo` 값을 나타냅니다 (적어도이 이미지에 대 한) 색 형식이 `SKColorType.Index8`, 즉 각 픽셀이 색 유형으로 인덱스 됩니다. 색상표를 사용 하지 않으려면 프로그램을 사용 하는 [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) 하 고 [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) 컬러를 소유 하는 정보를 생성 하는 구조는 `ImageInfo` 값. 각 `SKBitmap` 에서 만들어집니다.
 
-합니다 `GetPixels` 메서드의 `SKBitmap` 반환을 `IntPtr` 해당 비트맵의 픽셀 비트를 참조 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. `IntPtr` 중 하나에 전달 되는 [ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCodec.GetPixels/p/SkiaSharp.SKImageInfo/System.IntPtr/SkiaSharp.SKCodecOptions/) 메서드의 `SKCodec`합니다. 해당 메서드에 복사 프레임 GIF 파일에서 참조 하는 메모리 공간을 `IntPtr`입니다. 합니다 [ `SKCodecOptions` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCodecOptions.SKCodecOptions/p/System.Int32/System.Boolean/) 생성자 프레임 수를 나타냅니다.
+합니다 `GetPixels` 메서드의 `SKBitmap` 반환을 `IntPtr` 해당 비트맵의 픽셀 비트를 참조 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. `IntPtr` 중 하나에 전달 되는 [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) 메서드의 `SKCodec`합니다. 해당 메서드에 복사 프레임 GIF 파일에서 참조 하는 메모리 공간을 `IntPtr`입니다. 합니다 [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) 생성자 프레임 수를 나타냅니다.
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -657,6 +657,6 @@ public partial class AnimatedGifPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Mandelbrot 애니메이션 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)

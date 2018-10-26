@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1017f108d6808155cac84e98a811a30d09afa134
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: a7acb300dbbd6daa02eace955066d3227834cf67
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986085"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103077"
 ---
 # <a name="colors-in-xamarinforms"></a>Xamarin.Forms의 색
 
@@ -53,7 +53,7 @@ var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accen
 
 사용 된 `Default` 기본값으로 다시 플랫폼 (각 속성에 대 한 각 플랫폼에서 다른 기본 색을 나타내는 이해) 색 값을 설정 (또는 다시 설정).
 
-개발자 설정 하려면이 값을 사용할 수는 `Color` 해야 하지만 **하지** 의 구성 요소 RGB 값 (해당 하는 모든-1로 설정)에 대해이 인스턴스를 쿼리 합니다.
+개발자 설정 하려면이 값을 사용할 수는 `Color` 해야 하지만 **하지** (해당 하는 모든-1로 설정) 구성 요소 RGB 값에 대해이 인스턴스를 쿼리 합니다.
 
 ## <a name="colortransparent"></a>Color.Transparent
 

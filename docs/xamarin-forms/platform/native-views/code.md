@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ad633f49c1c448529fa4c2b50483ec233c1ee841
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996196"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112401"
 ---
 # <a name="native-views-in-c"></a>C#의 네이티브 뷰
 
@@ -20,7 +20,7 @@ _C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 iOS, Android 및 UWP�
 
 ## <a name="overview"></a>개요
 
-허용 하는 모든 Xamarin.Forms 컨트롤 `Content` 을 설정 하려면 않았거나는 `Children` 컬렉션 플랫폼 특정 뷰를 추가할 수 있습니다. 예를 들어, iOS `UILabel` 에 직접 추가할 수 있습니다 합니다 [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) 속성 또는 합니다 [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) 컬렉션. 그러나이 기능을 사용 해야는 `#if` Xamarin.Forms 공유 프로젝트 솔루션에서 정의 하 고 Xamarin.Forms.NET Standard 라이브러리 솔루션에서 사용할 수 없습니다.
+허용 하는 모든 Xamarin.Forms 컨트롤 `Content` 를 설정할 수 있는 또는 `Children` 컬렉션 플랫폼 특정 뷰를 추가할 수 있습니다. 예를 들어, iOS `UILabel` 에 직접 추가할 수 있습니다 합니다 [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) 속성 또는 합니다 [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) 컬렉션. 그러나이 기능을 사용 해야는 `#if` Xamarin.Forms 공유 프로젝트 솔루션에서 정의 하 고 Xamarin.Forms.NET Standard 라이브러리 솔루션에서 사용할 수 없습니다.
 
 다음 스크린샷은 플랫폼별 뷰는 Xamarin.Forms에 추가 된 것을 보여 줍니다 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 

@@ -1,18 +1,18 @@
 ---
 title: 좌표 이동 변환
-description: 이 examiens Xamarin.Forms 응용 프로그램에서 SkiaSharp 그래픽 이동할 좌표 이동 변환 사용 방법 문서 및 샘플 코드를 사용 하 여이 보여 줍니다.
+description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSharp 그래픽 이동할 좌표 이동 변환을 사용 하는 방법을 검사 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 02361b5b2d00015ce168c075dc19522b6c04e446
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 2171c8f0b2926a645fb98df52bae2391449bf89c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615448"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120933"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
@@ -24,19 +24,19 @@ SkiaSharp에서 변환의 가장 간단한 유형이 합니다 *변환* 또는 *
 
 ![](translate-images/translateexample.png "조각, 및 번역을 사용 하 여 볼록 텍스트 그림자")
 
-합니다 [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/System.Single/System.Single/) 메서드에서 `SKCanvas` 가로 및 세로로 이동할 이후에 그려지는 그래픽 개체는 두 매개 변수가:
+합니다 [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) 메서드에서 `SKCanvas` 가로 및 세로로 이동할 이후에 그려지는 그래픽 개체는 두 매개 변수가:
 
 ```csharp
 public void Translate (Single dx, Single dy)
 ```
 
-이러한 인수는 음수일 수 있습니다. 두 번째 [ `Translate` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Translate/p/SkiaSharp.SKPoint/) 메서드는 단일에서 두 변환 값을 결합 `SKPoint` 값:
+이러한 인수는 음수일 수 있습니다. 두 번째 [ `Translate` ](xref:SkiaSharp.SKCanvas.Translate(SkiaSharp.SKPoint)) 메서드는 단일에서 두 변환 값을 결합 `SKPoint` 값:
 
 ```csharp
 public void Translate (SKPoint point)
 ```
 
-**변환 누적** 페이지를 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 프로그램의 여러 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 됩니다. 합니다 [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 동일한 영역의 20 버전을 표시 하는 클래스, 각각 오프셋 이전 사각형에서 충분 대각선을 따라 stretch 있습니다 있도록 합니다. 다음은 `PaintSurface` 이벤트 처리기:
+**변환 누적** 페이지를 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 프로그램의 여러 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 됩니다. 합니다 [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 동일한 영역의 20 버전을 표시 하는 클래스, 각각 오프셋 이전 사각형에서 충분 대각선을 따라 stretch 있습니다 있도록 합니다. 다음은 `PaintSurface` 이벤트 처리기:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -132,13 +132,15 @@ using (SKPaint textPaint = new SKPaint())
 
 첫 번째 예제에서는 호출 `Translate` 다시 하지만 음의 값을 사용 합니다. 때문에 `Translate` 호출은 누적, 단순히이 호출 시퀀스 0의 기본값으로 총 번역을 복원 합니다.
 
-두 번째 예제에서는 호출 [ `ResetMatrix` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ResetMatrix()/)합니다. 이렇게 하면 모든 변환 기본 상태로 돌아갑니다.
+두 번째 예제에서는 호출 [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix)합니다. 이렇게 하면 모든 변환 기본 상태로 돌아갑니다.
 
-상태를 저장 하는 세 번째 예제는의 합니다 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Save()/) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Restore/)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 하 고 `Restore` 스택 처럼 함수를 호출: 호출할 수 있습니다 `Save` 여러 시간 및 호출 `Restore` 반대로 이전 상태를 반환할 시퀀스입니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RestoreToCount/) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.SaveCount/) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
+상태를 저장 하는 세 번째 예제는 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](xref:SkiaSharp.SKCanvas.Save) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 하 고 `Restore` 스택 처럼 함수를 호출: 호출할 수 있습니다 `Save` 여러 시간 및 호출 `Restore` 반대로 이전 상태를 반환할 시퀀스입니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
+
+사용할 수도 있습니다는 [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) 캔버스 상태를 복원 하기 위한 클래스입니다. 이 클래스의 생성자에서 호출 될 것을 `using` 문; 캔버스 상태가 끝날 때 자동으로 복원 되는 `using` 블록. 
 
 그러나 한 호출에서 가져올 변환에 걱정할 필요가 없습니다를 `PaintSurface` 다음 처리기입니다. 호출할 때마다 새 `PaintSurface` 에 새로 제공 `SKCanvas` 기본 변환 사용 하 여 개체입니다.
 
-또 다른 일반적인 용도 `Translate` 시각적 개체는 렌더링 원래 만들어진 것 그리기에 대 한 편리한는 좌표를 사용 하 여 변환입니다. 예를 들어, 다음 지점 (0, 0)에 center를 사용 하 여 아날로그 시계의 좌표를 지정 하는 것이 좋습니다. 사용할 수 있습니다 다음 변환 표시 하려는 위치. 에 설명 되어이 [**Hendecagram 배열**] 페이지입니다. [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) 클래스를 만들어 시작을 `SKPath` 11 가리킨 스타는 개체입니다. `HendecagramPath` 다른 데모 프로그램에서 액세스할 수 있도록 개체는 public, 정적 및 읽기 전용으로 정의 됩니다. 정적 생성자에 생성 됩니다.
+또 다른 일반적인 용도 `Translate` 시각적 개체는 렌더링 원래 만들어진 것 그리기에 대 한 편리한는 좌표를 사용 하 여 변환입니다. 예를 들어, 다음 지점 (0, 0)에 center를 사용 하 여 아날로그 시계의 좌표를 지정 하는 것이 좋습니다. 사용할 수 있습니다 다음 변환을 시계를 표시 하려면 원하는 위치. 이 기술은에 설명 되어는 [**Hendecagram 배열**] 페이지입니다. [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs) 클래스를 만들어 시작을 `SKPath` 11 가리킨 스타는 개체입니다. `HendecagramPath` 다른 데모 프로그램에서 액세스할 수 있도록 개체는 public, 정적 및 읽기 전용으로 정의 됩니다. 정적 생성자에 생성 됩니다.
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -263,7 +265,7 @@ public class HendecagramAnimationPage : ContentPage
 }
 ```
 
-`angle` 필드 애니메이션이 적용 되어 0에서 360도 5 초 마다. `PaintSurface` 처리기에서 사용 합니다 `angle` 두 가지 방법으로 속성: 색의 색상을 지정 하는 `SKColor.FromHsl` 메서드를 및 인수로 `Math.Sin` 및 `Math.Cos` 별의 위치를 제어 하는 방법:
+`angle` 필드 애니메이션이 적용 되어 0도에서 360도 5 초 마다. `PaintSurface` 처리기에서 사용 합니다 `angle` 두 가지 방법으로 속성: 색의 색상을 지정 하는 `SKColor.FromHsl` 메서드를 및 인수로 `Math.Sin` 및 `Math.Cos` 별의 위치를 제어 하는 방법:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage
@@ -302,5 +304,5 @@ public class HendecagramAnimationPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

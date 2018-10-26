@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 86de2ad6009365b3debbe1a2310651002b023219
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995569"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106431"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Xamarin.Forms ControlTemplate에서 바인딩
 
@@ -156,13 +156,24 @@ public class HomePageCS : ContentPage
 }
 ```
 
+바인딩할 수도 있습니다 보기 모델 속성에 직접 선언 하지 않아도 되도록 `BindableProperty`에 대 한 `HeaderText` 및 `FooterText` 에 `ContentPage`, 컨트롤 템플릿 Parent.BindingContext 바인딩하여. _PropertyName_ 예를 들어:
+
+```xaml
+<ControlTemplate x:Key="TealTemplate">
+  <Grid>
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.HeaderText}" ... />
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.FooterText}" ... />
+  </Grid>
+</ControlTemplate>
+```
+
 ViewModels 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [에서 데이터에 대 한 바인딩을 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)합니다.
 
 ## <a name="summary"></a>요약
 
 이 문서 컨트롤 템플릿에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여 줍니다. 쉽게 변경 될 컨트롤 템플릿의 컨트롤에에서 대 한 속성 값을 사용 하도록 설정 하면 public 속성에 데이터를 컨트롤 템플릿의 컨트롤에에서 바인딩할 템플릿 바인딩을 허용 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

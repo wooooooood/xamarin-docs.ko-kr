@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Mac 응용 프로그램 앱 스토어�
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e6cfd39260b76c5097d8faa24f406f45681ac8d
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250960"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123780"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.Mac 앱 샌드 박싱
 

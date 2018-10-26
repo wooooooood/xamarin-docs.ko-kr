@@ -3,15 +3,15 @@ title: .NET 포함
 description: '.NET 포함 기존.NET 코드 (C#, F # 및 다른) 다른 프로그래밍 언어로 작성 된 코드에서 사용할 수 있습니다.'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 16f59498a49d10a43e04989136d8835bf78bd89d
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107146"
 ---
 # <a name="net-embedding"></a>.NET 포함
 

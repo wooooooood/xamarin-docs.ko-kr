@@ -4,15 +4,15 @@ description: 이 섹션에는 Xamarin.Android에서 로컬 알림을 구현 하�
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117683"
 ---
 <a name="compatibility"></a>
 
@@ -22,11 +22,11 @@ _이 섹션에는 Xamarin.Android에서 로컬 알림을 구현 하는 방법을
 
 ## <a name="local-notifications-overview"></a>로컬 알림 개요
 
-Android는 사용자에 게 알림 아이콘 및 알림 정보를 표시 하는 것에 대 한 시스템 제어 방식의 두 가지 영역을 제공 합니다. 먼저 알림을 게시, 해당 아이콘에 표시 됩니다는 *알림 영역*다음 스크린 샷과 같이:
+Android는 사용자에 게 알림 아이콘 및 알림 정보를 표시 하는 것에 대 한 시스템 제어 방식의 두 가지 영역을 제공 합니다. 먼저 알림을 게시, 해당 아이콘에 표시 됩니다는 *알림 영역*다음 스크린샷에 표시 된 것 처럼:
 
 ![장치에서 알림 영역 예제](local-notifications-images/01-notification-shade.png)
 
-알림에 대 한 세부 정보를 가져오려면 사용자 (각 알림 아이콘 표시 알림 콘텐츠 확장)이 표시 되는 알림 서랍을 열 수는 알림과 관련 된 모든 작업을 수행 하 고 있습니다. 다음 스크린샷은 *알림 서랍* 위에 표시 알림 영역에 해당 하는:
+알림에 대 한 세부 정보를 가져오려면 사용자 (각 알림 아이콘 표시 알림 콘텐츠 확장)이 표시 되는 알림 서랍을 열 수는 알림과 관련 된 모든 작업을 수행 하 고 있습니다. 다음 스크린 샷에 표시 된 *알림 서랍* 위에 표시 알림 영역에 해당 하는:
 
 [![세 가지 알림을 표시 하는 예제 알림 서랍](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -64,11 +64,11 @@ Android 알림을 두 종류의 레이아웃을 사용합니다.
 
 ![간단한 알림 사진](local-notifications-images/04-simple-notification-photo.png)
 
-Android 5.0부터, 알림 나타날 수도 있습니다는 잠금 화면에서:
+Android 5.0부터, 알림 나타날 수도 있습니다 잠금 화면에서:
 
 [![잠금 화면 알림 예제](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-사용자 수 두 번 눌러서 장치의 잠금을 해제 하 고 해당 알림을 발생 하는 앱으로 이동 하려면 잠금 화면 알림 또는 안쪽으로 살짝 밀어 알림을 해제 합니다. 앱의 잠금 화면에 표시 되는 내용을 제어 하는 알림의 표시 수준을 설정할 수 있습니다 하 고 사용자의 잠금 화면 알림을 표시할 중요 한 콘텐츠를 허용할 것인지를 선택할 수 있습니다.
+사용자 수 두 번 눌러서 잠금 화면 알림 장치를 잠금 해제 하 고 해당 알림을 발생 하는 앱으로 이동 하거나 안쪽으로 살짝 밀어 알림을 해제 합니다. 앱 잠금 화면에 보이는 것을 제어 하는 알림의 표시 수준을 설정할 수 있습니다 하 고 사용자의 화면 잠금 알림을 표시할 중요 한 콘텐츠를 허용할 것인지를 선택할 수 있습니다.
 
 Android 5.0 호출 우선 순위가 높은 알림 표시 형식을 도입 *헤 즈 업*합니다. 헤 즈 업 알림 몇 초간 화면 맨 위에서 아래로 슬라이드 및 알림 영역에 백업 후퇴 후:
 
@@ -76,11 +76,11 @@ Android 5.0 호출 우선 순위가 높은 알림 표시 형식을 도입 *헤 �
 
 헤 즈 업 알림 수 있도록 시스템 현재 실행 중인 활동의 상태를 중단 하지 않고 사용자 앞에 중요 한 정보를 배치 하는 UI에 대 한 합니다.
 
-Android는 알림을 정렬 하 고 지능적으로 표시 될 수 있도록 알림 메타 데이터에 대 한 지원을 포함 합니다. 알림 메타 데이터는 또한 알림을 헤드업 형식에는 잠금 화면에 표시 되는 방식을 제어 합니다. 응용 프로그램 다음과 같은 유형의 알림 메타 데이터를 설정할 수 있습니다.
+Android는 알림을 정렬 하 고 지능적으로 표시 될 수 있도록 알림 메타 데이터에 대 한 지원을 포함 합니다. 알림 메타 데이터는 또한 헤드업 형식 및 잠금 화면에서 알림 표시 되는 방식을 제어 합니다. 응용 프로그램 다음과 같은 유형의 알림 메타 데이터를 설정할 수 있습니다.
 
 -   **우선 순위** &ndash; 우선 순위 수준을 알림은 제공 된 방법 및 시기를 결정 합니다. 예를 들어에 Android 5.0에서 우선 순위가 높은 알림 헤드업 알림으로 표시 됩니다.
 
--   **표시 여부** &ndash; 알림 콘텐츠 양에 잠금 화면에 알림을 표시 될 때 표시할를 지정 합니다.
+-   **표시 여부** &ndash; 알림이 잠금 화면에 나타날 때 표시 될 알림 콘텐츠의 양을 지정 합니다.
 
 -   **범주** &ndash; 시스템에 장치가 표시 되는 경우와 같은 다양 한 상황에서 알림 메시지를 처리 하는 방법에 알립니다 *방해 금지* 모드입니다.
 
@@ -117,7 +117,7 @@ Android 8.0 oreo (용)부터 사용할 수는 *알림 채널* 알림 표시 하�
 
 [![Android Oreo에서 YouTube에 대 한 알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
-이러한 각 범주는 알림 채널에 해당합니다. YouTube 앱을 구현 하는 한 **알림을 다운로드** 채널 및 **일반 알림** 채널입니다. 사용자가 탭 **알림을 다운로드**, 알림 채널을 다운로드 하는 앱에 대 한 설정 화면을 표시 하는:
+이러한 각 범주는 알림 채널에 해당합니다. YouTube 앱을 구현 하는 한 **다운로드 알림을** 채널 및 **일반 알림** 채널입니다. 사용자가 탭 **알림을 다운로드**, 알림 채널을 다운로드 하는 앱에 대 한 설정 화면을 표시 하는:
 
 [![YouTube 앱에 대 한 알림 화면 다운로드](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
@@ -662,9 +662,9 @@ Xamarin.Android 알림 표시 유형 설정에 대 한 다음과 같은 열거�
 
 -   `NotificationVisibility.Public` &ndash; 알림의 전체 콘텐츠를 보안 잠금 화면에 표시 됩니다.
 
--   `NotificationVisibility.Private` &ndash; 중요 한 정보만 (예: 알림 아이콘 및 게시 하는 앱의 이름)는 보안 잠금 화면에 표시 됩니다 있지만 알림의 세부 정보 나머지는 숨겨집니다. 기본적으로 모든 알림 `NotificationVisibility.Private`합니다.
+-   `NotificationVisibility.Private` &ndash; 보안 잠금 화면 (예: 알림 아이콘 및 게시 하는 앱의 이름)에 중요 한 정보만 표시 됩니다 있지만 알림의 세부 정보 나머지는 숨겨집니다. 기본적으로 모든 알림 `NotificationVisibility.Private`합니다.
 
--   `NotificationVisibility.Secret` &ndash; 보안 잠금 화면 알림 아이콘도에 아무 내용도 표시 됩니다. 알림 콘텐츠는 사용자는 장치의 잠금을 해제 한 후에 사용할 수 있습니다.
+-   `NotificationVisibility.Secret` &ndash; 아무 것도 보안 잠금 화면에서 알림 아이콘도 표시 됩니다. 알림 콘텐츠는 사용자는 장치의 잠금을 해제 한 후에 사용할 수 있습니다.
 
 앱 호출 알림의 표시 유형을 설정 하려면 합니다 `SetVisibility` 메서드를 `NotificationCompat.Builder` 개체, 표시 유형 설정을 전달 합니다. 예를 들어,이 호출은 `SetVisibility` 알림을 통해 `Private`:
 
@@ -676,7 +676,7 @@ builder.SetVisibility (NotificationVisibility.Private);
 
 ![장치 알림 메시지를 잠금 해제](local-notifications-images/25-lockscreen-private.png)
 
-이 예에서 **NotificationsLab** 원래 앱의 이름입니다. 알림의 교정된이 버전은의 잠금 화면 안전한 경우에 표시 됩니다 (즉, PIN, 패턴 또는 암호를 통해 보안 됨) &ndash; 알림의 전체 콘텐츠는 잠금 화면에 수의 잠금 화면에 보안이 설정 되지 않으면.
+이 예에서 **NotificationsLab** 원래 앱의 이름입니다. 알림 모드이 버전은 잠금 화면 안전한 경우에 표시 됩니다 (즉, PIN, 패턴 또는 암호를 통해 보안 됨) &ndash; 잠금 화면에 보안이 설정 되지 않으면 알림의 전체 콘텐츠는 잠금 화면에서 사용할 수 있습니다.
 
 
 ### <a name="category-settings"></a>범주 설정
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 이 예제에서는 앱의 **대상 프레임 워크** Android 5.0으로 설정 되어 하며 **최소 Android 버전** 로 설정 되어 **Android 4.1 (API 레벨 16)** 합니다. 때문에 `SetCategory` 는 API 수준 21 이상에서 사용할 수 있는,이 예제 코드를 호출 합니다 `SetCategory` 경우에 사용할 수 있습니다 &ndash; 호출 하지 `SetCategory` API 수준 21 보다 작은 경우.
 
 
-### <a name="lockscreen-visibility"></a>잠금 화면 표시
+### <a name="lock-screen-visibility"></a>잠금 화면 표시
 
-Android Android 5.0 (API 수준 21) 하기 전에 잠금 화면 알림을 지원 하지 않았기 때문에 `NotificationCompat.Builder` 지원 하지 않습니다는 `SetVisibility` 메서드. 위에서 설명한 것 처럼 `SetCategory`, 코드는 런타임 및 호출 API 수준을 확인할 수 있습니다 `SetVisiblity` 경우에 사용할 수 있습니다.
+Android (API 수준 21), Android 5.0 이전 화면 잠금 알림을 지원 하지 않았기 때문에 `NotificationCompat.Builder` 지원 하지 않습니다는 `SetVisibility` 메서드. 위에서 설명한 것 처럼 `SetCategory`, 코드는 런타임 및 호출 API 수준을 확인할 수 있습니다 `SetVisiblity` 경우에 사용할 수 있습니다.
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {

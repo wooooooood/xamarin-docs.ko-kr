@@ -4,15 +4,15 @@ description: 이 문서에서는 windows 및 Xamarin.Mac 응용 프로그램에�
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
+ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "40251112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106977"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.Mac의 Windows
 
@@ -347,14 +347,14 @@ using Foundation;
 
 namespace SourceWriter
 {
-    public class EditorWidowDelegate : NSWindowDelegate
+    public class EditorWindowDelegate : NSWindowDelegate
     {
         #region Computed Properties
         public NSWindow Window { get; set;}
         #endregion
 
         #region constructors
-        public EditorWidowDelegate (NSWindow window)
+        public EditorWindowDelegate (NSWindow window)
         {
             // Initialize
             this.Window = window;
@@ -427,7 +427,7 @@ namespace SourceWriter
 
 ```csharp
 // Set delegate
-Window.Delegate = new EditorWidowDelegate(Window);
+Window.Delegate = new EditorWindowDelegate(Window);
 ```
 
 ### <a name="saving-changes-before-closing-the-app"></a>앱을 닫기 전에 변경 내용을 저장
@@ -489,7 +489,7 @@ void NewDocument (NSObject sender) {
 
 열겠습니다 경우 합니다 **Windows** 메뉴에서 응용 프로그램은 자동으로 추적 및 처리는 열려 있는 창을 볼 수 있습니다.
 
-[![](window-images/display05.png "Widows 메뉴")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "Windows 메뉴")](window-images/display05.png#lightbox)
 
 Xamarin.Mac 응용 프로그램에서 작업 메뉴에 대 한 자세한 내용은 참조 하십시오 우리의 [메뉴를 사용 하 여 작업](~/mac/user-interface/menu.md) 설명서.
 
@@ -759,7 +759,7 @@ void OpenDialog (NSObject sender)
 4. 두 번 클릭 하 여 `DocumentPanel.xib` Interface Builder에서 편집 하기 위해 열려는 파일: 
 
     [![](window-images/new02.png "pannel 편집")](window-images/new02.png#lightbox)
-5. 패널을 끌어서 기존 창을 삭제 합니다 **라이브러리 검사기** 에 합니다 **인터페이스 편집기**: 
+5. 패널을 끌어서 기존 창을 삭제 합니다 **라이브러리 검사기** 에 **인터페이스 편집기**: 
 
     [![](window-images/panels01.png "기존 창을 삭제")](window-images/panels01.png#lightbox)
 6. 최대 패널을 연결 합니다 **파일의 소유자** - **창** - **콘센트**: 

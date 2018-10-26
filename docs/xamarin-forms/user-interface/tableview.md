@@ -6,13 +6,13 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 47cd79611cfeaf48c0422772d8f3e75eb57ba771
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/04/2018
+ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119998"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -216,7 +216,67 @@ C# 위에서 수행 하는 많은 합니다. 알아봅시다.
 
 사용자 지정 셀에 대 한 클래스 정의 되지 않은 참고 합니다. 대신 합니다 `ViewCell`의 뷰 속성의 특정 인스턴스에 대해 `ViewCell`합니다.
 
+## <a name="row-height"></a>행 높이
 
+합니다 [ `TableView` ](xref:Xamarin.Forms.TableView) 클래스에 셀의 행 높이 변경 하려면 사용할 수 있는 두 가지 속성이 있습니다.
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) – 각 행의 높이 `int`합니다.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) – 행 경우 다양 한 높이 `true`합니다. 이 속성을 설정 하는 경우 사용자에 게 유의 `true`, 행 높이가 자동으로 계산 및 Xamarin.Forms에서 적용 됩니다.
+
+경우에 셀 콘텐츠의 높이 [ `TableView` ](xref:Xamarin.Forms.TableView) 변경 되 면 행 높이가 Android 및 유니버설 Windows 플랫폼 (UWP)에서 암시적으로 업데이트 됩니다. 그러나 iOS에서이 해야 해야만 설정 하 여 업데이트 합니다 [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) 속성을 `true` 호출 하 여 합니다 [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) 메서드.
+
+다음 XAML 예제를 [ `TableView` ](xref:Xamarin.Forms.TableView) 포함 하는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+경우는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 를 탭 할는 `OnViewCellTapped` 이벤트 처리기가 실행:
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+합니다 `OnViewCellTapped` 이벤트 처리기 표시 하거나 숨깁니다. 두 번째 [ `Label` ](xref:Xamarin.Forms.Label) 에 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)를 명시적으로 호출 하 여 셀의 크기를 업데이트 하 고는 [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) 메서드.
+
+다음 스크린샷에서 시 탭 되 고 이전 셀을 표시 합니다.
+
+![](tableview-images/cell-beforeresize.png "크기가 조정 되기 전의 ViewCell")
+
+다음 스크린샷에서 시 탭 되 후 셀을 표시 합니다.
+
+![](tableview-images/cell-afterresize.png "ViewCell 크기가 조정 된 후")
+
+> [!IMPORTANT]
+> 이 기능은 초과 사용 되 면 강력한 성능 저하가 발생할 수가 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
