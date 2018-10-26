@@ -4,15 +4,15 @@ description: 이 문서에서는 Mac용 Visual Studio 또는 Visual Studio 2017�
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/09/2018
-ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118905"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -26,14 +26,14 @@ ms.locfileid: "34785520"
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio
 - Xcode 9.0 이상
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - 최신 버전의 Visual Studio
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치

@@ -5,45 +5,45 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: 81a15f85c3b3b10525e2eb4966900edc95224fe0
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+author: lobrien
+ms.author: laobri
+ms.date: 09/02/2018
+ms.openlocfilehash: f79a509e3122cbccbe6bf10040f8143432c9d66c
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "43780538"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello, Mac – 연습
 
-Xamarin.Mac을 사용하면 *Objective-C* 및 *Xcode*에서 개발할 때 사용되는 동일한 OS X 라이브러리 및 인터페이스 컨트롤을 사용하여 C# 및 .NET에서 완전한 네이티브 Mac 앱을 개발할 수 있습니다. Xamarin.Mac이 Xcode와 직접 통합되므로 개발자는 Xcode의 _Interface Builder_를 사용하여 앱의 사용자 인터페이스를 만들 수 있습니다(또는 필요에 따라 C# 코드에서 바로 작성).
+Xamarin.Mac을 사용하면 *Objective-C* 또는 *Swift*에서 개발할 때 사용되는 동일한 macOS API를 사용하여 C# 및 .NET에서 완전한 네이티브 Mac 앱을 개발할 수 있습니다. Xamarin.Mac이 Xcode와 직접 통합되므로 개발자는 Xcode의 _Interface Builder_를 사용하여 앱의 사용자 인터페이스를 만들 수 있습니다(또는 필요에 따라 C# 코드에서 바로 작성).
 
-또한 Xamarin.Mac 응용 프로그램은 C# 및 .NET으로 작성되므로 각 플랫폼에 기본 경험을 제공하면서도 공통적인 백 엔드 코드를 Xamarin.iOS 및 Xamarin.Android 모바일 앱과 공유할 수 있습니다.
+또한 Xamarin.Mac 응용 프로그램은 C# 및 .NET으로 작성되므로, 각 플랫폼에 기본 환경을 제공하면서 Xamarin.iOS 및 Xamarin.Android 모바일 앱과 코드를 공유할 수 있습니다.
 
 이 문서에서는 단추 클릭 횟수를 계산하는 간단한 **Hello, Mac** 앱을 빌드하는 프로세스를 살펴보면서 Xamarin.Mac, Mac용 Visual Studio 및 Xcode의 Interface Builder를 사용하여 Mac 앱을 만드는 데 필요한 핵심 개념을 소개합니다.
 
-[![](hello-mac-images/run02.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png#lightbox)
 
 다음 개념을 다룹니다.
 
--  **Mac용 Visual Studio** – Mac용 Visual Studio를 소개하고 Mac용 Visual Studio를 사용하여 Xamarin.Mac 응용 프로그램을 만드는 방법을 설명합니다.
--  **Xamarin.Mac 응용 프로그램 분석** – Xamarin.Mac 응용 프로그램의 구성 요소를 살펴봅니다.
--  **Xcode의 Interface Builder** - Xcode의 Interface Builder를 사용하여 앱의 사용자 인터페이스를 정의하는 방법을 알아봅니다.
--  **출선 및 작업** - 출선 및 작업을 사용하여 사용자 인터페이스에서 컨트롤을 연결하는 방법을 알아봅니다.
--  **배포/테스트** – Xamarin.Mac 앱을 실행하고 테스트하는 방법을 알아봅니다.
+- **Mac용 Visual Studio** – Mac용 Visual Studio를 소개하고 Mac용 Visual Studio를 사용하여 Xamarin.Mac 응용 프로그램을 만드는 방법을 설명합니다.
+- **Xamarin.Mac 응용 프로그램 분석** – Xamarin.Mac 응용 프로그램의 구성 요소를 살펴봅니다.
+- **Xcode의 Interface Builder** - Xcode의 Interface Builder를 사용하여 앱의 사용자 인터페이스를 정의하는 방법을 알아봅니다.
+- **출선 및 작업** - 출선 및 작업을 사용하여 사용자 인터페이스에서 컨트롤을 연결하는 방법을 알아봅니다.
+- **배포/테스트** – Xamarin.Mac 앱을 실행하고 테스트하는 방법을 알아봅니다.
 
 ## <a name="requirements"></a>요구 사항
 
-최신 macOS API를 사용하여 Xamarin.Mac 앱을 개발하려면 다음이 필요합니다.
+Xamarin.Mac 응용 프로그램 개발에는 다음이 필요합니다.
 
 - macOS High Sierra(10.13) 이상을 실행하는 Mac 컴퓨터
 - [Xcode 9 이상](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
-- 최신 버전의 [Xamarin.Mac 및 Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation).
+- 최신 버전의 [Xamarin.Mac 및 Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 Xamarin.Mac으로 빌드된 응용 프로그램을 실행하려면 다음이 필요합니다.
 
-- Mac OS X 10.7 이상을 실행하는 Mac 컴퓨터.
+- macOS 10.7 이상을 실행하는 Mac 컴퓨터.
 
 > [!WARNING]
 > 예정된 Xamarin.Mac 4.8 릴리스는 macOS 10.9 이상만 지원합니다.
@@ -53,51 +53,45 @@ Xamarin.Mac으로 빌드된 응용 프로그램을 실행하려면 다음이 필
 
 위에서 언급했듯이, 이 가이드에서는 주 창에 단일 단추 및 레이블을 추가하는 `Hello_Mac`이라는 Mac 앱을 만드는 단계를 설명합니다. 단추를 클릭하면 레이블에 단추 클릭 횟수가 표시됩니다.
 
-시작하려면 다음을 수행합니다.
+시작하려면 다음 단계를 수행합니다.
 
 1. Mac용 Visual Studio 시작:
 
-    [![](hello-mac-images/setup01.png "Mac용 Visual Studio 기본 인터페이스")](hello-mac-images/setup01.png#lightbox)
+    [![](hello-mac-images/setup01-sml.png "Mac용 Visual Studio 기본 인터페이스")](hello-mac-images/setup01.png#lightbox)
 
-2. 화면의 왼쪽 위 모서리에서 **새 솔루션...** 링크를 클릭하여 **새 프로젝트** 대화 상자를 엽니다.
+2. **새 프로젝트...** 단추를 클릭하여 **새 프로젝트** 대화 상자를 연 이후에 **Mac** > **앱** > **Cocoa 앱**을 선택하고 **다음** 단추를 클릭합니다.
 
-    [![](hello-mac-images/setup03.png "Mac용 Visual Studio에서 새 솔루션 만들기")](hello-mac-images/setup02.png#lightbox)
+    [![](hello-mac-images/setup02-sml.png "Cocoa 앱 선택")](hello-mac-images/setup02.png#lightbox)
 
-3. **Mac** > **앱** > **Cocoa 앱**을 선택하고 **다음** 단추를 클릭합니다.
+3. **앱 이름**으로 `Hello_Mac`을 입력하고, 나머지는 기본값을 유지합니다. **다음**을 클릭합니다.
 
-    [![](hello-mac-images/setup03.png "Cocoa 앱 선택")](hello-mac-images/setup03.png#lightbox)
+    [![](hello-mac-images/setup03-sml.png "앱 이름 설정")](hello-mac-images/setup03.png#lightbox)
 
-4. **앱 이름**으로 `Hello_Mac`을 입력하고, 나머지는 기본값을 유지합니다. **다음**을 클릭합니다.
+4. 컴퓨터에서 새 프로젝트의 위치를 확인합니다.
 
-    [![](hello-mac-images/setup05.png "앱 이름 설정")](hello-mac-images/setup05.png#lightbox)
-
-4. 여러 다양한 프로젝트를 저장하는 솔루션을 만들 때 개발자는 다른 **솔루션 이름**을 설정하고 싶겠지만, 여기서는 이 예제의 목적 달성을 위해 기본값인 **Project Name**으로 둡니다.
-
-    [![](hello-mac-images/setup04.png "새 솔루션 세부 정보 확인")](hello-mac-images/setup04.png#lightbox)
+    [![](hello-mac-images/setup04-sml.png "새 솔루션 세부 정보 확인")](hello-mac-images/setup04.png#lightbox)
 
 5. **만들기** 단추를 클릭합니다.
 
 Mac용 visual Studio가 새 Xamarin.Mac 앱을 만들고 앱의 솔루션에 추가되는 기본 파일을 표시합니다.
 
- [![](hello-mac-images/project01.png "새 솔루션 기본 보기")](hello-mac-images/project01.png#lightbox)
+[![](hello-mac-images/project01-sml.png "새 솔루션 기본 보기")](hello-mac-images/project01.png#lightbox)
 
-Mac용 Visual Studio는 **솔루션** 및 **프로젝트**를 Visual Studio와 똑같은 방식으로 사용합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등을 포함할 수 있습니다. 여기서는 Mac용 Visual Studio가 솔루션과 응용 프로그램 프로젝트를 자동으로 만들었습니다.
-
-원하는 경우 개발자는 일반적인 공유 코드를 포함하는 하나 이상의 코드 라이브러리 프로젝트를 만들 수 있습니다. 이러한 라이브러리 프로젝트는 표준.NET 응용 프로그램과 동일한 방식으로 앱의 프로젝트에서 사용하거나 다른 Xamarin.Mac 앱 프로젝트(또는 코드 형식에 따라 Xamarin.iOS 및 Xamarin.Android)와 공유할 수 있습니다.
+Mac용 Visual Studio는 Visual Studio 2017과 동일한 **솔루션** 및 **프로젝트** 구조를 사용합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등을 포함할 수 있습니다. **파일 > 새 프로젝트** 템플릿은 솔루션 및 응용 프로그램 프로젝트를 자동으로 만듭니다.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Xamarin.Mac 응용 프로그램 분석
 
-iOS 프로그래밍에 익숙한 경우 수많은 유사성을 발견할 수 있습니다. 사실, iOS는 Mac에서 사용하는 Cocoa를 경량화한 버전인 CocoaTouch 프레임워크를 사용하므로 수많은 개념이 서로 겹칩니다.
+Xamarin.Mac 응용 프로그램 프로그래밍은 Xamarin.iOS 작업과 매우 유사합니다. iOS는 Mac에서 사용하는 Cocoa를 경량화한 버전인 CocoaTouch 프레임워크를 사용합니다.
 
 프로젝트의 파일을 살펴보세요.
 
--   `Main.cs` - 앱의 진입점을 포함합니다. 앱이 실행되면 첫 번째 클래스와 실행되는 메서드를 포함합니다.
--   `AppDelegate.cs` – 이 파일은 운영 체제의 이벤트를 수신하는 일을 담당하는 기본 앱 클래스를 포함합니다.
--   `Info.plist` – 이 파일은 응용 프로그램 이름, 아이콘 등의 앱 속성을 포함합니다.
--   `Entitlements.plist` - 이 파일은 앱에 대한 권리를 포함하며 샌드박싱 및 iCloud 지원 같은 것들에 대한 액세스를 허용합니다.
--  `Main.storyboard` – 앱의 사용자 인터페이스(Windows 및 Menus)를 정의하고 Segues를 통해 Windows 간 상호 연결을 배치합니다. 스토리보드는 보기의 정의(사용자 인터페이스 요소)를 포함하는 XML 파일입니다. 이 파일은 Xcode의 Interface Builder 내에서 만들고 유지 관리할 수 있습니다.
--   `ViewController.cs` – 주 창에 대한 컨트롤러입니다. 컨트롤러에 대한 자세한 내용은 다른 문서에서 다루기로 하고, 지금은 특정 보기의 주 엔진이라고 생각하시면 됩니다.
--   `ViewController.designer.cs` – 이 파일은 기본 화면의 사용자 인터페이스와 통합하도록 도와주는 배관 코드를 포함합니다.
+- **Main.cs**에는 앱의 주요 진입점이 포함됩니다. 앱이 시작되면 `Main` 클래스에 실행되는 첫 번째 메서드가 포함됩니다.
+- **AppDelegate.cs**에는 운영 체제의 이벤트 수신을 담당하는 `AppDelegate` 클래스가 포함됩니다.
+- **Info.plist**에는 응용 프로그램 이름, 아이콘 등의 앱 속성이 포함됩니다.
+- **Entitlements.plist**에는 앱에 대한 자격이 포함되며, 이 파일은 샌드박싱 및 iCloud 지원 같은 항목에 대한 액세스를 허용합니다.
+- **Main.storyboard**는 앱의 사용자 인터페이스(Windows 및 Menus)를 정의하고 Segues를 통해 Windows 간 상호 연결을 배치합니다. 스토리보드는 보기의 정의(사용자 인터페이스 요소)를 포함하는 XML 파일입니다. 이 파일은 Xcode의 Interface Builder 내에서 만들고 유지 관리할 수 있습니다.
+- **ViewController.cs**는 주 창에 대한 컨트롤러입니다. 컨트롤러에 대한 자세한 내용은 다른 문서에서 다루기로 하고, 지금은 특정 보기의 주 엔진이라고 생각하시면 됩니다.
+- **ViewController.designer.cs**에는 기본 화면의 사용자 인터페이스와 통합하도록 도와주는 배관 코드가 포함됩니다.
 
 다음 섹션에서는 이러한 파일 중 일부를 간략하게 살펴보겠습니다. 자세한 내용은 나중에 살펴보기로 하고, 여기서는 기본 사항을 알아보겠습니다.
 
@@ -114,14 +108,14 @@ using ObjCRuntime;
 
 namespace Hello_Mac
 {
-        class MainClass
+    class MainClass
+    {
+        static void Main (string[] args)
         {
-                static void Main (string[] args)
-                {
-                        NSApplication.Init ();
-                        NSApplication.Main (args);
-                }
+            NSApplication.Init ();
+            NSApplication.Main (args);
         }
+    }
 }
 ```
 
@@ -165,7 +159,7 @@ namespace Hello_Mac
 
 Cocoa(및 Cocoa에서 파생된 CocoaTouch)는 *MVC(모델 보기 컨트롤러)* 패턴을 사용합니다. `ViewController` 선언은 실제 앱 창의 개체 컨트롤을 나타냅니다. 일반적으로 생성되는 모든 창(그리고 창 내부의 여러 것들)에는 창을 표시하고, 창에 새 보기(컨트롤)를 추가하는 등 창 수명 주기를 담당하는 컨트롤러가 있습니다.
 
-`ViewController` 클래스는 주 창의 컨트롤러입니다. 즉, 주 창의 수명 주기를 관리합니다. 자세한 내용은 나중에 알아보기로 하고, 지금은 간략하게 살펴보겠습니다.
+`ViewController` 클래스는 주 창의 컨트롤러입니다. 이 컨트롤러는 주 창의 수명 주기를 관리합니다. 자세한 내용은 나중에 알아보기로 하고, 지금은 간략하게 살펴보겠습니다.
 
 ```csharp
 using System;
@@ -203,7 +197,7 @@ namespace Hello_Mac
 
 ### <a name="viewcontrollerdesignercs"></a>ViewController.Designer.cs
 
-주 창 클래스의 디자이너 파일이 지금은 비어 있지만, Xcode 내부에서 Interface Builder를 사용하여 사용자 인터페이스를 만들면 Mac용 Visual Studio가 자동으로 디자이너 파일을 채웁니다.
+주 창 클래스의 디자이너 파일은 처음에 비어 있지만, Xcode Interface Builder를 사용하여 사용자 인터페이스를 만들면 Mac용 Visual Studio가 자동으로 디자이너 파일을 채웁니다.
 
 ```csharp
 // WARNING
@@ -226,7 +220,7 @@ namespace Hello_Mac
 }
 ```
 
-Mac용 Visual Studio가 자동으로 디자이너 파일을 관리하고 앱의 창 또는 보기에 추가된 컨트롤에 대한 액세스를 허용하는 필수 배관 코드를 제공하므로, 개발자는 일반적으로 디자이너 파일에 대해 신경을 쓰지 않아도 됩니다.
+Mac용 Visual Studio가 자동으로 디자이너 파일을 관리하여 앱의 창 또는 보기에 추가된 컨트롤에 대한 액세스를 허용하는 배관 코드를 제공하므로, 디자이너 파일은 직접 편집할 수 없습니다.
 
 Xamarin.Mac 앱 프로젝트를 만들고 구성 요소에 대한 기본적인 내용을 알아보았으니, Xcode로 넘어가서 Interface Builder를 사용하여 사용자 인터페이스를 만들겠습니다.
 
@@ -244,7 +238,7 @@ Xamarin.Mac 앱 프로젝트를 만들고 구성 요소에 대한 기본적인 �
 
 [![](hello-mac-images/entitlements01.png "Mac용 Visual Studio 자격 편집기")](hello-mac-images/entitlements01.png#lightbox)
 
-Hello World 예제에서는 자격이 필요 없습니다. 다음 섹션에서는 Xcode의 Interface Builder를 사용하여 `Main.storyboard` 파일을 편집하고 Xamarin.Mac 앱의 UI를 정의하는 방법을 보여줍니다.
+Hello World 예제에서는 자격이 필요 없습니다. 다음 섹션에서는 Xcode의 Interface Builder를 사용하여 **Main.storyboard** 파일을 편집하고 Xamarin.Mac 앱의 UI를 정의하는 방법을 보여줍니다.
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 및 Interface Builder 소개
 
@@ -254,7 +248,7 @@ Apple에서는 Xcode의 일부로 개발자가 디자이너에서 시각적으�
 
 [![](hello-mac-images/xcode01.png "솔루션 탐색기의 Main.storyboard 파일")](hello-mac-images/xcode01.png#lightbox)
 
-그러면 Xcode가 실행되고 다음과 같이 표시됩니다.
+그러면 Xcode가 시작되고 다음 스크린샷과 비슷하게 표시됩니다.
 
 [![](hello-mac-images/xcode02.png "기본 Xcode Interface Builder 보기")](hello-mac-images/xcode02.png#lightbox)
 
@@ -263,10 +257,9 @@ Apple에서는 Xcode의 일부로 개발자가 디자이너에서 시각적으�
 > [!NOTE]
 > 개발자는 Xamarin.Mac 앱에 대한 사용자 인터페이스를 만들기 위해 반드시 Xcode와 Interface Builder를 사용해야 하는 것은 아니고, C# 코드에서 직접 UI를 만들 수도 있습니다. 그러나 그 방법은 본 문서의 범위를 벗어납니다. 간단한 설명을 위해 이 자습서의 나머지 부분에서는 Interface Builder를 사용하여 사용자 인터페이스를 만들겠습니다.
 
-
 ### <a name="components-of-xcode"></a>Xcode 구성 요소
 
-Mac용 Visual Studio에서 Xcode로 `.storyboard` 파일을 열면 왼쪽에는 **프로젝트 탐색기**, 가운데에는 **인터페이스 계층 구조** 및 **인터페이스 편집기**, 오른쪽에는 **속성 및 유틸리티** 섹션이 표시됩니다.
+Mac용 Visual Studio에서 Xcode로 **.storyboard** 파일을 열면 왼쪽에는 **프로젝트 탐색기**, 가운데에는 **인터페이스 계층 구조** 및 **인터페이스 편집기**, 오른쪽에는 **속성 및 유틸리티** 섹션이 표시됩니다.
 
 [![](hello-mac-images/xcode03.png "Xcode에서 Interface Builder의 다양한 섹션")](hello-mac-images/xcode03.png#lightbox)
 
@@ -274,7 +267,7 @@ Mac용 Visual Studio에서 Xcode로 `.storyboard` 파일을 열면 왼쪽에는 
 
 ### <a name="project-navigation"></a>프로젝트 탐색
 
-Xcode에서 편집하기 위해 `.storyboard` 파일을 열면 Mac용 Visual Studio는 Xcode와 변경 내용을 전달하기 위해 백그라운드에서 *Xcode 프로젝트 파일*을 만듭니다. 나중에 개발자가 Xcode에서 Mac용 Visual Studio로 전환하면 이 프로젝트에서 변경된 내용이 Mac용 Visual Studio에 의해 Xamarin.Mac 프로젝트와 동기화됩니다.
+Xcode에서 편집하기 위해 **.storyboard** 파일을 열면 Mac용 Visual Studio는 Xcode와 변경 내용을 전달하기 위해 백그라운드에서 *Xcode 프로젝트 파일*을 만듭니다. 나중에 개발자가 Xcode에서 Mac용 Visual Studio로 전환하면 이 프로젝트에서 변경된 내용이 Mac용 Visual Studio에 의해 Xamarin.Mac 프로젝트와 동기화됩니다.
 
 **프로젝트 탐색** 섹션에서 개발자는 이 _shim_ Xcode 프로젝트를 구성하는 모든 파일을 탐색할 수 있습니다. 일반적으로 개발자들은 `Main.storyboard`처럼 이 목록의 `.storyboard` 파일에만 관심이 있습니다.
 
@@ -302,14 +295,14 @@ Xcode에서 편집하기 위해 `.storyboard` 파일을 열면 Mac용 Visual Stu
 
 왼쪽부터 시작해서 오른쪽으로 가면서 다음과 같은 탭이 있습니다.
 
--   **파일 검사기** – 파일 검사기는 파일 이름, 편집 중인 Xib 파일의 위치와 같은 파일 정보를 보여줍니다.
--   **빠른 도움말** – 빠른 도움말 탭에서는 현재 Xcode에서 선택한 항목에 따라 상황에 맞는 도움말을 제공합니다.
--   **ID 검사기** – ID 검사기는 선택한 컨트롤/보기에 대한 정보를 제공합니다.
--   **특성 검사기** – 개발자는 특성 검사기를 사용하여 선택한 컨트롤/보기의 다양한 특성을 사용자 지정할 수 있습니다.
--   **크기 검사기** – 개발자는 크기 검사기를 사용하여 선택한 컨트롤/보기의 크기 및 크기 조정 동작을 제어할 수 있습니다.
--   **연결 검사기** – 연결 검사기는 선택한 컨트롤의 **출선** 및 **작업** 연결을 보여줍니다. 출선 및 작업은 아래에서 자세히 설명하겠습니다.
--   **바인딩 검사기** – 개발자는 바인딩 검사기를 사용하여 컨트롤 값이 자동으로 데이터 모델에 바인딩되도록 컨트롤을 구성할 수 있습니다.
--   **보기 효과 검사기** – 개발자는 보기 효과 검사기를 사용하여 컨트롤에 대해 애니메이션 같은 효과를 지정할 수 있습니다.
+- **파일 검사기** – 파일 검사기는 파일 이름, 편집 중인 Xib 파일의 위치와 같은 파일 정보를 보여줍니다.
+- **빠른 도움말** – 빠른 도움말 탭에서는 현재 Xcode에서 선택한 항목에 따라 상황에 맞는 도움말을 제공합니다.
+- **ID 검사기** – ID 검사기는 선택한 컨트롤/보기에 대한 정보를 제공합니다.
+- **특성 검사기** – 개발자는 특성 검사기를 사용하여 선택한 컨트롤/보기의 다양한 특성을 사용자 지정할 수 있습니다.
+- **크기 검사기** – 개발자는 크기 검사기를 사용하여 선택한 컨트롤/보기의 크기 및 크기 조정 동작을 제어할 수 있습니다.
+- **연결 검사기** – 연결 검사기는 선택한 컨트롤의 **출선** 및 **작업** 연결을 보여줍니다. 출선 및 작업은 아래에서 자세히 설명하겠습니다.
+- **바인딩 검사기** – 개발자는 바인딩 검사기를 사용하여 컨트롤 값이 자동으로 데이터 모델에 바인딩되도록 컨트롤을 구성할 수 있습니다.
+- **보기 효과 검사기** – 개발자는 보기 효과 검사기를 사용하여 컨트롤에 대해 애니메이션 같은 효과를 지정할 수 있습니다.
 
 **라이브러리** 섹션을 사용하여 디자이너에 배치할 컨트롤 및 개체를 찾아 그래픽으로 사용자 인터페이스를 빌드할 수 있습니다.
 
@@ -319,7 +312,7 @@ Xcode에서 편집하기 위해 `.storyboard` 파일을 열면 Mac용 Visual Stu
 
 Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발자는 주 보기에 대한 사용자 인터페이스를 만들 수 있습니다.
 
-다음을 수행합니다.
+다음 단계에 따라 Interface Builder를 사용하세요.
 
 1. Xcode의 **라이브러리 섹션**에서 **누름 단추**를 끕니다.
 
@@ -329,7 +322,7 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
     [![](hello-mac-images/xcode08.png "인터페이스 디자인에 단추 추가")](hello-mac-images/xcode08.png#lightbox)
 
-3. **특성 검사기**에서 **제목** 속성을 클릭하고 단추 제목을 `Click Me`로 변경합니다.
+3. **특성 검사기**에서 **제목** 속성을 클릭하고 단추 제목을 **Click Me**로 변경합니다.
 
     [![](hello-mac-images/xcode09.png "단추의 속성 설정")](hello-mac-images/xcode09.png#lightbox)
 
@@ -365,7 +358,7 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 14. 변경 내용을 사용자 인터페이스에 저장합니다.
 
-컨트롤 크기를 조정하고 이동할 때 Interface Builder는 [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)에 따라 유용한 스냅 힌트를 제공합니다. 이러한 지침은 Mac 사용자에게 친숙한 모양과 느낌을 주는 고품질 앱을 만들려는 개발자에게 도움이 됩니다.
+컨트롤 크기를 조정하고 이동할 때 Interface Builder는 [macOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)에 따라 유용한 스냅 힌트를 제공합니다. 이러한 지침은 Mac 사용자에게 친숙한 모양과 느낌을 주는 고품질 앱을 만들려는 개발자에게 도움이 됩니다.
 
 **인터페이스 계층 구조** 섹션에서 사용자 인터페이스를 구성하는 요소의 레이아웃과 계층 구조가 어떤 모양인지 살펴볼 수 있습니다.
 
@@ -379,14 +372,14 @@ Xcode IDE 및 Interface Builder의 기본 사항에 대해 배웠으니, 개발�
 
 **출선** 및 **작업**이란? 전통적인 .NET 사용자 인터페이스 프로그래밍에서, 사용자 인터페이스의 컨트롤은 추가될 때 자동으로 속성으로 노출됩니다. Mac에서는 동작이 약간 다릅니다. 보기에 컨트롤을 추가하기만 해서는 코드에 액세스할 수 없습니다. 개발자가 UI 요소를 코드에 명시적으로 노출해야 합니다. 이 작업을 위해 Apple에서 두 가지 옵션을 제공합니다.
 
--   **출선** – 출선은 속성과 비슷합니다. 개발자가 컨트롤을 출선에 연결하면 출선은 속성을 통해 코드에 노출되고, 따라서 이벤트 처리기를 연결하고 메서드를 호출하는 등의 작업을 할 수 있습니다.
--   **작업** – 작업은 WPF의 명령 패턴과 비슷합니다. 예를 들어 컨트롤에서 단추 클릭 작업을 수행하면 컨트롤이 코드에서 메서드를 자동으로 호출합니다. 작업은 개발자가 여러 컨트롤을 같은 작업에 연결할 수 있기 때문에 강력하고 편리합니다.
+- **출선** – 출선은 속성과 비슷합니다. 개발자가 컨트롤을 출선에 연결하면 출선은 속성을 통해 코드에 노출되고, 따라서 이벤트 처리기를 연결하고 메서드를 호출하는 등의 작업을 할 수 있습니다.
+- **작업** – 작업은 WPF의 명령 패턴과 비슷합니다. 예를 들어 컨트롤에서 단추 클릭 작업을 수행하면 컨트롤이 코드에서 메서드를 자동으로 호출합니다. 작업은 개발자가 여러 컨트롤을 같은 작업에 연결할 수 있기 때문에 강력하고 편리합니다.
 
 Xcode에서 **출선** 및 **작업**은 *컨트롤 끌기*를 통해 코드에서 직접 추가됩니다. 보다 구체적으로 말해서, 개발자는 **출선** 또는 **작업**을 만들기 위해 개발자는 **출선** 또는 **작업**을 추가할 컨트롤 요소를 선택하고, 키보드에서 **Control** 키를 누른 상태로 해당 컨트롤을 코드로 직접 끕니다.
 
 Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 파일에 해당하는 Objective-C 스텁 파일로 끕니다. Mac용 Visual Studio는 Interface Builder를 사용하기 위해 생성한 shim Xcode 프로젝트의 일부로 `ViewController.h`라는 파일을 만들었습니다.
 
-[![](hello-mac-images/xcode16.png "Xcode에서 원본 보기")](hello-mac-images/xcode16.png#lightbox)
+[![](hello-mac-images/xcode16-sml.png "Xcode에서 원본 보기")](hello-mac-images/xcode16.png#lightbox)
 
 이 스텁 `.h` 파일은 새 `NSWindow`가 생성될 때 Xamarin.Mac 프로젝트에 자동으로 추가되는 `ViewController.designer.cs`를 미러링합니다. 이 파일은 Interface Builder에서 변경한 내용을 동기화하는 데 사용되며, UI 요소가 C# 코드에 노출되도록 **출선** 및 **작업**이 생성되는 위치입니다.
 
@@ -412,7 +405,7 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 
     [![](hello-mac-images/outlet03.png "ViewController.h 파일 보기")](hello-mac-images/outlet03.png#lightbox)
 
-6. **마지막 단계는 매우 중요합니다!** 개발자가 올바른 파일을 선택하지 않으면 **출선** 및 **작업**을 만들 수 없거나 C#에서 잘못된 클래스에 노출됩니다.
+6. **마지막 단계는 아주 중요합니다.** 올바른 파일을 선택하지 않으면 **출선** 및 **작업**을 만들 수 없거나 C#에서 잘못된 클래스에 노출됩니다.
 
 7. **인터페이스 편집기**에서 키보드의 **Control** 키를 누른 채로 위에서 만든 레이블을 클릭하여 `@interface ViewController : NSViewController {}` 코드 바로 아래에 있는 코드 편집기 위로 끕니다.
 
@@ -435,6 +428,7 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 다음을 수행합니다.
 
 1. Xcode가 여전히 **도우미 편집기**에 있고 **코드 편집기**에서 **ViewController.h** 파일이 보이는지 확인합니다.
+
 2. **인터페이스 편집기**에서 키보드의 **Control** 키를 누른 채로 위에서 만든 단추를 클릭하여 `@property (assign) IBOutlet NSTextField *ClickedLabel;` 코드 바로 아래에 있는 코드 편집기 위로 끕니다.
 
     [![](hello-mac-images/action01.png "끌어서 작업 만들기")](hello-mac-images/action01.png#lightbox)
@@ -464,7 +458,7 @@ Xamarin.Mac 개발자의 경우 **출선** 또는 **작업**을 만들려는 C# 
 
 **솔루션 탐색기**에서 **ViewController.designer.cs**를 선택하여 C# 코드에서 **출선** 및 **작업**이 연결되는 방식을 살펴봅니다.
 
-[![](hello-mac-images/sync01.png "Xcode와 변경 내용 동기화")](hello-mac-images/sync01.png#lightbox)
+[![](hello-mac-images/sync01-sml.png "Xcode와 변경 내용 동기화")](hello-mac-images/sync01.png#lightbox)
 
 **ViewController.designer.cs** 파일의 두 정의를 살펴봅니다.
 
@@ -478,7 +472,7 @@ partial void ClickedButton (Foundation.NSObject sender);
 
 Xcode에서 `ViewController.h` 파일의 정의와 일치시킵니다.
 
-```csharp
+```objc
 @property (assign) IBOutlet NSTextField *ClickedLabel;
 - (IBAction)ClickedButton:(id)sender;
 ```
@@ -496,7 +490,7 @@ Mac용 Visual Studio는 **.h** 파일의 변경 내용을 수신 대기하면서
 
 이 샘플 앱에서 첫 번째 단추를 클릭할 때마다 단추 클릭 횟수를 표시하도록 레이블이 업데이트됩니다. 이 작업을 수행하려면 `ViewController.cs` 파일을 편집할 수 있도록 **솔루션 탐색기**에서 이 파일을 두 번 클릭하여 엽니다.
 
-[![](hello-mac-images/code01.png "Mac용 Visual Studio에서 ViewController.cs 파일 보기")](hello-mac-images/code01.png#lightbox)
+[![](hello-mac-images/code01-sml.png "Mac용 Visual Studio에서 ViewController.cs 파일 보기")](hello-mac-images/code01.png#lightbox)
 
 먼저 `ViewController` 클래스에서 발생한 클릭 횟수를 추적하는 클래스 수준 변수를 만듭니다. 클래스 정의를 편집하고 다음과 비슷하게 만듭니다.
 
@@ -514,7 +508,7 @@ namespace Hello_Mac
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.AwakeFromNib ();
+    base.ViewDidLoad ();
 
     // Set the initial value for the label
     ClickedLabel.StringValue = "Button has not been clicked yet.";
@@ -527,7 +521,6 @@ public override void ViewDidLoad ()
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
-
     // Update counter and label
     ClickedLabel.StringValue = string.Format("The button has been clicked {0} time{1}.",++numberOfTimesClicked, (numberOfTimesClicked < 2) ? "" : "s");
 }
@@ -541,12 +534,12 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 앱을 빌드할 때마다 개발자는 원하는 빌드 종류를 선택할 수 있습니다.
 
--   **디버그** - 디버그 빌드는 **.app**(응용 프로그램) 파일로 컴파일되고 개발자가 앱이 실행되는 동안 발생하는 문제를 디버그할 수 있는 여러 가지 추가 메타데이터를 제공합니다.
--   **릴리스** – 릴리스 빌드도 **.app** 파일을 만들지만 디버그 정보를 포함하지 않으므로 크기가 작고 실행 속도가 빠릅니다.
+- **디버그** - 디버그 빌드는 **.app**(응용 프로그램) 파일로 컴파일되고 개발자가 앱이 실행되는 동안 발생하는 문제를 디버그할 수 있는 여러 가지 추가 메타데이터를 제공합니다.
+- **릴리스** – 릴리스 빌드도 **.app** 파일을 만들지만 디버그 정보를 포함하지 않으므로 크기가 작고 실행 속도가 빠릅니다.
 
 개발자는 Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기**에서 빌드 유형을 선택할 수 있습니다.
 
-[![](hello-mac-images/run01.png "디버그 빌드 선택")](hello-mac-images/run01.png#lightbox)
+[![](hello-mac-images/run01-sml.png "디버그 빌드 선택")](hello-mac-images/run01.png#lightbox)
 
 ## <a name="building-the-application"></a>응용 프로그램 빌드
 
@@ -558,17 +551,17 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 앱을 실행하는 세 가지 방법이 있습니다.
 
--  **⌘ + Enter**를 누릅니다.
--  **실행** 메뉴에서 **디버그**를 선택합니다.
--  Mac용 Visual Studio 도구 모음에서 **재생** 단추를 클릭합니다(**솔루션 탐색기** 바로 위에 있음).
+- **⌘ + Enter**를 누릅니다.
+- **실행** 메뉴에서 **디버그**를 선택합니다.
+- Mac용 Visual Studio 도구 모음에서 **재생** 단추를 클릭합니다(**솔루션 탐색기** 바로 위에 있음).
 
 앱이 빌드되고(아직 빌드되지 않은 경우), 디버그 모드에서 시작되고, 주 인터페이스 창을 표시합니다.
 
-[![](hello-mac-images/run02.png "응용 프로그램 실행")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "응용 프로그램 실행")](hello-mac-images/run02.png#lightbox)
 
 단추를 몇 번 클릭하면 그 횟수에 따라 레이블이 업데이트됩니다.
 
-[![](hello-mac-images/run03.png "단추 클릭 결과 표시")](hello-mac-images/run03.png#lightbox)
+[![](hello-mac-images/run03-sml.png "단추 클릭 결과 표시")](hello-mac-images/run03.png#lightbox)
 
 ## <a name="where-to-next"></a>다음 위치
 
@@ -578,7 +571,7 @@ Xamarin.Mac 응용 프로그램을 작업하기 위한 기본 개념을 살펴�
 - [창](~/mac/user-interface/window.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 창 및 패널을 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 창과 패널을 생성 및 유지 관리하고, .xib 파일에서 창과 패널을 로드하고, C# 코드에서 창을 사용하고 창에 응답하는 내용을 다룹니다.
 - [대화 상자](~/mac/user-interface/dialog.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 대화 상자 및 모달 창을 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 모달 창을 생성 및 유지 관리하고, 표준 대화 상자를 작업하고, C# 코드에서 창을 표시하고 응답하는 내용을 다룹니다.
 - [경고](~/mac/user-interface/alert.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 경고를 작업하는 내용을 다룹니다. C# 코드에서 경고를 생성 및 표시하고 경고에 응답하는 내용을 다룹니다.
-- [메뉴](~/mac/user-interface/menu.md) - 메뉴는 화면 위쪽의 주 메뉴부터 창의 아무 곳에나 나타날 수 있는 팝업 및 상황에 맞는 메뉴까지, Mac 응용 프로그램 사용자 인터페이스의 여러 부분에 사용됩니다. 메뉴는 Mac 응용 프로그램의 사용자 경험에서 필수 요소입니다. 이 문서에서는 Xamarin.Mac 응용 프로그램에서 Cocoa 메뉴를 작업하는 내용을 다룹니다.
+- [메뉴](~/mac/user-interface/menu.md) - 메뉴는 화면 위쪽의 주 메뉴부터 창의 아무 곳에나 나타날 수 있는 팝업 및 상황에 맞는 메뉴까지, Mac 응용 프로그램 사용자 인터페이스의 여러 부분에 사용됩니다. 메뉴는 Mac 응용 프로그램의 사용자 환경에서 필수 요소입니다. 이 문서에서는 Xamarin.Mac 응용 프로그램에서 Cocoa 메뉴를 작업하는 내용을 다룹니다.
 - [도구 모음](~/mac/user-interface/toolbar.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 도구 모음을 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 도구 모음을 생성 및 유지 관리하고, 출선 및 작업을 사용하여 도구 모음 항목을 코드에 노출하고, 도구 모음을 설정 및 해제하고, 마지막으로 C# 코드에서 도구 모음 항목에 응답하는 내용을 다룹니다.
 - [테이블 보기](~/mac/user-interface/table-view.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 테이블 보기를 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 테이블 보기를 생성 및 유지 관리하고, 출선 및 작업을 사용하여 테이블 보기 항목을 코드에 노출하고, 테이블 항목을 채우고, 마지막으로 C# 코드에서 테이블 보기 항목에 응답하는 내용을 다룹니다.
 - [출선 보기](~/mac/user-interface/outline-view.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 출선 보기를 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 출선 보기를 생성 및 유지 관리하고, 출선 및 작업을 사용하여 출선 보기 항목을 코드에 노출하고, 출선 항목을 채우고, 마지막으로 C# 코드에서 출선 보기 항목에 응답하는 내용을 다룹니다.
@@ -586,11 +579,11 @@ Xamarin.Mac 응용 프로그램을 작업하기 위한 기본 개념을 살펴�
 - [컬렉션 보기](~/mac/user-interface/collection-view.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 컬렉션 보기를 작업하는 내용을 다룹니다. Xcode 및 Interface Builder에서 컬렉션 보기를 생성 및 유지 관리하고, 출선 및 작업을 사용하여 컬렉션 보기 요소를 코드에 노출하고, 컬렉션 보기를 채우고, 마지막으로 C# 코드에서 컬렉션 보기에 응답하는 내용을 다룹니다.
 - [이미지 작업](~/mac/app-fundamentals/image.md) - 이 문서에서는 Xamarin.Mac 응용 프로그램에서 이미지 및 아이콘을 작업하는 내용을 다룹니다. 앱 아이콘을 만드는 데 필요한 이미지를 생성 및 유지 관리하고 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용하는 내용을 다룹니다.
 
-[Mac 샘플 갤러리](https://developer.xamarin.com/samples/mac/all/)도 살펴보시기를 권장합니다. 개발자가 Xamarin.Mac 프로젝트를 신속하게 시작할 수 있도록 즉시 사용 가능한 여러 코드가 제공됩니다.
+[Mac 샘플 갤러리](https://developer.xamarin.com/samples/mac/all/)에는 Xamarin.Mac을 학습하는 데 도움이 되는, 즉시 사용할 수 있는 코드 예제가 있습니다.
 
-사용자가 일반적인 Mac 응용 프로그램에서 예상하는 여러 기능을 포함하고 있는 완전한 Xamarin.Mac 앱의 예제는 [SourceWriter 샘플 앱](https://developer.xamarin.com/samples/mac/SourceWriter/)을 참조하세요. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
+사용자가 일반적인 Mac 응용 프로그램에서 예상하는 여러 기능을 포함하고 있는 완전한 Xamarin.Mac 앱은 [SourceWriter 샘플 앱](https://developer.xamarin.com/samples/mac/SourceWriter/)입니다. SourceWriter는 코드 완성 및 간단한 구문 강조 기능을 제공하는 간단한 소스 코드 편집기입니다.
 
-SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 지침 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
+SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경우 Xamarin.Mac 설명서에 핵심 기술 또는 메서드부터 관련 정보까지 다양한 링크가 제공됩니다.
 
 ## <a name="summary"></a>요약
 
@@ -599,4 +592,4 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 ## <a name="related-links"></a>관련 링크
 
 - [Hello, Mac(샘플)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
-- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

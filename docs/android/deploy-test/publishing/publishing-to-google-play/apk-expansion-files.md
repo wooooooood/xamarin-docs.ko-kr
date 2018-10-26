@@ -3,15 +3,15 @@ title: APK 확장 파일
 ms.prod: xamarin
 ms.assetid: DB7E38E8-3C4E-5191-27EA-22DE63044FE2
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: f2ca86fb27b5bd4b6cb7ba855fbd0a2abfa1381d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 38568fa9258c7e3de2c3333cdca5dc7d5867319c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117104"
 ---
 # <a name="apk-expansion-files"></a>APK 확장 파일
 
@@ -44,7 +44,7 @@ Google Play에서는 기존 APK에 확장 파일을 업로드하거나 기존 AP
 
 다운로드 후에는 확장 파일을 장치의 위치에서 이동, 변경, 이름 변경 또는 삭제할 수 없습니다. 이렇게 하면 확장 파일을 다시 다운로드하며 구 파일이 삭제됩니다. 또한 확장 파일 디렉터리에는 확장 팩 파일만 포함되어야 합니다.
 
-확장 파일은 콘텐츠에 대한 보안이나 보호를 제공하지 않으므로 다른 응용 프로그램이나 사용자가 공유 저장소에 저장된 모든 파일에 액세스할 수 있습니다.
+확장 파일은 콘텐츠에 대한 보안이나 보호를 제공하지 않으므로 &ndash; 다른 응용 프로그램이나 사용자가 공유 저장소에 저장된 모든 파일에 액세스할 수 있습니다.
 
 확장 파일의 압축을 풀어야 할 경우 압축을 푼 파일은 `Android.OS.Environment.ExternalStorageDirectory`의 디렉터리 같은 별도의 디렉터리에 저장해야 합니다.
 

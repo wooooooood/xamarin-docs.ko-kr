@@ -4,15 +4,15 @@ description: 이 가이드에서는 Android Emulator를 사용하여 Visual Stud
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 9e0eade7a2e033838f78f24270ec2bf9d4abc171
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: e40178e43cfcfd261434fab9dd5ca0a9061d3f59
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113784"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Android Emulator에서 디버깅
 
@@ -25,7 +25,7 @@ Android Emulator(**.NET을 사용한 모바일 개발** 워크로드의 일부�
 
 ## <a name="using-a-pre-configured-virtual-device"></a>미리 구성된 가상 장치 사용
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에는 장치 드롭다운 메뉴에 표시되는 미리 구성된 가상 장치가 있습니다. 예를 들어 다음 Visual Studio 2017 스크린 샷에서는 몇 가지 미리 구성된 가상 장치를 제공합니다.
 
@@ -48,7 +48,7 @@ Xamarin.Android 프로젝트에서 사용 가능한 가상 장치와 호환되�
 **최소 Android 대상 변경**을 클릭하여 프로젝트의 최소 Android 버전을 사용 가능한 가상 장치의 API 수준에 맞게 변경할 수 있습니다. 또는 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 사용하여 대상 API 수준을 지원하는 새 가상 장치를 만들 수 있습니다.
 새 API 수준에 대해 가상 장치를 구성할 수 있으려면 먼저 해당 API 수준에 대한 시스템 이미지를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac에는 장치 드롭다운 메뉴에 표시되는 미리 구성된 가상 장치가 있습니다. 예를 들어 다음 스크린 샷에서는 몇 가지 미리 구성된 두 가상 장치를 제공합니다.
 
@@ -73,11 +73,11 @@ Visual Studio for Mac에는 장치 드롭다운 메뉴에 표시되는 미리 �
 
 Visual Studio 위에는 **디버그** 또는 **릴리스** 모드를 선택하는 데 사용할 수 있는 드롭다운 메뉴가 있습니다. **디버그**를 선택하면 디버거가 앱이 시작된 후 에뮬레이터 안에 실행 중인 응용 프로그램 프로세스에 연결됩니다. **릴리스** 모드를 선택하면 디버거가 비활성화됩니다(그러나 여전히 앱을 실행하고 디버그에 대한 로그 문을 사용할 수 있음). 장치 드롭다운 메뉴에서 가상 장치를 선택한 후 **디버그** 또는 **릴리스** 모드를 선택한 다음, 재생 단추를 클릭하여 응용 프로그램을 실행합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

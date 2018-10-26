@@ -4,15 +4,15 @@ description: Xamarin.Android ProGuard는 Java 클래스 파일 축소, 최적화
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321378"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117397"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -323,11 +323,11 @@ ProGuard가 구성 파일을 읽을 때 다음과 같은 오류 메시지가 표
 
 이 문제는 일반적으로 Windows에서 `.cfg` 파일에 잘못된 인코딩이 있는 경우에 발생합니다. ProGuard는 텍스트 파일에 있는 _바이트 순서 표시_(BOM)를 처리할 수 없습니다. BOM이 있는 경우 ProGuard는 위의 오류와 함께 종료됩니다. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 이 문제를 방지하려면 파일을 BOM 없이 저장할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 편집합니다. 이 문제를 해결하려면 텍스트 편집기의 인코딩이 `UTF-8`로 설정되어 있는지 확인합니다. 예를 들어 텍스트 편집기 [Notepad++](https://notepad-plus-plus.org/)는 파일을 저장할 때 **Encoding &gt; Encode in UTF-8 Without BOM**을 선택하면 BOM 없이 파일을 저장할 수 있습니다. 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 이 문제를 방지하려면 BOM을 생략할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 저장합니다. 
 

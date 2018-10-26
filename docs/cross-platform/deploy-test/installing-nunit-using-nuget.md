@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: fb0ffd87a61f20744e68eafdd7eb8de691df6f75
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c43b3f3204cba890cb2fa9c4cfc33a23250e0550
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112054"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>NuGet을 사용하여 NUnit 2.6.4 설치하기
 
@@ -19,11 +19,11 @@ _이 가이드에서는 NuGet을 사용하여 NUnit 3.0 NUnit 2.6.4로 다운그
 
 Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 사용하는 개발자는 NUnit 3.0 이상이 Mac용 Visual Studio 또는 Xamarin.UITest와 호환되지 않으므로 [NUnit 2.6.4](http://nunit.org/index.php?p=docHome&r=2.6.4)을 사용해야 합니다. Mac용 Visual Studio 또는 NUnit 3.0을 사용하는 Xamarin.UITests에서 단위 테스트 실행하려는 시도는 실패합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 이 가이드에서는 Mac용 Visual Studio에 대해 NuGet을 사용하여 NUnit 2.6.4를 설치하는 방법을 다룹니다. 또한 이러한 단계는 필요한 경우 NUnit 3.0를 제거합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 이 가이드에서는 Visual Studio 2015에서 NuGet을 사용하여 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 다룹니다.
 
@@ -33,7 +33,7 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 이 가이드에서는 모바일 앱 프로젝트 및 테스트 프로젝트를 함께 사용하는 기존 솔루션이 있다고 가정합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="installing-nunit-264-in-visual-studio-for-mac"></a>NUnit 2.6.4를 Mac용 Visual Studio에 설치함
 
@@ -58,7 +58,7 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 이 가이드는 패키지 관리자 콘솔을 사용하여 Mac용 Visual Studio에서 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 설명합니다.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>NUnit 2.6.4를 Visual Studio에 설치함
 

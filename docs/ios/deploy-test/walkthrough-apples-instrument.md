@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin�
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: a751488b4063a594904393faa605d36c3414d2ec
-ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
+ms.openlocfilehash: d0c79a5eb417762531245256ff062c5c34ca394c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39182184"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112327"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 

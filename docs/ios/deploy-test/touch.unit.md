@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 응용 프로그램을 단위 테�
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785465"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121830"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Xamarin.iOS 앱 단위 테스트
 
@@ -21,13 +21,13 @@ Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사�
 
 ## <a name="setting-up-a-test-project"></a>테스트 프로젝트 설정
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트 추가**를 차례로 선택합니다. 목록에서 **iOS > 테스트 > 통합 API > iOS 단위 테스트 프로젝트**(C# 또는 F# 중 하나를 선택할 수 있음)를 차례로 선택합니다.
 
 ![](touch.unit-images/00.png "C# 또는 F# 선택")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...** 를 차례로 선택합니다. 목록에서 **Visual C# > iOS > 단위 테스트 앱(iOS)** 을 선택합니다.
 
@@ -37,11 +37,11 @@ Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사�
 
 위에서는 기본 실행기 프로그램을 포함하고 새 MonoTouch.NUnitLite 어셈블리를 참조하는 기본 프로젝트를 만듭니다. 이 프로젝트는 다음과 같습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "솔루션 탐색기의 프로젝트")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "솔루션 탐색기의 프로젝트")
 

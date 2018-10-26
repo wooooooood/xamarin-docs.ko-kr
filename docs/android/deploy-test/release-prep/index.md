@@ -3,15 +3,15 @@ title: 릴리스용 응용 프로그램 준비
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32020428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123455"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 응용 프로그램 준비
 
@@ -42,13 +42,13 @@ ms.locfileid: "32020428"
 
 각각의 Xamarin.Android 응용 프로그램마다 응용 프로그램 아이콘을 지정하는 것이 좋습니다. 일부 응용 프로그램 마켓플레이스에서는 아이콘 없이 Android 응용 프로그램을 게시하지 못합니다. `Application` 특성의 `Icon` 속성은 Xamarin.Android 프로젝트의 응용 프로그램 아이콘을 지정하는 데 사용됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 2015 이상에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션을 통해 응용 프로그램 아이콘을 지정합니다.
 
 [![응용 프로그램 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 응용 프로그램** 섹션을 통해 응용 프로그램 아이콘을 지정할 수 있습니다.
 
@@ -75,13 +75,13 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 -   **버전 이름** &ndash; 응용 프로그램 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 장치에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 장치에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션에서 이 값을 설정할 수 있습니다.
 
 [![버전 번호 설정](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 이러한 값은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **빌드 > Android 응용 프로그램** 섹션을 통해 설정할 수 있습니다.
 
@@ -104,7 +104,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 -   Configuration: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 프로젝트 **속성**의 **Android 옵션** 섹션을 통해 링커 옵션을 설정합니다.
 
@@ -119,7 +119,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 -   **Sdk 및 사용자 어셈블리** &ndash; Xamarin.Android뿐 아니라 응용 프로그램에서 필요한 모든 어셈블리를 연결합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 링커 옵션은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 빌드** 섹션에 있는 **링커** 탭을 통해 설정합니다.
 
@@ -146,11 +146,11 @@ ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android
 
 **ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다.  
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Proguard 빌드 작업](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![Proguard 빌드 작업](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -190,7 +190,7 @@ Android 매니페스트에는 응용 프로그램의 디버그 가능 여부를 
 
 ### <a name="application-protection-with-dotfuscator"></a>Dotfuscator를 통한 응용 프로그램 보호
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 응용 프로그램을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 응용 프로그램의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 장치에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
@@ -200,7 +200,7 @@ Dotfuscator CE는 Visual Studio에 포함되지만 Visual Studio 2015 업데이�
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 응용 프로그램을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 응용 프로그램의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 장치에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
@@ -241,13 +241,13 @@ _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며
 
 ## <a name="set-packaging-properties"></a>패키지 속성 설정
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 옵션** 섹션에서 패키지 속성을 설정할 수 있습니다.
 
 [![패키징 속성](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 다음 스크린 샷에서처럼 **프로젝트 옵션**에서 패키지 속성을 설정할 수 있습니다.
 
@@ -280,13 +280,13 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 ## <a name="compile"></a>Compile
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 위의 단계가 모두 완료되면 앱을 컴파일할 수 있습니다. **빌드 > 솔루션 다시 빌드**를 선택하여 릴리스 모드에서 성공적으로 빌드되는지 확인합니다. 이 단계에서는 아직 APK가 생성되지 않았습니다.
 
 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 패키지와 서명을 더 상세하게 설명합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 위의 단계가 모두 완료되면 응용 프로그램을 빌드하여(**빌드 > 모두 빌드**) 릴리스 모드에서 성공적으로 빌드되는지 확인합니다. 이 단계에서는 아직 APK가 생성되지 않았습니다.
 
@@ -297,7 +297,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 ## <a name="archive-for-publishing"></a>게시를 위해 보관
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 게시 프로세스를 시작하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **보관...**  바로 가기 메뉴 항목을 선택합니다.
 
@@ -356,7 +356,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 * **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다. 계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 게시 프로세스를 시작하려면 **빌드 > 게시를 위해 보관**을 선택합니다.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 테스트 또는 엔터프라이즈 배포를 �
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 39e1af5edf91ffd6811fa8d221fd56580f3b33da
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: af1ad32e605bbbe899ec8596a60cdabf226372db
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111306"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
 
@@ -285,7 +285,7 @@ iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>iTunesMetadata.plist 파일 만들기
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  Mac용 Visual Studio에서 `iTunesMetadata.plist` 파일을 사용하는 경우 두 가지 옵션이 있습니다.
 
@@ -337,7 +337,7 @@ iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르
 6. [파일 열]기 대화 상자에서 위에서 만든 `iTunesMetadata.plist` 파일을 선택하고 **확인** 단추를 클릭합니다.
 7. 이 파일에서 **없음**으로 설정된 **빌드 작업**은 그대로 둡니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio용 Xamarin 플러그 인은 `Info.plist` 및 `Entitlement.plist` 파일에 대한 시각적 편집기만 지원하므로 표준 텍스트 편집기에서 `iTunesMetadata.plist` 파일을 만들고 Xamarin.iOS 프로젝트에 수동으로 포함해야 합니다.
 

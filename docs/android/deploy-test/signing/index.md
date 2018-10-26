@@ -4,27 +4,27 @@ description: 게시할 APK(Android 응용 프로그램 패키지)에 서명하�
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: f05de5185f224f8606f38011d8f307ed62d64541
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112873"
 ---
 # <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 
 [릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [게시를 위해 보관](~/android/deploy-test/release-prep/index.md#archive)에서 **배포 채널** 대화 상자에는 두 가지 배포 옵션이 제공됩니다. **임시**를 선택합니다.
 
 [![배포 채널 대화 상자](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [게시를 위해 보관](~/android/deploy-test/release-prep/index.md#archive)에서 **서명 및 배포...** 대화 상자에는 두 가지 배포 옵션이 제공됩니다. **임시**를 선택하고 **다음**을 클릭합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "37403314"
 
 ## <a name="create-a-new-certificate"></a>새 인증서 만들기
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **임시**를 선택하면 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 대화 상자의 **서명 ID** 페이지가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "37403314"
 
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 **임시**를 클릭하면 Mac용 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 **Android 서명 ID** 대화 상자가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다. 인증서가 이미 있는 경우 **기존 키 가져오기** 단추를 클릭하여 가져온 후 [APK 서명](#signapkxs)을 진행합니다. 그렇지 않을 경우 **새 키 만들기** 단추를 클릭하여 새 인증서를 만듭니다. 
 
@@ -97,7 +97,7 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 ## <a name="sign-the-apk"></a>APK 서명
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **만들기**를 클릭하면 다음 스크린샷에 표시된 것처럼 **서명 ID** 아래에 새 키 저장소(새 인증서 포함)가 저장되고 나열됩니다. Google Play에서 앱을 게시하려면 **취소**를 클릭하고 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)로 이동합니다.
 *ad-hoc*을 게시하려면 서명에 사용할 서명 ID를 선택하고 **다른 이름으로 저장**을 클릭하여 앱을 개별 배포용으로 게시합니다. 예를 들어 이 스크린샷에서는 (이전에 만든) **chimp** 서명 ID가 선택되었습니다.
@@ -121,7 +121,7 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 [![Windows 탐색기에 표시된 APK](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 
 여기 표시된 것처럼 새 인증서가 키 저장소에 추가되었습니다. Google Play에서 앱을 게시하려면 **취소**를 클릭하고 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)로 이동합니다.

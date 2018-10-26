@@ -3,15 +3,15 @@ title: Google Play에 게시
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
-ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
+ms.openlocfilehash: e8b1fdd933d026875ae10e76894120c8c4504769
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39067362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123338"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
@@ -130,7 +130,7 @@ Google Play의 추천 섹션에서 사용합니다. 이 그래픽은 응용 프�
 
 ### <a name="publishing-to-google-play"></a>Google Play에 게시
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin Android 7.0에는 Visual Studio에서 Google Play에 앱을 게시하는 통합 워크플로가 도입되었습니다. Xamarin Android 7.0 이전 버전을 사용하는 경우 Google Play 개발자 콘솔을 통해 APK를 수동으로 업로드해야 합니다. 또한 통합 워크플로를 사용하려면 먼저 하나 이상의 APK가 기존에 업로드되어 있어야 합니다. 첫 번째 APK를 업로드하지 않은 경우 수동으로 업로드해야 합니다. 자세한 내용은 [수동으로 APK 업로드](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md)를 참조하세요.
 
@@ -161,7 +161,7 @@ Xamarin Android 7.0에는 Visual Studio에서 Google Play에 앱을 게시하는
 
 다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 _클라이언트 ID_ 및 _클라이언트 암호_를 생성하는 방법에 대해 설명합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac에는 Google Play에 앱을 게시하는 통합 워크플로가 있습니다. Xamarin Studio 5.9 이전 버전을 사용할 경우 Google Play 개발자 콘솔을 통해 APK를 수동으로 업로드한 다음 이후의 APK 업데이트에 **Google Play에 게시** 대화 상자를 사용해야 합니다. 또한 **Google Play에 게시**를 사용하려면 먼저 하나 이상의 APK가 기존에 업로드되어 있어야 합니다. 첫 번째 APK를 업로드하지 않은 경우 수동으로 업로드해야 합니다. APK를 수동으로 업로드하는 방법에 관한 정보는 [수동으로 APK 업로드](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md)를 참조하세요.
 
@@ -227,7 +227,7 @@ JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자
 
 #### <a name="register-google-api-access"></a>Google API 액세스 등록
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 클라이언트 ID와 클라이언트 암호를 사용하여 Visual Studio for Mac의 **Google Play API 계정** 대화 상자를 입력합니다. 계정에 설명을 제공할 수 있습니다. &ndash; 이렇게 하면 둘 이상의 Google Play 계정을 등록하고 향후의 APK를 다른 Google Play 계정에 등록할 수 있습니다. 클라이언트 ID와 클라이언트 암호를 이 대화 상자에 복사하고 **등록**을 클릭합니다.
 
@@ -283,7 +283,7 @@ Google Play 테스트 및 단계별 출시에 대한 자세한 내용은 [알파
 
 이 오류를 해결하려면 다른 버전 번호로 앱을 다시 빌드하고 **배포 채널** 대화 상자를 통해 Google Play에 다시 제출합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 클라이언트 ID와 클라이언트 암호를 사용하여 Visual Studio for Mac의 **Google Play API 계정** 대화 상자를 입력합니다. 계정에 설명을 제공할 수 있습니다. &ndash; 이렇게 하면 둘 이상의 Google Play 계정을 등록하고 향후의 APK를 다른 Google Play 계정에 등록할 수 있습니다. 클라이언트 ID와 클라이언트 암호를 이 대화 상자에 복사하고 **등록**을 클릭합니다.
 

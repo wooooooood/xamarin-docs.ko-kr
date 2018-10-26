@@ -4,15 +4,15 @@ description: 이 문서에서는 물리적 Android 장치에서 Xamarin.Android 
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109707"
 ---
 # <a name="debug-on-device"></a>장치에서 디버그
 
@@ -27,7 +27,7 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 장치에서 X
 
 장치가 컴퓨터에 연결된 후에는 Xamarin.Android 응용 프로그램 디버그가 다른 Xamarin 제품 또는 .NET 응용 프로그램에서와 같은 방식으로 수행됩니다. **디버그** 구성과 외부 장치를 IDE에서 선택했는지 확인합니다. 필요한 디버그 기호를 사용할 수 있고 IDE가 실행 중인 응용 프로그램에 연결할 수 있음을 확인하는 것입니다. 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![디버그 구성 선택됨](debug-on-device-images/image1-vs.png)
 
@@ -39,7 +39,7 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 장치에서 X
 
 ![중단점 도달](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![디버그 구성 선택됨](debug-on-device-images/image1-xs.png)
 
