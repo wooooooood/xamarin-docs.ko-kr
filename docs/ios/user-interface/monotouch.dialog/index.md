@@ -4,14 +4,14 @@ description: 이 문서에서는 MonoTouch.Dialog (콜로라도 설명 D), Xamar
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: bee4b460552c7273021b16955b52ba3d95d3e07c
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: a948d5beca6c09dc77e5c86d3f281851e4839ff0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107991"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>MonoTouch.Dialog Xamarin.iOS에 대 한 소개
 
@@ -54,7 +54,7 @@ IOS에서 테이블을 사용 하는 경우 경우가 있습니다 엄청난 양
 산 차원은 테이블 생성을 위한 제네릭 API로 모든 해당 코드를 캡슐화 하 여 하를 간소화 합니다. 그런 다음 바인딩도 쉽게 구문 선언적 개체를 허용 하는 해당 api 추상화를 제공 합니다. 따라서 두 가지 Api 산에서 사용할 수 있는 D:
 
 -   **하위 수준 요소 API** – *요소 API* 화면 및 해당 구성 요소를 나타내는 요소의 계층적 트리를 만드는 기반으로 합니다. 요소 API를 최대한의 유연성 및 제어 Ui를 만드는 개발자에 게 제공 합니다. 또한 요소 API를 아주 빨리 선언인 뿐만 아니라 서버에서 동적 UI 생성 허용 하는 JSON을 통해 선언적 정의 대 한 지원을 발전 했습니다. 
--   **높은 수준의 리플렉션 API** – 라고도 합니다 *바인딩**API* , UI 힌트와 다음 산 주석이 지정 된 클래스에서 D 화면 개체를 기반으로 자동으로 만들고 간에 새로운 바인딩을 표시 (및 필요에 따라 편집) 화면에서 및 백업 원본 개체를 제공 합니다.   위의 예제에서는 리플렉션 API의 사용을 보여 줍니다. 이 API는 API 요소는 세분화 된 제어를 제공 하지 않습니다 하지만 자동으로 클래스 특성을 기반으로 요소 계층 구조를 구축 하 여 복잡성을 더욱 줄입니다. 
+-   **높은 수준의 리플렉션 API** – 라고도 합니다 *바인딩**API* , UI 힌트와 다음 산 주석이 지정 된 클래스에서 D 화면 개체를 기반으로 자동으로 만들고 간에 새로운 바인딩을 표시 (및 필요에 따라 편집) 화면에서 및 백업 원본 개체를 제공 합니다. 위의 예제에서는 리플렉션 API의 사용을 보여 줍니다. 이 API는 API 요소는 세분화 된 제어를 제공 하지 않습니다 하지만 자동으로 클래스 특성을 기반으로 요소 계층 구조를 구축 하 여 복잡성을 더욱 줄입니다. 
 
 
 산 D는 큰 집합으로 압축 된 화면 만들기에 대 한 UI 요소에 기본 제공 하지만 것도 사용자 지정된 요소 및 고급 화면 레이아웃에 대 한 필요성을 인식 합니다. 따라서 확장성은 최우선 추천 API로 구운입니다. 개발자가 기존 요소를 확장 또는 새로 만들 고 원활 하 게 통합할 수 있습니다.

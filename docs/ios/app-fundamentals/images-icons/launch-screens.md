@@ -4,15 +4,15 @@ description: 이 문서에서는 모든 해상도와 방향을 단일 통합 스
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 40b8c38e89e96223bbf657ff06356d9fb2e9d9b3
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251187"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116930"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대 한 시작 화면
 
@@ -28,7 +28,7 @@ IOS 8 하기 전에 iOS 앱에 대 한 시작 화면을 만드는 다양 한 장
 
 IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 사용 하는 대신 시작 화면을 제공 하는 특수 통합 Storyboard를 만들 수 있습니다. IOS 디자이너에서에서 실행 하는 스토리 보드를 만들 때 여러 디스플레이 환경에 대 한 다른 레이아웃을 정의 하려면 Size 클래스 및 자동 레이아웃을 사용 합니다. 자동 레이아웃 및 Size 클래스를 사용 하 여 개발자는 모든 장치에서 정상적으로 진행 하는 단일 시작 화면을 만들 수 있으며 환경 표시.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac 용 Visual Studio에서 선택 하 여 새 프로젝트를 만듭니다 **파일 > 새 솔루션** 를 선택한 다음 **단일 뷰 앱**: 
 
@@ -95,7 +95,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 13. 스토리 보드에 변경 내용을 저장 합니다. 시뮬레이터 또는 장치에서 앱을 실행 하 고 앱을 시작 하는 대로 시작 화면이 표시 됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 새 프로젝트를 만듭니다. Visual Studio에서 선택 **파일 > 새로 만들기 > 프로젝트 > Visual C# > iPhone 및 iPad > iOS 앱 (Xamarin)**:
 
@@ -140,7 +140,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
     ![디자인 화면에 빈 뷰 컨트롤러 추가](launch-screens-images/launch08-vs.png)
 
-9. 설정 된 **백그라운드** 색 뷰 컨트롤러의 기본 보기입니다. 뷰 컨트롤러 중간 클릭 하 여 보기를 선택 하 고 사용 하 여 배경 색을 조정 합니다는 **속성 창**:
+9. 설정 된 **백그라운드** 색 뷰 컨트롤러의 기본 보기입니다. 뷰 컨트롤러 중간 클릭 하 여 보기를 선택 하 고 사용 하 여 배경 색을 조정 합니다 **속성 창**:
     
     ![자주색 배경색을 사용 하 여 단일 보기](launch-screens-images/launch09-vs.png)
 
@@ -187,7 +187,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>시작 화면 스토리 보드 마이그레이션
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 해당 시작 화면에 대 한 스토리 보드를 사용 하도록 기존 앱을 업데이트할 때 마우스 오른쪽 단추로 클릭 합니다 **프로젝트 이름** 에 **솔루션 탐색기** 선택한 **추가**  >  **새 파일...** . 선택 **iOS** > **시작 화면** 을 클릭 합니다 **New** 단추:
 
@@ -205,7 +205,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
     ![](launch-screens-images/storyboard08.png "스토리 보드에 시작 화면 설정")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 프로젝트 이름을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 선택한 **추가** > **새 파일...** : 
 

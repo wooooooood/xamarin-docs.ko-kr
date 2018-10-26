@@ -4,15 +4,15 @@ description: 이전 섹션에는 기본 제공 ContentProvider 구현에서 데�
 ms.prod: xamarin
 ms.assetid: 36742B59-607E-070E-5D0E-B9C18917D3F4
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 95d38fae1614bbb12ddafaeca60d50e63404ea95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da8aacac1f282fefb6b8d0e84cae168cf3a7148b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30769031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108017"
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 
@@ -20,51 +20,51 @@ _이전 섹션에는 기본 제공 ContentProvider 구현에서 데이터를 사
 
 ## <a name="about-contentproviders"></a>ContentProviders에 대 한
 
-콘텐츠 공급자 클래스에서 상속 해야 `ContentProvider`합니다. 쿼리에 응답 하는 데 사용 되는 내부 데이터 저장소가으로 구성 되어야 하 고 상수를 사용 하는 코드가 확인 데이터에 대 한 올바른 요청 Uri 및 MIME 형식을 노출 해야 것입니다.
+콘텐츠 공급자 클래스에서 상속 해야 `ContentProvider`합니다. 쿼리에 응답 하는 데 사용 되는 내부 데이터 저장소의 구성 되어야 하 고 코드를 사용 하는 데 상수 데이터에 대 한 유효한 요청을 확인 하는 대로 Uri 및 MIME 형식 노출 해야 하 합니다.
 
-### <a name="uri-authority"></a>URI (기관)
+### <a name="uri-authority"></a>URI (인증 기관)
 
-`ContentProviders` Uri를 사용 하 여 Android에서 액세스 됩니다. 노출 하는 응용 프로그램은 `ContentProvider` 에 응답 하는 Uri 설정의 **AndroidManifest.xml** 파일입니다. 응용 프로그램을 설치할 때 이러한 Uri는 다른 응용 프로그램에 액세스할 수 있도록 등록 됩니다.
+`ContentProviders` Uri를 사용 하 여 Android에서 액세스 됩니다. 노출 하는 응용 프로그램을 `ContentProvider` 에 응답 하는 Uri를 설정 합니다. 해당 **AndroidManifest.xml** 파일입니다. 응용 프로그램을 설치할 때 이러한 Uri는 다른 응용 프로그램에 액세스할 수 있도록 등록 됩니다.
 
-Android 용 모노, 콘텐츠 공급자 클래스 없어야는 `[ContentProvider]` Uri (또는 Uri)를 지정 하는 특성에 추가 해야 하는 **AndroidManifest.xml**합니다.
+Android 용 Mono, 콘텐츠 공급자 클래스 있어야를 `[ContentProvider]` Uri (또는 Uri)를 지정 하는 특성에 추가 해야 하는 **AndroidManifest.xml**합니다.
 
 
 ### <a name="mime-type"></a>Mime 형식
 
-MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다. Android `ContentProviders` 일반적으로 MIME 형식의 첫 번째 부분에 대 한 이러한 두 문자열을 사용 합니다.
+MIME 형식에 대 한 일반적인 형식을 두 부분으로 구성 됩니다. Android `ContentProviders` 일반적으로 첫 번째 부분은 MIME 형식에 대 한 이러한 두 문자열을 사용 합니다.
 
-1. `vnd.android.cursor.item` &ndash; 사용 하 여 한 행을 표시 하는 `ContentResolver.CursorItemBaseType` 코드에서 상수입니다.
+1. `vnd.android.cursor.item` &ndash; 단일 행을 나타내기 위해 사용 된 `ContentResolver.CursorItemBaseType` 코드에서 상수입니다.
 
-1. `vnd.android.cursor.dir` &ndash; 사용 하 여 여러 행에는 `ContentResolver.CursorDirBaseType` 코드에서 상수입니다.
+1. `vnd.android.cursor.dir` &ndash; 여러 행에 대해 사용 된 `ContentResolver.CursorDirBaseType` 코드에서 상수입니다.
 
-역방향 DNS 표준에 사용 해야 응용 프로그램에 특정 MIME 형식을 두 번째 부분 되며는 `vnd.` 접두사입니다. 예제 코드에서는 사용 `vnd.com.xamarin.sample.Vegetables`합니다.
+두 번째 부분은 MIME 형식을 응용 프로그램에 특정 되며으로 역방향 DNS 표준을 사용 해야는 `vnd.` 접두사입니다. 샘플 코드를 사용 하 여 `vnd.com.xamarin.sample.Vegetables`입니다.
 
 
 ### <a name="data-model-metadata"></a>데이터 모델 메타 데이터
 
-소비 응용 프로그램을 서로 다른 유형의 데이터를 액세스 하는 Uri 쿼리를 구성 해야 합니다. 기본 Uri는 데이터의 특정 테이블을 참조 하도록 확장할 수 있으며 결과 필터링 하려면 매개 변수를 포함할 수도 있습니다. 열과 데이터를 표시 하기 위해 결과 커서와 함께 사용 하는 절 선언 되어야 합니다.
+응용 프로그램이 서로 다른 유형의 데이터에 액세스 하는 Uri 쿼리를 생성 해야 합니다. 기본 Uri 데이터의 특정 테이블을 참조 하도록 확장할 수 있으며 결과 필터링 하는 매개 변수를 포함할 수도 있습니다. 열과 데이터를 표시할 결과 커서를 사용 하는 절 선언 되어야 합니다.
 
-유효한 Uri 쿼리 생성 된,이 상수 값으로 유효한 문자열을 제공할 일반적인 합니다. 이렇게 하면 쉽게 액세스 하는 `ContentProvider` 쉽게 값 코드 완성 기능을 통해 검색할 수 있으므로 입력 문자열에 오류를 방지 합니다.
+을 보장 하기 위해 유효한 Uri 쿼리 생성 되는 것에 상수 값으로 올바른 문자열을 제공 합니다. 이 쉽게 액세스 하는 `ContentProvider` 코드 완성을 통해 값을 검색 가능 하 고 문자열의 오타를 방지 하므로 합니다.
 
-이전 예에서 `android.provider.ContactsContract` 클래스 연락처 데이터에 대 한 메타 데이터를 노출 합니다. 사용자 지정에 대 한 `ContentProvider` 우리는 방금 클래스 자체에 상수를 제공 합니다.
+이전 예에서 `android.provider.ContactsContract` 클래스 연락처 데이터에 대 한 메타 데이터를 노출 합니다. 에서는 사용자 지정에 대 한 `ContentProvider` 상수 클래스 자체에 노출 합니다.
 
 
 ## <a name="implementation"></a>구현
 
-세 가지 단계를 만들고 사용 하는 사용자 지정 `ContentProvider`:
+세 가지 단계를 만들고 사용자 지정 사용 `ContentProvider`:
 
-1. **데이터베이스 클래스를 만들고** &ndash; 구현 `SQLiteOpenHelper`합니다.
+1. **데이터베이스 클래스를 만듭니다** &ndash; 구현 `SQLiteOpenHelper`합니다.
 
-2. **만들기는 `ContentProvider` 클래스** &ndash; 구현 `ContentProvider` 인스턴스로 데이터베이스의 메타 데이터 상수 값 및 데이터에 액세스 하는 방법으로 노출 합니다.
+2. **만들기는 `ContentProvider` 클래스** &ndash; 구현 `ContentProvider` 인스턴스에 데이터베이스를 사용 하 여 메타 데이터 상수 값 및 데이터에 액세스 하는 방법으로 노출 합니다.
 
-3. **액세스는 `ContentProvider` 해당 Uri를 통해** &ndash; 채우기는 `CursorAdapter` 를 사용 하는 `ContentProvider`, 해당 Uri를 통해 액세스 합니다.
+3. **액세스는 `ContentProvider` 해당 Uri를 통해** &ndash; 채우기는 `CursorAdapter` 를 사용 하 여를 `ContentProvider`해당 Uri를 통해 액세스 합니다.
 
-앞에서 설명한 대로 `ContentProviders` 정의 되어 있는 이외의 응용 프로그램에서 사용 될 수 있습니다. 이 예에서 동일한 응용 프로그램에서 데이터를 사용 하지만 다른 응용 프로그램 에서도 액세스할 수 Uri 및 스키마 (일반적으로 노출 되는 상수 값)에 대 한 정보를 모르는 상태로 염두에서에 둬야 합니다.
+앞에서 설명한 대로 `ContentProviders` 정의 되어 있는 이외의 응용 프로그램에서 사용할 수 있습니다. 이 예제는 데이터가 동일한 응용 프로그램에서 사용 하지만 다른 응용 프로그램 수 또한 액세스 하는 Uri 및 스키마 (일반적으로 노출 되는 상수 값)에 대 한 정보를 알고 있다면 염두에 둡니다.
 
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 
-대부분 `ContentProvider` 구현에 따라 달라 집니다는 `SQLite` 데이터베이스입니다. 예제 데이터베이스 코드 **SimpleContentProvider/VegetableDatabase.cs** 같이 매우 간단한 열이 두 데이터베이스를 만듭니다.
+대부분 `ContentProvider` 구현에 따라 달라 집니다을 `SQLite` 데이터베이스입니다. 예제 데이터베이스 코드 **SimpleContentProvider/VegetableDatabase.cs** 표시 된 것 처럼 매우 간단한 2 열 데이터베이스를 만듭니다.
 
 ```csharp
 class VegetableDatabase  : SQLiteOpenHelper {
@@ -92,17 +92,17 @@ class VegetableDatabase  : SQLiteOpenHelper {
 }
 ```
 
-자체 데이터베이스 구현으로 노출 되도록 특별 한 고려 하지 않아도 `ContentProvider`그러나 바인딩을 의도 하는 경우는 `ContentProvider's` 데이터를는 `ListView` 라는 고유한 정수 열을 다음 제어 `_id` 의 일부가 되어야 합니다는 결과 집합입니다. 참조는 [Listview 및 어댑터](~/android/user-interface/layouts/list-view/index.md) 문서에 대 한 자세한 내용은 사용 하는 `ListView` 제어 합니다.
+자체 데이터베이스 구현으로 노출 해야 하는 특별 한 고려 사항이 필요가 없습니다를 `ContentProvider`그러나 바인딩할 하려는 경우는 `ContentProvider's` 데이터를를 `ListView` 라는 고유 정수 열을 제어 한 다음 `_id` 의 일부 여야 합니다를 결과 집합입니다. 참조를 [Listview 및 어댑터](~/android/user-interface/layouts/list-view/index.md) 사용 하 여 대 한 자세한 내용은 문서를 `ListView` 제어 합니다.
 
 
 ## <a name="create-the-contentprovider"></a>ContentProvider 만들기
 
-이 섹션의 나머지 부분 방법에 대 한 단계별 지침인 **SimpleContentProvider/VegetableProvider.cs** 클래스 예제 빌드 되었습니다.
+이 섹션의 나머지 부분에서 하는 방법을 단계별 지침을 제공 **SimpleContentProvider/VegetableProvider.cs** 클래스 예제 빌드 되었습니다.
 
 
 ### <a name="initialize-the-database"></a>데이터베이스를 초기화 합니다.
 
-첫 번째 단계는 하위 클래스 `ContentProvider` 사용할 데이터베이스를 추가 합니다.
+첫 번째 단계는 서브 클래스 `ContentProvider` 사용할 데이터베이스를 추가 합니다.
 
 ```csharp
 public class VegetableProvider : ContentProvider 
@@ -116,23 +116,23 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-코드의 나머지 부분 하면 데이터를 검색 하 고 쿼리 하는 실제 콘텐츠 공급자 구현을 형성 됩니다.
+코드의 나머지 데이터를 검색 하 고 쿼리할 수 있도록 실제 콘텐츠 공급자 구현을 구성 됩니다.
 
 
 
-## <a name="add-metadata-for-consumers"></a>소비자에 대 한 메타 데이터 추가
+## <a name="add-metadata-for-consumers"></a>소비자에 대 한 메타 데이터를 추가 합니다.
 
-네 가지 종류의 메타 데이터에 노출 하려는 없는 `ContentProvider` 클래스입니다. 만 기관 필요할 나머지 규칙으로 수행 됩니다.
+네 가지 유형의에 노출 하려고 하는 메타 데이터를 가지는 `ContentProvider` 클래스입니다. 만 기관 필요한 나머지 규칙에서 수행 됩니다.
 
-- **기관** &ndash; 는 `ContentProvider` 특성 *해야* 것에 등록 된 Android 응용 프로그램을 설치 하는 클래스에 추가 합니다.
+- **인증 기관** &ndash; 는 `ContentProvider` 특성 *해야* 에 Android로 등록 된 응용 프로그램을 설치할 때 클래스에 추가 합니다.
 
-- **Uri** &ndash; 는 `CONTENT_URI` 코드에서 쉽게 사용할 수 있도록 상수로 노출 됩니다. 인증 기관을 일치 해야 하는데 스키마 및 기본 경로 포함 합니다.
+- **Uri** &ndash; 는 `CONTENT_URI` 코드에서 쉽게 사용할 수 있도록 상수로 노출 됩니다. 인증 기관 일치 해야 하지만 스키마 및 기본 경로 포함 합니다.
 
-- **MIME 형식을** &ndash; 그 인수를 나타내는 두 개의 MIME 형식을 정의 하므로 결과 및 단일 결과 목록이 서로 다른 내용 유형을으로 처리 됩니다.
+- **MIME 형식** &ndash; 결과 및 단일 결과 목록을 나타내는 두 개의 MIME 형식을 정의 하므로 다른 콘텐츠 형식으로 처리 됩니다.
 
-- **InterfaceConsts** &ndash; 사용 하는 코드가 쉽게 검색 하 고 입력 오류의 위험 없이 참조할 수 있도록 각 데이터 열 이름에 대 한 상수 값을 제공 합니다.
+- **InterfaceConsts** &ndash; 코드가 사용 쉽게 검색 하 고 수 철자 오류 시 키 지 않고 참조할 각 데이터 열 이름에 대 한 상수 값을 제공 합니다.
 
-이 코드에서는 이러한 각 항목 구현 하는 방법을, 보여 줍니다. 이전 단계에서 데이터베이스 정의에 추가 합니다.
+이 코드를 보여 줍니다 어떻게 이러한 각 항목을 구현 하 고 이전 단계에서 데이터베이스 정의에 추가 합니다.
 
 ```csharp
 [ContentProvider(new string[] { CursorTableAdapter.VegetableProvider.AUTHORITY })]
@@ -161,15 +161,15 @@ public class VegetableProvider : ContentProvider
 
 ## <a name="implement-the-uri-parsing-helper"></a>도우미를 구문 분석 하는 URI를 구현 합니다.
 
-Uri를 사용 하 여 요청을 사용 하는 코드가 있으므로 `ContentProvider`, 반환 될 데이터를 확인 하기 위해 해당 요청을 구문 분석 해야 합니다. `UriMatcher` 클래스 Uri 구문 분석 하는 데 도움이 될 수, 하는 패턴 Uri로 초기화 된 후의 `ContentProvider` 지원 합니다.
+요청 Uri를 사용 코드를 사용 하기 때문에 `ContentProvider`, 반환 될 데이터를 확인 하기 위해 이러한 요청을 구문 분석할 수 해야 합니다. 합니다 `UriMatcher` 클래스 Uri 구문 분석 하는 데 도움이, Uri는 패턴으로 초기화 된 후의 `ContentProvider` 지원 합니다.
 
-`UriMatcher` 예제에서으로 초기화 됩니다 두 Uri:
+`UriMatcher` 예제의 두 Uri를 사용 하 여 초기화할 수 됩니다.
 
 1. *"com.xamarin.sample.VegetableProvider/vegetables"* &ndash; 야채의 전체 목록을 반환 하는 요청입니다.
 
 2. *"com.xamarin.sample.VegetableProvider/vegetables/\#"* &ndash; 여기서는 \# 는 숫자 매개 변수 자리 표시자 (의 `_id` 데이터베이스에서 행의). 별표 자리 표시자 ("\*") 텍스트 매개 변수와 일치를 사용할 수도 있습니다.
 
-코드를 사용 하 여 상수 기관 및 자료와 같은 메타 데이터 값을 참조할\_경로입니다. 반환 코드 Uri 반환 될 데이터를 확인 하려면 구문 분석을 수행 하는 메서드에서 사용 됩니다.
+코드를 사용 하 여 상수 기관 및 자료와 같은 메타 데이터 값을 참조할\_경로입니다. 반환 코드에서 Uri 반환 될 데이터를 확인 하려면 구문 분석을 수행 하는 메서드가 사용 됩니다.
 
 ```csharp
 const int GET_ALL = 0; // return code when list of Vegetables requested
@@ -185,12 +185,12 @@ static UriMatcher BuildUriMatcher()
 }
 ```
 
-이 코드는 모든 개인는 `ContentProvider` 클래스입니다. 참조 [Google UriMatcher 설명서](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/) 자세한 정보.
+이 코드는 모든 개인은 `ContentProvider` 클래스입니다. 가리킵니다 [Google UriMatcher 설명서](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/) 대 한 자세한 내용은 합니다.
 
 
-## <a name="implement-the-querymethod"></a>QueryMethod 구현
+## <a name="implement-the-querymethod"></a>구현 된 QueryMethod
 
-가장 간단한 `ContentProvider` 메서드를 구현 하는 `Query` 메서드. 구현을 사용 하 여 아래에서 `UriMatcher` 구문 분석 하는 `uri` 매개 변수 및 올바른 데이터베이스 메서드를 호출 합니다. 경우는 `uri` 정수 아웃 구문 분석 되는 ID 매개 변수를 포함 (사용 하 여 `LastPathSegment`) 데이터베이스 쿼리에 사용 되 고 있습니다.
+가장 간단한 `ContentProvider` 구현할 메서드를 `Query` 메서드. 구현을 사용 합니다 `UriMatcher` 구문 분석 하는 `uri` 매개 변수 및 메서드 호출 하 여 올바른 데이터베이스. 경우는 `uri` 정수 아웃 구문 분석 되는 ID 매개 변수를 포함 (사용 하 여 `LastPathSegment`) 데이터베이스 쿼리에서 사용 합니다.
 
 ```csharp
 public override Android.Database.ICursor Query(Android.Net.Uri uri, string[] projection, string selection, string[] selectionArgs, string sortOrder)
@@ -216,7 +216,7 @@ Android.Database.ICursor GetFromDatabase(string id)
 ```
 
 `GetType` 메서드 재정의 해야 합니다. 지정 된 Uri에 대해 반환 되는 콘텐츠 형식을 확인 하려면이 메서드를 호출할 수 있습니다.
-해당 데이터를 처리 하는 방법을 소비 응용 프로그램을 알려줄 수 있습니다이 있습니다.
+소비 응용 프로그램이 해당 데이터를 처리 하는 방법을 알 수 있습니다이 합니다.
 
 ```csharp
 public override String GetType(Android.Net.Uri uri)
@@ -235,7 +235,7 @@ public override String GetType(Android.Net.Uri uri)
 
 ## <a name="implement-the-other-overrides"></a>다른 재정의 구현 합니다.
 
-간단한 예제는 편집 하거나 데이터를 삭제 하기 위해 허용 하지 않지만 Insert, Update 및 Delete 메서드를 구현 해야 하는 구현 없이 추가:
+이 간단한 예제는 편집 하거나 데이터를 삭제 하기 위해 허용 하지 않지만 Insert, Update 및 Delete 메서드를 구현 해야 하므로 구현 없이 추가:
 
 ```csharp
 public override int Delete(Android.Net.Uri uri, string selection, string[] selectionArgs)
@@ -252,19 +252,19 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 }
 ```
 
-기본 완료 `ContentProvider` 구현 합니다. 응용 프로그램 설치가 완료 된 후 되 면 노출 된 데이터에서 제공 됩니다. 둘 다 응용 프로그램 내부 될 뿐만 아니라 다른 응용 프로그램을 참조 하는 Uri를 알고 있습니다.
+기본 완료 `ContentProvider` 구현 합니다. 응용 프로그램을 설치한 후에, 노출 된 데이터에서 제공 됩니다. 모두 응용 프로그램 내에서 뿐만 아니라이 참조 하는 Uri를 알고 있는 다른 응용 프로그램입니다.
 
 
 ## <a name="access-the-contentprovider"></a>액세스는 ContentProvider
 
-한 번의 `VegetableProvider` 되었습니다, 구현에 액세스 이루어진다는 동일한 방식으로이 문서의 시작 부분에 연락처 공급자: 지정된 된 Uri를 사용 하 여 커서를 가져오고 다음 어댑터를 사용 하 여 데이터에 액세스 합니다.
+한 번는 `VegetableProvider` 되었습니다 구현 액세스 이루어집니다이 문서의 시작 부분에서 연락처 공급자와 마찬가지로: 지정된 된 Uri를 사용 하 여 커서를 가져오고 다음 어댑터를 사용 하 여 데이터에 액세스할 수 있습니다.
 
 
-## <a name="bind-a-listview-to-a-contentprovider"></a>ListView를 ContentProvider에 바인딩
+## <a name="bind-a-listview-to-a-contentprovider"></a>ListView ContentProvider에 바인딩
 
-채우는 한 `ListView` 데이터로 야채 필터링 되지 않은 목록에 해당 하는 Uri를 사용 합니다. 코드 상수 값 사용 `VegetableProvider.CONTENT_URI`, 확인 알게 되 `com.xamarin.sample.vegetableprovider/vegetables`합니다. 우리의 `VegetableProvider.Query` 구현에 바인딩할 수 있는 커서를 반환 합니다는 `ListView`합니다.
+채우는 데는 `ListView` 데이터로 야채 그림 필터링 되지 않은 목록에 해당 하는 Uri를 사용 합니다. 코드에서 상수 값 사용 `VegetableProvider.CONTENT_URI`, 알 수 있는 확인 `com.xamarin.sample.vegetableprovider/vegetables`합니다. 우리의 `VegetableProvider.Query` 구현에 바인딩할 수 있습니다 하는 커서를 반환 합니다는 `ListView`합니다.
 
-코드 `SimpleContentProvider/HomeScreen.cs` 데이터를 표시 하는 간단한 방법을 보여 줍니다.는 `ContentProvider`:
+코드 `SimpleContentProvider/HomeScreen.cs` 간단 하 게 데이터를 표시 하도록 표시는 `ContentProvider`:
 
 ```csharp
 listView = FindViewById<ListView>(Resource.Id.List);
@@ -282,17 +282,17 @@ adapter = new SimpleCursorAdapter(this, Android.Resource.Layout.SimpleListItem1,
 listView.Adapter = adapter;
 ```
 
-완성 된 응용 프로그램은 다음과 같습니다.
+응용 프로그램은 다음과 같습니다.
 
 [![야채, 과일, 꽃 bud과, Legumes, 전구, Tubers 나열 하는 앱의 스크린 샷](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
 
-## <a name="retrieve-a-single-item-from-a-contentprovider"></a>ContentProvider에서 단일 항목을 검색 합니다.
+## <a name="retrieve-a-single-item-from-a-contentprovider"></a>ContentProvider에서 단일 항목 검색
 
-소비 응용 프로그램 예를 들어 특정 행으로 참조 하는 다른 Uri를 구성 하 여 변환을 수행할 수 있는 데이터의 단일 행에 액세스 해야 할 경우가 있습니다.
+소비 응용 프로그램을 단일 행의 예를 들어 특정 행을 참조 하는 다른 Uri를 생성 하 여 수행할 수 있는 데이터에 액세스할 수도 있습니다.
 
-사용 하 여 `ContentResolver` 필요한와 Uri를 작성 하 여 단일 항목에 액세스 하는 직접 `Id`합니다.
+사용 하 여 `ContentResolver` 필요한 Uri를 작성 하 여 단일 항목에 액세스 하려면 직접 `Id`입니다.
 
 ```csharp
 Uri.WithAppendedPath(VegetableProvider.CONTENT_URI, id.ToString());

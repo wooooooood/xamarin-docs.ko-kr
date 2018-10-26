@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 132f31f4c9426dfceeef38f464231d1545f4db50
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115174"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
 
 ![미리 보기](~/media/shared/preview.png)
 
-Xamarin.Forms는 GTK # 앱에 대 한 미리 보기 지원이 되었습니다. GTK #는 그래픽 사용자 인터페이스 도구 키트 GTK + toolkit 및 다양 한 GNOME 라이브러리를 연결 하는 Mono와.NET을 사용 하 여 완전 한 네이티브 GNONE 그래픽 앱의 개발을 허용 합니다. 이 문서에서는 Xamarin.Forms 솔루션에 GTK # 프로젝트를 추가 하는 방법에 설명 합니다.
+Xamarin.Forms는 GTK# 앱에 대한 제한적인 지원을 하고 있습니다. GTK #는 GTK + toolkit 및 다양 한 GNOME 라이브러리를 연결 하는 그래픽 사용자 인터페이스 도구 키트는 완전 한 네이티브 GNOME 개발 Mono와.NET을 사용 하 여 그래픽 앱. 이 문서에서는 Xamarin.Forms 솔루션에 GTK # 프로젝트를 추가 하는 방법에 설명 합니다.
 
 시작 하기 전이나, 새 Xamarin.Forms 솔루션을 만드는 예를 들어 기존 Xamarin.Forms 솔루션을 사용 하 여 [ **GameOfLife**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife/)합니다.
 
@@ -29,7 +29,7 @@ Xamarin.Forms는 GTK # 앱에 대 한 미리 보기 지원이 되었습니다. G
 
 GTK # macos 및 Linux의 일부로 설치 됩니다 [Mono](http://www.mono-project.com/download/stable/)합니다. GTK # for.NET에 설치할 수 있습니다 사용 하 여 Windows를 [GTK # Installer](http://www.mono-project.com/download/stable/#download-win)합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한 지침을 따릅니다.
 
@@ -110,7 +110,7 @@ GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한
 
     ![GTK # 게임 수명의](gtk-images/win/gtk-gameoflife.png "GTK # 게임 수명")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 앱을 추가 하려면 GTK # Mac 데스크톱에서 실행 되는 이러한 지침을 따릅니다.
 

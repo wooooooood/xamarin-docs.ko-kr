@@ -3,15 +3,15 @@ title: Android 매니페스트 사용
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 0857b70e6e1d9104f62ec2e26f8edbab385d06f3
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242253"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111254"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -37,7 +37,8 @@ namespace Demo
 }
 ```
 
-이 인해에서 생성 되 고 아무 **AndroidManifest.xml**합니다. 원하는 경우는 `<activity/>` 요소를 생성 하도록 사용 해야 합니다 [ `[Activity]` ](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) 사용자 지정 특성: 
+이 인해에서 생성 되 고 아무 **AndroidManifest.xml**합니다. 하려는 경우는 `<activity/>` 생성 되는 요소를 사용 해야 합니다 [`[Activity]`](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) 
+사용자 지정 특성: 
 
 ```csharp
 namespace Demo
@@ -177,7 +178,10 @@ Android 매니페스트 사용 권한을 추가 하면 (에 설명 된 대로 [A
 
 ### <a name="intent-actions-and-features"></a>의도 한 동작 및 기능
 
-Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 이 통해 이루어집니다 [의도](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 하며 [ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 사용자 지정 특성입니다. 작업을 사용 하 여 작업에 대 한 적절 한를 지정할 수 있습니다는 [ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 생성자 및 범주와 적합 합니다 [ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 속성입니다. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
+Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 이 통해 이루어집니다 [의도](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+사용자 지정 특성입니다. 작업을 사용 하 여 작업에 대 한 적절 한를 지정할 수는 [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
+생성자 및 범주와 적합 합니다 [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
+속성입니다. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 07/16/2018
+ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "39351745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121427"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
 
@@ -111,10 +111,10 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[IntelliTect](http://intellitect.com/)|Spokane, WA, USA|ntelliTect Corporation은 고급 소프트웨어 아키텍처 및 컨설팅 회사 Spokane 워싱턴 주에 기반을 개발 합니다.|
 |[Interknowlogy](http://www.interknowlogy.com/)|샌디에이고, CA, 미국|사용자 지정 앱 개발에 전 세계 선두 InterKnowlogy 터치, 제스처 및 음성을 통해 연결 된 환경을 제공 하기 위해 현재와 미래의 기술을 활용 하 여|
 |[Intouch 솔루션](http://www.intouchsol.com )|Overland Park, KS, 미국. 런던, 영국; 시카고, IL, 미국. 뉴욕, NY, 미국|제약 및 의료 공간 내에서 선행 디지털 에이전시를 기꺼이|
-|[iTexico](http://www.itexico.com)|오스틴, 텍사스, 미국|iTexico는 글로벌 소프트웨어 기술 회사에서는 프로젝트 내내 모바일 개발을 사용 하 여는 데 집중 하는 ' Äôs 수명 주기를 nearshore 아웃소싱 합니다.|
+|[iTexico](http://www.itexico.com)|오스틴, 텍사스, 미국|iTexico에 nearshore 아웃소싱 통해 프로젝트의 수명 주기 동안 모바일 개발을 사용 하 여는 데 집중 하는 글로벌 소프트웨어 기술 회사입니다.|
 |[JBS](https://www.jbssolutions.com)|펜실베이니아, 미국|JBS는 사용자 지정 소프트웨어 솔루션 공급자입니다.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, 미국. 시카고, IL, 미국. 톨레도, OH, 미국. Seongnam-si Gyeonggi 수행, 대한민국|Kaonsoft는 enterprise mobility 응용 프로그램을 만드는 대 한 플랫폼 간 완전 한 종단 간 솔루션을 제공 하는 혁신적인 소프트웨어 회사입니다.|
-|[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, 미국. 애틀랜타, GA, 미국. 뭄바이, 인도, Maharashtra; 바드, Telangana, 인도; 푸 네, Maharashtra, 인도|Katalyst에서 기술을 실제로 조력자 수 하는 것이 믿습니다. 에 선행 회사 뿐 아니라를 신뢰 하는 이유를 제공 하는 제품 및 서비스, 하지만 자신의 핵심 업무 엔터프라이즈에 걸쳐 있는 사용자 지정, 강력한 솔루션을 통해 작동 하는 방식 변경.|
+|[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, 미국. 애틀랜타, GA, 미국. 뭄바이, 인도, Maharashtra; 바드, Telangana, 인도; 푸 네, Maharashtra, 인도|Katalyst에서 기술을 실제로 조력자 수 하는 것이 믿습니다. 에 선행 회사 뿐 아니라를 신뢰 하는 이유를 제공 하는 제품 및 서비스, 하지만 자신의 핵심 업무 엔터프라이즈에 걸쳐 있는 사용자 지정, 강력한 솔루션을 통해 작동 하는 방식 변경.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm Beach, FL|일반적으로 교육, 브랜드, Id 및 협력 했습니다. 클라이언트의 비즈니스 문제를 연구 했습니다 디자인, UX 및 콘텐츠 전략의 주소입니다. 클라이언트 요구 사항에 도달 하 고 수익성에 bussiness 도울|
 |[LEAP](http://www.leapagency.com/our-work)|루이빌, KY|영상을 몰입 형 환경을 spark 사용자와 브랜드 간의 화학 하도록 설계 되었습니다. 하기 위해 최선을 다하고, 참여 및 영광는 환경입니다. 관계를 구축 하는 환경입니다. 환경 영향을 줍니다.|
 |[Leaware](http://www.leaware.com)|Elmhurst, IL; Monheim 저는 Rhein, 독일; 바르샤바, 폴란드|Leaware는 소프트웨어 집, 회사 및 개발 업체인-다중 플랫폼, 네이티브 모바일 응용 프로그램을 전문적으로 다루는 및 웹 응용 프로그램 디자인입니다. 이 고유한 기술, 역량, blend 및 경험을 만들기 가장 신뢰할 수 있는, 고급 솔루션 시장에서 현재는 데 도움이 됩니다.|
@@ -123,10 +123,10 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[수명 주기 컨설팅](http://lifecycleconsulting.com.au)|Syndey, AU|수명 주기 패드/모바일 개발, business intelligence에에서 참여 하는 소프트웨어 개발 회사 맞춤식 Microsoft 및 Xamarin 기술을 사용 하 여 소프트웨어 및 시스템 통합입니다. Agile 방법론을 활용 하 여 해당 클라이언트의 경우, 마음의 평화를 제공 하 고 결과물 및 비용을 쉽게 추적할 수 눈에 띄어야 프로세스를 달성할 수 있습니다.|
 |[Magenic](http://magenic.com)|애틀랜타, GA; 보스턴, MA; 시카고, IL; 이끌고, MN; 샌프란시스코, CA; 뉴포트 Beach, CA; 마닐라, 필리핀|Magenic 되도록 하려는 가져올 기술을 통해 비즈니스를 변환 합니다. 성공은 곧 우리의 성공 기업은 일치할 수 있도록 참여 하는 각 프로젝트에 유연성이 더욱 우수 하며 전문 개발 속도 제공 하는 데 때문일 수 있습니다. |
 |[Magenium 솔루션](http://magenium.com)|감사 Ellyn, IL, 미국|서비스에서 범위 IT 클라우드 컴퓨팅 모바일 앱 개발 인력입니다. 기술을 통해 비즈니스를 성장 시키는, 생산성, 경쟁력을 및 비용을 절감 하는 클라이언트에 있도록 도와 드립니다.|
-|[Mapleton Hill](Https://www.mapletonhill.net )|그림, CO|Mapleton Hill는 전체 서비스 응용 프로그램 개발 기관 볼더의 CO에 기반 합니다. 대상에 이제 사용자 지정 소프트웨어, API, 응답성이 뛰어난 CMS 웹 사이트 또는 Xamarin으로 빌드된 네이티브 모바일 앱을 해야 하는지 여부를|
+|[Mapleton Hill](Https://www.mapletonhill.net )|그림, CO|Mapleton Hill는 전체 서비스 응용 프로그램 개발 기관 볼더의 CO에 기반 합니다. 대상에 이제 사용자 지정 소프트웨어, API, 응답성이 뛰어난 CMS 웹 사이트 또는 Xamarin으로 빌드된 네이티브 모바일 앱을 해야 하는지 여부를|
 |[컨설팅, Inc Megsoft](http://megsoftconsulting.com)|워싱턴 d.c.|Megsoft 컨설팅, Inc.에 Microsoft.NET framework 및 Azure 에코 시스템에 따라 Xamarin 플랫폼 간 도구를 사용 하 여 모바일 응용 프로그램을 만드는 전문으로 하는 회사입니다. |
 |[장점이 Solutions i n c.](http://meritsolutions.com)|Wheaton, IL |전 세계 몇 가지 Microsoft 파트너 사이에서 장점이 솔루션은 사이 종단 간 디지털 변환-Azure 관리 되는 서비스, 사물 인터넷 (IoT)에 모바일 응용 프로그램 및 모든 Microsoft Dynamics 365을 제공할 수 있습니다.|
-|[시스템 LLC 메시](http://www.mesh-systems.com )|카멜, IN |메시 시스템에는 컴퓨터 데이터의 가치를 드러내 변환 사람, 프로세스 및 컴퓨터 간의 관계를 사용 하는 방법을 알고 있습니다. |
+|[시스템 LLC 메시](http://www.mesh-systems.com )|카멜, IN |메시 시스템에는 컴퓨터 데이터의 가치를 드러내 변환 사람, 프로세스 및 컴퓨터 간의 관계를 사용 하는 방법을 알고 있습니다. |
 |[MetroStar 시스템](http://www.metrostarsystems.com/)|스톤, 버지니아|디지털 변환 투자를 강화 하 고 환경에서 성공 하는 데 제공 합니다.|
 |[MiC 소프트웨어 ](http://mic-software.net/)|Fresno, CA, 미국|직접 고객의 개별 요구 사항에 맞게 완벽 하 게 맞춤형된 서비스를 제공 함으로써 pride 했습니다.|
 |[Mindtree](http://www.mindtree.com)|Warren 뉴어크|Mindtree 디지털 변환 및 기술 서비스 제공 구상이에서 실행을 경쟁 업체 보다 성능이 뛰어나지만 Global 2000 클라이언트를 사용 하도록 설정|
@@ -135,16 +135,16 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[컨설팅 Motis](http://www.motisconsulting.com/)|Dubuque, 아이오와|Motis 컨설팅 도움이 됩니다. 모바일 또는 데스크톱 소프트웨어 응용 프로그램과 관련 된 제품 전략, 아키텍처 또는 개발 요구에 대 한 도움말 우리 Motis 솔루션 및 연락처에 자세히 읽어보세요.|
 |[Nebbia 기술 ](http://www.nebbiatech.com/)|플로리다|우리는 클라우드 우선 소프트웨어 회사의 Microsoft 기술에 중점을 둡니다. Devops에서 모범 사례를 적용 하는 동안 Azure를 활용 하는 놀라운 제품 빌드합니다. 클라우드 우선 중점을 두고 있고 클라우드로 이동 및 클라우드 투자를 최대한 활용 하도록 도와주는 클라이언트와 파트너 관계입니다.|
 |[특성](http://www.ness.com/)|산호세, CA, 미국|디지털 변환 및 사용자 지정 소프트웨어 제품 엔지니어링 조직 구상, 빌드 및 신규 시장에 진입 하는 디지털 플랫폼을 지속적으로 진화 하는 데 서비스 캡처 운영 알아보고 새로운 수익 Ness 디지털 엔지니어링 제공 효율성입니다. |
-|[Neudesic의](http://www.neudesic.com)|Irvine, CA; 애틀랜타, GA; 오스틴, 텍사스; 시카고, IL; 댈러스, 텍사스; 덴버, CO; 텍사스 휴스턴에; 로스앤젤레스, CA; 뉴욕, NY; 필라델피아, PA; 피닉스, AZ; 포틀랜드, OR; 시애틀, 워싱턴|Neudesic의 선행 National 시스템 통합 업체 및 신뢰할 수 있는 Microsoft 파트너, 기능 및 Microsoft 기술 관련 전문 대 한 독립 연구 회사에서 인식 됩니다. 또한 Theobald, AWS, Dell, Xamarin, metalogix의 Nintex 등과 같은 기타 업계 선두 업체와의 전략적 제휴 유지합니다. 우리의 제휴와 밀접 하에서 작업 하 여 ' 도구 및 기술 전문성을 혼합 Äî ' Äî neudesic의 모든 비즈니스 문제에 가장 적합 한 해결책을 전달할 수 있습니다.|
+|[Neudesic의](http://www.neudesic.com)|Irvine, CA; 애틀랜타, GA; 오스틴, 텍사스; 시카고, IL; 댈러스, 텍사스; 덴버, CO; 텍사스 휴스턴에; 로스앤젤레스, CA; 뉴욕, NY; 필라델피아, PA; 피닉스, AZ; 포틀랜드, OR; 시애틀, 워싱턴|Neudesic의 선행 National 시스템 통합 업체 및 신뢰할 수 있는 Microsoft 파트너, 기능 및 Microsoft 기술 관련 전문 대 한 독립 연구 회사에서 인식 됩니다. 또한 Theobald, AWS, Dell, Xamarin, metalogix의 Nintex 등과 같은 기타 업계 선두 업체와의 전략적 제휴 유지합니다. 우리의 제휴와 밀접 하에서 작업 하 여 &ndash; 도구 및 기술 전문성을 혼합 &ndash; neudesic의 모든 비즈니스 문제에 가장 적합 한 해결책을 전달할 수 있습니다.|
 |[NIIT Technologies](http://www.niit-tech.com)|애틀랜타, GA, 미국. 노 이다, 인도, Uttar 프라 데 시; 런던, 영국; 마드리드, 스페인; 싱가포르|NIIT Technologies는 미국, 유럽, 아시아 및 오스트레일리아에서 클라이언트의 요구 사항을 해결 하는 글로벌 IT 솔루션 조직입니다. NIIT Technologies는 다양 한 서비스를 제공 하는 여행 및 운송, 은행 및 금융 서비스, 보험, 제조 및 미디어 버티 컬에서 클라이언트를 서비스 합니다. 디지털 서비스에 집중, 민첩 하 고 확장 가능한 비즈니스 디자인 및 디지털 운영 모델 회사는 지원 됩니다.  광범위 한 최고의에서 솔루션 및 환경, 분석 및 통합을 포함 하 여 디지털 서비스 값 체인 전체에 분산 되어 있는 효율적인 서비스 제공 합니다.|
-|[Nous Infosystems](http://nousinfosystems.com)|Edison 뉴어크 |새 프로젝트는 언제나 환영 합니다. |
+|[Nous Infosystems](http://nousinfosystems.com)|Edison 뉴어크 & San Ramon, CA, 미국. Bentford, 영국; Mississauga, ON, 캐나다; Mainz, 독일; Bengaluru, Coimbatore, 인도; 두바이, 아랍에미리트|Nous, 선행 Xamarin 파트너를 통해 개발 역량을 쉽게 강력한 Xamarin 플랫폼을 채택 하 여 기존 비즈니스 팀, 도구를 활용 하도록 고객 및 C#효율적으로 이동할 라이브 모바일 /.NET 코드입니다. 종단 간 엔터프라이즈 모바일 서비스 사용자 환경 및 Xamarin 자문 서비스, 서비스 응용 프로그램 개발, 테스트 및 지원 서비스 디자인을 제공합니다.|
 |[Noutash 컨설팅 Inc.](http://www.noutashconsulting.ca/)|Scarborough, ON|당사의 컨설턴트 원래, creative 모바일 응용 프로그램을 작성 및 독특하고 멋진 특수화 합니다.|
 |[Oakwood 마케팅](http://www.oakwoodsys.com/)|캔자스 시티, MO, 미국|에서는 소프트웨어 도구, 기술, 기능 및 모범 사례는 고유 집합을 사용 하 여 사용자 지정합니다.  고유 사양 및 요구 사항 하도록 설계 되었습니다.|
 |[Odessian, LLC](http://www.odessian.com)|팔리고, IL|이 전문가 기술 문제에 일치 하는 숙련 된 합니다. 당사는 다양 한 업계 prospectives 귀사에 맞는 최고의의 솔루션을 만듭니다.|
 |[어떤 소프트웨어](http://www.onprairiesoftware.com/about-us.html)|Walhalla, ND|어떤 소프트웨어에서 개념 미국 내에서 비용 효율적인 소프트웨어 개발 서비스를 제공 하는 것입니다. 개발 해안이 작업을 유지 하는 옵션을 아웃소싱 하려는 American 회사를 제공 하려고 합니다. 저렴 한 비용으로 개발 서비스 품질을 제공할 수 있도록 하려면 키는 소규모 영역에 자체를 기반으로 합니다. 이 작업을 수행 하면 이러한도 것으로 생각 될 강력한 개발 팀이이 영역에는 뛰어난 작업 광에 작성할 수 있습니다.|
-|[개방형 시스템 기술 (OST)](http://www.ostusa.com/app-dev)|그랜드 Rapids, MI; Detroit, MI; 이끌고, MN; 일리노이 주 시카고|이 전구 머리 되거나 주시만 만족은? 비즈니스에 대 한 하드 작동 하는 플랫폼 간 모바일 응용 프로그램에 프로그램 개념을 설정 하는 데 도움이 필요한 경우에서는 ' Äôve만 작업을 수행 하는 전문가 가져왔습니다.  앱만 보다 모바일 응용 프로그램을 작성 하 여 더 이상 임을 알고 있습니다.  엔터프라이즈 아키텍처와 통합 해야 할 필요성 이해 합니다.  계십니까 API에 대 한 마이크로 서비스 기반 아키텍처, NoSQL 및 클라우드에서 응용 프로그램에 관계형 데이터베이스, 오프 라인 동기화, Bluetooth LE IoT에 대 한 방법과?  그렇다면 드립니다 계획 및 개발, 테스트, 배포 및 응용 프로그램을 지원 하려면 실용적인 agile 접근 방식을 활용 합니다.  모바일 환영 하지만 실제 열정은 클라이언트를 사용 하 여 컨설팅 및 비전 달성 하기 위해.  연락 하 고 작업 중인 항목 공유 합니다.  참여를 하는 친숙 하 고 자리 잡기 팀을 찾을 수 있습니다.|
+|[개방형 시스템 기술 (OST)](http://www.ostusa.com/app-dev)|그랜드 Rapids, MI; Detroit, MI; 이끌고, MN; 일리노이 주 시카고|이 전구 머리 되거나 주시만 만족은? 비즈니스에 대 한 하드 작동 하는 플랫폼 간 모바일 응용 프로그램에 프로그램 개념을 설정 하면 도움이 필요한 경우에 작업을 수행 하는 전문가 답변이 있습니다.  앱만 보다 모바일 응용 프로그램을 작성 하 여 더 이상 임을 알고 있습니다.  엔터프라이즈 아키텍처와 통합 해야 할 필요성 이해 합니다.  계십니까 API에 대 한 마이크로 서비스 기반 아키텍처, NoSQL 및 클라우드에서 응용 프로그램에 관계형 데이터베이스, 오프 라인 동기화, Bluetooth LE IoT에 대 한 방법과?  그렇다면 드립니다 계획 및 개발, 테스트, 배포 및 응용 프로그램을 지원 하려면 실용적인 agile 접근 방식을 활용 합니다.  모바일 환영 하지만 실제 열정은 클라이언트를 사용 하 여 컨설팅 및 비전 달성 하기 위해.  연락 하 고 작업 중인 항목 공유 합니다.  참여를 하는 친숙 하 고 자리 잡기 팀을 찾을 수 있습니다.|
 |[OpenArc](https://www.openarc.net/)|Wexford, PA, 미국. 개가, OH, 미국. 워싱턴, DC, 미국|OpenArc은 클라우드에 태어난 ' IT 및 비즈니스 컨설팅 업체인 선행 기술 및 비즈니스를 사용 하도록 설정 하기 위한 모범 사례를 사용 하 여 활용 하려면 수 있도록 클라이언트입니다. Xamarin 사용 하 여 파트너에 초점을 구상, 설계/디자인 및 확장 또는 클라우드 및 모바일 응용 프로그램을 해당 백 엔드 시스템 및 IoT 장치를 통합 하는 데 전념 켜져 있습니다. 조직 세 가지 기본 서비스 영역으로 구성 됩니다: 컨설팅, 소프트웨어 개발 및 인력 전략입니다. 전략 서비스 도움말 비전, 고객 및 로드맵 일반 정방향을 사용 하 여 값을 확인를 선행 사람이 중심 디자인 사고 기술 및 메서드를 사용 하 여 적합 한 솔루션을 구상 하는 클라이언트입니다. 소프트웨어 엔지니어링 및 개발 서비스 솔루션을 구축할 오른쪽, 오른쪽의 기술을 사용 하 여 처음으로 확인 합니다. 전문성을 비롯 한 종단 간 솔루션에 걸쳐: UX/u I 및 콘텐츠 디자인, 반응 형 웹, Agile/스크럼, 하이브리드 및 네이티브 개발 콘텐츠 관리, 보안, 백 엔드, 소셜 및 IoT 통합, 분석 및 프로젝트 관리 합니다. 혁신적인 설계자, 개발자 및 QA/테스터의 전담된 팀을 구상, 디자인 및 최고 품질을 지속적으로 연중 무휴 지원 사용 하 여 여러분의 비전을 충족할 수 있는 최상의 솔루션을 만듭니다.|
-|[Pariveda 솔루션](http://www.parivedasolutions.com/About/Pages/Xamarin.aspx)|댈러스, 텍사스; 텍사스 휴스턴에; 시카고, IL; 샌프란시스코, CA; 로스앤젤레스, CA; 시애틀, WA; 뉴욕, NY; 워싱턴, DC; 애틀랜타, GA|Pariveda를 사용 하 여 모바일 기술을 채택 하는 능력을 가속화 ' Äôs 이동성 전략 및 솔루션 생산성 및 혁신을 입증 합니다. 해당 모바일 사례를 활용 하는 해당 솔루션 ' Äôs 광범위 한 지식이 기업 전략 및 현재 및 미래의 요구 사항을 해결 하는 사용자 지정 모바일 솔루션을 제공 합니다. Pariveda 솔루션 범위는 회사의 개발 및 구현은까지 Mobile 전략에서 제공합니다.|
+|[Pariveda 솔루션](http://www.parivedasolutions.com/About/Pages/Xamarin.aspx)|댈러스, 텍사스; 텍사스 휴스턴에; 시카고, IL; 샌프란시스코, CA; 로스앤젤레스, CA; 시애틀, WA; 뉴욕, NY; 워싱턴, DC; 애틀랜타, GA|Pariveda의 입증 된 이동성 전략 및 생산성 및 혁신을 제공 하는 솔루션을 사용 하 여 모바일 기술을 채택 하는 능력을 가속화 하세요. 해당 솔루션 전략 및 현재 및 미래의 요구 사항을 해결 하는 사용자 지정 모바일 솔루션을 제공 하는 기업의 해당 Mobility 연습 방대한 기술 자료를 활용 합니다. Pariveda 솔루션 범위는 회사의 개발 및 구현은까지 Mobile 전략에서 제공합니다.|
 |[Perficient](http://www.perficient.com/services/technology/mobile)|애틀랜타, GA|Perficient은 Global 2000 및 enterprise 고객은 북미 지역 전체 서비스 선행 디지털 변환을 컨설팅 회사입니다. 뛰어난된 정보 기술, 관리 컨설팅 및 창의적인 기능을 사용 하 여 Perficient 및 해당 Perficient 디지털 에이전시 비전, 실행 및 제공 뛰어난 디지털 환경, 비즈니스 최적화 및 산업 솔루션을 사용 하 여 값 .|
 |[PILR 기술](http://pilrtech.com)|Joplin, 월, 미국. Springfield, 월, 미국. 캔자스 시티, MO, 미국|소프트웨어를 만들어 PILR 기술에 뛰어난 조직은 수 있습니다. 고유한 과제를 해결 하 고 소프트웨어를 통해 실제 가치를 리더 및 팀 협력 합니다.|
 |[PIXI3](http://www.pixi3.com/)|리가, 라트비아; 숲 Village, CO, 미국|다양 한 플랫폼에 대 한 데스크톱 소프트웨어입니다. 특정 비즈니스 논리를 구현 하는 서버 소프트웨어입니다. 휴대폰 및 태블릿 용 모바일 응용 프로그램입니다. 포함 된 시스템 및 특수 한 장치에 대 한 소프트웨어입니다. |
@@ -158,36 +158,36 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[RapidValue 솔루션](http://www.rapidvaluesolutions.com/)|Pleasanton, CA, 미국|RapidValue는 글로벌 선도 업체 enterprise mobility, 옴니 채널 솔루션 및 클라우드 서비스를 포함 하 여 디지털 변환을 사용 하도록 설정 합니다. 차세대 기술을 첨단 제품 뿐 아니라 기업에 대 한 디지털 솔루션을 구축할 수 있도록 도와 드립니다.|
 |[Reinvently](http://reinvently.com/xamarin-app-development/)|Palo Alto, CA |우리에 게 있어 디자인은 제품의 모양을 설명 하는 범용 언어 및 작업입니다. 전략을 수립할 고 아이디어를 시각적으로 '분명 합니다.' 하 여 개발|
 |[Reztech LLC](http://reztech.com)|피닉스, AZ, 미국. 댈러스, TX, 미국||
-|[Rightpoint]( http://www.rightpoint.com/contact)|시카고, IL, 미국. 보스턴, MA, 미국. Detroit, MI, 미국. 애틀랜타, GA, 미국. 덴버, CO, 미국. 댈러스, TX, 미국. 로스앤젤레스, CA, 미국. 뉴욕, NY, 미국|Rightpoint는의 핵심 기술 사용 하 여 고객 환경을 기관. Rightpoint 배달 하는 사용자가 훌륭한 고객 환경을 연료로 사용 하는 스레드도 기초로 ' Äôs 임무는 장벽을 제거 하 고 연결할 기업 고객에 게 모든 touchpoint에서 새로운 가능성을 실현해 하 합니다. Rightpoint 모바일 응용 프로그램을 만들거나 모바일 웹 사이트를 디자인 하는 반응 형는 단순히, 외에 해당 채널 선택 보다는 고객 경험에 초점을 맞춘 전체적인 engagement 모델을 설정 하는 다중 채널 솔루션 빌드 사용자 요구 사항을 충족 합니다. 이 패러다임 변화 하 여 마케터 잠재 고객에 값을 통신 하 고 보다 의미 있고 일관 된 방식으로 기존 고객과 지속적인 고객 충성도 설정 하 여 허용 합니다.|
+|[Rightpoint]( http://www.rightpoint.com/contact)|시카고, IL, 미국. 보스턴, MA, 미국. Detroit, MI, 미국. 애틀랜타, GA, 미국. 덴버, CO, 미국. 댈러스, TX, 미국. 로스앤젤레스, CA, 미국. 뉴욕, NY, 미국|Rightpoint는의 핵심 기술 사용 하 여 고객 환경을 기관. 뛰어난 고객 환경을 제공 하는 사용자가 연료로 사용 됩니다는 스레드도 년 설립 된 Rightpoint의 임무는 장벽을 제거 하 고 연결할 기업 고객에 게 모든 touchpoint에서 새로운 가능성을 실현해 하 합니다. Rightpoint 모바일 응용 프로그램을 만들거나 모바일 웹 사이트를 디자인 하는 반응 형는 단순히, 외에 해당 채널 선택 보다는 고객 경험에 초점을 맞춘 전체적인 engagement 모델을 설정 하는 다중 채널 솔루션 빌드 사용자 요구 사항을 충족 합니다. 이 패러다임 변화 하 여 마케터 잠재 고객에 값을 통신 하 고 보다 의미 있고 일관 된 방식으로 기존 고객과 지속적인 고객 충성도 설정 하 여 허용 합니다.|
 |[Sapient Razorfish](http://www.sapientrazorfish.com)|애틀랜타, GA|모든 새로운 디지털 환경을 사람들의 기대치 발전와 비즈니스 성취도 더 많이 의존 적이 없는 사일로 엔터프라이즈 수준 보기를 고객의 환경을 모두는 SapientRazorfish 디지털 중심 조직에서 보다는 효율적이 고 효과적인 있도록 중요 한 디지털 작업입니다. 디지털 브랜드 소비자 관계의 선구자,으로 일반적이 지 않은 영향을 줄의 결과 만들려면 연결 된 전 세계를 활용 하 여 클라이언트를 사용 하 여 파트너입니다.|
 |[Saviant 컨설팅](http://www.saviantconsulting.com/xamarin-consulting.asp)||Saviant 'The 지능형 솔루션 회사' 및 골드 클라우드 플랫폼, microsoft 데이터 분석 파트너 골드 됩니다. 변환 하 고 비즈니스를 현대화 기업이 클라우드, 모바일, 분석 및 IoT를 활용 하 여 혁신적인 솔루션 이라고 있을 것입니다. 기업에서는 가속화 된 비즈니스 성장 위한 확장성이 높은 플랫폼 간 모바일 응용 프로그램 빌드를 돕습니다. 디자인, 작성, 배포 및 고객의 비즈니스 환경에 안전 하 고 신속 하 게 모바일 앱을 통합 하는 Xamarin 활용 합니다. |
 |[Seamgen, LLC](http://www.seamgen.com)|샌디에이고, CA|전체 스택 웹 및 모바일 응용 프로그램 개발 팀에서 서비스 합니다. 열정적인 기술 전문가의 Seamgen의 팀은 필요한 모든 사항을, 모바일 응용 프로그램을 클라우드 기반 서비스에는 반응 형 웹 사이트에서 만들 수 있습니다. 그리고 디자인 하 고 보완 하 고 기존 시스템 아키텍처를 향상 하는 솔루션을 개발 하기 위해 작업 개발 프로세스의 모든 단계에서 기술 파트너는 모든 최신 기술 사용 모바일 및 웹에 정통한 앱 개발입니다.|
 |[SELA 그룹](http://www.selagroup.com)|미국 워싱턴 bellevue로 변경 합니다. Arlington, VA; 이스라엘, Bnei Brak; 푸 네, 인도; 토론토, 캐나다; 싱가포르|Sela는 2000 년 이후로 Microsoft Certified Partner에 대 한 학습 솔루션 CPLS ()를 사용 했습니다. Sela 55 선임 강사, 기술 대학 제품 강력한 커리큘럼 및 IT 업계에 대 한 인증을 개발한 300 개가 넘는 과정입니다. Sela는 800 개 이상의 클라이언트를 다른 Microsoft, SAP, NCR, Motorola, HP, BMC Software, ECI, Comverse 및 IBM을 포함 하 여 전 세계에 있습니다.|
 |[샤 우 트 Digital 제한](http://www.shoutdigital.com)|필라델피아, PA|계 Digital 2009에 설립 되었습니다 및 우수한 클라이언트 솔루션의 뒷면에 많은 노력 30 자랑 팀을 만들었습니다. 장기적으로 클라이언트를 사용 하 여 신뢰할 수 있는 파트너 관계를 만드는 것입니다. 우리의 품질 및 관리에서 제공 하는 모든 경우 전문성 디지털 미래 혁신을 일으키는 원대한 클라이언트 수 있습니다. |
-|[Skyline Technologies](http://www.skylinetechnologies.com)|Appleton, 마법사|사용자 가장 까다로운 비즈니스 과제를 해결 하 고 새로운 상상 하는 데 Skyline의 목표는 자신의 고유한 인 사이트와 비즈니스에 가치를 뛰어난 기술 전문 제품인 ' 기술을 통해 Äôs 가능 합니다. 모든 클라이언트 engagement에서 테이블에 적합 한 사람에 제공 ' 되도록 원하는 위치에서 간격을 브리징 하려면 Äîelevating 기술 이외의 대화 합니다.|
-|[Slalom 컨설팅](http://www.slalom.com)|시애틀, WA; 보스턴, MA; 시카고, IL; 덴버, CO; 텍사스 휴스턴에; 로스앤젤레스, CA; 뉴욕, NY; 포틀랜드, OR; 샌프란시스코, CA; 버, TX, 미국. 댈러스, TX, 미국. 피닉스, AZ, 미국. 보이시, ID, 미국. 솔트레이크시티에서, UT, 미국. 캐나다 토론토 ON, Detroit, MI, 미국. 워싱턴, DC, 미국. 필라델피아, PA, 미국. Hartford, CT, 미국. 애틀랜타, GA, 미국. 세인트루이스, 월, 미국. 산호세, CA, 미국. 이끌고, MN, 미국. 샌디에이고, CA, 미국. 런던, 영국|Slalom를 고유 하 게 설정 하는 모든 기능, 인력 목록의 맨 위에 있는 됩니다. 'Äôre 숙련 된 컨설턴트 관련 전문 선택한 필드를 사용 하 여 클라이언트에 차이가 신경 정말로' Äô 기업 하며에 거주할 커뮤니티입니다. 에 있는 '그 밖의 내용은 Äôs' Äîthey 웃는 얼굴 보내기 때문에 Slalom 컨설턴트를 인식할 수 그 클라이언트 중 한 번 언급은 ' Äôre 방에 웃는 되는 것입니다. 해당 ' 미국 및 런던에서 3,000 + 16 사무실 컨설턴트가 키도 록 Äôve 이러한 ' Äôve 정확 하 게 작업을 수행 하는 사용자를 사용 하도록 설정 하면 해당 포커스를 유지 합니다.|
-|[SmartBridge](http://smartbridge.com)|Houston, TX, 미국|Smartbridge에서에서는 평가, 구현, 만들기 및 관리 엔터프라이즈 솔루션 |
+|[Skyline Technologies](http://www.skylinetechnologies.com)|Appleton, 마법사|Skyline의 목표에 가장 까다로운 비즈니스 과제를 해결 하 고 기술을 통해 가능한 것을 구상 하는 데는 자신의 고유한 인 사이트와 비즈니스에 가치를 뛰어난 기술 전문 제품인입니다. 모든 클라이언트 engagement에서 테이블에 적합 한 사람에 제공 &ndash; 되도록 원하는 위치에서 간격을 브리징 하려면 기술 이외의 대화를 승격 합니다.|
+|[Slalom 컨설팅](http://www.slalom.com)|시애틀, WA; 보스턴, MA; 시카고, IL; 덴버, CO; 텍사스 휴스턴에; 로스앤젤레스, CA; 뉴욕, NY; 포틀랜드, OR; 샌프란시스코, CA; 버, TX, 미국. 댈러스, TX, 미국. 피닉스, AZ, 미국. 보이시, ID, 미국. 솔트레이크시티에서, UT, 미국. 캐나다 토론토 ON, Detroit, MI, 미국. 워싱턴, DC, 미국. 필라델피아, PA, 미국. Hartford, CT, 미국. 애틀랜타, GA, 미국. 세인트루이스, 월, 미국. 산호세, CA, 미국. 이끌고, MN, 미국. 샌디에이고, CA, 미국. 런던, 영국|Slalom를 고유 하 게 설정 하는 모든 기능, 인력 목록의 맨 위에 있는 됩니다. 살펴보며 숙련 된 컨설턴트 관련 전문 선택한 필드를 사용 하 여 해당 클라이언트의 기업과에 거주할 커뮤니티의 차이점에 대 한 완전히 처리 합니다. 그리고 &ndash; 그 밖의 내용은 &ndash; 미소 있습니다. 해당 클라이언트 중 하나는 한 번 웃는 있는 방에 것 이기 때문에 Slalom 컨설턴트를 인식할 수 있는 그 있다고 합니다. 미국 및 런던 16 사무실에서 3,000 + 컨설턴트 늘어날수록 했으므로 이러한, 정확 하 게 작업을 수행 하는 사용자를 사용 하도록 설정 하면 해당 포커스를 유지 했습니다.|
+|[SmartBridge](http://smartbridge.com)|Houston, TX, 미국|Smartbridge에서에서는 평가, 구현, 만들기 및 관리 엔터프라이즈 솔루션 |
 |[Softeq](http://www.softeq.com/)|Houston, TX, 미국|Softeq 개발 Inc.는 해당 데 전념 설계, 개발 및 B2B 또는 B2C 시장에 대 한 새 제품을 시작 하는 전체 스택 개발 회사입니다. Softeq는 하드웨어와 고유 하 게 IoT 솔루션 개발 프로젝트에 배치 하 고 제품 개발 주기의 모든 단계를 다루는 수 있도록 하는 응용 프로그램 수준 기술을 주기-PCB 및 인클로저 디자인 하는 클라우드 백 엔드 및 모바일 클라이언트에서 제공 앱입니다. Softeq는 명성을, NVIDIA, Intel 및 Disney에 대 한 장기 모바일 개발 파트너 되었습니다 하 고 Xamarin 개발에 입증 된 역량을 제공 합니다.|
 |[Softjourn](https://softjourn.com/en#1)|Fremont, CA, 미국. Ivano Frankivsk, 우크라이나; Wroc≈Çaw, 폴란드|카드 및 지불, 선불, 미디어 및 응용 프로그램 티켓에 대 한 사용자 지정 소프트웨어 개발의 전문가입니다.|
 |[Softserve](http://www.softserveinc.com)|오스틴, 텍사스, 미국|뛰어난 아이디어 간단한 질문을 사용 하 여 시작합니다. 대화를 시작할 준비가 되었습니다. 문의 하세요. 또는 현재 아래 양식을 작성 합니다.|
 |[소프트웨어 엔지니어링 전문가 SEP)](http://www.sep.com)|카멜, IN|SEP는 까다로운 프로젝트 및 지속적인 학습 thrived 엔지니어에 의해 1988에 시작 되었습니다. 회사 소프트웨어 엔지니어-판매 하지-혁신을 간소화 하 고 공동 작업을 권장 하는 클라이언트와 직접 작동 하는 위치를 빌드를 원했습니다. |
 |[Softweb 솔루션](http://www.softwebsolutions.com/)|Elgin, IL|Softweb 솔루션은 시카고 기반된 기술 컨설팅 회사로 비즈니스를 개선 하는 솔루션을 최신 상태를 제공 하는 합니다. 해당 전문 영역에는 세 가지 핵심 영역으로 나눌 수 있습니다: Enterprise Mobility, 웹 응용 프로그램 개발 및 컨설팅 클라우드입니다. 해당 다른 기술 장점을 공동 작업 소프트웨어 및 CRM/ERP 시스템에서 작업을 포함합니다.|
-|[2010(vs2010)과](http://www.sogeti.com/xamarin)|Datyon, OH, 미국. Alpharetta, GA, 미국. 오스틴, 텍사스, 미국. Baltimore, MD, 미국. Westchester, IL, 미국. Cincinnati, OH, 미국. Westerville, OH, 미국. 빙, TX, 미국. 숲 Village, CO, 미국. Wes Des Moines, IA, 미국. 사우스 필드, MI, 미국. Houston, TX, 미국. 인디애나폴리스, IN, 미국. Fairway, KS, 미국. Richfield, MN, 미국. 뉴욕, NY, 미국. 오마하, NE, 미국. Scottsdale, AZ, 미국. Redmond, WA, USA; 미국 서 부 Chester OH, Tallahassee, FL, 미국. 탬파에, FL, 미국. 브뤼셀, 벨기에; Kort, Danmark; Espoo, 핀란드; 파리, 프랑스; D√ºsseldorf, 독일; 뭄바이, 인도; 더블린, 아일랜드; Bertrange, Luxumbourg; Vianen, 네덜란드; 오슬로, 노르웨이; 마드리드, 스페인; Bromma, 스웨덴; 스위스; 영국 런던|Xamarin 사용 하 여 해당 전역 파트너 관계를 통해 2010(vs2010)과 전 세계 최고의 앱을 빌드합니다. 해당 기본 공통 분모는 기술, 디지털 변환 및 테스트에 대 한 공동 열정입니다. 이러한 문제는 실제로 디지털 운영 중단 및 회사 흐르면서 점차 디지털 고객 충성도 및 게 하지만 가속화 문제를 해결 하는 데 도움이 이해 합니다. Xamarin에서 에게도 해당 클라이언트가 ' 빌드에 대 한 세계적으로 유명한 제품 포트폴리오 Äôs 테스트 하 고 실행 합니다.|
+|[2010(vs2010)과](http://www.sogeti.com/xamarin)|Datyon, OH, 미국. Alpharetta, GA, 미국. 오스틴, 텍사스, 미국. Baltimore, MD, 미국. Westchester, IL, 미국. Cincinnati, OH, 미국. Westerville, OH, 미국. 빙, TX, 미국. 숲 Village, CO, 미국. Wes Des Moines, IA, 미국. 사우스 필드, MI, 미국. Houston, TX, 미국. 인디애나폴리스, IN, 미국. Fairway, KS, 미국. Richfield, MN, 미국. 뉴욕, NY, 미국. 오마하, NE, 미국. Scottsdale, AZ, 미국. Redmond, WA, USA; 미국 서 부 Chester OH, Tallahassee, FL, 미국. 탬파에, FL, 미국. 브뤼셀, 벨기에; Kort, Danmark; Espoo, 핀란드; 파리, 프랑스; D√ºsseldorf, 독일; 뭄바이, 인도; 더블린, 아일랜드; Bertrange, Luxumbourg; Vianen, 네덜란드; 오슬로, 노르웨이; 마드리드, 스페인; Bromma, 스웨덴; 스위스; 영국 런던|Xamarin 사용 하 여 해당 전역 파트너 관계를 통해 2010(vs2010)과 전 세계 최고의 앱을 빌드합니다. 해당 기본 공통 분모는 기술, 디지털 변환 및 테스트에 대 한 공동 열정입니다. 이러한 문제는 실제로 디지털 운영 중단 및 회사 흐르면서 점차 디지털 고객 충성도 및 게 하지만 가속화 문제를 해결 하는 데 도움이 이해 합니다. 빌드에 대 한 Xamarin의 세계적으로 유명한 제품 포트폴리오에서 혜택, 테스트 및 실행 하려면 클라이언트 사용 수 있습니다.|
 |[대화형 단색](http://www.solid.ws/xamarin)||Solid 대화형은 전체 서비스 소프트웨어 개발 및 컨설팅 조직이 웹, 모바일 및 텔레비전 응용 프로그램 개발을 전문으로 합니다.  Solid 대화형 전략, 디자인, 프로그래밍, 테스트, 배포 및 마케팅에서 응용 프로그램 개발의 많은 측면에서 전문 지식을 제공합니다. 우리 팀은 플랫폼 및 기술 제약 없는 비즈니스에 다음 단계를 지정할 수 있도록 합니다.  |
 |[SPAN Infotech 인도 병 ltd입니다.](http://www.spansystems.com)|인도 방갈로 르; 빙, 텍사스|범위는 도메인 지식, 기술 전문 지식과 강력한 참여 모델을 최적으로 사용 하 여 고객의 비즈니스 영향입니다. 클라이언트는 engagement 보다는 비용 기반 또는 순수 하 게 프로세스 기반 모델에는 현실적인 접근 방식에서 엄청난 가치를 받습니다. 범위의 관리 팀은 측정 및 무형 기대이 행을 통해 관계를 지속 관여 합니다.|
-|[Sparkhound](http://www.sparkhound.com/)|댈러스, 텍사스|Sparkhound는 기업이 혁신적인 기술 기반의 비즈니스 솔루션을 통해 성공 하는 데 계속 1998에서 설정 합니다. 온갖 / 빌드 실행 방법을 사용 하면 효과적인 솔루션을 디자인, 구현 및 지속적인 관리, 따라서 IT 수명 주기의 모든 구성 요소에 영향을 주는 /입니다. Sparkhound'Äôs 기술 솔루션 5 가지 핵심 영역에 기반한: 사용자 지정 응용 프로그램, 비즈니스 컨설팅, 클라우드, 엔터프라이즈 응용 프로그램 및 관리 되는 서비스입니다. Sparkies 성공적인 결과 달성 하는 강한 중점 있고는 항상 먼저 고객을 배치 ' Ä¶ 성공은 플랫폼입니다.|
+|[Sparkhound](http://www.sparkhound.com/)|댈러스, 텍사스|Sparkhound는 기업이 혁신적인 기술 기반의 비즈니스 솔루션을 통해 성공 하는 데 계속 1998에서 설정 합니다. 온갖 / 빌드 실행 방법을 사용 하면 효과적인 솔루션을 디자인, 구현 및 지속적인 관리, 따라서 IT 수명 주기의 모든 구성 요소에 영향을 주는 /입니다. 기술 솔루션 Sparkhound의 5 가지 핵심 영역에 기반한: 사용자 지정 응용 프로그램, 비즈니스 컨설팅, 클라우드, 엔터프라이즈 응용 프로그램 및 관리 되는 서비스입니다. Sparkies 성공적인 결과 달성 하는 강한 중점 있고는 항상 먼저 고객을 배치 합니다: 성공은 플랫폼입니다.|
 |[SPR 컨설팅](http://spr.com/)|시카고, IL, 미국|SPR에서 사용자 환경을 변환할 디지털 기술을 사용 합니다.|
 |[SpurTree 기술](http://spurtreetech.com)|인도 방갈로 르; 토론토, 캐나다; Walpole, MA|SpurTree emerging 기술 분야에서 해당 솔루션을 사용 하 여 혁신을 자체를 푸시 및 배달 관리 고객의 기대치를 초과를 강력 하 고 강력한 프로세스에 계속 됩니다. 상당한 시간과 모바일 및 소셜 미디어 솔루션, 엔터프라이즈 아키텍처 및 인프라 컨설팅 등 해당 고객에 대 한 증가 영역으로 제공할 기술에 투자 했습니다.|
 |[Stefanini](https://stefanini.com/en/)|사우스 필드, 미시간 |Stefanini는 30 개 이상의 언어로 미국, 유럽, 아프리카, 오스트레일리아 및 아시아에서 30 여 국가에서 75 개 사무실을 전역 IT 서비스 회사입니다. 1987 년, 이후 Stefanini 제공 하 고 offshore, onshore 및 nearshore IT 응용 프로그램 개발, IT 인프라 아웃소싱 (헬프 데스크 지원 및 데스크톱 서비스), 시스템 통합, 컨설팅 및 전략적 인력을 비롯 한 서비스를 전 세계 fortune 1000 기업 적합 합니다. |
 |[시계 기술](http://www.sundialer.com)|플로리다 탬파에 주|시계 기술 1990 년에서 요새 포트 로더데일을 했습니다.  시계 다이얼로직 컴퓨터 전화 통신 통합, 인터넷, Windows 및 SQL Server 기술은 최고의 병합 설립 합니다. 시계는 처음 적이 Windows 다이얼로직 기반 예측 걸기 호출을 미국 및 전 세계 센터 시장 적중 합니다.|
-|[Syrinx 컨설팅](http://www.syrinx.com)|Needham, MA, 미국|Syrinx의 모바일 개발 팀 모바일 기술을 이해 하 고 만들고 고유한, 대상 응용 프로그램 또는 조직에 적합 하는 앱을 배포 하 여 회사와 직접 작업 전문가 구성 됩니다. 이들은 이해 한다는 ' Äôs; 작동 해야 하는 기술 뿐 아니라 해당 ' Äôs 통합, 민첩성, 확장성, 인벤토리, 마케팅 및 고객 환경 요인 너무 합니다.|
+|[Syrinx 컨설팅](http://www.syrinx.com)|Needham, MA, 미국|Syrinx의 모바일 개발 팀 모바일 기술을 이해 하 고 만들고 고유한, 대상 응용 프로그램 또는 조직에 적합 하는 앱을 배포 하 여 회사와 직접 작업 전문가 구성 됩니다. 함수를 해야 하는 기술만 아님을 이해합니다 통합, 민첩성, 확장성, 인벤토리, 마케팅 및 고객 요소를 너무 발생 합니다.|
 |[Tallan]( http://www.tallan.com)|댈러스, 텍사스|Tallan 역할 조직 전국 사무실 Hartford, 뉴욕, 보스턴, 애틀랜타, 주황색 County, CA, 탬파에, 댈러스 및 워싱턴 d.c.|
-|[Technossus](http://www.technossus.com/)|Irvine, CA, 미국|Technossus는 비상장, 수상 경력이 있는 소프트웨어 솔루션 및 컨설팅 회사 기술 됩니다. 년 설립 된 거의 10 년 전에 업계 전문가 의해 회사를 디자인, 개발 하 고 혁신적인 소프트웨어 솔루션을 구현 합니다. 모든 클라이언트에 탁월한 가치 및 품질을 제공 하기 위한 노력을 포함 하는 우리의 핵심 가치 ' Äîevery 시간입니다. 기대치를 초과 하 고 비즈니스를 변환 하 고 비용 효율적으로 운영 성능을 개선 하는 솔루션을 제공 합니다.|
+|[Technossus](http://www.technossus.com/)|Irvine, CA, 미국|Technossus는 비상장, 수상 경력이 있는 소프트웨어 솔루션 및 컨설팅 회사 기술 됩니다. 년 설립 된 거의 10 년 전에 업계 전문가 의해 회사를 디자인, 개발 하 고 혁신적인 소프트웨어 솔루션을 구현 합니다. 모든 클라이언트에 탁월한 가치 및 품질을 제공 하기 위한 노력을 포함 하는 우리의 핵심 가치 &ndash; 때마다 합니다. 기대치를 초과 하 고 비즈니스를 변환 하 고 비용 효율적으로 운영 성능을 개선 하는 솔루션을 제공 합니다.|
 |[Tecknoworks](http://www.tecknoworks.com)||기술에 대 한 열정 및 매일 새로운 것 들에 알아보려면이 호기심 기반의에서는 된 사람들이 하 고 조직이 갖추어야 기술을 통해 15 년 이상. |
 |[Tecordeon Inc](http://www.tecordeon.com)|로스앤젤레스, CA; 바드, 인도|Tecordeon Inc. 아웃소싱 회사를 클라이언트에 다양 한 소프트웨어 솔루션을 제공 하 고 빠른 소프트웨어 개발 중 하나입니다. 회사 전문적으로 모바일 응용 프로그램 개발, 웹 응용 프로그램 개발, 풍부한 인터넷 응용 프로그램 개발, 모바일 응용 프로그램 테스트, 시스템 통합, 소프트웨어 테스트 및 유효성 검사 서비스 품질 보증을 제공 합니다. 서비스 및 기타 정보 또한 Tecordeon Inc 산업별 소프트웨어 전문 기술, 엔터테인먼트, 의료, 미디어, 재무 및 다른 많은 섹터에 있습니다.|
 |[테라스 소프트웨어](http://www.terrace.com)|샌프란시스코, CA|우리 회사 저자명은 ' 빌드 사용 하 여 Us'입니다. 이 구를 당사의 목표를 정확 하 게 설명 하는 것이 생각 합니다. 간단합니다. 클라이언트와 밀접 하 게 작동, 비전 수신 대기할 포괄적인 계획을 작성 하 고 최신 기술을 사용 하 여 혁신적인 솔루션을 구현 합니다.|
 |[앱 전문가](http://www.TheAppPros.com)|Springfield, MO|모바일 응용 프로그램의 중요성을 인식 중소 규모 기업에 특히 초점을 두었습니다 현지 업무 지원 및 신생 최대한 해당 리소스가 증가 하는 데 복잡 한 응용 프로그램을 개발 하 여 유지 관리 하 고 비즈니스 운영을 개선 합니다.|
-|[검증 된 메서드](http://www.provenmethod.com)|애틀랜타, GA|비즈니스를 수행 하는 입증 된 메서드 사용을 빠르게 개발 하 고 유연 하 고 효과적인 솔루션을 구현 하 여 다음 공동 작업 비즈니스 목표를 전략적으로 생각으로 시작 합니다. 이러한 솔루션에 다음 25 년 동안 IT 비즈니스 성공 지 역량이, 숙련 된 장기 IT 전문가에 게 전달할지 ' Äì 비즈니스 목표를 충족 하기 위해 모든 작업입니다.|
+|[검증 된 메서드](http://www.provenmethod.com)|애틀랜타, GA|비즈니스를 수행 하는 입증 된 메서드 사용을 빠르게 개발 하 고 유연 하 고 효과적인 솔루션을 구현 하 여 다음 공동 작업 비즈니스 목표를 전략적으로 생각으로 시작 합니다. 이러한 솔루션에 다음 25 년 동안 IT 비즈니스 성공 지 역량이, 숙련 된 장기 IT 전문가에 게 전달할지 &ndash; 비즈니스 목표를 충족 하기 위해 모든 작업입니다.|
 |[3 중-I Corporation](http://triplei.com)||오른쪽 또는 꿈꿔를 작업 하는 데 수행할 작업을 가져올 것를 위해 비즈니스 성취도 달성 하 합니다. 지거나 주시면 메모를 보내주세요. 에 귀를 기울이고 있습니다.  |
 |[미리 소프트웨어 LLC 생각 합니다.](http://www.thinkaheadsoftware.com)|동부 Windsor, CT|인터넷 비즈니스 솔루션 공급자 소프트웨어 개발, 컨설팅 및 서비스를 호스팅하는 응용 프로그램을 제공 하는입니다. 이 특성에 따라 웹, 비즈니스 응용 프로그램 및 iOS 및 Android 플랫폼 둘 다에 대 한 모바일 응용 프로그램 개발을 포함합니다. |
 |[ThinkPower 정보 Corporation](http://www.thinkpower.info)|뉴욕, NY|ThinkPower는 2005 년 설립 된 사내를 사용 하 여 직원 총 150, 사용자 지정된 웹/모바일 앱 소프트웨어 개발 서비스를 제공 합니다. |
@@ -195,11 +195,11 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[tkLABS, i n c.](https://www.tklabs.com/)|일출, FL, 미국. Hoffman은 이상적인, IL, 미국|tkLABS 엔지니어링 컨설팅 회사에서 최고의 제품 엔지니어링 및 개발 서비스 제공에 집중 유연함입니다. 이 간단한 방법은 문제의 핵심으로 바로 이동를 지능적이 고 명확한 솔루션을 파악 합니다.|
 |[TowerStrides Inc.](http://www.towerstrides.com)|Chantilly, 버지니아|Hemos sido galardonados por nuestra herramienta SPARTANE con la 쿼리 el 100 %del 백 엔드 de las 앱 es generado sin necesidad de programar 합니다. Vea 취소 비디오 demostrativo de nuestra herramienta 합니다. |
 |[Trailhead 기술 파트너](http://trailheadtechnology.com/partners/xamarin)||Trailhead 기술 파트너는.NET, Xamarin, Angular 및 기타 최신 기술 플랫폼을 사용 하 여 기업 고객을 위한 사용자 지정 모바일, 웹, IoT 및 클라우드 소프트웨어 솔루션을 제공 합니다.|
-|[Valore 파트너 (DBA Statera 남서)](http://www.valorepartners.com)|템피 소재, AZ|Valore 파트너에서 해당 목표는 실용적인 선별 하 여 지속적인 파트너 관계를 개발 하 고 오늘날의 프라미스에서 제공 하는 혁신적인 솔루션 ' Äôs 고급 정보 기술 합니다. 디자인 및 구현 현장은 지능형 조합에 해당 클라이언트를 사용 하 여 작동 및 클라우드 기반 유연성과 확장성을 함께 의미 있는 비용을 달성을 통해 얻을 수 있는 기회를 활용할 수 있도록 Microsoft 기술 감소 합니다.|
-|[Valorem](http://www.valorem.com/)|캔자스 시티, MO|선도적인 기술을 사용 Valorem 기업 브랜드를 변환 하 고 탁월한 고객 환경을 제공 합니다. Äôve 'Äô 생각 리더십 및 혁신의 고유한 관점에서 솔루션을 제공 및 사용자 경험' 팀을 참여 시키는 방법에 대 한 찾고 있습니다. 우리 구동의 핵심인 도달는 사용자, 고객 및 파트너를 오른쪽으로 수행 합니다. 세계 직원께 바 칩니다 예외 심오하다 Valorem 사용 하 여 귀하의 경험을 보장 합니다.|
+|[Valore 파트너 (DBA Statera 남서)](http://www.valorepartners.com)|템피 소재, AZ|Valore 파트너에서 해당 목표 오늘날의 고급 정보 기술에 대 한 약속에 제공 하는 실용적이 고 혁신적인 솔루션을 선별 하 여 지속적인 파트너 관계를 개발 하는 것입니다. 디자인 및 구현 현장은 지능형 조합에 해당 클라이언트를 사용 하 여 작동 및 클라우드 기반 유연성과 확장성을 함께 의미 있는 비용을 달성을 통해 얻을 수 있는 기회를 활용할 수 있도록 Microsoft 기술 감소 합니다.|
+|[Valorem](http://www.valorem.com/)|캔자스 시티, MO|선도적인 기술을 사용 Valorem 기업 브랜드를 변환 하 고 탁월한 고객 환경을 제공 합니다. 이라고 생각 리더십 팀의 참여 하 고 고유한 관점, 솔루션 및 환경에 대 한 찾고 있다면 혁신 제공 합니다. 우리 구동의 핵심인 도달는 사용자, 고객 및 파트너를 오른쪽으로 수행 합니다. 세계 직원께 바 칩니다 예외 심오하다 Valorem 사용 하 여 귀하의 경험을 보장 합니다.|
 |[Vectorform](https://www.vectorform.com/)|Detroit, MI, 미국. 시애틀, WA, USA; 뉴욕, NY, 미국. 뮌헨, 독일|Vectorform는 조직에서 디지털 제품을 만들 수 있도록 설계 된 플랫폼 및 고객 경험 합니다. 테스트 환경의 거의 20 년을 사용 하 여 비즈니스의 미래를 정의 하 고 아이디어를 넘어 작성 하는 복잡 한 문제를 해결 하는 조직에 있도록 도와 드립니다. 브랜드 혁신에 대 한 가속도 제공 하는 특수 한 큐브 뷰를 제공 하 고 향상 된 고객 환경을 합니다.|
 |[Venado 기술](http://venadotech.com/)|댈러스, 텍사스|Venado Technologies는 국제 공급자로 Emerging 기술 활용 (Xamarin 교육/부트 캠프), 모바일 응용 프로그램 개발, mBaaS 통합 및 관리 되는 서비스에서에서 전문적으로 다루는 기술 서비스입니다. 고객의 고유한 요구 사항에 집중 Venado 컨설팅 서비스 회사를 통해 일반적으로 사용할 수 있는 것 이상의 이동 하는 서비스를 제공 합니다. 전 세계 사무실에 있는 컨설턴트를 사용 하 여 Venado 기술 덴버, CO에 기반 합니다.|
-|[Ventureforth, Inc.](http://www.ventureforth.com )|애틀랜타, GA|업계 최고의 기술 솔루션과 mobile 모범 사례를 결합 하 고 클라우드 컴퓨팅 솔루션 제공 실제 측정 가능한 값, 우리 직원 들을 가량에서 세계적인 선도자 하 합니다. |
+|[Ventureforth, Inc.](http://www.ventureforth.com )|애틀랜타, GA|업계 최고의 기술 솔루션과 mobile 모범 사례를 결합 하 고 클라우드 컴퓨팅 솔루션 제공 실제 측정 가능한 값, 우리 직원 들을 가량에서 세계적인 선도자 하 합니다. |
 |[Wandio](http://www.wandio.com)|트빌리시, 그루지야|비즈니스에 대 한 소프트웨어 솔루션을 맞춤식 합니다. Wandio는 신뢰할 수 있는 백 엔드 시스템, 웹 및 비즈니스를 개선 하기 위해 전 세계 회사는 데 도움이 되는 모바일 응용 프로그램을 빌드합니다.|
 |[우리는 매머드 LLC 컨설팅](http://www.wearemammoth.com)|시카고, IL, 미국|것 쯤은 디자이너, 엔지니어 및 조직과 작업 전략가 웹 및 모바일 앱을 사용 하 여 전 세계를 개선 하기 위해 회사입니다. |
 |[서 부 미국 먼로 파트너](http://www.westmonroepartners.com)|North America, Europe, 라틴 아메리카 이상.|서 부 미국 먼로 파트너 팀은 비즈니스 전문 컨설턴트 및 지속 가능한 성공을 달성 하기 위해 함께 작동 하는 기술 전문가 흔히 혼합으로 이루어져 있습니다.|
@@ -272,7 +272,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Cortex 미디어](http://cortex.bz)|캐나다 퀘벡 주|Cortex 미디어 디자인 모바일 플랫폼 실제 및 가상, 연결 하는 비즈니스 및 사용자|
 |[Formatec](http://mobile.formatec.ca)|핼리팩스, 노바스코샤, 캐나다|Formatec는 비상장 캐나다 전문적으로 만들어 스마트폰 및 태블릿을 비롯 한 모바일 장치에서 실행 되는 소프트웨어 응용 프로그램 테스트|
 |[nventive](http://www.nventive.com)|몬트리올, QC|nventive는 iOS, Android 및 최신 기술을 사용 하 여 Windows 10 용 모바일 응용 프로그램을 개발 하는 최신 studio입니다.|
-|[ObjectSharp Corporation](http://www.objectsharp.com)|토론토, 캐나다|먼저 Microsoft.NET 컨설팅 파트너와 캐나다에서 ObjectSharp 제공 하는 광범위 한 Microsoft 사용자 지정 개발, 교육 및 서비스에 대 한 멘토링: PC 및 Tablet ' Äì Windows 8 + 7, Windows Phone ' Äì Windows Phone, 클라우드 ' Äì Azure. Microsoft Mvp, 선임 소프트웨어 개발자 및 숙련 된 강사 디자인, 빌드 및 응용 프로그램을 빠르고 적절 하 게 제공 하는 데 도움이 됩니다.|
+|[ObjectSharp Corporation](http://www.objectsharp.com)|토론토, 캐나다|먼저 Microsoft.NET 컨설팅 파트너와 캐나다에서 ObjectSharp 제공 하는 광범위 한 Microsoft 사용자 지정 개발, 교육 및 서비스에 대 한 멘토링: PC와 태블릿, Windows 8 + Windows 7, Phone, Windows Phone, 클라우드 및 Azure입니다. Microsoft Mvp, 선임 소프트웨어 개발자 및 숙련 된 강사 디자인, 빌드 및 응용 프로그램을 빠르고 적절 하 게 제공 하는 데 도움이 됩니다.|
 |[파노라마 소프트웨어](http://www.panoramicsoft.com)|Surrey, 브리티시 컬럼비아|  파노라마 소프트웨어 Inc.에 만들 전략적 모바일 소프트웨어 타이틀 소셜, 교육, 음악 및 게임 시장에서 2006 년부터. |
 |[RedBit 개발](http://www.redbitdev.com)|토론토, 캐나다|RedBit 개발은 소프트웨어 컨설팅 및 디자인 회사 소프트웨어 제품 및 솔루션 제공에 집중할 회사 수익 채널을 만들고 새 대상과, 드라이브 연결 및 브랜드 인지도 높일 수 있도록 합니다. 비즈니스에 대 한 학습, 연구 프로세스 및 기술 적합할 수 없는 결정에 중점을 둡니다. 모바일 웹 기반 솔루션을 디자인 또는 전체 종단 간 시스템, 해당 목표 기반된 솔루션을 연계 하 여 비즈니스 결과 제공 하는 것입니다.|
 |[SDA 소프트웨어 Associates Inc.](http://www.sda.com)|밴쿠버, BC|에서는 웹 및 모바일 컨설팅을 유용 하 고 신뢰할 수 있는 소프트웨어를 작성 하는 방법에 대 한 열정적인 됩니다. 당사는 매력적이 고 관련 웹 및 모바일 환경을 제공 하 여 브랜드 인지도 및 충성도 높일 있도록 도와 드립니다.|
@@ -338,7 +338,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 | 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Maven 분](http://www.maven.do)|도미니카 공화국|Maven은 큰 꿈 소규모 기업을입니다. 새로운 제품, 도미니카 공화국의 품질과 다양 한 소프트웨어 솔루션을 가장 하는 방법으로 2012에 설립 된 것입니다. 소프트웨어 개발 품질 보증된을 사용 하 여 고객에 게 제공 되며,이 과정에서 신뢰 하 고 해당 필요성에 대해 책임의 관계를 하려고 합니다.|
-|[Solvex Dominicana](http://www.solvex.com.do)||Solvex 값 전문적 경험 합니다. 2014 년에 설정 된 회사는 개 80%가 5 년 이상 소프트웨어를 제공 하는 환경의 200 소프트웨어 엔지니어를 얻었습니다. |
+|[Solvex Dominicana](http://www.solvex.com.do)||Solvex 값 전문적 경험 합니다. 2014 년에 설정 된 회사는 개 80%가 5 년 이상 소프트웨어를 제공 하는 환경의 200 소프트웨어 엔지니어를 얻었습니다. |
 
 
 ## <a name="egypt"></a>이집트
@@ -365,7 +365,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[La 모바일 IT](http://www.la-mobile-it.com)|Grenoble, 프랑스|Nous sommes spécialisés depuis 10 ans dans le 모바일 et avons des 관계 étroites avec nos partenaires 클라이언트 fournisseurs 타설 et 봤지만 ce qui touche 회사 la mobilité 합니다. Nous n'avons aucune exclusivité, si vous désirez obtenir des conseils, nous présenter une 솔루션 ou 게시 devenir partenaire, contactez nous!|
 |[Matelli 서비스](http://www.matelli.fr/english/)|파리, 프랑스|Matelli는 2008에 설립 된 사용자 지정된 비즈니스 웹을 만들고 해당 클라이언트에 대 한 모바일 응용 프로그램 정보 서비스 회사입니다.|
 |[멘 탈 작동](http://www.mentalworks.fr)|파리, 프랑스|Mentalworks는 비정상적 기술적 디지털 에이전시: 둘 다 웹 에이전시 e 마케팅 에이전시 및 컨설팅 업체 / ESN 합니다. 이 전문 웹 사이트, 모바일 앱 또는 사용자 지정 비즈니스 응용 프로그램을 만들고 키 기술 솔루션을 통합할 수 있습니다.|
-|[비즈니스용 주황색 응용 프로그램](http://www.orange-business.com/en/contact-us)|파리, 프랑스; 취리히, 스위스|주황색 비즈니스 서비스는 전역 통신 연산자 및 IT 서비스 회사입니다. 20,000 직원이 자신의 디지털 변환의 모든 측면에서 기업, 지방 정부 본문 및 공공 분야 조직을 지원합니다. 기업이 더 효율적으로 공동 작업, 더 효율적으로 작동 하 고 고객에 게 더 잘 이용 있도록 ' Äì 인력, 연결 사이트 및 컴퓨터 안전 하 고 안정적으로.|
+|[비즈니스용 주황색 응용 프로그램](http://www.orange-business.com/en/contact-us)|파리, 프랑스; 취리히, 스위스|주황색 비즈니스 서비스는 전역 통신 연산자 및 IT 서비스 회사입니다. 20,000 직원이 자신의 디지털 변환의 모든 측면에서 기업, 지방 정부 본문 및 공공 분야 조직을 지원합니다. 기업이 더 효율적으로 공동 작업, 더 효율적으로 작동 하 고 고객에 게 더 잘 이용 있도록 &ndash; 사이트 및 안전 하 고 안정적으로 컴퓨터는 사람들을 연결 합니다.|
 |[페이지 위로](http://www.pageup.fr)|Dijon, 프랑스||
 |[Rayonnance 기술](http://rayonnance.fr)|파리, 프랑스|Rayonnance 그룹에는 Android, IOS 13 년 동안 Windows 터미널 비즈니스 (Windows Mobile, Windows Phone 8.1, Windows 8)에서 추적 가능성 및 모바일 응용 프로그램의 구현에서에 대 한 전문으로 하는 선행 프랑스어 통합자입니다.|
 |[SFEIR](http://www.sfeir.com)|Neuilly-sur-Seine, 프랑스; Strasbourg, 프랑스; Lille, 프랑스; Leudelange, 룩셈부르크|SFEIR est une communauté façonnée par et des développeurs talentueux 타설 합니다. Nous créons des 응용 프로그램 de pointe et relevons avec nos 클라이언트 leurs défis 기술 les ambitieux plus입니다.|
@@ -380,7 +380,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[27interactive](http://27interactive.com)|Düsseldorf, 독일; 함부르크, 독일|크로스 플랫폼 솔루션 스마트폰 및 태블릿 Android, iOS, Windows 및 macOS를 사용 하 여 용으로 맞춤 제작|
 |[전](http://www.aitgmbh.de)|Stuttgart, 독일|AIT은.NET 플랫폼에서 전문적으로 다루는 소프트웨어 컨설턴트 고 주요 개발자 중 하나입니다. 수 년 동안 다중 award 수상 Microsoft Gold Partner 되었습니다.|
 |[Ashley GmbH에 대 한 모든](http://www.a-gentur.de)|Ibbenbueren, 독일|Ashley에 대 한 모든 최적화 IT 솔루션의 디자인에 회사를 지원 합니다.|
-|[BRICKMAKERS GmbH](http://www.brickmakers.de)|Koblenz, 독일|모든 Brickmakers 활동의 포커스가 있는 프로젝트에 ' Äôs 성공과 혜택. 해당 프로세스 중 해당 민첩 한 작업으로 인해 고객에 대해 최대한 투명 하 게 지정 됩니다. 또한 기꺼이 범위 개념, 디자인 및 개발 하는 것 외에도 해당 포털 및 마케팅 앱에 대 한 책임을 가정 합니다. 이 옵션을 사용 하면 디지털 제품의 전체 수명 주기에 모든 경험을 가져올 수 있도록 합니다.|
+|[BRICKMAKERS GmbH](http://www.brickmakers.de)|Koblenz, 독일|모든 Brickmakers 활동에 대해 포커스가에 프로젝트의 성공과 혜택입니다. 해당 프로세스 중 해당 민첩 한 작업으로 인해 고객에 대해 최대한 투명 하 게 지정 됩니다. 또한 기꺼이 범위 개념, 디자인 및 개발 하는 것 외에도 해당 포털 및 마케팅 앱에 대 한 책임을 가정 합니다. 이 옵션을 사용 하면 디지털 제품의 전체 수명 주기에 모든 경험을 가져올 수 있도록 합니다.|
 |[BTC AG](http://www.btc-ag.com )|Oldenburg, 독일|새 솔루션을 개발 하 고 표준 수 지정|
 |[CATIS](http://www.catis.de/)|Wolfsburg, 독일; Gifhorn, 독일; Hanover, 독일; Sindelfingen, 독일; Ingolstadt, 독일; Ajax, 캐나다; Mlada Boleslav, 체코; Chattanooga, TN|CATIS 최신 작업 단위에 맞춤 제작 비즈니스 및 소비자 앱을 만들어 기업의 mobilising 수 있는 앱 개발자의 숙련된 된 팀|
 |[Cayas 소프트웨어](http://www.cayas.de)|Minden, 독일|Cayas 소프트웨어에서는 데스크톱, Android, iPad 및 iPhone 용 및 웹 앱에 대 한 사용자 지정 소프트웨어|
@@ -458,7 +458,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Mahiz Srl](http://www.mahiz.it/)|이탈리아|소프트웨어의 artisans, Mahiz 사용 하면 더 나은 제품을 작성 하는 회사 정보 기술 분야에서 20 년 제공 있습니다. 임무는 수많은 제품, 프로세스 및 아이디어의 발전을 차단 하는 잘못 된 소프트웨어를 제거 하는 것입니다. |
 |[Proge 소프트웨어](http://www.progesoftware.com)|이탈리아 로마에 살고 있습니다. 이탈리아 밀라노|에서는 된 생성 높은 기술적 콘텐츠를 사용 하 여 프로젝트 기업에서 대기업 및 중간 국가적 및 국제적으로, 1985 이후입니다. 디자인, 개발 및 기업 IT 시스템의 유지 관리 하는 데 필요한 모든 활동 제공|
 |[모바일 srl PS](http://www.psmobile.it)|라스베가스, 네바다 주 이탈리아|PS Mobile의 철학 기반; 대화 상자 고객에 게 수신 하 고 함께 전략을 정의 합니다. 찾기가 성공 하려면이 반드시 사용자, 비즈니스 목표 및 플랫폼에서 제공 하는 가능성의 요구를 조정 합니다. 개발 팀 계정에 그래픽, 기술 및 사용자 환경 및는 우수한 성능을 선택한 플랫폼의 특정 측면을 제공합니다.|
-|[SOFOS snc](http://www.sofos.it )|라스베가스 대도시 City 라스베가스의 네바다 주, 이탈리아, 네바다 주||
+|[SOFOS snc](http://www.sofos.it )|라스베가스 대도시 City 라스베가스의 네바다 주, 이탈리아, 네바다 주||
 
 
 ## <a name="japan"></a>일본
@@ -505,7 +505,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[InfoTacto](http://infotacto.com)|멕시코 멕시코 멕시코 시티|우리는 광범위 한 경험 위험 관리, 상태, 사회 (pension 계획 및 소셜 혜택 체계), 공공 안전, 호텔 섹터 및 컴퓨터 기술 전문가 들의 자발적 그룹.|
 |[Lisyx 기술 SA de CV](http://www.lisyx.com)|세, Guanajuato|Lisyx Technologies는 정보 기술 및 비즈니스 프로세스에 대 한 솔루션에 초점을 맞춘 컨설팅 회사입니다. 부가 가치 비즈니스 및 IT 아웃소싱 서비스 솔루션 신생 기술 컨설팅 서비스 제공 합니다.|
 |[Migesa](http://www.migesa.com.mx/)|몬테레이 Nuevo Leon, 멕시코; 멕시코 시티, CDMX, 멕시코|있는 35 년에 대 한 시장에서 Migesa 가장 큰 정보 및 통신 기술 서비스 및 솔루션 통합자 중 하나입니다. 디자인 하 고 중간 규모 및 대규모 기업이 요구 사항에 대 한 맞춤형 솔루션을 구현 합니다.|
-|[RAMSCT SC](http://www.ramsct.com )|멕시코 시티|Cada empresa를 nivel mundial se encuentra actualmente evaluando la mejor manera de utilizar soluciones móviles dentro de su negocio 합니다. Nuestra experiencia en soluciones móviles por más de 10 años nos permite ofrecer soluciones totalmente integradas incluyendo:  |
+|[RAMSCT SC](http://www.ramsct.com )|멕시코 시티|Cada empresa를 nivel mundial se encuentra actualmente evaluando la mejor manera de utilizar soluciones móviles dentro de su negocio 합니다. Nuestra experiencia en soluciones móviles por más de 10 años nos permite ofrecer soluciones totalmente integradas incluyendo:  |
 |[TotalTech SA de CV](http://www.totaltech.com.mx)||omos expertos en desarrollo de 앱 반 iOS, Android y Windows Phone입니다. |
 |[Xherstone](http://www.xherstone.com)|Naucalpan de Juárez, 멕시코|Xherstone는 소프트웨어, 웹 및 모바일 개발 회사에서 개인 설정 하는 오픈 소스 기술의 cutting edge에서 작업 하는 합니다. 비즈니스 지식 및 기술적 환경을 결합 합니다.|
 
@@ -647,7 +647,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 | --- | --- | --- |
 |[DevsDNA](http://www.devsdna.com)|Seville 스페인|비즈니스를 수행 하는 또 다른 방법은 생각 하 고 만들 DevsDNA 소프트웨어 불가능 합니다. 아쉽게도 현대 사회에 투명도, 윤리, 원칙 및 도덕적 컴퍼스가 부족합니다.|
 |[KutirTech](http://www.kutirtech.com)|Malaga 스페인  |13 년 넘게 되었습니다 구축 하 고 대규모 및 소규모 기업 클라이언트에 대 한 웹 및 모바일 응용 프로그램을 지원 합니다. 지속적으로 탐색 하 고 클래스 도구 및 기술의 가장을 사용 하 여 실험 하 고 도구 및 기술을 성공적으로 엔터프라이즈 클라이언트 수 있도록 적절 한 조합을 제공 합니다.|
-|[S.L 컨설팅 Pasiona](http://www.pasiona.com)|스페인 바르셀로나|수신 하 고 고객과 대화에 참여는 가장 좋은 방법은 각자의 요구에 맞게 조정 되는 혁신적인 기술 솔루션을 제공 하는 온-프레미스에서 2007에 설립 된 것입니다. 당사의 목표 및 우리의 raison 즉 Äôetre d'입니다. 컨설팅는 전문화 된 회사 각 클라이언트가 다른을 고유 하 고 단독 처리 필요 하기 때문에 각 회사에 대 한 사용자 지정된 솔루션을 개발 합니다. 혁신, 고품질 작업, 지속적인 교육 및 사람이 teaRegional 프리미어의 값에 최선을 다하고 있습니다.|
+|[S.L 컨설팅 Pasiona](http://www.pasiona.com)|스페인 바르셀로나|수신 하 고 고객과 대화에 참여는 가장 좋은 방법은 각자의 요구에 맞게 조정 되는 혁신적인 기술 솔루션을 제공 하는 온-프레미스에서 2007에 설립 된 것입니다. 당사의 목표 및 우리의 raison d'etre입니다. 컨설팅는 전문화 된 회사 각 클라이언트가 다른을 고유 하 고 단독 처리 필요 하기 때문에 각 회사에 대 한 사용자 지정된 솔루션을 개발 합니다. 혁신, 고품질 작업, 지속적인 교육 및 사람이 teaRegional 프리미어의 값에 최선을 다하고 있습니다.|
 |[TalentoMobile](http://www.talentomobile.com/)|스페인 |디지털 원주민 있습니다. 에서는 디지털화 비즈니스 프로세스 및 고객과 우리의 솔루션 및 제품을 사용 하 여 연결 합니다.|
 |[Vass Consultoria de Sistemas](http://www.vass.es/en)|마드리드, 스페인; 스페인 바르셀로나|VASS 이며 IT 컨설팅 업체인, 1999 년에 설립 된, 새로운 기술이 통합된 제품 및 서비스에 잘 알고와 기술의 워크상에서 고도로 전문화 유럽 지역에 여러 국가에 있는 국가별 확장 지우기 약정 회사 됩니다. VASS 회사 society, 소셜 작업에 대 한 수익의 2%에 커밋된 경우|
 
@@ -718,12 +718,12 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Proto 소프트웨어](https://www.protosoftware.co.uk/)|영국|에서는 다양 한 iOS, Android 및 3 십억 개 잠재 고객의 도달률을 제공 하는 Windows를 포함 하 여 플랫폼에서 비즈니스를 위한 모바일 앱을 개발할 수 있습니다. |
 |[거의 불가능](http://www.rarelyimpossible.com)|Bournemouth, 영국|거의 불가능 한 도움말 회사 빌드에 대 한 모바일 앱 및 사용자 환경 디자인 및 개발 단계에 중점을 둔 비즈니스 문제를 해결 하기 위해 IoT 클라우드 솔루션입니다. 프로젝트 및 제품을 만들겠습니다.이 클라이언트에 대 한 우리의 목표는 매일에 도움이 되는 도구를 사용 하 여 조직 내 모든 사람의 역량 강화입니다.|
 |[Rock 확실히 알고](http://www.rocksolidknowledge.com)|Bristol, 영국|Xamarin 파트너를 Xamarin.forms와 네이티브 UI를 사용 하 여 iOS 및 Android에서 플랫폼 모바일 솔루션을 교차 합니다. 네이티브 UI 느낌, 공유 하는 동안 또는 다양 한 플랫폼 간에 코드를 제공 하는 솔루션을 개발 경험이 있습니다.|
-|[Screenmedia](http://www.screenmedia.co.uk)|글래스고, 영국|클라이언트 및 최종 사용자에 대 한 사람이 centred 솔루션을 만들려면 해야 한다는 휴먼 centred 비즈니스 Screenmedia 한다고 생각 합니다. 비전과 값 완벽 하 게 반영 하 고 물론 이렇게 인력입니다. Screenmedia의 연습 문화권이 해당 성공의 열쇠입니다. 해당 ' Äôs 드라이브 내용과; 새로운 기술에는 지속적인 혁신을 유지 사용 하면 클라이언트를 사용 하 여 agile 파트너 관계를 만듭니다. 하며 ' 것이 매우 어려울 점에서 Äôs 즐거운 작동 합니다.|
+|[Screenmedia](http://www.screenmedia.co.uk)|글래스고, 영국|클라이언트 및 최종 사용자에 대 한 사람이 centred 솔루션을 만들려면 해야 한다는 휴먼 centred 비즈니스 Screenmedia 한다고 생각 합니다. 비전과 값 완벽 하 게 반영 하 고 물론 이렇게 인력입니다. Screenmedia의 연습 문화권이 해당 성공의 열쇠입니다. 드라이브를 만들고 해당 지속적인 혁신; 새로운 기술에 유지 사용 하면 클라이언트를 사용 하 여 agile 파트너 관계를 만듭니다. 되며 점에서 매우 어려운 작업 즐거운 것입니다.|
 |[Sequence](https://www.sequence.co.uk/)|카디프, 영국; 런던, 영국|시퀀스는 creative 디지털 에이전시 1995 년에 설정 됩니다. 디자인, 전략 및 사용자 환경에서 참여를 작업에서 까지의 제조 여행 및 관광 산업 분야에서 가장 큰 조직은 영국의의 일부입니다. 열정 및 혁신을 통해 고객과 브랜드를 연결 합니다.|
-|[ShinobiSolutions](https://www.shinobicontrols.com/shinobienterprise)|Newcastle에 딘 버 러, 영국|2011 년에서 초창기 Shinobicontrols iOS 및 Android 개발자를 위한 포괄적이 고 강력한 대화형 UI 컨트롤 만들에 있습니다. 2012에서 시작한 shinobicharts, 첫 번째 제품입니다. 그 이후로 ' Äôve 빠르게 성장 하며 이제 제품을 신속 하 게 확장 포트폴리오를 사용 하 여 고객에 게 수천 UI 솔루션을 제공 합니다.|
+|[ShinobiSolutions](https://www.shinobicontrols.com/shinobienterprise)|Newcastle에 딘 버 러, 영국|2011 년에서 초창기 Shinobicontrols iOS 및 Android 개발자를 위한 포괄적이 고 강력한 대화형 UI 컨트롤 만들에 있습니다. 2012에서 시작한 shinobicharts, 첫 번째 제품입니다. 그 이후에 빠르게 성장 했습니다 하 고 이제 제공 하는 UI 솔루션 수천 명의 고객이 제품을 신속 하 게 확장 포트폴리오를 사용 하 여 합니다.|
 |[Skillweb](http://www.skillweb.co.uk)|높은 Wycombe, 영국|Skillweb은 개인적으로 소유한, 영국 기반 비즈니스 조직 모바일 작업을 관리 하 고 상품의 움직임을 추적할 수 있도록 하는 기술 솔루션을 제공 하는 경우 회사는 영국 및 유럽 1999 관리 배포 이후 운영에 하 고 매월 최대 100 백만 트랜잭션에 대 한 책임 및 증가 하는.|
 |[해결 하는 소프트웨어](http://www.softwaresolved.com/)|Exeter, 영국; 런던, 영국; 맨체스터, 영국|트러스트 및 우수한 소프트웨어를 배달에 따라 클라이언트를 사용 하 여 장기 파트너 관계를 구축 했습니다. 우리는 Microsoft Gold Partner 되며 프로세스 ISO 9001 인증 합니다.  이 소프트웨어 개발에서 가장 높은 품질 표준 공인 된 것을 의미 합니다.|
-|[StyleTech](https://www.styletech.co.uk/)|헐, 영국|전문가 맞춤형된 소프트웨어, 또한 지원 하 고, 유지 관리 하 고, 레거시 시스템을 강화 하는 동안 고객 Äô 요구 사항에 맞게 최첨단, 맞춤형 솔루션을 개발 합니다. 1999 년부터 운영, 공공 및 민간 부문에서 다양 한 클라이언트에 대 한 1천 개가 넘는 맞춤형된 소프트웨어 프로젝트를 제공 하는 추적 레코드를 자랑 했습니다, 의료, 공학용 전송, 제조 및 기술 산업에 specialise 했습니다. 접근이 용이 하며 친숙 한 문화권을 사용 하 여 항상 제공 서비스의 품질을 집중적된이 고 모든 고객에 게 합니다. Xamarin, Xamarin Test Cloud 및 Azure 모바일 전문가 작업, 태블릿, 클라우드, 웹 또는 데스크톱 개발 하 고 항상 분석, 디자인, 보안, 테스트 및 통합 영역에 모범 사례를 적용 합니다.|
+|[StyleTech](https://www.styletech.co.uk/)|헐, 영국|전문가 맞춤형된 소프트웨어도 지원 하 고, 관리 하 고, 레거시 시스템을 강화 하면서 고객의 요구 사항에 맞게 최첨단, 맞춤형 솔루션을 개발 합니다. 1999 년부터 운영, 공공 및 민간 부문에서 다양 한 클라이언트에 대 한 1천 개가 넘는 맞춤형된 소프트웨어 프로젝트를 제공 하는 추적 레코드를 자랑 했습니다, 의료, 공학용 전송, 제조 및 기술 산업에 specialise 했습니다. 접근이 용이 하며 친숙 한 문화권을 사용 하 여 항상 제공 서비스의 품질을 집중적된이 고 모든 고객에 게 합니다. Xamarin, Xamarin Test Cloud 및 Azure 모바일 전문가 작업, 태블릿, 클라우드, 웹 또는 데스크톱 개발 하 고 항상 분석, 디자인, 보안, 테스트 및 통합 영역에 모범 사례를 적용 합니다.|
 |[Superluminal](http://www.superluminalsoftware.co.uk)|Oxford, 영국|여기 Superluminal에서에서는 되므로 소프트웨어 엔지니어부터, 소프트웨어 디자인에서는 비즈니스 프로세스와 하이퍼 요금에 일치 하는 중요 한 시스템 생성 합니다. 유지 관리 하 고 하는 경우 현재 시스템 업그레이드도에서는를 시작 또는 비즈니스 요구 사항에 맞게 변경 해야 합니다.|
 |[맞춤형된 앱 회사 제한](http://www.thebespokeappcompany.co.uk)|Barrowford, 영국; 북 서 부 Leicestershire 구역, 영국||
 |[Thumbmunkeys Ltd](http://www.thumbmunkeys.com)|York, 북부 요크 셔, 영국|30 백만 개 다운로드를 사용 하 여 소비자 앱 만들기를 포함 하는 추적 레코드를 실제로 예외 및 사용자 참여 모바일 환경을 만드는 방법 Thumbmunkeys 알 수 있습니다. 우리의 영국 전문 개발자 들의 팀 기반 및 디자이너 프로토타입, UI/UX 디자인, 플랫폼 간 개발, 클라우드 개발 및 지속적인 기술 지원을 면담을 통해 종단 간 맞춤형된 솔루션을 제공 합니다.|
@@ -731,7 +731,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[Waterstons LTD](https://waterstons.com)|더 럼, 영국|더 나은 비즈니스를 구축 합니다. 기술, 환경 및 약정을 통해 Waterstons 수백 대의 클라이언트, 크고 작은 비즈니스를 개선 하기 위해 함께 작동 합니다.|
 |[IT 확장](http://www.xpand-it.com)|리스본, 포르투갈; 런던, 영국|모바일 전 세계에 다양 한 시장에서 130 개 이상의 모바일 앱 사용 가능한 환경의 몇 년을 사용 하 여 확장 IT는 엔터프라이즈 모바일 응용 프로그램 서비스 선도 업체입니다.|
 |[YARG 제한](http://www.yarg.com)|런던, 영국|IPhone 용 플랫폼 간 모바일 앱을 개발 하는 YARG iPad, Android 및 Windows Phone입니다. 이러한 pride 값, 제품의 품질 및 높은 수준의 개인 서비스 제공에서 직접.|
-|[Zepto 시스템 제한](http://www.zeptosystems.com )|런던, 영국|아웃소싱 및 offshoring 스마트 소싱을 변환 합니다. 사내 용량이 및 원격 직원 기술을 비용 (최대 60%), 시간, 저장, 고용 및 유지 합니다.|
+|[Zepto 시스템 제한](http://www.zeptosystems.com )|런던, 영국|아웃소싱 및 offshoring 스마트 소싱을 변환 합니다. 사내 용량이 및 원격 직원 기술을 비용 (최대 60%), 시간, 저장, 고용 및 유지 합니다.|
 
 
 ## <a name="ukraine"></a>우크라이나

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS Api 및 목표를 가리킵니다. 
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 275db96435639a60be89e0e3ddb7fa120a30de1c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996414"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116955"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -494,7 +494,7 @@ public class MyCallbacks : NSObject {
 }
 ```
 
-메서드에 대 한 C# 이름이 중요; 되지 않습니다. 중요 한 것 모두 [내보내기] 특성에 전달 된 문자열입니다.
+C# 이름의 방법이 중요 합니다. 중요 한 것 모두 [내보내기] 특성에 전달 된 문자열입니다.
 
 이러한 프로그래밍 스타일을 사용 하는 경우 C# 매개 변수는 런타임 엔진을 전달 하는 실제 형식을 일치 하는지 확인 합니다.
 

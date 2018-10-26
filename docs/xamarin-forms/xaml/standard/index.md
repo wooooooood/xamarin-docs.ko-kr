@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 61e0fa2587ce9a8794dbd32ff9de1f13da857342
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 4e65f31d76d9540bed6110198d7cafaab9fe78f5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38838012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114901"
 ---
 # <a name="xaml-standard-preview"></a>XAML 표준 (미리 보기)
 
@@ -20,7 +20,7 @@ ms.locfileid: "38838012"
 
 Xamarin.forms에서 XAML 표준을 사용 하 여 실험 하려면 다음이 단계를 수행 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 다운로드 합니다 [여기에 NuGet 패키지를 미리 보려면](https://aka.ms/xf-xamlstandard-nuget)합니다.
 2. 추가 된 **Xamarin.Forms.Alias** Xamarin.Forms.NET Standard 및 플랫폼 프로젝트에 NuGet 패키지.
@@ -28,7 +28,7 @@ Xamarin.forms에서 XAML 표준을 사용 하 여 실험 하려면 다음이 단
 4. 추가 `xmlns:a` 참조 `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. XAML의 형식을 사용할-참조를 [제어 참조](controls.md) 자세한 내용은 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 다운로드 합니다 [여기에 NuGet 패키지를 미리 보려면](https://aka.ms/xf-xamlstandard-nuget)합니다.
 2. 추가 된 **Xamarin.Forms.Alias** Xamarin.Forms.NET Standard 및 플랫폼 프로젝트에 NuGet 패키지.

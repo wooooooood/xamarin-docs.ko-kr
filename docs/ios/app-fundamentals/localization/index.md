@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 지역화 기능 및 Xamarin.iOS 앱에서 
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 2a6096efc18f40d18ea37573e77d93796e812cc2
-ms.sourcegitcommit: 4cc17681ee4164bdf2f5da52ac1f2ae99c391d1d
+ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39387442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115928"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.iOS에서 지역화
 
@@ -70,8 +70,6 @@ Xamarin을 사용 하 여 Apple의 iOS 클래스에 액세스할 수 (`NSNumberF
 
 iOS에서는 오류가 발생 하는 `NSCurrentLocaleDidChangeNotification` 사용자 로캘과 업데이트 하는 경우. 응용 프로그램 실행 중이 고 UI에 적절 한 변경할 수는 있지만이 알림을 수신할 수 있습니다.
 
-<a name="basics" />
-
 ## <a name="localization-basics-in-ios"></a>IOS의 지역화 기본 사항
 
 IOS의 다음 기능을 쉽게 사용자에 게 표시에 대 한 지역화 된 리소스를 제공 하는 Xamarin에서 사용 가능 합니다. 참조를 [TaskyL10n 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 이러한 아이디어를 구현 하는 방법을 확인 합니다.
@@ -120,13 +118,13 @@ IOS의 다음 기능을 쉽게 사용자에 게 표시에 대 한 지역화 된 
 
 ### <a name="getlocalizedstring-method"></a>GetLocalizedString 메서드
 
-`NSBundle.MainBundle.GetLocalizedString` 에 저장 된 지역화 된 텍스트를 메서드 조회 **.strings** 프로젝트의 파일입니다. 이러한 파일을 사용 하 여 특수 하 게 명명 된 디렉터리의 언어별 구성 하는 **.lproj** 접미사.
+`NSBundle.MainBundle.GetLocalizedString` 에 저장 된 지역화 된 텍스트를 메서드 조회 **.strings** 프로젝트의 파일입니다. 이러한 파일을 사용 하 여 특수 하 게 명명 된 디렉터리의 언어별 구성 하는 **.lproj** 접미사 (확장의 첫 번째 문자는 소문자 "L" 참고).
 
 #### <a name="strings-file-locations"></a>.strings 파일 위치
 
 - **Base.lproj** 기본 언어 리소스가 포함 된 디렉터리입니다.
   프로젝트 루트에 있는 경우가 많습니다 (에 적용할 수 있지만 합니다 **리소스** 폴더).
-- **<language>.lproj** 에서 일반적으로 지원 되는 각 언어에 대 한 디렉터리는 생성 된 **리소스** 폴더입니다.
+- **&lt;언어&gt;.lproj** 에서 일반적으로 지원 되는 각 언어에 대 한 디렉터리는 생성 된 **리소스** 폴더입니다.
 
 여러 가지 있을 수 있습니다 **.strings** 각 언어 디렉터리의 파일:
 
@@ -147,9 +145,9 @@ IOS의 다음 기능을 쉽게 사용자에 게 표시에 대 한 지역화 된 
 
 문자열에 다음 문자를 이스케이프 해야 합니다.
 
-* `\"`  따옴표
-* `\\`  백슬래시
-* `\n`  줄 바꿈
+* `\"` 따옴표
+* `\\` 백슬래시
+* `\n` 줄 바꿈
 
 다음은 예제 **es/Localizable.strings** (즉 이 샘플에서 파일을 스페인어):
 
@@ -171,16 +169,15 @@ IOS에서 이미지를 지역화 합니다.
 
 1. 예를 들어 코드에서 이미지 참조:
 
-  ```csharp
-  UIImage.FromBundle("flag");
-  ```
+    ```csharp
+    UIImage.FromBundle("flag");
+    ```
 
 2. 기본 이미지 파일을 배치할 **flag.png** 에 **Base.lproj** (네이티브 개발 언어 디렉터리).
 
 3. 필요에 따라 이미지의 지역화 된 버전을 배치할 **.lproj** 폴더 (예: 각 언어에 대 한 **es.lproj**, **ja.lproj**). 같은 파일 이름을 사용 하 여 **flag.png** 각 언어 디렉터리에 있습니다.
 
 특정 언어에 대 한 이미지 없으면 iOS를 기본 네이티브 언어 폴더를 대체 위치에서 이미지를 로드 합니다.
-
 
 #### <a name="launch-images"></a>시작 이미지
 
@@ -247,14 +244,14 @@ Apple 참조 [날짜 포맷터](https://developer.apple.com/library/mac/document
 
 <a name="rtl" />
 
-### <a name="right-to-left-rtl-layout"></a>오른쪽-왼쪽 (RTL) 레이아웃
+### <a name="right-to-left-rtl-layout"></a>오른쪽에서 왼쪽 (RTL) 레이아웃
 
 iOS는 다양을 한 RTL 인식 앱을 빌드하는 데 도움이 되는 기능을 제공 합니다.
 
-* 사용 하 여 자동 레이아웃 `leading` 고 `trailing` 컨트롤 맞춤 (영어의 경우 왼쪽 및 오른쪽에 해당 하지만 있는 RTL 언어에 대 한 역순입니다)에 대 한 특성입니다.
+- 사용 하 여 자동 레이아웃 `leading` 고 `trailing` 컨트롤 맞춤 (영어의 경우 왼쪽 및 오른쪽에 해당 하지만 있는 RTL 언어에 대 한 역순입니다)에 대 한 특성입니다.
   합니다 [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) 컨트롤은 RTL 인식 되도록 컨트롤을 배치 하는 데 특히 유용 합니다.
-* 사용 하 여 `TextAlignment = UITextAlignment.Natural` 텍스트 맞춤 (남게 되므로 RTL 적합 하지만 대부분의 언어)에 대 한 합니다.
-* `UINavigationController` 자동으로 뒤로 단추를 대칭 이동 하 고 살짝 밀기 방향을 반대로 바꿉니다.
+- 사용 하 여 `TextAlignment = UITextAlignment.Natural` 텍스트 맞춤 (남게 되므로 RTL 적합 하지만 대부분의 언어)에 대 한 합니다.
+- `UINavigationController` 자동으로 뒤로 단추를 대칭 이동 하 고 살짝 밀기 방향을 반대로 바꿉니다.
 
 다음 스크린샷에서 표시 된 [지역화 Tasky 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 아랍어 및 히브리어에 (하지만 영어 필드에 입력 된):
 
@@ -322,8 +319,8 @@ someControl.Text = localizedString;
 
 만들고 스토리 보드에 컨트롤을 편집 하는 경우 각 컨트롤을 선택 하 고 지역화에 사용할 ID를 확인 합니다.
 
-* Mac 용 Visual Studio에서에 위치 합니다 **Properties Pad** 라고 **지역화 ID**합니다.
-* Xcode에서 라고 **개체 ID**합니다.
+- Mac 용 Visual Studio에서에 위치 합니다 **Properties Pad** 라고 **지역화 ID**합니다.
+- Xcode에서 라고 **개체 ID**합니다.
 
 다음 스크린샷에 표시 된 것 처럼 종종이 문자열 값에 "NF3-h8-xmR"와 같은 형식은 같습니다.
 

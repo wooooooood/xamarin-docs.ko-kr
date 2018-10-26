@@ -7,12 +7,12 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 17e62d68f8ad2c7deff500216c0bb095ca8f4275
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117449"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 4 장입니다. 스택 스크롤
 
@@ -95,7 +95,7 @@ ms.locfileid: "39156719"
 
 경우는 `BoxView` 제한 됩니다 (해당 `HorizontalOptions` 하 고 `VerticalOptions` 속성의 해당 기본 설정을 `LayoutOptions.Fill`), `BoxView` 에 대 한 사용 가능한 공간을 채웁니다. 경우는 `BoxView` 제약을 받지 않는 (사용 하 여 `HorizontalOptions` 하 고 `LayoutOptions` 의 설정을 `Start`, `Center`, 또는 `End`), 40 단위 정사각형의 기본 차원이 합니다. `BoxView` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다.
 
-설정 종종를 [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성 `BoxView` 특정 크기를 제공 합니다. 자세히 설명 합니다 [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) 샘플입니다.
+설정 종종 합니다 [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성 `BoxView` 특정 크기를 제공 합니다. 자세히 설명 합니다 [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) 샘플입니다.
 
 여러 인스턴스를 사용할 수 있습니다 `StackLayout` 결합 하는 `BoxView` 및 여러 `Label` 인스턴스를 `Frame` 특정 색을 표시 한 다음 각각에서 이러한 보기를 배치 하는 `StackLayout` 에 `ScrollView` 매력적인를 만들려면 에 표시 된 색 목록을 합니다 [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) 샘플:
 
@@ -115,7 +115,7 @@ ms.locfileid: "39156719"
 
 - [4 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [4 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
-- [4 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
+- [4 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
 - [BoxView](~/xamarin-forms/user-interface/boxview.md)

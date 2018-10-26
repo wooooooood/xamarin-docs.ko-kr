@@ -3,15 +3,15 @@ title: Android의 Xamarin Workbooks 문제 해결
 description: 이 문서에서는 Android의 Xamarin Workbooks를 사용 하 여 작업에 대 한 문제 해결 팁을 제공 합니다. 에뮬레이터 지원, 로드 되지 않습니다는 통합 문서 및 기타 항목에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: b0333e1a40570374ee6218b7a848d2dd1c06b872
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: a93288829ff99027a4b33e7720a7f849df37e9b1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112613"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Android의 Xamarin Workbooks 문제 해결
 

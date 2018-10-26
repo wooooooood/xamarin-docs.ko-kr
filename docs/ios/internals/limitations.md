@@ -4,15 +4,15 @@ description: 이 문서에는 Xamarin.iOS, 제네릭, 제네릭 개체의 P/Invo
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: e154e4e1688b8a3d03459956934409fa9d5aef35
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 1ccbea1921b4e0c4189182696c8679d041eea60b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998087"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113029"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 

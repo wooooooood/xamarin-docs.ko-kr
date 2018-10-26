@@ -4,15 +4,15 @@ description: 일부 영역 확장 하 고 일부 영역은 없습니다 있도�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e5bfa076a8746abd6275e9d7a8393c7c8ab53294
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615238"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119230"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>SkiaSharp 비트맵의 분할된 된 표시
 
@@ -26,7 +26,7 @@ SkiaSharp `SKCanvas` 이라는 메서드를 정의 하는 개체 `DrawBitmapNine
 
 ## <a name="the-nine-patch-display"></a>9-패치 표시 
 
-개념상 [ `DrawBitmapNinePatch` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapNinePatch/p/SkiaSharp.SKBitmap/SkiaSharp.SKRectI/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 9 사각형으로 비트맵을 분할 합니다.
+개념상 [ `DrawBitmapNinePatch` ](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 9 사각형으로 비트맵을 분할 합니다.
 
 ![9 명의 패치](segmented-images/NinePatch.png "9 패치")
 
@@ -119,14 +119,14 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 두 `DrawBitmapLattice` 메서드는 비슷합니다 `DrawBitmapNinePatch`, 하지만 모든 가로 또는 세로 구역 수에 대 한 일반화 되어 있습니다. 이러한 부서 픽셀에 해당 하는 정수 배열에서 정의 됩니다. 
 
-합니다 [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/System.Int32[]/System.Int32[]/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 정수의 이러한 배열에 대 한 메서드 매개 변수를 사용 하 여 작동 하지 않는 것입니다. 합니다 [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/SkiaSharp.SKLattice/SkiaSharp.SKRect/SkiaSharp.SKPaint/) 형식의 매개 변수를 사용 하 여 메서드 `SKLattice` 작동, 아래 샘플에서 사용 하는 것입니다.
+합니다 [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) 정수의 이러한 배열에 대 한 메서드 매개 변수를 사용 하 여 작동 하지 않는 것입니다. 합니다 [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 형식의 매개 변수를 사용 하 여 메서드 `SKLattice` 작동, 아래 샘플에서 사용 하는 것입니다.
 
-합니다 [ `SKLattice` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLattice/) 구조 네 가지 속성을 정의 합니다.
+합니다 [ `SKLattice` ](xref:SkiaSharp.SKLattice) 구조 네 가지 속성을 정의 합니다.
 
-- [`XDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.XDivs/)정수 배열
-- [`YDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.YDivs/)정수 배열
-- [`Flags`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Flags/)에서 배열을 `SKLatticeFlags`, 열거형 형식
-- [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Bounds/) 형식의 `Nullable<SKRectI>` 비트맵 내 선택적 원본 영역을 지정 하려면
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs)정수 배열
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs)정수 배열
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags)에서 배열을 `SKLatticeFlags`, 열거형 형식
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) 형식의 `Nullable<SKRectI>` 비트맵 내 선택적 원본 영역을 지정 하려면
 
 `XDivs` 배열 세로 줄무늬 비트맵의 너비를 나눕니다. 첫 번째 줄무늬를 왼쪽에 0 픽셀에서 확장 `XDivs[0]`합니다. 이 줄은 픽셀 너비에 렌더링 됩니다. 두 번째 줄에서 확장 `XDivs[0]` 에 `XDivs[1]`를 채우도록 확장 되 고 합니다. 세 번째 줄에서 확장 `XDivs[1]` 에 `XDivs[2]` 픽셀 너비에서 렌더링 됩니다. 마지막 줄 비트맵의 오른쪽 가장자리에서 배열의 마지막 요소까지 확장 됩니다. 배열의 요소 수는 짝수가 있으면 해당 픽셀 너비에서 표시 됩니다. 그렇지 않으면 해당 연장 됩니다. 세로 줄무늬의 총 수는 하나는 배열의 요소 수를 초과 합니다.
 
@@ -134,7 +134,7 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 함께 합니다 `XDivs` 및 `YDivs` 배열 사각형으로 비트맵을 나눕니다. 사각형의 수 세로 줄무늬의 수와 가로 스트립의 수를 곱한 하는 것과 같습니다.
 
-Skia 설명서에 따르면는 `Flags` 배열 요소를 포함 한 각 사각형에 대 한 처음 사각형의 맨 위 행을 두 번째 행 등입니다. 합니다 `Flags` 형식의 배열이 [ `SKLatticeFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLatticeFlags/)를 다음 멤버로 구성 된 열거형:
+Skia 설명서에 따르면는 `Flags` 배열 요소를 포함 한 각 사각형에 대 한 처음 사각형의 맨 위 행을 두 번째 행 등입니다. 합니다 `Flags` 형식의 배열이 [ `SKLatticeFlags` ](xref:SkiaSharp.SKLatticeFlags)를 다음 멤버로 구성 된 열거형:
 
 - `Default` 값이 0 인
 - `Transparent` 값이 1 인
@@ -225,5 +225,5 @@ IOS 및 Android 이미지 왼쪽에 있는 작은 원만 픽셀 크기로 렌더
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

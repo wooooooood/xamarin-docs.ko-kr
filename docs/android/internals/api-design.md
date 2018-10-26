@@ -3,15 +3,15 @@ title: Xamarin.Android API 디자인 원칙
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8abb78f335b159223e9394b7845eccbba8d124da
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110721"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 디자인 원칙
 
@@ -167,7 +167,8 @@ C# 이벤트 또는 속성 자동으로 생성 하는 경우 Android 이벤트 �
 
 다른 메서드 및 대리자 기반 연결을 노출 하는 생성자 오버 로드를 추가 하려고 합니다. 또한 수신기가 여러 콜백이 있는 경우 개별 콜백 구현 이므로, 변환 하는 것이 발견 되 결정할 몇 가지 추가 검사가 필요 합니다. 해당 이벤트가 없습니다 있으면 수신기 C#에서 사용할 되지만 하세요 존경 대리자 사용을 가질 수를 생각 하는 합니다. 또한 대리자 대신에서 도움이 되는 선택 취소 했을 때 "수신기" 접미사 없이 인터페이스의 일부 변환 완료 된 합니다.
 
-모든 수신기 인터페이스를 구현 합니다 [ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 수신기 클래스는이 인터페이스를 구현 해야 하므로 바인딩 구현 세부 사항으로 인해 인터페이스입니다. 수신기 인터페이스의 서브 클래스에서 구현 하 여 이렇게 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 다른 래핑된 Android 활동 등의 Java 개체입니다.
+모든 수신기 인터페이스를 구현 합니다 [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
+인터페이스는 수신기 클래스는이 인터페이스를 구현 해야 하므로 바인딩 구현 세부 사항 때문입니다. 수신기 인터페이스의 서브 클래스에서 구현 하 여 이렇게 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 다른 래핑된 Android 활동 등의 Java 개체입니다.
 
 
 ### <a name="runnables"></a>Runnables
@@ -262,7 +263,7 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 결과적으로 Java 표현식 *MediaStore.Video.VideoColumns.TITLE* C# 식에 바인딩해야 *MediaStore.Video.MediaColumnsConsts.Title* 읽지도 않고 검색 하기 어려운는 Java 설명서 다양 합니다. 1.9에 해당 하는 C# 식 됩니다 [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)합니다.
 
 또한 고려해 야 합니다 [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) Java를 구현 하는 형식 *Parcelable* 인터페이스입니다. 예를 들어 해당 인터페이스의 모든 상수는 "통해" 번들 형식에 액세스할 수 있는 인터페이스를 구현 하기 때문 *Bundle.CONTENTS_FILE_DESCRIPTOR* 완벽 하 게 유효한 Java 식입니다.
-이전에이 식을 C#으로 이식 해야는 형식에서 참조 하기 위해 구현 되는 모든 인터페이스를 살펴보고 합니다 *CONTENTS_FILE_DESCRIPTOR* 에서 제공 합니다. Xamarin.Android 1.9부터 상수를 포함 하는 Java 인터페이스를 구현 하는 클래스 해야 중첩 *InterfaceConsts* 모든 상속 된 인터페이스 상수를 포함 하는 형식입니다. 그러면 변환 *Bundle.CONTENTS_FILE_DESCRIPTOR* 하 [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)합니다.
+이전에이 식을 포트를 C# 연결 된 모든 인터페이스는 형식에서 참조 하기 위해 구현 되는 확인 해야 합니다 *CONTENTS_FILE_DESCRIPTOR* 에서 제공 합니다. Xamarin.Android 1.9부터 상수를 포함 하는 Java 인터페이스를 구현 하는 클래스 해야 중첩 *InterfaceConsts* 모든 상속 된 인터페이스 상수를 포함 하는 형식입니다. 그러면 변환 *Bundle.CONTENTS_FILE_DESCRIPTOR* 하 [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)합니다.
 
 마지막으로 사용 하 여 형식를 *비용* 접미사와 같은 *Android.OS.ParcelableConsts* 사용 되지 않음, 새로 도입된 된 InterfaceConsts 이외의 중첩 형식은 이제 됩니다. Xamarin.Android 3.0에서 제거 됩니다.
 

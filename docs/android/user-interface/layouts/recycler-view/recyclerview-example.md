@@ -4,15 +4,15 @@ description: 예제 앱 RecyclerView를 사용 하는 방법을 보여 줍니다
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360840"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108654"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 이 코드는 기본 활동에 있는 `OnCreate` 메서드. 레이아웃 관리자에 게 생성자를 사용 하려면를 *상황에 맞는*이므로 `MainActivity` 사용 하 여 전달 됩니다 `this` 위와 같이 합니다.
 
-사용 하는 대신는 predefind `LinearLayoutManager`를 두 개를 표시 하는 사용자 지정 레이아웃 관리자에 연결할 수 있습니다 `CardView` 항목 side-by-side, 사진 컬렉션을 이동할 페이지 넘기기 애니메이션 효과 구현 합니다. 이 가이드의 뒷부분에 나오는 다른 레이아웃 관리자에서 교환 하 여 레이아웃을 수정 하는 방법의 예가 표시 됩니다.
+predefind를 사용 하는 대신 `LinearLayoutManager`를 두 개를 표시 하는 사용자 지정 레이아웃 관리자에 연결할 수 있습니다 `CardView` 항목 side-by-side, 사진 컬렉션을 이동할 페이지 넘기기 애니메이션 효과 구현 합니다. 이 가이드의 뒷부분에 나오는 다른 레이아웃 관리자에서 교환 하 여 레이아웃을 수정 하는 방법의 예가 표시 됩니다.
 
 <a name="view-holder" />
 

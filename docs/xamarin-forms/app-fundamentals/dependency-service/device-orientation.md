@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115421"
 ---
 # <a name="checking-device-orientation"></a>장치 방향 확인
 
@@ -29,7 +29,7 @@ ms.locfileid: "38995643"
 ![](device-orientation-images/orientation-diagram.png "DependencyService 응용 프로그램 구조")
 
 > [!NOTE]
-> 설명 된 대로 장치 공유 코드에 세로 또는 가로 방향 인지 여부를 검색할 수 있기에 [장치 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
+> 에 설명 된 대로 장치 공유 코드에 세로 또는 가로 방향 인지 여부를 검색 하는 것이 불가능 [장치 방향](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation)합니다. 이 문서에서 설명 하는 방법을 장치 거꾸로 인지를 포함 하 여 방향에 대 한 자세한 정보를 보려면 기본 기능을 사용 합니다.
 
 <a name="Creating_the_Interface" />
 
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-IOS, Android 또는 Windows 플랫폼에서이 응용 프로그램을 실행 하 고 단추를 누르면는 장치 방향으로 업데이트 하는 단추의 텍스트입니다.
+장치 방향으로 업데이트 하는 단추의 텍스트 iOS, Android 또는 Windows 플랫폼에서이 응용 프로그램을 실행 하 고 단추를 누르면 발생 합니다.
 
 ![](device-orientation-images/orientation.png "장치 방향 샘플")
 

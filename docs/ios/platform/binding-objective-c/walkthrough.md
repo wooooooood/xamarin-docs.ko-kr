@@ -4,21 +4,21 @@ description: 이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 8285a82920f0d95a88855c5257535048c6de41d5
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118996"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-c 라이브러리 바인딩
 
 _이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실습 연습을 제공 합니다. 정적 Objective-c 라이브러리 바인딩, 컴파일하고 Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 주제를 다룹니다._
 
-IOS에서 작동 하는 경우 타사 Objective-c 라이브러리를 사용 하려는 경우 발생할 수 있습니다. 이러한 상황에서는 Xamarin.iOS를 사용할 수 있습니다 _바인딩 프로젝트가_ 만들려는 [C# 바인딩을](~/cross-platform/macios/binding/overview.md) Xamarin.iOS 응용 프로그램에서 라이브러리를 사용할 수 있도록 합니다.
+IOS에서 작동 하는 경우 타사 Objective-c 라이브러리를 사용 하려는 경우 발생할 수 있습니다. 이러한 상황에서는 Xamarin.iOS를 사용할 수 있습니다 _바인딩 프로젝트가_ 만들려는 [ C# 바인딩](~/cross-platform/macios/binding/overview.md) Xamarin.iOS 응용 프로그램에서 라이브러리를 사용할 수 있도록 합니다.
 
 일반적으로 iOS 에코 시스템에서의 3 가지 라이브러리를 찾을 수 있습니다.
 
@@ -39,7 +39,7 @@ Xamarin.iOS에서이 특정 Objective C API를 사용 하는 데 필요한 모�
 - 다음으로, 목표 Sharpie 일부 (전부가 아님)를 자동으로 생성 하 여 워크 로드를 줄일 수 있는 방법을 보여 줍니다 Xamarin.iOS 바인딩에서 필요한 필요한 API 정의 합니다.
 - 마지막으로 바인딩을 사용 하는 Xamarin.iOS 응용 프로그램을 만듭니다.
 
-샘플 응용 프로그램에서는 InfColorPicker API 및 C# 코드 간의 통신을 위한 강력한 대리자를 사용 하는 방법을 보여 줍니다. 강력한 대리자를 사용 하는 방법을 살펴본 후 약한 대리자를 사용 하 여 동일한 작업을 수행 하는 방법을 설명 합니다.
+샘플 응용 프로그램에서는 InfColorPicker API 간의 통신을 위한 강력한 대리자를 사용 하는 방법을 보여 줍니다 및 C# 코드입니다. 강력한 대리자를 사용 하는 방법을 살펴본 후 약한 대리자를 사용 하 여 동일한 작업을 수행 하는 방법을 설명 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -54,13 +54,13 @@ Xamarin.iOS에서이 특정 Objective C API를 사용 하는 데 필요한 모�
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Xcode 명령 줄 도구 설치
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 
 위에서 설명한 대로 사용 Xcode 명령줄 도구 (특히 `make` 고 `lipo`)이 연습의 합니다. `make` 명령은 실행 프로그램 및 라이브러리의 컴파일을 사용 하 여 자동화할 수 있는 매우 일반적인 Unix 유틸리티는 _메이크파일_ 프로그램을 작성 해야 하는 방법을 지정 하는 합니다. 합니다 `lipo` 명령 OS X 명령줄 유틸리티를 사용 하 여 다중 아키텍처 파일 만들기에 여러 결합이 `.a` 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 파일입니다.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 위에서 설명한 대로 사용 Xcode 명령줄 도구에는 **Mac 빌드 호스트** (특히 `make` 및 `lipo`)이 연습의 합니다. 합니다 `make` 명령은 실행 프로그램 및 라이브러리의 컴파일을 사용 하 여 자동화할 수 있는 매우 일반적인 Unix 유틸리티는 _메이크파일_ 프로그램을 빌드하는 방법을 지정 하 합니다. 합니다 `lipo` 명령 OS X 명령줄 유틸리티를 사용 하 여 다중 아키텍처 파일 만들기에 여러 결합이 `.a` 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 파일입니다.
@@ -81,11 +81,11 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - 메시지가 표시 됩니다 명령줄 도구를 설치 하려면를 클릭 합니다 **설치** 단추: [ ![ ] (walkthrough-images/xcode01.png "명령줄 도구를 설치 합니다.")](walkthrough-images/xcode01.png#lightbox)
+    - 메시지가 표시 됩니다 명령줄 도구를 설치 하려면를 클릭 합니다 **설치** 단추: [ ![](walkthrough-images/xcode01.png "명령줄 도구를 설치 합니다.")](walkthrough-images/xcode01.png#lightbox)
 
-    - 도구를 다운로드 하 고 Apple 서버에서 설치 됩니다. [ ![ ] (walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
+    - 도구를 다운로드 하 고 Apple 서버에서 설치 됩니다. [ ![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
 
-- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드]() 웹 페이지입니다. Apple ID를 사용 하 여 로그인 한 다음 검색 하 고, 명령줄 도구를 다운로드 합니다. [ ![ ] (walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
+- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드]() 웹 페이지입니다. Apple ID를 사용 하 여 로그인 한 다음 검색 하 고, 명령줄 도구를 다운로드 합니다. [ ![](walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
 
 명령줄 도구를 설치 하는 것에서 연습을 진행할 준비가 된 것입니다.
 
@@ -94,7 +94,7 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
 이 연습에서는 다음 단계를 다룹니다.
 
 - **[정적 라이브러리를 만드는](#Creating_A_Static_Library)**  -이 단계에서는 정적 라이브러리를 작성 합니다 **InfColorPicker** Objective-c 코드입니다. 정적 라이브러리 갖습니다는 `.a` 파일 확장명 및 라이브러리 프로젝트의.NET 어셈블리에 포함 됩니다.
-- **[Xamarin.iOS 바인딩 프로젝트를 만듭니다](#Create_a_Xamarin.iOS_Binding_Project)**  -정적 라이브러리에 있으면 Xamarin.iOS 바인딩 프로젝트를 만들려면 사용할 것입니다. 방금 만든 정적 라이브러리 및 Objective-c로 API를 사용할 수 있는 방법을 설명 하는 C# 코드의 형태로 메타 데이터 바인딩 프로젝트 구성 됩니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 사용 하 여 **[목표 Sharpie](#Using_Objective_Sharpie)** 는 데 사용 하 여 API 정의 만듭니다.
+- **[Xamarin.iOS 바인딩 프로젝트를 만듭니다](#Create_a_Xamarin.iOS_Binding_Project)**  -정적 라이브러리에 있으면 Xamarin.iOS 바인딩 프로젝트를 만들려면 사용할 것입니다. 바인딩 프로젝트를 구성 하 고 방금 만든 정적 라이브러리 형태로 메타 데이터의 C# Objective C API를 사용할 수 있는 방법을 설명 하는 코드입니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 사용 하 여 **[목표 Sharpie](#Using_Objective_Sharpie)** 는 데 사용 하 여 API 정의 만듭니다.
 - **[API 정의 정규화](#Normalize_the_API_Definitions)**  -목표 Sharpie 도움을 잘 않습니다 하지만 모든 작업을 수행할 수 없습니다. 사용할 수 있으려면 먼저 API 정의를 변경 해야 하는 몇 가지 변경 내용을 설명 하겠습니다.
 - **[바인딩 라이브러리를 사용 하 여](#Using_the_Binding)**  -마지막으로 새로 만든된 바인딩 프로젝트를 사용 하는 방법을 보여 주는 Xamarin.iOS 응용 프로그램을 만듭니다.
 
@@ -245,11 +245,11 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
 ## <a name="create-a-xamarinios-binding-project"></a>Xamarin.iOS 프로젝트 바인딩 만들기
 
-사용 하기 전에 **목표 Sharpie** 바인딩 프로세스를 자동화 하려면 API 정의 저장할 Xamarin.iOS 바인딩 프로젝트를 생성 해야 (사용할 예정입니다 **목표 Sharpie** 도움이 빌드) 미국에 대 한 C# 바인딩을 만듭니다.
+사용 하기 전에 **목표 Sharpie** 바인딩 프로세스를 자동화 하려면 API 정의 저장할 Xamarin.iOS 바인딩 프로젝트를 생성 해야 (사용할 예정입니다 **목표 Sharpie** 도움이 빌드)를 만들어는 C# 미국에 대 한 바인딩.
 
 다음을 수행 하겠습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac 용 Visual Studio를 시작 합니다.
 1. **파일** 메뉴에서 **새로 만들기** > **솔루션...** :
@@ -271,7 +271,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 ![](walkthrough-images/bind03.png "솔루션 탐색기에서 솔루션 구조")
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 1. Visual Studio를 시작합니다.
@@ -280,7 +280,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
     ![새 프로젝트를 시작](walkthrough-images/bind01vs.png "새 프로젝트를 시작 합니다.")
 
-1. 새 프로젝트 대화 상자에서 선택 **Visual C# > iPhone 및 iPad > iOS 바인딩 라이브러리 (Xamarin)**:
+1. 새 프로젝트 대화 상자에서 선택 **시각적 C# > iPhone 및 iPad > iOS 바인딩 라이브러리 (Xamarin)**:
 
     [![IOS 바인딩 라이브러리를 선택 합니다.](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
@@ -292,7 +292,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
 -----
 
-- **ApiDefinition.cs** -이 파일은 C#에서 Objective-c API 래핑될 하는 방법을 정의 하는 계약을 포함 합니다.
+- **ApiDefinition.cs** -이 파일의 Objective C API 래핑될 하는 방법을 정의 하는 계약에 포함 됩니다 C#합니다.
 - **Structs.cs** -이 파일에는 구조가 보유할 또는 열거형 값의 인터페이스 및 대리자에 필요 합니다.
 
 이 연습의 뒷부분에서이 두 파일을 사용 하 여 작업할 것입니다. 먼저, InfColorPicker 라이브러리 바인딩 프로젝트를 추가 해야 합니다.
@@ -303,7 +303,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
 라이브러리를 추가 하려면 다음이 단계를 수행 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 마우스 오른쪽 단추로 클릭 합니다 **네이티브 참조** 선택한 Solution Pad에서 폴더 **네이티브 참조 추가**:
 
@@ -316,7 +316,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
     ![](walkthrough-images/bind04.png "파일 포함")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 복사 합니다 `libInfColorPickerSDK.a` 에서 프로그램 **Mac 빌드 호스트** 바인딩 프로젝트에 붙여 넣습니다.
 
@@ -352,16 +352,16 @@ using ObjCRuntime;
 
 ## <a name="using-objective-sharpie"></a>목표 Sharpie를 사용 하 여
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 
-목표 Sharpie은 명령줄에서 C# 타사 Objective-c 라이브러리를 바인딩하는 데 필요한 정의 만드는 데 도움이 되는 도구 (Xamarin에서 제공). 이 섹션에서는를 사용 하 여 목표 Sharpie 만들 초기 **ApiDefinition.cs** InfColorPicker 프로젝트에 대 한 합니다.
+목표 Sharpie는 명령줄 도구 (Xamarin에서 제공)는 타사 Objective-c 라이브러리를 바인딩하는 데 필요한 정의 만드는 데 도움이 되는 C#입니다. 이 섹션에서는를 사용 하 여 목표 Sharpie 만들 초기 **ApiDefinition.cs** InfColorPicker 프로젝트에 대 한 합니다.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
-목표 Sharpie은 명령줄에서 C# 타사 Objective-c 라이브러리를 바인딩하는 데 필요한 정의 만드는 데 도움이 되는 도구 (Xamarin에서 제공). 이 섹션에서는 목표 Sharpie에서 우리의 **Mac 빌드 호스트** 초기에 만들려는 **ApiDefinition.cs** InfColorPicker 프로젝트에 대 한 합니다.
+목표 Sharpie는 명령줄 도구 (Xamarin에서 제공)는 타사 Objective-c 라이브러리를 바인딩하는 데 필요한 정의 만드는 데 도움이 되는 C#입니다. 이 섹션에서는 목표 Sharpie에서 우리의 **Mac 빌드 호스트** 초기에 만들려는 **ApiDefinition.cs** InfColorPicker 프로젝트에 대 한 합니다.
 
 
 -----
@@ -423,7 +423,7 @@ sdk: watchos2.2      arch: armv7
 
 위의 보면 있다는 것을 `iphoneos9.3` SDK는 컴퓨터에 설치 합니다. 이 정보를 사용 하 여 준비가 InfColorPicker 프로젝트를 구문 분석할 `.h` 초기에 파일 **ApiDefinition.cs** 및 `StructsAndEnums.cs` InfColorPicker 프로젝트에 대 한 합니다.
 
-다음 명령을 입력 하 여 터미널 앱:
+터미널 앱에서 다음 명령을 입력 합니다.
 
 ```bash
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
@@ -462,7 +462,7 @@ Europa:Resources kmullins$
 
 [![](walkthrough-images/os06.png "InfColorPicker.enums.cs 파일과 InfColorPicker.cs")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 
 위에서 만든 바인딩 프로젝트에서 두이 파일을 엽니다. 내용을 복사 합니다 **InfColorPicker.cs** 파일에 붙여 넣습니다를 **ApiDefinition.cs** 파일을 기존 `namespace ...` 코드 블록의 내용으로는  **InfColorPicker.cs** 파일 (종료 된 `using` 문을 그대로):
@@ -470,7 +470,7 @@ Europa:Resources kmullins$
 ![](walkthrough-images/os07.png "InfColorPickerControllerDelegate 파일")
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 위에서 만든 바인딩 프로젝트에서 두이 파일을 엽니다. 내용을 복사 합니다 **InfColorPicker.cs** 파일 (에서 **Mac 빌드 호스트**)에 붙여 넣습니다 합니다 **ApiDefinition.cs** 파일을 기존 `namespace ...` 내용으로 코드 블록을 **InfColorPicker.cs** 파일 (종료를 `using` 그대로 문).
@@ -498,7 +498,7 @@ Europa:Resources kmullins$
 
 목표 Sharpie에 바인딩을 사용 하 여 주석이 추가 된 찾을 수도 있습니다 `[Verify]` 특성입니다. 이러한 특성은 확인 하는 바인딩 (바인딩된 선언 위에 주석에서 제공 됩니다)는 원래 C/Objective-c 선언과 비교 하 여 바람직한 목표 Sharpie에가 하 나타냅니다. 바인딩을 확인 한 후 확인 특성을 제거 해야 합니다. 자세한 내용은 참조는 [확인](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) 가이드입니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 
 이 시점에서 바인딩 프로젝트 완전 하 고 만들 준비 해야 합니다. 바인딩 프로젝트를 빌드하고에서는 최종적으로 오류가 있는지 확인 하겠습니다.
@@ -506,7 +506,7 @@ Europa:Resources kmullins$
 [바인딩 프로젝트를 빌드하고 오류가 없는지 확인](walkthrough-images/os12.png)
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 
 이 시점에서 바인딩 프로젝트 완전 하 고 만들 준비 해야 합니다. 바인딩 프로젝트를 빌드하고에서는 최종적으로 오류가 있는지 확인 하겠습니다.
@@ -520,7 +520,7 @@ Europa:Resources kmullins$
 
 IOS 바인딩 라이브러리 위에서 만든를 사용 하는 샘플 iPhone 응용 프로그램을 만들려면 다음이 단계를 수행 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. **Xamarin.iOS 프로젝트를 만듭니다** -라는 새 Xamarin.iOS 프로젝트를 추가 **InfColorPickerSample** 를 솔루션에는 다음 스크린샷과 같이:
 
@@ -542,7 +542,7 @@ IOS 바인딩 라이브러리 위에서 만든를 사용 하는 샘플 iPhone �
 
 1. 을 묻는 메시지가 나타나면 복사 합니다 **.xib** 프로젝트 파일입니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. **Xamarin.iOS 프로젝트를 만듭니다** -라는 새 Xamarin.iOS 프로젝트에 추가 **InfColorPickerSample** 사용 하는 **단일 뷰 앱** 템플릿:
 
@@ -562,11 +562,11 @@ IOS 바인딩 라이브러리 위에서 만든를 사용 하는 샘플 iPhone �
 
 -----
 
-다음으로, Objective-c 및 처리 하 고 바인딩 및 C# 코드에서 프로토콜에 빠른에 대해 살펴보겠습니다.
+다음으로, 살펴보겠습니다를 빠른 Objective-c 및 처리 하 고 바인딩에 대 한 프로토콜 및 C# 코드입니다.
 
 ### <a name="protocols-and-xamarinios"></a>Xamarin.iOS 및 프로토콜
 
-Objective-c 프로토콜 정의 메서드 (또는 메시지) 특정 상황에서 사용할 수 있습니다. 개념적으로 C#에서 인터페이스와 매우 비슷합니다. C# 인터페이스와 Objective-c 프로토콜을 차이 프로토콜 선택적 메서드-구현 되지 않은 클래스 메서드는입니다. Objective-c로 사용 하는 @optional 키워드는 메서드는 선택 사항 나타내는 데 사용 됩니다. 프로토콜에 대 한 자세한 내용은 참조 하세요 [이벤트, 프로토콜 및 대리자](~/ios/app-fundamentals/delegates-protocols-and-events.md)합니다.
+Objective-c 프로토콜 정의 메서드 (또는 메시지) 특정 상황에서 사용할 수 있습니다. 인터페이스와 매우 비슷합니다는 개념적으로 C#입니다. 주요 차이점 중 하나는 Objective-c 프로토콜 및 C# 프로토콜 선택적 메서드-구현 되지 않은 클래스 메서드는 인터페이스입니다. Objective-c로 사용 하는 @optional 키워드는 메서드는 선택 사항 나타내는 데 사용 됩니다. 프로토콜에 대 한 자세한 내용은 참조 하세요 [이벤트, 프로토콜 및 대리자](~/ios/app-fundamentals/delegates-protocols-and-events.md)합니다.
 
 **InfColorPickerController** 에 아래 코드 조각 에서처럼 한 하나의 프로토콜이:
 
@@ -603,7 +603,7 @@ public partial interface InfColorPickerControllerDelegate {
 
 두 가지 방법으로 Xamarin.iOS 응용 프로그램에서이 인터페이스를 구현할 수 있습니다.
 
-- **강력한 위임** -강력한 대리자를 사용 하 여 만들어야 C# 클래스를 서브클래싱하는 `InfColorPickerControllerDelegate` 및 적절 한 메서드를 재정의 합니다. **InfColorPickerController** 해당 클라이언트와 통신 하려면이 클래스의 인스턴스를 사용 합니다.
+- **강력한 위임** -강력한 대리자를 사용 하 여 만들어야를 C# 는 클래스 `InfColorPickerControllerDelegate` 및 적절 한 메서드를 재정의 합니다. **InfColorPickerController** 해당 클라이언트와 통신 하려면이 클래스의 인스턴스를 사용 합니다.
 - **약한 대리자** -약한 대리자는 일부 클래스의 public 메서드를 만들어야 하는 약간 다른 기술 (같은 `InfColorPickerSampleViewController`) 해당 메서드를 노출 합니다 `InfColorPickerDelegate` 프로토콜을 통해는 `Export` 특성입니다.
 
 강력한 대리자에는 Intellisense, 형식 안전성 및 캡슐화를 효율적으로 제공합니다. 이러한 이유로, 강력한 대리자 수 있는, 약한 대리자 대신 사용 해야 있습니다.
@@ -708,7 +708,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**colorPickerControllerDidFinish 처리: 메시지** -를 `ViewController` 가 완료 되 면 iOS에서 메시지를 보내지 `colorPickerControllerDidFinish:` 에 `WeakDelegate`합니다. 이 메시지를 처리할 수 있는 C# 메서드를 생성 해야 합니다. 이 위해 C# 메서드를 만들고 사용 하 여 다음 표시는 `ExportAttribute`합니다. 편집 `ViewController`, 클래스에 다음 메서드를 추가 합니다.
+**colorPickerControllerDidFinish 처리: 메시지** -를 `ViewController` 가 완료 되 면 iOS에서 메시지를 보내지 `colorPickerControllerDidFinish:` 에 `WeakDelegate`합니다. 생성 해야는 C# 이 메시지를 처리할 수 있는 메서드. 이 작업을 수행 하려면 만듭니다는 C# 메서드 다음 표시 하 고는 `ExportAttribute`합니다. 편집 `ViewController`, 클래스에 다음 메서드를 추가 합니다.
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]

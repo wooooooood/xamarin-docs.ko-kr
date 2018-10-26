@@ -4,15 +4,15 @@ description: 이 문서에서는 키-값 코딩 및 Xcode의 Interface Builder�
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110383"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>데이터 바인딩 및 Xamarin.Mac 키-값 코딩
 
@@ -334,7 +334,7 @@ public NSArray People {
 여기에 두 가지가 있습니다.
 
 1. 사용 하는 `NSMutableArray` 표준 C# 배열 또는 컬렉션 이므로 AppKit 컨트롤에 데이터 바인딩할 요구 사항 등을 대신 **테이블 뷰**, **개요 보기** 및 **컬렉션** .
-2. 직원의 배열에 캐스팅 하 여 노출 했습니다를 `NSArray` 목적으로 바인딩 및 변경 하 고 해당 C# 데이터 형식 이름에 대 한 `People`, 데이터 바인딩에서 예상 하는 하나로 `personModelArray` 형태로 **{class_name} 배열** (참고 첫 번째 문자 만들어졌다고 소문자로).
+2. 직원의 배열에 캐스팅 하 여 노출 했습니다를 `NSArray` 데이터에 대 한 바인딩 목적 및 변경 해당 C# 이름, 형식 `People`, 데이터 바인딩에서 예상 하는 하나에 `personModelArray` 형태로 **{0} class_name} 배열**(첫 번째 문자가 소문자로 변환 수행 되었음을 참고).
 
 다음으로, 일부 특수 이름 공용 지 원하는 메서드를 추가 해야 **배열 컨트롤러** 하 고 **트리 컨트롤러**:
 

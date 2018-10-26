@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790102"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122675"
 ---
 # <a name="stack-views-in-xamarinios"></a>Xamarin.iOS에서 스택 뷰
 
 _이 문서에서는 스택을 사용 하 여 Xamarin.iOS 앱에 새 UIStackView 컨트롤의 하위 집합을 관리 하는 가로 또는 세로로 정렬에 대해 설명 합니다._
 
 > [!IMPORTANT]
-> StackView iOS 디자이너에서는 지원 되는 동안 발생할 수 있는 사용 편의성 버그 안정 채널을 사용 하는 경우 note 하십시오. 전환의 베타 또는 알파 채널이이 문제를 완화 해야 합니다. 필요한 수정 프로그램 안정 채널에서 구현 되는 때까지 Xcode를 사용 하 여이 연습을 제공 하도록 결정 했습니다.
+> StackView iOS 디자이너에서는 지원 되는 동안 발생할 수 있는 사용 편의성 버그 안정 채널을 사용 하는 경우 note 하십시오. 베타 또는 알파 채널을 전환 하면이 문제를 완화 해야 합니다. 필요한 수정 프로그램 안정 채널에서 구현 되는 때까지 Xcode를 사용 하 여이 연습을 제공 하도록 결정 했습니다.
 
 스택 뷰 컨트롤 (`UIStackView`) 활용 자동 레이아웃 및 크기 클래스 가로 또는 세로로 하위의 스택을 관리 하는 화면 크기와 방향 iOS 장치에 동적으로 응답 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 65bb3fa070c082fa6c6c489e326a870a80fb9502
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122753"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -33,7 +33,7 @@ Xamarin.Forms를 호출 하 여 초기화 해야 합니다는 `Forms.Init` 메�
 > [!NOTE]
 > 합니다 **NativeForms** Xamarin.Forms 프로젝트 샘플 응용 프로그램 솔루션에 없습니다. 대신, Xamarin.iOS 프로젝트, Xamarin.Android 프로젝트 및 UWP 프로젝트의 구성 됩니다. 각 프로젝트에 사용할 기본 폼을 사용 하는 네이티브 프로젝트는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생 합니다. 그러나 네이티브 프로젝트에서 사용할 수 없습니다 이유는 없는 이유는 `ContentPage`-.NET Standard 라이브러리 프로젝트 또는 공유 프로젝트에서 페이지를 파생 합니다.
 
-Xamarin.Forms와 같은 기능 기본 폼을 사용할 때 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService)를 [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter), 및 데이터 바인딩 엔진에서 모두 계속 작동 합니다.
+Xamarin.Forms와 같은 기능 기본 폼을 사용할 때 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService)를 [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter), 및 데이터 바인딩 엔진에서 모두 계속 작동 합니다. 그러나 페이지 탐색 네이티브 탐색 API를 사용 하 여 수행 되어야 합니다.
 
 ## <a name="ios"></a>iOS
 
@@ -350,7 +350,7 @@ UWP의 후방 탐색 지원에 대 한 자세한 내용은 참조 [탐색 기록
 
 ## <a name="summary"></a>요약
 
-네이티브 양식 허용 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-Xamarin.iOS, Xamarin.Android 및 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 프로젝트에서 사용할 수 있도록 페이지를 파생 합니다. 네이티브 프로젝트에서 사용할 수 있습니다 `ContentPage`-.NET Standard 라이브러리 프로젝트 또는 공유 프로젝트 또는 프로젝트에 직접 추가 되는 페이지를 파생 합니다. 이 문서를 사용 하는 방법을 설명 `ContentPage`-네이티브 프로젝트 및 이들 사이 탐색 하는 방법에 직접 추가 되는 페이지를 파생 합니다.
+Native Forms는 Xamarin.Forms의 파생된 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 페이지들을 네이티브 Xamarin.iOS, Xamarin.Android 및 유니버설 Windows 플랫폼(UWP) 프로젝트에서 사용할 수 있게 파생합니다. 네이티브 프로젝트에서 사용할 수 있습니다 `ContentPage`-.NET Standard 라이브러리 프로젝트 또는 공유 프로젝트 또는 프로젝트에 직접 추가 되는 페이지를 파생 합니다. 이 문서를 사용 하는 방법을 설명 `ContentPage`-네이티브 프로젝트 및 이들 사이 탐색 하는 방법에 직접 추가 되는 페이지를 파생 합니다.
 
 
 ## <a name="related-links"></a>관련 링크

@@ -4,15 +4,15 @@ description: 이 문서에는 백그라운드 태스크를 사용 하 여는 응
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120998"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 작업
 
@@ -20,7 +20,7 @@ IOS의 backgrounding 수행 하는 가장 간단한 방법은 backgrounding 요�
 
 백그라운드 작업 세 가지 범주로 나눌 수 있습니다.
 
-1.  **백그라운드 스레드로부터 안전한 작업** -어디에서 나 호출을 작업 해야 하는 응용 프로그램 않으려는 중단 된 응용 프로그램이 백그라운드를 입력 해야 합니다.
+1.  **백그라운드 스레드로부터 안전한 작업** 호출-어디서 나 작업 해야 하는 응용 프로그램에서 원하지 중단 된 응용 프로그램이 백그라운드를 입력 해야 합니다.
 1.  **DidEnterBackground 태스크** 하는 동안 호출-는 `DidEnterBackground` 정리 및 상태 저장 하는 데 도움이 되는 응용 프로그램 수명 주기 메서드.
 1.  **전송 (iOS 7 이상)을 백그라운드** -iOS 7에서 네트워크 전송을 수행 하는 특수 한 유형의 백그라운드 작업을 사용 합니다. 일반 작업과 달리 백그라운드 전송은 미리 결정된 된 제한 시간을 갖지 않습니다.
 

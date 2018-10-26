@@ -4,15 +4,15 @@ description: '이 문서에서는 Xamarin.iOS에서 다양 한 응용 프로그�
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: cd67c564461721ade6f3eb269b461ddea5e2d2c4
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276004"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118515"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.iOS 응용 프로그램 아이콘
 
@@ -109,7 +109,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
 자산 카탈로그를 사용 하려면 다음을 수행 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
 2. 아래로 스크롤하여 합니다 **앱 아이콘** 섹션입니다.
@@ -126,7 +126,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 7. 클릭 합니다 **열려** 프로젝트에 이미지를 포함 하는 xcasset에서 설정 단추입니다.
 8. 필요한 모든 이미지에 대해 반복 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 **Info.plist** 파일을 **솔루션 탐색기**:
 
@@ -155,7 +155,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
 2. 아래로 스크롤하여 합니다 **앱 아이콘** 섹션입니다.
@@ -166,7 +166,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
      ![](app-icons-images/migrate03.png "Assets.xcassets AppIcons 이미지 집합")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
 2. IPhone 아이콘 섹션 클릭 합니다. 
@@ -187,7 +187,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
 iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
 2. 스크롤하여 합니다 **iTunes 아트 워크** 편집기의 섹션: 
@@ -196,7 +196,7 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 3. 누락 된 이미지가 편집기에서 썸네일을 클릭, 파일 열기 대화 상자에서 원하는 iTunes 아트 워크에 대 한 이미지 파일을 선택 하 고 클릭 합니다 **확인** 단추입니다.
 4. 필요한 이미지가 지정 된 앱에 대 한 모든 때까지이 단계를 반복 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
 

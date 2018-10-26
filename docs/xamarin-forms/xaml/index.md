@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: f593e5d084d8cd7071d17195663478d430d994b7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4045f3a1d31b1c0c8b69e840d3943b6ce258b894
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113588"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
 
@@ -37,7 +37,7 @@ XAML은 코드가 아닌 태그를 사용 하 여 Xamarin.Forms 응용 프로그
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[XAML 미리 보기](xaml-previewer.md)
 
-합니다 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md) 에서 발표 Xamarin 발전 2016은 알파 채널에서 테스트할 수 있습니다.
+합니다 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md) 를 페이지-side-by-side 입력할 때 렌더링 하 여 사용자 인터페이스를 볼 수 있도록 하 고 XAML 태그로 실시간 미리 보기를 렌더링 합니다.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[XAML 네임스페이스](namespaces.md)
 

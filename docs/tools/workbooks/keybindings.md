@@ -3,15 +3,15 @@ title: Xamarin 통합 문서 편집기 바로 가기 키
 description: 이 문서에서는 Xamarin Workbooks 편집기에서 사용할 수 있는 바로 가기 키를 설명 합니다. 특히 반환 키를 사용 하는 다양 한 방법에 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: c2b4a8c1bcb8f7b88ab2ae1e2906b1c9c702b76a
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: fdb581706ad40635f082509230ae28961d5b428e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351680"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111241"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Xamarin 통합 문서 편집기 바로 가기 키
 

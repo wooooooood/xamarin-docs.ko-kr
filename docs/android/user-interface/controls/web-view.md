@@ -3,19 +3,20 @@ title: 웹 보기
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241177"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110084"
 ---
 # <a name="web-view"></a>웹 보기
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 웹 페이지 보기에 대 한 고유한 창을 만드는 (또는 심지어 전체 브라우저를 개발) 수 있습니다. 이 자습서에서는 간단한 만듭니다 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) 볼 수를 웹 페이지를 탐색 합니다.
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 웹 페이지 보기에 대 한 고유한 창을 만드는 (또는 심지어 전체 브라우저를 개발) 수 있습니다. 이 자습서에서는 간단한을 만듭니다. [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+볼 수 있으며 웹 페이지를 탐색 하는.
 
 라는 새 프로젝트를 만듭니다 **HelloWebView**합니다.
 
@@ -74,7 +75,8 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-다음으로, 다음 코드를 사용 합니다 [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) 메서드:
+다음으로, 다음 코드를 사용 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+방법:
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -118,7 +120,8 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-이렇게 [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent)) 동작이 실행 되는 동안 단추를 누를 때마다 콜백 메서드가 호출 됩니다. 조건을 사용 하 여 내부를 [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) 키를 눌렀는지 여부를 확인 하는 **다시** 단추를 사용할지 여부와 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 실제로 수 다시 (있는 경우 기록)을 탐색 합니다. 둘 다 true 인 경우 해당 [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) 백 1 단계에서 이동 하는 메서드가 호출 되는 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 기록 합니다. 반환 `true` 이벤트가 처리 된 것을 나타냅니다. 이 조건이 충족 되지 않으면 이벤트 시스템에 다시 전송 됩니다.
+이 [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+콜백 메서드는 작업이 실행 되는 동안 단추를 누를 때마다 호출 됩니다. 조건을 사용 하 여 내부를 [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) 키를 눌렀는지 여부를 확인 하는 **다시** 단추를 사용할지 여부와 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 실제로 수 다시 (있는 경우 기록)을 탐색 합니다. 둘 다 true 인 경우 해당 [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) 백 1 단계에서 이동 하는 메서드가 호출 되는 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 기록 합니다. 반환 `true` 이벤트가 처리 된 것을 나타냅니다. 이 조건이 충족 되지 않으면 이벤트 시스템에 다시 전송 됩니다.
 
 응용 프로그램을 다시 실행합니다. 이제 링크를 따르고 페이지 기록을 탐색할 수: 있습니다.
 

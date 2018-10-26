@@ -5,12 +5,12 @@ description: 이 문서는 비교 하 고 WPF Xamarin.Forms에 대조 합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 4d6585715b2fc118bb350c242abccbc68791ec0b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119851"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및입니다. Xamarin.Forms: 유사성 및 차이점
 
@@ -98,7 +98,6 @@ Xamarin.Forms의 바인딩 가능한 속성에 대 한 정의 WPF와 같습니�
     - Validationrule 컬렉션
     - XPath
     - XmlNamespaceManager
-- `Binding.Mode` 지원 하지 않습니다 `OneTime`를 대신 사용 `OneWay`합니다.
 
 #### <a name="relativesource"></a>RelativeSource
 

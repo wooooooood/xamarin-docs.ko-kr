@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241213"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118879"
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -28,7 +28,7 @@ Xamarin.Forms를 사용 하는 경우 장치 방향 제어에 대 한 지원 되
 
 사용 하 여 응용 프로그램에 대 한 iOS 장치 방향을 구성 합니다 **Info.plist** 파일입니다. 이 파일은 앱을 대상으로 포함 하는 경우 iPhone 및 iPod에 대 한 방향 설정 뿐만 아니라 iPad에 대 한 설정을 포함 됩니다. 다음은 특정 IDE에 지시 합니다. 참조 하려고 하는 지침을 선택 하려면이 문서의 맨 위에 있는 IDE 옵션을 사용 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 iOS 프로젝트를 열고 **Info.plist**합니다. IPhone 배포 정보 탭을 사용 하 여 시작 하는 구성 패널에는 파일이 열립니다.
 
@@ -38,7 +38,7 @@ IPad 방향을 구성 하려면 선택 합니다 **iPad 배포 정보** 탭 왼�
 
 ![Visual Studio에서 지원 되는 장치 방향](device-orientation-images/orientation-vs-ipad.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual Studio에서 iOS 프로젝트를 열고 **Info.plist**합니다. 아래는 **응용 프로그램** 탭 섹션 방향을 설정 사용할 수 있습니다.
 

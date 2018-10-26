@@ -1,37 +1,37 @@
 ---
-title: Android 마모 컨트롤
+title: Android Wear 컨트롤
 ms.prod: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2adae250d2f59e8eee0558a92c3845c5592aa01a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112041"
 ---
-# <a name="android-wear-controls"></a>Android 마모 컨트롤
+# <a name="android-wear-controls"></a>Android Wear 컨트롤
 
-Android 마모 앱 צ ְ ײ 대부분 동일한 컨트롤의 이미 사용을 포함 하 여 Android 앱의 일반 `Button`, `TextView`, 고 drawables 이미지입니다. 포함 하 여 레이아웃 컨트롤 `ScrollView`, `LinearLayout`, 및 `RelativateLayout` 사용할 수도 있습니다.
+Android Wear 앱에서에서 사용할 수 동일한 컨트롤은 대부분 이미 사용을 비롯 한 일반적인 Android 앱에 대 한 `Button`, `TextView`, 및 드로어 블 이미지입니다. 포함 하는 레이아웃 컨트롤 `ScrollView`, `LinearLayout`, 및 `RelativateLayout` 사용할 수도 있습니다.
 
-이 페이지에서 Android 마모 특정 컨트롤에 연결 된 [착용 식 UI 라이브러리](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) 를 통해 Xamarin 프로젝트에서 사용할 수는 [착용 식 지원](http://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지 합니다. 이러한 컨트롤은 다음과 같습니다.
+이 페이지에서 Android Wear 관련 컨트롤에 연결 합니다 [착용 식 UI 라이브러리](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) 를 통해 Xamarin 프로젝트에서 사용할 수 있는 합니다 [착용 식 지원](http://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지. 이러한 컨트롤은 다음과 같습니다.
 
--   **GridViewPager** &ndash; 사용자 선택 다운 다음 행을 스크롤 위치 2 차원 탐색 인터페이스 만들기 (자세한 내용은 참조 [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
+-   **GridViewPager** &ndash; 는 사용자가 스크롤할 다운 다음 행 선택 하려면 2 차원 탐색 인터페이스 만들기 (자세한 내용은 참조 하십시오 [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
 
-    ![GridViewPager의 예제 스크린 샷](images/gridviewpager.png)
+    ![예제는 GridViewPager 스크린샷](images/gridviewpager.png)
 
-마모 앱에 대 한 중요 한 다른 컨트롤은 다음과 같습니다.
+Wear 앱에 대 한 중요 한 다른 컨트롤은 다음과 같습니다.
 
-* `BoxInsetLayout` (참조 [화면 크기와 작업](~/android/wear/screen-sizes.md)),
+* `BoxInsetLayout` (참조 [화면 크기를 사용 하 여 작업](~/android/wear/screen-sizes.md)),
 
-* `WatchViewStub` (참조 [화면 크기와 작업](~/android/wear/screen-sizes.md)),
+* `WatchViewStub` (참조 [화면 크기를 사용 하 여 작업](~/android/wear/screen-sizes.md)),
 
-* `CardFrame` (참조 [Android 만드는 카드](https://developer.android.com/training/wearables/ui/cards.html)),
+* `CardFrame` (참조 [Android 만들기 카드](https://developer.android.com/training/wearables/ui/cards.html)),
 
-* `CardScrollView` (참조 [Android 만드는 카드](https://developer.android.com/training/wearables/ui/cards.html)),
+* `CardScrollView` (참조 [Android 만들기 카드](https://developer.android.com/training/wearables/ui/cards.html)),
 
 * `WearableListView` (참조 [Android 목록 만들기](https://developer.android.com/training/wearables/ui/lists.html)).
 

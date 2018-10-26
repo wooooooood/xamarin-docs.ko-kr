@@ -4,15 +4,15 @@ description: 이 문서에서는 비 관계 변환을 사용 하 여 3D 공간�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 84ebdd007d17eaf0bcfc1be119cb4130299503bc
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 750f357819a85077b3f272a7a10cbd3928186681
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110292"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
@@ -24,7 +24,7 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 
 이 작업에서는 3 차원 회전을 사용 하 여 작업 및 비 관계을 파생 `SKMatrix` 이러한 3D 회전을 수행 하는 변환입니다.
 
-이 개발 하는 것이 어렵습니다 `SKMatrix` 변형 2 차원 내 에서만 작동 합니다. 이 3으로 3 행렬 3D 그래픽에서 사용 되는 4x4 매트릭스에서 파생 되는 경우 작업이 훨씬 쉬워집니다. SkiaSharp 포함 된 [ `SKMatrix44` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.PreConcat/p/SkiaSharp.SKMatrix44/) 이 있지만 약간의 경험이 3D 그래픽에 대 한 클래스는 3D 회전 및 4-4 변환 매트릭스를 이해 하는 데 필요 합니다.
+이 개발 하는 것이 어렵습니다 `SKMatrix` 변형 2 차원 내 에서만 작동 합니다. 이 3으로 3 행렬 3D 그래픽에서 사용 되는 4x4 매트릭스에서 파생 되는 경우 작업이 훨씬 쉬워집니다. SkiaSharp 포함 된 [ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44) 이 있지만 약간의 경험이 3D 그래픽에 대 한 클래스는 3D 회전 및 4-4 변환 매트릭스를 이해 하는 데 필요 합니다.
 
 개념적으로 Z. 라는 세 번째 축을 추가 하는 3 차원 좌표계는 Z 축을 화면 오른쪽 각도에. 3D 공간의 점 좌표는 세 자리 숫자를 사용 하 여 표시 됩니다: (x, y, z). 3d에서 X의 값을 늘리면이 문서에서는 사용 하는 좌표계 오른쪽 되며 증가 Y 값 두 개의 차원에서와 마찬가지로 아래로 이동 합니다. 양수 Z 값 증가 화면에서 제공 됩니다. 원점은 2D 그래픽 마찬가지로 왼쪽 위 모퉁이 있습니다. 이 평면에 오른쪽 각도 Z 축은 XY 평면으로 화면의 생각할 수 있습니다.
 
@@ -48,7 +48,7 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 |  M41  M42  M43  M44  |
 </pre>
 
-그러나는 SkiaSharp `Matrix44` 클래스는 약간 다릅니다. 설정 하거나 개별 셀 값을 가져올 유일한 방법은 `SKMatrix44` 사용 하는 것은 [ `Item` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Item/p/System.Int32/System.Int32/) 인덱서 합니다. 행 및 열 인덱스는 0부터 시작 하지 않고 1부터 시작 하 고 행과 열 교환 됩니다. 위의 다이어그램에 있는 셀 M14 인덱서를 사용 하 여 액세스할 `[3, 0]` 에 `SKMatrix44` 개체입니다.
+그러나는 SkiaSharp `Matrix44` 클래스는 약간 다릅니다. 설정 하거나 개별 셀 값을 가져올 유일한 방법은 `SKMatrix44` 사용 하는 것은 [ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) 인덱서 합니다. 행 및 열 인덱스는 0부터 시작 하지 않고 1부터 시작 하 고 행과 열 교환 됩니다. 위의 다이어그램에 있는 셀 M14 인덱서를 사용 하 여 액세스할 `[3, 0]` 에 `SKMatrix44` 개체입니다.
 
 3D 그래픽 시스템에서는 3D 지점 (x, y, z)는 4x4 변환 매트릭스를 곱하는 대 한 1-4 매트릭스도 변환 됩니다.
 
@@ -112,7 +112,7 @@ Z 축 중심으로 회전 2D 그래픽와 동일 합니다.
 
 회전의 방향은 좌표계의 선호도 포함 됩니다. 왼쪽 시스템입니다 증가 값 특정 축 방향으로 왼쪽의 엄지 단추를 가리킬 경우-X 축 중심으로 회전 오른쪽 회전 Y 축 및 사용자 쪽 Z 축 중심으로 회전에 대 한 아래쪽-다음의 곡선 yo 다른 손가락의 회전 양의 각도 방향을 나타냅니다.
 
-`SKMatrix44` 정적 일반화 [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) 하 고 [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) 축 회전 중심점입니다 발생을 지정할 수 있도록 하는 메서드:
+`SKMatrix44` 정적 일반화 [ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) 하 고 [ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) 축 회전 중심점입니다 발생을 지정할 수 있도록 하는 메서드:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -220,7 +220,7 @@ x"= cos (α) ·x / ((sin (α) / 깊이) ·x + 1)
 
 Y 축 중심을 양의 양의 각도 사용 하 여 2D 개체는 회전 하는 경우 X 값 오목 하 게 표시 부정 하는 동안 배경에 전경으로 제공 되는 X 값입니다. X 값을 더 작은 또는 뷰어를 멀리 이동할 때 더 큰 가깝게 됩니다 좌표로 Y 축에서 가장 먼 곳 (코사인 값을 적용은)는 Y 축에 가깝게 이동할 것 같습니다.
 
-사용 하는 경우 `SKMatrix44`, 다양 한 곱하여 모든 3D 회전 및 큐브 뷰 작업을 수행할 `SKMatrix44` 값입니다. 4에서 4에서 2 차원-3x3 매트릭스를 추출할 수 있습니다 다음 매트릭스를 사용 하 여는 [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) 의 속성을 `SKMatrix44` 클래스입니다. 이 속성은 익숙한 반환 `SKMatrix` 값입니다.
+사용 하는 경우 `SKMatrix44`, 다양 한 곱하여 모든 3D 회전 및 큐브 뷰 작업을 수행할 `SKMatrix44` 값입니다. 4에서 4에서 2 차원-3x3 매트릭스를 추출할 수 있습니다 다음 매트릭스를 사용 하 여는 [ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix) 의 속성을 `SKMatrix44` 클래스입니다. 이 속성은 익숙한 반환 `SKMatrix` 값입니다.
 
 합니다 **회전 3D** 페이지 3D 회전을 시험해 볼 수 있습니다. 합니다 [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) 파일은 4 개의 슬라이더 X, Y 및 Z 축 기준으로 회전을 설정 하 고 깊이 값을 설정 합니다.
 
@@ -441,7 +441,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing` 재정의 세 Xamarin.Forms 정의 `Animation` 애니메이션 효과를 줄 개체를 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드. 숫자를 소수이 애니메이션쯤 기간 설정 되어 있는지 확인-5 초, 7, 11 초 및-전체 조합 마다 385 초 또는 10 분 이상만 반복 하므로:
+`OnAppearing` 재정의 세 Xamarin.Forms 정의 `Animation` 애니메이션 효과를 줄 개체를 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드. 이러한 애니메이션 기간 소수로 설정 된 전체 조합 마다 385 초 또는 10 분 이상만 반복 하므로 (5 초, 7, 11 초 및) 번호:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -536,5 +536,5 @@ public class AnimatedRotation3DPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

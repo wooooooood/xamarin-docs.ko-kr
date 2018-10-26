@@ -4,15 +4,15 @@ description: 이 문서는 보안 및 개인 정보 보호 기능의 iOS 설명 
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1a28bf394d29c09bfd264f03e0eea6c8b582f271
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120504"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 보호 기능
 
@@ -72,7 +72,7 @@ HomeKit ios 10 개 (이상)에 액세스 하는 예로 다음, 개발자를 추�
 
 ![경고 예제 NSHomeKitUsageDescription](security-privacy-images/info01.png "NSHomeKitUsageDescription 경고 예제")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 용 Xamarin.iOS를 현재 편집을 지원 하지 않습니다 합니다 **Info.plist** 매니페스트 편집기 기본 iOS 내에서 개인 키입니다. 제네릭 PList 편집기를 사용 해야 하는 대신 하므로 다음을 수행 합니다.
 
@@ -90,7 +90,7 @@ Visual Studio 용 Xamarin.iOS를 현재 편집을 지원 하지 않습니다 합
     ![설명 입력](security-privacy-images/InfoPListSetValue.png "설명을 입력")
 7. 파일의 변경 내용을 저장합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 개인 키 중 하나를 설정 하려면 다음을 수행 합니다.
 

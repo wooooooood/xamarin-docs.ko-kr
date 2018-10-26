@@ -4,28 +4,25 @@ description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSha
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 0ba3d86f52d2e6907f32450d87f30280ade95d3f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 1357f0be1ba4c15c4046e92f8556c957b9c4bd46
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615641"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122246"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본적인 애니메이션
 
 _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법 알아보기_
 
-시켜 Xamarin.Forms에서 SkiaSharp 그래픽 애니메이션을 적용할 수는 `PaintSurface` 약간 다르게 사용 되는 그래픽 그리기 시간 매우 빈번 하 게 호출 될 메서드를 각각. 센터에서 확장 된 것 처럼 보이는 동심원을 사용 하 여이 문서의 뒷부분에 표시 된 애니메이션은 다음과 같습니다.
+시켜 Xamarin.Forms에서 SkiaSharp 그래픽 애니메이션을 적용할 수는 `PaintSurface` 약간 다르게 사용 되는 그래픽 그리기 시간 주기적으로 호출 될 메서드를 각각. 센터에서 확장 된 것 처럼 보이는 동심원을 사용 하 여이 문서의 뒷부분에 표시 된 애니메이션은 다음과 같습니다.
 
 ![](animation-images/animationexample.png "여러 동심원 센터에서 보이는 확장")
 
-합니다 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수에 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 속도:
-
-
-합니다 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 뷰를 사용 하 여:
+합니다 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수에 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 비율입니다. 합니다 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 뷰를 사용 하 여:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -146,7 +143,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 에 `SKPaint` 에서 개체를 만들는 `using` 블록입니다. 많은 SkiaSharp 클래스 처럼 `SKPaint` 에서 파생 되 `SKObject`에서 파생 되는 `SKNativeObject`를 구현 하는 합니다 [ `IDisposable` ](xref:System.IDisposable) 인터페이스입니다. `SKPaint` 재정의 `Dispose` 관리 되지 않는 리소스를 해제 하는 방법입니다.
 
- 배치 `SKPaint` 에 `using` 되도록 블록 `Dispose` 이러한 관리 되지 않는 리소스를 해제 하는 블록의 끝에 호출 됩니다. 이런 그래도 메모리에서 사용 하는 경우는 `SKPaint` 개체가 해제 되며 더 순차적 방식으로 메모리를 해제 좀 대응력 유용.NET 가비지 수집기에 의해 하지만 애니메이션 코드에서입니다.
+ 배치 `SKPaint` 에 `using` 되도록 블록 `Dispose` 이러한 관리 되지 않는 리소스를 해제 하는 블록의 끝에 호출 됩니다. 이런 그래도 메모리에서 사용 하는 경우는 `SKPaint` 개체가 해제 되며.NET 가비지 수집기에 의해 하지만 애니메이션 코드에서 것이 가장 좋습니다를 능동적으로 보다 순차적 방식으로 메모리를 해제 합니다.
 
  이 경우 더 나은 솔루션을 두 개를 만드는 것 `SKPaint` 필드로 저장할 개체입니다.
 
@@ -178,7 +175,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-이 프로그램에는 Xamarin.Forms에 따라 애니메이션 하는 다른 방법을 사용 하 여 `Device.StartTimer`입니다. 합니다 `t` 필드의 애니메이션이 적용 되어 0에서 1 모든 `cycleTime` 시간 (밀리초):
+이 프로그램에는 Xamarin.Forms에 따라 애니메이션 하는 다른 방법을 사용 하 여 `Device.StartTimer` 메서드. 합니다 `t` 필드의 애니메이션이 적용 되어 0에서 1 모든 `cycleTime` 시간 (밀리초):
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -212,7 +209,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-`PaintSurface` 처리기 애니메이션이 적용 된 반지름을 사용 하 여 5 동심원을 그립니다. 경우는 `baseRadius` 으로 다음 100으로 변수는 계산 `t` 0에서 1, 100, 100-200, 200에서 300, 300 ~ 400 및 500 400 0에서 5 원 증가의 반지름에 애니메이션 효과가 적용 됩니다. 원 중 대부분은 `strokeWidth` 50 하지만 첫 번째 원형는 `strokeWidth` 0에서 50으로 애니메이션 효과 줍니다. 원 중 대부분의 경우 색은 파란색이 고 하지만 마지막 원의 색 애니메이션 효과가 적용 됩니다 파란색에서 투명 한:
+`PaintSurface` 처리기 애니메이션이 적용 된 반지름을 사용 하 여 5 동심원을 그립니다. 경우는 `baseRadius` 으로 다음 100으로 변수는 계산 `t` 0에서 1, 100, 100-200, 200에서 300, 300 ~ 400 및 500 400 0에서 5 원 증가의 반지름에 애니메이션 효과가 적용 됩니다. 원 중 대부분은 `strokeWidth` 50 하지만 첫 번째 원형는 `strokeWidth` 0에서 50으로 애니메이션 효과 줍니다. 원 중 대부분의 경우 색 파란색 이지만 마지막 원의 색 애니메이션 효과가 적용 됩니다 파란색에서 투명 합니다. 네 번째 인수를 확인 합니다 `SKColor` 불투명도 지정 하는 생성자.
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -250,5 +247,5 @@ public class ExpandingCirclesPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

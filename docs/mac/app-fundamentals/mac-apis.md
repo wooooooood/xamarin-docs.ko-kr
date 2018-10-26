@@ -4,15 +4,15 @@ description: 이 문서에서는 Objective-c 선택기를 읽는 방법 및 Xama
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: 6dfaa3c7bf988228bfbacefe7c8e7268edc8117a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 209ce2b5fb2fbb357f23e6ccc9bb849fbfedc81d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115655"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>macOS Xamarin.Mac 개발자를 위한 Api
 

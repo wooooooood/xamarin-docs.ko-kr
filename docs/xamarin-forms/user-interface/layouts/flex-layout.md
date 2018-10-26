@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: a6c1b0a4e0df1c25f595ca4eb53079c74b84972e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108745"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -486,7 +486,7 @@ IOS 스크린샷에서 모든 자식의 위쪽을 맞춥니다. Android 스크�
 
 [![실험 페이지: 콘텐츠 맞춤](flex-layout-images/ExperimentAlignContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
-IOS 스크린샷 두 행에는 맨; Android 스크린 샷 있을 때에 센터; 그리고 UWP 스크린샷에서 맨 아래에서. 행은 다양 한 방법으로 간격이 수 있습니다.
+IOS 스크린샷에서; 맨 위에 있는 두 행은 Android 스크린 샷 있을 때에 센터; 그리고 UWP 스크린샷에서 맨 아래에서. 행은 다양 한 방법으로 간격이 수 있습니다.
 
 [![실험 페이지: 콘텐츠 2 Align](flex-layout-images/ExperimentAlignContent2.png "실험 페이지-정렬 콘텐츠 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
@@ -606,7 +606,7 @@ XAML, 장치 독립적 단위에서 크기에 대 한 숫자를 사용할 수 �
 
 [![축소가 실험 페이지](flex-layout-images/ShrinkExperiment.png "축소가 실험 페이지")](flex-layout-images/ShrinkExperiment-Large.png#lightbox)
 
-Android 스크린 샷에서 `Shrink` 두 번째 값 `Label` 0과는 `Label` 전체 너비에 표시 됩니다. 네 번째 뿐만 `Label` 같습니다는 `Shrink` 1 보다 큰 값 및 축소 되었습니다. UWP 스크린샷은 둘 다 `Label` 지정 된 요소를 `Shrink` 경우 전체 크기로 표시 될 수 있도록 하려면 값 0 가능 합니다.
+Android 스크린 샷에서 `Shrink` 두 번째 값 `Label` 와 0으로 설정 되어 `Label` 전체 너비에 표시 됩니다. 네 번째 뿐만 `Label` 같습니다는 `Shrink` 1 보다 큰 값 및 축소 되었습니다. UWP 스크린샷은 둘 다 `Label` 지정 된 요소를 `Shrink` 경우 전체 크기로 표시 될 수 있도록 하려면 값 0 가능 합니다.
 
 둘 다 설정할 수 있습니다 합니다 `Grow` 및 `Shrink` 집계 자식 크기 때로는 수 있는 보다 작거나의 크기 보다 큰 경우에 따라 상황에 맞게 값을 `FlexLayout`입니다.
 

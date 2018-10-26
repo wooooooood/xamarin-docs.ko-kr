@@ -1,59 +1,58 @@
 ---
-title: 'F # 시작'
-description: '이 문서에서는 F # 배우고 Mac. Visual Studio 2017 및 Visual Studio와 Xamarin 응용 프로그램을 개발을 사용 하는 방법을 설명합니다'
+title: 시작 하기F#
+description: 이 문서에서는 설명 하는 방법을 설명 F# mac 용 Visual Studio 2017 및 Visual Studio를 사용 하 여 Xamarin 응용 프로그램을 구축 하는 데 사용
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 044767d52588e48e563a40cb70ef0bfe910f9a3e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781779"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112834"
 ---
-# <a name="getting-started-with-f35"></a>F 시작&#35;
+# <a name="getting-started-with-f35"></a>F # 시작&#35;
 
 ## <a name="requirements"></a>요구 사항
 
-F # 기본적으로 포함 된 Visual Studio에서 Mac.에 대 한
+F#mac 용 Visual Studio에서 기본적으로 포함 됩니다.
 
-Windows에서는에 지침에 따라 독립 실행형 F # 컴파일러 도구를 설치 해야 [FSharp.org 사이트](http://fsharp.org/use/windows/)합니다.
+Windows에서 독립 실행형 설치 해야 합니다 F# 의 지침에 따라 컴파일러 도구 [FSharp.org 사이트](http://fsharp.org/use/windows/)합니다.
 
-## <a name="creating-an-f35-project"></a>F 만들기&#35; 프로젝트
+## <a name="creating-an-f35-project"></a>F를 만드는&#35; 프로젝트
 
-동일한 이루어진다는 새 F # 응용 프로그램을 만드는 **새 프로젝트** C#에 사용 되는 창입니다.
+새 F# 응용 프로그램 같은 이루어집니다 **새 프로젝트** 창에 사용 되는 C#합니다.
 
-Mac 용 Visual Studio에서 선택할 **파일 > 새 솔루션**합니다. 에 **새 프로젝트** 대화 상자에서 프로젝트 템플릿을 선택 합니다. 서식 파일의 오른쪽에 드롭다운을 사용 하 여 사용 하려는 언어를 선택할 수 있습니다.
+Mac 용 Visual studio **파일 > 새 솔루션**합니다. 에 **새 프로젝트** 대화 상자에서 프로젝트 템플릿을 선택 합니다. 사용 하려는 언어를 선택 하려면 템플릿의 오른쪽에 드롭다운을 사용 합니다.
 
- [![](overview-images/choosefsharp.png "서식 파일의 오른쪽에 드롭다운을 사용 하 여 사용 하려는 언어 선택")](overview-images/choosefsharp.png#lightbox)
+ [![](overview-images/choosefsharp.png "템플릿의 오른쪽에 드롭다운을 사용 하 여 사용 하려는 언어를 선택 합니다.")](overview-images/choosefsharp.png#lightbox)
 
-프로젝트 형식을 선택 하 고 클릭 **다음** 를 명명 및 만듭니다.
+프로젝트 형식 선택 하 고 클릭 **다음** 이름을 지정 하 고 만들어야 합니다.
 
 
-이제 몇 가지 뛰어난 F # 응용 프로그램 만들기를 시작할 준비가 되었습니다!
+준비가 이제 일부 훌륭한 만들기를 시작 하려면 F# 응용 프로그램.
 
-## <a name="learning-to-use-f35"></a>F 사용 방법 학습&#35;
+## <a name="learning-to-use-f35"></a>F를 사용 하는 학습&#35;
 
-F # 자습서 내에서 만들 수도 있습니다는 **새 솔루션** Mac.에 대 한 Visual Studio에서 대화 상자 로 이동 **다른 >.NET > F # 자습서**, 아래 그림에 설명 된 대로:
+F# 자습서에서 만들 수도 있습니다는 **새 솔루션** mac 용 Visual Studio의 대화 상자 이동할 **기타 >.NET > F# 자습서**아래 이미지에 설명 된 대로,:
 
- [![](overview-images/fsharptutorial.png "다른 곳으로 이동 /.NET / F # 자습서")](overview-images/fsharptutorial.png#lightbox)
+ [![](overview-images/fsharptutorial.png "다른 이동 /.NET / F# 자습서")](overview-images/fsharptutorial.png#lightbox)
 
-이 새 대화형 솔루션을 엽니다. 이 탐색은 관련 된 언어의 기본 그립에 액세스할 수 있는 좋은 방법입니다.
+이 새 대화형 솔루션을 엽니다. 이 작업을 지금 좋은 언어의 기본 사항 배우기 위한 방법 이며
 
- [![](overview-images/newtutorial-sml.png "언어의 기본 사항 배우기 얻을 수 있는 좋은 방법에는이 탐색")](overview-images/newtutorial.png#lightbox)
+ [![](overview-images/newtutorial-sml.png "탐색이 방법이 유용한 언어의 기본 사항 배우기 위한 가져오기")](overview-images/newtutorial.png#lightbox)
 
-체크 아웃는 [샘플 목록](~/cross-platform/platform/fsharp/samples.md) 에 F # 방법이 작동 되는지 확인 합니다.
+체크 아웃 합니다 [샘플 목록을](~/cross-platform/platform/fsharp/samples.md) 보려는 F# 작업에서.
 
 ## <a name="references"></a>참조
 
-다양 한 정보를 다루는 모든 proficiencies F # 언어, 사용 속도 가져오기 위한 온라인 있습니다. 몇 가지 권장 되는 다음과 같습니다.
+다양 한 정보를 신속 하 게 시작 하는 것에 대 한 온라인는 F# 언어에서 다루는 모든 proficiencies 합니다. 몇 가지 권장 되는 다음과 같습니다.
 
--  [F # 열기 조직](http://fsharp.org)
--  [F # 학습 포털](http://tryfsharp.org)
--  [Visual F # 개발 포털](http://go.microsoft.com/fwlink/?LinkID=234174)
--  [Visual F # 코드 갤러리](http://go.microsoft.com/fwlink/?LinkID=124614)
--  [Visual F # Math/Stats 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=235173)
--  [Visual F # 차트 만들기](http://go.microsoft.com/fwlink/?LinkId=235176)
+-  [F# Software Foundation](http://fsharp.org)
+-  [Visual F# 개발 포털](http://go.microsoft.com/fwlink/?LinkID=234174)
+-  [Visual F# 코드 갤러리](http://go.microsoft.com/fwlink/?LinkID=124614)
+-  [Visual F# 수학/통계 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=235173)
+-  [Visual F# 차트](http://go.microsoft.com/fwlink/?LinkId=235176)
 

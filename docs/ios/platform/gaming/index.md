@@ -1,64 +1,64 @@
 ---
-title: iOS Xamarin.iOS의 게임 Api
-description: 이 문서에서는 Xamarin.iOS 게임의 그래픽 및 오디오 기능을 개선 하기 위해 사용할 수 있는 iOS 9 제공한 새 게임 향상 된 기능을 설명 합니다.
+title: iOS 게임 Api Xamarin.iOS에서
+description: 이 문서에서는 Xamarin.iOS 게임 그래픽 및 오디오 기능을 개선 하기 위해 사용할 수 있는 iOS 9 제공한 새 게임 향상 된 기능을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 263c325816867e9eee32c92edf97f703b39bda7c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116006"
 ---
-# <a name="ios-gaming-apis-in-xamarinios"></a>iOS Xamarin.iOS의 게임 Api
+# <a name="ios-gaming-apis-in-xamarinios"></a>iOS 게임 Api Xamarin.iOS에서
 
-_이 문서에서는 Xamarin.iOS 게임의 그래픽 및 오디오 기능을 개선 하기 위해 사용할 수 있는 iOS 9 제공한 새 게임 향상 된 기능을 설명 합니다._
+_이 문서에서는 Xamarin.iOS 게임 그래픽 및 오디오 기능을 개선 하기 위해 사용할 수 있는 iOS 9 제공한 새 게임 향상 된 기능을 설명 합니다._
 
-Apple는 iOS 9에에서 Api 게임을 보다 쉽게 Xamarin.iOS 앱에서 게임 그래픽 및 오디오를 구현할 수 있도록 몇 가지 기술적 개선을 했습니다.
-여기에 두 간편한 개발을 통해 높은 수준의 프레임 워크 및 향상 된 속도 그래픽 기능에 대 한 iOS 장치 GPU의 기능을 통해 포함 됩니다.
+Apple는 iOS 9에서에서 게임 Api 쉽게 Xamarin.iOS 앱에서 오디오 및 게임 그래픽을 구현 하는 몇 가지 기술적 향상을 했습니다.
+여기에 고급 프레임 워크 및 향상 된 속도 및 그래픽 기능에 대 한 iOS 장치의 GPU의 강력한 기능 활용을 통해 개발의 용이성 모두 포함 됩니다.
 
 [![](images/flocking01.png "떼지 실행 되는 앱의 예")](images/flocking01.png#lightbox)
 
-여기에 GameplayKit "," ReplayKit "," 모델 I/O "," MetalKit "및" Metal 성능 셰이더 금속, SceneKit 및 SpriteKit 더욱 향상 기능입니다.
+SpriteKit 체제 미 설치 컴퓨터, SceneKit을 더욱 향상 기능과 함께 GameplayKit, ReplayKit, 모델 I/O, MetalKit 및 체제 미 설치 컴퓨터 성능 셰이더 포함 됩니다.
 
-이 문서의 모든 iOS 9의 게임 향상 된 기능을 사용 하 여 Xamarin.iOS 게임을 향상 시키는 방법을 소개 합니다.
+이 문서에서는 모든 iOS 9의 새로운 게임 향상 된 기능을 사용 하 여 Xamarin.iOS 게임을 개선 하는 방법을 소개 합니다.
 
 ## <a name="introducing-gameplaykit"></a>GameplayKit 소개
 
-Apple의 새로운 GameplayKit 프레임 워크는 구현에 필요한 반복적인, 일반적인 코드의 양을 줄여 iOS 장치에 대 한 게임을 작성을 용이 하 게 하는 일련의 기술을 제공 합니다. GameplayKit를 신속 하 게 (예: SceneKit 또는 SpriteKit)는 그래픽 엔진와 쉽게 조합 될 다음 게임 메커니즘을 개발 하기 위한 도구 제공 완료 게임을 제공 합니다.
+Apple 새 GameplayKit 프레임 워크에는 쉽게 구현 하는 데 필요한 반복 되는 일반적인 코드의 양을 줄여 iOS 장치용 게임을 만들 수 있도록 하는 기술 집합을 제공 합니다. GameplayKit 신속 하 게 하려면 다음 결합 될 수 있는 쉽게 (예: SceneKit 또는 SpriteKit) 그래픽 엔진을 사용 하 여 게임 메커니즘을 개발 하기 위한 도구 제공 완료 된 게임을 제공 합니다.
 
-일반적인 여러 GameplayKit 포함, 게임와 같은 알고리즘을 재생:
+여러 일반적인 GameplayKit 포함, 게임 플레이 알고리즘 같은:
 
-- 동작을 기반으로 동작과 AI는 자동으로 진행 하는 목표를 정의할 수 있도록 하는 에이전트 시뮬레이션 합니다.
-- 턴 기반 게임에 대 한 minmax 인공 인텔리전스
-- 새 동작을 제공 하도록 유사 항목 원리와 데이터 기반 게임 논리는 규칙 시스템입니다.
+- 동작 기반, 이동 및 목표에는 AI는 함에 따라 자동으로 정의할 수 있도록 에이전트 시뮬레이션 합니다.
+- 턴 기반 게임에 대 한 minmax 인공 지능 합니다.
+- Emergent 동작을 제공 하도록 유사 항목 추론을 사용 하 여 데이터 기반 게임 논리에 대 한 규칙 시스템입니다.
 
-또한 GameplayKit 걸립니다 빌딩 블록 방법을 게임 개발에는 다음과 같은 기능을 제공 하는 모듈식 아키텍처를 사용 하 여:
+또한 GameplayKit은 문서 블록 방식 게임 개발에는 다음과 같은 기능을 제공 하는 모듈식 아키텍처를 사용 하 여:
 
-- 복잡 한, 절차적 코드를 처리 하기 위한 상태 시스템 기반 게임 플레이 시스템.
-- 도구를 제공 하는 데 임의 디버깅 문제를 일으키지 않고 게임와 예측 불가능성을 제공 합니다.
-- 다시 사용할 수 있는, 즉 엔터티 기반 아키텍처입니다.
+- 복잡 한 절차적 코드를 처리 하는 것에 대 한 상태 시스템 기반 게임에는 시스템.
+- 도구를 제공 하는 것에 대 한 디버그 관련 문제가 발생 하지 않고 게임 플레이 예측 불가능성 임의입니다.
+- 구성 요소화 된 엔터티를 재사용 가능한 아키텍처를 기반합니다.
 
-GameplayKit에 대 한 자세한 내용은 Apple의를 참조 하십시오 [Gameplaykit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172) 및 [GameplayKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/GameplayKit/Reference/GameplayKit_Framework/index.html#//apple_ref/doc/uid/TP40015199)합니다.
+GameplayKit에 대 한 자세한 내용은 Apple의를 참조 하세요 [Gameplaykit 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172) 하 고 [GameplayKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/GameplayKit/Reference/GameplayKit_Framework/index.html#//apple_ref/doc/uid/TP40015199)합니다.
 
 ## <a name="gameplaykit-examples"></a>GameplayKit 예제
 
-게임 키트를 사용 하 여 Xamarin.iOS 앱에서 몇 가지 간단한 게임 메커니즘을 구현 빠른 살펴보겠습니다.
+게임 플레이 키트를 사용 하 여 Xamarin.iOS 앱에 몇 가지 간단한 게임 메커니즘을 구현 빠른 살펴보겠습니다.
 
 ### <a name="pathfinding"></a>경로 찾기
 
-경로 찾기 게임 AI 요소에 대 한 그 반대의 게임 보드를 찾을 수 있다는 점입니다.
-예를 들어 2D 적 미로 통해 또는 첫 번째-사용자-해결사 세계 지형을 통해 3D 문자를 찾기.
+경로 찾기 게임의 AI 요소에 대 한 해당 반대로 게임 보드를 찾을 수 있다는 점입니다.
+예를 들어, 2D 적 미로 통해 서 또는 첫 번째-사용자-슈팅 world 지형 통해 3D 문자 찾기.
 
-다음과 같은 맵을 고려해 야 합니다.
+다음 맵에 것이 좋습니다.
 
-[![](images/gkpathfindpath.png "예제 경로 찾기 맵")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "예제 경로 찾기 지도")](images/gkpathfindpath.png#lightbox)
 
-경로 찾기를 사용 하 여이 C# 코드 맵을 통해는 방법을 찾을 수 있습니다.:
+경로 찾기 사용 C# 코드 맵을 통해 방법을 찾을 수 있습니다.
 
 ```csharp
 var a = GKGraphNode2D.FromPoint (new Vector2 (0, 5));
@@ -84,7 +84,7 @@ Console.WriteLine(String.Join ("->", (object[]) a2f));
 
 ### <a name="classical-expert-system"></a>고전 전문가 시스템
 
-C# 코드의 다음 코드 조각은 고전 전문가 시스템을 구현 하 GameplayKit를 사용할 수 있는 방법을 보여 줍니다.
+다음 코드 조각은 C# 코드 고전 전문가 시스템을 구현 하려면 GameplayKit를 사용할 수 있는 방법을 보여 줍니다.
 
 ```csharp
 string output = "";
@@ -145,13 +145,13 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-지정 된 집합이 규칙에 따라 (`GKRule`) 및 입력을 전문가 시스템 알려진된 집합 (`GKRuleSystem`) 예측 가능한 출력을 만듭니다 (`fizzbuzz` 위의 예에 대 한).
+지정된 된 규칙 집합에 따라 (`GKRule`) 및 입력 전문가 시스템의 알려진된 집합 (`GKRuleSystem`) 예측 가능한 출력 만들어집니다 (`fizzbuzz` 위의 예제에 대 한).
 
 ### <a name="flocking"></a>떼지
 
-떼지 AI의 그룹 제어 게임 엔터티 그룹 이동 및는 새 떼의 경우 처리 중에서 또는 수영 어 학교와 같은 잠재 고객 엔터티의 동작에 응답 하는 위치는 떼도 작동 하도록 허용 합니다.
+떼지 AI의 그룹 제어 게임 엔터티 그룹 이동 및 잠재 고객 엔터티를 새 떼의 진행에서 또는 유영 fish의 학교와 같은 작업에 응답 하는 위치를 떼도 작동 하도록 허용 합니다.
 
-C# 코드의 다음 코드 조각은 GameplayKit 및 SpriteKit를 사용 하 여 그래픽 표시를 위해 떼지 동작을 구현 합니다.
+다음 코드 조각은 C# 코드 그래픽 표시에 대 한 GameplayKit 및 SpriteKit를 사용 하 여 떼지 동작을 구현 합니다.
 
 ```csharp
 using System;
@@ -338,7 +338,7 @@ namespace FieldBehaviorExplorer
 }
 ```
 
-그런 다음이 장면 뷰 컨트롤러에서 구현:
+그런 다음 뷰 컨트롤러에서이 장면을 구현 합니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -367,107 +367,107 @@ public override void ViewWillLayoutSubviews ()
 
 를 실행할 때 약간 애니메이션 _"Boids"_ 우리의 손가락 탭 주위 flock 됩니다.
 
-[![](images/flocking01.png "애니메이션 효과 준된 약간 Boids 손가락 탭 주위 flock 됩니다.")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "약간 애니메이션된 Boids 손가락 탭 주위 flock 됩니다.")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>다른 Apple 예제
 
-위의 샘플 이외에 Apple Xamarin.iOS 및 C#를 코드 변환 될 수 있는 다음 샘플 앱을 제공 했습니다.
+위의 샘플 외에도 Apple를 제공한 다음 샘플 앱으로 트랜스 코딩할 수 있는 C# Xamarin.iOS 및:
 
 - [FourInARow: GameplayKit Minmax 전략가 사용 하 여 상대가 AI에 대 한](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: GameplayKit의 에이전트 시스템 사용](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
-- [DemoBots: SpriteKit GameplayKit와 플랫폼 간 게임 작성](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
+- [AgentsCatalog: GameplayKit에서 에이전트 시스템 사용](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [DemoBots: SpriteKit GameplayKit와 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
 
-IOS 9에에서 Apple에 수행한 몇 가지 변경 내용과 추가 금속 GPU에 오버 헤드가 적은 액세스 권한을 제공 합니다. 복구를 사용 하 여 그래픽 및 iOS 앱의 컴퓨팅 잠재력을 최대화할 수 있습니다.
+Ios 9에서 Apple에에 대 한 여러 변경 및 추가 체제 미 설치 컴퓨터 GPU에 오버 헤드가 낮은 액세스 권한을 제공 합니다. Metal을 사용 하는 그래픽 및 iOS 앱의 컴퓨팅 잠재력을 최대화할 수 있습니다.
 
-금속 프레임 워크에는 다음과 같은 새로운 기능이 포함 됩니다.
+다음과 같은 새로운 기능을 포함 하는 금속 프레임 워크:
 
 - 새 개인 및 깊이 스텐실 텍스처 OS X에 대 한 합니다.
-- 향상 된 그림자 품질 깊이 고정할 및 별도 전면 및 후면 스텐실 값입니다.
-- 금속 음영 언어 및 표준 라이브러리 금속 향상
-- 계산 셰이더 픽셀 형식 보다 넓은 범위의 지원합니다.
+- 깊이 고정 및 별도 앞면과 뒷면 스텐실 값을 사용 하 여 향상 된 섀도 품질입니다.
+- Metal 음영 언어 및 금속 표준 라이브러리 향상
+- 계산 셰이더는 광범위 한 픽셀 형식 지원합니다.
 
 ### <a name="the-metalkit-framework"></a>MetalKit 프레임 워크
 
-MetalKit 프레임 워크는 iOS 앱에서 복구를 사용 하는 데 필요한 작업의 양을 줄일 수 있는 기능 및 유틸리티 클래스 집합을 제공 합니다. MetalKit에는 세 가지 주요 영역에 대 한 지원을 제공합니다.
+MetalKit 프레임 워크에는 유틸리티 클래스 및 iOS 앱에서 체제 미 설치 컴퓨터를 사용 하는 데 필요한 작업의 양을 줄일 수 있는 기능 집합을 제공 합니다. MetalKit에는 세 가지 주요 영역에 대 한 지원을 제공합니다.
 
-1. 비동기 질감은 여러 가지 일반적인 형식 PNG, JPEG, KTX PVR 등을 포함 하 여 소스에서에서 로드 합니다.
-2. 쉽게 액세스할 수 있는 모델 I/O 금속 특정 모델 처리를 위해 자산을 기반 으로합니다. 이러한 기능은 모델 I/O 메시와 금속 버퍼 간의 효율적인 데이터 전송을 제공 하기 위해 항상 최적화 되었습니다.
-3. 미리 정의 된 금속 뷰와 그래픽 렌더링 iOS 앱 내에서 표시 하는 데 필요한 코드의 양을 상당히 줄일 뷰 관리 합니다.
+1. 비동기 질감 다양 한 일반적인 형식은 PNG, JPEG, KTX PVR 등을 비롯 한 원본에서에서 로드 합니다.
+2. 모델의 간편한 액세스에는 금속 특정 모델 처리에 대 한 자산 기반합니다. 이러한 기능은 항상 모델 I/O 메시과 Metal 버퍼 간의 효율적인 데이터 전송을 위해 최적화 되었습니다.
+3. 미리 정의 된 Metal 뷰 및 iOS 앱 내에서 그래픽 렌더링을 표시 하는 데 필요한 코드의 양을 크게 줄일 뷰 관리 합니다.
 
-MetalKit에 대 한 자세한 내용은 Apple의를 참조 하십시오 [MetalKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356), [금속 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221), [금속 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) 및 [금속 언어 가이드 음영](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)합니다.
+MetalKit에 대 한 자세한 내용은 Apple의를 참조 하세요 [MetalKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/MetalKit/Reference/MTKFrameworkReference/index.html#//apple_ref/doc/uid/TP40015356), [체제 미 설치 컴퓨터 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221)하십시오 [금속 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalFrameworkReference/index.html#//apple_ref/doc/uid/TP40014161) 및 [체제 미 설치 컴퓨터 음영 언어 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)합니다.
 
-### <a name="metal-performance-shaders-framework"></a>금속 성능 셰이더 프레임 워크
+### <a name="metal-performance-shaders-framework"></a>Metal 성능 셰이더 프레임 워크
 
-성능 셰이더 금속 프레임 워크 그래픽 최적화 된 집합을 제공 및 계산 기반 셰이더 프로그램 금속에서 사용 하기 위해 iOS 앱을 기반으로 합니다. 프레임 워크 금속에 높은 성능을 제공 하도록 구체적으로 조정 되었습니다 금속 성능 셰이더에 각 셰이더 Gpu iOS를 지원 합니다.
+Metal 성능 셰이더 프레임 워크는 고도로 최적화 된 그래픽 집합을 제공 하 고 계산 기반 셰이더 프로그램 체제 미 설치 컴퓨터에서 사용 하기 위해 iOS 앱을 기반으로 합니다. Framework 체제 미 설치 컴퓨터에서 고성능을 제공 하도록 특별히 조정 되었습니다 체제 미 설치 컴퓨터 성능 셰이더에서 각 셰이더 Gpu iOS를 지원 합니다.
 
-금속 성능 셰이더 클래스를 사용 하 여 대상으로 하 여 개별 코드 베이스를 유지 관리할 필요 없이 각 특정 iOS GPU에서 가능한 최고의 성능을 얻을 수 있습니다. 예: 질감 버퍼 금속 리소스와 금속 성능 셰이더를 사용할 수 있습니다.
+Metal 성능 셰이더 클래스를 사용 하 여 대상 및 개별 코드 베이스를 유지 관리 하지 않고도 각 특정 iOS GPU에서 가능한 가장 높은 성능을 얻을 수 있습니다. Metal 성능 셰이더는 질감 및 버퍼와 같은 모든 Metal 리소스를 사용 하 여 사용할 수 있습니다.
 
-성능 셰이더 금속 프레임 워크와 같은 일반적인 셰이더 집합을 제공합니다.
+Metal 성능 셰이더 프레임 워크와 같은 일반적인 셰이더는 집합을 제공합니다.
 
-- **가우스 흐림 효과** (`MPSImageGaussianBlur`)
+- **가우스 흐리게** (`MPSImageGaussianBlur`)
 - **Sobel 가장자리 검출** (`MPSImageSobel`)
 - **히스토그램 이미지** (`MPSImageHistogram`)
 
-자세한 내용은 Apple의를 참조 하십시오 [금속 음영 언어 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)합니다.
+자세한 내용은 Apple의를 참조 하세요 [Metal 음영 언어 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Metal/Reference/MetalShadingLanguageGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014364)합니다.
 
-## <a name="introducing-model-io"></a>모델 I/O 소개
+## <a name="introducing-model-io"></a>모델 I/O를 소개합니다.
 
-Apple의 모델 I/O 프레임 워크 (예: 모델 및 해당 관련된 리소스) 3D 자산을 깊이 이해를 제공합니다. 모델 I/O 물리적 기반 자료, 모델 및 GameplayKit, 금속 SceneKit와 사용할 수 있는 조명와 함께 iOS 게임을 제공 합니다.
+Apple의 모델 I/O framework 3D 자산 (예: 모델 및 해당 관련된 리소스)에 대 한 깊은 이해를 제공합니다. 모델 I/O 물리적 기반 자료, 모델 및 조명 GameplayKit, 금속 및 SceneKit을 사용 하 여 사용할 수 있는 사용 하 여 iOS 게임을 제공 합니다.
 
-모델 I/O로 다음과 같은 유형의 작업을 지원할 수 있습니다.
+모델 I/O를 사용 하 여 다음과 같은 유형의 작업을 지원할 수 있습니다.
 
-- 데이터, 카메라 설정 및 다양 한 인기 있는 소프트웨어 및 게임 엔진 형식에서에서 다른 장면 기반 정보 메시를 조명 자료 가져와서 합니다.
-- 프로세스 또는 sky 돔 또는 메시에 조명 빵 할인 질감 절차에 따라 만들기와 같은 장면 기반 정보를 생성 합니다.
-- MetalKit와 SceneKit GLKit 효율적으로 렌더링 하기 위한 GPU 버퍼에 게임 자산을 로드 하는 작동 합니다.
-- 다양 한 인기 있는 소프트웨어 및 게임 엔진 형식을를 장면 기반 정보를 내보냅니다.
+- 조명, 자료를 가져오려면, 데이터, 카메라 설정 및 기타 다양 한 인기 있는 소프트웨어 및 게임 엔진 형식 장면 기반 정보 메시입니다.
+- 프로세스 또는 하늘 돔 또는 메시를 조명 적용 질감 절차적 만들기와 같은 장면 기반 정보를 생성 합니다.
+- 와 MetalKit SceneKit GLKit 렌더링에 대 한 GPU 버퍼 게임 자산 로드 효율적으로 작동 합니다.
+- 다양 한 인기 있는 소프트웨어 및 게임 엔진 형식 장면 기반 정보를 내보냅니다.
 
 모델 I/O에 대 한 자세한 내용은 Apple의를 참조 하십시오 [모델 I/O 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/ModelIO/Reference/ModelIO_Framework/index.html#//apple_ref/doc/uid/TP40015421)
 
 ## <a name="introducing-replaykit"></a>ReplayKit 소개
 
-Apple의 새로운 ReplayKit 프레임 워크를 사용 하면 쉽게 iOS 게임에 게임의 기록을 추가 하 고 사용자가 신속 하 고 쉽게 편집 및 응용 프로그램 내에서이 비디오를 공유 하도록 허용 수 있습니다.
+새 Apple ReplayKit 프레임 워크를 사용 하면 iOS 게임의 게임 기록을 추가할 쉽고 빠르고 쉽게 편집 및 앱 내에서이 비디오를 공유할 수 있도록 수 있습니다.
 
-자세한 내용은 Apple의를 참조 하십시오 [ReplayKit 및 게임 센터 비디오 소셜 이동](https://developer.apple.com/videos/wwdc/2015/?id=605) 및 해당 [DemoBots: SpriteKit 및 GameplayKit 크로스 플랫폼 게임 작성](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 응용 프로그램입니다.
+자세한 내용은 Apple의를 참조 하세요 [ReplayKit Game Center 비디오를 사용 하 여 소셜 이동](https://developer.apple.com/videos/wwdc/2015/?id=605) 및 해당 [DemoBots: SpriteKit GameplayKit와 크로스 플랫폼 게임 제작](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱입니다.
 
 ## <a name="scenekit"></a>SceneKit
 
-장면 키트 3D 장면 graph API 작업 3D 그래픽을 간소화 하는입니다. OS X 10.8에서 처음 도입 하 고 iOS 8 하기 위해 이제 왔습니다. 장면 키트 몰입 3D 시각화 및 아마추어 3D 게임을 만들기는 OpenGL 관련 지식이 필요 하지 않습니다. 일반적인 장면 그래프 개념에 대해 빌드, 장면 키트에서 벗어난 OpenGL 및 OpenGL ES 매우 간편 하 게 추가 3D 콘텐츠를 응용 프로그램의 복잡성을 합니다. 그러나 OpenGL 전문가 인 경우 장면 키트는도 OpenGL을 사용 하 여 직접 전후해 서 연결에 대 한 뛰어난 지원 합니다. 또한 물리학 같은 3D 그래픽을 보완 하는 다양 한 기능을 포함 하 고 몇 가지 다른 Apple 프레임 워크 Sprite 키트 코어 애니메이션, Core 이미지 등 매우 잘 통합 합니다.
+장면 키트는 3D 장면 그래프 3D 그래픽 작업을 간소화 하는 API입니다. OS X 10.8에 처음 도입 하 고 iOS 8 하기 위해 이제 왔습니다. Scene Kit를 사용 하 여 몰입 감이 뛰어난 3D 시각화 및 아마추어 3D 게임을 만들기는 OpenGL에 대 한 전문이 필요 하지 않습니다. 일반적인 장면 그래프 개념을 토대로 Scene Kit 추상화 OpenGL 및 OpenGL ES를 매우 간편 하 게 추가 3D 콘텐츠 응용 프로그램의 복잡성입니다. 그러나 OpenGL 전문가 라면 Scene Kit는도 OpenGL을 사용 하 여 직접 시도 하는 것에 대 한 훌륭한 지원 합니다. 또한 물리학 같은 3D 그래픽을 보완 하는 다양 한 기능을 포함 하 고 몇 가지 Apple 등 다른 프레임 워크, Core Animation, Core 이미지 및 Sprite Kit를 사용 하 여 매끄럽게 통합 되 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [SceneKit](~/ios/platform/gaming/scenekit.md) 설명서입니다.
+자세한 내용은 참조 하십시오 우리의 [SceneKit](~/ios/platform/gaming/scenekit.md) 설명서.
 
-### <a name="scenekit-changes"></a>SceneKit 변경 내용
+### <a name="scenekit-changes"></a>SceneKit 변경
 
-Apple는 iOS 9에 대 한 SceneKit에 다음과 같은 새로운 기능을 추가 했습니다.
+Apple는 iOS 9 용 SceneKit에 다음과 같은 새로운 기능을 추가:
 
-- Xcode는 이제 Xcode 내에서 백그라운드에서 직접 편집 하 여 게임 및 3D 대화형 응용 프로그램을 신속 하 게 만들 수 있는 장면 편집기를 제공 합니다.
-- `SCNView` 및 `SCNSceneRenderer` 금속 렌더링 (지원 되는 iOS 장치)에서 사용할 수 있도록 클래스를 사용할 수 있습니다.
-- `SCNAudioPlayer` 및 `SCNNode` 자동으로 iOS 앱에 플레이어 위치를 추적 하는 공간 오디오 효과 추가 하는 클래스를 사용할 수 있습니다.
+- 이제 Xcode을 빠르게 Xcode 내에서 백그라운드에서 직접 편집 하 여 게임 및 대화형 3D 응용 프로그램을 빌드할 수 있도록 장면 편집기를 제공 합니다.
+- 합니다 `SCNView` 고 `SCNSceneRenderer` Metal 렌더링 (지원 되는 iOS 장치)에서 사용할 수 있도록 클래스를 사용할 수 있습니다.
+- 합니다 `SCNAudioPlayer` 고 `SCNNode` 클래스를 사용 하 여 자동으로 iOS 앱에는 플레이어 위치를 추적 하는 공간 오디오 효과 추가할 수 있습니다.
 
-자세한 내용은 참조 하십시오 우리의 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 과 Apple [SceneKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 및 [Fox: SceneKit 게임 Xcode 장면 편집기와작성](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)샘플 프로젝트입니다.
+자세한 내용은 참조 하십시오 우리의 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 과 Apple [SceneKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 및 [Fox: Xcode 장면 편집기를 사용한SceneKit게임제작](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)샘플 프로젝트입니다.
 
 ## <a name="spritekit"></a>SpriteKit
 
-Sprite 키트, Apple에서 2D 게임 프레임 워크는 iOS 8 및 OS X Yosemite의 몇 가지 흥미로운 새로운 기능에 있습니다. 여기에 장면 키트, 셰이더 지원, 조명, 그림자, 제약 조건, 기본 맵 생성 및 물리학 향상 된 기능 통합을 포함 합니다. 특히, 새로운 물리 기능 매우 쉽게 게임에 실제 효과를 추가 합니다.
+Sprite Kit를 Apple에서 2D 게임 프레임 워크에는 iOS 8 및 OS X Yosemite의 몇 가지 흥미로운 새 기능에 있습니다. 여기에 Scene Kit, 셰이더 지원, 조명, 그림자, 제약 조건, 법선 맵 생성 및 물리학 향상 된 기능을 사용 하 여 통합이 포함 됩니다. 특히 물리 기능과 매우 쉽게 게임에 실제 효과를 추가 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [SpriteKit](~/ios/platform/gaming/spritekit.md) 설명서입니다.
+자세한 내용은 참조 하십시오 우리의 [SpriteKit](~/ios/platform/gaming/spritekit.md) 설명서.
 
-### <a name="spritekit-changes"></a>SpriteKit 변경 내용
+### <a name="spritekit-changes"></a>SpriteKit 변경
 
-Apple는 iOS 9에 대 한 SpriteKit에 다음과 같은 새로운 기능을 추가 했습니다.
+Apple는 iOS 9 용 SpriteKit에 다음과 같은 새로운 기능을 추가:
 
-- 플레이어의 위치를 자동으로 추적 하는 공간 오디오 효과 `SKAudioNode` 클래스입니다.
-- Xcode는 이제 장면 편집기와 쉽게 2D 게임 및 앱 만들기에 대 한 작업 편집기 특징입니다.
-- 새 카메라 노드를 사용 하 여 게임 지원을 쉽게 스크롤할 (`SKCameraNode`) 개체입니다.
-- 복구를 지 원하는 iOS 장치에서 SpriteKit 자동으로 사용 합니다 렌더링을 사용자 지정 OpenGL ES 셰이더를 이미 사용 하는 경우에 합니다.
+- 자동으로 사용 하 여 플레이어의 위치를 추적 하는 공간 오디오 효과 `SKAudioNode` 클래스입니다.
+- Xcode는 이제 장면 편집기를 쉽게 2D 게임 및 앱 만들기에 대 한 작업 편집기 기능입니다.
+- 쉽게 새 카메라 노드를 사용 하 여 게임 지원 스크롤 (`SKCameraNode`) 개체입니다.
+- 체제 미 설치 컴퓨터를 지 원하는 iOS 장치에서 SpriteKit를 자동으로 사용 렌더링을 위해 사용자 지정 OpenGL ES 셰이더를 이미 사용한 경우에 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple의 [SpriteKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [DemoBots: SpriteKit 사용 크로스 플랫폼 게임 작성 및 GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 응용 프로그램입니다.
+자세한 내용은 참조 하십시오 우리의 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [DemoBots: SpriteKit 사용 하 여 크로스 플랫폼 게임을 빌드 및 GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱입니다.
 
 ## <a name="summary"></a>요약
 
-이 문서의 새 검사가 수행 게임 기능 Xamarin.iOS 앱에 대해 제공 하는 iOS 9입니다.
-GameplayKit 및 모델 I/O를 도입 금속;의 주요 향상 된 기능 및 SceneKit 및 SpriteKit의 새로운 기능을 추가 합니다.
+이 문서에서는 이러한 새 부분이 Xamarin.iOS 앱에 대 한 게임 기능은 iOS 9 제공 합니다.
+GameplayKit 모델 I/O를 도입 금속;의 주요 향상 된 기능 및 SceneKit 및 SpriteKit의 새로운 기능을 추가 합니다.
 
 
 
