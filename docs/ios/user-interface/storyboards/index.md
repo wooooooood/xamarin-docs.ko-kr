@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS에서 스토리 보드를 소개 �
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: bd8fee1b8f1941203bb0e6f00e261cbfbbccc9a7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242344"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106886"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
@@ -129,7 +129,7 @@ if (callHistoryContoller != null) {
 
 경우에 따라 이전에 비-스토리 보드 파일에 스토리 보드를 추가 해야 합니다. 다음 단계를 수행 하 여 한 번 Mac 용 Visual Studio에서 이렇게 간소화 될 수 있습니다.:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 로 이동 하 여 새 스토리 보드 파일을 만듭니다 **파일 > 새 파일 > iOS > 스토리 보드**아래 그림과 같이: 
     
@@ -148,7 +148,7 @@ if (callHistoryContoller != null) {
             set;
             }
             
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 새 스토리 보드 파일을 만듭니다 **추가 > 새 파일 > iOS > 빈 스토리 보드**아래 그림과 같이: 
     

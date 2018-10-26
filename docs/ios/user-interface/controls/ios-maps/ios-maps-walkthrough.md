@@ -1,33 +1,33 @@
 ---
-title: 주석 및 Xamarin.iOS 오버레이
-description: 이 문서에서는 맵 키트의 주석 및 오버레이 기능과 함께 작동 하는 방법을 보여 주는 단계별 연습을 제공 합니다. Xamarin 발전 2013 컨퍼런스에서의 위치에 주석 및 오버레이 표시 하는 응용 프로그램에 맵을 추가 하는 방법을 보여 줍니다.
+title: 주석 및 Xamarin.iOS에서 오버레이
+description: 이 문서에서는 Map 키트의 주석 및 오버레이 기능과 함께 작동 하는 방법을 보여 주는 단계별 연습을 제공 합니다. Xamarin 발전 2013 컨퍼런스에서 위치의 주석 및 오버레이 표시 하는 응용 프로그램에 맵을 추가 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d224f034afc9b841bbf82b2b15b92db2d7820c7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 445661513b0cf79df99d54ed0bb4b0261dd75c2a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105439"
 ---
-# <a name="annotations-and-overlays-in-xamarinios"></a>주석 및 Xamarin.iOS 오버레이
+# <a name="annotations-and-overlays-in-xamarinios"></a>주석 및 Xamarin.iOS에서 오버레이
 
-이 연습에서 작성 하 여 응용 프로그램은 다음과 같습니다.
+이 연습에서 빌드 하려는 응용 프로그램은 다음과 같습니다.
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "예제 MapKit 앱")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
+ [![](ios-maps-walkthrough-images/00-map-overlay.png "MapKit 앱의 예")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
  
-완성 된 코드를 찾을 수 있습니다는 **MapsWalkthroughComplete** 내의 폴더는 [지도 데모 샘플](https://developer.xamarin.com/samples/monotouch/MapDemo/)합니다.
+완성 된 코드를 찾을 수 있습니다 합니다 [Maps 연습 샘플](https://developer.xamarin.com/samples/monotouch/MapsWalkthrough/)합니다.
 
-새 사용 되는지를 **iOS 빈 프로젝트**, 관련 된 이름을 지정 하 고 있습니다. MapView을 표시 하려면 보기 Controller에 코드를 추가 하 여 시작 합니다 하 고 우리의 MapDelegate 및 사용자 정의 주석을에서는 다음 새 클래스를 만듭니다. 이렇게 하려면 아래 단계를 수행합니다.
+새 시작 해 보겠습니다 **iOS 빈 프로젝트**, 관련 된 이름을 지정 하 고 있습니다. MapView를 표시 하는 보기 컨트롤러에 코드를 추가 하 여 시작 하 고 우리의 MapDelegate 및 사용자 지정 주석에서는 그런 다음 새 클래스를 만듭니다. 이렇게 하려면 아래 단계를 수행합니다.
 
 ## <a name="viewcontroller"></a>ViewController
 
 
-1. 다음 네임 스페이스에 추가 `ViewController`:
+1. 다음 네임 스페이스를 추가 합니다 `ViewController`:
 
     ```csharp
     using MapKit;
@@ -36,7 +36,7 @@ ms.locfileid: "34789582"
     using CoreGraphics
     ```
 
-1. 추가 `MKMapView` 변수를 클래스에 인스턴스는 `MapDelegate` 인스턴스. 만들겠습니다는 `MapDelegate` 곧:
+1. 추가 `MKMapView` 변수를 클래스에 인스턴스를 `MapDelegate` 인스턴스. 만들겠습니다는 `MapDelegate` 곧:
 
     ```csharp
     public partial class ViewController : UIViewController
@@ -46,7 +46,7 @@ ms.locfileid: "34789582"
         ...
     ```
 
-1. 컨트롤러의에서 `LoadView` 메서드를 추가 `MKMapView` 로 설정 하 고는 `View` 컨트롤러의 속성:
+1. 컨트롤러의 `LoadView` 메서드를 추가 `MKMapView` 로 설정 된 `View` 컨트롤러의 속성:
 
     ```csharp
     public override void LoadView ()
@@ -56,9 +56,9 @@ ms.locfileid: "34789582"
     }
     ```
 
-    맵을 초기화 코드를 추가 하겠습니다 다음으로 ' ViewDidLoad ' 메서드.
+    그런 다음에 map를 초기화 하는 코드를 추가한는 ' ViewDidLoad ' 메서드.
 
-1. `ViewDidLoad` 지도 유형 설정, 사용자 위치를 표시 및 확대/축소 및 회전을 허용 하는 코드를 추가 합니다.
+1. `ViewDidLoad` 지도 유형을 설정, 사용자 위치를 표시 및 확대/축소 및 이동을 허용 하는 코드를 추가 합니다.
 
     ```csharp
     // change map type, show user location and allow zooming and panning
@@ -69,7 +69,7 @@ ms.locfileid: "34789582"
     
     ```
 
-1. 그런 다음 지도 가운데 맞춤의 영역을 설정 하는 코드를 추가 합니다.
+1. 다음에서 지도 중심 및 it의 영역을 설정 하는 코드를 추가 합니다.
 
     ```csharp
     double lat = 30.2652233534254;
@@ -81,20 +81,20 @@ ms.locfileid: "34789582"
     
     ```
 
-1. 새 인스턴스를 만들고 `MapDelegate` 에 할당 하는 `Delegate` 의 `MKMapView`합니다. Implcodeent त ु म च 다시는 `MapDelegate` 곧:
+1. 새 인스턴스를 만듭니다 `MapDelegate` 에 할당 합니다 `Delegate` 의 `MKMapView`합니다. Implcodeent에서는 다시는 `MapDelegate` 곧:
 
     ```csharp
     mapDelegate = new MapDelegate ();
     map.Delegate = mapDelegate;     
     ```
 
-1. IOS 8 기준으로 해야 요청 있습니다 권한 부여에서 사용자가 직접의 위치를 사용 하 여, 이제이 샘플에 추가 하도록 합니다. 먼저 정의 `CLLocationManager` 클래스 수준 변수:
+1. IOS 8 기준으로 해야 요청 있습니다 권한 부여에서 사용자를 해당 위치를 사용 하 여, 샘플에 추가 해 보겠습니다. 먼저, 정의 `CLLocationManager` 클래스 수준 변수:
 
     ```csharp
     CLLocationManager locationManager = new CLLocationManager();
     ```
 
-1. 에 `ViewDidLoad` 를 확인 하는 경우 응용 프로그램을 실행 하는 장치를 iOS 8을 실행 중인 경우 우리는 권한 부여를 요청 응용 프로그램 사용 중인 경우 원하는 메서드를:
+1. 에 `ViewDidLoad` 응용 프로그램을 실행 하는 장치에는 iOS 8을 사용 하는 경우 앱은 사용 권한 부여 요청 합니다에서는 확인 하고자 하는 메서드:
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion(8,0)){
@@ -102,26 +102,26 @@ ms.locfileid: "34789582"
                 }
     ```
 
-1. 마지막으로 편집 해야는 **Info.plist** 파일의 위치를 요청 하기 위한 이유의 사용자가 알립니다. 에 **소스** 의 메뉴는 **Info.plist**, 다음 키를 추가 합니다.
+1. 마지막으로 편집 해야 합니다 **Info.plist** 파일을 사용자의 위치를 요청에 대 한 이유를 나타내는 것이 좋습니다. 에 **원본** 메뉴의 **Info.plist**, 다음 키를 추가:
     
     `NSLocationWhenInUseUsageDescription` 
     
-    및 문자열: 
+    및 문자열을 추가 합니다. 
 
-    `Maps Demo`.
+    `Maps Walkthrough Docs Sample`.
 
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – 사용자 지정 주석에 대 한 클래스
 
 
-1. 호출 된 주석에 대 한 사용자 지정 클래스를 사용 하 여 `ConferenceAnnotation`합니다. 프로젝트에 다음 클래스를 추가 합니다.
+1. 호출 된 주석에 대 한 사용자 지정 클래스를 사용 하겠습니다 `ConferenceAnnotation`합니다. 프로젝트에 다음 클래스를 추가 합니다.
 
     ```csharp
     using System;
     using CoreLocation;
     using MapKit;
     
-    namespace MapDemo
+    namespace MapsWalkthrough
     {
         public class ConferenceAnnotation : MKAnnotation
         {
@@ -152,13 +152,13 @@ ms.locfileid: "34789582"
 
 ## <a name="viewcontroller---adding-the-annotation-and-overlay"></a>ViewController-주석 및 오버레이 추가
 
-1. 와 `ConferenceAnnotation` 준비에서를 추가할 수 있습니다는 지도에 있습니다. 에 `ViewDidLoad` 의 메서드는 `ViewController`, 지도의 센터 좌표에 주석을 추가:
+1. 사용 하 여는 `ConferenceAnnotation` 위치에 추가할 수 있습니다 것 맵에 있습니다. 다시 합니다 `ViewDidLoad` 메서드는 `ViewController`, 지도의 중심 좌표에 주석 추가:
 
     ```csharp
     map.AddAnnotations (new ConferenceAnnotation ("Evolve Conference", mapCenter)); 
     ```
 
-1. 또한 호텔의 오버레이 하려고 합니다. 다음 코드를 추가 만듭니다는 `MKPolygon` 제공 호텔에 좌표를 사용 하 고 호출 하 여 지도에 추가 `AddOverlay`:
+1. 또한 하고자 호텔의 오버레이 합니다. 다음 코드를 추가 합니다 `MKPolygon` 제공 된 호텔에 대 한 좌표를 사용 하 고 호출 하 여 지도에 추가 `AddOverlay`:
 
     ```csharp
     // add an overlay of the hotel
@@ -178,12 +178,12 @@ ms.locfileid: "34789582"
     
     map.AddOverlay (hotelOverlay);  
     ```
-코드가 완성 `ViewDidLoad`합니다. 구현 해야 하는 이제 우리의 `MapDelegate` 클래스를 만드는 주석 처리 및 오버레이 뷰를 각각 사용 합니다.
+코드가 완성 되었으므로 `ViewDidLoad`합니다. 이제 구현 해야이 `MapDelegate` 주석 만들기를 처리 하 여 뷰를 각각 오버레이 하는 클래스입니다.
 
 
 ## <a name="mapdelegate"></a>MapDelegate
 
-1. 라는 클래스를 만들고 `MapDelegate` 에서 상속 되는 `MKMapViewDelegate` 포함는 `annotationId` 주석에 대해서는 다시 사용할 수 있도록 식별자로 사용 하는 변수:
+1. 라는 클래스를 만듭니다 `MapDelegate` 에서 상속 되는 `MKMapViewDelegate` 등과 `annotationId` 주석에 대 한 재사용 식별자로 사용 하는 변수:
 
     ```csharp
     class MapDelegate : MKMapViewDelegate
@@ -192,9 +192,9 @@ ms.locfileid: "34789582"
         ...
     }
     ```
-    만 있습니다 하나 주석 여기 되므로 다시 사용할 수 있도록 코드를 엄격 하 게 필요 하지 않습니다. 그러나이 기능을 포함 하는 것이 좋습니다.
+    만 않았으므로 이상의 주석이 여기 다시 사용할 수 있도록 코드를 엄격 하 게 필요는 없지만 포함 하는 것이 좋습니다.
 
-1. 구현 된 `GetViewForAnnotation` 에 대 한 뷰를 반환 하는 메서드는 `ConferenceAnnotation` 를 사용 하는 **conference.png** 이 연습에 포함 된 이미지:
+1. 구현 된 `GetViewForAnnotation` 에 대 한 뷰를 반환 하는 방법 합니다 `ConferenceAnnotation` 를 사용 하 여는 **conference.png** 이 연습에 포함 된 이미지:
 
     ```csharp
     public override MKAnnotationView GetViewForAnnotation (MKMapView mapView, NSObject annotation)
@@ -220,14 +220,14 @@ ms.locfileid: "34789582"
     }
     ```
 
-1. 사용자는 주석을 누르면 Austin 도시를 보여 주는 이미지를 표시 하는 것이 좋습니다. 다음 변수를 추가 `MapDelegate` 이미지 및 것을 표시 하려면 보기:
+1. 사용자 주석을 누르면 오스틴 city를 보여 주는 이미지를 표시 하려고 합니다. 다음 변수를 추가 합니다 `MapDelegate` 이미지를 표시 하도록 보기:
 
     ```csharp
     UIImageView venueView;
     UIImage venueImage;
     ```
 
-1. 그런 다음 주석을 탭이 수행 되는 경우 이미지를 표시 하도록 구현 된 `DidSelectAnnotation` 메서드를 다음과 같이 합니다.
+1. 다음으로 이미지 주석에 탭 할 때를 표시 하려면 구현 합니다 `DidSelectAnnotation` 같이 메서드:
 
     ```csharp
     public override void DidSelectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -247,7 +247,7 @@ ms.locfileid: "34789582"
     }
     ```
 
-1. 이미지를 숨기려면 지도에서 다른 곳을 탭 하 여 주석을 선택 취소 하는 경우 구현에서 `DidSelectAnnotationView` 메서드를 다음과 같이 합니다.
+1. 사용자는 주석을 맵에서 다른 곳을 탭 하 여 선택 취소 하는 경우 이미지를 숨기려면를 구현 합니다 `DidSelectAnnotationView` 같이 메서드:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -261,7 +261,7 @@ ms.locfileid: "34789582"
         }
     }
     ```
-    이제 코드 주석에 대 한 위치에 있는 합니다. 남아 있는 모든 코드를 추가 하는 것은 `MapDelegate` 호텔 오버레이 대 한 보기를 만듭니다.
+    이제 코드 주석에 대 한 위치에 있습니다. 남아 있는 모든 코드를 추가 하는 것은 `MapDelegate` 호텔 오버레이 대 한 보기를 만듭니다.
 
 1. 다음 구현을 추가 `GetViewForOverlay` 에 `MapDelegate`:
 
@@ -277,16 +277,17 @@ ms.locfileid: "34789582"
     }
     ```
 
-응용 프로그램을 실행합니다. 사용자 지정 주석 및 오버레이 대화형 지도 했습니다! 주석을 누르고 Austin 이미지 아래와 같이 표시 됩니다.
+응용 프로그램을 실행합니다. 이제 사용자 지정 주석 및 오버레이 사용 하 여 대화형 맵을 했습니다! 주석을 탭 하 고 아래와 같이, 오스틴의 이미지가 표시 됩니다.
 
- [![](ios-maps-walkthrough-images/01-map-image.png "주석을 누르고 Austin 이미지가 표시 됩니다.")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
+ [![](ios-maps-walkthrough-images/01-map-image.png "주석을 누르고 오스틴의 이미지가 표시 됩니다.")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>요약
 
-이 문서에서 지정 된 다각형에 대 한 오버레이 추가 하는 방법 뿐만 아니라 지도에 주석을 추가 하는 방법을 살펴보았습니다. 터치 조작 지원 이미지 맵을 통해 애니메이션 효과를 주석으로 추가 하는 방법을 보여 줍니다.
+이 문서에서 지정 된 다각형에 대 한 오버레이 추가 하는 방법 뿐만 아니라 맵에 주석을 추가 하는 방법을 살펴보았습니다. 터치 지원 이미지 맵을 통해 애니메이션에 대 한 주석을 추가 하는 방법을 설명 했습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [지도 데모 (샘플)](https://developer.xamarin.com/samples/monotouch/MapDemo/)
-- [iOS 맵](~/ios/user-interface/controls/ios-maps/index.md)
+- [지도 연습 샘플](https://developer.xamarin.com/samples/monotouch/MapsWalkthrough/)
+- [맵 데모 샘플](https://developer.xamarin.com/samples/monotouch/MapDemo/)
+- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)

@@ -1,56 +1,56 @@
 ---
-title: 새 참조 시스템에 Xamarin.iOS 횟수
-description: 이 문서에서는 시스템에서 기본적으로 모든 Xamarin.iOS 응용 프로그램에서 활성화를 사용한 Xamarin의 향상 된 참조를 설명 합니다.
+title: Xamarin.iOS에서 시스템을 계산 하는 새 참조
+description: 이 문서에서는 Xamarin의 향상 된 참조 시스템에 기본적으로 모든 Xamarin.iOS 응용 프로그램에서 사용을 계산을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: f2e40ca1fdd4a02d62e45004b75f3abefda781a5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 3a40605dd58cac0bcf14c156ecf65aa3fec52bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103389"
 ---
-# <a name="new-reference-counting-system-in-xamarinios"></a>새 참조 시스템에 Xamarin.iOS 횟수
+# <a name="new-reference-counting-system-in-xamarinios"></a>Xamarin.iOS에서 시스템을 계산 하는 새 참조
 
-Xamarin.iOS 9.2.1 도입 향상 된 참조 기본적으로 모든 응용 프로그램에는 시스템을 계산 합니다. 메모리 문제를 추적 하 고 이전 버전의 Xamarin.iOS 수정할 어려웠습니다 해결할를 사용할 수 있습니다.
+Xamarin.iOS 9.2.1 기본적으로 모든 응용 프로그램에 대 한 시스템 계산 향상 된 참조를 도입 합니다. 추적 하 고 이전 버전의 Xamarin.iOS 수정할 어려웠던 많은 메모리 문제를 제거 하기 위해 사용할 수 있습니다.
 
-## <a name="enabling-the-new-reference-counting-system"></a>새 참조 가산 시스템을 사용 하도록 설정
+## <a name="enabling-the-new-reference-counting-system"></a>새 참조 횟수 시스템을 사용 하도록 설정
 
-Xamarin 9.2.1 기준으로 새 ref 시스템을 계산 하기 위해 설정 된 **모든** 기본적으로 응용 프로그램입니다.
+새 참조 시스템을 계산 하도록 Xamarin 9.2.1 기준 **모든** 기본적으로 응용 프로그램입니다.
 
-기존 응용 프로그램을 개발 하는 경우에 되도록.csproj 파일을 확인할 수 있습니다의 항목을 모두 `MtouchUseRefCounting` 로 설정 `true`처럼 아래:
+기존 응용 프로그램을 개발 하는 경우에 되도록 하려면.csproj 파일을 확인할 수 있습니다의 모든 항목 `MtouchUseRefCounting` 로 설정 되어 `true`처럼 아래:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-로 설정 되어 있으면 `false` 응용 프로그램 새 도구를 사용 하지 것입니다.
+로 설정 된 경우 `false` 응용 프로그램이 새 도구를 사용 하지 않는 합니다.
 
 ### <a name="using-older-versions-of-xamarin"></a>이전 버전의 Xamarin 사용 하 여
 
-Xamarin.iOS 7.2.1 및 위에 새 참조 시스템 횟수의 향상 된 미리 보기 기능입니다.
+Xamarin.iOS 7.2.1 및 위의 시스템을 계산 하는 새 참조의 향상 된 미리 보기 기능입니다.
 
 **클래식 API:**
 
-이 새 참조 계산 시스템을 사용 하도록 설정 하려면 확인는 **참조 가산 확장을 사용 하 여** 확인란에서 찾을 수는 **고급** 프로젝트의 탭 **iOS 빌드 옵션** 아래와 같이: 
+사용 하도록 설정 하려면이 새 참조 횟수를 확인 합니다 **참조 계산 확장 사용** 확인란에는 **고급** 프로젝트 탭 **iOS 빌드 옵션** 를 아래와 같이: 
 
-[![](newrefcount-images/image1.png "새 참조 계산 시스템을 사용 하도록 설정")](newrefcount-images/image1.png#lightbox)
+[![](newrefcount-images/image1.png "새 참조 횟수 시스템을 사용 하도록 설정")](newrefcount-images/image1.png#lightbox)
 
-이러한 옵션 Mac.에 대 한 최신 버전의 Visual Studio에서 제거 된 있는지 참고
+Mac 용 Visual Studio의 최신 버전에서 이러한 옵션이 제거 되었습니다는 참고
 
- **[통합된 API:](~/cross-platform/macios/unified/index.md)**
+ **[API 통합된:](~/cross-platform/macios/unified/index.md)**
 
- 확장을 계산 하 고 새 참조는 통합 API에 필요 하며 기본적으로 사용 하도록 설정 합니다. 이전 버전의 IDE에 자동으로 확인 하는이 값을 사용할 수 없습니다 및 확인란에 의해 직접 해야 할 수 있습니다.
+ 새 참조 계산 확장 Unified API에 대 한 필수 이며 기본적으로 사용 하도록 설정 해야 합니다. IDE의 이전 버전에서이 값이 자동으로 선택 되어 없을 수 있습니다 하 고 확인란을 선택 하 여 직접 할 수도 있습니다.
 
     
 > [!IMPORTANT]
-> 이 기능은 이전 버전은 MonoTouch 5.2 하지만 사용할 수에 대 한 이후 되었습니다 **sgen** 실험적 미리 보기로 합니다. 이 새로운 향상 된 버전도 수 이제는 **Boehm** 가비지 수집기입니다.
+> 이 기능은 이전 버전 이후 주위 MonoTouch 5.2 하지만 사용할 수 있습니다 **sgen** 는 실험적 미리 보기로 있습니다. 이 새로운 향상 된 버전도 출시 되었습니다에 대 한 합니다 **Boehm** 가비지 수집기입니다.
 
 
-지금까지 있었는지 Xamarin.iOS에서 관리 하는 두 가지: 추가 메모리 상태를 유지 하 여 네이티브 개체 (피어 개체)과 확장 하거나 새로운 기능 (파생된 개체)를 포함 하는에 대 한 래퍼로 단순히 일반적으로 된 합니다. 이전에 있었습니다 (예를 추가 하 여 C# 이벤트 처리기) 상태와 피어 개체를 보강할 수 म 있 참조 되지 않은 이동한 후 수집 된 개체를 사용 했습니다. 나중에 충돌이 발생할 수 (예: 관리 되는 개체로 Objective C 런타임 다시 호출 하는 경우).
+지금까지 있었는지 Xamarin.iOS를 통해 관리 되는 개체의 두 종류:는 네이티브 개체 (피어 개체) 및 확장 하거나 새로운 기능 (파생 된 개체)를 통합 하는 것에 대 한 래퍼로 단순히 일반적으로 추가 메모리 내 상태를 유지 하 여 합니다. 가능한 상태를 사용 하 여 피어 개체를를 보강할 수에서는 이전에 (추가 하 여 예를 들어는 C# 이벤트 처리기) 하지만 해당 개체 참조 되지 않은 이동한 다음 수집 하도록 합니다. 나중에 충돌이 발생할 수 있습니다 (예: Objective-c 런타임에서 관리 되는 개체에 다시 호출 하는 경우).
 
 새 시스템 추가 정보를 저장 하는 경우 런타임에서 관리 되는 개체로 피어 개체를 자동으로 업그레이드 합니다.
 
@@ -72,10 +72,10 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-참조 개수 확장 없이이 코드는 때문에 충돌 `cell` 는 수집 가능한, 사용 하 고 있어서 해당 `TouchDown` 위임 현 수 포인터에는 변환입니다.
+참조 개수 확장 하지 않고이 코드는 때문에 충돌 `cell` 수집 가능한, 됩니다 등 해당 `TouchDown` 대리자는 현 수 포인터 변환 됩니다.
 
-참조 개수 확장 하면 관리 되는 개체 연결이 유지 되는 해당 컬렉션이 않도록 네이티브 개체는 네이티브 코드에 의해 보존 된 제공.
+참조 개수 확장 제공 네이티브 코드의 네이티브 개체를 유지 관리 되는 개체 유지 및 해당 컬렉션을 방지를 보장 합니다.
 
-새 시스템에 대 한 필요성 제거 *대부분* 개인 바인딩으로-는 인스턴스를 유지 하는 기본 방법에서 사용 되는 필드를 백업 합니다. 관리 되는 링커는 모두 제거 하 여 *불필요 한* 필드 새 참조를 사용 하 여 응용 프로그램에서 확장을 계산 합니다.
+새 시스템에는 또한에 대 한 필요가 없습니다 *대부분의* 개인 인스턴스를 유지 하는 기본 방법이 있는 바인딩-사용 되는 필드를 백업 합니다. 관리 되는 링커는 모든 것은 제거 하지 못합니다 *불필요 한* 새 참조를 사용 하 여 응용 프로그램에서 필드 계산 확장 합니다.
 
-즉, 각 관리 되는 개체 인스턴스가 하기 전에 보다 적은 메모리를 사용 합니다. 또한 일부 지원 필드 보이게 일부 메모리를 회수할 Objective-c 런타임에서 더 이상 필요 하지 않은 참조를 저장 해야 하는 관련된 문제를 해결 합니다.
+즉, 각 관리 되는 개체 인스턴스에 이전 보다 적은 메모리를 사용 하는 것을 의미 합니다. 또한 일부 지원 필드는 보면 하는 일부 메모리를 회수 하기 어려운 Objective-c 런타임에서 더 이상 필요 하지 않은 참조 관련된 문제가 해결 되었습니다.

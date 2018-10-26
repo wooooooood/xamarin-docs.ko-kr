@@ -1,16 +1,16 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: WPF 및입니다. Xamarin.Forms 앱 수명 주기
-description: 이 문서 비교의 유사점과 차이점 Xamarin.Forms 및 WPF 응용 프로그램에 대 한 응용 프로그램 수명 주기입니다. 시각적 트리, 그래픽, 리소스 및 스타일에 대해서도 살펴봅니다.
+description: 이 문서는 간의 유사점 및 차이점 Xamarin.Forms 및 WPF 응용 프로그램에 대 한 응용 프로그램 수명 주기를 비교합니다. 시각적 트리, 그래픽, 리소스 및 스타일에 대해서도 살펴봅니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: a59f257d1e6285fa2d899271a1aae9778b04d985
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107125"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및입니다. Xamarin.Forms 앱 수명 주기
 

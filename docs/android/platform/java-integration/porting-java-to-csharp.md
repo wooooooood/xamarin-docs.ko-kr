@@ -1,44 +1,44 @@
 ---
-title: C# Java 이식
-description: Xamarin.Android 응용 프로그램에서 Java를 사용 하기 위한 세 번째 방법은 Java 소스 코드를 C# 이식 하 합니다.
+title: Java를 이식합니다.C#
+description: Java 소스 코드를 이식 하는 Java를 사용 하 여 Xamarin.Android 응용 프로그램에서 세 번째 옵션인 C#입니다.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/05/2016
-ms.openlocfilehash: c2d05b101c627dab42dc1343eab2a408d1bd010f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9beb6d59c9376a404c06af7f0cd1efd985929843
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762599"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104273"
 ---
-# <a name="porting-java-to-c"></a>C# Java 이식
+# <a name="porting-java-to-c"></a>Java를 이식합니다.C#
 
-_Xamarin.Android 응용 프로그램에서 Java를 사용 하기 위한 세 번째 방법은 Java 소스 코드를 C# 이식 하 합니다._
+_Java 소스 코드를 이식 하는 Java를 사용 하 여 Xamarin.Android 응용 프로그램에서 세 번째 옵션인 C#입니다._
 
 ## <a name="overview"></a>개요
 
-이 방법을 조직에 도움이 될 수입니다.
+이 방법은 조직에 도움이 될 수입니다.
 
--  **로 전환 하는 기술 스택을 Java에서 C#입니다.**
--  **C#과 같은 제품의 Java 버전을 유지 해야 합니다.**
--  **인기 있는 Java 라이브러리의.NET 버전을 두려는 합니다.**
+-  **Java에서 기술 스택에 전환 하는 C#입니다.**
+-  **유지 관리 해야 합니다는 C# 와 같은 제품의 Java 버전입니다.**
+-  **인기 있는 Java 라이브러리의.NET 버전이 하려고 합니다.**
 
 
-Java 코드를 C# 이식 하는 방법은 두 가지가 있습니다. 첫 번째 방법은 수동으로 코드를 이식 하는 것입니다. .NET 및 Java를 이해 하 고 각 언어에 대 한 적절 한 관용구에 잘 알고 있는 숙련 된 개발자가 포함 됩니다. 이 이렇게 하면 적은 양의 코드에 또는 C#에서 Java 완전히 전환 하는 조직에 가장 적합 하 게 합니다.
+Java 코드를 이식 하는 방법은 두 가지 C#입니다. 첫 번째 방법은 수동으로 코드를 이식 하는 것입니다. 여기에.NET 및 Java 모두 이해 하 고 각 언어에 대 한 적절 한 코드를 잘 알고 있는 숙련 된 개발자가 포함 됩니다. 이 이렇게 하면 소량의 코드 또는 Java에서 완전히 탈피 하려는 조직에 가장 적합 하 게 C#입니다.
 
-두 번째 포팅 방법론 시도 하 고와 같은 코드 변환기를 사용 하 여 프로세스를 자동화 하는 것 [선명](https://github.com/mono/sharpen)합니다. [선명 하 게](https://github.com/mono/sharpen) 는 오픈 소스 변환기에 대 한 코드를 이식 하 데 사용 된 원래 Versant에서 *db4o* Java와 C#에서. db4o는 Versant java를 개발 하 고 다음.NET 이식 하는 개체 지향 데이터베이스를입니다. 코드 변환기를 사용 하면 언어 모두에 존재 해야 하는 고 둘 사이의 몇 가지 패리티를 해야 하는 프로젝트에 대 한 됩니다.
+시도 같은 코드 변환기를 사용 하 여 프로세스를 자동화 하는 두 번째 이식 방법론 [선명 하 게](https://github.com/mono/sharpen)합니다. [단련](https://github.com/mono/sharpen) 는 오픈 소스 변환기에 대 한 코드를 이식 하려면 원래 사용 된 Versant에서 *db4o* Java에서 C#. db4o는 Versant java로 개발 하 고 다음.NET으로 이식 하는 개체 지향 데이터베이스를입니다. 코드 변환기를 사용 하 여 둘 간의 일부 패리티를 필요로 하는 두 언어 모두에 있어야 하는 프로젝트에 대 한 의미를 만들 수 있습니다.
 
-경우 자동화 된 코드 변환 도구는 것이 좋습니다의 예를 볼 수는 [ngit](https://github.com/mono/ngit) 프로젝트.
-Ngit은 Java 프로젝트의 포트 [jgit](http://eclipse.org/)합니다.
-Jgit 자체는의 Java로 구현 된 [Git](http://git-scm.com/) 소스 코드 관리 시스템입니다. Java에서 C# 코드를 생성 하려면 ngit 프로그래머 jgit에서 Java 코드를 추출, 변환 프로세스를 수용 하기 위해 일부 패치를 적용 한 다음 선명 C# 코드를 생성 하는 메시지를 실행 하는 사용자 지정 자동화 된 시스템을 사용 합니다. 이렇게 하면 ngit 프로젝트를 jgit에 의해 이루어진다는 continuous, 진행 중인 작업을 활용할 수 있습니다.
+경우는 자동화 된 코드 변환 도구는 것이 좋습니다 예가에서 볼 수 있습니다 합니다 [ngit](https://github.com/mono/ngit) 프로젝트입니다.
+Java 프로젝트의 포트인 Ngit [jgit](http://eclipse.org/)합니다.
+Jgit 자체는 Java로 구현 된 [Git](http://git-scm.com/) 소스 코드 관리 시스템입니다. 생성 C# 사용자 지정 자동화 jgit에서 Java 코드를 추출, 변환 프로세스를 수용 하기 위해 일부 패치를 적용 한 다음 선명 하 게를 생성 하는 실행 하는 시스템 ngit 프로그래머에 게 사용 하 여 Java에서 코드를 C# 코드입니다. 이렇게 하면 ngit 프로젝트 jgit에서 수행 되는 연속, 진행 중인 작업을 활용할 수 있습니다.
 
-종종 특수 양의 작업 부트스트랩 하는 코드의 자동된 변환 도구와 관련 된 이며이 하는 데 장애가 될 증명할 수 있습니다. 대부분의 경우에서 수도 있습니다 간단 하 고 보다 쉽게 C# Java 포트 수를 직접.
+경우가 trivial이 아닌 양의 작업을 부트스트랩 하는 자동화 된 코드 변환 도구와 관련 된 및 사용에 대 한 장벽을 증명할 수 있습니다이 있습니다. 대부분의 경우에 것이 간단 하 고 포트 Java를 쉽게 C# 를 직접.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [변환 도구를 선명 하 게](https://github.com/mono/sharpen)
+- [변환 도구 단련](https://github.com/mono/sharpen)

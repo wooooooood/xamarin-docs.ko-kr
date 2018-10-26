@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11을 사용 하는 방법을 설명 Xamari
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 4746de2f351e866fd72946b204f97e997c3e88c4
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 291cbdb93cfb6ac123d740e98065ba877bb44da5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350666"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104832"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Xamarin.iOS에서 비전 프레임 워크
 

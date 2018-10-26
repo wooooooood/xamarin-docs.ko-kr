@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 009a4025bc9df6f657964b7e97e559635ef0a929
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105482"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
 
@@ -60,26 +60,26 @@ EShopOnContainers 모바일 앱-Model-view-viewmodel (MVVM) 패턴 및 앱에서
 경우는 `CatalogView` 을 탐색 하면를 `OnInitialize` 에서 메서드를 `CatalogViewModel` 클래스 라고 합니다. 이 메서드에 다음 코드 예제에서 설명한 것 처럼 카탈로그 마이크로 서비스에서 카탈로그 데이터를 검색 합니다.
 
 ```csharp
-public override async Task InitializeAsync(object navigationData)  
+public override async Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Products = await _productsService.GetCatalogAsync();  
-    ...  
+    ...  
+    Products = await _productsService.GetCatalogAsync();  
+    ...  
 }
 ```
 
 이 메서드를 호출 합니다 `GetCatalogAsync` 메서드를 `CatalogService` 에 삽입 된 인스턴스는 `CatalogViewModel` Autofac에서. 다음 코드 예제는 `GetCatalogAsync` 메서드:
 
 ```csharp
-public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
+public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
-    builder.Path = "api/v1/catalog/items";  
-    string uri = builder.ToString();  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
+    builder.Path = "api/v1/catalog/items";  
+    string uri = builder.ToString();  
 
-    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
-    ...  
-    return catalog?.Data.ToObservableCollection();            
+    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
+    ...  
+    return catalog?.Data.ToObservableCollection();            
 }
 ```
 
@@ -88,18 +88,18 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 다음 코드 예제는 `GetAsync` 의 메서드는 `RequestProvider` 클래스:
 
 ```csharp
-public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
+public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    HttpResponseMessage response = await httpClient.GetAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    HttpResponseMessage response = await httpClient.GetAsync(uri);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>   
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>   
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -108,18 +108,18 @@ public async Task<TResult> GetAsync<TResult>(string uri, string token = "")
 `CreateHttpClient` 메서드는 다음 코드 예제에 표시 됩니다.
 
 ```csharp
-private HttpClient CreateHttpClient(string token = "")  
+private HttpClient CreateHttpClient(string token = "")  
 {  
-    var httpClient = new HttpClient();  
-    httpClient.DefaultRequestHeaders.Accept.Add(  
-        new MediaTypeWithQualityHeaderValue("application/json"));  
+    var httpClient = new HttpClient();  
+    httpClient.DefaultRequestHeaders.Accept.Add(  
+        new MediaTypeWithQualityHeaderValue("application/json"));  
 
-    if (!string.IsNullOrEmpty(token))  
-    {  
-        httpClient.DefaultRequestHeaders.Authorization =   
-            new AuthenticationHeaderValue("Bearer", token);  
-    }  
-    return httpClient;  
+    if (!string.IsNullOrEmpty(token))  
+    {  
+        httpClient.DefaultRequestHeaders.Authorization =   
+            new AuthenticationHeaderValue("Bearer", token);  
+    }  
+    return httpClient;  
 }
 ```
 
@@ -130,23 +130,23 @@ private HttpClient CreateHttpClient(string token = "")
 ```csharp
 [HttpGet]  
 [Route("[action]")]  
-public async Task<IActionResult> Items(  
-    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
+public async Task<IActionResult> Items(  
+    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
 {  
-    var totalItems = await _catalogContext.CatalogItems  
-        .LongCountAsync();  
+    var totalItems = await _catalogContext.CatalogItems  
+        .LongCountAsync();  
 
-    var itemsOnPage = await _catalogContext.CatalogItems  
-        .OrderBy(c=>c.Name)  
-        .Skip(pageSize * pageIndex)  
-        .Take(pageSize)  
-        .ToListAsync();  
+    var itemsOnPage = await _catalogContext.CatalogItems  
+        .OrderBy(c=>c.Name)  
+        .Skip(pageSize * pageIndex)  
+        .Take(pageSize)  
+        .ToListAsync();  
 
-    itemsOnPage = ComposePicUri(itemsOnPage);  
-    var model = new PaginatedItemsViewModel<CatalogItem>(  
-        pageIndex, pageSize, totalItems, itemsOnPage);             
+    itemsOnPage = ComposePicUri(itemsOnPage);  
+    var model = new PaginatedItemsViewModel<CatalogItem>(  
+        pageIndex, pageSize, totalItems, itemsOnPage);             
 
-    return Ok(model);  
+    return Ok(model);  
 }
 ```
 
@@ -165,26 +165,26 @@ public async Task<IActionResult> Items(
 시장 바구니에 항목 추가 되 면 합니다 `ReCalculateTotalAsync` 의 메서드는 `BasketViewModel` 클래스 라고 합니다. 이 메서드는 시장 바구니에 있는 항목의 총 값을 업데이트 하 고 다음 코드 예제에서와 같이 장바구니 마이크로 서비스에 바구니 데이터를 보냅니다.
 
 ```csharp
-private async Task ReCalculateTotalAsync()  
+private async Task ReCalculateTotalAsync()  
 {  
-    ...  
-    await _basketService.UpdateBasketAsync(new CustomerBasket  
-    {  
-        BuyerId = userInfo.UserId,   
-        Items = BasketItems.ToList()  
-    }, authToken);  
+    ...  
+    await _basketService.UpdateBasketAsync(new CustomerBasket  
+    {  
+        BuyerId = userInfo.UserId,   
+        Items = BasketItems.ToList()  
+    }, authToken);  
 }
 ```
 
 이 메서드를 호출 합니다 `UpdateBasketAsync` 메서드를 `BasketService` 에 삽입 된 인스턴스는 `BasketViewModel` Autofac에서. 에서는 다음 메서드는 `UpdateBasketAsync` 메서드:
 
 ```csharp
-public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
+public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    string uri = builder.ToString();  
-    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
-    return result;  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    string uri = builder.ToString();  
+    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
+    return result;  
 }
 ```
 
@@ -193,22 +193,22 @@ public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBaske
 다음 코드 예제 중 하나를 표시 합니다 `PostAsync` 의 메서드는 `RequestProvider` 클래스:
 
 ```csharp
-public async Task<TResult> PostAsync<TResult>(  
-    string uri, TResult data, string token = "", string header = "")  
+public async Task<TResult> PostAsync<TResult>(  
+    string uri, TResult data, string token = "", string header = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    ...  
-    var content = new StringContent(JsonConvert.SerializeObject(data));  
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
-    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    ...  
+    var content = new StringContent(JsonConvert.SerializeObject(data));  
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
+    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>  
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>  
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -218,10 +218,10 @@ public async Task<TResult> PostAsync<TResult>(
 
 ```csharp
 [HttpPost]  
-public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
+public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
 {  
-    var basket = await _repository.UpdateBasketAsync(value);  
-    return Ok(basket);  
+    var basket = await _repository.UpdateBasketAsync(value);  
+    return Ok(basket);  
 }
 ```
 
@@ -238,23 +238,23 @@ public async Task<IActionResult> Post([FromBody]CustomerBasket value)
 체크 아웃 프로세스를 호출 하면 합니다 `CheckoutAsync` 의 메서드는 `CheckoutViewModel` 클래스 라고 합니다. 이 메서드는 다음 코드 예제에서 설명한 것 처럼 시장 바구니를 지우기 전에 새 순서를 만듭니다.
 
 ```csharp
-private async Task CheckoutAsync()  
+private async Task CheckoutAsync()  
 {  
-    ...  
-    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
-    ...  
+    ...  
+    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
+    ...  
 }
 ```
 
 이 메서드를 호출 합니다 `ClearBasketAsync` 메서드를 `BasketService` 에 삽입 된 인스턴스는 `CheckoutViewModel` Autofac에서. 에서는 다음 메서드는 `ClearBasketAsync` 메서드:
 
 ```csharp
-public async Task ClearBasketAsync(string guidUser, string token)  
+public async Task ClearBasketAsync(string guidUser, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    builder.Path = guidUser;  
-    string uri = builder.ToString();  
-    await _requestProvider.DeleteAsync(uri, token);  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    builder.Path = guidUser;  
+    string uri = builder.ToString();  
+    await _requestProvider.DeleteAsync(uri, token);  
 }
 ```
 
@@ -263,10 +263,10 @@ public async Task ClearBasketAsync(string guidUser, string token)
 다음 코드 예제는 `DeleteAsync` 의 메서드는 `RequestProvider` 클래스:
 
 ```csharp
-public async Task DeleteAsync(string uri, string token = "")  
+public async Task DeleteAsync(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    await httpClient.DeleteAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    await httpClient.DeleteAsync(uri);  
 }
 ```
 
@@ -276,9 +276,9 @@ public async Task DeleteAsync(string uri, string token = "")
 
 ```csharp
 [HttpDelete("{id}")]  
-public void Delete(string id)  
+public void Delete(string id)  
 {  
-    _repository.DeleteBasketAsync(id);  
+    _repository.DeleteBasketAsync(id);  
 }
 ```
 
@@ -320,7 +320,7 @@ EShopOnContainers 모바일 앱 데이터를 앱의 인스턴스를 실행 하�
 
 EShopOnContainers 모바일 앱을 캐시할 활용 하는 원격 제품 이미지를 사용 합니다. 이러한 이미지에서 표시 됩니다는 [ `Image` ](xref:Xamarin.Forms.Image) 컨트롤 및 `CachedImage` 에서 제공 하는 컨트롤을 [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) 라이브러리입니다.
 
-Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) 컨트롤이 다운로드 되는 이미지의 캐싱을 지원 합니다. 캐싱은 기본적으로 활성화 되 고 24 시간 동안 로컬 이미지를 저장 합니다. 만료 시간을 사용 하 여 구성할 수 있습니다 또한 합니다 [ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity) 속성입니다. 자세한 내용은 [다운로드 한 이미지 캐싱](~/xamarin-forms/user-interface/images.md#Image_Caching)합니다.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) 컨트롤이 다운로드 되는 이미지의 캐싱을 지원 합니다. 캐싱은 기본적으로 활성화 되 고 24 시간 동안 로컬 이미지를 저장 합니다. 만료 시간을 사용 하 여 구성할 수 있습니다 또한 합니다 [ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity) 속성입니다. 자세한 내용은 [다운로드 한 이미지 캐싱](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)합니다.
 
 FFImageLoading의 `CachedImage` 컨트롤을 사용 하면 Xamarin.Forms에 대 한 대체가 [ `Image` ](xref:Xamarin.Forms.Image) 컨트롤에 보조 기능을 사용 하는 추가 속성을 제공 합니다. 이 기능을 간에 컨트롤, 오류를 지원 하 고 자리 표시자 이미지를 로드 하는 동안 구성 가능한 캐싱을 제공 합니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱을 사용 하는 방법을 보여 줍니다.는 `CachedImage` 에서 제어를 `ProductTemplate`는에서 사용 하는 데이터 템플릿입니다를 [ `ListView` ](xref:Xamarin.Forms.ListView) 에서 제어할는 `CatalogView`:
 

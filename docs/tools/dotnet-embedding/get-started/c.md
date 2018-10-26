@@ -1,28 +1,28 @@
 ---
 title: C 시작
-description: 이 문서에서는 C 응용 프로그램에서.NET 코드를 포함 하려면 포함 하는.NET을 사용 하는 방법에 설명 합니다. Mac.에 대 한 Visual Studio 2017와 Visual Studio에 포함 하는.NET을 사용 하는 방법에 설명
+description: 이 문서에는 C 응용 프로그램에서.NET 코드를 포함 하려면 포함 하는.NET을 사용 하는 방법을 설명 합니다. Mac 용 Visual Studio 2017 및 Visual Studio에서.NET 포함을 사용 하는 방법에 설명
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 248d44f23495e45d9d35b34622de0f3b85ca3e8d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a16821e83dc169d7800162e1eaf45c4be661185a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794100"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106808"
 ---
 # <a name="getting-started-with-c"></a>C 시작
 
 ## <a name="requirements"></a>요구 사항
 
-사용 하려면.NET 포함 C, Mac 또는 Windows 실행 하는 컴퓨터에 필요 합니다.
+를 사용 하려면.NET 포함 C를 사용 하 여 Mac 또는 Windows 컴퓨터 실행을 해야 합니다.
 
 ### <a name="macos"></a>macOS
 
-* macOS 10.12 (시에라) 이상
-* Xcode 8.3.2 이상 버전
+* macOS 10.12(sierra) 이상
+* Xcode 8.3.2 이상
 * [Mono](http://www.mono-project.com/download/)
 
 ### <a name="windows"></a>Windows
@@ -32,9 +32,9 @@ ms.locfileid: "34794100"
 
 ## <a name="installing-net-embedding-from-nuget"></a>NuGet에서 포함 하는.NET 설치
 
-이 따라 [지침](~/tools/dotnet-embedding/get-started/install/install.md) 설치 하 고 프로젝트에 대 한.NET 포함을 구성 합니다.
+따르세요 [지침](~/tools/dotnet-embedding/get-started/install/install.md) 를 설치 하 여 프로젝트에 대 한.NET 포함을 구성 합니다.
 
-명령 호출을 구성 해야 (수 있는 버전 번호가 서로 다른 경로와) 같이 표시 됩니다.
+구성 해야 하는 명령 호출 (가능한 경우 버전 번호가 다른 경로와) 같이 표시 됩니다.
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
@@ -52,7 +52,7 @@ $(SolutionDir)\packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe -
 
 ### <a name="output-files"></a>출력 파일
 
-모든 코드가 정상적으로 작동 하는 경우 다음과 같은 출력이 나타납니다.
+정상적으로 작동 하는 경우 다음과 같은 출력이 나타납니다.
 
 ```shell
 Parsing assemblies...
@@ -71,12 +71,12 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-이후는 `--compile` 플래그 도구에 전달 된,.NET 포함 해야 또한 컴파일한 출력 파일 생성된 된 파일 옆에 찾을 수 있는 공유 라이브러리에 **libmanaged.dylib** macOS 등 상의파일**managed.dll** Windows에서 합니다.
+있으므로 합니다 `--compile` 플래그 도구에 전달 된,.NET 포함 해야도 컴파일한 출력 파일이 생성된 된 파일 옆에 있는 있습니다 공유 라이브러리로 **libmanaged.dylib** macOS에대한파일**managed.dll** Windows에서.
 
-공유 라이브러리를 사용 하려면 포함는 **managed.h** 에 해당 하는 각 C 선언 제공 하는 C 헤더 파일에 관리 되는 Api 라이브러리 및 링크 합니다. 앞에서 언급 한 컴파일된 공유 라이브러리입니다.
+공유 라이브러리를 사용 하려면 포함 된 **managed.h** C 헤더 파일에 해당 하는 각 C 선언을 제공 하는 Api 라이브러리를 관리 하 고 앞에서 언급 한 링크 공유 라이브러리를 컴파일한 합니다.
 
 ## <a name="further-reading"></a>추가 정보
 
 * [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-* [오픈 소스 프로젝트에 기여 하](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [오픈 소스 프로젝트 기여](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

@@ -1,27 +1,27 @@
 ---
 title: 서비스 알림
-description: 이 가이드로 인해 Android 서비스 정보는 사용자에 게 발송할 로컬 알림을 사용 될 수 있습니다는 방법을 설명 합니다.
+description: 이 가이드에서는 Android 서비스 사용자에 게 정보를 발송 하는 데 로컬 알림을 사용할 수 있습니다 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 65ccb94bd4fac1f3818b4f08eb34ecf73d6c52e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d56f67254a9eae334fa8ac3f08d3ef270800c309
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103252"
 ---
 # <a name="service-notifications"></a>서비스 알림
 
-_이 가이드로 인해 Android 서비스 정보는 사용자에 게 발송할 로컬 알림을 사용 될 수 있습니다는 방법을 설명 합니다._
+_이 가이드에서는 Android 서비스 사용자에 게 정보를 발송 하는 데 로컬 알림을 사용할 수 있습니다 하는 방법을 설명 합니다._
 
 
 ## <a name="service-notifications-overview"></a>서비스 알림 개요
 
-Android 응용 프로그램은 전경에 없는 경우에 서비스 알림을 사용자에 게 정보를 표시 하는 응용 프로그램을 사용 합니다. 알림을 수신 응용 프로그램에서 활동을 표시 하는 등 사용자에 대 한 작업을 제공 하는 것이 불가능 합니다. 다음 코드 샘플 서비스는 사용자에 게 알림 수 디스패치 하는 방법을 보여 줍니다.
+서비스 알림 Android 응용 프로그램이 전경에 있는 경우에 사용자에 게 정보를 표시 하는 앱을 허용 합니다. 응용 프로그램에서 활동을 표시 하는 등 사용자에 대 한 작업을 제공 하는 알림에 대 한 것 같습니다. 다음 코드 샘플 서비스는 사용자에 게 알림 수 디스패치 하는 방법을 보여 줍니다.
 
 ```csharp
 [Service]
@@ -46,18 +46,18 @@ public class MyService: Service
 }
 ```
 
-이 스크린 샷은 표시 되는 알림 메시지의 예:
+이 스크린샷에 표시 되는 알림의 예제 같습니다.
 
 [![상태 표시줄에 표시 되는 알림 아이콘](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
-사용자 슬라이드 알림 화면 위쪽에서 아래쪽, 전체 알림이 표시 됩니다.
+사용자 슬라이드 알림 화면 맨 위에서 아래로 전체 알림이 표시 됩니다.
 
-![Notication 알림 표시줄에 표시](service-notifications-images/02-fullnotification.png)
+![알림 표시줄에 표시 되는 알림](service-notifications-images/02-fullnotification.png)
 
 
-## <a name="updating-a-notification"></a>업데이트 알림
+## <a name="updating-a-notification"></a>알림을 업데이트합니다.
 
-서비스에 같은 알림 ID를 사용 하 여 알림을 다시 게시는 점에 알림을 업데이트 하려면 Android을 표시 하거나 필요에 따라 상태 표시줄에서 알림을 업데이트 합니다.
+서비스는 같은 알림 ID를 사용 하 여 알림의 게시 하는 데 알림을 업데이트 하려면 Android을 표시 하거나 필요에 따라 상태 표시줄에서 알림을 업데이트 합니다.
 
 ```csharp 
 void UpdateNotification(string content)
@@ -79,9 +79,9 @@ Notification GetNotification(string content, PendingIntent intent)
 }
 ```
 
-알림에 대 한 자세한 정보는에서 사용할 수는 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md) 의 섹션은 [Android 알림을](~/android/app-fundamentals/notifications/index.md) 가이드입니다.
+알림에 대 한 자세한 정보는 사용할 수 있습니다는 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md) 섹션을 [Android 알림](~/android/app-fundamentals/notifications/index.md) 가이드입니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android의 로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)
+- [Android에서 로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)
