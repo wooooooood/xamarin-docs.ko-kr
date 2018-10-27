@@ -1,31 +1,26 @@
 ---
-title: 실시간 다시 로드
+title: Xamarin 라이브 다시 로드 (미리 보기)
 description: XAML에 변경 내용을 다른 컴파일 없이 실시간으로 반영 되었는지 확인 하 고 배포 합니다.
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
-ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+robots: noindex
+ms.date: 10/26/2018
+ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
+ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109993"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50142338"
 ---
-# <a name="xamarin-live-reload"></a>Xamarin 라이브 다시 로드
-
-![미리 보기](~/media/shared/preview.png)
-
-Xamarin 라이브 다시 로드 수 있습니다 **에 XAML을 변경 하 고 다른 컴파일 없이 실시간으로 반영 배포**합니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
-
-Live Reload를 사용할 때 앱이 컴파일되기 때문에, 모든 라이브러리와 타사 컨트롤에서도 작동합니다. iOS, Android, UWP 등 Xamarin.Forms가 지원하는 모든 플랫폼을 지원하며 시뮬레이터, 에뮬레이터 및 물리적 장치 등 모든 유효한 배포 대상에서 사용할 수 있습니다.
+# <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
 > [!NOTE]
-> [라이브 다시 로드 미리 보기를 마쳤습니다.](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> 이 대 한 토론에 없는 [ ![채팅에 참여 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> Xamarin 라이브 다시 로드의 미리 보기 기간이 종료 하 고 모든 사용자에 게 사용자 의견과 감사 하려고 합니다. 읽어보세요 우리의 [로드맵](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) Xamarin.Forms에 대 한 현재 작업 중인 새로운 생산성 기능에 자세히 알아보려면 Visual Studio 2019에 대 한 합니다. 이 확장 Visual Studio 2017에 대 한 사용 가능한 상태로 유지 되지만 향후 업데이트 받고 있지 않습니다.
+
+Xamarin 라이브 다시 로드 수 있습니다 **에 XAML을 변경 하 고 다른 컴파일 없이 실시간으로 반영 배포**합니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -86,7 +81,7 @@ Live Reload는 작동하는 모든 XAML 파일에서 사용할 수 있습니다.
 ## <a name="frequently-asked-questions"></a>질문과 대답 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>Mac 용 Xamarin 라이브 다시 로드를 Visual Studio에서 사용할 수 있는? 
 
-Xamarin 라이브 다시 로드의 초기 미리 보기 릴리스만 Visual Studio 2017에 대 한 제공 됩니다. Mac 용 Visual Studio에 대 한 지원이 향후 릴리스에 예정 되어 있습니다.
+아니요, Xamarin 라이브 다시 로드의 미리 보기 릴리스는 Visual Studio 2017에 대 한 사용 가능한만 합니다.
 
 ### <a name="does-this-work-with-all-libraries-such-as-prism"></a>Prism 등의 모든 라이브러리를 사용 하 여이 작동 합니까? 
 
@@ -94,7 +89,7 @@ Xamarin 라이브 다시 로드의 초기 미리 보기 릴리스만 Visual Stud
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>라이브 다시 로드에는 어떤 변경 재배포는? 
 
-실시간 다시 로드에는 XAML 또는 CSS에 대 한 변경만 적용 됩니다. C# 파일을 변경한 경우에 recompile 해야 합니다. 다시 로드 하 고 C#에 대 한 지원이 향후 릴리스에 예정 되어 있습니다.
+실시간 다시 로드에는 XAML 또는 CSS에 대 한 변경만 적용 됩니다. C# 파일을 변경한 경우에 recompile 해야 합니다. 
 
 ### <a name="what-platforms-are-supported"></a>어떤 플랫폼이 지원 되나요? 
 
@@ -121,8 +116,8 @@ IOS 시뮬레이터는 Android 에뮬레이터를 디버깅 하는 경우 라이
 
 * Visual Studio 에서만 지원 됩니다.
 * 연결 설정 해야 합니다 **연결 하지 않음** 또는 **프레임 워크 Sdk를 전용에 링크** 
-* 앱 전체 리소스를 다시 로드 (예: **App.xaml** 또는 리소스가 공유), 앱 탐색을 다시 설정 됩니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
-* 현재 ContentView 다시 로드를 포함 하는 페이지를 다시 로드 해야 합니다. 이 다음 미리 보기 릴리스에서 수정 될 예정입니다.
+* 앱 전체 리소스를 다시 로드 (예: **App.xaml** 또는 리소스가 공유), 앱 탐색을 다시 설정 됩니다. 
+* 현재 ContentView 다시 로드를 포함 하는 페이지를 다시 로드 해야 합니다.
 * AutomationId를 포함 하는 요소는 다시 로드 오류가 발생할 수 있습니다.
 * 런타임 크래시가 발생할 수 있습니다 UWP를 디버깅 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 **(Ctrl + F5) 디버깅 하지 않고 시작** of **디버깅 시작 (F5)** 합니다.
 
