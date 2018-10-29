@@ -1,0 +1,665 @@
+items:
+- name: Xamarin.Android
+  href: index.yml
+  items:
+  - name: 시작
+    href: get-started/index.md
+    items:
+    - name: 설정 및 설치
+      href: get-started/installation/index.md
+      items:
+      - name: Windows 설치
+        href: get-started/installation/windows.md
+      - name: Android SDK 설정
+        href: get-started/installation/android-sdk.md
+      - name: Android Emulator 설정
+        href: get-started/installation/android-emulator/index.md
+        items:
+        - name: 하드웨어 가속(Hyper-V 및 HAXM)
+          href: get-started/installation/android-emulator/hardware-acceleration.md
+        - name: 장치 관리자
+          href: get-started/installation/android-emulator/device-manager.md
+        - name: 장치 속성
+          href: get-started/installation/android-emulator/device-properties.md
+        - name: 문제 해결
+          href: get-started/installation/android-emulator/troubleshooting.md
+      - name: Android 장치 설정
+        href: get-started/installation/set-up-device-for-development.md
+      - name: Microsoft Mobile OpenJDK 미리 보기
+        href: get-started/installation/openjdk.md
+    - name: Hello, Android
+      href: get-started/hello-android/index.md
+      items:
+      - name: '1부: 빠른 시작'
+        href: get-started/hello-android/hello-android-quickstart.md
+      - name: '2부: 심층 분석'
+        href: get-started/hello-android/hello-android-deepdive.md
+    - name: Hello, Android 멀티스크린
+      href: get-started/hello-android-multiscreen/index.md
+      items:
+      - name: '1부: 빠른 시작'
+        href: get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+      - name: '2부: 심층 분석'
+        href: get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md
+    - name: Java 개발자를 위한 Xamarin
+      href: get-started/java-developers.md
+    expanded: true
+  - name: 응용 프로그램 기본 사항
+    href: app-fundamentals/index.md
+    items:
+    - name: 액세스 가능성
+      href: app-fundamentals/accessibility.md
+    - name: Android API 수준
+      href: app-fundamentals/android-api-levels.md
+    - name: Android 리소스
+      href: app-fundamentals/resources-in-android/index.md
+      items:
+      - name: Android 리소스 기본 사항
+        href: app-fundamentals/resources-in-android/android-resource-basics.md
+      - name: 기본 리소스
+        href: app-fundamentals/resources-in-android/default-resources.md
+      - name: 대체 리소스
+        href: app-fundamentals/resources-in-android/alternate-resources.md
+      - name: 다양한 화면에 대한 리소스 만들기
+        href: app-fundamentals/resources-in-android/resources-for-varying-screens.md
+      - name: 응용 프로그램 지역화 및 문자열 리소스
+        href: app-fundamentals/resources-in-android/application-localization.md
+      - name: Android 자산 사용
+        href: app-fundamentals/resources-in-android/android-assets.md
+      - name: 글꼴
+        href: app-fundamentals/resources-in-android/fonts.md
+    - name: 활동 수명 주기
+      href: app-fundamentals/activity-lifecycle/index.md
+      items:
+      - name: 연습 - 작업 상태 저장
+        href: app-fundamentals/activity-lifecycle/saving-state.md
+    - name: Android 서비스
+      href: app-fundamentals/services/index.md
+      items:
+      - name: 서비스 만들기
+        href: app-fundamentals/services/creating-a-service/index.md
+        items:
+        - name: 바인딩된 서비스
+          href: app-fundamentals/services/creating-a-service/bound-services.md
+        - name: 인텐트 서비스
+          href: app-fundamentals/services/creating-a-service/intent-services.md
+        - name: 시작된 서비스
+          href: app-fundamentals/services/creating-a-service/started-services.md
+      - name: 포그라운드 서비스
+        href: app-fundamentals/services/foreground-services.md
+      - name: 프로세스 서비스 부족
+        href: app-fundamentals/services/out-of-process-services.md
+      - name: 서비스 알림
+        href: app-fundamentals/services/service-notifications.md
+    - name: 브로드캐스트 수신기
+      href: app-fundamentals/broadcast-receivers.md
+    - name: 지역화
+      href: app-fundamentals/localization.md
+    - name: 사용 권한
+      href: app-fundamentals/permissions.md
+    - name: 그래픽 및 애니메이션
+      href: app-fundamentals/graphics-and-animation.md
+    - name: CPU 아키텍처
+      href: app-fundamentals/cpu-architectures.md
+    - name: 회전 처리
+      href: app-fundamentals/handling-rotation.md
+    - name: 오디오
+      href: app-fundamentals/android-audio.md
+    - name: 알림
+      href: app-fundamentals/notifications/index.md
+      items:
+      - name: 로컬 알림
+        href: app-fundamentals/notifications/local-notifications.md
+      - name: 로컬 알림 연습
+        href: app-fundamentals/notifications/local-notifications-walkthrough.md
+    - name: 터치
+      href: app-fundamentals/touch/index.md
+      items:
+      - name: Android 터치
+        href: app-fundamentals/touch/touch-in-android.md
+      - name: 연습 - Android 터치 사용
+        href: app-fundamentals/touch/android-touch-walkthrough.md
+      - name: 멀티 터치 추적
+        href: app-fundamentals/touch/touch-tracking.md
+    - name: HttpClient 스택 및 SSL/TLS
+      href: app-fundamentals/http-stack.md
+    - name: 응답성이 뛰어난 앱 작성
+      href: app-fundamentals/writing-responsive-apps.md
+  - name: 사용자 인터페이스
+    href: user-interface/index.md
+    items:
+    - name: Android 디자이너
+      href: user-interface/android-designer/index.md
+      items:
+      - name: Android Designer 사용
+        href: user-interface/android-designer/designer-walkthrough.md
+      - name: 디자이너 기본 사항
+        href: user-interface/android-designer/designer-basics.md
+      - name: 리소스 한정자 및 시각화 옵션
+        href: user-interface/android-designer/resource-qualifiers.md
+      - name: 대체 레이아웃 보기
+        href: user-interface/android-designer/alternative-layout-views.md
+      - name: 재질 디자인 기능
+        href: user-interface/android-designer/material-design-features.md
+    - name: 재질 테마
+      href: user-interface/material-theme.md
+    - name: 사용자 프로필
+      href: user-interface/user-profile.md
+    - name: 시작 화면
+      href: user-interface/splash-screen.md
+    - name: 레이아웃
+      href: user-interface/layouts/index.md
+      items:
+      - name: LinearLayout
+        href: user-interface/layouts/linear-layout.md
+      - name: RelativeLayout
+        href: user-interface/layouts/relative-layout.md
+      - name: TableLayout
+        href: user-interface/layouts/table-layout.md
+      - name: RecyclerView
+        href: user-interface/layouts/recycler-view/index.md
+        items:
+        - name: 파트 및 기능
+          href: user-interface/layouts/recycler-view/parts-and-functionality.md
+        - name: RecyclerView 예제
+          href: user-interface/layouts/recycler-view/recyclerview-example.md
+        - name: 예제 확장
+          href: user-interface/layouts/recycler-view/extending-the-example.md
+      - name: ListView
+        href: user-interface/layouts/list-view/index.md
+        items:
+        - name: ListView 파트 및 기능
+          href: user-interface/layouts/list-view/parts-and-functionality.md
+        - name: 데이터로 ListView 채우기
+          href: user-interface/layouts/list-view/populating.md
+        - name: ListView 모양 사용자 지정
+          href: user-interface/layouts/list-view/customizing-appearance.md
+        - name: CursorAdapters 사용
+          href: user-interface/layouts/list-view/cursor-adapters.md
+        - name: ContentProvider 사용
+          href: user-interface/layouts/list-view/content-provider.md
+        - name: ListView 및 작업 수명 주기
+          href: user-interface/layouts/list-view/activity-lifecycle.md
+      - name: GridView
+        href: user-interface/layouts/grid-view.md
+      - name: GridLayout
+        href: user-interface/layouts/grid-layout.md
+      - name: 탭 레이아웃
+        href: user-interface/layouts/tab-layout/index.md
+        items:
+        - name: ActionBar가 있는 탐색 탭
+          href: user-interface/layouts/tab-layout/with-action-bar.md
+    - name: 컨트롤
+      href: user-interface/controls/index.md
+      items:
+      - name: ActionBar
+        href: user-interface/controls/action-bar.md
+      - name: 자동 완성
+        href: user-interface/controls/auto-complete.md
+      - name: 단추
+        href: user-interface/controls/buttons/index.md
+        items:
+        - name: Radio Button
+          href: user-interface/controls/buttons/radio-button.md
+        - name: 토글 단추
+          href: user-interface/controls/buttons/toggle-button.md
+        - name: CheckBox
+          href: user-interface/controls/buttons/check-box.md
+        - name: 사용자 지정 단추
+          href: user-interface/controls/buttons/custom-button.md
+      - name: 일정
+        href: user-interface/controls/calendar.md
+      - name: CardView
+        href: user-interface/controls/card-view.md
+      - name: EditText
+        href: user-interface/controls/edit-text.md
+      - name: 갤러리
+        href: user-interface/controls/gallery.md
+      - name: 탐색 모음
+        href: user-interface/controls/navigation-bar.md
+      - name: 선택기
+        href: user-interface/controls/pickers/index.md
+        items:
+        - name: 날짜 선택
+          href: user-interface/controls/pickers/date-picker.md
+        - name: 시간 선택기
+          href: user-interface/controls/pickers/time-picker.md
+      - name: 팝업 메뉴
+        href: user-interface/controls/popup-menu.md
+      - name: RatingBar
+        href: user-interface/controls/ratingbar.md
+      - name: Spinner
+        href: user-interface/controls/spinner.md
+      - name: 전환
+        href: user-interface/controls/switch.md
+      - name: TextureView
+        href: user-interface/controls/texture-view.md
+      - name: Toolbar
+        href: user-interface/controls/tool-bar/index.md
+        items:
+        - name: 작업 모음 바꾸기
+          href: user-interface/controls/tool-bar/replacing-the-action-bar.md
+        - name: 두 번째 도구 모음 추가
+          href: user-interface/controls/tool-bar/adding-a-second-toolbar.md
+        - name: 도구 모음 호환성
+          href: user-interface/controls/tool-bar/toolbar-compatibility.md
+      - name: ViewPager
+        href: user-interface/controls/view-pager/index.md
+        items:
+        - name: 보기가 있는 ViewPager
+          href: user-interface/controls/view-pager/viewpager-and-views.md
+        - name: 조각이 있는 ViewPager
+          href: user-interface/controls/view-pager/viewpager-and-fragments.md
+      - name: WebView
+        href: user-interface/controls/web-view.md
+  - name: 플랫폼 기능
+    href: platform/index.md
+    items:
+    - name: Android Beam
+      href: platform/android-beam.md
+    - name: Android 매니페스트
+      href: platform/android-manifest.md
+    - name: Xamarin.Android를 사용하여 파일 액세스
+      href: platform/files/index.md
+      items:
+      - name: 외부 저장소
+        href: platform/files/external-storage.md
+    - name: 지문 인증
+      href: platform/fingerprint-authentication/index.md
+      items:
+      - name: 시작
+        href: platform/fingerprint-authentication/get-started.md
+      - name: 지문 검사
+        href: platform/fingerprint-authentication/scanning.md
+      - name: CryptoObject 만들기
+        href: platform/fingerprint-authentication/creating-a-cryptoobject.md
+      - name: 인증 콜백에 응답
+        href: platform/fingerprint-authentication/fingerprint-authentication-callbacks.md
+      - name: 지침 및 요약
+        href: platform/fingerprint-authentication/summary.md
+      - name: 지문 등록
+        href: platform/fingerprint-authentication/enrolling-fingerprint.md
+    - name: Android 작업 스케줄러
+      href: platform/android-job-scheduler.md
+    - name: Firebase 작업 디스패처
+      href: platform/firebase-job-dispatcher.md
+    - name: 조각
+      href: platform/fragments/index.md
+      items:
+      - name: 조각 구현
+        href: platform/fragments/implementing-with-fragments/index.md
+        items:
+        - name: 조각 연습 - 1부
+          href: platform/fragments/implementing-with-fragments/walkthrough.md
+        - name: 조각 연습 - 2부
+          href: platform/fragments/implementing-with-fragments/walkthrough-landscape.md
+      - name: 조각 만들기
+        href: platform/fragments/creating-a-fragment.md
+      - name: 조각 관리
+        href: platform/fragments/managing-fragments.md
+      - name: 특수화된 조각 클래스
+        href: platform/fragments/specialized-fragment-classes.md
+      - name: 이전 버전과의 호환성 제공
+        href: platform/fragments/providing-backwards-compatibility.md
+    - name: 앱 연결
+      href: platform/app-linking.md
+    - name: Android 9 Pie
+      href: platform/pie.md
+    - name: Android 8 Oreo
+      href: platform/oreo.md
+    - name: Android 7 Nougat
+      href: platform/nougat.md
+    - name: Android 6 Marshmallow
+      href: platform/marshmallow.md
+    - name: Android 5 Lollipop
+      href: platform/lollipop.md
+    - name: Android 4.4 KitKat
+      href: platform/kitkat.md
+    - name: Android 4.1 Jelly Bean
+      href: platform/jelly-bean.md
+    - name: Android 4.0 Ice Cream Sandwich
+      href: platform/ice-cream-sandwich.md
+    - name: 콘텐츠 공급자
+      href: platform/content-providers/index.md
+      items:
+      - name: 작동 방법
+        href: platform/content-providers/how-it-works.md
+      - name: 연락처 ContentProvider 사용
+        href: platform/content-providers/contacts-contentprovider.md
+      - name: 사용자 지정 ContentProvider 만들기
+        href: platform/content-providers/custom-contentprovider.md
+    - name: 맵 및 위치
+      href: platform/maps-and-location/index.md
+      items:
+      - name: 위치
+        href: platform/maps-and-location/location.md
+      - name: 맵
+        href: platform/maps-and-location/maps/index.md
+        items:
+        - name: 맵 응용 프로그램
+          href: platform/maps-and-location/maps/maps-application.md
+        - name: 맵 API
+          href: platform/maps-and-location/maps/maps-api.md
+        - name: Google Maps API 키 가져오기
+          href: platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md
+    - name: Android.Speech 사용
+      href: platform/speech.md
+    - name: Java 통합
+      href: platform/java-integration/index.md
+      items:
+      - name: Android 호출 가능 래퍼
+        href: platform/java-integration/android-callable-wrappers.md
+      - name: JNI 작업
+        href: platform/java-integration/working-with-jni.md
+      - name: Java를 C#으로 이식
+        href: platform/java-integration/porting-java-to-csharp.md
+    - name: Java 라이브러리 바인딩
+      href: platform/binding-java-library/index.md
+      items:
+      - name: JAR 바인딩
+        href: platform/binding-java-library/binding-a-jar.md
+      - name: .AAR 바인딩
+        href: platform/binding-java-library/binding-an-aar.md
+      - name: Eclipse 라이브러리 프로젝트 바인딩
+        href: platform/binding-java-library/binding-a-library-project.md
+      - name: 바인딩 사용자 지정
+        href: platform/binding-java-library/customizing-bindings/index.md
+        items:
+        - name: Java 바인딩 메타데이터
+          href: platform/binding-java-library/customizing-bindings/java-bindings-metadata.md
+        - name: Javadoc을 사용하여 매개 변수 이름 지정
+          href: platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md
+      - name: 바인딩 문제 해결
+        href: platform/binding-java-library/troubleshooting-bindings.md
+    - name: 네이티브 라이브러리 사용
+      href: platform/native-libraries.md
+    - name: Renderscript
+      href: platform/renderscript.md
+  - name: Xamarin.Essentials
+    href: ~/essentials/index.md?context=xamarin/android
+    items:
+    - name: 시작
+      href: ~/essentials/get-started.md?context=xamarin/android
+    - name: 가속도계
+      href: ~/essentials/accelerometer.md?context=xamarin/android
+    - name: 앱 정보
+      href: ~/essentials/app-information.md?context=xamarin/android
+    - name: 지표
+      href: ~/essentials/barometer.md?context=xamarin/android
+    - name: 배터리
+      href: ~/essentials/battery.md?context=xamarin/android
+    - name: 클립보드
+      href: ~/essentials/clipboard.md?context=xamarin/android
+    - name: 나침반
+      href: ~/essentials/compass.md?context=xamarin/android
+    - name: 연결
+      href: ~/essentials/connectivity.md?context=xamarin/android
+    - name: 데이터 전송
+      href: ~/essentials/data-transfer.md?context=xamarin/android
+    - name: 장치 표시 정보
+      href: ~/essentials/device-display.md?context=xamarin/android
+    - name: 장치 정보
+      href: ~/essentials/device-information.md?context=xamarin/android
+    - name: 메일
+      href: ~/essentials/email.md?context=xamarin/android
+    - name: 파일 시스템 도우미
+      href: ~/essentials/file-system-helpers.md?context=xamarin/android
+    - name: 손전등
+      href: ~/essentials/flashlight.md?context=xamarin/android
+    - name: 지오코딩
+      href: ~/essentials/geocoding.md?context=xamarin/android
+    - name: 지리적 위치
+      href: ~/essentials/geolocation.md?context=xamarin/android
+    - name: 자이로스코프
+      href: ~/essentials/gyroscope.md?context=xamarin/android
+    - name: 시작 관리자
+      href: ~/essentials/launcher.md?context=xamarin/android
+    - name: 지자기 센터
+      href: ~/essentials/magnetometer.md?context=xamarin/android
+    - name: 주 스레드
+      href: ~/essentials/main-thread.md?context=xamarin/android
+    - name: 맵
+      href: ~/essentials/maps.md?context=xamarin/android
+    - name: 브라우저 열기
+      href: ~/essentials/open-browser.md?context=xamarin/android
+    - name: 방향 센서
+      href: ~/essentials/orientation-sensor.md?context=xamarin/android
+    - name: 전화 걸기
+      href: ~/essentials/phone-dialer.md?context=xamarin/android
+    - name: 전원
+      href: ~/essentials/power.md?context=xamarin/android
+    - name: 기본 설정
+      href: ~/essentials/preferences.md?context=xamarin/android
+    - name: 화면 잠금
+      href: ~/essentials/screen-lock.md?context=xamarin/android
+    - name: 보안 저장소
+      href: ~/essentials/secure-storage.md?context=xamarin/android
+    - name: SMS
+      href: ~/essentials/sms.md?context=xamarin/android
+    - name: 텍스트 음성 변환
+      href: ~/essentials/text-to-speech.md?context=xamarin/android
+    - name: 버전 추적
+      href: ~/essentials/version-tracking.md?context=xamarin/android
+    - name: 진동
+      href: ~/essentials/vibrate.md?context=xamarin/android
+    - name: 문제 해결
+      href: ~/essentials/troubleshooting.md?context=xamarin/android
+  - name: 데이터 및 Cloud Services
+    href: data-cloud/index.md
+    items:
+    - name: Azure Active Directory
+      href: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
+      items:
+      - name: 시작
+        href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/android
+        items:
+        - name: '1단계: 레지스터'
+          href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/android
+        - name: 2단계. 구성
+          href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/android
+      - name: Graph API에 액세스
+        href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/android
+    - name: Azure Mobile Apps
+      href: ~/cross-platform/data-cloud/mobile-apps.md?context=xamarin/android
+    - name: 데이터 액세스
+      href: data-cloud/data-access/index.md
+      items:
+      - name: 소개
+        href: data-cloud/data-access/introduction.md
+      - name: 구성
+        href: data-cloud/data-access/configuration.md
+      - name: SQLite.NET ORM 사용
+        href: data-cloud/data-access/using-sqlite-orm.md
+      - name: ADO.NET 사용
+        href: data-cloud/data-access/using-adonet.md
+      - name: 앱에서 데이터 사용
+        href: data-cloud/data-access/using-data-in-an-app.md
+    - name: Google 메시징
+      href: data-cloud/google-messaging/index.md
+      items:
+      - name: Firebase 클라우드 메시징
+        href: data-cloud/google-messaging/firebase-cloud-messaging.md
+      - name: FCM 알림 연습
+        href: data-cloud/google-messaging/remote-notifications-with-fcm.md
+      - name: Google Cloud Messaging
+        href: data-cloud/google-messaging/google-cloud-messaging.md
+      - name: GCM 알림 연습
+        href: data-cloud/google-messaging/remote-notifications-with-gcm.md
+    - name: 웹 서비스
+      href: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/android
+      items:
+      - name: 연습 - WCF 작업
+        href: ~/cross-platform/data-cloud/web-services/walkthrough-working-with-wcf.md?context=xamarin/android
+  - name: 배포 및 테스트
+    href: deploy-test/index.md
+    items:
+    - name: 앱 패키지 크기
+      href: deploy-test/app-package-size.md
+    - name: 앱 빌드
+      href: deploy-test/building-apps/index.md
+      items:
+      - name: 빌드 프로세스
+        href: deploy-test/building-apps/build-process.md
+      - name: ABI 관련 APK 빌드
+        href: deploy-test/building-apps/abi-specific-apks.md
+    - name: 명령줄 에뮬레이터
+      href: deploy-test/command-line-emulator.md
+    - name: 디버깅
+      href: deploy-test/debugging/index.md
+      items:
+      - name: 에뮬레이터에서 디버그
+        href: deploy-test/debugging/debug-on-emulator.md
+      - name: 장치에서 디버그
+        href: deploy-test/debugging/debug-on-device.md
+      - name: Android 디버그 로그
+        href: deploy-test/debugging/android-debug-log.md
+    - name: 디버깅 가능한 특성
+      href: deploy-test/debuggable-attribute.md
+    - name: 환경
+      href: deploy-test/environment.md
+    - name: GDB
+      href: deploy-test/gdb.md
+    - name: 사용자 지정 링커 설정
+      href: deploy-test/linker.md
+    - name: 다중 코어 장치
+      href: deploy-test/multicore-devices.md
+    - name: 성능
+      href: deploy-test/performance.md
+    - name: 프로파일링
+      href: deploy-test/profiling.md
+    - name: 릴리스 준비
+      href: deploy-test/release-prep/index.md
+      items:
+      - name: ProGuard
+        href: deploy-test/release-prep/proguard.md
+    - name: APK 서명
+      href: deploy-test/signing/index.md
+      items:
+      - name: 수동으로 APK 서명
+        href: deploy-test/signing/manually-signing-the-apk.md
+      - name: 키 저장소 서명 찾기
+        href: deploy-test/signing/keystore-signature.md
+    - name: 앱 게시
+      href: deploy-test/publishing/index.md
+      items:
+      - name: Google Play에 게시
+        href: deploy-test/publishing/publishing-to-google-play/index.md
+        items:
+        - name: Google 라이선스 서비스
+          href: deploy-test/publishing/publishing-to-google-play/google-licensing-services.md
+        - name: APK 확장 파일
+          href: deploy-test/publishing/publishing-to-google-play/apk-expansion-files.md
+        - name: 수동으로 APK 업로드
+          href: deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md
+      - name: Amazon에 게시
+        href: deploy-test/publishing/publishing-to-amazon.md
+      - name: 독립적으로 게시
+        href: deploy-test/publishing/publishing-independently.md
+    - name: 시스템 앱으로 설치
+      href: deploy-test/install-system-app.md
+  - name: 고급 개념 및 내부 요소
+    href: internals/index.md
+    items:
+    - name: 아키텍처
+      href: internals/architecture.md
+    - name: 사용 가능한 어셈블리
+      href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
+    - name: API 디자인
+      href: internals/api-design.md
+    - name: 가비지 컬렉션
+      href: internals/garbage-collection.md
+    - name: 제한 사항
+      href: internals/limitations.md
+  - name: 문제 해결
+    href: troubleshooting/index.md
+    items:
+    - name: 문제 해결 팁
+      href: troubleshooting/troubleshooting.md
+    - name: 질문과 대답
+      href: troubleshooting/questions/index.md
+      items:
+      - name: 어떤 Android SDK 패키지를 설치해야 하나요?
+        href: troubleshooting/questions/install-android-sdk-packages.md
+      - name: Android SDK 위치를 어디에 설정할 수 있나요?
+        href: troubleshooting/questions/android-sdk-location.md
+      - name: JDK(Java Development Kit) 버전을 업데이트하려면 어떻게 할까요?
+        href: troubleshooting/questions/update-jdk.md
+      - name: JDK(Java Development Kit) 버전 9 이상을 사용할 수 있나요?
+        href: troubleshooting/questions/jdk9-errors.md
+      - name: Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 수동으로 설치하려면 어떻게 할까요?
+        href: troubleshooting/questions/install-android-support-library.md
+      - name: Windows에서 Android를 디버그해야 하는 USB 드라이버는 무엇인가요?
+        href: troubleshooting/questions/android-drivers-debug-windows.md
+      - name: Windows VM에서 Mac에서 실행 중인 Android 에뮬레이터에 연결할 수 있나요?
+        href: troubleshooting/questions/connect-android-emulator-mac-windows.md
+      - name: Android NUnit 테스트 프로젝트를 자동화하려면 어떻게 할까요?
+        href: troubleshooting/questions/automate-android-nunit-test.md
+      - name: Android .axml 파일에서 Intellisense를 사용하려면 어떻게 할까요?
+        href: troubleshooting/questions/enable-axml-intellisense.md
+      - name: Android 릴리스 빌드를 인터넷에 연결할 수 없는 이유는 무엇인가요?
+        href: troubleshooting/questions/android-internet.md
+      - name: 더 스마트한 Xamarin Android 지원 v4/v13 NuGet 패키지
+        href: troubleshooting/questions/android-support-v4v13-libraries.md
+      - name: PathTooLongException을 해결하려면 어떻게 할까요?
+        href: troubleshooting/questions/path-too-long-exception.md
+      - name: 어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
+        href: troubleshooting/questions/xa-lollipop.md
+      - name: Android.Support.v7.AppCompat - 제공된 이름과 일치하는 리소스를 찾을 수 없습니다. attr ‘android:actionModeShareDrawable’
+        href: troubleshooting/questions/missing-action-mode-share-drawable.md
+      - name: Android Designer용 Java 메모리 매개 변수 조정
+        href: troubleshooting/questions/android-designer-java-memory.md
+      - name: 내 Android Resource.designer.cs 파일이 업데이트되지 않습니다.
+        href: troubleshooting/questions/resource-designer-wont-update.md
+    - name: 라이브러리 설치 오류 해결
+      href: troubleshooting/resolving-library-installation-errors.md
+    - name: Android SDK Tools에 대한 변경 내용
+      href: troubleshooting/sdk-cli-tooling-changes.md
+    - name: Xamarin.Android 오류 참조
+      href: troubleshooting/errors.md
+  - name: Wear
+    href: wear/index.md
+    items:
+    - name: 시작
+      href: wear/get-started/index.md
+      items:
+      - name: Android Wear 소개
+        href: wear/get-started/intro-to-wear.md
+      - name: 설정 및 설치
+        href: wear/get-started/installation.md
+      - name: Hello, Wear
+        href: wear/get-started/hello-wear.md
+    - name: 사용자 인터페이스
+      href: wear/user-interface/index.md
+      items:
+      - name: 컨트롤
+        href: wear/user-interface/controls/index.md
+        items:
+        - name: GridViewPager
+          href: wear/user-interface/controls/gridviewpager.md
+    - name: 플랫폼 기능
+      href: wear/platform/index.md
+      items:
+      - name: 시계 모드 만들기
+        href: wear/platform/creating-a-watchface.md
+    - name: 화면 크기
+      href: wear/screen-sizes.md
+    - name: 배포 및 테스트
+      href: wear/deploy-test/index.md
+      items:
+      - name: 에뮬레이터에서 디버그
+        href: wear/deploy-test/debug-on-emulator.md
+      - name: Wear 장치에서 디버그
+        href: wear/deploy-test/debug-on-device.md
+      - name: 패키지
+        href: wear/deploy-test/packaging.md
+  - name: 릴리스 정보
+    href: https://developer.xamarin.com/releases/android/
+  - name: 샘플
+    href: samples/index.yml
+  expanded: true
+ms.openlocfilehash: 2ca84f556d0822272c8d2b680835322056b0d7bd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50130228"
