@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 01359d8b5fc402c83006c1c227375557fd2d7149
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a9d7f1eb0051035d6bfcc47e18fb0bdd00b60f5d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122454"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235118"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 오류
 
@@ -28,9 +28,9 @@ ms.locfileid: "50122454"
 
 <a name="MT0000" />
 
-### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpbugzillaxamarincom"></a>MT0000: 예기치 않은 오류-에서 버그 보고서를 작성 하세요 http://bugzilla.xamarin.com
+### <a name="mt0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MT0000: 예기치 않은 오류-에서 버그 보고서를 작성 하세요 https://github.com/xamarin/xamarin-macios/issues/new
 
-예기치 않은 오류가 발생 했습니다. 하세요 [버그 보고서](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 최대한 많은 정보를 포함 합니다.
+예기치 않은 오류가 발생 했습니다. 하세요 [버그 보고서](https://github.com/xamarin/xamarin-macios/issues/new) 최대한 많은 정보를 포함 합니다.
 
 * 전체 최대의 자세한 정도 사용 하 여 로그를 빌드합니다 (예: `-v -v -v -v` 에 **추가 mtouch 인수**);
 * 오류를 재현 하는 최소한의 테스트 사례 및

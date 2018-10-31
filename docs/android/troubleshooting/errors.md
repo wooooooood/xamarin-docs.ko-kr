@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: b51e8b3d931ccbb511afe7d06d9be66fa104fb46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121843"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235079"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Xamarin.Android Errors Matrix
 
@@ -40,7 +40,7 @@ ms.locfileid: "50121843"
 
 |오류 코드|설명|
 |--- |--- |
-|XA0000|예기치 않은 오류-채우십시오를 [버그 보고서](http://bugzilla.xamarin.com)합니다.|
+|XA0000|예기치 않은 오류-채우십시오를 [버그 보고서](https://github.com/xamarin/xamarin-android/issues/new)합니다.|
 |XA0001|'-devname 장치별 개입 없이 제공 되었습니다.|
 |XA0002|환경 변수를 구문 분석 하지 못했습니다 '{0}'.|
 |XA0003|응용 프로그램 이름 '{0}.exe' SDK 또는 제품 어셈블리 (.dll) 이름과 충돌 합니다.|

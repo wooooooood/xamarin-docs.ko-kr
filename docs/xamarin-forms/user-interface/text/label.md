@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: c98dcc30ac89e3df0338df02e14a32575c0dc847
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: a6c0cd057082a6fa4793ca3de18cefd00243e9e3
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39203038"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235066"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -22,13 +22,13 @@ _Xamarin.Forms에서 텍스트를 표시 합니다._
 
 ## <a name="text-decorations"></a>텍스트 장식
 
-밑줄 및 취소선 텍스트 장식을 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 설정 하 여 인스턴스를 `Label.TextDecoration` 속성을 하나 이상의 `TextDecoration` 열거형 멤버:
+밑줄 및 취소선 텍스트 장식을 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 설정 하 여 인스턴스를 `Label.TextDecorations` 속성을 하나 이상의 `TextDecorations` 열거형 멤버:
 
 - `None`
 - `Underline`
 - `Strikethrough`
 
-다음 XAML 예제에서는 설정 된 `Label.TextDecoration` 속성:
+다음 XAML 예제에서는 설정 된 `Label.TextDecorations` 속성:
 
 ```xaml
 <Label Text="This is underlined text." TextDecorations="Underline"  />
@@ -44,7 +44,7 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-다음 스크린샷에서 표시 된 `TextDecoration` 열거형 멤버에 적용 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스:
+다음 스크린샷에서 표시 된 `TextDecorations` 열거형 멤버에 적용 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스:
 
 ![](label-images/label-textdecorations.png "텍스트 장식으로 레이블")
 
@@ -158,7 +158,7 @@ var label =
 - [`Style`](xref:Xamarin.Forms.Span.Style) – 범위에 적용할 스타일입니다.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – 텍스트 범위입니다.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 범위에 있는 텍스트의 색입니다.
-- `TextDecoration` -범위에 있는 텍스트에 적용할 장식 합니다. 자세한 내용은 [텍스트 장식을](#text-decorations)합니다.
+- `TextDecorations` -범위에 있는 텍스트에 적용할 장식 합니다. 자세한 내용은 [텍스트 장식을](#text-decorations)합니다.
 
 또한 합니다 [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) 응답할 제스처에서 제스처 인식기의 컬렉션을 정의 하려면 속성을 사용할 수 있습니다 합니다 [ `Span` ](xref:Xamarin.Forms.Span)합니다.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156979"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234988"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
-<p><img src="Images/Cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />책 <i>Creating Mobile Apps with Xamarin.Forms</i> Charles petzold가 저술한는 Xamarin.Forms 응용 프로그램을 작성 하는 방법에 대 한 가이드입니다. 유일한 필수 구성 요소는 C# 프로그래밍 언어의 기술입니다. 책은 Xamarin.Forms 사용자 인터페이스에 광범위 한 탐색을 제공 하 고 또한 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러, 및 등을 다룹니다. 
+<p><img src="images/cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />책 <i>Creating Mobile Apps with Xamarin.Forms</i> Charles petzold가 저술한는 Xamarin.Forms 응용 프로그램을 작성 하는 방법에 대 한 가이드입니다. 유일한 필수 구성 요소에 대 한 지식이 됩니다는 C# 프로그래밍 언어입니다. 책은 Xamarin.Forms 사용자 인터페이스에 광범위 한 탐색을 제공 하 고 또한 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러, 및 등을 다룹니다. 
 
 책은 2016 년 봄에 게시 된 및 이후로 업데이트 되지 않았습니다. 가 책에는 계속 제공 하지만 일부는 [자료는 오래 된](#ways-in-which-the-book-is-outdated), 일부 항목은 더 이상 완전히 잘못 완료 및 합니다. 
 

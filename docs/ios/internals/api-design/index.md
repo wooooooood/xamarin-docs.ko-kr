@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116955"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235053"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -107,7 +107,7 @@ Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C
 
 ##### <a name="nsobject"></a>NSObject
 
-합니다 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) 형식은 모든 Objective-c 바인딩 위한 기초입니다. Xamarin.iOS 형식 반영 된 CocoaTouch Api iOS에서 형식의 두 클래스: (이러한 모든 NSObject 클래스에서 파생) Objective-c 형식과 C 형식 (일반적으로 하는 이러한 CoreFoundation 형식).
+합니다 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) 형식은 모든 Objective-c 바인딩 위한 기초입니다. Xamarin.iOS 형식 반영 된 CocoaTouch Api iOS에서 형식의 두 클래스: (이러한 모든 NSObject 클래스에서 파생) Objective-c 형식과 C 형식 (일반적으로 CoreFoundation 형식 이라고 함).
 
 관리 되지 않는 형식 반영 하는 각 형식에 대해를 통해 네이티브 개체를 가져올 수 있기를 [처리](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) 속성입니다.
 

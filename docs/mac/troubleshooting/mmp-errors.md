@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: 3c7b7c39eb714dbd47049c9440c188667a75e48f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106275"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234975"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 오류 메시지 (mmp)
 
@@ -23,9 +23,9 @@ ms.locfileid: "50106275"
 
 <a name="MM0000" />
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM0000: 예기치 않은 오류-파일 버그를 보고 하십시오에서 http://bugzilla.xamarin.com
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: 예기치 않은 오류-파일 버그를 보고 하십시오에서 https://github.com/xamarin/xamarin-macios/issues/new
 
-예기치 않은 오류가 발생 했습니다. 하세요 [버그 보고서](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 최대한 많은 정보를 포함 합니다.
+예기치 않은 오류가 발생 했습니다. 하세요 [버그 보고서](https://github.com/xamarin/xamarin-macios/issues/new) 최대한 많은 정보를 포함 합니다.
 
 * 전체 최대의 자세한 정도 사용 하 여 로그를 빌드합니다 (예: `-v -v -v -v` 에 **추가 mmp 인수**);
 * 오류를 재현 하는 최소한의 테스트 사례 및
