@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 69fc4fe8f8cd6031d592289e81d4c8a5ee14e054
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
-ms.translationtype: HT
+ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "36935141"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235040"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
-Maps 응용 프로그램을 사용 하는 것은 유용 하지만 응용 프로그램에서 직접 지도 포함 하려는 경우가 있습니다. 맵 응용 프로그램을 기본 제공 하는 것 외에도 Google도 제공 합니다.는 [Android 용 네이티브 매핑 API](hhttps://developers.google.com/maps/documentation/android-sdk/intro)합니다.
+Maps 응용 프로그램을 사용 하는 것은 유용 하지만 응용 프로그램에서 직접 지도 포함 하려는 경우가 있습니다. 맵 응용 프로그램을 기본 제공 하는 것 외에도 Google도 제공 합니다.는 [Android 용 네이티브 매핑 API](https://developers.google.com/maps/documentation/android-sdk/intro)합니다.
 Maps API를 통한 매핑 환경 더 많은 제어를 유지 관리 하려는 경우에 적합 합니다. Maps API를 사용할 수 있는 사항은 다음과 같습니다.
 
 -  Map의 관점을 프로그래밍 방식으로 변경 합니다.
