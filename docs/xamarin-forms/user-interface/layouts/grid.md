@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301242"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 표
 
@@ -22,12 +22,12 @@ ms.locfileid: "38994504"
 
 이 문서에서는 설명 합니다.
 
-- **[목적은](#Purpose)**  &ndash; 의 일반적인 용도 `Grid`합니다.
-- **[사용 현황](#Usage)**  &ndash; 사용 하는 방법을 `Grid` 원하는 디자인을 달성 하기 위해.
-  - **[행 및 열](#Rows_and_Columns)**  &ndash; 행 및 열에 대 한 지정 된 `Grid`합니다.
-  - **[뷰를 배치](#Placing_Views)**  &ndash; 표에 특정 행과 열에서 뷰를 추가 합니다.
-  - **[간격](#Spacing)**  &ndash; 행 및 열 사이의 간격을 구성 합니다.
-  - **[범위](#Spans)**  &ndash; 여러 행 또는 열에 걸쳐에 요소를 구성 합니다.
+- **[목적은](#purpose)**  &ndash; 의 일반적인 용도 `Grid`합니다.
+- **[사용 현황](#usage)**  &ndash; 사용 하는 방법을 `Grid` 원하는 디자인을 달성 하기 위해.
+  - **[행 및 열](#rows-and-columns)**  &ndash; 행 및 열에 대 한 지정 된 `Grid`합니다.
+  - **[뷰를 배치](#placing-views-in-a-grid)**  &ndash; 표에 특정 행과 열에서 뷰를 추가 합니다.
+  - **[간격](#spacing)**  &ndash; 행 및 열 사이의 간격을 구성 합니다.
+  - **[범위](#spans)**  &ndash; 여러 행 또는 열에 걸쳐에 요소를 구성 합니다.
 
 ![](grid-images/grid.png "표 탐색")
 
@@ -42,8 +42,6 @@ ms.locfileid: "38994504"
 ## <a name="usage"></a>사용법
 
 기존 테이블과 달리 `Grid` 에서는 행 및 열 콘텐츠에서 크기와 수를 유추 하지 않습니다. 대신 `Grid` 했습니다 `RowDefinitions` 고 `ColumnDefinitions` 컬렉션입니다. 이러한 행과 열 개수는 배치의 정의 보유 합니다. 보기에 추가 됩니다 `Grid` 는 지정 된 행 및 열 인덱스를 사용 하 여 식별 행 및 열 뷰를 배치 해야 합니다.
-
-<a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>행 및 열
 
@@ -83,8 +81,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### <a name="placing-views-in-a-grid"></a>뷰는 표에 배치
 
