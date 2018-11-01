@@ -1,18 +1,18 @@
 ---
 title: Android Emulator 설정
-description: Android Emulator를 다양한 구성으로 실행하여 다양한 장치를 시뮬레이션할 수 있습니다. 이 가이드에서는 앱 테스트를 위해 Android Emulator를 준비하는 방법을 설명합니다.
+description: Android Emulator를 다양한 구성으로 실행하여 다양한 장치를 시뮬레이션할 수 있습니다. 이 가이드에서는 앱을 테스트하기 위해 Android Emulator를 준비하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 06/22/2018
-ms.openlocfilehash: f281227ae6ee17548e9c4653d52c7ae6d2bfff2d
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+author: conceptdev
+ms.author: crdun
+ms.date: 08/27/2018
+ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935037"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102531"
 ---
 # <a name="android-emulator-setup"></a>Android Emulator 설정
 
@@ -29,8 +29,7 @@ Android Emulator를 다양한 구성으로 실행하여 다양한 장치를 시�
 
 ### <a name="hardware-acceleration-for-emulator-performanceandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-Android Emulator 성능을 최대화하기 위해 컴퓨터를 준비하는 방법입니다.
-Android Emulator는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 이 에뮬레이터를 사용하기 전에 컴퓨터에 하드웨어 가속을 활성화하는 것이 좋습니다.
+Hyper-V 또는 HAXM 가상화 기술을 사용하여 Android Emulator 성능을 최대화하도록 컴퓨터를 준비하는 방법입니다. Android Emulator는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 이 에뮬레이터를 사용하기 전에 컴퓨터에 하드웨어 가속을 활성화하는 것이 좋습니다.
 
 ### <a name="managing-virtual-devices-with-the-android-device-managerandroidget-startedinstallationandroid-emulatordevice-managermd"></a>[Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md)
 

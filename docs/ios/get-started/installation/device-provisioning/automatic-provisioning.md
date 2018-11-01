@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 5cb388df6223ebfe0a196e7db38495bf7723943f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986189"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110650"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -20,12 +20,12 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="requirements"></a>요구 사항
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - Mac용 Visual Studio 7.3 이상
 - Xcode 9 이상
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Visual Studio 2017 버전 15.7 (이상)
 
@@ -40,16 +40,20 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 자동 서명 프로세스를 시작하기 전에 [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md) 가이드에 설명된 대로 Visual Studio에 추가된 Apple ID가 있는지 확인해야 합니다. Apple ID를 추가했다면 모든 관련 _팀_을 사용할 수 있습니다. 따라서 팀에 대해 인증서, 프로필 및 다른 ID를 만들 수 있습니다. 팀 ID는 프로비저닝 프로필에 포함될 앱 ID에 대한 접두사를 만들 때도 사용됩니다. 이 요소가 있으면 Apple이 신원을 확인할 수 있습니다.
 
 > [!IMPORTANT]
-> 시작하기 전에 [iTunes Connect](https://itunesconnect.apple.com/) 또는 [appleid.apple.com](https://appleid.apple.com)에 로그인하여 최신 Apple 계정 정책에 동의했는지 확인하세요. 메시지가 표시되면 단계를 완료하여 Apple의 새 계정 계약에 동의합니다. 2018년 5월부터 개인 정보 보호 계약에 동의하지 않은 경우 장치를 프로비전하려고 할 때 다음 경고가 표시됩니다.
+> 시작하기 전에 [iTunes Connect](https://itunesconnect.apple.com/) 또는 [appleid.apple.com](https://appleid.apple.com)에 로그인하여 최신 Apple 계정 정책에 동의했는지 확인하세요. 메시지가 표시되면 단계를 완료하여 Apple의 새 계정 계약에 동의합니다. 2018년 5월부터 개인 정보 보호 계약에 동의하지 않은 경우 장치를 프로비저닝할 때 다음 경고 중 하나가 표시됩니다.
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
->}
->```
+> }
+> ```
+> 또는
+> ```
+> Authentication Service Is Unavailable
+> ```
 
 IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac용 Visual Studio에서 iOS 프로젝트를 엽니다.
 
@@ -67,7 +71,7 @@ IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합�
 
     자동 서명이 실패하면 **자동 서명 패드**에 오류의 원인이 표시됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2017을 페어링합니다.
 
@@ -99,6 +103,30 @@ IOS 장치에 배포할 앱에 자동으로 서명하려면 다음을 수행합�
     - 이 기능은 앱 ID에 추가되고, 업데이트된 앱 ID가 포함된 새 프로비저닝 프로필이 생성됩니다.
     - 일부 기능은 현재 지원되지 않습니다. 지원되는 기능에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
 
+## <a name="wildcard-app-ids"></a>와일드카드 앱 ID
+
+Mac용 Visual Studio 7.6부터 자동 프로비저닝에서는 기본적으로 **Info.plist**에 지정된 **번들 식별자**를 기반으로 앱 ID 대신, 와일드카드 앱 ID 및 프로비저닝 프로필을 생성하고 사용하려고 시도합니다. 와일드카드 앱 ID는 프로필 및 Apple Developer Portal에서 유지 관리하는 ID 수를 줄입니다.
+
+경우에 따라 앱의 자격에는 명시적인 앱 ID가 필요합니다. 다음 자격은 와일드카드 앱 ID를 지원하지 않습니다.
+
+- 앱 그룹
+- 연결된 도메인
+- Apple Pay
+- Game Center
+- HealthKit
+- HomeKit
+- 핫스폿
+- 앱에서 바로 구매
+- 다중 경로
+- NFC
+- 개인 VPN
+- 푸시 알림
+- 무선 액세서리 구성
+
+앱에서 이러한 자격 중 하나를 사용하는 경우 Mac용 Visual Studio는 와일드카드 대신 명시적인 앱 ID를 만들려고 시도합니다.
+
+> [!NOTE]
+> 와일드카드 앱 ID를 포함한 자동 프로비저닝은 현재 Mac용 Visual Studio에서만 사용할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -3,15 +3,15 @@ title: 빌드 프로세스
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 63e86ef89c8d736640e7677fee6147feacc87bdc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108927"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -327,7 +327,8 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     예를 들어 `abi`가 `armeabi`이고 매니페스트의 `versionCode`가 `123`일 경우 `{abi}{versionCode}`는 `$(AndroidCreatePackagePerAbi)`가 True일 때 `1123`의 versionCode를 생성하고, 그렇지 않을 경우 값 123을 생성합니다.
     `abi`가 `x86_64`이고 매니페스트의 `versionCode`가 `44`일 경우. `$(AndroidCreatePackagePerAbi)`가 True일 때 `544`를 생성하고, 그렇지 않을 경우 값 `44`를 생성합니다.
 
-    왼쪽 안쪽 여백 문자열 `{abi}{versionCode:0000}`을 포함할 경우 `versionCode`의 왼쪽 안쪽 여백이 `0`이므로 `50044`가 생성됩니다. 또는 이전 예제와 동일한 작업을 수행하는 `{abi}{versionCode:D4}`와 같은 10진수 패딩을 사용할 수 있습니다.
+    왼쪽 안쪽 여백 문자열 `{abi}{versionCode:0000}`을 포함할 경우 `versionCode`의 왼쪽 안쪽 여백이 `0`이므로 `50044`가 생성됩니다. 또는 `{abi}{versionCode:D4}`와 같은 10진수 패딩을 사용할 수 있습니다.
+    이전 예제와 동일한 역할을 합니다.
 
     값이 정수여야 하므로 '0' 및 'Dx' 같은 안쪽 여백 형식만 지원됩니다.
     

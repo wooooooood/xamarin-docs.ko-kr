@@ -7,14 +7,14 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 35c7605f9682bef9e93fb4f25404659662126a9d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111332"
 ---
-# <a name="getting-started-with-xamarin"></a>Xamarin 시작
+# <a name="get-started-with-xamarin"></a>Xamarin 시작
 
 시작하기 전에 [시스템 요구 사항](requirements.md) 및 [설치 지침](installation/index.md)을 확인하여 모든 항목을 사용할 준비가 되도록 합니다.
 
@@ -27,7 +27,6 @@ Android XML 또는 Xcode Storyboard와 같은 기본 UI 기술을 사용하여 �
 
 - [Android 빠른 시작](~/android/get-started/hello-android/hello-android-quickstart.md)
 - [iOS 빠른 시작](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-- [Mac 시작](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>모바일 개발 시작하기
 

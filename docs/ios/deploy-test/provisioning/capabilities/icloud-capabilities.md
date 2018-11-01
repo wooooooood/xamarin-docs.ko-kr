@@ -4,15 +4,15 @@ description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a1d2197a4cc7c7bf8fc9b69463a4679389e45ee8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 13d0e7a70c91c6e3e422f2e91cefc403627a340c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105521"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 
@@ -107,6 +107,6 @@ iCloud 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.
 * 앱에 필요한 자격을 추가합니다. 필요한 자격 및 추가 방법에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
-* 앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
+* 앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이  _아닙니다_ .
 
 앱 서비스에 문제가 발생하면 주 가이드의 [문제 해결](~/ios/deploy-test/provisioning/capabilities/index.md) 섹션을 참조하세요.

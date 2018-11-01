@@ -3,21 +3,21 @@ title: GDB
 ms.prod: xamarin
 ms.assetid: CD0BE462-FA38-4881-B481-82AD05B3B8FE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 886cc1de87bd8225bd0389d2e7b84b546ffb39d7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241499"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111384"
 ---
 # <a name="gdb"></a>GDB
 
 ## <a name="overview"></a>개요
 
-Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 사용하여 `gdb`를 사용하는 부분적인 지원을 도입했습니다. 
+Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 통해 `gdb`를 사용하는 부분적인 지원을 도입했습니다. 
 
 > [!NOTE]
 > `gdb` 지원을 위해서는 Android NDK를 설치해야 합니다.
@@ -37,7 +37,7 @@ Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 사용하여 `gdb`를 사용하
 
 빠른 배포가 활성화된 디버그 빌드를 빌드하고 배포할 때는 `_Gdb` MSBuild 대상을 사용하여 `gdb`를 연결할 수 있습니다.
 
-첫째, 앱을 설치합니다. 이는 IDE 또는 명령줄을 통해 수행할 수 있습니다.
+먼저 앱을 설치합니다. 이는 IDE 또는 명령줄을 통해 수행할 수 있습니다.
 
 ```bash
 $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:Install *.csproj

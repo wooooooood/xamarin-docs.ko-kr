@@ -3,15 +3,15 @@ title: 키 저장소의 서명 찾기
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 46b43e6689f751c4fac1e8668234fce7f953521e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112469"
 ---
 # <a name="finding-your-keystores-signature"></a>키 저장소의 서명 찾기
 
@@ -21,7 +21,7 @@ Xamarin.Android 앱의 MD5 또는 SHA1 서명은 APK 서명에 사용된 **.keys
 
 Xamarin.Android는 동일한 **debug.keystore** 파일을 사용하여 모든 디버그 빌드에 서명합니다. 이 파일은 Xamarin.Android가 처음 설치될 때 생성됩니다. 아래 단계에는 기본 Xamarin.Android **debug.keystore** 파일의 MD5 또는 SHA1 서명을 찾는 과정이 자세히 설명되어 있습니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 응용 프로그램의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
@@ -60,7 +60,7 @@ Certificate fingerprints:
 ```
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 응용 프로그램의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
@@ -114,20 +114,20 @@ KeyIdentifier [
 
 사용자 지정 **.keystore** 파일을 사용하여 서명된 릴리스 빌드의 프로세스는 위와 동일하며, 릴리스 **.keystore** 파일이 Xamarin.Android에서 사용하는 **debug.keystore** 파일을 대체합니다. 릴리스 키 저장소 파일이 생성된 경우 키 저장소 암호와 별칭 이름의 고유한 값을 대체합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio **배포** 마법사를 사용하여 Xamarin.Android 앱에 서명한 경우 결과 키 저장소는 다음 위치에 있습니다.
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*alias*\\*alias*.keystore**
 
 예를 들어 [새 인증서 만들기](~/android/deploy-test/signing/index.md#newcertvs)의 단계를 따라 새 서명 키를 만든 경우 결과 예제 키 저장소는 다음 위치에 있습니다.
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 응용 프로그램 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio **서명 및 배포...** 마법사를 사용하여 앱에 서명한 경우 결과 키 저장소는 다음 위치에 있습니다.
 

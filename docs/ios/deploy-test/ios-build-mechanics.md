@@ -4,15 +4,15 @@ description: 이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104845"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -27,7 +27,7 @@ Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의
 
 ## <a name="timing-apps"></a>타이밍 앱
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
@@ -40,7 +40,7 @@ Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 7. 빌드 출력 단추를 클릭하여 오류 패드 내에서 진단 출력 보기(보기 > 패드 > 오류)
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 기술적으로 Xamarin 도구는 OS X 10.10 Yosemite 이상을 실행할 수 있는 모든 Mac에서 작동합니다. 그러나 Mac의 성능에 따라 개발자 환경 및 빌드 시간이 영향을 받을 수 있습니다.
 
-연결이 끊어진 상태에서는 Windows의 Visual Studio가 C# 컴파일 단계만 수행하고 연결 또는 AOT 컴파일을 수행하거나 앱을 _.app_ 번들로 패키지하거나 앱 번들을 서명하려는 시도를 하지 않습니다. (C# 컴파일 단계에서는 거의 성능 병목 현상이 거의 발생하지 않습니다.) Mac용 Visual Studio의 Mac 빌드 호스트에서 바로 빌드하여 파이프라인에서 빌드 속도가 느려지는 지점을 찾아보세요.
+연결이 끊어진 상태에서는 Windows의 Visual Studio가 C# 컴파일 단계만 수행하고 연결 또는 AOT 컴파일을 수행하거나 앱을  _.app_  번들로 패키지하거나 앱 번들을 서명하려는 시도를 하지 않습니다. (C# 컴파일 단계에서는 거의 성능 병목 현상이 거의 발생하지 않습니다.) Mac용 Visual Studio의 Mac 빌드 호스트에서 바로 빌드하여 파이프라인에서 빌드 속도가 느려지는 지점을 찾아보세요.
 
 
 뿐만 아니라, 응답 속도가 느려지는 보다 일반적인 위치 중 하나는 Windows 컴퓨터와 Mac 빌드 호스트 간의 네트워크 연결입니다. 그 원인은 네트워크상의 물리적 제한일 수도 있고(무선 연결을 사용하는 경우) 또는 포화된 컴퓨터(예: 클라우드 서비스의 Mac)를 통과해야 하기 때문일 수도 있습니다.
@@ -131,7 +131,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
   - 단일 아키텍처(예: ARM64)를 빌드하는 것이 FAT 이진 파일(예: ARMv7 + ARM64)보다 빠릅니다.
   - 디버깅할 때 PNG 파일을 최적화하지 마세요.
   - 모든 어셈블리를 연결하는 방안을 고려해 봅니다. 모든 어셈블리를 최적화 
-  - `--dsym=false`를 사용하여 디버그 기호 생성을 해제합니다. 그러나 디버그 기호 생성을 해제하면 앱이 제거되지 않은 경우에만, 앱을 빌드한 컴퓨터에서만 크래시 보고서가 기호화됩니다.
+  -  `--dsym=false`를 사용하여 디버그 기호 생성을 해제합니다. 그러나 디버그 기호 생성을 해제하면 앱이 제거되지 않은 경우에만, 앱을 빌드한 컴퓨터에서만 크래시 보고서가 기호화됩니다.
 
  
 다음과 같은 항목을 피해야 합니다.

@@ -4,15 +4,15 @@ description: 디버그 로그를 사용하여 Xamarin.Android 응용 프로그�
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114784"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
@@ -33,7 +33,7 @@ ms.locfileid: "36935219"
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Visual Studio에서 디버그 로그에 액세스
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **장치 로그** 도구를 열려면 도구 모음에서 **장치 로그(logcat)** 아이콘을 클릭합니다.
 
@@ -65,10 +65,10 @@ ms.locfileid: "36935219"
 
 [![Device Selector(장치 선택기)의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
-장치가 선택되면 **장치 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. 이러한 로그 항목은 로그 항목 테이블에 표시됩니다.&ndash; 장치 간에 전환하면 장치 로깅이 중지되었다가 다시 시작됩니다. 장치 선택기에 장치가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 장치 선택기에 장치가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 장치 드롭다운 메뉴에서 장치가 사용 가능한지 확인합니다.
+장치가 선택되면 **장치 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 장치 간에 전환하면 장치 로깅이 중지되었다가 다시 시작됩니다. 장치 선택기에 장치가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 장치 선택기에 장치가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 장치 드롭다운 메뉴에서 장치가 사용 가능한지 확인합니다.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 **장치 로그**를 열려면 **보기 > 패드 > 장치 로그**를 클릭합니다.
 
@@ -100,14 +100,14 @@ ms.locfileid: "36935219"
 
 [![Device selector(장치 선택기)의 위치](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
-장치가 선택되면 **장치 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. 이러한 로그 항목은 로그 항목 테이블에 표시됩니다.&ndash; 장치 간에 전환하면 장치 로깅이 중지되었다가 다시 시작됩니다. 장치 선택기에 장치가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 장치 선택기에 장치가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 장치 드롭다운 메뉴에서 장치가 사용 가능한지 확인합니다.
+장치가 선택되면 **장치 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 장치 간에 전환하면 장치 로깅이 중지되었다가 다시 시작됩니다. 장치 선택기에 장치가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 장치 선택기에 장치가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 장치 드롭다운 메뉴에서 장치가 사용 가능한지 확인합니다.
 
 -----
 
 
 ## <a name="accessing-from-the-command-line"></a>명령줄에서 액세스
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 디버그 로그를 보는 또 다른 옵션은 명령줄을 통해서 보는 것입니다. 명령 프롬프트 창을 열고 Android SDK 플랫폼 도구 폴더(일반적으로 SDK 플랫폼 도구 폴더는 **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools**에 있음)로 이동합니다.
 
@@ -117,7 +117,7 @@ ms.locfileid: "36935219"
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 디버그 로그를 보는 또 다른 옵션은 명령줄을 통해서 보는 것입니다. 터미널 창을 열고 Android SDK 플랫폼 도구 폴더(일반적으로 SDK 플랫폼 도구 폴더는 **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**에 있음)로 이동합니다.
 

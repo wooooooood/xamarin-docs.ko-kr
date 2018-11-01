@@ -4,15 +4,15 @@ description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785072"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112353"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 
@@ -40,11 +40,11 @@ Apple Pay를 사용하면 사용자의 iOS 장치를 통해 실제 상품을 구
 
 2.  **식별자** 아래에서 **가맹점 ID**를 선택한 다음, **+** 를 선택하여 새 가맹점 ID를 만듭니다.  
 
-3.  아래 설명된 양식에 새로운 설명과 식별자를 입력합니다. 설명을 통해 ID를 식별할 수 있고 나중에 변경할 수 있습니다. 식별자는 고유해야 하며 `merchant` 문자열로 시작해야 합니다. 식별자는 다음과 같은 형식을 사용하는 것이 좋습니다. `merchant.com.[Your-App-Name]`
+3.  아래 설명된 양식에 새로운 설명과 식별자를 입력합니다. 설명을 통해 ID를 식별할 수 있고 나중에 변경할 수 있습니다. 식별자는 고유해야 하며  `merchant` 문자열로 시작해야 합니다. 식별자는 다음과 같은 형식을 사용하는 것이 좋습니다. `merchant.com.[Your-App-Name]`
    
     ![새 가맹점 ID 세부 정보](apple-pay-capabilities-images/image58.png)
 
-4.  세부 정보를 확인하고 ID를 **등록**합니다. 
+4.  세부 정보를 확인하고 ID를  **등록** 합니다. 
     
     ![가맹점 ID 확인](apple-pay-capabilities-images/image59.png)
 
@@ -154,6 +154,6 @@ Apple Pay 사용에 대한 자세한 내용은 다음 가이드를 참조하세�
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.
 * 앱에 필요한 자격을 추가합니다. 필요한 자격 및 추가 방법에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
-* 앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
+* 앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이  _아닙니다_ .
 
 앱 서비스에 문제가 발생하면 주 가이드의 [문제 해결](~/ios/deploy-test/provisioning/capabilities/index.md) 섹션을 참조하세요.

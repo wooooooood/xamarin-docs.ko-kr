@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 응용 프로그램에서 성능 �
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: caf35ab601d20e1cb235ab9ebb131e6dffc614fc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514465"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108882"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -101,7 +101,9 @@ container.AddSubview (new MyView (container));
 
 여기에서 포함된 개체는 부모를 활성 상태로 유지합니다. 그러나 부모는 `container.AddSubView`에 수행한 호출을 통해 자식을 활성 상태로 유지합니다.
 
-또한 이는 대리자 또는 데이터 원본 패턴을 사용하는 iOS API에서도 발생합니다. 예를 들어 [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) 클래스에서 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) 속성 또는 [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)를 설정할 때 피어 클래스에 구현이 포함됩니다.
+이는 대리자 또는 데이터 원본 패턴을 사용하는 iOS API에서도 발생합니다. 예를 들어 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) 클래스에서
+[`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) 속성 또는
+[`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/)를 설정할 때 피어 클래스에 구현이 포함됩니다.
 
 하위 클래스를 만드는 대신 수행할 수 있는 작업인 [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/)와 같이 프로토콜을 구현하기 위해 순전히 만들어진 클래스의 경우, 클래스에서 인터페이스를 구현하고, 메서드를 재정의하고, `DataSource` 속성을 `this`에 할당할 수 있습니다.
 

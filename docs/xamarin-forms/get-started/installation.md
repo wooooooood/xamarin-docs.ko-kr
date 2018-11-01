@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
-ms.openlocfilehash: 75e6d25f95a0a3f18c83fe73f67ad4a7797f0924
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: 504f20f6575e559d7c4965643b74b407d5e84de8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34470332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112365"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 
@@ -25,7 +25,7 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 다음 운영 체제에 대한 Xamarin.Forms 응용 프로그램을 작성할 수 있습니다.
 
 - iOS 8 이상
-- Android 4.0.3(API 15) 이상([자세한 내용](#android))
+- Android 4.4(API 19) 이상([자세한 내용](#android))
 - [Windows 10 UWP(유니버설 Windows 플랫폼)](#windows10)
 
 개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)에 익숙하다고 가정합니다.
@@ -50,15 +50,15 @@ Xamarin.Forms 3.0을 사용하는 경우 이러한 플랫폼은 지원되지 않
 
 최신 Android SDK 도구 및 Android API 플랫폼이 설치되어 있어야 합니다. [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 사용하여 최신 버전으로 업데이트할 수 있습니다.
 
-또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.0.3 이상을 사용하는 장치를 계속 지원할 수 있도록 API 15로 설정될 수 있습니다. 이러한 값은 **프로젝트 옵션**에 설정됩니다.
+또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 장치를 계속 지원할 수 있도록 API 19로 설정될 수 있습니다. 이러한 값은 **프로젝트 옵션**에 설정됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **프로젝트 옵션 > 응용 프로그램 > 응용 프로그램 속성**
 
 ![](installation-images/options-android-vs-sml.png "Visual Studio의 Android 빌드 옵션")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 **빌드 > 일반**
 

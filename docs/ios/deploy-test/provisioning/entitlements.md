@@ -4,15 +4,15 @@ description: 자격은 특수 앱 기능이며 올바르게 사용하도록 구�
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103415"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Xamarin.iOS에서 자격 사용
 
@@ -20,12 +20,11 @@ _자격은 특수 앱 기능이며 올바르게 사용하도록 구성된 응용
 
 iOS에서 앱은 응용 프로그램과 특정 시스템 리소스 또는 사용자 데이터 사이의 액세스를 제한하는 일련의 규칙을 제공하는 _샌드박스_에서 실행됩니다. _자격_은 시스템이 샌드박스를 확장하여 앱에 추가 기능을 제공하도록 요청하는 데 사용됩니다.
 
-앱의 기능을 확장하려면 앱의 Entitlements.plist 파일에 자격을 제공해야 합니다. 특정 기능만 확장이 가능하며 이러한 기능은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드에 나열되어 있고 [아래](#keyreference) 설명되어 있습니다. 자격은 시스템에 키/값 쌍으로 전달되며 일반적으로 기능당 하나만 필요합니다. 구체적인 키와 값은 이 가이드의 뒷부분에 나오는 [자격 키 참조](#keyreference) 섹션에 설명되어 있습니다.
+앱의 기능을 확장하려면 앱의 Entitlements.plist 파일에 자격을 제공해야 합니다. 특정 기능만 확장이 가능하며 이러한 기능은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드에 나열되어 있고 [아래](#entitlement-key-reference) 설명되어 있습니다. 자격은 시스템에 키/값 쌍으로 전달되며 일반적으로 기능당 하나만 필요합니다. 구체적인 키와 값은 이 가이드의 뒷부분에 나오는 [자격 키 참조](#entitlement-key-reference) 섹션에 설명되어 있습니다.
 Mac용 Visual Studio와 Visual Studio는 Entitlements.plist 편집기를 통해 Xamarin.iOS 앱에 자격을 추가할 수 있는 명확한 인터페이스를 제공합니다.
 이 가이드에서는 Entitlements.plist 편집기를 소개하고 이 편집기를 사용하는 방법을 소개합니다. 또한 각 기능에 대해 iOS 프로젝트에 추가할 수 있는 모든 자격에 대한 참조를 제공합니다.
 
 ## <a name="entitlements-and-provisioning"></a>자격 및 프로비전
-
 
 Entitlements.plist 파일은 자격을 지정하는 데 사용되며 응용 프로그램 번들에 서명하는 데 사용됩니다.
 
@@ -38,7 +37,7 @@ Entitlements.plist 파일은 자격을 지정하는 데 사용되며 응용 프�
 
 앱 ID를 정의할 때 필요한 응용 프로그램 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격을 구성해야 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
@@ -55,7 +54,7 @@ Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 응용 프로그램에 필요한 자격을 선택하고 구성합니다.
 6. 변경 내용을 **Entitlements.plist** 파일에 저장합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
@@ -74,10 +73,7 @@ Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 응용 프로그램에 필요한 자격을 선택하고 구성합니다.
 6. 변경 내용을 **Entitlements.plist** 파일에 저장합니다.
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>새 Entitlements.plist 파일 추가
 
@@ -91,8 +87,6 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 2.  새 파일 대화 상자에서 **iOS > 속성 목록**을 선택하고 Entitlements라고 이름을 지정합니다.
 
     ![새 파일 대화 상자](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>자격 키 참조
 
@@ -150,7 +144,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 ### <a name="push-notifications"></a>푸시 알림
 
 - **키**: aps-environment
-- **문자열**: `production` 또는 `development`
+- **문자열**: `development` 또는 `production`
 
 ### <a name="siri"></a>Siri
 
@@ -203,6 +197,12 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 - **설명**: 무선 액세서리 구성을 사용하면 앱에서 MFi Wi-Fi 액세서리를 구성할 수 있습니다.
     - **키**: com.apple.external-accessory.wireless-configuration
     - **부울**: YES
+
+### <a name="classkit"></a>ClassKit
+
+- **설명**: ClassKit을 사용하면 교사가 앱에서 할당된 활동에 대한 학생의 진행 상황을 볼 수 있습니다.
+    - **키**: com.apple.developer.ClassKit-environment
+    - **문자열**: `development` 또는 `production`
 
 ## <a name="summary"></a>요약
 

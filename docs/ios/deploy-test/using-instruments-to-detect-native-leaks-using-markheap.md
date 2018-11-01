@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple의 계측 앱을 사용하여 장치 또�
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
-ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
+ms.openlocfilehash: cef817c30dd20840c440cdbbdc8145047ad1fc0e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39182210"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110793"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 응용 프로그램 프로파일링
 
