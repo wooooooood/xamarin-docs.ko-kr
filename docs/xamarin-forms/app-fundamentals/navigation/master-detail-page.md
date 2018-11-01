@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675525"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 페이지
 
@@ -45,7 +45,7 @@ _Xamarin.Forms MasterDetailPage에 두 관련된 페이지의 정보 항목을 �
 마스터 및 세부 정보 페이지 간에 탐색 환경의 동작은 플랫폼에 따라 다릅니다.
 
 - Ios의 경우 세부 정보 페이지 *슬라이드* 페이지 왼쪽에서 왼쪽된 부분 세부 정보에서 마스터 페이지 슬라이드도 오른쪽에 계속 표시 됩니다.
-- 세부 정보 및 마스터 페이지에 Android *겹쳐진* 서로 합니다.
+- 세부 정보 및 마스터 페이지에 Android *오버레이된* 서로 합니다.
 - 세부 정보 및 마스터 페이지에 UWP *교환*합니다.
 
 IOS 및 Android에서 마스터 페이지에 비슷한 폭 세로 모드에서 마스터 페이지와 세부 정보 페이지 자세히 볼 수 있도록 한다는 가로 모드로 비슷한 동작이 관찰 됩니다.
@@ -79,7 +79,7 @@ A [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 포함 [ `Master` 
 </MasterDetailPage>
 ```
 
-다음 코드 예제에서는 해당 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) C#에서 만든:
+다음 코드 예제에서는 해당 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 생성 C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -269,7 +269,7 @@ public partial class MainPage : MasterDetailPage
 </MasterDetailPage>
 ```
 
-다음 코드 예제에서는 해당 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) C#에서 만든:
+다음 코드 예제에서는 해당 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 생성 C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage

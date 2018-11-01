@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675213"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -85,7 +85,8 @@ ms.locfileid: "38995539"
 
 데이터 트리거 데이터 바인딩을 사용 하 여 다른 컨트롤을 모니터링 합니다 `Setter`호출 하도록 합니다. 대신 합니다 `Property` 속성 트리거 특성을 설정 합니다 `Binding` 특성에 지정 된 값에 대 한 모니터링을 합니다.
 
-아래 예제에서는 데이터 바인딩 구문을 사용 하 여 `{Binding Source={x:Reference entry}, Path=Text.Length}` 다른 컨트롤의 속성을 참조 하는 방법입니다. 때의 길이 `entry` 가 0 이면 트리거는 활성화 됩니다. 이 샘플에서 트리거 입력이 비어 있을 때 단추를 사용 하지 않습니다.
+아래 예제에서는 데이터 바인딩 구문 `{Binding Source={x:Reference entry}, Path=Text.Length}`
+다른 컨트롤의 속성을 참조 하는 방법입니다. 때의 길이 `entry` 가 0 이면 트리거는 활성화 됩니다. 이 샘플에서 트리거 입력이 비어 있을 때 단추를 사용 하지 않습니다.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 
 트리거를 공유 하는 경우 주의 `ResourceDictionary`를 한 번만 구성 된 모든 상태 모두에 적용 됩니다 있도록 하나의 인스턴스만 컨트롤 간에 공유 됩니다.
 
-이벤트 트리거를 지원 하지 않습니다 `EnterActions` 하 고 `ExitActions` [아래에 설명 된](#enterexit)합니다.    
+이벤트 트리거를 지원 하지 않습니다 `EnterActions` 하 고 `ExitActions` [아래에 설명 된](#enterexit)합니다.
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ A `MultiTrigger` 비슷합니다는 `Trigger` 또는 `DataTrigger` 제외 조건
 
 사용 하 여이 작업을 수행할 수 있습니다는 `IValueConverter`합니다. 변환 아래 변환기 코드를 `Text.Length` 에 바인딩는 `bool` 필드를 빈 인지 여부를 나타내는:
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ public class MultiTriggerConverter : IValueConverter
 XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음과 같은 차이점이 note:
 
 * 단추가 `IsEnabled="false"` 기본적으로 설정 합니다.
-* 다중 트리거 조건을 변환기를 사용 하 여 설정 하는 `Text.Length` 부울 값입니다.
+* 다중 트리거 조건을 변환기를 사용 하 여 설정 하는 `Text.Length` 값을 `boolean`입니다.
 * 모든 조건이 때 `true`, setter는 단추의 `IsEnabled` 속성 `true`합니다.
 
 ```xaml
@@ -266,7 +266,6 @@ XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음�
 
 이러한 스크린샷은 위의 두 가지 다중 트리거 예제 간의 차이 보여 줍니다. 화면 위쪽에 텍스트 입력에서 하나만 `Entry` 사용 하기에 충분 합니다 **저장** 단추.
 화면 아래쪽에는 **로그인** 단추 비활성 상태로 유지 될 두 필드에 데이터가 포함 될 때까지 합니다.
-
 
 ![](triggers-images/multi-requireall.png "MultiTrigger 예제")
 

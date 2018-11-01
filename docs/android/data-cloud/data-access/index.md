@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 19a2842fa7d29ed40052166b880bf4b26dc09e9c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674772"
 ---
 # <a name="xamarinandroid-data-access"></a>Xamarin.Android 데이터 액세스
 
@@ -20,18 +20,18 @@ _대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 
 
 ## <a name="data-access-overview"></a>데이터 액세스 개요
 
-대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구 사항이. 데이터의 양이 일반적으로 작은 아닌 일반적으로 데이터베이스 및 데이터 계층 응용 프로그램 데이터베이스 액세스를 관리 하에 있어야 합니다. Android 모두에 "기본 제공" Sqlite 데이터베이스 엔진 및 데이터에 대 한 액세스는 SQLite 데이터 공급자와 함께 제공 되는 Xamarin의 플랫폼을 통해 간소화 되었습니다.
+대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구 사항이. 데이터의 양이 일반적으로 작은 아닌 일반적으로 데이터베이스 및 데이터 계층 응용 프로그램 데이터베이스 액세스를 관리 하에 있어야 합니다. Android 모두에 "기본 제공" SQLite 데이터베이스 엔진 및 데이터에 대 한 액세스는 SQLite 데이터 공급자와 함께 제공 되는 Xamarin의 플랫폼을 통해 간소화 되었습니다.
 
 Xamarin.Android는와 같은 데이터베이스 액세스 Api를 지원 합니다.
 
--  ADO.NET 프레임 워크입니다.
--  SQLite-NET 타사 라이브러리입니다.
+- ADO.NET 프레임 워크입니다.
+- SQLite-NET 타사 라이브러리입니다.
 
 이 섹션의 코드 대부분 완전히 플랫폼 이며 수정 하지 않고 iOS 또는 Android에서 실행 됩니다. 설명 하는 두 개의 샘플 앱 가지가 있습니다.
 
--  [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; 간단한 데이터 작업 기록 결과 텍스트를 표시 컨트롤
+- [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; 간단한 데이터 작업 기록 결과 텍스트를 표시 컨트롤
 
--  [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; 데이터 작업을 나열 하 고 간단한 데이터 구조를 편집 하는 작은 작업 응용 프로그램을 통합 합니다.
+- [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; 데이터 작업을 나열 하 고 간단한 데이터 구조를 편집 하는 작은 작업 응용 프로그램을 통합 합니다.
 
 샘플 솔루션을 모두 iOS 및 Android 샘플 응용 프로그램 프로젝트를 포함 합니다.
 

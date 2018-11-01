@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d12815c92c1f608a5df4b3869fe9a17cb604b47a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
+ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109681"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50737208"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.Mac의 메뉴
 
@@ -839,7 +839,7 @@ menuItem.Activated += (sender, e) => {
 
 ```csharp
 // Define formatting commands
-FormattingCommands.Add(new LanguageFormatCommand("Stong","**","**"));
+FormattingCommands.Add(new LanguageFormatCommand("Strong","**","**"));
 FormattingCommands.Add(new LanguageFormatCommand("Emphasize","_","_"));
 FormattingCommands.Add(new LanguageFormatCommand("Inline Code","`","`"));
 FormattingCommands.Add(new LanguageFormatCommand("Code Block","```\n","\n```"));
@@ -861,8 +861,8 @@ FormattingCommands.Add (Headings);
 
 FormattingCommands.Add(new LanguageFormatCommand ());
 FormattingCommands.Add(new LanguageFormatCommand("Link","[","]()"));
-FormattingCommands.Add(new LanguageFormatCommand("Image","![]("-")"));
-FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![]("-")](linkimagehere/index.md)"));
+FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
+FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![](",")](LinkImageHere)"));
 ```
 
 있으며이 컬렉션을 전달 합니다 `AssembleMenu` 함수 (사용 하 여는 **형식** 메뉴 기본 설정), 다음 동적 메뉴 및 메뉴 항목 생성:

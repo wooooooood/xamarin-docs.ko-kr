@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 34e923e4df76680ad8d0be5f2844ef56b32af4db
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 625564eebf83b3075f61b1a25bde1a78abe1ca2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674914"
 ---
 # <a name="creating-a-custom-xamarinforms-theme"></a>사용자 지정 Xamarin.Forms 테마 만들기
 
@@ -20,13 +20,14 @@ ms.locfileid: "38985993"
 
 Nuget 패키지에서 테마를 추가 하는 것 외에도 (같은 합니다 [Light](~/xamarin-forms/user-interface/themes/light.md) 및 [어두운](~/xamarin-forms/user-interface/themes/dark.md) 테마), 앱에서 사용자 고유의 리소스 참조할 수 있는 사전 테마를 만들 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 세 가지 `BoxView`s에 표시 합니다 [테마 페이지](~/xamarin-forms/user-interface/themes/index.md) 는 두 개의 다운로드 가능한 테마에 정의 된 세 가지 클래스에 따라 스타일이 지정 합니다.
 
 작동 방식을 이해, 다음 태그에 직접 추가할 수는 해당 하는 스타일을 만듭니다 하 **App.xaml**합니다.
 
-참고를 `Class` 특성에 대 한 `Style` (반대인 합니다 [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms의 이전 버전에서 사용할 수 있는 특성).
+참고 합니다 `Class` 에 대 한 특성 `Style` (아닌 사이트별로 [`x:Key`](~/xamarin-forms/user-interface/styles/inheritance.md)
+특성 Xamarin.Forms의 이전 버전에서 사용할 수 있습니다).
 
 ```xml
 <ResourceDictionary>
@@ -200,7 +201,7 @@ namespace ThemesDemo.Droid
 
         protected override bool CanBeApplied()
         {
-            return Container != null && (int)Android.OS.Build.VERSION.SdkInt >= 21;
+            return Container != null && Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop;
         }
 
         protected override void OnAttachedInternal()

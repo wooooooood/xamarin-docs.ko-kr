@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b18d042e34146a72b488da9017648a430c9cd353
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675258"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
@@ -22,7 +22,7 @@ ms.locfileid: "38996375"
 
 간의 데이터 바인딩을 허용 하는 `Button` 및 ViewModel을 `Button` 두 속성을 정의:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) 형식의 <xref:System.Windows.Input.ICommand>
+- [`Command`](xref:Xamarin.Forms.Button.Command) 형식의 [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
 - [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) 형식의 `Object`
 
 명령 인터페이스를 사용 하려면 대상으로 하는 데이터 바인딩을 정의 `Command` 의 속성을 `Button` 여기서 소스는 형식의 ViewModel의 속성 `ICommand`합니다. 연결 된 코드를 포함 하는 ViewModel `ICommand` 단추를 클릭할 때 실행 되는 속성입니다. 설정할 수 있습니다 `CommandParameter` 동일 하 게 바인딩된 모든 경우에 여러 단추를 구분 하기 위해 임의의 데이터 `ICommand` ViewModel의 속성입니다.
@@ -39,7 +39,7 @@ ms.locfileid: "38996375"
 
 ## <a name="the-icommand-interface"></a>ICommand 인터페이스
 
-<xref:System.Windows.Input.ICommand> 인터페이스 Xamarin.Forms의 일부가 아닙니다. 대신에 정의 되어는 [System.Windows.Input](xref:System.Windows.Input) 네임 스페이스 고 두 메서드 및 이벤트 구성:
+합니다 [ `System.Windows.Input.ICommand` ](xref:System.Windows.Input.ICommand) 인터페이스 Xamarin.Forms의 일부가 아닙니다. 대신에 정의 되어는 [System.Windows.Input](xref:System.Windows.Input) 네임 스페이스 고 두 메서드 및 이벤트 구성:
 
 ```csharp
 public interface ICommand
@@ -378,7 +378,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 `execute` 함수에 대 한 **제출** 에서 속성 변경 처리기를 제거 합니다 `PersonViewModel`에 개체를 추가 `Persons` 컬렉션 초기 조건에 모두를 반환 합니다.
 
-`execute` 함수를 **취소** 단추 모든 작업을 수행 하는 합니다 **제출** 단추는 execept 개체를 컬렉션에 추가:
+`execute` 함수는 **취소** 단추 모든 작업을 수행 하는 합니다 **제출** 단추를 사용 하는 제외 하 고 개체 컬렉션에 추가:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -693,7 +693,6 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 명령 같은 탐색 메뉴를 구현 하는 데 유용 합니다 [ **데이터 바인딩 데모** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 프로그램 자체. 여기의 일부인 **MainPage.xaml**:
 
-
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -763,8 +762,6 @@ public partial class MainPage : ContentPage
 모두 설정 `NavigateCommand` 하 고 `BindingContext` (임의 순서로) 호출 하기 전에 `InitializeComponent` XAML 파서가 바인딩 정의 발견 하면 두 구성 요소 바인딩 설정 되어 있으므로 작동 합니다.
 
 데이터 바인딩, 작업은 복잡할 수 있지만이 문서 시리즈에서는 지금까지 살펴본 대로 속도가 강력 하 고 다양 한 사용자 인터페이스에서 기본 논리를 분리 하 여 코드를 구성 하는 데 크게 도움이 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

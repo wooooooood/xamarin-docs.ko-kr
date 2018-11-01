@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/15/2018
-ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38995416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675018"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 소개
 
@@ -42,7 +42,7 @@ Xamarin.Forms 앱을 사용 하 여 네 가지 구성 요소 필요 `DependencyS
 
 ### <a name="interface"></a>인터페이스
 
-플랫폼별 기능 상호 작용 디자인 인터페이스를 정의 합니다. 구성 요소 또는 Nuget 패키지 공유 구성 요소를 개발 하는 경우 주의 해야 합니다. API 디자인 망칠 수도 패키지 있습니다. 아래 예제에서는 각 플랫폼에 대 한 사용자 지정 구현 되지만 읽을 단어를 지정 하는 유연성을 허용 하는 텍스트 말하기에 대 한 간단한 인터페이스를 지정 합니다.
+플랫폼별 기능 상호 작용 디자인 인터페이스를 정의 합니다. 구성 요소 또는 NuGet 패키지 공유 구성 요소를 개발 하는 경우 주의 해야 합니다. API 디자인 망칠 수도 패키지 있습니다. 아래 예제에서는 각 플랫폼에 대 한 사용자 지정 구현 되지만 읽을 단어를 지정 하는 유연성을 허용 하는 텍스트 말하기에 대 한 간단한 인터페이스를 지정 합니다.
 
 ```csharp
 public interface ITextToSpeech {

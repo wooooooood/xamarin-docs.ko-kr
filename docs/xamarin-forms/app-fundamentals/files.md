@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: ddffb45b8cd8d47371e4ab57f30a467cea45b27d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117774"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675161"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
 
@@ -107,7 +107,7 @@ listView.ItemsSource = monkeys;
 
 <a name="Embedding_in_Shared_Projects" />
 
-### <a name="embedding-in-shared-projects"></a>공유 프로젝트에 포함
+## <a name="embedding-in-shared-projects"></a>공유 프로젝트에 포함
 
 하지만 공유 프로젝트에 사용 되는 접두사 포함 파일 리소스 Id를 변경할 수는 공유 프로젝트의 내용을 참조 프로젝트로 컴파일되므로 파일이 포함 리소스로 포함할 수도 있습니다. 즉, 포함 된 각 파일에 대 한 리소스 ID는 각 플랫폼에 대해 다를 수 있습니다.
 

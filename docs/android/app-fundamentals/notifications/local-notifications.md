@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675551"
 ---
 <a name="compatibility"></a>
 
@@ -747,7 +747,7 @@ builder.SetStyle (textStyle);
 Android의 이전 버전을 지원 하도록 `SetCategory` 는 사용할 수 없는 코드 확인해 조건부로 호출 하는 런타임 시 API 수준 `SetCategory` API 수준 Android 5.0 (API 수준 21) 보다 크거나 같은 경우:
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
@@ -760,7 +760,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 Android (API 수준 21), Android 5.0 이전 화면 잠금 알림을 지원 하지 않았기 때문에 `NotificationCompat.Builder` 지원 하지 않습니다는 `SetVisibility` 메서드. 위에서 설명한 것 처럼 `SetCategory`, 코드는 런타임 및 호출 API 수준을 확인할 수 있습니다 `SetVisiblity` 경우에 사용할 수 있습니다.
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```

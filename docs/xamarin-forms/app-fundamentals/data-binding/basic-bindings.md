@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38998074"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675200"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
@@ -94,7 +94,7 @@ label.SetBinding(RotationProperty, "Value");
 
 조작 하면 합니다 `Slider`, `Label` 그에 따라 회전 합니다.
 
-[![바인딩 Basice 코드](basic-bindings-images/basiccodebinding-small.png "기본 코드 바인딩")](basic-bindings-images/basiccodebinding-large.png#lightbox "기본 코드 바인딩")
+[![기본 코드 바인딩](basic-bindings-images/basiccodebinding-small.png "기본 코드 바인딩")](basic-bindings-images/basiccodebinding-large.png#lightbox "기본 코드 바인딩")
 
 **기본 Xaml 바인딩** 페이지는 동일 **기본 코드 바인딩** 제외 하 고 전체 데이터 바인딩은 XAML에서 정의 합니다.
 

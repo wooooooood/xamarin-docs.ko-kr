@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: cebdd6fafafae7d1cd6258e6200808731e3c4f29
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118814"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675096"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms 앱 클래스
 
@@ -208,7 +208,7 @@ UWP 프로젝트에서 기본 페이지에서 상속 해야 `WindowsPage`:
 </forms:WindowsPage>
 ```
 
-C# 코드 숨김의 생성 호출 해야 합니다 `LoadApplication` 하면 Xamarin.Forms의 인스턴스를 만드는 `App`합니다. 좋습니다 되려면 응용 프로그램 네임 스페이스를 명시적으로 사용 하는 것은 `App` UWP 응용 프로그램에 있으므로 또한 자신의 `App` Xamarin.Forms 관련이 클래스.
+C# 코드 숨김 생성 호출 해야 합니다 `LoadApplication` 하면 Xamarin.Forms의 인스턴스를 만드는 `App`합니다. 좋습니다 되려면 응용 프로그램 네임 스페이스를 명시적으로 사용 하는 것은 `App` UWP 응용 프로그램에 있으므로 또한 자신의 `App` Xamarin.Forms 관련이 클래스.
 
 ```csharp
 public sealed partial class MainPage

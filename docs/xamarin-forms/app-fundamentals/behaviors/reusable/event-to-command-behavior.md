@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 92d0f393ff8d96ac9c0040ab7c46a364418cf956
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675291"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
@@ -25,7 +25,7 @@ _명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 
 동작 속성을 다음 동작을 사용 하도록 설정 해야 합니다.
 
 - **EventName** – 동작을 수신 대기 이벤트의 이름입니다.
-- **명령** – **ICommand** 실행 될 수 있습니다. 동작을 찾으려고 시도 합니다 `ICommand` 인스턴스를 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 을 부모 요소 로부터 상속 될 수 있는 연결 된 컨트롤의.
+- **명령** – `ICommand` 실행 될 수 있습니다. 동작을 찾으려고 시도 합니다 `ICommand` 인스턴스를 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 을 부모 요소 로부터 상속 될 수 있는 연결 된 컨트롤의.
 
 다음 선택적 동작 속성을 설정할 수도 있습니다.
 
