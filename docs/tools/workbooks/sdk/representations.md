@@ -25,7 +25,7 @@ SDK 통합을 공통 된 표현을 외에도 에이전트에서 사용자 지정
 
 ## <a name="external-representations"></a>외부 표현
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 등록 하는 기능을 제공 된 [ `RepresentationProvider` ] [ repp], 임의 개체에서 렌더링 하는 알 수 없는 형식으로 변환 하는 통합 구현 해야 하는 합니다. 알 수 없는 이러한 형태를 구현 해야 합니다 [ `ISerializableObject` ] [ serobj] 인터페이스입니다.
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 등록 하는 기능을 제공 된 [`RepresentationProvider`][repp], 임의 개체에서 렌더링 하는 알 수 없는 형식으로 변환 하는 통합 구현 해야 하는 합니다. 알 수 없는 이러한 형태를 구현 해야 합니다 [`ISerializableObject`][serobj] 인터페이스입니다.
 
 구현 된 `ISerializableObject` 인터페이스 개체 직렬화 되는 방식을 정확 하 게 제어 하는 직렬화 메서드를 추가 합니다. `Serialize` 메서드에서 예상 개발자 속성을 직렬화 되며 됩니다 최종 이름 지정 정확 하 게 됩니다. 살펴보면를 `Person` 개체는 [`KitchenSink` 샘플] [샘플], 작동 방식을 확인할 수 있습니다.
 
@@ -71,7 +71,7 @@ public sealed class Person : ISerializableObject
 
 렌더러는 JavaScript에서 구현 되며 JavaScript 버전을 통해 표시 되는 개체에 액세스할 수 `ISerializableObject`입니다. JavaScript 복사본을 갖게 됩니다는 `$type` .NET 형식 이름을 나타내는 문자열 속성입니다.
 
-물론 바닐라 JavaScript로 컴파일되는 클라이언트 통합 코드에 대 한 TypeScript를 사용 하는 것이 좋습니다. 어느 방법이 든 SDK 제공 [typings] [ typings] TypeScript에서 직접 참조 하거나 단순히 참조를 수동으로 작성 바닐라 JavaScript는 기본 설정 된 경우 수입니다.
+물론 바닐라 JavaScript로 컴파일되는 클라이언트 통합 코드에 대 한 TypeScript를 사용 하는 것이 좋습니다. 어느 방법이 든 SDK 제공 [typings][typings] TypeScript에서 직접 참조 하거나 단순히 참조를 수동으로 작성 바닐라 JavaScript는 기본 설정 된 경우 수입니다.
 
 렌더링에 대 한 기본 통합 지점은 `xamarin.interactive.RendererRegistry`:
 
@@ -85,7 +85,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-이때 `PersonRenderer` 구현 된 `Renderer` 인터페이스입니다. 참조 된 [typings] [ typings] 대 한 자세한 내용은 합니다.
+이때 `PersonRenderer` 구현 된 `Renderer` 인터페이스입니다. 참조 된 [typings][typings] 대 한 자세한 내용은 합니다.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
 [xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
