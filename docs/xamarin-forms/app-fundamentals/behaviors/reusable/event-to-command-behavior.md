@@ -1,22 +1,22 @@
 ---
 title: 재사용 가능한 EventToCommandBehavior
-description: 명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 하는 컨트롤을 사용 하 여 명령을 연결 동작을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 동작을 사용 하 여 이벤트가 발생 하는 경우 명령을 호출 하는 방법을 보여 줍니다.
+description: 명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 하는 컨트롤을 사용 하 여 명령을 연결 동작을 사용할 수 있습니다. 이 문서에서는 만들고는 이벤트가 발생할 때 명령을 호출 하는 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 2609ce4ea677c6b03021a919599c250abff663a3
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675291"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911556"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
-_명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 하는 컨트롤을 사용 하 여 명령을 연결 동작을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 동작을 사용 하 여 이벤트가 발생 하는 경우 명령을 호출 하는 방법을 보여 줍니다._
+_명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 하는 컨트롤을 사용 하 여 명령을 연결 동작을 사용할 수 있습니다. 이 문서에서는 만들고는 이벤트가 발생할 때 명령을 호출 하는 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
@@ -31,6 +31,9 @@ _명령을 사용 하 여 상호 작용 하도록 설계 되지 않았습니다 
 
 - **CommandParameter** –는 `object` 는 명령에 전달 됩니다.
 - **변환기** 는 – [ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter) 간에 전달 될 때 이벤트 인수 데이터의 형식을 변경 되는 구현 *원본* 고 *대상*바인딩 엔진에서.
+
+> [!NOTE]
+> `EventToCommandBehavior` 에 있는 사용자 지정 클래스인 합니다 [EventToCommand 동작 샘플](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/), 및 Xamarin.Forms의 일부가 아닙니다.
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 

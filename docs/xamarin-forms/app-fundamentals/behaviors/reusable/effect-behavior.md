@@ -1,22 +1,22 @@
 ---
 title: 재사용 가능한 EffectBehavior
-description: 동작 처리 코드 코드 숨김 파일에서 보일 러 접시 효과 제거 하는 컨트롤에 영향을 줄을 추가 하기 위한 유용한 접근 방식 이며 이 문서에서는 Xamarin.Forms 동작을 사용 하 여 컨트롤에 효과 추가 하는 방법을 보여 줍니다.
+description: 동작 처리 코드 코드 숨김 파일에서 보일 러 접시 효과 제거 하는 컨트롤에 영향을 줄을 추가 하기 위한 유용한 접근 방식 이며 이 문서에서는 만들고 컨트롤에 영향을 줄을 추가 하는 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 1ce7eda6f556041cbffc3793b00e8e2cba44d3d0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995783"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911595"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
-_동작 처리 코드 코드 숨김 파일에서 보일 러 접시 효과 제거 하는 컨트롤에 영향을 줄을 추가 하기 위한 유용한 접근 방식 이며 이 문서에서는 Xamarin.Forms 동작을 사용 하 여 컨트롤에 효과 추가 하는 방법을 보여 줍니다._
+_동작 처리 코드 코드 숨김 파일에서 보일 러 접시 효과 제거 하는 컨트롤에 영향을 줄을 추가 하기 위한 유용한 접근 방식 이며 이 문서에서는 만들고 컨트롤에 영향을 줄을 추가 하는 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
@@ -28,6 +28,9 @@ _동작 처리 코드 코드 숨김 파일에서 보일 러 접시 효과 제거
 - **이름** – 값은 [ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute) 효과 클래스에 대 한 특성입니다.
 
 효과 대 한 자세한 내용은 참조 하세요. [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
+
+> [!NOTE]
+> `EffectBehavior` 에 있는 사용자 지정 클래스인 합니다 [효과 동작 샘플](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/), 및 Xamarin.Forms의 일부가 아닙니다.
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 
