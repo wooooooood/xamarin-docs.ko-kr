@@ -5,12 +5,12 @@ ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: b0d5f28aca5d836608bc5a3423f3dc234a551ca0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112002"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675408"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
 
@@ -18,7 +18,9 @@ ms.locfileid: "50112002"
 
 **Connectivity** 클래스를 사용하면 장치의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
 
-## <a name="getting-started"></a>시작
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 **Connectivity** 기능에 액세스하려면 다음과 같은 플랫폼 특정 설정이 필요합니다.
 

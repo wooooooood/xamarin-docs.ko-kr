@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120114"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234884"
 ---
 # <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
 
@@ -53,7 +53,7 @@ Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 �
 
 ### <a name="dont-link"></a>연결하지 않음
 
-연결을 사용하지 않으면 어떤 어셈블리도 수정되지 않습니다. IDE의 대상이 iOS 시뮬레이터인 경우 성능상의 이유로 이것이 기본 설정입니다. 장치 빌드의 경우 링커에 응용 프로그램 실행을 방해하는 버그가 있는 경우에만 이 옵션을 해결 방법으로 사용해야 합니다. 응용 프로그램이 *-nolink*에서만 작동하는 경우 [버그 보고서](http://bugzilla.xamarin.com)를 제출하세요.
+연결을 사용하지 않으면 어떤 어셈블리도 수정되지 않습니다. IDE의 대상이 iOS 시뮬레이터인 경우 성능상의 이유로 이것이 기본 설정입니다. 장치 빌드의 경우 링커에 응용 프로그램 실행을 방해하는 버그가 있는 경우에만 이 옵션을 해결 방법으로 사용해야 합니다. 응용 프로그램이 *-nolink*에서만 작동하는 경우 [버그 보고서](https://github.com/xamarin/xamarin-macios/issues/new)를 제출하세요.
 
 명령줄 도구 mtouch를 사용하는 경우 이것은 *-nolink* 옵션에 해당합니다.
 

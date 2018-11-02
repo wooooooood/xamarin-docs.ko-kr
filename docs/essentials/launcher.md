@@ -5,18 +5,22 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/25/2018
-ms.openlocfilehash: 8f5ef8ef97999e9e85944d9fa9d4e57660779a48
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b9dc211a8b8b007e6975448a6c6c35f870021cc6
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674797"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Launcher** 클래스를 사용하면 응용 프로그램이 시스템을 통해 URI를 열 수 있습니다. 다른 응용 프로그램의 사용자 지정 URI 체계에 대한 딥 링크를 설정할 때 주로 사용됩니다. 브라우저에서 웹 사이트를 열려면 **[Browser](open-browser.md)** API를 참조해야 합니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-launcher"></a>Launcher 사용
 

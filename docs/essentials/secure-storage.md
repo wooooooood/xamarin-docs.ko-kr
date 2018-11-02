@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a5b5385af991ff988902bb3ed9670cd71d421bc6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d9367b7bbaa906ce39d1fafb3d09e56bfd0dc238
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116032"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675228"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
@@ -18,7 +18,9 @@ ms.locfileid: "50116032"
 
 **SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
 
-## <a name="getting-started"></a>시작
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 **SecureStorage** 기능에 액세스하려면 다음과 같은 플랫폼 특정 설정이 필요합니다.
 

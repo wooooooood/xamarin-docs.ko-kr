@@ -5,12 +5,12 @@ ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675447"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -23,6 +23,10 @@ ms.locfileid: "50112316"
 iOS, Android 및 유니버설 Windows 플랫폼을 포함한 대부분의 운영 체제는 사용자 인터페이스와 관련된 코드에 대해 단일 스레딩 모델을 사용합니다. 이 모델은 키 입력 및 터치 입력을 포함한 사용자 인터페이스 이벤트를 올바르게 직렬화하는 데 필요합니다. 이 스레드를 _주 스레드_, _사용자 인터페이스 스레드_ 또는 _UI 스레드_라고 합니다. 이 모델의 단점은 사용자 인터페이스 요소에 액세스하는 모든 코드가 응용 프로그램의 주 스레드에서 실행되어야 한다는 것입니다. 
 
 응용 프로그램이 보조 실행 스레드의 이벤트 처리기를 호출하는 이벤트를 사용해야 하는 경우도 있습니다. (Xamarin.Essentials 클래스 [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) 및 [`OrientationSensor`](orientation-sensor.md)는 더 빠른 속도로 사용할 경우 모두 보조 스레드에 대한 정보를 반환할 수 있습니다.) 이벤트 처리기가 사용자 인터페이스 요소에 액세스해야 하는 경우, 주 스레드에서 해당 코드를 실행해야 합니다. **MainThread** 클래스를 사용하면 응용 프로그램이 주 실행 스레드에서 이 코드를 실행할 수 있습니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="running-code-on-the-main-thread"></a>주 스레드에서 코드 실행
 

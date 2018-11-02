@@ -5,12 +5,12 @@ ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/21/2018
-ms.openlocfilehash: 4ea6ebbb85510b5d7262cde73248af9df975b867
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5d31ae10120c8b8f2c5e824d336c231e69fc97c7
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674711"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
@@ -20,6 +20,10 @@ ms.locfileid: "50112067"
 
 > [!NOTE]
 > 이 클래스는 3D 공간에서 장치의 방향을 확인하기 위한 것입니다. 장치의 비디오 디스플레이가 세로 또는 가로 모드인지 확인해야 하는 경우 [`DeviceDisplay`](device-display.md) 클래스에서 제공되는 `ScreenMetrics` 개체의 `Orientation` 속성을 사용합니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-orientationsensor"></a>OrientationSensor 사용
 

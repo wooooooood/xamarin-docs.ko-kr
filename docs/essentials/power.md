@@ -5,12 +5,12 @@ ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/27/2018
-ms.openlocfilehash: 5a89dba16a93b007c5d7312221d8d33e00c7404a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 96b4aef3a8df571392d43836d46b03b025c80888
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110006"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675382"
 ---
 # <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials: Power Energy Saver Status
 
@@ -23,6 +23,10 @@ ms.locfileid: "50110006"
 배터리로 실행되는 장치를 절전 모드로 전환할 수 있습니다. 배터리 용량이 20% 미만으로 떨어지는 경우와 같이 장치가 자동으로 이 모드로 전환되는 경우도 있습니다. 운영 체제는 배터리를 고갈시키는 경향이 있는 활동을 줄여 절전 모드에 응답합니다. 응용 프로그램은 절전 모드가 켜져 있을 때 후순위 처리나 다른 고전력 활동을 피하여 도울 수 있습니다.
 
 Android 장치의 경우, **Power** 클래스는 Android 버전 5.0(Lollipop) 이상에 대해서만 의미 있는 정보를 반환합니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-the-power-class"></a>Power 클래스 사용
 
