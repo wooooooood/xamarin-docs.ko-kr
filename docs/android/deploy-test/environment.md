@@ -3,15 +3,15 @@ title: Xamarin.Android 환경
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: ebac7bfe826388de83fedc4be5f268773ca2526b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f0ad51738e0bbe785773f653b06fe5f582527f0b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30766324"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120881"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -49,7 +49,8 @@ Xamarin.Android는 `adb shell setprop debug.mono.env` 또는 `$(AndroidEnvironme
 
 Xamarin.Android 6.1에서는 이 환경 변수가 기본적으로 설정되지 않으며 [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)가 사용됩니다.
 
-또는 `Xamarin.Android.Net.AndroidClientHandler` 값을 지정하여 네트워크 액세스에 Android에서 지원하는 경우 TLS 1.2의 사용을 *허가*하는 [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)을 사용할 수 있습니다.
+또는 네트워크 액세스에 [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)을 사용하도록 `Xamarin.Android.Net.AndroidClientHandler` 값이 지정되어
+Android에서 지원하는 경우 TLS 1.2의 사용을 허용*할* 수 있습니다.
 
 Xamarin.Android 6.1에 추가되었습니다.
 

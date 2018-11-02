@@ -1,32 +1,30 @@
 ---
 title: 'Hello, Android 멀티스크린: 빠른 시작'
 description: 두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 04/30/2018
-ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436933"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120491"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
 _두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다._
-
-## <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린 빠른 시작
 
 이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 응용 프로그램에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 응용 프로그램](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
 
 [![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 함께 제공된 [심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)은 빌드된 기능을 검토하고, 해당 과정에서 발생한 아키텍처, 탐색 및 기타 새로운 Android 개념에 대해 설명합니다.
-
 
 ## <a name="requirements"></a>요구 사항
 
@@ -37,13 +35,13 @@ _두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 �
 
 이 연습에서는 **Phoneword** 응용 프로그램에 **변환 기록** 화면을 추가합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Visual Studio에서 **Phoneword** 응용 프로그램을 열고 **솔루션 탐색기**에서 **Main.axml** 파일을 편집하여 시작합니다.
 
 ### <a name="updating-the-layout"></a>레이아웃 업데이트
 
-**도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 창에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다. 
+**도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 창에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다.
 
 [![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
@@ -107,7 +105,7 @@ namespace Phoneword
 
 이 작업에 새 레이아웃 파일을 만들 필요가 없도록 이 클래스에서 `ListActivity`을 만들고 프로그래밍 방식으로 채웁니다. [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android/hello-android-deepdive.md)에서 자세히 설명되어 있습니다.
 
-### <a name="adding-translation-history-code"></a>변환 기록 코드 추가
+### <a name="adding-a-list"></a>목록 추가
 
 이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록(및 나중에 사용되는 의도)을 지원하려면 다음 `using` 지시문을 **MainActivity.cs** 맨 위에 추가합니다.
 
@@ -175,13 +173,14 @@ translateButton.Click += (sender, e) =>
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패드**에서 **Main.axml** 파일을 편집하여 시작합니다.
 
 ### <a name="updating-the-layout"></a>레이아웃 업데이트
 
-**도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 패드에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다. 
+**도구 상자**에서 **단추**를 디자인 화면에 끌어와서 **TranslatedPhoneWord** TextView 아래에 배치합니다. **속성** 패드에서 **ID** 단추를 `@+id/TranslationHistoryButton`로 변경합니다.
 
 [![새 단추 끌어오기](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
@@ -189,11 +188,9 @@ Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패�
 
 [![변환 기록 단추 텍스트 설정](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
-
 **솔루션 패드**의 **리소스** 폴더에서 **값** 노드를 확장하고, 문자열 리소스 파일인 **Strings.xml**을 두 번 클릭합니다.
 
 [![문자열 열기](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
-
 
 `translationHistory` 문자열 이름 및 값을 **Strings.xml** 파일에 추가하고 저장합니다.
 
@@ -246,7 +243,7 @@ namespace Phoneword
 
 이 작업에 새 레이아웃 파일을 만들 필요가 없도록 이 클래스에서 `ListActivity`을 만들고 프로그래밍 방식으로 채웁니다. [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)에서 자세히 설명되어 있습니다.
 
-### <a name="adding-translation-history-code"></a>변환 기록 코드 추가
+### <a name="adding-a-list"></a>목록 추가
 
 이 앱은 전화 번호(사용자가 첫 번째 화면에서 변환함)를 수집하고 두 번째 화면으로 전달합니다. 전화 번호는 문자열 목록으로 저장됩니다. 목록(및 나중에 사용되는 의도)을 지원하려면 다음 `using` 지시문을 **MainActivity.cs** 맨 위에 추가합니다.
 
@@ -309,10 +306,9 @@ translateButton.Click += (sender, e) =>
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
------
+::: zone-end
 
 첫 번째 멀티스크린 Xamarin.Android 응용 프로그램을 완성한 것을 축하합니다! 이제 사용할 &ndash;에 대해 알아본 도구 및 기술을 분석하겠습니다. 다음은 [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

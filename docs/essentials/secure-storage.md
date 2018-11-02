@@ -1,54 +1,91 @@
 ---
-title: 'Xamarin.Essentials: 보안 저장소'
-description: 이 문서는 간단한 키/값 쌍을 안전 하 게 저장 하는 데 도움이 됩니다 Xamarin.Essentials SecureStorage 클래스를 설명 합니다. 클래스, 플랫폼별 구현 및 제한 사항을 사용 하는 방법을 설명 합니다.
+title: 'Xamarin.Essentials: Secure Storage'
+description: 이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는, Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다. 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: redth
-ms.author: jodick
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2dfdb7051b269e73c68290a557849b9ae606c165
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: a5b5385af991ff988902bb3ed9670cd71d421bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116032"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 저장소
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **SecureStorage** 클래스에 안전 하 게 간단한 키/값 쌍을 저장 하는 데 도움이 됩니다.
+**SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
 
 ## <a name="getting-started"></a>시작
 
-액세스 하는 **SecureStorage** , 다음 플랫폼별 설정을 기능은 필요:
+**SecureStorage** 기능에 액세스하려면 다음과 같은 플랫폼 특정 설정이 필요합니다.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-추가 설정이 필요 없습니다.
+> [!TIP]
+> [앱에 대한 자동 백업](https://developer.android.com/guide/topics/data/autobackup)은 Android 6.0(API 레벨 23) 이상의 기능으로, 사용자의 앱 데이터(공유 기본 설정, 앱 내부 저장소의 파일 및 기타 특정 파일)를 백업합니다. 앱을 다시 설치하거나 새 장치에 설치하면 데이터가 복원됩니다. 이는 백업된 공유 기본 설정을 이용하며 복원 시 암호를 해독할 수 없는 `SecureStorage`에 영향을 줄 수 있습니다. Xamarin.Essentials는 키를 제거해서 다시 설정할 수 있도록 하여 자동으로 이러한 경우를 처리하지만, 자동 백업을 사용하지 않도록 설정하면 추가 단계를 수행할 수 있습니다.
+
+### <a name="enable-or-disable-backup"></a>백업 사용 또는 사용 안 함
+`AndroidManifest.xml` 파일에서 `android:allowBackup` 설정을 false로 지정하여 전체 응용 프로그램의 자동 백업을 사용하지 않을 수 있습니다. 이 방법은 다른 방법으로 데이터를 복원하려는 경우에만 권장됩니다.
+
+```xml
+<manifest ... >
+    ...
+    <application android:allowBackup="false" ... >
+        ...
+    </application>
+</manifest>
+```
+
+### <a name="selective-backup"></a>선택적 백업
+특정 콘텐츠가 백업되지 않도록 자동 백업을 구성할 수 있습니다. 사용자 지정 규칙 집합을 만들어 `SecureStore` 항목이 백업되지 않도록 제외할 수 있습니다.
+
+1. **AndroidManifest.xml**에서 `android:fullBackupContent` 특성을 설정합니다.
+
+    ```xml
+    <application ...
+        android:fullBackupContent="@xml/auto_backup_rules">
+    </application>
+    ```
+
+2. **Resources/xml** 디렉터리에 **auto_backup_rules.xml**이라는 새 XML 파일을 만듭니다. `SecureStorage`를 제외한 모든 공유 기본 설정을 포함하는 다음 콘텐츠를 설정합니다.
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <full-backup-content>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="${applicationId}.xamarinessentials.xml"/>
+    </full-backup-content>
+    ```
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-IOS 시뮬레이터를 개발 하는 경우 사용 하도록 설정 합니다 **키 집합** 자격 응용 프로그램의 번들 식별자에 대 한 키 집합 액세스 그룹을 추가 합니다.
+**iOS 시뮬레이터**에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 응용 프로그램의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다. 
 
-열기는 **Entitlements.plist** 찾을 및 iOS 프로젝트를 **Keychain** 자격 사용 하도록 설정 하 고 합니다. 응용 프로그램의 식별자를 그룹으로 자동으로 추가 됩니다.
+iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을 찾아 사용하도록 설정합니다. 그러면 응용 프로그램 식별자가 그룹으로 자동 추가됩니다.
 
-프로젝트 속성에서 아래 **iOS 번들 서명** 설정 된 **사용자 지정 자격** 에 **Entitlements.plist**.
+프로젝트 속성의 **iOS 번들 서명** 아래에서 **사용자 지정 자격**을 **Entitlements.plist**로 설정합니다.
+
+> [!TIP]
+> iOS 장치에 배포할 때는 이 자격이 필요하지 않으므로 제거해야 합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-추가 설정이 필요 없습니다.
+추가 설정이 필요하지 않습니다.
 
 -----
 
-## <a name="using-secure-storage"></a>보안 저장소를 사용 하 여
+## <a name="using-secure-storage"></a>보안 저장소 사용
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-에 대 한 값을 저장 하는 주어진 _키_ 보안 저장소에서:
+지정된 _키_의 값을 보안 저장소에 저장하려면
 
 ```csharp
 try
@@ -61,7 +98,7 @@ catch (Exception ex)
 }
 ```
 
-보안 저장소에서 값을 검색 합니다.
+보안 저장소에서 값을 검색하려면
 
 ```csharp
 try
@@ -75,58 +112,58 @@ catch (Exception ex)
 ```
 
 > [!NOTE]
-> 요청된 된 키와 연결 된 값이 없을 경우 `GetAsync` 돌아갑니다 `null`합니다.
+> 요청된 키와 연결된 값이 없는 경우 `GetAsync`는 `null`을 반환합니다.
 
-특정 키를 제거 하려면 다음을 호출 합니다.
+특정 키를 제거하려면 다음을 호출합니다.
 
 ```csharp
 SecureStorage.Remove("oauth_token");
 ```
 
-모든 키를 제거 하려면 다음을 호출 합니다.
+모든 키를 제거하려면 다음을 호출합니다.
 
 ```csharp
 SecureStorage.RemoveAll();
 ```
 
 
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Android KeyStore](https://developer.android.com/training/articles/keystore.html) 에 저장 되기 전에 값을 암호화 하는 데 암호화 키를 저장 하는 데 사용 되는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html) 의 파일 이름을 가진 **[YOUR-앱-패키지-ID].xamarinessentials** .  공유 기본 설정 파일에서 사용 된 키가 한 _MD5 해시_ 에 전달 된 키의는 `SecureStorage` Api.
+[Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
 
-## <a name="api-level-23-and-higher"></a>API 수준 23 이상
+## <a name="api-level-23-and-higher"></a>API 레벨 23 이상
 
-최신 API 수준에는 **AES** Android 키 저장소에서 키를 가져와 사용한는 **AES/GCM/NoPadding** 공유 기본 설정 파일에 저장 되기 전에 값을 암호화 하는 암호입니다.
+최신 API 레벨에서 **AES** 키는 Android 키 저장소에서 가져오며, **AES/GCM/NoPadding** 암호화에 사용되어 값이 공유 기본 설정 파일에 저장되기 전에 암호화합니다.
 
-## <a name="api-level-22-and-lower"></a>API 레벨 22 및 하 한
+## <a name="api-level-22-and-lower"></a>API 레벨 22 이하
 
-이전 API 수준에서 Android 키 저장소만 지원 저장 **RSA** 와 함께 사용 되며 키를 **PKCS1Padding/RSA/ECB** 암호를 암호화 하는 **AES** (임의로 키 런타임에 생성) 키 아래에 있는 공유 기본 설정 파일에 저장 _SecureStorageKey_아직 생성 되지 않은 한 경우.
+이전 API 레벨에서 Android 키 저장소는 **RSA** 키 저장만 지원합니다. 이 키는 **RSA/ECB/PKCS1Padding** 암호화와 함께 사용되어 **AES** 키(런타임에 임의로 생성됨)를 암호화하며, 아직 생성되지 않은 경우 공유 기본 설정 파일의 _SecureStorageKey_ 키 아래에 저장됩니다.
 
-**SecureStorage** 사용 합니다 [기본 설정](preferences.md) API와 동일한 데이터 지 속성에 설명 된 다음과 같이 [기본 설정](preferences.md#persistence) 설명서. 이 유형의 암호화 앱은 제거 하지 않는 한 사용할 계속 장치 API 레벨 22 이하로에서 API 수준 23 이상으로 업그레이드를 하는 경우 또는 **RemoveAll** 라고 합니다.
+**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 장치가 API 레벨 22 이하에서 API 레벨 23 이상으로 업그레이드되는 경우, 앱을 제거하거나 **RemoveAll**을 호출하지 않는 한 이 유형의 암호화가 계속 사용됩니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[키 집합](https://developer.xamarin.com/api/type/Security.SecKeyChain/) iOS 장치에서 안전 하 게 값을 저장 하는 데 사용 됩니다.  합니다 `SecRecord` 값을 저장 하는 데에 `Service` 값으로 설정 **[YOUR-앱-번들-ID].xamarinessentials**합니다.
+[KeyChain](https://developer.xamarin.com/api/type/Security.SecKeyChain/)을 사용하여 iOS 장치에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials**로 설정됩니다.
 
-일부 경우 KeyChain 데이터와 iCloud에 동기화 됩니다 없으며 응용 프로그램 제거 제거할 수 있습니다 하지 보안 값 iCloud 및 사용자의 다른 장치에서.
+KeyChain 데이터가 iCloud와 동기화되어 응용 프로그램을 제거해도 iCloud 및 사용자의 다른 장치에서 안전한 값이 제거되지 않는 경우도 있습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) UWP 장치에서 안전 하 게 암호화 된 값으로 사용 됩니다.
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)를 사용하여 UWP 장치에서 값을 안전하게 암호화합니다.
 
-암호화 된 값에 저장 됩니다 `ApplicationData.Current.LocalSettings`, 라는 이름의 컨테이너 안에 **[YOUR-앱-ID].xamarinessentials**합니다.
+암호화된 값은 `ApplicationData.Current.LocalSettings`의 컨테이너 안에 **[YOUR-APP-ID].xamarinessentials**라는 이름으로 저장됩니다.
 
-**SecureStorage** 사용 합니다 [기본 설정](preferences.md) API와 동일한 데이터 지 속성에 설명 된 다음과 같이 [기본 설정](preferences.md#persistence) 설명서.
+**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다.
 
 -----
 
 ## <a name="limitations"></a>제한 사항
 
-이 API는 적은 양의 텍스트를 저장 하기 위한 것입니다.  성능을 사용 하 여 많은 양의 텍스트를 저장 하려는 경우에 느려질 수 있습니다.
+이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 느려질 수 있습니다.
 
 ## <a name="api"></a>API
 
 - [SecureStorage 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
-- [SecureStorage API 설명서](xref:Xamarin.Essentials.SecureStorage)
+- [SecureStorage API 문서](xref:Xamarin.Essentials.SecureStorage)

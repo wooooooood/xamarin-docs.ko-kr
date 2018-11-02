@@ -4,15 +4,15 @@ description: TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iO
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785689"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120523"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -98,7 +98,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
 먼저 IDE에서 [최종 배포 가능한 파일](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)을 빌드한 다음, 응용 프로그램 로더 또는 Xcode의 보관 기능을 통해 [Apple에 앱을 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ###  <a name="create-an-archive"></a>보관 만들기
 
@@ -126,7 +126,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ###  <a name="building-your-final-distributable"></a>최종 배포 가능한 파일 빌드
  Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 응용 프로그램을 게시하는 두 가지 옵션이 있습니다. 이러한 항목은 다음과 같습니다.

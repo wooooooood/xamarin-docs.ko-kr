@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118970"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -22,15 +22,13 @@ ms.locfileid: "39111227"
 이 가이드에서는 *MVC(모델, 뷰, 컨트롤러)* 패턴 및 iOS 아키텍처 및 탐색에서의 해당 역할을 소개합니다.
 그런 다음, 탐색 컨트롤러에 대해 자세히 알아보고 iOS에서 친숙한 탐색 환경을 제공하기 위해 사용하는 방법을 알아봅니다.
 
-<a name="Model_View_Controller" />
-
 ## <a name="model-view-controller-mvc"></a>MVC(모델-뷰-컨트롤러)
 
 [Hello, iOS](~/ios/get-started/hello-ios/index.md) 자습서에서는 iOS 응용 프로그램에 뷰 컨트롤러가 해당 *콘텐츠 뷰 계층 구조*를 창으로 로딩할 책임이 있는 하나의 *창*만 있다는 것을 배웠습니다. 두 번째 Phoneword 연습에서는 응용 프로그램에 두 번째 화면을 추가하고 아래 다이어그램에 표시된 것처럼 두 개의 화면 간에 일부 데이터(전화번호 목록)를 전달했습니다.
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "이 다이어그램은 두 개의 화면 간 데이터 전달을 보여줍니다.")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-예제에서 데이터는 첫 번째 화면에서 수집되었고, 첫 번째 뷰 컨트롤러에서 두 번째로 전달되었으며 두 번째 화면에서 표시되었습니다. 이 화면, 컨트롤러 뷰 및 데이터의 분리는 *MVC(모델, 뷰, 컨트롤러)* 패턴을 따릅니다. 다음 단원에서는 패턴의 이점, 해당 구성 요소 및 Phoneword 응용 프로그램에서 사용하는 방법을 설명합니다.
+예제에서 데이터는 첫 번째 화면에서 수집되었고, 첫 번째 뷰 컨트롤러에서 두 번째로 전달되었으며 두 번째 화면에서 표시되었습니다. 이 화면, 뷰 컨트롤러 및 데이터의 분리는 *MVC(모델, 뷰, 컨트롤러)* 패턴을 따릅니다. 다음 단원에서는 패턴의 이점, 해당 구성 요소 및 Phoneword 응용 프로그램에서 사용하는 방법을 설명합니다.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>MVC 패턴의 이점
 
@@ -66,7 +64,7 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 
 ## <a name="navigation-controller"></a>탐색 컨트롤러
 
-Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 컨트롤러 뷰 계층 구조를 관리합니다.
+Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 콘텐츠 뷰 계층 구조를 관리합니다.
 
 탐색 컨트롤러는 iOS 응용 프로그램에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 응용 프로그램에 대한 탐색을 제공합니다.
 
@@ -86,18 +84,18 @@ Phoneword 응용 프로그램에서는 여러 화면 간 탐색을 관리하는 
 
 -  **제목 표시줄을 제공합니다.** – 탐색 컨트롤러의 윗 부분은 *제목 표시줄*이라고 합니다. 아래 다이어그램에 표시된 것처럼 뷰 컨트롤러 제목을 표시합니다.  
 
-    [![](hello-ios-multiscreen-deepdive-images/04.png "제목 표시줄은 보기 컨트롤러 제목을 표시합니다.")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "제목 표시줄은 뷰 컨트롤러 제목을 표시합니다.")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 ### <a name="root-view-controller"></a>루트 뷰 컨트롤러
 
 탐색 컨트롤러는 콘텐츠 뷰 계층 구조를 관리하지 않으므로 표시할 항목이 없습니다.
 대신 탐색 컨트롤러는 *루트 뷰 컨트롤러*와 쌍을 이룹니다.
 
- [![](hello-ios-multiscreen-deepdive-images/05.png "탐색 컨트롤러는 루트 보기 컨트롤러와 쌍을 이룹니다.")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "탐색 컨트롤러는 루트 뷰 컨트롤러와 쌍을 이룹니다.")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 루트 뷰 컨트롤러는 탐색 컨트롤러의 스택에서 첫 번째 뷰 컨트롤러를 나타내고, 루트 뷰 컨트롤러의 콘텐츠 뷰 계층 구조는 창에 로드되는 첫 번째 콘텐츠 뷰 계층 구조입니다. 전체 응용 프로그램을 탐색 컨트롤러의 스택에 배치하고자 하는 경우 원본 없는 Segue를 탐색 컨트롤러로 이동시키고 Phoneword 앱에서 수행한 것처럼 첫 번째 화면의 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정할 수 있습니다.
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "원본 없는 Segue는 첫 번째 화면 보기 컨트롤러를 루트 보기 컨트롤러로 설정합니다.")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "원본 없는 Segue는 첫 번째 화면 뷰 컨트롤러를 루트 뷰 컨트롤러로 설정합니다.")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>추가 탐색 옵션
 
@@ -193,7 +191,7 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가지 개념이 도입되었습니다. 이러한 개념은 다음과 같습니다.
 
--  **뷰 컨트롤러의 자동 생성** – **Properties Pad**에 뷰 컨트롤러에 대한 클래스 이름을 입력할 때 iOS 디자이너는 해당 클래스 있는지 확인한 다음, 클래스를 백업하는 뷰 컨트롤러를 생성합니다. 해당 항목 및 다른 iOS 디자이너 기능에 대한 자세한 내용은 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드를 참조하세요.
+-  **뷰 컨트롤러의 자동 생성** – **Properties Pad**에 뷰 컨트롤러에 대한 클래스 이름을 입력할 때 iOS 디자이너는 해당 클래스가 있는지 확인한 다음, 클래스를 백업하는 뷰 컨트롤러를 생성합니다. 해당 항목 및 다른 iOS 디자이너 기능에 대한 자세한 내용은 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드를 참조하세요.
 -  **테이블 뷰 컨트롤러** – `CallHistoryController`는 테이블 뷰 컨트롤러입니다. 테이블 뷰 컨트롤러는 iOS에서 가장 일반적인 레이아웃 및 데이터 표시 도구인 테이블 뷰를 포함합니다. 테이블은 이 가이드의 범위를 벗어납니다. 테이블 뷰 컨트롤러에 대한 자세한 내용은 [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md) 가이드를 참조하세요.
 -   **Storyboard ID** – Storyboard ID를 설정하면 Storyboard에서 뷰 컨트롤러에 대한 코드 숨김을 포함하는 Objective-C에서 뷰 컨트롤러 클래스를 만듭니다. Storyboard ID를 사용하여 Objective-C 클래스를 찾고 Storyboard에서 뷰 컨트롤러를 인스턴스화합니다. Storyboard ID에 대한 자세한 내용은 [스토리보드 소개](~/ios/user-interface/storyboards/index.md) 가이드를 참조하세요.
 

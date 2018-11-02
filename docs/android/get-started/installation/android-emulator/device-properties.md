@@ -1,25 +1,27 @@
 ---
 title: Android 가상 장치 속성 편집
 description: 이 문서에서는 Android Device Manager를 사용하여 Android 가상 장치의 프로필 속성을 편집하는 방법을 설명합니다.
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 75ac85c67825e5db1b663d00f10eee6d093bfc1f
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733814"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119620"
 ---
 # <a name="editing-android-virtual-device-properties"></a>Android 가상 장치 속성 편집
 
 _이 문서에서는 Android Device Manager를 사용하여 Android 가상 장치의 프로필 속성을 편집하는 방법을 설명합니다._
 
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="android-device-manager-on-windows"></a>Windows의 Android Device Manager
 
 **Android Device Manager**는 개별 Android 가상 장치 프로필 속성의 편집을 지원합니다. **새 장치** 및 **장치 편집기** 화면에서 첫 번째 열에는 가상 장치 속성이 나열되고, 두 번째 열에는 각 속성의 해당 값이 나열됩니다(이 예제에 표시된 것처럼). 
 
@@ -41,8 +43,10 @@ _이 문서에서는 Android Device Manager를 사용하여 Android 가상 장�
 
     ![정수 속성 변경](device-properties-images/win/03-integer-value.png)
 
+::: zone-end
+::: zone pivot="macos"
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+## <a name="android-device-manager-on-macos"></a>macOS의 Android Device Manager
 
 **Android Device Manager**는 개별 Android 가상 장치 프로필 속성의 편집을 지원합니다. **새 장치** 및 **장치 편집기** 화면에서 첫 번째 열에는 가상 장치 속성이 나열되고, 두 번째 열에는 각 속성의 해당 값이 나열됩니다(이 예제에 표시된 것처럼). 
 
@@ -64,7 +68,7 @@ _이 문서에서는 Android Device Manager를 사용하여 Android 가상 장�
 
     ![정수 속성 변경](device-properties-images/mac/03-integer-value.png)
 
------
+::: zone-end
 
 다음 표에는 **새 장치** 및 **장치 편집기** 화면에 나오는 속성에 대한 자세한 설명이 나와 있습니다.
 

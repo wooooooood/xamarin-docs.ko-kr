@@ -1,32 +1,36 @@
 ---
-title: Xamarin.Essentials 맵
-description: Xamarin.Essentials에 있는 맵 클래스 placemark 또는 특정 위치에 설치 된 지도 응용 프로그램을 열려면 응용 프로그램을 수 있습니다.
+title: Xamarin.Essentials Maps
+description: Xamarin.Essentials의 Maps 클래스를 사용하면 응용 프로그램이 설치된 지도 응용 프로그램에서 특정 위치나 placemark를 열 수 있습니다.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/25/2018
-ms.openlocfilehash: 445e2da84e9a9aaf1ce4d836af11cfba963b8cbb
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: fb4cbc2fd334d574abc57a3359fa346bc6795408
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674776"
 ---
-# <a name="xamarinessentials-maps"></a>Xamarin.Essentials: 맵
+# <a name="xamarinessentials-maps"></a>Xamarin.Essentials: Maps
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **매핑합니다** 클래스를 사용 하면 응용 프로그램을 특정 위치 또는 placemark에 설치 된 지도 응용 프로그램을 엽니다.
+**Maps** 클래스를 사용하면 응용 프로그램이 설치된 지도 응용 프로그램에서 특정 위치나 placemark를 열 수 있습니다.
 
-## <a name="using-maps"></a>맵을 사용 하 여
+## <a name="get-started"></a>시작
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-maps"></a>Maps 사용
+
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Maps 기능을 호출 하 여 작동 합니다 `OpenAsync` 메서드를 `Location` 또는 `Placemark` 선택적으로 열려는 `MapsLaunchOptions`합니다.
+Maps 기능은 선택적 `MapsLaunchOptions`를 사용해서 열려는 `Location` 또는 `Placemark`로 `OpenAsync` 메서드를 호출하여 작동합니다.
 
 ```csharp
 public class MapsTest
@@ -41,12 +45,12 @@ public class MapsTest
 }
 ```
 
-사용 하 여 열면는 `Placemark` 다음 정보가 필요 합니다.
+`Placemark`로 여는 경우 다음 정보가 필요합니다.
 
-* `CountryName`
-* `AdminArea`
-* `Thoroughfare`
-* `Locality`
+- `CountryName`
+- `AdminArea`
+- `Thoroughfare`
+- `Locality`
 
 ```csharp
 public class MapsTest
@@ -69,7 +73,7 @@ public class MapsTest
 
 ## <a name="extension-methods"></a>확장명 메서드
 
-에 대 한 참조를 이미 있는 경우는 `Location` 나 `Placemark` 기본 제공 확장 메서드를 사용할 수 있습니다 `OpenMapsAsync` 선택적으로 `MapsLaunchOptions`:
+`Location` 또는 `Placemark`에 대한 참조가 이미 있는 경우 선택적 `MapsLaunchOptions`와 함께 기본 제공 확장 메서드 `OpenMapsAsync`를 사용할 수 있습니다.
 
 ```csharp
 public class MapsTest
@@ -81,39 +85,56 @@ public class MapsTest
 }
 ```
 
+## <a name="directions-mode"></a>길 찾기 모드
+
+`MapsLaunchOptions` 없이 `OpenMapsAsync`를 호출하면 지도가 지정한 위치에서 시작됩니다. 필요에 따라, 탐색 경로가 장치의 현재 위치에서 계산되도록 할 수 있습니다. 이렇게 하려면 `MapsLaunchOptions`에서 `MapDirectionsMode`를 설정합니다.
+
+```csharp
+public class MapsTest
+{
+    public async Task NavigateToBuilding25()
+    {
+        var location = new Location(47.645160, -122.1306032);
+        var options =  new MapsLaunchOptions { MapDirectionsMode = MapDirectionsMode.Driving };
+
+        await Maps.OpenAsync(location, options);
+    }
+}
+```
+
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `MapDirectionsMode` 지원 되지 않습니다 하 고 영향을 주지 않습니다.
+- `MapDirectionsMode`에서 자전거 타기, 자가용, 걷기를 지원합니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `MapDirectionsMode` 지도 응용 프로그램이 열릴 때의 기본 방향 모드 설정에 지원 됩니다.
+- `MapDirectionsMode`에서 자가용, 대중교통, 걷기를 지원합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `MapDirectionsMode` 지원 되지 않습니다 하 고 영향을 주지 않습니다.
+- `MapDirectionsMode`에서 자가용, 대중교통, 걷기를 지원합니다.
 
 --------------
 
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-사용 하 여 android는 `geo:` Uri 체계 장치의 maps 응용 프로그램을 시작 합니다. 이 사용자가이 Uri 체계를 지 원하는 기존 앱에서 선택할 것인지 수 있습니다.  이 체계를 지 원하는 Google Maps Xamarin.Essentials 테스트 됩니다.
+Android는 `geo:` URI 체계를 사용하여 장치에서 지도 응용 프로그램을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-플랫폼 특정 구현 세부 정보가 없습니다.
+플랫폼 특정 구현 세부 정보는 없습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-플랫폼 특정 구현 세부 정보가 없습니다.
+플랫폼 특정 구현 세부 정보는 없습니다.
 
 --------------
 
 ## <a name="api"></a>API
 
-- [맵 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Maps)
-- [Maps API 설명서](xref:Xamarin.Essentials.Maps)
+- [Maps 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Maps)
+- [Maps API 문서](xref:Xamarin.Essentials.Maps)

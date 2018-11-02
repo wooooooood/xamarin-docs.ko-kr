@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: 텍스트 음성 변환'
-description: Xamarin.Essentials 사용 하면 장치에서 그리고 엔진을 지원할 수 있는 쿼리 사용 가능한 언어 백 텍스트를 말하는 텍스트 음성 변환 엔진에서 응용 프로그램을 기본 제공 활용 TextToSpeech 클래스입니다.
+title: 'Xamarin.Essentials: Text-to-Speech'
+description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ba822870edafce44140caa66b01f4da242fb7779
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.date: 08/30/2018
+ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675369"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: 텍스트 음성 변환
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **TextToSpeech** 클래스를 사용 하면 장치에서 그리고 엔진을 지원할 수 있는 쿼리 사용 가능한 언어 백 텍스트를 말하는 텍스트 음성 변환 엔진에서 기본 제공을 활용 하는 응용 프로그램입니다.
+**TextToSpeech** 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-text-to-speech"></a>텍스트 음성 변환 사용
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-텍스트 음성 변환 기능을 호출 하 여 작동 합니다 `SpeakAsync` 메서드 텍스트 및 선택적 매개 변수를 utterance 완료 된 후 반환 합니다. 
+텍스트 음성 변환은 텍스트 및 선택적 매개 변수로 `SpeakAsync` 메서드를 호출하여 작동하며, 발화가 완료된 후 반환됩니다.
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +50,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-이 메서드는 선택적인 `CancellationToken` 일단 시작 된 utterance를 중지 합니다.
+이 메서드는 선택적 `CancellationToken`을 사용하여 시작된 발화를 중지합니다.
 
 ```csharp
 CancellationTokenSource cts;
@@ -67,7 +71,7 @@ public void CancelSpeech()
 }
 ```
 
-Text to speech는 동일한 스레드에서 음성 요청을 큐 자동으로 합니다.
+텍스트 음성 변환은 동일한 스레드의 음성 요청을 자동으로 큐에 넣습니다.
 
 ```csharp
 bool isBusy = false;
@@ -93,7 +97,7 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>음성 설정
 
-오디오 사용 되는 방식을 보다 자세히 제어를 사용 하 여 다시 `SpeakSettings` 볼륨, 피치 및 로캘 설정 수 있도록 합니다.
+볼륨, 피치 및 로캘을 설정할 수 있는 `SpeakSettings`를 사용하여 오디오를 말하는 방법을 세부적으로 제어할 수 있습니다.
 
 ```csharp
 public async Task SpeakNow()
@@ -108,7 +112,7 @@ public async Task SpeakNow()
 }
 ```
 
-다음은 이러한 매개 변수에 대해 지원 되는 값입니다.
+다음은 이러한 매개 변수에 대해 지원되는 값입니다.
 
 | 매개 변수 | 최소 | Maximum |
 | --- | :---: | :---: |
@@ -117,7 +121,7 @@ public async Task SpeakNow()
 
 ### <a name="speech-locales"></a>음성 로캘
 
-각 플랫폼에는 여러 언어에서 악센트 백 텍스트 읽어주기 로캘을 제공 합니다. 각 플랫폼에 다른 코드 및 의미 하기 때문에이 지정 하는 방법으로 Essentials 제공 플랫폼 간 `Locale` 클래스와 사용 하 여 쿼리 하는 방법은 `GetLocalesAsync`합니다.
+각 플랫폼은 서로 다른 언어와 악센트로 텍스트를 말하기 위해 다양한 로캘을 지원합니다. 플랫폼마다 각기 다른 코드와 방법으로 로캘을 지정하며, 이 때문에 Xamarin.Essentials는 플랫폼 간 `Locale` 클래스와 `GetLocalesAsync`로 쿼리하는 방법을 제공합니다.
 
 ```csharp
 public async Task SpeakNow()
@@ -140,10 +144,10 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>제한 사항
 
-- 여러 스레드에서 호출 되는 경우에 utterance 큐 보장 되지 않습니다.
-- 백그라운드 오디오 재생 공식적으로 지원 되지 않습니다.
+- 여러 스레드에서 호출하는 경우 발화 큐는 보장되지 않습니다.
+- 백그라운드 오디오 재생은 공식적으로 지원되지 않습니다.
 
 ## <a name="api"></a>API
 
 - [TextToSpeech 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
-- [TextToSpeech API 설명서](xref:Xamarin.Essentials.TextToSpeech)
+- [TextToSpeech API 문서](xref:Xamarin.Essentials.TextToSpeech)

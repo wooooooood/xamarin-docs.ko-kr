@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120946"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -73,7 +73,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 
@@ -93,7 +93,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
     ![entitlements.plist 파일에 기능 추가](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 기능은 **Entitlements.plist**에 추가됩니다. Visual Studio 2017에서 기능을 추가하려면 다음 단계를 사용합니다.
 
@@ -206,12 +206,12 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 아래 목록에는 앱 서비스를 사용하도록 설정한 상태에서 앱을 개발할 때 장애물을 만들 수 있는 가장 일반적인 문제 중 일부가 자세히 나열되어 있습니다.
 
--   Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
--   서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
--   프로비전 프로필과 App ID가 설치되어 있는지, 앱의 **Info.plist**(Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
--   앱의 **Entitlements.plist** 파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
+-   Apple Developer 포털의  **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
+-   서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의  **Certificates, IDs & Profiles** (인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
+-   프로비전 프로필과 App ID가 설치되어 있는지, 앱의  **Info.plist** (Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
+-   앱의  **Entitlements.plist**  파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
 -   info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
--   앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
+-   앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이  _아닙니다_ .
 
 <a name="summary" />
 

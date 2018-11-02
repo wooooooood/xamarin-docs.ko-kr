@@ -1,6 +1,7 @@
 ---
 title: Xamarin.Forms 심층 분석
 description: 이 문서에서는 Xamarin.Forms를 사용하여 응용 프로그램 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 응용 프로그램 분석, 아키텍처 및 응용 프로그램 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -8,22 +9,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: def4ecccf92c47a5cc7c08e2821e5f3387fb752f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118710"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 심층 분석
 
 [Xamarin.Forms 빠른 시작](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)에서는 Phoneword 응용 프로그램을 빌드했습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램의 핵심 작동 원리를 이해하기 위해 무엇이 빌드되었는지 검토합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Visual Studio 소개
-
-Visual Studio는 Microsoft의 강력한 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. 이 문서에서는 Visual Studio의 일부 기본 기능을 Xamarin 플러그 인과 함께 사용하는 방법을 집중적으로 다룹니다.
 
 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등이 될 수 있습니다. Phoneword 응용 프로그램은 다음 스크린샷처럼 4개의 프로젝트를 포함하는 솔루션 하나로 구성됩니다.
 
@@ -42,15 +41,17 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 ![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 프로젝트 콘텐츠")
 
-프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다. **NuGet** 노드는 프로젝트에 추가된 Xamarin.Forms NuGet 패키지를 포함하고, **SDK** 노드는 .NET Standard를 정의하는 전체 NuGet 패키지 집합을 참조하는 `NETStandard.Library` 메타패키지를 포함합니다.
+프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+- **NuGet** &ndash; Xamarin.Forms NuGet 패키지가 프로젝트에 추가되었습니다.
+- **SDK** &ndash; `NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.
+
+::: zone-end
+::: zone pivot="macos"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Mac용 Visual Studio 소개
 
-Mac용 Visual Studio는 Visual Studio와 유사한 무료 오픈 소스 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. Mac용 Visual Studio에 대한 자세한 내용은 [Mac용 Visual Studio 소개](/visualstudio/mac/)를 참조하세요.
-
-Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등이 될 수 있습니다. Phoneword 응용 프로그램은 다음 스크린샷처럼 3개의 프로젝트를 포함하는 솔루션 하나로 구성됩니다.
+[Mac용 Visual Studio](/visualstudio/mac/)는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등이 될 수 있습니다. Phoneword 응용 프로그램은 다음 스크린샷처럼 3개의 프로젝트를 포함하는 솔루션 하나로 구성됩니다.
 
 ![](deepdive-images/xs/solution.png "Mac용 Visual Studio 솔루션 창")
 
@@ -66,9 +67,12 @@ Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는
 
 ![](deepdive-images/xs/library-project.png "Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠")
 
-프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다. **NuGet** 노드는 프로젝트에 추가된 Xamarin.Forms NuGet 패키지를 포함하고, **SDK** 노드는 .NET Standard를 정의하는 전체 NuGet 패키지 집합을 참조하는 `NETStandard.Library` 메타패키지를 포함합니다.
+프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
------
+- **NuGet** &ndash; Xamarin.Forms NuGet 패키지가 프로젝트에 추가되었습니다.
+- **SDK** &ndash; `NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.
+
+::: zone-end
 
 프로젝트는 여러 파일로도 구성됩니다.
 
@@ -83,19 +87,20 @@ Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응�
 
 ## <a name="architecture-and-application-fundamentals"></a>아키텍처 및 응용 프로그램 기본 사항
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 .NET 표준 라이브러리에 배치되고 플랫폼 관련 응용 프로그램은 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 이 관계의 개요를 보여줍니다.
 
 ![](deepdive-images/vs/architecture.png "Phoneword 아키텍처")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 .NET 표준 라이브러리에 배치되고 플랫폼 관련 응용 프로그램은 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 이 관계의 개요를 보여줍니다.
 
 ![](deepdive-images/xs/architecture.png "Phoneword 아키텍처")
 
------
+::: zone-end
 
 다음 코드 예제와 같이, 시작 코드의 재사용을 최대화하기 위해 Xamarin.Forms 응용 프로그램에는 각 플랫폼에서 응용 프로그램이 표시할 첫 번째 페이지를 인스턴스화하는 역할을 담당하는 `App`이라는 단일 클래스가 있습니다.
 
@@ -176,6 +181,8 @@ namespace Phoneword.Droid
 
 `OnCreate` 재정의는 `Init` 메서드를 호출하여 Xamarin.Forms 프레임워크를 초기화합니다. 이로 인해 Xamarin.Forms 응용 프로그램이 로드되기 전에 Xamarin.Forms의 Android 특정 구현이 응용 프로그램에 로드됩니다. 또한 `MainActivity` 클래스는 그 자체에 대한 참조를 `Instance` 속성에 저장합니다. `Instance` 속성을 로컬 컨텍스트라고도 하며, `PhoneDialer` 클래스에서 참조됩니다.
 
+::: zone pivot="windows"
+
 ## <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
 UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
@@ -210,12 +217,14 @@ Xamarin.Forms 응용 프로그램은 `LoadApplication` 메서드를 사용해 �
 > [!NOTE]
 > UWP(유니버설 Windows 플랫폼) 앱은 Xamarin.Forms로 빌드할 수 있지만 Windows에서 Visual Studio만 사용합니다.
 
+::: zone-end
+
 ## <a name="user-interface"></a>사용자 인터페이스
 
 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 사용되는 4개의 주 제어 그룹이 있습니다.
 
 1. **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. Phoneword 응용 프로그램은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 클래스를 사용하여 단일 화면을 표시합니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
-1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용된 컨테이너입니다. Phoneword 응용 프로그램은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스를 사용하여 컨트롤을 가로 스택에 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
+1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용된 컨테이너입니다. Phoneword 응용 프로그램은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스를 사용하여 컨트롤을 세로 스택에 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
 1. **뷰** – Xamarin.Forms 뷰는 레이블, 단추 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. Phoneword 응용 프로그램은 [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry) 및 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 사용합니다. 보기에 대한 자세한 내용은 [Xamarin.Forms 보기](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
 1. **셀** – Xamarin.Forms 셀은 목록에 있는 항목에 사용되는 특수한 요소이며, 목록의 각 항목이 어떻게 그려져야 하는지를 설명합니다. Phoneword 응용 프로그램은 어떤 셀도 사용하지 않습니다. 셀에 대한 자세한 내용은 [Xamarin.Forms 셀](~/xamarin-forms/user-interface/controls/cells.md)을 참조하세요.
 
@@ -232,7 +241,7 @@ Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
         <StackLayout>
             <Label Text="Enter a Phoneword:" />
             <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
             <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
 </ContentPage>
@@ -265,7 +274,7 @@ void OnTranslate(object sender, EventArgs e)
 변환 단추를 `OnTranslate` 메서드에 연결하는 동작은 `MainPage` 클래스에 대한 XAML 태그에서 발생합니다.
 
 ```xaml
-<Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+<Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
 ```
 
 ## <a name="additional-concepts-introduced-in-phoneword"></a>Phoneword에 도입된 추가 개념

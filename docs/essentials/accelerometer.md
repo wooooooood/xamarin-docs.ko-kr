@@ -5,18 +5,22 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 70f41e6242b62577b6aa42cc207802ead020499e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40184430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674766"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: 가속도계
 
 ![시험판 NuGet](~/media/shared/pre-release.png)
 
-**가속도계** 클래스를 사용하면 3차원 공간에서 장치의 가속을 나타내는 장치의 가속도계 센서를 모니터링할 수 있습니다.
+**Accelerometer** 클래스를 사용하면 3차원 공간에서 장치의 가속을 나타내는 장치의 가속도계 센서를 모니터링할 수 있습니다.
+
+## <a name="get-started"></a>시작
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-accelerometer"></a>가속도계 사용
 
@@ -77,11 +81,11 @@ X축은 가로이고 오른쪽을 가리키며, Y축은 세로이고 위를 가�
 
 예를 들면 다음과 같습니다.
 
-* 장치가 테이블 위에 눕혀 있고 왼쪽을 오른쪽 방향으로 푸시한 경우 x 가속 값은 양수입니다.
+- 장치가 테이블 위에 눕혀 있고 왼쪽을 오른쪽 방향으로 푸시한 경우 x 가속 값은 양수입니다.
 
-* 장치가 테이블 위에 눕혀 있으면 가속 값이 +1.00G 또는 (+9.81m/s^2)입니다. 이 값은 장치의 가속(0m/s^2) - 중력(-9.81m/s^2)에 해당하며 G 단위로 일반화됩니다.
+- 장치가 테이블 위에 눕혀 있으면 가속 값이 +1.00G 또는 (+9.81m/s^2)입니다. 이 값은 장치의 가속(0m/s^2) - 중력(-9.81m/s^2)에 해당하며 G 단위로 일반화됩니다.
 
-* 장치가 테이블 위에 눕혀 있고 Am/s^2 가속으로 위쪽으로 푸시한 경우 가속 값은 A+9.81과 동일합니다. 이 값은 장치의 가속(+Am/s^2) - 중력(-9.81m/s^2)에 해당하며 G 단위로 일반화됩니다.
+- 장치가 테이블 위에 눕혀 있고 Am/s^2 가속으로 위쪽으로 푸시한 경우 가속 값은 A+9.81과 동일합니다. 이 값은 장치의 가속(+Am/s^2) - 중력(-9.81m/s^2)에 해당하며 G 단위로 일반화됩니다.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

@@ -1,35 +1,35 @@
 ---
 title: 'Xamarin.Essentials: OrientationSensor'
-description: OrientationSensor 클래스를 사용 하면 방향을 3 차원 공간에 장치를 모니터링할 수 있습니다.
+description: OrientationSensor 클래스를 사용하면 3차원 공간에서 장치의 방향을 모니터링할 수 있습니다.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/21/2018
-ms.openlocfilehash: a15338795424885882ed9c86288342d196f6fda2
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 4ea6ebbb85510b5d7262cde73248af9df975b867
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112067"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **OrientationSensor** 클래스를 사용 하면 세 가지 차원 공간에서 장치의 방향을 모니터링 합니다.
+**OrientationSensor** 클래스를 사용하면 3차원 공간에서 장치의 방향을 모니터링할 수 있습니다.
 
 > [!NOTE]
-> 이 클래스는 3D 공간에서 장치의 방향을 결정 합니다. 세로 또는 가로 모드로 표시 되는 장치의 비디오를 확인 해야 할 경우 사용 합니다는 `Orientation` 의 속성을 `ScreenMetrics` 에서 사용 가능한 개체를 [ `DeviceDisplay` ](device-display.md) 클래스.
+> 이 클래스는 3D 공간에서 장치의 방향을 확인하기 위한 것입니다. 장치의 비디오 디스플레이가 세로 또는 가로 모드인지 확인해야 하는 경우 [`DeviceDisplay`](device-display.md) 클래스에서 제공되는 `ScreenMetrics` 개체의 `Orientation` 속성을 사용합니다.
 
-## <a name="using-orientationsensor"></a>OrientationSensor를 사용 하 여
+## <a name="using-orientationsensor"></a>OrientationSensor 사용
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-합니다 `OrientationSensor` 호출 하 여 사용 하도록 설정할지를 `Start` 메서드를 호출 하 여 장치 방향 및 사용 안 함으로 변경 내용을 모니터링 합니다 `Stop` 메서드. 변경 내용을 통해 다시 전송 되는 `ReadingChanged` 이벤트입니다. 사용 예는 다음과 같습니다.
+`OrientationSensor`는 장치의 방향 변경 내용을 모니터링하기 위해 `Start` 메서드를 호출하여 사용되고, `Stop` 메서드를 호출하여 사용하지 않게 됩니다. `ReadingChanged` 이벤트를 통해 변경 내용을 다시 전송합니다. 다음은 샘플 사용법입니다.
 
 ```csharp
 
@@ -72,41 +72,41 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` 판독값의 형태로 다시 보고 됩니다는 [ `Quaternion` ](xref:System.Numerics.Quaternion) 두 3D 좌표 시스템에 따라 장치 방향을 설명 합니다.
+`OrientationSensor` 판독값은 두 개의 3D 좌표계를 기준으로 장치의 방향을 설명하는 [`Quaternion`](xref:System.Numerics.Quaternion) 형식으로 다시 보고됩니다.
 
-장치 (일반적으로 휴대폰 또는 태블릿)에 다음 축 사용 하 여 3D 좌표 시스템을 있습니다.
+장치(일반적으로 휴대폰 또는 태블릿)에는 다음 축을 포함하는 3D 좌표계가 있습니다.
 
-- X 축 요소 오른쪽의 세로 모드에 표시 되는 양수입니다.
-- 양의 Y 축 위쪽 세로 모드에서 장치를 가리킵니다.
-- 양의 Z 축 요소는 화면입니다.
+- 양수 X 축은 세로 모드에서 디스플레이 오른쪽을 가리킵니다.
+- 양수 Y 축은 세로 모드에서 장치의 위쪽을 가리킵니다.
+- 양수 Z 축은 화면 밖을 가리킵니다.
 
-지구 3D 좌표 시스템의 다음 축:
+지구의 3D 좌표계에는 다음 축이 있습니다.
 
-- 양수 X 축 지구 표면의 탄젠트 및 동부 가리킵니다.
-- 양의 Y 축을 지점 북쪽 고 지구 표면의 탄젠트 이기도합니다.
-- 양의 Z 축 등록 지점과 지구의 화면에 수직인 합니다.
+- 양수 X 축은 지구 표면에 접하고 동쪽을 가리킵니다.
+- 양수 Y 축도 지구 표면에 접하고 북쪽을 가리킵니다.
+- 양수 Z 축은 지구 표면에 수직이고 위쪽을 가리킵니다.
 
-`Quaternion` 지구 좌표계를 기준으로 장치의 좌표 시스템의 회전에 설명 합니다.
+`Quaternion`은 지구 좌표계를 기준으로 장치 좌표계의 회전을 설명합니다.
 
-`Quaternion` 값은 매우 밀접 하는 축 기준으로 회전 합니다. 회전의 축을 정규화 된 벡터 이면 (을<sub>x</sub>,<sub>y</sub>,<sub>z</sub>), 회전 각도 Θ, 한 다음 (X, Y, Z, W) 이며 쿼터 니 언의 구성 요소는:
+`Quaternion` 값은 축을 중심으로 하는 회전과 밀접한 관련이 있습니다. 회전의 축이 정규화된 벡터(a<sub>x</sub>, a<sub>y</sub>, a<sub>z</sub>)이고 회전 각도가 Θ인 경우 쿼터니언의 (X, Y, Z, W) 구성 요소는 다음과 같습니다.
 
-(한<sub>x</sub>·sin(Θ/2)는<sub>y</sub>·sin(Θ/2)는<sub>z</sub>·sin(Θ/2), cos(Θ/2))
+(a<sub>x</sub>·sin(Θ/2), a<sub>y</sub>·sin(Θ/2), a<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-이들은 오른쪽 좌표계를 양의 방향으로 회전 축 가리키고 오른쪽의 thumb을 사용 하 여 손가락의 곡선을 나타낼 회전 양의 각도 방향입니다.
+이는 오른손 좌표계이므로, 오른손 엄지손가락이 회전 축의 양수 방향을 가리킬 때 손가락 곡선은 양수 각도에 대한 회전 방향을 나타냅니다.
 
 예를 들면 다음과 같습니다.
 
-* 북쪽을 가리키는 위쪽 (세로 모드)에서 장치를 연결 하는 화면을 사용 하 여 플랫 테이블에서 장치에 존재 하는 경우에 두 개의 좌표 시스템 정렬 됩니다. `Quaternion` 값 (0, 0, 0, 1) id 4 원수를 나타냅니다. 이 위치를 기준으로 모든 회전을 분석할 수 있습니다.
+* 장치가 화면이 위를 향하도록 테이블에 놓여 있고 장치의 위쪽(세로 모드)이 북쪽을 가리키는 경우 두 좌표계가 정렬됩니다. `Quaternion` 값은 ID 쿼터니언(0, 0, 0, 1)을 나타냅니다. 이 위치를 기준으로 모든 회전을 분석할 수 있습니다.
 
-* 장치 연결, 화면 및 서쪽을 가리키는 위쪽 (세로 모드)에서 장치를 사용 하 여 플랫 테이블에 존재 하는 경우는 `Quaternion` 값 (0, 0, 0.707, 0.707)이 있습니다. 장치 지구 Z 축 중심으로 90도 회전 된 합니다.
+* 장치가 화면이 위를 향하도록 테이블에 놓여 있고 장치의 위쪽(세로 모드)이 서쪽을 가리키는 경우 `Quaternion` 값은 (0, 0, 0.707, 0.707)입니다. 장치가 지구의 Z 축을 중심으로 90도 회전되었습니다.
 
-* 장치가 적용 하는 동안 수직 위쪽 (세로 모드로), 하늘 가리킵니다 하 고 장치 뒷면 북쪽 직면 하는 경우 장치는 X 축 중심으로 90도 회전된 되었습니다. `Quaternion` (0.707, 0, 0, 0.707) 값이 있습니다.
+* 위쪽(세로 모드)이 하늘을 가리키고 장치의 뒤쪽이 북쪽을 향하도록 장치를 똑바로 드는 경우 장치가 X 축을 중심으로 90도 회전되었습니다. `Quaternion` 값은 (0.707, 0, 0, 0.707)입니다.
 
-* 테이블의 왼쪽된 가장자리 이며 맨 북쪽을 가리키는 장치 회전 된 하므로 장치가 있을 경우 &ndash;90도 Y 축을 중심으로 (또는 음의 Y 축 중심으로 90도). `Quaternion` 값 (0,-0.707, 0, 0.707)이 있습니다.
+* 왼쪽 가장자리가 테이블 위에 오고 위쪽이 북쪽을 가리키도록 장치를 놓는 경우 장치가 Y 축을 중심으로 &ndash;90도(또는 음수 Y 축을 중심으로 90도) 회전되었습니다. `Quaternion` 값은 (0, -0.707, 0, 0.707)입니다.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
 - [OrientationSensor 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
-- [OrientationSensor API 설명서](xref:Xamarin.Essentials.OrientationSensor)
+- [OrientationSensor API 문서](xref:Xamarin.Essentials.OrientationSensor)

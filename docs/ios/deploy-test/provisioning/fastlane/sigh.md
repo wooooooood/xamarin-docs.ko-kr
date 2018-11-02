@@ -4,17 +4,17 @@ description: 이 문서에서는 모든 Xamarin.iOS 빌드 구성에 대해 프�
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785504"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119516"
 ---
-# <a name="fastlane-for-ios--sigh"></a>iOS용 fastlane – sigh
+# <a name="fastlane-for-ios-sigh"></a>iOS용 fastlane – sigh
 
 > [!IMPORTANT]
 > fastlane에서는 프로비전 프로필 생성 및 유지 관리를 위해 [`match`](~/ios/deploy-test/provisioning/fastlane/match.md)를 사용하는 것이 좋습니다. 코드 서명에 대해 알고 있고 완전한 제어가 필요한 경우에만 sigh를 직접 사용합니다.
