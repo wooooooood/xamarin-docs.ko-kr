@@ -7,45 +7,27 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b995ed5cf8d8735e87fb18c3a69d43b5a079b82f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674985"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Xamarin.iOS 앱 단위 테스트
 
 이 문서에서는 Xamarin.iOS 프로젝트의 단위 테스트를 만드는 방법을 설명합니다.
 Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사용하여 수행됩니다. 여기에는 단위 테스트를 작성하기 위한 친숙한 API 집합을 제공하는 [Touch.Unit](https://github.com/xamarin/Touch.Unit)이라는 NUnit의 수정된 버전 외에도 iOS 테스트 실행기가 모두 포함되어 있습니다.
 
-## <a name="setting-up-a-test-project"></a>테스트 프로젝트 설정
+## <a name="setting-up-a-test-project-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 테스트 프로젝트 설정
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-
-프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트 추가**를 차례로 선택합니다. 목록에서 **iOS > 테스트 > 통합 API > iOS 단위 테스트 프로젝트**(C# 또는 F# 중 하나를 선택할 수 있음)를 차례로 선택합니다.
+프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 형식의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트 추가**를 차례로 선택합니다. 목록에서 **iOS > 테스트 > 통합 API > iOS 단위 테스트 프로젝트**(C# 또는 F# 중 하나를 선택할 수 있음)를 차례로 선택합니다.
 
 ![](touch.unit-images/00.png "C# 또는 F# 선택")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...** 를 차례로 선택합니다. 목록에서 **Visual C# > iOS > 단위 테스트 앱(iOS)** 을 선택합니다.
-
-![](touch.unit-images/00a.png "단위 테스트 앱 iOS ")
-
------
-
 위에서는 기본 실행기 프로그램을 포함하고 새 MonoTouch.NUnitLite 어셈블리를 참조하는 기본 프로젝트를 만듭니다. 이 프로젝트는 다음과 같습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-
 ![](touch.unit-images/01.png "솔루션 탐색기의 프로젝트")
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-![](touch.unit-images/01a.png "솔루션 탐색기의 프로젝트")
-
------
 
 `AppDelegate.cs` 클래스에는 테스트 실행기가 포함되어 있으며 다음과 같습니다.
 
@@ -53,27 +35,30 @@ Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사�
 [Register ("AppDelegate")]
 public partial class AppDelegate : UIApplicationDelegate
 {
-        UIWindow window;
-        TouchRunner runner;
+    UIWindow window;
+    TouchRunner runner;
 
-        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-        {
-                // create a new window instance based on the screen size
-                window = new UIWindow (UIScreen.MainScreen.Bounds);
-                runner = new TouchRunner (window);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
+        runner = new TouchRunner (window);
 
-                // register every tests included in the main application/assembly
-                runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
+        // register every tests included in the main application/assembly
+        runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
 
-                window.RootViewController = new UINavigationController (runner.GetViewController ());
+        window.RootViewController = new UINavigationController (runner.GetViewController ());
 
-                // make the window visible
-                window.MakeKeyAndVisible ();
+        // make the window visible
+        window.MakeKeyAndVisible ();
 
-                return true;
-        }
+        return true;
+    }
 }
 ```
+
+> [!NOTE]
+> Windows의 Visual Studio 2017에서는 iOS 단위 테스트 프로젝트 형식을 사용할 수 없습니다.
 
 ## <a name="writing-some-tests"></a>일부 테스트 작성
 
@@ -89,28 +74,28 @@ using NUnit.Framework;
 
 namespace Fixtures {
 
-        [TestFixture]
-        public class Tests {
+    [TestFixture]
+    public class Tests {
 
-                [Test]
-                public void Pass ()
-                {
-                        Assert.True (true);
-                }
-
-                [Test]
-                public void Fail ()
-                {
-                        Assert.False (true);
-                }
-
-                [Test]
-                [Ignore ("another time")]
-                public void Ignore ()
-                {
-                        Assert.True (false);
-                }
+        [Test]
+        public void Pass ()
+        {
+                Assert.True (true);
         }
+
+        [Test]
+        public void Fail ()
+        {
+                Assert.False (true);
+        }
+
+        [Test]
+        [Ignore ("another time")]
+        public void Ignore ()
+        {
+                Assert.True (false);
+        }
+    }
 }
 ```
 
@@ -120,15 +105,14 @@ namespace Fixtures {
 
 테스트 실행기를 사용하면 등록된 테스트를 확인하고 실행할 수 있는 테스트를 개별적으로 선택할 수 있습니다.
 
-[![](touch.unit-images/02.png "등록된 테스트 목록")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/02-sml.png "등록된 테스트 목록")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/03-sml.png "개별 텍스트")](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/03.png "개별 텍스트")](touch.unit-images/03.png#lightbox) 
-
-[![](touch.unit-images/04.png "실행 결과")](touch.unit-images/04.png#lightbox)
+[![](touch.unit-images/04-sml.png "실행 결과")](touch.unit-images/04.png#lightbox)
 
 중첩된 뷰에서 테스트 픽스쳐를 선택하여 개별 테스트 픽스쳐를 실행하거나, "모든 항목 실행"으로 모든 테스트를 실행할 수 있습니다. 기본 테스트를 실행하는 경우 통과한 테스트, 실패한 테스트 및 무시한 테스트를 하나씩 포함하도록 되어 있습니다. 보고서는 다음과 같이 표시되며, 실패한 테스트를 직접 드릴다운하여 실패에 대한 자세한 정보를 확인할 수 있습니다.
 
-[![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "샘플 보고서")](touch.unit-images/05.png#lightbox)
+[![](touch.unit-images/05-sml.png "샘플 보고서")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "샘플 보고서")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "샘플 보고서")](touch.unit-images/07.png#lightbox)
 
 또한 IDE에서 응용 프로그램 출력 창을 통해 실행 중인 테스트와 현재 상태를 확인할 수도 있습니다.
 
@@ -139,12 +123,7 @@ NUnitLite는 [Touch.Unit](https://github.com/xamarin/Touch.Unit) 프로젝트라
 
 Assert 클래스 메서드 외에도 단위 테스트 기능은 NUnitLite의 일부인 다음 네임스페이스에서 분할됩니다.
 
--   [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
--   [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
--   [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
--   [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
-
-
-다음은 Xamarin.iOS 관련 단위 테스트 실행기에 대해 설명하고 있습니다.
-
--   [NUnit.UI.TouchRunner](https://developer.xamarin.com/api/type/NUnit.UI.TouchRunner/)
+- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
+- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
+- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
+- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: c4fba219b7fbfef9930539f0e25fda74ae1299b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a2739d1a3848303b3086c23c0a28a889250ee2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675512"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 장치 및 Xamarin.Android
 
 _Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습니다. 이 문서에서는 Xamarin.Android 응용 프로그램에 대해 사용할 수 있는 여러 CPU 아키텍처에 설명합니다. 이 문서에서는 또한 여러 CPU 아키텍처를 지원하도록 Android 응용 프로그램을 패키징하는 방법도 설명합니다. ABI(응용 프로그램 이진 인터페이스)를 소개하고, Xamarin.Android 응용 프로그램에서 사용할 ABI에 대한 지침을 제공합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -25,19 +24,17 @@ Android는 여러 CPU 아키텍처를 지원하는 컴퓨터 코드가 포함된
 
 특히 각 Android 응용 프로그램은 EABI(*포함된 응용 프로그램 이진 인터페이스*)를 하나 이상 지원하게 됩니다. EABI는 포함된 소프트웨어 프로그램과 관련된 규칙입니다. 일반적인 EABI는 다음과 같은 항목을 설명합니다.
 
--   CPU 명령 집합.
+- CPU 명령 집합.
 
--   런타임 시 메모리 저장 및 로드의 엔디언.
+- 런타임 시 메모리 저장 및 로드의 엔디언.
 
--   개체 파일 및 프로그램 라이브러리의 이진 형식과 이러한 파일 및 라이브러리에서 허용 또는 지원되는 콘텐츠 형식.
+- 개체 파일 및 프로그램 라이브러리의 이진 형식과 이러한 파일 및 라이브러리에서 허용 또는 지원되는 콘텐츠 형식
 
--   응용 프로그램 코드와 시스템 간에 데이터를 전달하는 데 사용되는 다양한 규칙(예: 함수가 호출될 때 레지스터 및/또는 스택이 사용되는 방법, 맞춤 제약 조건 등)
+- 응용 프로그램 코드와 시스템 간에 데이터를 전달하는 데 사용되는 다양한 규칙(예: 함수가 호출될 때 레지스터 및/또는 스택이 사용되는 방법, 맞춤 제약 조건 등)
 
--   열거형 형식, 구조체, 필드 및 배열에 대한 맞춤 및 크기 제약 조건.
+- 열거형 형식, 구조체, 필드 및 배열에 대한 맞춤 및 크기 제약 조건
 
--   런타임 시 컴퓨터 코드에 사용할 수 있는 함수 기호 목록(일반적으로 구체적으로 선택된 라이브러리 집합에서 가져옴).
-
-
+- 런타임 시 머신 코드에 사용할 수 있는 함수 기호 목록(일반적으로 구체적으로 선택된 라이브러리 집합에서 가져옴)
 
 ### <a name="armeabi-and-thread-safety"></a>armeabi 및 스레드 보안
 
@@ -48,12 +45,9 @@ Android 4.0.0, 4.0.1, 4.0.2 및 4.0.3의 버그로 인해 `armeabi-v7a` 디렉�
 > [!NOTE]
 > Xamarin.Android는 `.so`가 올바른 순서로 APK에 추가되도록 합니다. 이 버그는 Xamarin.Android의 사용자에게 문제가 되지 않습니다.
 
-
 ### <a name="abi-descriptions"></a>ABI 설명
 
 Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
-
-
 
 #### <a name="armeabi"></a>armeabi
 
@@ -61,48 +55,36 @@ Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 
 **참고**: Xamarin.Android의 `armeabi` 코드는 스레드로부터 안전하지 않으며 다중 CPU `armeabi-v7a` 장치에 사용해서는 안 됩니다(아래 설명 참조). 단일 코어 `armeabi-v7a` 장치에서 `aremabi` 코드를 사용하는 것은 안전합니다.
 
-
-
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 이는 위에 설명된 `armeabi` EABI를 확장하는 또 다른 ARM 기반 CPU 명령 집합입니다. 이 `armeabi-v7a` EABI는 하드웨어 부동 소수점 연산 및 다중 CPU(SMP) 장치를 지원합니다. `armeabi-v7a` EABI를 사용하는 응용 프로그램은 `armeabi`를 사용하는 응용 프로그램보다 상당한 성능 개선 효과를 기대할 수 있습니다.
 
 **참고:** `armeabi-v7a` 기계어 코드는 ARMv5 장치에서 실행되지 않습니다.
 
-
-
 #### <a name="arm64-v8a"></a>arm64-v8a
 
 이는 ARMv8 CPU 아키텍처에 기반을 둔 64비트 명령 집합입니다. 이 아키텍처는 *Nexus 9*에서 사용됩니다.
 Xamarin.Android 5.1은 이 아키텍처에 대한 실험적 지원을 제공합니다(자세한 내용은 [실험적 기능](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) 참조).
 
-
-
 #### <a name="x86"></a>x86
 
 이는 명령 집합을 지원하는 CPU의 ABI 이름이며, 일반적으로 *x86* 또는 *IA-32*라고 합니다. 이 ABI는 MMX, SSE, SSE2 및 SSE3 명령 집합을 포함한 Pentium Pro 명령 집합의 명령에 해당합니다. 다음과 같은 다른 선택적 IA-32 명령 집합은 포함하지 않습니다.
 
--  MOVBE 명령.
--  보조 SSE3 확장(SSSE3).
--  SSE4 변형.
+- MOVBE 명령.
+- 보조 SSE3 확장(SSSE3).
+- SSE4 변형.
 
-
-**참고:** Google TV는 x86에서 실행되기는 하지만 Android의 NDK 또는 다음에서 지원되지 않습니다.
-
-
+**참고:** Google TV는 x86에서 실행되기는 하지만 Android의 NDK에서 지원되지 않습니다.
 
 #### <a name="x8664"></a>x86_64
 
 이는 64비트 x86 명령 집합을 지원하는 CPU의 ABI입니다(*x64* 또는 *AMD64*라고도 함). Xamarin.Android 5.1은 이 아키텍처에 대한 실험적 지원을 제공합니다(자세한 내용은 [실험적 기능](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) 참조).
-
 
 #### <a name="mips"></a>mips
 
 이는 하나 이상의 `MIPS32r1` 명령 집합을 지원하는 MIPS 기반 CPU의 ABI 이름입니다. MIPS 16와 `micromips`는 모두 Android에서 지원되지 않습니다.
 
 **참고:** MIPS 장치는 현재 Xamarin.Android에서 지원되지 않지만 향후 릴리스에서는 지원될 예정입니다.
-
-
 
 #### <a name="apk-file-format"></a>APK 파일 형식
 
@@ -112,42 +94,36 @@ Android 응용 프로그램 패키지는 Android 응용 프로그램에 필요�
 
 `.apk` 파일의 콘텐츠에 대한 간단한 설명:
 
--   **AndroidManifest.xml** &ndash; 이는 이진 XML 형식의 `AndroidManifest.xml` 파일입니다.
+- **AndroidManifest.xml** &ndash; 이는 이진 XML 형식의 `AndroidManifest.xml` 파일입니다.
 
--   **classes.dex** &ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 응용 프로그램 코드가 포함됩니다.
+- **classes.dex** &ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 응용 프로그램 코드가 포함됩니다.
 
--   **resources.arsc** &ndash; 이 파일에는 응용 프로그램의 미리 컴파일된 리소스가 모두 포함됩니다.
+- **resources.arsc** &ndash; 이 파일에는 응용 프로그램의 미리 컴파일된 리소스가 모두 포함됩니다.
 
--   **lib** &ndash; 이 디렉터리에는 각 ABI의 컴파일된 코드가 저장됩니다. 이전 섹션에서 설명된 각 ABI당 하나의 하위 폴더가 포함됩니다. 위의 스크린샷에서 해당 `.apk`에는 `armeabi-v7a` 및 `x86` 모두를 위한 네이티브 라이브러리가 있습니다.
+- **lib** &ndash; 이 디렉터리에는 각 ABI의 컴파일된 코드가 저장됩니다. 이전 섹션에서 설명된 각 ABI당 하나의 하위 폴더가 포함됩니다. 위의 스크린샷에서 해당 `.apk`에는 `armeabi-v7a` 및 `x86` 모두를 위한 네이티브 라이브러리가 있습니다.
 
--   **META-INF** &ndash; 이 디렉터리(있는 경우)는 서명 정보, 패키지 및 확장 구성 데이터를 저장하는 데 사용됩니다.
+- **META-INF** &ndash; 이 디렉터리(있는 경우)는 서명 정보, 패키지 및 확장 구성 데이터를 저장하는 데 사용됩니다.
 
--   **res** &ndash; 이 디렉터리는 `resources.arsc`로 컴파일되지 않은 리소스를 저장합니다.
+- **res** &ndash; 이 디렉터리는 `resources.arsc`로 컴파일되지 않은 리소스를 저장합니다.
 
 > [!NOTE]
 > `libmonodroid.so` 파일은 모든 Xamarin.Android 응용 프로그램에 필요한 네이티브 라이브러리입니다.
-
-
 
 #### <a name="android-device-abi-support"></a>Android 장치 ABI 지원
 
 각 Android 장치는 최대 두 개의 ABI에서 네이티브 코드 실행을 지원합니다.
 
--   **"주" ABI** &ndash; 이는 시스템 이미지에서 사용되는 기계어 코드에 해당합니다.
+- **“주” ABI** &ndash; 이는 시스템 이미지에서 사용되는 머신 코드에 해당합니다.
 
--   **"보조" ABI** &ndash; 이는 시스템 이미지에서도 지원되는 선택적 ABI입니다.
-
+- **“보조” ABI** &ndash; 이는 시스템 이미지에서도 지원되는 선택적 ABI입니다.
 
 예를 들어 일반적인 ARMv5TE 장치는 `armeabi`의 주 ABI만 있지만, ARMv7 장치는 `armeabi-v7a`의 주 ABI와 `armeabi`의 보조 ABI를 지정합니다. 일반적인 x86 장치는 `x86`의 주 ABI만 지정합니다.
-
 
 ### <a name="android-native-library-installation"></a>Android 네이티브 라이브러리 설치
 
 패키지 설치 시 `.apk` 내 네이티브 라이브러리가 앱의 네이티브 라이브러리 디렉터리(일반적으로 `/data/data/<package-name>/lib`)로 추출되고, 그 이후에는 `$APP/lib`라 불립니다.
 
 Android의 네이티브 라이브러리 설치 동작은 Android 버전에 따라 큰 차이가 있습니다.
-
-
 
 #### <a name="installing-native-libraries-pre-android-40"></a>네이티브 라이브러리 설치: Android 4.0 이전
 
@@ -178,15 +154,13 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-
 #### <a name="installing-native-libraries-android-40-ndash-android-403"></a>네이티브 라이브러리 설치: Android 4.0 &ndash; Android 4.0.3
 
 Android 4.0 Ice Cream Sandwich는 추출 논리를 변경합니다. 모든 네이티브 라이브러리를 열거하고, 파일의 기본 이름이 이미 추출되었는지, 다음 조건이 둘 다 충족되었는지 확인한 후 라이브러리를 추출합니다.
 
--   아직 추출되지 않았습니다.
+- 아직 추출되지 않았습니다.
 
--   네이티브 라이브러리의 ABI가 대상의 주 또는 보조 ABI와 일치합니다.
-
+- 네이티브 라이브러리의 ABI가 대상의 주 또는 보조 ABI와 일치합니다.
 
 이러한 조건을 충족하면(즉, 다음과 같은 콘텐츠가 포함된 `.apk`가 있다면) "병합" 동작이 가능합니다.
 
@@ -239,26 +213,23 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-
 ### <a name="xamarinandroid-and-abis"></a>Xamarin.Android 및 ABI
 
 Xamarin.Android는 다음과 같은 아키텍처를 지원합니다.
 
--  `armeabi`
--  `armeabi-v7a`
--  `x86`
+- `armeabi`
+- `armeabi-v7a`
+- `x86`
 
 Xamarin.Android는 다음과 같은 아키텍처에 대해 실험적인 지원을 제공합니다.
 
--  `arm64-v8a`
--  `x86_64`
+- `arm64-v8a`
+- `x86_64`
 
-
-64비트 장치에서 앱을 실행할 때는 64비트 런타임이 필요하지 *않습니다*. Xamarin.Android 5.1의 실험적 기능에 대한 자세한 내용은 [실험적 기능](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)을 참조하세요.
+> [!NOTE]
+> 2018년 8월부터 새 앱은 API 레벨 26을 대상으로 해야 하고, 2019년 8월부터 앱은 32비트 버전 외에 ‘64비트 버전을 제공’해야 합니다.[](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)
 
 Xamarin.Android는 현재 `mips`에 대한 지원을 제공하지 않습니다.
-
-
 
 ### <a name="declaring-supported-abis"></a>지원되는 ABI 선언
 
@@ -273,17 +244,14 @@ Mac용 Visual Studio에서는 다음 스크린샷에서처럼 **고급** 탭에�
 
 다음과 같이 추가적인 ABI 지원을 선언해야 하는 경우가 있습니다.
 
--   `x86` 장치에 응용 프로그램 배포.
+- `x86` 장치에 응용 프로그램 배포.
 
--   스레드 보안을 위해 `armeabi-v7a` 장치에 응용 프로그램 배포.
-
-
+- 스레드 보안을 위해 `armeabi-v7a` 장치에 응용 프로그램 배포
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Android 응용 프로그램을 실행할 수 있는 여러 CPU 아키텍처를 설명했습니다. 응용 프로그램 이진 인터페이스와 Android에서 이를 사용하여 개별 CPU 아키텍처를 지원하는 방법을 소개했습니다.
 그런 다음, Xamarin.Android 응용 프로그램에서 ABI 지원을 지정하는 방법을 설명하고, `armeabi` 전용으로 고안된 `armeabi-v7a` 장치에서 Xamarin.Android 응용 프로그램을 사용할 경우 발생하는 문제를 중점적으로 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

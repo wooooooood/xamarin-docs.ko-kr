@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: befeb92529aa066f6106e855ed1fbdfe49c51e66
+ms.sourcegitcommit: c59e1882aa4af3ce36fba5c6eaeb5cf73a9cb289
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104091"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50919044"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -22,7 +22,7 @@ _이 가이드에서는 Mac에 페어링을 사용하여 Visual Studio 2017을 M
 
 네이티브 iOS 응용 프로그램을 빌드하려면 Mac에서만 실행되는 Apple의 빌드 도구에 액세스해야 합니다. 이에 따라 Visual Studio 2017에서 네트워크에 액세스할 수 있는 Mac에 연결하여 Xamarin.iOS 응용 프로그램을 빌드해야 합니다.
 
-Windows 기반 iOS 개발자가 생산적으로 작업할 수 있도록 Visual Studio 2017의 Mac에 페어링 기능은 Mac 빌드 호스트를 검색, 연결, 인증 및 기억합니다. 
+Windows 기반 iOS 개발자가 생산적으로 작업할 수 있도록 Visual Studio 2017의 Mac에 페어링 기능은 Mac 빌드 호스트를 검색, 연결, 인증 및 기억합니다.
 
 Mac에 페어링을 사용하면 다음과 같은 개발 워크플로를 수행할 수 있습니다.
 
@@ -40,12 +40,14 @@ Mac에 페어링을 사용하면 다음과 같은 개발 워크플로를 수행�
 
 > [!NOTE]
 > 
-> 이 가이드의 지침을 수행하기 전에 먼저 다음 단계를 완료합니다. 
+> 이 가이드의 지침을 수행하기 전에 먼저 다음 단계를 완료합니다.
 > 
 > - Windows 컴퓨터에서 [Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)을 설치합니다.
 > - Mac에서 [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) 및 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation)를 설치합니다.
+>    - 설치 후 구성 요소를 추가할 수 있도록 ‘Xcode를 수동으로 열어야’ 합니다.
 >
 > Mac용 Visual Studio를 설치하지 않으려는 경우 Visual Studio 2017은 Xamarin.iOS 및 Mono를 사용하여 Mac 빌드 호스트를 자동으로 구성할 수 있습니다.
+> 그래도 Xcode는 설치하고 실행해야 합니다.
 > 자세한 내용은 [자동 Mac 프로비전](#automatic-mac-provisioning)을 참조하세요.
 
 ## <a name="enable-remote-login-on-the-mac"></a>Mac에서 원격 로그인을 사용하도록 설정
@@ -87,7 +89,7 @@ Mac 빌드 호스트를 설정하려면 먼저 원격 로그인을 사용하도�
 3. 목록에서 Mac을 선택합니다. **연결**을 클릭합니다. 
 
 4. 사용자 이름과 암호를 입력합니다.
-    
+
     - 특정 Mac에 처음 연결하면 해당 컴퓨터에 대한 사용자 이름과 암호를 입력하라는 메시지가 표시됩니다.
 
         ![Mac에 대한 사용자 이름 및 암호 입력](images/auth.png "Mac에 대한 사용자 이름 및 암호 입력")
@@ -102,7 +104,7 @@ Mac 빌드 호스트를 설정하려면 먼저 원격 로그인을 사용하도�
     [Visual Studio 2017 버전 15.6부터](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning) Visual Studio 2017은 필요에 따라 연결된 Mac 빌드 호스트에서 Mono 및 Xamarin.iOS를 설치하거나 업데이트합니다(Xcode는 여전히 수동으로 설치해야 함). 자세한 내용은 [자동 Mac 프로비전](#automatic-mac-provisioning)을 참조하세요.
 
 6. 연결 상태 아이콘을 찾습니다.
-    
+
     - Visual Studio 2017이 Mac에 연결되면, **Mac에 페어링** 대화 상자의 해당 Mac 항목에 현재 연결되어 있음을 나타내는 아이콘이 표시됩니다.
 
         ![연결된 Mac](images/connected.png "연결된 Mac")
@@ -112,7 +114,7 @@ Mac 빌드 호스트를 설정하려면 먼저 원격 로그인을 사용하도�
       > [!TIP]
       > **Mac에 페어링** 목록에서 Mac을 마우스 오른쪽 단추로 클릭하면 **연결...**, **이 Mac 지우기** 또는 **연결 끊기**를 허용하는 바로 가기 메뉴가 표시됩니다.
       >
-      > ![Mac에 페어링 바로 가기 메뉴](images/contextmenu.png "Mac에 페어링 바로 가기 메뉴") 
+      > ![Mac에 페어링 바로 가기 메뉴](images/contextmenu.png "Mac에 페어링 바로 가기 메뉴")
       >
       > **이 Mac 지우기**를 선택하는 경우 선택한 Mac에 대한 자격 증명이 무시됩니다. 해당 Mac에 다시 연결하려면 사용자 이름과 암호를 다시 입력해야 합니다.
 
@@ -131,7 +133,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
         [![시스템 기본 설정 > 공유에 있는 Mac의 IP 주소](images/sharing-ipaddress.png "시스템 기본 설정 > 공유에 있는 Mac의 IP 주소")](images/sharing.png#lightbox)
 
     - 또는 명령줄을 사용합니다. 터미널에서 다음 명령을 실행합니다. 
-   
+
         ```bash
         $ ipconfig getifaddr en0
         196.168.1.8
@@ -177,7 +179,7 @@ Mac에 페어링은 Mono가 설치되어 있는지 확인합니다. 설치되어
 |---|---|---|---|
 |Mono|[![모노 설치 누락](images/mono-missing.png "모노 설치 누락")](images/mono-missing-large.png#lightbox)|[![모노 다운로드](images/mono-downloading.png "모노 다운로드")](images/mono-downloading-large.png#lightbox)|[![모노 설치](images/mono-installing.png "모노 설치")](images/mono-installing-large.png#lightbox)|
 
-### <a name="xamarinios"></a>Xamarin.iOS 
+### <a name="xamarinios"></a>Xamarin.iOS
 
 Mac에 페어링은 Windows 컴퓨터에 설치된 버전과 일치하도록 Mac에서 Xamarin.iOS를 업그레이드합니다.
 
@@ -216,22 +218,23 @@ Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인�
 
 자동 Mac 프로비전을 사용하는 데 문제가 발생하면 **%LOCALAPPDATA%\Xamarin\Logs\15.0**에 저장된 Visual Studio 2017 IDE 로그를 살펴보세요. 이러한 로그에는 효율적으로 오류를 진단하거나 지원을 받는 데 도움이 되는 오류 메시지가 포함될 수 있습니다.
 
-## <a name="build-ios-apps-from-the-windows-command-line"></a>Windows 명령줄에서 iOS 응용 프로그램 빌드 
+## <a name="build-ios-apps-from-the-windows-command-line"></a>Windows 명령줄에서 iOS 응용 프로그램 빌드
 
 Mac에 페어링은 명령줄에서 Xamarin.iOS 응용 프로그램을 빌드하도록 지원합니다. 예:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
+
 위의 예제에서 `msbuild`에 전달된 매개 변수는 다음과 같습니다.
 
 - `ServerAddress` – Mac 빌드 호스트의 IP 주소입니다.
 - `ServerUser` – Mac 빌드 호스트에 로그인할 때 사용할 사용자 이름입니다.
   전체 이름이 아닌 시스템 사용자 이름을 사용합니다.
 - `ServerPassword` – Mac 빌드 호스트에 로그인할 때 사용할 암호입니다.
- 
+
 > [!NOTE]
-> Visual Studio 2017은 `msbuild`를 **C:\Program Files (x86)\Microsoft Visual Studio\2017\<Version>\MSBuild\15.0\Bin** 디렉터리에 저장합니다.
+> Visual Studio 2017은 `msbuild`를 **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin** 디렉터리에 저장합니다.
 
 Mac에 페어링은 Visual Studio 2017 또는 명령줄에서 특정 Mac 빌드 호스트에 처음 로그인할 때 SSH 키를 설정합니다. 이러한 키를 사용하면 이후의 로그인에서 사용자 이름이나 암호가 필요하지 않습니다. 새로 만든 키는 **%LOCALAPPDATA%\Xamarin\MonoTouch**에 저장됩니다.
 
@@ -248,4 +251,3 @@ Mac에 페어링은 Visual Studio 2017 또는 명령줄에서 특정 Mac 빌드 
 - [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Windows용 원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
 - [무선 배포](~/ios/deploy-test/wireless-deployment.md)
-
