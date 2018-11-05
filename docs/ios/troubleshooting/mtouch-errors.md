@@ -2913,13 +2913,13 @@ Xamarin.iOS 프로젝트는 자주 참조 네이티브 기호 동적으로 즉, 
 
 <a name="MT8008" />
 
-### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: Xamarin.iOS.dll의 로드 된 버전에 대 한 컴파일된 * 비트 프로세스는 * 비트입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: Xamarin.iOS.dll의 로드 된 버전에 대 한 컴파일된 * 비트 프로세스는 * 비트입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
-이 빌드 프로세스에서 잘못 된 것을 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 빌드 프로세스에서 잘못 된 것을 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8009" />
 
-### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 대리자에 블록을 찾을 수 없습니다 *.*' s 매개 변수 # * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 대리자에 블록을 찾을 수 없습니다 *.*' s 매개 변수 # * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이 API는 올바르게 바인딩되어 되지 않은 것을 나타냅니다. 우리의 bugzilla에서 버그를 보내주세요 Xamarin에서 노출 되는 API 인 경우 ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) 타사 바인딩 경우 공급 업체에 문의 하세요.
 
@@ -2927,96 +2927,96 @@ Xamarin.iOS 프로젝트는 자주 참조 네이티브 기호 동적으로 즉, 
 
 ### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>Xamarin 간의 MT8010: 네이티브 형식 크기 불일치 합니다. [iOS | 실행 중인 아키텍처를 Mac].dll Xamarin입니다. [iOS | Mac].dll 용으로 빌드된 *-현재 프로세스 동안 비트 *-비트입니다.
 
-이 빌드 프로세스에서 잘못 된 것을 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 빌드 프로세스에서 잘못 된 것을 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드에 대 한 반환 값에 대 한 블록 변환 특성 ([DelegateProxy])에 대리자를 찾을 수 없습니다 *.* 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드에 대 한 반환 값에 대 한 블록 변환 특성 ([DelegateProxy])에 대리자를 찾을 수 없습니다 *.* 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 Xamarin.iOS (변환할 대리자 블록) 런타임에 필요한 메서드를 찾을 수 없습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8012" />
 
-### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: DelegateType null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *.*: DelegateType null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *합니다.*: DelegateType ({2}) 'Handler' 필드가 없으면 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *합니다.*: DelegateType ({2}) 'Handler' 필드가 없으면 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *합니다.*: The DelegateType ({2}) 'Handler' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 대 한 잘못 된 DelegateProxyAttribute *합니다.*: The DelegateType ({2}) 'Handler' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *합니다.*: The DelegateType ({2}) 'Handler' 필드 대리자가 아니거나, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *합니다.*: The DelegateType ({2}) 'Handler' 필드 대리자가 아니거나, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8016" />
 
-### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 메서드에 대 한 반환 값에 대 한 차단 하는 대리자를 변환할 수 없습니다 *.* 입력은 대리자를 하지 않기 때문에, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 메서드에 대 한 반환 값에 대 한 차단 하는 대리자를 변환할 수 없습니다 *.* 입력은 대리자를 하지 않기 때문에, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
-일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+일반적으로 Xamarin.iOS;의 버그를 나타냅니다이 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <!-- 8017 is used by mmp -->
 
 <a name="MT8018" />
 
-### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: 내부 일관성 오류가 발생 했습니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: 내부 일관성 오류가 발생 했습니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019: 어셈블리를 찾을 수 없습니다 * 로드 된 어셈블리에 있습니다.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020: MetadataToken 인 모듈을 찾을 수 없습니다 * 어셈블리의 *.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021: 알 수 없는 암시적 토큰 형식: *.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8022" />
 
-### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: 토큰 참조를 예상 * 되도록는 *, 이지만 *입니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: 토큰 참조를 예상 * 되도록는 *, 이지만 *입니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8023" />
 
-### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: 인스턴스 개체 오픈 제네릭 메서드의 닫힌된 제네릭 메서드를 만드는 데 필요한: * (토큰 참조: *). 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com합니다.
+### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: 인스턴스 개체 오픈 제네릭 메서드의 닫힌된 제네릭 메서드를 만드는 데 필요한: * (토큰 참조: *). 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 <a name="MT8024" />
 
-### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 '{smart_type}'에 대 한 올바른 확장 유형이 찾을 수 없습니다. 버그를 제출 하세요 https://bugzilla.xamarin.com합니다.
+### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 '{smart_type}'에 대 한 올바른 확장 유형이 찾을 수 없습니다. 버그를 제출 하세요 https://bugzilla.xamarin.com 합니다.
 
-이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)합니다.
+이 Xamarin.iOS에서 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
