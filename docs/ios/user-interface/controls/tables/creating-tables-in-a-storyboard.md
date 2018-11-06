@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105809"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983616"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>IOS 디자이너에서에서 테이블 작업
 
@@ -73,7 +73,7 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 
 1.  뷰 컨트롤러의 아래쪽 막대를 선택 하 여 삭제 합니다.
 2.  끌어서를 **탐색 컨트롤러** 와 **테이블 뷰 컨트롤러** 도구 상자에서 스토리 보드에 있습니다. 
-3.  방금 추가 된 두 번째 테이블 뷰 컨트롤러를 루트 뷰 컨트롤러에서 segue를 만듭니다. Segue를 컨트롤 만들기 + 드래그 *세부 정보 셀에서* 새로 추가 된 UITableViewController를 합니다. 옵션을 선택 **표시*** 아래 **Segue 선택**합니다. 
+3.  방금 추가 된 두 번째 테이블 뷰 컨트롤러를 루트 뷰 컨트롤러에서 segue를 만듭니다. Segue를 컨트롤 만들기 + 드래그 *세부 정보 셀에서* 새로 추가 된 UITableViewController를 합니다. 옵션을 선택 **표시** 아래에서 **Segue 선택**합니다. 
 4.  선택 하면 새 사용자가 만든 segue 및 코드에서 segue이 참조에 식별자를 제공 합니다. Segue 클릭 하 고 입력 `TaskSegue` 에 대 한 합니다 **식별자** 에 **Properties Pad**, 다음과 같은:    
   [![속성 패널에서 segue 명명](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 

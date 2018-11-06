@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
+ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235040"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51027329"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
@@ -40,7 +40,7 @@ Xamarin.Android 앱을 Google Maps Android API를 사용할 수 있기 전에 �
 
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Google Maps API 키를 가져오려면
 
-마지막 단계 (참고 레거시 Google Maps v1 API에서 API 키를 다시 사용할 수 없습니다) Google Maps API 키를 가져오는 것입니다. Xamarin.Android를 사용 하 여 API 키를 사용 하는 방법에 대 한 정보를 참조 하세요 [는 Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)합니다.
+첫 번째 단계 (참고 레거시 Google Maps v1 API에서 API 키를 다시 사용할 수 없습니다) Google Maps API 키를 가져오는 것입니다. Xamarin.Android를 사용 하 여 API 키를 사용 하는 방법에 대 한 정보를 참조 하세요 [는 Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)합니다.
  
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Google Play Services SDK 설치
@@ -183,7 +183,7 @@ Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되�
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **Programmaatically** - `MapFragment` 사용 하 여 프로그래밍 방식으로 인스턴스화할 수 있습니다 합니다 [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) 메서드 후 활동에 추가 합니다. 이 조각을 인스턴스화하는 가장 간단한 방법은 사용 하는 `MapFragment` 활동에 추가 합니다.
+-   **프로그래밍 방식으로** - `MapFragment` 사용 하 여 프로그래밍 방식으로 인스턴스화할 수 있습니다 합니다 [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) 메서드 후 활동에 추가 합니다. 이 조각을 인스턴스화하는 가장 간단한 방법은 사용 하는 `MapFragment` 활동에 추가 합니다.
     
     ```csharp
         var mapFrag = MapFragment.NewInstance();

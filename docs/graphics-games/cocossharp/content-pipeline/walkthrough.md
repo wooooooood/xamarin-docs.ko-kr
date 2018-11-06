@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102986"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983603"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 
@@ -84,7 +84,7 @@ MonoGame 파이프라인 도구는 프로젝트에 대 한 정보를 보여 프�
 
 ### <a name="output-folder"></a>출력 폴더
 
-이 폴더는 폴더 (프로젝트에 상대적 콘텐츠 자체)는 출력 **.xnb** 파일이 저장 됩니다. 간단히를 같은 폴더를 입력을 보유할 출력 파일 사용 하겠습니다. 이번 변경 즉 합니다 **출력 폴더** 되도록 **.\**  :
+이 폴더는 폴더 (프로젝트에 상대적 콘텐츠 자체)는 출력 **.xnb** 파일이 저장 됩니다. 간단히를 같은 폴더를 입력을 보유할 출력 파일 사용 하겠습니다. 이번 변경 즉 합니다 **출력 폴더** 되도록 **.\\**  :
 
 ![](walkthrough-images/image10.png "")
 
