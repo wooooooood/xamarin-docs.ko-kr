@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123754"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51285588"
 ---
 # <a name="ios-designer-basics"></a>iOS Designer 기본 사항
 
@@ -459,6 +459,14 @@ IOS 디자이너 및 Xcode Interface Builder를 서로 교환해 서 사용할 �
 Xcode Interface Builder에서 편집한 후 파일을 저장 하 고 mac 용 Visual Studio로 돌아가서 Xamarin.iOS 프로젝트에 변경 내용을 동기화 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+## <a name="revert-to-xcode"></a>Xcode를 되돌리려면
+
+서로 교체 하 여 iOS 디자이너 및 Xcode Interface Builder를 사용 하 여 mac에서 Xcode Interface Builder 수만 인데 Mac에서 Xcode Interface Builder에서 스토리 보드 또는.xib 파일을 여 Xamarin.iOS 프로젝트에 포함 된 솔루션을 엽니다 [Mac 용 Visual Studio](/visualstudio/mac/)파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **프로그램 > Xcode Interface 작성기**아래 스크린샷에 나온 것 처럼,:
+
+[![Xcode Interface Builder에서 스토리 보드 열기](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "Xcode Interface Builder에서 스토리 보드 열기")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
+
+Xcode Interface Builder에서 편집한 후 파일을 저장 하 고 mac 용 Visual Studio로 돌아가서 Xamarin.iOS 프로젝트에 변경 내용을 동기화 합니다.
 
 -----
 
