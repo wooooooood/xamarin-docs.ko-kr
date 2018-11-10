@@ -1,32 +1,36 @@
 ---
 title: 'Xamarin.Essentials: 지자기 센터'
-description: Xamarin.Essentials 지자기 센터 클래스 지구 자기장을 기준으로 장치의 방향을 나타내는 지자기 센터 센서, 장치를 모니터링할 수 있습니다.
+description: Xamarin.Essentials의 Magnetometer 클래스를 사용하면 지구 자기장을 기준으로 장치 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 3827b9a57ec2667a8716f5b56bfb4631b979d43a
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 2fe610195f881f3d20ecc327c02dd2dfbced35ce
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675057"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **지자기 센터** 클래스를 사용 하면 지구 자기장을 기준으로 장치의 방향을 나타내는 장치의 지자기 센터 센서를 모니터링 합니다.
+**Magnetometer** 클래스를 사용하면 지구 자기장을 기준으로 장치 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
 
-## <a name="using-magnetometer"></a>지자기 센터를 사용 하 여
+## <a name="get-started"></a>시작
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-magnetometer"></a>지자기 센터 사용
+
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-지자기 센터 기능을 호출 하 여 작동 합니다 `Start` 고 `Stop` 는 지자기 센터에 대 한 변경 내용을 수신 대기 하는 방법입니다. 변경 내용을 통해 다시 전송 되는 `ReadingChanged` 이벤트입니다. 사용법 예제는 다음과 같습니다.
+지자기 센터 기능은 지자기 센터에 대한 변경 내용을 수신 대기하는 `Start` 및 `Stop` 메서드를 호출하여 작동합니다. `ReadingChanged` 이벤트를 통해 변경 내용을 다시 전송합니다. 샘플은 다음과 같이 사용합니다.
 
 ```csharp
 
@@ -69,11 +73,11 @@ public class MagnetometerTest
 }
 ```
 
-Microteslas 모든 데이터가 반환 됩니다.
+모든 데이터는 microtesla 단위로 반환됩니다.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
 - [지자기 센터 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
-- [지자기 센터 API 설명서](xref:Xamarin.Essentials.Magnetometer)
+- [지자기 센터 API 문서](xref:Xamarin.Essentials.Magnetometer)

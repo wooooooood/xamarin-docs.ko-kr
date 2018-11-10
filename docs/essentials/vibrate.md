@@ -1,66 +1,68 @@
 ---
 title: 'Xamarin.Essentials: 진동'
-description: 이 문서에서 시작 하 고 원하는 기간에 대 한 진동 기능을 중지할 수 있는 Xamarin.Essentials 진동 클래스를 설명 합니다.
+description: 이 문서에서는 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있는 Xamarin.Essentials의 Vibration 클래스를 설명합니다.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 622689342dd961a63318a88f098dea4d1a60e277
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: ff2e718953d86eb59b28fcaa8640e04f6bf422f3
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675304"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: 진동
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **진동** 클래스를 사용 하면 시작 하 고 원하는 기간에 대 한 진동 기능을 중지 합니다.
+**Vibration** 클래스를 사용하면 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있습니다.
 
-## <a name="getting-started"></a>시작
+## <a name="get-started"></a>시작
 
-액세스 하는 **진동** 플랫폼 특정 설정 기능은 필요 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+**진동** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-진동 권한이 필요 하며 Android 프로젝트에 구성 되어야 합니다. 이 다음과 같은 방법으로 추가할 수 있습니다.
+Vibrate 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
-엽니다는 **AssemblyInfo.cs** 파일을 **속성** 폴더 추가:
+**속성** 폴더 아래의 **AssemblyInfo.cs** 파일을 열고 다음을 추가합니다.
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
 ```
 
-또는 Android 매니페스트를 업데이트 합니다.
+또는 Android 매니페스트를 업데이트합니다.
 
-열기를 **AndroidManifest.xml** 파일을 **속성** 폴더 내부에 다음 줄을 추가 합니다 **매니페스트** 노드.
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 합니다 **필요한 권한:** 영역과 확인을 **진동** 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
+또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 **VIBRATE** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-추가 설정이 필요 없습니다.
+추가 설정이 필요하지 않습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-플랫폼 차이점이 없습니다.
+플랫폼의 차이점이 없습니다.
 
 -----
 
-## <a name="using-vibration"></a>진동을 사용 하 여
+## <a name="using-vibration"></a>진동 사용
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-일정 시간 동안에 기본값인 500 밀리초 진동 기능을 요청할 수 있습니다.
+Vibration 기능은 설정된 시간 또는 기본값 500밀리초 동안 요청할 수 있습니다.
 
 ```csharp
 try
@@ -82,7 +84,7 @@ catch (Exception ex)
 }
 ```
 
-사용 하 여 장치 진동의 취소를 요청할 수 있습니다는 `Cancel` 메서드:
+장치 진동의 취소는 `Cancel` 메서드를 사용하여 요청할 수 있습니다.
 
 ```csharp
 try
@@ -103,21 +105,21 @@ catch (Exception ex)
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-플랫폼 차이점이 없습니다.
+플랫폼의 차이점이 없습니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* 장치 "링에서 진동"로 설정 된 경우 진동만 합니다.
-* 500 밀리초 동안 진동 항상 있습니다.
-* 진동을 취소 하는 것이 불가능 합니다.
+* 장치가 “전화벨이 울리면 진동”으로 설정된 경우에만 진동합니다.
+* 항상 500밀리초 동안 진동합니다.
+* 진동을 취소할 수 없습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-플랫폼 차이점이 없습니다.
+플랫폼의 차이점이 없습니다.
 
 -----
 
 ## <a name="api"></a>API
 
 - [진동 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
-- [진동 API 설명서](xref:Xamarin.Essentials.Vibration)
+- [진동 API 문서](xref:Xamarin.Essentials.Vibration)

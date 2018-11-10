@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: 자이로스코프가'
-description: Xamarin.Essentials 자이로스코프가 클래스를 사용 하면 장치의 세 가지 기본 축 회전을 측정 하는 장치의 자이로스코프가 센서에서 모니터링할 수 있습니다.
+title: 'Xamarin.Essentials: 자이로스코프'
+description: Xamarin.Essentials의 Gyroscope 클래스를 사용하면 장치의 3개 기본 축을 중심으로 회전을 측정하는 장치의 자이로스코프 센서를 모니터링할 수 있습니다.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f1e1199ae32158889ec569eb5f7e9742f37d45d4
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 1d42658160855e260e0d159c58a1f95e7a8c7d4c
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674735"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: 자이로스코프가
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: 자이로스코프
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **자이로스코프가** 클래스를 사용 하면 장치의 세 가지 기본 축 회전 각도 장치의 자이로스코프가 센서를 모니터링 합니다.
+**Gyroscope** 클래스를 사용하면 장치의 3개 기본 축을 중심으로 한 회전인 장치의 자이로스코프 센서를 모니터링할 수 있습니다.
 
-## <a name="using-gyroscope"></a>자이로스코프가 사용 하 여
+## <a name="get-started"></a>시작
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-gyroscope"></a>자이로스코프 사용
+
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-자이로스코프가 기능을 호출 하 여 작동 합니다 `Start` 및 `Stop` 는 자이로스코프가 변경 내용을 수신 대기 하는 방법입니다. 변경 내용을 통해 다시 전송 되는 `ReadingChanged` 이벤트입니다. 사용법 예제는 다음과 같습니다.
+자이로스코프 기능은 자이로스코프에 대한 변경 내용을 수신 대기하는 `Start` 및 `Stop` 메서드를 호출하여 작동합니다. `ReadingChanged` 이벤트를 통해 변경 내용을 다시 전송합니다. 샘플은 다음과 같이 사용합니다.
 
 ```csharp
 
@@ -73,5 +77,5 @@ public class GyroscopeTest
 
 ## <a name="api"></a>API
 
-- [자이로스코프가 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
-- [자이로스코프가 API 설명서](xref:Xamarin.Essentials.Gyroscope)
+- [자이로스코프 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [자이로스코프 API 문서](xref:Xamarin.Essentials.Gyroscope)

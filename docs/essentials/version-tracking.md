@@ -1,38 +1,42 @@
 ---
 title: 'Xamarin.Essentials: 버전 추적'
-description: Xamarin.Essentials VersionTracking 클래스를 사용 하면 응용 프로그램 버전을 확인 하 고 첫 번째 것 처럼 이러한 추가 정보를 표시와 함께 빌드 번호 응용 프로그램이 어느 시작 시간 또는 최신 버전은 이전 빌드를 가져오기 정보 및 더 합니다.
+description: Xamarin.Essentials의 VersionTracking 클래스를 사용하면 응용 프로그램 버전 및 빌드 번호를 확인하고 응용 프로그램의 처음 시작되었는지 여부와 같은 추가 정보를 확인할 수 있고 현재 버전의 경우 이전 빌드 정보를 가져올 수 있습니다.
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 81dc67fa5a4975f31d0fbf9f7219637596a827ce
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 1eae0bf7c21dd7efa7655633896bdb2897f9d782
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674862"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: 버전 추적
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **VersionTracking** 클래스를 사용 하면 응용 프로그램 버전을 확인 하 고 첫 번째 것 처럼 이러한 추가 정보를 표시와 함께 빌드 번호 응용 프로그램이 어느 시작 시간 또는 최신 버전은 이전 가져오기 빌드 정보 및 기타 정보
+**VersionTracking** 클래스를 사용하면 응용 프로그램 버전 및 빌드 번호를 확인하고 응용 프로그램의 처음 시작되었는지 여부와 같은 추가 정보를 확인할 수 있고 현재 버전의 경우 이전 빌드 정보를 가져올 수 있습니다.
 
-## <a name="using-version-tracking"></a>버전 추적을 사용 하 여
+## <a name="get-started"></a>시작
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-version-tracking"></a>버전 추적 사용
+
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-처음 사용 하 여 합니다 **VersionTracking** 클래스 현재 버전을 추적 시작 됩니다. 호출 해야 `Track` 초기 현재 버전 정보를 추적 하도록 로드 될 때마다 응용 프로그램에만:
+**VersionTracking** 클래스를 처음 사용하면 현재 버전이 추적됩니다. 현재 버전 정보가 추적되는지 확인하려면 로드될 때마다 응용 프로그램에서만 초기에 `Track`을 호출해야 합니다.
 
 ```csharp
 VersionTracking.Track();
 ```
 
-초기 후 `Track` 라고 버전 정보를 읽을 수 있습니다.
+초기 `Track`이 호출된 후 버전 정보를 읽을 수 있습니다.
 
 ```csharp
 
@@ -70,11 +74,11 @@ var versionHistory = VersionTracking.VersionHistory;
 var buildHistory = VersionTracking.BuildHistory;
 ```
 
-## <a name="platform-implementation-specifics"></a>플랫폼 구현 세부 정보
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-모든 버전 정보를 사용 하 여 저장 됩니다는 [기본 설정](preferences.md) Xamarin.Essentials에서 API의 파일 이름으로 저장 됩니다 **[YOUR-앱-패키지-ID].xamarinessentials.versiontracking** 와 동일 에 설명 된 데이터 지 속성을 [기본 설정](preferences.md#persistence) 설명서.
+모든 버전 정보는 Xamarin.Essentials의 [기본 설정](preferences.md) API를 사용하여 저장되며 파일 이름 **[YOUR-APP-PACKAGE-ID].xamarinessentials.versiontracking**으로 저장되고 [기본 설정](preferences.md#persistence) 문서에 설명된 동일한 데이터 지속성을 따릅니다.
 
 ## <a name="api"></a>API
 
 - [버전 추적 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
-- [버전 추적 API 설명서](xref:Xamarin.Essentials.VersionTracking)
+- [버전 추적 API 문서](xref:Xamarin.Essentials.VersionTracking)

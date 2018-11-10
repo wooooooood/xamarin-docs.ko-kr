@@ -1,32 +1,36 @@
 ---
-title: 'Xamarin.Essentials: 전자 메일'
-description: Xamarin.Essentials의 전자 메일 클래스에는 제목, 본문 및 받는 사람 (TO, CC, 숨은 참조)를 포함 하 여 지정 된 정보를 사용 하 여 기본 메일 응용 프로그램을 열려면 응용 프로그램 수 있습니다.
+title: 'Xamarin.Essentials: 메일'
+description: Xamarin.Essentials의 Email 클래스를 사용하면 응용 프로그램이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 응용 프로그램을 열 수 있습니다.
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f113cebfebf4238fd4b75ad8ab248e2abf61efea
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: c8d4a83caf6832f911193067324915fd6226b380
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674966"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
+# <a name="xamarinessentials-email"></a>Xamarin.Essentials: 메일
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **전자 메일** 클래스를 사용 하면 응용 프로그램 제목, 본문 및 받는 사람 (TO, CC, 숨은 참조)를 포함 하 여 지정 된 정보를 사용 하 여 기본 메일 응용 프로그램을 엽니다.
+**Email** 클래스를 사용하면 응용 프로그램이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 응용 프로그램을 열 수 있습니다.
 
-## <a name="using-email"></a>전자 메일을 사용 하 여
+## <a name="get-started"></a>시작
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-email"></a>메일 사용
+
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-전자 메일 기능을 호출 하 여 작동 합니다 `ComposeAsync` 메서드는 `EmailMessage` 전자 메일에 대 한 정보를 포함 하는:
+메일 기능은 메일에 대한 정보를 포함하는 `ComposeAsync` 메서드 `EmailMessage`를 호출하여 작동합니다.
 
 ```csharp
 public class EmailTest
@@ -59,5 +63,5 @@ public class EmailTest
 
 ## <a name="api"></a>API
 
-- [전자 메일 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [전자 메일 API 설명서](xref:Xamarin.Essentials.Email)
+- [메일 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [메일 API 문서](xref:Xamarin.Essentials.Email)

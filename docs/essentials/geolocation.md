@@ -1,32 +1,34 @@
 ---
 title: 'Xamarin.Essentials: 지리적 위치'
-description: 이 문서에서는 Xamarin.Essentials 장치의 현재 지리적 위치 좌표를 검색 하는 Api를 제공 하는 지리적 위치 클래스를 설명 합니다.
+description: 이 문서에서는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0aeb2ed96e6c21def69eb2e6f305b26e2e478825
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 533620fbfca9f2a7a235fe65e038b6dd89aa95a9
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674902"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
-![시험판 버전 NuGet](~/media/shared/pre-release.png)
+![시험판 NuGet](~/media/shared/pre-release.png)
 
-합니다 **지리적 위치** 클래스는 장치의 현재 지리적 위치 좌표를 검색 하는 Api를 제공 합니다.
+**Geolocation** 클래스는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
 
-## <a name="getting-started"></a>시작
+## <a name="get-started"></a>시작
 
-액세스 하는 **지리적 위치** , 다음 플랫폼별 설정을 기능은 필요:
+[!include[](~/essentials/includes/get-started.md)]
+
+**지리적 위치** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-대략 및 위치를 세밀 하 게 사용 권한 필요 및 Android 프로젝트에 구성 되어야 합니다. 또한 앱이 Android 5.0 (API 수준 21) 대상으로 선언 해야 합니다는 이상 하는 경우 앱 매니페스트 파일의 하드웨어 기능을 사용 합니다. 이 다음과 같은 방법으로 추가할 수 있습니다.
+Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 또한 앱이 Android 5.0(API 레벨 21) 이상을 대상으로 하는 경우 해당 앱에서 매니페스트 파일의 하드웨어 기능을 사용하도록 선언해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
-엽니다는 **AssemblyInfo.cs** 파일을 **속성** 폴더 추가:
+**속성** 폴더 아래의 **AssemblyInfo.cs** 파일을 열고 다음을 추가합니다.
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessCoarseLocation)]
@@ -36,9 +38,9 @@ ms.locfileid: "39353856"
 [assembly: UsesFeature("android.hardware.location.network", Required = false)]
 ```
 
-또는 Android 매니페스트를 업데이트 합니다.
+또는 Android 매니페스트를 업데이트합니다.
 
-열기는 **AndroidManifest.xml** 파일을 **속성** 폴더 내에 다음 줄을 추가 합니다 **매니페스트** 노드:
+**속성** 폴더 아래의 **AndroidManifest.xml** 파일을 열고 **매니페스트** 노드 내부에 다음을 추가합니다.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -48,15 +50,15 @@ ms.locfileid: "39353856"
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 프로젝트의 속성을 엽니다. 아래 **Android 매니페스트** 찾을 합니다 **필요한 권한:** 영역 및 확인 합니다 **ACCESS_COARSE_LOCATION** 및 **ACCESS_FINE_LOCATION**사용 권한. 이 자동으로 업데이트 합니다 **AndroidManifest.xml** 파일입니다.
+또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아서 **ACCESS_COARSE_LOCATION** 및 **ACCESS_FINE_LOCATION** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-앱의 **Info.plist** 포함 해야 합니다는 `NSLocationWhenInUseUsageDescription` 장치의 위치에 액세스 하기 위해 키입니다.
+장치 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
 
-Plist 편집기를 열고 추가 된 **개인 정보-위치는 경우에 사용 하 여 사용 설명** 속성 및 사용자를 표시 하려면 값을 입력 합니다.
+plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** 속성을 추가하고, 사용자에게 표시할 값을 입력합니다.
 
-또는 수동으로 파일을 편집 하 고 다음을 추가 합니다.
+또는 수동으로 파일을 편집하고 다음을 추가합니다.
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
@@ -65,21 +67,21 @@ Plist 편집기를 열고 추가 된 **개인 정보-위치는 경우에 사용 
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-설정 해야 합니다는 `Location` 응용 프로그램에 대 한 권한이 있습니다. 열어 이렇게 합니다 **Package.appxmanifest** 를 선택 하 고는 **기능** 탭 및 검사 **위치**합니다.
+응용 프로그램에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
 
 -----
 
-## <a name="using-geolocation"></a>지리적 위치를 사용 하 여
+## <a name="using-geolocation"></a>지리적 위치 사용
 
-클래스에서 Xamarin.Essentials에 대 한 참조를 추가 합니다.
+클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Geoloation API를 필요한 경우 사용 권한에 대 한 사용자 라는 메시지도 표시 됩니다.
+또한 지리적 위치 API는 필요한 경우 권한을 요청하는 메시지를 사용자에게 표시합니다.
 
-마지막으로 알려진을 가져올 수 있습니다 [위치](xref:Xamarin.Essentials.Location) 를 호출 하 여 장치를 `GetLastKnownLocationAsync` 메서드. 이 종종 다음 전체 쿼리를 수행 하 고 빠르게 이지만 덜 정확할 수 있습니다.
+`GetLastKnownLocationAsync` 메서드를 호출하여 장치의 마지막으로 알려진 [위치](xref:Xamarin.Essentials.Location)를 가져올 수 있습니다. 이는 일반적으로 전체 쿼리를 수행하는 것보다 더 빠르지만 덜 정확할 수 있습니다.
 
 ```csharp
 try
@@ -105,9 +107,9 @@ catch (Exception ex)
 }
 ```
 
-고도 항상 사용할 수 없습니다. 를 사용할 수 없는 경우는 `Altitude` 속성 수 `null` 또는 0 값일 수 있습니다. 고도 사용 가능한 경우 바다 수준 위의 위에 미터는 값은입니다. 
+고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다. 
 
-현재 장치를 쿼리하려면 [위치](xref:Xamarin.Essentials.Location) 좌표를 `GetLocationAsync` 사용할 수 있습니다. 전체에 전달 하는 것이 좋습니다 `GeolocationRequest` 고 `CancellationToken` 장치의 위치를 가져오려면 약간의 시간이 걸릴 수 있기 때문입니다.
+현재 장치의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 장치 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
 
 ```csharp
 try
@@ -136,53 +138,53 @@ catch (Exception ex)
 
 ## <a name="geolocation-accuracy"></a>지리적 위치 정확도
 
-다음 표에서 플랫폼별 정확도를 설명합니다.
+다음 표에서는 플랫폼별 정확도를 개략적으로 설명합니다.
 
 ### <a name="lowest"></a>가장 낮음
 
-| 플랫폼 | 거리 (미터) |
+| 플랫폼 | 거리(미터) |
 | --- | --- |
 | Android | 500 |
 | iOS | 3000 |
-| UWP | 1000에서 5000 |
+| UWP | 1000 - 5000 |
 
 ### <a name="low"></a>낮음
 
-| 플랫폼 | 거리 (미터) |
+| 플랫폼 | 거리(미터) |
 | --- | --- |
 | Android | 500 |
 | iOS | 1000 |
-| UWP | 300-3000 |
+| UWP | 300 - 3000 |
 
-### <a name="medium-default"></a>중간 (기본값)
+### <a name="medium-default"></a>중간(기본값)
 
-| 플랫폼 | 거리 (미터) |
+| 플랫폼 | 거리(미터) |
 | --- | --- |
-| Android | 100-500 |
+| Android | 100 - 500 |
 | iOS | 100 |
-| UWP | 30 ~ 500 |
+| UWP | 30-500 |
 
 ### <a name="high"></a>높음
 
-| 플랫폼 | 거리 (미터) |
+| 플랫폼 | 거리(미터) |
 | --- | --- |
-| Android | 0-100 |
+| Android | 0 - 100 |
 | iOS | 10 |
-| UWP | < = 10 |
+| UWP | <= 10 |
 
-### <a name="best"></a>가장
+### <a name="best"></a>가장 좋음
 
-| 플랫폼 | 거리 (미터) |
+| 플랫폼 | 거리(미터) |
 | --- | --- |
-| Android | 0-100 |
+| Android | 0 - 100 |
 | iOS | ~0 |
-| UWP | < = 10 |
+| UWP | <= 10 |
 
 <a name="calculate-distance" />
 
-## <a name="distance-between-two-locations"></a>두 위치 사이의 거리
+## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[ `Location` ](xref:Xamarin.Essentials.Location) 하 고 [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) 클래스 정의 `CalculateDistance` 두 곳의 지리적 위치 사이의 거리를 계산할 수 있도록 하는 방법입니다. 이 계산 거리를,도 또는 다른 경로 고려 하지 않습니다 및이를 화면에 따라 두 점 간 최단 단순히 라고도 합니다 _대권 거리_ 또는 흔히,는 지정 된 거리 "crow 덮어쓰는."
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다.
 
 예를 들면 다음과 같습니다.
 
@@ -192,9 +194,9 @@ Location sanFrancisco = new Location(37.783333, -122.416667);
 double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-`Location` 생성자에 지정 된 순서로 위도 및 경도 인수가 있습니다. 위도 값은 적도 북쪽의 및 양수 경도 값은 본초 자오선의 동쪽 양수입니다. 마지막 인수를 사용 하 여 `CalculateDistance` 마일 또는 킬로미터를 지정 합니다. 합니다 `Location` 클래스도 정의 `KilometersToMiles` 및 `MilesToKilometers` 단위 두 개 사이의 변환 메서드를 합니다.
+`Location` 생성자에는 해당 순서로 위도 및 경도 인수가 포함됩니다. 양수 위도 값은 적도의 북쪽이고 양수 경도 값은 본초 자오선의 동쪽입니다. `CalculateDistance`에 대한 마지막 인수를 사용하여 마일 또는 킬로미터를 지정합니다. 또한 `Location` 클래스는 두 단위 간에 변환하기 위한 `KilometersToMiles` 및 `MilesToKilometers` 메서드를 정의합니다.
 
 ## <a name="api"></a>API
 
 - [지리적 위치 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
-- [지리적 위치 API 설명서](xref:Xamarin.Essentials.Geolocation)
+- [지리적 위치 API 문서](xref:Xamarin.Essentials.Geolocation)
