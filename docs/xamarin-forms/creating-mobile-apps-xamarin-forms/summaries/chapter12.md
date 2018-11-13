@@ -7,18 +7,18 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 8ee169d15c4b5060f2a7696bfebd314ed7029570
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 55168f8f401cca711422dc49027b2b055fba5f1f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156943"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526756"
 ---
 # <a name="summary-of-chapter-12-styles"></a>요약 12 장입니다. 스타일
 
 Xamarin.Forms 스타일 속성 설정의 컬렉션을 공유할 수 있는 여러 보기를 허용 합니다. 태그 줄이고 일관 된 시각적 테마를 유지 관리를 사용 하도록 설정 합니다.
 
-스타일은 거의 항상 정의 이며 태그에 사용 됩니다. 형식의 개체 [ `Style` ](xref:Xamarin.Forms.Style) 리소스 사전에서 인스턴스화되고로 설정 합니다 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 사용 하 여 시각적 요소 속성을 `StaticResource` 또는 `DyanamicResource` 태그 확장입니다.
+스타일은 거의 항상 정의 이며 태그에 사용 됩니다. 형식의 개체 [ `Style` ](xref:Xamarin.Forms.Style) 리소스 사전에서 인스턴스화되고로 설정 합니다 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 사용 하 여 시각적 요소 속성을 `StaticResource` 또는 `DynamicResource` 태그 확장입니다.
 
 ## <a name="the-basic-style"></a>기본 스타일
 
@@ -40,7 +40,7 @@ XAML에는 `Property` 설정은 CLR 속성의 이름입니다 (같은 `Text` 의
 
 ## <a name="styles-in-code"></a>코드 스타일
 
-일반적인 경우에 인스턴스화를 초기화 합니다. `Style` 코드의 개체입니다. 이 확인할 합니다 [ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) 샘플입니다.
+인스턴스화 및 초기화 수 것이 일반적 이지만 `Style` 코드의 개체입니다. 이 확인할 합니다 [ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) 샘플입니다.
 
 ## <a name="style-inheritance"></a>스타일 상속
 

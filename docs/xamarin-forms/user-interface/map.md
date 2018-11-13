@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cfa450c977ac9f1d6370f40d27f5d704cc774767
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123611"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526678"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -36,7 +36,7 @@ Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이 �
 
 ## <a name="maps-initialization"></a>맵 초기화
 
-Xamarin.Forms 응용 프로그램에 맵을 추가 하는 경우 **Xamarin.Forms.Maps** 되는 솔루션의 모든 프로젝트에 추가 해야 하는 별도 NuGet 패키지.
+Xamarin.Forms 응용 프로그램에 맵을 추가 하는 경우 **Xamarin.Forms.Maps** 솔루션의 모든 프로젝트에 추가 해야 하는 별도 NuGet 패키지입니다.
 Android에서이 또한에 종속이 되어 GooglePlayServices (다른 NuGet) Xamarin.Forms.Maps를 추가 하면 자동으로 다운로드 됩니다.
 
 NuGet 패키지를 설치한 후 초기화 코드를 각 응용 프로그램 프로젝트에서 필요 *한 후* 는 `Xamarin.Forms.Forms.Init` 메서드 호출 합니다. IOS에 대 한 다음 코드를 사용 합니다.
@@ -141,7 +141,7 @@ Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>맵을 사용 하 여
+## <a name="using-maps"></a>Maps 사용
 
 참조 된 [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) MobileCRM 샘플 코드의 맵 컨트롤을 사용할 수 있는 방법을의 예입니다. 간단한 `MapPage` 클래스-이 알림은 다음과 같을 수 있습니다 하는 새 `MapSpan` 지도의 보기를 배치 하기 위해 만들어집니다.
 
@@ -183,7 +183,7 @@ map.MapType == MapType.Street;
 위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. `MoveToRegion` 지도의 위치 또는 확대/축소 수준을 변경 하려면 다음 map 클래스에서 메서드를 사용할 수 있습니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
 
 -  **MapSpan.FromCenterAndRadius()** -의 범위를 만드는 정적 메서드를를 `Position` 지정 하는 `Distance` 합니다.
--  **새 MapSpan ()** -사용 하는 생성자를 `Position` 및 위도 및 경도 표시할 degress 합니다.
+-  **새 MapSpan ()** -사용 하는 생성자를 `Position` 위도 및 경도 표시할 각도입니다.
 
 
 위치를 변경 하지 않고 지도의 확대/축소 수준을 변경 하려면 새로 만듭니다 `MapSpan` 에서 현재 위치를 사용 하는 `VisibleRegion.Center` 지도 컨트롤의 속성입니다. 하지만 `Slider` (지도 컨트롤에서 직접 확대/축소 슬라이더의 값을 현재 업데이트할 수 없습니다) 다음과 같은 지도 확대/축소를 제어 하는데 사용할 수 없습니다.

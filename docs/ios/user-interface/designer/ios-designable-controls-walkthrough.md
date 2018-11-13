@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d24d62bf190a2cb078bf82d7a8676f302e740762
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0401c2c05677c719bbe4914cc7e008b650fdd198
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115590"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526244"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>IOS 디자이너를 사용 하 여 사용자 지정 컨트롤을 사용 하 여
 
@@ -25,7 +25,7 @@ IOS 용 Xamarin 디자이너는 Windows에서 Mac 및 Visual Studio 2015 및 201
 ## <a name="walkthrough"></a>연습
 
 > [!IMPORTANT]
-> Xamarin.Studio 5.5부터 사용자 지정 컨트롤 생성 하는 방식으로 이전 버전으로 약간 다릅니다. 컨트롤을 사용자 지정 하거나 만들려면 합니다 `IComponent` 필요 (연결된 구현 메서드)는 인터페이스 또는 클래스로 주석을 달아야 `[DesignTimeVisible(true)]`합니다. 두 번째 메서드의 경우 다음 연습 예제에서 사용 중입니다.
+> Xamarin.Studio 5.5부터 사용자 지정 컨트롤 생성 하는 방식으로 이전 버전으로 약간 다릅니다. 컨트롤을 사용자 지정 하거나 만들려면 합니다 `IComponent` 인터페이스 또는 클래스를 사용 하 여 주석을 달 수 있습니다 (관련된 구현 메서드로) 필요 `[DesignTimeVisible(true)]`. 두 번째 메서드의 경우 다음 연습 예제에서 사용 중입니다.
 
 
 1. 새 솔루션 만들기를 **iOS > 앱 > 단일 뷰 응용 프로그램 > C#** 템플릿 이름을 `ScratchTicket`, 새 프로젝트 마법사를 계속 진행 하 고:

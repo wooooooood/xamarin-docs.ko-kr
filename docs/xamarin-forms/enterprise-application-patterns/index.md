@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ecfe99f66e16eafabc3117036ff065e3a35259c3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994350"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528444"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Xamarin.Forms 전자책을 사용 하 여 엔터프라이즈 응용 프로그램 패턴
 
@@ -54,7 +54,7 @@ Xamarin.Forms에는 일반적으로 UI 사용 하 여 사용자의 상호 작용
 
 사용자 로부터 입력을 허용 하는 모든 앱에 유효한 입력 되었는지 확인 해야 합니다. 유효성 검사 없이 사용자는 응용 프로그램에서 실패를 발생 시키는 데이터를 제공할 수 있습니다. 비즈니스 규칙을 적용 하 고 공격자가 악성 데이터 주입 하지 않도록 설정 하는 유효성 검사 합니다.
 
-ViewModel 모델 (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모델 종종 해야 데이터 유효성 검사를 수행 하 고 사용자 해결할 수 있도록 보기로 유효성 검사 오류를 알립니다.
+모델-뷰-ViewModel (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모델 종종 해야 데이터 유효성 검사를 수행 하 고 사용자 해결할 수 있도록 보기로 유효성 검사 오류를 알립니다.
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[구성 관리](configuration-management.md)
 

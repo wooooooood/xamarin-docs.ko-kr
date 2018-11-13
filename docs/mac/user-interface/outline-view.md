@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113577"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527185"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Xamarin.Mac의 개요 보기
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에 대 한 개요 보기를 사용 하 여 작업을 설명 합니다. 만들고 유지 관리 개요 뷰가 Xcode 및 Interface Builder에서 프로그래밍 방식으로 작업을 설명 합니다._
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일 하 게 액세스할 수 있습니다에서 작업 하는 개발자는 개요 뷰 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 개요 보기를 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및 같은 개요 보기 작업 하는 개발자는 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 개요 보기를 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 개요 보기를 사용자를 허용 하는 테이블 형식 확장 또는 계층적 데이터의 행을 축소 됩니다. 테이블 보기와 같은 개요 보기를 개별 항목과 해당 항목의 특성을 나타내는 열을 나타내는 행을 사용 하 여 관련된 항목 집합에 대 한 데이터를 표시 합니다. 표 보기와 달리 개요 보기에서 항목을 플랫 목록에 없는, 하드 드라이브의 파일 및 폴더와 같은 계층에 구성 된 합니다.
 

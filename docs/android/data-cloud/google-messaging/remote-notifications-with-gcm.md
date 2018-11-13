@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: e361444f2c717ff44e0771710836f156f90cfcb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118892"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528808"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
@@ -91,7 +91,7 @@ Android 응용 프로그램에는 다음 사용 권한을 구성한 후에 Googl
 -   `com.google.android.c2dm.permission.RECEIVE` &ndash; 이 앱을 등록 하 고 Google Cloud Messaging에서 메시지를 수신 하는 권한을 부여 합니다. (용도 `c2dm` 의미? 이 _클라우드-장치 메시징_, GCM에 이제 사용 되지 않는 선행 작업입니다. 
     GCM 사용 하 여 여전히 `c2dm` 해당 권한 문자열의 여러.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (선택 사항) 장치를에서 CPU에서 메시지를 수신 하는 동안 절전 상태로 전환할 수 없습니다. 
+-   `android.permission.WAKE_LOCK` &ndash; (선택 사항) 메시지를 수신 하는 동안 절전 모드로 전환에서 장치의 CPU를 방지 합니다. 
 
 -   `android.permission.INTERNET` &ndash; 클라이언트 앱이 GCM을 사용 하 여 통신할 수 있도록 인터넷 액세스를 부여 합니다. 
 
@@ -649,7 +649,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 또한 새 알림 아이콘에 알림 표시줄에 나타나는 유의 해야 합니다. 
 
-[![장치의 Notiication 아이콘이 표시 됩니다.](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![장치에서 알림 아이콘이 표시 됩니다.](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 알림을 보려면 알림 표시줄을 열면이 원격 알림을 표시 됩니다.
 
@@ -657,7 +657,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 축, 앱의 첫 번째 원격 알림을 받았습니다.
 
-Note 앱이 강제로 중지 하는 경우 GCM 메시지가 수신 되지 않습니다. 알림을 강제로 중지 후 다시 시작 하려면 앱에 수동으로 다시 시작 해야 합니다. 이 Android 정책에 대 한 자세한 내용은 참조 하세요. [중지 된 응용 프로그램에서 컨트롤을 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) 이 고 [stack overflow 게시물](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)합니다. 
+Note 앱이 강제로 중지 하는 경우 GCM 메시지가 수신 되지 않습니다. 알림을 강제로 중지 후 다시 시작 하려면 앱을 수동으로 다시 시작 해야 합니다. 이 Android 정책에 대 한 자세한 내용은 참조 하세요. [중지 된 응용 프로그램에서 컨트롤을 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) 이 고 [stack overflow 게시물](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)합니다. 
 
  
 ## <a name="summary"></a>요약

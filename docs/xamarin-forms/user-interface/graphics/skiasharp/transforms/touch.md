@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
-ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
+ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "39615394"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527107"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -229,7 +229,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
@@ -1060,7 +1060,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 크기 조정 작업에는 일반적으로 두 손가락을 사용한 축소 제스처에 필요 합니다. 그러나 손가락 비트맵의 모퉁이 이동 하 여 손가락을 사용 하 여 크기 조정을 구현 하는 것이 같습니다.
 
-에 설명 되어이 **단일 손가락 모퉁이 확장** 페이지입니다. 이 샘플에는에서 구현 하는 크기 조정 약간 다른 형식을 사용 하기 때문에 합니다 `TouchManipulationManager` 클래스는 클래스를 사용 하지 않습니다 또는 `TouchManipulationBitmap` 클래스입니다. 대신 모든 터치 논리의 코드 숨김 파일. 한 번에 하나의 손가락을 추적 하 고 화면을 터치 수 있는 모든 보조 손가락을 무시 하므로 이것이 평소 보다 좀 더 간단 논리입니다.
+에 설명 되어이 **단일 손가락 모퉁이 확장** 페이지입니다. 구현 하는이 샘플 보다 크기 조정의 약간 다른 형식을 사용 하기 때문에 `TouchManipulationManager` 클래스는 클래스를 사용 하지 않습니다 또는 `TouchManipulationBitmap` 클래스. 대신 모든 터치 논리의 코드 숨김 파일. 한 번에 하나의 손가락을 추적 하 고 화면을 터치 수 있는 모든 보조 손가락을 무시 하므로 이것이 평소 보다 좀 더 간단 논리입니다.
 
 합니다 [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) 페이지를 인스턴스화하는 `SKCanvasView` 만들고 클래스를 `TouchEffect` 터치 이벤트를 추적 하는 것에 대 한 개체:
 

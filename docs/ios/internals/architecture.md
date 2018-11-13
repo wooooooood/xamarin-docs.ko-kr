@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 106357e9442d51fdd31bb30b4f0342e2b59f67fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118489"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526665"
 ---
 # <a name="ios-app-architecture"></a>iOS 앱 아키텍처
 
@@ -118,7 +118,7 @@ IOS Xamarin.iOS에서 사용 하는 형식 등록 시스템의 세부 사항에 
 
 ## <a name="generator"></a>Generator
 
-Xamarin.iOS는 모든 단일 iOS API에 대 한 정의 포함합니다. 탐색할 수 있습니다 이러한 합니다 [MaciOS github 리포지토리](https://github.com/xamarin/xamarin-macios/tree/master/src)합니다. 이러한 정의 특성을 가진 인터페이스 뿐만 아니라 모든 필요한 메서드 및 속성을 포함 합니다. 예를 들어, 다음 코드는를 사용 하는 UIKit의는 UIToolbar 정의 [네임 스페이스](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)합니다. 다양 한 메서드 및 속성을 사용 하 여 인터페이스 인지 확인 합니다.
+Xamarin.iOS는 모든 단일 iOS API에 대 한 정의 포함합니다. 탐색할 수 있습니다 이러한 합니다 [MaciOS github 리포지토리](https://github.com/xamarin/xamarin-macios/tree/master/src)합니다. 이러한 정의 특성을 가진 인터페이스 뿐만 아니라 모든 필요한 메서드 및 속성을 포함 합니다. 다음 코드는 UIKit의는 UIToolbar를 정의 하는 예를 들어 [네임 스페이스](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)합니다. 다양 한 메서드 및 속성을 사용 하 여 인터페이스 인지 확인 합니다.
 
 ```csharp
 [BaseType (typeof (UIView))]

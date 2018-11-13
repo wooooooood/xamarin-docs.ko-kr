@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 14 장 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 07774bb5d63b8c9fb9c48192744d383b37f64900
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 6393794a20a80fae43e31a96efd4941f4b633c28
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156659"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563721"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 14 장입니다. 절대 레이아웃
 
@@ -55,7 +55,7 @@ ms.locfileid: "39156659"
 - [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12)
 - [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
 
-C#의 비트 OR 연산자를 사용 하 여이 결합할 수 있습니다.
+이를 결합할 수 있습니다는 C# 비트 OR 연산자입니다.
 
 이러한 플래그 집합의 특정 속성을 사용 하 여는 `Rectangle` 레이아웃 범위 구조를 배치 하 고 자식 크기를 비례적으로 해석 됩니다.
 

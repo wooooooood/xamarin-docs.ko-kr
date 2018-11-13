@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104013"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527068"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.Mac의 사용자 지정 컨트롤 만들기
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일 하 게 액세스할 수 있습니다 사용자 컨트롤에서 작업을 수행할 *Objective-c*를 *Swift* 하 고 *Xcode* 않습니다 . Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 사용자 컨트롤을 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및 동일한 사용자 컨트롤에서 작업을 수행할 *Objective-c*를 *Swift* 및 *Xcode*않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 사용자 컨트롤을 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 MacOS에서 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만 기본 제공 지원 되지 않는 기능을 제공 하거나 (예: 게임 인터페이스) 사용자 지정 UI 테마에 맞게 사용자 지정 컨트롤을 만드는 해야 할 수 있습니다.
 
@@ -221,7 +221,7 @@ public override void DrawRect (CGRect dirtyRect)
 
 #### <a name="handling-user-input-with-override-methods"></a>재정의 메서드를 사용 하 여 사용자 입력 처리
 
-상속 된 개체 `NSControl` (또는 `NSView`) 여러 입력 키보드 또는 마우스 처리에 대 한 메서드를 재정의 합니다. 이 예제에서는 컨트롤에 대 한 상태 간 전환을 대칭 이동 하고자 **에** 및 **해제** 사용자가 왼쪽된 마우스 단추를 사용 하 여 컨트롤을 클릭할 때입니다. 다음 메서드를 재정의 추가할 수 있습니다는 `NSFliwSwitch` 이 처리 하는 클래스:
+상속 된 개체 `NSControl` (또는 `NSView`) 여러 입력 키보드 또는 마우스 처리에 대 한 메서드를 재정의 합니다. 이 예제에서는 컨트롤에 대 한 상태 간 전환을 대칭 이동 하고자 **에** 및 **해제** 사용자가 왼쪽된 마우스 단추를 사용 하 여 컨트롤을 클릭할 때입니다. 다음 메서드를 재정의 추가할 수 있습니다는 `NSFlipSwitch` 이 처리 하는 클래스:
 
 ```csharp
 #region Mouse Handling Methods
@@ -344,7 +344,7 @@ Interface Builder를 사용 하 여 컨트롤을 추가 하려면 먼저 Xamarin
 
 [![](custom-controls-images/custom04.png "보기의 클래스를 설정합니다.")](custom-controls-images/custom04.png#lightbox)
 
-전환할를 **도우미 편집기** 만들고는 **출 선** 사용자 지정 컨트롤에 대 한 (에 바인딩할 수 있도록 합니다 `ViewControler.h` 파일 아니라는 `.m` 파일):
+전환할를 **도우미 편집기** 만들고는 **출 선** 사용자 지정 컨트롤에 대 한 (에 바인딩할 수 있도록 합니다 `ViewController.h` 파일 아니라는 `.m` 파일):
 
 [![](custom-controls-images/custom05.png "새 콘센트를 구성합니다.")](custom-controls-images/custom05.png#lightbox)
 

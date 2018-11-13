@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 9 장에�
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: e7b2eea22758155db7d79fa26f3376e16cf16a45
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 89056bac86116161512ad32721c5d877850d75f2
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39157018"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563227"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 9 장입니다. 플랫폼별 API 호출
 
@@ -36,7 +36,7 @@ SAP의 플랫폼별 코드를 실행 하려면 더 구조화 된 접근법에 �
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService 및 이식 가능한 클래스 라이브러리
 
 > [!NOTE] 
-> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다.
+> Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
 라이브러리는 응용 프로그램 프로젝트에서 클래스를 액세스할 일반적으로 수 없습니다. 설명한 기술을 사용 하지 않으려면이 제한 사항은 같습니다 **PlatInfoSap2** 라이브러리에서 사용 되지 않도록 합니다. Xamarin.Forms에서 클래스를 포함 하는 반면 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) .NET 리플렉션을 응용 프로그램 프로젝트에서 공용 클래스 라이브러리에서 액세스를 사용 하 여 합니다.
 

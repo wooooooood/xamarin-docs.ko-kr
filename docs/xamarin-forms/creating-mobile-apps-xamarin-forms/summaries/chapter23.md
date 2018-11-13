@@ -7,12 +7,12 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 0e8d666d9da9878d2af3a21903fa0884e09199d8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156758"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527133"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 23 장입니다. 트리거 및 동작
 
@@ -152,7 +152,7 @@ ms.locfileid: "39156758"
 
 합니다 [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) 간 전환 하 여이 개념을 확장 하는 샘플 `FormattedString` 개체입니다.
 
-[ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) 클래스를 **Xamarin.FormsBook.Toolkit** 에서 파생 되는 라이브러리 `ContentView`, 정의 `IsToggled` 속성을 통합 및는 `ToggleBehavior` 토글에 논리입니다. 이 쉽게 설정/해제 단추, XAML에서 정의 하 여 볼 수 있듯이 합니다 [ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) 샘플입니다.
+[ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) 클래스를 **Xamarin.FormsBook.Toolkit** 에서 파생 되는 라이브러리 `ContentView`, 정의 `IsToggled` 속성을 통합 및는 `ToggleBehavior` 토글에 논리입니다. 이 쉽게 설정/해제 단추, XAML에서 정의 하 여 볼 수 있듯이 합니다 [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) 샘플입니다.
 
 [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) 포함는 [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) 에서 파생 된 클래스 `ToggleBase` 사용 하는 [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)Xamarin.Forms 유사한 토글 단추를 생성 하는 클래스 `Switch`합니다.
 

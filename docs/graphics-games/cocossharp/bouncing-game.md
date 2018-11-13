@@ -6,12 +6,12 @@ ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 42155eb541849f365e7fab0a3d5c3ad583e760b7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9fd6c9108695f58bd69a1c4aa307ca2e4be6dede
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109408"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528743"
 ---
 # <a name="bouncinggame-details"></a>BouncingGame 세부 정보
 
@@ -100,7 +100,7 @@ namespace BouncingGame
 
 ![폴더 대화 상자에 파일 추가](bouncing-game-images/image2.png "폴더 대화 상자는 추가 파일")
 
-그런 다음 Android 프로젝트에 파일을 추가 합니다. 마우스 오른쪽 단추 메뉴나 컨트롤-클릭 Content 폴더 (보기로 제공 되는 **자산** Android 프로젝트의 폴더) 선택 하 고 **추가** > **파일 추가...** . 이 이번에는 iOS 프로젝트의 이동할 **콘텐츠** 폴더입니다. 파일을 추가 하는 방법에 대 한 요청을 받는 경우 선택 합니다 **링크를 추가할** 옵션:
+그런 다음 Android 프로젝트에 파일을 추가 합니다. 마우스 오른쪽 단추 메뉴나 컨트롤-클릭 Content 폴더 (보기로 제공 되는 **자산** Android 프로젝트의 폴더) 선택한 **추가** > **파일 추가...** . 이 이번에는 iOS 프로젝트의 이동할 **콘텐츠** 폴더입니다. 파일을 추가 하는 방법에 대 한 요청을 받는 경우 선택 합니다 **링크를 추가할** 옵션:
 
 ![폴더 대화 상자에 파일 추가](bouncing-game-images/addalink.png "폴더 대화 상자에 파일 추가")
 

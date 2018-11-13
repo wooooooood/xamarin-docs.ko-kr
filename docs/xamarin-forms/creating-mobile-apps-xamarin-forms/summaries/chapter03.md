@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 3 장 요
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 609b0066e033b48be55056d459e818a9acc9625c
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156576"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563331"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
 
@@ -20,7 +20,7 @@ ms.locfileid: "39156576"
 
 ## <a name="wrapping-paragraphs"></a>단락 줄 바꿈
 
-경우는 [ `Text` ](xref:Xamarin.Forms.Label.Text) 속성을 `Label` 긴 텍스트를 포함 `Label` 자동으로 나타난 것 처럼 여러 줄으로 래핑하는 [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) 샘플입니다. Em dash 또는 C# 문자를 새 줄 구분 '\r' 같은 '\u2014'와 같은 유니코드 코드를 포함할 수 있습니다.
+경우는 [ `Text` ](xref:Xamarin.Forms.Label.Text) 속성을 `Label` 긴 텍스트를 포함 `Label` 자동으로 나타난 것 처럼 여러 줄으로 래핑하는 [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) 샘플입니다. Em dash에 대 한 '\u2014'와 같은 유니코드 코드를 포함할 수 있습니다 또는 C# 새 줄을 중단 하려면 '\r'와 같은 문자입니다.
 
 경우는 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 의 속성을 `Label` 로 설정 됩니다 `LayoutOptions.Fill`의 전체 크기는 `Label` 공간에 의해 제어 됩니다는 해당 컨테이너 사용할 수 있도록 설정 합니다. 합니다 `Label` 이라고 *제한*합니다. 크기는 `Label` 해당 컨테이너의 크기입니다.
 
@@ -119,7 +119,7 @@ Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 �
 
 또는 미리 설정 된 플랫폼에 종속 된 글꼴을 여러 가지 크기 중 하나를 가져올 수 있습니다. 정적 [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) 메서드 및 [오버 로드](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) 둘 다 반환을 `double` 의 멤버에 따라 플랫폼에 적합 한 글꼴 크기 값을 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)열거형 ([`Default`](xref:Xamarin.Forms.NamedSize.Default)하십시오 [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro)를 [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  및 [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). 반환 되는 값을 `Medium` 멤버가 아닐 동일 `Default`합니다. 합니다 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 샘플 이러한 명명 된 크기를 사용 하 여 텍스트를 표시 합니다.
 
-설정 된 [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) 속성을 `Label` 이러한 멤버에 [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) 열거형 [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), 또는 [ `None` ](xref:Xamarin.Forms.FontAttributes.None)합니다. 결합할 수 있습니다 합니다 `Bold` 고 `Italic` C#의 비트 OR 연산자를 사용 하 여 멤버입니다.
+설정 된 [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) 속성을 `Label` 이러한 멤버에 [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) 열거형 [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), 또는 [ `None` ](xref:Xamarin.Forms.FontAttributes.None)합니다. 결합할 수 있습니다는 `Bold` 하 고 `Italic` 멤버는 C# 비트 OR 연산자입니다.
 
 ## <a name="formatted-text"></a>서식 있는 텍스트
 
@@ -139,6 +139,6 @@ Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 �
 
 - [3 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [3 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [3 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [3 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [레이블](~/xamarin-forms/user-interface/text/label.md)
 - [색 작업](~/xamarin-forms/user-interface/colors.md)

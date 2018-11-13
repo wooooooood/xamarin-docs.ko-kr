@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108654"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526769"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 이 코드는 기본 활동에 있는 `OnCreate` 메서드. 레이아웃 관리자에 게 생성자를 사용 하려면를 *상황에 맞는*이므로 `MainActivity` 사용 하 여 전달 됩니다 `this` 위와 같이 합니다.
 
-predefind를 사용 하는 대신 `LinearLayoutManager`를 두 개를 표시 하는 사용자 지정 레이아웃 관리자에 연결할 수 있습니다 `CardView` 항목 side-by-side, 사진 컬렉션을 이동할 페이지 넘기기 애니메이션 효과 구현 합니다. 이 가이드의 뒷부분에 나오는 다른 레이아웃 관리자에서 교환 하 여 레이아웃을 수정 하는 방법의 예가 표시 됩니다.
+미리 정의 된 사용 하는 대신 `LinearLayoutManager`를 두 개를 표시 하는 사용자 지정 레이아웃 관리자를 연결 하 여 `CardView` 항목 side-by-side, 사진 컬렉션을 이동할 페이지 넘기기 애니메이션 효과 구현 합니다. 이 가이드의 뒷부분에 나오는 다른 레이아웃 관리자에서 교환 하 여 레이아웃을 수정 하는 방법의 예가 표시 됩니다.
 
 <a name="view-holder" />
 
@@ -391,7 +391,7 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 
 [![표에 사진 가로 스크롤을 사용 하 여 앱의 스크린샷 예제](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-한 줄의 코드를 변경 하 여 사진 보기 응용 프로그램에서 다른 레이아웃을 사용 하 여 다른 동작을 사용 하 여 수정할 수 있습니다.
+한 줄의 코드를 변경 하 여 사진 보기 응용 프로그램에서 다른 레이아웃을 사용 하 여 다른 동작을 사용 하 여 수정 하는 것이 같습니다.
 알림 어댑터 코드 아니고 레이아웃 XML 레이아웃 스타일을 변경 하도록 수정 했습니다. 
 
 다음 항목인 [RecyclerView 예제 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md),이 기본 샘플 앱 항목 클릭 이벤트를 처리 하 고 업데이트 하도록 확장 되었습니다 `RecyclerView` 때 기본 데이터 원본 변경 합니다.

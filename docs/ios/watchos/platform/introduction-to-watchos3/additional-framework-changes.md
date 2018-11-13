@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 745c39dab1f73870ce036791434ed9a0b05d681b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e3eb4e3454aeab08d1333c5dbc3d4808fa4d676c
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122623"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528406"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>추가 watchOS 3 프레임 워크 변경
 
@@ -38,7 +38,7 @@ IOS에 주요 변경 내용 외에도 Apple가 수정 및 여러 기존 프레�
 
 조사식 3 OS의 핵심 동작 프레임 워크 같이 향상 됩니다.:
 
-- 새 장치 동작 이벤트가 속도계 및 자이로스코프가 사용 하 여 동작 및 방향 업데이트를 제공 합니다. 업데이트 (최대 100 Hz의 요금)이 앱을 등록할 수 있습니다.
+- 새 장치 동작 이벤트가 속도계 및 자이로스코프가 사용 하 여 동작 및 방향 업데이트를 제공 합니다. (최대 100 Hz의 요금)이이 업데이트에 대 한 앱을 등록할 수 있습니다.
 - 사용자 일시 중지 하는 경우 실시간 알림 및 실행을 재개할 새 Pedometer 이벤트를 신속 하 고 있습니다. 사용 된 [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) 포그라운드 또는 백그라운드 pedometer 이벤트에 대 한 등록 합니다.
 
 
@@ -48,7 +48,7 @@ Watch OS 3 Foundation 프레임 워크 같이 향상 됩니다.:
 
 - 새 [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) 기간, 간격을 비교 하 고 간격 교차점에 대 한 테스트와 같은 날짜 및 시간 간격 계산을 수행 하는 클래스입니다.
 - 에 추가 된 몇 가지 새 속성을 [NSLocal](https://developer.apple.com/reference/foundation/nslocale) 로컬 정보 및 사용 가능한 표시 형식을 가져오려고 클래스.
-- 새 [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스 간에 서로 다른 단위의 측정값 (UOM)을 변환 하거나 다른 UOMs의 값에 대해 계산을 수행 합니다.
+- 새 [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스 간에 서로 다른 단위의 측정값 (UOM)을 변환 하거나 다른 UOMs의 값에 대해 계산을 수행 합니다.
 - 새 [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) 최종 사용자에 게 표시 하는 것에 대 한 지역화 된 측정값의 서식을 지정 하는 클래스입니다.
 - 새 [NSUnit](https://developer.apple.com/reference/foundation/nsunit) 하 고 [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) 특정 UOMs 나타내기 위한 클래스입니다.
 

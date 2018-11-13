@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: af5554d08ac6c45fc0c392bd17cef5d91251bb1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 01ff4426dfb4764b7d9ca22703aa2b1667a90454
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106509"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528548"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>작업 모음이 있는 탭된 레이아웃
 
@@ -23,7 +23,7 @@ _이 가이드 소개 하 고 작업 모음이 Api를 사용 하 여 Xamarin.And
 
 작업 표시줄은 탭, 응용 프로그램 id, 메뉴 및 검색과 같은 주요 기능에 대 한 일관 된 사용자 인터페이스를 제공 하는 데 사용 되는 Android UI 패턴입니다. Android 3.0 (API 레벨 11), Google Android 플랫폼에 작업 모음이 Api를 도입 했습니다. 작업 모음이 Api는 일관 된 모양과 느낌 및 탭된 사용자 인터페이스에 대 한 허용 하는 클래스를 제공 하는 UI 테마를 소개 합니다. 이 가이드에서는 Xamarin.Android 응용 프로그램에 작업 표시줄 탭을 추가 하는 방법을 설명 합니다. 또한 Android 2.1 Android 2.3을 대상으로 하는 Xamarin.Android 응용 프로그램을 백 포팅 작업 모음이 탭 Android 지원 라이브러리 v7을 사용 하는 방법을 설명 합니다. 
 
-사실은 `Toolbar` 의 대신 사용 해야 하는 새롭고 보다 일반화 된 작업 표시줄 구성 요소 `ActionBar` (`Toolbar` 대체 하도록 고안 된 `ActionBar`). 자세한 내용은 [도구 모음](~/android/user-interface/controls/tool-bar/index.md)합니다. 
+사실은 `Toolbar` 대신 사용 해야 하는 새롭고 보다 일반화 된 작업 표시줄 구성 요소 `ActionBar` (`Toolbar` 대체 하도록 고안 된 `ActionBar`). 자세한 내용은 [도구 모음](~/android/user-interface/controls/tool-bar/index.md)합니다. 
 
 
 

@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 21 장 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 16fcdb345fd9aeb9201a00a0bb98d143e6468f01
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 6c666329664ad7dfaa8439068a60b6135d59d229
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156771"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563058"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
 
@@ -71,17 +71,17 @@ Xamarin.forms에 크기 조정은 등방성; 영향을 너비와 높이 균일 �
 
 [**ScaleToSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/ScaleToSize) 샘플은 `Scale` 요소에 적용되는 `Label` 속성을 계산하여 가능한 한 큰 값으로 만듭니다.
 
-### <a name="anchoring-the-scale"></a>세로 슬라이더?
+### <a name="anchoring-the-scale"></a>소수 자릿수를 고정합니다.
 
-합니다  VerticalSliders  샘플을 보여 줍니다  요소 90도 회전 된 수와 작동 합니다. 그러나 어렵습니다 위치로 회전 이러한  가로 것으로 표시 해야 하며 레이아웃에 있으므로 요소입니다. 문제 3D 회전
+이전 세 가지 샘플 규모 감축 하는 요소가 있는 모든 증가 하거나 감소 요소의 가운데를 기준으로 크기입니다. 즉, 요소 늘리거나 모든 방향에서 동일한 크기의 줄입니다. 크기 조정 하는 동안 동일한 위치에 요소 중심이 지점만 유지 됩니다.
 
-[`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) 및 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) 속성을 설정하여 크기 조정의 중심을 변경할 수 있습니다. 마찬가지로, 합니다    왼쪽과 오른쪽 요소를 향해 또는 뷰어에서 떨어져 이동할 것 처럼 보일 수 있도록 y 축을 요소를 회전 하는 것 같습니다. 합니다 `AnchorX` 속성에 영향을 줍니다  있지만 합니다. 실험해 볼 수 있습니다 합니다 `AnchorY` ThreeDeeRotationDemo  이러한 속성의 상호 작용을 탐색 하는 샘플입니다. Xamarin.Forms 사용 권한에 포함 된 3D 좌표 시스템의 왼쪽입니다.
+[`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) 및 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) 속성을 설정하여 크기 조정의 중심을 변경할 수 있습니다. 이러한 속성은 요소 자체 기준으로 하는 것입니다. 에 대 한 `AnchorX`, 요소의 왼쪽에 값이 0 참조 하 고 왼쪽에서 오른쪽으로 1 참조 합니다. 마찬가지로 `AnchorY`, 0은 맨 하 고 1은 아래쪽 합니다. 두 속성 모두를 센터인 0.5의 기본 값을 갖습니다.
 
 [**AnchoredScaleDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/AnchoredScaleDemo) 샘플을 사용하면 `AnchorX` 및 `AnchorY` 속성뿐만 아니라 `Scale` 속성을 실험 할 수 있습니다.
 
 iOS에서 기본값이 아닌 `AnchorX` 및 `AnchorY` 속성을 사용하면 일반적으로 휴대 전화 방향 변경과 호환되지 않습니다.
 
-## <a name="the-rotation-transform"></a>21 장 전체 텍스트 (PDF)
+## <a name="the-rotation-transform"></a>회전 변환
 
 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) 속성은도 단위로 지정되며 `AnchorX` 및 `AnchorY`로 정의 된 요소의 점을 중심으로 시계 방향으로 회전을 나타냅니다. 합니다 [ **PlaneRotationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/PlaneRotationDemo) 이러한 세 가지 속성을 사용 하 여 실험할 수 있습니다.
 

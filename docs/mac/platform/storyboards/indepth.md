@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117293"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528460"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Xamarin.Mac의 스토리 보드를 사용 하 여 작업
 
@@ -68,7 +68,7 @@ controller.ShowWindow(this);
 - `ViewDidDisappear` -이 메서드는 화면에서 보기를 제거한 후 바로 호출 됩니다.
 - `UpdateViewConstraints` -이 메서드는 뷰를 정의 하는 제약 조건을 자동 레이아웃 위치 및 크기가 업데이트 해야 하는 경우 호출 됩니다.
 - `ViewWillLayout` -이 메서드는이 뷰의 하위 뷰는 화면에 배치 되기 직전에 호출 됩니다.
-- `ViewDidLayout` -이 메서드는 보기의 하위 화면에 배치 된 후 바로 호출 됩니다.
+- `ViewDidLayout` -이 메서드는 뷰의 하위 화면에 배치 된 후 바로 호출 됩니다.
 
 <a name="The-Responder-Chain" />
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-재정의할 수 있습니다 합니다 `ShouldPerfromSegue` 메서드 및 Segue를 통해 실제로 실행 되는 여부 제어 C# 코드입니다. 수동으로 표시 보기 컨트롤러에 대 한 호출의 `DismissController` 더 이상 필요 없는 경우 표시에서 제거 하는 방법입니다.
+재정의할 수 있습니다 합니다 `ShouldPerformSegue` 메서드 및 Segue를 통해 실제로 실행 되는 여부 제어 C# 코드입니다. 수동으로 표시 보기 컨트롤러에 대 한 호출의 `DismissController` 더 이상 필요 없는 경우 표시에서 제거 하는 방법입니다.
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ namespace OnCardMac
 2. 합니다 `Storyboard` 속성은 다른 창 컨트롤러에서 로드 된 스토리 보드를 포함 합니다. `null` 스토리 보드에서 로드 되지 않은 경우.
 3. 호출할 수 있습니다는 `DismissController` 메서드를 지정 된 창을 닫고 보기에서 제거 합니다.
 
-뷰 컨트롤러와 마찬가지로 창 컨트롤러 구현 합니다 `PerformSegue`, `PrepareForSegue` 및 `ShouldPerfromSegue` 메서드 Segue 작업의 원본으로 사용할 수 있습니다.
+뷰 컨트롤러와 마찬가지로 창 컨트롤러 구현 합니다 `PerformSegue`, `PrepareForSegue` 및 `ShouldPerformSegue` 메서드 Segue 작업의 원본으로 사용할 수 있습니다.
 
 창 컨트롤러 macOS 앱의 다음 기능을 담당 합니다.
 
@@ -259,7 +259,7 @@ MacOS에 대 한 제스처 인식기 iOS에 상응 하는 거의 동일 하 고 
 
 ## <a name="using-storyboard-references"></a>스토리 보드 참조 사용
 
-따라서 제거 복잡성을 제거 하 고 결과 개별 만드는 Storyboard 쉽게 디자인, 스토리 보드 참조를 사용 하면 대규모의 복잡 한 스토리 보드 디자인을 가져와 원래에서 참조 가져오기는 더 작은 스토리 보드를 중단 하 고 유지 관리 합니다.
+스토리 보드 참조를 사용 하는 대규모의 복잡 한 스토리 보드 디자인을 수행 하 고 더 작은 스토리 보드에 원본에서 참조 가져오기 있으므로 복잡성을 제거 하 고 결과 개별 스토리 보드 디자인 및 유지 관리를 쉽게으로 나누는 수 있습니다.
 
 또한 스토리 보드 참조를 제공할 수는 _앵커_ 동일한 스토리 보드 또는 다른 특정 장면 내에서 다른 장면으로 합니다.
 

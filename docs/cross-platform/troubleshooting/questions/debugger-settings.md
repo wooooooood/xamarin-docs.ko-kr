@@ -1,19 +1,19 @@
 ---
-title: 디버거에 필요한 프로젝트 설정은 어떤?
+title: 디버거에 필요한 프로젝트 설정은 무엇인가요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
-ms.openlocfilehash: 646ef7f708be2de6a851ace25d69a7c2f0b18a83
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 9a18c97ba227615ae42529424b5c22b5e144f5e5
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350809"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526706"
 ---
-# <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 어떤?
+# <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 무엇인가요?
 
 (중단점 적중 횟수, 디버그 로그 표시 등)를 예상 대로 작동 하도록 디버거에 대 한 순서로 개발자 계측 및 디버그 정보 표시가 모두 활성화 되어야 합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "39350809"
 2. 로 **빌드 > 고급...** 디버그 정보로 **전체**
 3. 각 플랫폼에 대 한 설정은 다음과 같습니다.
    - 로 이동 **Android 옵션 > 디버깅 옵션**합니다. 눈금은 **개발자 계측을 사용 하도록 설정** 상자입니다.
-   - 로 이동 **iOS 빌드 > 디버깅 옵션**합니다. 눈금은 **디버깅 사용** 상자입니다.
+   - 로 이동 **iOS 디버그 > 디버깅 및 계측**합니다. 눈금은 **디버깅 사용** 상자입니다.
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 1. 프로젝트 옵션을 열려면

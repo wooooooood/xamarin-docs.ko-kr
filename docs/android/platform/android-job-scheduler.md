@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108771"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527016"
 ---
 # <a name="android-job-scheduler"></a>Android 작업 스케줄러
 
@@ -42,7 +42,7 @@ Android 작업 스케줄러는 예약 백그라운드 작업을 간소화 하기
 * `Android.App.Job.JobService` 는 응용 프로그램의 주 스레드에서 작업을 실행 하는 논리를 사용 하 여 확장 해야 하는 추상 클래스입니다. 즉는 `JobService` 작업은 비동기적으로 수행 해야 하는 방법에 대 한 일을 담당 합니다.
 * `Android.App.Job.JobInfo` 개체는 작업을 실행할 때 Android를 안내 하는 조건을 포함 합니다.
 
-Android 작업 스케줄러를 사용 하 여 작업을 예약 하려면 Xamarin.Android 응용 프로그램을 확장 하는 클래스의 코드를 캡슐화 해야 합니다는 `JobService` 클래스입니다. `JobService` 에 수명 주기는 작업의 수명 동안 호출할 수 있는:
+Android 작업 스케줄러를 사용 하 여 작업을 예약 하려면 Xamarin.Android 응용 프로그램을 확장 하는 클래스의 코드를 캡슐화 해야 합니다는 `JobService` 클래스입니다. `JobService` 작업의 수명 동안 호출할 수 있는 세 가지 수명 주기 방법이 있습니다.
 
 * **bool (JobParameters 매개 변수) OnStartJob** &ndash; 이 메서드는 `JobScheduler` 작업 및 응용 프로그램의 주 스레드에서 실행 하는 데 합니다. 책임이 합니다 `JobService` 비동기적으로 작업을 수행할 수 및 `true` 있으면, 남은 작업 또는 `false` 작업이 수행 되는 경우.
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Android 작업 스케줄러의 강력한 기능은 작업을 실행 하는 경우 또는 실행 수는 조건 작업을 제어할 수 있습니다. 다음 표에 일부 메서드의 `JobInfo.Builder` 앱에는 작업을 실행할 때 영향을 줄 수 있도록 합니다.  
@@ -211,7 +211,7 @@ else
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

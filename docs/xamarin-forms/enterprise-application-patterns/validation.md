@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 2b4be17e3c96ee223433b435a7b1011eafa8e9db
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 30c507a1b78600ef1b9a96e37f88904daaf82987
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995829"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528574"
 ---
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
 사용자 로부터 입력을 허용 하는 모든 앱에 유효한 입력 되었는지 확인 해야 합니다. 앱 특정 범위에 있는 문자만 포함, 특정 길이입니다. 또는 특정 형식과 일치 하는 입력에 대 한 확인 예를 들어 수 있습니다. 유효성 검사 없이 사용자는 응용 프로그램에서 실패를 발생 시키는 데이터를 제공할 수 있습니다. 비즈니스 규칙을 적용 하 고 공격자가 악성 데이터 주입 하지 않도록 설정 하는 유효성 검사 합니다.
 
-ViewModel 모델 (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모델 종종 해야 데이터 유효성 검사를 수행 하 고 사용자 해결할 수 있도록 보기로 유효성 검사 오류를 알립니다. EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 사용자를 제공 하는 오류 메시지를 표시 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 유효성 검사 오류가 발생 하는 사용자에 게 알립니다. 데이터를 잘못 된 이유입니다. 그림 6-1 eShopOnContainers 모바일 앱에서 유효성 검사를 수행과 관련 된 클래스를 보여 줍니다.
+모델-뷰-ViewModel (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모델 종종 해야 데이터 유효성 검사를 수행 하 고 사용자 해결할 수 있도록 보기로 유효성 검사 오류를 알립니다. EShopOnContainers 모바일 앱 보기 모델 속성의 동기 클라이언트 쪽 유효성 검사를 수행 하 고 사용자를 제공 하는 오류 메시지를 표시 하 고 잘못 된 데이터를 포함 하는 컨트롤을 강조 표시 하 여 유효성 검사 오류가 발생 하는 사용자에 게 알립니다. 데이터를 잘못 된 이유입니다. 그림 6-1 eShopOnContainers 모바일 앱에서 유효성 검사를 수행과 관련 된 클래스를 보여 줍니다.
 
 [![](validation-images/validation.png "EShopOnContainers 모바일 앱에서 유효성 검사 클래스")](validation-images/validation-large.png#lightbox "eShopOnContainers 모바일 앱에서 유효성 검사 클래스")
 
@@ -33,10 +33,10 @@ ViewModel 모델 (MVVM)의 컨텍스트에서 패턴, 보기 모델 또는 모�
 파생 되는 클래스를 만들어 지정 된 유효성 검사 규칙을 `IValidationRule<T>` 다음 코드 예제에 나와 있는 인터페이스:
 
 ```csharp
-public interface IValidationRule<T>  
+public interface IValidationRule<T>  
 {  
-    string ValidationMessage { get; set; }  
-    bool Check(T value);  
+    string ValidationMessage { get; set; }  
+    bool Check(T value);  
 }
 ```
 
@@ -45,20 +45,20 @@ public interface IValidationRule<T>
 다음 코드 예제는 `IsNotNullOrEmptyRule<T>` 사용자 이름 및 암호에 사용자가 입력의 유효성을 검사 하는 데 사용 되는 유효성 검사 규칙을 `LoginView` eShopOnContainers 모바일 앱에서 모의 서비스를 사용 하는 경우:
 
 ```csharp
-public class IsNotNullOrEmptyRule<T> : IValidationRule<T>  
+public class IsNotNullOrEmptyRule<T> : IValidationRule<T>  
 {  
-    public string ValidationMessage { get; set; }  
+    public string ValidationMessage { get; set; }  
 
-    public bool Check(T value)  
-    {  
-        if (value == null)  
-        {  
-            return false;  
-        }  
+    public bool Check(T value)  
+    {  
+        if (value == null)  
+        {  
+            return false;  
+        }  
 
-        var str = value as string;  
-        return !string.IsNullOrWhiteSpace(str);  
-    }  
+        var str = value as string;  
+        return !string.IsNullOrWhiteSpace(str);  
+    }  
 }
 ```
 
@@ -67,23 +67,23 @@ public class IsNotNullOrEmptyRule<T> : IValidationRule<T>
 EShopOnContainers 모바일 앱에서 사용 되지 않지만 다음 코드 예제에서는 전자 메일 주소 유효성 검사에 대 한 유효성 검사 규칙을 보여 줍니다.
 
 ```csharp
-public class EmailRule<T> : IValidationRule<T>  
+public class EmailRule<T> : IValidationRule<T>  
 {  
-    public string ValidationMessage { get; set; }  
+    public string ValidationMessage { get; set; }  
 
-    public bool Check(T value)  
-    {  
-        if (value == null)  
-        {  
-            return false;  
-        }  
+    public bool Check(T value)  
+    {  
+        if (value == null)  
+        {  
+            return false;  
+        }  
 
-        var str = value as string;  
-        Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");  
-        Match match = regex.Match(str);  
+        var str = value as string;  
+        Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");  
+        Match match = regex.Match(str);  
 
-        return match.Success;  
-    }  
+        return match.Success;  
+    }  
 }
 ```
 
@@ -97,46 +97,46 @@ public class EmailRule<T> : IValidationRule<T>
 EShopOnContainers 모바일 앱에서 유효성 검사를 요구 하는 보기 모델 속성 형식으로 선언 된 `ValidatableObject<T>`여기서 `T` 유효성을 검사할 데이터의 형식입니다. 다음 코드 예제에서는 이러한 두 속성의 예를 보여 줍니다.
 
 ```csharp
-public ValidatableObject<string> UserName  
+public ValidatableObject<string> UserName  
 {  
-    get  
-    {  
-        return _userName;  
-    }  
-    set  
-    {  
-        _userName = value;  
-        RaisePropertyChanged(() => UserName);  
-    }  
+    get  
+    {  
+        return _userName;  
+    }  
+    set  
+    {  
+        _userName = value;  
+        RaisePropertyChanged(() => UserName);  
+    }  
 }  
 
-public ValidatableObject<string> Password  
+public ValidatableObject<string> Password  
 {  
-    get  
-    {  
-        return _password;  
-    }  
-    set  
-    {  
-        _password = value;  
-        RaisePropertyChanged(() => Password);  
-    }  
+    get  
+    {  
+        return _password;  
+    }  
+    set  
+    {  
+        _password = value;  
+        RaisePropertyChanged(() => Password);  
+    }  
 }
 ```
 
 유효성 검사를 실행, 유효성 검사 규칙에 추가 해야 합니다 `Validations` 각 컬렉션 `ValidatableObject<T>` 다음 코드 예제에 설명 된 대로 인스턴스:
 
 ```csharp
-private void AddValidations()  
+private void AddValidations()  
 {  
-    _userName.Validations.Add(new IsNotNullOrEmptyRule<string>   
-    {   
-        ValidationMessage = "A username is required."   
-    });  
-    _password.Validations.Add(new IsNotNullOrEmptyRule<string>   
-    {   
-        ValidationMessage = "A password is required."   
-    });  
+    _userName.Validations.Add(new IsNotNullOrEmptyRule<string>   
+    {   
+        ValidationMessage = "A username is required."   
+    });  
+    _password.Validations.Add(new IsNotNullOrEmptyRule<string>   
+    {   
+        ValidationMessage = "A password is required."   
+    });  
 }
 ```
 
@@ -151,39 +151,39 @@ EShopOnContainers 모바일 앱에서 사용 된 유효성 검사 방법은 수�
 보기 모델 속성에 대 한 유효성 검사를 수동으로 트리거할 수 있습니다. 예를 들어,이 경우 eShopOnContainers 모바일 앱에서 사용자 탭의 **로그인** 단추를 `LoginView`모의 서비스를 사용 하는 경우. 명령 대리자 호출을 `MockSignInAsync` 에서 메서드를 `LoginViewModel`를 실행 하 여 유효성 검사를 호출 하는 `Validate` 메서드를 다음 코드 예제에 나와 있는:
 
 ```csharp
-private bool Validate()  
+private bool Validate()  
 {  
-    bool isValidUser = ValidateUserName();  
-    bool isValidPassword = ValidatePassword();  
-    return isValidUser && isValidPassword;  
+    bool isValidUser = ValidateUserName();  
+    bool isValidPassword = ValidatePassword();  
+    return isValidUser && isValidPassword;  
 }  
 
-private bool ValidateUserName()  
+private bool ValidateUserName()  
 {  
-    return _userName.Validate();  
+    return _userName.Validate();  
 }  
 
-private bool ValidatePassword()  
+private bool ValidatePassword()  
 {  
-    return _password.Validate();  
+    return _password.Validate();  
 }
 ```
 
 합니다 `Validate` 사용자 이름 및 암호에 사용자가 입력의 유효성 검사를 수행 하는 메서드를 `LoginView`, 각 유효성 검사 메서드를 호출 하 여 `ValidatableObject<T>` 인스턴스. 다음 코드 예제에서 유효성 검사 메서드를 보여 줍니다.는 `ValidatableObject<T>` 클래스:
 
 ```csharp
-public bool Validate()  
+public bool Validate()  
 {  
-    Errors.Clear();  
+    Errors.Clear();  
 
-    IEnumerable<string> errors = _validations  
-        .Where(v => !v.Check(Value))  
-        .Select(v => v.ValidationMessage);  
+    IEnumerable<string> errors = _validations  
+        .Where(v => !v.Check(Value))  
+        .Select(v => v.ValidationMessage);  
 
-    Errors = errors.ToList();  
-    IsValid = !Errors.Any();  
+    Errors = errors.ToList();  
+    IsValid = !Errors.Any();  
 
-    return this.IsValid;  
+    return this.IsValid;  
 }
 ```
 
@@ -194,13 +194,13 @@ public bool Validate()
 바인딩된 속성이 변경 될 때마다 유효성 검사를 트리거할 수도 있습니다. 등의 경우 양방향 바인딩 합니다 `LoginView` 설정 합니다 `UserName` 또는 `Password` 속성, 유효성 검사가 트리거됩니다. 다음 코드 예제에서는이 발생 하는 방법을 보여 줍니다.
 
 ```xaml
-<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
-    <Entry.Behaviors>  
-        <behaviors:EventToCommandBehavior  
-            EventName="TextChanged"  
-            Command="{Binding ValidateUserNameCommand}" />  
-    </Entry.Behaviors>  
-    ...  
+<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
+    <Entry.Behaviors>  
+        <behaviors:EventToCommandBehavior  
+            EventName="TextChanged"  
+            Command="{Binding ValidateUserNameCommand}" />  
+    </Entry.Behaviors>  
+    ...  
 </Entry>
 ```
 
@@ -237,14 +237,14 @@ EShopOnContainers 모바일 앱 사용자에 게 모든 유효성 검사 오류�
 합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤에는 다음 코드 예제에 나와 있는 명시적 스타일을 사용 합니다.
 
 ```xaml
-<Style x:Key="EntryStyle"  
-       TargetType="{x:Type Entry}">  
-    ...  
-    <Setter Property="behaviors:LineColorBehavior.ApplyLineColor"  
-            Value="True" />  
-    <Setter Property="behaviors:LineColorBehavior.LineColor"  
-            Value="{StaticResource BlackColor}" />  
-    ...  
+<Style x:Key="EntryStyle"  
+       TargetType="{x:Type Entry}">  
+    ...  
+    <Setter Property="behaviors:LineColorBehavior.ApplyLineColor"  
+            Value="True" />  
+    <Setter Property="behaviors:LineColorBehavior.LineColor"  
+            Value="{StaticResource BlackColor}" />  
+    ...  
 </Style>
 ```
 
@@ -253,33 +253,33 @@ EShopOnContainers 모바일 앱 사용자에 게 모든 유효성 검사 오류�
 때 값을 `ApplyLineColor` 연결 된 속성은 집합 또는 변경 합니다 `LineColorBehavior` 연결 된 동작을 실행는 `OnApplyLineColorChanged` 메서드를 다음 코드 예제에 나와 있는:
 
 ```csharp
-public static class LineColorBehavior  
+public static class LineColorBehavior  
 {  
-    ...  
-    private static void OnApplyLineColorChanged(  
-                BindableObject bindable, object oldValue, object newValue)  
-    {  
-        var view = bindable as View;  
-        if (view == null)  
-        {  
-            return;  
-        }  
+    ...  
+    private static void OnApplyLineColorChanged(  
+                BindableObject bindable, object oldValue, object newValue)  
+    {  
+        var view = bindable as View;  
+        if (view == null)  
+        {  
+            return;  
+        }  
 
-        bool hasLine = (bool)newValue;  
-        if (hasLine)  
-        {  
-            view.Effects.Add(new EntryLineColorEffect());  
-        }  
-        else  
-        {  
-            var entryLineColorEffectToRemove =   
-                    view.Effects.FirstOrDefault(e => e is EntryLineColorEffect);  
-            if (entryLineColorEffectToRemove != null)  
-            {  
-                view.Effects.Remove(entryLineColorEffectToRemove);  
-            }  
-        }  
-    }  
+        bool hasLine = (bool)newValue;  
+        if (hasLine)  
+        {  
+            view.Effects.Add(new EntryLineColorEffect());  
+        }  
+        else  
+        {  
+            var entryLineColorEffectToRemove =   
+                    view.Effects.FirstOrDefault(e => e is EntryLineColorEffect);  
+            if (entryLineColorEffectToRemove != null)  
+            {  
+                view.Effects.Remove(entryLineColorEffectToRemove);  
+            }  
+        }  
+    }  
 }
 ```
 
@@ -288,11 +288,11 @@ public static class LineColorBehavior
 합니다 `EntryLineColorEffect` 서브 클래스를 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스 하 고 다음 코드 예제에 표시 됩니다.
 
 ```csharp
-public class EntryLineColorEffect : RoutingEffect  
+public class EntryLineColorEffect : RoutingEffect  
 {  
-    public EntryLineColorEffect() : base("eShopOnContainers.EntryLineColorEffect")  
-    {  
-    }  
+    public EntryLineColorEffect() : base("eShopOnContainers.EntryLineColorEffect")  
+    {  
+    }  
 }
 ```
 
@@ -301,76 +301,76 @@ public class EntryLineColorEffect : RoutingEffect
 다음 코드 예제는 `eShopOnContainers.EntryLineColorEffect` iOS에 대 한 구현 합니다.
 
 ```csharp
-[assembly: ResolutionGroupName("eShopOnContainers")]  
-[assembly: ExportEffect(typeof(EntryLineColorEffect), "EntryLineColorEffect")]  
-namespace eShopOnContainers.iOS.Effects  
+[assembly: ResolutionGroupName("eShopOnContainers")]  
+[assembly: ExportEffect(typeof(EntryLineColorEffect), "EntryLineColorEffect")]  
+namespace eShopOnContainers.iOS.Effects  
 {  
-    public class EntryLineColorEffect : PlatformEffect  
-    {  
-        UITextField control;  
+    public class EntryLineColorEffect : PlatformEffect  
+    {  
+        UITextField control;  
 
-        protected override void OnAttached()  
-        {  
-            try  
-            {  
-                control = Control as UITextField;  
-                UpdateLineColor();  
-            }  
-            catch (Exception ex)  
-            {  
-                Console.WriteLine("Can't set property on attached control. Error: ", ex.Message);  
-            }  
-        }  
+        protected override void OnAttached()  
+        {  
+            try  
+            {  
+                control = Control as UITextField;  
+                UpdateLineColor();  
+            }  
+            catch (Exception ex)  
+            {  
+                Console.WriteLine("Can't set property on attached control. Error: ", ex.Message);  
+            }  
+        }  
 
-        protected override void OnDetached()  
-        {  
-            control = null;  
-        }  
+        protected override void OnDetached()  
+        {  
+            control = null;  
+        }  
 
-        protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)  
-        {  
-            base.OnElementPropertyChanged(args);  
+        protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)  
+        {  
+            base.OnElementPropertyChanged(args);  
 
-            if (args.PropertyName == LineColorBehavior.LineColorProperty.PropertyName ||  
-                args.PropertyName == "Height")  
-            {  
-                Initialize();  
-                UpdateLineColor();  
-            }  
-        }  
+            if (args.PropertyName == LineColorBehavior.LineColorProperty.PropertyName ||  
+                args.PropertyName == "Height")  
+            {  
+                Initialize();  
+                UpdateLineColor();  
+            }  
+        }  
 
-        private void Initialize()  
-        {  
-            var entry = Element as Entry;  
-            if (entry != null)  
-            {  
-                Control.Bounds = new CGRect(0, 0, entry.Width, entry.Height);  
-            }  
-        }  
+        private void Initialize()  
+        {  
+            var entry = Element as Entry;  
+            if (entry != null)  
+            {  
+                Control.Bounds = new CGRect(0, 0, entry.Width, entry.Height);  
+            }  
+        }  
 
-        private void UpdateLineColor()  
-        {  
-            BorderLineLayer lineLayer = control.Layer.Sublayers.OfType<BorderLineLayer>()  
-                                                             .FirstOrDefault();  
+        private void UpdateLineColor()  
+        {  
+            BorderLineLayer lineLayer = control.Layer.Sublayers.OfType<BorderLineLayer>()  
+                                                             .FirstOrDefault();  
 
-            if (lineLayer == null)  
-            {  
-                lineLayer = new BorderLineLayer();  
-                lineLayer.MasksToBounds = true;  
-                lineLayer.BorderWidth = 1.0f;  
-                control.Layer.AddSublayer(lineLayer);  
-                control.BorderStyle = UITextBorderStyle.None;  
-            }  
+            if (lineLayer == null)  
+            {  
+                lineLayer = new BorderLineLayer();  
+                lineLayer.MasksToBounds = true;  
+                lineLayer.BorderWidth = 1.0f;  
+                control.Layer.AddSublayer(lineLayer);  
+                control.BorderStyle = UITextBorderStyle.None;  
+            }  
 
-            lineLayer.Frame = new CGRect(0f, Control.Frame.Height-1f, Control.Bounds.Width, 1f);  
-            lineLayer.BorderColor = LineColorBehavior.GetLineColor(Element).ToCGColor();  
-            control.TintColor = control.TextColor;  
-        }  
+            lineLayer.Frame = new CGRect(0f, Control.Frame.Height-1f, Control.Bounds.Width, 1f);  
+            lineLayer.BorderColor = LineColorBehavior.GetLineColor(Element).ToCGColor();  
+            control.TintColor = control.TextColor;  
+        }  
 
-        private class BorderLineLayer : CALayer  
-        {  
-        }  
-    }  
+        private class BorderLineLayer : CALayer  
+        {  
+        }  
+    }  
 }
 ```
 
@@ -385,17 +385,17 @@ namespace eShopOnContainers.iOS.Effects
 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤을 [ `DataTrigger` ](xref:Xamarin.Forms.DataTrigger) 추가할 해당 [ `Triggers` ](xref:Xamarin.Forms.VisualElement.Triggers) 컬렉션입니다. 다음 코드 예제는 `DataTrigger`:
 
 ```xaml
-<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
-    ...  
-    <Entry.Triggers>  
-        <DataTrigger   
-            TargetType="Entry"  
-            Binding="{Binding UserName.IsValid}"  
-            Value="False">  
-            <Setter Property="behaviors:LineColorBehavior.LineColor"   
-                    Value="{StaticResource ErrorColor}" />  
-        </DataTrigger>  
-    </Entry.Triggers>  
+<Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
+    ...  
+    <Entry.Triggers>  
+        <DataTrigger   
+            TargetType="Entry"  
+            Binding="{Binding UserName.IsValid}"  
+            Value="False">  
+            <Setter Property="behaviors:LineColorBehavior.LineColor"   
+                    Value="{StaticResource ErrorColor}" />  
+        </DataTrigger>  
+    </Entry.Triggers>  
 </Entry>
 ```
 
@@ -414,8 +414,8 @@ namespace eShopOnContainers.iOS.Effects
 UI는 데이터 유효성 검사에 실패 하는 각 컨트롤 아래 레이블 컨트롤에 유효성 검사 오류 메시지를 표시 합니다. 다음 코드 예제는 [ `Label` ](xref:Xamarin.Forms.Label) 표시 하는 유효성 검사 오류 메시지를 사용자가 올바른 사용자 이름을 입력 하지 하는 경우:
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
-       Style="{StaticResource ValidationErrorLabelStyle}" />
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+       Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 
 각 [ `Label` ](xref:Xamarin.Forms.Label) 바인딩되는 `Errors` 유효성 검사 중인 뷰 모델 개체의 속성입니다. 합니다 `Errors` 에서 제공 하는 속성을 `ValidatableObject<T>` 클래스 및 형식입니다 `List<string>`합니다. 때문에 합니다 `Errors` 속성에는 여러 유효성 검사 오류가 포함 될 수 있습니다는 `FirstValidationErrorConverter` 인스턴스 표시에 대 한 컬렉션에서 첫 번째 오류를 검색 하는 합니다.

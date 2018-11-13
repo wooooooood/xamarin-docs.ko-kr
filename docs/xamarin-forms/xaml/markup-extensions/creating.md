@@ -4,15 +4,15 @@ description: 이 문서에서는 사용자 고유의 사용자 지정 하는 Xam
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 6b61d03910d908f5fab0d946ed97c88b1e32885d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b928c55f447d68b8adfedaa031fd85750ee71267
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109551"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563708"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 

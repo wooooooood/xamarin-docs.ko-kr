@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106977"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526977"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.Mac의 Windows
 
 _이 문서에서는 windows 및 Xamarin.Mac 응용 프로그램에서 패널을 사용 하 여 작업을 다룹니다. Windows 만들고 패널 Xcode 및 Interface Builder 스토리 보드 및.xib 파일에서 로드 하 고 프로그래밍 방식으로 작업에서 설명 합니다._
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일한 Windows에 액세스할 수 하는 개발자의 작업 패널 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 Windows 및 패널 유지 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 및.NET Xamarin.Mac 응용 프로그램에서 동일한 Windows에 액세스 해야 하 고이 작업 하는 개발자는 패널 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 Windows 및 패널 유지 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 Xamarin.Mac 응용 프로그램의 용도 따라 관리 하 고 정보를 표시 하 고 함께 조정 화면에서 하나 이상의 Windows를 표시할 수 있습니다. 창의 사용자 기능은 다음과 같습니다.
 
@@ -284,7 +284,7 @@ public override void ViewWillAppear ()
 MyWindow.PerformClose(this);
 ```
 
-닫기 하려고 합니다 `MyWindow` `NSWindow` 인스턴스. 성공적으로 수행 되었으면 창, 다른 내보낼 경고 소리 닫히고는 열린 채로 합니다.
+닫기 하려고 합니다 `MyWindow` `NSWindow` 인스턴스. 성공 하면 창이 닫힙니다., 경고 소리 내보낼 다른 개방가 됩니다.
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller
@@ -758,7 +758,7 @@ void OpenDialog (NSObject sender)
 3. **이름**에 대해 `DocumentPanel`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. 두 번 클릭 하 여 `DocumentPanel.xib` Interface Builder에서 편집 하기 위해 열려는 파일: 
 
-    [![](window-images/new02.png "pannel 편집")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "편집 패널")](window-images/new02.png#lightbox)
 5. 패널을 끌어서 기존 창을 삭제 합니다 **라이브러리 검사기** 에 **인터페이스 편집기**: 
 
     [![](window-images/panels01.png "기존 창을 삭제")](window-images/panels01.png#lightbox)

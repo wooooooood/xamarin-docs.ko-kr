@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 16 장 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: a3884aef844b14d2b5923901596df8ce76018538
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156667"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563599"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>요약 16 장입니다. 데이터 바인딩
 

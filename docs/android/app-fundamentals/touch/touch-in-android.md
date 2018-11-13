@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9a6f7f5c82808b6430ba1aa6178a543945ae2634
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104910"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527237"
 ---
 # <a name="touch-in-android"></a>Android 터치
 
@@ -80,7 +80,7 @@ public override bool OnTouchEvent(MotionEvent e)
 -  *OnSingleTapUp* -한 번의 터치로 발생할 때 호출 됩니다.
 
 
-대부분의 응용 프로그램 제스처의 하위 집합에 관심이 될 수 있습니다. 응용 프로그램 해야 GestureDetector.SimpleOnGestureListener 클래스를 확장 하 고 이벤트에 해당 하는 메서드를 재정의 하는 예제의 경우 관심 있는입니다.
+대부분의 응용 프로그램 제스처의 하위 집합에 관심이 될 수 있습니다. 이 경우 응용 프로그램 GestureDetector.SimpleOnGestureListener 클래스를 확장 하 고 관심 있는 이벤트에 해당 하는 메서드를 재정의 해야 합니다.
 
 ## <a name="custom-gestures"></a>사용자 지정 제스처
 
@@ -134,7 +134,7 @@ SetContentView(gestureOverlayView);
     android:layout_height="match_parent" />
 ```
 
-`GestureOverlayView` 에 제스처를 그리기 프로세스 중 발생할 수 있는 몇 가지 이벤트가 있습니다. 가장 흥미로운 이벤트 `GesturePeformed`합니다. 이 이벤트는 사용자가 제스처 그리기 완료 될 때 발생 합니다.
+`GestureOverlayView` 에 제스처를 그리기 프로세스 중 발생할 수 있는 몇 가지 이벤트가 있습니다. 가장 흥미로운 이벤트 `GesturePerformed`합니다. 이 이벤트는 사용자가 제스처 그리기 완료 될 때 발생 합니다.
 
 이 이벤트가 발생 하면 작업 요청을 `GestureLibrary` 해 제스처 도구로 제스처 중 하나를 사용 하 여 사용자가 만든 제스처와 일치 합니다. `GestureLibrary` 예측 개체의 목록을 반환 합니다.
 

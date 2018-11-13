@@ -4,15 +4,15 @@ description: XAML 태그 확장 속성을 개체 또는 다른 원본에서 직�
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935618"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563838"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부입니다. XAML 태그 확장
 
@@ -387,7 +387,7 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-다른 클래스에 액세스 하려면 XML 네임 스페이스 선언을 추가 해야 합니다. 각 추가 XML 네임 스페이스 선언을 새 접두사를 정의합니다. 클래스는 공유 응용 프로그램.NET 표준 라이브러리를 로컬를 같은 액세스 하려면 `AppConstants`, 접두사를 자주 사용 하는 XAML 프로그래머 `local`합니다. 네임 스페이스 선언에는 CLR (공용 언어 런타임) 네임 스페이스 이름, 라고도.NET 네임 스페이스 이름, C#에 표시 되는 이름 나타내야 `namespace` 정의 또는 `using` 지시문:
+다른 클래스에 액세스 하려면 XML 네임 스페이스 선언을 추가 해야 합니다. 각 추가 XML 네임 스페이스 선언을 새 접두사를 정의합니다. 클래스는 공유 응용 프로그램.NET 표준 라이브러리를 로컬를 같은 액세스 하려면 `AppConstants`, 접두사를 자주 사용 하는 XAML 프로그래머 `local`합니다. 네임 스페이스 선언에는 CLR (공용 언어 런타임) 네임 스페이스 이름, 라고도.NET 네임 스페이스 이름에 나타나는 이름 나타내야 합니다.는 C# `namespace` 정의 또는 `using` 지시문:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"

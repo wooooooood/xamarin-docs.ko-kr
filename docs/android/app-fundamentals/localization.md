@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
-ms.translationtype: MT
+ms.openlocfilehash: 833bdc0fd087fcf8dbb8cce3b8b23f427302f5e7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301255"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526873"
 ---
 # <a name="android-localization"></a>Android 지역화
 
@@ -207,7 +207,7 @@ var translated = Resources.GetQuantityString (
 
 또한 언어별 리소스 레이아웃, 애니메이션 및 원시 파일을 포함 하 여 다른 유형의 대신을 제공할 수 있습니다. 하나 이상의 대상 언어에 대 한 특정 화면 레이아웃을 제공할 수 있습니다이 즉, 예를 들어 만들 수 있습니다 레이아웃을 매우 긴 텍스트 레이블에 대 한 허용 하는 독일어에 맞게.
 
-Android 4.2에 대 한 지원을 도입 [왼쪽된 (RTL) 언어에 오른쪽](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) 응용 프로그램 설정을 설정 하는 경우 `android:supportsRtl="true"`합니다. 리소스 한정자 `"ldrtl"` RTL 표시에 대 한 설계 된 사용자 지정 레이아웃을 포함 하도록 direcory 이름에 포함 될 수 있습니다.
+Android 4.2에 대 한 지원을 도입 [왼쪽된 (RTL) 언어에 오른쪽](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) 응용 프로그램 설정을 설정 하는 경우 `android:supportsRtl="true"`합니다. 리소스 한정자 `"ldrtl"` RTL 표시에 대 한 설계 된 사용자 지정 레이아웃을 포함 하는 디렉터리 이름에 포함할 수 있습니다.
 
 리소스 디렉터리 이름 지정 및 대체 (fallback)에 대 한 자세한 내용은 Android 문서 참조 [대체 리소스를 제공](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)합니다.
 

@@ -1,56 +1,56 @@
 ---
 title: 효과의 이벤트를 호출합니다.
-description: 효과 정의 하 고 기본 네이티브 보기에서 변경 됨을 나타내는 이벤트를 호출 수입니다. 이 문서에는 추적, 낮은 수준의 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 알리는 이벤트를 생성 하는 방법을 보여 줍니다.
+description: 효과 정의 하 고 기본 네이티브 보기에 대 한 변경 내용을 신호 이벤트를 호출할 수 있습니다. 이 문서를 추적 하는 하위 수준 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 보이는 이벤트를 생성 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34050158"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527406"
 ---
 # <a name="invoking-events-from-effects"></a>효과의 이벤트를 호출합니다.
 
-_효과 정의 하 고 기본 네이티브 보기에서 변경 됨을 나타내는 이벤트를 호출 수입니다. 이 문서에는 추적, 낮은 수준의 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 알리는 이벤트를 생성 하는 방법을 보여 줍니다._
+_효과 정의 하 고 기본 네이티브 보기에 대 한 변경 내용을 신호 이벤트를 호출할 수 있습니다. 이 문서를 추적 하는 하위 수준 멀티 터치 손가락을 구현 하는 방법 및 터치 작업을 보이는 이벤트를 생성 하는 방법을 보여 줍니다._
 
-이 문서에서 설명 하는 효과 낮은 수준의 터치 이벤트에 대 한 액세스를 제공 합니다. 이러한 하위 수준 이벤트를 기존를 통해 사용할 수 없는 `GestureRecognizer` 클래스, 있지만 몇 가지 종류의 응용 프로그램에 중요 한 됩니다. 예를 들어 한 finger-paint 응용 프로그램 화면에서 이동 하는 동안 개별 손가락을 추적 해야 합니다. 음악 키보드 탭 검색 하 고는 glissando에서 다른 키가 두 개에서 gliding 손가락 뿐만 아니라 개별 키를 해제 합니다.
+이 문서에 설명 된 효과 낮은 수준의 터치 이벤트에 대 한 액세스를 제공 합니다. 이러한 하위 수준 이벤트를 기존를 통해 사용할 수 없는 `GestureRecognizer` 있지만 클래스는 일부 유형의 응용 프로그램에 중요 합니다. 예를 들어를 finger-paint 응용 프로그램 화면에서 이동할 때 각 손가락을 추적 해야 합니다. 음악 키보드 탭 검색 해야 하 고 하나의 키에서 다른 한 glissando gliding 손가락 뿐만 아니라 개별 키를 해제 합니다.
 
-효과 멀티 터치 손가락 추적 Xamarin.Forms 요소에 첨부 때문에 적합 합니다.
+효과는 손가락 멀티 터치 추적 Xamarin.Forms 요소에 연결할 수 있으므로 적합 합니다.
 
 ## <a name="platform-touch-events"></a>플랫폼 터치 이벤트
 
-IOS, Android 및 유니버설 Windows 플랫폼 응용 프로그램을 검색 하는 낮은 수준의 API를 포함 하는 모든 활동을 터치 합니다. 이러한 플랫폼의 세 가지 기본 유형은 구분 모든 터치 이벤트:
+IOS, Android 및 유니버설 Windows 플랫폼 응용 프로그램을 검색 하는 하위 수준 API를 포함 하는 모든 활동을 터치 합니다. 이러한 플랫폼 모두 세 가지 기본 유형의 구분 터치 이벤트:
 
 - *누른*손가락 화면을 터치 하는 경우
-- *이동*는 화면을 터치 손가락을 움직이면,
-- *출시*화면에서 손가락 해제 될 때,
+- *이동*여 화면을 터치 손가락을 움직이면,
+- *출시*손가락을 화면에서 해제 될 때,
 
-여러 손가락 멀티 터치 환경에서 동시에 화면을 접할 수 있습니다. 다양 한 플랫폼 응용 프로그램을 여러 손가락 서로 구분 하는 데 사용할 수 있는 id (ID) 번호를 포함 합니다.
+다중 터치 환경에서 여러 손가락 동시에 화면을 터치 수 있습니다. 다양 한 플랫폼 응용 프로그램은 여러 손가락을 구분 하는 데 사용할 수 있는 id (ID) 번호를 포함 합니다.
 
-IOS의 경우에 `UIView` 세 가지 재정의 가능한 메서드를 정의 하는 클래스 `TouchesBegan`, `TouchesMoved`, 및 `TouchesEnded` 이러한 세 가지 기본 이벤트에 해당 합니다. 문서 [멀티 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md) 이러한 메서드를 사용 하는 방법을 설명 합니다. 그러나에서 파생 된 클래스를 재정의 하는 iOS 프로그램 필요 하지 않습니다 `UIView` 이러한 메서드를 사용 하도록 합니다. IOS `UIGestureRecognizer` 도 정의 같은 세 개의 메서드와 있습니다에서 파생 되는 클래스의 인스턴스를 연결할 수 `UIGestureRecognizer` 모든 `UIView` 개체입니다.
+IOS에는 `UIView` 세 개의 재정의 가능한 메서드를 정의 하는 클래스 `TouchesBegan`, `TouchesMoved`, 및 `TouchesEnded` 이러한 세 가지 기본 이벤트에 해당 합니다. 이 문서 [멀티 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md) 이러한 메서드를 사용 하는 방법에 설명 합니다. 그러나 iOS 프로그램 않아도에서 파생 된 클래스 재정의 `UIView` 이러한 메서드를 사용 하도록 합니다. IOS `UIGestureRecognizer` 도 정의 같은 세 가지 메서드 및 있습니다에서 파생 된 클래스의 인스턴스를 연결할 수 있습니다 `UIGestureRecognizer` 에 `UIView` 개체입니다.
 
-Android에서는 `View` 라는 재정의 가능한 메서드를 정의 하는 클래스 `OnTouchEvent` 모든 터치 작업을 처리할 수 있습니다. 터치 활동의 형식 열거형 멤버에 의해 정의 되 `Down`, `PointerDown`, `Move`, `Up`, 및 `PointerUp` 문서에 설명 된 대로 [멀티 터치 손가락 추적](~/android/app-fundamentals/touch/touch-tracking.md)합니다. Android `View` 라는 이벤트 정의 `Touch` 이벤트 처리기에 연결 될 수 있는 `View` 개체입니다.
+Android에서 합니다 `View` 클래스 라는 재정의 가능한 메서드를 정의 합니다. `OnTouchEvent` 모든 터치 작업을 처리 합니다. 터치 활동의 type을가 열거형 멤버를 정의한 `Down`, `PointerDown`를 `Move`, `Up`, 및 `PointerUp` 문서에 설명 된 대로 [멀티 터치 손가락 추적](~/android/app-fundamentals/touch/touch-tracking.md)합니다. Android `View` 라는 이벤트가 정의 `Touch` 이벤트 처리기에 연결할 수 있도록 `View` 개체입니다.
 
-에 플랫폼 UWP (유니버설 Windows)는 `UIElement` 명명 된 이벤트를 정의 하는 클래스 `PointerPressed`, `PointerMoved`, 및 `PointerReleased`합니다. 문서에 설명 되어 [MSDN에서 포인터 입력 처리 문서](/windows/uwp/input-and-devices/handle-pointer-input/) 및에 대 한 API 설명서는 [ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/) 클래스입니다.
+Windows 플랫폼 (UWP (유니버설), 합니다 `UIElement` 명명 된 이벤트를 정의 하는 클래스 `PointerPressed`, `PointerMoved`, 및 `PointerReleased`합니다. 문서에 설명 된 이러한 [MSDN에 대 한 포인터 입력 처리 문서](/windows/uwp/input-and-devices/handle-pointer-input/) 및에 대 한 API 설명서를 [ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/) 클래스.
 
-`Pointer` 유니버설 Windows 플랫폼에서 API 마우스, 터치 및 펜 입력을 통합 하기 위한 용도가 있습니다. 이런 이유로 `PointerMoved` 이벤트는 마우스 단추를 누르지 않은 경우에 요소에서 마우스를 이동할 때 호출 됩니다. `PointerRoutedEventArgs` 이러한 이벤트를 함께 제공 되는 개체에 라는 속성이 `Pointer` 라는 속성이 있는 `IsInContact` 마우스 단추를 누르면 나 손가락 화면 접촉 되어 있는 경우 나타냅니다.
+`Pointer` 유니버설 Windows 플랫폼에서 API 마우스, 터치, 펜 입력 통합 됩니다. 이런 이유로 `PointerMoved` 이벤트는 마우스 단추를 누르지 않은 경우에 요소에서 마우스를 이동할 때 호출 됩니다. `PointerRoutedEventArgs` 이러한 이벤트와 함께 제공 되는 개체에 라는 속성이 `Pointer` 라는 속성이 있는 `IsInContact` 마우스 단추가 눌러져 나 손가락 화면 접촉 되어 있는 경우 나타냅니다.
 
-UWP 라는 두 개 더 많은 이벤트를 정의 하는 또한 `PointerEntered` 및 `PointerExited`합니다. 이 경우 마우스 또는 손가락은 요소에서를 다른 위치로 이동 나타냅니다. 예를 들어 A와 B 라는 두 개의 인접 한 요소 두 요소에 대 한 포인터 이벤트 처리기를 설치 해야 합니다. A에서 손가락으로를 누르면는 `PointerPressed` 이벤트 호출 됩니다. 손가락 이동할 때 A 호출 `PointerMoved` 이벤트입니다. 손가락 A에서 B로 이동 하는 경우 A을 호출 하는 `PointerExited` 이벤트와 B를 호출는 `PointerEntered` 이벤트입니다. 다음 손가락 릴리스될 때마다 경우 B을 호출 하는 `PointerReleased` 이벤트입니다.
+UWP 라는 두 개의 자세한 이벤트를 정의 하는 또한 `PointerEntered` 고 `PointerExited`입니다. 이러한 손가락이 나 마우스 이동 하면 요소에서를 다른 것을 나타냅니다. 예를 들어 A와 B 라는 두 개의 인접 한 요소 두 요소 모두 포인터 이벤트에 대 한 처리기를 설치 했습니다. 손가락 a를 누르면는 `PointerPressed` 이벤트가 호출 됩니다. 호출 하는 손가락 이동 `PointerMoved` 이벤트입니다. 손가락 A에서 B로 이동 하는 경우는 호출을 `PointerExited` 이벤트와 B를 호출 하는 `PointerEntered` 이벤트입니다. B를 호출 하는 손가락이 출시 후에 `PointerReleased` 이벤트입니다.
 
-IOS 및 Android 플랫폼은 UWP 다릅니다: 보기에 대 한 호출을 처음 가져오는 `TouchesBegan` 또는 `OnTouchEvent` 손가락 터치 보기 손가락 다른 보기로 이동 하는 경우 모든 터치 활동 경우에도 해당 가져오려는 계속 합니다. 응용 프로그램 포인터를 캡처하는 경우 UWP 유사 하 게 동작 수:에서 `PointerEntered` 이벤트 처리기, 요소를 호출 하 여 `CapturePointer` 하 고 해당 손가락에서 모든 터치 작업을 가져옵니다.
+IOS 및 Android 플랫폼은 UWP 다릅니다: 뷰를 먼저 호출을 가져옵니다 `TouchesBegan` 또는 `OnTouchEvent` 손가락 터치 보기 손가락 다른 뷰로 이동 하는 경우에 모든 터치 작업을 자동으로 가져오려고 계속 합니다. UWP 응용 프로그램에 포인터를 캡처하는 경우 마찬가지로 동작할 수 있습니다:에 `PointerEntered` 이벤트 처리기를 호출 하 여 요소 `CapturePointer` 한 다음 해당 손가락에서 모든 터치 작업을 가져옵니다.
 
-UWP 접근 방식을 음악 키보드 예를 들어, 응용 프로그램의 일부 형식에 매우 유용 하 게 되려면를 증명 합니다. 각 키를 처리 하 여 그 키에 대 한 터치 이벤트 손가락이를 사용 하 여 다른 한 키에서 이동할 때 감지 된 `PointerEntered` 및 `PointerExited` 이벤트입니다.
+UWP 접근 방식은 일부 유형의 응용 프로그램, 예를 들어, 음악 키보드에 대 한 매우 유용 하 게 증명 합니다. 각 키에서 해당 키에 대 한 터치 이벤트를 처리 하 고 손가락을 사용 하 여 다른 하나의 키에서 슬라이드에 하는 경우를 검색할 수는 `PointerEntered` 고 `PointerExited` 이벤트입니다.
 
-따라서이 문서에 설명 된 터치 추적 효과 UWP 접근 방식을 구현 합니다.
+따라서가이 문서에 설명 된 터치 추적 효과 UWP 접근 방식을 구현 합니다.
 
 ## <a name="the-touch-tracking-effect-api"></a>터치 추적 효과 API
 
-[ **추적 효과 데모 터치** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 샘플 포함 클래스 (열거형) 하 고 하위 수준 터치 추적을 구현 합니다. 이러한 형식은 네임 스페이스에 속한 `TouchTracking` 라는 단어로 시작 하 고 `Touch`합니다. **TouchTrackingEffectDemos** .NET 표준 라이브러리 프로젝트에는 `TouchActionType` 터치 이벤트의 형식에 대 한 열거형:
+합니다 [ **추적 효과 데모 Touch** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 클래스 (및 열거형) 낮은 수준의 터치 추적을 구현 하는 샘플에 포함 되어 있습니다. 이러한 형식은 네임 스페이스에 속하는 `TouchTracking` 단어로 시작 하 고 `Touch`입니다. **TouchTrackingEffectDemos** .NET Standard 라이브러리 프로젝트에 포함 된 `TouchActionType` 터치 이벤트 유형에 대 한 열거형:
 
 ```csharp
 public enum TouchActionType
@@ -64,9 +64,9 @@ public enum TouchActionType
 }
 ```
 
-모든 플랫폼 터치 이벤트가 취소를 나타내는 이벤트를 포함 합니다.
+모든 플랫폼에는 터치 이벤트가 취소 되었는지 여부를 나타내는 이벤트가 포함 됩니다.
 
-`TouchEffect` .NET 표준 라이브러리의 클래스에서 파생 `RoutingEffect` 이라는 이벤트를 정의 하 고 `TouchAction` 라는 이름의 메서드 `OnTouchAction` 를 호출 하는 `TouchAction` 이벤트:
+합니다 `TouchEffect` .NET 표준 라이브러리의 클래스에서 파생 됩니다 `RoutingEffect` 이라는 이벤트를 정의 하 고 `TouchAction` 라는 이름의 메서드 `OnTouchAction` 를 호출 하는 `TouchAction` 이벤트:
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -111,19 +111,19 @@ public class TouchActionEventArgs : EventArgs
 }
 ```
 
-응용 프로그램이 사용할 수는 `Id` 개별 손가락을 추적 하기 위한 속성입니다. 공지는 `IsInContact` 속성입니다. 이 속성은 항상 `true` 에 대 한 `Pressed` 이벤트 및 `false` 에 대 한 `Released` 이벤트입니다. 또한 항상 이므로 `true` 에 대 한 `Moved` iOS 및 Android에는 이벤트입니다. `IsInContact` 속성 수 있습니다 `false` 에 대 한 `Moved` 누름 유니버설 Windows 플랫폼의 바탕 화면에서 프로그램 실행 되 고 단추 없이 마우스 포인터를 이동 하는 경우에 이벤트입니다.
+응용 프로그램이 사용할 수는 `Id` 각 손가락을 추적 하기 위한 속성입니다. 통지를 `IsInContact` 속성입니다. 이 속성은 항상 `true` 에 대 한 `Pressed` 이벤트와 `false` 에 대 한 `Released` 이벤트입니다. 것도 항상 `true` 에 대 한 `Moved` iOS 및 Android에는 이벤트입니다. 합니다 `IsInContact` 속성 수 있습니다 `false` 에 대 한 `Moved` 바탕 화면에서 프로그램이 실행 되 고 단추 없이 마우스 포인터를 이동 하는 경우 유니버설 Windows 플랫폼에서 이벤트 누를 합니다.
 
-사용할 수는 `TouchEffect` 솔루션의 표준.NET 라이브러리 프로젝트에서 파일을 포함 하 여 고 인스턴스를 추가 하 여 응용 프로그램에서 클래스는 `Effects` Xamarin.Forms 요소의 컬렉션입니다. 에 처리기를 연결 하는 `TouchAction` 이벤트 터치 이벤트를 가져올 수 있습니다.
+사용할 수는 `TouchEffect` 클래스 인스턴스를 추가 하 고 솔루션의.NET Standard 라이브러리 프로젝트에 파일을 포함 하 여 사용자 고유의 응용 프로그램에는 `Effects` Xamarin.Forms 요소의 컬렉션입니다. 처리기를 연결 합니다 `TouchAction` 이벤트 터치 이벤트를 가져오려고 합니다.
 
-사용 하도록 `TouchEffect` 사용자의 응용 프로그램에도 필요에 포함 된 플랫폼 구현 **TouchTrackingEffectDemos** 솔루션입니다.
+사용 하도록 `TouchEffect` 응용 프로그램에 필요에 포함 된 플랫폼 구현 **TouchTrackingEffectDemos** 솔루션입니다.
 
 ## <a name="the-touch-tracking-effect-implementations"></a>터치 추적 효과 구현
 
-IOS, Android 및 UWP 구현의 `TouchEffect` 가장 간단한 구현 (UWP)으로 시작 하 고 다른 조건들 보다 구조적으로 더 복잡 한 있기 때문에 iOS 구현으로 끝나는 아래에 설명 되어 있습니다.
+IOS, Android 및 UWP 구현의 `TouchEffect` 가장 간단한 구현 (UWP)로 시작 하 고 다른 구조적으로 더 복잡 한 이기 때문에 iOS 구현 끝나는 다음과 같습니다.
 
 ### <a name="the-uwp-implementation"></a>UWP 구현
 
-UWP 구현의 `TouchEffect` 는 가장 간단한 방법입니다. 클래스에서 파생 되는 일반적으로 `PlatformEffect` 두 어셈블리 특성을 포함 합니다.
+UWP 구현의 `TouchEffect` 간단 합니다. 클래스에서 파생 되는 일반적으로 `PlatformEffect` 두 어셈블리 특성을 포함 합니다.
 
 ```csharp
 [assembly: ResolutionGroupName("XamarinDocs")]
@@ -138,7 +138,7 @@ namespace TouchTracking.UWP
 }
 ```
 
-`OnAttached` 재정의 필드와 연결 합니다. 모든 포인터 이벤트 처리기로 몇 가지 정보를 저장 합니다.
+`OnAttached` 재정의 모든 포인터 이벤트 필드와 연결 처리기로 몇 가지 정보를 저장 합니다.
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -174,7 +174,7 @@ public class TouchEffect : PlatformEffect
 }    
 ```
 
-`OnPointerPressed` 처리기 효과 이벤트를 호출 하 여 호출 된 `onTouchAction` 필드에 `CommonHandler` 메서드:
+합니다 `OnPointerPressed` 처리기를 호출 하 여 결과 이벤트를 호출 하는 `onTouchAction` 필드에 `CommonHandler` 메서드:
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -204,7 +204,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` 값도 확인는 `Capture` .NET 표준 라이브러리 및 호출의 효과 클래스 속성에에서 `CapturePointer` 경우 `true`합니다.
+`OnPointerPressed` 값도 확인 합니다 `Capture` .NET Standard 라이브러리를 호출 효과 클래스의 속성에에서 `CapturePointer` 있으면 `true`합니다.
 
  다른 UWP 이벤트 처리기는 훨씬 더 간단 합니다.
 
@@ -222,9 +222,9 @@ public class TouchEffect : PlatformEffect
 
 ### <a name="the-android-implementation"></a>Android 구현
 
-구현 해야 하므로 Android 및 iOS 구현 하는 복잡 한 반드시는 `Exited` 및 `Entered` 손가락을 움직이면은 요소를 다른 이벤트입니다. 두 구현 모두 구조가 유사 합니다.
+Android 및 iOS 구현을 구현 해야 하므로 반드시 더 복잡 합니다 `Exited` 및 `Entered` 손가락을 움직이면 요소에서 간 이벤트입니다. 두 구현 모두 마찬가지로 구조화 되어 있습니다.
 
-Android `TouchEffect` 클래스 설치에 대 한 처리기는 `Touch` 이벤트:
+Android `TouchEffect` 클래스에 대 한 처리기를 설치 합니다 `Touch` 이벤트:
 
 ```csharp
 view = Control == null ? Container : Control;
@@ -232,7 +232,7 @@ view = Control == null ? Container : Control;
 view.Touch += OnTouch;
 ```
 
-클래스에 정적 사전 두 개를 정의합니다.
+클래스에는 두 개의 정적 사전을 정의합니다.
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -246,15 +246,15 @@ public class TouchEffect : PlatformEffect
     ...
 ```
 
-`viewDictionary` 될 때마다 새 항목을 가져옵니다는 `OnAttached` 재정의 호출 됩니다.
+`viewDictionary` 될 때마다 새 항목을 가져옵니다는 `OnAttached` 재정의 라고 합니다.
 
 ```csharp
 viewDictionary.Add(view, this);
 ```
 
-항목의 사전에서 제거 됩니다 `OnDetached`합니다. 모든 인스턴스에 `TouchEffect` 효과에 연결 된 특정 보기와 연결 됩니다. 정적 사전 있도록 `TouchEffect` 다른 보기와 그에 해당을 열거 하는 인스턴스 `TouchEffect` 인스턴스. 이것은 하나의 뷰에서 다른 이벤트를 전송 하는 데 허용 하는 데 필요 합니다.
+항목이 사전에서 제거 됩니다 `OnDetached`합니다. 모든 인스턴스의 `TouchEffect` 효과에 연결 된 특정 뷰를 사용 하 여 연결 합니다. 모든 정적 사전 허용 `TouchEffect` 인스턴스를 다른 모든 보기 및 해당 열거 `TouchEffect` 인스턴스. 이 다른 어떤 보기에서 이벤트를 전송 하는 데 필요 합니다.
 
-Android 터치 이벤트를 개별 손가락을 추적 하는 응용 프로그램을 허용 하는 ID 코드를 할당 합니다. `idToEffectDictionary` 연결 사용 하 여이 ID 코드는 `TouchEffect` 인스턴스. 이 사전에 항목이 추가 될 때는 `Touch` 손가락 누르기에 대 한 처리기가 호출 됩니다.
+Android 터치 이벤트를 각 손가락을 추적 하는 응용 프로그램을 허용 하는 ID 코드를 할당 합니다. 합니다 `idToEffectDictionary` 사용 하 여이 ID 코드는 연결을 `TouchEffect` 인스턴스. 이 사전에 항목이 추가 될 때를 `Touch` 손가락 press 처리기가 호출:
 
 ```csharp
 void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
@@ -273,7 +273,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
 ```
 
-항목이 제거 되 고 `idToEffectDictionary` 화면에서 손가락 해제 될 때입니다. `FireEvent` 메서드를 호출 하는 데 필요한 모든 정보를 단순히 누적 된 `OnTouchAction` 메서드:
+항목이 제거 되는 `idToEffectDictionary` 화면에서 손가락을 해제할 때. 합니다 `FireEvent` 메서드를 호출 하는 데 필요한 모든 정보를 간단히 누적 된 `OnTouchAction` 메서드:
 
 ```csharp
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
@@ -293,7 +293,7 @@ void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Poin
 }
 ```
 
-다른 모든 터치 유형에 두 가지 방법으로 처리 됩니다: 경우는 `Capture` 속성은 `true`, 터치 이벤트는 매우 단순한 번역에는 `TouchEffect` 정보입니다. 가져와서 더 복잡 한 경우 `Capture` 은 `false` 터치 이벤트 보기 간을 이동할 수 할 수 있으므로 합니다. 이의 책임은 `CheckForBoundaryHop` 이동 이벤트 중 호출 되는 메서드. 이 메서드 모두 정적 사전을 사용 합니다. 열거 하는 `viewDictionary` 손가락에 현재 연결을 사용 하 여 보기를 확인 하려면 `idToEffectDictionary` 를 현재 저장 `TouchEffect` 인스턴스 (및 따라서 다음 현재 보기) 특정 ID와 연결 된:
+다른 모든 터치 형식의 두 가지 방법으로 처리 됩니다: 경우 합니다 `Capture` 속성은 `true`, 터치 이벤트를 매우 간단한 변환이 `TouchEffect` 정보입니다. 가져와서 더 복잡 한 경우 `Capture` 는 `false` 터치 이벤트를 다른 보기로 이동할 할 수 있으므로 합니다. 책임입니다는 `CheckForBoundaryHop` 메서드를 이동 이벤트 동안 호출 됩니다. 이 메서드는 모두 정적 사전을 사용 합니다. 열거 하는 `viewDictionary` 손가락이 닿는 현재를 사용 하는 뷰를 확인 하려면 `idToEffectDictionary` 현재 스토어로 `TouchEffect` 인스턴스 (및 따라서 현재 보기) 특정 ID와 연결 된:
 
 ```csharp
 void CheckForBoundaryHop(int id, Point pointerLocation)
@@ -334,13 +334,13 @@ void CheckForBoundaryHop(int id, Point pointerLocation)
 }
 ```
 
-변경 된 경우는 `idToEffectionDictionary`, 잠재적으로 메서드 `FireEvent` 에 대 한 `Exited` 및 `Entered` 다른 어떤 보기에서 전송 하는 데 있습니다. 그러나 손가락 된 이동 없이 연결 된 보기에서 사용 되는 영역으로 `TouchEffect`, 또는 연결 된 영향을 주지 않고 보기로 영역입니다.
+변경 된 경우는 `idToEffectDictionary`, 잠재적으로 호출 `FireEvent` 에 대 한 `Exited` 및 `Entered` 다른 하나의 뷰에서 전송할 합니다. 그러나 손가락 수로 옮겨지면 연결 하지 않고 뷰를 차지 하는 영역 `TouchEffect`, 또는 연결 된 효과 사용 하 여 뷰에 해당 영역에서 합니다.
 
-공지는 `try` 및 `catch` 보기에 액세스 하는 경우 차단 합니다. 탐색 한 후 홈 페이지로 다시 이동 하는 페이지에는 `OnDetached` 메서드는 및에 항목이 남아는 `viewDictionary` Android에서는 삭제 하지만 합니다.
+표시 된 `try` 및 `catch` 보기에 액세스 하는 경우 차단 합니다. 탐색 하는 다음에 홈 페이지로 다시 이동 하는 페이지에는 `OnDetached` 메서드가 호출 되지 않습니다 및 항목 유지는 `viewDictionary` Android에서는 삭제 하지만 합니다.
 
 ### <a name="the-ios-implementation"></a>IOS 구현
 
-IOS 구현 점을 제외 하 고 Android 구현에 비슷합니다. iOS `TouchEffect` 클래스의 파생 항목 인스턴스화해야 `UIGestureRecognizer`합니다. 이 클래스는 명명 된 iOS 프로젝트에 클래스 `TouchRecognizer`합니다. 이 클래스를 저장 하는 두 개의 정적 사전을 유지 `TouchRecognizer` 인스턴스:
+IOS 구현은 제외 하 고 Android 구현에 비슷합니다. iOS `TouchEffect` 클래스의 파생 클래스를 인스턴스화해야 합니다. `UIGestureRecognizer`합니다. 이 iOS 프로젝트에서 클래스 `TouchRecognizer`합니다. 이 클래스를 저장 하는 두 개의 정적 사전을 유지 `TouchRecognizer` 인스턴스:
 
 ```csharp
 static Dictionary<UIView, TouchRecognizer> viewDictionary =
@@ -350,15 +350,15 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
     new Dictionary<long, TouchRecognizer>();
 ```
 
-이 구조의 많은 `TouchRecognizer` 클래스는 Android 비슷합니다 `TouchEffect` 클래스입니다.
+이 구조의 많이 `TouchRecognizer` 클래스는 Android 비슷합니다 `TouchEffect` 클래스입니다.
 
-## <a name="putting-the-touch-effect-to-work"></a>작업에 터치 효과 배치합니다.
+## <a name="putting-the-touch-effect-to-work"></a>터치 효과 작업에 투입
 
-[ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 프로그램에 일반적인 작업에 대 한 터치 추적 효과 테스트 하는 5 개의 페이지가 포함 되어 있습니다.
+합니다 [ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 프로그램에는 일반적인 작업에 대 한 터치 추적 결과 테스트 하는 5 개 페이지가 있습니다.
 
-**BoxView 끌어** 페이지 추가할 수 있습니다. `BoxView` 요소를 사용 하는 `AbsoluteLayout` 다음 화면으로 끕니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) 두 개를 인스턴스화하고 `Button` 추가 대 한 보기 `BoxView` 요소를 사용 하는 `AbsoluteLayout` 선택을 취소 하 고는 `AbsoluteLayout`합니다.
+합니다 **BoxView 끌어** 페이지에 추가할 수 있습니다 `BoxView` 요소를 사용 하는 `AbsoluteLayout` 다음 화면에서 이리저리 드래그 합니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) 두 개를 인스턴스화하고 `Button` 뷰 추가 대 한 `BoxView` 요소를 사용 하는 `AbsoluteLayout` 선택을 취소 하 고는 `AbsoluteLayout`합니다.
 
-메서드에 [코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs) 새을 추가 하는 `BoxView` 에 `AbsoluteLayout` 도 추가 `TouchEffect` 개체는 `BoxView` 효과에 이벤트 처리기를 연결 하 고:
+메서드는 [코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs) 더하는 새 `BoxView` 에 `AbsoluteLayout` 추가 `TouchEffect` 개체를 `BoxView` 효과 대 한 이벤트 처리기를 연결 하 고:
 
 ```csharp
 void AddBoxViewToLayout()
@@ -379,7 +379,7 @@ void AddBoxViewToLayout()
 }
 ```
 
-`TouchAction` 모두에 대 한 모든 터치 이벤트를 처리 하는 이벤트 처리기는 `BoxView` 요소 하지만 주의 해야 하는 데 필요한: 단일 두 손가락을 허용할 수 없습니다 `BoxView` 끌기만 프로그램을 구현 하 고 두 손가락 것 때문에 서로 충돌 합니다. 이러한 이유로 페이지 현재 추적 중인 각 손가락에 대 한 포함 된 클래스를 정의 합니다.
+합니다 `TouchAction` 모두에 대 한 모든 터치 이벤트를 처리 하는 이벤트 처리기는 `BoxView` 요소인 하지만 몇 가지 주의 해야: 단일 두 손가락으로 허용 될 수 없습니다 `BoxView` 프로그램만 끌어, 구현 및 두 손가락으로 하기 때문에 서로 방해 합니다. 따라서 페이지 현재 추적 중인 각 손가락 마다 포함 된 클래스를 정의 합니다.
 
 ```csharp
 class DragInfo
@@ -398,9 +398,9 @@ class DragInfo
 Dictionary<BoxView, DragInfo> dragDictionary = new Dictionary<BoxView, DragInfo>();
 ```
 
-`dragDictionary` 에 대 한 항목이 포함 된 모든 `BoxView` 현재 끌고 있습니다.
+합니다 `dragDictionary` 에 대 한 항목이 모든 `BoxView` 현재 끌고 있는 합니다.
 
-`Pressed` 터치 작업을이 사전에 항목 추가 및 `Released` 작업에 의해 제거 합니다. `Pressed` 논리를 사전에 항목이 이미 있는지 확인 해야 `BoxView`합니다. 이 경우는 `BoxView` 이미 끌고 및 새 이벤트는 두 번째 손가락으로 그에 동일한는 `BoxView`합니다. 에 대 한는 `Moved` 및 `Released` 동작, 이벤트 처리기 해야에 있는지 확인 사전 항목에 대 한 `BoxView` 하 고 터치 `Id` 속성을 끌어 `BoxView` 사전 항목의 일치:
+합니다 `Pressed` 터치가 사전에 항목 추가 및 `Released` 작업 제거 합니다. 합니다 `Pressed` 논리에 대 한 사전에 항목이 이미 인지 확인 해야 `BoxView`합니다. 그렇다면 합니다 `BoxView` 끄는 이미이 고 새 이벤트는 두 번째 손가락으로에 동일한 `BoxView`. 에 대 한 합니다 `Moved` 하 고 `Released` 작업, 이벤트 처리기를 확인 해야 합니다 사전에 대 한 항목이 있는 경우 `BoxView` 하 고 터치 `Id` 끈 속성 `BoxView` 사전 항목의 일치:
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -442,17 +442,17 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 }
 ```
 
-`Pressed` 논리 집합은 `Capture` 의 속성은 `TouchEffect` 개체를 `true`합니다. 동일한 이벤트 처리기를 해당 지문에 대 한 모든 후속 이벤트를 전달 하 것과 효과가 있습니다.
+`Pressed` 논리 집합을 `Capture` 의 속성을 `TouchEffect` 개체를 `true`. 이 손가락에 대 한 후속 이벤트를 모두 동일한 이벤트 처리기를 제공 하는 효과가 있습니다.
 
-`Moved` 논리 이동은 `BoxView` 변경 하 여는 `LayoutBounds` 연결 된 속성입니다. `Location` 기준으로 이벤트 인수의 속성은 항상는 `BoxView` 끌어 오는 경우는 `BoxView` 일정 한 속도로 끌고는 `Location` 연속 된 이벤트의 속성은 약 동일 합니다. 예를 들어, 손가락이는 `BoxView` 의 중심에는 `Pressed` 작업 저장소는 `PressPoint` 의 속성 (50, 50)는 후속 이벤트에 대 한 동일 하 게 유지 합니다. 경우는 `BoxView` 후속 상수 속도로 대각선 방향으로 끌면 `Location` 동안 속성이 `Moved` 동작의 값을 수 있습니다 (55, 55)는 쿼리에서 `Moved` 논리는 의가로및세로위치에5를추가합니다`BoxView`. 이렇게 하면 이동는 `BoxView` 되도록 중심을 관통 다시 손가락 바로 아래 합니다.
+합니다 `Moved` 논리 이동 합니다 `BoxView` 변경 하 여는 `LayoutBounds` 연결 된 속성입니다. `Location` 기준으로 이벤트 인수의 속성은 항상를 `BoxView` 끌고 있는 경우에 `BoxView` 일정 한 속도로 끌고를 `Location` 연속 이벤트의 속성은 동일 약 합니다. 예를 들어, 손가락이 키를 누를 경우는 `BoxView` 의 중심에는 `Pressed` 작업 저장소를 `PressPoint` 속성 (50, 50)는 후속 이벤트에 대 한 동일 하 게 유지 합니다. 경우는 `BoxView` 후속 상수 속도로 대각선 방향으로 끌 `Location` 속성 중 합니다 `Moved` 작업의 값일 수 있습니다 (55, 55) 경우는 `Moved` 합니다 의가로및세로위치에5를추가하는논리`BoxView`. 이동이 `BoxView` 중심 다시 되도록 손가락 바로 아래입니다.
 
 여러 이동할 수 있습니다 `BoxView` 동시에 다른 손가락을 사용 하 여 요소입니다.
 
-[![](touch-tracking-images/boxviewdragging-small.png "BoxView 끌어 페이지의 삼중 스크린샷")](touch-tracking-images/boxviewdragging-large.png#lightbox "BoxView 끌어 페이지의 삼중 스크린 샷")
+[![](touch-tracking-images/boxviewdragging-small.png "삼중 BoxView 끌어 페이지 스크린샷")](touch-tracking-images/boxviewdragging-large.png#lightbox "삼중 BoxView 끌어 페이지 스크린샷")
 
-### <a name="subclassing-the-view"></a>보기를 서브클래싱합니다.
+### <a name="subclassing-the-view"></a>뷰를 서브클래싱합니다.
 
-종종 자체 터치 이벤트를 처리 하는 Xamarin.Forms 요소에 대 한 쉽습니다. **Draggable BoxView 끌어** 페이지는 동일 하 게 작동는 **BoxView 끌어** 페이지 하지만 사용자 끌기 형식의 인스턴스인 요소는 [ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs) 파생 된 클래스 `BoxView`:
+종종 자체 터치 이벤트를 처리 하는 Xamarin.Forms 요소에 대 한 쉽습니다. **Draggable BoxView 끌어** 페이지에 동일 하 게 작동 합니다 **BoxView 끌어** 페이지 있지만 사용자 끌기의 인스턴스인 요소를 [ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs) 파생 된 클래스 `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -503,19 +503,19 @@ class DraggableBoxView : BoxView
 }
 ```
 
-생성자를 만들고 연결는 `TouchEffect`, 설정 및는 `Capture` 를 먼저 해당 개체를 인스턴스화할 때 속성입니다. 사전이 없습니다 클래스 자체에 저장 하기 때문에 반드시 `isBeingDragged`, `pressPoint`, 및 `touchId` 각 손가락와 관련 된 값입니다. `Moved` 처리 변경는 `TranslationX` 및 `TranslationY` 속성 논리가 작동 하도록 경우에의 부모는 `DraggableBoxView` 않습니다는 `AbsoluteLayout`합니다.
+생성자를 만들고 연결 합니다 `TouchEffect`, 설정 및는 `Capture` 해당 개체를 처음으로 인스턴스화될 때 속성입니다. 클래스 자체를 저장 하므로 사전이 없습니다 필수임 `isBeingDragged`, `pressPoint`, 및 `touchId` 각 손가락 연관 된 값입니다. `Moved` 처리 변경 합니다 `TranslationX` 및 `TranslationY` 논리 작동 속성 경우에의 부모를 `DraggableBoxView` 아닙니다는 `AbsoluteLayout`.
 
-### <a name="integrating-with-skiasharp"></a>SkiaSharp와 통합
+### <a name="integrating-with-skiasharp"></a>SkiaSharp 통합
 
-다음 두 데모 그래픽 필요 하 고 SkiaSharp이이 목적을 위해 사용 합니다. 에 대 한 자세한 내용은 경우가 [xamarin.forms에서를 사용 하 여 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) 이러한 예제를 살펴보려면 전에 합니다. 처음 두 문서 ("SkiaSharp 그리기 기본 사항" 및 "SkiaSharp 줄 및 경로")는 여기에 필요한 모든 다룹니다.
+다음 두 데모 그래픽 하며 SkiaSharp이이 목적을 위해 사용 합니다. 에 대해 자세히 알아보려면는 것이 좋습니다 [Xamarin.Forms에서 SkiaSharp 사용 하 여](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) 전에 이러한 예제를 연구 합니다. 처음 두 문서 ("SkiaSharp 그리기 기본 사항" 및 "SkiaSharp 선 및 경로")를 가린다는 여기 해야 합니다.
 
-**타원 그리기** 페이지 화면에서 손가락을 살짝 밀어 타원을 그릴 수 있습니다. 손가락을 이동 하는 방법을 따라, 아래 오른쪽에 왼쪽 위 또는 반대 모퉁이에 다른 모퉁이에서 타원을 그릴 수 있습니다. 타원 임의의 색상 및 불투명도 사용 하 여 그린 합니다.
+합니다 **타원 그리기** 페이지를 사용 하면 화면에서 손가락을 밀어서 타원을 그릴 수 있습니다. 손가락을 이동 하는 방법에 따라, 반대쪽 모퉁이 있는 모든 다른 모서리 또는 왼쪽-오른쪽, 아래에서에서 타원을 그릴 수 있습니다. 타원 임의 색상과 불투명도 사용 하 여 그려집니다.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "타원 그리기 페이지의 삼중 스크린샷")](touch-tracking-images/ellipsedrawing-large.png#lightbox "타원 그리기 페이지의 삼중 스크린샷")
+[![](touch-tracking-images/ellipsedrawing-small.png "타원 그리기 페이지 스크린샷 삼중")](touch-tracking-images/ellipsedrawing-large.png#lightbox "삼중 타원 그리기 페이지 스크린샷")
 
-타원 중 하나 다음 터치 할 경우 다른 위치로 끌어 놓을 수 있습니다. 이렇게 하려면으로 "적중 테스트," 특정 시점 그래픽 개체에 대 한 검색 해야 합니다. SkiaSharp 줄임표 되지 않으므로 Xamarin.Forms 요소를 직접 실행할 수 없는 `TouchEffect` 처리 합니다. `TouchEffect` 전체에 적용 해야 `SKCanvasView` 개체입니다.
+줄임표 중 다음 터치 할 경우 다른 위치로 끌 수 있습니다. "적중 테스트," 특정 지점에서 그래픽 개체에 대 한 검색을 포함 하는 기술이 필요 합니다. SkiaSharp 줄임표 없는 Xamarin.Forms 요소 자체를 수행할 수 없습니다 있도록 `TouchEffect` 처리 합니다. 합니다 `TouchEffect` 전체에 적용 해야 `SKCanvasView` 개체입니다.
 
-[EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) 파일 인스턴스화하는 `SKCanvasView` 단일 셀에서 `Grid`합니다. `TouchEffect` 에 있는 개체를 연결 `Grid`:
+합니다 [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml) 파일은 합니다 `SKCanvasView` 단일 셀에서 `Grid`합니다. 합니다 `TouchEffect` 개체는 연결 된 `Grid`:
 
 ```xaml
 <Grid x:Name="canvasViewGrid"
@@ -531,9 +531,9 @@ class DraggableBoxView : BoxView
 </Grid>
 ```
 
-Android 및 유니버설 Windows 플랫폼에는 `TouchEffect` 에 직접 연결할 수는 `SKCanvasView`, iOS 작동 하지 않는 경우에 합니다. 에 `Capture` 속성이 `true`합니다.
+Android 및 유니버설 Windows 플랫폼에는 `TouchEffect` 에 직접 연결할 수 있습니다는 `SKCanvasView`, 있지만 작동 하지 않는 경우 iOS에서 합니다. 다음에 유의 합니다 `Capture` 속성이 `true`.
 
-형식의 개체로 나타내는 SkiaSharp 렌더링 하는 각 타원 `EllipseDrawingFigure`:
+SkiaSharp 렌더링 하는 각 타원은 형식의 개체를 표현 `EllipseDrawingFigure`:
 
 ```csharp
 class EllipseDrawingFigure
@@ -585,9 +585,9 @@ class EllipseDrawingFigure
 }
 ```
 
-`StartPoint` 및 `EndPoint` 프로그램 터치식 입력; 처리할 때 사용 되는 속성의 `Rectangle` 속성 타원 그리기에 사용 됩니다. `LastFingerLocation` 타원을 끄는 경우에 발생 되는 속성 및 `IsInEllipse` 적중 테스트 메서드를 지원 합니다. 메서드가 반환 `true` 포인터가 타원 안에 있는 경우.
+`StartPoint` 및 `EndPoint` 프로그램은 터치 입력을 처리할 때 사용 되는 속성을 `Rectangle` 속성 타원 그리기에 사용 됩니다. `LastFingerLocation` 타원을 끌어 놓으면 속성 고려해 야 하며 `IsInEllipse` 적중 테스트 메서드를 지원 합니다. 메서드는 반환 `true` ellipse 안쪽 지점이 있으면 됩니다.
 
-[코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) 세 컬렉션을 유지 합니다.
+합니다 [코드 숨김 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs) 세 컬렉션을 유지 합니다.
 
 ```csharp
 Dictionary<long, EllipseDrawingFigure> inProgressFigures = new Dictionary<long, EllipseDrawingFigure>();
@@ -595,7 +595,7 @@ List<EllipseDrawingFigure> completedFigures = new List<EllipseDrawingFigure>();
 Dictionary<long, EllipseDrawingFigure> draggingFigures = new Dictionary<long, EllipseDrawingFigure>();
 ```
 
-`draggingFigure` 사전의 하위 집합에 포함 되어는 `completedFigures` 컬렉션입니다. SkiaSharp `PaintSurface` 렌더링 개체에서 이러한 이벤트 처리기는 `completedFigures` 및 `inProgressFigures` 컬렉션:
+합니다 `draggingFigure` 의 하위 집합을 포함 하는 사전은 `completedFigures` 컬렉션입니다. SkiaSharp `PaintSurface` 이벤트 처리기에서 이러한 개체를 렌더링 합니다 `completedFigures` 고 `inProgressFigures` 컬렉션:
 
 ```csharp
 SKPaint paint = new SKPaint
@@ -621,7 +621,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-터치 처리의 가장 까다로운 부분은 `Pressed` 처리 합니다. 여기에 적중 테스트를 수행 하지만 코드에서 사용자의 손가락 아래에서 줄임표를 발견 하면 해당 타원만 놓을 수 있습니다 다른 손가락으로 끌 되어 있지 않는 경우. 가 아래 없는 타원 이면 코드 새 타원 그리기의 프로세스를 시작 합니다.
+터치 처리의 가장 까다로운 부분은 `Pressed` 처리 합니다. 이 경우 적중 테스트를 수행 하지만 코드에서 사용자의 손가락 아래 타원을 발견 하면 해당 타원만 끌어 놓을 수 있습니다 다른 손가락으로 현재 끌고 있는 경우. 사용자의 손가락 아래 없습니다 타원의 경우 코드를 새 타원 그리기 프로세스를 시작 합니다.
 
 ```csharp
 case TouchActionType.Pressed:
@@ -681,11 +681,11 @@ case TouchActionType.Pressed:
     break;
 ```
 
-다른 SkiaSharp 예로 **손가락 페인트** 페이지. 두 개에서 선 색과 선 너비를 선택할 수 있습니다 `Picker` 뷰를 다음 하나 이상의 손가락으로 그립니다.
+다른 SkiaSharp 예제는 **손가락으로 그리기** 페이지입니다. 두 스트로크 색과 스트로크 너비를 선택할 수 있습니다 `Picker` 뷰 및 다음 하나 이상의 손가락으로 그립니다.
 
-[![](touch-tracking-images/fingerpaint-small.png "손가락 페인트 페이지의 삼중 스크린샷")](touch-tracking-images/fingerpaint-large.png#lightbox "손가락 페인트 페이지의 삼중 스크린샷")
+[![](touch-tracking-images/fingerpaint-small.png "손가락으로 그리기 페이지 스크린샷 삼중")](touch-tracking-images/fingerpaint-large.png#lightbox "삼중 손가락으로 그리기 페이지 스크린샷")
 
-이 예제에는 별도 클래스를 화면에 그릴 각 줄을 나타내는 데 필요 합니다.
+이 예제에는 화면에 그릴 각 줄을 나타내는 별도 클래스를 필요 합니다.
 
 ```csharp
 class FingerPaintPolyline
@@ -703,14 +703,14 @@ class FingerPaintPolyline
 }
 ```
 
-`SKPath` 개체 각 줄을 렌더링 하는 데 사용 됩니다. [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) 파일 이러한 개체, 그리고 현재 해당 폴리라인에 대 한 및 완료 된 폴리라인 관리를 위한 두 컬렉션을 유지 합니다.
+`SKPath` 개체는 각 줄을 렌더링에 사용 됩니다. 합니다 [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs) 파일에 이러한 개체, 그리고 현재 해당 폴리라인에 하나 및 완료 된 폴리라인으로 대 한 다른 두 컬렉션은 유지 관리 합니다.
 
 ```csharp
 Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-`Pressed` 처리에서는 새 `FingerPaintPolyline`, 호출 `MoveTo` 초기 지점을 저장 하는 경로 개체에 해당 개체를 추가 하 고는 `inProgressPolylines` 사전입니다. `Moved` 호출 처리 `LineTo` 새 손가락 위치와 경로 개체에 및 `Released` 처리 전송에서 완료 된 폴리라인 `inProgressPolylines` 를 `completedPolylines`합니다. 다시 한 번 그리기 코드 실제 SkiaSharp는 비교적 간단 합니다.
+`Pressed` 처리를 만듭니다 `FingerPaintPolyline`를 호출 `MoveTo` 초기 지점에 저장 하는 경로 개체에 해당 개체를 추가 하 고는 `inProgressPolylines` 사전입니다. `Moved` 호출을 처리 `LineTo` 새 손가락 위치를 사용 하 여 경로 개체에 및 `Released` 처리 전송에서 완료 된 다중선 `inProgressPolylines` 에 `completedPolylines`입니다. 이번에 실제 SkiaSharp 그리기 코드는 비교적 간단 합니다.
 
 ```csharp
 SKPaint paint = new SKPaint
@@ -741,23 +741,23 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-### <a name="tracking-view-to-view-touch"></a>보기-터치를 추적합니다.
+### <a name="tracking-view-to-view-touch"></a>뷰를 터치 추적
 
-모든 이전 예제를 설정는 `Capture` 속성의는 `TouchEffect` 를 `true`때는 `TouchEffect` 만들어진 경우 또는 `Pressed` 이벤트가 발생 합니다. 이렇게 하면 동일한 요소 뷰를 처음 누를 손가락와 관련 된 모든 이벤트를 받습니다. 마지막 예제에서는 *하지* 설정 `Capture` 를 `true`합니다. 손가락을 움직이면 화면 접촉은 요소 간에 서로 다른 동작을 유발 합니다. 손가락에서 이동 하는 요소와 이벤트를 수신는 `Type` 속성이로 설정 `TouchActionType.Exited` 두 번째 요소와 이벤트를 수신 하 고는 `Type` 설정인 `TouchActionType.Entered`합니다.
+앞의 모든 예제 설정를 `Capture` 의 속성을 `TouchEffect` 를 `true`때를 `TouchEffect` 만든 때나는 `Pressed` 이벤트가 발생 한 합니다. 동일한 요소 먼저 뷰를 누르는 손가락을 사용 하 여 연결 된 모든 이벤트를 수신 하는 것이 이렇게 합니다. 최종 샘플 *되지* 설정 `Capture` 하려면 `true`합니다. 그러면 손가락을 움직이면 화면 닿는 요소에서 간 다르게 동작 합니다. 사용 하 여 이벤트를 수신 하는 요소에서 손가락 이동 하는 `Type` 속성이로 설정 `TouchActionType.Exited` 사용 하 여 이벤트를 수신 하는 두 번째 요소와는 `Type` 설정 `TouchActionType.Entered`합니다.
 
-이러한 유형의 터치 처리 음악 키보드에 대 한 매우 유용합니다. 키를 누를 때, 뿐만 아니라 다른 키가 두 개에서 손가락 슬라이드 때 검색할 수 있어야 합니다.
+이 유형의 터치 처리 음악 키보드에 대 한 매우 유용합니다. 키를 누를 때에 다른 하나의 키에서 손가락을 움직일 슬라이드 하는 경우를 검색할 수 있어야 합니다.
 
-**자동 키보드** 페이지는 작은 정의 [ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) 및 [ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs) 에서 파생 된 클래스 [ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs)에서 파생 되는 `BoxView`합니다.
+**자동 키보드** 페이지에서는 소규모 [ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs) 하 고 [ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs) 에서 파생 된 클래스 [ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs)에서 파생 되는 `BoxView`합니다.
 
-`Key` 클래스는 실제 음악 프로그램에서 사용할 수 있게 합니다. 라는 공용 속성을 정의 `IsPressed` 및 `KeyNumber`, MIDI 표준에 의해 설정 된 키 코드로 설정 하기 위한 용도가입니다. `Key` 클래스에는 또한 라는 이벤트 정의 `StatusChanged`이며 때 호출 되는 `IsPressed` 속성 변경 합니다.
+`Key` 클래스는 실제 음악 프로그램에서 사용할 수 있습니다. 라는 공용 속성 정의 `IsPressed` 및 `KeyNumber`, MIDI 표준에 따라 설정 키 코드에 설정 되었습니다. `Key` 클래스도 이라는 이벤트를 정의 `StatusChanged`를 호출할 때를 `IsPressed` 속성 변경 합니다.
 
-여러 손가락 각 키에서 허용 됩니다. 이러한 이유로 `Key` 클래스를 유지 관리는 `List` 현재 해당 키를 변경 하는 모든 손가락 터치 ID 번호.
+여러 손가락 각 키에서 허용 됩니다. 이러한 이유로 합니다 `Key` 클래스를 유지 관리를 `List` 현재 해당 키를 변경 하는 모든 손가락 터치 ID 번호:
 
 ```csharp
 List<long> ids = new List<long>();
 ```
 
-`TouchAction` 에 ID를 추가 하는 이벤트 처리기는 `ids` 목록 모두에 대 한는 `Pressed` 이벤트 유형 및 `Entered` 형식이 아니라 경우에만 `IsInContact` 속성은 `true` 에 대 한는 `Entered` 이벤트입니다. ID에서 제거 되 고 `List` 에 대 한는 `Released` 또는 `Exited` 이벤트:
+`TouchAction` 에 ID를 추가 하는 이벤트 처리기는 `ids` 둘 다에 대 한 목록을 `Pressed` 이벤트 유형 및 `Entered` 형식이 아니라 경우에만 `IsInContact` 속성은 `true` 에 대 한는 `Entered` 이벤트. ID에서 제거 되는 `List` 에 대 한는 `Released` 또는 `Exited` 이벤트:
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -787,21 +787,21 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 ```
 
-`AddToList` 및 `RemoveFromList` 메서드는 모두 확인 하는 경우는 `List` 비어 있음과 비어 간에 변경 된 경우 호출는 `StatusChanged` 이벤트입니다.
+`AddToList` 하 고 `RemoveFromList` 메서드는 모두 확인 하는 경우를 `List` 비어 있음과 비어 간에 변경 된를 호출 하 고는 `StatusChanged` 이벤트.
 
-다양 한 `WhiteKey` 및 `BlackKey` 페이지의 요소 정렬 되는 [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), 전화 가로 모드로 유지 되는 경우 최상의 표시:
+다양 한 `WhiteKey` 하 고 `BlackKey` 페이지에서 요소 정렬 [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml), 전화를 가로 모드로 유지 되는 경우 좋은:
 
-[![](touch-tracking-images/silentkeyboard-small.png "자동 키보드 페이지의 삼중 스크린샷")](touch-tracking-images/silentkeyboard-large.png#lightbox "자동 키보드 페이지의 삼중 스크린 샷")
+[![](touch-tracking-images/silentkeyboard-small.png "자동 키보드 페이지 스크린샷 삼중")](touch-tracking-images/silentkeyboard-large.png#lightbox "삼중 자동 키보드 페이지 스크린샷")
 
-키에서 손가락을 정리 하는 경우 표시 됩니다 컬러로 약간 변경 하 여 다른 한 키에서 터치 이벤트 전송 됩니다.
+키에서 손가락을 스윕, 보면 색에서 약간 변경 하 여 다른 하나의 키에서 터치 이벤트 전송 됩니다.
 
 ## <a name="summary"></a>요약
 
-이 문서 작성 및 하위 수준 멀티 터치 처리를 구현 하는 효과 사용 하는 방법과 효과의 이벤트를 호출 하는 방법을 명시 되어 있습니다.
+이 문서를 적용에서 하는 이벤트를 호출 하는 방법 및 쓰기 하위 수준 멀티 터치 처리를 구현 하는 효과 사용 하는 방법을 살펴보았습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [IOS에서 멀티 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [Android에서 추적 멀티 터치 손가락](~/android/app-fundamentals/touch/touch-tracking.md)
+- [IOS에서 다중 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md)
+- [Android에서 추적 하는 멀티 터치 손가락](~/android/app-fundamentals/touch/touch-tracking.md)
 - [터치 추적 효과 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)

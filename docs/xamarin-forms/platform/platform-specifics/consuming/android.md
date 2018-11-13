@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108979"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527276"
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼별
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 결과에서 데이터를 통해 빠른 스크롤 하는 한 [ `ListView` ](xref:Xamarin.Forms.ListView) 스크롤의 크기를 변경 하는 사용할 수 있습니다.
 
-[![](android-images/fastscroll.png "ListView FastScroll 플랫폼별")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll 플랫폼별")](android-images/fastscroll-large.png#lightbox "ListView FastScroll 플랫폼별")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 결과 소프트 키보드 입력 영역 입력된 컨트롤에 포커스가 있을 때 운영 모드를 설정할 수 있습니다는.
 
-[![](android-images/pan-resize.png "운영 모드 플랫폼별 소프트 키보드")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "운영 모드 플랫폼별 소프트 키보드")](android-images/pan-resize-large.png#lightbox "운영 모드 플랫폼별 소프트 키보드")
 
 <a name="disable_lifecycle_events" />
 

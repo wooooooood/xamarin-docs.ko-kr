@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "50675330"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527172"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.iOS에 대 한 문제 해결 팁 
 
@@ -187,7 +187,7 @@ Stacktrace:
 
 ## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>JIT 컴파일 메서드 (관리 되는--관리 되는 래퍼) Foo[]:System.Collections.Generic.ICollection'1.get_Count ()를 시도: System.ExecutionEngineException
 
-접미사 또는 클래스 라이브러리 ienumerable<>, ICollection <> IList <> 등의 제네릭 컬렉션을 배열에서 메서드를 호출 되는 것을 나타냅니다. 대 안으로 AOT 컴파일러를 직접 메서드를 호출 하 여 이러한 메서드를 포함 하도록 명시적으로 강제 수 있습니다 및 하는지 확인 하 여이 코드는 예외를 트리거한 호출 전에 실행 됩니다. 이 경우에 작성할 수 있습니다.
+접미사 또는 클래스 라이브러리 ienumerable<>, ICollection <> IList <> 등의 제네릭 컬렉션을 배열에서 메서드를 호출 되는 것을 나타냅니다. 대 안으로 AOT 컴파일러를 직접 메서드를 호출 하 여 이러한 메서드를 포함 하도록 명시적으로 할 수 있습니다 및 하는지 확인 하 여이 코드는 예외를 트리거한 호출 전에 실행 됩니다. 이 경우에 작성할 수 있습니다.
 
 ```csharp
 Foo [] array = null;
@@ -354,11 +354,11 @@ actionSheet.Clicked += delegate (sender, args){
 
 ## <a name="project-always-runs-in-the-ipad-simulator"></a>프로젝트 항상 실행 iPad 시뮬레이터
 
-IPhone SDK 4.0 설치 관리자를 2 Sdk-iPad 전용 앱을 빌드하기 위한 3.2 SDK와 빌드 iPhone 및 유니버설 앱에 사용 되는 4.0 SDK를 설치 합니다. 또한 iPad만 시뮬레이션을 3.2 시뮬레이터를 및 iPhone 또는 iPhone 4 시뮬레이트하는 4.0 시뮬레이터를 설치 합니다. Sdk 및 시뮬레이터에 대 한 모든 이전 제거 됩니다.
+IPhone SDK 4.0 설치 관리자는 2 Sdk-iPad 전용 앱을 빌드하기 위한 3.2 SDK와 iPhone 및 유니버설 앱을 빌드하는 데 4.0 SDK를 설치 합니다. 또한 iPad만 시뮬레이션을 3.2 시뮬레이터를 및 iPhone 또는 iPhone 4 시뮬레이트하는 4.0 시뮬레이터를 설치 합니다. Sdk 및 시뮬레이터에 대 한 모든 이전 제거 됩니다.
 
 IPhone 프로젝트 빌드 옵션 Mac 용 visual Studio는 앱 빌드에 사용 되는 SDK 버전에 대 한 설정의 포함 합니다. 이 설정에서 찾을 수 있습니다 **프로젝트 옵션에는 빌드-> iPhone 빌드->** 합니다.
 
-Mac 용 Visual Studio에서 새 프로젝트 가장 오래 된 설치 된 SDK를 사용 하 여 해당 기본 SDK 설정이로 하 고 Mac 용 Visual Studio는 가장 가까운 응용 프로그램을 찾을 수 있습니다 사용 하 여 지정 된 SDK 존재 하지 않는 경우. 이 프로젝트는 항상 최신 SDK requre 있도록 하실 수 있습니다. 그러나 현재 그러면 되 고 있는 3.2 SDK 사용-그러면 사용 중인 iPad 시뮬레이터입니다.
+Mac 용 Visual Studio에서 새 프로젝트 가장 오래 된 설치 된 SDK를 사용 하 여 해당 기본 SDK 설정이로 하 고 Mac 용 Visual Studio는 가장 가까운 응용 프로그램을 찾을 수 있습니다 사용 하 여 지정 된 SDK 존재 하지 않는 경우. 이 프로젝트는 항상 최신 SDK를 요구 하지 않도록 작업을 수행 했습니다. 그러나 현재 그러면 되 고 있는 3.2 SDK 사용-그러면 사용 중인 iPad 시뮬레이터입니다.
 
 4.0 SDK를 사용 하 여이 문제를 해결로 이동 **프로젝트 옵션에는 빌드-> iPhone 빌드->**> SDK 값 드롭다운 상자를 사용 하 여 "4.0"을 변경 합니다. 각 구성 및 액세스 패널의 맨 위에 있는 드롭다운을 사용 하 여 플랫폼 조합에 대 한이 작업을 수행 해야 합니다.
 

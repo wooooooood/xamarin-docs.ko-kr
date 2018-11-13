@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118879"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527340"
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -96,7 +96,7 @@ Xamarin.Forms 앱 공유 코드의 방향 변경 내용을 알리는 대 한 기
 > [!NOTE]
 > 공유 코드에서 방향 변경 알림 받기에 대 한 기존에 사용 가능한 NuGet 패키지가 있습니다. 참조를 [GitHub 리포지토리에서](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) 자세한 내용은 합니다.
 
-재정의 가능 또는 [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) 메서드를 `Page`, 삽입 모든 레이아웃 논리를 변경 합니다. 합니다 `OnSizeAllocated` 메서드는 때마다는 `Page` 장치 회전 때도 항상 발생 하는 새 크기를 할당 합니다. 기본 구현의 `OnSizeAllocated` 는 재정의에서 기본 구현을 호출 해야 하므로 중요 한 레이아웃 기능을 수행 합니다.
+재정의 가능 또는 [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) 메서드를 `Page`, 삽입 모든 레이아웃 논리를 변경 합니다. 합니다 `OnSizeAllocated` 메서드는 때마다는 `Page` 장치 회전 될 때마다 발생 하는 새 크기를 할당 합니다. 기본 구현의 `OnSizeAllocated` 는 재정의에서 기본 구현을 호출 해야 하므로 중요 한 레이아웃 기능을 수행 합니다.
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

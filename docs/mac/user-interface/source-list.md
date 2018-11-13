@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122051"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526412"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Xamarin.Mac의 원본 목록
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에서 원본 목록 사용 하 여 작업을 설명 합니다. 만들기, Xcode 및 Interface Builder에서 원본 목록을 유지 관리 및 C# 코드에서 상호 작용을 설명 합니다._
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일 하 게 액세스할 수 있습니다는 원본에서 작업 하는 개발자를 제공 하는 목록을 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 프로그램 원본 목록을 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET, 및는 동일한 소스 작업 하는 개발자를 제공 하는 나열 *Objective-c* 및 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 프로그램 원본 목록을 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 원본 목록에는 원인을 찾기 또는 iTunes에서 세로 막대와 같은 작업을 표시 하는 데 사용 되는 개요 보기의 특별 한 형식입니다.
 

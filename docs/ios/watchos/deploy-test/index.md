@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120959"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528600"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>배포 및 Xamarin 사용 하 여 watchOS 앱 테스트
 
@@ -50,7 +50,7 @@ Watch 테스트 환경에 배포 하거나 앱 스토어에 업로드,이 페이
 
 ### <a name="explicit-app-ids"></a>명시적 앱 Id
 
-만들기는 **앱 ID** 각 각 프로젝트의 번들 ID (iOS 개발자 센터에서 다음과 같이 표시 됩니다)에 대 한 합니다.
+만들기는 **앱 ID** 각 프로젝트의 번들 ID (iOS 개발자 센터에서 다음과 같이 표시 됩니다)에 대 한 합니다.
 
 ![IOS 개발자 센터의에서 번들 Id](images/appids-specific-sml.png)
 
@@ -88,7 +88,7 @@ IOS 앱 및 Watch 확장 간에 데이터를 공유 하는 앱 그룹을 사용�
 
 참조 될 수는 그룹을 만든 후에 **앱 ID** 구성 합니다. IOS 앱 및 Watch 확장을 포함 해야 **앱 Id**합니다.
 
-![사용 가능한 consifurations](images/appgroups-sml.png)
+![사용 가능한 구성](images/appgroups-sml.png)
 
 수행할 **되지** Apple Watch 앱 ID에 앱 그룹을 사용 하도록 설정 Watch 자체에서 사용 하도록 설정 하는 데 필요한 것입니다.
 

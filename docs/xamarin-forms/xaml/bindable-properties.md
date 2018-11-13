@@ -4,15 +4,15 @@ description: 이 문서에서는 바인딩 가능한 속성에 대해 소개 하
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 241579d51d1f0af84655f439bad3adb879404e91
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8dc53c37894af70d5183fe5c44b018fdf25af616
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995390"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563851"
 ---
 # <a name="bindable-properties"></a>바인딩 가능한 속성
 
@@ -54,7 +54,7 @@ Xamarin.Forms 바인딩 가능한 속성의 예로 [ `Label.Text` ](xref:Xamarin
 - 이름을 합니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty)합니다.
 - 속성의 형식입니다.
 - 소유 하는 개체의 형식입니다.
-- 속성에 대 한 기본 값입니다. 이 속성을 설정 하지 않으면 속성의 형식에 대 한 기본 값에서 다를 수 있습니다 때 항상 특정 기본 값을 반환 하는지 확인 합니다. 기본 값은 복원 될 때를 [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) 바인딩 가능한 속성에서 메서드를 호출 합니다.
+- 속성의 기본값입니다. 이 속성을 설정 하지 않으면 속성의 형식에 대 한 기본 값에서 다를 수 있습니다 때 항상 특정 기본 값을 반환 하는지 확인 합니다. 기본 값은 복원 될 때를 [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) 바인딩 가능한 속성에서 메서드를 호출 합니다.
 
 다음 코드에 식별자와 4 개의 필수 매개 변수의 값을 사용 하 여 바인딩 가능한 속성의 예를 보여 줍니다.
 

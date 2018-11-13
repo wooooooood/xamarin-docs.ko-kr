@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116178"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526925"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
@@ -44,9 +44,9 @@ Firebase 작업 발송자는 일정 백그라운드 작업을 간소화 하기 �
 * `Firebase.JobDispatcher.RetryStrategy` 제대로 실행 하는 작업이 실패할 경우 수행 하는 방법에 대 한 정보를 포함 합니다. 재시도 전략 작업을 다시 실행 하기 전에 대기할 시간을 지정 합니다. 
 * `Firebase.JobDispatcher.Constraint` 은 조건을 충족 해야 하는 작업을 실행 하기 전에 unmetered 네트워크 장치 등을 설명 하는 선택적 값 또는 청구 합니다.
 * `Firebase.JobDispatcher.Job` 는 이전 Api에는 단위 작업으로 예약할 수 있는를 통합 하는 API는 `JobDispatcher`합니다. 합니다 `Job.Builder` 클래스를 인스턴스화하는 `Job`합니다.
-* `Firebasee.JobDispatcher.JobDispatcher` 이전 세 가지 Api를 사용 하 여 운영 체제를 사용 하 여 작업을 예약 하는 데 필요한 경우 작업을 취소 하는 방법을 제공 합니다.
+* `Firebase.JobDispatcher.JobDispatcher` 이전 세 가지 Api를 사용 하 여 운영 체제를 사용 하 여 작업을 예약 하는 데 필요한 경우 작업을 취소 하는 방법을 제공 합니다.
 
-Firebase 작업 발송자를 사용 하 여 작업을 예약 하려면 Xamarin.Android 응용 프로그램을 확장 하는 형식 코드를 캡슐화 해야 합니다는 `JobService` 클래스입니다. `JobService` 에 수명 주기는 작업의 수명 동안 호출할 수 있는:
+Firebase 작업 발송자를 사용 하 여 작업을 예약 하려면 Xamarin.Android 응용 프로그램을 확장 하는 형식 코드를 캡슐화 해야 합니다는 `JobService` 클래스입니다. `JobService` 작업의 수명 동안 호출할 수 있는 세 가지 수명 주기 방법이 있습니다.
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; 이 방법은 작업의 발생 위치 및 구현 되어야 합니다. 주 스레드에서 실행 됩니다. 이 메서드는 반환 `true` 없을 경우, 남은 작업 또는 `false` 작업을 완료 한 경우. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; 이 작업은 몇 가지 이유로 중지 되 면 호출 됩니다. 반환할 `true` 나중에 작업 다시 예약 해야 하는 경우.
@@ -177,7 +177,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>작업에 전달 jarameters
+#### <a name="passing-parameters-to-a-job"></a>작업에 매개 변수 전달
 
 매개 변수를 만들어 작업에 전달 되는 `Bundle` 와 함께 전달 되는 `Job.Builder.SetExtras` 메서드:
 
@@ -252,7 +252,7 @@ Job myJob = dispatcher.NewJobBuilder()
 사용자 지정을 정의 하는 것이 불가능 `RetryStrategy` 사용 하 여는 `FirebaseJobDispatcher.NewRetryStrategy` 메서드. 세 가지 매개 변수를 사용 합니다.
 
 1. `int policy` &ndash; 합니다 _정책_ 이전 중 하나인 `RetryStrategy` 값을 `RetryStrategy.RetryPolicyLinear`, 또는 `RetryStrategy.RetryPolicyExponential`합니다.
-2. `int intialBackoffSeconds` &ndash; 합니다 _초기 백오프_ 작업을 다시 실행 하기 전에 필요한 초 단위로 지연 됩니다. 이 대 한 기본값은 30 초입니다. 
+2. `int initialBackoffSeconds` &ndash; 합니다 _초기 백오프_ 작업을 다시 실행 하기 전에 필요한 초 단위로 지연 됩니다. 이 대 한 기본값은 30 초입니다. 
 3. `int maximumBackoffSeconds` &ndash; 합니다 _최대 백오프_ 작업을 다시 실행 하기 전에 지연 시간 (초)의 최대 수를 선언 하는 값입니다. 기본값은 3600 초입니다. 
 
 ```csharp

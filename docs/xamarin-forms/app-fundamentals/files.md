@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675161"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527367"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
 
@@ -20,7 +20,7 @@ _Xamarin.Forms를 사용 하 여 처리 하는 파일은.NET Standard 라이브�
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms 코드는 각자 자체적인 파일 시스템을 지닌 여러 개의 플랫폼에서 실행됩니다. 이전에이 네이티브 파일 Api를 사용 하 여 각 플랫폼에는 파일 읽기 및 쓰기를 가장 쉽게 수행 의미 합니다. 또는 포함 된 리소스는 앱을 사용 하 여 데이터 파일을 배포 하는 간단한 솔루션입니다. 그러나.NET Standard 2.0을 사용 하 여.NET Standard 라이브러리에서 파일 액세스 코드를 공유 하는 것이 같습니다.
+Xamarin.Forms 코드는 각자 자체적인 파일 시스템을 지닌 여러 개의 플랫폼에서 실행됩니다. 이전에이 파일 읽기 및 쓰기 가장 쉽게 수행 된 각 플랫폼에서 네이티브 파일 Api를 사용 하 여 의미 합니다. 또는 포함 된 리소스는 앱을 사용 하 여 데이터 파일을 배포 하는 간단한 솔루션입니다. 그러나.NET Standard 2.0을 사용 하 여.NET Standard 라이브러리에서 파일 액세스 코드를 공유 하는 것이 같습니다.
 
 이미지 파일 처리에 대 한 내용은 참조는 [이미지를 사용 하 여 작업](~/xamarin-forms/user-interface/images.md) 페이지입니다.
 

@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 7 장 요
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 1dc4fe12d3ca23a9ca87c3be7819c970683db469
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156914"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563500"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>요약 7 장입니다. 코드 및 XAML
 
@@ -82,5 +82,5 @@ XAML에 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 플랫폼에 종속 �
 
 - [7 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [7 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
-- [7 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [7 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [XAML 기본 사항](~/xamarin-forms/xaml/xaml-basics/index.md)

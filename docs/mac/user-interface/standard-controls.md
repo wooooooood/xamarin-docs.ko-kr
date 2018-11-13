@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9f5bdc9a79c514f0310d29b3d054fb7e9659d669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 150d5a35a2ccae63a1ff9969f5751b0e93c12454
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123793"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527003"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac의 표준 컨트롤
 
 _이 문서에서는 단추, 레이블, 텍스트 필드, 확인란 등 표준 AppKit 컨트롤을 사용 하 여 작업 내용을 다룹니다 및 Xamarin.Mac 응용 프로그램에서 컨트롤을 분할 합니다. Interface Builder를 사용 하 여 인터페이스를 추가 하 고 코드에서 상호 작용을 설명 합니다._
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일 하 게 액세스할 수 있습니다 AppKit 컨트롤에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 Appkit 컨트롤 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및 동일한 AppKit 컨트롤에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 Appkit 컨트롤 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 AppKit 컨트롤은 Xamarin.Mac 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 UI 요소입니다. 단추, 레이블, 텍스트 필드, 확인란 및 분할 된 컨트롤 같은 요소로 구성 하며 사용자 조작 하는 경우 빠른 작업 또는 표시 결과 유발 합니다.
 

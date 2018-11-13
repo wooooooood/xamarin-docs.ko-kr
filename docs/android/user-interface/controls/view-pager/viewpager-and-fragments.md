@@ -1,5 +1,5 @@
 ---
-title: 있는 ViewPager
+title: 조각이 있는 ViewPager
 description: ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드에서는 ViewPager, 조각을 사용 하 여 데이터 페이지를 사용 하 여 swipeable UI를 구현 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
@@ -7,21 +7,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: def46f69b139ef52bb6e65a1c415b9c899e63897
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109421"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528431"
 ---
-# <a name="viewpager-with-fragments"></a>있는 ViewPager
+# <a name="viewpager-with-fragments"></a>조각이 있는 ViewPager
 
 _ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드에서는 ViewPager, 조각을 사용 하 여 데이터 페이지를 사용 하 여 swipeable UI를 구현 하는 방법을 설명 합니다._
 
  
 ## <a name="overview"></a>개요
 
-`ViewPager` 각 페이지의 수명 주기를 관리할 수 있도록 조각 함께에서 자주 사용 된 `ViewPager`합니다. 이 연습의 `ViewPager` 만드는 데 사용 되는 앱 호출 **FlashCardPager** 플래시 카드에는 일련의 수학 문제를 표시 하는 합니다. 각 플래시 카드 조각으로 구현 됩니다. 사용자 왼쪽 및 오른쪽 플래시 카드를 통해 천공 기와 및 해당 응답을 표시 하기 위해 수학 문제를 해결할 탭 합니다. 이 앱을 만듭니다는 `Fragment` 어댑터에서 파생 된 각 플래시 카드 및 구현에 대 한 인스턴스 `FragmentPagerAdapter`합니다. [Viewpager 뷰와](~/android/user-interface/controls/view-pager/viewpager-and-views.md), 대부분의 작업에서 수행 된 `MainActivity` 수명 주기 메서드. **FlashCardPager**, 대부분의 작업 수행 됩니다는 `Fragment` 수명 주기 메서드 중 하나에서. 
+`ViewPager` 각 페이지의 수명 주기를 관리할 수 있도록 조각 함께에서 자주 사용 된 `ViewPager`합니다. 이 연습의 `ViewPager` 이라는 앱을 만드는 데 사용 됩니다 **FlashCardPager** 플래시 카드에는 일련의 수학 문제를 표시 하는 합니다. 각 플래시 카드 조각으로 구현 됩니다. 사용자 왼쪽 및 오른쪽 플래시 카드를 통해 천공 기와 및 해당 응답을 표시 하기 위해 수학 문제를 해결할 탭 합니다. 이 앱을 만듭니다는 `Fragment` 어댑터에서 파생 된 각 플래시 카드 및 구현에 대 한 인스턴스 `FragmentPagerAdapter`합니다. [Viewpager 뷰와](~/android/user-interface/controls/view-pager/viewpager-and-views.md), 대부분의 작업에서 수행 된 `MainActivity` 수명 주기 메서드. **FlashCardPager**, 대부분의 작업 수행 됩니다는 `Fragment` 수명 주기 메서드 중 하나에서. 
 
 이 가이드에서는 조각의 기본 사항의 다루지 않습니다 &ndash; 모르는 아직 Xamarin.Android의 조각으로, 참조 [조각을](~/android/platform/fragments/index.md) 조각을 사용 하 여 시작할 수 있도록 합니다. 
 

@@ -6,13 +6,13 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/11/2018
-ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/09/2018
+ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122753"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563734"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -25,7 +25,7 @@ Xamarin.Forms를 사용 하기 위한 프로세스 [ `ContentPage` ](xref:Xamari
 1. 네이티브 프로젝트에 Xamarin.Forms NuGet 패키지를 추가 합니다.
 1. 추가 된 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지 및 네이티브 프로젝트에 모든 종속성을 파생 합니다.
 1. `Forms.Init` 메서드를 호출합니다.
-1. 인스턴스를 생성 합니다 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생 하 고 다음 확장 메서드 중 하나를 사용 하 여 적절 한 네이티브 형식으로 변환: `CreateViewController` ios의 경우 `CreateFragment` 또는 `CreateSupportFragment` android의 경우 또는 `CreateFrameworkElement` UWP에 대 한 합니다.
+1. 인스턴스를 생성 합니다 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생 하 고 다음 확장 메서드 중 하나를 사용 하 여 적절 한 네이티브 형식으로 변환: `CreateViewController` ios의 경우 `CreateSupportFragment` android의 경우 또는 `CreateFrameworkElement` 에 대 한 UWP입니다.
 1. 네이티브 형식 표현으로 이동 합니다 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-기본 탐색 API를 사용 하 여 페이지를 파생 합니다.
 
 Xamarin.Forms를 호출 하 여 초기화 해야 합니다는 `Forms.Init` 메서드가 네이티브 프로젝트를 만들 수는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생 합니다. 응용 프로그램 흐름에서 가장 편리한 시간에 따라이 작업을 주로 수행 하는 경우 선택 – 바로 앞 이나 응용 프로그램 시작 시 수행할 수는 `ContentPage`-파생된 페이지 생성 됩니다. 이 문서 및 함께 제공 되는 샘플 응용 프로그램에는 `Forms.Init` 응용 프로그램 시작 시 호출 됩니다.
@@ -134,8 +134,8 @@ public class MainActivity : AppCompatActivity
         SetSupportActionBar(toolbar);
         SupportActionBar.Title = "Phoneword";
 
-        var mainPage = new PhonewordPage().CreateFragment(this);
-        FragmentManager
+        var mainPage = new PhonewordPage().CreateSupportFragment(this);
+        SupportFragmentManager
             .BeginTransaction()
             .Replace(Resource.Id.fragment_frame_layout, mainPage)
             .Commit();
@@ -151,13 +151,10 @@ public class MainActivity : AppCompatActivity
 - 에 대 한 참조를 `MainActivity` 클래스에 저장 되는 `static` `Instance` 필드입니다. 다른 클래스에 정의 된 메서드를 호출 하는 메커니즘을 제공 하는 것이 `MainActivity` 클래스입니다.
 - `Activity` 콘텐츠 레이아웃 리소스에서 설정 됩니다. 샘플 응용 프로그램을 레이아웃으로 구성 됩니다는 `LinearLayout` 포함 하는 `Toolbar`, 및 `FrameLayout` 조각 컨테이너 역할을 합니다.
 - 합니다 `Toolbar` 를 검색 하 고 작업 표시줄에 대 한 설정의 `Activity`, 작업 표시줄 제목 설정 됩니다.
-- 합니다 `PhonewordPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `Fragment` 사용 하 여는 `CreateFragment` 확장 메서드.
-- `FragmentManager` 클래스를 만들고를 대체 하는 트랜잭션을 커밋합니다 합니다 `FrameLayout` 인스턴스를 `Fragment` 에 대 한는 `PhonewordPage` 클래스입니다.
+- 합니다 `PhonewordPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `Fragment` 사용 하 여는 `CreateSupportFragment` 확장 메서드.
+- `SupportFragmentManager` 클래스를 만들고를 대체 하는 트랜잭션을 커밋합니다 합니다 `FrameLayout` 인스턴스를 `Fragment` 에 대 한는 `PhonewordPage` 클래스입니다.
 
 조각에 대 한 자세한 내용은 참조 하세요. [조각](~/android/platform/fragments/index.md)합니다.
-
-> [!NOTE]
-> 외에 `CreateFragment` 확장 메서드를 Xamarin.Forms 또한을 `CreateSupportFragment` 메서드. 합니다 `CreateFragment` 메서드를 만듭니다를 `Android.App.Fragment` 이상 API 11을 대상으로 하는 응용 프로그램에서 사용 될 수 있습니다. 합니다 `CreateSupportFragment` 메서드를 만듭니다를 `Android.Support.V4.App.Fragment` 11 이전 API 버전을 대상으로 하는 응용 프로그램에서 사용할 수 있습니다.
 
 한 번 합니다 `OnCreate` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `PhonewordPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
@@ -177,8 +174,8 @@ void OnCallHistory(object sender, EventArgs e)
 ```csharp
 public void NavigateToCallHistoryPage()
 {
-    var callHistoryPage = new CallHistoryPage().CreateFragment(this);
-    FragmentManager
+    var callHistoryPage = new CallHistoryPage().CreateSupportFragment(this);
+    SupportFragmentManager
         .BeginTransaction()
         .AddToBackStack(null)
         .Replace(Resource.Id.fragment_frame_layout, callHistoryPage)
@@ -186,7 +183,7 @@ public void NavigateToCallHistoryPage()
 }
 ```
 
-`NavigateToCallHistoryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생를 `Fragment` 사용 하 여를 `CreateFragment` 확장 메서드를 추가 합니다 `Fragment` 조각으로 백 스택. Xamarin.Forms에 UI를 정의 하는 따라서 `CallHistoryPage` 표시할 다음 스크린샷에 표시 된 대로:
+`NavigateToCallHistoryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생를 `Fragment` 사용 하 여를 `CreateSupportFragment` 확장 메서드를 추가 합니다 `Fragment` 조각으로 백 스택. Xamarin.Forms에 UI를 정의 하는 따라서 `CallHistoryPage` 표시할 다음 스크린샷에 표시 된 대로:
 
 [![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
@@ -194,12 +191,12 @@ public void NavigateToCallHistoryPage()
 
 ### <a name="enabling-back-navigation-support"></a>후방 탐색 지원을 사용 하도록 설정
 
-합니다 `FragmentManager` 클래스에는 `BackStackChanged` 조각 백 스택의 콘텐츠가 변경 될 때마다 발생 하는 이벤트입니다. `OnCreate` 에서 메서드를 `MainActivity` 클래스는이 이벤트에 대 한 익명 이벤트 처리기를 포함 합니다.
+합니다 `SupportFragmentManager` 클래스에는 `BackStackChanged` 조각 백 스택의 콘텐츠가 변경 될 때마다 발생 하는 이벤트입니다. `OnCreate` 에서 메서드를 `MainActivity` 클래스는이 이벤트에 대 한 익명 이벤트 처리기를 포함 합니다.
 
 ```csharp
-FragmentManager.BackStackChanged += (sender, e) =>
+SupportFragmentManager.BackStackChanged += (sender, e) =>
 {
-    bool hasBack = FragmentManager.BackStackEntryCount > 0;
+    bool hasBack = SupportFragmentManager.BackStackEntryCount > 0;
     SupportActionBar.SetHomeButtonEnabled(hasBack);
     SupportActionBar.SetDisplayHomeAsUpEnabled(hasBack);
     SupportActionBar.Title = hasBack ? "Call History" : "Phoneword";
@@ -211,9 +208,9 @@ FragmentManager.BackStackChanged += (sender, e) =>
 ```csharp
 public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
 {
-    if (item.ItemId == global::Android.Resource.Id.Home && FragmentManager.BackStackEntryCount > 0)
+    if (item.ItemId == global::Android.Resource.Id.Home && SupportFragmentManager.BackStackEntryCount > 0)
     {
-        FragmentManager.PopBackStack();
+        SupportFragmentManager.PopBackStack();
         return true;
     }
     return base.OnOptionsItemSelected(item);

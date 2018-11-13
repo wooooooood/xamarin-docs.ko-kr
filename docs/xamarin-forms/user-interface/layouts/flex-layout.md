@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: c4c7dc0db3112efa3ef02a51d4bc96939b714da9
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108745"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527094"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -385,7 +385,7 @@ public partial class PhotoWrappingPage : ContentPage
 ## <a name="the-bindable-properties-in-detail"></a>세부 정보에 바인딩 가능한 속성
 
 지금까지 살펴본 몇 가지 일반적인 응용 프로그램의 했으므로 `FlexLayout`, 속성을 `FlexLayout` 자세히 탐색할 수 있습니다. 
-`FlexLayout` 에 설정 하는 6 개의 바인딩 가능한 속성 정의 `FlexLayout` 코드 또는 컨트롤 orientatin 및 맞춤을 XAML 자체입니다. (이러한 속성 중 하나 [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position),이 문서에서는 다루지 않습니다.)
+`FlexLayout` 에 설정 하는 6 개의 바인딩 가능한 속성 정의 `FlexLayout` 코드 또는 컨트롤 방향 및 맞춤을 XAML 자체입니다. (이러한 속성 중 하나 [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position),이 문서에서는 다루지 않습니다.)
 
 다섯 가지 나머지 바인딩 가능한 속성을 사용 하 여 실험할 수 있습니다 합니다 **실험** 페이지의 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플. 이 페이지에서는 추가 하거나에서 자식을 제거할 수 있습니다는 `FlexLayout` 및 5 바인딩 가능한 속성 조합을 설정 합니다. 모든 자식을 `FlexLayout` 는 `Label` 다양 한 색과 크기의 뷰 사용 하 여는 `Text` 숫자에 해당 하는 해당 위치를 설정 하는 속성을 `Children` 컬렉션.
 
@@ -584,7 +584,7 @@ XAML, 장치 독립적 단위에서 크기에 대 한 숫자를 사용할 수 �
 
 합니다 [ `Grow` ](xref:Xamarin.Forms.FlexLayout.GrowProperty) 형식의 연결 된 바인딩 가능한 속성은 `int`합니다. 기본값은 0 및 0 보다 크거나 값 이어야 합니다.
 
-`Grow` 때 때 역할을 담당 하는 속성을 `Wrap` 속성이로 설정 되어 `NoWrap` 자식 행의 너비 보다 작은 총 너비가 있고를 `FlexLayout`, 보다 짧은 높이가 자식 열 또는 `FlexLayout`합니다. `Grow` 속성 자식 간에 남아 있는 공간을 할당 하는 방법을 나타냅니다.
+`Grow` 속성 역할을 때를 `Wrap` 속성이로 설정 되어 `NoWrap` 자식 행의 너비 보다 작은 총 너비가 있고를 `FlexLayout`, 자식의 열 보다 더 짧은 높이 또는 `FlexLayout`합니다. `Grow` 속성 자식 간에 남아 있는 공간을 할당 하는 방법을 나타냅니다.
 
 에 **증가 실험** 5 페이지 `Label` 색이 교대로 반복 되는 요소는 열 및 두 개의 정렬 됩니다 `Slider` 요소를 사용 하면를 조정할를 `Grow` 속성의 두 번째 및 네 번째 `Label`. 맨 왼쪽 iOS 스크린샷은 기본 `Grow` 0의 속성:
 

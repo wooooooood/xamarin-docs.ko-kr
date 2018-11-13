@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103753"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563344"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -79,7 +79,7 @@ Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자에 
 
 #### <a name="to-watch-a-specific-thread"></a>특정 스레드를 조사 하려면
 
-스레드는 특히 시청 하려는 경우 것이 이상적는 매우부터 만들 get 있도록에서 스레드 이름을 `ThreadName` 대신 `0x0`합니다. 예를 들어 UI로 스레드 이름을 설정 하려면, 다음 코드를 사용할 수 있습니다.
+스레드는 특히 시청 하려는 경우 것이 이상적 이름을 가져오려면 생성 시작할 때 스레드 `ThreadName` 대신 `0x0`합니다. 예를 들어도 스레드 이름을 설정 하려면 `UI`, 다음 코드를 사용할 수 있습니다.
 
 ```csharp
 RunOnUiThread (() => {

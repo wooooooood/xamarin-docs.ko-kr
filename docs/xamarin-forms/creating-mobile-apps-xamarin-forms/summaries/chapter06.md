@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 6 장 요
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 464fbdb043ac35eba7a4cc2d9ec76b78cc91ac5b
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 0f1da94031e658d42205e6346d41b02c5822d992
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156514"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563682"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>요약 6 장입니다. 단추 클릭
 
@@ -87,5 +87,5 @@ ms.locfileid: "39156514"
 
 - [6 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [6 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
-- [6 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [6 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md)

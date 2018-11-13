@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/05/2018
-ms.openlocfilehash: 4d121c2dfcca380e1735da1a4ca47c42d1957b8a
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: ac8e5323a2a2e05ac03294bb6919e8dfadc93655
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854742"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526522"
 ---
 # <a name="consuming-and-creating-xamarinforms-plugins"></a>Xamarin.Forms 플러그 인을 만들고 사용
 
@@ -53,7 +53,7 @@ NuGet 패키지를 디자인 하기 위한 특정 요구 사항이 없습니다 
 
 읽기 James Montemagno [블로그 게시물](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/) Xamarin에 대 한 플러그 인을 만드는 과정을 설명 합니다.
 
-최근에 플러그 인 만들 수 있습니다 수 단일 멀티 타기 팅 플랫폼을 사용 하 여. 이 방법은 James Montemagno의 부분은 [블로그 게시물](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/)합니다. 이 방법은 위에 링크 되어 James Montemagno의 플러그 인에서 사용 되 고 형식에도 사용 됩니다 **Xamarin.Essentials**합니다.
+최근에 플러그 인 단일 멀티 타기 팅 플랫폼을 사용 하 여 만들 수 있습니다. 이 방법은 James Montemagno의 부분은 [블로그 게시물](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/)합니다. 이 방법은 위에 링크 되어 James Montemagno의 플러그 인에서 사용 되 고 형식에도 사용 됩니다 **Xamarin.Essentials**합니다.
 
 것 Xamarin.Forms 플러그 인에서 직접 참조 하지 않으려면이 좋습니다.
 다른 개발자가 플러그 인을 사용 하려고 할 때 버전 충돌 문제가 발생할 수 있습니다이 있습니다. 대신 Xamarin 또는.NET 응용 프로그램에서 사용할 수 있도록 API를 디자인 하려고 합니다.

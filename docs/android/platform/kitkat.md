@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103311"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527334"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>반투명 UI
 
-KitKat 제어할 수 더 테마 선택적 transclucent 상태 및 탐색 막대를 사용 하 여 앱. Android 테마를 정의 하는 데 동일한 XML 파일에서 시스템 UI 요소의 합니다 반투명도 변경할 수 있습니다. KitKat 다음 속성을 제공합니다.
+KitKat 제어할 수 더 테마 선택적 반투명 상태 및 탐색 막대를 사용 하 여 앱. Android 테마를 정의 하는 데 동일한 XML 파일에서 시스템 UI 요소의 합니다 반투명도 변경할 수 있습니다. KitKat 다음 속성을 제공합니다.
 
 -  `windowTranslucentStatus` -로 설정 하면 true를 사용 하면 상위 상태 표시줄 반투명 합니다.
 
@@ -322,7 +322,7 @@ KitKat 제어할 수 더 테마 선택적 transclucent 상태 및 탐색 막대�
 
 저장소 액세스 프레임 워크 (SAF)는 이미지, 비디오, 문서 등 저장 된 콘텐츠가와 상호 작용 하는 사용자는 새로운 방법입니다. KitKat은 콘텐츠를 처리 하도록 응용 프로그램을 선택 하는 대화 상자를 사용 하 여 사용자를 표시 하는 대신 하나의 집계 위치에서 해당 데이터에 액세스할 수 있도록 새 UI를 엽니다. 콘텐츠를 선택한 후 사용자가 콘텐츠를 요청한 응용 프로그램에 반환 하 고 앱 환경을 정상적으로 계속 됩니다.
 
-이 변경 개발자 측면에 대 한 두 개의 작업 필요: 첫 번째 공급자에서 콘텐츠를 필요로 하는 앱 reqesting 콘텐츠의 새로운 방식으로 업데이트할 필요 합니다. 데이터를 기록 하는 두 번째 응용 프로그램을 `ContentProvider` 새 프레임 워크를 사용 하도록 수정 해야 합니다. 두 시나리오 모두 새 달라 집니다. [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+이 변경 개발자 쪽에서 두 작업을 해야: 먼저 앱 공급자의 콘텐츠를 필요로 하는 요청 콘텐츠는 새로운 방법이 업데이트 해야 합니다. 데이터를 기록 하는 두 번째 응용 프로그램을 `ContentProvider` 새 프레임 워크를 사용 하도록 수정 해야 합니다. 두 시나리오 모두 새 달라 집니다. [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API입니다.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 호출 `StartActivityForResult` 사용자 이미지를 선택 하 여 탐색할 수 있는 SAF UI를 시작 합니다.
 
-[![이미지에 브라우징에 대 한 저장소 액세스 프레임 워크를 사용 하는 앱의 스크린샷 예제](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![이미지 검색에 대 한 저장소 액세스 프레임 워크를 사용 하는 앱의 스크린샷 예제](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 사용자가 이미지를 선택한 후 `OnActivityResult` 반환 된 `Android.Net.Uri` 선택한 파일의 합니다. 다음 코드 예제에는 사용자의 이미지 선택을 표시 됩니다.
 
@@ -424,7 +424,7 @@ Note 로드 및 웹 콘텐츠를 인쇄 하려면 인터넷 권한이 필요 합
 인쇄 옵션을 작업에 일반적으로 표시 됩니다 [[옵션] 메뉴](http://developer.android.com/guide/topics/ui/menus.html#options-menu)합니다.
 [옵션] 메뉴 작업에서 작업을 수행할 수 있도록 합니다. 화면 오른쪽 상단에서 이며 다음과 같이 표시 됩니다.
 
-[![화면의 오른쪽 위 모서리에서 인쇄 메뉴 항목 표시의 스크린샷 예제](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![화면의 오른쪽 위 모서리에 표시 된 인쇄 메뉴 항목의 예제 스크린샷](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 추가 메뉴 항목을 정의할 수 있습니다 합니다 *메뉴*아래에 있는 디렉터리 *리소스*합니다. 아래 코드 정의 항목 이라는 샘플 메뉴가 [인쇄](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -505,7 +505,7 @@ void PrintPage ()
 
 `Print` 인수로: ("MyWebPage"이 예제의), 인쇄 작업의 이름을 [`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
 콘텐츠에서 인쇄 문서를 생성 하 고 [`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
-(`null` 위의 예제에서). 지정할 수 있습니다 `PrintAttributes` 문제가 해결 되는 콘텐츠 페이지의 인쇄 레이아웃 않는 대부분의 시나리오를 처리 하는 기본 특성을 합니다.
+(`null` 위의 예제에서). 지정할 수 있습니다 `PrintAttributes` 문제가 해결 되는 콘텐츠 페이지의 인쇄 레이아웃 대부분의 시나리오를 처리 하는 기본 특성을 합니다.
 
 호출 `Print` 인쇄 작업에 대 한 옵션을 나열 하는 인쇄 UI를 로드 합니다. UI 아래 스크린샷에서 나온 것 처럼 사용자의 인쇄 하거나 HTML 콘텐츠를 pdf로 저장 옵션을 제공 합니다.
 
@@ -542,12 +542,12 @@ HCE 해야 HCE 기능 및 `Nfc` 권한을 응용 프로그램을 사용 하 여 
 -  *OnDeactivated* - `HostAdpuService` HCE 서비스 NFC 판독기와 통신 하는 더 이상 경우 비활성화 됩니다.
 
 
-HCE 서비스를 응용 프로그램의 매니페스트를 사용 하 여 등록 되 고 적절 한 권한을 부여 하려면, 의도 필터 및 메타 데이터를 사용 하 여 데코레이팅 해야 합니다. 다음 코드는 예가 `HostApduService` Android 매니페스트를 사용 하 여 등록 합니다 `Service` 특성 (특성에 대 한 자세한 내용은 Xamarin 참조 [Android 매니페스트 사용](~/android/platform/android-manifest.md) 가이드):
+HCE 서비스를 응용 프로그램의 매니페스트를 사용 하 여 등록 되 고 적절 한 사용 권한, 의도 필터 및 메타 데이터를 사용 하 여 데코레이팅 해야 합니다. 다음 코드는 예가 `HostApduService` Android 매니페스트를 사용 하 여 등록 합니다 `Service` 특성 (특성에 대 한 자세한 내용은 Xamarin 참조 [Android 매니페스트 사용](~/android/platform/android-manifest.md) 가이드):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ KitKat은 사용자의 단계를 추적 하기 위한 두 개의 새 센서 형�
 
 [![단계 카운터 표시 SensorsActivity 앱의 스크린 샷](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-만들 수 있습니다는 `SensorManager` 를 호출 하 여 `GetSystemService(SensorService)` 결과 캐스팅 하는 `SensorManager`합니다. 단계 카운터를 사용 하려면 호출 `GetDeafultSensor` 에 `SensorManager`합니다. 센서를 등록 하 고 활용 하 여 단계 수의 변경 내용을 수신 하는 [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+만들 수 있습니다는 `SensorManager` 를 호출 하 여 `GetSystemService(SensorService)` 결과 캐스팅 하는 `SensorManager`합니다. 단계 카운터를 사용 하려면 호출 `GetDefaultSensor` 에 `SensorManager`합니다. 센서를 등록 하 고 활용 하 여 단계 수의 변경 내용을 수신 하는 [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 다음 코드 예제에 나온 것 처럼 인터페이스:
 
 ```csharp
@@ -689,7 +689,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 -  *애니메이션을 일시 중지* -일시 중지 및 다시 시작 애니메이션을 사용 하 여 만든 합니다 [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    포함됩니다.
 
--  *동적으로 변경 텍스트 읽기* -새 "라이브 영역"으로 새 텍스트를 사용 하 여 동적으로 업데이트 하는 UI 부분을 나타내는 [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *동적으로 변경 텍스트 읽기* -새 "라이브 영역"으로 새 텍스트를 사용 하 여 동적으로 업데이트 하는 UI 부분을 나타내는 [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    새 텍스트를 자동으로 읽을 액세스 모드에는 특성입니다.
 
 -  *오디오 환경을 개선할* -확인 된 크게 트랙 합니다 [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 -  *원격 제어* -하드웨어 및 소프트웨어를 둘 다 쪽에 몇 가지 변경 내용으로 KitKat를 사용 하 여 원격 제어는 IR 전송기를 갖출 장치를 끌 수 있습니다는 `ConsumerIrService`, 새 주변 장치와 상호 작용 하 고 [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    Api입니다.
 
-위의 API 변경 내용에 대 한 자세한 내용은 참조 하십시오는 Google [Android 4.4 Api](http://developer.android.com/about/versions/android-4.4.html) 개요.
+위의 API 변경 내용에 대 한 자세한 내용은 참조 하십시오 Google [Android 4.4 Api](http://developer.android.com/about/versions/android-4.4.html) 개요.
 
 
 ## <a name="summary"></a>요약

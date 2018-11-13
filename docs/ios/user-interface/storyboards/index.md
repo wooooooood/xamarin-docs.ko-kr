@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106886"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564007"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 이 예제는 `PrepareForSegue` segue가 트리거될 때 메서드가 호출 됩니다. 먼저 '수신' 뷰 컨트롤러의 인스턴스를 만들고이 segue의 대상 뷰 컨트롤러로 설정 해야 합니다. 아래 코드 줄을 하면 됩니다.
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 메서드는 이제 속성을 설정 하는 기능에는 `DestinationViewController`합니다. 이 예제에서는 활용할이 호출 목록을 전달 하 여 `PhoneNumbers` 에 `CallHistoryController` 같은 이름의 개체에 할당 합니다.
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ Storyboards.Conditional 솔루션에 대 한 참조를 [수동 스토리 보드 
 
 ## <a name="using-storyboard-references"></a>스토리 보드 참조 사용
 
-따라서 제거 복잡성을 제거 하 고 결과 개별 만드는 Storyboard 쉽게 디자인, 스토리 보드 참조를 사용 하면 대규모의 복잡 한 스토리 보드 디자인을 가져와 원래에서 참조 가져오기는 더 작은 스토리 보드를 중단 하 고 유지 관리 합니다.
+스토리 보드 참조를 사용 하는 대규모의 복잡 한 스토리 보드 디자인을 수행 하 고 더 작은 스토리 보드에 원본에서 참조 가져오기 있으므로 복잡성을 제거 하 고 결과 개별 스토리 보드 디자인 및 유지 관리를 쉽게으로 나누는 수 있습니다.
 
 또한 스토리 보드 참조를 제공할 수는 _앵커_ 동일한 스토리 보드 또는 다른 특정 장면 내에서 다른 장면으로 합니다.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 4eb4a97a346f3906c925dc9e324ed9378af0b560
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116188"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528132"
 ---
 # <a name="accessibility-on-android"></a>Android에서 내게 필요한 옵션
 
@@ -74,7 +74,7 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
 
 **C#**
 
-C#로 설정 합니다 `LabelFor` 이 콘텐츠 컨트롤의 리소스 ID 속성에 설명 합니다 (일반적으로이 속성에 레이블이 설정 되어 및 일부 다른 입력된 컨트롤을 참조).
+C#로 설정 합니다 `LabelFor` 속성을이 콘텐츠를 설명 하는 컨트롤의 리소스 ID (일반적으로이 속성에 레이블이 설정 되어 및 일부 다른 입력된 컨트롤을 참조):
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);

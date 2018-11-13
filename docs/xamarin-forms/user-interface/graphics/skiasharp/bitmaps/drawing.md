@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109239"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527250"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
 
@@ -494,7 +494,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 일반적으로 비트맵에서 수행 하는 다른 작업 이라고 _대칭 이동_합니다. 개념적으로 비트맵 세로 축 또는 center 비트맵의 가로 축 주위 3 차원에서 회전 합니다. 수직 대칭 이동 미러 이미지를 만듭니다.
 
-**비트맵 플리퍼** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램 demonstates 이러한 프로세스입니다. XAML 파일에는 `SKCanvasView` 세로 및 가로로 대칭 이동에 대 한 두 개의 단추:
+**비트맵 플리퍼** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램에서는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 세로 및 가로로 대칭 이동에 대 한 두 개의 단추:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

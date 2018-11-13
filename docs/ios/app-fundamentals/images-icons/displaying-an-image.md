@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104156"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526562"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.iOS에서 이미지를 표시합니다.
 
@@ -41,7 +41,7 @@ IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버�
 3. 새 이미지 집합을 선택 하 고 편집기를 표시 됩니다.
 
     ![](displaying-an-image-images/imageset03.png "이미지 집합 편집기")
-4. 여기에서 끌어 이미지의 각 다른 장치에 대 한 및 및 필요한 해결 방법입니다. 
+4. 여기에서 다양 한 장치 및 필요한 해결 방법은 각 이미지의 끕니다. 
 5. 새 이미지 집합을 두 번 클릭 **이름을** 에 **자산 목록** 편집 하려면: ![](displaying-an-image-images/imageset04.png "새 이미지 집합의 이름 편집")
 
 사용 하는 경우는 **집합 이미지** ios 디자이너에서 단순히 집합의 이름을 선택 속성 편집기에서 드롭다운 목록에서:
@@ -54,7 +54,7 @@ IOS 7에서에서 추가한 **자산 카탈로그 이미지 집합** 모든 버�
 
     ![](displaying-an-image-images/asset5.png "더하기를 클릭 합니다. 단추")
 
-2. 선택 **이미지 집합 추가** 집합 이미지 편집기 새 이미지 집합에 대 한 표시 됩니다. 여기에서 끌어 이미지의 각 다른 장치에 대 한 및 및 필요한 해결 방법입니다. 
+2. 선택 **이미지 집합 추가** 집합 이미지 편집기 새 이미지 집합에 대 한 표시 됩니다. 여기에서 다양 한 장치 및 필요한 해결 방법은 각 이미지의 끕니다. 
 
     ![](displaying-an-image-images/asset7.png "이미지 편집기 설정")
 

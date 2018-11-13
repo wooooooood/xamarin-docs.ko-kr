@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: 420fabf7b1f4c5bf4cacdeaf10823ae3233f5bd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113237"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528561"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Xamarin.Android에 바인딩된 서비스
 
@@ -234,7 +234,7 @@ Android 바인딩 프로세스의 일부로 호출 합니다 `OnServiceConnected
 
 * **`Intent`**  &ndash; 의 의도에 연결 하는 서비스를 명시적으로 식별 해야 합니다.
 * **`IServiceConnection` 개체** &ndash; 이 개체가 바인딩된 서비스 시작 및 중지 하는 경우 클라이언트에 알리기 위해 콜백 메서드를 제공 하는 중개자입니다.
-* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) 열거형** &ndash; 이 매개 변수는 플래그 집합에 개체를 바인딩할 때 시스템에서 사용 됩니다. 가장 자주 사용 되는 값이 [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), 자동 시작 서비스가 이미 실행 되지 않는 경우.
+* **[`Android.Content.Bind`](https://developer.xamarin.com/api/type/Android.Content.Bind/) 열거형** &ndash; 이 매개 변수는 플래그 집합이에 개체를 바인딩할 때 시스템에서 사용 됩니다. 가장 자주 사용 되는 값이 [ `Bind.AutoCreate` ](https://developer.xamarin.com/api/field/Android.Content.Bind.AutoCreate/), 자동 시작 서비스가 이미 실행 되지 않는 경우.
 
 다음 코드 조각은 다음과 같습니다. 명시적 의도 사용 하 여 활동에 바인딩된 서비스를 시작 하는 방법의 예
 

@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 13 장 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: ac4dd8ffc0ce407aeb9dbc36fe705a809a9c4058
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156628"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563600"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
 
@@ -31,7 +31,7 @@ Xamarin.Forms에서 비트맵 네 곳에서 제공합니다.
 공유 라이브러리에서 비트맵 리소스 플랫폼 독립적인은 플랫폼 프로젝트에서는 비트맵 리소스가 플랫폼 마다 다릅니다.
 
 > [!NOTE] 
-> 책의 텍스트는.NET Standard 라이브러리 바뀌었습니다는 이식 가능한 클래스 라이브러리에 대 한 참조를 만듭니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다.
+> 책의 텍스트는.NET Standard 라이브러리 바뀌었습니다는 이식 가능한 클래스 라이브러리에 대 한 참조를 만듭니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
 비트맵을 설정 하 여 지정 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 의 속성 `Image` 형식의 개체에 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 세 개의 파생을 사용 하 여 추상 클래스:
 

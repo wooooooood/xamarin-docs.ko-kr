@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 2 장 요
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156686"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563883"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>요약 2 장입니다. 앱 분석
 
@@ -34,7 +34,7 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac 합니다 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 대 한 이식 가능한 클래스 라이브러리를 사용 합니다. 
 
 > [!NOTE] 
-> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다.
+> Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
 이 샘플에는 수정 하지 않고도 Visual Studio에서 만들어진 Xamarin.Forms 솔루션을 보여 줍니다. 솔루션은 6 개 프로젝트:
 
@@ -46,7 +46,7 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), Windows Phone 8.1에 대 한 응용 프로그램 프로젝트
 
 > [!NOTE] 
-> Xamarin.Forms는 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile 더 이상 지원 하지만 Windows 10 데스크톱에서 Xamarin.Forms 응용 프로그램을 실행 합니다. 
+> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 
 
 수의 응용 프로그램 프로젝트 시작 프로젝트 및 다음 빌드를 장치 또는 시뮬레이터에서 프로그램을 실행 합니다.
 
@@ -96,13 +96,13 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 이식 가능한 클래스 라이브러리 (PCL) 또는 공유 자산 프로젝트 (SAP)에서 공통 코드를 사용 하 여 Xamarin.Forms 솔루션을 만들 수는 것입니다. SAP 솔루션을 만들려면 Visual Studio에서 공유 옵션을 선택 합니다. 합니다 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) 솔루션은 수정 하지 않고도 SAP 템플릿을 보여 줍니다.
 
 > [!NOTE] 
-> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드를.NET 표준 라이브러리를 사용 하도록 변환 되었습니다. 그렇지 않은 경우 PCL 및.NET Standard 라이브러리는 개념적으로 유사 합니다.
+> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다. 그렇지 않은 경우 PCL 및.NET Standard 라이브러리는 개념적으로 유사 합니다.
 
 모든 일반적인 플랫폼 응용 프로그램 프로젝트에서 참조 하는 라이브러리 프로젝트에서 코드 라이브러리 접근 방식 번들입니다. SAP 방식의 경우 공통 코드는 효과적으로 모든 플랫폼 응용 프로그램 프로젝트에 존재 하 고 그 중 공유 됩니다.
 
 대부분의 개발자 들은 Xamarin.Forms 라이브러리 접근 방식을 선호합니다. 이 책에이 나온 대부분의 솔루션이 라이브러리를 사용 합니다. SAP를 사용 하는 포함 된 **Sap** 프로젝트 이름에서 접미사.
 
-SAP 접근 방식을 사용 하 여 코드 공유 프로젝트에서 코드를 실행할 수 다른 다양 한 플랫폼에 대 한 C# 전처리기 지시문을 사용 하 여 (`#if`, #`elif`, 및 `#endif`) 이러한 미리 정의 된 식별자:
+SAP 접근 방식으로 공유 프로젝트에서 코드를 실행할 수 있습니다는 다양 한 플랫폼에 대해 서로 다른 코드를 사용 하 여 C# 전처리기 지시문 (`#if`, #`elif`, 및 `#endif`) 이러한 미리 정의 된 식별자:
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
@@ -112,7 +112,7 @@ SAP 접근 방식을 사용 하 여 코드 공유 프로젝트에서 코드를 �
 
 ## <a name="labels-for-text"></a>텍스트에 대 한 레이블
 
-합니다 [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) 솔루션에 새 C# 파일을 추가 하는 방법에 설명 합니다 **인사말** 프로젝트. 이 파일은 라는 클래스를 정의 `GreetingsPage` 에서 파생 되는 `ContentPage`합니다. 이 책에이 나온 대부분의 프로젝트는 단일 포함 `ContentPage` 접미사를 사용 하 여 프로젝트의 이름인 이름이 파생 `Page` 추가 합니다.
+[ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) 솔루션에 추가 하는 방법을 보여 줍니다 C# 파일을 **Greetings** 프로젝트. 이 파일은 라는 클래스를 정의 `GreetingsPage` 에서 파생 되는 `ContentPage`합니다. 이 책에이 나온 대부분의 프로젝트는 단일 포함 `ContentPage` 접미사를 사용 하 여 프로젝트의 이름인 이름이 파생 `Page` 추가 합니다.
 
 `GreetingsPage` 생성자를 인스턴스화하는 [ `Label` ](xref:Xamarin.Forms.Label) 뷰를 텍스트를 표시 하는 Xamarin.Forms 보기. [ `Text` ](xref:Xamarin.Forms.Label.Text) 으로 표시 되는 텍스트 속성을 `Label`입니다. 이 프로그램을 설정 합니다 `Label` 에 `Content` 의 속성 `ContentPage`합니다. 생성자는 `App` 클래스를 인스턴스화하고 `GreetingsPage` 로 설정 하 고 해당 `MainPage` 속성입니다.
 
@@ -131,7 +131,7 @@ SAP 접근 방식을 사용 하 여 코드 공유 프로젝트에서 코드를 �
 
 ### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>솔루션 2입니다. IOS (SAP에만 해당)에 대 한 안쪽 여백을 포함
 
-SAP를 사용 하 여 C# 전처리기 지시문을 사용 하 여 iOS에만 '안쪽 여백' 속성을 설정 합니다. 에 설명 되어이 [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) 솔루션입니다.
+'안쪽 여백' 속성을 사용 하 여 SAP를 사용 하 여 iOS에만 설정 된 C# 전처리기 지시문입니다. 에 설명 되어이 [ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) 솔루션입니다.
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>3 솔루션입니다. IOS (PCL 또는 SAP)에 대 한 안쪽 여백을 포함
 
@@ -203,5 +203,5 @@ Center 수를 `Label` 내에서 `Page` (또는 다른 위치를 8 중 하나에 
 
 - [2 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [2 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
-- [2 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
+- [2 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Xamarin.Forms를 사용 하 여 시작](~/xamarin-forms/get-started/index.md)

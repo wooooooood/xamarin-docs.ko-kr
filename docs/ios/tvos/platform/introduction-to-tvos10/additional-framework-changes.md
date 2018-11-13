@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8f7094cebf284f301e08faae8d94c99a73964d55
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ca9856251d35a741d496b6e8b45b07e851e0e89
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114290"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528613"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경
 
@@ -85,7 +85,7 @@ TvOS 10에 대 한 Foundation 프레임 워크 같이 향상 되었습니다.:
 
  - 새 [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) 기간, 간격을 비교 하 고 간격 교차점에 대 한 테스트와 같은 날짜 및 시간 간격 계산을 수행 하는 클래스입니다.
  - 에 추가 된 몇 가지 새 속성을 [NSLocal](https://developer.apple.com/reference/foundation/nslocale) 로컬 정보 및 사용 가능한 표시 형식을 가져오려고 클래스.
- - 새 [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스 간에 서로 다른 단위의 측정값 (UOM)을 변환 하거나 다른 UOMs의 값에 대해 계산을 수행 합니다.
+ - 새 [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스 간에 서로 다른 단위의 측정값 (UOM)을 변환 하거나 다른 UOMs의 값에 대해 계산을 수행 합니다.
  - 새 [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) 최종 사용자에 게 표시 하는 것에 대 한 지역화 된 측정값의 서식을 지정 하는 클래스입니다.
  - 새 [NSUnit](https://developer.apple.com/reference/foundation/nsunit) 하 고 [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) 특정 UOMs 나타내기 위한 클래스입니다.
 
@@ -182,7 +182,7 @@ TvOS 10에서에서 SpriteKit 프레임 워크 같이 향상 되었습니다.:
  - 새 `UIGraphicsRender` 클래스는 UIKit 렌더링 또는 핵심 그래픽 비트맵 또는 Pdf 만드는 개체 지향 메서드를 제공 하 고 사용 되지 않는 대체 `UIGraphicsBeginImageContext` 메서드.
  - `UIUserInterfaceStyle` 현재 활성 상태인 사용자 인터페이스 테마 (어둡게 또는 밝게) 인지 클래스가 추가 되었습니다.
  - 새 완전 한 대화형 하 고, 개체 기반 이며, 인터럽트 가능한 애니메이션 지원이 추가 되었습니다 van 제스처를 연결할 수 있습니다. Pleas 참조 Apple의 [UIViewAnimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating)를 [UIViewPropertyAnimator 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator)하십시오 [UITimingCurveProvider 프로토콜 참조](https://developer.apple.com/reference/uikit/uitimingcurveprovider)를 [UICubicTimingParameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) 하 고 [UISpringTimingParameter 클래스 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 자세한 내용은 합니다.
- - 새 `UIPreviewInteraction` 고 `UIPreviewInteractionDelegate` 미리 보기 및 pop 작업에 대 한 사용자 지정 인터페이스를 제공 하는 앱을 허용 합니다.
+ - 새 `UIPreviewInteraction` 고 `UIPreviewInteractionDelegate` 앱 미리 보기 및 pop 작업에 대 한 사용자 지정 인터페이스를 제공 하도록 허용 합니다.
  - 새 `UIAccessibilityCustomRotor` 클래스를 사용 하면 응용 프로그램에서 사용자 지정 상황에 맞는 기능 Voice Over와 같은 보조 기술을 제공 합니다.
  - 사용 된 `UIAccessibilityIsAssistiveTouchRunning` 및 `UIAccessibilityAssistiveTouchStatusDidChangeNotification` AssistiveTouch 사용 되는지 여부를 결정 하는 기호입니다.
  - 사용 된 `UIAccessibilityHearingDevicePairedEar` 및 `UIAccessibilityHearingDevicePairedEarDidChangeNotification` 의 상태를 가져오려면 기호 쌍을 이루는 MFi 청각 지원.

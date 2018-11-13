@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 69f754db0fd9661fb317f43c7cda546b0b510265
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119418"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527081"
 ---
 # <a name="ios-platform-specifics"></a>플랫폼별 iOS
 
@@ -332,7 +332,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 결과 지정한 `UpdateMode` 에 적용 되는 [ `Picker` ](xref:Xamarin.Forms.Picker), 항목을 선택할 경우 제어:
 
-[![](ios-images/picker-updatemode.png "선택기 UpdateMode 플랫폼별")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "선택기 UpdateMode 플랫폼별")](ios-images/picker-updatemode-large.png#lightbox "선택기 UpdateMode 플랫폼별")
 
 <a name="slider-updateontap" />
 
@@ -721,7 +721,7 @@ public class iOSModalFormSheetPageCS : ContentPage
 
 또한 합니다 `GetModalPresentationStyle` 의 현재 값을 검색할 메서드를 사용할 수는 `UIModalPresentationStyle` 열거형에 적용 되는 [ `Page` ](xref:Xamarin.Forms.Page)합니다.
 
-결과에서 모달 표시 스타일을 [ `Page` ](xref:Xamarin.Forms.Page) 설정할 수 있습니다:
+결과에서 모달 표시 스타일을 [ `Page` ](xref:Xamarin.Forms.Page) 설정할 수 있습니다.
 
 [![](ios-images/modal-presentation-style-small.png "IPad에서 모달 프레젠테이션 스타일")](ios-images/modal-presentation-style-large.png#lightbox "iPad에서 모달 표시 스타일")
 
@@ -777,7 +777,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 결과 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는 [ `Slider` ](xref:Xamarin.Forms.Slider) 제스처를 받는 대신 [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) 페이지의 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 건드리면 플랫폼별")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 건드리면 플랫폼별")](ios-images/scrollview-delay-content-touches-large.png#lightbox "지연을 ScrollView 콘텐츠 건드리면 플랫폼별")
 
 ## <a name="application"></a>응용 프로그램
 

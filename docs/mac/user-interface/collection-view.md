@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104039"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526835"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Xamarin.mac에서 컬렉션 뷰
 
 _이 문서에서는 Xamarin.Mac 앱에서 컬렉션 뷰를 사용 하 여 작업을 설명 합니다. Xcode 및 Interface Builder에서 컬렉션 뷰를 유지 관리 만들고 프로그래밍 방식으로 작업 하는 내용을 다룹니다._
 
-개발자는 Xamarin.Mac 앱에서 C# 및.NET을 사용 하 여 작업에 대 한 동일한 액세스 때 AppKit 컬렉션 뷰 컨트롤에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다. 개발자는 Xcode의를 사용 하 여 Xamarin.Mac이 Xcode와 직접 통합 되므로 _Interface Builder_ 를 만들어 컬렉션 뷰를 유지 관리 합니다.
+작업할 때 C# Xamarin.Mac 앱에서.NET 개발자가에 대 한 액세스 및 동일한 AppKit 컬렉션 뷰 컨트롤에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다. 개발자는 Xcode의를 사용 하 여 Xamarin.Mac이 Xcode와 직접 통합 되므로 _Interface Builder_ 를 만들어 컬렉션 뷰를 유지 관리 합니다.
 
 A `NSCollectionView` 표를 사용 하 여 구성 하는 하위 뷰의 표시는 `NSCollectionViewLayout`합니다. 표의 각 하위 뷰 표시 됩니다는 `NSCollectionViewItem` 뷰의 콘텐츠의 로드를 관리 하는 `.xib` 파일입니다.
 

@@ -5,12 +5,12 @@ description: 이 문서는 간의 유사점 및 차이점 Xamarin.Forms 및 WPF 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107125"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526795"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및입니다. Xamarin.Forms 앱 수명 주기
 
@@ -53,7 +53,7 @@ Xamarin.Forms에서 최상위 시각적 개체는 항상 플랫폼이 정의한-
 
 ### <a name="views"></a>보기
 
-두 프레임 워크에 대 한 시각적 계층 구조와 비슷합니다. WPF는 wysiwyg (위지윅) 문서에 대 한 지원의 조금 더 깊이입니다.
+두 프레임 워크에 대 한 시각적 계층은 유사 합니다. WPF는 wysiwyg (위지윅) 문서에 대 한 지원으로 인해 조금 더 깊이입니다.
 
 **WPF**
 
@@ -83,7 +83,7 @@ Xamarin.Forms는 모바일 시나리오 주로 지향 합니다. 응용 프로�
 |--- |--- |--- |
 |초기 활성화|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |표시|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |일시 중단/손실 포커스|Window.OnDeactivated|Page.OnSleep|
 |활성화/가져왔습니다 포커스|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|N/A|
@@ -139,7 +139,7 @@ WPF 및 Xamarin.Forms 레이아웃 컨트롤을 자식 요소의 위치를 사�
 
 WPF 및 Xamarin.Forms에 대 한 렌더링 역학은 근본적으로 다릅니다. Wpf에서 직접 만든 컨트롤 화면에서 픽셀에 콘텐츠를 렌더링 합니다. WPF 두 개체 그래프 유지 관리 (_트리_)이-합니다 _논리적 트리_ 코드 또는 XAML에 정의 된 대로 컨트롤을 나타내는 및 _시각적 트리_ 나타냅니다는 실제 렌더링 인 화면에서 발생 하는 (가상 그리기 메서드)를 통해 수행 하거나 직접 시각적 요소 또는 XAML 정의 통해 `ControlTemplate` 대체 하거나 사용자 지정할 수는 있습니다. 일반적으로 시각적 트리는 컨트롤, 암시적 내용에 대 한 레이블 주위에 테두리 등이 포함 되어 있으므로 더 복잡 합니다. WPF Api 집합이 포함 되어 있습니다 (`LogicalTreeHelper` 및 `VisualTreeHelper`) 두 개체 그래프 이러한 오류를 확인 합니다.
 
-Xamarin.Forms 컨트롤 정의에 `Page` 는 매우 단순한 데이터 개체입니다. 논리적 트리 표현을 비슷합니다 있지만 자체적으로 콘텐츠를 렌더링 하지 않습니다. 이들은 합니다 _데이터 모델_ 는 요소의 렌더링에 영향을 줍니다. 실제 렌더링 하면 됩니다는 [집합이 구분 _시각적 렌더러_ 각 컨트롤 형식에 매핑되는](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)합니다. 이 렌더러는 각 플랫폼별 프로젝트에 플랫폼별 Xamarin.Forms 어셈블리에 등록 됩니다. 목록을 볼 수 있습니다 [여기](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다. 바꾸거나 렌더러를 확장 하는 것 외에도 Xamarin.Forms 기능도 지원 [효과](~/xamarin-forms/app-fundamentals/effects/index.md) 플랫폼 당 기준 네이티브 렌더링에 영향을 줄에 사용할 수 있는 합니다.
+Xamarin.Forms 컨트롤 정의에 `Page` 는 매우 단순한 데이터 개체입니다. 논리적 트리 표현을 비슷합니다 있지만 자체적으로 콘텐츠를 렌더링 하지 않습니다. 이들은 합니다 _데이터 모델_ 는 요소의 렌더링에 영향을 줍니다. 실제 렌더링 하면 됩니다는 [집합이 구분 _시각적 렌더러_ 각 컨트롤 형식에 매핑되는](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)합니다. 이 렌더러는 각 플랫폼별 프로젝트에 플랫폼별 Xamarin.Forms 어셈블리에 등록 됩니다. 목록을 볼 수 있습니다 [여기](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다. 바꾸거나 렌더러를 확장 하는 것 외에도 Xamarin.Forms 기능도 지원 [효과](~/xamarin-forms/app-fundamentals/effects/index.md) 플랫폼별 기준 네이티브 렌더링에 영향을 줄에 사용할 수 있는 합니다.
 
 #### <a name="the-logicalvisual-tree"></a>논리/시각적 트리
 
@@ -179,11 +179,11 @@ WPF 및 Xamarin.Forms 둘 다 리소스 및 리소스 사전 개념을 가집니
 
 ## <a name="styles"></a>스타일
 
-스타일은 Xamarin.Forms에서도 완전히 지원 및 수 UI를 구성 하는 Xamarin.Forms 요소 테마를 사용 합니다. 트리거 (속성, 이벤트 및 데이터), 상속을 통해 지 `BasedOn`, 및 값에 대 한 리소스를 조회 합니다. 스타일은 요소에 적용 하거나 명시적으로 통해를 `Style` 속성 또는 하지-WPF와 마찬가지로 리소스 키를 제공 하 여 저 용입니다.
+스타일은 Xamarin.Forms에서도 완전히 지원 및 수 UI를 구성 하는 Xamarin.Forms 요소 테마를 사용 합니다. 트리거 (속성, 이벤트 및 데이터), 상속을 통해 지 `BasedOn`, 및 값에 대 한 리소스를 조회 합니다. 스타일은 요소에 적용 하거나 통해 명시적으로 `Style` 속성 또는 암시적으로 WPF와 마찬가지로 리소스 키-제공 안 함.
 
 ### <a name="device-styles"></a>장치 스타일
 
-WPF에는 미리 정의 된 속성 집합이 있습니다. (같은 정적 클래스의 집합에 정적 값으로 저장 된 `SystemColors`) 시스템 색, 글꼴 및 메트릭 값과 리소스 키의 형태로 지정입니다. Xamarin.Forms는 유사 하지만 집합을 정의 [장치 스타일](~/xamarin-forms/user-interface/styles/device.md) 동일한 항목을 나타냅니다. 이러한 스타일의 frameowrk 제공한 되며 런타임 환경 (예: 내게 필요한 옵션)에 따라 값으로 설정 됩니다.
+WPF에는 미리 정의 된 속성 집합이 있습니다. (같은 정적 클래스의 집합에 정적 값으로 저장 `SystemColors`) 시스템 색, 글꼴 및 메트릭 값과 리소스 키의 형태로 지정입니다. Xamarin.Forms는 유사 하지만 집합을 정의 [장치 스타일](~/xamarin-forms/user-interface/styles/device.md) 동일한 항목을 나타냅니다. 이러한 스타일 프레임 워크에서 제공 되며 런타임 환경 (예: 내게 필요한 옵션)에 따라 값으로 설정 됩니다.
 
 **WPF**
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 9954a27b0cc857efa158e8cbc0281737c822f0c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131927"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526899"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
 
@@ -292,7 +292,7 @@ Xcode에서 **Project Navigator**에서 최상위 프로젝트를 **OrderSoupInt
 특히이 프로젝트에 포함 되어 있는지 확인 합니다.
 
 - **ApiDefinitions.cs** – 파일 목표 Sharpie 하 여 위에서 생성 및이 프로젝트에 추가 합니다. 이 파일의 **빌드 작업** 로 설정 된 **ObjcBindingApiDefinition**합니다.
-- **StructsAndEnums.cs** – 다른 목표 Sharpie에서 위의 genrated 파일을이 프로젝트에 추가 합니다. 이 파일의 **빌드 작업** 로 설정 된 **ObjcBindingCoreSource**합니다.
+- **StructsAndEnums.cs** – 다른 목표 Sharpie 하 여 위에서 생성 된 파일과이 프로젝트에 추가 합니다. 이 파일의 **빌드 작업** 로 설정 된 **ObjcBindingCoreSource**합니다.
 - A **네이티브 참조** 하 **libOrderSoupIntentStaticLib.a**, 위에서 빌드한 정적 라이브러리입니다.
 
 > [!NOTE]
@@ -336,7 +336,7 @@ void DonateInteraction(Order order)
 `INInteraction` 지정 되는 [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
 (이 때 도움이 되는 나중에 유효 하지 않은 의도 기부 삭제) 주문의 고유 ID와 일치 하는 합니다. 그런 다음 상호 작용은 단체에 기부 Siri 합니다.
 
-에 대 한 호출을 `order.Intent` getter 인출은 `OrderSoupIntent` 설정 하 여 순서를 나타내는 해당 `Quantity`, `Soup`, `Options`, 이미지, 및 및 사용자 레코드를 Siri를 구 하는 경우 제안으로 사용 하는 호출 구 의도 사용 하 여 연결 합니다.
+에 대 한 호출을 `order.Intent` getter 인출을 `OrderSoupIntent` 설정 하 여 순서를 나타내는 해당 `Quantity`를 `Soup`, `Options`, 이미지 및 사용자 레코드를 연결할 Siri에 대 한 구 때 제안으로 사용 하는 호출 구 의도로:
 
 ```csharp
 public OrderSoupIntent Intent

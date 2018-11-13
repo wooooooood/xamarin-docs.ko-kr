@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8da13afb7fd8d7198e8bfe7476b40a5cd09769a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112554"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527289"
 ---
 # <a name="adding-a-second-toolbar"></a>두 번째 도구 모음 추가
 
 
 ## <a name="overview"></a>개요 
 
-`Toolbar` 대체 보다 더 많은 작업 모음 작업 수 &ndash; 사용할 수 있습니다 여러 번 활동 내에서 사용할 수 있습니다, 화면에서 아무 곳 이나 배치에 대 한 사용자 지정 하 고 화면의 너비를 부분에 걸쳐 구성할 수 있습니다. 아래 예제에서는 두 번째를 만드는 방법을 보여 줍니다 `Toolbar` 화면 맨 아래에 놓습니다. 이 `Toolbar` 구현 **복사**합니다 **잘라내기**, 및 **붙여넣기** 메뉴 항목입니다. 
+합니다 `Toolbar` replace 보다 더 많은 작업 모음 작업 수 &ndash; 사용할 수 있습니다 여러 번 활동 내에서 화면에서 아무 곳 이나 배치에 대 한 사용자 지정할 수 있습니다 하 고 화면의 너비를 부분에 걸쳐 구성할 수 있습니다. 아래 예제에서는 두 번째를 만드는 방법을 보여 줍니다 `Toolbar` 화면 맨 아래에 놓습니다. 이 `Toolbar` 구현 **복사**합니다 **잘라내기**, 및 **붙여넣기** 메뉴 항목입니다. 
 
 
 ## <a name="define-the-second-toolbar"></a>두 번째 도구 모음을 정의 합니다. 

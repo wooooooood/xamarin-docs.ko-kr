@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 51bd3dd4c27dce19344f7660c31a0d4e741e1ad4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a411d4d85877c9868ec49f92b53ca8d7a81f9959
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121141"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528535"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Xamarin.Android에 브로드캐스트 수신기
 
@@ -97,7 +97,7 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Android 8.0 (API 레벨 26)를 대상으로 하는 앱 이상 등록할 수 없습니다 정적 암시적는 브로드캐스트 또는 합니다. 앱을 명시적 브로드캐스트에 대 한 정적으로 여전히 등록이 가능 합니다. 이 제한에서 제외 되는 암시적 브로드캐스트의 작은 목록이 있습니다. 이러한 예외에 설명 되어는 [암시적 브로드캐스트 예외](https://developer.android.com/guide/components/broadcast-exceptions.html) Android 설명서 가이드입니다. 암시적 브로드캐스트에 관심이 있는 앱을 사용 하 여 동적으로 수행 해야 합니다는 `RegisterReceiver` 메서드. 이 작업은 다음 설명 되어 있습니다.
+Android 8.0 (API 레벨 26)를 대상으로 하는 앱 이상 등록할 수 없습니다 정적 암시적는 브로드캐스트 또는 합니다. 앱을 명시적 브로드캐스트에 대 한 정적으로 여전히 등록이 가능 합니다. 이 제한에서 제외 되는 암시적 브로드캐스트 작은 목록이 있습니다. 이러한 예외에 설명 되어는 [암시적 브로드캐스트 예외](https://developer.android.com/guide/components/broadcast-exceptions.html) Android 설명서 가이드입니다. 암시적 브로드캐스트에 관심이 있는 앱을 사용 하 여 동적으로 수행 해야 합니다는 `RegisterReceiver` 메서드. 이 작업은 다음 설명 되어 있습니다.
 
 ### <a name="context-registering-a-broadcast-receiver"></a>브로드캐스트 수신기를 컨텍스트 등록
 

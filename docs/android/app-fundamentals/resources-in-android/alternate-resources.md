@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 0384d96ddc96f8d0b16a42f691305f26ea25881d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108758"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527393"
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
@@ -54,10 +54,10 @@ ms.locfileid: "50108758"
 
 - **사용 가능한 너비** &ndash; 화면에 형식 w의 최소 너비*N*dp를 여기서 *N* 독립적 픽셀 밀도의 너비입니다.
   이 값은 사용자가 장치를 회전할 때 변경 될 수 있습니다. 더 자세하게 다룹니다 [다양 한 화면에 대 한 리소스를 만드는](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)합니다. 
-  API 수준 (Android 3.2) 13 이상에서 사용할 수 있습니다. 예: 한정자 w720dp 최소 720dp 너비가 있는 장치를 대상으로 하는 데 사용 됩니다.
+  API 수준 (Android 3.2) 13 이상에 사용할 수 있습니다. 예: 한정자 w720dp 최소 720dp 너비가 있는 장치를 대상으로 하는 데 사용 됩니다.
 
 - **높이** &ndash; 화면에 형식 h의 최소 높이*N*dp, 여기서 *N* dp의 높이입니다. 이 값은 사용자가 장치를 회전할 때 변경 될 수 있습니다. 더 자세하게 다룹니다 [다양 한 화면에 대 한 리소스를 만드는](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)합니다. 
-  API 수준 (Android 3.2) 13 이상에서 사용할 수 있습니다. 예를 들어, 한정자 h720dp 최소 720dp 높이가 있는 장치를 대상으로 사용 됩니다.
+  API 수준 (Android 3.2) 13 이상에 사용할 수 있습니다. 예를 들어, 한정자 h720dp 최소 720dp 높이가 있는 장치를 대상으로 사용 됩니다.
 
 - **화면 크기** &ndash; 이 한정자가 있는 이러한 리소스에 대 한 화면 크기의 일반화 합니다. 더 자세하게에서 다룹니다 [다양 한 화면에 대 한 리소스를 만드는](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)합니다. 
   가능한 값은 `small`, `normal`, `large` 및 `xlarge`입니다. API 수준 (Android 2.3/Android 2.3.1/Android 2.3.2) 9에 추가

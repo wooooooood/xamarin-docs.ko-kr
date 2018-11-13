@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 7f34bd5bbab4accaa30c22266dacd30692bf9ccc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107575"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526509"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵 파일을 저장 하는 중
 
@@ -54,13 +54,13 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 이 메서드는 곧 자세히 설명 되어 있습니다. 인코드된 비트맵 쓰기 가능한 스트림을에 기록 됩니다. ('W'에서 `SKWStream` "쓰기"는 의미입니다.) 두 번째와 세 번째 인수는 파일 형식을 지정 하 고 (손실 형식)에 대 한 0에서 100 사이의 원하는 품질입니다.
 
-또한 합니다 [ `SKImage` ](xref:SkiaSharp.SKImage) 및 [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) 클래스를 정의할 수도 `Encode` 방법과 약간 더 나쁠 수 있는 것을 선호할 수 있는 합니다. 쉽게 만들 수 있습니다는 `SKImage` 에서 개체를 `SKBitmap` 사용 하는 정적 개체 [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) 메서드. 가져올 수 있습니다는 `SKPixmap` 에서 개체를 `SKBitmp` 사용 하 여 개체를 [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) 메서드.
+또한 합니다 [ `SKImage` ](xref:SkiaSharp.SKImage) 및 [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) 클래스를 정의할 수도 `Encode` 방법과 약간 더 나쁠 수 있는 것을 선호할 수 있는 합니다. 쉽게 만들 수 있습니다는 `SKImage` 에서 개체를 `SKBitmap` 사용 하는 정적 개체 [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) 메서드. 가져올 수 있습니다는 `SKPixmap` 에서 개체를 `SKBitmap` 사용 하 여 개체를 [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) 메서드.
 
 중 하나는 [ `Encode` ](xref:SkiaSharp.SKImage.Encode) 정의한 메서드 `SKImage` 매개 변수가 없는 및 PNG 형식으로 자동으로 저장 합니다. 해당 매개 변수가 없는 메서드는 사용 하기가 매우 간편 합니다.
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>비트맵 파일을 저장 하기 위한 플랫폼 특정 코드
 
-인코딩할 때는 `SKBitmap` 개체로 특정 파일 형식에 수 일반적으로 일종의 스트림 개체와 데이터의 배열 이어야 합니다. 일부를 `Encode` 메서드 (정의한 매개 변수가 없는 것을 포함 하 여 `SKImage`) 반환을 [ `SKData` ](xref:SkiaSharp.SKData) 를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) 메서드. 이 데이터 파일에 저장 해야 합니다. 
+인코딩할 때는 `SKBitmap` 개체로 특정 파일 형식에 일반적으로 됩니다 수 둔 일종의 스트림 개체와 데이터의 배열입니다. 일부를 `Encode` 메서드 (정의한 매개 변수가 없는 것을 포함 하 여 `SKImage`) 반환을 [ `SKData` ](xref:SkiaSharp.SKData) 를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) 메서드. 이 데이터 파일에 저장 해야 합니다. 
 
 응용 프로그램 로컬 저장소에서 파일에 저장 하는 표준 사용할 수 있으므로 쉽게 `System.IO` 클래스 및이 태스크에 대 한 메서드. 이 기술 문서에 설명 되어 [ **SkiaSharp 비트맵 애니메이션** ](animating.md#bitmap-animation) 관련 하 여 일련의 비트맵 Mandelbrot 집합의 애니메이션.
 

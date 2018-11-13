@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: b51dd4f2a6bf0e3e5ec206953e60c264c70107a5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122285"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526938"
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.Mac 아키텍처
 
@@ -105,7 +105,7 @@ Xamarin.Mac – 동적 및 정적에 사용 되는 등록자의는 다음과 같
 
 ## <a name="generator"></a>Generator
 
-Xamarin.Mac 모든 Mac API에 대 한 정의 포함합니다. 탐색할 수 있습니다 이러한 합니다 [MaciOS github 리포지토리](https://github.com/xamarin/xamarin-macios/tree/master/src)합니다. 이러한 정의 특성을 가진 인터페이스 뿐만 아니라 모든 필요한 메서드 및 속성을 포함 합니다. 예를 들어, 다음 코드는를 사용 하는 NSBox에 정의 된 [AppKit 네임 스페이스](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526)합니다. 다양 한 메서드 및 속성을 사용 하 여 인터페이스 인지 확인 합니다.
+Xamarin.Mac 모든 Mac API에 대 한 정의 포함합니다. 탐색할 수 있습니다 이러한 합니다 [MaciOS github 리포지토리](https://github.com/xamarin/xamarin-macios/tree/master/src)합니다. 이러한 정의 특성을 가진 인터페이스 뿐만 아니라 모든 필요한 메서드 및 속성을 포함 합니다. 다음 코드는 NSBox에서 정의 하는 예를 들어 합니다 [AppKit 네임 스페이스](https://github.com/xamarin/xamarin-macios/blob/master/src/appkit.cs#L1465-L1526)합니다. 다양 한 메서드 및 속성을 사용 하 여 인터페이스 인지 확인 합니다.
 
 ```csharp
 [BaseType (typeof (NSView))]

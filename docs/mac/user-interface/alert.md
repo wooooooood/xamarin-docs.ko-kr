@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8f84b688998251db52c8c2be71949e1a2e665dc0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103961"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526413"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.Mac의 경고
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램에서 경고를 사용 하 여 작업을 설명 합니다. 만들기 및 경고를 표시에 대해 설명 합니다 C# 코드 및 사용자 상호 작용에 응답 합니다._
 
-작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및 동일한 경고 하는 개발자의 작업 *Objective-c* 하 고 *Xcode* 않습니다. 
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및 동일한 경고를에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다. 
 
 경고는 특수 한 유형의 대화 상자가 나타나면 (예: 오류) 심각한 문제가 발생 한 경우 또는 경고 (예: 파일을 삭제 하려면 준비). 경고 대화 상자 이기 때문에 문제가 닫힐 수 있음 전에 사용자 응답도 필요 합니다.
 

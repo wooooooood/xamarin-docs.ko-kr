@@ -1,18 +1,19 @@
 ---
-title: NuGet을 업데이트 하려면 어떻게 해야 합니까?
+title: NuGet을 업데이트하려면 어떻게 할까요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ac990024e99d8e49f921ce4b49a793731e332913
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 11/25/2015
+ms.openlocfilehash: 511b80013c13ae0d34f803255d0ed7fd6c09a988
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270230"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526428"
 ---
-# <a name="how-can-i-update-nuget"></a>NuGet을 업데이트 하려면 어떻게 해야 합니까?
+# <a name="how-can-i-update-nuget"></a>NuGet을 업데이트하려면 어떻게 할까요?
 
 NuGet 업데이트, 확장 및 추가 기능에서 찾을 수 있습니다 합니다 **업데이트** 탭에 **NuGet 패키지 관리자**합니다. Visual Studio에서 Mac 및 Visual Studio에 대 한 업데이트를 찾으려면 자세한 탐색에는 다음과 같습니다. 
 

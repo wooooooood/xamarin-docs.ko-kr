@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a8c55c8b4ff3fbd515aad8bf45c52a0b549af9f
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: MT
+ms.openlocfilehash: 0d89fff81d1d13baa578068bcaef11dd5af00e14
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285601"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527055"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.Mac의 테이블 뷰
 
 _이 문서에서는 Xamarin.Mac 응용 프로그램의 테이블 뷰를 사용 하 여 작업을 설명 합니다. Xcode 및 Interface Builder 및 코드에서 상호 작용 하에서 만드는 테이블 뷰를 설명 합니다._
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일 하 게 액세스할 수 있습니다 하는 테이블에서 작업 하는 개발자를 제공 하는 뷰 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 테이블 뷰를 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
+작업할 때 C# 에 액세스할 수 있는 Xamarin.Mac 응용 프로그램에서.NET 및는 동일한 테이블 작업 하는 개발자를 제공 하는 뷰 *Objective-c* 하 고 *Xcode* 않습니다. Xcode의 Xamarin.Mac이 Xcode와 직접 통합 되므로 사용할 수 있습니다 _Interface Builder_ 만들기 및 테이블 뷰를 유지 관리 (또는 필요에 따라 C# 코드에서 바로 작성).
 
 테이블 뷰를 하나 이상의 열을 여러 행의 정보를 포함 하 여 테이블 형식으로 데이터를 표시 합니다. 만들어지는 테이블 보기의 유형에 따라 사용자 수 열별로 정렬, 열을 다시 구성, 추가 열, 열을 제거 또는 테이블 내에 포함 된 데이터를 편집 합니다.
 

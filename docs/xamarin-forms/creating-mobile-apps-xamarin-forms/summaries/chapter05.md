@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 5 장 요
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 0e99d15bbecf6640b714b499997144eb18268183
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156498"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51562707"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 5 장입니다. 크기를 사용 하 여 처리
 
@@ -92,4 +92,4 @@ Windows 휴대폰 및 모바일 장치 160 장치 독립적인 1/96 인치 단�
 
 - [5 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)
 - [5 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
-- [5 장 F # 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)
+- [5 장 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FS)

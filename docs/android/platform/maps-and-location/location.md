@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120296"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563513"
 ---
 # <a name="location-services"></a>위치 서비스
 
@@ -190,7 +190,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 퓨즈 위치 공급자 위치 업데이트의 Xamarin.Android 응용 프로그램을 알림 호출을 `LocationCallBack.OnLocationResult(LocationResult result)`입니다. `Android.Gms.Location.LocationResult` 매개 변수 업데이트 위치 정보가 포함 됩니다.
 
-퓨즈 위치 공급자 변경 위치 데이터의 가용성에서을 감지 하면 호출 된 `LocationProvider.OnLocationAvaibility(LocationAvailability
+퓨즈 위치 공급자 변경 위치 데이터의 가용성에서을 감지 하면 호출 된 `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` 메서드. 경우는 `LocationAvailability.IsLocationAvailable` 속성에서 반환 `true`, 다음에서 장치 위치 결과 보고 있는지 간주 될 수 있습니다 `OnLocationResult` 으로 정확 하 고 최신으로 필요에 따라를 `LocationRequest`합니다. 하는 경우 `IsLocationAvailable` 가 false 이면 아무 위치에서 반환 될 `OnLocationResult`합니다.
 
 이 코드의 예제 구현은 `LocationCallback` 개체:
@@ -253,9 +253,9 @@ LocationManager locationManager = (LocationManager) GetSystemService(Context.Loc
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>LocationManager에서 위치 업데이트를 요청 합니다.
 
-응용 프로그램에 대 한 참조에는 `LocationManager`, 지시 해야를 `LocationManager` 어떤 유형의 위치 정보는 필수 이며 해당 정보를 업데이트 하는 빈도입니다. 호출 하 여이 작업을 수행할 `RequestionLocationUpdates` 에 `LocationManager` 개체 및 위치 업데이트를 받을 콜백 및 업데이트에 대 한 몇 가지 조건에 전달 합니다. 구현 해야 하는 형식이이 콜백에서 `ILocationListener` 인터페이스 (자세한 내용은이 가이드 뒷부분에서에서 설명).
+응용 프로그램에 대 한 참조에는 `LocationManager`, 지시 해야를 `LocationManager` 어떤 유형의 위치 정보는 필수 이며 해당 정보를 업데이트 하는 빈도입니다. 호출 하 여이 작업을 수행할 `RequestLocationUpdates` 에 `LocationManager` 개체 및 위치 업데이트를 받을 콜백 및 업데이트에 대 한 몇 가지 조건에 전달 합니다. 구현 해야 하는 형식이이 콜백에서 `ILocationListener` 인터페이스 (자세한 내용은이 가이드 뒷부분에서에서 설명).
 
-`RequestionLocationUpdates` 메서드의 지시에 따라 시스템 위치 서비스 응용 프로그램 위치 업데이트 수신을 시작 하려고 합니다. 이 메서드를 사용 하는 공급자 뿐만 아니라 시간 및 거리 임계값 업데이트 빈도 제어할 수를 지정할 수 있습니다. 예를 들어, 요청 위치 아래의 아래 메서드 업데이트 GPS 위치 공급자 로부터 2000 밀리초 마다 위치 1 미터 두 개를 변경 하는 경우에:
+`RequestLocationUpdates` 메서드의 지시에 따라 시스템 위치 서비스 응용 프로그램 위치 업데이트 수신을 시작 하려고 합니다. 이 메서드를 사용 하는 공급자 뿐만 아니라 시간 및 거리 임계값 업데이트 빈도 제어할 수를 지정할 수 있습니다. 예를 들어, 아래 메서드의 위치 2000 밀리초 마다 GPS 위치 공급자 로부터 업데이트를 요청 하 고 위치 1 미터 두 개를 변경 하는 경우에:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

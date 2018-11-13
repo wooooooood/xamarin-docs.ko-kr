@@ -7,12 +7,12 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c4d92784654db8e566b41c8270dbe2095bd28b94
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 354338aedf67a02918858cbab71d866e5cd8ec9d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156602"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527146"
 ---
 # <a name="summary-of-chapter-22-animation"></a>요약 22 장입니다. 애니메이션
 
@@ -48,7 +48,7 @@ ms.locfileid: "39156602"
 
 ### <a name="composite-animations"></a>복합 애니메이션
 
-복합 애니메이션을 만드는 대기 및 비 대기 애니메이션을 혼합할 수 있습니다. 애니메이션에서 이들은 `ViewExtensions` 대상으로 하는 합니다 `TranslatonX`, `TranslationY`, 및 `Scale` 변환 속성:
+복합 애니메이션을 만드는 대기 및 비 대기 애니메이션을 혼합할 수 있습니다. 애니메이션에서 이들은 `ViewExtensions` 대상으로 하는 합니다 `TranslationX`, `TranslationY`, 및 `Scale` 변환 속성:
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing))
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))
@@ -134,7 +134,7 @@ ms.locfileid: "39156602"
 
 ## <a name="deeper-into-animations"></a>애니메이션에 대 한 자세한
 
-Xamarin.Forms 애니메이션 시스템을 약간 혼동 될 수 있습니다. 외에는 `Easing` 클래스 애니메이션 시스템을 구성 합니다 `ViewExtensions`, `Animation`, 및 `AnimationExtension` classses 합니다.
+Xamarin.Forms 애니메이션 시스템을 약간 혼동 될 수 있습니다. 외에 `Easing` 클래스 애니메이션 시스템 구성 합니다 `ViewExtensions`, `Animation`, 및 `AnimationExtension` 클래스.
 
 ### <a name="viewextensions-class"></a>ViewExtensions 클래스
 
@@ -144,7 +144,7 @@ Xamarin.Forms 애니메이션 시스템을 약간 혼동 될 수 있습니다. �
 
 합니다 [ `Animation` ](xref:Xamarin.Forms.AnimationExtensions) 클래스에는 [생성자](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action)) 콜백, 완료 된 메서드 및 애니메이션의 매개 변수를 정의 하는 다섯 개의 인수를 사용 하 여 합니다.
 
-자식 애니메이션으로 추가할 수 있습니다 [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation))합니다 [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation))를 [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)), 및 오버 로드 하 고 [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
+자식 애니메이션으로 추가할 수 있습니다 [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation))합니다 [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation))를 [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)), 오버 로드 하 고 [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
 
 다음 애니메이션 개체에 대 한 호출을 사용 하 여 시작 합니다 [ `Commit` ](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) 메서드.
 
@@ -162,7 +162,7 @@ Xamarin.Forms 애니메이션 시스템을 약간 혼동 될 수 있습니다. �
 
 ### <a name="beyond-the-high-level-animation-methods"></a>고급 애니메이션 방법 외에도
 
-합니다 [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) 샘플 속성에서 대상으로 지정 된 된 범위를 벗어난 애니메이션을 수행 하는 방법을 보여 줍니다는 `ViewExtensions` 메서드. 예를 들어, 일련의 기간이 더 길어집니다; 또 다른 예로 `BackgroundColor` 속성에 애니메이션 효과가 적용 됩니다.
+합니다 [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) 샘플을 대상으로 지정 된 속성을 넘어서는 애니메이션을 수행 하는 방법을 보여 줍니다는 `ViewExtensions` 메서드. 예를 들어, 일련의 기간이 더 길어집니다; 또 다른 예로 `BackgroundColor` 속성에 애니메이션 효과가 적용 됩니다.
 
 ### <a name="more-of-your-own-awaitable-methods"></a>더 많은 사용자 고유의 awaitable 메서드
 

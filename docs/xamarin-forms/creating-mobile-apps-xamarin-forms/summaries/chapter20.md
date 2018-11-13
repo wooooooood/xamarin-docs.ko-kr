@@ -4,15 +4,15 @@ description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 20 장 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156732"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563773"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
 
@@ -28,7 +28,7 @@ ms.locfileid: "39156732"
 > [!NOTE]
 > Xamarin.Forms 프로그램을 사용할지 [ `HttpClient` ](xref:System.Net.Http.HttpClient) 대신 [ `WebRequest` ](xref:System.Net.WebRequest) 인터넷을 통해 파일에 액세스 합니다. `HttpClient` 비동기 작업을 지원합니다.
 
-비동기 처리 하는 최신 방법을.NET 및 C#에서 제공 됩니다. 여기에 [ `Task` ](xref:System.Threading.Tasks.Task) 및 [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) 클래스 및 기타 형식에는 [ `System.Threading` ](xref:System.Threading) 및 [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) 네임 스페이스와 C# 5.0 `async` 및 `await` 키워드입니다. 이 장에서 중점적입니다.
+비동기 처리 하는 최신 방법을.NET 및 C#에서 제공 됩니다. 여기에 [ `Task` ](xref:System.Threading.Tasks.Task) 및 [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) 클래스 및 기타 형식에는 [ `System.Threading` ](xref:System.Threading) 및 [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) 네임 스페이스와 C# 5.0 `async` 하 고 `await` 키워드입니다. 이 장에서 중점적입니다.
 
 ## <a name="from-callbacks-to-await"></a>Await 콜백에서
 

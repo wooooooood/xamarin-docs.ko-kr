@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: d3e5da19bacf5a6847bf6226c3fdd2b1e0e46ab2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 83f9651fa7fd20709c620258833ae4a152ffd0eb
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111066"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563669"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>이벤트, 프로토콜 및 Xamarin.iOS에서 대리자
 
@@ -52,7 +52,7 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-위의 코드 연결 되는 `ViewDidLoad` 는 UIViewContoller 메서드. `aButton` 변수 참조 단추가 iOS 디자이너 또는 코드를 사용 하 여 추가할 수 있습니다. 다음 그림 iOS 디자이너에에서 추가한 단추를 보여 줍니다.
+위의 코드 연결 되는 `ViewDidLoad` 메서드는 UIViewController의 합니다. `aButton` 변수 참조 단추가 iOS 디자이너 또는 코드를 사용 하 여 추가할 수 있습니다. 다음 그림 iOS 디자이너에에서 추가한 단추를 보여 줍니다.
 
 [![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "IOS 디자이너에에서 추가 단추")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
