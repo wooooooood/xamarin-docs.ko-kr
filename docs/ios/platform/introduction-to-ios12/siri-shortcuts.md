@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526899"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617763"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
 
@@ -695,7 +695,7 @@ Visual Studio에서 Mac 또는 Visual Studio 2017에 대 한 합니다.
 
 ### <a name="automatic-provisioning"></a>자동 프로 비전
 
-사용할 수 있는 참고 [자동 프로 비전](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) 프로 비전 작업은 IDE에서 직접 이들 중 대부분을 수행 하 합니다.
+사용할 수 있는 참고 [자동 프로 비전](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning) 프로 비전 작업은 IDE에서 직접 이들 중 대부분을 수행 하 합니다.
 그러나 자동 프로 비전 앱 그룹을 설정 하지 않습니다. 수동으로 구성 해야 합니다 **Entitlements.plist** 파일을 사용 하려는 app 그룹의 이름으로 앱 그룹을 자동으로 만든 각 앱 ID에 해당 앱 그룹을 할당 하려면 Apple 개발자 포털을 방문 프로 비전을 프로 비전 프로필 (앱, 인 텐트 확장, 인 텐트 UI 확장) 및 새로 만든된 앱 그룹을 포함 하 고, 다운로드 하 고, 설치를 다시 생성 합니다.
 
 ## <a name="related-links"></a>관련 링크

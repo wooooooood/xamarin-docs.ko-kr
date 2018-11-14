@@ -1,4 +1,10 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: 091f94f66e07309ca5c6cc6ba69e0631e17eb0c0
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617282"
 documentType: LandingData
 title: 플랫폼 간 지침
 metadata:
@@ -7,12 +13,6 @@ metadata:
   ms.author: crdun
   ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 9a08ccb3b00990a8b8425a2eb95d1f2390dda30e
-  ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
-  ms.translationtype: HT
-  ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/03/2018
-  ms.locfileid: "32436387"
 abstract:
   description: Xamarin은 모바일, 태블릿 및 데스크톱 응용 프로그램용 플랫폼 간 개발 솔루션을 제공합니다. 이 섹션에서는 대상으로 지정하는 플랫폼과 관계없이 적용되는 자세한 내용을 다룹니다.
   menu:
@@ -60,7 +60,7 @@ sections:
     - href: ~/cross-platform/get-started/index.md
       html: Xamarin을 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/cross-platform/get-started/index.md
       title: 시작
     - href: ~/cross-platform/platform
@@ -78,7 +78,7 @@ sections:
     - href: ~/cross-platform/deploy-test/performance.md
       html: 앱 성능 및 보안에 대한 지침입니다.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
         href: ~/cross-platform/deploy-test/performance.md
       title: 성능 및 보안
     - href: ~/cross-platform/deploy-test/
@@ -90,7 +90,7 @@ sections:
     - href: ~/cross-platform/desktop/
       html: 모바일 앱 빌드에 관심이 있는 .NET 데스크톱 개발자를 위한 지침입니다.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_xplat-code.svg
+        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
         href: ~/cross-platform/desktop/
       title: 데스크톱 개발자
 - title: 플랫폼

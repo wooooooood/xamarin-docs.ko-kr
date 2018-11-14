@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a795b382b9bcc727b0b0872d29d30a501cfed0a6
+ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563773"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598901"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
 
@@ -23,7 +23,7 @@ ms.locfileid: "51563773"
 
 사용자가 응답 그래픽 사용자 인터페이스를 기대 합니다. 이 프로그램을 사용자 입력 이벤트를 신속 하 게 처리 해야 한다는 것을 의미 합니다. 가능 하지 않은 처리 한 후 보조 스레드 실행에 있어 해야 합니다.
 
-이 가이드의 몇 가지 샘플 프로그램 사용 합니다 [ `WebRequest` ](xref:System.Net.WebRequest) 클래스입니다. 이 클래스에는 [ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) 메서드 완료 되 면 콜백 함수를 호출 하는 작업자 스레드를 시작 합니다. 그러나 프로그램을 호출 해야 하므로 해당 콜백 함수가 작업자 스레드에서 실행 [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) 메서드가 사용자 인터페이스에 액세스 하도록 합니다.
+이 가이드의 몇 가지 샘플 프로그램 사용 합니다 [ `WebRequest` ](xref:System.Net.WebRequest) 클래스입니다. 이 클래스에는 [ `BeginGetResponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) 메서드 완료 되 면 콜백 함수를 호출 하는 작업자 스레드를 시작 합니다. 그러나 프로그램을 호출 해야 하므로 해당 콜백 함수가 작업자 스레드에서 실행 [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) 메서드가 사용자 인터페이스에 액세스 하도록 합니다.
 
 > [!NOTE]
 > Xamarin.Forms 프로그램을 사용할지 [ `HttpClient` ](xref:System.Net.Http.HttpClient) 대신 [ `WebRequest` ](xref:System.Net.WebRequest) 인터넷을 통해 파일에 액세스 합니다. `HttpClient` 비동기 작업을 지원합니다.

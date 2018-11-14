@@ -5,12 +5,12 @@ description: 이 문서는 비교 하 고 WPF Xamarin.Forms에 대조 합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119851"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617594"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및입니다. Xamarin.Forms: 유사성 및 차이점
 
@@ -60,7 +60,7 @@ WPF에서와 마찬가지로 단일 필수 메서드는을 `ProvideValue` 태그
 
 ## <a name="binding-infrastructure"></a>바인딩 인프라
 
-전달 되는 핵심 개념 중 하나에.NET 데이터 속성에 시각적 속성을 연결 하는 데이터 바인딩 인프라입니다. 이 통해 MVVM과 같은 아키텍처 패턴. 기본 디자인 동일-바인딩할 수 있는 기본 클래스 [BindableObject](xref:Xamarin.Forms.BindableObject),이 WPF에는 [DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx) 클래스. 이 기본 클래스는 데이터 바인딩의 대상으로 참여 하는 모든 개체에 대 한 루트 상위 요소로 사용 됩니다. 파생된 클래스를 노출 합니다 [BindableProperty](xref:Xamarin.Forms.BindableProperty) 속성 값에 대 한 백업 저장소로 작동 하는 개체 (으로 정의 됩니다 [DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) wpf에서 개체).
+전달 되는 핵심 개념 중 하나에.NET 데이터 속성에 시각적 속성을 연결 하는 데이터 바인딩 인프라입니다. 이 통해 MVVM과 같은 아키텍처 패턴. 기본 디자인 동일-바인딩할 수 있는 기본 클래스 [BindableObject](xref:Xamarin.Forms.BindableObject),이 WPF에는 [DependencyObject](xref:System.Windows.DependencyObject) 클래스. 이 기본 클래스는 데이터 바인딩의 대상으로 참여 하는 모든 개체에 대 한 루트 상위 요소로 사용 됩니다. 파생된 클래스를 노출 합니다 [BindableProperty](xref:Xamarin.Forms.BindableProperty) 속성 값에 대 한 백업 저장소로 작동 하는 개체 (으로 정의 됩니다 [DependencyProperty](xref:System.Windows.DependencyProperty) wpf에서 개체).
 
 ### <a name="defining-bindable-properties"></a>바인딩 가능한 속성 정의
 

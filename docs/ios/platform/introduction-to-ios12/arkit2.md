@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 008fc22d654478df3151706101ef07bc0a23acb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4d5319005b28c5afa0906c44cfa59f0cad40de76
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111569"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617620"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.iOS에서 ARKit 2
 
@@ -373,7 +373,7 @@ ARKit 2의 최종 헤드라인 기능은 Apple Pixar의 채택 [Universal 장면
 
 ARKit 것 수동으로 리소스를 관리 하는 것이 중요 합니다. 이는 높은 프레임 속도 실제로 뿐만 아니라 _필요한_ "화면 고정 합니다."을 혼동 하지 않도록 ARKit 프레임 워크는 새 카메라 프레임을 제공 하는 방법에 대 한 지연 ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). 현재까지 [ `ARFrame` ](https://developer.xamarin.com/api/type/ARKit.ARFrame/) 했습니다 `Dispose()` 것에서 호출 되 면 ARKit는 제공 하지 새 프레임! 이렇게 하면 앱의 나머지 부분 응답 이더라도 "고정" 비디오. 해결책은 언제 든 지 액세스할 `ARSession.CurrentFrame` 사용 하 여는 `using` 차단 하거나 수동으로 호출 `Dispose()` 에 있습니다.
 
-파생 된 모든 개체 `NSObject` 됩니다 `IDisposable` 및 `NSObject` 구현 합니다 [Dispose 패턴](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/dispose-pattern)이므로 일반적으로 따라야 [이 패턴을 구현 하기 위한 `Dispose` 에서 파생 된 클래스](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose)합니다.
+파생 된 모든 개체 `NSObject` 됩니다 `IDisposable` 및 `NSObject` 구현 합니다 [Dispose 패턴](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern)이므로 일반적으로 따라야 [이 패턴을 구현 하기 위한 `Dispose` 에서 파생 된 클래스](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)합니다.
 
 ### <a name="manipulating-transform-matrices"></a>변환 행렬을 조작
 

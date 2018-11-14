@@ -1,5 +1,5 @@
 ---
-title: 시간 선택
+title: 시간 선택기
 description: TimePickerDialog 및 DialogFragment를 사용 하 여 시간을 선택
 ms.prod: xamarin
 ms.assetid: EB4E8206-E8AD-9F04-AC1C-82AC9364A9DD
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 911101d44e3ae401910b35b93d85ba3f79ddd35a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103987"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617672"
 ---
-# <a name="time-picker"></a>시간 선택
+# <a name="time-picker"></a>시간 선택기
 
 사용자는 시간을 선택할 수 있는 방법을 제공을 사용할 수 있습니다 [TimePicker](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/)합니다. Android 앱은 일반적으로 사용 `TimePicker` 사용 하 여 [TimePickerDialog](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog/) 시간 값을 선택 하기 위한 &ndash; 장치 및 응용 프로그램 전체에서 일관 된 인터페이스를 보장할 수 있습니다. `TimePicker` 12 시간제 또는 24 시간 AM/PM 모드로 하루 중 시간을 선택할 수 있습니다.
 `TimePickerDialog` 캡슐화 하는 도우미 클래스는 `TimePicker` 대화 상자에서.
@@ -279,7 +279,7 @@ is24HourFormat = true;
 
 [![24 시간 형식으로의 TimePicker 대화 상자](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
-처리기를 호출 하므로 [DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx) 작업의 시간을 인쇄 하려면 `TextView`에 계속 기본 12 시간 AM/PM 형식으로 인쇄 합니다.
+처리기를 호출 하므로 [DateTime.ToShortTimeString](xref:System.DateTime.ToShortDateString*) 작업의 시간을 인쇄 하려면 `TextView`에 계속 기본 12 시간 AM/PM 형식으로 인쇄 합니다.
 
 
 

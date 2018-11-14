@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 958ca967764b4547d6bdf64452e372d3ea4abd1e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 7d0ccfeaa85e74b15f1d1bf2feae8e4404b36813
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351524"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617347"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -57,7 +57,7 @@ sections:
     - href: ~/xamarin-forms/get-started/index.md
       html: Xamarin.Forms를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 빌드하세요.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/xamarin-forms/get-started/index.md
       title: 시작
     - href: ~/xamarin-forms/xaml/
@@ -87,7 +87,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
       html: 파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
@@ -105,7 +105,7 @@ sections:
     - href: ~/xamarin-forms/internals/
       html: Xamarin.Forms 내부 요소에 대한 추가 정보 및 지역화와 액세스 가능성 등의 기능에 대한 도움말입니다.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/xamarin-forms/internals/
       title: 고급 개념 및 내부 요소
 - title: 참조
@@ -119,4 +119,4 @@ sections:
     - title: 샘플
       html: <p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms 샘플</a></p>
     - title: 책
-      html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">모바일 앱 만들기 전자책</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">엔터프라이즈 응용 프로그램 패턴 전자책</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Xamarin.Forms의 SkiaSharp 그래픽 전자책</a></p>
+      html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">모바일 앱 전자책 만들기</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">엔터프라이즈 응용 프로그램 패턴 전자책</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Xamarin.Forms의 SkiaSharp 그래픽 전자책</a></p>

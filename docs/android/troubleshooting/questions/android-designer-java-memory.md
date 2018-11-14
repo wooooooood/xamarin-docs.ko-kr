@@ -1,5 +1,5 @@
 ---
-title: Android designer 용 Java 메모리 매개 변수를 조정합니다.
+title: Android Designer용 Java 메모리 매개 변수 조정
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118060"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617243"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android designer 용 Java 메모리 매개 변수를 조정합니다.
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android Designer용 Java 메모리 매개 변수 조정
 
 시작할 때 사용 되는 기본 메모리 매개 변수는 `java` Android designer를 일부 시스템 구성과 호환 되지 않을 대 한 처리 합니다.
 
@@ -35,7 +35,7 @@ Xamarin Studio 5.7.2.7 (및 이상, Visual Studio for Mac)부터 Visual Studio T
 
 1.  Visual Studio에서 솔루션을 엽니다.
 
-2.  솔루션 탐색기에서-하나씩 각 Android 프로젝트를 선택 하 고 클릭 [모든 파일 표시](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) 각 프로젝트에 두 번입니다. 포함 되지 않은 프로젝트를 건너뛸 수 있습니다 `.axml` 레이아웃 파일입니다. 이 단계는 각 프로젝트 디렉터리에 포함 되어 있는지 확인 합니다는 `.csproj.user` 파일입니다.
+2.  솔루션 탐색기에서-하나씩 각 Android 프로젝트를 선택 하 고 클릭 [모든 파일 표시](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) 각 프로젝트에 두 번입니다. 포함 되지 않은 프로젝트를 건너뛸 수 있습니다 `.axml` 레이아웃 파일입니다. 이 단계는 각 프로젝트 디렉터리에 포함 되어 있는지 확인 합니다는 `.csproj.user` 파일입니다.
 
 3.  Visual Studio를 종료합니다.
 

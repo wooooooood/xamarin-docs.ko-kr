@@ -8,17 +8,17 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
-ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
+ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50142338"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617659"
 ---
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
 > [!NOTE]
-> Xamarin 라이브 다시 로드의 미리 보기 기간이 종료 하 고 모든 사용자에 게 사용자 의견과 감사 하려고 합니다. 읽어보세요 우리의 [로드맵](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) Xamarin.Forms에 대 한 현재 작업 중인 새로운 생산성 기능에 자세히 알아보려면 Visual Studio 2019에 대 한 합니다. 이 확장 Visual Studio 2017에 대 한 사용 가능한 상태로 유지 되지만 향후 업데이트 받고 있지 않습니다.
+> Xamarin 라이브 다시 로드의 미리 보기 기간이 종료 하 고 모든 사용자에 게 사용자 의견과 감사 하려고 합니다. 읽어보세요 우리의 [로드맵](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) Xamarin.Forms에 대 한 현재 작업 중인 새로운 생산성 기능에 자세히 알아보려면 Visual Studio 2019에 대 한 합니다. 이 확장 Visual Studio 2017에 대 한 사용 가능한 상태로 유지 되지만 향후 업데이트 받고 있지 않습니다.
 
 Xamarin 라이브 다시 로드 수 있습니다 **에 XAML을 변경 하 고 다른 컴파일 없이 실시간으로 반영 배포**합니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
 

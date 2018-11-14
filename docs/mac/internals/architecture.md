@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
-ms.openlocfilehash: 7b9b3b648f6ac66859714052e916407026da10d4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
+ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526938"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51579832"
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.Mac 아키텍처
 
@@ -145,7 +145,7 @@ Xamarin.Mac.dll를 만든 후, packager를 `mmp`, 모든 구성 요소를 함께
 - 앱 번들 구조를 만듭니다.
 - 관리 되는 어셈블리에서 복사 합니다.
 - 연결을 사용 하는 경우 사용 하지 않는 부분을 제거 하 여 어셈블리를 최적화 하기 위해 관리 되는 링커를 실행 합니다.
-- 정적 모드인 경우 등록자 코드와 함께 이야기 launcher 코드에 연결 하는 시작 관리자 응용 프로그램을 만듭니다.
+- 시작 관리자 응용 프로그램을 고정 모드에서 작업 하는 경우 등록 기관 코드와 함께 이야기 launcher 코드에서 연결을 만듭니다.
 
 이 사용자의 일부로 실행 빌드 프로세스에서 사용자 코드를 어셈블리로 컴파일합니다를 참조 하는 Xamarin.Mac.dll 및 실행 한 다음 `mmp` 패키지를 확인 하려면
 

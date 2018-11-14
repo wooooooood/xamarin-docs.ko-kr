@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 150d5a35a2ccae63a1ff9969f5751b0e93c12454
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: HT
+ms.openlocfilehash: 4e236f2517482665406008d0b86af487e2d799dd
+ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527003"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51579884"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac의 표준 컨트롤
 
@@ -508,7 +508,7 @@ FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.
 특수 컨트롤 (예: 색 및 이미지도)는 해당 값 형식에 대 한 특정 속성이 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
-CollorWell.Color = NSColor.Red;
+ColorWell.Color = NSColor.Red;
 ImageWell.Image = NSImage.ImageNamed ("tag.png");
 
 ```
