@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681568"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.iOS에 대 한 문제 해결 팁 
 
@@ -46,9 +46,10 @@ Apple의 참조할 수도 있습니다 [출 선](https://developer.apple.com/lib
 
 멤버는 링커로 가능성이 없어집니다 및 따라서 런타임에 어셈블리에 존재 하지 않습니다.  가지이 몇 가지 솔루션이 있습니다.
 
--  추가 된 [[유지]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) 멤버에 특성입니다.  이렇게 하면 링커에서 제거 되지 것입니다.
--  호출할 때 [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) 를 사용 합니다 **-nolink** 또는 **-linksdkonly** 옵션입니다. -    **-nolink** 모든 연결을 사용 하지 않도록 설정 합니다.
--    **-linksdkonly** 연결 Xamarin.iOS가 제공한 어셈블리와 같은 *monotouch.dll* 또는 xamarin.ios.dll 합니다.
+- 추가 된 [ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) 멤버에 특성입니다.  이렇게 하면 링커에서 제거 되지 것입니다.
+- 호출할 때 [ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29)를 사용 합니다 **-nolink** 또는 **-linksdkonly** 옵션:
+  - **-nolink** 모든 연결을 사용 하지 않도록 설정 합니다.
+  - **-linksdkonly** 연결 Xamarin.iOS가 제공한 어셈블리와 같은 **xamarin.ios.dll**, 사용자가 만든 어셈블리의 모든 형식을 유지 하면서 (ie. 앱 프로젝트).
 
 Note는 어셈블리는 연결 되어 있으므로 결과 실행 파일은 작은; 따라서 것이 바람직한 것 보다 더 큰 실행 파일에서 연결을 사용 하지 않도록 설정 될 수 있습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: deabecc0dc96f8963122afebc0dc0ba256fd92e8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 10e45ec438f1e698a9f09223cecea5934de54da8
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115564"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617716"
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 
@@ -233,7 +233,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 ## <a name="dispose-of-unused-image-resources"></a>사용되지 않는 이미지 리소스 삭제
 
-메모리 사용을 절약하려면 더 이상 필요 없는 큰 이미지 리소스를 삭제하는 것이 좋습니다. 그러나 이미지를 제대로 삭제해야 합니다. 명시적 `.Dispose()` 호출을 사용하는 대신 [using](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement) 문을 활용하여 `IDisposable` 개체를 바르게 사용하도록 할 수 있습니다. 
+메모리 사용을 절약하려면 더 이상 필요 없는 큰 이미지 리소스를 삭제하는 것이 좋습니다. 그러나 이미지를 제대로 삭제해야 합니다. 명시적 `.Dispose()` 호출을 사용하는 대신 [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) 문을 활용하여 `IDisposable` 개체를 바르게 사용하도록 할 수 있습니다. 
 
 예를 들어 [비트맵](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) 클래스는 `IDisposable`을 구현합니다. `using` 블록에서 `BitMap` 개체의 인스턴스화를 래핑하면 블록에서 종로 시 올바르게 삭제되도록 합니다.
 

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
-ms.date: 05/11/2018
-ms.openlocfilehash: c923a62916959c74b8cd753d25361afee68e75fe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 21229bc9d56865d6365f8ddfe4dd2046fbabc03d
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131933"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681529"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Windows용 원격 iOS 시뮬레이터
 
@@ -32,11 +32,11 @@ Windows에 대 한 원격 iOS 시뮬레이터는 Visual Studio 2017에서 Xamari
 
 유용한 단추 수를 포함 하는 시뮬레이터 창의 맨 위에 있는 도구 모음:
 
-- **홈** – 홈 단추 iOS 장치를 시뮬레이션 합니다.
-- **잠금** – 잠금 (잠금 해제를 살짝 밀기) 시뮬레이터
-- **스크린 샷** – 시뮬레이터의 스크린 샷 저장
+- **홈** -iOS 장치의 홈 단추를 시뮬레이션 합니다.
+- **잠금** – 시뮬레이터 (잠금을 해제 하려면 살짝 밀기)를 잠급니다.
+- **스크린 샷** – 시뮬레이터의 스크린 샷을 저장 (에 저장 된 **Pictures\Xamarin\iOS 시뮬레이터\**).
 - [**설정을** ](#settings) -키보드, 위치 및 기타 설정을 표시 합니다.
-- [**기타 옵션** ](#other-options) – 회전 및 흔들기 제스처와 같은 다양 한 시뮬레이터 옵션 표시
+- [**기타 옵션** ](#other-options) – 회전, 흔들기 제스처, 터치 ID 등 다양 한 시뮬레이터 옵션 표시
 
     [![](images/maps-app-sml.png "iOS 시뮬레이터가 매핑합니다 예제를")](images/maps-app.png#lightbox)
 

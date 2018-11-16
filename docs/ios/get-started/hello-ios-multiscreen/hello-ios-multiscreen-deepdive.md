@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 61a90632849787e28526f83d53247a0491148148
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: e8b3881db99d569008ce1290f81891f1b3b183d7
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235092"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563812"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -125,13 +125,13 @@ iOS는 전환이 발생하기 직전에 `PrepareForSegue`를 호출하고 Storyb
 이 시점에서 Segue의 대상 뷰 컨트롤러를 수동으로 설정해야 합니다. 다음 코드는 대상 뷰 컨트롤러로 핸들을 가져오고 적절한 클래스(이 경우 CallHistoryController)로 캐스팅합니다.
 
 ```csharp
-CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 마지막으로 `CallHistoryController`의 `PhoneHistory` 속성을 전화를 건 전화번호 목록으로 설정하여 `ViewController`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
 
 ```csharp
-callHistoryContoller.PhoneNumbers = PhoneNumbers;
+callHistoryController.PhoneNumbers = PhoneNumbers;
 ```
 
 Segue를 사용하여 데이터를 전달하기 위한 전체 코드는 다음과 같습니다.
@@ -141,10 +141,10 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+    var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-         callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+         callHistoryController.PhoneNumbers = PhoneNumbers;
     }
  }
 ```
