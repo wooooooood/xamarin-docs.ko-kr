@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: e9ec7bc9186193c8a87bd1ddfabd3e72153d7e81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 09db1075ef787041e806ef3afb569e4830f51575
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103324"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563825"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
@@ -156,7 +156,7 @@ ms.locfileid: "50103324"
 
     ![](hello-ios-multiscreen-quickstart-images/18new.png "Properties Pad에서 보기 컨트롤러 제목을 통화 기록으로 변경")
 
-16. 응용 프로그램이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
+16. 애플리케이션이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만, 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
 
     이 앱은 문자열의 목록으로 전화번호를 저장합니다.
 
@@ -240,14 +240,14 @@ ms.locfileid: "50103324"
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }
@@ -398,7 +398,7 @@ ms.locfileid: "50103324"
 
     ![](hello-ios-multiscreen-quickstart-images/image16.png "보기 컨트롤러 제목을 통화 기록으로 변경")
 
-16. 응용 프로그램이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
+16. 애플리케이션이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만, 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
 
     이 앱은 문자열의 목록으로 전화번호를 저장합니다.
 
@@ -482,14 +482,14 @@ ms.locfileid: "50103324"
           // set the view controller that’s powering the screen we’re
           // transitioning to
 
-          var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+          var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
           //set the table view controller’s list of phone numbers to the
           // list of dialed phone numbers
 
-          if (callHistoryContoller != null)
+          if (callHistoryController != null)
           {
-            callHistoryContoller.PhoneNumbers = PhoneNumbers;
+            callHistoryController.PhoneNumbers = PhoneNumbers;
           }
         }
       }

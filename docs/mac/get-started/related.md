@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: ae1ac9b40a0e6a62076a6143e64fa8beb82df6c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107319"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526951"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac – 관련 설명서
 
@@ -26,7 +26,7 @@ ms.locfileid: "50107319"
 
 ## <a name="user-interface"></a>사용자 인터페이스
 
-Xamarin.Mac 응용 프로그램에서 C# 및 .NET을 작업할 때 개발자는 *Objective-C* 및 *Xcode*에서 작업하는 개발자와 동일한 사용자 인터페이스 컨트롤에 액세스할 수 있습니다. Xamarin.Mac이 Xcode와 직접 통합되므로 개발자는 Xcode의 _Interface Builder_를 사용하여 앱의 사용자 인터페이스를 만들고 유지 관리할 수 있습니다(또는 필요에 따라 C# 코드에서 바로 작성).
+Xamarin.Mac 애플리케이션에서 C# 및 .NET을 작업할 때 개발자는 *Objective-C* 및 *Xcode*에서 작업하는 개발자와 동일한 사용자 인터페이스 컨트롤에 액세스할 수 있습니다. Xamarin.Mac이 Xcode와 직접 통합되므로 개발자는 Xcode의 _Interface Builder_를 사용하여 앱의 사용자 인터페이스를 만들고 유지 관리할 수 있습니다(또는 필요에 따라 C# 코드에서 바로 작성).
 
 아래에 나열된 지침은 Xamarin.Mac 응용 프로그램에서 macOS 요소를 작업하는 자세한 방법을 설명합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 88b09070f41ec586ab0eed82173763bb1706dc62
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce102f189321cbd49b37e7718c1f3d478c322f55
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103376"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526691"
 ---
 # <a name="set-up-device-for-development"></a>개발용 장치 설정
 
@@ -62,7 +62,7 @@ USB 디버깅 등 개발자 옵션을 사용하도록 설정하고 절전 모드
 
 ## <a name="install-usb-drivers"></a>USB 드라이버 설치
 
-이 단계는 OS X에 필요하지 않습니다. USB 케이블을 사용하여 장치를 Mac에 연결하기만 하면 됩니다.
+이 단계는 OS X에 필요하지 않습니다. USB 케이블을 사용하여 디바이스를 Mac에 연결하기만 하면 됩니다.
 
 Windows 컴퓨터에서 USB로 연결된 Android 장치를 인식하기 전에 몇 가지 추가 드라이버를 설치해야 할 수도 있습니다.
 

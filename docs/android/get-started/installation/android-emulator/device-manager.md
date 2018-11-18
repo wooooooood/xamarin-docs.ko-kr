@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 8cf11056881af6fd622cae901d518fe27f61d08f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 67ab5b9bd711cb10a20b1365effea1627d0f7688
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115395"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526990"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 장치 관리
 
@@ -307,7 +307,7 @@ Android 장치 관리자를 처음 실행하면 현재 구성된 모든 가상 �
 
 9. Android Device Manager는 장치 생성 중 **만드는 중** 진행률 표시기를 표시하는 동안 설치된 가상 장치 목록에 새 장치를 추가합니다.
 
-   [![만들기 진행률 indictator](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
+   [![만들기 진행률 표시기](device-manager-images/mac/19-creating-the-device-m76-sml.png)](device-manager-images/mac/19-creating-the-device-m76.png#lightbox)
 
 10. 만들기 프로세스가 완료되면 설치된 가상 장치 목록에 실행할 준비가 된 새 장치와 **시작** 단추가 표시됩니다.
 

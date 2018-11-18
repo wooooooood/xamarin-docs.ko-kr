@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: cd46aac653d6477f3fc8240e4f193ec1c4a7bb4c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 215aa88b7e97a67242bd991dde0e66c445b47b0a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122441"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526425"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>App Center를 사용하여 Xamarin.Forms 테스트 자동화
 
@@ -28,7 +28,7 @@ _Xamarin UITest 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우�
 - [App Center 테스트 소개](/appcenter/test-cloud/)
 - [UITest 소개](/appcenter/test-cloud/preparing-for-upload/uitest/)
 
-Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 응용 프로그램에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 응용 프로그램과 동일합니다.
+Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 애플리케이션에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 애플리케이션과 동일합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -200,7 +200,7 @@ Xamarin.UITest를 Xamarin.Forms 솔루션에 추가하면 UITest를 만들고, �
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms 응용 프로그램은 테스트 자동화를 위한 고유한 뷰 ID로 `AutomationId`를 노출하는 단순한 메커니즘을 사용하는 **Xamarin.UITest**로 손쉽게 테스트할 수 있습니다. Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 응용 프로그램에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 응용 프로그램과 동일합니다.
+Xamarin.Forms 응용 프로그램은 테스트 자동화를 위한 고유한 뷰 ID로 `AutomationId`를 노출하는 단순한 메커니즘을 사용하는 **Xamarin.UITest**로 손쉽게 테스트할 수 있습니다. Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 애플리케이션에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 애플리케이션과 동일합니다.
 
 App Center Test에 테스트를 제출하는 방법에 대한 자세한 내용은 [UITest 제출](/appcenter/test-cloud/preparing-for-upload/uitest/)을 참조하세요. UITest에 대한 자세한 내용은 [App Center Test 설명서](/appcenter/test-cloud/)를 참조하세요.
 

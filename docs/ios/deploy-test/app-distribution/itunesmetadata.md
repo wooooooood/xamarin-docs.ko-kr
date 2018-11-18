@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: af1ad32e605bbbe899ec8596a60cdabf226372db
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c03815776921a61c1f54136e3f09c0996dff71d3
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111306"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528418"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
 
@@ -20,7 +20,7 @@ _이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시
 
 iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 장치 및 필요한 장치 기능과 같은 정보를 지정할 수 있습니다. 임시 배포를 통해 테스터 또는 엔터프라이즈 사용자에게 배달되는 iOS 응용 프로그램의 경우 이 정보가 누락됩니다.
 
-누락된 정보를 임시 배포에 제공하기 위해 선택적인 `iTunesMetadata.plist` 파일을 만들어 응용 프로그램 IPA 파일에 포함할 수 있습니다. 이 plist 파일은 지정된 iOS 응용 프로그램에 대한 정보를 정의하는 키/값 쌍이 포함된 특수 형식의 XML 파일입니다(Apple의 [속성 목록 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 참조).
+누락된 정보를 임시 배포에 제공하기 위해 선택적인 `iTunesMetadata.plist` 파일을 만들어 응용 프로그램 IPA 파일에 포함할 수 있습니다. 이 plist 파일은 지정된 iOS 애플리케이션에 대한 정보를 정의하는 키/값 쌍이 포함된 특수 형식의 XML 파일입니다(Apple의 [속성 목록 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 참조).
 
 <a name="iTunesMetadata_contents" />
 

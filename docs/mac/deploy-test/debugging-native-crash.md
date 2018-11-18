@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 6cf19efcd2fa0f9d74034214bfa6a4e60ce0f9e2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 777e8d2880313b5a793d6257cc0fd9d8299cb94d
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103883"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528483"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
@@ -159,7 +159,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ```
 
-이 가이드는 크래시가 발생할 경우 이러한 특성의 버그를 추적하고, 해결할 수 있도록 올바르게 보고하고, 그때까지 코드에서 버그를 수정하는 데 도움이 됩니다.
+이 가이드는 크래시가 발생할 경우 이러한 특성의 버그를 추적하고, 해결할 수 있도록 올바르게 보고하고, 그때까지 코드에서 버그를 해결할 수 있도록 도와줍니다.
 
 ### <a name="locating"></a>찾기
 
