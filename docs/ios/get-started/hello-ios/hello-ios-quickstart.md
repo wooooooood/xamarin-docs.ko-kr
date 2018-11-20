@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 092b67ba13a3c8e5405b894929f6e00fb8b21240
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ec24e49e03237829474515a9abe9b014d10014f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122662"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527120"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
@@ -257,7 +257,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
     ![](hello-ios-quickstart-images/image27.png "시뮬레이터를 선택하고 시작을 누릅니다.")
 
     > [!NOTE]
-    > 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 *서명 ID*가 필요할 수 있습니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+    > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 28. 그러면 iOS 시뮬레이터 내에서 응용 프로그램이 시작됩니다.
 
