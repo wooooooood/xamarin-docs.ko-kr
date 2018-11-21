@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563981"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172251"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
-> [!NOTE] 
+> [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms 지원를 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 에서 파생 된 요소 `View`합니다. 맵을 사용 하 여 관련 된 위에 표시 되는 특별 한 플랫폼 요구 사항으로 인해 별도 어셈블리에 구현 됩니다 **Xamarin.Forms.Maps**를 다른 네임 스페이스를 포함 하 고: `Xamarin.Forms.Maps`합니다.
@@ -194,7 +194,7 @@ Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가�
 
 ### <a name="the-phones-location"></a>휴대폰의 위치
 
-[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) 의 속성 `Map` 약간으로 세 가지 플랫폼에서 다르게 작동 합니다 [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일을 보여 줍니다.
+[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) 의 속성 `Map` 약간으로 각 플랫폼에서 다르게 작동 합니다 [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일을 보여 줍니다.
 
 - IOS에서 파랑 점 휴대폰의 위치를 나타내는 있지만 있습니다에 수동으로 이동 해야 합니다.
 - Android에서는 아이콘이 표시 됩니다 때 푸시 이동 휴대폰의 위치에 매핑

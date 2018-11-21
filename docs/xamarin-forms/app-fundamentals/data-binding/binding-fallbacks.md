@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: fa375720730630065609e328b343e16578c6f1df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131993"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171601"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 
@@ -44,7 +44,7 @@ ms.locfileid: "50131993"
 > [!NOTE]
 > 설정 하는 것이 불가능 합니다 `FallbackValue` 바인딩 식 사용 하 여 속성입니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 ![FallbackValue 바인딩을](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue 바인딩")
 
@@ -93,7 +93,7 @@ ms.locfileid: "50131993"
 > [!NOTE]
 > 설정 하는 것이 불가능 합니다 `TargetNullValue` 바인딩 식 사용 하 여 속성입니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![TargetNullValue 바인딩을](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue 바인딩")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue 바인딩")
 

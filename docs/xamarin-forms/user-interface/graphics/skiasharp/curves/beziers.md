@@ -1,5 +1,5 @@
 ---
-title: 세 가지 유형의 베 지 어 곡선
+title: 3가지 형식의 Bézier 곡선
 description: 이 문서에서는 SkiaSharp 사용 하 여 Xamarin.Forms 응용 프로그램에서 입방 형 3, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615342"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172355"
 ---
-# <a name="three-types-of-bzier-curves"></a>세 가지 유형의 베 지 어 곡선
+# <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
 
 _SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법_
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다음 세 플랫폼 모두에서 실행 중인 것:
+여기이 실행 됩니다.
 
 [![](beziers-images/beziercurve-small.png "베 지 어 곡선 페이지 스크린샷 삼중")](beziers-images/beziercurve-large.png#lightbox "삼중 베 지 어 곡선 페이지 스크린샷")
 
@@ -207,7 +207,7 @@ float Magnitude(SKPoint v)
 
 시작점과 끝점 (`point0` 고 `point3`) 원에 대 한 일반 파라메트릭 수식에 따라 계산 됩니다. 원을 중심으로 하기 때문에 (0, 0) 이러한 지점이 처리 될 수도 방사형 벡터로 원의 중심에서 원주를 합니다. 제어점이 방사형 벡터에 직각 되므로 탄젠트 값은 원형에 있는 줄에 있습니다. 다른 직각을 이루어야 벡터는 X 및 Y 좌표는 교환, 음수 수행 중 하나를 사용 하 여 원래 벡터 하기만 하면 됩니다.
 
-세 가지 다른 각도 사용 하 여 세 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
+다른 각도 사용 하 여 실행 중인 프로그램이 다음과 같습니다.
 
 [![](beziers-images/beziercirculararc-small.png "베 지 어 원호 페이지 스크린샷 삼중")](beziers-images/beziercirculararc-large.png#lightbox "삼중 베 지 어 원호 페이지 스크린샷")
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-점을 sinusoidally 진동 값에 따라 보간 `t`합니다. 일련의 연결 된 4 개의 베 지 어 곡선을 생성 하는 보간된 지점 사용 됩니다. 애니메이션을 사각형으로 원에서 진행률을 표시 하는 세 가지 플랫폼에는 다음과 같습니다.
+점을 sinusoidally 진동 값에 따라 보간 `t`합니다. 일련의 연결 된 4 개의 베 지 어 곡선을 생성 하는 보간된 지점 사용 됩니다. 애니메이션을 다음과 같습니다.
 
 [![](beziers-images/squaringthecircle-small.png "삼중 스크린샷은 Squaring 원 페이지")](beziers-images/squaringthecircle-large.png#lightbox "삼중 스크린샷은 Squaring 원 페이지")
 
@@ -338,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 그래프 문서에 관련성을 확인 하려면 이러한 좌표를 그릴 좋은 연습을 수 있습니다. 점 (0, 0)을 중심으로 무한대 기호는 있고 두 개의 루프 센터 (–150, 0) 및 (150, 0) 및 100의 반지름입니다. 일련의 `CubicTo` 명령을 볼 수 있습니다 –95 및 –205 값에서 수행 하는 제어점 좌표 X (해당 값은 –150 더하기 및 빼기 55) 205 및 95 (150 더하기 및 빼기 55) 뿐만 아니라 250 –250 왼쪽과 오른쪽에 대 한 합니다. 무한대 기호를 센터에서 자체 교차 하는 경우 유일한 예외가입니다. 에 없는 경우에 제어점 50 및 –50 곡선 가운데 근처에 있는 초과 맞춤을 조합 하 여 좌표입니다.
 
-다음은 세 플랫폼 모두에서 무한대 기호가입니다.
+무한대 기호는 다음과 같습니다.
 
 [![](beziers-images/bezierinfinity-small.png "베 지 어 무한대 페이지 스크린샷 삼중")](beziers-images/bezierinfinity-large.png#lightbox "삼중 베 지 어 무한대 페이지 스크린샷")
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-및 세 플랫폼 모두에서 실행 중인 것 같습니다.
+및 여기 실행 됩니다.
 
 [![](beziers-images/quadraticcurve-small.png "정방형 곡선 페이지 스크린샷 삼중")](beziers-images/quadraticcurve-large.png#lightbox "삼중 정방형 곡선 페이지 스크린샷")
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다음 세 플랫폼 모두에서 실행 중인 것:
+여기이 실행 됩니다.
 
 [![](beziers-images/coniccurve-small.png "삼중 원추형 곡선 페이지 스크린샷")](beziers-images/coniccurve-large.png#lightbox "삼중 원추형 곡선 페이지 스크린샷")
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 6dc7737290bf7eacb3ba0e0bca0ddcfcd4aacba3
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 6e0377b71badfae0d0e6a1a6ffdaf1d67a7f3ad9
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615264"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171419"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -224,7 +224,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-스크린샷은 다양 한 `Picker` 세 가지 플랫폼에서 선택 합니다.
+스크린샷에서 다양 한 표시 `Picker` 선택:
 
 [![](lines-images/multiplelines-small.png "여러 줄 페이지의 3 배가 스크린샷")](lines-images/multiplelines-large.png#lightbox "삼중 여러 줄 페이지 스크린샷")
 

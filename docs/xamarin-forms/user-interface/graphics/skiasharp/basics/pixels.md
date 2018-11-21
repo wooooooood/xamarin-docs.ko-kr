@@ -7,12 +7,12 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615303"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171926"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 장치 독립적 단위
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 메서드 시작 (왼쪽에 있는 작은 여백)에 대 한 20의 X 좌표 및 Y 좌표를 사용 하 여 텍스트의 첫 번째 줄 `fontSpacing`, 화면 맨 위에 있는 텍스트의 첫 번째 줄의 전체 높이 표시 하는 데 필요한 것 보다 좀 더 많은 인 합니다. 호출한 후 `DrawText`, Y 좌표 중 하나 또는 두 개의 씩 증가 `fontSpacing`합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![](pixels-images/surfacesize-small.png "화면 크기 페이지 스크린샷 삼중")](pixels-images/surfacesize-large.png#lightbox "삼중 화면 크기 페이지 스크린샷")
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다음 세 가지 플랫폼에서 실행 중인:
+여기이 실행 됩니다.
 
 [![](pixels-images/ellipsefill-small.png "화면 크기 페이지 스크린샷 삼중")](pixels-images/ellipsefill-large.png#lightbox "삼중 화면 크기 페이지 스크린샷")
 

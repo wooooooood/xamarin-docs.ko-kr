@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e0ad67db0671996e594f9c5d48b329a5d676fc1d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563435"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171770"
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
 
@@ -327,7 +327,7 @@ XamlSamples에 포함 된 프로젝트는 라는 클래스 `NamedColor`합니다
 </ContentPage>
 ```
 
-사용 하 여 `OnPlatform` 의 크기를 정의 하는 `BoxView` 와의 높이 `ListView` 행. 세 플랫폼 모두에 대 한 값이 동일 하지만 태그를 쉽게 디스플레이 미세 조정 하기 위해 다른 값에 적용할 수 있습니다.
+사용 하 여 `OnPlatform` 의 크기를 정의 하는 `BoxView` 와의 높이 `ListView` 행. 모든 플랫폼에 대 한 값이 동일 하지만 태그를 쉽게 디스플레이 미세 조정 하기 위해 다른 값에 적용할 수 있습니다.
 
 ## <a name="binding-value-converters"></a>바인딩 값 변환기
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: 9a534c39d514fec9a0de4bc810f33c972453baa2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f5fdaa55f91656d8560fb9ad2eb2b938d5c9a02f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111657"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171848"
 ---
 # <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
 
@@ -158,7 +158,7 @@ public partial class MainPage : ContentPage
 
 타이머 틱 초 마다 실행 합니다 `OnTimerTick` 확인 하는 메서드 여부를 [ `Switch` ](xref:Xamarin.Forms.Switch) 에 사용할지 여부와 현재 시간 보다 큽니다. 되었거나 타이머에 같음. 타이머에 발생 합니다 [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드 참고로 사용자에 게 경고 대화 상자를 제공 합니다.
 
-샘플을 처음 실행할 때 합니다 [ `TimePicker` ](xref:Xamarin.Forms.TimePicker) 보기가 11를 초기화 합니다. 탭의 `TimePicker` 플랫폼 시간 선택기를 호출 합니다. 매우 다양 한 방식에서 시간 선택기를 구현 하는 세 가지 플랫폼 이지만 각 접근 방식은 해당 플랫폼의 사용자에 게 친숙 합니다.
+샘플을 처음 실행할 때 합니다 [ `TimePicker` ](xref:Xamarin.Forms.TimePicker) 보기가 11를 초기화 합니다. 탭의 `TimePicker` 플랫폼 시간 선택기를 호출 합니다. 매우 다양 한 방식에서 시간 선택기를 구현 하는 플랫폼 이지만 각 접근 방식은 해당 플랫폼의 사용자에 게 친숙 합니다.
 
 [![시간 선택](timepicker-images/timepicker-open.png "시간 선택")](timepicker-images/timepicker-open-large.png#lightbox "시간 선택")
 

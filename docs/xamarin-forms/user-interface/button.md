@@ -6,13 +6,13 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/26/2018
-ms.openlocfilehash: cdff3e721aa91733e995e95ead533a3ad7b41a77
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.date: 11/19/2018
+ms.openlocfilehash: fbdb611df558c547a2470a8c8a9d7848ef7aa31f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563929"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171393"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
@@ -422,7 +422,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 텍스트의 크기
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 기울임꼴 또는 굵게 표시 된 텍스트 인지 여부를 나타냅니다.
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) 테두리의 너비
-- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 모서리를 둥글게 만듭니다.
+- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 모서리 반지름을 `Button`
 
 > [!NOTE]
 > `Button` 클래스에 [ `Margin` ](xref:Xamarin.Forms.View.Margin) 하 고 [ `Padding` ](xref:Xamarin.Forms.Button.Padding) 레이아웃 동작을 제어 하는 속성을 `Button`합니다. 자세한 내용은 [여백 및 안쪽 여백](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)합니다.
@@ -543,6 +543,40 @@ public partial class PressAndReleaseButtonPage : ContentPage
 IOS에서 보면 큰 테두리 너비의 내부를 저해 하는 `Button` 텍스트 표시를 방해 합니다. IOS를 사용 하 여 테두리를 사용 하기로 `Button`, 시작 및 종료 하 고 싶을 `Text` 보이도록 유지 하려면 공백 사용 하 여 속성입니다.
 
 UWP에서 선택 하는 `CornerRadius` 높이의 절반을 초과 하는 `Button` 예외를 발생 시킵니다.
+
+## <a name="button-visual-states"></a>단추 시각적 상태
+
+[`Button`](xref:Xamarin.Forms.Button) 에 `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) 시각적으로 변화를 시작 하려면 사용할 수 있는 `Button` 설정 된 사용자가 누를 때.
+
+다음 XAML 예제에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다는 `Pressed` 상태:
+
+```xaml
+<Button Text="Click me!"
+        ...>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="1" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Pressed">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="0.8" />
+                </VisualState.Setters>
+            </VisualState>
+
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</ImageButton>
+```
+
+`Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) 되도록 지정 합니다 [ `Button` ](xref:Xamarin.Forms.Button) 를 누르면 해당 [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) 속성에서 변경할 수는 해당 1 0.8은 사용자의 기본 값입니다. 합니다 `Normal` `VisualState` 되도록 지정 합니다 `Button` 정상 상태의 해당 `Scale` 속성이 1로 설정 됩니다. 따라서 전체적인 효과 때를 `Button` 는 약간 더 작은 및 시기를 재조정는 누른는 `Button` 는 기본 크기를 재조정은 해제 합니다.
+
+시각적 상태에 대 한 자세한 내용은 참조 하세요. [은 Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
 
 ## <a name="creating-a-toggle-button"></a>설정/해제 단추 만들기
 
@@ -774,7 +808,7 @@ XAML, 열거형 멤버에만 또는 간격을 지정 해야 또는 쉼표로 구
         ContentLayout="Right, 20" />
 ```
 
-합니다 **이미지 단추 데모** 사용 하 여 페이지 `OnPlatform` iOS, Android 및 UWP 비트맵 파일에 대 한 다른 파일 이름을 지정 합니다. 세 플랫폼 모두에 같은 파일 이름을 사용 하 고 사용 하지 않도록 하려는 경우 `OnPlatform`, UWP 비트맵을 프로젝트의 루트 디렉터리에 저장 해야 합니다.
+합니다 **이미지 단추 데모** 사용 하 여 페이지 `OnPlatform` iOS, Android 및 UWP 비트맵 파일에 대 한 다른 파일 이름을 지정 합니다. 각 플랫폼에 대해 동일한 파일 이름을 사용 하 고 사용 하지 않도록 하려는 경우 `OnPlatform`, UWP 비트맵을 프로젝트의 루트 디렉터리에 저장 해야 합니다.
 
 첫 번째 `Button` 에 **이미지 단추 데모** 집합 페이지를 `Image` 속성 아닌는 `Text` 속성:
 

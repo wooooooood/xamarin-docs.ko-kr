@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027329"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171042"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
@@ -223,7 +223,7 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 
 Google Maps API에서 사용할 수 있는 5 가지 유형의 지도:
 
--  **보통** -기본 지도 형식입니다. 도 및 중요 한 자연 스러운 기능 (예: 건물 및 브리지) 일부 artifical 관심 함께 보여 줍니다.
+-  **보통** -기본 지도 형식입니다. 도 및 중요 한 자연 스러운 기능 (예: 건물 및 브리지) 관심 임의의 점수와 함께 보여 줍니다.
 
 -  **위성** -이 맵은 위성 사진을 보여 줍니다.
 

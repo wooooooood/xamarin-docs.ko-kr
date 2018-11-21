@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
-ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104955"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170912"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
@@ -46,13 +46,17 @@ DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 �
 
 `DatePicker` 지정된 된 범위 내에서 날짜를 선택할 수 있습니다. 응용 프로그램에서 실행 되는 특정 플랫폼에서 지원 되는 날짜 선택기를 사용 하 여 구현 됩니다.
 
-## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[SkiaSharp 그래픽](graphics/skiasharp/index.md)
+## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[SkiaSharp를 사용한 그래픽](graphics/skiasharp/index.md)
 
 SkiaSharp를 사용 하 여 Xamarin.Forms 응용 프로그램에 그래픽을 통합 하는 방법.
 
 ## <a name="imagesimagesmd"></a>[이미지](images.md)
 
 Xamarin.Forms 사용 하 여 플랫폼 이미지를 공유할 수 있습니다 하 고, 각 플랫폼에 대해 구체적으로 로드 될 수 있습니다 또는 표시를 위해 다운로드할 수 있습니다.
+
+## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+
+`ImageButton` 이미지를 표시 하 고 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다.
 
 ## <a name="layoutslayoutsindexmd"></a>[레이아웃](layouts/index.md)
 
@@ -74,7 +78,7 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시할 목록 뷰 컨트롤을
 
 `Slider` 연속 범위에서 숫자 값을 선택할 수 있습니다.
 
-## <a name="steppersteppermd"></a>[스텝 퍼](stepper.md)
+## <a name="steppersteppermd"></a>[Stepper](stepper.md)
 
 `Stepper` 값의 범위에서 숫자 값을 선택할 수 있습니다. 레이블이 지정 된 두 개의 단추 이루어져 빼기와 더하기 기호입니다. 선택한 값을 증분 변경 두 개의 단추를 조작 합니다.
 

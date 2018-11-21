@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 7ee701c659e0051f5509934dbf0d86e9b3890c9a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 150818379a31fe7b22c1f04a49aba146df84c11c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563884"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171120"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML을 사용 하 여 시작
 
@@ -26,7 +26,7 @@ _Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Windows를 선택 하려면 Visual Studio 사용 **파일 > 새로 만들기 > 프로젝트** 합니다. 에 **새 프로젝트** 대화 상자에서 **Visual C# > 플랫폼 간** 왼쪽 차례로 **Mobile 앱 (Xamarin.Forms)** 가운데 있는 목록에서. 
+Windows를 선택 하려면 Visual Studio 사용 **파일 > 새로 만들기 > 프로젝트** 합니다. 에 **새 프로젝트** 대화 상자에서 **Visual C# > 플랫폼 간** 왼쪽 차례로 **Mobile 앱 (Xamarin.Forms)** 가운데 있는 목록에서.
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "새 프로젝트 대화 상자")
 
@@ -36,7 +36,7 @@ Windows를 선택 하려면 Visual Studio 사용 **파일 > 새로 만들기 > �
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "새 앱 대화 상자")
 
-키를 눌러 **확인**합니다. 
+키를 눌러 **확인**합니다.
 
 4 개의 프로젝트가 솔루션에 생성 됩니다: 합니다 **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**를 **XamlSamples.iOS**, 및 유니버설 Windows 플랫폼 솔루션 **XamlSamples.UWP**합니다.
 
@@ -52,7 +52,7 @@ Mac 용 Visual Studio에서 선택 **파일 > 새 솔루션** 합니다. 에 **�
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "새 프로젝트 대화 상자 2")
 
-키를 눌러 **다음**합니다. 
+키를 눌러 **다음**합니다.
 
 다음 대화 상자에서 프로젝트의 위치를 선택할 수 있습니다.
 
@@ -60,7 +60,7 @@ Mac 용 Visual Studio에서 선택 **파일 > 새 솔루션** 합니다. 에 **�
 
 키를 눌러 **만들기**
 
-세 개의 프로젝트를 솔루션에 생성 됩니다: 합니다 **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**, 및 **XamlSamples.iOS**합니다. 
+세 개의 프로젝트를 솔루션에 생성 됩니다: 합니다 **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**, 및 **XamlSamples.iOS**합니다.
 
 -----
 
@@ -75,7 +75,7 @@ Mac 용 Visual Studio에서 선택 **파일 > 새 솔루션** 합니다. 에 **�
 - **App.xaml**, XAML 파일 및
 - **App.xaml.cs**, C# *코드 숨김* XAML 파일과 연결 된 파일입니다.
 
-다음 화살표를 클릭 해야 **App.xaml** 코드 숨김 파일을 확인 합니다. 
+다음 화살표를 클릭 해야 **App.xaml** 코드 숨김 파일을 확인 합니다.
 
 둘 다 **App.xaml** 하 고 **App.xaml.cs** 라는 클래스에 기여 `App` 에서 파생 되는 `Application`합니다. XAML 파일을 사용 하 여 다른 대부분의 클래스에서 파생 된 클래스를 적용할 `ContentPage`; 파일과 XAML를 사용 하 여 전체 페이지의 시각적 콘텐츠를 정의 합니다. 경우 다른 두 파일을 **XamlSamples** 프로젝트:
 
@@ -92,8 +92,8 @@ Mac 용 Visual Studio에서 선택 **파일 > 새 솔루션** 합니다. 에 **�
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin Forms!" 
-               VerticalOptions="Center" 
+        <Label Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
                HorizontalOptions="Center" />
     </StackLayout>
 
@@ -129,7 +129,7 @@ namespace XamlSamples
 }
 ```
 
-`MainPage` 클래스에서 파생 되며 `ContentPage`, 그러나는 `partial` 클래스 정의 합니다. 이 제안에 대 한 다른 partial 클래스 정의 되도록 `MainPage`에 있지만? 그건 뭐죠 및 `InitializeComponent` 메서드? 
+`MainPage` 클래스에서 파생 되며 `ContentPage`, 그러나는 `partial` 클래스 정의 합니다. 이 제안에 대 한 다른 partial 클래스 정의 되도록 `MainPage`에 있지만? 그건 뭐죠 및 `InitializeComponent` 메서드?
 
 Visual Studio 프로젝트가 빌드될 때 생성 하려면 XAML 파일 구문 분석을 C# 코드 파일. 확인 합니다 **XamlSamples\XamlSamples\obj\Debug** 디렉터리 라는 파일을 찾을 수 있습니다 **XamlSamples.MainPage.xaml.g.cs**합니다. 'G'는 생성을 나타냅니다. 이 다른 partial 클래스 정의입니다 `MainPage` 의 정의 포함 하는 `InitializeComponent` 에서 호출 된 메서드는 `MainPage` 생성자입니다. 이러한 두 부분 `MainPage` 클래스 정의 함께 컴파일될 수 있습니다. 여부는 XAML 컴파일 여부에 따라 XAML 파일이 나 XAML 파일의 이진 형식 실행 파일에 포함 됩니다.
 
@@ -137,7 +137,7 @@ Visual Studio 프로젝트가 빌드될 때 생성 하려면 XAML 파일 구문 
 
 필요는 없지만 일반적으로 생성 된 코드 파일을 사용 하 여 시간을 투자 하, 경우에 따라 런타임 예외 발생 생성된 된 파일의 코드에서 작업할 수 있도록 합니다.
 
-컴파일 및이 프로그램을 실행 하는 경우는 `Label` 요소는 XAML 알 수 있듯이 페이지의 가운데에 표시 합니다. 세 가지 플랫폼 왼쪽에서 오른쪽으로 다음과 같습니다. iOS, Android 및 UWP
+컴파일 및이 프로그램을 실행 하는 경우는 `Label` 요소는 XAML 알 수 있듯이 페이지의 가운데에 표시 합니다.
 
 [![](get-started-with-xaml-images/xamlsamples.png "기본 Xamarin.Forms 디스플레이")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "기본 Xamarin.Forms 표시")
 
@@ -159,7 +159,7 @@ Visual Studio 프로젝트가 빌드될 때 생성 하려면 XAML 파일 구문 
 
 -----
 
-두 파일을 프로젝트에 추가 됩니다 **HelloXamlPage.xaml** 코드 숨김 파일과 **HelloXamlPage.xaml.cs**합니다. 
+두 파일을 프로젝트에 추가 됩니다 **HelloXamlPage.xaml** 코드 숨김 파일과 **HelloXamlPage.xaml.cs**합니다.
 
 ## <a name="setting-page-content"></a>페이지 콘텐츠를 설정합니다.
 
@@ -170,7 +170,7 @@ Visual Studio 프로젝트가 빌드될 때 생성 하려면 XAML 파일 구문 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.HelloXamlPage">
     <ContentPage.Content>
-        
+
     </ContentPage.Content>
 </ContentPage>
 ```

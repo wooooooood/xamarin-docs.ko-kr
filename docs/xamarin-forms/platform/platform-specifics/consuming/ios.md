@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: 12fd9e477e24058d36128e52b7b5dd9074598be8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527081"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171796"
 ---
 # <a name="ios-platform-specifics"></a>플랫폼별 iOS
 
@@ -783,7 +783,34 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 Xamarin.Forms에 대 한 iOS 다음에서 플랫폼별 기능이 제공 됩니다 [ `Application` ](xref:Xamarin.Forms.Application) 클래스:
 
+- 컨트롤 레이아웃을 사용 하도록 설정 하 고 주 스레드에서 수행할 업데이트를 렌더링 합니다. 자세한 내용은 [주 스레드에서 컨트롤 업데이트 처리](#update-on-main-thread)합니다.
 - 사용을 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰에서 수집 하 고 스크롤 뷰를 사용 하 여 pan 제스처를 공유 합니다. 자세한 내용은 [동시 팬 제스처 인식 사용](#simultaneous-pan-gesture)합니다.
+
+<a name="update-on-main-thread" />
+
+### <a name="handling-control-updates-on-the-main-thread"></a>주 스레드에서 처리 컨트롤 업데이트
+
+이 플랫폼 특정 컨트롤 레이아웃 및 렌더링 업데이트 백그라운드 스레드에서 수행 되는 대신 주 스레드에서 수행할 수 있습니다. 거의 필요 하지, 있지만 일부의 경우에서 충돌 하지 못할 수 있습니다. 설정 하 여 해당 사용된에서 XAML 합니다 `Application.HandleControlUpdatesOnMainThread` 바인딩 가능한 속성을 `true`:
+
+```xaml
+<Application ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Application.HandleControlUpdatesOnMainThread="true">
+    ...
+</Application>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+Xamarin.Forms.Application.Current.On<iOS>().SetHandleControlUpdatesOnMainThread(true);
+```
+
+`Application.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `Application.SetHandleControlUpdatesOnMainThread` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스는 사용 제어 되는지 여부를 제어 레이아웃 및 렌더링 업데이트 백그라운드 스레드에서 수행 되는 대신 주 스레드에서 수행 됩니다. 또한는 `Application.GetHandleControlUpdatesOnMainThread` 메서드를 사용 하 여 컨트롤 레이아웃 및 렌더링 업데이트 주 스레드에서 수행 되는 여부를 반환할 수 있습니다.
 
 <a name="simultaneous-pan-gesture" />
 

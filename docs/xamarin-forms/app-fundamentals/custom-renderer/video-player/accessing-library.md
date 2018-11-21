@@ -1,28 +1,28 @@
 ---
 title: 장치의 비디오 라이브러리 액세스
-description: 이 문서에서는 Xamarin.Forms를 사용 하는 비디오 플레이어 응용 프로그램에서 장치의 비디오 라이브러리 액세스 하는 방법을 설명 합니다.
+description: 이 문서에서는 Xamarin.Forms를 사용 하 여 비디오 플레이어 응용 프로그램에서는 장치의 비디오 라이브러리에 액세스 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 7e9f7ad93ae8828155847b923cb2779b3146f63e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 619469e4c4fd3901491c20d6215ec0a25c49f69d
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240702"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171185"
 ---
 # <a name="accessing-the-devices-video-library"></a>장치의 비디오 라이브러리 액세스
 
-대부분의 모바일 장치 및 데스크톱 컴퓨터 장치의 카메라를 사용 하 여 레코드 비디오를 수가 있습니다. 사용자가 만드는 동영상은 장치에 파일로 저장 됩니다. 이러한 파일을 이미지 라이브러리에서 검색 하 여 재생 하 고는 `VideoPlayer` 다른 비디오와 마찬가지로 클래스입니다.
+최신 모바일 장치 및 데스크톱 컴퓨터를 장치의 카메라를 사용 하 여 레코드 비디오를 수가 있습니다. 사용자가 만든 비디오 파일을 장치에로 저장 됩니다. 이러한 파일 이미지 라이브러리에서 검색 및 재생 하 여 수를 `VideoPlayer` 다른 비디오에서와 마찬가지로 클래스입니다.
 
 ## <a name="the-photo-picker-dependency-service"></a>사진 선택 종속성 서비스
 
-세 플랫폼 각각 사용자가 장치의 이미지 라이브러리에서 사진이 나 비디오를 선택할 수 있게 하는 기능을 포함 합니다. 장치 이미지 라이브러리에서 비디오를 재생 하는 첫 번째 단계는 각 플랫폼에서 이미지 선택기를 호출 하는 종속성 서비스를 만드는 중입니다. 아래에 설명 된 종속 서비스가 매우 비슷합니다에 정의 된 하나는 [ **사진 그림 라이브러리에서 선택** ](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md) 문서, 비디오 선택기는 아닌파일이름을반환한다는`Stream`개체입니다.
+각 플랫폼에 사용자가 장치의 이미지 라이브러리에서 사진 또는 비디오를 선택할 수 있도록 하는 기능 포함 됩니다. 장치 이미지 라이브러리에서 비디오를 재생 하는 첫 번째 단계는 각 플랫폼에서 이미지 선택기를 호출 하는 종속성 서비스를 만드는 중입니다. 아래에 설명 된 종속 서비스가 매우 비슷합니다에 정의 된 것을 [ **사진 그림 라이브러리에서 선택** ](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md) 문서, 비디오 선택기를 대신파일이름을반환한다는`Stream`개체입니다.
 
-이라는 인터페이스를 정의 하는 표준.NET 라이브러리 프로젝트 `IVideoPicker` 종속성 서비스에 대 한:
+라는 인터페이스를 정의 하는.NET Standard 라이브러리 프로젝트를 `IVideoPicker` 종속성 서비스에 대 한 합니다.
 
 ```csharp
 namespace FormsVideoLibrary
@@ -34,11 +34,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-클래스를 포함 하는 세 플랫폼 각각 `VideoPicker` 이 인터페이스를 구현 하는 합니다.
+클래스를 포함 하는 각 플랫폼 `VideoPicker` 이 인터페이스를 구현 하는 합니다.
 
 ### <a name="the-ios-video-picker"></a>IOS 비디오 선택
 
-IOS `VideoPicker` iOS를 사용 하 여 [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) iOS에서 비디오를 ("영화" 라고도 함)을 제한 해야 것을 지정 하는 이미지 라이브러리에 액세스 하도록 `MediaType` 속성입니다. 다음에 유의 `VideoPicker` 명시적으로 구현 하는 `IVideoPicker` 인터페이스입니다. 또한는 `Dependency` 종속성 서비스로 서이 클래스를 식별 하는 특성입니다. 다음은 Xamarin.Forms는 플랫폼 프로젝트에서 해당 종속성 서비스를 허용 하는 두 가지 요구 사항:
+IOS `VideoPicker` iOS를 사용 하 여 [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) iOS에서 비디오 ("movies" 라고도 함)으로 제한 되어야 하도록 지정 하는 이미지 라이브러리에 액세스 하려면 `MediaType` 속성입니다. 있음을 `VideoPicker` 명시적으로 구현 된 `IVideoPicker` 인터페이스입니다. 또한는 `Dependency` 종속성 서비스로이 클래스를 식별 하는 특성입니다. Xamarin.Forms 플랫폼 프로젝트에서 종속성 서비스를 찾을 수 있도록 두 가지 요구 사항이:
 
 ```csharp
 using System;
@@ -102,7 +102,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-video-picker"></a>Android 비디오 선택
 
-Android 구현의 `IVideoPicker` 응용 프로그램의 활동의 일부인 콜백 메서드가 필요 합니다. 이런 이유로 `MainActivity` 두 개의 속성, 필드 및 콜백 메서드를 클래스 정의:
+Android 구현의 `IVideoPicker` 응용 프로그램의 활동의 일부인 콜백 메서드가 필요 합니다. 이런 이유로 `MainActivity` 클래스에는 두 가지 속성, 필드 및 콜백 메서드를 정의 합니다.
 
 ```csharp
 namespace VideoPlayerDemos.Droid
@@ -144,7 +144,7 @@ namespace VideoPlayerDemos.Droid
 }
 ```
 
-`OnCreate` 메서드에서 `MainActivity` 자체 인스턴스는 정적 저장 `Current` 속성입니다. 이 구현할 수 `IVideoPicker` 얻으려고는 `MainActivity` 시작에 대 한 인스턴스는 **선택 비디오** 선택:
+합니다 `OnCreate` 의 메서드 `MainActivity` 자체 인스턴스는 정적에서 저장 `Current` 속성입니다. 이 구현할 수 `IVideoPicker` 가져오려고 합니다 `MainActivity` 시작에 대 한 인스턴스를 **선택 비디오** 선택:
 
 ```csharp
 using System;
@@ -186,11 +186,11 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-추가 기능에는 `MainActivity` 개체의 유일한 코드는는 [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 일반 응용 프로그램 코드를 지원 하도록 업데이트 해야 하는 솔루션의 `FormsVideoLibrary` 클래스입니다.
+추가 기능을 `MainActivity` 개체의 유일한 코드는를 [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 솔루션 일반적인 응용 프로그램 코드를 지원 하도록 변경 해야 하는 위치를 `FormsVideoLibrary` 클래스입니다.
 
 ### <a name="the-uwp-video-picker"></a>UWP 비디오 선택
 
-UWP 구현의 `IVideoPicker` 인터페이스 UWP에 사용 하 여 [ `FileOpenPicker` ](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/)합니다. 사진 라이브러리를 사용 하 여 파일 검색을 시작 하 고 MP4 및 WMV (Windows Media Video) 파일 형식을 제한:
+UWP 구현의 합니다 `IVideoPicker` 인터페이스가 사용 UWP [ `FileOpenPicker` ](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/)합니다. 사진 라이브러리를 사용 하 여 파일 검색을 시작 하 고 MP4 및 WMV (Windows Media Video) 파일 형식을 제한 합니다.
 
 ```csharp
 using System;
@@ -227,7 +227,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>종속성 서비스를 호출합니다.
 
-**라이브러리 비디오 재생** 의 페이지는 [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 프로그램 비디오 선택 종속성 서비스를 사용 하는 방법을 보여 줍니다. XAML 파일에 포함 되어는 `VideoPlayer` 인스턴스 및 `Button` 레이블이 **비디오 라이브러리 표시**:
+**라이브러리 비디오 재생** 페이지의 [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 프로그램 비디오 선택 종속성 서비스를 사용 하는 방법에 설명 합니다. XAML 파일에 포함 되어는 `VideoPlayer` 인스턴스 및 `Button` 레이블이 **비디오 라이브러리 표시**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -247,7 +247,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-코드 숨김 파일에 포함 되어는 `Clicked` 에 대 한 처리기는 `Button`합니다. 에 대 한 호출에 필요한 종속성 서비스를 호출 `DependencyService.Get` 구현의 가져올 수는 `IVideoPicker` 플랫폼 프로젝트에 대 한 인터페이스입니다. `GetVideoFileAsync` 해당 인스턴스에서 메서드가 호출 됩니다.
+코드 숨김 파일을 포함 합니다 `Clicked` 에 대 한 처리기를 `Button`입니다. 에 대 한 호출에 필요한 종속성 서비스를 호출 `DependencyService.Get` 구현의 가져오려고는 `IVideoPicker` 플랫폼 프로젝트에서 인터페이스입니다. `GetVideoFileAsync` 메서드 해당 인스턴스에서 호출 됩니다.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -280,13 +280,13 @@ namespace VideoPlayerDemos
 }
 ```
 
-`Clicked` 처리기를 사용 하 여 해당 파일 이름을 만들기는 `FileVideoSource` 개체를 설정 하는 `Source` 의 속성은 `VideoPlayer`합니다.
+`Clicked` 처리기를 사용 하 여 해당 파일 만들기를 `FileVideoSource` 개체 및로 설정 하는 `Source` 의 속성을 `VideoPlayer`.
 
-각각의 `VideoPlayerRenderer` 클래스의 코드가 포함 되어 해당 `SetSource` 형식의 개체에 대 한 메서드 `FileVideoSource`합니다. 이 다음과 같습니다.
+각 합니다 `VideoPlayerRenderer` 클래스의 코드가 포함 되어 해당 `SetSource` 형식의 개체에 대 한 메서드 `FileVideoSource`. 이러한 항목은 다음과 같습니다.
 
 ### <a name="handling-ios-files"></a>IOS 파일 처리
 
-IOS 버전 `VideoPlayerRenderer` 프로세스 `FileVideoSource` 정적을 사용 하 여 개체 `Asset.FromUrl` 파일 이름 사용 하 여 메서드. 이 `AVAsset` 장치의 이미지 라이브러리에 파일을 나타내는 개체입니다.
+IOS 버전 `VideoPlayerRenderer` 프로세스 `FileVideoSource` 정적을 사용 하 여 개체 `Asset.FromUrl` 파일을 사용 하 여 메서드. 이 `AVAsset` 장치의 이미지 라이브러리에에서 있는 파일을 나타내는 개체입니다.
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -316,7 +316,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="handling-android-files"></a>Android 파일 처리
 
-형식의 개체를 처리할 때 `FileVideoSource`, Android 구현의 `VideoPlayerRenderer` 사용 하 여는 `SetVideoPath` 방식의 `VideoView` 장치의 이미지 라이브러리에 파일을 지정 하려면:
+형식의 개체를 처리할 때 `FileVideoSource`, Android 구현의 `VideoPlayerRenderer` 사용 하는 `SetVideoPath` 메서드의 `VideoView` 장치의 이미지 라이브러리에 파일을 지정 하려면:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -348,7 +348,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="handling-uwp-files"></a>UWP 파일 처리
 
-형식의 개체를 처리할 때 `FileVideoSource`, UWP 구현의 `SetSource` 메서드를 만드는 데 필요한는 `StorageFile` 개체, 읽기를 위해 해당 열 및 스트림 개체를 전달는 `SetSource` 의 메서드는 `MediaElement`:
+형식의 개체를 처리할 때 `FileVideoSource`, UWP 구현의 `SetSource` 메서드를 만드는 데 필요한를 `StorageFile` 개체 읽기에 대 한 해당 파일을 열고 스트림 개체를 전달 합니다 `SetSource` 메서드의 `MediaElement`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -382,7 +382,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-세 플랫폼 모두에 비디오 재생이 시작 되는 비디오 거의 바로 뒤 원본이 설정 때문에 파일이 장치에 다운로드할 필요가 없습니다.
+각 플랫폼에 대 한 비디오 재생이 시작 되는 비디오 직후 원본이 설정 때문에 파일을 장치에 다운로드할 필요가 없습니다.
 
 
 

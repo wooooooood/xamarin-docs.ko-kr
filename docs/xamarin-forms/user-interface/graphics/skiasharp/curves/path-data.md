@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 5e059cc6ef3a127ae79bd2ed97ade7a8045958f1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3571da005f48bda630b4202b804f3efe9c892f60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116175"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172329"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
 
@@ -286,7 +286,7 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![](path-data-images/pathdatacat-small.png "경로 데이터 Cat 페이지 스크린샷 삼중")](path-data-images/pathdatacat-large.png#lightbox "삼중 경로 데이터 Cat 페이지 스크린샷")
 

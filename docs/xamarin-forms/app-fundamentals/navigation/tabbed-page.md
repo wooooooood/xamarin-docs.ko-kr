@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996297"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171380"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 탭된 페이지
 
@@ -32,13 +32,13 @@ _Xamarin.Forms TabbedPage 세부 정보 영역에 콘텐츠를 로드 하는 각
 
 - IOS에서 탭 목록 화면 맨 아래에 나타나고 세부 영역이 위에 합니다. 각 탭에는 일반적인 확인에 대 한 투명도 사용 하 여 30 PNG 30x, 높은 해상도 대 한 60x60 및 iPhone 6 용 90x90 될 아이콘 이미지도 또한 확인 합니다. 5 개 탭에 있는 경우는 *자세한* 탭이 표시 됩니다, 사용할 수 있는 다른 탭에 액세스 해야 합니다. Xamarin.Forms 응용 프로그램에서 이미지를 로드 하는 방법에 대 한 자세한 내용은 참조 하세요. [이미지를 사용 하 여 작업](~/xamarin-forms/user-interface/images.md)합니다. 아이콘 요구 사항에 대 한 자세한 내용은 참조 하세요. [응용 프로그램 탭 만들기](~/ios/user-interface/controls/creating-tabbed-applications.md)합니다.
 
-    > [!NOTE]
+  > [!NOTE]
   > 합니다 `TabbedRenderer` iOS에는 재정의 가능한 `GetIcon` 탭 아이콘을 지정된 된 소스에서 로드 하는 메서드. 이 재정의 사용 하면 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`합니다. 또한 아이콘의 선택 또는 선택 하지 않은 버전을 제공할 수 있습니다.
 
 - Android에서 기본적으로 화면 맨 위에 있는 탭 목록 표시 및 세부 정보 영역에서 아래입니다. 그러나 탭은 플랫폼 특정 화면 아래쪽으로 이동할 수 있습니다. 자세한 내용은 [설정은 TabbedPage 도구 모음 배치 및 색](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar)합니다.
 
-    > [!NOTE]
-  > 참고는 AppCompat에서 Android를 사용 하는 경우 각 탭도 아이콘이 표시 됩니다. 또한 합니다 `TabbedPageRenderer` Android AppCompat에는 재정의 가능한 `SetTabIcon` 사용자 지정에서 탭 아이콘을 로드 하는 메서드 `Drawable`합니다. 이 재정의 사용 하면 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`합니다.
+  > [!NOTE]
+  > 참고는 AppCompat에서 Android를 사용 하는 경우 각 탭도 아이콘이 표시 됩니다. 또한 합니다 `TabbedPageRenderer` Android AppCompat에는 재정의 가능한 `GetIconDrawable` 사용자 지정에서 탭 아이콘을 로드 하는 메서드 `Drawable`합니다. 이 재정의 사용 하면 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`, 상위 및 탭 표시줄 아래쪽을 둘 다에서 작동 하 고 있습니다. 또는 재정의 가능한 `SetTabIcon` 메서드를 사용 하 여를 사용자 지정에서 탭 아이콘을 로드할 수 있습니다 `Drawable` 위쪽 탭 표시줄에 대 한 합니다.
 
 - Windows 태블릿 폼 팩터를 탭 항상는 표시 되지 않습니다 및 사용자가 스와이프 다운 해야 (또는 마우스 오른쪽 단추 클릭 마우스 연결 되어 있는 경우) 탭을 확인 하는 `TabbedPage` (아래와 같이).
 
@@ -76,7 +76,7 @@ _Xamarin.Forms TabbedPage 세부 정보 영역에 콘텐츠를 로드 하는 각
 </TabbedPage>
 ```
 
-다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) C#에서 만든:
+다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 생성 C#:
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) C#에서 만든:
+다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 생성 C#:
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage

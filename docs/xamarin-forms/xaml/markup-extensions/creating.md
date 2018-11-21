@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b928c55f447d68b8adfedaa031fd85750ee71267
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e11f7c95ccc65371ec5d844505682103025cd8af
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563708"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172238"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
 
@@ -141,8 +141,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
         }
 
         string assemblyName = GetType().GetTypeInfo().Assembly.GetName().Name;
-
-        return ImageSource.FromResource(assemblyName + "." + Source);
+        return ImageSource.FromResource(assemblyName + "." + Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
     }
 
     object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
@@ -152,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` XAML 파일을.NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우 유용 합니다. 사용 된 `Source` 정적 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더, 이름과 마침표로 구분 된 파일 이름으로 구성 된 정규화 된 리소스 이름에 필요 합니다. 합니다 `ImageResourceExtension` 하지 필요한 어셈블리의 이름 부분 앞에 추가 하 고 리플렉션을 사용 하 여 어셈블리 이름을 가져옵니다 있기 때문에 `Source` 속성입니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 해당 라이브러리에서 이미지도 하지 않는 한이 XAML 리소스 확장에서 외부 라이브러리 포함 될 수 없습니다는 즉 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조를 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded-images) 비트맵을 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
+`ImageResourceExtension` XAML 파일을.NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우 유용 합니다. 사용 된 `Source` 정적 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더, 이름과 마침표로 구분 된 파일 이름으로 구성 된 정규화 된 리소스 이름에 필요 합니다. 두 번째 인수를 `ImageSource.FromResource` 메서드는 어셈블리 이름을 제공 하며만 UWP의 릴리스 빌드에 필요 합니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 해당 라이브러리에서 이미지도 하지 않는 한이 XAML 리소스 확장에서 외부 라이브러리 포함 될 수 없습니다는 즉 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조를 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded-images) 비트맵을 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
 
 하지만 `ImageResourceExtension` 필요 합니다 `Source` 속성을 설정할 수는 `Source` 속성은 특성에서 클래스의 content 속성으로 표시 됩니다. 즉는 `Source=` 중괄호 안에 있는 식의 부분을 생략할 수 있습니다. 에 **이미지 리소스 데모** 페이지를 `Image` 요소 인출 폴더 이름과 마침표로 구분 된 파일 이름을 사용 하 여 두 개의 이미지:
 
@@ -178,7 +177,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 </ContentPage>
 ```
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png#lightbox "리소스 데모 이미지")
 
@@ -199,7 +198,6 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 ## <a name="conclusion"></a>결론
 
 다양 한 원본에서에서 특성을 설정 하는 기능을 확장 하 여 XAML에서 중요 한 역할을 재생 하는 XAML 태그 확장 합니다. 또한 기존 XAML 태그 확장은 필요한 것만 제공 하지 않습니다, 경우 기록도 고유한 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

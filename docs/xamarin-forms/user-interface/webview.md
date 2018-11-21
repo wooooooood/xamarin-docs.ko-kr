@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/02/2018
-ms.openlocfilehash: 8d68afaf0edf178bba6f18d3071de029e111edee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 10/24/2018
+ms.openlocfilehash: 02ea94fa67491384e6ca6768e429ee96b46c6143
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118671"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171341"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -37,7 +37,8 @@ ms.locfileid: "50118671"
 인터넷에서 웹 사이트를 표시 하려면 설정 합니다 `WebView`의 [ `Source` ](xref:Xamarin.Forms.WebViewSource) 속성을 문자열 URL:
 
 ```csharp
-var browser = new WebView {
+var browser = new WebView
+{
   Source = "http://xamarin.com"
 };
 ```
@@ -70,6 +71,8 @@ IOS 버전 9, 이후 기본적으로 최상의 보안을 구현 하는 서버와
             </dict>
         </dict>
     </dict>
+    ...
+</key>
 ```
 
 만 ATS를 사용 하는 동안 트러스트 되지 않은 도메인에 대 한 추가 보안에서 신뢰할 수 있는 사이트를 사용 하 게 사용 하지 않으려면 일부 도메인을 사용 하도록 설정 하는 것이 좋습니다. 다음 앱에 대 한 ATS를 사용 하지 않도록 설정 떨어집니다 메서드를 보여 줍니다.
@@ -80,6 +83,8 @@ IOS 버전 9, 이후 기본적으로 최상의 보안을 구현 하는 서버와
         <key>NSAllowsArbitraryLoads </key>
         <true/>
     </dict>
+    ...
+</key>
 ```
 
 참조 [앱 전송 보안](~/ios/app-fundamentals/ats.md) iOS 9의에서이 새로운 기능에 대 한 자세한 내용은 합니다.
@@ -178,9 +183,12 @@ Ios, 웹 콘텐츠를 프로젝트의 루트 디렉터리에 배치 해야 하�
 
 ```csharp
 [assembly: Dependency (typeof (BaseUrl_iOS))]
-namespace WorkingWithWebview.iOS{
-  public class BaseUrl_iOS : IBaseUrl {
-    public string Get() {
+namespace WorkingWithWebview.iOS
+{
+  public class BaseUrl_iOS : IBaseUrl
+  {
+    public string Get()
+    {
       return NSBundle.MainBundle.BundlePath;
     }
   }
@@ -205,9 +213,12 @@ Android에는 `BaseUrl` 로 설정 해야 `"file:///android_asset/"`:
 
 ```csharp
 [assembly: Dependency (typeof(BaseUrl_Android))]
-namespace WorkingWithWebview.Android {
-  public class BaseUrl_Android : IBaseUrl {
-    public string Get() {
+namespace WorkingWithWebview.Android
+{
+  public class BaseUrl_Android : IBaseUrl
+  {
+    public string Get()
+    {
       return "file:///android_asset/";
     }
   }
@@ -218,7 +229,8 @@ Android에서의 파일을 **자산** 폴더에 의해 노출 되는 Android 현
 
 ```csharp
 var assetManager = MainActivity.Instance.Assets;
-using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
+using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
+{
   var html = streamReader.ReadToEnd ();
 }
 ```
@@ -261,50 +273,49 @@ WebView 여러 메서드 및 속성을 사용할 수 있는 탐색을 지원 합
 브라우저 보기에 대 한 페이지를 만들어 시작 합니다.
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="WebViewDemo.InAppDemo"
-Title="In App Browser">
-    <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="10,10">
-                <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
-                <Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
-            </StackLayout>
-            <WebView x:Name="Browser" WidthRequest="1000" HeightRequest="1000" />
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewSample.InAppBrowserXaml"
+             Title="Browser">
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
+            <Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
         </StackLayout>
-    </ContentPage.Content>
+        <!-- WebView needs to be given height and width request within layouts to render. -->
+        <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
+    </StackLayout>
 </ContentPage>
 ```
 
-이 코드 숨김에서:
+코드 숨김에서:
 
 ```csharp
-public partial class InAppDemo : ContentPage
+public partial class InAppBrowserXaml : ContentPage
 {
-  //sets the URL for the browser in the page at creation
-    public InAppDemo (string URL)
+    public InAppBrowserXaml(string URL)
     {
-        InitializeComponent ();
-        Browser.Source = URL;
+        InitializeComponent();
+        webView.Source = URL;
     }
 
-
-    private void backClicked(object sender, EventArgs e)
+    async void OnBackButtonClicked(object sender, EventArgs e)
     {
-    // Check to see if there is anywhere to go back to
-        if (Browser.CanGoBack) {
-            Browser.GoBack ();
-        } else { // If not, leave the view
-            Navigation.PopAsync ();
+        if (webView.CanGoBack)
+        {
+            webView.GoBack();
+        }
+        else
+        {
+            await Navigation.PopAsync();
         }
     }
 
-    private void forwardClicked(object sender, EventArgs e)
+    void OnForwardButtonClicked(object sender, EventArgs e)
     {
-        if (Browser.CanGoForward) {
-            Browser.GoForward ();
+        if (webView.CanGoForward)
+        {
+            webView.GoForward();
         }
     }
 }
@@ -316,45 +327,38 @@ public partial class InAppDemo : ContentPage
 
 ## <a name="events"></a>이벤트
 
-웹 보기 상태에서 변경 내용에 응답할 수 있도록 두 개의 이벤트를 발생 시킵니다.
+WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤트를 발생 시킵니다.
 
-- **탐색** &ndash; WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
-- **탐색할** &ndash; 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
+- **탐색** – WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
+- **탐색** – 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
+- **ReloadRequested** – 현재 콘텐츠를 다시 로드 요청이 있을 때 발생 하는 이벤트입니다.
 
-로드 시간이 오래 걸리는 웹 페이지를 사용 하 여 예상 되는 경우에 해당 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어는 XAML은 다음과 같습니다.
+로드 시간이 오래 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 사용을 고려 합니다 `Navigating` 고 `Navigated` 상태 표시기를 구현 하는 이벤트입니다. 예를 들어는 XAML은 다음과 같습니다.
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
-  <ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewSample.LoadingLabelXaml"
+             Title="Loading Demo">
     <StackLayout>
-      <Label x:Name="LoadingLabel"
-        Text="Loading..."
-        HorizontalOptions="Center"
-        IsVisible="false" />
-      <WebView x:Name="Browser"
-      HeightRequest="1000"
-      WidthRequest="1000"
-      Navigating="webOnNavigating"
-      Navigated="webOnEndNavigating" />
+        <!--Loading label should not render by default.-->
+        <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
     </StackLayout>
-  </ContentPage.Content>
 </ContentPage>
 ```
 
 두 개의 이벤트 처리기:
 
 ```csharp
-void webOnNavigating (object sender, WebNavigatingEventArgs e)
+void webviewNavigating(object sender, WebNavigatingEventArgs e)
 {
-    LoadingLabel.IsVisible = true;
+    labelLoading.IsVisible = true;
 }
 
-void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
+void webviewNavigated(object sender, WebNavigatedEventArgs e)
 {
-    LoadingLabel.IsVisible = false;
+    labelLoading.IsVisible = false;
 }
 ```
 
@@ -365,6 +369,18 @@ void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 완료 된 로드 합니다.
 
 ![](webview-images/loading-end.png "WebView 탐색할된 이벤트 예")
+
+## <a name="reloading-content"></a>콘텐츠를 다시 로드
+
+[`WebView`](xref:Xamarin.Forms.WebView) 에 `Reload` 현재 콘텐츠를 다시 로드 하는 메서드:
+
+```csharp
+var webView = new WebView();
+...
+webView.Reload();
+```
+
+경우는 `Reload` 메서드가 호출 되는 `ReloadRequested` 이벤트가 현재 콘텐츠를 다시 로드 하려면 요청에 있는지를 나타내는입니다.
 
 ## <a name="performance"></a>성능
 
@@ -447,7 +463,7 @@ AbsoluteLayout *없이* WidthRequest & HeightRequest:
 
 ## <a name="invoking-javascript"></a>JavaScript를 호출합니다.
 
-합니다 [ `WebView` ](xref:Xamarin.Forms.WebView) C#에서 JavaScript 함수를 호출 하 고 C# 코드를 호출 하려면 결과 반환 하는 기능을 포함 합니다. 주게 됩니다 합니다 [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 의 다음 예제에 나와 있는 메서드를 [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) 샘플:
+[`WebView`](xref:Xamarin.Forms.WebView) JavaScript 함수를 호출 하는 기능을 포함 C#를 호출 하는 결과 반환 하 고 C# 코드입니다. 주게 됩니다 합니다 [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 의 다음 예제에 나와 있는 메서드를 [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) 샘플:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };

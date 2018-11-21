@@ -7,16 +7,16 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: dfe2d81673804e2f77694a794ef82931eb88357d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa5f42596b6f92285b8b8bed40452928e3c494b1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563916"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170925"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
 
-> [!NOTE] 
+> [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 프로그래밍에서 가장 즐겁지 않은 작업 중 하나는 다른 플랫폼으로 코드를 포팅하는 작업입니다. 특히 다른 프로그래밍 언어로 포팅하는 작업은 쉽지 않은 작업입니다. 포팅 과정에서 리팩토링 충동을 느낄 수 있으며 포팅된 코드와 기존 코드는 동시에 유지보수 되어야 하기 때문에 두 코드베이스 간의 차이점들은 앞으로의 유지보수 작업을 더욱 힘들게 할 것입니다.
@@ -25,7 +25,7 @@ ms.locfileid: "51563916"
 
 이 문제는 모바일 플렛폼을 타겟으로 개발할 때 일반적으로 발생합니다. 현재 두개의 메이저 모바일 플렛폼이 존재합니다. iOS 운영체제를 사용하는 아이폰, 아이패드 애플 제품군과 안드로이드 운영체제를 사용하는 수많은 스마트폰과 태블릿이 있습니다. 그밖에 중요한 플랫폼으로 마이크로소프트의 Universal Windows Platform (UWP)이 있으며 Windows 10과 Windows 10 Mobile을 타겟으로 하는 단일 프로그램을 개발할 수 있습니다.
 
-이러한 세 플랫폼을 대상으로 하려는 소프트웨어 공급업체는 서로 다른 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스 &mdash;아마도 가장 껄끄러운 부분인&mdash; 세 가지 프로그래밍 언어(iPhone, iPad의 Objective-C, Android의 Java, Windows의 C#)를 다루어야 합니다.
+이러한 플랫폼을 대상으로 하려는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 사용 하 여 처리 해야 하 고&mdash;아마도 가장 이라는&mdash;3 다양 한 프로그래밍 언어: iPhone 및 iPad, Android 용 Java 용 Objective-c 및 C# Windows에 대 한 합니다.
 
 ## <a name="the-c-and-net-solution"></a>C#과 .NET 솔루션
 
@@ -35,7 +35,7 @@ Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었�
 
 개발자는 Mac, iOS 또는 Android 어플리케이션을 개발하기 위해 Xamarin 플랫폼을 사용할 수 있으며 C#언어로 개발할 수 있습니다. 하나 이상의 플랫폼을 타겟으로 개발할 때는 플랫폼 간에 일부 코드를 공유하는 것이 합리적입니다. 따라서 프로그램 코드를 플랫폼 의존적인 코드(주로 사용자 인터페이스와 관계된 코드)와 플랫폼 중립적인 코드(일반적으로 .NET 프레임워크만을 필요로 하는 코드)로 분리해야 합니다. 플랫폼 중립적인 코드는 Portable Class Library(PCL) 또는 공유 프로젝트(Shared Asset Project 또는 SAP)로 관리할 수 있습니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
 ## <a name="introducing-xamarinforms"></a>Xamarin.Forms 소개
@@ -48,18 +48,18 @@ Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었�
 - Windows 8.1의 Windows 런타임 API
 - Windows Phone 8.1의 Windows 런타임 API
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), [Tizen](/xamarin-forms/platform/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
 
-대부분의 Xamarin.Forms 프로그램의 공유 코드는 단일 라이브러리나 SAP에 위치하게 됩니다. 각 플랫폼들은 이러한 공유 코드를 호출하는 작은 프로그램 조각으로 구성됩니다. 
+대부분의 Xamarin.Forms 프로그램의 공유 코드는 단일 라이브러리나 SAP에 위치하게 됩니다. 각 플랫폼들은 이러한 공유 코드를 호출하는 작은 프로그램 조각으로 구성됩니다.
 
 Xamarin.Forms API는 각 플랫폼의 네이티브 컨트롤에 매핑되며 그 결과 각 플랫폼의 고유한 형태와 느낌을 유지하게 됩니다.
 
 [![공유 플랫폼 시각 효과의 삼중 스크린 샷](images/ch01fg03-small.png "각 플랫폼에서 Xamarin.Forms 컨트롤")](images/ch01fg03-large.png#lightbox "각 플랫폼에서 Xamarin.Forms 컨트롤")
 
-왼쪽에서 오른쪽으로 iPhone, Android 및 Windows 10 Mobile 폰을 보여 줍니다. 
+왼쪽에서 오른쪽으로 iPhone, Android 및 Windows 10 Mobile 폰을 보여 줍니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin.Forms는 더 이상 Windows 10 Mobile을 지원하지 않습니다.
 
 각 화면에서 페이지는 텍스트를 표시하는 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label), 작업을 시작하기 위한 [ `Button` ](xref:Xamarin.Forms.Button), On/Off를 선택하는 [ `Switch` ](xref:Xamarin.Forms.Switch), 범위 내에서 값을 선택할 수 있는 [ `Slider` ](xref:Xamarin.Forms.Slider)를 포함하고 있습니다. 이 4개의 View는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 내에 포함된 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)의 자식들입니다.

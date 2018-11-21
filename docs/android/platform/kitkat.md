@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527334"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172095"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -413,7 +413,7 @@ Google 클라우드 인쇄 앱을 다운로드 하는 자동으로 KitKat 함께
 
 #### <a name="printing-html-content"></a>HTML 콘텐츠 인쇄
 
-KitKat 자동으로 만듭니다는 [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) 포함 된 웹 보기에 대 한 `WebView.CreatePrintDocumentAdapter`합니다. 인쇄 웹 콘텐츠는 간에 조정 된 작업을 [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) HTML 콘텐츠를 로드 될 때까지 대기 하 고 인쇄 옵션을 사용 가능 옵션 메뉴에서 알고 있어야 하는 활동 및 사용자를 때까지 대기 하는 Actvity 선택 하 고 인쇄 옵션 호출 `Print`에 `PrintManager`합니다. 이 섹션에서는 화면에 인쇄 하는 데 필요한 기본 설정을 설명 HTML 콘텐츠입니다.
+KitKat 자동으로 만듭니다는 [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) 포함 된 웹 보기에 대 한 `WebView.CreatePrintDocumentAdapter`합니다. 인쇄 웹 콘텐츠는 간에 조정 된 작업을 [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) HTML 콘텐츠를 로드 될 때까지 대기 하 고 옵션 메뉴에서 인쇄 옵션을 사용 가능 알고 활동 및 사용자가 될 때까지 대기 하는 활동을 수 있습니다. 선택 하 고 인쇄 옵션 호출 `Print`에 `PrintManager`합니다. 이 섹션에서는 화면에 인쇄 하는 데 필요한 기본 설정을 설명 HTML 콘텐츠입니다.
 
 Note 로드 및 웹 콘텐츠를 인쇄 하려면 인터넷 권한이 필요 합니다.
 

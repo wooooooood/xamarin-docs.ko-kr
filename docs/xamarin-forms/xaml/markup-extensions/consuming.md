@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563955"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171718"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -137,7 +137,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </Label>
 ```
 
-다음은 세 플랫폼 모두에서 실행 되는 샘플입니다.
+샘플이 실행 되는 다음과 같습니다.
 
 [![X:static 데모](consuming-images/staticdemo-small.png "X:static 데모")](consuming-images/staticdemo-large.png#lightbox "X:static 데모")
 
@@ -181,7 +181,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-둘 다 `x:Reference` 식의 약식된 버전을 사용 합니다 `ReferenceExtension` 클래스 이름 및 제거는 `Name=` 식의 일부입니다. 첫 번째 예에서는 합니다 `x:Reference` 태그 확장에 포함 되어는 `Binding` 태그 확장 합니다. 에 `Source` 및 `StringFormat` 설정 쉼표로 구분 됩니다. 다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+둘 다 `x:Reference` 식의 약식된 버전을 사용 합니다 `ReferenceExtension` 클래스 이름 및 제거는 `Name=` 식의 일부입니다. 첫 번째 예에서는 합니다 `x:Reference` 태그 확장에 포함 되어는 `Binding` 태그 확장 합니다. 에 `Source` 및 `StringFormat` 설정 쉼표로 구분 됩니다. 실행 중인 프로그램이 다음과 같습니다.
 
 [![X:reference 데모](consuming-images/referencedemo-small.png "X:reference 데모")](consuming-images/referencedemo-large.png#lightbox "X:reference 데모")
 
@@ -449,7 +449,7 @@ public partial class TypeDemoPage : ContentPage
 
 중 하나에를 검색 한 다음 합니다 `Label` 요소를 암시적의 모든 속성 설정을 `Style` 제외 하 고는 `FontFamily`, 기본값을 합니다. 다른 정의할 수 있습니다 `Style` 간단 하지만 해당 용도 설정 합니다 `FontFamily` 특정 속성 `Label` 에 `x:Null`센터에서 설명한 것 처럼 `Label`합니다.
 
-세 가지 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![X:null 데모](consuming-images/nulldemo-small.png "X:null 데모")](consuming-images/nulldemo-large.png#lightbox "X:null 데모")
 
@@ -493,7 +493,7 @@ public partial class TypeDemoPage : ContentPage
 
 이 예제에서는 모든 세 `OnPlatform` 식의 약식된 버전을 사용 합니다 `OnPlatformExtension` 클래스 이름입니다. 세 가지 `OnPlatform` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) iOS, Android 및 UWP에서 서로 다른 값으로. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 플랫폼에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![OnPlatform 데모](consuming-images/onplatformdemo-small.png "OnPlatform 데모")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform 데모")
 
@@ -531,7 +531,7 @@ public partial class TypeDemoPage : ContentPage
 
 이 예제에서는 모든 세 `OnIdiom` 식의 약식된 버전을 사용 합니다 `OnIdiomExtension` 클래스 이름입니다. 세 가지 `OnIdiom` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 전화, 태블릿 및 데스크톱 관용구의 다른 값입니다. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 코드에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![OnIdiom 데모](consuming-images/onidiomdemo-small.png "OnIdiom 데모")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom 데모")
 

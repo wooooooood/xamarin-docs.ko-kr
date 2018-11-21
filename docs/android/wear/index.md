@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113055"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171475"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -51,7 +51,7 @@ Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정�
 |샘플|설명|스크린 샷|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|간단한 예 GridViewPager 및 대화형 알림을 비롯 한 착용 식 프로젝트의 기본 사항입니다.|![Skeletonwear 스크린샷](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|화면 셰이프를 검색 하 고 올바른 레이아웃을 자동으로 로드 WatchViewStub 컨트롤의 간단한 데모입니다.  WatchViewStub 작동 하는 방식을 확인 합니다 **Resources/layout/main_actvity.xml** 레이아웃 합니다.|![WatchViewStub 스크린샷](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|화면 셰이프를 검색 하 고 올바른 레이아웃을 자동으로 로드 WatchViewStub 컨트롤의 간단한 데모입니다.  WatchViewStub 작동 하는 방식을 확인 합니다 **Resources/layout/main_activity.xml** 레이아웃 합니다.|![WatchViewStub 스크린샷](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|작성법 단계의 형태로 Wear 알림 페이지의 데모입니다. 알림은 RecipeService.cs에 생성 됩니다.|![RecipeAssistant 스크린샷](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|"개인 비서" 상호 작용의 재미 있게 샘플 Eliza, 미리 준비 된 응답을 사용 하 여 대화를 만드는 Wear 대화형 알림을 사용 하 여 호출 됩니다.|![ElizaChat 스크린샷](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager 여기서 사용자 천공 기와 세로로 2D 탐색 패턴을 구현 하 고 옵션 및 콘텐츠 탐색을 가로로 합니다.|![GridViewPager 스크린샷](images/gridviewpager.png)|

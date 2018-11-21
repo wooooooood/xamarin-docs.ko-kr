@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 104985a4221cc6e5e6aa56420c1a41ee4c736b8d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: b5d01aa451c9ab9be081b666e8c7ce51f58a3096
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563695"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172316"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
@@ -181,7 +181,7 @@ public partial class MainPage : ContentPage
 
 [![시작 날짜 사이의 일](datepicker-images/DaysBetweenDatesStart.png "시작 날짜 사이의 일")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "시작 날짜 사이의 일")
 
-탭 중 하나는 `DatePicker` 플랫폼 날짜 선택기를 호출 하는 표시 됩니다. 매우 다양 한 방식에서이 날짜 선택기를 구현 하는 세 가지 플랫폼 이지만 각 접근 방식은 해당 플랫폼의 사용자에 게 친숙 합니다.
+탭 중 하나는 `DatePicker` 플랫폼 날짜 선택기를 호출 하는 표시 됩니다. 매우 다양 한 방식에서이 날짜 선택기를 구현 하는 플랫폼 이지만 각 접근 방식은 해당 플랫폼의 사용자에 게 친숙 합니다.
 
 [![날짜 사이의 날짜 선택](datepicker-images/DaysBetweenDatesSelect.png "날짜 사이의 날짜 선택")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "날짜 사이의 날짜 선택")
 

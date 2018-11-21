@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 84870de28ffd30b2d29fb5d8fbea815e1fd0d9c4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996440"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171068"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
 
 구현 된 **재생**, **일시 중지**, 및 **중지** 함수 전송 제어를 지 원하는 충분 하지 않습니다. 종종를 **재생** 하 고 **일시 중지** 명령을 재생 또는 일시 중지 된 비디오 현재 인지 여부를 나타내는 모양을 변경 하는 동일한 단추를 사용 하 여 구현 됩니다. 또한 비디오 아직 로드 되지 않은 경우 단추가 활성화도 안 됩니다.
 
-이러한 요구 사항을 비디오 플레이어를 사용할 수 있도록 나타내는 현재 상태는 재생 또는 일시 중지 된 경우 또는 아직 비디오를 재생 하는 데 준비 되지 않은 경우 해야 함을 의미 합니다. (세 플랫폼은 또한 비디오를 일시 중지할 수, 또는 새 위치로 이동할 수 있지만 이러한 속성은에서 지원 되지 않습니다 있도록 비디오 파일 보다는 스트리밍 비디오에 적용 하는 속성을 지원 합니다 `VideoPlayer` 여기에서 설명 합니다.)
+이러한 요구 사항을 비디오 플레이어를 사용할 수 있도록 나타내는 현재 상태는 재생 또는 일시 중지 된 경우 또는 아직 비디오를 재생 하는 데 준비 되지 않은 경우 해야 함을 의미 합니다. (각 플랫폼에서 지원 되지 않습니다 있도록 이러한 속성은 비디오 파일 보다는 스트리밍 비디오에 적용 되지만 비디오를 일시 중지할 수, 또는 새 위치로 이동할 수를 나타내는 속성도 지원 합니다 `VideoPlayer` 여기에서 설명 합니다.)
 
 **VideoPlayerDemos** 프로젝트에 포함 된 `VideoStatus` 세 멤버가 포함 된 열거형:
 
@@ -532,7 +532,7 @@ namespace FormsVideoLibrary.UWP
 
 - 0x25B6 (검은색 오른쪽을 가리키는 삼각형) 또는 &#x25B6; 에 대 한 **재생**
 
-않는다는 점을 제외 하면 3D 모양을 비슷하지 않을 일반 검정색 삼각형 세 플랫폼 모두에서 지원 됩니다 **일시 중지** 하 고 **중지**합니다. 한 가지 방법은 다음과 같습니다. variant 코드로 0x25B6 코드 포인트에 따라
+3D 모양 비슷하지 않을 일반 검정색 삼각형은 점을 제외 하 고 각 플랫폼에서 지원 됩니다 **일시 중지** 하 고 **중지**합니다. 한 가지 방법은 다음과 같습니다. variant 코드로 0x25B6 코드 포인트에 따라
 
 - 0x25B6 0xFE0F (variant 형식 16) 뒤에 또는 &#x25B6; &#xFE0F; 에 대 한 **재생**
 

@@ -1,5 +1,5 @@
 ---
-title: 호를 그리려면 세 가지 방법으로
+title: 원호를 그리는 3가지 방법
 description: 이 문서에서는 SkiaSharp를 사용 하 여 세 가지 방법으로 타원을 정의 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615407"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172225"
 ---
-# <a name="three-ways-to-draw-an-arc"></a>호를 그리려면 세 가지 방법으로
+# <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
 _SkiaSharp를 사용 하 여 세 가지 방법으로 타원을 정의 하는 방법 알아보기_
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-다음은 **탄젠트 호** 세 플랫폼 모두에서 실행 되 고 페이지:
+다음은 **탄젠트 호** 실행 페이지:
 
 [![](arcs-images/tangentarc-small.png "Arc Tangent 페이지 스크린샷 삼중")](arcs-images/tangentarc-large.png#lightbox "삼중 탄젠트 호 페이지 스크린샷")
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-세 가지 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![](arcs-images/roundedheptagon-small.png "삼중 반올림 Heptagon 페이지 스크린샷")](arcs-images/roundedheptagon-large.png#lightbox "삼중 반올림 Heptagon 페이지 스크린샷")
 
@@ -582,7 +582,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-다음 세 가지 플랫폼에서 실행 중인:
+여기이 실행 됩니다.
 
 [![](arcs-images/ellipticalarc-small.png "타원형 호 페이지 스크린샷 삼중")](arcs-images/ellipticalarc-large.png#lightbox "삼중 타원형 호 페이지 스크린샷")
 

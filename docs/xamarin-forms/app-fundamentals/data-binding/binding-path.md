@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8340e952d30e21a5249edd0fa3319462bbd5ff8b
-ms.sourcegitcommit: 913763498b5d23fa4a92e877760c51164bf1aa41
+ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150238"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172108"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
@@ -134,7 +134,7 @@ ms.locfileid: "50150238"
 
 해당 자식이 `Label`, 있는 `Text` 형식의 속성 `String`에 있는 `Length` 속성. 첫 번째 `Label` 보고서를 `TimeSpan` 에 설정 합니다 `TimePicker`이므로 해당 텍스트가 변경 되 면 최종 `Label` 도 변경 합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![경로 변형을](binding-path-images/pathvariations-small.png "경로 변형")](binding-path-images/pathvariations-large.png#lightbox "경로 변형")
 

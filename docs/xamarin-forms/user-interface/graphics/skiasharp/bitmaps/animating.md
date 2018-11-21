@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 78fcbae8db70a83d7d0a643e0b27f575152e9515
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6eacc7f2688a563f9facf651b0a6da85bd75360f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112560"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171354"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
@@ -20,7 +20,7 @@ ms.locfileid: "50112560"
 
 그러나 그래픽에 16 밀리초에서 렌더링할 너무 복잡 한 경우 애니메이션 흔들림 될 수 있습니다. 프로그래머가 30 배 또는 15 번 초 새로 고침 빈도 줄일 수도 있지만 되기도 하는 충분 하지 않습니다. 경우에 따라 그래픽은 복잡 하 게 하는 단순히 렌더링할 수 없습니다 실시간에서입니다.
 
-하나의 솔루션 미리 일련의 비트맵에 있는 애니메이션의 개별 프레임을 렌더링 하 여 애니메이션에 대 한 준비 하는 것입니다. 애니메이션을 표시 하는 초당 60 번 이러한 비트맵을 순차적으로 표시 하는 데 필요한만 합니다. 
+하나의 솔루션 미리 일련의 비트맵에 있는 애니메이션의 개별 프레임을 렌더링 하 여 애니메이션에 대 한 준비 하는 것입니다. 애니메이션을 표시 하는 초당 60 번 이러한 비트맵을 순차적으로 표시 하는 데 필요한만 합니다.
 
 물론, 비트맵, 많은 가능성이 이지만 큰 예산을 어떻게 3D 애니메이션된 영화 이루어집니다. 3D 그래픽은 실시간으로 렌더링할 훨씬 너무 복잡 합니다. 각 프레임을 렌더링 하는 많은 처리 시간이 필요 합니다. 동영상을 시청 하는 경우 표시 되는 비트맵의 일련 기본적으로 합니다.
 
@@ -34,7 +34,7 @@ SkiaSharp에서 유사 하 게 수행할 수 있습니다. 이 문서에서는 �
 
 Mandelbrot 집합을 시각적으로 썼으며 이지만 computionally 매우 긴 경우 (여기에 수학 및 Mandelbrot 집합의 내용은 참조 하세요. [의 20 장 _Creating Mobile Apps with Xamarin.Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) 666 페이지를 시작 합니다. 다음 설명에서는 해당 배경 지식을)
 
-합니다 [ **Mandelbrot 애니메이션** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) 샘플 Mandelbrot 집합에서 고정된 소수점의 지속적인 확대를 시뮬레이션 하기 위해 비트맵 애니메이션을 사용 합니다. 를 축소 하 여 다음 확대/축소 하 고 주기가 영구적으로 또는 프로그램을 종료할 때까지 반복 됩니다. 
+합니다 [ **Mandelbrot 애니메이션** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/) 샘플 Mandelbrot 집합에서 고정된 소수점의 지속적인 확대를 시뮬레이션 하기 위해 비트맵 애니메이션을 사용 합니다. 를 축소 하 여 다음 확대/축소 하 고 주기가 영구적으로 또는 프로그램을 종료할 때까지 반복 됩니다.
 
 이 애니메이션에 대 한 응용 프로그램 로컬 저장소에 저장 하는 50 비트맵까지 만들어 프로그램을 준비 합니다. 각 비트맵은 이전 비트맵 너비와 높이 복합 평면의의 절반을 포함합니다. (프로그램에 이러한 비트맵을 나타내는 정수 라고 _확대/축소 수준_.) 비트맵 순서로 표시 됩니다. 각 비트맵의 배율을 다른 하나의 비트맵에서 원활한 진행을 위해 애니메이션 효과가 적용 됩니다.
 
@@ -150,7 +150,7 @@ class BitmapInfo
 
             <Button x:Name="deleteButton"
                     Text="Delete All"
-                    HorizontalOptions="EndAndExpand" 
+                    HorizontalOptions="EndAndExpand"
                     Clicked="OnDeleteButtonClicked" />
         </StackLayout>
     </StackLayout>
@@ -179,7 +179,7 @@ public partial class MainPage : ContentPage
 
 어느 시점에서에서는 아마도 변경 하려는 `COUNT` 값을 50 애니메이션의 전체 범위를 확인 합니다. 50 보다 큰 값 유용합니다. 48 정도의 확대/축소 수준, 배정밀도 부동 소수점 숫자의 해상도 Mandelbrot 집합 계산에 대 한 부족 한 됩니다. 이 문제는 684 페이지에서 설명 _Creating Mobile Apps with Xamarin.Forms_합니다.
 
-`center` 값이 매우 중요 합니다. 이 애니메이션 확대/축소의 초점 이기도 합니다. 파일의 세 가지 값의 20 장 최종 스크린샷 세 개에 사용 된 _Creating Mobile Apps with Xamarin.Forms_ 페이지 684, 하지만 고유한 값 중 하나를 사용 하는 장에서 프로그램을 사용 하 여 실험할 수 있습니다. 
+`center` 값이 매우 중요 합니다. 이 애니메이션 확대/축소의 초점 이기도 합니다. 파일의 세 가지 값의 20 장 최종 스크린샷 세 개에 사용 된 _Creating Mobile Apps with Xamarin.Forms_ 페이지 684, 하지만 고유한 값 중 하나를 사용 하는 장에서 프로그램을 사용 하 여 실험할 수 있습니다.
 
 합니다 **Mandelbrot 애니메이션** 이러한 샘플 저장 `COUNT` 로컬 응용 프로그램 저장소에는 비트맵입니다. 50 비트맵 20mb가 넘는 장치에서 저장소 이러한 비트맵 차지 하 고 저장소 양을 알아야 할 수 있도록 하며 시점에서 모두 삭제 하려고 할 수 있습니다. 아래쪽의 두 가지 방법의 용도는 `MainPage` 클래스:
 
@@ -222,10 +222,10 @@ public partial class MainPage : ContentPage
 {
     ···
     // File path for storing each bitmap in local storage
-    string FolderPath() => 
+    string FolderPath() =>
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-    string FilePath(int zoomLevel) => 
+    string FilePath(int zoomLevel) =>
         Path.Combine(FolderPath(),
                      String.Format("R{0}I{1}Z{2:D2}.png", center.Real, center.Imaginary, zoomLevel));
 
@@ -292,7 +292,7 @@ public partial class MainPage : ContentPage
 
                 CancellationToken cancelToken = cancelTokenSource.Token;
 
-                // Do the (generally lengthy) Mandelbrot calculation 
+                // Do the (generally lengthy) Mandelbrot calculation
                 BitmapInfo bitmapInfo =
                     await Mandelbrot.CalculateAsync(center,
                                                     4 / Math.Pow(2, zoomLevel),
@@ -376,7 +376,7 @@ public partial class MainPage : ContentPage
 
 메서드를 시작 하는 모든 비트맵 만들거나 메모리에 로드 한 후에 `Stopwatch` 개체와 호출 `Device.StartTimer`합니다. `OnTimerTick` 16 밀리초 마다 호출 됩니다.
 
-`OnTimerTick` 계산을 `time` 6000 시간이 0 까지의 시간 (밀리초)의 값 `COUNT`, 각 비트맵의 표시를 위한 6 초 apportions입니다. 합니다 `progress` 사용 하 여 값을 `Math.Sin` 주기의 시작 부분에서 성능이 저하 됩니다 하는 사인 곡선 애니메이션을 만드는 값 및 느린 것으로 끝 방향을 반대로 바꿉니다. 
+`OnTimerTick` 계산을 `time` 6000 시간이 0 까지의 시간 (밀리초)의 값 `COUNT`, 각 비트맵의 표시를 위한 6 초 apportions입니다. 합니다 `progress` 사용 하 여 값을 `Math.Sin` 주기의 시작 부분에서 성능이 저하 됩니다 하는 사인 곡선 애니메이션을 만드는 값 및 느린 것으로 끝 방향을 반대로 바꿉니다.
 
 합니다 `progress` 값을 0에서 범위 `COUNT`합니다. 즉, 변수의 정수 부분과 `progress` 인덱스인 합니다 `bitmaps` 배열에 생성 되 고 소수 부분의 `progress` 해당 특정 비트맵을 확대/축소 수준을 나타냅니다. 이러한 값에 저장 됩니다는 `bitmapIndex` 및 `bitmapProgress` 필드 및 하 여 표시 되는 `Label` 및 `Slider` XAML 파일에. `SKCanvasView` 비트맵 디스플레이를 업데이트 무효화 됩니다.
 
@@ -448,7 +448,7 @@ public partial class MainPage : ContentPage
             SKBitmap bitmap = bitmaps[bitmapIndex];
             int width = bitmap.Width;
             int height = bitmap.Height;
-            SKRect sourceRect = new SKRect(fraction * width, fraction * height, 
+            SKRect sourceRect = new SKRect(fraction * width, fraction * height,
                                            (1 - fraction) * width, (1 - fraction) * height);
 
             // Display the bitmap
@@ -459,7 +459,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![Mandelbrot 애니메이션](animating-images/MandelbrotAnimation.png "Mandelbrot 애니메이션")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
@@ -482,7 +482,7 @@ public partial class MainPage : ContentPage
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" 
+        <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
@@ -494,11 +494,11 @@ public partial class MainPage : ContentPage
 </ContentPage>
 ```
 
-코드 숨김 파일을 모든 애니메이션된 GIF 파일을 재생 하려면 일반화 되지 됩니다. 반복 횟수 및 루프에서 애니메이션된 GIF 재생 하기만 하면 특히를 사용할 수 있는 정보의 일부 무시 됩니다. 
+코드 숨김 파일을 모든 애니메이션된 GIF 파일을 재생 하려면 일반화 되지 됩니다. 반복 횟수 및 루프에서 애니메이션된 GIF 재생 하기만 하면 특히를 사용할 수 있는 정보의 일부 무시 됩니다.
 
 애니메이션된 GIF 파일의 프레임을 추출 하려면 SkisSharp 사용 하지 않는 것 어디서 나 문서화 대 한 설명은 아래 코드는 평소 보다 더 자세한 이므로:
 
-페이지의 생성자에서 발생 하 고는 애니메이션된 GIF 파일 디코딩 합니다 `Stream` 비트맵을 참조 하는 개체를 만드는 데 사용할를 `SKManagedStream` 개체 차례로 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 개체입니다. 합니다 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) 속성 애니메이션을 구성 하는 프레임의 수를 나타냅니다. 
+페이지의 생성자에서 발생 하 고는 애니메이션된 GIF 파일 디코딩 합니다 `Stream` 비트맵을 참조 하는 개체를 만드는 데 사용할를 `SKManagedStream` 개체 차례로 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 개체입니다. 합니다 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) 속성 애니메이션을 구성 하는 프레임의 수를 나타냅니다.
 
 이러한 프레임 생성자를 사용 하므로 결과적으로 개별 비트맵으로 저장 됩니다 `FrameCount` 형식의 배열을 할당할 `SKBitmap` 두 뿐만 아니라 `int` 누적 된 기간 동안 각 프레임의와 (보다 쉽게 애니메이션 논리) 배열 재생 시간입니다.
 
@@ -562,10 +562,10 @@ public partial class AnimatedGifPage : ContentPage
                 totalDuration += durations[frame];
             }
 
-            // Calculate the accumulated durations 
+            // Calculate the accumulated durations
             for (int frame = 0; frame < durations.Length; frame++)
             {
-                accumulatedDurations[frame] = durations[frame] + 
+                accumulatedDurations[frame] = durations[frame] +
                     (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
             }
         }
@@ -641,7 +641,7 @@ public partial class AnimatedGifPage : ContentPage
         SKCanvas canvas = surface.Canvas;
 
         canvas.Clear(SKColors.Black);
-            
+
         // Get the bitmap and center it
         SKBitmap bitmap = bitmaps[currentFrame];
         canvas.DrawBitmap(bitmap,info.Rect, BitmapStretch.Uniform);

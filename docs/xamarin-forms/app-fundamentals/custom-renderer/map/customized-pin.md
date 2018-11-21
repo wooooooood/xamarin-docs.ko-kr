@@ -6,13 +6,13 @@ ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/24/2018
+ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203087"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172303"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -422,9 +422,10 @@ protected override MarkerOptions CreateMarker(Pin pin)
 }
 ```
 
-이 메서드를 만듭니다 `MarkerOption` 각각에 대 한 인스턴스 `Pin` 인스턴스. 해당 아이콘으로 설정 된 위치, 레이블 및 표식의 주소를 설정한 후의 `SetIcon` 메서드. 이 메서드를 `BitmapDescriptor` 아이콘을 사용 하 여 렌더링 하는 데 필요한 데이터가 포함 된 개체를 `BitmapDescriptorFactory` 생성을 간소화 하기 위한 도우미 메서드를 제공 하는 클래스를 `BitmapDescriptor`.
+이 메서드를 만듭니다 `MarkerOption` 각각에 대 한 인스턴스 `Pin` 인스턴스. 해당 아이콘으로 설정 된 위치, 레이블 및 표식의 주소를 설정한 후의 `SetIcon` 메서드. 이 메서드를 `BitmapDescriptor` 아이콘을 사용 하 여 렌더링 하는 데 필요한 데이터가 포함 된 개체를 `BitmapDescriptorFactory` 생성을 간소화 하기 위한 도우미 메서드를 제공 하는 클래스를 `BitmapDescriptor`. 사용에 대 한 자세한 내용은 합니다 `BitmapDescriptorFactory` 마커를 사용자 지정할 내용은 클래스 [표식을 사용자 지정](~/android/platform/maps-and-location/maps/maps-api.md)합니다.
 
-사용에 대 한 자세한 내용은 합니다 `BitmapDescriptorFactory` 마커를 사용자 지정할 내용은 클래스 [표식을 사용자 지정](~/android/platform/maps-and-location/maps/maps-api.md)합니다.
+> [!NOTE]
+> 필요한 경우는 `GetMarkerForPin` 를 검색 하 여 맵 렌더러에서 메서드를 호출할 수는 `Marker` 에서 `Pin`합니다.
 
 <a name="Customizing_the_Info_Window" />
 

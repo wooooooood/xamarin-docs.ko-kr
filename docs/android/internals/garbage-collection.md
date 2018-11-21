@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 814e975f57023424618c5ea403126f36f87467a7
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 347793934b01d26d22455189c12b0f1d5213a40b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235014"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170977"
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
@@ -219,7 +219,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-초기 dispose를 전달 하면 `childViews` 잘못 된 있어야 `Handle`의 `for` 루프 액세스를 발생 시킵니다는 `ArgumentException`합니다. 명시적인 더하여 `Handle` 첫 번째 검사 null `childViews` 에 액세스 하 고 다음 `Dispose` 예외 발생에서을 방지 하는 메서드: 
+초기 dispose를 전달 하면 `childViews` 잘못 된 있어야 `Handle`의 `for` 루프 액세스를 발생 시킵니다는 `ArgumentException`합니다. 명시적인 추가 하 여 `Handle` 첫 번째 검사 null `childViews` 에 액세스 하 고 다음 `Dispose` 메서드 예외 발생을 방지 합니다. 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 

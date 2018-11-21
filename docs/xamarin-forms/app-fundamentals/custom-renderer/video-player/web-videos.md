@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 566f056bd616c918ce274b9c7406d94fdc265ea2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994561"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172212"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오를 재생
 
@@ -465,7 +465,7 @@ namespace FormsVideoLibrary.UWP
 
 [![웹 비디오 재생](web-videos-images/playwebvideo-small.png "웹 비디오 재생")](web-videos-images/playwebvideo-large.png#lightbox "웹 비디오 재생")
 
-세 플랫폼 각각에 전송 컨트롤 페이드 아웃 사용 되지는 않지만 비디오를 탭 하 여 보려는 복원할 수 있습니다 경우.
+각 플랫폼에서 전송 컨트롤 페이드 아웃 사용 되지는 않지만 비디오를 탭 하 여 보려는 복원할 수 있습니다 경우.
 
 자동으로 설정 하 여 시작 비디오를 방지할 수 있습니다 합니다 `AutoPlay` 속성을 `false`:
 

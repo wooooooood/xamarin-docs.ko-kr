@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528769"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171783"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -131,7 +131,7 @@ Android SDK Tools 26.0 설치 후 기본 Google GUI 기반 AVD 관리자를 시�
 
 -----
 
-Google을 독립 실행형 API 26.0 이상 지 원하는 GUI AVD 관리자를 더 이상 제공 하므로이 메시지가 표시 됩니다. Android 8.0 Oreo 용 Xamarin Android Emulator 관리자 또는 명령줄 중 하나를 사용 해야 `avdmanager` Android Oreo 용 가상 장치를 만드는 도구입니다.
+Google API 26.0 이상 지 원하는 GUI AVD manager 독립 실행형을 더 이상 제공 하므로이 메시지가 표시 됩니다. Android 8.0 Oreo 용 Xamarin Android Emulator 관리자 또는 명령줄 중 하나를 사용 해야 `avdmanager` Android Oreo 용 가상 장치를 만드는 도구입니다.
 
 Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 참조 [가상 장치 관리 Android 장치 관리자를 사용 하 여](~/android/get-started/installation/android-emulator/device-manager.md)입니다.
 가상 장치 없이 Android 장치 관리자를 만들려면 다음 섹션의 단계를 따릅니다.
@@ -248,7 +248,7 @@ Android Oreo 소개 *xml에서 글꼴*,이 통해 리소스로 사용자 지정 
 
 ### <a name="downloadable-fonts"></a>다운로드할 수 있는 글꼴
 
-앱 Android Oreo 부터는 APK를 번들 하는 것이 아니라 공급자에서 글꼴을 요청할 수 있습니다. 글꼴은 필요할 때만 네트워크에서 다운로드 됩니다. 이 기능은 전화 메모리 및 셀룰러 데이터 사용을 절약 하 고 APK 크기를 줄여 줍니다. 또한 Android 지원 Libary 26 패키지를 설치 하 여 Android API 버전 14 이상에서이 기능을 사용할 수 있습니다.
+앱 Android Oreo 부터는 APK를 번들 하는 것이 아니라 공급자에서 글꼴을 요청할 수 있습니다. 글꼴은 필요할 때만 네트워크에서 다운로드 됩니다. 이 기능은 전화 메모리 및 셀룰러 데이터 사용을 절약 하 고 APK 크기를 줄여 줍니다. 또한 Android 지원 라이브러리 26 패키지를 설치 하 여 Android API 버전 14 이상에서이 기능을 사용할 수 있습니다.
 
 만든 앱에서 글꼴을 필요한 경우는 `FontsRequest` 개체 (다운로드 하려면 글꼴을 지정 합니다.)를 전달는 `FontsContract` 글꼴을 다운로드 하는 방법입니다. 다음 단계를 자세히 글꼴 다운로드 프로세스를 설명합니다.
 

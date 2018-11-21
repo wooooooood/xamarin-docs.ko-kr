@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: cd91f145d41d5e3bbb2f8061e04d87fdc495f1aa
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526509"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171055"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵 파일을 저장 하는 중
 
@@ -44,7 +44,7 @@ SkiaSharp 응용 프로그램을 만들거나 수정 비트맵에, 후 응용 �
 
 또한 합니다 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 클래스 라는 두 가지 방법에 `Create` 을 만들 수는 `SKCodec` 압축 된 원본에서 개체 및 응용 프로그램이 디코딩 프로세스에서 더 참여 하도록 허용 합니다. (합니다 `SKCodec` 클래스는 문서에 표시 됩니다 [ **SkiaSharp 비트맵 애니메이션** ](animating.md#gif-animation) 애니메이션된 GIF 파일 디코딩와 관련 하 여.)
 
-비트맵 인코딩, 더 많은 정보를 필요한: 인코더에는 응용 프로그램 (JPEG 또는 PNG 또는 다른)를 사용 하려는 특정 파일 형식을 알고 있어야 합니다. 손실 형식으로 필요한 경우 인코딩 원하는 수준의 품질도 알아야 합니다. 
+비트맵 인코딩, 더 많은 정보를 필요한: 인코더에는 응용 프로그램 (JPEG 또는 PNG 또는 다른)를 사용 하려는 특정 파일 형식을 알고 있어야 합니다. 손실 형식으로 필요한 경우 인코딩 원하는 수준의 품질도 알아야 합니다.
 
 합니다 `SKBitmap` 클래스를 정의 [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) 다음 구문 사용 하 여 메서드:
 
@@ -60,7 +60,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>비트맵 파일을 저장 하기 위한 플랫폼 특정 코드
 
-인코딩할 때는 `SKBitmap` 개체로 특정 파일 형식에 일반적으로 됩니다 수 둔 일종의 스트림 개체와 데이터의 배열입니다. 일부를 `Encode` 메서드 (정의한 매개 변수가 없는 것을 포함 하 여 `SKImage`) 반환을 [ `SKData` ](xref:SkiaSharp.SKData) 를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) 메서드. 이 데이터 파일에 저장 해야 합니다. 
+인코딩할 때는 `SKBitmap` 개체로 특정 파일 형식에 일반적으로 됩니다 수 둔 일종의 스트림 개체와 데이터의 배열입니다. 일부를 `Encode` 메서드 (정의한 매개 변수가 없는 것을 포함 하 여 `SKImage`) 반환을 [ `SKData` ](xref:SkiaSharp.SKData) 를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) 메서드. 이 데이터 파일에 저장 해야 합니다.
 
 응용 프로그램 로컬 저장소에서 파일에 저장 하는 표준 사용할 수 있으므로 쉽게 `System.IO` 클래스 및이 태스크에 대 한 메서드. 이 기술 문서에 설명 되어 [ **SkiaSharp 비트맵 애니메이션** ](animating.md#bitmap-animation) 관련 하 여 일련의 비트맵 Mandelbrot 집합의 애니메이션.
 
@@ -81,7 +81,7 @@ public interface IPhotoLibrary
 
 에 대 한 `SavePhotoAsync`, 첫 번째 인수는 비트맵, JPEG 또는 PNG와 같은 특정 파일 형식으로 인코딩된 이미 포함 하는 바이트 배열입니다. 응용 프로그램에 파일 이름 뒤에 다음 매개 변수에 지정 된 특정 폴더를 만들면 모든 비트맵을 격리 하기를 원하는 가능성이 있습니다. 메서드 또는 성공 여부를 나타내는 부울 값을 반환 합니다.
 
-다음은 어떻게 `SavePhotoAsync` 세 가지 플랫폼에서 구현 됩니다:
+다음 섹션에서는 설명 하는 방법을 `SavePhotoAsync` 각 플랫폼에서 구현 됩니다.
 
 ### <a name="the-ios-implementation"></a>IOS 구현
 
@@ -107,7 +107,7 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-아쉽게도 없기 파일 이름 또는 이미지에 대 한 폴더를 지정 합니다. 
+아쉽게도 없기 파일 이름 또는 이미지에 대 한 폴더를 지정 합니다.
 
 합니다 **Info.plist** iOS 프로젝트의 파일에는 사진 라이브러리에 이미지를 추가한 것입니다 나타내는 키가 필요 합니다.
 
@@ -276,7 +276,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-합니다 `SKManagedWStream` 클래스에서 파생 되며 `SKWStream` (나타내는 "쓰기 가능 스트림"). `Encode` 메서드는 스트림으로 인코딩된 비트맵 파일을 씁니다. 일부 오류 검사를 수행 해야를 해당 코드의 주석을 참조 하십시오. 
+합니다 `SKManagedWStream` 클래스에서 파생 되며 `SKWStream` (나타내는 "쓰기 가능 스트림"). `Encode` 메서드는 스트림으로 인코딩된 비트맵 파일을 씁니다. 일부 오류 검사를 수행 해야를 해당 코드의 주석을 참조 하십시오.
 
 **저장 파일 형식** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 응용 프로그램에서 유사한 코드를 사용 하 여 다양 한 형식에서 비트맵을 저장 하는 실험을 수행할 수 있도록 합니다.
 
@@ -341,7 +341,7 @@ XAML 파일에 포함 되어는 `SKCanvasView` 비트맵을 표시 하는, 응�
                    HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
-        <Button Text="Save" 
+        <Button Text="Save"
                 Clicked="OnButtonClicked">
             <Button.Triggers>
                 <DataTrigger TargetType="Button"
@@ -435,9 +435,9 @@ public partial class SaveFileFormatsPage : ContentPage
 
 합니다 `Clicked` 에 대 한 처리기를 `Button` 모든 실제 작동 합니다. 에 대 한 두 개의 인수를 가져와서 `Encode` 에서 합니다 `Picker` 및 `Slider`, 다음 만들려면 앞서 살펴본 코드를 사용 하 여는 `SKManagedWStream` 에 대 한는 `Encode` 메서드. 두 개의 `Entry` 보기에 대 한 폴더와 파일 이름을 제공 합니다 `SavePhotoAsync` 메서드.
 
-이 메서드는 대부분 할애 되는데 문제 또는 오류를 처리 합니다. 경우 `Encode` 빈 배열을 만듭니다. 즉, 특정 파일 형식은 지원 되지 않습니다. 하는 경우 `SavePhotoAsync` 반환 `false`, 다음 파일을 성공적으로 저장 되지 않았습니다. 
+이 메서드는 대부분 할애 되는데 문제 또는 오류를 처리 합니다. 경우 `Encode` 빈 배열을 만듭니다. 즉, 특정 파일 형식은 지원 되지 않습니다. 하는 경우 `SavePhotoAsync` 반환 `false`, 다음 파일을 성공적으로 저장 되지 않았습니다.
 
-세 가지 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![파일 형식 저장](saving-images/SaveFileFormats.png "파일 형식 저장")](saving-images/SaveFileFormats-Large.png#lightbox)
 
@@ -688,7 +688,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-합니다 **저장** 단추 처리기를 사용 하 여 단순한 [ `Encode` ](xref:SkiaSharp.SKImage.Encode) 메서드에서 `SKImage`합니다. 이 메서드는 PNG 형식으로 인코딩합니다. 합니다 `SKImage` 개체를 기반으로 생성 됩니다 `saveBitmap`, 및 `SKData` 인코딩된 PNG 파일을 포함 하는 개체입니다. 
+합니다 **저장** 단추 처리기를 사용 하 여 단순한 [ `Encode` ](xref:SkiaSharp.SKImage.Encode) 메서드에서 `SKImage`합니다. 이 메서드는 PNG 형식으로 인코딩합니다. 합니다 `SKImage` 개체를 기반으로 생성 됩니다 `saveBitmap`, 및 `SKData` 인코딩된 PNG 파일을 포함 하는 개체입니다.
 
 합니다 `ToArray` 메서드의 `SKData` 바이트의 배열을 가져옵니다. 에 전달 되는이 `SavePhotoAsync` 고정된 폴더 이름 및 현재 날짜 및 시간에서 생성 된 고유한 파일 이름을 함께 메서드.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 12a97989ac675d2504a2c626da73ebccb596b99b
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563565"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170938"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
@@ -109,7 +109,7 @@ public class BasicSliderCodePage : ContentPage
 
 [![기본 슬라이더 코드](slider-images/BasicSliderCode.png "기본 슬라이더 코드")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-두 번째 `Label` 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 합니다 `Slider` 조작 되 하면 첫 번째 `ValueChanged` 이벤트를 발생 합니다. 표시 되는 소수 자릿수는 세 가지 플랫폼에 대해 다른 인지 확인 합니다. 이러한 차이점의 플랫폼 구현에 관련 된 합니다 `Slider` 섹션에서이 문서의 뒷부분에서 설명 하 고 [플랫폼 구현 차이로](#implementations)합니다.
+두 번째 `Label` 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 합니다 `Slider` 조작 되 하면 첫 번째 `ValueChanged` 이벤트를 발생 합니다. 각 플랫폼에 대해 표시 되는 소수 자릿수는 알 수 있습니다. 이러한 차이점의 플랫폼 구현에 관련 된 합니다 `Slider` 섹션에서이 문서의 뒷부분에서 설명 하 고 [플랫폼 구현 차이로](#implementations)합니다.
 
 ### <a name="creating-a-slider-in-xaml"></a>XAML에서 슬라이더를 만들기
 

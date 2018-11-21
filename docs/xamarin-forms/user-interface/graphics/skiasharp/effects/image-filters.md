@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: b55067f7b4df66ccce23a7409281f4b8bbc4e9e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d4029cbd4100b3ad83343b3bee73868b385a02e5
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111642"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171822"
 ---
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
 
@@ -29,8 +29,8 @@ ms.locfileid: "50111642"
 만든 흐림 효과 [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) 정적 메서드가에 흐리게 방법에 대 한 중요 한 장점 합니다 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 클래스: 이미지 필터 수는 전체 비트맵을 흐리게 표시 합니다. 메서드가 다음 구문:
 
 ```csharp
-public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY, 
-                                                  SKImageFilter input = null, 
+public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
+                                                  SKImageFilter input = null,
                                                   SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -44,7 +44,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.ImageBlurExperimentPage"
              Title="Image Blur Experiment">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -59,7 +59,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
                               Path=Value,
                               StringFormat='Sigma X = {0:F1}'}"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="sigmaYSlider"
                 Maximum="10"
                 Margin="10, 0"
@@ -145,11 +145,11 @@ public partial class ImageBlurExperimentPage : ContentPage
 합니다 [ `SKImageFilter.CreateDropShadow` ](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) 정적 메서드를 만듭니다는 `SKImageFilter` 그림자에 대 한 개체:
 
 ```csharp
-public static SKImageFilter CreateDropShadow (float dx, float dy, 
-                                              float sigmaX, float sigmaY, 
-                                              SKColor color, 
-                                              SKDropShadowImageFilterShadowMode shadowMode, 
-                                              SKImageFilter input = null, 
+public static SKImageFilter CreateDropShadow (float dx, float dy,
+                                              float sigmaX, float sigmaY,
+                                              SKColor color,
+                                              SKDropShadowImageFilterShadowMode shadowMode,
+                                              SKImageFilter input = null,
                                               SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -159,7 +159,7 @@ public static SKImageFilter CreateDropShadow (float dx, float dy,
 
 합니다 `sigmaX` 고 `sigmaY` 매개 변수 그림자에 대 한 요소를 흐리게 표시 됩니다.
 
-`color` 매개 변수는 그림자의 색입니다. 이 `SKColor` 값 투명도 포함할 수 있습니다. 한 가지 방법은 색 값은 `SKColors.Black.WithAlpha(0x80)` 색 백그라운드 어두워집니다. 
+`color` 매개 변수는 그림자의 색입니다. 이 `SKColor` 값 투명도 포함할 수 있습니다. 한 가지 방법은 색 값은 `SKColors.Black.WithAlpha(0x80)` 색 백그라운드 어두워집니다.
 
 마지막 두 매개 변수는 선택적입니다.
 
@@ -265,7 +265,7 @@ public partial class DropShadowExperimentPage : ContentPage
                                     sigmaX,
                                     sigmaY,
                                     SKColors.Red,
-                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground); 
+                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground);
 
             SKRect textBounds = new SKRect();
             paint.MeasureText(TEXT, ref textBounds);
@@ -280,7 +280,7 @@ public partial class DropShadowExperimentPage : ContentPage
 }
 ```
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![섀도 실험을 삭제할](image-filters-images/DropShadowExperiment.png "섀도 실험 삭제")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
@@ -299,22 +299,22 @@ public partial class DropShadowExperimentPage : ContentPage
 
 이러한 메서드는 3 차원 화면에서 광원의 다양 한 종류의 효과 모방 하는 이미지 필터를 만듭니다. 결과 이미지 필터 서 이러한 개체를 상승 된 권한 또는 들어간 표시할 발생할 수 있습니다, 3D 공간에서 반사 강조 표시 또는 있었던 것 처럼 2 차원 개체를 나타냅니다.
 
-`Distant` 밝은 메서드 조명이 먼 거리에서를 가정 합니다. 불어넣을 개체를 목적으로 밝은 지구 작은 영역에서 Sun 마찬가지로 3D 공간에서 일관 된 단방향으로 간주 됩니다. `Point` 밝은 메서드를 내보내는 모든 방향으로 조명을 3D 공간에서 전구를 모방 합니다. `Spot` light에 위치 및 방향 손전등 매우 유사 하 게 합니다. 
+`Distant` 밝은 메서드 조명이 먼 거리에서를 가정 합니다. 불어넣을 개체를 목적으로 밝은 지구 작은 영역에서 Sun 마찬가지로 3D 공간에서 일관 된 단방향으로 간주 됩니다. `Point` 밝은 메서드를 내보내는 모든 방향으로 조명을 3D 공간에서 전구를 모방 합니다. `Spot` light에 위치 및 방향 손전등 매우 유사 하 게 합니다.
 
-위치 및 방향 3D 공간에서 둘 다의 값을 사용 하 여 지정 된를 [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) 비슷한 구조 `SKPoint` 있지만 라는 세 가지 속성을 사용 하 여 `X`를 `Y`, 및 `Z`합니다. 
+위치 및 방향 3D 공간에서 둘 다의 값을 사용 하 여 지정 된를 [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) 비슷한 구조 `SKPoint` 있지만 라는 세 가지 속성을 사용 하 여 `X`를 `Y`, 및 `Z`합니다.
 
 수와 이러한 메서드는 매개 변수는 복잡성으로 실험을 어려워집니다. 시작 하는 데는 **먼 Light 실험** 매개 변수를 실험해 볼 수 있습니다. 페이지를 `CreateDistantLightDiffuse` 메서드:
 
 ```csharp
-public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction, 
-                                                     SKColor lightColor, 
-                                                     float surfaceScale, 
-                                                     float kd, 
-                                                     SKImageFilter input = null, 
+public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
+                                                     SKColor lightColor,
+                                                     float surfaceScale,
+                                                     float kd,
+                                                     SKImageFilter input = null,
                                                      SKImageFilter.CropRect cropRect = null);
 ```
 
-페이지에는 마지막 두 개의 선택적 매개 변수를 사용 하지 않습니다. 
+페이지에는 마지막 두 개의 선택적 매개 변수를 사용 하지 않습니다.
 
 세 `Slider` 는 XAML에서 뷰 파일 수를 선택 하면를 `Z` 의 좌표를 `SKPoint3` 값을 `surfaceScale` 매개 변수를 및 `kd` "확산 조명 상수"는 API 설명서에 정의 된 매개 변수:
 
@@ -331,7 +331,7 @@ public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
                            PaintSurface="OnCanvasViewPaintSurface"
                            VerticalOptions="FillAndExpand" />
 
-        <Slider x:Name="zSlider" 
+        <Slider x:Name="zSlider"
                 Minimum="-10"
                 Maximum="10"
                 Margin="10, 0"
@@ -342,7 +342,7 @@ public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
                               StringFormat='Z = {0:F0}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="surfaceScaleSlider" 
+        <Slider x:Name="surfaceScaleSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"
@@ -353,7 +353,7 @@ public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
                               StringFormat='Surface Scale = {0:F1}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="lightConstantSlider" 
+        <Slider x:Name="lightConstantSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"

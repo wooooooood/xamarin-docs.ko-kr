@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527276"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171289"
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼별
 
@@ -143,6 +143,7 @@ Android에서 Xamarin.Forms 보기에 대 한 다음과 같은 플랫폼별 기�
 
 - 기본 안쪽 여백 및 Android 단추의 섀도 값을 사용합니다. 자세한 내용은 [Android 단추를 사용 하 여](#button-padding-shadow)입니다.
 - 입력된 방법에 대 한 소프트 키보드에 대 한 편집기 옵션 설정 된 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 자세한 내용은 [설정은 항목 입력 방법 편집기 옵션](#entry-imeoptions)합니다.
+- 에 그림자를 사용 하도록 설정 된 `ImageButton`합니다. 자세한 내용은 [는 ImageButton에 Drop 그림자를 사용 하도록 설정 하면](#imagebutton-drop-shadow)합니다.
 - 빠른 스크롤을 사용 하도록 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView) 자세한 내용은 참조 하세요. [는 ListView의 빠른 스크롤 사용 하도록 설정](#fastscroll).
 - 제어 여부는 [ `WebView` ](xref:Xamarin.Forms.WebView) 혼합 된 콘텐츠를 표시할 수 있습니다. 자세한 내용은 [혼합 콘텐츠는 WebView에서 사용 하도록 설정 하면](#webview-mixed-content)합니다.
 
@@ -227,6 +228,67 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 결과 지정 된 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 값에 대 한 소프트 키보드에 적용 됩니다는 [ `Entry` ](xref:Xamarin.Forms.Entry)를 설정 하는 입력된 방법 편집기 옵션:
 
 [![항목 입력 방법 편집기 플랫폼별](android-images/entry-imeoptions.png "항목 입력 방법 편집기 플랫폼별")](android-images/entry-imeoptions-large.png#lightbox "항목 입력 방법 편집기 플랫폼별")
+
+<a name="imagebutton-drop-shadow" />
+
+### <a name="enabling-a-drop-shadow-on-a-imagebutton"></a>ImageButton에 그림자를 사용 하도록 설정
+
+이 플랫폼별에서 그림자를 사용 하도록 설정 되는 `ImageButton`합니다. 설정 하 여 XAML에서 사용 되는 `ImageButton.IsShadowEnabled` 바인딩 가능한 속성을 `true`, 그림자를 제어 하는 추가 선택적 바인딩 가능한 속성의 수와 함께 합니다.
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> 일부로 그림자를 그릴 합니다 `ImageButton` 배경색과 배경만 그려지는 경우를 `BackgroundColor` 속성을 설정 합니다. 따라서 그림자를 그릴 수 없는 경우는 `ImageButton.BackgroundColor` 속성이 설정 되지 않습니다.
+
+`ImageButton.On<Android>` 메서드가 플랫폼별 Android에만 실행 되도록 지정 합니다. `ImageButton.SetIsShadowEnabled` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 그림자에 사용 되는지 여부를 제어 하려면 네임 스페이스는는 `ImageButton`합니다. 또한 그림자를 제어 하려면 다음 메서드를 호출할 수 있습니다.
+
+- `SetShadowColor` – 그림자의 색을 설정 합니다. 기본 색은 [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*)합니다.
+- `SetShadowOffset` – 그림자의 오프셋을 설정 합니다. 그림자 캐스팅 된 및로 지정 된 방향을 변경 하는 오프셋 된 [ `Size` ](xref:Xamarin.Forms.Size) 값입니다. `Size` 구조 값의 첫 번째 값 (음수) 왼쪽 또는 오른쪽 (양수) 까지의 거리와 두 번째 되 위의 거리 값 (음수 값) 또는 (양수) 아래 장치 독립적 단위 표현 됩니다 . 이 속성의 기본값은 (0.0, 0.0)의 모든 관련 캐스팅은 섀도 있으며 그 결과 `ImageButton`합니다.
+- `SetShadowRadius`– 그림자를 렌더링 하는 데 흐리게 반경이 설정 합니다. Radius 기본값은 10.0입니다.
+
+> [!NOTE]
+> 호출 하 여 그림자의 상태를 쿼리할 수 있습니다 합니다 `GetIsShadowEnabled`, `GetShadowColor`를 `GetShadowOffset`, 및 `GetShadowRadius` 메서드.
+
+결과에서 그림자를 사용할 수 있습니다는 `ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "그림자를 사용 하 여 ImageButton")
 
 <a name="fastscroll" />
 

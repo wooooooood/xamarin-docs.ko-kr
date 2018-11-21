@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615680"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171146"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-이 효과 사용 하 여 선 그리기 또는 기반 채우기 합니다 `Style` 의 속성을 `SKPaint` 개체입니다. 다음 세 플랫폼 모두에서입니다.
+이 효과 사용 하 여 선 그리기 또는 기반 채우기 합니다 `Style` 의 속성을 `SKPaint` 개체입니다. 여기이 실행 됩니다.
 
 [![](effects-images/anotherroundedheptagon-small.png "다른 반올림 Heptagon 페이지 스크린샷 삼중")](effects-images/anotherroundedheptagon-large.png#lightbox "삼중 다른 반올림 Heptagon 페이지 스크린샷")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-여기 세 플랫폼 모두에서 가로 모드로 실행 됩니다.
+여기 가로 모드에서 실행 중인:
 
 [![](effects-images/jittertext-small.png "Triple 지터 텍스트 페이지의 스크린샷")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

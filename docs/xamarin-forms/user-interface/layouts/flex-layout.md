@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 731eb8cbcf062556e4c37b444376825527f662df
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564020"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171562"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -31,7 +31,7 @@ Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms 버�
 
 ## <a name="common-usage-scenarios"></a>일반적인 사용 시나리오
 
-합니다 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플 프로그램에 여러 페이지의 몇 가지 일반적인 용도 돕기 `FlexLayout` 해당 속성을 사용 하 여 실험할 수 있습니다.
+합니다 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 의 몇 가지 일반적인 용도 보여 주는 여러 페이지를 포함 하는 샘플 프로그램 `FlexLayout` 해당 속성을 사용 하 여 실험할 수 있습니다.
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>FlexLayout를 사용 하 여 간단한 스택
 
@@ -187,7 +187,7 @@ public partial class PhotoWrappingPage : ContentPage
 }
 ```
 
-점진적으로 위쪽에서 아래쪽으로 스크롤할 세 가지 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
+프로그램 실행, 점진적으로 스크롤되는 위쪽에서 아래쪽은 다음과 같습니다.
 
 [![사진 래핑 페이지](flex-layout-images/PhotoWrapping.png "사진 래핑 페이지")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
@@ -242,7 +242,7 @@ public partial class PhotoWrappingPage : ContentPage
 </ContentPage>
 ```
 
-다음 세 가지 플랫폼에서 실행 중인:
+여기이 실행 됩니다.
 
 [![인프라도 레이아웃 페이지](flex-layout-images/HolyGrailLayout.png "인프라도 레이아웃 페이지")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
@@ -384,7 +384,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ## <a name="the-bindable-properties-in-detail"></a>세부 정보에 바인딩 가능한 속성
 
-지금까지 살펴본 몇 가지 일반적인 응용 프로그램의 했으므로 `FlexLayout`, 속성을 `FlexLayout` 자세히 탐색할 수 있습니다. 
+지금까지 살펴본 몇 가지 일반적인 응용 프로그램의 했으므로 `FlexLayout`, 속성을 `FlexLayout` 자세히 탐색할 수 있습니다.
 `FlexLayout` 에 설정 하는 6 개의 바인딩 가능한 속성 정의 `FlexLayout` 코드 또는 컨트롤 방향 및 맞춤을 XAML 자체입니다. (이러한 속성 중 하나 [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position),이 문서에서는 다루지 않습니다.)
 
 다섯 가지 나머지 바인딩 가능한 속성을 사용 하 여 실험할 수 있습니다 합니다 **실험** 페이지의 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플. 이 페이지에서는 추가 하거나에서 자식을 제거할 수 있습니다는 `FlexLayout` 및 5 바인딩 가능한 속성 조합을 설정 합니다. 모든 자식을 `FlexLayout` 는 `Label` 다양 한 색과 크기의 뷰 사용 하 여는 `Text` 숫자에 해당 하는 해당 위치를 설정 하는 속성을 `Children` 컬렉션.
@@ -532,7 +532,7 @@ FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
 
 ### <a name="the-basis-property"></a>기본 속성
 
-합니다 [ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) 연결 된 바인딩 가능한 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 기본 축에 합니다. 으로 크기 지정 된 `Basis` 속성은 부모 주 축 따라 크기 `FlexLayout`합니다. 따라서 `Basis` 열에서 자식을 정렬 하는 경우 행 높이에 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
+합니다 [ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty) 연결 된 바인딩 가능한 속성의 자식에 할당 된 공간의 양을 나타냅니다는 `FlexLayout` 기본 축에 합니다. 지정 된 크기는 `Basis` 속성은 부모 주 축 따라 크기 `FlexLayout`합니다. 따라서 `Basis` 열에서 자식을 정렬 하는 경우 행 높이에 자식 항목을 정렬할 때 자식의 너비를 나타냅니다.
 
 합니다 `Basis` 형식의 속성은 [ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis), 구조입니다. 두 장치 독립적 단위 또는 크기의 백분율로 크기를 지정할 수는 `FlexLayout`합니다. 기본값은 `Basis` 속성은 정적 속성 `FlexBasis.Auto`, 자식의 너비 또는 높이 데 사용 됩니다 요청 했음을 의미 하는 합니다.
 
@@ -735,7 +735,7 @@ button {
 
 여러 `FlexLayout` 연결 된 바인딩 가능한 속성은 여기 참조 됩니다. 에 `label.empty` 선택기를 표시 합니다 `flex-grow` 빈 스타일 특성을 `Label` 위의 빈 공간을 제공 하는 `Button`. `image` 선택기를 포함를 `order` 특성 및 `align-self` 특성에 해당 하는 둘 다 `FlexLayout` 바인딩 가능한 속성을 연결 합니다.
 
-지금까지 살펴본에서 직접 속성을 설정할 수는 `FlexLayout` 의 자식에 대해 연결 된 바인딩 가능한 속성을 설정할 수 있습니다는 `FlexLayout`합니다. 또는 기존 XAML 기반 스타일 또는 CSS 스타일 직접 하지 하 여 이러한 속성을 설정할 수 있습니다. 알고 있어야 하 고 이러한 속성을 이해 하는 중요 한 것입니다. 이러한 속성은 어떻게는 `FlexLayout` 진정으로 유연 합니다. 
+지금까지 살펴본에서 직접 속성을 설정할 수는 `FlexLayout` 의 자식에 대해 연결 된 바인딩 가능한 속성을 설정할 수 있습니다는 `FlexLayout`합니다. 또는 기존 XAML 기반 스타일 또는 CSS 스타일 직접 하지 하 여 이러한 속성을 설정할 수 있습니다. 알고 있어야 하 고 이러한 속성을 이해 하는 중요 한 것입니다. 이러한 속성은 어떻게는 `FlexLayout` 진정으로 유연 합니다.
 
 ## <a name="flexlayout-with-xamarinuniversity"></a>FlexLayout Xamarin.University 사용 하 여
 

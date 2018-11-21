@@ -7,12 +7,12 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 6ad9c099f3a517a4667c0ea8635fbbc3001ae7ca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c0ee238e0fc72aaea2f73e11317fea7b7a63fb7
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132052"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171497"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
 
@@ -20,7 +20,7 @@ ms.locfileid: "50132052"
 
 ![Perlin 노이즈 샘플](noise-images/NoiseSample.png "Perlin 노이즈 샘플")
 
-알 수 있듯이 각 픽셀을 임의의 색 값이 아닙니다. 임의 셰이프 픽셀 연속성 픽셀에서 발생합니다. 
+알 수 있듯이 각 픽셀을 임의의 색 값이 아닙니다. 임의 셰이프 픽셀 연속성 픽셀에서 발생합니다.
 
 Perlin 노이즈 Skia 지원은 CSS 및 SVG에 대 한 W3C 사양을 기반으로 합니다. 섹션 8.20 [ **필터 효과 모듈 수준 1** ](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) C 코드에서 기본 Perlin 노이즈 알고리즘을 포함 합니다.
 
@@ -36,7 +36,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 두 메서드 모두 추가 사용 하 여 오버 로드 된 버전에도 존재 `SKPointI` 매개 변수입니다. 섹션 [ **바둑판식 배열 Perlin 노이즈** ](#tiling-perlin-noise) 이러한 오버 로드에 설명 합니다.
 
-두 `baseFrequency` 인수는 양수 값으로 0에서 1 사이의 SkiaSharp 설명서에 정의 되어 있지만 더 높은 값으로 설정할 수 있습니다. 값이 높을수록, 가로 및 세로 방향으로 임의 이미지에는 큰 변경 합니다. 
+두 `baseFrequency` 인수는 양수 값으로 0에서 1 사이의 SkiaSharp 설명서에 정의 되어 있지만 더 높은 값으로 설정할 수 있습니다. 값이 높을수록, 가로 및 세로 방향으로 임의 이미지에는 큰 변경 합니다.
 
 `numOctaves` 값은 정수 1 이상입니다. 알고리즘의 반복 요소를 관련이 있습니다. 각 추가 octave 이므로 이전 octave의 절반 octave 값이 높은 영향 감소 효과 제공 합니다.
 
@@ -51,7 +51,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.PerlinNoisePage"
              Title="Perlin Noise">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -64,7 +64,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
         <Label x:Name="baseFrequencyXText"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="baseFrequencyYSlider"
                 Maximum="4"
                 Margin="10, 0"
@@ -72,7 +72,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
         <Label x:Name="baseFrequencyYText"
                HorizontalTextAlignment="Center" />
-        
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      Margin="10">
@@ -81,7 +81,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
                                   Path=Value,
                                   StringFormat='Number of Octaves: {0:F0}'}"
                    VerticalOptions="Center" />
-            
+
             <Stepper x:Name="octavesStepper"
                      Minimum="1"
                      ValueChanged="OnStepperValueChanged" />
@@ -141,7 +141,7 @@ public partial class PerlinNoisePage : ContentPage
 
         using (SKPaint paint = new SKPaint())
         {
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseFractalNoise(baseFreqX,
                                                        baseFreqY,
                                                        numOctaves,
@@ -150,7 +150,7 @@ public partial class PerlinNoisePage : ContentPage
             SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
             canvas.DrawRect(rect, paint);
 
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseTurbulence(baseFreqX,
                                                      baseFreqY,
                                                      numOctaves,
@@ -193,7 +193,7 @@ public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float 
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.TiledPerlinNoisePage"
              Title="Tiled Perlin Noise">
-             
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -257,7 +257,7 @@ public partial class TiledPerlinNoisePage : ContentPage
                 using (SKPaint paint = new SKPaint())
                 {
                     paint.Shader = SKShader.CreatePerlinNoiseTurbulence(
-                                        0.02f, 0.02f, 1, seed, 
+                                        0.02f, 0.02f, 1, seed,
                                         new SKPointI(TILE_SIZE, TILE_SIZE));
 
                     bitmapCanvas.DrawRect(tileRect, paint);
@@ -267,13 +267,13 @@ public partial class TiledPerlinNoisePage : ContentPage
             // Draw tiled bitmap shader on canvas
             using (SKPaint paint = new SKPaint())
             {
-                paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                                     SKShaderTileMode.Repeat, 
+                paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                     SKShaderTileMode.Repeat,
                                                      SKShaderTileMode.Repeat);
                 canvas.DrawRect(info.Rect, paint);
             }
 
-            // Draw rectangle showing tile 
+            // Draw rectangle showing tile
             using (SKPaint paint = new SKPaint())
             {
                 paint.Style = SKPaintStyle.Stroke;
@@ -290,22 +290,22 @@ public partial class TiledPerlinNoisePage : ContentPage
 비트맵 만든 후에, 다른 `SKPaint` 개체는 호출 하 여 비트맵을 바둑판식으로 배열 된 패턴을 만드는 데 `SKShader.CreateBitmap`합니다. 두 인수를 확인할 수 있습니다 `SKShaderTileMode.Repeat`:
 
 ```csharp
-paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                     SKShaderTileMode.Repeat, 
+paint.Shader = SKShader.CreateBitmap(bitmap,
+                                     SKShaderTileMode.Repeat,
                                      SKShaderTileMode.Repeat);
 ```
 
-이 셰이더는 캔버스를 포함 하는 데 사용 됩니다. 마지막으로, 다른 `SKPaint` 개체 원래 비트맵의 크기를 표시 하는 사각형을 그리는 데 사용 됩니다. 
+이 셰이더는 캔버스를 포함 하는 데 사용 됩니다. 마지막으로, 다른 `SKPaint` 개체 원래 비트맵의 크기를 표시 하는 사각형을 그리는 데 사용 됩니다.
 
-만 `seed` 매개 변수는 사용자 인터페이스에서 선택할 수 있습니다. 하는 경우 동일한 `seed` 패턴은 세 플랫폼에서 사용, 동일한 패턴이 표시 됩니다. 다른 `seed` 값으로 인해 다른 패턴이 있습니다.
+만 `seed` 매개 변수는 사용자 인터페이스에서 선택할 수 있습니다. 하는 경우 동일한 `seed` 패턴은 각 플랫폼에서 사용 됩니다, 동일한 패턴이 표시 됩니다. 다른 `seed` 값으로 인해 다른 패턴이 있습니다.
 
 [![Perlin 노이즈를 바둑판식으로 배열](noise-images/TiledPerlinNoise.png "Perlin 노이즈를 바둑판식으로 배열")](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
-왼쪽 위 모퉁이에 있는 200 픽셀 사각형 패턴과 다른 타일로 원활 하 게 이동합니다. 
+왼쪽 위 모퉁이에 있는 200 픽셀 사각형 패턴과 다른 타일로 원활 하 게 이동합니다.
 
 ## <a name="combining-multiple-shaders"></a>여러 셰이더를 결합합니다.
 
-합니다 `SKShader` 클래스에 포함을 [ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*) 지정 단색 셰이더를 만드는 메서드를 합니다. 해당 색 설정 하기만 하면이 셰이더 자체로 유용 이므로 `Color` 의 속성을 `SKPaint` 개체 및 설정는 `Shader` 속성을 null. 
+합니다 `SKShader` 클래스에 포함을 [ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*) 지정 단색 셰이더를 만드는 메서드를 합니다. 해당 색 설정 하기만 하면이 셰이더 자체로 유용 이므로 `Color` 의 속성을 `SKPaint` 개체 및 설정는 `Shader` 속성을 null.
 
 이 `CreateColor` 메서드가 다른 메서드를 유용 하 게 하는 `SKShader` 정의 합니다. 이 메서드는 [ `CreateCompose` ](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader)), 두 셰이더를 결합 합니다. 구문은 다음과 같습니다.
 

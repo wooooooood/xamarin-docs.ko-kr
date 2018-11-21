@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: faf2c35b49b0b02b9f3b16e19494d2e447361d84
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617672"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171653"
 ---
 # <a name="time-picker"></a>시간 선택기
 
@@ -45,7 +45,7 @@ ms.locfileid: "51617672"
 에 `TimePickerDialog`시간을 선택 하 고 클릭 하는 **확인** 원인 단추를 `TimePickerDialog` 메서드를 호출 하 [IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/)합니다.
 이 인터페이스를 호스트 하 여 구현 됩니다 `DialogFragment` (`TimePickerFragment`에 아래 설명 된 대로). 클릭 하 여 **취소** 단추를 클릭 하면 대화 상자를 닫을 수를 확인 하 고 조각.
 
-`DialogFragment` 세 가지 방법 중 하나에서 호스팅 Actvity를 선택한 시간을 반환합니다.
+`DialogFragment` 호스팅 작업 세 가지 방법 중 하나를 선택한 시간을 반환합니다.
 
 1. **메서드 호출 또는 속성을 설정** &ndash; The 활동 속성 또는이 값이 설정에 맞게 메서드를 제공할 수 있습니다.
 

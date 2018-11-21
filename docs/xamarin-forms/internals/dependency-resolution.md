@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 9226e1d26dcc49b6ec82b71f7757eb0e22cd66ec
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351587"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171978"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms에서 종속성 확인
 
@@ -149,7 +149,7 @@ public VideoPlayerRenderer(ILogger logger)
 }
 ```
 
-세 플랫폼 모두에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다 합니다 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` iOS 플랫폼에서 메서드:
+모든 플랫폼에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다는 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` iOS 플랫폼에서 메서드:
 
 ```csharp
 void RegisterTypes()
@@ -196,7 +196,7 @@ boxView.Effects.Add(touchEffect);
 
 `TouchEffect` 클래스는를 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 하 여 각 플랫폼에서 구현 되는 `TouchEffect` 클래스에 `PlatformEffect`합니다. 플랫폼 `TouchEffect` 끌기를 위한 기능을 제공 하는 클래스는 `BoxView` 페이지입니다. 이러한 효과 클래스에 대 한 자세한 내용은 참조 하세요. [효과의 이벤트를 호출](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)합니다.
 
-세 플랫폼 모두에 `TouchEffect` 클래스에 필요한 다음 생성자는 `ILogger` 인수:
+모든 플랫폼에서의 `TouchEffect` 클래스에 필요한 다음 생성자는 `ILogger` 인수:
 
 ```csharp
 public TouchEffect(ILogger logger)
@@ -205,7 +205,7 @@ public TouchEffect(ILogger logger)
 }
 ```
 
-세 플랫폼 모두에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다 합니다 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` Android 플랫폼에서 메서드:
+모든 플랫폼에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다는 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` Android 플랫폼에서 메서드:
 
 ```csharp
 void RegisterTypes()
@@ -240,7 +240,7 @@ public PhotoPicker(ILogger logger)
 }
 ```
 
-세 플랫폼 모두에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다 합니다 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` UWP 메서드:
+모든 플랫폼에서 종속성 주입 컨테이너를 사용 하 여 유형을 등록 하 여 수행 됩니다는 `RegisterTypes` 메서드를 사용 하 여 응용 프로그램을 로드 하는 플랫폼 전에 호출 되는 `LoadApplication(new App())` 메서드. 다음 예제는 `RegisterTypes` UWP 메서드:
 
 ```csharp
 void RegisterTypes()

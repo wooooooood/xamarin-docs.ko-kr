@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105534"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172004"
 ---
 # <a name="creating-a-watch-face"></a>시계 모드 만들기
 
@@ -302,7 +302,7 @@ public override void OnTimeTick()
 
 3.  라는 이미지를 그릴 수 있는 선언 `preview` 는 조사식 선택기 선택 화면이 표시 됩니다.
 
-4.  포함을 `intent-filter` 사실을 Android 있도록 `MyWatchFaceSevice` 시계 모드를 표시 합니다.
+4.  포함을 `intent-filter` 사실을 Android 있도록 `MyWatchFaceService` 시계 모드를 표시 합니다.
 
 기본 코드를 완료 하는 `WatchFace` 예제입니다. 다음 단계는 데 필요한 리소스를 추가 하는 것입니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: a876e81c67b6ec61a2cb29143cb001a7d6160032
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998149"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170951"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
 
@@ -119,7 +119,7 @@ XAML 파일에 다음 섹션은는 `StackLayout` 사용 하 여는 `BindingConte
 
 마지막 섹션 집합의 `BindingContext` 의 값으로 `Math.PI` 기본 서식 지정 및 두 가지 유형의 숫자 서식 지정을 사용 하 여 표시 합니다.
 
-다음은 세 플랫폼 모두에서 실행 중인 프로그램이입니다.
+실행 중인 프로그램이 다음과 같습니다.
 
 [![문자열 서식 지정](string-formatting-images/stringformatting-small.png "문자열 서식 지정")](string-formatting-images/stringformatting-large.png#lightbox "문자열 서식 지정")
 

@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/28/2018
-ms.openlocfilehash: bcc18672257338e74e7a0c7114876129ae661acb
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 98eb37d27a20bac4ad2efab831552140496af2e3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527419"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172173"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -373,7 +373,7 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|_색_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_문자열_ \| `initial` |`background-image: bg.png;`|
-|`border-color`|`Button`, `Frame`|_색_ \| `initial`|`border-color: #9acd32;`|
+|`border-color`|`Button`, `Frame`, `ImageButton`|_색_ \| `initial`|`border-color: #9acd32;`|
 |`border-radius`|`BoxView`|_Double_ \| `initial` |`border-radius: 10;`|
 |`border-width`|`Button`|_Double_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_색_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
@@ -400,11 +400,11 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`min-width`|`VisualElement`|_Double_ \| `initial` |`min-width: 112;`|
 |`opacity`|`VisualElement`|_Double_ \| `initial` |`opacity: .3;`|
 |`order`|`VisualElement`|_Int_ \| `initial`|`order: -1;`|
-|`padding`|`Layout`, `Page`|_두께_ \| `initial` |`padding: 6 12 12;`|
-|`padding-left`|`Layout`, `Page`|_Double_ \| `initial`|`padding-left: 3;`|
-|`padding-top`|`Layout`, `Page`| _Double_ \| `initial` |`padding-top: 4;`|
-|`padding-right`|`Layout`, `Page`| _Double_ \| `initial` |`padding-right: 2;`|
-|`padding-bottom`|`Layout`, `Page`| _Double_ \| `initial` |`padding-bottom: 6;`|
+|`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_두께_ \| `initial` |`padding: 6 12 12;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_Double_ \| `initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _Double_ \| `initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
 |`row-gap`|`Grid`| _Double_ \| `initial`|`row-gap: 12;`|
 |`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` 및 `right` 오른쪽에서 왼쪽 환경에서 피해 야 합니다.| `text-align: right;`|
