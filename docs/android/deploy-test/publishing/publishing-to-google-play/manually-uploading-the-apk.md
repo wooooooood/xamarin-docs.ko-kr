@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f0378f7e2fe29a5d11c2cbc02fc736adf12577c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111286"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171731"
 ---
 # <a name="manually-uploading-the-apk"></a>수동으로 APK 업로드
 
@@ -125,7 +125,7 @@ Google Play에서는 무료 응용 프로그램이 유료 앱으로 변경되는
 
 ### <a name="manage-countries"></a>국가 관리 
 
-다음 섹션 **국가 관리**에서는 앱을 배포할 수 있는 국가를 제어합니다.
+**국가 관리** 섹션에서는 앱이 배포될 수 있는 국가를 제어합니다.
 
 [![국가 관리 대화 상자](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
@@ -169,7 +169,7 @@ Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 이 매니페스트 요소는 응용 프로그램이 작동하기 위해 장치에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 응용 프로그램을 장치에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 응용 프로그램을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 장치에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibaryAttribute`를 통해서도 지정할 수 있습니다. 예: 
+-   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 장치에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]

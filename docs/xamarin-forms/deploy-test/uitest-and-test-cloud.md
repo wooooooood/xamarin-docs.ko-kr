@@ -7,13 +7,13 @@ ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/31/2016
-ms.openlocfilehash: 215aa88b7e97a67242bd991dde0e66c445b47b0a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: a4a3a1d35b675091319646a03fb0362e4d250b0e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526425"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171887"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>App Center를 사용하여 Xamarin.Forms 테스트 자동화
 
@@ -38,7 +38,7 @@ Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms �
 
 UITest는 화면에 컨트롤을 활성화하고 사용자가 일반적으로 응용 프로그램과 상호 작용하는 모든 위치에서 입력을 수행하여 사용자 인터페이스를 자동화합니다. *단추를 누르거나* *입력란에 텍스트를 입력*할 수 있는 테스트를 활성화하려면 테스트 코드가 화면의 컨트롤을 식별할 수 있어야 합니다.
 
-UITest 코드가 컨트롤을 참조하려면 각 컨트롤에 고유한 ID가 필요합니다. Xamarin.Forms에서 이러한 ID를 설정할 때 권장되는 방법은 아래 표시된 것처럼 `AutomationId` 속성을 사용하는 것입니다.
+UITest 코드가 컨트롤을 참조하려면 각 컨트롤에 고유한 ID가 필요합니다. Xamarin.Forms에서 이 식별자를 설정하는 경우 아래와 같이 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 속성을 사용하는 것이 좋습니다.
 
 ```csharp
 var b = new Button {
@@ -51,17 +51,19 @@ var l = new Label {
 };
 ```
 
-XAML에서 `AutomationId` 속성을 설정할 수도 있습니다.
+XAML에서 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 속성을 설정할 수도 있습니다.
 
 ```xaml
 <Button x:Name="b" AutomationId="MyButton" Text="Click me"/>
 <Label x:Name="l" AutomationId="MyLabel" Text="Hello, Xamarin.Forms!" />
 ```
 
-테스트에 필요한 모든 컨트롤(값을 쿼리해야 할 수 있는 단추, 텍스트 항목 및 레이블 포함)에 고유한 `AutomationId`를 추가해야 합니다.
-
 > [!NOTE]
-> `Element`의 `AutomationId` 속성을 여러 번 설정하려고 시도하면 `InvalidOperationException`이 throw 됩니다.
+> [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)이므로 바인딩 식을 사용하여 설정할 수도 있습니다.
+
+고유한 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)는 테스트에 필요한 모든 컨트롤(값을 쿼리해야 할 수 있는 단추, 텍스트 항목 및 레이블 포함)에 추가해야 합니다.
+
+> [!WARN] [`Element`](xref:Xamarin.Forms.Element)의 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 속성을 두 번 이상 설정하려고 시도하면 `InvalidOperationException`이 throw됩니다.
 
 ### <a name="ios-application-project"></a>iOS 응용 프로그램 프로젝트
 
@@ -102,16 +104,16 @@ UITest를 작성하는 방법에 대한 자세한 내용은 [UITest 설명서](/
 
 ### <a name="use-automationid-in-the-xamarinforms-ui"></a>Xamarin.Forms UI에서 AutomationId 사용
 
-UITest를 작성하려면 Xamarin.Forms 응용 프로그램 사용자 인터페이스가 스크립트 가능해야 합니다. 사용자 인터페이스의 모든 컨트롤에 `AutomationId`가 있는지 확인하세요. 그래야 테스트 코드에서 참조될 수 있습니다.
+UITest를 작성하려면 Xamarin.Forms 응용 프로그램 사용자 인터페이스가 스크립트 가능해야 합니다. 테스트 코드에서 참조할 수 있도록 사용자 인터페이스의 모든 컨트롤에 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)가 있는지 확인하세요.
 
 #### <a name="referring-to-the-automationid-in-uitests"></a>UITest에서 AutomationId 참조
 
-UITest를 작성할 때 `AutomationId` 값은 각 플랫폼에서 다르게 노출됩니다.
+UITest를 작성할 때 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 값은 각 플랫폼마다 다르게 공개됩니다.
 
 - **iOS**는 `id` 필드를 사용합니다.
 - **Android**는 `label` 필드를 사용합니다.
 
-iOS와 Android 모두에서 `AutomationId`를 찾는 플랫폼 간 UITest를 작성하려면 `Marked` 테스트 쿼리를 사용합니다.
+iOS와 Android 모두에서 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)를 찾는 플랫폼 간 UITest를 작성하려면 `Marked` 테스트 쿼리를 사용합니다.
 
 ```csharp
 app.Query(c=>c.Marked("MyButton"))
@@ -200,7 +202,7 @@ Xamarin.UITest를 Xamarin.Forms 솔루션에 추가하면 UITest를 만들고, �
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms 응용 프로그램은 테스트 자동화를 위한 고유한 뷰 ID로 `AutomationId`를 노출하는 단순한 메커니즘을 사용하는 **Xamarin.UITest**로 손쉽게 테스트할 수 있습니다. Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 애플리케이션에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 애플리케이션과 동일합니다.
+Xamarin.Forms 애플리케이션은 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)를 테스트 자동화에 대한 고유한 보기 식별자로 공개하는 간단한 메커니즘을 사용하는 **Xamarin.UITest**를 통해 쉽게 테스트할 수 있습니다. Xamarin.Forms 솔루션에 UITest 프로젝트가 추가된 후 Xamarin.Forms 응용 프로그램에 대한 테스트를 작성하고 실행하는 단계는 Xamarin.Android 또는 Xamarin.iOS 응용 프로그램과 동일합니다.
 
 App Center Test에 테스트를 제출하는 방법에 대한 자세한 내용은 [UITest 제출](/appcenter/test-cloud/preparing-for-upload/uitest/)을 참조하세요. UITest에 대한 자세한 내용은 [App Center Test 설명서](/appcenter/test-cloud/)를 참조하세요.
 
