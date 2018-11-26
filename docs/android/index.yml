@@ -57,7 +57,7 @@ sections:
     className: cardsB
     items:
     - href: ~/android/get-started/index.md
-      html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모든것이 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 제작하세요.
+      html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 제작하세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
@@ -81,7 +81,7 @@ sections:
         href: ~/android/platform/
       title: 플랫폼 기능
     - href: ~/essentials/index.md?context=xamarin/android
-      html: 모바일 응용 프로그램을 위한 교차 플랫폼 API 입니다.
+      html: 모바일 응용 프로그램을 위한 교차 플랫폼 API입니다.
       image:
         src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/android
