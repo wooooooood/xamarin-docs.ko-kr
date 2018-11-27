@@ -8,7 +8,7 @@ ms.locfileid: "51617334"
 documentType: LandingData
 title: Xamarin.Android
 metadata:
-  description: Xamarin.Android는 .NET 개발자를 위한 전체 Android SDK를 제공합니다.
+  description: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다.
   author: conceptdev
   ms.author: crdun
   ms.date: 07/27/2018
@@ -30,7 +30,7 @@ sections:
 - title: 시작
   items:
   - type: paragraph
-    text: Xamarin 및 C#으로 첫 번째 Android 앱을 제작하는 방법에 대해 알아봅니다.
+    text: Xamarin 및 C#으로 첫 번째 Android 앱을 빌드하는 방법에 대해 알아봅니다.
   - type: list
     style: icon48
     items:
@@ -50,20 +50,20 @@ sections:
         src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
       text: Android Pie
       href: ~/android/platform/pie.md
-- title: 가이드
+- title: 안내선
   items:
   - type: list
     style: cards
     className: cardsB
     items:
     - href: ~/android/get-started/index.md
-      html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 제작하세요.
+      html: Xamarin.Android를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 빌드하세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
       title: 시작
     - href: ~/android/app-fundamentals/
-      html: 'Android 앱을 제작하는 데 알아야 할 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
+      html: 'Android 앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
       image:
         src: ~/media/icons/i_app-build.svg
         href: ~/android/app-fundamentals/
@@ -81,13 +81,13 @@ sections:
         href: ~/android/platform/
       title: 플랫폼 기능
     - href: ~/essentials/index.md?context=xamarin/android
-      html: 모바일 응용 프로그램을 위한 교차 플랫폼 API입니다.
+      html: 모바일 응용 프로그램을 위한 플랫폼 간 API.
       image:
         src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/android
       title: Xamarin.Essentials
     - href: ~/android/data-cloud/
-      html: 로컬 및 원격 데이터 저장소와 검색, 기타 클라우드 기반 서비스입니다.
+      html: 로컬 및 원격 데이터 저장과 검색 및 기타 클라우드 기반 서비스입니다.
       image:
         src: ~/media/icons/i_data-cloud.svg
         href: ~/android/data-cloud/
@@ -105,7 +105,7 @@ sections:
         href: ~/android/internals/
       title: 고급 개념 및 내부 요소
     - href: ~/android/wear/
-      html: Android Wear용 앱을 제작합니다.
+      html: Android Wear용 앱을 빌드합니다.
       image:
         src: ~/media/icons/i_android-wear.svg
         href: ~/android/wear/
