@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: bb70dac34847cf46bd06cc20b87df8ea5f72105a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459930"
 ---
 # <a name="callkit-in-xamarinios"></a>Xamarin.iOS에서 CallKit
 
@@ -423,14 +423,14 @@ namespace MonkeyCall
             // Define handle types
             var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 
-            // Get Image Mask
-            var maskImage = UIImage.FromFile ("telephone_receiver.png");
+            // Get Image Template
+            var templateImage = UIImage.FromFile ("telephone_receiver.png");
 
             // Setup the initial configurations
             Configuration = new CXProviderConfiguration ("MonkeyCall") {
                 MaximumCallsPerCallGroup = 1,
                 SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-                IconMaskImageData = maskImage.AsPNG(),
+                IconTemplateImageData = templateImage.AsPNG(),
                 RingtoneSound = "musicloop01.wav"
             };
 
@@ -459,14 +459,14 @@ namespace MonkeyCall
             activeCall.StartingConnectionChanged += (call) => {
                 if (call.isConnecting) {
                     // Inform system that the call is starting
-                    Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+                    Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
                 }
             };
 
             activeCall.ConnectedChanged += (call) => {
                 if (call.isConnected) {
                     // Inform system that the call has connected
-                    provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+                    provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
                 }
             };
 
@@ -606,11 +606,11 @@ namespace MonkeyCall
 var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 ```
 
-및 호출이 진행에서 중일 때 앱의 아이콘에 적용 될 마스크를 가져옵니다.
+및 호출을 진행에서 중일 때 앱의 아이콘에 적용 될 템플릿 이미지를 가져옵니다.
 
 ```csharp
-// Get Image Mask
-var maskImage = UIImage.FromFile ("telephone_receiver.png");
+// Get Image Template
+var templateImage = UIImage.FromFile ("telephone_receiver.png");
 ```
 
 이러한 값에 번들로 가져올는 `CXProviderConfiguration` 구성에 사용할는 `CXProvider`:
@@ -620,7 +620,7 @@ var maskImage = UIImage.FromFile ("telephone_receiver.png");
 Configuration = new CXProviderConfiguration ("MonkeyCall") {
     MaximumCallsPerCallGroup = 1,
     SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-    IconMaskImageData = maskImage.AsPNG(),
+    IconTemplateImageData = templateImage.AsPNG(),
     RingtoneSound = "musicloop01.wav"
 };
 ```
@@ -959,14 +959,14 @@ public override void PerformStartCallAction (CXProvider provider, CXStartCallAct
     activeCall.StartingConnectionChanged += (call) => {
         if (call.IsConnecting) {
             // Inform system that the call is starting
-            Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNsDate());
+            Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
         }
     };
 
     activeCall.ConnectedChanged += (call) => {
         if (call.IsConnected) {
             // Inform system that the call has connected
-            Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNsDate ());
+            Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
         }
     };
 
@@ -1044,7 +1044,7 @@ public void EndCall (ActiveCall call)
 
 - 지역화 된 이름을 표시 합니다.
 - 비디오 호출 지원을 사용 하도록 설정 합니다.
-- 자체 마스킹된 이미지 아이콘을 제공 하 여 호출에 UI의 단추를 사용자 지정 합니다. 사용자 지정 단추를 사용 하 여 사용자 상호 작용은 처리할 앱에 직접 전송 됩니다. 
+- 고유한 템플릿 이미지 아이콘을 제공 하 여 호출에 UI의 단추를 사용자 지정 합니다. 사용자 지정 단추를 사용 하 여 사용자 상호 작용은 처리할 앱에 직접 전송 됩니다. 
 
 ### <a name="action-errors"></a>작업 오류
 

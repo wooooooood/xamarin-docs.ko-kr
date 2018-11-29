@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: d1b1a59b432315532844f8fca3b613ff3392a7b5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bfbb8c2b189defeb6efb07388ea34425c239c061
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459891"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 향상 된 사용자 알림
 
@@ -58,7 +58,7 @@ IOS 앱을 보낼 수 있는 로컬 알림을 다음 기능 및 특성
 - 미리 알림 경고
 - 위치 인식 트리거
 
-자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) 설명서.
+자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications) 설명서.
 
 ### <a name="about-remote-notifications"></a>원격 알림 정보
 
@@ -80,7 +80,7 @@ IOS 앱을 사용할 수 있는 두 가지 유형의 원격 알림은:
 - **사용자 용** -이러한 장치에서 사용자에 게 표시 됩니다.
 - **자동 업데이트** -이 백그라운드에서 iOS 앱의 콘텐츠를 업데이트 하는 메커니즘을 제공 합니다. 자동 업데이트를 수신 되 면 앱 최신 내용을 제거 서버 풀에 연결할 수 있습니다.
 
-자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) 설명서.
+자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications) 설명서.
 
 ### <a name="about-the-existing-notifications-api"></a>기존 알림 API에 대 한
 
@@ -202,7 +202,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 
 토큰을 열거나 알림에 응답 하는 데 앱 알림과 함께 연결 하는 키로 작동 합니다.
 
-자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) 설명서.
+자세한 내용은 Apple의를 참조 하세요 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications) 설명서.
 
 ## <a name="notification-delivery"></a>알림 배달
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>전경 앱 알림 처리
 
-새 ios 10, 앱 알림을 처리할 수 다르게 포그라운드에서 되 고 알림이 트리거됩니다. 제공 하 여는 `UNUserNotificationCenterDelegate` 구현 및는 `UserNotificationCenter` 메서드, 앱 알림을 표시 하는 것에 대 한 책임 걸릴 수 있습니다. 예를 들어:
+새 ios 10, 앱 알림을 처리할 수 다르게 포그라운드에서 되 고 알림이 트리거됩니다. 제공 하 여는 `UNUserNotificationCenterDelegate` 구현 및는 `UserNotificationCenter` 메서드, 앱 알림을 표시 하는 것에 대 한 책임 걸릴 수 있습니다. 예:
 
 ```csharp
 using System;
@@ -431,7 +431,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 사용자 지정 작업 및 범주 집합을 생성 및 시스템을 사용 하 여 등록 된, 일단 로컬 또는 원격 알림을 표시할 수 있습니다.
 
-원격 알림 설정는 `category` 위에서 만든 범주 중 하 나와 일치 하는 원격 알림 페이로드에서 합니다. 예를 들어:
+원격 알림 설정는 `category` 위에서 만든 범주 중 하 나와 일치 하는 원격 알림 페이로드에서 합니다. 예:
 
 ```csharp
 {
@@ -442,7 +442,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-로컬 알림을 설정 합니다 `CategoryIdentifier` 의 속성을 `UNMutableNotificationContent` 개체. 예를 들어:
+로컬 알림을 설정 합니다 `CategoryIdentifier` 의 속성을 `UNMutableNotificationContent` 개체. 예:
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -458,7 +458,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>처리 작업을 해제
 
-위에서 설명한 대로 사용자가 알림의 닫을 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작 하지 이므로 옵션을 범주를 만들 때 설정 해야 합니다. 예를 들어:
+위에서 설명한 대로 사용자가 알림의 닫을 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작 하지 이므로 옵션을 범주를 만들 때 설정 해야 합니다. 예:
 
 ```csharp
 var categoryID = "message";
@@ -471,7 +471,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>처리 작업 응답
 
-사용자 지정 작업 및 위에서 만든 범주를 사용 하 여 사용자 상호 작용을 앱에서 요청 된 작업을 수행 해야 합니다. 이렇게 함으로써를 `UNUserNotificationCenterDelegate` 구현 및는 `UserNotificationCenter` 메서드. 예를 들어:
+사용자 지정 작업 및 위에서 만든 범주를 사용 하 여 사용자 상호 작용을 앱에서 요청 된 작업을 수행 해야 합니다. 이렇게 함으로써를 `UNUserNotificationCenterDelegate` 구현 및는 `UserNotificationCenter` 메서드. 예:
 
 ```csharp
 using System;
@@ -561,7 +561,7 @@ Xamarin.iOS 앱에 서비스 확장을 구현 하려면 다음을 수행 합니�
 > [!IMPORTANT]
 > 서비스 확장에 대 한 번들 식별자에는 주 응용 프로그램의 번들 식별자와 일치 해야 `.appnameserviceextension` 끝에 추가 합니다. 예를 들어, 기본 앱의 번들 식별자에 있으면 `com.xamarin.monkeynotify`, 서비스 확장의 번들 식별자 있어야 `com.xamarin.monkeynotify.monkeynotifyserviceextension`합니다. 확장 솔루션에 추가 되 면 자동으로 설정 해야 합니다. 
 
-필요한 기능을 제공 하도록 수정 해야 하는 알림 서비스 확장에서 기본 클래스를 하나 있습니다. 예를 들어:
+필요한 기능을 제공 하도록 수정 해야 하는 알림 서비스 확장에서 기본 클래스를 하나 있습니다. 예:
 
 ```csharp
 using System;
@@ -616,7 +616,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>서비스 확장을 트리거
 
-서비스 확장을 만들고 앱을 사용 하 여 배달를 사용 하 여 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들어:
+서비스 확장을 만들고 앱을 사용 하 여 배달를 사용 하 여 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예:
 
 ```csharp
 {
@@ -672,4 +672,4 @@ namespace myApp {
 - [iOS 10 샘플](https://developer.xamarin.com/samples/ios/iOS10/)
 - [UserNotifications 프레임 워크 참조](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications)

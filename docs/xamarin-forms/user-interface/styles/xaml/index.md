@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459865"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
 ## <a name="introductionintroductionmd"></a>[소개](introduction.md)
 
-Xamarin.Forms 응용 프로그램은 종종 동일한 모양이 있는 여러 컨트롤을 포함 합니다. 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일 여 만들 수 있습니다 컨트롤 모양을 사용자 지정 하는 그룹화 및 컨트롤 형식에 사용할 수 있는 설정 속성입니다.
+Xamarin.Forms 응용 프로그램은 종종 동일한 모양이 있는 여러 컨트롤을 포함 합니다. 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일 만들 수 있습니다 그룹화 하 고 컨트롤 형식에 사용할 수 있는 속성을 설정 하 여 컨트롤 모양을 사용자 지정 하는 합니다.
 
 ## <a name="explicit-stylesexplicitmd"></a>[명시적 스타일](explicit.md)
 

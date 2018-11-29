@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61ed731f22122637963c28c42f44b84ec7fa9f4
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121427"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459956"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
 
@@ -290,7 +290,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 
 | 파트너 | 위치 | 설명 |
 | --- | --- | --- |
-|[소프트웨어 높은 보기](http://www.highviewsoft.com)|베이징, 중국|Visionsoft 소프트웨어 플랫폼 간 앱 및 클라우드 기반 서비스 프로그램 디자인, 개발, 구현, 기술 교육 및 다른 컨설팅 서비스 제공에 초점을 맞춰합니다|
+|[소프트웨어 높은 보기](http://www.highviewsoft.com)|베이징, 중국|소프트웨어 보기 높은 플랫폼 간 앱 및 클라우드 기반 서비스 프로그램 디자인, 개발, 구현, 기술 교육 및 다른 컨설팅 서비스 제공에 초점을 맞춰합니다|
 
 
 ## <a name="colombia"></a>콜롬비아

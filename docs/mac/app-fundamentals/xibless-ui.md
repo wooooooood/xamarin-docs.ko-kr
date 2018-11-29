@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e41f19c1a2d02537f300ae82b7f3d45bc6571e1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459839"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>xamarin.mac에서.storyboard/.xib-less 사용자 인터페이스 디자인
 
@@ -34,7 +34,7 @@ Xamarin.Mac 응용 프로그램의 UI의 일부 또는 전부를 직접 만들 �
 
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
-1. 사용 중지 하려는 응용 프로그램을 엽니다 `.stroyboard` 또는 mac 용 Visual Studio에서 사용자 인터페이스를 정의 하려면.xib 파일
+1. 사용 중지 하려는 응용 프로그램을 엽니다 `.storyboard` 또는 mac 용 Visual Studio에서 사용자 인터페이스를 정의 하려면.xib 파일
 2. 에 **Solution Pad**를 마우스 오른쪽 단추로 클릭 합니다 **Main.storyboard** 또는 **MainWindow.xib** 파일을 선택 **제거**: 
 
     ![주 스토리 보드 또는 창 제거](xibless-ui-images/switch01.png "주 스토리 보드 또는 창 제거")
@@ -299,7 +299,7 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에는 UI 요소 추가
 
-창의 코드에서 생성 되었거나.storyboard 또는.xib 파일에서 로드를 여부를 경우가 있을 창에 코드에서 UI 요소를 추가 하려고 합니다. 예를 들어:
+창의 코드에서 생성 되었거나.storyboard 또는.xib 파일에서 로드를 여부를 경우가 있을 창에 코드에서 UI 요소를 추가 하려고 합니다. 예:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -371,5 +371,5 @@ public override void DidFinishLaunching (NSNotification notification)
 - [MacXibless (샘플)](https://developer.xamarin.com/samples/mac/MacXibless/)
 - [Windows](~/mac/user-interface/window.md)
 - [메뉴](~/mac/user-interface/menu.md)
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
 - [Windows 소개](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/WinPanel/Introduction.html)

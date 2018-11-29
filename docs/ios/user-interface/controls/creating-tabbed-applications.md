@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e4ab46994ed25daaef95a709e4f9df94f3a21cd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6a0081a9d4ee4df72dc3eecfd5c4da318c5c5d78
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459917"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 표시줄 및 Xamarin.iOS에 탭 표시줄 컨트롤러
 
@@ -87,7 +87,7 @@ namespace TabbedApplication {
 
                 public TabController ()
                 {
-                        tab1 = new UIViewController();
+            tab1 = new UIViewController();
                         tab1.Title = "Green";
                         tab1.View.BackgroundColor = UIColor.Green;
 
@@ -121,23 +121,23 @@ namespace TabbedApplication {
 
 ```csharp
 [Register ("AppDelegate")]
-        public partial class AppDelegate : UIApplicationDelegate
-        {
-                UIWindow window;
-                TabController tabController;
+public partial class AppDelegate : UIApplicationDelegate
+{
+    UIWindow window;
+    TabController tabController;
 
-                public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-                {
-                        window = new UIWindow (UIScreen.MainScreen.Bounds);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-                        var tabController = new TabController ();
-                        window.RootViewController = tabController;
+        tabController = new TabController ();
+        window.RootViewController = tabController;
 
-                        window.MakeKeyAndVisible ();
-            
-                        return true;
-                }
-        }
+        window.MakeKeyAndVisible ();
+
+        return true;
+    }
+}
 ```
 
 응용 프로그램을 지금 실행 하는 경우는 `UITabBarController` 기본적으로 선택 하 고 첫 번째 탭을 사용 하 여 로드 됩니다. 다른 탭을 선택 하면 연결된 된 컨트롤러에서 결과 보기에서 제공 되는 `UITabBarController,` 최종 사용자가 두 번째 탭을 선택 하는 위치 아래와 같이:
@@ -309,9 +309,9 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
 ```csharp
 partial void InitialActionCompleted (UIButton sender)
-    {
-      aButton.Hidden = true;  
-    }
+{
+    aButton.Hidden = true;  
+}
 ```
 
 파일을 저장 하 고 응용 프로그램을 실행 합니다. 에서는 화면 표시 하나 및 사진에서 사라집니다 단추 표시 됩니다.
@@ -352,7 +352,6 @@ public override void ViewDidLoad ()
      if (ParentViewController != null){
        aButton.Hidden = true;
      }
-
 }
 ```
 
