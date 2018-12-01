@@ -1,5 +1,5 @@
 ---
-title: Android 9 원형
+title: Android 9 Pie
 description: Xamarin.Android를 사용 하 여 9 원형을 Android 용 앱 개발을 시작 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111677"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710025"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
 
@@ -24,9 +24,7 @@ _Xamarin.Android를 사용 하 여 9 원형을 Android 용 앱 개발을 시작 
 
 이 문서에서는 Android 원형 용 Xamarin.Android 앱 개발을 시작할 수 있도록 구성 되었습니다. 필요한 업데이트를 설치 하 고, SDK를 구성 하 고, 에뮬레이터 또는 테스트에 대 한 장치를 준비 하는 방법을 설명 합니다. 또한 Android 원형의 새로운 기능에 대 한 개요를 제공 하 고 주요 Android 원형 기능 중 일부를 사용 하는 방법을 보여 주는 소스 코드 예제를 제공 합니다.
 
-![미리 보기](~/media/shared/preview.png)
-
-Xamarin.Android 9.0에는 Android 원형에 대 한 미리 보기 지원을 제공합니다. Android 원형에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조는 [Android P 개발자 미리 보기 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) 릴리스 정보입니다.
+Xamarin.Android 9.0 Android 원형에 대 한 지원을 제공합니다. Android 원형에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조는 [Android P 개발자 미리 보기 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) 릴리스 정보입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -142,7 +140,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 장치에서 잘라낸 부분 영역에 대 한 자세한 정보를 해야 하는 경우 사용할 수 있습니다 새 [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) 클래스입니다. `DisplayCutout` 콘텐츠를 표시 하려면 사용할 수 없는 디스플레이의 영역을 나타냅니다. 앱이 작동 하지 않는 영역에 콘텐츠를 표시 하지 않도록 잘라낸 모양의 위치를 검색 하려면이 정보를 사용할 수 있습니다.
 
-Android P의 새로운 잘라낸 기능에 대 한 자세한 내용은 참조 하세요. [디스플레이 잘라낸 지원](https://developer.android.com/preview/features#cutout)합니다.
+Android P의 새로운 잘라낸 기능에 대 한 자세한 내용은 참조 하세요. [디스플레이 잘라낸 지원](https://developer.android.com/about/versions/pie/android-9.0#cutout)합니다.
 
 
 
@@ -175,7 +173,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
     ```
 
 2. 만들기는 `Notification.MessagingStyle.Message` 보낼 이미지가 포함 된 새 이미지 전달 [Notification.MessagingStyle.Message.SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) 메서드.
-   예를 들어:
+   예를 들어 다음과 같습니다.
 
     ```csharp
     Uri imageUri = Uri.Parse("android.resource://com.xamarin.pminidemo/drawable/example_image");
@@ -184,14 +182,14 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
             .SetData("image/", imageUri);
     ```
 
-3. 메시지를 추가 `Notification.MessagingStyle` 개체입니다. 예를 들어:
+3. 메시지를 추가 `Notification.MessagingStyle` 개체입니다. 예를 들어 다음과 같습니다.
 
     ```csharp
     Notification.MessagingStyle style = new Notification.MessagingStyle(fromPerson)
             .AddMessage(message);
     ```
 
-4. 알림 작성기에이 스타일을 연결 합니다. 예를 들어:
+4. 알림 작성기에이 스타일을 연결 합니다. 예를 들어 다음과 같습니다.
 
     ```csharp
     builder = new Notification.Builder(this, MY_CHANNEL)
@@ -202,7 +200,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
         .SetChannelId(MY_CHANNEL);
     ```
 
-5. 알림을 게시 합니다. 예를 들어:
+5. 알림을 게시 합니다. 예를 들어 다음과 같습니다.
 
     ```csharp
     const int notificationId = 1000;
@@ -223,12 +221,12 @@ IEEE 802.11mc android 원형 지 (라고도 _WiFi Round 왕복 시간_ 또는 _W
 
 ### <a name="multi-camera-support"></a>다중 카메라 지원
 
-많은 최신 Android 장치 이중 프런트 및/또는 이중 백 카메라 스테레오 시각, 향상 된 시각 효과 및 향상 된 확대/축소 기능으로 이러한 기능에 대 한 유용한 경우 Android P 새 소개 [다중 카메라](https://developer.android.com/preview/features#camera) 사용 하 여 앱에 대 한 수 있도록 하는 API를 *논리 카메라* (또는 *논리 다중 카메라*) 둘 이상에서 지 원하는 실제 카메라입니다.
+많은 최신 Android 장치 이중 프런트 및/또는 이중 백 카메라 스테레오 시각, 향상 된 시각 효과 및 향상 된 확대/축소 기능으로 이러한 기능에 대 한 유용한 경우 Android P 새 소개 [다중 카메라](https://developer.android.com/about/versions/pie/android-9.0#camera) 사용 하 여 앱에 대 한 수 있도록 하는 API를 *논리 카메라* (또는 *논리 다중 카메라*) 둘 이상에서 지 원하는 실제 카메라입니다.
 장치 논리 다중 카메라를 지 원하는 경우에 장치에서 각 카메라의 기능 지원 되는지 여부를 살펴볼 수 있습니다 결정할 [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA)합니다.
 
 Android 원형 또한 새 [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) 초기 캡처하는 동안 지연을 줄이고를 시작 하려면 카메라 스트림을 필요성을 제거 하는 데 사용할 수 있는 클래스입니다.
 
-다중 카메라에 대 한 자세한 내용은 Android P 지원, 참조 [다중 카메라 지원 및 카메라 업데이트](https://developer.android.com/preview/features#camera)합니다.
+다중 카메라에 대 한 자세한 내용은 Android P 지원, 참조 [다중 카메라 지원 및 카메라 업데이트](https://developer.android.com/about/versions/pie/android-9.0#camera)합니다.
 
 
 ### <a name="other-features"></a>기타 기능
@@ -256,7 +254,7 @@ Android 원형 또한 새 [SessionConfiguration](https://developer.android.com/r
 
 -  경로에서 다른 앱의 데이터 디렉터리에 직접 액세스는 더 이상 허용 합니다.
 
-Android P를 대상으로 하는 앱의 동작 변경 내용에 대 한 자세한 내용은 참조 하세요. [동작 변경 내용](https://developer.android.com/preview/behavior-changes.html#p-apps)합니다.
+Android P를 대상으로 하는 앱의 동작 변경 내용에 대 한 자세한 내용은 참조 하세요. [동작 변경 내용](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps)합니다.
 
 
 ## <a name="sample-code"></a>샘플 코드
