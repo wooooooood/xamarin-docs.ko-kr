@@ -1,38 +1,34 @@
 ---
-title: Microsoft의 모바일 OpenJDK 배포 미리 보기
-description: Microsoft의 모바일 배포용 OpenJDK 배포를 구성하는 단계별 가이드입니다.
+title: Microsoft의 모바일 OpenJDK 배포
+description: Microsoft의 모바일 개발용 OpenJDK 배포를 구성 및 문제 해결을 위한 단계별 가이드입니다.
 ms.prod: xamarin
 ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
 ms.technology: xamarin-android
 author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
-ms.openlocfilehash: 2022337ebd65997c7b2492137193586278f2dffd
-ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
+ms.openlocfilehash: aad88ad883dea1e0430a047a71a2c191195efffe
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39573596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459904"
 ---
-# <a name="microsofts-mobile-openjdk-distribution-preview"></a>Microsoft의 모바일 OpenJDK 배포 미리 보기
+# <a name="microsofts-mobile-openjdk-distribution"></a>Microsoft의 모바일 OpenJDK 배포
 
-_이 가이드에서는 Microsoft의 OpenJDK 배포 미리 보기 릴리스로 전환하는 단계를 설명합니다. 이 배포는 모바일 개발을 위한 것입니다._
-
-![미리 보기 기능](~/media/shared/preview.png)
+_이 가이드는 OpenJDK의 내부 배포로 전환하는 단계를 설명합니다. 이 배포는 모바일 개발을 위한 것입니다._
 
 ## <a name="overview"></a>개요
 
-Visual Studio 15.9 및 Mac용 Visual Studio 7.7부터 Visual Studio Tools for Xamarin은 Oracle의 JDK에서 **Android 개발 전용인 경량 버전의 OpenJDK**로 전환됩니다.
-
-![VS 15.8 미리 보기 5의 OpenJDK 웹 미리 보기를 제공하는 새 워크플로](openjdk-images/openjdk.png)
+Visual Studio 15.9 및 Mac용 Visual Studio 7.7부터 Visual Studio Tools for Xamarin은 Oracle의 JDK에서 **Android 개발 전용인 경량 버전의 OpenJDK**로 전환했습니다. Oracle이 2019년에 JDK 8의 상용 배포 지원을 종료하고 JDK 8이 모든 Android 개발에 필수적으로 종속되기 때문에 마이그레이션이 필요합니다.
 
 이 이동의 이점은 다음과 같습니다.
 
 - Android 개발에 적합한 OpenJDK 버전을 언제나 사용할 수 있습니다.
 
-- JDK 9 또는 10을 다운로드해도 개발 환경에 영향을 미치지 않습니다.
+- Oracle의 JDK 9 이상을 다운로드해도 개발 환경에는 영향을 미치지 않습니다.
 
-- 다운로드 크기 및 공간이 상당히 줄어듭니다.
+- 다운로드 크기 및 공간이 줄어듭니다.
 
 - 타사 서버 및 설치 관리자에 더 이상 문제가 발생하지 않습니다.
 
@@ -40,21 +36,24 @@ Visual Studio 15.9 및 Mac용 Visual Studio 7.7부터 Visual Studio Tools for Xa
 
 ## <a name="download"></a>다운로드
 
-시작하려면 시스템에 올바른 빌드를 다운로드합니다.
+Windows의 Visual Studio 설치 관리자에서 Android SDK 패키지를 선택하면 모바일 OpenJDK 배포가 자동으로 설치됩니다. Android SDK를 선택한 사용자의 경우 15.9에 대한 업데이트에 포함됩니다.
 
-- **Mac** &ndash; https://dl.xamarin.com/OpenJDK/mac/microsoft-dist-openjdk-1.8.0.9.zip
-- **Windows x86** &ndash; https://dl.xamarin.com/OpenJDK/win32/microsoft-dist-openjdk-1.8.0.9.zip
-- **Windows x64** &ndash; https://dl.xamarin.com/OpenJDK/win64/microsoft-dist-openjdk-1.8.0.9.zip
+Mac에서는 새로운 설치를 위한 Android 워크로드의 일부로 모바일 OpenJDK가 설치됩니다. 기존 Mac용 Visual Studio 사용자의 경우 7.7에 대한 업데이트의 일부로 설치하라는 메시지가 표시됩니다. IDE는 새 JDK로 이동하라는 메시지를 표시하고 다음 재시작 시 사용하도록 전환합니다.
 
-## <a name="configure"></a>구성
+## <a name="troubleshooting"></a>문제 해결
 
-올바른 위치에 압축을 풉니다.
+Mac 또는 Windows에서 설치에 문제가 발생하는 경우 수동 설치를 위해 다음 단계를 수행할 수 있습니다.
+
+OpenJDK가 올바른 위치에 있는 머신에 설치되어 있는지 확인합니다.
 
 - **Mac** &ndash; **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**
 - **Windows** &ndash; **C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**
 
-> [!IMPORTANT]
-> 이 예에서는 빌드 1.8.0.9를 사용하지만, 다운로드하는 버전이 더 최신 버전일 수 있습니다.
+이 경로가 비어 있으면 다음 패키지 중 하나를 다운로드할 수 있습니다.
+
+- **Mac** &ndash; https://dl.xamarin.com/OpenJDK/mac/microsoft-dist-openjdk-1.8.0.9.zip
+- **Windows x86** &ndash; https://dl.xamarin.com/OpenJDK/win32/microsoft-dist-openjdk-1.8.0.9.zip
+- **Windows x64** &ndash; https://dl.xamarin.com/OpenJDK/win64/microsoft-dist-openjdk-1.8.0.9.zip
 
 새 JDK에 대한 IDE 경로를 지정합니다.
 
@@ -66,16 +65,16 @@ Visual Studio 15.9 및 Mac용 Visual Studio 7.7부터 Visual Studio Tools for Xa
 
 ![Windows에서 Microsoft 모바일 OpenJDK 배포에 대한 JDK 경로 설정](openjdk-images/vs.png)
 
-## <a name="revert"></a>되돌리기
+## <a name="known-issues"></a>알려진 문제
 
-Oracle JDK로 되돌리려면 Java SDK 위치를 이전에 사용한 Oracle JDK 경로로 변경하고 솔루션을 다시 빌드합니다. Mac에서는 **기본값으로 다시 설정**을 클릭하여 Oracle JDK 경로로 되돌릴 수 있습니다.
+### <a name="package-openjdkv1regkeyversion1809chipx64-failed-to-install"></a>'OpenJDKV1.RegKey,version=1.8.0.9,chip=x64' 패키지를 설치하지 못했습니다.
 
-Microsoft 모바일 OpenJDK 배포에 문제가 있는 경우, 신속하게 추적 및 수정될 수 있도록 IDE의 피드백 도구를 사용하여 문제를 보고하세요.
+이는 일부 기업 환경에서 문제가 될 수 있습니다. OpenJDK가 이미 머신에 있습니다. [위의 문제 해결 단계](#troubleshooting)에 따라 IDE를 올바른 위치로 지정합니다. [여기서](https://developercommunity.visualstudio.com/content/problem/382549/packageidopenjdkv1regkeypackageactioninstallreturn.html) 문제의 상태를 추적할 수 있습니다.
 
-## <a name="known-issues--planned-fix-dates"></a>알려진 문제 및 계획된 수정 일자
+### <a name="unknown-update-type-zip-when-upgrading-visual-studio-for-mac-to-77"></a>Mac용 Visual Studio 7.7로 업그레이드할 때 "알 수 없는 업데이트 유형: zip"
 
-`JAVA_HOME` 환경 변수는 SDK 및 장치 관리자로 올바르게 내보내기가 되지 않을 수 있습니다. 해결 방법으로, 이 환경 변수를 컴퓨터의 OpenJDK 위치에 설정할 수 있습니다. 이 문제는 15.9 미리 보기에서 수정됩니다.
+Mac용 Visual Studio의 이전 버전을 7.7로 업그레이드하려는 경우 이 문제가 발생할 수 있습니다. 이 문제를 해결하려면 업데이트 프로그램에서 OpenJDK의 선택을 취소하고, 나머지 업데이트를 설치하고, 업데이트를 다시 확인하여 OpenJDK 패키지를 가져옵니다. 여전히 문제가 발생하는 경우 [위의 문제 해결 단계](#troubleshooting)에 따라 OpenJDK를 수동으로 설치할 수 있습니다. 이 문제가 발생하는 경우 첨부된 로그가 있는 버그를 제출하세요.
 
 ## <a name="summary"></a>요약
 
-이 아티클에서는 IDE를 구성하여 Microsoft의 모바일 OpenJDK 배포의 미리 보기 릴리스를 사용하는 방법을 알아보았습니다. 해당 기능은 2018년 하반기에 안정적인 릴리스가 계획되어 있습니다.
+이 문서에서는 Microsoft의 모바일 OpenJDK 배포를 사용하도록 IDE를 구성하는 방법과 문제가 발생할 경우 문제를 해결하는 방법을 배웠습니다.
