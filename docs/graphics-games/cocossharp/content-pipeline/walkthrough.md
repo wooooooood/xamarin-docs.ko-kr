@@ -69,7 +69,7 @@ MonoGame 파이프라인 도구를 실행 중이면 콘텐츠 및 게임 프로�
 
 ## <a name="creating-a-content-project"></a>콘텐츠 프로젝트 만들기
 
-이제 게임 프로젝트로, 스토리를 만들었으므로 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. MonoGame 파이프라인 도구에서이 작업을 수행 하려면 **파일 > 새로 만들기...**  프로젝트의 Content 폴더로 이동 합니다. Android에 대 한 폴더에 위치한 **[프로젝트 root]\BouncingGame.Android\Assets\Content\\**합니다. Ios의 경우 폴더에 위치한 **[프로젝트 root]\BouncingGame.iOS\Content\\**합니다.
+이제 게임 프로젝트로, 스토리를 만들었으므로 MonoGame 파이프라인 프로젝트를 만들 수 있습니다. MonoGame 파이프라인 도구에서이 작업을 수행 하려면 **파일 > 새로 만들기...**  프로젝트의 Content 폴더로 이동 합니다. Android에 대 한 폴더에 위치한 **[프로젝트 root]\BouncingGame.Android\Assets\Content\\** 합니다. Ios의 경우 폴더에 위치한 **[프로젝트 root]\BouncingGame.iOS\Content\\** 합니다.
 
 변경 합니다 **파일 이름** 에 **ContentProject** 클릭 합니다 **저장** 단추:
 
