@@ -4,17 +4,15 @@ description: 이 문서에서는 장치의 현재 지리적 위치 좌표를 검
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 55d33181b2a0de1f939ebd28b83a67a9af64716e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 651da789dcd87810ef6650d87fc2df4f91ce58e1
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528496"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898934"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Geolocation** 클래스는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
 
@@ -191,7 +189,7 @@ catch (Exception ex)
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
 Location sanFrancisco = new Location(37.783333, -122.416667);
-double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnit.Miles);
 ```
 
 `Location` 생성자에는 해당 순서로 위도 및 경도 인수가 포함됩니다. 양수 위도 값은 적도의 북쪽이고 양수 경도 값은 본초 자오선의 동쪽입니다. `CalculateDistance`에 대한 마지막 인수를 사용하여 마일 또는 킬로미터를 지정합니다. 또한 `Location` 클래스는 두 단위 간에 변환하기 위한 `KilometersToMiles` 및 `MilesToKilometers` 메서드를 정의합니다.

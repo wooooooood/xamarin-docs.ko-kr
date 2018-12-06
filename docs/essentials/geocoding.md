@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 Geocoding 클래스는 위치 좌표에 장�
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3202d4ace85c68042425ca5f23641ca7a76a6c7e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528392"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898981"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지오코딩
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Geocoding** 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.
 
@@ -36,10 +34,10 @@ ms.locfileid: "51528392"
 
 지오코딩 기능을 사용하려면 Bing Maps API 키가 필요합니다. [Bing Maps](https://www.bingmapsportal.com/) 체험 계정을 등록합니다. **내 계정 > 내 키**에서 새 키를 만들고 응용 프로그램 유형(UWP 앱의 경우 **공용 Windows 앱(UWP, 8.x 이하)** 이어야 함)에 따라 정보를 입력합니다.
 
-**지오코딩** 메서드를 호출하기 전에 응용 프로그램 수명 초기에 API 키를 설정합니다.
+**지오코딩** 메서드를 호출하기 전에 애플리케이션 수명 초기에 API 키를 설정합니다(UWP에서만 사용 가능).
 
 ```csharp
-Geocoding.MapKey = "YOUR-KEY-HERE";
+Platform.MapServiceToken = "YOUR-KEY-HERE";
 ```
 
 -----

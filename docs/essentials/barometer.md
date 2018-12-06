@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 Barometer 클래스를 사용하면 압력을
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/16/2018
-ms.openlocfilehash: 9172d816fe9a15993ba8f015310d0e79874c2d84
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675031"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899046"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometer
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Barometer** 클래스를 사용하면 압력을 측정하는 장치의 기압계 센서를 모니터링할 수 있습니다.
 
@@ -30,7 +28,7 @@ ms.locfileid: "50675031"
 using Xamarin.Essentials;
 ```
 
-Barometer 기능은 기압계의 압력 판독값(킬로파스칼 단위) 변경 내용을 수신 대기하기 위해 `Start` 및 `Stop` 메서드를 호출하여 작동합니다. `ReadingChanged` 이벤트를 통해 변경 내용을 다시 전송합니다. 샘플은 다음과 같이 사용합니다.
+Barometer 기능은 기압계의 압력 판독값(헥토파스칼 단위) 변경 내용을 수신 대기하기 위해 `Start` 및 `Stop` 메서드를 호출하여 작동합니다. `ReadingChanged` 이벤트를 통해 변경 내용을 다시 전송합니다. 샘플은 다음과 같이 사용합니다.
 
 ```csharp
 
@@ -49,7 +47,7 @@ public class BarometerTest
     {
         var data = e.Reading;
         // Process Pressure
-        Console.WriteLine($"Reading: Pressure: {data.Pressure} kilopascals");
+        Console.WriteLine($"Reading: Pressure: {data.PressureInHectopascals} hectopascals");
     }
 
     public void ToggleBarometer()

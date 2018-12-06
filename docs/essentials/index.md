@@ -4,17 +4,15 @@ description: 이 문서에는 모바일 응용 프로그램에 대한 플랫폼 
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/30/2018
-ms.openlocfilehash: b81102c6c0e0d65aaa46b2d32e34db536ab58e03
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f4271e5c0c9de53a83a840f7fe0a83b594a06fa
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "39361004"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898643"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 Xamarin.Essentials는 모바일 응용 프로그램에 대한 플랫폼 간 API를 개발자에게 제공합니다.
 
@@ -35,7 +33,6 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 * [클립보드](clipboard.md?context=xamarin/xamarin-forms) - 클립보드에서 쉽고 빠르게 텍스트를 설정하거나 읽습니다.
 * [나침반](compass.md?context=xamarin/xamarin-forms) - 나침반에서 변경 내용을 모니터링합니다.
 * [연결](connectivity.md?context=xamarin/xamarin-forms) - 연결 상태를 확인하고 변경 내용을 검색합니다.
-* [데이터 전송](data-transfer.md?context=xamarin/xamarin-forms) - 텍스트 및 웹 사이트 URI를 다른 앱에 전송합니다.
 * [장치 디스플레이 정보](device-display.md?context=xamarin/xamarin-forms) - 장치의 화면 메트릭 및 방향을 가져옵니다.
 * [장치 정보](device-information.md?context=xamarin/xamarin-forms) - 편리하게 장치에 대해 알아봅니다.
 * [전자 메일](email.md?context=xamarin/xamarin-forms) - 전자 메일 메시지를 쉽게 전송합니다.
@@ -51,10 +48,9 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 * [브라우저 열기](open-browser.md?context=xamarin/xamarin-forms) - 브라우저에서 특정 웹 사이트를 쉽고 빠르게 엽니다.
 * [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) - 3차원 공간에서 장치의 방향을 검색합니다.
 * [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) - 전화 걸기를 엽니다.
-* [전원](power.md?context=xamarin/xamarin-forms) - 장치의 절전 상태를 확인합니다.
 * [기본 설정](preferences.md?context=xamarin/xamarin-forms) - 영구적 기본 설정을 쉽고 빠르게 추가합니다.
-* [화면 잠금](screen-lock.md?context=xamarin/xamarin-forms) - 장치 화면을 깨어 있는 상태로 유지합니다.
 * [보안 저장소](secure-storage.md?context=xamarin/xamarin-forms) - 데이터를 안전하게 저장합니다.
+* [공유](share.md?context=xamarin/xamarin-forms) - 텍스트 및 웹 사이트 URI를 다른 앱에 전송합니다.
 * [SMS](sms.md?context=xamarin/xamarin-forms) - 보낼 SMS 메시지를 만듭니다.
 * [텍스트 음성 변환](text-to-speech.md?context=xamarin/xamarin-forms) - 장치의 텍스트를 말합니다.
 * [버전 추적](version-tracking.md?context=xamarin/xamarin-forms) - 응용 프로그램 버전 및 빌드 번호를 추적합니다.

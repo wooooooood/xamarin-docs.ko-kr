@@ -4,19 +4,17 @@ description: 이 문서에서는 응용 프로그램이 실행 중인 장치의 
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ebe97cf7fbb78bff17196110e835bd35ff76b826
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: d3102f0a4ed5f16c77c4a4768feb4a1565f2dd1a
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674888"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898898"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 디스플레이 정보
 
-![시험판 NuGet](~/media/shared/pre-release.png)
-
-**DeviceDisplay** 클래스는 응용 프로그램이 실행 중인 장치의 화면 메트릭 정보를 제공합니다.
+**DeviceDisplay** 클래스는 애플리케이션이 실행되고 있는 디바이스의 화면 메트릭에 관한 정보를 제공하고, 애플리케이션이 실행 중일 때 화면이 절전 상태가 되지 않도록 요청할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -30,45 +28,57 @@ ms.locfileid: "50674888"
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>화면 메트릭
+## <a name="main-display-info"></a>기본 디스플레이 정보
 
 기본 장치 정보 외에도 **DeviceDisplay** 클래스에는 장치의 화면 및 방향에 대한 정보가 포함되어 있습니다.
 
 ```csharp
 // Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
 // Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+var orientation = mainDisplayInfo.Orientation;
 
 // Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+var rotation = mainDisplayInfo.Rotation;
 
 // Width (in pixels)
-var width = metrics.Width;
+var width = mainDisplayInfo.Width;
 
 // Height (in pixels)
-var height = metrics.Height;
+var height = mainDisplayInfo.Height;
 
 // Screen density
-var density = metrics.Density;
+var density = mainDisplayInfo.Density;
 ```
 
 또한 **DeviceDisplay** 클래스는 화면 메트릭이 변경될 때마다 트리거되는 구독할 수 있는 이벤트를 표시합니다.
 
 ```csharp
-public class ScreenMetricsTest
+public class DisplayInfoTest
 {
-    public ScreenMetricsTest()
+    public DisplayInfoTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
+        DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
     {
         // Process changes
-        var metrics = e.Metrics;
+        var displayInfo = e.DisplayInfo;
+    }
+}
+```
+
+**DeviceDisplay** 클래스는 디바이스의 디스플레이가 꺼지거나 잠기지 않도록 설정할 수 있는 `KeepScreenOn`이라는 `bool` 속성을 노출합니다.
+
+```csharp
+public class KeepScreenOnTest
+{
+    public void ToggleScreenLock()
+    {
+        DeviceDisplay.KeepScreenOn = !DeviceDisplay.KeepScreenOn;
     }
 }
 ```
@@ -81,7 +91,7 @@ public class ScreenMetricsTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* UI 스레드에서 `ScreenMetrics`에 액세스해야 합니다. 그렇지 않으면 예외가 발생합니다. [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 메서드를 사용하여 UI 스레드에서 해당 코드를 실행할 수 있습니다.
+* UI 스레드에서 `DeviceDisplay`에 액세스해야 합니다. 그렇지 않으면 예외가 발생합니다. [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 메서드를 사용하여 UI 스레드에서 해당 코드를 실행할 수 있습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

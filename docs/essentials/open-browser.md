@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 Browser 클래스를 사용하면 응용 프�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: a68837ac4447dabcf52a1d1b27913adf80b4cbd7
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675395"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898903"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Browser** 클래스를 사용하면 응용 프로그램이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
 
@@ -36,12 +34,14 @@ Browser 기능은 `Uri` 및 `BrowserLaunchMode`로 `OpenAsync` 메서드를 호�
 
 public class BrowserTest
 {
-    public async Task OpenBrowser(Uri uri)
+    public async Task<bool> OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        return await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
+
+이 메서드는 브라우저가 _시작_된 후 반환되며, 반드시 사용자가 _종료_하는 것은 아닙니다.  `bool` 결과는 시작의 성공 여부를 나타냅니다.
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 

@@ -4,17 +4,15 @@ description: 이 문서에서는 장치의 자기 북쪽 방향을 모니터링�
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675499"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898786"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Compass** 클래스를 사용하면 장치의 자기 북쪽 방향을 모니터링할 수 있습니다.
 
@@ -86,13 +84,13 @@ Android는 나침반 방향을 검색하기 위한 API를 제공하지 않습니
 
 ## <a name="low-pass-filter"></a>저역 필터
 
-Android 나침반 값이 업데이트 및 계산되는 방법으로 인해 값을 평준화해야 할 수 있습니다. ‘저역 필터’는 적용하여 각도의 사인 및 코사인 값 평균을 계산하기 위해 적용할 수 있고 `Compass` 클래스에서 `ApplyLowPassFilter` 속성을 설정하여 켤 수 있습니다.
+Android 나침반 값이 업데이트 및 계산되는 방법으로 인해 값을 평준화해야 할 수 있습니다. _저역 필터_는 각도의 사인 및 코사인 값 평균을 계산하기 위해 적용할 수 있고 `bool applyLowPassFilter` 매개 변수를 허용하는 `Start` 메서드 오버로드를 사용하여 켤 수 있습니다.
 
 ```csharp
-Compass.ApplyLowPassFilter = true;
+Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);
 ```
 
-Android 플랫폼에서만 적용됩니다. 자세한 내용은 [여기](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860)에서 참조할 수 있습니다.
+이는 Android 플랫폼에만 적용되며 iOS 및 UWP에서는 매개 변수가 무시됩니다.  자세한 내용은 [여기](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860)에서 참조할 수 있습니다.
 
 --------------
 

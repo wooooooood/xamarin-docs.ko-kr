@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 Email 클래스를 사용하면 응용 프로
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3c2958cc4572c2f87c46c9edc5fc194284658f24
-ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
+ms.date: 11/04/2018
+ms.openlocfilehash: d7d2536fca32fe3ae9f9692031645c42edb4ea61
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51691752"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898674"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: 메일
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Email** 클래스를 사용하면 응용 프로그램이 제목, 본문 및 받는 사람(받는 사람, 참조, 숨은 참조)을 포함한 지정된 정보를 사용하여 기본 메일 응용 프로그램을 열 수 있습니다.
 
@@ -66,7 +64,7 @@ public class EmailTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-플랫폼의 차이점이 없습니다.
+모든 Android용 이메일 클라이언트가 `Html`을 지원하는 것은 아닙니다. 지원 여부를 확인할 방법은 없으므로 이메일을 보낼 때는 `PlainText`를 사용하는 것이 좋습니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

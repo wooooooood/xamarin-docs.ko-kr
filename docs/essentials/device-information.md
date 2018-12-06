@@ -4,17 +4,15 @@ description: 이 문서에서는 응용 프로그램이 실행 중인 장치에 
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 530b04446703d78452357b2c9f9089e59ebf6e6c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674815"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898955"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: 장치 정보
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **DeviceInfo** 클래스는 응용 프로그램이 실행 중인 장치에 대한 정보를 제공합니다.
 
@@ -57,22 +55,23 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[플랫폼](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-`DeviceInfo.Platform`은 운영 체제에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `Platforms` 클래스를 사용하여 확인할 수 있습니다.
+`DeviceInfo.Platform`은 운영 체제에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DevicePlatform` 구조체를 사용하여 확인할 수 있습니다.
 
-- **DeviceInfo.Platforms.iOS** – iOS
-- **DeviceInfo.Platforms.Android** – Android
-- **DeviceInfo.Platforms.UWP** – UWP
-- **DeviceInfo.Platforms.Unsupported** - 지원되지 않음
+- **DevicePlatform.iOS** – iOS
+- **DevicePlatform.Android** – Android
+- **DevicePlatform.UWP** – UWP
+- **DevicePlatform.Unknown** – 알 수 없음
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom`은 응용 프로그램이 실행 중인 장치 유형에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `Idioms` 클래스를 사용하여 확인할 수 있습니다.
+`DeviceInfo.Idiom`은 응용 프로그램이 실행 중인 장치 유형에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DeviceIdiom` 구조체를 사용하여 확인할 수 있습니다.
 
-- **DeviceInfo.Idioms.Phone** - 전화
-- **DeviceInfo.Idioms.Tablet** – 태블릿
-- **DeviceInfo.Idioms.Desktop** – 데스크톱
-- **DeviceInfo.Idioms.TV** – TV
-- **DeviceInfo.Idioms.Unsupported** - 지원되지 않음
+- **DeviceIdiom.Phone** – 휴대폰
+- **DeviceIdiom.Tablet** – 태블릿
+- **DeviceIdiom.Desktop** – 데스크톱
+- **DeviceIdiom.TV** – TV
+- **DeviceIdiom.Watch** – 시계
+- **DeviceIdiom.Unknown** – 알 수 없음
 
 ## <a name="device-type"></a>장치 유형
 

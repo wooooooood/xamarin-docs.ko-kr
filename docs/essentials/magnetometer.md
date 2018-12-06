@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 Magnetometer 클래스를 사용하면 지구
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 2fe610195f881f3d20ecc327c02dd2dfbced35ce
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675057"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898718"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Magnetometer** 클래스를 사용하면 지구 자기장을 기준으로 장치 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
 
@@ -73,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-모든 데이터는 microtesla 단위로 반환됩니다.
+모든 데이터는 µ(microtesla) 단위로 반환됩니다.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
