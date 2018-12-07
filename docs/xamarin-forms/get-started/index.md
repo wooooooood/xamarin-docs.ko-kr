@@ -19,16 +19,16 @@ ms.locfileid: "35242442"
 
 _Xamarin.Forms는 개발자가 iOS, Android 및 UWP(Univeral Windows Platform) 앱에서 기본 사용자 인터페이스 레이아웃을 효율적으로 만들 수 있도록 해주는 교차 플랫폼 UI 도구 키트입니다. 이 시리즈에서는 Xamarin.Forms 개발의 기본 사항을 소개하고 다중 플랫폼 및 다중 화면 응용 프로그램을 만드는 내용을 다룹니다._
 
-플랫폼 간 개발에 적용되는 설치 및 설정 연습의 개요는 [Xamarin.Forms 요구 사항](installation.md) 및 [설치](~/cross-platform/get-started/installation/index.md)를 참조하세요.
+교차 플랫폼 개발에 적용되는 설치 및 설정 연습의 개요는 [Xamarin.Forms 요구 사항](installation.md) 및 [설치](~/cross-platform/get-started/installation/index.md)를 참조하세요.
 
 > [!div class="nextstepaction"]
-> [첫 번째 앱 빌드](~/xamarin-forms/get-started/first-app/index.md)
+> [첫 번째 앱 만들기](~/xamarin-forms/get-started/first-app/index.md)
 
 ## <a name="requirementsinstallationmd"></a>[요구 사항](installation.md)
 
 Xamarin.Forms에서 개발된 앱의 플랫폼 요구 사항과 Visual Studio for Mac 및 Visual Studio에서 Xamarin.Forms로 개발하기 위한 최소 시스템 요구 사항을 간략하게 설명합니다.
 
-## <a name="build-your-first-appfirst-appindexmd"></a>[첫 번째 앱 빌드](first-app/index.md)
+## <a name="build-your-first-appfirst-appindexmd"></a>[첫 번째 앱 만들기](first-app/index.md)
 
 동영상을 시청하고 단계별 지침에 따라 첫 번째 Xamarin.Forms 앱을 빌드하고 테스트합니다.
 
@@ -36,7 +36,7 @@ Xamarin.Forms에서 개발된 앱의 플랫폼 요구 사항과 Visual Studio fo
 
 이 가이드에서는 Visual Studio for Mac 또는 Visual Studio를 사용하여 Xamarin.Forms 응용 프로그램 개발 방법에 대해 소개합니다. Xamarin.Forms 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 다룹니다.
 
-## <a name="hello-xamarinforms-multiscreenhello-xamarin-forms-multiscreenindexmd"></a>[Hello, Xamarin.Forms 멀티스크린](hello-xamarin-forms-multiscreen/index.md)
+## <a name="hello-xamarinforms-multiscreenhello-xamarin-forms-multiscreenindexmd"></a>[Hello, Xamarin.Forms 다중 화면](hello-xamarin-forms-multiscreen/index.md)
 
 이 가이드는 보조 페이지 탐색을 도입하여 이전에 만든 응용 프로그램을 확장합니다. 데이터 바인딩 및 성능 탐색에 대해 다룹니다.
 
