@@ -7,14 +7,16 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: 07b6a13a8bba1e30db1d69e49aa87420bbbdf601
-ms.sourcegitcommit: a635312ffec816ba357a92b66c8c5221c8d9044c
+ms.openlocfilehash: dd38d91a808bed715c92c0fc7d98d6786fc43f67
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "39615433"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054650"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 행렬 변환
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _SkiaSharp 변환 다양 한 변환 매트릭스를 사용 하 여 본격적으로 활용 하기_
 
