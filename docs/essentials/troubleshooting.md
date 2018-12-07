@@ -4,23 +4,21 @@ description: 이 문서에서는 Xamarin.Essentials 라이브러리를 사용하
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 06/26/2018
-ms.openlocfilehash: 8cb18ab029d2fd161c60fda7e130f319b8f0c3ab
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 11/04/2018
+ms.openlocfilehash: 3440b572514c02c8c2240dc99b09aecfde06fcb9
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947376"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898755"
 ---
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: 문제 해결
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>오류: Xamarin.Android.Support.Compat에 대한 버전 충돌이 검색되었습니다.
 
 Xamarin.Essentials를 사용하는 Xamarin.Forms 프로젝트로 NuGet 패키지를 업데이트(하거나 새 패키지를 추가)하는 경우 다음 오류가 발생할 수 있습니다.
 
-```
+```error
 NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue. 
  MyApp -> Xamarin.Essentials 0.8.0-preview -> Xamarin.Android.Support.CustomTabs 27.0.2.1 -> Xamarin.Android.Support.Compat (= 27.0.2.1) 
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).
