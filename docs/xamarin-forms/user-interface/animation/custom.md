@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 519368031384e72a2d2e0a7c99053be44ea4cffc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 157e044fd96cdeff87d8fb56029fe625b7312bf4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995223"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056242"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Xamarin.Forms에서 사용자 지정 애니메이션
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
 
 _애니메이션 클래스는 하나 이상의 애니메이션 개체를 만드는 ViewExtensions 클래스의 확장 메서드를 사용 하 여 모든 Xamarin.Forms 애니메이션의 빌딩 블록입니다. 이 문서에서는 기존 애니메이션 방법으로 애니메이션 효과가 적용 되지 않습니다 하는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만들고 애니메이션 클래스를 사용 하 여 만드는 애니메이션을 취소 하 고 여러 애니메이션을 동기화 하는 방법을 보여 줍니다._
 

@@ -7,14 +7,16 @@ ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: cf757976be1a95fb7ed56ba6c014389fbe520408
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 75f153499edb6d979f9a0269a1439eaf8ca53878
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563578"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061069"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>8 장의 요약입니다. 코드 및 XAML의 조율
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
 
 이 장의 XAML를 보다 강력 하 게 탐색 및 특히 어떻게 코드 및 XAML 상호 작용 합니다.
 

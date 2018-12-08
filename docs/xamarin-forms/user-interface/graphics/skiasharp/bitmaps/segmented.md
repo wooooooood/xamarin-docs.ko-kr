@@ -7,14 +7,16 @@ ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be2d998916c81cb2216251e2112ff8ca2af5d87a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119230"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061370"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>SkiaSharp 비트맵의 분할된 된 표시
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 SkiaSharp `SKCanvas` 이라는 메서드를 정의 하는 개체 `DrawBitmapNinePatch` 및 이라는 두 가지 방법 `DrawBitmapLattice` 는 매우 비슷합니다. 둘 다 이러한 메서드는 대상 사각형의 크기를 비트맵을 렌더링 하지만 비트맵을 균일 하 게 확장 하는 대신 해당 픽셀 크기의 비트맵의 일부를 표시 하며 사각형 맞도록 비트맵의 다른 부분 확장:
 

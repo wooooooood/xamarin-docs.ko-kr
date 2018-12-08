@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: f73760e2dc2310a9c1cd7a63a03ead37283a415f
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710012"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059628"
 ---
 # <a name="application-indexing-and-deep-linking"></a>응용 프로그램 인덱싱 및 딥 링크 설정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
 
 _응용 프로그램 인덱싱 몇 가지 사용 하 여 검색 결과에 표시 하 여 인재를 후 잊어버린 그렇지 않은 경우는 응용 프로그램을 수 있습니다. 딥 링크는 앱이 검색 기록에 앱 정보를 포함하고 있을 때 응답할 수 있도록 도와줍니다. 이는 주로 딥 링크로부터 참조된 페이지로 이동할 때입니다. 이 문서에서는 응용 프로그램 인덱싱을 사용 하는 방법 및 Xamarin.Forms 응용 프로그램 콘텐츠를 iOS 및 Android 장치에서 검색할 수 있도록 딥 링크를 설명 합니다._
 

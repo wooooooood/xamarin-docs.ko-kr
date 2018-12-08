@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3f82e4b7d52988bfef9736ace8c476a9cd2da02b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 102ff15ea0e0002b783f993c59eb50d03a5ece63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994746"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051071"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 
 _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서는 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다._
 

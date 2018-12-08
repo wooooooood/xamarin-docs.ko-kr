@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 02ea94fa67491384e6ca6768e429ee96b46c6143
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171341"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052253"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
 
 [`WebView`](xref:Xamarin.Forms.WebView) 앱에서 웹 및 HTML 콘텐츠를 표시 하기 위한 뷰입니다. 와 달리 `OpenUri`, 사용자 장치의 웹 브라우저에 적용 되 `WebView` 앱 내에서 HTML 콘텐츠를 표시 합니다.
 
@@ -109,7 +111,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript를 포함 합니다. 예를 들어:
+WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript를 포함 합니다. 예를 들어 다음과 같습니다.
 
 ```html
 <html>

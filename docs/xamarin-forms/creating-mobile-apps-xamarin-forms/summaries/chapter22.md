@@ -7,14 +7,16 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 82ffecd41115bc91df9732793f5e22e721dbdee4
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563903"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053119"
 ---
 # <a name="summary-of-chapter-22-animation"></a>요약 22 장입니다. 애니메이션
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
 지금까지 살펴본 Xamarin.Forms 타이머를 사용 하 여 사용자 고유의 애니메이션을 만들 수 있습니다 또는 `Task.Delay`, Xamarin.Forms 제공 하는 애니메이션 기능을 사용 하 여 일반적으로 쉽게 이지만 합니다. 세 클래스는 이러한 애니메이션을 구현합니다.
 

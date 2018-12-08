@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 7a0f55b6d8a61f52f4ef137d83c56d86149bc3c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7c19cc0f2d1f72706926d640bb7fad9323a9e17f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996258"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049458"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
 
 ListView를 사용 하 여 사용자 지정할 수 있는 스크롤 가능한 목록이 표시 `ViewCell`s입니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
 

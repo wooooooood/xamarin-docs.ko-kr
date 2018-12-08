@@ -7,14 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 08a79c7685b6e7d210baf11e99edcf928df88c67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132011"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056047"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 순환 그라데이션
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 합니다 [ `SKShader` ](xref:SkiaSharp.SKShader) 클래스 네 가지 유형의 그라데이션 만드는 정적 메서드를 정의 합니다. 합니다 [ **SkiaSharp 선형 그라데이션** ](linear-gradient.md) 문서에 설명 합니다 [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) 메서드. 이 문서에는 다른 세 가지 유형의 그라데이션 원에 기반한 모두 다룹니다.
 

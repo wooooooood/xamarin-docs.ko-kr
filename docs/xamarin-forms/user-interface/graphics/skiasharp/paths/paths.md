@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 647d9f82eab4d606a940ff887defb864d7770cc3
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171081"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054943"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체 탐색_
 

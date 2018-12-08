@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 745c10b381ef2bd578278cb8d141a944ef1087e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121986"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059949"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>WatchOS에서 Xamarin 부모 응용 프로그램 사용
 
@@ -147,7 +147,7 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 
 ## <a name="related-links"></a>관련 링크
 
-- [GpsWatch (샘플)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [GpsWatch (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [WormHoleSharp (샘플)](https://github.com/Clancey/WormHoleSharp)
 - [Apple의 WKInterfaceController 참조](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple의 포함 된 앱을 사용 하 여 데이터 공유](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

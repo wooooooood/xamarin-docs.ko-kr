@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 4f80682c5d8c4f5231fbdd2e081fdcf7962aa969
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 06cf5d2a862a5db2f94fca655b69c45d16375854
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103727"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059154"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 
 A [ `ListView` ](xref:Xamarin.Forms.ListView) 데이터의 목록을 표시 하기 위해 사용 됩니다. 데이터 및 선택한 항목에 바인딩할 수 있습니다 하는 방법을 사용 하 여 ListView를 채우는 방법에 대 한 알아보겠습니다.
 

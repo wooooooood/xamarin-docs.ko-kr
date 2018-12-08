@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 53179170afa1381a562699a39baaa716ecc6a5a6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: f6815b54867b47bb32ede41470712dac65b6d410
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171198"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062180"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 
 _Xamarin.Forms 사용 하 여 플랫폼 이미지를 공유할 수 있습니다 하 고, 각 플랫폼에 대해 구체적으로 로드 될 수 있습니다 또는 표시를 위해 다운로드할 수 있습니다._
 

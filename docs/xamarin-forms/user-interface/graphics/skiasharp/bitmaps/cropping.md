@@ -7,14 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 653904da37354db52ef6bbd303355e98ddc1582f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122636"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056573"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 합니다 [ **만들고 그리기 SkiaSharp 비트맵** ](drawing.md) 하는 방법을 설명 하는 문서를 `SKBitmap` 개체를 전달할 수는 `SKCanvas` 생성자입니다. 비트맵에 렌더링 되는 캔버스 원인 그래픽 라는 모든 그리기 메서드. 이러한 그리기 메서드를 포함 `DrawBitmap`, 즉,이 기술은 한 비트맵의 전체 또는 일부 다른 비트맵 아마도 사용 하 여 전송 적용 되는 변환을 허용함.
 

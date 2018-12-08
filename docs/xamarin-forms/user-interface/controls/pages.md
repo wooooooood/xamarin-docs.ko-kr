@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: fea1db6c65e533692601439f4712d15371740644
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 588c04729b3387cd1a072f73a21f1e49df4529e5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995900"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050077"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms 페이지
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다._
 
@@ -32,7 +34,7 @@ Xamarin.Forms는 페이지 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| [`ContentPage`](xref:Xamarin.Forms.ContentPage) 페이지의 간단 하 고 가장 일반적인 형식이입니다. 설정 합니다 [ `Content` ](xref:Xamarin.Forms.ContentPage.Content) 속성을 단일 [ `View` ](views.md) 대부분 인 개체를 [ `Layout` ](layouts.md) 와 같은 [ `StackLayout` ](layouts.md#stackLayout)하십시오 [ `Grid` ](layouts.md#grid), 또는 [ `ScrollView` ](layouts.md#scrollView)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentPage) | [![ContentPage 예제](pages-images/ContentPage.png "ContentPage 예제")](pages-images/ContentPage-Large.png#lightbox "ContentPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
+| [`ContentPage`](xref:Xamarin.Forms.ContentPage) 페이지의 간단 하 고 가장 일반적인 형식이입니다. 설정 합니다 [ `Content` ](xref:Xamarin.Forms.ContentPage.Content) 속성을 단일 [ `View` ](views.md) 대부분 인 개체를 [ `Layout` ](layouts.md) 와 같은 [ `StackLayout` ](layouts.md#stackLayout)하십시오 [ `Grid` ](layouts.md#grid), 또는 [ `ScrollView` ](layouts.md#scrollView)합니다.<br /><br />[API 문서](xref:Xamarin.Forms.ContentPage) | [![ContentPage 예제](pages-images/ContentPage.png "ContentPage 예제")](pages-images/ContentPage-Large.png#lightbox "ContentPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
 |     |     |
 
 ### <a name="masterdetailpage"></a>MasterDetailPage

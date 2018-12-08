@@ -7,14 +7,16 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 835663b2d9a9fa8557a31570f91492da95be7a9a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171146"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059193"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 효과 검색 합니다._
 

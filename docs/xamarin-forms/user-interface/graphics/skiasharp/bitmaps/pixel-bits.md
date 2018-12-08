@@ -7,14 +7,16 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172017"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059206"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트에 액세스
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 이 문서에서 볼 수 있듯이 [ **파일에 저장 SkiaSharp 비트맵**](saving.md), 비트맵은 일반적으로 압축 된 형식으로 JPEG 또는 PNG와 같은 파일에 저장 됩니다. 이와 달리 SkiaSharp 비트맵 메모리에 저장 된 압축 되지 않습니다. 픽셀의 순차적으로 저장 됩니다. 압축 되지 않은 형식으로 표시 화면에 비트맵의 전송을 지원합니다.
 

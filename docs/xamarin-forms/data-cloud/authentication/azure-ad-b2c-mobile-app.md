@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: cafc1e78779dc393fa0409daa08b3daa8948a1ee
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 135977329e2a190dd4c611937f6b8a664f135f5c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815679"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051946"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Azure Mobile Apps와 Azure Active Directory B2C 통합
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuthADB2CClientFlow/)
 
 _Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램에 대 한 클라우드 id 관리 솔루션입니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Xamarin.Forms를 사용 하 여 인증 및 Azure Mobile Apps 인스턴스에 대 한 권한 부여를 제공 하는 방법에 설명 합니다._
 

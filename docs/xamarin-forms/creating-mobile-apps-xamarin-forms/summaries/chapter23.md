@@ -7,14 +7,16 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563994"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058638"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 23 장입니다. 트리거 및 동작
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
 트리거 및 동작을 한다는 점에서 비슷합니다는 모두 데이터 바인딩의 이상 요소 상호 작용을 단순화 하 고 XAML 요소의 기능을 확장 하려면 XAML 파일에서 사용 하기 위한 합니다. 트리거 및 동작은 모두 시각적 사용자 인터페이스 개체를 사용 하 여 거의 항상 사용 됩니다.
 

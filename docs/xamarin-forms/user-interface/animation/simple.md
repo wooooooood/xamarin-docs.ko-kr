@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 61a7d2261ac35621482e9810a0fdb69a6061ae6a
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 93bb138b3a78b6052715ab987a4634a18cdce317
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38997073"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054504"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Xamarin.Forms에서 간단한 애니메이션
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
 
 _ViewExtensions 클래스는 간단한 애니메이션을 만드는 데 사용할 수 있는 확장 메서드를 제공 합니다. 이 문서에서는 만들고 ViewExtensions 클래스를 사용 하 여 애니메이션을 취소 하는 방법을 보여 줍니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e0377b71badfae0d0e6a1a6ffdaf1d67a7f3ad9
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171419"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059719"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _다른 스트로크 단면 있는 선을 그리려면 SkiaSharp 사용 방법 알아보기_
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 53ec1b0777827e7f4faf81110507787c65dfaf63
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103935"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057329"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS에서 Xamarin 알림
 
@@ -126,7 +126,7 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
 
 ### <a name="example-notification-payload"></a>알림 페이로드 예제
 
-에 [조사식 키트 카탈로그](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/) 있습니다 샘플 페이로드 JSON 파일의 예는 **NotificationPayload.json** (아래 참조).
+에 [조사식 키트 카탈로그](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) 있습니다 샘플 페이로드 JSON 파일의 예는 **NotificationPayload.json** (아래 참조).
 
 ```csharp
 {
@@ -152,5 +152,5 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
 ## <a name="related-links"></a>관련 링크
 
 - [(로컬 알림) WatchNotifications (샘플)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
+- [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Apple Watch 키트 알림을 docs](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

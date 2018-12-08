@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: ff485774b8e9ee47aae4808701e8b9d20c308e03
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
+ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52280480"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059342"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 표
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`Grid`](xref:Xamarin.Forms.Grid) 지원 행과 열으로 뷰를 정렬 합니다. 가변 크기 또는 절대 크기는 행과 열을 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블을 사용 하 여 혼동 해서는 안 됩니다 및 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식 개념이 없습니다. HTML 테이블과 달리 `Grid` 순수 하 게 콘텐츠를 배치 하기 위한 것입니다.
 

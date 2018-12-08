@@ -7,14 +7,16 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 743c84c8aa02a5a079d29921a2fec276fd2d975d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563422"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054238"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 11 장입니다. 바인딩할 수 있는 인프라
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
 모든 C# 프로그래머는 C#을 사용 하 여 익숙한 *속성*합니다. 속성에 포함 된 *설정* 접근자 및/또는 *가져오기* 접근자입니다. 이러한 이라고 *CLR 속성* 공용 언어 런타임에 대 한 합니다.
 

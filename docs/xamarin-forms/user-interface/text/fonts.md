@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e6635bc13214a5a4e728fa3e71db86a8ea1c39d6
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 1b90a3184b89ba9147525a87b52e048bbb59f5af
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202957"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061155"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 
 이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (크기 및 무게 포함)을 지정할 수 있습니다 하는 방법을 설명 합니다. 글꼴 정보 일 수 있습니다 [코드에서 지정한](#Setting_Font_in_Code) 하거나 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다.
 사용할 수 이기도 한 [사용자 지정 글꼴](#Using_a_Custom_Font)합니다.

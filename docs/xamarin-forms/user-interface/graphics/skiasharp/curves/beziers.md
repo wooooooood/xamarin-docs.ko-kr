@@ -7,14 +7,16 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172355"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055480"
 ---
 # <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법_
 

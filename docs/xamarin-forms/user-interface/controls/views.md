@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 13/11/2018
-ms.openlocfilehash: b14cb6fd96bb5da1ba2f8612daa51b2db4242630
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 819eff30f9d9aa9107df3bffaa749a2c078431a5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172342"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061121"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구성 요소입니다._
 

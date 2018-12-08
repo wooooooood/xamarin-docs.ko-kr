@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 7ea7a9bb66e039289e8ce09e77c223c98f90e4c1
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 79547277b00ae1f1d9b035d5fb08685562cefc79
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617633"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052584"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure Cosmos DB 문서 데이터베이스를 사용합니다.
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
 
 _Azure Cosmos DB 문서 데이터베이스는 원활한 확장 및 전역 복제가 필요한 응용 프로그램에 대 한 빠른, 고가용성, 확장성 있는 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 대기 시간이 짧은 액세스를 제공 하는 NoSQL 데이터베이스. 이 문서에서는 Azure Cosmos DB.NET Standard 클라이언트 라이브러리를 사용 하 여 Xamarin.Forms 응용 프로그램에 Azure Cosmos DB 문서 데이터베이스를 통합 하는 방법에 설명 합니다._
 

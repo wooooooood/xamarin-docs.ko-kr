@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 8dc53c37894af70d5183fe5c44b018fdf25af616
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0251d06ff68185990ed8b7acb46389c59c71a99a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563851"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059862"
 ---
 # <a name="bindable-properties"></a>바인딩 가능한 속성
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 
 _Xamarin.Forms에서 공용 언어 런타임 (CLR) 속성의 기능 바인딩 가능한 속성으로 확장 됩니다. 바인딩 가능한 속성을 속성의 값 Xamarin.Forms 속성 시스템에서 추적 되는 속성의 특수 형식입니다. 이 문서에서는 바인딩 가능한 속성에 대해 소개 하 고 만들고이 사용 하는 방법을 보여 줍니다._
 

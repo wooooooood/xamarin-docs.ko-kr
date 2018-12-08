@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: c6a6ed38ec64c681075ffa3e42f3ffaf58c576ec
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997219"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059248"
 ---
 # <a name="listview-performance"></a>ListView 성능
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
 
 모바일 응용 프로그램을 작성할 때 성능에 중요 합니다. 사용자가 제대로 찾아 오셨습니다 부드러운 스크롤 및 빠른 로드 시간을 예상 합니다. 사용자의 기대를 충족 하기 위해 실패 한 응용 프로그램 저장소에 대 한 등급 비용이 되거나를 기간 업무 응용 프로그램의 경우 조직으로 시간과 비용을 비용 됩니다.
 
@@ -127,7 +129,7 @@ XAML에서 설정 된 `CachingStrategy` 아래 코드에 표시 된 대로 특�
 </ListView>
 ```
 
-C#; 생성자에는 캐싱 전략 인수를 설정 하는 것과 동일한 효과가 없습니다 `CachingStrategy` 속성을 `ListView`입니다.
+생성자에서는 캐싱 전략 인수를 설정 하는 것과 동일한 효과가 C#; 없습니다 `CachingStrategy` 속성을 `ListView`입니다.
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>서브클래싱된 ListView에서 캐싱 전략을 설정합니다.
 

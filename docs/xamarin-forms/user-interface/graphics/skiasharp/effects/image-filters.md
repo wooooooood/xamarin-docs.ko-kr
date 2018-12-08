@@ -7,14 +7,16 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d4029cbd4100b3ad83343b3bee73868b385a02e5
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171822"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050376"
 ---
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 이미지 필터는 픽셀 이미지를 구성 하는 모든 색 비트에서 작동 하는 효과입니다. 이 문서에 설명 된 대로 알파 채널 에서만 작동 하는 마스크 필터 보다 더 많은 [ **SkiaSharp 마스크 필터**](mask-filters.md)합니다. 이미지 필터를 사용 하려면 설정 합니다 [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) 클래스의 정적 메서드 중 하나를 호출 하 여 만든 합니다.
 

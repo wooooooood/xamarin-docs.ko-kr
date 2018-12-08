@@ -7,14 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171211"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053080"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 살펴보았습니다 방법을 통해 응용 프로그램 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드할 수 있습니다. 응용 프로그램 내에서 새 비트맵을 만들 수 이기도 합니다. 가장 간단한 방법은의 생성자 중 하나를 포함 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 

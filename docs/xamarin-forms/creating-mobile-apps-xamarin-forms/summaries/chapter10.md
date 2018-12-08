@@ -7,14 +7,16 @@ ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 2c9493706930bd3c2ffd54835d963d9847e82e76
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563799"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054743"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>요약 10 장입니다. XAML 태그 확장
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
 
 XAML 파서는 특성 값으로 설정 되어 기본.NET 데이터 형식에 대 한 표준 변환에 따라 속성의 형식 문자열을 변환 하는 일반적으로 또는 [ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter) 속성 또는 해당 형식과 연결 된 파생 클래스는 [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute).
 

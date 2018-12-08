@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: dc039a7a984fae9bd856a9e7147ad899f86f0592
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "35245002"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059261"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
-ListView 스크롤 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다. 이 가이드에서는 ListView를 사용 하는 방법을 보여 줍니다.
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/WorkingWithListview)
+
+뷰는 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다. 이 가이드에서는 ListView를 사용 하는 방법을 보여 줍니다.
 
 1. **[데이터 원본](data-and-databinding.md)**  &ndash; 데이터 바인딩 없이 데이터로 ListView 채우기입니다.
 2. **[셀 모양을](customizing-cell-appearance.md)**  &ndash; 사용자 고유의 사용자 지정 셀을 만들거나 기본 제공 셀 모양 사용자 지정 합니다.

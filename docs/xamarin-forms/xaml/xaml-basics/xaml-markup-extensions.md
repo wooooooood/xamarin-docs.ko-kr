@@ -7,14 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563838"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056217"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3 부입니다. XAML 태그 확장
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _XAML 태그 확장 속성을 개체 또는 다른 원본에서 직접 참조 되는 값을 설정할 수 있도록 XAML에서 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하는 것이 특히 하지만 데이터 바인딩에 해당 가장 큰 유틸리티를 찾을 수 있습니다._
 
@@ -103,7 +105,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage>
 ```
 
-이제 리소스 사전에 개체 및 다양 한 형식의 값을 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있어야 합니다. 추상 클래스, 예를 들어 수 없습니다. 이러한 형식에 매개 변수가 없는 public 생성자가 있어야 합니다. 각 항목에 지정 된 사전의 키가 필요 합니다 `x:Key` 특성입니다. 예를 들어:
+이제 리소스 사전에 개체 및 다양 한 형식의 값을 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있어야 합니다. 추상 클래스, 예를 들어 수 없습니다. 이러한 형식에 매개 변수가 없는 public 생성자가 있어야 합니다. 각 항목에 지정 된 사전의 키가 필요 합니다 `x:Key` 특성입니다. 예를 들어 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

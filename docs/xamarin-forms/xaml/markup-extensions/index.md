@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3a28963852b2b36be0a9751722b7f184c340d3e9
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563396"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060163"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 XAML 태그 확장 요소 리터럴 텍스트 문자열 이외의 원본에서 설정할 수 있도록 하 여 성능과 유연성 XAML의를 확장할 수 있습니다.
 

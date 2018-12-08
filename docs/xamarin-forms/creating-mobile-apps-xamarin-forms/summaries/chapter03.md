@@ -7,14 +7,16 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 609b0066e033b48be55056d459e818a9acc9625c
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563331"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052597"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
 
 이 장에서 설명 합니다 [ `Label` ](xref:Xamarin.Forms.Label) 글꼴, 색 등 서식을 더 자세히 보기입니다.
 

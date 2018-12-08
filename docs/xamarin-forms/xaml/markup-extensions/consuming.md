@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171718"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054128"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 향상 하도록 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 일반적인 XAML 파일에서 표시 `x` 되며 네임 스페이스 접두사를 흔히이 접두사를 사용 하 여 합니다. 다음 태그 확장에 설명 합니다.
 

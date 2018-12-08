@@ -7,14 +7,16 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6c666329664ad7dfaa8439068a60b6135d59d229
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563058"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048819"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
 Xamarin.Forms 뷰 화면 위치 및 크기는 일반적으로 부모 기준에서 표시 되는 `Layout` 또는 `Layout<View>` 파생 합니다. 합니다 *변환* 해당 위치, 크기 또는 심지어 방향을 수정할 수 있는 Xamarin.Forms 기능입니다.
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e02c04afe656b0eca3b7ae12b8b30f35836b9368
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563734"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054815"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
 
 _네이티브 양식 Xamarin.Forms ContentPage 파생 페이지 Xamarin.iOS, Xamarin.Android 및 유니버설 Windows 플랫폼 (UWP)에 대 한 네이티브 프로젝트에서 사용할 수 있도록 허용 합니다. 네이티브 프로젝트는.NET Standard 라이브러리,.NET Standard 라이브러리 또는 공유 프로젝트 또는 프로젝트에 직접 추가 된 ContentPage에서 파생 된 페이지를 사용할 수 있습니다. 이 문서에서는 직접 네이티브 프로젝트에 추가 된 ContentPage에서 파생 된 페이지를 사용 하는 방법 및 이들 사이 탐색 하는 방법을 설명 합니다._
 

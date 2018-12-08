@@ -7,14 +7,16 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 45b959c2d9b40cee4d86eb5eefaad724d857b4b9
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 995291c438bdb510536294d4c3bb0e4e37ac737d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615163"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051599"
 ---
 # <a name="integrating-text-and-graphics"></a>텍스트와 그래픽 통합
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _SkiaSharp 그래픽을 사용 하 여 텍스트를 통합 하는 렌더링 된 텍스트 문자열의 크기를 확인 하는 방법을 참조 하세요._
 

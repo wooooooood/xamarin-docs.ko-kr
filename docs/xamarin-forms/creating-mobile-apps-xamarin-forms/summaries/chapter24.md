@@ -7,14 +7,16 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: d90bef4da589215247f412450905a5db541b0444
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563162"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052743"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>요약 24 장입니다. 페이지 탐색
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
 대부분의 응용 프로그램 중 사용자가 여러 페이지로 구성 됩니다. 항상 응용 프로그램에는 *주* 페이지 또는 *홈* 페이지, 여기에서 사용자는 스택에서 뒤로 탐색에 유지 되는 다른 페이지로 이동 합니다. 추가 탐색 옵션에 나와 [ **25 장입니다. 페이지 종류**](chapter25.md)합니다.
 

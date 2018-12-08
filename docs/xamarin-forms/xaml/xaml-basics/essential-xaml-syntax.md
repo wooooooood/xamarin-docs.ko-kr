@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0c7e0d01a75d72204ca086fc1b0639d584220651
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171575"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059745"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2 부입니다. 필수 XAML 구문
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _XAML은 주로 인스턴스화 및 초기화 개체에 대 한 설계 되었습니다. 하지만 XML 문자열로 쉽게 표현할 수 없는 복잡 한 개체에 속성을 설정 해야 하 고 하나의 클래스에 의해 정의 된 속성을 자식 클래스에 설정 해야 하는 경우에 따라 경우가 많습니다. 이러한 두 요구 속성 요소 및 연결 된 속성의 필수 XAML 구문 기능 필요합니다._
 

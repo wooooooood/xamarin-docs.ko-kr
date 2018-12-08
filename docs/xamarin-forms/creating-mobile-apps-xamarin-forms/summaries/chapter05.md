@@ -7,16 +7,18 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 0e99d15bbecf6640b714b499997144eb18268183
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562707"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056086"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 5 장입니다. 크기를 사용 하 여 처리
 
-> [!NOTE] 
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+
+> [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms의 몇 가지 크기로 지금 발생 했습니다.

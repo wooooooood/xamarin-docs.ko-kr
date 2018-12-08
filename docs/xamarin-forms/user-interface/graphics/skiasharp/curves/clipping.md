@@ -7,14 +7,16 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615290"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057446"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _클립 그래픽에 대 한 경로 사용 하 여 특정 영역을 영역을 만드는 데_
 

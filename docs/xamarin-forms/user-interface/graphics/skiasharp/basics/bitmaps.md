@@ -7,14 +7,16 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 7732bc2ea9a9c5a896b27ca9bd73433ecdcfd9fa
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615212"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060267"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _다양 한 원본에서 비트맵을 로드 하 고 표시 합니다._
 

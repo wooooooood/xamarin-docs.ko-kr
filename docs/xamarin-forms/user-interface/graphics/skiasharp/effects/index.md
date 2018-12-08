@@ -7,14 +7,16 @@ ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2018
-ms.openlocfilehash: 768fd0e1cd5ed08f42310d9aaf5993de7ec32e6b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 121d505d578aa20e86977c0da5d69626bbad1f53
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131459"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049223"
 ---
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 SkiaSharp [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스의 일반 용어에서 분류할 수 있는 6 개의 속성을 정의 합니다. _효과_합니다. 이러한 값은 어떤 방식으로든에서 그래픽의 기본 표시 크기를 변경 하는 속성입니다. SkiaSharp 효과 6 개의 범주로 구분 됩니다.
 

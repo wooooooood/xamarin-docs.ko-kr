@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0c16fd3930926a05ed7796391962d0fc8996dc96
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a1027b1fd738c80cf5917effc66957f77a337ecf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995377"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054569"
 ---
 # <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CustomLayout/WrapLayout/)
 
 _Xamarin.Forms 4 레이아웃 클래스 – StackLayout, AbsoluteLayout, RelativeLayout, 및 그리드를 정의 하 고 자식을 다른 방식으로 정렬 하는 각 키를 누릅니다. 그러나 경우에 Xamarin.Forms에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 합니다. 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법에 설명 하 고 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
 

@@ -7,14 +7,16 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 6eacc7f2688a563f9facf651b0a6da85bd75360f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171354"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053147"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 일반적으로 SkiaSharp 그래픽에 애니메이션을 적용 하는 응용 프로그램 호출 `InvalidateSurface` 에 `SKCanvasView` 종종 16 밀리초 마다 고정 요금. 에 대 한 호출을 트리거하는 화면을 무효화 합니다 `PaintSurface` 처리기 표시를 다시 그려야 합니다. 시각적 개체에는 초당 60 번 그려지는,으로 애니메이션을 적용할 원활 하 게 표시 됩니다.
 

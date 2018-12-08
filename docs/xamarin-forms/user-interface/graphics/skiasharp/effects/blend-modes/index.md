@@ -7,14 +7,16 @@ ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: b2083a819bc688e1742bc4cecccfd24c4d89ac39
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111667"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051045"
 ---
 # <a name="skiasharp-blend-modes"></a>SkiaSharp blend 모드
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 이러한 문서에 집중 합니다 [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) 속성을 [ `SKPaint` ](xref:SkiaSharp.SKPaint)합니다. 합니다 `BlendMode` 형식의 속성은 [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode), 29 멤버로 구성 된 열거형입니다.
 

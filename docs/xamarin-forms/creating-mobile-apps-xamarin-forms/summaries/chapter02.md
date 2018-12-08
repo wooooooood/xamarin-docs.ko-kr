@@ -7,16 +7,18 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563883"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052639"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>요약 2 장입니다. 앱 분석
 
-> [!NOTE] 
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+
+> [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
 Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개체 라고 *시각적 요소*하 여 캡슐화 된, 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스입니다. 시각적 요소는 이러한 클래스에 해당 하는 세 가지 범주로 분할 될 수 있습니다.
@@ -31,9 +33,9 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 
 ## <a name="say-hello"></a>살펴보기
 
-설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac 합니다 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 대 한 이식 가능한 클래스 라이브러리를 사용 합니다. 
+설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac 합니다 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 대 한 이식 가능한 클래스 라이브러리를 사용 합니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
 이 샘플에는 수정 하지 않고도 Visual Studio에서 만들어진 Xamarin.Forms 솔루션을 보여 줍니다. 솔루션은 6 개 프로젝트:
@@ -45,8 +47,8 @@ Xamarin.Forms 응용 프로그램에서 화면에서 공간을 차지 하는 개
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), Windows 8.1 대 한 응용 프로그램 프로젝트
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), Windows Phone 8.1에 대 한 응용 프로그램 프로젝트
 
-> [!NOTE] 
-> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 
+> [!NOTE]
+> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다.
 
 수의 응용 프로그램 프로젝트 시작 프로젝트 및 다음 빌드를 장치 또는 시뮬레이터에서 프로그램을 실행 합니다.
 
@@ -56,7 +58,7 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 
 표시 하 여 시각적 개체를 **Hello** 프로그램의 생성자에 정의 된 합니다 [ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) 클래스입니다. `App` Xamarin.Forms 클래스에서 파생 [ `Application` ](xref:Xamarin.Forms.Application)합니다.
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin.Forms에 대 한 Visual Studio 솔루션 템플릿 XAML 파일을 사용 하 여 페이지를 만듭니다. XAML 될 때까지이 가이드에서 다루지 [7 장](chapter07.md)합니다.
 
 합니다 **참조** 섹션을 **Hello** PCL 프로젝트에 다음 Xamarin.Forms 어셈블리에 포함:
@@ -74,8 +76,8 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
-> [!NOTE] 
-> 합니다 **참조가** 섹션에서는 이러한 프로젝트의 어셈블리를 더 이상 나열 합니다. 대신 프로젝트 파일에는 **PackageReference** Xamarin.Forms NuGet 패키지를 참조 하는 태그입니다. 합니다 **참조** Visual Studio 목록의 섹션의 **Xamarin.Forms** Xamarin.Forms 어셈블리 대신 패키지 합니다. 
+> [!NOTE]
+> 합니다 **참조가** 섹션에서는 이러한 프로젝트의 어셈블리를 더 이상 나열 합니다. 대신 프로젝트 파일에는 **PackageReference** Xamarin.Forms NuGet 패키지를 참조 하는 태그입니다. 합니다 **참조** Visual Studio 목록의 섹션의 **Xamarin.Forms** Xamarin.Forms 어셈블리 대신 패키지 합니다.
 
 정적 호출이 포함 되어 응용 프로그램 프로젝트의 각 `Forms.Init` 의 메서드는 `Xamarin.Forms` 네임 스페이스입니다. 이 Xamarin.Forms 라이브러리를 초기화합니다. 다른 버전의 `Forms.Init` 각 플랫폼에 대해 정의 됩니다. 다음 클래스에이 메서드의 호출을 찾을 수 있습니다.
 
@@ -95,7 +97,7 @@ Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝�
 
 이식 가능한 클래스 라이브러리 (PCL) 또는 공유 자산 프로젝트 (SAP)에서 공통 코드를 사용 하 여 Xamarin.Forms 솔루션을 만들 수는 것입니다. SAP 솔루션을 만들려면 Visual Studio에서 공유 옵션을 선택 합니다. 합니다 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) 솔루션은 수정 하지 않고도 SAP 템플릿을 보여 줍니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다. 그렇지 않은 경우 PCL 및.NET Standard 라이브러리는 개념적으로 유사 합니다.
 
 모든 일반적인 플랫폼 응용 프로그램 프로젝트에서 참조 하는 라이브러리 프로젝트에서 코드 라이브러리 접근 방식 번들입니다. SAP 방식의 경우 공통 코드는 효과적으로 모든 플랫폼 응용 프로그램 프로젝트에 존재 하 고 그 중 공유 됩니다.

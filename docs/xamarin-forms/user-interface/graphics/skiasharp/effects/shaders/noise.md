@@ -7,14 +7,16 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 3c0ee238e0fc72aaea2f73e11317fea7b7a63fb7
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 4801aa12acf8eca2384cc5b41d677f7cb0bdd90d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171497"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052053"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 간단한 벡터 그래픽 자연스럽 경향이 있습니다. 직선, 부드러운 곡선 및 단색 실제 개체의 결함 유사 하지 않습니다. 1982 영화에 대 한 컴퓨터에서 생성 된 그래픽 작업 하는 동안 _트 론에_, 컴퓨터 과학자 박 단은 Perlin 임의의 프로세스 보다 현실적인 질감 이러한 이미지를 제공 하는 데는 알고리즘을 개발을 시작 합니다. 1997 년 박 단은 Perlin Academy 상을 기술 도전 과제에 대 한이 했습니다. 자신의 업무에 Perlin 노이즈 이라고 하 고 SkiaSharp 지원 됩니다. 예를 들면 다음과 같습니다.
 

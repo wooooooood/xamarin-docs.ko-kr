@@ -7,14 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: ebd4db28b2c20bd2b9e1d93e03dd101ebc5da663
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132064"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055039"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter 임신 blend 모드
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Thomas Porter Tom 임신 Lucasfilm 근무 하면서 합성는 대 수를 개발한 후 Porter 임신 blend 모드 라고 합니다. 백서 [ _합치기 디지털 이미지_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) 1984 년 7 월호에 게시 된 _컴퓨터 그래픽_, 253을 259 페이지입니다. 이러한 혼합 모드는 합치기를 복합 장면에 다양 한 이미지를 구축 하는 데 필요한:
 

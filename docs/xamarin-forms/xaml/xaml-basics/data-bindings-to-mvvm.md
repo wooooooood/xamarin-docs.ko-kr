@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 2376ff986db985c3764c90c3af76ea74c2936a29
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563149"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054035"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5 부입니다. 데이터 바인딩부터 MVVM
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _모델-뷰-ViewModel (MVVM) 아키텍처 패턴은 XAML을 사용 하 여 염두에서 이었으니까요. 세 소프트웨어 계층 간의 분리를 적용 하는 패턴-; 뷰라고 XAML 사용자 인터페이스 기본 데이터 모델 호출 고 뷰와 모델 간의 중개자로 ViewModel 이라고 합니다. 종종 뷰와 ViewModel이 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰에 대 한 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: ecf8a1e6d7c248c7141039844324d45d28700854
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170912"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049345"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법_
 
@@ -29,6 +31,10 @@ Xamarin.Forms를 쉬우면서도 컬 복잡 한 애니메이션을 만드는 간
 ## <a name="buttonbuttonmd"></a>[Button](button.md)
 
 `Button` 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다.
+
+## <a name="collectionviewcollectionviewmd"></a>[CollectionView](collectionview.md)
+
+`CollectionView` 레이아웃이 사양을 사용 하 여 데이터의 목록을 제공 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
 
 ## <a name="colorscolorsmd"></a>[색](colors.md)
 
@@ -54,7 +60,7 @@ SkiaSharp를 사용 하 여 Xamarin.Forms 응용 프로그램에 그래픽을 �
 
 Xamarin.Forms 사용 하 여 플랫폼 이미지를 공유할 수 있습니다 하 고, 각 플랫폼에 대해 구체적으로 로드 될 수 있습니다 또는 표시를 위해 다운로드할 수 있습니다.
 
-## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+## <a name="imagebuttonimagebuttonmd"></a>[ImageButton](imagebutton.md)
 
 `ImageButton` 이미지를 표시 하 고 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다.
 
@@ -102,6 +108,10 @@ Xamarin.Forms 테마에는 표준 컨트롤에 대 한 시각적인 특정 모�
 
 `TimePicker` 시간을 선택할 수 있습니다. 응용 프로그램에서 실행 되는 특정 플랫폼에서 지원 되는 시간 선택기를 사용 하 여 구현 됩니다.
 
+## <a name="visualvisualmd"></a>[Visual](visual.md)
+
+이 아티클에서 iOS 및 Android에서 동일 하 게 또는 거의 동일 하 게 뷰를 렌더링 하는 Xamarin.Forms 시각적 개체를 소개 합니다.
+
 ## <a name="visual-state-managervisual-state-managermd"></a>[시각적 상태 관리자](visual-state-manager.md)
 
 Visual State Manager에는 장치 방향 또는 크기의 변경 내용에 맞게 조정 되는 레이아웃을 포함 하 여 코드에서 사용자 인터페이스에서 변경을 트리거하는 구조화 된 방법을 제공 합니다.
@@ -110,8 +120,7 @@ Visual State Manager에는 장치 방향 또는 크기의 변경 내용에 맞�
 
 Xamarin.Forms는 각 플랫폼에서 기본 웹 브라우저 컨트롤을 사용 하 여 및 웹 사이트, 로컬 리소스 및 생성 된 Html 문자열을 표시할 수 있습니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms 갤러리 (샘플)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms 갤러리(샘플)](https://developer.xamarin.com/samples/FormsGallery/)

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 30eb8522f39438ca4006379b3b9e0d3a613ba112
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563032"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052558"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
 
 _XAML 리소스는 공유 하 고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있는 개체의 정의입니다._
 

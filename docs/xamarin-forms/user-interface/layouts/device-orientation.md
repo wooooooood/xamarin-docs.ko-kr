@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 762d4752eb3882398f212e634c66305f74d5a459
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527340"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052665"
 ---
 # <a name="device-orientation"></a>장치 방향
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
 
 응용 프로그램 사용 방법 및 사용자 환경을 개선 하기 위해 가로 방향을 통합 하는 방법을 고려 하는 것이 반드시 합니다. 여러 화면 방향에 맞게 개별 레이아웃을 디자인할 수 있습니다 하 고 최적의 사용 가능한 공간을 사용 합니다. 응용 프로그램 수준에서 회전을 사용 하지 않도록 설정 되거나 활성화 될 수 있습니다.
 

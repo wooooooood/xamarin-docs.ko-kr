@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0561c2a08aa96755d6d6caa9a3c683a5ce83ae10
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119998"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053988"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView)
 
 [TableView](xref:Xamarin.Forms.TableView) 스크롤 가능한 목록이 데이터 나 선택 항목을 표시 하기 위한 뷰입니다 같은 서식 파일을 공유 하지 않는 행이 있습니다. 와 달리 [ListView](~/xamarin-forms/user-interface/listview/index.md), TableView 개념이 없는 `ItemsSource`이므로 수동으로 항목 자식으로 추가 해야 합니다.
 

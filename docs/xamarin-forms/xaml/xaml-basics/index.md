@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 348cbc07586a5d8536efafe67103258936c1c705
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563214"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055743"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. XAML Xamarin.Forms 프로그램에서 필요 하지 않습니다 하지만 것이 간결 하 고 해당 하는 코드 보다 일관 된 시각적으로 화할 수 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다: XAML XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결 된 뷰를 정의 합니다.
 

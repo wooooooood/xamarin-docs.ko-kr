@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 1326a1326b4a88459e4e0a01ef590e770e3a88c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997350"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059459"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
 `ListView` 기본 외에도 전체 목록 표시를 제어 하기 위한 옵션이 `ViewCell`s입니다. 다음 옵션을 사용할 수 있습니다.
 

@@ -7,14 +7,16 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f99c5c2b60dec091e07ef11e62955de399d12164
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 577eb19106ffa0ebd19c54aeeb155a9c6c85feac
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132028"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062045"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 지금까지 살펴본 대로 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스를 포함 한 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 형식의 속성 [ `SKColor` ](xref:SkiaSharp.SKColor). `SKColor` 알파 채널을 모두 사용 하 여 색을 포함 한 `SKColor` 값 부분적으로 투명 하 게 될 수 있습니다. 
 

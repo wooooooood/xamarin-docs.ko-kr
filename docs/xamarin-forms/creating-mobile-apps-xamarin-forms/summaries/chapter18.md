@@ -7,14 +7,16 @@ ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 99378a2974891ec78977b29adc99350395b5ad14
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563305"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050129"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 18 장입니다. MVVM
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 이 라고도 하는 기본 코드의 사용자 인터페이스를 분리 하 여는 응용 프로그램을 설계 하는 가장 좋은 방법 중 하나는 *비즈니스 논리*합니다. 다양 한 기술을 존재 하지만 XAML 기반 환경에 맞게 작성 된 것은 모델-뷰-ViewModel 또는 MVVM 이라고 합니다.
 

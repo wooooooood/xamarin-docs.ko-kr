@@ -7,14 +7,16 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: daa2c2f3b43633fd9b3359763b9d740b0def9144
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563084"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052040"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 4 장입니다. 스택 스크롤
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
 이 장에서 주로 전용으로 지정 개념을 도입 *레이아웃*, 있으며 클래스 및 Xamarin.Forms 페이지의 여러 보기의 시각적 표시를 구성 하는 데 사용 하는 방법에 대 한 전체 용어입니다.
 

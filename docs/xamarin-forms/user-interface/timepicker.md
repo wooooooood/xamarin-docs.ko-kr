@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: f5fdaa55f91656d8560fb9ad2eb2b938d5c9a02f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 056183511db3b43c9faccc9fe1d3fe25153dbc09
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171848"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057524"
 ---
 # <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker/)
 
 _시간을 선택할 수 있도록 하는 Xamarin.Forms 뷰._
 

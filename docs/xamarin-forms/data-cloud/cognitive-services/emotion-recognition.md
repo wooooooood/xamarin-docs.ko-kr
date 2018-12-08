@@ -1,36 +1,38 @@
 ---
-title: Face API를 사용 하 여 emotion 인식
-description: Face API를 입력으로 이미지에는 얼굴 식 하며 감정 각 면 이미지에 대 한 조합에 대해 신뢰도 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 emotion 인식 하도록 Face API를 사용 하는 방법을 설명 합니다.
+title: Face API를 사용 하 여 감정 인식
+description: Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 4dc04cb077b894b255eb496b2cb2983626573897
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d703de90378991d262a4b056b9ebc98d183e3fb8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049768"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056492"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>Face API를 사용 하 여 emotion 인식
+# <a name="emotion-recognition-using-the-face-api"></a>Face API를 사용 하 여 감정 인식
 
-_Face API를 입력으로 이미지에는 얼굴 식 하며 감정 각 면 이미지에 대 한 조합에 대해 신뢰도 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 emotion 인식 하도록 Face API를 사용 하는 방법을 설명 합니다._
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+
+_Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
-Face API 얼굴 식에서 emotion 분노, 컨 템, disgust, 걱정, 중립 만족도 검색 하는 검색, 슬픔, 및 놀랄 수행할 수 있습니다. 이러한 감정은 보편적으로 및 문화 기본 동일한 얼굴 식을 통해 전달 됩니다. 얼굴 식에 대 한는 emotion 결과 반환 하는 데 뿐만 아니라 Face API 수도 반환에 대해 검색 된 경계 상자. Face API를 사용 하면 API 키를 얻어야 하는 참고 합니다. 다운로드할 수 있습니다 [Cognitive 서비스 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
+Face API 얼굴 식에 분노, 경 멸, 혐오, 공포, 행복, 중립 검색할 감정 감지, 슬픔 및 놀람을 수행할 수 있습니다. 이러한 감정은 보편적으로 및 문화 기본 동일한 표정을 통해 전달 됩니다. 식의 얼굴 감정을 결과 반환, 뿐만 아니라 Face API 수도 반환 검색 된 얼굴에 대 한 경계 상자입니다. Face API를 사용 하려면 API 키를 받아야 하는 참고 합니다. 가져올 수 있습니다 [Cognitive Services 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
 
-Emotion 인식 클라이언트 라이브러리를 통해 및 REST API를 통해 수행할 수 있습니다. 이 문서에서는 REST API를 통해 emotion 인식을 수행 합니다. REST API에 대 한 자세한 내용은 참조 [얼굴 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
+감정 인식 클라이언트 라이브러리 및 REST API를 통해 수행할 수 있습니다. 이 문서에서는 REST API를 통해 감정 인식을 수행에 중점을 둡니다. REST API에 대 한 자세한 내용은 참조 하세요. [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
 
-Face API 비디오에서는 사용자의 얼굴 식을 인식 하도록도 사용할 수 있으며 해당 감정의 요약을 반환할 수 있습니다. 자세한 내용은 참조 [실시간에서 비디오를 분석 하는 방법을](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/)합니다.
+Face API 비디오에서 사람의 얼굴 표정을 인식 하도 사용할 수 있으며 한 사람의 감정 요약해 서를 반환할 수 있습니다. 자세한 내용은 [실시간 비디오 분석 방법](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/)합니다.
 
-Face API에 대 한 자세한 내용은 참조 [Face API](/azure/cognitive-services/face/overview/)합니다.
+Face API에 대 한 자세한 내용은 참조 하세요. [Face API](/azure/cognitive-services/face/overview/)합니다.
 
 ## <a name="authentication"></a>인증
 
-Face API에 대 한 모든 요청 필요 하면 API 키의 값으로 지정 해야 하는 `Ocp-Apim-Subscription-Key` 헤더입니다. 다음 코드 예제에서는 API 키를 추가 하는 방법을 보여 줍니다.는 `Ocp-Apim-Subscription-Key` 요청 헤더의:
+Face API에 대 한 모든 요청 값으로 지정 해야 하는 API 키가 필요 합니다 `Ocp-Apim-Subscription-Key` 헤더입니다. 다음 코드 예제에는 API 키를 추가 하는 방법을 보여 줍니다는 `Ocp-Apim-Subscription-Key` 요청 헤더:
 
 ```csharp
 public FaceRecognitionService()
@@ -40,28 +42,28 @@ public FaceRecognitionService()
 }
 ```
 
-Face API를 올바른 API 키를 전달 하는 오류 401 응답 오류가 발생 합니다.
+Face API에 유효한 API 키를 전달 하는 오류 401 응답 오류가 발생 합니다.
 
-## <a name="performing-emotion-recognition"></a>Emotion 인식을 수행
+## <a name="performing-emotion-recognition"></a>감정 인식을 수행
 
-Emotion 인식 이미지가 포함 된 POST 요청 하 여 수행 되는 `detect` API에 `https://[location].api.cognitive.microsoft.com/face/v1.0`여기서 `[location]]` API 키를 가져오는 데 영역입니다. 선택적인 요청 매개 변수는.
+감정 인식 이미지가 포함 된 POST 요청을 만들어 수행 됩니다 합니다 `detect` API `https://[location].api.cognitive.microsoft.com/face/v1.0`여기서 `[location]]` API 키를 가져오는 데 사용할 영역입니다. 선택적 요청 매개 변수를 다음과 같습니다.
 
-- `returnFaceId` -검색 된 면 faceIds 반환할 것인지 합니다. 기본값은 `true`입니다.
-- `returnFaceLandmarks` -검색 된 면 얼굴 이정표 반환할 것인지 합니다. 기본값은 `false`입니다.
-- `returnFaceAttributes` – 특성에 맞서게 여부를 분석 하 고 지정 된 하나 이상의 반환 합니다. 지원 되 면 특성에는 `age`, `gender`, `headPose`, `smile`, `facialHair`, `glasses`, `emotion`, `hair`, `makeup`, `occlusion`, `accessories`, `blur`, `exposure`, 및 `noise`합니다. 글꼴 특성 분석 시간 및 계산에 대 한 추가 비용에 있는지 확인 합니다.
+- `returnFaceId` -검색 된 얼굴 faceIds를 반환할지 여부를 합니다. 기본값은 `true`입니다.
+- `returnFaceLandmarks` – 중 검색 된 얼굴 랜드마크를 반환할지 여부를 합니다. 기본값은 `false`입니다.
+- `returnFaceAttributes` – 분석 하 고 하나 이상의 지정 된 반환 것인지 얼굴 특성입니다. 지원 되는 얼굴 특성 포함 `age`, `gender`, `headPose`, `smile`, `facialHair`를 `glasses`, `emotion`, `hair`, `makeup`를 `occlusion`, `accessories`, `blur`하십시오 `exposure`, 및 `noise`합니다. 얼굴 특성 분석에 추가 계산 시간 및 비용을 참고 합니다.
 
-이미지 콘텐츠 URL 또는 이진 데이터로 POST 요청의 본문에 배치 되어야 합니다.
+이미지 콘텐츠 URL 또는 이진 데이터를 POST 요청의 본문에 배치 되어야 합니다.
 
 > [!NOTE]
-> 지원 되는 이미지 파일 형식 JPEG, PNG, GIF, 및 BMP, 이며 허용 되는 파일 크기가 1KB에서 4mb입니다.
+> 지원 되는 이미지 파일은 JPEG, PNG, GIF 및 BMP, 및 허용 되는 파일 크기가 1KB에서 4mb입니다.
 
-샘플 응용 프로그램에서 emotion 인식 프로세스가 호출 하 여 호출 됩니다는 `DetectAsync` 메서드:
+샘플 응용 프로그램에서 감정 인식 프로세스를 호출한 호출 된 `DetectAsync` 메서드:
 
 ```csharp
 Face[] faces = await _faceRecognitionService.DetectAsync(photoStream, true, false, new FaceAttributeType[] { FaceAttributeType.Emotion });
 ```
 
-이 메서드 호출에는 faceIds 되돌려야, 얼굴 이정표 안 반환 하 고 이미지의 emotion 분석 되어야 하는 이미지 데이터가 포함 된 스트림을 지정 합니다. 또한 결과의 배열의 형태로 돌아갑니다 지정 `Face` 개체입니다. 차례로 `DetectAsync` 메서드가 호출 하는 `detect` emotion 인식을 수행 하는 REST API:
+이 메서드 호출은 faceIds 반환 되어야 하는, 해당 얼굴 랜드마크 반환 하지 않아야 하 고 이미지의 감정 분석 해야 하도록 이미지 데이터를 포함 하는 스트림을 지정 합니다. 또한 결과 배열로 반환될지 지정 `Face` 개체입니다. 차례로 합니다 `DetectAsync` 메서드를 호출 하는 `detect` 감정 인식을 수행 하는 REST API:
 
 ```csharp
 public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, bool returnFaceLandmarks, IEnumerable<FaceAttributeType> returnFaceAttributes)
@@ -74,14 +76,14 @@ public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, boo
 }
 ```
 
-이 메서드는 요청 URI를 생성 하 고 다음 요청을 보냅니다는 `detect` 를 통해 API는 `SendRequestAsync` 메서드.
+이 메서드는 요청 URI를 생성 하 고 요청을 보냅니다 합니다 `detect` 를 통해 API를 `SendRequestAsync` 메서드.
 
 > [!NOTE]
-> 동일한 지역으로 구독 키를 가져오는 데 사용 하 여 얼굴 API 호출에서 사용 해야 합니다. 예를 들어, 사용자 구독 키를 구입한 경우는 `westus` 영역 얼굴 감지 끝점 됩니다 `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`합니다.
+> 동일한 지역으로 구독 키를 가져오는 데 사용 하 여 Face API 호출에 사용 해야 합니다. 예를 들어에서 구독 키를 구입한 경우 합니다 `westus` 얼굴 검색 끝점 수는 지역 `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`합니다.
 
 ### <a name="sending-the-request"></a>요청을 보내기
 
-`SendRequestAsync` 메서드 Face API에 POST 요청을 만들고으로 결과 반환는 `Face` 배열:
+합니다 `SendRequestAsync` Face API에 POST 요청 메서드와으로 결과 반환을 `Face` 배열:
 
 ```csharp
 async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMethod, string requestUrl, TRequest requestBody)
@@ -124,15 +126,15 @@ async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMetho
 }
 ```
 
-메서드를 POST 요청에 대 한 이미지 스트림을 래핑하고 작성 이미지 스트림을 통해 제공 되는 경우는 `StreamContent` 스트림에 따라 HTTP 콘텐츠를 제공 하는 인스턴스. 또는 이미지 URL을 통해 제공 되는 경우 메서드를 작성 POST 요청에 URL에 래핑하여는 `StringContent` 문자열에 따라 HTTP 콘텐츠를 제공 하는 인스턴스.
+이미지 스트림을 래핑하여 메서드 POST 요청에는 빌드 이미지를 스트림을 통해 제공 하면를 `StreamContent` 스트림에 따라 HTTP 콘텐츠를 제공 하는 경우. 또는 이미지 URL을 통해 제공 되 면, 메서드 작성 POST 요청 URL에 래핑하여는 `StringContent` 문자열을 기반으로 HTTP 콘텐츠를 제공 하는 경우.
 
-POST 요청에 전송 됩니다 `detect` API입니다. 응답 읽기, deserialize 및 호출 하는 메서드로 반환 합니다.
+그런 다음 POST 요청을 보낼 `detect` API. 응답을 deserialize 읽고 호출 메서드로 반환 합니다.
 
-`detect` API에서 HTTP 상태 코드 200 (정상) 요청이 올바른지는 요청이 성공 했음을 나타내는 응답에 요청 된 정보를 제공 하 고 응답을 보냅니다. 목록이 가능한 오류 응답에 대 한 참조 [얼굴 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
+`detect` API에서 HTTP 상태 코드 200 (정상) 요청 올바른지 요청이 성공 했는지를 나타내는 응답에 요청 된 정보를 제공 하 고 응답을 보냅니다. 가능한 오류 응답의 목록을 참조 하세요 [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
 
-### <a name="processing-the-response"></a>가 응답 처리
+### <a name="processing-the-response"></a>응답 처리
 
-API 응답은 JSON 형식으로 반환 합니다. 다음 JSON 데이터 샘플 응용 프로그램에서 요청한 데이터를 제공 하는 일반적인 성공 응답 메시지를 보여 줍니다.
+API 응답은 JSON 형식으로 반환 됩니다. 다음 JSON 데이터에는 샘플 응용 프로그램에서 요청한 데이터를 제공 하는 일반적인 성공 응답 메시지를 보여 줍니다.
 
 ```json
 [  
@@ -160,24 +162,24 @@ API 응답은 JSON 형식으로 반환 합니다. 다음 JSON 데이터 샘플 �
 ]
 ```
 
-성공적인 응답 메시지 면 항목을 기준으로 내림차순으로 빈 응답 없음 얼굴 감지 이면 얼굴 사각형 크기의 배열으로 이루어져 있습니다. 글꼴 포함 일련의 선택적 글꼴 특성에서 지정 된 각 인식는 `returnFaceAttributes` 인수에는 `DetectAsync` 메서드.
+성공적인 응답 메시지의 내림차순으로 빈 응답은 검색 된 얼굴이 없음을 나타냄 얼굴 사각형 크기에 따라 순위를 지정 하는 얼굴 항목 배열을 이루어져 있습니다. 각 얼굴에 의해 지정 되는 선택적 얼굴 특성을 인식 합니다 `returnFaceAttributes` 인수는 `DetectAsync` 메서드.
 
-배열으로 deserialize 하는 JSON 응답 예제 응용 프로그램에서는 `Face` 개체입니다. Face API에서 결과 해석 하는 경우 검색 된 emotion으로 해석할지 점수가 가장 높은와 emotion 점수를 기본 형태로 변환 하는 대로 하나에 대 한 합계를 구할 합니다. 따라서 샘플 응용 프로그램 이미지에는 가장 큰 검색 된 글꼴에 대 한 가장 높은 점수를 인식 된 emotion를 표시합니다. 다음 코드로 작업을 수행 합니다.
+샘플 응용 프로그램에서 JSON 응답의 배열으로 deserialize `Face` 개체입니다. Face API의 결과 해석 하는 경우 검색 된 감정을으로 해석할지 점수가 가장 높은 감정 점수는 정규화 된로 하나에 대 한 합계를 합니다. 따라서 샘플 응용 프로그램 이미지의 최대 검색 된 얼굴에 대 한 점수가 가장 높은 인식된 emotion을 표시합니다. 이 작업은 다음 코드를 사용 하 여 수행 됩니다.
 
 ```csharp
 emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRankedList().FirstOrDefault().Key;
 ```
 
-다음 스크린 샷에서 샘플 응용 프로그램에서 emotion 인식 프로세스의 결과 보여 줍니다.
+다음 스크린샷은 샘플 응용 프로그램에서 감정 인식 프로세스의 결과 보여 줍니다.
 
-![](emotion-recognition-images/emotion-recognition.png "Emotion 인식")
+![](emotion-recognition-images/emotion-recognition.png "감정 인식")
 
 ## <a name="summary"></a>요약
 
-이 문서는 Xamarin.Forms 응용 프로그램을 평가 하려면 emotion 인식 하도록 Face API를 사용 하는 방법을 설명 합니다. Face API 얼굴 식을 입력으로 이미지의 하며 이미지의 각 면에 대해 감정의 신뢰성을 포함 하는 데이터를 반환 합니다.
+이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다. Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰도 포함 하는 데이터를 반환 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [API에 맞서게](/azure/cognitive-services/face/overview/)합니다.
-- [Todo Cognitive 서비스 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Face API](/azure/cognitive-services/face/overview/)합니다.
+- [Todo Cognitive Services (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
 - [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

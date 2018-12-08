@@ -1,5 +1,5 @@
 ---
-title: 배율 변환
+title: 크기 조정 변환
 description: Thhis 문서 탐색 SkiaSharp 배율 변환 개체, 다양 한 규모를 확장 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,16 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: d4ab7ad5a0fc645c13388d76eb11cbd4e2dd72f8
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615605"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061354"
 ---
-# <a name="the-scale-transform"></a>배율 변환
+# <a name="the-scale-transform"></a>크기 조정 변환
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _SkiaSharp 배율 변환 다양 한 크기는 개체 크기 조정에 대 한 검색_
 

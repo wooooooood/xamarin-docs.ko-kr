@@ -7,14 +7,16 @@ ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 0f1da94031e658d42205e6346d41b02c5822d992
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563682"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057602"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>요약 6 장입니다. 단추 클릭
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 
 합니다 [ `Button` ](xref:Xamarin.Forms.Button) 명령을 시작 하려면 사용자를 허용 하는 뷰입니다. A `Button` 텍스트로 식별 됩니다 (및 필요에 따라 이미지로에 설명 된 대로 [13 장, 비트맵](chapter13.md)). 따라서 `Button` 대부분의 동일한 속성을 정의 `Label`:
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2f336bff19302228b9c8c3a1aa87930414c44ac2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f1c491bd2e19f44151e2efb317fe40d2d122ecae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108407"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058528"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Xamarin.Forms에서 동적 스타일
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
 
 _스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기간 동안 변경 되지 않습니다. 예를 들어 스타일에 시각적 요소, Setter 인스턴스 중 하나가 수정 되 면 제거 또는 추가 된 새 Setter 인스턴스에 할당 한 후 변경 내용은 시각적 요소에 적용 되지 않습니다. 그러나 응용 프로그램 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경 내용에 응답할 수 있습니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c505b12a745017664e56e8c84d0cf847a262208d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171289"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060215"
 ---
 # <a name="android-platform-specifics"></a>Android 플랫폼별
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
 _플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에는 Android 플랫폼별 Xamarin.Forms에 기본 제공 되는 사용 하는 방법을 보여 줍니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8587cade1c5b4a6882f21603ee869f94f38fd04a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112401"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058836"
 ---
 # <a name="native-views-in-c"></a>C#의 네이티브 뷰
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeEmbedding/)
 
 _C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 iOS, Android 및 UWP에서 네이티브 뷰를 직접 참조할 수 있습니다. 이 문서에는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 네이티브 뷰를 추가 하는 방법 및 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 보여 줍니다._
 

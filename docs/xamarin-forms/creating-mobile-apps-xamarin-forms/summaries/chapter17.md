@@ -7,14 +7,16 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db16ee34ed353379ea23899da0d3d16fc8428c62
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563358"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050899"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 17 장입니다. 눈금 마스터
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid) 자식 셀의 행과 열으로 정렬 하는 강력한 레이아웃 메커니즘입니다. 비슷한 HTML과는 달리 `table` 요소는 `Grid` 표시가 아니라 레이아웃의 용도로 됩니다.
 

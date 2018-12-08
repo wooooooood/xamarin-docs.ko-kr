@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 0d49b8c50db08ad07952425492591ee246de4f8b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e2abb37a69fc059cea499814eb48453f3bbbed72
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998350"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051058"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 배치 하 고 자체 크기와 위치 또는 절대 값으로 비례 하는 자식 요소의 크기를 지정 합니다. 배치 및 크기에 비례 하는 값 또는 정적 값을 사용 하 여 비례 자식 뷰 수 있으며 정적 값을 함께 사용할 수 있습니다.
 

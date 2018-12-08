@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114322"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059758"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 
 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 클래스 속성 및 레이아웃 및 플랫폼별으로 기능을 사용자 지정 하는 개발자가 하는 방법의 수를 포함 합니다.
 
@@ -113,7 +115,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-합니다 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 검색 값을 [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) 장치에서 사용 중인 현재 흐름 방향을 나타내는 열거형 값입니다. 흐름 방향은 눈으로 페이지의 UI 요소를 검색 하는 방향입니다. 열거형 값은 다음과 같습니다.
+합니다 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 검색 값을 [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) 장치에서 사용 중인 현재 흐름 방향을 나타내는 열거형 값입니다. 흐름 방향은 페이지의 UI 요소를 육안으로 흝어보는 방향입니다. 열거형 값은 다음과 같습니다.
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
@@ -215,4 +217,4 @@ Xamarin.Forms `Device` 클래스에는 기능 및 레이아웃 플랫폼별 기�
 
 - [장치 샘플](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 - [스타일 샘플](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [장치](xref:Xamarin.Forms.Device)
+- [디바이스](xref:Xamarin.Forms.Device)

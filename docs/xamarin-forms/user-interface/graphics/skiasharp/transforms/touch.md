@@ -7,14 +7,16 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527107"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061270"
 ---
 # <a name="touch-manipulations"></a>터치 조작
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _터치, 펴서를 끌어서 회전 구현 사용 하 여 행렬 변환_
 

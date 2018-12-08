@@ -7,14 +7,16 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: a795b382b9bcc727b0b0872d29d30a501cfed0a6
-ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
+ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598901"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058235"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
 > [!NOTE] 
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: fba00120ed9f5c74bec7622ae1914c43533e8579
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 5b3d6f486f802fda1a384b7a8e53b104c1251fdd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998572"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058248"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms에 명시적 스타일
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 
 _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 되는 경우_
 

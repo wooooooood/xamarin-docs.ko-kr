@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: b6989782c438ec41911cc9317d9f911d6518132d
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38872724"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059706"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 사용 하 여 사용자 인증
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 
 _Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램에 대 한 클라우드 id 관리 솔루션입니다. 이 문서에는 Microsoft 인증 라이브러리 및 Azure Active Directory B2C 소비자 id 관리는 모바일 응용 프로그램 통합을 사용 하는 방법을 보여 줍니다._
 

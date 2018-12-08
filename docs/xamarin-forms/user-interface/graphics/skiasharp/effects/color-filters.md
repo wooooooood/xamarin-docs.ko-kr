@@ -7,14 +7,16 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: fafc9db542d804745dbd0eb0fb73db47068ea465
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7edb504a228612d7f1f1fee10a50a467fbb5fc6c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132113"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057102"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 색 필터 포스터화와 같은 효과 다른 색 비트맵 (또는 다른 이미지)의 색을 변환할 수 있습니다.
 

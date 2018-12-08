@@ -7,14 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: ac4dd8ffc0ce407aeb9dbc36fe705a809a9c4058
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563600"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059602"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE] 
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.

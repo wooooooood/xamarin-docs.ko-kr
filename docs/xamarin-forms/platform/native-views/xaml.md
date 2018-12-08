@@ -1,22 +1,24 @@
 ---
 title: XAML의 네이티브 뷰
-description: Xamarin.Forms XAML 파일에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조할 수 있습니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 뷰를 사용 하 여 상호 작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법에 설명 합니다.
+description: Xamarin.Forms XAML 파일에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조할 수 있습니다. 속성과 이벤트 핸들러는 네이티브 뷰에서 설정할 수 있으며, Xamarin.Forms 뷰와 상호작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: b7ea75c13d84cf9fe74d7a606f6127aaa6bbe3b2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4b33d1d149d3ac85d01dfcbe0d144416fd953426
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996336"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052900"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
-_Xamarin.Forms XAML 파일에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조할 수 있습니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 뷰를 사용 하 여 상호 작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법에 설명 합니다._
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
+
+_Xamarin.Forms XAML 파일에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조할 수 있습니다. 속성과 이벤트 핸들러는 네이티브 뷰에서 설정할 수 있으며, Xamarin.Forms 뷰와 상호작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법에 설명 합니다._
 
 이 문서에서는 다음 내용을 다룹니다.
 
@@ -483,7 +485,7 @@ class MySpinner : Spinner
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법을 보여 줍니다. 기본 보기에서 속성 및 이벤트 처리기를 설정할 수 있습니다 및 Xamarin.Forms 뷰를 사용 하 여 상호 작용할 수 있습니다.
+이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법을 보여 줍니다. 속성과 이벤트 핸들러는 네이티브 뷰에서 설정할 수 있으며, Xamarin.Forms 뷰와 상호작용할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109538"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060176"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
@@ -204,7 +204,7 @@ public class AppDelegate : UIApplicationDelegate
 
  [![](ios-code-only-images/image2.png "탐색 컨트롤러 내에 중첩 된 컨트롤러")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-vontroller"></a>보기 vontroller 만들기
+## <a name="creating-a-view-controller"></a>뷰 컨트롤러를 만들기
 
 이제 살펴보았으므로 다음으로 컨트롤러를 추가 하는 방법의 `RootViewController` 창의 코드에서 사용자 지정 뷰 컨트롤러를 만드는 방법을 확인해 보겠습니다.
 

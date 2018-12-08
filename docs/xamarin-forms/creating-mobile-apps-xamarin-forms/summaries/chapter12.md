@@ -7,14 +7,16 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: b37a32df9944cd7b312decd9cd9312669b777bc1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: bb2cd1c97cc588923e0da1a8793f16445c111f0e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563376"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058849"
 ---
 # <a name="summary-of-chapter-12-styles"></a>요약 12 장입니다. 스타일
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
 Xamarin.Forms 스타일 속성 설정의 컬렉션을 공유할 수 있는 여러 보기를 허용 합니다. 태그 줄이고 일관 된 시각적 테마를 유지 관리를 사용 하도록 설정 합니다.
 

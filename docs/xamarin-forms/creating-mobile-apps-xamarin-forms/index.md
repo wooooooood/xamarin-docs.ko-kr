@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: d694d58b994309f26264459a69517c2bc3b526e2
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a1458d53cb6e57b73317bce77ebdfd5aea64acca
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563639"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061948"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)
 
 <p><img src="images/cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />책 <i>Creating Mobile Apps with Xamarin.Forms</i> Charles petzold가 저술한는 Xamarin.Forms 응용 프로그램을 작성 하는 방법에 대 한 가이드입니다. 유일한 필수 구성 요소에 대 한 지식이 됩니다는 C# 프로그래밍 언어입니다. 책은 Xamarin.Forms 사용자 인터페이스에 광범위 한 탐색을 제공 하 고 또한 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러, 및 등을 다룹니다. 
 

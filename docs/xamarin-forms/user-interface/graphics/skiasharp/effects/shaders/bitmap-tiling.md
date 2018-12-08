@@ -7,14 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 5bd063f82cc1d09c6b2e9100429889a23a2eda7f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111587"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060380"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 비트맵 바둑판식 배열
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
 
 두 가지 이전 문서에서는 지금까지 살펴본 대로 합니다 [ `SKShader` ](xref:SkiaSharp.SKShader) 클래스는 선형 또는 순환 그라데이션을 만들 수 있습니다. 이 문서에서는 `SKShader` 타일 영역에 비트맵을 사용 하는 개체입니다. 가로 방향과 세로 방향으로 비트맵을 반복할 수 있습니다 원래 방향에서 가로 및 세로로 대칭 이동 또는 또는 합니다. 대칭 이동 타일 간에 불연속성을 방지합니다.
 

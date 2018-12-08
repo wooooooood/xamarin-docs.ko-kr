@@ -7,14 +7,16 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615316"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054922"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵을 표시합니다.
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 SkiaSharp 비트맵의 제목을 문서의 도입  **[SkiaSharp의 비트맵 기본 사항](../basics/bitmaps.md)** 합니다. 이 문서에는 세 가지 방법 부하 비트맵 및 비트맵을 표시 하는 세 가지 방법 보여 주었습니다. 이 문서에서는 비트맵을 로드 하는 기술을 검토 하 고 심층적인 사용 되는 `DrawBitmap` 메서드의 `SKCanvas`합니다.
 
@@ -126,7 +128,7 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 이러한 메서드와 기능적으로 동일 합니다. 지정된 된 지점 캔버스를 기준으로 비트맵의 왼쪽 위 모퉁이 위치를 나타냅니다. 모바일 장치의 픽셀 해상도 높아 이기 때문에 작은 비트맵은 일반적으로 이러한 장치에서 매우 작은 표시 합니다.
 
-선택적 `SKPaint` 매개 변수를 사용 하면 투명도 사용 하 여 비트맵을 표시할 수 있습니다. 이 작업을 수행 하려면 만듭니다는 `SKPaint` 개체 및 설정 합니다 `Color` 속성에 `SKColor` 값과 알파 채널 1 보다 작은. 예를 들어:
+선택적 `SKPaint` 매개 변수를 사용 하면 투명도 사용 하 여 비트맵을 표시할 수 있습니다. 이 작업을 수행 하려면 만듭니다는 `SKPaint` 개체 및 설정 합니다 `Color` 속성에 `SKColor` 값과 알파 채널 1 보다 작은. 예를 들어 다음과 같습니다.
 
 ```csharp
 paint.Color = new SKColor(0, 0, 0, 0x80);

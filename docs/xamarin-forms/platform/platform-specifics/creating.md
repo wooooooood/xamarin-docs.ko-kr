@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 1d9f07a089eabedf07bef49c9815fe7e93128f09
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3f68b7c1ef9603d4a6d21e0c00a4cc8f4f7d818a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997258"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058532"
 ---
 # <a name="creating-platform-specifics"></a>플랫폼별 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 
 _공급 업체는 자신의 플랫폼별 효과 사용 하 여 만들 수 있습니다. 효과가는 플랫폼별을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다. 이 문서는 플랫폼별 통해 효과 노출 하는 방법을 보여 줍니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 85edbf657382b7c85ab2c5af543431fb51fb0d4e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38997054"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053875"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView)
 
 [`BoxView`](xref:Xamarin.Forms.BoxView) 지정 된 너비, 높이 및 색상의 간단한 사각형을 렌더링합니다. 사용할 수 있습니다 `BoxView` 장식, 기본적인 그래픽 및 터치를 통해 사용자와의 상호 작용 합니다.
 

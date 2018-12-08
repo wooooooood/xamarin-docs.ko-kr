@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 26f69f9ac2d315e1076cab6f7c1534cbdd39a9b3
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52173895"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050142"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _Imagebutton이 이미지를 표시 하 고 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다._
 

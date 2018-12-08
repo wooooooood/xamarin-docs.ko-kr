@@ -7,14 +7,16 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171926"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059787"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 장치 독립적 단위
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _SkiaSharp 좌표 및 Xamarin.Forms 좌표 간의 차이점을 살펴보기_
 

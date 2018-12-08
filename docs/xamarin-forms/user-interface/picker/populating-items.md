@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 8d911108d7d72586a37a3281803eab9c0841f16c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997112"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057433"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 
 _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에는 항목 컬렉션에 추가 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다._
 

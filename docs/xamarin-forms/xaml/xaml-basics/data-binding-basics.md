@@ -7,14 +7,16 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171770"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055730"
 ---
 # <a name="part-4-data-binding-basics"></a>4 부입니다. 데이터 바인딩 기본 사항
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연결할 두 개체의 속성을 허용 합니다. 이 매우 유용한 도구 및 XAML 바로 가기 및 편의 제공 코드에서 완전히 데이터 바인딩을 정의할 수 있지만. 따라서 Xamarin.Forms의 가장 중요 한 태그 확장 중 하나는 바인딩 됩니다._
 

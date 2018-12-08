@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 150818379a31fe7b22c1f04a49aba146df84c11c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171120"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059550"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML을 사용 하 여 시작
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠를 정의 하는 대부분 및 함께 작동 하는 C# 코드 숨김 파일입니다._
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 504b2789ef61b0339d1c32e92c852a779a193b52
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 786f1503fcc0cc07f76a7cdc55731d341607429f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854768"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053199"
 ---
 # <a name="authenticating-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _Xamarin.Auth는 사용자를 인증 하 고 해당 계정에 저장 된 플랫폼 간 SDK입니다. Google, Microsoft, Facebook 및 Twitter와 같은 id 공급자를 사용 하는 것에 대 한 지원을 제공 하는 OAuth 인증자를 포함 합니다. 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법에 설명 합니다._
 
