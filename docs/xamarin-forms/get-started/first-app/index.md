@@ -1,6 +1,6 @@
 ---
-title: 첫 번째 Xamarin.Forms 앱 빌드
-description: Visual Studio에서 첫 번째 Xamarin.Forms 응용 프로그램을 빌드하는 방법을 보여주는 비디오 가이드입니다.
+title: 첫 번째 Xamarin.Forms 앱 만들기
+description: Visual Studio에서 첫 번째 Xamarin.Forms 응용 프로그램을 만드는 방법을 보여주는 비디오 가이드입니다.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
@@ -18,7 +18,7 @@ ms.locfileid: "50110519"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
-_이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 만듭니다._
+_이 비디오를 보고 Xamarin.Forms로 첫 번째 모바일 앱 만들기를 따라해 보세요._
 
 ::: zone pivot="windows"
 
@@ -28,19 +28,19 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
-1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > 플랫폼 간 > 모바일 앱(Xamarin.Forms)** 을 선택합니다.
+1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > Cross-Platform > 모바일 앱(Xamarin.Forms)** 를 선택합니다.
 
     [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
-    [![.NET Standard가 포함된 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
+    [![.NET Standard로 만든 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. NuGet 패키지가 복원될 때까지 기다립니다(상태 표시줄에 "복원 완료" 메시지가 표시됨).
 
 4. 디버그 단추(또는 **디버그 > 디버깅 시작** 메뉴 항목)를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>` 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
@@ -87,7 +87,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 4. 디버그 단추(또는 **실행 > 디버깅 시작**)를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>` 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
