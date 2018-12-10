@@ -25,13 +25,13 @@ _이 가이드는 Hello, Xamarin.Forms 가이드에서 만들어진 Phoneword �
 
 ## <a name="part-2-deep-divexamarin-formsget-startedhello-xamarin-forms-multiscreendeepdivemd"></a>[2부: 심층 분석](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md)
 
-이 가이드의 두 번째 부분에서는 Xamarin.Forms 응용 프로그램에서 페이지 탐색 및 데이터 바인딩에 대한 이해를 갖추기 위해 무엇이 빌드되었는지 검토합니다.
+이 가이드의 두 번째 부분에서는 Xamarin.Forms 응용 프로그램에서 페이지 탐색 및 데이터 바인딩에 대한 이해를 돕기 위해 만들어진 결과물을 검토합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Visual Studio의 디버깅](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Mac용 Visual Studio 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
-- [무료 사용자 진행 방식 학습(비디오)](https://university.xamarin.com/self-guided)
+- [Visual Studio for Mac 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
+- [무료 학습(비디오)](https://university.xamarin.com/self-guided)
 - [Xamarin 시작(비디오)](https://developer.xamarin.com/videos/)
