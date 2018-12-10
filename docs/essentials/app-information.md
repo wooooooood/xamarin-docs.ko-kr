@@ -4,17 +4,15 @@ description: 이 문서에서는 응용 프로그램에 대한 정보를 제공�
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 00419fb746609464b49be343938905614c59ab29
-ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
+ms.date: 11/04/2018
+ms.openlocfilehash: 3e67b605e485b724ec11f2ac94dcf3d1aa77d5cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51691765"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057301"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: 앱 정보
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **AppInfo** 클래스는 응용 프로그램에 대한 정보를 제공합니다.
 
@@ -54,10 +52,42 @@ var build = AppInfo.BuildString;
 
 ```csharp
 // Display settings page
-AppInfo.OpenSettings();
+AppInfo.ShowSettingsUI();
 ```
 
 이 설정 페이지에서는 사용자가 응용 프로그램 권한을 변경하고 기타 플랫폼 관련 작업을 수행할 수 있습니다.
+
+## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+앱 정보는 다음 필드에 대한 `AndroidManifest.xml`에서 가져옵니다.
+
+- **빌드** – `manifest` 노드의 `android:versionCode`
+- **이름** - `application` 노드의 `android:label`
+- **PackageName**: `manifest` 노드의 `package`
+- **VersionString** – `application` 노드의 `android:versionName`
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+앱 정보는 다음 필드에 대한 `Info.plist`에서 가져옵니다.
+
+- **빌드** – `CFBundleVersion`
+- **이름** -  설정된 경우 `CFBundleDisplayName`이고 그렇지 않으면 `CFBundleName`임
+- **PackageName**: `CFBundleIdentifier`
+- **VersionString** – `CFBundleShortVersionString`
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+앱 정보는 다음 필드에 대한 `Package.appxmanifest`에서 가져옵니다.
+
+- **빌드** – `Identity` 노드의 `Version`에서 `Build`를 사용함
+- **이름** - `Properties` 노드의 `DisplayName`
+- **PackageName**: `Identity` 노드의 `Name`
+- **VersionString** – `Identity` 노드의 `Version`
+
+
+--------------
 
 ## <a name="api"></a>API
 
