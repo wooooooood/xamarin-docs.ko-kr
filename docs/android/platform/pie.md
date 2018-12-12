@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710025"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267640"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
 
@@ -24,7 +24,7 @@ _Xamarin.Android를 사용 하 여 9 원형을 Android 용 앱 개발을 시작 
 
 이 문서에서는 Android 원형 용 Xamarin.Android 앱 개발을 시작할 수 있도록 구성 되었습니다. 필요한 업데이트를 설치 하 고, SDK를 구성 하 고, 에뮬레이터 또는 테스트에 대 한 장치를 준비 하는 방법을 설명 합니다. 또한 Android 원형의 새로운 기능에 대 한 개요를 제공 하 고 주요 Android 원형 기능 중 일부를 사용 하는 방법을 보여 주는 소스 코드 예제를 제공 합니다.
 
-Xamarin.Android 9.0 Android 원형에 대 한 지원을 제공합니다. Android 원형에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조는 [Android P 개발자 미리 보기 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) 릴리스 정보입니다.
+Xamarin.Android 9.0 Android 원형에 대 한 지원을 제공합니다. Android 원형에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조는 [Android P 개발자 미리 보기 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) 릴리스 정보입니다.
 
 ## <a name="requirements"></a>요구 사항
 

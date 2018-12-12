@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 765494b5d9a55aedd9c9b3f0ea29ea389346ae3c
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267627"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -74,7 +74,7 @@ Visual Studio에 Android Oreo 지원을 추가 하려면 다음을 수행 합니
 
 -----
 
-Android Oreo 용 Xamarin 지원에 대 한 자세한 내용은 참조는 [Xamarin.Android 8.0 릴리스](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/)합니다.
+Android Oreo 용 Xamarin 지원에 대 한 자세한 내용은 참조는 [Xamarin.Android 8.0 릴리스](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/)합니다.
 
 
 

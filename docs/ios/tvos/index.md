@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: cbec49844d34ab8ad04282b383de15093ecdd891
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118283"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267510"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Xamarin에서 tvOS 소개
 
@@ -68,7 +68,7 @@ Xamarin으로 빌드된 샘플 tvOS 앱:
 
 ## <a name="known-issues-and-troubleshooting"></a>알려진된 문제 및 문제 해결
 
-문제가 있는 경우 모든 Xamarin 사용 하 여 tvOS 빌드를 확인 합니다 [릴리스 정보](http://releases.xamarin.com/)를 [Xamarin.iOS 포럼](https://forums.xamarin.com/categories/ios)를 [Xamarin Bugzilla 추적기](https://bugzilla.xamarin.com/query.cgi?product=iOS), 및 [GitHub ](https://github.com/xamarin/xamarin-macios/issues) 기존 문제에 대 한 합니다.
+문제가 있는 경우 모든 Xamarin 사용 하 여 tvOS 빌드를 확인 합니다 [릴리스 정보](https://docs.microsoft.com/xamarin/ios/release-notes/)를 [Xamarin.iOS 포럼](https://forums.xamarin.com/categories/ios)를 [Xamarin Bugzilla 추적기](https://bugzilla.xamarin.com/query.cgi?product=iOS), 및 [GitHub ](https://github.com/xamarin/xamarin-macios/issues) 기존 문제에 대 한 합니다.
 
 새 문제 및 제안을 보고 [GitHub에서](https://github.com/xamarin/xamarin-macios/issues)합니다.
 
