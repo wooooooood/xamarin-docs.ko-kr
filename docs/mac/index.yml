@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 7e6831a78d13cf3ae46a3a921c4b4420c430e28a
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 892c6d4903724eaa4cd2f482b550841bfa6f63ae
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267328"
 documentType: LandingData
 title: Xamarin.Mac
 metadata:
@@ -20,7 +20,7 @@ abstract:
     items:
     - href: ~/mac/samples/index.yml
       text: Mac 샘플
-    - href: https://developer.xamarin.com/releases/mac/
+    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
       text: 릴리스 정보
     - href: https://developer.apple.com/documentation/
       text: Apple 개발자 설명서
@@ -42,14 +42,14 @@ sections:
         src: https://docs.microsoft.com/media/common/i_xplat-code.svg
       text: Hello, Mac
       href: ~/mac/get-started/hello-mac.md
-- title: 안내선
+- title: 가이드
   items:
   - type: list
     style: cards
     className: cardsB
     items:
     - href: ~/mac/get-started/index.md
-      html: Xamarin.Mac을 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 빌드하세요.
+      html: Xamarin.Mac을 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 제작하세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/mac/get-started/index.md

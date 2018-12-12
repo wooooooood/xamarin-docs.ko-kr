@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 0c8ab21b0f70eed4cbdba882503ee8f82de7f11b
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 68a999cae8d3eb1113805a8876fc0e2928f0003e
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267315"
 documentType: LandingData
 title: Xamarin.Android
 metadata:
@@ -15,12 +15,12 @@ metadata:
   ms.topic: landing-page
   ms.technology: xamarin-android
 abstract:
-  description: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 제작합니다.
+  description: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 빌드합니다.
   menu:
     items:
     - href: ~/android/samples/
       text: Android 샘플
-    - href: https://developer.xamarin.com/releases/android/
+    - href: https://docs.microsoft.com/xamarin/android/release-notes/
       text: 릴리스 정보
     - href: https://developers.google.com/
       text: Google 개발자 설명서
