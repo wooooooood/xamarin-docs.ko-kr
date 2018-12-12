@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 70d6b908beb0d04788365b104b5e4a2679b0ebe1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 100b98d12d45713b0d5f6dfb435f3aa879e7da9f
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113250"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899124"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS에서 IPA 지원
 
@@ -262,4 +262,5 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 - [iTunesMetadata.plist 파일](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [문제 해결](~/ios/deploy-test/troubleshooting.md)
 - [iTunes 아트워크](~/ios/app-fundamentals/images-icons/app-icons.md#itunes)
-- [iOS 장치용 엔터프라이즈 앱 배포](http://developer.apple.com/library/ios/#featuredarticles/FA_Wireless_Enterprise_App_Distribution/Introduction/Introduction.html)
+- [엔터프라이즈 앱(Apple) 개발 및 배포](https://help.apple.com/xcode/mac/current/#/devba5e7054d)
+- [엔터프라이즈 앱 배포(WWDC 비디오)](https://developer.apple.com/videos/play/wwdc2014/705/)

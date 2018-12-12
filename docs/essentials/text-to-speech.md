@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 응용
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/30/2018
-ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: a7f40fc652c6f02d68a9f01dcdd0f4132893a6ca
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675369"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898539"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **TextToSpeech** 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
 
@@ -97,12 +95,12 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>음성 설정
 
-볼륨, 피치 및 로캘을 설정할 수 있는 `SpeakSettings`를 사용하여 오디오를 말하는 방법을 세부적으로 제어할 수 있습니다.
+볼륨, 피치 및 로캘을 설정할 수 있는 `SpeechOptions`를 사용하여 오디오를 말하는 방법을 세부적으로 제어할 수 있습니다.
 
 ```csharp
 public async Task SpeakNow()
 {
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0
@@ -131,7 +129,7 @@ public async Task SpeakNow()
     // Grab the first locale
     var locale = locales.FirstOrDefault();
 
-    var settings = new SpeakSettings()
+    var settings = new SpeechOptions()
         {
             Volume = .75,
             Pitch = 1.0,

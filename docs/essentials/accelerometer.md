@@ -4,17 +4,15 @@ description: Xamarin.Essentials의 가속도계 클래스를 사용하면 3차�
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 70f41e6242b62577b6aa42cc207802ead020499e
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: f443cc094c7d7be6ec782df27332bafe5d51dda3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674766"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898799"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: 가속도계
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Accelerometer** 클래스를 사용하면 3차원 공간에서 장치의 가속을 나타내는 장치의 가속도계 센서를 모니터링할 수 있습니다.
 

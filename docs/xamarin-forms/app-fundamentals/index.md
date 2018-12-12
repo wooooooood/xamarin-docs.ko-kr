@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2017
-ms.openlocfilehash: 515dbd2683619cfcfb7a6c8ecac6bc147265ef7d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 12/03/2018
+ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995614"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898994"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 애플리케이션 기본 사항
 
@@ -71,6 +71,10 @@ Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 기타 구성 
 ## <a name="navigationnavigationindexmd"></a>[탐색](navigation/index.md)
 
 Xamarin.Forms는 사용되는 `Page` 형식에 따라 다양한 페이지 탐색 환경을 제공합니다.
+
+## <a name="shellshellmd"></a>[셸](shell.md)
+
+Xamarin.Forms Shell은 애플리케이션의 컨테이너로, 대부분의 애플리케이션에서 필요로 하는 기본 UI 기능을 제공하므로 애플리케이션의 핵심 워크로드에 집중할 수 있습니다.
 
 ## <a name="templatestemplatesindexmd"></a>[템플릿](templates/index.md)
 

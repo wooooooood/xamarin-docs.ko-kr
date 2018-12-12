@@ -5,17 +5,15 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 08/08/2018
-ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675109"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899110"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 응용 프로그램에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 
