@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms DataTemplateSelector 만들기
-description: 이 문서를 만들고 데이터 바인딩된 속성의 값을 기반으로 런타임에 DataTemplate 선택에 사용할 수 있는 DataTemplateSelector를 사용 하는 방법을 보여 줍니다.
+description: 이 문서에서는 데이터 바인딩된 속성 값을 기반으로, 런타임 시 DataTemplate을 선택하는 데 사용할 수 있는 DataTemplateSelector를 만들고 사용하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: a72777c7e51e96a8e123ecd85ad0aa24fc60fc6c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38994519"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
 
-_데이터 바인딩된 속성의 값을 기반으로 런타임에 DataTemplate을 선택 하는 DataTemplateSelector는 사용할 수 있습니다. 이 통해 여러 Datatemplate를 동일한 유형의 특정 개체의 모양을 사용자 지정 개체에 적용할 수 있습니다. 이 문서를 만들고를 DataTemplateSelector 사용 방법을 보여 줍니다._
+_DataTemplateSelector는 데이터 바인딩된 속성의 값에 기반하여 런타임 시 DataTemplate을 선택하는 데 사용할 수 있습니다. 이렇게 하면 여러 DataTemplates 인스턴스를 같은 유형의 개체에 적용하여 특정 개체의 모양을 사용자 지정할 수 있습니다. 이 문서에서는 DataTemplateSelector을 만들고 사용하는 방법을 보여 줍니다._
 
-데이터 템플릿 선택기와 같은 시나리오를 지원 하는 [ `ListView` ](xref:Xamarin.Forms.ListView) 개체의 컬렉션에 바인딩 위치에 있는 각 개체의 모양을 `ListView` 데이터 템플릿 선택기를 반환 하 여 런타임 시 선택할 수 있습니다를 특정 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)합니다.
+데이터 템플릿 선택기를 통해 개체 컬렉션에 바인딩되는 [`ListView`](xref:Xamarin.Forms.ListView)와 같은 시나리오가 가능합니다. 여기서 `ListView`의 각 개체 모양은 특정 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)를 반환하는 데이터 템플릿 선택기로 런타임 시 선택할 수 있습니다.
 
 ## <a name="creating-a-datatemplateselector"></a>DataTemplateSelector 만들기
 
-상속 되는 클래스를 만들어 데이터 템플릿 선택기를 구현 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector)합니다. 합니다 `OnSelectTemplate` 특정 반환할 메서드를 재정의 한 다음 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)다음 코드 예제 에서처럼:
+데이터 템플릿 선택기는 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)에서 상속되는 클래스를 만들어 구현합니다. 그러면 `OnSelectTemplate` 메서드는 다음 코드 예제처럼 특정 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 반환하도록 재정의됩니다.
 
 ```csharp
 public class PersonDataTemplateSelector : DataTemplateSelector
@@ -37,22 +37,22 @@ public class PersonDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-합니다 `OnSelectTemplate` 반환 값에 따라 적절 한 템플릿을 `DateOfBirth` 속성입니다. 반환할 템플릿의 값은는 `ValidTemplate` 속성 또는 `InvalidTemplate` 속성을 사용 하는 경우 설정 됩니다는 `PersonDataTemplateSelector`합니다.
+`OnSelectTemplate` 메서드는 `DateOfBirth` 속성 값에 따라 적절한 템플릿을 반환합니다. 반환할 템플릿은 `PersonDataTemplateSelector`를 사용할 때 설정되는 `ValidTemplate` 속성 또는 `InvalidTemplate` 속성 값입니다.
 
-데이터 템플릿 선택기 클래스의 인스턴스 수 다음 속성에 할당 되 Xamarin.Forms 컨트롤 같은 [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)합니다. 유효한 속성 목록에 대해서 [DataTemplate 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md)합니다.
+그런 다음, 데이터 템플릿 선택기 클래스의 인스턴스는 Xamarin.Forms 컨트롤 속성(예: [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1))에 할당할 수 있습니다. 유효한 속성 목록은 [DataTemplate 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md)를 참조하세요.
 
 ### <a name="limitations"></a>제한 사항
 
-[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 인스턴스는 다음 제한 사항이 있습니다.
+[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 인스턴스에는 다음과 같은 제한 사항이 있습니다.
 
-- `DataTemplateSelector` 여러 번 쿼리할 경우 서브 클래스에서 동일한 데이터에 대해 동일한 템플릿을 항상 반환 해야 합니다.
-- 합니다 `DataTemplateSelector` 서브 클래스 다른 반환 하지 않아야 `DataTemplateSelector` 하위 클래스입니다.
-- 합니다 `DataTemplateSelector` 서브 클래스의 새 인스턴스를 반환 하지 않아야는 `DataTemplate` 각 호출에서. 대신, 동일한 인스턴스를 반환 합니다. 이렇게 하지 않으면 메모리 누수를 만들고 가상화 사용 하지 않도록 설정 됩니다.
-- Android에서 있을 수 있습니다 당 20 개 이하의 서로 다른 데이터 템플릿을 `ListView`합니다.
+- `DataTemplateSelector` 서브클래스는 여러 번 쿼리해도 동일한 데이터에 대해서는 항상 동일한 템플릿을 반환해야 합니다.
+- `DataTemplateSelector` 서브클래스는 다른 `DataTemplateSelector` 서브클래스를 반환해서는 안 됩니다.
+- `DataTemplateSelector` 서브클래스는 각 호출에서 `DataTemplate`의 새 인스턴스를 반환해서는 안 됩니다. 대신, 동일한 인스턴스를 반환해야 합니다. 그렇게 하지 않으면 메모리 누수가 발생하고 가상화가 비활성화됩니다.
+- Android의 경우 `ListView`당 서로 다른 데이터 템플릿이 20개를 넘을 수 없습니다.
 
 ## <a name="consuming-a-datatemplateselector-in-xaml"></a>XAML에서 DataTemplateSelector 사용
 
-XAML에서 `PersonDataTemplateSelector` 다음 코드 예제에 표시 된 대로 리소스로 선언 하 여 인스턴스화할 수 있습니다.
+XAML에서 `PersonDataTemplateSelector`는 다음 코드 예제와 같이 리소스로 선언하여 인스턴스화할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Selector;assembly=Selector" x:Class="Selector.HomePage">
@@ -77,25 +77,25 @@ XAML에서 `PersonDataTemplateSelector` 다음 코드 예제에 표시 된 대�
 </ContentPage>
 ```
 
-이 페이지 수준 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 두 정의 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 인스턴스 및 `PersonDataTemplateSelector` 인스턴스. `PersonDataTemplateSelector` 집합 인스턴스 해당 `ValidTemplate` 및 `InvalidTemplate` 속성을 적절 한 `DataTemplate` 사용 하 여 인스턴스를 `StaticResource` 태그 확장 합니다. 페이지에 정의 된 리소스 중 상태인 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 제어 수준 또는 응용 프로그램 수준에서 정의할 수도 있습니다.
+이 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)는 두 개의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 인스턴스와 한 개의 `PersonDataTemplateSelector` 인스턴스를 정의합니다. `PersonDataTemplateSelector` 인스턴스는 `StaticResource` 태그 확장을 사용하여 해당 `ValidTemplate` 및 `InvalidTemplate` 속성을 적절한 `DataTemplate` 인스턴스로 설정합니다. 리소스는 페이지의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 정의되지만 컨트롤 수준이나 애플리케이션 수준에서도 정의될 수 있습니다.
 
-합니다 `PersonDataTemplateSelector` 에 할당 되는 인스턴스를 [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1) 속성을 다음 코드 예제 에서처럼:
+`PersonDataTemplateSelector` 인스턴스는 다음 코드 예제와 같이 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 속성에 할당하여 사용합니다.
 
 ```xaml
 <ListView x:Name="listView" ItemTemplate="{StaticResource personDataTemplateSelector}" />
 ```
 
-런타임에 [ `ListView` ](xref:Xamarin.Forms.ListView) 호출을 `PersonDataTemplateSelector.OnSelectTemplate` 의 각 데이터 개체를 전달 하는 호출을 사용 하 여 기본 컬렉션에서 항목에 대 한 메서드는 `item` 매개 변수. 합니다 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 에서 반환 하는 메서드를 해당 개체에 적용 됩니다.
+런타임 시 [`ListView`](xref:Xamarin.Forms.ListView)는 기본 컬렉션의 각 항목에 대해 `PersonDataTemplateSelector.OnSelectTemplate` 메서드를 호출하며, 호출 시 데이터 개체를 `item` 매개 변수로 전달합니다. 그런 다음, 메서드에서 반환된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)이 해당 개체에 적용됩니다.
 
-다음 스크린샷은 결과를 표시 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 적용 된 `PersonDataTemplateSelector` 기본 컬렉션의 각 개체에:
+다음 스크린샷은 기본 컬렉션의 각 개체에 `PersonDataTemplateSelector`를 적용한 [`ListView`](xref:Xamarin.Forms.ListView)의 결과를 보여 줍니다.
 
-![](selector-images/data-template-selector.png "데이터 템플릿 선택기를 사용 하 여 ListView")
+![](selector-images/data-template-selector.png "데이터 템플릿 선택기를 사용하는 ListView")
 
-모든 `Person` 가 있는 개체를 `DateOfBirth` 빨간색으로 표시 되 고 남은 개체를 사용 하 여 속성 값 보다 크거나 같음 1980 녹색으로 표시 됩니다.
+`DateOfBirth` 속성 값이 1980보다 크거나 같은 `Person` 개체는 녹색으로 표시되고 나머지 개체는 빨간색으로 표시됩니다.
 
-## <a name="consuming-a-datatemplateselector-in-cnum"></a>C에서 DataTemplateSelector 사용&num;
+## <a name="consuming-a-datatemplateselector-in-cnum"></a>C&num;에서 DataTemplateSelector 사용
 
-C#에서는 합니다 `PersonDataTemplateSelector` 인스턴스화되고 할당할 수는 [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1) 속성을 다음 코드 예제에 표시 된 대로:
+C#에서는 다음 코드 예제와 같이 `PersonDataTemplateSelector`를 인스턴스화하고 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 속성에 할당할 수 있습니다.
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -126,14 +126,14 @@ public class HomePageCS : ContentPage
 }
 ```
 
-`PersonDataTemplateSelector` 집합 인스턴스 해당 `ValidTemplate` 하 고 `InvalidTemplate` 속성을 적절 한 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 만든 인스턴스에 `SetupDataTemplates` 메서드. 런타임에 [ `ListView` ](xref:Xamarin.Forms.ListView) 호출을 `PersonDataTemplateSelector.OnSelectTemplate` 의 각 데이터 개체를 전달 하는 호출을 사용 하 여 기본 컬렉션에서 항목에 대 한 메서드는 `item` 매개 변수. `DataTemplate` 에서 반환 하는 메서드를 해당 개체에 적용 됩니다.
+`PersonDataTemplateSelector` 인스턴스는 해당 `ValidTemplate` 및 `InvalidTemplate` 속성을 `SetupDataTemplates` 메서드로 만든 적절한 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 인스턴스로 설정합니다. 런타임 시 [`ListView`](xref:Xamarin.Forms.ListView)는 기본 컬렉션의 각 항목에 대해 `PersonDataTemplateSelector.OnSelectTemplate` 메서드를 호출하며, 호출 시 데이터 개체를 `item` 매개 변수로 전달합니다. 그런 다음, 메서드에서 반환된 `DataTemplate`이 해당 개체에 적용됩니다.
 
 ## <a name="summary"></a>요약
 
-이 문서를 만들고 사용 하는 방법에 명시 되어는 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector)합니다. A `DataTemplateSelector` 선택에 사용할 수는 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 데이터 바인딩된 속성의 값을 기반으로 하는 런타임 시. 이렇게 하면 여러 `DataTemplate` 인스턴스가 동일한 유형의 개체를 특정 개체의 모양을 사용자 지정을 적용할 수 있습니다.
+이 문서에서는 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)를 만들고 사용하는 방법을 보여줍니다. `DataTemplateSelector`는 데이터 바인딩된 속성의 값에 기반하여 런타임 시 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 선택하는 데 사용됩니다. 이렇게 하면 여러 `DataTemplate` 인스턴스를 같은 형식의 개체에 적용하여 특정 개체의 모양을 사용자 지정할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 템플릿 선택기 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplateselector/)
+- [데이터 템플릿 선택기(샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplateselector/)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

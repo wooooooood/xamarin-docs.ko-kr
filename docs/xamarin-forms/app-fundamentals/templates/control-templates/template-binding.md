@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms ControlTemplate에서 바인딩
-description: 쉽게 변경 될 컨트롤 템플릿의 컨트롤에에서 대 한 속성 값을 사용 하도록 설정 하면 public 속성에 데이터를 컨트롤 템플릿의 컨트롤에에서 바인딩할 템플릿 바인딩을 허용 합니다. 이 문서에서는 템플릿 바인딩을 사용 하 여 데이터 바인딩 컨트롤 템플릿에서 수행 하는 방법을 보여 줍니다.
+description: 템플릿 바인딩을 사용하면 컨트롤 템플릿의 컨트롤을 공용 속성에 데이터 바인딩할 수 있기 때문에 컨트롤 템플릿의 컨트롤에 대한 속성 값을 쉽게 변경할 수 있습니다. 이 문서에서는 템플릿 바인딩을 사용하여 컨트롤 템플릿에서 데이터 바인딩을 수행하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50106431"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Xamarin.Forms ControlTemplate에서 바인딩
 
-_쉽게 변경 될 컨트롤 템플릿의 컨트롤에에서 대 한 속성 값을 사용 하도록 설정 하면 public 속성에 데이터를 컨트롤 템플릿의 컨트롤에에서 바인딩할 템플릿 바인딩을 허용 합니다. 이 문서에서는 템플릿 바인딩을 사용 하 여 데이터 바인딩 컨트롤 템플릿에서 수행 하는 방법을 보여 줍니다._
+_템플릿 바인딩을 사용하면 컨트롤 템플릿의 컨트롤을 공용 속성에 데이터 바인딩할 수 있기 때문에 컨트롤 템플릿의 컨트롤에 대한 속성 값을 쉽게 변경할 수 있습니다. 이 문서에서는 템플릿 바인딩을 사용하여 컨트롤 템플릿에서 데이터 바인딩을 수행하는 방법을 보여줍니다._
 
-A [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 바인딩 가능한 속성의 부모에 컨트롤 템플릿의 컨트롤의 속성을 바인딩하는 데는 *대상* 컨트롤 템플릿을 소유 하는 보기입니다. 표시 되는 텍스트를 정의 하는 대신에 예를 들어 [ `Label` ](xref:Xamarin.Forms.Label) 내에서 인스턴스를 [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate), 템플릿 바인딩을 사용 하 여 바인딩할 수 없습니다는 [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) 속성을 표시할 텍스트를 정의 하는 바인딩 가능한 속성입니다.
+[`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)은 컨트롤 템플릿을 소유한 *대상* 뷰의 부모의 바인딩 가능한 속성에 컨트롤 템플릿의 컨트롤 속성을 바인딩하는 데 사용됩니다. 예를 들어 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) 내부의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스에 따라 표시된 텍스트를 정의하는 대신 템플릿 바인딩을 사용하여 [`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성을 표시될 텍스트를 정의하는 바인딩 가능한 속성에 바인딩할 수 있습니다.
 
-[ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 기존 비슷합니다 [ `Binding` ](xref:Xamarin.Forms.Binding)한다는 점을 제외 하는 *원본* 의 `TemplateBinding` 부모에 항상 자동으로 설정 됩니다는 *대상* 컨트롤 템플릿을 소유 하는 보기입니다. 그러나 사용 하 여는 `TemplateBinding` 외부에 [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) 지원 되지 않습니다.
+[`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)은 `TemplateBinding`의 *원본*이 항상 컨트롤 템플릿을 소유하는 *대상* 뷰의 부모로 자동 설정되는 것을 제외하고는 기존 [`Binding`](xref:Xamarin.Forms.Binding)과 비슷합니다. 그러나 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) 외부의 `TemplateBinding`을 사용하는 것은 지원되지 않습니다.
 
-## <a name="creating-a-templatebinding-in-xaml"></a>TemplateBinding XAML에서 만들기
+## <a name="creating-a-templatebinding-in-xaml"></a>XAML에서 TemplateBinding 만들기
 
-XAML에서 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 사용 하 여 만들어집니다 합니다 [ `TemplateBinding` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) 다음 코드 예제 에서처럼 태그 확장:
+다음 코드 예제에 설명된 대로 XAML에서 [`TemplateBinding`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) 태그 확장을 사용하여 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)을 만듭니다.
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -37,7 +37,7 @@ XAML에서 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 사용 하 
 </ControlTemplate>
 ```
 
-설정 하지 않고 합니다 [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) 정적 텍스트 속성을 속성의 부모에 바인딩 가능한 속성에 바인딩할 템플릿 바인딩을 사용할 수는 *대상* 소유 하는 뷰는 [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). 그러나 템플릿 바인딩을 바인딩할 `Parent.HeaderText` 하 고 `Parent.FooterText`를 대신 `HeaderText` 및 `FooterText`합니다. 이 예제에서는 바인딩 가능한 속성의 상위 부모에서 정의 되기 때문에 이것이 합니다 *대상* 를 보려면 부모 대신 다음 코드 예제에서 설명한 것 처럼:
+[`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성을 정적 텍스트로 설정하기보다 해당 속성은 템플릿 바인딩을 사용하여 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)을 소유하는 *대상* 뷰의 부모의 바인딩 가능한 속성에 바인딩할 수 있습니다. 그러나 템플릿 바인딩은 `HeaderText` 및 `FooterText`보다는 `Parent.HeaderText` 및 `Parent.FooterText`에 바인딩됩니다. 다음 코드 예제에 설명된 것처럼 이 예제에서는 바인딩 가능한 속성을 부모보다는 *대상* 뷰의 상위 부모에서 정의하기 때문입니다.
 
 ```xaml
 <ContentPage ...>
@@ -47,7 +47,7 @@ XAML에서 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 사용 하 
 </ContentPage>
 ```
 
-합니다 *소스* 템플릿의 바인딩이 항상 자동으로 설정 됩니다의 부모를 *대상* 여기에 컨트롤 템플릿에 소유 하는 뷰를 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 인스턴스입니다. 바인딩에서 사용 하 여 템플릿을 [ `Parent` ](xref:Xamarin.Forms.Element.Parent) 속성의 부모 요소를 반환 하는 `ContentView` 인스턴스를 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 인스턴스. 따라서 사용 하 여는 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 에 [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) 바인딩할 `Parent.HeaderText` 및 `Parent.FooterText` 에 정의 된 바인딩 가능한 속성을 찾습니다는 `ContentPage`,으로 다음 코드 예제에서 보여 줍니다.
+템플릿 바인딩의 *원본*은 항상 컨트롤 템플릿을 소유하는 *대상* 뷰의 부모로 자동 설정되며 여기서는 [`ContentView`](xref:Xamarin.Forms.ContentView) 인스턴스입니다. 템플릿 바인딩은 [`Parent`](xref:Xamarin.Forms.Element.Parent) 속성을 사용하여 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스인 `ContentView` 인스턴스의 부모 요소를 반환합니다. 따라서 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)을 사용하여 `Parent.HeaderText`에 바인딩하고 `Parent.FooterText`는 다음 코드 예제에 표시된 것처럼 `ContentPage`에서 정의된 바인딩 가능한 속성을 찾습니다.
 
 ```csharp
 public static readonly BindableProperty HeaderTextProperty =
@@ -64,13 +64,13 @@ public string FooterText {
 }
 ```
 
-이 인해 다음 스크린샷에 표시 된 모양:
+이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-![](template-binding-images/teal-theme.png "템플릿 바인딩을 사용 하 여 청록색 컨트롤 템플릿")
+![](template-binding-images/teal-theme.png "템플릿 바인딩을 사용하는 청록색 컨트롤 템플릿")
 
-## <a name="creating-a-templatebinding-in-c35"></a>TemplateBinding C에서 만들기&#35;
+## <a name="creating-a-templatebinding-in-c35"></a>C&#35;에서 TemplateBinding 만들기
 
-C#을 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 사용 하 여 만들어집니다는 `TemplateBinding` 생성자에 다음 코드 예제에서 설명한 것 처럼:
+다음 코드 예제에 표시된 것처럼 `TemplateBinding` 생성자를 사용하여 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)을 만듭니다.
 
 ```csharp
 class TealTemplate : Grid
@@ -88,7 +88,7 @@ class TealTemplate : Grid
 }
 ```
 
-설정 하지 않고 합니다 [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) 정적 텍스트 속성을 속성의 부모에 바인딩 가능한 속성에 바인딩할 템플릿 바인딩을 사용할 수는 *대상* 소유 하는 뷰는 [ `ControlTemplate`](xref:Xamarin.Forms.ControlTemplate). 템플릿 바인딩을 사용 하 여 만들를 [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 지정 하는 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 두 번째 매개 변수로 인스턴스. 템플릿 바인딩이 바인딩되는 참고 `Parent.HeaderText` 및 `Parent.FooterText`부모의에 바인딩 가능한 속성 정의 되기 때문에, 합니다 *대상* 를 보려면 부모 대신 다음 코드 예제에서 설명한 것 처럼:
+[`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성을 정적 텍스트로 설정하기보다 해당 속성은 템플릿 바인딩을 사용하여 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)을 소유하는 *대상* 뷰의 부모의 바인딩 가능한 속성에 바인딩할 수 있습니다. [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 두 번째 매개 변수로 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) 인스턴스를 지정하여 템플릿 바인딩을 만듭니다. 다음 코드 예제에 설명된 것처럼 바인딩 가능한 속성은 부모보다는 *대상* 뷰의 상위 부모에서 정의되므로 템플릿 바인딩은 `Parent.HeaderText` 및 `Parent.FooterText`에 바인딩됩니다.
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -108,13 +108,13 @@ public class HomePageCS : ContentPage
 }
 ```
 
-바인딩 가능한 속성에 정의 된는 `ContentPage`앞부분에서 설명한 대로 합니다.
+바인딩 가능한 속성은 앞에서 설명한 대로 `ContentPage`에서 정의됩니다.
 
-### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>BindableProperty ViewModel 속성에 바인딩
+### <a name="binding-a-bindableproperty-to-a-viewmodel-property"></a>ViewModel 속성에 BindableProperty 바인딩
 
-이전에 설명한 대로 [ `TemplateBinding` ](xref:Xamarin.Forms.TemplateBinding) 바인딩 가능한 속성의 부모에 컨트롤 템플릿의 컨트롤의 속성에 바인딩합니다 합니다 *대상* 컨트롤 템플릿을 소유 하는 보기입니다. 따라서 이러한 바인딩 가능한 속성 Viewmodel의 속성에 바인딩할 수 있습니다.
+앞서 설명한 대로 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding)은 컨트롤 템플릿을 소유한 *대상* 뷰의 부모의 바인딩 가능한 속성에 컨트롤 템플릿의 컨트롤 속성을 바인딩하는 데 사용됩니다. 결국 이러한 바인딩 가능한 속성은 ViewModels의 속성에 바인딩될 수 있습니다.
 
-다음 코드 예제는 ViewModel에 두 속성을 정의합니다.
+다음 코드 예제에서는 ViewModel에서 두 속성을 정의합니다.
 
 ```csharp
 public class HomePageViewModel
@@ -124,7 +124,7 @@ public class HomePageViewModel
 }
 ```
 
-합니다 `HeaderText` 고 `FooterText` ViewModel 속성을 다음 XAML 코드 예제에 표시 된 대로 바인딩할 수 있습니다.
+`HeaderText` 및 `FooterText` ViewModel 속성은 다음 XAML 코드 예제에 표시된 대로 바인딩될 수 있습니다.
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:SimpleTheme;assembly=SimpleTheme"
@@ -138,7 +138,7 @@ public class HomePageViewModel
 </ContentPage>
 ```
 
-`HeaderText` 및 `FooterText` 바인딩 가능한 속성에 바인딩된를 `HomePageViewModel.HeaderText` 및 `HomePageViewModel.FooterText` 속성을 설정으로 인해를 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 인스턴스에 `HomePageViewModel` 클래스. 전반적으로이 인해 컨트롤 속성에는 [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) 바인딩되 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 인스턴스를 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), 다시 바인딩하는 ViewModel 속성입니다.
+`HeaderText` 및 `FooterText` 바인딩 가능한 속성은 `HomePageViewModel` 클래스 인스턴스로 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 설정했기 때문에 `HomePageViewModel.HeaderText` 및 `HomePageViewModel.FooterText` 속성에 바인딩됩니다. 전반적으로 이로 인해 결국 ViewModel 속성에 바인딩하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)의 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 인스턴스에 바인딩된 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 컨트롤 속성이 됩니다.
 
 해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
 
@@ -156,7 +156,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-바인딩할 수도 있습니다 보기 모델 속성에 직접 선언 하지 않아도 되도록 `BindableProperty`에 대 한 `HeaderText` 및 `FooterText` 에 `ContentPage`, 컨트롤 템플릿 Parent.BindingContext 바인딩하여. _PropertyName_ 예를 들어:
+뷰 모델에 직접 바인딩할 수도 있으므로 Parent.BindingContext._PropertyName_ 등에 컨트롤 템플릿을 바인딩하여 `ContentPage`에서 `HeaderText` 및 `FooterText`에 대한 `BindableProperty`을 선언하지 않아도 됩니다.
 
 ```xaml
 <ControlTemplate x:Key="TealTemplate">
@@ -169,18 +169,18 @@ public class HomePageCS : ContentPage
 </ControlTemplate>
 ```
 
-ViewModels 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [에서 데이터에 대 한 바인딩을 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)합니다.
+ViewModels에 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩에서 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)를 참조하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서 컨트롤 템플릿에서 데이터 바인딩을 수행 하려면 템플릿 바인딩을 사용 하 여 보여 줍니다. 쉽게 변경 될 컨트롤 템플릿의 컨트롤에에서 대 한 속성 값을 사용 하도록 설정 하면 public 속성에 데이터를 컨트롤 템플릿의 컨트롤에에서 바인딩할 템플릿 바인딩을 허용 합니다.
+이 문서에서는 템플릿 바인딩을 사용하여 컨트롤 템플릿에서 데이터 바인딩을 수행하는 방법을 보여줍니다. 템플릿 바인딩을 사용하면 컨트롤 템플릿의 컨트롤을 공용 속성에 데이터 바인딩할 수 있기 때문에 컨트롤 템플릿의 컨트롤에 대한 속성 값을 쉽게 변경할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
-- [템플릿 바인딩 (샘플) 사용 하 여 간단한 테마](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
-- [템플릿 바인딩 및 ViewModel (샘플)를 사용 하 여 간단한 테마](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
+- [데이터 바인딩에서 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [템플릿 바인딩(샘플)을 사용한 간단한 테마](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
+- [템플릿 바인딩 및 ViewModel(샘플)을 사용한 간단한 테마](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebindingandviewmodel/)
 - [TemplateBinding](xref:Xamarin.Forms.TemplateBinding)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentView](xref:Xamarin.Forms.ContentView)

@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 탭된 페이지
-description: Xamarin.Forms TabbedPage 세부 정보 영역에 콘텐츠를 로드 하는 각 탭을 사용 하 여 탭 및 더 큰 세부 정보 영역을 목록으로 구성 됩니다. 이 문서에서는 페이지의 컬렉션을 탐색 하는 TabbedPage를 사용 하는 방법을 보여 줍니다.
+title: Xamarin.Forms TabbedPage
+description: Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
@@ -9,58 +9,58 @@ ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171380"
 ---
-# <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 탭된 페이지
+# <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
 
-_Xamarin.Forms TabbedPage 세부 정보 영역에 콘텐츠를 로드 하는 각 탭을 사용 하 여 탭 및 더 큰 세부 정보 영역을 목록으로 구성 됩니다. 이 문서에서는 페이지의 컬렉션을 탐색 하는 TabbedPage를 사용 하는 방법을 보여 줍니다._
+_Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다._
 
 ## <a name="overview"></a>개요
 
-다음 스크린샷에서 표시 된 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 각 플랫폼에서:
+다음 스크린샷은 각 플랫폼에서 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 보여줍니다.
 
 ![](tabbed-page-images/tab1.png "TabbedPage 예제")
 
-다음 스크린샷에서 각 플랫폼에서 탭 형식에 집중 합니다.
+다음 스크린샷은 각 플랫폼의 탭 서식에 초점을 둡니다.
 
 ![](tabbed-page-images/tabbedpage-components.png "TabbedPage 탭 구성 요소")
 
-레이아웃을 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), 및 해당 탭 플랫폼에 따라 달라 집니다.
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)의 레이아웃 및 탭은 플랫폼에 따라 달라집니다.
 
-- IOS에서 탭 목록 화면 맨 아래에 나타나고 세부 영역이 위에 합니다. 각 탭에는 일반적인 확인에 대 한 투명도 사용 하 여 30 PNG 30x, 높은 해상도 대 한 60x60 및 iPhone 6 용 90x90 될 아이콘 이미지도 또한 확인 합니다. 5 개 탭에 있는 경우는 *자세한* 탭이 표시 됩니다, 사용할 수 있는 다른 탭에 액세스 해야 합니다. Xamarin.Forms 응용 프로그램에서 이미지를 로드 하는 방법에 대 한 자세한 내용은 참조 하세요. [이미지를 사용 하 여 작업](~/xamarin-forms/user-interface/images.md)합니다. 아이콘 요구 사항에 대 한 자세한 내용은 참조 하세요. [응용 프로그램 탭 만들기](~/ios/user-interface/controls/creating-tabbed-applications.md)합니다.
-
-  > [!NOTE]
-  > 합니다 `TabbedRenderer` iOS에는 재정의 가능한 `GetIcon` 탭 아이콘을 지정된 된 소스에서 로드 하는 메서드. 이 재정의 사용 하면 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`합니다. 또한 아이콘의 선택 또는 선택 하지 않은 버전을 제공할 수 있습니다.
-
-- Android에서 기본적으로 화면 맨 위에 있는 탭 목록 표시 및 세부 정보 영역에서 아래입니다. 그러나 탭은 플랫폼 특정 화면 아래쪽으로 이동할 수 있습니다. 자세한 내용은 [설정은 TabbedPage 도구 모음 배치 및 색](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar)합니다.
+- iOS에서 탭 목록은 화면 맨 아래에 나타나고 세부 내용 영역이 위에 위치합니다. 각 탭에는 일반 해상도의 경우 30x30 PNG, 고해상도의 경우 60x60, iPhone 6 Plus의 경우 90x90라는 투명도인 아이콘 이미지도 포함됩니다. 6개 이상의 탭이 있는 경우 다른 탭에 액세스하는 데 사용할 수 있는 *자세히* 탭이 표시됩니다. Xamarin.Forms 애플리케이션에서 이미지를 로드하는 방법에 대한 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md)을 참조하세요. 아이콘 요구 사항에 대한 자세한 내용은 [탭된 애플리케이션 만들기](~/ios/user-interface/controls/creating-tabbed-applications.md)를 참조하세요.
 
   > [!NOTE]
-  > 참고는 AppCompat에서 Android를 사용 하는 경우 각 탭도 아이콘이 표시 됩니다. 또한 합니다 `TabbedPageRenderer` Android AppCompat에는 재정의 가능한 `GetIconDrawable` 사용자 지정에서 탭 아이콘을 로드 하는 메서드 `Drawable`합니다. 이 재정의 사용 하면 SVG 이미지 아이콘으로 사용할 수는 `TabbedPage`, 상위 및 탭 표시줄 아래쪽을 둘 다에서 작동 하 고 있습니다. 또는 재정의 가능한 `SetTabIcon` 메서드를 사용 하 여를 사용자 지정에서 탭 아이콘을 로드할 수 있습니다 `Drawable` 위쪽 탭 표시줄에 대 한 합니다.
+  > iOS의 경우 `TabbedRenderer`에는 지정된 원본에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIcon` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있습니다. 또한 선택하거나 선택하지 않은 버전의 아이콘을 제공할 수 있습니다.
 
-- Windows 태블릿 폼 팩터를 탭 항상는 표시 되지 않습니다 및 사용자가 스와이프 다운 해야 (또는 마우스 오른쪽 단추 클릭 마우스 연결 되어 있는 경우) 탭을 확인 하는 `TabbedPage` (아래와 같이).
+- Android에서 탭 목록은 기본적으로 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 그러나 탭 목록은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar)을 참조하세요.
 
-![](tabbed-page-images/windows-tabs.png "Windows에서 TabbedPage 탭")
+  > [!NOTE]
+  > Android에서 AppCompat을 사용하는 경우 각 탭에도 아이콘이 표시됩니다. 또한 Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIconDrawable` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다. 또는 위쪽 탭 표시줄의 경우 재정의 가능한 `SetTabIcon` 메서드를 사용하여 사용자 지정 `Drawable`에서 탭 아이콘을 로드할 수 있습니다.
+
+- Windows 태블릿 양식 요소에서 탭은 표시되지 않을 수 있습니다. 또한 사용자는 `TabbedPage` 탭을 보기 위해 (다음과 같이) 아래로 스와이프(또는 마우스가 연결된 경우 마우스 오른쪽 단추 클릭)해야 합니다.
+
+![](tabbed-page-images/windows-tabs.png "Windows의 TabbedPage 탭")
 
 ## <a name="creating-a-tabbedpage"></a>TabbedPage 만들기
 
-두 가지 방법을 만드는 데 사용할 수는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage):
+두 방법을 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 만드는 데 사용할 수 있습니다.
 
-- [채울](#Populating_a_TabbedPage_with_a_Page_Collection) 는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 자식 컬렉션을 사용 하 여 [ `Page` ](xref:Xamarin.Forms.Page) 컬렉션과 같은 개체 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 인스턴스.
-- [할당](#Populating_a_TabbedPage_with_a_Template) 컬렉션을를 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성 및 할당을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 에 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 에 대 한 페이지를 반환 하도록 속성 컬렉션의 개체입니다.
+- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 자식 [`Page`](xref:Xamarin.Forms.Page) 개체 컬렉션(예: [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스의 컬렉션)으로 [채웁니다](#Populating_a_TabbedPage_with_a_Page_Collection).
+- 컬렉션을 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성에 [할당](#Populating_a_TabbedPage_with_a_Template)하고 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성에 할당하여 컬렉션의 개체에 대한 페이지를 반환합니다.
 
-두 방법으로는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 사용자가 각 탭에는 각 페이지를 표시 합니다.
+사용자가 각 탭을 선택하면 두 가지 방법으로 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 각 페이지를 표시합니다.
 
 > [!NOTE]
-> 하는 것이 좋습니다는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 채울 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 고 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)인스턴스에만 합니다. 이 모든 플랫폼에서 일관 된 사용자 환경을 보장 하는 데 도움이 됩니다.
+> [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 및 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스만으로 채우는 것이 좋습니다. 이렇게 하면 모든 플랫폼에서 일관된 사용자 환경을 보장하는 데 도움이 됩니다.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
 ### <a name="populating-a-tabbedpage-with-a-page-collection"></a>페이지 컬렉션으로 TabbedPage 채우기
 
-다음 XAML 코드 예제는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 자식 컬렉션을 사용 하 여 채워 생성 [ `Page` ](xref:Xamarin.Forms.Page) 개체:
+다음 XAML 코드 예제에서는 자식 [`Page`](xref:Xamarin.Forms.Page) 개체의 컬렉션으로 채워서 생성된 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 보여줍니다.
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -76,7 +76,7 @@ _Xamarin.Forms TabbedPage 세부 정보 영역에 콘텐츠를 로드 하는 각
 </TabbedPage>
 ```
 
-다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 생성 C#:
+다음 코드 예제에서는 C#에서 만든 해당 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 보여줍니다.
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -93,27 +93,27 @@ public class MainPageCS : TabbedPage
 }
 ```
 
-합니다 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 두 개의 자식 채워집니다 [ `Page` ](xref:Xamarin.Forms.Page) 개체입니다. 첫 번째 자식이 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 인스턴스 및 두 번째 탭은을 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 포함 하는 `ContentPage` 인스턴스.
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 두 개의 자식 [`Page`](xref:Xamarin.Forms.Page) 개체로 채워집니다. 첫 번째 자식은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스이고 두 번째 탭은 `ContentPage` 인스턴스를 포함하는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)입니다.
 
 > [!NOTE]
-> 합니다 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) UI 가상화를 지원 하지 않습니다. 경우 성능이 저하 될 수 있습니다 따라서는 `TabbedPage` 너무 많은 자식 요소가 포함 됩니다.
+> [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 UI 가상화를 지원하지 않습니다. 따라서 `TabbedPage`에 너무 많은 자식 요소가 포함된 경우 성능에 영향을 미칠 수 있습니다.
 
-다음 스크린샷에서 표시 된 `TodayPage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 에 표시 되는 인스턴스를 *지금* 탭:
+다음 스크린샷에서는 *오늘* 탭에 표시된 `TodayPage`[`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스를 보여줍니다.
 
-![](tabbed-page-images/today-page.png "ContentPage를 TabbedPage에서")
+![](tabbed-page-images/today-page.png "TabbedPage의 ContentPage")
 
-선택 하는 *일정* 표시 탭를 `SchedulePage` [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 래핑됩니다 인스턴스입니다를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 인스턴스 및에 표시 됩니다는 다음 스크린 샷:
+*일정* 탭을 선택하면 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에서 래핑된 `SchedulePage`[`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스를 표시하고 다음 스크린샷처럼 표시됩니다.
 
 ![](tabbed-page-images/schedule-page.png "TabbedPage의 NavigationPage")
 
-레이아웃에 대 한 자세한를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)를 참조 하십시오 [탐색을 수행](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)합니다.
+[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 레이아웃에 대한 정보는 [검색 수행](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)을 참조하세요.
 
 > [!NOTE]
-> 배치에 사용할 수 있지만 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 에 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage), 적용할 좋지에 `TabbedPage` 에 `NavigationPage`. 이므로 ios의 경우는 `UITabBarController` 항상 역할에 대 한 래퍼를 `UINavigationController`입니다. 자세한 내용은 [결합 뷰 컨트롤러 인터페이스](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) iOS 개발자 라이브러리에서에서.
+> [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)를 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에 배치할 수 있지만 `TabbedPage`를 `NavigationPage`에 배치하지 않는 것이 좋습니다. iOS의 경우 `UITabBarController`가 항상 `UINavigationController`에 대한 래퍼의 역할을 하기 때문입니다. 자세한 내용은 iOS 개발자 라이브러리에서 [결합된 보기 컨트롤러 인터페이스](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html)를 참조하세요.
 
-#### <a name="navigation-inside-a-tab"></a>탭 내에서 탐색
+#### <a name="navigation-inside-a-tab"></a>탭 내에서 검색
 
-호출 하 여 두 번째 탭에서 탐색을 수행할 수 있습니다는 [ `PushAsync` ](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를를 [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) 속성을 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 인스턴스를 다음 코드 예제에서 설명한 것 처럼:
+다음 코드 예제에서 설명한 대로 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출하여 두 번째 탭에서 검색을 수행할 수 있습니다.
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
@@ -122,17 +122,17 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
 }
 ```
 
-`UpcomingAppointmentsPage` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다. 다음 스크린샷과에서 같습니다.
+`UpcomingAppointmentsPage` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다. 이 과정은 다음 스크린샷에 나와 있습니다.
 
-![](tabbed-page-images/navigationpage.png "탭 내에서 탐색")
+![](tabbed-page-images/navigationpage.png "탭 내에서 검색")
 
-탐색에 사용 하 여 수행 하는 방법에 대 한 자세한 내용은 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 클래스를 참조 하십시오 [계층적 탐색](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)합니다.
+[`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스를 사용하는 검색을 수행하는 방법에 대한 자세한 내용은 [계층적 검색](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)을 참조하세요.
 
 <a name="Populating_a_TabbedPage_with_a_Template" />
 
-### <a name="populating-a-tabbedpage-with-a-template"></a>템플릿 사용 하 여 TabbedPage 채우기
+### <a name="populating-a-tabbedpage-with-a-template"></a>템플릿으로 TabbedPage 채우기
 
-다음 XAML 코드 예제에서는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 할당 하 여 생성을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 에 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 에 대 한 페이지를 반환 하도록 속성 컬렉션의 개체:
+다음 XAML 코드 예제에서는 컬렉션의 개체에 대해 페이지를 반환하도록 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성에 할당하여 생성된 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 보여줍니다.
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -164,7 +164,7 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
 </TabbedPage>
 ```
 
-합니다 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 설정 하 여 데이터를 채운 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 코드 숨김 파일에 대 한 생성자에서 속성:
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 코드 숨김 파일에 대한 생성자에서 [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성을 설정하여 데이터로 채웁니다.
 
 ```csharp
 public TabbedPageDemoPage ()
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-다음 코드 예제에서는 해당 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 생성 C#:
+다음 코드 예제에서는 C#에서 만든 해당 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 보여줍니다.
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage
@@ -232,25 +232,25 @@ public class TabbedPageDemoPageCS : TabbedPage
 }
 ```
 
-각 탭에 표시 됩니다는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 사용 하는 일련의 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 및 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 탭에 대 한 데이터를 표시 합니다. 다음 스크린샷에서 표시에 대 한 콘텐츠를 *Tamarin* 탭:
+각 탭은 탭에 대한 데이터를 표시하기 위해 일련의 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 및 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 사용하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 표시합니다. 다음 스크린샷에서는 *Tamarin* 탭에 대한 콘텐츠를 보여줍니다.
 
-![](tabbed-page-images/tab3.png "템플릿 사용 하 여 TabbedPage 채우기")
+![](tabbed-page-images/tab3.png "템플릿으로 TabbedPage 채우기")
 
-그런 다음 다른 탭을 선택 하면 해당 탭에 대 한 콘텐츠를 표시 합니다.
+그런 다음, 다른 탭을 선택하면 해당 탭에 대한 콘텐츠를 표시합니다.
 
 > [!NOTE]
-> 합니다 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) UI 가상화를 지원 하지 않습니다. 경우 성능이 저하 될 수 있습니다 따라서는 `TabbedPage` 너무 많은 자식 요소가 포함 됩니다.
+> [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 UI 가상화를 지원하지 않습니다. 따라서 `TabbedPage`에 너무 많은 자식 요소가 포함된 경우 성능에 영향을 미칠 수 있습니다.
 
-에 대 한 자세한 내용은 합니다 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)를 참조 하세요 [25 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) Charles Petzold의 Xamarin.Forms 책의 합니다.
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에 대한 자세한 내용은 Charles Petzold의 Xamarin.Forms 책의 [챕터 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)을 참조하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 페이지의 컬렉션을 탐색 하는 TabbedPage를 사용 하는 방법을 보여 줍니다. Xamarin.Forms [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 세부 정보 영역에 콘텐츠를 로드 하는 각 탭을 사용 하 여 탭 및 더 큰 세부 정보 영역을 목록으로 구성 합니다.
+이 문서에서는 페이지의 컬렉션을 검색하는 데 TabbedPage를 사용하는 방법을 설명합니다. Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 종류](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
-- [TabbedPage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
+- [TabbedPageWithNavigationPage(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+- [TabbedPage(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
 - [TabbedPage](xref:Xamarin.Forms.TabbedPage)

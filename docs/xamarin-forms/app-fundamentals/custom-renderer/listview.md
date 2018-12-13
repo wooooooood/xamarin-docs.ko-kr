@@ -1,6 +1,6 @@
 ---
-title: ListView의 사용자 지정
-description: Xamarin.Forms ListView 세로 목록으로 데이터의 컬렉션을 표시 하는 뷰입니다. 이 문서에는 사용자 지정 렌더러를 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 제어 성능 더욱 잘 제어할 수 있도록 만드는 방법을 보여 줍니다.
+title: ListView 사용자 지정
+description: Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
 ms.technology: xamarin-forms
@@ -9,34 +9,34 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: b3b73d542faebdb8ab85c989d7812368f4f3ffac
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38997492"
 ---
-# <a name="customizing-a-listview"></a>ListView의 사용자 지정
+# <a name="customizing-a-listview"></a>ListView 사용자 지정
 
-_Xamarin.Forms ListView 세로 목록으로 데이터의 컬렉션을 표시 하는 뷰입니다. 이 문서에는 사용자 지정 렌더러를 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 제어 성능 더욱 잘 제어할 수 있도록 만드는 방법을 보여 줍니다._
+_Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
-모든 Xamarin.Forms 보기에 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대 한는 함께 제공 되는 렌더러. 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) iOS에서 Xamarin.Forms 응용 프로그램에서 렌더링 되는 `ListViewRenderer` 클래스가 인스턴스화되면 네이티브를 다시 인스턴스화하는 `UITableView` 컨트롤입니다. Android 플랫폼에는 `ListViewRenderer` 클래스에는 네이티브 인스턴스화합니다 `ListView` 컨트롤입니다. Windows 플랫폼 (UWP (유니버설), 합니다 `ListViewRenderer` 클래스 인스턴스화합니다 네이티브 `ListView` 컨트롤입니다. 렌더러 및 Xamarin.Forms 컨트롤에 매핑되는 네이티브 컨트롤 클래스에 대 한 자세한 내용은 참조 하세요. [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)합니다.
+모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`ListView`](xref:Xamarin.Forms.ListView)를 렌더링하면 `ListViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITableView` 컨트롤을 인스턴스화합니다. Android 플랫폼에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
-다음 다이어그램 간의 관계는 [ `ListView` ](xref:Xamarin.Forms.ListView) 제어 및 구현 하는 해당 네이티브 컨트롤:
+다음 다이어그램은 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](listview-images/listview-classes.png "ListView 컨트롤 구현 네이티브 컨트롤 간의 관계")
+![](listview-images/listview-classes.png "ListView 컨트롤과 네이티브 컨트롤 구현 간의 관계")
 
-렌더링 프로세스를 수행할 수 활용에 대 한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현 하는 [ `ListView` ](xref:Xamarin.Forms.ListView) 각 플랫폼에서 합니다. 이 수행 하는 프로세스는 다음과 같습니다.
+렌더링 프로세스는 각 플랫폼에서 [`ListView`](xref:Xamarin.Forms.ListView)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
-1. [만들](#Creating_the_Custom_ListView_Control) Xamarin.Forms 사용자 지정 컨트롤입니다.
-1. [사용할](#Consuming_the_Custom_Control) Xamarin.Forms에서 사용자 지정 컨트롤입니다.
-1. [만들](#Creating_the_Custom_Renderer_on_each_Platform) 각 플랫폼에서 컨트롤에 대 한 사용자 지정 렌더러.
+1. Xamarin.Forms 사용자 지정 컨트롤을 [만듭니다](#Creating_the_Custom_ListView_Control).
+1. Xamarin.Forms에서 사용자 지정 컨트롤을 [사용합니다](#Consuming_the_Custom_Control).
+1. 각 플랫폼의 컨트롤에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
 
-각 항목 이제 살펴봅니다를 구현 하는 `NativeListView` 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 활용 하는 렌더러. 이 시나리오는 다시 사용할 수 있는 셀 코드 및 목록을 포함 하는 기존 네이티브 앱을 이식 하는 경우에 유용 합니다. 또한 데이터 가상화와 같은 성능에 영향을 줄 수 있는 목록 컨트롤 기능 자세한 사용자 지정할 수 있습니다.
+이제 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 활용하는 `NativeListView` 렌더러를 구현하도록 각 항목을 차례로 설명합니다. 이 시나리오는 다시 사용할 수 있는 목록 및 셀 코드를 포함하는 기존 네이티브 앱을 이식하는 경우에 유용합니다. 또한 데이터 가상화와 같은 성능에 영향을 줄 수 있는 목록 컨트롤 기능의 자세한 사용자 지정을 허용합니다.
 
 <a name="Creating_the_Custom_ListView_Control" />
 
 ## <a name="creating-the-custom-listview-control"></a>사용자 지정 ListView 컨트롤 만들기
 
-사용자 지정 [ `ListView` ](xref:Xamarin.Forms.ListView) 컨트롤을 서브클래싱하 여 생성할 수는 `ListView` 클래스에 다음 코드 예제 에서처럼:
+다음 코드 예제와 같이 `ListView` 클래스를 서브클래스하여 사용자 지정 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤을 만들 수 있습니다.
 
 ```csharp
 public class NativeListView : ListView
@@ -60,13 +60,13 @@ public class NativeListView : ListView
 }
 ```
 
-`NativeListView` .NET Standard 라이브러리 프로젝트에서 생성 되 고 사용자 지정 컨트롤에 대 한 API를 정의 합니다. 이 컨트롤을 표시는 `Items` 채우는 데 사용 되는 속성을 `ListView` 데이터 및 수에 대 한에 바인딩된 데이터 표시 목적으로 합니다. 또한 노출는 `ItemSelected` 플랫폼 특정 네이티브 목록 컨트롤에서 항목을 선택할 때마다 발생 하는 이벤트입니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
+`NativeListView`는 .NET 표준 라이브러리 프로젝트에서 생성되고 사용자 지정 컨트롤에 대한 API를 정의합니다. 이 컨트롤은 데이터로 `ListView`를 채우는 데 사용되는 `Items` 속성을 노출하며, 표시 목적을 위해 바인딩되는 데이터가 될 수 있습니다. 또한 항목이 플랫폼별 네이티브 목록 컨트롤에서 선택될 때마다 발생하는 `ItemSelected` 이벤트를 노출합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
-`NativeListView` 사용자 지정 컨트롤 참조할 수 있습니다 Xaml의.NET Standard 라이브러리 프로젝트에서 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤에 네임 스페이스 접두사를 사용 합니다. 다음 코드 예제에서는 방법을 `NativeListView` XAML 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
+`NativeListView` 사용자 지정 컨트롤은 해당 위치의 네임스페이스를 선언하고 컨트롤의 네임스페이스 접두사를 사용하여 .NET 표준 라이브러리 프로젝트의 Xaml에서 참조할 수 있습니다. 다음 코드 예제에서는 `NativeListView` 사용자 지정 컨트롤을 XAML 페이지에서 사용하는 방법을 보여줍니다.
 
 ```xaml
 <ContentPage ...
@@ -86,9 +86,9 @@ public class NativeListView : ListView
 </ContentPage>
 ```
 
-`local` 원하는 네임 스페이스 접두사를 이름을 지정할 수 있습니다. 그러나 합니다 `clr-namespace` 고 `assembly` 값 사용자 지정 컨트롤의 세부 정보를 일치 해야 합니다. 네임 스페이스를 선언 하는 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
+`local` 네임스페이스 접두사는 원하는 것으로 이름을 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 사용됩니다.
 
-다음 코드 예제에서는 방법을 `NativeListView` C# 페이지에서 사용자 지정 컨트롤을 사용할 수 있습니다.
+다음 코드 예제에서는 C# 페이지에서 `NativeListView` 사용자 지정 컨트롤을 사용하는 방법을 보여줍니다.
 
 ```csharp
 public class MainPageCS : ContentPage
@@ -131,12 +131,12 @@ public class MainPageCS : ContentPage
 }
 ```
 
-합니다 `NativeListView` 사용자 지정 컨트롤 플랫폼별 사용자 지정 렌더러를 사용 하 여 데이터를 통해 채워진 목록을 표시 하는 `Items` 속성입니다. 목록의 각 행에는 이름, 범주 및 이미지 파일 이름에는 데이터의 세 가지 항목이 있습니다. 목록의 각 행의 레이아웃은 플랫폼 고유의 사용자 지정 렌더러를 통해 정의 됩니다.
+`NativeListView` 사용자 지정 컨트롤은 `Items` 속성을 통해 채워지는 데이터의 목록을 표시하는 데 플랫폼별 사용자 지정 렌더러를 사용합니다. 목록의 각 행에는 이름, 범주 및 이미지 파일 이름의 세 가지 데이터 항목이 있습니다. 목록에서 각 행의 레이아웃은 플랫폼별 사용자 지정 렌더러를 통해 정의됩니다.
 
 > [!NOTE]
-> 때문에 `NativeListView` 스크롤 기능을 포함 하는 플랫폼 특정 목록 컨트롤을 사용 하 여 사용자 지정 컨트롤이 렌더링 될, 사용자 지정 컨트롤 호스팅해서는 안 스크롤할 수 있는 레이아웃 컨트롤의 예는 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)합니다.
+> `NativeListView` 사용자 지정 컨트롤은 스크롤 기능을 포함하는 플랫폼별 목록 컨트롤을 사용하여 렌더링되므로 사용자 지정 컨트롤은 [`ScrollView`](xref:Xamarin.Forms.ScrollView)와 같은 스크롤할 수 있는 레이아웃 컨트롤에서 호스트되어서는 안 됩니다.
 
-사용자 지정 렌더러는 이제 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 만들려면 각 응용 프로그램 프로젝트에 추가할 수 있습니다.
+이제 각 애플리케이션 프로젝트에 사용자 지정 렌더러를 추가하여 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 만들 수 있습니다.
 
 <a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
@@ -144,26 +144,26 @@ public class MainPageCS : ContentPage
 
 사용자 지정 렌더러 클래스를 만드는 프로세스는 다음과 같습니다.
 
-1. 서브 클래스를 만든를 `ListViewRenderer` 사용자 지정 컨트롤을 렌더링 하는 클래스입니다.
-1. 재정의 `OnElementChanged` 맞게 사용자 지정 컨트롤 및 쓰기 논리를 렌더링 하는 메서드. 이 메서드를 호출한 경우 해당 Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView) 만들어집니다.
-1. 추가 `ExportRenderer` 특성을 사용자 지정 렌더러 클래스 Xamarin.Forms 사용자 지정 컨트롤을 렌더링 하 사용 수를 지정할 수 있습니다. 이 특성은 Xamarin.Forms를 사용 하 여 사용자 지정 렌더러를 등록 하는 데 사용 됩니다.
+1. 사용자 지정 컨트롤을 렌더링하는 `ListViewRenderer` 클래스의 서브클래스를 만듭니다.
+1. 사용자 지정 컨트롤을 렌더링하고 이를 사용자 지정하기 위한 논리를 작성하는 `OnElementChanged` 메서드를 재정의합니다. 이 메서드는 해당 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)가 생성될 때 호출됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
-> 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하는 선택 사항입니다. 사용자 지정 렌더러를 등록 하지 않은 경우 셀의 기본 클래스에 대 한 기본 렌더러 사용 됩니다.
+> 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 셀의 기본 클래스에 대한 기본 렌더러가 사용됩니다.
 
-다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램에서 각 프로젝트의 책임을 보여 줍니다.
+다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
 ![](listview-images/solution-structure.png "NativeListView 사용자 지정 렌더러 프로젝트 책임")
 
-합니다 `NativeListView` 사용자 지정 컨트롤에서 파생 되는 플랫폼별 렌더러 클래스에 의해 렌더링 되는 `ListViewRenderer` 각 플랫폼에 대 한 클래스입니다. 이 인해 각 `NativeListView` 다음 스크린샷과에서 같이 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 사용 하 여 렌더링 되는 사용자 지정 컨트롤:
+`NativeListView` 사용자 지정 컨트롤은 각 플랫폼의 `ListViewRenderer` 클래스에서 모두 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `NativeListView` 사용자 지정 컨트롤이 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃으로 렌더링됩니다.
 
-![](listview-images/screenshots.png "각 플랫폼에서 NativeListView")
+![](listview-images/screenshots.png "각 플랫폼의 NativeListView")
 
-합니다 `ListViewRenderer` 노출 클래스는 `OnElementChanged` 해당 네이티브 컨트롤을 렌더링 하는 Xamarin.Forms 사용자 지정 컨트롤을 만들 때 호출 되는 메서드. 이 메서드는 `ElementChangedEventArgs` 매개 변수를 포함 하는 `OldElement` 및 `NewElement` 속성입니다. 이러한 속성은 Xamarin.Forms 요소를 나타냅니다는 렌더러 *되었습니다* 에 연결 및 Xamarin.Forms 요소는 렌더러 *는* 을 각각 연결 합니다. 샘플 응용 프로그램에서을 `OldElement` 속성이 `null` 및 `NewElement` 속성에 대 한 참조가 포함 됩니다는 `NativeListView` 인스턴스.
+`ListViewRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `NativeListView` 인스턴스에 대한 참조를 포함합니다.
 
-재정의 된 버전을 `OnElementChanged` 각 플랫폼별 렌더러 클래스에서 메서드는 네이티브 컨트롤 사용자 지정을 수행 하는 위치입니다. 플랫폼에서 사용 되는 네이티브 컨트롤에 대 한 형식화 된 참조를 통해 액세스할 수는 `Control` 속성입니다. 또한를 통해 렌더링 되는 Xamarin.Forms 컨트롤에 대 한 참조를 가져올 수 있습니다는 `Element` 속성입니다.
+각 플랫폼별 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 랜더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 
-이벤트 처리기를 구독할 때는 주의 기울여야 합니다는 `OnElementChanged` 메서드를 다음 코드 예제에서 설명한 것 처럼:
+`OnElementChanged` 메서드에서 이벤트 처리기를 구독할 때는 다음 코드 예제와 같이 주의해야 합니다.
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
@@ -180,17 +180,17 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-네이티브 컨트롤 구성만 해야 하 고 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결 될 때 이벤트 처리기를 구독 합니다. 마찬가지로, 된 모든 이벤트 처리기를 취소 해야 수신을 렌더러가 변경 내용에 연결 된 경우에 합니다. 이 접근 방식을 채택 메모리 누수의 영향을 받지 않으며는 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 네이티브 컨트롤만 구성해야 합니다. 마찬가지로, 구독된 모든 이벤트 처리기는 렌더러가 연결된 요소가 변경될 때만 구독을 취소해야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 사용자 지정 렌더러를 만들 수 있습니다.
 
-재정의 된 버전을 `OnElementPropertyChanged` 각 플랫폼별 렌더러 클래스에서 메서드는 Xamarin.Forms 사용자 지정 컨트롤에 바인딩 가능한 속성 변경 내용에 응답할 수 있는 곳입니다. 변경 되는 속성에 대 한 검사를 항상 수 있어야를 따라이 재정의 여러 번 호출할 수 있습니다.
+각 플랫폼별 렌더러 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 Xamarin.Forms 사용자 지정 컨트롤의 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다. 이 재정의는 여러 번 호출될 수 있으므로 변경되는 속성에 대한 검사는 항상 수행되어야 합니다.
 
-으로 데코 레이트 된 각 사용자 지정 렌더러 클래스는 `ExportRenderer` Xamarin.Forms를 사용 하 여 렌더러를 등록 하는 특성입니다. 특성 매개 변수 두 개 – 렌더링 되 고 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름 및 사용자 지정 렌더러의 형식 이름입니다. `assembly` 접두사 특성에 특성을 전체 어셈블리에 적용 되도록 지정 합니다.
+각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 플랫폼별 사용자 지정 렌더러 클래스의 구현을 설명합니다.
 
-### <a name="creating-the-custom-renderer-on-ios"></a>IOS에서 사용자 지정 렌더러 만들기
+### <a name="creating-the-custom-renderer-on-ios"></a>iOS에서 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 iOS 플랫폼에 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 iOS 플랫폼용 사용자 지정 렌더러를 보여줍니다.
 
 ```csharp
 [assembly: ExportRenderer (typeof(NativeListView), typeof(NativeiOSListViewRenderer))]
@@ -214,7 +214,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-합니다 `UITableView` 컨트롤의 인스턴스를 만들어 구성 된를 `NativeiOSListViewSource` 클래스는 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결 된 합니다. 이 클래스는 데이터를 제공 합니다 `UITableView` 재정의 하 여 컨트롤을 `RowsInSection` 및 `GetCell` 메서드를를 `UITableViewSource` 클래스를 노출 하는 `Items` 표시할 데이터의 목록을 포함 하는 속성입니다. 클래스도 제공 합니다.는 `RowSelected` 를 호출 하는 메서드 재정의 `ItemSelected` 에서 제공 하는 이벤트를 `NativeListView` 사용자 지정 컨트롤입니다. 메서드에 대 한 자세한 내용은 재정의 참조 하세요 [서브클래싱 UITableViewSource](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)합니다. `GetCell` 메서드가 반환을 `UITableCellView` 목록의 각 행에 대 한 데이터로 채워집니다 하 고 다음 코드 예제에 표시 됩니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `UITableView` 컨트롤은 `NativeiOSListViewSource` 클래스의 인스턴스를 만들어서 구성됩니다. 이 클래스는 `UITableViewSource` 클래스에서 `RowsInSection` 및 `GetCell` 메서드를 재정의하고, 표시되는 데이터의 목록을 포함하는 `Items` 속성을 노출하여 `UITableView` 컨트롤에 데이터를 제공합니다. 클래스는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출하는 `RowSelected` 메서드 재정의도 제공합니다. 메서드 재정의에 대한 자세한 내용은 [UITableViewSource 서브클래싱](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)을 참조하세요. `GetCell` 메서드는 목록의 각 행에 대한 데이터로 채워지는 `UITableCellView`를 반환하며, 다음 코드 예제에 표시됩니다.
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -241,9 +241,9 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-이 메서드가 만드는 `NativeiOSListViewCell` 화면에 표시할 데이터의 각 행에 대 한 인스턴스. `NativeiOSCell` 인스턴스는 각 셀을 셀의 데이터 레이아웃을 정의 합니다. 셀 스크롤로 인해 화면에서 사라지면 셀 제공 됩니다 다시 사용할 수 있도록 합니다. 있는지만 확인 하 여 메모리가 낭비를 방지 하는이 `NativeiOSCell` 인스턴스 목록에 있는 데이터의 모든가 대신 화면에 표시 되는 데이터에 대 한 합니다. 셀 재사용에 대 한 자세한 내용은 참조 하세요. [셀 재사용](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)합니다. `GetCell` 메서드 또한 읽습니다.는 `ImageFilename` 존재 하 고 이미지를 읽습니다를 있는 그대로 저장에 제공 된 데이터의 각 행의 속성을 `UIImage` 인스턴스를 업데이트 하기 전에 `NativeiOSListViewCell` 에 대 한 데이터 (이름, 범주 및 이미지)를 사용 하 여 인스턴스 행입니다.
+이 메서드는 화면에 표시될 데이터의 각 행에 대한 `NativeiOSListViewCell` 인스턴스를 만듭니다. `NativeiOSCell` 인스턴스는 각 셀의 레이아웃 및 셀의 데이터를 정의합니다. 셀이 스크롤로 인해 화면에서 사라지면 셀은 재사용을 위해 사용할 수 있도록 생성됩니다. 이렇게 하면 목록에 있는 모든 데이터가 아니라 화면에 표시되는 데이터에 대해 `NativeiOSCell` 인스턴스만 있는 것을 보장하여 메모리 낭비를 방지합니다. 셀 재사용에 대한 자세한 내용은 [셀 재사용](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)을 참조하세요. `GetCell` 메서드는 데이터의 각 행의 `ImageFilename` 속성을 읽고(존재하는 경우), 이미지를 읽고, 행에 대한 데이터(이름, 범주 및 이미지)로 `NativeiOSListViewCell` 인스턴스를 업데이트하기 전에 `UIImage` 인스턴스로 저장합니다.
 
-`NativeiOSListViewCell` 클래스는 각 셀에 대 한 레이아웃을 정의 하 고 다음 코드 예제에 표시 됩니다.
+`NativeiOSListViewCell` 클래스는 각 셀에 대한 레이아웃을 정의하며, 다음 코드 예제에 표시됩니다.
 
 ```csharp
 public class NativeiOSListViewCell : UITableViewCell
@@ -295,11 +295,11 @@ public class NativeiOSListViewCell : UITableViewCell
 }
 ```
 
-이 클래스는 셀의 내용 및 해당 레이아웃을 렌더링 하는 데 사용 하는 컨트롤을 정의 합니다. 합니다 `NativeiOSListViewCell` 생성자의 인스턴스를 만듭니다 `UILabel` 및 `UIImageView` 컨트롤 및 모양을 초기화 합니다. 이러한 컨트롤은 하는 데 사용 하 여 각 행의 데이터를 표시 합니다 `UpdateCell` 이 데이터를 설정 하는 데 사용 되는 메서드를 `UILabel` 및 `UIImageView` 인스턴스. 이 인스턴스의 위치가 설정 재정의 된 `LayoutSubviews` 셀 내에서 해당 좌표를 지정 하 여 메서드.
+이 클래스는 셀의 콘텐츠 및 해당 레이아웃을 렌더링하는 데 사용하는 컨트롤을 정의합니다. `NativeiOSListViewCell` 생성자는 `UILabel` 및 `UIImageView` 컨트롤의 인스턴스를 만들고, 모양을 초기화합니다. 이러한 컨트롤은 `UILabel` 및 `UIImageView` 인스턴스에서 이 데이터를 설정하는 데 사용되는 `UpdateCell` 메서드와 함께 각 행의 데이터를 표시하는 데 사용됩니다. 이러한 인스턴스의 위치는 재정의된 `LayoutSubviews` 메서드 및 셀 내의 해당 좌표를 지정하여 설정됩니다.
 
 #### <a name="responding-to-a-property-change-on-the-custom-control"></a>사용자 지정 컨트롤의 속성 변경에 응답
 
-경우는 `NativeListView.Items` 속성에 추가 되는 항목으로 인해 변경 또는 목록에서 제거, 사용자 지정 렌더러가 변경 내용을 표시 하 여 응답 해야 합니다. 재정의 하 여이 작업을 수행할 수 있습니다는 `OnElementPropertyChanged` 메서드를 다음 코드 예제에 표시 됩니다.
+`NativeListView.Items` 속성이 목록에 추가되거나 목록에서 제거되는 항목으로 인해 변경되는 경우 사용자 지정 렌더러는 변경 내용을 표시하여 응답해야 합니다. 다음 코드 예제에 표시되는 `OnElementPropertyChanged` 메서드를 재정의하여 이 작업을 수행할 수 있습니다.
 
 ```csharp
 protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -312,11 +312,11 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 }
 ```
 
-메서드의 새 인스턴스를 만듭니다는 `NativeiOSListViewSource` 데이터를 제공 하는 클래스를 `UITableView` 컨트롤을 하는 바인딩 가능한 제공 `NativeListView.Items` 속성이 변경 합니다.
+메서드는 바인딩 가능한 `NativeListView.Items` 속성이 변경되는 경우 `UITableView` 컨트롤에 데이터를 제공하는 `NativeiOSListViewSource` 클래스의 새 인스턴스를 만듭니다.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Android에서 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 Android 플랫폼에 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제에서는 Android 플랫폼용 사용자 지정 렌더러를 보여줍니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeListView), typeof(NativeAndroidListViewRenderer))]
@@ -358,9 +358,9 @@ namespace CustomRenderer.Droid
 }
 ```
 
-네이티브 `ListView` 컨트롤은 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결할 때 제공한 구성 됩니다. 인스턴스를 만들고 이렇게이 구성 하면 합니다 `NativeAndroidListViewAdapter` 네이티브에 데이터를 제공 하는 클래스 `ListView` 컨트롤을 처리 하는 이벤트 처리기를 등록 합니다 `ItemClick` 이벤트. 이 처리기는 호출을 합니다 `ItemSelected` 에서 제공 하는 이벤트를 `NativeListView` 사용자 지정 컨트롤입니다. `ItemClick` Xamarin.Forms 렌더러가 변경 내용에 연결 되어 있으면 이벤트에서 구독 취소 합니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤에 데이터를 제공하는 `NativeAndroidListViewAdapter` 클래스의 인스턴스를 만들고, `ItemClick` 이벤트를 처리하는 이벤트 처리기를 등록하는 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `ItemClick` 이벤트는 렌더러가 변경 내용에 연결된 Xamarin.Forms 요소에서만 구독이 취소됩니다.
 
-`NativeAndroidListViewAdapter` 에서 파생 되는 `BaseAdapter` 클래스 및 노출은 `Items` 재정의 뿐만 아니라 표시 되는 데이터의 목록을 포함 하는 속성을 `Count`, `GetView`, `GetItemId`, 및 `this[int]` 메서드. 이러한 메서드 재정의 대 한 자세한 내용은 참조 하세요. [는 ListAdapter 구현](~/android/user-interface/layouts/list-view/populating.md)합니다. `GetView` 메서드는 데이터로 채워진, 각 행에 대 한 뷰를 반환 하 고 다음 코드 예제에 표시 됩니다.
+`NativeAndroidListViewAdapter`는 `BaseAdapter` 클래스에서 파생되며 `Count`, `GetView`, `GetItemId` 및 `this[int]` 메서드 재정의 뿐만 아니라 표시되는 데이터의 목록을 포함하는 `Items` 속성을 노출합니다. 이러한 메서드 재정의에 대한 자세한 내용은 [ListAdapter 구현](~/android/user-interface/layouts/list-view/populating.md)을 참조하세요. `GetView` 메서드는 데이터로 채워지는 각 행에 대한 보기를 반환하며, 다음 코드 예제에 표시됩니다.
 
 ```csharp
 public override View GetView (int position, View convertView, ViewGroup parent)
@@ -405,11 +405,11 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 }
 ```
 
-`GetView` 메서드는 렌더링할 셀에 반환할으로 `View`, 목록에서 데이터의 각 행에 대 한 합니다. 만듭니다는 `View` 모양의 사용 하 여 화면에 표시할 데이터의 각 행에 대 한 인스턴스는 `View` 레이아웃 파일에 정의 되는 인스턴스. 셀 스크롤로 인해 화면에서 사라지면 셀 제공 됩니다 다시 사용할 수 있도록 합니다. 있는지만 확인 하 여 메모리가 낭비를 방지 하는이 `View` 인스턴스 목록에 있는 데이터의 모든가 대신 화면에 표시 되는 데이터에 대 한 합니다. 뷰 다시 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md)합니다.
+`GetView` 메서드는 목록에서 데이터의 각 행에 대해 `View`로 렌더링되는 셀을 반환하도록 호출됩니다. 레이아웃 파일에서 정의되는 `View` 인스턴스의 모양으로 화면에 표시될 데이터의 각 행에 대한 `View` 인스턴스를 만듭니다. 셀이 스크롤로 인해 화면에서 사라지면 셀은 재사용을 위해 사용할 수 있도록 생성됩니다. 이렇게 하면 목록에 있는 모든 데이터가 아니라 화면에 표시되는 데이터에 대해 `View` 인스턴스만 있는 것을 보장하여 메모리 낭비를 방지합니다. 보기 재사용에 대한 자세한 내용은 [행 보기 재사용](~/android/user-interface/layouts/list-view/populating.md)을 참조하세요.
 
-`GetView` 채웁니다 메서드를 `View` 에 지정 된 파일 이름에서 이미지 데이터를 읽는 비롯 한 데이터를 사용 하 여 인스턴스를 `ImageFilename` 속성입니다.
+`GetView` 메서드는 또한 `ImageFilename` 속성에 지정된 파일 이름에서 이미지 데이터 읽기를 포함하여 데이터로 `View` 인스턴스를 채웁니다.
 
-네이티브 하 여 각 셀 dispayed의 레이아웃 `ListView` 에 정의 된 합니다 `NativeAndroidListViewCell.axml` 레이아웃 파일을 더하게 됩니다는 `LayoutInflater.Inflate` 메서드. 다음 코드 예제에서는 레이아웃 정을 보여 줍니다.
+네이티브 `ListView`로 표시되는 각 셀의 레이아웃은 `LayoutInflater.Inflate` 메서드로 확장되는 `NativeAndroidListViewCell.axml` 레이아웃 파일에서 정의됩니다. 다음 코드 예제에서는 레이아웃 정의를 보여줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -449,11 +449,11 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 </RelativeLayout>
 ```
 
-이 레이아웃 지정 두 개의 `TextView` 컨트롤 및 `ImageView` 컨트롤은 셀의 내용을 표시 하는 데 사용 됩니다. 두 `TextView` 내에서 세로 방향 컨트롤은는 `LinearLayout` 내에 포함 되는 모든 컨트롤을 사용 하 여 컨트롤을 `RelativeLayout`.
+이 레이아웃은 두 개의 `TextView` 컨트롤 및 `ImageView` 컨트롤이 셀의 콘텐츠를 표시하는 데 사용되는 것을 지정합니다. 두 개의 `TextView` 컨트롤은 `RelativeLayout` 내에 포함되는 모든 컨트롤을 사용하여 `LinearLayout` 컨트롤 내에서 세로 방향으로 설정됩니다.
 
 #### <a name="responding-to-a-property-change-on-the-custom-control"></a>사용자 지정 컨트롤의 속성 변경에 응답
 
-경우는 `NativeListView.Items` 속성에 추가 되는 항목으로 인해 변경 또는 목록에서 제거, 사용자 지정 렌더러가 변경 내용을 표시 하 여 응답 해야 합니다. 재정의 하 여이 작업을 수행할 수 있습니다는 `OnElementPropertyChanged` 메서드를 다음 코드 예제에 표시 됩니다.
+`NativeListView.Items` 속성이 목록에 추가되거나 목록에서 제거되는 항목으로 인해 변경되는 경우 사용자 지정 렌더러는 변경 내용을 표시하여 응답해야 합니다. 다음 코드 예제에 표시되는 `OnElementPropertyChanged` 메서드를 재정의하여 이 작업을 수행할 수 있습니다.
 
 ```csharp
 protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -466,11 +466,11 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 }
 ```
 
-메서드의 새 인스턴스를 만듭니다는 `NativeAndroidListViewAdapter` 네이티브에 데이터를 제공 하는 클래스 `ListView` 컨트롤을 하는 바인딩 가능한 제공 `NativeListView.Items` 속성이 변경 합니다.
+메서드는 바인딩 가능한 `NativeListView.Items` 속성이 변경되는 경우 네이티브 `ListView` 컨트롤에 데이터를 제공하는 `NativeAndroidListViewAdapter` 클래스의 새 인스턴스를 만듭니다.
 
-### <a name="creating-the-custom-renderer-on-uwp"></a>UWP의 사용자 지정 렌더러 만들기
+### <a name="creating-the-custom-renderer-on-uwp"></a>UWP에서 사용자 지정 렌더러 만들기
 
-다음 코드 예제에서는 UWP에 대 한 사용자 지정 렌더러를 보여 줍니다.
+다음 코드 예제는 UWP용 사용자 지정 렌더러를 보여줍니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
@@ -511,9 +511,9 @@ namespace CustomRenderer.UWP
 }
 ```
 
-네이티브 `ListView` 컨트롤은 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결할 때 제공한 구성 됩니다. 이렇게이 구성 하면 설정을 어떻게 네이티브 `ListView` 컨트롤 컨트롤, 모양 및 각 셀의 내용을 정의 하 고 를처리하는이벤트처리기를등록하여표시된데이터를채우는선택된항목에응답합니다`SelectionChanged` 이벤트입니다. 이 처리기는 호출을 합니다 `ItemSelected` 에서 제공 하는 이벤트를 `NativeListView` 사용자 지정 컨트롤입니다. `SelectionChanged` Xamarin.Forms 렌더러가 변경 내용에 연결 되어 있으면 이벤트에서 구독 취소 합니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤이 선택되는 항목에 응답하는 방법 설정, 컨트롤로 표시되는 데이터 채우기, 각 셀의 모양 및 콘텐츠 정의 및 `SelectionChanged` 이벤트를 처리하는 이벤트 처리기 등록 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `SelectionChanged` 이벤트는 렌더러가 변경 내용에 연결된 Xamarin.Forms 요소에서만 구독이 취소됩니다.
 
-각 네이티브의 내용과 모양을 `ListView` 셀에 의해 정의 됩니다는 `DataTemplate` 라는 `ListViewItemTemplate`합니다. 이 `DataTemplate` 응용 프로그램 수준 리소스 사전에 저장 되 고 다음 코드 예제에 표시 됩니다.
+각 네이티브 `ListView` 셀의 모양 및 콘텐츠는 `ListViewItemTemplate`이라는 `DataTemplate`에 의해 정의됩니다. 이 `DataTemplate`은 애플리케이션 수준 리소스 사전에 저장되며, 다음 코드 예제에 표시됩니다.
 
 ```xaml
 <DataTemplate x:Key="ListViewItemTemplate">
@@ -538,11 +538,11 @@ namespace CustomRenderer.UWP
 </DataTemplate>
 ```
 
-`DataTemplate` 셀 레이아웃 및 모양을의 내용을 표시 하는 데 사용 하는 컨트롤을 지정 합니다. 두 개의 `TextBlock` 컨트롤 및 `Image` 컨트롤은 데이터 바인딩을 통해 셀의 내용을 표시 하는 데 사용 됩니다. 또한의 인스턴스를 `ConcatImageExtensionConverter` 연결 하는 데 사용 되는 `.jpg` 파일 각 이미지 파일 이름 확장명입니다. 이렇게 하면 합니다 `Image` 컨트롤에서 로드 하 고 때 이미지를 렌더링할 수 `Source` 속성을 설정 합니다.
+`DataTemplate`은 셀의 콘텐츠, 해당 레이아웃 및 모양을 표시하는 데 사용되는 컨트롤을 지정합니다. 두 개의 `TextBlock` 컨트롤 및 `Image` 컨트롤은 데이터 바인딩을 통해 셀의 콘텐츠를 표시하는 데 사용됩니다. 또한 `ConcatImageExtensionConverter`의 인스턴스는 각 이미지 파일 이름에 `.jpg` 파일 확장을 연결하는 데 사용됩니다. 이렇게 하면 `Image` 컨트롤은 해당 `Source` 속성이 설정될 때 이미지를 로드하고 렌더링할 수 있습니다.
 
 #### <a name="responding-to-a-property-change-on-the-custom-control"></a>사용자 지정 컨트롤의 속성 변경에 응답
 
-경우는 `NativeListView.Items` 속성에 추가 되는 항목으로 인해 변경 또는 목록에서 제거, 사용자 지정 렌더러가 변경 내용을 표시 하 여 응답 해야 합니다. 재정의 하 여이 작업을 수행할 수 있습니다는 `OnElementPropertyChanged` 메서드를 다음 코드 예제에 표시 됩니다.
+`NativeListView.Items` 속성이 목록에 추가되거나 목록에서 제거되는 항목으로 인해 변경되는 경우 사용자 지정 렌더러는 변경 내용을 표시하여 응답해야 합니다. 다음 코드 예제에 표시되는 `OnElementPropertyChanged` 메서드를 재정의하여 이 작업을 수행할 수 있습니다.
 
 ```csharp
 protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -556,13 +556,13 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 }
 ```
 
-메서드가 네이티브를 다시 채웁니다 `ListView` 컨트롤이 변경된 된 데이터를 사용 하 여 제공 하는 바인딩 가능한 `NativeListView.Items` 속성이 변경 합니다.
+바인딩 가능한 `NativeListView.Items` 속성이 변경되는 경우 메서드는 변경된 데이터로 네이티브 `ListView`컨트롤을 다시 채웁니다.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 사용자 지정 렌더러를 플랫폼별 목록 컨트롤 및 네이티브 셀 레이아웃을 캡슐화 하는 네이티브 목록 제어 성능 더욱 잘 제어할 수 있도록 만드는 방법을 살펴보았습니다.
+이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 살펴보았습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererListView (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
+- [CustomRendererListView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)

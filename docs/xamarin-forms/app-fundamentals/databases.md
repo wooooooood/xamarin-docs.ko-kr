@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 로컬 데이터베이스
-description: Xamarin.Forms는 로드 하 고 공유 코드에서 개체를 저장할 수 있도록 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다. 이 문서에서는 어떻게 Xamarin.Forms 응용 프로그램 수 데이터 읽기 및 쓰기 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스를 설명 합니다.
+description: Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 애플리케이션이 SQLite.Net을 사용하여 데이터를 읽고 로컬 SQLite 데이터베이스에 데이터를 기록하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
@@ -9,41 +9,41 @@ ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 05c77c4c47841a897d0d1de5c3ba004db524ea2d
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "36310142"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
-_Xamarin.Forms는 로드 하 고 공유 코드에서 개체를 저장할 수 있도록 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다. 이 문서에서는 어떻게 Xamarin.Forms 응용 프로그램 수 데이터 읽기 및 쓰기 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스를 설명 합니다._
+_Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 애플리케이션이 SQLite.Net을 사용하여 데이터를 읽고 로컬 SQLite 데이터베이스에 데이터를 기록하는 방법을 설명합니다._
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms 응용 프로그램에서 사용할 수는 [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) 데이터베이스 작업을 통합 하는 패키지를 참조 하 여 코드를 공유 합니다 `SQLite` NuGet에서 제공 되는 클래스입니다. Xamarin.Forms 솔루션의.NET Standard 라이브러리 프로젝트에서 데이터베이스 작업을 정의할 수 있습니다.
+Xamarin.Forms 애플리케이션은 [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) 패키지를 사용하여 NuGet에서 제공되는 `SQLite` 클래스를 참조하여 데이터베이스 작업을 공유 코드에 통합할 수 있습니다. 데이터베이스 작업은 Xamarin.Forms 솔루션의.NET 표준 라이브러리 프로젝트에서 정의할 수 있습니다.
 
-와 함께 [샘플 응용 프로그램](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) 는 간단한 할 일 목록 응용 프로그램입니다. 다음 스크린샷에서 각 플랫폼에서 샘플을 표시 하는 방법을 보여 줍니다.
+함께 제공되는 [애플리케이션 예제](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)는 간단한 할 일 목록 애플리케이션입니다. 다음 스크린샷에서는 각 플랫폼에서 샘플이 어떻게 나타나는지를 보여 줍니다.
 
-[![Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷") [ ![ Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷")
+[![Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 페이지 스크린샷") [![Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 페이지 스크린샷")
 
 <a name="Using_SQLite_with_PCL" />
 
 ## <a name="using-sqlite"></a>SQLite 사용
 
-Xamarin.Forms.NET Standard 라이브러리에 SQLite 지원을 추가 하려면 사용 하 여 NuGet의 검색 기능 찾으려고 **sqlite-net-pcl** 최신 패키지를 설치 하 고:
+Xamarin.Forms .NET 표준 라이브러리에 SQLite 지원을 추가하려면 NuGet의 검색 기능을 사용하여 **sqlite-net-pcl**을 찾고 최신 패키지를 설치합니다.
 
 ![NuGet SQLite.NET PCL 패키지 추가](databases-images/vs2017-sqlite-pcl-nuget.png "NuGet SQLite.NET PCL 패키지 추가")
 
-비슷한 이름의 NuGet 패키지의 여러 가지, 이러한 특성이 올바른 패키지:
+비슷한 이름의 NuGet 패키지가 여러 개 있으며 정확한 패키지는 다음 특성을 포함합니다.
 
-- **만든:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
+- **만든 사람:** Frank A. Krueger
+- **ID:** sqlite-net-pcl
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> 패키지 이름에도 불구 하 고 사용 합니다 **sqlite-net-pcl** .NET Standard 프로젝트에도 NuGet 패키지.
+> 패키지 이름에도 불구하고 .NET 표준 프로젝트에서도 **sqlite-net-pcl** NuGet 패키지를 사용합니다.
 
-참조를 추가한 후 속성을 추가 하 여 `App` 데이터베이스 저장 로컬 파일 경로 반환 하는 클래스:
+참조가 추가되었으면 데이터베이스를 저장하기 위해 로컬 파일 경로를 반환하는 `App` 클래스에 속성을 추가합니다.
 
 ```csharp
 static TodoItemDatabase database;
@@ -62,7 +62,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-`TodoItemDatabase` 생성자 인수로 서 데이터베이스 파일의 경로 사용 하는 다음과 같습니다.
+아래에 표시된 것처럼 `TodoItemDatabase` 생성자는 데이터베이스 파일에 대한 경로를 인수로 사용합니다.
 
 ```csharp
 public TodoItemDatabase(string dbPath)
@@ -72,9 +72,9 @@ public TodoItemDatabase(string dbPath)
 }
 ```
 
-이점은 단일 단일 데이터베이스의 연결이 생성 되는 데이터베이스를 노출 하는 동안 응용 프로그램 열기 유지 되는 실행, 수행 되므로 데이터베이스 작업을 열고 될 때마다 데이터베이스 파일을 닫는의 비용을 방지 합니다.
+데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
 
-나머지는 `TodoItemDatabase` 클래스 플랫폼 간 실행 되는 SQLite 쿼리를 포함 합니다. 예제 쿼리 코드는 다음과 같습니다 (구문에 대 한 자세한 내용은에서 찾을 수 있습니다 [Xamarin.iOS와 함께 사용 하 여 SQLite.NET](~/ios/data-cloud/data/using-sqlite-orm.md)합니다.
+`TodoItemDatabase` 클래스의 나머지 부분에는 플랫폼 간 실행되는 SQLite 쿼리가 포함됩니다. 예제 쿼리 코드는 아래와 같습니다(구문에 대한 자세한 내용은 [SQLite.NET with Xamarin.iOS 사용](~/ios/data-cloud/data/using-sqlite-orm.md)에서 확인 가능).
 
 ```csharp
 public Task<List<TodoItem>> GetItemsAsync()
@@ -110,16 +110,16 @@ public Task<int> DeleteItemAsync(TodoItem item)
 ```
 
 > [!NOTE]
-> 비동기 SQLite.Net API를 사용 하 여의 장점은 작업을 백그라운드 스레드로 이동 하는 데이터베이스입니다. 또한 동시성 처리의 API를 담당 하기 때문에 코드를 작성할 필요가 없습니다 있습니다.
+> 비동기 SQLite.Net API를 사용하면 데이터베이스 작업이 백그라운드 스레드로 전환된다는 이점이 있습니다. 또한 API에서 대신 처리하므로 동시성 처리 코드를 추가로 작성할 필요가 없습니다.
 
 ## <a name="summary"></a>요약
 
-Xamarin.Forms는 로드 하 고 공유 코드에서 개체를 저장할 수 있도록 하는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 합니다.
+Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다.
 
-이 문서에 초점을 맞춘 **액세스** Xamarin.Forms를 사용 하 여 SQLite 데이터베이스입니다. SQLite.Net 자체를 사용 하 여 작업에 대 한 자세한 내용은 참조는 [Android에서 SQLite.NET](~/android/data-cloud/data-access/using-sqlite-orm.md) 또는 [iOS에서 SQLite.NET](~/ios/data-cloud/data/using-sqlite-orm.md) 설명서.
+이 문서에서는 Xamarin.Forms를 사용하여 SQLite 데이터베이스에 **액세스**하는 것을 중점적으로 설명합니다. SQLite.Net 자체로 작업하는 방법은 [Android에서 SQLite.NET](~/android/data-cloud/data-access/using-sqlite-orm.md) 또는 [iOS에서 SQLite.NET](~/ios/data-cloud/data/using-sqlite-orm.md) 설명서를 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [할 일 샘플](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+- [Todo 샘플](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 

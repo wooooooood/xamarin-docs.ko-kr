@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 바인딩 모드
-description: 이 문서에서는 원본 및 대상 BindingMode 열거형의 멤버와 지정 된 바인딩 모드를 사용 하 여 간 정보의 흐름을 제어 하는 방법을 설명 합니다. 바인딩할 수 있는 속성이 모든 속성이 데이터 바인딩 대상 해당 하는 경우 적용 모드를 나타내는 기본 바인딩 모드를 보여 줍니다.
+description: 이 문서에서는 BindingMode 열거형의 멤버를 통해 지정되는 바인딩 모드를 사용하여 원본과 대상 간의 정보 흐름을 제어하는 방법을 설명합니다. 바인딩할 수 있는 모든 속성에는 기본 바인딩 모드가 있으며, 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 05/01/2018
 ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
 ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51563942"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
-에 [이전 문서](basic-bindings.md)의 **대체 코드 바인딩** 및 **대신 XAML 바인딩** 추천 하는 페이지를 `Label` 사용 하 여 해당 `Scale` 속성 바인딩되는 `Value` 의 속성을 `Slider`합니다. 때문에 `Slider` 초기 값이 0 이면이 인해를 `Scale` 의 속성을 `Label` 1이 아닌 0으로 설정 됩니다 및 `Label` 사라졌습니다.
+[이전 문서](basic-bindings.md)에서는 **Alternative Code Binding**(대체 코드 바인딩)과 **Alternative XAML Binding**(대체 XAML 바인딩) 페이지에 `Scale` 속성이 있는 `Label`이 `Slider`의 `Value`에 바인딩되는 것을 설명했습니다. `Slider` 초기 값이 0이라서 `Label`의 `Scale` 속성이 1이 아닌 0으로 설정되어 `Label`이 사라졌습니다.
 
-에 [ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 샘플을 **역방향 바인딩** 페이지는 이전 문서에서는 프로그램와 유사 합니다 에데이터바인딩이정의된제외하고`Slider` 대신에 `Label`:
+[**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 샘플의 **Reverse Binding**(역방향 바인딩) 페이지는 이전 문서의 프로그램과 유사하며, 데이터 바인딩이 `Label`에 정의되지 않고 `Slider`에 정의되는 것만 다릅니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -41,78 +41,78 @@ ms.locfileid: "51563942"
 </ContentPage>
 ```
 
-처음에 울 수 있지만 이전 버전과: 이제는 `Label` 는 데이터 바인딩 소스 및 `Slider` 대상입니다. 바인딩 참조를 `Opacity` 의 속성을 `Label`, 1의 기본 값.
+처음에는 반대 방향처럼 보일 수 있습니다. 이제 `Label`이 데이터 바인딩 원본이고 `Slider`가 대상입니다. 바인딩은 `Label`의 `Opacity` 속성을 참조하며, 기본값은 1일입니다.
 
-예상할 수 있듯이 합니다 `Slider` 초기에서 값을 1로 초기화 됩니다 `Opacity` 의 값 `Label`합니다. 이 iOS 스크린 샷 왼쪽에 표시 됩니다.
+예상대로 `Slider`는 `Label`의 초기 `Opacity` 값에서 1로 초기화됩니다. 왼쪽의 iOS 스크린샷이 이 경우를 보여줍니다.
 
-[![바인딩 역방향](binding-mode-images/reversebinding-small.png "바인딩 역방향")](binding-mode-images/reversebinding-large.png#lightbox "역방향 바인딩")
+[![역방향 바인딩](binding-mode-images/reversebinding-small.png "역방향 바인딩")](binding-mode-images/reversebinding-large.png#lightbox "역방향 바인딩")
 
-경우도 있겠지만 놀 랐는 `Slider` 스크린샷에서 Android 및 UWP 시연 하려면 계속 됩니다. 데이터 바인딩의 작동 더 나은 경우에는 제안에 `Slider` 바인딩 대상 대신 `Label` 예상할 수 있는 초기화 하는 방식 때문에 합니다.
+하지만 놀랍게도 `Slider`는 Android와 UWP 스크린샷에 표시된 것처럼 계속 작동합니다. 이를 통해 알 수 있는 것은 데이터 바인딩은 `Label`보다는 `Slider`가 바인딩 대상일 때 더 잘 작동하며 그 이유는 초기화가 예상대로 작동하기 때문이라는 점입니다.
 
-간의 차이 **역방향 바인딩** 샘플과 이전 샘플에서는 합니다 *바인딩 모드*합니다.
+**Reverse Binding**(역방향 바인딩) 샘플과 이전 샘플의 차이는 *바인딩 모드*입니다.
 
 ## <a name="the-default-binding-mode"></a>기본 바인딩 모드
 
-바인딩 모드의 구성원으로 지정 된 [ `BindingMode` ](xref:Xamarin.Forms.BindingMode) 열거형:
+바인딩 모드는 [`BindingMode`](xref:Xamarin.Forms.BindingMode) 열거형의 멤버를 통해 지정됩니다.
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 데이터 원본과 대상 간의 양방향 이동
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 데이터 원본에서 대상 이동
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터 원본으로 대상에서 이동합니다.
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 대상으로 하지만 경우에만 원본에서 데이터 이동은 `BindingContext` 변경 (새 Xamarin.Forms 3.0)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 데이터가 원본과 대상 사이에서 양방향으로 이동합니다.
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 데이터가 원본에서 대상으로 이동합니다.
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 대상에서 원본으로 이동합니다.
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; `BindingContext`가 변경되는 경우에만 데이터가 원본에서 대상으로 이동합니다(Xamarin.Forms 3.0의 새로운 기능).
 
-기본 바인딩 가능 속성 만들어질 때 설정 되는 모드를 바인딩 및에서 사용할 수 있는 모든 바인딩 가능한 속성에는 [ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) 의 속성을 `BindableProperty` 개체입니다. 이 기본 바인딩 모드 데이터 바인딩 대상 속성이 해당 하는 경우 적용 모드를 나타냅니다.
+바인딩할 수 있는 모든 속성에는 바인딩할 수 있는 속성이 생성될 때 설정되는 기본 바인딩 모드가 있으며, `BindableProperty` 개체의 [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) 속성에 제공됩니다. 기본 바인딩 모드는 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
 
-와 같은 대부분의 속성에 대 한 기본 바인딩 모드 `Rotation`, `Scale`, 및 `Opacity` 는 `OneWay`합니다. 그런 다음 이러한 속성은 데이터 바인딩 대상, 대상 속성 원본에서 설정 됩니다.
+`Rotation`, `Scale` 및 `Opacity`와 같은 대부분의 속성에 대한 기본 바인딩 모드는 `OneWay`입니다. 이러한 속성이 데이터 바인딩 대상인 경우에는 대상 속성이 원본에서 설정됩니다.
 
-그러나에 대 한 기본 바인딩 모드를 `Value` 속성을 `Slider` 는 `TwoWay`합니다. 즉, 해당 경우에는 `Value` 속성이 데이터 바인딩 대상 다음 대상 (일반적으로) 원본에서 설정 되어 있지만 대상에서 원본도 설정 됩니다. 이 통해 합니다 `Slider` 초기에서 설정할 `Opacity` 값입니다.
+하지만 `Slider`의 `Value` 속성에 대한 기본 바인딩 모드는 `TwoWay`입니다. 즉, `Value` 속성이 데이터 바인딩 대상이면 대상이 원본에서(일반적으로) 설정되지만 원본 역시 대상에서 설정됩니다. 따라서 `Slider`가 초기 `Opacity` 값에서 설정될 수 있습니다.
 
-이 양방향 바인딩에 무한 루프를 만드는 것 처럼 보일 수 있지만 발생 하지 않습니다. 바인딩 가능한 속성 속성이 실제로 변경 하지 않는 한 속성 변경을 신호 되지 않습니다. 이 무한 루프를 방지합니다.
+양방향 바인딩은 무한 루프를 만드는 것처럼 보일 수도 있지만 그런 상황은 발생하지 않습니다. 바인딩할 수 있는 속성은 속성이 실제로 변경되는 경우가 아니면 속성의 변화를 신호로 알리지 않습니다. 이를 통해 무한 루프가 방지됩니다.
 
-### <a name="two-way-bindings"></a>양방향 바인딩으로 설정
+### <a name="two-way-bindings"></a>양방향 바인딩
 
-가장 바인딩 가능한 속성의 기본 바인딩 모드를 가지 `OneWay` 있으 나 다음 속성의 기본 바인딩 모드를 `TwoWay`:
+바인딩할 수 있는 대부분의 속성에는 `OneWay`라는 기본 바인딩 모드가 있지만 다음 속성의 기본 바인딩 모드는 `TwoWay`입니다.
 
-- `Date` 속성 `DatePicker`
-- `Text` 속성 `Editor`하십시오 `Entry`, `SearchBar`, 및 `EntryCell`
-- `IsRefreshing` 속성 `ListView`
-- `SelectedItem` 속성 `MultiPage`
-- `SelectedIndex` 및 `SelectedItem` 의 속성 `Picker`
-- `Value` 속성의 `Slider` 및 `Stepper`
-- `IsToggled` 속성 `Switch`
-- `On` 속성 `SwitchCell`
-- `Time` 속성 `TimePicker`
+- `DatePicker`의 `Date` 속성
+- `Editor`, `Entry`, `SearchBar`, `EntryCell`의 `Text` 속성
+- `ListView`의 `IsRefreshing` 속성
+- `MultiPage`의 `SelectedItem` 속성
+- `Picker`의 `SelectedIndex` 및 `SelectedItem` 속성
+- `Slider`, `Stepper`의 `Value` 속성
+- `Switch`의 `IsToggled` 속성
+- `SwitchCell`의 `On` 속성
+- `TimePicker`의 `Time` 속성
 
-이러한 특정 속성으로 정의 된 `TwoWay` 매우 합당 한 이유가 있습니다.
+특정 속성이 `TwoWay`로 정의되는 데에는 매우 합당한 이유가 있습니다.
 
-데이터 바인딩 소스 및 보기와 같은 구성 된 뷰는 ViewModel 클래스는 데이터 바인딩 모델-뷰-ViewModel (MVVM) 응용 프로그램 아키텍처를 사용 하 여 사용 하는 경우 `Slider`, 데이터 바인딩 대상이 됩니다. MVVM 바인딩와 유사 합니다 **바인딩 역방향** 이전 샘플에서 바인딩 보다 더 많은 샘플입니다. 각 페이지의 보기에는 ViewModel의 해당 속성의 값을 사용 하 여 초기화 하지만 보기에서 변경 해야 ViewModel 속성에는 영향을 매우 높습니다.
+데이터 바인딩이 MVVM(Model-View-ViewModel) 애플리케이션 아키텍처에 사용되는 경우에는 ViewModel 클래스가 데이터 바인딩 소스이고 View(`Slider`와 같은 뷰로 구성됨)는 데이터 바인딩 대상이 됩니다. MVVM 바인딩은 이전 샘플의 바인딩보다 **Reverse Binding**(역방향 바인딩) 샘플과 더 유사합니다. 페이지의 각 뷰를 ViewModel의 해당 속성 값으로 초기화할 가능성이 높지만 뷰의 변경 내용은 ViewModel 속성에도 영향을 미쳐야 합니다.
 
-기본 바인딩 모드를 사용 하 여 속성 `TwoWay` MVVM 시나리오에서 사용할 가능성이 가장 높은 속성에 해당 됩니다.
+기본 바인딩 모드가 `TwoWay`인 속성이 MVVM 시나리오에서 가장 많이 사용되는 속성입니다.
 
-### <a name="one-way-to-source-bindings"></a>한-단방향-에-소스 바인딩
+### <a name="one-way-to-source-bindings"></a>One-Way-to-Source 바인딩
 
-읽기 전용으로 바인딩할 수 있는 속성의 기본 바인딩 모드를 사용할 `OneWayToSource`합니다. 기본 바인딩 모드를 가진 하나의 읽기/쓰기 바인딩 가능한 속성은 `OneWayToSource`:
+바인딩할 수 있는 읽기 전용 속성의 기본 바인딩 모드는 `OneWayToSource`입니다. 기본 바인딩 모드로 `OneWayToSource`가 사용되는 바인딩할 수 있는 읽기/쓰기 속성은 하나뿐입니다.
 
-- `SelectedItem` 속성 `ListView`
+- `ListView`의 `SelectedItem` 속성
 
-이유는 바인딩에 `SelectedItem` 속성을 설정 하 여 바인딩 소스 유발 합니다. 이 문서 뒷부분의 예는 해당 동작을 재정의합니다.
+`SelectedItem` 속성에 바인딩을 하면 바인딩 소스가 설정되어야 하기 때문입니다. 이 문서의 뒷부분에 나오는 예제에서 이 동작이 재정의됩니다.
 
-### <a name="one-time-bindings"></a>일회성 바인딩
+### <a name="one-time-bindings"></a>One-Time 바인딩
 
-몇 가지 속성의 기본 바인딩 모드를 가지 `OneTime`합니다. 이러한 항목은 다음과 같습니다.
+몇 가지 속성은 기본 바인딩 모드가 `OneTime`입니다. 이러한 항목은 다음과 같습니다.
 
-- `IsTextPredictionEnabled` 속성 `Entry`
-- `Text`를 `BackgroundColor`, 및 `Style` 의 속성 `Span`합니다.
+- `Entry`의 `IsTextPredictionEnabled` 속성
+- `Span`의 `Text`, `BackgroundColor`, `Style` 속성
 
-바인딩 모드를 사용 하 여 속성을 대상으로 `OneTime` 바인딩 컨텍스트를 변경 하는 경우에 업데이트 됩니다. 이 대 한 이러한 대상 속성에 바인딩 소스 속성의 변경 내용을 모니터링할 필요가 없기 때문에 바인딩 인프라를 단순해 집니다.
+바인딩 모드가 `OneTime`인 대상 속성은 바인딩 컨텍스트가 변경되는 경우에만 업데이트됩니다. 이러한 대상 속성의 바인딩은 원본 속성의 변경 내용을 모니터링할 필요가 없기 때문에 바인딩 인프라가 간소화됩니다.
 
-## <a name="viewmodels-and-property-change-notifications"></a>Viewmodel 및 속성 변경 알림
+## <a name="viewmodels-and-property-change-notifications"></a>ViewModels 및 Property-Change 알림
 
-합니다 **간단한 색 선택기** 페이지 간단한 ViewModel의 사용을 보여 줍니다. 데이터 바인딩을 3 개를 사용 하 여 색을 선택 하는 데 사용할 수 `Slider` 색상, 채도 및 명도 대 한 요소입니다.
+**Simple Color Selector**(간단한 색 선택기) 페이지는 간단한 ViewModel 사용을 보여줍니다. 데이터 바인딩을 사용하여 사용자가 색상, 채도 및 광도에 대한 세 가지 `Slider` 요소를 사용하여 색상을 선택할 수 있습니다.
 
-ViewModel에는 데이터 바인딩 소스입니다. ViewModel 않습니다 *되지* 바인딩 가능한 속성을 정의 하지만 바인딩 인프라는 속성의 값이 변경 될 때 알림을 받을 수 있도록 알림 메커니즘을 구현 하는 것 않습니다. 이 알림 메커니즘은는 [ `INotifyPropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged) 이라는 단일 속성을 정의 하는 인터페이스 [ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)합니다. 일반적으로이 인터페이스를 구현 하는 클래스의 공용 속성 중 하나에 값을 변경할 때 이벤트를 발생 시킵니다. 이벤트 속성은 변경 되지 않습니다 하는 경우 실행 될 필요가 없습니다. (합니다 `INotifyPropertyChanged` 가 인터페이스를 구현도 `BindableObject` 및 `PropertyChanged` 바인딩 가능한 속성 값이 변경 될 때마다 이벤트가 발생 합니다.)
+ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이러한 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 속성을 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
 
-`HslColorViewModel` 5 속성을 정의 하는 클래스:를 `Hue`, `Saturation`, `Luminosity`, 및 `Color` 속성은 서로 관련 되어 있습니다. 세 가지 중 하나가 색 구성 요소 변경 값 때 합니다 `Color` 속성은 다시 계산 및 `PropertyChanged` 모든 네 가지 속성에 대 한 이벤트가:
+`HslColorViewModel` 클래스는 다섯 가지 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity`, `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -206,13 +206,13 @@ public class HslColorViewModel : INotifyPropertyChanged
 }
 ```
 
-때를 `Color` 속성 변경, 정적 `GetNearestColorName` 에서 메서드는 `NamedColor` 클래스 (에 포함 합니다 **DataBindingDemos** 솔루션) 가장 가까운 명명 된 색을 가져오고 설정를 `Name` 속성. 이렇게 `Name` 속성이 개인 `set` 접근자 클래스 외부에서 설정할 수 없습니다.
+`Color` 속성이 변경되면 `NamedColor` 클래스(**DataBindingDemos** 솔루션에도 포함되어 있음)의 정적 `GetNearestColorName` 메서드가 가장 가까이 명명된 색을 가져다가 `Name` 속성을 설정합니다. `Name` 속성에는 비공개 `set` 접근자가 있기 때문에 클래스 외부에서는 설정할 수 없습니다.
 
-ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리기를 연결 합니다 `PropertyChanged` 이벤트입니다. 이러한 방식으로 바인딩 속성을 변경 알림을 받을 수와 변경된 된 값에서 대상 속성을 설정한 수 있습니다.
+ViewModel이 바인딩 소스로 설정되면 바인딩 인프라는 `PropertyChanged` 이벤트에 처리기를 연결합니다. 이런 방식으로 속성에 대한 변경 내용을 바인딩에 알릴 수 있으며 그런 다음, 변경된 값에서 대상 속성을 설정할 수 있습니다.
 
-그러나 경우 대상 속성 (또는 `Binding` 대상 속성에 정의)에 `BindingMode` 의 `OneTime`, 처리기에 연결 하는 바인딩 인프라에 대 한 필요는 없습니다를 `PropertyChanged` 이벤트입니다. 대상 속성이 업데이트 될 경우에만 `BindingContext` 변경과 소스 속성 자체가 변경 될 때 되지 않습니다.
+하지만 대상 속성(또는 대상 속성의 `Binding` 정의)에 `OneTime`의 `BindingMode`가 있으면 바인딩 인프라가 `PropertyChanged` 이벤트에 대한 처리기를 연결할 필요가 없습니다. 대상 속성은 `BindingContext`가 변경되는 경우에만 업데이트됩니다. 원본 속성 자체가 변경되는 경우에는 업데이트되지 않습니다.
 
-**간단한 색 선택기** XAML 파일은 합니다 `HslColorViewModel` 페이지의 리소스 사전에 초기화를 `Color` 속성입니다. `BindingContext` 의 속성을 `Grid` 로 설정 됩니다는 `StaticResource` 바인딩 해당 리소스를 참조 하는 확장:
+**Simple Color Selector**(간단한 색 선택기) XAML 파일은 페이지의 리소스 사전에서 `HslColorViewModel`을 인스턴스화하고 `Color` 속성을 초기화합니다. `Grid`의 `BindingContext` 속성은 해당 리소스를 참조하는 `StaticResource` 바인딩 확장으로 설정됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -256,17 +256,17 @@ ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리
 </ContentPage>
 ```
 
-합니다 `BoxView`, `Label`, 및 3 `Slider` 보기에서 바인딩 컨텍스트를 상속 받습니다.는 `Grid`합니다. 이러한 뷰는 ViewModel에 원본 속성을 참조 하는 모든 바인딩 대상입니다. 에 대 한는 `Color` 의 속성을 `BoxView`, 및 `Text` 의 속성을 `Label`, 데이터 바인딩은 `OneWay`: 보기에서 속성을 ViewModel의 속성에서 설정 됩니다.
+`BoxView`, `Label` 및 세 가지 `Slider`뷰는 `Grid`에서 바인딩 컨텍스트를 상속받습니다. 이러한 뷰는 모두 ViewModel의 원본 속성을 참조하는 바인딩 대상입니다. `BoxView`의 `Color` 속성, `Label`의 `Text` 속성, 데이터 바인딩은 `OneWay`이며, 뷰의 속성은 ViewModel의 속성으로부터 설정됩니다.
 
-`Value` 의 속성을 `Slider`, 것 인데, `TwoWay`합니다. 이렇게 하면 각 `Slider` ViewModel에서 그리고 각 설정할 ViewModel 설정할 `Slider`합니다.
+단 `Slider`의 `Value` 속성은 `TwoWay`입니다. 이렇게 하면 각 `Slider`을 ViewModel에서 설정하고 각 `Slider`에서 ViewModel을 설정할 수 있습니다.
 
-프로그램을 처음 실행할 때 합니다 `BoxView`, `Label`, 및 3 `Slider` 요소는 초기에 따라 ViewModel에서 모두 설정 `Color` ViewModel 인스턴스화된 경우 속성을 설정 합니다. 이 왼쪽에 있는 iOS 스크린샷에 표시 됩니다.
+프로그램을 처음 실행하는 경우 `BoxView`, `Label` 및 세 가지 `Slider` 요소는 모두 ViewModel을 인스턴스화했을 때 설정된 초기 `Color` 설정을 기반으로 ViewModel에서 설정됩니다. 왼쪽의 iOS 스크린샷이 이 경우를 보여줍니다.
 
-[![단순한 색 선택기](binding-mode-images/simplecolorselector-small.png "단순한 색 선택기")](binding-mode-images/simplecolorselector-large.png#lightbox "단순한 색 선택기")
+[![간단한 색 선택기](binding-mode-images/simplecolorselector-small.png "간단한 색 선택기")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple 간단한 색 선택기")
 
-슬라이더를 조작 하면 합니다 `BoxView` 고 `Label` Android 및 UWP 스크린샷에서 나온 것 처럼 적절히 업데이트 됩니다.
+슬라이더를 조작하면 그에 따라 `BoxView`와 `Label`이 Android와 UWP 스크린샷에 설명된 것처럼 업데이트됩니다.
 
-리소스 사전에 ViewModel을 인스턴스화하는 하나의 일반적인 방법입니다. 에 대 한 속성 요소 태그 내의 ViewModel을 인스턴스화하고 이기도 합니다 `BindingContext` 속성입니다. **간단한 색 선택기** XAML 파일을 제거는 `HslColorViewModel` 리소스 사전에서로 설정 합니다 `BindingContext` 의 속성은 `Grid` 같이:
+리소스 사전에서 ViewModel을 인스턴스화하는 것이 일반적인 방법 중 하나입니다. `BindingContext` 속성에 대한 속성 요소 태그 내에서 ViewModel을 인스턴스화하는 것도 가능합니다. **Simple Color Selector**(간단한 색 선택기) XAML 파일에서 `HslColorViewModel`을 리소스 사전에서 제거하고 다음과 같이 `Grid`의 `BindingContext` 속성으로 설정합니다.
 
 ```xaml
 <Grid>
@@ -279,13 +279,13 @@ ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리
 </Grid>
 ```
 
-바인딩 컨텍스트는 여러 가지 방법으로 설정할 수 있습니다. 경우에 따라 코드 숨김 파일을 ViewModel을 인스턴스화하고로 설정 합니다는 `BindingContext` 페이지의 속성입니다. 이들은 모두 유효한 접근 방식입니다.
+바인딩 컨텍스트는 다양한 방식으로 설정할 수 있습니다. 코드 숨김 파일이 ViewModel을 인스턴스화하고 페이지의 `BindingContext` 속성으로 설정하는 경우도 있습니다. 이 모두가 유효한 방식입니다.
 
-## <a name="overriding-the-binding-mode"></a>바인딩 모드를 재정의합니다.
+## <a name="overriding-the-binding-mode"></a>바인딩 모드 재정의
 
-대상 속성에 기본 바인딩 모드를 특정 데이터 바인딩에 대 한 적합 없는 경우 설정 하 여 재정의할 수는 [ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode) 속성을 `Binding` (또는 [ `Mode` ](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) 의 속성을 `Binding` 태그 확장)의 멤버 중 하나에 `BindingMode` 열거형입니다.
+대상 속성의 기본 바인딩 모드가 특정 데이터 바인딩에 적합하지 않으면 `Binding`의 [`Mode`](xref:Xamarin.Forms.BindingBase.Mode) 속성(또는 `Binding` 태그 확장의 [`Mode`](xref:Xamarin.Forms.Xaml.BindingExtension.Mode) 속성)을 `BindingMode` 열거형의 멤버 중 하나로 설정하여 재정의할 수 있습니다.
 
-그러나 설정 된 `Mode` 속성을 `TwoWay` 예상한 대로 작동 하지 않습니다. 예를 들어 수정를 시도 합니다 **대신 XAML 바인딩** 포함 하 여 XAML 파일 `TwoWay` 바인딩 정의에서:
+단, `Mode` 속성을 `TwoWay`로 설정해도 항상 예상대로 작동하지는 않습니다. 예를 들어, 바인딩 정의에 `TwoWay`가 포함되도록 **Alternative XAML Binding**(대체 XAML 바인딩) XAML 파일을 수정해 보겠습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -297,9 +297,9 @@ ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리
                        Mode=TwoWay}" />
 ```
 
-예상 되는 합니다 `Slider` 의 초기 값으로 초기화 됩니다를 `Scale` 속성을 1 이지만 발생 하지 않습니다. 경우는 `TwoWay` 바인딩 인스턴스화될, 대상 원본에서 가장 먼저 설정 됩니다, 즉를 `Scale` 속성는 `Slider` 0의 기본값. 경우는 `TwoWay` 바인딩은에 설정 됩니다는 `Slider`, 그런 다음 `Slider` 원본의 초기 설정 됩니다.
+`Slider`가 `Scale` 속성의 초기 값인 1로 초기화될 것으로 예상할 수도 있지만 그렇게 되지 않습니다. `TwoWay` 바인딩이 초기화되면 먼저 원본을 통해 대상이 설정됩니다. 즉, `Scale` 속성이 `Slider` 기본값인 0으로 설정됩니다. `TwoWay` 바인딩이 `Slider`에 설정되면 `Slider`는 원본을 통해 초기 설정됩니다.
 
-바인딩 모드 설정할 수 있습니다 `OneWayToSource` 에 **대신 XAML 바인딩** 샘플:
+**Alternative XAML Binding**(대체 XAML 바인딩) 샘플에서 바인딩 모드를 `OneWayToSource`로 설정할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -311,14 +311,14 @@ ViewModel은 바인딩 원본으로 설정 되 면 바인딩 인프라에 처리
                        Mode=OneWayToSource}" />
 ```
 
-이제는 `Slider` 1로 초기화 됩니다 (기본값인 `Scale`) 하지만 조작 하기는 `Slider` 영향을 주지 않습니다는 `Scale` 속성,이 기능은 매우 유용 합니다.
+이제 `Slider`가 1(`Scale`의 기본값)로 초기화되지만 `Slider`를 조작해도 `Scale` 속성에 영향을 주지 않기 때문에 별로 유용하지 않습니다.
 
 > [!NOTE]
-> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스도 정의 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 확장 될 수 있는 속성을 `VisualElement` 에서 다르게는 가로 및 세로 방향입니다.
+> 또한 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스는 `VisualElement`의 크기를 가로 및 세로 방향으로 다르게 확장할 수 있는 [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) 속성도 정의합니다.
 
-사용 하 여 기본 바인딩 모드를 재정의 하는 매우 유용한 응용 프로그램 `TwoWay` 포함 된 `SelectedItem` 의 속성 `ListView`합니다. 기본 바인딩 모드는 `OneWayToSource`합니다. 에 데이터 바인딩이 설정 된 경우는 `SelectedItem` 소스 속성에서 설정 됩니다는 ViewModel에 소스 속성을 참조할 속성을 `ListView` 선택 합니다. 그러나 일부 경우에 필요할 수 있습니다는 `ListView` ViewModel에서 초기화 되어야 합니다.
+`TwoWay`를 사용하여 기본 바인딩 모드를 재정의하는 매우 유용한 애플리케이션은 `ListView`의 `SelectedItem` 속성과 관련이 있습니다. 기본 바인딩 모드는 `OneWayToSource`입니다. 데이터 바인딩이 ViewModel의 원본 속성을 참조하도록 `SelectedItem` 속성에 설정되면 해당 원본 속성은 `ListView` 선택 항목에서 설정됩니다. 하지만 경우에 따라 `ListView`를 ViewModel에서 초기화해야 하는 경우도 있습니다.
 
-합니다 **샘플 설정을** 페이지에는이 기술을 보여 줍니다. 이 페이지를 자주 같이 ViewModel에 정의 된 응용 프로그램 설정의 간단한 구현을 나타냅니다 `SampleSettingsViewModel` 파일:
+**Sample Settings**(샘플 설정) 페이지는 이 기술을 보여줍니다. 이 페이지는 `SampleSettingsViewModel` 파일과 같이 ViewModel에 정의되는 경우가 많은 애플리케이션 설정의 간단한 구현을 나타냅니다.
 
 ```csharp
 public class SampleSettingsViewModel : INotifyPropertyChanged
@@ -412,13 +412,13 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-각 응용 프로그램 설정 라는 메서드에서 Xamarin.Forms 속성 사전에 저장 되는 속성은 `SaveState` 생성자에는 사전에서 로드 합니다. 클래스의 아래쪽에 있는 두 가지 방법이 ViewModels를 간소화 하 고 있도록 오류 발생 가능성이 적습니다. `OnPropertyChanged` 맨 아래에서 메서드가 호출 속성으로 설정 되는 선택적 매개 변수입니다. 이 문자열 속성의 이름을 지정할 때 맞춤법 오류를 방지 합니다.
+각 애플리케이션 설정은 `SaveState`라는 메서드로 Xamarin.Forms 속성 사전에 저장되고 이 사전에서 생성자로 로드되는 속성입니다. 클래스의 맨 아래에는 ViewModel을 간소화하고 오류를 줄이도록 도와주는 두 가지 메서드가 있습니다. 맨 아래 `OnPropertyChanged` 메서드에는 호출 속성으로 설정되는 선택적 매개 변수가 있습니다. 이것을 사용하면 속성 이름을 문자열로 지정할 때 맞춤법 오류가 방지됩니다.
 
-합니다 `SetProperty` 클래스의 메서드는 더: 필드로 저장 된 값을 사용 하 여 속성에 설정 되는 값과 비교 하 고 호출 `OnPropertyChanged` 두 값이 같은 경우입니다.
+클래스의 `SetProperty` 메서드는 훨씬 더 많은 작업을 수행합니다. 속성으로 설정되는 값을 필드로 저장되는 값과 비교하고 두 값이 같지 않을 때만 `OnPropertyChanged`를 호출합니다.
 
-`SampleSettingsViewModel` 배경색에 두 속성을 정의 하는 클래스: 합니다 `BackgroundNamedColor` 형식의 속성은 `NamedColor`는 클래스에도 포함 되어는 **DataBindingDemos** 솔루션. `BackgroundColor` 형식의 속성은 `Color`에서 가져온 및는 `Color` 의 속성을 `NamedColor` 개체.
+`SampleSettingsViewModel` 클래스는 배경색에 대한 두 가지 속성을 정의합니다. `BackgroundNamedColor` 속성은 `NamedColor` 유형이며, 이것은 **DataBindingDemos** 솔루션에도 포함되는 클래스입니다. `BackgroundColor` 속성은 `Color` 유형이며 `NamedColor` 개체의 `Color` 속성에서 가져옵니다.
 
-합니다 `NamedColor` 클래스.NET 리플렉션을 사용 하 여 Xamarin.Forms에 모든 정적 공용 필드가 열거 `Color` 구조 및 정적에서 액세스할 수 있는 컬렉션의 이름으로 저장 하기 `All` 속성:
+`NamedColor` 클래스는 .NET 리플렉션을 사용하여 Xamarin.Forms `Color` 구조체의 정적인 공용 필드를 모두 열거하고 정적 `All` 속성에서 액세스할 수 있는 컬렉션에 이름을 사용하여 저장합니다.
 
 ```csharp
 public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
@@ -526,7 +526,7 @@ public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
 }
 ```
 
-합니다 `App` 클래스를 **DataBindingDemos** 라는 속성을 정의 하는 프로젝트 `Settings` 형식의 `SampleSettingsViewModel`합니다. 이 속성은 초기화 때 합니다 `App` 클래스가 인스턴스화되면 및 `SaveState` 메서드를 호출한 경우는 `OnSleep` 메서드는:
+**DataBindingDemos** 프로젝트의 `App` 클래스는 `SampleSettingsViewModel` 유형의 `Settings`라는 속성을 정의합니다. 이 속성은 `App` 클래스가 인스턴스화될 때 초기화되고 `SaveState` 메서드는 `OnSleep` 메서드가 호출될 때 호출됩니다.
 
 ```csharp
 public partial class App : Application
@@ -560,9 +560,9 @@ public partial class App : Application
 }
 ```
 
-응용 프로그램 수명 주기 메서드에 대 한 자세한 내용은 문서 참조 [ **앱 수명 주기**](~/xamarin-forms/app-fundamentals/app-lifecycle.md)합니다.
+애플리케이션 수명 주기 메서드에 대한 자세한 내용은 [**앱 수명 주기**](~/xamarin-forms/app-fundamentals/app-lifecycle.md) 문서를 참조하세요.
 
-다른 거의 모든 것에서 처리 되는 **SampleSettingsPage.xaml** 파일입니다. `BindingContext` 페이지의 사용 하도록 설정 됩니다는 `Binding` 태그 확장: 바인딩 소스는 정적 `Application.Current` 인스턴스 속성의는 `App` 프로젝트에서 클래스 및 `Path` 로 설정 됩니다는 `Settings` 속성은 `SampleSettingsViewModel` 개체:
+그 밖에 거의 모든 것은 **SampleSettingsPage.xaml** 파일에서 처리됩니다. 페이지의 `BindingContext`는 `Binding` 태그 확장을 사용하여 설정됩니다. 바인딩 소스는 프로젝트의 `App` 클래스 인스턴스인 정적 `Application.Current` 속성이며 `Path`는 `SampleSettingsViewModel` 개체인 `Settings` 속성으로 설정됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -643,19 +643,19 @@ public partial class App : Application
 </ContentPage>
 ```
 
-페이지의 모든 자식을 바인딩 컨텍스트를 상속합니다. 속성에이 페이지에 대 한 다른 바인딩 대부분 `SampleSettingsViewModel`합니다. `BackgroundColor` 속성을 설정 하는 `BackgroundColor` 의 속성을 `StackLayout`, 및 `Entry`, `DatePicker`, `Switch`, 및 `Stepper` 속성 모든 ViewModel의 다른 속성에 바인딩된.
+페이지의 모든 자식은 바인딩 컨텍스트를 상속받습니다. 이 페이지의 다른 바인딩 대부분은 `SampleSettingsViewModel`의 속성에 지정됩니다. `BackgroundColor` 속성은 `StackLayout`의 `BackgroundColor` 속성을 설정하는 데 사용되고 `Entry`, `DatePicker`, `Switch`, `Stepper` 속성은 모두 ViewModel의 다른 속성에 바인딩됩니다.
 
-`ItemsSource` 의 속성을 `ListView` 정적으로 설정 되어 `NamedColor.All` 속성입니다. 그러면 채워집니다 합니다 `ListView` 모든는 `NamedColor` 인스턴스. 각 항목에 대 한 합니다 `ListView`, 항목에 대 한 바인딩 컨텍스트를로 `NamedColor` 개체입니다. `BoxView` 및 `Label` 에 `ViewCell` 속성에 바인딩된 `NamedColor`합니다.
+`ListView`의 `ItemsSource` 속성은 정적 `NamedColor.All` 속성으로 설정됩니다. 이것은 `ListView`를 모든 `NamedColor` 인스턴스로 채웁니다. `ListView`의 각 항목의 경우 해당 항목에 대한 바인딩 컨텍스트는 `NamedColor` 개체로 설정됩니다. `ViewCell`의 `BoxView`와 `Label`은 `NamedColor`의 속성에 바인딩됩니다.
 
-`SelectedItem` 의 속성을 `ListView` 형식입니다 `NamedColor`에 바인딩됩니다를 `BackgroundNamedColor` 속성의 `SampleSettingsViewModel`:
+`ListView`의 `SelectedItem` 속성은 `NamedColor` 유형이며 `SampleSettingsViewModel`의 `BackgroundNamedColor` 속성에 바인딩됩니다.
 
 ```xaml
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-에 대 한 기본 바인딩 모드 `SelectedItem` 는 `OneWayToSource`, 선택된 된 항목의 ViewModel 속성을 설정 하는 합니다. 합니다 `TwoWay` 모드에서는 `SelectedItem` ViewModel에서 초기화 합니다.
+`SelectedItem`의 기본 바인딩 모드는 `OneWayToSource`이며, 선택한 항목의 ViewModel 속성을 설정합니다. `TwoWay` 모드는 `SelectedItem`이 ViewModel에서 초기화될 수 있도록 합니다.
 
-그러나 경우는 `SelectedItem` 이런 방식이으로 설정 됩니다는 `ListView` 선택한 항목을 표시 하려면 자동으로 스크롤되지 않습니다. 필요한 코드 숨김 파일에 코드를 조금 같습니다.
+단, `SelectedItem`이 이렇게 설정되면 선택한 항목을 표시하도록 `ListView`가 자동으로 스크롤되지 않습니다. 코드 숨김 파일에 약간의 코드가 필요합니다.
 
 ```csharp
 public partial class SampleSettingsPage : ContentPage
@@ -674,16 +674,16 @@ public partial class SampleSettingsPage : ContentPage
 }
 ```
 
-왼쪽에 있는 iOS 스크린 샷을 처음 실행할 때 프로그램을 보여 줍니다. 생성자 `SampleSettingsViewModel` 초기화의 배경색을 흰색으로 및에서 선택한 항목에는 `ListView`:
+왼쪽의 iOS 스크린샷은 프로그램이 처음 실행될 때를 보여줍니다. `SampleSettingsViewModel`의 생성자는 배경색을 흰색으로 초기화하며, 이것이 `ListView`에 선택된 항목입니다.
 
-[![예제 설정](binding-mode-images/samplesettings-small.png "샘플 설정")](binding-mode-images/samplesettings-large.png#lightbox "설정 샘플")
+[![샘플 설정](binding-mode-images/samplesettings-small.png "샘플 설정")](binding-mode-images/samplesettings-large.png#lightbox "샘플 설정")
 
-다른 두 개의 스크린샷에 표시 설정이 변경된 합니다. 이 페이지를 사용 하 여 시험해 보려는 경우 프로그램이 절전 모드로 전환 하거나 장치 또는 실행 중인 에뮬레이터에서 종료를 배치 해야 합니다. Visual Studio 디버거에서 프로그램 종료를 발생 하지 것입니다는 `OnSleep` 의 재정의 `App` 클래스를 호출할 수 있습니다.
+다른 두 스크린샷은 변경된 설정을 보여줍니다. 이 페이지로 실험할 때는 프로그램을 절전 상태로 두거나 실행 중인 디바이스나 에뮬레이터에서 종료해야 합니다. Visual Studio 디버거에서 프로그램을 종료하면 `App` 클래스의 `OnSleep` 재정의가 호출되지 않습니다.
 
-다음 문서에서 지정 하는 방법을 볼 [ **문자열 서식 지정** ](string-formatting.md) 에서 설정 되는 데이터 바인딩의 합니다 `Text` 속성 `Label`합니다.
+다음 문서에서는 `Label`의 `Text` 속성에 설정된 데이터 바인딩의 [**문자열 서식**](string-formatting.md)을 지정하는 방법을 알아봅니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Xamarin.Forms 책에서 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

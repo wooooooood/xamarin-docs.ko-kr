@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 트리거
-description: 이 문서에서는 Xamarin.Forms 트리거를 사용 하 여 XAML 사용 하 여 사용자 인터페이스 변경에 응답 하는 방법에 설명 합니다. 트리거를 사용 하면 이벤트 또는 속성 변경 내용을 기반으로 하는 컨트롤의 모양을 변경 하는 XAML에서 선언적으로 작업을 표현할 수 있습니다.
+description: 이 문서에서는 Xamarin.Forms 트리거를 사용하여 XAML에서 사용자 인터페이스 변경에 응답하는 방법을 설명합니다. 트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -9,33 +9,33 @@ ms.author: dabritch
 ms.date: 07/01/2016
 ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675213"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
-트리거를 사용 하면 이벤트 또는 속성 변경 내용을 기반으로 하는 컨트롤의 모양을 변경 하는 XAML에서 선언적으로 작업을 표현할 수 있습니다.
+트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다.
 
-트리거를 직접 컨트롤을 할당할 수도 있고 여러 컨트롤에 적용할 페이지 수준 또는 응용 프로그램 수준 리소스 사전에 추가할 수 있습니다.
+트리거를 컨트롤에 직접 할당하거나 여러 컨트롤에 적용될 페이지 수준 또는 애플리케이션 수준 리소스 사전에 추가할 수 있습니다.
 
-네 가지 유형의 트리거는
+트리거에는 다음 네 가지 유형이 있습니다.
 
-* [속성 트리거](#property) -컨트롤의 속성은 특정 값으로 설정 된 경우 발생 합니다.
+* [속성 트리거](#property) - 컨트롤의 속성이 특정 값으로 설정될 때 발생합니다.
 
-* [데이터 트리거](#data) -다른 컨트롤의 속성을 기반으로 하는 트리거를 바인딩할 데이터를 사용 합니다.
+* [데이터 트리거](#data) - 데이터 바인딩을 사용하여 다른 컨트롤의 속성을 기반으로 하여 트리거합니다.
 
-* [이벤트 트리거](#event) -컨트롤에서 이벤트가 발생할 때 발생 합니다.
+* [이벤트 트리거](#event) - 컨트롤에서 이벤트가 발생할 때 발생합니다.
 
-* [다중 트리거](#multi) -여러 트리거 조건은 작업이 발생 하기 전에 설정할 수 있습니다.
+* [다중 트리거](#multi) - 작업이 발생하기 전에 여러 트리거 조건을 설정할 수 있도록 합니다.
 
 <a name="property" />
 
 ## <a name="property-triggers"></a>속성 트리거
 
-간단한 트리거가, XAML에서 순수 하 게 표현할 수 있는 추가 `Trigger` 컨트롤의 요소 컬렉션을 트리거합니다.
-이 예제에서는 변경 하는 트리거를 `Entry` 배경색 키를 누른 채 포커스를 받을 때:
+간단한 트리거는 컨트롤의 트리거 컬렉션에 `Trigger` 요소를 추가하는 XAML에서만 표현할 수 있습니다.
+다음 예제에서는 포커스를 받을 때 `Entry` 배경색을 변경하는 트리거를 보여 줍니다.
 
 ```xaml
 <Entry Placeholder="enter name">
@@ -48,21 +48,21 @@ ms.locfileid: "50675213"
 </Entry>
 ```
 
-트리거의 선언의 중요 한 부분은 다음과 같습니다.
+트리거 선언에서 중요한 부분은 다음과 같습니다.
 
-* **TargetType** -트리거가 적용 되는 컨트롤 형식입니다.
+* **TargetType** - 트리거가 적용되는 컨트롤 형식입니다.
 
-* **속성** -모니터링 되는 컨트롤의 속성입니다.
+* **Property** - 모니터링되는 컨트롤의 속성입니다.
 
-* **값** -모니터링 되는 속성에 대 한 경우 값을 되도록 트리거를 활성화 합니다.
+* **Value** - 모니터링되는 속성에 대해 발생할 때 트리거가 활성화되는 값입니다.
 
-* **Setter** -컬렉션 `Setter` 트리거 조건이 충족 되는 경우 및 요소를 추가할 수 있습니다. 지정 해야 합니다 `Property` 및 `Value` 설정 합니다.
+* **Setter** - 트리거 조건이 충족될 때 `Setter` 요소의 컬렉션을 추가할 수 있습니다. 설정할 `Property` 및 `Value`를 지정합니다.
 
-* **EnterActions 및 ExitActions** (표시 되지 않음)-코드 작성 되 고 외에 (또는 instead of)에 사용할 수 있습니다 `Setter` 요소입니다. 이들은 [아래에 설명 된](#enterexit)합니다.
+* **EnterActions 및 ExitActions**(표시되지 않음) - 코드로 작성되며 `Setter` 요소에 추가하여(또는 대신) 사용할 수 있습니다. 이러한 모든 부분은 [아래와 같이 설명됩니다](#enterexit).
 
-### <a name="applying-a-trigger-using-a-style"></a>스타일을 사용 하는 트리거를 적용 합니다.
+### <a name="applying-a-trigger-using-a-style"></a>Style(스타일)을 사용하여 Trigger(트리거) 적용
 
-트리거를 추가할 수도 있습니다는 `Style` 페이지나 응용 프로그램에서 컨트롤을 선언 `ResourceDictionary`합니다. 이 예제에서는 암시적 스타일을 선언 (ie. 없습니다 `Key` 설정할지) 모두에 적용 되는 의미 `Entry` 페이지의 컨트롤입니다.
+트리거는 컨트롤, 페이지 또는 `ResourceDictionary`애플리케이션의 `Style` 선언에도 추가할 수 있습니다. 다음 예제에서는 페이지의 모든 `Entry` 컨트롤에 적용된다고 나타내는 암시적 스타일(즉, `Key`가 설정되지 않음)을 선언합니다.
 
 ```xaml
 <ContentPage.Resources>
@@ -83,10 +83,10 @@ ms.locfileid: "50675213"
 
 ## <a name="data-triggers"></a>데이터 트리거
 
-데이터 트리거 데이터 바인딩을 사용 하 여 다른 컨트롤을 모니터링 합니다 `Setter`호출 하도록 합니다. 대신 합니다 `Property` 속성 트리거 특성을 설정 합니다 `Binding` 특성에 지정 된 값에 대 한 모니터링을 합니다.
+데이터 트리거는 다른 컨트롤을 모니터링하는 데이터 바인딩을 사용하여 `Setter`가 호출되도록 합니다. 속성 트리거의 `Property` 특성 대신 지정된 값을 모니터링하는 `Binding` 특성을 설정합니다.
 
-아래 예제에서는 데이터 바인딩 구문 `{Binding Source={x:Reference entry}, Path=Text.Length}`
-다른 컨트롤의 속성을 참조 하는 방법입니다. 때의 길이 `entry` 가 0 이면 트리거는 활성화 됩니다. 이 샘플에서 트리거 입력이 비어 있을 때 단추를 사용 하지 않습니다.
+다음 예제에서는 다른 컨트롤의 속성을 참조하는 `{Binding Source={x:Reference entry}, Path=Text.Length}` 데이터 바인딩 구문을
+사용합니다. `entry`의 길이가 0이면 트리거가 활성화됩니다. 이 샘플에서 트리거는 입력이 비어 있을 때 단추를 비활성화합니다.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -109,15 +109,15 @@ ms.locfileid: "50675213"
 </Button>
 ```
 
-팁: 평가할 때 `Path=Text.Length` (예: 대상 속성에 대 한 기본값을 항상 제공 `Text=""`) 하기 때문에 그렇지 않으면 `null` 것 같은 트리거가 작동 하지 않습니다.
+팁: `Path=Text.Length`를 평가할 때 항상 대상 속성(예:`Text=""`)에 기본값을 제공합니다. 그렇지 않으면 `null`이 되고 트리거가 예상대로 작동하지 않기 때문입니다.
 
-지정 하는 것 외에도 `Setter`s를 제공할 수도 있습니다 [ `EnterActions` 하 고 `ExitActions` ](#enterexit)합니다.
+`Setter`를 지정하는 것 외에도 [`EnterActions` 및 `ExitActions`](#enterexit)도 제공할 수 있습니다.
 
 <a name="event" />
 
 ## <a name="event-triggers"></a>이벤트 트리거
 
-`EventTrigger` 요소에만 필요는 `Event` 속성을 같은 `"Clicked"` 아래 예제에서입니다.
+`EventTrigger` 요소에는 아래 예제의 `"Clicked"`와 같이 `Event` 속성만 필요합니다.
 
 ```xaml
 <EventTrigger Event="Clicked">
@@ -125,7 +125,7 @@ ms.locfileid: "50675213"
 </EventTrigger>
 ```
 
-있으며 없습니다 `Setter` 요소 있지만 정의한 클래스에 대 한 참조 대신 `local:NumericValidationTriggerAction` 필요는 `xmlns:local` 의 XAML 페이지에 선언 해야:
+`Setter` 요소는 없고 오히려 `local:NumericValidationTriggerAction`에서 정의된 클래스에 대한 참조가 있음에 유의하세요. 이 클래스는 페이지의 XAML에서 `xmlns:local`을 선언해야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,15 +133,15 @@ ms.locfileid: "50675213"
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-클래스 자체 구현 `TriggerAction` 즉에 대 한 재정의 제공 해야는 `Invoke` 트리거 이벤트가 발생할 때마다 호출 되는 메서드입니다.
+클래스 자체는 `TriggerAction`을 구현합니다. 즉 트리거 이벤트가 발생할 때마다 호출되는 `Invoke` 메서드에 대한 재정의를 제공해야 합니다.
 
-트리거 동작 구현 해야 합니다.
+트리거 작업 구현에서 수행해야 하는 작업은 다음과 같습니다.
 
-* 제네릭 구현 `TriggerAction<T>` 트리거 적용할 컨트롤의 형식과 해당 제네릭 매개 변수를 사용 하 여 클래스입니다. 와 같은 슈퍼 클래스를 사용할 수 있습니다 `VisualElement` 다양 한 컨트롤을 사용 하거나 컨트롤 종류를 지정 하는 트리거 동작을 쓸 `Entry`합니다.
+* 트리거가 적용될 컨트롤 형식에 해당하는 제네릭 매개 변수를 사용하여 제네릭 `TriggerAction<T>` 클래스를 구현합니다. `VisualElement`와 같은 수퍼클래스를 사용하여 다양한 컨트롤에서 작동하는 트리거 작업을 작성하거나 `Entry`와 같은 컨트롤 형식을 지정할 수 있습니다.
 
-* 재정의 `Invoke` -이 메서드는 트리거 조건이 충족 합니다.
+* 트리거 조건이 충족될 때마다 호출되는 `Invoke` 메서드를 재정의합니다.
 
-* 필요에 따라 트리거를 선언할 때는 XAML에서 설정할 수 있는 속성을 노출 (같은 `Anchor`, `Scale`, 및 `Length` 이 예제의).
+* 필요에 따라 트리거를 선언할 때 XAML에서 설정할 수 있는 속성(예: 이 예제의 경우 `Anchor`, `Scale` 및 `Length`)을 공개합니다.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -155,7 +155,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-트리거 동작에 의해 노출 되는 속성 XAML 선언에 다음과 같이 설정할 수 있습니다.
+트리거 작업으로 공개되는 속성은 XAML 선언에서 다음과 같이 설정할 수 있습니다.
 
 ```xaml
 <EventTrigger Event="TextChanged">
@@ -163,17 +163,17 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 </EventTrigger>
 ```
 
-트리거를 공유 하는 경우 주의 `ResourceDictionary`를 한 번만 구성 된 모든 상태 모두에 적용 됩니다 있도록 하나의 인스턴스만 컨트롤 간에 공유 됩니다.
+`ResourceDictionary`에서 트리거를 공유할 때 주의하세요. 하나의 인스턴스가 컨트롤 간에 공유되므로 한 번 구성된 상태가 모든 컨트롤에 적용됩니다.
 
-이벤트 트리거를 지원 하지 않습니다 `EnterActions` 하 고 `ExitActions` [아래에 설명 된](#enterexit)합니다.
+이벤트 트리거는 [아래에서 설명하는](#enterexit) `EnterActions` 및 `ExitActions`를 지원하지 않습니다.
 
 <a name="multi" />
 
 ## <a name="multi-triggers"></a>다중 트리거
 
-A `MultiTrigger` 비슷합니다는 `Trigger` 또는 `DataTrigger` 제외 조건을 둘 이상 있을 수 있습니다. 모든 조건이 하기 전에 충족 해야 합니다.는 `Setter`s 트리거됩니다.
+`MultiTrigger`는 둘 이상의 조건이 있을 수 있다는 점을 제외하고는 `Trigger` 또는 `DataTrigger`와 비슷합니다. `Setter`가 트리거되기 전에 모든 조건이 true여야 합니다.
 
-다음은 두 개의 다른 입력에 바인딩되는 단추에 대 한 트리거의 예 (`email` 고 `phone`):
+두 개의 서로 다른 입력(`email` 및 `phone`)에 바인딩되는 단추 트리거의 예제는 다음과 같습니다.
 
 ```xaml
 <MultiTrigger TargetType="Button">
@@ -191,17 +191,17 @@ A `MultiTrigger` 비슷합니다는 `Trigger` 또는 `DataTrigger` 제외 조건
 </MultiTrigger>
 ```
 
-합니다 `Conditions` 컬렉션을 포함할 수 있습니다 `PropertyCondition` 이 같은 요소:
+`Conditions` 컬렉션에도 다음과 같은 `PropertyCondition` 요소가 포함될 수 있습니다.
 
 ```xaml
 <PropertyCondition Property="Text" Value="OK" />
 ```
 
-### <a name="building-a-require-all-multi-trigger"></a>"모든 필요한" 다중 트리거를 작성합니다.
+### <a name="building-a-require-all-multi-trigger"></a>"모두가 필수인" 다중 트리거 작성
 
-다중 트리거는 모든 조건이 true 인 경우 해당 컨트롤을 업데이트 합니다. "모든 필드는 길이가 0" (예: 여기서 모든 입력을 완료 해야 하는 로그인 페이지)에 대 한 테스트는 조건 때문에 까다로울 "여기서 Text.Length > 0" 하지만이 XAML에서 표현할 수 없습니다.
+모든 조건이 true인 경우에만 다중 트리거에서 컨트롤을 업데이트합니다. "영(0)보다 큰 Text.Length" 조건이 필요하지만 XAML에서는 표시할 수 없으므로 "모든 필드의 길이가 영(0)임"(예: 모든 입력이 완료되어야 하는 로그인 페이지)에 대한 테스트는 까다롭습니다.
 
-사용 하 여이 작업을 수행할 수 있습니다는 `IValueConverter`합니다. 변환 아래 변환기 코드를 `Text.Length` 에 바인딩는 `bool` 필드를 빈 인지 여부를 나타내는:
+이 작업은 `IValueConverter`를 사용하여 수행할 수 있습니다. 아래의 변환기 코드는 `Text.Length` 바인딩을 필드가 비어 있는지 여부를 나타내는 `bool`로 변환합니다.
 
 ```csharp
 public class MultiTriggerConverter : IValueConverter
@@ -223,7 +223,7 @@ public class MultiTriggerConverter : IValueConverter
 }
 ```
 
-이 변환기에서 다중 트리거를 사용 하려면 먼저 사전에 추가 페이지의 리소스 (사용자 지정 함께 `xmlns:local` 네임 스페이스 정의):
+다중 트리거에서 이 변환기를 사용하려면 먼저 사용자 지정 `xmlns:local` 네임스페이스 정의와 함께 해당 변환기를 페이지의 리소스 사전에 추가합니다.
 
 ```xaml
 <ResourceDictionary>
@@ -231,11 +231,11 @@ public class MultiTriggerConverter : IValueConverter
 </ResourceDictionary>
 ```
 
-XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음과 같은 차이점이 note:
+XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이점은 다음과 같습니다.
 
-* 단추가 `IsEnabled="false"` 기본적으로 설정 합니다.
-* 다중 트리거 조건을 변환기를 사용 하 여 설정 하는 `Text.Length` 값을 `boolean`입니다.
-* 모든 조건이 때 `true`, setter는 단추의 `IsEnabled` 속성 `true`합니다.
+* 단추는 기본적으로 `IsEnabled="false"`로 설정되어 있습니다.
+* 다중 트리거 조건은 변환기를 사용하여 `Text.Length` 값을 `boolean`으로 변환합니다.
+* 모든 조건이 `true`이면 setter에서 단추의 `IsEnabled` 속성을 `true`로 설정합니다.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />
@@ -264,8 +264,8 @@ XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음�
 </Button>
 ```
 
-이러한 스크린샷은 위의 두 가지 다중 트리거 예제 간의 차이 보여 줍니다. 화면 위쪽에 텍스트 입력에서 하나만 `Entry` 사용 하기에 충분 합니다 **저장** 단추.
-화면 아래쪽에는 **로그인** 단추 비활성 상태로 유지 될 두 필드에 데이터가 포함 될 때까지 합니다.
+다음 스크린샷에서는 위의 두 가지 다중 트리거 예제 사이의 차이점을 보여 줍니다. 화면의 위쪽에서는 `Entry`의 텍스트 입력만으로 **저장** 단추를 사용할 수 있습니다.
+화면의 아래쪽에서는 두 필드 모두에 데이터가 포함될 때까지 **로그인** 단추가 비활성 상태로 유지됩니다.
 
 ![](triggers-images/multi-requireall.png "MultiTrigger 예제")
 
@@ -273,9 +273,9 @@ XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음�
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions 및 ExitActions
 
-추가 하 여 트리거를 발생 하는 경우 변경 내용을 구현 하는 또 다른 방법은 것 `EnterActions` 하 고 `ExitActions` 컬렉션과 지정 `TriggerAction<T>` 구현 합니다.
+트리거가 발생할 때 변경 내용을 구현하는 또 다른 방법은 `EnterActions` 및 `ExitActions` 컬렉션을 추가하고 `TriggerAction<T>` 구현을 지정하는 것입니다.
 
-제공할 수 있습니다 *둘 다* `EnterActions` 및 `ExitActions` 뿐만 `Setter`트리거에서 있지만 주의를 `Setter`s 즉시 호출 되 (에 대 한 대기 하지 않도록 합니다 `EnterAction` 또는 `ExitAction` 를 완성). 모든 코드에서 수행 하 고 사용 하지 수 또는 `Setter`전혀 s입니다.
+트리거에서 `Setter`뿐만 아니라 `EnterActions` 및 `ExitActions`도 *모두* 제공할 수 있지만, `Setter`가 즉시 호출된다는 점에 주의하세요(`EnterAction` 또는 `ExitAction`이 완료될 때까지 기다리지 않음). 또는 코드에 있는 모든 작업을 수행할 수 있으며 `Setter`는 전혀 사용하지 않습니다.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -295,7 +295,7 @@ XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음�
 </Entry>
 ```
 
-네임 스페이스와 같은 선언 해야 클래스를 XAML에서 참조할 때에 언제 든 지 대로 `xmlns:local` 다음과 같이 합니다.
+항상 그렇듯이 XAML에서 클래스가 참조되는 경우 다음과 같이 `xmlns:local`과 같은 네임스페이스를 선언해야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,7 +303,7 @@ XAML은 다음과 같습니다. 첫 번째 다중 트리거 예제에서 다음�
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-`FadeTriggerAction` 코드는 다음과 같습니다.
+`FadeTriggerAction` 코드는 아래와 같습니다.
 
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
@@ -325,7 +325,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-참고: `EnterActions` 하 고 `ExitActions` 가 무시 됩니다 **이벤트 트리거**합니다.
+참고: `EnterActions` 및 `ExitActions`는 **이벤트 트리거**에서 무시됩니다.
 
 
 

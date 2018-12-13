@@ -1,6 +1,6 @@
 ---
-title: 연결 된 속성으로 결과 매개 변수 전달
-description: 연결 된 속성은 런타임 속성 변경 내용에 응답 하는 효과 매개 변수를 정의에 사용할 수 있습니다. 이 문서에서는 연결 된를 적용 하 고 런타임에 매개 변수를 변경 하려면 매개 변수를 전달 하는 속성을 사용 하 여 하는 방법을 보여 줍니다.
+title: 연결된 속성으로 효과 매개 변수 전달
+description: 연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
 ms.technology: xamarin-forms
@@ -9,39 +9,39 @@ ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 9483e424a74a88ce3f0eb49624bb5315551f2062
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38996453"
 ---
-# <a name="passing-effect-parameters-as-attached-properties"></a>연결 된 속성으로 결과 매개 변수 전달
+# <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달
 
-_연결 된 속성은 런타임 속성 변경 내용에 응답 하는 효과 매개 변수를 정의에 사용할 수 있습니다. 이 문서에서는 연결 된를 적용 하 고 런타임에 매개 변수를 변경 하려면 매개 변수를 전달 하는 속성을 사용 하 여 하는 방법을 보여 줍니다._
+_연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명합니다._
 
-런타임 속성 변경 내용에 응답 하는 효과 매개 변수를 만드는 프로세스는 다음과 같습니다.
+런타임 속성 변경 내용에 응답하는 효과 매개 변수를 만드는 프로세스는 다음과 같습니다.
 
-1. 만들기는 `static` 효과에 전달할 각 매개 변수에 대 한 연결된 된 속성을 포함 하는 클래스입니다.
-1. 클래스에 추가 또는 제거에 연결할 클래스는 컨트롤에 효과 제어 하는 데 사용할 연결된 된 추가 속성을 추가 합니다. 속성 등록 연결이 있는지 확인 하십시오는 `propertyChanged` 속성의 값이 변경 될 때 실행 될 대리자입니다.
-1. 만들 `static` getter 및 setter 각각에 대해 연결 된 속성입니다.
-1. 논리를 구현 합니다 `propertyChanged` 대리자를 추가 하 고 효과 제거 합니다.
-1. 내에 중첩 된 클래스를 구현 합니다 `static` 효과 서브 클래스의 이름을 딴 클래스는 `RoutingEffect` 클래스입니다. 생성자에 대 한 확인 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID 문자열이 전달 하 여 기본 클래스 생성자를 호출 합니다.
+1. 효과에 전달할 각 매개 변수에 대한 연결된 속성을 포함하는 `static` 클래스를 만듭니다.
+1. 클래스가 연결될 컨트롤에 효과의 추가 또는 제거를 제어하는 데 사용할 클래스에 추가적인 연결된 속성을 추가합니다. 이 연결된 속성이 속성 값이 변경될 때 실행할 `propertyChanged` 대리자를 등록하는지 확인하십시오.
+1. 각 연결된 속성에 대해 `static` getter 및 setter를 만듭니다.
+1. `propertyChanged` 대리자에서 논리를 구현하여 효과를 추가 및 제거합니다.
+1. `RoutingEffect` 클래스를 서브클래스하는 효과의 이름을 따서 명명된 `static` 클래스 내에 중첩된 클래스를 구현합니다. 생성자의 경우 기본 클래스 생성자를 호출하여 해상도 그룹 이름의 연결과 각 플랫폼별 효과 클래스에 지정된 고유 ID를 전달합니다.
 
-매개 변수가 해당 컨트롤에 연결 된 속성 및 속성 값을 추가 하 여 결과를 전달할 수 있습니다. 또한 매개 변수는 새 연결 된 속성 값을 지정 하 여 런타임 시 변경할 수 있습니다.
+그런 다음, 적절한 컨트롤에 연결된 속성 및 속성 값을 추가하면 매개 변수를 효과로 전달할 수 있습니다. 또한 새 연결된 속성 값을 지정하여 런타임 시 매개 변수를 변경할 수 있습니다.
 
 > [!NOTE]
-> 연결된 된 속성에 속성 이름과 마침표로 구분 된 클래스를 포함 하는 특성으로 다른 개체에 연결 되 고 XAML에서 인식할 수 있지만 하나의 클래스에 정의 된 바인딩 가능한 속성의 특수 형식입니다. 자세한 내용은 [연결 속성](~/xamarin-forms/xaml/attached-properties.md)합니다.
+> 연결된 속성은 한 클래스에서 정의되지만 다른 개체에 연결되어 있는 특수한 형식의 바인딩 가능 속성이며, XAML에서 마침표로 구분된 클래스 및 속성 이름을 포함하는 특성으로 인식할 수 있습니다. 자세한 내용은 [연결된 속성](~/xamarin-forms/xaml/attached-properties.md)을 참조하세요.
 
-샘플 응용 프로그램을 보여 줍니다를 `ShadowEffect` 하 여 표시 되는 텍스트에 그림자를 추가 하는 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤. 또한 런타임 시 그림자의 색을 변경할 수 있습니다. 다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램에서 각 프로젝트의 책임을 보여 줍니다.
+샘플 애플리케이션은 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에서 표시되는 텍스트에 그림자를 추가하는 `ShadowEffect`를 설명합니다. 또한 런타임 시 그림자의 색을 변경할 수 있습니다. 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
 ![](attached-properties-images/shadow-effect.png "그림자 효과 프로젝트 책임")
 
-A [ `Label` ](xref:Xamarin.Forms.Label) 대 한 control 권한 합니다 `HomePage` 를 사용자 지정는 `LabelShadowEffect` 각 플랫폼별 프로젝트에. 매개 변수는 각 전달 `LabelShadowEffect` 를 통해 연결 된 속성에는 `ShadowEffect` 클래스입니다. 각 `LabelShadowEffect` 클래스에서 파생 되는 `PlatformEffect` 각 플랫폼에 대 한 클래스입니다. 그러면 표시 되는 텍스트에 추가할 그림자를 `Label` 다음 스크린샷과에서 같이 제어:
+`HomePage`의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤은 각 플랫폼별 프로젝트에서 `LabelShadowEffect`로 사용자 지정됩니다. 매개 변수는 `ShadowEffect` 클래스의 연결된 속성을 통해 각 `LabelShadowEffect`에 전달됩니다. 각 `LabelShadowEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷에 표시된 대로 `Label` 컨트롤에서 표시되는 텍스트에 그림자가 추가됩니다.
 
-![](attached-properties-images/screenshots.png "각 플랫폼에 그림자 효과")
+![](attached-properties-images/screenshots.png "각 플랫폼의 그림자 효과")
 
-## <a name="creating-effect-parameters"></a>결과 매개 변수 만들기
+## <a name="creating-effect-parameters"></a>효과 매개 변수 만들기
 
-`static` 다음 코드 예제에서 설명한 것 처럼 결과 매개 변수를 나타내는 클래스를 만들 수 해야 합니다.
+다음 코드 예제에서 설명한 것처럼 효과 매개 변수를 표현하도록 `static` 클래스를 만들어야 합니다.
 
 ```csharp
 public static class ShadowEffect
@@ -95,16 +95,16 @@ public static class ShadowEffect
 }
 ```
 
-합니다 `ShadowEffect` 5 개의 연결 된 속성이 포함 되어 `static` getter 및 setter 각각에 대해 연결 된 속성입니다. 각 플랫폼별에 전달할 매개 변수를 나타내는 이러한 속성 중 4 개 `LabelShadowEffect`합니다. `ShadowEffect` 클래스도 정의 합니다.는 `HasShadow` 연결 된 속성 추가 또는 제거를 제어 하는 효과 제어 하는 데 사용 되는는 `ShadowEffect` 클래스에 연결 됩니다. 이 연결 속성 레지스터는 `OnHasShadowChanged` 속성의 값이 변경 될 때 실행 되는 메서드. 이 메서드를 추가 하거나의 값을 기반으로 하는 효과 제거 합니다 `HasShadow` 연결 된 속성입니다.
+`ShadowEffect`에는 각 연결된 속성에 대한 `static` getter 및 setter와 함께 5개의 연결된 속성이 포함되어 있습니다. 이러한 네 가지 속성은 각 플랫폼별 `LabelShadowEffect`에 전달할 매개 변수를 나타냅니다. 또한 `ShadowEffect` 클래스는 `ShadowEffect` 클래스가 연결될 컨트롤에 효과의 추가 또는 제거를 제어하는 데 사용되는 `HasShadow` 연결된 속성을 정의합니다. 이 연결된 속성은 속성 값이 변경될 때 실행할 `OnHasShadowChanged` 메서드를 등록합니다. 이 메서드는 `HasShadow` 연결된 속성의 값을 기반으로 효과를 추가 또는 제거합니다.
 
-중첩 `LabelShadowEffect` 클래스를 서브클래싱하는 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스를 지 원하는 효과 추가 및 제거 합니다. `RoutingEffect` 클래스 내부 효과 일반적으로 플랫폼별을 래핑하는 플랫폼 독립적인 효과 나타냅니다. 이 플랫폼별 효과 대 한 형식 정보에 액세스할 수 없는 컴파일 시간 이후 효과 제거 프로세스를 간소화 합니다. `LabelShadowEffect` 확인 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID를 연결으로 구성 된 매개 변수 전달, 기본 클래스 생성자를 호출 하는 생성자입니다. 이렇게 하면 효과 추가 및 제거는 `OnHasShadowChanged` 같이 메서드:
+[`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 클래스를 서브클래스하는 중첩된 `LabelShadowEffect` 클래스는 효과 추가 및 제거를 지원합니다. `RoutingEffect` 클래스는 일반적으로 플랫폼에 따라 내부 효과를 래핑하는 플랫폼 독립적인 효과를 나타냅니다. 이는 플랫폼별 효과에 대한 형식 정보에 컴파일 시간 액세스가 없으므로 효과 제거 프로세스를 간소화합니다. `LabelShadowEffect` 생성자는 기본 클래스 생성자를 호출하여 해상도 그룹 이름의 연결과 각 플랫폼별 효과 클래스에 지정된 고유 ID로 이루어진 매개 변수를 전달합니다. 이를 통해 다음과 같이 `OnHasShadowChanged` 메서드에서 효과 추가 및 제거를 수행할 수 있습니다.
 
-- **추가 효과** –의 새 인스턴스를 `LabelShadowEffect` 컨트롤에 추가 됩니다 [ `Effects` ](xref:Xamarin.Forms.Element.Effects) 컬렉션입니다. 사용 하 여이 대체 합니다 [ `Effect.Resolve` ](xref:Xamarin.Forms.Effect.Resolve(System.String)) 효과 추가 하는 방법입니다.
-- **제거를 적용** – 첫 번째 인스턴스의 합니다 `LabelShadowEffect` 컨트롤의 [ `Effects` ](xref:Xamarin.Forms.Element.Effects) 컬렉션을 검색 하 고 제거 합니다.
+- **효과 추가** – `LabelShadowEffect`의 새 인스턴스가 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가됩니다. 이는 효과를 추가하는 [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) 메서드 사용을 대체합니다.
+- **효과 제거** – 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에서 `LabelShadowEffect`의 첫 번째 인스턴스가 검색되어 제거됩니다.
 
-## <a name="consuming-the-effect"></a>효과 사용합니다.
+## <a name="consuming-the-effect"></a>효과 사용
 
-각 플랫폼별 `LabelShadowEffect` 연결 된 속성을 추가 하 여 사용할 수는 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤을 다음 XAML 코드 예제에서 설명한 것 처럼:
+다음과 같은 XAML 코드 예제에 설명된 대로 연결된 속성을 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에 추가하면 각 플랫폼별 `LabelShadowEffect`를 사용할 수 있습니다.
 
 ```xaml
 <Label Text="Label Shadow Effect" ...
@@ -120,7 +120,7 @@ public static class ShadowEffect
 </Label>
 ```
 
-해당 [ `Label` ](xref:Xamarin.Forms.Label) C#에서 다음 코드 예제에 표시 됩니다.
+해당하는 C#의 [`Label`](xref:Xamarin.Forms.Label)가 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 var label = new Label {
@@ -149,17 +149,17 @@ ShadowEffect.SetDistanceY (label, 5);
 ShadowEffect.SetColor (label, color));
 ```
 
-설정를 `ShadowEffect.HasShadow` 연결 된 속성을 `true` 실행를 `ShadowEffect.OnHasShadowChanged` 추가 하거나 제거 하는 메서드를 `LabelShadowEffect` 에 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤입니다. 두 코드 예제에서는 `ShadowEffect.Color` 플랫폼별 색 값을 제공 하는 연결 된 속성입니다. 자세한 내용은 [장치 클래스](~/xamarin-forms/platform/device.md)합니다.
+`ShadowEffect.HasShadow` 연결된 속성을 `true`로 설정하면 `LabelShadowEffect`를 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에 추가하거나 제거하는 `ShadowEffect.OnHasShadowChanged` 메서드를 실행합니다. 두 코드 예제에서 `ShadowEffect.Color` 연결된 속성은 플랫폼별 색 값을 제공합니다. 자세한 내용은 [디바이스 클래스](~/xamarin-forms/platform/device.md)를 참조하세요.
 
-또한 한 [ `Button` ](xref:Xamarin.Forms.Button) 그림자 색을 런타임 시 변경할 수 있습니다. 경우는 `Button` 를 클릭 하면 그림자 색을 설정 하 여 코드 변경의 `ShadowEffect.Color` 연결 된 속성:
+또한 [`Button`](xref:Xamarin.Forms.Button)으로 런타임 시 그림자 색을 변경할 수 있습니다. `ShadowEffect.Color` 연결된 속성을 설정하면 `Button`을 클릭할 때 다음 코드가 그림자 색을 변경합니다.
 
 ```csharp
 ShadowEffect.SetColor (label, Color.Teal);
 ```
 
-### <a name="consuming-the-effect-with-a-style"></a>스타일을 사용 하 여 효과 사용합니다.
+### <a name="consuming-the-effect-with-a-style"></a>스타일을 통한 효과 사용
 
-컨트롤에 연결 된 속성을 추가 하 여 사용할 수 있는 효과 스타일에 의해 사용 될 수도 있습니다. 다음 XAML 코드 예제는 *명시적* 스타일을 적용할 수 있는 그림자 효과 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤:
+컨트롤에 연결된 속성을 추가하여 사용할 수 있는 효과는 스타일로도 사용할 수 있습니다. 다음 XAML 코드 예제는 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에 적용할 수 있는 그림자 효과에 대한 *명시적* 스타일을 보여줍니다.
 
 ```xaml
 <Style x:Key="ShadowEffectStyle" TargetType="Label">
@@ -172,21 +172,21 @@ ShadowEffect.SetColor (label, Color.Teal);
 </Style>
 ```
 
-합니다 [ `Style` ](xref:Xamarin.Forms.Style) 에 적용할 수는 [ `Label` ](xref:Xamarin.Forms.Label) 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을는 `Style` 를사용하여인스턴스`StaticResource`다음 코드 예제 에서처럼 태그 확장:
+다음 코드 예제에 설명된 대로 `StaticResource` 태그 확장을 사용하여 해당 [`Style`](xref:Xamarin.Forms.VisualElement.Style) 속성을 `Style` 인스턴스로 설정하면 [`Style`](xref:Xamarin.Forms.Style)을 [`Label`](xref:Xamarin.Forms.Label)에 적용할 수 있습니다.
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
 ```
 
-스타일에 대 한 자세한 내용은 참조 하세요. [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
+스타일에 대한 자세한 내용은 [스타일](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
 
-## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼에 대 한 효과 만들기
+## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼의 효과 만들기
 
-다음 섹션에서는 플랫폼 전용 구현에 설명 된 `LabelShadowEffect` 클래스입니다.
+다음 섹션에서는 `LabelShadowEffect` 클래스의 플랫폼별 구현을 설명합니다.
 
 ### <a name="ios-project"></a>iOS 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` iOS 프로젝트에 대 한 구현 합니다.
+다음 코드 예제는 iOS 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -231,11 +231,11 @@ namespace EffectsDemo.iOS
     }
 ```
 
-합니다 `OnAttached` 메서드를 사용 하 여 연결 된 속성 값을 검색 하는 메서드를 호출 합니다 `ShadowEffect` getter, 및 설정 `Control.Layer` 속성을 만드는 그림자 속성 값을 합니다. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+`OnAttached` 메서드는 `ShadowEffect` getter를 사용하여 연결된 속성 값을 검색하고 그림자를 만드는 속성 값으로 `Control.Layer` 속성을 설정하는 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
-#### <a name="responding-to-property-changes"></a>속성 변경에 응답
+#### <a name="responding-to-property-changes"></a>속성 변경 내용에 응답
 
-하나라는 `ShadowEffect` 속성 값 변경 런타임에 적용 해야 변경 내용을 표시 하 여 응답을 연결 합니다. 재정의 된 버전을 `OnElementPropertyChanged` 플랫폼별 결과 클래스에서 메서드를 다음 코드 예제에서 설명한 것 처럼 바인딩 가능 속성 변경 내용에 응답할 수 있는 곳은:
+`ShadowEffect` 연결된 속성 값이 런타임 시 변경되는 경우 효과는 변경 내용을 표시하여 응답해야 합니다. 플랫폼별 효과 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 다음 코드 예제에 설명된 대로 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다.
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -256,11 +256,11 @@ public class LabelShadowEffect : PlatformEffect
 }
 ```
 
-합니다 `OnElementPropertyChanged` radius, 색 또는 그림자 오프셋 메서드를 업데이트 하는 적절 한 제공 `ShadowEffect` 연결 된 속성 값이 변경 합니다. 변경 되는 속성에 대 한 검사를 항상 수 있어야를 따라이 재정의 여러 번 호출할 수 있습니다.
+`OnElementPropertyChanged` 메서드는 적절한 `ShadowEffect` 연결된 속성 값이 변경된 경우 그림자의 반경, 색 또는 오프셋을 업데이트합니다. 이 재정의는 여러 번 호출될 수 있으므로 변경된 속성에 대한 검사는 항상 수행되어야 합니다.
 
 ### <a name="android-project"></a>Android 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` Android 프로젝트에 대 한 구현 합니다.
+다음 코드 예제는 Android 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -316,11 +316,11 @@ namespace EffectsDemo.Droid
     }
 ```
 
-`OnAttached` 메서드를 사용 하 여 연결 된 속성 값을 검색 하는 메서드를 호출 합니다 `ShadowEffect` getter를 호출 하는 메서드를 호출 하 고는 [ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 속성 값을 사용 하 여 그림자를 만드는 방법. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+`OnAttached` 메서드는 `ShadowEffect` getter를 사용하여 연결된 속성 값을 검색하는 메서드를 호출하며, 속성 값을 사용하여 그림자를 만드는 [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 메서드를 호출하는 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
-#### <a name="responding-to-property-changes"></a>속성 변경에 응답
+#### <a name="responding-to-property-changes"></a>속성 변경 내용에 응답
 
-하나라는 `ShadowEffect` 속성 값 변경 런타임에 적용 해야 변경 내용을 표시 하 여 응답을 연결 합니다. 재정의 된 버전을 `OnElementPropertyChanged` 플랫폼별 결과 클래스에서 메서드를 다음 코드 예제에서 설명한 것 처럼 바인딩 가능 속성 변경 내용에 응답할 수 있는 곳은:
+`ShadowEffect` 연결된 속성 값이 런타임 시 변경되는 경우 효과는 변경 내용을 표시하여 응답해야 합니다. 플랫폼별 효과 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 다음 코드 예제에 설명된 대로 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다.
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -344,11 +344,11 @@ public class LabelShadowEffect : PlatformEffect
 }
 ```
 
-합니다 `OnElementPropertyChanged` radius, 색 또는 그림자 오프셋 메서드를 업데이트 하는 적절 한 제공 `ShadowEffect` 연결 된 속성 값이 변경 합니다. 변경 되는 속성에 대 한 검사를 항상 수 있어야를 따라이 재정의 여러 번 호출할 수 있습니다.
+`OnElementPropertyChanged` 메서드는 적절한 `ShadowEffect` 연결된 속성 값이 변경된 경우 그림자의 반경, 색 또는 오프셋을 업데이트합니다. 이 재정의는 여러 번 호출될 수 있으므로 변경된 속성에 대한 검사는 항상 수행되어야 합니다.
 
 ### <a name="universal-windows-platform-project"></a>유니버설 Windows 플랫폼 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
+다음 코드 예제는 UWP(유니버설 Windows 플랫폼) 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly: ResolutionGroupName ("MyCompany")]
@@ -402,11 +402,11 @@ namespace EffectsDemo.UWP
 }
 ```
 
-유니버설 Windows 플랫폼에 그림자 효과 제공 하지 않으므로 `LabelShadowEffect` 구현은 두 가지 플랫폼에서 두 번째 오프셋을 추가 하 여 시뮬레이션 [ `Label` ](xref:Xamarin.Forms.Label) 주 뒤 `Label`합니다. 합니다 `OnAttached` 메서드를 만듭니다 `Label` 일부 레이아웃 속성을 설정 하 고는 `Label`합니다. 그런 다음 사용 하 여 연결 된 속성 값을 검색 하는 메서드를 호출 합니다 `ShadowEffect` getter를 설정 하 여 그림자를 생성 하 고는 [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor), [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), 및 [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) 색상 및 위치를 제어 하는 속성을 `Label`입니다. `shadowLabel` 그런 다음 삽입은 주 뒤 오프셋 `Label`합니다. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+유니버설 Windows 플랫폼은 그림자 효과를 제공하지 않으므로 두 가지 플랫폼의 `LabelShadowEffect` 구현은 기본 `Label` 뒤에 두 번째 오프셋 [`Label`](xref:Xamarin.Forms.Label)을 추가하여 시뮬레이션합니다. `OnAttached` 메서드는 새 `Label`을 만들고 `Label`에서 일부 레이아웃 속성을 설정합니다. 그런 다음, `ShadowEffect` getter를 사용하여 연결된 속성 값을 검색하는 메서드를 호출하고, `Label`의 색 및 위치를 제어하는 [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 및 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) 속성을 설정하여 그림자를 만듭니다. 그런 다음, `shadowLabel`이 기본 `Label` 뒤에 삽입됩니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
-#### <a name="responding-to-property-changes"></a>속성 변경에 응답
+#### <a name="responding-to-property-changes"></a>속성 변경 내용에 응답
 
-하나라는 `ShadowEffect` 속성 값 변경 런타임에 적용 해야 변경 내용을 표시 하 여 응답을 연결 합니다. 재정의 된 버전을 `OnElementPropertyChanged` 플랫폼별 결과 클래스에서 메서드를 다음 코드 예제에서 설명한 것 처럼 바인딩 가능 속성 변경 내용에 응답할 수 있는 곳은:
+`ShadowEffect` 연결된 속성 값이 런타임 시 변경되는 경우 효과는 변경 내용을 표시하여 응답해야 합니다. 플랫폼별 효과 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 다음 코드 예제에 설명된 대로 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다.
 
 ```csharp
 public class LabelShadowEffect : PlatformEffect
@@ -425,11 +425,11 @@ public class LabelShadowEffect : PlatformEffect
 }
 ```
 
-합니다 `OnElementPropertyChanged` 색 또는 그림자 오프셋 메서드를 업데이트 하는 적절 한 제공 `ShadowEffect` 연결 된 속성 값이 변경 합니다. 변경 되는 속성에 대 한 검사를 항상 수 있어야를 따라이 재정의 여러 번 호출할 수 있습니다.
+`OnElementPropertyChanged` 메서드는 적절한 `ShadowEffect` 연결된 속성 값이 변경된 경우 그림자의 색 또는 오프셋을 업데이트합니다. 이 재정의는 여러 번 호출될 수 있으므로 변경된 속성에 대한 검사는 항상 수행되어야 합니다.
 
 ## <a name="summary"></a>요약
 
-이 문서에 연결 된를 적용 하 고 런타임에 매개 변수를 변경 하려면 매개 변수를 전달 하는 속성을 사용 하 여 보여 줍니다. 연결 된 속성은 런타임 속성 변경 내용에 응답 하는 효과 매개 변수를 정의에 사용할 수 있습니다.
+이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명했습니다. 연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
@@ -438,4 +438,4 @@ public class LabelShadowEffect : PlatformEffect
 - [효과](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [그림자 효과 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+- [그림자 효과(샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)

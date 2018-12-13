@@ -1,6 +1,6 @@
 ---
 title: 사용자 지정 렌더러 소개
-description: 이 문서에서는 사용자 지정 렌더러를 소개 하 고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명 합니다.
+description: 이 문서에서는 사용자 지정 렌더러를 소개하고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명합니다.
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50108433"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
-_사용자 지정 렌더러 Xamarin.Forms 컨트롤의 동작과 모양을 사용자 지정 하기 위한 강력한 도구를 제공 합니다. 이러한 작은 스타일 변경 또는 복잡 한 플랫폼 특정 레이아웃 동작 사용자 지정에 사용할 수 있습니다. 이 문서에서는 사용자 지정 렌더러를 소개 하 고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명 합니다._
+_사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다. 이 문서에서는 사용자 지정 렌더러를 소개하고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명합니다._
 
-Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-interface/controls/index.md) 플랫폼 간 모바일 사용자 인터페이스를 설명 하는 공용 API를 제공 합니다. 각 페이지, 레이아웃 및 컨트롤 각 플랫폼에서 다르게 렌더링 됩니다 사용 하는 `Renderer` 클래스 (표현에 해당 하는 Xamarin.Forms), 네이티브 컨트롤을 다시 만드는 화면에서 정렬 및에 지정 된 동작을 추가 합니다 공유 코드입니다.
+Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-interface/controls/index.md)은 플랫폼 간 모바일 사용자 인터페이스를 설명하는 공용 API를 제공합니다. 각 페이지, 레이아웃 및 컨트롤은 차례로 네이티브 컨트롤을 만들고(Xamarin.Forms 표현에 해당), 화면에 정렬하고, 공유 코드에 지정한 동작을 추가하는 `Renderer` 클래스를 사용하여 각 플랫폼에서 다르게 렌더링됩니다.
 
-개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 다른 플랫폼;의 기본 동작을 허용 하는 동안 한 곳에서 제어를 사용자 지정 응용 프로그램 프로젝트에 지정된 된 형식에 대 한 사용자 지정 렌더러를 추가할 수 있습니다. 또는 다른 사용자 지정 렌더러를 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에서 다른 모양 및 느낌을 만들려면 각 응용 프로그램 프로젝트에 추가할 수 있습니다. 그러나 간단한 컨트롤 사용자 지정 하는 데 사용자 지정 렌더러 클래스를 구현 경우가 중량 응답 합니다. 효과이 프로세스를 간소화 하 고 작은 스타일 변경에 대 한 일반적으로 사용 됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
+개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 다른 플랫폼에서 기본 동작을 허용하는 동안 한 장소에서 컨트롤을 사용자 지정하려면 지정된 형식의 사용자 지정 렌더러를 애플리케이션 프로젝트에 추가할 수 있습니다. 또는 iOS, Android 및 UWP(유니버설 Windows 플랫폼)에서 다른 모양 및 느낌을 만들려면 다른 사용자 지정 렌더러를 각 애플리케이션 프로젝트에 추가할 수 있습니다. 그러나 간단한 컨트롤 사용자 지정을 수행하는 사용자 지정 렌더러 클래스를 구현하는 것은 종종 중량 응답입니다. 효과는 이 프로세스를 간소화하고 일반적으로 작은 스타일 변경에 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
-## <a name="examining-why-custom-renderers-are-necessary"></a>검토 이유는 사용자 지정 렌더러는 필요
+## <a name="examining-why-custom-renderers-are-necessary"></a>사용자 지정 렌더러가 필요한 이유 검토
 
-Xamarin.Forms 컨트롤의 모양 변경, 사용자 지정 렌더러를 사용 하지 않고는 서브클래싱, 및 원래 컨트롤 대신 사용자 지정 컨트롤을 사용 하는 다음을 통해 사용자 지정 컨트롤을 만들어야 하는 2 단계 프로세스입니다. 다음 코드 예제에서는 하위 클래스의 예를 보여 줍니다.는 `Entry` 제어 합니다.
+사용자 지정 렌더러를 사용하지 않고 Xamarin.Forms 컨트롤의 모양 변경은 서브클래싱을 통해 사용자 지정 컨트롤을 만드는 방법 및 원래 컨트롤 대신 사용자 지정 컨트롤을 사용하는 방법이 포함되는 2단계 프로세스입니다. 다음 코드 예제에서는 `Entry` 컨트롤을 서브클래싱하는 예를 보여 줍니다.
 
 ```csharp
 public class MyEntry : Entry
@@ -36,7 +36,7 @@ public class MyEntry : Entry
 }
 ```
 
-`MyEntry` 컨트롤은는 `Entry` 위치를 제어 합니다 `BackgroundColor` 로 설정 되어 회색, 및 해당 위치에 대 한 네임 스페이스를 선언 하 고 컨트롤 요소에서 네임 스페이스 접두사를 사용 하 여 Xaml에서 참조할 수 있습니다. 다음 코드 예제에서는 하는 방법을 `MyEntry` 사용자 지정 컨트롤에서 사용할 수는 `ContentPage`:
+`MyEntry` 컨트롤은 `BackgroundColor`가 회색으로 설정되며, 해당 위치의 네임스페이스를 선언하고 컨트롤 요소의 네임스페이스 접두사를 사용하여 Xaml에서 참조할 수 있는 `Entry` 컨트롤입니다. 다음 코드 예제에서는 `ContentPage`에서 `MyEntry` 사용자 지정 컨트롤을 사용하는 방법을 보여줍니다.
 
 ```xaml
 <ContentPage
@@ -49,49 +49,49 @@ public class MyEntry : Entry
 </ContentPage>
 ```
 
-`local` 네임 스페이스 접두사 아무 이름이 나 가능 합니다. 그러나 합니다 `namespace` 고 `assembly` 값 사용자 지정 컨트롤의 세부 정보를 일치 해야 합니다. 네임 스페이스를 선언 하는 사용자 지정 컨트롤을 참조 하는 접두사가 사용 됩니다.
+`local` 네임스페이스 접두사는 어떤 것으로든 지정할 수 있습니다. 그러나 `namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 사용됩니다.
 
 > [!NOTE]
-> 정의 된 `xmlns` 공유 프로젝트 보다.NET Standard 라이브러리 프로젝트에서 훨씬 간단 합니다. .NET Standard 라이브러리를 결정 하는 것이 쉽습니다 있도록는 어셈블리로 컴파일되는 `assembly=CustomRenderer` 값 이어야 합니다. XAML 등 모든 공유 자산은 각 참조는 프로젝트, 즉 iOS, Android 및 UWP로 컴파일되는 공유 프로젝트를 사용 하는 경우 프로젝트 자체적인 *어셈블리 이름* 쓸 수 없는 `xmlns` 선언 각 응용 프로그램 마다 다를 수 값이 필요 하기 때문입니다. 공유 프로젝트에 대 한 XAML의 사용자 지정 컨트롤에는 모든 응용 프로그램 프로젝트를 동일한 어셈블리 이름을 사용 하 여 구성 해야 합니다.
+> `xmlns`의 정의는 공유 프로젝트 보다 .NET Standard 라이브러리 프로젝트에서 훨씬 간단합니다. .NET Standard 라이브러리를 어셈블리로 컴파일하므로 `assembly=CustomRenderer` 값을 결정하기가 쉽습니다. 공유 프로젝트를 사용하는 경우 모든 공유 자산(XAML 포함)은 각 참조 프로젝트로 컴파일됩니다. 즉, iOS, Android 및 UWP 프로젝트에 고유한 *어셈블리 이름*이 있는 경우 값이 각 애플리케이션에 대해 서로 달라야 하므로 `xmlns` 선언을 작성할 수 없습니다. 공유 프로젝트에 대한 XAML의 사용자 지정 컨트롤에서는 모든 애플리케이션 프로젝트가 동일한 어셈블리 이름으로 구성되어야 합니다.
 
-`MyEntry` 다음 스크린샷과에서 같이 회색 배경으로 각 플랫폼에서 사용자 지정 컨트롤 다음 렌더링 됩니다.
+다음 스크린샷에 표시된 것처럼 `MyEntry` 사용자 지정 컨트롤은 회색 배경의 각 플랫폼에서 렌더링됩니다.
 
-![](introduction-images/screenshots.png "각 플랫폼에서 MyEntry 사용자 지정 컨트롤")
+![](introduction-images/screenshots.png "각 플랫폼의 MyEntry 사용자 지정 컨트롤")
 
-각 플랫폼에서 컨트롤의 배경색을 변경 컨트롤 서브클래싱 통해 순수 하 게 완성 되었습니다. 그러나이 기술은 플랫폼별 향상 된 기능 및 사용자 지정을 활용할 수 아니므로 가능에서 제한 됩니다. 필요한 경우 이러한 사용자 지정 렌더러를 구현 합니다.
+각 플랫폼에서 컨트롤의 배경 색상은 컨트롤 서브클래싱을 통해서만 변경할 수 있습니다. 그러나 플랫폼별 향상 및 사용자 지정을 활용할 수 없으므로 이 기술은 완수할 수 있는 작업에 제약이 있습니다. 필요한 경우 사용자 지정 렌더러를 구현해야 합니다.
 
 ## <a name="creating-a-custom-renderer-class"></a>사용자 지정 렌더러 클래스 만들기
 
 사용자 지정 렌더러 클래스를 만드는 프로세스는 다음과 같습니다.
 
-1. 네이티브 컨트롤을 렌더링 하는 렌더러 클래스의 서브 클래스를 만듭니다.
-1. 컨트롤을 사용자 지정 하는 논리를 작성 및 네이티브 컨트롤을 렌더링 하는 메서드를 재정의 합니다. 종종는 `OnElementChanged` 메서드 사용은 해당 Xamarin.Forms 컨트롤이 생성 될 때 호출 되는 네이티브 컨트롤을 렌더링 합니다.
-1. 추가 `ExportRenderer` 특성을 사용자 지정 렌더러 클래스 Xamarin.Forms 컨트롤을 렌더링 하 사용 수를 지정할 수 있습니다. 이 특성은 Xamarin.Forms를 사용 하 여 사용자 지정 렌더러를 등록 하는 데 사용 됩니다.
+1. 네이티브 컨트롤을 렌더링하는 렌더러 클래스의 서브클래스를 만듭니다.
+1. 네이티브 컨트롤을 렌더링하고 컨트롤을 사용자 지정하기 위한 논리를 작성하는 메서드를 재정의합니다. `OnElementChanged` 메서드는 해당 Xamarin.Forms 컨트롤이 생성될 때 호출되는 네이티브 컨트롤을 렌더링하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
-> 대부분의 Xamarin.Forms 요소 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공 하는 선택 사항입니다. 사용자 지정 렌더러를 등록 하지 않은 경우 컨트롤의 기본 클래스에 대 한 기본 렌더러 사용 됩니다. 그러나 사용자 지정 렌더러 필요한 각 플랫폼 프로젝트에서 렌더링 하는 경우는 [뷰](xref:Xamarin.Forms.View) 또는 [ViewCell](xref:Xamarin.Forms.ViewCell) 요소입니다.
+> 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [보기](xref:Xamarin.Forms.View) 요소 또는 [ViewCell](xref:Xamarin.Forms.ViewCell) 요소를 렌더링하는 경우 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
 
-이 시리즈의 항목에는 데모 및이 프로세스의 다양 한 Xamarin.Forms 요소에 대 한 설명을 제공 합니다.
+이 시리즈의 항목에서는 다양한 Xamarin.Forms 요소에 대한 이 프로세스의 설명 및 데모를 제공합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
-사용자 지정 컨트롤이 포함 된 추가 되었습니다 (예: 하지.NET 표준 라이브러리를 Mac/Visual Studio Xamarin.Forms 앱 프로젝트 템플릿에 대 한 Visual Studio에서 만든) 솔루션에는 예외는.NET Standard 라이브러리 프로젝트를 iOS에서 발생할 수 있습니다 때 사용자 지정 컨트롤에 액세스 하려고 합니다. 사용자 지정 컨트롤에 대 한 참조를 만들어 해결할 수 있는 경우이 문제는 `AppDelegate` 클래스:
+솔루션에 추가된 .NET Standard 라이브러리 프로젝트(예: Mac용 Visual Studio/Visual Studio Xamarin.Forms 앱 프로젝트에서 만든 .NET Standard 라이브러리가 아님)에 사용자 지정 컨트롤이 포함된 경우 사용자 지정 컨트롤에 액세스 하려고 할 때 iOS에서 예외가 발생할 수 있습니다. 이 문제가 발생한 경우 `AppDelegate` 클래스에서 사용자 지정 컨트롤에 대한 참조를 만들어 해결할 수 있습니다.
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere
 ```
 
-이렇게 하면 컴파일러에서 인식할 수는 `ClassInPCL` 것을 확인 하 여 형식입니다. 또는 합니다 `Preserve` 특성을 추가할 수는 `AppDelegate` 동일한 결과 달성 하기 위해 클래스:
+이렇게 하면 컴파일러가 문제를 해결하여 `ClassInPCL` 형식을 강제로 인식합니다. 또는 `Preserve` 특성을 `AppDelegate` 클래스에 추가하여 동일한 결과를 얻을 수 있습니다.
 
 ```csharp
 [assembly: Preserve (typeof (ClassInPCL))]
 ```
 
-에 대 한 참조를 만들고이 `ClassInPCL` 런타임에 필수인 있는지를 나타내는 형식입니다. 자세한 내용은 [유지 코드](~/ios/deploy-test/linker.md)합니다.
+이렇게 하면 `ClassInPCL` 형식에 대한 참조를 만들고 런타임 시 필요한지를 나타냅니다. 자세한 내용은 [코드 유지](~/ios/deploy-test/linker.md)를 참조하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서는 사용자 지정 렌더러 소개를 제공 하 고 사용자 지정 렌더러를 만드는 과정을 간략히 설명 했습니다. 사용자 지정 렌더러 Xamarin.Forms 컨트롤의 동작과 모양을 사용자 지정 하기 위한 강력한 도구를 제공 합니다. 이러한 작은 스타일 변경 또는 복잡 한 플랫폼 특정 레이아웃 동작 사용자 지정에 사용할 수 있습니다.
+이 문서에서는 사용자 지정 렌더러를 소개했으며 사용자 지정 렌더러를 만드는 과정을 간략하게 설명했습니다. 사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
