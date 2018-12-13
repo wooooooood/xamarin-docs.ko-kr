@@ -235,8 +235,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 다른 두 가지 형식을 사용하면 다음과 같이 각 채널에 대한 단일 16 진수만를 지정할 수 있습니다.
 
- `TextColor="#rgb"` 
- `TextColor="#argb"`
+ `TextColor="#rgb"`  `TextColor="#argb"`
 
 이러한 경우, 숫자는 값을 구성 하도록 반복 됩니다. 예를 들어, #CF3는 RGB 색 CC-FF-33 입니다.
 
