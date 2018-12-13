@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898903"
 ---
-# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
+# <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
 **Browser** 클래스를 사용하면 응용 프로그램이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
 

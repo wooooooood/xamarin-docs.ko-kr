@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Barometer'
+title: 'Xamarin.Essentials: 기압계'
 description: Xamarin.Essentials의 Barometer 클래스를 사용하면 압력을 측정하는 장치의 기압계 센서를 모니터링할 수 있습니다.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52899046"
 ---
-# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Barometer
+# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 기압계
 
 **Barometer** 클래스를 사용하면 압력을 측정하는 장치의 기압계 센서를 모니터링할 수 있습니다.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: Secure Storage'
+title: 'Xamarin.Essentials: 보안 스토리지'
 description: 이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는, Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다. 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898916"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Secure Storage
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
 **SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "52898916"
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 > [!TIP]
-> [앱에 대한 자동 백업](https://developer.android.com/guide/topics/data/autobackup)은 Android 6.0(API 레벨 23) 이상의 기능으로, 사용자의 앱 데이터(공유 기본 설정, 앱 내부 저장소의 파일 및 기타 특정 파일)를 백업합니다. 앱을 다시 설치하거나 새 장치에 설치하면 데이터가 복원됩니다. 이는 백업된 공유 기본 설정을 이용하며 복원 시 암호를 해독할 수 없는 `SecureStorage`에 영향을 줄 수 있습니다. Xamarin.Essentials는 키를 제거해서 다시 설정할 수 있도록 하여 자동으로 이러한 경우를 처리하지만, 자동 백업을 사용하지 않도록 설정하면 추가 단계를 수행할 수 있습니다.
+> [앱에 대한 자동 백업](https://developer.android.com/guide/topics/data/autobackup)은 Android 6.0(API 레벨 23) 이상의 기능으로, 사용자의 앱 데이터(공유 기본 설정, 앱 내부 스토리지의 파일 및 기타 특정 파일)를 백업합니다. 앱을 다시 설치하거나 새 장치에 설치하면 데이터가 복원됩니다. 이는 백업된 공유 기본 설정을 이용하며 복원 시 암호를 해독할 수 없는 `SecureStorage`에 영향을 줄 수 있습니다. Xamarin.Essentials는 키를 제거해서 다시 설정할 수 있도록 하여 자동으로 이러한 경우를 처리하지만, 자동 백업을 사용하지 않도록 설정하면 추가 단계를 수행할 수 있습니다.
 
 ### <a name="enable-or-disable-backup"></a>백업 사용 또는 사용 안 함
 `AndroidManifest.xml` 파일에서 `android:allowBackup` 설정을 false로 지정하여 전체 응용 프로그램의 자동 백업을 사용하지 않을 수 있습니다. 이 방법은 다른 방법으로 데이터를 복원하려는 경우에만 권장됩니다.
@@ -77,7 +77,7 @@ iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을
 
 -----
 
-## <a name="using-secure-storage"></a>보안 저장소 사용
+## <a name="using-secure-storage"></a>보안 스토리지 사용
 
 클래스에서 Xamarin.Essentials에 대한 참조를 추가합니다.
 
@@ -85,7 +85,7 @@ iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을
 using Xamarin.Essentials;
 ```
 
-지정된 _키_의 값을 보안 저장소에 저장하려면
+지정된 _키_의 값을 보안 스토리지에 저장하려면
 
 ```csharp
 try
@@ -98,7 +98,7 @@ catch (Exception ex)
 }
 ```
 
-보안 저장소에서 값을 검색하려면
+보안 스토리지에서 값을 검색하려면
 
 ```csharp
 try

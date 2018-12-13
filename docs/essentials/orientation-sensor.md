@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.Essentials: OrientationSensor'
+title: 'Xamarin.Essentials: 방향 센서'
 description: OrientationSensor 클래스를 사용하면 3차원 공간에서 장치의 방향을 모니터링할 수 있습니다.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
 author: jamesmontemagno
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898682"
 ---
-# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
+# <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: 방향 센서
 
 **OrientationSensor** 클래스를 사용하면 3차원 공간에서 장치의 방향을 모니터링할 수 있습니다.
 

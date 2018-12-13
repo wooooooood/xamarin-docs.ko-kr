@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898274"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
 
 **Launcher** 클래스를 사용하면 응용 프로그램이 시스템을 통해 URI를 열 수 있습니다. 다른 응용 프로그램의 사용자 지정 URI 체계에 대한 딥 링크를 설정할 때 주로 사용됩니다. 브라우저에서 웹 사이트를 열려면 **[Browser](open-browser.md)** API를 참조해야 합니다.
 
