@@ -32,6 +32,6 @@ _이 가이드는 Hello, Xamarin.Forms 가이드에서 만들어진 Phoneword �
 
 - [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Visual Studio의 디버깅](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Visual Studio for Mac 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
+- [Mac용 Visual Studio 작성법-디버깅](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [무료 학습(비디오)](https://university.xamarin.com/self-guided)
 - [Xamarin 시작(비디오)](https://developer.xamarin.com/videos/)
