@@ -24,8 +24,8 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
 다음 운영 체제에 대한 Xamarin.Forms 응용 프로그램을 작성할 수 있습니다.
 
-- iOS 8 또는 그 이상
-- Android 4.4(API 19) 또는 그 이상([자세한 내용](#android))
+- iOS 8 이상
+- Android 4.4(API 19) 이상([자세한 내용](#android))
 - Windows 10 UWP(Universal Windows Platform)([자세한 내용)](#windows10))
 
 개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)에 익숙하다고 가정합니다.
@@ -76,7 +76,7 @@ Xamarin.Forms 앱은 macOS 및 Windows에서 개발할 수 있습니다. 그러�
 
 ## <a name="mac-system-requirements"></a>Mac 시스템 요구 사항
 
-Visual Studio for Mac을 사용하여 OS X El Capitan(10.11) 이상에서 Xamarin.Forms 앱을 개발할 수 있습니다. iOS 앱을 개발하려면 적어도 iOS 10 SDK 및 Xcode 8을 설치하는 것이 좋습니다.
+Mac용 Visual Studio를 사용하여 OS X El Capitan(10.11) 이상에서 Xamarin.Forms 앱을 개발할 수 있습니다. iOS 앱을 개발하려면 적어도 iOS 10 SDK 및 Xcode 8를 설치하는 것이 좋습니다.
 
 > [!NOTE]
 >  Windows 앱은 macOS에서 개발할 수 없습니다.
@@ -97,5 +97,5 @@ UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
-UWP 프로젝트는 Visual Studio 2017에서 만들어진 Xamarin.Forms 솔루션에 포함되지만, Visual Studio for Mac에서 만들어진 솔루션에는 포함되지 않습니다.
+UWP 프로젝트는 Visual Studio 2017에서 만들어진 Xamarin.Forms 솔루션에 포함되지만, Mac용 Visual Studio에서 만들어진 솔루션에는 포함되지 않습니다.
 언제든지 [UWP(Univeral Windows Platform) 앱](~/xamarin-forms/platform/windows/installation/index.md)을 기존 Xamarin.Forms 솔루션에 추가할 수 있습니다.
