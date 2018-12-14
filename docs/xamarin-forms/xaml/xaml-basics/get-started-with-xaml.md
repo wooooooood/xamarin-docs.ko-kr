@@ -457,4 +457,4 @@ public partial class XamlPlusCodePage : ContentPage {
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. MVVM 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5부. 데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
