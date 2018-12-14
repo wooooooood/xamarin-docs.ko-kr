@@ -105,7 +105,7 @@ XAML은 기본적으로 XML이지만 XAML에는 몇 가지 고유한 구문 기�
 
 이 문서는 또한 XML 네임 스페이스 선언 및 *요소*, *태그* 및 *특성*의 용어 사용의 이해를 포함하여 몇 가지 XML에 익숙하다고 가정합니다.
 
-Xamarin.Forms 및 XML에 익숙한 경우, [1부. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md) 읽기를 시작하십시오.
+Xamarin.Forms 및 XML에 익숙한 경우, [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md) 읽기를 시작하십시오.
 
 
 
