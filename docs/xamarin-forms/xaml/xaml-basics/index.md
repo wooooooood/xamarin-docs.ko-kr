@@ -27,7 +27,7 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 * [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+* [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 해당 XAML 기본 사항 문서 외에도 [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 단원은 다운로드할 수 있습니다 :
 
@@ -38,34 +38,34 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 <table style="border:0px; box-shadow:0 0px 0px" cellpadding="0" cellspacing="2" border="0" width="85%">
 <tr style="background:#ecf0f1">
   <td style="border:0px;">
-    <h4>7 장. XAML vs 코드</h4>
+    <h4>7장. XAML vs 코드</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>8 장. 코드 및 XAML의 조율</h4>
+    <h4>8장. 코드 및 XAML의 조율</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>10 장. XAML 태그 확장</h4>
+    <h4>10장. XAML 태그 확장</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>18 장. MVVM</h4>
+    <h4>18장. MVVM</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">요약</a></td></tr>
 </table>
 
-위 장들은 [무료 다운로드](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)가 가능 합니다.
+해당 장들은 [무료 다운로드](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)가 가능 합니다.
 
 <a name="Overview" />
 
@@ -105,7 +105,7 @@ XAML은 기본적으로 XML이지만 XAML에는 몇 가지 고유한 구문 기�
 
 이 문서는 또한 XML 네임 스페이스 선언 및 *요소*, *태그* 및 *특성*의 용어 사용의 이해를 포함하여 몇 가지 XML에 익숙하다고 가정합니다.
 
-Xamarin.Forms 및 XML에 익숙한 경우, [1 부. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md) 읽기를 시작하십시오.
+Xamarin.Forms 및 XML에 익숙한 경우, [1부. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md) 읽기를 시작하십시오.
 
 
 
