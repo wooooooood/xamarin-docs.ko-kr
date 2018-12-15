@@ -17,7 +17,7 @@ ms.locfileid: "39241307"
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
 
-이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio 사용한 Xamarin.Forms 응용 프로그램 개발과 Xamarin.Forms를 사용한 응용 프로그램 개발의 핵심을 소개합니다. Xamarin.Forms 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 다룹니다._
+_이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio 사용한 Xamarin.Forms 응용 프로그램 개발과 Xamarin.Forms를 사용한 응용 프로그램 개발의 핵심을 소개합니다. Xamarin.Forms 응용 프로그램을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계를 다룹니다._
 
 먼저 [Xamarin.Forms 시스템 요구 사항](~/cross-platform/get-started/installation/index.md)을 검토합니다.
 
