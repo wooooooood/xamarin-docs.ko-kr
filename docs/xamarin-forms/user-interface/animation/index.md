@@ -18,7 +18,7 @@ ms.locfileid: "38998307"
 
 _Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다._
 
-Xamarin.Forms 애니메이션 클래스는 시각 요소들(Visual Elments)의 여러 속성들을 대상으로 하며, 일반적인 애니메이션은 일정 기간 동안 한 속성의 값을 다른 값으로 점짐적으로 변경합니다. Xamarin.Forms 애니메이션 클래스에는 XAML 인터페이스가 없는 점은 참고해야 합니다. 그렇지만 애니메이션은 XAML에서 [동작](~/xamarin-forms/app-fundamentals/behaviors/index.md)을 통해 캡슐화 한 후 XAML에서 참조할 수 있습니다.
+Xamarin.Forms 애니메이션 클래스는 시각 요소들(Visual Elments)의 여러 속성들을 대상으로 하며, 일반적인 애니메이션은 일정 기간 동안 한 속성의 값을 다른 값으로 점진적으로 변경합니다. Xamarin.Forms 애니메이션 클래스에는 XAML 인터페이스가 없는 점은 참고해야 합니다. 그렇지만 애니메이션은 XAML에서 [동작](~/xamarin-forms/app-fundamentals/behaviors/index.md)을 통해 캡슐화 한 후 XAML에서 참조할 수 있습니다.
 
 ## <a name="simple-animationssimplemd"></a>[간단한 애니메이션](simple.md)
 
