@@ -349,28 +349,28 @@ namespace XamlSamples
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // 생성자
+        // Constructor
         public KeypadViewModel()
         {
             AddCharCommand = new Command<string>((key) =>
                 {
-                    // 입력 문자열에 대한 키를 추가.
+                    // Add the key to the input string.
                     InputString += key;
                 });
 
             DeleteCharCommand = new Command(() =>
                 {
-                    // 입력 문자열에서 문자를 제거.
+                    // Strip a character from the input string.
                     InputString = InputString.Substring(0, InputString.Length - 1);
                 },
                 () =>
                 {
-                    // 삭제할 것이 있다면 true를 반환.
+                    // Return true if there's something to delete.
                     return InputString.Length > 0;
                 });
         }
 
-        // Public 속성
+        // Public properties
         public string InputString
         {
             protected set
@@ -381,7 +381,7 @@ namespace XamlSamples
                     OnPropertyChanged("InputString");
                     DisplayText = FormatText(inputString);
 
-                    // 아마도 삭제 버튼이 활성/비활성 되어야 합니다.
+                    // Perhaps the delete button must be enabled/disabled.
                     ((Command)DeleteCharCommand).ChangeCanExecute();
                 }
             }
@@ -402,7 +402,7 @@ namespace XamlSamples
             get { return displayText; }
         }
 
-        // ICommand 구현
+        // ICommand implementations
         public ICommand AddCharCommand { protected set; get; }
 
         public ICommand DeleteCharCommand { protected set; get; }
@@ -603,21 +603,21 @@ public class PageDataViewModel
     {
         All = new List<PageDataViewModel>
         {
-            // 1부. XAML 시작
+            // Part 1. Getting Started with XAML
             new PageDataViewModel(typeof(HelloXamlPage), "Hello, XAML",
                                   "Display a Label with many properties set"),
 
             new PageDataViewModel(typeof(XamlPlusCodePage), "XAML + Code",
                                   "Interact with a Slider and Button"),
 
-            // 2부. 필수 XAML 구문
+            // Part 2. Essential XAML Syntax
             new PageDataViewModel(typeof(GridDemoPage), "Grid Demo",
                                   "Explore XAML syntax with the Grid"),
 
             new PageDataViewModel(typeof(AbsoluteDemoPage), "Absolute Demo",
                                   "Explore XAML syntax with AbsoluteLayout"),
 
-            // 3부. XAML 태그 확장
+            // Part 3. XAML Markup Extensions
             new PageDataViewModel(typeof(SharedResourcesPage), "Shared Resources",
                                   "Using resource dictionaries to share resources"),
 
@@ -627,7 +627,7 @@ public class PageDataViewModel
             new PageDataViewModel(typeof(RelativeLayoutPage), "Relative Layout",
                                   "Explore XAML markup extensions"),
 
-            // 4부. 데이터 바인딩 기본 사항
+            // Part 4. Data Binding Basics
             new PageDataViewModel(typeof(SliderBindingsPage), "Slider Bindings",
                                   "Bind properties of two views on the page"),
 
@@ -637,7 +637,7 @@ public class PageDataViewModel
             new PageDataViewModel(typeof(ListViewDemoPage), "ListView Demo",
                                   "Use a ListView with data bindings"),
 
-            // 5부. 데이터 바인딩부터 MVVM까지
+            // Part 5. From Data Bindings to MVVM
             new PageDataViewModel(typeof(OneShotDateTimePage), "One-Shot DateTime",
                                   "Obtain the current DateTime and display it"),
 
