@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/5/2018
-ms.openlocfilehash: 416dfef5520be39ca37945ea25cb9426e9ad653a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 02c95fbdde8b264fc34d5a8785be03b2dfcddba7
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267364"
 ---
 # <a name="troubleshooting-ios-12-development-with-xamarin"></a>Xamarin 사용한 iOS 12 개발 문제 해결
 
@@ -24,7 +24,7 @@ ms.locfileid: "50131951"
 
 - 릴리스 정보
     - 합니다 [Xamarin 릴리스](http://releases.xamarin.com/) 블로그
-    - Xamarin [릴리스](https://developer.xamarin.com/releases/) 보관
+    - Xamarin [릴리스](https://docs.microsoft.com/xamarin/ios/release-notes/) 보관
     - Mac 용 visual Studio ([안정적인](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes)하십시오 [미리 보기](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
     - Visual Studio 2017 ([안정적인](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)하십시오 [미리 보기](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [개발자 커뮤니티](https://developercommunity.visualstudio.com/search.html)

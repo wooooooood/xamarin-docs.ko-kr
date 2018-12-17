@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 140307dbfe55d5445c329ea83eafedd467fe58fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267601"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -66,7 +66,7 @@ Visual Studio 내 장치 배포 로깅을 설정 하려면
 4.  로그 메시지는 데스크톱에 monodroid.log 파일에 기록 됩니다.
 
 
-Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾을 수 있으며 병렬화가 약간 더 어렵습니다. *AndroidUtils* 모든 날짜 + 예를 들어 배포를 발생 하는 시간에 대 한 로그 파일이 생성 됩니다. **AndroidTools-2012-10-24_12-35-45.log**합니다.
+Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾을 수 있으며 병렬화가 약간 더 어렵습니다. *AndroidUtils* 모든 날짜 + 예를 들어 배포를 발생 하는 시간에 대 한 로그 파일이 만들어집니다. **AndroidTools-2012-10-24_12-35-45.log**합니다.
 
 -  Windows에서의 로그 파일에 기록 됩니다 `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`합니다.
 -  OS X에서 로그 파일에 기록 됩니다 `$HOME/Library/Logs/XamarinStudio-{VERSION}`합니다.
@@ -91,13 +91,13 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 Xamarin.Android에는 다음 시스템 속성을 지원합니다.
 
--   *debug.mono.debug*:이 해당 하는 경우 비어 있지 않은 문자열로 `*mono-debug*`합니다.
+-   *debug.mono.debug*: 이 해당 하는 경우 비어 있지 않은 문자열로 `*mono-debug*`합니다.
 
--   *debug.mono.env*: 파이프로 구분 된 ('*|*') 응용 프로그램을 시작 하는 동안 내보내려면 환경 변수 목록을 *전에* mono가 초기화 되었습니다. 따라서 해당 컨트롤 mono 로깅 환경 변수를 설정 합니다.
+-   *debug.mono.env*: 파이프로 구분 된 ('*|*') 응용 프로그램을 시작 하는 동안 내보내려면 환경 변수 목록을 *하기 전에* mono가 초기화 되었습니다. 따라서 해당 컨트롤 mono 로깅 환경 변수를 설정 합니다.
 
-    - *참고*: 값 이므로 '*|*'-구분 값이 있어야 인용에 대 한 추가 수준으로는 \` *adb 셸* \` 명령 제거 됩니다는 따옴표의 집합입니다.
+    - *참고*: 값 이므로 '*|*'-구분 값이 있어야 인용에 대 한 추가 수준으로는 \` *adb 셸* \` 명령 집합이 따옴표를 제거 합니다.
 
-    - *참고*: Android 시스템 속성 값 길이가 92 자까지 될 수 없습니다.
+    - *참고*: 않을 Android 시스템 속성 값 길이가 92 문자 보다 길지 수 없습니다.
 
     - 예제:
 
@@ -106,7 +106,7 @@ Xamarin.Android에는 다음 시스템 속성을 지원합니다.
 -   *debug.mono.log*: 쉼표로 구분 된 ('*,*') Android 디버그 로그에 추가 메시지를 인쇄 해야 하는 구성 요소의 목록입니다. 기본적으로 아무 것도 설정 됩니다. 구성 요소에는 다음이 포함 됩니다.
 
     -   *모든*: 모든 메시지를 인쇄 합니다.
-    -   *gc*: 인쇄 GC 관련 메시지입니다.
+    -   *gc*: GC 관련 메시지를 인쇄 합니다.
     -   *gref*: (약한, 전역) 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
     -   *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
 
@@ -250,63 +250,6 @@ I/monodroid-gref(27679): -w- grefc 1914 gwrefc 296 handle 0xde68f95f/W from take
 
 
 
-## <a name="offline-activation"></a>오프 라인 정품 인증
-
-Windows에서 Xamarin.Android를 활성화할 수 없습니다 또는 Mac OS X에서 전체 버전의 Xamarin.Android 설치 하지 못했습니다 경우 참조 하세요. 합니다 [오프 라인 정품 인증](~/android/get-started/installation/index.md) 페이지입니다.
-
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>평가판 계정에서 인디/비즈니스로 업그레이드할 수 없습니다.
-
-최근에 Xamarin.Android를 구입 하 고 이전에 Xamarin.Android 평가판을 시작 하는 경우 Visual Studio가 Mac 또는 Visual Studio에 대 한 선택이 라이선스 변경 하려면 다음이 단계를 완료 해야 합니다.
-
--  Mac/Visual Studio 용 Visual Studio를 닫습니다.
--  Android\License\에 대 한 Windows에 대 한 모든 파일을 Mac에서 ~/Library/MonoAndroid 또는 %PROGRAMDATA%\Mono에서 제거 합니다.
--  Xamarin.Android 프로젝트를 빌드하고 Mac/Visual Studio 용 Visual Studio를 다시 엽니다
-
-
-이 가동 및 실행 표시 되어야 합니다. 시도 하려는 계속 하는 데 문제가 있는 경우는 [오프 라인 정품 인증](~/android/get-started/installation/index.md) 워크스테이션의 활성화를 완료 합니다.
-
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>수신 ' 활성화 불완전 한 오류 메시지
-
-이 문제는 Visual Studio 용 Xamarin.Android를 사용 하는 경우에 발생할 수 있습니다. 이 문제를 해결 하려면 로그를 보내세요를 하기 위해 다음 위치에서 *contact@xamarin.com*합니다.
-
--  로그 위치: **% LocalAppData %\\Xamarin\\로그**
-
-
-
-
-## <a name="receiving-error-retrieving-update-information-error-message"></a>오류 메시지 '오류 업데이트 정보를 검색 하는 데 사용'
-
-때때로, 업데이트는 업데이트를 확인할 때 자주 발생 하는이 다음 오류로 실패 합니다.
-
-시간의 대부분을 로깅에 Xamarin 계정 로그 아웃 하면이 오류를 해결할 수 있습니다 하 고 다시 로그인 합니다.
-
-이렇게 하려면 아래 선택한 플랫폼을 찾 및 단계를 수행 합니다.
-
-**Mac:**
-1. Mac 용 Visual Studio를 열고
-2. Mac 용 Visual Studio 선택 > 계정...
-3. 로그 아웃 클릭
-4. [로그인] 클릭
-5. 자격 증명 입력
-6. 업데이트 확인
-
-**PC에서 Visual Studo 사용:**
-1. Visual Studio를 엽니다.
-2. 도구 > Xamarin 계정
-3. 로그 아웃 클릭
-4. [로그인] 클릭
-5. 자격 증명 입력
-6. 업데이트 확인
-
-이 오류 메시지가 계속 표시 되 면 전자 메일 **contact@xamarin.com**합니다.
-
-
-
-
 ## <a name="android-debug-logs"></a>Android 디버그 로그
 
 합니다 [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 왔다면 런타임 오류에 대 한 추가 컨텍스트를 제공할 수 있습니다.
@@ -365,7 +308,7 @@ HTC 동기화 소프트웨어 하지 못할 수 있습니다 **adb 서버 시작
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid.exe 또는 aresgen.exe 1 코드로 종료 되었습니다.
 
-이 문제를 디버깅, Visual Studio로 이동 하 고, 이렇게 하려면 MSBuild의 자세한 정도 수준을 변경 하는 데 선택: **도구 > 옵션 > 프로젝트** 하 고 **솔루션 > 빌드** 고 **실행 > MSBuild 프로젝트 빌드 출력의 자세한 정도** 이 값을 설정 하 고 **Normal**합니다.
+이 문제를 디버깅, Visual studio 및 MSBuild의 자세한 정도 수준이를 변경 하려면 선택 합니다. **도구 > 옵션 > 프로젝트** 하 고 **솔루션 > 빌드** 하 고 **실행 > MSBuild 프로젝트 빌드 출력의 자세한 정도** 이 값을 설정 하 고 **보통**.
 
 다시 작성 하 고 전체 오류를 포함 해야 하는 Visual Studio의 출력 창을 확인 합니다.
 

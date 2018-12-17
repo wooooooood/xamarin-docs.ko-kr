@@ -1,6 +1,6 @@
 ---
-title: 플레이어에 게 비디오 소스 바인딩
-description: 이 문서에서는 Xamarin.Forms를 사용 하 여 비디오 플레이어에 게 비디오 소스에 바인딩하는 방법을 설명 합니다.
+title: 플레이어에 비디오 소스 바인딩
+description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어에 비디오 소스를 바인딩하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
@@ -9,14 +9,14 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35240032"
 ---
-# <a name="binding-video-sources-to-the-player"></a>플레이어에 게 비디오 소스 바인딩
+# <a name="binding-video-sources-to-the-player"></a>플레이어에 비디오 소스 바인딩
 
-경우는 `Source` 의 속성은 `VideoPlayer` 보기가 새 비디오 파일에 설정 된 기존 비디오 재생을 중지 하 고 새 비디오 시작 합니다. 이 확인할는 **웹 비디오 선택** 의 페이지는 [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 샘플. 페이지에 포함 된 `ListView` 에서 참조 하는 세 개의 비디오의 제목으로는 **App.xaml** 파일:
+`VideoPlayer` 보기의 `Source` 속성이 새 비디오 파일로 설정되면 기본 비디오는 재생이 중지되고 새 비디오가 시작됩니다. 이는 [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 샘플의 **웹 비디오 선택** 페이지에서 확인할 수 있습니다. 페이지에는 **App.xaml** 파일에서 참조된 세 비디오의 제목이 있는 `ListView`가 포함됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -47,7 +47,7 @@ ms.locfileid: "35240032"
 </ContentPage>
 ```
 
-비디오 옵션을 선택 하면는 `ItemSelected` 코드 숨김 파일에 이벤트 처리기가 실행 됩니다. 제목에서 모든 공백 및 아포스트로피를 제거 하 고에 정의 된 리소스 중 하나를 가져오려면 키로 사용 하는 처리기는 **App.xaml** 파일입니다. `UriVideoSource` 개체가 다음으로 설정 되는 `Source` 속성은 `VideoPlayer`합니다.
+비디오를 선택하면 코드 숨김 파일의 `ItemSelected` 이벤트 처리기가 실행됩니다. 처리기는 제목에서 공백과 아포스트로피를 제거하고 이를 **App.xaml** 파일에 정의된 리소스 중 하나를 얻기 위한 키로 사용합니다. 그런 다음, `UriVideoSource` 개체가 `VideoPlayer`의 `Source` 속성으로 설정됩니다.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -71,11 +71,11 @@ namespace VideoPlayerDemos
 }
 ```
 
-이 페이지가 처음 로드 될 때는 `ListView`이므로 비디오 재생을 시작 하려면 하나를 선택 해야 합니다.
+페이지가 처음 로드되면 `ListView`에서 항목이 선택되지 않으므로 재생을 시작하려면 비디오에 대해 한 항목을 선택해야 합니다.
 
-[![웹 비디오 선택](source-bindings-images/selectwebvideo-small.png "웹 비디오 선택")](source-bindings-images/selectwebvideo-large.png#lightbox "웹 비디오를 선택 합니다.")
+[![웹 비디오 선택](source-bindings-images/selectwebvideo-small.png "웹 비디오 선택")](source-bindings-images/selectwebvideo-large.png#lightbox "웹 비디오 선택")
 
-`Source` 속성 `VideoPlayer` 는에서 대상 데이터 바인딩을 사용할 수 있다는 것을 의미 하는 바인딩 가능한 속성을 지원 합니다. 이 확인할는 **VideoPlayer 바인딩할** 페이지. 태그는 **BindToVideoPlayer.xaml** 파일은 비디오와 그의 제목을 캡슐화 하는 다음 클래스에 의해 지원 `VideoSource` 개체:
+`VideoPlayer`의 `Source` 속성은 바인딩 가능한 속성에서 지원되므로 데이터 바인딩의 대상이 될 수 있습니다. 이 내용은 **VideoPlayer에 바인딩** 페이지에서 확인할 수 있습니다. **BindToVideoPlayer.xaml** 파일의 태그는 비디오 제목과 해당 `VideoSource` 개체를 캡슐화하는 다음 클래스에 의해 지원됩니다.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -94,7 +94,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-`ListView` 에 **BindToVideoPlayer.xaml** 이러한 배열을 파일에 포함 되어 `VideoInfo` 개체, 비디오 제목으로 초기화 하는 한 개의 각 및 `UriVideoSource` 개체에서 리소스 사전에서  **App.xaml**:
+**BindToVideoPlayer.xaml** 파일의 `ListView`에는 각각 **App.xaml**에 있는 리소스 사전의 `UriVideoSource` 개체와 비디오 제목으로 초기화된 `VideoInfo` 개체 배열이 포함되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,11 +133,11 @@ namespace VideoPlayerDemos
 </ContentPage>
 ```
 
-`Source` 속성은 `VideoPlayer` 바인딩되는 `ListView`합니다. `Path` 로 지정 된 바인딩의 `SelectedItem.VideoSource`, 두 가지 속성으로 구성 된 복합 경로: `SelectedItem` 의 속성인 `ListView`합니다. 선택한 항목은 형식의 `VideoInfo`을는 `VideoSource` 속성.
+`VideoPlayer`의 `Source` 속성은 `ListView`에 바인딩됩니다. 바인딩의 `Path`는 `SelectedItem.VideoSource`로 지정되며 이는 두 속성으로 구성된 복합 경로입니다. `SelectedItem`은 `ListView`의 속성입니다. 선택한 항목은 `VideoInfo` 형식이며 여기에는 `VideoSource` 속성이 포함됩니다.
 
-첫 번째와 마찬가지로 **웹 비디오 선택** 페이지에서 선택 된 항목이 처음에서 `ListView`이므로 재생을 시작 하기 전에 동영상 중 하나를 선택 해야 합니다.
+처음 **웹 비디오 선택** 페이지에서처럼 초기에는 `ListView`에서 항목이 선택되지 않으므로 재생을 시작하기 전에 비디오 중 하나를 선택해야 합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [비디오 플레이어 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

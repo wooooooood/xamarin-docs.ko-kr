@@ -4,17 +4,15 @@ description: 이 문서에서는 응용 프로그램 간에 텍스트를 복사�
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 8dd238da678dfb5773801137d313b286590aa463
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 90ede9d0d0fbee9efabcce25c0ae7c3c439d9e69
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675538"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898705"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: 클립보드
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **Clipboard** 클래스를 사용하여 응용 프로그램 간에 텍스트를 복사하여 시스템 클립보드에 붙여넣을 수 있습니다.
 
@@ -39,7 +37,7 @@ var hasText = Clipboard.HasText;
 **클립보드**의 텍스트를 설정합니다.
 
 ```csharp
-Clipboard.SetText("Hello World");
+await Clipboard.SetTextAsync("Hello World");
 ```
 
 **클립보드**에서 텍스트를 읽습니다.

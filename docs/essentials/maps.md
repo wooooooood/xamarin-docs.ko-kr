@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898968"
 ---
-# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Map
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: 지도
 
 **Map** 클래스를 사용하면 애플리케이션이 설치된 지도 애플리케이션에서 특정 위치나 placemark를 열 수 있습니다.
 

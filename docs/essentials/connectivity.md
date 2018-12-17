@@ -1,20 +1,18 @@
 ---
-title: 'Xamarin.Essentials: Connectivity'
+title: 'Xamarin.Essentials: 연결'
 description: Xamarin.Essentials의 Connectivity 클래스를 사용하면 장치의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 3c29fc85d20e3a4d91a1ae63feca1cb668af141e
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675408"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899021"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
-
-![시험판 NuGet](~/media/shared/pre-release.png)
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: 연결
 
 **Connectivity** 클래스를 사용하면 장치의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
 
@@ -84,7 +82,7 @@ if (current == NetworkAccess.Internet)
 장치에서 현재 사용 중인 [연결 프로필](xref:Xamarin.Essentials.ConnectionProfile) 유형을 확인할 수 있습니다.
 
 ```csharp
-var profiles = Connectivity.Profiles;
+var profiles = Connectivity.ConnectionProfiles;
 if (profiles.Contains(ConnectionProfile.WiFi))
 {
     // Active Wi-Fi connection.
@@ -105,7 +103,7 @@ public class ConnectivityTest
     void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
     {
         var access = e.NetworkAccess;
-        var profiles = e.Profiles;
+        var profiles = e.ConnectionProfiles;
     }
 }
 ```

@@ -1,6 +1,6 @@
 ---
-title: 공용 언어 런타임 속성으로 결과 매개 변수 전달
-description: 공용 언어 런타임 (CLR) 속성은 런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수 정의를 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용 하 여 매개 변수는 효과를 전달 하는 방법을 보여 줍니다.
+title: 공용 언어 런타임 속성으로 효과 매개 변수 전달
+description: CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
@@ -9,34 +9,34 @@ ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 1bb357b256a7cc6d52d1d92613f38cbf48400c4c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995770"
 ---
-# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 결과 매개 변수 전달
+# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 
-_공용 언어 런타임 (CLR) 속성은 런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수 정의를 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용 하 여 매개 변수는 효과를 전달 하는 방법을 보여 줍니다._
+_CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다._
 
-런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수를 만드는 프로세스는 다음과 같습니다.
+런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 만드는 프로세스는 다음과 같습니다.
 
-1. 만들기는 `public` 해당 서브 클래스를 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스입니다. `RoutingEffect` 클래스 내부 효과 일반적으로 플랫폼별을 래핑하는 플랫폼 독립적인 효과 나타냅니다.
-1. 해상도 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID 문자열이 전달 하 여 기본 클래스 생성자를 호출 하는 생성자를 만듭니다.
-1. 각 매개 변수에 결과를 전달할 수에 대 한 클래스 속성을 추가 합니다.
+1. [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 클래스를 서브클래스하는 `public` 클래스를 만듭니다. `RoutingEffect` 클래스는 일반적으로 플랫폼에 따라 내부 효과를 래핑하는 플랫폼 독립적인 효과를 나타냅니다.
+1. 기본 클래스 생성자를 호출하여 해상도 그룹 이름의 연결과 각 플랫폼별 효과 클래스에 지정된 고유 ID를 전달하는 생성자를 만듭니다.
+1. 효과에 전달될 각 매개 변수에 대한 클래스에 속성을 추가합니다.
 
-매개 변수 효과 인스턴스화할 때 각 속성에 대 한 값을 지정 하 여 결과를 전달할 수 있습니다.
+그런 다음, 효과를 인스턴스화할 때 각 속성에 대한 값을 지정하여 매개 변수를 효과에 전달할 수 있습니다.
 
-샘플 응용 프로그램을 보여 줍니다를 `ShadowEffect` 하 여 표시 되는 텍스트에 그림자를 추가 하는 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤. 다음 다이어그램은 이들 간의 관계와 함께 샘플 응용 프로그램에서 각 프로젝트의 책임을 보여 줍니다.
+샘플 애플리케이션은 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에서 표시되는 텍스트에 그림자를 추가하는 `ShadowEffect`를 설명합니다. 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
 ![](clr-properties-images/shadow-effect.png "그림자 효과 프로젝트 책임")
 
-A [ `Label` ](xref:Xamarin.Forms.Label) 대 한 control 권한 합니다 `HomePage` 를 사용자 지정는 `LabelShadowEffect` 각 플랫폼별 프로젝트에. 매개 변수는 각 전달 `LabelShadowEffect` 속성을 통해는 `ShadowEffect` 클래스입니다. 각 `LabelShadowEffect` 클래스에서 파생 되는 `PlatformEffect` 각 플랫폼에 대 한 클래스입니다. 그러면 표시 되는 텍스트에 추가할 그림자를 `Label` 다음 스크린샷과에서 같이 제어:
+`HomePage`의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤은 각 플랫폼별 프로젝트에서 `LabelShadowEffect`로 사용자 지정됩니다. 매개 변수는 `ShadowEffect` 클래스의 속성을 통해 각 `LabelShadowEffect`에 전달됩니다. 각 `LabelShadowEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷에 표시된 대로 `Label` 컨트롤에서 표시되는 텍스트에 그림자가 추가됩니다.
 
-![](clr-properties-images/screenshots.png "각 플랫폼에 그림자 효과")
+![](clr-properties-images/screenshots.png "각 플랫폼의 그림자 효과")
 
-## <a name="creating-effect-parameters"></a>결과 매개 변수 만들기
+## <a name="creating-effect-parameters"></a>효과 매개 변수 만들기
 
-`public` 해당 서브 클래스를 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 다음 코드 예제에서 설명한 것 처럼 결과 매개 변수를 나타내는 클래스를 만들 수 해야 합니다.
+다음 코드 예제에서 설명한 것처럼 효과 매개 변수를 표현하도록 [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 클래스를 서브클래스하는 `public` 클래스를 만들어야 합니다.
 
 ```csharp
 public class ShadowEffect : RoutingEffect
@@ -55,11 +55,11 @@ public class ShadowEffect : RoutingEffect
 }
 ```
 
-합니다 `ShadowEffect` 각 플랫폼별에 전달할 매개 변수를 나타내는 네 가지 속성을 포함 `LabelShadowEffect`합니다. 클래스 생성자는 해상도 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID를 연결으로 구성 된 매개 변수에서 전달 기본 클래스 생성자를 호출 합니다. 따라서의 새 인스턴스를 `MyCompany.LabelShadowEffect` 컨트롤을 추가할 [ `Effects` ](xref:Xamarin.Forms.Element.Effects) 컬렉션 때를 `ShadowEffect` 인스턴스화됩니다.
+`ShadowEffect`에는 각 플랫폼별 `LabelShadowEffect`에 전달할 매개 변수를 나타내는 네 가지 속성이 포함되어 있습니다. 클래스 생성자는 기본 클래스 생성자를 호출하여 해상도 그룹 이름의 연결과 각 플랫폼별 효과 클래스에 지정된 고유 ID로 이루어진 매개 변수를 전달합니다. 따라서 `ShadowEffect`가 인스턴스화될 때 `MyCompany.LabelShadowEffect`의 새 인스턴스가 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가됩니다.
 
-## <a name="consuming-the-effect"></a>효과 사용합니다.
+## <a name="consuming-the-effect"></a>효과 사용
 
-다음 XAML 코드 예제와 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤에는 `ShadowEffect` 연결:
+다음 XAML 코드 예제는 `ShadowEffect`가 연결된 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 보여줍니다.
 
 ```xaml
 <Label Text="Label Shadow Effect" ...>
@@ -77,7 +77,7 @@ public class ShadowEffect : RoutingEffect
 </Label>
 ```
 
-해당 [ `Label` ](xref:Xamarin.Forms.Label) C#에서 다음 코드 예제에 표시 됩니다.
+해당하는 C#의 [`Label`](xref:Xamarin.Forms.Label)가 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 var label = new Label {
@@ -107,15 +107,15 @@ label.Effects.Add (new ShadowEffect {
 });
 ```
 
-두 코드 예제에서는 인스턴스를 `ShadowEffect` 컨트롤에 추가 되기 전에 각 속성에 대해 지정 되는 값을 사용 하 여 클래스가 인스턴스화되고 [ `Effects` ](xref:Xamarin.Forms.Element.Effects) 컬렉션입니다. `ShadowEffect.Color` 속성 플랫폼별 색 값을 사용 합니다. 자세한 내용은 [장치 클래스](~/xamarin-forms/platform/device.md)합니다.
+두 코드 예제에서 `ShadowEffect` 클래스의 인스턴스는 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가되기 전에 각 속성에 대해 지정되는 값을 사용하여 인스턴스화됩니다. `ShadowEffect.Color` 속성은 플랫폼별 색 값을 사용합니다. 자세한 내용은 [디바이스 클래스](~/xamarin-forms/platform/device.md)를 참조하세요.
 
-## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼에 대 한 효과 만들기
+## <a name="creating-the-effect-on-each-platform"></a>각 플랫폼의 효과 만들기
 
-다음 섹션에서는 플랫폼 전용 구현에 설명 된 `LabelShadowEffect` 클래스입니다.
+다음 섹션에서는 `LabelShadowEffect` 클래스의 플랫폼별 구현을 설명합니다.
 
 ### <a name="ios-project"></a>iOS 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` iOS 프로젝트에 대 한 구현 합니다.
+다음 코드 예제는 iOS 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -146,11 +146,11 @@ namespace EffectsDemo.iOS
 }
 ```
 
-`OnAttached` 메서드에서 검색 합니다 `ShadowEffect` 인스턴스 및 집합 `Control.Layer` 그림자를 만들 지정 된 속성 값에 대 한 속성. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+`OnAttached` 메서드는 `ShadowEffect` 인스턴스를 검색하고, `Control.Layer` 속성을 그림자를 만들도록 지정된 속성 값으로 설정합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
 ### <a name="android-project"></a>Android 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` Android 프로젝트에 대 한 구현 합니다.
+다음 코드 예제는 Android 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -183,11 +183,11 @@ namespace EffectsDemo.Droid
 }
 ```
 
-`OnAttached` 메서드 검색 합니다 `ShadowEffect` 인스턴스 및 호출 합니다 [ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 지정 된 속성 값을 사용 하 여 그림자를 만드는 방법. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+`OnAttached` 메서드는 `ShadowEffect` 인스턴스를 검색하고, 지정된 속성 값을 사용하여 그림자를 만들도록 [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
 ### <a name="universal-windows-platform-project"></a>유니버설 Windows 플랫폼 프로젝트
 
-다음 코드 예제는 `LabelShadowEffect` 유니버설 Windows 플랫폼 (UWP) 프로젝트에 대 한 구현:
+다음 코드 예제는 UWP(유니버설 Windows 플랫폼) 프로젝트에 대한 `LabelShadowEffect` 구현을 보여줍니다.
 
 ```csharp
 [assembly: ResolutionGroupName ("Xamarin")]
@@ -230,11 +230,11 @@ namespace EffectsDemo.UWP
 }
 ```
 
-유니버설 Windows 플랫폼에 그림자 효과 제공 하지 않으므로 `LabelShadowEffect` 구현은 두 가지 플랫폼에서 두 번째 오프셋을 추가 하 여 시뮬레이션 [ `Label` ](xref:Xamarin.Forms.Label) 주 뒤 `Label`합니다. `OnAttached` 메서드에서 검색 합니다 `ShadowEffect` 인스턴스를 만들고 새 `Label`, 일부 레이아웃 속성을 설정 하 고는 `Label`합니다. 다음 설정 하 여 그림자를 생성 합니다 [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor)를 [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), 및 [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) 합니다 의위치와색을제어하는속성`Label`. `shadowLabel` 그런 다음 삽입은 주 뒤 오프셋 `Label`합니다. 이 기능에 래핑됩니다를 `try` / `catch` 효과에 연결 된 컨트롤에 없는 경우 차단 된 `Control.Layer` 속성입니다. 구현 되는 `OnDetached` 메서드 정리가 필요 없으므로 합니다.
+유니버설 Windows 플랫폼은 그림자 효과를 제공하지 않으므로 두 가지 플랫폼의 `LabelShadowEffect` 구현은 기본 `Label` 뒤에 두 번째 오프셋 [`Label`](xref:Xamarin.Forms.Label)을 추가하여 시뮬레이션합니다. `OnAttached` 메서드는 `ShadowEffect` 인스턴스를 검색하고, 새 `Label`을 만든 후, 일부 레이아웃 속성을 `Label`로 설정합니다. 그런 다음, [`TextColor`](xref:Xamarin.Forms.Label.TextColor), [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 및 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) 속성을 설정하여 그림자를 생성하여 `Label`의 위치와 색을 제어합니다. 그런 다음, `shadowLabel`이 기본 `Label` 뒤에 삽입됩니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 CLR 속성을 사용 하 여 영향을 줄에 매개 변수를 전달할 살펴보았습니다. CLR 속성은 런타임 속성 변경 내용에 응답 하지 않는 효과 매개 변수 정의를 사용할 수 있습니다.
+이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명했습니다. CLR 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
@@ -243,4 +243,4 @@ namespace EffectsDemo.UWP
 - [효과](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [그림자 효과 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [그림자 효과(샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)

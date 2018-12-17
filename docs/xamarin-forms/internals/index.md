@@ -6,15 +6,19 @@ ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 8ed643619e5a22e9a1febe419eb42d45901dec63
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.date: 03/12/2018
+ms.openlocfilehash: 77b32d823e1fd89f6b45dca73e89322e57ddc199
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350747"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898893"
 ---
 # <a name="advanced-concepts--internals"></a>고급 개념 및 내부 요소
+
+## <a name="dependency-resolutiondependency-resolutionmd"></a>[종속성 확인](dependency-resolution.md)
+
+이 문서에서는 응용 프로그램의 종속성 주입 컨테이너 만들기 및 사용자 지정 렌더러의 경우 효과의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 하 고 `DependencyService` 구현 합니다.
 
 ## <a name="fast-renderersfast-renderersmd"></a>[빠른 렌더러](fast-renderers.md)
 
@@ -23,7 +27,3 @@ ms.locfileid: "39350747"
 ## <a name="net-standardnet-standardmd"></a>[.NET Standard](net-standard.md)
 
 이 문서에서는.NET Standard 2.0을 사용 하 여 Xamarin.Forms 응용 프로그램을 변환 하는 방법을 설명 합니다.
-
-## <a name="dependency-resolutiondependency-resolutionmd"></a>[종속성 확인](dependency-resolution.md)
-
-이 문서에서는 응용 프로그램의 종속성 주입 컨테이너 만들기 및 사용자 지정 렌더러의 경우 효과의 수명을 제어할 수 있도록 Xamarin.Forms에 종속성 확인 메서드를 삽입 하는 방법에 설명 하 고 `DependencyService` 구현 합니다.

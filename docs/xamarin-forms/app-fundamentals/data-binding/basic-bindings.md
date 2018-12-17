@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 기본 바인딩
-description: 이 문서에서는 Xamarin.Forms 데이터 바인딩, 적어도 한 쌍의 두 개체 간의 속성 링크는 그 중 하나는 일반적으로 사용자 인터페이스 개체를 사용 하는 방법을 설명 합니다. 이러한 두 개체는 원본과 대상 이라고 합니다.
+description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 대상과 원본이라고 합니다.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
@@ -9,23 +9,23 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675200"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
-데이터 바인딩을 Xamarin.Forms는 하나 이상의 사용자 인터페이스 개체는 일반적으로 두 개체 사이의 속성 쌍을 연결 합니다. 이 두 개체 라고 합니다 *대상* 하며 *원본*:
+Xamarin.Forms 데이터 바인딩은 두 개의 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 *대상* 및 *원본*이라고 합니다.
 
-- 합니다 *대상* 데이터 바인딩이 설정 된 개체 (및 속성) 됩니다.
-- 합니다 *원본* 데이터 바인딩에서 참조 된 개체 (및 속성).
+- *대상*은 데이터 바인딩이 설정된 개체(및 속성)입니다.
+- *원본*은 데이터 바인딩에서 참조하는 개체(및 속성)입니다.
 
-이러한 차이점으로이 인해 혼동이 발생할 수: 가장 간단한 경우, 데이터 흐름 원본에서 대상에 대상 속성의 값은 소스 속성의 값에서 설정 되어 있는지를 의미 합니다. 그러나 일부 경우에 데이터 전달 될 수 있습니다 또는 대상에서 원본 또는 양방향. 혼동을 피하기 위해 대상 된 개체 데이터를 제공 하는 대신 되며 데이터를 수신 하는 경우에 데이터 바인딩이 설정 됩니다는 항상 염두에서에 둡니다.
+이 구분은 경우에 따라 다소 혼란스러울 수 있습니다. 가장 간단한 경우 데이터는 원본에서 대상으로 이동합니다. 즉 대상 속성의 값이 원본 속성의 값에서 설정됩니다. 하지만 어떤 경우에는 데이터가 대상에서 원본으로 또는 양방향으로 이동할 수 있습니다. 혼란을 방지하기 위해 데이터를 받는 것이 아니라 데이터를 제공하는 경우에도 대상이 항상 데이터 바인딩이 설정된 개체라는 점을 명심하세요.
 
-## <a name="bindings-with-a-binding-context"></a>바인딩 컨텍스트를 사용 하 여 바인딩
+## <a name="bindings-with-a-binding-context"></a>바인딩 컨텍스트가 있는 바인딩
 
-데이터 바인딩에 일반적으로 완전히 XAML에 지정 이지만 보이는지 코드의 데이터 바인딩에 있습니다. 합니다 **기본 코드 바인딩** 사용 하 여 XAML 파일을 포함 하는 페이지는 `Label` 및 `Slider`:
+데이터 바인딩은 일반적으로 XAML에 완전히 지정되지만 코드에서 데이터 바인딩을 확인하는 것이 좋습니다. **기본 코드 바인딩** 페이지에는 `Label` 및 `Slider`가 있는 XAML 파일이 포함됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -46,18 +46,18 @@ ms.locfileid: "50675200"
 </ContentPage>
 ```
 
-`Slider` 0-360 범위에 대해 설정 됩니다. 이 프로그램의 의도를 회전 시키는 것은 `Label` 조작 하 여는 `Slider`합니다.
+`Slider`는 0 - 360의 범위로 설정됩니다. 이 프로그램의 목적은 `Slider`를 조작하여 `Label`을 회전시키는 것입니다.
 
-데이터 바인딩 없이 설정할 수 있습니다는 `ValueChanged` 의 이벤트를 `Slider` 에 액세스 하는 이벤트 처리기에는 `Value` 의 속성을 `Slider` 고 해당 값을 설정를 `Rotation` 속성을 `Label`. 해당 작업을 자동화 하는 데이터 바인딩 이벤트 처리기 내 코드와 더 이상 필요 합니다.
+데이터 바인딩이 없으면 `Slider`의 `ValueChanged` 이벤트를 `Slider`의 `Value` 속성에 액세스하고 해당 값을 `Label`의 `Rotation` 속성으로 설정하는 이벤트 처리기로 설정합니다. 데이터 바인딩은 이 작업을 자동화하므로 이벤트 처리기와 그 안에 있는 코드가 더 이상 필요하지 않습니다.
 
-파생 된 클래스의 인스턴스에서 바인딩을 설정할 수 있습니다 [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)를 포함 하는 `Element`, `VisualElement`를 `View`, 및 `View` 파생형입니다.  바인딩 대상 개체에 항상 설정 됩니다. 바인딩 소스 개체를 참조합니다. 데이터 바인딩을 설정 하려면 대상 클래스의 다음 두 명의 멤버를 사용 합니다.
+`Element`, `VisualElement`, `View` 및 `View` 파생문이 포함된 [`BindableObject`](xref:Xamarin.Forms.BindableObject)에서 파생되는 모든 클래스의 인스턴스에 바인딩을 설정할 수 있습니다.  바인딩은 항상 대상 개체에 설정됩니다. 바인딩은 원본 개체를 참조합니다. 데이터 바인딩을 설정하려면 대상 클래스의 다음 두 멤버를 사용합니다.
 
-- 합니다 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 속성 원본 개체를 지정 합니다.
-- 합니다 [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드 대상 속성과 소스 속성을 지정 합니다.
+- [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 원본 개체를 지정합니다.
+- [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드는 대상 속성 및 원본 속성을 지정합니다.
 
-이 예제는 `Label` 바인딩 대상 및 `Slider` 은 바인딩 소스입니다. 변경 합니다 `Slider` 회전 하는 원본에 영향을 줄를 `Label` 대상입니다. 데이터 원본에서 대상으로 이동합니다.
+이 예제에서 `Label`은 바인딩 대상이고 `Slider`는 바인딩 원본입니다. `Slider` 원본의 변경은 `Label` 대상의 회전에 영향을 줍니다. 데이터는 원본에서 대상으로 이동합니다.
 
-합니다 `SetBinding` 정의한 메서드 `BindableObject` 형식의 인수를 사용 [ `BindingBase` ](xref:Xamarin.Forms.BindingBase) 올 합니다 [ `Binding` ](xref:Xamarin.Forms.Binding) 클래스 파생 하지만 다른 `SetBinding` 메서드 정의한 합니다 [ `BindableObjectExtensions` ](xref:Xamarin.Forms.BindableObjectExtensions) 클래스입니다. 코드 숨김 파일에는 **기본 코드 바인딩** 샘플에서는 더욱 간단 [ `SetBinding` ](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) 이 클래스에서 확장 메서드.
+`BindableObject`에서 정의된 `SetBinding` 메서드에 [`Binding`](xref:Xamarin.Forms.Binding) 클래스에서 파생되는 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 형식의 인수가 있지만, [`BindableObjectExtensions`](xref:Xamarin.Forms.BindableObjectExtensions) 클래스에서 정의된 다른 `SetBinding` 메서드가 있습니다. **기본 코드 바인딩** 샘플의 코드 숨김 파일은 이 클래스의 더 간단한 [`SetBinding`](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*) 확장 메서드를 사용합니다.
 
 ```csharp
 public partial class BasicCodeBindingPage : ContentPage
@@ -72,31 +72,31 @@ public partial class BasicCodeBindingPage : ContentPage
 }
 ```
 
-`Label` 개체 이므로 바인딩 대상에서이 속성을 설정 및 메서드를 호출 하는 개체입니다. 합니다 `BindingContext` 속성에는 바인딩 소스를 나타냅니다는 `Slider`합니다.
+`Label` 개체는 바인딩 대상이므로 이 속성이 설정되고 메서드가 호출되는 개체입니다. `BindingContext` 속성은 바인딩 원본, 즉 `Slider`를 나타냅니다.
 
-`SetBinding` 메서드는 바인딩 대상에서 호출 되지만 대상 속성과 소스 속성이 모두 지정 합니다. 대상 속성으로 지정 되는 `BindableProperty` 개체: `Label.RotationProperty`합니다. Source 속성을 문자열로 지정 된 문서를 나타내고 합니다 `Value` 속성의 `Slider`합니다.
+`SetBinding` 메서드는 바인딩 대상에서 호출되지만 대상 속성과 원본 속성을 모두 지정합니다. 대상 속성은 `BindableProperty` 개체, 즉 `Label.RotationProperty`로 지정됩니다. 원본 속성은 문자열로 지정되고 `Slider`의 `Value` 속성을 나타냅니다.
 
-`SetBinding` 메서드 데이터 바인딩의 가장 중요 한 규칙 중 하나를 보여 줍니다.
+`SetBinding` 메서드는 데이터 바인딩의 가장 중요한 규칙 중 하나를 표시합니다.
 
-*대상 속성 바인딩 가능한 속성으로 백업 해야 합니다.*
+*대상 속성은 바인딩 가능한 속성으로 지원되어야 합니다.*
 
-이 규칙은 대상 개체에서 파생 된 클래스의 인스턴스를 되도록 의미 `BindableObject`합니다. 참조 된 [ **바인딩 가능한 속성** ](~/xamarin-forms/xaml/bindable-properties.md) 바인딩할 수 있는 개체 및 바인딩 가능한 속성에 대 한 개요 문서입니다.
+이 규칙은 대상 개체가 `BindableObject`에서 파생되는 클래스의 인스턴스여야 함을 암시합니다. 바인딩 가능한 개체 및 속성에 대한 개요는 [**바인딩 가능한 속성**](~/xamarin-forms/xaml/bindable-properties.md) 문서를 참조하세요.
 
-문자열로 지정 된 원본 속성에 대 한 이러한 규칙이 없는 경우 내부적으로 리플렉션은 실제 속성에 액세스 하는 데 사용 됩니다. 그러나이 경우,는 `Value` 속성은 또한 바인딩 가능한 속성으로 지원 됩니다.
+문자열로 지정된 원본 속성에 대해 이러한 규칙은 없습니다. 내부적으로 리플렉션은 실제 속성에 액세스하는 데 사용됩니다. 그러나 이 특별한 경우에는 `Value` 속성도 바인딩 가능한 속성으로 지원됩니다.
 
-코드 수 약간 간소화: 합니다 `RotationProperty` 바인딩 가능한 속성으로 정의 됩니다 `VisualElement`, 상속 `Label` 및 `ContentPage` 클래스 이름에 필요 하지 않습니다 하므로 에서도 `SetBinding` 호출:
+코드는 다소 간소화될 수 있습니다. 즉 `RotationProperty` 바인딩 가능한 속성은 `VisualElement`에서 정의되고 `Label` 및 `ContentPage`에도 상속되므로 `SetBinding` 호출에서 클래스 이름이 필요하지 않습니다.
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
 ```
 
-그러나 클래스 이름을 포함 하 여 대상 개체의 좋은 미리 알림입니다.
+그러나 클래스 이름이 포함되면 대상 개체를 알리는 데 도움이 됩니다.
 
-조작 하면 합니다 `Slider`, `Label` 그에 따라 회전 합니다.
+`Slider`를 조작하면 이에 따라 `Label`이 회전합니다.
 
 [![기본 코드 바인딩](basic-bindings-images/basiccodebinding-small.png "기본 코드 바인딩")](basic-bindings-images/basiccodebinding-large.png#lightbox "기본 코드 바인딩")
 
-**기본 Xaml 바인딩** 페이지는 동일 **기본 코드 바인딩** 제외 하 고 전체 데이터 바인딩은 XAML에서 정의 합니다.
+**기본 Xaml 바인딩** 페이지는 XAML에서 전체 데이터 바인딩을 정의한다는 점을 제외하고는 **기본 코드 바인딩**과 동일합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -118,24 +118,24 @@ label.SetBinding(RotationProperty, "Value");
 </ContentPage>
 ```
 
-데이터 바인딩 상태인 대상 개체에 설정 되어 코드에서와 마찬가지로 `Label`합니다. 두 XAML 태그 확장에 포함 됩니다. 다음은 바로 알아볼 중괄호로 묶습니다.
+코드에서와 마찬가지로 데이터 바인딩은 대상 개체, 즉 `Label`에 설정됩니다. 두 개의 XAML 태그 확장이 포함됩니다. 이러한 확장은 중괄호 구분 기호로 즉시 인식할 수 있습니다.
 
-- `x:Reference` 태그 확장은 원본 개체를 참조 해야 합니다 `Slider` 라는 `slider`합니다.
-- `Binding` 태그 확장 링크는 `Rotation` 의 속성을 `Label` 에 `Value` 속성은 `Slider`.
+- `x:Reference` 태그 확장은 원본 개체, 즉 `slider`라는 `Slider`를 참조하는 데 필요합니다.
+- `Binding` 태그 확장에서 `Label`의 `Rotation` 속성을 `Slider`의 `Value` 속성에 연결합니다.
 
-문서를 참조 하세요 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md) XAML 태그 확장에 대 한 자세한 내용은 합니다. 합니다 `x:Reference` 태그 확장에서 지원 되는 [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스 `Binding` 되는 [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) 클래스입니다. Xml 네임 스페이스 접두사 나타낼 `x:Reference` XAML 2009 사양의 일부가 동안 `Binding` Xamarin.Forms의 일부인 합니다. 중괄호 안의 하지 인용 부호 표시 되는지 확인 합니다.
+XAML 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md) 문서를 참조하세요. `x:Reference` 태그 확장은 [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원되고, `Binding`은 [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) 클래스에서 지원됩니다. XML 네임스페이스 접두사가 표시되면 `x:Reference`는 XAML 2009 사양의 일부이지만 `Binding`은 Xamin.Forms의 일부입니다. 따옴표는 중괄호 안에 표시되지 않습니다.
 
-잊기 쉽습니다 합니다 `x:Reference` 태그 확장 설정 하는 경우는 `BindingContext`합니다. 일반적인 실수로 같이 바인딩 원본의 이름에 직접 속성을 설정 하는 것:
+`BindingContext`를 설정할 때 `x:Reference` 태그 확장을 잊어버리기 쉽습니다. 다음과 같이 실수로 속성을 바인딩 원본 이름으로 직접 설정하는 것이 일반적입니다.
 
 ```xaml
 BindingContext="slider"
 ```
 
-하지만 그렇지 않습니다. 해당 태그를 설정 합니다 `BindingContext` 속성을는 `string` 문자가 맞춤법 "slider" 개체!
+하지만 이는 올바르지 않습니다. 해당 태그는 `BindingContext` 속성을 "slider" 문자로 철자되는 `string` 개체로 설정합니다!
 
-원본 속성에 지정 되는 [ `Path` ](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 의 속성 `BindingExtension`, 해당 하는 [ `Path` ](xref:Xamarin.Forms.Binding.Path) 속성을 [ `Binding` ](xref:Xamarin.Forms.Binding) 클래스입니다.
+원본 속성은 [`Binding`](xref:Xamarin.Forms.Binding) 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성에 해당하는 `BindingExtension`의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성으로 지정됩니다.
 
-에 표시 된 태그를 **기본 XAML 바인딩** 페이지를 단순화할 수 있습니다.:와 같은 XAML 태그 확장 `x:Reference` 하 고 `Binding` 있을 수 있습니다 *콘텐츠 속성* XAML에 대해 특성 정의 태그 확장 속성 이름을 표시할 필요가 있는지를 의미 합니다. `Name` 속성의 콘텐츠 속성인 `x:Reference`, 및 `Path` 속성의 콘텐츠 속성은 `Binding`, 즉, 식에서 제거할 수:
+**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉 `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 *콘텐츠 속성* 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다. `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -146,11 +146,11 @@ BindingContext="slider"
        Rotation="{Binding Value}" />
 ```
 
-## <a name="bindings-without-a-binding-context"></a>바인딩 컨텍스트 없이 바인딩
+## <a name="bindings-without-a-binding-context"></a>바인딩 컨텍스트가 없는 바인딩
 
-`BindingContext` 속성은 데이터 바인딩의 중요 한 요소가 이지만 항상 필요는 없습니다. 원본 개체에서 대신 지정할 수 있습니다 합니다 `SetBinding` 호출 또는 `Binding` 태그 확장 합니다.
+`BindingContext` 속성은 데이터 바인딩의 중요한 구성 요소이지만 항상 필요한 것은 아닙니다. 대신 원본 개체를 `SetBinding` 호출 또는 `Binding` 태그 확장에 지정할 수 있습니다.
 
-에 설명 되어이 **대체 코드 바인딩** 샘플입니다. XAML 파일은 유사 합니다 **기본 코드 바인딩** 는 제외 하 고 샘플를 `Slider` 컨트롤에 정의 된를 `Scale` 의 속성은 `Label`. 이런 이유로 합니다 `Slider` 범위에 대해 설정 된 &ndash;2에서 2:
+이는 **대체 코드 바인딩** 샘플에 나와 있습니다. XAML 파일은 `Slider`가 `Label`의 `Scale` 속성을 제어하도록 정의된다는 점을 제외하고는 **기본 코드 바인딩** 샘플과 비슷합니다. 이러한 이유로 `Slider`는 &ndash;2 - 2의 범위로 설정됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,7 +172,7 @@ BindingContext="slider"
 </ContentPage>
 ```
 
-코드 숨김 파일을 사용 하 여 바인딩을 설정 합니다 [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 정의한 `BindableObject`합니다. 인수가 [생성자](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object)) 에 대 한 합니다 [ `Binding` ](xref:Xamarin.Forms.Binding) 클래스:
+코드 숨김 파일은 `BindableObject`에서 정의된 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 사용하여 바인딩을 설정합니다. 인수는 [`Binding`](xref:Xamarin.Forms.Binding) 클래스에 대한 [생성자](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))입니다.
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage
@@ -186,22 +186,22 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-합니다 `Binding` 생성자에 매개 변수가 6 하므로 `source` 명명된 된 인수를 사용 하 여 매개 변수를 지정 합니다. 인수가 `slider` 개체입니다.
+`Binding` 생성자에는 6개의 매개 변수가 있으므로 `source` 매개 변수는 명명된 인수로 지정됩니다. 인수는 `slider` 개체입니다.
 
-이 프로그램을 실행 하는 것은 다소 놀라울 수 있습니다.
+이 프로그램을 실행하면 약간 놀랄 수도 있습니다.
 
 [![대체 코드 바인딩](basic-bindings-images/alternativecodebinding-small.png "대체 코드 바인딩")](basic-bindings-images/alternativecodebinding-large.png#lightbox "대체 코드 바인딩")
 
-IOS 화면 왼쪽에는 페이지가 처음 나타날 때 화면 표시 되는 모양을 보여 줍니다. 여기서는 `Label`?
+왼쪽의 iOS 화면에서는 페이지가 처음 나타날 때 화면이 표시되는 모양을 보여 줍니다. `Label`은 어디에 있을까요?
 
-문제는는 `Slider` 의 초기 값은 0입니다. 이 인해를 `Scale` 의 속성은 `Label` 0, 1의 기본값으로 재정의로 설정 해야 합니다. 이 인해는 `Label` 가 처음에 표시 합니다. 스크린샷에서 Android 및 유니버설 Windows 플랫폼 (UWP)에서 알 수 있듯이 조작할 수 있습니다 합니다 `Slider` 있도록는 `Label` 다시 표시 되지만 해당 초기 사라지는 혼란을 줄.
+문제는 `Slider`의 초기 값이 0이라는 것입니다. 이로 인해 `Label`의 `Scale` 속성도 0으로 설정되어 기본값인 1을 재정의합니다. 따라서 초기에는 `Label`이 표시되지 않습니다. Android 및 UWP(유니버설 Windows 플랫폼) 스크린샷에서 보여 주듯이 `Slider`를 조작하여 `Label`이 다시 나타나도록 할 수 있지만 초기에 표시되지 않으면 당혹스럽게 만듭니다.
 
-수를 [다음 문서](binding-mode.md) 초기화 하 여이 문제를 방지 하는 방법의 `Slider` 의 기본 값에서를 `Scale` 속성.
+[다음 문서](binding-mode.md)에서 `Scale` 속성의 기본값에서 `Slider`를 초기화하여 이 문제를 방지하는 방법을 알아봅니다.
 
 > [!NOTE]
-> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스도 정의 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 확장 될 수 있는 속성을 `VisualElement` 에서 다르게는 가로 및 세로 방향입니다.
+> 또한 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스는 `VisualElement`의 크기를 가로 및 세로 방향으로 다르게 확장할 수 있는 [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) 속성을 정의합니다.
 
-합니다 **대신 XAML 바인딩** XAML의 완전히 동일한 바인딩을 보여 줍니다.
+**대체 XAML 바인딩** 페이지에는 XAML에서 완전히 동일한 바인딩이 표시됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -224,21 +224,21 @@ IOS 화면 왼쪽에는 페이지가 처음 나타날 때 화면 표시 되는 �
 </ContentPage>
 ```
 
-이제는 `Binding` 태그 확장에는 두 가지 속성을 설정 `Source` 고 `Path`쉼표로 구분 합니다. 원하는 경우 동일한 줄에 나타날 수 있습니다.
+이제 `Binding` 태그 확장에는 쉼표로 구분된 두 개의 속성 세트인 `Source`와 `Path`가 있습니다. 원하는 경우 동일한 줄에 나타날 수 있습니다.
 
 ```xaml
 Scale="{Binding Source={x:Reference slider}, Path=Value}" />
 ```
 
-`Source` 속성은 포함 된 `x:Reference` 설정으로 동일한 구문을 포함 하는 태그 확장의 `BindingContext`. 따옴표, 중괄호 안의 나타나고 두 속성은 쉼표로 구분 해야 합니다는 알 수 있습니다.
+`Source` 속성은 포함된 `x:Reference` 태그 확장으로 설정되며, 그렇지 않으면 `BindingContext`를 설정하는 것과 동일한 구문이 포함됩니다. 중괄호 안에 따옴표가 표시되지 않으며, 두 속성은 쉼표로 구분해야 합니다.
 
-콘텐츠 속성을 `Binding` 태그 확장은 `Path`, 하지만 `Path=` 첫 번째 속성 식의 경우에 태그 확장의 파트를 제거할 수 있습니다. 제거 하는 `Path=` 두 속성은 교환 해야 하는 부분:
+`Binding` 태그 확장의 콘텐츠 속성은 `Path`이지만, 태그 확장의 `Path=` 부분은 식의 첫 번째 속성인 경우에만 제거할 수 있습니다. `Path=` 부분을 제거하려면 다음 두 속성을 교환해야 합니다.
 
 ```xaml
 Scale="{Binding Value, Source={x:Reference slider}}" />
 ```
 
-하지만 XAML 태그 확장은 중괄호로 묶어 구분 일반적으로 표시할 수 있습니다 개체 요소로:
+XAML 태그 확장은 일반적으로 중괄호로 구분되지만, 개체 요소로도 표현할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -252,7 +252,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 </Label>
 ```
 
-이제는 `Source` 고 `Path` 속성은 일반 XAML 특성: 값이 따옴표로 표시 하 고 특성에서 쉼표 구분 되지 않은 합니다. `x:Reference` 태그 확장 개체 요소 될 수도 있습니다.
+이제 `Source` 및 `Path` 속성은 일반 XAML 특성입니다. 값이 따옴표 안에 표시되고, 특성은 쉼표로 구분되지 않습니다. 또한 `x:Reference` 태그 확장은 개체 요소가 될 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -269,25 +269,25 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 </Label>
 ```
 
-이 구문은 일반적인 없지만 경우가 필요한 복잡 한 개체와 관련 된 경우.
+이 구문은 일반적이지 않지만, 때때로 복잡한 개체가 관련되는 경우에는 필요합니다.
 
-지금 나와 있는 예제 설정 합니다 `BindingContext` 속성 및 `Source` 의 속성 `Binding` 에 `x:Reference` 참조 페이지의 다른 보기에 태그 확장 합니다. 이러한 속성은 두 가지 형식의 `Object`를 바인딩 원본에 대 한 적합 한 속성을 포함 하는 모든 개체에 설정할 수 있습니다.
+지금까지 표시된 예제에서는 `BindingContext` 속성과 `Binding`의 `Source` 속성을 `x:Reference` 태그 확장으로 설정하여 페이지의 다른 보기를 참조했습니다. 이 두 속성은 `Object` 형식이며, 바인딩 원본에 적합한 속성이 포함된 개체로 설정할 수 있습니다.
 
-계속 해 서 문서에서는 알게 설정할 수 있습니다 합니다 `BindingContext` 또는 `Source` 속성을는 `x:Static` 태그 확장 참조는 정적 속성 또는 필드의 값을 또는 `StaticResource` 태그 확장에 저장 된 개체를 참조 하는 리소스 사전을 직접 개체에 일반적으로 (항상 그렇지는 않지만) 또는 ViewModel의 인스턴스.
+앞서의 문서에서 `BindingContext` 또는 `Source` 속성은 정적 속성 또는 필드의 값을 참조하는 `x:Static` 태그 확장, 리소스 사전에 저장된 개체를 참조하는 `StaticResource` 태그 확장으로 설정하거나, 일반적으로(항상은 아님) ViewModel의 인스턴스인 개체로 직접 설정할 수 있음을 알 수 있습니다.
 
-`BindingContext` 속성 설정할 수도 있습니다는 `Binding` 개체 있도록를 `Source` 및 `Path` 속성의 `Binding` 바인딩 컨텍스트를 정의 합니다.
+또한 `BindingContext` 속성을 `Binding` 개체로 설정하여 `Binding`의 `Source` 및 `Path` 속성에서 바인딩 컨텍스트를 정의할 수도 있습니다.
 
 ## <a name="binding-context-inheritance"></a>바인딩 컨텍스트 상속
 
-이 문서에서는 지금까지 살펴본 사용 하 여 원본 개체를 지정할 수는 `BindingContext` 속성 또는 `Source` 의 속성을 `Binding` 개체입니다. 모두 설정 된 경우는 `Source` 의 속성을 `Binding` 우선를 `BindingContext`.
+이 문서에서는 `BindingContext` 속성 또는 `Binding` 개체의 `Source` 속성을 사용하여 원본 개체를 지정할 수 있음을 살펴보았습니다. 둘 다 설정되는 경우 `Binding`의 `Source` 속성이 `BindingContext`보다 우선합니다.
 
-`BindingContext` 속성이 매우 중요 한 특징:
+`BindingContext` 속성에는 다음과 같은 매우 중요한 특징이 있습니다.
 
-*설정 된 `BindingContext` 속성은 시각적 트리를 통해 상속 됩니다.*
+*`BindingContext` 속성의 설정은 시각적 트리를 통해 상속됩니다.*
 
-알 수 있듯이이 매우 유용할 수 바인딩 식 단순화 한 경우도 &mdash; -Model-view-viewmodel (MVVM) 시나리오에서 특히 &mdash; 것이 중요 합니다.
+보다시피, 이 방법은 바인딩 식을 간소화하는 데 매우 유용할 수 있으며, 경우에 따라, 특히 MVVM(Model-View-ViewModel) 시나리오에서는 필수적입니다.
 
-합니다 **바인딩 컨텍스트 상속** 샘플은 바인딩 컨텍스트의 상속의 간단한 데모:
+**바인딩 컨텍스트 상속** 샘플은 바인딩 컨텍스트의 상속에 대한 간단한 데모입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -320,14 +320,14 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 </ContentPage>
 ```
 
-`BindingContext` 의 속성을 `StackLayout` 로 설정 되어를 `slider` 개체입니다. 이 바인딩 컨텍스트에 둘 다에서 상속 됩니다는 `Label` 및 `BoxView`모두 있는의 해당 `Rotation` 속성으로 설정 합니다 `Value` 속성의는 `Slider`:
+`StackLayout`의 `BindingContext` 속성은 `slider` 개체로 설정됩니다. 이 바인딩 컨텍스트는 `Label`과 `BoxView` 모두에서 상속되며, 둘 모두의 `Rotation` 속성이 `Slider`의 `Value` 속성으로 설정됩니다.
 
-[![상황에 맞는 상속 바인딩](basic-bindings-images/bindingcontextinheritance-small.png "상황에 맞는 상속 바인딩")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "상황에 맞는 상속 바인딩")
+[![바인딩 컨텍스트 상속](basic-bindings-images/bindingcontextinheritance-small.png "바인딩 컨텍스트 상속")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "바인딩 컨텍스트 상속")
 
-에 [다음 문서](binding-mode.md), 표시 하는 방법을 *바인딩 모드* 대상 및 소스 개체 간의 데이터 흐름을 변경할 수 있습니다.
+[다음 문서](binding-mode.md)에서는 *바인딩 모드*에서 대상 개체와 원본 개체 간의 데이터 흐름을 변경하는 방법을 보여 줍니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Xamarin.Forms 책에서 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

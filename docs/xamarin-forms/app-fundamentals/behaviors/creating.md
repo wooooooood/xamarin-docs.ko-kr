@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 동작
-description: Xamarin.Forms 동작에서 동작 또는 동작을 파생 하 여 만들어진<T> 클래스입니다. 이 문서를 만들고 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다.
+description: Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
 ms.technology: xamarin-forms
@@ -9,25 +9,25 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 7e057567ec0bb72e9bcc016d4a9fef3af78a3ea1
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998897"
 ---
 # <a name="xamarinforms-behaviors"></a>Xamarin.Forms 동작
 
-_Xamarin.Forms 동작에서 동작 또는 동작을 파생 하 여 만들어진<T> 클래스입니다. 이 문서를 만들고 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다._
+_Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다._
 
 ## <a name="overview"></a>개요
 
 Xamarin.Forms 동작을 만들기 위한 프로세스는 다음과 같습니다.
 
-1. 상속 되는 클래스를 만듭니다는 [ `Behavior` ](xref:Xamarin.Forms.Behavior) 또는 [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) 클래스는 `T` 동작 적용 되어야 하는 컨트롤의 형식입니다.
-1. 재정의 된 [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 필요한 설정을 수행 하는 방법입니다.
-1. 재정의 된 [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 필요한 정리를 수행 하는 방법입니다.
-1. 동작의 핵심 기능을 구현 합니다.
+1. [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 상속되는 클래스를 만듭니다. 여기서 `T`는 동작이 적용되어야 하는 컨트롤의 형식입니다.
+1. 필요한 설정을 수행하도록 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
+1. 필요한 정리를 수행하도록 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
+1. 동작의 핵심 기능을 구현합니다.
 
-그러면 다음 코드 예제에 표시 되는 구조:
+다음 코드 예제에서 표시된 구조가 됩니다.
 
 ```csharp
 public class CustomBehavior : Behavior<View>
@@ -48,15 +48,15 @@ public class CustomBehavior : Behavior<View>
 }
 ```
 
-합니다 [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드 동작을 컨트롤에 연결 된 직후에 발생 합니다. 이 메서드는 연결 되 고 이벤트 처리기를 등록 하 여 동작 기능을 지원 하는 데 필요한 다른 설정을 수행에 사용할 수는 컨트롤에 대 한 참조를 받습니다. 예를 들어 컨트롤에서 이벤트를 구독할 수 있습니다. 동작 기능은 이벤트에 대 한 이벤트 처리기에서 구현 합니다.
+동작이 컨트롤에 연결된 후 즉시 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드가 발생합니다. 이 메서드는 연결된 컨트롤에 대한 참조를 받고, 이벤트 처리기를 등록하거나 동작 기능을 지원하는 데 필요한 다른 설정을 수행하는 데 사용할 수 있습니다. 예를 들어 컨트롤에서 이벤트를 구독할 수 있습니다. 그런 다음, 동작 기능은 이벤트에 대한 이벤트 처리기에서 구현됩니다.
 
-합니다 [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드 동작을 컨트롤에서 제거 될 때 발생 합니다. 이 메서드는 연결 되 고 필요한 정리를 수행 하는 데 사용 되는 컨트롤에 대 한 참조를 받습니다. 예를 들어, 메모리 누수를 방지 하기 위해 컨트롤에서 이벤트에서 지 구독 취소 수 없습니다.
+동작이 컨트롤에서 제거될 때 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드가 발생합니다. 이 메서드는 연결된 컨트롤에 대한 참조를 받고, 필요한 모든 정리를 수행하는 데 사용됩니다. 예를 들어 메모리 누수를 방지하기 위해 컨트롤에서 이벤트를 구독 취소할 수 있습니다.
 
-동작에 연결 하 여 사용할 수 있습니다 합니다 [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) 적절 한 컨트롤의 컬렉션입니다.
+그런 다음, 적절한 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션에 연결하여 동작을 사용할 수 있습니다.
 
-## <a name="creating-a-xamarinforms-behavior"></a>Xamarin.Forms 동작 만들기
+## <a name="creating-a-xamarinforms-behavior"></a>Xamarin.Forms Behavior 만들기
 
-샘플 응용 프로그램을 보여 줍니다는 `NumericValidationBehavior`에 사용자가 입력 한 값을 강조 표시 하는 [ `Entry` ](xref:Xamarin.Forms.Entry) 있지 않으면 빨간색으로 제어를 `double`입니다. 동작은 다음 코드 예제에 표시 됩니다.
+샘플 애플리케이션은 사용자가 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 입력한 값이 `double`이 아닌 경우 빨간색으로 강조 표시하는 `NumericValidationBehavior`를 설명합니다. 동작은 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
@@ -82,14 +82,14 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior` 에서 파생 되는 [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) 클래스를 `T` 는 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 합니다 [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 에 대 한 이벤트 처리기를 등록 하는 메서드를 [ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged) 이벤트를 사용 하 여는 [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 등록 취소 합니다 `TextChanged`누수 메모리가 것을 방지 하는 이벤트입니다. 동작의 핵심 기능을 제공 합니다 `OnEntryTextChanged` 에 사용자가 입력 한 값을 구문 분석 하는 메서드를를 `Entry`, 설정 및는 [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) 속성 값이 아닌 경우 빨간색을를 `double`입니다.
+`NumericValidationBehavior`는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되며, 여기서 `T`는 [`Entry`](xref:Xamarin.Forms.Entry)입니다. [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드는 메모리 누수를 방지하도록 `TextChanged` 이벤트를 등록 취소하는 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 사용하여 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트에 대한 이벤트 처리기를 등록합니다. 동작의 핵심 기능은 `OnEntryTextChanged` 메서드에서 제공됩니다. 이는 사용자가 `Entry`에 입력한 값을 구문 분석하고, 값이 `double`이 아닌 경우 [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) 속성을 빨간색으로 설정합니다.
 
 > [!NOTE]
-> Xamarin.Forms는 설정 하지 않습니다는 `BindingContext` 동작, 동작을 공유 하 고 스타일을 통해 여러 컨트롤에 적용할 수 있으므로 합니다.
+> 동작은 스타일을 통해 공유되고 여러 컨트롤에 적용할 수 있으므로 Xamarin.Forms는 동작의 `BindingContext`를 설정하지 않습니다.
 
-## <a name="consuming-a-xamarinforms-behavior"></a>Xamarin.Forms 동작 사용
+## <a name="consuming-a-xamarinforms-behavior"></a>Xamarin.Forms Behavior 사용
 
-모든 Xamarin.Forms 컨트롤에는 [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션에 추가 하는 하나 이상의 동작 수를 다음 XAML 코드 예제에서 설명한 것 처럼:
+모든 Xamarin.Forms 컨트롤에는 다음 XAML 코드 예제에서 설명한 것처럼 하나 이상의 동작을 추가할 수 있는 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션이 있습니다.
 
 ```xaml
 <Entry Placeholder="Enter a System.Double">
@@ -99,29 +99,29 @@ public class NumericValidationBehavior : Behavior<Entry>
 </Entry>
 ```
 
-해당 [ `Entry` ](xref:Xamarin.Forms.Entry) C#에서 다음 코드 예제에 표시 됩니다.
+C#의 해당하는 [`Entry`](xref:Xamarin.Forms.Entry)가 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 entry.Behaviors.Add (new NumericValidationBehavior ());
 ```
 
-런타임에 동작 동작 구현에 따라 컨트롤과 상호 작용에 응답 합니다. 다음 스크린샷에서 잘못 된 입력에 응답 동작을 보여 줍니다.
+런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 동작을 설명합니다.
 
-[![](creating-images/screenshots-sml.png "Xamarin.Forms 동작을 사용 하 여 응용 프로그램 예제")](creating-images/screenshots.png#lightbox "Xamarin.Forms 동작을 사용 하 여 응용 프로그램 샘플")
+[![](creating-images/screenshots-sml.png "Xamarin.Forms Behavior를 사용하는 애플리케이션 예제")](creating-images/screenshots.png#lightbox "Xamarin.Forms Behavior를 사용하는 애플리케이션 예제")
 
 > [!NOTE]
-> 동작은 특정 컨트롤 형식 (또는 여러 컨트롤에 적용할 수 있는 슈퍼 클래스)에 쓰고 호환 컨트롤에만 추가 해야 합니다. 호환 되지 않는 컨트롤에 동작을 연결 하는 동안 예외가 throw 됩니다.
+> 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며, 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하면 예외가 throw됩니다.
 
-### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>스타일을 사용 하 여 Xamarin.Forms 동작 사용
+### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>스타일과 함께 Xamarin.Forms Behavior 사용
 
-동작을 명시적 또는 암시적 스타일에 의해 사용 될 수도 있습니다. 그러나 설정 하는 스타일을 만드는 합니다 [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) 속성이 읽기 전용 이므로 컨트롤의 속성 수 없는 합니다. 솔루션 추가 및 제거 동작을 제어 하는 동작 클래스에 연결된 된 속성을 추가 하는 것입니다. 프로세스는 다음과 같습니다.
+동작은 명시적 또는 암시적 스타일에 의해 사용될 수도 있습니다. 그러나 속성은 읽기 전용이므로 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 속성을 설정하는 스타일을 만드는 것은 불가능합니다. 솔루션은 동작 추가 및 제거를 제어하는 동작 클래스에 연결된 속성을 추가하는 것입니다. 프로세스는 다음과 같습니다.
 
-1. 동작 클래스를 추가 하거나 제거할 연결 동작을는 컨트롤에 동작을 제어 하는 데 사용할에 연결된 된 속성을 추가 합니다. 연결된 된 속성 등록 확인을 `propertyChanged` 속성의 값이 변경 될 때 실행 될 대리자입니다.
-1. 만들기는 `static` 연결된 된 속성에 getter 및 setter.
-1. 논리를 구현 합니다 `propertyChanged` 추가 동작을 제거 하는 대리자입니다.
+1. 동작이 추가되는 컨트롤에 동작의 추가 또는 제거를 제어하는 데 사용될 동작 클래스에 연결된 속성을 추가합니다. 연결된 속성이 속성 값이 변경될 때 실행할 `propertyChanged` 대리자를 등록하는지 확인합니다.
+1. 연결된 속성에 대한 `static` getter 및 setter를 만듭니다.
+1. `propertyChanged` 대리자에서 논리를 구현하여 동작을 추가 및 제거합니다.
 
-다음 코드 예제에서는 추가 및 제거를 제어 하는 연결된 된 속성을 `NumericValidationBehavior`:
+다음 코드 예제에서는 `NumericValidationBehavior` 추가 및 제거를 제어하는 연결된 속성을 보여줍니다.
 
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
@@ -160,9 +160,9 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-합니다 `NumericValidationBehavior` 라는 연결된 된 속성을 포함 하는 클래스 `AttachBehavior` 사용 하 여는 `static` getter 및 setter를 추가 하거나 제거할은 연결 수 있는 컨트롤에 동작을 제어 하는 합니다. 이 연결 속성 레지스터는 `OnAttachBehaviorChanged` 속성의 값이 변경 될 때 실행 되는 메서드. 이 메서드를 추가 하거나 동작의 값을 기반으로 컨트롤을 제거 합니다 `AttachBehavior` 연결 된 속성입니다.
+`NumericValidationBehavior` 클래스에는 `static` getter 및 setter와 함께 `AttachBehavior`라는 연결된 속성이 포함되어 있습니다. 이는 클래스가 연결될 컨트롤에 동작의 추가 또는 제거를 제어합니다. 이 연결된 속성은 속성 값이 변경될 때 실행할 `OnAttachBehaviorChanged` 메서드를 등록합니다. 이 메서드는 `AttachBehavior` 연결된 속성의 값을 기반으로 컨트롤에 동작을 추가 또는 제거합니다.
 
-다음 코드 예제는 *명시적* 에 대 한 스타일를 `NumericValidationBehavior` 사용 하는 `AttachBehavior` 연결 된 속성 및에 적용할 수 있습니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤:
+다음 코드 예제는 `AttachBehavior` 연결된 속성을 사용하는 `NumericValidationBehavior`에 대한 *명시적* 스타일을 보여주며, [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 적용될 수 있습니다.
 
 ```xaml
 <Style x:Key="NumericValidationStyle" TargetType="Entry">
@@ -172,20 +172,20 @@ public class NumericValidationBehavior : Behavior<Entry>
 </Style>
 ```
 
-[ `Style` ](xref:Xamarin.Forms.Style) 에 적용할 수는 [ `Entry` ](xref:Xamarin.Forms.Entry) 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을는 `Style` 인스턴스에서 사용 하 여는 `StaticResource` 다음 코드 예제 에서처럼 태그 확장:
+다음 코드 예제에 설명된 대로 `StaticResource` 태그 확장을 사용하여 해당 [`Style`](xref:Xamarin.Forms.VisualElement.Style) 속성을 `Style` 인스턴스에 설정하여 [`Style`](xref:Xamarin.Forms.Style)을 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 적용할 수 있습니다.
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
 ```
 
-스타일에 대 한 자세한 내용은 참조 하세요. [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
+스타일에 대한 자세한 내용은 [스타일](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
 
 > [!NOTE]
-> 상태에 있는 바인딩 가능한 속성을 설정 하거나 만드는 경우 동작 하는 XAML을 쿼리 하는 동작을 추가할 수는 있지만 이러한 컨트롤 간에 공유 하지 말아야를 `Style` 에 `ResourceDictionary`합니다.
+> XAML에서 설정되거라 쿼리되는 동작에 바인딩 가능한 속성을 추가할 수 있지만 상태가 있는 동작을 만드는 경우 `Style` 및 `ResourceDictionary`에서 컨트롤 간에 공유해서는 안 됩니다.
 
-### <a name="removing-a-behavior-from-a-control"></a>컨트롤에서 동작을 제거합니다.
+### <a name="removing-a-behavior-from-a-control"></a>컨트롤에서 동작 제거
 
-합니다 [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드 동작을 컨트롤에서 제거 되 고 메모리 누수를 방지 하는 이벤트에서 구독 취소와 같은 필요한 정리를 수행 하는 데 사용 되는 경우 발생 합니다. 그러나 동작 암시적으로에서 제거 되지 않습니다 제어 하지 않는 한 컨트롤의 [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) 하 여 컬렉션이 수정 되는 `Remove` 또는 `Clear` 메서드. 다음 코드 예제에서 컨트롤의 특정 동작을 제거 하는 방법을 보여 줍니다 `Behaviors` 컬렉션:
+[`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드는 동작이 컨트롤에서 제거되면 발생되며, 메모리 누수를 방지하도록 이벤트 구독 취소와 같은 필요한 모든 정리를 수행하는 데 사용됩니다. 그러나 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션이 `Remove` 또는 `Clear` 메서드에 의해 수정되지 않는 한 동작은 컨트롤에서 암시적으로 제거되지 않습니다. 다음 코드 예제에서는 컨트롤의 `Behaviors` 컬렉션에서 특정 동작 제거를 보여줍니다.
 
 ```csharp
 var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
@@ -194,22 +194,22 @@ if (toRemove != null) {
 }
 ```
 
-또는 컨트롤의 [ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) 다음 코드 예제에서 설명한 것 처럼 컬렉션이 지워질 수 있습니다.
+또는 다음 코드 예제에서 설명한 것처럼 컨트롤의 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 컬렉션을 지울 수 있습니다.
 
 ```csharp
 entry.Behaviors.Clear();
 ```
 
-또한 페이지 탐색 스택에서 팝 되 고 때 동작 컨트롤에서 암시적으로 제거 되지 않습니다 note 합니다. 대신 명시적으로 제거 해야 페이지 범위를 벗어나기 전에 합니다.
+또한 페이지가 탐색 스택에서 팝되는 경우 동작은 컨트롤에서 암시적으로 제거되지 않습니다. 대신 페이지가 범위를 벗어나기 전에 명시적으로 제거되어야 합니다.
 
 ## <a name="summary"></a>요약
 
-이 문서를 만들고 Xamarin.Forms 동작을 사용 하는 방법을 보여 줍니다. Xamarin.Forms 동작에서 파생 하 여 생성 되는 [ `Behavior` ](xref:Xamarin.Forms.Behavior) 또는 [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) 클래스입니다.
+이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 설명했습니다. Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되어 만들어집니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 동작 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [스타일 (샘플)를 사용 하 여 Xamarin.Forms 동작 적용](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
-- [동작](xref:Xamarin.Forms.Behavior)
-- [동작<T>](xref:Xamarin.Forms.Behavior`1)
+- [Xamarin.Forms Behavior(샘플)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+- [스타일을 사용하여 적용된 Xamarin.Forms Behavior(샘플)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Behavior](xref:Xamarin.Forms.Behavior)
+- [Behavior<T>](xref:Xamarin.Forms.Behavior`1)

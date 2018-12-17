@@ -5,13 +5,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/14/2018
-ms.openlocfilehash: b63efb3f9bfa432f15415e652cd5d59f929c4488
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.date: 12/03/2018
+ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617789"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899176"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -76,7 +76,7 @@ Xamarin.Android 프로젝트에는 다음 빌드 대상이 정의됩니다.
 
 ## <a name="build-properties"></a>빌드 속성
 
-MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup 요소](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild) 내 프로젝트 파일(예: **MyApp.csproj**)에 지정됩니다.
+MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup 요소](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild) 내 프로젝트 파일(예: **MyApp.csproj**)에 지정됩니다. 
 
 -   **Configuration** &ndash; "디버그" 또는 "릴리스"와 같이 사용할 빌드 구성을 지정합니다. Configuration 속성은 대상 동작을 결정하는 다른 속성에 대한 기본값을 결정하는 데 사용됩니다. IDE 내에 추가 구성을 만들 수 있습니다.
 
@@ -94,7 +94,8 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     `DebugType`이 설정되지 않았거나 빈 문자열이면 `DebugSymbols` 속성에서 응용 프로그램의 디버그 가능 여부를 제어합니다.
 
-
+    - **AndroidGenerateLayoutBindings** &ndash; `true`로 설정된 경우 [레이아웃 코드 숨김](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)의 생성을 활성화하거나, `false`로 설정된 경우 완전히 비활성화합니다. 기본값은 `false`입니다.
+    
 ### <a name="install-properties"></a>설치 속성
 
 설치 속성은 `Install` 및 `Uninstall` 대상의 동작을 제어합니다.
@@ -129,6 +130,16 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     이 속성에 대한 지원은 Xamarin.Android 7.1 이후에 추가되었습니다.
 
     기본적으로 이 속성은 `False`입니다.
+
+-   **AndroidD8JarPath** &ndash; d8 dex 컴파일러와 함께 사용하기 위한 `d8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
+
+-   **AndroidDexTool** &ndash; 유효한 값이 `dx` 또는 `d8`인 열거형 스타일 속성입니다. Xamarin.Android 빌드 프로세스 중에 Android [dex][dex] 컴파일러가 사용됨을 나타냅니다.
+    현재 기본값은 `dx`입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
+
+    [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **AndroidEnableDesugar** &ndash; `desugar`가 활성화되있는지 여부를 확인하는 부울 속성입니다. Android는 현재 모든 Java 8 기능을 지원하지 않으며, 기본 도구 체인은 `javac` 컴파일러의 출력에서 `desugar`라는 바이트 코드 변환을 수행하여 새 언어 기능을 구현합니다. `AndroidDexTool=dx`를 사용하는 경우 기본값은 `False`이며 `AndroidDexTool=d8`을 사용하는 경우 기본값은 `True`입니다.
 
 -   **AndroidEnableMultiDex** &ndash; 최종 `.apk`에서 Multi-Dex 지원이 사용되는지 여부를 결정하는 부울 속성입니다.
 
@@ -229,6 +240,14 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
     ```
 
+-   **AndroidLinkTool** &ndash; 유효한 값이 `proguard` 또는 `r8`인 열거형 스타일 속성입니다. Java 코드에 사용되는 코드 축소기를 나타냅니다. 현재 기본값은 빈 문자열이거나 `$(AndroidEnableProguard)`가 `True`이면 `proguard`입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
+
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **LinkerDumpDependencies** &ndash; 링커 종속성 파일 생성을 활성화하는 부울 속성입니다. 이 파일은 [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer) 도구에 대한 입력으로 사용할 수 있습니다.
+
+    기본값은 False입니다.
+
 -   **AndroidManagedSymbols** &ndash; `Release` 스택 추적에서 파일 이름과 줄 번호 정보를 추출할 수 있도록 시퀀스 점을 생성할지 여부를 제어하는 부울 속성입니다.
 
     Xamarin.Android 6.1에 추가되었습니다.
@@ -236,6 +255,8 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 -   **AndroidManifest** &ndash; 앱의 [`AndroidManifest.xml`](~/android/platform/android-manifest.md)에 대한 템플릿으로 사용할 파일 이름을 지정합니다.
     빌드 중에 필요한 다른 모든 값이 병합되어 실제 `AndroidManifest.xml`이 생성됩니다.
     `$(AndroidManifest)`는 `/manifest/@package` 특성에 패키지 이름을 포함해야 합니다.
+
+-   **AndroidR8JarPath** &ndash; r8 dex 컴파일러 및 shrinker와 함께 사용하기 위한 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
 
 -   **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다.
 
@@ -245,7 +266,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     지원되는 값은 다음과 같습니다.
 
-    -   `armeabi`
     -   `armeabi-v7a`
     -   `x86`
     -   `arm64-v8a`: Xamarin.Android 5.1 이상이 필요합니다.
@@ -284,10 +304,11 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     `True`일 경우 [ProguardConfiguration](#ProguardConfiguration) 파일을 사용하여 `proguard` 실행을 제어합니다.
 
 -   **JavaMaximumHeapSize** &ndash; 패키징 프로세스의 일부로 `.dex` 파일을 빌드할 때 사용할 **java**
-    `-Xmx` 매개 변수 값을 지정합니다. 지정하지 않으면 `-Xmx` 옵션이 **java**에 제공되지 않습니다.
+    `-Xmx` 매개 변수 값을 지정합니다. 지정하지 않으면 `-Xmx` 옵션은 **java**에 값을 `1G`로 제공합니다. 이는 다른 플랫폼에 비해 Windows에서 일반적으로 필요하다는 것을 알수 있었습니다.
 
     [`_CompileDex` 대상이 `java.lang.OutOfMemoryError`를 throw](https://bugzilla.xamarin.com/show_bug.cgi?id=18327)할 경우 이 속성을 지정해야 합니다.
 
+    다음을 변경하여 값을 사용자 지정합니다.
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```
@@ -334,8 +355,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     
     미리 정의된 주요 항목
 
-    -   **abi** &ndash; 앱에 대한 대상 abi를 삽입합니다.
-        -   1 &ndash; `armeabi`
+    -   **abi** &ndash; 앱의 대상 abi를 삽입합니다.
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
         -   4 &ndash; `arm64-v8a`
@@ -351,7 +371,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 7.2에 추가되었습니다.
 
--   **AndroidVersionCodeProperties** &ndash; 개발자가 `AndroidVersionCodePattern`과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다. `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_SupportedApiLevel)` 보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
+-   **AndroidVersionCodeProperties** &ndash; 개발자가 `AndroidVersionCodePattern`과 함께 사용할 사용자 지정 항목을 정의할 수 있게 해주는 문자열 속성입니다. `key=value` 쌍 형식입니다. `value`의 모든 항목은 정수 값이어야 합니다. 예: `screen=23;target=$(_AndroidApiLevel)` 보시다시피 문자열에 기존 또는 사용자 지정 MSBuild 속성을 활용할 수 있습니다.
 
     Xamarin.Android 7.2에 추가되었습니다.
 
@@ -370,6 +390,65 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 -  **AndroidApkSignerAdditionalArguments** &ndash; 개발자가 `apksigner` 도구에 추가 인수를 제공할 수 있는 문자열 속성입니다.
 
     Xamarin.Android 8.2에 추가되었습니다.
+
+-  **AndroidLintEnabled** &ndash; 개발자가 패키징 프로세스의 일부로 Android `lint` 도구를 실행할 수 있게 해주는 부울 속성입니다.
+
+    -   **AndroidLintEnabledIssues** &ndash; 활성화할 lint 문제의 쉼표 구분 목록입니다.
+
+    -   **AndroidLintDisabledIssues** &ndash; 비활성화할 lint 문제의 쉼표 구분 목록입니다.
+
+    -   **AndroidLintCheckIssues** &ndash; 확인할 lint 문제의 쉼표 구분 목록입니다. 
+       참고: 이러한 문제만 확인됩니다.
+
+    -   **AndroidLintConfig** &ndash; 이는 lint 스타일 구성 파일을 위한 빌드 작업입니다. 이는 확인할 문제를 활성화/비활성화하는 데 사용될 수 있습니다. 해당 콘텐츠가 병합될 것이기 때문에 여러 파일이 이 빌드 작업을 사용할 수 있습니다.
+
+    Android `lint` 도구에 대한 자세한 내용은 [Lint 도움말](http://www.androiddocs.com/tools/help/lint.html)을 참조하세요.
+
+-  **AndroidGenerateJniMarshalMethods** &ndash; 빌드 프로세스의 일부로 JNI 마샬링 메서드 생성을 활성화하는 부울 속성입니다. 이는 바인딩 도우미 코드의 System.Reflection 사용량을 크게 줄입니다.
+
+   기본적으로 이 값은 False로 설정됩니다. 개발자가 새 JNI 마샬링 메서드 기능을 사용하고자 하는 경우
+
+    ```xml
+    <AndroidGenerateJniMarshalMethods>True</AndroidGenerateJniMarshalMethods>
+    ```
+
+    해당 csproj에서 설정할 수 있습니다. 또는 다음을 통해 명령줄에 속성을 제공합니다.
+
+    `/p:AndroidGenerateJniMarshalMethods=True`
+
+    **실험적**. Xamarin.Android 9.2에 추가되었습니다.
+    기본값은 False입니다.
+
+- **AndroidGenerateJniMarshalMethodsAdditionalArguments** &ndash; `jnimarshalmethod-gen.exe` 호출에 추가 매개 변수를 추가하는 데 사용할 수 있는 문자열 속성입니다.  이는 디버깅에 유용하므로 `-v`, `-d` 또는 `--keeptemp`와 같은 옵션을 사용할 수 있습니다.
+
+   기본값은 빈 문자열입니다. csproj 파일 또는 명령줄에서 설정할 수 있습니다. 예:
+
+    ```xml
+    <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
+    ```
+
+   또는
+
+    `/p:AndroidGenerateJniMarshalMethodsAdditionalArguments="-v -d --keeptemp"`
+
+    Xamarin.Android 9.2에 추가되었습니다.
+
+- **AndroidMultiDexClassListExtraArgs** &ndash; 개발자가 `multidex.keep` 파일을 생성할 때 추가 인수를 `com.android.multidex.MainDexListBuilder`에 전달할 수 있는 문자열 속성입니다. 
+
+    한 가지 특별한 사례는 `dx` 컴파일 중에 다음 오류가 발생하는 경우입니다.
+
+        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+
+    이 오류가 발생하면 .csproj에 다음을 추가할 수 있습니다.
+
+    ```xml
+    <DxExtraArguments>--force-jumbo </DxExtraArguments>
+    <AndroidMultiDexClassListExtraArgs>--disable-annotation-resolution-workaround</AndroidMultiDexClassListExtraArgs>
+    ```
+
+    이렇게 하면 `dx` 단계가 성공할 수 있습니다.
+
+    Xamarin.Android 8.3에 추가되었습니다.
 
 ### <a name="binding-project-build-properties"></a>프로젝트 빌드 속성 바인딩
 
@@ -408,9 +487,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
       - 관리되는 서브클래스를 위한 Java Callable Wrapper 생성자 `jmethodID` 캐싱.
 
-    기본값은 `XamarinAndroid`입니다.
-
-    이 기본값은 향후 릴리스에서 변경될 예정입니다.
+    기본값은 `XAJavaInterop1`입니다.
 
 
 ### <a name="resource-properties"></a>리소스 속성
@@ -427,8 +504,31 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidExplicitCrunch** &ndash; 매우 많은 로컬 드로어블을 사용하여 앱을 빌드할 경우 초기 빌드(또는 재빌드)를 완성하는 데 수 분이 걸릴 수 있습니다. 빌드 프로세스 속도를 높이려면 이 속성을 포함하고 `True`로 설정해 보세요. 이 속성이 설정되면 빌드 프로세스가 .png 파일을 사전에 크런치합니다.
 
+    참고: 이 옵션은 `$(AndroidUseAapt2)` 옵션과 호환되지 않습니다. `$(AndroidUseAapt2)`를 사용하면 이 기능은 사용할 수 없습니다. 이 기능을 계속 사용하려면 `$(AndroidUseAapt2)`를 `False`로 설정합니다.
+
     **실험적**. Xamarin.Android 7.0에 추가되었습니다.
 
+-  **AndroidUseAapt2** &ndash; 개발자가 패키징을 위해 `aapt2` 도구의 사용을 제어할 수 있게 해 주는 부울 속성입니다.
+    기본적으로 이 값은 False로 설정되며 `aapt`를 사용합니다.
+    개발자가 새로운 `aapt2` 기능을 사용하려는 경우 설정할 수 있습니다.
+        
+    ```xml
+    <AndroidUseAapt2>True</AndroidUseAapt2>
+    ```
+        
+    해당 csproj에서 설정할 수 있습니다. 또는 다음을 통해 명령줄에 속성을 제공합니다.
+
+    `/p:AndroidUseAapt2=True`
+
+    Xamarin.Android 8.3에 추가되었습니다.
+
+-   **AndroidAapt2CompileExtraArgs** &ndash; Android 자산 및 리소스 처리 시 **aapt2 컴파일** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
+
+    Xamarin.Android 9.1에 추가되었습니다.
+
+-   **AndroidAapt2LinkExtraArgs** &ndash; Android 자산 및 리소스 처리 시 **aapt2 링크** 명령에 전달할 추가 명령줄 옵션을 지정합니다.
+
+    Xamarin.Android 9.1에 추가되었습니다.
 
 <a name="Signing_Properties" />
 
@@ -542,6 +642,18 @@ Enter key password for keystore.alias
 </ItemGroup>
 ```
 
+### <a name="androidboundlayout"></a>AndroidBoundLayout
+
+`AndroidGenerateLayoutBindings` 속성이 `false`로 설정된 경우 레이아웃 파일에 대해 코드 숨김을 생성해야 함을 나타냅니다. 다른 모든 측면에서는 위에서 설명한 `AndroidResource`와 동일합니다. 이 작업은 레이아웃 파일에서**만** 사용할 수 있습니다.
+
+```xml
+<AndroidBoundLayout Include="Resources\layout\Main.axml" />
+```
+
+### <a name="androidfragmenttype"></a>AndroidFragmentType
+
+레이아웃 바인딩 코드를 생성할 때 모든 `<fragment>` 레이아웃 요소에 사용할 기본 정규화된 형식을 지정합니다. 이 속성의 기본값은 표준 Android `Android.App.Fragment` 형식입니다.
+
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -552,7 +664,7 @@ Android는 여러 ABI(응용 프로그램 이진 인터페이스)를 지원하�
 1.  경로 "검색".
 2.  `Abi` 항목 특성 사용.
 
-경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 빌드에 `lib/armeabi/libfoo.so`를 추가하면 ABI가 `armeabi`로 "검색"됩니다. 
+경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 빌드에 `lib/armeabi-v7a/libfoo.so`를 추가하면 ABI가 `armeabi-v7a`로 "검색"됩니다. 
 
 
 #### <a name="item-attribute-name"></a>항목 특성 이름
@@ -562,7 +674,7 @@ Android는 여러 ABI(응용 프로그램 이진 인터페이스)를 지원하�
 ```xml
 <ItemGroup>
   <AndroidNativeLibrary Include="path/to/libfoo.so">
-    <Abi>armeabi</Abi>
+    <Abi>armeabi-v7a</Abi>
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
@@ -572,7 +684,13 @@ Android는 여러 ABI(응용 프로그램 이진 인터페이스)를 지원하�
 
 .aar 파일을 직접 참조하려면 `AndroidAarLibrary`의 빌드 동작을 사용해야 합니다. 이 빌드 동작은 Xamarin 구성 요소에서 가장 일반적으로 사용됩니다. 즉 Google Play 및 기타 서비스를 작동하는 데 필요한 .aar 파일에 대한 참조를 포함합니다.
 
-이 빌드 동작을 사용하는 파일은 라이브러리 프로젝트에 있는 포함 리소스와 비슷한 방식으로 처리됩니다. .aar은 중간 디렉터리로 추출됩니다. 그런 다음, 모든 자산, 자원 및 .jar 파일이 적절한 항목 그룹에 포함됩니다.  
+이 빌드 동작을 사용하는 파일은 라이브러리 프로젝트에 있는 포함 리소스와 비슷한 방식으로 처리됩니다. .aar은 중간 디렉터리로 추출됩니다. 그런 다음, 모든 자산, 자원 및 .jar 파일이 적절한 항목 그룹에 포함됩니다. 
+
+### <a name="androidlintconfig"></a>AndroidLintConfig
+
+빌드 작업 'AndroidLintConfig'는 `AndroidLintEnabled` 빌드 속성과 함께 사용해야 합니다. 이 빌드 작업이 포함된 파일은 함께 병합되어 Android `lint` 도구에 전달됩니다. 테스트를 활성화/비활성화할 정보가 포함된 xml 파일이어야 합니다.
+
+자세한 내용은 [lint 설명서](http://www.androiddocs.com/tools/help/lint.html)를 참조하세요.
 
 ### <a name="content"></a>콘텐츠
 

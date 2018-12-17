@@ -18,7 +18,7 @@ ms.locfileid: "50112365"
 
 _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
-플랫폼 전반에 적용되는 설치 및 설정 사례에 대한 개요의 경우 [설치](~/cross-platform/get-started/installation/index.md) 아티클을 참조합니다.
+플랫폼 전반에 적용되는 설치 및 설정 사례에 대한 개요의 경우 [설치](~/cross-platform/get-started/installation/index.md) 글을 참조합니다.
 
 ## <a name="target-platforms"></a>대상 플랫폼
 
@@ -50,7 +50,7 @@ Xamarin.Forms 3.0을 사용하는 경우 이러한 플랫폼은 지원되지 않
 
 최신 Android SDK 도구 및 Android API 플랫폼이 설치되어 있어야 합니다. [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 사용하여 최신 버전으로 업데이트할 수 있습니다.
 
-또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 장치를 계속 지원할 수 있도록 API 19로 설정될 수 있습니다. 이러한 값은 **프로젝트 옵션**에 설정됩니다.
+또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 장치를 계속 지원할 수 있도록 API 19로 설정할 수 있습니다. 이러한 값은 **프로젝트 옵션**에서 설정합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -83,11 +83,11 @@ Mac용 Visual Studio를 사용하여 OS X El Capitan(10.11) 이상에서 Xamarin
 
 ## <a name="windows-system-requirements"></a>Windows 시스템 요구 사항
 
-Xamarin 개발을 지원하는 모든 Windows 설치에서 iOS 및 Android용 Xamarin.Forms 앱을 빌드할 수 있습니다. 이 경우 Windows 7 이상에서 Visual Studio 2017 이상이 실행되어야 합니다. iOS 개발을 위해 네트워크로 연결된 Mac이 필요합니다.
+Xamarin 개발을 지원하는 모든 Windows 설치에서 iOS 및 Android용 Xamarin.Forms 앱을 만들 수 있습니다. 이 경우 Windows 7 이상에서 Visual Studio 2017 이상이 실행되어야 합니다. iOS 개발을 위해 네트워크로 연결된 Mac이 필요합니다.
 
 <a name="windows10" />
 
-### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
+### <a name="universal-windows-platform-uwp"></a>UWP(Universal Windows Platform)
 
 UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 
@@ -98,4 +98,4 @@ UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
 UWP 프로젝트는 Visual Studio 2017에서 만들어진 Xamarin.Forms 솔루션에 포함되지만, Mac용 Visual Studio에서 만들어진 솔루션에는 포함되지 않습니다.
-언제든지 [UWP(유니버설 Windows 플랫폼) 앱](~/xamarin-forms/platform/windows/installation/index.md)을 기존 Xamarin.Forms 솔루션에 추가할 수 있습니다.
+언제든지 [UWP(Univeral Windows Platform) 앱](~/xamarin-forms/platform/windows/installation/index.md)을 기존 Xamarin.Forms 솔루션에 추가할 수 있습니다.

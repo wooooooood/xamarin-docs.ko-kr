@@ -4,17 +4,15 @@ description: MainThread 클래스를 사용하면 응용 프로그램이 주 실
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 06/26/2018
-ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675447"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899007"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
-
-![시험판 NuGet](~/media/shared/pre-release.png)
 
 **MainThread** 클래스를 사용하면 응용 프로그램이 주 실행 스레드에서 코드를 실행할 수 있으며, 특정 코드 블록이 현재 주 스레드에서 실행되고 있는지 확인할 수 있습니다.
 

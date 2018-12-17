@@ -49,7 +49,7 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 * [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) - 3차원 공간에서 장치의 방향을 검색합니다.
 * [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) - 전화 걸기를 엽니다.
 * [기본 설정](preferences.md?context=xamarin/xamarin-forms) - 영구적 기본 설정을 쉽고 빠르게 추가합니다.
-* [보안 저장소](secure-storage.md?context=xamarin/xamarin-forms) - 데이터를 안전하게 저장합니다.
+* [보안 스토리지](secure-storage.md?context=xamarin/xamarin-forms) - 데이터를 안전하게 저장합니다.
 * [공유](share.md?context=xamarin/xamarin-forms) - 텍스트 및 웹 사이트 URI를 다른 앱에 전송합니다.
 * [SMS](sms.md?context=xamarin/xamarin-forms) - 보낼 SMS 메시지를 만듭니다.
 * [텍스트 음성 변환](text-to-speech.md?context=xamarin/xamarin-forms) - 장치의 텍스트를 말합니다.

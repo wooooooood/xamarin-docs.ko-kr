@@ -1,6 +1,6 @@
 ---
 title: 사용자 지정 비디오 전송 컨트롤
-description: 이 문서에서는 Xamarin.Forms를 사용 하 여 비디오 플레이어 응용 프로그램에서 사용자 지정 전송 컨트롤을 구현 하는 방법을 설명 합니다.
+description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어 애플리케이션에 사용자 지정 전송 컨트롤을 구현하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171068"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
-비디오 플레이어의 전송 컨트롤 기능을 수행 하는 단추를 포함 **재생**를 **일시 중지**, 및 **중지**합니다. 이러한 단추 텍스트 보다는 친숙 한 아이콘을 사용 하 여 일반적으로 식별 됩니다 및 **재생** 하 고 **일시 중지** 함수 단추 하나에 일반적으로 결합 됩니다.
+비디오 플레이어의 전송 컨트롤에는 **재생**, **일시 중지**, **중지** 기능을 수행하는 단추가 포함됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생**과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
 
-기본적으로 `VideoPlayer` 표시 각 플랫폼에서 지원 되는 컨트롤을 전송 합니다. 설정한 경우 합니다 `AreTransportControlsEnabled` 속성을 `false`, 이러한 컨트롤을 사용 하는 표시 되지 않습니다. 제어할 수 있습니다.는 `VideoPlayer` 프로그래밍 방식으로 또는 사용자 지정 전송 컨트롤을 제공 합니다.
+기본적으로 `VideoPlayer`는 각 플랫폼에서 지원되는 전송 컨트롤을 나타냅니다. `AreTransportControlsEnabled` 속성을 `false`로 설정하면 이러한 컨트롤이 표시되지 않습니다. 그런 다음, 프로그래밍 방식으로 `VideoPlayer`를 제어하거나 자체 전송 컨트롤을 제공할 수 있습니다.
 
-## <a name="the-play-pause-and-stop-methods"></a>재생, 일시 중지 및 중지 메서드
+## <a name="the-play-pause-and-stop-methods"></a>Play, Pause, Stop 메서드
 
-합니다 `VideoPlayer` 라는 세 가지 메서드를 정의 하는 클래스 `Play`를 `Pause`, 및 `Stop` 이벤트를 발생 하 여 구현 되는:
+`VideoPlayer` 클래스는 이벤트 발생에 의해 구현되는 `Play`, `Pause`, `Stop`이라는 세 가지 메서드를 정의합니다.
 
 ```csharp
 namespace FormsVideoLibrary
@@ -54,11 +54,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-이러한 이벤트에 대 한 이벤트 처리기가 설정 된 `VideoPlayerRenderer` 아래와 같이 각 플랫폼에서 클래스:
+이러한 이벤트에 대한 이벤트 처리기는 아래와 같이 각 플랫폼의 `VideoPlayerRenderer` 클래스에 의해 설정됩니다.
 
 ### <a name="ios-transport-implementations"></a>iOS 전송 구현
 
-iOS 버전 `VideoPlayerRenderer` 사용 하는 `OnElementChanged` 이러한 세 가지 이벤트에 대 한 처리기를 설정 하는 방법 때를 `NewElement` 속성이 아닙니다 `null` 하 고 이벤트 처리기를 분리 때 `OldElement` 아닙니다 `null`:
+`VideoPlayerRenderer`의 iOS 버전은 `NewElement` 속성이 `null`이 아닌 경우 `OnElementChanged` 메서드를 사용하여 이 세 가지 이벤트에 대한 처리기를 설정하고 `OldElement`가 `null`이 아닌 경우 이벤트 처리기를 분리합니다.
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -107,11 +107,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-이벤트 처리기에서 메서드를 호출 하 여 구현 되는 `AVPlayer` 개체입니다. 방법이 없는 `Stop` 에 대 한 메서드 `AVPlayer`이므로 비디오를 일시 중지 및 시작 부분에 위치를 이동 하 여 동작을 시뮬레이션 합니다.
+이벤트 처리기는 `AVPlayer` 개체에서 메서드를 호출하여 구현됩니다. `AVPlayer`에 대한 `Stop` 메서드가 없기 때문에 비디오를 일시 중지하고 위치를 처음으로 이동하여 시뮬레이션합니다.
 
 ### <a name="android-transport-implementations"></a>Android 전송 구현
 
-Android 구현 iOS 구현 하는 것과 비슷합니다. 세 함수에 대 한 처리기가 될 때 설정 됩니다 `NewElement` 아닙니다 `null` 때 분리 `OldElement` 아닙니다 `null`:
+Android 구현은 iOS 구현과 유사합니다. 세 함수의 처리기는 `NewElement`가 `null`이 아니면 설정되고 `OldElement`가 `null`이 아니면 분리됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -158,11 +158,11 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-정의한 메서드를 호출 하는 세 가지 함수 `VideoView`합니다.
+세 함수는 `VideoView`에 의해 정의된 메서드를 호출합니다.
 
 ### <a name="uwp-transport-implementations"></a>UWP 전송 구현
 
-세 가지 전송 함수의 UWP 구현은 iOS 및 Android 구현을 모두 매우 비슷합니다.
+세 가지 전송 함수에 대한 UWP 구현은 iOS 및 Android 구현과 매우 유사합니다.
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -210,11 +210,11 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="the-video-player-status"></a>비디오 플레이어 상태
 
-구현 된 **재생**, **일시 중지**, 및 **중지** 함수 전송 제어를 지 원하는 충분 하지 않습니다. 종종를 **재생** 하 고 **일시 중지** 명령을 재생 또는 일시 중지 된 비디오 현재 인지 여부를 나타내는 모양을 변경 하는 동일한 단추를 사용 하 여 구현 됩니다. 또한 비디오 아직 로드 되지 않은 경우 단추가 활성화도 안 됩니다.
+**재생**, **일시 중지**, **중지** 기능을 구현하는 것만으로는 전송 컨트롤을 지원하기에 충분하지 않습니다. 흔히 **재생** 및 **일시 중지** 명령은 비디오가 현재 재생 중인지, 일시 중지되었는지 여부를 나타내도록 모양이 변경되는 동일한 단추로 구현됩니다. 또한 비디오가 아직 로드되지 않은 경우에는 단추가 활성화되지 않아야 합니다.
 
-이러한 요구 사항을 비디오 플레이어를 사용할 수 있도록 나타내는 현재 상태는 재생 또는 일시 중지 된 경우 또는 아직 비디오를 재생 하는 데 준비 되지 않은 경우 해야 함을 의미 합니다. (각 플랫폼에서 지원 되지 않습니다 있도록 이러한 속성은 비디오 파일 보다는 스트리밍 비디오에 적용 되지만 비디오를 일시 중지할 수, 또는 새 위치로 이동할 수를 나타내는 속성도 지원 합니다 `VideoPlayer` 여기에서 설명 합니다.)
+이러한 요구 사항은 비디오 플레이어가 재생 중인지, 일시 중지되었는지, 아니면 비디오를 재생할 준비가 되지 않았는지를 나타내는 현재 상태를 제공해야 한다는 것을 의미합니다. (각 플랫폼은 비디오를 일시 정지할 수 있는지 또는 새 위치로 이동할 수 있는지 여부를 나타내는 속성도 지원하지만 이러한 속성은 비디오 파일보다는 스트리밍 비디오에 해당되기 때문에 여기에 설명된 `VideoPlayer`에서는 지원되지 않습니다.)
 
-**VideoPlayerDemos** 프로젝트에 포함 된 `VideoStatus` 세 멤버가 포함 된 열거형:
+**VideoPlayerDemos** 프로젝트에는 세 멤버가 있는 `VideoStatus` 열거형이 포함됩니다.
 
 ```csharp
 namespace FormsVideoLibrary
@@ -228,7 +228,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-합니다 `VideoPlayer` 라는 실시간 전용 바인딩 가능한 속성을 정의 하는 클래스 `Status` 형식의 `VideoStatus`합니다. 플랫폼 렌더러에서만 설정 해야 하기 때문에이 속성은 읽기 전용으로 정의 됩니다.
+`VideoPlayer` 클래스는 `VideoStatus` 유형의 `Status`라는 바인딩 가능한 읽기 전용 속성을 정의합니다. 이 속성은 플랫폼 렌더러에서만 설정해야 하기 때문에 읽기 전용으로 정의됩니다.
 
 ```csharp
 using System;
@@ -260,9 +260,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-일반적으로 읽기 전용으로 바인딩할 수 있는 속성을 개인 미칠 `set` 에 접근자를 `Status` 클래스 내에서 설정할 수 있도록 하는 속성입니다. 그러나에 대 한는 `View` 렌더러,에서 지원 되는 파생 클래스는 속성을 설정 해야에서 클래스 외부에 있지만 플랫폼 렌더러에 의해만 합니다.
+일반적으로 바인딩 가능한 읽기 전용 속성에는 `Status` 속성에 `set` 접근자가 있기 때문에 클래스 내에서 설정될 수 있습니다. 하지만 렌더러로 지원되는 `View` 파생 클래스의 경우, 속성은 클래스 외부에서 플랫폼 렌더러에 의해서만 설정되어야 합니다.
 
-이러한 이유로 다른 속성은 이름으로 정의 `IVideoPlayerController.Status`합니다. 명시적 인터페이스 구현을 이며에서 이루어집니다 합니다 `IVideoPlayerController` 는 인터페이스를 `VideoPlayer` 클래스 구현:
+이러한 이유 때문에 다른 속성은 `IVideoPlayerController.Status`라는 이름으로 정의됩니다. 이것은 명시적인 인터페이스 구현이며 `VideoPlayer` 클래스가 구현하는 `IVideoPlayerController` 인터페이스를 통해 가능합니다.
 
 ```csharp
 namespace FormsVideoLibrary
@@ -276,11 +276,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-이것이 방법과 유사 [ `WebView` ](xref:Xamarin.Forms.WebView) 컨트롤이 사용 하는 [ `IWebViewController` ](xref:Xamarin.Forms.IWebViewController) 인터페이스를 구현 하는 `CanGoBack` 및 `CanGoForward` 속성. (소스 코드를 참조 하십시오 [ `WebView` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) 및 세부 정보에 대 한 해당 렌더러.)
+이것은 [`WebView`](xref:Xamarin.Forms.WebView) 컨트롤이 [`IWebViewController`](xref:Xamarin.Forms.IWebViewController) 인터페이스를 사용하여 `CanGoBack` 및 `CanGoForward` 속성을 구현하는 방법과 유사합니다. (자세한 내용은 [`WebView`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/WebView.cs) 및 해당 렌더러의 소스 코드를 참조하세요.)
 
-따라서 클래스에 대 한 외부 `VideoPlayer` 설정 하는 `Status` 참조 하 여 속성을 `IVideoPlayerController` 인터페이스. (있습니다 곧 확인 하겠지만 코드입니다.) 물론 다른 클래스에서 속성을 설정할 수 있습니다 하지만 실수로 설정할 어렵습니다. 가장 중요 한 점은 `Status` 데이터 바인딩을 통해 속성을 설정할 수 없습니다.
+따라서 `VideoPlayer` 외부 클래스가 `IVideoPlayerController` 인터페이스를 참조하여 `Status` 속성을 설정할 수 있습니다. (코드는 곧 표시됩니다.) 이 속성은 다른 클래스에서도 설정할 수 있지만 실수로 설정될 가능성은 낮습니다. 가장 중요한 점은 `Status` 속성은 데이터 바인딩을 통해 설정할 수 없습니다.
 
-이 유지 된 렌더러를 지원 하기 위해 `Status` 업데이트 속성을 `VideoPlayer` 클래스 정의 `UpdateStatus` 이벤트는 트리거된 모든 0.1 초:
+렌더러가 이 `Status` 속성을 업데이트할 수 있도록, `VideoPlayer` 클래스는 10분의 1초마다 트리거되는 `UpdateStatus` 이벤트를 정의합니다.
 
 ```csharp
 namespace FormsVideoLibrary
@@ -302,9 +302,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-### <a name="the-ios-status-setting"></a>IOS 상태 설정
+### <a name="the-ios-status-setting"></a>iOS 상태 설정
 
-IOS `VideoPlayerRenderer` 에 대 한 처리기를 설정 합니다 `UpdateStatus` 이벤트 (하 고 해당 처리기를 분리 때 기본 `VideoPlayer` 요소를 사용할 수 없는), 처리기를 사용 하 여 설정 및를 `Status` 속성:
+iOS `VideoPlayerRenderer`는 `UpdateStatus` 이벤트에 대한 처리기를 설정하고(기본 `VideoPlayer` 요소가 없으면 처리기를 분리함) 이 처리기를 사용하여 `Status` 속성을 설정합니다.
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -358,11 +358,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-두 속성 `AVPlayer` 액세스 해야 합니다: 합니다 [ `Status` ](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) 형식의 속성 `AVPlayerStatus` 하며 [ `TimeControlStatus` ](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) 형식의 속성 `AVPlayerTimeControlStatus`. 있음을 `Element` 속성 (되를 `VideoPlayer`)으로 캐스팅 되어야 합니다 `IVideoPlayerController` 설정 하는 `Status` 속성.
+`AVPlayer`의 두 가지 속성 즉, `AVPlayerStatus` 유형의 [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) 속성과 `AVPlayerTimeControlStatus` 유형의 [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) 속성에 액세스해야 합니다. `Status` 속성을 설정하려면 `Element` 속성(`VideoPlayer`임)을 `IVideoPlayerController`로 캐스팅해야 합니다.
 
 ### <a name="the-android-status-setting"></a>Android 상태 설정
 
-합니다 [ `IsPlaying` ](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) Android 속성 `VideoView` 만 비디오 재생 또는 일시 중지 상태 인지를 나타내는 부울입니다. 여부를 확인 하는 `VideoView` 비디오를 일시 중지 하거나 모두 play 수 있지만, `Prepared` 이벤트를 `VideoView` 처리 해야 합니다. 이러한 두 명의 처리기에서 설정 됩니다는 `OnElementChanged` 메서드를 분리 하는 동안 및는 `Dispose` 재정의:
+Android `VideoView`의 [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) 속성은 비디오가 재생 중인지, 일시 중지되었는지 여부만 표시하는 부울 값입니다. `VideoView`가 아직 비디오를 아직 재생하거나 일시 중지할 수 없는지 확인하려면 `VideoView`의 `Prepared` 이벤트를 처리해야 합니다. 이 두 가지 처리기는 `OnElementChanged` 메서드에서 설정되고 `Dispose` 재정의 중에 분리됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -415,7 +415,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-`UpdateStatus` 처리기에서 사용 합니다 `isPrepared` 필드 (설정를 `Prepared` 처리기) 및 `IsPlaying` 속성을 설정는 `Status` 속성:
+`UpdateStatus` 처리기는 `isPrepared` 필드(`Prepared` 처리기에서 설정됨)와 `IsPlaying` 속성을 사용하여 `Status` 속성을 설정합니다.
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -449,7 +449,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-status-setting"></a>UWP 상태 설정
 
-UWP `VideoPlayerRenderer` 활용 합니다 `UpdateStatus` 이벤트 하지만 필요 없다고 설정에 대 한는 `Status` 속성입니다. 합니다 `MediaElement` 정의 [ `CurrentStateChanged` ](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) 렌더러를 허용 하는 이벤트 때 알림을 받도록 합니다 [ `CurrentState` ](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) 속성이 변경 합니다. 속성에서 분리 되는 `Dispose` 재정의:
+UWP `VideoPlayerRenderer`는 `UpdateStatus` 이벤트를 사용하지만 `Status` 속성을 설정하는 데는 필요하지 않습니다. `MediaElement`는 [`CurrentState`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentState) 속성이 변경될 때 렌더러에 알릴 수 있는 [`CurrentStateChanged`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_CurrentStateChanged) 이벤트를 정의합니다. 이 속성은 `Dispose` 재정의 시 분리됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -487,7 +487,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-합니다 `CurrentState` 형식의 속성은 [ `MediaElementState` ](/uwp/api/windows.ui.xaml.media.mediaelementstate)에 쉽게 매핑됩니다 `VideoStatus`:
+`CurrentState` 속성은 [`MediaElementState`](/uwp/api/windows.ui.xaml.media.mediaelementstate) 유형이며 `VideoStatus`에 쉽게 매핑됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -518,27 +518,27 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-## <a name="play-pause-and-stop-buttons"></a>재생, 일시 중지 및 중지 단추
+## <a name="play-pause-and-stop-buttons"></a>재생, 일시 중지, 중지 단추
 
-유니코드 문자를 사용 하 여 바로 가기 **재생**, **일시 중지**, 및 **중지** 이미지로 인해 문제가 발생 합니다. 합니다 [기타 기술](https://unicode-table.com/en/blocks/miscellaneous-technical/) 유니코드 표준의 섹션에서는이 목적을 위해 적절 한 것 처럼 보이는 3 개 기호 문자를 정의 합니다. 이러한 항목은 다음과 같습니다.
+**재생**, **일시 중지**, **중지** 기호 이미지에 유니코드 문자를 사용하는 것은 문제가 있습니다. 유니코드 표준의 [기타 기술](https://unicode-table.com/en/blocks/miscellaneous-technical/) 섹션에는 이러한 용도에 적합해 보이는 세 개의 기호 문자가 정의되어 있습니다. 이러한 항목은 다음과 같습니다.
 
-- 0x23F5 (검은색 중간 오른쪽을 가리키는 삼각형) 또는 &#x23F5; 에 대 한 **재생**
-- 0x23F8 (이중 세로 막대) 또는 &#x23F8; 에 대 한 **일시 중지**
-- 0x23F9 (검은 사각형) 또는 &#x23F9; 에 대 한 **중지**
+- 0x23F5(검은색 중간 오른쪽 삼각형) 또는 &#x23F5; - **Play**
+- 0x23F8(이중 세로 막대) 또는 &#x23F8; - **Pause**
+- 0x23F9(검은색 사각형) 또는 &#x23F9; - **Stop**
 
-관계 없이 이러한 기호 브라우저에 나타납니다 (방법과 다른 브라우저에서 다양 한 방법으로 처리 하), Xamarin.Forms에서 지 원하는 플랫폼에서 일관 되 게 표시 되지 않습니다. IOS 및 UWP 장치에는 **일시 중지** 하 고 **중지** 문자 모양이 그래픽, 3D 배경이 파란색 및 흰색 전경색을 사용 하 여 합니다. 기호가 단순히 파란색 Android의 경우에 없습니다. 그러나 한 0x23F5 codepoint **재생** UWP, 하며에서 동일한 모양을 iOS 및 Android에서 지원 하지도 않습니다 없습니다.
+브라우저에 이러한 기호가 어떻게 표시되는지 관계없이(다른 브라우저는 여러 가지 방식으로 해당 기호가 처리됨) Xamarin.Forms에서 지원하는 플랫폼에 일관되게 표시되지 않습니다. iOS 및 UWP 디바이스에서 **Pause** 및 **Stop** 문자는 파란색 3D 배경과 흰색 전경의 그래픽입니다. 이와 달리 Android에서는 기호가 단순한 파란색입니다. 하지만 **Play**에 대한 0x23F5 코드 포인트는 UWP와 동일한 모양이 아니며 iOS 및 Android에서는 지원도 되지 않습니다.
 
-이런 이유로 0x23F5 코드 포인트에 사용할 수 없습니다 **재생**합니다. 적절 한 대체 하는 다음과 같습니다.
+따라서 0x23F5 코드 포인트를 **Play**에 사용할 수 없습니다. 적절한 대안은 다음과 같습니다.
 
-- 0x25B6 (검은색 오른쪽을 가리키는 삼각형) 또는 &#x25B6; 에 대 한 **재생**
+- 0x25B6(오른쪽 방향 검은색 삼각형) 또는 &#x25B6; - **Play**
 
-3D 모양 비슷하지 않을 일반 검정색 삼각형은 점을 제외 하 고 각 플랫폼에서 지원 됩니다 **일시 중지** 하 고 **중지**합니다. 한 가지 방법은 다음과 같습니다. variant 코드로 0x25B6 코드 포인트에 따라
+이것은 각 플랫폼에서 지원됩니다. 다만 **Pause** 및 **Stop**의 3D 모양과 다른 검은색 일반 삼각형입니다. 한 가지 방법은 변형 코드로 0x25B6 코드 포인트를 따르는 것입니다.
 
-- 0x25B6 0xFE0F (variant 형식 16) 뒤에 또는 &#x25B6; &#xFE0F; 에 대 한 **재생**
+- 0xFE0F 뒤에 0x25B6(변형 16) 또는 &#x25B6;&#xFE0F; - **Play**
 
-아래에 표시 된 태그에 사용 되는 것입니다. IOS에서 제공 합니다 **재생** 으로 3D 모양을 만들려면 동일한 기호를 **일시 중지** 및 **중지** 단추 하지만 변형 Android 및 UWP에서 작동 하지 않습니다.
+이것이 아래에 보이는 표시에 사용되었습니다. iOS에서는 **Play** 기호에 **Pause** 및 **Stop** 단추와 동일한 3D 모양이 부여되지만 Android와 UWP에서는 변형이 작동하지 않습니다.
 
-**사용자 지정 전송** 집합 페이지는 **AreTransportControlsEnabled** 속성을 **false** 포함 하 고는 `ActivityIndicator` 비디오를 로드할 때 표시 두 단추입니다. `DataTrigger` 개체 활성화 및 비활성화 하는 데 사용 됩니다는 `ActivityIndicator` 와 단추 사이 있는 첫 번째 단추를 전환 하 고 **재생** 하 고 **일시 중지**:
+**Custom Transport**(사용자 지정 전송) 페이지는 **AreTransportControlsEnabled** 속성을 **false**로 설정하고 비디오가 로드될 때 표시되는 `ActivityIndicator`와 두 개의 단추를 포함합니다. `DataTrigger` 개체는 `ActivityIndicator`와 단추를 활성화 및 비활성화하고 첫 번째 단추를 **Play**와 **Pause** 사이에서 전환하는 데 사용됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -611,9 +611,9 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-데이터 트리거는 문서에서 자세히 설명 되어 있습니다 [데이터 트리거](~/xamarin-forms/app-fundamentals/triggers.md#data)합니다.
+데이터 트리거에 대한 자세한 내용은 [데이터 트리거](~/xamarin-forms/app-fundamentals/triggers.md#data) 문서를 참조하세요.
 
-코드 숨김 파일에 있는 단추에 대 한 처리기 `Clicked` 이벤트:
+코드 숨김 파일에는 단추 `Clicked` 이벤트에 대한 처리기가 있습니다.
 
 ```csharp
 namespace VideoPlayerDemos
@@ -645,17 +645,17 @@ namespace VideoPlayerDemos
 }
 ```
 
-때문에 `AutoPlay` 로 설정 되어 `false` 에 **CustomTransport.xaml** 파일인 해야 키를 누릅니다 합니다 **재생** 비디오를 시작 하려면 가능 하 게 단추. 단추는 위에서 설명한 유니코드 문자는 해당 텍스트와 함께 제공 되도록 정의 됩니다. 비디오가 재생 되는 경우 각 플랫폼에서 일관 된 모양을 제공 하는 단추 됩니다.
+`AutoPlay`가 **CustomTransport.xaml** 파일에 `false`로 설정되어 있으므로 비디오를 시작할 수 있게 되면 **Play** 단추를 눌러야 비디오가 시작됩니다. 단추는 위에 언급된 유니코드 문자가 해당 텍스트와 함께 제공되도록 정의됩니다. 버튼은 비디오가 재생될 때 각 플랫폼에서 일관된 모양을 유지합니다.
 
-[![사용자 지정 전송 재생](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 재생")](custom-transport-images/customtransportplaying-large.png#lightbox "사용자 지정 전송 재생")
+[![사용자 지정 전송 재생 중](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 재생 중")](custom-transport-images/customtransportplaying-large.png#lightbox "사용자 지정 전송 재생 중")
 
-하지만 Android 및 UWP 합니다 **재생** 비디오 일시 중지 되 면 단추 매우 다르게 보이므로 시점:
+하지만 Android 및 UWP에서 동영상이 일시 중지되면 **Play** 단추가 매우 다르게 보입니다.
 
-[![사용자 지정 전송을 일시 중지](custom-transport-images/customtransportpaused-small.png "사용자 지정 전송을 일시 중지")](custom-transport-images/customtransportpaused-large.png#lightbox "사용자 지정 전송을 일시 중지")
+[![사용자 지정 전송 일시 중지됨](custom-transport-images/customtransportpaused-small.png "사용자 지정 전송 일시 중지됨")](custom-transport-images/customtransportpaused-large.png#lightbox "사용자 지정 전송 일시 중지됨")
 
-프로덕션 응용 프로그램에서에서는 아마도 하려는 시각적 일관성을 달성 하기 위해 단추에 대 한 사용자 고유의 비트맵 이미지를 사용 합니다.
+프로덕션 애플리케이션에서는 시각적 일관성을 유지하기 위해 단추에 자체 비트맵 이미지를 사용할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [비디오 플레이어 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
