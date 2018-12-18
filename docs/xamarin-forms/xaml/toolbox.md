@@ -39,11 +39,11 @@ Visual Studio for Mac에서 도구 상자를 표시하기 위해서는 다음과
 Visual Studio for Mac에서 도구 상자는 패드의 우측 상단에 있는 아이콘을 사용하여 다른 패드와 같이 숨기고 고정할 수 있습니다. Xamarin.Forms XAML 도구 상자에 검색 상자 옆의 단추를 사용하여 변경할 수 있는 사용자 지정 보기 옵션이 있습니다.
 
 - 범주 표시
-- 간단 표시 사용
+- 간단한 표시 사용
 
-전체 및 간단 옵션은 다음과 같습니다.
+범주 표시 및 간단한 표시 옵션은 다음과 같습니다.
 
-[![도구 상자 전체 표시](toolbox-images/mac-full-display-sml.png)](toolbox-images/mac-full-display.png#lightbox) ![도구 상자 간단 표시](toolbox-images/mac-compact-display.png)
+[![도구 상자 범주 표시](toolbox-images/mac-full-display-sml.png)](toolbox-images/mac-full-display.png#lightbox) ![도구 상자 간단한 표시 사용](toolbox-images/mac-compact-display.png)
 
 편집을 위해 Xamarin.Forms XAML 파일을 열면 도구 상자에서 어떤 컨트롤이나 레이아웃을 파일로 끌어온 다음 인텔리센스를 활용하여 사용자 인터페이스를 사용자 지정 합니다.
 
