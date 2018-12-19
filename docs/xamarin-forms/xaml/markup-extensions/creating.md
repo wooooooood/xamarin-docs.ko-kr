@@ -1,6 +1,6 @@
 ---
-title: XAML 태그 확장명 만들기
-description: 이 문서에서는 사용자 고유의 사용자 지정 하는 Xamarin.Forms XAML 태그 확장을 정의 하는 방법을 설명 합니다. XAML 태그 확장은 IMarkupExtension IMarkupExtension 인터페이스를 구현 하는 클래스입니다.
+title: XAML 태그 확장 만들기
+description: 이 문서에서는 사용자 고유의 사용자 지정 Xamarin.Forms XAML 태그 확장을 정의하는 방법을 설명합니다. XAML 태그 확장은 IMarkupExtension 인터페이스를 구현하는 클래스입니다.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
@@ -14,21 +14,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/07/2018
 ms.locfileid: "53050558"
 ---
-# <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장명 만들기
+# <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
-프로그래밍 방식으로 수준에서 XAML 태그 확장은 구현 하는 클래스를 [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) 하거나 [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) 인터페이스입니다. 아래에 설명 된 표준 태그 확장의 소스 코드를 탐색할 수 있습니다 합니다 [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) Xamarin.Forms GitHub 리포지토리.
+프로그래밍 방식 수준에서 XAML 태그 확장은 [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) 또는 [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) 인터페이스를 구현하는 클래스입니다. 아래에 설명 된 Xamarin.Forms GitHub 리포지토리의 [ **MarkupExtensions** 디렉토리](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions)에서 표준 태그 확장의 소스 코드를 살펴볼 수 있습니다.
 
-파생 하 여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수 이기도 `IMarkupExtension` 또는 `IMarkupExtension<T>`합니다. 태그 확장 특정 형식의 값을 가져오는 경우 일반 양식은 사용 합니다. 다양 한 Xamarin.Forms 태그 확장을 사용 하는 경우 다음과 같습니다.
+또한 `IMarkupExtension` 또는 `IMarkupExtension<T>`를 파생하여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수 있습니다. 태그 확장이 특정 유형의 값을 얻는 경우 제네릭 형식을 사용 하십시오. Xamarin.Forms 태그 확장을 사용하는 몇 가지 경우는 다음과 같습니다.
 
-- `TypeExtension` 파생 `IMarkupExtension<Type>`
-- `ArrayExtension` 파생 `IMarkupExtension<Array>`
-- `DynamicResourceExtension` 파생 `IMarkupExtension<DynamicResource>`
-- `BindingExtension` 파생 `IMarkupExtension<BindingBase>`
-- `ConstraintExpression` 파생 `IMarkupExtension<Constraint>`
+- `IMarkupExtension<Type>`에서 파생하는 `TypeExtension`
+- `IMarkupExtension<Array>`에서 파생하는 `ArrayExtension`
+- `IMarkupExtension<DynamicResource>`에서 파생하는 `DynamicResourceExtension`
+- `IMarkupExtension<BindingBase>`에서 파생하는 `BindingExtension`
+- `IMarkupExtension<Constraint>`에서 파생하는 `ConstraintExpression`
 
-두 개의 `IMarkupExtension` 각각 하나의 메서드를 정의 하는 인터페이스 이름이 `ProvideValue`:
+두 개의 `IMarkupExtension` 인터페이스는 다음과 같이 각각 `ProvideValue`라는 하나의 메서드만 정의합니다.
 
 ```csharp
 public interface IMarkupExtension
@@ -42,13 +42,13 @@ public interface IMarkupExtension<out T> : IMarkupExtension
 }
 ```
 
-하므로 `IMarkupExtension<T>` 에서 파생 되 `IMarkupExtension` 포함 합니다 `new` 키워드 `ProvideValue`를 모두 포함 되어 `ProvideValue` 메서드.
+`IMarkupExtension<T>`는 `IMarkupExtension`에서 파생되고 `ProvideValue`에 `new` 키워드를 포함하고 있으며, 모두 `ProvideValue` 메서드를 포함합니다.
 
-많은 경우 XAML 태그 확장 반환 값에 영향을 주는 속성을 정의 합니다. (은 예외임 `NullExtension`에는 `ProvideValue` 반환 하기만 `null`.) 합니다 `ProvideValue` 메서드는 형식의 단일 인수 `IServiceProvider` 는이 문서의 뒷부분에서 설명 됩니다.
+많은 경우 XAML 태그 확장은 반환 값에 영향을 주는 속성을 정의합니다. (명백한 예외는 `ProvideValue`가 단순히 `null`을 반환하는 `NullExtension` 입니다.) `ProvideValue` 메서드는 이 문서의 뒷부분에서 논의 될 `IServiceProvider` 유형의 단일 인수를 가집니다.
 
-## <a name="a-markup-extension-for-specifying-color"></a>색을 지정 하는 것에 대 한 태그 확장
+## <a name="a-markup-extension-for-specifying-color"></a>색상을 지정하는 태그 확장
 
-다음 XAML 태그 확장을 사용 하면 생성 하는 `Color` 색상, 채도 및 명도 구성 요소를 사용 하 여 값입니다. 1로 초기화 되는 알파 구성 요소를 포함 하 여 색의 네 가지 구성 요소에 대 한 네 가지 속성을 정의 합니다. 클래스에서 파생 `IMarkupExtension<Color>` 나타내려면는 `Color` 값을 반환 합니다.
+다음 XAML 태그 확장은 색상, 채도 및 명도 구성 요소를 사용하여 `Color` 값을 구성할 수 있습니다. 해당 클래스는 1로 초기화 되는 알파 구성 요소를 포함하여 색상의 네 가지 구성 요소에 대한 네 가지 속성을 정의합니다. 해당 클래스는 `Color` 반환 값을 나타내기 위해 `IMarkupExtension<Color>`에서 파생됩니다.
 
 ```csharp
 public class HslColorExtension : IMarkupExtension<Color>
@@ -73,9 +73,9 @@ public class HslColorExtension : IMarkupExtension<Color>
 }
 ```
 
-때문에 `IMarkupExtension<T>` 에서 파생 되 `IMarkupExtension`, 두 개의 클래스를 포함 해야 합니다 `ProvideValue` 메서드를 반환 하는 것 `Color` 반환 하 고 다른 `object`, 하지만 두 번째 방법은 첫 번째 메서드를 호출 하기만 하면 됩니다.
+`IMarkupExtension<T>`는 `IMarkupExtension`에서 파생 되므로, 클래스에는 두 개의 `ProvideValue` 메서드를 포함해야 하고, 하나는 `Color`를 반환하고 다른 하나는 `object`를 반환 하지만, 두 번째 메서드는 첫 번째 메서드를 단순히 호출만 하면 됩니다.
 
-합니다 **HSL 색 데모** 페이지에 따르면 다양 한 방법으로 `HslColorExtension` 색을 지정 하는 XAML 파일에 나타날 수는 `BoxView`:
+다음의 **HSL Color Demo** 페이지는 XAML 파일에서 `BoxView`의 색상을 지정하여 표시할 수 있는 `HslColorExtension`의 다양한 방법을 보여줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -117,15 +117,15 @@ public class HslColorExtension : IMarkupExtension<Color>
 </ContentPage>
 ```
 
-때 `HslColorExtension` XML 태그가, 네 가지 속성은 특성으로 설정 되지만 중괄호 사이 나타날 때 네 가지 속성은 쉼표로 구분 하 여 따옴표 없이 합니다. 기본값을 `H`, `S`, 및 `L` 는 0이 고 기본값은 `A` 1 이므로 기본값으로 설정 하려는 경우 해당 속성을 생략할 수 있습니다. 마지막 예제에서는 여기서 명도 검정색에서 결과 일반적으로 0 이지만 알파 채널 0.5 반 투명 하 고 표시 되는 예를 보여 줍니다. 페이지의 흰색 배경에 회색:
+`HslColorExtension`이 XML 태그일 때 네 가지 속성은 특성으로 설정 되지만, 중괄호 사이에 나타날 때는 네 가지 속성은 따옴표 없이 쉼표로 구분합니다. `H`, `S` 및 `L`에 대한 기본값은 0 이고, `A`에 대한 기본값은 1 이므로, 기본값으로 설정 하려는 경우 해당 속성을 생략할 수 있습니다. 마지막 예제에서는 일반적으로 검정색 결과인 명도가 0 이지만, 알파 채널 0.5 이므로 반 투명하고 페이지가 흰색 배경인 데 비해 회색으로 표시되는 예를 보여줍니다.
 
-[![HSL 색 데모](creating-images/hslcolordemo-small.png "HSL 색 데모")](creating-images/hslcolordemo-large.png#lightbox "HSL 색 데모")
+[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
 
-## <a name="a-markup-extension-for-accessing-bitmaps"></a>비트맵에 액세스 하기 위한 태그 확장
+## <a name="a-markup-extension-for-accessing-bitmaps"></a>비트맵에 접근하는 태그 확장
 
-인수 `ProvideValue` 를 구현 하는 개체를 [ `IServiceProvider` ](xref:System.IServiceProvider) .NET에 정의 된 인터페이스 `System` 네임 스페이스입니다. 이 인터페이스에는 하나의 멤버, 명명 된 메서드 `GetService` 사용 하 여는 `Type` 인수입니다.
+`ProvideValue`에 대한 인수는 .NET `System` 네임 스페이스에 정의된 [ `IServiceProvider` ](xref:System.IServiceProvider) 인터페이스를 구현하는 개체입니다. 해당 인터페이스에는 `Type` 인수를 가진 `GetService`라는 메소드가 있습니다.
 
-`ImageResourceExtension` 아래에 표시 된 클래스의 한 가지 가능한 용도 보여 줍니다. `IServiceProvider` 하 고 `GetService` 가져오려고는 `IXmlLineInfoProvider` 나타내는 특정 오류를 발견 된 줄과 문자 정보를 제공할 수 있는 개체입니다. 이 경우 예외가 발생 하는 경우는 `Source` 속성이 설정 되지 않았습니다:
+아래 보이는 `ImageResourceExtension` 클래스는 `IServiceProvider`와 `GetService`를 사용하여 특정 오류가 발견된 곳을 가리키는 줄과 문자 정보를 제공할 수 있는 `IXmlLineInfoProvider` 개체를 얻을 수 있습니다. 이 경우 `Source` 속성이 설정되지 않으면 예외가 발생합니다.
 
 ```csharp
 [ContentProperty("Source")]
@@ -153,9 +153,9 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` XAML 파일을.NET Standard 라이브러리 프로젝트에 포함 리소스로 저장 된 이미지 파일에 액세스 해야 하는 경우 유용 합니다. 사용 된 `Source` 정적 호출 하는 속성 `ImageSource.FromResource` 메서드. 이 메서드는 어셈블리 이름, 폴더, 이름과 마침표로 구분 된 파일 이름으로 구성 된 정규화 된 리소스 이름에 필요 합니다. 두 번째 인수를 `ImageSource.FromResource` 메서드는 어셈블리 이름을 제공 하며만 UWP의 릴리스 빌드에 필요 합니다. 그럼에도 불구 하 고 `ImageSource.FromResource` 해당 라이브러리에서 이미지도 하지 않는 한이 XAML 리소스 확장에서 외부 라이브러리 포함 될 수 없습니다는 즉 비트맵을 포함 하는 어셈블리에서 호출 되어야 합니다. (참조를 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded-images) 비트맵을 포함 리소스로 저장 된 액세스에 대 한 자세한 내용은 문서입니다.)
+`ImageResourceExtension`은 XAML 파일이 .NET Standard 라이브러리 프로젝트의 포함 리소스로 저장된 이미지 파일에 접근해야 할 때 유용합니다. 해당 클래스는 `Source` 속성을 사용하여 정적 `ImageSource.FromResource` 메서드를 호출합니다. 해당 메서드는 어셈블리 이름, 폴더 이름 및 마침표로 구분된 파일 이름으로 구성된 정규화된 리소스 이름이 필요합니다. `ImageSource.FromResource` 메서드에 대한 두 번째 인수는 어셈블리 이름을 제공하며 UWP의 릴리스 빌드에만 필요합니다. 그럼에도 불구하고 비트맵을 포함하는 어셈블리에서 `ImageSource.FromResource`를 호출해야 합니다. 즉, XAML 리소스 확장은 이미지가 해당 라이브러리에도 없는 경우 외부 라이브러리의 일부로 될 수 없습니다. (포함 리소스로 저장된 비트맵에 접근하는 좀 더 자세한 정보는 [ **포함 된 이미지가** ](~/xamarin-forms/user-interface/images.md#embedded-images) 문서를 참고하십시오.)
 
-하지만 `ImageResourceExtension` 필요 합니다 `Source` 속성을 설정할 수는 `Source` 속성은 특성에서 클래스의 content 속성으로 표시 됩니다. 즉는 `Source=` 중괄호 안에 있는 식의 부분을 생략할 수 있습니다. 에 **이미지 리소스 데모** 페이지를 `Image` 요소 인출 폴더 이름과 마침표로 구분 된 파일 이름을 사용 하 여 두 개의 이미지:
+`ImageResourceExtension`은 `Source` 속성 설정이 필요하지만, `Source` 속성은 특성에서 클래스의 컨텐츠 속성으로 표시됩니다. 즉, 중괄호 안에 있는 표현식의 `Source=` 부분을 생략할 수 있습니다. 다음의 **Image Resource Demo** 페이지에서 `Image` 요소는 폴더 이름을 마침표로 구분하여 두 개의 이미지를 가져옵니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -179,27 +179,27 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 </ContentPage>
 ```
 
-실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png#lightbox "리소스 데모 이미지")
+[![Image Resource Demo](creating-images/imageresourcedemo-small.png "Image Resource Demo")](creating-images/imageresourcedemo-large.png#lightbox "Image Resource Demo")
 
 ## <a name="service-providers"></a>서비스 공급자
 
-사용 하 여 합니다 `IServiceProvider` 인수를 `ProvideValue`, XAML 태그 확장 사용 되는 XAML 파일에 대 한 유용한 정보를 얻을 수 있습니다. 하지만 사용 하 여 `IServiceProvider` 인수 성공적으로 알아야 할 어떤 종류의 서비스는 특정 컨텍스트에서 사용할 수 있습니다. 기존 XAML 태그 확장의 소스 코드를 조사 하 여이 기능을 이해 하는 가장 좋은 방법은는 [ **MarkupExtensions** 폴더](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) Xamarin.Forms 리포지토리의 GitHub에서. 일부 종류의 서비스는 내부 Xamarin.Forms에 주의 합니다.
+`ProvideValue`에 대한 `IServiceProvider` 인수를 사용하면, XAML 태그 확장에서 해당 태그가 사용되는 XAML 파일에 대한 유용한 정보에 접근할 수 있습니다. 하지만 `IServiceProvider` 인수를 성공적으로 사용하려면 특정 상황에서 어떤 종류의 서비스가 사용 가능한지 알아야 합니다. 해당 기능을 이해하는 가장 좋은 방법은 GitHub의 Xamarin.Forms 리포지토리에서 [ **MarkupExtensions** 폴더](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions)에 있는 기존 XAML 태그 확장의 소스 코드를 공부하는 것입니다. 몇 가지 종류의 서비스는 Xamarin.Forms 내부에 있다는 것에 주의 합니다.
 
-일부 XAML 태그 확장에서이 서비스는 유용할 수 있습니다.
+일부 XAML 태그 확장에서 해당 서비스는 유용할 수 있습니다.
 
 ```csharp
  IProvideValueTarget provideValueTarget = serviceProvider.GetService(typeof(IProvideValueTarget)) as IProvideValueTarget;
 ```
 
-합니다 `IProvideValueTarget` 인터페이스는 두 개의 속성 정의 `TargetObject` 및 `TargetProperty`합니다. 이 정보를 가져옵니다 하는 경우는 `ImageResourceExtension` 클래스 `TargetObject` 는 `Image` 및 `TargetProperty` 는 `BindableProperty` 개체에 대 한 합니다 `Source` 속성 `Image`. XAML 태그 확장에 설정 된 속성입니다.
+`IProvideValueTarget` 인터페이스는 두 개의 속성인 `TargetObject`와 `TargetProperty`를 정의합니다. 해당 정보를 `ImageResourceExtension` 클래스에서 가져오면, `TargetObject`는 `Image`이고 `TargetProperty`는 `Image`의 `Source` 속성을 위한 `BindableProperty` 개체입니다. 해당 개체는 XAML 태그 확장이 설정된 속성입니다.
 
-`GetService` 의 인수와 함께 호출 `typeof(IProvideValueTarget)` 실제로 형식의 개체를 반환 `SimpleValueTargetProvider`에 정의 되어 있는 `Xamarin.Forms.Xaml.Internals` 네임 스페이스입니다. 반환 값을 캐스팅 하는 경우 `GetService` 해당 형식에 액세스할 수도 있습니다는 `ParentObjects` 속성을 포함 하는 배열을 `Image` 요소를 `Grid` 부모 및 `ImageResourceDemoPage` 의 부모는 `Grid`합니다.
+`typeof(IProvideValueTarget)` 인수를 갖는 `GetService` 호출은 `Xamarin.Forms.Xaml.Internals` 네임 스페이스에 정의된 `SimpleValueTargetProvider` 유형의 개체를 실제로 반환합니다. `GetService`의 반환 값을 해당 유형으로 변환하면 `Image` 요소, `Grid` 부모 및 `Grid`의 `ImageResourceDemoPage` 부모를 포함하는 배열인 `ParentObjects` 속성에 접근할 수 있습니다.
 
 ## <a name="conclusion"></a>결론
 
-다양 한 원본에서에서 특성을 설정 하는 기능을 확장 하 여 XAML에서 중요 한 역할을 재생 하는 XAML 태그 확장 합니다. 또한 기존 XAML 태그 확장은 필요한 것만 제공 하지 않습니다, 경우 기록도 고유한 합니다.
+XAML 태그 확장은 다양한 원본의 특성을 설정할 수 있는 기능을 확장하여 XAML에서 중요한 역할을 합니다. 또한 기존 XAML 태그 확장이 필요한 것을 정확하게 제공하지 못하는 경우 사용자가 직접 작성할 수도 경우 기록도 고유한 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
