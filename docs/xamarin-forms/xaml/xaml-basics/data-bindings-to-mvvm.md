@@ -1,6 +1,6 @@
 ---
-title: 5부. 데이터 바인딩부터 MVVM까지
-description: MVVM 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, 뷰모델이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다.
+title: 5장. 데이터 바인딩부터 MVVM까지
+description: MVVM 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, ViewModel이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다.
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
@@ -14,15 +14,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/07/2018
 ms.locfileid: "53054035"
 ---
-# <a name="part-5-from-data-bindings-to-mvvm"></a>5부. 데이터 바인딩부터 MVVM까지
+# <a name="part-5-from-data-bindings-to-mvvm"></a>5장. 데이터 바인딩부터 MVVM까지
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_MVVM(Model-View-ViewModel) 아키텍처 패턴은 XAML을 염두에 두고 고안되었습니다. 해당 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, 뷰모델이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다. 종종 뷰와 뷰모델은 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰의 BindingContext는 일반적으로 뷰모델의 인스턴스입니다._
+_MVVM(Model-View-ViewModel) 아키텍처 패턴은 XAML을 염두에 두고 고안되었습니다. 해당 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, ViewModel이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다. 종종 뷰와 ViewModel은 XAML 파일에 정의된 데이터 바인딩을 통해 연결됩니다. 뷰의 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
 
-## <a name="a-simple-viewmodel"></a>간단한 뷰모델
+## <a name="a-simple-viewmodel"></a>간단한 ViewModel
 
-뷰모델(ViewModel)에 대한 소개로 뷰모델이 없는 프로그램을 먼저 살펴 보겠습니다.
+ViewModel에 대한 소개로 ViewModel이 없는 프로그램을 먼저 살펴 보겠습니다.
 이전에 XAML 파일이 다른 어셈블리의 클래스를 참조할 수 있도록 새 XML 네임 스페이스 선언을 정의하는 방법을 살펴 보았습니다. 다음은 `System` 네임 스페이스에 대한 XML 네임 스페이스 선언을 정의하는 프로그램입니다.
 
 ```csharp
@@ -35,7 +35,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`는 매우 특별 한 속성입니다. 하나의 요소에 `BindingContext`를 설정하면, 해당 요소의 모든 자식에 의해 상속 됩니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 이는 해당 개체의 속성에 대한 간단한 바인딩을 포함할 수 있습니다.
+`BindingContext`는 매우 특별한 속성입니다. 하나의 요소에 `BindingContext`를 설정하면, 해당 요소의 모든 자식에게 상속됩니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
 
 **One-Shot DateTime** 프로그램에서 두 개의 자식은 `DateTime` 값의 속성에 바인딩을 포함하고 있지만, 다른 두 자식은 바인딩 경로가 없는 것으로 보입니다. 이는 다음과 같이 `DateTime` 값 자체가 `StringFormat`에 사용됨을 의미합니다.
 
@@ -63,13 +63,13 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 [![](data-bindings-to-mvvm-images/oneshotdatetime.png "날짜 및 시간을 표시하는 뷰")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "날짜 및 시간을 표시하는 뷰")
 
-XAML 파일은 항상 현재 시간을 나타내는 시계를 표시할 수 있지만 이를 도와주는 코드가 필요합니다. MVVM의 관점에서 보면, 모델 및 뷰모델은 완전한 코드로 작성된 클래스입니다. 뷰는 종종 데이터 바인딩을 통해 뷰모델에 정의 된 속성을 참조하는 XAML 파일 입니다.
+XAML 파일은 항상 현재 시간을 나타내는 시계를 표시할 수 있지만 이를 도와주는 코드가 필요합니다. MVVM의 관점에서 보면, 모델 및 ViewModel은 완전한 코드로 작성된 클래스입니다. 뷰는 종종 데이터 바인딩을 통해 뷰모델에 정의된 속성을 참조하는 XAML 파일입니다.
 
-적절한 모델은 뷰모델을 모르고 있으며, 적절한 뷰모델은 뷰를 모르고 있습니다. 그러나 프로그래머는 매우 빈번하게 뷰모델에 노출된 데이터 유형을 특정 사용자 인터페이스와 연관되는 데이터 유형에 맞게 조정합니다. 예를 들어, 모델이 8 비트 문자인 ASCII 문자열을 포함하는 데이터베이스에 접근하는 경우 뷰모델은 사용자 인터페이스에서 유니코드를 독점적으로 사용하기 위해 해당 문자열 사이를 유니코드 문자열로 변환해야 합니다.
+적절한 모델은 ViewModel을 모르고 있으며, 적절한 ViewModel은 뷰를 모르고 있습니다. 그러나 프로그래머는 매우 빈번하게 ViewModel에 노출된 데이터 유형을 특정 사용자 인터페이스와 연관되는 데이터 유형에 맞게 조정합니다. 예를 들어, 모델이 8 비트 문자인 ASCII 문자열을 포함하는 데이터베이스에 접근하는 경우 ViewModel은 사용자 인터페이스에서 유니코드를 독점적으로 사용하기 위해 해당 문자열 사이를 유니코드 문자열로 변환해야 합니다.
 
-MVVM의 간단한 예제(여기에 표시 된 것처럼)는 종종 모델이 전혀이 전혀 없는 경우가 많으며, 패턴에는 데이터 바인딩과 연결된 뷰 및 뷰모델만 포함합니다.
+MVVM의 간단한 예제(여기에 표시된 것처럼)는 종종 모델이 전혀 없는 경우가 많으며, 패턴에는 데이터 바인딩과 연결된 뷰 및 ViewModel만 포함합니다.
 
-다음은 `DateTime`이라는 단 하나의 속성을 가진 시계에 대한 뷰모델이지만, 매초 `DateTime` 속성을 업데이트 합니다.
+다음은 `DateTime`이라는 단 하나의 속성을 가진 시계에 대한 ViewModel이지만, 매초 `DateTime` 속성을 업데이트합니다.
 
 ```csharp
 using System;
@@ -118,9 +118,9 @@ namespace XamlSamples
 }
 ```
 
-뷰모델은 일반적으로 `INotifyPropertyChanged` 인터페이스를 구현합니다. 즉, 속성 중 하나가 변경 될 때마다 클래스가 `PropertyChanged` 이벤트를 발생시키는 것을 의미합니다. Xamarin.Forms의 데이터 바인딩 메커니즘은 해당 `PropertyChanged` 이벤트에 처리기를 붙여 속성이 변경 될 때 이를 알리고 새 값으로 대상을 업데이트 합니다.
+ViewModel은 일반적으로 `INotifyPropertyChanged` 인터페이스를 구현합니다. 즉, 속성 중 하나가 변경될 때마다 클래스가 `PropertyChanged` 이벤트를 발생시킵니다. Xamarin.Forms의 데이터 바인딩 메커니즘은 해당 `PropertyChanged` 이벤트에 처리기를 붙여 속성이 변경될 때 이를 알리고 새 값으로 대상을 업데이트합니다.
 
-해당 뷰모델에 기반한 시계는 다음과 같이 간단해질 수 있습니다.
+해당 ViewModel에 기반한 시계는 다음과 같이 간단해질 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,13 +140,13 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-`ClockViewModel`이 속성 요소 태그를 사용하여 `Label`의 `BindingContext`에 어떻게 설정되는지 주목하십시오. 또는 `Resources` 컬렉션에서 `ClockViewModel`을 인스턴스화하고 `StaticResource` 태그 확장을 통해 `BindingContext`로 설정할 수 있습니다. 또는 코드 비하인드 파일은 뷰모델을 인스턴스화할 수 있습니다.
+`ClockViewModel`이 속성 요소 태그를 사용하여 `Label`의 `BindingContext`에 어떻게 설정되는지 주목하십시오. 또는 `Resources` 컬렉션에서 `ClockViewModel`을 인스턴스화하고 `StaticResource` 태그 확장을 통해 `BindingContext`로 설정할 수 있습니다. 또는 코드 숨김 파일은 ViewModel을 인스턴스화할 수 있습니다.
 
-`Label`의 `Text` 속성에 있는 `Binding` 태그 확장은 `DateTime` 속성을 형식화 합니다. 다음과 같이 표시 됩니다.
+`Label`의 `Text` 속성에 있는 `Binding` 태그 확장은 `DateTime` 속성을 형식화합니다. 다음과 같이 표시됩니다.
 
-[![](data-bindings-to-mvvm-images/clock.png "뷰모델을 통해 시간과 날짜를 표시하는 뷰")](data-bindings-to-mvvm-images/clock-large.png#lightbox "뷰모델을 통해 시간과 날짜를 표시하는 뷰")
+[![](data-bindings-to-mvvm-images/clock.png "ViewModel을 통해 시간과 날짜를 표시하는 뷰")](data-bindings-to-mvvm-images/clock-large.png#lightbox "ViewModel을 통해 시간과 날짜를 표시하는 뷰")
 
-다음과 같이 점으로 속성을 구분하여 뷰모델의 `DateTime` 속성의 개별 속성에 접근할 수도 있습니다.
+다음과 같이 마침표로 속성을 구분하여 ViewModel의 `DateTime` 속성의 개별 속성에 접근할 수도 있습니다.
 
 ```xaml
 <Label Text="{Binding DateTime.Second, StringFormat='{0}'}" … >
@@ -156,7 +156,7 @@ namespace XamlSamples
 
 MVVM은 기본 데이터 모델을 기반으로하는 대화형 뷰의 양방향 데이터 바인딩을 함께 사용하는 경우가 꽤 자주 있습니다.
 
-다음은 `Color` 값을 `Hue`, `Saturation` 및 `Luminosity` 값으로 변환하는 `HslViewModel` 클래스 입니다.
+다음은 `Color` 값을 `Hue`, `Saturation` 및 `Luminosity` 값으로 변환하는 `HslViewModel` 클래스입니다.
 
 ```csharp
 using System;
@@ -258,7 +258,7 @@ namespace XamlSamples
 
 `Hue`, `Saturation` 및 `Luminosity` 속성을 변경하면 `Color` 속성이 바뀌고, `Color`가 바뀌면 다른 세 가지 속성이 바뀝니다. 이는 속성이 실제로 변경되지 않는 한 클래스가 `PropertyChanged` 이벤트를 호출하지 않는다는 점을 제외하면 무한 루프처럼 보일 수 있습니다. 이로 인해 제어 불가능한 경우 없이 피드백 루프가 끝납니다.
 
-다음 XAML 파일은 `Color` 속성이 뷰모델의 `Color` 속성에 바인딩 된 `BoxView`와 `Hue`, `Saturation` 및 `Luminosity` 속성에 바인딩 된 세 개의 `Slider`와 세 개의 `Label` 뷰를 포함 합니다.
+다음 XAML 파일은 `Color` 속성이 ViewModel의 `Color` 속성에 바인딩된 `BoxView`와 `Hue`, `Saturation` 및 `Luminosity` 속성에 바인딩된 세 개의 `Slider`와 세 개의 `Label` 뷰를 포함합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -292,23 +292,23 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-각 `Label`의 바인딩은 기본 값이 `OneWay` 입니다. 값만 표시하면 됩니다. 하지만 각 `Slider`의 바인딩은 `TwoWay` 입니다. 따라서 `Slider`는 뷰모델에서 초기화할 수 있습니다. 뷰모델이 인스턴스화될 때, `Color` 속성은 `Aqua`로 설정됩니다. 하지만 `Slider`를 변경하면 뷰모델의 속성 값을 새로 설정해야 새로운 색상이 계산됩니다.
+각 `Label`의 바인딩은 기본값이 `OneWay`이므로 값만 표시하면 됩니다. 하지만 각 `Slider`의 바인딩은 `TwoWay`이므로 `Slider`는 ViewModel에서 초기화할 수 있습니다. ViewModel이 인스턴스화될 때, `Color` 속성은 `Aqua`로 설정됩니다. 하지만 `Slider`를 변경하면 뷰모델의 속성 값을 새로 설정해야 새로운 색상이 계산됩니다.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "양방향 데이터 바인딩을 사용하는 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용하는 MVVM")
 
-## <a name="commanding-with-viewmodels"></a>뷰모델을 사용하여 명령 실행
+## <a name="commanding-with-viewmodels"></a>ViewModel을 사용하여 명령 실행
 
-대부분의 경우 MVVM 패턴은 데이터 항목의 조작으로 제한됩니다. 뷰의 사용자 인터페이스 개체는 뷰모델의 데이터 개체와 병렬입니다.
+대부분의 경우 MVVM 패턴은 데이터 항목의 조작으로 제한됩니다. 뷰의 사용자 인터페이스 개체는 ViewModel의 데이터 개체와 병렬입니다.
 
-하지만 뷰에는 뷰모델에서 다양한 작업을 실행하는 버튼이 포함되는 경우가 있습니다. 그러나 뷰모델은 특정 사용자 인터페이스 패러다임을 뷰모델에 묶어주기 때문에 `Clicked` 처리기를 포함시키면 안됩니다.
+하지만 뷰에는 ViewModel에서 다양한 작업을 실행하는 단추가 포함되는 경우가 있습니다. 그러나 ViewModel은 특정 사용자 인터페이스 패러다임을 ViewModel에 묶어주기 때문에 `Clicked` 처리기를 포함시키면 안됩니다.
 
-뷰모델이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 해주지만, 뷰모델 내에서 메서드를 호출 할 수 있도록 하려면 *command* 인터페이스가 있어야 합니다. 이 명령은 인터페이스는 Xamarin.Forms에서 다음과 같은 요소에서 지원 됩니다.
+ViewModel이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 해주지만, ViewModel 내에서 메서드를 호출할 수 있도록 하려면 *command* 인터페이스가 있어야 합니다. 이 명령의 인터페이스는 Xamarin.Forms의 다음과 같은 요소에서 지원됩니다.
 
 -  `Button`
 -  `MenuItem`
 -  `ToolbarItem`
 -  `SearchBar`
--  `TextCell` (그리고 `ImageCell`도 따름)
+- `TextCell`(그리고 `ImageCell`도 따름)
 -  `ListView`
 -  `TapGestureRecognizer`
 
@@ -319,19 +319,19 @@ namespace XamlSamples
 
 `SearchBar`는 `SearchCommand` 및  `SearchCommandParameter` 속성을 정의하는 반면 `ListView`는 `ICommand` 유형의 `RefreshCommand`를 정의합니다.
 
-`ICommand` 인터페이스는 다음과 같이 두 개의 메서드와 하나의 이벤트를 정의 합니다.
+`ICommand` 인터페이스는 다음과 같이 두 개의 메서드와 하나의 이벤트를 정의합니다.
 
 -  `void Execute(object arg)`
 -  `bool CanExecute(object arg)`
 -  `event EventHandler CanExecuteChanged`
 
-뷰모델은 `ICommand` 유형의 속성을 정의할 수 있습니다. 그런 다음 해당 속성들을 `Button`이나 다른 요소의 `Command` 속성 또는 해당 인터페이스를 구현 하는 사용자 지정 뷰에 바인딩 할 수 있습니다. 선택적으로 `CommandParameter` 속성을 설정하여 해당 뷰모델 속성에 바인딩 된 개별 `Button` 개체(또는 다른 요소)를 식별 할 수 있습니다. 내부적으로 `Button`은 사용자가 `Button`을 누를 때마다 `Execute` 메서드를 호출하고 `Execute` 메서드에 자신의 `CommandParameter`를 전달합니다.
+ViewModel은 `ICommand` 유형의 속성을 정의할 수 있습니다. 그런 다음 해당 속성들을 `Button`이나 다른 요소의 `Command` 속성 또는 해당 인터페이스를 구현하는 사용자 지정 뷰에 바인딩할 수 있습니다. 선택적으로 `CommandParameter` 속성을 설정하여 해당 ViewModel 속성에 바인딩된 개별 `Button` 개체(또는 다른 요소)를 식별할 수 있습니다. 내부적으로 `Button`은 사용자가 `Button`을 누를 때마다 `Execute` 메서드를 호출하고 `Execute` 메서드에 자신의 `CommandParameter`를 전달합니다.
 
-`CanExecute` 메서드 및 `CanExecuteChanged` 이벤트는 `Button`을 탭하는 현재의 상황이 무효가 될 수 있는 경우에 사용합니다. 이 경우 `Button`은 스스로 비활성화 되어야 합니다. `Button`은 `Command` 속성이 처음 설정될 때와 `CanExecuteChanged` 이벤트가 발생할 때마다 `CanExecute`를 호출합니다. `CanExecute`가 `false`를 반환하면 `Button`은 스스로 비활성화되고 `Execute`를 호출하지 않습니다.
+`CanExecute` 메서드 및 `CanExecuteChanged` 이벤트는 `Button`을 탭하는 현재의 상황이 무효가 될 수 있는 경우에 사용합니다. 이 경우 `Button`은 스스로 비활성화되어야 합니다. `Button`은 `Command` 속성이 처음 설정될 때와 `CanExecuteChanged` 이벤트가 발생할 때마다 `CanExecute`를 호출합니다. `CanExecute`가 `false`를 반환하면 `Button`은 스스로 비활성화되고 `Execute`를 호출하지 않습니다.
 
-뷰모델에 명령 추가를 돕기 위해서 Xamarin.Forms는 `ICommand`를 구현하는 두 클래스를 정의합니다. `Command`와 `Execute` 및 `CanExecute`에 대한 인수의 유형이 `T`인 `Command<T>` 입니다. 해당 두 클래스는 여러 생성자와 뷰모델이 `CanExecuteChanged` 이벤트를 발생 시키도록 `Command` 개체를 강제로 호출하는 `ChangeCanExecute` 메서드의 연결을 정의합니다.
+ViewModel에 명령 추가를 돕기 위하여 Xamarin.Forms는 `ICommand`를 구현하는 두 클래스를 정의하는 데, 이는 `Command`와 `Execute` 및 `CanExecute`에 대한 인수의 유형이 `T`인 `Command<T>`입니다. 해당 두 클래스는 여러 생성자와 ViewModel이 `CanExecuteChanged` 이벤트를 발생시키도록 `Command` 개체를 강제로 호출하는 `ChangeCanExecute` 메서드의 연결을 정의합니다.
 
-다음은 전화 번호를 입력하기 위한 간단한 키패드 용 뷰모델입니다. 다음과 같이 `Execute` 및 `CanExecute` 메서드는 생성자에서 람다 함수로 오른쪽에 정의 됩니다.
+다음은 전화 번호를 입력하기 위한 간단한 키패드 용 ViewModel입니다. 다음과 같이 `Execute` 및 `CanExecute` 메서드는 생성자에서 람다 함수로 오른쪽에 정의됩니다.
 
 ```csharp
 using System;
@@ -439,9 +439,9 @@ namespace XamlSamples
 }
 ```
 
-해당 뷰모델은 `AddCharCommand` 속성이 `CommandParameter`에 의해 구별되는 여러 버튼(또는 명령 인터페이스가 있는 다른 항목)의 `Command` 속성에 바인딩되어 있다고 가정합니다. 해당 버튼은 `InputString` 속성에 `DisplayText` 속성의 전화번호 형식 문자를 추가합니다.
+해당 ViewModel은 `AddCharCommand` 속성이 `CommandParameter`에 의해 구별되는 여러 단추(또는 명령 인터페이스가 있는 다른 항목)의 `Command` 속성에 바인딩되어 있다고 가정합니다. 해당 단추는 `InputString` 속성에 `DisplayText` 속성의 전화번호 형식 문자를 추가합니다.
 
-또한 `DeleteCharCommand`라는 `ICommand` 유형의 두 번째 속성이 있습니다. 해당 버튼은 백 스페이스 버튼에 바인딩되어 있지만 삭제하려는 문자가 없는 경우 버튼을 비활성화 해야 합니다.
+또한 `DeleteCharCommand`라는 `ICommand` 유형의 두 번째 속성이 있습니다. 해당 단추는 백 스페이스 단추에 바인딩되어 있지만 삭제하려는 문자가 없는 경우 단추를 비활성화해야 합니다.
 
 다음 키패드는 시각적으로 정교하지 않습니다. 대신, 명령 인터페이스 사용을 보다 명확하게 보여주기 위해 태그를 최소한으로 줄였습니다.
 
@@ -581,7 +581,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>탐색 메뉴 구현
 
-해당 시리즈 글의 모든 소스 코드가 들어있는 [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) 프로그램은 해당 홈 페이지에 대한 뷰모델(ViewModel)을 사용합니다. 해당 뷰모델은 샘플 페이지, 제목 및 간단한 설명의 유형을 포함하는 `Type`, `Title` 및 `Description`이라는 세 가지 속성을 가진 짧은 클래스 정의 입니다. 또한 뷰모델은 프로그램의 모든 페이지 컬렉션인 `All`이라는 정적(static) 속성을 정의 합니다.
+해당 시리즈 글의 모든 소스 코드가 들어있는 [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) 프로그램은 해당 홈 페이지에 대한 ViewModel을 사용합니다. 해당 ViewModel은 샘플 페이지, 제목 및 간단한 설명의 유형을 포함하는 `Type`, `Title` 및 `Description`이라는 세 가지 속성을 가진 짧은 클래스 정의입니다. 또한 ViewModel은 프로그램의 모든 페이지 컬렉션인 `All`이라는 정적 속성을 정의합니다.
 
 ```csharp
 public class PageDataViewModel
@@ -656,7 +656,7 @@ public class PageDataViewModel
 }
 ```
 
-`MainPage`에 대한 XAML 파일은 다음과 같이 `ItemsSource` 속성이 `All` 속성으로 설정되고 각 페이지의 `Title` 및 `Description` 속성을 표시하는 `TextCell`을 포함하는 `ListBox` 입니다.
+`MainPage`에 대한 XAML 파일은 다음과 같이 `ItemsSource` 속성이 `All` 속성으로 설정되고 각 페이지의 `Title` 및 `Description` 속성을 표시하는 `TextCell`을 포함하는 `ListBox`입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -682,7 +682,7 @@ public class PageDataViewModel
 
 [![](data-bindings-to-mvvm-images/mainpage.png "페이지의 스크롤 가능한 목록")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "페이지의 스크롤 가능한 목록")
 
-코드 비하인드 파일에서 처리기(handler)는 사용자가 항목을 선택할 때 실행 됩니다. 처리기는 다음과 같이 `ListBox`의 `SelectedItem` 속성을 `null`로 설정한 다음 선택한 페이지를 인스턴스화하고 해당 페이지로 이동합니다.
+코드 숨김 파일에서 처리기(handler)는 사용자가 항목을 선택할 때 실행됩니다. 처리기는 다음과 같이 `ListBox`의 `SelectedItem` 속성을 `null`로 설정한 다음 선택한 페이지를 인스턴스화하고 해당 페이지로 이동합니다.
 
 ```csharp
 private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -702,7 +702,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Xamarin Evolve 2016: Xamarin.Forms 및 Prism을 사용하여 단순화 된 MVVM**
+**Xamarin Evolve 2016: Xamarin.Forms 및 Prism을 사용하여 단순화된 MVVM**
 
 ## <a name="summary"></a>요약
 
