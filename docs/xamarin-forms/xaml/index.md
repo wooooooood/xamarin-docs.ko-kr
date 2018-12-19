@@ -29,15 +29,15 @@ _XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 �
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[XAML 기본 사항](xaml-basics/index.md)
 
-XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 코드보다 태그를 이용해 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 요소는 아니지만 도구를 사용할 수 있게 해주고, 같은 기능을 하는 코드보다 시각적으로 더욱 일관되고 간결합니다. XAML은 많이 사용되는 Model-View-ViewModel (MVVM) 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드를 연결한 뷰를 정의할 수 있습니다. 
+XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 코드보다 태그를 이용해 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 요소는 아니지만 도구를 사용할 수 있게 해주고, 같은 기능을 하는 코드보다 시각적으로 더욱 일관되고 간결합니다. XAML은 많이 사용되는 Model-View-ViewModel (MVVM) 아키텍처를 사용 하는 데 특히 적합합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드를 연결한 뷰를 정의할 수 있습니다.
 
 ## <a name="xaml-compilationxamlcmd"></a>[XAML 컴파일](xamlc.md)
 
-필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC와 그 혜택을 사용 하는 방법을 설명 합니다.
+필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC와 그 혜택을 사용하는 방법을 설명합니다.
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[XAML 미리 보기](xaml-previewer.md)
 
-[XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md)를 통해 XAML 마크업과 페이지를 나란히 미리보기할 수 있어 입력된 코드가 사용자 인터페이스에 어떻게 렌더링 되는지 보여줍니다.
+[XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md)를 통해 XAML 마크업과 페이지를 나란히 미리 볼 수 있어 입력된 코드가 사용자 인터페이스에 어떻게 렌더링되는지 보여줍니다.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[XAML 네임스페이스](namespaces.md)
 
@@ -57,12 +57,12 @@ XAML은 기본이 아닌 생성자 혹은 팩토리 메서드로 인수를 전�
 
 ## <a name="bindable-propertiesbindable-propertiesmd"></a>[Bindable Properties](bindable-properties.md)
 
-Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindable Property를 통해 확장할 수 있습니다. Bindable Property는 Xamarin.Forms의 속성 체계에 속성의 값이 추적되는 특수 형식입니다. 이 문서에서는 Bindable Properties에 대한 기본 소개와 어떻게 만들고 사용하는 지에 대해 알아봅니다.
+Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindable Property를 통해 확장할 수 있습니다. Bindable Property는 Xamarin.Forms의 속성 체계에 속성의 값이 추적되는 특수 형식입니다. 이 문서에서는 Bindable Properties에 대한 기본 소개와 어떻게 만들고 사용하는지에 대해 알아봅니다.
 
 ## <a name="attached-propertiesattached-propertiesmd"></a>[Attached Properties](attached-properties.md)
 
-Attached property는 어느 하나의 클래스에 정의하였지만 다른 개체에 연결할 수 있는 특수 형식입니다.또한 이는 XAML에서 클래스와 속성을 마침표로 구분한 특성(Attribute)를 통해 사용할 수 있습니다. 이 문서에서는 Attached Properties에 대한 소개와 어떻게 만들고 사용하는 지에 대해 알아봅니다.
+Attached property는 어느 하나의 클래스에 정의하였지만 다른 개체에 연결할 수 있는 특수 형식입니다. 또한 이는 XAML에서 클래스와 속성을 마침표로 구분한 특성(Attribute)를 통해 사용할 수 있습니다. 이 문서에서는 Attached Properties에 대한 소개와 어떻게 만들고 사용하는지에 대해 알아봅니다.
 
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Resource Dictionaries](resource-dictionaries.md)
 
-XAML 리소스는 한 번 이상 사용할 수 있는 개체의 정의들의 모음입니다. [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)는 리소스를 한 곳에서 정의하고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있도록 해줍니다. 이 문서에서는 `ResourceDictionary`를 어떻게 만들고 사용하는 지와 `ResourceDictionary`를 다른 것과 합치는 방법을 알아봅니다.
+XAML 리소스는 한 번 이상 사용할 수 있는 개체 정의의 모음입니다. [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)는 리소스를 한 곳에서 정의하고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있도록 해줍니다. 이 문서에서는 `ResourceDictionary`를 어떻게 만들고 사용하는 지와 `ResourceDictionary`를 다른 것과 합치는 방법을 알아봅니다.
