@@ -36,7 +36,7 @@ ms.locfileid: "52742887"
 
 3. **새 프로젝트** 대화 상자에서 **Cross-Platform**을 클릭하고, **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고, 이름 및 솔루션 이름을 **Phoneword**로 설정하고, 프로젝트에 대한 적절한 생성 위치를 선택하고, **확인** 버튼을 클릭합니다.
 
-    ![](quickstart-images/vs/new-project.w157.png "교차 플랫폼 프로젝트 템플릿")
+    ![](quickstart-images/vs/new-project.w157.png "플랫폼 간 프로젝트 템플릿")
 
     > [!NOTE]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Phoneword**이어야 합니다.
@@ -124,7 +124,7 @@ ms.locfileid: "52742887"
     ```
 
     > [!NOTE]
-    > 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정하려고 하는 지점에서 오류가 발생합니다.
+    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정하려고 하는 지점에서 오류가 발생합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -363,9 +363,9 @@ ms.locfileid: "52742887"
 ::: zone-end
 ::: zone pivot="macos"
 
-## <a name="get-started-with-visual-studio-for-mac"></a>Visual Studio for Mac 시작
+## <a name="get-started-with-visual-studio-for-mac"></a>Mac용 Visual Studio 시작
 
-1. Visual Studio for Mac을 시작하고, 시작 페이지에서 **새 프로젝트...** 를 클릭하여 새 프로젝트를 만듭니다.
+1. Mac용 Visual Studio을 시작하고, 시작 페이지에서 **New Project...** 를 클릭하여 새 프로젝트를 만듭니다.
 
     ![](quickstart-images/xs/new-solution.png "새 솔루션")
 
@@ -463,7 +463,7 @@ ms.locfileid: "52742887"
     ```
 
     > [!NOTE]
-    > 이 때 응용 프로그램을 빌드하려고 하면 나중에 수정할 지점에서 오류가 발생합니다.
+    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정할 지점에서 오류가 발생합니다.
 
     **파일 > 저장** 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -475,7 +475,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/xs/add-translator-class.png "새 클래스 추가")
 
-11. **PhoneTranslator.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 전화번호 문자를 전화번호로 변환합니다.
+11. PhoneTranslator.cs 에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다. 이 코드는 전화 문자를 전화 번호로 변환합니다..
 
     ```csharp
     using System.Text;
@@ -689,14 +689,14 @@ ms.locfileid: "52742887"
 
     **파일 > 저장**을 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **AndroidManifest.xml**에 저장하고 파일을 닫습니다.
 
-24. Visual Studio for Mac에서 **빌드 > 모두 빌드** 메뉴 항목을 선택(하거나 **&#8984; + B** 키를 누릅니다). 응용 프로그램이 빌드하고 성공 메시지가 Visual Studio for Mac 상태 표시줄에 표시됩니다.
+24. Mac용 Visual Studio에서 빌드 > 솔루션 빌드 메뉴 항목을 선택하거나 **&#8984; + B** 키를 누릅니다. 응용 프로그램이 빌드되고 성공 메시지가 Mac용 Visual Studio 상태 표시줄에 표시됩니다.
 
     ![](quickstart-images/xs/build-successful.png "빌드 성공")
 
 25. 오류가 있는 경우 이전 단계를 반복하고 응용 프로그램이 성공적으로 빌드할 때까지 실수를 수정합니다.
-26. Visual Studio for Mac 도구 모음에서 iOS Simulator 안에 응용 프로그램을 시작하려면 **시작** 버튼(재생 단추와 비슷한 삼각형 모양의 버튼)을 누릅니다.
+26. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 응용 프로그램을 시작하려면 시작 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    ![](quickstart-images/xs/start.png "Visual Studio for Mac 도구 모음")
+    ![](quickstart-images/xs/start.png "Mac용 Visual Studio 도구 모음")
     ![](quickstart-images/xs/phoneword-result-ios.png "iOS Simulator")
 
     주의: 전화 통화는 iOS Simulator에서 지원되지 않습니다.
@@ -705,7 +705,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/xs/set-startup-project.png "시작 프로젝트로 설정")
 
-28. Visual Studio for Mac 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 버튼(재생 단추와 비슷한 삼각형 모양의 단추)을 누릅니다.
+28. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 시작 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
 
