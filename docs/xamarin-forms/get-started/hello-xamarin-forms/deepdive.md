@@ -33,7 +33,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 - Phoneword - 이 프로젝트는 모든 공유 코드와 공유 UI를 보관하는 .NET 표준 라이브러리 프로젝트입니다.
 - Phoneword.Android - 이 프로젝트는 Android 관련 코드를 보관하며 Android 응용 프로그램의 진입점입니다.
 - Phoneword.iOS - 이 프로젝트는 iOS 관련 코드를 보관하며 iOS 응용 프로그램의 진입점입니다.
-- Phoneword.UWP - 이 프로젝트는 UWP(Universal Windows Platform) 관련 코드를 보관하며 UWP 응용 프로그램의 진입점입니다.
+- Phoneword.UWP: 이 프로젝트는 UWP(유니버설 Windows 플랫폼) 관련 코드를 보관하며 UWP 응용 프로그램의 진입점입니다.
 
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 응용 프로그램 분석
 
@@ -63,7 +63,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 응용 프로그램 분석
 
-다음 스크린샷은 Visual Studio for Mac의 Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
+다음 스크린샷은 Mac용 Visual Studio의 Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠를 보여줍니다.
 
 ![](deepdive-images/xs/library-project.png "Phoneword .NET Standard 라이브러리 프로젝트 콘텐츠")
 
@@ -74,14 +74,14 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 ::: zone-end
 
-프로젝트는 또한 다음과 같이 여러 파일로 구성됩니다.
+프로젝트는 또한 다음과 같은 여러 파일로 구성됩니다.
 
-- **App.xaml** - 응용 프로그램의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
+- App.xaml: 응용 프로그램의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
 - **App.xaml.cs** – `App` 클래스의 코드 숨김으로, 각 플랫폼에서 응용 프로그램이 표시할 첫 번째 페이지를 인스턴스화하고 응용 프로그램 수명 주기 이벤트를 처리하는 역할을 담당합니다.
 - **IDialer.cs** – 구현 클래스를 통해 `Dial` 메서드를 제공해야 한다고 지정하는 `IDialer` 인터페이스입니다.
 - **MainPage.xaml** - `MainPage` 클래스에 대한 XAML 태그로, 응용 프로그램이 시작될 때 표시되는 페이지의 UI를 정의합니다.
 - **MainPage.xaml.cs** – `MainPage` 클래스의 코드 숨김으로, 사용자가 페이지와 상호 작용할 때 실행되는 비즈니스 논리를 포함하고 있습니다.
-- **PhoneTranslator.cs** – 전화 문자를 전화 번호로 변환하는 역할을 담당하는 비즈니스 논리로, **MainPage.xaml.cs**에서 호출합니다.
+- PhoneTranslator.cs: 전화 문자를 전화 번호로 변환하는 역할을 담당하는 비즈니스 논리로, **MainPage.xaml.cs**에서 호출합니다.
 
 Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응용 프로그램 분석](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application)을 참조하세요. Xamarin.Android 응용 프로그램에 대한 자세한 내용은 [Xamarin.Android 응용 프로그램 분석](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)을 참조하세요.
 
@@ -89,7 +89,7 @@ Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응�
 
 ::: zone pivot="windows"
 
-Xamarin.Forms 응용 프로그램은 전통적인 교차 플랫폼 응용 프로그램과 같은 방식으로 설계 되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 응용 프로그램은 해당 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 해당 관계의 개요를 보여줍니다.
+Xamarin.Forms 응용 프로그램은 전통적인 교차 플랫폼 응용 프로그램과 같은 방식으로 설계되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 응용 프로그램은 해당 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 해당 관계의 개요를 보여줍니다.
 
 ![](deepdive-images/vs/architecture.png "Phoneword 아키텍처")
 
@@ -185,7 +185,7 @@ namespace Phoneword.Droid
 
 ## <a name="universal-windows-platform"></a>UWP
 
-UWP(Universal Windows Platform) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
+UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
 
 ```csharp
 Xamarin.Forms.Forms.Init (e);
@@ -215,7 +215,7 @@ namespace Phoneword.UWP
 Xamarin.Forms 응용 프로그램은 `LoadApplication` 메서드를 사용해 로드합니다.
 
 > [!NOTE]
-> UWP(Universal Windows Platform) 앱은 Xamarin.Forms로 만들 수 있지만 Windows상의 Visual Studio에서만 사용합니다.
+> UWP(유니버설 Windows 플랫폼) 앱은 Xamarin.Forms로 만들 수 있지만 Windows상의 Visual Studio에서만 사용합니다.
 
 ::: zone-end
 
@@ -225,7 +225,7 @@ Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
 
 1. **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. Phoneword 응용 프로그램은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 클래스를 사용하여 단일 화면을 표시합니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
 1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용된 컨테이너입니다. Phoneword 응용 프로그램은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스를 사용하여 컨트롤을 세로 스택에 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
-1. **뷰** – Xamarin.Forms 뷰는 레이블, 버튼 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. Phoneword 응용 프로그램은 [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry) 및 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 사용합니다. 뷰에 대한 자세한 내용은 [Xamarin.Forms 뷰](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
+1. **뷰**: Xamarin.Forms 뷰는 레이블, 단추 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. Phoneword 응용 프로그램은 [`Label`](xref:Xamarin.Forms.Label), [`Entry`](xref:Xamarin.Forms.Entry) 및 [`Button`](xref:Xamarin.Forms.Button) 컨트롤을 사용합니다. 뷰에 대한 자세한 내용은 [Xamarin.Forms 뷰](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
 1. **셀** – Xamarin.Forms 셀은 목록에 있는 항목에 사용되는 특수한 요소이며, 목록의 각 항목이 어떻게 그려져야 하는지를 설명합니다. Phoneword 응용 프로그램은 어떤 셀도 사용하지 않습니다. 셀에 대한 자세한 내용은 [Xamarin.Forms 셀](~/xamarin-forms/user-interface/controls/cells.md)을 참조하세요.
 
 런타임 시 각 컨트롤은 렌더링될 해당 고유 장치에 매핑됩니다.
@@ -253,7 +253,7 @@ Xamarin.Forms의 XAML에 대한 자세한 내용은 [Xamarin.Forms XAML 기본 �
 
 ### <a name="responding-to-user-interaction"></a>사용자 상호 작용에 응답
 
-XAML에 정의된 개체는 코드 숨김 파일에서 처리되는 이벤트를 발생시킬 수 있습니다. 다음 코드 예제는 *Translate* 버튼에서 발생하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 응답하여 실행되는 `MainPage` 클래스에 대한 코드 숨김의 `OnTranslate` 메서드를 보여줍니다.
+XAML에 정의된 개체는 코드 숨김 파일에서 처리되는 이벤트를 발생시킬 수 있습니다. 다음 코드 예제는 *Translate* 단추에서 발생하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 응답하여 실행되는 `MainPage` 클래스에 대한 코드 숨김의 `OnTranslate` 메서드를 보여줍니다.
 
 ```csharp
 void OnTranslate(object sender, EventArgs e)
@@ -269,9 +269,9 @@ void OnTranslate(object sender, EventArgs e)
 }
 ```
 
-`OnTranslate` 메서드는 전화 문자를 해당하는 전화 번호로 변환하고, 그에 대한 응답으로 통화(call) 버튼의 속성을 설정합니다. XAML 클래스의 코드 숨김 파일은 `x:Name` 특성으로 할당된 이름을 사용하여 XAML에서 정의된 개체에 접근할 수 있습니다. 이 특성에 할당된 값은 C# 변수와 동일한 규칙을 가지며, 따라서 문자 또는 밑줄로 시작해야 하고 공백을 포함하면 안 됩니다.
+`OnTranslate` 메서드는 전화 문자를 해당하는 전화 번호로 변환하고, 그에 대한 응답으로 통화(call) 단추의 속성을 설정합니다. XAML 클래스의 코드 숨김 파일은 `x:Name` 특성으로 할당된 이름을 사용하여 XAML에서 정의된 개체에 접근할 수 있습니다. 이 특성에 할당된 값은 C# 변수와 동일한 규칙을 가지며, 따라서 문자 또는 밑줄로 시작해야 하고 공백을 포함하면 안 됩니다.
 
-Translate 버튼을 `OnTranslate` 메서드에 연결하는 동작은 `MainPage` 클래스에 대한 XAML 태그에서 발생합니다.
+Translate 버튼을 `OnTranslate` 메서드에 연결하는 동작은 `MainPage` 클래스에 대한 XAML 태그에서 발생합니다.	
 
 ```xaml
 <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
@@ -281,7 +281,7 @@ Translate 버튼을 `OnTranslate` 메서드에 연결하는 동작은 `MainPage`
 
 Xamarin.Forms 용 Phoneword 응용 프로그램에는 이 문서에서 다루지 않은 몇 가지 개념이 도입되었습니다. 이러한 개념은 다음과 같습니다.
 
-- 버튼 사용 및 사용 안 함. [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성을 변경하여 [`Button`](xref:Xamarin.Forms.Button)을 켜거나 끌 수 있습니다. 예를 들어 다음 코드 예제에서는 `callButton`을 사용하지 않습니다.
+- 단추 사용 및 사용 안 함. [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성을 변경하여 [`Button`](xref:Xamarin.Forms.Button)을 켜거나 끌 수 있습니다. 예를 들어 다음 코드 예제에서는 `callButton`을 사용하지 않습니다.
 
     ```csharp
     callButton.IsEnabled = false;
