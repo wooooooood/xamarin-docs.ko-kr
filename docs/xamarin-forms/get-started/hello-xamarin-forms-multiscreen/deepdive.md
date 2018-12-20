@@ -23,7 +23,7 @@ ms.locfileid: "38997558"
 
 Xamarin.Forms는 페이지 스택의 탐색 및 사용자 경험을 관리하는 기본 제공 탐색 모델을 제공합니다. 이 모델은 `Page` 개체의 LIFO(마지막에 들어간 것부터 사용) 스택을 구현합니다. 한 페이지에서 다른 페이지로 이동하려면 응용 프로그램은 새 페이지를 이 스택으로 푸시합니다. 이전 페이지로 돌아가기 위해 응용 프로그램은 스택으로부터 현재 페이지를 꺼냅니다.
 
-Xamarin.Forms에는 [`Page`](xref:Xamarin.Forms.Page) 개체 스택을 관리하는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 있습니다. `NavigationPage` 클래스는 또한 제목을 표시하는 페이지의 최상단 탐색 모음을 추가하고 이전 페이지로 돌아가게 하는 플랫폼에 적절한 <span class="uiitem">뒤로</span> 단추를 추가합니다. 다음 코드 예제에서는 응용Xamarin.Forms에는 [`Page`](xref:Xamarin.Forms.Page) 개체 스택을 관리하는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 있습니다.
+Xamarin.Forms에는 [`Page`](xref:Xamarin.Forms.Page) 개체 스택을 관리하는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 있습니다. `NavigationPage` 클래스는 또한 제목을 표시하는 페이지의 맨 위에 탐색 모음을 추가하고 이전 페이지로 돌아가게 하는 플랫폼에 적절한 <span class="uiitem">뒤로</span> 단추를 추가합니다. 다음 코드 예제에서는 응용프로그램의 첫 번째 페이지 주위에 `NavigationPage`을 래핑하는 방법을 보여줍니다.
 
 ```csharp
 public App ()

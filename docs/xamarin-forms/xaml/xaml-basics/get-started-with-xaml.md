@@ -1,6 +1,6 @@
 ---
 title: 1장. XAML 시작하기
-description: Xamarin.Forms 응용 프로그램에서 XAML은 주로 페이지의 시각적 내용 및 코드 숨김 파일과 함께하는 작업을 정의할 때 사용합니다.
+description: Xamarin.Forms 응용 프로그램에서 XAML 페이지 및 코드 숨김 파일을와 함께 작동 visual 내용을 정의 주로 사용 됩니다.
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
@@ -24,11 +24,11 @@ _Xamarin.Forms 응용 프로그램에서 XAML은 주로 페이지의 시각적 �
 
 ## <a name="creating-the-solution"></a>솔루션 만들기
 
-첫 번째 XAML 파일 편집을 시작하려면 Visual Studio 또는 Mac용 Visual Studio를 사용하여 새 Xamarin.Forms 솔루션을 만듭니다.(사용자 환경에 해당하는 아래에 있는 탭을 선택합니다.)
+첫 번째 XAML 파일을 편집 하려면 새 Xamarin.Forms 솔루션을 만들려면 Visual Studio 또는 Mac 용 Visual Studio를 사용 합니다. (사용자 환경에 해당 하는 아래에 있는 탭을 선택 합니다.)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Windows에서는 Visual Studio를 사용하여 메뉴에서 **파일 > 새로 만들기 > 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C# > Cross-Platform**을 선택한 다음 가운데 있는 목록에서 **모바일 앱(Xamarin.Forms)**을 선택합니다..
+Windows를 선택 하려면 Visual Studio 사용 **파일 > 새로 만들기 > 프로젝트** 합니다. 에 **새 프로젝트** 대화 상자에서 **Visual C# > 플랫폼 간** 왼쪽 차례로 **Mobile 앱 (Xamarin.Forms)** 가운데 있는 목록에서.
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "새 프로젝트 대화 상자")
 
@@ -40,11 +40,11 @@ Windows에서는 Visual Studio를 사용하여 메뉴에서 **파일 > 새로 �
 
 **확인**을 누릅니다.
 
-솔루션에 다음과 같은 4개의 프로젝트가 생성됩니다. **XamlSamples** .NET Standard 라이브러리, **XamlSamples.Android**, **XamlSamples.iOS**, 및 UWP(Universal Windows Platform) 솔루션 **XamlSamples.UWP**.
+4 개의 프로젝트가 솔루션에 생성 됩니다: 합니다 **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**를 **XamlSamples.iOS**, 및 유니버설 Windows 플랫폼 솔루션 **XamlSamples.UWP**합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택합니다. **새 프로젝트** 대화 상자에서 왼쪽의 **다중 플랫폼 > 앱** 및 템플릿 목록에서 **빈 Forms 앱**(**Forms 앱**이 *아님*)을 선택합니다.
+Mac 용 Visual Studio에서 선택 **파일 > 새 솔루션** 합니다. 에 **새 프로젝트** 대화 상자에서 **다중 플랫폼 > 앱** 왼쪽 및 **빈 Forms 앱** (*되지* **Forms 앱** ) 템플릿 목록에서:
 
 ![](get-started-with-xaml-images/mac/newprojectdialog1.png "새 프로젝트 대화 상자 1")
 
@@ -62,7 +62,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택합니다. **새 
 
 **만들기**를 누릅니다.
 
-다음과 같은 세 개의 프로젝트가 솔루션에 생성됩니다. **XamlSamples** .NET Standard 라이브러리, **XamlSamples.Android**, **XamlSamples.iOS**.
+세 개의 프로젝트를 솔루션에 생성 됩니다: 합니다 **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**, 및 **XamlSamples.iOS**합니다.
 
 -----
 
@@ -79,7 +79,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택합니다. **새 
 
 코드 숨김 파일을 보려면 **App.xaml** 옆에 있는 화살표를 클릭해야 합니다.
 
-**App.xaml** 및 **App.xaml.cs** 모두 `Application`에서 파생된 `App`이라는 클래스와 관련됩니다. XAML 파일과 함께 있는 대부분의 다른 클래스는 `ContentPage`에서 파생된 클래스와 관련됩니다. 해당 파일들은 전체 페이지의 시각적 내용을 정의하기 위해 XAML을 사용합니다. 다음은 **XamlSamples** 프로젝트에 있는 실제적으로 다른 두 파일입니다.
+둘 다 **App.xaml** 하 고 **App.xaml.cs** 라는 클래스에 기여 `App` 에서 파생 되는 `Application`합니다. XAML 파일을 사용 하 여 다른 대부분의 클래스에서 파생 된 클래스를 적용할 `ContentPage`; 파일과 XAML를 사용 하 여 전체 페이지의 시각적 콘텐츠를 정의 합니다. 경우 다른 두 파일을 **XamlSamples** 프로젝트:
 
 - **MainPage.xaml**: XAML 파일
 - **MainPage.xaml.cs**: C# 코드 숨김 파일
@@ -102,7 +102,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택합니다. **새 
 </ContentPage>
 ```
 
-URI를 참조하는 두 개의 XML 네임 스페이스(`xmlns`) 선언 중 첫 번째는 Xamarin 그리고 두 번째는 Microsoft의 웹 사이트로 보입니다. 궁금한 경우 해당 URI 지점을 확인해보면 아무 것도 없습니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
+두 XML 네임 스페이스 ( `xmlns`) 선언 Xamarin 웹 사이트에서 보이는 첫 번째 및 microsoft의 두 번째 Uri 참조입니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. Xamarin 및 Microsoft에서 소유 하는 Uri 하기만 하면 되며 기본적으로 버전 식별자로 작동 합니다.
 
 첫 번째 XML 네임 스페이스 선언은 Xamarin.Forms에서 접두사가 없는 클래스 참조를 갖는 XAML 파일 내의 정의된 태그, 예를 들면 `ContentPage`와 같은 태그를 의미합니다. 두 번째 네임 스페이스 선언은 `x`의 접두사를 정의합니다. 이는 XAML 자체에 내장된 몇 가지 요소와 특성 및 XAML의 다른 구현이 지원되는 곳에서 사용됩니다. 그러나 이러한 요소와 특성은 URI에 포함된 연도에 따라 약간 다릅니다. Xamarin.Forms는 전체가 아니라 2009 XAML 사양을 지원합니다.
 
@@ -110,7 +110,7 @@ URI를 참조하는 두 개의 XML 네임 스페이스(`xmlns`) 선언 중 첫 �
 
 첫 번째 태그의 끝에서 `x` 접두사는 `Class`라는 특성으로 사용됩니다. 이 `x`와 같은 접두사는 XAML 네임 스페이스에서 거의 보편적이므로 `Class`와 같은 XAML 특성은 거의 항상 `x:Class`와 같이 참조됩니다.
 
-`x:Class` 특성은 `XamlSamples` 네임 스페이스에 있는 `MainPage` 클래스를 완전히 정규화된 .NET 클래스 이름으로 지정합니다. 즉, 이 XAML 파일은 `XamlSamples` 네임 스페이스에 있는 `x:Class` 특성이 표시된 태그 `ContentPage`에서 파생된 `MainPage`라는 새 클래스를 정의합니다. 
+`x:Class` 특성은 `XamlSamples` 네임 스페이스에 있는 `MainPage` 클래스를 완전히 정규화된 .NET 클래스 이름으로 지정합니다. 즉, 이 XAML 파일은 `XamlSamples` 네임 스페이스에 있는 `x:Class` 특성이 표시된 태그 `ContentPage`에서 파생된 `MainPage`라는 새 클래스를 정의합니다.
 
 `x:Class` 특성은 C# 클래스에서 파생되었음을 정의하기 위해 XAML 파일의 루트 요소에만 나타날 수 있습니다. 이것은 XAML 파일에 정의된 새 클래스입니다. XAML 파일에 표시되는 그 밖의 모든 항목은 단순히 기존 클래스에서 인스턴스화되고 초기화하는 용도로 사용됩니다.
 
@@ -133,15 +133,15 @@ namespace XamlSamples
 
 `MainPage` 클래스는 `ContentPage`에서 파생되지만 `partial` 클래스 정의를 주목하십시오. 이는 `MainPage`에 대해 다른 partial 클래스 정의가 있을 것이라는 것을 암시하지만, 어디에 있을까요? 그리고 `InitializeComponent` 메서드는 무엇일까요?
 
-Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일로 생성하도록 변환합니다. **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 보면 **XamlSamples.MainPage.xaml.g.cs**라는 파일을 찾을 수 있습니다. 'g'는 생성(generated)을 의미합니다. 이것이 `MainPage` 생성자에서 호출되는 `InitializeComponent` 메서드 정의를 포함하는 `MainPage`의 다른 partial 클래스 정의입니다. 이러한 두 개의 partial `MainPage` 클래스 정의는 함께 컴파일될 수 있습니다. XAML이 컴파일 될지 여부에 따라 XAML 파일 또는 XAML 파일의 이진 형식 중 하나가 실행 파일에 포함됩니다.
+Visual Studio 프로젝트가 빌드될 때 생성 하려면 XAML 파일 구문 분석을 C# 코드 파일. 확인 합니다 **XamlSamples\XamlSamples\obj\Debug** 디렉터리 라는 파일을 찾을 수 있습니다 **XamlSamples.MainPage.xaml.g.cs**합니다. 'G'는 생성을 나타냅니다. 이 다른 partial 클래스 정의입니다 `MainPage` 의 정의 포함 하는 `InitializeComponent` 에서 호출 된 메서드는 `MainPage` 생성자입니다. 이러한 두 부분 `MainPage` 클래스 정의 함께 컴파일될 수 있습니다. 여부는 XAML 컴파일 여부에 따라 XAML 파일이 나 XAML 파일의 이진 형식 실행 파일에 포함 됩니다.
 
-런타임 시 특정 플랫폼 프로젝트의 코드는 .NET Standard 라이브러리의 `App` 클래스 인스턴스를 전달하는 `LoadApplication` 메서드를 호출합니다. `App` 클래스 생성자는 `MainPage`를 인스턴스화합니다. `MainPage` 클래스의 생성자는 `InitializeComponent`를 호출하고, 그러면 .NET Standard 라이브러리에서 XAML 파일(또는 해당 컴파일된 이진 파일)을 추출하는 `LoadFromXaml` 메서드를 호출합니다. `LoadFromXaml`은 XAML 파일에 정의된 모든 개체를 초기화하고, 부모-자식 관계로 개체를 모두 함께 연결하고, 코드에 정의된 이벤트 처리기를 XAML 파일의 이벤트 설정에 연결하고, 개체의 결과 트리를 페이지의 내용으로 설정합니다.
+런타임에 호출 하 여 특정 플랫폼 프로젝트에서에서 코드를 `LoadApplication` 의 새 인스턴스를 전달 하는 메서드를 `App` .NET 표준 라이브러리의 클래스입니다. 합니다 `App` 클래스 생성자를 인스턴스화합니다 `MainPage`합니다. 해당 클래스의 생성자를 호출 `InitializeComponent`를 호출 합니다 `LoadFromXaml` .NET Standard 라이브러리에서 XAML 파일 (또는 해당 컴파일된 이진 파일)를 추출 하는 메서드. `LoadFromXaml` XAML 파일에 정의 된 모든 개체를 초기화, 부모-자식 관계에서 모두 함께 연결 하, XAML 파일에서 설정 하는 이벤트에는 코드에 정의 된 이벤트 처리기를 연결 및 개체의 결과 트리 페이지의 내용으로 설정 합니다.
 
 일반적으로 생성된 코드 파일에 많은 시간을 투자할 필요는 없지만, 종종 생성된 파일의 코드에서 런타임 예외가 발생하므로 친숙해질 필요가 있습니다.
 
 이 프로그램을 컴파일하고 실행하는 경우, `Label` 요소는 다음 XAML에서 알 수 있듯이 페이지의 가운데에 나타납니다.
 
-[![](get-started-with-xaml-images/xamlsamples.png "기본 Xamarin.Forms 표시")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "기본 Xamarin.Forms 표시")
+[![](get-started-with-xaml-images/xamlsamples.png "기본 Xamarin.Forms 디스플레이")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "기본 Xamarin.Forms 표시")
 
 시각적인 것에 더 관심이 있다면 XAML에 더 관심을 갖기만 하면 됩니다.
 
@@ -149,13 +149,13 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-프로젝트에 다른 XAML 기반 `ContentPage`를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **프로젝트 > 새 항목 추가** 메뉴 항목을 실행합니다. **새 항목 추가** 대화 상자에서 왼쪽에 있는 **Visual C#** 및 **Xamarin.Forms**를 선택합니다. 목록에서 **콘텐츠 페이지** (코드 전용 페이지를 생성하는 **콘텐츠 페이지 (C#)** 또는 페이지가 아닌 **콘텐츠 뷰**가 아님)를 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage.xaml**로 입력합니다.
+다른 XAML 기반 추가할 `ContentPage` 프로젝트에 클래스를 선택 합니다 **XamlSamples** .NET Standard 라이브러리 프로젝트 및 호출를 **프로젝트 > 새 항목 추가** 메뉴 항목입니다. 왼쪽에 있는 합니다 **새 항목 추가** 대화 상자에서 **시각적 C#**  및 **Xamarin.Forms**. 목록에서 선택 **콘텐츠 페이지** (되지 **콘텐츠 페이지 (C#)**, 코드 전용 페이지를 만듭니다.는 또는 **콘텐츠 뷰**, 페이지 없는). 예를 들어 페이지에 이름을 지정 **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "새 항목 추가 대화 상자")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-프로젝트에 다른 XAML 기반 `ContentPage`를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **파일 > 새 파일** 메뉴 항목을 실행합니다. **새 파일** 대화 상자에서 왼쪽에 있는 **Forms** 및 **Forms ContentPage XAML**(코드 전용 페이지를 생성하는 **Forms ContentPage** 또는 페이지가 아닌 **Contents View**가 아님)을 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage**로 입력합니다.
+다른 XAML 기반 추가할 `ContentPage` 프로젝트에 클래스를 선택 합니다 **XamlSamples** .NET Standard 라이브러리 프로젝트 및 호출를 **파일 > 새 파일** 메뉴 항목입니다. 왼쪽에는 **새 파일** 대화 상자에서 **Forms** 왼쪽 및 **Forms ContentPage Xaml** (되지 **Forms ContentPage**는 코드 전용 페이지를 만듭니다. 또는 **콘텐츠 뷰**, 페이지 없는). 예를 들어 페이지에 이름을 지정 **HelloXamlPage**:
 
 ![](get-started-with-xaml-images/mac/newfiledialog.png "새 파일 대화 상자")
 
@@ -203,7 +203,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 또한 `Title` 특성이 루트 태그에 설정되었다는 것에 주의하십시오.
 
-이쯤에서 클래스, 속성 및 XML 간의 관계는 분명해집니다. Xamarin.Forms 클래스(`ContentPage` 또는 `Label` 등)는 XML 요소로 XAML 파일에 표시됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
+이때 클래스, 속성 및 XML 간의 관계 분명해 집니다:는 Xamarin.Forms 클래스 (같은 `ContentPage` 또는 `Label`) XML 요소에 XAML 파일에 표시 됩니다. 해당 클래스의 속성-포함 `Title` 온 `ContentPage` 7의 속성과 `Label`-일반적으로 XML 특성으로 표시 합니다.
 
 대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 유형이 있으며, 예를 들어 `Title` 및 `Text` 속성의 유형은 `String`이고, `Rotation` 속성의 유형은 `Double`이며, `IsVisible`의 유형은 `Boolean`(기본적으로 `true`이며 여기서는 오직 설명 용도로 설정됨)입니다.
 
@@ -211,9 +211,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 그러나 변환기는 더 복잡한 유형의 속성에 대하여 구문 분석에 XAML을 사용합니다. 변환기는 `TypeConverter`에서 파생되는 Xamarin.Forms의 클래스입니다. 대부분이 공용(public) 클래스이지만 몇몇은 아닙니다. 해당 특정 XAML 파일에 대해 다음과 같은 몇 가지 변환기 클래스가 배후에서 작동합니다.
 
--  `VerticalOptions` 속성에 대한 `LayoutOptionsConverter` 
--  `FontSize` 속성에 대한 `FontSizeConverter` 
--  `TextColor` 속성에 대한 `ColorTypeConverter` 
+-  `LayoutOptionsConverter` 에 대 한는 `VerticalOptions` 속성
+-  `FontSizeConverter` 에 대 한는 `FontSize` 속성
+-  `ColorTypeConverter` 에 대 한는 `TextColor` 속성
 
 이러한 변환기는 속성 설정의 허용 구문을 제어합니다.
 
@@ -235,7 +235,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 다른 두 가지 형식을 사용하면 다음과 같이 각 채널에 대한 단일 16진수만을 지정할 수 있습니다.
 
- `TextColor="#rgb"`  `TextColor="#argb"`
+ `TextColor="#rgb"` `TextColor="#argb"`
 
 이러한 경우, 숫자는 값을 구성하도록 반복됩니다. 예를 들어, #CF3는 RGB 색 CC-FF-33입니다.
 
@@ -278,9 +278,9 @@ public MainPage()
 
 페이지의 `Content` 속성을 설정하면 XAML 파일의 `Content` 속성을 대체하게 됩니다. 해당 프로그램의 새 버전을 컴파일하고 배포하면 단추가 화면에 나타납니다. 단추를 눌러 `HelloXamlPage`로 이동합니다. IPhone, Android 및 UWP 결과 페이지는 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전합니다.")
+[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전 합니다.")
 
-iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상단 또는 폰의 맨 아래에 있는 왼쪽 화살표를 사용하며, Windows 10에서는 페이지의 상단에 있는 왼쪽 화살표를 사용하여 `MainPage`로 다시 이동할 수 있습니다.
+다시 탐색할 수 있습니다 `MainPage` 를 사용 하 여는 **< 다시** iOS, android에서 휴대폰의 맨 아래 또는 페이지의 맨 위에 있는 왼쪽된 화살표를 사용 하 여 또는 왼쪽된 화살표를 사용 하 여 Windows 10에서 페이지의 맨 위에 있는 단추입니다.
 
 `Label` 표시를 위해 다양한 방법의 XAML 연습을 자유롭게 해 봅니다. 텍스트에 유니코드 문자를 포함하는 경우 표준 XML 구문을 사용할 수 있습니다. 예를 들어, 다음과 같이 인사말에 지능형 따옴표를 삽입합니다.
 
@@ -288,11 +288,11 @@ iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상
 
 해당 모양은 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자를 사용하여 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자를 사용하여 레이블 텍스트를 회전합니다.")
+[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자를 사용 하 여 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자를 사용 하 여 레이블 텍스트를 회전 합니다.")
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
-**HelloXamlPage** 샘플은 페이지에 단일 `Label`만 포함했지만 아주 일반적인 것은 아닙니다. 대부분의 `ContentPage` 상속은 `StackLayout`과 같은 일종의 레이아웃으로 `Content` 속성을 설정합니다. `StackLayout`의 `Children` 속성은 `IList<View>` 형식이 되도록 정의되지만 그것은 `ElementCollection<View>` 형식의 실제 개체이며, 해당 컬랙션은 여러 뷰 또는 다른 레이아웃으로 채울 수 있습니다. XAML에서 해당 부모-자식 관계는 일반 XML 계층 구조를 사용하여 설정됩니다. **XamlPlusCodePage**라는 이름의 새 페이지에 대한 XAML 파일은 다음과 같습니다.
+합니다 **HelloXamlPage** 샘플 하나만 포함 되어 있습니다. `Label` 페이지의 있지만 매우 일반적인 것은 아닙니다. 대부분의 `ContentPage` 파생형 집합 합니다 `Content` 와 같은 속성의 일부 레이아웃에 정렬를 `StackLayout`입니다. `Children` 의 속성을 `StackLayout` 형식으로 정의 됩니다 `IList<View>` 형식의 개체가 실제로 이지만 `ElementCollection<View>`, 여러 뷰 또는 다른 레이아웃을 사용 하 여 컬렉션을 채울 수 있습니다 하 고 합니다. XAML에서 이러한 부모-자식 관계는 일반 XML 계층 구조를 사용 하 여 설정 됩니다. 라는 새 페이지에 대 한 XAML 파일을 다음과 같습니다 **XamlPlusCodePage**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -320,7 +320,7 @@ iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상
 
 그러나 이 프로그램이 기능적으로 결함이 있다고 생각할 수 있습니다. `Slider`는 `Label`에 현재 값을 표시하고, `Button`은 프로그램 내에서 어떤 작업을 수행할 가능성이 있슴니다.
 
-[4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 살펴보겠지만, `Label`을 사용하여 `Slider` 값을 표시하는 작업은 데이터 바인딩을 사용하여 XAML에서 완전히 처리할 수 있습니다. 하지만 코드 솔루션을 먼저 보는 것이 유용 합니다. 그렇더라도 `Button` 클릭을 처리하는 데는 분명히 코드가 있어야 합니다. 즉, `XamlPlusCodePage`에 대한 코드 비하인드 파일에는 `Slider`의 `ValueChanged` 이벤트와 `Button`의 `Clicked` 이벤트를 위한 처리기를 포함되어야 합니다. 다음과 같이 추가 해 보겠습니다.
+살펴보겠지만 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)를 표시 하는 작업을 `Slider` 사용 하 여 값을 `Label` 데이터 바인딩을 사용 하 여 XAML에서 완전히 처리할 수 있습니다. 하지만 코드 솔루션을 먼저 참조 하는 것이 유용 합니다. 이 경우에 처리 합니다 `Button` 클릭 코드를 반드시 있어야 합니다. 즉, 코드 숨김 파일에 대 한 `XamlPlusCodePage` 에 대 한 처리기를 포함 해야 합니다는 `ValueChanged` 의 이벤트를 `Slider` 및 `Clicked` 의 이벤트는 `Button`합니다. 이러한 파일을 추가 해 보겠습니다.
 
 ```csharp
 namespace XamlSamples
@@ -405,11 +405,11 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 }
 ```
 
-프로그램을 처음 실행 하면, `ValueChanged` 이벤트가 아직 실행 되지 않았기 때문에 `Label`에 `Slider` 값이 표시되지 않습니다. 하지만 다음과 같이 `Slider`를 조정하기만 하면 값이 표시 됩니다.
+프로그램을 처음 실행하면, `ValueChanged` 이벤트가 아직 실행되지 않았기 때문에 `Label`에 `Slider` 값이 표시되지 않습니다. 하지만 다음과 같이 `Slider`를 조정하기만 하면 값이 표시됩니다.
 
 [![](get-started-with-xaml-images/xamlpluscode2.png "슬라이더 값 표시")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "슬라이더 값 표시")
 
-이제는 `Button` 차례 입니다. 버튼의 `Text`를 사용하여 경고를 표시하도록 `Clicked` 이벤트 응답을 시연해 보겠습니다. 이벤트 처리기는 다음과 같이 `sender` 인수를 `Button`으로 안전하게 변환한 다음 해당 속성에 접근할 수 있습니다.
+이제는 `Button` 차례입니다. 버튼의 `Text`를 사용하여 경고를 표시하도록 `Clicked` 이벤트 응답을 시연해 보겠습니다. 이벤트 처리기는 다음과 같이 `sender` 인수를 `Button`으로 안전하게 변환한 다음 해당 속성에 접근할 수 있습니다.
 
 ```csharp
 async void OnButtonClicked(object sender, EventArgs args)
@@ -421,11 +421,11 @@ async void OnButtonClicked(object sender, EventArgs args)
 }
 ```
 
-위 메서드는 `DisplayAlert` 메서드가 비동기적으로 수행되므로 메서드가 완료 될 때 반환하는 `await` 연산자로 시작하기 때문에 `async`로 정의합니다. 이 메서드는 `sender` 인수에서 이벤트를 발생시키는 `Button`을 얻으므로 동일한 처리기를 여러 버튼에 사용할 수 있습니다.
+위 메서드는 `DisplayAlert` 메서드가 비동기적으로 수행되므로 메서드가 완료될 때 반환하는 `await` 연산자로 시작하기 때문에 `async`로 정의합니다. 이 메서드는 `sender` 인수에서 이벤트를 발생시키는 `Button`을 얻으므로 동일한 처리기를 여러 단추에 사용할 수 있습니다.
 
-XAML에 정의 된 개체 코드 비하인드 파일에서 처리되는 이벤트를 발생 시키고 코드 비하인드 파일은 `x:Name` 특성과 함께 할당 된 이름을 사용하여 XAML에 정의 된 개체에 접근할 수 있음을 확인했습니다. 이것은 코드 및 XAML이 상호 작용하는 두 가지 기본 방법 입니다.
+XAML에 정의된 개체 코드 숨김 파일에서 처리되는 이벤트를 발생시키고 코드 숨김 파일은 `x:Name` 특성과 함께 할당된 이름을 사용하여 XAML에 정의된 개체에 접근할 수 있음을 확인했습니다. 이것은 코드 및 XAML이 상호 작용하는 두 가지 기본 방법입니다.
 
-이제 지역(private) 필드인 모든 `x:Name`으로 할당된 모든 이름을 포함하는 새로 생성 된 **XamlPlusCode.xaml.g.cs 파일**을 검토하여 XAML 작동 방식에 대한 몇 가지 추가 정보를 얻을 수 있습니다. 해당 파일의 단순화 된 버전은 다음과 같습니다.
+이제 지역(private) 필드인 모든 `x:Name`으로 할당된 모든 이름을 포함하는 새로 생성된 **XamlPlusCode.xaml.g.cs 파일**을 검토하여 XAML 작동 방식에 대한 몇 가지 추가 정보를 얻을 수 있습니다. 해당 파일의 단순화된 버전은 다음과 같습니다.
 
 ```csharp
 public partial class XamlPlusCodePage : ContentPage {
@@ -439,15 +439,15 @@ public partial class XamlPlusCodePage : ContentPage {
 }
 ```
 
-이 필드를 선언하면 해당 관할권 지역의 `XamlPlusCodePage` 부분(partial) 클래스 파일에서 변수를 자유롭게 사용할 수 있습니다. 런타임 시 필드는 XAML이 구문 분석 된 후 할당 됩니다. 즉, `XamlPlusCodePage` 생성자가 시작되고 `InitializeComponent`가 호출 된 후 유효하지 않으면 `valueLabel` 필드는 `null`이 됩니다.
+이 필드를 선언하면 해당 관할권 지역의 `XamlPlusCodePage` 부분(partial) 클래스 파일에서 변수를 자유롭게 사용할 수 있습니다. 런타임 시 필드는 XAML이 구문 분석된 후 할당됩니다. 즉, `XamlPlusCodePage` 생성자가 시작되고 `InitializeComponent`가 호출된 후 유효하지 않으면 `valueLabel` 필드는 `null`이 됩니다.
 
-`InitializeComponent`가 생성자에게 다시 컨트롤을 반환한 후에, 페이지의 비주얼은 마치 컨트롤이 코드에서 인스턴스화 및 초기화 된 것처럼 구성되었습니다. XAML 파일은 더 이상 클래스에서 어떤 역할을 수행하지 않습니다. 예를 들어, `StackLayout`에 뷰를 추가하거나 페이지의 `Content` 속성을 완전히 다른 것으로 설정하는 등 원하는 방식으로 페이지에서 해당 개체를 조작할 수 있습니다. 페이지의 `Content` 속성과 레이아웃의 `Children` 컬렉션에 있는 항목을 검사하여 "트리를 돌아 다닐" 수 있습니다. 이러한 방식으로 접근되는 뷰 속성을 설정하거나 이벤트 처리기를 동적으로 할당할 수 있습니다.
+`InitializeComponent`가 생성자에게 다시 컨트롤을 반환한 후에, 페이지의 비주얼은 마치 컨트롤이 코드에서 인스턴스화 및 초기화된 것처럼 구성되었습니다. XAML 파일은 더 이상 클래스에서 어떤 역할을 수행하지 않습니다. 예를 들어, `StackLayout`에 뷰를 추가하거나 페이지의 `Content` 속성을 완전히 다른 것으로 설정하는 등 원하는 방식으로 페이지에서 해당 개체를 조작할 수 있습니다. 페이지의 `Content` 속성과 레이아웃의 `Children` 컬렉션에 있는 항목을 검사하여 '트리를 돌아다닐' 수 있습니다. 이러한 방식으로 접근되는 뷰 속성을 설정하거나 이벤트 처리기를 동적으로 할당할 수 있습니다.
 
 자유롭습니다. 페이지는 사용자의 것이고 XAML은 페이지 내용을 만들기 위한 유일한 도구입니다.
 
 ## <a name="summary"></a>요약
 
-이 소개 글로 XAML 파일과 코드 파일이 클래스 정의에 어떻게 기여하는지, 그리고 XAML 및 코드 파일이 상호 작용 하는 방식을 살펴보았습니다. 하지만 XAML에는 매우 유연한 방식으로 사용할 수 있는 자체 고유 구문 기능이 있습니다. [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)에서 해당 내용을 살펴볼 수 있습니다.
+이 소개를 사용 하 여 클래스 정의를 XAML 파일과 코드 파일을 제공 하는 방법 및 XAML 및 코드 파일이 상호 작용 하는 방법을 살펴보았습니다. 하지만 XAML도 자체 고유 구문는 기능이 매우 유연한 방식으로 사용할 수 있도록 합니다. 이러한 탐색을 시작할 수 있습니다 [2 부입니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)합니다.
 
 
 
@@ -457,4 +457,4 @@ public partial class XamlPlusCodePage : ContentPage {
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. 데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

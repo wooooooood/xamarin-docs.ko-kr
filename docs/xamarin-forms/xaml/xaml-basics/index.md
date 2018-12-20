@@ -18,7 +18,7 @@ ms.locfileid: "53055743"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용하는 데 특히 더 적합합니다. XAML은 XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결된 View를 정의합니다.
+XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있습니다. XAML Xamarin.Forms 프로그램에서 필요 하지 않습니다 하지만 것이 간결 하 고 해당 하는 코드 보다 일관 된 시각적으로 화할 수 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다: XAML XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결 된 뷰를 정의 합니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 콘텐츠
 
@@ -27,7 +27,7 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 * [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+* [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 해당 XAML 기본 사항 문서 외에도 [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 단원을 다운로드할 수 있습니다.
 
@@ -38,28 +38,28 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 <table style="border:0px; box-shadow:0 0px 0px" cellpadding="0" cellspacing="2" border="0" width="85%">
 <tr style="background:#ecf0f1">
   <td style="border:0px;">
-    <h4>7 장. XAML과 코드 비교</h4>
+    <h4>7 장입니다. XAML vs입니다. 코드</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>8장. 코드 및 XAML의 조율</h4>
+    <h4>8 장. 코드 및 XAML의 조율</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>10장. XAML 태그 확장</h4>
+    <h4>10 장. XAML 태그 확장</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md">요약</a></td>
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>18장. MVVM</h4>
+    <h4>18 장. MVVM</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf">PDF 다운로드</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">요약</a></td></tr>
@@ -77,17 +77,17 @@ XAML은 또한 iOS, Android 및 UWP 모바일 장치용 교차 플랫폼의 고�
 
 동일한 코드에 비해 XAML은 다음과 같은 여러 장점이 있습니다.
 
-- XAML은 대개 동일한 코드보다 더 간결하고 가독성이 좋습니다.
-- Xml에 고유한 부모-자식 계층은 XAML에서 사용자 인터페이스 개체의 부모-자식 계층 구조를 더욱 명확하게 모방하도록 해줍니다.
+-  XAML은 대개 동일한 코드보다 더 간결하고 가독성이 좋습니다.
+-  Xml에 고유한 부모-자식 계층은 XAML에서 사용자 인터페이스 개체의 부모-자식 계층 구조를 더욱 명확하게 모방하도록 해줍니다.
 -  XAML 프로그래머가 쉽게 손으로 작성할 수 있지만, 또한 비주얼 디자인 도구를 통해 도구 사용성 및 생성을 대신할 수 있습니다.
 
 물론, 대부분의 태그 언어에 내재되어 있는 한계와 관련된 다음과 같은 단점도 있습니다.
 
-- XAML에는 코드를 포함할 수 없습니다. 모든 이벤트 처리기는 코드 파일에 정의되어야 합니다.
-- XAML에는 반복적인 처리를 위한 반복문을 포함할 수 없습니다. 그러나, 몇 가지 Xamarin.Forms 시각적 개체([ `ListView` ](xref:Xamarin.Forms.ListView)가 가장 주목할 만 함)는 자신의 `ItemsSource` 컬렉션 안에 개체를 기반으로 하는 다수의 자식 요소를 생성할 수 있습니다.
-- XAML에는 조건부 처리를 포함할 수 없습니다.(단, 데이터 바인딩은 일부 조건부 처리를 허용하는 코드 기반 바인딩 변환기를 참조할 수 있습니다.) 
-- 일반적으로 XAML에서는 매개 변수가 없는 생성자 클래스가 아니면 인스턴스화할 수 없습니다.(그러나 때때로 해당 제한을 해결할 수 있는 방법이 있습니다.)
-- 일반적으로 XAML에서는 메서드를 호출할 수 없습니다.(이 제한 사항 역시, 경우에 따라 해결할 수 있습니다.)
+-  XAML에는 코드를 포함할 수 없습니다. 모든 이벤트 처리기는 코드 파일에 정의되어야 합니다.
+-  XAML에는 반복적인 처리를 위한 반복문을 포함할 수 없습니다. 그러나, 몇 가지 Xamarin.Forms 시각적 개체([ `ListView` ](xref:Xamarin.Forms.ListView)가 가장 주목할 만 함)는 자신의 `ItemsSource` 컬렉션 안에 개체를 기반으로 하는 다수의 자식 요소를 생성할 수 있습니다.
+-  XAML에는 조건부 처리를 포함할 수 없습니다.(단, 데이터 바인딩은 일부 조건부 처리를 허용하는 코드 기반 바인딩 변환기를 참조할 수 있습니다.)
+-  일반적으로 XAML 매개 변수가 없는 생성자를 정의 하지 않은 클래스를 인스턴스화할 수 없습니다. 그러나 (방법이 때때로이 제한 해결할.)
+-  일반적으로 XAML 메서드를 호출할 수 없습니다. (다시이 제한 사항은 경우에 따라 확장할 수 있습니다.)
 
 아직 Xamarin.Forms 응용 프로그램에서 XAML을 생성하는 비주얼 디자이너는 없습니다. 모든 XAML을 직접 작성해야 하지만 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md)가 있습니다. 특히 종종 XAML을 처음 접하는 프로그래머는 명백하게 올바른지를 확인한 후에 자신의 응용 프로그램을 빌드하고 실행하기를 바랄 수 있습니다. XAML 경험이 많은 개발자일지라도 미리보기가 중요하다는 것을 알고 있습니다.
 
@@ -105,7 +105,7 @@ XAML은 기본적으로 XML이지만 XAML에는 몇 가지 고유한 구문 기�
 
 이 문서는 또한 XML 네임 스페이스 선언 및 *요소*, *태그* 및 *특성*의 용어 사용의 이해를 비롯하여 XML에 어느 정도 익숙하다고 가정합니다.
 
-Xamarin.Forms 및 XML에 익숙한 경우, [1장. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)를 읽기 시작하십시오.
+Xamarin.Forms 및 XML에 익숙한 경우 읽기를 시작할 [1 부입니다. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)합니다.
 
 
 

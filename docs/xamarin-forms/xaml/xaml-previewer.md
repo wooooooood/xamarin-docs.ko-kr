@@ -28,21 +28,21 @@ _입력할 때 렌더링되는 Xamarin.Forms 레이아웃을 확인하세요._
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-XAML 미리 보기는 기본적으로 켜져 있으며 **도구 > 옵션 > Xamarin > Forms Previewer** 대화 상자에서 제어할 수 있습니다. 해당 대화 상자에서 기본 문서 보기 및 분할 방향을 선택할 수 있습니다.
+XAML 미리 보기는 기본적으로 및에서 제어할 수 있습니다 합니다 **도구 > 옵션 > Xamarin > Forms 미리 보기** 대화 합니다. 이 대화 상자에서 기본 문서 보기 및 분할 방향을 선택할 수 있습니다.
 
 [![Visual Studio의 ListView 컨트롤 미리 보기](xaml-previewer-images/xamlp-options-vs.png "Visual Studio의 Forms Previewer 옵션")](xaml-previewer-images/xamlp-options-vs.png#lightbox "Visual Studio의 Forms Previewer 옵션")
 
-XAML 페이지를 열면 편집기는 **도구 > 옵션 > Xamarin > Forms Previewer** 대화 상자에서 선택한 설정에 따라 분할됩니다. 그러나 이러한 기본 설정은 편집기 창에서 변경할 수 있습니다.
+때 선택한 설정에 따라 편집기 분할 XAML 페이지를 열고 합니다 **도구 > 옵션 > Xamarin > Forms 미리 보기** 대화 합니다. 그러나 이러한 기본 설정 편집기 창에서 변경할 수 있습니다.
 
 ## <a name="xaml-preview-controls"></a>XAML 미리 보기 제어
 
 편집기 창의 맨 위에는 사용 중인 창을 선택하는 단추가 있으며, 맨 위에 있는 단추는 디자인 창으로 전환되고, 하단의 단추는 소스 창으로 전환됩니다. 가운데 단추는 창 순서를 바꿉니다.
 
-[![Visual Studio의 ListView 컨트롤 미리 보기](xaml-previewer-images/xamlp-controls-vs.png "Visual Studio의 Forms Previewer 창 제어")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "Visual Studio의 Forms Previewer 창 제어")
+[![Visual Studio에서 ListView 컨트롤 미리 보기](xaml-previewer-images/xamlp-controls-vs.png "Visual Studio에서 컨트롤을 폼 미리 보기 창")](xaml-previewer-images/xamlp-controls-vs.png#lightbox "Visual Studio의 Forms 미리 보기 창 제어")
 
 편집기 창의 아래쪽에는 창을 세로 및 가로로 분할하고 현재 창을 확장하거나 축소할 수 있는 단추가 있습니다.
 
-[![Visual Studio의 ListView 컨트롤 미리 보기](xaml-previewer-images/xamlp-controls2-vs.png "Visual Studio의 Forms Previewer 창 제어")](xaml-previewer-images/xamlp-controls2-vs.png#lightbox "Visual Studio의 Forms Previewer 창 제어")
+[![Visual Studio에서 ListView 컨트롤 미리 보기](xaml-previewer-images/xamlp-controls2-vs.png "Visual Studio에서 컨트롤을 폼 미리 보기 창")](xaml-previewer-images/xamlp-controls2-vs.png#lightbox "Visual Studio의 Forms 미리 보기 창 제어")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -89,7 +89,7 @@ if (DesignMode.IsDesignModeEnabled)
 다음을 확인하십시오.
 
 * XAML 파일 미리 보기를 시도하기 전에 프로젝트를 빌드(컴파일)해야 합니다.
-* 디자이너 에이전트는 처음 XAML 파일을 미리 보기할 때 설정해야 합니다. 준비가 완료될 때까지 진행률 표시기가 진행률 메시지와 함께 미리보기에 나타납니다.
+* 디자이너 에이전트 설치를 XAML 파일을 미리 볼 처음 여야 합니다-이 준비 될 때까지 진행률 메시지와 함께 미리 보기에서 진행률 표시기가 나타납니다.
 * XAML 파일을 닫았다가 다시 열어 봅니다.
 * `App` 클래스가 매개 변수 없는 생성자를 가지고 있는지 확인합니다.
 
