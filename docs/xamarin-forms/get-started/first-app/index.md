@@ -28,11 +28,11 @@ _이 비디오를 보고 Xamarin.Forms로 첫 번째 모바일 앱 만들기를 
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
-1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > 플랫폼 간 > 모바일 앱(Xamarin.Forms)** 을 선택합니다.
+1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > Cross-Platform > 모바일 앱(Xamarin.Forms)** 를 선택합니다.
 
     [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
     [![.NET Standard로 만든 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
 
@@ -77,7 +77,7 @@ _이 비디오를 보고 Xamarin.Forms로 첫 번째 모바일 앱 만들기를 
 
     [![빈 Forms 앱](images/01-sml.png)](images/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
     [![.NET Standard로 만든 Android 및 iOS](images/02-sml.png)](images/02.png#lightbox)
 

@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51563077"
 ---
-# <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
+# <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
 _XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 마크업 언어입니다. XAML 구문을 사용한 XML 파일에서 사용자 인터페이스를 정의하고 런타임 동작은 비하인드 코드 파일에 정의합니다._
 

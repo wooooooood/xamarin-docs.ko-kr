@@ -304,7 +304,7 @@ ms.locfileid: "50123481"
 
     오류가 있는 경우 이전 단계를 반복하고 응용 프로그램이 성공적으로 빌드할 때까지 실수를 수정합니다.
 
-13. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+13. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안의 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/start.png "Mac용 Visual Studio 도구 모음")
     ![](quickstart-images/xs/phone-result-ios.png "iOS Simulator")
@@ -315,7 +315,7 @@ ms.locfileid: "50123481"
 
     ![](quickstart-images/xs/set-startup-project.png "시작 프로젝트로 설정")
 
-15. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+15. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안의 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/phone-result-android.png "Android Emulator")
 
