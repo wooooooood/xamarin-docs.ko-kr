@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51563077"
 ---
-# <a name="extensible-application-markup-language-xaml"></a>eXtensible Application Markup Language (XAML)
+# <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
 _XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 마크업 언어입니다. XAML 구문을 사용한 XML 파일에서 사용자 인터페이스를 정의하고 런타임 동작은 비하인드 코드 파일에 정의합니다._
 
@@ -57,12 +57,12 @@ XAML은 기본이 아닌 생성자 혹은 팩토리 메서드로 인수를 전�
 
 ## <a name="bindable-propertiesbindable-propertiesmd"></a>[Bindable Properties](bindable-properties.md)
 
-Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindable Property를 통해 확장할 수 있습니다. Bindable Property는 Xamarin.Forms의 속성 체계에 속성의 값이 추적되는 특수 형식입니다. 이 문서에서는 Bindable Properties에 대한 기본 소개와 어떻게 만들고 사용하는 지에 대해 알아봅니다.
+Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindable Property를 통해 확장할 수 있습니다. Bindable Property는 Xamarin.Forms의 속성 체계에 속성의 값이 추적되는 특수 형식입니다. 이 문서에서는 Bindable Properties에 대한 기본 소개와 어떻게 만들고 사용하는지에 대해 알아봅니다.
 
 ## <a name="attached-propertiesattached-propertiesmd"></a>[Attached Properties](attached-properties.md)
 
-Attached property는 어느 하나의 클래스에 정의하였지만 다른 개체에 연결할 수 있는 특수 형식입니다.또한 이는 XAML에서 클래스와 속성을 마침표로 구분한 특성(Attribute)를 통해 사용할 수 있습니다. 이 문서에서는 Attached Properties에 대한 소개와 어떻게 만들고 사용하는 지에 대해 알아봅니다.
+연결된 된 속성은 다른 개체에 연결 없이 하나의 클래스로 정의되고, XAML에서 점으로 구별되는 클래스와 속성 이름을 포함하는 특성으로 인식 가능한 특수한 유형의 바인딩 가능한 속성입니다. 이 문서에서는 연결된 속성에 대해 소개하고 연결된 속성 생성및 사용 방법을 설명합니다.
 
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Resource Dictionaries](resource-dictionaries.md)
 
-XAML 리소스는 한 번 이상 사용할 수 있는 개체의 정의들의 모음입니다. [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)는 리소스를 한 곳에서 정의하고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있도록 해줍니다. 이 문서에서는 `ResourceDictionary`를 어떻게 만들고 사용하는 지와 `ResourceDictionary`를 다른 것과 합치는 방법을 알아봅니다.
+XAML 리소스는 한 번 이상 사용할 수 있는 개체 정의의 모음입니다. [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)는 리소스를 한 곳에서 정의하고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있도록 해줍니다. 이 문서에서는 `ResourceDictionary`를 어떻게 만들고 사용하는 지와 `ResourceDictionary`를 다른 것과 합치는 방법을 알아봅니다.
