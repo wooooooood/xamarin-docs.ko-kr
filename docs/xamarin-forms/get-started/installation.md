@@ -26,7 +26,7 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
 - iOS 8 이상
 - Android 4.4(API 19) 이상([자세한 내용](#android))
-- [Windows 10 UWP(유니버설 Windows 플랫폼)](#windows10)
+- Windows 10 UWP(Universal Windows Platform)([자세한 내용)](#windows10))
 
 개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)에 익숙하다고 가정합니다.
 
