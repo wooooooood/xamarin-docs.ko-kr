@@ -1,4 +1,4 @@
----
+﻿---
 title: Xamarin.Forms 심층 분석
 description: 이 문서에서는 Xamarin.Forms를 사용하여 응용 프로그램 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 응용 프로그램 분석, 아키텍처 및 응용 프로그램 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
 zone_pivot_groups: platform
@@ -43,8 +43,8 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
-- **NuGet** &ndash; Xamarin.Forms NuGet 패키지가 프로젝트에 추가되었습니다.
-- **SDK** &ndash; `NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.
+- **NuGet** &ndash; 프로젝트에 추가된 Xamarin.Forms NuGet 패키지.
+- **SDK** &ndash; .NET Standard를 정의하는 NuGet 패키지의 전체 집합을 참조하는 `NETStandard.Library` 메타패키지.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -96,7 +96,7 @@ Xamarin.Forms 응용 프로그램은 전통적인 교차 플랫폼 응용 프로
 ::: zone-end
 ::: zone pivot="macos"
 
-Xamarin.Forms 응용 프로그램은 기존의 플랫폼 간 응용 프로그램과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 .NET 표준 라이브러리에 배치되고 플랫폼 관련 응용 프로그램은 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 이 관계의 개요를 보여줍니다.
+Xamarin.Forms 응용 프로그램은 전통적인 교차 플랫폼 응용 프로그램과 같은 방식으로 설계되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 응용 프로그램은 해당 공유 코드를 사용합니다. 다음 다이어그램은 Phoneword 응용 프로그램에 대한 해당 관계의 개요를 보여줍니다.
 
 ![](deepdive-images/xs/architecture.png "Phoneword 아키텍처")
 
