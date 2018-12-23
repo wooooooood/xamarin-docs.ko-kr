@@ -55,7 +55,7 @@ public class HomePage : ContentPage
 }
 ```
 
-이 예제에서는 `HomePage` 클래스에 대한 XAML의 컴파일 시 검사가 수행되고 컴파일 프로세스의 일부로 오류가 보고됩니다.
+이 예제에서는 `HomePage` 클래스에 대한 XAML의 컴파일 시 검사가 수행되고 컴파일 프로세스의 일부로 오류가 보고됩니다
 
 > [!NOTE]
 > 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오.
