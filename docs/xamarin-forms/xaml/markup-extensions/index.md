@@ -1,6 +1,6 @@
 ---
 title: XAML 태그 확장
-description: 문서 요소 리터럴 텍스트 문자열 이외의 원본에서 설정할 수 있도록 하 여 전원 및 XAML의 유연성을 확장 하기 Xamarin.Forms XAML 태그 확장을 사용 하는 방법에 설명 합니다.
+description: 이 문서에서는 Xamarin.Forms XAML 태그 확장을 사용하여 일반적인 텍스트 문자열 이외의 소스에서 요소 특성을 설정할 수 있도록 하여 XAML의 기능과 유연성을 확장하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
@@ -18,43 +18,43 @@ ms.locfileid: "53060163"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
-XAML 태그 확장 요소 리터럴 텍스트 문자열 이외의 원본에서 설정할 수 있도록 하 여 성능과 유연성 XAML의를 확장할 수 있습니다.
+XAML 태그 확장은 일반적인 텍스트 문자열 이외의 소스에서 요소 특성을 설정할 수 있도록 하여 XAML의 기능과 유연성 확장을 돕습니다.
 
-설정 일반적으로 예를 들어 합니다 `Color` 속성의 `BoxView` 같이:
+예를 들어, 다음과 같이 `BoxView`의 `Color` 속성을 설정합니다.
 
 ```xaml
 <BoxView Color="Blue" />
 ```
 
-또는 16 진수 RGB 색 값으로 설정할 수 있습니다.
+또는 다음과 같이 16 진수 RGB 색상 값으로 설정할 수 있습니다.
 
 ```xaml
 <BoxView Color="#FF0080" />
 ```
 
-두 경우 모두에서 텍스트 문자열을 설정 합니다 `Color` 특성으로 변환 됩니다는 `Color` 값을 [ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter) 클래스입니다.
+두 경우 모두, `Color` 특성으로 설정된 텍스트 문자열은 [ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter) 클래스에 의해 `Color` 값으로 변환됩니다.
 
-설정 하려면 대신 좋습니다를 `Color` 리소스 사전에 저장 된 값 또는 사용자가 만든 하는 클래스의 정적 속성의 값 또는 형식 속성을 특성 `Color` 페이지의 다른 요소에서 생성 된 또는 색상, 채도 및 명도 값을 구분 합니다.
+`Color` 특성을 리소스 사전에 저장 된 값, 또는 사용자가 생성한 클래스의 정적 속성의 값, 또는 페이지에 있는 다른 요소의 `Color` 유형, 또는 색조, 채도 및 명도 값으로 구분하여 설정하는 것을 선호할 수 있습니다.
 
 이러한 옵션은 모두 XAML 태그 확장을 사용 하 여 있을 수 있습니다. 그러나 구 "태그 확장" 하다 고 걱정할: XAML 태그 확장은 *하지* XML에 대 한 확장입니다. XAML 태그 확장을 사용 하더라도 XAML은 항상 xml이 유효한 XML입니다.
 
-태그 확장은 실제로 다른 방식으로 요소 특성을 표현 하 합니다. XAML 태그 확장은 중괄호로 묶은 특성 설정을 일반적으로 식별할 수 있습니다:
+태그 확장은 실제로 요소 특성을 표현하는 다른 방식입니다. XAML 태그 확장은 일반적으로 다음과 같이 중괄호로 묶인 특성 설정으로 식별할 수 있습니다.
 
 ```xaml
 <BoxView Color="{StaticResource themeColor}" />
 ```
 
-중괄호 안에 있는 모든 특성 설정이 *항상* XAML 태그 확장 합니다. 그러나 볼 수 있듯이 XAML 태그 확장 중괄호를 사용 하지 않고 참조할 수도 있습니다.
+중괄호 안에 있는 모든 특성 설정은 *항상* XAML 태그 확장입니다. 그러나 XAML 태그 확장은 중괄호를 사용하지 않고도 참조할 수 있습니다.
 
-이 문서는 두 부분으로 구분 됩니다.
+이 문서는 다음 두 부분으로 구분됩니다.
 
 ## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[XAML 태그 확장 사용](consuming.md)  
 
-Xamarin.Forms에 정의 된 XAML 태그 확장을 사용 합니다.
+Xamarin.Forms에 정의된 XAML 태그 확장을 사용합니다.
 
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[XAML 태그 확장 만들기](creating.md)
 
-사용자 고유의 사용자 지정 XAML 태그 확장을 작성 합니다.
+사용자 고유의 사용자 지정 XAML 태그 확장을 작성합니다.
 
 
 
