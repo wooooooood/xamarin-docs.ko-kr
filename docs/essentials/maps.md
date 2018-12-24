@@ -85,7 +85,7 @@ public class MapTest
 
 ## <a name="directions-mode"></a>길 찾기 모드
 
-`MapLaunchOptions` 없이 `OpenMapAsync`를 호출하면 지도가 지정한 위치에서 시작됩니다. 필요에 따라, 탐색 경로가 장치의 현재 위치에서 계산되도록 할 수 있습니다. 이렇게 하려면 `MapLaunchOptions`에서 `NavigationMode`를 설정합니다.
+`MapLaunchOptions` 없이 `OpenMapAsync`를 호출하면 지도가 지정한 위치에서 시작됩니다. 필요에 따라, 탐색 경로가 디바이스의 현재 위치에서 계산되도록 할 수 있습니다. 이렇게 하려면 `MapLaunchOptions`에서 `NavigationMode`를 설정합니다.
 
 ```csharp
 public class MapTest
@@ -120,7 +120,7 @@ public class MapTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android는 `geo:` URI 체계를 사용하여 장치에서 지도 응용 프로그램을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
+Android는 `geo:` URI 체계를 사용하여 디바이스에서 지도 응용 프로그램을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

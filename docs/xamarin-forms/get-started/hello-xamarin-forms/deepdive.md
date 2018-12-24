@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Forms 심층 분석
 description: 이 문서에서는 Xamarin.Forms를 사용하여 응용 프로그램 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 응용 프로그램 분석, 아키텍처 및 응용 프로그램 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
 zone_pivot_groups: platform
@@ -76,12 +76,12 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 프로젝트는 또한 다음과 같은 여러 파일로 구성됩니다.
 
-- App.xaml: 응용 프로그램의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
+- **App.xaml** - `App` 클래스에 대한 XAML 태그로, 응용 프로그램의 리소스 사전을 정의합니다.
 - **App.xaml.cs** – `App` 클래스의 코드 숨김으로, 각 플랫폼에서 응용 프로그램이 표시할 첫 번째 페이지를 인스턴스화하고 응용 프로그램 수명 주기 이벤트를 처리하는 역할을 담당합니다.
 - **IDialer.cs** – 구현 클래스를 통해 `Dial` 메서드를 제공해야 한다고 지정하는 `IDialer` 인터페이스입니다.
 - **MainPage.xaml** - `MainPage` 클래스에 대한 XAML 태그로, 응용 프로그램이 시작될 때 표시되는 페이지의 UI를 정의합니다.
 - **MainPage.xaml.cs** – `MainPage` 클래스의 코드 숨김으로, 사용자가 페이지와 상호 작용할 때 실행되는 비즈니스 논리를 포함하고 있습니다.
-- PhoneTranslator.cs: 전화 문자를 전화 번호로 변환하는 역할을 담당하는 비즈니스 논리로, **MainPage.xaml.cs**에서 호출합니다.
+- **PhoneTranslator.cs**: 전화 문자를 전화 번호로 변환하는 역할을 담당하는 비즈니스 논리로, **MainPage.xaml.cs**에서 호출합니다.
 
 Xamarin.iOS 응용 프로그램에 대한 자세한 내용은 [Xamarin.iOS 응용 프로그램 분석](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application)을 참조하세요. Xamarin.Android 응용 프로그램에 대한 자세한 내용은 [Xamarin.Android 응용 프로그램 분석](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)을 참조하세요.
 
@@ -271,7 +271,7 @@ void OnTranslate(object sender, EventArgs e)
 
 `OnTranslate` 메서드는 전화 문자를 해당하는 전화 번호로 변환하고, 그에 대한 응답으로 통화(call) 단추의 속성을 설정합니다. XAML 클래스의 코드 숨김 파일은 `x:Name` 특성으로 할당된 이름을 사용하여 XAML에서 정의된 개체에 접근할 수 있습니다. 이 특성에 할당된 값은 C# 변수와 동일한 규칙을 가지며, 따라서 문자 또는 밑줄로 시작해야 하고 공백을 포함하면 안 됩니다.
 
-Translate 버튼을 `OnTranslate` 메서드에 연결하는 동작은 `MainPage` 클래스에 대한 XAML 태그에서 발생합니다.	
+Translate 단추를 `OnTranslate` 메서드에 연결하는 동작은 `MainPage` 클래스에 대한 XAML 태그에서 발생합니다.
 
 ```xaml
 <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
@@ -297,7 +297,7 @@ Xamarin.Forms 용 Phoneword 응용 프로그램에는 이 문서에서 다루지
             "No");
     ```
 
-- [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 고유(Native) 기능에 액세스. Phoneword 응용 프로그램은 Phoneword 프로젝트의 다음 코드 예제와 같이 `DependencyService` 클래스를 사용하여 `IDialer` 인터페이스를 플랫폼 관련 전화 걸기 구현으로 해석 합니다.
+- [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 고유(Native) 기능에 액세스. Phoneword 응용 프로그램은 Phoneword 프로젝트의 다음 코드 예제와 같이 `DependencyService` 클래스를 사용하여 `IDialer` 인터페이스를 플랫폼 관련 전화 걸기 구현으로 해석합니다.
 
     ```csharp
     async void OnCall (object sender, EventArgs e)
@@ -334,9 +334,9 @@ Xamarin.Forms 용 Phoneword 응용 프로그램에는 이 문서에서 다루지
 
 ## <a name="testing-and-deployment"></a>테스트 및 배포
 
-Visual Studio for Mac 및 Visual Studio는 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 응용 프로그램 디버그는 응용 프로그램 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [단계별 코드 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) 및 [로그 창에 정보 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)을 참조하세요.
+Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 응용 프로그램 디버그는 응용 프로그램 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [단계별 코드 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) 및 [로그 창에 정보 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)을 참조하세요.
 
-시뮬레이터는 응용 프로그램 배포 및 테스트를 시작하기에 좋은 곳이며, 응용 프로그램을 테스트하는 유용한 기능을 제공합니다. 그러나 사용자가 최종 응용 프로그램을 시뮬레이터에서 사용하지는 않으므로, 초기에 자주 실제 장치에서 응용 프로그램을 테스트해야 합니다. iOS 장치 프로비전에 대한 자세한 내용은 [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md)을 참조하세요. Android 장치 프로비전에 대한 자세한 내용은 [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하세요.
+시뮬레이터는 응용 프로그램 배포 및 테스트를 시작하기에 좋은 곳이며, 응용 프로그램을 테스트하는 유용한 기능을 제공합니다. 그러나 사용자가 최종 응용 프로그램을 시뮬레이터에서 사용하지는 않으므로, 초기에 자주 실제 장치에서 응용 프로그램을 테스트해야 합니다. iOS 디바이스 프로비전에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md)을 참조하세요. Android 디바이스 프로비전에 대한 자세한 내용은 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하세요.
 
 ## <a name="summary"></a>요약
 

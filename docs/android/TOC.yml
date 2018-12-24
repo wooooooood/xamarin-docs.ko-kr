@@ -17,13 +17,13 @@ items:
         items:
         - name: 하드웨어 가속(Hyper-V 및 HAXM)
           href: get-started/installation/android-emulator/hardware-acceleration.md
-        - name: 장치 관리자
+        - name: 디바이스 관리자
           href: get-started/installation/android-emulator/device-manager.md
-        - name: 장치 속성
+        - name: 디바이스 속성
           href: get-started/installation/android-emulator/device-properties.md
         - name: 문제 해결
           href: get-started/installation/android-emulator/troubleshooting.md
-      - name: Android 장치 설정
+      - name: Android 디바이스 설정
         href: get-started/installation/set-up-device-for-development.md
       - name: Microsoft Mobile OpenJDK 미리 보기
         href: get-started/installation/openjdk.md
@@ -394,9 +394,9 @@ items:
       href: ~/essentials/compass.md?context=xamarin/android
     - name: 연결
       href: ~/essentials/connectivity.md?context=xamarin/android
-    - name: 장치 표시 정보
+    - name: 디바이스 표시 정보
       href: ~/essentials/device-display.md?context=xamarin/android
-    - name: 장치 정보
+    - name: 디바이스 정보
       href: ~/essentials/device-information.md?context=xamarin/android
     - name: 메일
       href: ~/essentials/email.md?context=xamarin/android
@@ -505,7 +505,7 @@ items:
       items:
       - name: 에뮬레이터에서 디버그
         href: deploy-test/debugging/debug-on-emulator.md
-      - name: 장치에서 디버그
+      - name: 디바이스에서 디버그
         href: deploy-test/debugging/debug-on-device.md
       - name: Android 디버그 로그
         href: deploy-test/debugging/android-debug-log.md
@@ -517,7 +517,7 @@ items:
       href: deploy-test/gdb.md
     - name: 사용자 지정 링커 설정
       href: deploy-test/linker.md
-    - name: 다중 코어 장치
+    - name: 다중 코어 디바이스
       href: deploy-test/multicore-devices.md
     - name: 성능
       href: deploy-test/performance.md
@@ -644,7 +644,7 @@ items:
       items:
       - name: 에뮬레이터에서 디버그
         href: wear/deploy-test/debug-on-emulator.md
-      - name: Wear 장치에서 디버그
+      - name: Wear 디바이스에서 디버그
         href: wear/deploy-test/debug-on-device.md
       - name: 패키지
         href: wear/deploy-test/packaging.md

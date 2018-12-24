@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.Essentials: 장치 디스플레이 정보'
-description: 이 문서에서는 응용 프로그램이 실행 중인 장치의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
+title: 'Xamarin.Essentials: 디바이스 디스플레이 정보'
+description: 이 문서에서는 응용 프로그램이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/05/2018
 ms.locfileid: "52898898"
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 장치 디스플레이 정보
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 디바이스 디스플레이 정보
 
 **DeviceDisplay** 클래스는 애플리케이션이 실행되고 있는 디바이스의 화면 메트릭에 관한 정보를 제공하고, 애플리케이션이 실행 중일 때 화면이 절전 상태가 되지 않도록 요청할 수 있습니다.
 
@@ -30,7 +30,7 @@ using Xamarin.Essentials;
 
 ## <a name="main-display-info"></a>기본 디스플레이 정보
 
-기본 장치 정보 외에도 **DeviceDisplay** 클래스에는 장치의 화면 및 방향에 대한 정보가 포함되어 있습니다.
+기본 디바이스 정보 외에도 **DeviceDisplay** 클래스에는 디바이스의 화면 및 방향에 대한 정보가 포함되어 있습니다.
 
 ```csharp
 // Get Metrics

@@ -18,7 +18,7 @@ ms.locfileid: "52899176"
 
 ## <a name="overview"></a>개요
 
-Xamarin.Android 빌드 프로세스는 [`Resource.designer.cs`를 생성하고](~/android/internals/api-design.md), `AndroidAsset`, `AndroidResource` 및 다른 [빌드 동작](#Build_Actions)을 지원하고, [Android에서 호출 가능한 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)를 생성하고, Android 장치에서 실행할 `.apk`를 생성하는 등 모든 것을 결합하는 역할을 합니다.
+Xamarin.Android 빌드 프로세스는 [`Resource.designer.cs`를 생성하고](~/android/internals/api-design.md), `AndroidAsset`, `AndroidResource` 및 다른 [빌드 동작](#Build_Actions)을 지원하고, [Android에서 호출 가능한 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)를 생성하고, Android 디바이스에서 실행할 `.apk`를 생성하는 등 모든 것을 결합하는 역할을 합니다.
 
 
 ## <a name="application-packages"></a>응용 프로그램 패키지
@@ -41,9 +41,9 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 
 ### <a name="fast-deployment"></a>빠른 배포
 
-*빠른 배포*는 공유 런타임과 함께 작동하여 Android 응용 프로그램의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 장치에 다시 동기화합니다. 
+*빠른 배포*는 공유 런타임과 함께 작동하여 Android 응용 프로그램의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 디바이스에 다시 동기화합니다. 
 
-빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 장치에서 실패하는 것으로 알려져 있습니다. 
+빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 디바이스에서 실패하는 것으로 알려져 있습니다. 
 
 빠른 배포는 기본적으로 활성화되며, 디버그 빌드에서 `$(EmbedAssembliesIntoApk)` 속성을 `True`로 설정하여 비활성화할 수 있습니다.
 
@@ -100,7 +100,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 설치 속성은 `Install` 및 `Uninstall` 대상의 동작을 제어합니다.
 
--   **AdbTarget** &ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 장치를 지정합니다. 이 속성의 값은 [`adb` 대상 장치 옵션](http://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
+-   **AdbTarget** &ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 장치를 지정합니다. 이 속성의 값은 [`adb` 대상 디바이스 옵션](http://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
 
     ```bash
     # Install package onto emulator via -e
@@ -283,7 +283,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **EmbedAssembliesIntoApk** &ndash; 앱의 어셈블리가 응용 프로그램 패키지에 포함되어야 하는지 여부를 결정하는 부울 속성입니다.
 
-    이 속성은 릴리스 빌드의 경우 `True`, 디버그 빌드의 경우 `False`여야 합니다. 빠른 배포에서 대상 장치를 지원하지 않는 경우 디버그 빌드에서 `True`가 되어야 *할 수 있습니다*.
+    이 속성은 릴리스 빌드의 경우 `True`, 디버그 빌드의 경우 `False`여야 합니다. 빠른 배포에서 대상 디바이스를 지원하지 않는 경우 디버그 빌드에서 `True`가 되어야 *할 수 있습니다*.
 
     이 속성이 `False`이면 `$(AndroidFastDeploymentType)` MSBuild 속성에서 `.apk`에 포함될 항목도 제어하며, 이로 인해 배포 및 다시 빌드 시간에 영향을 줍니다.
 
@@ -534,7 +534,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 ### <a name="signing-properties"></a>서명 속성
 
-서명 속성은 Android 장치에 설치할 수 있도록 응용 프로그램 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
+서명 속성은 Android 디바이스에 설치할 수 있도록 응용 프로그램 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
 
 기본적으로 서명 대상은 필요한 경우 새 디버그 서명 키를 생성합니다. 예를 들어 빌드 서버에서 특정 키를 사용하려는 경우 다음 MSBuild 속성을 사용할 수 있습니다.
 

@@ -59,7 +59,7 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 
 
 > [!NOTE]
-> `gdb-symbols` 디렉터리의 콘텐츠는 사용자가 배포한 Android 대상에 연결되고, 사용자가 대상을 변경하지 않는 한 자동으로 바뀌지 않습니다. (이는 버그로 간주하세요.) Android 대상 장치를 변경할 경우 이 디렉터리를 수동으로 삭제해야 합니다.
+> `gdb-symbols` 디렉터리의 콘텐츠는 사용자가 배포한 Android 대상에 연결되고, 사용자가 대상을 변경하지 않는 한 자동으로 바뀌지 않습니다. (이는 버그로 간주하세요.) Android 대상 디바이스를 변경할 경우 이 디렉터리를 수동으로 삭제해야 합니다.
 
 마지막으로, 생성된 `gdb` 명령을 복사하여 셸에서 실행합니다.
 

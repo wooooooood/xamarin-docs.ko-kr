@@ -191,7 +191,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,7 +424,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -619,7 +619,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -1076,7 +1076,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>CocosSharp</h3>
-                                                    <p>모바일 장치용 플랫폼 간 2D 게임을 빌드합니다.</p>
+                                                    <p>모바일 디바이스용 플랫폼 간 2D 게임을 빌드합니다.</p>
                                                 </div>
                                             </div>
                                         </div>

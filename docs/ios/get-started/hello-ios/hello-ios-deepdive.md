@@ -73,7 +73,7 @@ Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루
 - **ViewController.cs** – 뷰 컨트롤러는 사용자가 보고 터치하는 화면(뷰)을 제공합니다. 뷰 컨트롤러는 사용자와 뷰 간 상호 작용을 처리하는 일을 담당합니다.
 - **ViewController.designer.cs** – `designer.cs`는 뷰의 컨트롤과 뷰 컨트롤러에서 해당 코드 표현 간의 연결점으로 사용되는 자동으로 생성되는 파일입니다. 내부 배관 파일이기 때문에 IDE는 수동 변경을 덮어쓰게 되며 대부분의 경우 이 파일은 무시할 수 있습니다. 비주얼 디자이너와 백업 코드 사이의 관계에 대한 자세한 내용은 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드를 참조하세요.
 - **Info.plist** – **Info.plist**에서는 응용 프로그램 이름, 아이콘, 시작 이미지 등과 같은 응용 프로그램 속성이 설정됩니다. 강력한 파일로, 전체 소개는 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다.
-- **Entitlements.plist** - 자격 속성 목록을 통해 iCloud, PassKit 등의 *기능*(앱 스토어 기술이라고도 함)을 지정할 수 있습니다. **Entitlements.plist**에 대한 자세한 내용은 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다. 자격에 대한 일반적인 소개의 경우 [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
+- **Entitlements.plist** - 자격 속성 목록을 통해 iCloud, PassKit 등의 *기능*(앱 스토어 기술이라고도 함)을 지정할 수 있습니다. **Entitlements.plist**에 대한 자세한 내용은 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다. 자격에 대한 일반적인 소개의 경우 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 ## <a name="architecture-and-app-fundamentals"></a>아키텍처 및 앱 기본 사항
 
@@ -105,7 +105,7 @@ namespace Phoneword_iOS
 
 ### <a name="application-delegate"></a>응용 프로그램 대리자
 
-iOS에서 *응용 프로그램 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 응용 프로그램 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 응용 프로그램은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 장치 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
+iOS에서 *응용 프로그램 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 응용 프로그램 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 응용 프로그램은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 디바이스 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
 
 또한 *AppDelegate*는 앱 시작이 종료될 때 또는 메모리가 부족할 때와 중요한 응용 프로그램 이벤트에 대한 시스템 업데이트를 구독하는 역할을 합니다.
 
@@ -171,7 +171,7 @@ iOS 디자이너는 Xamarin에서 사용자 인터페이스를 빌드하는 비�
 
 ::: zone-end
 
-_뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰는 화면의 영역을 정의하고 해당 영역에서 콘텐츠를 사용하기 위한 인터페이스를 제공하는 `UIView` 클래스의 인스턴스입니다. 기본 뷰는 전체 장치 화면을 채우는 단일 *루트 뷰*입니다.
+_뷰_는 장면의 흰색 부분을 클릭하여 선택할 수 있습니다. 뷰는 화면의 영역을 정의하고 해당 영역에서 콘텐츠를 사용하기 위한 인터페이스를 제공하는 `UIView` 클래스의 인스턴스입니다. 기본 뷰는 전체 디바이스 화면을 채우는 단일 *루트 뷰*입니다.
 
 아래 스크린샷에서 나온 것처럼 장면의 왼쪽에 플래그 아이콘이 포함된 회색 화살표가 있습니다.
 
@@ -239,7 +239,7 @@ _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단�
 
 ::: zone-end
 
-다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
+다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
 
 [![](hello-ios-deepdive-images/image43.png "창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계")](hello-ios-deepdive-images/image43.png#lightbox)
 
@@ -401,22 +401,22 @@ Phoneword 응용 프로그램에는 이 가이드에서 다루지 않은 몇 가
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 장치에서 응용 프로그램 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
 경우에 따라 응용 프로그램 코드의 문제는 진단하기가 어렵습니다. 복잡한 코드 문제를 진단하려면 [중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하거나, [코드를 단계별 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)하거나, [로그 창에 정보를 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)합니다.
 
-### <a name="deploy-to-a-device"></a>장치에 배포
+### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 장치에서 테스트해야 합니다.
+iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 디바이스에서 테스트해야 합니다.
 
-장치를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침이 나와 있습니다.
+디바이스를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [장치 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침이 나와 있습니다.
 
 > [!NOTE]
-> 현재 Apple의 요구 사항에 따라 장치 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 _서명 ID_가 필요합니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+> 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 _서명 ID_가 필요합니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
-장치가 프로비전되고 나면, 다음 스크린샷에 표시된 것처럼 플러그 인하고 빌드 도구 모음에 있는 대상을 iOS 장치로 변경한 다음, **Start**(**Play**) 키를 눌러 배포할 수 있습니다.
+디바이스가 프로비전되고 나면, 다음 스크린샷에 표시된 것처럼 플러그 인하고 빌드 도구 모음에 있는 대상을 iOS 디바이스로 변경한 다음, **Start**(**Play**) 키를 눌러 배포할 수 있습니다.
 
 ::: zone pivot="macos"
 
@@ -429,7 +429,7 @@ iOS 시뮬레이터는 응용 프로그램을 테스트하기 위한 빠른 방�
 
 ::: zone-end
 
-앱이 iOS 장치에 배포합니다.
+앱이 iOS 디바이스에 배포합니다.
 
 [![](hello-ios-deepdive-images/image1.png "앱이 iOS 장치에 배포되고 실행됩니다.")](hello-ios-deepdive-images/image1.png#lightbox)
 

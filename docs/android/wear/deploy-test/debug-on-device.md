@@ -1,5 +1,5 @@
 ---
-title: Wear 장치에서 디버그
+title: Wear 디바이스에서 디버그
 description: 이 문서에서는 Wear 장치에서 Xamarin.Android Wear 응용 프로그램을 디버깅 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50112471"
 ---
-# <a name="debug-on-a-wear-device"></a>Wear 장치에서 디버그
+# <a name="debug-on-a-wear-device"></a>Wear 디바이스에서 디버그
 
 _이 문서에서는 Wear 장치에서 Xamarin.Android Wear 응용 프로그램을 디버깅 하는 방법에 설명 합니다._
 

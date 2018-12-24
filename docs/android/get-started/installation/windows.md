@@ -28,7 +28,7 @@ Xamarin은 이제 모든 버전의 Visual Studio에 무료로 포함되며 별�
 
 -   Android SDK Manager를 시작하여 추가 Android SDK 구성 요소를 다운로드하고 설치하는 방법
 
--   디버깅 및 테스트할 Android 장치 또는 에뮬레이터를 준비하는 방법
+-   디버깅 및 테스트할 Android 디바이스 또는 에뮬레이터를 준비하는 방법
 
 -   첫 번째 Xamarin.Android 앱 프로젝트를 만드는 방법
 
@@ -70,9 +70,9 @@ Xamarin Android SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~
 
 ### <a name="android-emulator"></a>Android 에뮬레이터
 
-[Android Emulator](https://developer.android.com/studio/run/emulator)는 Xamarin.Android 앱을 개발하고 테스트하는 유용한 도구입니다. 예를 들어 태블릿과 같은 물리적 장치가 개발 중에 지원되지 않거나 개발자가 코드를 커밋하기 전에 해당 컴퓨터에서 일부 통합 테스트를 실행하려고 할 수 있습니다.
+[Android Emulator](https://developer.android.com/studio/run/emulator)는 Xamarin.Android 앱을 개발하고 테스트하는 유용한 도구입니다. 예를 들어 태블릿과 같은 물리적 디바이스가 개발 중에 지원되지 않거나 개발자가 코드를 커밋하기 전에 해당 컴퓨터에서 일부 통합 테스트를 실행하려고 할 수 있습니다.
 
-컴퓨터에서 Android 장치를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
+컴퓨터에서 Android 디바이스를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
 
 * **Google Android Emulator** &ndash; 개발자의 워크스테이션에서 실행하는 가상화된 장치를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
 * **에뮬레이터 이미지** &ndash; _에뮬레이터 이미지_는 가상화되어야 하는 하드웨어 및 운영 체제의 템플릿 또는 사양입니다. 예를 들어 하나의 에뮬레이터 이미지는 Google Play 서비스가 설치된 Android 7.0을 실행하는 Nexus 5X의 하드웨어 요구 사항을 식별합니다. 다른 에뮬레이터 이미지는 Android 6.0을 실행하는 특정 10" 테이블일 수 있습니다.
@@ -91,9 +91,9 @@ Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [에뮬레이�
 
 <a name="device" />
 
-### <a name="android-device"></a>Android 장치
+### <a name="android-device"></a>Android 디바이스
 
-테스트에 사용할 물리적 Android 장치가 있는 경우 개발에 사용하도록 설정하는 것이 좋습니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하여 개발할 Android 장치를 구성한 다음, Xamarin.Android 응용 프로그램을 실행하고 디버깅하는 컴퓨터에 연결합니다.
+테스트에 사용할 물리적 Android 디바이스가 있는 경우 개발에 사용하도록 설정하는 것이 좋습니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하여 개발할 Android 장치를 구성한 다음, Xamarin.Android 응용 프로그램을 실행하고 디버깅하는 컴퓨터에 연결합니다.
 
 
 ## <a name="create-an-application"></a>응용 프로그램 만들기
@@ -111,7 +111,7 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Windows에서 Xamarin.Android 플랫폼을 설정하고 설치하는 방법, (선택 사항)사용자 지정 JDK Java 및 Android SDK 설치 위치를 사용하여 Visual Studio를 구성하는 방법, SDK Manager를 시작하여 추가 Android SDK를 설치하는 방법, Android 장치 또는 에뮬레이터를 설정하는 방법 및 첫 번째 응용 프로그램을 빌드하기 시작하는 방법을 알아보았습니다.
+이 문서에서는 Windows에서 Xamarin.Android 플랫폼을 설정하고 설치하는 방법, (선택 사항)사용자 지정 JDK Java 및 Android SDK 설치 위치를 사용하여 Visual Studio를 구성하는 방법, SDK Manager를 시작하여 추가 Android SDK를 설치하는 방법, Android 디바이스 또는 에뮬레이터를 설정하는 방법 및 첫 번째 응용 프로그램을 빌드하기 시작하는 방법을 알아보았습니다.
 
 다음 단계에서는 [Hello, Android](~/android/get-started/hello-android/index.md) 자습서를 살펴보고 작동하는 Xamarin.Android 앱을 만드는 방법을 알아봅니다.
 

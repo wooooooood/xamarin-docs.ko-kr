@@ -24,7 +24,7 @@ C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual
 > [!NOTE]
 > 디버그 모드에서 응용 프로그램을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 응용 프로그램을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
 
-Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 장치에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다.
+Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 디바이스에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다.
 
 Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)를 사용합니다. 즉, 생성된 코드와 Mono 런타임이 IDE와 협력하여 디버깅 환경을 제공합니다. 이는 디버그된 프로그램의 지식이나 협력 없이 프로그램을 제어하는 LLDB 또는 MDB와 같은 하드 디버거와 다릅니다.
 
@@ -73,7 +73,7 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 -----
 
 ## <a name="start-debugging"></a>디버깅 시작
-디버깅을 시작하려면 IDE에서 대상 장치 또는 유사한 장치를 선택합니다.
+디버깅을 시작하려면 IDE에서 대상 디바이스 또는 유사한 디바이스를 선택합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -175,15 +175,15 @@ iOS가 응용 프로그램 대리자에서 `FinishedLaunching` 메서드를 시�
 
 즉 프로그램의 시작 코드에 중단점을 설정하는 것이 거의 불가능합니다. 시작 코드를 디버그하려면 초기화 중 일부를 지연시키고 타이머 호출 메서드 또는 FinishedLaunching이 종료된 후 실행되는 다른 형식의 콜백 메서드에 배치해야 합니다.
 
-## <a name="device-diagnostics"></a>장치 진단
+## <a name="device-diagnostics"></a>디바이스 진단
 
-디버거를 설정하는 동안 오류가 발생하면 [프로젝트 옵션]에서 "-v -v -v"를 추가 mtouch 인수에 추가하여 자세한 진단을 사용하도록 설정할 수 있습니다. 이렇게 하면 자세한 오류 정보가 장치 콘솔에 출력됩니다.
+디버거를 설정하는 동안 오류가 발생하면 [프로젝트 옵션]에서 "-v -v -v"를 추가 mtouch 인수에 추가하여 자세한 진단을 사용하도록 설정할 수 있습니다. 이렇게 하면 자세한 오류 정보가 디바이스 콘솔에 출력됩니다.
 
  <a name="WiFi_Debugging" />
 
 ## <a name="wireless-debugging"></a>무선 디버깅
 
-Xamarin.iOS는 기본적으로 USB 연결을 통해 장치에서 응용 프로그램을 디버그합니다. 때로는 ExternalAccessory 지원 응용 프로그램을 개발하기 위해 USB 장치에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
+Xamarin.iOS는 기본적으로 USB 연결을 통해 디바이스에서 응용 프로그램을 디버그합니다. 때로는 ExternalAccessory 지원 응용 프로그램을 개발하기 위해 USB 디바이스에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
 
 무선 배포 및 디버깅에 대한 자세한 내용은 [무선 배포](~/ios/deploy-test/wireless-deployment.md) 가이드를 참조하세요.
 
@@ -195,14 +195,14 @@ Xamarin.iOS는 새로운 Mono 소프트 디버거를 사용합니다. 별도의 
 
 시작 시 디버그할 응용 프로그램이 디버거에 연결되어 디버거가 작동하기 시작합니다. Visual Studio용 Xamarin.iOS에서 Xamarin Mac 에이전트는 Visual Studio에 있는 응용 프로그램과 디버거 사이의 중개자 역할을 합니다.
 
-이 소프트 디버거에는 장치에서 실행할 때 공동 작업 디버깅 구성표가 필요합니다. 즉 디버깅을 지원하기 위해 모든 시퀀스 점에서 추가 코드를 포함하도록 코드가 계측되므로 디버깅이 커질 때 바이너리가 빌드됩니다.
+이 소프트 디버거에는 디바이스에서 실행할 때 공동 작업 디버깅 구성표가 필요합니다. 즉 디버깅을 지원하기 위해 모든 시퀀스 점에서 추가 코드를 포함하도록 코드가 계측되므로 디버깅이 커질 때 바이너리가 빌드됩니다.
 
 <a name="Accessing_the_Console" />
 
 
 ## <a name="accessing-the-console"></a>콘솔 액세스
 
-콘솔 클래스의 크래시 로그 및 출력은 iPhone 콘솔로 전송됩니다. "구성 도우미"를 사용하고 구성 도우미에서 장치를 선택하여 Xcode를 통해 이 콘솔에 액세스할 수 있습니다.
+콘솔 클래스의 크래시 로그 및 출력은 iPhone 콘솔로 전송됩니다. "구성 도우미"를 사용하고 구성 도우미에서 디바이스를 선택하여 Xcode를 통해 이 콘솔에 액세스할 수 있습니다.
 
 또는 Xcode를 시작하지 않으려면 Apple의 [iPhone 구성 유틸리티](http://www.apple.com/support/iphone/enterprise/)를 사용하여 콘솔에 직접 액세스할 수 있습니다. 이 필드에서 문제를 디버그하는 경우 Windows 시스템에서 콘솔 로그에 액세스할 수 있는 기회가 추가로 있습니다.
 

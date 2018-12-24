@@ -1,6 +1,6 @@
 ---
 title: Xamarin.iOS 설치
-description: 이 문서는 Mac 및 Windows에 Xamarin.iOS 설치하는 방법 및 테스트를 위해 장치를 프로비전하는 방법을 설명하는 설명서로 연결합니다.
+description: 이 문서는 Mac 및 Windows에 Xamarin.iOS 설치하는 방법 및 테스트를 위해 디바이스를 프로비전하는 방법을 설명하는 설명서로 연결합니다.
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
@@ -37,9 +37,9 @@ Mac에서 Xamarin.iOS 설치에 대한 지침은 [Mac 설치](https://docs.micro
 
 Windows 컴퓨터에서 Xamarin.iOS 설치에 대한 지침은 [Windows 설치](~/ios/get-started/installation/windows/index.md) 가이드를 참조하세요.
 
-## <a name="development-and-device-provisioning"></a>개발 및 장치 프로비저닝
+## <a name="development-and-device-provisioning"></a>개발 및 디바이스 프로비저닝
 
-Xamarin.iOS를 성공적으로 설치한 후에 장치에서 Xamarin.iOS 응용 프로그램을 개발하고 테스트할 수 있도록 iOS 장치를 프로비전하는 방법을 알아봅니다.
+Xamarin.iOS를 성공적으로 설치한 후에 디바이스에서 Xamarin.iOS 응용 프로그램을 개발하고 테스트할 수 있도록 iOS 디바이스를 프로비전하는 방법을 알아봅니다.
 
 * [개발용 장치 설정](device-provisioning/index.md)
 * [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

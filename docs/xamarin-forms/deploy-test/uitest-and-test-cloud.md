@@ -1,6 +1,6 @@
 ---
 title: App Center를 사용하여 Xamarin.Forms 테스트 자동화
-description: Xamarin UITest 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우드에서 수백 대의 장치에 실행할 UI 테스트를 작성할 수 있습니다.
+description: Xamarin UITest 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우드에서 수백 대의 디바이스에 실행할 UI 테스트를 작성할 수 있습니다.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9

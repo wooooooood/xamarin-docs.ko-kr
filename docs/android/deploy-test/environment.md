@@ -28,7 +28,7 @@ adb shell setprop debug.mono.log gref
 adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 ```
 
-Android 시스템 속성은 대상 장치의 모든 프로세스에 대해 설정됩니다.
+Android 시스템 속성은 대상 디바이스의 모든 프로세스에 대해 설정됩니다.
 
 Xamarin.Android 4.6부터 시스템 속성 및 환경 변수는 모두 앱별로 프로젝트에 *환경 파일*을 추가하여 설정하거나 재정의할 수 있습니다. 환경 파일은 [`AndroidEnvironment`의 **빌드 동작**](~/android/deploy-test/building-apps/build-process.md)을 사용하는 Unix 형식의 일반 텍스트 파일입니다.
 환경 파일에는 *key=value* 형식이 있는 줄이 포함됩니다.
@@ -104,7 +104,7 @@ Xamarin.Android가 `adb logcat`에 로깅할 추가 정보를 제어합니다.
 ### `debug.mono.max_grefc`
 
 `debug.mono.max_grefc` 시스템 속성의 값은 정수입니다.
-이 값은 대상 장치에 대해 기본으로 검색된 최대 GREF 수를 *재정의*합니다.
+이 값은 대상 디바이스에 대해 기본으로 검색된 최대 GREF 수를 *재정의*합니다.
 
 *참고:* 이 값은 조만간 **environment.txt** 파일과 함께 사용할 수 없게 되므로 `adb shell setprop
 debug.mono.max_grefc`와만 함께 사용할 수 있습니다.
@@ -148,7 +148,7 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 ```
 
 > [!NOTE]
-> 기본 Android 장치가 TLS 1.2를 지원해야 합니다.
+> 기본 Android 디바이스가 TLS 1.2를 지원해야 합니다.
 Android 5.0 이상은 TLS 1.2를 지원합니다.
 
 

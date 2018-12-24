@@ -1,6 +1,6 @@
 ---
-title: Xamarin.iOS에서 다른 장치용으로 컴파일
-description: 이 문서에서는 다양한 장치에 대한 Xamarin.iOS 빌드를 사용자 지정하는 데 사용할 수 있는 다양한 빌드 구성 옵션을 설명합니다.
+title: Xamarin.iOS에서 다른 디바이스용으로 컴파일
+description: 이 문서에서는 다양한 디바이스에 대한 Xamarin.iOS 빌드를 사용자 지정하는 데 사용할 수 있는 다양한 빌드 구성 옵션을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50121210"
 ---
-# <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 장치용으로 컴파일
+# <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 디바이스용으로 컴파일
 
 프로젝트의 **iOS 빌드** 속성 페이지에서 실행 파일의 빌드 속성을 구성할 수 있으며, 이 페이지는 Mac용 Visual Studio에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **옵션 > iOS 빌드**를 찾거나 Visual Studio의 **속성**에서 찾을 수 있습니다.
 
@@ -124,7 +124,7 @@ Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입�
 
 ## <a name="conditional-framework-usage"></a>조건부 프레임워크 사용
 
-프로젝트에 최신 iOS 릴리스의 일부 기능을 활용하려면 조건에 따라 특정 새 프레임워크를 사용해야 할 수도 있습니다. 가장 대표적인 예로 iOS 4.0 이상에서 실행 중일 때 iAd를 사용하고 싶지만 계속해서 3.x 장치를 지원하려는 경우를 들 수 있습니다. 이렇게 하려면 iAd 프레임워크에 "약하게" 연결해야 한다는 사실을 Xamarin.iOS가 알 수 있게 해야 합니다. 약한 바인딩은 프레임워크의 클래스가 처음으로 필요할 때 프레임워크만 필요에 따라 로드되도록 보장합니다.
+프로젝트에 최신 iOS 릴리스의 일부 기능을 활용하려면 조건에 따라 특정 새 프레임워크를 사용해야 할 수도 있습니다. 가장 대표적인 예로 iOS 4.0 이상에서 실행 중일 때 iAd를 사용하고 싶지만 계속해서 3.x 디바이스를 지원하려는 경우를 들 수 있습니다. 이렇게 하려면 iAd 프레임워크에 "약하게" 연결해야 한다는 사실을 Xamarin.iOS가 알 수 있게 해야 합니다. 약한 바인딩은 프레임워크의 클래스가 처음으로 필요할 때 프레임워크만 필요에 따라 로드되도록 보장합니다.
 
 이렇게 하려면 다음 단계를 수행해야 합니다.
 

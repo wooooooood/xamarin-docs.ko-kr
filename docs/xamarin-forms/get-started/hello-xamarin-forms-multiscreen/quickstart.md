@@ -161,10 +161,10 @@ ms.locfileid: "50123481"
 
 13. **솔루션 탐색기**에서 **Phoneword.Droid** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **시작 프로젝트로 설정**을 선택합니다.
 14. Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
-15. iOS 장치가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 장치에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
+15. iOS 디바이스가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 디바이스에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
 
     > [!NOTE]
-    > 전화 통화는 장치 에뮬레이터에서 지원되지 않습니다.
+    > 전화 통화는 디바이스 에뮬레이터에서 지원되지 않습니다.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -320,7 +320,7 @@ ms.locfileid: "50123481"
     ![](quickstart-images/xs/phone-result-android.png "Android Emulator")
 
     > [!NOTE]
-    > 전화 통화는 장치 에뮬레이터에서 지원되지 않습니다.
+    > 전화 통화는 디바이스 에뮬레이터에서 지원되지 않습니다.
 
 ::: zone-end
 

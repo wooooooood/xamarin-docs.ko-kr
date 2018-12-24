@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 손전등'
-description: 이 문서에서는 장치의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.
+description: 이 문서에서는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
@@ -44,7 +44,7 @@ Flashlight 및 Camera 권한이 필요하며 Android 프로젝트에서 구성�
 
 또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 **FLASHLIGHT** 및 **CAMERA** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
-이러한 권한을 추가하면 특정 하드웨어 없이 [Google Play에서 자동으로 장치를 필터링](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)합니다. Android 프로젝트에서 AssemblyInfo.cs 파일에 다음을 추가하여 이를 처리할 수 있습니다.
+이러한 권한을 추가하면 특정 하드웨어 없이 [Google Play에서 자동으로 디바이스를 필터링](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)합니다. Android 프로젝트에서 AssemblyInfo.cs 파일에 다음을 추가하여 이를 처리할 수 있습니다.
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -98,11 +98,11 @@ catch (Exception ex)
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Flashlight 클래스는 장치의 운영 체제에 따라 최적화되었습니다.
+Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었습니다.
 
 #### <a name="api-level-23-and-higher"></a>API 레벨 23 이상
 
-최신 API 레벨에서 [손전등 모드](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode)는 장치의 플래시 장치를 켜거나 끄는 데 사용됩니다.
+최신 API 레벨에서 [손전등 모드](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode)는 디바이스의 플래시 디바이스를 켜거나 끄는 데 사용됩니다.
 
 #### <a name="api-level-22-and-lower"></a>API 레벨 22 이하
 

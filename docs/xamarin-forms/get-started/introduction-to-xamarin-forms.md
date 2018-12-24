@@ -634,7 +634,7 @@ await Navigation.PushAsync(new LoginPage());
 
 새 `LoginPage` 개체가 탐색 스택으로 푸시되어 활성 페이지가 됩니다.
 
-활성 페이지는 장치의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 장치의 물리적 단추이든 화면상 단추이든 상관없습니다. 프로그래밍 방식으로 이전 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
+활성 페이지는 디바이스의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 디바이스의 물리적 단추이든 화면상 단추이든 상관없습니다. 프로그래밍 방식으로 이전 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PopAsync();
@@ -661,7 +661,7 @@ await Navigation.PushModalAsync(new LoginPage());
 
 `LoginPage` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다.
 
-활성 페이지는 장치의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 장치의 물리적 단추이든 화면상 단추이든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) 메서드를 호출해야 합니다.
+활성 페이지는 디바이스의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 디바이스의 물리적 단추이든 화면상 단추이든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PopModalAsync();
