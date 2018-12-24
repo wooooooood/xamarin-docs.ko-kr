@@ -30,4 +30,4 @@ Xamarin.Forms는 애니메이션이 동작하고 있을 때 [`Easing`](xref:Xama
 
 ## <a name="custom-animationscustommd"></a>[사용자 지정 애니메이션](custom.md)
 
-[ `Animation` ](xref:Xamarin.Forms.Animation) 클래스의 확장 메서드를 사용 하 여 모든 Xamarin.Forms 애니메이션의 기본 구성 요소는는 [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) 클래스를 하나 이상 만드는 `Animation` 개체입니다. 이 문서를 사용 하는 방법에 설명 합니다 `Animation` 및 애니메이션을 취소, 여러 애니메이션 동기화 만들고 속성은 기존 애니메이션 방법을 사용 하 여 애니메이션을 애니메이션을 적용 하는 사용자 지정 애니메이션 클래스입니다.
+[`Animation`](xref:Xamarin.Forms.Animation) 클래스로 하나 혹은 그 이상의 애니메이션을 만드는 확장 메서드를 사용할 수 있는 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)를 통해 Xamarin.Forms의 모든 애니메이션들의 블록을 만들 수 있습니다. 이 문서는 `Animation` 클래스를 사용해 애니메이션을 만들고 취소하는 방법과, 여러 애니메이션을 동기화하는 방법, 그리고 기존 애니메이션 메서드에 없는 사용자 지정 애니메이션을 만드는 방법에 대해 살펴 봅니다.
