@@ -33,7 +33,7 @@ ms.locfileid: "50103688"
 
 ## <a name="debuggingandroiddeploy-testdebuggingindexmd"></a>[디버깅](~/android/deploy-test/debugging/index.md)
 
-섹션의 가이드를 통해 Android 에뮬레이터, 실제 Android 장치 및 디버그 로그를 사용하여 앱을 디버그할 수 있습니다.
+섹션의 가이드를 통해 Android 에뮬레이터, 실제 Android 디바이스 및 디버그 로그를 사용하여 앱을 디버그할 수 있습니다.
 
 ##  <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[디버깅 가능한 특성 설정](~/android/deploy-test/debuggable-attribute.md)
 
@@ -49,7 +49,7 @@ ms.locfileid: "50103688"
 
 ##  <a name="installing-a-system-appinstall-system-appmd"></a>[시스템 앱 설치](install-system-app.md)
 
-이 가이드에서는 Xamarin.Android 앱을 Android 장치의 시스템 응용 프로그램이나 사용자 지정 ROM의 일부로 설치하는 방법을 설명합니다.
+이 가이드에서는 Xamarin.Android 앱을 Android 디바이스의 시스템 응용 프로그램이나 사용자 지정 ROM의 일부로 설치하는 방법을 설명합니다.
 
 ##  <a name="linking-on-androidlinkermd"></a>[Android의 연결](linker.md)
 
@@ -70,7 +70,7 @@ Xamarin.Android로 빌드된 응용 프로그램의 성능을 높이기 위한 �
 
 ## <a name="signing-the-android-application-packageandroiddeploy-testsigningindexmd"></a>[Android 응용 프로그램 패키지에 서명](~/android/deploy-test/signing/index.md)
 
-Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 서명 인증서로 응용 프로그램에 서명하는 방법을 설명합니다. 또한 이 항목에서는 *임시* 배포를 위해 디스크에 앱을 내보내는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
+Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 서명 인증서로 응용 프로그램에 서명하는 방법을 설명합니다. 또한 이 항목에서는 *임시* 배포를 위해 디스크에 앱을 내보내는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 디바이스에 생성된 APK를 사이드로드할 수 있습니다.
 
 ## <a name="publishing-an-applicationandroiddeploy-testpublishingindexmd"></a>[응용 프로그램 게시](~/android/deploy-test/publishing/index.md)
 

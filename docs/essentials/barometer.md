@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 기압계'
-description: Xamarin.Essentials의 Barometer 클래스를 사용하면 압력을 측정하는 장치의 기압계 센서를 모니터링할 수 있습니다.
+description: Xamarin.Essentials의 Barometer 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
@@ -81,7 +81,7 @@ public class BarometerTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-이 API는 [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter)를 사용하여 압력 변경 내용을 모니터링합니다. 이 기능은 iPhone 6 이상 장치에 추가된 하드웨어 기능입니다. 고도계를 지원하지 않는 장치에서는 `FeatureNotSupportedException`이 throw됩니다.
+이 API는 [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter)를 사용하여 압력 변경 내용을 모니터링합니다. 이 기능은 iPhone 6 이상 디바이스에 추가된 하드웨어 기능입니다. 고도계를 지원하지 않는 디바이스에서는 `FeatureNotSupportedException`이 throw됩니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

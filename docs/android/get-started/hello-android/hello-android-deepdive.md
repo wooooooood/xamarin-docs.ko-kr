@@ -141,7 +141,7 @@ Android의 이러한 고유한 기능은 복잡한 응용 프로그램을 디자
 
 ### <a name="phoneword-scenario---starting-with-an-activity"></a>Phoneword 시나리오 - 작업으로 시작
 
-에뮬레이터 또는 장치에서 처음으로 **Phoneword** 응용 프로그램을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 응용 프로그램 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 응용 프로그램의 첫 번째 작업을 만들 때 전체 응용 프로그램을 로드합니다.
+에뮬레이터 또는 디바이스에서 처음으로 **Phoneword** 응용 프로그램을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 응용 프로그램 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 응용 프로그램의 첫 번째 작업을 만들 때 전체 응용 프로그램을 로드합니다.
 
 [![작업 부하](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
@@ -312,40 +312,40 @@ translateButton.Click += (sender, e) =>
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 장치에서 응용 프로그램 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
 응용 프로그램 코드의 문제는 진단하기가 어렵습니다. 복잡한 코드 문제를 진단하려면 [중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하거나, [코드를 단계별 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)하거나, [로그 창에 정보를 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)할 수 있습니다.
 
-### <a name="deploy-to-a-device"></a>장치에 배포
+### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-응용 프로그램을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 장치에서 응용 프로그램을 테스트하는 것이 좋습니다.
+응용 프로그램을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 디바이스에서 응용 프로그램을 테스트하는 것이 좋습니다.
 
-응용 프로그램을 테스트하기 위해 Android 장치를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침을 제공합니다.
+응용 프로그램을 테스트하기 위해 Android 디바이스를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 장치 준비에 대한 철저한 지침을 제공합니다.
 
 ::: zone pivot="windows"
 
-장치를 구성한 후에 플러그 인하고, **장치 선택** 대화 상자에서 선택하고, 응용 프로그램을 시작하여 배포할 수 있습니다.
+디바이스를 구성한 후에 플러그 인하고, **디바이스 선택** 대화 상자에서 선택하고, 응용 프로그램을 시작하여 배포할 수 있습니다.
 
 ![디버그 장치 선택](hello-android-deepdive-images/vs/06-select-device.png "디버그 장치 선택")
 
 ::: zone-end
 ::: zone pivot="macos"
 
-장치를 구성한 후에 플러그 인하고, **시작(플레이)** 를 누르고, **장치 선택** 대화 상자에서 선택하고, **확인**을 눌러서 배포할 수 있습니다.
+디바이스를 구성한 후에 플러그 인하고, **시작(플레이)** 를 누르고, **디바이스 선택** 대화 상자에서 선택하고, **확인**을 눌러서 배포할 수 있습니다.
 
 [![디버그 장치 선택](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 ::: zone-end
 
-그러면 장치에서 응용 프로그램을 시작합니다.
+그러면 디바이스에서 응용 프로그램을 시작합니다.
 
 [![Phoneword 입력](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
 ### <a name="set-icons-for-different-screen-densities"></a>다양한 화면 밀도에 대한 아이콘 설정
 
-Android 장치가 다양한 화면 크기 및 해상도에서 제공되지만 일부 이미지는 화면에서 제대로 표시되지 않습니다. 예를 들어 고밀도 Nexus 5에서 저밀도 아이콘의 스크린샷은 다음과 같습니다. 주변 아이콘에 비해 흐리게 표시되는 점에 유의하세요.
+Android 디바이스가 다양한 화면 크기 및 해상도에서 제공되지만 일부 이미지는 화면에서 제대로 표시되지 않습니다. 예를 들어 고밀도 Nexus 5에서 저밀도 아이콘의 스크린샷은 다음과 같습니다. 주변 아이콘에 비해 흐리게 표시되는 점에 유의하세요.
 
 [![흐린 아이콘](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 

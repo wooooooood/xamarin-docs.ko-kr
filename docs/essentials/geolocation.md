@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 지리적 위치'
-description: 이 문서에서는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
+description: 이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
@@ -52,7 +52,7 @@ Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구�
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-장치 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
+디바이스 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
 
 plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** 속성을 추가하고, 사용자에게 표시할 값을 입력합니다.
 
@@ -107,7 +107,7 @@ catch (Exception ex)
 
 고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다. 
 
-현재 장치의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 장치 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
+현재 디바이스의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 디바이스 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
 
 ```csharp
 try

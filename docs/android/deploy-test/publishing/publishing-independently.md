@@ -33,7 +33,7 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 
 ## <a name="allow-installation-from-unknown-sources"></a>알 수 없는 원본에서의 설치 허용
 
-기본적으로 Android는 사용자가 Google Play 이외의 위치에서 응용 프로그램을 다운로드하여 설치하는 것을 차단합니다. 마켓플레이스 이외 원본에서의 설치를 허용하려면 사용자가 응용 프로그램을 설치하기 전에 먼저 장치에서 *알 수 없는 원본* 설정을 사용하도록 설정해야 합니다. 이에 대한 설정은 다음 그림처럼 **설정 > 보안**에 있습니다.
+기본적으로 Android는 사용자가 Google Play 이외의 위치에서 응용 프로그램을 다운로드하여 설치하는 것을 차단합니다. 마켓플레이스 이외 원본에서의 설치를 허용하려면 사용자가 응용 프로그램을 설치하기 전에 먼저 디바이스에서 *알 수 없는 원본* 설정을 사용하도록 설정해야 합니다. 이에 대한 설정은 다음 그림처럼 **설정 > 보안**에 있습니다.
 
 [![보안 설정 화면](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
@@ -45,7 +45,7 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 
 ## <a name="publishing-by-e-mail"></a>이메일로 게시
 
-이메일에 릴리스 APK를 첨부하면 응용 프로그램을 쉽고 빠르게 사용자에게 배포할 수 있습니다. Android 지원 장치에서 사용자가 이메일을 열면 다음 이미지에서처럼 Android가 APK 첨부 파일을 인식하고 **설치** 단추를 표시합니다.
+이메일에 릴리스 APK를 첨부하면 응용 프로그램을 쉽고 빠르게 사용자에게 배포할 수 있습니다. Android 지원 디바이스에서 사용자가 이메일을 열면 다음 이미지에서처럼 Android가 APK 첨부 파일을 인식하고 **설치** 단추를 표시합니다.
 
 [![첨부 파일에 대한 설치 단추](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
@@ -54,7 +54,7 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 
 ## <a name="publishing-by-web"></a>웹으로 게시
 
-웹 서버를 통해 응용 프로그램을 배포할 수 있습니다. 이 작업은 웹 서버에 응용 프로그램을 업로드한 다음 사용자에게 다운로드 링크를 제공하여 수행합니다. Android 지원 장치가 이 링크로 이동하면 응용 프로그램을 다운로드하면 다운로드 완료 후 응용 프로그램이 자동으로 설치됩니다.
+웹 서버를 통해 응용 프로그램을 배포할 수 있습니다. 이 작업은 웹 서버에 응용 프로그램을 업로드한 다음 사용자에게 다운로드 링크를 제공하여 수행합니다. Android 지원 디바이스가 이 링크로 이동하면 응용 프로그램을 다운로드하면 다운로드 완료 후 응용 프로그램이 자동으로 설치됩니다.
 
 
 ## <a name="manually-installing-an-apk"></a>수동으로 APK 설치
@@ -64,7 +64,7 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 1.   **APK 사본을 사용자에게 배포** &ndash; 예를 들어 이 사본은 CD나 USB 플래스 드라이브에 배포할 수 있습니다.
 1.   **(사용자) Android 장치에 응용 프로그램 설치**  &ndash; 명령줄 *Android Debug Bridge*(**adb**) 도구를 사용합니다. **adb**는 에뮬레이터 인스턴스 또는 Android 지원 장치와의 커뮤니케이션을 구현하는 범용 명령줄 도구입니다. Android SDK는 **adb**를 포함하며 **<sdk>/platform-tools/** 디렉터리에 있습니다.
 
-Android 장치를 컴퓨터에 USB 케이블로 연결해야 합니다.
+Android 디바이스를 컴퓨터에 USB 케이블로 연결해야 합니다.
 Windows 컴퓨터도 **adb**에서 인식하기 위해 전화 공급업체가 제공하는 추가 USB 드라이버가 필요할 수 있습니다. 이러한 추가 USB 드라이버 설치 지침은 이 문서에 해당하지 않습니다.
 
 **adb** 명령을 실행하기 전에 해당하는 경우 어떤 에뮬레이터 인스턴스나 장치가 연결되었는지 알고 있으면 유용합니다. 다음 코드 조각에서처럼 `devices` 명령을 사용하여 연결된 장치 목록을 확인할 수 있습니다.
@@ -75,13 +75,13 @@ List of devices attached
         0149B2EC03012005device
 ```
 
-연결된 장치를 확인한 후 `install` 명령을 **adb**와 함께 실행하여 응용 프로그램을 실행할 수 있습니다.
+연결된 디바이스를 확인한 후 `install` 명령을 **adb**와 함께 실행하여 응용 프로그램을 실행할 수 있습니다.
 
 ```shell
 $ adb install <path-to-apk>
 ```
 
-다음 코드 조각은 연결된 장치에 응용 프로그램을 설치하는 예제를 보여 줍니다.
+다음 코드 조각은 연결된 디바이스에 응용 프로그램을 설치하는 예제를 보여 줍니다.
 
 ```shell
 $ adb install helloworld.apk
@@ -99,7 +99,7 @@ $ adb install helloworld.apk
 Failure [INSTALL_FAILED_ALREADY_EXISTS]
 ```
 
-장치에서 응용 프로그램을 제거해야 합니다. 먼저 `adb uninstall` 명령을 실행합니다.
+디바이스에서 응용 프로그램을 제거해야 합니다. 먼저 `adb uninstall` 명령을 실행합니다.
 
 ```shell
 adb uninstall <package_name>

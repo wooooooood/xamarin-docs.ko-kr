@@ -73,7 +73,7 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 -   **버전 번호** &ndash; 응용 프로그램의 버전을 나타내는 정수값(Android 및 응용 프로그램에서 내부적으로 사용)입니다. 대부분의 응용 프로그램은 이 값을 1로 설정한 다음 빌드마다 커집니다. 이 값은 버전 이름 특성과의 관련이나 선호 관계가 없습니다(아래 참조). 응용 프로그램 및 게시 서비스는 이 값을 사용자에게 표시해서는 안 됩니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionCode`로 저장됩니다. 
 
--   **버전 이름** &ndash; 응용 프로그램 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 장치에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 장치에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
+-   **버전 이름** &ndash; 응용 프로그램 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 장치에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 디바이스에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -135,7 +135,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 -----
 
-연결에는 의도치 않은 부작용이 있을 수 있으므로 물리적 장치의 릴리스 모드에서 응용 프로그램을 다시 테스트하는 것이 중요합니다.
+연결에는 의도치 않은 부작용이 있을 수 있으므로 물리적 디바이스의 릴리스 모드에서 응용 프로그램을 다시 테스트하는 것이 중요합니다.
 
 
 ### <a name="proguard"></a>ProGuard
@@ -203,7 +203,7 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 응용 프로그램을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 응용 프로그램의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
-Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 장치에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
+Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 디바이스에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
 
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.

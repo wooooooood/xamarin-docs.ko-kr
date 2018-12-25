@@ -93,7 +93,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>탐색 스택에서 페이지 꺼내기
 
-활성 페이지는 장치의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 장치의 물리적 단추이든 화면상 단추이든 상관없습니다.
+활성 페이지는 디바이스의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 디바이스의 물리적 단추이든 화면상 단추이든 상관없습니다.
 
 프로그래밍 방식으로 원래 페이지로 돌아가려면 `Page2Xaml` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 

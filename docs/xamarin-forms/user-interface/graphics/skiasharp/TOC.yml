@@ -9,7 +9,7 @@ items:
       href: basics/circle.md
     - name: Xamarin.Forms와 통합
       href: basics/integration.md
-    - name: 픽셀 및 장치 독립적 단위
+    - name: 픽셀 및 디바이스 독립적 단위
       href: basics/pixels.md
     - name: 기본 애니메이션
       href: basics/animation.md

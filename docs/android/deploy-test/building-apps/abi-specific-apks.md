@@ -22,14 +22,14 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 
 ## <a name="overview"></a>개요
 
-응용 프로그램에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 저장소를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 장치나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 장치와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
+응용 프로그램에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 저장소를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 디바이스나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 디바이스와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
 
--  **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 장치별 APK를 만들면 응용 프로그램의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
+-  **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 디바이스별 APK를 만들면 응용 프로그램의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
 
 -  **여러 CPU 아키텍처 지원** - 응용 프로그램에 특정 CPU에 대한 공유 라이브러리가 있을 경우 해당 CPU에 대한 공유 라이브러리만 배포할 수 있습니다.
 
 
-여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 응용 프로그램의 버전 코드 및 기타 메타데이터에 따라 장치에 올바른 APK가 제공되도록 합니다. Google Play에서 응용 프로그램에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](http://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
+여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 응용 프로그램의 버전 코드 및 기타 메타데이터에 따라 디바이스에 올바른 APK가 제공되도록 합니다. Google Play에서 응용 프로그램에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](http://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
 
 이 가이드에서는 Xamarin.Android 응용 프로그램을 위해 각 APK가 특정 ABI를 대상으로 하는 여러 APK 빌드를 스크립팅하는 방법을 설명합니다. 다음 토픽을 살펴봅니다.
 
@@ -46,7 +46,7 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 ### <a name="creating-the-version-code-for-the-apk"></a>APK의 버전 코드 만들기
 
 Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 알고리즘을 권장합니다([여러 APK 지원 문서](http://developer.android.com/google/play/publishing/multiple-apks.html)에서 *버전 코드 구성표 사용* 섹션 참조).
-이 버전 코드 구성표를 8자리로 확장하면 일부 ABI 정보를 버전 코드에 포함하여 Google Play에서 장치에 올바른 APK를 배포하도록 할 수 있습니다. 다음 목록에서는 이 8자리 버전 코드 형식을 설명합니다(왼쪽에서 오른쪽으로 인덱싱됨).
+이 버전 코드 구성표를 8자리로 확장하면 일부 ABI 정보를 버전 코드에 포함하여 Google Play에서 디바이스에 올바른 APK를 배포하도록 할 수 있습니다. 다음 목록에서는 이 8자리 버전 코드 형식을 설명합니다(왼쪽에서 오른쪽으로 인덱싱됨).
 
 -   **인덱스 0**(아래 다이어그램에서 빨간색) &ndash; ABI의 정수:
     -   1 &ndash; `armeabi`
@@ -69,7 +69,7 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
 [![다이어그램의 8자리 버전 코드 형식의 다이어그램(색상으로 구분)](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
-Google Play에서는 `versionCode` 및 APK 구성에 따라 장치에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 장치에 제공됩니다. 예를 들어 응용 프로그램에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
+Google Play에서는 `versionCode` 및 APK 구성에 따라 디바이스에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 디바이스에 제공됩니다. 예를 들어 응용 프로그램에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
 
 -  11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 번호는 456입니다.
 -  21423456 - ABI가 `armeabi-v7a`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
@@ -130,7 +130,7 @@ APK에 서명해야 Google Play를 통해 배포할 수 있습니다. 이는 Jav
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTORE> -storepass <PASSWORD> -signedjar <PATH/FOR/SIGNED_JAR> <PATH/FOR/JAR/TO/SIGN> <NAME_OF_KEY_IN_KEYSTORE>
 ```
 
-모든 Xamarin.Android 응용 프로그램은 zipalign되어야 장치에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
+모든 Xamarin.Android 응용 프로그램은 zipalign되어야 디바이스에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
 
 ```shell
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>

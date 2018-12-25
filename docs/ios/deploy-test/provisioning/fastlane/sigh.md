@@ -21,15 +21,15 @@ ms.locfileid: "50119516"
 
 ## <a name="overview"></a>개요
 
-일반적으로 장치 프로비전은 Xcode를 통해 또는 Apple Developer 포털에서 개발 팀의 각 멤버가 수행하며 다음과 같은 몇 가지 단계로 구성됩니다.
+일반적으로 디바이스 프로비전은 Xcode를 통해 또는 Apple Developer 포털에서 개발 팀의 각 멤버가 수행하며 다음과 같은 몇 가지 단계로 구성됩니다.
 
 - 개발 인증서 요청
-- 포털에 장치 추가
+- 포털에 디바이스 추가
 - 앱 ID 만들기
 - 프로비전 프로필 만들기
 - 프로필 및 인증서 다운로드
 
-간 단계에는 개발하는 응용 프로그램 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 장치를 설정하는 데 필요한 단계에 대한 자세한 내용은 [장치 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
+간 단계에는 개발하는 응용 프로그램 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 디바이스를 설정하는 데 필요한 단계에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 이 가이드에서는 Xcode를 사용하는 대신 fastlane 도구를 소개하고 다음 내용을 설명합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "50119516"
 - [추가 옵션](#options)
 
 > [!NOTE]
-> 앱의 번들 ID와 일치하는 기존 앱 ID가 있고 개발자 포털에 장치가 있는 경우 [앱 ID 만들기](#appid) 및 [장치 추가](#newdevices)의 단계를 무시할 수 있습니다. 이 경우 [sigh 사용](#using)으로 바로 이동하여 시작합니다.
+> 앱의 번들 ID와 일치하는 기존 앱 ID가 있고 개발자 포털에 디바이스가 있는 경우 [앱 ID 만들기](#appid) 및 [디바이스 추가](#newdevices)의 단계를 무시할 수 있습니다. 이 경우 [sigh 사용](#using)으로 바로 이동하여 시작합니다.
 
 ## <a name="installation"></a>설치
 
@@ -70,15 +70,15 @@ sigh는 개발, 앱 스토어 배포, 임시 배포 및 엔터프라이즈 배�
 
 <a name="newdevices" />
 
-## <a name="adding-new-devices"></a>새 장치 추가
+## <a name="adding-new-devices"></a>새 디바이스 추가
 
-명령줄에서 개발자 포털에 단일 장치를 추가하려면 다음 명령을 입력합니다.
+명령줄에서 개발자 포털에 단일 디바이스를 추가하려면 다음 명령을 입력합니다.
 
 ```bash
 fastlane run register_device name:"Adam iPhone" udid:"abcdeg1234567"
 ```
 
-둘 이상의 장치를 추가하려면 `register_devices` 명령을 사용합니다.
+둘 이상의 디바이스를 추가하려면 `register_devices` 명령을 사용합니다.
 
 ```bash
     register_devices(
@@ -99,7 +99,7 @@ sigh 유틸리티를 사용하려면 터미널에 다음 명령을 입력합니�
 fastlane sigh
 ```
 
-기본적으로 [앱 스토어 배포](~/ios/deploy-test/app-distribution/app-store-distribution/index.md) 프로비전 프로필이 생성됩니다. 개발용 장치를 설정하려면 `--development`플래그를 전달합니다.
+기본적으로 [앱 스토어 배포](~/ios/deploy-test/app-distribution/app-store-distribution/index.md) 프로비전 프로필이 생성됩니다. 개발용 디바이스를 설정하려면 `--development`플래그를 전달합니다.
 
 ```bash
 fastlane sigh --development
@@ -119,7 +119,7 @@ fastlane sigh -l 2TU993NY9J
 
 앱의 [앱 ID](#appid)를 입력합니다. 이 ID는 앱의 Info.plist에 있는 번들 식별자와 일치해야 합니다.
 
-계정에 연결된 모든 장치는 프로비전 프로필에 추가됩니다.
+계정에 연결된 모든 디바이스는 프로비전 프로필에 추가됩니다.
 
 그러면 fastlane에서 프로비전 프로필이 생성, 다운로드 및 설치됩니다.
 

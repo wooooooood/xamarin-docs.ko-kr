@@ -37,7 +37,7 @@ Android Wear 가상 장치를 만든 후 디버깅을 시작 하기 전에 IDE �
 
 [![Wear AVD를 Visual Studio 장치 메뉴에서 선택](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
-Android emulator 시작 된 후 Xamarin.Android Wear 앱을 에뮬레이터에 배포 됩니다. 에뮬레이터가 구성된 가상 장치 이미지로 앱을 실행합니다.
+Android emulator 시작 된 후 Xamarin.Android Wear 앱을 에뮬레이터에 배포 됩니다. 에뮬레이터가 구성된 가상 디바이스 이미지로 앱을 실행합니다.
 
 이 표시 되 면 예상한 것 (또는 다른 중간 화면)에서 첫 번째입니다. 조사식 에뮬레이터를 시작 하는 데 사용할 수 있습니다. 
 

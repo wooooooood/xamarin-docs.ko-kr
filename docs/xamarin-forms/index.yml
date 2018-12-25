@@ -85,7 +85,7 @@ sections:
         href: ~/xamarin-forms/platform/
       title: 플랫폼 기능
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
-      html: 파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.
+      html: 파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.
       image:
         src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms

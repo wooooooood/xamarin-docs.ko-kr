@@ -1,6 +1,6 @@
 ---
 title: Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
-description: 이 문서에서는 Mac용 Visual Studio 또는 Visual Studio 2017에서 iOS 장치에 Xamarin.iOS 앱을 무선으로 배포하는 방법을 설명합니다.
+description: 이 문서에서는 Mac용 Visual Studio 또는 Visual Studio 2017에서 iOS 디바이스에 Xamarin.iOS 앱을 무선으로 배포하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
@@ -16,9 +16,9 @@ ms.locfileid: "50118905"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
-개발자 워크플로에서 중요한 부분은 장치에 배포하는 것입니다. Xcode 9은 앱을 배포하고 디버그할 때마다 장치를 유선으로 연결하지 않고 네트워크를 통해 iOS 장치 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 Mac용 Visual Studio 7.4 및 Visual Studio 15.6 릴리스에 도입되었습니다.
+개발자 워크플로에서 중요한 부분은 디바이스에 배포하는 것입니다. Xcode 9은 앱을 배포하고 디버그할 때마다 디바이스를 유선으로 연결하지 않고 네트워크를 통해 iOS 디바이스 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 Mac용 Visual Studio 7.4 및 Visual Studio 15.6 릴리스에 도입되었습니다.
 
-이 가이드에서는 네트워크를 통해 페어링하고 장치에 배포하는 방법을 설명합니다.
+이 가이드에서는 네트워크를 통해 페어링하고 디바이스에 배포하는 방법을 설명합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -31,12 +31,12 @@ ms.locfileid: "50118905"
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio
 - Xcode 9.0 이상
-- iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치
+- iOS 11.0 또는 tvOS 11.0 이상이 설치된 디바이스
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - 최신 버전의 Visual Studio
-- iOS 11.0 또는 tvOS 11.0 이상이 설치된 장치
+- iOS 11.0 또는 tvOS 11.0 이상이 설치된 디바이스
 
 Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
@@ -46,19 +46,19 @@ Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 -----
 
-## <a name="connecting-a-device"></a>장치에 연결
+## <a name="connecting-a-device"></a>디바이스에 연결
 
-장치에서 무선으로 배포하고 디버그하려면 iOS 장치 또는 Apple TV를 Mac의 Xcode와 페어링해야 합니다. 페어링한 후에는 Visual Studio의 장치 대상 목록에서 장치를 선택할 수 있습니다. 
+디바이스에서 무선으로 배포하고 디버그하려면 iOS 디바이스 또는 Apple TV를 Mac의 Xcode와 페어링해야 합니다. 페어링한 후에는 Visual Studio의 디바이스 대상 목록에서 디바이스를 선택할 수 있습니다. 
 
-다음 페어링 프로세스는 장치마다 한 번만 수행하면 됩니다. Xcode가 연결 설정을 그대로 유지합니다.
+다음 페어링 프로세스는 디바이스마다 한 번만 수행하면 됩니다. Xcode가 연결 설정을 그대로 유지합니다.
 
 <a name="pair" />
 
-### <a name="pairing-an-ios-device-with-xcode"></a>iOS 장치를 Xcode와 페어링
+### <a name="pairing-an-ios-device-with-xcode"></a>iOS 디바이스를 Xcode와 페어링
 
 1. Xcode를 열고 **창 > 장치 및 시뮬레이터**로 이동합니다.
-2. 번개 케이블을 사용하여 Mac에 iOS 장치를 연결합니다. 장치에서 **이 컴퓨터를 신뢰**를 선택해야 할 수도 있습니다.
-3. 해당 장치를 선택한 다음, **네트워크를 통해 연결** 확인란을 선택하여 장치를 페어링합니다. ![네트워크 옵션을 통한 연결을 보여주는 장치 및 시뮬레이터 창](wireless-deployment-images/image2.png)
+2. 번개 케이블을 사용하여 Mac에 iOS 디바이스를 연결합니다. 디바이스에서 **이 컴퓨터를 신뢰**를 선택해야 할 수도 있습니다.
+3. 해당 디바이스를 선택한 다음, **네트워크를 통해 연결** 확인란을 선택하여 디바이스를 페어링합니다. ![네트워크 옵션을 통한 연결을 보여주는 디바이스 및 시뮬레이터 창](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Apple TV를 Xcode와 페어링
 
@@ -72,33 +72,33 @@ Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 5. **Connect** 단추를 클릭합니다. 성공적으로 페어링되면 Apple TV 옆에 네트워크 연결 아이콘이 나타납니다.
 
-## <a name="deploy-to-a-device"></a>장치에 배포
+## <a name="deploy-to-a-device"></a>디바이스에 배포
 
-장치가 무선으로 연결되고 배포에 사용할 준비가 완료되면 마치 장치가 USB를 통해 연결된 것처럼 장치 대상 목록에 나타납니다.
+디바이스가 무선으로 연결되고 배포에 사용할 준비가 완료되면 마치 디바이스가 USB를 통해 연결된 것처럼 디바이스 대상 목록에 나타납니다.
 
-실제 장치에서 테스트하려면 해당 장치를 [프로비전](~/ios/get-started/installation/device-provisioning/index.md)해야 합니다. 장치에 배포하기 전에 이 작업을 수행해야 합니다. 
+실제 디바이스에서 테스트하려면 해당 디바이스를 [프로비전](~/ios/get-started/installation/device-provisioning/index.md)해야 합니다. 디바이스에 배포하기 전에 이 작업을 수행해야 합니다. 
 
-iOS 또는 tvOS 장치에 배포하려면 다음 단계를 수행합니다.
+iOS 또는 tvOS 디바이스에 배포하려면 다음 단계를 수행합니다.
 
-1. 배포 컴퓨터와 대상 장치가 동일한 무선 네트워크에 있는지 확인합니다. 
+1. 배포 컴퓨터와 대상 디바이스가 동일한 무선 네트워크에 있는지 확인합니다. 
 
-2. 대상 장치 목록에서 장치를 선택하고 응용 프로그램을 실행합니다.
+2. 대상 디바이스 목록에서 디바이스를 선택하고 응용 프로그램을 실행합니다.
 
-2. 장치가 잠겨 있으면 장치의 잠금을 해제하라는 메시지가 표시됩니다. 장치의 잠금이 해지되면 앱이 장치에 배포됩니다.
+2. 디바이스가 잠겨 있으면 디바이스의 잠금을 해제하라는 메시지가 표시됩니다. 디바이스의 잠금이 해지되면 앱이 디바이스에 배포됩니다.
 
 무선 배포가 완료되면 자동으로 무선 디버깅이 사용되므로 늘 하던 것처럼 이전에 설정한 중단점을 사용하여 디버깅 워크플로를 계속 진행할 수 있습니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
-1. 항상 iOS 장치 또는 Apple TV가 Mac과 동일한 네트워크에 연결되어 있는지 확인합니다.
+1. 항상 iOS 디바이스 또는 Apple TV가 Mac과 동일한 네트워크에 연결되어 있는지 확인합니다.
 
-2. 장치가 Visual Studio에서 보이지 않으면 Xcode의 **장치 및 시뮬레이터** 창을 선택합니다. 
+2. 디바이스가 Visual Studio에서 보이지 않으면 Xcode의 **디바이스 및 시뮬레이터** 창을 선택합니다. 
 
-    * Xcode가 해당 장치를 연결된 것으로 표시하지 **않으면** 장치를 다시 [페어링](#pair)합니다.
+    * Xcode가 해당 디바이스를 연결된 것으로 표시하지 **않으면** 디바이스를 다시 [페어링](#pair)합니다.
 
-    * Xcode가 해당 장치를 연결된 것으로 표시하면 Visual Studio와 장치를 다시 시작합니다.
+    * Xcode가 해당 디바이스를 연결된 것으로 표시하면 Visual Studio와 디바이스를 다시 시작합니다.
 
-3. 아직 장치를 [프로비전](~/ios/get-started/installation/device-provisioning/index.md)하지 않았으면 지금 합니다.
+3. 아직 디바이스를 [프로비전](~/ios/get-started/installation/device-provisioning/index.md)하지 않았으면 지금 합니다.
 
 4. 이 기능과 관련하여 앞에서 설명한 단계로 해결할 수 없는 문제가 있는 경우 [개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/41/index.html)에 문제를 제출하세요.
 

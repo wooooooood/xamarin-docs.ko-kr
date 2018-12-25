@@ -199,7 +199,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 ## <a name="release-resources-when-notified"></a>알림을 받을 때 리소스 릴리스
 
-응용 프로그램 수명 주기 동안 장치 메모리가 부족한 경우 [`OnTrimMemory`](https://developer.xamarin.com/api/member/Android.App.Activity.OnTrimMemory/p/Android.Content.TrimMemory/) 콜백은 알림을 제공합니다. 이 콜백을 구현하여 다음 메모리 수준 알림을 수신해야 합니다.
+응용 프로그램 수명 주기 동안 디바이스 메모리가 부족한 경우 [`OnTrimMemory`](https://developer.xamarin.com/api/member/Android.App.Activity.OnTrimMemory/p/Android.Content.TrimMemory/) 콜백은 알림을 제공합니다. 이 콜백을 구현하여 다음 메모리 수준 알림을 수신해야 합니다.
 
 - [`TrimMemoryRunningModerate`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate/) – 응용 프로그램이 필요없는 일부 리소스를 릴리스하려고 *할 수 있습니다*.
 - [`TrimMemoryRunningLow`](https://developer.xamarin.com/api/field/Android.Content.ComponentCallbacks2.TrimMemoryRunningLow/) – 응용 프로그램이 필요없는 리소스를 릴리스*해야 합니다*.
@@ -225,7 +225,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
-이미지는 응용 프로그램에서 사용하는 가장 비싼 리소스 중 일부이며, 고해상도로 캡처되는 경우가 많습니다. 따라서 이미지를 표시할 때 장치 화면에 필요한 해상도로 표시합니다. 이미지의 해상도가 화면보다 더 높은 경우 규모를 축소해야 합니다.
+이미지는 응용 프로그램에서 사용하는 가장 비싼 리소스 중 일부이며, 고해상도로 캡처되는 경우가 많습니다. 따라서 이미지를 표시할 때 디바이스 화면에 필요한 해상도로 표시합니다. 이미지의 해상도가 화면보다 더 높은 경우 규모를 축소해야 합니다.
 
 자세한 내용은 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md) 가이드의 [이미지 리소스 최적화](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)를 참조하세요.
 
@@ -251,7 +251,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 ## <a name="avoid-floating-point-arithmetic"></a>부동 소수점 연산 방지
 
-Android 장치에서 부동 소수점 연산은 정수 연산보다 2배 정도 느립니다. 따라서 가능하면 부동 소수점 연산을 정수 연산으로 바꿉니다. 그러나 최근 하드웨어에서 `float`와 `double` 연산 사이에 실행 시간이 다르지 않습니다.
+Android 디바이스에서 부동 소수점 연산은 정수 연산보다 2배 정도 느립니다. 따라서 가능하면 부동 소수점 연산을 정수 연산으로 바꿉니다. 그러나 최근 하드웨어에서 `float`와 `double` 연산 사이에 실행 시간이 다르지 않습니다.
 
 > [!NOTE]
 > 정수 연산에 대해서도 일부 CPU는 하드웨어 나누기 기능이 부족합니다. 따라서 정수 나누기 및 모듈러스 연산은 소프트웨어에서 자주 수행됩니다.

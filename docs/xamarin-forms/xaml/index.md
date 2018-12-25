@@ -61,7 +61,7 @@ Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindabl
 
 ## <a name="attached-propertiesattached-propertiesmd"></a>[Attached Properties](attached-properties.md)
 
-연결된 된 속성은 다른 개체에 연결 없이 하나의 클래스로 정의되고, XAML에서 점으로 구별되는 클래스와 속성 이름을 포함하는 특성으로 인식 가능한 특수한 유형의 바인딩 가능한 속성입니다. 이 문서에서는 연결된 속성에 대해 소개하고 연결된 속성 생성및 사용 방법을 설명합니다.
+Attached property는 어느 하나의 클래스에 정의하였지만 다른 개체에 연결할 수 있는 특수 형식입니다. 또한 이는 XAML에서 클래스와 속성을 마침표로 구분한 특성(Attribute)를 통해 사용할 수 있습니다. 이 문서에서는 Attached Properties에 대한 소개와 어떻게 만들고 사용하는지에 대해 알아봅니다.
 
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Resource Dictionaries](resource-dictionaries.md)
 

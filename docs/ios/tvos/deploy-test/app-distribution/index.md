@@ -31,7 +31,7 @@ Apple는 Xamarin.tvOS 지 원하는 tvOS 앱을 배포 하는 다음 방법을 �
 2. [**사내(엔터프라이즈)**](#In-House-Distribution) 
 2. [**임시**](#Ad_Hoc_Distribution) 
 
-이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 장치에 대한 정보도 포함되어 있습니다.
+이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 
 <a name="Apple-TV-App-Store-Distribution" />
 
@@ -66,7 +66,7 @@ Xamarin.tvOS 앱을 Apple TV App Store에 제출 하는 데 문제가 있는 경
 
 ## <a name="in-house-distribution"></a>사내 배포
 
-*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 응용 프로그램을 설치할 수 있는 장치의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
+*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 응용 프로그램을 설치할 수 있는 디바이스의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
 
 설정 하 고 내부 응용 프로그램을 배포 하는 방법에 대 한 자세한 내용은 참조 하십시오 합니다 [사내 배포 가이드](~/ios/deploy-test/app-distribution/in-house-distribution.md)합니다. 이 문서는 특정 iOS에 있지만 동일한 기술을 tvOS 앱에 사용 됩니다.
 

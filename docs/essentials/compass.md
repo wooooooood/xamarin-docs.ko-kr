@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 나침반'
-description: 이 문서에서는 장치의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.
+description: 이 문서에서는 디바이스의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
@@ -78,7 +78,7 @@ public class CompassTest
 
 Android는 나침반 방향을 검색하기 위한 API를 제공하지 않습니다. 가속도계 및 지자기 센터를 활용하여 Google에서 추천하는 자기 북쪽 방향을 계산합니다.
 
-드문 경우지만, 센서를 보정하려면 그림 8의 움직임으로 장치를 이동해야 하므로 일관되지 않은 결과가 표시될 수 있습니다. 이 작업을 수행하는 가장 좋은 방법은 Google Maps를 열고, 현재 위치의 점을 탭하고, **나침반 보정**을 선택하는 것입니다.
+드문 경우지만, 센서를 보정하려면 그림 8의 움직임으로 디바이스를 이동해야 하므로 일관되지 않은 결과가 표시될 수 있습니다. 이 작업을 수행하는 가장 좋은 방법은 Google Maps를 열고, 현재 위치의 점을 탭하고, **나침반 보정**을 선택하는 것입니다.
 
 앱에서 동시에 여러 센서를 실행하면 센서 속도가 조정될 수 있다는 점에 주의하세요.
 

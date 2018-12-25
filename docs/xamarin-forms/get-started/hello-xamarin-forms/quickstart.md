@@ -358,7 +358,7 @@ ms.locfileid: "52742887"
     > [!WARNING]
     > 전화 통화는 모든 시뮬레이터에서 지원되지 않으므로 기능이 작동하지 않을 수 있습니다.
 
-26. iOS 장치가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 장치에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
+26. iOS 디바이스가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 디바이스에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
 
 ::: zone-end
 ::: zone pivot="macos"

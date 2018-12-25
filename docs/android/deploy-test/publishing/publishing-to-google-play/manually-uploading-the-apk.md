@@ -132,7 +132,7 @@ Google Play에서는 무료 응용 프로그램이 유료 앱으로 변경되는
 
 ### <a name="other-information"></a>기타 정보
 
-더 아래로 스크롤하여 앱의 광고 포함 여부를 지정합니다. 또한 **장치 범주** 섹션에서는 선택적으로 앱을 Android Wear, Android TV 또는 Android Auto에 배포하는 옵션을 제공합니다.
+더 아래로 스크롤하여 앱의 광고 포함 여부를 지정합니다. 또한 **디바이스 범주** 섹션에서는 선택적으로 앱을 Android Wear, Android TV 또는 Android Auto에 배포하는 옵션을 제공합니다.
 
 [![광고 포함 섹션](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
@@ -153,12 +153,12 @@ Google Play 앱 게시에 대한 자세한 내용은 [Google Play 개발자 콘�
 
 ## <a name="google-play-filters"></a>Google Play 필터
 
-사용자가 Google Play 웹 사이트에서 응용 프로그램을 탐색할 때는 모든 게시된 응용 프로그램을 검색할 수 있습니다. 사용자가 Google Play에서 Android 장치를 찾아보면 결과가 다소 차이가 있습니다. 결과는 사용 중인 장치와의 호환성에 따라 필터링됩니다. 예를 들어 응용 프로그램에서 SMS 메시지를 보내야 할 경우 Google Play는 SMS 메시지를 보낼 수 없는 장치에는 응용 프로그램을 표시하지 않습니다. 검색에 적용된 필터는 다음을 통해 만들어집니다.
+사용자가 Google Play 웹 사이트에서 응용 프로그램을 탐색할 때는 모든 게시된 응용 프로그램을 검색할 수 있습니다. 사용자가 Google Play에서 Android 디바이스를 찾아보면 결과가 다소 차이가 있습니다. 결과는 사용 중인 디바이스와의 호환성에 따라 필터링됩니다. 예를 들어 응용 프로그램에서 SMS 메시지를 보내야 할 경우 Google Play는 SMS 메시지를 보낼 수 없는 디바이스에는 응용 프로그램을 표시하지 않습니다. 검색에 적용된 필터는 다음을 통해 만들어집니다.
 
-1.  장치의 하드웨어 구성
+1.  디바이스의 하드웨어 구성
 2.  응용 프로그램 매니페스트 파일의 선언
 3.  사용되는 이동 통신 사업자(있는 경우)
-4.  장치 위치
+4.  디바이스 위치
 
 Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해 앱의 매니페스트에 요소를 추가할 수 있습니다. 다음은 응용 프로그램 필터링에 사용할 수 있는 매니페스트 요소 및 특성을 나열합니다.
 
@@ -167,7 +167,7 @@ Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해
 
 -   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; 이 매니페스트 요소는 키보드 형식, 탐색 장치, 터치 스크린 등, 특정 하드웨어 기능을 요청하는 데 사용됩니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
 
--   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 이 매니페스트 요소는 응용 프로그램이 작동하기 위해 장치에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 응용 프로그램을 장치에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 응용 프로그램을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
+-   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 이 매니페스트 요소는 응용 프로그램이 작동하기 위해 장치에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 응용 프로그램을 디바이스에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 응용 프로그램을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
 
 -   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 장치에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예: 
 
@@ -175,7 +175,7 @@ Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
--   [uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 응용 프로그램의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 응용 프로그램이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 장치에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예: 
+-   [uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 응용 프로그램의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 응용 프로그램이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 디바이스에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예: 
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]

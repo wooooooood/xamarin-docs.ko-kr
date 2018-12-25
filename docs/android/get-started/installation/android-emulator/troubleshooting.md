@@ -39,7 +39,7 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
    adb devices
    ```
 
-4. 에뮬레이터를 Android SDK에서 액세스할 수 있는 경우 에뮬레이터가 연결 장치 목록에 나타나야 합니다. 예:
+4. 에뮬레이터를 Android SDK에서 액세스할 수 있는 경우 에뮬레이터가 연결 디바이스 목록에 나타나야 합니다. 예:
 
    ```shell
    List of devices attached
@@ -58,17 +58,17 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 ## <a name="missing-google-play-services"></a>Google Play 서비스 누락
 
-에뮬레이터에서 실행 중인 가상 장치에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 이러한 패키지를 포함하지 않고 가상 장치를 만들 때 발생하는 경우가 많습니다. 가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 옵션 중 하나 또는 둘 다를 선택해야 합니다.
+에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 이러한 패키지를 포함하지 않고 가상 디바이스를 만들 때 발생하는 경우가 많습니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 옵션 중 하나 또는 둘 다를 선택해야 합니다.
 
 - **Google API** &ndash;에는 가상 장치에 Google Play 서비스가 포함되어 있습니다.
 - **Google Play 스토어** &ndash;에는 가상 장치에 Google Play 스토어가 포함되어 있습니다.
 
-예를 들어 이 가상 장치에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
+예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
 [![Google Play 서비스 및 Google Play 스토어가 활성화된 예제 AVD](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
-> Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 장치 유형에만 사용할 수 있습니다.
+> Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 디바이스 유형에만 사용할 수 있습니다.
 
 
 <a name="perf-win" />
@@ -79,7 +79,7 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 - 에뮬레이터가 하드웨어 가속 없이 실행 중입니다.
 
-- 에뮬레이터에서 실행 중인 가상 장치가 x86 기반 시스템 이미지를 사용하지 않습니다.
+- 에뮬레이터에서 실행 중인 가상 디바이스가 x86 기반 시스템 이미지를 사용하지 않습니다.
 
 다음 섹션에서는 이러한 시나리오를 자세히 설명합니다.
 
@@ -87,14 +87,14 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 하드웨어 가속을 사용하도록 설정하지 않은 경우 Device Manager에서 시작하면 Windows 하이버파이저 플랫폼(WHPX)이 제대로 구성되지 않았음을 나타내는 오류 메시지가 포함된 대화 상자가 생성됩니다.
 
-![장치 관리자 경고 예제](troubleshooting-images/win/01-dev-mgr-warning-w158.png)
+![디바이스 관리자 경고 예제](troubleshooting-images/win/01-dev-mgr-warning-w158.png)
 
 이 오류 메시지가 표시되면 하드웨어 가속을 확인하고 사용하도록 설정할 수 있는 단계에 대한 아래의 [하드웨어 가속 문제](#accel-issues-win)를 참조하세요.
 
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>가속을 사용할 수 있지만 에뮬레이터가 너무 느리게 실행됩니다. 
 
-이 문제의 일반적인 원인은 가상 장치(AVD)에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
+이 문제의 일반적인 원인은 가상 디바이스(AVD)에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
 
 [![가상 장치용 x86 시스템 이미지 선택](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
@@ -384,7 +384,7 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
    adb devices
    ```
 
-4. 에뮬레이터를 Android SDK에서 액세스할 수 있는 경우 에뮬레이터가 연결 장치 목록에 나타나야 합니다. 예:
+4. 에뮬레이터를 Android SDK에서 액세스할 수 있는 경우 에뮬레이터가 연결 디바이스 목록에 나타나야 합니다. 예:
 
    ```shell
    List of devices attached
@@ -402,17 +402,17 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 ## <a name="missing-google-play-services"></a>Google Play 서비스 누락
 
-에뮬레이터에서 실행 중인 가상 장치에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 일반적으로 패키지를 포함하지 않고 가상 장치를 만드는 경우에 발생합니다. 가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 중 하나 또는 둘 다를 선택해야 합니다.
+에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 일반적으로 패키지를 포함하지 않고 가상 디바이스를 만드는 경우에 발생합니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 중 하나 또는 둘 다를 선택해야 합니다.
 
 - **Google API** &ndash;에는 가상 장치에 Google Play 서비스가 포함되어 있습니다.
 - **Google Play 스토어** &ndash;에는 가상 장치에 Google Play 스토어가 포함되어 있습니다.
 
-예를 들어 이 가상 장치에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
+예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
 [![Google Play 서비스 및 Google Play 스토어가 활성화된 예제 AVD](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
-> Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 장치 유형에만 사용할 수 있습니다.
+> Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 디바이스 유형에만 사용할 수 있습니다.
 
 
 <a name="perf-mac" />
@@ -423,18 +423,18 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 - 에뮬레이터가 하드웨어 가속 없이 실행 중입니다.
 
-- 에뮬레이터에서 실행 중인 가상 장치가 x86 기반 시스템 이미지를 사용하지 않습니다.
+- 에뮬레이터에서 실행 중인 가상 디바이스가 x86 기반 시스템 이미지를 사용하지 않습니다.
 
 다음 섹션에서는 이러한 시나리오를 자세히 설명합니다.
 
 ### <a name="hardware-acceleration-is-not-enabled"></a>하드웨어 가속을 사용할 수 없습니다.
 
-하드웨어 가속을 사용하지 않으면 Android 에뮬레이터에 앱을 배포할 때 **장치가 가속 없이 실행됨**과 같은 메시지가 포함된 대화 상자가 팝업될 수 있습니다. 컴퓨터에서 하드웨어 가속이 활성화되어 있는지(또는 가속을 제공하는 기술을 알고 싶다면) 확실하지 않은 경우, 하드웨어 가속을 확인하고 활성화할 수 있는 단계에 대한 아래의 [하드웨어 가속 문제](#accel-issues-mac)를 참조하세요.
+하드웨어 가속을 사용하지 않으면 Android 에뮬레이터에 앱을 배포할 때 **디바이스가 가속 없이 실행됨**과 같은 메시지가 포함된 대화 상자가 팝업될 수 있습니다. 컴퓨터에서 하드웨어 가속이 활성화되어 있는지(또는 가속을 제공하는 기술을 알고 싶다면) 확실하지 않은 경우, 하드웨어 가속을 확인하고 활성화할 수 있는 단계에 대한 아래의 [하드웨어 가속 문제](#accel-issues-mac)를 참조하세요.
 
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>가속을 사용할 수 있지만 에뮬레이터가 너무 느리게 실행됩니다. 
 
-이 문제의 일반적인 원인은 가상 장치에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
+이 문제의 일반적인 원인은 가상 디바이스에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
 
 [![가상 장치용 x86 시스템 이미지 선택](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 

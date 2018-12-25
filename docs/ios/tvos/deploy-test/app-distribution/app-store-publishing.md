@@ -107,7 +107,7 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>배포 프로필 만들기 및 설치
 
-사용 하 여 tvOS *프로 비전 프로필* 특정 응용 프로그램 빌드를 배포 하는 방법을 제어 합니다. 이러한 파일은 앱 서명에 사용된 인증서, *응용 프로그램 ID* 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 장치 목록도 포함됩니다. 그러나 Apple TV App Store 배포에 대 한 인증서 및 앱 ID 정보만 포함 됩니다, Apple TV App Store를 통해 공개 배포 하는 유일한 메커니즘 이므로 합니다.
+사용 하 여 tvOS *프로 비전 프로필* 특정 응용 프로그램 빌드를 배포 하는 방법을 제어 합니다. 이러한 파일은 앱 서명에 사용된 인증서, *응용 프로그램 ID* 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 디바이스 목록도 포함됩니다. 그러나 Apple TV App Store 배포에 대 한 인증서 및 앱 ID 정보만 포함 됩니다, Apple TV App Store를 통해 공개 배포 하는 유일한 메커니즘 이므로 합니다.
 
 프로비전에는 Apple의 웹 기반 iOS 프로비전 포털을 사용하는 다음 단계가 포함됩니다.
 
@@ -147,7 +147,7 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 #### <a name="build-your-archive"></a>보관 빌드
 
-1. Mac용 Visual Studio에서 **릴리스 | 장치** 구성을 선택합니다:
+1. Mac용 Visual Studio에서 **릴리스 | 디바이스** 구성을 선택합니다:
 
     ![](app-store-publishing-images/buildxs01new.png "릴리스 구성을 선택 합니다.")
 2. **빌드** 메뉴에서 **게시를 위해 보관**을 선택합니다.

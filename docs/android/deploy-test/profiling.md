@@ -81,19 +81,19 @@ Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android
 
     [![프로파일러 도구 모음 아이콘의 위치](profiling-images/vswin/09-launch-profiler-sml.png)](profiling-images/vswin/09-launch-profiler.png#lightbox)
 
-11. 앱을 실행/프로파일링하기 위해 배포 대상을 선택하고 **확인**을 클릭합니다. 배포 대상은 에뮬레이터에서 실행되는 물리적 장치 또는 가상 장치일 수 있습니다. 이 예제에서는 Nexus 5X 장치가 사용됩니다.
+11. 앱을 실행/프로파일링하기 위해 배포 대상을 선택하고 **확인**을 클릭합니다. 배포 대상은 에뮬레이터에서 실행되는 물리적 디바이스 또는 가상 디바이스일 수 있습니다. 이 예제에서는 Nexus 5X 디바이스가 사용됩니다.
 
     ![배포 대상 선택](profiling-images/vswin/10-select-deployment-target.png)
 
-12. 프로파일러가 시작된 후 배포 장치 및 앱 프로세스에 연결되는 데 몇 초가 걸립니다. APK를 설치하는 동안 Android Profiler는 **연결된 장치 없음** 및 **디버깅할 수 있는 프로세스 없음**을 보고합니다.
+12. 프로파일러가 시작된 후 배포 디바이스 및 앱 프로세스에 연결되는 데 몇 초가 걸립니다. APK를 설치하는 동안 Android Profiler는 **연결된 디바이스 없음** 및 **디버깅할 수 있는 프로세스 없음**을 보고합니다.
 
     [![프로파일러에서 APK 설치](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
 
-13. 몇 초 후 Android Profiler는 APK 설치를 완료하고 장치 이름 및 프로파일링되는 앱 프로세스의 이름을 보고하는 APK를 시작합니다(이 예제에서는 각각 **LGE Nexus 5X** 및 **com.companyname.XamagonXuzzle**).
+13. 몇 초 후 Android Profiler는 APK 설치를 완료하고 디바이스 이름 및 프로파일링되는 앱 프로세스의 이름을 보고하는 APK를 시작합니다(이 예제에서는 각각 **LGE Nexus 5X** 및 **com.companyname.XamagonXuzzle**).
 
     [![시작 후 프로파일러 창](profiling-images/vswin/12-profiler-starts-sml.png)](profiling-images/vswin/12-profiler-starts.png#lightbox)
 
-14. 장치 및 디버깅할 수 있는 프로세스를 식별한 후 Android Profiler는 앱 프로파일링을 시작합니다.
+14. 디바이스 및 디버깅할 수 있는 프로세스를 식별한 후 Android Profiler는 앱 프로파일링을 시작합니다.
 
     [![프로파일러에서 실행 중인 앱에 대해 표시](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
 

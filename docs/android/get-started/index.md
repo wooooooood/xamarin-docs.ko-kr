@@ -19,7 +19,7 @@ ms.locfileid: "50110344"
 
 ## <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[설정 및 설치](~/android/get-started/installation/index.md)
 
-Xamarin.Android를 설정하고 Visual Studio에서 실행합니다. 이 섹션에서는 다운로드, 설치, 에뮬레이터 구성, 장치 프로 비전 등을 다룹니다.
+Xamarin.Android를 설정하고 Visual Studio에서 실행합니다. 이 섹션에서는 다운로드, 설치, 에뮬레이터 구성, 디바이스 프로 비전 등을 다룹니다.
 
 ## <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello, Android](~/android/get-started/hello-android/index.md)
 

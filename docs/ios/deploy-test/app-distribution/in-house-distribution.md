@@ -21,7 +21,7 @@ _이 문서에서는 Apple Enterprise Developer Program의 구성원으로 응�
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 사용자에게 앱을 배포하는 것입니다. 독점 앱은 **Apple Developer Enterprise Program**을 통해 *사내*(이전에 엔터프라이즈라고 함)에 배포할 수 있으며 다음과 같은 이점을 제공합니다.
 
 - Apple에서 검토를 위해 응용 프로그램을 제출할 필요가 없습니다.
-- 응용 프로그램을 배포할 수 있는 장치의 수에는 제한이 없습니다
+- 응용 프로그램을 배포할 수 있는 디바이스의 수에는 제한이 없습니다
     - Apple에서는 사내 응용 프로그램을 내부용으로만 사용해야 한다고 명확하게 언급하고 있습니다.
 
 또한 Enterprise Program과 관련하여 주의해야 할 사항은 다음과 같습니다.
@@ -35,7 +35,7 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 ## <a name="testing-your-application"></a>응용 프로그램 테스트
 
-응용 프로그램 테스트는 임시 배포를 사용하여 수행됩니다. 테스트에 대한 자세한 내용은 [임시 배포](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드의 단계를 따릅니다. 최대 100개의 장치에서만 테스트할 수 있습니다.
+응용 프로그램 테스트는 임시 배포를 사용하여 수행됩니다. 테스트에 대한 자세한 내용은 [임시 배포](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드의 단계를 따릅니다. 최대 100개의 디바이스에서만 테스트할 수 있습니다.
 
 <a name="setup" />
 
@@ -92,7 +92,7 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 ### <a name="creating-an-app-id"></a>앱 ID 만들기
 
-만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 장치에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
+만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 디바이스에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
 
 
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
@@ -153,7 +153,7 @@ Apple Developer Enterprise Program에서 정식 사용자는 응용 프로그램
 
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>사내 배포를 위한 IPA 만들기
 
-프로비전된 응용 프로그램은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 응용 프로그램이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 장치에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
+프로비전된 응용 프로그램은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 응용 프로그램이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
 
 IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-distribution/ipa-support.md) 가이드를 참조하세요.
 
