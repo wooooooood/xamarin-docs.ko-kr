@@ -1,4 +1,4 @@
----
+﻿---
 title: Xamarin.Forms의 XAML 필드 한정자
 description: x:Fieldmodifier 네임 스페이스 특성은 명명된 XAML 요소를 위해 생성된 필드에 대한 접근 수준을 지정합니다.
 ms.prod: xamarin
