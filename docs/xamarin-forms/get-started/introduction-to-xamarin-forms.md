@@ -16,9 +16,9 @@ ms.locfileid: "38999020"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 소개
 
-_Xamarin.Forms는 개발자가 Android, iOS 및 Windows용 교차 플랫폼 응용 프로그램을 만들 수 있도록 해주는 프레임워크입니다. 코드 및 사용자 인터페이스 정의는 플랫폼 간에 공유되지만 고유 컨트롤로 렌더링됩니다. 이 문서에서는 Xamarin.Forms를 소개하고 Visual Studio에서 C# 및 XAML을 사용하여 응용 프로그램 작성을 시작하는 방법을 제공합니다._
+_Xamarin.Forms는 개발자가 Android, iOS 및 Windows용 플랫폼 간 응용 프로그램을 빌드할 수 있도록 하는 프레임워크입니다. 코드 및 사용자 인터페이스 정의는 플랫폼에서 공유되지만 네이티브 컨트롤로 렌더링됩니다. 이 문서에서는 Xamarin.Forms를 소개하고 Visual Studio에서 C# 및 XAML을 사용하여 응용 프로그램 작성을 시작하는 방법을 제공합니다._
 
-Xamarin.Forms 응용 프로그램은 공유코드를 포함하기 위해 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 프로젝트를 사용하고, 공유 코드를 사용하기 위해 응용 프로그램 프로젝트를 분리하며 각 플랫폼에 필요한 출력을 만듭니다. 새 Xamarin.Forms 앱을 만들면 이 스크린샷에 표시된 것처럼 솔루션에 공유 코드 프로젝트(C# 및 XAML 파일 포함)와 플랫폼 특정 프로젝트가 포함됩니다.
+Xamarin.Forms 응용 프로그램은 공유 코드를 포함하기 위해 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 프로젝트를 사용하고, 공유 코드를 사용하기 위해 응용 프로그램 프로젝트를 분리하며 각 플랫폼에 필요한 출력을 빌드합니다. 새 Xamarin.Forms 앱을 만들면 이 스크린샷에 표시된 것처럼 솔루션에 공유 코드 프로젝트(C# 및 XAML 파일 포함)와 플랫폼 특정 프로젝트가 포함됩니다.
 
 ![Visual Studio의 Xamarin.Forms 템플릿 솔루션](introduction-to-xamarin-forms-images/solution-both.png)
 
@@ -58,19 +58,19 @@ public partial class App : Application
 </ContentPage>
 ```
 
-### <a name="launching-the-initial-xamarinforms-page-on-each-platform"></a>각 플랫폼에서 Xamarin.Forms 페이지 초기화 시작
+### <a name="launching-the-initial-xamarinforms-page-on-each-platform"></a>각 플랫폼에서 초기 Xamarin.Forms 페이지 시작
 
 > [!TIP]
-> 이 절에서 Xamarin.Forms의 작동 방식을 이해하는 데 도움을 주기 위해 플랫폼별 정보가 제공됩니다.
+> Xamarin.Forms의 작동 방식을 이해하는 데 도움을 주기 위해 이 섹션의 플랫폼별 정보가 제공됩니다.
 > 프로젝트 템플릿에는 이미 해당 클래스가 포함되어 있으므로, 직접 코딩할 필요가 없습니다.
 >
 > [사용자 인터페이스](#user-interface) 섹션으로 건너뛰고 나중에 이 부분을 읽을 수 있습니다.
 
-응용 프로그램 내에서 페이지(예: 위 예제의 **MainPage**)를 사용하려면 각 플랫폼 응용 프로그램은 Xamarin.Forms 프레임워크를 초기화하고 Xamarin.Forms 프레임워크가 시작될 때 페이지의 인스턴스를 제공해야 합니다. 이 초기화 단계는 플랫폼마다 다르며 다음 절에서 설명됩니다.
+응용 프로그램 내에서 페이지(예: 위 예제의 **MainPage**)를 사용하려면 각 플랫폼 응용 프로그램은 Xamarin.Forms 프레임워크를 초기화하고 Xamarin.Forms 프레임워크가 시작될 때 페이지의 인스턴스를 제공해야 합니다. 이 초기화 단계는 플랫폼마다 다르며 다음 섹션에서 설명됩니다.
 
 #### <a name="ios"></a>iOS
 
-iOS에서 Xamarin.Forms 페이지 초기화를 시작하기 위해 플랫폼 프로젝트는 다음 코드 예제에서 설명한 것처럼 `Xamarin.Forms.Platform.iOS.FormsApplicationDelegate` 클래스를 상속하는 `AppDelegate` 클래스를 포함합니다.
+iOS에서 초기 Xamarin.Forms 페이지를 시작하기 위해 플랫폼 프로젝트는 다음 코드 예제에서 설명한 것처럼 `Xamarin.Forms.Platform.iOS.FormsApplicationDelegate` 클래스에서 상속하는 `AppDelegate` 클래스를 포함합니다.
 
 ```csharp
 [Register("AppDelegate")]
@@ -89,7 +89,7 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
 
 #### <a name="android"></a>Android
 
-Android에서 Xamarin.Forms 페이지 초기화를 시작하기 위해 플랫폼 프로젝트는 다음 코드 예제에서 설명한 것처럼 `FormsAppCompatActivity` 클래스를 상속한 activity을 사용하여 `MainLauncher` 속성으로 `Activity`를 생성하는 코드를 포함합니다.
+Android에서 초기 Xamarin.Forms 페이지를 시작하기 위해 플랫폼 프로젝트는 다음 코드 예제에서 설명한 것처럼 `FormsAppCompatActivity` 클래스에서 상속한 활동을 사용하여 `MainLauncher` 속성을 가진 `Activity`을 만드는 코드를 포함합니다.
 
 ```csharp
 namespace HelloXamarinFormsWorld.Android
@@ -110,9 +110,9 @@ namespace HelloXamarinFormsWorld.Android
 
 `OnCreate` 재정의는 `Init` 메서드를 호출하여 Xamarin.Forms 프레임 워크를 초기화합니다. 이로 인해 Xamarin.Forms 응용 프로그램이 로드되기 전에 Xamarin.Forms의 Android 특정 구현이 응용 프로그램에 로드됩니다.
 
-#### <a name="universal-windows-platform-uwp"></a>UWP(Universal Windows Platform)
+#### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-UWP(Universal Windows Platform) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
+UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
 
 ```csharp
 Xamarin.Forms.Forms.Init (e);
@@ -123,7 +123,7 @@ if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
 }
 ```
 
-이렇게 하면 Xamarin.Forms의 UWP 특정 구현이 응용 프로그램에 로드됩니다. `MainPage` 클래스는 Xamarin.Forms 페이지 초기화를 다음 코드 예제에서 설명한 것처럼 시작합니다.
+이렇게 하면 Xamarin.Forms의 UWP 특정 구현이 응용 프로그램에 로드됩니다. `MainPage` 클래스는 초기 Xamarin.Forms 페이지를 다음 코드 예제에서 설명한 것처럼 시작합니다.
 
 ```csharp
 public partial class MainPage
@@ -149,20 +149,20 @@ Xamarin.Forms에서 사용자 인터페이스를 만드는 두 가지 기술이 
 
 ### <a name="views-and-layouts"></a>뷰 및 레이아웃
 
-Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 사용되는 4개의 컨트롤 그룹이 있습니다.
+Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 사용되는 4개의 주요 컨트롤 그룹이 있습니다.
 
-- **페이지** – Xamarin.Forms 페이지는 교차 플랫폼 모바일 응용 프로그램 화면을 나타냅니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
+- **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
 - **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용되는 컨테이너입니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
 - **뷰** – Xamarin.Forms 뷰는 레이블, 버튼 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. 뷰에 대한 자세한 내용은 [Xamarin.Forms 뷰](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
 - **셀** – Xamarin.Forms 셀은 목록에 있는 항목에 사용되는 특수한 요소이며, 목록의 각 항목이 어떻게 그려져야 하는지를 설명합니다. 셀에 대한 자세한 내용은 [Xamarin.Forms 셀](~/xamarin-forms/user-interface/controls/cells.md)을 참조하세요.
 
-런타임 시 각 컨트롤은 화면에 표시되는 해당 고유 장치에 매핑됩니다.
+런타임 시 각 컨트롤은 화면에 렌더링되는 해당 네이티브에 매핑됩니다.
 
 컨트롤은 레이아웃 내에 호스팅됩니다. 일반적으로 사용되는 레이아웃인 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스는 아래에 설명되어 있습니다.
 
 ### <a name="stacklayout"></a>StackLayout
 
-[`StackLayout`](xref:Xamarin.Forms.StackLayout)은 화면 크기와 관계없이 화면에 컨트롤을 자동으로 정렬하여 플랫폼 간 응용 프로그램 개발을 단순화합니다. 각 자식 요소는 가로 또는 세로로 추가된 순서대로 차례로 위치가 지정됩니다. 얼마나 큰 공간을 `StackLayout`이 사용할지는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 어떻게 설정했는지에 달려 있지만, 기본적으로는 `StackLayout`은 전체 화면을 사용 합니다.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout)은 화면 크기와 관계없이 화면에 컨트롤을 자동으로 정렬하여 플랫폼 간 응용 프로그램 개발을 단순화합니다. 각 자식 요소는 가로 또는 세로로 추가된 순서대로 차례로 위치가 지정됩니다. 얼마나 큰 공간을 `StackLayout`이 사용할지는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 어떻게 설정했는지에 달려 있지만, 기본적으로는 `StackLayout`은 전체 화면을 사용합니다.
 
 다음 XAML 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 사용하여 3개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 정렬하는 예를 보여줍니다.
 
@@ -177,7 +177,7 @@ Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
 </ContentPage>
 ```
 
-동일한 C# 코드는 다음 코드 예제와 같습니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 public class StackLayoutExample : ContentPage
@@ -224,14 +224,14 @@ public class StackLayoutExample : ContentPage
 </ContentPage>
 ```
 
-동일한 C# 코드는 다음 코드 예제와 같습니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 public class StackLayoutExample: ContentPage
 {
     public StackLayoutExample()
     {
-        // 선언 없이 빨강, 노랑, 초록 레이블을 생성하는 코드(위 참조)
+        // Code that creates red, yellow, green labels removed for clarity (see above)
         Content = new StackLayout
         {
             Spacing = 10,
@@ -261,7 +261,7 @@ public class StackLayoutExample: ContentPage
 </ContentPage>
 ```
 
-동일한 C# 코드는 다음 코드 예제와 같습니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 var red = new Label
@@ -295,7 +295,7 @@ Content = new StackLayout
 
 ## <a name="lists-in-xamarinforms"></a>Xamarin.Forms의 목록
 
-[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 화면에 항목 컬렉션 표시를 담당합니다 - `ListView`의 각 항목은 단일 셀에 포함됩니다. 기본적으로 `ListView`는 내장된 [`TextCell`](xref:Xamarin.Forms.TextCell) 템플릿을 사용하여 한 줄의 텍스트를 렌더링합니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 화면에 항목 컬렉션 표시를 담당합니다 - `ListView`의 각 항목은 단일 셀에 포함됩니다. 기본적으로 `ListView`은 기본 제공된 [`TextCell`](xref:Xamarin.Forms.TextCell) 템플릿을 사용하여 한 줄의 텍스트를 렌더링합니다.
 
 다음 코드 예제는 간단한 [`ListView`](xref:Xamarin.Forms.ListView) 예제를 보여줍니다.
 
@@ -368,7 +368,7 @@ listView.ItemSelected += async (sender, e) => {
 };
 ```
 
-[`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 내에 포함된 경우, [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 메서드를 내장된 뒤로 탐색을 사용하여 새 페이지를 여는 데 사용할 수 있습니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 다음 코드 예제에서 설명한 것처럼 [`e.SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 속성을 통해 셀과 연결된 개체에 접근하여 새 페이지에 바인딩하고 `PushAsync`을 사용하여 새 페이지를 표시합니다.
+[`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 내에 포함된 경우, [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 메서드를 기본 제공된 뒤로 탐색으로 새 페이지를 여는 데 사용할 수 있습니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 다음 코드 예제에서 설명한 것처럼 [`e.SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 속성을 통해 셀과 연결된 개체에 액세스하여 새 페이지에 바인딩하고 `PushAsync`을 사용하여 새 페이지를 표시합니다.
 
 ```csharp
 listView.ItemSelected += async (sender, e) => {
@@ -378,7 +378,7 @@ listView.ItemSelected += async (sender, e) => {
 };
 ```
 
-각 플랫폼은 내장된 뒤로 탐색을 자체적으로 구현합니다. 자세한 내용은 [탐색](#Navigation)를 참조하세요.
+각 플랫폼은 기본 제공된 뒤로 탐색을 자체적으로 구현합니다. 자세한 내용은 [탐색](#Navigation)를 참조하세요.
 
 [`ListView`](xref:Xamarin.Forms.ListView) 선택에 관한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md)을 참조하세요.
 
@@ -441,11 +441,11 @@ class EmployeeCell : ViewCell
 
 코드는 다음 작업을 수행합니다.
 
--  [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성을 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
+- [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
 -  두 개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 갖도록 세로 방향으로 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. `Label` 컨트롤에 `Employee` 개체의 `DisplayName`과 `Twitter`속성을 바인딩합니다.
 -  기존의 [`Image`](xref:Xamarin.Forms.Image)와 `StackLayout`을 호스팅할 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. 가로 방향을 사용하여 자식을 정렬합니다.
 
-사용자 지정 셀이 만들어지면 다음 코드 예제에서 설명한 것처럼 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 감싸서 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤에서 사용할 수 있습니다.
+사용자 지정 셀이 만들어지면 다음 코드 예제에서 설명한 것처럼 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에서 래핑하여 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤에서 사용할 수 있습니다.
 
 ```csharp
 List<Employee> myListOfEmployeeObjects = GetAListOfAllEmployees();
@@ -457,13 +457,13 @@ listView.ItemsSource = myListOfEmployeeObjects;
 listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 ```
 
-위 코드는 `Employee`의 `List`를 [`ListView`](xref:Xamarin.Forms.ListView)에 제공합니다. 각 셀은 `EmployeeCell` 클래스를 사용하여 표시 됩니다. `ListView`는 `Employee` 개체를 `EmployeeCell`에 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)로 전달합니다.
+이 코드는 `Employee`의 `List`을 [`ListView`](xref:Xamarin.Forms.ListView)에 제공합니다. 각 셀은 `EmployeeCell` 클래스를 사용하여 렌더링 됩니다. `ListView`은 `Employee` 개체를 `EmployeeCell`에 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)으로 전달합니다.
 
 셀 모양을 사용자 지정하는 방법에 대한 자세한 내용은 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)을 참조하세요.
 
 ### <a name="using-xaml-to-create-and-customize-a-list"></a>XAML를 사용하여 목록 생성 및 사용자 지정
 
-이전 절의 [`ListView`](xref:Xamarin.Forms.ListView)에 해당하는 동일한 XAML을 다음 코드 예제에서 설명하고 있습니다.
+이전 섹션에서 [`ListView`](xref:Xamarin.Forms.ListView)에 해당하는 XAML이 다음 코드 예제에서 설명됩니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -497,16 +497,16 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 
 ## <a name="data-binding"></a>데이터 바인딩
 
-데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(종종 표시라고도 함)합니다. 예를 들어 한 [`Label`](xref:Xamarin.Forms.Label)(*target* 개체)은 일반적으로 *source* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.Label.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
+데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어 한 [`Label`](xref:Xamarin.Forms.Label)(*target* 개체)은 일반적으로 *source* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.Label.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
 
 ![](introduction-to-xamarin-forms-images/data-binding.png "데이터 바인딩")
 
-데이터 바인딩의 주요 장점은 더 이상 뷰와 데이터 원본 간의 데이터 동기화에 대해 걱정할 필요가 없다는입니다. *source* 개체의 변경 사항은 바인딩 프레임워크가 화면 뒤에서 *target* 개체에 자동으로 푸시하며, 대상(target) 개체의 변경 내용은 필요한 경우 *source* 개체로 다시 푸시될 수 있습니다.
+데이터 바인딩의 주요 장점은 더 이상 뷰와 데이터 원본 간의 데이터 동기화에 대해 걱정할 필요가 없다는 것입니다. *source* 개체의 변경 사항은 바인딩 프레임워크가 화면 뒤에서 *target* 개체에 자동으로 푸시하며, 대상(target) 개체의 변경 내용은 필요한 경우 *source* 개체로 다시 푸시될 수 있습니다.
 
-데이터 바인딩 설정은 두 단계 과정으로 이루어집니다.
+데이터 바인딩 설정은 두 단계 프로세스입니다.
 
 - *target* 개체의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 *source*에 설정되어야 합니다.
-- 바인딩이 *source*와 *target* 간에 설정되어야 합니다. XAML의 경우 [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) 태그 확장을 사용하여 이루어 집니다. C#의 경우 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 사용하여 이루어 집니다.
+- 바인딩이 *source*와 *target* 간에 설정되어야 합니다. XAML의 경우 [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) 태그 확장을 사용하여 이루어집니다. C#의 경우 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 사용하여 이루어집니다.
 
 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
@@ -520,7 +520,7 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 
 *source* 개체의 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 속성과 `FirstName` 속성 간의 바인딩이 설정됩니다. `Entry` 컨트롤에서 변경된 내용은 자동으로 `employeeToDisplay` 개체로 전파됩니다. 마찬가지로, `employeeToDisplay.FirstName` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Entry` 컨트롤의 내용도 업데이트합니다. 이를 *양방향 바인딩*이라고 합니다. 양방향 바인딩이 작동하기 위해서는 모델 클래스가 `INotifyPropertyChanged` 인터페이스를 구현해야 합니다.
 
-`EmployeeDetailPage` 클래스의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 XAML에서 설정할 수도 있지만, 여기서는 `Employee` 개체의 인스턴스를 위해 코드-비하인드에서 설정합니다.
+`EmployeeDetailPage` 클래스의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 XAML에서 설정할 수 있지만, 여기서는 `Employee` 개체의 인스턴스에 코드 숨김으로 설정됩니다.
 
 ```csharp
 public EmployeeDetailPage(Employee employee)
@@ -551,7 +551,7 @@ public EmployeeDetailPage(Employee employeeToDisplay)
 
 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 생성자에 `Employee` 개체의 인스턴스가 전달되고, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 바인딩할 개체에 설정합니다. [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤이 인스턴스화되고, *source* 개체의 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 속성과 `FirstName` 속성 간의 바인딩이 설정됩니다. `Entry` 컨트롤에서 변경된 내용은 자동으로 `employeeToDisplay` 개체로 전파됩니다. 마찬가지로, `employeeToDisplay.FirstName` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Entry` 컨트롤의 내용도 업데이트합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다. 양방향 바인딩이 작동하기 위해서는 모델 클래스가 `INotifyPropertyChanged` 인터페이스를 구현해야 합니다.
 
-`SetBinding` 메서드는 두개의 매개 변수를 사용합니다. 첫 번째 매개 변수는 바인딩 유형에 관한 정보를 지정합니다. 두 번째 매개 변수는 바인딩할 항목 또는 바인딩하는 방법에 대한 정보를 제공하는 데 사용됩니다. 두 번째 매개 변수는 대부분의 경우 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)의 속성 이름이 담긴 문자열입니다. 다음 구문을 사용하여 이를 `BindingContext`에 직접 바인딩합니다.
+`SetBinding` 메서드는 두 개의 매개 변수를 사용합니다. 첫 번째 매개 변수는 바인딩 유형에 관한 정보를 지정합니다. 두 번째 매개 변수는 바인딩할 항목 또는 바인딩하는 방법에 대한 정보를 제공하는 데 사용됩니다. 두 번째 매개 변수는 대부분의 경우 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)의 속성 이름이 담긴 문자열입니다. 다음 구문을 사용하여 이를 `BindingContext`에 직접 바인딩합니다.
 
 ```csharp
 someLabel.SetBinding(Label.TextProperty, new Binding("."));
@@ -561,7 +561,7 @@ someLabel.SetBinding(Label.TextProperty, new Binding("."));
 
 ### <a name="property-change-notification"></a>속성 변경 알림
 
-기본적으로는 바인딩이 만들어질 때 *target* 개체는 *source* 개체의 값만 받습니다. UI와 데이터 원본의 동기화를 유지하려면 *source* 개체가 변경 되었을 때 *target* 개체에 알릴 방법이 있어야 합니다. 이 메커니즘은 `INotifyPropertyChanged` 인터페이스에서 제공합니다. 이 인터페이스를 구현하면 기본 속성 값이 변경될 때 데이터 바인딩된 컨트롤에 알립니다.
+기본적으로는 바인딩이 만들어질 때 *target* 개체는 *source* 개체의 값만 받습니다. UI와 데이터 원본의 동기화를 유지하려면 *source* 개체가 변경되었을 때 *target* 개체에 알릴 방법이 있어야 합니다. 이 메커니즘은 `INotifyPropertyChanged` 인터페이스에서 제공합니다. 이 인터페이스를 구현하면 기본 속성 값이 변경될 때 데이터 바인딩된 컨트롤에 알립니다.
 
 `INotifyPropertyChanged`을 구현하는 개체는 다음 코드 예제에서 설명한 것처럼 해당 속성 중 하나가 새 값으로 업데이트 될 때 `PropertyChanged` 이벤트를 발생시켜야 합니다.
 
@@ -598,7 +598,7 @@ public class MyObject : INotifyPropertyChanged
 }
 ```
 
-`MyObject.FirstName` 속성이 변경될 경우 `OnPropertyChanged` 메서드가 호출되어 `PropertyChanged` 이벤트가 발생해야 합니다. 불필요한 이벤트 발생을 방지하기 위해 속성 값이 바뀌지 않는 경우 `PropertyChanged` 이벤트는 발생되지 않습니다.
+`MyObject.FirstName` 속성이 변경될 경우 `OnPropertyChanged` 메서드가 호출되어 `PropertyChanged` 이벤트가 발생합니다. 불필요한 이벤트 발생을 방지하기 위해 속성 값이 바뀌지 않는 경우 `PropertyChanged` 이벤트는 발생되지 않습니다.
 
 `OnPropertyChanged` 메서드에서 `propertyName` 매개 변수는 `CallerMemberName` 특성으로 표시됩니다. 이렇게 하면 `OnPropertyChanged` 메서드가 `null` 값으로 호출되는 경우 `CallerMemberName` 특성이 `OnPropertyChanged`를 호출하는 메서드의 이름을 제공합니다.
 
@@ -634,7 +634,7 @@ await Navigation.PushAsync(new LoginPage());
 
 새 `LoginPage` 개체가 탐색 스택으로 푸시되어 활성 페이지가 됩니다.
 
-활성 페이지는 장치의 *뒤로* 버튼을 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 버튼이든 화면상 버튼이든 상관없습니다. 프로그래밍 방식으로 이전 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
+활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다. 프로그래밍 방식으로 이전 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PopAsync();
@@ -661,7 +661,7 @@ await Navigation.PushModalAsync(new LoginPage());
 
 `LoginPage` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다.
 
-활성 페이지는 장치의 *뒤로* 버튼을 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 버튼은 장치의 물리적 버튼이든 화면상 버튼이든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) 메서드를 호출해야 합니다.
+활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `LoginPage` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PopModalAsync();
@@ -675,12 +675,12 @@ await Navigation.PopModalAsync();
 
 이 소개 문서를 통해 Xamarin.Forms 응용 프로그램 작성을 시작할 수 있을 것입니다. 제안된 다음 단계로는 다음 기능에 대한 내용이 있습니다.
 
-- 컨트롤 템플릿은 런타임에 손쉽게 응용 프로그램 페이지 테마 및 재테마 적용을 기능을 제공합니다. 자세한 내용은 [컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)을 참조하세요.
+- 컨트롤 템플릿은 런타임에 손쉬운 응용 프로그램 페이지 테마 및 재테마 적용 기능을 제공합니다. 자세한 내용은 [컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)을 참조하세요.
 - 데이터 템플릿은 지원되는 컨트롤에 있는 데이터 프레젠테이션을 정의하는 기능을 제공합니다. 자세한 내용은 [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
-- 공유 코드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 고유 기능에 접근할 수 있습니다. 자세한 내용은 [DependencyService를 사용한 고유 기능 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
+- 공유 코드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 네이티브 기능에 액세스할 수 있습니다. 자세한 내용은 [DependencyService를 사용한 네이티브 기능 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 - Xamarin.Forms에는 메시지를 보내거나 받을 수 있는 간단한 메시징 서비스가 들어 있어 클래스 간의 결합을 줄일 수 있습니다. 자세한 내용은 [MessagingCenter를 사용한 게시 및 구독](~/xamarin-forms/app-fundamentals/messaging-center.md)을 참조하세요.
-- 각 페이지, 레이아웃 및 컨트롤은 차례로 고유 컨트롤을 만들고, 화면에 정렬하고, 공유 코드에 지정한 동작을 추가하는 `Renderer` 클래스를 사용하여 각 플랫폼에서 다르게 표시 됩니다. 개발자는 컨트롤의 모양 및(또는) 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 자세한 내용은 [사용자 지정 표시자](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조하세요.
-- 각 플랫폼의 고유 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과가 플랫폼별 프로젝트에 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 컨트롤을 하위 클래스화하여 만들어지고, 적절한 Xamarin.Forms 컨트롤에 연결하여 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
+- 각 페이지, 레이아웃 및 컨트롤은 차례로 네이티브 컨트롤을 만들고, 화면에 정렬하고, 공유 코드에 지정한 동작을 추가하는 `Renderer` 클래스를 사용하여 각 플랫폼에서 다르게 렌더링됩니다. 개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 자세한 내용은 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조하세요.
+- 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과가 플랫폼별 프로젝트에 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 컨트롤을 하위 클래스화하여 만들어지고, 적절한 Xamarin.Forms 컨트롤에 연결하여 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
 또는 Charles Petzold의 책인 [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)(Xamarin.Forms를 사용하여 모바일 앱 만들기)는 Xamarin.Forms에 대해 더 배울 수 있는 좋은 자료입니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.
 
