@@ -1,4 +1,4 @@
----
+﻿---
 title: XAML 태그 확장 사용
 description: 이 문서에서는 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성을 향상시키는 Xamarin.Forms XAML 태그 확장 사용 방법을 설명합니다.
 ms.prod: xamarin
@@ -84,7 +84,7 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
 </Label>
 ```
 
-더 나아가 단순화할 수 있습니다. 하지만 변경에 몇 가지 새 구문을 소개: 배치로 구성 됩니다는 `StaticExtension` 클래스와 중괄호에서 설정 멤버입니다. 결과 식에 직접 설정 되는 `FontSize` 특성:
+이것은 더 단순화할 수 있지만, 이러한 변경으로 몇 가지 새로운 구문이 도입됩니다. `StaticExtension` 클래스와 멤버 설정을 중괄호로 묶어서 구성합니다. 결과 표현식은 다음과 같이 직접 `FontSize` 특성으로 설정됩니다.
 
 ```xaml
 <Label Text="Label No. 3"
@@ -100,7 +100,7 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
        FontSize="{x:Static Member=local:AppConstants.NormalFontSize}" />
 ```
 
-합니다 `StaticExtension` 클래스에는 `ContentProperty` 속성을 참조 하는 특성 `Member`, 클래스의 기본 콘텐츠 속성으로이 속성을 표시 하는 합니다. 중괄호를 사용 하 여 표현 XAML 태그 확장을 제거할 수 있습니다는 `Member=` 식의 일부:
+`StaticExtension` 클래스는 `Member` 속성을 참조하는 `ContentProperty` 특성을 가지고 있습니다. 이 특성은 해당 속성을 클래스의 기본 콘텐츠 속성으로 표시합니다. 중괄호를 사용하여 표시된 XAML 태그 확장의 경우 다음과 같이 표현식의 `Member=` 부분을 제거할 수 있습니다.
 
 ```xaml
 <Label Text="Label No. 5"
@@ -151,7 +151,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 `x:Reference` 태그 확장은 [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에서 자세히 설명하는 데이터 바인딩과 함께 독점적으로 사용됩니다.
 
-**X:reference 데모** 페이지의 두 가지 용도 보여 줍니다. `x:Reference` 데이터 바인딩을 사용 하 여 설정에 사용 된 첫 번째는 `Source` 속성을 `Binding` 개체 및 설정에 사용 된 두 번째는 `BindingContext` 두 데이터 바인딩에 대 한 속성:
+다음의 **x:Reference Demo** 페이지는 데이터 바인딩을 사용하는 `x:Reference`의 두 가지 사용법을 보여줍니다. 첫 번째는 `Binding` 개체의 `Source` 속성을 설정하는 데 사용되고, 두 번째는 두 개의 데이터 바인딩을 위한 `BindingContext` 속성을 설정하는 데 사용되었습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -195,7 +195,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니다. 예제는 `Style`의 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성과 [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 특성은 제네릭 클래스에서 인수를 지정하는 데 사용됩니다. 그러나 XAML 파서는 자동으로 `typeof` 연산을 수행하며, 이 경우에는 `x:Type` 태그 확장이 사용되지 않습니다.
 
-한 곳 위치 `x:Type` *은* 된 필요한를 `x:Array` 에 설명 된 태그 확장을 [다음 섹션](#array)합니다.
+`x:Type`이 *필수* 인 한 곳은 [다음 절](#array)에서 설명하는 `x:Array` 태그 확장 입니다.
 
 `x:Type` 태그 확장은 각 메뉴 항목이 특정 유형의 개체에 해당하는 메뉴를 구성할 때도 유용합니다. `Type` 개체를 각 메뉴 항목과 연결한 다음 메뉴 항목이 선택될 때 개체를 인스턴스화할 수 있습니다.
 
@@ -240,7 +240,7 @@ Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니
 
 **Markup Extensions**의 기본 페이지는 다음과 같습니다.
 
-[![기본 페이지](consuming-images/mainpage-small.png "기본 페이지")](consuming-images/mainpage-large.png#lightbox "주 페이지")
+[![기본 페이지](consuming-images/mainpage-small.png "기본 페이지")](consuming-images/mainpage-large.png#lightbox "기본 페이지")
 
 각 `CommandParameter` 속성은 다른 페이지 중 하나를 참조하는 `x:Type` 태그 확장으로 설정됩니다. `Command` 속성은 `NavigateCommand`라는 속성에 바인딩됩니다. 해당 속성은 `MainPage` 코드 숨김 파일에 다음과 같이 정의되어 있습니다.
 
@@ -264,7 +264,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`NavigateCommand` 속성은는 `Command` 형식의 인수를 사용 하 여 execute 명령이 구현 하는 개체 `Type` &mdash; 변수의 `CommandParameter`합니다. 메서드를 사용 하 여 `Activator.CreateInstance` 페이지를 인스턴스화하기 위해 다음 여기로 이동 하 고 있습니다. 생성자를 설정 하 여 완료 합니다 `BindingContext` 그러면 자신에 게 페이지의를 `Binding` 에서 `Command` 작동 하려면. 참조 된 [ **데이터 바인딩** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서 및 특히 [ **직속 상관** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 이러한 종류의 코드에 대 한 자세한 문서.
+`NavigateCommand` 속성은 `CommandParameter`의 값인 `Type` 유형의 인수를 사용하여 execute 명령을 구현하는 `Command` 개체입니다. 해당 메서드는 페이지 인스턴스화를 위해 `Activator.CreateInstance`를 사용한 다음 해당 페이지로 이동합니다. 생성자는 `Command`의 `Binding`이 동작 가능하도록 페이지의 `BindingContext`를 자신으로 설정하여 완료됩니다. 해당 종류의 코드에 대한 더 자세한 내용은 [ **데이터 바인딩** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서와 특히 [ **명령** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 문서를 참조하십시오.
 
 **x:Type Demo** 페이지는 유사한 기술을 사용하여 Xamarin.Forms 요소를 인스턴스화하고 해당 인스턴스를 `StackLayout`에 추가합니다. 다음 XAML 파일은 처음에는 `Command` 속성이 `Binding`으로 설정되고 `CommandParameter` 속성이 세 개의 Xamarin.Forms 뷰 유형으로 설정된 `Button` 요소 세 개로 구성됩니다.
 
@@ -410,7 +410,7 @@ public partial class TypeDemoPage : ContentPage
 
 `x:Null` 태그 확장은 거의 필요하지 않으며 드물게 사용되지만, 필요한 순간이 오면 그것이 존재한다는 것에 기뻐할 것입니다.
 
-합니다 **X:null 데모** 페이지 하나 시나리오를 보여 줍니다. 때 `x:Null` 편리할 수 있습니다. 암시적 정의 한다고 가정 `Style` 에 대 한 `Label` 포함 하는 `Setter` 설정 하는 `FontFamily` 속성을 플랫폼에 종속 된 제품군 이름:
+x:Null Demo 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 보여줍니다. 다음과 같이 `FontFamily` 속성을 플랫폼 의존적인 글꼴 가족 이름으로 설정하는 `Setter`를 포함하는 `Label`에 대한 암시적 `Style`을 정의한다고 가정해 보겠습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
