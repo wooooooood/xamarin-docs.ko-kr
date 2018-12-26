@@ -1,6 +1,6 @@
 ---
 title: XAML 태그 확장 사용
-description: 이 문서에서는 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 강화 하기 위해 Xamarin.Forms XAML 태그 확장을 사용 하는 방법에 설명 합니다.
+description: 이 문서에서는 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성을 향상시키는 Xamarin.Forms XAML 태그 확장 사용 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
@@ -141,7 +141,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 샘플 실행은 다음과 같습니다.
 
-[![X:static 데모](consuming-images/staticdemo-small.png "X:static 데모")](consuming-images/staticdemo-large.png#lightbox "X:static 데모")
+[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 <a name="reference" />
 
@@ -185,19 +185,19 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 두 `x:Reference` 표현식은 모두 `ReferenceExtension` 클래스 이름의 축약된 버전을 사용하고 표현식의 `Name=` 부분을 제거하였습니다. 첫 번째 예에서 `x:Reference` 태그 확장은 `Binding` 태그 확장에 내장되어 있습니다. `Source`와 `StringFormat` 설정은 쉼표로 구분됩니다. 프로그램 실행 화면은 다음과 같습니다.
 
-[![X:reference 데모](consuming-images/referencedemo-small.png "X:reference 데모")](consuming-images/referencedemo-large.png#lightbox "X:reference 데모")
+[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
 
 <a name="type" />
 
-## <a name="xtype-markup-extension"></a>x:Type 태그 확장명
+## <a name="xtype-markup-extension"></a>x:Type 태그 확장
 
-합니다 `x:Type` 태그 확장은 XAML에 해당 하는 C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) 키워드입니다. 지 원하는 합니다 [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) 라는 속성이 하나 정의 하는 클래스 [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) 형식의 `string` 클래스 또는 구조체 이름으로 설정 된 합니다. 합니다 `x:Type` 태그 확장 반환 합니다 [ `System.Type` ](xref:System.Type) 해당 클래스 또는 구조체의 개체입니다. `TypeName` 콘텐츠 속성인 `TypeExtension`이므로 `TypeName=` 필요 없는 경우 `x:Type` 중괄호를 사용 하 여 표시 됩니다.
+`x:Type` 태그 확장은 C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) 키워드와 동등한 XAML입니다. 클래스 또는 구조체 이름으로 설정된 `string` 유형의 [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName)이라는 하나의 속성을 정의하는 [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) 클래스에서 지원됩니다. `x:Type` 태그 확장은 해당 클래스 또는 구조체의 [ `System.Type` ](xref:System.Type) 개체를 반환합니다. `TypeName`은 `TypeExtension`의 콘텐츠 속성이므로 중괄호로 `x:Type`을 표시할 때 `TypeName=`이 필요하지 않습니다.
 
-에서는 Xamarin.Forms 내의 여러 가지 속성 형식의 인수가 있는 `Type`합니다. 예로 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성을 `Style`, 및 [X:typearguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 제네릭 클래스에서 인수를 지정 하는 데 사용 되는 특성입니다. 그러나 XAML 파서를 수행 합니다 `typeof` 작업 자동으로 및 `x:Type` 이러한 경우 태그 확장 사용 되지 않습니다.
+Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니다. 예제는 `Style`의 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성과 [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 특성은 제네릭 클래스에서 인수를 지정하는 데 사용됩니다. 그러나 XAML 파서는 자동으로 `typeof` 연산을 수행하며, 이 경우에는 `x:Type` 태그 확장이 사용되지 않습니다.
 
 한 곳 위치 `x:Type` *은* 된 필요한를 `x:Array` 에 설명 된 태그 확장을 [다음 섹션](#array)합니다.
 
-`x:Type` 메뉴 특정 형식의 개체에 각 메뉴 항목을 해당 하는 위치를 생성할 때 태그 확장 유용한 이기도 합니다. 연결할 수는 `Type` 각 메뉴 항목을 사용 하 여 개체 및 메뉴 항목이 선택 될 때 개체를 인스턴스화해야 합니다.
+`x:Type` 태그 확장은 각 메뉴 항목이 특정 유형의 개체에 해당하는 메뉴를 구성할 때도 유용합니다. `Type` 개체를 각 메뉴 항목과 연결한 다음 메뉴 항목이 선택될 때 개체를 인스턴스화할 수 있습니다.
 
 이것이 **Markup Extensions** 프로그램의 `MainPage`에 있는 탐색 메뉴가 작동하는 방식입니다. 다음과 같이 **MainPage.xaml** 파일에는 프로그램의 특정 페이지에 해당하는 각 `TextCell`이 있는 `TableView`가 들어 있습니다.
 
@@ -323,13 +323,13 @@ public partial class TypeDemoPage : ContentPage
 
 `Button`을 누를 때 실행되는 메서드는 인수의 새로운 인스턴스를 만들고, 버튼의 `VerticalOptions` 속성을 설정하고 `StackLayout`에 추가합니다. 세 개의 `Button` 요소는 동적으로 생성된 뷰를 사용하여 다음과 같이 페이지를 공유합니다.
 
-[![X:type 데모](consuming-images/typedemo-small.png "X:type 데모")](consuming-images/typedemo-large.png#lightbox "X:type 데모")
+[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
 
 <a name="array" />
 
 ## <a name="xarray-markup-extension"></a>x:Array 태그 확장
 
-`x:Array` 태그 확장을 사용 하면 태그 배열을 정의할 수 있습니다. 지원 되는 [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) 두 속성을 정의 하는 클래스:
+`x:Array` 태그 확장은 태그에서 배열을 정의할 수 있도록 해줍니다. 이는 다음의 두 속성을 정의하는 [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) 클래스에서 지원됩니다.
 
 - 배열에 있는 요소의 유형을 가리키는 `Type` 유형의 `Type`.
 - 항목 자체의 컬렉션인 `IList` 유형의 `Items`. 이는 `ArrayExtension`의 컨텐츠 속성입니다.
@@ -380,7 +380,7 @@ public partial class TypeDemoPage : ContentPage
 
 `ViewCell`은 다음과 같이 각 색상 항목에 대한 단순 `BoxView`를 생성합니다.
 
-[![X:array 데모](consuming-images/arraydemo-small.png "X:array 데모")](consuming-images/arraydemo-large.png#lightbox "X:array 데모")
+[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
 
 해당 배열에 개별적인 `Color` 항목을 지정하는 여러 가지 방법이 있습니다. 다음과 같이 `x:Static` 태그 확장을 사용할 수 있습니다.
 
@@ -453,7 +453,7 @@ public partial class TypeDemoPage : ContentPage
 
 프로그램 실행 화면은 다음과 같습니다.
 
-[![X:null 데모](consuming-images/nulldemo-small.png "X:null 데모")](consuming-images/nulldemo-large.png#lightbox "X:null 데모")
+[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
 
 `Label` 요소 중 네 개는 serif 글꼴을 갖고 있지만, 가운데 `Label`은 기본 sans-serif 글꼴을 갖습니다.
 
@@ -497,7 +497,7 @@ public partial class TypeDemoPage : ContentPage
 
 프로그램 실행 화면은 다음과 같습니다.
 
-[![OnPlatform 데모](consuming-images/onplatformdemo-small.png "OnPlatform 데모")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform 데모")
+[![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
 
 <a name="onidiom" />
 
@@ -510,7 +510,7 @@ public partial class TypeDemoPage : ContentPage
 - 태블릿에 적용할 값으로 설정하는 `object` 유형의 `Tablet`.
 - 데스크톱 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Desktop`.
 - TV 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `TV`.
-- `Watch` 형식의 `object`, 조사식 플랫폼에 적용할 값으로 설정 합니다.
+- 조사식 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Watch`.
 - `IValueConverter` 구현에 설정하는 `Converter` 유형의 `IValueConverter`.
 - `ConverterParameter` 구현에 전달할 값으로 설정하는 `object` 유형의 `IValueConverter`.
 
@@ -522,7 +522,7 @@ public partial class TypeDemoPage : ContentPage
 > [!IMPORTANT]
 > XAML 파서는 올바른 유형의 값이 `OnIdiom` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnIdiom` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기로는 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
 
-합니다 **OnIdiom 데모** 페이지를 사용 하는 방법을 보여 줍니다는 `OnIdiom` 태그 확장:
+**OnIdiom Demo** 페이지는 다음과 같이 `OnIdiom` 태그 확장을 사용하는 방법을 보여 줍니다.
 
 ```xaml
 <BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
@@ -535,11 +535,11 @@ public partial class TypeDemoPage : ContentPage
 
 프로그램 실행 화면은 다음과 같습니다.
 
-[![OnIdiom 데모](consuming-images/onidiomdemo-small.png "OnIdiom 데모")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom 데모")
+[![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
-## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장을 정의 합니다.
+## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장 정의
 
-Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장에 대 한 필요를 알리는 경우 할 수 있습니다 [직접 만들어보십시오](creating.md)합니다.
+Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장이 필요하다면 [직접 만들기](creating.md)를 참조하십시오.
 
 ## <a name="related-links"></a>관련 링크
 

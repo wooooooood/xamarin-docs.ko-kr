@@ -28,7 +28,7 @@ sections:
 - title: 시작
   items:
   - type: paragraph
-    text: Android, iOS 및 유니버설 Windows 플랫폼을 대상으로 Xamarin 및 C#을 사용하여 첫 번째 Xamarin.Forms 앱을 빌드하는 방법에 대해 알아봅니다.
+    text: Xamarin 및 C#을 사용하여 Android, iOS 및 UWP(Universal Windows Platform)를 대상으로 하는 첫 번째 Xamarin.Forms 앱을 만드는 방법에 대해 알아봅니다.
   - type: list
     style: icon48
     items:
@@ -55,19 +55,19 @@ sections:
     className: cardsB
     items:
     - href: ~/xamarin-forms/get-started/index.md
-      html: Xamarin.Forms를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 빌드하세요.
+      html: Xamarin.Forms를 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 만드세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/xamarin-forms/get-started/index.md
       title: 시작
     - href: ~/xamarin-forms/xaml/
-      html: 사용자 인터페이스를 선언적으로 빌드하고 모바일 및 데스크톱 플랫폼에서 공유합니다.
+      html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: ~/xamarin-forms/xaml/
       title: XAML
     - href: ~/xamarin-forms/app-fundamentals/
-      html: 'Xamarin.Forms 앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
+      html: 파일, 이미지, 데이터베이스 작업 등과 같이 Xamarin.Forms 앱을 빌드하는 데 필요한 모든 작업을 안내합니다.
       image:
         src: ~/media/icons/i_app-build.svg
         href: ~/xamarin-forms/app-fundamentals/
@@ -79,7 +79,7 @@ sections:
         href: ~/xamarin-forms/user-interface/
       title: 사용자 인터페이스
     - href: ~/xamarin-forms/platform/
-      html: 'Xamarin.Forms 플랫폼 기능 작업(예: 사용자 지정 렌더러) 및 각 릴리스의 기타 중요한 기능입니다.'
+      html: 사용자 지정 렌더러와 같이 Xamarin.Forms 플랫폼 기능 및 각 릴리스의 기타 중요한 기능 작업입니다.
       image:
         src: ~/media/icons/i_platform.svg
         href: ~/xamarin-forms/platform/
