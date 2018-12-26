@@ -21,27 +21,27 @@ ms.locfileid: "53051998"
 _Xamarin.Forms는 애니메이션 속도 또는 실행 되는 속도가 저하 하는 방법을 제어 하는 전송 함수를 지정할 수 있도록 하는 감속/가속 클래스를 포함 합니다. 이 문서에는 미리 정의 된 감속/가속 함수를 사용 하는 방법 및 사용자 지정 감속/가속 함수를 만드는 방법을 보여 줍니다._
 
 
-합니다 [ `Easing` ](xref:Xamarin.Forms.Easing) 클래스는 다양 한 애니메이션에서 사용 될 수 있는 감속/가속 함수를 정의 합니다.
+[`Easing`](xref:Xamarin.Forms.Easing) 클래스는 애니메이션에서 사용할 수 있는 다양한 감속/가속 함수를 제공합니다.
 
-- 합니다 [ `BounceIn` ](xref:Xamarin.Forms.Easing.BounceIn) 애니메이션 시작 부분에서 바운스 감속/가속 함수입니다.
-- 합니다 [ `BounceOut` ](xref:Xamarin.Forms.Easing.BounceOut) 끝 애니메이션 바운스 감속/가속 함수입니다.
-- 합니다 [ `CubicIn` ](xref:Xamarin.Forms.Easing.CubicIn) 애니메이션 감속 감속/가속 함수를 느리게 합니다.
-- 합니다 [ `CubicInOut` ](xref:Xamarin.Forms.Easing.CubicInOut) 시작 되 면 애니메이션을 가속화 하 고 끝에 있는 애니메이션 감속 감속/가속 함수입니다.
-- 합니다 [ `CubicOut` ](xref:Xamarin.Forms.Easing.CubicOut) 애니메이션 감속 감속/가속 함수를 신속 하 게 합니다.
-- 합니다 [ `Linear` ](xref:Xamarin.Forms.Easing.Linear) 상수 개발 속도 사용 하 여 감속/가속 함수 및는 기본 감속/가속 함수입니다.
-- 합니다 [ `SinIn` ](xref:Xamarin.Forms.Easing.SinIn) 애니메이션 감속 감속/가속 함수를 원활 하 게 합니다.
-- 합니다 [ `SinInOut` ](xref:Xamarin.Forms.Easing.SinInOut) 시작 되 면 애니메이션을 가속화 하 고 원활 하 게 끝 애니메이션 감속 감속/가속 함수를 원활 하 게 합니다.
-- 합니다 [ `SinOut` ](xref:Xamarin.Forms.Easing.SinOut) 애니메이션 감속 감속/가속 함수를 원활 하 게 합니다.
-- 합니다 [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) 을 매우 신속 하 게 끝 가속화 애니메이션이 감속/가속 함수입니다.
-- 합니다 [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) 끝 빠르게 감속을 애니메이션이 감속/가속 함수입니다.
+- [`BounceIn`](xref:Xamarin.Forms.Easing.BounceIn) 감속/가속 함수는 애니메이션 시작 부분에서 바운스합니다.
+- [`BounceOut`](xref:Xamarin.Forms.Easing.BounceOut) 감속/가속 함수는 애니메이션 끝 부분에서 바운스합니다.
+- [`CubicIn`](xref:Xamarin.Forms.Easing.CubicIn) 감속/가속 함수는 애니메이션을 천천히 가속합니다.
+- [`CubicInOut`](xref:Xamarin.Forms.Easing.CubicInOut) 감속/가속 함수는 애니메이션 시작 부분에서는 가속하고 끝부분에서는 감속합니다.
+- [`CubicOut`](xref:Xamarin.Forms.Easing.CubicOut) 감속/가속 함수는 빠르게 감속합니다.
+- [`Linear`](xref:Xamarin.Forms.Easing.Linear) 감속/가속 함수는 일정한 속도로 애니메이션이 실행되는 기본 감속/가속 함수입니다.
+- [`SinIn`](xref:Xamarin.Forms.Easing.SinIn) 감속/가속 함수는 애니메이션을 매끄럽게 가속합니다.
+- [`SinInOut`](xref:Xamarin.Forms.Easing.SinInOut) 감속/가속 함수는 애니메이션이 시작할 때 매끄럽게 가속하고 끝날 때 매끄럽게 감속합니다.
+- [`SinOut`](xref:Xamarin.Forms.Easing.SinOut) 감속/가속 함수는 애니메이션을 매끄럽게 가속합니다.
+- [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) 감속/가속 함수는 끝 부분에서 매우 빠르게 가속합니다.
+- [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) 감속/가속 함수는 끝 부분에서 매우 빠르게 감속합니다.
 
-합니다 `In` 고 `Out` 접미사 감속/가속 함수를 제공한 효과 끝 또는 둘 다에서 애니메이션의 시작 부분에 눈에 띄는 인지를 나타냅니다.
+`In`과 `Out` 접미사는 감속/가속 함수가 애니메이션의 시작 부분에서 효과가 있는지, 아니면 끝 부분이나 둘 다에서 효과가 있는지를 나타냅니다.
 
-또한 사용자 지정 감속/가속 함수를 만들 수 있습니다. 자세한 내용은 [사용자 지정 감속/가속 함수](#customeasing)합니다.
+또한 사용자 지정 감속/가속 함수도 만들 수 있습니다. 자세한 내용은 [사용자 지정 감속/가속 함수](#customeasing)를 참조합니다.
 
-## <a name="consuming-an-easing-function"></a>감속/가속 함수를 사용합니다.
+## <a name="consuming-an-easing-function"></a>감속/가속 함수 사용
 
-애니메이션 확장 메서드는 [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) 클래스는 다음 코드 예제에서 설명한 것 처럼 최종 메서드 매개 변수로 지정 감속/가속 함수를 허용 합니다.
+[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스의 애니메이션 확장 메서드는 다음 코드 예제에서 설명한 것처럼 메서드의 마지막 매개 변수에서 감속/가속 함수를 지정할 수 있습니다.
 
 ```csharp
 await image.TranslateTo(0, 200, 2000, Easing.BounceIn);
@@ -51,25 +51,25 @@ await image.ScaleTo(1, 2000, Easing.CubicOut);
 await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 ```
 
-애니메이션에 감속/가속 함수를 지정 하 여 애니메이션 속도 비선형 되며 감속/가속 함수를 제공한 효과 생성 합니다. 기본값을 사용 하려면 애니메이션이 애니메이션을 만들 때에 감속/가속 함수를 생략 [ `Linear` ](xref:Xamarin.Forms.Easing.Linear) 감속/가속 함수는 선형 속도 생성 합니다.
+애니메이션에 감속/가속 함수를 지정하면 애니메이션 속도가 비선형이 되면서 효과가 만들어집니다. 애니메이션을 생성할 때 감속/가속 함수를 생략하면 선형 속도로 애니메이션을 생성하는 기본 [`Linear`](xref:Xamarin.Forms.Easing.Linear) 감속/가속 함수를 사용합니다.
 
-애니메이션 확장 메서드를 사용 하는 방법에 대 한 자세한 내용은 합니다 [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) 클래스를 참조 하십시오 [간단한 애니메이션](~/xamarin-forms/user-interface/animation/simple.md)합니다. 감속/가속 함수 또한 에서도 사용할 수 있습니다 합니다 [ `Animation` ](xref:Xamarin.Forms.Animation) 클래스입니다. 자세한 내용은 [사용자 지정 애니메이션](~/xamarin-forms/user-interface/animation/custom.md)합니다.
+[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스의 확장 메서드를 사용하는 방법에 대한 더 자세한 정보는 [간단한 애니메이션](~/xamarin-forms/user-interface/animation/simple.md)을 참조합니다. 감속/가속 함수는 또한 [`Animation`](xref:Xamarin.Forms.Animation) 클래스에서도 사용할 수 있습니다. 자세한 내용은 [사용자 지정 애니메이션](~/xamarin-forms/user-interface/animation/custom.md)을 참조합니다.
 
 <a name="customeasing" />
 
 ## <a name="custom-easing-functions"></a>사용자 지정 감속/가속 함수
 
-가지 사용자 지정 감속/가속 함수를 만드는 세 가지 주요 방법이 있습니다.
+사용자 지정 감속/가속 함수를 만들 때 주로 사용하는 세 가지 방법이 있습니다.
 
-1. 사용 하는 메서드 만들기는 `double` 인수 및 반환을 `double` 결과입니다.
+1. `double`을 인수로 사용하고 반환을 `double`로 하는 메서드를 만듭니다.
 1. `Func<double, double>`를 만듭니다.
-1. 감속/가속 함수에 대 한 인수로 지정 된 [ `Easing` ](xref:Xamarin.Forms.Easing) 생성자입니다.
+1. [`Easing`](xref:Xamarin.Forms.Easing) 생성자의 인수에 감속/가속 함수를 지정합니다.
 
-세 가지 경우 모두 사용자 지정 감속/가속 함수는 인수 1에 대 한 0과 1의 인수에 대해 0을 반환 해야 합니다. 그러나 인수 값은 0과 1 사이의 모든 값을 반환할 수 있습니다. 이제 각 방법은 차례로 설명 합니다.
+이 세 가지 경우 모두 사용자 지정 감속/가속 함수는 인수가 0인 경우에는 0을, 인수가 1인 경우에는 1을 반환해야 합니다. 그렇지만 인수가 0과 1 사이이면 어떤 값도 반환할 수 있습니다. 각 방법에 대해 차례로 설명합니다.
 
-### <a name="custom-easing-method"></a>사용자 지정 메서드를 감속/가속
+### <a name="custom-easing-method"></a>사용자 지정 감속/가속 메서드
 
-사용자 지정 감속/가속 함수를 사용 하는 방법으로 정의할 수 있습니다는 `double` 인수 및 반환을 `double` 다음 코드 예제에서 설명한 것 처럼 결과:
+다음 코드 예제에서 설명하는 것처럼 사용자 지정 감속/가속 함수는 인수를 `double`로 받고 `double`로 반환하여 정의할 수 있습니다.
 
 ```csharp
 await image.TranslateTo(0, 200, 2000, CustomEase);
@@ -80,28 +80,28 @@ double CustomEase (double t)
 }
 ```
 
-`CustomEase` 메서드 0, 0.2, 0.4, 0.6, 0.8을 및 1 값을 들어오는 값이 잘립니다. 따라서 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 인스턴스는 개별 점프, 보다 원활 하 게 변환 됩니다.
+`CustomEase` 메서드는 들어오는 값을 0, 0.2, 0.4, 0.6, 0.8 및 1로 자릅니다. 따라서 [`Image`](xref:Xamarin.Forms.Image) 인스턴스는 부드럽게 움직이지 않고 불연속적으로 움직입니다.
 
-### <a name="custom-easing-func"></a>사용자 지정 Func 감속/가속
+### <a name="custom-easing-func"></a>사용자 지정 가속/감속 Func
 
-사용자 지정 감속/가속 함수를 정의할 수도 있습니다는 `Func<double, double>`다음 코드 예제에서 설명한 것 처럼:
+사용자 지정 감속/가속 함수는 다음 코드 예제에서 설명한 것처럼 `Func<double, double>`을 사용해 정의할 수 있습니다.
 
 ```csharp
 Func<double, double> CustomEase = t => 9 * t * t * t - 13.5 * t * t + 5.5 * t;
 await image.TranslateTo(0, 200, 2000, CustomEase));
 ```
 
-합니다 `CustomEase` `Func` 끝 신속 하 게 가속화를 다시 코스는 속도가 빠르고 및 과정을 반대로 및 취소 한 다음 시작 되는 감속/가속 함수를 나타냅니다. 따라서 전체 이동 하는 동안 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 인스턴스가 아래쪽으로, 애니메이션 중간 과정을 일시적으로 되돌립니다.
+`CustomEase` `Func`는 빠르게 시작하고 감속하면서 코스가 역전된 다음 다시 역전되어 끝까지 빠르게 향하는 감속/가속 함수를 나타냅니다. 따라서 [`Image`](xref:Xamarin.Forms.Image) 인스턴스의 전체적인 동작은 아래쪽을 향하며 애니메이션 도중 일시적으로 코스를 절반 정도 돌립니다.
 
-### <a name="custom-easing-constructor"></a>사용자 지정 생성자를 감속/가속
+### <a name="custom-easing-constructor"></a>사용자 지정 Easing 생성자
 
-에 대 한 인수로 사용자 지정 감속/가속 함수를 정의할 수도 있습니다는 [ `Easing` ](xref:Xamarin.Forms.Easing) 다음 코드 예제 에서처럼 생성자:
+다음 코드 예제처럼 사용자 지정 감속/가속 함수는 [`Easing`](xref:Xamarin.Forms.Easing) 생성자를 인수로 전달하여 정의할 수 있습니다.
 
 ```csharp
 await image.TranslateTo (0, 200, 2000, new Easing (t => 1 - Math.Cos (10 * Math.PI * t) * Math.Exp (-5 * t)));
 ```
 
-사용자 지정 감속/가속 함수에 람다 함수 인수로 지정 되는 [ `Easing` ](xref:Xamarin.Forms.Easing) 생성자를 사용 하 여를 `Math.Cos` 하 여이 감소 되는지 저속 놓기 효과 만드는 방법의 `Math.Exp` 메서드. 따라서 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 인스턴스는 해당 최종 도착 위치로 삭제 표시 되도록 변환 됩니다.
+이 사용자 지정 감속/가속 함수는 [`Easing`](xref:Xamarin.Forms.Easing) 생성자에 람다 함수를 인수로 사용하여 정의했고, `Math.Cos` 메서드를 사용하여 `Math.Exp` 메서드에 의해 저감되는 드롭 효과를 만듭니다. 그리하여 [`Image`](xref:Xamarin.Forms.Image) 인스턴스는 최종 도착 위치로 차분히 떨어지면서 이동합니다.
 
 ## <a name="summary"></a>요약
 
