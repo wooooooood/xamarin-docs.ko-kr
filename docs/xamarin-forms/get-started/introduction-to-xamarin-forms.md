@@ -1,4 +1,4 @@
----
+﻿---
 title: Xamarin.Forms 소개
 description: 이 문서에서는 Xamarin.Forms에 대한 소개 및 Xamarin.Fomrs를 사용해 응용 프로그램 작성을 시작하는 방법을 제공합니다.
 ms.prod: xamarin
@@ -40,12 +40,12 @@ public partial class App : Application
   public App ()
   {
     InitializeComponent();
-    MainPage = new MainPage(); // sets the App.MainPage property to an instance of the MainPage class
+    MainPage = new MainPage(); // MainPage 클래스의 인스턴스화를 위해 App.MainPage 속성을 설정
   }
 }
 ```
 
-이 코드는 페이지에 가로 및 세로로 중앙에 놓일 단일 [`Label`](xref:Xamarin.Forms.Label)을 표시할 `MainPage`라고 하는 새 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체를 인스턴스화합니다. **MainPage.xaml** 파일의 XAML은 다음과 같습니다.
+다음 코드는 페이지에 가로 및 세로 중앙에 놓일 단일 [`Label`](xref:Xamarin.Forms.Label)을 표시할 `MainPage`라고 하는 새 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체를 인스턴스화합니다. **MainPage.xaml** 파일의 XAML은 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -158,7 +158,7 @@ Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
 
 런타임 시 각 컨트롤은 화면에 렌더링되는 해당 네이티브에 매핑됩니다.
 
-컨트롤은 레이아웃 내에 호스팅됩니다. 일반적으로 사용되는 레이아웃인 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스는 아래에 설명되어 있습니다. &ndash;&ndash;
+컨트롤은 레이아웃 내에 호스팅됩니다. 일반적으로 사용되는 레이아웃인 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스는 아래에 설명되어 있습니다.
 
 ### <a name="stacklayout"></a>StackLayout
 
@@ -373,7 +373,7 @@ listView.ItemSelected += async (sender, e) => {
 ```csharp
 listView.ItemSelected += async (sender, e) => {
     var todoItem = (TodoItem)e.SelectedItem;
-    var todoPage = new TodoItemPage(todoItem); // so the new page shows correct data
+    var todoPage = new TodoItemPage(todoItem); // 그러면 새 페이지가 올바른 데이터를 보여준다
     await Navigation.PushAsync(todoPage);
 };
 ```
@@ -384,7 +384,7 @@ listView.ItemSelected += async (sender, e) => {
 
 ### <a name="customizing-the-appearance-of-a-cell"></a>셀 모양 사용자 지정
 
-셀 모양은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 클래스를 서브클래싱하고 이 클래스의 형식을 [`ListView`](xref:Xamarin.Forms.ListView)의 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성에 설정함으로써 사용자 지정할 수 있습니다.
+셀 모양은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 클래스를 하위 클래스화하고, 이 클래스의 형식을 [`ListView`](xref:Xamarin.Forms.ListView)의 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성에 설정함으로써 사용자 지정할 수 있습니다.
 
 다음 스크린샷에 표시된 셀은 한 개의 [`Image`](xref:Xamarin.Forms.Image)와 두 개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤로 구성됩니다.
 
@@ -441,9 +441,9 @@ class EmployeeCell : ViewCell
 
 코드는 다음 작업을 수행합니다.
 
--  [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
--  두 개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 보관하도록 세로 방향으로 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. `Label` 컨트롤은 `Employee` 개체의 `DisplayName`와 `Twitter`속성에 바인딩됩니다.
--  기존의 [`Image`](xref:Xamarin.Forms.Image)과 `StackLayout`을 호스팅할 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다 가로 방향을 사용하여 자식을 정렬합니다.
+- [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
+-  두 개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 갖도록 세로 방향으로 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. `Label` 컨트롤에 `Employee` 개체의 `DisplayName`과 `Twitter`속성을 바인딩합니다.
+-  기존의 [`Image`](xref:Xamarin.Forms.Image)와 `StackLayout`을 호스팅할 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. 가로 방향을 사용하여 자식을 정렬합니다.
 
 사용자 지정 셀이 만들어지면 다음 코드 예제에서 설명한 것처럼 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에서 래핑하여 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤에서 사용할 수 있습니다.
 
@@ -493,7 +493,7 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 </ContentPage>
 ```
 
-이 XAML은 [`ListView`](xref:Xamarin.Forms.ListView)을 포함하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)을 정의합니다. `ListView`의 데이터 원본은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 특성를 통해 설정됩니다. `ItemsSource`에서 각 행의 레이아웃은 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 요소 내에 정의됩니다.
+이 XAML은 [`ListView`](xref:Xamarin.Forms.ListView)를 포함하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 정의합니다. `ListView`의 데이터 원본은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 특성를 통해 설정됩니다. `ItemsSource`에서 각 행의 레이아웃은 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 요소 내에 정의됩니다.
 
 ## <a name="data-binding"></a>데이터 바인딩
 
@@ -561,7 +561,7 @@ someLabel.SetBinding(Label.TextProperty, new Binding("."));
 
 ### <a name="property-change-notification"></a>속성 변경 알림
 
-기본적으로는 바인딩이 만들어질 때 *대상* 개체는 *소스* 개체의 값만 받습니다. UI와 데이터 원본의 동기화를 유지하려면 *소스* 개체가 변경 되었을 때 *대상* 개체에 알릴 방법이 있어야 합니다. 이 메커니즘은 `INotifyPropertyChanged` 인터페이스에서 제공합니다. 이 인터페이스를 구현하면 기본 속성 값이 변경될 때 데이터 바인딩된 컨트롤에 알립니다.
+기본적으로는 바인딩이 만들어질 때 *target* 개체는 *source* 개체의 값만 받습니다. UI와 데이터 원본의 동기화를 유지하려면 *source* 개체가 변경되었을 때 *target* 개체에 알릴 방법이 있어야 합니다. 이 메커니즘은 `INotifyPropertyChanged` 인터페이스에서 제공합니다. 이 인터페이스를 구현하면 기본 속성 값이 변경될 때 데이터 바인딩된 컨트롤에 알립니다.
 
 `INotifyPropertyChanged`을 구현하는 개체는 다음 코드 예제에서 설명한 것처럼 해당 속성 중 하나가 새 값으로 업데이트 될 때 `PropertyChanged` 이벤트를 발생시켜야 합니다.
 
@@ -578,7 +578,7 @@ public class MyObject : INotifyPropertyChanged
         {
             if (value.Equals(_firstName, StringComparison.Ordinal))
             {
-                // Nothing to do - the value hasn't changed;
+                // 아무것도 하지 않음 - 값이 변경되지 않았다.
                 return;
             }
             _firstName = value;
@@ -653,7 +653,7 @@ Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용
 > [!NOTE]
 > [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스는 모달 페이지 탐색을 수행하는 데 필요하지 않습니다.
 
-형태상으로 `LoginPage`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) 메서드를 호출해야 합니다.
+모달 탐색으로 `LoginPage`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PushModalAsync(new LoginPage());
