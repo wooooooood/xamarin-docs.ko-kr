@@ -1,4 +1,4 @@
----
+﻿---
 title: 4부. 데이터 바인딩 기본 사항
 description: 데이터 바인딩은 한 개체의 변경으로 인해 다른 개체의 변경이 일어나도록 두 개체의 속성을 연결하도록 해 줍니다.
 ms.prod: xamarin
@@ -18,11 +18,11 @@ ms.locfileid: "53055730"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연결할 두 개체의 속성을 허용 합니다. 이 매우 유용한 도구 및 XAML 바로 가기 및 편의 제공 코드에서 완전히 데이터 바인딩을 정의할 수 있지만. 따라서 Xamarin.Forms의 가장 중요 한 태그 확장 중 하나는 바인딩 됩니다._
+_데이터 바인딩은 한 개체의 변경으로 인해 다른 개체의 변경이 일어나도록 두 개체의 속성을 연결하도록 해줍니다. 매우 유용한 도구이며 데이터 바인딩은 코드로만 정의할 수 있는 반면 XAML은 바로 가기 및 편의성을 제공합니다. 따라서 Xamarin.Forms에서 태그 확장 중 가장 중요한 하나는 바인딩(Binding)입니다._
 
 ## <a name="data-bindings"></a>데이터 바인딩
 
-데이터 바인딩 이라는 두 개체, 속성 연결 합니다 *소스* 및 *대상*합니다. 코드에서 두 단계가 필요: 합니다 `BindingContext` 원본 개체를 대상 개체의 속성을 설정 해야 및 `SetBinding` 메서드 (종종 함께 사용 합니다 `Binding` 클래스)의 속성을 바인딩하려면 대상 개체에서 호출 해야 원본 개체의 속성에 대 한 개체입니다.
+데이터 바인딩은 두 개체의 속성을 연결하고, *source* 및 *target*을 호출합니다. 코드에서 두 가지 단계가 필요합니다. 대상(target) 개체의 `BindingContext`는 원본(source) 개체로 설정되어야 하며, `SetBinding` 메서드(종종 `Binding` 클래스와 함께 사용됨)는 해당 개체의 속성을 원본 개체의 속성으로 바인딩하는 대상 개체에서 호출해야 합니다.
 
 대상 속성은 대상 개체가 `BindableObject`에서 파생되어야 한다는 것을 의미하는 바인딩 가능한 속성이어야 합니다. 온라인 Xamarin.Forms 문서는 어떤 속성이 바인딩 가능한 속성인지를 나타냅니다. `Text`와 같은 `Label`의 속성은 바인딩 가능한 속성 `TextProperty`와 연관됩니다.
 
@@ -30,13 +30,13 @@ _데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연�
 
 그러나 XAML에서 데이터 바인딩을 정의할 때 대상 개체의 `BindingContext`를 설정하는 여러 가지 방법이 있습니다. 때로는 `StaticResource`나 `x:Static` 태그 확장을 사용하여, 때로는 `BindingContext` 속성 요소 태그의 내용으로 코드 비하인드에서 설정됩니다.
 
-바인딩 가장 자주 사용 되는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처의 인식에서 일반적으로 기본 데이터 모델을 사용 하 여 프로그램의 시각적 개체를 연결할에 설명 된 대로 [5 부입니다. 데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), 하지만 다른 시나리오가 가능 합니다.
+바인딩은 [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)에서 설명한 대로 일반적으로 MVVM(Model View ViewModel) 응용 프로그램 아키텍처의 구현에서 프로그램의 비주얼을 기본 데이터 모델과 연결하는 데 가장 많이 사용되지만, 다른 시나리오도 가능합니다.
 
 ## <a name="view-to-view-bindings"></a>뷰를 뷰에 바인딩
 
 같은 페이지에서 두 가지 뷰 속성을 연결하기 위한 데이터 바인딩을 정의할 수 있습니다. 이 경우 `x:Reference` 태그 확장을 사용하여 대상 개체의 `BindingContext`를 설정합니다.
 
-포함 된 XAML 파일을 다음과 같습니다를 `Slider` 두 개의 `Label` 뷰 중 하나는 방향으로 회전 합니다 `Slider` 값을 표시 하는 `Slider` 값:
+다음은 `Slider`와 두 개의 `Label` 뷰를 포함하는 XAML 파일입니다. 다음과 같이 레이블 중 하나는 `Slider` 값에 의해 회전되고, 다른 하나는 `Slider` 값을 표시합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -94,7 +94,7 @@ Text="{Binding Value,
 
 무엇이든 편리한 것을 수행하면 됩니다.
 
-표시 된 `StringFormat` 두 번째에서 속성 `Binding` 태그 확장 합니다. Xamarin.forms에 바인딩 모든 암시적 형식 변환을 수행 하지 않습니다 및 형식 변환기를 제공 하거나 사용 해야는 문자열이 아닌 개체를 문자열로 표시 하는 경우 `StringFormat`합니다. 내부적으로 정적 `String.Format` 메서드를 구현 하는 `StringFormat`합니다. 잠재적으로 문제가 있는 경우, 중괄호도 태그 확장 구분 하는 데 사용 되는.NET의 서식 사양을 사용 되므로 이렇게 하면 XAML 파서를 혼동 하는 위험이 만들어집니다. 이 문제를 방지 하려면 작은따옴표로 전체 서식 문자열을 넣습니다.
+`Binding` 태그 확장에서 두 번째 `StringFormat` 속성을 확인하십시오. Xamarin.Forms에 바인딩은 모든 암시적 유형 변환을 수행하지 않으므로 문자열이 아닌 개체를 문자열로 표시해야 하는 경우 유형 변환기를 제공하거나 `StringFormat`을 사용해야 합니다. 배후에서 정적(static) `String.Format` 메서드가 `StringFormat`을 구현하는 데 사용됩니다. .NET 서식 지정 사양에는 중괄호가 포함되어 있기 때문에 잠제적으로 문제가 될 수 있습니다. 이로 인해 XAML 파서가 혼동될 위험이 생깁니다. 해당 문제를 방지하려면 작은따옴표로 전체 서식 문자열을 묶습니다.
 
 ```csharp
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -112,12 +112,12 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 - `Default`
 - `OneWay` -값이 원본(source)에서 대상(target)으로 전송됩니다.
-- `OneWayToSource` -소스 대상에서 전송할지 값
+- `OneWayToSource` -값이 대상에서 원본으로 전송됩니다.
 - `TwoWay` -값이 원본과 대상 간의 값 양방향으로 전송됩니다.
 
 다음 프로그램은 `OneWayToSource`와 `TwoWay` 바인딩 모드의 일반적인 사용법을 보여줍니다. 네 개의 `Slider` 뷰는 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성을 제어하기 위한 것입니다. 처음에는 `Label`의 네 가지 속성이 각각 `Slider`에 의해 설정되기 때문에 데이터 바인딩 대상이어야 하는 것처럼 보입니다. 그러나, `Label`의 `BindingContext`는 하나의 개체일 수 있으며, 네 개의 다른 슬라이더가 있습니다.
 
-따라서 모든 바인딩을 설정 보이는 이전 버전과 방법으로:는 `BindingContext` 로 설정 되어 각 네 개의 슬라이더를 `Label`에 바인딩을 설정 하 고는 `Value` 슬라이더의 속성입니다. 사용 하 여는 `OneWayToSource` 및 `TwoWay` 모드 이러한 `Value` 속성에는 원본 속성을 설정할 수는 `Scale`, `Rotate`, `RotateX`, 및 `RotateY` 의 속성을 `Label`:
+이러한 이유 때문에 모든 바인딩은 겉으로 보기에 역으로 설정된 것 같습니다. 네 개의 슬라이더 각각의 `BindingContext`는 `Label`에 설정되고 바인딩은 슬라이더의 `Value` 속성에 설정됩니다. `OneWayToSource` 및 `TwoWay` 모드를 사용하면, 다음과 같이 `Value` 속성은 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성인 원본 속성을 설정할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -200,7 +200,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 그러나 `Scale` 속성에 대한 바인딩은 `TwoWay`입니다. 이것은 `Scale` 속성이 기본값 1을 가지며 `TwoWay` 바인딩을 사용하면 `Slider` 초기 값이 0이 아닌 1로 설정됩니다. 해당 바인딩이 `OneWayToSource`라면 `Scale` 속성은 초기에 `Slider` 기본값 0으로 설정됩니다. `Label`이 표시되지 않으며, 사용자에게 약간의 혼동이 발생할 수 있습니다.
 
- [![](data-binding-basics-images/slidertransforms.png "이전 버전과 바인딩을")](data-binding-basics-images/slidertransforms-large.png#lightbox "이전 버전과 바인딩")
+ [![](data-binding-basics-images/slidertransforms.png "역 바인딩")](data-binding-basics-images/slidertransforms-large.png#lightbox "역 바인딩")
 
  > [!NOTE]
  > [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스는 또한 x축 및 y축 각각 `VisualElement`로 크기를 조정하는 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 속성을 가지고 있습니다.
@@ -253,7 +253,7 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
 </ListView>
 ```
 
-`Label` 로 설정 된를 `View` 의 속성을 `ViewCell`입니다. (합니다 `ViewCell.View` 태그 때문에 필요 하지 않은 합니다 `View` 속성의 콘텐츠 속성은 `ViewCell`.) 이 태그를 표시 합니다 `FriendlyName` 의 각 속성 `NamedColor` 개체:
+`Label` 요소는 `ViewCell`의 `View` 속성으로 설정됩니다. (`ViewCell.View` 태그는 `View` 속성이 `ViewCell`의 콘텐츠 속성이므로 필요하지 않습니다.) 해당 태그는 다음과 같이 각 `NamedColor` 개체의 `FriendlyName` 속성을 표시합니다.
 
 [![](data-binding-basics-images/listview2.png "DataTemplate을 사용하여 컬렉션에 바인딩")](data-binding-basics-images/listview2-large.png#lightbox "DataTemplate을 사용하여 컬렉션에 바인딩")
 
@@ -335,7 +335,7 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
 
 이전 **ListView 데모** XAML 파일은 Xamarin.Forms `Color` 구조체의 개별 `R`, `G`, `B` 속성을 표시합니다. 해당 속성은 `double` 유형이고 범위는 0에서 1까지입니다. 16 진수 값을 표시하려는 경우 "X2" 형식 지정과 함께 단순히 `StringFormat`을 사용할 수 없습니다. 그것은 정수에만 작동하고, 게다가 `double` 값에는 255를 곱해야 합니다.
 
-사용 하 여 이러한 문제 해결 되었습니다를 *값 변환기*라고도 하는 *바인딩 변환기*합니다. 이 클래스는 구현 하는 클래스를 `IValueConverter` 인터페이스를 통해 라는 두 개의 메서드를가지고 `Convert` 및 `ConvertBack`합니다. `Convert` 메서드는 원본에서 대상; 값이 전송 합니다 `ConvertBack` 메서드는 전송에 대 한 대상에서 원본에 `OneWayToSource` 또는 `TwoWay` 바인딩:
+이 사소한 문제는 *바인딩 변환기*라고도 하는 *값 변환기(value converter)*로 해결되었습니다. 이 클래스는 `IValueConverter` 인터페이스를 구현하는 클래스입니다. 즉, `Convert` 및 `ConvertBack`이라는 두 가지 메서드를 가지고 있습니다. `Convert` 메서드는 값이 원본(source)에서 대상(target)으로 전달될 때 호출됩니다. `ConvertBack` 메서드는 `OneWayToSource` 또는 `TwoWay` 바인딩 내에서 대상에서 원본으로 전송을 위해 호출됩니다.
 
 ```csharp
 using System;
@@ -396,18 +396,18 @@ namespace XamlSamples
 
 `ListView`는 기본 데이터에서 동적으로 발생할 수 있는 변경 사항을 처리하는 데 상당히 정교하지만 특정 단계를 수행할 때만 가능합니다. `ListView`의 `ItemsSource` 속성에 할당된 항목의 컬렉션이 런타임 중에 변경되면(즉, 항목이 컬렉션에서 추가되거나 제거될 수 있는 경우), 해당 항목에 대해 `ObservableCollection` 클래스를 사용하십시오. `ObservableCollection`은 `INotifyCollectionChanged` 인터페이스를 구현하고, `ListView`는 `CollectionChanged` 이벤트를 위한 처리기를 설치합니다.
 
-런타임에 항목 자체의 속성 변경 경우 컬렉션의 항목이 구현 해야 합니다 `INotifyPropertyChanged` 인터페이스 및 신호를 사용 하 여 속성 값 변경의 `PropertyChanged` 이벤트. 이 시리즈의 다음 부분에서는이 확인할 [5 부입니다. MVVM에 데이터 바인딩에서](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)합니다.
+항목 자체의 속성이 런타임 중에 변경되면, 컬렉션의 항목은 `INotifyPropertyChanged` 인터페이스를 구현하고, `PropertyChanged` 이벤트를 사용하여 속성 값 변경 사항에 대해 신호합니다. 해당 내용은 이 시리즈의 다음 부분인 [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)에서 설명합니다.
 
 ## <a name="summary"></a>요약
 
-데이터 바인딩 속성 페이지 내에서 두 개체 간의 또는 시각적 개체 간의 연결 및 기본 데이터에 대 한 강력한 메커니즘을 제공 합니다. 하지만 데이터 소스를 사용 하 여 작업을 시작 하는 응용 프로그램, 인기 있는 응용 프로그램 아키텍처 패턴 유용한 패러다임으로 등장 하기 시작 합니다. 이에 대해서는 [5 부입니다. 데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)합니다.
+데이터 바인딩은 페이지 내의 두 개체 간, 또는 시각적 개체와 기본 데이터 사이의 속성을 연결하는 강력한 메커니즘을 제공합니다. 그러나 응응 프로그램이 데이터 원본(sources)으로 작업하기 시작하면, 인기 있는 응용 프로그램 아키텍처 패턴이 유용한 패러다임으로 부상하기 시작합니다. 이에 대해서는 [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)에서 다룹니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [1부. XAML (샘플)를 사용 하 여 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+- [1부. XAML 시작(샘플)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문 (샘플)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장 (샘플)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [5부. MVVM (샘플)에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5부. MVVM에 데이터 바인딩(샘플)](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
