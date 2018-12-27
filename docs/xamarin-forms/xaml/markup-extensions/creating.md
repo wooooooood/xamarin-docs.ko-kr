@@ -1,4 +1,4 @@
----
+﻿---
 title: XAML 태그 확장 만들기
 description: 이 문서에서는 사용자 고유의 사용자 지정 Xamarin.Forms XAML 태그 확장을 정의하는 방법을 설명합니다. XAML 태그 확장은 IMarkupExtension 인터페이스를 구현하는 클래스입니다.
 ms.prod: xamarin
@@ -23,9 +23,9 @@ ms.locfileid: "53050558"
 또한 `IMarkupExtension` 또는 `IMarkupExtension<T>`를 파생하여 사용자 고유의 사용자 지정 XAML 태그 확장을 정의할 수 있습니다. 태그 확장이 특정 유형의 값을 얻는 경우 제네릭 형식을 사용 하십시오. Xamarin.Forms 태그 확장을 사용하는 몇 가지 경우는 다음과 같습니다.
 
 - `IMarkupExtension<Type>`에서 파생하는 `TypeExtension`
-- `ArrayExtension`에서 파생하는 `IMarkupExtension<Array>`
+- `IMarkupExtension<Array>`에서 파생하는 `ArrayExtension`
 - `IMarkupExtension<DynamicResource>`에서 파생하는 `DynamicResourceExtension`
-- `BindingExtension`에서 파생하는 `IMarkupExtension<BindingBase>`
+- `IMarkupExtension<BindingBase>`에서 파생하는 `BindingExtension`
 - `IMarkupExtension<Constraint>`에서 파생하는 `ConstraintExpression`
 
 두 개의 `IMarkupExtension` 인터페이스는 다음과 같이 각각 `ProvideValue`라는 하나의 메서드만 정의합니다.
@@ -44,7 +44,7 @@ public interface IMarkupExtension<out T> : IMarkupExtension
 
 `IMarkupExtension<T>`는 `IMarkupExtension`에서 파생되고 `ProvideValue`에 `new` 키워드를 포함하고 있으며, 모두 `ProvideValue` 메서드를 포함합니다.
 
-많은 경우 XAML 태그 확장 반환 값에 영향을 주는 속성을 정의 합니다. (은 예외임 `NullExtension`에는 `ProvideValue` 반환 하기만 `null`.) 합니다 `ProvideValue` 메서드는 형식의 단일 인수 `IServiceProvider` 는이 문서의 뒷부분에서 설명 됩니다.
+많은 경우 XAML 태그 확장은 반환 값에 영향을 주는 속성을 정의합니다.(명백한 예외는 `ProvideValue`가 단순히 `null`을 반환하는 `NullExtension`입니다.) `ProvideValue` 메서드는 이 문서의 뒷부분에서 논의될 `IServiceProvider` 유형의 단일 인수를 가집니다.
 
 ## <a name="a-markup-extension-for-specifying-color"></a>색상을 지정하는 태그 확장
 
@@ -117,7 +117,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 </ContentPage>
 ```
 
-때 `HslColorExtension` XML 태그가, 네 가지 속성은 특성으로 설정 되지만 중괄호 사이 나타날 때 네 가지 속성은 쉼표로 구분 하 여 따옴표 없이 합니다. 기본값을 `H`, `S`, 및 `L` 는 0이 고 기본값은 `A` 1 이므로 기본값으로 설정 하려는 경우 해당 속성을 생략할 수 있습니다. 마지막 예제에서는 여기서 명도 검정색에서 결과 일반적으로 0 이지만 알파 채널 0.5 반 투명 하 고 표시 되는 예를 보여 줍니다. 페이지의 흰색 배경에 회색:
+`HslColorExtension`이 XML 태그일 때 네 가지 속성은 특성으로 설정되지만, 중괄호 사이에 나타날 때는 네 가지 속성을 따옴표 없이 쉼표로 구분합니다. `H`, `S` 및 `L`에 대한 기본값은 0이고, `A`에 대한 기본값은 1이므로, 기본값으로 설정하려는 경우 해당 속성을 생략할 수 있습니다. 마지막 예제에서는 일반적으로 검정색 결과인 명도가 0이지만, 알파 채널이 0.5 이므로 반투명하고 페이지가 흰색 배경인 데 비해 회색으로 표시되는 예를 보여줍니다.
 
 [![HSL 색상 데모](creating-images/hslcolordemo-small.png "HSL 색상 데모")](creating-images/hslcolordemo-large.png#lightbox "HSL 색상 데모")
 
@@ -125,7 +125,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 
 `ProvideValue`에 대한 인수는 .NET `System` 네임 스페이스에 정의된 [ `IServiceProvider` ](xref:System.IServiceProvider) 인터페이스를 구현하는 개체입니다. 해당 인터페이스에는 `Type` 인수를 가진 `GetService`라는 메소드가 있습니다.
 
-`ImageResourceExtension` 아래에 표시 된 클래스의 한 가지 가능한 용도 보여 줍니다. `IServiceProvider` 하 고 `GetService` 가져오려고는 `IXmlLineInfoProvider` 나타내는 특정 오류를 발견 된 줄과 문자 정보를 제공할 수 있는 개체입니다. 이 경우 예외가 발생 하는 경우는 `Source` 속성이 설정 되지 않았습니다:
+아래에 표시된 `ImageResourceExtension` 클래스는 `IServiceProvider`와 `GetService`를 사용하여 특정 오류가 발견된 곳을 가리키는 줄과 문자 정보를 제공할 수 있는 `IXmlLineInfoProvider` 개체를 얻을 수 있습니다. 이 경우 `Source` 속성이 설정되지 않으면 예외가 발생합니다.
 
 ```csharp
 [ContentProperty("Source")]
@@ -181,7 +181,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png#lightbox "리소스 데모 이미지")
+[![이미지 리소스 데모](creating-images/imageresourcedemo-small.png "이미지 리소스 데모")](creating-images/imageresourcedemo-large.png#lightbox "이미지 리소스 데모")
 
 ## <a name="service-providers"></a>서비스 공급자
 

@@ -19,8 +19,8 @@ ms.locfileid: "50113224"
 
 _이 아티클에서는 컴퓨터의 하드웨어 가속 기능을 사용하여 Android Emulator 성능을 최대화하는 방법을 설명합니다._
 
-Visual Studio를 통해 Android 장치가 지원되지 않거나 실용적이지 않은 경우 Android 에뮬레이터를 사용하여 개발자가 Xamarin.Android 응용 프로그램을 쉽게 테스트하고 디버그할 수 있습니다.
-그러나 Android 에뮬레이터는 실행되는 컴퓨터에서 하드웨어 가속을 사용할 수 없는 경우 너무 늦게 실행됩니다. 컴퓨터의 가상화 기능과 함께 특별한 x86 가상 장치 이미지를 사용하여 Android 에뮬레이터의 성능을 상당히 개선할 수 있습니다.
+Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적이지 않은 경우 Android 에뮬레이터를 사용하여 개발자가 Xamarin.Android 응용 프로그램을 쉽게 테스트하고 디버그할 수 있습니다.
+그러나 Android 에뮬레이터는 실행되는 컴퓨터에서 하드웨어 가속을 사용할 수 없는 경우 너무 늦게 실행됩니다. 컴퓨터의 가상화 기능과 함께 특별한 x86 가상 디바이스 이미지를 사용하여 Android 에뮬레이터의 성능을 상당히 개선할 수 있습니다.
 
 ::: zone pivot="windows"
 
@@ -38,7 +38,7 @@ Visual Studio를 통해 Android 장치가 지원되지 않거나 실용적이지
 
 - 개발 컴퓨터에서 하드웨어 가속을 사용하고 활성화할 수 있습니다.
 
-- 에뮬레이터가 **x86** 기반 가상 장치를 위해 생성된 이미지를 실행 중입니다.
+- 에뮬레이터가 **x86** 기반 가상 디바이스를 위해 생성된 이미지를 실행 중입니다.
 
 > [!IMPORTANT]
 > VM 가속화된 에뮬레이터는 VirtualBox, VMWare 또는 Docker가 호스팅하는 VM과 같은 다른 VM 내에서 실행할 수 없습니다. [시스템 하드웨어에서 직접](https://developer.android.com/studio/run/emulator-acceleration.html#extensions) Android Emulator를 실행해야 합니다.
@@ -97,14 +97,14 @@ systeminfo
 
    다음과 같이 변경한 후 컴퓨터를 다시 부팅합니다.
 
-2. **[Visual Studio 15.8 이상](https://visualstudio.microsoft.com/vs/) 설치**(이 버전의 Visual Studio는 Hyper-V로 Android 에뮬레이터를 실행하기 위한 IDE 지원을 제공합니다).
+2.  **[Visual Studio 15.8 이상](https://visualstudio.microsoft.com/vs/) 설치**(이 버전의 Visual Studio는 Hyper-V로 Android 에뮬레이터를 실행하기 위한 IDE 지원을 제공합니다).
 
 3. **Android Emulator 패키지 27.2.7 이상을 설치합니다**. 이 패키지를 설치하려면 Visual Studio에서 **도구 > Android > Android SDK Manager**로 이동합니다. **도구** 탭을 선택하고 Android 에뮬레이터 버전이 적어도 27.2.7인지 확인합니다. 또한 Android SDK Tools 버전이 26.1.1 이상인지 확인합니다.
 
     [![Android SDK 및 도구 대화 상자](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
 
-가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 장치가 가속화되지 않고 느리게 실행됩니다.
+가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 디바이스가 가속화되지 않고 느리게 실행됩니다.
 
 
 ## <a name="accelerating-with-haxm"></a>HAXM을 통한 가속화
@@ -143,7 +143,7 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
    ![Intel Hardware Accelerated Execution Manager 설치 창](hardware-acceleration-images/win/06-haxm-installer.png)
 
 
-가상 장치를 만들 때([Android Device Manager를 사용하여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 장치가 가속화되지 않고 느리게 실행됩니다.
+가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 디바이스가 가속화되지 않고 느리게 실행됩니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -166,7 +166,7 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
 
 - 개발 컴퓨터에서 하드웨어 가속을 사용하고 활성화할 수 있습니다.
 
-- 에뮬레이터가 **x86** 기반 가상 장치를 위해 생성된 이미지를 실행 중입니다.
+- 에뮬레이터가 **x86** 기반 가상 디바이스를 위해 생성된 이미지를 실행 중입니다.
 
 > [!IMPORTANT]
 > 

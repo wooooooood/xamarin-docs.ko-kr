@@ -17,7 +17,7 @@ ms.locfileid: "35242442"
 ---
 # <a name="get-started-with-xamarinforms"></a>Xamarin.Forms 시작
 
-_Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 앱에서 기본 사용자 인터페이스 레이아웃을 효율적으로 만들 수 있는 플랫폼 간 UI 도구 키트입니다. 이 시리즈에서는 Xamarin.Forms 개발의 기본 사항을 소개하고 다중 플랫폼 및 다중 화면 응용 프로그램을 빌드하는 내용을 다룹니다._
+_Xamarin.Forms는 개발자가 iOS, Android 및 UWP(Univeral Windows Platform) 앱에서 기본 사용자 인터페이스 레이아웃을 효율적으로 만들 수 있는 교차 플랫폼 UI 도구 키트입니다. 이 시리즈에서는 Xamarin.Forms 개발의 기본 사항을 소개하고 다중 플랫폼 및 다중 화면 응용 프로그램을 만드는 내용을 다룹니다._
 
 플랫폼 간 개발에 적용되는 설치 및 설정 연습의 개요는 [Xamarin.Forms 요구 사항](installation.md) 및 [설치](~/cross-platform/get-started/installation/index.md)를 참조하세요.
 
