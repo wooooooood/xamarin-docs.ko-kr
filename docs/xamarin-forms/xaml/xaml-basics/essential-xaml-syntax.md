@@ -1,6 +1,6 @@
 ---
 title: 2부. 필수 XAML 구문
-description: 이 문서에서는 속성 요소 및 연결 속성의 필수 XAML 구문 기능을 설명 합니다.
+description: 이 문서에서는 속성 요소 및 연결 속성의 필수 XAML 구문 기능을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
@@ -18,11 +18,11 @@ ms.locfileid: "53059745"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_XAML은 주로 개체 인스턴스화 및 초기화를 위해 설계 되었습니다. 하지만 종종 속성을 XML 문자열로 쉽게 표현할 수 없는 복잡한 개체 속성을 설정해야 하 고 하나의 클래스에 의해 정의 된 속성을 자식 클래스에 설정해야 하는 경우가 있습니다. 이러한 속성 요소 및 연결 속성의 두 가지 필수 XAML 구문 기능 요구가 필요합니다._
+_XAML은 주로 개체 인스턴스화 및 초기화를 위해 설계되었습니다. 하지만 종종 속성을 XML 문자열로 쉽게 표현할 수 없는 복잡한 개체 속성으로 설정해야 하고 하나의 클래스에 의해 정의된 속성을 자식 클래스에 설정해야 하는 경우가 있습니다. 따라서 속성 요소 및 연결 속성이라는 필수 XAML 구문 기능이 필요합니다._
 
 ## <a name="property-elements"></a>속성 요소
 
-XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으로 설정 됩니다.
+XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으로 설정됩니다.
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -41,7 +41,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
        FontSize="Large" />
 ```
 
-다음과 같이 시작 및 끝 태그를 분리하여 `Label` 태그 빈 요소를 여십시오.
+다음과 같이 시작 및 끝 태그로 분리하여 `Label` 태그 빈 요소를 엽니다.
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -52,7 +52,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-이 태그 안에 다음과 같이 점으로 구분 된 클래스 이름과 속성 이름으로 구성된 시작 및 끝 태그를 추가 합니다.
+이 태그 안에 다음과 같이 점으로 구분된 클래스 이름과 속성 이름으로 구성된 시작 및 끝 태그를 추가합니다.
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -65,7 +65,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-다음과 같이 해당 새 태그의 내용으로 속성 값을 설정 합니다.
+다음과 같이 해당 새 태그의 내용으로 속성 값을 설정합니다.
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -78,18 +78,18 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-`TextColor` 속성을 지정하는 해당 두 방법은 기능적으로 동일 하지만, 속성을 실제로 두 번 설정하게 되면 모호할 수 있으므로 동일한 속성을 두 가지 방법으로 사용하지 마십시오.
+`TextColor` 속성을 지정하는 해당 두 방법은 기능적으로 동일하지만, 속성을 실제로 두 번 설정하게 되고 모호할 수 있으므로 동일한 속성에 두 가지 방법을 사용하지 마십시오.
 
-해당 새 구문을 사용은 다음과 같은 몇 가지 쉬운 용어로 소개할 수 있습니다.
+해당 새 구문으로 다음과 같은 몇 가지 편리한 용어를 사용할 수 있습니다.
 
--  `Label`은 *개체 요소* 입니다. XML 요소로 표현 된 Xamarin.Forms 개체입니다.
--  `Text`를 `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이는 XML 특성으로 표현된 Xamarin.Forms 속성 입니다.
--  해당 마지막 부분에서 `TextColor`가 *속성 요소*로 되었습니다. 이는 Xamarin.Forms 속성 이지만 이제 XML 요소입니다.
+- `Label`은 *개체 요소*입니다. XML 요소로 표현된 Xamarin.Forms 개체입니다.
+- `Text`, `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이들은 XML 특성으로 표현된 Xamarin.Forms 속성입니다.
+- 해당 마지막 조각에서 `TextColor`는 *속성 요소*가 되었습니다. 이는 Xamarin.Forms 속성이지만 이제 XML 요소입니다.
 
 
-속성 요소의 정의는 처음에는 XML 구문을 위반하는 것처럼 보일 수 있지만 그렇지 않습니다. 점은 XML에서 특별한 의미가 없습니다. XML 디코더에서 `Label.TextColor`는 단순히 일반적인 자식 요소입니다.
+속성 요소의 정의는 처음에는 XML 구문을 위반하는 것처럼 보일 수 있지만 그렇지 않습니다. 마침표는 XML에서 특별한 의미가 없습니다. XML 디코더에서 `Label.TextColor`는 단순히 일반적인 자식 요소입니다.
 
-하지만 XAML에서는 해당 구문이 매우 특별 합니다. 속성 요소에 대한 규칙 중 하나는 `Label.TextColor` 태그에 다른 것을 표시할 수 없다는 것입니다. 속성의 값은 항상 속성 요소 시작 태그와 종료 태그 사이의 내용으로 정의 됩니다.
+하지만 XAML에서는 해당 구문이 매우 특별합니다. 속성 요소에 대한 규칙 중 하나는 `Label.TextColor` 태그에 다른 것을 표시할 수 없다는 것입니다. 속성의 값은 항상 속성 요소 시작 태그와 종료 태그 사이의 내용으로 정의됩니다.
 
 다음과 같이 둘 이상의 속성에서 속성 요소 구문을 사용할 수 있습니다.
 
@@ -130,9 +130,9 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-처음에 속성 요소 구문이 비교적 꽤 단순한 것에 대한 불필요하게 장황한 대체 수단으로 여겨질 수 있고, 해당 예제에서 확실히 그렇습니다.
+처음에 속성 요소 구문이 비교적 꽤 단순한 것에 대한 불필요하게 장황한 대체 수단으로 여겨질 수 있고, 해당 예제에서는 확실히 그렇습니다.
 
-그러나 속성의 값이 너무 복잡해서 간단한 문자열로 표현할 수 없으면 속성 요소 구문이 필수적입니다. 속성 요소 태그 내의 다른 개체를 인스턴스화하고 해당 속성을 설정할 수 있습니다. 예를 들어 다음과 같이 `VerticalOptions`와 같은 속성 설정을 사용하여 `LayoutOptions` 값을 명시적으로 설정할 수 있습니다.
+그러나 속성의 값이 너무 복잡해서 간단한 문자열로 표현할 수 없으면 속성 요소 구문이 필수적입니다. 속성 요소 태그 내에서 다른 개체를 인스턴스화하고 해당 속성을 설정할 수 있습니다. 예를 들어 다음과 같이 속성 설정을 사용하여 `VerticalOptions`와 같은 속성을 `LayoutOptions` 값으로 명시적으로 설정할 수 있습니다.
 
 ```xaml
 <Label>
@@ -143,7 +143,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-또 다른 예는 `Grid`가 `RowDefinitions` 및 `ColumnDefinitions`라는 두 개의 속성을 가지고 있습니다. 해당 두 속성은 `RowDefinitionCollection`과 `ColumnDefinitionCollection` 형식이며, `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션 입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
+또 다른 예로, `Grid`는 `RowDefinitions` 및 `ColumnDefinitions`라는 두 개의 속성을 가지고 있습니다. 해당 두 속성은 `RowDefinitionCollection`및 `ColumnDefinitionCollection` 형식이며, 이들은 `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
 
 다음은 `GridDemoPage` 클래스에 대한 XAML 파일의 시작 부분으로, `RowDefinitions` 및 `ColumnDefinitions` 컬렉션에 대한 속성 요소 태그를 보여줍니다.
 
@@ -168,7 +168,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-자동 크기 조정 셀을, 픽셀 너비 및 높이 셀 및 별 설정을 정의하기 위한 약식 구문을 확인하십시오.
+자동 크기 조정 셀, 픽셀 너비 및 높이 셀 및 별 설정을 정의하기 위한 약식 구문을 확인하십시오.
 
 ## <a name="attached-properties"></a>연결 속성
 
@@ -186,7 +186,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 해당 두 특성의 기본값은 1입니다.
 
-다음은 전체 GridDemoPage.xaml 파일이 입니다.
+다음은 전체 GridDemoPage.xaml 파일입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -251,19 +251,19 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-`Grid.Row`와 `Grid.Column` 설정이 0이면 필요하지 않지만, 명확히 하기 위해 일반적으로 포함합니다.
+`Grid.Row`와 `Grid.Column`을 0으로 설정하는 것은 필요하지 않지만, 명확히 하기 위해 일반적으로 포함합니다.
 
 해당 모양은 다음과 같습니다.
 
 [![](essential-xaml-syntax-images/griddemo.png "모눈 레이아웃")](essential-xaml-syntax-images/griddemo-large.png#lightbox "모눈 레이아웃")
 
-구문에서 결론적으로 미루어 보면, 해당 `Grid.Row`, `Grid.Column`, `Grid.RowSpan` 및 `Grid.ColumnSpan` 속성은 정적(static) 필드 또는 `Grid`의 특성으로 보이지만, 흥미롭게도 `Grid`는 `Row`, `Column`, `RowSpan` 또는 `ColumnSpan` 이름을 가진 어떤것도 정의하지 않습니다.
+구문으로만 미루어 보면, 해당 `Grid.Row`, `Grid.Column`, `Grid.RowSpan` 및 `Grid.ColumnSpan` 속성은 정적(static) 필드 또는 `Grid`의 특성으로 보이지만, 흥미롭게도 `Grid`는 `Row`, `Column`, `RowSpan` 또는 `ColumnSpan` 이름을 가진 어떤 것도 정의하지 않습니다.
 
-대신 `Grid`는 `RowProperty`, `ColumnProperty`, `RowSpanProperty` 및 `ColumnSpanProperty`라는 4 개의 바인딩 가능한 속성을 정의합니다. 해당 속성은 *연결 속성*이라는 특별한 유형의 바인딩 가능한 특성입니다. 이는 `Grid` 클래스에 의해 정의되지만 `Grid`의 자식에 설정됩니다.
+대신 `Grid`는 `RowProperty`, `ColumnProperty`, `RowSpanProperty` 및 `ColumnSpanProperty`라는 4개의 바인딩 가능한 속성을 정의합니다. 해당 속성은 *연결 속성*이라는 특별한 유형의 바인딩 가능한 속성입니다. 이는 `Grid` 클래스에 의해 정의되지만 `Grid`의 자식에 설정됩니다.
 
 코드에서 해당 연결 속성을 사용하려는 경우, `Grid` 클래스는 `SetRow`, `GetColumn`등의 정적(static) 메서드를 제공합니다. 그러나 XAML에서 해당 연결 속성은 간단한 속성 이름을 사용하여 `Grid`의 자식에서 특성으로 설정됩니다.
 
-연결 속성은 항상 XAML 파일에서 클래스와 속성 이름을 마침표로 구분하여 포함하는 특성으로 인식 할 수 있습니다. 하나의 클래스(이 예제의 경우 `Grid`)에서 정의되었지만, 다른 개체(여기서는 자식의 `Grid`)에 연결 되었기 때문에 *연결 속성*이라고 합니다. 레이아웃하는 동안, `Grid`는 각 자식을 배치할 위치를 알기 위해 해당 연결 속성의 값을 조사 할 수 있습니다.
+연결 속성은 항상 XAML 파일에서 클래스와 속성 이름을 마침표로 구분하여 포함하는 특성으로 인식할 수 있습니다. 하나의 클래스(이 예제의 경우 `Grid`)에서 정의되었지만, 다른 개체(여기서는 `Grid`의 자식)에 연결되었기 때문에 *연결 속성*이라고 합니다. 레이아웃하는 동안, `Grid`는 각 자식을 배치할 위치를 알기 위해 해당 연결 속성의 값을 조사할 수 있습니다.
 
 `AbsoluteLayout` 클래스는 `LayoutBounds`와 `LayoutFlags`라는 두 개의 연결 속성을 정의합니다. 다음은 `AbsoluteLayout`의 비례 위치 지정 및 크기 조정 기능을 사용하여 구현된 체스판 패턴입니다.
 
@@ -310,17 +310,17 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-다음과 같습니다.
+화면은 다음과 같습니다.
 
 [![](essential-xaml-syntax-images/absolutedemo-large.png "절대 레이아웃")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "절대 레이아웃")
 
-이런 경우 XAML 사용의 지혜로운 의문을 제기할 수 있습니다. 명확하게는 `LayoutBounds` 사각형의 반복 및 규칙성은 코드에서 더 잘 구현될 수 있지 않냐는 제안입니다.
+이런 경우 XAML 사용의 지혜로움에 의문을 제기할 수 있습니다. `LayoutBounds` 사각형의 반복 및 규칙성으로 보아 코드에서 구현되는 편이 낫지 않았나 생각할 수 있습니다.
 
-이는 확실히 무엇을 사용하느냐의 문제이고, 사용자 인터페이스를 정의 하는 경우 코드와 태그의 균형을 잘 맞추면 문제가 없습니다. XAML에서 일부 시각적 개체를 정의하고, 그런 다음 코드 비하인드 파일의 생성자를 사용하여 루프에서 더 잘 생성할 수 있는 몇 가지 시각적 개체를 추가하는 것이 쉽습니다.
+이는 합당한 우려이며, 사용자 인터페이스를 정의하는 경우 코드와 태그의 균형을 잘 맞추면 문제가 없습니다. XAML에서 일부 시각적 개체를 정의하고, 그런 다음 코드 숨김 파일의 생성자를 사용하여 루프에서 더 잘 생성할 수 있는 몇 가지 시각적 개체를 추가하는 것이 쉽습니다.
 
 ## <a name="content-properties"></a>콘텐츠 속성
 
-이전 예제에서 `StackLayout`, `Grid` 및 `AbsoluteLayout` 개체는 `ContentPage`의 `Content` 속성으로 설정되었고, 해당 레이아웃의 자식들은 실제로 `Children` 컬렉션의 항목들 입니다. 아직 해당 `Content` 및 `Children` 속성은 XAML 파일에 없습니다.
+이전 예제에서 `StackLayout`, `Grid` 및 `AbsoluteLayout` 개체는 `ContentPage`의 `Content` 속성으로 설정되었고, 해당 레이아웃의 자식들은 실제로 `Children` 컬렉션의 항목들입니다. 아직 해당 `Content` 및 `Children` 속성은 XAML 파일에 없습니다.
 
 다음의 **XamlPlusCode** 예제와 같이 `Content` 및 `Children` 속성을 속성 요소로 포함할 수 있습니다.
 
@@ -351,9 +351,9 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-현실적인 질문은 XAML 파일에 해당 속성 요소가 필요하지 *않은* 이유는 무엇인가 입니다.
+진짜 질문은 XAML 파일에 해당 속성 요소가 필요하지 *않은* 이유는 무엇인가입니다.
 
-XAML에서 사용하기 위해 Xamarin.Forms에 정의 된 요소는 클래스의 `ContentProperty` 특성에 플래그가 지정된 하나의 속성을 가질 수 있습니다. 온라인 Xamarin.Forms 문서에서 `ContentPage` 클래스를 검색하면 해당 속성을 볼 수 있습니다.
+XAML에서 사용하기 위해 Xamarin.Forms에 정의된 요소는 클래스의 `ContentProperty` 특성에 플래그가 지정된 하나의 속성을 가질 수 있습니다. 온라인 Xamarin.Forms 문서에서 `ContentPage` 클래스를 검색하면 해당 특성을 볼 수 있습니다.
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Content")]
@@ -362,18 +362,18 @@ public class ContentPage : TemplatedPage
 
 즉, `Content` 속성 요소 태그가 필요하지 않다는 의미입니다. `ContentPage` 태그의 시작과 끝 사이에 나타나는 모든 XML 내용은 `Content` 속성에 할당되는 것으로 간주됩니다.
 
- `StackLayout`, `Grid`, `AbsoluteLayout` 및 `RelativeLayout`은 모두 `Layout<View>`에서 파생되었으며, Xamarin.Forms 문서에서 `Layout<T>`을 검색하면 다음과 같이 또 다른 `ContentProperty` 특성을 찾을 수 있습니다.
+`StackLayout`, `Grid`, `AbsoluteLayout` 및 `RelativeLayout`은 모두 `Layout<View>`에서 파생되었으며, Xamarin.Forms 문서에서 `Layout<T>`를 검색하면 다음과 같이 또 다른 `ContentProperty` 특성을 찾을 수 있습니다.
 
 ```csharp
 [Xamarin.Forms.ContentProperty("Children")]
 public abstract class Layout<T> : Layout ...
 ```
 
-이렇게 하면 레이아웃의 컨텐츠를 명시적으로 `Children` 속성 요소 태그 없이 `Children` 컬렉션에 자동으로 추가 할 수 있습니다.
+이렇게 하면 레이아웃의 컨텐츠를 명시적으로 `Children` 속성 요소 태그 없이 `Children` 컬렉션에 자동으로 추가할 수 있습니다.
 
-또한 다른 클래스는 `ContentProperty` 특성 정의가 있습니다. 예를 들어, `Label`의 컨텐츠 속성은 `Text` 입니다. 다른 것들은 API 설명서를 확인 하십시오.
+다른 클래스들은 `ContentProperty` 특성 정의가 있습니다. 예를 들어, `Label`의 콘텐츠 속성은 `Text` 입니다. 다른 것들은 API 설명서를 확인하십시오.
 
-## <a name="platform-differences-with-onplatform"></a>OnPlatform을 사용하여 플랫폼 구별
+## <a name="platform-differences-with-onplatform"></a>OnPlatform 사용 시의 플랫폼별 차이
 
 단일 페이지 응용 프로그램에서는 iOS 상태 표시줄을 덮어쓰지 않도록 페이지에서 `Padding` 속성을 설정하는 것이 일반적입니다. 이를 위해 다음과 같이 코드에서 `Device.RuntimePlatform` 속성을 사용할 수 있습니다.
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-또한 `OnPlatform` 및 `On` 클래스를 사용하여 XAML에서 다소 비슷한 수행을 할 수도 있습니다. 먼저 `Padding` 속성을 위해 다음과 같이 페이지의 상단 근처에 속성 요소를 추가합니다.
+또한 `OnPlatform` 및 `On` 클래스를 사용하여 XAML에서 비슷한 작업을 할 수도 있습니다. 먼저 페이지의 상단 근처의 `Padding` 속성을 위해 다음과 같이 속성 요소를 추가합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -398,7 +398,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-해당 태그 안에 `OnPlatform` 태그를 포함하십시오. 제네릭(generic) 형식 인수를 지정해야 하고, 이 경우에는 `Padding` 속성 형식인 `Thickness` 입니다. 다행스럽게도 `x:TypeArguments`라는 제네릭 인수를 정의하는 XAML 특성이 있습니다. 속성 유형을 연결하는 설정은 다음과 같습니다.
+해당 태그 안에 `OnPlatform` 태그를 포함하십시오. `OnPlatform`은 제네릭 클래스입니다. 제네릭(generic) 형식 인수를 지정해야 하고, 이 경우에는 `Padding` 속성 형식인 `Thickness`입니다. 다행스럽게도 `x:TypeArguments`라는 제네릭 인수를 정의하는 XAML 특성이 있습니다. 속성 유형을 매칭하는 설정은 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -432,7 +432,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-이제 `On` 요소를 추가 합니다. 각각에 대해 `Platform` 속성 및 `Thickness` 속성에 대한 태그로 `Value` 속성을 다음과 같이 설정합니다.
+이제 `On` 요소를 추가합니다. 각각에 대해 다음과 같이 `Platform` 속성 및 `Value` 속성을 설정하여 `Thickness` 속성을 다음과 같이 설정합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -525,7 +525,7 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 
 ## <a name="summary"></a>요약
 
-속성 요소 및 연결 속성을 사용하여 상당 부분의 기본 XAML 구문을 설정 하였습니다. 그러나 때로는 리소스 사전과 같은 간접 방식으로 개체 속성을 설정해야 합니다. 해당 접근 방식은 다음 부분인 [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)에서 다룹니다.
+속성 요소 및 연결 속성을 사용하여 상당 부분의 기본 XAML 구문을 설정하였습니다. 그러나 때로는 리소스 사전과 같은 간접 방식으로 개체 속성을 설정해야 합니다. 해당 접근 방식은 다음 부분인 [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)에서 다룹니다.
 
 
 
@@ -535,4 +535,4 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. 데이터 바인딩부터 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
