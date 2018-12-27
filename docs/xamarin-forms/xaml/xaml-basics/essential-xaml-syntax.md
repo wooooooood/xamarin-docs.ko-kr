@@ -1,4 +1,4 @@
----
+﻿---
 title: 2부. 필수 XAML 구문
 description: 이 문서에서는 속성 요소 및 연결 속성의 필수 XAML 구문 기능을 설명합니다.
 ms.prod: xamarin
@@ -18,7 +18,7 @@ ms.locfileid: "53059745"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_XAML은 주로 인스턴스화 및 초기화 개체에 대 한 설계 되었습니다. 하지만 XML 문자열로 쉽게 표현할 수 없는 복잡 한 개체에 속성을 설정 해야 하 고 하나의 클래스에 의해 정의 된 속성을 자식 클래스에 설정 해야 하는 경우에 따라 경우가 많습니다. 이러한 두 요구 속성 요소 및 연결 된 속성의 필수 XAML 구문 기능 필요합니다._
+_XAML은 주로 개체 인스턴스화 및 초기화를 위해 설계되었습니다. 하지만 종종 속성을 XML 문자열로 쉽게 표현할 수 없는 복잡한 개체 속성으로 설정해야 하고 하나의 클래스에 의해 정의된 속성을 자식 클래스에 설정해야 하는 경우가 있습니다. 따라서 속성 요소 및 연결 속성이라는 필수 XAML 구문 기능이 필요합니다._
 
 ## <a name="property-elements"></a>속성 요소
 
@@ -80,7 +80,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 `TextColor` 속성을 지정하는 해당 두 방법은 기능적으로 동일하지만, 속성을 실제로 두 번 설정하게 되고 모호할 수 있으므로 동일한 속성에 두 가지 방법을 사용하지 마십시오.
 
-이 새 구문을 사용 하 여 몇 가지 유용한 용어를 도입할 수 있습니다.
+해당 새 구문으로 다음과 같은 몇 가지 편리한 용어를 사용할 수 있습니다.
 
 -  `Label`은 *개체 요소*입니다. XML 요소로 표현된 Xamarin.Forms 개체입니다.
 -  `Text`, `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이들은 XML 특성으로 표현된 Xamarin.Forms 속성입니다.
@@ -525,7 +525,7 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 
 ## <a name="summary"></a>요약
 
-속성 요소 및 연결 된 속성을 사용 하 여 기본 XAML 구문의 상당 부분이 설정 되었습니다. 그러나 때로는 해야 리소스 사전에서 간접 방식으로, 예를 들어, 개체 속성을 설정 합니다. 이 방법은 다음 부분을 파트에 대해서는 [3입니다. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)합니다.
+속성 요소 및 연결 속성을 사용하여 상당 부분의 기본 XAML 구문을 설정하였습니다. 그러나 때로는 리소스 사전과 같은 간접 방식으로 개체 속성을 설정해야 합니다. 해당 접근 방식은 다음 부분인 [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)에서 다룹니다.
 
 
 
@@ -535,4 +535,4 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
