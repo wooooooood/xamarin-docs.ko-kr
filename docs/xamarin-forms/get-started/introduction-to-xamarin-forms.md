@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Forms 소개
 description: 이 문서에서는 Xamarin.Forms에 대한 소개 및 Xamarin.Fomrs를 사용해 응용 프로그램 작성을 시작하는 방법을 제공합니다.
 ms.prod: xamarin
@@ -40,7 +40,7 @@ public partial class App : Application
   public App ()
   {
     InitializeComponent();
-    MainPage = new MainPage(); // MainPage 클래스의 인스턴스화를 위해 App.MainPage 속성을 설정
+    MainPage = new MainPage(); // sets the App.MainPage property to an instance of the MainPage class
   }
 }
 ```
@@ -373,7 +373,7 @@ listView.ItemSelected += async (sender, e) => {
 ```csharp
 listView.ItemSelected += async (sender, e) => {
     var todoItem = (TodoItem)e.SelectedItem;
-    var todoPage = new TodoItemPage(todoItem); // 그러면 새 페이지가 올바른 데이터를 보여준다
+    var todoPage = new TodoItemPage(todoItem); // so the new page shows correct data
     await Navigation.PushAsync(todoPage);
 };
 ```
@@ -441,7 +441,7 @@ class EmployeeCell : ViewCell
 
 코드는 다음 작업을 수행합니다.
 
-- [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
+-  [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 추가하고 `Employee` 개체의 `ImageUri` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩](#Data_Binding)을 참조하세요.
 -  두 개의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤을 갖도록 세로 방향으로 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. `Label` 컨트롤에 `Employee` 개체의 `DisplayName`과 `Twitter`속성을 바인딩합니다.
 -  기존의 [`Image`](xref:Xamarin.Forms.Image)와 `StackLayout`을 호스팅할 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다. 가로 방향을 사용하여 자식을 정렬합니다.
 
@@ -549,7 +549,7 @@ public EmployeeDetailPage(Employee employeeToDisplay)
 }
 ```
 
-[`ContentPage`](xref:Xamarin.Forms.ContentPage) 생성자는 `Employee` 개체의 인스턴스로 전달되고, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)을 바인딩할 개체에 설정합니다. [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤이 인스턴스화되고, *소스* 개체의 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 속성과 `FirstName` 속성 간의 바인딩이 설정됩니다. `Entry` 컨트롤에서 변경된 내용은 자동으로 `employeeToDisplay` 개체로 전파됩니다. 마찬가지로, `employeeToDisplay.FirstName` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Entry` 컨트롤의 내용도 업데이트합니다. 이를 *양방향 바인딩*이라고 합니다. 양방향 바인딩이 작동하기 위해서는 모델 클래스가 `INotifyPropertyChanged` 인터페이스를 구현해야 합니다.
+[`ContentPage`](xref:Xamarin.Forms.ContentPage) 생성자에 `Employee` 개체의 인스턴스가 전달되고, [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 바인딩할 개체에 설정합니다. [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤이 인스턴스화되고, *source* 개체의 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 속성과 `FirstName` 속성 간의 바인딩이 설정됩니다. `Entry` 컨트롤에서 변경된 내용은 자동으로 `employeeToDisplay` 개체로 전파됩니다. 마찬가지로, `employeeToDisplay.FirstName` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Entry` 컨트롤의 내용도 업데이트합니다. 이를 *양방향 바인딩*이라고 합니다. 양방향 바인딩이 작동하기 위해서는 모델 클래스가 `INotifyPropertyChanged` 인터페이스를 구현해야 합니다.
 
 `SetBinding` 메서드는 두 개의 매개 변수를 사용합니다. 첫 번째 매개 변수는 바인딩 유형에 관한 정보를 지정합니다. 두 번째 매개 변수는 바인딩할 항목 또는 바인딩하는 방법에 대한 정보를 제공하는 데 사용됩니다. 두 번째 매개 변수는 대부분의 경우 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)의 속성 이름이 담긴 문자열입니다. 다음 구문을 사용하여 이를 `BindingContext`에 직접 바인딩합니다.
 
@@ -578,7 +578,7 @@ public class MyObject : INotifyPropertyChanged
         {
             if (value.Equals(_firstName, StringComparison.Ordinal))
             {
-                // 아무것도 하지 않음 - 값이 변경되지 않았다.
+                // Nothing to do - the value hasn't changed;
                 return;
             }
             _firstName = value;

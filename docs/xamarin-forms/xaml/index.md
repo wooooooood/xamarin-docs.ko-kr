@@ -1,6 +1,6 @@
 ---
-title: eXtensible Application Markup Language (XAML)
-description: XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 마크업 언어입니다. XAML 구문을 사용한 XML 파일에서 사용자 인터페이스를 정의하고 런타임 동작은 비하인드 코드 파일에 정의합니다.
+title: XAML(eXtensible Application Markup Language)
+description: XAML은 사용자 인터페이스를 정의하는 데 사용할 수 있는 선언적 태그 언어입니다. 사용자 인터페이스를 별도 코드 숨김 파일에서 런타임 동작을 정의하는 동안 XAML 구문을 사용하여 XML 파일로 정의합니다.
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
@@ -16,7 +16,7 @@ ms.locfileid: "51563077"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
-_XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 마크업 언어입니다. XAML 구문을 사용한 XML 파일에서 사용자 인터페이스를 정의하고 런타임 동작은 비하인드 코드 파일에 정의합니다._
+_XAML은 사용자 인터페이스를 정의하는 데 사용할 수 있는 선언적 태그 언어입니다. 사용자 인터페이스를 별도 코드 숨김 파일에서 런타임 동작을 정의하는 동안 XAML 구문을 사용하여 XML 파일로 정의합니다._
 
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
@@ -29,11 +29,11 @@ _XAML은 사용자 인터페이스를 정의 하는 데 사용하는 선언적 �
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[XAML 기본 사항](xaml-basics/index.md)
 
-XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 코드보다 태그를 이용해 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 요소는 아니지만 도구를 사용할 수 있게 해주고, 같은 기능을 하는 코드보다 시각적으로 더욱 일관되고 간결합니다. XAML은 많이 사용되는 Model-View-ViewModel (MVVM) 아키텍처를 사용 하는 데 특히 적합합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드를 연결한 뷰를 정의할 수 있습니다.
+XAML은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만, 도구화되어 있고 시각적으로 일관적이며 동일한 코드보다 더 간결합니다. XAML은 인기 있는 MVVM (Model-View-ViewModel) 응용 프로그램 아키텍처를 사용하는 데 특히 적합합니다. XAML은 XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결된 View를 정의합니다.
 
 ## <a name="xaml-compilationxamlcmd"></a>[XAML 컴파일](xamlc.md)
 
-필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC와 그 혜택을 사용하는 방법을 설명합니다.
+XAML 컴파일러(XAMLC)를 사용하여 선택적으로 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC와 그 혜택을 사용하는 방법을 설명합니다.
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[XAML 미리 보기](xaml-previewer.md)
 
@@ -61,7 +61,7 @@ Xamarin.Forms에서는 공용 언어 런타임 (CLR) 속성의 기능을 Bindabl
 
 ## <a name="attached-propertiesattached-propertiesmd"></a>[Attached Properties](attached-properties.md)
 
-Attached property는 어느 하나의 클래스에 정의하였지만 다른 개체에 연결할 수 있는 특수 형식입니다. 또한 이는 XAML에서 클래스와 속성을 마침표로 구분한 특성(Attribute)를 통해 사용할 수 있습니다. 이 문서에서는 Attached Properties에 대한 소개와 어떻게 만들고 사용하는지에 대해 알아봅니다.
+연결된 된 속성은 다른 개체에 연결 없이 하나의 클래스로 정의되고, XAML에서 점으로 구별되는 클래스와 속성 이름을 포함하는 특성으로 인식 가능한 특수한 유형의 바인딩 가능한 속성입니다. 이 문서에서는 연결된 속성에 대해 소개하고 연결된 속성 생성및 사용 방법을 설명합니다.
 
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[Resource Dictionaries](resource-dictionaries.md)
 
