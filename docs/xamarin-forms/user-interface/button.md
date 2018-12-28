@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054426"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746897"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>단추를 사용 하지 않도록 설정
 
-경우에 따라 응용 프로그램은 특정 상태의 경우 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 해야 사용할 수 없게 설정 하 여 해당 `IsEnabled` 속성을 `false`입니다. 전형적인 예는 `Entry` 파일 열기와 함께 파일에 대 한 제어 `Button`:를 `Button` 에 일부 텍스트를 입력 하는 경우에 사용 해야는 `Entry`합니다.
+경우에 따라 응용 프로그램은 특정 상태의 경우 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 해야 사용할 수 없게 설정 하 여 해당 `IsEnabled` 속성을 `false`입니다. 전형적인 예는 `Entry` 열려 있는 파일-동반 파일 이름에 대 한 제어 `Button`: 합니다 `Button` 에 일부 텍스트를 입력 하는 경우에 사용 해야는 `Entry`합니다.
 사용할 수는 `DataTrigger` 에 표시 된 대로이 태스크에 대 한는 [ **데이터 트리거** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) 문서.
 
 ## <a name="using-the-command-interface"></a>인터페이스를 사용 하 여
@@ -409,7 +409,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 [![단추를 눌렀다](button-images/PressAndReleaseButton.png "누른 단추")](button-images/PressAndReleaseButton-Large.png)
 
-이러한 유형의 동작에 게임에 대 한 응용 프로그램: 보유 한 손가락을 `Button` on 화면 개체가 특정 방향으로 이동 해야 합니다.
+이러한 유형의 동작이 게임에 대 한 응용 프로그램에 있습니다. 보유 한 손가락을 `Button` on 화면 개체가 특정 방향으로 이동 해야 합니다.
 
 <a name="button-appearance" />
 
@@ -573,7 +573,7 @@ UWP에서 선택 하는 `CornerRadius` 높이의 절반을 초과 하는 `Button
 
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</ImageButton>
+</Button>
 ```
 
 `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) 되도록 지정 합니다 [ `Button` ](xref:Xamarin.Forms.Button) 를 누르면 해당 [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) 속성에서 변경할 수는 해당 1 0.8은 사용자의 기본 값입니다. 합니다 `Normal` `VisualState` 되도록 지정 합니다 `Button` 정상 상태의 해당 `Scale` 속성이 1로 설정 됩니다. 따라서 전체적인 효과 때를 `Button` 는 약간 더 작은 및 시기를 재조정는 누른는 `Button` 는 기본 크기를 재조정은 해제 합니다.
@@ -582,7 +582,7 @@ UWP에서 선택 하는 `CornerRadius` 높이의 절반을 초과 하는 `Button
 
 ## <a name="creating-a-toggle-button"></a>설정/해제 단추 만들기
 
-서브 클래스 수 `Button` 켜기 / 끄기 스위치를 같은 작동 되도록: 단추를 한 번 설정/해제 단추를 해제 하기 위해 다시 탭을 탭 합니다.
+서브 클래스 수 `Button` 켜기 / 끄기 스위치를 같은 작동 되도록 합니다. 설정/해제 단추를 해제 하기 위해 다시 탭 한 번만 단추를 누릅니다.
 
 다음 `ToggleButton` 클래스에서 파생 되며 `Button` 라는 새 이벤트를 정의 하 고 `Toggled` 및 라는 부울 속성이 `IsToggled`합니다. 다음은 Xamarin.Forms를 정의한 동일한 두 개의 속성 [ `Switch` ](xref:Xamarin.Forms.Switch):
 
