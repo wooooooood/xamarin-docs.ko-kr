@@ -72,7 +72,7 @@ ms.locfileid: "52742887"
     </ContentPage>
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
 7. **솔루션 탐색기**에서 **MainPage.xaml**을 확장한 다음, **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
@@ -126,13 +126,13 @@ ms.locfileid: "52742887"
     > [!NOTE]
     > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정하려고 하는 지점에서 오류가 발생합니다.
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
 9. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item.png "새 항목 추가")
 
-10. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Class**를 선택하고, 새 파일에 **PhoneTranslator**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
+10. **새 항목 추가** 대화 상자에서 **Visual C# > Code > 클래스**를 선택하고, 새 파일에 **PhoneTranslator**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/add-translator-class.w157.png "새 클래스 추가")
 
@@ -192,13 +192,13 @@ ms.locfileid: "52742887"
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **PhoneTranslator.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **PhoneTranslator.cs**에 저장하고 파일을 닫습니다.
 
 12. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item.png "새 항목 추가")
 
-13. **새 항목 추가** 대화 상자에서 **Visual C# > Code > Interface**를 선택하고, 새 파일에 **IDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
+13. **새 항목 추가** 대화 상자에서 **Visual C# > Code > 인터페이스**를 선택하고, 새 파일 이름을 **IDialer**라고 입력하고 **추가** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/add-idialer-interface.w157.png "새 인터페이스 추가")
 
@@ -214,7 +214,7 @@ ms.locfileid: "52742887"
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **IDialer.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **IDialer.cs**에 저장하고 파일을 닫습니다.
 
     > [!NOTE]
     > 응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
@@ -223,7 +223,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/vs/add-new-item-ios.png "새 항목 추가")
 
-16. **새 항목 추가** 대화 상자에서 **Apple > Code > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
+16. **새 항목 추가** 대화 상자에서 **Apple > Code > 클래스**를 선택하고, 새 파일 이름에 **PhoneDialer**라고 입력하고 **추가** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "새 클래스 추가")
 
@@ -249,13 +249,13 @@ ms.locfileid: "52742887"
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 닫습니다.
 
 18. **솔루션 탐색기**에서 **Phoneword.Android** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가 > 새 항목...** 을 클릭합니다.
 
     ![](quickstart-images/vs/add-new-item-android.png "새 항목 추가")
 
-19. **새 항목 추가** 대화 상자에서 **Visual C# > Android > Class**를 선택하고, 새 파일에 **PhoneDialer**라는 이름을 지정하고 **추가** 단추를 클릭합니다.
+19. **새 항목 추가** 대화 상자에서 **Visual C# > Android > 클래스**를 선택하고, 새 파일 이름에 **PhoneDialer**라고 지정하고 **추가** 단추를 클릭합니다.
 
     ![](quickstart-images/vs/new-phone-dialer-android.w157.png "새 클래스 추가")
 
@@ -308,7 +308,7 @@ ms.locfileid: "52742887"
     }
     ```
 
-    이 코드는 최신 Android API를 사용한다고 가정합니다. **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 선택합니다.
+    이 코드는 최신 Android API를 사용한다고 가정합니다. **CTRL+S** 키를 눌러 변경 내용을 **PhoneDialer.cs**에 저장하고 파일을 닫습니다.
 
 21. **솔루션 탐색기**의 **Phoneword.Android** 프로젝트에서 **MainActivity.cs**를 두 번 클릭하여 열고, 모든 템플릿 코드를 제거한 후 다음 코드로 바꿉니다.
 
@@ -343,7 +343,7 @@ ms.locfileid: "52742887"
 
 22. **솔루션 탐색기**의 **Phoneword.Android** 프로젝트에서 **Properties**을 두 번 클릭한 다음 **Android 매니페스트** 탭을 선택합니다.
 
-    ![](quickstart-images/vs/android-manifest.png "빌드 > Android Manifest 열기")
+    ![](quickstart-images/vs/android-manifest.png "빌드 > Android 매니페스트 열기")
 
 23. **필수 권한** 섹션에서 **CALL_PHONE** 권한을 사용하도록 설정합니다. 그러면 응용 프로그램에 전화를 거는 권한이 주어집니다.
 
@@ -365,11 +365,11 @@ ms.locfileid: "52742887"
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Mac용 Visual Studio 시작
 
-1. Mac용 Visual Studio를 시작하고, 시작 페이지에서 **새 프로젝트...** 를 클릭하여 새 프로젝트를 만듭니다.
+1. Mac용 Visual Studio을 시작하고, 시작 페이지에서 **New Project...** 를 클릭하여 새 프로젝트를 만듭니다.
 
     ![](quickstart-images/xs/new-solution.png "새 솔루션")
 
-2. **새 프로젝트에 대한 템플릿 선택** 대화 상자에서 **다중 플랫폼 > 앱**을 클릭하여 **빈 Forms 앱** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
+2. **Choose a template for your new project** 대화 상자에서 **Multiplatform > App**을 클릭하여 **Blank Forms App** 템플릿을 선택하고 **Next** 단추를 클릭합니다.
 
     ![](quickstart-images/xs/choose-template.png "템플릿 선택")
 
@@ -689,7 +689,7 @@ ms.locfileid: "52742887"
 
     **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **AndroidManifest.xml**에 저장하고 파일을 닫습니다.
 
-24. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(하거나 **&#8984; + B** 키를 누릅니다). 응용 프로그램이 빌드하고 성공 메시지가 Mac용 Visual Studio 상태 표시줄에 표시됩니다.
+24. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택하거나 **&#8984; + B** 키를 누릅니다. 응용 프로그램이 빌드되고 성공 메시지가 Mac용 Visual Studio 상태 표시줄에 표시됩니다.
 
     ![](quickstart-images/xs/build-successful.png "빌드 성공")
 

@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: HT
+ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055730"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746884"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
@@ -22,7 +22,7 @@ _데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연�
 
 ## <a name="data-bindings"></a>데이터 바인딩
 
-데이터 바인딩 이라는 두 개체, 속성 연결 합니다 *소스* 및 *대상*합니다. 코드에서 두 단계가 필요: 합니다 `BindingContext` 원본 개체를 대상 개체의 속성을 설정 해야 및 `SetBinding` 메서드 (종종 함께 사용 합니다 `Binding` 클래스)의 속성을 바인딩하려면 대상 개체에서 호출 해야 원본 개체의 속성에 대 한 개체입니다.
+데이터 바인딩 이라는 두 개체, 속성 연결 합니다 *소스* 및 *대상*합니다. 코드에서 두 단계가 필요 합니다. `BindingContext` 원본 개체를 대상 개체의 속성을 설정 해야 하며 `SetBinding` 메서드 (종종 함께 사용를 `Binding` 클래스) 원본의 속성에 해당 개체의 속성 바인딩 대상 개체에서 호출 해야 개체입니다.
 
 대상 속성은 대상 개체가 `BindableObject`에서 파생되어야 한다는 것을 의미하는 바인딩 가능한 속성이어야 합니다. 온라인 Xamarin.Forms 문서는 어떤 속성이 바인딩 가능한 속성인지를 나타냅니다. `Text`와 같은 `Label`의 속성은 바인딩 가능한 속성 `TextProperty`와 연관됩니다.
 
@@ -71,7 +71,7 @@ _데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연�
 
 `x:Reference` 바인딩 확장은 참조된 요소의 이름으로 설정하기 위해 `Name`이라는 속성을 정의하는데, 이 경우에는 `slider`입니다. 그러나 `x:Reference` 태그 확장을 정의하는 `ReferenceExtension` 클래스는 또한 명시적으로 필수가 아닌 `Name`을 위한 `ContentProperty` 특성을 정의합니다. 다양성을 위해서, 다음과 같이 `x:Reference`는 "Name="을 포함하지만 두 번째는 포함하지 않습니다.
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -79,7 +79,7 @@ BindingContext="{x:Reference slider}"
 
 `Binding` 태그 확장 자체는 `BindingBase` 및 `Binding` 클래스처럼 여러 속성을 가질 수 있습니다. `Binding`에 대한 `ContentProperty`는 `Path`이지만, 태그 확장의 일부인 "Path="은 경로가 `Binding` 태그 확장에서 첫 번째 항목인 경우 생략할 수 있습니다. 다음과 같이 첫 번째 예제는 "Path="이 있지만 두 번째 예제에서는 생략합니다.
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -87,7 +87,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 다음과 같이 속성은 모두 한줄에 표현하거나 여러 줄로 구분할 수 있습니다.
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -96,7 +96,7 @@ Text="{Binding Value,
 
 표시 된 `StringFormat` 두 번째에서 속성 `Binding` 태그 확장 합니다. Xamarin.forms에 바인딩 모든 암시적 형식 변환을 수행 하지 않습니다 및 형식 변환기를 제공 하거나 사용 해야는 문자열이 아닌 개체를 문자열로 표시 하는 경우 `StringFormat`합니다. 내부적으로 정적 `String.Format` 메서드를 구현 하는 `StringFormat`합니다. 잠재적으로 문제가 있는 경우, 중괄호도 태그 확장 구분 하는 데 사용 되는.NET의 서식 사양을 사용 되므로 이렇게 하면 XAML 파서를 혼동 하는 위험이 만들어집니다. 이 문제를 방지 하려면 작은따옴표로 전체 서식 문자열을 넣습니다.
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -117,7 +117,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 다음 프로그램은 `OneWayToSource`와 `TwoWay` 바인딩 모드의 일반적인 사용법을 보여줍니다. 네 개의 `Slider` 뷰는 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성을 제어하기 위한 것입니다. 처음에는 `Label`의 네 가지 속성이 각각 `Slider`에 의해 설정되기 때문에 데이터 바인딩 대상이어야 하는 것처럼 보입니다. 그러나, `Label`의 `BindingContext`는 하나의 개체일 수 있으며, 네 개의 다른 슬라이더가 있습니다.
 
-따라서 모든 바인딩을 설정 보이는 이전 버전과 방법으로:는 `BindingContext` 로 설정 되어 각 네 개의 슬라이더를 `Label`에 바인딩을 설정 하 고는 `Value` 슬라이더의 속성입니다. 사용 하 여는 `OneWayToSource` 및 `TwoWay` 모드 이러한 `Value` 속성에는 원본 속성을 설정할 수는 `Scale`, `Rotate`, `RotateX`, 및 `RotateY` 의 속성을 `Label`:
+따라서 모든 바인딩을 설정 보이는 이전 버전과 방법으로: `BindingContext` 로 설정 되어 각 네 개의 슬라이더를 `Label`에 바인딩을 설정 하 고는 `Value` 슬라이더의 속성입니다. 사용 하 여는 `OneWayToSource` 및 `TwoWay` 모드 이러한 `Value` 속성에는 원본 속성을 설정할 수는 `Scale`, `Rotate`, `RotateX`, 및 `RotateY` 의 속성을 `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

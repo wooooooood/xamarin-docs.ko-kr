@@ -1,4 +1,4 @@
----
+﻿---
 title: 도구 상자를 사용하여 Xamarin.Forms XAML 편집
 description: XAML 도구 상자에는 열린 XAML 파일로 직접 끌어올 수 있는 기본 제공 레이아웃 및 컨트롤이 모두 포함되어 있습니다.
 ms.prod: xamarin
@@ -20,7 +20,7 @@ Visual Studio 2017 버전 15.8 및 Visual Studio for Mac 7.6에는 현재 Xamari
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio 2017에서 편집을 위해 Xamarin.Forms XAML 파일을 엽니다. 키를 눌러 도구 상자를 표시할 수 있습니다 **Ctrl + W, X** 바로 가기 키를 선택 하거나 합니다 **보기 > 도구 상자** 메뉴 항목입니다.
+Visual Studio 2017에서 편집을 위해 Xamarin.Forms XAML 파일을 엽니다. 도구 상자는 키보드에서 **Ctrl + W, X**를 누르거나 **보기 > 도구 상자** 메뉴 항목을 선택하여 보이게 할 수 있습니다.
 
 ![보기-도구 상자 메뉴](toolbox-images/win-view-menu.png)
 
@@ -32,7 +32,7 @@ Visual Studio 2017에서 편집을 위해 Xamarin.Forms XAML 파일을 엽니다
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-Mac 용 Visual Studio에서 선택 합니다 **보기 > 패드 > 도구 상자** 도구 상자에 표시할 메뉴 항목:
+Visual Studio for Mac에서 도구 상자를 표시하기 위해서는 다음과 같이 **보기 > 패드 > 도구 상자** 메뉴 항목을 선택합니다.
 
 ![보기-패드-도구 상자 메뉴](toolbox-images/mac-view-menu.png)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8df7e14088486d0eff9a6370303e83c5e69d4484
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119106"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746910"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.Mac의 이미지
 
@@ -219,22 +219,23 @@ MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 뷰 컨트롤러에 다음 공용 함수를 추가 합니다.
 
 ```csharp
-public NSImage ImageTintedWithColor (NSImage image, NSColor tint)
-{
-    var tintedImage = image.Copy () as NSImage;
-    var frame = new CGRect (0, 0, image.Size.Width, image.Size.Height);
+public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
+    => NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+        // Draw the original source image
+        sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-    // Apply tint
-    tintedImage.LockFocus ();
-    tint.Set ();
-    NSGraphics.RectFill (frame, NSCompositingOperation.SourceAtop);
-    tintedImage.UnlockFocus ();
-    tintedImage.Template = false;
+        // Apply tint
+        tintColor.Set();
+        NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-    // Return tinted image
-    return tintedImage;
-}
+        return true;
+    });
 ```
+
+> [!IMPORTANT]
+> 특히 도입 되면서 어두운 모드 Mojave macOS에서, 것이 중요 하지 않으려면 합니다 `LockFocus` reating 사용자 지정 렌더링 될 때 API `NSImage` 개체입니다. 이러한 이미지는 정적 해지고 모양이 나 표시 밀도 변경에 대 한 계정에 자동으로 업데이트 되지 않습니다.
+>
+> 위의 처리기 기반 메커니즘을 사용 하 여 동적인 조건에 대 한 렌더링 다시 자동으로 발생 경우 합니다 `NSImage` 에서 호스팅되는, 예를 들어는 `NSImageView`합니다.
 
 마지막으로 템플릿 이미지를 색칠 할 색을 지정 하려면 이미지에 대해이 함수를 호출 합니다.
 
@@ -246,7 +247,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>테이블 뷰를 사용 하 여 이미지를 사용 하 여
 
-셀의 일부로 이미지를 포함 하는 `NSTableView`에서 테이블 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여를 `NSTableCellView` 대신 일반적인 `NSTextField`합니다. 예를 들어:
+셀의 일부로 이미지를 포함 하는 `NSTableView`에서 테이블 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여를 `NSTableCellView` 대신 일반적인 `NSTextField`합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -344,7 +345,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>개요 보기를 사용 하 여 이미지를 사용 하 여
 
-셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여를 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들어:
+셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여를 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
