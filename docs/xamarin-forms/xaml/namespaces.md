@@ -16,7 +16,7 @@ ms.locfileid: "51563045"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms의 XAML 네임 스페이스
 
-_XAML 네임 스페이스 선언에 대 한 xmlns XML 특성을 사용합니다. 이 문서는 XAML 네임 스페이스 구문을 소개 하 고 형식에 액세스 하는 XAML 네임 스페이스를 선언 하는 방법을 보여 줍니다._
+_XAML 네임 스페이스 선언에 xmlns XML 특성을 사용합니다. 이 문서는 XAML 네임 스페이스 구문을 소개하고 XAML 네임 스페이스를 선언하여 유형에 접근하는 방법을 보여줍니다._
 
 ## <a name="overview"></a>개요
 
