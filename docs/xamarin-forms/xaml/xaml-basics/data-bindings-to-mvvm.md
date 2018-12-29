@@ -18,7 +18,7 @@ ms.locfileid: "53054035"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_모델-뷰-ViewModel (MVVM) 아키텍처 패턴은 XAML을 사용 하 여 염두에서 이었으니까요. 세 소프트웨어 계층 간의 분리를 적용 하는 패턴-; 뷰라고 XAML 사용자 인터페이스 기본 데이터 모델 호출 고 뷰와 모델 간의 중개자로 ViewModel 이라고 합니다. 종종 뷰와 ViewModel이 XAML 파일에 정의 된 데이터 바인딩을 통해 연결 됩니다. 뷰에 대 한 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
+_MVVM(Model-View-ViewModel) 아키텍처 패턴은 XAML을 염두에 두고 고안되었습니다. 해당 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, ViewModel이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다. 종종 뷰와 ViewModel은 XAML 파일에 정의된 데이터 바인딩을 통해 연결됩니다. 뷰의 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
 
 ## <a name="a-simple-viewmodel"></a>간단한 ViewModel
 
@@ -35,7 +35,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` 매우 특별 한 속성: 설정 하는 경우는 `BindingContext` 해당 요소의 모든 자식에 의해 상속 된 요소에 대해 합니다. 즉, 모든 자식을 합니다 `StackLayout` 이 동일한 `BindingContext`, 고 해당 개체의 속성에 대 한 간단한 바인딩을 포함할 수 있습니다.
+`BindingContext`는 매우 특별한 속성입니다. 하나의 요소에 `BindingContext`를 설정하면, 해당 요소의 모든 자식에게 상속됩니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
 
 **One-Shot DateTime** 프로그램에서 두 개의 자식은 `DateTime` 값의 속성에 바인딩을 포함하고 있지만, 다른 두 자식은 바인딩 경로가 없는 것으로 보입니다. 이는 다음과 같이 `DateTime` 값 자체가 `StringFormat`에 사용됨을 의미합니다.
 
@@ -118,7 +118,7 @@ namespace XamlSamples
 }
 ```
 
-Viewmodel 일반적으로 구현 합니다 `INotifyPropertyChanged` 클래스에서 발생 하는 인터페이스를 `PropertyChanged` 해당 속성 중 하나가 변경 될 때마다 이벤트. 이 처리기를 연결 하는 Xamarin.Forms에 데이터 바인딩 메커니즘인 `PropertyChanged` 속성이 변경 될 때 알림을 받을 수 있도록 이벤트 및 새 값으로 업데이트 대상 유지 합니다.
+ViewModel은 일반적으로 `INotifyPropertyChanged` 인터페이스를 구현합니다. 즉, 속성 중 하나가 변경될 때마다 클래스가 `PropertyChanged` 이벤트를 발생시킵니다. Xamarin.Forms의 데이터 바인딩 메커니즘은 해당 `PropertyChanged` 이벤트에 처리기를 붙여 속성이 변경될 때 이를 알리고 새 값으로 대상을 업데이트합니다.
 
 해당 ViewModel에 기반한 시계는 다음과 같이 간단해질 수 있습니다.
 
@@ -292,15 +292,15 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-각 바인딩에 `Label` 기본값인 `OneWay`합니다. 만 값을 표시 해야 합니다. 하지만 각각의 바인딩에서 `Slider` 는 `TwoWay`합니다. 따라서는 `Slider` ViewModel에서 초기화 되어야 합니다. 에 `Color` 속성이 `Aqua` ViewModel 인스턴스화될 때. 하지만 변경은 `Slider` 다음 새 색을 계산 하는 ViewModel의 속성에 대 한 새 값을 설정 해야 합니다.
+각 `Label`의 바인딩은 기본값이 `OneWay`이므로. 값만 표시하면 됩니다. 하지만 각 `Slider`의 바인딩은 `TwoWay`이므로. `Slider`는 ViewModel에서 초기화할 수 있습니다. ViewModel이 인스턴스화될 때, `Color` 속성은 `Aqua`로 설정됩니다. 하지만 `Slider`를 변경하면 뷰모델의 속성 값을 새로 설정해야 새로운 색상이 계산됩니다.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "양방향 데이터 바인딩을 사용하는 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "양방향 데이터 바인딩을 사용하는 MVVM")
 
 ## <a name="commanding-with-viewmodels"></a>ViewModel을 사용하여 명령 실행
 
-MVVM 패턴은 대부분의 경우에서 데이터 항목의 조작에 제한 됩니다: 뷰의 사용자 인터페이스 개체 병렬 ViewModel에 있는 데이터 개체입니다.
+대부분의 경우 MVVM 패턴은 데이터 항목의 조작으로 제한됩니다. 뷰의 사용자 인터페이스 개체는 ViewModel의 데이터 개체와 병렬입니다.
 
-그러나 경우에 따라 뷰를 포함 해야 ViewModel에 다양 한 작업을 트리거하는 단추 합니다. ViewModel이 없어야 합니다. 하지만 `Clicked` 단추에 대 한 처리기 하므로 특정 사용자 인터페이스 패러다임을 ViewModel에 연결 될 것입니다.
+하지만 뷰에는 ViewModel에서 다양한 작업을 실행하는 단추가 포함되는 경우가 있습니다. 그러나 ViewModel은 특정 사용자 인터페이스 패러다임을 ViewModel에 묶어주기 때문에 `Clicked` 처리기를 포함시키면 안됩니다.
 
 ViewModel이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 해주지만, ViewModel 내에서 메서드를 호출할 수 있도록 하려면 *command* 인터페이스가 있어야 합니다. 이 명령의 인터페이스는 Xamarin.Forms의 다음과 같은 요소에서 지원됩니다.
 
@@ -315,7 +315,7 @@ ViewModel이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 
 `SearchBar`와 `ListView` 요소를 제외하고, 해당 요소들은 다음과 같이 두 개의 속성을 정의합니다.
 
 -  `System.Windows.Input.ICommand` 유형의 `Command`
--  `CommandParameter` 유형의 `Object`
+-  `Object` 유형의 `CommandParameter`
 
 `SearchBar`는 `SearchCommand` 및  `SearchCommandParameter` 속성을 정의하는 반면 `ListView`는 `ICommand` 유형의 `RefreshCommand`를 정의합니다.
 
@@ -327,7 +327,7 @@ ViewModel이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 
 
 ViewModel은 `ICommand` 유형의 속성을 정의할 수 있습니다. 그런 다음 해당 속성들을 `Button`이나 다른 요소의 `Command` 속성 또는 해당 인터페이스를 구현하는 사용자 지정 뷰에 바인딩할 수 있습니다. 선택적으로 `CommandParameter` 속성을 설정하여 해당 ViewModel 속성에 바인딩된 개별 `Button` 개체(또는 다른 요소)를 식별할 수 있습니다. 내부적으로 `Button`은 사용자가 `Button`을 누를 때마다 `Execute` 메서드를 호출하고 `Execute` 메서드에 자신의 `CommandParameter`를 전달합니다.
 
-`CanExecute` 메서드 및 `CanExecuteChanged` 이벤트의 경우에 사용 되는 `Button` 탭 않을, 현재 유효한 경우는 `Button` 자체를 비활성화 해야 합니다. `Button` 호출 `CanExecute` 때 합니다 `Command` 속성이 먼저 언제는 `CanExecuteChanged` 이벤트가 발생 합니다. 경우 `CanExecute` 반환 `false`서 `Button` 자체를 사용 하지 않도록 설정 하 고 생성 하지 않습니다 `Execute` 호출 합니다.
+`CanExecute` 메서드 및 `CanExecuteChanged` 이벤트는 `Button`을 탭하는 현재의 상황이 무효가 될 수 있는 경우에 사용합니다. 이 경우 `Button`은 스스로 비활성화되어야 합니다. `Button`은 `Command` 속성이 처음 설정될 때와 `CanExecuteChanged` 이벤트가 발생할 때마다 `CanExecute`를 호출합니다. `CanExecute`가 `false`를 반환하면 `Button`은 스스로 비활성화되고 `Execute`를 호출하지 않습니다.
 
 ViewModel에 명령 추가를 돕기 위하여 Xamarin.Forms는 `ICommand`를 구현하는 두 클래스를 정의하는 데, 이는 `Command`와 `Execute` 및 `CanExecute`에 대한 인수의 유형이 `T`인 `Command<T>`입니다. 해당 두 클래스는 여러 생성자와 ViewModel이 `CanExecuteChanged` 이벤트를 발생시키도록 `Command` 개체를 강제로 호출하는 `ChangeCanExecute` 메서드의 연결을 정의합니다.
 
@@ -553,9 +553,9 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-`Command` 첫 번째 속성 `Button` 이 표시 되는 태그에 바인딩되어를 `DeleteCharCommand`; 나머지 부분에 바인딩된를 `AddCharCommand` 사용 하 여를 `CommandParameter` 에 표시 되는 문자는 동일 합니다 `Button` 얼굴. 작업에서 프로그램이 다음과 같습니다.
+해당 태그에 나타나는 첫 번째 `Button`의 `Command` 속성은 `DeleteCharCommand`에 바인딩되어 있습니다. 나머지는 `AddCharCommand`와 `Button` 표면에 표시되는 문자와 동일한 `CommandParameter`를 가지고 있습니다. 동작 중인 프로그램은 다음과 같습니다.
 
-[![](data-bindings-to-mvvm-images/keypad.png "MVVM 및 명령을 사용 하 여 계산기")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "명령과 MVVM을 사용 하 여 계산기")
+[![](data-bindings-to-mvvm-images/keypad.png "MVVM 및 명령을 사용하는 계산기")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "MVVM 및 명령을 사용하는 계산기")
 
 ### <a name="invoking-asynchronous-methods"></a>비동기 메서드 호출
 
@@ -680,7 +680,7 @@ public class PageDataViewModel
 
 다음과 같이 페이지는 스크롤 가능한 목록으로 표시됩니다.
 
-[![](data-bindings-to-mvvm-images/mainpage.png "페이지의 스크롤 가능한 목록이")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "스크롤 가능한 목록이 페이지")
+[![](data-bindings-to-mvvm-images/mainpage.png "페이지의 스크롤 가능한 목록")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "페이지의 스크롤 가능한 목록")
 
 코드 숨김 파일에서 처리기(handler)는 사용자가 항목을 선택할 때 실행됩니다. 처리기는 다음과 같이 `ListBox`의 `SelectedItem` 속성을 `null`로 설정한 다음 선택한 페이지를 인스턴스화하고 해당 페이지로 이동합니다.
 
