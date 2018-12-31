@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105547"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814039"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>원격 알림 firebase Cloud Messaging
 
@@ -137,7 +137,7 @@ FCM에서 메시지를 수신 하는 [Xamarin Firebase-메시징](https://www.nu
 
 1.  Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가...** .
 
-2.  확인할 **시험판 패키지 표시** 검색 **Xamarin.Firebase.Messaging**합니다.
+2.  검색할 **Xamarin.Firebase.Messaging**합니다.
 
 3.  이 패키지를 설치 합니다 **FCMClient** 프로젝트:
 
@@ -771,7 +771,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM 모두에서 장치 등록을 취소 하려면 호출 하 여 인스턴스 ID를 삭제 합니다 [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드는 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스입니다. 예를 들어:
+FCM 모두에서 장치 등록을 취소 하려면 호출 하 여 인스턴스 ID를 삭제 합니다 [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드는 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스입니다. 다음은 사용 예를 보여줍니다.
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();
@@ -793,8 +793,7 @@ Java.Lang.IllegalStateException: Default FirebaseApp is not initialized in this 
 Make sure to call FirebaseApp.initializeApp(Context) first.
 ```
 
-솔루션을 정리 하 고 프로젝트를 다시 작성 하 여 해결할 수 있는 알려진된 문제입니다 (**빌드 > 솔루션 정리**하십시오 **빌드 > 솔루션 다시 빌드**). 자세한 내용은 참조 [포럼 토론](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process)합니다.
-
+솔루션을 정리 하 고 프로젝트를 다시 작성 하 여 해결할 수 있는 알려진된 문제입니다 (**빌드 > 솔루션 정리**하십시오 **빌드 > 솔루션 다시 빌드**).
 
 ## <a name="summary"></a>요약
 
