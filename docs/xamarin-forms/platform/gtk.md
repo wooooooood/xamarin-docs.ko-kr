@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 132f31f4c9426dfceeef38f464231d1545f4db50
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcfcf6c29b0a055c59501d6d95d4f97c16475bb3
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115174"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815232"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
 
@@ -106,7 +106,7 @@ GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한
 
     ![프로젝트 출력 형식을 변경](gtk-images/win/change-project-output-type.png "프로젝트 출력 형식 변경")
 
-13. 에 **솔루션 탐색기**, WPF 프로젝트를 마우스 오른쪽 단추로 **시작 프로젝트로 설정**합니다. F5 키를 눌러 Visual Studio 디버거를 사용 하 여 Windows 바탕 화면에서 프로그램을 실행 하려면:
+13. 에 **솔루션 탐색기**GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **시작 프로젝트로 설정**합니다. F5 키를 눌러 Visual Studio 디버거를 사용 하 여 Windows 바탕 화면에서 프로그램을 실행 하려면:
 
     ![GTK # 게임 수명의](gtk-images/win/gtk-gameoflife.png "GTK # 게임 수명")
 
