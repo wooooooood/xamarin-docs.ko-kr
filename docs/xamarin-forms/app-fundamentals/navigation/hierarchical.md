@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994678"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058992"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으로 뒤로 탐색할 수 있는 계층적 탐색 환경을 제공합니다. 이 클래스는 탐색을 Page 개체의 LIFO(후입선출) 스택으로 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용하여 페이지 스택 탐색을 수행하는 방법을 보여 줍니다._
 
@@ -32,7 +34,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ## <a name="performing-navigation"></a>탐색 수행
 
-계층적 탐색에는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
+계층적 탐색에서는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
 
 ![](hierarchical-images/navigationpage-components.png "NavigationPage 구성 요소")
 
@@ -49,7 +51,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ### <a name="creating-the-root-page"></a>루트 페이지 만들기
 
-탐색 스택에 추가된 첫 번째 페이지는 응용 프로그램의 *루트* 페이지라고 하며, 다음 코드 예제는 이것을 수행하는 방법을 보여줍니다.
+탐색 스택에 추가된 첫 번째 페이지는 응용 프로그램의 *root* 페이지라고 하며, 다음 코드 예제는 해당 수행 방법을 보여줍니다.
 
 ```csharp
 public App ()
@@ -93,7 +95,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>탐색 스택에서 페이지 꺼내기
 
-활성 페이지는 디바이스의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 디바이스의 물리적 단추이든 화면상 단추이든 상관없습니다.
+활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다.
 
 프로그래밍 방식으로 원래 페이지로 돌아가려면 `Page2Xaml` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: b83668f6836b1d5d98f67592bf3e2b01e7319edc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: dc26084b94956ea9bc87384e5fdb79695bc8c2b5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998191"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051784"
 ---
 # <a name="creating-a-controltemplate"></a>ControlTemplate 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
 
 _컨트롤 템플릿은 애플리케이션 수준 또는 페이지 수준에서 정의할 수 있습니다. 이 문서에서는 컨트롤 템플릿을 만들고 사용하는 방법을 보여줍니다._
 

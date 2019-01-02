@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 7fef4443cacba0fa8bdb8d5df070c4244730b4f5
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: ecd3fe7256eeaa51baf1bc2c367ff7560db51b0c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675177"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055817"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/UsingMessagingCenter)
 
 _Xamarin.Forms에는 메시지를 보내거나 받을 수 있는 간단한 메시징 서비스가 포함되어 있습니다._
 

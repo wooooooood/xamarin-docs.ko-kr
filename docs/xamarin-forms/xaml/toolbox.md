@@ -1,4 +1,4 @@
-﻿---
+---
 title: 도구 상자를 사용하여 Xamarin.Forms XAML 편집
 description: XAML 도구 상자에는 열린 XAML 파일로 직접 끌어올 수 있는 기본 제공 레이아웃 및 컨트롤이 모두 포함되어 있습니다.
 ms.prod: xamarin

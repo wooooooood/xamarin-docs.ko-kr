@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2018
-ms.openlocfilehash: 0b350082c834076a1d69427644259087d64bf26a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a5273897539cdce4aeb0abde28a0912e8327284a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111606"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052182"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 있으므로 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능이 향상됩니다._
 

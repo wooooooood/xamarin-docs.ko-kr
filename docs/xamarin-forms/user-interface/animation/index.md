@@ -1,4 +1,4 @@
----
+﻿---
 title: Xamarin.Forms의 애니메이션
 description: Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도, 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다.
 ms.prod: xamarin

@@ -1,4 +1,4 @@
-﻿---
+---
 title: XAML 태그 확장 사용
 description: 이 문서에서는 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성을 향상시키는 Xamarin.Forms XAML 태그 확장 사용 방법을 설명합니다.
 ms.prod: xamarin
@@ -147,7 +147,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 ## <a name="xreference-markup-extension"></a>x:Reference 태그 확장
 
-`x:Reference` 태그 확장은 [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원됩니다. 클래스에 라는 단일 속성만 [ `Name` ](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) 형식의 `string` 이름을 있는 페이지의 요소 이름으로 설정 하는 `x:Name`합니다. 이렇게 `Name` 속성의 콘텐츠 속성은 `ReferenceExtension`이므로 `Name=` 필요 없는 경우 `x:Reference` 중괄호로 표시 됩니다.
+`x:Reference` 태그 확장은 [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원됩니다. 클래스에는 `x:Name`으로 이름이 붙여진 페이지 상의 요소 이름을 설정하는 `string` 유형의 [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name)이라는 단일 속성을 가지고 있습니다. `Name` 속성은 `ReferenceExtension`의 콘텐츠 속성이므로 `x:Reference`가 중괄호 안에 나타날 때 `Name=`은 필요 없습니다.
 
 `x:Reference` 태그 확장은 [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에서 자세히 설명하는 데이터 바인딩과 함께 독점적으로 사용됩니다.
 
@@ -195,7 +195,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니다. 예제는 `Style`의 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성과 [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 특성은 제네릭 클래스에서 인수를 지정하는 데 사용됩니다. 그러나 XAML 파서는 자동으로 `typeof` 연산을 수행하며, 이 경우에는 `x:Type` 태그 확장이 사용되지 않습니다.
 
-`x:Type`이 *필수* 인 한 곳은 [다음 절](#array)에서 설명하는 `x:Array` 태그 확장 입니다.
+`x:Type`이 *필수*인 한 곳은 [다음 절](#array)에서 설명하는 `x:Array` 태그 확장입니다.
 
 `x:Type` 태그 확장은 각 메뉴 항목이 특정 유형의 개체에 해당하는 메뉴를 구성할 때도 유용합니다. `Type` 개체를 각 메뉴 항목과 연결한 다음 메뉴 항목이 선택될 때 개체를 인스턴스화할 수 있습니다.
 
@@ -264,7 +264,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`NavigateCommand` 속성은 `CommandParameter`의 값인 `Type` 유형의 인수를 사용하여 execute 명령을 구현하는 `Command` 개체입니다. 해당 메서드는 페이지 인스턴스화를 위해 `Activator.CreateInstance`를 사용한 다음 해당 페이지로 이동합니다. 생성자는 `Command`의 `Binding`이 동작 가능하도록 페이지의 `BindingContext`를 자신으로 설정하여 완료됩니다. 해당 종류의 코드에 대한 더 자세한 내용은 [ **데이터 바인딩** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서와 특히 [ **명령** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 문서를 참조하십시오.
+`NavigateCommand` 속성은 `CommandParameter`의 값인 `Type` 유형의 인수를 사용하여 execute 명령을 구현하는 `Command` 개체입니다. 해당 메서드는 페이지 인스턴스화를 위해 `Activator.CreateInstance`를 사용한 다음 해당 페이지로 이동합니다. 생성자는 `Command`의 `Binding`이 동작 가능하도록 페이지의 `BindingContext`를 자신으로 설정하여 완료됩니다. 해당 종류의 코드에 대한 더 자세한 내용은 [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서와 특히 [**명령**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 문서를 참조하십시오.
 
 **x:Type Demo** 페이지는 유사한 기술을 사용하여 Xamarin.Forms 요소를 인스턴스화하고 해당 인스턴스를 `StackLayout`에 추가합니다. 다음 XAML 파일은 처음에는 `Command` 속성이 `Binding`으로 설정되고 `CommandParameter` 속성이 세 개의 Xamarin.Forms 뷰 유형으로 설정된 `Button` 요소 세 개로 구성됩니다.
 
@@ -406,11 +406,11 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="xnull-markup-extension"></a>x:Null 태그 확장
 
-`x:Null` 태그 확장은 [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) 클래스에서 지원됩니다. 속성이 있으며 단순히 XAML에 해당 하는 C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) 키워드입니다.
+`x:Null` 태그 확장은 [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) 클래스에서 지원됩니다. 속성이 없고 단순히 C# [`null`](/dotnet/csharp/language-reference/keywords/null/) 키워드에 해당하는 XAML 입니다.
 
 `x:Null` 태그 확장은 거의 필요하지 않으며 드물게 사용되지만, 필요한 순간이 오면 그것이 존재한다는 것에 기뻐할 것입니다.
 
-x:Null Demo 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 보여줍니다. 다음과 같이 `FontFamily` 속성을 플랫폼 의존적인 글꼴 가족 이름으로 설정하는 `Setter`를 포함하는 `Label`에 대한 암시적 `Style`을 정의한다고 가정해 보겠습니다.
+**x:Null Demo** 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 보여줍니다. 다음과 같이 `FontFamily` 속성을 플랫폼 의존적인 글꼴 가족 이름으로 설정하는 `Setter`를 포함하는 `Label`에 대한 암시적 `Style`을 정의한다고 가정해 보겠습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -511,16 +511,16 @@ x:Null Demo 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 �
 - 데스크톱 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Desktop`.
 - TV 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `TV`.
 - 조사식 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Watch`.
-- `IValueConverter` 구현에 설정하는 `Converter` 유형의 `IValueConverter`.
-- `ConverterParameter` 구현에 전달할 값으로 설정하는 `object` 유형의 `IValueConverter`.
+- `IValueConverter` 구현에 설정하는 `IValueConverter` 유형의 `Converter`.
+- `IValueConverter` 구현에 전달할 값으로 설정하는 `object` 유형의 `ConverterParameter`.
 
 > [!NOTE]
-> XAML 파서는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스가 `OnIdiom`으로 축약되는 것을 허용합니다.
+> XAML 파서는 [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스를 `OnIdiom`으로 축약하는 것을 허용합니다.
 
-`Default` 속성은 `OnIdiomExtension`의 콘텐츠 속성입니다. 따라서 XAML 태그 표현식은 중괄호를 사용하여 표현되며, 첫 번째 인수라는 전제 하에 표현식의 `Default=` 부분은 제거할 수 있습니다.
+`Default` 속성은 `OnIdiomExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
 
 > [!IMPORTANT]
-> XAML 파서는 올바른 유형의 값이 `OnIdiom` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnIdiom` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기로는 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
+> XAML 파서는 올바른 유형의 값이 `OnIdiom` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnIdiom` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기에서 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
 
 **OnIdiom Demo** 페이지는 다음과 같이 `OnIdiom` 태그 확장을 사용하는 방법을 보여 줍니다.
 
@@ -531,7 +531,7 @@ x:Null Demo 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 �
          HorizontalOptions="Center" />
 ```
 
-이 예제에서 세 개의 `OnIdiom` 표현식 모두가 `OnIdiomExtension` 클래스 이름의 축약된 버전을 사용합니다. 세 가지 `OnIdiom` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 전화, 태블릿 및 데스크톱 관용구의 다른 값입니다. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 코드에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 설정되는 태그 확장 속성은 쉼표로 구분합니다.
+이 예제에서 세 개의 `OnIdiom` 표현식은 모두 `OnIdiomExtension` 클래스 이름의 축약된 버전을 사용합니다. 세 개의 `OnIdiom` 태그 확장은 [`BoxView`](xref:Xamarin.Forms.BoxView)의 [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성을 휴대폰, 태블릿 및 데스크톱 관용구에서 달라지는 값으로 설정합니다. 또한 태그 확장은 지정되지 않은 관용구의 해당 속성에 대한 기본값을 제공하며, 표현식의 `Default=` 부분은 제거합니다. 설정되는 태그 확장 속성은 쉼표로 구분합니다.
 
 프로그램 실행 화면은 다음과 같습니다.
 

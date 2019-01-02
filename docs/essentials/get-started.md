@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c40762ad4d165c1e5a29bdf9dc6d3c0fdb8581f7
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899110"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411728"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
@@ -33,7 +33,7 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
 
 1. [Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/index.md)을 사용하여 [Visual Studio](http://visualstudio.com)를 다운로드하고 설치합니다.
 
-2. 기존 프로젝트를 열거나, **Visual Studio C#** 아래의 비어 있는 앱 템플릿(Android, iPhone 및 iPad, 플랫폼 간)을 사용하여 새 프로젝트를 만듭니다. **중요**: UWP 프로젝트에 추가하는 경우 프로젝트 속성에 빌드 16299 이상이 설정되었는지 확인합니다.
+2. 기존 프로젝트를 열거나, **Visual Studio C#** 아래의 비어 있는 앱 템플릿(Android, iPhone 및 iPad, 플랫폼 간)을 사용하여 새 프로젝트를 만듭니다. **중요**: UWP 프로젝트에 추가하려면 프로젝트 속성에 빌드 16299 이상이 설정되었는지 확인합니다.
 
 3. 각 프로젝트에 **Xamarin.Essentials** NuGet 패키지를 추가합니다.
 
@@ -47,9 +47,6 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
     솔루션 탐색기 패널에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > NuGet 패키지 추가...** 를 선택합니다. **Xamarin.Essentials**를 검색하고 Android, iOS 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
-
-    > [!TIP]
-    > [**Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials)이 미리 보기 상태인 경우 **시험판 패키지 표시** 확인란을 선택합니다.
 
     -----
 

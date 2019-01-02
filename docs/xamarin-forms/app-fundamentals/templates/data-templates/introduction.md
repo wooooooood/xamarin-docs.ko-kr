@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 129ce7a04b93bfb3cb1b9a1639aee61cd56d09d5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bcea44688a64e741868e7ad2adf6c4dc65a5071a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998921"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052279"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 
 _Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤의 데이터 표현을 정의하는 기능을 제공합니다. 이 문서에서는 데이터 템플릿이 필요한 이유를 검토하면서 데이터 템플릿을 소개합니다._
 

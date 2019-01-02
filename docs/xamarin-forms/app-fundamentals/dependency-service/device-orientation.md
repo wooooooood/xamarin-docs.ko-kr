@@ -7,20 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115421"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051473"
 ---
 # <a name="checking-device-orientation"></a>디바이스 방향 확인
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/UsingDependencyService)
 
 이 문서에서는 각 플랫폼에서 기본 API를 사용하여 공유 코드에서 디바이스 방향을 확인하기 위해 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하는 방법을 안내합니다. 이 연습은 Ali Özgür별 기존 `DeviceOrientation` 플러그 인을 따릅니다. 자세한 내용은 [GitHub 리포지토리](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)를 참조하세요.
 
 - **[인터페이스 만들기](#Creating_the_Interface)** &ndash; 공유 코드에서 인터페이스를 만드는 방법을 이해합니다.
 - **[iOS 구현](#iOS_Implementation)**  &ndash; iOS용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
-- **[Android 구현](#Android_Implementation)**  &ndash; Android용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
+- **[Android 구현](#Android_Implementation)** &ndash; Android용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
 - **[UWP 구현](#WindowsImplementation)** &ndash; UWP(유니버설 Windows 플랫폼)용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
 - **[공유 코드에서 구현](#Implementing_in_Shared_Code)** &ndash; 공유 코드에서 기본 구현을 호출하기 위해 `DependencyService`를 사용하는 방법을 알아봅니다.
 

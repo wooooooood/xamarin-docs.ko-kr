@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
-ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
+ms.openlocfilehash: 5e47799e704dfbe2c4088016d7055fc616215ea2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50911595"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056466"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
 _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 는 컨트롤에 효과를 추가하는 방법을 보여 줍니다._
 
@@ -138,7 +140,7 @@ public class EffectBehavior : Behavior<View>
 </Label>
 ```
 
-해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 var label = new Label {

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675213"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050610"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/WorkingWithTriggers)
 
 트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다.
 

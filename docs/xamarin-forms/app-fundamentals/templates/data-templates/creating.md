@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 63f9bf82bc8e637aced1afa5d5699ac1e8dc3f8c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994617"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060228"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Xamarin.Forms DataTemplate 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 
 _데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 사용자 지정 형식 또는 적절한 Xamarin.Forms 셀 형식으로 만들 수 있습니다. 이 문서에서는 각 기법을 살펴봅니다._
 
@@ -63,7 +65,7 @@ _데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 �
 
 인라인 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)의 자식은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 형식이거나 파생된 것이어야 합니다. `ViewCell` 내의 레이아웃은 여기서 [`Grid`](xref:Xamarin.Forms.Grid)로 관리됩니다. `Grid`는 [`Text`](xref:Xamarin.Forms.Label.Text) 속성을 컬렉션에 있는 각 `Person` 개체의 적절한 속성으로 바인딩하는 세 개의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 포함합니다.
 
-해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 public class WithDataTemplatePageCS : ContentPage

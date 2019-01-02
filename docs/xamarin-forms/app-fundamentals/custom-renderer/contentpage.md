@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: e310726ae4ad72d10e8e2890e9fbf07dda9bc48e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "38995744"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052331"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
 
 _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
@@ -109,7 +111,7 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 
 ![](contentpage-images/screenshots.png "각 플랫폼의 CameraPage")
 
-`PageRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 페이지가 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPage` 인스턴스에 대한 참조를 포함합니다.
+`PageRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 페이지가 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPage` 인스턴스에 대한 참조를 포함합니다.
 
 `CameraPageRenderer` 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 페이지 사용자 지정을 수행하는 위치입니다. 또한 렌더링되는 Xamarin.Forms 페이지 인스턴스에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 

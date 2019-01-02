@@ -203,7 +203,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 또한 `Title` 특성이 루트 태그에 설정되었다는 것에 주의하십시오.
 
-이때 클래스, 속성 및 XML 간의 관계 분명해 집니다:는 Xamarin.Forms 클래스 (같은 `ContentPage` 또는 `Label`) XML 요소에 XAML 파일에 표시 됩니다. 해당 클래스의 속성-포함 `Title` 온 `ContentPage` 7의 속성과 `Label`-일반적으로 XML 특성으로 표시 합니다.
+이쯤에서 클래스, 속성 및 XML 간의 관계는 분명해집니다. Xamarin.Forms 클래스(`ContentPage` 또는 `Label` 등)는 XML 요소로 XAML 파일에 표시됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
 
 대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 유형이 있으며, 예를 들어 `Title` 및 `Text` 속성의 유형은 `String`이고, `Rotation` 속성의 유형은 `Double`이며, `IsVisible`의 유형은 `Boolean`(기본적으로 `true`이며 여기서는 오직 설명 용도로 설정됨)입니다.
 
@@ -211,9 +211,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 그러나 변환기는 더 복잡한 유형의 속성에 대하여 구문 분석에 XAML을 사용합니다. 변환기는 `TypeConverter`에서 파생되는 Xamarin.Forms의 클래스입니다. 대부분이 공용(public) 클래스이지만 몇몇은 아닙니다. 해당 특정 XAML 파일에 대해 다음과 같은 몇 가지 변환기 클래스가 배후에서 작동합니다.
 
--  `LayoutOptionsConverter` 에 대 한는 `VerticalOptions` 속성
--  `FontSizeConverter` 에 대 한는 `FontSize` 속성
--  `ColorTypeConverter` 에 대 한는 `TextColor` 속성
+-  `VerticalOptions` 속성에 대한 `LayoutOptionsConverter`
+-  `FontSize` 속성에 대한 `FontSizeConverter`
+-  `TextColor` 속성에 대한 `ColorTypeConverter`
 
 이러한 변환기는 속성 설정의 허용 구문을 제어합니다.
 
@@ -278,9 +278,9 @@ public MainPage()
 
 페이지의 `Content` 속성을 설정하면 XAML 파일의 `Content` 속성을 대체하게 됩니다. 해당 프로그램의 새 버전을 컴파일하고 배포하면 단추가 화면에 나타납니다. 단추를 눌러 `HelloXamlPage`로 이동합니다. IPhone, Android 및 UWP 결과 페이지는 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전 합니다.")
+[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전합니다.")
 
-다시 탐색할 수 있습니다 `MainPage` 를 사용 하 여는 **< 다시** iOS, android에서 휴대폰의 맨 아래 또는 페이지의 맨 위에 있는 왼쪽된 화살표를 사용 하 여 또는 왼쪽된 화살표를 사용 하 여 Windows 10에서 페이지의 맨 위에 있는 단추입니다.
+iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상단 또는 폰의 맨 아래에 있는 왼쪽 화살표를 사용하며, Windows 10에서는 페이지의 상단에 있는 왼쪽 화살표를 사용하여 `MainPage`로 다시 이동할 수 있습니다.
 
 `Label` 표시를 위해 다양한 방법의 XAML 연습을 자유롭게 해 봅니다. 텍스트에 유니코드 문자를 포함하는 경우 표준 XML 구문을 사용할 수 있습니다. 예를 들어, 다음과 같이 인사말에 지능형 따옴표를 삽입합니다.
 
@@ -288,11 +288,11 @@ public MainPage()
 
 해당 모양은 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자를 사용 하 여 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자를 사용 하 여 레이블 텍스트를 회전 합니다.")
+[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자를 사용하여 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자를 사용하여 레이블 텍스트를 회전합니다.")
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
-합니다 **HelloXamlPage** 샘플 하나만 포함 되어 있습니다. `Label` 페이지의 있지만 매우 일반적인 것은 아닙니다. 대부분의 `ContentPage` 파생형 집합 합니다 `Content` 와 같은 속성의 일부 레이아웃에 정렬를 `StackLayout`입니다. `Children` 의 속성을 `StackLayout` 형식으로 정의 됩니다 `IList<View>` 형식의 개체가 실제로 이지만 `ElementCollection<View>`, 여러 뷰 또는 다른 레이아웃을 사용 하 여 컬렉션을 채울 수 있습니다 하 고 합니다. XAML에서 이러한 부모-자식 관계는 일반 XML 계층 구조를 사용 하 여 설정 됩니다. 라는 새 페이지에 대 한 XAML 파일을 다음과 같습니다 **XamlPlusCodePage**:
+**HelloXamlPage** 샘플은 페이지에 단일 `Label`만 포함했지만 아주 일반적인 것은 아닙니다.  대부분의 `ContentPage` 상속은 `StackLayout`과 같은 일종의 레이아웃으로 `Content` 속성을 설정합니다. `StackLayout`의 `Children` 속성은 `IList<View>` 형식이 되도록 정의되지만 그것은 `ElementCollection<View>` 형식의 실제 개체이며, 해당 컬랙션은 여러 뷰 또는 다른 레이아웃으로 채울 수 있습니다.  XAML에서 해당 부모-자식 관계는 일반 XML 계층 구조를 사용하여 설정됩니다. **XamlPlusCodePage**라는 이름의 새 페이지에 대한 XAML 파일은 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -320,7 +320,7 @@ public MainPage()
 
 그러나 이 프로그램이 기능적으로 결함이 있다고 생각할 수 있습니다. `Slider`는 `Label`에 현재 값을 표시하고, `Button`은 프로그램 내에서 어떤 작업을 수행할 가능성이 있슴니다.
 
-살펴보겠지만 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)를 표시 하는 작업을 `Slider` 사용 하 여 값을 `Label` 데이터 바인딩을 사용 하 여 XAML에서 완전히 처리할 수 있습니다. 하지만 코드 솔루션을 먼저 참조 하는 것이 유용 합니다. 이 경우에 처리 합니다 `Button` 클릭 코드를 반드시 있어야 합니다. 즉, 코드 숨김 파일에 대 한 `XamlPlusCodePage` 에 대 한 처리기를 포함 해야 합니다는 `ValueChanged` 의 이벤트를 `Slider` 및 `Clicked` 의 이벤트는 `Button`합니다. 이러한 파일을 추가 해 보겠습니다.
+[4부. 데이터 바인딩 기본 사항 ](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 살펴보겠지만, `Label`을 사용하여 `Slider` 값을 표시하는 작업은 데이터 바인딩을 사용하여 XAML에서 완전히 처리할 수 있습니다. 하지만 코드 솔루션을 먼저 보는 것이 유용 합니다. 그렇더라도 `Button`` 클릭을 처리하는 데는 분명히 코드가 있어야 합니다. 즉, `XamlPlusCodePage`에 대한 코드 숨김 파일에는 `Slider`의 `ValueChanged` 이벤트와 `Button`의 `Clicked` 이벤트를 위한 처리기를 포함되어야 합니다. 다음과 같이 추가해 보겠습니다.
 
 ```csharp
 namespace XamlSamples
@@ -447,7 +447,7 @@ public partial class XamlPlusCodePage : ContentPage {
 
 ## <a name="summary"></a>요약
 
-이 소개를 사용 하 여 클래스 정의를 XAML 파일과 코드 파일을 제공 하는 방법 및 XAML 및 코드 파일이 상호 작용 하는 방법을 살펴보았습니다. 하지만 XAML도 자체 고유 구문는 기능이 매우 유연한 방식으로 사용할 수 있도록 합니다. 이러한 탐색을 시작할 수 있습니다 [2 부입니다. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)합니다.
+이 소개 글로 XAML 파일과 코드 파일이 클래스 정의에 어떻게 기여하는지, 그리고 XAML 및 코드 파일이 상호 작용하는 방식을 살펴보았습니다. 하지만 XAML에는 매우 유연한 방식으로 사용할 수 있는 자체적인 고유 구문 기능이 있습니다. [2장. 필수 XAML 구문 ](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)에서 해당 내용을 살펴볼 수 있습니다.
 
 
 
@@ -457,4 +457,4 @@ public partial class XamlPlusCodePage : ContentPage {
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5장. MVVM 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

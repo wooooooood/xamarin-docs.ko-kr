@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 619469e4c4fd3901491c20d6215ec0a25c49f69d
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2754e135bee090ce47796dfa1ae39eed2b5f27c5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171185"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059589"
 ---
 # <a name="accessing-the-devices-video-library"></a>디바이스의 비디오 라이브러리에 액세스
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 대부분의 최신 모바일 디바이스 및 데스크톱 컴퓨터에는 디바이스의 카메라를 사용하여 비디오를 녹화할 수 있는 기능이 있습니다. 사용자가 생성한 비디오는 디바이스에 파일로 저장됩니다. 이러한 파일을 이미지 라이브러리에서 가져와서 다른 비디오처럼 `VideoPlayer` 클래스로 재생할 수 있습니다.
 

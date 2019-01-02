@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 6d1948214b97a1b536b07b6420c32e4d27124518
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 0351436259bb782e4f8e3a3405b9620c4e8b20bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38997545"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050753"
 ---
 # <a name="implementing-text-to-speech"></a>텍스트 음성 변환 구현
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 이 문서에서는 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 네이티브 텍스트 음성 변환 API에 액세스하는 플랫폼 간 앱을 만드는 방법을 안내합니다.
 
@@ -175,4 +177,3 @@ iOS, Android 또는 UWP에서 이 애플리케이션을 실행하고 단추를 �
 
 - [DependencyService 사용(샘플)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
-
