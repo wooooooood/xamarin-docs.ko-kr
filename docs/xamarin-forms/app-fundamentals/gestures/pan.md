@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 36f01fb309f174e0ed7c709fb77f133b101ef8e0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38996808"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061095"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>이동 제스처 인식기 추가
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
 
 _이동 제스처는 화면에서 손가락의 움직임을 감지하고 이 움직임을 콘텐츠에 적용하는 데 사용되며 `PanGestureRecognizer` 클래스로 구현됩니다. 이동 제스처에 대한 일반적인 시나리오는 이미지 콘텐츠가 이미지 차원보다 작게 뷰포트에 표시되는 경우 모든 이미지 콘텐츠를 볼 수 있도록 이미지를 가로 및 세로로 이동하는 것입니다. 이는 뷰포트 내의 이미지를 이동하여 수행되며 이 문서에서 설명됩니다._
 

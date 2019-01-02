@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131956"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050441"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Xamarin.Forms의 키보드 탐색
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 일부 사용자는 적절한 키보드 액세스 권한을 제공하지 않는 애플리케이션을 사용하는 데 문제가 있을 수 있습니다. 컨트롤에 대한 탭 순서를 지정하면 키보드 탐색을 사용하도록 설정하고 특정 순서로 입력을 수신할 애플리케이션 페이지를 준비할 수 있습니다.
 

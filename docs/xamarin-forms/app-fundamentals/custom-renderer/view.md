@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8ee9926eb3b726673711141e7c75a68b607d02d3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994704"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057972"
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 보기 클래스에서 파생되어야 합니다. 이 문서에서는 디바이스 카메라에서 미리 보기 비디오 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
-모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`View`](xref:Xamarin.Forms.View)를 렌더링하면 `ViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UIView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ViewRenderer` 클래스는 네이티브 `View` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ViewRenderer` 클래스는 네이티브 `FrameworkElement` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤이 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`View`](xref:Xamarin.Forms.View)를 렌더링하면 `ViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UIView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ViewRenderer` 클래스는 네이티브 `View` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ViewRenderer` 클래스는 네이티브 `FrameworkElement` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`View`](xref:Xamarin.Forms.View) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -76,7 +78,7 @@ public class CameraPreview : View
 </ContentPage>
 ```
 
-`local` 네임스페이스 접두사는 원하는 것으로 이름을 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 접두사가 사용됩니다.
+`local` 네임스페이스 접두사는 원하는 이름으로 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 접두사가 사용됩니다.
 
 다음 코드 예제에서는 C# 페이지에서 `CameraPreview` 사용자 지정 컨트롤을 사용하는 방법을 보여줍니다.
 
@@ -112,7 +114,7 @@ public class MainPageCS : ContentPage
 
 1. 사용자 지정 컨트롤을 렌더링하는 `ViewRenderer<T1,T2>` 클래스의 서브클래스를 만듭니다. 첫 번째 형식 인수는 렌더러가 사용할(이 경우 `CameraPreview`) 사용자 지정 컨트롤이어야 합니다. 두 번째 형식 인수는 사용자 지정 컨트롤을 구현할 네이티브 컨트롤이어야 합니다.
 1. 사용자 지정 컨트롤을 렌더링하는 `OnElementChanged` 메서드를 정의하고 이를 사용자 지정하기 위한 논리를 작성합니다. 이 메서드는 해당 Xamarin.Forms 컨트롤이 생성될 때 호출됩니다.
-1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [보기](xref:Xamarin.Forms.View) 요소를 렌더링하는 경우에는 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
@@ -153,7 +155,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 
 `Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 성능이 뛰어난 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
 
-각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 사용자 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 플랫폼별 사용자 지정 렌더러 클래스의 구현을 설명합니다.
 

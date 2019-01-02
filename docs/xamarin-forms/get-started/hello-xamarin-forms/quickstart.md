@@ -9,18 +9,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/13/2018
-ms.openlocfilehash: f836d6212dfdff6c9840e2d780def3df72bc7c27
-ms.sourcegitcommit: 744c0a50420bb091fca8b92a84c20e61c741cf9e
+ms.openlocfilehash: fcd7f1b9d88b7305f9cccd12a799d71c793c42b4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742887"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057459"
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 빠른 시작
 
-이 연습에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 그 번호로 전화를 거는 응용 프로그램을 만드는 방법을 보여줍니다. 최종 응용 프로그램은 다음과 같습니다.
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Phoneword/)
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword 응용 프로그램")](quickstart-images/intro-app-examples.png#lightbox "Phoneword 응용 프로그램")
+이 연습에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 그 번호로 전화하는 애플리케이션을 만드는 방법을 보여줍니다. 최종 애플리케이션은 다음과 같습니다.
+
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword 애플리케이션")](quickstart-images/intro-app-examples.png#lightbox "Phoneword 애플리케이션")
 
 ::: zone pivot="windows"
 
@@ -124,7 +126,7 @@ ms.locfileid: "52742887"
     ```
 
     > [!NOTE]
-    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정하려고 하는 지점에서 오류가 발생합니다.
+    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정할 지점에서 오류가 발생합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -345,7 +347,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/vs/android-manifest.png "빌드 > Android 매니페스트 열기")
 
-23. **필수 권한** 섹션에서 **CALL_PHONE** 권한을 사용하도록 설정합니다. 그러면 응용 프로그램에 전화를 거는 권한이 주어집니다.
+23. **필수 권한** 섹션에서 **CALL_PHONE** 권한을 사용하도록 설정합니다. 그러면 애플리케이션에 전화를 거는 권한이 주어집니다.
 
     ![](quickstart-images/vs/android-manifest-changed.png "CallPhone 권한을 사용하도록 설정")
 
@@ -375,7 +377,7 @@ ms.locfileid: "52742887"
 
 3. **빈 양식 앱 구성** 대화 상자에서 새 앱 이름을 **Phoneword**로 설정하고 **.NET Standard** 라디오 버튼이 선택되었는지 확인한 다음, **다음** 단추를 클릭합니다.
 
-    ![](quickstart-images/xs/configure-app.png "Forms 응용프로그램 구성")
+    ![](quickstart-images/xs/configure-app.png "Forms 애플리케이션 구성")
 
 4. **새 빈 Forms 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 **Phoneword**으로 설정된 채로 두고, 프로젝트에 적절한 위치를 선택한 다음, **만들기** 단추를 클릭하여 프로젝트를 만듭니다.
 
@@ -463,9 +465,9 @@ ms.locfileid: "52742887"
     ```
 
     > [!NOTE]
-    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정하려고 하는 지점에서 오류가 발생합니다.
+    > 이때 응용 프로그램을 빌드하려고 하면 나중에 수정할 지점에서 오류가 발생합니다.
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
+    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
 9. **Solution Pad**에서 **Phoneword** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 선택합니다.
 
@@ -555,7 +557,7 @@ ms.locfileid: "52742887"
     **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **IDialer.cs**에 저장하고 파일을 닫습니다.
 
     > [!NOTE]
-    > 응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
+    > 애플리케이션에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
 15. **Solution Pad**에서 **Phoneword.iOS** 프로젝트를 선택한 다음, **추가 > 새 파일...** 을 마우스 오른쪽 단추로 클릭하여 선택합니다.
 
@@ -683,7 +685,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/xs/android-manifest.png "빌드 > Android Manifest 열기")
 
-23. **필요한 권한** 섹션에서 **CallPhone** 권한을 사용하도록 설정합니다. 그러면 응용 프로그램에 전화를 거는 권한이 주어집니다.
+23. **필요한 권한** 섹션에서 **CallPhone** 권한을 사용하도록 설정합니다. 그러면 애플리케이션에 전화를 거는 권한이 주어집니다.
 
     ![](quickstart-images/xs/android-manifest-changed.png "CallPhone 권한을 사용하도록 설정")
 
@@ -693,8 +695,8 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/xs/build-successful.png "빌드 성공")
 
-25. 오류가 있는 경우 이전 단계를 반복하고 응용 프로그램이 성공적으로 빌드할 때까지 실수를 수정합니다.
-26. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+25. 오류가 있는 경우 이전 단계를 반복하고 애플리케이션이 성공적으로 빌드할 때까지 실수를 수정합니다.
+26. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/start.png "Mac용 Visual Studio 도구 모음")
     ![](quickstart-images/xs/phoneword-result-ios.png "iOS Simulator")
@@ -705,7 +707,7 @@ ms.locfileid: "52742887"
 
     ![](quickstart-images/xs/set-startup-project.png "시작 프로젝트로 설정")
 
-28. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+28. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
 
@@ -714,7 +716,7 @@ ms.locfileid: "52742887"
 
 ::: zone-end
 
-Xamarin.Forms 응용 프로그램을 완료한 것을 축하합니다. 이 가이드의 [다음 항목](~/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md)은 Xamarin.Forms를 사용하여 응용 프로그램 개발의 기본에 대한 이해를 갖추기 위해 이 연습에서 수행된 단계를 검토합니다.
+Xamarin.Forms 애플리케이션을 완료한 것을 축하합니다. 이 가이드의 [다음 항목](~/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md)은 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본에 대한 이해를 갖추기 위해 이 연습에서 수행된 단계를 검토합니다.
 
 ## <a name="related-links"></a>관련 링크
 

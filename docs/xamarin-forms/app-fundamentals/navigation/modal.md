@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 44aee8500c7de2ae56b59049368d6025ec49cc5e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994830"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057063"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
 
 _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에서는 모달 페이지를 탐색하는 방법을 설명합니다._
 
@@ -39,7 +41,7 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 모달 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에 의해 노출됩니다. 이러한 메서드는 모달 스택으로 [모달 페이지를 푸시](#Pushing_Pages_to_the_Modal_Stack)하고, 모달 스택에서 [모달 페이지를 팝](#Popping_Pages_from_the_Modal_Stack)하는 기능을 제공합니다.
 
-[`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 또한 모달 스택의 모달 페이지를 얻을 수 있는 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 속성을 노출합니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 팝하는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
+[`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 또한 모달 스택의 모달 페이지를 얻을 수 있는 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 속성을 노출합니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 빼(pop)는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
 
 > [!NOTE]
 > [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스는 모달 페이지 탐색을 수행하는 데 필요하지 않습니다.

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2018
-ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: c607cecf6c7044fa4c8d0270a5b8d1471d3f9227
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "35240355"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059063"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 _데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 데이터 바인딩은 MVVM(Model-View-ViewModel) 애플리케이션 아키텍처의 필수적인 부분입니다._
 

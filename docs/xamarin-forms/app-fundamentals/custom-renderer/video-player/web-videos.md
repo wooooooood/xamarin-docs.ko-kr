@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 06b95c40b12aa93b79f25c3adf12b74bda232267
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172212"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056628"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 `VideoPlayer` 클래스는 비디오 파일의 원본을 지정하는 데 사용되는 `AutoPlay` 속성 및 `Source` 속성을 정의합니다. `AutoPlay`에는 `true`인 기본 설정 있습니다. 즉, `Source`를 설정한 후에 비디오는 자동으로 재생하기 시작해야 합니다.
 

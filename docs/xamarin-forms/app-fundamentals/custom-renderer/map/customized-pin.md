@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172303"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059381"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+
 _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 보기가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
-모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`Map`](xref:Xamarin.Forms.Maps.Map)을 렌더링하면 `MapRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `MKMapView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `MapRenderer` 클래스는 네이티브 `MapView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `MapRenderer` 클래스는 네이티브 `MapControl`을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`Map`](xref:Xamarin.Forms.Maps.Map)를 렌더링하면 `MapRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `MKMapView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `MapRenderer` 클래스는 네이티브 `MapView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `MapRenderer` 클래스는 네이티브 `MapControl`을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`Map`](xref:Xamarin.Forms.Maps.Map) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
