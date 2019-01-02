@@ -109,7 +109,7 @@ await image.RelScaleTo (2, 2000);
 
 [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)와 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) 속성으로 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) 및 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) 속성으로 조정하는 크기 조정과 회전의 중심을 설정할 수 있습니다. 따라서 해당 값은 [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))와 [`ScaleTo`](xref:Xamarin.Forms.VisualElement.Scale) 메서드에도 영향을 줍니다.
 
-지정 된 [ `Image` ](xref:Xamarin.Forms.Image) 레이아웃의 가운데에 배치 된는, 다음 코드 예제에서는 설정 하 여 레이아웃의 가운데를 기준으로 이미지를 회전 하는 방법을 보여 줍니다 해당 [ `AnchorY` ](xref:Xamarin.Forms.VisualElement.AnchorY) 속성:
+아래의 코드 예제에서는 [`Image`](xref:Xamarin.Forms.Image)가 레이아웃의 가운데에 배치되었을 때 [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)를 설정하여 레이아웃의 중심을 기준으로 이미지를 회전시키는 것을 보여줍니다
 
 ```csharp
 image.AnchorY = (Math.Min (absoluteLayout.Width, absoluteLayout.Height) / 2) / image.Height;
