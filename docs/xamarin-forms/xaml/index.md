@@ -1,6 +1,6 @@
 ---
 title: XAML(eXtensible Application Markup Language)
-description: XAML은 사용자 인터페이스를 정의하는 데 사용할 수 있는 선언적 태그 언어입니다. 사용자 인터페이스를 별도 코드 숨김 파일에서 런타임 동작을 정의하는 동안 XAML 구문을 사용하여 XML 파일로 정의합니다.
+description: XAML은 사용자 인터페이스를 정의하는 데 사용하는 선언적 태그 언어입니다. XAML 구문을 사용한 XML 파일에서 사용자 인터페이스를 정의하고 런타임 동작은 코드 숨김 파일에 정의합니다.
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
