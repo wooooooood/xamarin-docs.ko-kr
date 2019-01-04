@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563942"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056965"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 [이전 문서](basic-bindings.md)에서는 **Alternative Code Binding**(대체 코드 바인딩)과 **Alternative XAML Binding**(대체 XAML 바인딩) 페이지에 `Scale` 속성이 있는 `Label`이 `Slider`의 `Value`에 바인딩되는 것을 설명했습니다. `Slider` 초기 값이 0이라서 `Label`의 `Scale` 속성이 1이 아닌 0으로 설정되어 `Label`이 사라졌습니다.
 
@@ -41,7 +43,7 @@ ms.locfileid: "51563942"
 </ContentPage>
 ```
 
-처음에는 반대 방향처럼 보일 수 있습니다. 이제 `Label`이 데이터 바인딩 원본이고 `Slider`가 대상입니다. 바인딩은 `Label`의 `Opacity` 속성을 참조하며, 기본값은 1일입니다.
+처음에는 반대 방향처럼 보일 수 있습니다. 이제 `Label`은 데이터 바인딩 소스이고 `Slider`는 대상입니다. 바인딩은 `Label`의 `Opacity` 속성을 참조하며, 기본값은 1일입니다.
 
 예상대로 `Slider`는 `Label`의 초기 `Opacity` 값에서 1로 초기화됩니다. 왼쪽의 iOS 스크린샷이 이 경우를 보여줍니다.
 
@@ -112,7 +114,7 @@ ms.locfileid: "51563942"
 
 ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이러한 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 속성을 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
 
-`HslColorViewModel` 클래스는 다섯 가지 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity`, `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
+`HslColorViewModel` 클래스는 5개 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity` 및 `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -256,7 +258,7 @@ ViewModel이 바인딩 소스로 설정되면 바인딩 인프라는 `PropertyCh
 </ContentPage>
 ```
 
-`BoxView`, `Label` 및 세 가지 `Slider`뷰는 `Grid`에서 바인딩 컨텍스트를 상속받습니다. 이러한 뷰는 모두 ViewModel의 원본 속성을 참조하는 바인딩 대상입니다. `BoxView`의 `Color` 속성, `Label`의 `Text` 속성, 데이터 바인딩은 `OneWay`이며, 뷰의 속성은 ViewModel의 속성으로부터 설정됩니다.
+`BoxView`, `Label` 및 세 가지 `Slider`뷰는 `Grid`에서 바인딩 컨텍스트를 상속받습니다. 이러한 뷰는 모두 ViewModel의 원본 속성을 참조하는 바인딩 대상입니다. `BoxView`의 `Color`속성과 `Label`의 `Text` 속성의 경우 데이터 바인딩은 `OneWay`입니다. 뷰의 속성은 ViewModel의 속성에서 설정됩니다.
 
 단 `Slider`의 `Value` 속성은 `TwoWay`입니다. 이렇게 하면 각 `Slider`을 ViewModel에서 설정하고 각 `Slider`에서 ViewModel을 설정할 수 있습니다.
 
@@ -416,7 +418,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
 클래스의 `SetProperty` 메서드는 훨씬 더 많은 작업을 수행합니다. 속성으로 설정되는 값을 필드로 저장되는 값과 비교하고 두 값이 같지 않을 때만 `OnPropertyChanged`를 호출합니다.
 
-`SampleSettingsViewModel` 클래스는 배경색에 대한 두 가지 속성을 정의합니다. `BackgroundNamedColor` 속성은 `NamedColor` 유형이며, 이것은 **DataBindingDemos** 솔루션에도 포함되는 클래스입니다. `BackgroundColor` 속성은 `Color` 유형이며 `NamedColor` 개체의 `Color` 속성에서 가져옵니다.
+`SampleSettingsViewModel` 클래스는 배경색에 대한 두 가지 속성을 정의합니다. `BackgroundNamedColor` 속성은 `NamedColor` 형식이며, 이것은 **DataBindingDemos** 솔루션에도 포함되는 클래스입니다. `BackgroundColor` 속성은 `Color` 유형이며 `NamedColor` 개체의 `Color` 속성에서 가져옵니다.
 
 `NamedColor` 클래스는 .NET 리플렉션을 사용하여 Xamarin.Forms `Color` 구조체의 정적인 공용 필드를 모두 열거하고 정적 `All` 속성에서 액세스할 수 있는 컬렉션에 이름을 사용하여 저장합니다.
 

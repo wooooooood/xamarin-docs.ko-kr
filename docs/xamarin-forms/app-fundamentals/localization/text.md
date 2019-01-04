@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108459"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054063"
 ---
 # <a name="localization"></a>지역화
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 _.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다._
 
@@ -73,7 +75,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 기본적으로 문자열에 대한 강력한 형식의 참조를 생성할 경우 어셈블리에 대한 `internal`이 됩니다. 이는 RESX 파일에 대한 기본 빌드 도구에서 `internal` 속성을 사용하여 **.designer.cs** 파일을 생성하기 때문입니다.
 
-이 빌드 도구가 구성되는 위치를 확인하려면 **AppResources.resx** 파일을 선택하고 **속성** 패드를 표시합니다. 아래 스크린샷에서는 **사용자 지정 도구: ResXFileCodeGenerator**를 보여줍니다.
+이 빌드 도구가 구성되는 위치를 확인하려면 **AppResources.resx** 파일을 선택하고 **속성** 패드를 표시합니다. 아래 스크린샷에서는 **사용자 지정 도구: ResXFileCodeGenerator**를 보여 줍니다.
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -154,7 +156,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 일반적인 패턴은 2글자 언어 코드를 사용하는 것이지만 다른 형식을 사용하는 일부 예제(예: 중국어) 및 4글자 로캘 식별자가 필요한 다른 예제(예: 브라질 포르투갈어)도 있습니다.
 
-이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요*하지 않기* 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
+이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
 
 ![](text-images/appresources-langs.png "언어별 리소스 파일")
 
@@ -334,7 +336,7 @@ iOS, Android 및 UWP 모두가 조금 다르게 이 정보를 노출하므로 �
 
 플랫폼별 코드는 사용자가 .NET의 `CultureInfo` 클래스에서 지원되지 않는 로캘 식별자를 구성하도록 운영 체제에서 허용하는 사례도 처리해야 합니다. 이러한 경우 사용자 지정 코드가 작성되어 지원되지 않는 로캘을 검색하고 최상의 .NET 호환 가능한 로캘을 대체해야 합니다.
 
-#### <a name="ios-application-project"></a>iOS 응용 프로그램 프로젝트
+#### <a name="ios-application-project"></a>iOS 애플리케이션 프로젝트
 
 iOS 사용자는 날짜 및 시간 형식의 문화권에서 개별적으로 자신의 기본 설정 언어를 선택합니다. Xamarin.Forms 앱을 지역화하는 올바른 리소스를 로드하려면 첫 번째 요소에 대한 `NSLocale.PreferredLanguages` 배열을 쿼리해야 합니다.
 
@@ -463,7 +465,7 @@ public class Localize : UsingResxLocalization.ILocalize
 
 iOS 지역화에 대한 자세한 내용은 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)를 참조하세요.
 
-#### <a name="android-application-project"></a>Android 응용 프로그램 프로젝트
+#### <a name="android-application-project"></a>Android 애플리케이션 프로젝트
 
 Android는 `Java.Util.Locale.Default`를 통해 현재 선택된 로캘을 노출하고 다음 코드로 교체되는 대시 대신 밑줄 구분 기호를 사용합니다. Android 애플리케이션 프로젝트에 이 종속성 서비스 구현을 추가합니다.
 
@@ -556,11 +558,11 @@ namespace UsingResxLocalization.Android
 이 코드가 Android 애플리케이션 프로젝트에 추가되면 변환된 문자열이 자동으로 표시됩니다.
 
 > [!NOTE]
->**경고:** 변환된 문자열이 Android가 빌드한 RELEASE에서는 작동하지만 디버깅 중에는 작동하지 않는 경우 **Android 프로젝트**를 마우스 오른쪽 단추로 클릭하고 **옵션 > 빌드 > Android 빌드**를 선택하고 **빠른 어셈블리 배포**가 선택되지 않도록 해야 합니다. 이 옵션은 리소스를 로드할 때 문제가 발생하므로 지역화된 애플리케이션을 테스트하는 경우 사용해서는 안 됩니다.
+>️**경고:** 변환된 문자열이 Android가 빌드한 RELEASE에서는 작동하지만 디버깅 중에는 작동하지 않는 경우 **Android 프로젝트**를 마우스 오른쪽 단추로 클릭하고 **옵션 > 빌드 > Android 빌드**를 선택하고 **빠른 어셈블리 배포**가 선택되지 않도록 해야 합니다. 이 옵션은 리소스를 로드할 때 문제가 발생하므로 지역화된 애플리케이션을 테스트하는 경우 사용해서는 안 됩니다.
 
 Android 지역화에 대한 자세한 내용은 [Android 지역화](~/android/app-fundamentals/localization.md)를 참조하세요.
 
-#### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+#### <a name="universal-windows-platform"></a>UWP
 
 UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필요하지 않습니다. 대신 이 플랫폼에서 자동으로 리소스의 문화권을 올바르게 설정합니다.
 
@@ -574,7 +576,7 @@ UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필�
 
 이러면 앱의 기본 문화권에 대해 리소스 관리자에게 알리므로, 하나의 영어 로캘에서 앱을 실행하는 경우 언어 중립 RESX 파일(**AppResources.resx**)에서 정의된 문자열이 표시되는지 확인합니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 위에 표시된 대로 플랫폼별 프로젝트를 업데이트하고 변환된 RESX 파일을 사용하여 앱을 다시 컴파일한 후 각 앱에서 업데이트된 변환을 사용할 수 있습니다. 중국어(간체)로 번역된 샘플 코드의 스크린샷은 다음과 같습니다.
 
@@ -719,7 +721,7 @@ switch (Device.RuntimePlatform)
 
 아래에 설명된 프로젝트 구조가 구현되는 한 모든 플랫폼은 지역화된 버전의 이미지에 다음과 같은 이미지 참조를 자동으로 확인합니다.
 
-### <a name="ios-application-project"></a>iOS 응용 프로그램 프로젝트
+### <a name="ios-application-project"></a>iOS 애플리케이션 프로젝트
 
 iOS는 지역화 프로젝트 또는 **.lproj** 디렉터리라는 명명 표준을 사용하여 이미지 및 문자열 리소스를 포함합니다. 이러한 디렉터리에는 앱에서 사용되는 지역화된 버전의 이미지 및 앱 이름을 지역화하는 데 사용할 수 있는 **InfoPlist.strings** 파일도 포함될 수 있습니다. iOS 지역화에 대한 자세한 내용은 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)를 참조하세요.
 
@@ -743,7 +745,7 @@ iOS는 지역화 프로젝트 또는 **.lproj** 디렉터리라는 명명 표준
 
 ![](text-images/ios-imageicon.png "iOS 샘플 앱 텍스트 및 이미지 지역화")
 
-### <a name="android-application-project"></a>Android 응용 프로그램 프로젝트
+### <a name="android-application-project"></a>Android 애플리케이션 프로젝트
 
 Android는 언어 코드 접미사가 있는 다양한 **드로어블** 및 **문자열** 디렉터리를 사용하여 지역화된 이미지를 저장하기 위한 다른 체계를 따릅니다. 4글자 로캘 코드가 필요한 경우(예: zh-TW 또는 pt-BR) Android에서는 대시 뒤에/로캘 코드 앞에 **r**을 추가해야 합니다(예: zh-rTW 또는 pt-rBR). Android 지역화에 대한 자세한 내용은 [Android 지역화](~/android/app-fundamentals/localization.md)를 참조하세요.
 

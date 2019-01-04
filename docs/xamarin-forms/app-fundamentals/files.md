@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527367"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057615"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 
 _Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함 리소스를 사용하여 수행할 수 있습니다._
 
@@ -62,7 +64,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 ## <a name="loading-files-embedded-as-resources"></a>리소스로 포함된 파일 로드
 
-**.NET Standard** 어셈블리에 파일을 포함시키려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
+**.NET Standard** 어셈블리에 파일을 포함하려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

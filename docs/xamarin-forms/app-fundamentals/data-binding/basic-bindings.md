@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675200"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051985"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Xamarin.Forms 데이터 바인딩은 두 개의 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 *대상* 및 *원본*이라고 합니다.
 
 - *대상*은 데이터 바인딩이 설정된 개체(및 속성)입니다.
 - *원본*은 데이터 바인딩에서 참조하는 개체(및 속성)입니다.
 
-이 구분은 경우에 따라 다소 혼란스러울 수 있습니다. 가장 간단한 경우 데이터는 원본에서 대상으로 이동합니다. 즉 대상 속성의 값이 원본 속성의 값에서 설정됩니다. 하지만 어떤 경우에는 데이터가 대상에서 원본으로 또는 양방향으로 이동할 수 있습니다. 혼란을 방지하기 위해 데이터를 받는 것이 아니라 데이터를 제공하는 경우에도 대상이 항상 데이터 바인딩이 설정된 개체라는 점을 명심하세요.
+이 구분은 경우에 따라 다소 혼란스러울 수 있습니다. 가장 간단한 경우 데이터는 소스에서 대상으로 이동합니다. 즉 대상 속성의 값이 소스 속성의 값에서 설정됩니다. 하지만 어떤 경우에는 데이터가 대상에서 원본으로 또는 양방향으로 이동할 수 있습니다. 혼란을 방지하기 위해 데이터를 받는 것이 아니라 데이터를 제공하는 경우에도 대상이 항상 데이터 바인딩이 설정된 개체라는 점을 명심하세요.
 
 ## <a name="bindings-with-a-binding-context"></a>바인딩 컨텍스트가 있는 바인딩
 
@@ -84,7 +86,7 @@ public partial class BasicCodeBindingPage : ContentPage
 
 문자열로 지정된 원본 속성에 대해 이러한 규칙은 없습니다. 내부적으로 리플렉션은 실제 속성에 액세스하는 데 사용됩니다. 그러나 이 특별한 경우에는 `Value` 속성도 바인딩 가능한 속성으로 지원됩니다.
 
-코드는 다소 간소화될 수 있습니다. 즉 `RotationProperty` 바인딩 가능한 속성은 `VisualElement`에서 정의되고 `Label` 및 `ContentPage`에도 상속되므로 `SetBinding` 호출에서 클래스 이름이 필요하지 않습니다.
+코드는 다소 간소화될 수 있습니다. 즉, `RotationProperty` 바인딩 가능한 속성은 `VisualElement`에서 정의되고 `Label` 및 `ContentPage`에도 상속되므로 `SetBinding` 호출에서 클래스 이름이 필요하지 않습니다.
 
 ```csharp
 label.SetBinding(RotationProperty, "Value");
@@ -135,7 +137,7 @@ BindingContext="slider"
 
 원본 속성은 [`Binding`](xref:Xamarin.Forms.Binding) 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성에 해당하는 `BindingExtension`의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성으로 지정됩니다.
 
-**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉 `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 *콘텐츠 속성* 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다. `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
+**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉, `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 ‘콘텐츠 속성’ 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다. `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"

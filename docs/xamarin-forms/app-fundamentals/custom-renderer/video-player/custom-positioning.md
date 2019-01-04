@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cf2de96022366165e726bc3e6447bb88f30a26bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241912"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057141"
 ---
 # <a name="custom-video-positioning"></a>사용자 지정 비디오 위치 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 각 플랫폼에 의해 구현되는 전송 컨트롤에는 위치 막대가 포함됩니다. 이 막대는 슬라이더 또는 스크롤 막대와 유사하며 전체 기간 내에 비디오의 현재 위치를 보여 줍니다. 또한 사용자는 위치 막대를 조작하여 비디오의 새로운 위치로 앞으로 또는 뒤로 이동할 수 있습니다.
 
@@ -170,7 +172,7 @@ namespace FormsVideoLibrary
 
 `get` 접근자는 재생 중인 비디오의 현재 위치를 반환하지만 `set` 접근자는 비디오 위치를 앞 또는 뒤로 이동하는 사용자의 위치 조작에 응답하기 위한 것입니다.
 
-iOS 및 Android의 경우 현재 위치를 가져오는 속성에는 하나의 `get` 접근자만 있고 다음 두 번째 작업을 수행하기 위해 `Seek` 메서드가 제공됩니다. 생각하기에 따라, 별도의 `Seek` 메서드가 단일 `Position` 속성보다 더 적절한 접근 방법인 것 같기도 합니다. 단일 `Position` 속성에는 내재된 문제가 있는데, 비디오가 재생되면서 새 위치를 반영하기 위해 `Position` 속성을 지속적으로 업데이트해야 한다는 것입니다. 그러나 대부분 비디오 플레이어가 비디오의 새로운 위치로 이동하도록 `Position` 속성을 변경하지 않으려고 합니다. 이 경우 비디오 플레이어는 `Position` 속성의 마지막 값을 찾아 응답하고 비디오는 진행되지 않습니다.
+iOS 및 Android의 경우 현재 위치를 가져오는 속성에는 하나의 `get` 접근자만 있고 다음 두 번째 작업을 수행하기 위해 `Seek` 메서드가 제공됩니다. 생각하기에 따라, 별도의 `Seek` 메서드가 단일 `Position` 속성보다 더 적절한 접근 방법인 것 같기도 합니다. 단일 `Position` 속성에는 내재된 문제가 있습니다. 비디오가 재생되면서 새 위치를 반영하기 위해 `Position` 속성을 지속적으로 업데이트해야 합니다. 그러나 대부분 비디오 플레이어가 비디오의 새로운 위치로 이동하도록 `Position` 속성을 변경하지 않으려고 합니다. 이 경우 비디오 플레이어는 `Position` 속성의 마지막 값을 찾아 응답하고 비디오는 진행되지 않습니다.
 
 `set` 및 `get` 접근자를 사용하여 `Position` 속성을 구현하는 데 어려움이 있음에도 불구하고 이 접근 방식은 UWP `MediaElement`와 일관성을 유지하고 데이터 바인딩이라는 큰 이점이 있으므로 주로 선택되었습니다. `VideoPlayer`의 `Position` 속성은 위치를 표시하고 새 위치를 찾는 데 사용되는 슬라이더에 바인딩할 수 있습니다. 그러나 이 `Position` 속성을 구현할 때는 피드백 루프를 피하기 위해 몇 가지 예방 조치가 필요합니다.
 
@@ -397,7 +399,7 @@ namespace FormsVideoLibrary
 
 `Duration` 속성에 대한 속성 변경 처리기는 기본 `Slider`의 `Maximum` 속성을 `TimeSpan` 값의 `TotalSeconds` 속성으로 설정합니다. 마찬가지로 `Position`에 대한 속성 변경 처리기는 `Slider`의 `Value` 속성을 설정합니다. 이러한 방식으로 기본 `Slider`는 `PositionSlider`의 위치를 추적합니다.
 
-`PositionSlider`는 사용자가 비디오를 새로운 위치로 앞 또는 뒤로 이동해야 함을 나타내기 위해 `Slider`를 조작할 때 기본 `Slider`로부터 하나의 인스턴스에서만 업데이트됩니다. 이것은 `PositionSlider`의 생성자에 있는 `PropertyChanged` 처리기에서 검색됩니다. 처리기는 `Value` 속성에 변경 내용이 있는지 확인하고 `Position` 속성과 다른 경우 `Position` 속성이 `Value` 속성에서 설정됩니다.
+`PositionSlider`는 다음 한 가지 경우에만 기본 `Slider`에서 업데이트됩니다. 사용자가 비디오를 새로운 위치로 앞 또는 뒤로 이동해야 함을 나타내기 위해 `Slider`를 조작할 경우. 이것은 `PositionSlider`의 생성자에 있는 `PropertyChanged` 처리기에서 검색됩니다. 처리기는 `Value` 속성에 변경 내용이 있는지 확인하고 `Position` 속성과 다른 경우 `Position` 속성이 `Value` 속성에서 설정됩니다.
 
 이론적으로 내부 `if` 문은 다음과 같이 작성할 수 있습니다.
 

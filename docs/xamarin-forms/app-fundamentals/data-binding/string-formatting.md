@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170951"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056125"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 형식 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 데이터 바인딩을 사용하여 개체나 값의 문자열 표현을 나타내는 것이 편리한 경우도 있습니다. 예를 들어, `Label`을 사용하여 `Slider`의 현재 값을 표시할 수 있습니다. 이 데이터 바인딩에서 `Slider`는 원본이고 대상은 `Label`의 `Text` 속성입니다.
 
@@ -178,7 +180,7 @@ XAML 파일의 다음 섹션은 정적 `DateTime.Now` 속성을 참조하는 `x:
 
 RGB(빨강, 녹색, 파랑) 값을 기존의 2자리 16진수 형식으로 표현하는 방법이 궁금할 수도 있습니다. 이러한 정수 값은 `Color` 구조체에서 직접 사용할 수 없습니다. 한 가지 솔루션은 ViewModel에서 색 구성 요소의 정수 값을 계산하여 속성으로 나타내는 것입니다. 그런 다음, `X2` 형식 지정 사양을 사용하여 형식을 지정할 수 있습니다.
 
-다른 방식은 더 일반적입니다. [**바인딩 값 변환기**](converters.md) 문서 뒷부분의 설명대로 바인딩 값 변환기를 작성할 수 있습니다.
+다른 방식은 더 일반적입니다. [**바인딩 값 변환기**](converters.md) 문서 뒷부분의 설명대로 ‘바인딩 값 변환기’를 작성할 수 있습니다.
 
 하지만 다음 문서에서는 [**바인딩 경로**](binding-path.md)에 대해 더 자세히 살펴보고 이것을 사용하여 컬렉션의 하위 속성과 항목을 참조하는 방법을 보여줍니다.
 

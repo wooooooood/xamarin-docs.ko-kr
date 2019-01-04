@@ -6,15 +6,17 @@ ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/01/2017
-ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 12/14/2018
+ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527406"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411767"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
 
 _효과는 기본 네이티브 뷰의 변경을 신호로 알리는 이벤트를 정의하고 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 손가락 추적을 구현하는 방법과 터치 동작을 신호로 알려주는 이벤트를 생성하는 방법을 보여줍니다._
 
@@ -42,7 +44,7 @@ UWP(유니버설 Windows 플랫폼)에서는 `UIElement` 클래스가 `PointerPr
 
 또한 UWP는 `PointerEntered` 및 `PointerExited`라는 두 가지 이벤트를 더 정의합니다. 이 이벤트는 마우스나 손가락이 한 가지 요소에서 다른 요소로 이동하는 것을 알려줍니다. 예를 들어 A와 B라는 두 개의 인접한 요소가 있고, 두 요소 모두에 포인터 이벤트에 대한 처리기가 설치되어 있습니다. 손가락이 A를 누르면 `PointerPressed` 이벤트가 호출됩니다. 손가락을 이동하면 A가 `PointerMoved` 이벤트를 호출합니다. 손가락이 A에서 B로 이동하면 A는 `PointerExited` 이벤트를 호출하고 B는 `PointerEntered` 이벤트를 호출합니다. 그런 다음, 손가락을 떼면 B가 `PointerReleased` 이벤트를 호출합니다.
 
-iOS와 Android 플랫폼은 UWP와 다릅니다. 손가락이 보기를 터치할 때 `TouchesBegan`이나 `OnTouchEvent`에 대한 호출을 먼저 받는 보기는 손가락이 다른 보기로 이동하더라도 계속해서 모든 터치 동작을 받습니다. 애플리케이션이 포인터를 캡처하면 UWP도 유사하게 작동할 수 있습니다. `PointerEntered` 이벤트 처리기에서 요소는 `CapturePointer`를 호출한 다음, 해당 손가락의 모든 터치 동작을 받습니다.
+iOS 및 Android 플랫폼은 UWP와 다릅니다. 손가락이 보기를 터치할 때 `TouchesBegan`이나 `OnTouchEvent`에 대한 호출을 먼저 받는 보기는 손가락이 다른 보기로 이동하더라도 계속해서 모든 터치 동작을 받습니다. 애플리케이션이 포인터를 캡처하면 UWP도 유사하게 작동할 수 있습니다. `PointerEntered` 이벤트 처리기에서 요소는 `CapturePointer`를 호출한 다음, 해당 손가락의 모든 터치 동작을 받습니다.
 
 UWP 방식은 음악 키보드와 같은 유형의 일부 애플리케이션에 매우 유용한 것으로 입증되었습니다. 각 키는 이러한 키에 대한 터치 이벤트를 처리할 수 있으며 `PointerEntered`와 `PointerExited` 이벤트를 사용하여 손가락이 한 키에서 다른 키로 미끄러지는 경우를 감지합니다.
 
@@ -352,6 +354,9 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 이 `TouchRecognizer` 클래스 구조의 많은 부분이 Android `TouchEffect` 클래스와 유사합니다.
 
+> [!IMPORTANT]
+> `UIKit`의 많은 보기에는 기본적으로 터치가 사용되지 않습니다. iOS 프로젝트에서 `TouchEffect` 클래스의 `OnAttached` 재정의에 `view.UserInteractionEnabled = true;`를 추가하여 터치를 사용하도록 설정할 수 있습니다. 이 작업은 효과가 연결된 요소에 해당하는 `UIView`를 가져온 후에 수행해야 합니다.
+
 ## <a name="putting-the-touch-effect-to-work"></a>터치 효과 작업
 
 [**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
@@ -379,7 +384,7 @@ void AddBoxViewToLayout()
 }
 ```
 
-`TouchAction` 이벤트 처리기는 모든 `BoxView` 요소의 모든 터치 이벤트를 처리하지만 몇 가지 주의할 점이 있습니다. 프로그램이 드래그만 구현하기 때문에 `BoxView` 하나에 손가락 두 개가 허용되지 않고 두 손가락이 서로 방해가 됩니다. 따라서 페이지는 현재 추적 중인 각 손가락에 대해 포함된 클래스를 정의합니다.
+`TouchAction` 이벤트 처리기는 모든 `BoxView` 요소의 모든 터치 이벤트를 처리하지만 몇 가지 주의할 점이 있습니다. 프로그램이 끌기만 구현하기 때문에 `BoxView` 하나에 손가락 두 개가 허용되지 않고 두 손가락이 서로 방해가 됩니다. 따라서 페이지는 현재 추적 중인 각 손가락에 대해 포함된 클래스를 정의합니다.
 
 ```csharp
 class DragInfo
