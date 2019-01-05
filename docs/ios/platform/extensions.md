@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9c28cc892536ebe841fb28e8313cf380c7f051b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120426"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012284"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -49,7 +49,7 @@ ms.locfileid: "50120426"
 - (하지만 기존 미디어 파일에 액세스할 수) 확장 장치 카메라 또는 마이크에 액세스할 수 없습니다.
 - 확장 (공기 삭제를 통해 데이터를 전송할 수 있습니다) 하지만 공기 삭제 데이터를 받을 수 없습니다.
 - [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/) 하 고 [UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/) 를 사용할 수 없습니다; 확장을 사용 해야 [UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- 몇몇 구성원이 [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) 를 사용할 수 없습니다: [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)하십시오 `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` 및 `UIApplication.EndIgnoringInteractionEvents`
+- 몇몇 구성원이 [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) 를 사용할 수 없습니다. [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)하십시오 `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` 및 `UIApplication.EndIgnoringInteractionEvents`
 - iOS는 오늘날의 확장에 16MB 메모리 사용량 한계를 적용합니다.
 - 기본적으로 키보드 확장에는 네트워크에 액세스를 권한이 없습니다. 이 영향을 줍니다 (제한을 시뮬레이터에는 적용 되지 않습니다) 장치에서 디버깅 Xamarin.iOS 디버깅을 수행 하려면 네트워크 액세스를 필요 하기 때문입니다. 설정 하 여 네트워크 액세스를 요청 하는 합니다 `Requests Open Access` 값을 프로젝트의 Info.plist에 `Yes`입니다. Apple의를 참조 하세요 [사용자 지정 키보드 가이드](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) 키보드 확장 제한에 대 한 자세한 내용은 합니다.
 
@@ -274,7 +274,7 @@ IOS 시뮬레이터에서에서 확장 프로그램을 테스트 하려면 다�
 
 ## <a name="communicating-with-the-parent-app"></a>부모 앱을 사용 하 여 통신
 
-앱 그룹을 사용하면 서로 다른 응용 프로그램(또는 응용 프로그램과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
+앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
 - [Apple Watch 설정](~/ios/watchos/app-fundamentals/settings.md)합니다.
 - [공유 NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)합니다.
@@ -432,7 +432,7 @@ IOS 시뮬레이터에서에서 확장 프로그램을 테스트 하려면 다�
 - `kUTTypeXPCService` - `XPCService`
 - `kUTTypeZipArchive` - `ZipArchive`
 
-다음 예제를 참조 하세요.
+다음 예제를 참조하십시오.
 
 ```csharp
 using MobileCoreServices;
