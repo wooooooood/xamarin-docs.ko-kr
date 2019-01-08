@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
+ms.sourcegitcommit: e3e851080e6ea0b77e355487a61348d8e0419b09
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117566"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060072"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
-Xamarin.Mac 2.10 미리 보기에서 여러 macOS 확장 지점에 대 한 지원이 추가 되었습니다.
+Xamarin.Mac 2.10에서 여러 macOS 확장 지점에 대 한 지원이 추가 되었습니다.
 
 - 찾기
 - 공유
@@ -59,10 +59,10 @@ Xamarin.Mac 2.10 미리 보기에서 여러 macOS 확장 지점에 대 한 지�
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 빠르게 확인 Xamarin.Max 버전 2.10 (이상) 앱에서 확장을 사용 하 여 작업을 수행 했습니다.
+이 문서에서는 Xamarin.Mac 버전 2.10 (이상) 앱에서 확장을 사용 하 여 작업을 빠르게 확인을 수행 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
