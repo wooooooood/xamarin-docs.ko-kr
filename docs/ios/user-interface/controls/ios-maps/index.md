@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d83470db23b1376d18fa36c52c1daabaf68cfe0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b5a8bd99afda5e8fbeea44e3362574fa7feea
+ms.sourcegitcommit: b18ceed35aa94999d13faf4a3e3177c0b9fc33b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117761"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084583"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.iOS의 지도
 
@@ -175,7 +175,7 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 ### <a name="overlays"></a>오버레이
 
-또 다른 방법은 지도에 계층 그래픽 오버레이 사용 중입니다. 오버레이 확대/축소 하는 대로 지도 사용 하 여 크기가 조정 되는 그래픽 그리기 콘텐츠를 지원 합니다. iOS의 오버레이 비롯 한 여러 형식에 대 한 지원을 제공 합니다.
+또 다른 방법은 지도에 계층 그래픽 오버레이 사용 중입니다. 오버레이는 확대/축소하는 대로 맵을 크기 조정하는 그래픽 그리기 콘텐츠를 지원합니다. iOS의 오버레이 비롯 한 여러 형식에 대 한 지원을 제공 합니다.
 
 -  다각형-는 지도에 일부 영역을 강조 표시 하는 데 주로 사용 합니다.
 -  다중선-경로 표시 하는 경우 주로 표시 됩니다.
@@ -267,23 +267,23 @@ DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
 NavigationItem.TitleView = searchController.SearchBar;
+```
 
-```csharp
-Note that you are responsible for incorporating the search bar object into the user interface. In this example, we assigned it to the TitleView of the navigation bar, but if you do not use a navigation controller in your application you will have to find another place to display it.
+사용자 인터페이스를 검색 모음 개체를 통합 하는 것에 대 한 책임이 참고 합니다. 이 예제에서는 탐색 모음의 TitleView 할당에서는 있지만 표시할 수 있는 다른 위치를 찾을 수는 응용 프로그램에서 탐색 컨트롤러를 사용 하지 않는 경우.
 
-In this code snippet, we created another custom view controller – `searchResultsController` –  that displays the search results and then we used this object to create our search controller object. We also created a new search updater, which becomes active when the user interacts with the search bar. It receives notifications about searches with each keystroke and is responsible for updating the UI.
-We will take a look at how to implement both the `searchResultsController` and the `searchResultsUpdater` later in this guide.
+이 코드 조각에서는 다른 사용자 지정 뷰 컨트롤러 – 만들었습니다 `searchResultsController` – 검색 결과 표시 하 고 다음은 검색 컨트롤러 개체를 만들려면이 개체를 사용 했습니다. 검색 표시줄을 사용 하 여 상호 작용할 때 활성화 되는 새 검색 업데이트를 만들었습니다. 각 키 입력을 사용 하 여 검색 하는 방법에 대 한 알림을 수신 하 고 UI를 업데이트 해야 합니다.
+둘 다 구현 하는 방법을 살펴보는 됩니다 것를 `searchResultsController` 하며 `searchResultsUpdater` 이 가이드의 뒷부분에 나오는.
 
-This results in a search bar displayed over the map as shown below:
+이 인해 검색 표시줄 아래와 같이 지도 표시:
 
- ![](images/07-searchbar.png "A search bar displayed over the map")
+ ![](images/07-searchbar.png "지도 표시를 검색 창")
  
 
 
-### Displaying the Search Results
+### <a name="displaying-the-search-results"></a>검색 결과 표시합니다.
 
-To display search results, we need to create a custom View Controller; normally a `UITableViewController`. As shown above, the `searchResultsController` is passed to the constructor of the `searchController` when it is being created.
-The following code is an example of how to create this custom View Controller:
+검색 결과 표시 하려면 사용자 지정 뷰 컨트롤러를;을 생성 해야 일반적으로 `UITableViewController`합니다. 위에 나와 있는 것 처럼 합니다 `searchResultsController` 의 생성자에 전달 되는 `searchController` 만들 때.
+다음 코드는이 사용자 지정 뷰 컨트롤러를 만드는 방법의 예:
 
 ```csharp
 public class SearchResultsViewController : UITableViewController
