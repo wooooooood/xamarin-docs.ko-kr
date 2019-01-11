@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057433"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54208014"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
 
@@ -58,7 +58,7 @@ picker.Items.Add("Japanese Macaque");
 A [ `Picker` ](xref:Xamarin.Forms.Picker) 한 번에 하나씩 선택할 수 있습니다. 사용자가 항목을 선택 합니다 [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트 발생 및 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 목록에서 선택한 항목의 인덱스를 나타내는 정수를 업데이트 합니다. `SelectedIndex` 속성은 사용자가 선택한 항목을 나타내는 0부터 시작 수 있습니다. 선택 된 항목이 있는 경우 때 합니다 `Picker` 먼저 생성 되 고 초기화 하 고, `SelectedIndex` -1이 됩니다.
 
 > [!NOTE]
-> 항목의 선택 동작을 [ `Picker` ](xref:Xamarin.Forms.Picker) 플랫폼 전용을 사용 하 여 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택 항목 선택 제어](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode)입니다.
+> 항목의 선택 동작을 [ `Picker` ](xref:Xamarin.Forms.Picker) 플랫폼 전용을 사용 하 여 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택 항목 선택 제어](~/xamarin-forms/platform/ios/picker-selection.md)입니다.
 
 다음 코드 예제는 `OnPickerSelectedIndexChanged` 이벤트 처리기 메서드를 될 때 실행 되는 [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트 발생:
 

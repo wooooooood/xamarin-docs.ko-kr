@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110721"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207936"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 디자인 원칙
 
@@ -111,9 +111,9 @@ if (goodSource.Count != 4) // false
 
 Java 메서드를 속성으로 해당 하는 경우 변환 됩니다.
 
--  Java 메서드 쌍 `T getFoo()` 하 고 `void setFoo(T)` 으로 변환 되는 `Foo` 속성입니다. 예: [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)합니다.
+-  Java 메서드 쌍 `T getFoo()` 하 고 `void setFoo(T)` 으로 변환 되는 `Foo` 속성입니다. 예제: [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)합니다.
 
--  다음 Java 메서드의 경우 `getFoo()` 읽기 전용 Foo 속성으로 변환 됩니다. 예: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/)합니다.
+-  다음 Java 메서드의 경우 `getFoo()` 읽기 전용 Foo 속성으로 변환 됩니다. 예제: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/)합니다.
 
 -  집합 전용 속성이 생성 되지 않습니다.
 
@@ -322,6 +322,6 @@ public class Resource {
 이러한 경우.NET 열거형에 관련된 상수를 함께 그룹화 하 여 열거형을 대신 수행할 메서드를 다시 매핑할 다해야 합니다.
 이 작업을 수행 하면 IntelliSense 다양 한 잠재적인 값을 제공할 수 있습니다.
 
-위의 예제가: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)).
+위의 예제는 다음과 같이 계산 됩니다. [(WindowFeatures featureId) Activity.RequestWindowFeature](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)합니다.
 
-이 상수는 서로 파악 하는 매우 수동 프로세스가 하 고 어떤 Api 이러한 상수를 사용 합니다. 열거형으로 표현 된 더 잘 될 API에서 상수 사용에 대 한 버그를 제출 하세요.
+이 상수는 서로 파악 하는 매우 수동 프로세스가 하 고 어떤 Api 이러한 상수를 사용 합니다. 열거형으로 표현 된 더 잘 될 API에서 사용 되는 모든 상수에 대 한 버그를 제출 하세요.

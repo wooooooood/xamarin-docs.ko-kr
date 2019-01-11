@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/15/2018
-ms.openlocfilehash: 86055932edf82f04e11c9ae8dd684a3d77c3d830
-ms.sourcegitcommit: da2260a882dbda02732e21cad5cc9a9dd35e27e7
+ms.openlocfilehash: bfbc902b0912527fea6aaa58c6706ef5a0ccbf8e
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51709230"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207923"
 ---
 # <a name="appearance-api-in-xamarinios"></a>Xamarin.iOS에서 모양 API
 
@@ -69,7 +69,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>Xamarin.Forms에서 UIAppearance 사용
 
-모양 API 때 유용할 수 있습니다 [iOS 앱 스타일 지정](~/xamarin-forms/platform/ios/theme.md#uiappearance) Xamarin.Forms 솔루션에. 몇 줄을 `AppDelegate` 클래스를 만들 필요 없이 특정 색 구성표를 구현 하는 데 도움이 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)합니다.
+모양 API 때 유용할 수 있습니다 [iOS 앱 스타일 지정](~/xamarin-forms/platform/ios/formatting.md#uiappearance) Xamarin.Forms 솔루션에. 몇 줄을 `AppDelegate` 클래스를 만들 필요 없이 특정 색 구성표를 구현 하는 데 도움이 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)합니다.
 
 ### <a name="custom-themes-and-uiappearance"></a>사용자 지정 테마 및 UIAppearance
 
@@ -83,7 +83,7 @@ iOS 인터페이스 컨트롤을 사용 하 여 "테마" 사용자의 많은 시
 sg1.TintColor = UIColor.Magenta;
 ```
 
-또는 디자이너의 Properties pad에서 값을 설정 합니다. 
+또는 디자이너의 Properties pad에서 값을 설정 합니다.
 
 [![](introduction-to-the-appearance-api-images/propertiespadtint.png "속성 패드 색조")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
@@ -109,4 +109,4 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 - [모양 (샘플)](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [UIAppearance 프로토콜 참조](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Xamarin.Forms의 모양](~/xamarin-forms/platform/ios/theme.md#uiappearance)
+- [Xamarin.Forms의 모양](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

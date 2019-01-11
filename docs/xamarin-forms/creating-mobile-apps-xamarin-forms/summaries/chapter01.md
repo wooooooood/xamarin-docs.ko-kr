@@ -7,12 +7,12 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746858"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207910"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
 
@@ -49,7 +49,7 @@ Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었�
 - 대상 Windows 10 유니버설 Windows 플랫폼
 
 > [!NOTE]
-> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), [Tizen](~/xamarin-forms/platform/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
+> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
 
 대부분의 Xamarin.Forms 프로그램의 공유 코드는 단일 라이브러리나 SAP에 위치하게 됩니다. 각 플랫폼들은 이러한 공유 코드를 호출하는 작은 프로그램 조각으로 구성됩니다.
 
