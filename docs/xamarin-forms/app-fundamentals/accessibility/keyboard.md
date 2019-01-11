@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050441"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207884"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Xamarin.Forms의 키보드 탐색
 
@@ -58,7 +58,7 @@ ms.locfileid: "53050441"
 여기서 탭 순서는 행 기반이며 컨트롤을 XAML에 나열한 순서와 같습니다. 따라서 탭 키를 누르면 이름 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 이어 성 `Entry` 인스턴스를 탐색합니다. 그러나 보다 직관적인 환경은 첫 번째 열 탭 탐색을 사용하므로 Tab 키를 누르면 이름-성 쌍을 탐색합니다. 입력 컨트롤의 탭 순서를 지정하여 이를 구현할 수 있습니다.
 
 > [!NOTE]
-> 유니버설 Windows 플랫폼에서 터치 또는 마우스 대신 키보드를 통해 사용자가 애플리케이션의 표시되는 UI와 상호 작용하고 빠르게 탐색할 수 있는 직관적인 방법을 제공하는 바로 가기 키를 정의할 수 있습니다. 자세한 내용은 [VisualElement 액세스 키 설정](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys)을 참조하세요.
+> 유니버설 Windows 플랫폼에서 터치 또는 마우스 대신 키보드를 통해 사용자가 애플리케이션의 표시되는 UI와 상호 작용하고 빠르게 탐색할 수 있는 직관적인 방법을 제공하는 바로 가기 키를 정의할 수 있습니다. 자세한 내용은 [VisualElement 액세스 키 설정](~/xamarin-forms/platform/windows/visualelement-access-keys.md)을 참조하세요.
 
 ## <a name="setting-the-tab-order"></a>탭 순서 설정
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058992"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207975"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -344,9 +344,9 @@ public class TitleViewPage : ContentPage
 > [!IMPORTANT]
 > 보기의 크기가 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성으로 지정되지 않으면 탐색 모음에 많은 보기가 나타나지 않습니다. 또는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 적절한 값으로 설정하여 보기를 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 래핑할 수 있습니다.
 
-[`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정할 수 있습니다. iOS 및 UWP(유니버설 Windows 플랫폼)에서는 탐색 모음의 높이를 변경할 수 없으므로 탐색 모음에 표시된 보기가 탐색 모음의 기본 크기보다 클 경우 클리핑이 발생합니다. 그러나 Android에서는 [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능 속성을 새 높이를 나타내는 `double`로 설정하여 탐색 모음의 높이를 변경할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 높이 설정](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight)을 참조하세요.
+[`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정할 수 있습니다. iOS 및 UWP(유니버설 Windows 플랫폼)에서는 탐색 모음의 높이를 변경할 수 없으므로 탐색 모음에 표시된 보기가 탐색 모음의 기본 크기보다 클 경우 클리핑이 발생합니다. 그러나 Android에서는 [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능 속성을 새 높이를 나타내는 `double`로 설정하여 탐색 모음의 높이를 변경할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 높이 설정](~/xamarin-forms/platform/android/navigationpage-bar-height.md)을 참조하세요.
 
-또는 탐색 막대에 일부 콘텐츠를 배치하고, 일부는 탐색 막대와 색상이 일치하는 페이지 콘텐츠 맨 위에 있는 보기에 배치하여 확장된 탐색 모음을 제시할 수 있습니다. 또한 iOS에서 [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인드 가능 속성을 `true`로 설정하여 탐색 모음의 맨 아래에 있는 구분선과 그림자를 제거할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 구분 기호 숨기기](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar)를 참조하세요.
+또는 탐색 막대에 일부 콘텐츠를 배치하고, 일부는 탐색 막대와 색상이 일치하는 페이지 콘텐츠 맨 위에 있는 보기에 배치하여 확장된 탐색 모음을 제시할 수 있습니다. 또한 iOS에서 [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인드 가능 속성을 `true`로 설정하여 탐색 모음의 맨 아래에 있는 구분선과 그림자를 제거할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 구분 기호 숨기기](~/xamarin-forms/platform/ios/navigation-bar-separator.md)를 참조하세요.
 
 > [!NOTE]
 > [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty) 및 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 속성으로 탐색 모음에서 공간을 차지하는 모든 값을 정의할 수 있습니다. 탐색 모음 크기는 플랫폼 및 화면 크기에 따라 다르지만 이러한 속성을 모두 설정하면 사용 가능한 공간이 제한되어 충돌이 발생합니다. 이러한 속성을 조합하여 사용하는 대신 `TitleView` 속성만 설정하여 원하는 탐색 모음 디자인을 보다 잘 만들 수 있습니다.
@@ -355,7 +355,7 @@ public class TitleViewPage : ContentPage
 
 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 탐색 모음에 [`View`](xref:Xamarin.Forms.View)를 표시할 때 주의해야 할 몇 가지 제한 사항이 있습니다.
 
-- iOS에서는 `NavigationPage`의 탐색 모음에 배치된 보기가 큰 제목의 사용 가능 여부에 따라 다른 위치에 나타납니다. 큰 제목 사용에 대한 자세한 내용은 [큰 제목 표시](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title)를 참조하세요.
+- iOS에서는 `NavigationPage`의 탐색 모음에 배치된 보기가 큰 제목의 사용 가능 여부에 따라 다른 위치에 나타납니다. 큰 제목 사용에 대한 자세한 내용은 [큰 제목 표시](~/xamarin-forms/platform/ios/page-large-title.md)를 참조하세요.
 - Android에서는 `NavigationPage`의 탐색 모음에 보기를 배치하는 작업을 app-compat을 사용하는 앱에서만 수행할 수 있습니다.
 - `NavigationPage`의 탐색 모음에 [`ListView`](xref:Xamarin.Forms.ListView) 및 [`TableView`](xref:Xamarin.Forms.TableView)와 같은 크고 복잡한 보기를 배치하지 않는 것이 좋습니다.
 
