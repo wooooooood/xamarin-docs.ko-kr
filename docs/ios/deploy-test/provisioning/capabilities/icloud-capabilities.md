@@ -1,6 +1,6 @@
 ---
 title: Xamarin.iOS에서 iCloud 기능
-description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 iCloud 기능에 필요한 설정을 설명합니다.
+description: 애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 iCloud 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
@@ -18,9 +18,9 @@ ms.locfileid: "50105521"
 
 _응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 iCloud 기능에 필요한 설정을 설명합니다._
 
-iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 저장 수단을 제공할 수 있는 방법은 네 가지입니다. 키-값 저장소, UIDocument 저장소, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리에 대한 저장소를 직접 제공합니다. 자세한 내용은 [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md) 가이드를 참조하세요.
+iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 방법은 네 가지입니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리에 대한 스토리지를 직접 제공합니다. 자세한 내용은 [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md) 가이드를 참조하세요.
 
-iCloud 기능을 응용 프로그램에 추가하는 것은 _컨테이너_ 때문에 다른 App Services보다 약간 더 어렵습니다. 컨테이너는 iCloud에서 앱에 대한 정보를 저장하는 데 사용되며 단일 iCloud 계정에 포함된 모든 정보를 분리(예: 사용자 iOS 디바이스에서 샌드 박싱)할 수 있습니다. 컨테이너에 대한 자세한 내용은 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 가이드를 참조하세요.
+iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문에 다른 App Services보다 약간 더 어렵습니다. 컨테이너는 iCloud에서 앱에 대한 정보를 저장하는 데 사용되며 단일 iCloud 계정에 포함된 모든 정보를 분리(예: 사용자 iOS 디바이스에서 샌드 박싱)할 수 있습니다. 컨테이너에 대한 자세한 내용은 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 가이드를 참조하세요.
 
 > [!IMPORTANT]
 > Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).

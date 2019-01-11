@@ -44,7 +44,7 @@ items:
     - name: Java 개발자를 위한 Xamarin
       href: get-started/java-developers.md
     expanded: true
-  - name: 응용 프로그램 기본 사항
+  - name: 애플리케이션 기본 사항
     href: app-fundamentals/index.md
     items:
     - name: 액세스 가능성
@@ -62,7 +62,7 @@ items:
         href: app-fundamentals/resources-in-android/alternate-resources.md
       - name: 다양한 화면에 대한 리소스 만들기
         href: app-fundamentals/resources-in-android/resources-for-varying-screens.md
-      - name: 응용 프로그램 지역화 및 문자열 리소스
+      - name: 애플리케이션 지역화 및 문자열 리소스
         href: app-fundamentals/resources-in-android/application-localization.md
       - name: Android 자산 사용
         href: app-fundamentals/resources-in-android/android-assets.md
@@ -262,7 +262,7 @@ items:
     - name: Xamarin.Android를 사용하여 파일 액세스
       href: platform/files/index.md
       items:
-      - name: 외부 저장소
+      - name: 외부 스토리지
         href: platform/files/external-storage.md
     - name: 지문 인증
       href: platform/fingerprint-authentication/index.md
@@ -336,7 +336,7 @@ items:
       - name: 맵
         href: platform/maps-and-location/maps/index.md
         items:
-        - name: 맵 응용 프로그램
+        - name: 맵 애플리케이션
           href: platform/maps-and-location/maps/maps-application.md
         - name: 맵 API
           href: platform/maps-and-location/maps/maps-api.md
@@ -426,7 +426,7 @@ items:
       href: ~/essentials/phone-dialer.md?context=xamarin/android
     - name: 기본 설정
       href: ~/essentials/preferences.md?context=xamarin/android
-    - name: 보안 저장소
+    - name: 보안 스토리지
       href: ~/essentials/secure-storage.md?context=xamarin/android
     - name: 공유
       href: ~/essentials/share.md?context=xamarin/android
