@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104962"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249192"
 ---
 # <a name="inspector-installation-and-requirements"></a>관리자 설치 및 요구 사항
 
@@ -52,7 +52,7 @@ ms.locfileid: "50104962"
 |앱 플랫폼|IDE 지원|노트|
 |--- |--- |--- |
 |Mac|Mac 용 Visual Studio 에서만 지원|
-|iOS|Mac 용 Visual Studio 2017 및 Visual Studio에서 지원| |
+|iOS|Mac 용 Visual Studio 2017 및 Visual Studio에서 지원| 링커 동작으로 설정 되어 있어야 **연결 하지 않음** (아래 **iOS 빌드** 프로젝트 옵션) |
 |Android|Mac 용 Visual Studio 2017 및 Visual Studio에서 지원|Android 대상 > 4.0.3을 사용 하 여 = **fastdev** 사용 하도록 설정 합니다.<br />Google, Visual Studio 또는 Xamarin Android 에뮬레이터를 사용 해야 합니다. Android 7 에뮬레이터에는이 이번에는 검사를 사용할 수 없습니다.|
 |WPF|Visual Studio 2017 에서만 지원|
 
@@ -114,8 +114,8 @@ Android 및 iOS에 대 한 것이 중요에서 디버깅 하는 검사 하려는
 
 - IDE에 표시 된 대로 장치의 이름
 - 장치 OS 버전
-- Android: x86을 사용 하 고 있는지 확인 에뮬레이터
-- Android: 에뮬레이터 플랫폼 사용 중 입니까? Google 에뮬레이터? Visual Studio Android Emulator? Xamarin Android Player?
+- Android: X86을 사용 하 고 있는지 확인 합니다. 에뮬레이터
+- Android: 에뮬레이터 플랫폼을 사용 중 입니까? Google 에뮬레이터? Visual Studio Android Emulator? Xamarin Android Player?
 - 올바르게 디버깅 하는 앱을 표시 하 고 장치에서 작동?
 - 장치는 네트워크 연결 (웹 브라우저를 통해 확인)가 있습니까?
 
