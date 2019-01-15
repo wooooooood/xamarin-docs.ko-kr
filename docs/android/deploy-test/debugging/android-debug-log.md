@@ -1,6 +1,6 @@
 ---
 title: Android 디버그 로그
-description: 디버그 로그를 사용하여 Xamarin.Android 응용 프로그램을 디버깅하는 방법입니다.
+description: 디버그 로그를 사용하여 Xamarin.Android 애플리케이션을 디버깅하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
@@ -16,7 +16,7 @@ ms.locfileid: "50114784"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
-개발자가 응용 프로그램 디버그에 사용하는 아주 일반적인 트릭은 `Console.WriteLine`에 대한 호출을 수행하는 것입니다. 하지만 Android와 같은 모바일 플랫폼에는 콘솔이 없습니다. Android 디바이스에는 앱을 작성하는 동안 사용할 수 있는 로그가 제공됩니다. 이 명령은 검색을 위해 입력하는 명령 때문에 _logcat_이라고도 합니다. 로그된 데이터를 보려면 **디버그 로그** 도구를 사용하세요.
+개발자가 애플리케이션 디버그에 사용하는 아주 일반적인 트릭은 `Console.WriteLine`에 대한 호출을 수행하는 것입니다. 하지만 Android와 같은 모바일 플랫폼에는 콘솔이 없습니다. Android 디바이스에는 앱을 작성하는 동안 사용할 수 있는 로그가 제공됩니다. 이 명령은 검색을 위해 입력하는 명령 때문에 _logcat_이라고도 합니다. 로그된 데이터를 보려면 **디버그 로그** 도구를 사용하세요.
 
 ## <a name="android-debug-log-overview"></a>Android 디버그 로그 개요
 
@@ -48,22 +48,22 @@ ms.locfileid: "50114784"
 
 [![디버그 도구 창의 부분](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Device Selector**(장치 선택기) &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
+-   **장치 선택기** &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
 
--   **Log Entries**(로그 항목) &ndash; logcat의 로그 메시지 테이블입니다.
+-   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
--   **Clear Log Entries**(로그 항목 지우기) &ndash; 테이블에서 현재 로그를 모두 지웁니다.
+-   **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
 
--   **Play/Pause**(재생/일시 중지) &ndash; 새 로그 항목 표시 업데이트 또는 일시 중지 간을 토글합니다.
+-   **재생/일시 중지** &ndash; 새 로그 항목 표시 업데이트 또는 일시 중지 간을 토글합니다.
 
 -   **중지** &ndash; 새 로그 항목 표시를 중지합니다.
 
--   **Search Box**(검색 상자) &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
+-   **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
 
 **디버그 로그** 도구 창이 표시되면 장치 풀다운 메뉴를 사용하여 모니터링할 Android 장치를 선택합니다.
 
-[![Device Selector(장치 선택기)의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+[![장치 선택기의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 
@@ -78,13 +78,13 @@ ms.locfileid: "50114784"
 
 [![디버그 도구 창의 기능](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Device Selector**(장치 선택기) &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
+-   **장치 선택기** &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
 
--   **Log Entries**(로그 항목) &ndash; logcat의 로그 메시지 테이블입니다.
+-   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
--   **Clear Log Entries**(로그 항목 지우기) &ndash; 테이블에서 현재 로그를 모두 지웁니다.
+-   **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
 
--   **Search Box**(검색 상자) &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
+-   **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
 -   **메시지 표시** &ndash; 정보 메시지 표시를 토글합니다.
 
@@ -98,7 +98,7 @@ ms.locfileid: "50114784"
 
 [디버그 로그] 도구 창이 표시되면 디바이스 풀다운 메뉴를 사용하여 모니터링할 Android 디바이스를 선택합니다.
 
-[![Device selector(장치 선택기)의 위치](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+[![장치 선택기의 위치](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 
@@ -177,15 +177,15 @@ Info (19543) / mono-stdout: DEBUG - Button Clicked!
 I/ActivityManager(12944): Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=GcTest.GcTest/gctest.Activity1 } from pid 24175
 ```
 
-특히 응용 프로그램 패키지 이름도 포함하는 정규식과 일치하는 줄을 찾습니다.
+특히 애플리케이션 패키지 이름도 포함하는 정규식과 일치하는 줄을 찾습니다.
 
 ```shell
 ^I.*ActivityManager.*Starting: Intent
 ```
 
-작업의 시작 부분에 해당하는 줄이며 다음 메시지 중 *대부분*(전부는 아님)이 응용 프로그램과 관련되어야 합니다.
+작업의 시작 부분에 해당하는 줄이며 다음 메시지 중 *대부분*(전부는 아님)이 애플리케이션과 관련되어야 합니다.
 
-모든 메시지는 메시지를 생성하는 프로세스의 프로세스 식별자(pid)를 포함합니다. 위의 `ActivityManager` 메시지에서 `12944` 프로세스는 메시지를 생성합니다. 어떤 프로세스가 디버그 중인 응용 프로그램의 프로세스인지 확인하려면 **mono.MonoRuntimeProvider** 메시지를 찾습니다. 
+모든 메시지는 메시지를 생성하는 프로세스의 프로세스 식별자(pid)를 포함합니다. 위의 `ActivityManager` 메시지에서 `12944` 프로세스는 메시지를 생성합니다. 어떤 프로세스가 디버그 중인 애플리케이션의 프로세스인지 확인하려면 **mono.MonoRuntimeProvider** 메시지를 찾습니다. 
 
 ```shell
 I/ActivityThread(  602): Pub TouchTest.TouchTest.__mono_init__: mono.MonoRuntimeProvider
