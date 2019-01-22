@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Essentials 시작
-description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 응용 프로그램에서 작동하는 단일 플랫폼 간 API를 제공합니다.
+description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: c40762ad4d165c1e5a29bdf9dc6d3c0fdb8581f7
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: d2ce173740b6de1c628c34c3b5c1227ed0fbcd3c
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411728"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418649"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
-Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 응용 프로그램에서 작동하는 단일 플랫폼 간 API를 제공합니다.
+Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 
 ## <a name="platform-support"></a>플랫폼 지원
 
@@ -41,9 +41,6 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
 
     솔루션 탐색기 패널에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. **Xamarin.Essentials**를 검색하고 Android, iOS, UWP 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
 
-    > [!TIP]
-    > [**Xamarin.Essentials** NuGet](https://www.nuget.org/packages/Xamarin.Essentials)이 미리 보기 상태인 경우 **시험판 포함** 확인란을 선택합니다.
-
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
     솔루션 탐색기 패널에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > NuGet 패키지 추가...** 를 선택합니다. **Xamarin.Essentials**를 검색하고 Android, iOS 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
@@ -60,9 +57,9 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
 
     # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-    Xamarin.Essentials는 API 레벨 19에 해당하는 최소 Android 버전 4.4를 지원하지만, 컴파일 대상 Android 버전은 API 레벨 27에 해당하는 8.1이어야 합니다. Visual Studio에서 이러한 두 버전은 Android 프로젝트에 대한 프로젝트 속성 대화 상자의 Android 매니페스트 탭에서 설정됩니다. Mac용 Visual Studio에서는 Android 프로젝트에 대한 프로젝트 옵션 대화 상자의 Android 응용 프로그램 탭에서 설정됩니다. 
+    Xamarin.Essentials는 API 레벨 19에 해당하는 최소 Android 버전 4.4를 지원하지만, 컴파일 대상 Android 버전은 API 레벨 27에 해당하는 8.1이어야 합니다. Visual Studio에서 이러한 두 버전은 Android 프로젝트에 대한 프로젝트 속성 대화 상자의 Android 매니페스트 탭에서 설정됩니다. Mac용 Visual Studio에서는 Android 프로젝트에 대한 프로젝트 옵션 대화 상자의 Android 애플리케이션 탭에서 설정됩니다. 
 
-    Xamarin.Essentials는 필요한 Xamarin.Android.Support 라이브러리 버전 27.0.2.1을 설치합니다. NuGet 패키지 관리자를 사용하여 응용 프로그램에 필요한 다른 모든 Xamarin.Android.Support 라이브러리도 버전 27.0.2.1로 업데이트해야 합니다. 응용 프로그램에서 사용하는 모든 Xamarin.Android.Support 라이브러리는 동일해야 하며, 적어도 27.0.2.1 버전이어야 합니다. Xamarin.Essentials NuGet을 추가하거나 솔루션의 NuGet을 업데이트하는 데 문제가 있는 경우 [문제 해결 페이지](troubleshooting.md)를 참조하세요.
+    Xamarin.Essentials는 필요한 Xamarin.Android.Support 라이브러리 버전 27.0.2.1을 설치합니다. NuGet 패키지 관리자를 사용하여 애플리케이션에 필요한 다른 모든 Xamarin.Android.Support 라이브러리도 버전 27.0.2.1로 업데이트해야 합니다. 애플리케이션에서 사용하는 모든 Xamarin.Android.Support 라이브러리는 동일해야 하며, 적어도 27.0.2.1 버전이어야 합니다. Xamarin.Essentials NuGet을 추가하거나 솔루션의 NuGet을 업데이트하는 데 문제가 있는 경우 [문제 해결 페이지](troubleshooting.md)를 참조하세요.
 
     Android 프로젝트의 `MainLauncher` 또는 시작된 `Activity`의 `OnCreate` 메서드에서 Xamarin.Essentials를 초기화해야 합니다.
 
