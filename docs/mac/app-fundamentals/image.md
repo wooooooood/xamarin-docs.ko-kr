@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746910"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841382"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.Mac의 이미지
 
@@ -82,7 +82,7 @@ Xamarin.Mac 응용 프로그램에서 사용 하 여 이미지를 추가 하는 
 - PDF는 컴파일 시간 및 최종 응용 프로그램에서 제공 하는 비트맵 비트맵 래스터화된 있을 전체 벡터 지원 되지 않습니다.
 - 자산 카탈로그에 설정한 후에 이미지의 크기를 조정할 수 없습니다. (또는 코드에서 자동 레이아웃 및 Size 클래스를 사용 하 여) 이미지 크기를 조정 하려는 경우 다른 비트맵 마찬가지로 이미지 왜곡 됩니다.
 
-사용 하는 경우는 **집합 이미지** Xcode의 Interface Builder에서 단순히 이름을 선택할 수 있습니다 설정의 드롭다운 목록에서 합니다 **특성 검사기**: * *
+사용 하는 경우는 **집합 이미지** Xcode의 Interface Builder에서 단순히 이름을 선택할 수 있습니다 설정의 드롭다운 목록에서 합니다 **특성 검사기**:
 
 ![Xcode의 Interface Builder에서 집합 이미지를 선택할](image-images/imageset06.png "Xcode의 Interface Builder에서 이미지를 선택 하면 설정")
 
@@ -247,7 +247,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>테이블 뷰를 사용 하 여 이미지를 사용 하 여
 
-셀의 일부로 이미지를 포함 하는 `NSTableView`에서 테이블 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여를 `NSTableCellView` 대신 일반적인 `NSTextField`합니다. 예를 들면 다음과 같습니다.
+셀의 일부로 이미지를 포함 하는 `NSTableView`에서 테이블 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여를 `NSTableCellView` 대신 일반적인 `NSTextField`합니다. 예를 들어:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -345,7 +345,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>개요 보기를 사용 하 여 이미지를 사용 하 여
 
-셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여를 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들면 다음과 같습니다.
+셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여를 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들어:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
