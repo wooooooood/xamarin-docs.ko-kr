@@ -1,6 +1,6 @@
 ---
 title: Xamarin.iOS 앱에 대한 코드 서명 및 프로비전
-description: 이 문서는 장치 프로비저닝, 기능 사용, 자격 사용, Info.plist 파일 및 fastlane을 설명하는 설명서로 연결합니다.
+description: 이 문서는 디바이스 프로비저닝, 기능 사용, 자격 사용, Info.plist 파일 및 fastlane을 설명하는 설명서로 연결합니다.
 ms.prod: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
 ms.technology: xamarin-ios
@@ -18,7 +18,7 @@ ms.locfileid: "50113162"
 
 ## <a name="device-provisioning--introductioniosget-startedinstallationdevice-provisioningindexmd"></a>[장치 프로비저닝 - 소개](~/ios/get-started/installation/device-provisioning/index.md)
 
-Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 장치로 배포하기 등을 자세히 다룹니다.
+Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 디바이스를 프로비전하는 것입니다. 이 가이드는 개발 인증서 요청하기, 앱 서비스를 사용해 작업하기, 앱을 디바이스로 배포하기 등을 자세히 다룹니다.
 
 ## <a name="working-with-capabilitiescapabilitiesindexmd"></a>[기능 작업](capabilities/index.md)
 

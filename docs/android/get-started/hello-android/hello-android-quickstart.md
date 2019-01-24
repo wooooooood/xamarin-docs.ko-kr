@@ -257,12 +257,12 @@ translateButton.Click += (sender, e) =>
 
 ## <a name="run-the-app"></a>앱 실행
 
-Android 장치 또는 에뮬레이터에서 응용 프로그램을 실행하여 테스트합니다.
+Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하여 테스트합니다.
 **좌표 이동** 단추를 눌러 **1-855-XAMARIN**을 전화 번호로 변환합니다.
 
 [![실행 중인 앱의 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
-Android 장치에서 앱을 실행하려면 [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
+Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -485,7 +485,7 @@ namespace Phoneword
 
 대화 상자에서 **삭제** 단추를 클릭합니다.
 
-다음으로 [Xamarin 앱 아이콘 설정](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)을 다운로드하고 압축을 풉니다. 이 zip 파일은 응용 프로그램에 대한 아이콘을 보관합니다. 각 아이콘은 시각적으로 거의 동일하지만 다양한 화면 밀도를 가진 다양한 장치에서 다른 해상도로 올바르게 렌더링합니다.  파일 집합을 Xamarin.Android 프로젝트에 복사해야 합니다. Mac용 Visual Studio의 **Solution Pad**에서 **mipmap-hdpi** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가 > 파일 추가**를 선택합니다.
+다음으로 [Xamarin 앱 아이콘 설정](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)을 다운로드하고 압축을 풉니다. 이 zip 파일은 응용 프로그램에 대한 아이콘을 보관합니다. 각 아이콘은 시각적으로 거의 동일하지만 다양한 화면 밀도를 가진 다양한 디바이스에서 다른 해상도로 올바르게 렌더링합니다.  파일 집합을 Xamarin.Android 프로젝트에 복사해야 합니다. Mac용 Visual Studio의 **Solution Pad**에서 **mipmap-hdpi** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가 > 파일 추가**를 선택합니다.
 
 [![파일 추가](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png#lightbox)
 
@@ -503,11 +503,11 @@ namespace Phoneword
 
 ## <a name="run-the-app"></a>앱 실행
 
-마지막으로 Android 장치 또는 에뮬레이터에서 응용 프로그램을 실행하고 Phoneword를 변환하여 테스트합니다.
+마지막으로 Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하고 Phoneword를 변환하여 테스트합니다.
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
-Android 장치에서 앱을 실행하려면 [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
+Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
 
 ::: zone-end
 

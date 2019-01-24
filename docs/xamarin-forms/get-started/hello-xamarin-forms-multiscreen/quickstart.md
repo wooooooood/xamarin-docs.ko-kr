@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms Multiscreen Quickstart
-description: 이 문서에서는 응용 프로그램에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 응용 프로그램을 확장하는 방법을 설명합니다.
+description: 이 문서에서는 애플리케이션에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 애플리케이션을 확장하는 방법을 설명합니다.
 zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
@@ -8,24 +8,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 406a7e780136f87dc85b28b970de2bfd02db36ec
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123481"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052373"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms Multiscreen Quickstart
 
-이 빠른 시작에서는 응용 프로그램에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 응용 프로그램을 확장하는 방법을 보여줍니다. 최종 응용 프로그램은 다음과 같습니다.
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/PhonewordMultiscreen/)
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword 응용 프로그램")](quickstart-images/intro-app-examples.png#lightbox "Phoneword 응용 프로그램")
+이 빠른 시작에서는 애플리케이션에 대한 통화 기록을 추적하기 위해 두 번째 화면을 추가하여 Phoneword 애플리케이션을 확장하는 방법을 보여줍니다. 최종 애플리케이션은 다음과 같습니다.
+
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword 애플리케이션")](quickstart-images/intro-app-examples.png#lightbox "Phoneword 애플리케이션")
 
 ::: zone pivot="windows"
 
 ## <a name="update-the-app-with-visual-studio"></a>Visual Studio를 사용하여 앱 업데이트
 
-1. Visual Studio를 실행합니다. 시작 페이지에서 **프로젝트 열기...** 를 클릭하고, **프로젝트 열기** 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
+1. Visual Studio를 실행합니다. 시작 페이지에서 **프로젝트/솔루션 열기...** 를 클릭하고, **프로젝트 열기** 대화 상자에서 Phoneword 프로젝트에 대한 솔루션 파일을 선택합니다.
 
     ![](quickstart-images/vs/open-solution.png "프로젝트 열기")
 
@@ -58,13 +60,13 @@ ms.locfileid: "50123481"
     </ContentPage>
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 닫습니다.
 
 5. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **App.xaml.cs** 파일을 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/vs/open-app-class.png "App.xaml.cs 열기")
 
-6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+6. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 애플리케이션을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -89,7 +91,7 @@ ms.locfileid: "50123481"
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
 
 7. **솔루션 탐색기**에서 공유 **Phoneword** 프로젝트의 **MainPage.xaml** 파일을 두 번 클릭하여 엽니다.
 
@@ -109,7 +111,7 @@ ms.locfileid: "50123481"
     </StackLayout>
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
 9. **솔루션 탐색기**에서 **MainPage.xaml.cs**을 두 번 클릭하여 엽니다.
 
@@ -146,22 +148,22 @@ ms.locfileid: "50123481"
     }
     ```
 
-    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 선택합니다.
+    **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
-11. Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(하거나 **CTRL+SHIFT+B** 키를 누릅니다). 응용 프로그램이 빌드하고 성공 메시지가 Visual Studio 상태 표시줄에 표시됩니다.
+11. Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(또는 **CTRL+SHIFT+B** 키를 누름)합니다. 애플리케이션이 빌드하고 성공 메시지가 Visual Studio 상태 표시줄에 표시됩니다.
 
     ![](quickstart-images/vs/build-successful.png "빌드 성공")
 
-    오류가 있는 경우 이전 단계를 반복하고 응용 프로그램이 성공적으로 빌드할 때까지 실수를 수정합니다.
+    오류가 있는 경우 이전 단계를 반복하고 애플리케이션이 성공적으로 빌드할 때까지 실수를 수정합니다.
 
-12. Visual Studio 도구 모음에서 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+12. Visual Studio 도구 모음에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/vs/start.png "Visual Studio 도구 모음")
-    ![](quickstart-images/vs/phone-result-uwp.png "Phoneword 응용 프로그램 UWP")
+    ![](quickstart-images/vs/phone-result-uwp.png "Phoneword 애플리케이션 UWP")
 
 13. **솔루션 탐색기**에서 **Phoneword.Droid** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **시작 프로젝트로 설정**을 선택합니다.
-14. Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
-15. iOS 장치가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 장치에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
+14. Visual Studio 도구 모음에서 Android 에뮬레이터 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+15. iOS 디바이스가 있고 Xamarin.Forms 개발에 대한 Mac 시스템 요구 사항을 충족하는 경우 비슷한 기술을 사용하여 앱을 iOS 디바이스에 배포합니다. 또는 [iOS 원격 시뮬레이터](~/tools/ios-simulator/index.md)에 앱을 배포합니다.
 
     > [!NOTE]
     > 전화 통화는 장치 에뮬레이터에서 지원되지 않습니다.
@@ -208,13 +210,13 @@ ms.locfileid: "50123481"
     </ContentPage>      
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 닫습니다.
+    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **CallHistoryPage.xaml**에 저장하고 파일을 닫습니다.
 
 6. **Solution Pad**에서 **App.xaml.cs**를 두 번 클릭하여 엽니다.
 
     ![](quickstart-images/xs/open-app-class.png "App.xaml.cs 열기")
 
-7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 응용 프로그램을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
+7. **App.xaml.cs**에서 `System.Collections.Generic` 네임스페이스를 가져와 `PhoneNumbers` 속성의 선언을 추가하고, 속성을 `App` 생성자에서 초기화한 후 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 속성이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 되도록 초기화합니다. `PhoneNumbers` 컬렉션은 애플리케이션을 사용해 호출한 각 변환된 전화번호의 목록을 저장하기 위해 사용됩니다.
 
     ```csharp
     using System.Collections.Generic;
@@ -239,7 +241,7 @@ ms.locfileid: "50123481"
     }
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
+    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
 
 8. **Solution Pad**에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
@@ -259,7 +261,7 @@ ms.locfileid: "50123481"
     </StackLayout>
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
+    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
 10. **Solution Pad**에서 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
@@ -296,15 +298,15 @@ ms.locfileid: "50123481"
     }
     ```
 
-    **File > Save**를 선택하거나(또는 **&#8984; + S**를 눌러) 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
+    **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
-12. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(하거나 **&#8984; + B** 키를 누릅니다). 응용 프로그램이 빌드하고 성공 메시지가 Mac용 Visual Studio 상태 표시줄에 표시됩니다.
+12. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(또는 **&#8984; + B** 키를 누름)합니다. 애플리케이션이 빌드하고 성공 메시지가 Mac용 Visual Studio 상태 표시줄에 표시됩니다.
 
     ![](quickstart-images/xs/build-successful.png "빌드 성공")
 
-    오류가 있는 경우 이전 단계를 반복하고 응용 프로그램이 성공적으로 빌드할 때까지 실수를 수정합니다.
+    오류가 있는 경우 이전 단계를 반복하고 애플리케이션이 성공적으로 빌드할 때까지 실수를 수정합니다.
 
-13. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+13. Mac용 Visual Studio 도구 모음에서 iOS Simulator 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/start.png "Mac용 Visual Studio 도구 모음")
     ![](quickstart-images/xs/phone-result-ios.png "iOS Simulator")
@@ -315,7 +317,7 @@ ms.locfileid: "50123481"
 
     ![](quickstart-images/xs/set-startup-project.png "시작 프로젝트로 설정")
 
-15. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 응용 프로그램을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
+15. Mac용 Visual Studio 도구 모음에서 Android 에뮬레이터 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     ![](quickstart-images/xs/phone-result-android.png "Android Emulator")
 
@@ -324,7 +326,7 @@ ms.locfileid: "50123481"
 
 ::: zone-end
 
-멀티 스크린 Xamarin.Forms 응용 프로그램을 완료한 것을 축하합니다. 이 가이드의 [다음 항목](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md)은 Xamarin.Forms를 사용하여 페이지 탐색 및 데이터 바인딩에 대한 이해를 갖추기 위해 이 연습에서 수행된 단계를 검토합니다.
+멀티 스크린 Xamarin.Forms 애플리케이션을 완료한 것을 축하합니다. 이 가이드의 [다음 항목](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md)은 Xamarin.Forms를 사용하여 페이지 탐색 및 데이터 바인딩에 대한 이해를 갖추기 위해 이 연습에서 수행된 단계를 검토합니다.
 
 ## <a name="related-links"></a>관련 링크
 

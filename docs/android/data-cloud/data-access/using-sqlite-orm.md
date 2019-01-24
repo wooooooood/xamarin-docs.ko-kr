@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 741e18d84c25bb4479480949a271a5845e99daa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118463"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418688"
 ---
 # <a name="using-sqlitenet-with-android"></a>Android SQLite.NET 사용
 
@@ -22,7 +22,7 @@ Xamarin 앱에서 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet �
 
 - **패키지 이름:** sqlite-net-pcl
 - **작성자:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
+- **ID:** sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![SQLite.NET NuGet 패키지](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
@@ -136,7 +136,7 @@ public static void DoSomeDataAccess () {
 -   **[MaxLength(value)]**  &ndash; 데이터베이스 삽입을 수행 하려고 할 때 텍스트 속성의 길이 제한 합니다. 코드가 사용 유효성을 검사 해야이이 특성은 '때만 확인' 삽입 또는 업데이트 작업을 시도 하는 대로 개체를 삽입 하기 전에 합니다.
 
 -   **[무시]**  &ndash; 하면 SQLite.NET이이 속성을 무시 합니다.
-    데이터베이스에 저장할 수 없는 형식이 있는 속성 또는 자동으로 확인할 수 없는 모델 컬렉션 SQLite 되도록 하는 속성에 대 한 경우 특히 유용 합니다.
+    데이터베이스에 저장할 수 없는 형식이 있는 속성 또는 SQLite로 자동으로 확인할 수 없는 컬렉션을 모델링 하는 속성에 대해 특히 유용 합니다.
 
 -   **[Unique]**  &ndash; 기본 데이터베이스 열에 값이 고유한 지 확인 합니다.
 
@@ -205,7 +205,7 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>SQLite.NET를 사용 하 여 여러 스레드를 사용 하 여
 
-SQLite는 서로 다른 3 가지 스레딩 모드를 지원 합니다. *단일 스레드*, *다중 스레드*, 및 *직렬화 됨*합니다. 아무런 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우 SQLite를 사용 하 여 구성할 수 있습니다 합니다 **직렬화 됨** 모드를 스레딩 합니다. 응용 프로그램의 초기에이 모드를 설정 해야 (예를 들어 맨 앞에 `OnCreate` 메서드).
+SQLite는 서로 다른 3 가지 스레딩 모드를 지원합니다. *단일 스레드*하십시오 *다중 스레드*, 및 *직렬화*합니다. 아무런 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우 SQLite를 사용 하 여 구성할 수 있습니다 합니다 **직렬화 됨** 모드를 스레딩 합니다. 응용 프로그램의 초기에이 모드를 설정 해야 (예를 들어 맨 앞에 `OnCreate` 메서드).
 
 스레딩 모드를 변경 하려면 호출 `SqliteConnection.SetConfig`합니다. 이 코드 줄에 대해 SQLite를 구성 하는 예를 들어 **직렬화 됨** 모드: 
 

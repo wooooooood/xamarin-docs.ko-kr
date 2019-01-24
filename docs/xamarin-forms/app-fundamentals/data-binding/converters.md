@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997486"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054333"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 데이터 바인딩은 일반적으로 원본 속성에서 대상 속성으로, 일부 경우에는 대상 속성에서 원본 속성으로 데이터를 전송합니다. 이 전송은 원본 및 대상 속성이 동일한 형식인 경우 또는 하나의 형식을 암시적 변환을 통해 다른 형식으로 변환할 수 있는 경우에 간단합니다. 그렇지 않은 경우 형식 변환을 수행해야 합니다.
 
@@ -45,7 +47,7 @@ public class IntToBoolConverter : IValueConverter
 
 데이터가 원본에서 `OneWay` 또는 `TwoWay` 바인딩의 대상으로 이동하는 경우 `Convert` 메서드가 호출됩니다. `value` 매개 변수는 데이터 바인딩 원본의 개체 또는 값입니다. 메서드는 데이터 바인딩 대상 형식의 값을 반환해야 합니다. 여기에 표시된 메서드는 `value` 매개 변수를 `int`에 캐스팅한 다음, `bool` 반환 값에 대해 0과 비교합니다.
 
-데이터가 대상에서 `TwoWay` 또는 `OneWayToSource` 바인딩의 원본으로 이동하는 경우 `ConvertBack` 메서드가 호출됩니다. `ConvertBack`은 반대 변환을 수행합니다. `value` 매개 변수가 대상의 `bool`이라고 가정하고, 원본에 대한 `int` 반환 값으로 변환합니다.
+데이터가 대상에서 `TwoWay` 또는 `OneWayToSource` 바인딩의 원본으로 이동하는 경우 `ConvertBack` 메서드가 호출됩니다. `ConvertBack`은 반대 변환을 수행합니다. `value` 매개 변수가 대상의 `bool`이라고 가정하고, 소스에 대한 `int` 반환 값으로 변환합니다.
 
 데이터 바인딩에 `StringFormat` 설정이 포함되는 경우 값 변환기는 결과가 문자열로 서식 지정되기 전에 호출됩니다.
 
@@ -130,7 +132,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 }
 ```
 
-**스위치 표시기** 페이지는 `Switch` 보기의 값을 표시하기 위해 사용하는 방법을 보여줍니다. 값 변환기를 리소스 사전의 리소스로 인스턴스화하는 것은 일반적이지만 이 페이지는 대체 방법을 보여줍니다. 각 값 변환기는 `Binding.Converter` 속성 요소 태그 간에 인스턴스화됩니다. `x:TypeArguments`는 제네릭 인수를 나타내며, `TrueObject` 및 `FalseObject`는 해당 형식의 개체로 설정됩니다.
+**스위치 표시기** 페이지는 `Switch` 보기의 값을 표시하기 위해 사용하는 방법을 보여줍니다. 값 변환기를 리소스 사전의 리소스로 인스턴스화하는 것은 일반적이지만 이 페이지는 대체 방법을 보여 줍니다. 각 값 변환기는 `Binding.Converter` 속성 요소 태그 간에 인스턴스화됩니다. `x:TypeArguments`는 제네릭 인수를 나타내며, `TrueObject` 및 `FalseObject`는 해당 형식의 개체로 설정됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -466,4 +468,4 @@ binding.ConverterParameter = 255;
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Xamarin.Forms 서적의 데이터 바인딩 챕터](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

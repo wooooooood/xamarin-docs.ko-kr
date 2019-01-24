@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105040"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053869"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 보기 클래스에서 파생되어야 합니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼별 웹 컨트롤을 향상시키는 방법을 보여주는 HybridWebView 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 

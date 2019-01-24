@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675258"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053466"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 MVVM(Model-View-ViewModel) 아키텍처에서 데이터 바인딩은 일반적으로 `INotifyPropertyChanged`에서 파생되는 클래스인 ViewModel의 속성과 일반적으로 XAML 파일인 View의 속성 간에 정의됩니다. 경우에 따라 애플리케이션에서 사용자에게 ViewModel의 어떤 항목에 영향을 주는 명령을 시작하도록 요구하여 이러한 속성 바인딩을 뛰어넘어야 합니다. 이러한 명령은 일반적으로 단추를 클릭하거나 손가락으로 탭하여 신호를 받으며, 대개 `Button`의 `Clicked` 이벤트 또는 `TapGestureRecognizer`의 `Tapped` 이벤트에 대한 처리기의 코드 숨김 파일에서 처리됩니다.
 

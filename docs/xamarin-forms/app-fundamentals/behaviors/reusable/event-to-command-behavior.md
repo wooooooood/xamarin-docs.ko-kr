@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 8bf8f86cf708806d1c17b3fe4eda0755f98fd646
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 1c2aea9a5dead1962cfd4bb71d1a1211e8b98ee9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563188"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056709"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 
 _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다._
 
@@ -170,7 +172,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 <Label Text="{Binding SelectedItemText}" />
 ```
 
-해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 var listView = new ListView();

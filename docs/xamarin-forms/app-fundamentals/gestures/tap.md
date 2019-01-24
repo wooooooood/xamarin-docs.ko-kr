@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: e2e5a71d7cddee66612c12bc6091c57426b3ed47
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38994856"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059962"
 ---
 # <a name="adding-a-tap-gesture-recognizer"></a>탭 제스처 인식기 추가
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
 
 _탭 제스처는 탭 감지에 사용되며 TapGestureRecognizer 클래스를 통해 구현됩니다._
 

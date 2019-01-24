@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
 ms.openlocfilehash: 3b8a440617dedfbe23f869e865b3cedae21d6c5b
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241379"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54209808"
 ---
 # <a name="adding-ios-specific-formatting"></a>추가 iOS 별 서식 지정
 
@@ -86,7 +86,8 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-기본적으로 선택된 된 탭 표시줄 아이콘을 [ `TabbedPage` ](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) 파란색 됩니다.
+기본적으로 선택된 된 탭 표시줄 아이콘을 [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+파란색 것입니다.
 
 ![](theme-images/tabbar-default.png "기본 iOS TabbedPage에 탭 표시줄 아이콘")
 

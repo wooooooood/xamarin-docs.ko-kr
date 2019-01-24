@@ -436,7 +436,7 @@ Android 5.0에는 새 `Android.Media.MediaController` 클래스를 대체 `Remot
 
 Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 참조 하세요 [미디어](http://developer.android.com/about/versions/android-5.0.html#Media)합니다.
 
-### <a name="storage"></a>저장소
+### <a name="storage"></a>스토리지
 
 Android 5.0 응용 프로그램 디렉터리 및 문서 작업을 쉽게 수행할 수 있도록 저장소 액세스 프레임 워크를 업데이트 합니다.
 

@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2018
-ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2018
+ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898994"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207819"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 애플리케이션 기본 사항
 
@@ -27,6 +27,10 @@ Xamarin.Forms로 액세스 가능한 기능(예: 화면 판독 도구 지원)을
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[앱 수명 주기](app-lifecycle.md)
 
 `Application` 클래스 `OnStart`, `OnSleep` 및 `OnResume` 메서드는 물론 모달 탐색 이벤트를 사용하면 사용자 지정 코드로 애플리케이션 수명 주기 이벤트를 처리할 수 있습니다.
+
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[애플리케이션 인덱싱 및 딥 링크 설정](deep-linking.md)
+
+애플리케이션 인덱싱은 검색 결과에 나타나서 관련성을 유지하기 위해 몇 번 사용한 후에 잊혀질 애플리케이션을 허용합니다. 딥 링크 설정은 애플리케이션이 애플리케이션 데이터를 포함하는 검색 결과에 응답할 수 있도록 하며, 일반적으로 딥 링크에서 참조하는 페이지로 이동하면 됩니다.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[동작](behaviors/index.md)
 

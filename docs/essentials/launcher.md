@@ -28,7 +28,7 @@ ms.locfileid: "52898274"
 using Xamarin.Essentials;
 ```
 
-Launcher 기능을 사용하려면 `OpenAsync` 메서드를 호출하고 열려는 `string` 또는 `Uri`를 전달합니다. 필요에 따라 `CanOpenAsync` 메서드를 사용하여 장치의 응용 프로그램이 URI 스키마를 처리할 수 있는지 확인할 수 있습니다.
+Launcher 기능을 사용하려면 `OpenAsync` 메서드를 호출하고 열려는 `string` 또는 `Uri`를 전달합니다. 필요에 따라 `CanOpenAsync` 메서드를 사용하여 디바이스의 응용 프로그램이 URI 스키마를 처리할 수 있는지 확인할 수 있습니다.
 
 ```csharp
 public class LauncherTest
@@ -50,7 +50,7 @@ public class LauncherTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-이 장치의 대상 응용 프로그램이 사용자 응용 프로그램의 `OpenAsync`에 의해 열린 적이 없는 경우 iOS에서 앱이 열 수 있도록 허용하라는 메시지를 사용자에게 한 번 표시합니다.
+이 디바이스의 대상 응용 프로그램이 사용자 응용 프로그램의 `OpenAsync`에 의해 열린 적이 없는 경우 iOS에서 앱이 열 수 있도록 허용하라는 메시지를 사용자에게 한 번 표시합니다.
 
 `CanOpenAsync`에서 반환된 작업이 즉시 완료됩니다.
 

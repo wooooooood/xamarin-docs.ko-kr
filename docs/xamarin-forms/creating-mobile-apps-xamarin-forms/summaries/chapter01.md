@@ -1,18 +1,18 @@
 ---
 title: 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
-description: 'Xamarin.Forms를 사용하여 모바일 앱 만들기: 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 552cff71911b0f5ee118e15cb543e16bbfa19bd3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050967"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207910"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
 
@@ -25,9 +25,9 @@ ms.locfileid: "53050967"
 
 ## <a name="cross-platform-mobile-development"></a>크로스 플랫폼 모바일 개발
 
-이 문제는 모바일 플렛폼을 타겟으로 개발할 때 일반적으로 발생합니다. 현재 두개의 메이저 모바일 플렛폼이 존재합니다. iOS 운영체제를 사용하는 아이폰, 아이패드 애플 제품군과 안드로이드 운영체제를 사용하는 수많은 스마트폰과 태블릿이 있습니다. 그밖에 중요한 플랫폼으로 마이크로소프트의 Universal Windows Platform (UWP)이 있으며 Windows 10과 Windows 10 Mobile을 타겟으로 하는 단일 프로그램을 개발할 수 있습니다.
+이 문제는 모바일 플렛폼을 타겟으로 개발할 때 일반적으로 발생합니다. 현재 두개의 메이저 모바일 플렛폼이 존재합니다. iOS 운영체제를 사용하는 아이폰, 아이패드 애플 제품군과 안드로이드 운영체제를 사용하는 수많은 스마트폰과 태블릿이 있습니다. 다른 중요 한 플랫폼은 Microsoft의 Windows 플랫폼 (UWP (유니버설)을 모두 Windows 10을 대상으로 한 개의 프로그램을 수 있습니다.
 
-이러한 플랫폼을 대상으로 하려는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 사용 하 여 처리 해야 하 고&mdash;아마도 가장 이라는&mdash;3 다양 한 프로그래밍 언어: iPhone 및 iPad, Android 용 Java 용 Objective-c 및 C# Windows에 대 한 합니다.
+이러한 플랫폼을 대상으로 하려는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 사용 하 여 처리 해야 하 고&mdash;아마도 가장 이라는&mdash;3 다른 프로그래밍 언어: IPhone 및 iPad, Android 용 Java 용 Objective-c 및 C# Windows에 대 한 합니다.
 
 ## <a name="the-c-and-net-solution"></a>C#과 .NET 솔루션
 
@@ -42,16 +42,14 @@ Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었�
 
 ## <a name="introducing-xamarinforms"></a>Xamarin.Forms 소개
 
-여러 모바일 플랫폼을 대상으로 하는 경우 Xamarin.Forms는 더 많은 코드 공유를 허용합니다. Xamarin.Forms로 작성된 단일 프로그램은 5개의 고유한 플랫폼을 지원할 수 있습니다.
+여러 모바일 플랫폼을 대상으로 하는 경우 Xamarin.Forms는 더 많은 코드 공유를 허용합니다. Xamarin.Forms 용으로 작성 된 단일 프로그램 이러한 플랫폼을 대상 수 있습니다.
 
 - iPhone, iPad 및 iPod touch에서 실행되는 프로그램을 지원하는 iOS
 - Android 휴대폰 및 태블릿에서 실행되는 프로그램을 위한 Android
-- Windows 10 및 Windows 10 Mobile을 위한 Universal Windows Platform
-- Windows 8.1의 Windows 런타임 API
-- Windows Phone 8.1의 Windows 런타임 API
+- 대상 Windows 10 유니버설 Windows 플랫폼
 
 > [!NOTE]
-> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/mac.md), [WPF](~/xamarin-forms/platform/wpf.md), [GTK #](~/xamarin-forms/platform/gtk.md), [Tizen](/xamarin-forms/platform/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
+> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
 
 대부분의 Xamarin.Forms 프로그램의 공유 코드는 단일 라이브러리나 SAP에 위치하게 됩니다. 각 플랫폼들은 이러한 공유 코드를 호출하는 작은 프로그램 조각으로 구성됩니다.
 
@@ -59,10 +57,7 @@ Xamarin.Forms API는 각 플랫폼의 네이티브 컨트롤에 매핑되며 그
 
 [![공유 플랫폼 시각 효과의 삼중 스크린 샷](images/ch01fg03-small.png "각 플랫폼에서 Xamarin.Forms 컨트롤")](images/ch01fg03-large.png#lightbox "각 플랫폼에서 Xamarin.Forms 컨트롤")
 
-왼쪽에서 오른쪽으로 iPhone, Android 및 Windows 10 Mobile 폰을 보여 줍니다.
-
-> [!NOTE]
-> Xamarin.Forms는 더 이상 Windows 10 Mobile을 지원하지 않습니다.
+왼쪽에서 오른쪽 스크린샷을 iPhone 및 Android 휴대폰을 보여 줍니다.
 
 각 화면에서 페이지는 텍스트를 표시하는 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label), 작업을 시작하기 위한 [ `Button` ](xref:Xamarin.Forms.Button), On/Off를 선택하는 [ `Switch` ](xref:Xamarin.Forms.Switch), 범위 내에서 값을 선택할 수 있는 [ `Slider` ](xref:Xamarin.Forms.Slider)를 포함하고 있습니다. 이 4개의 View는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 내에 포함된 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)의 자식들입니다.
 

@@ -1,18 +1,18 @@
 ---
 title: 요약 3 장입니다. 텍스트 더 자세히
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 3 장 요약 합니다. 텍스트 더 자세히'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 3 장입니다. 텍스트 더 자세히
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052597"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207851"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
 
@@ -100,8 +100,8 @@ ms.locfileid: "53052597"
 `Color.Default` 플랫폼의 색 구성표를 적용 하기 위한 것 및 결과적으로 서로 다른 플랫폼에서 다양 한 상황에서 다른 의미를 갖습니다. 기본적으로 플랫폼 색 구성표는 다음과 같습니다.
 
 - iOS: 밝은 배경에 어두운 텍스트
-- Android: Light (책)에 있는 어두운 배경에 텍스트 또는 어두운는 밝은 배경의 텍스트 (재료 디자인에서 AppCompat 통해는 **마스터** 샘플 코드 리포지토리의 분기)
-- 밝은 배경에 UWP: 어두운 텍스트
+- Android: (책)에 있는 어두운 배경에 텍스트 또는 어두운는 밝은 배경의 텍스트 light (AppCompat의을 통해 자료 디자인에 대 한 합니다 **마스터** 샘플 코드 리포지토리의 분기)
+- UWP: 밝은 배경에 어두운 텍스트
 
 `Color.Accent` 결과 어둡게 또는 밝게 배경에 표시 되는 플랫폼 특정 (및 경우에 따라 사용자가 선택할 수 있는) 색 값입니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "53052597"
 
 위 목록에 표시 된 대로 기본 색 구성표를가 하는 다양 한 플랫폼.
 
-광원에서 어둡게 체계를 Android.Manifest.xml 파일에서 또는에서 밝은 테마를 지정 하 여 전환할 수 있기 Android를 대상으로 하는 경우 [추가 AppCompat 및 재질 디자인](~/xamarin-forms/platform/android/appcompat.md)합니다.
+광원에서 어둡게 체계를 Android.Manifest.xml 파일에서 또는에서 밝은 테마를 지정 하 여 전환할 수 있기 Android를 대상으로 하는 경우 [추가 AppCompat 및 재질 디자인](~/xamarin-forms/platform/android/appcompat-material-design.md)합니다.
 
 Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 있지만 추가할 수 있습니다는 `RequestedTheme` 특성 중 하나로 설정할 `Light` 또는 `Dark` 플랫폼의 App.xaml 파일에 있습니다. 기본적으로 UWP 프로젝트에서 App.xaml 파일에 포함 된 `RequestedTheme` 특성이로 설정 `Light`합니다.
 

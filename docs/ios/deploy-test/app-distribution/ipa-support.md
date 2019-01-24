@@ -20,18 +20,18 @@ _이 문서에서는 테스트 또는 내부 응용 프로그램의 사내 배�
 
 iTunes 앱 스토어를 통해 판매할 응용 프로그램을 릴리스하는 것 외에도 다음 용도로 배포할 수 있습니다.
 
-- **임시 테스트** - 알파 및 베타 테스트 목적으로 iOS 응용 프로그램을 최대 100명의 사용자(특정 iOS 장치 UUID로 식별)에게 배포할 수 있습니다. Apple iOS 장치를 Apple 개발자 계정에 추가하는 방법에 대한 자세한 내용은 [개발용 iOS 장치 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning) 설명서를 참조하고, 이 방식으로 배포하는 방법에 대한 자세한 내용은 [임시](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드를 참조하세요.
+- **임시 테스트** - 알파 및 베타 테스트 목적으로 iOS 응용 프로그램을 최대 100명의 사용자(특정 iOS 장치 UUID로 식별)에게 배포할 수 있습니다. Apple iOS 디바이스를 Apple 개발자 계정에 추가하는 방법에 대한 자세한 내용은 [개발용 iOS 디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning) 설명서를 참조하고, 이 방식으로 배포하는 방법에 대한 자세한 내용은 [임시](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드를 참조하세요.
 - **사내/엔터프라이즈 배포** - iOS 응용 프로그램은 Apple의 Developer Enterprise 프로그램 구성원 자격이 필요한 회사 내에서 내부적으로 배포할 수 있습니다. 사내 배포에 대한 자세한 내용은 [사내 배포](~/ios/deploy-test/app-distribution/in-house-distribution.md) 가이드에서 자세히 설명하고 있습니다.
 
-두 경우 모두에서 올바른 배포 프로비전 프로필을 사용하여 IPA 패키지(특수 유형의 zip 파일)를 만들고 디지털 서명해야 합니다. 이 문서에서는 Mac 또는 Windows PC에서 iTunes를 사용하여 IPA 패키지를 빌드하고 iOS 장치에 패키지를 설치하는 데 필요한 단계에 대해 설명합니다.
+두 경우 모두에서 올바른 배포 프로비전 프로필을 사용하여 IPA 패키지(특수 유형의 zip 파일)를 만들고 디지털 서명해야 합니다. 이 문서에서는 Mac 또는 Windows PC에서 iTunes를 사용하여 IPA 패키지를 빌드하고 iOS 디바이스에 패키지를 설치하는 데 필요한 단계에 대해 설명합니다.
 
 <a name="iTunesMetadata" />
 
 ## <a name="the-itunesmetadataplist-file"></a>iTunesMetadata.plist 파일
 
-iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 장치 및 필요한 장치 기능과 같은 정보를 지정할 수 있습니다.
+iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 디바이스 및 필요한 디바이스 기능과 같은 정보를 지정할 수 있습니다.
 
-임시 또는 사내 배포를 통해 제공되는 iOS 응용 프로그램에는 iTunes 및 사용자 장치에 표시될 수 있도록 이 정보를 지원하는 몇 가지 방법이 필요합니다. 기본적으로 프로젝트를 빌드할 때마다 작은 iTunesMetadata.plist 파일이 만들어지며 프로젝트 디렉터리에 저장됩니다.
+임시 또는 사내 배포를 통해 제공되는 iOS 응용 프로그램에는 iTunes 및 사용자 디바이스에 표시될 수 있도록 이 정보를 지원하는 몇 가지 방법이 필요합니다. 기본적으로 프로젝트를 빌드할 때마다 작은 iTunesMetadata.plist 파일이 만들어지며 프로젝트 디렉터리에 저장됩니다.
 
 또한 추가 정보를 배포에 제공하기 위해 사용자 지정 **iTunesMetadata.plist**를 만들 수도 있습니다. 이 파일의 내용 및 만드는 방법에 대한 자세한 내용은 [iTunesMetadata.plist 내용](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_contents) 및 [iTunesMetadata.plist 파일 만들기](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_creating) 설명서를 참조하세요.
 
@@ -67,7 +67,7 @@ IPA 만들기는 이제 새 게시 워크플로에 내장됩니다. 이렇게 �
 IPA를 빌드하려면 응용 프로그램의 릴리스 빌드에 대한 _보관_을 만들어야 합니다. 이 보관에는 앱 및 이를 식별하는 정보가 포함됩니다.
 
 
-1. Mac용 Visual Studio에서 **릴리스 | 장치** 구성을 선택합니다.
+1. Mac용 Visual Studio에서 **릴리스 | 디바이스** 구성을 선택합니다.
 
     ![](ipa-support-images/buildxs01new.png "릴리스 | 장치 구성 선택")
 
@@ -229,7 +229,7 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 ## <a name="installing-an-ipa-using-itunes"></a>iTunes를 사용하여 IPA 설치
 
-결과 IPA 패키지는 테스트 사용자에게 전달되어 iOS 장치에 설치하거나 엔터프라이즈 배포용으로 제공될 수 있습니다. 선택된 방법에 관계없이 최종 사용자는 IPA 파일을 두 번 클릭하거나 열려 있는 iTunes 창으로 끌어서 Mac 또는 Windows PC의 iTunes 응용 프로그램에 패키지를 설치합니다.
+결과 IPA 패키지는 테스트 사용자에게 전달되어 iOS 디바이스에 설치하거나 엔터프라이즈 배포용으로 제공될 수 있습니다. 선택된 방법에 관계없이 최종 사용자는 IPA 파일을 두 번 클릭하거나 열려 있는 iTunes 창으로 끌어서 Mac 또는 Windows PC의 iTunes 응용 프로그램에 패키지를 설치합니다.
 
 새 iOS 응용 프로그램은 **My Apps** 섹션에 표시되며, 여기서 마우스 오른쪽 단추를 클릭하고 응용 프로그램에 대한 정보를 얻을 수 있습니다.
 
@@ -243,13 +243,13 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 -----
 
-이제 사용자는 iTunes를 자신의 장치와 동기화하여 새 iOS 응용 프로그램을 설치할 수 있습니다.
+이제 사용자는 iTunes를 자신의 디바이스와 동기화하여 새 iOS 응용 프로그램을 설치할 수 있습니다.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 앱 스토어 이외의 빌드를 위한 Xamarin.iOS 응용 프로그램을 준비하는 데 필요한 설정에 대해 설명했습니다. IPA 패키지를 만드는 방법 및 테스트 또는 사내 배포를 위해 최종 사용자의 iOS 장치에 결과 iOS 응용 프로그램을 설치하는 방법을 보여 주었습니다.
+이 문서에서는 앱 스토어 이외의 빌드를 위한 Xamarin.iOS 응용 프로그램을 준비하는 데 필요한 설정에 대해 설명했습니다. IPA 패키지를 만드는 방법 및 테스트 또는 사내 배포를 위해 최종 사용자의 iOS 디바이스에 결과 iOS 응용 프로그램을 설치하는 방법을 보여 주었습니다.
 
 
 ## <a name="related-links"></a>관련 링크

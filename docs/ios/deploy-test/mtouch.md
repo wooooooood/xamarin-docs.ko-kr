@@ -1,6 +1,6 @@
 ---
 title: mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
-description: 이 문서에서는 Xamarin.iOS 응용 프로그램을 번들로 묶고, 시뮬레이터에서 실행하고, 물리적 장치에 배포하는 데 필요한 많은 단계를 제공하는 도구인 mtouch를 설명합니다.
+description: 이 문서에서는 Xamarin.iOS 응용 프로그램을 번들로 묶고, 시뮬레이터에서 실행하고, 물리적 디바이스에 배포하는 데 필요한 많은 단계를 제공하는 도구인 mtouch를 설명합니다.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
@@ -18,7 +18,7 @@ ms.locfileid: "50109213"
 
 iPhone 응용 프로그램은 응용 프로그램 번들로 제공됩니다. 응용 프로그램 번들은 iPhone이 응용 프로그램에 대해 배우기 위해 사용하는 코드, 데이터, 구성 파일 및 매니페스트를 포함하는 `.app` 확장이 포함된 디렉터리 입니다.
 
-.NET 실행 파일을 응용 프로그램으로 바꾸는 프로세스는 대부분 응용 프로그램을 번들로 바꾸는 데 필요한 여러 단계를 통합하는 도구인 `mtouch` 명령을 통해 이루어집니다. 이 도구는 시뮬레이터에서 응용 프로그램을 시작하고 실제 iPhone 또는 iPod Touch 장치에 소프트웨어를 배포할 때도 사용됩니다.
+.NET 실행 파일을 응용 프로그램으로 바꾸는 프로세스는 대부분 응용 프로그램을 번들로 바꾸는 데 필요한 여러 단계를 통합하는 도구인 `mtouch` 명령을 통해 이루어집니다. 이 도구는 시뮬레이터에서 응용 프로그램을 시작하고 실제 iPhone 또는 iPod Touch 디바이스에 소프트웨어를 배포할 때도 사용됩니다.
 
 ## <a name="detailed-instructions"></a>자세한 지침
 
@@ -46,8 +46,8 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 `mtouch` 명령은 세 가지 방법으로 코드를 컴파일할 수 있습니다.
 
 -  시뮬레이터 테스트용 컴파일.
--  장치 배포용으로 컴파일.
--  실행 파일을 장치에 배포.
+-  디바이스 배포용으로 컴파일.
+-  실행 파일을 디바이스에 배포.
 
 
 ### <a name="building-for-the-simulator"></a>시뮬레이터용으로 빌드
@@ -58,15 +58,15 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 $ mtouch -sim Hello.app hello.exe
 ```
 
-### <a name="building-for-the-device"></a>장치용으로 빌드
+### <a name="building-for-the-device"></a>디바이스용으로 빌드
 
-장치용 소프트웨어를 빌드하려면 `mtouch -dev` 옵션을 사용하여 응용 프로그램을 빌드해야 하며, 또한 응용 프로그램을 서명하는 데 사용되는 인증서의 이름을 제공해야 합니다. 다음은 장치용 응용 프로그램을 빌드하는 방법입니다.
+디바이스용 소프트웨어를 빌드하려면 `mtouch -dev` 옵션을 사용하여 응용 프로그램을 빌드해야 하며, 또한 응용 프로그램을 서명하는 데 사용되는 인증서의 이름을 제공해야 합니다. 다음은 디바이스용 응용 프로그램을 빌드하는 방법입니다.
 
 ```bash
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-이 예에서는 "iPhone Developer: Miguel de Icaza" 인증서를 사용하여 응용 프로그램을 서명합니다. 이 단계는 매우 중요하며, 이 단계를 거치지 않으면 물리적 장치에서 응용 프로그램 로드를 거부합니다.
+이 예에서는 "iPhone Developer: Miguel de Icaza" 인증서를 사용하여 응용 프로그램을 서명합니다. 이 단계는 매우 중요하며, 이 단계를 거치지 않으면 물리적 디바이스에서 응용 프로그램 로드를 거부합니다.
 
  <a name="Running_your_Application" />
 
@@ -108,9 +108,9 @@ Press enter to terminate the application
 응용 프로그램이 실패할 경우 출력 및 오류를 살펴보고 문제를 진단할 수 있습니다.
 
 
-### <a name="deploying-to-a-device"></a>장치에 배포
+### <a name="deploying-to-a-device"></a>디바이스에 배포
 
-장치에 배포하려면 Apple의 [관리 장치](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) 문서에 설명된 대로 장치를 프로비전해야 합니다. 장치가 올바르게 프로비전되면 mtouch 명령을 사용하여 컴파일된 ".app"을 장치에 배포할 수 있습니다. 이 작업은 다음 명령을 사용하여 수행합니다.
+디바이스에 배포하려면 Apple의 [관리 디바이스](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html) 문서에 설명된 대로 디바이스를 프로비전해야 합니다. 디바이스가 올바르게 프로비전되면 mtouch 명령을 사용하여 컴파일된 ".app"을 디바이스에 배포할 수 있습니다. 이 작업은 다음 명령을 사용하여 수행합니다.
 
 ```bash
 $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app

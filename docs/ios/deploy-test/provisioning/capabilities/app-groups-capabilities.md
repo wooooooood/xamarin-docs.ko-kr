@@ -1,24 +1,24 @@
 ---
 title: Xamarin.iOS에서 앱 그룹 기능
-description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 앱 그룹 기능에 필요한 설정을 설명합니다.
+description: 애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 앱 그룹 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 4ce04f21a3e520fea9da5d538fb7cc0ac098ad31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119866"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411741"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Xamarin.iOS에서 앱 그룹 기능
 
-_응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 앱 그룹 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 앱 그룹 기능에 필요한 설정을 설명합니다._
 
-앱 그룹을 사용하면 서로 다른 응용 프로그램(또는 응용 프로그램과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
+앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
 *   [Apple Watch 설정](~/ios/watchos/app-fundamentals/settings.md)
 *   [공유 NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
@@ -34,12 +34,12 @@ _응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설
 
 1.  Apple의  [iOS Developer Center](https://developer.apple.com/account/)로 이동하여  **계정** 을 열어서 로그인합니다.
 2.  **Certificates, IDs & Profiles**(인증서, ID 및 프로필)을 선택합니다.
-3.   **식별자** 에서  **앱 그룹** 을 선택하고  **+**  단추를 클릭하여 새 그룹을 만듭니다.
+3.  **식별자**에서 **앱 그룹**을 선택하고 **+** 단추를 클릭하여 새 그룹을 만듭니다.
 4.  새 그룹에 대해  **이름**  및  **식별자** 를 입력하고  **계속**  단추를 클릭합니다. 
    
     ![앱 그룹 추가 세부 정보](app-groups-capabilities-images/image52.png)
 
-5.   **등록**  단추를 클릭하여 그룹을 만들고  **완료**  단추를 클릭하여 등록된 앱 그룹 목록으로 돌아갑니다.
+5.  **등록** 단추를 클릭하여 그룹을 만들고 **완료** 단추를 클릭하여 등록된 앱 그룹 목록으로 돌아갑니다.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>앱 그룹을 사용하도록 앱 구성
 
@@ -48,15 +48,15 @@ _응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설
 다음을 수행합니다.
 
 1.  Apple의  [iOS Developer Center](https://developer.apple.com/account/)로 이동하여 Apple 개발자 계정으로 로그인합니다.
-2.   **Program Resources** (프로그램 리소스) 메뉴에서  **Certificates, IDs & Profiles**(인증서, ID 및 프로필)을 선택합니다.
-3.   **식별자** 에서  **앱 ID** 를 선택하고  **+**  단추를 클릭하여 새 ID를 만듭니다.
+2.  **Program Resources**(프로그램 리소스) 메뉴에서 **Certificates, IDs & Profiles**(인증서, ID 및 프로필)을 선택합니다.
+3.  **식별자**에서 **앱 ID**를 선택하고 **+** 단추를 클릭하여 새 ID를 만듭니다.
 4.  앱 ID의 이름을 입력하고 Explicit App ID(명시적 앱 ID)를 지정합니다.
-5.   **앱 서비스** 에서  **앱 그룹**을 사용하도록 설정한 다음, 계속 단추를 클릭합니다.
+5.  **App Services** 아래에서 **앱 그룹**을 사용하도록 설정한 다음, [계속] 단추를 클릭합니다.
 
     ![앱 그룹 앱 서비스 추가](app-groups-capabilities-images/image53.png)
 
 6.  설정을 확인하고  **등록**  단추를 클릭하여 앱 ID를 만듭니다.
-7.   **완료**  단추를 클릭하여 등록된 앱 ID 목록으로 돌아갑니다.
+7.  **완료** 단추를 클릭하여 등록된 앱 ID 목록으로 돌아갑니다.
 8.  목록에서 새로 만든 앱 ID를 선택한 다음,  **편집**  단추를 클릭합니다.
 
     ![목록에서 앱 ID 선택](app-groups-capabilities-images/image54.png)
@@ -69,7 +69,7 @@ _응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설
 
     ![앱 그룹 추가](app-groups-capabilities-images/image56.png)
 
-11.  **할당**  단추를 클릭한 다음,  **완료**  단추를 클릭하여 등록된 앱 ID 목록으로 돌아갑니다.
+11. **할당** 단추를 클릭한 다음, **완료** 단추를 클릭하여 등록된 앱 ID 목록으로 돌아갑니다.
 12. 앱 그룹을 사용할 앱(또는 확장 프로그램)에 대해 이 단계를 반복합니다.
 
 ## <a name="next-steps"></a>다음 단계

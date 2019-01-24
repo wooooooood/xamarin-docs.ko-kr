@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998400"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058586"
 ---
 # <a name="checking-battery-status"></a>배터리 상태 확인
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/DependencyService)
 
 이 문서는 배터리 상태를 확인하는 애플리케이션의 만들기를 안내합니다. 이 문서는 James Montemagno의 배터리 플러그 인을 기반으로 합니다. 자세한 내용은 [GitHub 리포지토리](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)를 참조하세요.
 

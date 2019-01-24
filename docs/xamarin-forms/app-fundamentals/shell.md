@@ -6,13 +6,13 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
-ms.openlocfilehash: 933368f7ca1435ece4f20945b2f8e905f7584217
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 12/11/2018
+ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
+ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899386"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246297"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -50,7 +50,7 @@ Xamarin.Forms Shell은 애플리케이션의 컨테이너로, 대부분의 애�
 
 ## <a name="bootstrapping-a-shell-application"></a>셸 애플리케이션 부트스트래핑
 
-셸 애플리케이션은 `App` 클래스의 `MainPage` 속성을 새 `Shell` 인스턴스로 설정하여 부트스트랩됩니다.
+셸 애플리케이션은 `App` 클래스의 `MainPage` 속성을 셸 파일 인스턴스로 설정하여 부트스트랩됩니다.
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -62,13 +62,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-`Shell` 클래스는 애플리케이션의 시각적 개체 구조를 설명하는 XAML 파일입니다.
+`TheShell` 클래스는 애플리케이션의 시각적 개체 구조를 설명하는 XAML 파일입니다.
 
 > [!IMPORTANT]
 > 셸은 현재 시험 단계이며 `Shell` 인스턴스를 만들기 전에 `App` 클래스에 또는 `Forms.Init` 메서드를 호출하기 전에 플랫폼 프로젝트에 `Forms.SetFlags("Shell_Experimental");`을 추가하는 경우에만 사용할 수 있습니다.
@@ -83,13 +83,13 @@ namespace TailwindTraders.Mobile
 
 이러한 요소 중 어떤 것도 사용자 인터페이스를 나타내지 않고 애플리케이션의 시각적 개체 구조를 구성합니다. 셸은 이러한 요소를 취해 콘텐츠에 대한 탐색 사용자 인터페이스를 생성합니다.
 
-다음 XAML은 `Shell` 파일의 간단한 예제를 보여줍니다.
+다음 XAML은 셸 파일의 간단한 예제를 보여 줍니다.
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -97,7 +97,7 @@ namespace TailwindTraders.Mobile
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
@@ -117,8 +117,8 @@ namespace TailwindTraders.Mobile
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -349,7 +349,7 @@ namespace TailwindTraders.Mobile
 
 셸은 URI 기반 탐색 환경을 포함합니다. URI는 집합 탐색 계층 구조를 수행하지 않고도 애플리케이션의 모든 페이지에 대한 탐색을 허용하는 향상된 탐색 환경을 제공합니다. 또한 탐색 스택의 모든 페이지를 방문하지 않고도 뒤로 이동할 수 있는 기능을 제공합니다.
 
-이 URI 기반 탐색은 애플리케이션 내에서 이동하는 데 사용되는 URI 세그먼트인 경로를 통해 수행됩니다. `Shell` 파일은 경로 구성표, 경로 호스트 및 경로를 선언해야 합니다.
+이 URI 기반 탐색은 애플리케이션 내에서 이동하는 데 사용되는 URI 세그먼트인 경로를 통해 수행됩니다. 셸 파일은 경로 구성표, 경로 호스트 및 경로를 선언해야 합니다.
 
 ```xaml
 <Shell ...
@@ -362,9 +362,9 @@ namespace TailwindTraders.Mobile
 
 `RouteScheme`, `RouteHost` 및 `Route` 속성 값이 결합되어 `app://www.microsoft.com/tailwindtraders` 루트 URI를 형성합니다.
 
-`Shell` 클래스의 각 요소는 프로그래밍 방식 탐색에 사용할 수 있는 경로 속성도 정의할 수 있습니다.
+셸 파일의 각 요소는 프로그래밍 방식 탐색에 사용할 수 있는 경로 속성도 정의할 수 있습니다.
 
-`Shell` 생성자 또는 경로를 호출하기 전에 실행되는 다른 위치에서는 셸 요소가 표시되지 않는 모든 페이지(예: `MenuItem` 인스턴스)에 대해 추가 경로를 명시적으로 등록할 수 있습니다.
+셸 파일 생성자 또는 경로를 호출하기 전에 실행되는 다른 위치에서는 셸 요소가 표시되지 않는 모든 페이지(예: `MenuItem` 인스턴스)에 대해 추가 경로를 명시적으로 등록할 수 있습니다.
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));

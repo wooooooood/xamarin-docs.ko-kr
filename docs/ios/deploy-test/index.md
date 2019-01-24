@@ -28,7 +28,7 @@ ms.locfileid: "50114030"
 
 ##  <a name="ipa-deploymentiosdeploy-testapp-distributionipa-supportmd"></a>[IPA 배포](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-Ad-Hoc 및 Enterprise 배포를 통해 개발자는 테스트용 또는 내부 회사 사용자용으로 배포할 수 있는 패키지를 만들 수 있습니다. 이 문서에서는 iTunes를 사용하여 iOS 장치에 동기화할 수 있는 IPA를 만드는 방법을 설명합니다.
+Ad-Hoc 및 Enterprise 배포를 통해 개발자는 테스트용 또는 내부 회사 사용자용으로 배포할 수 있는 패키지를 만들 수 있습니다. 이 문서에서는 iTunes를 사용하여 iOS 디바이스에 동기화할 수 있는 IPA를 만드는 방법을 설명합니다.
 
 ## <a name="provisioningprovisioningindexmd"></a>[프로비전](provisioning/index.md)
 
@@ -36,7 +36,7 @@ Ad-Hoc 및 Enterprise 배포를 통해 개발자는 테스트용 또는 내부 �
 
 ## <a name="wireless-deploymentwireless-deploymentmd"></a>[무선 배포](wireless-deployment.md)
 
- Xcode 9은 앱을 배포하고 디버그할 때마다 장치를 유선으로 연결하지 않고 네트워크를 통해 iOS 장치 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 현재 미리 보기입니다.
+ Xcode 9은 앱을 배포하고 디버그할 때마다 디바이스를 유선으로 연결하지 않고 네트워크를 통해 iOS 디바이스 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 현재 미리 보기입니다.
 
 ##  <a name="testflightiosdeploy-testtestflightmd"></a>[TestFlight](~/ios/deploy-test/testflight.md)
 
@@ -44,7 +44,7 @@ TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베�
 
 ##  <a name="debugging-in-xamariniosiosdeploy-testdebugging-in-xamarin-iosmd"></a>[Xamarin.iOS에서 디버깅](~/ios/deploy-test/debugging-in-xamarin-ios.md)
 
-Mac IDE용 Visual Studio 및 Visual Studio는 iOS 시뮬레이터 및 iOS 장치 모두에서 Xamarin.iOS 응용 프로그램 디버깅을 지원합니다. 이 아티클에서는 디버거를 사용하는 방법과 지원되는 다양한 옵션을 구성하는 방법을 보여줍니다.
+Mac IDE용 Visual Studio 및 Visual Studio는 iOS 시뮬레이터 및 iOS 디바이스 모두에서 Xamarin.iOS 응용 프로그램 디버깅을 지원합니다. 이 아티클에서는 디버거를 사용하는 방법과 지원되는 다양한 옵션을 구성하는 방법을 보여줍니다.
 
 ##  <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
@@ -53,7 +53,7 @@ Xamarin.iOS의 단위 테스트는 iOS Test Runner와 단위 테스트 작성을
 
 ##  <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[MarkHeap을 사용하여 네이티브 누수를 검색하는 기기 사용](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
-이 아티클에서는 모든 iOS 장치 및 모든 Xamarin.iOS 응용 프로그램에 기기를 사용하는 방법을 설명합니다. 또한 시뮬레이터에서 응용 프로그램을 프로파일링하는 방법을 설명합니다.
+이 아티클에서는 모든 iOS 디바이스 및 모든 Xamarin.iOS 응용 프로그램에 기기를 사용하는 방법을 설명합니다. 또한 시뮬레이터에서 응용 프로그램을 프로파일링하는 방법을 설명합니다.
 
 ##  <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[연습 - Apple의 계측 도구 사용](~/ios/deploy-test/walkthrough-apples-instrument.md)
 

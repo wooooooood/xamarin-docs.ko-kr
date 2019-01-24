@@ -1,6 +1,6 @@
 ---
 title: Xamarin.iOS에서 자격 사용
-description: 자격은 특수 앱 기능이며 올바르게 사용하도록 구성된 응용 프로그램에 부여된 보안 권한입니다.
+description: 자격은 특수 앱 기능이며 올바르게 사용하도록 구성된 애플리케이션에 부여된 보안 권한입니다.
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
@@ -18,7 +18,7 @@ ms.locfileid: "50103415"
 
 _자격은 특수 앱 기능이며 올바르게 사용하도록 구성된 응용 프로그램에 부여된 보안 권한입니다._
 
-iOS에서 앱은 응용 프로그램과 특정 시스템 리소스 또는 사용자 데이터 사이의 액세스를 제한하는 일련의 규칙을 제공하는 _샌드박스_에서 실행됩니다. _자격_은 시스템이 샌드박스를 확장하여 앱에 추가 기능을 제공하도록 요청하는 데 사용됩니다.
+iOS에서 앱은 애플리케이션과 특정 시스템 리소스 또는 사용자 데이터 사이의 액세스를 제한하는 일련의 규칙을 제공하는 _샌드박스_에서 실행됩니다. _자격_은 시스템이 샌드박스를 확장하여 앱에 추가 기능을 제공하도록 요청하는 데 사용됩니다.
 
 앱의 기능을 확장하려면 앱의 Entitlements.plist 파일에 자격을 제공해야 합니다. 특정 기능만 확장이 가능하며 이러한 기능은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드에 나열되어 있고 [아래](#entitlement-key-reference) 설명되어 있습니다. 자격은 시스템에 키/값 쌍으로 전달되며 일반적으로 기능당 하나만 필요합니다. 구체적인 키와 값은 이 가이드의 뒷부분에 나오는 [자격 키 참조](#entitlement-key-reference) 섹션에 설명되어 있습니다.
 Mac용 Visual Studio와 Visual Studio는 Entitlements.plist 편집기를 통해 Xamarin.iOS 앱에 자격을 추가할 수 있는 명확한 인터페이스를 제공합니다.
@@ -26,16 +26,16 @@ Mac용 Visual Studio와 Visual Studio는 Entitlements.plist 편집기를 통해 
 
 ## <a name="entitlements-and-provisioning"></a>자격 및 프로비전
 
-Entitlements.plist 파일은 자격을 지정하는 데 사용되며 응용 프로그램 번들에 서명하는 데 사용됩니다.
+Entitlements.plist 파일은 자격을 지정하는 데 사용되며 애플리케이션 번들에 서명하는 데 사용됩니다.
 
 하지만 앱이 코드로 올바르게 서명되었는지 확인하려면 추가 프로비전이 필요합니다. 사용된 프로비전 프로필에는 필요한 기능이 활성화된 앱 ID가 있어야 합니다. 방법에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
 
 > [!IMPORTANT]
-> Entitlements.plist 파일은 기능을 사용하여 응용 프로그램의 올바른 속성을 입력하는 데 도움이 되지만 Apple 개발자 계정에 연결되어 있지 않기 때문에 프로비저닝 프로필을 생성할 수 없습니다. 응용 프로그램을 배포하려면 개발자 포털을 사용하여 프로비전 프로필을 생성해야 합니다.
+> Entitlements.plist 파일은 기능을 사용하여 애플리케이션의 올바른 속성을 입력하는 데 도움이 되지만 Apple 개발자 계정에 연결되어 있지 않기 때문에 프로비저닝 프로필을 생성할 수 없습니다. 애플리케이션을 배포하려면 개발자 포털을 사용하여 프로비전 프로필을 생성해야 합니다.
 
 ## <a name="set-entitlements-in-a-xamarinios-project"></a>Xamarin.iOS 프로젝트에서 자격 설정
 
-앱 ID를 정의할 때 필요한 응용 프로그램 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격을 구성해야 합니다.
+앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격을 구성해야 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -51,7 +51,7 @@ Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
     ![](entitlements-images/servicexs02.png "자격 편집")
 
-5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 응용 프로그램에 필요한 자격을 선택하고 구성합니다.
+5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 애플리케이션에 필요한 자격을 선택하고 구성합니다.
 6. 변경 내용을 **Entitlements.plist** 파일에 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -70,7 +70,7 @@ Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
     또는 **Entitlements.plist** 파일을 두 번 클릭하면 XML 원본 편집기가 열리고 Entitlement 속성과 키 값을 아래 [자격 참조](#keyreference) 섹션의 세부 내용대로 설정할 수 있습니다.
 
-5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 응용 프로그램에 필요한 자격을 선택하고 구성합니다.
+5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 애플리케이션에 필요한 자격을 선택하고 구성합니다.
 6. 변경 내용을 **Entitlements.plist** 파일에 저장합니다.
 
 -----
@@ -109,7 +109,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 ### <a name="icloud"></a>iCloud
 
-*   **설명**: iCloud는 iOS 사용자에게 콘텐츠를 저장하고 장치 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 저장 수단을 제공할 수 있는 방법은 네 가지입니다. 키-값 저장소, UIDocument 저장소, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리에 대한 저장소를 직접 제공합니다. 자세한 내용은 iCloud 소개 가이드를 참조하세요.
+*   **설명**: iCloud는 iOS 사용자에게 콘텐츠를 저장하고 장치 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 저장 수단을 제공할 수 있는 방법은 네 가지입니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리에 대한 스토리지를 직접 제공합니다. 자세한 내용은 iCloud 소개 가이드를 참조하세요.
 
     - **iCloud 문서 및 CloudKit**
         - **키**: com.apple.developer.ubiquity-container-identifiers
@@ -176,7 +176,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 ### <a name="data-protection"></a>데이터 보호
 
-- **설명**: 데이터 보호를 사용하도록 설정하면 내장된 암호화 하드웨어를 사용하여 앱에 사용되는 중요한 데이터가 암호화된 형식으로 저장됩니다. 기본적으로 보호 수준은 완전 보호(장치가 잠금 해제된 경우에만 파일에 액세스 가능)로 설정됩니다.
+- **설명**: 데이터 보호를 사용하도록 설정하면 내장된 암호화 하드웨어를 사용하여 앱에 사용되는 중요한 데이터가 암호화된 형식으로 저장됩니다. 기본적으로 보호 수준은 완전 보호(디바이스가 잠금 해제된 경우에만 파일에 액세스 가능)로 설정됩니다.
     - **키**: com.apple.developer.default-data-protection
     - **문자열**: NSFileProtectionComplete
 

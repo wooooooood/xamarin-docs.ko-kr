@@ -77,7 +77,7 @@ iCloud 서비스를 구성하려면 **편집** 단추를 클릭합니다.
 
 테스트에 사용할 프로비전 프로필을 만들려면 개발자는 Mac 컴퓨터를 등록해야 합니다. 개발자는 Mac 앱을 테스트하기 위해 최대 100대의 컴퓨터를 등록할 수 있습니다.
 
-Mac 개발자 센터의 **장치** 섹션에서 **모두**를 선택하고 **+** 단추를 클릭합니다.
+Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고 **+** 단추를 클릭합니다.
 
 [![새 컴퓨터 추가](certificates-identifiers-images/devcenter10.png "새 컴퓨터 추가")](certificates-identifiers-images/devcenter10-large.png#lightbox)
 

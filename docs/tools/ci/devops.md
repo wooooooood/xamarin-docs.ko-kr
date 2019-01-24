@@ -83,7 +83,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |-------------|----------------------------|-------------------------|
 |테스트 계획, 테스트 사례 만들기 및 테스트 도구 모음 구성|예||
 |수동 테스트|예||
-|테스트 관리자(테스트 기록 및 재생)|예|Visual Studio에서만 제공하는 Windows 장치 및 Android 에뮬레이터.|
+|테스트 관리자(테스트 기록 및 재생)|예|Visual Studio에서만 제공하는 Windows 디바이스 및 Android 에뮬레이터.|
 |코드 검사|N/A||
 |[코드 단위 테스트](/visualstudio/test/unit-test-your-code/)|예|Windows 및 Android 대상의 경우 기본 제공 MSTest 도구를 사용할 수 있습니다. Windows, Android 및 iOS에서 단위 테스트를 실행하려면 NUnit를 사용하는 것이 좋습니다. [TFVC 사용](/azure/devops/repos/tfvc/overview?view=vsts) 참조|
 |[UI 자동화를 사용하여 코드 테스트](/visualstudio/test/use-ui-automation-to-test-your-code/)|Windows에만 해당|Visual Studio의 UI 테스트 레코더는 Windows 전용입니다. 모든 플랫폼에 대해서는 [Xamarin.UITest](/appcenter/test-cloud/uitest/)를 참조하세요.|

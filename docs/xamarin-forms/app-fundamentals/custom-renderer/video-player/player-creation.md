@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171913"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061961"
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어 만들기
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 솔루션에는 Xamarin.Forms에서 비디오 플레이어를 구현하는 모든 코드를 포함합니다. 또한 애플리케이션 내에서 비디오 플레이어를 사용하는 방법에 설명하는 일련의 페이지가 포함됩니다. 모든 `VideoPlayer` 코드 및 해당 플랫폼 렌더러는 `FormsVideoLibrary`라는 프로젝트 폴더에 위치하며, `FormsVideoLibrary` 네임스페이스를 사용합니다. 그러면 고유한 애플리케이션에 쉽게 파일을 복사하고 클래스를 참조할 수 있습니다.
 

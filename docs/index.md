@@ -114,7 +114,7 @@ ms.locfileid: "51617748"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>응용 프로그램 기본 사항</h3>
+                                                    <h3>애플리케이션 기본 사항</h3>
                                                     <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
                                                 </div>
                                             </div>
@@ -191,7 +191,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -210,7 +210,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>데이터 및 클라우드 서비스</h3>
-                                                    <p>데이터 저장소 및 Microsoft Azure와 같은 클라우드 서비스에 액세스합니다.</p>
+                                                    <p>데이터 스토리지 및 Microsoft Azure와 같은 클라우드 서비스에 액세스합니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -286,7 +286,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>엔터프라이즈 전자책</h3>
-                                                    <p>조정, 유지 관리 및 테스트할 수 있는 Xamarin.Forms 엔터프라이즈 응용 프로그램을 개발하는 데 유용한 아키텍처 지침입니다.</p>
+                                                    <p>조정, 유지 관리 및 테스트할 수 있는 Xamarin.Forms 엔터프라이즈 애플리케이션을 개발하는 데 유용한 아키텍처 지침입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -366,7 +366,7 @@ ms.locfileid: "51617748"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>응용 프로그램 기본 사항</h3>
+                                                    <h3>애플리케이션 기본 사항</h3>
                                                     <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
                                                 </div>
                                             </div>
@@ -424,7 +424,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -443,7 +443,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>데이터 및 클라우드 서비스</h3>
-                                                    <p>데이터 저장소 및 클라우드 서비스에 액세스합니다.</p>
+                                                    <p>데이터 스토리지 및 클라우드 서비스에 액세스합니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -561,7 +561,7 @@ ms.locfileid: "51617748"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>응용 프로그램 기본 사항</h3>
+                                                    <h3>애플리케이션 기본 사항</h3>
                                                     <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
                                                 </div>
                                             </div>
@@ -619,7 +619,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -638,7 +638,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>데이터 및 클라우드 서비스</h3>
-                                                    <p>데이터 저장소 및 클라우드 서비스에 액세스합니다.</p>
+                                                    <p>데이터 스토리지 및 클라우드 서비스에 액세스합니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -775,7 +775,7 @@ ms.locfileid: "51617748"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>응용 프로그램 기본 사항</h3>
+                                                    <h3>애플리케이션 기본 사항</h3>
                                                     <p>앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.</p>
                                                 </div>
                                             </div>
@@ -1076,7 +1076,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>CocosSharp</h3>
-                                                    <p>모바일 장치용 플랫폼 간 2D 게임을 빌드합니다.</p>
+                                                    <p>모바일 디바이스용 플랫폼 간 2D 게임을 빌드합니다.</p>
                                                 </div>
                                             </div>
                                         </div>

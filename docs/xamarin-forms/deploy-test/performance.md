@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms 성능
-description: Xamarin.Forms 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
+description: Xamarin.Forms 애플리케이션의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998619"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061033"
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 성능
 
-_Xamarin.Forms 응용 프로그램의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다._
+_Xamarin.Forms 애플리케이션의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다. 이 문서에서는 이러한 기술에 대해 설명합니다._
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
@@ -24,9 +24,9 @@ _Xamarin.Forms 응용 프로그램의 성능을 높이기 위한 많은 기술�
 
 ## <a name="overview"></a>개요
 
-낮은 응용 프로그램 성능은 여러 가지 방법으로 나타납니다. 이 경우에 응용 프로그램이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 응용 프로그램 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
+낮은 애플리케이션 성능은 여러가지 방법으로 나타납니다. 이 경우에 애플리케이션이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 애플리케이션 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
 
-Xamarin.Forms 응용 프로그램의 성능과 인식 성능을 높이는 여러 가지 기술이 있습니다. 다음과 같은 변경 내용이 해당됩니다.
+Xamarin.Forms 애플리케이션의 성능과 인식 성능을 높이는 여러 가지 기술이 있습니다. 다음과 같은 변경 내용이 해당됩니다.
 
 - [XAML 컴파일러 활성화](#xamlc)
 - [올바른 레이아웃 선택](#correctlayout)
@@ -37,11 +37,11 @@ Xamarin.Forms 응용 프로그램의 성능과 인식 성능을 높이는 여러
 - [ListView 성능 최적화](#optimizelistview)
 - [이미지 리소스 최적화](#optimizeimages)
 - [시각적 트리 크기 줄이기](#visualtree)
-- [응용 프로그램 리소스 사전 크기 줄이기](#resourcedictionary)
+- [애플리케이션 리소스 사전 크기 줄이기](#resourcedictionary)
 - [사용자 지정 렌더러 패턴 사용](#rendererpattern)
 
 > [!NOTE]
->  이 문서를 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 응용 프로그램의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
+>  이 아티클을 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 애플리케이션의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
 
 <a name="xamlc" />
 
@@ -151,7 +151,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 ## <a name="enable-layout-compression"></a>레이아웃 압축 활성화
 
-레이아웃 압축은 페이지 렌더링 성능을 개선하기 위해 시각적 트리에서 지정된 레이아웃을 제거합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 응용 프로그램이 실행 중인 장치에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 장치에서 볼 수 있습니다. 자세한 내용은 [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)을 참조하세요.
+레이아웃 압축은 페이지 렌더링 성능을 개선하기 위해 시각적 트리에서 지정된 레이아웃을 제거합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 애플리케이션이 실행 중인 장치에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 디바이스에서 볼 수 있습니다. 자세한 내용은 [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)을 참조하세요.
 
 <a name="fastrenderers" />
 
@@ -192,13 +192,13 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 - **스크롤** - 목록을 스크롤하는 기능이며, UI가 터치 제스처보다 지연되지 않도록 합니다.
 - **상호 작용** - 항목을 추가, 삭제 및 선택합니다.
 
-[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤을 사용하려면 응용 프로그램이 데이터 및 셀 템플릿을 제공해야 합니다. 이것이 구현되는 방식은 컨트롤의 성능에 큰 영향을 줍니다. 자세한 내용은 [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)을 참조하세요.
+[`ListView`](xref:Xamarin.Forms.ListView) 컨트롤을 사용하려면 애플리케이션이 데이터 및 셀 템플릿을 제공해야 합니다. 이것이 구현되는 방식은 컨트롤의 성능에 큰 영향을 줍니다. 자세한 내용은 [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)을 참조하세요.
 
 <a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>이미지 리소스 최적화
 
-이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 응용 프로그램에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 예를 들어 응용 프로그램이 스트림에서 데이터를 읽어 이미지를 표시하는 경우, 필요할 경우에만 스트림이 생성되도록 하고, 더 이상 필요 없는 경우에는 스트림이 해제되도록 합니다. 이는 페이지가 생성될 때나 [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) 이벤트가 실행될 때 스트림을 만든 후 [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) 이벤트가 실행될 때 스트림을 폐기하는 방식으로 구현할 수 있습니다.
+이미지 리소스를 표시하면 앱의 메모리 사용 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 애플리케이션에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 예를 들어 애플리케이션이 스트림에서 데이터를 읽어 이미지를 표시하는 경우, 필요할 경우에만 스트림이 생성되도록 하고, 더 이상 필요 없는 경우에는 스트림이 해제되도록 합니다. 이는 페이지가 생성될 때나 [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) 이벤트가 실행될 때 스트림을 만든 후 [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) 이벤트가 실행될 때 스트림을 폐기하는 방식으로 구현할 수 있습니다.
 
 [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 메서드를 사용하여 표시할 이미지를 다운로드할 때는 [`UriImageSource.CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) 속성을 `true`로 설정하여 다운로드된 이미지를 캐시에 저장합니다. 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md)을 참조하세요.
 
@@ -242,9 +242,9 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 
 <a name="resourcedictionary" />
 
-## <a name="reduce-the-application-resource-dictionary-size"></a>응용 프로그램 리소스 사전 크기 줄이기
+## <a name="reduce-the-application-resource-dictionary-size"></a>애플리케이션 리소스 사전 크기 줄이기
 
-응용 프로그램에서 사용되는 모든 리소스는 중복을 피하기 위해 응용 프로그램의 리소스 사전에 저장되어야 합니다. 이는 응용 프로그램에서 구문 분석되어야 하는 XAML의 양을 줄이는 데 도움이 됩니다. 다음 코드 예제는 응용 프로그램 전체에서 사용되므로 응용 프로그램의 리소스 사전에 정의된 `HeadingLabelStyle` 리소스를 보여 줍니다.
+애플리케이션에서 사용되는 모든 리소스는 중복을 피하기 위해 애플리케이션의 리소스 사전에 저장되어야 합니다. 이는 애플리케이션에서 구문 분석되어야 하는 XAML의 양을 줄이는 데 도움이 됩니다. 다음 코드 예제는 애플리케이션 전체에서 사용되므로 애플리케이션의 리소스 사전에 정의된 `HeadingLabelStyle` 리소스를 보여 줍니다.
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -262,7 +262,7 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 </Application>
 ```
 
-그러나 페이지에만 적용되는 XAML은 앱의 리소스 사전에 포함되어서는 안 됩니다. 그러면 응용 프로그램 시작 시 페이지에서 요구할 경우 리소스가 대신 구문 분석되기 때문입니다. 시작 페이지가 아닌 페이지에서 사용하는 리소스는 응용 프로그램이 시작될 때 구문 분석되는 XAML을 줄이기 위해 해당 페이지의 리소스 사전에 저장해야 합니다. 다음 코드 예제는 단일 페이지에만 있으므로 페이지의 리소스 사전에 정의된 `HeadingLabelStyle` 리소스를 보여 줍니다.
+그러나 페이지에만 적용되는 XAML은 앱의 리소스 사전에 포함되어서는 안 됩니다. 그러면 애플리케이션 시작 시 페이지에서 요구할 경우 리소스가 대신 구문 분석되기 때문입니다. 시작 페이지가 아닌 페이지에서 사용하는 리소스는 애플리케이션이 시작될 때 구문 분석되는 XAML을 줄이기 위해 해당 페이지의 리소스 사전에 저장해야 합니다. 다음 코드 예제는 단일 페이지에만 있으므로 페이지의 리소스 사전에 정의된 `HeadingLabelStyle` 리소스를 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -285,7 +285,7 @@ Xamarin.Forms 2에는 레이아웃 업데이트에 영향을 주는 최적화된
 
 ```
 
-응용 프로그램 리소스에 대한 자세한 내용은 [`Working with Styles`](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
+애플리케이션 리소스에 대한 자세한 내용은 [`Working with Styles`](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
 
 <a name="rendererpattern" />
 
@@ -320,7 +320,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Forms 응용 프로그램의 성능을 높이는 기술에 대해 설명했습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 응용 프로그램에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
+이 문서에서는 Xamarin.Forms 애플리케이션의 성능을 높이는 기술에 대해 설명했습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크
@@ -329,6 +329,5 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 - [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)
 - [빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)
 - [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)
-- [Xamarin.Forms 이미지 크기 조정 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
 - [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
 - [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

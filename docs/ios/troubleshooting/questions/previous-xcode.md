@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/02/2018
-ms.openlocfilehash: 808053319bb98b505748ade24b358a08ded48cd6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ad706700001ab07d74f518d50ab389c8590ba131
+ms.sourcegitcommit: 7016df4979e763963eb024eb2fe6d79f466d871a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103532"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53748447"
 ---
 # <a name="how-can-i-download-a-previous-version-of-xcode"></a>이전 버전의 Xcode 다운로드 하려면 어떻게 해야 합니까?
 
@@ -22,7 +22,7 @@ ms.locfileid: "50103532"
 
 ## <a name="older-versions"></a>이전 버전
 
-에 로그인 하 여 이전 버전의 Xcode 찾을 수 있습니다 합니다 [Apple 개발자 다운로드 페이지](https://developer.apple.com/downloads/) 해야 하는 Xcode 버전을 검색 합니다.
+에 로그인 하 여 이전 버전의 Xcode 찾을 수 있습니다 합니다 [Apple 개발자 다운로드 페이지](https://developer.apple.com/downloads/more/) 해야 하는 Xcode 버전을 검색 합니다.
 
 ## <a name="related-links"></a>관련 링크
 - [Xamarin 시스템 요구 사항](~/cross-platform/get-started/requirements.md)

@@ -1,20 +1,21 @@
 ---
 title: 'Xamarin.Essentials: 기본 설정'
-description: 이 문서에서는 키/값 저장소에 응용 프로그램 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다. 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.
+description: 이 문서에서는 키/값 저장소에 애플리케이션 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다. 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 0144cdd4e12d53e0ac82af24a932825491db9e41
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/15/2019
+ms.custom: video
+ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
+ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899086"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317884"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
-**Preferences** 클래스를 사용하여 키/값 저장소에 응용 프로그램 기본 설정을 저장할 수 있습니다.
+**Preferences** 클래스를 사용하여 키/값 저장소에 애플리케이션 기본 설정을 저장할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -68,7 +69,7 @@ Preferences.Clear();
 
 ## <a name="implementation-details"></a>구현 세부 정보
 
-`DateTime` 값은 `DateTime` 클래스에서 정의한 두 가지 메서드를 사용하여 64비트 이진(long 정수) 형식으로 저장됩니다. [`ToBinary`](xref:System.DateTime.ToBinary) 메서드는 `DateTime` 값을 인코드하는 데 사용되고 [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) 메서드는 값을 디코드합니다. UTC(협정 세계시) 값이 아닌 `DateTime`이 저장될 때 디코드된 값으로 설정할 수 있는 조정에 대해서는 이러한 메서드의 문서를 참조하세요.
+`DateTime` 값은 `DateTime` 클래스에서 정의된 두 가지 메서드를 사용하여 64 비트 이진(긴 정수) 형식으로 저장됩니다. [`ToBinary`](xref:System.DateTime.ToBinary) 메서드는 `DateTime` 값을 인코딩하는 데 사용되며 [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) 메서드는 값을 디코딩합니다. UTC(협정 세계시) 값이 아닌 `DateTime`이 저장될 때 디코드된 값으로 설정할 수 있는 조정에 대해서는 이러한 메서드의 문서를 참조하세요.
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
@@ -78,17 +79,17 @@ Preferences.Clear();
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults)는 iOS 장치에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `StandardUserDefaults`가 사용되고, 이외의 경우에는 `NSUserDefaultsType.SuiteName`에 사용된 지정된 이름을 사용하여 새 `NSUserDefaults`을 만드는 데 이름이 사용됩니다.
+[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults)는 iOS 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `StandardUserDefaults`가 사용되고, 이외의 경우에는 `NSUserDefaultsType.SuiteName`에 사용된 지정된 이름을 사용하여 새 `NSUserDefaults`을 만드는 데 이름이 사용됩니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 장치에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다.
 
 --------------
 
 ## <a name="persistence"></a>지속성
 
-응용 프로그램을 제거하면 모든 ‘기본 설정’이 제거됩니다. 한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
+애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다. 한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 
@@ -98,3 +99,9 @@ Preferences.Clear();
 
 - [기본 설정 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
 - [기본 설정 API 문서](xref:Xamarin.Essentials.Preferences)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

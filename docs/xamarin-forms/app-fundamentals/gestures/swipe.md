@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 95e95d8849824cd2dc31c2019627cc5adbbefeec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131926"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059420"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>살짝 밀기 제스처 인식기 추가
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
 
 _살짝 밀기 제스처는 화면에서 손가락이 가로나 세로 방향으로 이동하는 경우 발생하며 콘텐츠 탐색을 시작하는 데 종종 사용됩니다. 이 문서의 코드 예제는 [살짝 밀기 제스처](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/) 샘플에서 사용됩니다._
 

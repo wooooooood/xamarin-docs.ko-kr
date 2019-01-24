@@ -1,6 +1,6 @@
 ---
 title: iOS용 fastlane – cert
-description: 이 문서에서는 iOS 응용 프로그램 프로비저닝 프로세스, 인증서 요청, Apple의 개발자 포털에 장치 추가, 앱 ID 만들기 등의 많은 부분을 자동화하는 도구인 fastlane을 설명합니다.
+description: 이 문서에서는 iOS 응용 프로그램 프로비저닝 프로세스, 인증서 요청, Apple의 개발자 포털에 디바이스 추가, 앱 ID 만들기 등의 많은 부분을 자동화하는 도구인 fastlane을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
@@ -21,15 +21,15 @@ ms.locfileid: "50108043"
 
 ## <a name="overview"></a>개요
 
-일반적으로 장치 프로비전은 Xcode를 통해 또는 Apple Developer 포털에서 개발 팀의 각 멤버가 수행하며 다음과 같은 몇 가지 단계로 구성됩니다.
+일반적으로 디바이스 프로비전은 Xcode를 통해 또는 Apple Developer 포털에서 개발 팀의 각 멤버가 수행하며 다음과 같은 몇 가지 단계로 구성됩니다.
 
 - 개발 인증서 요청
-- 포털에 장치 추가
+- 포털에 디바이스 추가
 - 앱 ID 만들기
 - 프로비전 프로필 만들기
 - 프로필 및 인증서 다운로드
 
-간 단계에는 개발하는 응용 프로그램 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 장치를 설정하는 데 필요한 단계에 대한 자세한 내용은 [장치 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
+간 단계에는 개발하는 응용 프로그램 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 디바이스를 설정하는 데 필요한 단계에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 이 가이드에서는 Xcode를 사용하는 대신 fastlane 도구를 소개하고 다음 내용을 설명합니다.
 

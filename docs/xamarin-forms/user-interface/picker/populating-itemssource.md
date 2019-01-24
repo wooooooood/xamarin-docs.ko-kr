@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 102ff15ea0e0002b783f993c59eb50d03a5ece63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051071"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207856"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
@@ -66,7 +66,7 @@ picker.ItemsSource = monkeyList;
 A [ `Picker` ](xref:Xamarin.Forms.Picker) 한 번에 하나씩 선택할 수 있습니다. 사용자가 항목을 선택 합니다 [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트가 발생 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 목록에서 선택한 항목의 인덱스를 나타내는 정수를 업데이트 및 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성은 업데이트 된 `object` 은 선택한 항목을 나타내는입니다. 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 사용자가 선택한 항목을 나타내는 0부터 시작 수 있습니다. 선택 된 항목이 있는 경우 때 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 먼저 생성 되 고 초기화 하 고, `SelectedIndex` -1이 됩니다.
 
 > [!NOTE]
-> 항목의 선택 동작을 [ `Picker` ](xref:Xamarin.Forms.Picker) 플랫폼 전용을 사용 하 여 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택 항목 선택 제어](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode)입니다.
+> 항목의 선택 동작을 [ `Picker` ](xref:Xamarin.Forms.Picker) 플랫폼 전용을 사용 하 여 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택 항목 선택 제어](~/xamarin-forms/platform/ios/picker-selection.md)입니다.
 
 다음 코드 예제에서는 검색 하는 방법을 보여 줍니다.는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 에서 속성 값을 [ `Picker` ](xref:Xamarin.Forms.Picker) XAML에서:
 
@@ -178,10 +178,9 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서를 채우는 방법을 설명 된 `Picker` 설정 하 여 데이터를 사용 하 여는 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성 및 사용자가 항목 선택에 응답 하는 방법. Xamarin.Forms 2.3.4에에서 도입 된,이 접근 방식 상호 작용 하기 위한 권장 방법이 `Picker`합니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
 - [선택기 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Monkey 앱 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 - [바인딩할 수 있는 선택 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [선택기](xref:Xamarin.Forms.Picker)
+- [API 선택](xref:Xamarin.Forms.Picker)

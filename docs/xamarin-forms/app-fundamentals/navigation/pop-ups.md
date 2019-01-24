@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 156c2f9dca47a7755d4f810d7921a05662388ded
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 1334340f18e664d4c652803e7678f45ee942eea8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996716"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057407"
 ---
 # <a name="displaying-pop-ups"></a>팝업 표시
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
 
 _Xamarin.Forms는 팝업과 유사한 두 가지 사용자 인터페이스 요소인 경고와 작업 시트를 제공합니다. 이 문서에서는 사용자에게 간단한 질문을 하고 작업을 안내하는 경고 및 작업 시트 API를 사용하는 방법을 설명합니다._
 

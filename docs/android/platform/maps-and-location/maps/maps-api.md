@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171042"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012297"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
@@ -45,7 +45,7 @@ Xamarin.Android 앱을 Google Maps Android API를 사용할 수 있기 전에 �
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Google Play Services SDK 설치
 
-Google Play Services에 Google +, 앱 내 청구, 및 지도 같은 다양 한 Google 기능을 활용 하려면 Android 응용 프로그램을 허용 하는 Google에서 기술입니다. 이러한 기능에 포함 된 f 백그라운드 서비스로 Android 장치에서 액세스할 수 합니다 [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)합니다.
+Google Play Services에 Google +, 앱 내 청구, 및 지도 같은 다양 한 Google 기능을 활용 하려면 Android 응용 프로그램을 허용 하는 Google에서 기술입니다. 이러한 기능에 포함 된 백그라운드 서비스로 Android 장치에서 액세스할 수 합니다 [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)합니다.
 
 Google Play Services 클라이언트 라이브러리를 통해 Google Play 서비스를 사용 하 여 android 응용 프로그램 상호 작용 합니다. 이 라이브러리는 인터페이스 및 맵과 같은 개별 서비스에 대 한 클래스를 포함합니다. 다음 다이어그램은 Android 응용 프로그램 및 Google Play 서비스 간의 관계를 보여줍니다.
 
@@ -236,7 +236,7 @@ Google Maps API에서 사용할 수 있는 5 가지 유형의 지도:
 
 아래 이미지에서는 왼쪽에서 오른쪽 (보통, 하이브리드, 지형)에서 다양 한 유형의 지도 중 3 개를 보여 줍니다.
 
-[![예제 스크린샷 매핑할 3: 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
+[![세 가지 지도 예제 스크린샷. 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 `GoogleMap.MapType` 속성은 설정 하거나 표시 되는 지도 유형을 변경 하려면 사용 합니다. 다음 코드 조각에는 위성 지도 표시 하는 방법을 보여 줍니다.
 

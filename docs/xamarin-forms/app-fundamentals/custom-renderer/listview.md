@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b3b73d542faebdb8ab85c989d7812368f4f3ffac
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 39ba281f036b9c57f85629390f5ba76377c99dd8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997492"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054213"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
 
 _Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
@@ -86,7 +88,7 @@ public class NativeListView : ListView
 </ContentPage>
 ```
 
-`local` 네임스페이스 접두사는 원하는 것으로 이름을 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 사용됩니다.
+`local` 네임스페이스 접두사는 원하는 이름으로 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 컨트롤의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 컨트롤을 참조하는 데 접두사가 사용됩니다.
 
 다음 코드 예제에서는 C# 페이지에서 `NativeListView` 사용자 지정 컨트롤을 사용하는 방법을 보여줍니다.
 

@@ -7,20 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 00308a6c7883d4ac6ce41592d4a0e18f9fb28d52
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3452c79621013690f967e065c7afaf0768a50c3f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113315"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057494"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
 
 이 문서에서는 사용자가 휴대폰의 사진 라이브러리에서 사진을 선택할 수 있는 애플리케이션 만들기를 설명합니다. Xamarin.Forms에는 이 기능이 포함되지 않으므로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 각 플랫폼에서 기본 API에 액세스해야 합니다.  이 문서에서는 이 태스크에 대한 `DependencyService`를 사용하기 위한 다음 단계를 설명합니다.
 
 - **[인터페이스 만들기](#Creating_the_Interface)** &ndash; 공유 코드에서 인터페이스를 만드는 방법을 이해합니다.
-- **[iOS 구현](#iOS_Implementation)**  &ndash; iOS용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
-- **[Android 구현](#Android_Implementation)**  &ndash; Android용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
+- **[iOS 구현](#iOS_Implementation)** &ndash; iOS용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
+- **[Android 구현](#Android_Implementation)** &ndash; Android용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
 - **[유니버설 Windows 플랫폼 구현](#UWP_Implementation)** &ndash; UWP(유니버설 Windows 플랫폼)용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
 - **[공유 코드에서 구현](#Implementing_in_Shared_Code)** &ndash; 공유 코드에서 기본 구현을 호출하기 위해 `DependencyService`를 사용하는 방법을 알아봅니다.
 

@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
 ms.openlocfilehash: 1aa21a416f4abca0440e96e25aebe5f834a717ce
-ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598875"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54209358"
 ---
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 

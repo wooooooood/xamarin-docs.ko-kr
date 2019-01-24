@@ -1,5 +1,5 @@
 ---
-title: 픽셀 및 장치 독립적 단위
+title: 픽셀 및 디바이스 독립적 단위
 description: 이 문서에서는 Xamarin.Forms 좌표 SkiaSharp 좌표 사이의 차이점에 살펴보고 및 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/07/2018
 ms.locfileid: "53059787"
 ---
-# <a name="pixels-and-device-independent-units"></a>픽셀 및 장치 독립적 단위
+# <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 

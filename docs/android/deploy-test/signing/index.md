@@ -16,7 +16,7 @@ ms.locfileid: "50112873"
 ---
 # <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 
-[릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 장치에 생성된 APK를 사이드로드할 수 있습니다.
+[릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 디바이스에 생성된 APK를 사이드로드할 수 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -149,7 +149,7 @@ Finder에 서명된 APK 파일의 위치가 열립니다.
 
 [![찾기에 표시된 APK](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png#lightbox)
 
-APK가 Finder에서 복사하여 최종 대상으로 보낼 수 있습니다. Android 장치에 APK를 설치하고 배포하기 전에 사용해 보는 것이 좋습니다. *임시* APK를 게시하는 방법에 대한 자세한 내용은 [독립적으로 게시](~/android/deploy-test/publishing/publishing-independently.md)를 참조하세요.
+APK가 Finder에서 복사하여 최종 대상으로 보낼 수 있습니다. Android 디바이스에 APK를 설치하고 배포하기 전에 사용해 보는 것이 좋습니다. *임시* APK를 게시하는 방법에 대한 자세한 내용은 [독립적으로 게시](~/android/deploy-test/publishing/publishing-independently.md)를 참조하세요.
 
 -----
 

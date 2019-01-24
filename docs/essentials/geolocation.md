@@ -1,20 +1,20 @@
 ---
 title: 'Xamarin.Essentials: 지리적 위치'
-description: 이 문서에서는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
+description: 이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 651da789dcd87810ef6650d87fc2df4f91ce58e1
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 84e0a5d37b757d14750f6bd3119d8695b35d7544
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898934"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841369"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
-**Geolocation** 클래스는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
+**Geolocation** 클래스는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
 
 ## <a name="get-started"></a>시작
 
@@ -52,7 +52,7 @@ Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구�
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-장치 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
+디바이스 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
 
 plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** 속성을 추가하고, 사용자에게 표시할 값을 입력합니다.
 
@@ -65,7 +65,7 @@ plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** �
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-응용 프로그램에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
+애플리케이션에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
 
 -----
 
@@ -79,7 +79,7 @@ using Xamarin.Essentials;
 
 또한 지리적 위치 API는 필요한 경우 권한을 요청하는 메시지를 사용자에게 표시합니다.
 
-`GetLastKnownLocationAsync` 메서드를 호출하여 장치의 마지막으로 알려진 [위치](xref:Xamarin.Essentials.Location)를 가져올 수 있습니다. 이는 일반적으로 전체 쿼리를 수행하는 것보다 더 빠르지만 덜 정확할 수 있습니다.
+`GetLastKnownLocationAsync` 메서드를 호출하여 디바이스의 마지막으로 알려진 [위치](xref:Xamarin.Essentials.Location)를 가져올 수 있습니다. 이는 일반적으로 전체 쿼리를 수행하는 것보다 더 빠르지만 덜 정확할 수 있습니다.
 
 ```csharp
 try
@@ -95,6 +95,10 @@ catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
 }
+catch (FeatureNotEnabledException fneEx)
+{
+    // Handle not enabled on device exception
+}
 catch (PermissionException pEx)
 {
     // Handle permission exception
@@ -107,7 +111,7 @@ catch (Exception ex)
 
 고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다. 
 
-현재 장치의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 장치 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
+현재 디바이스의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 디바이스 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
 
 ```csharp
 try
@@ -123,6 +127,10 @@ try
 catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
+}
+catch (FeatureNotEnabledException fneEx)
+{
+    // Handle not enabled on device exception
 }
 catch (PermissionException pEx)
 {
@@ -189,10 +197,10 @@ catch (Exception ex)
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
 Location sanFrancisco = new Location(37.783333, -122.416667);
-double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnit.Miles);
+double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Miles);
 ```
 
-`Location` 생성자에는 해당 순서로 위도 및 경도 인수가 포함됩니다. 양수 위도 값은 적도의 북쪽이고 양수 경도 값은 본초 자오선의 동쪽입니다. `CalculateDistance`에 대한 마지막 인수를 사용하여 마일 또는 킬로미터를 지정합니다. 또한 `Location` 클래스는 두 단위 간에 변환하기 위한 `KilometersToMiles` 및 `MilesToKilometers` 메서드를 정의합니다.
+`Location` 생성자에는 해당 순서로 위도 및 경도 인수가 포함됩니다. 양수 위도 값은 적도의 북쪽이고 양수 경도 값은 본초 자오선의 동쪽입니다. `CalculateDistance`에 대한 마지막 인수를 사용하여 마일 또는 킬로미터를 지정합니다. 또한 `UnitConverters` 클래스는 두 단위 간에 변환하기 위한 `KilometersToMiles` 및 `MilesToKilometers` 메서드를 정의합니다.
 
 ## <a name="api"></a>API
 

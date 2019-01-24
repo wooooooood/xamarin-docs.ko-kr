@@ -20,7 +20,7 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
+다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
 [![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
@@ -28,7 +28,7 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-다음 다이어그램에는 장치 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
+다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
 
 [![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 

@@ -257,7 +257,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
     ![](hello-ios-quickstart-images/image27.png "시뮬레이터를 선택하고 시작을 누릅니다.")
 
     > [!NOTE]
-    > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다. 이를 설정하려면 [장치 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+    > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 28. 그러면 iOS 시뮬레이터 내에서 응용 프로그램이 시작됩니다.
 

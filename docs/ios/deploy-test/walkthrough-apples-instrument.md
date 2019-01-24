@@ -29,7 +29,7 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 
     ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "할당 템플릿 선택")
 
-4. 창 위쪽의 **프로비전 템플릿 선택:** 목록에서 **MemoryDemo** 응용 프로그램을 선택합니다. iOS 장치를 먼저 클릭하여 설치된 응용 프로그램을 보여 주는 메뉴를 펼칩니다.
+4. 창 위쪽의 **프로비전 템플릿 선택:** 목록에서 **MemoryDemo** 응용 프로그램을 선택합니다. iOS 디바이스를 먼저 클릭하여 설치된 응용 프로그램을 보여 주는 메뉴를 펼칩니다.
 
     ![](walkthrough-apples-instrument-images/01-mem-demo.png "MemoryDemo 응용 프로그램 선택")
 

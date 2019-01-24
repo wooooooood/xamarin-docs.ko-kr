@@ -45,7 +45,7 @@ sections:
         src: ~/media/index/xamarin-graphics-cocos.svg
         href: ~/graphics-games/cocossharp/index.md
       title: CocosSharp
-      html: 모바일 장치용 플랫폼 간 2D 게임을 빌드합니다.
+      html: 모바일 디바이스용 플랫폼 간 2D 게임을 빌드합니다.
     - href: ~/graphics-games/monogame/index.md
       image:
         src: ~/media/index/xamarin-graphics-monogame.svg

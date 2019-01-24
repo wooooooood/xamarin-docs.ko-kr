@@ -22,4 +22,4 @@ Xamarin.Forms 앱의 성능을 높이기 위한 많은 기술이 있습니다. �
 
 ## <a name="automated-testing-with-xamarinuitest-and-app-centeruitest-and-test-cloudmd"></a>[Xamarin.UITest 및 App Center를 사용하여 자동화된 테스트](uitest-and-test-cloud.md)
 
-Xamarin Test Cloud의 **UITest** 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우드에서 수백 대의 장치에 실행할 UI 테스트를 작성할 수 있습니다.
+Xamarin Test Cloud의 **UITest** 구성 요소를 Xamarin.Forms와 함께 사용하여 클라우드에서 수백 대의 디바이스에 실행할 UI 테스트를 작성할 수 있습니다.

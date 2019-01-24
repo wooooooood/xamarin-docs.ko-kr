@@ -1,6 +1,6 @@
 ---
-title: 3 부입니다. XAML 태그 확장
-description: XAML 태그 확장 속성을 개체 또는 다른 원본에서 직접 참조 되는 값을 설정할 수 있도록 XAML에서 중요 한 기능을 구성 합니다.
+title: 3부. XAML 태그 확장
+description: XAML 태그 확장 속성은 다른 소스에서 간접적으로 참조되는 개체 또는 값으로 속성을 설정할 수 있는 XAML에서 중요한 기능을 구성합니다.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
@@ -14,25 +14,25 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/07/2018
 ms.locfileid: "53056217"
 ---
-# <a name="part-3-xaml-markup-extensions"></a>3 부입니다. XAML 태그 확장
+# <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_XAML 태그 확장 속성을 개체 또는 다른 원본에서 직접 참조 되는 값을 설정할 수 있도록 XAML에서 중요 한 기능을 구성 합니다. XAML 태그 확장은 개체를 공유 하 고 응용 프로그램 전체에서 사용 되는 상수를 참조 하는 것이 특히 하지만 데이터 바인딩에 해당 가장 큰 유틸리티를 찾을 수 있습니다._
+_XAML 태그 확장 속성은 다른 소스에서 간접적으로 참조되는 개체 또는 값으로 속성을 설정할 수 있는 XAML에서 중요한 기능을 구성합니다. XAML 태그 확장은 개체를 공유하고 응용 프로그램 전체에서 사용되는 상수를 참조할 때 특히 중요하지만 가장 큰 장점은 데이터 바인딩에서 찾을 수 있습니다._
 
 ## <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
-일반적으로 XAML 문자열, 숫자, 열거형 멤버를 백그라운드에서 값으로 변환 되는 문자열 등의 명시적 값으로 개체의 속성을 설정 하려면 사용 합니다.
+일반적으로 XAML을 사용하여 문자열, 숫자, 열거형 멤버, 또는 배후에서 값으로 변환되는 문자열 등의 명시적 값으로 개체의 속성을 설정하기 위해 사용합니다.
 
-그러나 경우에 따라 속성 대신 다른 곳에 정의 되는 값을 참조 해야 합니다 또는 런타임 시 코드에 의해 거의 처리에 필요할 수 있습니다는. 이러한 목적에서 XAML *태그 확장* 사용할 수 있습니다.
+그러나 때로는 속성이 다른 곳에 정의된 값을 대신 참조하거나 런타임 시 코드에 의해 약간의 처리가 필요할 수 있습니다. 이러한 목적에 XAML *태그 확장*을 사용할 수 있습니다.
 
-이러한 XAML 태그 확장 XML의 확장 않습니다. XAML은 완전히 올바른 XML입니다. 코드를 구현 하는 클래스에 의해 백업 하기 때문에 "extensions" 가젯으로 `IMarkupExtension`합니다. 사용자 고유의 사용자 지정 태그 확장을 작성할 수 있습니다.
+해당 XAML 태그 확장은 XML의 확장이 아닙니다. XAML은 완전히 올바른 XML입니다. `IMarkupExtension`을 구현하는 클래스의 코드에 의해 뒷받침되기 때문에 "extensions"이라 합니다. 자신의 사용자 지정 태그 확장을 작성할 수 있습니다.
 
-대부분의 경우에서 XAML 태그 확장은 XAML 파일에 즉시 인식할 수 있는 중괄호를 구분 하는 특성 설정으로 표시 되므로: {및}, 있지만 태그 확장 태그에서 기본 요소로 표시 하는 경우가 있습니다.
+대부분의 경우에서 XAML 태그 확장은 XAML 파일에서 즉시 인식할 수 있는 중괄호로 구분된 특성 설정 { and }로 표시되지만, 때로는 태그 확장이 전통적인 요소로 태그에 표시됩니다.
 
 ## <a name="shared-resources"></a>공유 리소스
 
-일부 XAML 페이지에는 동일한 값으로 설정 하는 속성을 사용 하 여 여러 뷰가 포함 됩니다. 예를 들어, 대부분의 이러한 속성 설정은 `Button` 개체는 동일 합니다.
+일부 XAML 페이지에는 동일한 값으로 설정하는 속성을 사용하는 여러 뷰가 포함됩니다. 예를 들어, 다음과 같이 `Button` 개체에 대한 대부분의 속성 설정은 동일합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -69,11 +69,11 @@ _XAML 태그 확장 속성을 개체 또는 다른 원본에서 직접 참조 �
 </ContentPage>
 ```
 
-이러한 속성 중 하나를 변경 해야 합니다 하는 경우에 세 번 보다는 한 번만 변경 내용을 확인 하는 것이 좋습니다. 코드 인 경우 가능성이 사용 상수 및 정적 읽기 전용 개체 일관적이 고 쉽게 수정할 수 이러한 값을 유지할 수 있습니다.
+해당 속성 중 하나를 변경해야 하는 경우, 세 번 보다는 한 번만 내용을 변경하는 것이 좋습니다. 코드라면 상수 및 정적(static) 읽기 전용 개체를 사용하여 해당 값을 일관되고 유지하고 쉽게 수정할 수 있습니다.
 
-XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는 개체를 *리소스 사전*합니다. `VisualElement` 라는 속성을 정의 하는 클래스 `Resources` 형식의 `ResourceDictionary`는 형식의 키를 사용 하 여 사전 `string` 및 형식의 값 `object`합니다. 이 사전에 개체를 배치 하 고 모두 XAML 태그에서 참조할 수 있습니다.
+XAML에서 한가지 인기있는 해결책은 해당 값이나 개체를 *리소스 사전*에 저장하는 것입니다. `VisualElement` 클래스는 `ResourceDictionary` 유형의 `Resources`라는 속성을 정의합니다. 이는 `string` 유형의 키와 `object` 유형의 값을 가진 사전입니다. 이 사전에 개체를 넣으면 모든 XAML 내에서 해당 개체를 태그로 참조할 수 있습니다.
 
-리소스 사전에서 페이지를 사용 하려면 한 쌍의 포함 `Resources` 속성 요소 태그입니다. 이러한 페이지의 맨 위에 있는 가장 유용 합니다.
+한 페이지에서 리소스 사전을 사용하려면, 한 쌍의 `Resources` 속성 요소 태그를 포함합니다. 다음과 같이 해당 페이지의 맨 위에 두는 것이 가장 유용합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -88,7 +88,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage>
 ```
 
-명시적으로 포함 하는 데 필요한 것도 `ResourceDictionary` 태그:
+다음과 같이 `ResourceDictionary` 태그를 명시적으로 포함시켜야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -105,7 +105,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage>
 ```
 
-이제 리소스 사전에 개체 및 다양 한 형식의 값을 추가할 수 있습니다. 이러한 형식은 인스턴스화할 수 있어야 합니다. 추상 클래스, 예를 들어 수 없습니다. 이러한 형식에 매개 변수가 없는 public 생성자가 있어야 합니다. 각 항목에 지정 된 사전의 키가 필요 합니다 `x:Key` 특성입니다. 예를 들어 다음과 같습니다.
+이제 다양한 유형의 개체와 값을 리소스 사전에 추가할 수 있습니다. 해당 유형은 인스턴스화할 수 있어야 합니다. 예를 들어, 추상(abstract) 클래스는 추가할 수 없습니다. 해당 유형에는 매개 변수가 없는 공용(public) 생성자가 있어야 합니다. 각 항목에는 `x:Key` 특성으로 지정된 사전 키가 필요합니다. 예를 들어 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -127,9 +127,9 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage>
 ```
 
-이러한 두 항목은 구조체 형식의 값 `LayoutOptions`, 및 각각에 고유 키 및 하나 또는 두 속성을 설정 합니다. 코드 및 태그에서 훨씬 더 일반적으로 정적 필드를 사용 하는 `LayoutOptions`, 이지만 여기 속성을 설정 하는 것이 편리 합니다.
+위 두 항목은 `LayoutOptions` 구조체 형식의 값이 있고, 각각은 고유 키 및 하나 또는 두 개의 속성 설정이 있습니다. 코드 및 태그에서 `LayoutOptions`의 정적(static) 필드를 사용하는 것이 일반적이지만 여기서는 속성을 설정하는 것이 더 편리합니다.
 
-설정 해야 하는 이제 합니다 `HorizontalOptions` 및 `VerticalOptions` 이러한 리소스에 이러한 단추 중 속성 및 사용 하 여 수행 되는 `StaticResource` XAML 태그 확장:
+이제 다음과 같이 단추의 `HorizontalOptions` 및 `VerticalOptions` 속성을 해당 리소스에 설정하면 해당 작업이 `StaticResource` XAML 태그 확장으로 완료됩니다.
 
 ```xaml
 <Button Text="Do this!"
@@ -141,11 +141,11 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
         FontSize="24" />
 ```
 
-`StaticResource` 태그 확장은 중괄호로 구분 항상 및 사전 키를 포함 합니다.
+`StaticResource` 태그 확장은 중괄호로 구분 항상 및 사전 키를 포함합니다.
 
-이름을 `StaticResource` 구별할 `DynamicResource`, Xamarin.Forms 지원 하기도 합니다. `DynamicResource` 런타임에 변경 될 수 있는 값과 연결 된 사전 키에 대 한 동안 `StaticResource` 페이지의 요소는 생성 하는 경우 한 번만 사전에서 요소를 액세스 합니다.
+`StaticResource`라는 이름은 Xamarin.Forms도 마찬가지로 지원하는 `DynamicResource`와 구별됩니다. `DynamicResource`는 런타임 중에 변경 될 수 있는 값과 연결된 사전 키를 위한 것이고, `StaticResource`는 페이지 상의 요소가 생성될 때 한 번만 사전에서 요소를 접근합니다.
 
-에 대 한는 `BorderWidth` 속성인 해야 하는 double 값을 사전에 저장 합니다. 와 같은 일반적인 데이터 형식에 대 한 태그를 편리 하 게 정의 하는 XAML `x:Double` 고 `x:Int32`:
+`BorderWidth` 속성의 경우, 사전에 double 값을 저장할 필요가 있습니다. 다음과 같이 XAML은 `x:Double` 및 `x:Int32`와 같은 공통 데이터 유형에 대한 태그를 편리하게 정의합니다.
 
 ```xaml
 <ContentPage.Resources>
@@ -164,7 +164,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage.Resources>
 ```
 
-세 줄에 추가할 필요가 없습니다. 이 회전 각도 대 한이 사전 항목을 한 줄 위로 사용:
+위에서처럼 세 줄에 추가할 필요는 없습니다. 다음과 같이 해당 회전 각도에 대한 사전 항목은 한 줄만 차지합니다.
 
 ```xaml
 <ContentPage.Resources>
@@ -185,7 +185,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage.Resources>
 ```
 
-동일한 방식으로 해당 두 리소스를 참조할 수 있습니다는 `LayoutOptions` 값:
+위의 두 리소스는 다음과 같이 `LayoutOptions` 값과 동일한 방식으로 참조할 수 있습니다.
 
 ```xaml
 <Button Text="Do this!"
@@ -197,19 +197,19 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
         FontSize="24" />
 ```
 
-종류의 리소스에 대 한 `Color`, 직접 이러한 유형의 특성을 할당할 때 사용 하는 동일한 문자열 표현을 사용할 수 있습니다. 형식 변환기는 리소스를 만들 때 호출 됩니다. 다음은 형식 리소스입니다 `Color`:
+`Color` 유형의 리소스의 경우, 해당 유형의 특성을 직접 할당할 때 사용하는 것과 동일한 문자열 표현을 사용할 수 있습니다. 유형 변환기는 리소스가 생성될 때 호출됩니다. 다음은 `Color` 유형 리소스입니다.
 
 ```xaml
 <Color x:Key="textColor">Red</Color>
 ```
 
-집합을 자주 프로그램을 `FontSize` 속성의 멤버에는 `NamedSize` 와 같은 열거형 `Large`합니다. 합니다 `FontSizeConverter` 사용 하 여 플랫폼에 종속 된 값으로 변환 하는 백그라운드로 작동 클래스는 `Device.GetNamedSized` 메서드. 그러나 글꼴 크기 리소스를 정의할 때는 것 나와 있는 숫자 값을 사용 하는 것으로 여기는 `x:Double` 형식:
+프로그램은 종종 `FontSize` 속성을 `Large`와 같은 `NamedSize` 열거형 멤버로 설정합니다. `FontSizeConverter` 클래스는 배후에서 작동하여 `Device.GetNamedSized` 메서드를 사용하여 플랫폼 독립적인 값으로 변환합니다. 그러나 글꼴 크기 리소스를 정의할 때는 여기서 보는 바와 같이 `x:Double`로 숫자 값을 사용하는 것이 더 합리적입니다.
 
 ```xaml
 <x:Double x:Key="fontSize">24</x:Double>
 ```
 
-이제 모든 속성을 제외 하 고 `Text` 리소스 설정에 의해 정의 됩니다.
+이제 `Text`를 제외한 모든 속성은 리소스 설정에 의해 정의됩니다.
 
 ```xaml
 <Button Text="Do this!"
@@ -221,7 +221,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
         FontSize="{StaticResource fontSize}" />
 ```
 
-사용할 수 이기도 `OnPlatform` 플랫폼에 대해 다른 값을 정의 하도록 리소스 사전 내에서. 다음은 어떻게는 `OnPlatform` 개체는 다른 텍스트 색에 대 한 리소스 사전이 포함 될 수 있습니다:
+또한 리소스 사전에서 `OnPlatform`을 사용하여 플랫폼 별로 다른 값을 정의할 수도 있습니다. 다음은 `OnPlatform` 개체가 다른 텍스트 색상을 위한 리소스 사전의 일부가 되도록 하는 방법입니다.
 
 ```xaml
 <OnPlatform x:Key="textColor"
@@ -232,9 +232,9 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </OnPlatform>
 ```
 
-있음을 `OnPlatform` 둘 다 가져옵니다는 `x:Key` 사전에 개체 이기 때문에 특성 및 `x:TypeArguments` 제네릭 클래스 이기 때문에 특성입니다. 합니다 `iOS`, `Android`, 및 `UWP` 특성으로 변환 됩니다 `Color` 값 개체를 초기화 하는 경우.
+`OnPlatform`은 해당 개체가 사전에 있으므로 `x:Key` 특성을 얻고 제네릭 클래스이므로 `x:TypeArguments` 특성도 얻습니다. `iOS`, `Android` 및 `UWP` 특성은 개체가 초기화될 때 `Color` 값으로 변환됩니다.
 
-다음은 6 개 공유 값에 액세스 하는 세 개의 단추를 사용 하 여 최종 완료 XAML 파일이입니다.
+다음은 여섯 개의 공유 값에 접근하는 세 개의 단추가 있는 완전한 최종 XAML 파일입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -295,11 +295,11 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </ContentPage>
 ```
 
-스크린샷은 일관 된 스타일 및 플랫폼별 스타일 지정을 확인합니다.
+스크린샷은 일관된 스타일 및 플랫폼별 스타일 지정을 다음과 같이 보여줍니다.
 
 [![](xaml-markup-extensions-images/sharedresources.png "스타일의 컨트롤")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "스타일의 컨트롤")
 
-정의 하는 것이 일반적 이지만 `Resources` 페이지의 맨 위에 있는 컬렉션에 유의 하는 `Resources` 속성으로 정의 됩니다 `VisualElement`, 할 수 있습니다 및 `Resources` 컬렉션 페이지의 다른 요소에. 예를 들어,에 추가 시도 합니다 `StackLayout` 이 예제에서:
+페이지의 상단에 `Resources` 컬렉션을 정의하는 것이 가장 일반적이지만, `Resources` 속성은 `VisualElement`에 의해 정의되고, 페이지의 다른 요소에서 `Resources` 컬렉션을 사용할 수도 있습니다. 예를 들어, 다음과 같이 `StackLayout`에 하나를 추가해 봅니다.
 
 ```xaml
 <StackLayout>
@@ -312,24 +312,24 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
 </StackLayout>
 ```
 
-단추의 텍스트 색이 파란색 이제 알 수 있습니다. XAML 파서가 발견할 때마다 기본적으로 `StaticResource` 태그 확장 시각적 트리를 검색 하 고 첫 번째를 사용 하 여 `ResourceDictionary` 해당 키를 포함 하는 것이 발견할 합니다.
+버튼의 텍스트 색상이 파란색임을 이제 알 수 있습니다. 기본적으로 XAML 파서가 `StaticResource` 태그 확장을 발견하면 시각적 트리를 검색하여 해당 키가 포함된 첫 번째 `ResourceDictionary`를 사용합니다.
 
-리소스 사전에 저장 된 개체의 가장 일반적인 형식 중 하나는 Xamarin.Forms `Style`, 속성 설정의 컬렉션을 정의 하는 합니다. 스타일 문서에 설명 되어 [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
+리소스 사전에 저장된 가장 일반적인 유형 중 하나는 속성 설정 컬렉션을 정의하는 Xamarin.Forms `Style` 입니다. 스타일은 [스타일](~/xamarin-forms/user-interface/styles/index.md) 문서에 설명되어 있습니다.
 
-경우에 따라 XAML 접하는 개발자 궁금할 경우 시각적 요소를 같은 넣을 수 있습니다 `Label` 또는 `Button` 에 `ResourceDictionary`합니다. 물론 가능 하다 고 하는 동안 말을 것 하지 않습니다. 용도 `ResourceDictionary` 개체를 공유 하는 것입니다. 시각적 요소를 공유할 수 없습니다. 동일한 인스턴스는 단일 페이지에 두 번 나타날 수 없습니다.
+가끔 XAML을 처음 접하는 개발자는 `Label`에 `Button` 또는 `ResourceDictionary`와 같은 시각적 요소를 넣을 수 있는지 궁금해 합니다. 물론 가능은 하지만 별로 의미가 없습니다. `ResourceDictionary`의 목적은 개체를 공유하는 것입니다. 시각적 요소는 공유할 수 없습니다. 동일한 인스턴스가 한 페이지에 두 번 나타날 수 없습니다.
 
-## <a name="the-xstatic-markup-extension"></a>X:static 태그 확장명
+## <a name="the-xstatic-markup-extension"></a>x:Static 태그 확장
 
-해당 이름의 유사성에도 불구 하 고 `x:Static` 고 `StaticResource` 는 매우 다릅니다. `StaticResource` 하는 동안 리소스 사전에서 개체를 반환 합니다. `x:Static` 다음 중 하나에 액세스 합니다.
+해당 이름의 유사성에도 불구 하 고 `x:Static` 과 `StaticResource` 는 매우 다릅니다. `StaticResource` 는 리소스 사전에서 개체를 반환하는 반면 `x:Static`은 다음 중 하나에 액세스합니다.
 
-- 공용 정적 필드
+- 공용(public) 정적(static) 필드
 - 공용 정적 속성
 - 공용 상수 필드
 - 열거형 멤버입니다.
 
-`StaticResource` 리소스 사전 정의 하는 XAML 구현에서 태그 확장은 지원 하지만 `x:Static` XAML 내장 한 부분을 사용 하는 `x` 접두사 보여 줍니다.
+`StaticResource` 태그 확장은 리소스 사전을 정의하는 XAML 구현에 의해 지원되는 반면, `x:Static`은 `x` 접두사가 드러내는 것처럼 XAML의 본질적인 부분입니다.
 
-여기 몇 가지 예를 보여 주는 방법을 `x:Static` 정적 필드 및 열거형 멤버를 명시적으로 참조할 수 있습니다.
+다음은 `x:Static`이 정적 필드 및 열거형 멤버를 명시적으로 참조할 수 있는 방법을 보여주는 몇 가지 예제입니다.
 
 ```xaml
 <Label Text="Hello, XAML!"
@@ -338,7 +338,7 @@ XAML에의 한 인기 있는 솔루션 이러한 값을 저장 하는 것 또는
        TextColor="{x:Static Color.Aqua}" />
 ```
 
-지금까지 매우 인상적인 아닙니다. 하지만 `x:Static` 태그 확장 참조할 수도 있습니다 정적 필드 또는 속성에서 사용자 고유의 코드입니다. 예를 들어, 다음은 `AppConstants` 응용 프로그램을 통해 여러 페이지에 사용할 수 있는 몇 가지 정적 필드를 포함 하는 클래스:
+지금까지는 별로 인상적이지 않습니다. 하지만 `x:Static` 태그 확장은 정적 필드나 속성을 자신의 코드에서 참조할 수도 있습니다. 예를 들어, 다음은 응용 프로그램 전체에서 여러 페이지에 사용할 수 있는 정적 필드가 포함된 `AppConstants` 클래스입니다.
 
 ```csharp
 using System;
@@ -380,32 +380,32 @@ namespace XamlSamples
 }
 ```
 
-XAML 파일에서이 클래스의 정적 필드를 참조 하려면이 파일이 위치 하는 XAML 파일 내에서 표시 하는 방법이 사용 해야 합니다. XML 네임 스페이스 선언을 사용 하 여이 작업을 수행 합니다.
+XAML 파일에서 해당 클래스의 정적 필드를 참조하려면 XAML 파일에서 해당 파일의 위치를 나타내는 몇 가지 방법이 필요합니다. XML 네임 스페이스 선언을 사용하면 됩니다.
 
-표준 Xamarin.Forms XAML 템플릿의 일부로 생성 된 XAML 파일에 두 개의 XML 네임 스페이스 선언을 포함 회수: Xamarin.Forms 클래스 및 태그와 특성에 XAML 내장 함수를 참조 하는 것에 대 한 다른 액세스 하기 위한 하나:
+표준 Xamarin.Forms XAML 템플릿의 일부로 생성된 XAML 파일에는 다음과 같이 Xamarin.Forms 클래스에 접근하기 위한 XML 선언과 XAML에 고유한 태그 및 특성을 참조하는 두 개의 XML 네임 스페이스 선언이 포함되어 있습니다.
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-다른 클래스에 액세스 하려면 XML 네임 스페이스 선언을 추가 해야 합니다. 각 추가 XML 네임 스페이스 선언을 새 접두사를 정의합니다. 클래스는 공유 응용 프로그램.NET 표준 라이브러리를 로컬를 같은 액세스 하려면 `AppConstants`, 접두사를 자주 사용 하는 XAML 프로그래머 `local`합니다. 네임 스페이스 선언에는 CLR (공용 언어 런타임) 네임 스페이스 이름, 라고도.NET 네임 스페이스 이름에 나타나는 이름 나타내야 합니다.는 C# `namespace` 정의 또는 `using` 지시문:
+다른 클래스에 접근하려면 XML 네임 스페이스 선언이 필요합니다. 각 추가 XML 네임 스페이스 선언은 새 접두사를 정의합니다. `AppConstants`와 같은 공유 응용 프로그램 .NET Standard 라이브러리의 로컬 클래스에 접근하려면, XAML 프로그래머는 종종 `local` 접두사를 사용합니다. 네임 스페이스 선언은 CLR (Common Language Runtime, 공용 언어 런타임) 네임 스페이스 이름(.NET 네임 스페이스 이름이라고도 함)을 나타내야 합니다. 해당 네임 스페이스 이름은 C# `namespace` 정의 또는 `using` 지시문에 나타나는 이름입니다.
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-.NET Standard 라이브러리를 참조 하는 모든 어셈블리에서.NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음은 `sys` 표준.NET에 대 한 접두사 `System` 에 있는 네임 스페이스에는 **mscorlib** "Microsoft 공용 개체 런타임 라이브러리에 대 한" 한 번만 구현 되지만 이제 "다국어 표준를 의미 하는 어셈블리를 개체 런타임 라이브러리입니다. 일반적인 " 다른 어셈블리 이기 때문에 지정 해야 어셈블리 이름을 여기서 **mscorlib**:
+.NET Standard 라이브러리를 참조 하는 모든 어셈블리에서.NET 네임 스페이스에 대 한 XML 네임 스페이스 선언을 정의할 수도 있습니다. 예를 들어, 다음은 표준 .NET `System` 네임 스페이스에 대한 `sys` 접두사입니다. 해당 네임 스페이스는 다음과 같이 **mscorlib** 어셈블리에 있으며, 한때 "Microsoft 공용 개체 런타임 라이브러리(Microsoft Common Object Runtime Library)"를 나타냈지만 이제 "다국어 표준 개체 런타임 라이브러리(Multilanguage Standard Common Object Runtime Library)"를 의미합니다. 다른 어셈블리 이기 때문에 지정 해야 어셈블리 이름을 여기서 **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-키워드 `clr-namespace` 뒤에 콜론 및.NET 네임 스페이스 이름과 키워드를 세미콜론 `assembly`, 등호와 어셈블리 이름입니다.
+키워드 `clr-namespace` 뒤에 콜론이 오고, 그 다음 .NET 네임 스페이스 이름, 세미콜론, 키워드 `assembly`, 등호 및 어셈블리 이름이 옵니다.
 
-예, 뒤에 콜론 `clr-namespace` 등호 따르는 `assembly`합니다. 구문은이 방식으로 의도적으로 정의 된: 대부분의 XML 네임 스페이스 선언을 참조와 같은 URI 체계 이름을 시작 하는 URI `http`에 항상 뒤에 콜론입니다. `clr-namespace` 이 문자열의 일부로 해당 규칙을 모방 하기 위함입니다.
+맞습니다, 콜론은 `clr-namespace` 뒤에 오지만 등호는 `assembly` 다음에 옵니다. 구문은 해당 방식으로 의도적으로 정의되었습니다. 대부분의 XML 네임 스페이스 선언은 `http`와 같이 URI 스키마 이름을 시작하는 URI를 참조하며 항상 뒤에 콜론이 옵니다. 해당 문자열의 `clr-namespace` 부분은 URI 규칙을 모방하기 위함입니다.
 
-이 네임 스페이스 선언을 모두에 포함 된 합니다 **StaticConstantsPage** 샘플입니다. 다음에 유의 합니다 `BoxView` 차원으로 설정 됩니다 `Math.PI` 및 `Math.E`, 하지만 100의 비율로 배율 조정 된:
+해당 네임 스페이스 선언은 모두 **StaticConstantsPage** 샘플에 포함됩니다. `BoxView` 차원은 `Math.PI` 및 `Math.E`로 설정되어 있지만 100의 비율로 배율이 조정됩니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -435,22 +435,22 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 결과의 크기 `BoxView` 화면을 기준으로 플랫폼에 따라 다릅니다.
 
- [![](xaml-markup-extensions-images/staticconstants.png "X:static 태그 확장을 사용 하 여 컨트롤")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "X:static 태그 확장을 사용 하 여 컨트롤")
+ [![](xaml-markup-extensions-images/staticconstants.png "X:static 태그 확장을 사용하는 컨트롤")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "X:static 태그 확장을 사용하는 컨트롤")
 
-## <a name="other-standard-markup-extensions"></a>다른 표준 태그 확장
+## <a name="other-standard-markup-extensions"></a>기타 표준 태그 확장
 
-여러 가지 태그 확장은 XAML 및 Xamarin.Forms XAML 파일에서 지원 합니다. 이 중 몇 가지 자주 사용 되지 않지만 필요할 때 필수적인:
+여러 태그 확장은 XAML에 고유하며 Xamarin.Forms XAML 파일에 지원됩니다. 이 중 몇 가지는 자주 사용되지 않지만 필요할 때는 기본적입니다.
 
--  속성이 아닌 경우 `null` 수 있지만 기본 값으로 설정 하려면 `null`로 설정 된 `{x:Null}` 태그 확장 합니다.
--  속성 형식의 경우 `Type`를 할당할 수 있습니다를 `Type` 태그 확장을 사용 하 여 `{x:Type someClass}`입니다.
--  XAML 사용 하 여 배열을 정의할 수 있습니다는 `x:Array` 태그 확장 합니다. 이 태그 확장에 필요한 특성이 라는 `Type` 배열에 있는 요소의 형식을 나타내는입니다.
-- 합니다 `Binding` 태그 확장에 대해서는 설명 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)합니다.
+-  속성은 기본적으로 `null`이 아닌 값을 갖지만, `null`로 설정하고자 한다면 `{x:Null}` 태그 확장으로 설정합니다.
+-  속성이 `Type` 형식인 경우, `{x:Type someClass}`를 사용하여 해당 속성을 `Type` 개체에 할당할 수 있습니다.
+-  XAML의 배열은 `x:Array` 태그 확장을 사용하여 정의할 수 있습니다. 이 태그 확장에는 배열에 있는 요소 유형을 나타내는 `Type`이라는 필수 특성이 있습니다.
+- `Binding` 태그 확장에 대해서는 설명 [4부.  데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 논의합니다.
 
 ## <a name="the-constraintexpression-markup-extension"></a>ConstraintExpression 태그 확장
 
-태그 확장 속성을 가질 수 있지만 같은 XML 특성이 설정 되지 않습니다. 태그 확장에서 속성 설정을 쉼표로 구분 하 여 및 하지 인용 부호 중괄호 내에 표시 합니다.
+태그 확장은 속성을 가질 수 있지만, XML 특성처럼 설정되지는 않습니다. 태그 확장에서 속성 설정은 쉼표로 구분하며 중괄호 내에서 따옴표는 표시되지 않습니다.
 
-라는 Xamarin.Forms 태그 확장을 사용 하 여이 설명할 수 있습니다 `ConstraintExpression`를 사용 하 여 사용 되는 `RelativeLayout` 클래스입니다. 상수 또는 부모 또는 다른 명명 된 보기에 상대적인 위치 또는 자식 뷰 크기를 지정할 수 있습니다. 구문의 합니다 `ConstraintExpression` 위치를 사용 하 여 보기의 크기를 설정할 수 있습니다를 `Factor` 번 다른 뷰의 속성 및 a `Constant`합니다. 항목 보다 더 복잡 한 코드가 필요합니다.
+이것은 `RelativeLayout` 클래스와 함께 사용되는 `ConstraintExpression`이라는 Xamarin.Forms 태그 확장을 사용하여 설명할 수 있습니다. 자식 뷰의 위치나 크기를 상수로 지정하거나 부모 또는 다른 명명 된 뷰와 상대적으로 지정할 수 있습니다. `ConstraintExpression`의 구문은 `Factor`와 다른 뷰의 속성에 `Constant`를 곱한 값을 사용하여 뷰의 위치나 크기를 설정할 수 있습니다. 그것보다 더 복잡한 것은 코드가 필요합니다.
 
 예를 들면 다음과 같습니다.
 
@@ -547,21 +547,21 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-아마도이 샘플에서 수행 해야 하는 가장 중요 한과 구문은 태그 확장의: 하지 인용 부호 태그 확장의 중괄호 내에 나타나야 합니다. 태그 확장이 XAML 파일에을 입력 하면 속성의 값을 따옴표로 묶어야 하 려 자연 스러운 것입니다. 벗어나지 마세요!
+아마도 이 샘플에서 얻어야 할 가장 중요한 배움은 태그 확장의 구문입니다. 따옴표는 태그 확장의 중괄호 내에 올 수 없습니다. XAML 파일에 태그 확장을 입력할 때 속성의 값을 자연스럽게 따옴표로 묶고 싶을 것입니다. 유혹을 이겨내십시오!
 
 실행 중인 프로그램이 다음과 같습니다.
 
-[![](xaml-markup-extensions-images/relativelayout.png "제약 조건을 사용 하 여 상대 레이아웃")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "제약 조건을 사용 하 여 상대 레이아웃")
+[![](xaml-markup-extensions-images/relativelayout.png "제약 조건을 사용하는 상대 레이아웃")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "제약 조건을 사용하는 상대 레이아웃")
 
 ## <a name="summary"></a>요약
 
-여기에 표시 된 XAML 태그 확장 XAML 파일에 대 한 중요 한 지지를 제공 합니다. 하지만 가장 중요 한 XAML 태그 확장은 아마도 `Binding`,이 시리즈의 다음 부분에 나와 있는 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)합니다.
+문서에 표시된 XAML 태그 확장은 XAML 파일에 대한 중요한 지원을 제공합니다. 하지만 가장 중요 한 XAML 태그 확장은 아마도 `Binding`,이 시리즈의 다음 부분에 나와 있는 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 논의합니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

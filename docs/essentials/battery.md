@@ -1,20 +1,21 @@
 ---
 title: 'Xamarin.Essentials: 배터리'
-description: 이 문서에서는 장치의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.
+description: 이 문서에서는 디바이스의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 3d69d082495f11c48273e9329bd2a4a61451b33f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 01/22/2019
+ms.custom: video
+ms.openlocfilehash: 9ab2f960872386b68063d7af209ec0a7a24ac287
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479669"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
-**Battery** 클래스를 사용하면 디바이스의 배터리 정보를 확인하고 변경 사항을 모니터링할 수 있으며, 디바이스가 절전 모드로 실행 중인지를 나타내는 디바이스 절전 상태 관련 정보를 확인할 수 있습니다. 장치의 절전 상태가 켜짐이면 응용 프로그램에서 후순위 처리를 피해야 합니다.
+**Battery** 클래스를 사용하면 디바이스의 배터리 정보를 확인하고 변경 사항을 모니터링할 수 있으며, 디바이스가 절전 모드로 실행 중인지를 나타내는 디바이스 절전 상태 관련 정보를 확인할 수 있습니다. 장치의 절전 상태가 켜짐이면 애플리케이션에서 후순위 처리를 피해야 합니다.
 
 ## <a name="get-started"></a>시작
 
@@ -116,10 +117,10 @@ public class BatteryTest
     public BatteryTest()
     {
         // Register for battery changes, be sure to unsubscribe when needed
-        Battery.BatteryChanged += Battery_BatteryChanged;
+        Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
+    void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -129,7 +130,7 @@ public class BatteryTest
 }
 ```
 
-배터리로 실행되는 장치를 절전 모드로 전환할 수 있습니다. 배터리 용량이 20% 미만으로 떨어지는 경우와 같이 장치가 자동으로 이 모드로 전환되는 경우도 있습니다. 운영 체제는 배터리를 고갈시키는 경향이 있는 활동을 줄여 절전 모드에 응답합니다. 응용 프로그램은 절전 모드가 켜져 있을 때 후순위 처리나 다른 고전력 활동을 피하여 도울 수 있습니다.
+배터리로 실행되는 디바이스를 절전 모드로 전환할 수 있습니다. 배터리 용량이 20% 미만으로 떨어지는 경우와 같이 디바이스가 자동으로 이 모드로 전환되는 경우도 있습니다. 운영 체제는 배터리를 고갈시키는 경향이 있는 활동을 줄여 절전 모드에 응답합니다. 애플리케이션은 절전 모드가 켜져 있을 때 후순위 처리나 다른 고전력 활동을 피하여 도울 수 있습니다.
 
 또한 정적 `Battery.EnergySaverStatus` 속성을 사용하여 디바이스의 현재 절전 상태를 확인할 수도 있습니다.
 
@@ -138,9 +139,9 @@ public class BatteryTest
 var status = Battery.EnergySaverStatus;
 ```
 
-이 속성은 `On`, `Off` 또는 `Unknown`인 `EnergySaverStatus` 열거형의 멤버를 반환합니다. 속성이 `On`을 반환하는 경우 응용 프로그램에서 후순위 처리나 많은 전력을 소모할 수 있는 다른 활동을 피해야 합니다.
+이 속성은 `On`, `Off` 또는 `Unknown`인 `EnergySaverStatus` 열거형의 멤버를 반환합니다. 속성이 `On`을 반환하는 경우 애플리케이션에서 후순위 처리나 많은 전력을 소모할 수 있는 다른 활동을 피해야 합니다.
 
-또한 응용 프로그램에서 이벤트 처리기를 설치해야 합니다. **Battery** 클래스는 절전 상태가 변경될 때 트리거되는 이벤트를 표시합니다.
+또한 애플리케이션에서 이벤트 처리기를 설치해야 합니다. **Battery** 클래스는 절전 상태가 변경될 때 트리거되는 이벤트를 표시합니다.
 
 ```csharp
 public class EnergySaverTest
@@ -148,7 +149,7 @@ public class EnergySaverTest
     public EnergySaverTest()
     {
         // Subscribe to changes of energy-saver status
-        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+        Battery.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
     }
 
     private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
@@ -159,7 +160,7 @@ public class EnergySaverTest
 }
 ```
 
-절전 상태가 `On`으로 변경되면 응용 프로그램에서 후순위 처리 수행을 중지해야 합니다. 상태가 `Unknown` 또는 `Off`로 변경되면 응용 프로그램에서 후순위 처리를 다시 시작할 수 있습니다.
+절전 상태가 `On`으로 변경되면 애플리케이션에서 후순위 처리 수행을 중지해야 합니다. 상태가 `Unknown` 또는 `Off`로 변경되면 애플리케이션에서 후순위 처리를 다시 시작할 수 있습니다.
 
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
@@ -170,7 +171,7 @@ public class EnergySaverTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* API를 테스트하려면 장치를 사용해야 합니다. 
+* API를 테스트하려면 디바이스를 사용해야 합니다. 
 * `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
@@ -183,3 +184,9 @@ public class EnergySaverTest
 
 - [배터리 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [배터리 API 문서](xref:Xamarin.Essentials.Battery)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

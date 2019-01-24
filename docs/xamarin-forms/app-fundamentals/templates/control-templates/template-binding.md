@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106431"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051583"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Xamarin.Forms ControlTemplate에서 바인딩
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
 
 _템플릿 바인딩을 사용하면 컨트롤 템플릿의 컨트롤을 공용 속성에 데이터 바인딩할 수 있기 때문에 컨트롤 템플릿의 컨트롤에 대한 속성 값을 쉽게 변경할 수 있습니다. 이 문서에서는 템플릿 바인딩을 사용하여 컨트롤 템플릿에서 데이터 바인딩을 수행하는 방법을 보여줍니다._
 
@@ -140,7 +142,7 @@ public class HomePageViewModel
 
 `HeaderText` 및 `FooterText` 바인딩 가능한 속성은 `HomePageViewModel` 클래스 인스턴스로 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 설정했기 때문에 `HomePageViewModel.HeaderText` 및 `HomePageViewModel.FooterText` 속성에 바인딩됩니다. 전반적으로 이로 인해 결국 ViewModel 속성에 바인딩하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)의 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 인스턴스에 바인딩된 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)의 컨트롤 속성이 됩니다.
 
-해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 public class HomePageCS : ContentPage

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 24d86827ab93dcf7dfc4da39c4a03a0a2805f332
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8c2086025ccb5fe41b3ffddc9cd650c1e0c81fbc
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107432"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53813987"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
@@ -107,7 +107,7 @@ Android는 암시적 intent 둘 이상의 가능한 일치 항목에 있는 경�
 
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>암시적 의도 대 한 의도 필터를 만들기
 
-암시적 Intent를 사용 하 여 서비스에 연결 하려면 Android 앱 서비스의 기능을 식별 하려면 일부 메타 데이터를 제공 해야 합니다. 이 메타 데이터에서 제공 됩니다 _의도 필터_합니다. 의도 필터 작업 또는 서비스를 시작 하는 의도에 있어야 하는 데이터 형식 등 몇 가지 정보를 포함 합니다. Xamarin.android에서 의도 필터에 등록 되어 **AndroidManifest.xml** 사용 하 여 서비스를 데코레이팅하여 합니다 [ `IntentFilterAttribute` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)합니다. 다음 코드는 연결 된 작업을 통해 의도 필터를 추가 하는 예를 들어 `com.xamarin.DemoService`:
+암시적 의도 사용 하 여 서비스에 연결 하려면 Android 앱 서비스의 기능을 식별 하려면 일부 메타 데이터를 제공 해야 합니다. 이 메타 데이터에서 제공 됩니다 _의도 필터_합니다. 의도 필터 작업 또는 서비스를 시작 하는 의도에 있어야 하는 데이터 형식 등 몇 가지 정보를 포함 합니다. Xamarin.android에서 의도 필터에 등록 되어 **AndroidManifest.xml** 사용 하 여 서비스를 데코레이팅하여 합니다 [ `IntentFilterAttribute` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)합니다. 다음 코드는 연결 된 작업을 통해 의도 필터를 추가 하는 예를 들어 `com.xamarin.DemoService`:
 
 ```csharp
 [Service]

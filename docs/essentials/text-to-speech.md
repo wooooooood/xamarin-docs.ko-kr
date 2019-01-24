@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 텍스트 음성 변환'
-description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
+description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 디바이스에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont

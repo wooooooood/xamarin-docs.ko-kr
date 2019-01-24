@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116747"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609911"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.Mac 문제 해결 팁
 
@@ -77,7 +77,7 @@ ms.locfileid: "50116747"
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: 없습니다 데이터가 437 인코딩에 사용할 수 있습니다.
  
-Xamarin.Mac 앱에서 타사 라이브러리를 포함 하는 경우 오류가 발생할 수 있습니다는 형태로 "System.NotSupportedException: 데이터가 437 인코딩에 사용할 수 없습니다" 컴파일 및 앱을 실행 하려고 할 때입니다. 예를 들어 라이브러리와 같은 `Ionic.Zip.ZipFile`를 작업 하는 동안이 예외를 throw 할 수 있습니다.
+Xamarin.Mac 앱에서 타사 라이브러리를 포함 하는 경우 오류가 발생할 수 있습니다는 형태로 "System.NotSupportedException: 데이터를 없습니다 인코딩 437"컴파일 및 앱을 실행 하려고 할 때 사용할 수 있습니다. 예를 들어 라이브러리와 같은 `Ionic.Zip.ZipFile`를 작업 하는 동안이 예외를 throw 할 수 있습니다.
 
 하려는 Xamarin.Mac 프로젝트에 대 한 옵션을 열어이 해결할 수 있습니다 **Mac 빌드** > **국제화** 확인 합니다 **서쪽** 국제화:
 
@@ -110,10 +110,6 @@ Xcode의 새 버전을 실행 하면 처음으로 Xamarin.Mac에 필요한 몇 �
 입력 `Entitlements` 이름과 클릭 합니다 **새로 만들기** 단추입니다. 프로젝트가 이전에 자격 파일을 포함 하는 경우 새 파일을 만드는 대신 프로젝트에 추가할 묻는 메시지가 나타납니다.
 
 [![파일 덮어쓰기 확인](troubleshooting-images/entitlements04.png "파일 덮어쓰기 확인")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>지원 (business 또는 enterprise 라이선스)에 문의
-
-비즈니스 또는 엔터프라이즈 라이선스에 있는 경우 지원 티켓을 통해 Xamarin 엔지니어 로부터 직접 도움을 요청을 수 있습니다. 참조 [xamarin.com/support](http://xamarin.com/support) 세부 정보에 대 한 합니다.
 
 ## <a name="community-support-on-the-forums"></a>포럼에서 커뮤니티 지원
 

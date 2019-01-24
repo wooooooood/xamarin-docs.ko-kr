@@ -33,7 +33,7 @@ Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
 ### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[설정 및 설치](~/ios/get-started/installation/index.md)
 
-Mac용 Visual Studio 또는 Visual Studio에서 Xamarin.iOS를 설정하고 실행합니다. 이 섹션에서는 다운로드, Xamarin 설치 관리자를 사용한 설치, Microsoft 계정으로 로그인, 일반적인 문제 해결 항목, 장치 프로비전 등을 다룹니다.
+Mac용 Visual Studio 또는 Visual Studio에서 Xamarin.iOS를 설정하고 실행합니다. 이 섹션에서는 다운로드, Xamarin 설치 관리자를 사용한 설치, Microsoft 계정으로 로그인, 일반적인 문제 해결 항목, 디바이스 프로비전 등을 다룹니다.
 
 ### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
 

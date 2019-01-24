@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: cdf115c4ea6d6613a1da2d0d2cfa14ed500086f8
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563136"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54209188"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치
 

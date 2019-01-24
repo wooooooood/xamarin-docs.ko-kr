@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994678"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207975"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으로 뒤로 탐색할 수 있는 계층적 탐색 환경을 제공합니다. 이 클래스는 탐색을 Page 개체의 LIFO(후입선출) 스택으로 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용하여 페이지 스택 탐색을 수행하는 방법을 보여 줍니다._
 
@@ -32,7 +34,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ## <a name="performing-navigation"></a>탐색 수행
 
-계층적 탐색에는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
+계층적 탐색에서는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
 
 ![](hierarchical-images/navigationpage-components.png "NavigationPage 구성 요소")
 
@@ -49,7 +51,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ### <a name="creating-the-root-page"></a>루트 페이지 만들기
 
-탐색 스택에 추가된 첫 번째 페이지는 응용 프로그램의 *루트* 페이지라고 하며, 다음 코드 예제는 이것을 수행하는 방법을 보여줍니다.
+탐색 스택에 추가된 첫 번째 페이지는 응용 프로그램의 *root* 페이지라고 하며, 다음 코드 예제는 해당 수행 방법을 보여줍니다.
 
 ```csharp
 public App ()
@@ -93,7 +95,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>탐색 스택에서 페이지 꺼내기
 
-활성 페이지는 장치의 *다시* 단추를 눌러 탐색 스택에서 팝할 수 있습니다. 이때 단추는 장치의 물리적 단추이든 화면상 단추이든 상관없습니다.
+활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다.
 
 프로그래밍 방식으로 원래 페이지로 돌아가려면 `Page2Xaml` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 
@@ -342,9 +344,9 @@ public class TitleViewPage : ContentPage
 > [!IMPORTANT]
 > 보기의 크기가 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성으로 지정되지 않으면 탐색 모음에 많은 보기가 나타나지 않습니다. 또는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 적절한 값으로 설정하여 보기를 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 래핑할 수 있습니다.
 
-[`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정할 수 있습니다. iOS 및 UWP(유니버설 Windows 플랫폼)에서는 탐색 모음의 높이를 변경할 수 없으므로 탐색 모음에 표시된 보기가 탐색 모음의 기본 크기보다 클 경우 클리핑이 발생합니다. 그러나 Android에서는 [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능 속성을 새 높이를 나타내는 `double`로 설정하여 탐색 모음의 높이를 변경할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 높이 설정](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight)을 참조하세요.
+[`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정할 수 있습니다. iOS 및 UWP(유니버설 Windows 플랫폼)에서는 탐색 모음의 높이를 변경할 수 없으므로 탐색 모음에 표시된 보기가 탐색 모음의 기본 크기보다 클 경우 클리핑이 발생합니다. 그러나 Android에서는 [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능 속성을 새 높이를 나타내는 `double`로 설정하여 탐색 모음의 높이를 변경할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 높이 설정](~/xamarin-forms/platform/android/navigationpage-bar-height.md)을 참조하세요.
 
-또는 탐색 막대에 일부 콘텐츠를 배치하고, 일부는 탐색 막대와 색상이 일치하는 페이지 콘텐츠 맨 위에 있는 보기에 배치하여 확장된 탐색 모음을 제시할 수 있습니다. 또한 iOS에서 [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인드 가능 속성을 `true`로 설정하여 탐색 모음의 맨 아래에 있는 구분선과 그림자를 제거할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 구분 기호 숨기기](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar)를 참조하세요.
+또는 탐색 막대에 일부 콘텐츠를 배치하고, 일부는 탐색 막대와 색상이 일치하는 페이지 콘텐츠 맨 위에 있는 보기에 배치하여 확장된 탐색 모음을 제시할 수 있습니다. 또한 iOS에서 [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인드 가능 속성을 `true`로 설정하여 탐색 모음의 맨 아래에 있는 구분선과 그림자를 제거할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 구분 기호 숨기기](~/xamarin-forms/platform/ios/navigation-bar-separator.md)를 참조하세요.
 
 > [!NOTE]
 > [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty) 및 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 속성으로 탐색 모음에서 공간을 차지하는 모든 값을 정의할 수 있습니다. 탐색 모음 크기는 플랫폼 및 화면 크기에 따라 다르지만 이러한 속성을 모두 설정하면 사용 가능한 공간이 제한되어 충돌이 발생합니다. 이러한 속성을 조합하여 사용하는 대신 `TitleView` 속성만 설정하여 원하는 탐색 모음 디자인을 보다 잘 만들 수 있습니다.
@@ -353,7 +355,7 @@ public class TitleViewPage : ContentPage
 
 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 탐색 모음에 [`View`](xref:Xamarin.Forms.View)를 표시할 때 주의해야 할 몇 가지 제한 사항이 있습니다.
 
-- iOS에서는 `NavigationPage`의 탐색 모음에 배치된 보기가 큰 제목의 사용 가능 여부에 따라 다른 위치에 나타납니다. 큰 제목 사용에 대한 자세한 내용은 [큰 제목 표시](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title)를 참조하세요.
+- iOS에서는 `NavigationPage`의 탐색 모음에 배치된 보기가 큰 제목의 사용 가능 여부에 따라 다른 위치에 나타납니다. 큰 제목 사용에 대한 자세한 내용은 [큰 제목 표시](~/xamarin-forms/platform/ios/page-large-title.md)를 참조하세요.
 - Android에서는 `NavigationPage`의 탐색 모음에 보기를 배치하는 작업을 app-compat을 사용하는 앱에서만 수행할 수 있습니다.
 - `NavigationPage`의 탐색 모음에 [`ListView`](xref:Xamarin.Forms.ListView) 및 [`TableView`](xref:Xamarin.Forms.TableView)와 같은 크고 복잡한 보기를 배치하지 않는 것이 좋습니다.
 

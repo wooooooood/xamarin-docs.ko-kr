@@ -75,7 +75,7 @@ alarmManager.SetExact (AlarmType.Rtc, AlarmManager.IntervalDay, pendingIntent);
 더 이상 KitKat 정확한 반복 경보를 설정할 수 없습니다. 사용 하는 응용 프로그램 [`SetRepeating`](https://developer.xamarin.com/api/member/Android.App.AlarmManager.SetRepeating/p/Android.App.AlarmType/System.Int64/System.Int64/Android.App.PendingIntent/)
 및 정확한 경보를 수동으로 각 경보를 트리거하는 지금 필요한 작업에 필요 합니다.
 
-### <a name="external-storage"></a>외부 저장소
+### <a name="external-storage"></a>외부 스토리지
 
 외부 저장소는 이제 두 형식을-응용 프로그램 및 여러 응용 프로그램에서 공유 데이터에 고유한 저장소 나뉩니다. 읽기 및 쓰기 앱의 특정 위치를 외부 저장소에 없는 특별 한 권한이 필요 합니다. 이제 공유 저장소에 데이터와 상호 작용 해야 합니다 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한. 두 유형으로 분류할 수 있습니다.
 

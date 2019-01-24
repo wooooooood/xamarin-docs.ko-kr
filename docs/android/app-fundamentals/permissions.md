@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1a73896e4f98a6535bcd7ed66f478d168b01157f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526886"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746871"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Xamarin.Android에서 사용 권한
 
@@ -139,7 +139,7 @@ else
 
 사용 권한을 필요한 이유는 응용 프로그램에 대 한 권한을 부여 하는 합리적인된 결정을 내릴 수 있도록 하는 것에 대 한 사용자에 게는 것이 좋습니다. 이러한 예로 사진 및 지역 태그를 사용 하는 앱 수 합니다. 카메라 사용 권한을 이지만 필요한 것 지울 수 없는 앱을 장치의 위치 해야 하는 이유는 사용자에 게 명확있지 않습니다. 근거는 사용자 위치 권한도 올바른지 및 카메라 권한이 필요 하다 이유는 이해 하는 데 메시지가 표시 됩니다.
 
-`ActivityCompat.ShouldShowRequestPermissionRational` 메서드는 ' 설계 원리 '를 사용자에 게 표시될지 여부를 결정 하는 합니다. 이 메서드는 반환 `true` 지정 된 사용 권한에 대해 ' 설계 원리 '를 표시 합니다. 이 스크린샷에서 앱 장치의 위치를 알고 있어야 하는 이유를 설명 하는 응용 프로그램에서 표시 하는 Snackbar의 예를 보여줍니다.
+`ActivityCompat.ShouldShowRequestPermissionRationale` 메서드는 ' 설계 원리 '를 사용자에 게 표시될지 여부를 결정 하는 합니다. 이 메서드는 반환 `true` 지정 된 사용 권한에 대해 ' 설계 원리 '를 표시 합니다. 이 스크린샷에서 앱 장치의 위치를 알고 있어야 하는 이유를 설명 하는 응용 프로그램에서 표시 하는 Snackbar의 예를 보여줍니다.
 
 ![위치에 대 한 설명](permissions-images/07-rationale-snackbar.png) 
 

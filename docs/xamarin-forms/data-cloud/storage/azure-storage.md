@@ -1,26 +1,24 @@
 ---
 title: Azure Storage에 데이터 저장 및 액세스
-description: Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법을 데이터에 액세스 하는 방법을 보여 줍니다.
+description: Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법 및 데이터에 액세스 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2017
-ms.openlocfilehash: 1f920eb36eab3e451b20aa91734f00cee5ba6485
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/28/2018
+ms.openlocfilehash: 4ecffa0902d186b659e7df07dbcf17053e29c818
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059222"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814013"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>Azure Storage에 데이터 저장 및 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 
 _Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법을 데이터에 액세스 하는 방법을 보여 줍니다._
-
-## <a name="overview"></a>개요
 
 Azure Storage는 4 개의 저장소 서비스를 제공합니다.
 
@@ -69,9 +67,6 @@ Xamarin.Forms 응용 프로그램을 Azure Storage 계정 통합에 대 한 프�
 1. 추가 된 [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) Xamarin.Forms 응용 프로그램입니다.
 1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결할](#connecting)합니다.
 1. 추가 `using` 지시문에 대 한 합니다 `Microsoft.WindowsAzure.Storage` 및 `Microsoft.WindowsAzure.Storage.Blob` 네임 스페이스는 Azure Storage에 액세스 하는 클래스입니다.
-
-> [!NOTE]
-> 이 샘플은 공유 액세스 프로젝트를 사용 하는 동안 Azure Storage 클라이언트 라이브러리도 이제 이식 가능한 클래스 라이브러리 (PCL) 프로젝트에서 사용 중인 합니다.
 
 <a name="connecting" />
 
@@ -263,15 +258,10 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 컨테이너 참조를 검색 한 후 메서드는 지정 된 blob에 대 한 blob 참조를 검색 합니다. Blob은 사용 하 여 삭제를 `DeleteIfExistsAsync` 메서드.
 
-## <a name="summary"></a>요약
-
-이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법 및 데이터에 액세스 하는 방법을 보여 줍니다. Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다.
-
-
 ## <a name="related-links"></a>관련 링크
 
 - [Azure Storage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 - [Storage 소개](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Xamarin에서 Blob Storage를 사용 하는 방법](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [공유 액세스 서명 (SAS)을 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure 저장소](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Windows Azure Storage (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

@@ -18,7 +18,7 @@ ms.locfileid: "51528418"
 
 _이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시 배포를 사용하여 iOS 응용 프로그램에 관한 정보를 iTunes에 제공하는 데 사용되는 iTunesMetadata.plist 파일에 대해 설명합니다._
 
-iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 장치 및 필요한 장치 기능과 같은 정보를 지정할 수 있습니다. 임시 배포를 통해 테스터 또는 엔터프라이즈 사용자에게 배달되는 iOS 응용 프로그램의 경우 이 정보가 누락됩니다.
+iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 디바이스 및 필요한 디바이스 기능과 같은 정보를 지정할 수 있습니다. 임시 배포를 통해 테스터 또는 엔터프라이즈 사용자에게 배달되는 iOS 응용 프로그램의 경우 이 정보가 누락됩니다.
 
 누락된 정보를 임시 배포에 제공하기 위해 선택적인 `iTunesMetadata.plist` 파일을 만들어 응용 프로그램 IPA 파일에 포함할 수 있습니다. 이 plist 파일은 지정된 iOS 애플리케이션에 대한 정보를 정의하는 키/값 쌍이 포함된 특수 형식의 XML 파일입니다(Apple의 [속성 목록 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 참조).
 
@@ -119,7 +119,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
     <true/>
 </dict>
 ```
-이 응용 프로그램을 장치에 설치하려면 먼저 iOS 장치에서 ARM7 명령 집합을 지원하고 전면 카메라가 있어야 한다고 지정합니다. 허용되는 값의 전체 목록은 Apple의 [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 설명서를 참조하세요.
+이 응용 프로그램을 디바이스에 설치하려면 먼저 iOS 디바이스에서 ARM7 명령 집합을 지원하고 전면 카메라가 있어야 한다고 지정합니다. 허용되는 값의 전체 목록은 Apple의 [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 설명서를 참조하세요.
 
 ### <a name="artistname-and-playlistartistname"></a>artistName 및 playlistArtistName
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171380"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207988"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 
 _Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다._
 
@@ -35,7 +37,7 @@ _Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 �
   > [!NOTE]
   > iOS의 경우 `TabbedRenderer`에는 지정된 원본에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIcon` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있습니다. 또한 선택하거나 선택하지 않은 버전의 아이콘을 제공할 수 있습니다.
 
-- Android에서 탭 목록은 기본적으로 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 그러나 탭 목록은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar)을 참조하세요.
+- Android에서 탭 목록은 기본적으로 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 그러나 탭 목록은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md)을 참조하세요.
 
   > [!NOTE]
   > Android에서 AppCompat을 사용하는 경우 각 탭에도 아이콘이 표시됩니다. 또한 Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIconDrawable` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다. 또는 위쪽 탭 표시줄의 경우 재정의 가능한 `SetTabIcon` 메서드를 사용하여 사용자 지정 `Drawable`에서 탭 아이콘을 로드할 수 있습니다.

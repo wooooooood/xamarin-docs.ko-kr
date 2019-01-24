@@ -1,20 +1,21 @@
 ---
 title: 'Xamarin.Essentials: 연결'
-description: Xamarin.Essentials의 Connectivity 클래스를 사용하면 장치의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
+description: Xamarin.Essentials의 Connectivity 클래스를 사용하면 디바이스의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 3c29fc85d20e3a4d91a1ae63feca1cb668af141e
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2019
+ms.custom: video
+ms.openlocfilehash: 749eec6d2000e9ffa84b1d3ac04aa575ebeb212f
+ms.sourcegitcommit: 7db5be0bb11e8914e1d1760e5f969ed17731e3a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899021"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54114968"
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: 연결
 
-**Connectivity** 클래스를 사용하면 장치의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
+**Connectivity** 클래스를 사용하면 디바이스의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -79,7 +80,7 @@ if (current == NetworkAccess.Internet)
 * **없음** - 사용 가능한 연결이 없습니다.
 * **알 수 없음** - 인터넷 연결을 확인할 수 없습니다.
 
-장치에서 현재 사용 중인 [연결 프로필](xref:Xamarin.Essentials.ConnectionProfile) 유형을 확인할 수 있습니다.
+디바이스에서 현재 사용 중인 [연결 프로필](xref:Xamarin.Essentials.ConnectionProfile) 유형을 확인할 수 있습니다.
 
 ```csharp
 var profiles = Connectivity.ConnectionProfiles;
@@ -110,9 +111,15 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>제한 사항
 
-`NetworkAccess`에서 `Internet`를 보고해도 웹에 대한 모든 권한을 사용할 수 없는 경우도 있습니다. 각 플랫폼에서 연결이 작동하는 방식으로 인해 연결이 사용 가능한 것만 보장할 수 있습니다. 예를 들어 장치가 Wi-Fi 네트워크에 연결되어 있지만 라우터의 인터넷 연결이 끊어졌을 수 있습니다. 이 경우 인터넷이 보고되더라도 활성 연결을 사용할 수 없습니다.
+`NetworkAccess`에서 `Internet`를 보고해도 웹에 대한 모든 권한을 사용할 수 없는 경우도 있습니다. 각 플랫폼에서 연결이 작동하는 방식으로 인해 연결이 사용 가능한 것만 보장할 수 있습니다. 예를 들어 디바이스가 Wi-Fi 네트워크에 연결되어 있지만 라우터의 인터넷 연결이 끊어졌을 수 있습니다. 이 경우 인터넷이 보고되더라도 활성 연결을 사용할 수 없습니다.
 
 ## <a name="api"></a>API
 
 * [Connectivity 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
 * [Connectivity API 문서](xref:Xamarin.Essentials.Connectivity)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Connectivity-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
