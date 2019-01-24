@@ -4,13 +4,14 @@ description: 이 문서에서는 디바이스의 배터리 정보를 확인하�
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 4b3f361f2e97673c4121e81247f668eb0730199e
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
+ms.date: 01/22/2019
+ms.custom: video
+ms.openlocfilehash: 9ab2f960872386b68063d7af209ec0a7a24ac287
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479669"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
@@ -183,3 +184,9 @@ public class EnergySaverTest
 
 - [배터리 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Battery)
 - [배터리 API 문서](xref:Xamarin.Essentials.Battery)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Battery-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

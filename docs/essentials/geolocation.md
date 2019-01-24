@@ -5,16 +5,16 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 651da789dcd87810ef6650d87fc2df4f91ce58e1
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 88f973715f216f5d68eb2b3dc5582502cf5d605d
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479734"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
-**Geolocation** 클래스는 장치의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
+**Geolocation** 클래스는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
 
 ## <a name="get-started"></a>시작
 
@@ -65,7 +65,7 @@ plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** �
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-응용 프로그램에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
+애플리케이션에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
 
 -----
 
@@ -79,7 +79,7 @@ using Xamarin.Essentials;
 
 또한 지리적 위치 API는 필요한 경우 권한을 요청하는 메시지를 사용자에게 표시합니다.
 
-`GetLastKnownLocationAsync` 메서드를 호출하여 장치의 마지막으로 알려진 [위치](xref:Xamarin.Essentials.Location)를 가져올 수 있습니다. 이는 일반적으로 전체 쿼리를 수행하는 것보다 더 빠르지만 덜 정확할 수 있습니다.
+`GetLastKnownLocationAsync` 메서드를 호출하여 디바이스의 마지막으로 알려진 [위치](xref:Xamarin.Essentials.Location)를 가져올 수 있습니다. 이는 일반적으로 전체 쿼리를 수행하는 것보다 더 빠르지만 덜 정확할 수 있습니다.
 
 ```csharp
 try
@@ -94,6 +94,10 @@ try
 catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
+}
+catch (FeatureNotEnableException fneEx)
+{
+    // Handle not enabled on device exception
 }
 catch (PermissionException pEx)
 {
@@ -123,6 +127,10 @@ try
 catch (FeatureNotSupportedException fnsEx)
 {
     // Handle not supported on device exception
+}
+catch (FeatureNotEnableException fneEx)
+{
+    // Handle not enabled on device exception
 }
 catch (PermissionException pEx)
 {
