@@ -6,17 +6,18 @@ ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 05/22/2018
-ms.openlocfilehash: 3db4afedf7f4c48154e1ff880bb182711a733cd2
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 9f198336d3fc9cca3bc79c377749a1211ebbac55
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479682"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
-_Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다._
+_Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 디바이스를 프로비전하는 것입니다. 이 가이드에서는 자동 서명을 사용하여 개발 인증서와 프로필을 요청하는 방법을 설명합니다._
 
 ## <a name="requirements"></a>요구 사항
 
@@ -134,3 +135,9 @@ Mac용 Visual Studio 7.6부터 자동 프로비저닝에서는 기본적으로 *
 - [앱 배포](~/ios/deploy-test/app-distribution/index.md)
 - [문제 해결](~/ios/deploy-test/troubleshooting.md)
 - [Apple - 앱 배포 가이드](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

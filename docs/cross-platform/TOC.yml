@@ -29,7 +29,7 @@ items:
       href: get-started/introduction-to-mobile-development.md
     - name: 모바일 SDLC 소개
       href: get-started/introduction-to-mobile-sdlc.md
-    - name: 플랫폼 간 응용 프로그램 빌드
+    - name: 플랫폼 간 애플리케이션 빌드
       href: app-fundamentals/building-cross-platform-applications/index.md
       items:
       - name: 개요
@@ -74,6 +74,8 @@ items:
         href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
     - name: NuGet 패키지(수동)
       href: app-fundamentals/nuget-manual.md
+    - name: 플랫폼 간 앱에서 C/C++ 라이브러리 사용
+      href: cpp/index.md
   - name: 언어 지원
     href: platform/index.md
     items:
@@ -190,9 +192,9 @@ items:
   - name: 샘플
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 6de69aacc37d17086e49ae1a7571879686168a42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5eb01503b809979ebbc6598cf1cde985d3431bad
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130262"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841330"
