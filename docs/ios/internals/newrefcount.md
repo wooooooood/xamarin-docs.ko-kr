@@ -6,12 +6,13 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 3a40605dd58cac0bcf14c156ecf65aa3fec52bc6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/25/2015
+ms.openlocfilehash: 8c7b1a88284156cb5d4261f18d5659ed66dfaf64
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103389"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879331"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Xamarin.iOS에서 시스템을 계산 하는 새 참조
 
@@ -41,7 +42,7 @@ Xamarin.iOS 7.2.1 및 위의 시스템을 계산 하는 새 참조의 향상 된
 
 Mac 용 Visual Studio의 최신 버전에서 이러한 옵션이 제거 되었습니다는 참고
 
- **[API 통합된:](~/cross-platform/macios/unified/index.md)**
+ **[Unified API:](~/cross-platform/macios/unified/index.md)**
 
  새 참조 계산 확장 Unified API에 대 한 필수 이며 기본적으로 사용 하도록 설정 해야 합니다. IDE의 이전 버전에서이 값이 자동으로 선택 되어 없을 수 있습니다 하 고 확인란을 선택 하 여 직접 할 수도 있습니다.
 

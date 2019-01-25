@@ -1,16 +1,17 @@
 ---
 title: Objective-c 바인딩 개요
-description: 이 문서는 C# 명령줄 바인딩, 바인딩 프로젝트 목표 Sharpie 등 Objective-c 코드에 대 한 바인딩을 만드는 다양 한 방법의 개요를 제공 합니다. 또한 바인딩의 작동 하는 방법을 설명 합니다.
+description: 만드는 다양 한 방법의 개요를 제공 하는이 문서 C# 명령줄 바인딩, 바인딩 프로젝트 목표 Sharpie 등 Objective-c 코드에 대 한 바인딩. 또한 바인딩의 작동 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 97d0c5b9f61d4dafe144d2b2f22df6d465cbbccb
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.date: 11/25/2015
+ms.openlocfilehash: 3f15eaf9171ac44b870239fb5ffa14edd6210360
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855275"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879305"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Objective-c 바인딩 개요
 
@@ -18,14 +19,14 @@ _바인딩 프로세스의 작동 원리의 세부 정보_
 
 Xamarin 사용에 대 한 Objective-c 라이브러리 바인딩 세 단계로 수행 합니다.
 
-1. C# "API 정의" 작성 설명 하기 위해 네이티브 API 노출 되는 방식을.NET 및 기본 목표 C에 매핑하는 방법 이렇게 같은 구문을 사용 하 여 표준 C# `interface` 및 다양 한 바인딩 **특성** (이 참조 하십시오 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+1. 쓰기는 C# "API 정의" 설명 하는 네이티브 API 노출 되는 방식을.NET 및 기본 목표 C에 매핑하는 방법 이렇게 표준을 사용 하 여 C# 구문 등 `interface` 및 다양 한 바인딩 **특성** (이 참조 하십시오 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
-2. 작성 한 후 "API 정의" C#에서 "바인딩" 어셈블리를 생성 하기 위해를 컴파일합니다. 이 작업을 수행할 수 있습니다는 [ **명령줄** ](#commandline) 사용 하 여 또는 [ **바인딩 프로젝트** ](#bindingproject) Mac 또는 Visual Studio 용 Visual Studio에서.
+2. "API 정의" 작성 한 C#를 "바인딩" 어셈블리를 생성 하기 위해 컴파일할 합니다. 이 작업을 수행할 수 있습니다는 [ **명령줄** ](#commandline) 사용 하 여 또는 [ **바인딩 프로젝트** ](#bindingproject) Mac 또는 Visual Studio 용 Visual Studio에서.
 
 3. 해당 "바인딩" 어셈블리는 정의한 API를 사용 하는 기본 기능에 액세스할 수 있도록 다음 Xamarin 응용 프로그램 프로젝트에 추가 됩니다.
   바인딩 프로젝트는 응용 프로그램 프로젝트와 완전히 별개입니다.
 
-**참고:** 이용을 사용 하 여 1 단계를 자동화할 수 있습니다 [ **목표 Sharpie**](#objectivesharpie)합니다. Objective C API를 검사 하 고 생성 하 고 제안 된 C# "API 정의입니다." 목표 Sharpie에서 만든 파일을 사용자 지정 하 고 바인딩 프로젝트 (또는 명령줄)에서 사용할 수 있습니다에 바인딩 어셈블리를 만들 수 있습니다. 목표 Sharpie 자체적으로 바인딩을 만들지 않으므로 단순히 대규모 프로세스의 선택적 부분입니다.
+**참고:** 1 단계를 사용 하 여 자동화할 수 있습니다 [ **목표 Sharpie**](#objectivesharpie)합니다. Objective C API를 검사 하 고 생성 된 제안 된 C# "API 정의입니다." 목표 Sharpie에서 만든 파일을 사용자 지정 하 고 바인딩 프로젝트 (또는 명령줄)에서 사용할 수 있습니다에 바인딩 어셈블리를 만들 수 있습니다. 목표 Sharpie 자체적으로 바인딩을 만들지 않으므로 단순히 대규모 프로세스의 선택적 부분입니다.
 
 자세한 기술 정보를 참조할 수 있습니다 [작동 방식](#howitworks), 바인딩을 작성 하는 데 도움이 됩니다입니다.
 
@@ -33,7 +34,7 @@ Xamarin 사용에 대 한 Objective-c 라이브러리 바인딩 세 단계로 �
 
 ## <a name="command-line-bindings"></a>명령줄 바인딩
 
-사용할 수는 `btouch-native` Xamarin.iOS 용 (또는 `bmac-native` Xamarin.Mac을 사용 하는 경우) 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 전달 하 여 작동 하는지 (또는 목표 Sharpie를 사용 하 여) 명령줄 도구 (`btouch-native` iOS 용 또는 `bmac-native` Mac 용).
+사용할 수는 `btouch-native` Xamarin.iOS 용 (또는 `bmac-native` Xamarin.Mac을 사용 하는 경우) 바인딩을 직접 빌드할 수 있습니다. 전달 하 여 작동 합니다 C# API 정의 직접 만든 (또는 목표 Sharpie를 사용 하 여) 명령줄 도구 (`btouch-native` iOS 용 또는 `bmac-native` Mac 용).
 
 
 이러한 도구를 호출 하는 것에 대 한 일반 구문은 다음과 같습니다.
@@ -61,7 +62,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 <a name="objectivesharpie" />
 
-## <a name="objective-sharpie"></a>목표 Sharpie
+## <a name="objective-sharpie"></a>Objective Sharpie
 
 목표 Sharpie는 바인딩을 만드는 방법의 초기 단계를 사용 하 여는 데 도움이 되는 다른, 별도 명령줄 도구입니다. 자체적으로 바인딩을 만들지 않습니다, 그리고 대신 대상 네이티브 라이브러리에 대 한 API 정의 생성의 초기 단계를 자동화 합니다.
 
@@ -75,7 +76,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 먼저, 바인딩할 하려는 형식을 찾습니다. 바인딩한에서는 설명을 위해 (및 단순성)는 [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 (에서 이미 바인딩 되었으면 하는 [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); 아래 구현은 예를 들어 방금 목적).
 
-둘째, C# 형식 생성 해야 합니다. 네임 스페이스에 배치 해야 할 수 있습니다. 사용 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성 Xamarin.iOS Objective-c 런타임에 등록 하는 형식 이름을 변경할 수 있습니다. C# 형식에서 상속 되어야 합니다 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+둘째, 생성 해야 합니다 C# 형식입니다. 네임 스페이스에 배치 해야 할 수 있습니다. 사용 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성 Xamarin.iOS Objective-c 런타임에 등록 하는 형식 이름을 변경할 수 있습니다. C# 형식에서 상속 되어야 합니다 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
 
 ```csharp
 namespace Example.Binding {
@@ -188,5 +189,5 @@ namespace Example.Binding {
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

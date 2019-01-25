@@ -6,12 +6,13 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4e9b782cf266a96f30c79eaf139ef88332e02dca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/25/2015
+ms.openlocfilehash: 014de47660f2c0ac8295495e417b3d5def135470
+ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119863"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54879318"
 ---
 # <a name="systemdata-in-xamarinios"></a>Xamarin.iOS System.Data
 
@@ -110,7 +111,7 @@ class Demo {
 > 것은 바람직하지 만들므로 코드에 취약 한 SQL 명령에서 문자열을 포함 하 고 위의 코드 샘플에서 설명 했 듯이 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
 
 
-### <a name="using-command-parameters"></a>명령 매개 변수를 사용 하 여
+### <a name="using-command-parameters"></a>Command 매개 변수 사용
 
 다음 코드 (경우에 단일 아포스트로피 같은 특수 SQL 문자를 포함 하는 텍스트) 데이터베이스에 사용자가 입력 한 텍스트를 안전 하 게 삽입 하려면 명령 매개 변수를 사용 하는 방법을 보여 줍니다.
 
