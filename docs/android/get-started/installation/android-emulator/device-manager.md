@@ -7,17 +7,18 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
-ms.openlocfilehash: 67ab5b9bd711cb10a20b1365effea1627d0f7688
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 5618f15d60a26d2ad3d84ff0e3674936c0c01ca3
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479786"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
 
-_이 문서에서는 Android Device Manager를 사용하여 물리적 Android 장치를 에뮬레이트하는 AVD(Android 가상 장치)를 만들고 구성하는 방법을 설명합니다. 물리적 디바이스에 의존하지 않고도 이러한 가상 디바이스를 사용하여 앱을 실행하고 테스트할 수 있습니다._
+_이 문서에서는 Android Device Manager를 사용하여 물리적 Android 디바이스를 에뮬레이트하는 AVD(Android 가상 디바이스)를 만들고 구성하는 방법을 설명합니다. 물리적 디바이스에 의존하지 않고도 이러한 가상 디바이스를 사용하여 앱을 실행하고 테스트할 수 있습니다._
 
 (에뮬레이터 성능에 대한 [하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)에 설명된 대로) 하드웨어 가속이 활성화된 것을 확인한 후에 다음 단계는 _Android Device Manager_(_Xamarin Android Device Manager_라고도 함)를 사용하여 앱을 테스트하고 디버깅하는 데 사용할 수 있는 가상 디바이스를 만드는 것입니다.
 
@@ -27,7 +28,7 @@ _이 문서에서는 Android Device Manager를 사용하여 물리적 Android �
 
 이 문서에서는 Android Device Manager를 사용하여 Android 가상 디바이스를 만들고, 복제하고, 사용자 지정하고, 실행하는 방법을 설명합니다.
 
-[![장치 탭에 있는 Android Device Manager의 스크린샷](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
+[![디바이스 탭에 있는 Android Device Manager의 스크린샷](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
 
 Android Device Manager를 사용하여 [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)에서 실행되는 AVD(_Android 가상 디바이스_)를 만들고 구성합니다.
 각 AVD는 실제 Android 디바이스를 시뮬레이션하는 에뮬레이터 구성입니다. 이를 통해 여러 실제 Android 디바이스를 시뮬레이션하는 다양한 구성에서 앱을 실행하고 테스트할 수 있습니다.
@@ -41,7 +42,7 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 - Visual Studio Tools for Xamarin 버전 4.9 이상
 
 - Android SDK를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
-  아직 설치되지 않은 경우 **C:\\Program Files(x86)\\Android\\android-sdk**의 기본 위치에 Android SDK를 설치해야 합니다.
+  아직 설치되지 않은 경우, 기본 위치에 Android SDK를 설치하세요. **C:\\Program Files (x86)\\Android\\android-sdk**.
 
 - [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 통해 다음 패키지를 설치해야 합니다. 
     - **Android SDK Tools 버전 26.1.1** 이상
@@ -58,7 +59,7 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
 **도구 > Android > Android Device Manager**를 클릭하여 **도구** 메뉴에서 Android Device Manager를 시작합니다.
 
-[![도구 메뉴에서 장치 관리자 시작](device-manager-images/win/03-tools-menu-sml.png)](device-manager-images/win/03-tools-menu.png#lightbox)
+[![도구 메뉴에서 디바이스 관리자 시작](device-manager-images/win/03-tools-menu-sml.png)](device-manager-images/win/03-tools-menu.png#lightbox)
 
 시작 시 다음 오류 대화 상자가 표시되면 [문제 해결](#troubleshooting) 섹션에서 해결 방법 지침을 참조하세요.
 
@@ -69,37 +70,37 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
 Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 가상 디바이스가 화면에 표시됩니다. 각 가상 디바이스에 대해 **이름**, **OS**(Android 버전), **프로세서**, **메모리** 크기 및 화면 **해상도**가 표시됩니다.
 
-[![설치된 장치의 목록 및 매개 변수](device-manager-images/win/05-installed-list-sml.png)](device-manager-images/win/05-installed-list.png#lightbox)
+[![설치된 디바이스의 목록 및 매개 변수](device-manager-images/win/05-installed-list-sml.png)](device-manager-images/win/05-installed-list.png#lightbox)
 
-목록에서 디바이스를 선택하면 **시작** 단추가 오른쪽에 나타납니다. **시작** 단추를 클릭하면 이 가상 장치로 에뮬레이터를 시작할 수 있습니다.
+목록에서 디바이스를 선택하면 **시작** 단추가 오른쪽에 나타납니다. **시작** 단추를 클릭하면 이 가상 디바이스로 에뮬레이터를 시작할 수 있습니다.
 
-[![장치 이미지에 대한 시작 단추](device-manager-images/win/06-start-button-sml.png)](device-manager-images/win/06-start-button.png#lightbox)
+[![디바이스 이미지에 대한 시작 단추](device-manager-images/win/06-start-button-sml.png)](device-manager-images/win/06-start-button.png#lightbox)
 
 선택한 가상 디바이스로 에뮬레이터가 시작되면 **시작** 단추가 에뮬레이터를 중지하는 데 사용할 수 있는 **중지** 단추로 변경됩니다.
 
-[![실행 중인 장치에 대한 중지 단추](device-manager-images/win/07-stop-button-sml.png)](device-manager-images/win/07-stop-button.png#lightbox)
+[![실행 중인 디바이스에 대한 중지 단추](device-manager-images/win/07-stop-button-sml.png)](device-manager-images/win/07-stop-button.png#lightbox)
 
 ### <a name="new-device"></a>새 디바이스
 
 새 디바이스를 만들려면 **새로 만들기** 단추(화면의 오른쪽 상단에 있음)를 클릭합니다.
 
-[![새 장치를 만드는 데 사용되는 새로 만들기 단추](device-manager-images/win/08-new-button-sml.png)](device-manager-images/win/08-new-button.png#lightbox)
+[![새 디바이스를 만드는 데 사용되는 새로 만들기 단추](device-manager-images/win/08-new-button-sml.png)](device-manager-images/win/08-new-button.png#lightbox)
 
-**새로 만들기**를 클릭하면 **새 장치** 화면이 열립니다.
+**새로 만들기**를 클릭하면 **새 디바이스** 화면이 열립니다.
 
-[![장치 관리자의 새 장치 화면](device-manager-images/win/09-new-device-editor-sml.png)](device-manager-images/win/09-new-device-editor.png#lightbox)
+[![디바이스 관리자의 새 디바이스 화면](device-manager-images/win/09-new-device-editor-sml.png)](device-manager-images/win/09-new-device-editor.png#lightbox)
 
-**새 장치** 화면에서 새 장치를 구성하려면 다음 단계를 따르세요.
+**새 디바이스** 화면에서 새 디바이스를 구성하려면 다음 단계를 따르세요.
 
 1. 디바이스에 새 이름을 지정합니다. 다음 예제에서는 새 디바이스에 **Pixel_API_27**이라는 이름을 지정합니다.
 
-   [![새 장치 이름 지정](device-manager-images/win/10-device-name-sml.png)](device-manager-images/win/10-device-name.png#lightbox)
+   [![새 디바이스 이름 지정](device-manager-images/win/10-device-name-sml.png)](device-manager-images/win/10-device-name.png#lightbox)
 
-2. **기본 장치** 풀 다운 메뉴를 클릭하여 에뮬레이트할 실제 장치를 선택합니다.
+2. **기본 디바이스** 풀 다운 메뉴를 클릭하여 에뮬레이트할 실제 디바이스를 선택합니다.
 
-   [![에뮬레이트할 실제 장치 선택](device-manager-images/win/11-device-menu-sml.png)](device-manager-images/win/11-device-menu.png#lightbox)
+   [![에뮬레이트할 실제 디바이스 선택](device-manager-images/win/11-device-menu-sml.png)](device-manager-images/win/11-device-menu.png#lightbox)
 
-3. **프로세서** 풀 다운 메뉴를 클릭하여 이 가상 장치의 프로세서 유형을 선택합니다. **x86**을 선택하면 에뮬레이터가 [하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)을 활용할 수 있으므로 최상의 성능을 제공합니다.
+3. **프로세서** 풀 다운 메뉴를 클릭하여 이 가상 디바이스의 프로세서 유형을 선택합니다. **x86**을 선택하면 에뮬레이터가 [하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)을 활용할 수 있으므로 최상의 성능을 제공합니다.
    **x86_64** 옵션도 하드웨어 가속을 사용하지만 **x86**보다 약간 느리게 실행됩니다(**x86_64**는 일반적으로 64비트 응용 프로그램 테스트를 위해 사용).
 
    [![프로세서 유형 선택](device-manager-images/win/12-processor-type-menu-sml.png)](device-manager-images/win/12-processor-type-menu.png#lightbox)
@@ -120,13 +121,13 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 6. 수정해야 하는 모든 속성을 편집합니다. 속성을 변경하려면 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
 
-7. 명시적으로 설정해야 하는 추가 속성을 추가합니다. **새 장치** 화면에는 가장 일반적으로 수정되는 속성만 나열되지만 **속성 추가** 풀 다운 메뉴(하단에서)를 클릭하여 추가 속성을 추가할 수 있습니다.
+7. 명시적으로 설정해야 하는 추가 속성을 추가합니다. **새 디바이스** 화면에는 가장 일반적으로 수정되는 속성만 나열되지만 **속성 추가** 풀 다운 메뉴(하단에서)를 클릭하여 추가 속성을 추가할 수 있습니다.
 
    [![속성 추가 풀 다운 메뉴](device-manager-images/win/16-add-property-menu-sml.png)](device-manager-images/win/16-add-property-menu.png#lightbox)
 
     속성 목록 맨 위에 있는 **사용자 지정...** 을 선택하여 사용자 지정 속성을 정의할 수도 있습니다.
 
-8. **만들기** 단추(오른쪽 하단)를 클릭하여 새 장치를 만듭니다.
+8. **만들기** 단추(오른쪽 하단)를 클릭하여 새 디바이스를 만듭니다.
 
    [![만들기 단추](device-manager-images/win/17-create-button-sml.png)](device-manager-images/win/17-create-button.png#lightbox)
 
@@ -140,25 +141,25 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 11. 만들기 프로세스가 완료되면 설치된 가상 디바이스 목록에 실행할 준비가 된 새 디바이스와 **시작** 단추가 표시됩니다.
 
-    [![실행할 준비가 된 새로 생성된 장치](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
+    [![실행할 준비가 된 새로 생성된 디바이스](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
 
 
 ### <a name="edit-device"></a>디바이스 편집
 
 기존 가상 디바이스를 편집하려면 디바이스를 선택하고 (화면 오른쪽 상단에 있는) **편집** 단추를 클릭합니다.
 
-[![장치를 수정하기 위한 편집 단추](device-manager-images/win/21-edit-button-sml.png)](device-manager-images/win/21-edit-button.png#lightbox)
+[![디바이스를 수정하기 위한 편집 단추](device-manager-images/win/21-edit-button-sml.png)](device-manager-images/win/21-edit-button.png#lightbox)
 
-**편집**을 클릭하면 선택된 가상 장치에 대한 장치 편집기가 실행됩니다.
+**편집**을 클릭하면 선택된 가상 디바이스에 대한 디바이스 편집기가 실행됩니다.
 
-[![장치 편집기 화면](device-manager-images/win/22-device-editor-sml.png)](device-manager-images/win/22-device-editor.png#lightbox)
+[![디바이스 편집기 화면](device-manager-images/win/22-device-editor-sml.png)](device-manager-images/win/22-device-editor.png#lightbox)
 
-**장치 편집기** 화면에는 가상 장치의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
+**디바이스 편집기** 화면에는 가상 디바이스의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
 
 속성을 변경하려면 **값** 열에서 해당 값을 편집합니다.
 예를 들어 다음 스크린샷에서 `hw.lcd.density` 속성은 **480**에서 **240**으로 변경됩니다.
 
-[![장치 편집 예제](device-manager-images/win/23-device-editing-sml.png)](device-manager-images/win/23-device-editing.png#lightbox)
+[![디바이스 편집 예제](device-manager-images/win/23-device-editing-sml.png)](device-manager-images/win/23-device-editing.png#lightbox)
 
 필요한 구성을 변경했으면 **저장** 단추를 클릭합니다.
 가상 디바이스 속성을 변경하는 방법에 대한 자세한 내용은 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
@@ -172,19 +173,19 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 추가 옵션 메뉴에는 다음 항목이 포함되어 있습니다.
 
-- **복제 및 편집** &ndash; 현재 선택된 장치를 복제하고 다른 고유한 이름을 사용하여 **새 장치** 화면에서 엽니다. 예를 들어 **Pixel_API_27**을 선택하고 **복제 및 편집**을 클릭하면 이름에 카운터가 추가됩니다.
+- **복제 및 편집**&ndash; 현재 선택된 디바이스를 복제하고 다른 고유한 이름을 사용하여 **새 디바이스** 화면에서 엽니다. 예를 들어 **Pixel_API_27**을 선택하고 **복제 및 편집**을 클릭하면 이름에 카운터가 추가됩니다.
 
   [![복제 및 편집 화면](device-manager-images/win/25-dupe-and-edit-sml.png)](device-manager-images/win/25-dupe-and-edit.png#lightbox)
 
-- **탐색기에 표시** &ndash; Windows 탐색기 창에 가상 장치에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel_API_27**을 선택하고 **탐색기에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
+- **탐색기에 표시**&ndash; Windows 탐색기 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel_API_27**을 선택하고 **탐색기에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
 
   [![탐색기에 표시 클릭 후 결과](device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
 
-- **공장 재설정** &ndash; 선택된 장치를 기본 설정으로 재설정하여 장치가 실행 중일 때 사용자가 변경한 장치의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/win/27-factory-reset.png)
 
-- **삭제** &ndash; 선택된 가상 장치를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
+- **삭제**&ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
 
   ![디바이스 삭제 대화 상자](device-manager-images/win/28-delete-device-w158.png)
 
@@ -196,7 +197,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 이 문서에서는 Android Device Manager를 사용하여 Android 가상 디바이스를 만들고, 복제하고, 사용자 지정하고, 실행하는 방법을 설명합니다.
 
-[![장치 탭에 있는 Android Device Manager의 스크린샷](device-manager-images/mac/01-devices-dialog-sml.png)](device-manager-images/mac/01-devices-dialog.png#lightbox)
+[![디바이스 탭에 있는 Android Device Manager의 스크린샷](device-manager-images/mac/01-devices-dialog-sml.png)](device-manager-images/mac/01-devices-dialog.png#lightbox)
 
 > [!NOTE]
 > 이 가이드는 Mac용 Visual Studio에만 적용됩니다.
@@ -225,9 +226,9 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
 ## <a name="launching-the-device-manager"></a>디바이스 관리자 실행
 
-**도구 > 장치 관리자**를 클릭하여 Android Device Manager를 시작합니다.
+**도구 &gt; 디바이스 관리자**를 클릭하여 Android Device Manager를 시작합니다.
 
-[![도구 메뉴에서 장치 관리자 시작](device-manager-images/mac/03-tools-menu-sml.png)](device-manager-images/mac/03-tools-menu.png#lightbox)
+[![도구 메뉴에서 디바이스 관리자 시작](device-manager-images/mac/03-tools-menu-sml.png)](device-manager-images/mac/03-tools-menu.png#lightbox)
 
 시작 시 다음 오류 대화 상자가 표시되면 [문제 해결](#troubleshooting) 섹션에서 해결 방법 지침을 참조하세요.
 
@@ -238,15 +239,15 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
 Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 가상 디바이스가 화면에 표시됩니다. 각 가상 디바이스에 대해 **이름**, **OS**(Android 버전), **프로세서**, **메모리** 크기 및 화면 **해상도**가 표시됩니다.
 
-[![설치된 장치의 목록 및 매개 변수](device-manager-images/mac/05-devices-list-sml.png)](device-manager-images/mac/05-devices-list.png#lightbox)
+[![설치된 디바이스의 목록 및 매개 변수](device-manager-images/mac/05-devices-list-sml.png)](device-manager-images/mac/05-devices-list.png#lightbox)
 
-목록에서 디바이스를 선택하면 **재생** 단추가 오른쪽에 나타납니다. **재생** 단추를 클릭하면 이 가상 장치로 에뮬레이터를 시작할 수 있습니다.
+목록에서 디바이스를 선택하면 **재생** 단추가 오른쪽에 나타납니다. **재생** 단추를 클릭하면 이 가상 디바이스로 에뮬레이터를 시작할 수 있습니다.
 
-[![장치 이미지에 대한 재생 단추](device-manager-images/mac/06-start-button-sml.png)](device-manager-images/mac/06-start-button.png#lightbox)
+[![디바이스 이미지에 대한 재생 단추](device-manager-images/mac/06-start-button-sml.png)](device-manager-images/mac/06-start-button.png#lightbox)
 
 선택한 가상 디바이스로 에뮬레이터가 시작되면 **재생** 단추가 에뮬레이터를 중지하는 데 사용할 수 있는 **중지** 단추로 변경됩니다.
 
-[![실행 중인 장치에 대한 중지 단추](device-manager-images/mac/07-stop-button-sml.png)](device-manager-images/mac/07-stop-button.png#lightbox)
+[![실행 중인 디바이스에 대한 중지 단추](device-manager-images/mac/07-stop-button-sml.png)](device-manager-images/mac/07-stop-button.png#lightbox)
 
 에뮬레이터를 중지하면 다음 빠른 부팅을 위해 현재 상태를 저장할지 묻는 메시지가 표시될 수 있습니다.
 
@@ -258,23 +259,23 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 새 디바이스를 만들려면 **새 디바이스** 단추(화면의 왼쪽 상단에 있음)를 클릭합니다.
 
-[![새 장치를 만드는 데 사용되는 새로 만들기 단추](device-manager-images/mac/09-new-button-sml.png)](device-manager-images/mac/09-new-button.png#lightbox)
+[![새 디바이스를 만드는 데 사용되는 새로 만들기 단추](device-manager-images/mac/09-new-button-sml.png)](device-manager-images/mac/09-new-button.png#lightbox)
 
-**새 장치**를 클릭하면 **새 장치** 화면이 열립니다.
+**새 디바이스**를 클릭하면 **새 디바이스** 화면이 열립니다.
 
-[![장치 관리자의 새 장치 화면](device-manager-images/mac/10-new-device-editor-sml.png)](device-manager-images/mac/10-new-device-editor.png#lightbox)
+[![디바이스 관리자의 새 디바이스 화면](device-manager-images/mac/10-new-device-editor-sml.png)](device-manager-images/mac/10-new-device-editor.png#lightbox)
 
-**새 장치** 화면에서 새 장치를 구성하려면 다음 단계를 따르세요.
+**새 디바이스** 화면에서 새 디바이스를 구성하려면 다음 단계를 따르세요.
 
 1. 디바이스에 새 이름을 지정합니다. 다음 예제에서는 새 디바이스에 **Pixel_API_27**이라는 이름을 지정합니다.
 
-   [![새 장치 이름 지정](device-manager-images/mac/11-device-name-m76-sml.png)](device-manager-images/mac/11-device-name-m76.png#lightbox)
+   [![새 디바이스 이름 지정](device-manager-images/mac/11-device-name-m76-sml.png)](device-manager-images/mac/11-device-name-m76.png#lightbox)
 
-2. **기본 장치** 풀 다운 메뉴를 클릭하여 에뮬레이트할 실제 장치를 선택합니다.
+2. **기본 디바이스** 풀 다운 메뉴를 클릭하여 에뮬레이트할 실제 디바이스를 선택합니다.
 
-   [![에뮬레이트할 실제 장치 선택](device-manager-images/mac/12-device-menu-m76-sml.png)](device-manager-images/mac/12-device-menu-m76.png#lightbox)
+   [![에뮬레이트할 실제 디바이스 선택](device-manager-images/mac/12-device-menu-m76-sml.png)](device-manager-images/mac/12-device-menu-m76.png#lightbox)
 
-3. **프로세서** 풀 다운 메뉴를 클릭하여 이 가상 장치의 프로세서 유형을 선택합니다. **x86**을 선택하면 에뮬레이터가 [하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)을 활용할 수 있으므로 최상의 성능을 제공합니다.
+3. **프로세서** 풀 다운 메뉴를 클릭하여 이 가상 디바이스의 프로세서 유형을 선택합니다. **x86**을 선택하면 에뮬레이터가 [하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)을 활용할 수 있으므로 최상의 성능을 제공합니다.
    **x86_64** 옵션도 하드웨어 가속을 사용하지만 **x86**보다 약간 느리게 실행됩니다(**x86_64**는 일반적으로 64비트 응용 프로그램 테스트를 위해 사용).
 
    [![프로세서 유형 선택](device-manager-images/mac/13-processor-type-menu-m76-sml.png)](device-manager-images/mac/13-processor-type-menu-m76.png#lightbox)
@@ -295,13 +296,13 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 6. 수정해야 하는 모든 속성을 편집합니다. 속성을 변경하려면 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
 
-7. 명시적으로 설정해야 하는 추가 속성을 추가합니다. **새 장치** 화면에는 가장 일반적으로 수정되는 속성만 나열되지만 **속성 추가** 풀 다운 메뉴(하단에서)를 클릭하여 추가 속성을 추가할 수 있습니다.
+7. 명시적으로 설정해야 하는 추가 속성을 추가합니다. **새 디바이스** 화면에는 가장 일반적으로 수정되는 속성만 나열되지만 **속성 추가** 풀 다운 메뉴(하단에서)를 클릭하여 추가 속성을 추가할 수 있습니다.
 
    [![속성 추가 풀 다운 메뉴](device-manager-images/mac/17-add-property-menu-m76-sml.png)](device-manager-images/mac/17-add-property-menu-m76.png#lightbox)
 
    이 속성 목록 맨 위에 있는 **사용자 지정...** 을 클릭하여 사용자 지정 속성을 정의할 수도 있습니다.
 
-8. **만들기** 단추(오른쪽 하단)를 클릭하여 새 장치를 만듭니다.
+8. **만들기** 단추(오른쪽 하단)를 클릭하여 새 디바이스를 만듭니다.
 
    ![만들기 단추](device-manager-images/mac/18-create-button-m76.png)
 
@@ -311,25 +312,25 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 10. 만들기 프로세스가 완료되면 설치된 가상 디바이스 목록에 실행할 준비가 된 새 디바이스와 **시작** 단추가 표시됩니다.
 
-    [![실행할 준비가 된 새로 생성된 장치](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
+    [![실행할 준비가 된 새로 생성된 디바이스](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
 
 
 ### <a name="edit-device"></a>디바이스 편집
 
 기존 가상 디바이스를 편집하려면 **추가 옵션** 풀 다운 메뉴(기어 아이콘)을 선택하고 **편집**을 선택합니다.
 
-[![새 장치를 수정하기 위한 편집 메뉴 선택](device-manager-images/mac/21-edit-button-m76-sml.png)](device-manager-images/mac/21-edit-button-m76.png#lightbox)
+[![새 디바이스를 수정하기 위한 편집 메뉴 선택](device-manager-images/mac/21-edit-button-m76-sml.png)](device-manager-images/mac/21-edit-button-m76.png#lightbox)
 
-**편집**을 클릭하면 선택된 가상 장치에 대한 장치 편집기가 실행됩니다.
+**편집**을 클릭하면 선택된 가상 디바이스에 대한 디바이스 편집기가 실행됩니다.
 
-[![장치 편집기 화면](device-manager-images/mac/22-device-editor-sml.png)](device-manager-images/mac/22-device-editor.png#lightbox)
+[![디바이스 편집기 화면](device-manager-images/mac/22-device-editor-sml.png)](device-manager-images/mac/22-device-editor.png#lightbox)
 
-**장치 편집기** 화면에는 가상 장치의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
+**디바이스 편집기** 화면에는 가상 디바이스의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
 
 속성을 변경하려면 **값** 열에서 해당 값을 편집합니다.
 예를 들어 다음 스크린샷에서 `hw.lcd.density` 속성은 **480**에서 **240**으로 변경됩니다.
 
-[![장치 편집 예제](device-manager-images/mac/23-device-editing-sml.png)](device-manager-images/mac/23-device-editing.png#lightbox)
+[![디바이스 편집 예제](device-manager-images/mac/23-device-editing-sml.png)](device-manager-images/mac/23-device-editing.png#lightbox)
 
 필요한 구성을 변경했으면 **저장** 단추를 클릭합니다.
 가상 디바이스 속성을 변경하는 방법에 대한 자세한 내용은 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
@@ -343,21 +344,21 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 추가 옵션 메뉴에는 다음 항목이 포함되어 있습니다.
 
-- **편집** &ndash; 앞에서 설명한 대로 현재 선택된 장치를 장치 편집기에서 엽니다.
+- **편집**&ndash; 앞에서 설명한 대로 현재 선택된 디바이스를 디바이스 편집기에서 엽니다.
 
-- **복제 및 편집** &ndash; 현재 선택된 장치를 복제하고 다른 고유한 이름을 사용하여 **새 장치** 화면에서 엽니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **복제 및 편집**을 클릭하면 이름에 카운터가 추가됩니다.
+- **복제 및 편집**&ndash; 현재 선택된 디바이스를 복제하고 다른 고유한 이름을 사용하여 **새 디바이스** 화면에서 엽니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **복제 및 편집**을 클릭하면 이름에 카운터가 추가됩니다.
 
   [![복제 및 편집 화면](device-manager-images/mac/25-dupe-and-edit-sml.png)](device-manager-images/mac/25-dupe-and-edit.png#lightbox)
 
-- **Finder에 표시** &ndash; macOS Finder 창에 가상 장치에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **Finder에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
+- **Finder에 표시**&ndash; macOS Finder 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **Finder에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
 
   [![Finder에 표시 클릭 후 결과](device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
 
-- **공장 재설정** &ndash; 선택된 장치를 기본 설정으로 재설정하여 장치가 실행 중일 때 사용자가 변경한 장치의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/mac/27-factory-reset-m76.png)
 
-- **삭제** &ndash; 선택된 가상 장치를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
+- **삭제**&ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
 
   ![디바이스 삭제 대화 상자](device-manager-images/mac/28-delete-device-m76.png)
 
@@ -502,3 +503,9 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 - [SDK Tools 릴리스 정보(Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/How-to-Create-and-Manage-Your-Own-Android-Emulators/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

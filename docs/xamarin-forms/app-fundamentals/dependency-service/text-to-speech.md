@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 0351436259bb782e4f8e3a3405b9620c4e8b20bb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: af40dc99dffd6e04ad0d408aea58b23c5446461e
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479760"
 ---
 # <a name="implementing-text-to-speech"></a>텍스트 음성 변환 구현
 
@@ -86,7 +86,21 @@ namespace DependencyServiceSample.iOS
 
 ## <a name="android-implementation"></a>Android 구현
 
-Android 코드는 iOS 버전보다 더 복잡합니다. 구현 클래스가 Android별 `Java.Lang.Object`에서 상속받고 `IOnInitListener` 인터페이스도 구현해야 합니다. `MainActivity.Instance` 속성에 의해 노출되는 현재 Android 컨텍스트에 대한 액세스도 필요합니다.
+Android 코드는 iOS 버전보다 더 복잡합니다. 이를 사용하려면 `MainActivity.Instance` 속성에 표시된 현재 Android 컨텍스트에 액세스해야 합니다.
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    internal static MainActivity Instance { get; private set; }
+
+    protected override void OnCreate(Bundle bundle)
+    {
+        ...
+    }
+}
+```
+
+구현 클래스가 Android별 `Java.Lang.Object`에서 상속받고 `IOnInitListener` 인터페이스도 구현해야 합니다.
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]

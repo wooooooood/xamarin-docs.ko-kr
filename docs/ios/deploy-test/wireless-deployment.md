@@ -6,13 +6,14 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
-ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479695"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -56,15 +57,15 @@ Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 ### <a name="pairing-an-ios-device-with-xcode"></a>iOS 디바이스를 Xcode와 페어링
 
-1. Xcode를 열고 **창 > 장치 및 시뮬레이터**로 이동합니다.
+1. Xcode를 열고 **창 &gt; 디바이스 및 시뮬레이터**로 이동합니다.
 2. 번개 케이블을 사용하여 Mac에 iOS 디바이스를 연결합니다. 디바이스에서 **이 컴퓨터를 신뢰**를 선택해야 할 수도 있습니다.
-3. 해당 디바이스를 선택한 다음, **네트워크를 통해 연결** 확인란을 선택하여 디바이스를 페어링합니다. ![네트워크 옵션을 통한 연결을 보여주는 디바이스 및 시뮬레이터 창](wireless-deployment-images/image2.png)
+3. 디바이스를 선택한 다음 **Connect via network(네트워크를 통해 연결)** 확인란을 선택하여 디바이스를 페어링하세요.  ![네트워크를 통해 연결 옵션이 표시된 디바이스 및 시뮬레이터 창](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Apple TV를 Xcode와 페어링
 
 1. Mac과 Apple TV가 동일한 네트워크에 연결되어 있는지 확인합니다.
 
-2. Xcode를 열고 **창 > 장치 및 시뮬레이터**로 이동합니다.
+2. Xcode를 열고 **창 &gt; 디바이스 및 시뮬레이터**로 이동합니다.
 
 3. Apple TV에서 **Settings > Remotes and Devices > Remote App and Devices**로 이동합니다.
 
@@ -82,7 +83,7 @@ iOS 또는 tvOS 디바이스에 배포하려면 다음 단계를 수행합니다
 
 1. 배포 컴퓨터와 대상 디바이스가 동일한 무선 네트워크에 있는지 확인합니다. 
 
-2. 대상 디바이스 목록에서 디바이스를 선택하고 응용 프로그램을 실행합니다.
+2. 대상 장치 목록에서 장치를 선택하고 애플리케이션을 실행합니다.
 
 2. 디바이스가 잠겨 있으면 디바이스의 잠금을 해제하라는 메시지가 표시됩니다. 디바이스의 잠금이 해지되면 앱이 디바이스에 배포됩니다.
 
@@ -104,4 +105,10 @@ iOS 또는 tvOS 디바이스에 배포하려면 다음 단계를 수행합니다
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xcode를 사용하여 무선 장치 페어링](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+- [Xcode를 사용하여 무선 디바이스 페어링](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

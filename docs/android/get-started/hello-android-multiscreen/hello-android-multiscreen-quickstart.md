@@ -1,6 +1,6 @@
 ---
 title: 'Hello, Android 멀티스크린: 빠른 시작'
-description: 두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다.
+description: 두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 애플리케이션 구성 요소를 도입합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120491"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418662"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
-_두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 응용 프로그램 구성 요소를 도입합니다._
+_두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 애플리케이션 구성 요소를 도입합니다._
 
-이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 응용 프로그램에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 응용 프로그램](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
+이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 애플리케이션에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 애플리케이션](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
 
 [![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -33,11 +33,11 @@ _두 부분으로 구성된 이 가이드는 Phoneword 응용 프로그램을 �
 
 ## <a name="walkthrough"></a>연습
 
-이 연습에서는 **Phoneword** 응용 프로그램에 **변환 기록** 화면을 추가합니다.
+이 연습에서는 **Phoneword** 애플리케이션에 **변환 기록** 화면을 추가합니다.
 
 ::: zone pivot="windows"
 
-Visual Studio에서 **Phoneword** 응용 프로그램을 열고 **솔루션 탐색기**에서 **Main.axml** 파일을 편집하여 시작합니다.
+Visual Studio에서 **Phoneword** 애플리케이션을 열고 **솔루션 탐색기**에서 **Main.axml** 파일을 편집하여 시작합니다.
 
 ### <a name="updating-the-layout"></a>레이아웃 업데이트
 
@@ -143,7 +143,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-**변환** 단추를 업데이트하여 전화 번호를 `phoneNumbers` 목록에 추가합니다. `TranslateHistoryButton`에 대한 `Click` 처리기는 다음 코드와 유사합니다.
+**변환** 단추를 업데이트하여 전화 번호를 `phoneNumbers` 목록에 추가합니다. `translateButton`에 대한 `Click` 처리기는 다음 코드와 유사합니다.
 
 ```csharp
 // Add code to translate number
@@ -165,11 +165,11 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-응용 프로그램을 저장하고 빌드하여 오류가 없는지 확인합니다.
+애플리케이션을 저장하고 빌드하여 오류가 없는지 확인합니다.
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 응용 프로그램을 설명합니다.
+에뮬레이터 또는 장치에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -302,13 +302,13 @@ translateButton.Click += (sender, e) =>
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 응용 프로그램을 설명합니다.
+에뮬레이터 또는 장치에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 ::: zone-end
 
-첫 번째 멀티스크린 Xamarin.Android 응용 프로그램을 완성한 것을 축하합니다! 이제 사용할 &ndash;에 대해 알아본 도구 및 기술을 분석하겠습니다. 다음은 [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)입니다.
+첫 번째 멀티스크린 Xamarin.Android 애플리케이션을 완성한 것을 축하합니다! 이제 사용할 &ndash;에 대해 알아본 도구 및 기술을 분석하겠습니다. 다음은 [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)입니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2018
-ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
-ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
+ms.openlocfilehash: 41530399bfc2210e7c3eda461688c12c6235ef79
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246297"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418675"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -61,7 +61,6 @@ namespace TailwindTraders.Mobile
         {
             InitializeComponent();
 
-            Forms.SetFlags("Shell_Experimental");
             MainPage = new TheShell();
         }
     }
@@ -71,7 +70,46 @@ namespace TailwindTraders.Mobile
 `TheShell` 클래스는 애플리케이션의 시각적 개체 구조를 설명하는 XAML 파일입니다.
 
 > [!IMPORTANT]
-> 셸은 현재 시험 단계이며 `Shell` 인스턴스를 만들기 전에 `App` 클래스에 또는 `Forms.Init` 메서드를 호출하기 전에 플랫폼 프로젝트에 `Forms.SetFlags("Shell_Experimental");`을 추가하는 경우에만 사용할 수 있습니다.
+> 셸은 현재 시험 단계이며 `Forms.Init` 메서드를 호출하기 전에 플랫폼 프로젝트에 `Forms.SetFlags("Shell_Experimental");`을(를) 추가하는 경우에만 사용할 수 있습니다.
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+{
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
+
+        TabLayoutResource = Resource.Layout.Tabbar;
+        ToolbarResource = Resource.Layout.Toolbar;
+
+        base.OnCreate(savedInstanceState);
+
+        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+        LoadApplication(new App());
+    }
+}
+```
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+```csharp
+public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+{
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
+
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new App());
+
+        return base.FinishedLaunching(app, options);
+    }
+}
+```
+
+----
 
 ## <a name="shell-file-hierarchy"></a>셸 파일 계층 구조
 
