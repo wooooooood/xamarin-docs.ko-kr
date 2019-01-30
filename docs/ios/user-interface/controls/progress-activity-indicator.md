@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: cb56af300444020a543c16afb0dfb48015fc2153
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d39170d0109d7f81d3f02ec36381ebcd46c0143d
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102596"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233525"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>진행률 및 Xamarin.iOS에서 활동 표시기
 
 이 앱을 장기 수행할 수 있을 로드 또는 데이터 및이 지연 UI를 업데이트 하는 지연 될 수 있습니다는 처리와 같은 작업을 실행 합니다. 이 시간 동안 항상 시스템 사용량이 많은 작업을 수행 하는 사용자를 원할 것에 진행률 표시기를 사용 해야 합니다. 이렇게 하면 사용자 컨트롤의 의견을 기다리고 있지 않으면 해당 요청을에 앱이 작동을 정확 하 게 얼마나 오래 대기 해야 하는 자세히 설명 하는 수단을 제공할 수 있습니다.
 
-iOS 앱에서이 진행률 표시를 제공 하는 두 가지 방법이 제공: 활동 표시기 (특정을 포함 하 여 _네트워크_ 활동 표시기) 및 진행률 표시줄입니다.
+iOS 앱에서이 진행률 표시를 제공 하는 두 가지를 제공 합니다. 활동 표시기 (특정을 포함 하 여 _네트워크_ 활동 표시기) 및 진행률 표시줄입니다.
 
 ## <a name="activity-indicator"></a>활동 표시기
 
@@ -32,7 +32,7 @@ Apple 활동 표시기를 사용 하 여 작업 하기 위한 다음 제안에 �
 
 ### <a name="implementing-an-activity-indicator"></a>활동 표시기 구현
 
-활동 표시기를 통해 구현 됩니다는 [ `UIActivityIndictorView` ](https://developer.xamarin.com/api/type/UIKit.UIActivityIndicatorView/) 나타내는 클래스를 `UIActivity` 을 수행 합니다.
+활동 표시기를 통해 구현 됩니다는 [ `UIActivityIndictorView` ](xref:UIKit.UIActivityIndicatorView) 나타내는 클래스를 `UIActivity` 을 수행 합니다.
 
 ### <a name="activity-indicators-and-storyboards"></a>스토리 보드 및 활동 표시기
 
@@ -68,7 +68,7 @@ Apple에는 진행률 표시줄을 사용 하 여 작업 하기 위한 다음 �
 
 ### <a name="implementing-an-progress-bar"></a>진행률 표시줄을 구현합니다.
 
-진행률 표시줄을 인스턴스화하여 생성 되는 [`UIProgressView`](https://developer.xamarin.com/api/type/UIKit.UIProgressView/)
+진행률 표시줄을 인스턴스화하여 생성 되는 [`UIProgressView`](xref:UIKit.UIProgressView)
 
 ### <a name="progress-bars-and-storyboards"></a>진행률 표시줄 및 스토리 보드
 

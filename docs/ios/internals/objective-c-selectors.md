@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: b51ee6b547cc53761f23379e7233bb710090a61b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 5d3c8b6bd8f7f788a1de74feddf7fcb378fa5818
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351732"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233642"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Xamarin.iOS에서 Objective-c 선택기
 
@@ -36,9 +36,9 @@ Apple 설명서) (에서 선언은 다음과 같습니다.
 이 API에는 다음과 같은 특징이 있습니다.
 
 - 반환 형식은 `CGSize` Unified API에 대 한 합니다.
-- 합니다 `font` 매개 변수는를 [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (및 형식 (직접)에서 파생 된 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/))에 매핑된 [System.IntPtr](xref:System.IntPtr)합니다.
+- 합니다 `font` 매개 변수는를 [UIFont](xref:UIKit.UIFont) (및 형식 (직접)에서 파생 된 [NSObject](xref:Foundation.NSObject)에 매핑된 [System.IntPtr](xref:System.IntPtr)합니다.
 - 합니다 `width` 매개 변수를 `CGFloat`, 매핑되 `nfloat`합니다.
-- 합니다 `lineBreakMode` 매개 변수를 [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc),으로 Xamarin.iOS에서 이미 바인딩된는 [`UILineBreakMode`](https://developer.xamarin.com/api/type/UIKit.UILineBreakMode/)
+- 합니다 `lineBreakMode` 매개 변수를 [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc),으로 Xamarin.iOS에서 이미 바인딩된는 [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 열거형입니다.
 
 전체적인 통합,는 `objc_msgSend` 선언이 일치 해야 합니다.
@@ -149,7 +149,7 @@ Apple 설명서에 선택기 이름이 나열 됩니다. 예를 들어 [ `NSStri
 
 ### <a name="calling-objcmsgsend"></a>Objc_msgSend 호출
 
-`objc_msgSend` 개체 (선택기) 메시지를 보냅니다. 이 함수 패밀리는 필수 인수 두 개 이상의: 선택기 대상 (인스턴스 또는 처리 하는 클래스), 자체 선택기 및 선택기에 필요한 인수입니다. 인스턴스 및 선택기 인수 여야 합니다 `System.IntPtr`, 모든 나머지 인수는 예를 들어 선택기 예상 형식과 일치 해야 합니다는 `nint` 에 대 한는 `int`, 또는 `System.IntPtr` 모든 `NSObject`-파생 형식입니다. 사용 된 [`NSObject.Handle`](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)
+`objc_msgSend` 개체 (선택기) 메시지를 보냅니다. 이 함수 패밀리는 필수 인수 두 개 이상의: 선택기 대상 (인스턴스 또는 처리 하는 클래스), 자체 선택기 및 선택기에 필요한 인수입니다. 인스턴스 및 선택기 인수 여야 합니다 `System.IntPtr`, 모든 나머지 인수는 예를 들어 선택기 예상 형식과 일치 해야 합니다는 `nint` 에 대 한는 `int`, 또는 `System.IntPtr` 모든 `NSObject`-파생 형식입니다. 사용 된 [`NSObject.Handle`](xref:Foundation.NSObject.Handle)
 가져올 속성을 `IntPtr` Objective-c 형식 인스턴스에 대 한 합니다.
 
 둘 이상의 방법이 `objc_msgSend` 함수:

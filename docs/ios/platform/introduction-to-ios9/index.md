@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f9cc72dcbe506d22c8a986bcf59ddaa6355f043
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103259"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233538"
 ---
 # <a name="introduction-to-ios-9"></a>IOS 9 소개
 
@@ -38,7 +38,7 @@ IOS 9 iPhone 6s와 iPhone 6s 새 또한 3D 터치 하 여 iOS 앱에가 중 중�
 
 새 앱 전송 보안 (ATS) 하 여 iOS 9, 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결을 적용 합니다. 앱 또는 사용 하는 라이브러리를 통해 직접 중요 한 정보가 실수로 유출 방지 모든 인터넷 통신 보안 연결 모범 사례를 준수 하는지 ATS에서 확인 합니다.
 
-ATS는 모든 연결을 사용 하 여 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 활성화 되어 있으므로 [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/)를 [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) 하거나 [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) 적용 됩니다 ATS 보안 요구 사항입니다. 연결에 이러한 요구 사항에 맞지 않는 경우 예외가 발생 하 여 실패 합니다.
+ATS는 모든 연결을 사용 하 여 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 활성화 되어 있으므로 [NSUrlConnection](xref:Foundation.NSUrlConnection)를 [CFUrl](xref:CoreFoundation.CFUrl) 하거나 [NSUrlSession](xref:Foundation.NSUrlSession) 적용 됩니다 ATS 보안 요구 사항입니다. 연결에 이러한 요구 사항에 맞지 않는 경우 예외가 발생 하 여 실패 합니다.
 
 ATS 대 한 자세한 정보를 확인 하려면 하세요 우리의 [앱 전송 보안](~/ios/app-fundamentals/ats.md) 가이드입니다.
 
@@ -78,7 +78,7 @@ Apple iOS 9의 도입으로 두 가지 새 프레임 워크를 출시 했습니�
 
 ## <a name="new-stack-view"></a>새 스택 보기
 
-스택 뷰 컨트롤 ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) 활용 자동 레이아웃 및 크기 클래스 (가로 또는 세로로) 하위 뷰의 스택을 관리 하는 iOS 장치의 화면 크기와 방향에 동적으로 응답 합니다.
+스택 뷰 컨트롤 ([UIStackView](xref:UIKit.UIStackView) 활용 자동 레이아웃 및 크기 클래스 (가로 또는 세로로) 하위 뷰의 스택을 관리 하는 iOS 장치의 화면 크기와 방향에 동적으로 응답 합니다.
 
 스택 보기 컨트롤을 사용 하면 작업량이 사용자 인터페이스를 크게 감소 하는 레이아웃에 필요 합니다. 스택 보기에 연결 하는 모든 하위 뷰의 레이아웃 축, 배포, 맞춤 간격 등 개발자 정의 속성에 따라 자동으로 관리 됩니다.
 
@@ -87,7 +87,7 @@ Apple iOS 9의 도입으로 두 가지 새 프레임 워크를 출시 했습니�
 
 ## <a name="collection-view-changes"></a>변경 내용 컬렉션 보기
 
-Ios 9 컬렉션 뷰 ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) 지 원하는 새 기본 제스처 인식기 및 몇 가지 새로운 지원 메서드를 추가 하 여 즉시 항목 다시 정렬 끕니다.
+Ios 9 컬렉션 뷰 ([UICollectionView](xref:UIKit.UICollectionView) 지원 끌어 새 기본 제스처 인식기 및 몇 가지 새로운 지원 메서드를 추가 하 여 즉시 항목 다시 정렬 합니다.
 
 이러한 새 메서드를 사용 하 쉽게 끌어서 다시 정렬 컬렉션 보기에 구현 하 고 수 다시 정렬 하는 프로세스의 모든 단계 동안 항목 모양을 사용자 지정할 수 있습니다.
 
@@ -150,9 +150,9 @@ IOS 9 Apple이 같이 보안 Enclave와 더 많은 항목 보호 옵션에 대 �
 
 Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페이스를 보다 쉽게 적이 오른쪽에서 왼쪽 언어에 대 한 전체 지원을 제공 합니다. 여기에는 다음과 같은 사항이 포함됩니다.
 
-- 표준 [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) 컨트롤 오른쪽에서 왼쪽 iOS 장치 로캘 및 언어 설정에 따라 자동으로 대칭 이동 됩니다.
-- 합니다 [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) 클래스는 오른쪽에서 왼쪽을 대칭 이동 된 경우 지정된 된 보기 표시 되어야 하는 방법을 정의할 수 있도록 하는 특성을 제공 합니다.
-- 기능을 사용 하 여 프로그래밍 방식으로 이미지를 대칭 합니다 [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) 의 속성을 [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) 클래스.
+- 표준 [UIKit](xref:UIKit) 컨트롤 오른쪽에서 왼쪽 iOS 장치 로캘 및 언어 설정에 따라 자동으로 대칭 이동 됩니다.
+- 합니다 [UIView](xref:UIKit.UIView) 클래스는 오른쪽에서 왼쪽을 대칭 이동 된 경우 지정된 된 보기 표시 되어야 하는 방법을 정의할 수 있도록 하는 특성을 제공 합니다.
+- 기능을 사용 하 여 프로그래밍 방식으로 이미지를 대칭 합니다 [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) 의 속성을 [UIImage](xref:UIKit.UIImage) 클래스.
 
 자세한 내용은 Apple의를 참조 하세요 [지원 오른쪽에서 왼쪽 언어](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) 설명서.
 
@@ -162,18 +162,18 @@ Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페�
 
 위의 살펴 봤는 주요 변경 내용 외에도 Apple ios 9 다음과 같은 몇 가지 기존 프레임 워크의 향상 된 기능 및 수정 했습니다.
 
-- AV Foundation 프레임 워크
-- AVKit 프레임 워크
-- CloudKit 프레임 워크
-- Foundation 프레임 워크
+- AV Foundation Framework
+- AVKit Framework
+- CloudKit Framework
+- Foundation Framework
 - 핸드 오프 프레임 워크
 - HealthKit 프레임 워크
-- HomeKit 프레임 워크
+- HomeKit Framework
 - 로컬 인증 프레임 워크
 - MapKit 프레임 워크
 - PassKit Framework
-- Safari 서비스 프레임 워크
-- UIKit 프레임 워크
+- Safari Services Framework
+- UIKit Framework
 
 자세한 내용은 참조 하십시오 우리의 [추가 iOS 9 프레임 워크 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md) 설명서.
 

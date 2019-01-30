@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 4f847a86f3f92bcf7168c2e104471e1ca052969c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 699d19228d2dee92f7a730bba4186a3aa5f21b04
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131452"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233239"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Xamarin.iOS에서 중요 한 알림
 
@@ -28,8 +28,8 @@ IOS 12 사용 하 여 앱 위험 경고를 보낼 수 있습니다. 방해 금�
 
 앱의 알림을 허용 하거나 거부 하 라는 메시지를 표시 하는 앱의 알림 인증 요청 합니다. 알림 권한 부여 요청을 중요 한 경고를 보낼 수 있는 권한 요청 하는 경우 앱에서는 제공 사용자 위험 경고에 옵트인 할 수 있는 기회입니다.
 
-다음 코드를 적절 한 전달 하 여 중요 한 알림 및 표준 알림와 소리를 보낼 수 있는 요청 [`UNAuthorizationOptions`](https://developer.xamarin.com/api/type/UserNotifications.UNAuthorizationOptions/)
-값을 [ `RequestAuthorization` ](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.RequestAuthorization/):
+다음 코드를 적절 한 전달 하 여 중요 한 알림 및 표준 알림와 소리를 보낼 수 있는 요청 [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+값을 [ `RequestAuthorization` ](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*):
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -45,7 +45,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>로컬 중요 한 경고
 
-로컬 중요 한 경고를 보내도록 만들기를 [`UNMutableNotificationContent`](https://developer.xamarin.com/api/type/UserNotifications.UNMutableNotificationContent/)
+로컬 중요 한 경고를 보내도록 만들기를 [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
 설정 및 해당 `Sound` 속성을 합니다.
 
 - `UNNotificationSound.DefaultCriticalSound`를 사용 하는 기본 위험 알림 소리 합니다.

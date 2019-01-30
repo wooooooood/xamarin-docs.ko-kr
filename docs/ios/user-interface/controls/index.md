@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 25b17dbebebf7bcae92ebdc294c798101d39b987
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5b7d4a372704079343a357c1d341a5260fcf583
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121622"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233278"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Xamarin.iOS에서 사용자 인터페이스 컨트롤
 
@@ -54,13 +54,13 @@ Maps는 모든 최신 모바일 운영 체제의 일반적인 기능. iOS에는 
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[진행률 및 활동 표시기](progress-activity-indicator.md)
 
-iOS 앱에서 진행률을 나타내는 두 가지 방법이 제공: 활동 표시기 (특정을 포함 하 여 _네트워크_ 활동 표시기) 및 진행률 표시줄입니다.
+iOS 앱에서 진행률을 나타내는 두 가지를 제공 합니다. 활동 표시기 (특정을 포함 하 여 _네트워크_ 활동 표시기) 및 진행률 표시줄입니다.
 
 ## <a name="search-barssearchbarmd"></a>[검색 막대](searchbar.md)
 
 UISearchBar 값 목록을 검색 하는 데 사용 됩니다. 
 
-## <a name="sliders-steppers-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[슬라이더, 스텝 퍼, 및 분할 된 컨트롤](slider-switch-segmented-controls.md)
+## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[슬라이더, 스위치 및 분할된 컨트롤](slider-switch-segmented-controls.md)
 
 슬라이더 컨트롤 범위 내에서 숫자 값의 간단한 선택할 수 있습니다. iOS를 사용 하는 `UISwitch` 부울 값을 입력 하는 다른 플랫폼에서 라디오 단추에 표시 될 수 있습니다. 분할 된 컨트롤은 체계적인된 방식으로 사용자가 적은 수의 옵션을 사용 하 여 상호 작용할 수 있도록 합니다.
 

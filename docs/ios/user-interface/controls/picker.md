@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/14/2018
-ms.openlocfilehash: 0ef33c2036b1ff2d5a7e2035ca5fa8af58672867
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 525ddf3c8cfc457738099c3afbb162fd3fb9239b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34789914"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233577"
 ---
 # <a name="picker-control-in-xamarinios"></a>Xamarin.iOS에서 선택 컨트롤
 
-A [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) 휠 유사한 인터페이스의 개별 구성 요소를 스크롤하여 목록에서 값을 선택할 수 있습니다.
+A [ `UIPickerView` ](xref:UIKit.UIPickerView) 휠 유사한 인터페이스의 개별 구성 요소를 스크롤하여 목록에서 값을 선택할 수 있습니다.
 
-선택기는 날짜 및 시간을 선택 하는 데 자주 사용 됩니다. Apple에서 제공 합니다 [`UIDatePicker`](https://developer.xamarin.com/api/type/UIKit.UIDatePicker/)
+선택기는 날짜 및 시간을 선택 하는 데 자주 사용 됩니다. Apple에서 제공 합니다 [`UIDatePicker`](xref:UIKit.UIDatePicker)
 이 목적을 위해 클래스입니다.
 
 구현 및 사용 하는 방법을 설명 합니다 `UIPickerView` 고 `UIDatePicker` 컨트롤입니다.
@@ -59,8 +59,8 @@ public override void ViewDidLoad()
 }
 ```
 
-합니다 [ `UIPickerViewModel` ](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) 두 인터페이스를 구현 하는 기본 클래스 [`IUIPickerDataSource`](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDataSource/)
-및 [ `IUIPickerViewDelegate` ](https://developer.xamarin.com/api/type/UIKit.IUIPickerViewDelegate/)선택기의 데이터를 지정 하는 다양 한 메서드를 선언 하 고 상호 작용을 처리 하는 방법을:
+합니다 [ `UIPickerViewModel` ](xref:UIKit.UIPickerViewModel) 두 인터페이스를 구현 하는 기본 클래스 [`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
+및 [ `IUIPickerViewDelegate` ](xref:UIKit.IUIPickerViewDelegate)선택기의 데이터를 지정 하는 다양 한 메서드를 선언 하 고 상호 작용을 처리 하는 방법을:
 
 ```csharp
 public class PeopleModel : UIPickerViewModel
@@ -126,13 +126,13 @@ public class PeopleModel : UIPickerViewModel
 
 ![두 구성 요소를 사용 하 여 선택기](picker-images/image3.png "두 구성 요소를 사용 하 여 선택")
 
-선택에서 구성 요소 수를 지정 하려면 사용 합니다 [`GetComponentCount`](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetComponentCount/p/UIKit.UIPickerView/) 
+선택에서 구성 요소 수를 지정 하려면 사용 합니다 [`GetComponentCount`](xref:UIKit.UIPickerViewModel.GetComponentCount(UIKit.UIPickerView)) 
 메서드를 재정의합니다.
 
 ### <a name="customizing-a-pickers-appearance"></a>선택기의 모양 사용자 지정
 
 선택기의 모양을 사용자 지정 하려면 사용 합니다 [`UIPickerView.UIPickerViewAppearance`](https://developer.xamarin.com/api/type/UIKit.UIPickerView+UIPickerViewAppearance/)
-클래스 또는 재정의 [ `GetView` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetView/p/UIKit.UIPickerView/System.nint/System.nint/UIKit.UIView/) 하 고 [ `GetRowHeight` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.GetRowHeight/p/UIKit.UIPickerView/System.nint/) 의 메서드는 `UIPickerViewModel`합니다.
+클래스 또는 재정의 [ `GetView` ](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) 하 고 [ `GetRowHeight` ](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) 의 메서드는 `UIPickerViewModel`합니다.
 
 ## <a name="uidatepicker"></a>UIDatePicker
 
@@ -161,7 +161,7 @@ UIPickerView pickerView = new UIPickerView(
 
 #### <a name="minimum-and-maximum-date"></a>최소 및 최대 날짜
 
-[`MinimumDate`](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinimumDate/) 및 [ `MaximumDate` ](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MaximumDate/) 날짜 선택 컨트롤에서 사용할 수 있는 날짜 범위를 제한 합니다. 예를 들어, 다음 코드는 제한 있는 현재 이르는 60 년 날짜 선택:
+[`MinimumDate`](xref:UIKit.UIDatePicker.MinimumDate) 및 [ `MaximumDate` ](xref:UIKit.UIDatePicker.MaximumDate) 날짜 선택 컨트롤에서 사용할 수 있는 날짜 범위를 제한 합니다. 예를 들어, 다음 코드는 제한 있는 현재 이르는 60 년 날짜 선택:
 
 ```csharp
 var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -182,7 +182,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 #### <a name="minute-interval"></a>분 간격
 
-합니다 [ `MinuteInterval` ](https://developer.xamarin.com/api/property/UIKit.UIDatePicker.MinuteInterval/) 속성 선택기는 분을 표시 하는 데는 간격을 설정 합니다.
+합니다 [ `MinuteInterval` ](xref:UIKit.UIDatePicker.MinuteInterval) 속성 선택기는 분을 표시 하는 데는 간격을 설정 합니다.
 
 ```csharp
 datePickerView.MinuteInterval = 10;
@@ -190,7 +190,7 @@ datePickerView.MinuteInterval = 10;
 
 #### <a name="mode"></a>모드
 
-날짜 선택 지원 네 [모드](https://developer.xamarin.com/api/type/UIKit.UIDatePickerMode/)아래 설명:
+날짜 선택 지원 네 [모드](xref:UIKit.UIDatePickerMode)아래 설명:
 
 ##### <a name="uidatepickermodetime"></a>UIDatePickerMode.Time
 
@@ -257,9 +257,9 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 #### <a name="nsdateformatter"></a>NSDateFormatter
 
-형식을 지정 하는 `NSDate`를 사용 하 여는 [ `NSDateFormatter` ](https://developer.xamarin.com/api/type/Foundation.NSDateFormatter/)합니다.
+형식을 지정 하는 `NSDate`를 사용 하 여는 [ `NSDateFormatter` ](xref:Foundation.NSDateFormatter)합니다.
 
-사용 하는 `NSDateFormatter`, 호출 해당 [ `ToString` ](https://developer.xamarin.com/api/member/Foundation.NSDateFormatter.ToString/p/Foundation.NSDate/) 메서드. 예를 들어:
+사용 하는 `NSDateFormatter`, 호출 해당 [ `ToString` ](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 메서드. 예를 들어:
 
 ```csharp
 var date = NSDate.Now;
@@ -272,7 +272,7 @@ var formattedDate = formatter.ToString(d);
 
 ##### <a name="dateformat"></a>DateFormat
 
-[ `DateFormat` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateFormat/) 속성 (문자열)는 `NSDateFormatter` 사용자 지정 가능한 날짜 형식 지정을 허용 합니다.
+[ `DateFormat` ](xref:Foundation.NSDateFormatter.DateFormat) 속성 (문자열)는 `NSDateFormatter` 사용자 지정 가능한 날짜 형식 지정을 허용 합니다.
 
 ```csharp
 NSDateFormatter dateFormat = new NSDateFormatter();
@@ -281,7 +281,7 @@ dateFormat.DateFormat = "yyyy-MM-dd";
 
 ##### <a name="timestyle"></a>TimeStyle
 
-[ `TimeStyle` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.TimeStyle/) 속성 (프로그램 [ `NSDateFormatterStyle` ](https://developer.xamarin.com/api/type/Foundation.NSDateFormatterStyle/))의 `NSDateFormatter` 미리 결정 된 스타일을 기반으로 시간 형식 지정:
+[ `TimeStyle` ](xref:Foundation.NSDateFormatter.TimeStyle) 속성 (프로그램 [ `NSDateFormatterStyle` ](xref:Foundation.NSDateFormatterStyle) 의 `NSDateFormatter` 미리 결정 된 스타일을 기반으로 시간 형식 지정:
 
 ```csharp
 NSDateFormatter timeFormat = new NSDateFormatter();
@@ -291,13 +291,13 @@ timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 다양 한 `NSDateFormatterStyle` 값 시간을 다음과 같이 표시 합니다.
 
 - `NSDateFormatterStyle.Full`: 46: 오후 7:00 동부 일광 절약 시간
-- `NSDateFormatterStyle.Long`: 7시 47분: 00 EDT
+- `NSDateFormatterStyle.Long`: 7:47:00 PM EDT
 - `NSDateFormatterStyle.Medium`: 47: 오후 7:00
-- `NSDateFormatterSytle.Short`: 오후 7시 47분
+- `NSDateFormatterSytle.Short`: 47 오후 7
 
 ##### <a name="datestyle"></a>DateStyle
 
-합니다 [ `DateStyle` ](https://developer.xamarin.com/api/property/Foundation.NSDateFormatter.DateStyle/) 속성 (을 `NSDateFormatterStyle`)의 `NSDateFormatter` 미리 결정 된 스타일에 따라 날짜 서식 지정:
+합니다 [ `DateStyle` ](xref:Foundation.NSDateFormatter.DateStyle) 속성 (을 `NSDateFormatterStyle`)의 `NSDateFormatter` 미리 결정 된 스타일에 따라 날짜 서식 지정:
 
 ```csharp
 NSDateFormatter dateTimeformat = new NSDateFormatter();
@@ -307,8 +307,8 @@ dateTimeformat.DateStyle = NSDateFormatterStyle.Long;
 다양 한 `NSDateFormatterStyle` 값이 다음과 같이 날짜를 표시 합니다.
 
 - `NSDateFormatterStyle.Full`: 수요일, 2017 년 8 월 2, 오후 7 시 48 분
-- `NSDateFormatterStyle.Long`: 2 2017 년 8 월 오후 7 시 49 분
-- `NSDateFormatterStyle.Medium`: Aug 2017 년 2 오후 7시 49분
+- `NSDateFormatterStyle.Long`: 2017 년 8 월 2, 오후 7 시 49 분
+- `NSDateFormatterStyle.Medium`: 2017 년 8 월 2, 오후 7시 49분
 - `NSDateFormatterStyle.Short`: 8/2/17을 오후 7 시 50 분
 
 > [!NOTE]

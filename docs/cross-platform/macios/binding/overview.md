@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 3f15eaf9171ac44b870239fb5ffa14edd6210360
-ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
+ms.openlocfilehash: c68cdc443f11ec6709a9d6fdde8ce10cd9db6733
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54879305"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233681"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Objective-c 바인딩 개요
 
@@ -72,11 +72,11 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 ## <a name="how-binding-works"></a>바인딩의 작동 방법
 
-사용 하는 것이 가능 합니다 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) 특성인 [[내보내기]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 특성인 및 [수동 Objective-c 선택기 호출](~/ios/internals/objective-c-selectors.md) 함께 바인딩할 수동으로 새 (이전에 바인딩되지 않은) Objective-c 형식입니다.
+사용 하는 것이 가능 합니다 [[등록]](xref:Foundation.RegisterAttribute) 특성인 [[내보내기]](xref:Foundation.ExportAttribute) 특성인 및 [수동 Objective-c 선택기 호출](~/ios/internals/objective-c-selectors.md) 함께 바인딩할 수동으로 새 (이전에 바인딩되지 않은) Objective-c 형식입니다.
 
-먼저, 바인딩할 하려는 형식을 찾습니다. 바인딩한에서는 설명을 위해 (및 단순성)는 [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 (에서 이미 바인딩 되었으면 하는 [Foundation.NSEnumerator](https://developer.xamarin.com/api/type/Foundation.NSEnumerator/); 아래 구현은 예를 들어 방금 목적).
+먼저, 바인딩할 하려는 형식을 찾습니다. 바인딩한에서는 설명을 위해 (및 단순성)는 [NSEnumerator](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 (에서 이미 바인딩 되었으면 하는 [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); 아래 구현은 예를 들어 방금 목적).
 
-둘째, 생성 해야 합니다 C# 형식입니다. 네임 스페이스에 배치 해야 할 수 있습니다. 사용 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성 Xamarin.iOS Objective-c 런타임에 등록 하는 형식 이름을 변경할 수 있습니다. C# 형식에서 상속 되어야 합니다 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/):
+둘째, 생성 해야 합니다 C# 형식입니다. 네임 스페이스에 배치 해야 할 수 있습니다. 사용 해야 Objective-c 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성 Xamarin.iOS Objective-c 런타임에 등록 하는 형식 이름을 변경할 수 있습니다. C# 형식에서 상속 되어야 합니다 [Foundation.NSObject](xref:Foundation.NSObject):
 
 ```csharp
 namespace Example.Binding {

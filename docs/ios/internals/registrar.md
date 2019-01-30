@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 8/29/2018
-ms.openlocfilehash: cdd57095b03c24472abec5646ee3a70350770d7c
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "34786176"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233590"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Xamarin.iOS 용 형식 등록
 
@@ -22,10 +22,10 @@ ms.locfileid: "34786176"
 
 Xamarin.iOS를 시작 하는 동안 등록 합니다.
 
-- 클래스는 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) Objective-c 클래스 특성입니다.
-- 클래스는 [[Category]](https://developer.xamarin.com/api/type/CRuntime.CategoryAttribute) Objective-c 범주로 특성입니다.
-- 상호 작용을 [[Protocol]](https://developer.xamarin.com/api/type/Foundation.ProtocolAttribute/) Objective-c 프로토콜 특성입니다.
-- 사용 하 여 멤버를 [[내보내기]](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/), Objective-c에 액세스할 수 있게 합니다.
+- 클래스는 [[등록]](xref:Foundation.RegisterAttribute) Objective-c 클래스 특성입니다.
+- 클래스는 [[Category]](xref:ObjCRuntime.CategoryAttribute) Objective-c 범주로 특성입니다.
+- 상호 작용을 [[Protocol]](xref:Foundation.ProtocolAttribute) Objective-c 프로토콜 특성입니다.
+- 사용 하 여 멤버를 [[내보내기]](xref:Foundation.ExportAttribute), Objective-c에 액세스할 수 있게 합니다.
 
 예를 들어 관리 되는 것이 좋습니다 `Main` Xamarin.iOS 응용 프로그램에서 공용 메서드.
 

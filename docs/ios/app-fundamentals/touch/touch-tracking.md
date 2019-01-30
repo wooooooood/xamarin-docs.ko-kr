@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a1ddcda84d51b5a8a9220558ddaf9476a2321ee8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 09e895714cb4bbe241e4e14facaaee52079d55d9
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105053"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233190"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Xamarin.iOS에서 추적 하는 멀티 터치 손가락
 
@@ -20,7 +20,7 @@ _이 문서에서는 여러 손가락에서 터치 이벤트를 추적 하는 �
 
 멀티 터치 응용 프로그램 화면에서 동시에 이동 하는 대로 각 손가락을 추적 해야 할 경우 경우가 있습니다. 일반적인 응용 프로그램을 하나의 finger-paint 프로그램입니다. 사용자를 한 손가락으로 그릴 수 있지만 한 번에 여러 손가락으로 그릴 수 있게 되기를 원하는 합니다. 프로그램이 여러 터치 이벤트를 처리할 때 이러한 두 손가락 사이의 구분 해야 합니다.
 
-손가락 먼저 화면을 터치, iOS 만듭니다는 [ `UITouch` ](https://developer.xamarin.com/api/type/UIKit.UITouch/) 해당 지문에 대 한 개체입니다. 이 개체 손가락 화면에서 이동 하 고이 시점에서 개체가 삭제 되는 화면에서 다음가 뗄 동일 합니다. 추적 하기 위해 손가락을 프로그램이이 저장 하지 않아야 `UITouch` 직접 개체입니다. 대신 사용할 수는 [ `Handle` ](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) 형식의 속성 `IntPtr` 고유 하 게 식별 이러한 `UITouch` 개체입니다.
+손가락 먼저 화면을 터치, iOS 만듭니다는 [ `UITouch` ](xref:UIKit.UITouch) 해당 지문에 대 한 개체입니다. 이 개체 손가락 화면에서 이동 하 고이 시점에서 개체가 삭제 되는 화면에서 다음가 뗄 동일 합니다. 추적 하기 위해 손가락을 프로그램이이 저장 하지 않아야 `UITouch` 직접 개체입니다. 대신 사용할 수는 [ `Handle` ](xref:Foundation.NSObject.Handle) 형식의 속성 `IntPtr` 고유 하 게 식별 이러한 `UITouch` 개체입니다.
 
 거의 항상 각 손가락을 추적 하는 프로그램에는 터치 추적에 대 한 사전 유지 관리 합니다. IOS 프로그램에 대 한 사전 키는 `Handle` 특정 손가락을 식별 하는 값입니다. 사전 값은 응용 프로그램에 따라 달라 집니다. 에 [핑거 페인트](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint) (릴리스 touch)에서 각 손가락 스트로크는 손가락을 사용 하 여 그리는 선을 렌더링 하는 데 필요한 모든 정보를 포함 하는 개체와 연결 된 프로그램입니다. 프로그램은 정의 하는 작은 `FingerPaintPolyline` 이 목적을 위해 클래스:
 
@@ -40,7 +40,7 @@ class FingerPaintPolyline
 }
 ```
 
-각 폴리라인에 있고 색, 스트로크 너비는 iOS 그래픽 [ `CGPath` ](https://developer.xamarin.com/api/type/CoreGraphics.CGPath/) 누적를 그릴 때 줄의 여러 요소를 렌더링 하는 개체입니다.
+각 폴리라인에 있고 색, 스트로크 너비는 iOS 그래픽 [ `CGPath` ](xref:CoreGraphics.CGPath) 누적를 그릴 때 줄의 여러 요소를 렌더링 하는 개체입니다.
 
 
 나머지 모든 아래에 표시 된 코드에 포함 되어는 `UIView` 라는 파생 `FingerPaintCanvasView`합니다. 클래스 형식의 개체를 사전 유지 관리는 `FingerPaintPolyline` 적극적으로 하나 이상의 손가락으로 그릴 되는 동안:
@@ -61,11 +61,11 @@ List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 
 `FingerPaintCanvasView` 정의한 5 개의 메서드를 재정의 `View`:
 
-- [`TouchesBegan`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesBegan/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesMoved`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesMoved/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesEnded`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesEnded/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`TouchesCancelled`](https://developer.xamarin.com/api/member/UIKit.UIResponder.TouchesCancelled/p/Foundation.NSSet/UIKit.UIEvent/)
-- [`Draw`](https://developer.xamarin.com/api/member/UIKit.UIView.Draw/p/CoreGraphics.CGRect/)
+- [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesEnded`](xref:UIKit.UIResponder.TouchesEnded(Foundation.NSSet,UIKit.UIEvent))
+- [`TouchesCancelled`](xref:UIKit.UIResponder.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent))
+- [`Draw`](xref:UIKit.UIView.Draw(CoreGraphics.CGRect))
 
 다양 한 `Touches` 재정의 누적 다중선을 구성 하는 지점입니다.
 

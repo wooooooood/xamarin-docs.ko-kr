@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 42e357c0fbb4b858866e15d638177d6823de0f09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 33f27d2585f4fb4d65181cbfd9211ea87b837e73
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112678"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233889"
 ---
 # <a name="binding-objective-c-libraries"></a>Objective-c 라이브러리 바인딩
 
@@ -49,7 +49,7 @@ IOS 및 Mac 라이브러리 바인딩을 빌드할 수 있습니다.
 [![](objective-c-libraries-images/00vs-sml.png "iOS 바인딩 라이브러리 iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
 > [!IMPORTANT]
-> 참고:에 대 한 바인딩 프로젝트 **Xamarin.Mac** mac 용 Visual Studio에만 지원 됩니다
+> 참고: 프로젝트에 대 한 바인딩 **Xamarin.Mac** mac 용 Visual Studio에만 지원 됩니다
 
 -----
 
@@ -214,7 +214,7 @@ string SetText ([NullAllowed] string text);
 및 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
 특성입니다.
 
-사용 하는 경우는 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 설명 u c h-네이티브 아래의 속성에 실제로 두 메서드를 바인딩합니다: getter 및 setter. 내보내기를 제공 하는 이름을 합니다 **basename** setter 단어의 첫 글자를 하면 "set"를 추가 하 여 계산 됩니다는 **basename** 대문자나 소문자 및 수행 하는 선택기에는 인수입니다. 즉 `[Export ("label")]` 에 적용 된 속성은 실제로 "label" 바인딩합니다 및 "setLabel:" Objective-c 메서드.
+사용 하는 경우는 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성 설명 u c h-네이티브 아래의 속성에 실제로 두 메서드를 바인딩합니다: getter 및 setter. 내보내기를 제공 하는 이름을 합니다 **basename** setter 단어의 첫 글자를 하면 "set"를 추가 하 여 계산 됩니다는 **basename** 대문자나 소문자 및 수행 하는 선택기에는 인수입니다. 즉 `[Export ("label")]` 에 적용 된 속성은 실제로 "label" 바인딩합니다 및 "setLabel:" Objective-c 메서드입니다.
 
 Objective-c로 속성을 위에서 설명한 패턴을 따르지 않습니다 하 고 이름은 수동으로 덮어쓸 경우도 있습니다. 이러한 경우에이 바인딩을 사용 하 여 생성 되는 방식을 제어할 수 있습니다는 [`[Bind]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) 
 예를 들어 getter 또는 setter가 특성:
@@ -674,7 +674,7 @@ CAScroll [] SupportedScrollModes { get; set; }
 
 ### <a name="binding-notifications"></a>바인딩 알림
 
-알림은에 게시 되는 메시지는 `NSNotificationCenter.DefaultCenter` 다른 응용 프로그램의 특정 부분에서 메시지를 브로드캐스트 메커니즘으로 사용 됩니다. 개발자는 일반적으로 사용 하 여 알림을 구독 합니다 [NSNotificationCenter](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/)의 [AddObserver](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/M/AddObserver/) 메서드. 에 저장 된 페이로드를 응용 프로그램에 알림 센터에 메시지를 게시 하는 경우 일반적으로 포함 된 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) 사전입니다. 이 사전은 약하게 형식화 하 고 사용자는 일반적으로 키가 사전에 사전에 저장할 수 있는 값의 형식을 사용할 수 있는 설명서에서를 읽이 필요가 발생 하기 쉬우므로 오류는 정보를 가져오기. 경우에 따라 키의 존재도 부울 값으로 사용 됩니다.
+알림은에 게시 되는 메시지는 `NSNotificationCenter.DefaultCenter` 다른 응용 프로그램의 특정 부분에서 메시지를 브로드캐스트 메커니즘으로 사용 됩니다. 개발자는 일반적으로 사용 하 여 알림을 구독 합니다 [NSNotificationCenter](xref:Foundation.NSNotificationCenter)의 [AddObserver](xref:Foundation.NSNotificationCenter.AddObserver(Foundation.NSString,System.Action{Foundation.NSNotification})) 메서드. 에 저장 된 페이로드를 응용 프로그램에 알림 센터에 메시지를 게시 하는 경우 일반적으로 포함 된 [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) 사전입니다. 이 사전은 약하게 형식화 하 고 사용자는 일반적으로 키가 사전에 사전에 저장할 수 있는 값의 형식을 사용할 수 있는 설명서에서를 읽이 필요가 발생 하기 쉬우므로 오류는 정보를 가져오기. 경우에 따라 키의 존재도 부울 값으로 사용 됩니다.
 
 Xamarin.iOS 바인딩 생성기 알림을 바인딩하는 개발자를 위한 지원을 제공 합니다. 이 작업을 수행 하려면 설정 합니다 [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
 도 되었습니다 속성에 특성으로 태그가 지정 된 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
@@ -703,7 +703,7 @@ public class MyClass {
 }
 ```
 
-사용자 코드의 다음 쉽게 알림을 구독할 수에 게시 합니다 [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) 다음과 같은 코드를 사용 하 여:
+사용자 코드의 다음 쉽게 알림을 구독할 수에 게시 합니다 [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) 다음과 같은 코드를 사용 하 여:
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -717,7 +717,7 @@ var token = MyClass.Notifications.ObserverDidStart ((notification) => {
 token.Dispose ();
 ```
 
-하거나 호출할 수 있습니다 [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject/) 토큰을 전달 합니다. 도우미를 지정 해야 알림이 매개 변수를 포함할 경우 `EventArgs` 다음과 같은 인터페이스:
+하거나 호출할 수 있습니다 [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) 토큰을 전달 합니다. 도우미를 지정 해야 알림이 매개 변수를 포함할 경우 `EventArgs` 다음과 같은 인터페이스:
 
 ```csharp
 interface MyClass {
@@ -740,7 +740,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스를 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성을 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) "ScreenXKey" 및 "ScreenYKey" 키를 사용 하 여 사전 각각 적절 한 변환을 적용 합니다. 합니다 `[ProbePresence]` 특성을 사용 하는 생성기에 대 한 키에 설정 된 경우 프로브를 `UserInfo`, 값을 추출 하려고 하는 대신 합니다. 이 경우 키의 현재 상태 (일반적으로 부울 값)의 값에 사용 됩니다.
+위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스를 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성을 [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) "ScreenXKey" 및 "ScreenYKey" 키를 사용 하 여 사전 각각 적절 한 변환을 적용 합니다. 합니다 `[ProbePresence]` 특성을 사용 하는 생성기에 대 한 키에 설정 된 경우 프로브를 `UserInfo`, 값을 추출 하려고 하는 대신 합니다. 이 경우 키의 현재 상태 (일반적으로 부울 값)의 값에 사용 됩니다.
 
 이 옵션을 사용 하면 다음과 같은 코드를 작성할 수 있습니다.
 
@@ -918,7 +918,7 @@ public class  XyzOptions {
 
 이렇게 하려면 다음을 수행 해야 합니다.
 
-* 강력한 형식의 클래스를 만듭니다 [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 각 속성에 대 한 다양 한 getter 및 setter를 제공 합니다.
+* 강력한 형식의 클래스를 만듭니다 [DictionaryContainer](xref:Foundation.DictionaryContainer) 각 속성에 대 한 다양 한 getter 및 setter를 제공 합니다.
 * 수행 방법에 대 한 오버 로드를 선언 `NSDictionary` 새 강력한 형식의 버전을 수행 합니다.
 
 수동으로 강력한 형식의 클래스를 하거나 만들 수도 있고 생성기를 사용 하 여 작업을 수행할 수 있습니다.  먼저 이렇게 수동으로 진행 상황을 파악 하는 방법을 차례로 자동 방법을 탐색 합니다.
@@ -1404,5 +1404,5 @@ Xamarin.iOS v3.2 기준으로 사용 하 여 표시 된 프로토콜에서 상�
 ## <a name="related-links"></a>관련 링크
 
 - [바인딩 샘플](https://developer.xamarin.com/samples/BindingSample/)
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

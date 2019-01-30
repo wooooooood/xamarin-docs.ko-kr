@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 923eebc2674abdbbd66d9db11bebf9f503928569
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107328"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233330"
 ---
 # <a name="search-bars-in-xamarinios"></a>Xamarin.iOS에서 검색 표시줄
 
@@ -84,7 +84,7 @@ searchBar.SearchButtonClicked += (sender, e) => {
 
 - **자리 표시자 텍스트 프롬프트** – 제안 하 고 사용자가 검색 표시줄을 사용 해야 하는 방법을 지시 합니다. 이러한 속성을 사용 합니다. 예를 들어, 앱 저장소의 목록을 표시 하는 경우 사용할 수 있습니다 prompt 속성에는 "을 입력할 수는 도시, 스토리 이름 또는 우편 번호" 것이 좋습니다.
 - **스타일을 검색** – 있거나 검색 표시줄을 설정할 수 있습니다 **Prominent** 하거나 **최소**합니다. 주요를 사용 하 여 검색 모음 검색 표시줄에 그려질 포커스를 제외 하 고 화면의 다른 모든 색칠 합니다. 최소 스타일 검색 표시줄 해당 환경을 사용 하 여 결합 됩니다.
-- **기능** – UI 요소를 표시만 이러한 속성을 사용 하도록 설정 합니다. 에 설명 된 대로 올바른 이벤트를 발생 시켜 이러한 기능을 구현 해야 합니다는 [검색 표시줄 API 문서](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **기능** – UI 요소를 표시만 이러한 속성을 사용 하도록 설정 합니다. 에 설명 된 대로 올바른 이벤트를 발생 시켜 이러한 기능을 구현 해야 합니다는 [검색 표시줄 API 문서](xref:UIKit.UISearchBar)
     - 검색 결과 보여 줍니다. / 책갈피 단추 – 검색 표시줄에 검색 결과 또는 책갈피 아이콘을 보여 줍니다.
     - 검색 기능을 종료할 수 있도록 사용자가 취소 단추-를 보여 줍니다. 이 옵션이 선택 하는 것이 좋습니다.
     - 이렇게 하면 해당 검색 범위를 제한 하려면 사용자가 범위 가로 막대형 – 보여 줍니다. 예를 들어, 음악 앱에서 검색 하는 경우 Apple 음악 또는 특정 song 또는 artist 해당 라이브러리를 검색 하려는 사용자를 선택할 수 있습니다. 다양 한 옵션을 표시 하려면 타이틀의 배열을 추가 합니다 **ScopeBarTitles** 속성입니다.

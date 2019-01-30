@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: b90c59f09217077262c3aced9ee9e5d07849c25c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2dc56d9c5b63d428663d98bae4c8687c1f621a04
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106587"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233196"
 ---
 # <a name="threading-in-xamarinios"></a>Xamarin.iOS에서 스레딩
 
@@ -35,7 +35,7 @@ Xamarin을 사용 하는 적극 권장 합니다 [Task Parallel Library](http://
 
 ## <a name="developing-responsive-applications"></a>응답성이 뛰어난 응용 프로그램 개발
 
-UI 요소에 대 한 액세스는 응용 프로그램에 대 한 기본 루프를 실행 하는 동일한 스레드로 제한 되어야 합니다. 사용 하 여 코드를 큐 해야 변경 주 UI 스레드에서 않으려면 [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), 다음과 같은:
+UI 요소에 대 한 액세스는 응용 프로그램에 대 한 기본 루프를 실행 하는 동일한 스레드로 제한 되어야 합니다. 사용 하 여 코드를 큐 해야 변경 주 UI 스레드에서 않으려면 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject), 다음과 같은:
 
 ```csharp
 MyThreadedRoutine ()  

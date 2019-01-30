@@ -1,18 +1,18 @@
 ---
 title: 요약 27 장입니다. 사용자 지정 렌더러
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 27 장 요약 합니다. 사용자 지정 렌더러'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 27 장입니다. 사용자 지정 렌더러
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 1a992c192cb4d7fc24490257b67c1b851abcd949
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 96d06626fe0a8a4bb5aca59de454f707d4dfc731
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058346"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233876"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>요약 27 장입니다. 사용자 지정 렌더러
 
@@ -45,7 +45,7 @@ Xamarin.Forms 플랫폼 특정 코드를 포함 하는 4 명의 어셈블리 있
 IOS [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25) 제네릭 인수를 포함 합니다.
 
 - `TView` 제한 [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` 제한 [`UIKit.UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/)
+- `TNativeView` 제한 [`UIKit.UIView`](xref:UIKit.UIView)
 
 Android [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) 제네릭 인수를 포함 합니다.
 

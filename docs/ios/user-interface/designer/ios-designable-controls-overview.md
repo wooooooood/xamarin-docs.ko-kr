@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 00bf7290d5f7165feb5b67cd91c15a96b7d3eaf8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118372"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233668"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너에서 사용자 지정 컨트롤
 
@@ -24,8 +24,8 @@ IOS 용 Xamarin 디자이너 응용 프로그램의 사용자 인터페이스 �
 
 다음 요구 사항을 모두 충족 하는 컨트롤이 디자인 화면에서 렌더링 될:
 
-1.  직접 또는 간접 하위 클래스는 [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) 하거나 [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller)합니다. 다른 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) 서브 클래스는 디자인 화면에서 아이콘으로 표시 됩니다.
-2.  에 [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) 목표 C에 노출 하려면
+1.  직접 또는 간접 하위 클래스는 [UIView](xref:UIKit.UIView) 하거나 [UIViewController](xref:UIKit.UIViewController)합니다. 다른 [NSObject](xref:Foundation.NSObject) 서브 클래스는 디자인 화면에서 아이콘으로 표시 됩니다.
+2.  에 [RegisterAttribute](xref:Foundation.RegisterAttribute) 목표 C에 노출 하려면
 3.  있기 [필요한 IntPtr 생성자](~/ios/internals/api-design/index.md)합니다.
 4.  하거나 구현 합니다 [IComponent](xref:System.ComponentModel.IComponent) 되었거나 인터페이스는 [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) True로 설정 합니다.
 
@@ -38,17 +38,17 @@ IOS 용 Xamarin 디자이너 응용 프로그램의 사용자 인터페이스 �
 다음 조건이 충족 될 경우 사용자 지정 컨트롤에서 선언 된 속성 [속성] 패널에 표시 됩니다.
 
 1.  속성이 공용 getter 및 setter.
-1.  속성에는 [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 뿐만 [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) True로 설정 합니다.
-1.  속성 형식은 숫자 형식, 열거형, string, bool [SizeF](xref:System.Drawing.SizeF)를 [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), 또는 [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/)합니다. 이 목록은 지원 되는 형식 나중에 확장할 수 있습니다.
+1.  속성에는 [ExportAttribute](xref:Foundation.ExportAttribute) 뿐만 [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) True로 설정 합니다.
+1.  속성 형식은 숫자 형식, 열거형, string, bool [SizeF](xref:System.Drawing.SizeF)를 [UIColor](xref:UIKit.UIColor), 또는 [UIImage](xref:UIKit.UIImage)합니다. 이 목록은 지원 되는 형식 나중에 확장할 수 있습니다.
 
 
 속성 지정 될 수 있습니다는 [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) 에 대 한 [속성] 패널에 표시 되는 레이블을 지정 합니다.
 
 ## <a name="initialization"></a>초기화
 
-에 대 한 `UIViewController` 서브 클래스를 사용할지를 [ViewDidLoad](https://developer.xamarin.com/api/member/UIKit.UIViewController.ViewDidLoad/) 디자이너에서 만든 보기에 종속 된 코드가 메서드.
+에 대 한 `UIViewController` 서브 클래스를 사용할지를 [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) 디자이너에서 만든 보기에 종속 된 코드가 메서드.
 
-에 대 한 `UIView` 및 기타 `NSObject` 하위 클래스는 [AwakeFromNib](https://developer.xamarin.com/api/member/Foundation.NSObject.AwakeFromNib/) 메서드는 레이아웃 파일에서 로드 된 후 사용자 지정 컨트롤의 초기화를 수행 하는 데 좋은 위치입니다. 컨트롤의 생성자를 실행 하기 전에 설정할 수는 경우 속성 패널에서 설정 된 사용자 지정 속성을 설정할 수는 이것이 `AwakeFromNib` 라고 합니다.
+에 대 한 `UIView` 및 기타 `NSObject` 하위 클래스는 [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) 메서드는 레이아웃 파일에서 로드 된 후 사용자 지정 컨트롤의 초기화를 수행 하는 데 좋은 위치입니다. 컨트롤의 생성자를 실행 하기 전에 설정할 수는 경우 속성 패널에서 설정 된 사용자 지정 속성을 설정할 수는 이것이 `AwakeFromNib` 라고 합니다.
 
 
 ```csharp
@@ -138,7 +138,7 @@ public class CustomView : UIView {
 
 디자인 화면에서 사용자 지정 컨트롤을 몇 가지 제한 사항을 준수 해야 합니다.
 
--  앱 번들 리소스는 디자인 모드에서 사용할 수 없습니다. 통해 로드 된 경우에 사용할 수 있는 이미지가 [UIImage 메서드](https://developer.xamarin.com/api/type/UIKit.UIImage/%2fM) 합니다.
+-  앱 번들 리소스는 디자인 모드에서 사용할 수 없습니다. 통해 로드 된 경우에 사용할 수 있는 이미지가 [UIImage 메서드](xref:UIKit.UIImage) 합니다.
 -  디자인 모드에서 웹 요청과 같은 비동기 작업을 수행 되어야 합니다. 디자인 화면 애니메이션 또는 컨트롤의 UI 다른 비동기 업데이트를 지원 하지 않습니다.
 
 

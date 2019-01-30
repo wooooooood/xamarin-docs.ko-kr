@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: beb9e8f351a1cecc6017a08345f7cfc5e207ba35
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9db9902dfbf602ba21b353f3a17920dc37b03ee5
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996219"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234006"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -53,17 +53,17 @@ EShopOnContainers 모바일 앱 인증을 수행 하 여 Api에 대 한 액세�
 
 ### <a name="adding-identityserver-to-a-web-application"></a>IdentityServer는 웹 응용 프로그램에 추가
 
-IdentityServer 4를 사용 하도록 ASP.NET Core 웹 응용 프로그램에 대 한 순서 대로 웹 응용 프로그램의 Visual Studio 솔루션에 추가 되어야 합니다. 자세한 내용은 [설정과 개요](https://identityserver4.readthedocs.io/en/release/quickstarts/0_overview.html) IdentityServer 설명서에서.
+IdentityServer 4를 사용 하도록 ASP.NET Core 웹 응용 프로그램에 대 한 순서 대로 웹 응용 프로그램의 Visual Studio 솔루션에 추가 되어야 합니다. 자세한 내용은 [개요](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) IdentityServer 설명서에서.
 
 IdentityServer는 웹 응용 프로그램의 Visual Studio 솔루션에 포함 된, 일단 추가 해야 웹 응용 프로그램의 HTTP 요청 처리 파이프라인에 OpenID Connect 및 OAuth 2.0 끝점에 요청을 서비스할 수 있도록 합니다. 이 구현 합니다 `Configure` 웹 응용 프로그램의 메서드 `Startup` 클래스에 다음 코드 예제에서 설명한 것 처럼:
 
 ```csharp
-public void Configure(  
-    IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)  
+public void Configure(  
+    IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)  
 {  
-    ...  
-    app.UseIdentity();  
-    ...  
+    ...  
+    app.UseIdentity();  
+    ...  
 }
 ```
 
@@ -74,19 +74,19 @@ public void Configure(
 IdentityServer에서 구성 해야 합니다 `ConfigureServices` 웹 응용 프로그램의 메서드 `Startup` 를 호출 하 여 클래스를 `services.AddIdentityServer` eShopOnContainers 참조 응용 프로그램에서 다음 코드 예제에서 설명한 것 처럼 메서드:
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)  
+public void ConfigureServices(IServiceCollection services)  
 {  
-    ...  
-    services.AddIdentityServer(x => x.IssuerUri = "null")  
-        .AddSigningCredential(Certificate.Get())                 
-        .AddAspNetIdentity<ApplicationUser>()  
-        .AddConfigurationStore(builder =>  
-            builder.UseSqlServer(connectionString, options =>  
-                options.MigrationsAssembly(migrationsAssembly)))  
-        .AddOperationalStore(builder =>  
-            builder.UseSqlServer(connectionString, options =>  
-                options.MigrationsAssembly(migrationsAssembly)))  
-        .Services.AddTransient<IProfileService, ProfileService>();  
+    ...  
+    services.AddIdentityServer(x => x.IssuerUri = "null")  
+        .AddSigningCredential(Certificate.Get())                 
+        .AddAspNetIdentity<ApplicationUser>()  
+        .AddConfigurationStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
+                options.MigrationsAssembly(migrationsAssembly)))  
+        .AddOperationalStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
+                options.MigrationsAssembly(migrationsAssembly)))  
+        .Services.AddTransient<IProfileService, ProfileService>();  
 }
 ```
 
@@ -97,39 +97,39 @@ public void ConfigureServices(IServiceCollection services)
 -   요청 토큰에 연결 하는 클라이언트입니다.
 -   ASP.NET Core Id입니다.
 
->💡 **팁**: 동적으로 IdentityServer 4 구성을 로드 합니다. IdentityServer 4 Api IdentityServer 구성 개체의 메모리 내 목록에서 구성할 수 있습니다. EShopOnContainers 참조 응용 프로그램을 이러한 메모리 내 컬렉션에 응용 프로그램에 하드 코딩 됩니다. 그러나 프로덕션 시나리오에는 로드할 수 동적으로 데이터베이스 또는 구성 파일에서 합니다.
+>💡 **팁**: IdentityServer 4 구성을 동적으로 로드 합니다. IdentityServer 4 Api IdentityServer 구성 개체의 메모리 내 목록에서 구성할 수 있습니다. EShopOnContainers 참조 응용 프로그램을 이러한 메모리 내 컬렉션에 응용 프로그램에 하드 코딩 됩니다. 그러나 프로덕션 시나리오에는 로드할 수 동적으로 데이터베이스 또는 구성 파일에서 합니다.
 
-IdentityServer ASP.NET Core Id를 사용 하도록 구성 하는 방법에 대 한 내용은 [ASP.NET Core Id를 사용 하 여](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) IdentityServer 설명서에서.
+IdentityServer ASP.NET Core Id를 사용 하도록 구성 하는 방법에 대 한 내용은 [ASP.NET Core Id를 사용 하 여](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) IdentityServer 설명서에서.
 
 #### <a name="configuring-api-resources"></a>API 리소스를 구성합니다.
 
 API 리소스를 구성 하는 경우는 `AddInMemoryApiResources` 메서드에 `IEnumerable<ApiResource>` 컬렉션입니다. 다음 코드 예제는 `GetApis` eShopOnContainers에서이 컬렉션을 제공 하는 방법 참조 응용 프로그램:
 
 ```csharp
-public static IEnumerable<ApiResource> GetApis()  
+public static IEnumerable<ApiResource> GetApis()  
 {  
-    return new List<ApiResource>  
-    {  
-        new ApiResource("orders", "Orders Service"),  
-        new ApiResource("basket", "Basket Service")  
-    };  
+    return new List<ApiResource>  
+    {  
+        new ApiResource("orders", "Orders Service"),  
+        new ApiResource("basket", "Basket Service")  
+    };  
 }
 ```
 
-이 메서드는 IdentityServer 주문 및 바구니 Api 보호 해야 지정 합니다. 따라서 IdentityServer 관리 되는 액세스 토큰 해야 이러한 Api 호출할 때. 에 대 한 자세한 내용은 합니다 `ApiResource` 입력을 참조 하십시오 [API 리소스](https://identityserver4.readthedocs.io/en/release/reference/api_resource.html#refapiresource) IdentityServer 4 설명서에서.
+이 메서드는 IdentityServer 주문 및 바구니 Api 보호 해야 지정 합니다. 따라서 IdentityServer 관리 되는 액세스 토큰 해야 이러한 Api 호출할 때. 에 대 한 자세한 내용은 합니다 `ApiResource` 입력을 참조 하십시오 [API 리소스](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) IdentityServer 4 설명서에서.
 
 #### <a name="configuring-identity-resources"></a>Id 리소스 구성
 
 Id 리소스를 구성 하는 경우는 `AddInMemoryIdentityResources` 메서드에 `IEnumerable<IdentityResource>` 컬렉션입니다. Id 리소스는 사용자 ID, 이름 또는 전자 메일 주소와 같은 데이터입니다. 각 id 리소스에는 고유한 이름이 있으며 임의의 클레임 유형 할당할 수 있습니다,는 사용자에 대 한 id 토큰에 포함 됩니다. 다음 코드 예제는 `GetResources` eShopOnContainers에서이 컬렉션을 제공 하는 방법 참조 응용 프로그램:
 
 ```csharp
-public static IEnumerable<IdentityResource> GetResources()  
+public static IEnumerable<IdentityResource> GetResources()  
 {  
-    return new List<IdentityResource>  
-    {  
-        new IdentityResources.OpenId(),  
-        new IdentityResources.Profile()  
-    };  
+    return new List<IdentityResource>  
+    {  
+        new IdentityResources.OpenId(),  
+        new IdentityResources.Profile()  
+    };  
 }
 ```
 
@@ -138,7 +138,7 @@ public static IEnumerable<IdentityResource> GetResources()
 > [!NOTE]
 > `IdentityResources` 클래스는 모든 (openid, 전자 메일, 프로필, 전화 및 주소) OpenID Connect 사양에 정의 된 범위를 지원 합니다.
 
-IdentityServer는 사용자 지정 id 리소스 정의 지원 합니다. 자세한 내용은 [사용자 지정 id 리소스 정의](https://identityserver4.readthedocs.io/en/release/topics/resources.html#defining-custom-identity-resources) IdentityServer 설명서에서. 에 대 한 자세한 내용은 합니다 `IdentityResource` 입력을 참조 하십시오 [Id 리소스](https://identityserver4.readthedocs.io/en/release/reference/identity_resource.html) IdentityServer 4 설명서에서.
+IdentityServer는 사용자 지정 id 리소스 정의 지원 합니다. 자세한 내용은 [사용자 지정 id 리소스 정의](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) IdentityServer 설명서에서. 에 대 한 자세한 내용은 합니다 `IdentityResource` 입력을 참조 하십시오 [Id 리소스](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) IdentityServer 4 설명서에서.
 
 #### <a name="configuring-clients"></a>클라이언트 구성
 
@@ -152,44 +152,44 @@ IdentityServer는 사용자 지정 id 리소스 정의 지원 합니다. 자세�
 클라이언트를 구성 하는 경우는 `AddInMemoryClients` 메서드에 `IEnumerable<Client>` 컬렉션입니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱에 대 한 구성을 보여 줍니다는 `GetClients` eShopOnContainers에서이 컬렉션을 제공 하는 방법 참조 응용 프로그램:
 
 ```csharp
-public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
+public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
 {
-    return new List<Client>
-    {
-        ...
-        new Client
-        {
-            ClientId = "xamarin",
-            ClientName = "eShop Xamarin OpenId Client",
-            AllowedGrantTypes = GrantTypes.Hybrid,
-            ClientSecrets =
-            {
-                new Secret("secret".Sha256())
-            },
-            RedirectUris = { clientsUrl["Xamarin"] },
-            RequireConsent = false,
-            RequirePkce = true,
-            PostLogoutRedirectUris = { $"{clientsUrl["Xamarin"]}/Account/Redirecting" },
-            AllowedCorsOrigins = { "http://eshopxamarin" },
-            AllowedScopes = new List<string>
-            {
-                IdentityServerConstants.StandardScopes.OpenId,
-                IdentityServerConstants.StandardScopes.Profile,
-                IdentityServerConstants.StandardScopes.OfflineAccess,
-                "orders",
-                "basket"
-            },
-            AllowOfflineAccess = true,
-            AllowAccessTokensViaBrowser = true
-        },
-        ...
-    };
+    return new List<Client>
+    {
+        ...
+        new Client
+        {
+            ClientId = "xamarin",
+            ClientName = "eShop Xamarin OpenId Client",
+            AllowedGrantTypes = GrantTypes.Hybrid,
+            ClientSecrets =
+            {
+                new Secret("secret".Sha256())
+            },
+            RedirectUris = { clientsUrl["Xamarin"] },
+            RequireConsent = false,
+            RequirePkce = true,
+            PostLogoutRedirectUris = { $"{clientsUrl["Xamarin"]}/Account/Redirecting" },
+            AllowedCorsOrigins = { "http://eshopxamarin" },
+            AllowedScopes = new List<string>
+            {
+                IdentityServerConstants.StandardScopes.OpenId,
+                IdentityServerConstants.StandardScopes.Profile,
+                IdentityServerConstants.StandardScopes.OfflineAccess,
+                "orders",
+                "basket"
+            },
+            AllowOfflineAccess = true,
+            AllowAccessTokensViaBrowser = true
+        },
+        ...
+    };
 }
 ```
 
 이 구성은 다음 속성에 대 한 데이터를 지정합니다.
 
--   `ClientId`클라이언트: 고유 ID입니다.
+-   `ClientId`: 클라이언트에 대 한 고유 ID입니다.
 -   `ClientName`: 클라이언트 로깅 및 동의 화면에 사용 되는 이름을 표시 합니다.
 -   `AllowedGrantTypes`: 클라이언트를 IdentityServer와 상호 작용 하려고 하는 방법을 지정 합니다. 자세한 내용은 참조 [인증 흐름을 구성](#configuring_the_authentication_flow)합니다.
 -   `ClientSecrets`: 토큰 끝점에서 토큰을 요청할 때 사용 되는 클라이언트 보안 자격 증명을 지정 합니다.
@@ -197,7 +197,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUr
 -   `RequireConsent`: 동의 화면이 필요한 지 여부를 지정 합니다.
 -   `RequirePkce`: 클라이언트는 권한 부여 코드를 사용 하 여 증명 키를 전송 해야 하는지 여부를 지정 합니다.
 -   `PostLogoutRedirectUris`: 로그 아웃 한 후에 리디렉션할 허용 된 Uri를 지정 합니다.
--   `AllowedCorsOrigins`: IdentityServer 원점에서 크로스-원본 호출을 허용할 수 있도록 클라이언트의 원본을 지정 합니다.
+-   `AllowedCorsOrigins`: IdentityServer 원점에서 크로스-원본 호출을 허용할 수 있도록 클라이언트의 출처를 지정 합니다.
 -   `AllowedScopes`: 클라이언트에 대 한 리소스를 지정 합니다. 기본적으로 클라이언트에 모든 리소스에 액세스할 수 없습니다.
 -   `AllowOfflineAccess`: 클라이언트 새로 고침 토큰을 요청할 수 있는지 여부를 지정 합니다.
 
@@ -214,7 +214,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUr
 > [!TIP]
 > 하이브리드 인증 흐름을 사용 합니다. 하이브리드 인증 흐름은 많은 브라우저 채널에 적용 되는 공격을 완화 되며 액세스 토큰을 검색 (및 가능한 경우 토큰 새로 고침) 하는 네이티브 응용 프로그램에 대 한 권장 되는 흐름.
 
-인증 흐름에 대 한 자세한 내용은 참조 하세요. [부여 유형](https://identityserver4.readthedocs.io/en/release/topics/grant_types.html) IdentityServer 4 설명서에서.
+인증 흐름에 대 한 자세한 내용은 참조 하세요. [부여 유형](https://identityserver4.readthedocs.io/en/latest/topics/grant_types.html) IdentityServer 4 설명서에서.
 
 ### <a name="performing-authentication"></a>인증을 수행합니다.
 
@@ -232,54 +232,54 @@ EShopOnContainers 모바일 앱 기호-부족 IdentityServer 요청을 전송 �
 
 ![](authentication-and-authorization-images/sign-out.png "로그 아웃 프로세스에 대 한 개략적인 개요")
 
-**그림 9-3:** sign-out 프로세스의 대략적인 개요
+**그림 9-3:** 로그 아웃 프로세스에 대 한 개략적인 개요
 
 IdentityServer와의 통신 수행한 eShopOnContainers 모바일 앱에서의 `IdentityService` 클래스를 구현 하는 `IIdentityService` 인터페이스입니다. 이 인터페이스를 구현 하는 클래스를 제공 하는 지정 `CreateAuthorizationRequest`하십시오 `CreateLogoutRequest`, 및 `GetTokenAsync` 메서드.
 
 #### <a name="signing-in"></a>로그인
 
-사용자가 누를 때를 **로그인** 단추를 `LoginView`, `SignInCommand` 에 `LoginViewModel` 클래스를 차례로 실행 하는 실행 되는 `SignInAsync` 메서드. 다음 코드 예제에서는이 메서드를 보여 줍니다.
+사용자가 누를 때를 **로그인** 단추를 `LoginView`, `SignInCommand` 에 `LoginViewModel` 클래스를 차례로 실행 하는 실행 되는 `SignInAsync` 메서드. 다음 코드 예제에서는 이 메서드를 보여줍니다.
 
 ```csharp
-private async Task SignInAsync()  
+private async Task SignInAsync()  
 {  
-    ...  
-    LoginUrl = _identityService.CreateAuthorizationRequest();  
-    IsLogin = true;  
-    ...  
+    ...  
+    LoginUrl = _identityService.CreateAuthorizationRequest();  
+    IsLogin = true;  
+    ...  
 }
 ```
 
 이 메서드를 호출 하는 `CreateAuthorizationRequest` 의 메서드는 `IdentityService` 다음 코드 예제에 나와 있는 클래스:
 
 ```csharp
-public string CreateAuthorizationRequest()
+public string CreateAuthorizationRequest()
 {
-    // Create URI to authorization endpoint
-    var authorizeRequest = new AuthorizeRequest(GlobalSetting.Instance.IdentityEndpoint);
+    // Create URI to authorization endpoint
+    var authorizeRequest = new AuthorizeRequest(GlobalSetting.Instance.IdentityEndpoint);
 
-    // Dictionary with values for the authorize request
-    var dic = new Dictionary<string, string>();
-    dic.Add("client_id", GlobalSetting.Instance.ClientId);
-    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
-    dic.Add("response_type", "code id_token");
-    dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
-    dic.Add("nonce", Guid.NewGuid().ToString("N"));
-    dic.Add("code_challenge", CreateCodeChallenge());
-    dic.Add("code_challenge_method", "S256");
+    // Dictionary with values for the authorize request
+    var dic = new Dictionary<string, string>();
+    dic.Add("client_id", GlobalSetting.Instance.ClientId);
+    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
+    dic.Add("response_type", "code id_token");
+    dic.Add("scope", "openid profile basket orders locations marketing offline_access");
+    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
+    dic.Add("nonce", Guid.NewGuid().ToString("N"));
+    dic.Add("code_challenge", CreateCodeChallenge());
+    dic.Add("code_challenge_method", "S256");
 
-    // Add CSRF token to protect against cross-site request forgery attacks.
-    var currentCSRFToken = Guid.NewGuid().ToString("N");
-    dic.Add("state", currentCSRFToken);
+    // Add CSRF token to protect against cross-site request forgery attacks.
+    var currentCSRFToken = Guid.NewGuid().ToString("N");
+    dic.Add("state", currentCSRFToken);
 
-    var authorizeUri = authorizeRequest.Create(dic); 
-    return authorizeUri;
+    var authorizeUri = authorizeRequest.Create(dic); 
+    return authorizeUri;
 }
 
 ```
 
-이 메서드는 IdentityServer의에 대 한 URI를 만듭니다 [권한 부여 끝점](https://identityserver4.readthedocs.io/en/release/endpoints/authorize.html), 필수 매개 변수를 사용 합니다. 권한 부여 끝점은 `/connect/authorize` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
+이 메서드는 IdentityServer의에 대 한 URI를 만듭니다 [권한 부여 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html), 필수 매개 변수를 사용 합니다. 권한 부여 끝점은 `/connect/authorize` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
 
 > [!NOTE]
 > OAuth 코드 Exchange (PKCE) 확장에 대 한 증명 키를 구현 하 여 eShopOnContainers 모바일 앱의 공격 노출 영역 감소 합니다. PKCE을 가로채는 경우 사용 하는 권한 부여 코드를 보호 합니다. 클라이언트 비밀 검증 도구를 권한 부여 요청에 전달 되는 해시를 생성 하 여 수행 됩니다 하 고 표시 되는 해시 되지 않은 권한 부여 코드를 사용 하는 경우. PKCE에 대 한 자세한 내용은 참조 하세요. [OAuth 공용 클라이언트에서 코드 Exchange에 대 한 증명 키](https://tools.ietf.org/html/rfc7636) Internet Engineering Task Force 웹 사이트입니다.
@@ -293,31 +293,31 @@ public string CreateAuthorizationRequest()
 로그인 완료 되 면 합니다 [ `WebView` ](xref:Xamarin.Forms.WebView) 반환 하는 URI로 리디렉션됩니다. 이 `WebView` 탐색 하면 합니다 `NavigateAsync` 에서 메서드는 `LoginViewModel` 실행할 다음 코드 예제에 나와 있는 클래스:
 
 ```csharp
-private async Task NavigateAsync(string url)  
+private async Task NavigateAsync(string url)  
 {  
-    ...  
-    var authResponse = new AuthorizeResponse(url);  
-    if (!string.IsNullOrWhiteSpace(authResponse.Code))  
-    {  
-        var userToken = await _identityService.GetTokenAsync(authResponse.Code);  
-        string accessToken = userToken.AccessToken;  
+    ...  
+    var authResponse = new AuthorizeResponse(url);  
+    if (!string.IsNullOrWhiteSpace(authResponse.Code))  
+    {  
+        var userToken = await _identityService.GetTokenAsync(authResponse.Code);  
+        string accessToken = userToken.AccessToken;  
 
-        if (!string.IsNullOrWhiteSpace(accessToken))  
-        {  
-            Settings.AuthAccessToken = accessToken;  
-            Settings.AuthIdToken = authResponse.IdentityToken;  
+        if (!string.IsNullOrWhiteSpace(accessToken))  
+        {  
+            Settings.AuthAccessToken = accessToken;  
+            Settings.AuthIdToken = authResponse.IdentityToken;  
 
-            await NavigationService.NavigateToAsync<MainViewModel>();  
-            await NavigationService.RemoveLastFromBackStackAsync();  
-        }  
-    }  
-    ...  
+            await NavigationService.NavigateToAsync<MainViewModel>();  
+            await NavigationService.RemoveLastFromBackStackAsync();  
+        }  
+    }  
+    ...  
 }
 ```
 
-이 메서드가 반환 된 URI에 포함 된 인증 응답을 구문 분석 및 IdentityServer의 요청을 하면 유효한 권한 부여 코드를가 있는 제공한 [토큰 끝점](https://identityserver4.readthedocs.io/en/release/endpoints/token.html), 권한 부여 코드를 전달 합니다 PKCE 비밀 검증 도구 및 기타 매개 변수가 필요합니다. 토큰 끝점은 `/connect/token` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
+이 메서드가 반환 된 URI에 포함 된 인증 응답을 구문 분석 및 IdentityServer의 요청을 하면 유효한 권한 부여 코드를가 있는 제공한 [토큰 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), 권한 부여 코드를 전달 합니다 PKCE 비밀 검증 도구 및 기타 매개 변수가 필요합니다. 토큰 끝점은 `/connect/token` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
 
->💡 **팁**: 유효성 검사 Uri를 반환 합니다. EShopOnContainers 모바일 앱 반환 URI의 유효성을 검사 하지 않습니다, 하지만 오픈 리디렉션 공격 방지 하기 위해 알려진 위치로 반환 하는 URI 참조는 유효성을 검사 하는 것이 좋습니다.
+>💡 **팁**: 반환 된 Uri의 유효성을 검사 합니다. EShopOnContainers 모바일 앱 반환 URI의 유효성을 검사 하지 않습니다, 하지만 오픈 리디렉션 공격 방지 하기 위해 알려진 위치로 반환 하는 URI 참조는 유효성을 검사 하는 것이 좋습니다.
 
 토큰 끝점 PKCE 비밀 검증 도구를 유효한 권한 부여 코드를 수신 하는 경우는 액세스 토큰, id 토큰 및 새로 고침 토큰을 사용 하 여 응답 합니다. 액세스 토큰 (API 리소스에 액세스할 수 있음) 및 id 토큰은 응용 프로그램 설정으로 저장 됩니다 하 고 페이지 탐색 수행 됩니다. 따라서 eShopOnContainers 모바일 앱에서이 따라 이것이:으로 탐색 되는 사용자가 성공적으로 IdentityServer를 사용 하 여 인증할 수에 합니다 `MainView` , 즉 페이지를 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 표시 하는 `CatalogView` 선택한 탭으로 합니다.
 
@@ -333,52 +333,52 @@ private async Task NavigateAsync(string url)
 뷰를 만들고 탐색 한는 `InitializeAsync` 보기의 관련된 보기 모델의 메서드를 실행 하는 다음 실행 합니다 `Logout` 메서드는 `LoginViewModel` 다음 코드 예제에 나와 있는 클래스:
 
 ```csharp
-private void Logout()  
+private void Logout()  
 {  
-    var authIdToken = Settings.AuthIdToken;  
-    var logoutRequest = _identityService.CreateLogoutRequest(authIdToken);  
+    var authIdToken = Settings.AuthIdToken;  
+    var logoutRequest = _identityService.CreateLogoutRequest(authIdToken);  
 
-    if (!string.IsNullOrEmpty(logoutRequest))  
-    {  
-        // Logout  
-        LoginUrl = logoutRequest;  
-    }  
-    ...  
+    if (!string.IsNullOrEmpty(logoutRequest))  
+    {  
+        // Logout  
+        LoginUrl = logoutRequest;  
+    }  
+    ...  
 }
 ```
 
-이 메서드를 호출 하는 `CreateLogoutRequest` 의 메서드는 `IdentityService` 매개 변수로 응용 프로그램 설정에서 id 토큰을 전달 하는 클래스를 검색 합니다. 응용 프로그램 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다. 다음 코드 예제는 `CreateLogoutRequest` 메서드:
+이 메서드를 호출 하는 `CreateLogoutRequest` 의 메서드는 `IdentityService` 매개 변수로 응용 프로그램 설정에서 id 토큰을 전달 하는 클래스를 검색 합니다. 응용 프로그램 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다. 다음 코드 예제는 `CreateLogoutRequest` 메서드를 보여줍니다.
 
 ```csharp
-public string CreateLogoutRequest(string token)  
+public string CreateLogoutRequest(string token)  
 {  
-    ...  
-    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",   
-        GlobalSetting.Instance.LogoutEndpoint,  
-        token,  
-        GlobalSetting.Instance.LogoutCallback);  
+    ...  
+    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",   
+        GlobalSetting.Instance.LogoutEndpoint,  
+        token,  
+        GlobalSetting.Instance.LogoutCallback);  
 }
 ```
 
-이 메서드는 IdentityServer의 URI를 만듭니다 [세션 끝점 종료](https://identityserver4.readthedocs.io/en/release/endpoints/endsession.html#refendsession), 필수 매개 변수를 사용 하 여 합니다. 세션 끝점은 `/connect/endsession` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
+이 메서드는 IdentityServer의 URI를 만듭니다 [세션 끝점 종료](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession), 필수 매개 변수를 사용 하 여 합니다. 세션 끝점은 `/connect/endsession` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
 
 반환 된 URI에 저장 됩니다는 `LoginUrl` 의 속성을 `LoginViewModel` 클래스입니다. 하는 동안 합니다 `IsLogin` 속성은 `true`, [ `WebView` ](xref:Xamarin.Forms.WebView) 에 `LoginView` 표시 됩니다. `WebView` 데이터 바인딩합니다 해당 [ `Source` ](xref:Xamarin.Forms.WebView.Source) 속성을를 `LoginUrl` 의 속성을 `LoginViewModel` 클래스 및 따라서 IdentityServer 로그 아웃 요청을 만듭니다 때는 `LoginUrl` 속성 IdentityServer의 최종 세션 끝점입니다. IdentityServer는 사용자 로그인이 요청을 수신 하는 경우 로그 아웃 발생 합니다. 인증 쿠키 인증 미들웨어에서 ASP.NET Core에서 관리 하는 쿠키를 사용 하 여 추적 됩니다. 따라서 IdentityServer 아웃 인증 쿠키를 제거 및 post 로그 아웃 리디렉션 URI를 클라이언트에 다시 보냅니다.
 
 모바일 앱에는 [ `WebView` ](xref:Xamarin.Forms.WebView) 후 로그 아웃 리디렉션 URI로 리디렉션됩니다. 이 `WebView` 탐색 하면 합니다 `NavigateAsync` 에서 메서드는 `LoginViewModel` 실행할 다음 코드 예제에 나와 있는 클래스:
 
 ```csharp
-private async Task NavigateAsync(string url)  
+private async Task NavigateAsync(string url)  
 {  
-    ...  
-    Settings.AuthAccessToken = string.Empty;  
-    Settings.AuthIdToken = string.Empty;  
-    IsLogin = false;  
-    LoginUrl = _identityService.CreateAuthorizationRequest();  
-    ...  
+    ...  
+    Settings.AuthAccessToken = string.Empty;  
+    Settings.AuthIdToken = string.Empty;  
+    IsLogin = false;  
+    LoginUrl = _identityService.CreateAuthorizationRequest();  
+    ...  
 }
 ```
 
-이 메서드는 id 토큰 및 응용 프로그램 설정의 액세스 토큰을 모두 지웁니다 고는 `IsLogin` 속성을 `false`, 있어를 [ `WebView` ](xref:Xamarin.Forms.WebView) 에 `LoginView` 보이지 않는 되도록 페이지 . 마지막으로, 합니다 `LoginUrl` IdentityServer URI의 속성이 [권한 부여 끝점](https://identityserver4.readthedocs.io/en/release/endpoints/authorize.html), 필수 매개 변수를 사용 하 여 다음에 준비 과정에서 사용자를 로그인 시작 합니다.
+이 메서드는 id 토큰 및 응용 프로그램 설정의 액세스 토큰을 모두 지웁니다 고는 `IsLogin` 속성을 `false`, 있어를 [ `WebView` ](xref:Xamarin.Forms.WebView) 에 `LoginView` 보이지 않는 되도록 페이지 . 마지막으로, 합니다 `LoginUrl` IdentityServer URI의 속성이 [권한 부여 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html), 필수 매개 변수를 사용 하 여 다음에 준비 과정에서 사용자를 로그인 시작 합니다.
 
 페이지 탐색에 대 한 정보를 참조 하세요 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)합니다. 하는 방법에 대 한 자세한 [ `WebView` ](xref:Xamarin.Forms.WebView) 탐색 하면 참조를 실행 하는 보기 모델 메서드 [동작을 사용 하 여 호출 탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)합니다. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
 
@@ -387,7 +387,7 @@ private async Task NavigateAsync(string url)
 
 <a name="authorization" />
 
-## <a name="authorization"></a>Authorization
+## <a name="authorization"></a>권한 부여
 
 ASP.NET Core web Api는 자주 액세스 권한을 부여 해야 인증 후 일부 인증 된 사용자가 사용할 수 있지만 전체가 아닌 서비스를 api를 수 있습니다.
 
@@ -395,9 +395,9 @@ ASP.NET Core web Api는 자주 액세스 권한을 부여 해야 인증 후 일�
 
 ```csharp
 [Authorize]  
-public class BasketController : Controller  
+public class BasketController : Controller  
 {  
-    ...  
+    ...  
 }
 ```
 
@@ -419,16 +419,16 @@ EShopOnContainers 모바일 앱 id 마이크로 서비스와 통신 하 고 인�
 IdentityServer와 권한 부여를 수행 하려면 해당 인증 미들웨어는 웹 응용 프로그램의 HTTP 요청 파이프라인에 추가 되어야 합니다. 미들웨어에 추가 되는 `ConfigureAuth` 웹 응용 프로그램의 메서드 `Startup` 클래스에서 호출 되는 `Configure` 메서드 하며 eShopOnContainers 참조 응용 프로그램에서 다음 코드 예제에 나와:
 
 ```csharp
-protected virtual void ConfigureAuth(IApplicationBuilder app)  
+protected virtual void ConfigureAuth(IApplicationBuilder app)  
 {  
-    var identityUrl = Configuration.GetValue<string>("IdentityUrl");  
-    app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions  
-    {  
-        Authority = identityUrl.ToString(),  
-        ScopeName = "basket",  
-        RequireHttpsMetadata = false  
-    });  
-} 
+    var identityUrl = Configuration.GetValue<string>("IdentityUrl");  
+    app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions  
+    {  
+        Authority = identityUrl.ToString(),  
+        ScopeName = "basket",  
+        RequireHttpsMetadata = false  
+    });  
+} 
 ```
 
 이 메서드는 유효한 액세스 토큰을 사용 하 여 API만 액세스할 수 있는지 확인 합니다. 미들웨어에서 신뢰할 수 있는 발급자 전송 되도록 하려면 들어오는 토큰의 유효성을 검사 하 고 토큰을 수신 하는 API를 사용 하 여 사용할 유효한 지 확인 합니다. 따라서 순서나 바구니 컨트롤러에 검색 401 (권한 없음된) HTTP 상태 코드를 액세스 토큰을 필수 항목 임을 나타내는 반환 됩니다.
@@ -441,8 +441,8 @@ protected virtual void ConfigureAuth(IApplicationBuilder app)
 요청을 수행할 때 순서 지정 및 장바구니 마이크로 서비스, 액세스 토큰을 인증 프로세스 중 IdentityServer에서 가져온 다음 코드 예제에 표시 된 대로 요청에 포함 되어야 합니다.
 
 ```csharp
-var authToken = Settings.AuthAccessToken;  
-Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
+var authToken = Settings.AuthAccessToken;  
+Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
 ```
 
 액세스 토큰을 응용 프로그램 설정 대로 저장 됩니다는 플랫폼별 저장소에서 검색 및 호출에 포함 된 `GetOrderAsync` 에서 메서드를 `OrderService` 클래스.
@@ -450,12 +450,12 @@ Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), a
 마찬가지로, 액세스 토큰을 포함 해야 API를 보호 하는 IdentityServer 데이터를 보내는 경우 다음 코드 예제에 표시 된 대로:
 
 ```csharp
-var authToken = Settings.AuthAccessToken;  
-await _basketService.UpdateBasketAsync(new CustomerBasket  
+var authToken = Settings.AuthAccessToken;  
+await _basketService.UpdateBasketAsync(new CustomerBasket  
 {  
-    BuyerId = userInfo.UserId,   
-    Items = BasketItems.ToList()  
-}, authToken);
+    BuyerId = userInfo.UserId,   
+    Items = BasketItems.ToList()  
+}, authToken);
 ```
 
 액세스 토큰이 플랫폼별 저장소에서 검색 되 고에 대 한 호출에 포함 된 `UpdateBasketAsync` 에서 메서드를 `BasketService` 클래스입니다.
@@ -463,7 +463,7 @@ await _basketService.UpdateBasketAsync(new CustomerBasket
 `RequestProvider` 클래스 eShopOnContainers 모바일 앱에서 사용 된 `HttpClient` eShopOnContainers 참조 응용 프로그램에서 노출 하는 RESTful Api 요청을 하려면 클래스. 만들기 순서 및 바구니 권한 부여를 요구 하는 Api 요청 하면 유효한 액세스 토큰을 요청에 포함 해야 합니다. 액세스 토큰의 헤더에 추가 하 여 이렇게는 `HttpClient` 다음 코드 예제에 설명 된 대로 인스턴스:
 
 ```csharp
-httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 ```
 
 `DefaultRequestHeaders` 의 속성을 `HttpClient` 클래스는 각 요청과 함께 전송 되는 헤더를 노출 하 고 액세스 토큰에 추가 됩니다는 `Authorization` 문자열을 접두사로 하는 헤더 `Bearer`. 요청이 RESTful API의 값에 전송 된 때를 `Authorization` 머리글을 추출 하 고 신뢰할 수 있는 발급자에서 전송한 것을 사용자에 게 API를 호출할 수 있는 권한이 있는지 여부를 확인 하는 데 사용 하는 수신 확인의 유효성을 검사 합니다.

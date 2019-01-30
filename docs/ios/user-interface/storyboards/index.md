@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564007"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233564"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-IDE 디자이너를 사용 하 여 스토리 보드를 만들 때 자동으로 추가 됩니다는 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) 맨 위에 있는 특성을 `designer.cs` 클래스 및 Storyboard ID에 지정 된 동일한 문자열 식별자를 전달 합니다 이전 단계입니다. 이 연결 C# 관련 장면에서 스토리 보드.
+IDE 디자이너를 사용 하 여 스토리 보드를 만들 때 자동으로 추가 됩니다는 [[등록]](xref:Foundation.RegisterAttribute) 맨 위에 있는 특성을 `designer.cs` 클래스 및 Storyboard ID에 지정 된 동일한 문자열 식별자를 전달 합니다 이전 단계입니다. 이 연결 C# 관련 장면에서 스토리 보드.
 
 기존 클래스를 추가 하려는 특정 시점 **되지** 디자이너에서 생성 합니다. 이 경우 정상적으로이 클래스를 등록 합니다.
 
@@ -321,11 +321,11 @@ public partial class MainViewController : UIViewController
 
     - UITextField
         - 이름: PasswordTextField
-        - 보안 암호를 자리 표시자: ' 입력 '
+        - 자리 표시자: ' 암호를 입력 합니다. '
     - UILabel
-        - 텍스트: ' 오류: 암호를 잘못 되었습니다. 전달 하지 않습니다. '
-        - 색: 빨간색
-        - 맞춤: Center
+        - 텍스트: ' 오류: 잘못 된 암호입니다. 전달 하지 않습니다. '
+        - 색: 빨강
+        - Alignment: 가운데 맞춤
         - 줄: 2
         - '숨겨진된' 확인란을 선택한 상태 
         

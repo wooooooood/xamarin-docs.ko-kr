@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 75904ad91df7795c538e736eabb6c6000847b449
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235053"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233655"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -92,9 +92,9 @@ Cocoa # 및 Gtk # 경험을 바탕으로 iOS를 위해 특별히 설계 된 새 
 
 #### <a name="foundation"></a>Foundation
 
-합니다 [Foundation](https://developer.xamarin.com/api/namespace/Foundation/) 네임 스페이스에는 iOS의 일부인 Objective-c Foundation 프레임 워크와 상호 운용 하도록 설계 된 기본 데이터 형식 이므로 개체 지향 프로그래밍 하기 위한 것입니다.에 대 한 기본 제공
+합니다 [Foundation](xref:Foundation) 네임 스페이스에는 iOS의 일부인 Objective-c Foundation 프레임 워크와 상호 운용 하도록 설계 된 기본 데이터 형식 이므로 개체 지향 프로그래밍 하기 위한 것입니다.에 대 한 기본 제공
 
-Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C#의 미러링 Objective-c로 기본 클래스 예를 들어 [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) 를 통해 C#에서 사용 가능 [Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)합니다.
+Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C#의 미러링 Objective-c로 기본 클래스 예를 들어 [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) 를 통해 C#에서 사용 가능 [Foundation.NSObject](xref:Foundation.NSObject)합니다.
 
 이 네임 스페이스에서는 기본 Objective-c Foundation 형식에 대 한 바인딩을 제공 하지만 일부의 경우에 매핑한 내부 형식이.NET 형식으로 합니다. 예를 들어:
 
@@ -107,13 +107,13 @@ Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C
 
 ##### <a name="nsobject"></a>NSObject
 
-합니다 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) 형식은 모든 Objective-c 바인딩 위한 기초입니다. Xamarin.iOS 형식 반영 된 CocoaTouch Api iOS에서 형식의 두 클래스: (이러한 모든 NSObject 클래스에서 파생) Objective-c 형식과 C 형식 (일반적으로 CoreFoundation 형식 이라고 함).
+합니다 [NSObject](xref:Foundation.NSObject) 형식은 모든 Objective-c 바인딩 위한 기초입니다. Xamarin.iOS 형식 반영 된 CocoaTouch Api iOS에서 형식의 두 클래스: (이러한 모든 NSObject 클래스에서 파생) Objective-c 형식과 C 형식 (일반적으로 CoreFoundation 형식 이라고 함).
 
-관리 되지 않는 형식 반영 하는 각 형식에 대해를 통해 네이티브 개체를 가져올 수 있기를 [처리](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/) 속성입니다.
+관리 되지 않는 형식 반영 하는 각 형식에 대해를 통해 네이티브 개체를 가져올 수 있기를 [처리](xref:Foundation.NSObject.Handle) 속성입니다.
 
 Mono는 모든 개체를 가비지 수집을 제공 하는 동안 합니다 `Foundation.NSObject` 구현 합니다 [System.IDisposable](xref:System.IDisposable) 인터페이스입니다. 즉, 시작 하는 기능에 가비지 수집기를 기다릴 필요 없이 지정 된 모든 NSObject의 리소스를 명시적으로 해제할 수 있습니다. 이것이 중요 한 많은 NSObjects, 데이터의 큰 블록에 대 한 포인터를 보유 하는 예를 들어 UIImages를 사용 하는 경우입니다.
 
-형식이 명확한 종료를 수행 하는 경우 재정의 [NSObject.Dispose(bool) 메서드](https://developer.xamarin.com/api/type/Foundation.NSObject/%2fM%2fDispose) Dispose의 매개 변수는 "bool disposing", 경우 설정이 true로 의미 때문에 Dispose 메서드가 호출 되는 사용자 개체에 명시적으로 호출된 Dispose ()입니다. 값이 false 인 경우 종료자 스레드에서 Dispose (bool disposing) 메서드는 종료자에서 호출 되는 것을 의미 합니다. []()
+형식이 명확한 종료를 수행 하는 경우 재정의 [NSObject.Dispose(bool) 메서드](xref:Foundation.NSObject.Dispose(System.Boolean)) Dispose의 매개 변수는 "bool disposing", 경우 설정이 true로 의미 때문에 Dispose 메서드가 호출 되는 사용자 개체에 명시적으로 호출된 Dispose ()입니다. 값이 false 인 경우 종료자 스레드에서 Dispose (bool disposing) 메서드는 종료자에서 호출 되는 것을 의미 합니다. []()
 
 
 ##### <a name="categories"></a>범주
@@ -188,7 +188,7 @@ class Rotation_IOS6 {
 
 PreserveAttribute 경우 형식 또는 형식 멤버를 유지 하기 위해 – Xamarin.iOS 배포 도구-mtouch를 알리는 데 사용 되는 사용자 지정 특성을 해당 크기를 줄이기 위해 응용 프로그램 처리 되는 경우 단계
 
-응용 프로그램이 정적으로 연결하지 않은 모든 멤버는 제거됩니다. 따라서이 특성은 정적으로 참조 되지 않지만 여전히 응용 프로그램에 필요한 멤버를 표시 하는 데 사용 됩니다.
+애플리케이션이 정적으로 연결하지 않은 모든 멤버는 제거됩니다. 따라서이 특성은 정적으로 참조 되지 않지만 여전히 응용 프로그램에 필요한 멤버를 표시 하는 데 사용 됩니다.
 
 예를 들어 형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다. XML serialization을 사용하는 경우 형식의 속성을 유지하는 것이 좋습니다.
 
@@ -198,7 +198,7 @@ PreserveAttribute 경우 형식 또는 형식 멤버를 유지 하기 위해 –
 
 #### <a name="uikit"></a>UIKit
 
-합니다 [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) 네임 스페이스에는 모든 C# 클래스의 형태로 CocoaTouch를 구성 하는 UI 구성 요소에 일대일 매핑을 포함 합니다. API는 C# 언어에 사용 되는 규칙을 따라야 수정 되었습니다.
+합니다 [UIKit](xref:UIKit) 네임 스페이스에는 모든 C# 클래스의 형태로 CocoaTouch를 구성 하는 UI 구성 요소에 일대일 매핑을 포함 합니다. API는 C# 언어에 사용 되는 규칙을 따라야 수정 되었습니다.
 
 C# 대리자는 일반적인 작업에 제공 됩니다. 참조 된 [대리자](#Delegates) 자세한 내용은 섹션입니다.
 
@@ -283,7 +283,7 @@ Objective-c로 전 세계와는 CocoaTouch에 대 한 온라인 설명서에서 
 -  컨트롤의 동작을 합니다.
 
 
-프로그래밍 패턴은 컨트롤에 대 한 동작을 변경 하려면 파생된 클래스의 생성을 최소화 하도록 설계 되었습니다. 이 솔루션은 비슷하며 년에 걸쳐 수행 하는 다른 GUI 도구 키트가 보이는 않은: Gtk의 신호 Qt 슬롯, 이벤트 Winforms, WPF/Silverlight 이벤트 등에입니다. Objective-c 수백 개의 인터페이스 (각 작업에 대해 하나씩) 하거나 필요 하지 않은 많은 메서드를 구현 하는 개발자를 방지 하려면 선택적 메서드 정의 지원 합니다. 이 필요한 모든 메서드를 구현 해야 하는 C# 인터페이스와 다릅니다.
+프로그래밍 패턴은 컨트롤에 대 한 동작을 변경 하려면 파생된 클래스의 생성을 최소화 하도록 설계 되었습니다. 이 솔루션은 비슷하며 년에 걸쳐 수행 하는 다른 GUI 도구 키트가 보이는 않은: Gtk의 신호를 Qt 슬롯, 이벤트 Winforms, WPF/Silverlight 이벤트 등. Objective-c 수백 개의 인터페이스 (각 작업에 대해 하나씩) 하거나 필요 하지 않은 많은 메서드를 구현 하는 개발자를 방지 하려면 선택적 메서드 정의 지원 합니다. 이 필요한 모든 메서드를 구현 해야 하는 C# 인터페이스와 다릅니다.
 
 Objective-c 클래스에서 보면이 프로그래밍 패턴을 사용 하는 클래스 라는 일반적으로 속성을 노출 하 `delegate`, 인터페이스의 필수 부분 및 0 개 이상, 선택적 부분을 구현 하는 데 필요한 합니다.
 
@@ -301,9 +301,9 @@ Objective-c 클래스에서 보면이 프로그래밍 패턴을 사용 하는 �
 
 여러 형식에 대 한 Xamarin.iOS에서 자동으로 만듭니다 전달할는 적절 한 대리자는 `UIWebViewDelegate` C# 이벤트를 호출 합니다. `UIWebView`의 경우:
 
--  합니다 [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) 메서드에 매핑되는 [UIWebView.LoadStarted](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadStarted/) 이벤트입니다.
--  합니다 [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) 메서드에 매핑되는 [UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/) 이벤트입니다.
--  합니다 [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) 메서드에 매핑되는 [UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/) 이벤트입니다.
+-  합니다 [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) 메서드에 매핑되는 [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) 이벤트입니다.
+-  합니다 [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) 메서드에 매핑되는 [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) 이벤트입니다.
+-  합니다 [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) 메서드에 매핑되는 [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) 이벤트입니다.
 
 예를 들어,이 간단한 프로그램을 웹 로드를 볼 때 시작 시간과 종료 시간을 기록 합니다.
 
@@ -339,7 +339,7 @@ void SetupTextField (UITextField tf)
 
 ##### <a name="strongly-typed-via-a-delegate-property"></a>대리자 속성을 통해 강력한
 
-이벤트를 사용 하지 않도록 하려는 경우 제공할 수 있습니다 고유한 [UIWebViewDelegate](https://developer.xamarin.com/api/type/UIKit.UIWebViewDelegate/) 서브 클래스에 할당 하는 [UIWebView.Delegate](https://developer.xamarin.com/api/property/UIKit.UIWebView.Delegate/) 속성입니다. UIWebView.Delegate에 할당 된 UIWebView 이벤트 디스패치 메커니즘은 작동 하지 않습니다 후 UIWebViewDelegate 메서드는 해당 이벤트가 발생할 때 호출 됩니다.
+이벤트를 사용 하지 않도록 하려는 경우 제공할 수 있습니다 고유한 [UIWebViewDelegate](xref:UIKit.UIWebViewDelegate) 서브 클래스에 할당 하는 [UIWebView.Delegate](xref:UIKit.UIWebView.Delegate) 속성입니다. UIWebView.Delegate에 할당 된 UIWebView 이벤트 디스패치 메커니즘은 작동 하지 않습니다 후 UIWebViewDelegate 메서드는 해당 이벤트가 발생할 때 호출 됩니다.
 
 예를 들어, 단순 유형 웹 보기를 로드 하는 데 걸리는 시간을 기록 합니다.
 
@@ -368,9 +368,9 @@ web.Delegate = new Notifier ();
 
 위의 UIWebViewer 만들어지고이 알림, 메시지에 응답 하기 위해 만든 하는 클래스의 인스턴스로 메시지를 보내도록 지시 합니다.
 
-이 패턴은도 UIWebView 경우의 예를 들어 특정 컨트롤에 대 한 동작을 제어 하는 데 사용 됩니다는 [UIWebView.ShouldStartLoad](https://developer.xamarin.com/api/property/UIKit.UIWebView.ShouldStartLoad/) 속성을 사용 하면 합니다 `UIWebView` 인스턴스 제어를 여부를 `UIWebView` 로드 됩니다는 여부 페이지입니다.
+이 패턴은도 UIWebView 경우의 예를 들어 특정 컨트롤에 대 한 동작을 제어 하는 데 사용 됩니다는 [UIWebView.ShouldStartLoad](xref:UIKit.UIWebView.ShouldStartLoad) 속성을 사용 하면 합니다 `UIWebView` 인스턴스 제어를 여부를 `UIWebView` 로드 됩니다는 여부 페이지입니다.
 
-패턴을 몇 가지 컨트롤에 대 한 요청 시 데이터를 제공 하도 사용 됩니다. 예를 들어 합니다 [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/) 컨트롤은 강력한 표 렌더링 컨트롤 및 모양과 내용을 모두 구동 하는 인스턴스는 [UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
+패턴을 몇 가지 컨트롤에 대 한 요청 시 데이터를 제공 하도 사용 됩니다. 예를 들어 합니다 [UITableView](xref:UIKit.UITableView) 컨트롤은 강력한 표 렌더링 컨트롤 및 모양과 내용을 모두 구동 하는 인스턴스는 [UITableViewDataSource](xref:UIKit.UITableViewDataSource)
 
 <a name="WeakDelegate"/>
 
@@ -379,7 +379,7 @@ web.Delegate = new Notifier ();
 강력한 형식의 속성 외에도 개발자가 필요한 경우 작업을 다르게 바인딩할 수 있도록 형식화 된 약한 대리자도 됩니다.
 강력한 형식의 everywhere `Delegate` 속성을 해당 하는 Xamarin.iOS의가 바인딩에 노출 `WeakDelegate` 속성도 노출 됩니다.
 
-사용 하는 경우는 `WeakDelegate`를 올바르게 사용 하 여 클래스를 지정 하는 일을 담당 하는 합니다 [내보내기](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) 선택기를 지정 하는 특성입니다. 예를 들어:
+사용 하는 경우는 `WeakDelegate`를 올바르게 사용 하 여 클래스를 지정 하는 일을 담당 하는 합니다 [내보내기](xref:Foundation.ExportAttribute) 선택기를 지정 하는 특성입니다. 예를 들어:
 
 ```csharp
 class Notifier : NSObject  {

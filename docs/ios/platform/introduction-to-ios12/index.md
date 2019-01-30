@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 81375e8c66e5504604d0d4cb3be34afd58f4269d
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615150"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233837"
 ---
 # <a name="introduction-to-ios-12"></a>IOS 12 소개
 
@@ -28,7 +28,7 @@ ARKit는 iOS를 사용 하 여 포함 된 보강 된 현실 프레임 워크입�
 
 Siri 바로 가기 Siri를 사용 하 여 해당 응용 프로그램을 보다 강력 하 게 통합 하는 개발자를 수 있습니다. Siri 바로 가기를 사용자 음성 명령을 사용 하 여 콘텐츠를 열거나 백그라운드 작업을 시작할 수 있습니다 또는 잠금 화면에서 Siri 제안 하는 바로 가기를 통해 이와 동일한 작업을 시작할 수 있습니다.
 
-## <a name="core-ml-2coremlmd"></a>[코어 ML 2](coreml.md)
+## <a name="core-ml-2coremlmd"></a>[Core ML 2](coreml.md)
 
 2 코어 ML 모델 양자화 및 유연한 모델을 통해 응용 프로그램 크기를 줄입니다, 그리고 새 일괄 처리 예측 API 사용 하 여 응용 프로그램 성능이 향상 됩니다 및 machine learning의 고급 기능을 지원 하기 위해 사용자 지정 모델을 사용 합니다.
 
@@ -80,7 +80,7 @@ IOS 12, iMessage 앱 일반 iMessage 앱으로 또는 사진 또는 비디오 �
 IOS 12 사용 하 여 Apple에 사용 되지 않습니다.
 
 - OpenGL ES [개발자 들에 게](https://developer.apple.com/ios/whats-new/) 체제 미 설치 컴퓨터를 채택 해야 합니다.
-- [`UIWebView`](https://developer.xamarin.com/api/type/UIKit.UIWebView/)하십시오 [기준 `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc)합니다.
+- [`UIWebView`](xref:UIKit.UIWebView)하십시오 [기준 `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

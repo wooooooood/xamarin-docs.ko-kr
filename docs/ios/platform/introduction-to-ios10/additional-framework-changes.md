@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 6ae08264218c8f959b351f059d73fc0aebfea39e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118086"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233902"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>추가 iOS 10 프레임 워크 변경
 
@@ -156,7 +156,7 @@ IOS 10에서에서 ReplayKit 프레임 워크 같이 향상 되었습니다.:
 
 IOS 10에서에서 SceneKit 프레임 워크 같이 향상 되었습니다.:
 
-- 합니다 [SCNCamera](https://developer.xamarin.com/api/type/SceneKit.SCNCamera/) 클래스 HDR 기능 및 효과 사용 하 여 큰 현실성을 제공할 수 있습니다. 적응 노출을 사용 하 여 자동 효과 또는 사용 하 여 비네팅, 색 번짐과 및 게임 fillmatic 효과 추가할 그레이 딩 색을 만듭니다.
+- 합니다 [SCNCamera](xref:SceneKit.SCNCamera) 클래스 HDR 기능 및 효과 사용 하 여 큰 현실성을 제공할 수 있습니다. 적응 노출을 사용 하 여 자동 효과 또는 사용 하 여 비네팅, 색 번짐과 및 게임 fillmatic 효과 추가할 그레이 딩 색을 만듭니다.
 - SceneKit 간단 자산 작성 보다 현실적인 결과 대 한 새 물리적 기반 렌더링 (PBR) 시스템을 현재 포함 되어 있습니다.
 - 새 [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) 만 세 가지 기본 속성을 필요로 하는 동안 다양 한 실제 음영 효과 제품 모델 음영 (`Diffuse`를 `Metalness` 고 `Roughness`).
 - 이후 PBR 조명 환경을 기반으로 가장 잘 작동을 음영을 사용 하 여는 `LightingEnvironment` 이미지 기반 조명은 전체 장면에 할당할 속성입니다.
@@ -191,8 +191,8 @@ Ios 10.3 ScrollView 컨트롤에 다음과 같은 기능이 향상 되었습니�
 
 IOS 10에서에서의 UIKit 프레임 워크 같이 향상 되었습니다.:
 
-- 새 [UIPasteboard](https://developer.xamarin.com/api/type/UIKit.UIPasteboard/) API (예: 수명 제한 사항) 새 옵션을 제공 하 고 일반적인 클래스 형식에 대해 호환 되는 콘텐츠 형식에 자동으로 선언 됩니다.
-- 새로운 완전 한 대화형 하 고, 개체 기반 이며, 인터럽트 가능한 애니메이션 지원 추가 되었습니다 및 제스처에 연결할 수 있습니다. Pleas 참조 Apple의 [UIViewAnimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating)를 [UIViewPropertyAnimator 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator)하십시오 [UITimingCurveProvider 프로토콜 참조](https://developer.apple.com/reference/uikit/uitimingcurveprovider)를 [UICubicTimingParameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) 하 고 [UISpringTimingParameter 클래스 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 자세한 내용은 합니다.
+- 새 [UIPasteboard](xref:UIKit.UIPasteboard) API (예: 수명 제한 사항) 새 옵션을 제공 하 고 일반적인 클래스 형식에 대해 호환 되는 콘텐츠 형식에 자동으로 선언 됩니다.
+- 새로운 완전 한 대화형 하 고, 개체 기반 이며, 인터럽트 가능한 애니메이션 지원 추가 되었습니다 및 제스처에 연결할 수 있습니다. Apple의를 참조 하세요 [UIViewAnimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating), [UIViewPropertyAnimator 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator)하십시오 [UITimingCurveProvider 프로토콜 참조](https://developer.apple.com/reference/uikit/uitimingcurveprovider)를 [UICubicTimingParameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) 하 고 [UISpringTimingParameter 클래스 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 자세한 내용은 합니다.
 - 새 `UIPreviewInteraction` 고 `UIPreviewInteractionDelegate` 개발자 앱 미리 보기 및 pop 작업에 대 한 사용자 지정 인터페이스를 제공 하도록 허용 합니다.
 - 새 `UIAccessibilityCustomRotor` 클래스를 사용 하면 응용 프로그램에서 사용자 지정 상황에 맞는 기능 Voice Over와 같은 보조 기술을 제공 합니다.
 - 사용 된 `UIAccessibilityIsAssistiveTouchRunning` 및 `UIAccessibilityAssistiveTouchStatusDidChangeNotification` AssistiveTouch 사용 되는지 여부를 결정 하는 기호입니다.

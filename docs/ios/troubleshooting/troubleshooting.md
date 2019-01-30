@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609937"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233954"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.iOS에 대 한 문제 해결 팁 
 
@@ -75,7 +75,7 @@ TypeName XXXX {
 
 위의 정의 자동으로 생성 Visual Studio for Mac에서 Mac 용 Visual Studio에 추가한 모든 XIB 파일에 대 한는 `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` 파일입니다.
 
-또한 위의 코드를 포함 하는 형식의 하위 클래스 여야 [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)합니다.  또한 있어야 포함 하는 형식 네임 스페이스 내에 있으면 한 [[등록]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) (Interface Builder 형식의 네임 스페이스를 지원 하지 않습니다) 처럼 네임 스페이스가 없는 형식 이름을 제공 하는 특성:
+또한 위의 코드를 포함 하는 형식의 하위 클래스 여야 [NSObject](xref:Foundation.NSObject)합니다.  또한 있어야 포함 하는 형식 네임 스페이스 내에 있으면 한 [[등록]](xref:Foundation.RegisterAttribute) (Interface Builder 형식의 네임 스페이스를 지원 하지 않습니다) 처럼 네임 스페이스가 없는 형식 이름을 제공 하는 특성:
 
 ```csharp
 namespace Samples.GLPaint {
@@ -186,7 +186,7 @@ Stacktrace:
 
 즉, 프로젝트에 thumb 코드를 사용 하 여 컴파일된 정적 라이브러리를 링크 하는 있습니다. IPhone SDK 버전 3.1 이상이 문서 작성 당시부터 Apple Thumb 코드 (정적 라이브러리)를 사용 하 여 Thumb이 아닌 코드 (Xamarin.iOS)를 연결 하는 경우 해당 링커의 버그를 도입 했습니다. 이 문제를 완화 하려면 정적 라이브러리의 Thumb이 아닌 버전과 연결 해야 합니다.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException: JIT 컴파일 메서드 (관리 되는--관리 되는 래퍼) Foo[]:System.Collections.Generic.ICollection'1.get_Count ()를 시도합니다.
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException: Attempting to JIT compile method (wrapper managed-to-managed) Foo[]:System.Collections.Generic.ICollection`1.get_Count ()
 
 접미사 또는 클래스 라이브러리 ienumerable<>, ICollection <> IList <> 등의 제네릭 컬렉션을 배열에서 메서드를 호출 되는 것을 나타냅니다. 대 안으로 AOT 컴파일러를 직접 메서드를 호출 하 여 이러한 메서드를 포함 하도록 명시적으로 할 수 있습니다 및 하는지 확인 하 여이 코드는 예외를 트리거한 호출 전에 실행 됩니다. 이 경우에 작성할 수 있습니다.
 
@@ -283,7 +283,7 @@ Visual Studio for Mac 2.2에 쉼표를 포함 하는 배포 인증서를 검색 
 
 ## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>오류 "AFCFileRefWrite 반환 합니다. 1 "업로드 중
 
-장치에 앱을 업로드 하는 동안 오류가 나타날 수 있습니다 "AFCFileRefWrite 반환 합니다. 1 "입니다. 이 길이가 0 인 파일이 있는 경우에 발생할 수 있습니다.
+장치에 앱을 업로드 하는 동안 오류가 나타날 수 있습니다 "AFCFileRefWrite 반환 합니다. 1". 이 길이가 0 인 파일이 있는 경우에 발생할 수 있습니다.
 
 ## <a name="error-mtouch-failed-with-no-output"></a>오류 "mtouch 출력 없이 실패 했습니다."
 
@@ -317,7 +317,7 @@ Mac 용 Visual Studio 처리를 자동으로이 키 쌍을 제거 해야 합니�
 -  프로젝트에 대 한 사용자 지정 Info.plist 만들고 MinimumOSVersion 3.0에 명시적으로 설정 합니다.   Xamarin.iOS 설정한 MinimumOSVersion 3.2 값이 재정의 됩니다.   이렇게 하지 않으면 앱을 iPhone에서 실행 되지 않습니다.
 -  다시 작성, zip 및 업로드 iTunes에 연결합니다.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>처리 되지 않은 예외: System.Exception: 선택기 someSelector를 찾지 못했습니다. {type}에서
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>처리되지 않은 예외: System.Exception: 선택기 someSelector를 찾지 못했습니다. {type}에서
 
 다음 세 가지 중 하나에서이 예외가 발생 했습니다.
 

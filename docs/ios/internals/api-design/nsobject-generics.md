@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 39faa4670b17cdf4853bfe24ff104765ca541b9f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106223"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233694"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.iOS에서 NSObject의 제네릭 서브 클래스
 
 ## <a name="using-generics-with-nsobjects"></a>NSObjects 제네릭 사용
 
-제네릭의 서브 클래스에서 사용할 수 7.2.1 Xamarin.iOS를 사용 하 여 시작 `NSObject` (예를 들어 [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/)).
+제네릭의 서브 클래스에서 사용할 수 7.2.1 Xamarin.iOS를 사용 하 여 시작 `NSObject` (예를 들어 [UIView](xref:UIKit.UIView)합니다.
 
 이제 다음과 같은 제네릭 클래스를 만들 수 있습니다.
 
@@ -188,7 +188,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**원인:** 마찬가지로 제네릭 메서드, T.는 제네릭 형식 인수에 사용할 유형을 알고 있어야 Xamarin.iOS 런타임 요구 사항
+**원인:** 제네릭 메서드의 경우와 마찬가지로 Xamarin.iOS 런타임은 T.는 제네릭 형식 인수에 사용할 유형을 알 수 해야
 
 자체 인스턴스를 사용 하는 멤버 예를 들어 (될 수 없으므로 제네릭 인스턴스 때문<T>, 해당 값은 항상 일반<SomeSpecificClass>), 했지만 정적 멤버에 대 한이 정보를 제공 합니다.
 

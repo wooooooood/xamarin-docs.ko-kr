@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012284"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233928"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -30,7 +30,7 @@ ms.locfileid: "54012284"
 |형식|설명|확장 지점|호스트 응용 프로그램|
 |--- |--- |--- |--- |
 |작업|특수 편집기 또는 특정 미디어 유형에 대 한 뷰어|`com.apple.ui-services`|임의의 값|
-|문서 공급자|앱 원격 문서 저장소를 사용할 수 있도록 허용|`com.apple.fileprovider-ui`|사용 하 여 앱을 [UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|문서 공급자|앱 원격 문서 저장소를 사용할 수 있도록 허용|`com.apple.fileprovider-ui`|사용 하 여 앱을 [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
 |키보드|대체 키보드|`com.apple.keyboard-service`|임의의 값|
 |사진 편집|사진 조작 및 편집|`com.apple.photo-editing`|Photos.app 편집기|
 |공유|소셜 네트워크, 메시징 등 서비스를 사용 하 여 데이터를 공유 합니다.|`com.apple.share-services`|임의의 값|
@@ -48,8 +48,8 @@ ms.locfileid: "54012284"
 - 확장에서 사용할 수 없습니다 [백그라운드 모드를 확장 합니다.](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - (하지만 기존 미디어 파일에 액세스할 수) 확장 장치 카메라 또는 마이크에 액세스할 수 없습니다.
 - 확장 (공기 삭제를 통해 데이터를 전송할 수 있습니다) 하지만 공기 삭제 데이터를 받을 수 없습니다.
-- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/) 하 고 [UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/) 를 사용할 수 없습니다; 확장을 사용 해야 [UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- 몇몇 구성원이 [UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/) 를 사용할 수 없습니다. [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)하십시오 `UIApplication.OpenURL`, `UIApplication.BeginIgnoringInteractionEvents` 및 `UIApplication.EndIgnoringInteractionEvents`
+- [UIActionSheet](xref:UIKit.UIActionSheet) 하 고 [UIAlertView](xref:UIKit.UIAlertView) 를 사용할 수 없습니다; 확장을 사용 해야 [UIAlertController](xref:UIKit.UIAlertController)
+- 몇몇 구성원이 [UIApplication](xref:UIKit.UIApplication) 를 사용할 수 없습니다. [UIApplication.SharedApplication](xref:UIKit.UIApplication.SharedApplication)하십시오 [UIApplication.OpenUrl](xref:UIKit.UIApplication.OpenUrl(Foundation.NSUrl))하십시오 [UIApplication.BeginIgnoringInteractionEvents](xref:UIKit.UIApplication.BeginIgnoringInteractionEvents) 고 [ UIApplication.EndIgnoringInteractionEvents](xref:UIKit.UIApplication.EndIgnoringInteractionEvents)
 - iOS는 오늘날의 확장에 16MB 메모리 사용량 한계를 적용합니다.
 - 기본적으로 키보드 확장에는 네트워크에 액세스를 권한이 없습니다. 이 영향을 줍니다 (제한을 시뮬레이터에는 적용 되지 않습니다) 장치에서 디버깅 Xamarin.iOS 디버깅을 수행 하려면 네트워크 액세스를 필요 하기 때문입니다. 설정 하 여 네트워크 액세스를 요청 하는 합니다 `Requests Open Access` 값을 프로젝트의 Info.plist에 `Yes`입니다. Apple의를 참조 하세요 [사용자 지정 키보드 가이드](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html) 키보드 확장 제한에 대 한 자세한 내용은 합니다.
 
@@ -65,11 +65,11 @@ ms.locfileid: "54012284"
 
 ## <a name="extension-lifecycle"></a>확장 수명 주기
 
-확장 단일 처럼 간단할 수 있습니다 [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) 또는 UI의 여러 화면을 제공 하는 더 복잡 한 확장입니다. 발견할 경우에 사용자를 _확장점_ (때와 같이 이미지를 공유), 해당 확장 지점에 대해 등록 된 확장을 선택할 수 있는 기회를 갖게 됩니다. 
+확장 단일 처럼 간단할 수 있습니다 [UIViewController](xref:UIKit.UIViewController) 또는 UI의 여러 화면을 제공 하는 더 복잡 한 확장입니다. 발견할 경우에 사용자를 _확장점_ (때와 같이 이미지를 공유), 해당 확장 지점에 대해 등록 된 확장을 선택할 수 있는 기회를 갖게 됩니다. 
 
 앱 중 하나 선택 하는 경우의 확장을 해당 `UIViewController` 를 인스턴스화할 수 및 일반 뷰 컨트롤러 수명 주기를 시작 합니다. 그러나 일시 중단 하지만 일반적으로 사용자가 상호 작용을 마치면 종료, 일반 앱와 달리 확장은 로드, 실행 및을 반복적으로 종료 합니다.
 
-확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#Communicating-with-the-Host-App) 대 한 자세한 내용은 아래 섹션입니다.
+확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](xref:Foundation.NSExtensionContext) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#Communicating-with-the-Host-App) 대 한 자세한 내용은 아래 섹션입니다.
 
 기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [카운트다운 위젯 발전](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)합니다.
 
@@ -264,11 +264,11 @@ IOS 시뮬레이터에서에서 확장 프로그램을 테스트 하려면 다�
 
 ## <a name="communicating-with-the-host-app"></a>호스트 응용 프로그램을 사용 하 여 통신
 
-이 예제에서는 위에서 만든 확장 현재 해당 호스트 앱와 통신 하지 않습니다 (합니다 **오늘** 화면). 사용 하는 경우는 [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) 의 속성을 `TodayViewController` 또는 `CodeBasedViewController` 클래스입니다. 
+이 예제에서는 위에서 만든 확장 현재 해당 호스트 앱와 통신 하지 않습니다 (합니다 **오늘** 화면). 사용 하는 경우는 [ExtensionContext](xref:Foundation.NSExtensionContext) 의 속성을 `TodayViewController` 또는 `CodeBasedViewController` 클래스입니다. 
 
-해당 호스트 응용 프로그램에서 데이터를 받을 확장에 대 한 데이터가의 배열의 형태로 [NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/) 에 저장 된 개체를 [InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/) 속성을 [ExtensionContext ](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) 확장의 `UIViewController`합니다.
+해당 호스트 응용 프로그램에서 데이터를 받을 확장에 대 한 데이터가의 배열의 형태로 [NSExtensionItem](xref:Foundation.NSExtensionItem) 에 저장 된 개체를 [InputItems](xref:Foundation.NSExtensionContext.InputItems) 속성을 [ExtensionContext ](xref:Foundation.NSExtensionContext) 확장의 `UIViewController`합니다.
 
-사진 편집 확장 등의 다른 확장을 완료 하거나 취소 사용 사용자 구분 될 수 있습니다. 이 신호를 받을 통해 호스트 앱으로 다시 합니다 [CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/) 하 고 [CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/) 의 메서드 [ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/) 속성입니다.
+사진 편집 확장 등의 다른 확장을 완료 하거나 취소 사용 사용자 구분 될 수 있습니다. 이 신호를 받을 통해 호스트 앱으로 다시 합니다 [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) 하 고 [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) 의 메서드 [ExtensionContext](xref:Foundation.NSExtensionContext) 속성입니다.
 
 자세한 내용은 Apple의를 참조 하세요 [앱 확장의 프로그래밍 가이드](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 4d5319005b28c5afa0906c44cfa59f0cad40de76
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617620"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233604"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.iOS에서 ARKit 2
 
@@ -25,17 +25,17 @@ ARKit 작년 iOS 11에서에서 소개 된 이후로 크게 발전 합니다. �
 
 ## <a name="recognizing-reference-objects"></a>개체 참조를 인식합니다.
 
-한 쇼케이스 ARKit 2에서 기능은 참조 이미지 및 개체 인식 하는 기능입니다. 일반 이미지 파일에서 참조 이미지를 로드할 수 있습니다 ([나중에 설명할](#more-tracking-configurations)), 개체 검색 해야, 개발자 중심을 사용 하 여 참조 하지만 [ `ARObjectScanningConfiguration` ](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/)합니다.
+한 쇼케이스 ARKit 2에서 기능은 참조 이미지 및 개체 인식 하는 기능입니다. 일반 이미지 파일에서 참조 이미지를 로드할 수 있습니다 ([나중에 설명할](#more-tracking-configurations)), 개체 검색 해야, 개발자 중심을 사용 하 여 참조 하지만 [ `ARObjectScanningConfiguration` ](xref:ARKit.ARObjectScanningConfiguration)합니다.
 
 ### <a name="sample-app-scanning-and-detecting-3d-objects"></a>샘플 앱: 검색 및 3D 개체를 검색 합니다.
 
 [스캔 및 3D 개체를 감지](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) 샘플은 포트의는 [Apple 프로젝트](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) 보여 주는:
 
-* 사용 하 여 응용 프로그램 상태 관리 [ `NSNotification` ](https://developer.xamarin.com/api/type/Foundation.NSNotification/) 개체
+* 사용 하 여 응용 프로그램 상태 관리 [ `NSNotification` ](xref:Foundation.NSNotification) 개체
 * 사용자 지정 시각화
 * 복잡 한 제스처
 * 개체 검색
-* 저장 된 [`ARReferenceObject`](https://developer.xamarin.com/api/type/ARKit.ARReferenceObject/)
+* 저장 된 [`ARReferenceObject`](xref:ARKit.ARReferenceObject)
 
 참조 개체를 검색 하면 배터리 및 프로세스 집약적 이며 이전 장치는 안정적인 추적을 달성 하는 데 문제가 경우가 많습니다.
 
@@ -55,7 +55,7 @@ ARKit 작년 iOS 11에서에서 소개 된 이후로 크게 발전 합니다. �
 * `Scan.ScanState.Scanning`
 * `Scan.ScanState.AdjustingOrigin`
 
-상태 전환 알림을 게시 되는 반응 형 아키텍처를 사용 하는 앱 [ `NSNotificationCenter` ](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/) 하 고 이러한 알림을 구독 합니다. 설치 프로그램에서이 코드 조각은 다음과 같습니다 `ViewController.cs`:
+상태 전환 알림을 게시 되는 반응 형 아키텍처를 사용 하는 앱 [ `NSNotificationCenter` ](xref:Foundation.NSNotificationCenter) 하 고 이러한 알림을 구독 합니다. 설치 프로그램에서이 코드 조각은 다음과 같습니다 `ViewController.cs`:
 
 ```csharp
 // Configure notifications for application state changes
@@ -119,11 +119,11 @@ internal void EnterStateTesting()
 
 검색 된 가로 평면으로 프로젝션 된 하위 수준 지점을"클라우드" 개체의 경계 상자 내에 포함 된 앱 표시 합니다.
 
-이 지점 클라우드는 개발자에 게 제공 합니다 [ `ARFrame.RawFeaturePoints` ](https://developer.xamarin.com/api/property/ARKit.ARFrame.RawFeaturePoints/) 속성입니다. 지점 클라우드를 효율적으로 시각화는 까다로운 문제가 될 수 있습니다. 요소를 반복을 만들고 각 지점에 대 한 새 SceneKit 노드 배치는 종료할 프레임 속도입니다. 또는 비동기적으로 수행 하는 경우 지연 될 것입니다. 샘플은 세 부분으로 구성 전략을 사용 하 여 성능을 유지합니다.
+이 지점 클라우드는 개발자에 게 제공 합니다 [ `ARFrame.RawFeaturePoints` ](xref:ARKit.ARFrame.RawFeaturePoints) 속성입니다. 지점 클라우드를 효율적으로 시각화는 까다로운 문제가 될 수 있습니다. 요소를 반복을 만들고 각 지점에 대 한 새 SceneKit 노드 배치는 종료할 프레임 속도입니다. 또는 비동기적으로 수행 하는 경우 지연 될 것입니다. 샘플은 세 부분으로 구성 전략을 사용 하 여 성능을 유지합니다.
 
 * Pin의 데이터를 배치 하 고 원시 버퍼 바이트으로 데이터를 해석 하는 안전 하지 않은 코드를 사용 합니다.
-* 변환에 원시 버퍼를 [ `SCNGeometrySource` ](https://developer.xamarin.com/api/type/SceneKit.SCNGeometrySource/) "템플릿"를 만들고 [ `SCNGeometryElement` ](https://developer.xamarin.com/api/type/SceneKit.SCNGeometryElement/) 개체.
-* 신속 하 게 "만드므로" 원시 데이터 및 사용 하 여 템플릿을 [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](https://developer.xamarin.com/api/member/SceneKit.SCNGeometry.Create/p/SceneKit.SCNGeometrySource[]/SceneKit.SCNGeometryElement[]/)
+* 변환에 원시 버퍼를 [ `SCNGeometrySource` ](xref:SceneKit.SCNGeometrySource) "템플릿"를 만들고 [ `SCNGeometryElement` ](xref:SceneKit.SCNGeometryElement) 개체.
+* 신속 하 게 "만드므로" 원시 데이터 및 사용 하 여 템플릿을 [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
 internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color, float size)
@@ -251,11 +251,11 @@ internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRec
 
 이제 사용할 수 있습니다 다음 중 하나를 기준으로 혼합 현실 환경.
 
-* 장치가 속도계만 ([`AROrientationTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.AROrientationTrackingConfiguration/), iOS 11)
-* 얼굴 ([`ARFaceTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARFaceTrackingConfiguration/), iOS 11)
-* 이미지를 참조 ([`ARImageTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARImageTrackingConfiguration/), iOS 12)
-* 3D 개체를 검사 ([`ARObjectScanningConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARObjectScanningConfiguration/), iOS 12)
-* Visual 관성 odometry ([`ARWorldTrackingConfiguration`](https://developer.xamarin.com/api/type/ARKit.ARWorldTrackingConfiguration/)iOS 12에서에서 향상 된)
+* 장치가 속도계만 ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
+* 얼굴 ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
+* 이미지를 참조 ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
+* 3D 개체를 검사 ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
+* Visual 관성 odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration)iOS 12에서에서 향상 된)
 
 `AROrientationTrackingConfiguration`에 나오는 [이 블로그 게시물 및 F# 샘플](https://github.com/lobrien/FSharp_Face_AR), 가장 제한 되며만에 화면 및 장치를 연결 하지 않고 장치의 동작을 기준으로 디지털 개체를 배치 하는 대로 잘못 된 혼합 현실 환경을 제공 합니다. 실제 환경입니다.
 
@@ -299,8 +299,8 @@ configuration.TrackingImages = referenceImages;
 
 하려면 환경 질감을 사용 합니다.
 
-* 프로그램 [ `SCNMaterial` ](https://developer.xamarin.com/api/type/SceneKit.SCNMaterial/) 개체를 사용 해야 합니다 [ `SCNLightingModel.PhysicallyBased` ](https://developer.xamarin.com/api/property/SceneKit.SCNLightingModel.PhysicallyBased/) 에 대 한 0 ~ 1 범위에 값을 할당 하 고 [ `Metalness.Contents` ](https://developer.xamarin.com/api/property/SceneKit.SCNMaterial.Metalness/) 고 [ `Roughness.Contents` ](https://developer.xamarin.com/api/property/SceneKit.SCNMaterialProperty.Contents/) 및
-* 추적 구성을 설정 해야 합니다 [ `EnvironmentTexturing` ](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing/)  =  [AREnvironmentTexturing.Automatic'](https://developer.xamarin.com/api/field/ARKit.AREnvironmentTexturing.Automatic/) :
+* 프로그램 [ `SCNMaterial` ](xref:SceneKit.SCNMaterial) 개체를 사용 해야 합니다 [ `SCNLightingModel.PhysicallyBased` ](xref:SceneKit.SCNLightingModel.PhysicallyBased) 에 대 한 0 ~ 1 범위에 값을 할당 하 고 [ `Metalness.Contents` ](xref:SceneKit.SCNMaterial.Metalness) 고 [ `Roughness.Contents` ](xref:SceneKit.SCNMaterialProperty.Contents) 및
+* 추적 구성을 설정 해야 합니다 [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [AREnvironmentTexturing.Automatic'](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -323,7 +323,7 @@ var configuration = new ARWorldTrackingConfiguration
 
 ### <a name="shared-and-persistent-ar-experiences"></a>공유 및 영구 AR 환경
 
-ARKit 2로 주 또한 합니다 [ `ARWorldMap` ](https://developer.xamarin.com/api/type/ARKit.ARWorldMap/) 공유 또는 전 세계 추적 데이터를 저장할 수 있는 클래스입니다. 현재 전 세계 맵에 사용 하 여 얻게 [ `ARSession.GetCurrentWorldMapAsync` ](https://developer.xamarin.com/api/member/ARKit.ARSession.GetCurrentWorldMapAsync()/) 하거나 [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](https://developer.xamarin.com/api/member/ARKit.ARSession.GetCurrentWorldMap/p/System.Action%7BARKit.ARWorldMap,Foundation.NSError%7D/) :
+ARKit 2로 주 또한 합니다 [ `ARWorldMap` ](xref:ARKit.ARWorldMap) 공유 또는 전 세계 추적 데이터를 저장할 수 있는 클래스입니다. 현재 전 세계 맵에 사용 하 여 얻게 [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) 하거나 [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage
@@ -346,7 +346,7 @@ if (worldMap != null)
 
 1. 파일에서 데이터를 로드 합니다.
 2. 에 보관 해제는 `ARWorldMap` 개체
-3. 에 대 한 값으로 사용 합니다 [ `ARWorldTrackingConfiguration.InitialWorldMap` ](https://developer.xamarin.com/api/property/ARKit.ARWorldTrackingConfiguration.InitialWorldMap/) 속성:
+3. 에 대 한 값으로 사용 합니다 [ `ARWorldTrackingConfiguration.InitialWorldMap` ](xref:ARKit.ARWorldTrackingConfiguration.InitialWorldMap) 속성:
 
 ```csharp
 var data = NSData.FromArray(File.ReadAllBytes(PersistentWorldController.PersistenWorldPath));
@@ -361,7 +361,7 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-`ARWorldMap` 만 표시 되지 않는 세계 추적 데이터를 포함 하며 [ `ARAnchor` ](https://developer.xamarin.com/api/type/ARKit.ARAnchor/) 개체를 수행 _하지_ 디지털 자산을 포함 합니다. 기 하 도형 또는 이미지를 공유 하려면 사용 사례에 맞게 사용자 고유의 전략을 수립 해야 (저장/전송 위치 및 기 하 도형에 방향을 정적으로 적용 하 여 아마도 `SCNGeometry` 또는 저장/전송 하 여 serialize 된 개체)입니다. 이점은 합니다 `ARWorldMap` 자산을 한 번 공유에 상대적으로 배치 하는 `ARAnchor`, 장치 또는 세션 간에 일관 되 게 표시 됩니다.
+`ARWorldMap` 만 표시 되지 않는 세계 추적 데이터를 포함 하며 [ `ARAnchor` ](xref:ARKit.ARAnchor) 개체를 수행 _하지_ 디지털 자산을 포함 합니다. 기 하 도형 또는 이미지를 공유 하려면 사용 사례에 맞게 사용자 고유의 전략을 수립 해야 (저장/전송 위치 및 기 하 도형에 방향을 정적으로 적용 하 여 아마도 `SCNGeometry` 또는 저장/전송 하 여 serialize 된 개체)입니다. 이점은 합니다 `ARWorldMap` 자산을 한 번 공유에 상대적으로 배치 하는 `ARAnchor`, 장치 또는 세션 간에 일관 되 게 표시 됩니다.
 
 ### <a name="universal-scene-description-file-format"></a>범용 장면 설명 파일 형식
 
@@ -371,15 +371,15 @@ ARKit 2의 최종 헤드라인 기능은 Apple Pixar의 채택 [Universal 장면
 
 ### <a name="manual-resource-management"></a>수동 리소스 관리
 
-ARKit 것 수동으로 리소스를 관리 하는 것이 중요 합니다. 이는 높은 프레임 속도 실제로 뿐만 아니라 _필요한_ "화면 고정 합니다."을 혼동 하지 않도록 ARKit 프레임 워크는 새 카메라 프레임을 제공 하는 방법에 대 한 지연 ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). 현재까지 [ `ARFrame` ](https://developer.xamarin.com/api/type/ARKit.ARFrame/) 했습니다 `Dispose()` 것에서 호출 되 면 ARKit는 제공 하지 새 프레임! 이렇게 하면 앱의 나머지 부분 응답 이더라도 "고정" 비디오. 해결책은 언제 든 지 액세스할 `ARSession.CurrentFrame` 사용 하 여는 `using` 차단 하거나 수동으로 호출 `Dispose()` 에 있습니다.
+ARKit 것 수동으로 리소스를 관리 하는 것이 중요 합니다. 이는 높은 프레임 속도 실제로 뿐만 아니라 _필요한_ "화면 고정 합니다."을 혼동 하지 않도록 ARKit 프레임 워크는 새 카메라 프레임을 제공 하는 방법에 대 한 지연 ([`ARSession.CurrentFrame`](xref:ARKit.ARSession.CurrentFrame)합니다. 현재까지 [ `ARFrame` ](xref:ARKit.ARFrame) 했습니다 `Dispose()` 것에서 호출 되 면 ARKit는 제공 하지 새 프레임! 이렇게 하면 앱의 나머지 부분 응답 이더라도 "고정" 비디오. 해결책은 언제 든 지 액세스할 `ARSession.CurrentFrame` 사용 하 여는 `using` 차단 하거나 수동으로 호출 `Dispose()` 에 있습니다.
 
 파생 된 모든 개체 `NSObject` 됩니다 `IDisposable` 및 `NSObject` 구현 합니다 [Dispose 패턴](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern)이므로 일반적으로 따라야 [이 패턴을 구현 하기 위한 `Dispose` 에서 파생 된 클래스](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)합니다.
 
 ### <a name="manipulating-transform-matrices"></a>변환 행렬을 조작
 
-모든 3D 응용 프로그램에서 조밀 하 게 이동, 회전 하 고 3D 공간 개체를 기울일 방법에 설명 하는 4 x 4 변환 매트릭스를 사용 하 여 조사 하려는 합니다. 이들은, SceneKit [ `SCNMatrix4` ](https://developer.xamarin.com/api/type/SceneKit.SCNMatrix4/) 개체입니다.  
+모든 3D 응용 프로그램에서 조밀 하 게 이동, 회전 하 고 3D 공간 개체를 기울일 방법에 설명 하는 4 x 4 변환 매트릭스를 사용 하 여 조사 하려는 합니다. 이들은, SceneKit [ `SCNMatrix4` ](xref:SceneKit.SCNMatrix4) 개체입니다.  
 
-[ `SCNNode.Transform` ](https://developer.xamarin.com/api/property/SceneKit.SCNNode.Transform/) 속성에서 반환 합니다 `SCNMatrix4` 에 대 한 변형 매트릭스를 [ `SCNNode` ](https://developer.xamarin.com/api/type/SceneKit.SCNNode/) _에서 지 원하는 대로_ 행 중심 `simdfloat4x4` 형식. 따라서 예를 들어:
+[ `SCNNode.Transform` ](xref:SceneKit.SCNNode.Transform) 속성에서 반환 합니다 `SCNMatrix4` 에 대 한 변형 매트릭스를 [ `SCNNode` ](xref:SceneKit.SCNNode) _에서 지 원하는 대로_ 행 중심 `simdfloat4x4` 형식. 따라서 예를 들어:
 
 ```csharp
 var node = new SCNNode { Position = new SCNVector3(2, 3, 4) };  

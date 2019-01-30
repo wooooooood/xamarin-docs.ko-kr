@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: b98d1fcf0917b9e25d774a92d56bf90bdd291978
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9d1f54fa4753ba2ef44ba9b8b48a84a3ca932c4b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998638"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233850"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 앱에 대 한 레이아웃
 
@@ -86,7 +86,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 ### <a name="leveraging-masterdetailpage"></a>MasterDetailPage 활용
 
-[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 큰 화면을 사용 하는 iPad에서 특히 적합 합니다 [ `UISplitViewController` ](https://developer.xamarin.com/api/type/UIKit.UISplitViewController/) 네이티브 iOS 편리 하 게 합니다.
+[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 큰 화면을 사용 하는 iPad에서 특히 적합 합니다 [ `UISplitViewController` ](xref:UIKit.UISplitViewController) 네이티브 iOS 편리 하 게 합니다.
 
 검토 [Xamarin 블로그 포스트](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/) 휴대폰 레이아웃을 사용 하 고 더 큰 화면 간에 사용할 수 있도록 사용자 인터페이스에 적용할 수는 방법을 확인 하려면 (사용 하 여는 `MasterDetailPage`).
 

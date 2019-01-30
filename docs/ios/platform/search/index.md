@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 799d6dd532e530f5ee9c9a974b2d93b6a3be0efb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122415"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233304"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.iOS의 검색 Api
 
@@ -82,7 +82,7 @@ iOS 10 시스템 사전에 존재 하는 유용한 정보를 자동으로 사용
 - Siri 상호 작용
 - QuickType 제안 
 
-앱과 같은 기술의 모음을 사용 하 여 시스템에이 기능을 노출 [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), 핵심 스포트라이트, MapKit, Media Player 및 UIKit 웹 태그입니다.
+앱과 같은 기술의 모음을 사용 하 여 시스템에이 기능을 노출 [NSUserActivity](xref:Foundation.NSUserActivity), 핵심 스포트라이트, MapKit, Media Player 및 UIKit 웹 태그입니다.
 
 자세한 내용을 참조 하세요 우리의 [자동 제안](~/ios/platform/search/proactive-suggestions.md) 가이드입니다.
 

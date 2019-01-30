@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 278986b29e629995a202f474242670f5524c45ff
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2e23bb13ad35e9a7a6386d881fe64f817ca8e216
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111603"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233265"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Xamarin.iOS에서 그룹화 된 알림
 
@@ -30,7 +30,7 @@ Xamarin.iOS를 사용 하 여 그룹화 된 알림을 사용 하는 방법에 �
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>권한 부여를 요청 하 고 포그라운드 알림 허용
 
-앱에는 로컬 알림을 보낼 수 있습니다, 전에 권한을 요청 해야 합니다. 샘플 앱의 [ `AppDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)의 [ `FinishedLaunching` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.FinishedLaunching/p/UIKit.UIApplication/Foundation.NSDictionary/) 메서드는이 권한을 요청 합니다.
+앱에는 로컬 알림을 보낼 수 있습니다, 전에 권한을 요청 해야 합니다. 샘플 앱의 [ `AppDelegate` ](xref:UIKit.UIApplicationDelegate)의 [ `FinishedLaunching` ](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) 메서드는이 권한을 요청 합니다.
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-합니다 [ `Delegate` ](https://developer.xamarin.com/api/property/UserNotifications.UNUserNotificationCenter.Delegate/) (설정 위에서)는 [ `UNUserNotificationCenter` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenter/) 전경 앱 전달할완료처리기를호출하여는들어오는알림을표시할지여부를결정[`WillPresentNotification`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification/p/UserNotifications.IUNUserNotificationCenterDelegate/UserNotifications.UNUserNotificationCenter/UserNotifications.UNNotification/System.Action%7BUserNotifications.UNNotificationPresentationOptions%7D/):
+합니다 [ `Delegate` ](xref:UserNotifications.UNUserNotificationCenter.Delegate) (설정 위에서)는 [ `UNUserNotificationCenter` ](xref:UserNotifications.UNUserNotificationCenter) 전경 앱 전달할완료처리기를호출하여는들어오는알림을표시할지여부를결정[`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,7 +56,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-합니다 [ `UNNotificationPresentationOptions.Alert` ](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationPresentationOptions/) 매개 변수는 앱은 경고를 표시 하지만 소리를 재생 하거나 업데이트 하지 배지를 나타냅니다.
+합니다 [ `UNNotificationPresentationOptions.Alert` ](xref:UserNotifications.UNNotificationPresentationOptions) 매개 변수는 앱은 경고를 표시 하지만 소리를 재생 하거나 업데이트 하지 배지를 나타냅니다.
 
 ## <a name="threaded-notifications"></a>스레드 알림
 
@@ -80,8 +80,8 @@ void StartNewThread()
 샘플 앱에서는 스레드 알림을 보내려면:
 
 - 앱에 알림을 보내려면 권한 부여 여부를 확인 합니다.
-- 만듭니다는 [`UNMutableNotificationContent`](https://developer.xamarin.com/api/type/UserNotifications.UNMutableNotificationContent/)
-알림을 콘텐츠 및 설정에 대 한 개체는 [`ThreadIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNMutableNotificationContent.ThreadIdentifier/)
+- 만듭니다는 [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
+알림을 콘텐츠 및 설정에 대 한 개체는 [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
 위에서 만든 스레드 식별자입니다.
 - 요청을 만들고 알림을 예약 합니다.
 

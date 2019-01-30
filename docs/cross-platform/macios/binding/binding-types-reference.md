@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 369e1a37cc75bb4d10cc71d8f79ed1dd473378ba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119438"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234032"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 유형 참조 가이드
 
@@ -1181,7 +1181,7 @@ public class MyClass {
 }
 ```
 
-사용자 코드의 다음 쉽게 알림을 구독할 수에 게시 합니다 [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) 다음과 같은 코드를 사용 하 여:
+사용자 코드의 다음 쉽게 알림을 구독할 수에 게시 합니다 [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) 다음과 같은 코드를 사용 하 여:
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -1203,7 +1203,7 @@ var token = MyClass.Notifications.ObserverDidStart (objectToObserve, (notificati
 token.Dispose ();
 ```
 
-하거나 호출할 수 있습니다 [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject//) 토큰을 전달 합니다. 도우미를 지정 해야 알림이 매개 변수를 포함할 경우 `EventArgs` 다음과 같은 인터페이스:
+하거나 호출할 수 있습니다 [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) 토큰을 전달 합니다. 도우미를 지정 해야 알림이 매개 변수를 포함할 경우 `EventArgs` 다음과 같은 인터페이스:
 
 ```csharp
 interface MyClass {
@@ -1226,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스를 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성을 [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) 키를 사용 하 여 사전 `ScreenXKey` 및 `ScreenYKey` 각각 적절 한 변환을 적용 합니다. 합니다 `[ProbePresence]` 특성을 사용 하는 생성기에 대 한 키에 설정 된 경우 프로브를 `UserInfo`, 값을 추출 하려고 하는 대신 합니다. 이 경우 키의 현재 상태 (일반적으로 부울 값)의 값에 사용 됩니다.
+위의 생성 됩니다는 `MyScreenChangedEventArgs` 클래스를 `ScreenX` 및 `ScreenY` 에서 데이터를 인출 하는 속성을 [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) 키를 사용 하 여 사전 `ScreenXKey` 및 `ScreenYKey` 각각 적절 한 변환을 적용 합니다. 합니다 `[ProbePresence]` 특성을 사용 하는 생성기에 대 한 키에 설정 된 경우 프로브를 `UserInfo`, 값을 추출 하려고 하는 대신 합니다. 이 경우 키의 현재 상태 (일반적으로 부울 값)의 값에 사용 됩니다.
 
 이 옵션을 사용 하면 다음과 같은 코드를 작성할 수 있습니다.
 
@@ -1498,7 +1498,7 @@ interface FooExplorer {
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-참고: [CCallback](#CCallback)합니다.
+참고 항목: [CCallback](#CCallback)합니다.
 
 <a name="CCallback" />
 
@@ -1512,7 +1512,7 @@ typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 
-참고: [BlockCallback](#BlockCallback)합니다.
+참고 항목: [BlockCallback](#BlockCallback).
 
 ### <a name="params"></a>매개 변수
 
@@ -1942,13 +1942,13 @@ interface MyBinding {
 
 Xamarin.iOS 8.0으로 래핑하는 강력한 형식의 클래스를 쉽게 만들 수 있는 기능을 도입 했습니다 `NSDictionaries`합니다.
 
-항상 사용할 수 있었습니다 하는 동안 합니다 [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 수동 API와 함께 데이터 형식이 아니며 이제이 작업을 수행 하는 것이 훨씬 간단 합니다.  자세한 내용은 [강력한 형식 표시](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types)합니다.
+항상 사용할 수 있었습니다 하는 동안 합니다 [DictionaryContainer](xref:Foundation.DictionaryContainer) 수동 API와 함께 데이터 형식이 아니며 이제이 작업을 수행 하는 것이 훨씬 간단 합니다.  자세한 내용은 [강력한 형식 표시](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types)합니다.
 
 <a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 
-이 특성은 인터페이스에 적용할 때 생성기는 클래스에서 파생 되는 인터페이스와 동일한 이름 가진를 생성 [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) 강력한 형식의 인터페이스에 정의 된 각 속성을 설정 하 고 getter 및 setter를 사전에 대 한 합니다.
+이 특성은 인터페이스에 적용할 때 생성기는 클래스에서 파생 되는 인터페이스와 동일한 이름 가진를 생성 [DictionaryContainer](xref:Foundation.DictionaryContainer) 강력한 형식의 인터페이스에 정의 된 각 속성을 설정 하 고 getter 및 setter를 사전에 대 한 합니다.
 
 기존 인스턴스화할 수 있는 클래스가 자동으로 생성이 `NSDictionary` 에 만든 새 또는 합니다.
 

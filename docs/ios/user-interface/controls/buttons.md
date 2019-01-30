@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2018
-ms.openlocfilehash: 35fc743944c04dd1fdb8e035ba94ad6aeb6156ea
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: a98ddc2622682f2c105a6aff32e94bd92a5b11f2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38986006"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233252"
 ---
 # <a name="buttons-in-xamarinios"></a>Xamarin.iOS에서 단추
 
@@ -75,7 +75,7 @@ button.TouchUpInside += (sender, e) => {
 ```
 
 > [!NOTE]
-> `TouchUpInside` 만 사용할 수 있는 단추 이벤트가 아닙니다. `UIButton` 자식 클래스는 `UIControl`를 정의 하는 [다양 한 이벤트](https://developer.xamarin.com/api/type/UIKit.UIControlEvent/)합니다.
+> `TouchUpInside` 만 사용할 수 있는 단추 이벤트가 아닙니다. `UIButton` 자식 클래스는 `UIControl`를 정의 하는 [다양 한 이벤트](xref:UIKit.UIControlEvent)합니다.
 
 ### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>IOS 디자이너를 사용 하 여 단추 이벤트 처리기를 지정 합니다.
 
@@ -90,7 +90,7 @@ button.TouchUpInside += (sender, e) => {
 `UIButton` 컨트롤은 몇몇 다른 주에에서 있을 수 있습니다, 각각 지정 하는 `UIControlState` 값 `Normal`를 `Disabled`, `Focused`, `Highlighted`등입니다. 각 상태에는 iOS 디자이너를 사용 하 여 프로그래밍 방식으로 지정 된 고유 스타일을 지정할 수 있습니다.
 
 > [!NOTE]
-> 모든 목록은 `UIControlState` 값을 살펴보시기 바랍니다 합니다 [`UIKit.UIControlState enumeration`](https://developer.xamarin.com/api/type/UIKit.UIControlState/)
+> 모든 목록은 `UIControlState` 값을 살펴보시기 바랍니다 합니다 [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > 설명서입니다.
 
 예를 들어 제목 색 및 그림자 색을 설정 하려면 `UIControlState.Normal`:
@@ -123,8 +123,8 @@ button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlStat
 여부 사용자 닿는 단추 여부에 따라으로 렌더링 됩니다. 다음 이미지 중 하나 (`UIControlState.Normal`, `UIControlState.Highlighted` 및 `UIControlState.Selected` 상태 각각).
 
 ![UIControlState.Normal](buttons-images/image22.png "UIControlState.Normal")
-![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted") 
- ![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
+![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted")
+![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
 
 사용자 지정 단추를 사용 하 여 작업에 대 한 자세한 내용은 참조는 [이미지를 사용 하 여 단추에 대 한](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) 레시피입니다.
 

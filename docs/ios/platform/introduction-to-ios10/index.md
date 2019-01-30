@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d1e0df95b2665f7e3b33a901271b11e1c243b1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123567"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233746"
 ---
 # <a name="introduction-to-ios-10"></a>IOS 10 소개
 
@@ -135,7 +135,7 @@ iOS 10 시스템 사전에 존재 하는 유용한 정보를 자동으로 사용
 - Siri 상호 작용
 - QuickType 제안 
 
-앱과 같은 기술의 모음을 사용 하 여 시스템에이 기능을 노출 [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), 핵심 스포트라이트, MapKit, Media Player 및 UIKit 웹 태그입니다.
+앱과 같은 기술의 모음을 사용 하 여 시스템에이 기능을 노출 [NSUserActivity](xref:Foundation.NSUserActivity), 핵심 스포트라이트, MapKit, Media Player 및 UIKit 웹 태그입니다.
 
 자세한 내용을 참조 하세요 우리의 [자동 제안 소개](~/ios/platform/search/proactive-suggestions.md) 가이드입니다.
 
@@ -198,11 +198,11 @@ iOS 10 텍스트로 연속 음성 인식을 지원 및 음성 (라이브 또는 
 
 iOS 10 확장 범위 픽셀 형식 및 AVFoundation 핵심 그래픽, Core 이미지, 금속 등 프레임 워크를 비롯 한 시스템 전체에서 광범위 한 색상 공간에 대 한 지원도 확장 되었습니다. 와이드 컬러 디스플레이 사용 하 여 장치에 대 한 지원은 전체 그래픽 스택 전체에서이 동작을 제공 하 여 용이 추가 됩니다.
 
-또한 [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) 수정 된 새 작업을 확장 **sRGB** 색상 공간을 간편 하 게 중요 한 성능 손실 없이 광범위 한 색 색상의 색을 혼합 합니다.
+또한 [UIKit](xref:UIKit) 수정 된 새 작업을 확장 **sRGB** 색상 공간을 간편 하 게 중요 한 성능 손실 없이 광범위 한 색 색상의 색을 혼합 합니다.
 
 Apple에서는 다양 한 색을 사용 하 여 작업 하는 경우 다음 모범 사례를 제공 합니다.
 
-- [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/) 사용 하는 sRGB 색 공간을 더 이상 고정 값을 이제는 `0.0` 에 `1.0` 범위입니다. 앱을 이전 하는 제한 동작에 의존 하는 경우 iOS 10에 대 한 수정 해야 합니다.
+- [UIColor](xref:UIKit.UIColor) 사용 하는 sRGB 색 공간을 더 이상 고정 값을 이제는 `0.0` 에 `1.0` 범위입니다. 앱을 이전 하는 제한 동작에 의존 하는 경우 iOS 10에 대 한 수정 해야 합니다.
 - 사용자 지정을 수행할 때 sRGB 색 공간에 대 한 그리기 환경 구성 됩니다 `UIView` iPad Pro 토대로 합니다.
 - 앱의 사용자 지정 렌더링을 수행 하는 경우 `UIImages`를 사용 하 여 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 확장 범위 또는 표준 범위 형식의 사용을 지정 하는 클래스입니다.
 - 핵심 그래픽 또는 체제 미 설치 컴퓨터와 같은 하위 수준 API를 사용 하 여 이미지 처리를 개발자는 확장된 범위 색 공간과 픽셀 지 원하는 형식으로 16 비트 부동 소수점 값을 사용 해야 합니다. 필요한 경우 개발자는 수동으로 색 구성 요소 값을 고정 해야 합니다.
@@ -229,7 +229,7 @@ IOS 10에서에서 다음 Api가 사용 되지 않습니다.
 - `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` 고 `CKFetchRecordChangesOperation` 클래스에서에서 사용 되지 CloudKit iOS 10에 대 한 합니다. 사용 된 [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) 및 [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) 클래스 (레코드 공유를 지) 대신 합니다.
 - 몇 가지 [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) Api (예: 영역 및 쿼리 기반 구독)가 사용 되지 않습니다. 사용 된 [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) 하 고 [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) Api 대신 합니다.
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
-- `ADBannerView`를 `ADInterstitialAd` 과의 기호를 [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/) 클래스 사용 되지 않습니다.
+- `ADBannerView`를 `ADInterstitialAd` 과의 기호를 [UIViewController](xref:UIKit.UIViewController) 클래스 사용 되지 않습니다.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) 부동 소수점 값에 관련 된 기호 사용 되지 않습니다.
 - `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`를 `UIUserNotificationCategory` 및 `UIUserNotificationSettings` UIKit의 클래스 사용 되지 않습니다. 사용 된 [사용자 알림](#User-Notifications) framework 대신 합니다.
 - 합니다 `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`를 `DidReceiveLocalNotification` 및 `DidReceiveRemoteNotification` WatchKit 메서드 사용 되지 않습니다. 사용 된 `HandleActionForNotification` 고 `DidReceiveNotification` 메서드 대신 합니다.

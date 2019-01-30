@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 3b214833de10848e69a65181cff12e3223a6b24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a40d0911b7dabc900a4c6e50c692e4f091f22be9
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111846"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233629"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.iOS에서 핵심 애니메이션
 
@@ -49,7 +49,7 @@ UIKit 쉽게 애니메이션 응용 프로그램을 추가 하는 몇 가지 기
 
  `UIViewController` 기본 제공 지원을 통해 뷰 컨트롤러 간의 전환에 대 한 제공 된 `PresentViewController` 메서드. 사용 하는 경우 `PresentViewController`, 두 번째 컨트롤러 전환 필요에 따라 애니메이션을 적용할 수 있습니다.
 
-예를 들어 첫 번째 컨트롤러에서 단추를 호출 하는 경우 두 컨트롤러를 사용 하 여 응용 프로그램 `PresentViewController` 두 번째 컨트롤러를 표시 합니다. 어떤 전환 애니메이션은 두 번째 컨트롤러를 표시 하는 데을 제어 하려면 설정 하기만 하면 해당 [ `ModalTransitionStyle` ](https://developer.xamarin.com/api/type/UIKit.UIModalTransitionStyle/) 아래와 같이 속성:
+예를 들어 첫 번째 컨트롤러에서 단추를 호출 하는 경우 두 컨트롤러를 사용 하 여 응용 프로그램 `PresentViewController` 두 번째 컨트롤러를 표시 합니다. 어떤 전환 애니메이션은 두 번째 컨트롤러를 표시 하는 데을 제어 하려면 설정 하기만 하면 해당 [ `ModalTransitionStyle` ](xref:UIKit.UIModalTransitionStyle) 아래와 같이 속성:
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
@@ -90,7 +90,7 @@ UIView.Transition (
     completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition` 도 사용을 `duration` 애니메이션 실행 기간을 제어 하는 매개 변수 뿐만 [ `options` ](https://developer.xamarin.com/api/type/UIKit.UIViewAnimationOptions/) 감속/가속 함수를 사용 하 여 애니메이션 등을 지정할 수 있습니다. 또한 애니메이션이 완료 되 면 호출 되는 완료 처리기를 지정할 수 있습니다.
+`UIView.Transition` 도 사용을 `duration` 애니메이션 실행 기간을 제어 하는 매개 변수 뿐만 [ `options` ](xref:UIKit.UIViewAnimationOptions) 감속/가속 함수를 사용 하 여 애니메이션 등을 지정할 수 있습니다. 또한 애니메이션이 완료 되 면 호출 되는 완료 처리기를 지정할 수 있습니다.
 
 경우 표시 아래 스크린샷에서 애니메이션된 전환 이미지 뷰 `TransitionFlipFromTop` 사용 됩니다.
 
@@ -104,7 +104,7 @@ UIKit 다양 한 속성에 애니메이션 적용을 지원 합니다 `UIView` �
 -  범위
 -  가운데 맞춤
 -  알파
--  변형
+-  변환
 -  색
 
 

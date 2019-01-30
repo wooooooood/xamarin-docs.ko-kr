@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: b0a5d3e75ebbcd70a60a3e4e76eebe166117d31c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131411"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233070"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Xamarin.iOS를 사용 하 여 자연 언어 프레임 워크를 사용 하 여
 
@@ -20,7 +20,7 @@ ms.locfileid: "50131411"
 
 자연 언어 프레임 워크를 분류 하 고 특수화 된 컨텍스트에서 텍스트 태그를 사용자 지정 핵심 ML 모델을 사용할 수도 있습니다.
 
-합니다 [NSLinguisticTagger](https://developer.xamarin.com/api/type/Foundation.NSLinguisticTagger/) 클래스는 계속 사용할 수 있습니다. 그러나 자연 언어 프레임 워크는 자연어 처리를 위해 사용 하는 기본 메커니즘입니다.
+합니다 [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) 클래스는 계속 사용할 수 있습니다. 그러나 자연 언어 프레임 워크는 자연어 처리를 위해 사용 하는 기본 메커니즘입니다.
 
 ## <a name="sample-app-xamarinnl"></a>샘플 앱: XamarinNL
 
@@ -151,7 +151,7 @@ enum API 설명서입니다.
 탭의 **단어** 또는 **문장을** 단추 토큰 목록을 가져올 수 있습니다. 각 토큰 단어나 문장을 원래 텍스트에서와 연결 됩니다.
 
 `ShowTokens` 호출 하 여 사용자의 입력을 토큰으로 분할 합니다 [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
-메서드는 `NLTokenizer`합니다. 이 메서드는 배열을 반환합니다 [`NSValue`](https://developer.xamarin.com/api/type/Foundation.NSValue/)
+메서드는 `NLTokenizer`합니다. 이 메서드는 배열을 반환합니다 [`NSValue`](xref:Foundation.NSValue)
 개체에 각 배치를 `NSRange` 원본 텍스트의 토큰에 해당 하는 값입니다.
 
 ```csharp

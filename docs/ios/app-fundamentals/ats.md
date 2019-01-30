@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 0645b326576a68c97479bc5b59aabaa104f87ae2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9308d3a746a5a0a43cf47cc5ea809c0f82bbe7b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114264"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233824"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.iOS 앱 전송 보안
 
@@ -27,11 +27,11 @@ _앱 전송 보안 ATS ()는 인터넷 리소스 (예: 앱의 백 엔드 서버)
 
 기존 앱에 대 한 구현 된 `HTTPS` 가능한 프로토콜입니다. 새 Xamarin.iOS 앱에 대 한 사용할지 `HTTPS` 인터넷 리소스와 통신 하는 경우에 합니다. 또한 상위 수준 API 통신 전달 완전 보안을 사용 하 여 TLS 버전 1.2 사용 하 여 암호화 되어야 합니다.
 
-사용한 연결은 [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/)를 [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) 또는 [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) ATS 9 iOS 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 사용 됩니다.
+사용한 연결은 [NSUrlConnection](xref:Foundation.NSUrlConnection)를 [CFUrl](xref:CoreFoundation.CFUrl) 또는 [NSUrlSession](xref:Foundation.NSUrlSession) ATS 9 iOS 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 사용 됩니다.
 
 ## <a name="default-ats-behavior"></a>기본 ATS 동작
 
-ATS는 모든 연결을 사용 하 여 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 활성화 되어 있으므로 [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/)를 [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) 하거나 [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) 적용 됩니다 ATS 보안 요구 사항입니다. 연결에 이러한 요구 사항에 맞지 않는 경우 예외가 발생 하 여 실패 합니다.
+ATS는 모든 연결을 사용 하 여 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 활성화 되어 있으므로 [NSUrlConnection](xref:Foundation.NSUrlConnection)를 [CFUrl](xref:CoreFoundation.CFUrl) 하거나 [NSUrlSession](xref:Foundation.NSUrlSession) 적용 됩니다 ATS 보안 요구 사항입니다. 연결에 이러한 요구 사항에 맞지 않는 경우 예외가 발생 하 여 실패 합니다.
 
 ### <a name="ats-connection-requirements"></a>ATS 연결 요구 사항
 
@@ -91,7 +91,7 @@ IOS 앱에서 사용 하는 HTTPClient 구현으로 설정 하려면 두 번 클
 ![](ats-images/client01.png "IOS 빌드 옵션 설정")
 
 
-#### <a name="managed-handler"></a>관리 되는 처리기
+#### <a name="managed-handler"></a>Managed Handler
 
 관리 되는 처리기는 완전히 관리 되는 HttpClient 처리기 기본 처리기 이며 이전 버전의 Xamarin.iOS 사용 하 여 발송 되었습니다.
 
@@ -105,7 +105,7 @@ IOS 앱에서 사용 하는 HTTPClient 구현으로 설정 하려면 두 번 클
 - 것은 일반적으로 네이티브 Api 보다 훨씬 느립니다.
 - 관리 되는 코드가 더 필요 하 고 더 큰 앱을 만듭니다.
 
-#### <a name="cfnetwork-handler"></a>CFNetwork 처리기
+#### <a name="cfnetwork-handler"></a>CFNetwork Handler
 
 CFNetwork 기반 처리기를 기반으로 네이티브 `CFNetwork` 프레임 워크입니다.
 

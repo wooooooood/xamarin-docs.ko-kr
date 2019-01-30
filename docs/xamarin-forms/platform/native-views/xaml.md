@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4b33d1d149d3ac85d01dfcbe0d144416fd953426
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4f5f32871c273fc7ac3bab8fd9bcbcac03fc47fa
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052900"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233811"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -182,7 +182,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 인수�
 </ContentPage>
 ```
 
-합니다 [ `UIFont.FromName` ](https://developer.xamarin.com/api/member/UIKit.UIFont.FromName/) 팩터리 메서드는 설정 하는 데 사용 되는 [ `UILabel.Font` ](https://developer.xamarin.com/api/property/UIKit.UILabel.Font/) 속성을 새 [ `UIFont` ](https://developer.xamarin.com/api/type/UIKit.UIFont/) iOS에서. 합니다 `UIFont` 자식인 메서드 인수에 의해 지정 된 이름과 크기를 `x:Arguments` 특성입니다.
+합니다 [ `UIFont.FromName` ](xref:UIKit.UIFont.FromName*) 팩터리 메서드는 설정 하는 데 사용 되는 [ `UILabel.Font` ](xref:UIKit.UILabel.Font) 속성을 새 [ `UIFont` ](xref:UIKit.UIFont) iOS에서. 합니다 `UIFont` 자식인 메서드 인수에 의해 지정 된 이름과 크기를 `x:Arguments` 특성입니다.
 
 합니다 [ `Typeface.Create` ](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) 팩터리 메서드는 설정 하는 데 사용 되는 [ `TextView.Typeface` ](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) 속성을 새 [ `Typeface` ](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) Android에서. 합니다 `Typeface` 제품군 이름과 스타일의 자식인 메서드 인수에 의해 지정 되는 `x:Arguments` 특성입니다.
 
@@ -331,7 +331,7 @@ IOS 및 Android에서 기본 선택 방법을 사용 하 여 컨트롤을 설정
 
 ### <a name="ios"></a>iOS
 
-IOS 구현 서브 클래스는 [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) 보기 및 속성을 노출 하 여 XAML에서 쉽게 사용할 수 있는 이벤트:
+IOS 구현 서브 클래스는 [ `UIPickerView` ](xref:UIKit.UIPickerView) 보기 및 속성을 노출 하 여 XAML에서 쉽게 사용할 수 있는 이벤트:
 
 ```csharp
 public class MyUIPickerView : UIPickerView
@@ -376,7 +376,7 @@ public class MyUIPickerView : UIPickerView
 }
 ```
 
-`MyUIPickerView` 클래스가 노출 `ItemsSource` 하 고 `SelectedItem` 속성 및 `SelectedItemChanged` 이벤트입니다. [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) 내부 필요 [ `UIPickerViewModel` ](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) 에서 액세스할 수 있는 데이터 모델을 `MyUIPickerView` 속성 및 이벤트입니다. 합니다 `UIPickerViewModel` 에서 제공 하는 데이터 모델을 `PickerModel` 클래스:
+`MyUIPickerView` 클래스가 노출 `ItemsSource` 하 고 `SelectedItem` 속성 및 `SelectedItemChanged` 이벤트입니다. [ `UIPickerView` ](xref:UIKit.UIPickerView) 내부 필요 [ `UIPickerViewModel` ](xref:UIKit.UIPickerViewModel) 에서 액세스할 수 있는 데이터 모델을 `MyUIPickerView` 속성 및 이벤트입니다. 합니다 `UIPickerViewModel` 에서 제공 하는 데이터 모델을 `PickerModel` 클래스:
 
 ```csharp
 class PickerModel : UIPickerViewModel
@@ -419,7 +419,7 @@ class PickerModel : UIPickerViewModel
 }
 ```
 
-`PickerModel` 클래스에 대 한 기본 저장소를 제공 합니다 `MyUIPickerView` 클래스를 통해를 `Items` 속성입니다. 때마다에서 선택한 항목의 `MyUIPickerView` 변경을 [ `Selected` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.Selected/) 선택한 인덱스 및 발생을 업데이트 하는 메서드가 실행 되는 `ItemChanged` 이벤트입니다. 이렇게 하면는 `SelectedItem` 속성은 항상 사용자가 선택한 마지막 항목을 반환 합니다. 또한 합니다 `PickerModel` 설치에 사용 되는 메서드를 재정의 하는 클래스는 `MyUIPickerView` 인스턴스.
+`PickerModel` 클래스에 대 한 기본 저장소를 제공 합니다 `MyUIPickerView` 클래스를 통해를 `Items` 속성입니다. 때마다에서 선택한 항목의 `MyUIPickerView` 변경을 [ `Selected` ](xref:UIKit.UIPickerViewModel.Selected*) 선택한 인덱스 및 발생을 업데이트 하는 메서드가 실행 되는 `ItemChanged` 이벤트입니다. 이렇게 하면는 `SelectedItem` 속성은 항상 사용자가 선택한 마지막 항목을 반환 합니다. 또한 합니다 `PickerModel` 설치에 사용 되는 메서드를 재정의 하는 클래스는 `MyUIPickerView` 인스턴스.
 
 ### <a name="android"></a>Android
 

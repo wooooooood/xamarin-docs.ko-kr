@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 8a2755de3dc43ccff88cbdf4dc9c4f9ba2d532c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ddd3e1e6cc3a3a9b42ddb7a597ed2db0ee495d41
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111627"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233317"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Xamarin.iOS에서 동적 알림 실행 단추
 
@@ -35,9 +35,9 @@ Ios 12에서 알림 수 동적으로 추가, 제거 및 해당 관련된 실행 
 예를 들어 합니다 [샘플 앱](#sample-app-redgreennotifications)의 `FinishedLaunching` 메서드의 `AppDelegate` 다음을 수행:
 
 - 빨간색 알림에 대 한 하나의 범주 및 녹색 알림에 대 한 다른 정의
-- 호출 하 여 이러한 범주를 등록 합니다 [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+- 호출 하 여 이러한 범주를 등록 합니다 [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 메서드 `UNUserNotificationCenter`
-- 단일 연결 [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+- 단일 연결 [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 각 범주에
 
 다음 샘플 코드 작동 방식을 보여 줍니다.
@@ -74,12 +74,12 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-이 코드에서는 모든 알림 갖는 기반 [`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+이 코드에서는 모든 알림 갖는 기반 [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 "빨간색-범주" 또는 "녹색 범주"는 기본적으로 표시 되는 **20도 회전** 작업 단추입니다.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>앱에 알림 작업 단추 처리
 
-`UNUserNotificationCenter` 에 `Delegate` 형식의 속성 [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/)합니다.
+`UNUserNotificationCenter` 에 `Delegate` 형식의 속성 [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate)합니다.
 
 샘플 앱에서 `AppDelegate` 자체에 대 한 사용자 알림 센터의 대리자로 설정 `FinishedLaunching`:
 
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-그런 다음 `AppDelegate` 구현 [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+그런 다음 `AppDelegate` 구현 [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 실행 단추를 처리 하도록 다음을 탭 합니다.
 
 ```csharp
@@ -125,7 +125,7 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
 
 알림 콘텐츠 확장 알림에 대 한 사용자 지정 인터페이스를 정의 하는 뷰 컨트롤러를 포함 합니다.
 
-이 뷰 컨트롤러를 사용할 수는 `GetNotificationActions` 고 `SetNotificationActions` 메서드는 [`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+이 뷰 컨트롤러를 사용할 수는 `GetNotificationActions` 고 `SetNotificationActions` 메서드는 [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 속성 액세스 및 수정 알림의 작업 단추입니다.
 
 샘플 앱에서 알림 콘텐츠 확장의 뷰 컨트롤러는 기존 작업 단추 탭에 응답 하는 경우에 실행 단추를 수정 합니다.

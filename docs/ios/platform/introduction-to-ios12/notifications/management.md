@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: a7a3bb8f720f1c6a2370a2510659693bb28ea09b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 96fce269784ad0ac41fd1685ac7ac6b957932bd8
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111595"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233174"
 ---
 # <a name="notification-management-in-xamarinios"></a>Xamarin.iOS에서 알림 관리
 
@@ -28,8 +28,8 @@ Ios 12에서 운영 체제에는 알림 센터에서 딥 링크 및 설정 앱�
 
 ## <a name="notification-management-screen"></a>알림 관리 화면
 
-샘플 앱에서 `ManageNotificationsViewController` 독립적으로 사용 하도록 설정 하 고 빨간색 알림 및 녹색 알림을 사용 하지 않도록 설정할 수 있는 사용자 인터페이스를 정의 합니다. 이것은 표준 [`UIViewController`](https://developer.xamarin.com/api/type/UIKit.UIViewController/)
-포함 하는 [ `UISwitch` ](https://developer.xamarin.com/api/type/UIKit.UISwitch/) 각 알림 형식에 대 한 합니다. 알림의 형식 중 하나에 대 한 스위치를 설정/해제 저장, 사용자 기본값에 해당 알림 유형에 대 한 사용자의 기본 설정:
+샘플 앱에서 `ManageNotificationsViewController` 독립적으로 사용 하도록 설정 하 고 빨간색 알림 및 녹색 알림을 사용 하지 않도록 설정할 수 있는 사용자 인터페이스를 정의 합니다. 이것은 표준 [`UIViewController`](xref:UIKit.UIViewController)
+포함 하는 [ `UISwitch` ](xref:UIKit.UISwitch) 각 알림 형식에 대 한 합니다. 알림의 형식 중 하나에 대 한 스위치를 설정/해제 저장, 사용자 기본값에 해당 알림 유형에 대 한 사용자의 기본 설정:
 
 ```csharp
 partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
@@ -41,7 +41,7 @@ partial void HandleRedNotificationsSwitchValueChange(UISwitch sender)
 > [!NOTE]
 > 알림 관리 화면 사용자 앱에 대 한 알림을 완전히 비활성화 여부를 확인 합니다. 그렇다면 개별 알림 형식에 대 한 토글을 숨깁니다. 이렇게 하려면 알림 관리 화면:
 >
-> - 호출 [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync()/) 검사를 [ `AuthorizationStatus` ](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationSettings.AuthorizationStatus/) 속성입니다.
+> - 호출 [ `UNUserNotificationCenter.Current.GetNotificationSettingsAsync` ](xref:UserNotifications.UNUserNotificationCenter.GetNotificationSettingsAsync) 검사를 [ `AuthorizationStatus` ](xref:UserNotifications.UNNotificationSettings.AuthorizationStatus) 속성입니다.
 > - 앱에 대 한 알림을 완전히 비활성화 된 경우에 대 한 개별 알림 유형 설정/해제를 숨깁니다.
 > - 다시 하므로 사용자 수 활성화/비활성화 알림 iOS 설정에서에서 언제 든 지 응용 프로그램을 전경에 이동할 때마다 알림을 해제 되었는지 여부를 확인 합니다.
 
@@ -61,7 +61,7 @@ partial void HandleTapRedNotificationButton(UIButton sender)
 iOS 딥 링크 앱의 알림 관리 화면으로 알림 센터에서 설정 앱의 앱 알림 설정 합니다. 이 작업을 위해 다음과 같은 앱 같아야 합니다.
 
 - 알림 관리 화면을 전달 하 여 사용할 수 있는지를 나타내는 `UNAuthorizationOptions.ProvidesAppNotificationSettings` 앱의 알림 인증 요청을 합니다.
-- 구현 된 `OpenSettings` 메서드에서 [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.IUNUserNotificationCenterDelegate/)합니다.
+- 구현 된 `OpenSettings` 메서드에서 [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate)합니다.
 
 ### <a name="authorization-request"></a>권한 부여 요청
 

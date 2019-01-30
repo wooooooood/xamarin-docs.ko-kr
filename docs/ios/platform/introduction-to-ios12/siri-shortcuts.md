@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617763"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233733"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
 
@@ -72,9 +72,9 @@ Siri 바로 가기 키를 더 잘 이해 하려면 잠시 살펴 합니다 [Soup
 </array>
 ```
 
-이 `NSUserActivityTypes` Soup Chef가 처리 하는 방법을 알고 있는 키/값 쌍 나타냅니다는 `OrderSoupIntent`, 및 [ `NSUserActivity` ](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/) 하지는 [ `ActivityType` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/) "com.xamarin.SoupChef.viewMenu"의 합니다.
+이 `NSUserActivityTypes` Soup Chef가 처리 하는 방법을 알고 있는 키/값 쌍 나타냅니다는 `OrderSoupIntent`, 및 [ `NSUserActivity` ](xref:Foundation.NSUserActivity) 하지는 [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) "com.xamarin.SoupChef.viewMenu"의 합니다.
 
-활동 및 확장, 아니라 앱 자체에 전달 하는 사용자 지정 의도에서 처리 되는 `AppDelegate` (을 [ `UIApplicationDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)) 여는 [ `ContinueUserActivity` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/) 메서드.
+활동 및 확장, 아니라 앱 자체에 전달 하는 사용자 지정 의도에서 처리 되는 `AppDelegate` (을 [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) 여는 [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) 메서드.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,7 +89,7 @@ Siri 바로 가기 키를 더 잘 이해 하려면 잠시 살펴 합니다 [Soup
 <true/>
 ```
 
-이 구성은 앱 "group.com.xamarin.SoupChef" 앱 그룹을 사용 하는 것을 나타냅니다. 합니다 **SoupChefIntents** 두 프로젝트 공유를 허용 하는이 같은 앱 그룹을 사용 하 여 앱 확장 [`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+이 구성은 앱 "group.com.xamarin.SoupChef" 앱 그룹을 사용 하는 것을 나타냅니다. 합니다 **SoupChefIntents** 두 프로젝트 공유를 허용 하는이 같은 앱 그룹을 사용 하 여 앱 확장 [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 데이터
 
 `com.apple.developer.siri` 키 Siri를 사용 하 여 앱 상호 작용 한다고 나타냅니다.
@@ -103,7 +103,7 @@ Siri 바로 가기 키를 더 잘 이해 하려면 잠시 살펴 합니다 [Soup
 
 ### <a name="setting-up-an-nsuseractivity"></a>NSUserActivity 설정
 
-메뉴 화면의 `SoupMenuViewController` 만듭니다는 `NSUserActivity` 뷰 컨트롤러의 할당 [ `UserActivity` ](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/) 속성:
+메뉴 화면의 `SoupMenuViewController` 만듭니다는 `NSUserActivity` 뷰 컨트롤러의 할당 [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) 속성:
 
 ```csharp
 public override void ViewDidLoad()
@@ -149,8 +149,8 @@ public static NSUserActivity ViewMenuActivity {
 다음을 특히 note:
 
 - 설정 `EligibleForPrediction` 에 `true` Siri이이 활동을 예측 하 고 바로 가기로 화면 수 있는지를 나타냅니다.
-- 합니다 [ `ContentAttributeSet` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/) 배열이 표준 [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) 포함 하는 데는 `NSUserActivity` iOS 검색 결과에서.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/) Siri가 제안 사용자에 게 잠재적인 선택 항목으로 바로 가기는 문구를 할당할 때 하는 구문이입니다.
+- 합니다 [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) 배열이 표준 [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) 포함 하는 데는 `NSUserActivity` iOS 검색 결과에서.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) Siri가 제안 사용자에 게 잠재적인 선택 항목으로 바로 가기는 문구를 할당할 때 하는 구문이입니다.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>사용 하 여 NSUserActivity 바로 처리
 
@@ -600,7 +600,7 @@ public void ConfigureView(
 
 Soup Chef Siri 사용 하 여 주문 soup 수 있도록 음성 바로 가기를 할당 하는 각 주문에 대 한 인터페이스를 제공 합니다. 사실, 기록 및 음성 바로 가기를 할당 하는 데 사용 하는 인터페이스를 iOS에서 제공 하는 및 작은 사용자 지정 코드가 필요 합니다.
 
-`OrderDetailViewController`은 사용자가 테이블의 경우 **Siri 추가할** 행을 [ `RowSelected` ](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/) 메서드를 추가 하거나 음성 바로 가기를 편집 화면 표시:
+`OrderDetailViewController`은 사용자가 테이블의 경우 **Siri 추가할** 행을 [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) 메서드를 추가 하거나 음성 바로 가기를 편집 화면 표시:
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
@@ -647,7 +647,7 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 - 세 가지 앱 Id 만들기: 앱 자체에 대 한 고은 인 텐트 확장에 대 한 인 텐트 UI 확장 프로그램용입니다. 예를 들어:
 
-    - 앱: **com.yourcompanyname.SoupChef**
+    - App: **com.yourcompanyname.SoupChef**
         - 이 앱 id에 SiriKit을 할당 하 고 **앱 그룹** 기능입니다.
 
     - 인 텐트 확장: **com.yourcompanyname.SoupChef.Intents**
@@ -668,7 +668,7 @@ Mac 또는 Visual Studio 2017에 대 한 Visual Studio에서 다음을 수행 �
 
 - 다양 한 업데이트 **Info.plist** 솔루션의 파일입니다. 앱, 인 텐트 확장 및 인 텐트 UI 확장을 설정할 **번들 식별자** 앞에서 정의한 앱 id:
 
-    - 앱: **com.yourcompanyname.SoupChef**
+    - App: **com.yourcompanyname.SoupChef**
     - 인 텐트 확장: **com.yourcompanyname.SoupChef.Intents**
     - 인 텐트 UI 확장: **com.yourcompanyname.SoupChef.Intentsui**
 
