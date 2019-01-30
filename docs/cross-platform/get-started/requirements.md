@@ -72,13 +72,13 @@ macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/d
 
 현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](http://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
 
-각 플랫폼에 대한 자세한 [설치](~/cross-platform/get-started/installation/index.md) 지침은 여기에서 볼 수 있습니다.
+각 플랫폼에 대한 자세한 [설치](~/cross-platform/get-started/installation/index.md) 지침은 다음에서 볼 수 있습니다.
 
 - [Xamarin.iOS](~/ios/get-started/installation/index.md)
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
-또한 [Xamarin.Forms 요구 사항 및 지원되는 플랫폼](~/xamarin-forms/get-started/installation.md)에 대한 추가 정보가 있습니다.
+또한 [Xamarin.Forms 요구 사항 및 지원되는 플랫폼](~/xamarin-forms/get-started/installation.md)에 대한 추가 정보도 볼 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
