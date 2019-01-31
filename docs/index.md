@@ -6,18 +6,18 @@ description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인�
 ms.date: 08/08/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4cea75c2790096a55456018ed47d5899d94171ae
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 0a444626c86c6bb26739b1a9a94582404c729d27
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617748"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292113"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="~/xamarin-forms/get-started/index.md">
+                <a href="~/get-started/index.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -85,7 +85,7 @@ ms.locfileid: "51617748"
                         <a data-default="true" href="#XamarinForms">Xamarin.Forms</a>
                         <ul id="XamarinForms" class="cardsC">
                             <li>
-                                <a href="~/xamarin-forms/get-started/index.md">
+                                <a href="~/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -96,7 +96,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>시작</h3>
-                                                    <p>Xamarin.Forms를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
+                                                    <p>Xamarin.Forms를 안내하고 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,7 +191,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -348,7 +348,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Android 시작</h3>
-                                                    <p>Xamarin.Android를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
+                                                    <p>Xamarin.Android로 안내하고 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,7 +424,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -619,7 +619,7 @@ ms.locfileid: "51617748"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Xamarin.Essentials</h3>
-                                                    <p>파일 액세스, 디바이스 정보, 하드웨어 기능 등의 일반 작업을 위한 플랫폼 간 API.</p>
+                                                    <p>파일 액세스, 장치 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.</p>
                                                 </div>
                                             </div>
                                         </div>
