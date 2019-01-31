@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: e5ec152032a068c0c1e83c8df5e6f128bfa30c83
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 83946929874ae37caab459eed970c50b74154d66
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207767"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292339"
 ---
 # <a name="ios-platform-features"></a>iOS 플랫폼 기능
 
-IOS 용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/xamarin-forms/get-started/installation.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.
+IOS 용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/get-started/installation.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.
 
 ## <a name="platform-specifics"></a>플랫폼별
 

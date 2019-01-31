@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055743"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292144"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용하는 데 특히 더 적합합니다. XAML은 XAML 기반 데이터 바인딩을 통해 ViewModel 코드에 연결된 View를 정의합니다.
+XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 콘텐츠
 
@@ -27,7 +27,7 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 * [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+* [5장. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 해당 XAML 기본 사항 문서 외에도 [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 단원을 다운로드할 수 있습니다.
 
@@ -101,17 +101,12 @@ XAML은 기본적으로 XML이지만 XAML에는 몇 가지 고유한 구문 기�
 
 ## <a name="requirements"></a>요구 사항
 
-이 문서에서는 Xamarin.Forms 작업에 익숙하다고 가정합니다. [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)를 읽어보시는 것이 좋습니다.
-
-이 문서는 또한 XML 네임 스페이스 선언 및 *요소*, *태그* 및 *특성*의 용어 사용의 이해를 비롯하여 XML에 어느 정도 익숙하다고 가정합니다.
+이 문서에서는 Xamarin.Forms 작업에 익숙하다고 가정합니다. 이 문서는 또한 XML 네임 스페이스 선언 및 *요소*, *태그* 및 *특성*의 용어 사용의 이해를 비롯하여 XML에 어느 정도 익숙하다고 가정합니다.
 
 Xamarin.Forms 및 XML에 익숙한 경우, [1장. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)를 읽기 시작하십시오.
-
-
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [모바일 앱 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)

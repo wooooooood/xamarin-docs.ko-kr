@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 520a90030200a1371b15331868ec6e325c6d3694
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3c525178b5ed1e62774d032c0d317d43cd3f94c1
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053333"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292209"
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
@@ -116,7 +116,6 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/FormsGallery/)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

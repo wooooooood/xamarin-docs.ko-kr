@@ -6,13 +6,13 @@ ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.date: 01/30/2019
+ms.openlocfilehash: ec41955ac15ab23579a5e63b9e17eed61a74e86f
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459865"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291988"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -40,6 +40,10 @@ Xamarin.Forms 응용 프로그램은 종종 동일한 모양이 있는 여러 �
 
 스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기간 동안 변경 되지 않습니다. 그러나 응용 프로그램 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경 내용에 응답할 수 있습니다.
 
-## <a name="device-stylesdevicemd"></a>[장치 스타일](device.md)
+## <a name="device-stylesdevicemd"></a>[디바이스 스타일](device.md)
 
 Xamarin.Forms는 6 개 포함 되어 있습니다 *동적* 스타일 이라고 *장치* 스타일에 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다. 에 모든 6 가지 스타일을 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스에만 있습니다.
+
+## <a name="style-classesstyle-classmd"></a>[스타일 클래스](style-class.md)
+
+Xamarin.Forms 스타일 클래스 스타일 상속 방식을 사용 하지 않고 컨트롤에 적용할 스타일을 여러 개를 사용 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 9a149711b52b0ea7a6548c2070b20d708e747174
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4cccf0660e306cb0dc466f5376d74411fa6c4ba1
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050675"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292027"
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 
@@ -35,6 +35,5 @@ Xamarin.Forms 페이지는 일반적으로 전체 화면을 차지 합니다. �
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/FormsGallery/)
 - [API 문서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

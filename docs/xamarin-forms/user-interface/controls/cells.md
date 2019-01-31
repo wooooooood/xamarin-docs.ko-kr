@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ac65122e35849786307afd2a4d6e64e186cad466
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5ef1aba847954ccdeb230acd82ebbc5015ebd6b7
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060202"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292300"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
@@ -61,7 +61,6 @@ Xamarin.Forms 셀 형식을 지원 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 8f84c960f17f56fce2a1bba143a215ce930f6f4e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 6f5af5fde46676cf669e6c02fb83f4aac5d31c46
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996112"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292092"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Xamarin.Forms 스타일 소개
 
@@ -82,13 +82,13 @@ public class NoStylesPageCS : ContentPage
 }
 ```
 
-각 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스마다에서 표시 되는 텍스트의 모양을 제어 하기 위한 동일한 속성 값을 `Label`입니다. 이 인해 다음 스크린샷에 표시 된 모양:
+각 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스마다에서 표시 되는 텍스트의 모양을 제어 하기 위한 동일한 속성 값을 `Label`입니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
 [![](introduction-images/no-styles.png "레이블 스타일 없이 모양을")](introduction-images/no-styles-large.png#lightbox "스타일 없이 모양을 레이블")
 
 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일을 만들 수 있습니다 모양을 정의 하며 그런 다음 필요한 컨트롤에 적용 하는 합니다.
 
-## <a name="creating-a-style"></a>스타일 만들기
+## <a name="create-a-style"></a>스타일 만들기
 
 합니다 [ `Style` ](xref:Xamarin.Forms.Style) 다음 여러 시각적 요소 인스턴스에 적용할 수 있는 하나의 개체에 속성 값의 컬렉션을 그룹화 하는 클래스입니다. 이 반복 태그를 줄일 수 있습니다 및 응용 프로그램 모양을 보다 쉽게 변경할 수 있습니다.
 
@@ -97,7 +97,7 @@ public class NoStylesPageCS : ContentPage
 - [`Style`](xref:Xamarin.Forms.Style) XAML에서 만든 인스턴스는 일반적으로 정의 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 에 할당 된 합니다 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 컨트롤의 컬렉션 페이지에서 또는 [ `Resources` ](xref:Xamarin.Forms.Application.Resources) 응용 프로그램의 컬렉션입니다.
 - [`Style`](xref:Xamarin.Forms.Style) C#에서 만든 인스턴스는 일반적으로 페이지의 클래스 또는 전체적으로 액세스할 수 있는 클래스에서 정의 됩니다.
 
-정의할 위치를 선택는 [ `Style` ](xref:Xamarin.Forms.Style) 사용할 수 있는 영향을 줍니다.
+[`Style`](xref:Xamarin.Forms.Style)을 정의할 위치를 선택하면 사용할 수 있는 위치가 결정됩니다.
 
 - [`Style`](xref:Xamarin.Forms.Style) 제어 수준에 정의 된 인스턴스 및 해당 자식 컨트롤에 적용할 수 있습니다.
 - [`Style`](xref:Xamarin.Forms.Style) 페이지 수준에서 정의 된 인스턴스 및 해당 자식 페이지에 적용할 수 있습니다.
@@ -135,13 +135,8 @@ public class NoStylesPageCS : ContentPage
 >
 > Xamarin.Forms 2.2 이전 합니다 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성은 Pixate 같은 테마 엔진 및 UI 테스트에서 id에 대 한 응용 프로그램의 개별 요소를 식별 하는 데 사용 되었습니다. 하지만 Xamarin.Forms 2.2가 도입 합니다 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) 속성에는 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성. 자세한 내용은 [Xamarin.UITest 및 Test Cloud를 사용 하 여 테스트 자동화 Xamarin.Forms](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md)합니다.
 
-## <a name="summary"></a>요약
-
-Xamarin.Forms 응용 프로그램은 종종 동일한 모양이 있는 여러 컨트롤을 포함 합니다. 반복 될 수 있습니다 각 개별 컨트롤의 모양을 설정 하 고 오류가 발생 하기 쉽습니다. 대신, 스타일 여 만들 수 있습니다 컨트롤 모양을 사용자 지정 하는 그룹화 및 컨트롤 형식에 사용할 수 있는 설정 속성입니다.
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [스타일](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

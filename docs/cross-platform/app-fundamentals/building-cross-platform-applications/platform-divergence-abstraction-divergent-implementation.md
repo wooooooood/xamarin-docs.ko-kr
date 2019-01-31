@@ -1,19 +1,19 @@
 ---
-title: 4 부-다중 플랫폼 처리
+title: 4부 - 다중 플랫폼 처리
 description: 이 문서에서는 플랫폼 또는 기능 기반 응용 프로그램 확산을 처리 하는 방법을 설명 합니다. 화면 크기, 탐색 메타포, 터치 및 제스처, 푸시 알림 및 목록 탭 등 인터페이스 패러다임에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ef224b7410565ae15da7613c04d11e7bd6a44dcb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f4558d5172d7dcbd2e14e6b74a347dd2f1e3a234
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117943"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292131"
 ---
-# <a name="part-4---dealing-with-multiple-platforms"></a>4 부-다중 플랫폼 처리
+# <a name="part-4---dealing-with-multiple-platforms"></a>4부 - 다중 플랫폼 처리
 
 ## <a name="handling-platform-divergence-amp-features"></a>플랫폼 차이 처리 &amp; 기능
 
@@ -95,7 +95,7 @@ ms.locfileid: "50117943"
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-참조 된 [Xamarin.Forms](~/xamarin-forms/get-started/index.md) 설명서.
+참조 된 [Xamarin.Forms](~/get-started/index.md) 설명서.
 
 ### <a name="other-cross-platform-libraries"></a>다른 플랫폼 간 라이브러리
 

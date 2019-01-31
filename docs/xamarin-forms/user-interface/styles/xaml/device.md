@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6c1c7bd12922f127ff7f4eecdc982ede419fc515
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055938"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292235"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms에서 장치 스타일
 
@@ -122,11 +122,6 @@ public class DeviceStylesPageCS : ContentPage
 다음 스크린샷에서 가장 큰 액세스할 수 있는 글꼴 크기를 사용 하 여 각 플랫폼에서 장치 스타일을 보여 줍니다.
 
 ![](device-images/maximum-size.png "각 플랫폼에 액세스할 수 있는 큰 장치 스타일")
-
-## <a name="summary"></a>요약
-
-Xamarin.Forms는 6 개 포함 되어 있습니다 *동적* 스타일 이라고 *장치* 스타일에 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다. 모든 6 스타일에만 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스.
-
 
 ## <a name="related-links"></a>관련 링크
 

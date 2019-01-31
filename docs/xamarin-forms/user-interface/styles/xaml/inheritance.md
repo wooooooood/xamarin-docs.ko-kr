@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 05ec368fb0dd0e1adfac3eed88c5ddd50960f9ae
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bef48db93ae76346802b6569080bb1e54e3e51b3
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291949"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Xamarin.Forms에서 스타일 상속
 
@@ -155,14 +155,9 @@ public class StyleInheritancePageCS : ContentPage
 
 `baseStyle` 대상 [ `View` ](xref:Xamarin.Forms.View) 인스턴스와 설정 된 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신 `labelStyle` 고 `buttonStyle` 추가 바인딩 가능한 속성 값 설정에서 상속 합니다. 합니다 `labelStyle` 하 고 `buttonStyle` 적용 되는 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 및 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
 
-## <a name="summary"></a>요약
-
-스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타일에서 상속할 수 있습니다. 스타일 상속 설정 하 여 수행 합니다 [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) 속성을 기존 [ `Style` ](xref:Xamarin.Forms.Style)합니다.
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 - [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

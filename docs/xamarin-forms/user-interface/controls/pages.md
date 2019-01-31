@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 588c04729b3387cd1a072f73a21f1e49df4529e5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ce10a2e6ac91f67f8b4f664c232de2a3c97a5ba6
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050077"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292001"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms 페이지
 
@@ -74,7 +74,6 @@ Xamarin.Forms는 페이지 형식을 지원 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/FormsGallery/)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

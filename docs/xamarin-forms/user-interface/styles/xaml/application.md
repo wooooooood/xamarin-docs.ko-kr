@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: b663a7f2a4a67a9c3e18ed474d9935227fe34294
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 749e9bca87b2c9547b9733248d75718a4443ab88
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059563"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292352"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Xamarin.Forms에서 글로벌 스타일
 
@@ -20,9 +20,9 @@ ms.locfileid: "53059563"
 
 _스타일 사용할 수 있습니다 전체적으로 응용 프로그램의 리소스 사전에 추가 하 여 합니다. 이를 페이지 또는 컨트롤에서 스타일의 중복을 방지할 수 있습니다._
 
-## <a name="creating-a-global-style-in-xaml"></a>XAML에서 전역 스타일 만들기
+## <a name="create-a-global-style-in-xaml"></a>XAML에서 전역 스타일 만들기
 
-기본적으로 템플릿에서 만든 모든 Xamarin.Forms 응용 프로그램 사용 합니다 **앱** 클래스를 구현 하는 [ `Application` ](xref:Xamarin.Forms.Application) 하위 클래스입니다. 선언 하는 [ `Style` ](xref:Xamarin.Forms.Style) 응용 프로그램의 응용 프로그램 수준 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) XAML에서 기본값을 사용 하 여 **앱** 클래스는 XAML을 사용 하 여 교체 해야 합니다 **앱** 클래스와 관련 된 코드 숨김입니다. 자세한 내용은 [앱 클래스를 사용 하 여 작업](~/xamarin-forms/app-fundamentals/application-class.md)합니다.
+기본적으로 템플릿에서 만든 모든 Xamarin.Forms 애플리케이션은 **App** 클래스를 사용하여 [`Application`](xref:Xamarin.Forms.Application) 서브클래스를 구현합니다. 선언 하는 [ `Style` ](xref:Xamarin.Forms.Style) 응용 프로그램의 응용 프로그램 수준 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) XAML에서 기본값을 사용 하 여 **앱** 클래스는 XAML을 사용 하 여 교체 해야 합니다 **앱** 클래스와 관련 된 코드 숨김입니다. 자세한 내용은 [앱 클래스를 사용 하 여 작업](~/xamarin-forms/app-fundamentals/application-class.md)합니다.
 
 다음 코드 예제는 [ `Style` ](xref:Xamarin.Forms.Style) 응용 프로그램 수준에서 선언 합니다.
 
@@ -66,7 +66,7 @@ _스타일 사용할 수 있습니다 전체적으로 응용 프로그램의 리
 
 페이지의 스타일을 만드는 방법은 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 참조 하십시오 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md) 및 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)합니다.
 
-### <a name="overriding-styles"></a>스타일을 재정의
+### <a name="override-styles"></a>스타일을 재정의 합니다.
 
 스타일 뷰 계층 구조의 하위를 더 높은 정의 보다 우선 합니다. 예를 들어 설정를 [ `Style` ](xref:Xamarin.Forms.Style) 설정 하는 [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) 하 `Red` 응용 프로그램 수준 설정 하는 페이지 수준 스타일에 의해 재정의 됩니다 `Button.TextColor` 를`Green`. 마찬가지로, 페이지 수준 스타일 컨트롤 수준 스타일에 의해 재정의 됩니다. 또한 경우 `Button.TextColor` 직접 컨트롤 속성에이 우선적으로 적용 됩니다 스타일이 모두 설정 합니다. 이 우선 순위는 다음 코드 예제에서 보여 줍니다.
 
@@ -102,7 +102,7 @@ _스타일 사용할 수 있습니다 전체적으로 응용 프로그램의 리
 
 [![](application-images/application-styles-2.png "스타일 예제 재정의")](application-images/application-styles-2-large.png#lightbox "스타일 예제를 재정의 합니다.")
 
-## <a name="creating-a-global-style-in-c35"></a>C에서 전역 스타일 만들기&#35;
+## <a name="create-a-global-style-in-c35"></a>C에서 전역 스타일 만들기&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) 응용 프로그램의 인스턴스를 추가할 수 있습니다 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 새 C#에서 컬렉션 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 추가 하 여 다음을 `Style` 인스턴스를 `ResourceDictionary`,으로 다음 코드 예제에 표시 합니다.
 
@@ -150,15 +150,9 @@ public class ApplicationStylesPageCS : ContentPage
 
 `buttonStyle` 에 적용 되는 [ `Button` ](xref:Xamarin.Forms.Button) 설정 하 여 인스턴스 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성의 모양을 제어 하 고는 `Button` 인스턴스.
 
-## <a name="summary"></a>요약
-
-스타일 사용할 수 있습니다 전체적으로 응용 프로그램을 추가 하 여 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)합니다. 이를 페이지 또는 컨트롤에서 스타일의 중복을 방지할 수 있습니다.
-
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 - [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

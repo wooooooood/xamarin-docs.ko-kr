@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f1c491bd2e19f44151e2efb317fe40d2d122ecae
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 260c215df52eb31139998438cc0eda10a887be65
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058528"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291962"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Xamarin.Forms에서 동적 스타일
 
@@ -207,15 +207,9 @@ public class DynamicStylesInheritancePageCS : ContentPage
 
 `tealSearchBarStyle` 에 직접 할당 된를 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스. 이 `Style` 몇 가지 추가 속성을 설정 하 고 사용 합니다 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 참조할 속성 `searchBarStyle`합니다. [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) 메서드는 필요치 여기 하므로 `tealSearchBarStyle` 변경 되지 것입니다 제외 하 고는 `Style` 에서 파생 합니다. 따라서 `tealSearchBarStyle` 에 대 한 링크를 유지 관리 `searchBarStyle` 기본 스타일이 변경 될 때 변경 됩니다.
 
-## <a name="summary"></a>요약
-
-스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기간 동안 변경 되지 않습니다. 그러나 응용 프로그램 동적 리소스를 사용 하 여 런타임에 동적으로 스타일 변경 내용에 응답할 수 있습니다. 또한 *동적* 사용 하 여 스타일에서 파생 될 수는 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 속성입니다.
-
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [동적 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
 - [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

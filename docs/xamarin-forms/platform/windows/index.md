@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: b1ba6a9f2ee15cf078658b49124c1d9203a3f3d9
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: f14ea52e419ae5d639319f49ae4779de6a2eed31
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207949"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292183"
 ---
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
-Windows 플랫폼용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/xamarin-forms/get-started/installation.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.
+Windows 플랫폼용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/get-started/installation.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.
 
 ![](images/allhanselman.png "Windows를 실행 하는 Xamarin.Forms 응용 프로그램")
 
