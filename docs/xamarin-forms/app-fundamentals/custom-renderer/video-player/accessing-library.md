@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2754e135bee090ce47796dfa1ae39eed2b5f27c5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: dedd2768bfa843e529e2eddcaed3b102c0a2efbd
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059589"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233512"
 ---
 # <a name="accessing-the-devices-video-library"></a>디바이스의 비디오 라이브러리에 액세스
 
@@ -40,7 +40,7 @@ namespace FormsVideoLibrary
 
 ### <a name="the-ios-video-picker"></a>iOS 비디오 선택기
 
-iOS `VideoPicker`는 iOS [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/)를 사용하여 이미지 라이브러리에 액세스하고 iOS `MediaType` 속성에서 비디오("영화"라고 함)로 제한되도록 지정합니다. `VideoPicker`는 `IVideoPicker` 인터페이스를 명시적으로 구현합니다. `Dependency` 특성은 이 클래스를 종속성 서비스로 식별합니다. 이 항목이 Xamarin.Forms가 플랫폼 프로젝트에서 종속성 서비스를 찾을 수 있도록 하는 두 가지 요구 사항입니다.
+iOS `VideoPicker`는 iOS [`UIImagePickerController`](xref:UIKit.UIImagePickerController)를 사용하여 이미지 라이브러리에 액세스하고 iOS `MediaType` 속성에서 비디오("영화"라고 함)로 제한되도록 지정합니다. `VideoPicker`는 `IVideoPicker` 인터페이스를 명시적으로 구현합니다. `Dependency` 특성은 이 클래스를 종속성 서비스로 식별합니다. 이 항목이 Xamarin.Forms가 플랫폼 프로젝트에서 종속성 서비스를 찾을 수 있도록 하는 두 가지 요구 사항입니다.
 
 ```csharp
 using System;

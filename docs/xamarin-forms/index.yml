@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 892a6dccae7bf0ec673b19e830fc01e3f9e39833
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 95df735c07def5b3f7a0ad2e7e3eb1e114cc5e8f
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609898"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292248"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -15,7 +15,7 @@ metadata:
   ms.topic: landing-page
   ms.technology: xamarin-forms
 abstract:
-  description: Xamarin.Forms는 .NET 개발자용 완전한 교차 플랫폼 UI 도구 키트를 제공합니다. Visual Studio에서 C#을 사용하여 완전한 네이티브 Android, iOS 및 유니버설 Windows 플랫폼 앱을 만들 수 있습니다.
+  description: Xamarin.Forms는 .NET 개발자용 완전한 교차 플랫폼 UI 도구 키트를 제공합니다. Visual Studio에서 C#을 사용하여 완전한 네이티브 Android, iOS 및 UWP(Universal Windows Platform) 앱을 만들 수 있습니다.
   menu:
     items:
     - href: ~/xamarin-forms/samples/
@@ -35,30 +35,38 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: 설정
-      href: ~/xamarin-forms/get-started/installation.md
+      href: ~/get-started/installation.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: 첫 번째 앱
-      href: ~/xamarin-forms/get-started/first-app.md
+      href: ~/get-started/first-app/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: 빠른 시작
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
+      text: 앱 빠른 시작
+      href: ~/get-started/quickstarts/single-page.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: 멀티 화면 앱
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md
+      text: 다중 페이지 빠른 시작
+      href: ~/get-started/quickstarts/multi-page.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: 로컬 데이터베이스 빠른 시작
+      href: ~/get-started/quickstarts/database.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: 스타일 지정 빠른 시작
+      href: ~/get-started/quickstarts/styling.md
 - title: 가이드
   items:
   - type: list
     style: cards
     className: cardsB
     items:
-    - href: ~/xamarin-forms/get-started/index.md
+    - href: ~/get-started/quickstarts/index.md
       html: Xamarin.Forms를 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 만드세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/xamarin-forms/get-started/index.md
+        href: ~/get-started/quickstarts/index.md
       title: 시작
     - href: ~/xamarin-forms/xaml/
       html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
@@ -91,7 +99,7 @@ sections:
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
-      html: 로컬 및 원격 데이터 저장과 검색, 기타 클라우드 기반 서비스입니다.
+      html: 로컬 및 원격 데이터 저장과 검색 및 기타 클라우드 기반 서비스입니다.
       image:
         src: ~/media/icons/i_data-cloud.svg
         href: ~/xamarin-forms/data-cloud/

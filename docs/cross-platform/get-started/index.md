@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111332"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292170"
 ---
 # <a name="get-started-with-xamarin"></a>Xamarin 시작
 
@@ -21,7 +21,7 @@ ms.locfileid: "50111332"
 ## <a name="build-your-first-app"></a>첫 번째 앱 빌드
 
 > [!div class="nextstepaction"]
-> [Xamarin.Forms 빠른 시작](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)
+> [Xamarin.Forms 빠른 시작](~/get-started/quickstarts/single-page.md)
 
 Android XML 또는 Xcode Storyboard와 같은 기본 UI 기술을 사용하여 앱을 제작하려면 다음 플랫폼별 가이드 중 하나를 사용합니다.
 
@@ -38,11 +38,11 @@ Xamarin 작동 방법 및 모바일 앱 개발 프로젝트에 접근하는 방�
 
 ### <a name="introduction-to-the-mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[모바일 소프트웨어 개발 수명 주기 소개](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
-이 문서에서는 모바일 응용 프로그램과 관련된 소프트웨어 개발 수명 주기와 모바일 프로젝트를 빌드할 때 필요한 몇 가지 고려 사항에 대해 설명합니다. 바로 시작하여 빌드를 시작하려는 개발자는 이 가이드를 건너뛰어도 되며 모바일 개발에 대한 보다 자세한 이해를 위해 나중에 읽어도 됩니다.
+이 문서에서는 모바일 애플리케이션과 관련된 소프트웨어 개발 수명 주기와 모바일 프로젝트를 빌드할 때 필요한 몇 가지 고려 사항에 대해 설명합니다. 바로 시작하여 빌드를 시작하려는 개발자는 이 가이드를 건너뛰어도 되며 모바일 개발에 대한 보다 자세한 이해를 위해 나중에 읽어도 됩니다.
 
-## <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+## <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[플랫폼 간 애플리케이션 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
-모바일 응용 프로그램을 디자인 및 개발할 때 Xamarin을 선택하고 몇 가지 사항을 유의하면, 모바일 플랫폼 간 상당한 코드 공유를 확인하고, 시장에 빠르게 진입하며, 기존 역량을 활용하고, 모바일 액세스에 대한 고객 요구를 충족하며, 플랫폼 간 복잡성을 줄일 수 있습니다.&nbsp;이 문서에서는 유틸리티 및 생산성 응용 프로그램의 이러한 이점을 확인하기 위한 주요 지침을 설명합니다.
+모바일 애플리케이션을 디자인 및 개발할 때 Xamarin을 선택하고 몇 가지 사항을 유의하면, 모바일 플랫폼 간 상당한 코드 공유를 확인하고, 시장에 빠르게 진입하며, 기존 역량을 활용하고, 모바일 액세스에 대한 고객 요구를 충족하며, 플랫폼 간 복잡성을 줄일 수 있습니다.&nbsp;이 문서에서는 유틸리티 및 생산성 애플리케이션의 이러한 이점을 확인하기 위한 주요 지침을 설명합니다.
 
 ### <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Mac용 Visual Studio 소개](https://docs.microsoft.com/visualstudio/mac/)
 

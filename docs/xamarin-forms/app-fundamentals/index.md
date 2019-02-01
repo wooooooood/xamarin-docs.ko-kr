@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207819"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292157"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 애플리케이션 기본 사항
 
@@ -87,8 +87,3 @@ Xamarin.Forms Shell은 애플리케이션의 컨테이너로, 대부분의 애�
 ## <a name="triggerstriggersmd"></a>[트리거](triggers.md)
 
 XAML의 속성 변경 및 이벤트에 응답하여 컨트롤을 업데이트합니다.
-
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)

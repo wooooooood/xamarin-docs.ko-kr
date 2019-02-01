@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 3452c79621013690f967e065c7afaf0768a50c3f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5c4d43723bc23d8a16be8fec0a895a31ab8bcfdc
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057494"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233967"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
@@ -50,7 +50,7 @@ namespace DependencyServiceSample
 
 ## <a name="ios-implementation"></a>iOS 구현
 
-`IPicturePicker` 인터페이스의 iOS 구현은 [**갤러리에서 사진 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)에 설명된 대로 [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/)를 사용합니다.
+`IPicturePicker` 인터페이스의 iOS 구현은 [**갤러리에서 사진 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)에 설명된 대로 [`UIImagePickerController`](xref:UIKit.UIImagePickerController)를 사용합니다.
 
 iOS 구현은 샘플 코드의 iOS 프로젝트에서 [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) 클래스에 포함됩니다. 이 클래스를 `DependencyService` 관리자에 표시하려면 해당 클래스를 `Dependency` 유형의 [`assembly`] 특성을 사용하여 식별해야 합니다. 해당 클래스는 공개되어야 하며 명시적으로 `IPicturePicker` 인터페이스를 구현해야 합니다.
 

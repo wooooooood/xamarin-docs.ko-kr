@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 08278c2bc380892706320dbd0e69642257b73005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233785"
 ---
 # <a name="checking-battery-status"></a>배터리 상태 확인
 
@@ -77,7 +77,7 @@ namespace DependencyServiceSample
 
 ## <a name="ios-implementation"></a>iOS 구현
 
-각 플랫폼별 애플리케이션 프로젝트에서 `IBattery` 인터페이스를 구현해야 합니다. iOS 구현은 네이티브 [`UIDevice`](https://developer.xamarin.com/api/type/UIKit.UIDevice/) API를 사용하여 배터리 정보에 액세스합니다. 다음 클래스에는 매개 변수가 없는 생성자가 있으므로 `DependencyService`가 새 인스턴스를 만들 수 있습니다.
+각 플랫폼별 애플리케이션 프로젝트에서 `IBattery` 인터페이스를 구현해야 합니다. iOS 구현은 네이티브 [`UIDevice`](xref:UIKit.UIDevice) API를 사용하여 배터리 정보에 액세스합니다. 다음 클래스에는 매개 변수가 없는 생성자가 있으므로 `DependencyService`가 새 인스턴스를 만들 수 있습니다.
 
 ```csharp
 using UIKit;

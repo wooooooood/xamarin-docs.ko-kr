@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 997b3e8a8f847ae08eea7e022e7b3424d0fddd8d
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053869"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233941"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -301,19 +301,19 @@ namespace CustomRenderer.iOS
 }
 ```
 
-`HybridWebViewRenderer` 클래스는 `HybridWebView.Uri` 속성에 지정된 웹 페이지를 네이티브 [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) 컨트롤에 로드하고, `invokeCSharpAction` JavaScript 함수는 이 웹 페이지에 삽입됩니다. 사용자가 이름을 입력하고 HTML `button` 요소를 클릭하면 `invokeCSharpAction` JavaScript 함수가 실행되고, 웹 페이지에서 메시지를 받은 후 `DidReceiveScriptMessage` 메서드가 호출됩니다. 그러면 이 메서드는 팝업을 표시하도록 등록된 작업을 호출하는 `HybridWebView.InvokeAction` 메서드를 호출합니다.
+`HybridWebViewRenderer` 클래스는 `HybridWebView.Uri` 속성에 지정된 웹 페이지를 네이티브 [`WKWebView`](xref:WebKit.WKWebView) 컨트롤에 로드하고, `invokeCSharpAction` JavaScript 함수는 이 웹 페이지에 삽입됩니다. 사용자가 이름을 입력하고 HTML `button` 요소를 클릭하면 `invokeCSharpAction` JavaScript 함수가 실행되고, 웹 페이지에서 메시지를 받은 후 `DidReceiveScriptMessage` 메서드가 호출됩니다. 그러면 이 메서드는 팝업을 표시하도록 등록된 작업을 호출하는 `HybridWebView.InvokeAction` 메서드를 호출합니다.
 
 이 기능을 얻는 방법은 다음과 같습니다.
 
 - `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
-  - 웹 페이지에 메시지를 게시하고 사용자 스크립트를 삽입하는 것을 허용하는 [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 인스턴스가 만들어집니다.
-  - 웹 페이지가 로드된 후 `invokeCSharpAction` JavaScript 함수를 웹 페이지에 삽입하는 [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) 인스턴스가 만들어집니다.
-  - [`WKUserContentController.AddScript`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddUserScript/p/WebKit.WKUserScript/) 메서드는 콘텐츠 컨트롤러에 [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) 인스턴스를 추가합니다.
-  - [`WKUserContentController.AddScriptMessageHandler`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/) 메서드는 [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 인스턴스에 `invokeAction`이라는 스크립트 메시지 처리기를 추가합니다. 그러면 `WKUserContentController` 인스턴스를 사용할 모든 웹 보기의 모든 프레임에서 JavaScript 함수 `window.webkit.messageHandlers.invokeAction.postMessage(data)`가 정의됩니다.
-  - [`WKWebViewConfiguration`](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/) 인스턴스가 만들어지고, [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 인스턴스가 콘텐츠 컨트롤러로 설정됩니다.
-  - [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) 컨트롤이 인스턴스화되고, `WKWebView` 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
+  - 웹 페이지에 메시지를 게시하고 사용자 스크립트를 삽입하는 것을 허용하는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 만들어집니다.
+  - 웹 페이지가 로드된 후 `invokeCSharpAction` JavaScript 함수를 웹 페이지에 삽입하는 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스가 만들어집니다.
+  - [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) 메서드는 콘텐츠 컨트롤러에 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스를 추가합니다.
+  - [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) 메서드는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스에 `invokeAction`이라는 스크립트 메시지 처리기를 추가합니다. 그러면 `WKUserContentController` 인스턴스를 사용할 모든 웹 보기의 모든 프레임에서 JavaScript 함수 `window.webkit.messageHandlers.invokeAction.postMessage(data)`가 정의됩니다.
+  - [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) 인스턴스가 만들어지고, [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 콘텐츠 컨트롤러로 설정됩니다.
+  - [`WKWebView`](xref:WebKit.WKWebView) 컨트롤이 인스턴스화되고, `WKWebView` 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
-  - [`WKWebView.LoadRequest`](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다. 웹 페이지가 표시되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
+  - [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다. 웹 페이지가 표시되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
 - 렌더러가 연결된 요소가 변경되면:
   - 리소스가 해제됩니다.
 
