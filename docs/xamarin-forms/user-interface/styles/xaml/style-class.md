@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 2de21f19e2789c94c02b5d2e9c13fc06963e1a7f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: dd749a4a78adbab5317f1ae5ca6334caa009b9b3
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293320"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668552"
 ---
 # <a name="xamarinforms-style-classes"></a>Xamarin.Forms 스타일 클래스
 
@@ -206,7 +206,7 @@ Resources = new ResourceDictionary
 ![](style-class-images/boxviews.png "BoxViews는 스타일 클래스를 사용 하 여 스타일")
 
 > [!IMPORTANT]
-> 여러 스타일 클래스에 적용할 수를 제어 하기 때문에 합니다 [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) 형식의 속성이 `IList<string>`합니다.
+> 여러 스타일 클래스에 적용할 수를 제어 하기 때문에 합니다 [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) 형식의 속성이 `IList<string>`합니다. 이 경우 스타일 클래스 목록을 오름차순 적용 됩니다. 따라서 여러 스타일 클래스와 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스에서 속성 우선을 적용 됩니다.
 
 해당 하는 C# 코드가입니다.
 

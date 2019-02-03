@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 09/24/2018
-ms.openlocfilehash: d89488e3f6e42f84fc9519eedaa38c99b90ae068
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 02/02/2019
+ms.openlocfilehash: 8adf52d8e08dedeebae8362cf730e5dc3c7c93a9
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293353"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668565"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -25,6 +25,8 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
@@ -40,7 +42,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 4. 디버그 단추(또는 **디버그 > 디버깅 시작** 메뉴 항목)를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
@@ -71,6 +73,8 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ## <a name="step-by-step-instructions-for-mac"></a>Mac용 단계별 지침
 
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+
 위의 비디오와 함께 다음 단계를 수행합니다.
 
 1. **파일 > 새 솔루션...** 을 선택하거나 **새 프로젝트...** 단추를 누른 다음, **멀티 플랫폼 > 앱 > 빈 Forms 앱**을 선택합니다.
@@ -87,7 +91,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 4. 디버그 단추(또는 **실행 > 디버깅 시작**)를 눌러 Android 에뮬레이터를 시작합니다.
 
-5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackPanel>`이 종료되기 전에 추가합니다.
+5. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
