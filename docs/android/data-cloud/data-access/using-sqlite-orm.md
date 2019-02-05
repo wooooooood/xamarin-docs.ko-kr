@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: 6525cb321537a7cefb24feb1e77b532068b098ef
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418688"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712087"
 ---
 # <a name="using-sqlitenet-with-android"></a>Android SQLite.NET 사용
 
@@ -207,9 +207,11 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 SQLite는 서로 다른 3 가지 스레딩 모드를 지원합니다. *단일 스레드*하십시오 *다중 스레드*, 및 *직렬화*합니다. 아무런 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우 SQLite를 사용 하 여 구성할 수 있습니다 합니다 **직렬화 됨** 모드를 스레딩 합니다. 응용 프로그램의 초기에이 모드를 설정 해야 (예를 들어 맨 앞에 `OnCreate` 메서드).
 
-스레딩 모드를 변경 하려면 호출 `SqliteConnection.SetConfig`합니다. 이 코드 줄에 대해 SQLite를 구성 하는 예를 들어 **직렬화 됨** 모드: 
+스레딩 모드를 변경 하려면 호출 `SqliteConnection.SetConfig`합니다. 이 코드 줄에 대해 SQLite를 구성 하는 예를 들어 **직렬화 됨** 모드:
 
 ```csharp
+using using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
@@ -225,16 +227,17 @@ Android 버전의 SQLite 제한이 몇 가지 추가 단계가 필요 합니다.
     internal static extern int sqlite3_initialize();
     ```
 
-
 2.  매우 시작 부분에는 `OnCreate` 메서드를 종료 SQLite에이 코드를 추가, 구성에 대 한 **직렬화 됨** 모드 및 SQLite 다시 초기화:
 
     ```csharp
+    using using Mono.Data.Sqlite;
+    ...
     sqlite3_shutdown();
     SqliteConnection.SetConfig(SQLiteConfig.Serialized);
     sqlite3_initialize();
     ```
 
-이 해결 방법에 대해서도 작동 합니다 `Mono.Data.Sqlite` 라이브러리입니다. 다중 스레딩 및 SQLite에 대 한 자세한 내용은 참조 하세요 [SQLite 및 다중 스레드에서](https://www.sqlite.org/threadsafe.html)합니다. 
+이 해결 방법에 대해서도 작동 합니다 `Mono.Data.Sqlite` 라이브러리입니다. 다중 스레딩 및 SQLite에 대 한 자세한 내용은 참조 하세요 [SQLite 및 다중 스레드에서](https://www.sqlite.org/threadsafe.html)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

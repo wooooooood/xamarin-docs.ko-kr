@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 7c19cc0f2d1f72706926d640bb7fad9323a9e17f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 067ff4758ca78f7d706c7be96ffecd10e4e57965
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049458"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712074"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
@@ -120,6 +120,7 @@ x:Class="demoListView.ImageCellPage">
 - 사용자 지정 셀 내에 중첩 되어는 `DataTemplate`, 내부는 `ListView.ItemTemplate`합니다. 이 다른 셀을 사용 하 여 프로세스와 동일 합니다.
 - `ViewCell` 사용자 지정 셀의 유형이입니다. 자식 합니다 `DataTemplate` 요소 이어야 하거나 형식에서 파생 해야 `ViewCell`합니다.
 - 내부를 확인 합니다 `ViewCell`, 레이아웃에서 관리 하는 `StackLayout`합니다. 이 레이아웃을 사용 하면 배경 색을 사용자 지정할 수 있습니다. 모든 속성 `StackLayout` 바인딩할 수 있습니다 즉 여기 표시 되지 않습니다 하지만 사용자 지정 셀 내에서 바인딩할 수 있습니다.
+- 내부는 `ViewCell`, 모든 Xamarin.Forms 레이아웃에서 레이아웃을 관리할 수 있습니다. 
 
 ### <a name="cnum"></a>C&num;
 
