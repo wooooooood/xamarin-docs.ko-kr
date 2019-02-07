@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
+ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054128"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55748084"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -33,7 +33,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 - `StaticResource` &ndash; [**리소스 사전**](~/xamarin-forms/xaml/resource-dictionaries.md) 문서에서 설명된 것처럼 리소스 사전에서 개체를 참조합니다.
 - `DynamicResource` &ndash; [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md) 문서에 설명된 것처럼 리소스 사전에 있는 개체 변경에 응답합니다.
 - `Binding` &ndash; [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에 설명된 것처럼 두 개체의 속성 간의 연결을 설정합니다.
-- `TemplateBinding` &ndash; [**컨트롤 템플릿에서 바인딩**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/) 문서에 설명된 것처럼 컨트롤 템플릿에서 데이터 바인딩을 수행합니다.
+- `TemplateBinding` &ndash; [**컨트롤 템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/) 문서에 설명된 것처럼 컨트롤 템플릿에서 데이터 바인딩을 수행합니다.
 
 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃은 사용자 지정 태그 확장 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)을 사용합니다. 해당 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md) 문서에서 설명합니다.
 
@@ -84,7 +84,7 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
 </Label>
 ```
 
-이것은 더 단순화할 수 있지만, 이러한 변경으로 몇 가지 새로운 구문이 도입됩니다. `StaticExtension` 클래스와 멤버 설정을 중괄호로 묶어서 구성합니다. 결과 표현식은 다음과 같이 직접 `FontSize` 특성으로 설정됩니다.
+더 나아가 단순화할 수 있습니다. 하지만 변경에 몇 가지 새 구문을 소개: 배치 이루어져는 `StaticExtension` 클래스와 중괄호에서 설정 멤버입니다. 결과 표현식은 다음과 같이 직접 `FontSize` 특성으로 설정됩니다.
 
 ```xaml
 <Label Text="Label No. 3"
@@ -477,9 +477,9 @@ public partial class TypeDemoPage : ContentPage
 - `IValueConverter` 구현에 전달할 값으로 설정하는 `object` 유형의 `ConverterParameter`.
 
 > [!NOTE]
-> XAML 파서는 [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스가 `OnPlatform`으로 축약되는 것을 허용합니다.
+> XAML 파서는 [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스를 `OnPlatform`으로 축약하는 것을 허용합니다.
 
-`Default` 속성은 `OnPlatformExtension`의 콘텐츠 속성입니다. 따라서 XAML 태그 표현식은 중괄호를 사용하여 표현되며, 첫 번째 인수라는 전제 하에 표현식의 `Default=` 부분은 제거할 수 있습니다.
+`Default` 속성은 `OnPlatformExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
 
 > [!IMPORTANT]
 > XAML 파서는 올바른 유형의 값이 `OnPlatform` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnPlatform` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기로는 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
