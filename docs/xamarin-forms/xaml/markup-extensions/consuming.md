@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 3fdb2a3853c1320b6bd0b8a02701acd6883bf226
-ms.sourcegitcommit: 999b9f254c56ff18ebd391fd0de2f0d6e95e35b9
-ms.translationtype: HT
+ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
+ms.sourcegitcommit: 93c45e456218746df4f4a03bbe93493da0a90153
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55748084"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760721"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -33,7 +33,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 - `StaticResource` &ndash; [**리소스 사전**](~/xamarin-forms/xaml/resource-dictionaries.md) 문서에서 설명된 것처럼 리소스 사전에서 개체를 참조합니다.
 - `DynamicResource` &ndash; [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md) 문서에 설명된 것처럼 리소스 사전에 있는 개체 변경에 응답합니다.
 - `Binding` &ndash; [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에 설명된 것처럼 두 개체의 속성 간의 연결을 설정합니다.
-- `TemplateBinding` &ndash; [**컨트롤 템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding/) 문서에 설명된 것처럼 컨트롤 템플릿에서 데이터 바인딩을 수행합니다.
+- `TemplateBinding` &ndash; [**컨트롤 템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md) 문서에 설명된 것처럼 컨트롤 템플릿에서 데이터 바인딩을 수행합니다.
 
 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃은 사용자 지정 태그 확장 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)을 사용합니다. 해당 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md) 문서에서 설명합니다.
 
