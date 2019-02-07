@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 39af3b0e28bbbf9397ceece55adc330e364dcc3d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061787"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831965"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -44,6 +44,18 @@ var MyEntry = new Entry { Text = "I am an Entry" };
 var text = MyEntry.Text;
 ```
 
+### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
+
+합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Entry`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
+```
+
+```csharp
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
+```
+
 > [!NOTE]
 > 너비를 `Entry` 설정 하 여 정의할 수 있습니다 해당 `WidthRequest` 속성입니다. 너비에 종속 되지 않는 `Entry` 의 값에 따라 정의 되 고 해당 `Text` 속성입니다.
 
@@ -60,6 +72,40 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력 하지 않고 사용할 수 있습니다 값 `int.MaxValue`에 대 한 기본 값인는 [ `Entry` ](xref:Xamarin.Forms.Entry), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
+
+### <a name="password-fields"></a>암호 필드
+
+`Entry` 제공 된 `IsPassword` 속성입니다. 때 `IsPassword` 는 `true`, 필드의 내용을 black 원으로 표시 됩니다.
+
+XAML:
+
+```xaml
+<Entry IsPassword="true" />
+```
+
+C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true };
+```
+
+![](entry-images/password.png "항목 IsPassword 예")
+
+인스턴스를 사용 하 여 자리 표시자를 사용할 수 있습니다 `Entry` 암호 필드로 구성 된:
+
+XAML:
+
+```xaml
+<Entry IsPassword="true" Placeholder="Password" />
+```
+
+C#:
+
+```csharp
+var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
+```
+
+![](entry-images/passwordplaceholder.png "항목 IsPassword 및 자리 표시자 예제")
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>커서 위치 및 텍스트 선택 길이 설정합니다.
 
@@ -207,52 +253,6 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 
 > [!NOTE]
 > 경우는 [ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled) 속성 `false`,이 고 사용자 지정 키보드 가장 되지 않습니다 텍스트 자동 완성 및 자동 사용 텍스트 수정 되지 합니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
-
-### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
-
-합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Entry`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
-
-```xaml
-<Entry Placeholder="Username" PlaceholderColor="Olive" />
-```
-
-```csharp
-var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
-```
-
-### <a name="password-fields"></a>암호 필드
-
-`Entry` 제공 된 `IsPassword` 속성입니다. 때 `IsPassword` 는 `true`, 필드의 내용을 black 원으로 표시 됩니다.
-
-XAML:
-
-```xaml
-<Entry IsPassword="true" />
-```
-
-C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true };
-```
-
-![](entry-images/password.png "항목 IsPassword 예")
-
-인스턴스를 사용 하 여 자리 표시자를 사용할 수 있습니다 `Entry` 암호 필드로 구성 된:
-
-XAML:
-
-```xaml
-<Entry IsPassword="true" Placeholder="Password" />
-```
-
-C#:
-
-```csharp
-var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
-```
-
-![](entry-images/passwordplaceholder.png "항목 IsPassword 및 자리 표시자 예제")
 
 ### <a name="colors"></a>색
 
