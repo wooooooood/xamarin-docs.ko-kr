@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: 85b9297a62cfb90485be2cbd927abfdcfec2f13c
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: be6154631b8b51ec61feb4c713d925ff30505b7d
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563045"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831757"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms의 XAML 네임 스페이스
 
@@ -96,10 +96,11 @@ XAML에서 네임 스페이스 선언은 부모 요소에서 자식 요소로 �
 </ListView>
 ```
 
+사용자 지정 네임 스페이스 스키마를 정의 하는 방법에 대 한 내용은 [Namespace 스키마를 사용자 지정 하는 XAML](custom-namespace-schemas.md)합니다.
+
 ## <a name="summary"></a>요약
 
 이 문서에서는 XAML 네임 스페이스 구문을 소개하고 XAML 네임 스페이스를 선언하여 유형에 접근하는 방법을 보여줍니다. XAML은 네임 스페이스 선언에 `xmlns` XAML 특성을 사용하여 접두사가 있는 XAML 네임 스페이스를 선언하여 XML에서 유형을 참조할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

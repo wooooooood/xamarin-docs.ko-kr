@@ -7,23 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 067ff4758ca78f7d706c7be96ffecd10e4e57965
-ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
+ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712074"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831783"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
 
-ListView를 사용 하 여 사용자 지정할 수 있는 스크롤 가능한 목록이 표시 `ViewCell`s입니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
-
-ListView 셀에서 원하는 하는 방법은 두 가지가 있습니다.
-
-- **[기본 제공 셀 사용자 지정](#Built_in_Cells)**  &ndash; 쉽게 구현 및 사용자 지정 기능 저하 성능이 향상 됩니다.
-- **[사용자 지정 셀을 만드는](#customcells)**  &ndash; 더 최종 결과 제어 하지만 올바르게 구현 되지 않은 경우 성능 문제가 발생할 수 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 사용 하 여 사용자 지정할 수 있는 스크롤 가능한 목록이 제공 `ViewCell`s입니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
 
 <a name="Built_in_Cells" />
 

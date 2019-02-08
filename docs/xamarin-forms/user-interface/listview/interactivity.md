@@ -6,23 +6,19 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/13/2018
-ms.openlocfilehash: f5b5a8a2d7adf207a583d71953ead1e0e7306b3f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/14/2018
+ms.openlocfilehash: 939df6cfd17de82e28958363cfa51cd199f928cb
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052318"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831693"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
 
-ListView는 다음 방법 중 하나를 통해 표시 데이터와 상호 작용을 지원 합니다.
-
-- [**선택 및 Tap** ](#selectiontaps) &ndash; 탭을 선택/deselections 항목에 응답 합니다. 행 선택 (기본적으로 사용)를 사용 하지 않도록 설정 하거나 사용 합니다.
-- [**상황에 맞는 작업** ](#Context_Actions) &ndash; 삭제 하려면 안쪽으로 살짝 밀어 항목당, 예를 들어 노출 기능입니다.
-- [**끌어오기-새로 고침** ](#Pull_to_Refresh) &ndash; 사용자가 기대 하는 기본 환경에서 끌어오기-새로 고침 관용구를 구현 합니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 표시 데이터와 상호 작용을 지원 합니다.
 
 <a name="selectiontaps" />
 
@@ -66,6 +62,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>상황에 맞는 작업
+
 사용자는 항목에 대해 작업을 수행 하려면 종종는 `ListView`합니다. 예를 들어 메일 앱에서 전자 메일 목록을 것이 좋습니다. Ios의 경우 메시지를 삭제 하려면 살짝::
 
 ![](interactivity-images/context-default.png "상황에 맞는 작업을 사용 하 여 ListView")
@@ -149,30 +146,47 @@ public void OnDelete (object sender, EventArgs e) {
 <a name="Pull_to_Refresh" />
 
 ## <a name="pull-to-refresh"></a>고치려면 당김
-사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. `ListView` 이-의-기본을 지원합니다. 끌어오기-새로 고침 기능을 사용 하도록 설정 하려면 설정 `IsPullToRefreshEnabled` 로:
+
+사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. [`ListView`](xref:Xamarin.Forms.ListView) 이-의-기본을 지원합니다. 끌어오기-새로 고침 기능을 사용 하려면 [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) 하려면 `true`:
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true" />
+```
+
+해당 하는 C# 코드가입니다.
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
 ```
 
-끌어오기-새로 고침 사용자로이 가져오는 원본:
+기본적으로 검정색 인 새로 고치는 동안 회전자 표시 됩니다. 그러나 설정 하 여 iOS 및 Android에서 회전자 색상에 변경할 수는 합니다 `RefreshControlColor` 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<ListView ...
+          IsPullToRefreshEnabled="true"
+          RefreshControlColor="Red" />
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+listView.RefreshControlColor = Color.Red;
+```
+
+다음 스크린샷은 사용자 끌어오는으로 끌어오기-새로 고침을 보여 줍니다.
 
 ![](interactivity-images/refresh-start.png "ListView 당겨서 새로 고침 진행률의")
 
-끌어오기-새로 고침 사용자와 끌어오기를 출시 했습니다. 이 사용자 목록을 업데이트 하는 동안 확인: ![](interactivity-images/refresh-in-progress.png "ListView 당겨서 새로 고침 완료")
+다음 스크린샷은 사용자가 표시 되는 회전자를 사용 하 여 끌어오기, 출시 된 후 끌어오기-새로 고침을 표시 하는 동안 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 업데이트:
 
-ListView는 끌어오기-새로 고침 이벤트에 응답할 수 있도록 하는 몇 가지 이벤트를 노출 합니다.
+![](interactivity-images/refresh-in-progress.png "ListView 당겨서 새로 고침 완료")
 
--  합니다 `RefreshCommand` 호출할 및 `Refreshing` 호출 하는 이벤트입니다. `IsRefreshing` 에 설정할 `true`합니다.
--  코드 목록 뷰에서 명령 또는 이벤트의 내용을 새로 고치려면 반드시 수행 해야 합니다.
--  새로 고칠 때 완료가 호출 `EndRefresh` 설정할지 `IsRefreshing` 에 `false` 완료 되는 목록 보기를 합니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 발생 합니다 [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) 새로 고침을 시작 하는 이벤트와 [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) 속성에 설정할 `true`합니다. 내용 새로 고침 하는 데 필요한 코드를는 `ListView` 다음에 대 한 이벤트 처리기에서 실행할지를 `Refreshing` 이벤트 또는 실행 메서드에서 [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand)합니다. 한 번를 `ListView` 는 새로 고쳐지고를 `IsRefreshing` 속성 설정 해야 `false`, 또는 [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) 메서드를 호출 해야 새로 고침 완료 되었음을 나타냅니다.
 
-`CanExecute` 제공 하는 제어 하는 방법을 끌어오기-새로 고침 명령을 활성화 해야 하는지 여부를 속성이 적용 됩니다.
-
-
+> [!NOTE]
+> 정의 하는 경우는 [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand)는 `CanExecute` 명령의 메서드 명령을 사용할지 여부를 지정할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [ListView 대화형 작업 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [1.4 릴리스 정보](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [1.3 릴리스 정보](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

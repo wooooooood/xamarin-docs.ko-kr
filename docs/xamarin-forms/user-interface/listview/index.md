@@ -7,32 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059261"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831812"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/WorkingWithListview)
 
-뷰는 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다. 이 가이드에서는 ListView를 사용 하는 방법을 보여 줍니다.
-
-1. **[데이터 원본](data-and-databinding.md)**  &ndash; 데이터 바인딩 없이 데이터로 ListView 채우기입니다.
-2. **[셀 모양을](customizing-cell-appearance.md)**  &ndash; 사용자 고유의 사용자 지정 셀을 만들거나 기본 제공 셀 모양 사용자 지정 합니다.
-3. **[목록 모양](customizing-list-appearance.md)**  &ndash; ListView 모양 사용자 지정 합니다. 머리글과 바닥글, 그룹을 사용 하도록 설정 집합과 행의 높이 변경 합니다.
-4. **[상호 작용](interactivity.md)**  &ndash; 탭 및 선택 항목 처리 끌어오기-새로 고침을 구현 하 고 상황에 맞는 작업을 추가 합니다.
-5. **[성능](performance.md)**  &ndash; 성능 문제를 방지 합니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다.
 
 ## <a name="use-cases"></a>사용 사례
+
 ListView에 맞게 오른쪽 컨트롤 인지 확인 합니다. ListView는 데이터의 스크롤 목록을 표시 하는 상황에서 사용할 수 있습니다. Listview는 상황에 맞는 작업 및 데이터 바인딩을 지원합니다.
 
 ListView와 혼동 하지 마십시오 [TableView](~/xamarin-forms/user-interface/tableview.md)합니다. TableView 컨트롤이 바운드가 아닌 옵션 또는 데이터 목록이 있을 때마다 더 나은 옵션입니다. 예를 들어, 대부분 미리 정의 된 일련의 옵션에는 iOS 설정 앱은 TableView ListView 보다는 데 적합 합니다.
 
 유형이 같은 데이터를 ListView는 가장 적합 한도 &ndash; 즉, 모든 데이터가 동일한 형식 이어야 합니다. 즉, 목록의 각 행에 하나의 유형의 셀을 사용할 수 있습니다. 뷰를 조합 해야 할 때 더 나은 옵션은 있도록 TableViews 여러 셀 유형의 지원할 수 있습니다.
-
 
 ## <a name="components"></a>구성 요소
 ListView에는 여러 구성 요소가 각 플랫폼의 기본 기능을 실행 하도록 사용할 수 있습니다. 이러한 각 구성이 요소는 아래 설명 되어 있습니다.
@@ -62,7 +56,6 @@ ListView는 다양을 한 상호 작용 스타일을 포함 하 여 지원 합�
 ![](images/context-default.png "상황에 맞는 작업을 사용 하 여 ListView")
 
 ListView의 대화형 기능에 대 한 자세한 내용은 참조 하세요 [ListView 사용 하 여 대화형 작업 및 작업](interactivity.md)합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

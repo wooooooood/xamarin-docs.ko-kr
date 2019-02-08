@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53813962"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831719"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
@@ -23,7 +23,7 @@ _XAML은 사용자 인터페이스를 정의하는 데 사용하는 선언적 �
 **Evolve 2016: XAML 마스터 되 고**
 
 > [!NOTE]
-> [XAML 표준 미리 보기](standard/index.md)를 살펴보세요.
+> [XAML Standard 미리 보기](standard/index.md) 사용해 보기
 
 <a name="xaml" />
 
@@ -42,6 +42,10 @@ XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 �
 ## <a name="xaml-namespacesnamespacesmd"></a>[XAML 네임스페이스](namespaces.md)
 
 XAML에서 `xmlns`라는 XML 특성은 네임스페이스를 선언하는 데 사용합니다. 이 문서는 XAML 네임스페이스 구문을 소개하고 형식을 사용하기 위해 XAML 네임스페이스를 선언하는 방법을 보여줍니다.
+
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[XAML Namespace 사용자 지정 스키마](custom-namespace-schemas.md)
+
+XAML 네임 스페이스 사용자 지정 스키마를 정의할 수 있습니다는 `XmlnsDefinitionAttribute` 사용자 지정 URL 및 하나 이상의 CLR 네임 스페이스 간의 매핑을 지정 하는 클래스입니다. 사용자 지정 네임 스페이스 스키마 XAML 네임 스페이스 선언에서 사용할 수 있습니다.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[XAML 마크업 확장](markup-extensions/index.md)
 

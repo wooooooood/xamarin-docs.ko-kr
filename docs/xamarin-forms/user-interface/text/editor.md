@@ -6,13 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/31/2018
-ms.openlocfilehash: 2fe1ad168186740fd71d25814e68b1109e097597
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 4011863553935052c230def403f4ebc281c51d92
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052626"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831874"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -45,6 +45,18 @@ var MyEditor = new Editor { Text = "I am an Editor" };
 
 ```csharp
 var text = MyEditor.Text;
+```
+
+### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
+
+합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Editor`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+```
+
+```csharp
+var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
 ### <a name="limiting-input-length"></a>입력된 길이 제한
@@ -159,17 +171,22 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > 경우는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`, 사용자 지정 키보드를 사용 하지 않을, 네이티브 맞춤법 검사기를 사용할 수 없습니다. 그러나 경우에 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 가 된 맞춤법 검사를 사용 하지 않도록 설정 하는 집합 검사와 같은 [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), `IsSpellCheckEnabled` 속성은 무시 됩니다. 에 대 한 맞춤법 검사를 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
 
-### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
+### <a name="enabling-and-disabling-text-prediction"></a>설정 및 텍스트 자동 완성을 사용 하지 않도록 설정
 
-합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Editor`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+`IsTextPredictionEnabled` 속성 컨트롤 여부를 텍스트 예측 및 자동 텍스트 보정을 사용할 수 있습니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 하는 대로 word 예측 표시 됩니다.
+
+그러나 일부 텍스트 항목 시나리오에 대 한 사용자 이름, 텍스트 자동 완성 및 자동 텍스트를 입력 하는 등 수정 음수 환경을 제공 하 고 설정 하 여 비활성화 해야 합니다 `IsTextPredictionEnabled` 속성을 `false`:
 
 ```xaml
-<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+<Editor ... IsTextPredictionEnabled="false" />
 ```
 
 ```csharp
-var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
+var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
+
+> [!NOTE]
+> 경우는 `IsTextPredictionEnabled` 속성 `false`,이 고 사용자 지정 키보드 가장 되지 않습니다 텍스트 자동 완성 및 자동 사용 텍스트 수정 되지 합니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
 
 ### <a name="colors"></a>색
 

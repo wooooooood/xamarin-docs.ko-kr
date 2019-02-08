@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 08ac86674e4f10d6bd17d765de2bcdf7c2d3f901
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 79b973784dd978bff15c7a706083c70df83ba1c8
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061761"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831848"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API를 사용 하 여 맞춤법 검사
 
@@ -154,6 +154,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 ![](spell-check-images/before-spell-check.png "맞춤법 검사 하기 전에")
 
 ![](spell-check-images/after-spell-check.png "맞춤법 검사 후")
+
+> [!NOTE]
+> 사용 하 여 위의 예제 `Replace` 편의상 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 것입니다. API가 제공 된 `offset` 업데이트를 수행 하는 원본 텍스트에서 올바른 위치를 식별 하려면 프로덕션 앱에서 사용 해야 하는 값입니다.
 
 ## <a name="summary"></a>요약
 

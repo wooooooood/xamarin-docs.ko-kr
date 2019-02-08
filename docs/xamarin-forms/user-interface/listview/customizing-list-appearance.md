@@ -6,24 +6,19 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059459"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831797"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` 기본 외에도 전체 목록 표시를 제어 하기 위한 옵션이 `ViewCell`s입니다. 다음 옵션을 사용할 수 있습니다.
-
-- [**그룹화** ](#Grouping) &ndash; 쉽게 탐색 및 향상 된 조직에 대 한 ListView에서 항목을 그룹화 합니다.
-- [**머리글 및 바닥글** ](#Headers_and_Footers) &ndash; 다른 항목으로 스크롤 하는 보기의 시작과 끝에 정보를 표시 합니다.
-- [**행 구분 기호** ](#Row_Separators) &ndash; 표시 하거나 숨길 항목 간의 구분선입니다.
-- [**가변 높이 행** ](#Row_Heights) &ndash; 기본적으로 모든 행은 동일한 높이 있지만 표시할 다른 높이 사용 하 여 행을 변경할 수 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView) 외에 목록 표시를 제어 하는 기능에는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 목록의 각 행에 대 한 인스턴스.
 
 <a name="Grouping" />
 
@@ -205,6 +200,14 @@ XAML:
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "사용자 지정된 헤더 및 바닥글을 사용 하 여 ListView")
+
+## <a name="scrollbar-visibility"></a>스크롤 막대 표시 여부
+
+[`ListView`](xref:Xamarin.Forms.ListView) 가 `HorizontalScrollBarVisibility` 하 고 `VerticalScrollBarVisibility` 속성을 가져오거나 설정를 [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) 가로나 세로로 스크롤 막대에 표시 되는 경우를 나타내는 값입니다. 두 속성은 다음 값으로 설정할 수 있습니다.
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 플랫폼에 대 한 기본 스크롤 막대 동작을 나타내며의 기본값은는 `HorizontalScrollBarVisibility` 고 `VerticalScrollBarVisibility` 속성입니다.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠 보기에 맞지 않는 경우에 스크롤 막대 표시 수를 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 스크롤 막대 표시 수 없음을 나타내는 이벤트 콘텐츠 보기에 맞지 않는 경우.
 
 <a name="Row_Separators" />
 

@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/04/2018
-ms.openlocfilehash: c611828e2dc3ee7a373836ec01af90d4899f97f6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062220"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831861"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -146,7 +146,7 @@ var label =
 
 ## <a name="formatted-text"></a>서식 있는 텍스트
 
-레이블 표시를 [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) 같은 보기에서 색 및 여러 글꼴을 사용 하 여 텍스트의 표현을 수 있는 속성입니다.
+레이블 표시를 [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) 속성 여러 글꼴을 사용 하 여 텍스트 표시를 허용 하 고 동일한 뷰에서 색입니다.
 
 `FormattedText` 형식의 속성은 [ `FormattedString` ](xref:Xamarin.Forms.FormattedString)로 구성 된 하나 이상의 [ `Span` ](xref:Xamarin.Forms.Span) 인스턴스를 통해 설정 된 [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) 속성 . 다음 `Span` 모양을 설정 하려면 속성을 사용할 수 있습니다.
 
@@ -293,6 +293,119 @@ var label = new Label
 
 ![](label-images/span-lineheight.png "Span LineHeight 예제")
 
+## <a name="hyperlinks"></a>하이퍼링크
+
+표시 되는 텍스트 [ `Label` ](xref:Xamarin.Forms.Label) 하 고 [ `Span` ](xref:Xamarin.Forms.Span) 인스턴스는 다음 방법 사용 하 여 하이퍼링크로 변환할 수 있습니다.
+
+1. 설정 합니다 `TextColor` 및 `TextDecoration` 의 속성을 [ `Label` ](xref:Xamarin.Forms.Label) 또는 [ `Span` ](xref:Xamarin.Forms.Span)합니다.
+1. 추가 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 에 [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) 컬렉션을 [ `Label` ](xref:Xamarin.Forms.Label) 또는 [ `Span` ](xref:Xamarin.Forms.Span)이며, [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) 속성을 `ICommand`을 [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) 속성 열 URL을 포함 합니다.
+1. 정의 `ICommand` 에서 실행 될 합니다 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)합니다.
+1. 실행 될 코드를 작성 합니다 `ICommand`합니다.
+
+가져온 다음 코드 예제는 [하이퍼링크 데모](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) 샘플을 보여 줍니다는 [ `Label` ](xref:Xamarin.Forms.Label) 콘텐츠가 여러에서 설정 되어 [ `Span` ](xref:Xamarin.Forms.Span) 인스턴스:
+
+```xaml
+<Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Alternatively, click " />
+            <Span Text="here"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                <Span.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                </Span.GestureRecognizers>
+            </Span>
+            <Span Text=" to view Xamarin documentation." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+이 예제에서 첫 번째 및 세 번째 [ `Span` ](xref:Xamarin.Forms.Span) 두 번째 텍스트를 구성 하는 인스턴스가 `Span` tappable 하이퍼링크를 나타냅니다. 이 텍스트 색을 파란색으로 설정에 있고 밑줄 텍스트 장식 합니다. 다음 스크린샷과에서 같이 하이퍼링크의 모양을 만들어집니다.
+
+[![하이퍼링크](label-images/hyperlinks-small.png "하이퍼링크")](label-images/hyperlinks-large.png#lightbox)
+
+하이퍼링크 변하는데 합니다 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 실행 하 여 응답할 합니다 `ICommand` 정의한 해당 [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) 속성. URL을 지정 하는 또한 합니다 [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) 속성에 전달 될는 `ICommand` 매개 변수로 합니다.
+
+XAML 페이지에 대 한 코드 숨김을 포함 된 `TapCommand` 구현 합니다.
+
+```csharp
+public partial class MainPage : ContentPage
+{
+    public ICommand TapCommand => new Command<string>(OpenBrowser);
+
+    public MainPage()
+    {
+        InitializeComponent();
+        BindingContext = this;
+    }
+
+    void OpenBrowser(string url)
+    {
+        Device.OpenUri(new Uri(url));
+    }
+}
+```
+
+`TapCommand` 실행 합니다 `OpenBrowser` 메서드를 전달 합니다 [ `TapGestureRecognizer.CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) 속성 값을 매개 변수로. 그러면이 메서드를 호출 합니다는 [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) 메서드를 웹 브라우저에서 URL을 엽니다. 따라서 전체적인 효과 페이지의 하이퍼링크를 탭 할 웹 브라우저에 표시 되 고 하이퍼링크를 사용 하 여 연결 된 URL을 탐색 하는 경우입니다.
+
+### <a name="creating-a-reusable-hyperlink-class"></a>다시 사용할 수 있는 하이퍼링크 클래스 만들기
+
+하이퍼링크 응용 프로그램에서 필요할 때마다 반복적인 코드를 작성 해야 하는 하이퍼링크를 만드는 이전 접근 방식입니다. 그러나 모두를 [ `Label` ](xref:Xamarin.Forms.Label) 하 고 [ `Span` ](xref:Xamarin.Forms.Span) 클래스를 만들려면 서브클래싱된 될 수 있습니다 `HyperlinkLabel` 및 `HyperlinkSpan` 제스처 인식기 및 텍스트 서식을 사용 하 여 클래스 코드를 추가 합니다.
+
+가져온 다음 코드 예제는 [하이퍼링크 데모](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) 샘플을 보여 줍니다는 `HyperlinkSpan` 클래스:
+
+```csharp
+public class HyperlinkSpan : Span
+{
+    public static readonly BindableProperty UrlProperty =
+        BindableProperty.Create(nameof(Url), typeof(string), typeof(HyperlinkSpan), null);
+
+    public string Url
+    {
+        get { return (string)GetValue(UrlProperty); }
+        set { SetValue(UrlProperty, value); }
+    }
+
+    public HyperlinkSpan()
+    {
+        TextDecorations = TextDecorations.Underline;
+        TextColor = Color.Blue;
+        GestureRecognizers.Add(new TapGestureRecognizer
+        {
+            Command = new Command(() => Device.OpenUri(new Uri(Url)))
+        });
+    }
+}
+```
+
+합니다 `HyperlinkSpan` 클래스 정의 `Url` 속성 및 연결 된 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty), 하이퍼링크 모양을 설정 하는 생성자 및 및 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 응답 하는 하이퍼링크를 탭 할 경우. 경우는 `HyperlinkSpan` 탭은 `TapGestureRecognizer` 실행 하 여 응답 합니다를 [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) 메서드를 지정 된 URL을 엽니다는 `Url` 웹 브라우저에서 속성을.
+
+`HyperlinkSpan` 클래스의 인스턴스를 XAML에 추가 하 여 클래스를 사용할 수 있습니다.
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HyperlinkDemo"
+             x:Class="HyperlinkDemo.MainPage">
+    <StackLayout>
+        ...
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <local:HyperlinkSpan Text="here"
+                                         Url="https://docs.microsoft.com/appcenter/" />
+                    <Span Text=" to view AppCenter documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
+```
+
 ## <a name="styling-labels"></a>스타일 레이블
 
 이전 섹션에 설정 적용 [ `Label` ](xref:Xamarin.Forms.Label) 하 고 [ `Span` ](xref:Xamarin.Forms.Span) 인스턴스별 기준 속성입니다. 그러나 속성 집합이 하나 이상의 보기에 일관 되 게 적용 되는 하나의 스타일 그룹화 할 수 있습니다. 코드의 가독성을 증가 하며 쉽게 디자인 변경 내용을 구현 합니다. 자세한 내용은 [스타일](~/xamarin-forms/user-interface/text/styles.md)합니다.
@@ -300,6 +413,7 @@ var label = new Label
 ## <a name="related-links"></a>관련 링크
 
 - [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [하이퍼링크 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
 - [3 장 Xamarin.Forms를 사용 하 여 모바일 앱 만들기](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [레이블 API](xref:Xamarin.Forms.Label)
 - [API 범위](xref:Xamarin.Forms.Span)
