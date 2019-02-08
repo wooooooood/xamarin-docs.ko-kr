@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815206"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292079"
 ---
 # <a name="introduction-to-mobile-development"></a>모바일 개발 소개
 
@@ -65,13 +65,9 @@ Xamarin 애플리케이션은 Xamarin Mobile Profile로 알려진 .NET BCL의 �
 
 BCL 외에도, 이러한 .dll에는 C#에서 기본 SDK API를 직접 호출할 수 있는 거의 모든 iOS SDK 및 Android SDK용 래퍼가 포함되어 있습니다.
 
-
-
 ### <a name="application-output"></a>애플리케이션 출력
 
 Xamarin 애플리케이션이 컴파일되면 결과는 애플리케이션 패키지(iOS에서는 .app 파일, Android에서는 .apk 파일)로 생성됩니다. 이러한 파일은 플랫폼의 기본 IDE로 작성된 애플리케이션 패키지와 구별할 수 없으며 동일한 방식으로 배포할 수 있습니다.
-
-
 
 ## <a name="getting-started"></a>시작
 
@@ -83,22 +79,15 @@ Xamarin 애플리케이션이 컴파일되면 결과는 애플리케이션 패�
 
 ![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
 
-
 * [**Hello, Android**](~/android/get-started/hello-android/index.md)
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-
-* [**Xamarin.Forms 소개**](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-
-
-
-
+* [**Xamarin.Forms 시작**](~/get-started/index.md)
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 단순히 Xamarin 플랫폼을 소개했습니다. 진정한 재미는 첫 번째 앱을 가동 및 실행시킬 때부터 시작됩니다. 시작하려면 [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) 및 [Xamarin.Forms 소개](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) 가이드를 확인해 보세요.
-
+이 문서에서는 단순히 Xamarin 플랫폼을 소개했습니다. 진정한 재미는 첫 번째 앱을 가동 및 실행시킬 때부터 시작됩니다. 시작하려면 [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) 및 [Xamarin.Forms 시작](~/get-started/index.md) 가이드를 확인해 보세요.
 
 ## <a name="related-links"></a>관련 링크
 

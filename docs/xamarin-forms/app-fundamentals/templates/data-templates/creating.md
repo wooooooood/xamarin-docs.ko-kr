@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0374d37027546c41305c8cd5f27de593c226fcaa
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060228"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233772"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Xamarin.Forms DataTemplate 만들기
 
@@ -63,7 +63,7 @@ _데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 �
 </ListView>
 ```
 
-인라인 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)의 자식은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 형식이거나 파생된 것이어야 합니다. `ViewCell` 내의 레이아웃은 여기서 [`Grid`](xref:Xamarin.Forms.Grid)로 관리됩니다. `Grid`는 [`Text`](xref:Xamarin.Forms.Label.Text) 속성을 컬렉션에 있는 각 `Person` 개체의 적절한 속성으로 바인딩하는 세 개의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 포함합니다.
+인라인 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)의 자식은 [`Cell`](xref:Xamarin.Forms.Cell) 형식이거나 파생된 것이어야 합니다. 이 예제에서는 `Cell`에서 파생되는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 사용합니다. `ViewCell` 내의 레이아웃은 여기서 [`Grid`](xref:Xamarin.Forms.Grid)로 관리됩니다. `Grid`는 [`Text`](xref:Xamarin.Forms.Label.Text) 속성을 컬렉션에 있는 각 `Person` 개체의 적절한 속성으로 바인딩하는 세 개의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 포함합니다.
 
 동등한 C# 코드는 다음 코드 예제와 같습니다.
 
