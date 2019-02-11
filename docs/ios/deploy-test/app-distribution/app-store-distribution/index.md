@@ -1,27 +1,28 @@
 ---
 title: 앱 스토어 배포
-description: 이 문서에서는 App Store에 Xamarin.iOS 응용 프로그램을 배포하는 방법을 설명합니다. 배포 인증서를 만드는 방법, 배포 프로비저닝 프로필을 만드는 방법 및 iTunes Connect를 구성하고 앱을 제출하는 방법을 설명합니다.
+description: 이 문서에서는 App Store에 Xamarin.iOS 애플리케이션을 배포하는 방법을 설명합니다. 배포 인증서를 만드는 방법, 배포 프로비저닝 프로필을 만드는 방법 및 iTunes Connect를 구성하고 앱을 제출하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115135"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832030"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
-Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 iTunes 앱 스토어를 사용하여 사용자에게 앱을 배포하는 것입니다. 이는 응용 프로그램을 배포하는 가장 일반적인 방법입니다. Apple의 앱 스토어에 응용 프로그램을 게시하면 전 세계의 소비자가 해당 응용 프로그램을 사용할 수 있습니다.
+Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 iTunes 앱 스토어를 사용하여 사용자에게 앱을 배포하는 것입니다. 이는 애플리케이션을 배포하는 가장 일반적인 방법입니다. Apple의 앱 스토어에 애플리케이션을 게시하면 전 세계의 소비자가 해당 애플리케이션을 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
+> Apple은 2019년 3월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 12.1 SDK 이상에서 빌드되어 Xcode 10.1 이상에 포함된다고 [발표했습니다](https://developer.apple.com/ios/submit/).
+> 앱은 iPhone XS 및 12.9인치 iPad Pro 화면 크기도 지원해야 합니다.
 
-응용 프로그램을 배포하는 경우와 마찬가지로 응용 프로그램을 배포하려면 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
+애플리케이션을 배포하는 경우와 마찬가지로 애플리케이션을 배포하려면 적절한 *프로비전 프로필*을 사용하여 애플리케이션을 프로비전해야 합니다. 프로비전 프로필은 애플리케이션 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 
 > [!IMPORTANT]
 > iTunes Connect를 사용하는 것이 **중요**합니다. 따라서 앱 스토어에 앱을 게시하려면 사용자가 개인 또는 조직의 Apple Developer Program에 **반드시** 속해야 합니다. Apple Developer **Enterprise** Program의 구성원인 경우 이 페이지의 단계를 수행할 수 없습니다.
@@ -30,7 +31,7 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 ## <a name="provisioning-an-app-for-app-store-distribution"></a>앱 스토어 배포를 위한 앱 프로비전
 
-Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
+Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 애플리케이션을 iOS 장치에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
 
 - 앱 ID
 - 배포 인증서
@@ -61,13 +62,13 @@ Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특
 8. 마지막으로 완성된 인증서를 **다운로드**하고 파일을 두 번 클릭하여 설치합니다.
 9. 이 시점에서 인증서가 시스템에 설치되지만, Xcode에서 볼 수 있도록 [프로필을 새로 고쳐야](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 할 수도 있습니다.
 
-또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
+또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1.   팀을 선택하고, **인증서 관리...** 를 클릭합니다. [ ![](images/selectteam.png "팀 및 세부 정보 보기 선택")](images/selectteam.png#lightbox)
+1.   팀을 선택하고 **인증서 관리...** 를 클릭합니다. [![](images/selectteam.png "팀을 선택하고 세부 정보 보기")](images/selectteam.png#lightbox)
 
-2.   다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다. [ ![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
+2.   다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다. [![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
 
-3.   팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다. [![](images/generated.png "서명 ID가 생성되고 대화 상자가 표시됩니다.")](images/generated.png#lightbox)
+3.   팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다. [ ![](images/generated.png "서명 ID 생성 및 대화 상자 표시")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -106,13 +107,13 @@ Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특
 
     [![](images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](images/distribute03.png#lightbox)
 
-4. **계속** 단추를 클릭하고 응용 프로그램에 서명하는 데 필요한 인증서를 선택합니다.
+4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 인증서를 선택합니다.
 
-    [![](images/distribute04.png "응용 프로그램 서명에 필요한 인증서 선택")](images/distribute04.png#lightbox)
+    [![](images/distribute04.png "애플리케이션 서명에 필요한 인증서 선택")](images/distribute04.png#lightbox)
 
-5. **계속** 단추를 클릭하고 Xamarin.iOS 응용 프로그램이 실행될 수 있는 iOS 장치를 선택합니다.
+5. **계속** 단추를 클릭하고 Xamarin.iOS 애플리케이션이 실행될 수 있는 iOS 장치를 선택합니다.
 
-    [![](images/distribute05.png "앱이 실행될 수 있는 iOS 장치 선택")](images/distribute05.png#lightbox)
+    [![](images/distribute05.png "앱이 실행될 수 있는 iOS 디바이스 선택")](images/distribute05.png#lightbox)
 
 6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
@@ -135,7 +136,7 @@ Xamarin.iOS 응용 프로그램을 릴리스하려는 방법에 관계없이 특
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Xamarin.iOS 프로젝트에서 배포 프로필 선택
 
-iTunes 앱 스토어에서 판매할 Xamarin.iOS 응용 프로그램의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
+iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -173,11 +174,11 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 응용 프로그램의 최종 �
 
 <a name="itunesconnect" />
 
-## <a name="configuring-your-application-in-itunes-connect"></a>iTunes Connect에서 응용 프로그램 구성
+## <a name="configuring-your-application-in-itunes-connect"></a>iTunes Connect에서 애플리케이션 구성
 
-응용 프로그램이 성공적으로 프로비전되면, 다음 단계는 앱 스토어에서 iOS 응용 프로그램을 관리하는 웹 기반 도구 모음인 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa)에서 앱을 구성하는 것입니다.
+애플리케이션이 성공적으로 프로비전되면, 다음 단계는 앱 스토어에서 iOS 애플리케이션을 관리하는 웹 기반 도구 모음인 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa)에서 앱을 구성하는 것입니다.
 
-먼저 iTunes Connect에서 Xamarin.iOS 응용 프로그램을 제대로 설정하고 구성한 후에, 이를 검토하여 궁극적으로 앱 스토어에서 판매하거나 무료 앱으로 릴리스할 수 있도록 Apple에 제출해야 합니다.
+먼저 iTunes Connect에서 Xamarin.iOS 애플리케이션을 제대로 설정하고 구성한 후에, 이를 검토하여 궁극적으로 앱 스토어에서 판매하거나 무료 앱으로 릴리스할 수 있도록 Apple에 제출해야 합니다.
 
 자세한 내용은 [iTunes Connect에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) 설명서를 참조하세요.
 
@@ -185,9 +186,9 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 응용 프로그램의 최종 �
 
 ## <a name="submitting-an-app-to-itunes-connect"></a>iTunes Connect에 앱 제출
 
-응용 프로그램이 배포 프로비전 프로필을 사용하여 서명되고 iTunes Connect에서 앱이 만들어지면, 검토를 위해 응용 프로그램 이진 파일이 Apple에 업로드됩니다. Apple에서 성공적으로 검토되면 앱 스토어에서 사용할 수 있습니다.
+애플리케이션이 배포 프로비전 프로필을 사용하여 서명되고 iTunes Connect에서 앱이 만들어지면, 검토를 위해 애플리케이션 이진 파일이 Apple에 업로드됩니다. Apple에서 성공적으로 검토되면 앱 스토어에서 사용할 수 있습니다.
 
-앱 스토어에 응용 프로그램을 게시하는 방법에 대한 자세한 내용은 [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)를 참조하세요.
+앱 스토어에 애플리케이션을 게시하는 방법에 대한 자세한 내용은 [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)를 참조하세요.
 
 <a name="windows" />
 
@@ -197,7 +198,7 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 응용 프로그램의 최종 �
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 앱 스토어에 배포하기 위해 Xamarin.iOS 응용 프로그램을 준비하는 주요 구성 요소에 대해 설명했습니다.
+이 문서에서는 앱 스토어에 배포하기 위해 Xamarin.iOS 애플리케이션을 준비하는 주요 구성 요소에 대해 설명했습니다.
 
 ## <a name="related-links"></a>관련 링크
 

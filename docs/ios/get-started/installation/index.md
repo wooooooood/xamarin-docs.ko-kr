@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 5ce074e3659d4c380bd02537ef2cb8ac5734aede
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 67f43c0ac6cfac2a7b58afa7046875059529500b
+ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112028"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55668591"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 설치
 
@@ -26,7 +26,7 @@ Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
 최신 버전의 Xcode는 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/index.action#downloads)(로그인 필요) 또는 Mac 앱 스토어를 통해 다운로드할 수 있습니다.
 
-![](images/xcode.png "Mac 앱 스토어의 Xcode")
+![Mac App Store에서 Xcode 목록 페이지의 스크린샷](images/xcode.png "Mac App Store의 Xcode")
 
 ## <a name="mac-installation"></a>Mac 설치
 
@@ -39,7 +39,7 @@ Windows 컴퓨터에서 Xamarin.iOS 설치에 대한 지침은 [Windows 설치](
 
 ## <a name="development-and-device-provisioning"></a>개발 및 디바이스 프로비저닝
 
-Xamarin.iOS를 성공적으로 설치한 후에 디바이스에서 Xamarin.iOS 응용 프로그램을 개발하고 테스트할 수 있도록 iOS 디바이스를 프로비전하는 방법을 알아봅니다.
+Xamarin.iOS를 성공적으로 설치한 후에 장치에서 Xamarin.iOS 애플리케이션을 개발하고 테스트할 수 있도록 iOS 장치를 프로비전하는 방법을 알아봅니다.
 
-* [개발용 장치 설정](device-provisioning/index.md)
+* [개발용 디바이스 설정](device-provisioning/index.md)
 * [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

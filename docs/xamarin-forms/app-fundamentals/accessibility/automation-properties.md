@@ -6,13 +6,13 @@ ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/18/2018
+ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056164"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831991"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
 
@@ -138,6 +138,43 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 
 > [!NOTE]
 > [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.IsInAccessibleTree` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+
+## <a name="accessibility-intricacies"></a>내게 필요한 옵션 복잡성
+
+다음 섹션에서는 특정 컨트롤에서 내게 필요한 옵션 값을 설정하는 복잡성을 설명합니다.
+
+### <a name="navigationpage"></a>NavigationPage
+
+Android에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 작업 표시줄에서 뒤로 가기 화살표에 대해 읽고, [`Page`](xref:Xamarin.Forms.Page)에서 `AutomationProperties.Name` 및 `AutomationProperties.HelpText` 속성을 설정합니다. 하지만 이 작업은 OS 뒤로 가기 단추에 영향을 주지 않습니다.
+
+### <a name="masterdetailpage"></a>MasterDetailPage
+
+iOS 및 UWP(유니버설 Windows 플랫폼)에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)에서 토글 단추에 대해 읽고, `AutomationProperties.Name` 및 `MasterDetailPage`의 `AutomationProperties.HelpText` 속성 또는 `Master` 페이지의 `Icon` 속성을 설정합니다.
+
+Android에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)에서 토글 단추에 대해 읽고, 문자열 리소스를 Android 프로젝트에 추가합니다.
+
+```xml
+<resources>
+        <string name="app_name">Xamarin Forms Control Gallery</string>
+        <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+        <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+</resources>
+```
+
+그런 다음, `Master` 페이지에서 `Icon` 속성의 `AutomationId` 속성을 적절한 문자열로 설정합니다.
+
+```csharp
+var master = new ContentPage { ... };
+master.Icon.AutomationId = "btnMDPAutomationID";
+```
+
+### <a name="toolbaritem"></a>ToolbarItem
+
+iOS, Android 및 UWP에서 화면 판독기는 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 인스턴스의 `Text` 속성 값을 읽지만, `AutomationProperties.Name` 또는 `AutomationProperties.HelpText` 값이 정의되지 않습니다.
+
+iOS 및 UWP에서 `AutomationProperties.Name` 속성 값은 화면 판독기에서 읽은 `Text` 속성 값을 대체합니다.
+
+Android에서 `AutomationProperties.Name` 및/또는 `AutomationProperties.HelpText` 속성 값은 화면 판독기에서 표시되고 읽힌 `Text` 속성 값을 대체합니다. API를 26개 미만으로 제한합니다.
 
 ## <a name="related-links"></a>관련 링크
 

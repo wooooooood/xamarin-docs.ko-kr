@@ -1,18 +1,18 @@
 ---
 title: App Store에 Xamarin.iOS 앱 게시
-description: 이 문서에서는 App Store에 배포할 Xamarin.iOS 응용 프로그램을 구성, 빌드 및 게시하는 방법을 보여줍니다.
+description: 이 문서에서는 App Store에 배포할 Xamarin.iOS 애플리케이션을 구성, 빌드 및 게시하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 6e4ff817bcf59f071277b653175066c9727167c1
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: babfc85de645b285812421d453d51d5be6dceb1c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527159"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831939"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -30,7 +30,8 @@ ms.locfileid: "51527159"
 > - 앱을 빌드하고 Apple에 제출
 
 > [!IMPORTANT]
-> Apple은 2018년 7월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 11 SDK로 빌드되었고 [iPhone X 디스플레이를 지원](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)한다고 [발표](https://developer.apple.com/news/?id=05072018a)했습니다.
+> Apple은 2019년 3월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 12.1 SDK 이상에서 빌드되어 Xcode 10.1 이상에 포함된다고 [발표했습니다](https://developer.apple.com/ios/submit/).
+> 앱은 iPhone XS 및 12.9인치 iPad Pro 화면 크기도 지원해야 합니다.
 
 ## <a name="app-store-guidelines"></a>앱 스토어 지침
 
@@ -47,16 +48,16 @@ ms.locfileid: "51527159"
 
 ## <a name="set-up-an-app-id-and-entitlements"></a>앱 ID 및 자격 설정
 
-모든 iOS 앱에는 *자격*이라고 하는 연관된 응용 프로그램 서비스 집합이 있는 고유한 앱 ID가 있습니다. HealthKit 등과 같은 푸시 알림 수신, iOS 액세스 기능과 같은 다양한 작업을 수행하도록 앱을 허용하는 자격을 부여합니다.
+모든 iOS 앱에는 *자격*이라고 하는 연관된 애플리케이션 서비스 집합이 있는 고유한 앱 ID가 있습니다. HealthKit 등과 같은 푸시 알림 수신, iOS 액세스 기능과 같은 다양한 작업을 수행하도록 앱을 허용하는 자격을 부여합니다.
 
 앱 ID를 만들고 필요한 자격을 선택하려면 [Apple Developer 포털](https://developer.apple.com/account/)을 방문하여 다음 단계를 수행합니다:
 
 1. **인증서, 식별자 및 프로필** 섹션에서 **식별자 > 앱 ID**를 차례로 선택합니다.
-2. **+** 단추를 클릭하고 새 응용 프로그램에 대한 **이름** 및 **번들 ID**를 제공합니다.
-3. 화면 아래쪽으로 스크롤하여 Xamarin.iOS 응용 프로그램에 필요한 모든 **App Services**를 선택합니다. App Services에 대한 자세한 내용은 [Xamarin.iOS에서 기능을 사용하여 작업하기](~/ios/deploy-test/provisioning/capabilities/index.md)에 나와있습니다.
+2. **+** 단추를 클릭하고 새 애플리케이션에 대한 **이름** 및 **번들 ID**를 제공합니다.
+3. 화면 아래쪽으로 스크롤하여 Xamarin.iOS 애플리케이션에 필요한 모든 **App Services**를 선택합니다. App Services에 대한 자세한 내용은 [Xamarin.iOS에서 기능을 사용하여 작업하기](~/ios/deploy-test/provisioning/capabilities/index.md)에 나와있습니다.
 4. **계속** 단추를 클릭하고 화면의 지시에 따라 새 앱 ID를 만듭니다.
 
-앱 ID를 정의할 때 필요한 응용 프로그램 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격 및 앱 ID를 구성해야 합니다. 자세한 내용은 [Xamarin.iOS에서 자격 작업하기](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 살펴봅니다. 해당 가이드는 **Entitlements.plist** 파일 생성 방법 및 다양한 권한 설정의 의미에 대한 설명을 포함합니다.
+앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격 및 앱 ID를 구성해야 합니다. 자세한 내용은 [Xamarin.iOS에서 자격 작업하기](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 살펴봅니다. 해당 가이드는 **Entitlements.plist** 파일 생성 방법 및 다양한 권한 설정의 의미에 대한 설명을 포함합니다.
 
 ## <a name="include-an-app-store-icon"></a>앱 스토어 아이콘을 포함합니다.
 
@@ -66,12 +67,12 @@ Apple에 앱을 제출할 때 앱 스토어 아이콘이 들어 있는 자산 �
 
 Apple이 IOS 앱을 앱 스토어에서 사용할 수 있도록 하려면, 앱이 실행되는 모든 iOS 디바이스에 대해 적절한 아이콘 및 시작 화면이 있어야 합니다. 앱 아이콘 및 시작 화면을 설정하는 방법에 대한 자세한 내용은 다음 가이드를 읽어보세요.
 
-- [Xamarin.iOS 응용 프로그램 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
+- [Xamarin.iOS 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Xamarin.iOS 앱에 대한 시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 ## <a name="create-and-install-an-app-store-provisioning-profile"></a>앱 스토어 프로비전 프로필 생성 및 설치
 
-iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌드를 배포하는 방법을 제어합니다. 이러한 파일은 앱 서명에 사용된 인증서, 앱 ID 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 디바이스 목록도 포함됩니다. 그러나 앱 스토어 배포의 경우 앱 스토어를 통한 공개 배포만이 유일한 메커니즘이므로 인증서 및 앱 ID 정보만 포함됩니다.
+iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드를 배포하는 방법을 제어합니다. 이러한 파일은 앱 서명에 사용된 인증서, 앱 ID 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 디바이스 목록도 포함됩니다. 그러나 앱 스토어 배포의 경우 앱 스토어를 통한 공개 배포만이 유일한 메커니즘이므로 인증서 및 앱 ID 정보만 포함됩니다.
 
 앱 스토어 프로비전 프로필을 만들고 설치 하려면 다음 단계를 수행합니다.
 
@@ -95,12 +96,12 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 2. **Solution Pad**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택한 후, **iOS 빌드** 탭으로 이동합니다.
 3. **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
-5. 링크하면 사용되지 않는 코드를 제거하여 응용 프로그램의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
-6. **PNG 이미지 최적화**를 확인하여 추가로 응용 프로그램의 크기를 줄일 수 있는지 알아봅니다.
+5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
+6. **PNG 이미지 최적화**를 확인하여 추가로 애플리케이션의 크기를 줄일 수 있는지 알아봅니다.
 7. 디버깅은 빌드를 쓸데없이 크게 만들므로 _사용하지 않도록_ 설정해야 합니다.
 8. iOS 11의 경우 **ARM64**를 지원하는 디바이스 아키텍처 중 하나를 선택합니다. 64비트 iOS 디바이스 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
 9. 더 작고 빠른 코드를 빌드하기 위해 **LLVM** 컴파일러를 사용하고자 할 수 있습니다. 그러나 이 옵션은 컴파일 시간을 증가시킵니다.
-10. 응용 프로그램의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
+10. 애플리케이션의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
 
     위에서 설명하는 옵션을 설정한 다음, 빌드 설정은 다음과 유사하게 됩니다.
 
@@ -125,12 +126,12 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 2. **솔루션 탐색기**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 3. **iOS 빌드** 탭으로 이동하고 **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
-5. 링크하면 사용되지 않는 코드를 제거하여 응용 프로그램의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
-6. **PNG 이미지 최적화**를 확인하여 추가로 응용 프로그램의 크기를 줄일 수 있는지 알아봅니다.
+5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
+6. **PNG 이미지 최적화**를 확인하여 추가로 애플리케이션의 크기를 줄일 수 있는지 알아봅니다.
 7. 디버깅은 빌드를 쓸데없이 크게 만들므로 사용하지 않도록 설정해야 합니다.
 8. iOS 11의 경우 **ARM64**를 지원하는 디바이스 아키텍처 중 하나를 선택합니다. 64비트 iOS 디바이스 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
 9. 더 작고 빠른 코드를 빌드하기 위해 **LLVM** 컴파일러를 사용하고자 할 수 있습니다. 그러나 이 옵션은 컴파일 시간을 증가시킵니다.
-10. 응용 프로그램의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
+10. 애플리케이션의 요구에 따라 사용할 **가비지 수집**의 형식 및 **국제화**에 대한 설정을 조정할 수도 있습니다.
 
     위에서 설명하는 옵션을 설정한 다음, 빌드 설정은 다음과 유사하게 됩니다.
 
@@ -163,7 +164,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 
 ## <a name="configure-your-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
-[iTunes Connect](https://itunesconnect.apple.com)는 앱 스토어에서 iOS 응용 프로그램을 관리하는 웹 기반 도구 모음입니다. 먼저 iTunes Connect에서 Xamarin.iOS 응용 프로그램을 제대로 구성한 후에, Apple 검토 및 앱 스토어 릴리스를 위해 제출해야 합니다.
+[iTunes Connect](https://itunesconnect.apple.com)는 앱 스토어에서 iOS 애플리케이션을 관리하는 웹 기반 도구 모음입니다. 먼저 iTunes Connect에서 Xamarin.iOS 애플리케이션을 제대로 구성한 후에, Apple 검토 및 앱 스토어 릴리스를 위해 제출해야 합니다.
 
 이 작업을 수행하는 방법에 대해 알아보려면, [iTunes Connect에서에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) 가이드를 참조합니다.
 
@@ -202,26 +203,26 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 
     ![제출 준비됨](publishing-to-the-app-store-images/readyToGo-m157.png "제출 준비됨")
 
-9. **응용 프로그램 로더 열기**를 클릭하여 로그인합니다(반드시 Apple ID에 대한 [앱 특정 암호 만들기](https://support.apple.com/ht204397)를 해야 함).
+9. **애플리케이션 로더 열기**를 클릭하여 로그인합니다(반드시 Apple ID에 대한 [앱 특정 암호 만들기](https://support.apple.com/ht204397)를 해야 함).
 
     > [!NOTE]
-    > 도구에 대한 자세한 내용은 [응용 프로그램 로더에 대한 Apple 문서](https://help.apple.com/itc/apploader/#/apdS673accdb)를 참조합니다.
+    > 도구에 대한 자세한 내용은 [애플리케이션 로더에 대한 Apple 문서](https://help.apple.com/itc/apploader/#/apdS673accdb)를 참조합니다.
 
 10. **앱 배달**을 선택하고 **선택** 단추를 클릭합니다.
 
     ![앱 배달 선택](publishing-to-the-app-store-images/publishvs01.png "앱 배달 선택")
 
 11. 위에서 만든 .ipa 파일을 선택하고 **확인** 버튼을 클릭합니다.
-12. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.
+12. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
 
     ![유효성 검사 화면](publishing-to-the-app-store-images/publishvs02.png "유효성 검사 화면")
 
-13. **다음** 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
+13. **다음** 단추를 클릭합니다. 그러면 앱 스토어에 대한 애플리케이션의 유효성이 검사됩니다.
 
     ![앱 스토어에 대한 유효성 검사](publishing-to-the-app-store-images/publishvs03.png "앱 스토어에 대한 유효성 검사")
 
-14. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
-15. 파일이 성공적으로 업로드되면 응용 프로그램 로더에서 알려줍니다.
+14. **보내기** 단추를 클릭하여 검토를 위해 애플리케이션을 Apple에 보냅니다.
+15. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
 
     > [!NOTE]
     > Apple은 .ipa 파일에 포함된 **iTunesMetadata.plist**가 있는 앱을 거부할 수 있으며 다음과 같은 오류가 발생합니다.
@@ -247,27 +248,27 @@ iOS는 *프로비전 프로필*을 사용하여 특정 응용 프로그램 빌�
 
 4. Windows 컴퓨터에서 .ipa 파일을 찾으려면 Visual Studio 2017 **솔루션 탐색기**에서 Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 선택합니다. 그런 다음, 방금 연 Windows **파일 탐색기**에서 **bin/iPhone/Release** 하위 디렉터리로 이동합니다. [사용자 지정한 .ipa 파일 출력 위치](#customize-the-ipa-location)가 없다면, 이 디렉터리에 있어야 합니다.
 5. 대신 Mac 빌드 호스트에서 .ipa 파일을 보려면 Visual Studio 2017 **솔루션 탐색기**(Windows에서) Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고  **빌드 서버에 IPA 파일 표시**를 선택합니다. 이렇게 하면 .ipa 파일이 선택된 Mac 빌드 호스트에서 **Finder** 창이 열립니다.
-6. Mac 빌드 호스트에서 **응용 프로그램 로더**를 엽니다. Xcode에서 **Xcode > 개발자 도구 열기 > 응용 프로그램 로더**를 선택합니다.
+6. Mac 빌드 호스트에서 **애플리케이션 로더**를 엽니다. Xcode에서 **Xcode &gt; 개발자 도구 열기 &gt; 애플리케이션 로더**를 선택합니다.
 
     > [!NOTE]
-    > 도구에 대한 자세한 내용은 [응용 프로그램 로더에 대한 Apple 문서](https://help.apple.com/itc/apploader/#/apdS673accdb)를 참조합니다.
+    > 도구에 대한 자세한 내용은 [애플리케이션 로더에 대한 Apple 문서](https://help.apple.com/itc/apploader/#/apdS673accdb)를 참조합니다.
 
-7. 응용 프로그램 로더에 로그인합니다(Apple ID에 대해 [앱별 암호를 생성](https://support.apple.com/ht204397)해야 함).
+7. 애플리케이션 로더에 로그인합니다(Apple ID에 대해 [앱별 암호를 생성](https://support.apple.com/ht204397)해야 함).
 8. **앱 배달**을 선택하고 **선택** 단추를 클릭합니다.
 
     ![앱 배달 선택](publishing-to-the-app-store-images/publishvs01.png "앱 배달 선택")
 
 9. 위에서 만든 .ipa 파일을 선택하고 **확인**을 클릭합니다.
-10. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.
+10. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
 
     ![유효성 검사 화면](publishing-to-the-app-store-images/publishvs02.png "유효성 검사 화면")
 
-11. **다음** 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
+11. **다음** 단추를 클릭합니다. 그러면 앱 스토어에 대한 애플리케이션의 유효성이 검사됩니다.
 
     ![앱 스토어에 대한 유효성 검사](publishing-to-the-app-store-images/publishvs03.png "앱 스토어에 대한 유효성 검사")
 
-12. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
-13. 파일이 성공적으로 업로드되면 응용 프로그램 로더에서 알려줍니다.
+12. **보내기** 단추를 클릭하여 검토를 위해 애플리케이션을 Apple에 보냅니다.
+13. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
 
     > [!NOTE]
     > Apple은 .ipa 파일에 포함된 **iTunesMetadata.plist**가 있는 앱을 거부할 수 있으며 다음과 같은 오류가 발생합니다.
@@ -336,7 +337,7 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.16
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
-배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 응용 프로그램을 제출할 준비가 되었습니다.
+배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 애플리케이션을 제출할 준비가 되었습니다.
 
 ## <a name="summary"></a>요약
 
@@ -351,6 +352,6 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 - [Xamarin.iOS에서 기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md)
 - [Xamarin.iOS에서 자격 사용](~/ios/deploy-test/provisioning/entitlements.md)
 - [iTunes Connect에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
-- [Xamarin.iOS 응용 프로그램 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
+- [Xamarin.iOS 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Xamarin.iOS 앱에 대한 시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
-- [응용 프로그램 로더 설명서(Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)
+- [애플리케이션 로더 설명서(Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)
