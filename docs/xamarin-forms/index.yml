@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 95df735c07def5b3f7a0ad2e7e3eb1e114cc5e8f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 00d8e1459501b4643dea12b1d36939534a66833f
+ms.sourcegitcommit: 5405a376fe1b1e08c834eb565aaa5b1849a0fcdc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986489"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -62,11 +62,11 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/quickstarts/index.md
+    - href: ~/get-started/index.md
       html: Xamarin.Forms를 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 만드세요.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/quickstarts/index.md
+        href: ~/get-started/index.md
       title: 시작
     - href: ~/xamarin-forms/xaml/
       html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
