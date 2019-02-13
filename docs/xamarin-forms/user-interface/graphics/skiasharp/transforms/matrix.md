@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: dd38d91a808bed715c92c0fc7d98d6786fc43f67
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 192f0745874b54989ab9070014dae2a5e9e98110
+ms.sourcegitcommit: 605f7c480c3f7b5dd364fdb1bd4d983de8f7ed25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054650"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56213779"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 행렬 변환
 
@@ -64,11 +64,11 @@ SkiaSharp 그래픽 개체를 렌더링 하는 경우 각 점 (x, y)는 효과�
 
 표준 행렬 곱셈을 사용 하는 변환 된 요소는 다음과 같습니다.
 
-x' = x
+`x' = x`
 
-y' = y
+`y' = y`
 
-z' = 1
+`z' = 1`
 
 이것이 기본 변환입니다.
 
@@ -90,9 +90,9 @@ z' = 1
 
 변환 하는 수식을 다음과 같습니다.
 
-x' = x + tx
+`x' = x + tx`
 
-y' = y + ty
+`y' = y + ty`
 
 크기 조정 요인을 기본값이 1입니다. 호출 하는 경우는 `Scale` 새 메서드 `SKCanvas` 개체를 결과 변환 매트릭스를 포함 합니다 `sx` 및 `sy` 대각선 셀에는 인수:
 
@@ -104,9 +104,9 @@ y' = y + ty
 
 변환 수식에는 다음과 같습니다.
 
-x' = sx? x
+`x' = sx · x`
 
-y' = sy? y
+`y' = sy · y`
 
 호출한 후 변형 행렬 `Skew` 행렬 셀 크기 조정 요인을에 인접 한 두 개의 인수를 포함 합니다.
 
@@ -118,9 +118,9 @@ y' = sy? y
 
 변환 하는 수식을 다음과 같습니다.
 
-x' = x + xSkew? y
+`x' = x + xSkew · y`
 
-y' ySkew? = x + y
+`y' = ySkew · x + y`
 
 에 대 한 호출에 대 한 `RotateDegrees` 또는 `RotateRadians` α의 각도 변환 매트릭스는 다음과 같습니다.
 
@@ -132,9 +132,9 @@ y' ySkew? = x + y
 
 변환 하는 수식을 다음과 같습니다.
 
-x' = cos(α)? x-sin(α)? y
+`x' = cos(α) · x - sin(α) · y`
 
-y' sin(α)? = x-cos(α)? y
+`y' = sin(α) · x - cos(α) · y`
 
 Α 0도 인 경우 항등 매트릭스입니다. Α 180도 인 경우 변환 행렬은 다음과 같습니다.
 
@@ -228,11 +228,11 @@ canvas.Translate(–px, –py);
               │ TransX  TransY  1 │
 </pre>
 
-x' = ScaleX? x + SkewX? y + TransX
+`x' = ScaleX · x + SkewX · y + TransX`
 
-y' SkewX? = x + ScaleY? y + TransY
+`y' = SkewX · x + ScaleY · y + TransY`
 
-z' = 1
+`z' = 1`
 
 전체 2 차원 유사 변환입니다. 유사 변환에는 사각형 되지 변환 되는 평행 사변형 이외의 즉 평행선을 유지 합니다.
 
@@ -259,7 +259,7 @@ SKMatrix.Concat(ref R, ref A, ref B);
 
 이러한 다음 곱하기를 수행합니다.
 
-R = B × A
+`R = B × A`
 
 다른 방법만 두 개의 매개 변수입니다. 첫 번째 매개 변수를 수정 하 고 메서드 호출에서 반환 시를 두 매트릭스를 포함 합니다. 두 `PostConcat` 다음과 같은 메서드를 호출 합니다.
 
@@ -271,7 +271,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 이러한 호출은 다음 작업을 수행합니다.
 
-A = A × B
+`A = A × B`
 
 두 `PreConcat` 메서드는 유사 합니다.
 
@@ -283,7 +283,7 @@ SKMatrix.PreConcat(ref A, ref B);
 
 이러한 호출은 다음 작업을 수행합니다.
 
-A = B × A
+`A = B × A`
 
 모두를 사용 하 여 이러한 메서드의 버전 `ref` 인수는 기본 구현을 호출에서 약간 더 효율적 이지만 코드를 읽고 사용 하 여 아무 것도 가정 하 고 다른 사용자에 게 혼동을 줄 수 있습니다는 `ref` 인수를 수정 하 여 메서드입니다. 또한 것 중 하나를 결과로 생성 되는 인수를 전달 하면 편리 합니다 `Make` 메서드와 같은:
 
@@ -361,7 +361,7 @@ SKMatrix.PostConcat(ref A, C);
 
 이므로 일련의 연속 곱셈 결과 다음과 같습니다.
 
-× B × C
+`A × B × C`
 
 연속 늘린 후 곱하기 각 변환의 용도 이해 하는 데 도움이 됩니다. 배율 변환 좌표 –300에서 300 사이 있으므로 3 배 경로 좌표의 크기를 늘립니다. 회전 변환 별 원점 주위를 회전합니다. 좌표 이동 변환 후 이동 300 픽셀 오른쪽에서 양수 될 모든 좌표를 종료 합니다.
 
