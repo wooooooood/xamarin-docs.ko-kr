@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233993"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240437"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
@@ -107,9 +107,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 알고리즘 방식으로 가장 간단 하 고 호를 생성 하는이 방법 이며 호를 설명 하는 매개 방정식을 파생 하기가 쉽습니다. 타원 및 시작 및 스윕 각도의 위치와 크기를 알고 있으면 호의 시작점과 끝점 수를 계산 간단한 삼각 함수를 사용 하 여.
 
-x 타원 =. MidX + (oval 합니다. 너비 / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y 타원 =. MidY + (oval 합니다. 높이 / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 합니다 `angle` 값은 `startAngle` 또는 `startAngle + sweepAngle`합니다.
 
@@ -606,9 +606,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 정보를 사용 하 여 탄젠트 지점의 좌표를 계산한 다음 있습니다.
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 4 개의 탄젠트 사항은 100 원 반지름을 사용 하 여 점 (0, 0)에 가운데 맞춤은 무한대 기호를 그릴 필요한 모든 것 같습니다.
 

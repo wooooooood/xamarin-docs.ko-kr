@@ -1,18 +1,19 @@
 ---
-title: 'Xamarin.Essentials: Share'
+title: 'Xamarin.Essentials: 공유'
 description: Xamarin.Essentials의 Share 클래스를 사용하면 애플리케이션이 디바이스에 있는 다른 애플리케이션의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 6fd3fd90d1e2ada225dafdd855f8903688677660
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 02/12/2019
+ms.custom: video
+ms.openlocfilehash: 7e61041fa33557c4e1db3613b75b575e9d456231
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899376"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240424"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Share
+# <a name="xamarinessentials-share"></a>Xamarin.Essentials: 공유
 
 **Share** 클래스를 사용하면 Share이 디바이스에 있는 다른 Share의 텍스트 및 웹 링크와 같은 데이터를 공유할 수 있습니다.
 
@@ -54,7 +55,7 @@ public class ShareTest
 }
 ```
 
-요청 시 표시되는 외부 응용 프로그램에 공유할 사용자 인터페이스:
+요청 시 표시되는 외부 애플리케이션에 공유할 사용자 인터페이스:
 
 ![공유](share-images/share.png)
 
@@ -66,13 +67,13 @@ public class ShareTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject`이 사용되지 않습니다.
+* `Subject`가 사용되지 않습니다.
 * `Title`이 사용되지 않습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* 설정되지 않은 경우 `Title`은 기본적으로 응용 프로그램 이름으로 설정됩니다.
-* `Subject`이 사용되지 않습니다.
+* 설정되지 않은 경우 `Title`은 기본적으로 애플리케이션 이름으로 설정됩니다.
+* `Subject`가 사용되지 않습니다.
 
 -----
 
@@ -80,3 +81,9 @@ public class ShareTest
 
 - [Share 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
 - [Share API 문서](xref:Xamarin.Essentials.Share)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Share-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

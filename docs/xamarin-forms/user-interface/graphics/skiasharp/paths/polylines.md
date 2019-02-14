@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: c6328135e0310c7b10b89bf2e32ce62869b15cfb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e7327deead917f55d1e7ac8af5302b6dccf6fead
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059988"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240359"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
@@ -26,21 +26,21 @@ _SkiaSharp 매개 방정식을 사용 하 여 정의할 수 있는 모든 줄을
 
 일반적으로 매개 방정식의 쌍을 기준으로 곡선을 정의 하는 것이 좋습니다. X 및 Y 좌표는 수식 됩니다 라고도, 세 번째 변수가 종속 `t` 시간에 대 한 합니다. 다음 파라메트릭 수식에 대 한 원 중심 점 (0, 0)에 1의 반지름을 정의 하는 예를 들어 *t* 0에서 1:
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y sin(2πt) =
+`y = sin(2πt)`
 
  반지름을 1 보다 큰 하려는 경우 단순히 해당 radius 사인 및 코사인 값을 곱한를 중앙의 다른 위치로 이동 해야 하는 경우 해당 값을 추가:
 
-x = xCenter + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = yCenter + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 가로 및 세로 축 병렬을 사용 하 여 타원에 대 한 두 개의 반지름 관련 됩니다.
 
-x = xCenter + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = yCenter + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 그런 다음 다양 한 지점을 계산한 다음 경로에 추가 하는 루프에 해당 하는 SkiaSharp 코드를 넣을 수 있습니다. 다음 SkiaSharp 코드는 `SKPath` 화면을 채우는 타원에 대 한 개체입니다. 루프는 직접 360도 통해 주기입니다. 가운데 너비와 높이 디스플레이 화면의 절반 이며 되므로 두 반지름.
 

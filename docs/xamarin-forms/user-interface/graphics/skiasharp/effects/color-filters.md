@@ -7,12 +7,12 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: 7edb504a228612d7f1f1fee10a50a467fbb5fc6c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 71c0495520a5dd596be2e9cafec6b63e316fb627
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057102"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240320"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
@@ -68,13 +68,13 @@ ms.locfileid: "53057102"
 
 R에 대 한 별도 수식을 같습니다 ', G'를 A 및 B',':
 
-R' M11· = R + M12· G + M13· B + M14· A + M15 
+`R' = M11·R + M12·G + M13·B + M14·A + M15` 
 
-G' M21· = R + M22· G + M23· B + M24· A + M25 
+`G' = M21·R + M22·G + M23·B + M24·A + M25` 
 
-B' M31· = R + M32· G + M33· B + M34· A + M35 
+`B' = M31·R + M32·G + M33·B + M34·A + M35` 
 
-' M41· = R + M42· G + M43· B + M44· A + M45 
+`A' = M41·R + M42·G + M43·B + M44·A + M45` 
 
 행렬의 대부분 일반적으로 0 ~ 2 범위에 있는 곱하기 요소 이루어져 있습니다. 그러나 마지막 열 (M45 통해 M15) 수식에 추가 되는 값을 포함 합니다. 이러한 값 일반적으로 범위는 0에서 255입니다. 결과 0에서 255 사이의 범위로 제한 합니다.
 
@@ -89,13 +89,13 @@ B' M31· = R + M32· G + M33· B + M34· A + M35
 
 이렇게 하면 색 변경 되지 않았습니다. 변환 하는 수식을 다음과 같습니다.
 
-R' = R 
+`R' = R` 
 
-G' G =
+`G' = G`
 
-B의 B =
+`B' = B`
 
-' =
+`A' = A`
 
 불투명도 보존 되므로 M44 셀이 매우 중요 합니다. 불투명 빨강, 녹색 및 파랑 값을 기반으로 하는 원치 않을 것 때문 M41, M42, 및 M43 모든 0는 경우 일반적으로입니다. 그러나 M44이 0 이면는 ' 0이 되 고 아무 것도 표시 됩니다.
 
@@ -232,13 +232,13 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-배열에는 항상 256 항목 포함. 에 `CreateTable` 빨간색, 녹색 및 파랑 구성 요소에 대 한 테이블을 동일한 테이블을 사용 하 여 메서드를 사용 합니다. 간단한 조회 테이블: 소스 색 (R, G, B) 이며, 대상 색이 하는 경우 (R', G, B' '), 대상 구성 요소 인덱싱 하 여 가져온 다음 `table` 원본 구성 요소를 사용 하 여:
+배열에는 항상 256 항목 포함. 에 `CreateTable` 빨간색, 녹색 및 파랑 구성 요소에 대 한 테이블을 동일한 테이블을 사용 하 여 메서드를 사용 합니다. 간단한 조회 테이블인 경우: 소스 색 (R, G, B) 이며, 대상 색이 하는 경우 (R', G, B' '), 대상 구성 요소 인덱싱 하 여 가져온 다음 `table` 원본 구성 요소를 사용 하 여:
 
-R' = 테이블 [R]
+`R' = table[R]`
 
-G' = 테이블 [G]
+`G' = table[G]`
 
-B' = 테이블 [B]
+`B' = table[B]`
 
 두 번째 방법에서는 각각 네 가지 색 구성 요소는 별도 색상표를 가질 수 또는 동일한 색 테이블은 둘 이상의 구성 요소 간에 공유 될 수 있습니다.
 
