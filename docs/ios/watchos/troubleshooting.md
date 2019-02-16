@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526483"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321157"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
-이 페이지는 추가 정보 및 아직 개발 중인 기능에 대 한 대안을 포함합니다. 이러한 해결 방법 중 일부는 미리 보기 릴리스에만 적용 됩니다.
+이 페이지에는 추가 정보 및 문제를 발생할 수 있습니다.
 
 - [알려진 문제](#knownissues)
 
@@ -227,7 +227,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 앱을 반영 하도록 업데이트 해야 할 매개 변수가 `launchsimwatch`:
 
-### <a name="--launchsimwatch"></a>-launchsimwatch
+### <a name="--launchsimwatch"></a>--launchsimwatch
 
 기본 앱 번들의 전체 경로 *watch 앱 및 확장을 포함 하는 iOS 앱에 대 한*합니다.
 
@@ -260,7 +260,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-필수. Xcode (6.2 이상)에 대 한 경로 지정합니다.
+필수 요소. Xcode (6.2 이상)에 대 한 경로 지정합니다.
 
 예제:
 
@@ -268,7 +268,7 @@ with an alpha channel. Icons should not have an alpha channel.
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>-장치
+### <a name="--device"></a>--device
 
 시뮬레이터 장치 실행입니다. 이 두 가지 방법으로, 특정 장치의 udid를 사용 하 여 또는 런타임 형식과 장치를 조합 하 여 지정할 수 있습니다.
 

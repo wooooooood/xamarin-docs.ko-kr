@@ -1,27 +1,24 @@
 ---
 title: WatchOS 5 소개
-description: 이 문서는 Xamarin의 미리 보기 릴리스는 C# 바인딩을 제공 하는 일부 watchOS 5 api 자세히 설명 합니다.
+description: 이 문서에서는 일부 watchOS 5 개괄적으로 설명 제공 Xamarin에 대 한 Api입니다.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 6fbbd75c0daf960fd9fd01670bdea35126abfabe
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615511"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321118"
 ---
 # <a name="introduction-to-watchos-5"></a>WatchOS 5 소개
 
 이 문서에서는 일부 watchOS 5 개괄적으로 설명 제공 Api.
 
-시작 하려면 Xamarin 사용한 5 watchOS 앱 구축 살펴보세요.
-
-- [시작 가이드](~/ios/platform/introduction-to-ios12/get-started.md)
-- Xamarin 미리 보기 [릴리스 블로그 게시물](https://releases.xamarin.com/preview-release-xcode-10-beta-6/)
+Xamarin 사용한 5 watchOS 앱 빌드 시작, 참조는 [시작 가이드](~/ios/platform/introduction-to-ios12/get-started.md)
 
 ## <a name="workout-improvements"></a>운동 개선 사항
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: 1ccbea1921b4e0c4189182696c8679d041eea60b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
+ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113029"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307920"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 
-정적 코드를 Xamarin.iOS를 사용 하 여 iPhone에서 응용 프로그램을 컴파일한 후 런타임에 코드를 생성 해야 하는 기능을 사용 하는 것이 불가능 합니다.
+정적 코드를 Xamarin.iOS를 사용 하 여 응용 프로그램을 컴파일한 후 런타임에 코드를 생성 해야 하는 기능을 사용 하는 것이 불가능 합니다.
 
 다음은 Mono 데스크톱에 비해 Xamarin.iOS 제한 사항입니다.
 
@@ -48,43 +48,12 @@ class Foo<T> : UIView {
 > NSObjects의 제네릭 서브 클래스는 가능한, 몇 가지 제한이 있습니다. 읽기를 [NSObject의 제네릭 서브](~/ios/internals/api-design/nsobject-generics.md) 자세한 문서
 
 
-
-### <a name="pinvokes-in-generic-types"></a>제네릭 형식에 P 호출
-
-P/Invoke 제네릭 클래스에서 지원 되지 않습니다.
-
-```csharp
-class GenericType<T> {
-    [DllImport ("System")]
-    public static extern int getpid ();
-}
-```
-
- <a name="Property.SetInfo_on_a_Nullable_Type_is_not_supported" />
-
-
-### <a name="propertysetinfo-on-a-nullable-type-is-not-supported"></a>Property.SetInfo Nullable 형식에서 지원 되지 않습니다.
-
-리플렉션의 Property.SetInfo를 사용 하 여 Nullable에 값을 설정 하려면&lt;T&gt; 현재 지원 되지 않습니다.
-
- <a name="Value_types_as_Dictionary_Keys" />
-
-
-### <a name="value-types-as-dictionary-keys"></a>사전 키로 값 형식
-
-값 형식이 사전으로 사용 하 여&lt;TKey, TValue&gt; 키는 문제가, 기본적으로 사전 생성자 EqualityComparer 사용 하려고&lt;TKey&gt;합니다. 기본값은입니다. EqualityComparer&lt;TKey&gt;합니다. 기본적으로 리플렉션을 사용 하 여 IEqualityComparer를 구현 하는 새 형식을 인스턴스화할 차례로 시도&lt;TKey&gt; 인터페이스입니다.
-
-이것은 참조 형식에 적용 (리플렉션으로 + 새로 만들기 형식 단계를 건너뜁니다), 되지만 값 유형의 경우 충돌을 신속 하 게 장치에서 사용 하려고 하면 되 면 합니다.
-
- **해결 방법**: 수동으로 구현 합니다 [IEqualityComparer&lt;TKey&gt; ](xref:System.Collections.Generic.IEqualityComparer`1) 는 새 형식이 인터페이스 및 해당 형식의 인스턴스를 제공 합니다 [사전&lt;TKey, TValue&gt; ](xref:System.Collections.Generic.Dictionary`2) [(IEqualityComparer&lt;TKey&gt;)](xref:System.Collections.Generic.IEqualityComparer`1) 생성자입니다.
-
-
  <a name="No_Dynamic_Code_Generation" />
 
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드를 생성 하지 않음
 
-IPhone의 커널 방지 응용 프로그램 코드를 동적으로 생성 되므로 iPhone에서 Mono는 동적 코드 생성의 모든 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
+IOS 커널에서 동적 코드 생성에서 응용 프로그램 방지, 때문에 Xamarin.iOS 동적 코드 생성의 모든 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
 
 -  System.Reflection.Emit 제공 되지 않습니다.
 -  System.Runtime.Remoting 지원 되지 않습니다.
@@ -105,7 +74,7 @@ System.Reflection 부족 합니다. **내보낼** 런타임 코드 생성에 종
 -  Remoting의 TransparentProxy 또는 런타임 코드를 동적으로 생성 하는 다른 것입니다. 
 
 
- **중요:** 혼동 하지 마십시오 **Reflection.Emit** 사용 하 여 **리플렉션**합니다. Reflection.Emit 코드를 동적으로 생성 하는 방법에 대 한 이며 해당 jit 컴파일된 코드 및 네이티브 코드로 컴파일됩니다. IPhone (JIT 컴파일 안 함)의 제한으로 인해이 지원 되지 않습니다.
+ **중요:** 혼동 하지 마십시오 **Reflection.Emit** 사용 하 여 **리플렉션**합니다. Reflection.Emit 코드를 동적으로 생성 하는 방법에 대 한 이며 해당 jit 컴파일된 코드 및 네이티브 코드로 컴파일됩니다. IOS (JIT 컴파일 안 함)의 제한으로 인해이 지원 되지 않습니다.
 
 하지만 Type.GetType ("someClass") 메서드를 나열 하는 특성 및 값을 가져오는 속성을 나열을 비롯 한 전체 리플렉션 API는 잘 작동 합니다.
 

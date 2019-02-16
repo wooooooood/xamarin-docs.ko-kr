@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2016
-ms.openlocfilehash: a7be193cee60b40f70b3dd4a840e0a26ccb8c3b2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8ef76f24b017f5e3e6bec9d39534f3626e79147
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109005"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321105"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS에서 Xamarin 사용자 인터페이스 컨트롤
 
@@ -38,10 +38,10 @@ ms.locfileid: "50109005"
 |[메뉴](~/ios/watchos/user-interface/menu.md)|스토리 보드에서 force-키를 눌러 메뉴를 정의 하 고 코드에 각 단추에 대 한 작업을 구현 합니다.<br />[메뉴 (Force Touch) 제어 문서](~/ios/watchos/user-interface/menu.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
 |텍스트 입력|사용 하 여 `PresentTextInputController` 하며 `WKTextInputMode` 열거형입니다.<br />[텍스트 입력 설명서](~/ios/watchos/user-interface/text-input.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |디지털 Crown|코드에서의 회전을 추적할 수 있습니다 또는 디지털 Crown 선택기를 드라이브를 사용할 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
-|제스처|장면에 추가할 수 있는 제스처 인식의 네 가지가: 탭, 살짝 밀기, 팬 및 LongPress 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
+|제스처|네 가지 유형의 장면에 추가할 수 있는 제스처 인식 가지 탭, 살짝 밀기, 팬 및 LongPress 합니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [조사식 키트 API 참조](https://developer.xamarin.com/api/namespace/WatchKit/)
+- [조사식 키트 API 참조](xref:WatchKit)

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a9e23f1bfa6099c64a0a60d78ecc3c6283a86a96
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6a2b8c99156963ae167aecd29a618d0feeffbdc7
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108094"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321131"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>watchOS에서 Xamarin 이미지 컨트롤
 
-watchOS 제공 된 [`WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) 간단한 애니메이션 및 이미지를 표시 하도록 컨트롤입니다. 일부 컨트롤 (예: 단추, 그룹 및 인터페이스 컨트롤러) 배경 이미지를 포함할 수도 있습니다.
+watchOS 제공 된 [`WKInterfaceImage` ](xref:WatchKit.WKInterfaceImage) 간단한 애니메이션 및 이미지를 표시 하도록 컨트롤입니다. 일부 컨트롤 (예: 단추, 그룹 및 인터페이스 컨트롤러) 배경 이미지를 포함할 수도 있습니다.
 
 ![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![](image-images/image-animation.png "간단한 애니메이션을 사용 하 여 Apple Watch")
  <!-- watch image courtesy of http://infinitapps.com/bezel/ -->

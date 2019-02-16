@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: ba5e7a24524f9371cbd810e18c11acc9e2e2a4cb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0b320955cae23b18444732c826849002d6375fe4
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055623"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321144"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -53,10 +53,10 @@ WatchOS 1에서 정적 함수 또는 공유 앱 그룹을 통해 데이터를 �
 
 수명 주기를 `WKInterfaceController` 개체는 다음 호출을 포함 합니다.
 
-- [절전 모드 해제](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.Awake/) :이 방법에서는 대부분의 초기화를 수행 해야 합니다.
-- [WillActivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.WillActivate/) : Watch 앱 사용자에 게 표시 되기 바로 전에 호출 됩니다. 이 메서드를 사용 하 여 마지막 순간 초기화를 수행 하려면 애니메이션 등을 시작 합니다.
+- [절전 모드 해제](xref:WatchKit.WKInterfaceController.Awake*) : 이 방법에서는 대부분의 초기화를 수행 해야 합니다.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Watch 앱 사용자에 게 표시 하기 바로 호출 됩니다. 이 메서드를 사용 하 여 마지막 순간 초기화를 수행 하려면 애니메이션 등을 시작 합니다.
 - 이 시점에서 Watch 앱 나타나고 확장을 입력 하 고 응용 프로그램 논리 당 Watch 앱의 표시를 업데이트 하는 사용자에 게 응답을 시작 합니다.
-- [DidDeactivate](https://developer.xamarin.com/api/member/WatchKit.WKInterfaceController.DidDeactivate/) Watch 앱 후 사용자가 해제 된,이 메서드를 호출 합니다. 다음 시간까지 사용자 인터페이스 컨트롤을 수정할 수 없습니다이 메서드에서 반환 된 후 `WillActivate` 라고 합니다. IPhone에 대 한 연결이 끊어진 경우에이 메서드를 호출 합니다.
+- [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) Watch 앱 후 사용자가 해제 된,이 메서드를 호출 합니다. 다음 시간까지 사용자 인터페이스 컨트롤을 수정할 수 없습니다이 메서드에서 반환 된 후 `WillActivate` 라고 합니다. IPhone에 대 한 연결이 끊어진 경우에이 메서드를 호출 합니다.
 - 확장이 비활성화 된 후 프로그램에 액세스할 수 없는 합니다. 보류 중인 비동기 기능이 **것입니다** 호출할 수 있습니다. 조사식 키트 확장에는 백그라운드 처리 모드를 사용할 수 없습니다. 첫 번째 메서드 호출 수는 프로그램은 사용자가 다시 활성화 하는 경우 운영 체제에서 앱으로 끝나지 않았습니다 `WillActivate`합니다.
 
 ![](intro-to-watchos-images/wkinterfacecontrollerlifecycle.png "응용 프로그램 수명 주기 개요")
@@ -92,8 +92,8 @@ Watch 앱/확장 상호 작용의 대부분의 하위 클래스를 사용 하 �
 
 Apple Watch 두 개의 얼굴 크기: (38mm 및 42 mm 모두를 5:4 표시 비율과 레 티 나 디스플레이 사용 하 여 합니다. 사용 가능한 크기는 다음과 같습니다.
 
-- 38 mm: 136 x 170 논리 픽셀 (272 x 340 물리적 픽셀)
-- 42 mm: 156 x 195 논리 픽셀 (312 x 390 물리적 픽셀)입니다.
+- (38mm: 136 x 170 논리 픽셀 (272 x 340 물리적 픽셀)
+- 42mm: 156 x 195 논리 픽셀 (312 x 390 물리적 픽셀)입니다.
 
 사용 하 여 `WKInterfaceDevice.ScreenBounds` 어느 디스플레이의 Watch 앱이 실행 중인지 확인 하려면.
 
