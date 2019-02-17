@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
+ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675096"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078422"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
 
@@ -149,7 +149,6 @@ public class App : Xamarin.Forms.Application
 그러면 이 클래스가 각 플랫폼별 프로젝트에서 인스턴스화되고, `MainPage`가 로드되어 사용자에게 표시되는 `LoadApplication` 메서드로 전달됩니다.
 각 플랫폼에 대한 코드는 다음 섹션에서 보여 줍니다. 최신 Xamarin.Forms 솔루션 템플릿에는 이 코드가 모두 포함되어 있으며 애플리케이션에 맞게 미리 구성되어 있습니다.
 
-
 ### <a name="ios-project"></a>iOS 프로젝트
 
 iOS `AppDelegate` 클래스는 `FormsApplicationDelegate`에서 상속됩니다. 수행하는 작업은 다음과 같습니다.
@@ -196,8 +195,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Windows 10용 UWP(유니버설 Windows 프로젝트)
 
-Xamarin.Forms의 UWP 지원에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
-
 UWP 프로젝트의 기본 페이지는 `WindowsPage`에서 상속됩니다.
 
 ```xaml
@@ -222,4 +219,6 @@ public sealed partial class MainPage
  }
 ```
 
-`Forms.Init()`는 **App.xaml.cs**의 63번 줄 근처에서 호출해야 합니다.
+UWP 프로젝트의 **App.xaml.cs**에서 `Forms.Init()`가 호출되어야 합니다.
+
+자세한 내용은 UWP를 대상으로 하지 않는 기존 Xamarin.Forms 솔루션에 UWP 프로젝트를 추가하는 단계가 포함된 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.

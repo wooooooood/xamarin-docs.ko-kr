@@ -1,6 +1,6 @@
 ---
 title: 'Hello, Android: 빠른 시작'
-description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고, Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 응용 프로그램을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
+description: 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 애플리케이션을 빌드하고, Xamarin을 사용하여 Android 애플리케이션 개발에 대한 기본 사항을 이해하기 시작합니다. 이 과정에서 Xamarin.Android 애플리케이션을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,18 +9,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: e359defee98ada74a76726673f6d3db21c0f4db3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 378861dfecb2109269677fe13ed4df629a09da67
+ms.sourcegitcommit: 6d41b5d48fd626d3f649809ed5480e5356755f14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121583"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986265"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
-_두 부분으로 구성된 이 가이드에서는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고, Xamarin을 사용하여 Android 응용 프로그램 개발에 대한 기본 사항을 이해하기 시작합니다._
+_두 부분으로 구성된 이 가이드에서는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 애플리케이션을 빌드하고, Xamarin을 사용하여 Android 애플리케이션 개발에 대한 기본 사항을 이해하기 시작합니다._
 
-사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 해당 숫자 전화 번호를 사용자에게 표시하는 응용 프로그램을 만듭니다. 최종 응용 프로그램은 다음과 같습니다.
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+
+사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 해당 숫자 전화 번호를 사용자에게 표시하는 애플리케이션을 만듭니다. 최종 애플리케이션은 다음과 같습니다.
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
@@ -74,6 +76,12 @@ Visual Studio를 시작합니다. **파일 > 새로 만들기 > 프로젝트**�
 **activity_main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. 앱의 화면에 대한 레이아웃 파일입니다.
 
 [![activity axml 파일 열기](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+
+> [!TIP]
+> Visual Studio의 최신 릴리스는 약간 다른 앱 템플릿을 포함합니다.
+>
+> 1. 레이아웃은 **activity_main.axml** 대신 **content_main.axml**에 있습니다.
+> 2. 기본 레이아웃은 `RelativeLayout`입니다. 이 페이지의 나머지 단계를 수행하려면 `<RelativeLayout>` 태그를 `<LinearLayout>`으로 변경하고 `LinearLayout` 여는 태그에 다른 특성 `android:orientation="vertical"`을 추가해야 합니다.
 
 **도구 상자**(왼쪽 영역)에서 검색 표시줄에 `text`을 입력하고,**큰 텍스트** 위젯을 디자인 화면(가운데 영역)으로 끌어옵니다.
 
@@ -240,13 +248,13 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-**파일 > 모두 저장**을 선택(하거나 **CTRL-SHIFT-S** 키를 눌러서)하여 작업을 저장하고, **빌드 > 솔루션 다시 빌드**를 선택(하거나 **CTRL-SHIFT-B** 키를 눌러서)하여 응용 프로그램을 빌드합니다. 
+**파일 &gt; 모두 저장**을 선택(하거나 **CTRL-SHIFT-S** 키를 눌러서)하여 작업을 저장하고, **빌드 &gt; 솔루션 다시 빌드**를 선택(하거나 **CTRL-SHIFT-B** 키를 눌러서)하여 애플리케이션을 빌드합니다. 
 
-오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Visual Studio 업데이트를 설치했는지 확인합니다.
+오류가 있는 경우 이전 단계를 진행하고, 애플리케이션이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Visual Studio 업데이트를 설치했는지 확인합니다.
 
 ## <a name="set-the-app-name"></a>앱 이름 설정
 
-이제 응용 프로그램을 만들었습니다. &ndash; 앱 이름을 설정하겠습니다. **값** 폴더(**리소스** 폴더 내부)를 확장하고 **strings.xml** 파일을 엽니다. 다음과 같이 앱 이름 문자열을 `Phone Word`로 변경합니다.
+이제 애플리케이션을 만들었습니다. &ndash; 앱 이름을 설정하겠습니다. **값** 폴더(**리소스** 폴더 내부)를 확장하고 **strings.xml** 파일을 엽니다. 다음과 같이 앱 이름 문자열을 `Phone Word`로 변경합니다.
 
 ```xml
 <resources>
@@ -267,7 +275,7 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 ::: zone-end
 ::: zone pivot="macos"
 
-**응용 프로그램** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다.
+**애플리케이션** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다.
 
 **새 프로젝트...** 를 클릭하여 새 프로젝트를 만듭니다.
 
@@ -455,14 +463,15 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-**빌드 > 모두 빌드**를 선택(하거나 **& #8984; + B** 키를 눌러)하여 작업 내용을 저장하고 응용 프로그램을 빌드합니다. 응용 프로그램을 컴파일하는 경우 Mac용 Visual Studio 맨 위에서 성공 메시지가 표시됩니다.
 
-오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 및 Mac용 Visual Studio 업데이트를 설치했는지 확인합니다.
+  **빌드 &amp;gt; 모두 빌드**를 선택(하거나 **& #8984; + B** 키를 눌러)하여 작업 내용을 저장하고 애플리케이션을 빌드합니다. 애플리케이션을 컴파일하는 경우 Mac용 Visual Studio 맨 위에서 성공 메시지가 표시됩니다.
+
+오류가 있는 경우 이전 단계를 진행하고, 애플리케이션이 성공적으로 빌드될 때까지 모든 오류를 수정합니다. _현재 컨텍스트에서 리소스가 존재하지 않습니다._ 와 같은 빌드 오류가 발생할 경우 **MainActivity.cs**의 네임스페이스 이름이 프로젝트 이름(`Phoneword`)과 일치하는지 확인한 다음, 솔루션을 완전히 다시 빌드합니다. 빌드 오류가 여전히 발생하는 경우 최신 Xamarin.Android 및 Mac용 Visual Studio 업데이트를 설치했는지 확인합니다.
 
 ## <a name="set-the-label-and-app-icon"></a>레이블 및 앱 아이콘 설정
 
-이제 응용 프로그램을 만들었습니다. 마무리 작업을 추가하겠습니다. `MainActivity`에 대한 `Label`을 편집하여 시작합니다.
-`Label`은 사용자가 응용 프로그램에서 현재 위치를 알 수 있도록 Android가 화면 맨 위에 표시하는 항목입니다. `MainActivity` 클래스의 맨 위에서 다음과 같이 `Label`을 `Phone Word`로 변경합니다.
+이제 애플리케이션을 만들었습니다. 마무리 작업을 추가하겠습니다. `MainActivity`에 대한 `Label`을 편집하여 시작합니다.
+`Label`은 사용자가 애플리케이션에서 현재 위치를 알 수 있도록 Android가 화면 맨 위에 표시하는 항목입니다. `MainActivity` 클래스의 맨 위에서 다음과 같이 `Label`을 `Phone Word`로 변경합니다.
 
 ```csharp
 namespace Phoneword
@@ -475,7 +484,7 @@ namespace Phoneword
 }
 ```
 
-이제 응용 프로그램 아이콘을 설정하겠습니다. 기본적으로 Mac용 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿉니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-** 을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
+이제 애플리케이션 아이콘을 설정하겠습니다. 기본적으로 Mac용 Visual Studio는 프로젝트에 기본 아이콘을 제공합니다. 솔루션에서 이러한 파일을 삭제하고 다른 아이콘으로 바꿉니다. **Solution Pad**에서 **리소스** 폴더를 확장합니다. **mipmap-** 을 접두사로 지정한 5개의 폴더가 있고 해당 폴더에는 각각 단일 **Icon.png** 파일이 포함됩니다.
 
 [![mipmap- 폴더 및 Icon.png 파일](hello-android-quickstart-images/xs/23-mipmap-folders-sml.png)](hello-android-quickstart-images/xs/23-mipmap-folders.png#lightbox)
 
@@ -485,7 +494,7 @@ namespace Phoneword
 
 대화 상자에서 **삭제** 단추를 클릭합니다.
 
-다음으로 [Xamarin 앱 아이콘 설정](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)을 다운로드하고 압축을 풉니다. 이 zip 파일은 응용 프로그램에 대한 아이콘을 보관합니다. 각 아이콘은 시각적으로 거의 동일하지만 다양한 화면 밀도를 가진 다양한 디바이스에서 다른 해상도로 올바르게 렌더링합니다.  파일 집합을 Xamarin.Android 프로젝트에 복사해야 합니다. Mac용 Visual Studio의 **Solution Pad**에서 **mipmap-hdpi** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가 > 파일 추가**를 선택합니다.
+다음으로 [Xamarin 앱 아이콘 설정](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)을 다운로드하고 압축을 풉니다. 이 zip 파일은 애플리케이션에 대한 아이콘을 보관합니다. 각 아이콘은 시각적으로 거의 동일하지만 다양한 화면 밀도를 가진 다양한 디바이스에서 다른 해상도로 올바르게 렌더링합니다.  파일 집합을 Xamarin.Android 프로젝트에 복사해야 합니다. Mac용 Visual Studio의 **Solution Pad**에서 **mipmap-hdpi** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가 > 파일 추가**를 선택합니다.
 
 [![파일 추가](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png#lightbox)
 
@@ -503,7 +512,7 @@ namespace Phoneword
 
 ## <a name="run-the-app"></a>앱 실행
 
-마지막으로 Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하고 Phoneword를 변환하여 테스트합니다.
+마지막으로 Android 장치 또는 에뮬레이터에서 애플리케이션을 실행하고 Phoneword를 변환하여 테스트합니다.
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
@@ -511,7 +520,7 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 
 ::: zone-end
 
-첫 번째 Xamarin.Android 응용 프로그램을 완성한 것을 축하합니다!
+첫 번째 Xamarin.Android 애플리케이션을 완성한 것을 축하합니다!
 이제 방금 알아본 도구와 기술을 분석하겠습니다. 다음 단계는 [Hello, Android 심층 분석](~/android/get-started/hello-android/hello-android-deepdive.md)입니다.
 
 ## <a name="related-links"></a>관련 링크
