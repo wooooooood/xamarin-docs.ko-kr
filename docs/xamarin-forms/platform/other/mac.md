@@ -8,19 +8,18 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: 1aa21a416f4abca0440e96e25aebe5f834a717ce
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 3a488b3a9f729da5d4bee8c1262190b15c2e9240
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209358"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666898"
 ---
 # <a name="mac-platform-setup"></a>Mac 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)
 
-시작 하기 전에 만들고 (또는 기존 사용할) Xamarin.Forms 프로젝트입니다.
-Mac 용 Visual Studio를 사용 하 여 Mac 앱만 추가할 수 있습니다.
+시작 하기 전에 만들고 (또는 기존 사용할) Xamarin.Forms 프로젝트입니다. Mac 용 Visual Studio를 사용 하 여 Mac 앱만 추가할 수 있습니다.
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
@@ -38,13 +37,13 @@ MacOS Sierra 및 El Capitan macOS에서 실행 되는 Mac 앱을 추가 하려�
 
 4. 구성 및 키를 눌러 검토 **만들기**합니다. 이러한 단계는 아래에 나와 있습니다.
 
-  ![Cocoa 앱을 추가 하는 방법을 보여 주는 애니메이션된 지침](mac-images/add-macos-proj.gif)
+    ![Cocoa 앱을 추가 하는 방법을 보여 주는 애니메이션된 지침](mac-images/add-macos-proj.gif)
 
-5. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가...**  추가할 합니다 [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet 합니다. 또한이 버전을 다른 프로젝트를 업데이트 해야 합니다.
+5. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **패키지 > 패키지 추가...**  추가할 합니다 [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/) NuGet 합니다. 또한 Xamarin.Forms NuGet 패키지의 동일한 버전을 사용 하는 다른 프로젝트를 업데이트 해야 합니다.
 
 6. Mac 프로젝트에서 마우스 오른쪽 단추로 클릭 **참조가** Xamarin.Forms 프로젝트 (프로젝트 공유 또는.NET Standard 라이브러리 프로젝트)에 대 한 참조를 추가 합니다.
 
-  ![Xamarin.Forms 공유 코드 프로젝트에 대 한 참조를 추가 합니다.](mac-images/references-sml.png)
+    ![Xamarin.Forms 공유 코드 프로젝트에 대 한 참조를 추가 합니다.](mac-images/references-sml.png)
 
 7. 업데이트 **Main.cs** 초기화를 `AppDelegate`:
 
@@ -90,16 +89,16 @@ MacOS Sierra 및 El Capitan macOS에서 실행 되는 Mac 앱을 추가 하려�
         {
             Forms.Init();
             LoadApplication(new App());
-            base.DidFinishLaunching(notification); 
+            base.DidFinishLaunching(notification);
         }
     }
     ```
 
 9. 두 번 클릭 **Main.storyboard** Xcode에서 편집 합니다. 선택 합니다 **창을** 및 _의 선택을 취소_ 는 **초기 컨트롤러는** (이 위의 코드 창을 만들기 때문에) 확인란을 선택:
 
-  [![Xcode에서 초기 컨트롤러는 확인란의 선택을 취소합니다](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
+    [![Xcode에서 초기 컨트롤러는 확인란의 선택을 취소합니다](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
-  원치 않는 항목을 제거 하는 스토리 보드의 메뉴 시스템을 편집할 수 있습니다.
+    원치 않는 항목을 제거 하는 스토리 보드의 메뉴 시스템을 편집할 수 있습니다.
 
 10. 마지막으로 모든 로컬 리소스 (예: 추가 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
 
@@ -137,26 +136,11 @@ var rect = new CoreGraphics.CGRect(200, 1000, 1024, 768);  // x, y, width, heigh
 
 ### <a name="not-all-nugets-are-ready-for-macos"></a>일부 Nuget macOS에 대 한 준비가 되었습니다.
 
-패키지는 macOS 프로젝트에서 작동 하도록 "xamarinmac20" 대상으로 해야 합니다. 사용 하면 라이브러리의 일부 아직 지원 되지 않으므로 macOS 알 수 있습니다.
-
-이 경우 추가 프로젝트 유지 관리자에 게 요청 해야 합니다. 지원, 있어야 대안을 찾아보세요 해야 합니다.
+사용 하면 라이브러리의 일부 아직 지원 되지 않으므로 macOS 알 수 있습니다. 이 경우 추가 프로젝트 유지 관리자에 게 요청 해야 합니다. 지원, 있어야 대안을 찾아보세요 해야 합니다.
 
 ### <a name="missing-xamarinforms-features"></a>누락 된 Xamarin.Forms 기능
 
-모든 Xamarin.Forms 기능은이 미리 보기에에서 완료 목록이 아직 구현 되지 않은 기능 중 일부는 다음과 같습니다.
-
-* 바닥글
-* 이미지 – 측면
-* 새로 고침, SeparatorColor, SeparatorVisibility를 ListView – ScrollTo, UnevenRows 지원
-* MasterDetailPage-BackgroundColor
-* 탐색-InsertPageBefore
-* OpenGLRenderer
-* 선택 – Bindable/Observable 구현
-* TabbedPage – BarBackgroundColor, BarTextColor
-* TableView – UnevenRows
-* ViewCell – IsEnabled ForceUpdateSize
-* WebView – 대부분의 WebNavigationEvents
-
+모든 Xamarin.Forms 기능은이 미리 보기에서 완료 합니다. 자세한 내용은 [플랫폼 지원 macOS 상태](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support-macOS-Status) 에 [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) GitHub 리포지토리.
 
 ## <a name="related-links"></a>관련 링크
 

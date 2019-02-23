@@ -6,12 +6,12 @@ ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: dd987b6d1a6db8e27544ddd95cdc219bb5f783b5
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 1ebc450a285d47fe1eedb0f8d72d6c9dc2b95644
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526652"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666885"
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Live Player 설치
 
@@ -21,15 +21,11 @@ Xamarin Live Player를 사용 하면 앱에 라이브 편집을 확인 하 고�
 
 ## <a name="1-get-the-android-app"></a>1. Android 앱 다운로드
 
-Xamarin Live Player는 Google Play에서 Android 용 제공 됩니다.
-
-[ ![Google Play에서 사용할 수 있습니다.](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
-
-Google Play 없이 Android 장치에 대 한 Xamarin Live Player를 통해 제공 됩니다 [HockeyApp](https://aka.ms/xlp-hockeyapp) 배포 합니다. 초기 미리 보기의 Android를 선택 하 여 Google Play에서 직접 설치에 대 한 빌드 또한는 [공개 베타 프로그램](https://play.google.com/apps/testing/com.xamarin.live)
+Xamarin Live Player에서 직접 intalling 하 여 Android에 대 한 사용할 수 [HockeyApp](https://aka.ms/xlp-hockeyapp)합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="2-get-visual-studio-2017"></a>2. Visual Studio 2017을 가져오기
+## <a name="2-get-visual-studio-2017"></a>2. Get Visual Studio 2017
 
 Xamarin Live Player에는 다음이 필요합니다.
 

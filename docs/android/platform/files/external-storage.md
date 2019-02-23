@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: fa0ad282fedecec8f5ca4e94e7119c36ef182261
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116019"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666937"
 ---
 # <a name="external-storage"></a>외부 저장소
 
@@ -53,16 +53,16 @@ ms.locfileid: "50116019"
 
 | `Android.OS.Environment` | 디렉터리 |
 |-|-|
-| DirectoryAlarms | **_개인\_외부\_저장소_경보 /** |
-| DirectoryDcim | **_개인\_외부\_저장소_/DCIM** |
-| DirectoryDownloads | **_개인\_외부\_저장소_다운로드 /** |
-| DirectoryDocuments | **_개인\_외부\_저장소_문서 /** |
-| DirectoryMovies | **_개인\_외부\_저장소_/Movies** |
-| DirectoryMusic | **_개인\_외부\_저장소_/Music** |
-| DirectoryNotifications | **_개인\_외부\_저장소_/Notifications** |
-| DirectoryPodcasts | **_개인\_외부\_저장소_/Podcasts** |
-| DirectoryRingtones | **_개인\_외부\_저장소_/Ringtones** |
-| DirectoryPictures | **_개인\_외부\_저장소_그림 /** |
+| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
+| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
+| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
+| DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
+| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
+| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
+| DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
+| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
+| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
+| DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
 
 여러 외부 저장소 파티션을 포함 하는 장치의 경우 각 파티션에 개인 파일을 위한 디렉터리를 갖습니다. 메서드 `Android.Content.Context.GetExternalFilesDirs(string type)` 배열을 반환 합니다 `Java.IO.Files`합니다. 각 개체가 나타내는 개인 응용 프로그램별 디렉터리 응용 프로그램 파일을 배치할 수 있는 모든 공유/외부 저장 장치에 소유 합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "50116019"
 이 문서는 공용 파일을 외부 저장소에 대 한 저장소 디렉터리에 참조 _공개\_외부\_저장소_합니다.
 
 
-Android에서 응용 프로그램 디렉터리의 개념을도 지원 _공개\_외부\_저장소_합니다. 이러한 디렉터리는 정확 하 게에 대 한 응용 프로그램 diretories 동일 `_PRIVATE\_EXTERNAL\_STORAGE_` 하며 이전 섹션의 표에 설명 되어 있습니다. 메서드 `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` 돌아갑니다는 `Java.IO.File` 공용 응용 프로그램 디렉터리에 해당 하는 개체입니다. 합니다 `directoryType` 매개 변수는 필수 매개 변수 및 안 `null`합니다.
+Android에서 응용 프로그램 디렉터리의 개념을도 지원 _공개\_외부\_저장소_합니다. 이러한 디렉터리는 응용 프로그램 디렉터리와 동일 하 게 정확 하 게 `_PRIVATE\_EXTERNAL\_STORAGE_` 하며 이전 섹션의 표에 설명 되어 있습니다. 메서드 `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` 돌아갑니다는 `Java.IO.File` 공용 응용 프로그램 디렉터리에 해당 하는 개체입니다. 합니다 `directoryType` 매개 변수는 필수 매개 변수 및 안 `null`합니다.
 
 예를 들어 호출 `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` 는 비슷합니다는 문자열을 반환 합니다.
 
