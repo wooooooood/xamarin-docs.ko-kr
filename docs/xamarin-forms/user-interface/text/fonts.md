@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 1b90a3184b89ba9147525a87b52e048bbb59f5af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9441522af53a1240707eeb21ff9f583501d2491d
+ms.sourcegitcommit: 16a42b69176a40cde71e177079b11e15d300d042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061155"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56795448"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -97,27 +97,19 @@ IOS에 대 한 글꼴 정보 좋은 원본은 [iosfonts.com](http://iosfonts.com
 
 ## <a name="setting-the-font-in-xaml"></a>XAML에서 글꼴을 설정합니다.
 
-Xamarin.Forms 컨트롤 모두 표시 텍스트를 `Font` XAML에서 설정할 수 있는 속성입니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음과 같습니다. 명명 된 크기 열거형 값을 사용 하도록이 예와 같이
+Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정할 수 있는 속성입니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음과 같습니다. 명명 된 크기 열거형 값을 사용 하도록이 예와 같이
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-에 대 한 기본 제공 변환기는는 `Font` 속성을 사용 하는 모든 글꼴 설정을 XAML에서 문자열 값으로 표현 될 수 있습니다. 다음 예제에서는 XAML의 글꼴 특성 및 크기를 지정 하는 방법을 보여 줍니다.
+에 대 한 기본 제공 변환기는는 `FontSize` 속성을 사용 하는 모든 글꼴 설정을 XAML에서 문자열 값으로 표현 될 수 있습니다. 또한는 `FontAttributes` 글꼴 특성을 지정 하려면 속성을 사용할 수 있습니다.
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
 <Label Text="Biggest NamedSize" FontSize="Large" />
 <Label Text="Use size 72" FontSize="72" />
-```
-
-여러 개 지정할 `Font` 하나로 필요한 설정을 결합 하는 설정을 `Font` 문자열 특성. 로 형식이 지정 된 글꼴 특성 문자열은 `"[font-face],[attributes],[size]"`합니다. 매개 변수의 순서는 중요, 모든 매개 변수는 선택 사항 및 여러 `attributes` 예를 들어 지정할 수 있습니다.
-
-```xaml
-<Label Text="Small bold text" Font="Bold, Micro" />
-<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
-<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) 데도 사용할 수 있습니다 XAML에서 각 플랫폼에서 다른 글꼴을 렌더링 합니다. 아래 예제에서는 사용자 지정 글꼴을 사용 하 여 iOS에서 (<span style="font-family:MarkerFelt-Thin">MarkerFelt 씬</span>) 다른 플랫폼에만 크기/특성을 지정 합니다.
@@ -151,7 +143,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `Font` XAML에서 설정할 �
 먼저 로드 됨을 보장 다음 Xamarin.Forms를 사용 하 여 이름으로 참조 하 여 사용자 지정 글꼴을 표시 하는 것이 불가능 `Font` 메서드.
 지침을 따릅니다 [이 블로그 게시물](http://blog.xamarin.com/custom-fonts-in-ios/):
 
-1. 사용 하 여 글꼴 파일 추가 **빌드 작업: BundleResource**, 및
+1. 글꼴 파일 추가 **빌드 작업: BundleResource**, and
 2. 업데이트를 **Info.plist** 파일 (**응용 프로그램에서 제공 하는 글꼴**, 또는 `UIAppFonts`키,), 한 다음
 3. Xamarin.Forms의 글꼴을 정의 하는 위치를 이름으로 참조!
 
@@ -165,7 +157,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **자산** 집합과 응용 프로그램 프로젝트에서 폴더 *빌드 작업: AndroidAsset*합니다. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
+Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **자산** 집합과 응용 프로그램 프로젝트에서 폴더 *빌드 작업: AndroidAsset*. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
 
 ```csharp
 new Label
@@ -190,7 +182,7 @@ new Label
 > [!NOTE]
 > 글꼴 이름과 글꼴 파일에 있는 참고 달라질 수 있습니다. Windows에서 글꼴 이름을 검색할.ttf 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **미리 보기**합니다. 글꼴 이름은 미리 보기 창에서 다음 확인할 수 있습니다.
 
-응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
+애플리케이션에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
 ### <a name="xaml"></a>XAML
 
