@@ -97,7 +97,7 @@ systeminfo
 
    다음과 같이 변경한 후 컴퓨터를 다시 부팅합니다.
 
-2.  **[Visual Studio 15.8 이상](https://visualstudio.microsoft.com/vs/) 설치**(이 버전의 Visual Studio는 Hyper-V로 Android 에뮬레이터를 실행하기 위한 IDE 지원을 제공합니다).
+2. **[Visual Studio 15.8 이상](https://visualstudio.microsoft.com/vs/) 설치**(이 버전의 Visual Studio는 Hyper-V로 Android 에뮬레이터를 실행하기 위한 IDE 지원을 제공합니다).
 
 3. **Android Emulator 패키지 27.2.7 이상을 설치합니다**. 이 패키지를 설치하려면 Visual Studio에서 **도구 > Android > Android SDK Manager**로 이동합니다. **도구** 탭을 선택하고 Android 에뮬레이터 버전이 적어도 27.2.7인지 확인합니다. 또한 Android SDK Tools 버전이 26.1.1 이상인지 확인합니다.
 
