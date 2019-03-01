@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6f12670dd463471ba1e337802453c775adbe16a7
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054063"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666950"
 ---
 # <a name="localization"></a>지역화
 
@@ -347,13 +347,14 @@ iOS 사용자는 날짜 및 시간 형식의 문화권에서 개별적으로 자
 
 namespace UsingResxLocalization.iOS
 {
-public class Localize : UsingResxLocalization.ILocalize
+    public class Localize : UsingResxLocalization.ILocalize
     {
         public void SetLocale (CultureInfo ci)
         {
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
         }
+
         public CultureInfo GetCurrentCultureInfo ()
         {
             var netLanguage = "en";
@@ -385,9 +386,12 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return ci;
         }
+
         string iOSToDotnetLanguage(string iOSLanguage)
         {
-            var netLanguage = iOSLanguage;
+            // .NET cultures don't support underscores
+            string netLanguage = iOSLanguage.Replace("_", "-");
+
             //certain languages need to be converted to CultureInfo equivalent
             switch (iOSLanguage)
             {
@@ -403,6 +407,7 @@ public class Localize : UsingResxLocalization.ILocalize
             }
             return netLanguage;
         }
+
         string ToDotnetFallbackLanguage (PlatformCulture platCulture)
         {
             var netLanguage = platCulture.LanguageCode; // use the first part of the identifier (two chars, usually);
@@ -431,7 +436,6 @@ public class Localize : UsingResxLocalization.ILocalize
 > 예를 들어 iOS **설정 > 일반 언어 &amp; 지역** 화면을 선택하면 사용자는 휴대폰 **언어**는 **영어**로, **지역**은 **스페인**으로 설정할 수 있습니다. 그 결과로 `"en-ES"`의 로캘 문자열이 됩니다. `CultureInfo` 생성이 실패하는 경우 표시 언어를 선택하려면 코드는 처음 두 글자만 사용하는 것으로 대체할 수 있습니다.
 >
 > 개발자는 지원되는 해당 언어에 필요한 특정 사례를 처리하려면 `iOSToDotnetLanguage` 및 `ToDotnetFallbackLanguage` 메서드를 수정해야 합니다.
-
 
 `Picker` 컨트롤의 **완료** 단추와 같이 iOS에서 자동으로 변환되는 일부 시스템에서 정의된 사용자 인터페이스 요소가 있습니다. iOS에서 이러한 요소를 강제로 변환하려면 **Info.plist** 파일에서 지원하는 언어를 표시해야 합니다. 여기에 표시된 것처럼 **Info.plist > 소스**를 통해 이러한 값을 추가할 수 있습니다.
 
