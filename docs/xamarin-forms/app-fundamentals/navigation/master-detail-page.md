@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057667"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666911"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
@@ -48,7 +48,7 @@ _Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 - iOS의 경우 마스터 페이지를 왼쪽에서 밀면 세부 정보 페이지가 오른쪽으로 *밀리고* 세부 정보 페이지의 왼쪽 부분이 계속 표시됩니다.
 - Android의 경우 세부 정보 페이지와 마스터 페이지가 서로 *겹쳐집니다*.
-- UWP의 경우 세부 정보 페이지와 마스터 페이지가 *교환*됩니다.
+- UWP에서 마스터 페이지는 [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) 속성이 `Popover`로 설정된 경우 세부 정보 페이지의 남은 부분에서 슬라이드됩니다. 자세한 내용은 [세부 정보 페이지 표시 동작 제어](#Controlling_the_Detail_Page_Display_Behavior)를 참조하세요.
 
 iOS와 Android의 마스터 페이지가 세로 모드의 마스터 페이지와 비슷한 너비를 갖고 있으므로 더 많은 세부 페이지가 표시된다는 점을 제외하고는 가로 모드에서도 이와 비슷한 동작이 관찰됩니다.
 
@@ -291,7 +291,6 @@ public class MainPageCS : MasterDetailPage
 ## <a name="summary"></a>요약
 
 이 문서에서는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)를 사용하고 해당 정보 페이지 간에 이동하는 방법을 보여 주었습니다. Xamarin.Forms `MasterDetailPage`는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 
