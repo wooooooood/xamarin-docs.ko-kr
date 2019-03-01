@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 00d8e1459501b4643dea12b1d36939534a66833f
-ms.sourcegitcommit: 5405a376fe1b1e08c834eb565aaa5b1849a0fcdc
+ms.openlocfilehash: ccd085c8b1cf824f24d4677ed2e44ebc54b690bd
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986489"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197175"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -35,7 +35,7 @@ sections:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
       text: 설정
-      href: ~/get-started/installation.md
+      href: ~/get-started/requirements.md
     - image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
       text: 첫 번째 앱
@@ -62,18 +62,6 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/index.md
-      html: Xamarin.Forms를 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Xamarin.Forms 앱을 만드세요.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/index.md
-      title: 시작
-    - href: ~/xamarin-forms/xaml/
-      html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: ~/xamarin-forms/xaml/
-      title: XAML
     - href: ~/xamarin-forms/app-fundamentals/
       html: 파일, 이미지, 데이터베이스 작업 등과 같이 Xamarin.Forms 앱을 빌드하는 데 필요한 모든 작업을 안내합니다.
       image:
@@ -86,6 +74,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: ~/xamarin-forms/user-interface/
       title: 사용자 인터페이스
+    - href: ~/xamarin-forms/xaml/
+      html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: ~/xamarin-forms/xaml/
+      title: XAML
     - href: ~/xamarin-forms/platform/
       html: 사용자 지정 렌더러와 같이 Xamarin.Forms 플랫폼 기능 및 각 릴리스의 기타 중요한 기능 작업입니다.
       image:
