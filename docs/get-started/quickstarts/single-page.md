@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 7696ece64da28f05bb15866214de4a7f1103d06f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: dddd41f064be5e7840b6b86d86faec8045b476bf
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293313"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197227"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 응용 프로그램 만들기
 
@@ -38,7 +38,7 @@ ms.locfileid: "55293313"
 - 기술 자료의 C#입니다.
 - (선택 사항) IOS에서 응용 프로그램을 빌드하려면 페어링된 Mac.
 
-이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/cross-platform/get-started/installation/index.md)합니다. Visual Studio 2017을 Mac 빌드 호스트 연결에 대 한 자세한 내용은 [Xamarin.iOS 개발을 위한 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
+이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다. Visual Studio 2017을 Mac 빌드 호스트 연결에 대 한 자세한 내용은 [Xamarin.iOS 개발을 위한 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
 
 ## <a name="get-started-with-visual-studio"></a>Visual Studio 시작
 
@@ -92,7 +92,7 @@ ms.locfileid: "55293313"
     </ContentPage>
     ```
 
-    이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 인터페이스](deepdive.md#user-interface) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Label` ](xref:Xamarin.Forms.Label) 텍스트를 표시 하는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력을 한 두 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스는 응용 프로그램을 저장 하거나 파일을 삭제 합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 인터페이스](deepdive.md#user-interface) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
@@ -188,7 +188,7 @@ ms.locfileid: "55293313"
 - Xcode (최신 릴리스)입니다.
 - 기술 자료의 C#입니다.
 
-이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/cross-platform/get-started/installation/index.md)합니다.
+이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다.
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Mac용 Visual Studio 시작
 
@@ -246,7 +246,7 @@ ms.locfileid: "55293313"
     </ContentPage>
     ```
 
-    이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 인터페이스](deepdive.md#user-interface) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Label` ](xref:Xamarin.Forms.Label) 텍스트를 표시 하는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력을 한 두 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스는 응용 프로그램을 저장 하거나 파일을 삭제 합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 인터페이스](deepdive.md#user-interface) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
 
     **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 

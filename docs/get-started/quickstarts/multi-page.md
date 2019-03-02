@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 48b1c93afa22bf069a2b47b6c9a259641e8ed70f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293337"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197370"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 응용 프로그램에서 탐색을 수행 합니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "55293337"
       </ContentPage>
       ```
 
-      구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력 및 2에 대 한 [ `Button` ](xref:Xamarin.Forms.Button) 저장 또는 삭제 하 고 응용 프로그램이 있는 인스턴스를 파일입니다. 두 `Button` 인스턴스는 가로로 배치를 [ `Grid` ](xref:Xamarin.Forms.Grid)를 사용 하 여는 `Editor` 및 `Grid` 에 세로로 배치 되는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). 또한를 `Editor` 바인딩할 데이터 바인딩을 사용 하는 `Text` 의 속성은 `Note` 모델. 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [증상](deepdive.md#data-binding) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+      구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력 및 2에 대 한 [ `Button` ](xref:Xamarin.Forms.Button) 저장 또는 삭제 하 고 응용 프로그램이 인스턴스 파일입니다. 두 `Button` 인스턴스는 가로로 배치를 [ `Grid` ](xref:Xamarin.Forms.Grid)를 사용 하 여는 `Editor` 및 `Grid` 에 세로로 배치 되는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). 또한를 `Editor` 바인딩할 데이터 바인딩을 사용 하는 `Text` 의 속성은 `Note` 모델. 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [증상](deepdive.md#data-binding) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
 
       변경 내용을 저장 **NoteEntryPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
 
@@ -399,7 +399,7 @@ ms.locfileid: "55293337"
       </ContentPage>
       ```
 
-      구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력 및 2에 대 한 [ `Button` ](xref:Xamarin.Forms.Button) 저장 또는 삭제 하 고 응용 프로그램이 있는 인스턴스를 파일입니다. 두 `Button` 인스턴스는 가로로 배치를 [ `Grid` ](xref:Xamarin.Forms.Grid)를 사용 하 여는 `Editor` 및 `Grid` 에 세로로 배치 되는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). 또한를 `Editor` 바인딩할 데이터 바인딩을 사용 하는 `Text` 의 속성은 `Note` 모델. 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [증상](deepdive.md#data-binding) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+      구성 된 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 하는이 코드는 [ `Editor` ](xref:Xamarin.Forms.Editor) 텍스트 입력 및 2에 대 한 [ `Button` ](xref:Xamarin.Forms.Button) 저장 또는 삭제 하 고 응용 프로그램이 인스턴스 파일입니다. 두 `Button` 인스턴스는 가로로 배치를 [ `Grid` ](xref:Xamarin.Forms.Grid)를 사용 하 여는 `Editor` 및 `Grid` 에 세로로 배치 되는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). 또한를 `Editor` 바인딩할 데이터 바인딩을 사용 하는 `Text` 의 속성은 `Note` 모델. 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [증상](deepdive.md#data-binding) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
 
       변경 내용을 저장 **NoteEntryPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 4f69e88e0abff1236dc8365d88c8efbdf58b4031
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831706"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197120"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
@@ -71,11 +71,11 @@ listView.ItemsSource.Add("monochrome");
 때문에 `ItemsSource` 보냈습니다를 배열에 기본 목록 또는 배열로 변경 되 면 콘텐츠 업데이트 되지 것입니다. 사용 해야 항목 추가, 제거 및 내부 목록에서 변경할 때 자동으로 업데이트 하는 ListView를 하려는 경우는 `ObservableCollection`합니다. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) 에 정의 된 `System.Collections.ObjectModel` 마찬가지로 이며 `List`단 알릴 수 있습니다, `ListView` 변경:
 
 ```csharp
-ObservableCollection<Employees> employeeList = new ObservableCollection<Employess>();
-listView.ItemsSource = employeeList;
+ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+listView.ItemsSource = employees;
 
 //Mr. Mono will be added to the ListView because it uses an ObservableCollection
-employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
+employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 ```
 
 <a name="Data_Binding" />
@@ -93,7 +93,8 @@ employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
 Employee 클래스:
 
 ```csharp
-public class Employee{
+public class Employee
+{
     public string DisplayName {get; set;}
 }
 ```

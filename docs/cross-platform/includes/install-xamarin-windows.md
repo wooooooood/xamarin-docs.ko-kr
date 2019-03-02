@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: bcf68de7261e25c94f042f4479a39e449c1929fb
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
-ms.translationtype: HT
+ms.openlocfilehash: 5fccbcf56037b4c4538ccfa16515ea63aa53c57c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2018
-ms.locfileid: "52295076"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57199809"
 ---
 Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일부로 설치할 수 있습니다.
 
@@ -15,23 +15,23 @@ Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일�
 
 3. 설치 화면에서 **.NET을 사용한 모바일 개발** 워크로드를 선택합니다.
 
-    ![워크로드 화면에서 .NET을 사용한 모바일 개발 선택](~/cross-platform/get-started/installation/windows-images/01-mobile-dev-workload.png)
+    ![워크로드 화면에서 .NET을 사용한 모바일 개발 선택](~/get-started/installation/windows-images/01-mobile-dev-workload.png)
 
 4. **.NET을 사용한 모바일 개발**이 선택된 상태에서 오른쪽에 있는 **설치 세부 정보** 창을 봅니다. 여기에서는 설치하지 않으려는 모바일 개발 옵션의 선택을 취소할 수 있습니다.
 
-    ![설치할 Xamarin 옵션이 나열되는 설치 세부 정보 창](~/cross-platform/get-started/installation/windows-images/02-summary.png)
+    ![설치할 Xamarin 옵션이 나열되는 설치 세부 정보 창](~/get-started/installation/windows-images/02-summary.png)
 
 5. Visual Studio 2017 설치를 시작할 준비가 되면 오른쪽 아래 모서리에서 **설치** 단추를 클릭합니다.
 
-    ![설치 단추](~/cross-platform/get-started/installation/windows-images/03-click-install.png)
+    ![설치 단추](~/get-started/installation/windows-images/03-click-install.png)
 
    설치하는 Visual Studio 2017의 버전에 따라 설치 프로세스를 완료하는 데 시간이 오래 걸릴 수 있습니다. 진행률 표시줄을 통해 설치를 모니터링할 수 있습니다.
 
-    ![설치 중 진행률 표시줄](~/cross-platform/get-started/installation/windows-images/04-progress-bars.png)
+    ![설치 중 진행률 표시줄](~/get-started/installation/windows-images/04-progress-bars.png)
 
 6. Visual Studio 2017 설치가 완료되면 **시작** 단추를 클릭하여 Visual Studio를 시작합니다.
 
-    ![시작 단추의 위치](~/cross-platform/get-started/installation/windows-images/05-launch.png)
+    ![시작 단추의 위치](~/get-started/installation/windows-images/05-launch.png)
 
 <a name="vs2017" />
 

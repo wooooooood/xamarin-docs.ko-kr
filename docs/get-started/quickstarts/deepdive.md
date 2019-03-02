@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: aacc63af53d7408b61f01054d49fa2b436588fc7
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293345"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197552"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작에 대 한 심층 정보
 
-에 [Xamarin.Forms 빠른 시작](~/get-started/index.md), 정보 응용 프로그램을 빌드 했습니다. 이 문서에서는 Xamarin.Forms 애플리케이션의 핵심 작동 원리를 이해하기 위해 무엇이 빌드되었는지 검토합니다.
+에 [Xamarin.Forms 빠른 시작](~/get-started/index.yml), 정보 응용 프로그램을 빌드 했습니다. 이 문서에서는 Xamarin.Forms 애플리케이션의 핵심 작동 원리를 이해하기 위해 무엇이 빌드되었는지 검토합니다.
 
 ::: zone pivot="windows"
 
@@ -373,7 +373,7 @@ await Navigation.PopAsync();
 
 데이터 바인딩은 Xamarin.Forms 애플리케이션이 데이터를 나타내고 해당 데이터와 상호 작용하는 방법을 단순화하기 위해 사용됩니다. 그것을 통해 사용자 인터페이스와 기본 애플리케이션 간에 연결이 설정됩니다. [`BindableObject`](xref:Xamarin.Forms.BindableObject) 클래스에는 데이터 바인딩을 지원하는 인프라의 대부분이 담겨 있습니다.
 
-데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어 한 [`Editor`](xref:Xamarin.Forms.Editor)(*target* 개체)은 일반적으로 *source* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.Editor.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
+데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어, 한 [ `Editor` ](xref:Xamarin.Forms.Editor) (*대상* 개체)는 일반적으로 바인딩합니다 해당 [ `Text` ](xref:Xamarin.Forms.Editor.Text) 속성을 공용 `string` 속성에는 *원본* 개체입니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
 
 ![](deepdive-images/data-binding.png "데이터 바인딩")
 
