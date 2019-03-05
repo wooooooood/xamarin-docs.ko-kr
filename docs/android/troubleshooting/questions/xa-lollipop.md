@@ -1,5 +1,5 @@
 ---
-title: 어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가?
+title: 어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ffae20f3e62d8f735e4645143f08a94fd04744b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305609"
 ---
-# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가?
+# <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
 
 **참고:** 이 가이드는 Android L 미리 보기에 대 한 원래 작성 되었습니다.
 
@@ -33,7 +33,7 @@ Xamarin 능동적 Xamarin 도구의 현재 안정적인 릴리스를 지원합�
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-이 메시지는 API 수준 21 용 Android SDK 플랫폼이 설치 되어 있지 않음을 의미 합니다. Android SDK Manager에서 설치 하거나 (도구 > Android SDK 관리자 열기...), 또는 설치 된 API 버전을 대상으로 Xamarin.Android 프로젝트를 변경 합니다.
+이 메시지는 API 수준 21 용 Android SDK 플랫폼이 설치 되어 있지 않음을 의미 합니다. Android SDK Manager에서 설치 하거나 (**도구 > Android SDK 관리자 열기...** ), 또는 설치 된 API 버전을 대상으로 Xamarin.Android 프로젝트를 변경 합니다.
 
 이 문제에 대 한 몇 가지 대안 가지가 있습니다.
 
@@ -46,7 +46,7 @@ Error 1 Could not find android.jar for API Level 21.
 3. 일시적으로 Android API 수준 21 "L" 미리 보기 [1]로 다시 다운 그레이드 합니다.
 
     1.  삭제 된 **% LOCALAPPDATA %\\Android\\android sdk\\플랫폼\\android 21** 
-    2.  [1]에 압축을 풉니다 **c:\\사용자가\\<username>\\AppData\\로컬\\Android\\android sdk\\플랫폼** 만들려면는 **android-L** 폴더입니다.
+    2.  [1]에 압축을 풉니다 **c:\\사용자가\\&lt;username&gt;\\AppData\\로컬\\Android\\android sdk\\플랫폼**  만들려면를 **android-L** 폴더입니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
