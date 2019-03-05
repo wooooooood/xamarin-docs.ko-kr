@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms StackLayout 자습서
+metadata:
+  title: Xamarin.Forms StackLayout 자습서
+  description: Xamarin.Forms StackLayout을 사용하여 1차원 스택으로 가로 또는 세로 보기를 구성하는 방법을 알아봅니다.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 07/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 24ab316baf8a0be14d78d35e52698e2bff224dcc
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197849"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: stacklayout 만들기
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: 방향 지정
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/orientation.md)]
+- title: 맞춤 및 확장 제어
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/alignment-expansion.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Xamarin.Forms 팝업 자습서
+metadata:
+  title: Xamarin.Forms 팝업 자습서
+  description: Xamarin.Forms을 사용하여 사용자에게 간단한 질문을 묻거나 작업을 설명하는 경고 및 작업 시트를 표시하는 방법을 알아봅니다.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 7943f6caf94328d265ba03f90821a0075d1b02fe
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198919"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: 경고 표시
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/display-alert.md)]
+- title: 작업 시트 표시
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

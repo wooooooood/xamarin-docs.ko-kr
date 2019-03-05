@@ -1,0 +1,93 @@
+items:
+- name: 시작
+  href: index.yml
+  items:
+  - name: 요구 사항
+    href: requirements.md
+  - name: 설치
+    href: installation/index.md
+    items:
+    - name: Windows에서 Xamarin 설치
+      href: installation/windows.md
+      items:
+      - name: Xamarin 미리 보기 설치(Windows)
+        href: installation/windows-preview.md
+    - name: Mac용 Visual Studio 설치
+      href: /visualstudio/mac/installation/
+      items:
+      - name: Xamarin 미리 보기 설치(Mac)
+        href: /visualstudio/mac/update/
+    - name: Xamarin 방화벽 구성 지침
+      href: installation/firewall.md
+    - name: Xamarin 제거
+      href: installation/uninstalling-xamarin.md
+  - name: 첫 번째 앱
+    href: first-app/index.md
+  - name: 빠른 시작
+    href: quickstarts/index.yml
+    items:
+    - name: 파일 > 새로 만들기
+      href: quickstarts/single-page.md
+    - name: 다중 페이지
+      href: quickstarts/multi-page.md
+    - name: 데이터베이스
+      href: quickstarts/database.md
+    - name: 스타일 지정
+      href: quickstarts/styling.md
+    - name: 심층 분석
+      href: quickstarts/deepdive.md
+    expanded: true
+  - name: 자습서
+    href: tutorials/index.yml
+    items:
+    - name: 스택 레이아웃
+      href: tutorials/stacklayout/index.yml
+    - name: 레이블
+      href: tutorials/label/index.yml
+    - name: 단추
+      href: tutorials/button/index.yml
+    - name: 텍스트 항목
+      href: tutorials/entry/index.yml
+    - name: 텍스트 편집기
+      href: tutorials/editor/index.yml
+    - name: 이미지
+      href: tutorials/image/index.yml
+    - name: 그리드 레이아웃
+      href: tutorials/grid/index.yml
+    - name: 목록
+      href: tutorials/listview/index.yml
+    - name: 팝업 항목
+      href: tutorials/pop-ups/index.yml
+    - name: 앱 수명 주기
+      href: tutorials/app-lifecycle/index.yml
+    - name: 로컬 데이터베이스
+      href: tutorials/local-database/index.yml
+    - name: 웹 서비스
+      href: tutorials/web-service/index.yml
+    expanded: true
+  - name: Xamarin에 대해 알아보기
+    items:
+    - name: 네이티브 앱
+      href: ~/cross-platform/get-started/introduction-to-mobile-development.md
+    - name: .NET 개발자
+      href: ~/cross-platform/desktop/index.md
+    - name: ASP.NET 개발자
+      href: ~/cross-platform/desktop/index.md
+    - name: Java 개발자
+      href: ~/android/get-started/java-developers.md
+    - name: Swift 개발자
+      href: ~/ios/get-started/objective-c-developers/index.md
+    - name: Objective-C 개발자
+      href: ~/ios/get-started/objective-c-developers/index.md
+    - name: Azure
+      href: ~/xamarin-forms/data-cloud/index.md
+    expanded: true
+  - name: 개발 지침
+    href: ~/cross-platform/index.yml
+  expanded: true
+ms.openlocfilehash: 9acbdb260877a0cb835b5f9f05fe6faa0f0a3bb0
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57198509"

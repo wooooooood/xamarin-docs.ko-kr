@@ -1,0 +1,58 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: fddfe37d306273f10d8f46531f403719119e325a
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57198289"
+documentType: LandingData
+title: Xamarin.Forms 빠른 시작
+metadata:
+  title: Xamarin.Forms 빠른 시작
+  description: Visual Studio 및 Mac용 Visual Studio를 사용하여 Xamarin.Forms 애플리케이션을 개발하는 방법에 대한 빠른 시작.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 3318B8F8-3B24-489E-8E7B-28FA948796F8
+  ms.technology: xamarin-forms
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 02/15/2018
+abstract:
+  description: 이 페이지는 Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 방법을 학습하기 위한 빠른 시작에 연결됩니다. 전체 Xamarin.Forms 설명서는 <a href="/xamarin/xamarin-forms/">Xamarin.Forms 설명서</a>를 참조하세요.
+sections:
+- title: 빠른 시작
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: single-page.md
+      html: 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 알아봅니다.
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: single-page.md
+      title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
+    - href: multi-page.md
+      html: 단일 노트를 저장할 수 있는 단일 페이지 애플리케이션을 여러 노트를 저장할 수 있는 다중 페이지 애플리케이션으로 전환하는 방법을 알아봅니다.
+      image:
+        src: https://docs.microsoft.com/media/common/i_class.svg
+        href: multi-page.md
+      title: 다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
+    - href: database.md
+      html: 로컬 SQLite.NET 데이터베이스에 데이터를 저장하는 방법을 알아봅니다.
+      image:
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+        href: database.md
+      title: 로컬 SQLite.NET 데이터베이스에 데이터 저장
+    - href: styling.md
+      html: XAML 스타일로 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 지정하는 방법을 알아봅니다.
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: styling.md
+      title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
+    - href: deepdive.md
+      html: 빠른 시작 전체에서 개발된 애플리케이션에 중점을 둔 Xamarin.Forms를 이용한 애플리케이션 개발의 기본 사항에 대해 읽어보세요.
+      image:
+        src: https://docs.microsoft.com/media/common/i_overview.svg
+        href: deepdive.md
+      title: 빠른 시작 심층 분석

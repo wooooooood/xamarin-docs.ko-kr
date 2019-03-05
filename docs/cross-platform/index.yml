@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 430fcdc6066c677d74955670cef0979b19802835
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: c52714a36b204d8e92baa87f3aa7389c1b08260c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292114"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197526"
 documentType: LandingData
 title: 플랫폼 간 지침
 metadata:
@@ -22,7 +22,7 @@ abstract:
     - href: /visualstudio/
       text: Visual Studio
     - href: /visualstudio/mac/
-      text: Visual Studio for Mac
+      text: Mac용 Visual Studio
 sections:
 - title: 시작
   items:
@@ -58,11 +58,11 @@ sections:
     className: cardsB
     items:
     - href: ~/cross-platform/get-started/index.md
-      html: Xamarin을 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 앱을 빌드하세요.
+      html: Xamarin을 사용하여 모바일 앱 개발 소개
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/cross-platform/get-started/index.md
-      title: 시작
+      title: 모바일 앱 빌드
     - href: ~/cross-platform/platform
       html: Xamarin은 C#, F# 및 Razor 템플릿 엔진을 지원합니다.
       image:
@@ -93,21 +93,3 @@ sections:
         src: https://docs.microsoft.com/media/common/i_xplat-code.svg
         href: ~/cross-platform/desktop/
       title: 데스크톱 개발자
-- title: 플랫폼
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.yml
-      html: <p><a href="~/get-started/quickstarts/index.md">시작</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/xamarin-forms/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/xamarin-forms/platform/index.md">플랫폼 기능</a><br /><a href="~/xamarin-forms/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/xamarin-forms/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: Android
-      href: ~/android/index.yml
-      html: <p><a href="~/android/get-started/index.md">시작</a><br /><a href="~/android/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/android/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/android/platform/index.md">플랫폼 기능</a><br /><a href="~/android/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/android/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/android/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: iOS
-      href: ~/ios/index.yml
-      html: <p><a href="~/ios/get-started/index.md">시작</a><br /><a href="~/ios/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/ios/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/ios/platform/index.md">플랫폼 기능</a><br /><a href="~/ios/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/ios/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/ios/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: Mac
-      href: ~/mac/index.yml
-      html: <p><a href="~/mac/get-started/index.md">시작</a><br /><a href="~/mac/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/mac/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/mac/platform/index.md">플랫폼 기능</a><br /><a href="~/mac/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/mac/internals/index.md">고급 개념 및 내부 요소</a></p>

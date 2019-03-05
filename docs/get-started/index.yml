@@ -1,0 +1,175 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: 0910e5ad577aee8b9a46b64914bf06852cfd0160
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57198209"
+documentType: LandingData
+title: Xamarin 시작
+metadata:
+  title: Xamarin 시작
+  description: Visual Studio 및 Mac용 Visual Studio를 사용하여 Xamarin.Forms 애플리케이션을 개발하는 방법에 대한 문서, 빠른 시작 및 자습서.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 0F440777-74A2-4AE5-AD1E-5B51EB8BD228
+  ms.technology: xamarin
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 02/15/2018
+abstract:
+  description: Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 앱에서 기본 사용자 인터페이스 레이아웃을 효율적으로 만들 수 있는 플랫폼 간 UI 도구 키트입니다. 전체 Xamarin.Forms 설명서는 <a href="/xamarin/xamarin-forms/">Xamarin.Forms 설명서</a>를 참조하세요.
+sections:
+- title: 시작
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: requirements.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_tasks.svg
+      title: 요구 사항
+    - href: installation/index.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      title: 설치
+    - href: first-app/index.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+      title: 첫 번째 앱 빌드
+- title: 빠른 시작
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: quickstarts/single-page.md
+      html: <p></p>
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+      title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
+    - href: quickstarts/multi-page.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_class.svg
+      title: 다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
+    - href: quickstarts/database.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+      title: 로컬 SQLite.NET 데이터베이스에 데이터 저장
+    - href: quickstarts/styling.md
+      html: <p></p>
+      image:
+        src: ~/media/icons/i_user-interface.svg
+      title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
+    - href: quickstarts/deepdive.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_overview.svg
+      title: 빠른 시작 심층 분석
+- title: 자습서
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: tutorials/stacklayout/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+      title: StackLayout
+    - href: tutorials/label/
+      html: <p></p>
+      image:
+        src: ~/media/icons/i_form-label.svg
+      title: 레이블
+    - href: tutorials/button/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_button.svg
+      title: 단추
+    - href: tutorials/entry/
+      html: <p></p>
+      image:
+        src: ~/media/icons/i_form-entry.svg
+      title: 입력
+    - href: tutorials/editor/
+      html: <p></p>
+      image:
+        src: ~/media/icons/i_form-editor.svg
+      title: 편집기
+    - href: tutorials/image/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_account-management.svg
+      title: 이미지
+    - href: /tutorials/grid/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_table.svg
+      title: 표
+    - href: tutorials/listview/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_sharepoint-list.svg
+      title: ListView
+    - href: tutorials/pop-ups/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_alert.svg
+      title: 팝업
+    - href: tutorials/app-lifecycle/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_agile.svg
+      title: 앱 수명 주기
+    - href: tutorials/local-database/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_generic-database.svg
+      title: 로컬 데이터베이스
+    - href: tutorials/web-service/
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/common/i_server.svg
+      title: 웹 서비스
+- title: Xamarin에 대해 알아보기
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: ~/cross-platform/get-started/introduction-to-mobile-development.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_xamarin.svg
+      title: 네이티브 앱
+    - href: ~/cross-platform/desktop/index.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_NET.svg
+      title: .NET 개발자
+    - href: ~/android/get-started/java-developers.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_java.svg
+      title: Java 개발자
+    - href: ~/ios/get-started/objective-c-developers/index.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_xcode.svg
+      title: Objective-C 개발자
+    - href: ~/xamarin-forms/data-cloud/index.md
+      html: <p></p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_azure.svg
+      title: Azure
