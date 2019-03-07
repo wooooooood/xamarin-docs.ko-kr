@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 5470a70570a431c1adc3053d9f8f389cec31cf85
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 0062c5da4db206a9fe4dc0030a104ec034ab97f1
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292079"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197162"
 ---
 # <a name="introduction-to-mobile-development"></a>모바일 개발 소개
 
@@ -83,11 +83,11 @@ Xamarin 애플리케이션이 컴파일되면 결과는 애플리케이션 패�
 
 ![](introduction-to-mobile-development-images/android.png "Hello, Android")
 
-* [**Xamarin.Forms 시작**](~/get-started/index.md)
+* [**Xamarin.Forms 시작**](~/get-started/index.yml)
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 단순히 Xamarin 플랫폼을 소개했습니다. 진정한 재미는 첫 번째 앱을 가동 및 실행시킬 때부터 시작됩니다. 시작하려면 [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) 및 [Xamarin.Forms 시작](~/get-started/index.md) 가이드를 확인해 보세요.
+이 문서에서는 단순히 Xamarin 플랫폼을 소개했습니다. 진정한 재미는 첫 번째 앱을 가동 및 실행시킬 때부터 시작됩니다. 시작하려면 [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) 및 [Xamarin.Forms 시작](~/get-started/index.yml) 가이드를 확인해 보세요.
 
 ## <a name="related-links"></a>관련 링크
 

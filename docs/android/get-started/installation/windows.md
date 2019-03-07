@@ -1,22 +1,22 @@
 ---
 title: Windows 설치
-description: 이 가이드에서는 Windows에서 Visual Studio용 Xamarin.Android를 설치하는 단계를 설명하고, 첫 번째 Xamarin.Android 응용 프로그램을 빌드하는 Xamarin.Android를 구성하는 방법을 설명합니다.
+description: 이 가이드에서는 Windows에서 Visual Studio용 Xamarin.Android를 설치하는 단계를 설명하고, 첫 번째 Xamarin.Android 애플리케이션을 빌드하는 Xamarin.Android를 구성하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: c208bae61f425ccdb69e0543c7686891a7add358
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 26865fdbfc1cc6f11a978a70bd768e63771bcd4b
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113185"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197474"
 ---
 # <a name="windows-installation"></a>Windows 설치
 
-_이 가이드에서는 Windows에서 Visual Studio용 Xamarin.Android를 설치하는 단계를 설명하고, 첫 번째 Xamarin.Android 응용 프로그램을 빌드하는 Xamarin.Android를 구성하는 방법을 설명합니다._
+_이 가이드에서는 Windows에서 Visual Studio용 Xamarin.Android를 설치하는 단계를 설명하고, 첫 번째 Xamarin.Android 애플리케이션을 빌드하는 Xamarin.Android를 구성하는 방법을 설명합니다._
 
 
 ## <a name="overview"></a>개요
@@ -32,11 +32,11 @@ Xamarin은 이제 모든 버전의 Visual Studio에 무료로 포함되며 별�
 
 -   첫 번째 Xamarin.Android 앱 프로젝트를 만드는 방법
 
-이 가이드의 뒷부분에서는 Visual Studio에 통합된 Xamarin.Android 설치가 작동하고 첫 번째 Xamarin.Android 응용 프로그램을 빌드할 준비가 됩니다.
+이 가이드의 뒷부분에서는 Visual Studio에 통합된 Xamarin.Android 설치가 작동하고 첫 번째 Xamarin.Android 애플리케이션을 빌드할 준비가 됩니다.
 
 ## <a name="installation"></a>설치
 
-Windows에서 Visual Studio와 함께 사용할 Xamarin을 설치하는 방법에 자세한 내용은 [Windows 설치](~/cross-platform/get-started/installation/windows.md) 가이드를 참조하세요.
+Windows에서 Visual Studio와 함께 사용할 Xamarin을 설치하는 방법에 자세한 내용은 [Windows 설치](~/get-started/installation/windows.md) 가이드를 참조하세요.
 
 
 ## <a name="configuration"></a>구성
@@ -74,9 +74,9 @@ Xamarin Android SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~
 
 컴퓨터에서 Android 디바이스를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
 
-* **Google Android Emulator** &ndash; 개발자의 워크스테이션에서 실행하는 가상화된 장치를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
+* **Google Android Emulator**&ndash; 개발자의 워크스테이션에서 실행하는 가상화된 디바이스를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
 * **에뮬레이터 이미지** &ndash; _에뮬레이터 이미지_는 가상화되어야 하는 하드웨어 및 운영 체제의 템플릿 또는 사양입니다. 예를 들어 하나의 에뮬레이터 이미지는 Google Play 서비스가 설치된 Android 7.0을 실행하는 Nexus 5X의 하드웨어 요구 사항을 식별합니다. 다른 에뮬레이터 이미지는 Android 6.0을 실행하는 특정 10" 테이블일 수 있습니다.
-* **AVD(Android 가상 장치)** &ndash; _Android 가상 장치_는 에뮬레이터 이미지에서 만들어진 에뮬레이트된 Android 장치입니다. Android 앱을 실행하고 테스트할 때 Xamarin.Android는 Android Emulator를 시작하여 특정 AVD를 시작하고, APK를 설치한 다음, 앱을 실행합니다.
+* **AVD(Android 가상 디바이스)**&ndash;_Android 가상 디바이스_는 에뮬레이터 이미지에서 만들어진 에뮬레이트된 Android 디바이스입니다. Android 앱을 실행하고 테스트할 때 Xamarin.Android는 Android Emulator를 시작하여 특정 AVD를 시작하고, APK를 설치한 다음, 앱을 실행합니다.
 
 x86 기반 컴퓨터에서 개발하는 경우 x86 아키텍처에 최적화된 두 개의 가상화 기술 중 하나인 특별한 에뮬레이터 이미지를 사용하여 성능을 크게 향상시킬 수 있습니다.
 
@@ -93,10 +93,10 @@ Android Emulator, Hyper-V 및 HAXM에 대한 자세한 내용은 [에뮬레이�
 
 ### <a name="android-device"></a>Android 디바이스
 
-테스트에 사용할 물리적 Android 디바이스가 있는 경우 개발에 사용하도록 설정하는 것이 좋습니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하여 개발할 Android 장치를 구성한 다음, Xamarin.Android 응용 프로그램을 실행하고 디버깅하는 컴퓨터에 연결합니다.
+테스트에 사용할 물리적 Android 디바이스가 있는 경우 개발에 사용하도록 설정하는 것이 좋습니다. [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하여 개발할 Android 장치를 구성한 다음, Xamarin.Android 애플리케이션을 실행하고 디버깅하는 컴퓨터에 연결합니다.
 
 
-## <a name="create-an-application"></a>응용 프로그램 만들기
+## <a name="create-an-application"></a>애플리케이션 만들기
 
 Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로젝트를 만들 수 있습니다. **파일 > 새로 만들기 > 프로젝트**를 클릭하여 앱을 만들기 시작합니다.
 
@@ -106,12 +106,12 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 
 [![새 프로젝트 대화 상자의 스크린샷, 비어 있는 Android 앱 만들기](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
-정말 간단하죠. 이제 Xamarin.Android를 사용하여 Android 응용 프로그램을 만들 준비가 되었습니다.
+정말 간단하죠. 이제 Xamarin.Android를 사용하여 Android 애플리케이션을 만들 준비가 되었습니다.
 
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Windows에서 Xamarin.Android 플랫폼을 설정하고 설치하는 방법, (선택 사항)사용자 지정 JDK Java 및 Android SDK 설치 위치를 사용하여 Visual Studio를 구성하는 방법, SDK Manager를 시작하여 추가 Android SDK를 설치하는 방법, Android 디바이스 또는 에뮬레이터를 설정하는 방법 및 첫 번째 응용 프로그램을 빌드하기 시작하는 방법을 알아보았습니다.
+이 문서에서는 Windows에서 Xamarin.Android 플랫폼을 설정하고 설치하는 방법, (선택 사항)사용자 지정 JDK Java 및 Android SDK 설치 위치를 사용하여 Visual Studio를 구성하는 방법, SDK Manager를 시작하여 추가 Android SDK를 설치하는 방법, Android 장치 또는 에뮬레이터를 설정하는 방법 및 첫 번째 애플리케이션을 빌드하기 시작하는 방법을 알아보았습니다.
 
 다음 단계에서는 [Hello, Android](~/android/get-started/hello-android/index.md) 자습서를 살펴보고 작동하는 Xamarin.Android 앱을 만드는 방법을 알아봅니다.
 
@@ -119,9 +119,9 @@ Xamarin.Android를 설치했으므로 Visual Studio를 시작하여 새 프로�
 ## <a name="related-links"></a>관련 링크
 
 - [Visual Studio 다운로드](https://visualstudio.microsoft.com/vs/)
-- [Visual Studio Tools for Xamarin 설치](~/cross-platform/get-started/installation/windows.md)
+- [Visual Studio Tools for Xamarin 설치](~/get-started/installation/windows.md)
 - [시스템 요구 사항](~/cross-platform/get-started/requirements.md)
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
 - [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)
-- [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
+- [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)
 - [Android Emulator에서 앱 실행](https://developer.android.com/studio/run/emulator#Requirements)

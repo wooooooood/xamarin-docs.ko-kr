@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 87c3a189851db66e630095eae31434a590050154
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 4ea9690812675c48524393576e5509ab37e26981
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292274"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197149"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -72,13 +72,13 @@ macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/d
 
 현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](http://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
 
-각 플랫폼에 대한 자세한 [설치](~/cross-platform/get-started/installation/index.md) 지침은 다음에서 볼 수 있습니다.
+각 플랫폼에 대한 자세한 [설치](~/get-started/installation/index.md) 지침은 다음에서 볼 수 있습니다.
 
 - [Xamarin.iOS](~/ios/get-started/installation/index.md)
 - [Xamarin.Android](~/android/get-started/installation/index.md)
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
-또한 [Xamarin.Forms 요구 사항 및 지원되는 플랫폼](~/get-started/installation.md)에 대한 추가 정보도 볼 수 있습니다.
+또한 [Xamarin.Forms 요구 사항 및 지원되는 플랫폼](~/get-started/requirements.md)에 대한 추가 정보도 볼 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
