@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f6815b54867b47bb32ede41470712dac65b6d410
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062180"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557245"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -44,7 +44,7 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -을 측면을 유지 하면서 표시 영역을 채우도록 이미지를 자릅니다 (ie. 왜곡).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -레터 박스 이미지 (필요한 경우) 여부에 따라 양쪽 위쪽/아래쪽에 추가 공백이 있는 가로 또는 세로 이미지는 전체 이미지에 표시 영역에 적합 한 수 있도록 합니다.
 
-이미지를 로드할 수는 [로컬 파일](#Local_Images), [포함 리소스](#embedded-images), 또는 [다운로드](#Downloading_Images)합니다.
+이미지를 로드할 수는 [로컬 파일](#Local_Images), [포함 리소스](#embedded-images), 또는 [다운로드](#Downloading_Images)합니다. 또한 글꼴 아이콘 표시할 수 있습니다 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 글꼴 아이콘 데이터를 지정 하 여 보기를 `FontImageSource` 개체입니다. 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 에 [글꼴](~/xamarin-forms/user-interface/text/fonts.md) 가이드입니다.
 
 ## <a name="local-images"></a>로컬 이미지
 
@@ -53,11 +53,11 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 모든 앱에서 단일 이미지를 사용 하 *모든 플랫폼에서 같은 파일 이름을 사용 해야*, 올바른 Android 리소스 이름을 지정 해야 (ie. 소문자, 숫자, 밑줄 및 마침표 수)입니다.
 
 - **iOS** -기본 방식으로 관리 하 고 iOS 9를 사용 하는 것 이므로 이미지를 지원할 **자산 카탈로그 이미지 집합**, 다양 한 장치를 지원 하 고에 대 한 요소를 확장 하는 데 필요한 이미지의 버전 모두를 포함 해야 하는 응용 프로그램입니다. 자세한 내용은 [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
-- **Android** -이미지를 배치 합니다 **리소스/drawable** 디렉터리 **빌드 작업: AndroidResource**합니다. 이미지의 높은 DPI 및 낮은 버전을 제공할 수 있습니다 (적절 하 게 이름이 **리소스** 같은 하위 디렉터리 **drawable ldpi**에 **drawable hdpi**, 및 **drawable xhdpi**).
+- **Android** -이미지를 배치 합니다 **리소스/drawable** 디렉터리 **빌드 작업: AndroidResource**. 이미지의 높은 DPI 및 낮은 버전을 제공할 수 있습니다 (적절 하 게 이름이 **리소스** 같은 하위 디렉터리 **drawable ldpi**에 **drawable hdpi**, 및 **drawable xhdpi**).
 - **유니버설 Windows 플랫폼 (UWP)** -이미지를 사용 하 여 응용 프로그램의 루트 디렉터리에 배치 **빌드 작업: 콘텐츠**합니다.
 
 > [!IMPORTANT]
-> IOS 9 이전 이미지 일반적으로 배치 된 합니다 **리소스** 폴더가 **빌드 작업: BundleResource**합니다. 그러나이 메서드는 iOS 앱에서 이미지를 사용 하는 Apple에서 되지 합니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
+> IOS 9 이전 이미지 일반적으로 배치 된 합니다 **리소스** 폴더 **빌드 작업: BundleResource**. 그러나이 메서드는 iOS 앱에서 이미지를 사용 하는 Apple에서 되지 합니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 
 파일 이름 지정 및 배치에 대 한 이러한 규칙을 준수 로드 하 고 모든 플랫폼에서 이미지를 표시 하려면 다음 XAML을 허용 합니다.
 
@@ -114,11 +114,11 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 
 포함된 이미지는도 응용 프로그램 (예: 로컬 이미지)와 함께 제공 하지만 파일 리소스 어셈블리에 포함 된 각 응용 프로그램의 파일 구조 이미지에서에서 이미지의 복사본을 대신 합니다. 이미지를 배포 하는이 메서드는 각 플랫폼에서 동일한 이미지를 사용할 때 것이 좋습니다 하며 이미지 코드를 함께 제공 되는 대로 구성 요소를 만드는 데 특히 적합입니다.
 
-이미지를 프로젝트에 포함 하려면 마우스 오른쪽 단추를 새 항목을 추가 하 고 추가 하려는 이미지/s를 선택 합니다. 기본적으로 이미지 갖습니다 **빌드 작업: None**;로 설정 해야 **빌드 작업: EmbeddedResource**합니다.
+이미지를 프로젝트에 포함 하려면 마우스 오른쪽 단추를 새 항목을 추가 하 고 추가 하려는 이미지/s를 선택 합니다. 기본적으로 이미지 해야 **빌드 작업: None**;로 설정 해야이 **빌드 작업: EmbeddedResource**를 확인합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](images-images/vs-buildaction.png "빌드 동작 설정: 포함 리소스")
+![](images-images/vs-buildaction.png "빌드 작업을 설정 합니다. EmbeddedResource")
 
 **빌드 작업** 보기 및 변경 합니다 **속성** 파일 창.
 
@@ -128,7 +128,7 @@ IDE에 연결 하 여이 기본값을 생성 합니다 **기본 Namespace** 파�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](images-images/xs-buildaction.png "빌드 동작 설정: 포함 리소스")
+![](images-images/xs-buildaction.png "빌드 작업을 설정 합니다. EmbeddedResource")
 
 **빌드 작업** 도 확인 및 변경할 수는 **속성** 파일에 대 한 채움 합니다.
 이 패드 표시 합니다 **리소스 ID** 코드에서 리소스를 참조 하는 데 사용 되는 합니다. 아래 스크린샷에 **리소스 ID** 됩니다 **WorkingWithImages.beach.jpg**합니다.
@@ -297,6 +297,8 @@ webImage.Source = new UriImageSource
 ## <a name="icons"></a>아이콘
 
 참조를 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)를 [Google의도 해](http://developer.android.com/design/style/iconography.html), 및 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) 이러한 응용 프로그램 리소스를 만드는 대 한 자세한 내용은 합니다.
+
+또한 글꼴 아이콘 표시할 수 있습니다 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 글꼴 아이콘 데이터를 지정 하 여 보기를 `FontImageSource` 개체입니다. 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 에 [글꼴](~/xamarin-forms/user-interface/text/fonts.md) 가이드입니다.
 
 ## <a name="splash-screens"></a>시작 화면
 

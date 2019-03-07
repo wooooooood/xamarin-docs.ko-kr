@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # <a name="ios-platform-features"></a>iOS 플랫폼 기능
@@ -25,8 +25,11 @@ Xamarin.Forms 뷰, 페이지 및 iOS에서 레이아웃에 대해 다음 플랫�
 
 IOS에서 Xamarin.Forms 보기에 대 한 다음과 같은 플랫폼별 기능 제공 됩니다.
 
+- 설정 된 [ `Cell` ](xref:Xamarin.Forms.Cell) 배경색입니다. 자세한 내용은 [iOS에서 셀 배경색](cell-background-color.md)합니다.
 - 에 적합 한 텍스트를 입력 하는 보장 된 [ `Entry` ](xref:Xamarin.Forms.Entry) 글꼴 크기를 조정 하 여 합니다. 자세한 내용은 [항목의 글꼴 크기를 iOS](entry-font-size.md)합니다.
 - 커서 색 설정 된 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 자세한 내용은 [iOS에서 커서 색 항목](entry-cursor-color.md)합니다.
+- 제어 여부 [ `ListView` ](xref:Xamarin.Forms.ListView) 스크롤 하는 동안 머리글 셀 float입니다. 자세한 내용은 [iOS에서 ListView 그룹 헤더 스타일](listview-group-header-style.md)합니다.
+- 행 애니메이션 비활성화 되는지 여부를 제어 하면 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 항목 컬렉션을 업데이트 하는 중입니다. 자세한 내용은 [iOS에서 ListView 행 애니메이션](listview-row-animations.md)합니다.
 - 구분 기호 스타일을 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [iOS에서 ListView 구분 기호 스타일](listview-separator-style.md)합니다.
 - 선택 항목에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker)합니다. 자세한 내용은 [iOS에서 선택 항목을 선택할](picker-selection.md)합니다.
 - 사용 하도록 설정 합니다 [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) 속성에는 위치에 탭 하 여 설정 될를 [ `Slider` ](xref:Xamarin.Forms.Slider) 끌어 필요가 하는 대신 가로 막대형,는 `Slider` thumb. 자세한 내용은 [슬라이더 위치 조정 컨트롤 탭 iOS](slider-thumb.md)합니다.

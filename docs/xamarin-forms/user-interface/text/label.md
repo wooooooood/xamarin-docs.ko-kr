@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2019
+ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831861"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557040"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -157,10 +157,13 @@ var label =
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – 범위에 있는 텍스트의 글꼴 크기입니다.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – 범위에 있는 텍스트의 색입니다. 이 속성은 사용 되지 않습니다 및 바뀌었습니다는 `TextColor` 속성입니다.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -범위의 기본 줄 높이에 적용할 승수입니다. 자세한 내용은 [줄 높이](#line-height)합니다.
-- [`Style`](xref:Xamarin.Forms.Span.Style) – 범위에 적용할 스타일입니다.
+- [`Text`](xref:Xamarin.Forms.Span.Text)  – 범위에 적용할 스타일입니다.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – 텍스트 범위입니다.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 범위에 있는 텍스트의 색입니다.
 - `TextDecorations` -범위에 있는 텍스트에 적용할 장식 합니다. 자세한 내용은 [텍스트 장식을](#text-decorations)합니다.
+
+> [!NOTE]
+> [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor)하십시오 [ `Text` ](xref:Xamarin.Forms.Span.Text), 및 [ `Text` ](xref:Xamarin.Forms.Span.Text) 바인딩 가능한 속성의 기본 바인딩 모드를 가지 [ `OneWay` ](xref:Xamarin.Forms.BindingMode). 이 바인딩 모드에 대 한 자세한 내용은 참조 하세요. [의 기본 바인딩 모드](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) 에 [바인딩 모드](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) 가이드입니다.
 
 또한 합니다 [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) 응답할 제스처에서 제스처 인식기의 컬렉션을 정의 하려면 속성을 사용할 수 있습니다 합니다 [ `Span` ](xref:Xamarin.Forms.Span)합니다.
 

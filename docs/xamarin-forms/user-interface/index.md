@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: c3759430ce40397418d2f47794e8ecc555ef3ed4
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292287"
 ---
+
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
@@ -108,9 +103,9 @@ Xamarin.Forms 테마에는 표준 컨트롤에 대 한 시각적인 특정 모�
 
 `TimePicker` 시간을 선택할 수 있습니다. 응용 프로그램에서 실행 되는 특정 플랫폼에서 지원 되는 시간 선택기를 사용 하 여 구현 됩니다.
 
-## <a name="visualvisualmd"></a>[Visual](visual.md)
+## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-이 아티클에서 iOS 및 Android에서 동일 하 게 또는 거의 동일 하 게 뷰를 렌더링 하는 Xamarin.Forms 시각적 개체를 소개 합니다.
+Xamarin.Forms Visual 렌더러를 선택적으로 적용할 수 있도록 `VisualElement` 서브 클래스 Xamarin.Forms 컨트롤 하지 않고도 개체입니다.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[시각적 상태 관리자](visual-state-manager.md)
 

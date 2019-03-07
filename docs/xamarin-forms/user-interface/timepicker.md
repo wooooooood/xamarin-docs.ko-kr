@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms TimePicker
-description: TimPicker는 시간을 선택할 수 있도록 하는 Xamarin.Forms 뷰입니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 TimePicker를 사용 하는 방법을 설명 합니다.
+description: TimePicker는 시간을 선택할 수 있도록 하는 Xamarin.Forms 뷰입니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 TimePicker를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2018
-ms.openlocfilehash: 056183511db3b43c9faccc9fe1d3fe25153dbc09
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1b929b507d738cb4000bab20cfab5480b2222ed2
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057524"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557258"
 ---
 # <a name="xamarinforms-timepicker"></a>Xamarin.Forms TimePicker
 

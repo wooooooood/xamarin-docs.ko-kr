@@ -6,13 +6,13 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 02/27/2019
+ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057493"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557310"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
@@ -38,6 +38,8 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 `Slider` 정의 [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) 때 발생 하는 이벤트를 `Value` 의 사용자 조작을 통해 변경 내용을 합니다 `Slider` 하거나 프로그램을 설정 하는 경우는 `Value` 속성을 직접. A `ValueChanged` 도 이벤트가 실행 될 때를 `Value` 속성에는 이전 단락에 설명 된 대로 강제 변환 됩니다.
 
 [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) 와 함께 제공 되는 개체를 `ValueChanged` 이벤트 라는 두 가지 속성이 형식 둘 다 `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) 및 [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). 시 이벤트 발생의 값 `NewValue` 동일 합니다 `Value` 의 속성은 `Slider` 개체.
+
+`Slider` 또한 정의 `DragStarted` 고 `DragCompleted` 끌기 작업의 시작과 끝에서 발생 하는 이벤트입니다. 달리 합니다 [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트를 `DragStarted` 및 `DragCompleted` 만 이벤트가 사용자 조작을 통해는 `Slider`합니다. 경우는 `DragStarted` 이벤트가 발생 합니다 `DragStartedCommand`, 형식의 `ICommand`, 실행 됩니다. 마찬가지로,는 `DragCompleted` 이벤트가 발생 합니다 `DragCompletedCommand`, 형식의 `ICommand`, 실행 됩니다.
 
 > [!WARNING]
 > 제약을 받지 않는 가로 레이아웃 옵션을 사용 하지 마십시오 `Center`, `Start`, 또는 `End` 사용 하 여 `Slider`입니다. Android 및 UWP, 모두는 `Slider` 길이가 0 인 및 iOS의 경우 막대에 막대에는 축소 정도로 매우 짧습니다. 기본값을 유지 `HorizontalOptions` 설정 `Fill`, 고의 너비를 사용 하지 않는 `Auto` 전환할 때 `Slider` 에 `Grid` 레이아웃 합니다.

@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060014"
 ---
+
 # <a name="text-in-xamarinforms"></a>Xamarin.Forms에는 텍스트
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 ## <a name="fontsfontsmd"></a>[글꼴](fonts.md)
 
-`Label` 컨트롤은 기본 제공 글꼴을 사용 하 여 각 플랫폼에 사용자 지정 글꼴을 앱에 포함 된 다른 글꼴 설정을 지원 합니다. 참조 된 [글꼴](fonts.md) 자세한 문서.
+많은 컨트롤에 기본 제공 글꼴을 사용 하 여 각 플랫폼에 사용자 지정 글꼴을 앱에 포함 된 다른 글꼴 설정을 지원 합니다. 참조 된 [글꼴](fonts.md) 자세한 문서.
 
 <a name="Styles" />
 

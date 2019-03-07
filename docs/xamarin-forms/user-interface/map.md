@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/27/2016
-ms.openlocfilehash: 1d164c8593e358a97b21f42bf7116f64d0ac460d
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.date: 02/27/2018
+ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815219"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557118"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -20,13 +20,8 @@ ms.locfileid: "53815219"
 
 _Xamarin.Forms는 각 플랫폼에서 기본 지도 Api를 사용합니다._
 
-Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이 사용자에 대 한 지도 신속 하 고 친숙 한 환경을 제공 하지만 각 플랫폼 특정 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 함을 의미 합니다.
+Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이 사용자에 대 한 지도 신속 하 고 친숙 한 환경을 제공 하지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 함을 의미 합니다.
 한 번 구성 하면는 `Map` 공용 코드의 다른 모든 Xamarin.Forms 요소 처럼 작동을 제어 합니다.
-
-* [초기화 매핑합니다](#Maps_Initialization) 사용 하 여- `Map` 시작 시 추가 초기화 코드가 필요 합니다.
-* [플랫폼 구성](#Platform_Configuration) -각 플랫폼에 작동 하는 지도 대 한 몇 가지 구성이 필요 합니다.
-* [C#에서 맵을 사용 하 여](#Using_Maps) -매핑하고 C#을 사용 하 여 고정 표시 합니다.
-* [Maps를 사용 하 여 XAML에서](#Using_Xaml) -XAML 사용 하 여 지도 표시 합니다.
 
 지도 컨트롤에서 사용 된 합니다 [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) 아래 나와 있는 샘플입니다.
 
@@ -101,7 +96,6 @@ IOS 11 및 이전 버전을 지원 하려면 모든 세 개의 키를 포함할 
 
 ![Ios 8 Info.plist](map-images/ios8-map-permissions.png "iOS 8 필요한 Info.plist 항목")
 
-
 ### <a name="android"></a>Android
 
 사용 하는 [Google Maps API v2](https://developers.google.com/maps/documentation/android/) Android에서 API 키를 생성 한 Android 프로젝트에 추가 해야 합니다.
@@ -143,7 +137,7 @@ Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Maps 사용
+## <a name="using-maps"></a>맵을 사용 하 여
 
 참조 된 [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) MobileCRM 샘플 코드의 맵 컨트롤을 사용할 수 있는 방법을의 예입니다. 간단한 `MapPage` 클래스-이 알림은 다음과 같을 수 있습니다 하는 새 `MapSpan` 지도의 보기를 배치 하기 위해 만들어집니다.
 
@@ -178,7 +172,6 @@ map.MapType == MapType.Street;
 -  하이브리드
 -  위성
 -  주소 (기본값)
-
 
 ### <a name="map-region-and-mapspan"></a>지도 영역 및 MapSpan
 
@@ -223,30 +216,31 @@ map.Pins.Add(pin);
 -  SavedPin
 -  SearchResult
 
-
 <a name="Using_Xaml" />
 
-## <a name="using-xaml"></a>Xaml을 사용 하 여
+## <a name="using-xaml"></a>XAML을 사용 하 여
 
-맵이 코드이 조각에서와 같이 Xaml 레이아웃에 배치 될 수도 합니다.
+맵이 코드이 조각에서와 같이 XAML 레이아웃에 배치 될 수도 합니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-    x:Class="MapDemo.MapPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="MapDemo.MapPage">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
         <maps:Map WidthRequest="320" HeightRequest="200"
-            x:Name="MyMap"
-            IsShowingUser="true"
-            MapType="Hybrid"
-        />
+                  x:Name="MyMap"
+                  IsShowingUser="true"
+                  MapType="Hybrid" />
     </StackLayout>
 </ContentPage>
 ```
 
-합니다 `MapRegion` 하 고 `Pins` 사용 하 여 코드에서 설정할 수 있습니다는 `MyMap` 참조 (또는 맵의 이름이 무엇이 든). 추가 `xmlns` Xamarin.Forms.Maps 컨트롤 참조를 네임 스페이스 정의가 필요 합니다.
+> [!NOTE]
+> 추가 `xmlns` Xamarin.Forms.Maps 컨트롤 참조를 네임 스페이스 정의가 필요 합니다.
+
+합니다 `MapRegion` 하 고 `Pins` 사용 하 여 코드에서 설정할 수 있습니다는 `MyMap` 참조 (또는 맵의 이름이 무엇이 든).
 
 ```csharp
 MyMap.MoveToRegion(
@@ -254,14 +248,44 @@ MyMap.MoveToRegion(
         new Position(37,-122), Distance.FromMiles(1)));
 ```
 
-<a name="Summary" />
+## <a name="populating-a-map-with-data-using-data-binding"></a>지도 데이터 바인딩을 사용 하 여 데이터로 채우기
 
-## <a name="summary"></a>요약
+합니다 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 클래스에는 다음 속성을 노출 합니다.
 
-Xamarin.Forms.Maps Xamarin.Forms 솔루션의 각 프로젝트에 추가 되어야 하는 별도 NuGet입니다. 추가 초기화 코드는 iOS, Android 및 UWP에 대 한 구성 단계와 몇 가지 필수입니다.
+- `ItemsSource` -컬렉션을 지정 `IEnumerable` 항목을 표시할 수 있습니다.
+- `ItemTemplate` – 지정 된 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 표시 되는 항목의 컬렉션에 있는 각 항목에 적용 하 합니다.
 
-한 번 구성 Maps API를 몇 줄의 코드로 pin 표식을 사용 하 여 maps 렌더링에 사용할 수 있습니다. 맵을 사용 하 여 더욱 향상 시킬 수 있습니다는 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)합니다.
+따라서 한 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 바인딩할 데이터 바인딩을 사용 하 여 데이터로 채울 수 있습니다 해당 `ItemsSource` 속성을는 `IEnumerable` 컬렉션:
 
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.PinItemsSourcePage">
+    <Grid>
+        ...
+        <maps:Map x:Name="map"
+                  ItemsSource="{Binding Locations}">
+            <maps:Map.ItemTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>
+            </maps:Map.ItemTemplate>
+        </maps:Map>
+        ...
+    </Grid>
+</ContentPage>
+```
+
+`ItemsSource` 속성 데이터를 바인딩합니다를 `Locations` 반환 하는 연결 된 뷰 모델의 속성을 `ObservableCollection` 의 `Location` 사용자 지정 형식인 개체입니다. 각 `Location` 개체를 정의 `Address` 하 고 `Description` 형식의 속성을 `string`, 및 `Position` 형식의 속성 [ `Position` ](xref:Xamarin.Forms.Maps.Position)합니다.
+
+각 항목의 모양을 합니다 `IEnumerable` 컬렉션이 설정 하 여 정의 된를 `ItemTemplate` 속성을을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 포함 하는 [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) 데이터 바인딩할 개체 적절 한 속성입니다.
+
+다음 스크린샷에서 표시 된 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 표시를 [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) 데이터 바인딩을 사용 하 여 컬렉션:
+
+[![스크린샷 지도에 데이터 바인딩된 iOS 및 Android에서 핀](map-images/pins-itemssource.png "바인딩된 pin 데이터로 매핑합니다")](map-images/pins-itemssource-large.png#lightbox "핀이 바인딩된 데이터를 사용 하 여 매핑")
 
 ## <a name="related-links"></a>관련 링크
 

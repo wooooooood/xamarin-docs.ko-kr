@@ -6,13 +6,13 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2018
-ms.openlocfilehash: 303cca48defdadd69449edbd6c4c3f5e4410bbbb
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.date: 02/26/2018
+ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831965"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557206"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -58,6 +58,22 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 > [!NOTE]
 > 너비를 `Entry` 설정 하 여 정의할 수 있습니다 해당 `WidthRequest` 속성입니다. 너비에 종속 되지 않는 `Entry` 의 값에 따라 정의 되 고 해당 `Text` 속성입니다.
+
+### <a name="preventing-text-entry"></a>텍스트 입력 방지
+
+텍스트를 수정할 사용자를 방지할 수 있습니다는 [ `Entry` ](xref:Xamarin.Forms.Entry) 설정 하 여 합니다 `IsReadOnly` 기본값이 있는 속성의 `false`를 `true`:
+
+```xaml
+<Entry Text="This is a read-only Entry"
+       IsReadOnly="true" />
+```
+
+```csharp
+var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true });
+```
+
+> [!NOTE]
+> `IsReadonly` 속성의 시각적 모양을 변경 하지 않습니다는 [ `Entry` ](xref:Xamarin.Forms.Entry)달리를 `IsEnabled` 도의 시각적 모양을 변경 하는 속성은 `Entry` 회색입니다.
 
 ### <a name="limiting-input-length"></a>입력된 길이 제한
 

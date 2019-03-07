@@ -6,24 +6,23 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 9441522af53a1240707eeb21ff9f583501d2491d
-ms.sourcegitcommit: 16a42b69176a40cde71e177079b11e15d300d042
+ms.date: 03/04/2019
+ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56795448"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557055"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 
-이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (크기 및 무게 포함)을 지정할 수 있습니다 하는 방법을 설명 합니다. 글꼴 정보 일 수 있습니다 [코드에서 지정한](#Setting_Font_in_Code) 하거나 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다.
-사용할 수 이기도 한 [사용자 지정 글꼴](#Using_a_Custom_Font)합니다.
+이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (크기 및 무게 포함)을 지정할 수 있습니다 하는 방법을 설명 합니다. 글꼴 정보 일 수 있습니다 [코드에서 지정한](#Setting_Font_in_Code) 하거나 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다. 에 '도 사용할 수는 [사용자 지정 글꼴](#Using_a_Custom_Font), 및 [글꼴 아이콘 표시](#display-font-icons)합니다.
 
 <a name="Setting_Font_in_Code" />
 
-## <a name="setting-font-in-code"></a>코드에서 글꼴을 설정합니다.
+## <a name="set-the-font-in-code"></a>코드에서 글꼴 설정
 
 텍스트를 표시 하는 모든 컨트롤의 3 개의 글꼴 관련 속성을 사용 합니다.
 
@@ -80,7 +79,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### <a name="setting-font-info-per-platform"></a>플랫폼 당 글꼴 정보 설정
+### <a name="set-font-info-per-platform"></a>플랫폼 당 집합 글꼴 정보
 
 또는 `Device.RuntimePlatform` 이 코드에서와 같이 각 플랫폼에서 다른 글꼴 이름을 설정 하려면 속성을 사용할 수 있습니다.
 
@@ -95,7 +94,7 @@ IOS에 대 한 글꼴 정보 좋은 원본은 [iosfonts.com](http://iosfonts.com
 
 <a name="Setting_Font_in_Xaml" />
 
-## <a name="setting-the-font-in-xaml"></a>XAML에서 글꼴을 설정합니다.
+## <a name="set-the-font-in-xaml"></a>XAML에서 글꼴을 설정
 
 Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정할 수 있는 속성입니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음과 같습니다. 명명 된 크기 열거형 값을 사용 하도록이 예와 같이
 
@@ -130,7 +129,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 
 <a name="Using_a_Custom_Font" />
 
-## <a name="using-a-custom-font"></a>사용자 지정 글꼴을 사용 하 여
+## <a name="use-a-custom-font"></a>사용자 지정 글꼴을 사용 하 여
 
 기본 제공 서체가 아닌 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴을 보여 주는이 스크린샷 **Lobster** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) Xamarin.Forms를 사용 하 여 렌더링 합니다.
 
@@ -200,15 +199,51 @@ new Label
 </Label>
 ```
 
-<a name="Summary" />
+## <a name="display-font-icons"></a>글꼴 아이콘 표시
 
-## <a name="summary"></a>요약
+글꼴 아이콘 데이터를 지정 하 여 Xamarin.Forms 응용 프로그램에서 글꼴 아이콘을 표시할 수 있습니다는 `FontImageSource` 개체입니다. 파생 되는이 클래스는 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) 클래스에 다음 속성이 있습니다.
 
-Xamarin.Forms 수 있도록 간단한 기본 설정을 제공 쉽게 모든 지원 되는 플랫폼에 대 한 텍스트 크기입니다. 또한 글꼴 및 크기를 지정할 수 있습니다 &ndash; 각 플랫폼에 대해 다르게도 &ndash; 보다 세부적으로 제어를 해야 하는 경우.
+- `Glyph` –로 지정 된 글꼴 아이콘의 유니코드 문자 값을 `string`입니다.
+- `Size` –는 `double` 장치 독립적 단위 렌더링된 글꼴 아이콘의 크기를 나타내는 값입니다. 기본값은 30입니다.
+- `FontFamily` –는 `string` 글꼴 아이콘 속해 있는 글꼴 패밀리를 표시 합니다.
+- `Color` – 선택적 [ `Color` ](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용할 값입니다.
 
-올바르게 서식이 지정 된 글꼴 특성을 사용 하 여 XAML에서 글꼴 정보를 지정할 수도 있습니다.
+이 데이터는 표시할 수 있는 모든 보기에서 표시할 수 있는 PNG, 만드는 데는 `ImageSource`합니다. 이 방법은 단일 텍스트와 같은 보기를 제공 하는 글꼴 아이콘 표시를 제한 하는 대신 여러 뷰로 표시할 글꼴 아이콘이 모 지를 같은 허용을 [ `Label` ](xref:Xamarin.Forms.Label)합니다.
+
+> [!IMPORTANT]
+> 글꼴 아이콘은 해당 유니코드 문자 표현으로 현재만 지정할 수 있습니다.
+
+다음 XAML 예제에 표시 되는 단일 글꼴 아이콘에는 [ `Image` ](xref:Xamarin.Forms.Image) 보기:
+
+```xaml
+<Image BackgroundColor="#D1D1D1">
+    <Image.Source>
+        <FontImageSource Glyph="&#xf30c;"
+                         FontFamily="{OnPlatform iOS=Ionicons, Android=ionicons.ttf#}"
+                         Size="44" />
+    </Image.Source>
+</Image>
+```
+
+이 코드에서 Ionicons 글꼴 패밀리에서 XBox 아이콘 표시는 [ `Image` ](xref:Xamarin.Forms.Image) 보기. 유니코드 하는 동안이 아이콘에 대 한 문자는 `\uf30c`, XAML에서 이스케이프 해야 하 고 따라서 됩니다 `&#xf30c;`합니다. 해당 하는 C# 코드가입니다.
+
+```csharp
+Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
+image.Source = new FontImageSource
+{
+    Glyph = "\uf30c",
+    FontFamily = Device.RuntimePlatform == Device.iOS ? "Ionicons" : "ionicons.ttf#",
+    Size = 44
+};
+```
+
+다음 스크린샷과에서 [바인딩할 수 있는 레이아웃](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) 예제를 바인딩할 수 있는 레이아웃에 표시 되는 여러 글꼴 아이콘을 표시 합니다.
+
+![글꼴 아이콘 표시 되 고, iOS 및 Android에서 스크린 샷](fonts-images/font-image-source.png "이미지 보기에서 표시 되는 글꼴 아이콘")
 
 ## <a name="related-links"></a>관련 링크
 
 - [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
 - [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
+- [바인딩 가능한 레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

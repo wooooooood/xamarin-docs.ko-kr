@@ -6,13 +6,13 @@ ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208014"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557232"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
 
@@ -25,7 +25,8 @@ _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 �
 전에 Xamarin.Forms 2.3.4 채우는 프로세스는 [ `Picker` ](xref:Xamarin.Forms.Picker) 데이터를 사용 하 여 읽기 전용으로 표시할 데이터를 추가 하려면 되었습니다 [ `Items` ](xref:Xamarin.Forms.Picker.Items) 컬렉션 형식인 `IList<string>`. 컬렉션의 각 항목 유형 이어야 `string`합니다. 초기화 하 여 XAML에서 항목을 추가할 수는 `Items` 속성의 목록 사용 하 여 `x:String` 항목:
 
 ```xaml
-<Picker Title="Select a monkey">
+<Picker Title="Select a monkey"
+        TitleColor="Red">
   <Picker.Items>
     <x:String>Baboon</x:String>
     <x:String>Capuchin Monkey</x:String>
@@ -41,7 +42,7 @@ _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 �
 해당 하는 C# 코드는 다음과 같습니다.
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.Items.Add("Baboon");
 picker.Items.Add("Capuchin Monkey");
 picker.Items.Add("Blue Monkey");
@@ -79,11 +80,6 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 
 > [!NOTE]
 > A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 특정 항목을 표시 하도록 초기화 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성입니다. 그러나 합니다 `SelectedIndex` 초기화 한 후 속성을 설정 해야 합니다 [ `Items` ](xref:Xamarin.Forms.Picker.Items) 컬렉션입니다.
-
-## <a name="summary"></a>요약
-
-합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서를 채우는 방법을 설명 된 `Picker` 추가 하 여 데이터를 사용 하 여는 [ `Items` ](xref:Xamarin.Forms.Picker.Items) 컬렉션 및 사용자가 항목 선택에 응답 하는 방법. 이 사용 하기 위한 프로세스는 `Picker` Xamarin.Forms 2.3.4 전에 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 
