@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bc404986a83d0150c490486c20f780bf4e7f5a9e
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: c9be74bcc6e5d149856e06c98d3bef9a841d4bab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557206"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667310"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -321,6 +321,9 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 - [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; 항목의 텍스트 변경 될 때 발생 합니다. 전과 변경 후에 텍스트를 제공합니다.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
+
+> [!NOTE]
+> 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 올 클래스 [ `Entry` ](xref:Xamarin.Forms.Entry) 상속, 역시 [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) 하 고 [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)이벤트입니다.
 
 ### <a name="completed"></a>완료
 
