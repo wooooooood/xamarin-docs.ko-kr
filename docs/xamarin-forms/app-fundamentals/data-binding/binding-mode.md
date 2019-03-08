@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056965"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557284"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
@@ -101,10 +101,7 @@ ms.locfileid: "53056965"
 
 ### <a name="one-time-bindings"></a>One-Time 바인딩
 
-몇 가지 속성은 기본 바인딩 모드가 `OneTime`입니다. 이러한 항목은 다음과 같습니다.
-
-- `Entry`의 `IsTextPredictionEnabled` 속성
-- `Span`의 `Text`, `BackgroundColor`, `Style` 속성
+`Entry`의 `IsTextPredictionEnabled` 속성을 포함하여 몇 가지 속성은 `OneTime`의 기본 바인딩 모드가 있습니다.
 
 바인딩 모드가 `OneTime`인 대상 속성은 바인딩 컨텍스트가 변경되는 경우에만 업데이트됩니다. 이러한 대상 속성의 바인딩은 원본 속성의 변경 내용을 모니터링할 필요가 없기 때문에 바인딩 인프라가 간소화됩니다.
 

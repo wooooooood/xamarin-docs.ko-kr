@@ -6,24 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305648"
 ---
 # <a name="build-process"></a>빌드 프로세스
-
 
 ## <a name="overview"></a>개요
 
 Xamarin.Android 빌드 프로세스는 [`Resource.designer.cs`를 생성하고](~/android/internals/api-design.md), `AndroidAsset`, `AndroidResource` 및 다른 [빌드 동작](#Build_Actions)을 지원하고, [Android에서 호출 가능한 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)를 생성하고, Android 디바이스에서 실행할 `.apk`를 생성하는 등 모든 것을 결합하는 역할을 합니다.
 
+## <a name="application-packages"></a>애플리케이션 패키지
 
-## <a name="application-packages"></a>응용 프로그램 패키지
-
-Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로그램 패키지(`.apk` 파일)의 종류는 크게 두 가지가 있습니다. 
+Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 애플리케이션 패키지(`.apk` 파일)의 종류는 크게 두 가지가 있습니다. 
 
 -   완전히 자체 포함되어 있으며 실행할 추가 패키지가 필요 없는 **릴리스** 빌드. 앱 스토어에 제공되는 패키지입니다. 
 
@@ -33,7 +31,7 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 
 ### <a name="shared-runtime"></a>공유 런타임
 
-*공유 런타임*은 기본 클래스 라이브러리(`mscorlib.dll` 등) 및 Android 바인딩 라이브러리(`Mono.Android.dll` 등)를 제공하는 추가적인 Android 패키지의 쌍입니다. 디버그 빌드는 Android 응용 프로그램 패키지 내 기본 클래스 라이브러리 및 바인딩 어셈블리를 포함하는 대신 공유 런타임에 의존하므로 디버그 패키지 크기가 줄어듭니다.
+*공유 런타임*은 기본 클래스 라이브러리(`mscorlib.dll` 등) 및 Android 바인딩 라이브러리(`Mono.Android.dll` 등)를 제공하는 추가적인 Android 패키지의 쌍입니다. 디버그 빌드는 Android 애플리케이션 패키지 내 기본 클래스 라이브러리 및 바인딩 어셈블리를 포함하는 대신 공유 런타임에 의존하므로 디버그 패키지 크기가 줄어듭니다.
 
 공유 런타임은 디버그 빌드에서 `$(AndroidUseSharedRuntime)` 속성을 `False`로 설정하여 비활성화할 수 있습니다. 
 
@@ -41,9 +39,9 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 응용 프로�
 
 ### <a name="fast-deployment"></a>빠른 배포
 
-*빠른 배포*는 공유 런타임과 함께 작동하여 Android 응용 프로그램의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 디바이스에 다시 동기화합니다. 
+*빠른 배포*는 공유 런타임과 함께 작동하여 Android 애플리케이션의 패키지 크기를 더욱 줄입니다. 이를 위해 패키지 내에 앱의 어셈블리를 묶지 않습니다. 대신 `adb push`를 통해 대상에 복사합니다. 어셈블리가 변경될 *경우에만* 패키지가 다시 설치되지 않으므로 빌드/배포/디버그 주기가 단축됩니다. 대신 업데이트된 어셈블리만 대상 디바이스에 다시 동기화합니다. 
 
-빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 디바이스에서 실패하는 것으로 알려져 있습니다. 
+빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 디바이스에서 실패하는 것으로 알려져 있습니다.
 
 빠른 배포는 기본적으로 활성화되며, 디버그 빌드에서 `$(EmbedAssembliesIntoApk)` 속성을 `True`로 설정하여 비활성화할 수 있습니다.
 
@@ -65,9 +63,9 @@ Xamarin.Android 프로젝트에는 다음 빌드 대상이 정의됩니다.
 
 -   **Clean** &ndash; 빌드 프로세스에서 생성한 모든 파일을 제거합니다.
 
--   **Install** &ndash; 기본 장치 또는 가상 장치에 패키지를 설치합니다.
+-   **Install**&ndash; 기본 디바이스 또는 가상 디바이스에 패키지를 설치합니다.
 
--   **Uninstall** &ndash; 기본 장치 또는 가상 장치에서 패키지를 제거합니다.
+-   **Uninstall**&ndash; 기본 디바이스 또는 가상 디바이스에서 패키지를 제거합니다.
 
 -   **SignAndroidPackage** &ndash; 패키지를 만들고 서명합니다(`.apk`). 자체 포함 "릴리스" 패키지를 생성하려면 `/p:Configuration=Release`와 함께 사용합니다.
 
@@ -84,15 +82,15 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     기본 `Release` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 패키지나 파일을 설치하지 않고도 사용할 수 있는 ‘독립 실행형’ Android 패키지를 생성하도록 합니다.
 
--   **DebugSymbols** &ndash; `$(DebugType)` 속성과 함께 사용되며, Android 패키지가 *디버그 가능*한지 결정하는 부울 값입니다. 디버그 가능한 패키지는 디버그 기호를 포함하고, `//application/@android:debuggable` 특성을 `true`로 설정하며, 디버거가 프로세스에 연결할 수 있도록 `INTERNET` 권한을 자동으로 추가합니다. `DebugSymbols`가 `True`*이고* `DebugType`이 빈 문자열이거나 `Full`일 경우 응용 프로그램을 디버그할 수 있습니다.
+-   **DebugSymbols** &ndash; `$(DebugType)` 속성과 함께 사용되며, Android 패키지가 *디버그 가능*한지 결정하는 부울 값입니다. 디버그 가능한 패키지는 디버그 기호를 포함하고, `//application/@android:debuggable` 특성을 `true`로 설정하며, 디버거가 프로세스에 연결할 수 있도록 `INTERNET` 권한을 자동으로 추가합니다. `DebugSymbols`가 `True`*이고*`DebugType`이 빈 문자열이거나 `Full`일 경우 애플리케이션을 디버그할 수 있습니다.
 
--   **DebugType** &ndash; 빌드의 일부로 생성할 [디버그 기호의 유형](https://docs.microsoft.com/visualstudio/msbuild/csc-task)을 지정하며, 응용 프로그램의 디버그 가능 여부에도 영향을 줍니다. 가능한 값은 다음과 같습니다.
+-   **DebugType**&ndash; 빌드의 일부로 생성할 [디버그 기호의 유형](https://docs.microsoft.com/visualstudio/msbuild/csc-task)을 지정하며, 애플리케이션의 디버그 가능 여부에도 영향을 줍니다. 가능한 값은 다음과 같습니다.
 
-    - **Full**: 전체 기호가 생성됩니다. `DebugSymbols` MSBuild 속성도 `True`일 경우 응용 프로그램 패키지를 디버그할 수 있습니다.
+    - **전체**: 전체 기호가 생성됩니다. `DebugSymbols` MSBuild 속성도 `True`일 경우 애플리케이션 패키지를 디버그할 수 있습니다.
 
-    - **PdbOnly**: "PDB" 기호가 생성됩니다. 응용 프로그램 패키지를 디버그할 수 *없습니다*.
+    - **PdbOnly**: "PDB" 기호가 생성됩니다. 애플리케이션 패키지를 디버그할 수 *없습니다*.
 
-    `DebugType`이 설정되지 않았거나 빈 문자열이면 `DebugSymbols` 속성에서 응용 프로그램의 디버그 가능 여부를 제어합니다.
+    `DebugType`이 설정되지 않았거나 빈 문자열이면 `DebugSymbols` 속성에서 애플리케이션의 디버그 가능 여부를 제어합니다.
 
     - **AndroidGenerateLayoutBindings** &ndash; `true`로 설정된 경우 [레이아웃 코드 숨김](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)의 생성을 활성화하거나, `false`로 설정된 경우 완전히 비활성화합니다. 기본값은 `false`입니다.
     
@@ -100,7 +98,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 설치 속성은 `Install` 및 `Uninstall` 대상의 동작을 제어합니다.
 
--   **AdbTarget** &ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 장치를 지정합니다. 이 속성의 값은 [`adb` 대상 디바이스 옵션](http://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
+-   **AdbTarget**&ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 디바이스를 지정합니다. 이 속성의 값은 [`adb` 대상 디바이스 옵션](http://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
 
     ```bash
     # Install package onto emulator via -e
@@ -112,7 +110,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 ### <a name="packaging-properties"></a>패키징 속성
 
 패키징 속성은 Android 패키지의 생성을 제어하며, `Install` 및 `SignAndroidPackage` 대상에서 사용합니다.
-릴리스 응용 프로그램을 패키지하는 경우에는 [서명 속성](#Signing_Properties)도 관련이 있습니다.
+릴리스 애플리케이션을 패키지하는 경우에는 [서명 속성](#Signing_Properties)도 관련이 있습니다.
 
 
 -   **AndroidApkSigningAlgorithm** &ndash; `jarsigner -sigalg`와 함께 사용하는 서명 알고리즘을 지정하는 문자열 값입니다.
@@ -121,7 +119,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 8.2에 추가되었습니다.
 
--   **AndroidApplication** &ndash; 프로젝트가 Android 응용 프로그램용(`True`)인지, Android 라이브러리 프로젝트용(`False` 또는 없음)인지 나타내는 부울 값입니다.
+-   **AndroidApplication**&ndash; 프로젝트가 Android 애플리케이션용(`True`)인지, Android 라이브러리 프로젝트용(`False` 또는 없음)인지 나타내는 부울 값입니다.
 
     Android 패키지에는 `<AndroidApplication>True</AndroidApplication>`인 프로젝트가 하나만 존재할 수 있습니다. (하지만 이는 아직 확인되지 않았으며, Android 리소스와 관련하여 미묘하고 기이한 오류를 유발할 수 있습니다.)
 
@@ -174,11 +172,11 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     기본적으로 이 속성은 `True`입니다.
 
--   **AndroidFastDeploymentType** &ndash; `$(EmbedAssembliesIntoApk)` MSBuild 속성이 `False`일 경우 대상 장치에서 [빠른 배포 디렉터리](#Fast_Deployment)에 배포할 수 있는 형식을 제어하는 값의 콜론(`:`)으로 구분된 목록입니다. 리소스가 빠르게 배포될 경우 생성된 `.apk`에 포함되지 *않아* 배포 시간을 줄일 수 있습니다. (빠르게 배포되는 리소스가 많을수록 `.apk`를 재빌드해야 하는 경우가 줄어들고 설치 프로세스가 빨라질 수 있습니다.) 유효한 값은 다음과 같습니다.
+-   **AndroidFastDeploymentType**&ndash;`$(EmbedAssembliesIntoApk)` MSBuild 속성이 `False`일 경우 대상 디바이스에서 [빠른 배포 디렉터리](#Fast_Deployment)에 배포할 수 있는 형식을 제어하는 값의 콜론(`:`)으로 구분된 목록입니다. 리소스가 빠르게 배포될 경우 생성된 `.apk`에 포함되지 *않아* 배포 시간을 줄일 수 있습니다. (빠르게 배포되는 리소스가 많을수록 `.apk`를 재빌드해야 하는 경우가 줄어들고 설치 프로세스가 빨라질 수 있습니다.) 유효한 값은 다음과 같습니다.
 
-    - `Assemblies`: 응용 프로그램 어셈블리를 배포합니다.
+    - `Assemblies`: 애플리케이션 어셈블리를 배포합니다.
 
-    - `Dexes`: `.dex` 파일, Android 리소스 및 Android 자산을 배포합니다. **이 값은 *오직* Android 4.4 이상(API-19)을 실행 중인 장치에서만 사용할 수 있습니다.**
+    - `Dexes`: `.dex` 파일, Android 리소스 및 Android 자산을 배포합니다. **이 값은 *오직* Android 4.4 이상(API-19)을 실행 중인 디바이스에서만 사용할 수 있습니다.**
 
     기본값은 `Assemblies`입니다.
 
@@ -197,44 +195,44 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     이는 네트워크 요청을 수행하기 위해 Android Java API를 사용하는 `Xamarin.Android.Net.AndroidClientHandler`를 포함하도록 재정의될 수 있습니다. 기본 Android 버전이 TLS 1.2를 지원할 때 TLS 1.2 URL 액세스를 허용합니다.  
     Android 5.0 이상에서만 Java를 통해 TLS 1.2 지원을 안정적으로 제공할 수 있습니다.
 
-    참고: Android 버전 5.0 이전에서 TLS 1.2 지원이 필요하거나 TLS 1.2 지원이 `System.Net.WebClient` 및 관련 API에 필요한 경우 `$(AndroidTlsProvider)`를 사용해야 합니다.
+    *참고*: Android 버전 5.0 이전에서 TLS 1.2 지원이 필요*하거나* TLS 1.2 지원이 `System.Net.WebClient` 및 관련 API에 필요한 경우 `$(AndroidTlsProvider)`를 사용해야 합니다.
 
-    참고: 이 속성에 대한 지원은 [`XA_HTTP_CLIENT_HANDLER_TYPE` 환경 변수](~/android/deploy-test/environment.md)를 설정하여 작동됩니다.
+    *참고*: 이 속성에 대한 지원은 [`XA_HTTP_CLIENT_HANDLER_TYPE` 환경 변수](~/android/deploy-test/environment.md)를 설정하여 작동됩니다.
     파일에서 `$XA_HTTP_CLIENT_HANDLER_TYPE` 값을 찾았으며 `@(AndroidEnvironment)`의 빌드 동작이 우선됩니다.
 
     Xamarin.Android 6.1에 추가되었습니다.
 
--   **AndroidTlsProvider** &ndash; 응용 프로그램에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은 다음과 같습니다.
+-   **AndroidTlsProvider**&ndash; 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은 다음과 같습니다.
 
-    - `btls`: [HttpWebRequest](xref:System.Net.HttpWebRequest)와의 TLS 통신을 위해 [Boring SSL](https://boringssl.googlesource.com/boringssl)을 사용합니다.
+    - `btls`: [HttpWebRequest](xref:System.Net.HttpWebRequest)와의 TLS 통신에는 [Boring SSL](https://boringssl.googlesource.com/boringssl)을 사용합니다.
       이렇게 하면 모든 Android 버전에서 TLS 1.2를 사용할 수 있습니다.
 
     - `legacy`: 네트워크 상호 작용을 위해 관리되는 SSL 구현 기록을 사용합니다. 이는 TLS 1.2를 지원하지 *않습니다*.
 
     - `default`: 기본 TLS 공급자를 선택하도록 *Mono*를 허용합니다.
       이는 Xamarin.Android 7.3에서도 `legacy`에 해당합니다.  
-      참고: IDE “기본값”이 `$(AndroidTlsProvider)` 속성에서 ‘제거’되므로 이 값은 `.csproj` 값에 나타날 가능성이 없습니다.
+      *참고*: IDE "기본값"이 `$(AndroidTlsProvider)` 속성에서 *제거*되므로 이 값은 `.csproj` 값에 나타날 가능성이 없습니다.
 
-    - 설정되지 않은/빈 문자열: Xamarin.Android 7.1에서 이는 `legacy`에 해당합니다.  
+    - 설정 해제/빈 문자열: Xamarin.Android 7.1에서는 `legacy`에 해당합니다.  
       Xamarin.Android 7.3에서는 `btls`에 해당합니다.
 
     기본값은 빈 문자열입니다.
 
     Xamarin.Android 7.1에 추가되었습니다.
 
--   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 응용 프로그램 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 올바른 값은 다음과 같습니다.
+-   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 올바른 값은 다음과 같습니다.
 
-    - **None**: 연결을 시도하지 않습니다.
+    - **없음**: 연결을 시도하지 않습니다.
 
     - **SdkOnly**: 연결이 기본 클래스 라이브러리에서만 수행되며, 사용자 어셈블리에서는 수행되지 않습니다.
 
-    - **Full**: 연결이 기본 클래스 라이브러리와 사용자 어셈블리에서 수행됩니다. **참고:** `AndroidLinkMode`에 *Full* 값을 사용할 경우 앱이 손상될 수 있습니다(특히 리플렉션을 사용하는 경우). *제대로* 알지 않는 한 이 값을 사용하지 마세요.
+    - **전체**: 연결이 기본 클래스 라이브러리와 사용자 어셈블리에서 수행됩니다. **참고:** `AndroidLinkMode`에 *Full* 값을 사용할 경우 앱이 손상될 수 있습니다(특히 리플렉션을 사용하는 경우). *제대로* 알지 않는 한 이 값을 사용하지 마세요.
 
     ```xml
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     ```
 
--   **AndroidLinkSkip** &ndash; 연결해서는 안 되는 어셈블리에 대한 세미콜론(`;`)으로 구분된 어셈블리 이름 목록을 파일 확장명 없이 지정합니다. Android 응용 프로그램 프로젝트 내에서만 사용됩니다.
+-   **AndroidLinkSkip** &ndash; 연결해서는 안 되는 어셈블리에 대한 세미콜론(`;`)으로 구분된 어셈블리 이름 목록을 파일 확장명 없이 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다.
 
     ```xml
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
@@ -244,7 +242,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
 
--   **LinkerDumpDependencies** &ndash; 링커 종속성 파일 생성을 활성화하는 부울 속성입니다. 이 파일은 [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer) 도구에 대한 입력으로 사용할 수 있습니다.
+-   **LinkerDumpDependencies** &ndash; 링커 종속성 파일 생성을 활성화하는 부울 속성입니다. 이 파일은 [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md) 도구에 대한 입력으로 사용할 수 있습니다.
 
     기본값은 False입니다.
 
@@ -271,7 +269,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     -   `arm64-v8a`: Xamarin.Android 5.1 이상이 필요합니다.
     -   `x86_64`: Xamarin.Android 5.1 이상이 필요합니다.
 
--   **AndroidUseSharedRuntime** &ndash; 대상 장치에서 응용 프로그램을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 응용 프로그램 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
+-   **AndroidUseSharedRuntime**&ndash; 대상 장치에서 애플리케이션을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
 
     이 속성은 디버그 빌드의 경우 `True`, 릴리스 프로젝트의 경우 `False`여야 합니다.
 
@@ -281,7 +279,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     기본적으로 이 속성은 `False`입니다.
 
--   **EmbedAssembliesIntoApk** &ndash; 앱의 어셈블리가 응용 프로그램 패키지에 포함되어야 하는지 여부를 결정하는 부울 속성입니다.
+-   **EmbedAssembliesIntoApk**&ndash; 앱의 어셈블리가 애플리케이션 패키지에 포함되어야 하는지 여부를 결정하는 부울 속성입니다.
 
     이 속성은 릴리스 빌드의 경우 `True`, 디버그 빌드의 경우 `False`여야 합니다. 빠른 배포에서 대상 디바이스를 지원하지 않는 경우 디버그 빌드에서 `True`가 되어야 *할 수 있습니다*.
 
@@ -315,9 +313,9 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **JavaOptions** &ndash; `.dex` 파일을 빌드할 때 **java**에 전달할 추가 명령줄 옵션을 지정합니다.
 
--   **MandroidI18n** &ndash; 데이터 정렬 및 정렬 테이블처럼 응용 프로그램에 포함할 국제화 지원을 지정합니다. 값은 다음과 같은 대/소문자 구분 값이 하나 이상 포함된 쉼표 또는 세미콜론으로 구분된 목록입니다.
+-   **MandroidI18n**&ndash; 데이터 정렬 및 정렬 테이블처럼 애플리케이션에 포함할 국제화 지원을 지정합니다. 값은 다음과 같은 대/소문자 구분 값이 하나 이상 포함된 쉼표 또는 세미콜론으로 구분된 목록입니다.
 
-    -   **None**: 추가 인코딩을 포함하지 않습니다.
+    -   **없음**: 추가 인코딩을 포함하지 않습니다.
 
     -   **All**: 사용 가능한 모든 인코딩을 포함합니다.
 
@@ -325,7 +323,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     -   **MidEast**: *터키어(Windows)* \[iso-8859-9, CP1254\], *히브리어(Windows)* \[windows-1255, CP1255\], *아랍어(Windows)* \[windows-1256, CP1256\], *아랍어(ISO)* \[iso-8859-6, CP28596\], *히브리어(ISO)* \[iso-8859-8, CP28598\], *라틴어 5(ISO)* \[iso-8859-9, CP28599\] 및 *히브리어(Iso Alternative)* \[iso-8859-8, CP38598\] 같은 중동 인코딩을 포함합니다.
 
-    -   **Other**: *키릴 자모(Windows)* \[CP1251\], *발트어(Windows)* \[iso-8859-4, CP1257\], *베트남어(Windows)* \[CP1258\], *키릴 자모(KOI8-R)* \[koi8-r, CP1251\], *우크라이나어(KOI8-U)* \[koi8-u, CP1251\], *발트어(ISO)* \[iso-8859-4, CP1257\], *키릴 자모(ISO)* \[iso-8859-5, CP1251\], *ISCII 데바나가리 문자* \[x-iscii-de, CP57002\], *ISCII 벵골어* \[x-iscii-be, CP57003\], *ISCII 타밀어* \[x-iscii-ta, CP57004\], *ISCII 텔루구어* \[x-iscii-te, CP57005\], *ISCII 아삼어* \[x-iscii-as, CP57006\], *ISCII 오리야어* \[x-iscii-or, CP57007\], *ISCII 칸나다어* \[x-iscii-ka, CP57008\], *ISCII 말라얄람어* \[x-iscii-ma, CP57009\], *ISCII 구자라트어* \[x-iscii-gu, CP57010\], *ISCII 펀잡어* \[x-iscii-pa, CP57011\] 및 *태국어(Windows)* \[CP874\] 같은 기타 인코딩을 포함합니다.
+    -   **기타**: *키릴 자모(Windows)* \[CP1251\], *발트어(Windows)* \[iso-8859-4, CP1257\], *베트남어(Windows)* \[CP1258\], *키릴 자모(KOI8-R)* \[koi8-r, CP1251\], *우크라이나어(KOI8-U)* \[koi8-u, CP1251\], *발트어(ISO)* \[iso-8859-4, CP1257\], *키릴 자모(ISO)* \[iso-8859-5, CP1251\], *ISCII 데바나가리 문자* \[x-iscii-de, CP57002\], *ISCII 벵골어* \[x-iscii-be, CP57003\], *ISCII 타밀어* \[x-iscii-ta, CP57004\], *ISCII 텔루구어* \[x-iscii-te, CP57005\], *ISCII 아삼어* \[x-iscii-as, CP57006\], *ISCII 오리야어* \[x-iscii-or, CP57007\], *ISCII 칸나다어* \[x-iscii-ka, CP57008\], *ISCII 말라얄람어* \[x-iscii-ma, CP57009\], *ISCII 구자라트어* \[x-iscii-gu, CP57010\], *ISCII 펀잡어* \[x-iscii-pa, CP57011\] 및 *태국어(Windows)* \[CP874\] 같은 기타 인코딩을 포함합니다.
 
     -   **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\]*, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
 
@@ -375,7 +373,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 7.2에 추가되었습니다.
 
--   **AndroidUseLegacyVersionCode** &ndash; 부울 속성을 사용하면 개발자가 versionCode 계산을 이전의 사전 Xamarin.Android 8.2 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 응용 프로그램을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
+-   **AndroidUseLegacyVersionCode** &ndash; 부울 속성을 사용하면 개발자가 versionCode 계산을 이전의 사전 Xamarin.Android 8.2 동작으로 되돌릴 수 있습니다. 이러한 방법은 Google Play 스토어에서 기존 애플리케이션을 사용하는 개발자만 사용해야 합니다. 새 `$(AndroidVersionCodePattern)` 속성을 사용하는 것이 좋습니다.
 
     Xamarin.Android 8.2에 추가되었습니다.
 
@@ -456,7 +454,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidClassParser** &ndash; `.jar` 파일이 구문 분석되는 방법을 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
 
-    - **class-parse**: JVM의 보조 없이 `class-parse.exe`를 사용하여 Java 바이트코드의 구문 분석을 바로 수행합니다. 이 값은 실험적입니다. 
+    - **클래스 구문 분석**: JVM의 보조 없이 `class-parse.exe`를 사용하여 Java 바이트코드의 구문 분석을 바로 수행합니다. 이 값은 실험적입니다. 
 
 
     - **jar2xml**: `jar2xml.jar`을 통해 Java 리플렉션을 사용하여 `.jar` 파일에서 형식과 멤버를 추출합니다.
@@ -534,7 +532,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 ### <a name="signing-properties"></a>서명 속성
 
-서명 속성은 Android 디바이스에 설치할 수 있도록 응용 프로그램 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
+서명 속성은 Android 장치에 설치할 수 있도록 애플리케이션 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
 
 기본적으로 서명 대상은 필요한 경우 새 디버그 서명 키를 생성합니다. 예를 들어 빌드 서버에서 특정 키를 사용하려는 경우 다음 MSBuild 속성을 사용할 수 있습니다.
 
@@ -659,7 +657,7 @@ Enter key password for keystore.alias
 
 [네이티브 라이브러리](~/android/platform/native-libraries.md)는 `AndroidNativeLibrary`에 빌드 동작을 설정하여 빌드에 추가됩니다.
 
-Android는 여러 ABI(응용 프로그램 이진 인터페이스)를 지원하므로, 빌드 시스템은 네이티브 라이브러리가 대상으로 하는 ABI를 알아야 합니다. 이는 두 가지 방법으로 수행할 수 있습니다.
+Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므로, 빌드 시스템은 네이티브 라이브러리가 대상으로 하는 ABI를 알아야 합니다. 이는 두 가지 방법으로 수행할 수 있습니다.
 
 1.  경로 "검색".
 2.  `Abi` 항목 특성 사용.
