@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6f5af4cea0c223b9ddc7cd72331676f5f92f2509
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e02b5631aff76e35300ae4d7dd5e3c6652f6e3da
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055201"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668840"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 표시줄 및 Xamarin.iOS에 탭 표시줄 컨트롤러
 
@@ -47,7 +47,7 @@ ms.locfileid: "53055201"
  <a name="Creating_the_Application" />
 
 
-### <a name="creating-the-application"></a>응용 프로그램 작성
+### <a name="creating-the-application"></a>애플리케이션 작성
 
 새 응용 프로그램을 만들어 시작 해 보겠습니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "53055201"
 
 ### <a name="adding-the-uitabbarcontroller"></a>UITabBarController 추가
 
-다음을 선택 하 여 빈 클래스를 추가 **파일 > 새 파일** 선택 합니다 **일반: 빈 클래스** 템플릿. 파일 이름을 `TabController` 아래와 같이:
+다음으로 선택 하 여 빈 클래스를 추가할 **파일 > 새 파일** 선택 하 고는 **일반: 빈 클래스** 템플릿. 파일 이름을 `TabController` 아래와 같이:
 
 [![](creating-tabbed-applications-images/02-newclass.png "TabController 클래스 추가")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
@@ -283,8 +283,8 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
 끌어 하고자를 `Label` 와 `Button` 에서 ViewController1에는 **도구 상자** 오른쪽에서. 다음 사용 하 여 Properties Pad 이름과 다음 컨트롤의 텍스트를 편집 합니다.
 
--  **레이블을** : `Text`  =  **하나**
--  **단추** : `Title`  =  **일부 초기 작업을 수행 하는 사용자**
+-  **Label** : `Text` = **One**
+-  **단추** : `Title` = **사용자가 일부 초기 작업 수행**
 
 
 이 단추의 표시 여부를 제어할 수는 것을 `TouchUpInside` 이벤트를 코드 숨김에 참조 하는 데 필요 합니다. 보겠습니다 식별 하는 **이름을** `aButton` 다음 스크린샷에 표시 된 것 처럼 Properties Pad에서:
@@ -372,4 +372,4 @@ public override void ViewDidLoad ()
 
 - [탭 응용 프로그램 (샘플) 만들기](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
-- [UITabBarController 클래스 참조](http://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)
+- [UITabBarController 클래스 참조](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

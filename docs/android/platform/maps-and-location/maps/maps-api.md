@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
-ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
+ms.openlocfilehash: 12ff6f615b30e53704fee6368c9d7f171f881df0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012297"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671067"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
@@ -297,7 +297,7 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-Maps API를 제공 된 [CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 카메라 위치에 대 한 가능한 값의 모든 집계는 합니다. 이 클래스의 인스턴스를 지정할 수는 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) 반환 하는 메서드를 `CameraUpdate` 개체입니다. Maps API도 포함 되어 있습니다 합니다 [CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 클래스를 만들기 위한 fluent API를 제공 하는 `CameraPosition` 개체입니다.
+Maps API를 제공 된 [CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 카메라 위치에 대 한 가능한 값의 모든 집계는 합니다. 이 클래스의 인스턴스를 지정할 수는 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) 반환 하는 메서드를 `CameraUpdate` 개체입니다. Maps API도 포함 되어 있습니다 합니다 [CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 클래스를 만들기 위한 fluent API를 제공 하는 `CameraPosition` 개체입니다.
 다음 코드 조각을 만드는 예를 보여 줍니다.는 `CameraUpdate` 에서 `CameraPosition` 는에서 카메라 위치를 변경 하는 데 사용 된 `GoogleMap`:
 
 ```csharp
@@ -342,7 +342,7 @@ Maps API를 제공 된 [표식](https://developers.google.com/android/reference/
 
 ##### <a name="adding-a-marker"></a>마커 추가
 
-표식에 지도를 추가 하려면 새 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체를 호출 합니다 [AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) 메서드를를 `GoogleMap` 인스턴스. 이 메서드는 반환 된 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 개체입니다.
+표식에 지도를 추가 하려면 새 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체를 호출 합니다 [AddMarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) 메서드를를 `GoogleMap` 인스턴스. 이 메서드는 반환 된 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 개체입니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -580,5 +580,5 @@ private void MapOnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEvent
 - [Google Android API v2 맵](https://developers.google.com/maps/documentation/android-sdk/intro)
 - [Google Play는 APK를 서비스](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [라이브러리 사용](https://developer.android.com/guide/topics/manifest/uses-library-element)
-- [기능 사용](https://developer.android.com/guide/topics/manifest/uses-feature-element)
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element)
+- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element)

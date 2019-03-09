@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: 61aa360e91c3881c77c4bc3776e2cfdc36efb61b
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: f7fbd6f19820b8cbefe1a75c148ca1d9ba1395f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267362"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670955"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>IOS 11 및 Xamarin.iOS 한 문제 해결 팁
 
@@ -26,4 +26,4 @@ Xamarin.iOS에서 버그를 발견 했습니다 있다면 문제 보고 [GitHub�
 
 ## <a name="forums-and-stackoverflow"></a>포럼 및 StackOverflow
 
-사용 하거나 Xamarin.iOS에서 Xamarin에서 특정 iOS 11 기능을 구현 하는 방법에 대 한 특정 질문에 답변 [iOS 포럼](http://forums.xamarin.com/categories/ios) 다양 한 정보를 제공 합니다. [StackOverflow](http://stackoverflow.com/search?tab=newest&q=xamarin) 또 다른 좋은 소스 사용자 수 있도록 사용자 정보입니다.
+사용 하거나 Xamarin.iOS에서 Xamarin에서 특정 iOS 11 기능을 구현 하는 방법에 대 한 특정 질문에 답변 [iOS 포럼](http://forums.xamarin.com/categories/ios) 다양 한 정보를 제공 합니다. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) 또 다른 좋은 소스 사용자 수 있도록 사용자 정보입니다.

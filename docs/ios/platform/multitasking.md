@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 78f9aa47cce2fe0059bd7f4d4ff637d14fb8c669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68c2ae6eace2669d2ea6c77d72f4476d767c0a7d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112524"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672445"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.iOS 방향의 iPad 용 멀티태스킹
 
@@ -128,8 +128,8 @@ IPad에서 전체 화면 앱을 일반 가로 및 세로 크기 클래스에 있
 | **방향** | **기본 앱** | **보조 앱** |
 |--- |--- |--- |
 | **세로** |화면의 75%<br />Compact 가로<br />일반 세로|화면의 25%<br />Compact 가로<br />일반 세로|
-| **가로** |화면의 75%<br />일반 가로<br />일반 세로|화면의 25%<br />Compact 가로<br />일반 세로|
-| **가로** |화면 50%<br />Compact 가로<br />일반 세로|화면 50%<br />Compact 가로<br />일반 세로|
+| **Landscape** |화면의 75%<br />일반 가로<br />일반 세로|화면의 25%<br />Compact 가로<br />일반 세로|
+| **Landscape** |화면 50%<br />Compact 가로<br />일반 세로|화면 50%<br />Compact 가로<br />일반 세로|
 
 예에서 [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) 앱을 전체 화면을 iPad 가로 모드에서 실행 되는 경우, 목록 및 세부 정보 뷰에서 동시에 모두 표시 됩니다 것:
 
@@ -197,7 +197,7 @@ public void NewEntry() {
 
 [![](multitasking-images/keyboard03.png "바로 가기 키 팝업")](multitasking-images/keyboard03.png#lightbox)
 
-샘플을 참조 하세요 [MultiTask 앱](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) 구현 예제입니다.
+샘플을 참조 하세요 [MultiTask 앱](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) 구현 예제입니다.
 
 <a name="Resource-Management-Considerations" />
 

@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267393"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672458"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>코드를 Unified API로 업데이트하는 팁
 
@@ -88,7 +88,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
  * `NSAction` 되었습니다 [대체](~/cross-platform/macios/unified/overview.md#NSAction) starndard.NET을 사용 하 여 `Action`입니다. 또한 몇 가지 간단한 단일 매개 변수인 대리자로 대체 되었습니다 `Action<T>`합니다.
 
-마지막으로, 참조를 [클래식 v Unified API 차이점](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) Api 코드에서 변경 내용을 조회 하 합니다. 검색 [이 페이지](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 클래식 Api에 대 한 새로운 했습니다 된 업데이트를 찾을 수 있도록 도와줍니다.
+마지막으로, 참조를 [클래식 v Unified API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) Api 코드에서 변경 내용을 조회 하 합니다. 검색 [이 페이지](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 클래식 Api에 대 한 새로운 했습니다 된 업데이트를 찾을 수 있도록 도와줍니다.
 
 **참고:** 는 `MonoTouch.Dialog` 네임 스페이스 마이그레이션 후 동일 하 게 유지 합니다. 코드를 사용 하는 경우 **MonoTouch.Dialog** 네임 스페이스를 사용 하 여 수행 해야 할 *되지* 변경 `MonoTouch.Dialog` 에 `Dialog`!
 
@@ -96,7 +96,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 일반적인 오류에 대 한 다른 예제는 솔루션과 함께 아래에:
 
-**오류 CS0012: 'MonoTouch.UIKit.UIView' 형식이 참조 되지 않은 어셈블리에 정의 됩니다.**
+**Error CS0012: 'MonoTouch.UIKit.UIView' 형식이 참조 되지 않은 어셈블리에 정의 됩니다.**
 
 해결 방법: 이 구성 요소 또는 통합 API를 사용 하 여 빌드되지 않았습니다 하는 NuGet 패키지를 프로젝트 참조 의미 합니다. 삭제 하 고 다시 모든 구성 요소와 NuGet 추가 패키지 있습니다. 이 오류가 해결 되지 않으면, 외부 라이브러리는 통합 API를 아직 지원 하지 않습니다.
 
@@ -104,7 +104,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 해결 방법: 이 오류를 발생 시키는 구성 요소를 삭제 하 고 프로젝트를 다시 추가 합니다.
 
-**오류 CS0234: 'Foundation' 'MonoTouch' 네임 스페이스에 존재 하지 않는 형식 또는 네임 스페이스 이름입니다. 어셈블리 참조가 없습니다?**
+**Error CS0234: 'Foundation' 'MonoTouch' 네임 스페이스에 존재 하지 않는 형식 또는 네임 스페이스 이름입니다. 어셈블리 참조가 없습니다?**
 
 해결 방법: Mac 용 Visual Studio에서 자동화 된 마이그레이션 도구 *해야* 모든 업데이트 `MonoTouch.Foundation` 에 대 한 참조 `Foundation`이지만 경우에 따라서는 이러한 해야 수동으로 업데이트 해야 합니다. 에 포함 된 이전에 다른 네임 스페이스에 대 한 유사한 오류가 나타날 수 있습니다 `MonoTouch`와 같은 `UIKit`합니다.
 
@@ -170,7 +170,7 @@ MKAnnotation 서브클래싱 사용자 지정 주석을 만드는 경우 좌표 
 * SetCoordinate 메서드를 재정의 하 고 필드를 설정 합니다.
 * 전달 된 좌표 매개 변수를 사용 하 여 프로그램 ctor SetCoordinate 호출
 
-다음과 비슷하게 표시 됩니다.
+결과는 다음과 비슷합니다.
 
 ```csharp
 class BasicPinAnnotation : MKAnnotation

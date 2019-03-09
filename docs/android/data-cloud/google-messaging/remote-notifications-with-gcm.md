@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528808"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668896"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging을 사용 하 여 원격 알림
 
@@ -617,7 +617,7 @@ namespace MessageSender
 
 ### <a name="try-it"></a>실습
 
-이제 클라이언트 앱을 테스트할 준비가 되었습니다. 에뮬레이터를 사용 하는 경우 또는 장치는 GCM Wi-fi 상에 서와 통신 하는 경우 다음 TCP 포트를 통해 GCM 메시지에 대 한 방화벽에서 열어야: 5228, 5229, 및 5230 합니다.
+이제 클라이언트 앱을 테스트할 준비가 되었습니다. 에뮬레이터를 사용 하는 경우 장치는 GCM Wi-fi 상에 서와 통신 하는 경우 다음 TCP 포트를 통해 GCM 메시지에 대 한 방화벽에서 열어야 합니다. 5228 5229, 하며 5230 합니다.
 
 클라이언트 앱을 시작 하 고 출력 창. 이후에 `RegistrationIntentService` 등록을 성공적으로 수신 GCM에서 토큰을 출력 창에서 표시 해야 토큰 다음과 같은 로그 출력을 사용 하 여:
 
@@ -657,7 +657,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 축, 앱의 첫 번째 원격 알림을 받았습니다.
 
-Note 앱이 강제로 중지 하는 경우 GCM 메시지가 수신 되지 않습니다. 알림을 강제로 중지 후 다시 시작 하려면 앱을 수동으로 다시 시작 해야 합니다. 이 Android 정책에 대 한 자세한 내용은 참조 하세요. [중지 된 응용 프로그램에서 컨트롤을 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) 이 고 [stack overflow 게시물](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)합니다. 
+Note 앱이 강제로 중지 하는 경우 GCM 메시지가 수신 되지 않습니다. 알림을 강제로 중지 후 다시 시작 하려면 앱을 수동으로 다시 시작 해야 합니다. 이 Android 정책에 대 한 자세한 내용은 참조 하세요. [중지 된 응용 프로그램에서 컨트롤을 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) 이 고 [stack overflow 게시물](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)합니다. 
 
  
 ## <a name="summary"></a>요약

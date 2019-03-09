@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
-ms.openlocfilehash: be6154631b8b51ec61feb4c713d925ff30505b7d
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: d307c128826775e6d4f7129c79e17522e7e05d6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831757"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671574"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms의 XAML 네임 스페이스
 
@@ -50,6 +50,9 @@ XAML은 접두사를 사용하여 기본이 아닌 네임 스페이스를 선언
 |`x:TypeArguments`|제네릭 유형 생성자에 제네릭 유형 인수를 지정합니다.|
 
 `x:DataType` 특성에 대한 자세한 내용은 [컴파일 된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오. `x:FieldModifier` 특성에 대한 자세한 내용은 [필드 한정자](~/xamarin-forms/xaml/field-modifiers.md)를 참조하십시오. `x:Arguments`, `x:FactoryMethod` 및 `x:TypeArguments` 특성에 대한 자세한 내용은 [XAML의 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조하십시오.
+
+> [!NOTE]
+> 위에 나열 된 네임 스페이스 특성 외에도 Xamarin.Forms 또한를 통해 사용할 수 있는 태그 확장은 `x` 네임 스페이스 접두사입니다. 자세한 내용은 [XAML 태그 확장 사용](~/xamarin-forms/xaml/markup-extensions/consuming.md)합니다.
 
 XAML에서 네임 스페이스 선언은 부모 요소에서 자식 요소로 상속됩니다. 따라서 XAML 파일의 루트 요소 네임 스페이스를 정의하면 해당 파일의 모든 요소가 네임 스페이스 선언을 상속합니다.
 

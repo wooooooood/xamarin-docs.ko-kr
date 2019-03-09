@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122428"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667713"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -82,7 +82,7 @@ ms.locfileid: "50122428"
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>통합 문서 1.3 및 이전 버전 지침:
 
-Mac 용 visual Studio
+Visual Studio For Mac
 
 - **Visual Studio > Visual Studio에 대 한 > 세부 정보 표시 > 정보 복사**
 - 버그 보고서에 붙여 넣습니다.
@@ -102,11 +102,11 @@ IOS 또는 Android 통합 문서 연결 문제가 있는 경우 이미 체크 �
 
 - 에 연결 하려는 장치의 이름
 - 장치 OS 버전
-- Android: x86을 사용 하 고 있는지 확인 에뮬레이터
-- Android: 에뮬레이터 플랫폼 사용 중 입니까? Google 에뮬레이터?
+- Android: X86을 사용 하 고 있는지 확인 합니다. 에뮬레이터
+- Android: 에뮬레이터 플랫폼을 사용 중 입니까? Google 에뮬레이터?
   Visual Studio Android Emulator? Xamarin Android Player?
 - Windows에서 iOS: Xamarin 원격 ios 시뮬레이터 버전 수행 설치한 (체크 **프로그램 추가/제거** 에 **제어판**)?
-- Windows에서 iOS: 하세요 Mac 빌드 호스트에도 플랫폼 버전 정보를 제공
+- Windows에서 iOS: 또한 정보를 제공 하십시오 플랫폼 버전 Mac 빌드 호스트에 대 한
 - 장치는 네트워크 연결 (웹 브라우저를 통해 확인)가 있습니까?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -160,5 +160,5 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 1.4 또는 1.3.2 최신 또는 이전 버전에서 다운 그레이드 합니다.
 
-1. [Workbooks 및 Inspector를 수동으로 제거](#macOS)
+1. [Workbooks 및 Inspector를 수동으로 제거](#uninstall-macos)
 2. 1.3.2 실행 이전 또는 `.pkg` 설치 관리자

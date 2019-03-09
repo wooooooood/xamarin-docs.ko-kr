@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557245"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670989"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -44,7 +44,7 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -을 측면을 유지 하면서 표시 영역을 채우도록 이미지를 자릅니다 (ie. 왜곡).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -레터 박스 이미지 (필요한 경우) 여부에 따라 양쪽 위쪽/아래쪽에 추가 공백이 있는 가로 또는 세로 이미지는 전체 이미지에 표시 영역에 적합 한 수 있도록 합니다.
 
-이미지를 로드할 수는 [로컬 파일](#Local_Images), [포함 리소스](#embedded-images), 또는 [다운로드](#Downloading_Images)합니다. 또한 글꼴 아이콘 표시할 수 있습니다 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 글꼴 아이콘 데이터를 지정 하 여 보기를 `FontImageSource` 개체입니다. 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 에 [글꼴](~/xamarin-forms/user-interface/text/fonts.md) 가이드입니다.
+이미지를 로드할 수는 [로컬 파일](#local-images), [포함 리소스](#embedded-images), 또는 [다운로드](#downloading-images)합니다. 또한 글꼴 아이콘 표시할 수 있습니다 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 글꼴 아이콘 데이터를 지정 하 여 보기를 `FontImageSource` 개체입니다. 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 에 [글꼴](~/xamarin-forms/user-interface/text/fonts.md) 가이드입니다.
 
 ## <a name="local-images"></a>로컬 이미지
 
@@ -92,7 +92,7 @@ IOS 9를 적절 한 자산 카탈로그 이미지 집합에 필요한 각 해상
 
 IOS 9 이전 이미지의 레 티 나 버전에 놓일 수 있습니다는 **리소스** 폴더 2와 3 번 사용 하 여 확인을 **@2x** 하거나 **@3x**파일 이름 (예: 파일 확장명 앞에 접미사 **myimage@2x.png**). 그러나이 메서드는 iOS 앱에서 이미지를 사용 하는 Apple에서 되지 합니다. 자세한 내용은 [이미지 크기 및 파일 이름](~/ios/app-fundamentals/images-icons/displaying-an-image.md)합니다.
 
-Android 대체 고해상도 이미지를 배치할 [라는 특수 디렉터리](http://developer.android.com/guide/practices/screens_support.html) 다음 스크린샷에 표시 된 것 처럼 Android 프로젝트에서:
+Android 대체 고해상도 이미지를 배치할 [라는 특수 디렉터리](https://developer.android.com/guide/practices/screens_support.html) 다음 스크린샷에 표시 된 것 처럼 Android 프로젝트에서:
 
 [![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png "Android 다중 해상도 이미지 위치")](images-images/xs-highdpisolution.png#lightbox "Android 다중 해상도 이미지 위치")
 
@@ -296,7 +296,7 @@ webImage.Source = new UriImageSource
 
 ## <a name="icons"></a>아이콘
 
-참조를 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)를 [Google의도 해](http://developer.android.com/design/style/iconography.html), 및 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) 이러한 응용 프로그램 리소스를 만드는 대 한 자세한 내용은 합니다.
+참조를 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)를 [Google의도 해](https://developer.android.com/design/style/iconography.html), 및 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) 이러한 응용 프로그램 리소스를 만드는 대 한 자세한 내용은 합니다.
 
 또한 글꼴 아이콘 표시할 수 있습니다 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 글꼴 아이콘 데이터를 지정 하 여 보기를 `FontImageSource` 개체입니다. 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 에 [글꼴](~/xamarin-forms/user-interface/text/fonts.md) 가이드입니다.
 
@@ -316,5 +316,5 @@ Xamarin.Forms는 플랫폼 간 응용 프로그램에서 동일한 플랫폼에�
 
 - [WorkingWithImages (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)
-- [Android의 해](http://developer.android.com/design/style/iconography.html)
+- [Android의 해](https://developer.android.com/design/style/iconography.html)
 - [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

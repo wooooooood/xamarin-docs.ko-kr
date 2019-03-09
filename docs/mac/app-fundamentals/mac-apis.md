@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: 209ce2b5fb2fbb357f23e6ccc9bb849fbfedc81d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115655"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668285"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>macOS Xamarin.Mac 개발자를 위한 Api
 
@@ -57,7 +57,7 @@ ms.locfileid: "50115655"
 
     - `NSTableView x;`
     - `x.` [ctrl + 스페이스바 목록에 나타나지 않으면).
-    - `CanDrag` [입력]
+    - `CanDrag` [enter]
     - 메서드를 마우스 오른쪽 단추로 클릭, 어셈블리 브라우저 비교할 수 있습니다를 열려면 선언으로 이동 합니다 `Export` 문제의 선택기를 특성
 
 2. 전체 클래스 바인딩을 검색 합니다. 알 수 있기 때문에 인스턴스에 `NSTableView` 입력할 수 있습니다.
@@ -68,7 +68,7 @@ ms.locfileid: "50115655"
 
 3. 사용할 수는 [온라인 설명서 Xamarin.Mac API](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) 합니다.
 
-4. Miguel Xamarin.Mac api "전설의 Stone" 보기가 [여기](http://tirania.org/tmp/rosetta.html) 는 지정된 된 API를 통해 검색할 수 있습니다. API AppKit 또는 macOS 관련 없는 경우 있습니다 알 수 있습니다.
+4. Miguel Xamarin.Mac api "전설의 Stone" 보기가 [여기](https://tirania.org/tmp/rosetta.html) 는 지정된 된 API를 통해 검색할 수 있습니다. API AppKit 또는 macOS 관련 없는 경우 있습니다 알 수 있습니다.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

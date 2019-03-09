@@ -6,12 +6,12 @@ ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 60386b3629e8ed9d2fd1ff165cd2c04d9571b51a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ac84d5b28b0f211dccb1697a4b3dbbc9cedf81e9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106236"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670170"
 ---
 # <a name="2d-math-with-cocossharp"></a>CocosSharp 사용한 2D 수치 연산
 
@@ -19,12 +19,12 @@ _이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. Coco
 
 배치 하 고 코드를 사용 하 여 개체를 이동 하는 모든 규모의 개발 게임의 핵심적인 부분입니다. 위치 및 이동 게임 직선을 또는 회전 삼각 함수 사용을 따라 개체를 이동 해야 하는지 여부를 수학를 사용을 해야 합니다. 이 문서는 다음 항목을 설명 합니다.
 
- - 개발속도
+ - 속도
  - 가속
  - CocosSharp 개체 회전
  - 회전을 사용 하 여 개발 속도 사용 하 여
 
-개발자는 강력한 수학 배경이 없거나는 장기-잊어버린 학교에서 이러한 항목 걱정할 필요가 없습니다-이 문서는 개념 bite 큰 조각으로 나누고 실제 예제를 사용 하 여 이론적인 설명을 함께 표시 됩니다. 즉,이 문서는 전통적인 수학 학생 질문에 대답: "때 실제로 필요 합니까이 자료를 사용 하 시겠습니까?"
+개발자는 강력한 수학 배경이 없거나는 장기-잊어버린 학교에서 이러한 항목 걱정할 필요가 없습니다-이 문서는 개념 bite 큰 조각으로 나누고 실제 예제를 사용 하 여 이론적인 설명을 함께 표시 됩니다. 즉,이 문서에서는 문제를 바로 잡았습니다 수학 학생 질문에 답변 됩니다. "때 실제로 필요 합니까이 자료를 사용 하 시겠습니까"?
 
 
 ## <a name="requirements"></a>요구 사항
@@ -32,7 +32,7 @@ _이 가이드에서는 게임 개발에 대 한 2D 수학을 다룹니다. Coco
 코드 샘플 폼을 상속 하는 개체를 사용 하 여 작업을 가정 하지만이 문서 CocosSharp 수학 측면에 중점을 `CCNode`입니다. 또한 이후 `CCNode` 값을 포함 하지 않는 코드 개발 속도 및 가속에 대 한 VelocityX, VelocityY, AccelerationX, 및 AccelerationY 같은 값을 제공 하는 엔터티를 사용 하 여 작업을 가정 합니다. 엔터티에 대 한 자세한 내용은 연습에서 참조 하세요 [CocosSharp의 엔터티](~/graphics-games/cocossharp/entities.md)합니다.
 
 
-## <a name="velocity"></a>개발속도
+## <a name="velocity"></a>속도
 
 이라는 용어를 사용 하는 게임 개발자 *속도* 개체를 – 이동 하는 방법을 설명 하기 위해 특별히 속도 무엇 인가 이동 방향을 한다는 이며 이동 합니다. 
 
@@ -266,7 +266,7 @@ private void HandleInput(System.Collections.Generic.List<CCTouch> touches, C
 
 위의 코드는 Y 매개 변수를 전달 먼저 다음 X 매개 변수를 호출 하는 경우 확인 된 `Atan2` 메서드. 일반적인 X, Y 좌표 위치 순서에서 이전 버전과입니다. 자세한 내용은 [Atan2 문서를 참조 하세요](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx)합니다.
 
-또한 주목할 만한 가치가에서 반환 된 값을 `Atan2` 라디안에서 각도 측정 하는 데 사용 되는 다른 단위는 됩니다. 이 가이드 라디안의 세부 정보를 포함 하지 않습니다 하지만 유의 하는 모든 삼각 함수에는 `System.Math` 네임 스페이스 사용 라디안 값도 CocosSharp 개체에 사용 되기 전에 변환 해야 합니다. Radians 대 한 자세한 정보를 찾을 수 있습니다 [라디안 Wikipedia 페이지에서](http://en.wikipedia.org/wiki/Radian)합니다.
+또한 주목할 만한 가치가에서 반환 된 값을 `Atan2` 라디안에서 각도 측정 하는 데 사용 되는 다른 단위는 됩니다. 이 가이드 라디안의 세부 정보를 포함 하지 않습니다 하지만 유의 하는 모든 삼각 함수에는 `System.Math` 네임 스페이스 사용 라디안 값도 CocosSharp 개체에 사용 되기 전에 변환 해야 합니다. Radians 대 한 자세한 정보를 찾을 수 있습니다 [라디안 Wikipedia 페이지에서](https://en.wikipedia.org/wiki/Radian)합니다.
 
 #### <a name="forward-angle"></a>정방향 각도
 

@@ -1,5 +1,5 @@
 ---
-title: '연습: iOS Objective-c 라이브러리 바인딩'
+title: '연습: IOS Objective-c 라이브러리 바인딩'
 description: 이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실습 연습을 제공 합니다. 정적 Objective-c 라이브러리 바인딩, 컴파일하고 Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 주제를 다룹니다.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118996"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669273"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-c 라이브러리 바인딩
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: IOS Objective-c 라이브러리 바인딩
 
 _이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실습 연습을 제공 합니다. 정적 Objective-c 라이브러리 바인딩, 컴파일하고 Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 주제를 다룹니다._
 
@@ -81,11 +81,11 @@ Apple에 따라 [Xcode FAQ를 사용 하 여 명령줄에서 빌드](https://dev
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - 메시지가 표시 됩니다 명령줄 도구를 설치 하려면를 클릭 합니다 **설치** 단추: [ ![](walkthrough-images/xcode01.png "명령줄 도구를 설치 합니다.")](walkthrough-images/xcode01.png#lightbox)
+    - 메시지가 표시 됩니다 명령줄 도구를 설치 하려면를 클릭 합니다 **설치** 단추:   [![](walkthrough-images/xcode01.png "명령줄 도구를 설치합니다.")](walkthrough-images/xcode01.png#lightbox)
 
-    - 도구를 다운로드 하 고 Apple 서버에서 설치 됩니다. [ ![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
+    - 도구를 다운로드 하 고 Apple 서버에서 설치 됩니다.   [![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
 
-- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드]() 웹 페이지입니다. Apple ID를 사용 하 여 로그인 한 다음 검색 하 고, 명령줄 도구를 다운로드 합니다. [ ![](walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
+- **Apple 개발자를 위한 다운로드** -명령줄 도구 패키지를 사용할 수는 [Apple 개발자를 위한 다운로드](https://developer.apple.com/downloads/index.action) 웹 페이지입니다. Apple ID를 사용 하 여 로그인 하 고 검색할 명령줄 도구를 다운로드 합니다. [![](walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
 
 명령줄 도구를 설치 하는 것에서 연습을 진행할 준비가 된 것입니다.
 
@@ -184,7 +184,7 @@ fat 이진 만들기는 3 단계 프로세스입니다.
 
 이 세 단계는 매우 간단 하 고 나중에 업데이트를 수신 하는 Objective-c 라이브러리 또는 버그 수정 해야 하는 경우를 반복 하는 일을 할 수 있습니다. 이러한 단계를 자동화 하려는 경우 향후 유지 관리 및 지원 iOS 바인딩 프로젝트의이 간소화 됩니다.
 
-셸 스크립트를 이러한 작업을 자동화 하는 사용 가능한 도구가 많이 [rake](http://rake.rubyforge.org/)를 [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치할 때이 연습에 사용할 빌드 시스템에서 정말 make를 설치도 했습니다. 다음은 **메이크파일** iOS 장치 및 모든 라이브러리에 대 한 시뮬레이터에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
+셸 스크립트를 이러한 작업을 자동화 하는 사용 가능한 도구가 많이 [rake](http://rake.rubyforge.org/)를 [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치할 때이 연습에 사용할 빌드 시스템에서 정말 make를 설치도 했습니다. 다음은 **메이크파일** iOS 장치 및 모든 라이브러리에 대 한 시뮬레이터에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -708,7 +708,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**colorPickerControllerDidFinish 처리: 메시지** -를 `ViewController` 가 완료 되 면 iOS에서 메시지를 보내지 `colorPickerControllerDidFinish:` 에 `WeakDelegate`합니다. 생성 해야는 C# 이 메시지를 처리할 수 있는 메서드. 이 작업을 수행 하려면 만듭니다는 C# 메서드 다음 표시 하 고는 `ExportAttribute`합니다. 편집 `ViewController`, 클래스에 다음 메서드를 추가 합니다.
+**colorPickerControllerDidFinish 핸들: 메시지** -합니다 `ViewController` 는 완료 되 면 iOS에서 메시지를 보내지 `colorPickerControllerDidFinish:` 에 `WeakDelegate`합니다. 생성 해야는 C# 이 메시지를 처리할 수 있는 메서드. 이 작업을 수행 하려면 만듭니다는 C# 메서드 다음 표시 하 고는 `ExportAttribute`합니다. 편집 `ViewController`, 클래스에 다음 메서드를 추가 합니다.
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]
@@ -720,7 +720,7 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 ```
 
-응용 프로그램을 실행합니다. 이제 이전에 수행한 것 하지만 강력한 대리자 대신 약한 대리자를 사용 하는 것으로 정확 하 게 동작 합니다. 이 시점에서이 연습을 완료 했습니다. 이제 만들고 Xamarin.iOS 바인딩 프로젝트를 사용 하는 방법 이해 하 고 있어야 합니다.
+애플리케이션을 실행합니다. 이제 이전에 수행한 것 하지만 강력한 대리자 대신 약한 대리자를 사용 하는 것으로 정확 하 게 동작 합니다. 이 시점에서이 연습을 완료 했습니다. 이제 만들고 Xamarin.iOS 바인딩 프로젝트를 사용 하는 방법 이해 하 고 있어야 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -733,6 +733,6 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 유형 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Objective-C 개발자용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
-- [프레임워크 디자인 지침](http://msdn.microsoft.com/library/ms229042.aspx)
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [프레임워크 디자인 지침](https://msdn.microsoft.com/library/ms229042.aspx)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

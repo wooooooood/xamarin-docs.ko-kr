@@ -1,5 +1,5 @@
 ---
-title: 내 버전 정보와 로그는 어디서 찾을 수 있습니까?
+title: 버전 정보 및 로그는 어디에서 확인할 수 있나요?
 description: 이 문서에서는 Xamarin 버전 정보와 로그를 찾는 데 위치를 설명 합니다. 이 정보는 버그 제출 또는 지원 받기 문제를 진단할 때 유용 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,14 +7,14 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2c3ded2233810ff4e903596d65f64097aa3b0445
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118229"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668311"
 ---
-# <a name="where-can-i-find-my-version-information-and-logs"></a>내 버전 정보와 로그는 어디서 찾을 수 있습니까?
+# <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그는 어디에서 확인할 수 있나요?
 
 ## <a name="outline"></a>윤곽선
 
@@ -100,7 +100,7 @@ Android SDK Manager를 열고 위쪽의 스크린샷의 찍을 **도구** 섹션
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-참조: [명령줄 옵션](http://msdn.microsoft.com/library/aa367988.aspx)
+참조: [명령줄 옵션](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Visual Studio 시작, 자세한 정보 표시 로그
 
@@ -108,7 +108,7 @@ msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-참조: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+참조: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Mac 로그
 
@@ -146,7 +146,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 4.  복사 하 여 텍스트 파일에 IDE에서 빌드 출력을 붙여넣습니다.
      - Visual Studio (Windows): **보기 > 출력 >에서 출력 보기: 빌드**
-     - Mac 용 visual Studio: **보기 > 패드 > 오류 > 빌드 출력 (탭)**
+     - Visual Studio for Mac: **보기 > 패드 > 오류 > 빌드 출력 (탭)**
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Xamarin.iOS 및 Xamarin.Android 앱에 대 한 로그 디버그
 
@@ -160,7 +160,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 **보기 > 출력 >에서 출력 보기: 디버그**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](http://developer.android.com/tools/help/adb.html) logcat 로그
+### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](https://developer.android.com/tools/help/adb.html) logcat 로그
 
 실행 한 후 합니다 `adb` 명령에 다시 연결 합니다 **android_logcat.txt** 바탕 화면에서 파일입니다. 이러한 지침 연결 된 장치가 하나만 있다고 가정 합니다.
 

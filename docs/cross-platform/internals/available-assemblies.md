@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8882a7cd36eab5e7905585f5de4d6585dfb53439
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113354"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672263"
 ---
 # <a name="available-assemblies"></a>사용 가능한 어셈블리
 
@@ -53,22 +53,22 @@ Xamarin 프로젝트를 사용할 수도 [.NET 이식 가능한 클래스 라이
 > |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) 를 사용 하 여 [일부 기능이 제거](~/ios/data-cloud/system.data.md)합니다.|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx) 를 사용 하 여 [일부 기능이 제거](~/ios/data-cloud/system.data.md)합니다.|✓|✓|✓|
 > |System.Data.&#8203;Services.&#8203;Client.dll|전체 oData 클라이언트입니다.|✓|✓|✓|
 > |System.IO.&#8203;Compression| |✓|✓|✓|
 > |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.Net.&#8203;Http.dll| |✓|✓|✓|
 > |System.&#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime.&#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.&#8203;ServiceModel.dll|에 있는로 WCF 스택에 [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|에 있는로 WCF 스택에 [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및: <br />시스템<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |시스템입니다. &#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx);의 일부로 [System.Data](~/ios/data-cloud/system.data.md) 지원 합니다.|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), 다음 네임 스페이스의 형식 및: <br />시스템<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |시스템입니다. &#8203;Transactions.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx);의 일부로 [System.Data](~/ios/data-cloud/system.data.md) 지원 합니다.|✓|✓|✓|
 > |System.Web.&#8203;Services.dll|제거 된 서버 기능을 사용 하 여.NET 3.5 프로필에서 기본 웹 서비스 비교.|✓|✓|✓|
 > |System.&#8203;Windows.dll| |✓|✓|✓|
-> |System.&#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml.&#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|이 어셈블리는 C# 바인딩을 CocoaTouch API를 포함합니다. 이 통합 iOS 프로젝트에만 사용 됩니다.|✓| | |
 > |Java.Interop.dll| | |✓| |

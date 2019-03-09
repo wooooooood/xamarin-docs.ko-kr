@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 5dae8f1907b9a61018e335a8fe19ad319d95741d
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207871"
 ---
+
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -113,7 +108,7 @@ Xamarin.Forms는 Windows 8.1 및 Windows Phone 8.1에 더 이상 지원합니다
 
 .NET Standard 2.0 라이브러리는 Windows 10 Mobile 버전을 지원 하지 않습니다. 따라서.NET Standard 라이브러리를 사용 하 여 Xamarin.Forms 응용 프로그램을 Windows 10 Mobile 장치에서 실행 되지 않습니다. Xamarin.Forms 응용 프로그램 계속 10.0.16299.0 버전, Windows 10 desktop 이상 실행 합니다.
 
-Xamarin.Forms는 미리 보기를 지원 합니다 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), 및 [Tizen](/xamarin-forms/platform/other/tizen.md) 플랫폼입니다.
+Xamarin.Forms는 미리 보기를 지원 합니다 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), 및 [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼입니다.
 
 ### <a name="chapter-summaries"></a>챕터 요약
 

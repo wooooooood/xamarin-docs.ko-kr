@@ -1,25 +1,20 @@
 ---
 title: Xamarin Profiler
-description: 이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다.
+description: '이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다.'
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 237ee1a39907f9ebf0eb88db9fff1fbdab691f5e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112600"
 ---
+
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
 _이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다._
 
 응용 프로그램의 성공 최종 사용자 환경에 따라 달라 집니다. 개발자로 서 수 구현한 정말 놀라운 기능 일부 앱에서 하지만 앱 느림 또는 전체 크래시 인 경우 사용자는 가능성이 없앨 수 있습니다.
 
-지금까지 Mono가을 갖춘 강력한 명령줄 프로파일러 이라는 Mono 런타임에서 실행 되는 프로그램에 대 한 정보를 수집 합니다 [Mono 로그 프로파일러](http://www.mono-project.com/docs/debug+profile/profile/profiler/)합니다. Xamarin Profiler Mono 로그 프로파일러 및 Android, iOS, tvOS 및 Mac 및 Android, ios, Mac 응용 프로그램 및 Windows에서 tvOS 응용 프로그램을 프로 파일링 지원에 대 한 그래픽 인터페이스를 표시 합니다.
+지금까지 Mono가을 갖춘 강력한 명령줄 프로파일러 이라는 Mono 런타임에서 실행 되는 프로그램에 대 한 정보를 수집 합니다 [Mono 로그 프로파일러](https://www.mono-project.com/docs/debug+profile/profile/profiler/)합니다. Xamarin Profiler Mono 로그 프로파일러 및 Android, iOS, tvOS 및 Mac 및 Android, ios, Mac 응용 프로그램 및 Windows에서 tvOS 응용 프로그램을 프로 파일링 지원에 대 한 그래픽 인터페이스를 표시 합니다.
 
 Xamarin Profiler에 계측 프로 파일링 하기 위해 사용할 수 있는 많은-할당, 주기 및 시간 Profiler. 이 가이드에서는 이러한 기기가 무엇을 측정 하 고 응용 프로그램을 분석 하는 방법을 설명 하 고 각 화면에 표시 되는 데이터의 의미를 명확히 구분 합니다.
 
@@ -53,11 +48,11 @@ Xamarin Profiler 응용 프로그램에서 프로 파일링 하는 방법을 개
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-현재 (통해 Mac 용 Visual Studio) Mac에서 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 응용 프로그램을 테스트 하려면 Xamarin Profiler는 사용할 수 있습니다. 프로파일러 IDE에서 별도 프로세스 이며 따라서 Mac 용 Visual Studio에서 시작, 하는 것 외에도 사용할 수 있습니다 독립 실행형 응용 프로그램으로.exe를 검사 하 고 `.mlpd` 에서 생성 된 파일을 [mono 로그 프로파일러](http://www.mono-project.com/docs/debug+profile/profile/profiler/).
+현재 (통해 Mac 용 Visual Studio) Mac에서 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 응용 프로그램을 테스트 하려면 Xamarin Profiler는 사용할 수 있습니다. 프로파일러 IDE에서 별도 프로세스 이며 따라서 Mac 용 Visual Studio에서 시작, 하는 것 외에도 사용할 수 있습니다 독립 실행형 응용 프로그램으로.exe를 검사 하 고 `.mlpd` 에서 생성 된 파일을 [mono 로그 프로파일러](https://www.mono-project.com/docs/debug+profile/profile/profiler/).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-현재 Visual Studio 및 Mac 용 Visual Studio) (통해 Windows에서 Xamarin.Android 앱을 테스트 하려면 Xamarin Profiler는 사용할 수 있습니다. 프로파일러 IDE에서 별도 프로세스 이며 따라서 Visual Studio에서를 실행 하는 것 외에도 사용할 수 있습니다 독립 실행형 응용 프로그램으로.exe를 검사 하 고 `.mlpd` 에서 생성 된 파일을 [mono 로그 프로파일러](http://www.mono-project.com/docs/debug+profile/profile/profiler/) .
+현재 Visual Studio 및 Mac 용 Visual Studio) (통해 Windows에서 Xamarin.Android 앱을 테스트 하려면 Xamarin Profiler는 사용할 수 있습니다. 프로파일러 IDE에서 별도 프로세스 이며 따라서 Visual Studio에서를 실행 하는 것 외에도 사용할 수 있습니다 독립 실행형 응용 프로그램으로.exe를 검사 하 고 `.mlpd` 에서 생성 된 파일을 [mono 로그 프로파일러](https://www.mono-project.com/docs/debug+profile/profile/profiler/) .
 
 -----
 
@@ -196,7 +191,7 @@ Xamarin Profiler 아래 그림과 같이 5 개 섹션으로 구성 됩니다.
 - **계측 목록** – 모든 계측 프로 파일링 세션에 대 한 로드를 나열 합니다.
 - **차트 그림** – 이러한 차트와 가로 방향으로 계측 목록에서 관련 계측 관련 됩니다. 눈금을 변경 하려면 (시간 Profiler 아래에 표시 됨) 슬라이더를 사용할 수 있습니다.
 - **세부 정보 영역 계측** -현재 계측의 선택한 뷰에서 표시 되는 데이터를 포함 합니다. 이러한 뷰 아래 섹션에서 자세히 살펴보겠습니다.
-- **검사기 보기** –이 분할 된 컨트롤에서 선택할 수 있는 섹션을 포함 합니다. 섹션 선택 계측에 종속 되며 포함: 구성 설정, 통계, 스택 추적 정보 및 경로 루트입니다.
+- **검사기 보기** –이 분할 된 컨트롤에서 선택할 수 있는 섹션을 포함 합니다. 섹션을 선택 하는 계측에 종속 되어 포함 되어 있습니다. 구성 설정, 통계, 스택 추적 정보 및 경로 루트입니다.
 
 ### <a name="allocations"></a>할당
 
@@ -323,7 +318,7 @@ Xamarin Profiler 아래 그림과 같이 5 개 섹션으로 구성 됩니다.
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>SGen 가비지 수집기 및 프로 파일링
 
-합니다 [SGen](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/) 가비지 수집기는 모든 Xamarin 플랫폼에 사용 됩니다.
+합니다 [SGen](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/) 가비지 수집기는 모든 Xamarin 플랫폼에 사용 됩니다.
 
 SGen은 세 가지 힙 응용 프로그램의 개체를 할당 하는 세대 GC에-학교, 주요 힙 및 큰 개체 공간입니다. 이 가비지 수집이 더 실행할 수 있습니다. SGen은 현재 Xamarin.Android에 대 한 기본 GC 및 Xamarin.iOS 통합 응용 프로그램입니다.
 

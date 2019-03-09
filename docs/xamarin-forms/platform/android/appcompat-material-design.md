@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209318"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667492"
 ---
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
@@ -114,7 +114,7 @@ Android 프로젝트에 다음 세 개의 파일이 만들고 아래 내용에 �
 ```
 
 탭의 무게를 비롯 한 탭에 대 한 몇 가지 속성을 설정한 `fill` 및 모드를 `fixed`입니다.
-이 전환 하려는 여러 탭이 있는 경우-스크롤 가능 하려면 Android를 자세히 읽습니다 [TabLayout 설명서](http://developer.android.com/reference/android/support/design/widget/TabLayout.html) 에 대해 자세히 알아보세요.
+이 전환 하려는 여러 탭이 있는 경우-스크롤 가능 하려면 Android를 자세히 읽습니다 [TabLayout 설명서](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) 에 대해 자세히 알아보세요.
 
 **Resources/layout/Toolbar.axml**
 

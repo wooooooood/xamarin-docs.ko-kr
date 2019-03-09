@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 12a07be4adb32e8d9461a00e5fdea52d9b930848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117852"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666427"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
@@ -40,11 +40,11 @@ MonoGame UWP 앱 개발에 필요 합니다.
 필요한 모든 리소스를 설치한 후 Windows 10 컴퓨터에서 개발자 모드가 활성화 된 Visual Studio를 사용 하 여 이러한 단계에 따라 새 MonoGame 프로젝트를 만들 수 있습니다.
 
 1. 선택 **파일** > **새** > **프로젝트...**
-1. 선택 된 **설치** > **템플릿** > **시각적 C#**   >  **MonoGame** 범주: 
+1. 선택 된 **설치** > **템플릿** > **시각적 C#**   >  **MonoGame** 범주:
 
     ![](uwp-images/image1.png "MonoGame 범주")
 
-1. 선택 된 **MonoGame Windows 10 유니버설 프로젝트** 옵션: 
+1. 선택 된 **MonoGame Windows 10 유니버설 프로젝트** 옵션:
 
     ![](uwp-images/image2.png "MonoGame Windows 10 유니버설 프로젝트 옵션 선택")
 
@@ -76,7 +76,7 @@ UWP 프로젝트는 동일한 프로젝트에서 모든 Windows 10 장치에 배
 
 ![](uwp-images/remote.png "원격 컴퓨터에 대상 전환 하 고 Xbox 된 IP 주소를 입력 하 여 UWP 앱을 배포할 수 있습니다.")
 
-Xbox One에 흰색 테두리 Tv에 대 한 안전 하지 않은 영역을 나타냅니다. 자세한 내용은 참조는 [안전 영역 섹션](#Safe_Area_on_Xbox_One)합니다.
+Xbox One에 흰색 테두리 Tv에 대 한 안전 하지 않은 영역을 나타냅니다. 자세한 내용은 참조는 [안전 영역 섹션](#safe-area-on-xbox-one)합니다.
 
 ![](uwp-images/safearea.png "Xbox One에 흰색 테두리 Tv에 대 한 안전 하지 않은 영역을 나타내는")
 
@@ -92,7 +92,7 @@ MonoGame Xbox One에 대 한 안전 영역 고려 템플릿과 흰색 테두리�
 
 파일에서 직접 또는 MonoGame 프로젝트에서 콘텐츠를 참조할 수 있습니다 합니다 [MonoGame 콘텐츠 파이프라인](~/graphics-games/cocossharp/content-pipeline/index.md)합니다. 작은 게임 프로젝트 파일에서 로드 하는 단순성에서 이점을 얻을 수 있습니다. 대규모 프로젝트를 콘텐츠 파이프라인을 사용 하 여 콘텐츠 크기를 줄이고 로드 시간이 최적화를 활용 합니다. Xbox 360에서 XNA와 달리는 `System.IO.File` 클래스는 Xbox One UWP 앱에서 사용할 수 있습니다.
 
-콘텐츠 파이프라인을 사용 하 여 콘텐츠를 로드에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](~/graphics-games/cocossharp/content-pipeline/index.md)합니다. 
+콘텐츠 파이프라인을 사용 하 여 콘텐츠를 로드에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](~/graphics-games/cocossharp/content-pipeline/index.md)합니다.
 
 ### <a name="loading-content-from-file"></a>파일에서 콘텐츠를 로드합니다.
 

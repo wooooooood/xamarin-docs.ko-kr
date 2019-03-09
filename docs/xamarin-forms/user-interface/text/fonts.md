@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
-ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557055"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669559"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -140,7 +140,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 ### <a name="ios"></a>iOS
 
 먼저 로드 됨을 보장 다음 Xamarin.Forms를 사용 하 여 이름으로 참조 하 여 사용자 지정 글꼴을 표시 하는 것이 불가능 `Font` 메서드.
-지침을 따릅니다 [이 블로그 게시물](http://blog.xamarin.com/custom-fonts-in-ios/):
+지침을 따릅니다 [이 블로그 게시물](https://blog.xamarin.com/custom-fonts-in-ios/):
 
 1. 글꼴 파일 추가 **빌드 작업: BundleResource**, and
 2. 업데이트를 **Info.plist** 파일 (**응용 프로그램에서 제공 하는 글꼴**, 또는 `UIAppFonts`키,), 한 다음

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
-ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
+ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307920"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668350"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 
@@ -27,7 +27,7 @@ ms.locfileid: "56307920"
 
 일반적인 Mono/.NET, 달리 iPhone의 코드는 정적으로 요청 시 JIT 컴파일러로 컴파일할 대신 미리 컴파일됩니다.
 
-Mono [전체 AOT](http://www.mono-project.com/docs/advanced/aot/#full-aot) 기술에는 제네릭 관련 하 여 몇 가지 제한 사항, 이러한는 때문에 컴파일 시간에 모든 가능한 제네릭 인스턴스화를 미리 확인할 수 있습니다. 코드는을 사용 하 여 시간 컴파일러에서 런타임에 컴파일된 항상 일반.NET 또는 Mono 런타임 문제가 아닙니다. 하지만이 Xamarin.iOS와 같은 정적 컴파일러에 대 한 문제를 제기 합니다.
+Mono [전체 AOT](https://www.mono-project.com/docs/advanced/aot/#full-aot) 기술에는 제네릭 관련 하 여 몇 가지 제한 사항, 이러한는 때문에 컴파일 시간에 모든 가능한 제네릭 인스턴스화를 미리 확인할 수 있습니다. 코드는을 사용 하 여 시간 컴파일러에서 런타임에 컴파일된 항상 일반.NET 또는 Mono 런타임 문제가 아닙니다. 하지만이 Xamarin.iOS와 같은 정적 컴파일러에 대 한 문제를 제기 합니다.
 
 개발자를 실행 하는 일반적인 문제 중 일부는 다음과 같습니다.
 

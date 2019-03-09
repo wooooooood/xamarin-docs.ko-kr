@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 38422682849de60a3f43e513ef48011d32b030ef
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579871"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672627"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.iOS에서 파일 시스템 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FileSystemSampleCode/)
 
-Xamarin.iOS를 사용할 수 있습니다 및 `System.IO` 의 클래스를 *.NET 클래스 라이브러리 (BCL (기본)* iOS 파일 시스템에 액세스할 수 있습니다. 합니다 `File` 클래스를 사용 하면 생성, 삭제 및 파일을 읽 및 `Directory` 클래스 만들기, 삭제 또는 디렉터리의 내용을 열거할 수 있습니다. 사용할 수도 있습니다 `Stream` 뛰어난 파일 작업 (예: 파일 내의 압축 또는 위치 검색)에 대 한 제어를 제공할 수 있는 하위 클래스입니다.
+Xamarin.iOS를 사용할 수 있습니다 및 `System.IO` 의 클래스를 *.NET 클래스 라이브러리 (BCL (기본)* iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 사용할 수도 있습니다 `Stream` 뛰어난 파일 작업 (예: 파일 내의 압축 또는 위치 검색)에 대 한 제어를 제공할 수 있는 하위 클래스입니다.
 
 iOS 응용 프로그램에서 악성 앱 사용자를 보호 하 고 응용 프로그램 데이터의 보안을 유지 하기 위해 파일 시스템을 사용 하 여 수행할 수 있는 몇 가지 제한 사항이 적용 합니다. 이러한 제한의 일부인를 *샌드박스 응용 프로그램* – 파일, 기본 설정, 네트워크 리소스, 하드웨어 등 응용 프로그램의 액세스를 제한 하는 규칙의 집합입니다. 응용 프로그램은 홈 디렉터리 (설치 된 위치) 내에서 파일 읽기 및 쓰기 제한 다른 응용 프로그램의 파일 액세스할 수 없습니다.
 
@@ -357,5 +357,5 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 ## <a name="related-links"></a>관련 링크
 
 - [파일 시스템 샘플 코드](https://developer.xamarin.com/samples/FileSystemSampleCode/)
-- [파일 시스템 프로그래밍 가이드](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
-- [사용자 앱에서 지 원하는 형식 파일을 등록](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)
+- [파일 시스템 프로그래밍 가이드](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
+- [사용자 앱에서 지 원하는 형식 파일을 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

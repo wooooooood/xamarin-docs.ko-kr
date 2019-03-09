@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9ec27402aefd28ded4cf53e7e9fa52eedd2b86b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63164d90419f3a49d9eb52a52d02e05fbee43dbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103013"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667622"
 ---
 # <a name="gridview"></a>GridView
 
@@ -22,7 +22,7 @@ ms.locfileid: "50103013"
 
 명명 된 새 프로젝트를 시작 **HelloGridView**합니다.
 
-를 사용 하려는 일부 사진 찾기 또는 [이러한 샘플 이미지를 다운로드](http://developer.android.com/shareables/sample_images.zip)합니다. 프로젝트의 이미지 파일을 추가할 **리소스/Drawable** 디렉터리입니다. 에 **속성** 창에서 빌드 작업을 각각에 대 한 설정 **AndroidResource**합니다.
+를 사용 하려는 일부 사진 찾기 또는 [이러한 샘플 이미지를 다운로드](https://developer.android.com/shareables/sample_images.zip)합니다. 프로젝트의 이미지 파일을 추가할 **리소스/Drawable** 디렉터리입니다. 에 **속성** 창에서 빌드 작업을 각각에 대 한 설정 **AndroidResource**합니다.
 
 엽니다는 **Resources/Layout/Main.axml** 파일과 다음 삽입:
 
@@ -153,7 +153,7 @@ public class ImageAdapter : BaseAdapter
 
 남았습니다 정의 하는 것을 `thumbIds` 드로어 블 리소스의 배열입니다.
 
-응용 프로그램을 실행합니다. 표 레이아웃 코드는 다음과 같아야 합니다.
+애플리케이션을 실행합니다. 표 레이아웃 코드는 다음과 같아야 합니다.
 
 [![15 개 이미지를 표시 하는 GridView의 스크린샷 예제](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 

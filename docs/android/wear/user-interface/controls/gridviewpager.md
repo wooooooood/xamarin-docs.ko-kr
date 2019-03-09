@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112769"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670924"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
@@ -19,7 +19,7 @@ ms.locfileid: "50112769"
 
 ![정사각형 화면 GridViewPager의 예에서는 스크린 샷](gridviewpager-images/gridviewpager.png)
 
-먼저 추가 합니다 [Xamarin Android Wear 지원](http://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지를 프로젝트입니다.
+먼저 추가 합니다 [Xamarin Android Wear 지원](https://www.nuget.org/packages/Xamarin.Android.Wear/) NuGet 패키지를 프로젝트입니다.
 
 레이아웃 XML은 다음과 같습니다.
 
@@ -31,8 +31,8 @@ ms.locfileid: "50112769"
     android:keepScreenOn="true" />
 ```
 
-만들기를 [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(또는와 같은 하위 클래스입니다. [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+만들기를 [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(또는와 같은 하위 클래스입니다. [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 사용자로 표시 하도록 뷰를 제공 하려면 다음을 탐색 합니다.
 
 합니다 [샘플 어댑터](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) 에 대 한 재정의 포함 하 여 필요한 메서드를 구현 하는 방법을 보여 줍니다 `RowCount`합니다 `GetColumnCount`, `GetBackground`, 및 `GetFragment`

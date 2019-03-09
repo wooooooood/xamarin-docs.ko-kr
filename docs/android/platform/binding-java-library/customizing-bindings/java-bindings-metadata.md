@@ -1,5 +1,5 @@
 ---
-title: Java 바인딩 메타 데이터
+title: Java 바인딩 메타데이터
 description: C#xamarin.android에서 코드에서 Java 기본 인터페이스 (JNI)를 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘에는 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.Android는 이러한 바인딩을 생성 하는 도구를 제공 합니다. 이 도구를 사용 하면 네임 스페이스를 수정 하 고 멤버 이름 바꾸기와 같은 절차를 허용 하는 메타 데이터를 사용 하 여 바인딩을 만들어지는 방법을 개발자 제어가 있습니다. 이 문서는 메타 데이터의 작동 원리에 대해 설명, 해당 메타 데이터 특성을 요약 한 것이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는 방법에 설명 하 고, 지원 합니다.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113406"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669897"
 ---
-# <a name="java-bindings-metadata"></a>Java 바인딩 메타 데이터
+# <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
 _C#xamarin.android에서 코드에서 Java 기본 인터페이스 (JNI)를 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘에는 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.Android는 이러한 바인딩을 생성 하는 도구를 제공 합니다. 이 도구를 사용 하면 네임 스페이스를 수정 하 고 멤버 이름 바꾸기와 같은 절차를 허용 하는 메타 데이터를 사용 하 여 바인딩을 만들어지는 방법을 개발자 제어가 있습니다. 이 문서는 메타 데이터의 작동 원리에 대해 설명, 해당 메타 데이터 특성을 요약 한 것이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는 방법에 설명 하 고, 지원 합니다._
 
@@ -77,7 +77,7 @@ Xamarin.Android **Java 바인딩 라이브러리** 라고도 하는 도구를 �
 ## <a name="metadataxml-transform-file"></a>Metadata.xml 변환 파일
 
 이미 배웠습니다, 파일 처럼 **Metadata.xml** 바인딩 생성기에서 바인딩 어셈블리 생성에 영향을 하는 데 사용 됩니다.
-메타 데이터 형식은 사용 하 여 [XPath](https://www.w3.org/TR/xpath/) 구문와 거의 동일한 합니다 *GAPI 메타 데이터* 에 설명 된 [GAPI 메타 데이터](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) 가이드입니다. 이 구현 거의 완전히 구현 하는 XPath 1.0 이며 따라서 1.0 표준에 항목을 지원 합니다. 이 파일은 변경, 추가, 숨기기 또는 API 파일에서 임의의 요소 또는 특성을 이동 하는 강력한 XPath 기반 메커니즘. 모든 메타 데이터 사양에 규칙 요소는 규칙을 적용 하는 노드를 식별 경로 특성을 포함 합니다. 규칙은 다음 순서 대로 적용 됩니다.
+메타 데이터 형식은 사용 하 여 [XPath](https://www.w3.org/TR/xpath/) 구문와 거의 동일한 합니다 *GAPI 메타 데이터* 에 설명 된 [GAPI 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) 가이드입니다. 이 구현 거의 완전히 구현 하는 XPath 1.0 이며 따라서 1.0 표준에 항목을 지원 합니다. 이 파일은 변경, 추가, 숨기기 또는 API 파일에서 임의의 요소 또는 특성을 이동 하는 강력한 XPath 기반 메커니즘. 모든 메타 데이터 사양에 규칙 요소는 규칙을 적용 하는 노드를 식별 경로 특성을 포함 합니다. 규칙은 다음 순서 대로 적용 됩니다.
 
 * **노드 추가** &ndash; 경로 특성에 지정 된 자식 노드를 추가 합니다.
 * **attr** &ndash; 경로 특성에 지정 된 요소의 특성의 값을 설정 합니다.
@@ -223,7 +223,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 `managedType` 메서드의 반환 형식을 변경 하는 데 사용 됩니다. 일부 상황에서 바인딩 생성기 올바르게 유추 하지는 컴파일 시간 오류가 발생에서 하면 Java 메서드의 반환 형식. 이 경우 한 가지 해결책은 반환 형식의 메서드를 변경 하기 위해서입니다.
 
-바인딩 생성기는가 예를 들어 다음 Java 메서드의 경우 `de.neom.neoreadersdk.resolution.compareTo()` 반환 해야 합니다는 `int`, 오류 메시지의 결과 **오류 CS0535: ' DE 합니다. Neom.Neoreadersdk.Resolution' 인터페이스 멤버 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)' 구현 하지 않습니다**합니다. 다음 코드 조각에는 생성 된 반환 형식을 변경 하는 방법을 보여 줍니다. C# 메서드에서 `int` 에 `Java.Lang.Object`: 
+바인딩 생성기는가 예를 들어 다음 Java 메서드의 경우 `de.neom.neoreadersdk.resolution.compareTo()` 반환할지를 `int`, 오류 메시지의 결과 **오류 CS0535: ' DE 합니다. Neom.Neoreadersdk.Resolution' 인터페이스 멤버 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)' 구현 하지 않습니다**합니다. 다음 코드 조각에는 생성 된 반환 형식을 변경 하는 방법을 보여 줍니다. C# 메서드에서 `int` 에 `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -244,7 +244,7 @@ NavigationManager.2DSignNextManueverEventArgs
     name="managedReturn">Java.Lang.IAppendable</attr>
 ```
 
-### <a name="obfuscated"></a>난독 처리
+### <a name="obfuscated"></a>obfuscated
 
 Java 라이브러리를 난독 처리 하는 도구 Xamarin.Android 바인딩 생성기를 생성 하는 기능을 방해할 수 C# 래퍼 클래스입니다. 난독 처리 된 클래스의 특성 포함: * 클래스 이름에는 **$**, 즉 **$.class** * 클래스 이름을 완전히 손상 된 소문자 문자 즉,  **a.class**
 
@@ -347,4 +347,4 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 - [Jni 작업](~/android/platform/java-integration/working-with-jni.md)
 - [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)
-- [GAPI 메타 데이터](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

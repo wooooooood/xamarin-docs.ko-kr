@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 347793934b01d26d22455189c12b0f1d5213a40b
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170977"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671980"
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
-Mono를 사용 하는 Xamarin.Android [간단한 세대 가비지 수집기](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/)합니다. 이 두 세대를 사용 하 여 표시 및 스윕 가비지 수집기와 *큰 개체 공간*, 두 종류의 컬렉션을 사용 하 여: 
+Mono를 사용 하는 Xamarin.Android [간단한 세대 가비지 수집기](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/)합니다. 이 두 세대를 사용 하 여 표시 및 스윕 가비지 수집기와 *큰 개체 공간*, 두 종류의 컬렉션을 사용 하 여: 
 
 -   부 컬렉션 (Gen0 수집 힙) 
 -   주요 컬렉션 (Gen1 수집 하 고 큰 개체 공간 힙)입니다. 
@@ -37,14 +37,14 @@ Mono를 사용 하는 Xamarin.Android [간단한 세대 가비지 수집기](htt
 -   **관리 되는 개체**: 형식 개라면 *하지* 에서 상속 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 예 [System.String](xref:System.String)합니다. 
     이러한 작업은 GC가 정상적으로 수집 됩니다. 
 
--   **Java 개체**: Java 형식에는 Android 런타임 VM 내에 존재 하지만 Mono VM에 노출 되지 않습니다. 이러한 따분한 되며 더 이상 설명 하지 않습니다. 이러한 작업은 Android 런타임 VM에서 일반적으로 수집 됩니다. 
+-   **Java 개체**: Android 런타임 VM 내에서 있지만 Mono VM에 노출 되지 않습니다는 Java 형식입니다. 이러한 따분한 되며 더 이상 설명 하지 않습니다. 이러한 작업은 Android 런타임 VM에서 일반적으로 수집 됩니다. 
 
 -   **개체를 피어 링**: 구현 하는 형식 [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) , 모든 예를 들어 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 및 [Java.Lang.Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) 하위 클래스입니다. 이러한 형식의 인스턴스는 두 개의 "halfs"를 *관리 되는 피어* 와 *네이티브 피어*합니다. 관리 되는 피어가의 인스턴스는 C# 클래스입니다. 기본 피어가 Android 런타임 VM 내에서 Java 클래스의 인스턴스 및 C# [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) 속성에는 기본 피어 JNI 전역 참조를 포함 합니다. 
 
 
 기본 피어는 다음과 같은 두 종류가 있습니다.
 
--   **Framework 피어** : 예: Xamarin.Android의 아무 것도 알고 있는 "Normal" Java 형식 [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)합니다.
+-   **Framework 피어** : 예를 들어 Xamarin.Android의 아무 것도 알고 있는 "일반" Java 형식 [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)합니다.
 
 -   **사용자 피어** : [Android 호출 가능 래퍼](~/android/platform/java-integration/working-with-jni.md) 응용 프로그램 내에 있는 각 Java.Lang.Object 하위 클래스에 대 한 빌드 시 생성 되는 합니다.
 
@@ -69,7 +69,7 @@ Mono 컬렉션은 재미 이뤄지는 위치입니다. 관리 되는 개체는 �
 
 ## <a name="object-cycles"></a>개체 주기
 
-피어 개체는 Android 런타임 및 Mono VM 내에 논리적으로 존재 합니다. 예를 들어를 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 관리 되는 피어 인스턴스가 해당 갖습니다 [android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) framework 피어 Java 인스턴스. 상속 되는 모든 개체 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 두 Vm 내에서 표현이를 예상할 수 있습니다. 
+피어 개체는 Android 런타임 및 Mono VM 내에 논리적으로 존재 합니다. 예를 들어를 [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 관리 되는 피어 인스턴스가 해당 갖습니다 [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) framework 피어 Java 인스턴스. 상속 되는 모든 개체 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 두 Vm 내에서 표현이를 예상할 수 있습니다. 
 
 두 Vm에서 표현이 있는 모든 개체는 수명이 단일 VM 내 에서만 표시 되는 개체를 비교 하 여 확장 (같은 [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). 호출 [GC 합니다. 수집](xref:System.GC.Collect) Xamarin.Android GC 수집 하기 전에 VM 중 하나에서 개체 참조 되지 않으면 확인 하기 때문에 반드시 이러한 개체를 수집 하지 않습니다. 
 
@@ -78,7 +78,7 @@ Mono 컬렉션은 재미 이뤄지는 위치입니다. 관리 되는 개체는 �
 
 ## <a name="automatic-collections"></a>자동 컬렉션
 
-부터는 [릴리스 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), gref 임계값이 초과 하는 경우 자동으로 Xamarin.Android 전체 GC를 수행 합니다. 이 임계값은 90%를 플랫폼에 대해 알려진된 최대 grefs: 에뮬레이터 (최대 2000)에서 1800 grefs 및 46800 grefs 하드웨어 (최대 52000). *참고:* Xamarin.Android에서 만든 grefs 계산 [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), 및 프로세스에서 만든 다른 grefs에 대 한 알 수 없습니다. 이 경험적 접근 *만*합니다. 
+부터는 [릴리스 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), gref 임계값이 초과 하는 경우 자동으로 Xamarin.Android 전체 GC를 수행 합니다. 이 임계값은 90%를 플랫폼에 대해 알려진된 최대 grefs: (최대 2000) 에뮬레이터에서 1800 grefs 및 46800 grefs 하드웨어 (최대 52000). *참고:* Xamarin.Android에서 만든 grefs 계산 [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), 및 프로세스에서 만든 다른 grefs에 대 한 알 수 없습니다. 이 경험적 접근 *만*합니다. 
 
 자동 컬렉션을 수행 하는 경우 디버그 로그에 다음과 비슷한 메시지가 표시 됩니다.
 
@@ -102,10 +102,10 @@ GC 브리지의 Mono 가비지 컬렉션 및 수치는 피어 아웃 개체는 �
 
 이 복잡 한 프로세스는의 서브 클래스를 사용 하면 어떤 `Java.Lang.Object` 개체를 자유롭게 참조;는 Java에서 개체에 바인딩될 수 제한이 제거 C#합니다. 이러한 복잡성 때문에 브리지 프로세스는 매우 많은 비용이 소요 될 수 있습니다 하 고 응용 프로그램에 눈에 띄는 일시 중지 될 수 있습니다. 응용 프로그램은 중요 한 일시 중지에 발생 하는 경우 다음 세 가지 GC 브리지 구현 중 하나를 조사할 가치가: 
 
--   **Tarjan** -GC 브리지의 완전히 새로운 디자인을 기반으로 [Robert Tarjan 알고리즘 및 이전 버전과 전파를 참조](http://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)합니다.
+-   **Tarjan** -GC 브리지의 완전히 새로운 디자인을 기반으로 [Robert Tarjan 알고리즘 및 이전 버전과 전파를 참조](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm)합니다.
     이 시뮬레이트된 워크 로드에서 최상의 성능을 있으며 실험적 코드의 더 큰 공유에 있습니다. 
 
--   **새** -원래 코드 정방형 동작의 두 인스턴스를 수정 하는 핵심 알고리즘 유지의 크게 변화 (기준 [Kosaraju의 알고리즘](http://en.wikipedia.org/wiki/Kosaraju's_algorithm) 구성 요소를 연결 된 강력한 찾기에 대 한). 
+-   **새** -원래 코드 정방형 동작의 두 인스턴스를 수정 하는 핵심 알고리즘 유지의 크게 변화 (기준 [Kosaraju의 알고리즘](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) 구성 요소를 연결 된 강력한 찾기에 대 한). 
 
 -   **이전** -1962 (세 가지 가장 안정적인 것으로 간주). 이 응용 프로그램 사용 해야 하는 다리를 `GC_BRIDGE` 일시 중지가 허용 합니다. 
 
@@ -166,7 +166,7 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-위 내용은 안전 하기 때문에 피어는 [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) Framework 피어 이며 참조 반환 *하지* 사용자 피어. 합니다 `Dispose()` 끝날 때 호출 합니다 `using` 블록 관리 되는 관계의 연결이 끊어집니다 [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) 및 프레임 워크 [Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) Java 인스턴스가 있는 인스턴스 Android 런타임 해야 하는 즉시 수집 합니다. 결과 *되지* 사용자 피어에게 피어 인스턴스가 참조 하는 경우 안전 하 게 일 "external" 정보를 사용 하 고 여기 *알고* 는 합니다 `Drawable` 사용자 피어를 참조할 수 없습니다 이므로 `Dispose()` 호출 이 안전 합니다. 
+위 내용은 안전 하기 때문에 피어는 [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) Framework 피어 이며 참조 반환 *하지* 사용자 피어. 합니다 `Dispose()` 끝날 때 호출 합니다 `using` 블록 관리 되는 관계의 연결이 끊어집니다 [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) 및 프레임 워크 [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) Java 인스턴스가 있는 인스턴스 Android 런타임 해야 하는 즉시 수집 합니다. 결과 *되지* 사용자 피어에게 피어 인스턴스가 참조 하는 경우 안전 하 게 일 "external" 정보를 사용 하 고 여기 *알고* 는 합니다 `Drawable` 사용자 피어를 참조할 수 없습니다 이므로 `Dispose()` 호출 이 안전 합니다. 
 
 
 #### <a name="disposing-other-types"></a>다른 형식 삭제 
@@ -345,22 +345,22 @@ class BetterActivity : Activity {
 
 
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>구성하기
 
 Xamarin.Android 가비지 수집기를 설정 하 여 구성할 수 있습니다는 `MONO_GC_PARAMS` 환경 변수입니다. 빌드 작업을 사용 하 여 환경 변수를 설정할 수 있습니다 [AndroidEnvironment](~/android/deploy-test/environment.md)합니다.
 
 `MONO_GC_PARAMS` 환경 변수는 다음 매개 변수를 쉼표로 구분 된 목록: 
 
--   `nursery-size` = *크기* : nursery의 크기를 설정 합니다. 크기 (바이트)에 지정 된 및 2의 거듭제곱 이어야 합니다. 접미사 `k` 하십시오 `m` 및 `g` kilo-, mega-및 기가바이트, 각각 지정 데 사용할 수 있습니다. Nursery는 1 세대 (2 개). 큰 nursery 프로그램 속도가 일반적으로 하지만 더 많은 메모리를 사용할지 분명 합니다. 기본 nursery 크기가 512kb입니다. 
+-   `nursery-size` = *size* : Nursery의 크기를 설정합니다. 크기 (바이트)에 지정 된 및 2의 거듭제곱 이어야 합니다. 접미사 `k` 하십시오 `m` 및 `g` kilo-, mega-및 기가바이트, 각각 지정 데 사용할 수 있습니다. Nursery는 1 세대 (2 개). 큰 nursery 프로그램 속도가 일반적으로 하지만 더 많은 메모리를 사용할지 분명 합니다. 기본 nursery 크기가 512kb입니다. 
 
--   `soft-heap-limit` = *크기* : 대상 최대 앱에 대 한 메모리 소비량을 관리 합니다. 지정된 된 값 보다 작은 메모리 사용 되 면 GC는 실행 시간 (적은 컬렉션)에 대 한 최적화 됩니다. 
+-   `soft-heap-limit` = *size* : 대상 최대 앱에 대 한 메모리 소비량을 관리 합니다. 지정된 된 값 보다 작은 메모리 사용 되 면 GC는 실행 시간 (적은 컬렉션)에 대 한 최적화 됩니다. 
     이 제한을 초과 GC는 메모리 사용량 (자세한 컬렉션)에 대 한 최적화 됩니다. 
 
--   `evacuation-threshold` = *임계값* : 백분율에서 철수 임계값을 설정 합니다. 값은 0에서 100 사이의 정수 여야 합니다. 기본값은 66 합니다. 컬렉션의 스윕 단계는 특정 힙 블록 형식의 점유율은이 백분율 보다 작아야 합니다을 찾으면, 100%에 가까운를 선점 복원 다음 주요 컬렉션의 해당 블록 형식에 대 한 복사 컬렉션을 수행 합니다. 값이 0 철수를 해제합니다. 
+-   `evacuation-threshold` = *threshold* : 백분율에서 철수 임계값을 설정합니다. 값은 0에서 100 사이의 정수 여야 합니다. 기본값은 66 합니다. 컬렉션의 스윕 단계는 특정 힙 블록 형식의 점유율은이 백분율 보다 작아야 합니다을 찾으면, 100%에 가까운를 선점 복원 다음 주요 컬렉션의 해당 블록 형식에 대 한 복사 컬렉션을 수행 합니다. 값이 0 철수를 해제합니다. 
 
--   `bridge-implementation` = *구현 브리지* : 성능 문제를 해결할 GC 위해 GC 연결 옵션을 설정 합니다. 세 가지 가능한 값: *이전* 를 *새* 하십시오 *tarjan*합니다.
+-   `bridge-implementation` = *구현 브리지* : GC 성능 문제를 해결 하는 데 GC 연결 옵션을 설정 합니다. 세 가지 가능한 값: *이전* 를 *새* 하십시오 *tarjan*합니다.
 
--   `bridge-require-precise-merge`브리지 포함, 가끔 않을 개체 수를 최적화: Tarjan 가비지 먼저 되기 전에 하나의 GC를 수집 합니다. 이 옵션을 포함 하 여 해당 최적화를 잠재적으로 저하 되지만 예측 가능성이 더욱 뛰어난 Gc를 수행을 사용 하지 않도록 설정 합니다.
+-   `bridge-require-precise-merge`: 브리지 포함, 가끔 않을 개체 수를 최적화 Tarjan 가비지 먼저 되기 전에 하나의 GC를 수집 합니다. 이 옵션을 포함 하 여 해당 최적화를 잠재적으로 저하 되지만 예측 가능성이 더욱 뛰어난 Gc를 수행을 사용 하지 않도록 설정 합니다.
 
 예를 들어, 128MB의 힙 크기 제한이 GC를 구성 하려면 사용 하 여 프로젝트에 새 파일이 추가 된 **빌드 작업** 의 `AndroidEnvironment` 내용으로: 
 

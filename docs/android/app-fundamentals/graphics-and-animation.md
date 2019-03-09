@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c49b8855bccaf2eca825096746769d7f201736c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f4f7fd3af1e90307a84037f01ddf8e52b1ee030
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116890"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669052"
 ---
 # <a name="graphics-and-animation"></a>그래픽 및 애니메이션
 
@@ -25,7 +25,7 @@ _Android 2D 그래픽 및 애니메이션을 지원 하기 위한 매우 다양 
 
 다행히 우리에 게 있어 최신 모바일 플랫폼에 사용 편의성을 유지 하면서 복잡 한 애니메이션 및 사용자 지정 그래픽을 만들기 위한 강력한 프레임 워크는 합니다. 따라서 개발자가 매우 적은 노력으로 풍부한 대화형 작업을 추가할 수 있습니다.
 
-Android에서 UI API 프레임 워크는 두 가지 범주로 대략적으로 분할 될 수 있습니다: 그래픽 및 애니메이션 합니다.
+Android에서 UI API 프레임 워크는 대략 두 가지 범주로 분할 될 수 있습니다. 그래픽 및 애니메이션 합니다.
 
 그래픽은 2D 및 3D 그래픽 작업을 수행 하는 다른 방법으로 추가 분할 됩니다. 3D 그래픽은 기본 제공 OpenGL ES (특정의 모바일 버전 OpenGL)와 같은 프레임 워크 및 MonoGame (플랫폼 간 도구 키트는 XNA 도구 키트와 호환)와 같은 타사 프레임 워크의 번호를 통해 사용할 수 있습니다. 3D 그래픽이 문서의 범위에 포함 되지 않지만 기본 제공 2D 그리기 기술을 살펴보겠습니다.
 
@@ -57,7 +57,7 @@ Android는 2D 그래픽을 만들기 위한 두 개의 다른 API를 제공 합�
 
 앱은 접근성을 염두에서에 두고 디자인 된 경우 이러한 상황에서 좀더: 힌트 및 사용자 인터페이스에서 탐색 지원을 제공 하 고 텍스트 콘텐츠 또는 ui 요소에 대 한 설명을 확인 합니다.
 
-가리킵니다 [Google의 내게 필요한 옵션 가이드](http://developer.android.com/guide/topics/ui/accessibility/) Android의 내게 필요한 옵션 Api를 활용 하는 방법에 대 한 자세한 내용은 합니다.
+가리킵니다 [Google의 내게 필요한 옵션 가이드](https://developer.android.com/guide/topics/ui/accessibility/) Android의 내게 필요한 옵션 Api를 활용 하는 방법에 대 한 자세한 내용은 합니다.
 
 
 
@@ -76,23 +76,23 @@ Android는 2D 그래픽을 만들기 위한 두 개의 다른 API를 제공 합�
 런타임에 Android 응용 프로그램을 이러한 리소스를 로드를 2D 그래픽을 만들려면 이러한 XML 파일에 포함 된 지침을 사용 합니다.
 Android는 여러 다른 유형의 드로어 블 리소스를 정의합니다.
 
--   [ShapeDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; 해당 모양에 그래픽 효과 대 한 제한 된 집합을 적용 하는 기본 기 하 도형을 그립니다는 그릴 수 있는 개체입니다. 단추 사용자 지정 또는 TextViews의 배경을 설정 등에 대 한 매우 유용 합니다. 사용 하는 방법의 예제를 살펴보겠습니다는 `ShapeDrawable` 이 문서의 뒷부분에 나오는.
+-   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; 해당 모양에 그래픽 효과 대 한 제한 된 집합을 적용 하는 기본 기 하 도형을 그립니다는 그릴 수 있는 개체입니다. 단추 사용자 지정 또는 TextViews의 배경을 설정 등에 대 한 매우 유용 합니다. 사용 하는 방법의 예제를 살펴보겠습니다는 `ShapeDrawable` 이 문서의 뒷부분에 나오는.
 
--   [StateListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; 위젯/컨트롤의 상태에 따라 모양이 변경 되는 드로어 블 리소스입니다. 예를 들어, 단추 여부 눌린 여부에 따라 모양이 변경 될 수 있습니다.
+-   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; 위젯/컨트롤의 상태에 따라 모양이 변경 되는 드로어 블 리소스입니다. 예를 들어, 단추 여부 눌린 여부에 따라 모양이 변경 될 수 있습니다.
 
--   [LayerDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; 이 드로어 블 리소스를 다른를 기반으로 한 다른 여러 드로어 블 스택 됩니다. 예는 *LayerDrawable* 다음 스크린샷에 표시 됩니다.
+-   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; 이 드로어 블 리소스를 다른를 기반으로 한 다른 여러 드로어 블 스택 됩니다. 예는 *LayerDrawable* 다음 스크린샷에 표시 됩니다.
 
     ![LayerDrawable 예제](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; 이것이 *LayerDrawable* 하지만 차이점 중 하나입니다. A *TransitionDrawable* 한 계층 표시 위쪽 다른 애니메이션 효과를 줄 수 있습니다.
+-   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; 이것이 *LayerDrawable* 하지만 차이점 중 하나입니다. A *TransitionDrawable* 한 계층 표시 위쪽 다른 애니메이션 효과를 줄 수 있습니다.
 
--   [LevelListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; 이것은 매우 비슷합니다는 *StateListDrawable* 는 특정 조건에 따라 이미지로 표시 됩니다. 그러나 달리를 *StateListDrawable*의 *LevelListDrawable* 정수 값을 기반으로 이미지를 표시 합니다. 예는 *LevelListDrawable* WiFi 신호 강도 표시 하는 것입니다. WiFi 신호 변경의 강도으로 표시 되는 drawable 따라 변경 됩니다.
+-   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; 이것은 매우 비슷합니다는 *StateListDrawable* 는 특정 조건에 따라 이미지로 표시 됩니다. 그러나 달리를 *StateListDrawable*의 *LevelListDrawable* 정수 값을 기반으로 이미지를 표시 합니다. 예는 *LevelListDrawable* WiFi 신호 강도 표시 하는 것입니다. WiFi 신호 변경의 강도으로 표시 되는 drawable 따라 변경 됩니다.
 
--   [ScaleDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; 이러한 드로어 블 제공 크기 조정 및 자르기 기능 이름에서 알 수 있듯이, 합니다. *ScaleDrawable* 다른 Drawable, while 크기가 조정 됩니다 합니다 *ClipDrawable* 다른 Drawable 클립 됩니다.
+-   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; 이러한 드로어 블 제공 크기 조정 및 자르기 기능 이름에서 알 수 있듯이, 합니다. *ScaleDrawable* 다른 Drawable, while 크기가 조정 됩니다 합니다 *ClipDrawable* 다른 Drawable 클립 됩니다.
 
--   [InsetDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 이 Drawable 음각 다른 드로어 블 리소스의 양쪽에 적용 됩니다. 뷰를 뷰의 실제 범위 보다 작은 배경이 해야 하는 경우 사용 됩니다.
+-   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 이 Drawable 음각 다른 드로어 블 리소스의 양쪽에 적용 됩니다. 뷰를 뷰의 실제 범위 보다 작은 배경이 해야 하는 경우 사용 됩니다.
 
--   XML [BitmapDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; 이 파일은 명령의 XML에는 실제 비트맵에서 수행할 수 있는 집합입니다. Android에서 수행할 수 있는 일부 작업은 타일링, 디더링, 및 앤티앨리어싱입니다. 이 사용 되는 매우 일반적인 중 하나를 레이아웃의 백그라운드에서 비트맵을 바둑판식으로 배열입니다.
+-   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; 이 파일은 명령의 XML에는 실제 비트맵에서 수행할 수 있는 집합입니다. Android에서 수행할 수 있는 일부 작업은 타일링, 디더링, 및 앤티앨리어싱입니다. 이 사용 되는 매우 일반적인 중 하나를 레이아웃의 백그라운드에서 비트맵을 바둑판식으로 배열입니다.
 
 
 #### <a name="drawable-example"></a>Drawable 예제
@@ -148,7 +148,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 ![그라데이션 및 둥근 모퉁이 사용 하 여 그릴 수 있는 사용자 지정 배경 사용 하 여 Textview](graphics-and-animation-images/image1.png)
 
-XML 요소 및 드로어 블 리소스의 구문에 대 한 자세한 내용은 참조 하세요. [Google 설명서](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)합니다.
+XML 요소 및 드로어 블 리소스의 구문에 대 한 자세한 내용은 참조 하세요. [Google 설명서](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)합니다.
 
 
 ### <a name="using-the-canvas-drawing-api"></a>캔버스 그리기 API를 사용 하 여
@@ -443,7 +443,7 @@ protected override void OnCreate(Bundle bundle)
 ## <a name="related-links"></a>관련 링크
 
 - [애니메이션 데모 (샘플)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
-- [애니메이션 및 그래픽](http://developer.android.com/guide/topics/graphics/index.html)
+- [애니메이션 및 그래픽](https://developer.android.com/guide/topics/graphics/index.html)
 - [애니메이션을 사용 하 여 모바일 앱에 활기를](http://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
 - [캔버스](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)

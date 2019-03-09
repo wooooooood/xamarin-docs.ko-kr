@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 17a1c94ad3b9bde67537ea7113352f0fc10d2a08
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c720a30a59eea8f1ed74033da8d1c045a1fb9109
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110123"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666868"
 ---
 # <a name="responding-to-authentication-callbacks"></a>인증 콜백에 응답
 
@@ -101,7 +101,7 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 ## <a name="help-codes-and-error-message-ids"></a>코드 및 오류 메시지 Id 
 
-목록 및 오류 코드 및 도움말 코드 설명에서 확인할 수 있습니다 합니다 [Android SDK 설명서](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) FingerprintManager 클래스에 대 한 합니다. Xamarin.Android는 이러한 값을 나타내는 `Android.Hardware.Fingerprints.FingerprintState` 열거형:
+목록 및 오류 코드 및 도움말 코드 설명에서 확인할 수 있습니다 합니다 [Android SDK 설명서](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) FingerprintManager 클래스에 대 한 합니다. Xamarin.Android는 이러한 값을 나타내는 `Android.Hardware.Fingerprints.FingerprintState` 열거형:
 
 
 -   **`AcquiredGood`** &ndash; (값 0) 이미지 획득 되었을 것입니다.
@@ -131,7 +131,7 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 
 
--   **`ErrorHwUnavailable`** &ndash; (값 1) 하드웨어를 사용할 수 없는 경우 나중에 다시 시도 합니다.
+-   **`ErrorHwUnavailable`** &ndash; (값 1) 하드웨어를 사용할 수 없는 경우 나중에 다시 시도하십시오.
 
 
 
@@ -155,6 +155,6 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 ## <a name="related-links"></a>관련 링크
 
-- [암호화](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)
+- [Cipher](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

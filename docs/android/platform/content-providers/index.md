@@ -1,19 +1,14 @@
 ---
 title: ContentProviders 소개
-description: Android 운영 체제 콘텐츠 공급자를 사용 하 여 미디어 파일, 연락처 및 일정 정보 등의 공유 데이터에 대 한 액세스를 용이 하 게 합니다. 이 문서에서는 ContentProvider 클래스를 소개 하 고 사용 하는 방법의 두 가지 예제를 제공 합니다.
+description: 'Android 운영 체제 콘텐츠 공급자를 사용 하 여 미디어 파일, 연락처 및 일정 정보 등의 공유 데이터에 대 한 액세스를 용이 하 게 합니다. 이 문서에서는 ContentProvider 클래스를 소개 하 고 사용 하는 방법의 두 가지 예제를 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 4105200c48e41b142fc71e3a524023790b683cdb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105989"
 ---
+
 # <a name="intro-to-contentproviders"></a>ContentProviders 소개
 
 _Android 운영 체제 콘텐츠 공급자를 사용 하 여 미디어 파일, 연락처 및 일정 정보 등의 공유 데이터에 대 한 액세스를 용이 하 게 합니다. 이 문서에서는 ContentProvider 클래스를 소개 하 고 사용 하는 방법의 두 가지 예제를 제공 합니다._
@@ -47,7 +42,7 @@ A *ContentProvider* 데이터 저장소를 캡슐화 하 고 액세스 하기 �
 
 - [ContactsAdapter 데모 (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
 - [SimpleContentProvider (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
-- [콘텐츠 공급자 개발자 가이드](http://developer.android.com/guide/topics/providers/content-providers.html)
+- [콘텐츠 공급자 개발자 가이드](https://developer.android.com/guide/topics/providers/content-providers.html)
 - [ContentProvider 클래스 참조](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
 - [ContentResolver 클래스 참조](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
 - [ListView 클래스 참조](https://developer.xamarin.com/api/type/Android.Widget.ListView/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d79c0563d1dc9a2cfe75b702300982bb4d38553b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d6173e1886eaf807decd960b07acc022bb17c04d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117865"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669078"
 ---
 # <a name="lollipop-features"></a>롤리팝 기능
 
@@ -49,9 +49,9 @@ Android 5.0 (Lollipop)는 새로운 디자인 언어에는 *재료 디자인*,�
 
 -   **Android SDK** &ndash; Android 5.0 (API 21) 나중에 설치 해야 Android SDK Manager를 통해 또는 합니다.
 
--   **Java Developer Kit** &ndash; Xamarin.Android 필요 [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 1.8에서는 API 수준 24 롤리팝을 비롯 한 이전). 64 비트 JDK 1.8 버전이 필요한 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우입니다.
+-   **Java Developer Kit** &ndash; Xamarin.Android 필요 [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 1.8에서는 API 수준 24 롤리팝을 비롯 한 이전). 64 비트 JDK 1.8 버전이 필요한 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우입니다.
 
-계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
+계속 사용할 수 있습니다 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
 
 
 ## <a name="setting-up-an-android-50-project"></a>Android 5.0 프로젝트 설정
@@ -70,7 +70,7 @@ Android 5.0 프로젝트를 만들려면 최신 도구 및 SDK 패키지를 설�
 
     [![Android SDK Manager에서 Android 5.0 SDK 패키지를 설치합니다.](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
-   Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html)합니다.
+   Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html)합니다.
 
 4. 새 Xamarin.Android 프로젝트를 만듭니다. Xamarin 사용한 Android 개발을 처음 접하는 경우 참조 [Hello, Android](~/android/get-started/hello-android/index.md) Android 프로젝트 만들기에 대해 알아보려면 합니다. Android 프로젝트를 만들면 Android 5.0 버전 설정을 구성 해야 합니다.
    Mac 용 Visual Studio로 이동 **프로젝트 옵션 &gt; 빌드 &gt; 일반** 설정 하 고 **대상 프레임 워크** 하 **Android 5.0 (Lollipop)** 또는 나중에:
@@ -83,7 +83,7 @@ Android 5.0 프로젝트를 만들려면 최신 도구 및 SDK 패키지를 설�
 
 5. 앱을 테스트 하려면 에뮬레이터 또는 Android 장치를 구성 합니다. 에뮬레이터를 사용 하는 경우 참조 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md) 에 Xamarin Studio 또는 Visual Studio를 사용 하 여 사용 하기 위해 Android 에뮬레이터를 구성 하는 방법을 알아봅니다. Android 장치를 사용 하는 경우 참조 [the Preview SDK 설정](https://developer.android.com/preview/setup-sdk.html) Android 5.0 장치를 업데이트 하는 방법을 알아보려면. 실행 하 고 Xamarin.Android 응용 프로그램 디버깅에 대 한 Android 장치를 구성 하려면 참조 [장치 개발을 위한 설정](~/android/get-started/installation/set-up-device-for-development.md)합니다.
 
-참고: 대상 Android L 미리 보기는 기존 Android 프로젝트를 업데이트 하는 경우 업데이트 해야 합니다 **대상 프레임 워크** 및 **Android 버전** 위에서 설명한 값으로.
+참고: 대상 Android L 미리 보기는 기존 Android 프로젝트를 업데이트 하는 경우 업데이트 해야 합니다 **대상 프레임 워크** 하 고 **Android 버전** 위에서 설명한 값에 합니다.
 
 ## <a name="important-changes"></a>중요 한 변경 내용
 
@@ -99,7 +99,7 @@ Android 5.0 Dalvik 대신 기본 런타임으로 새 Android 런타임 (그림)�
 
 -   **응용 프로그램 디버깅 개선** &ndash; 아트 예외를 분석 하 고 충돌 보고서에 자세한 진단 정보를 제공 합니다.
 
-기존 앱 아트에서 변경 없이 작동 해야 &ndash; 이전 Dalvik 런타임에 고유한 기법을 악용 하는 앱을 제외 하 고는 작동 하지 않을 수 아트에서 합니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [앱 확인 동작에는 Android 런타임 (최신)](http://developer.android.com/guide/practices/verifying-apps-art.html)합니다.
+기존 앱 아트에서 변경 없이 작동 해야 &ndash; 이전 Dalvik 런타임에 고유한 기법을 악용 하는 앱을 제외 하 고는 작동 하지 않을 수 아트에서 합니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [앱 확인 동작에는 Android 런타임 (최신)](https://developer.android.com/guide/practices/verifying-apps-art.html)합니다.
 
 
 ### <a name="notification-changes"></a>알림 변경
@@ -124,7 +124,7 @@ Android 5.0 Dalvik 대신 기본 런타임으로 새 Android 런타임 (그림)�
 
 4.  새 Android 5.0에서 올바르게 처리 되도록 알림의 범주를 설정 *방해 금지* 모드입니다.
 
-알림을 전송 컨트롤을 디스플레이 미디어 재생 상태를 표시를 사용 하 여 `RemoteControlClient`를 호출 하거나 `ActivityManager.GetRecentTasks`를 참조 [중요 한 동작 변경 내용](http://developer.android.com/preview/api-overview.html#Behaviors) Android에 대 한 알림을 업데이트 하는 방법에 대 한 자세한 내용은 5.0입니다.
+알림을 전송 컨트롤을 디스플레이 미디어 재생 상태를 표시를 사용 하 여 `RemoteControlClient`를 호출 하거나 `ActivityManager.GetRecentTasks`를 참조 [중요 한 동작 변경 내용](https://developer.android.com/preview/api-overview.html#Behaviors) Android에 대 한 알림을 업데이트 하는 방법에 대 한 자세한 내용은 5.0입니다.
 
 Android에서 알림을 만드는 방법에 대 한 자세한 내용은 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md)합니다. 합니다 [호환성](~/android/app-fundamentals/notifications/local-notifications.md#compatibility) 이 문서의 섹션 아래쪽 호환 되는 알림을 만드는 방법에 설명 이전 버전의 Android 사용 하 여 합니다.
 
@@ -157,7 +157,7 @@ Android 5.0 터치 피드백 애니메이션, 작업 전환 애니메이션 및 
 
 단추를 사용 하 여 초기 터치 연락처 (왼쪽에서 오른쪽) 나머지 시퀀스를 단추 가장자리로 파급 효과가 분산 하는 방법을 보여 줍니다. 동안 왼쪽의 첫 번째 이미지에 발생 합니다. Ripple 애니메이션이 종료 될 때 원래 모양으로 뷰를 반환 합니다. 기본 ripple 애니메이션 초 미만의 시간에 수행 하지만 더 길거나 더 짧은 시간 길이 대 한 애니메이션의 길이 사용자 지정할 수 있습니다.
 
-Android 5.0에서 피드백 애니메이션, 터치 대 한 자세한 내용은 참조 [Touch 피드백을 사용자 지정](http://developer.android.com/training/material/animations.html#Touch)합니다.
+Android 5.0에서 피드백 애니메이션, 터치 대 한 자세한 내용은 참조 [Touch 피드백을 사용자 지정](https://developer.android.com/training/material/animations.html#Touch)합니다.
 
 
 ### <a name="activity-transition-animations"></a>작업 전환 애니메이션
@@ -206,7 +206,7 @@ Enter 전환에 대 한 Android 5.0에는 애니메이션의 세 가지 유형�
 
 -   보기에 대 한 크기 조정 및 규모 형식을 변경 합니다.
 
-Android 5.0에서 전환 애니메이션 작업에 대 한 자세한 내용은 참조 하세요 [사용자 지정 활동 전환](http://developer.android.com/training/material/animations.html#Transitions)합니다.
+Android 5.0에서 전환 애니메이션 작업에 대 한 자세한 내용은 참조 하세요 [사용자 지정 활동 전환](https://developer.android.com/training/material/animations.html#Transitions)합니다.
 
 
 ### <a name="view-state-transition-animations"></a>뷰 상태 전환 애니메이션
@@ -217,7 +217,7 @@ Android 5.0 애니메이션 뷰 상태가 변경 될 때 실행할 수 있습니
 
 -   뷰 상태가 변경 될 때 실행 되는 애니메이션 기능을 정의 합니다. 새 `StateListAnimator` 클래스 뷰 상태가 변경 될 때 실행 되는 애니메이터 정의할 수 있습니다.
 
-Android 5.0에서 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 참조 하세요 [뷰 상태 변경에 애니메이션 효과 주기](http://developer.android.com/training/material/animations.html#ViewState)합니다.
+Android 5.0에서 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 참조 하세요 [뷰 상태 변경에 애니메이션 효과 주기](https://developer.android.com/training/material/animations.html#ViewState)합니다.
 
 
 ### <a name="reveal-effect"></a>효과 표시
@@ -232,7 +232,7 @@ Android 5.0에서 뷰 상태 전환 애니메이션에 대 한 자세한 내용�
 
 표시할 애니메이션을 되돌릴 수 있습니다. 즉, 클리핑 원 보기 숨기려면 축소 것이 아니라 수 보기를 표시 하려면 확대 합니다.
 
-Android 5.0 표시 영향에 대 한 자세한 내용은 참조 하세요. [표시 효과 사용 하 여](http://developer.android.com/training/material/animations.html#Reveal)입니다.
+Android 5.0 표시 영향에 대 한 자세한 내용은 참조 하세요. [표시 효과 사용 하 여](https://developer.android.com/training/material/animations.html#Reveal)입니다.
 
 
 ### <a name="curved-motion"></a>곡선된 동작
@@ -245,7 +245,7 @@ Android 5.0 표시 영향에 대 한 자세한 내용은 참조 하세요. [표�
 
 -   **선형\_아웃\_느린\_에서** &ndash; 최고 속도 느리게 시작 애니메이션의 끝에 감속 합니다.
 
-새 따르면 `PathInterpolator` 동작 보간을 수행 하는 방법을 지정 하는 클래스입니다. `PathInterpolator` 지정 된 제어점과 동작 곡선에 따라 애니메이션 경로 통과 하는 보간이입니다. Android 5.0에서 곡선된 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [사용 하 여 곡선 동작](http://developer.android.com/training/material/animations.html#CurvedMotion)합니다.
+새 따르면 `PathInterpolator` 동작 보간을 수행 하는 방법을 지정 하는 클래스입니다. `PathInterpolator` 지정 된 제어점과 동작 곡선에 따라 애니메이션 경로 통과 하는 보간이입니다. Android 5.0에서 곡선된 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [사용 하 여 곡선 동작](https://developer.android.com/training/material/animations.html#CurvedMotion)합니다.
 
 
 ## <a name="view-shadows--elevation"></a>보기 그림자 & 권한 상승
@@ -258,7 +258,7 @@ Android 5.0에서 지정할 수 있습니다는 *권한 상승이* 새 설정 �
 
 섀도 설정 보기 (위와 같이) 정적 수 또는 보기의 배경 위에 증가 일시적으로 표시 하는 보기를 만들 애니메이션에서 사용할 수 있습니다. 사용할 수는 `ViewPropertyAnimator` 뷰의 권한 상승에 애니메이션 효과를 클래스입니다. 뷰의 레이아웃의 합계인 `elevation` 설정 및 `translationZ` 속성을 통해 설정할 수 있는 `ViewPropertyAnimator` 메서드를 호출 합니다.
 
-Android 5.0에서 보기 그림자에 대 한 자세한 내용은 참조 하세요 [그림자 정의 및 클리핑 뷰](http://developer.android.com/training/material/shadows-clipping.html)합니다.
+Android 5.0에서 보기 그림자에 대 한 자세한 내용은 참조 하세요 [그림자 정의 및 클리핑 뷰](https://developer.android.com/training/material/shadows-clipping.html)합니다.
 
 
 ## <a name="color-features"></a>색 기능
@@ -282,7 +282,7 @@ Android 5.0 레이아웃 인식 새 `tint` 다른 색을 표시 하려면 이러
 
 ![다른 tint 설정 사용 하 여 위의 로고의 예](lollipop-images/drawable-tinting.png)
 
-Drawable 색조 Android 5.0에 대 한 자세한 내용은 참조 하세요 [Drawable 색조](http://developer.android.com/training/material/drawables.html#DrawableTint)합니다.
+Drawable 색조 Android 5.0에 대 한 자세한 내용은 참조 하세요 [Drawable 색조](https://developer.android.com/training/material/drawables.html#DrawableTint)합니다.
 
 
 ### <a name="prominent-color-extraction"></a>주요 색상을 추출
@@ -307,7 +307,7 @@ Drawable 색조 Android 5.0에 대 한 자세한 내용은 참조 하세요 [Dra
 
 위의 스크린샷에서 작업 모음 추출된 "활발 한 light"로 설정 되어 색 및 배경 추출된 "활발 한 어둡게"로 설정 되어 색입니다. 위의 예제에서는 작은 색 사각형 행 이미지에서 추출 된 색상표를 보여 주기 위해 포함 됩니다.
 
-Android 5.0에서 색 추출에 대 한 자세한 내용은 참조 하세요 [이미지에서 추출 두드러진 색](http://developer.android.com/training/material/drawables.html#ColorExtract)합니다.
+Android 5.0에서 색 추출에 대 한 자세한 내용은 참조 하세요 [이미지에서 추출 두드러진 색](https://developer.android.com/training/material/drawables.html#ColorExtract)합니다.
 
 
 ## <a name="new-ui-widgets"></a>새 UI 위젯
@@ -410,7 +410,7 @@ Android 5.0 카메라 향상 된 기능에 대 한 몇 가지 새로운 Api를 �
 
 -   `CaptureResult` &ndash; 이미지 캡처 작업의 결과 제공합니다.
 
-새 카메라 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [미디어](http://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+새 카메라 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
 
 ### <a name="audio-playback"></a>오디오 재생
 
@@ -422,7 +422,7 @@ Android 5.0 업데이트는 `AudioTrack` 더 나은 오디오 재생에 대 한 
 
 -   `WRITE_NON_BLOCKING` &ndash; 이 옵션을 버퍼링 간소화 및 일부 앱에 대 한 다중 스레딩 합니다.
 
-에 대 한 자세한 `AudioTrack` Android 5.0에서 향상 된 기능 참조 [미디어](http://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+에 대 한 자세한 `AudioTrack` Android 5.0에서 향상 된 기능 참조 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
 
 ### <a name="media-playback-control"></a>미디어 재생 제어
 
@@ -434,7 +434,7 @@ Android 5.0에는 새 `Android.Media.MediaController` 클래스를 대체 `Remot
 
 또한 사용할 수 있습니다 새 `Android.App.Notification.MediaStyle` 풍부한 알림 콘텐츠 (예: 압축을 풀어 앨범 표지 표시)를 사용 하 여 미디어 세션을 연결 하는 클래스입니다.
 
-Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 참조 하세요 [미디어](http://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 참조 하세요 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
 
 ### <a name="storage"></a>스토리지
 
@@ -446,7 +446,7 @@ Android 5.0 응용 프로그램 디렉터리 및 문서 작업을 쉽게 수행�
 
 -   새 호출에 모든 공유 저장소 장치의 미디어 디렉터리 경로 얻으려면 `Android.Content.Context.GetExternalMediaDirs` 메서드.
 
-새 저장소 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [저장소](http://developer.android.com/preview/api-overview.html#Storage)합니다.
+새 저장소 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [저장소](https://developer.android.com/preview/api-overview.html#Storage)합니다.
 
 ### <a name="wireless--connectivity"></a>무선 및 연결
 
@@ -458,13 +458,13 @@ Android 5.0 무선 및 연결에 대 한 다음 API 향상 기능을 추가합�
 
 -   쉽게 근거리 통신 기능을 사용 하 여 다른 장치를 사용 하 여 데이터를 공유 하는 nfc 지원 향상.
 
-새 무선 및 Android 5.0에서 Api 연결에 대 한 자세한 내용은 참조 하세요 [무선 및 연결](http://developer.android.com/preview/api-overview.html#Wireless)합니다.
+새 무선 및 Android 5.0에서 Api 연결에 대 한 자세한 내용은 참조 하세요 [무선 및 연결](https://developer.android.com/preview/api-overview.html#Wireless)합니다.
 
 ### <a name="job-scheduling"></a>작업 예약
 
 Android 5.0에는 새 `JobScheduler` 사용자를 도울 수 있는 API 장치가 연결 되어 있는 경우에 실행 하려면 특정 작업을 예약 하 고 청구 하 여 배터리가 최소화 합니다. 또한이 작업 스케줄러 기능 조건이 요금제 네트워크 대신 Wi-fi 네트워크를 통해 연결 되어 있는 경우 큰 파일을 다운로드 하는 등의 해당 작업에 더 적합 한 경우를 실행 하는 작업을 예약 하는 데 사용할 수 있습니다.
 
-새 작업 예약 Android 5.0에서 Api에 대 한 자세한 내용은 참조 하세요 [예약 작업](http://developer.android.com/preview/api-overview.html#JobScheduler)합니다.
+새 작업 예약 Android 5.0에서 Api에 대 한 자세한 내용은 참조 하세요 [예약 작업](https://developer.android.com/preview/api-overview.html#JobScheduler)합니다.
 
 ## <a name="summary"></a>요약
 
@@ -491,7 +491,7 @@ Xamarin Android 개발을 처음 접하는 경우 읽을 [설정 및 설치](~/a
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android L 개발자 미리 보기](http://developer.android.com/preview/index.html)
+- [Android L 개발자 미리 보기](https://developer.android.com/preview/index.html)
 - [Android SDK 가져오기](https://developer.android.com/sdk/index.html#Other)
-- [재질 디자인](http://developer.android.com/preview/material/index.html)
+- [재질 디자인](https://developer.android.com/preview/material/index.html)
 - [재질 디자인 원칙](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

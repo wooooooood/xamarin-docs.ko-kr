@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: bf2842679aded21c9677d9cef31910f273518acd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: de2b92a4007f085a14c16f0c1e8ca9e568df1aff
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119178"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668372"
 ---
 # <a name="nougat-features"></a>Nougat 기능
 
@@ -27,7 +27,7 @@ _Xamarin.Android를 사용 하 여 Android Nougat 용 앱 개발을 시작 하�
 
 [![Android 태블릿 및 휴대폰 Android Nougat 실행의 대표 이미지](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
-Android 7.x Api에 대 한 자세한 내용은 참조 하세요. [개발자를 위한 Android 7.1](http://developer.android.com/preview/api-overview.html)합니다.
+Android 7.x Api에 대 한 자세한 내용은 참조 하세요. [개발자를 위한 Android 7.1](https://developer.android.com/preview/api-overview.html)합니다.
 Xamarin.Android 7.0의 알려진된 문제 목록을 참조 하십시오 합니다 [릴리스](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/)합니다.
 
 Android Nougat Xamarin.Android 개발자에 게 관심 있는 여러 가지 새로운 기능을 제공합니다. 이러한 기능에는 다음이 포함됩니다.
@@ -53,7 +53,7 @@ Android Nougat 다른 많은 향상 된 기능을 제공 하는 또한 새 네�
 
 -   **Android SDK** -Android SDK (API 24) 7.0 또는 나중에 설치 해야 Android SDK Manager를 통해.
 
--   **Java Developer Kit** &ndash; Xamarin Android 7.0 개발 필요 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 8도 지원 API 수준 24 미만도). JDK 8 64 비트 버전이 필요한 경우 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는입니다.
+-   **Java Developer Kit** &ndash; Xamarin Android 7.0 개발 필요 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 8도 지원 API 수준 24 미만도). JDK 8 64 비트 버전이 필요한 경우 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는입니다.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.

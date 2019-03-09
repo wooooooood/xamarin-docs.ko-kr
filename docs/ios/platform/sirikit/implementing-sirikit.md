@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: ea037aaaac97d9f326f1a2fbcb28d97c9d8a9b45
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110253"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669448"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.iOS에서 SiriKit 구현
 
@@ -209,7 +209,7 @@ Apple에 SiriKit 프레임 워크, SiriKit 구현 하는 모든 Xamarin.iOS 앱 
 
 Mac에서 다음을 수행 합니다.
 
-1. 웹 브라우저에서로 이동 [ http://developer.apple.com ](http://developer.apple.com) 및 계정에 로그인 합니다.
+1. 웹 브라우저에서로 이동 [ https://developer.apple.com ](https://developer.apple.com) 및 계정에 로그인 합니다.
 2. 클릭할 **인증서**를 **식별자** 하 고 **프로필**합니다.
 3. 선택 **프로 비전 프로필** 선택한 **앱 Id**를 클릭 합니다 **+** 단추입니다.
 4. 입력 한 **이름을** 새 프로필에 대 한 합니다.

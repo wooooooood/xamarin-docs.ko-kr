@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ed6d3c1cfc14bd0dece5ffe494cc02fd8f608b1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: af9be54b4509f7202618d9d68210eb534f63ccbf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117280"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671639"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -28,9 +28,9 @@ _이 문서에서는 컴퓨터와 Android Wear 개발용 장치를 준비 하는
 
 -   **Android SDK** -Android SDK (API 21) 5.0.1 나중에 설치 해야 Android SDK Manager를 통해 또는 합니다.
 
--   **Java Developer Kit** &ndash; Xamarin Android 개발 장치가 필요한 [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 개발 API 수준 24 이상을 있다면 (JDK 1.8에서는 API 수준 24 미만도).
+-   **Java Developer Kit** &ndash; Xamarin Android 개발 장치가 필요한 [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 개발 API 수준 24 이상을 있다면 (JDK 1.8에서는 API 수준 24 미만도).
 
-계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
+계속 사용할 수 있습니다 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.
@@ -80,7 +80,7 @@ Xamarin.Android를 설치한 후 Android Wear 앱 빌드 및 테스트 준비가
 -----
 
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>구성하기
 
 앱 테스트를 사용 하려면 먼저 Android Wear 에뮬레이터 또는 실제 Android Wear 장치를 구성 해야 합니다. 
 

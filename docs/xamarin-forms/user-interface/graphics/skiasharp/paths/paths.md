@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 006e4c2b2de56fef96c561e788992649f6582d24
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 833e24e91a37b92eb5025aacdc9509f092b823cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054943"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672088"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
@@ -28,26 +28,26 @@ _연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체 탐색_
 
 윤곽선의 다음 메서드를 호출 하 여 일반적으로 시작 `SKPath`:
 
-- [`MoveTo`](SkiaSharp.SKPath.MoveTo*) 새 윤곽선을 시작 하려면
+- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) 새 윤곽선을 시작 하려면
 
 해당 메서드에 인수가 표현할 수 있는 단일 지점을 `SKPoint` 값 또는 별도 X 및 Y 좌표입니다. 합니다 `MoveTo` 윤곽선 및 초기 시작 시점을 설정 하는 호출 *현재 지점*합니다. 줄 또는 현재 위치에서 메서드를 새로운 현재 점의 그러면에 지정 된 지점에 곡선을 사용 하 여 윤곽선을 계속 하려면 다음 메서드를 호출할 수 있습니다.
 
-- [`LineTo`](SkiaSharp.SKPath.LineTo*) 경로에 직선을 추가 하려면
-- [`ArcTo`](SkiaSharp.SKPath.ArcTo*) 원 또는 타원의 일부 줄을 나타내는 호를 추가 하려면
-- [`CubicTo`](SkiaSharp.SKPath.CubicTo*) 입방 형 3 차원 곡선 스플라인을 추가 하려면
-- [`QuadTo`](SkiaSharp.SKPath.QuadTo*) 정방형 베 지 어 스플라인을 추가 하려면
-- [`ConicTo`](SkiaSharp.SKPath.ConicTo*) rational 정방형 베 지 어 스플라인 원추형 섹션 (타원, parabolas, 및 hyperbolas)를 정확 하 게 렌더링할 수 있는 추가 하려면
+- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) 경로에 직선을 추가 하려면
+- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) 원 또는 타원의 일부 줄을 나타내는 호를 추가 하려면
+- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) 입방 형 3 차원 곡선 스플라인을 추가 하려면
+- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) 정방형 베 지 어 스플라인을 추가 하려면
+- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) rational 정방형 베 지 어 스플라인 원추형 섹션 (타원, parabolas, 및 hyperbolas)를 정확 하 게 렌더링할 수 있는 추가 하려면
 
 이러한 5 개의 메서드 선이나 곡선에 설명 하는 데 필요한 모든 정보를 포함 합니다. 이러한 다섯 개의 메서드의 메서드 호출 바로 앞에서 설정한 현재 지점과 함께에서 작동 합니다. 예를 들어 합니다 `LineTo` 윤곽선 직선 현재 시점에 기반 매개 변수를 추가 하는 메서드 `LineTo` 만 단일 지점입니다.
 
 합니다 `SKPath` 클래스에는 또한 사용 하 여 이러한 6 가지 방법으로 동일한 이름을 갖는 메서드를 정의 `R` 부분:
 
-- [`RMoveTo`]((SkiaSharp.SKPath.RMoveTo*))
-- [`RLineTo`](SkiaSharp.SKPath.RLineTo*)
-- [`RArcTo`](SkiaSharp.SKPath.RArcTo*)
-- [`RCubicTo`](SkiaSharp.SKPath.RCubicTo*)
-- [`RQuadTo`](SkiaSharp.SKPath.RQuadTo*)
-- [`RConicTo`](SkiaSharp.SKPath.RConicTo*)
+- [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
+- [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
+- [`RArcTo`](xref:SkiaSharp.SKPath.RArcTo*)
+- [`RCubicTo`](xref:SkiaSharp.SKPath.RCubicTo*)
+- [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
+- [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
 합니다 `R` 의미 *상대*합니다. 이러한 메서드 없이 해당 메서드와 동일한 구문을 사용 해야는 `R` 있지만 현재 점을 기준으로 합니다. 이 비슷한 구성 요소가 메서드를 여러 번 호출 하 여 경로 그리는 데 유용 합니다.
 

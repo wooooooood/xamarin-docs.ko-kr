@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1a98cf854ffdd1d4904981f85fd8e33ad486743c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233954"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672753"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.iOS에 대 한 문제 해결 팁 
 
@@ -396,7 +396,7 @@ Interface Builder를 사용 하려는 경우 설치 [XCode 시리즈 3](http://c
 이 응용 프로그램 이름을 포함 하는 경우에 발생할 수는 '.' (점) 이름에 있습니다.
 이 값은 많은 경우 (예: 장치)에서 작동 하는 가능한 경우에 CFBundleExecutable-실행 파일 이름으로 금지 되어 있습니다.
 
- * "값을 모든 확장 프로그램 이름을 포함 해야 합니다." - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ * "값을 모든 확장 프로그램 이름을 포함 해야 합니다." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>오류: "사용자 지정 특성 유형이 0x43 지원 되지 않습니다." double.xib 파일을 클릭할 때
 

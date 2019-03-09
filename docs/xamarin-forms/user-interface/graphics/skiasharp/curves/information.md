@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053902"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671405"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
@@ -24,7 +24,7 @@ _경로 대 한 정보를 가져오고 내용을 열거 합니다._
 
 경우에 따라 모든 줄 및 경로 구성 하는 곡선의 총 길이 확인 하는 것이 유용 합니다. 이 길이 계산 하지 않으므로 간단한 알고리즘 방식으로 작업을 전체 클래스 라는 [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) 를 전용으로 지정 됩니다.
 
-또한 유용한 경우가 모든 그리기 작업 및 경로 구성 하는 요소를 가져오려고 합니다. 처음에이 기능은 불필요 한 보일 수 있습니다: 프로그램 내용을 이미 알고 있는 프로그램에서 경로 만든 경우. 그러나 지금까지 살펴본 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 변환 하 [경로에 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 방법은 다음과 같습니다. 반구 주위의 텍스트 줄 바꿈, 예를 들어 모든 지점에 알고리즘 변환 적용
+또한 유용한 경우가 모든 그리기 작업 및 경로 구성 하는 요소를 가져오려고 합니다. 처음에이 기능 불필요 해 보일 수 있습니다. 프로그램에서 경로 만든 경우 프로그램에 이미 내용을 알고 있습니다. 그러나 지금까지 살펴본 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 변환 하 [경로에 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 방법은 다음과 같습니다. 반구 주위의 텍스트 줄 바꿈, 예를 들어 모든 지점에 알고리즘 변환 적용
 
 ![](information-images/pathenumerationsample.png "반구에서 텍스트")
 
@@ -140,7 +140,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 [![](information-images/unicyclehalfpipe-small.png "삼중 자전거 절반 파이프 페이지 스크린샷")](information-images/unicyclehalfpipe-large.png#lightbox "삼중 자전거 절반 파이프 페이지 스크린샷")
 
-합니다 `SKPaint` 절반-파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다 합니다 [ `UnicycleHalfPipePage` ]() 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
+합니다 `SKPaint` 절반-파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다는 `UnicycleHalfPipePage` 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -253,7 +253,7 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 이러한 문자는 대부분 직선 이루어진 아직 곡선에 이러한 직선을 twisted 분명히 있어야 합니다. 어떻게 이것이 가능 한가요?
 
-키가 원래 직선은 일련의 작은 직선으로 분류 됩니다. 그런 다음 곡선을 형성 하는 다양 한 방법의 더 작은 직선 이러한 개별을 조작할 수 있습니다. 
+키가 원래 직선은 일련의 작은 직선으로 분류 됩니다. 그런 다음 곡선을 형성 하는 다양 한 방법의 더 작은 직선 이러한 개별을 조작할 수 있습니다.
 
 이 프로세스를 사용 하는 데는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플에는 정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 `Interpolate` 구분 하는 메서드를 하나의 단위 길이에 다양 한 짧은 줄에는 직선입니다. 또한 클래스에는 일련의 작은 직선 곡선 근사치는 세 가지 유형의 베 지 어 곡선으로 변환 하는 여러 메서드가 들어 있습니다. (문서의 파라메트릭 수식에 표시 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) 이 프로세스를 호출할 _평면화_ 곡선:
 

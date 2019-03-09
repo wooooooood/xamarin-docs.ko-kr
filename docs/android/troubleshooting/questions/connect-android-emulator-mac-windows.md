@@ -1,5 +1,5 @@
 ---
-title: Android 에뮬레이터에 연결할 수 실행 중인가 Mac에서 Windows VM에서?
+title: Windows VM에서 Mac에서 실행 중인 Android 에뮬레이터에 연결할 수 있나요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 6e66bf4edb4269aa0f3b765df4a08b78c128f763
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 35bfdb92ccfffe54f0ca10dc001d8919703a5bd8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115642"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668155"
 ---
-# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Android 에뮬레이터에 연결할 수 실행 중인가 Mac에서 Windows VM에서?
+# <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Windows VM에서 Mac에서 실행 중인 Android 에뮬레이터에 연결할 수 있나요?
 
 Mac에서 Windows 가상 머신에서 실행 중인 Android 에뮬레이터에 연결 하려면 다음 단계를 사용 합니다.
 
@@ -35,9 +35,9 @@ Mac에서 Windows 가상 머신에서 실행 중인 Android 에뮬레이터에 �
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    홀수 번호 포트에 연결할 때 사용할 것 `adb`입니다. 참고 항목 [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking)합니다.
+    홀수 번호 포트에 연결할 때 사용할 것 `adb`입니다. 참고 항목 [ https://developer.android.com/tools/devices/emulator.html#emulatornetworking ](https://developer.android.com/tools/devices/emulator.html#emulatornetworking)합니다.
 
-4.  _옵션 1_: 사용 [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4.  _옵션 1_: 사용 하 여 [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
     앞으로 인바운드 TCP 패킷 수신 외부적으로 5555 포트에서 (또는 원하는 다른 모든 포트) 홀수 포트 루프백 인터페이스에 (**127.0.0.1 5555** 이 예제의)를 전달 하도록 아웃 바운드 패킷을 다시 다른 방법으로:
 
     ```bash
@@ -50,7 +50,7 @@ Mac에서 Windows 가상 머신에서 실행 중인 Android 에뮬레이터에 �
 
     (옵션 1 옵션 2, 보다 일반적으로 쉽습니다 경우에 특히 **시스템 기본 설정 > 보안 및 개인 정보 > 방화벽** 전환 됩니다.) 
 
-    _옵션 2_: 사용 [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _옵션 2_: 사용 하 여 [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     포트에서 TCP 패킷 리디렉션할 `5555` (또는 원하는 다른 모든 포트)에 [공유 네트워킹](http://kb.parallels.com/en/4948) 홀수 포트 루프백 인터페이스에 대 한 인터페이스 (`127.0.0.1:5555` 이 예제의):
 
     ```bash
@@ -95,7 +95,7 @@ Mac에서 Windows 가상 머신에서 실행 중인 Android 에뮬레이터에 �
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>또 다른 방법은 사용 하 여 `adb -H` 아직 지원 되지 않습니다
 
-이론적으로 사용 하는 다른 방법은 것 `adb`의에 연결 하는 기본 제공 기능을 `adb` 원격 컴퓨터에서 실행 중인 서버 (예를 들어 참조 [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
+이론적으로 사용 하는 다른 방법은 것 `adb`의에 연결 하는 기본 제공 기능을 `adb` 원격 컴퓨터에서 실행 중인 서버 (예를 들어 참조 [ https://stackoverflow.com/a/18551325 ](https://stackoverflow.com/a/18551325)).
 하지만 Xamarin.Android IDE 확장 옵션을 구성 하는 방법을 현재 제공 하지 않습니다.
 
 ## <a name="contact-information"></a>연락처 정보

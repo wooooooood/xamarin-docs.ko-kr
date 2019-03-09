@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060176"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670679"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
-IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 일반적으로 하나의 창을 가져옵니다 비슷하지만 채울 수 창 사용 하 여 많은 개체가 필요한 개체 및 배열은 어떤 앱에 따라 변경할 수 있습니다 및 표시 하려고 하는 대로 합니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 빌드하려면 뷰는 서로 위에 쌓인 콘텐츠 뷰 계층 구조에서 및 단일 뷰 컨트롤러에서 관리 하는 계층입니다. 여러 화면이 있는 응용 프로그램은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 응용 프로그램은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
+IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 일반적으로 하나의 창을 가져옵니다 비슷하지만 채울 수 창 사용 하 여 많은 개체가 필요한 개체 및 배열은 어떤 앱에 따라 변경할 수 있습니다 및 표시 하려고 하는 대로 합니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 빌드하려면 뷰는 서로 위에 쌓인 콘텐츠 뷰 계층 구조에서 및 단일 뷰 컨트롤러에서 관리 하는 계층입니다. 여러 화면이 있는 애플리케이션은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 애플리케이션은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
+다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
 
 [![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
@@ -28,7 +28,7 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다. 
+다음 다이어그램에는 디바이스 화면에 사용자 인터페이스를 가져오는 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계가 나와 있습니다.
 
 [![](ios-code-only-images/image9.png "이 다이어그램 창, 뷰, 하위 뷰 및 뷰 컨트롤러 간의 관계를 보여 줍니다.")](ios-code-only-images/image9.png#lightbox)
 
@@ -65,9 +65,9 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 ## <a name="ios-templates"></a>iOS 템플릿
 
 
-Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 템플릿에 UI를 만들기 위한 기본 방법으로 Apple이 권장 하는 스토리 보드가 지원 제공 됩니다. 그러나 코드에서 완전히 UI를 만들 수 것입니다. 
+Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 템플릿에 UI를 만들기 위한 기본 방법으로 Apple이 권장 하는 스토리 보드가 지원 제공 됩니다. 그러나 코드에서 완전히 UI를 만들 수 것입니다.
 
-아래 단계를 안내 응용 프로그램에서 스토리 보드를 제거 합니다. 
+아래 단계를 안내 응용 프로그램에서 스토리 보드를 제거 합니다.
 
 
 1. 단일 뷰 앱 템플릿을 사용 하 여 새 iOS 프로젝트를 만듭니다.
@@ -291,7 +291,7 @@ Window.RootViewController = navController;
 이제 로드 되 면 응용 프로그램을 `CustomViewController` 탐색 컨트롤러 내에서 로드 됩니다.
 
  [![](ios-code-only-images/customvc.png "탐색 컨트롤러 내에서 로드 되는 CustomViewController")](ios-code-only-images/customvc.png#lightbox)
- 
+
 단추를 클릭 _푸시_ 탐색 스택에 새 뷰 컨트롤러:
 
 [![](ios-code-only-images/customvca.png "새 뷰 컨트롤러를 탐색 스택으로 푸시")](ios-code-only-images/customvca.png#lightbox)
@@ -306,7 +306,7 @@ iOS 사용자 인터페이스 계층 구조 보기 이루어져 있습니다. �
 
 ### <a name="adding-the-text-fields"></a>텍스트 필드를 추가합니다.
 
-첫째,에 추가 된 단추와 이벤트 처리기를 제거 합니다 [뷰를 초기화 하](#Initializing_the_View) 섹션입니다. 
+첫째,에 추가 된 단추와 이벤트 처리기를 제거 합니다 [뷰를 초기화 하](#initializing-the-view) 섹션입니다. 
 
 만들고 초기화 하 여 사용자 이름에 대 한 컨트롤을 추가 `UITextField` 아래와 같이 뷰 계층 구조에 추가 합니다.
 
@@ -359,7 +359,7 @@ public class CustomViewController : UIViewController
             SecureTextEntry = true
         };
 
-      View.AddSubview(usernameField); 
+      View.AddSubview(usernameField);
       View.AddSubview(passwordField);
    }
 }
@@ -414,7 +414,7 @@ submitButton.Layer.CornerRadius = 5f;
 여러 뷰를 사용 하 여 계층 구조 보기를 추가 하는 기능을 제공 하는 iOS `AddSubviews`합니다.
 
 ```csharp
-View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
+View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 ```
 
 ## <a name="adding-button-functionality"></a>단추 기능 추가
@@ -610,12 +610,12 @@ Apple에.xib 또는 스토리 보드 파일은 iOS 8을 대상으로 하는 응�
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>시작 이미지를 사전 iOS 8 응용 프로그램 만들기
 
-이전의 iOS 8 버전의 응용 프로그램을 대상으로 하는 경우 정적 이미지를.xib 또는 시작 화면 스토리 보드를 실행 하는 것 외에도 사용할 수 있습니다. 
+이전의 iOS 8 버전의 응용 프로그램을 대상으로 하는 경우 정적 이미지를.xib 또는 시작 화면 스토리 보드를 실행 하는 것 외에도 사용할 수 있습니다.
 
 응용 프로그램에서 (iOS 7)에 대 한 자산 카탈로그 또는 Info.plist 파일에서이 정적 이미지를 설정할 수 있습니다. 응용 프로그램에서 실행 될 수 있는 각 장치 크기 (320 × 480, 640 x 960 640 x 1136)에 대 한 별도 이미지를 제공 해야 합니다. 시작 화면 크기에 대 한 자세한 내용은 다음을 확인 합니다 [시작 화면 이미지](~/ios/app-fundamentals/images-icons/launch-screens.md) 가이드입니다.
 
 > [!IMPORTANT]
-> 앱에 시작 화면이 없는 경우 화면을 맞지 않는 완벽 하 게 확인할 수 있습니다. 이 경우 해야 적어도 라는 640 x 1136 이미지를 포함 하려면 `Default-568@2x.png` info.plist 합니다. 
+> 앱에 시작 화면이 없는 경우 화면을 맞지 않는 완벽 하 게 확인할 수 있습니다. 이 경우 해야 적어도 라는 640 x 1136 이미지를 포함 하려면 `Default-568@2x.png` info.plist 합니다.
 
 ## <a name="summary"></a>요약
 

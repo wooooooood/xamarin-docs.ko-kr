@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 85e4e98cfbc96936c19642a200885b54cf745aa4
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617516"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670794"
 ---
 # <a name="localization"></a>지역화
 
@@ -111,7 +111,7 @@ double.Parse("1,999.99", CultureInfo.InvariantCulture);
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-참조 된 [숫자 문자열 구문 분석](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) 하 고 [구문 분석 하는 날짜 및 시간 문자열](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) 추가 정보에 대 한 MSDN 문서.
+참조 된 [숫자 문자열 구문 분석](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) 하 고 [구문 분석 하는 날짜 및 시간 문자열](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) 추가 정보에 대 한 MSDN 문서.
 
 <a name="rtl" />
 
@@ -131,7 +131,7 @@ IOS 및 Android에는 오른쪽에서 왼쪽 레이아웃 및 위의 조정 하�
 
 동일한 문자 집합을 사용 하는 경우에 해당 알파벳의 정렬 순서를 다르게 정의 하는 다른 언어입니다.
 
-참조를 [문자열 비교 세부 정보](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) 에 [.NET Framework에서 문자열 사용에 대 한 모범 사례](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) 언어 (CultureInfo) 정렬 순서를 적용 하는 위치 예입니다.
+참조를 [문자열 비교 세부 정보](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) 에 [.NET Framework에서 문자열 사용에 대 한 모범 사례](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) 언어 (CultureInfo) 정렬 순서를 적용 하는 위치 예입니다.
 
 그럴 가능성은 모바일 플랫폼에 기본 제공 데이터베이스 기능 언어별 정렬 순서 비즈니스 논리에서 추가 코드를 구현 하는 데 필요한 수 있도록 지원 합니다.
 
@@ -284,7 +284,7 @@ Twitter에서 외부 원본의 데이터를 다운로드 하는 대부분의 응
 테스트 목적으로 개발 하는 동안 앱에서 일부 지역화 된 텍스트를 포함 하도록 다양 한 온라인 번역 도구 중 하나로 사용할 수 있습니다.
 
 - [Bing 번역기](https://www.bing.com/translator/)
-- [Google 변환](http://translate.google.com/)
+- [Google Translate](http://translate.google.com/)
 
 도 많은 키워드가 사용할 수 있습니다. 기계 번역 품질 일반적으로 간주 되지 않는 응용 프로그램을 릴리스 수 있을 정도의 검토 및 전문 변환기 또는 모국어 테스트 먼저 없이 합니다.
 
@@ -312,5 +312,5 @@ Xamarin을 사용 하 여 가능한 다양 한 플랫폼 및 플랫폼 간 국�
 ## <a name="related-links"></a>관련 링크
 
 - [Apple의 지역화 개요](https://developer.apple.com/internationalization/)
-- [Android의 지역화 검사 목록](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [세계 시장 대응 응용 프로그램 (MSDN)을 개발 하기 위한 모범 사례](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Android의 지역화 검사 목록](https://developer.android.com/distribute/tools/localization-checklist.html)
+- [세계 시장 대응 응용 프로그램 (MSDN)을 개발 하기 위한 모범 사례](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

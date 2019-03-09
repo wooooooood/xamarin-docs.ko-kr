@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: a94c70bb7068847ed1b410dd7eddc70921fdf307
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106041"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667323"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.iOS에서 네이티브 라이브러리 참조
 
@@ -115,7 +115,7 @@ Xcode 사용 하 여 빌드를 인터넷에서 가져온 "libMyLibrary.a" 라이
 -  응용 프로그램과 함께 제공 되는 정적 라이브러리입니다.
 
 
-그 중 하나에 정의 된 메서드에 액세스 하려면 사용 [Mono의 P/Invoke 기능](http://www.mono-project.com/docs/advanced/pinvoke/) 약는.net에서 사용할 수 있는 동일한 기술인:
+그 중 하나에 정의 된 메서드에 액세스 하려면 사용 [Mono의 P/Invoke 기능](https://www.mono-project.com/docs/advanced/pinvoke/) 약는.net에서 사용할 수 있는 동일한 기술인:
 
 -  호출 하려는 C 함수를 결정 합니다.
 -  해당 서명을 확인 합니다.

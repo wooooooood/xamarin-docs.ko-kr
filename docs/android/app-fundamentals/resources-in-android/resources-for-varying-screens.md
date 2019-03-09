@@ -1,17 +1,17 @@
 ---
-title: 다양 한 화면에 대 한 리소스 만들기
+title: 다양한 화면에 대한 리소스 만들기
 ms.prod: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117436"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670573"
 ---
 # <a name="creating-resources-for-varying-screens"></a>다양 한 화면에 대 한 리소스 만들기
 
@@ -50,21 +50,21 @@ Android는 적절 한 크기를 런타임에 드로어 블을 확장 됩니다.
 
 ### <a name="declare-the-supported-screen-size"></a>지원 되는 화면 크기를 선언 합니다.
 
-화면 크기를 선언 하면 지원 되는 장치에만 응용 프로그램을 다운로드할 수 있습니다. 설정 하 여 이렇게 합니다 [지원 화면](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) 요소에는 **AndroidManifest.xml** 파일입니다. 이 요소를 사용 하 여 어떤 화면 크기는 응용 프로그램에서 지원 되도록 합니다. 지정된 된 화면 응용 프로그램 화면에 맞게 해당 레이아웃을 올바르게 배치할 수 있는 경우 지원 되는 데 간주 됩니다. 이 매니페스트 요소를 사용 하 여 응용 프로그램은에 표시 되지 [ *Google Play* ](https://play.google.com/) 화면 사양을 충족 하지 않는 장치에 대 한 합니다. 그러나 응용 프로그램이 지원 되지 않는 화면을 사용 하 여 장치에서 실행 되기는 하지만 레이아웃을 희미하게 보일 수 있습니다 및 잡아 합니다.
+화면 크기를 선언 하면 지원 되는 장치에만 응용 프로그램을 다운로드할 수 있습니다. 설정 하 여 이렇게 합니다 [지원 화면](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) 요소에는 **AndroidManifest.xml** 파일입니다. 이 요소를 사용 하 여 어떤 화면 크기는 응용 프로그램에서 지원 되도록 합니다. 지정된 된 화면 응용 프로그램 화면에 맞게 해당 레이아웃을 올바르게 배치할 수 있는 경우 지원 되는 데 간주 됩니다. 이 매니페스트 요소를 사용 하 여 응용 프로그램은에 표시 되지 [ *Google Play* ](https://play.google.com/) 화면 사양을 충족 하지 않는 장치에 대 한 합니다. 그러나 응용 프로그램이 지원 되지 않는 화면을 사용 하 여 장치에서 실행 되기는 하지만 레이아웃을 희미하게 보일 수 있습니다 및 잡아 합니다.
 
 지원 되는 화면 sixes에서 선언 되는 **Properites/AndroidManifest.xml** 솔루션의 파일:
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Android 매니페스트](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![Android 매니페스트](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
-편집할 **AndroidManifest.xml** 포함할 [지원 화면](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+편집할 **AndroidManifest.xml** 포함할 [지원 화면](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Android 장치에 대 한 필요에 따라 비트맵 조정 하지만 자체 비
 
 Android 장치의 놀랄만한 숫자로 실행 되며 화면 크기 및 화면 밀도의 조합을 울 수 있습니다. 다음 팁을 다양 한 장치를 지 원하는 데 필요한 노력을 최소화할 수 있습니다.
 
-- **만 디자인 및 개발 해야 하는 작업에 대 한** &ndash; 다양 한 장치, 있지만 일부 디자인 및 개발 하기 위한 많은 노력이 소요 되는 드문 폼 팩터에 존재 합니다. 합니다 [ **화면 크기와 밀도** ](http://developer.android.com/resources/dashboard/screens.html) 대시보드는 화면 크기/화면 밀도 매트릭스의 분석에 데이터를 제공 하는 Google에서 제공 하는 페이지입니다. 이 분석 화면을 지원 하기 위해 개발 노력 하는 방법에 대 한 정보를 제공 합니다.
+- **만 디자인 및 개발 해야 하는 작업에 대 한** &ndash; 다양 한 장치, 있지만 일부 디자인 및 개발 하기 위한 많은 노력이 소요 되는 드문 폼 팩터에 존재 합니다. 합니다 [ **화면 크기와 밀도** ](https://developer.android.com/resources/dashboard/screens.html) 대시보드는 화면 크기/화면 밀도 매트릭스의 분석에 데이터를 제공 하는 Google에서 제공 하는 페이지입니다. 이 분석 화면을 지원 하기 위해 개발 노력 하는 방법에 대 한 정보를 제공 합니다.
 
 - **픽셀 보다는 DPs 사용** -픽셀 화면 밀도 변경 될 때 문제가 됩니다. 하드 코딩 하지 마십시오. 픽셀 값. Dp (밀도 독립적 픽셀)를 위해 픽셀을 방지 합니다.
 

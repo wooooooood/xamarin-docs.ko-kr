@@ -6,12 +6,12 @@ ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 6445d595c9d8ca47e187fdcd158cd5a801a96407
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 42034261c374183346c8072eb42014f43a4fe22c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103207"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667609"
 ---
 # <a name="entities-in-cocossharp"></a>CocosSharp의 엔터티
 
@@ -37,7 +37,7 @@ _엔터티 패턴은 게임 코드를 구성 하는 강력한 방법입니다. �
 
 게임 엔터티는 렌더링, 충돌, 물리, 인공 지능 논리를 필요로 하는 개체를 정의 하는 클래스입니다. 다행 스럽게도 게임의 코드 베이스에 있는 엔터티는 종종 개념적 게임 개체와 일치 합니다. True 이면 게임에 필요한 엔터티를 식별 더 쉽게 수행할 수 있습니다. 
 
-테마가 지정 된 공백 예를 들어 [게임을 해결 하는 기](http://en.wikipedia.org/wiki/Shoot_%27em_up) 다음 엔터티를 포함할 수 있습니다.
+테마가 지정 된 공백 예를 들어 [게임을 해결 하는 기](https://en.wikipedia.org/wiki/Shoot_%27em_up) 다음 엔터티를 포함할 수 있습니다.
 
  - `PlayerShip`
  - `EnemyShip`

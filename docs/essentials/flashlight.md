@@ -5,16 +5,16 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3f8e9e2e8608467367af6523c8b89bd8f757d491
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899059"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671418"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
 
-**Flashlight** 클래스에는 장치의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있습니다.
+**Flashlight** 클래스에는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -44,7 +44,7 @@ Flashlight 및 Camera 권한이 필요하며 Android 프로젝트에서 구성�
 
 또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 **FLASHLIGHT** 및 **CAMERA** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
-이러한 권한을 추가하면 특정 하드웨어 없이 [Google Play에서 자동으로 디바이스를 필터링](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)합니다. Android 프로젝트에서 AssemblyInfo.cs 파일에 다음을 추가하여 이를 처리할 수 있습니다.
+이러한 권한을 추가하면 특정 하드웨어 없이 [Google Play에서 자동으로 디바이스를 필터링](https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)합니다. Android 프로젝트에서 AssemblyInfo.cs 파일에 다음을 추가하여 이를 처리할 수 있습니다.
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -110,11 +110,11 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)는 장치의 손전등 및 플래시 모드를 켜고 끄는 데 사용됩니다.
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)는 디바이스의 손전등 및 플래시 모드를 켜고 끄는 데 사용됩니다.
 
 ### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[램프](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp)는 켜거나 끌 장치 뒷면에 있는 첫 번째 램프를 검색하는 데 사용됩니다.
+[램프](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp)는 켜거나 끌 디바이스 뒷면에 있는 첫 번째 램프를 검색하는 데 사용됩니다.
 
 -----
 

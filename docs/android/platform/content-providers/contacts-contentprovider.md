@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48bb334e7e400d57e7eddc23b0b4ff183a7eba9b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120439"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669416"
 ---
 # <a name="using-the-contacts-contentprovider"></a>연락처 ContentProvider 사용
 
@@ -108,7 +108,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 `CursorLoader` 하면 모든 커서 작업이 백그라운드 스레드에서 완료 되 고 지능적으로 다시 사용할 수는 기존 커서 활동 인스턴스 간에 작업 다시 시작 되 면 (예: 구성 변경)로 인해 대신 다시 데이터를 다시 로드 하는 합니다.
 
-이전 Android 버전을 사용할 수도 있습니다는 `CursorLoader` 를 사용 하 여 클래스를 [v4 지원 라이브러리](http://developer.android.com/tools/support-library/index.html)합니다.
+이전 Android 버전을 사용할 수도 있습니다는 `CursorLoader` 를 사용 하 여 클래스를 [v4 지원 라이브러리](https://developer.android.com/tools/support-library/index.html)합니다.
 
 
 

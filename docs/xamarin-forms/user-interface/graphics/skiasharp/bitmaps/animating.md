@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 604067ac853bd53707e059b7db4abf2cfade21ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053147"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668961"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
@@ -508,7 +508,7 @@ public partial class MainPage : ContentPage
 
 `SKCodec` 라는 속성을 정의 [ `Info` ](xref:SkiaSharp.SKCodec.Info) 형식의 [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo)하지만 `SKImageInfo` 값을 나타냅니다 (적어도이 이미지에 대 한) 색 형식이 `SKColorType.Index8`, 즉 각 픽셀이 색 유형으로 인덱스 됩니다. 색상표를 사용 하지 않으려면 프로그램을 사용 하는 [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) 하 고 [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) 컬러를 소유 하는 정보를 생성 하는 구조는 `ImageInfo` 값. 각 `SKBitmap` 에서 만들어집니다.
 
-합니다 `GetPixels` 메서드의 `SKBitmap` 반환을 `IntPtr` 해당 비트맵의 픽셀 비트를 참조 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. `IntPtr` 중 하나에 전달 되는 [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) 메서드의 `SKCodec`합니다. 해당 메서드에 복사 프레임 GIF 파일에서 참조 하는 메모리 공간을 `IntPtr`입니다. 합니다 [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean)) 생성자 프레임 수를 나타냅니다.
+합니다 `GetPixels` 메서드의 `SKBitmap` 반환을 `IntPtr` 해당 비트맵의 픽셀 비트를 참조 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. `IntPtr` 중 하나에 전달 되는 [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) 메서드의 `SKCodec`합니다. 해당 메서드에 복사 프레임 GIF 파일에서 참조 하는 메모리 공간을 `IntPtr`입니다. 합니다 [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions) 생성자 프레임 수를 나타냅니다.
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage

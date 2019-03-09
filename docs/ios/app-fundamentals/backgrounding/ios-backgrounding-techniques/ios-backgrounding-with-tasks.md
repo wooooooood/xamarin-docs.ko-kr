@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120998"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669832"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 작업
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 재정의 하 여 시작 합니다 `DidEnterBackground` 에서 메서드를 `AppDelegate`필요한 작업을 통해 등록 하는 경우, `BeginBackgroundTask` 앞의 예제에서 수행한 것 처럼. 그런 다음 새 스레드를 생성 하 고 우리의 장기 실행 작업을 수행 합니다. 합니다 `EndBackgroundTask` 이제 호출에서 장기 실행 태스크 내에서 이후에 `DidEnterBackground` 메서드가 이미 반환 했습니다.
 
 > [!IMPORTANT]
-> iOS를 사용 하는 [메커니즘 watchdog](http://developer.apple.com/library/ios/qa/qa1693/_index.html) 응용 프로그램의 UI 응답성이 유지 되도록 합니다. 응용 프로그램에서 너무 많은 시간을 `DidEnterBackground` UI에 응답 하지 않게 됩니다. 허용 작업이 백그라운드에서 실행 될 때까지 정기적인 `DidEnterBackground` UI 응답성을 유지 하 고 응용 프로그램을 종료에서 watchdog를 방지, 적절 한 시기에 반환 합니다.
+> iOS를 사용 하는 [메커니즘 watchdog](https://developer.apple.com/library/ios/qa/qa1693/_index.html) 응용 프로그램의 UI 응답성이 유지 되도록 합니다. 응용 프로그램에서 너무 많은 시간을 `DidEnterBackground` UI에 응답 하지 않게 됩니다. 허용 작업이 백그라운드에서 실행 될 때까지 정기적인 `DidEnterBackground` UI 응답성을 유지 하 고 응용 프로그램을 종료에서 watchdog를 방지, 적절 한 시기에 반환 합니다.
 
 
 ## <a name="handling-background-task-time-limits"></a>처리 백그라운드 작업 시간 제한

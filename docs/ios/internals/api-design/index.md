@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 75904ad91df7795c538e736eabb6c6000847b449
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233655"
 ---
+
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
 Core, Mono 포함 된 기본 클래스 라이브러리 외에도 [Xamarin.iOS](http://www.xamarin.com/iOS) 다양 한 iOS 개발자 Mono를 사용 하 여 네이티브 iOS 응용 프로그램을 만들 수 있도록 Api에 대 한 바인딩을 포함 합니다.
@@ -94,11 +89,11 @@ Cocoa # 및 Gtk # 경험을 바탕으로 iOS를 위해 특별히 설계 된 새 
 
 합니다 [Foundation](xref:Foundation) 네임 스페이스에는 iOS의 일부인 Objective-c Foundation 프레임 워크와 상호 운용 하도록 설계 된 기본 데이터 형식 이므로 개체 지향 프로그래밍 하기 위한 것입니다.에 대 한 기본 제공
 
-Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C#의 미러링 Objective-c로 기본 클래스 예를 들어 [NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) 를 통해 C#에서 사용 가능 [Foundation.NSObject](xref:Foundation.NSObject)합니다.
+Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C#의 미러링 Objective-c로 기본 클래스 예를 들어 [NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html) 를 통해 C#에서 사용 가능 [Foundation.NSObject](xref:Foundation.NSObject)합니다.
 
 이 네임 스페이스에서는 기본 Objective-c Foundation 형식에 대 한 바인딩을 제공 하지만 일부의 경우에 매핑한 내부 형식이.NET 형식으로 합니다. 예를 들어:
 
-- 처리 하는 대신 [NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) 하 고 [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), C#으로 이러한 런타임이 노출 [문자열](xref:System.String)s 강력한 형식의 [배열](xref:System.Array)전체 s API입니다.
+- 처리 하는 대신 [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) 하 고 [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), C#으로 이러한 런타임이 노출 [문자열](xref:System.String)s 강력한 형식의 [배열](xref:System.Array)전체 s API입니다.
 
 - 다양 한 도우미 Api는 개발자가 타사 Api 또는 Api Xamarin.iOS를 통해 현재 연결 되어 있지 않은 다른 iOS Objective-c로 Api를 바인딩할 수 있도록 여기 노출 됩니다.
 
@@ -293,7 +288,7 @@ Objective-c 클래스에서 보면이 프로그래밍 패턴을 사용 하는 �
 2.  [통해 강력한 형식의 `Delegate` 속성](#StrongDelegate)
 3.  [통해 느슨하게 형식화 된 `WeakDelegate` 속성](#WeakDelegate)
 
-예를 들어 합니다 [UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) 클래스입니다. 디스패치할이 [UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) 에 할당 되는 인스턴스는 [대리자](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) 속성입니다.
+예를 들어 합니다 [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html) 클래스입니다. 디스패치할이 [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html) 에 할당 되는 인스턴스는 [대리자](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate) 속성입니다.
 
 <a name="Via_Events" />
 
@@ -301,9 +296,9 @@ Objective-c 클래스에서 보면이 프로그래밍 패턴을 사용 하는 �
 
 여러 형식에 대 한 Xamarin.iOS에서 자동으로 만듭니다 전달할는 적절 한 대리자는 `UIWebViewDelegate` C# 이벤트를 호출 합니다. `UIWebView`의 경우:
 
--  합니다 [webViewDidStartLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) 메서드에 매핑되는 [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) 이벤트입니다.
--  합니다 [webViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) 메서드에 매핑되는 [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) 이벤트입니다.
--  합니다 [webView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) 메서드에 매핑되는 [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) 이벤트입니다.
+-  합니다 [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) 메서드에 매핑되는 [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) 이벤트입니다.
+-  합니다 [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) 메서드에 매핑되는 [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) 이벤트입니다.
+-  합니다 [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) 메서드에 매핑되는 [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) 이벤트입니다.
 
 예를 들어,이 간단한 프로그램을 웹 로드를 볼 때 시작 시간과 종료 시간을 기록 합니다.
 
@@ -674,7 +669,7 @@ public Foo (NSObjectFlag x)
 public Foo (NSCoder coder)
 ```
 
-이 생성자는 개체 NSCoding 인스턴스에서 초기화 되는 사례에 대해 제공 됩니다. 자세한 내용은 Apple의을 참조 하세요. [보관 및 Serialization 프로그래밍 가이드입니다.](http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+이 생성자는 개체 NSCoding 인스턴스에서 초기화 되는 사례에 대해 제공 됩니다. 자세한 내용은 Apple의을 참조 하세요. [보관 및 Serialization 프로그래밍 가이드입니다.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
 
 #### <a name="exceptions"></a>예외
 
@@ -694,7 +689,7 @@ Xamarin.iOS에는 알아서 더 이상 사용 될 때 리소스를 해제 하는
 
 노출 된 `IDisposable` 인터페이스는 개발자를 지 원하는 큰 메모리 블록을 캡슐화 할 수 있는 개체를 해제 하는 편리한 방법 (예를 들어를 `UIImage` 방금 한 무고 포인터 처럼 보이지만 2mb 이미지를 가리킬 수 없습니다 ) 및 기타 중요 한 한정 된 리소스 (예: 비디오 디코딩 버퍼).
 
-NSObject IDisposable 인터페이스를 구현 합니다. 그리고 합니다 [.NET Dispose 패턴](http://msdn.microsoft.com/library/fs2xkftw.aspx)합니다. 이렇게 하면 개발자가 NSObject 삭제 동작을 재정의 하 고 필요에 따라 자신의 리소스를 해제 하려면 해당 하위 클래스입니다. 예를 들어, 다양 한 이미지 주위를 유지 하는이 뷰 컨트롤러를 것이 좋습니다.
+NSObject IDisposable 인터페이스를 구현 합니다. 그리고 합니다 [.NET Dispose 패턴](https://msdn.microsoft.com/library/fs2xkftw.aspx)합니다. 이렇게 하면 개발자가 NSObject 삭제 동작을 재정의 하 고 필요에 따라 자신의 리소스를 해제 하려면 해당 하위 클래스입니다. 예를 들어, 다양 한 이미지 주위를 유지 하는이 뷰 컨트롤러를 것이 좋습니다.
 
 ```csharp
 class MenuViewController : UIViewController {

@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b20760d3e8d7e168b0f0508222d8ae0b743a9368
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9fbbe7d33428c1274d78ed882ced3985b8459072
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058914"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671483"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 
@@ -201,7 +201,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 쓸 일반적인 파일 액세스 코드를 허용 하려면 Xamarin.iOS 및 Xamarin.Android에서 구현 된 Windows Phone (Silverlight)에서 파일 액세스를 위한 기본 메커니즘입니다. `System.IO.IsolatedStorage` 클래스의 세 플랫폼 모두에서 참조할 수는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md).
 
-참조 된 [Windows Phone 대 한 격리 된 저장소 개요](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) 자세한 내용은 합니다.
+참조 된 [Windows Phone 대 한 격리 된 저장소 개요](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) 자세한 내용은 합니다.
 
 격리 된 저장소 Api에서 사용할 수 없는 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)합니다. PCL에 대 한 한 가지 대안은 [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -295,7 +295,7 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 -  네트워크를 사용할 수 있는 경우에 것 다른 요청을 시작 하기 전에 대상 서버를 사용 하 여 연결을 확인 하는 것이 좋습니다. 앱의 네트워크 작업 시간 초과 반복적으로 방지 되 고도 사용자에 게 표시 되는 자세한 오류 메시지를 허용 됩니다.
 
 
-[Xamarin.iOS 샘플](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) 사용할 수 있습니다 (Apple의 기준으로 하는 [거치도록 샘플 코드](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) 네트워크 가용성을 검색 하는 데 합니다.
+[Xamarin.iOS 샘플](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) 사용할 수 있습니다 (Apple의 기준으로 하는 [거치도록 샘플 코드](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) 네트워크 가용성을 검색 하는 데 합니다.
 
 
 ## <a name="webservices"></a>웹 서비스
@@ -387,7 +387,7 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 IOS 및 Android 구문 즉,이 개체에 필요한 UI 스레드에서 콜백 메서드를 전달 해야 하는 코드를 사용할 수는 '컨텍스트' 클래스에 필요 합니다.
 
-공유 코드에서 UI 스레드 호출을 수행 합니다 [IDispatchOnUIThread 예제](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (인용 [ @follesoe ](http://jonas.follesoe.no/)). 선언 하 고 프로그램을 `IDispatchOnUIThread` 공유 코드에 인터페이스 및 다음 다음과 같이 플랫폼 관련 클래스를 구현 합니다.
+공유 코드에서 UI 스레드 호출을 수행 합니다 [IDispatchOnUIThread 예제](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (인용 [ @follesoe ](http://jonas.follesoe.no/)). 선언 하 고 프로그램을 `IDispatchOnUIThread` 공유 코드에 인터페이스 및 다음 다음과 같이 플랫폼 관련 클래스를 구현 합니다.
 
 ```csharp
 // program to the interface in shared code

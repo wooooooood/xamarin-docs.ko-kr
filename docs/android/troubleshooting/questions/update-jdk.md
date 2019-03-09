@@ -1,5 +1,5 @@
 ---
-title: Java 개발 키트 (JDK) 버전을 업데이트 하려면 어떻게 해야 하나요?
+title: JDK(Java Development Kit) 버전을 업데이트하려면 어떻게 할까요?
 description: 이 문서에서는 Windows 및 Mac. Java 개발 키트 (JDK) 버전을 업데이트 하는 방법을 보여줍니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -8,14 +8,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: aa04d944f803dded0e9448de27ed7d5ced2efb54
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 290a7deef4fdc10163bdb09881382f011b0dcd32
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109187"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670855"
 ---
-# <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>Java 개발 키트 (JDK) 버전을 업데이트 하려면 어떻게 해야 하나요?
+# <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>JDK(Java Development Kit) 버전을 업데이트하려면 어떻게 할까요?
 
 _이 문서에서는 Windows 및 Mac. Java 개발 키트 (JDK) 버전을 업데이트 하는 방법을 보여줍니다._
 
@@ -27,7 +27,7 @@ Microsoft Mobile OpenJDK를 업데이트 하려면 참조 [Microsoft Mobile Open
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  JDK 8 (1.8)에서 다운로드 합니다 [Oracle 웹 사이트](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  JDK 8 (1.8)에서 다운로드 합니다 [Oracle 웹 사이트](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Oracle 웹 사이트에서 페이지를 다운로드 하는 JDK의 스크린샷](update-jdk-images/image1.png)
 
@@ -47,7 +47,7 @@ Microsoft Mobile OpenJDK를 업데이트 하려면 참조 [Microsoft Mobile Open
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  JDK 8 (1.8)에서 다운로드 합니다 [Oracle 웹 사이트](http://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1.  JDK 8 (1.8)에서 다운로드 합니다 [Oracle 웹 사이트](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Oracle 웹 사이트에서 페이지를 다운로드 하는 JDK의 스크린샷](update-jdk-images/image1.png)
 

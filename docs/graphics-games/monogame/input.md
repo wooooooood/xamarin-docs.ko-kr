@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: badd23ebb78e61e7d7650ff6d0973226359fd9d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117111"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668974"
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame GamePad 참조
 
@@ -30,7 +30,7 @@ _GamePad 클래스인 표준, 플랫폼 간 MonoGame의 입력된 장치에 액�
 - `GetState` – 컨트롤러의 단추, 아날로그 스틱 및 패드의 현재 상태를 반환 합니다.
 - `GetCapabilities` – 단추나 지원 진동 컨트롤러 특정에 있는지 여부와 같은 하드웨어의 기능에 대 한 정보를 반환 합니다.
 
-### <a name="example-moving-a-character"></a>예: 문자를 이동합니다.
+### <a name="example-moving-a-character"></a>예제: 문자를 이동합니다.
 
 다음 코드를 설정 하 여 문자를 이동 하려면 왼쪽된 엄지 스틱을 사용할 수 있는 방법을 보여 줍니다. 해당 `XVelocity` 고 `YVelocity` 속성입니다. 이 코드는 가정 `characterInstance` 개체의 인스턴스이고 `XVelocity` 및 `YVelocity` 속성:
 
@@ -42,9 +42,9 @@ characterInstance.XVelocity = gamePadState.ThumbSticks.Left.X * characterInstanc
 characterInstance.YVelocity = gamePadState.ThumbSticks.Left.Y * characterInstance.MaxSpeed;
 ```
 
-### <a name="example-detecting-pushes"></a>예: 푸시를 검색합니다.
+### <a name="example-detecting-pushes"></a>예제: 푸시를 검색합니다.
 
-`GamePadState` 특정 단추가 눌러져 있는지 여부와 같은 컨트롤러의 현재 상태에 대 한 정보를 제공 합니다. 점프 문자 등의 특정 작업을 확인 단추 푸시된 경우 필요 (마지막 프레임을 아래로 없습니다 하지만이 프레임 중단) 또는 해제 (되었지만 마지막 프레임 아래쪽 방향으로이 프레임). 
+`GamePadState` 특정 단추가 눌러져 있는지 여부와 같은 컨트롤러의 현재 상태에 대 한 정보를 제공 합니다. 점프 문자 등의 특정 작업을 확인 단추 푸시된 경우 필요 (마지막 프레임을 아래로 없습니다 하지만이 프레임 중단) 또는 해제 (되었지만 마지막 프레임 아래쪽 방향으로이 프레임).
 
 이 유형의 논리를 지역 변수는 이전 프레임을 저장 하는 데 `GamePadState` 및 현재 프레임의 `GamePadState` 만들어야 합니다. 다음 예제를 저장 하 고 이전 프레임을 사용 하는 방법을 보여 줍니다 `GamePadState` 구현 되며, 이동 하려면:
 
@@ -59,7 +59,7 @@ protected override void Update(GameTime gameTime)
     // store off the last state before reading the new one:
     lastFrameGamePadState = currentGamePadState;
     currentGamePadState = GamePad.GetState(PlayerIndex.One);
-    bool wasAButtonPushed = 
+    bool wasAButtonPushed =
 currentGamePadState.Buttons.A == ButtonState.Pressed
         && lastFrameGamePadState.Buttons.A == ButtonState.Released;
     if(wasAButtonPushed)
@@ -70,7 +70,7 @@ currentGamePadState.Buttons.A == ButtonState.Pressed
 }
 ```
 
-### <a name="example-checking-for-buttons"></a>예: 단추에 대 한 확인
+### <a name="example-checking-for-buttons"></a>예제: 단추에 대 한 확인
 
 `GetCapabilities` 컨트롤러는 특정 단추 또는 아날로그 스틱 등 특정 하드웨어에 있는지 확인 하려면 사용할 수 있습니다. 다음 코드에는 두 단추의 존재 해야 게임 컨트롤러에서 B 및 Y 단추를 확인 하는 방법을 보여 줍니다.
 
@@ -89,7 +89,7 @@ if(!hasBButton || !hasXButton)
 iOS 앱 무선 게임 컨트롤러 입력을 지원합니다.
 
 > [!IMPORTANT]
-> MonoGame 3.5에 대 한 NuGet 패키지에는 무선 게임 컨트롤러에 대 한 지원이 포함 되지 않습니다. GamePad 클래스를 사용 하 여 iOS에서 원본의 MonoGame 3.5 빌드하거나 MonoGame 3.6 NuGet 이진 파일을 사용 하 여 필요 합니다. 
+> MonoGame 3.5에 대 한 NuGet 패키지에는 무선 게임 컨트롤러에 대 한 지원이 포함 되지 않습니다. GamePad 클래스를 사용 하 여 iOS에서 원본의 MonoGame 3.5 빌드하거나 MonoGame 3.6 NuGet 이진 파일을 사용 하 여 필요 합니다.
 
 ### <a name="ios-game-controller"></a>iOS 게임 컨트롤러
 
@@ -105,7 +105,7 @@ Apple TV 게임 입력 Siri 원격 또는 무선 게임 컨트롤러를 사용�
 
 *Siri 원격* Apple TV 원시 입력된 장치입니다. 이벤트를 통해 Siri 원격에서 값을 읽을 수는 있지만 (에서처럼 합니다 [Siri 원격 및 Bluetooth 컨트롤러 가이드](~/ios/tvos/platform/remote-bluetooth.md)), `GamePad` 클래스 Siri 원격에서 값을 반환할 수 있습니다.
 
-`GamePad` play 단추에서 입력 읽기 수 및 화면을 터치 합니다. 
+`GamePad` play 단추에서 입력 읽기 수 및 화면을 터치 합니다.
 
 ![](input-images/image2.png "GamePad play 단추를 통해 입력을 읽고 및 화면을 터치만 수 확인")
 
@@ -113,7 +113,7 @@ Apple TV 게임 입력 Siri 원격 또는 무선 게임 컨트롤러를 사용�
 
 ### <a name="apple-tv-game-controller"></a>Apple TV 게임 컨트롤러
 
-Apple TV에 대 한 게임 컨트롤러는 iOS 앱에 대 한 게임 컨트롤러에 동일 하 게 작동 합니다. 자세한 내용은 참조는 [iOS 게임 컨트롤러 섹션](#iOS_Game_Controller)합니다. 
+Apple TV에 대 한 게임 컨트롤러는 iOS 앱에 대 한 게임 컨트롤러에 동일 하 게 작동 합니다. 자세한 내용은 참조는 [iOS 게임 컨트롤러 섹션](#iOS-game-controller)합니다. 
 
 ## <a name="xbox-one"></a>Xbox One
 

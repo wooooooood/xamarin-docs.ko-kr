@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 0b320955cae23b18444732c826849002d6375fe4
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321144"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670456"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -136,7 +136,7 @@ Apple의 설명서를 확인해 보세요.
 - [watchOS 3 카탈로그 (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [watchOS 1 카탈로그 (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
-- [첫 번째 Watch 앱 비디오](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [첫 번째 Watch 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple는 Watch 키트 설명서에 대 한 개발의](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Apple의 WatchKit 팁](https://developer.apple.com/watchkit/tips/)
 - [watchOS 3 소개](~/ios/watchos/platform/introduction-to-watchos3/index.md)

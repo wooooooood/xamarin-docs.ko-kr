@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: f21eca052ef13fd0e3d6efa261e1ff70b3b14372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120712"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671860"
 ---
 # <a name="splash-screen"></a>시작 화면
 
@@ -52,7 +52,7 @@ Android 앱 시작 하려면 약간의 시간이 걸리며, 특히 첫 번째 �
 
 시작 화면은 시작 화면 액티비티의 배경에 XML 그림을 표시합니다. 그렇게 하려면 이미지 표시를 위해 비트맵 이미지(예: JPG 또는 PNG)를 사용해야 합니다.
 
-이 가이드에서는 응용 프로그램의 시작 화면 이미지를 가운데 표시하기 위해 [Layer List](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)를 사용합니다. 다음 코드 조각은 `layer-list`를 사용하는 `drawable` 리소스의 예제입니다.
+이 가이드에서는 응용 프로그램의 시작 화면 이미지를 가운데 표시하기 위해 [Layer List](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)를 사용합니다. 다음 코드 조각은 `layer-list`를 사용하는 `drawable` 리소스의 예제입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -229,5 +229,5 @@ public class MainActivity : AppCompatActivity
 ## <a name="related-links"></a>관련 링크
 
 - [SplashScreen (샘플)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [계층 목록 Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [계층 목록 Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ 재질 디자인 패턴-시작 화면](https://material.io/design/communication/launch-screen.html#usage)

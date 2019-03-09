@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 0393b9a994c1fd62f51cff01a88aa73f71019d53
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a396f4fe59db36b134843d2538bcb470a452a85b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113458"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668584"
 ---
 # <a name="marshmallow-features"></a>Marshmallow 기능
 
@@ -23,10 +23,10 @@ _이 문서에서는 Xamarin.Android를 사용 하 여 Android 6.0 Marshmallow�
 
 ## <a name="overview"></a>개요
 
-[Android 6.0 Marshmallow](http://developer.android.com/about/versions/marshmallow/index.html), 다음 주요 Android는 Android Lollipop 후 릴리스 합니다.
+[Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html), 다음 주요 Android는 Android Lollipop 후 릴리스 합니다.
 Xamarin.Android에는 포함 한 Android Marshmallow를 지원 합니다.
 
--   **API 23/Android 6.0 바인딩을** &ndash; 아래에 설명 된 새 기능에 대 한 많은 새로운 Api를 추가 하는 Android 6.0; API 레벨 23을 대상 하는 경우 이러한 Api는 Xamarin.Android 앱에 사용할 수 있습니다. Android 6.0 Api에 대 한 자세한 내용은 참조 하세요. [Android 6.0 Api](http://developer.android.com/preview/api-overview.html)합니다. 
+-   **API 23/Android 6.0 바인딩을** &ndash; 아래에 설명 된 새 기능에 대 한 많은 새로운 Api를 추가 하는 Android 6.0; API 레벨 23을 대상 하는 경우 이러한 Api는 Xamarin.Android 앱에 사용할 수 있습니다. Android 6.0 Api에 대 한 자세한 내용은 참조 하세요. [Android 6.0 Api](https://developer.android.com/preview/api-overview.html)합니다. 
 
 [![태블릿 및 휴대폰 Marshmallow 실행의 대표 이미지](marshmallow-images/android-m-hero-sml.png)](marshmallow-images/android-m-hero.png#lightbox)
 
@@ -66,9 +66,9 @@ Xamarin.Android에는 포함 한 Android Marshmallow를 지원 합니다.
 
 -   **Android SDK** &ndash; Android SDK (API 23) 6.0 이상이 있어야 설치 되어 Android SDK Manager를 통해.
 
--   **Java Developer Kit** &ndash; Xamarin.Android 필요 [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 1.8에서는 API 수준 24 Marshmallow를 포함 하 여 이전). 64 비트 JDK 1.8 버전이 필요한 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우입니다.
+-   **Java Developer Kit** &ndash; Xamarin.Android 필요 [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 1.8에서는 API 수준 24 Marshmallow를 포함 하 여 이전). 64 비트 JDK 1.8 버전이 필요한 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우입니다.
 
-계속 사용할 수 있습니다 [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우. 
+계속 사용할 수 있습니다 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우. 
 
 
 ## <a name="getting-started"></a>시작
@@ -104,7 +104,7 @@ Android Marshmallow에 대 한 Xamarin.Android 프로젝트를 만들려면 먼�
     [![Android SDK Manager에서 Android 6.0 SDK 패키지 선택](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
 Android SDK Tools 버전 24.3.4를 설치 해야 이상.
-Android 6.0 SDK를 설치 하려면 Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html)합니다.
+Android 6.0 SDK를 설치 하려면 Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html)합니다.
 
 
 
@@ -120,7 +120,7 @@ Android 프로젝트를 만들면 대상 Android 6.0 MarshMallow 버전 설정�
 
 에뮬레이터를 사용 하는 경우 Android AVD Manager를 시작 하 고 다음 설정을 사용 하 여 새 장치를 만듭니다.
 
--   장치: Nexus 5, 6 또는 9입니다.
+-   장치: Nexus 5, 6 또는 9를 포함 합니다.
 -   대상: Android 6.0-API 레벨 23
 -   ABI: x86
 
@@ -128,7 +128,7 @@ Android 프로젝트를 만들면 대상 Android 6.0 MarshMallow 버전 설정�
 
 [![Nexus 5 장치, Android 6.0 대상 및 Intel Atom (x86)를 사용 하 여 AVD를 구성 합니다.](marshmallow-images/android-m-avd.png)](marshmallow-images/android-m-avd.png#lightbox)
 
-Nexus 5와 같은 물리적 장치를 사용 하는 경우 6 또는 9를 설치할 수 있습니다 Android Marshmallow의 미리 보기 이미지를 합니다. Android Marshmallow에 장치를 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요. [하드웨어 시스템 이미지](http://developer.android.com/preview/download.html#images)합니다.
+Nexus 5와 같은 물리적 장치를 사용 하는 경우 6 또는 9를 설치할 수 있습니다 Android Marshmallow의 미리 보기 이미지를 합니다. Android Marshmallow에 장치를 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요. [하드웨어 시스템 이미지](https://developer.android.com/preview/download.html#images)합니다.
 
 
 
@@ -175,7 +175,7 @@ Android Marshmallow에 암호에 대 한 필요성을 제거 하는 데 도움�
 지문 하드웨어 검색을 지 원하는 장치를 사용할 수 있습니다 새 `FingerPrintManager` 사용자를 인증 하는 클래스입니다.
 Android Marshmallow에서 지문 인증 기능에 대 한 자세한 내용은 참조 하세요. [지문 인증](https://developer.android.com/preview/api-overview.html#fingerprint-authentication)합니다.
 
-Xamarin은 등록 된 지문을 사용 하 여 앱에서 사용자를 인증 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)합니다.
+Xamarin에서는 등록 된 지문을 사용 하 여 앱에서 사용자를 인증 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)합니다.
 
 사용 하려면이 샘플 앱:
 
@@ -247,7 +247,7 @@ Xamarin android 앱에서이 기능을 사용 하려면 다운로드 및 설치 
 
 -   **재질 탭** &ndash; 새 `TabLayout` 위젯 앱에서 최상위 탐색을 구현 하는 방법으로 탭을 표시 하기 위한 가로 레이아웃을 제공 합니다.
 
-활용 하는 [디자인 지원 라이브러리](http://developer.android.com/tools/support-library/features.html#design) Xamarin.Android 앱에서 다운로드 하 고 Xamarin 설치 [Xamarin 지원 라이브러리 디자인](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) NuGet 패키지.
+활용 하는 [디자인 지원 라이브러리](https://developer.android.com/tools/support-library/features.html#design) Xamarin.Android 앱에서 다운로드 하 고 Xamarin 설치 [Xamarin 지원 라이브러리 디자인](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) NuGet 패키지.
 
 참조 [Android 지원 라이브러리 디자인을 사용 하 여 멋진 자료 디자인](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) Xamarin.Android 앱에 재질 디자인 지원 라이브러리를 사용 하는 방법에 대 한 자세한 정보 (코드 예제 포함)에 대 한 합니다.
 Xamarin에서는 Xamarin.Android에서 새 Android 디자인 라이브러리를 데모 하는 샘플 앱 &ndash; [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare)합니다.
@@ -267,7 +267,7 @@ Xamarin에서는 Xamarin.Android에서 새 Android 디자인 라이브러리를 
 
 Google Android Marshmallow 외에도 몇 가지 핵심 Android 라이브러리에 관련된 업데이트를 발표 했습니다. Xamarin에서는 몇 가지 미리 보기 릴리스에서 NuGet 패키지를 통해 이러한 업데이트에 대 한 Xamarin.Android 지원을 합니다. 
 
--   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; Google Play Services의 최신 버전을 새 포함 *앱 초대* 기능 앱 친구 들과 공유할 수 있습니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [Google 앱 초대 사용 하 여 확장 하 고 앱의 도달률](http://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/)합니다. 
+-   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) &ndash; Google Play Services의 최신 버전을 새 포함 *앱 초대* 기능 앱 친구 들과 공유할 수 있습니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [Google 앱 초대 사용 하 여 확장 하 고 앱의 도달률](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/)합니다. 
 
 -   [Android 지원 라이브러리](https://www.nuget.org/packages?q=xamarin+support+library) &ndash; 이러한 Nuget Android 프레임 워크 Api의 이전 버전과 호환 버전을 제공 하는 동안 라이브러리 Api에 사용할 수만 있는 기능을 제공 합니다. 
 
@@ -281,7 +281,7 @@ Google Android Marshmallow 외에도 몇 가지 핵심 Android 라이브러리�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android 6.0 Marshmallow](http://developer.android.com/about/versions/marshmallow/index.html)
+- [Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Android SDK 가져오기](https://developer.android.com/sdk/index.html#Other)
 - [기능 개요](https://developer.android.com/preview/api-overview.html)
 - [릴리스 정보](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)

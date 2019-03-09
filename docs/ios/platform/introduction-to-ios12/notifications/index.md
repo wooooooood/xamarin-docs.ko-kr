@@ -6,26 +6,20 @@ ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
-ms.openlocfilehash: f4abc3c87a4c38da8863347fa08f198dece791a8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111632"
+ms.date: 09/04/2018
 ---
 # <a name="notifications-in-ios-12"></a>IOS 12의 알림
 
-## <a name="critical-alertscritical-alertsmd"></a>[중요 한 알림](critical-alerts.md)
+## <a name="critical-alertscritical-alertsmd"></a>[중요한 알림](critical-alerts.md)
 
 iOS 12 중요 한 경고를 보낼 수 있습니다. 방해 금지 설정 여부에 관계 없이 소리를 재생 하는 중요 한 알림 또는 벨소리 스위치 해제 되어 있습니다.
 
-## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[동적 알림 실행 단추](dynamic-actions.md)
+## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[동적 알림 작업 단추](dynamic-actions.md)
 
 IOS 12 사용 하 여 알림을 이제 런타임 시 해당 실행 단추를 수정할 수 있습니다.
 이렇게 알림과 함께 사용자의 상호 작용의 콘텐츠를 더 관련 작업을 표시할 수 있습니다.
 
-## <a name="grouped-notificationsgroupedmd"></a>[그룹화 된 알림](grouped.md)
+## <a name="grouped-notificationsgroupedmd"></a>[그룹화된 알림](grouped.md)
 
 사용자가 받은 많은 알림을 관리할 수 있도록 iOS 12 스레드 또는 앱에서 알림을 그룹화 수 있습니다.
 

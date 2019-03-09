@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 3b23a1a07741cd048ea034b2b39b5f9cde902dc6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746897"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672770"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
@@ -150,7 +150,7 @@ button.Clicked += OnButtonClicked;
 
 이 접근 방식은 모델-뷰-ViewModel (MVVM) 아키텍처를 구현 하는 경우에 특히 데이터 바인딩 관련 하 여 및에 특히 적합 합니다. 문서에서 설명 하는 이러한 [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)를 [에서 데이터에 대 한 바인딩을 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), 및 [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md)합니다.
 
-MVVM 응용 프로그램에서는 ViewModel 형식의 속성을 정의 `ICommand` 는 XAML에 연결 되어 있는 `Button` 데이터 바인딩 사용 하 여 요소입니다. Xamarin.Forms 정의 [ `Command` ]((xref:Xamarin.Forms.Command`1)) 하 고 [ `Command<T>` ](xref:Xamarin.Forms.Command`1) 구현 하는 클래스는 `ICommand` 인터페이스 및 형식의 속성정의ViewModel을지원하는`ICommand`.
+MVVM 응용 프로그램에서는 ViewModel 형식의 속성을 정의 `ICommand` 는 XAML에 연결 되어 있는 `Button` 데이터 바인딩 사용 하 여 요소입니다. Xamarin.Forms 정의 [ `Command` ]((xref:Xamarin.Forms.Command)) 하 고 [ `Command<T>` ](xref:Xamarin.Forms.Command`1) 구현 하는 클래스는 `ICommand` 인터페이스 및 형식의 속성정의ViewModel을지원하는`ICommand`.
 
 문서에 자세히 설명 되어 명령 [ **The 명령 인터페이스** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 되지만 **기본 단추 명령** 페이지에 [  **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플에는 기본적인 방법을 보여 줍니다.
 

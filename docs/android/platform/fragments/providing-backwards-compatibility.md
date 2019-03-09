@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: 18dac665eec1c5d3ac64065c37e73022670c1ba5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48ef40ce8560fd9fbb842dde70622d968591ab98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108849"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666907"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>이전 버전과 호환 Android 지원 패키지를 제공
 
-조각의 유용성 것 없이 이전 버전과 호환성 사전 Android 3.0 (API 수준 11) 장치를 사용 하 여 제한 합니다. Google이이 기능을 제공 하기 위해 도입 합니다 [지원 라이브러리](http://developer.android.com/sdk/compatibility-library.html) (원래 호출를 *Android Compatibility Library* 릴리스된 경우)는 backports 몇 가지 최신 버전의 Api 이전 버전의 Android android입니다. Android 2.3.3에 Android 1.6 (API 수준 4)를 실행 하는 장치를 사용 하도록 설정 하는 Android 지원 패키지입니다. (API 수준 10)입니다.
+조각의 유용성 것 없이 이전 버전과 호환성 사전 Android 3.0 (API 수준 11) 장치를 사용 하 여 제한 합니다. Google이이 기능을 제공 하기 위해 도입 합니다 [지원 라이브러리](https://developer.android.com/sdk/compatibility-library.html) (원래 호출를 *Android Compatibility Library* 릴리스된 경우)는 backports 몇 가지 최신 버전의 Api 이전 버전의 Android android입니다. Android 2.3.3에 Android 1.6 (API 수준 4)를 실행 하는 장치를 사용 하도록 설정 하는 Android 지원 패키지입니다. (API 수준 10)입니다.
 
 > [!NOTE]
 > 만 `ListFragment` 하며 `DialogFragment` Android 지원 패키지를 통해 사용할 수 있습니다. 하위 클래스를 같은 조각을 다른 하나도 `PreferenceFragment,` Android 지원 패키지에서 지원 됩니다. Android 3.0 응용 프로그램에서 작동 하지 않습니다. 

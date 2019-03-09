@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
-ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/27/2018
+ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056217"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671288"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 키워드 `clr-namespace` 뒤에 콜론이 오고, 그 다음 .NET 네임 스페이스 이름, 세미콜론, 키워드 `assembly`, 등호 및 어셈블리 이름이 옵니다.
 
-맞습니다, 콜론은 `clr-namespace` 뒤에 오지만 등호는 `assembly` 다음에 옵니다. 구문은 해당 방식으로 의도적으로 정의되었습니다. 대부분의 XML 네임 스페이스 선언은 `http`와 같이 URI 스키마 이름을 시작하는 URI를 참조하며 항상 뒤에 콜론이 옵니다. 해당 문자열의 `clr-namespace` 부분은 URI 규칙을 모방하기 위함입니다.
+맞습니다, 콜론은 `clr-namespace` 뒤에 오지만 등호는 `assembly` 다음에 옵니다. 구문은이 방식으로 의도적으로 정의 되었습니다. 대부분의 XML 네임 스페이스 선언을 참조와 같은 URI 체계 이름을 시작 하는 URI `http`에 항상 뒤에 콜론입니다. 해당 문자열의 `clr-namespace` 부분은 URI 규칙을 모방하기 위함입니다.
 
 해당 네임 스페이스 선언은 모두 **StaticConstantsPage** 샘플에 포함됩니다. `BoxView` 차원은 `Math.PI` 및 `Math.E`로 설정되어 있지만 100의 비율로 배율이 조정됩니다.
 
@@ -547,7 +547,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-아마도 이 샘플에서 얻어야 할 가장 중요한 배움은 태그 확장의 구문입니다. 따옴표는 태그 확장의 중괄호 내에 올 수 없습니다. XAML 파일에 태그 확장을 입력할 때 속성의 값을 자연스럽게 따옴표로 묶고 싶을 것입니다. 유혹을 이겨내십시오!
+아마도이 샘플에서 수행 해야 하는 가장 중요 한과 태그 확장의 구문: 태그 확장의 중괄호 안의 하지 인용 부호 표시 되어야 합니다. XAML 파일에 태그 확장을 입력할 때 속성의 값을 자연스럽게 따옴표로 묶고 싶을 것입니다. 유혹을 이겨내십시오!
 
 실행 중인 프로그램이 다음과 같습니다.
 
@@ -565,4 +565,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5장. MVVM 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

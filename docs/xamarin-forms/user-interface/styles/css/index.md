@@ -8,12 +8,6 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831926"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -466,7 +460,7 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 - 4 개의 값 맨 위에 다음 오른쪽 차례로 아래쪽, 왼쪽된 두께 나타냅니다.
 
 > [!NOTE]
-> CSS `thickness` XAML에서 값이 다르면 [ `Thickness` ](/api/type/Xamarin.Forms.Thickness/) 값입니다. XAML을 두 값의 예를 들어 `Thickness` 4 값을 하는 동안 가로 다음 세로 두께 나타내는 `Thickness` 아래쪽 두께 다음 왼쪽에서 차례로 위쪽, 오른쪽을 나타냅니다. 또한 XAML `Thickness` 값은 쉼표로 구분 합니다.
+> CSS `thickness` XAML에서 값이 다르면 [ `Thickness` ](xref:Xamarin.Forms.Thickness) 값입니다. XAML을 두 값의 예를 들어 `Thickness` 4 값을 하는 동안 가로 다음 세로 두께 나타내는 `Thickness` 아래쪽 두께 다음 왼쪽에서 차례로 위쪽, 오른쪽을 나타냅니다. 또한 XAML `Thickness` 값은 쉼표로 구분 합니다.
 
 ### <a name="namedsize"></a>NamedSize
 

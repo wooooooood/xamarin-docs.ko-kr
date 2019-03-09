@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557118"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672484"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -127,7 +127,7 @@ Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 
 
 ![Android에 필요한 권한](map-images/android-map-permissions.png "Android에 대 한 필요한 사용 권한")
 
-마지막 두는 응용 프로그램 맵 데이터를 다운로드 하려면 네트워크 연결이 필요 하기 때문에 필요 합니다. Android에 대해 알아보세요 [권한을](http://developer.android.com/reference/android/Manifest.permission.html) 에 대해 자세히 알아보세요.
+마지막 두는 응용 프로그램 맵 데이터를 다운로드 하려면 네트워크 연결이 필요 하기 때문에 필요 합니다. Android에 대해 알아보세요 [권한을](https://developer.android.com/reference/android/Manifest.permission.html) 에 대해 자세히 알아보세요.
 
 ### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 

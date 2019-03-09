@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527393"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671174"
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
 대체 리소스는 특정 장치 또는 픽셀 밀도, 특정 화면 크기, 또는 현재 언어와 같은 런타임 구성을 대상으로 하는 리소스입니다. Android에는 특정 장치 또는 구성에 대 한 보다 구체적인 기본 리소스는 리소스를 일치 시킬 수 있습니다, 한 리소스를 대신 사용 됩니다. 현재 구성과 일치 하는 대체 리소스를 찾지 못하면 기본 리소스가 로드 됩니다. 리소스 위치 섹션에서 자세히 아래에서 응용 프로그램에서 사용할 리소스를 설명 합니다 Android 결정 하는 방법
 
-대체 리소스는 기본 리소스와 마찬가지로 리소스 형식에 따라 리소스 폴더 안에 하위 디렉터리로 구성 됩니다. 대체 리소스 하위 디렉터리의 이름이 형식에서: _ResourceType_-_한정자_
+대체 리소스는 기본 리소스와 마찬가지로 리소스 형식에 따라 리소스 폴더 안에 하위 디렉터리로 구성 됩니다. 대체 리소스 하위 디렉터리의 이름이 형식: _ResourceType_-_Qualifier_
 
 *한정자* 특정 장치 구성을 식별 하는 이름입니다.
 각 대시로 구분 된 이름에 둘 이상의 한정자 있을 수 있습니다. 예를 들어 아래 스크린샷에서 로캘, 화면 밀도, 화면 크기, 방향 등 다양 한 구성에 대 한 대체 리소스가 있는 간단한 프로젝트를 보여 줍니다.
@@ -43,10 +43,10 @@ ms.locfileid: "51527393"
 
 참조에 대 한 가능한 한정자는 아래와 같습니다.
 
-- **MCC와 MNC** &ndash; 는 [모바일 국가 코드](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) 및 필요에 따라 합니다 [모바일 네트워크 코드](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). SIM 카드 장치를 연결할 네트워크를 MNC 제공 하는 동안 MCC를 제공 합니다. 대상 로캘로 모바일 국가 코드를 사용 하 여 가능한 경우에 권장 방법은 아래에 지정 된 언어 한정자를 사용 하는 것입니다. 예를 들어, 대상 리소스 독일에 한정자 것 `mcc262`입니다. 대상 리소스 미국의 T Mobile에 대 한 한정자가 `mcc310-mnc026`합니다.
+- **MCC와 MNC** &ndash; 는 [모바일 국가 코드](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) 및 필요에 따라 합니다 [모바일 네트워크 코드](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). SIM 카드 장치를 연결할 네트워크를 MNC 제공 하는 동안 MCC를 제공 합니다. 대상 로캘로 모바일 국가 코드를 사용 하 여 가능한 경우에 권장 방법은 아래에 지정 된 언어 한정자를 사용 하는 것입니다. 예를 들어, 대상 리소스 독일에 한정자 것 `mcc262`입니다. 대상 리소스 미국의 T Mobile에 대 한 한정자가 `mcc310-mnc026`합니다.
   모바일 국가 코드 및 모바일 네트워크 코드의 전체 목록을 참조 하세요. <http://mcc-mnc.com/>합니다.
 
-- **언어** &ndash; 2 자로 [ISO 639-1 언어 코드](http://en.wikipedia.org/wiki/ISO_639-1) 및 필요에 따라 두 문자 뒤 [ISO 3166-알파 2 지역 코드](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)합니다. 
+- **언어** &ndash; 2 자로 [ISO 639-1 언어 코드](https://en.wikipedia.org/wiki/ISO_639-1) 및 필요에 따라 두 문자 뒤 [ISO 3166-알파 2 지역 코드](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)합니다. 
   으로 구분 하는 경우 두 한정자가 제공 되는 `-r`합니다. 대상 로캘을 프랑스어의 한정자를 예를 들어 `fr` 사용 됩니다. 캐나다 로캘을 대상으로 `fr-rCA` 사용 됩니다. 언어 코드 및 지역 코드의 전체 목록은 참조 하세요 [표시의 이름이의 언어에 대 한 코드](http://www.loc.gov/standards/iso639-2/php/English_list.php) 하 고 [국가 이름 및 코드 요소](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm)합니다.
 
 - **최소 너비** &ndash; 응용 프로그램에서 실행 하려는 가장 작은 화면 너비를 지정 합니다. 더 자세하게 다룹니다 [다양 한 화면에 대 한 리소스를 만드는](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)합니다. 
@@ -123,7 +123,7 @@ ms.locfileid: "51527393"
 -  **플랫폼 버전 (API 수준)** &ndash; v 형식으로 장치에서 지원 되는 API 수준*N*여기서 *N* 대상이 되는 API 수준입니다. 예를 들어 v11 대상 API 수준 11 (Android 3.0) 장치.
 
 
-한정자가 리소스에 대 한 자세한 내용은 참조 [리소스 제공](http://developer.android.com/guide/topics/resources/providing-resources.html) Android 개발자 웹 사이트입니다.
+한정자가 리소스에 대 한 자세한 내용은 참조 [리소스 제공](https://developer.android.com/guide/topics/resources/providing-resources.html) Android 개발자 웹 사이트입니다.
 
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Android에서 사용할 리소스를 결정 하는 방법
@@ -176,7 +176,7 @@ ms.locfileid: "51527393"
     drawable-port-ldpi
     drawable-port-notouch-12key
 
-위의 한정자가 테이블에서 첫 번째 한정자는 선택 하는 다음으로,: MCC와 MNC 합니다. MCC/MNC 코드는 무시 됩니다 있도록이 한정자를 포함 하는 리소스 디렉터리가 있습니다.
+다음으로, 첫 번째 한정자는 위 한정자가 테이블에서 선택 됩니다. MCC와 MNC 합니다. MCC/MNC 코드는 무시 됩니다 있도록이 한정자를 포함 하는 리소스 디렉터리가 있습니다.
 
 다음 한정자는 언어가 선택 되었습니다. 언어 코드와 일치 하는 리소스가 있습니다. 언어 코드와 일치 하지 않는 모든 리소스 디렉터리 `en` 리소스 목록이 이제 되도록 거부 됩니다.
 

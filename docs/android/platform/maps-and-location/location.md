@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563513"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668944"
 ---
 # <a name="location-services"></a>위치 서비스
 
@@ -32,7 +32,7 @@ Android에서 위치 데이터를 사용 하 여 작업에 대해 선택한 어�
 
 사용자의 위치를 정확 하 게 여러 가지 기술은 내부적으로 사용 됩니다. 사용 되는 하드웨어의 유형에 따라 달라 집니다 *위치 공급자* 데이터를 수집 하는 작업에 대 한 선택입니다. Android에서는 세 가지 위치 공급자를 사용합니다.
 
--   **GPS 공급자** &ndash; GPS 가장 정확한 위치를 제공, 가장 power를 사용 하 여 및 옥외 가장 잘 작동 합니다. 이 공급자에 GPS와 보조 GPS 조합을 사용 하 여 ([aGPS](http://en.wikipedia.org/wiki/Assisted_GPS)), 셀룰러 towers에 의해 수집 된 GPS 데이터를 반환 하는 합니다.
+-   **GPS 공급자** &ndash; GPS 가장 정확한 위치를 제공, 가장 power를 사용 하 여 및 옥외 가장 잘 작동 합니다. 이 공급자에 GPS와 보조 GPS 조합을 사용 하 여 ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), 셀룰러 towers에 의해 수집 된 GPS 데이터를 반환 하는 합니다.
 
 -   **네트워크 공급자** &ndash; 셀 towers에서 수집한 aGPS 데이터를 포함 하 여 Wi-fi 및 셀룰러 데이터의 조합을 제공 합니다. GPS 공급자 보다 전원 사용 하지만 다양 한 정확도 위치 데이터를 반환 합니다.
 
@@ -84,7 +84,7 @@ else
  
 퓨즈 위치 공급자 API는 다양 한 지 오 펜싱 및 활동 모니터링을 포함 하 여 위치 인식 응용 프로그램에 권한을 부여 하는 다른 도구를 제공 합니다. 이 섹션에서는 하겠습니다 포커스를 설정 하는 기본 사항에는 `LocationClient`, 공급자, 설정 및 사용자의 위치를 가져오는 중입니다.
 
-퓨즈 위치 공급자의 일부인 [Google Play Services](http://developer.android.com/google/play-services/index.html)합니다.
+퓨즈 위치 공급자의 일부인 [Google Play Services](https://developer.android.com/google/play-services/index.html)합니다.
 Google Play 서비스 패키지를 설치 하 고 퓨즈 위치 공급자 API에 대 한 응용 프로그램 작동에 올바르게 구성 해야 하며 장치는 Google Play Services APK 설치 되어 있어야 합니다.
 
 Xamarin.Android 하기 전에 응용 프로그램 수 퓨즈 위치 공급자를 사용 하면 추가 해야 합니다 **Xamarin.GooglePlayServices.Maps** 프로젝트에 패키지 합니다. 또한 다음 `using` 문 아래에 설명 된 클래스를 참조 하는 모든 원본 파일에 추가 해야 합니다.
@@ -231,7 +231,7 @@ Android 위치 서비스 위치 정보를 사용 하 여 android에 대 한 이�
 
 위치 서비스 Google Play Services 설치 되지 않은 장치에서 실행 해야 하는 응용 프로그램에 가장 적합 합니다.
 
-위치 서비스는 특수 유형의 [서비스](http://developer.android.com/guide/components/services.html) 시스템에 의해 관리 됩니다. 시스템 서비스는 장치 하드웨어와 상호 작용 하 고 항상 실행 됩니다. 응용 프로그램에서 위치 업데이트를 활용 하려면 가입할 위치 업데이트를 사용 하 여 시스템 위치 서비스를 `LocationManager` 및 `RequestLocationUpdates` 호출 합니다.
+위치 서비스는 특수 유형의 [서비스](https://developer.android.com/guide/components/services.html) 시스템에 의해 관리 됩니다. 시스템 서비스는 장치 하드웨어와 상호 작용 하 고 항상 실행 됩니다. 응용 프로그램에서 위치 업데이트를 활용 하려면 가입할 위치 업데이트를 사용 하 여 시스템 위치 서비스를 `LocationManager` 및 `RequestLocationUpdates` 호출 합니다.
 
 Android 위치 서비스를 사용 하 여 사용자의 위치를 가져오려면 여러 단계가 포함 됩니다.
 
@@ -357,10 +357,10 @@ else
 
 - [위치 (샘플)](https://developer.xamarin.com/samples/Location/)
 - [FusedLocationProvider (샘플)](https://developer.xamarin.com/samples/FusedLocationProvider/)
-- [Google Play 서비스](http://developer.android.com/google/play-services/index.html)
+- [Google Play 서비스](https://developer.android.com/google/play-services/index.html)
 - [기준 클래스](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [LocationManager 클래스](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
 - [LocationListener 클래스](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
-- [LocationClient API](http://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
-- [LocationListener API](http://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
+- [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
+- [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

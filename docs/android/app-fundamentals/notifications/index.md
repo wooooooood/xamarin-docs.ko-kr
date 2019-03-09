@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a0778de5dcc7e21ba011fe144be703b3b83b8247
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114043"
 ---
+
 # <a name="notifications-in-xamarinandroid"></a>Xamarin.Android에서 알림
 
 
@@ -36,7 +31,7 @@ ms.locfileid: "50114043"
 
 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; FCM Firebase Cloud Messaging ()는 모바일 앱 및 서버 응용 프로그램 간의 메시징 원활 하 게 하는 서비스입니다. Firebase Cloud Messaging 사용할 수 있습니다 (푸시 알림 라고도 함) 원격 알림을 구현 하려면 Xamarin.Android 응용 프로그램.
 
-[알림을](http://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; 이 Android 개발자 항목은 Android 알림에 대 한 최선의 가이드입니다. Android 사용자 인터페이스의 지침을 적절 하 게 도움이 되는 고려 사항 섹션에 알림을 디자인 디자인을 포함 합니다. 활동을 시작할 때 preserviing 탐색에 대 한 자세한 배경 정보를 제공 하 고 잠금 화면에서 알림 및 제어 미디어 재생 진행률을 표시 하는 방법을 설명 합니다. 
+[알림을](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; 이 Android 개발자 항목은 Android 알림에 대 한 최선의 가이드입니다. Android 사용자 인터페이스의 지침을 적절 하 게 도움이 되는 고려 사항 섹션에 알림을 디자인 디자인을 포함 합니다. 활동을 시작할 때 preserviing 탐색에 대 한 자세한 배경 정보를 제공 하 고 잠금 화면에서 알림 및 제어 미디어 재생 진행률을 표시 하는 방법을 설명 합니다. 
 
 [NotificationListenerService](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/) &ndash; 이 Android 서비스를 사용 하면 수신 대기할 (및 상호 작용) 앱에 대 한 Android 장치에서 앱에 등록 된 알림 뿐 아니라 게시 된 모든 알림을 수신 합니다. 사용자 장치에 대 한 알림을 수신할 수 있도록 앱에 권한을 명시적으로 제공 해야 하는 참고 합니다.
 

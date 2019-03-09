@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "30764452"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671900"
 ---
 # <a name="auto-complete"></a>자동 완성
 
@@ -22,7 +22,7 @@ ms.locfileid: "30764452"
 ## <a name="overview"></a>개요
 
 자동 완성 제안 사항을 제공 하는 텍스트 항목 위젯을 만들려면 사용 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
-위젯입니다. 제안을 통해 위젯과 사용 하 여 연결 문자열의 컬렉션에서 수신 되는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)합니다.
+widget. 제안을 통해 위젯과 사용 하 여 연결 문자열의 컬렉션에서 수신 되는 [ `ArrayAdapter` ](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)합니다.
 
 이 자습서에서는 만듭니다는 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 국가 이름에 대 한 제안을 제공 하는 위젯입니다.
@@ -46,7 +46,7 @@ ms.locfileid: "30764452"
 ```
 
 합니다 [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 소개 하는 레이블이 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
-위젯입니다.
+widget.
 
 
 ## <a name="tutorial"></a>자습서
@@ -160,9 +160,9 @@ static string[] COUNTRIES = new string[] {
 ```
 
 이 사용자에 입력 하는 경우 드롭다운 목록에서 제공 되는 추천 단어 목록을 합니다 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
-위젯입니다.
+widget.
 
-응용 프로그램을 실행합니다. 입력할 때 다음과 같이 표시 됩니다.
+애플리케이션을 실행합니다. 입력할 때 다음과 같이 표시 됩니다.
 
 [![자동 완성 스크린샷 예제 "ca"를 포함 하는 이름을 나열 합니다.](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
@@ -171,7 +171,7 @@ static string[] COUNTRIES = new string[] {
 ## <a name="more-information"></a>추가 정보
 
 이때 하드 코드 된 문자열 배열을 사용 하 여 응용 프로그램 코드 동작을 콘텐츠에 집중 해야 하기 때문에 권장 되는 디자인 방법은 아닙니다. 문자열과 같은 응용 프로그램 콘텐츠는 수정 내용 쉽게 및 콘텐츠 지역화를 용이 하 게 하는 코드에서 구체화 해야 합니다. 하드 코드 된 문자열에만 쉽게 집중할이 자습서에 사용 되는 [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
-위젯입니다. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 사용 하 여이 작업을 수행할 수 있습니다는 `<string-array>` 프로젝트에서 리소스 `res/values/strings.xml` 파일입니다. 예를 들어:
+widget. 대신, 응용 프로그램에 XML 파일에 이러한 문자열 배열을 선언 해야 합니다. 사용 하 여이 작업을 수행할 수 있습니다는 `<string-array>` 프로젝트에서 리소스 `res/values/strings.xml` 파일입니다. 예를 들어:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -205,5 +205,5 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 *이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다* 
  [ *Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서는 기반으로 합니다* 
- [ *Android 자동 완성 자습서*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+ [ *Android 자동 완성 자습서*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
 *합니다.*

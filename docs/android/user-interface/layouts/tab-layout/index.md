@@ -1,5 +1,5 @@
 ---
-title: 탭된 레이아웃
+title: 탭 레이아웃
 description: Android에서 탭된 레이아웃의 개요
 ms.prod: xamarin
 ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
@@ -7,14 +7,9 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5d88ffb44d12ee142314c74ca8e749164cbfe3b9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105963"
 ---
-# <a name="tabbed-layouts"></a>탭된 레이아웃
+
+# <a name="tabbed-layouts"></a>탭 레이아웃
 
 
 ## <a name="overview"></a>개요
@@ -34,6 +29,6 @@ ms.locfileid: "50105963"
 
 ## <a name="related-links"></a>관련 링크
 
-- [재질 디자인-탭](https://material.io/guidelines/components/tabs.html)- [작업 모음](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [재질 디자인-탭](https://material.io/guidelines/components/tabs.html)- [작업 모음](https://developer.android.com/guide/topics/ui/actionbar.html)
 - [Android 지원 라이브러리 v7 AppCompat NuGet 패키지](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [v7 appcompat 라이브러리](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [v7 appcompat 라이브러리](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

@@ -1,5 +1,5 @@
 ---
-title: Jni 작업
+title: JNI 작업
 description: Xamarin.Android에서 Android 앱을 작성 허용 C# Java 대신 합니다. 여러 어셈블리 Mono.Android.dll 등 Mono.Android.GoogleMaps.dll Java 라이브러리에 대 한 바인딩을 제공 하는 Xamarin.Android와 함께 제공 됩니다. 그러나 가능한 모든 Java 라이브러리에 대 한 바인딩을 제공 되지 않습니다 및 바인딩을 제공 하는 모든 Java 형식 및 멤버 바인딩할 수 있습니다. 바인딩되지 않은 Java 형식 및 멤버를 사용 하 여 Java 기본 인터페이스 (JNI)를 사용할 수 있습니다. 이 문서에서는 JNI 사용 하 여 Java 형식 및 멤버에서 Xamarin.Android 응용 프로그램 상호 작용 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: c674112f629f2054f81d72ee2b71268836e48b7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8ad2dde701814c0977e25e6e58272c0aa01ca4ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106717"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672848"
 ---
-# <a name="working-with-jni"></a>Jni 작업
+# <a name="working-with-jni"></a>JNI 작업
 
 _Xamarin.Android에서 Android 앱을 작성 허용 C# Java 대신 합니다. 여러 어셈블리 Mono.Android.dll 등 Mono.Android.GoogleMaps.dll Java 라이브러리에 대 한 바인딩을 제공 하는 Xamarin.Android와 함께 제공 됩니다. 그러나 가능한 모든 Java 라이브러리에 대 한 바인딩을 제공 되지 않습니다 및 바인딩을 제공 하는 모든 Java 형식 및 멤버 바인딩할 수 있습니다. 바인딩되지 않은 Java 형식 및 멤버를 사용 하 여 Java 기본 인터페이스 (JNI)를 사용할 수 있습니다. 이 문서에서는 JNI 사용 하 여 Java 형식 및 멤버에서 Xamarin.Android 응용 프로그램 상호 작용 하는 방법을 보여 줍니다._
 
@@ -156,7 +156,7 @@ public class HelloAndroid extends android.app.Activity {
 
 -   Android 레이아웃 XML 특성의 예를 들어 작업 이름을 지원 합니다 [android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML 특성입니다. 지정 된 확장된 인스턴스 보기에서는 Java 메서드를 조회 하려고 시도 합니다.
 
--   합니다 [java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html) 인터페이스를 사용 하려면 `readObject` 고 `writeObject` 메서드. 아니므로이 인터페이스의 멤버를 해당 관리 되는 구현 Java 코드에 이러한 메서드를 노출 하지 않습니다.
+-   합니다 [java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html) 인터페이스를 사용 하려면 `readObject` 고 `writeObject` 메서드. 아니므로이 인터페이스의 멤버를 해당 관리 되는 구현 Java 코드에 이러한 메서드를 노출 하지 않습니다.
 
 -   합니다 [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.Os.Parcelable/) 인터페이스는 구현 클래스 정적 필드가 있어야는 예상 `CREATOR` 형식의 `Parcelable.Creator`합니다. 생성된 된 Java 코드에 몇 가지 명시적 필드가 필요 합니다. 표준 시나리오를 사용 하 여 관리 코드에서 Java 코드에서 출력 필드를 없음 방법이 있습니다.
 
@@ -248,12 +248,12 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 ### <a name="binding-fields"></a>필드 바인딩
 
-Java 필드도 노출 되는 C# 속성을 예를 들어 Java 필드 [java.lang.System.in](http://developer.android.com/reference/java/lang/System.html#in) 로 바인딩되어 합니다 C# 속성 [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
+Java 필드도 노출 되는 C# 속성을 예를 들어 Java 필드 [java.lang.System.in](https://developer.android.com/reference/java/lang/System.html#in) 로 바인딩되어 합니다 C# 속성 [Java.Lang.JavaSystem.In](https://developer.xamarin.com/api/property/Java.Lang.JavaSystem.In/).
 또한 정적 필드 및 인스턴스 필드를 구분 하는 JNI, 이후 속성을 구현 하는 경우 다양 한 방법은 사용할 수입니다.
 
 세 가지 메서드를 작업 하는 필드 바인딩:
 
-1.  합니다 *필드 id를 가져올* 메서드. *필드 id를 가져옵니다* 메서드는 반환 하는 필드를 처리 하는 일을 담당 합니다 *필드 값을 가져오려면* 및 *필드 값을 설정* 메서드를 사용 하 여 합니다. 필드 id를 얻으려면 알면 선언 하는 필드의 이름을 입력 해야 하며 [JNI 형식 시그니처](#_JNI_Type_Signatures) 필드.
+1.  합니다 *필드 id를 가져올* 메서드. *필드 id를 가져옵니다* 메서드는 반환 하는 필드를 처리 하는 일을 담당 합니다 *필드 값을 가져오려면* 및 *필드 값을 설정* 메서드를 사용 하 여 합니다. 필드 id를 얻으려면 알면 선언 하는 필드의 이름을 입력 해야 하며 [JNI 형식 시그니처](#JNI_Type_Signatures) 필드.
 
 1.  합니다 *필드 값을 얻으려면* 메서드. 이러한 메서드는 필요한 필드 핸들 하 고 Java에서 필드의 값을 읽는 담당 합니다.
     메서드를 사용 하 여 필드의 형식에 따라 다릅니다.
@@ -280,7 +280,7 @@ public static System.IO.Stream In
 }
 ```
 
-참고: 사용 하 고 [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) JNI 참조로 변환 하는 `System.IO.Stream` 인스턴스를 사용 하는 `JniHandleOwnership.TransferLocalRef` 때문에 [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) 로컬 참조를 반환합니다.
+참고: 바로 우리가 사용할 [InputStreamInvoker.FromJniHandle](https://developer.xamarin.com/api/member/Android.Runtime.InputStreamInvoker.FromJniHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) JNI 참조로 변환 하는 `System.IO.Stream` 인스턴스를 사용 하는 `JniHandleOwnership.TransferLocalRef` 때문에 [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/) 반환을 로컬 참조입니다.
 
 많은 합니다 [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) 형식에 `FromJniHandle` 는 JNI 변환 하는 메서드를 원하는 형식으로 참조 합니다.
 
@@ -288,11 +288,11 @@ public static System.IO.Stream In
 
 ### <a name="method-binding"></a>메서드 바인딩
 
-Java 메서드도 노출 된 C# 메서드 및 C# 속성입니다. 예를 들어 다음 Java 메서드의 [java.lang.Runtime.runFinalizersOnExit](http://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) 메서드로 바인딩되어 합니다 [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) 메서드 및 [java.lang.Object.getClass ](http://developer.android.com/reference/java/lang/Object.html#getClass) 메서드로 바인딩되어 합니다 [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) 속성입니다.
+Java 메서드도 노출 된 C# 메서드 및 C# 속성입니다. 예를 들어 다음 Java 메서드의 [java.lang.Runtime.runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) 메서드로 바인딩되어 합니다 [Java.Lang.Runtime.RunFinalizersOnExit](https://developer.xamarin.com/api/member/Java.Lang.Runtime.RunFinalizersOnExit/) 메서드 및 [java.lang.Object.getClass ](https://developer.android.com/reference/java/lang/Object.html#getClass) 메서드로 바인딩되어 합니다 [Java.Lang.Object.Class](https://developer.xamarin.com/api/property/Java.Lang.Object.Class/) 속성입니다.
 
 메서드 호출에는 2 단계 프로세스입니다.
 
-1.  합니다 *메서드 id를 가져올* 메서드를 호출 합니다. 합니다 *메서드 id를 가져올* 메서드는 메서드 호출 메서드를 사용 하는 메서드 핸들을 반환 하는 일을 담당 합니다. 선언 형식, 메서드의 이름을 알고 있으면 메서드 id를 얻으려면 해야 하며 [JNI 형식 시그니처](#_JNI_Type_Signatures) 메서드.
+1.  합니다 *메서드 id를 가져올* 메서드를 호출 합니다. 합니다 *메서드 id를 가져올* 메서드는 메서드 호출 메서드를 사용 하는 메서드 핸들을 반환 하는 일을 담당 합니다. 선언 형식, 메서드의 이름을 알고 있으면 메서드 id를 얻으려면 해야 하며 [JNI 형식 시그니처](#JNI_Type_Signatures) 메서드.
 
 1.  메서드를 호출합니다.
 
@@ -308,7 +308,7 @@ Java 메서드도 노출 된 C# 메서드 및 C# 속성입니다. 예를 들어 
 
 #### <a name="static-methods"></a>정적 메서드
 
-사용 하 여 정적 메서드를 바인딩에서는 `JNIEnv.GetStaticMethodID` 한 다음 적절 한 사용 하 여 메서드 핸들을 얻기 위해 `JNIEnv.CallStatic*Method` 메서드의 반환 형식에 따라 메서드. 다음은에 대 한 바인딩의 예제는 [Runtime.getRuntime](http://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) 메서드:
+사용 하 여 정적 메서드를 바인딩에서는 `JNIEnv.GetStaticMethodID` 한 다음 적절 한 사용 하 여 메서드 핸들을 얻기 위해 `JNIEnv.CallStatic*Method` 메서드의 반환 형식에 따라 메서드. 다음은에 대 한 바인딩의 예제는 [Runtime.getRuntime](https://developer.android.com/reference/java/lang/Runtime.html#getRuntime()) 메서드:
 
 ```csharp
 static IntPtr id_getRuntime;
@@ -388,7 +388,7 @@ IntPtr lrefInstance = JNIEnv.NewObject (class_ref, id_ctor_I, new JValue (value)
 1.  현재 런타임 형식을 선언 형식과 같은 경우 Java 생성자 호출을 사용 하 여 [Object.SetHandle](https://developer.xamarin.com/api/member/Java.Lang.Object.SetHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership)) 반환한 핸들을 저장 하 `JNIEnv.NewInstance` 합니다.
 
 
-예를 들어 합니다 [java.lang.Integer(int)](http://developer.android.com/reference/java/lang/Integer.html#Integer(int)) 생성자입니다. 이로 바인딩됩니다.
+예를 들어 합니다 [java.lang.Integer(int)](https://developer.android.com/reference/java/lang/Integer.html#Integer(int)) 생성자입니다. 이로 바인딩됩니다.
 
 ```csharp
 // Cache the constructor's method handle for later use
@@ -807,7 +807,7 @@ Java 매핑하는 위의 통지 `int[]` 매개 변수를 [JavaArray&lt;int&gt;](
 
 합니다 `Invoker` 형식 정의 상속 해야 `Java.Lang.Object`적절 한 인터페이스를 구현 하 고 인터페이스 정의에서 참조 하는 모든 연결 메서드를 제공 합니다. 클래스 바인딩에서 다른 자세한 제안 문장 하나는:는 `class_ref` 필드와 메서드 Id 인스턴스 멤버를 static이 아닌 멤버가 있어야 합니다.
 
-인스턴스 멤버를 선호 하는 것에 대 한 이유는 사용 하 여 `JNIEnv.GetMethodID` Android 런타임에서 동작 합니다. (이도 Java 동작을 수 있습니다; 테스트 되지 않은 요소가입니다.) `JNIEnv.GetMethodID` 구현된 된 인터페이스 및 없습니다 선언 된 인터페이스에서 제공 되는 메서드를 조회 하는 경우 null을 반환 합니다. 고려해 야 합니다 [java.util.SortedMap&lt;K, V&gt; ](http://developer.android.com/reference/java/util/SortedMap.html) Java 인터페이스를 구현 하는 [java.util.Map&lt;K, V&gt; ](http://developer.android.com/reference/java/util/Map.html) 인터페이스입니다. 구조는 제공을 [지우기](http://developer.android.com/reference/java/util/Map.html#clear()) 메서드를 따라서 겉보기 합리적 `Invoker` SortedMap에 대 한 정의 것:
+인스턴스 멤버를 선호 하는 것에 대 한 이유는 사용 하 여 `JNIEnv.GetMethodID` Android 런타임에서 동작 합니다. (이도 Java 동작을 수 있습니다; 테스트 되지 않은 요소가입니다.) `JNIEnv.GetMethodID` 구현된 된 인터페이스 및 없습니다 선언 된 인터페이스에서 제공 되는 메서드를 조회 하는 경우 null을 반환 합니다. 고려해 야 합니다 [java.util.SortedMap&lt;K, V&gt; ](https://developer.android.com/reference/java/util/SortedMap.html) Java 인터페이스를 구현 하는 [java.util.Map&lt;K, V&gt; ](https://developer.android.com/reference/java/util/Map.html) 인터페이스입니다. 구조는 제공을 [지우기](https://developer.android.com/reference/java/util/Map.html#clear()) 메서드를 따라서 겉보기 합리적 `Invoker` SortedMap에 대 한 정의 것:
 
 ```csharp
 // Fails at runtime. DO NOT FOLLOW
@@ -849,7 +849,7 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-참고:는 `Handle` 생성자 본문 내에서 속성을 사용 해야 아니라를 `handle` 매개 변수를 Android v4.0에서와 같이 `handle` 매개 변수가 올바르지 않을 수 있습니다 기본 생성자가 실행을 완료 합니다.
+참고: `Handle` 생성자 본문 내에서 속성을 사용 해야 아니라는 `handle` 매개 변수를 Android v4.0에서와 같이 `handle` 매개 변수가 올바르지 않을 수 있습니다 기본 생성자가 실행을 완료 합니다.
 
 
 #### <a name="dispose-method"></a>Dispose 메서드
@@ -1095,7 +1095,7 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 
 
 
-### <a name="using-javalangobjectgetobjectlttgt"></a>Java.Lang.Object.GetObject를 사용 하 여&lt;T&gt;)
+### <a name="using-javalangobjectgetobjectlttgt"></a>Using Java.Lang.Object.GetObject&lt;T&gt;()
 
 `Java.Lang.Object` 제공 된 [Java.Lang.Object.GetObject&lt;T&gt;(IntPtr 핸들을 JniHandleOwnership 전송)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) 메서드는 지정 된 형식의 관리 되는 호출 가능 래퍼를 만드는 데 사용할 수 있습니다.
 
@@ -1125,7 +1125,7 @@ Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefStrin
 
 JNI에서 메서드나 필드를 조회, 필드 또는 메서드에 대 한 선언 형식 먼저 조사 해야 합니다. 합니다 [Android.Runtime.JNIEnv.FindClass(string)](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.FindClass/(System.String)) 메서드 Java 형식 조회를 사용 합니다. 문자열 매개 변수가 합니다 *형식 참조를 간소화* 또는 *완전 한 형식 참조* Java 형식에 대 한 합니다. 참조를 [JNI 형식 참조 섹션](#_JNI_Type_References) 간단 하 고 전체 형식 참조에 대 한 세부 정보에 대 한 합니다.
 
-참고: 달리 격주로 `JNIEnv` 개체 인스턴스를 반환 하는 메서드 `FindClass` 로컬 참조가 아니라 전역 참조를 반환 합니다.
+참고: 다른 모든 달리 `JNIEnv` 개체 인스턴스를 반환 하는 메서드 `FindClass` 로컬 참조가 아니라 전역 참조를 반환 합니다.
 
 <a name="_Instance_Fields" />
 
@@ -1391,7 +1391,7 @@ JNI 형식 시그니처는 다음과 같습니다.
 (ILjava/lang/String;[I)J
 ```
 
-일반적으로 *강력한* 사용할 것을 권장 합니다 `javap` JNI 서명을 확인 하는 명령입니다. 예를 들어 JNI 형식 서명의 [java.lang.Thread.State.valueOf(String)](http://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) 메서드는 "(Ljava/l a n g/문자열) Ljava/l a n g/스레드$ 상태"는 JNI의 서명을 입력 하는 동안는 [ java.lang.Thread.State.values](http://developer.android.com/reference/java/lang/Thread.State.html#values) 메서드는 "() [Ljava/l a n g/스레드$ 상태"입니다. 후행 세미콜론에 대 한 주의 이러한 *는* JNI 형식 서명의 파트입니다.
+일반적으로 *강력한* 사용할 것을 권장 합니다 `javap` JNI 서명을 확인 하는 명령입니다. 예를 들어 JNI 형식 서명의 [java.lang.Thread.State.valueOf(String)](https://developer.android.com/reference/java/lang/Thread.State.html#valueOf(java.lang.String)) 메서드는 "(Ljava/l a n g/문자열) Ljava/l a n g/스레드$ 상태"는 JNI의 서명을 입력 하는 동안는 [ java.lang.Thread.State.values](https://developer.android.com/reference/java/lang/Thread.State.html#values) 메서드는 "() [Ljava/l a n g/스레드$ 상태"입니다. 후행 세미콜론에 대 한 주의 이러한 *는* JNI 형식 서명의 파트입니다.
 
 <a name="_JNI_Type_References" />
 
@@ -1433,12 +1433,12 @@ JNI 형식 참조는 Java 형식 참조와 다릅니다. 와 같은 정규화 �
 1.  출력을 읽을 `'unzip -l android.jar | grep JavaName'` 합니다.
 
 
-Java 형식 하면 두 [java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html) 간소화 된 형식 참조에 매핑되는 `java/lang/Thread$State`합니다.
+Java 형식 하면 두 [java.lang.Thread.State](https://developer.android.com/reference/java/lang/Thread.State.html) 간소화 된 형식 참조에 매핑되는 `java/lang/Thread$State`합니다.
 
 
 ### <a name="type-references"></a>형식 참조
 
-형식 참조는 기본 제공 형식 참조 또는 사용 하 여 간소화 된 형식 참조를 `'L'` 접두사 및 `';'` 접미사. Java 형식에 대 한 [java.lang.String](http://developer.android.com/reference/java/lang/String.html), 간소화 된 형식 참조 `"java/lang/String"`형식 참조를가 되는 반면 `"Ljava/lang/String;"`합니다.
+형식 참조는 기본 제공 형식 참조 또는 사용 하 여 간소화 된 형식 참조를 `'L'` 접두사 및 `';'` 접미사. Java 형식에 대 한 [java.lang.String](https://developer.android.com/reference/java/lang/String.html), 간소화 된 형식 참조 `"java/lang/String"`형식 참조를가 되는 반면 `"Ljava/lang/String;"`합니다.
 
 배열 형식 참조와 JNI 서명을 사용 하 여 형식 참조가 사용 됩니다.
 
@@ -1491,7 +1491,7 @@ static {};
 *대부분* JNI에서 Java 제네릭을 통해 볼 수 있듯이 시간의 *존재 하지 않는*합니다.
 일부 "주름" 있지만 이러한 주름 Java JNI 조회 하 고 제네릭 멤버를 호출 하는 방법을 사용 하 여 하지 제네릭을 사용 하 여 상호 작용 하는 방법에 있습니다.
 
-JNI 통해 상호 작용할 때 제네릭 형식 또는 멤버 및 제네릭이 아닌 형식 또는 멤버 사이는 차이점이 있습니다. 예를 들어, 제네릭 형식 [java.lang.Class&lt;T&gt; ](http://developer.android.com/reference/java/lang/Class.html) "원시" 제네릭 형식 이기도 `java.lang.Class`, 모두 같은 간단한 형식 참조를 `"java/lang/Class"`입니다.
+JNI 통해 상호 작용할 때 제네릭 형식 또는 멤버 및 제네릭이 아닌 형식 또는 멤버 사이는 차이점이 있습니다. 예를 들어, 제네릭 형식 [java.lang.Class&lt;T&gt; ](https://developer.android.com/reference/java/lang/Class.html) "원시" 제네릭 형식 이기도 `java.lang.Class`, 모두 같은 간단한 형식 참조를 `"java/lang/Class"`입니다.
 
 
 ## <a name="java-native-interface-support"></a>Java 기본 인터페이스 지원

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 362041efc5a19dfb70430054f3e4636d4fdfbd7e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675551"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672752"
 ---
 <a name="compatibility"></a>
 
@@ -84,7 +84,7 @@ Android는 알림을 정렬 하 고 지능적으로 표시 될 수 있도록 알
 
 -   **범주** &ndash; 시스템에 장치가 표시 되는 경우와 같은 다양 한 상황에서 알림 메시지를 처리 하는 방법에 알립니다 *방해 금지* 모드입니다.
 
-**참고:** **가시성** 하 고 **범주** 이전 버전의 Android에서 사용할 수 없는 되며 Android 5.0에서 도입 되었습니다. Android 8.0부터 [알림 채널](#notif-chan) 알림을 사용자에 게 표시 되는 방식을 제어 하는 데 사용 됩니다.
+**참고:** **표시 유형** 하 고 **범주** 이전 버전의 Android에서 사용할 수 없는 되며 Android 5.0에서 도입 되었습니다. Android 8.0부터 [알림 채널](#notif-chan) 알림을 사용자에 게 표시 되는 방식을 제어 하는 데 사용 됩니다.
 
 
 ### <a name="expanded-layouts"></a>확장 된 레이아웃
@@ -113,7 +113,7 @@ Android에서는 단일 이벤트 알림에 대 한 세 가지 확장된 레이�
 
 Android 8.0 oreo (용)부터 사용할 수는 *알림 채널* 알림 표시 하려는 각 형식에 대 한 사용자 지정 가능한 채널을 만드는 기능입니다. 알림 채널 수 있도록 하기 그룹 알림을 동작은 채널 별첨에 모든 알림 게시 되도록 합니다. 예를 들어 해야 즉각적인 주의가 필요한 알림을 위한 알림 채널 및 정보 메시지에 사용 되는 별도 "작게" 채널을 합니다.
 
-합니다 **YouTube** 두 알림 범주를 나열 하는 Android Oreo와 함께 설치 된 앱: **알림 다운로드** 하 고 **일반 알림**:
+합니다 **YouTube** Android Oreo를 사용 하 여 설치 된 앱에는 두 알림 범주를 나열 합니다. **다운로드 알림** 하 고 **일반 알림**:
 
 [![Android Oreo에서 YouTube에 대 한 알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
@@ -219,7 +219,7 @@ Android에서 알림을 생성 하려면 다음이 단계를 수행 합니다.
 
 -   알림의 텍스트
 
-다음 코드 예제를 사용 하는 방법을 보여 줍니다 `NotificationCompat.Builder` 기본 알림을 생성 하도록 합니다. 있음을 `NotificationCompat.Builder` 메서드를 지원 [메서드 체인](http://en.wikipedia.org/wiki/Method_chaining); 메서드 호출 다음에 대 한 마지막 메서드 호출의 결과 사용할 수 있도록 각 메서드는 작성기 개체를 반환 하는:
+다음 코드 예제를 사용 하는 방법을 보여 줍니다 `NotificationCompat.Builder` 기본 알림을 생성 하도록 합니다. 있음을 `NotificationCompat.Builder` 메서드를 지원 [메서드 체인](https://en.wikipedia.org/wiki/Method_chaining); 메서드 호출 다음에 대 한 마지막 메서드 호출의 결과 사용할 수 있도록 각 메서드는 작성기 개체를 반환 하는:
 
 ```csharp
 // Instantiate the builder and set notification elements:
@@ -332,7 +332,7 @@ notificationManager.Notify (notificationId, notification);
 
 -   응용 프로그램이 호출 `NotificationManager.CancelAll`합니다.
 
-Android 알림을 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요 [알림을 수정](http://developer.android.com/training/notify-user/managing.html#Updating)합니다.
+Android 알림을 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요 [알림을 수정](https://developer.android.com/training/notify-user/managing.html#Updating)합니다.
 
 
 ### <a name="starting-an-activity-from-a-notification"></a>알림을에서 작업 시작
@@ -375,7 +375,7 @@ notificationManager.Notify (notificationId, notification);
 
 원래 활동으로 사용자는이 알림을 탭 합니다.
 
-앱을 프로덕션 앱에서 처리 해야 합니다는 *백 스택에* 를 누를 때 합니다 **다시** 알림 작업 내에서 단추 (Android 작업과 백 스택에 잘 모르는 경우 참조 [ 작업 및 뒤로 스택](http://developer.android.com/guide/components/tasks-and-back-stack.html)).
+앱을 프로덕션 앱에서 처리 해야 합니다는 *백 스택에* 를 누를 때 합니다 **다시** 알림 작업 내에서 단추 (Android 작업과 백 스택에 잘 모르는 경우 참조 [ 작업 및 뒤로 스택](https://developer.android.com/guide/components/tasks-and-back-stack.html)).
 대부분의 경우에서 알림 작업에서 뒤로 이동 하면 사용자를 앱 외부로 및 홈 화면으로 반환 해야 합니다. 앱이 사용 하는 백 스택에 관리 하는 [TaskStackBuilder](https://developer.xamarin.com/api/type/Android.App.TaskStackBuilder/) 만들 클래스를 `PendingIntent` 백 스택을 사용 하 여 합니다.
 
 다른 실제 고려 사항은 원래 활동 알림 작업에 데이터를 전송 해야 할 수입니다. 예를 들어, 알림 텍스트 메시지가 도착 했는지를 사용자에 게 메시지를 표시 하는 메시지의 ID를 필요로 하는 알림 작업 (보기 화면 메시지)을 나타낼 수 있습니다. 만드는 작업을 `PendingIntent` 사용할 수는 [Intent.PutExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.PutExtra/p/System.String/System.String/) 이 데이터는 알림 작업에 전달 되도록 의도 (예를 들어, 문자열) 데이터를 추가 하는 방법입니다.
@@ -770,7 +770,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 
 이 문서에는 Android에서 로컬 알림을 만드는 방법을 설명 합니다. 알림의 분석 설명, 사용 하는 방법을 설명 했습니다 `NotificationCompat.Builder` 알림을 만들려면 큰 아이콘의 스타일 알림 방법 *큰 텍스트*를 *이미지* 고 *수신함*  형식, 알림 우선 순위, 표시 유형 및 범주와 같은 메타 데이터 설정을 설정 하는 방법 및 알림에서 활동을 시작 하는 방법입니다. 이 문서에서는 또한 이러한 알림 설정을 새 헤드업, 잠금 화면을 사용 하는 방법을 설명 하 고 *방해 금지* Android 5.0에 도입 된 기능입니다. 마지막으로 사용 하는 방법을 알아보았습니다 `NotificationCompat.Builder` 이전 버전의 Android 사용 하 여 알림 호환성을 유지 합니다.
 
-Android에 대 한 알림 디자인에 대 한 지침을 참조 하세요 [알림을](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)합니다.
+Android에 대 한 알림 디자인에 대 한 지침을 참조 하세요 [알림을](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)합니다.
 
 
 ## <a name="related-links"></a>관련 링크
@@ -778,7 +778,7 @@ Android에 대 한 알림 디자인에 대 한 지침을 참조 하세요 [알�
 - [NotificationsLab (샘플)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
 - [LocalNotifications (샘플)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Android 연습에서 로컬 알림](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
-- [사용자에 게 알리지](http://developer.android.com/training/notify-user/index.html)
+- [사용자에 게 알리지](https://developer.android.com/training/notify-user/index.html)
 - [알림](https://developer.xamarin.com/api/type/Android.App.Notification/)
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)

@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 16ee512395b2658b26bc7a489eabecec3656fa93
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5478a09c461ec8f1bf51efaa7b4dc2f862d69b4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115759"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668943"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 새 기능 개요
 
@@ -46,12 +46,12 @@ _최신 버전의를 C# – 버전 6 – 언어 상용구를 덜, 향상 된 이
 
 ## <a name="compiler"></a>컴파일러
 
-Mono C# 6 컴파일러는 Mono 4.0 이상에 포함 된 [무료로 다운로드할 수 있습니다](http://www.mono-project.com/download/)합니다.
+Mono C# 6 컴파일러는 Mono 4.0 이상에 포함 된 [무료로 다운로드할 수 있습니다](https://www.mono-project.com/download/)합니다.
 Mac 용 visual Studio는 자동으로 시스템에서 Mono 설치를 업데이트합니다.
 
 Windows 사용자에 게 있어야 [Visual Studio 2015 또는 2017 ^](https://visualstudio.microsoft.com/) 컴파일하는 데 설치 C# 6 코드 (선택한 경우에 Windows 용 Xamarin Studio IDE로).
 
-^ 또는 *[Microsoft Build Tools 2015](http://www.microsoft.com/download/details.aspx?id=48159)* 명령에 대 한 줄 컴파일 또는 빌드 서버, 예를 들어 있습니다.
+^ 또는 *[Microsoft Build Tools 2015](https://www.microsoft.com/download/details.aspx?id=48159)* 명령에 대 한 줄 컴파일 또는 빌드 서버, 예를 들어 있습니다.
 
 ## <a name="using-c-6"></a>사용 하 여 C# 6
 

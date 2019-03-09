@@ -6,13 +6,9 @@ ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 649a0db7e74f663b85efb9db2365dbc7a0186e0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106834"
+ms.date: 03/17/2017
 ---
+
 # <a name="watchos-application-fundamentals"></a>watchOS 응용 프로그램 기본 사항
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[부모 응용 프로그램](~/ios/watchos/app-fundamentals/parent-app.md)
@@ -46,4 +42,3 @@ Watch 앱에 사용할 수 있는 두 가지 탐색 옵션을 알아보는: 계�
 ##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[설정](~/ios/watchos/app-fundamentals/settings.md)
 
 Watch 앱을 위한 설정 화면을 추가 합니다.
-

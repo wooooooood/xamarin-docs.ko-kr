@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 322bb630194f973d37d7ca27a0ca9fe1b548b240
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f8fae79af654339b54a8df0d2ea32eef38f34adb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107217"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668454"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9-문제 해결
 
@@ -24,7 +24,7 @@ Xamarin iOS 디자이너 Xcode 7 기능을 아직 지원 하지 않습니다. �
 
 iOS Xcode 7 기능에 대 한 디자이너 지원을 곧 주기 6 기능 출시 대상으로 합니다. 주기 6 미리 보기 버전 알파 채널에서 현재 사용 가능한 및 제한적으로 새 Xcode 7 기능에 대 한 지원.
 
-Mac 용 Visual Studio에 대 한 부분 해결 방법: storyboard를 마우스 오른쪽 단추로 클릭 하 고 선택 **연결** > **Xcode Interface Builder**합니다.
+Mac 용 Visual Studio에 대 한 부분 해결 방법: 스토리 보드를 마우스 오른쪽 단추로 클릭 하 고 선택 **연결 프로그램** > **Xcode Interface Builder**합니다.
 
 ## <a name="where-are-the-ios-8-simulators"></a>여기서? iOS 8 시뮬레이터
 
@@ -42,23 +42,23 @@ IOS 8 (및 이전 버전), 스토리 보드에서 UI 요소 사용 하 여 두 �
 
 동일한 스토리 보드에서 iOS 9에서 실행 하는 경우 다음 형식의 예외 발생:
 
-> 앱 'NSInvalidArgumentException' 확인할 수 없는 예외로 인해 종료 이유: ' * * * + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: 선행/후행 간의 제약 조건을 만들 수 없습니다 특성 및 오른쪽/왼쪽 특성입니다. 둘 다 또는 둘 다에 대 한 선행/후행 사용 합니다.'
+> 앱 'NSInvalidArgumentException' 확인할 수 없는 예외로 인해 종료 이유: ' * * * + [NSLayoutConstraint constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:]: 선행/후행 특성 및 오른쪽/왼쪽 특성 간의 제약 조건을 만들 수 없습니다. 둘 다 또는 둘 다에 대 한 선행/후행 사용 합니다.'
 
 iOS 9를 사용 하 여 레이아웃 적용 **오른쪽** & **왼쪽** _하거나_ **선행**  &   **후행** 특성이 있지만 *하지* 둘 다. 이 문제를 해결 하려면 스토리 보드 파일 내에서 설정 된 동일한 특성을 사용 하는 모든 레이아웃 제약 조건을 변경 합니다.
 
-자세한 내용은 참조 하십시오 합니다 [iOS 9 제약 조건 오류가](http://stackoverflow.com/questions/32692841/ios-9-constraint-error) 스택 오버플로 토론 합니다.
+자세한 내용은 참조 하십시오 합니다 [iOS 9 제약 조건 오류가](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) 스택 오버플로 토론 합니다.
 
-## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>오류 ITMS-90535: 예기치 않은 CFBundleExecutable 키
+## <a name="error-itms-90535-unexpected-cfbundleexecutable-key"></a>ERROR ITMS-90535: 예기치 않은 CFBundleExecutable 키
 
 IOS 9 전환한 후 앱에서 타사 구성 요소 (특히 기존 Google Maps 구성 요소)에 컴파일하고 새 빌드를 iTunes Connect 양식에서 오류가 발생할 수 있습니다를 제출 하려고 할 때 iOS 8 (또는 이전)에서 실행을 사용 합니다.
 
-> 오류 ITMS-90535: 예기치 않은 CFBundleExecutable 키입니다. 'Payload/app-name.app/component.bundle'에서 번들에는 실행 파일을 번들 없습니다...
+> ERROR ITMS-90535: 예기치 않은 CFBundleExecutable 키입니다. 'Payload/app-name.app/component.bundle'에서 번들에는 실행 파일을 번들 없습니다...
 
 이 문제 수 일반적으로 프로젝트의 명명 된 번들을 검색 하 여 해결 후 다시 설치 해야-바로 알 수 있듯이 오류 메시지-편집 합니다 `Info.plist` 제거 하 여 번들에는 `CFBundleExecutable` 키입니다. 합니다 `CFBundlePackageType` 키로 설정 해야 `BNDL` 도 합니다.
 
 다음과 같이 변경한 후 정리를 수행 하 고 전체 프로젝트를 다시 빌드하십시오. 이러한 변경을 수행한 후 문제 없이 iTunes Connect에 전송할 수 있어야 합니다.
 
-자세한 내용은 참조 하십시오이 [Stack Overflow](http://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) 토론 합니다.
+자세한 내용은 참조 하십시오이 [Stack Overflow](https://stackoverflow.com/questions/32096130/unexpected-cfbundleexecutable-key) 토론 합니다.
 
 ## <a name="cfnetwork-sslhandshake-failed--9824-error"></a>CFNetwork SSLHandshake 실패 (-9824) 오류
 
@@ -90,7 +90,7 @@ ATS는 모든 연결을 사용 하 여 iOS 9 및 OS X 10.11 (El Capitan) 용으�
 
 ## <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView가 Null 생성자
 
-**원인:** Ios 9 `initWithFrame:` 생성자는 이제 iOS 9로의 동작 변경 내용으로 인해 필요한 합니다 [UICollectionView 설명서에 나와](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). 셀을 호출 하 여 초기화 됩니다 지정된 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 해당 `initWithFrame:` 메서드.
+**원인:** Ios 9 `initWithFrame:` 생성자는 이제 iOS 9로의 동작 변경 내용으로 인해 필요한 합니다 [UICollectionView 설명서에 나와](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)합니다. 셀을 호출 하 여 초기화 됩니다 지정된 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 해당 `initWithFrame:` 메서드.
 
 **해결 방법:** 추가 된 `initWithFrame:` 다음과 같은 생성자:
 
@@ -102,13 +102,13 @@ public YourCellClassName (CGRect frame) : base (frame)
 }
 ```
 
-관련 샘플: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
+관련된 샘플: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
 <a name="UIView-fails-to-Init-with-Coder-when-Loading-a-View-from-a-Xib/Nib" />
 
 ## <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView는 Xib/Nib에서 뷰를 로드할 때 코드 작성자를 사용 하 여 초기화 하지 못함
 
-**원인:** 는 `initWithCoder:` 생성자 인터페이스 작성기 Xib 파일에서 뷰를 로드할 때 호출 됩니다. 이 생성자는 내보내지지 않음 경우 비관리 코드는 관리 되는 버전을 호출할 수 없습니다. 이전에 (예: iOS 8)에 `IntPtr` 뷰를 초기화 하려면 생성자 호출 되었습니다.
+**원인:** `initWithCoder:` 생성자 인터페이스 작성기 Xib 파일에서 뷰를 로드할 때 호출 됩니다. 이 생성자는 내보내지지 않음 경우 비관리 코드는 관리 되는 버전을 호출할 수 없습니다. 이전에 (예: iOS 8)에 `IntPtr` 뷰를 초기화 하려면 생성자 호출 되었습니다.
 
 **해결 방법:** 만들기 및 내보내기는 `initWithCoder:` 다음과 같은 생성자:
 
@@ -120,9 +120,9 @@ public YourClassName (NSCoder coder) : base (coder)
 }
 ```
 
-관련된 샘플: [채팅](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
+관련된 샘플: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
-## <a name="dyld-message-no-cache-image-with-name"></a>Dyld 메시지: 캐시 이미지가 없는 이름...
+## <a name="dyld-message-no-cache-image-with-name"></a>Dyld 메시지: 이름의 캐시 이미지 없음...
 
 로그에서 다음 정보를 사용 하 여 충돌을 발생할 수 있습니다.
 
@@ -131,9 +131,9 @@ Dyld Error Message:
 Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**원인:** 할 개인 프레임 워크를 공개 하는 경우 발생 하는 Apple 네이티브 링커가의 버그입니다 (JavaScriptCore 수행 된 iOS 7에서에서 공개 하기 전에 개인 프레임 워크 였습니다) 앱의 배포 대상은 iOS 버전 이며 경우는 프레임 워크가 개인입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전을 사용 하 여 연결 됩니다.
+**원인:** 개인 프레임 워크를 활용 하며 공개 하는 경우 발생 하는 Apple 네이티브 링커가의 버그입니다 (JavaScriptCore 수행 된 iOS 7에서에서 공개 하기 전에 개인 프레임 워크 였습니다) 및 프레임 워크 개인 때 앱의 배포 대상은 iOS 버전입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전을 사용 하 여 연결 됩니다.
 
-**해결 방법:** iOS 9에 대 한 해결 될 것 이지만 그 동안에 직접 적용할 수 있습니다 문제를 쉽게 해결: 방금 이상 (보십시오 iOS 7이 예제의) 프로젝트에서 iOS 버전을 대상입니다. 다른 프레임 워크와 비슷한 문제가 발생할 수 있습니다, 예를 들어 WebKit framework iOS 8에서에서 공용으로 설정 되었습니다 (및 iOS 앱에서 WebKit를 사용 하는 8을 두어야 이므로이 오류를 발생 하면 iOS 7을 대상으로).
+**해결 방법:** IOS 9에 대 한 해결 될 것 이지만 그 동안에 직접 적용할 수 있습니다 문제를 쉽게 해결: 방금 이상 (보십시오 iOS 7이 예제의) 프로젝트에서 iOS 버전을 대상입니다. 다른 프레임 워크와 비슷한 문제가 발생할 수 있습니다, 예를 들어 WebKit framework iOS 8에서에서 공용으로 설정 되었습니다 (및 iOS 앱에서 WebKit를 사용 하는 8을 두어야 이므로이 오류를 발생 하면 iOS 7을 대상으로).
 
 ## <a name="untrusted-enterprise-developer"></a>신뢰할 수 없는 엔터프라이즈 개발자
 
@@ -177,7 +177,7 @@ iOS 9가 다른 인터페이스 방향을 지원 하기 위해 더 이상 동일
 
 컴파일 및 iOS 9에 대 한 기존 Xamarin.iOS 앱을 실행 하는 경우 오류가 발생할 수 있습니다는 형식:
 
-> Objective C 예외를 throw 됩니다.  이름: NSInternalInconsistencyException 이유: 응용 프로그램 windows 응용 프로그램 시작 후에 루트 보기 컨트롤러 해야
+> Objective C 예외를 throw 됩니다.  이름: NSInternalInconsistencyException 이유: Windows 응용 프로그램 루트 보기 컨트롤러 응용 프로그램의 끝에서 시작 해야
 
 이 오류는 앱 Windows 응용 프로그램 시작 후에 루트 뷰 컨트롤러를 해야 하 고 기존 앱 하지 때문에 발생 합니다.
 

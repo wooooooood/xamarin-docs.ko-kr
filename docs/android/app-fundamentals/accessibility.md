@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528132"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671626"
 ---
 # <a name="accessibility-on-android"></a>Android에서 내게 필요한 옵션
 
@@ -172,14 +172,14 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 별도 파일에 텍스트를 저장 하는 장점은 앱에서 파일의 여러 언어 번역을 제공할 수 있습니다. 참조를 [Android 지역화 가이드](~/android/app-fundamentals/localization.md) 알아보려면 응용 프로그램 프로젝트에 지역화 문자열 파일을 추가 하는 방법입니다.
 
 
-## <a name="testing-accessibility"></a>액세스 가능성 테스트
+## <a name="testing-accessibility"></a>접근성 테스트
 
-따릅니다 [이 단계](http://developer.android.com/training/accessibility/testing.html#how-to) TalkBack 및 탐색 터치 하 여 Android 장치에서 액세스 가능성을 테스트할 수 있도록 합니다.
+따릅니다 [이 단계](https://developer.android.com/training/accessibility/testing.html#how-to) TalkBack 및 탐색 터치 하 여 Android 장치에서 액세스 가능성을 테스트할 수 있도록 합니다.
 
 설치 해야 할 수 있습니다 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) 에 나타나지 않으면 Google Play에서 **설정 > 액세스 가능성**합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 간 내게 필요한 옵션](~/cross-platform/app-fundamentals/accessibility.md)
-- [Android 내게 필요한 옵션 Api](http://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [플랫폼 간 접근성](~/cross-platform/app-fundamentals/accessibility.md)
+- [Android 내게 필요한 옵션 Api](https://developer.android.com/guide/topics/ui/accessibility/index.html)

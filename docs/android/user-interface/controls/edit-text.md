@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: e708ceb4b0487cb07ae5a55fae5e96f0e41f17f6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d42cec1ee0939bead9ede83a042f5b6cbb5298cd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119503"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670872"
 ---
 # <a name="edit-text"></a>텍스트 편집
 
@@ -64,7 +64,7 @@ using Android.Views;
 
 [![EditText에 텍스트를 입력 하는 예제](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*이 페이지의 일부는 만든 작업에 따라 수정 하 고* [ *Android Open Source Project에서 공유* ](http://code.google.com/policies.html) *는에설명된조건에따라사용및* [ *2.5 creative Commons Attribution 라이선스* ](http://creativecommons.org/licenses/by/2.5/) *합니다. 이 자습서는 기반으로 합니다* [ *Android 양식 항목 자습서* ](http://developer.android.com/resources/tutorials/views/hello-formstuff.html) *합니다.*
+*이 페이지의 일부는 만든 작업에 따라 수정 하 고* [ *Android Open Source Project에서 공유* ](http://code.google.com/policies.html) *는에설명된조건에따라사용및* [ *2.5 creative Commons Attribution 라이선스* ](http://creativecommons.org/licenses/by/2.5/) *합니다. 이 자습서는 기반으로 합니다* [ *Android 양식 항목 자습서* ](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *합니다.*
 
 
 ## <a name="related-links"></a>관련 링크

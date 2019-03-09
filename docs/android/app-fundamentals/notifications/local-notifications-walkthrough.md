@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 7cf1dde6c65d2971cecd0a59a2e11d6c2d50ee2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119191"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670092"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.Android에서 로컬 알림 사용
 
@@ -237,9 +237,9 @@ namespace LocalNotifications
 마지막으로 알림을 시작 되 면 알림 영역에 나타나는 작은 아이콘을 추가 합니다. 복사할 수 있습니다 [이 아이콘](local-notifications-walkthrough-images/ic-stat-button-click.png) 프로젝트를 만들거나 사용자 고유의 사용자 지정 아이콘입니다. 아이콘 파일 이름을 **ic\_stat\_단추\_click.png** 복사 합니다 **리소스/drawable** 폴더입니다. 사용 하 여 **추가 > 기존 항목...**  프로젝트에서이 아이콘 파일을 포함 하도록 합니다.
 
 
-### <a name="run-the-application"></a>응용 프로그램 실행
+### <a name="run-the-application"></a>애플리케이션 실행
 
-응용 프로그램을 빌드 및 실행합니다. 다음 스크린샷과 유사 하 게 첫 번째 활동을 사용 하 여 표시 합니다.
+애플리케이션을 빌드 및 실행합니다. 다음 스크린샷과 유사 하 게 첫 번째 활동을 사용 하 여 표시 합니다.
 
 [![첫 번째 활동 스크린 샷](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
@@ -255,7 +255,7 @@ namespace LocalNotifications
 
 [![두 번째 활동 스크린 샷](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-지금까지 이 시점에서 Android 로컬 알림 연습 완료 하 고를 참조할 수 있는 작업 예제를 사용 합니다. 알림을 자세히 여기에서 설명 했습니다 보다 자세한 정보가 필요한 경우 걸리는 살펴보겠습니다 많이 [알림에 대 한 Google 설명서](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)합니다.
+지금까지 이 시점에서 Android 로컬 알림 연습 완료 하 고를 참조할 수 있는 작업 예제를 사용 합니다. 알림을 자세히 여기에서 설명 했습니다 보다 자세한 정보가 필요한 경우 걸리는 살펴보겠습니다 많이 [알림에 대 한 Google 설명서](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)합니다.
 
 
 ## <a name="summary"></a>요약

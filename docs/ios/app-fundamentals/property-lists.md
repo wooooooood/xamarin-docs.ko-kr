@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7056f7beb623bee32c767a3f2827efa6eb2a6136
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118801"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670829"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.iOS에서 속성 목록 사용
 
@@ -39,7 +39,7 @@ Mac 용 visual Studio 기능을 쉽게 기능과 앱 속성을 편집 하는 그
 
 Mac 용 visual Studio 기능 일반적인 편집 하기 위한 그래픽 인터페이스 `Info.plist` 응용 프로그램에 대 한 항목:
 
-1.  응용 프로그램 속성
+1.  애플리케이션 속성
 1.  지원 되는 장치 유형
 1.  각 장치 유형에 대해 지원 방향
 1.  상태 표시줄 스타일 및 색
@@ -110,7 +110,7 @@ Mac 용 visual Studio 기능 일반적인 편집 하기 위한 그래픽 인터�
 
 IOS 응용 프로그램 특정 파일 형식을 열기 지원에 대해 제공 된 `CFBundleDocumentTypes` 키입니다. -예를 들어 Pdf-특정 알려진된 파일 형식을 지원 하도록 응용 프로그램을 할까요 키 PDF 값의 연결을 추가할 것입니다. 이 섹션에 저장 되는 데이터를 입력 하는 편리한 방법을 제공 합니다 `CFBundleDocumentTypes` 키를 `Info.plist` 파일입니다.
 
-설명서를 참조 하십시오 [파일 형식 Your App 지원 등록](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) 이러한 값을 구성 하는 방법에 대 한 자세한 내용은 합니다.
+설명서를 참조 하십시오 [파일 형식 Your App 지원 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) 이러한 값을 구성 하는 방법에 대 한 자세한 내용은 합니다.
 
 ## <a name="utis"></a>Uti
 
@@ -146,7 +146,7 @@ URL의 첫 번째 부분은 (프로토콜 라고도 함) URL 구성표 이름입
 
  [![](property-lists-images/image33.png "사용 가능한 속성 형식")](property-lists-images/image33.png#lightbox)
 
-Apple 검토 [앱 관련 리소스](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) 선택적 속성에 대 한 추가 정보에 대 한 링크입니다.
+Apple 검토 [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) 선택적 속성에 대 한 추가 정보에 대 한 링크입니다.
 
  <a name="Entitlements" />
 
@@ -158,7 +158,7 @@ Apple 검토 [앱 관련 리소스](http://developer.apple.com/library/ios/#DOCU
 ## <a name="related-links"></a>관련 링크
 
 - [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
-- [앱 관련 리소스](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [사용자 앱에서 지 원하는 형식 파일을 등록](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
+- [사용자 앱에서 지 원하는 형식 파일을 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [사용자 지정 URL 구성표를 구현합니다.](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [자산 카탈로그 형식 참조](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

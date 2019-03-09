@@ -1,19 +1,14 @@
 ---
 title: MonoTouch.Dialog Xamarin.iOS에 대 한 소개
-description: 이 문서에서는 MonoTouch.Dialog (콜로라도 설명 D), Xamarin.iOS 사용 하 여 신속 하 게 하 고 선언적인 UI 개발을 위한 프레임 워크입니다. MonoTouch.Dialog Api를 사용 하 여 코드 또는 JSON에서 인터페이스를 만들고 끌어오기-새로 고침, 검색, 배경 이미지 로드 등과 같은 기능을 사용 하는 방법을 설명 합니다.
+description: '이 문서에서는 MonoTouch.Dialog (콜로라도 설명 D), Xamarin.iOS 사용 하 여 신속 하 게 하 고 선언적인 UI 개발을 위한 프레임 워크입니다. MonoTouch.Dialog Api를 사용 하 여 코드 또는 JSON에서 인터페이스를 만들고 끌어오기-새로 고침, 검색, 배경 이미지 로드 등과 같은 기능을 사용 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: c291a440a1937d2b0f1c229e3fa969caedba9ab9
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675460"
 ---
+
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>MonoTouch.Dialog Xamarin.iOS에 대 한 소개
 
 MonoTouch.Dialog, MT와 참조 줄여서 D는 개발자가 응용 프로그램 화면 및 탐색 하는 번거로움을 뷰 컨트롤러, 테이블 등을 만드는 것이 아니라 정보를 사용 하 여 구축을 신속 하 게 UI 개발 도구 키트입니다. 따라서 UI 개발 및 코드 영역 축소의 중요 한 단순화를 제공합니다. 예를 들어 다음 스크린 샷에서를 것이 좋습니다.
@@ -393,7 +388,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
 `JsonElement` 되는 `RootElement` 두 가지 형태로 인스턴스화할 수 있습니다. 한 버전을 만듭니다는 `RootElement` 해당 주문형 콘텐츠를 로드 됩니다. 사용 하 여 만들어지며는 `JsonElement` 끝에서 내용을 로드 하려면 url 인수를 사용 하는 생성자.
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 다른 폼에서 로컬 파일 또는 기존 데이터를 만듭니다 `System.Json.JsonObject` 이미 구문 분석:
@@ -589,10 +584,10 @@ public override Source CreateSizingSource (bool unevenRows)
 
 - [스크린 캐스트-Miguel de Icaza는 MonoTouch.Dialog를 사용 하 여는 iOS 로그인 화면을 만듭니다.](http://youtu.be/3butqB1EG0c)
 - [스크린 캐스트-MonoTouch.Dialog를 사용 하 여 iOS 사용자 인터페이스를 쉽게 만들기](http://youtu.be/j7OC5r8ZkYg)
-- [연습: 요소 API를 사용하여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
-- [연습: 리플렉션 API를 사용하여 응용 프로그램 만들기](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [연습: JSON 요소를 사용하여 사용자 인터페이스 만들기](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [연습: 요소 API를 사용하여 애플리케이션 만들기](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
+- [연습: 리플렉션 API를 사용하여 애플리케이션 만들기](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
+- [연습: JSON 요소를 사용 하 여 사용자 인터페이스를 만들려면](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [MonoTouch.Dialog JSON 태그](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Github에서 MonoTouch 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [UITableViewController 클래스 참조](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [UINavigationController 클래스 참조](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [UITableViewController 클래스 참조](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [UINavigationController 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: ea66cda0e2a1935a430c064c9cebd4134d295729
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681542"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669234"
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -29,13 +29,13 @@ Xamarin.Android 개발자에 게 (낮은 수준의 액세스)에 대 한 알고 
 Android 클래스 Android 런타임 클래스를 사용 하 여 통신 하는 방법에 대 한 자세한 내용은 참조는 [API 디자인](~/android/internals/api-design.md) 문서.
 
 
-## <a name="application-packages"></a>응용 프로그램 패키지
+## <a name="application-packages"></a>애플리케이션 패키지
 
 Android 응용 프로그램 패키지를 사용 하 여 ZIP 컨테이너를 *.apk* 파일 확장명입니다. 다음 내용을 추가 하 여 기본 Android 패키지와 동일한 구조와 레이아웃을가 하는 Xamarin.Android 응용 프로그램 패키지:
 
 -   응용 프로그램 어셈블리 (IL 포함)를 *저장* 내에서 압축 되지 않은 합니다 *어셈블리* 폴더입니다. 릴리스에서 시작 빌드 프로세스 중 합니다 *.apk* 됩니다 *mmap()* 어셈블리 및 프로세스로 ed가 메모리에서 로드 됩니다. 이 어셈블리를 실행 하기 전에 추출할 필요가 없으므로 빠른 응용 프로그램 시작을 허용 합니다.  
--   *참고:* 와 같은 위치 정보를 어셈블리 [Assembly.Location](xref:System.Reflection.Assembly.Location) 하 고 [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    *의존할 수 없습니다* 릴리스에서 빌드입니다. 고유한 파일 시스템 항목으로 존재 하지 않는 하 고 사용할 수 없는 위치를 갖습니다.
+-   *참고:* 같은 위치 정보를 어셈블리 [Assembly.Location](xref:System.Reflection.Assembly.Location) 하 고 [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+    *의존할 수 없습니다* 릴리스 빌드에서 합니다. 고유한 파일 시스템 항목으로 존재 하지 않는 하 고 사용할 수 없는 위치를 갖습니다.
 
 
 -   Mono 런타임 포함 된 네이티브 라이브러리는 내에 존재 합니다 *.apk* 합니다. Xamarin.Android 응용 프로그램을 원하는 대상 Android 아키텍처에 대 한 네이티브 라이브러리를 예를 들어 포함 해야 합니다 *armeabi* 를 *armeabi-v7a* 하십시오 *x86* 합니다. 적절 한 런타임 라이브러리를 포함 하지 않는 경우 Xamarin.Android 응용 프로그램 플랫폼에서 실행할 수 없습니다.
@@ -47,7 +47,7 @@ Xamarin.Android 응용 프로그램을 포함할 수도 *Android 호출 가능 �
 
 ## <a name="android-callable-wrappers"></a>Android 호출 가능 래퍼
 
-- **Android 호출 가능 래퍼** 되는 [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) Android 런타임에서 관리 코드를 호출 해야 하는 경우 든 지 사용 되는 브리지입니다. Android 호출 가능 래퍼 가상 메서드는 재정의할 수 있습니다 및 Java 인터페이스를 구현할 수 있습니다. 참조 된 [Java 통합 개요](~/android/platform/java-integration/index.md) 자세한 문서.
+- **Android 호출 가능 래퍼** 되는 [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) Android 런타임에서 관리 코드를 호출 해야 하는 경우 든 지 사용 되는 브리지입니다. Android 호출 가능 래퍼 가상 메서드는 재정의할 수 있습니다 및 Java 인터페이스를 구현할 수 있습니다. 참조 된 [Java 통합 개요](~/android/platform/java-integration/index.md) 자세한 문서.
 
 
 <a name="Managed_Callable_Wrappers" />
@@ -88,7 +88,7 @@ Java 전역 참조를 통해 액세스할 수 있는 관리 되는 호출 가능
 2. 기본 클래스 생성자에서 가상 메서드 호출입니다.
 
 
-(2)는 leaky 추상화 합니다. Java이 든, C#의 경우와 같이 생성자에서 가상 메서드를 호출은 항상 가장 많이 파생 된 메서드 구현을 호출 합니다. 예를 들어 합니다 [TextView (컨텍스트를 확인 하기 위해, int) 생성자](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) 가상 메서드를 호출 [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),으로 바인딩된는 [ TextView.DefaultMovementMethod 속성](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/)합니다.
+(2)는 leaky 추상화 합니다. Java이 든, C#의 경우와 같이 생성자에서 가상 메서드를 호출은 항상 가장 많이 파생 된 메서드 구현을 호출 합니다. 예를 들어 합니다 [TextView (컨텍스트를 확인 하기 위해, int) 생성자](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) 가상 메서드를 호출 [TextView.getDefaultMovementMethod()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),으로 바인딩된는 [ TextView.DefaultMovementMethod 속성](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/)합니다.
 따라서 형식을 [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) (1)로 된 [TextView 하위 클래스입니다](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [TextView.DefaultMovementMethod 재정의](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45), (3) [의 인스턴스를 활성화 XML 통해 클래스](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) 재정의 된 *DefaultMovementMethod* ACW 생성자를 실행 하려면 유익한 전에 하기 전에 발생 하는 속성 호출 되는 C# 생성자 유익한 실행 합니다.
 
 LogTextBox 인스턴스를 인스턴스화하고 지이 통해는 [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) ACW LogTextBox 인스턴스를 처음 실행 하는 경우 생성자에 다음 호출 하는 코드를 관리 되는 [ (상황에 맞는, IAttributeSet, int) LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) 생성자 *동일한 인스턴스에서* ACW 생성자를 실행 하는 경우.
@@ -99,7 +99,7 @@ LogTextBox 인스턴스를 인스턴스화하고 지이 통해는 [LogTextView (
 
 2.  Android 레이아웃 개체 그래프를 인스턴스화하고의 인스턴스를 인스턴스화합니다 *monodroid.apidemo.LogTextBox* 에 대 한 ACW *LogTextBox* 합니다.
 
-3.  합니다 *monodroid.apidemo.LogTextBox* 생성자를 실행 합니다 [android.widget.TextView](http://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) 생성자입니다.
+3.  합니다 *monodroid.apidemo.LogTextBox* 생성자를 실행 합니다 [android.widget.TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29) 생성자입니다.
 
 4.  합니다 *TextView* 생성자 호출 *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* 합니다.
 
@@ -178,8 +178,8 @@ I/mono-stdout( 2993): [Managed: Value=]
 
 ## <a name="application-startup"></a>응용 프로그램 시작
 
-작업, 서비스, 등 시작 됩니다, Android는 먼저 확인 활동/service/etc 호스트를 실행 중인 프로세스가 이미 있는지 확인 합니다. 새 프로세스가 만들어짐 다음 이러한 프로세스가 있는 경우는 [AndroidManifest.xml](http://developer.android.com/guide/topics/manifest/manifest-intro.html) 를 읽고 지정 된 형식 합니다 [ /manifest/application/@android:name ](http://developer.android.com/guide/topics/manifest/application-element.html#nm) 특성을 로드 하 고 인스턴스화합니다. 다음에 지정 된 모든 형식을 합니다 [ /manifest/application/provider/@android:name ](http://developer.android.com/guide/topics/manifest/provider-element.html#nm) 특성 값은 인스턴스화된을 해당 [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) 메서드를 호출 합니다. 이를 추가 하 여 Xamarin.Android 후크를 *mono입니다. MonoRuntimeProvider* *ContentProvider* AndroidManifest.xml 빌드 프로세스 중에 있습니다. *mono입니다. MonoRuntimeProvider.attachInfo()* 메서드는 Mono 런타임을 프로세스로 로드 하는 일을 담당 합니다.
-이 시점 전에 Mono를 사용 하려는 모든 시도가 실패 합니다. ( *참고*:이 인해 서브 클래스 형식을 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/) 제공 해야는 [(IntPtr, JniHandleOwnership) 생성자](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103)응용 프로그램 인스턴스는 만들어진 Mono를 초기화할 수 있습니다.)
+작업, 서비스, 등 시작 됩니다, Android는 먼저 확인 활동/service/etc 호스트를 실행 중인 프로세스가 이미 있는지 확인 합니다. 새 프로세스가 만들어짐 다음 이러한 프로세스가 있는 경우는 [AndroidManifest.xml](https://developer.android.com/guide/topics/manifest/manifest-intro.html) 를 읽고 지정 된 형식 합니다 [ /manifest/application/@android:name ](https://developer.android.com/guide/topics/manifest/application-element.html#nm) 특성을 로드 하 고 인스턴스화합니다. 다음에 지정 된 모든 형식을 합니다 [ /manifest/application/provider/@android:name ](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) 특성 값은 인스턴스화된을 해당 [ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/) 메서드를 호출 합니다. 이를 추가 하 여 Xamarin.Android 후크를 *mono입니다. MonoRuntimeProvider* *ContentProvider* AndroidManifest.xml 빌드 프로세스 중에 있습니다. *mono입니다. MonoRuntimeProvider.attachInfo()* 메서드는 Mono 런타임을 프로세스로 로드 하는 일을 담당 합니다.
+이 시점 전에 Mono를 사용 하려는 모든 시도가 실패 합니다. ( *참고*: 이 인해 서브 클래스 형식 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/) 제공 해야는 [(IntPtr, JniHandleOwnership) 생성자](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103)처럼 응용 프로그램 인스턴스는 전의 Mono를 초기화할 수 있습니다.)
 
-프로세스 초기화가 완료 되 면 `AndroidManifest.xml` 를 참조 하는 활동/service/등에 시작의 클래스 이름을 찾을 수 있습니다. 예를 들어 합니다 [ /manifest/application/activity/@android:name 특성](http://developer.android.com/guide/topics/manifest/activity-element.html#nm) 로드 하기 위한 작업의 이름을 결정 하는 데 사용 됩니다. 작업에 대 한이 형식을 상속 해야 합니다 [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)합니다.
-지정된 된 형식을 통해 로드 되 [class.forname ()](http://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (형식 Java 되어 있어야 하는 Android 호출 가능 래퍼 이므로 입력)를 인스턴스화합니다. Android 호출 가능 래퍼 인스턴스 생성 해당 C# 형식의 인스턴스 생성을 트리거합니다. 그러면 android는 호출 [Activity.onCreate(Bundle)](http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , 해당 하는 것이 그러면 [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) 호출할 끝 해제를 합니다.
+프로세스 초기화가 완료 되 면 `AndroidManifest.xml` 를 참조 하는 활동/service/등에 시작의 클래스 이름을 찾을 수 있습니다. 예를 들어 합니다 [ /manifest/application/activity/@android:name 특성](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) 로드 하기 위한 작업의 이름을 결정 하는 데 사용 됩니다. 작업에 대 한이 형식을 상속 해야 합니다 [android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)합니다.
+지정된 된 형식을 통해 로드 되 [class.forname ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (형식 Java 되어 있어야 하는 Android 호출 가능 래퍼 이므로 입력)를 인스턴스화합니다. Android 호출 가능 래퍼 인스턴스 생성 해당 C# 형식의 인스턴스 생성을 트리거합니다. 그러면 android는 호출 [Activity.onCreate(Bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) , 해당 하는 것이 그러면 [Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) 호출할 끝 해제를 합니다.

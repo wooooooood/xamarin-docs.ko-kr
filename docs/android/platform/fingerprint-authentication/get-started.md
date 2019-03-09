@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118476"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667726"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>지문 인증 시작
 
@@ -99,19 +99,19 @@ if (permissionResult == Android.Content.PM.Permission.Granted)
 else
 {
     // No permission. Go and ask for permissions and don't start the scanner. See
-    // http://developer.android.com/training/permissions/requesting.html
+    // https://developer.android.com/training/permissions/requesting.html
 }
 ```
 
 인증 옵션은 사용자가 최상의 사용자 환경을 확인 될 때마다 응용 프로그램 제공 하는 이러한 조건을 모두 확인 합니다. 변경 하거나 해당 장치 또는 운영 체제 업그레이드 지문 인증의 가용성 영향을 줄 수 있습니다. 이러한 검사의 결과 캐시 하려는 경우에 업그레이드 시나리오에 대 한 제공 해야 합니다.
 
-Android 6.0에 대 한 권한 요청 하는 방법에 대 한 자세한 내용은 Android 가이드를 참조 하십시오 [런타임 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)합니다.
+Android 6.0에 대 한 권한 요청 하는 방법에 대 한 자세한 내용은 Android 가이드를 참조 하십시오 [런타임 시 권한 요청](https://developer.android.com/training/permissions/requesting.html)합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [컨텍스트](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [런타임 시 권한 요청](http://developer.android.com/training/permissions/requesting.html)
+- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [런타임 시 권한 요청](https://developer.android.com/training/permissions/requesting.html)

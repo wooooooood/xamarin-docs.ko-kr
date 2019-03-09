@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4d79988fc2900f1fe58774657344f19fab90f3e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 267dac5b6aec263f1d8b69d81f34f732118c1802
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105092"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671986"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Xamarin.iOS에서 구성과 앱에서 바로 구매 기본 사항
 
@@ -44,9 +44,9 @@ Apple에서 판매 – 이름, 설명 들어가고 'product' 스크린샷 검토
 
 제품에 대 한 모든 가격을 선택할 수 없습니다.-'가격 계층을 ' Apple 지 각 국가/통화에 특정 값만 선택할 수 있습니다. 다양 한 시장에서 다른 가격 계층 수는 없습니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>구성하기
 
-앱 내 구매 코드를 작성 하기 전에 iTunes Connect에서에서 일부 설정 작업을 수행 해야 합니다 ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) 및 iOS Provisioning Portal ( [developer.apple.com/iOS](http://developer.apple.com/iOS)).
+앱 내 구매 코드를 작성 하기 전에 iTunes Connect에서에서 일부 설정 작업을 수행 해야 합니다 ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) 및 iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 다음 세 단계는 코드를 작성 하기 전에 완료 해야 합니다.
 
@@ -109,8 +109,8 @@ Apple에서 판매 – 이름, 설명 들어가고 'product' 스크린샷 검토
 
 새 제품을 추가 하는 프로세스에는 두 단계가 있습니다.
 
-1.   제품 유형 선택: [![](in-app-purchase-basics-and-configuration-images/image8.png "제품 종류를 선택 합니다.")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   가격 책정 계층 및 지역화 된 설명, 제품 Id를 포함 한 제품의 속성을 입력: [![](in-app-purchase-basics-and-configuration-images/image9.png "제품 특성을 입력")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   제품 유형을 선택 합니다. [![](in-app-purchase-basics-and-configuration-images/image8.png "제품 유형 선택")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   제품의 특성을 제품 Id를 포함 하 여, 가격 책정 계층 및 지역화 된 설명을 입력 합니다. [![](in-app-purchase-basics-and-configuration-images/image9.png "제품 특성을 입력합니다.")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 각 앱에서 바로 구매 제품에 필요한 필드는 아래 설명 되어 있습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 859afcf6ab9f3acfb56104fa68683ba28d913ce4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5363e3a2210bdcf1efb870ac808ecb37584de6a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117141"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668922"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.iOS의 데이터로 테이블 채우기
 
@@ -34,7 +34,7 @@ A `UITableViewSource` 서브 클래스 할당을 모든 `UITableView`합니다. 
 
 가지 테이블 데이터를 표시 하는 데 필요한 두 개의 필수 방법이 있습니다.
 
--   **RowsInSection** 반환 –를 [ `nint` ](http://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) 테이블 표시 해야 하는 데이터 행의 총 개수입니다.
+-   **RowsInSection** 반환 –를 [ `nint` ](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) 테이블 표시 해야 하는 데이터 행의 총 개수입니다.
 -   **GetCell** – 반환을 `UITableCellView` 메서드에 전달 된 해당 행 인덱스에 대 한 데이터로 채워집니다.
 
 

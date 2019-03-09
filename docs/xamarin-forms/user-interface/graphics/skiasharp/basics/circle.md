@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 63379a9a4195bf5128c96caaf8745df8dd0addf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b4cd84e9134db2b2106af3205f189fbc2a92bdcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050714"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669451"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 단순 원 그리기
 
@@ -108,7 +108,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 기본값은 `Fill`입니다. 선을 스트로크 및 동일한 색을 사용 하 여 내부를 채우는 세 번째 옵션을 사용 합니다.
 
-설정 된 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 속성 형식의 값을 [ `SKColor` ](xref:SkiaSharp.SKColor)합니다. 가져올 수는 `SKColor` 는 Xamarin.Forms를 변환 하 여 값이 `Color` 값을 `SKColor` 확장 메서드를 사용 하 여 값 [ `ToSKColor` ](SkiaSharp.Views.Forms.Extensions.ToSKColor*). 합니다 [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) 클래스는 `SkiaSharp.Views.Forms` 네임 스페이스는 Xamarin.Forms 값과 SkiaSharp 값 간에 변환 하는 다른 메서드를 포함 합니다.
+설정 된 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 속성 형식의 값을 [ `SKColor` ](xref:SkiaSharp.SKColor)합니다. 가져올 수는 `SKColor` 는 Xamarin.Forms를 변환 하 여 값이 `Color` 값을 `SKColor` 확장 메서드를 사용 하 여 값 [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). 합니다 [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) 클래스는 `SkiaSharp.Views.Forms` 네임 스페이스는 Xamarin.Forms 값과 SkiaSharp 값 간에 변환 하는 다른 메서드를 포함 합니다.
 
 합니다 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성 선의 두께 나타냅니다. 여기에 25 픽셀에 설정 됩니다.
 
@@ -153,7 +153,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램
 > [!NOTE]
 > 합니다 `SKPaint` 클래스 정의 [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) 앤티 앨리어싱을 그래픽 렌더링에 사용할 수 있도록 합니다. 앤티 앨리어싱을 시각적으로 부드러운 가장자리에서이 속성을 설정 하 고 싶을 하므로 일반적으로 발생 `true` 대부분의 프로그램 `SKPaint` 개체입니다. 에서는 편의 위해가이 속성은 _되지_ 대부분의 샘플 페이지에서 설정 합니다.
 
-원 윤곽선의 너비를 각각 25 픽셀인으로 지정 하지만 &mdash; 또는 원의 반지름의 1/4 &mdash; 얇 것 이며에 이유가: 파란색 원에서 줄의 너비 절반가 려 지 합니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
+원 윤곽선의 너비를 각각 25 픽셀인으로 지정 하지만 &mdash; 원의 반지름의 1 / 4 또는 &mdash; 얇 것 이며에 이유가: 줄의 너비 절반 파란색 원에서가 려 지 합니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
 
 다음 샘플은 [Xamarin.Forms를 사용 하 여 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 문서 시각적으로이에서는 합니다.
 

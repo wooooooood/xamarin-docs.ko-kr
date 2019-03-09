@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 155847b4f5f6b3e6070f1afb6219db2d3789a075
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110487"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668467"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Xamarin.iOS에서 사용자 지정 문서 아이콘
 
@@ -44,11 +44,11 @@ Visual Studio에서 이러한 값에 할당 하려면 사용 하 여는 **문서
 -----
 
 
-문서 종류에 대 한 자세한 내용은 Apple의을 참조 하세요 [Uniform 형식 식별자 참조](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) 하 고 [iOS에 대 한 문서 상호 작용 프로그래밍 항목](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html)합니다.
+문서 종류에 대 한 자세한 내용은 Apple의을 참조 하세요 [Uniform 형식 식별자 참조](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) 하 고 [iOS에 대 한 문서 상호 작용 프로그래밍 항목](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html)합니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [이미지 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [사용자 지정 아이콘 및 이미지 생성 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [사용자 지정 아이콘 및 이미지 생성 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

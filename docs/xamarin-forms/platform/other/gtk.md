@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: dcfcf6c29b0a055c59501d6d95d4f97c16475bb3
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 6243f7d90b921207f4dd406a1f33f4d7af40ecfb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209228"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668371"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
 
@@ -27,7 +27,7 @@ Xamarin.Forms는 GTK# 앱에 대한 제한적인 지원을 하고 있습니다. 
 
 ## <a name="adding-a-gtk-app"></a>GTK # 앱을 추가합니다.
 
-GTK # macos 및 Linux의 일부로 설치 됩니다 [Mono](http://www.mono-project.com/download/stable/)합니다. GTK # for.NET에 설치할 수 있습니다 사용 하 여 Windows를 [GTK # Installer](http://www.mono-project.com/download/stable/#download-win)합니다.
+GTK # macos 및 Linux의 일부로 설치 됩니다 [Mono](https://www.mono-project.com/download/stable/)합니다. GTK # for.NET에 설치할 수 있습니다 사용 하 여 Windows를 [GTK # Installer](https://www.mono-project.com/download/stable/#download-win)합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

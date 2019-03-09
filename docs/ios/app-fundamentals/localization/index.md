@@ -1,19 +1,14 @@
 ---
 title: Xamarin.iOS에서 지역화
-description: 이 문서에서는 iOS 지역화 기능 및 Xamarin.iOS 앱에서 이러한 기능을 사용 하는 방법을 설명 합니다. 언어, 로캘, 문자열, 시작 이미지 파일과 자세히 설명합니다.
+description: '이 문서에서는 iOS 지역화 기능 및 Xamarin.iOS 앱에서 이러한 기능을 사용 하는 방법을 설명 합니다. 언어, 로캘, 문자열, 시작 이미지 파일과 자세히 설명합니다.'
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527263"
 ---
+
 # <a name="localization-in-xamarinios"></a>Xamarin.iOS에서 지역화
 
 _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용 하 여 액세스 하는 방법을 설명 합니다._
@@ -22,11 +17,11 @@ _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용 하 여 �
 
 ## <a name="ios-platform-features"></a>iOS 플랫폼 기능
 
-이 섹션에서는 iOS의 지역화 기능 중 일부를 설명합니다. 건너뜁니다 합니다 [다음 섹션](#basics) 를 특정 코드 및 예제를 참조 하세요.
+이 섹션에서는 iOS의 지역화 기능 중 일부를 설명합니다. 건너뜁니다 합니다 [다음 섹션](#Localization-basics-in-iOS) 를 특정 코드 및 예제를 참조 하세요.
 
 ### <a name="language"></a>언어
 
-사용자에 해당 언어를 선택 합니다 **설정을** 앱. 이 설정은 언어 문자열 및 앱 및 운영 체제에 표시 되는 이미지를 적용 합니다. 
+사용자에 해당 언어를 선택 합니다 **설정을** 앱. 이 설정은 언어 문자열 및 앱 및 운영 체제에 표시 되는 이미지를 적용 합니다.
 
 앱에서 사용 되는 언어를 확인 하려면 첫 번째 요소를 가져올 `NSBundle.MainBundle.PreferredLocalizations`:
 
@@ -59,7 +54,7 @@ Xamarin을 사용 하 여 Apple의 iOS 클래스에 액세스할 수 (`NSNumberF
 > [!NOTE]
 > Mono (Xamarin.iOS 기반이 되는.NET 런타임) 및 Apple iOS Api 언어/지역 조합은의 동일한 집합을 지원 하지 않습니다.
 > 이 인해 iOS에서 언어/지역 조합을 선택 수 있기 **설정을** Mono에서 유효한 값에 매핑되지 않는 경우는 앱입니다. 예를 들어 스페인을 영어로 iPhone의 언어 및 해당 지역 설정 하면 다른 값을 생성 하려면 다음과 같은 Api:
-> 
+>
 > - `CurrentThead.CurrentCulture`: EN-US (Mono API)
 > - `CurrentThread.CurrentUICulture`: EN-US (Mono API)
 > - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
@@ -76,14 +71,14 @@ IOS의 다음 기능을 쉽게 사용자에 게 표시에 대 한 지역화 된 
 
 ### <a name="specifying-default-and-supported-languages-in-infoplist"></a>Info.plist에서 기본 및 지원 되는 언어 지정
 
-[기술 Q & A QA1828: iOS 앱 사용자에 대 한 언어를 결정 하는 방법](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple iOS 앱에서 사용할 언어를 선택 하는 방법에 대해 설명 합니다. 다음 요소를 어떤 언어로 표시 되는 영향을 줍니다.
+[기술 질문 및 답변을 QA1828: IOS 앱 사용자에 대 한 언어를 결정 하는 방법](https://developer.apple.com/library/content/qa/qa1828/_index.html), Apple iOS 앱에서 사용할 언어를 선택 하는 방법에 대해 설명 합니다. 다음 요소를 어떤 언어로 표시 되는 영향을 줍니다.
 
 - 사용자의 언어 기본 설정 (에 **설정을** 앱)
 - 앱 (.lproj 폴더)와 함께 제공 된 지역화
 - `CFBundleDevelopmentRegion` (**Info.plist** 앱에 대 한 기본 언어를 지정 하는 값)
 - `CFBundleLocalizations` (**Info.plist** 지원 되는 모든 지역화를 지정 하는 배열)
 
-기술 Q & A에 표시 된 대로 `CFBundleDevelopmentRegion` 앱의 기본 지역 및 언어를 나타냅니다. 앱에 사용자의 기본 설정된 언어를 지원 하지 않으면 명시적으로,이 필드로 지정 된 언어를 사용 합니다. 
+기술 Q & A에 표시 된 대로 `CFBundleDevelopmentRegion` 앱의 기본 지역 및 언어를 나타냅니다. 앱에 사용자의 기본 설정된 언어를 지원 하지 않으면 명시적으로,이 필드로 지정 된 언어를 사용 합니다.
 
 > [!IMPORTANT]
 > iOS 11 이전 버전의 운영 체제 보다 더 엄격 하 게이 언어 선택 메커니즘을 적용 합니다. 따라서 해당 지원 되는 지역화-.lproj 폴더를 포함 하거나 값을 설정 하 여 명시적으로 선언 하지 않는 모든 iOS 11 앱 `CFBundleLocalizations` – iOS 10에서에서 했던 것 보다 iOS 11에서에서 다른 언어로 표시 될 수 있습니다.
@@ -255,7 +250,7 @@ iOS는 다양을 한 RTL 인식 앱을 빌드하는 데 도움이 되는 기능�
 
 다음 스크린샷에서 표시 된 [지역화 Tasky 샘플](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) 아랍어 및 히브리어에 (하지만 영어 필드에 입력 된):
 
-[![](images/rtl-ar-sml.png "아랍어 지역화")](images/rtl-ar.png#lightbox "Arabic") 
+[![](images/rtl-ar-sml.png "아랍어 지역화")](images/rtl-ar.png#lightbox "Arabic")
 
 [![](images/rtl-he-sml.png "히브루어 지역화")](images/rtl-he.png#lightbox "Hebrew")
 
@@ -345,8 +340,8 @@ someControl.Text = localizedString;
 ```
 
 > [!IMPORTANT]
-> Size 클래스를 사용 하 여 storyboard를 사용 하 여 응용 프로그램에서 표시 되지 않는 번역 될 수 있습니다. [Apple의 Xcode 릴리스](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) 는 XIB 또는 스토리 보드를를 지역화 하지 올바르게 다음 세 가지 경우를 나타냅니다: size 클래스를 사용 하 여, 기본 지역화 및 빌드 대상 범용으로 설정 되 고 빌드 대상 iOS 7.0입니다. 이 스토리 보드 문자열 파일을 두 개의 동일한 파일 복제를 수정: **MainStoryboard~iphone.strings** 하 고 **MainStoryboard~ipad.strings**다음 스크린샷에 표시 된 것 처럼:
-> 
+> Size 클래스를 사용 하 여 storyboard를 사용 하 여 응용 프로그램에서 표시 되지 않는 번역 될 수 있습니다. [Apple의 Xcode 릴리스](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) 는 XIB 또는 스토리 보드를를 지역화 하지 올바르게 다음 세 가지 경우를 나타냅니다: size 클래스를 사용 하 여, 기본 지역화 및 빌드 대상 범용으로 설정 되 고 빌드 대상 iOS 7.0입니다. 해결 두 동일한 파일에 문자열 스토리 보드 파일을 복제 하는 것: **MainStoryboard~iphone.strings** 하 고 **MainStoryboard~ipad.strings**다음 스크린샷에 표시 된 것 처럼:
+>
 > ![](images/xs-dup-strings.png "문자열 파일")
 
 <a name="appstore" />

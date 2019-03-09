@@ -6,12 +6,13 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: da7064997b8a10d4a4604861a405e13dd23a08cf
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/19/2017
+ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233915"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672575"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경
 
@@ -195,9 +196,9 @@ Apple의 여러 요소에 다양 한 향상 기능이 포함 된 [UIKit](xref:UI
 
 ### <a name="3d-touch-events"></a>3D 터치 이벤트
 
-IOS 9 iPhone 6s와 iPhone 6s 새 또한 3D 터치 하 여 iOS 앱에가 중 중요 한 제스처를 추가 합니다. 결과적으로, 앱이 iOS 9 이상에서 실행 하 고 3D 터치를 지 원하는 iOS 장치 수, 압력의 변경 하면는 `TouchesMoved` 이벤트가 발생 합니다. 
+IOS 9 iPhone 6s와 iPhone 6s 새 또한 3D 터치 하 여 iOS 앱에가 중 중요 한 제스처를 추가 합니다. 결과적으로, 앱이 iOS 9 이상에서 실행 하 고 3D 터치를 지 원하는 iOS 장치 수, 압력의 변경 하면는 `TouchesMoved` 이벤트가 발생 합니다.
 
-동작에서 이러한 변경으로 인해 iOS 앱 준비 되어야 합니다는 `TouchesMoved` 더 자주 호출할 이벤트 경우에 X / Y 좌표는 변경 되지 않았습니다. 
+동작에서 이러한 변경으로 인해 iOS 앱 준비 되어야 합니다는 `TouchesMoved` 더 자주 호출할 이벤트 경우에 X / Y 좌표는 변경 되지 않았습니다.
 
 자세한 내용은 참조 하십시오 우리의 [3D 터치 소개](~/ios/platform/3d-touch.md) 가이드입니다.
 

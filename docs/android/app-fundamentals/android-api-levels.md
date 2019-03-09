@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8690be7551046a26339f58029da5f3f58e18cd15
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120062"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672588"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -202,7 +202,7 @@ Mac 용 Visual Studio에서이 설정에 액세스 하려면 프로젝트 이름
 
 -----
 
-일반적으로 최소 Android 버전 및 대상 프레임 워크 대상 Android 버전 묶어야 합니다. 구체적인 요건은 다음과 같습니다.
+일반적으로 최소 Android 버전 및 대상 프레임 워크 대상 Android 버전 묶어야 합니다. 즉, 다음과 같이 처리해야 합니다.
 
 **최소 Android 버전 < 대상 Android 버전 = < = 대상 프레임 워크**
 
@@ -281,5 +281,5 @@ Xamarin.Android 라이브러리 프로젝트를 만들면 방법이 없는 **And
 - [Android SDK 설정](~/android/get-started/installation/android-sdk.md)
 - [SDK CLI 도구 변경](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [고 compileSdkVersion, minSdkVersion, targetSdkVersion 선택](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd)
-- [API 수준 이란?](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+- [API 수준 이란?](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 - [코드, 태그 및 빌드 번호](https://source.android.com/source/build-numbers)

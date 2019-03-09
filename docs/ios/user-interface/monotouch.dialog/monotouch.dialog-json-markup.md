@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 775f378be383674e2bf90e2e8a72d82033ef0fbf
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675249"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670768"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -469,14 +469,14 @@ class Foo {
  <a name="placeholder" />
 
 
-### <a name="placeholder"></a>자리 표시자
+### <a name="placeholder"></a>자리 표시자(placeholder)
 
 항목에 빈 값 때 표시 되는 힌트 텍스트입니다.
 
  <a name="return-key" />
 
 
-### <a name="return-key"></a>반환 키
+### <a name="return-key"></a>return-key
 
 Return 키에 사용 되는 레이블. 가능한 값은 다음과 같습니다.
 
@@ -545,6 +545,6 @@ Return 키에 사용 되는 레이블. 가능한 값은 다음과 같습니다.
 {
         "type": "html",
         "caption": "Miguel's blog",
-        "url": "http://tirania.org/blog" 
+        "url": "https://tirania.org/blog" 
 }
 ```

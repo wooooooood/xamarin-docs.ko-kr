@@ -6,18 +6,18 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 33f27d2585f4fb4d65181cbfd9211ea87b837e73
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e97b211fe6a92ee0df3beed2301cf00c3d42c8f8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233889"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671808"
 ---
 # <a name="binding-objective-c-libraries"></a>Objective-c 라이브러리 바인딩
 
 Xamarin.iOS 또는 Xamarin.Mac을 사용 하는 경우 타사 Objective-c 라이브러리를 사용 하려는 경우 발생할 수 있습니다. 이러한 상황에서는 만들려면 Xamarin 바인딩 프로젝트를 사용할 수 있습니다는 C# 네이티브 Objective-c 라이브러리 바인딩. 프로젝트는 iOS 및 Mac Api를 사용 하는 것과 동일한 도구를 사용 하 여 C#입니다.
 
-이 문서에서는 Objective-c로 Api를 바인딩하는 방법을 설명 C Api만을 바인딩하는 경우 표준.NET 메커니즘은이 위해 사용할지 [P/Invoke framework](http://www.mono-project.com/docs/advanced/pinvoke/)합니다.
+이 문서에서는 Objective-c로 Api를 바인딩하는 방법을 설명 C Api만을 바인딩하는 경우 표준.NET 메커니즘은이 위해 사용할지 [P/Invoke framework](https://www.mono-project.com/docs/advanced/pinvoke/)합니다.
 C 라이브러리를 정적으로 연결 하는 방법에 대 한 세부 정보에서 사용할 수는 [네이티브 라이브러리 연결](~/ios/platform/native-interop.md) 페이지입니다.
 
 이 부록을 참조 하세요 [바인딩 유형 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118515"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672536"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.iOS 응용 프로그램 아이콘
 
@@ -46,23 +46,23 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
     ||3x|
     |---|---|
-    |응용 프로그램 아이콘|180x180|
+    |애플리케이션 아이콘|180x180|
     |추천|120x120|
     |설정|87x87|
 
-- **iPhone: iOS 7 및 8**
+- **iPhone: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
-    |응용 프로그램 아이콘|60x60<sup>1</sup>|120x120|
+    |애플리케이션 아이콘|60x60<sup>1</sup>|120x120|
     |추천|40x40<sup>2</sup>|80x80|
     |설정|-|-|
 
-- **iPhone: iOS 5 및 6**
+- **iPhone: iOS 5 & 6**
 
     ||1x|2x|
     |---|---|---|
-    |응용 프로그램 아이콘|57x57|114x114|
+    |애플리케이션 아이콘|57x57|114x114|
     |추천|29x29|58x58|
     |설정|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
@@ -72,7 +72,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
     ||2 x (iPad Pro)|
     |---|---|
-    |응용 프로그램 아이콘|167x167<sup>6</sup>|
+    |애플리케이션 아이콘|167x167<sup>6</sup>|
     |추천|120x120<sup>6</sup>|
     |설정|58x58<sup>5</sup>|
 
@@ -80,7 +80,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
     ||1x|2x|
     |---|---|---|
-    |응용 프로그램 아이콘|76x76|152x152|
+    |애플리케이션 아이콘|76x76|152x152|
     |추천|40x40|80x80|
     |설정|-|-|
 
@@ -88,7 +88,7 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 
     ||1x|2x|
     |---|---|---|
-    |응용 프로그램 아이콘|72x72|144x144|
+    |애플리케이션 아이콘|72x72|144x144|
     |추천|50x50|100x100|
     |설정|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
@@ -212,4 +212,4 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
 - [이미지 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [사용자 지정 아이콘 및 이미지 만들기 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [사용자 지정 아이콘 및 이미지 만들기 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

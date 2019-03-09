@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e354f8271257ab21a855bdf5d576ce3062fadc7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111254"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668246"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -84,7 +84,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-title-bar"></a>작업 제목 표시줄
 
-기본적으로 Android 응용 프로그램에 부여 제목 표시줄을 실행 하는 경우. 이 사용 되는 값이 [ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label)합니다. 대부분의 경우에서이 값은 클래스 이름에서 달라 집니다. 제목 표시줄에서 앱의 레이블을 지정 하려면 사용 합니다 [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) 속성입니다.
+기본적으로 Android 응용 프로그램에 부여 제목 표시줄을 실행 하는 경우. 이 사용 되는 값이 [ `/manifest/application/activity/@android:label` ](https://developer.android.com/guide/topics/manifest/activity-element.html#label)합니다. 대부분의 경우에서이 값은 클래스 이름에서 달라 집니다. 제목 표시줄에서 앱의 레이블을 지정 하려면 사용 합니다 [ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) 속성입니다.
 예를 들어: 
 
 ```csharp
@@ -178,10 +178,10 @@ Android 매니페스트 사용 권한을 추가 하면 (에 설명 된 대로 [A
 
 ### <a name="intent-actions-and-features"></a>의도 한 동작 및 기능
 
-Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 이 통해 이루어집니다 [의도](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 이 통해 이루어집니다 [의도](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 사용자 지정 특성입니다. 작업을 사용 하 여 작업에 대 한 적절 한를 지정할 수는 [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
 생성자 및 범주와 적합 합니다 [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
-속성입니다. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
+속성의 값에 따라 달라집니다. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -240,18 +240,18 @@ Android 매니페스트는 또한 전체 응용 프로그램에 대 한 속성�
 
 ## <a name="list-of-custom-attributes"></a>사용자 지정 특성의 목록
 
--   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : 생성 된 [/manifest/application/activity](http://developer.android.com/guide/topics/manifest/activity-element.html) XML 조각 
--   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : 생성 된 [/매니페스트 및 응용 프로그램](http://developer.android.com/guide/topics/manifest/application-element.html) XML 조각 
--   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : 생성 된 [/매니페스트/계측](http://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML 조각 
--   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : 생성 된 [//intent-filter](http://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML 조각 
--   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : 생성 된 [//meta-data](http://developer.android.com/guide/topics/manifest/meta-data-element.html) XML 조각 
--   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : 생성 된 [//permission](http://developer.android.com/guide/topics/manifest/permission-element.html) XML 조각 
--   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : 생성 된 [//permission-group](http://developer.android.com/guide/topics/manifest/permission-group-element.html) XML 조각 
--   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : 생성 된 [//permission-tree](http://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML 조각 
--   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : 생성 된 [/manifest/application/service](http://developer.android.com/guide/topics/manifest/service-element.html) XML 조각 
--   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : 생성 된 [/manifest/application/uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html) XML 조각 
--   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : 생성 된 [/manifest/uses-permission](http://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML 조각 
--   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : 생성 된 [/manifest/application/receiver](http://developer.android.com/guide/topics/manifest/receiver-element.html) XML 조각 
--   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : 생성 된 [/manifest/application/provider](http://developer.android.com/guide/topics/manifest/provider-element.html) XML 조각 
--   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : 생성 된 [/manifest/application/provider/grant-uri-permission](http://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML 조각
+-   [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : 생성 된 [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML 조각 
+-   [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : 생성 된 [/매니페스트 및 응용 프로그램](https://developer.android.com/guide/topics/manifest/application-element.html) XML 조각 
+-   [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : 생성 된 [/매니페스트/계측](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML 조각 
+-   [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : 생성 된 [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML 조각 
+-   [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : 생성 된 [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML 조각 
+-   [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : 생성 된 [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML 조각 
+-   [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : 생성 된 [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML 조각 
+-   [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : 생성 된 [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML 조각 
+-   [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : 생성 된 [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML 조각 
+-   [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : 생성 된 [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML 조각 
+-   [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : 생성 된 [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML 조각 
+-   [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : 생성 된 [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML 조각 
+-   [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : 생성 된 [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML 조각 
+-   [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : 생성 된 [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML 조각
 

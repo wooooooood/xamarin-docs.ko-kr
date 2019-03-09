@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 01ff4426dfb4764b7d9ca22703aa2b1667a90454
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 6ce8099aa4230a11a12f4fe8aeffe850f9ef2ce9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528548"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671002"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>작업 모음이 있는 탭된 레이아웃
 
@@ -31,7 +31,7 @@ _이 가이드 소개 하 고 작업 모음이 Api를 사용 하 여 Xamarin.And
 
 모든 Xamarin.Android 응용 프로그램입니다 11 (Android 3.0) API 레벨을 대상으로 하거나 더 높은 네이티브 Android Api의 일부로 작업 모음이 Api에 액세스할 수 있습니다. 
 
-API 수준 (Android 2.1) 7로 다시 이식 되었으며 일부 작업 모음이 Api 및을 통해 사용할 수는 [V7 AppCompat 라이브러리](http://developer.android.com/tools/support-library/features.html#v7-appcompat)를 통해 Xamarin.Android 앱에 사용할 수 있는 [Xamarin Android 지원 라이브러리-V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지 있습니다.
+API 수준 (Android 2.1) 7로 다시 이식 되었으며 일부 작업 모음이 Api 및을 통해 사용할 수는 [V7 AppCompat 라이브러리](https://developer.android.com/tools/support-library/features.html#v7-appcompat)를 통해 Xamarin.Android 앱에 사용할 수 있는 [Xamarin Android 지원 라이브러리-V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지 있습니다.
 
 
 
@@ -182,8 +182,8 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 - [ActionBarTabs (샘플)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
 - [도구 모음](~/android/user-interface/controls/tool-bar/index.md)
 - [조각](~/android/platform/fragments/index.md)
-- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
-- [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
-- [작업 표시줄 패턴](http://developer.android.com/design/patterns/actionbar.html)
-- [Android v7 AppCompat](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
+- [ActionBarActivity](https://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
+- [작업 표시줄 패턴](https://developer.android.com/design/patterns/actionbar.html)
+- [Android v7 AppCompat](https://developer.android.com/tools/support-library/features.html#v7-appcompat)
 - [Xamarin.Android 지원 라이브러리 v7 AppCompat NuGet 패키지](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)

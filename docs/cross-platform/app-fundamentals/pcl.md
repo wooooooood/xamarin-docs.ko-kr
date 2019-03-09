@@ -6,14 +6,14 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: 83b1da5cd10a46b8480b0755eeb16bf7434a5906
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270091"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666881"
 ---
-# <a name="portable-class-libraries-pcl"></a>이식 가능한 클래스 라이브러리 (PCL)
+# <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
 > [!WARNING]
 > 이식 가능한 클래스 라이브러리 (Pcl)는 최신 버전의 Visual Studio에서 사용 되지 않는 것으로 간주 됩니다.
@@ -54,7 +54,7 @@ Xamarin 열에는 Xamarin.iOS 및 Xamarin.Android 지원 Visual Studio와 함께
 - Windows Phone 8
 - UWP 앱
 
-알아볼 수 있습니다에 다양 한 프로필 기능에 대 한 [Microsoft 웹 사이트](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 멤버의 내용과 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 지원 되는 프레임 워크 정보 및 기타 정보를 포함 하는 합니다.
+알아볼 수 있습니다에 다양 한 프로필 기능에 대 한 [Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 멤버의 내용과 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 지원 되는 프레임 워크 정보 및 기타 정보를 포함 하는 합니다.
 
 **혜택**
 
@@ -273,7 +273,7 @@ public static extern Result Close(IntPtr db);
 ## <a name="related-links"></a>관련 링크
 
 - [TaskyPortable (샘플)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
-- [플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+- [플랫폼 간 애플리케이션 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [이식 가능한 Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)

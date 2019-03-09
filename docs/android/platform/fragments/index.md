@@ -1,19 +1,14 @@
 ---
 title: 조각
-description: Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크기 보다 유연한 디자인을 지 원하는 방법을 보여 주는 도입 되었습니다. 이 문서에서는 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법 및 조각을 미리 Android 3.0 (API 수준 11) 장치에서 지 원하는 방법을 설명 합니다.
+description: 'Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크기 보다 유연한 디자인을 지 원하는 방법을 보여 주는 도입 되었습니다. 이 문서에서는 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법 및 조각을 미리 Android 3.0 (API 수준 11) 장치에서 지 원하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: bc4441c7ee0c36af990297bad1b0c2f0e77123f3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113289"
 ---
+
 # <a name="fragments"></a>조각
 
 _Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크기 보다 유연한 디자인을 지 원하는 방법을 보여 주는 도입 되었습니다. 이 문서에서는 조각을 사용 하 여 Xamarin.Android 응용 프로그램을 개발 하는 방법 및 조각을 미리 Android 3.0 (API 수준 11) 장치에서 지 원하는 방법을 설명 합니다._
@@ -63,6 +58,6 @@ Android 개발에는 추가적인 복잡성 추가할 대부분 태블릿에 더
 ## <a name="related-links"></a>관련 링크
 
 - [Honeycomb 갤러리 (샘플)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [조각](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [지원 패키지](http://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV 웹 세미나: 조각을 소개](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
+- [조각](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [지원 패키지](https://developer.android.com/sdk/compatibility-library.html)
+- [MOTODEV 웹 세미나: 조각 소개](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

@@ -1,18 +1,13 @@
 ---
 title: Java를 사용 하 여 시작
-description: 이 문서에서는.NET 포함을 사용 하 여 Java를 사용 하 여 시작 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 설명 합니다.
+description: '이 문서에서는.NET 포함을 사용 하 여 Java를 사용 하 여 시작 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121752"
 ---
+
 # <a name="getting-started-with-java"></a>Java를 사용 하 여 시작
 
 이 모든 지원 되는 플랫폼에 대 한 기본 사항을 다루는 Java에 대 한 시작된 페이지를 합니다.
@@ -22,7 +17,7 @@ ms.locfileid: "50121752"
 .NET 포함 해야 하는 Java를 사용 하 여 사용 하려면 필요 합니다.
 
 * Java 1.8 이상
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Mac:
 

@@ -8,13 +8,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: b068169ee3f44932f8ee13d2546804f7b2d2a645
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103065"
 ---
+
 # <a name="implementing-fragments---walkthrough"></a>연습-조각 구현
 
 _조각은 다양 한 화면 크기를 사용 하 여 장치를 대상으로 하는 Android 앱의 복잡성을 해결 하는 데 도움이 되는 자체 포함 된, 모듈식 구성 요소입니다. 이 문서는 만들고 Xamarin.Android 응용 프로그램을 개발 하는 경우 조각을 사용 하는 방법을 안내 합니다._
@@ -52,5 +47,5 @@ _조각은 다양 한 화면 크기를 사용 하 여 장치를 대상으로 하
 
 - [FragmentsWalkthrough (샘플)](https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/)
 - [디자이너 개요](~/android/user-interface/android-designer/index.md)
-- [조각 구현](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [지원 패키지](http://developer.android.com/sdk/compatibility-library.html)
+- [조각 구현](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [지원 패키지](https://developer.android.com/sdk/compatibility-library.html)

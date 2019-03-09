@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: d40c932c560b3827cccacd4f9bafa155dcf26056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113328"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668883"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.iOS와 iCloud를 사용 하 여
 
@@ -45,7 +45,7 @@ IOS 5에서에서 iCloud 저장소 API에는 응용 프로그램을을 중앙 �
 
 ICloud에 액세스 하려면 응용 프로그램을 올바르게 구성 합니다.
 
--   **프로그램 팀 Id를 찾을** -에 로그인 [developer.apple.com](http://developer.apple.com) 방문 합니다 **Member Center > 계정 > 개발자 계정 요약** 에 팀 ID (또는 단일 개발자를 위한 개별 ID를 가져오려면 ). 10 자로 된 문자열 됩니다 ( **A93A5CM278** 예를 들어)-이 "컨테이너 식별자"의 일부를 형성 합니다.
+-   **프로그램 팀 Id를 찾을** -에 로그인 [developer.apple.com](https://developer.apple.com) 방문 합니다 **Member Center > 계정 > 개발자 계정 요약** 에 팀 ID (또는 단일 개발자를 위한 개별 ID를 가져오려면 ). 10 자로 된 문자열 됩니다 ( **A93A5CM278** 예를 들어)-이 "컨테이너 식별자"의 일부를 형성 합니다.
 
 -   **새 앱 ID를 만듭니다** -을 만들고 앱 ID에 설명 된 단계를 수행 합니다 [장치 프로 비전 가이드의 섹션 저장소 기술에 대 한 프로 비전](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)를 확인 해야 **iCloud** 으로 허용 되는 서비스:
 
@@ -144,7 +144,7 @@ NSNotificationCenter.DefaultCenter.AddObserver (
 
 코드의 로컬 복사본을 업데이트 하거나 새 값을 사용 하 여 UI를 업데이트 하는 등의 변경 된 키 목록으로 몇 가지 조치를 취할 수 있습니다.
 
-변경 가능한 이유는: ServerChange (0), (1), InitialSyncChange QuotaViolationChange (2). 이유를 액세스 하 고 필요한 경우 다른 처리를 수행할 수 있습니다 (의 결과로 일부 키를 제거 해야 하는 예를 들어, 한 *QuotaViolationChange*).
+변경 가능한 원인은 다음과 같습니다. ServerChange (0), (1), InitialSyncChange 또는 QuotaViolationChange (2). 이유를 액세스 하 고 필요한 경우 다른 처리를 수행할 수 있습니다 (의 결과로 일부 키를 제거 해야 하는 예를 들어, 한 *QuotaViolationChange*).
 
 ## <a name="document-storage"></a>문서 저장소
 
@@ -417,7 +417,7 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 ## <a name="icloud-backup"></a>iCloud 백업
 
 ICloud에 백업에는 개발자가 직접 액세스 하는 기능은 아니지만, 응용 프로그램을 디자인 하는 방법은 사용자 환경 영향을 줄 수 있습니다.
-Apple에서 제공 [데이터 저장소 지침 iOS](http://developer.apple.com/icloud/documentation/data-storage/) 개발자가 iOS 응용 프로그램에 따라야 합니다.
+Apple에서 제공 [데이터 저장소 지침 iOS](https://developer.apple.com/icloud/documentation/data-storage/) 개발자가 iOS 응용 프로그램에 따라야 합니다.
 
 가장 중요 한 고려 사항은 앱 (예: 문제 당 콘텐츠의 hundred-plus 메가바이트를 저장 하는 magazine 독자 응용 프로그램을) 사용자가 생성 되지 않은 큰 파일을 저장 하는 여부입니다. Apple이이 종류의 위치는 백업할 iCloud로 하 고 사용자의 iCloud 할당량을 불필요 하 게 입력 데이터를 저장 하지 않는 것을 선호 합니다.
 
@@ -437,6 +437,6 @@ Apple에서 제공 [데이터 저장소 지침 iOS](http://developer.apple.com/i
 
 - [소개에 iCloud (샘플)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
 - [iCloud 세미나 샘플 코드](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
-- [iCloud 세미나 슬라이드](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
+- [iCloud 세미나 슬라이드](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [iCloud 저장소](http://support.apple.com/kb/HT4847)
+- [iCloud Storage](https://support.apple.com/kb/HT4847)

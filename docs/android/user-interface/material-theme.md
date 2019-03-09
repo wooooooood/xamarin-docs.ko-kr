@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4b9c39a0ced9a264f501d78142c3bdfd556593ed
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "30771322"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668324"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -45,7 +45,7 @@ Android는 세 가지 재질 테마 버전을 제공합니다.
 
 -  **Android SDK** &ndash; Android 5.0 (API 21) 나중에 설치 해야 Android SDK Manager를 통해 또는 합니다.
 
--  **Java JDK 1.8** &ndash; 특별히 대상으로 하는 API 수준 23 및 이전 하려는 경우 JDK 1.7을 사용할 수 있습니다. JDK 1.8에서 제공 됩니다 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)합니다.
+-  **Java JDK 1.8** &ndash; 특별히 대상으로 하는 API 수준 23 및 이전 하려는 경우 JDK 1.7을 사용할 수 있습니다. JDK 1.8에서 제공 됩니다 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)합니다.
 
 Android 5.0 앱 프로젝트를 구성 하는 방법에 알아보려면 참조 [설정 하는 Android 5.0 프로젝트](~/android/platform/lollipop.md)합니다.
 

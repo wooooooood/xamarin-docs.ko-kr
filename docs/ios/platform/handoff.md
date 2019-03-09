@@ -6,12 +6,13 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 4b19d060bd8adf1c2b09bb18b7ff608381a35231
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 03/19/2017
+ms.openlocfilehash: 899e40460371933a3e1cb694618c7d33a124e76c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116669"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672705"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.iOS에서 핸드 오프
 
@@ -109,24 +110,24 @@ OS X에서 합니다 `NSUserActivity` 에서 관리 하는 `AppKit` 응답기를
 
 다음을 수행합니다.
 
-1. 에 로그인 합니다 [Apple Developer 포털](http://developer.apple.com)합니다.
+1. 에 로그인 합니다 [Apple Developer 포털](https://developer.apple.com)합니다.
 2. 클릭할 **인증서, 식별자 및 프로필**합니다.
 3. 이미 않았다면 클릭할 **식별자** 앱 ID를 만듭니다 (예: `com.company.appname`), 다른 기존 ID를 편집
-4. 있는지 확인 합니다 **iCloud** 서비스에 지정된 된 ID에 대 한 확인: 
+4. 있는지 확인 합니다 **iCloud** 서비스에 지정된 된 ID에 대 한 확인:
 
     [![](handoff-images/provision01.png "지정된 된 ID에 대 한 iCloud 서비스를 사용 하도록 설정")](handoff-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
-4. 클릭할 **프로 비전 프로필** > **개발** 를 프로 비전 프로필을 새로 개발 앱을 만듭니다. 
+4. 클릭할 **프로 비전 프로필** > **개발** 를 프로 비전 프로필을 새로 개발 앱을 만듭니다.
 
     [![](handoff-images/provision02.png "새 개발 프로 비전 앱에 대 한 프로필 만들기")](handoff-images/provision02.png#lightbox)
 5. 다운로드 및 새 프로 비전 프로필을 설치 또는 Xcode를 사용 하 여 다운로드 하 고 프로필을 설치 합니다.
-6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다. 
+6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다.
 
     [![](handoff-images/provision03.png "방금 만든 프로 비전 프로필 선택")](handoff-images/provision03.png#lightbox)
-7. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인: 
+7. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인:
 
     [![](handoff-images/provision04.png "앱 ID를 설정 합니다.")](handoff-images/provision04.png#lightbox)
-8. 스크롤하여 합니다 **백그라운드 모드** 섹션 및 다음 항목을 확인 합니다. 
+8. 스크롤하여 합니다 **백그라운드 모드** 섹션 및 다음 항목을 확인 합니다.
 
     [![](handoff-images/provision05.png "필수 백그라운드 모드를 사용 하도록 설정")](handoff-images/provision05.png#lightbox)
 9. 모든 파일에 변경 내용을 저장 합니다.
@@ -463,7 +464,7 @@ JSON 파일에 폼의 앱 Id의 목록을 지정 하는 사전 `<team identifier
 }
 ```
 
-JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 합니다 **터미널** 앱 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 한 키를 사용 하 여 명령을 (참조 [ http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012) 목록은). 예를 들어:
+JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 합니다 **터미널** 앱 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 한 키를 사용 하 여 명령을 (참조 [ https://support.apple.com/kb/ht5012 ](https://support.apple.com/kb/ht5012) 목록은). 예를 들어:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -606,7 +607,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 ## <a name="example-handoff-app"></a>핸드 오프 앱의 예
 
-포함 된 핸드 오프를 사용 하 여 Xamarin.iOS 앱에서의 예로 [ **MonkeyBrowser** ](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) 이 가이드를 사용 하 여 샘플 앱입니다. 앱에 사용자 지정된 작업 형식을 사용 하 여 각 웹을 검색 하는 데 사용할 수 있는 네 개의 탭이 있습니다: 날씨, 즐겨찾기, 휴식 시간 및 작업.
+포함 된 핸드 오프를 사용 하 여 Xamarin.iOS 앱에서의 예로 [ **MonkeyBrowser** ](https://developer.xamarin.com/samples/monotouch/ios8/MonkeyBrowser/) 이 가이드를 사용 하 여 샘플 앱입니다. 앱에 사용자 지정된 작업 형식을 사용 하 여 각 웹을 검색 하는 데 사용할 수 있는 네 개의 탭에 있습니다. 날씨, 즐겨찾기, 휴식 시간 및 작업입니다.
 
 새 URL 및 탭을 입력할 때 모든 탭 합니다 **이동** 단추를 새 `NSUserActivity` 현재 사용자를 검색 하는 URL이 포함 된 해당 탭에 대해 생성 됩니다.
 

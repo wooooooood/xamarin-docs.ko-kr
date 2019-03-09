@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: 83f9651fa7fd20709c620258833ae4a152ffd0eb
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 5ccefdb5e527e67338714896905734c74278d00a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563669"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671882"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>이벤트, 프로토콜 및 Xamarin.iOS에서 대리자
 
@@ -64,7 +64,7 @@ Xamarin.iOS는 또한 컨트롤을 사용 하 여 발생 하는 상호 작용에
 
 [![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "단추를 클릭할 때 메시지를 콘솔에 기록 됩니다.")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
-IOS 대상 동작 패턴에 대 한 자세한 내용은의 대상 작업 섹션을 참조 하세요 [iOS 용 핵심 응용 프로그램 역량](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) Apple iOS 개발자 라이브러리에서에서.
+IOS 대상 동작 패턴에 대 한 자세한 내용은의 대상 작업 섹션을 참조 하세요 [iOS 용 핵심 응용 프로그램 역량](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) Apple iOS 개발자 라이브러리에서에서.
 
 Xamarin.iOS를 사용 하 여 iOS 디자이너를 사용 하는 방법에 대 한 자세한 내용은 참조는 [iOS 디자이너 개요](~/ios/user-interface/designer/index.md) 설명서.
 
@@ -388,6 +388,6 @@ Objective-c 프로토콜을 포함 하는 방법을 다른 알아본 다음 C# �
 - [프로토콜, 대리자 및 이벤트 (샘플)](https://developer.xamarin.com/samples/Protocols_Delegates_Events/)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Objective-c 형식 바인딩](~/ios/platform/binding-objective-c/index.md)
-- [Objective C 프로그래밍 언어](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
-- [Xcode 4에서에서 사용자 인터페이스 디자인](http://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
-- [IOS에 대 한 핵심 응용 프로그램 역량](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)
+- [Objective C 프로그래밍 언어](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
+- [Xcode 4에서에서 사용자 인터페이스 디자인](https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
+- [IOS에 대 한 핵심 응용 프로그램 역량](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)

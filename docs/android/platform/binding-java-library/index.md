@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171614"
 ---
+
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
 _Android 커뮤니티는 앱에서 사용 하려는 많은 Java 라이브러리 이 가이드에서는 Xamarin.Android 응용 프로그램에 바인딩 라이브러리를 만들어 Java 라이브러리를 통합 하는 방법을 설명 합니다._
@@ -103,7 +98,7 @@ API 설명서 Java8, Java7 또는 Java6 SDK (다른 모든 형식으로) 기본 
 
 ## <a name="including-a-native-library-in-a-binding"></a>네이티브 라이브러리를 포함 하 여 바인딩에
 
-포함 하는 데 필요한 것을 **.so** Java 라이브러리 바인딩의 일부로 Xamarin.Android 바인딩 프로젝트의 라이브러리입니다. JNI 호출 및 오류 메시지에 실패 하기 래핑된 Java 코드를 실행 하는 경우 Xamarin.Android _java.lang.UnsatisfiedLinkError: 네이티브 메서드를 찾을 수 없음:_ 응용 프로그램에 대 한 아웃 logcat에 나타납니다.
+포함 하는 데 필요한 것을 **.so** Java 라이브러리 바인딩의 일부로 Xamarin.Android 바인딩 프로젝트의 라이브러리입니다. Xamarin.Android JNI 호출 및 오류 메시지에 실패 하기 래핑된 Java 코드를 실행 하는 경우 _java.lang.UnsatisfiedLinkError: 네이티브 메서드를 찾을 수 없음:_ 응용 프로그램에 대 한 아웃 logcat에 나타납니다.
 
 이 해결 수동으로 로드 하는 것은 **.so** 라이브러리를 호출 하 여 `Java.Lang.JavaSystem.LoadLibrary`입니다. 예를 들어 Xamarin.Android 프로젝트는 공유 라이브러리를 가정 **libpocketsphinx_jni.so** 빌드 작업을 사용 하 여 바인딩 프로젝트에 포함 된 **EmbeddedNativeLibrary**, 다음 코드 조각 (공유 라이브러리를 사용 하기 전에 실행)가 로드 된 **.so** 라이브러리:
 
@@ -145,5 +140,5 @@ Xamarin.Android 바인딩 생성기는 일부 관용구 Java 및.NET 패턴에 �
 ## <a name="related-links"></a>관련 링크
 
 - [Jni 작업](~/android/platform/java-integration/working-with-jni.md)
-- [GAPI 메타 데이터](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [네이티브 라이브러리 사용](~/android/platform/native-libraries.md)

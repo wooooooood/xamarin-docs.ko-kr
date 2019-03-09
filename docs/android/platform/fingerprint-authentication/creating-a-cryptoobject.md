@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1658934bedce11a42701eb023a42fc9e617b654d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1305a8a1f39d34b5e91e478a769750911afb2b3e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113770"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669644"
 ---
 # <a name="creating-a-cryptoobject"></a>CryptoObject 만들기
 
@@ -110,13 +110,13 @@ Android 키를 무효화 될 수 있는 경우도 있음을 알 것:
 * 사용자는 화면 잠금을 비활성화 합니다.
 * 사용자가 화면 잠금 (의 screenlock 또는 PIN/사용 된 패턴의 형식)으로 변경 합니다.
 
-이 경우 `Cipher.Init` 시킵니다를 [ `KeyPermanentlyInvalidatedException` ](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)합니다. 위의 샘플 코드는 해당 예외를 트래핑, 키 삭제 및 새로 만든
+이 경우 `Cipher.Init` 시킵니다를 [ `KeyPermanentlyInvalidatedException` ](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)합니다. 위의 샘플 코드는 해당 예외를 트래핑, 키 삭제 및 새로 만든
 
 다음 섹션에서는 키를 만들고 장치에 저장 하는 방법을 설명 합니다.
 
 ## <a name="creating-a-secret-key"></a>비밀 키 만들기
 
-`CryptoObjectHelper` 클래스에서는 Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) 키 만들기 및 장치에 저장 합니다. `KeyGenerator` 클래스 키를 만들 수를 요구 하지만 만들 키의 형식에 대 한 일부 메타 데이터입니다. 이 정보는 인스턴스의에서 제공 합니다 [ `KeyGenParameterSpec` ](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) 클래스입니다. 
+`CryptoObjectHelper` 클래스에서는 Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) 키 만들기 및 장치에 저장 합니다. `KeyGenerator` 클래스 키를 만들 수를 요구 하지만 만들 키의 형식에 대 한 일부 메타 데이터입니다. 이 정보는 인스턴스의에서 제공 합니다 [ `KeyGenParameterSpec` ](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) 클래스입니다. 
 
 A `KeyGenerator` 사용 하 여 인스턴스화됩니다는 `GetInstance` 팩터리 메서드입니다. 샘플 코드를 사용 하 여 [ _Advanced Encryption Standard_ ](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) 암호화 알고리즘으로 합니다. AES는 고정된 크기의 블록에 데이터를 나누는 각 해당 블록을 암호화 합니다.
 
@@ -159,13 +159,13 @@ protected void FingerPrintAuthenticationExample()
 
 ## <a name="related-links"></a>관련 링크
 
-- [암호화](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
-- [FingerprintManager.CryptoObject](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat.CryptoObject](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [Cipher](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
+- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
 - [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
-- [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec.Builder](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
-- [KeyPermanentlyInvalidatedException](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
-- [KeyProperties](http://developer.android.com/reference/android/security/keystore/KeyProperties.html)
+- [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
+- [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [RFC 2315-PCKS #7](https://tools.ietf.org/html/rfc2315)
+- [RFC 2315 - PCKS #7](https://tools.ietf.org/html/rfc2315)

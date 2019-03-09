@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: ed49c1d11e30d19b2dc60066c3c35568ade43198
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 3131963efa3d4ba4de9ff63c741c276a62e9d12d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557105"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670417"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -258,6 +258,9 @@ XAML:
 
 - [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; 텍스트 편집기에서 변경 될 때 발생 합니다. 전과 변경 후에 텍스트를 제공합니다.
 - [완료](xref:Xamarin.Forms.Editor.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
+
+> [!NOTE]
+> 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 올 클래스 [ `Entry` ](xref:Xamarin.Forms.Entry) 상속, 역시 [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) 하 고 [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)이벤트입니다.
 
 ### <a name="completed"></a>완료
 

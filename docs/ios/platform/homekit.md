@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 22b6fd101c0b983fe7b4a7d0891dc4674a11a02a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121193"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672822"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.iOS에서 HomeKit
 
@@ -39,7 +39,7 @@ HomeKit 홈 컬렉션에 지정된 된 위치에서 모든 automation 장치를 
 홈 컬렉션 홈 구성 데이터베이스를 자동으로 되는 백업 및 동기화 된 모든 사용자의 iOS 장치에 저장 됩니다. HomeKit 홈 구성 데이터베이스를 사용 하 여 작업에 대 한 다음 클래스를 제공 합니다.
 
 - `HMHome` -이 (예: 단일 물리적 위치에서 모든 정보 및 모든 홈 자동화 장치에 대 한 구성을 포함 하는 최상위 컨테이너 단일 제품군 거주). 사용자는 자신의 기본 홈 휴가 집 등 둘 이상의 거주가 있을 수 있습니다. 또는 다른 "보관" 동일한 속성에는 차고 통해 게스트 집 주 집 등을 가질 수 있습니다. 하나 이상의 어느 `HMHome` 개체 _해야_ 설치 되며 저장 기타 HomeKit 정보를 입력할 수 있습니다.
-- `HMRoom` -동안 선택적를 `HMRoom` 홈 내에서 특정 대화방을 정의할 수 있습니다 (`HMHome`)와 같은: 주방 욕실, 차고, 거실 합니다. 홈 자동화 장치에 자신의 집에서 특정 위치에 모든 사용자 그룹 수를 `HMRoom` 단위로 따라 작업을 수행 합니다. 예를 들어, Siri garage 광원 해제를 요청 합니다.
+- `HMRoom` -동안 선택적를 `HMRoom` 홈 내에서 특정 대화방을 정의할 수 있습니다 (`HMHome`)와 같은: 주방, 욕실, 차고 또는 가정용 합니다. 홈 자동화 장치에 자신의 집에서 특정 위치에 모든 사용자 그룹 수를 `HMRoom` 단위로 따라 작업을 수행 합니다. 예를 들어, Siri garage 광원 해제를 요청 합니다.
 - `HMAccessory` -이 나타내는 개인, 실제 HomeKit 사용 자동화 장치 (예: 스마트 자동 온도 조절기) 사용자의 거주지에 설치 된. 각 `HMAccessory` 에 할당 되는 `HMRoom`합니다. 사용자 모든 대화방을 구성 하지 않은 경우 HomeKit 액세서리 특별 기본 대화방에 할당 합니다.
 - `HMService` -제공 하는 서비스를 나타내는 지정 된 `HMAccessory`, 광원의 색 (지원 되는 색 변경) 하는 경우 설정/해제 상태와 같은 합니다. 각 `HMAccessory` 도 광원을 포함 하는 차고 도어 열기 등의 서비스가 둘 이상 있을 수 있습니다. 또한는 주어진 `HMAccessory` 서비스 펌웨어 업데이트와 같은 사용자 정의 컨트롤의 외부에 있는 있을 수 있습니다.
 - `HMZone` -컬렉션을 그룹화 할 수 있습니다. `HMRoom` Upstairs, Downstairs 지하실 등의 논리 영역으로는 개체입니다. 선택 사항 이지만, 이렇게 하면 Siri 요청 같은 상호 작용에 대 한 해제 downstairs 광원의 모든 설정.
@@ -52,7 +52,7 @@ HomeKit 따른 보안 요구 사항으로 인해 HomeKit 프레임 워크를 사
 
 다음을 수행합니다.
 
-1. 에 로그인 합니다 [Apple Developer 포털](http://developer.apple.com)합니다.
+1. 에 로그인 합니다 [Apple Developer 포털](https://developer.apple.com)합니다.
 2. 클릭할 **인증서, 식별자 및 프로필**합니다.
 3. 이미 않았다면 클릭할 **식별자** 앱 ID를 만듭니다 (예: `com.company.appname`), 다른 기존 ID를 편집
 4. 있는지 확인 합니다 **HomeKit** 서비스에 지정된 된 ID에 대 한 확인: 
@@ -667,7 +667,7 @@ HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합
 이 문서에서는 Xamarin.iOS 앱에 HomeKit 액세서리를 사용 하는 데 필요한 기본 기능 설명 했습니다. 그러나이 소개에서 다루지 않는 HomeKit의 몇 가지 고급 기능이 있습니다.
 
 - **대화방** -최종 사용자가 회의실에 사용 하도록 설정 하는 HomeKit 액세서리 구성 필요에 따라 수 있습니다. 이렇게 하면 쉽게 이해 하 고 사용 하 여 작업 사용자는 있는 accessories HomeKit. 만들고 방 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) 설명서.
-- **영역** -방 수 최종 사용자가 필요에 따라 영역으로 구성 하는 수입니다. 영역은 사용자는 하나의 단위로 처리할 수 있습니다 하는 대화방의 컬렉션을 가리킵니다. 예를 들어: Upstairs, Downstairs 또는 지하실 합니다. 마찬가지로 HomeKit을 제공 하 여 최종 사용자에 게 가장 적합 한 방식으로 보조 프로그램을 사용 하 여 작업할 수 있습니다. 만들고 영역을 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서.
+- **영역** -방 수 최종 사용자가 필요에 따라 영역으로 구성 하는 수입니다. 영역은 사용자는 하나의 단위로 처리할 수 있습니다 하는 대화방의 컬렉션을 가리킵니다. 예를 들어: Upstairs Downstairs 또는 지하실 합니다. 마찬가지로 HomeKit을 제공 하 여 최종 사용자에 게 가장 적합 한 방식으로 보조 프로그램을 사용 하 여 작업할 수 있습니다. 만들고 영역을 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서.
 - **작업 및 작업 설정** -작업 액세서리 서비스 특성을 수정 하 고 집합으로 그룹화 할 수 있습니다. 작업 집합 보조 프로그램 그룹을 제어 하 고 해당 작업을 조정 하는 스크립트와 작동 합니다. 예를 들어, "조사식 TV" 스크립트를 수 있습니다는 블라인드, 조명 dim 닫고는 텔레비전과 해당 사운드 시스템을 켭니다. 만들기 및 작업 및 작업 집합을 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) 하 고 [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) 설명서.
 - **트리거** -하나 트리거를 활성화할 수 있습니다 또는 자세한 동작 설정할 때 지정된 된 조건 집합이 충족 합니다. 예를 들어 portch light 설정 하 고 외부 어두운 가져오면 모든 외부 도어가 잠금. 만들기 및 트리거를 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) 설명서.
 
@@ -691,14 +691,14 @@ Apple에에 대 한 변경 및 추가 HomeKit ios 9:
 - **영구 식별자** -이제 모든 관련 HomeKit 클래스를 포함 한 `UniqueIdentifier` HomeKit에서 지정된 된 항목을 고유 하 게 식별 하는 속성이 앱 (또는 동일한 앱의 인스턴스)를 사용 합니다.
 - **사용자 관리** -주 사용자의 홈 HomeKit 장치에 액세스할 수 있는 사용자를 통해 사용자 관리를 제공 하는 기본 제공 뷰 컨트롤러를 추가 합니다.
 - **사용자 기능** -HomeKit 사용자에 게 이제 HomeKit를 사용 하는 기능을 제어 하는 권한 집합이 고 HomeKit 액세서리를 사용 하도록 설정 합니다. 앱만 현재 사용자에 게 관련 기능을 표시 됩니다. 예를 들어 한 관리자만 다른 사용자를 유지 하기 위해 수 있어야 합니다.
-- **백그라운드에서 미리 정의 된** -평균 HomeKit 사용자에 대해 발생 하는 4 개의 일반적인 이벤트에 대 한 미리 정의 된 장면 만들었습니다: 시작, 유지, 반환, 잠자리에 있습니다. 이러한 미리 정의 된 장면 집에서 삭제할 수 없습니다.
+- **백그라운드에서 미리 정의 된** -평균 HomeKit 사용자에 대해 발생 하는 4 개의 일반적인 이벤트에 대 한 미리 정의 된 자동으로 만들었습니다. 시작, 유지, 반환, 침대 가십시오. 이러한 미리 정의 된 장면 집에서 삭제할 수 없습니다.
 - **장면 및 Siri** -Siri iOS 9 및 수의 백그라운드에서 HomeKit에 정의 된 모든 장면 이름을 알 지원이 향상 되었습니다. 사용자는 해당 이름을 Siri 말하기 하면 장면을 실행할 수 있습니다.
 - **보조 범주** -미리 정의 된 범주 집합을 모든 Accessories 및 홈에 추가 되 고 액세서리의 형식을 식별 하는 데 도움이 됩니다에 추가 되었거나 앱 내에서 작업 합니다. 이러한 새 범주는 액세서리 설치 하는 동안 사용할 수 있습니다.
-- **Apple Watch 지원** -HomeKit watchOS에 대 한 출시 되었습니다. 및 Apple Watch 시계 근처 중인 iPhone 없이 HomeKit 사용 장치 컨트롤 수 있게 됩니다. HomeKit watchOS에 대 한 다음과 같은 기능을 지원 합니다: 보기 집, Accessories 제어 및 백그라운드에서 실행 합니다.
+- **Apple Watch 지원** -HomeKit watchOS에 대 한 출시 되었습니다. 및 Apple Watch 시계 근처 중인 iPhone 없이 HomeKit 사용 장치 컨트롤 수 있게 됩니다. WatchOS 용 HomeKit는 다음과 같은 기능을 지원합니다. 보기 집, 보조 프로그램을 제어 하 고 백그라운드에서 실행 합니다.
 - **새 이벤트 트리거 유형은** -8, iOS 9 지원 이벤트 트리거 액세서리 상태 (예: 센서 데이터) 또는 지리적 위치에 따라 이제 iOS에서 지원 되는 타이머 형식 트리거 외에도 합니다. 이벤트 트리거를 사용 하 여 `NSPredicates` 실행을 위한 조건을 설정 합니다.
 - **원격 액세스** -사용 하 여 원격 액세스, 사용자가 제어할 수 이제 해당 HomeKit 원격 위치에 있는 집와 멀리 떨어져 있을 때 Automation Accessories 홈 사용 하도록 설정 합니다. IOS 8에서에서 3 세대 집에서 Apple TV를 사용자가 경우에 지원 되었습니다이 합니다. Ios 9에서이 제한을 리프트 및 원격 액세스 iCloud 및 HomeKit 액세서리 프로토콜 (HAP)을 통해 지원 됩니다.
 - **새 에너지 BLE (Bluetooth Low) 기능** -HomeKit는 이제 에너지 BLE (Bluetooth Low) 프로토콜을 통해 통신할 수 있는 더 많은 액세서리 형식을 지원 합니다. HAP Secure Tunneling 사용 HomeKit 액세서리 노출할 수 있습니다 다른 Bluetooth 액세서리 Wi-fi 상에 서 (범위를 벗어나므로 Bluetooth) 하는 경우. IOS 9, BLE Accessories에는 알림 및 메타 데이터에 대 한 완벽 하 게 지원 합니다.
-- **새 액세서리 범주** -Apple iOS 9에서에서 다음 새 보조 범주를 추가 합니다: 창 Coverings, 고 문 및 Windows, 경보 시스템, 센서 및 프로그래밍 가능 스위치입니다.
+- **새 액세서리 범주** -Apple iOS 9에서에서 다음 새 보조 범주를 추가 합니다. 창 Coverings, 고 문 및 Windows, 경보 시스템, 센서 및 프로그래밍 가능 스위치입니다.
 
 HomeKit ios 9의 새로운 기능에 대 한 자세한 내용은 Apple의를 참조 하세요 [HomeKit 인덱스](https://developer.apple.com/homekit/) 하 고 [What's New in HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210) 비디오.
 

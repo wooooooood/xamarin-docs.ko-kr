@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: 5468495885e3af2afa2692ccad9191b669fa3328
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: f2db5f4acd57cbf887d9955d9ea61fce4427c1c3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066509"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672406"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용 하 여 연속 통합 소개
 
@@ -39,10 +39,6 @@ CI (지속적인 통합)를 지속적으로 공용 코드 베이스에 모든 �
 합니다 [App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud) 수백 대의 물리적 장치에서 직접 앱을 테스트 하 여이 특정 문제를 해결 합니다. 개발자는 강력한 UI 테스트에 대 한 허용 하는 자동화 된도 테스트를 작성 합니다. 이러한 테스트는 App Center에 업로드 되 면 CI 서버를 실행할 수 자동으로 CI 프로세스의 일부로 다음 다이어그램에 표시 된 대로:
 
 [![](intro-to-ci-images/intro02-small.png "이러한 테스트는 App Center에 업로드 되 면 CI 서버를 실행할 수 자동으로 CI 프로세스의 일부로이 다이어그램에 표시 된 대로")](intro-to-ci-images/intro02.png#lightbox)
-
-# <a name="components-of-continuous-integration"></a>연속 통합 구성 요소
-
-CI 지원 하도록 설계 하는 상용 및 오픈 소스 도구의 광범위 한 에코 시스템을 있습니다. 이 섹션의 가장 일반적인 몇 가지를 설명합니다.
 
 ## <a name="version-control"></a>버전 제어
 
@@ -92,8 +88,8 @@ Visual Studio Team Services를 사용 하 여 각 대상 플랫폼에 대 한 �
 
 Team Foundation Server를 사용 하 여 다음과 같은 특정 대상 플랫폼에 대 한 빌드 컴퓨터를 구성할 수 있습니다.
 
-- **Android 및 Windows:** (Android 및 Windows 모두) 용 도구 Visual Studio를 설치 하 고 Xamarin 및 Xamarin 라이선스를 사용 하 여 구성 합니다. TFS 빌드 에이전트는 서버에서 공유 위치에 Android SDK를 찾을 수를 이동 하는 데 필요한 이기도 합니다. 자세한 내용은 참조 하세요 [TFVC 구성](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)합니다.
-- **iOS 및 Xamarin:** Visual Studio를 설치 하 고 적절 한 라이선스를 사용 하 여 Windows 서버에 Xamarin 도구입니다. 다음 빌드 호스트로 하 고 최종 앱 패키지 (iOS, OS X 용 앱에 대 한 IPA)를 만들 네트워크에서 액세스할 수 있는 Mac OS X 컴퓨터에서 Mac 용 Visual Studio를 설치 합니다.
+- **Android 및 Windows:** (Android 및 Windows 모두) 용 Visual Studio 및 Xamarin 도구를 설치 하 고 Xamarin 라이선스를 사용 하 여 구성 합니다. TFS 빌드 에이전트는 서버에서 공유 위치에 Android SDK를 찾을 수를 이동 하는 데 필요한 이기도 합니다. 자세한 내용은 참조 하세요 [TFVC 구성](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)합니다.
+- **iOS 및 Xamarin:** 적절 한 라이선스를 사용 하 여 Windows 서버에 Visual Studio 및 Xamarin 도구를 설치 합니다. 다음 빌드 호스트로 하 고 최종 앱 패키지 (iOS, OS X 용 앱에 대 한 IPA)를 만들 네트워크에서 액세스할 수 있는 Mac OS X 컴퓨터에서 Mac 용 Visual Studio를 설치 합니다.
 
 다음 다이어그램은이 토폴로지를 보여 줍니다.
 
@@ -115,7 +111,3 @@ Team Foundation Server를 사용 하 여 다음과 같은 특정 대상 플랫�
 
 > [!IMPORTANT]
 > **Jenkins는 [Microsoft에서 지원 되지 않습니다](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md)합니다.**
-
-# <a name="summary"></a>요약
-
-이 문서에서는 지속적인 통합의 개념 및 소프트웨어 개발 팀에 제공 하는 장점에 도입 되었습니다. 버전 제어의 중요도 역할 및 책임의 빌드 서버와 함께 설명 합니다. 문서 몇 가지 도구를 사용 하 여 소스 코드 제어에 대 한 수 있고 빌드 서버 다음 발생 했습니다. 개발자 품질 및 해당 앱의 기능을 증명 되는 자동화 된 테스트를 실행 하 여 멋진 앱을 게시 하는 App Center 테스트 했습니다. 앱 및 App Center 테스트를 찾을 수 있습니다 제출에 대 한 설명서를 자세한 [여기](https://docs.microsoft.com/appcenter/test-cloud)합니다. 마지막으로, 이해 하기 위해 조직에서는 지속적인 통합을 위해 설정할 수 있는 여러 다른 CI 환경을 설명에서는 이러한 모든 도구와 구성 요소를 서로 맞추는, 하는 방법입니다. Xamarin 프로젝트를 사용 하 여 Visual Studio Team Services 및 Team Foundation Server를 사용 하 여 자세한 내용은 [구성 TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview/) 이 고 [연속 통합 소개](https://docs.microsoft.com/azure/devops/pipelines/get-started-designer/)합니다. Jenkins를 사용 하는 경우 참조 하는 마찬가지로 [Xamarin 사용 하 여 Jenkins를 사용 하 여](~/tools/ci/jenkins-walkthrough.md) 연속 통합 설정에 대 한 자세한 내용은 합니다.

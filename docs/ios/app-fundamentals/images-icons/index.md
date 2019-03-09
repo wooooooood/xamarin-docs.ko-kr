@@ -1,19 +1,14 @@
 ---
 title: 이미지 및 Xamarin.iOS에서 아이콘
-description: 이 섹션에 시작 화면, Xamarin.iOS 앱 아이콘으로 사용 하는 등에서 이미지를 사용 하 여 작업을 설명 하는 문서 또는 포함 하는 다양 한 컨트롤 및 사용자 지정 문서 유형에 대 한 아이콘을 제공 합니다.
+description: '이 섹션에 시작 화면, Xamarin.iOS 앱 아이콘으로 사용 하는 등에서 이미지를 사용 하 여 작업을 설명 하는 문서 또는 포함 하는 다양 한 컨트롤 및 사용자 지정 문서 유형에 대 한 아이콘을 제공 합니다.'
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 09afcac8dcecd5a1d05961c2981c0940fff00a01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102362"
 ---
+
 # <a name="images-and-icons-in-xamarinios"></a>이미지 및 Xamarin.iOS에서 아이콘
 
 _이 섹션에 시작 화면, Xamarin.iOS 앱 아이콘으로 사용 하는 등에서 이미지를 사용 하 여 작업을 설명 하는 문서 또는 포함 하는 다양 한 컨트롤 및 사용자 지정 문서 유형에 대 한 아이콘을 제공 합니다._
@@ -38,7 +33,7 @@ IOS 앱 뿐만 아니라 해당 자산을 사용 하는 여러 위치에 대 한
 
 이 문서에서는 이미지 자산 또는 C# 코드를 사용 하 여 iOS 디자이너에서에서 컨트롤에 할당 하 여 해당 이미지를 표시 하 고 Xamarin.iOS 앱에 포함 하 여 설명 합니다.
 
-## <a name="application-iconsiosapp-fundamentalsimages-iconsapp-iconsmd"></a>[응용 프로그램 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
+## <a name="application-iconsiosapp-fundamentalsimages-iconsapp-iconsmd"></a>[애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
 
 Xamarin.iOS 앱에 앱 아이콘으로 사용할 이미지 자산 관리 및 포함 하 여이 문서에서는 다룹니다.
 
@@ -66,4 +61,4 @@ Xamarin.iOS 앱에 사용자 지정 문서 형식 아이콘으로 사용할 이�
 
 - [이미지 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [사용자 지정 아이콘 및 이미지 생성 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [사용자 지정 아이콘 및 이미지 생성 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

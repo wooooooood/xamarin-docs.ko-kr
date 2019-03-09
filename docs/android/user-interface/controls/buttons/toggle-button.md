@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 22eb8f999450ed8fb46b1f7809c92540be13aa65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 841a11f9cb48786a046802288ce05e7ae186688a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105924"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671718"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
@@ -44,7 +44,7 @@ togglebutton.Click += (o, e) => {
 
 있음을 합니다 [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) 만 요청 된 있도록 checked 및 unchecked, 간에 변경 되는 자체 상태 처리 합니다.
 
-응용 프로그램을 실행합니다.
+애플리케이션을 실행합니다.
 
 
 **팁:** 상태를 변경 해야 할 경우 (때와 같이 저장 된 로드 [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/))를 사용 합니다 [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
@@ -54,5 +54,5 @@ togglebutton.Click += (o, e) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [토글 단추](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [스위치](http://developer.android.com/reference/android/widget/Switch.html)
+- [ToggleButton](https://developer.android.com/reference/android/widget/ToggleButton.html)
+- [스위치](https://developer.android.com/reference/android/widget/Switch.html)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 107877d0e92d3a46101812b78bc0b414c0fbb320
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e0430b8ed9c42030441021e71c3b08b1ddccc57
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105469"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670547"
 ---
 # <a name="managing-fragments"></a>조각 관리
 
@@ -40,7 +40,7 @@ fragmentTx.Commit();
 
 트랜잭션이 커밋된 후 하면 `Activity.OnSaveInstanceState()` 는 호출 예외가 throw 됩니다. Android 모든 호스 티 드 조각의 상태를 저장 하 작업 상태를 저장 하기 때문에 발생 합니다. 이 시점 이후에 모든 조각을 트랜잭션이 커밋되는, 이러한 트랜잭션의 상태 활동 복원 되 면이 변경 내용이 손실 됩니다.
 
-작업의 조각 트랜잭션을 저장 하는 것이 불가능 [백 스택에](http://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) 를 호출 하 여 `FragmentTransaction.AddToBackStack()`입니다. 이렇게 하면 사용자를 통해 뒤로 탐색할 수 있습니다. 조각을 변경 하는 경우는 **다시** 단추가 눌러져 있습니다. 이 메서드를 호출 하지 않고 조각 제거 되는 소멸 됩니다 및 사용자 활동을 통해 다시 이동 하는 경우에 사용할 수 없게 됩니다.
+작업의 조각 트랜잭션을 저장 하는 것이 불가능 [백 스택에](https://developer.android.com/guide/topics/fundamentals/tasks-and-back-stack.html) 를 호출 하 여 `FragmentTransaction.AddToBackStack()`입니다. 이렇게 하면 사용자를 통해 뒤로 탐색할 수 있습니다. 조각을 변경 하는 경우는 **다시** 단추가 눌러져 있습니다. 이 메서드를 호출 하지 않고 조각 제거 되는 소멸 됩니다 및 사용자 활동을 통해 다시 이동 하는 경우에 사용할 수 없게 됩니다.
 
 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 `AddToBackStack` 메서드는 `FragmentTransaction` 백 스택에 첫 번째 조각의 상태를 유지 하는 동안 하나의 조각을 바꾸려면:
 

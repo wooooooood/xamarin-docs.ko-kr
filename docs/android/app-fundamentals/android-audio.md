@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 9b7e9354250881074fc6f0db5d97dc83e4d3fa77
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a1a9dd06fb3cd6899dd3a564072bb63e413edf22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114667"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667558"
 ---
 # <a name="android-audio"></a>Android Audio
 
@@ -124,7 +124,7 @@ player.Release();
 
 2. 오디오 입력을 통해 캡처를 사용 하는 하드웨어 장치를 지정 합니다 [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/) 메서드.
 
-3. 사용 하 여 출력 파일 오디오 형식을 설정 합니다 [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) 메서드. 지원 되는 오디오 형식 목록을 참조 하세요 [Android 지원 되는 미디어 형식](http://developer.android.com/guide/appendix/media-formats.html)합니다.
+3. 사용 하 여 출력 파일 오디오 형식을 설정 합니다 [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/) 메서드. 지원 되는 오디오 형식 목록을 참조 하세요 [Android 지원 되는 미디어 형식](https://developer.android.com/guide/appendix/media-formats.html)합니다.
 
 4. 호출 된 [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/) 오디오 인코딩 형식을 설정 하는 방법입니다.
 
@@ -210,7 +210,7 @@ recorder.Release();
 
 오디오 포커스 있습니다 즉시 권한이 부여 또는 처음 거부 되며 나중에 부여 합니다. 예를 들어 경우는 응용 프로그램 요청 오디오 포커스 전화 통화를 거부, 됩니다 있지만 포커스 전화 통화 완료 되 면 부여 되어야 잘 수 있습니다. 이 경우 수신기 오디오 포커스 번 수행 되 면 그에 따라 응답 하기 위해 등록 됩니다. 오디오 포커스 요청 여부 확인 재생 또는 오디오 녹음을 결정 하는 데 사용 됩니다.
 
-오디오 포커스에 대 한 자세한 내용은 참조 하세요. [오디오 포커스 관리](http://developer.android.com/training/managing-audio/audio-focus.html)합니다.
+오디오 포커스에 대 한 자세한 내용은 참조 하세요. [오디오 포커스 관리](https://developer.android.com/training/managing-audio/audio-focus.html)합니다.
 
 
 
@@ -429,6 +429,6 @@ Android OS는 재생, 기록 및 오디오를 관리 하는 강력한 프레임 
 - [오디오 사용 하 여 작업 (샘플)](https://developer.xamarin.com/samples/Example_WorkingWithAudio/)
 - [Media Player](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/)
 - [미디어 레코더](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)
-- [오디오 관리자](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)
+- [Audio Manager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)
 - [오디오 트랙](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/)
 - [오디오 레코더](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/)

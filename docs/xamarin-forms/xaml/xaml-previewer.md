@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
-ms.openlocfilehash: 4258eca8e18229420ceb043a010c896137187653
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: 7834b87687db8fd1a3d51a40a4657b24e46bac17
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240385"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670404"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 용 XAML 미리 보기
 
@@ -21,7 +21,7 @@ _입력할 때 렌더링되는 Xamarin.Forms 레이아웃을 확인하세요._
 
 ## <a name="requirements"></a>요구 사항
 
-프로젝트를 수행하려면 XAML 미리 보기에 대한 최신 Xamarin.Forms NuGet 패키지가 필요합니다. Android 앱을 미리 보기하려면 [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)가 필요합니다.
+프로젝트를 수행하려면 XAML 미리 보기에 대한 최신 Xamarin.Forms NuGet 패키지가 필요합니다. Android 앱을 미리 보기하려면 [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)가 필요합니다.
 
 자세한 정보는 [릴리스](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer)를 참조하십시오.
 

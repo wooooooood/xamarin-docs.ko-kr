@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: cd80154602cc22668768fe217da7371b77ded003
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fa32783617fce99514560677184f17be904cd42d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112386"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670328"
 ---
 # <a name="launching-the-maps-application"></a>지도 응용 프로그램 시작
 
@@ -42,7 +42,7 @@ StartActivity (mapIntent);
 
 -   `geo:latitude,longitude` &ndash; 지도 응용 프로그램을 중심에 위도/경도 엽니다. 
 
--   `geo:latitude,longitude?z=zoom` &ndash; 응용 프로그램의 중심에 위도/경도 및 지정된 된 수준으로 확대 하는 맵을 엽니다. 확대/축소 수준 범위는 1에서 23: 1 표시 전체 지구 및 23에 가장 가까운 확대/축소 수준입니다.
+-   `geo:latitude,longitude?z=zoom` &ndash; 응용 프로그램의 중심에 위도/경도 및 지정된 된 수준으로 확대 하는 맵을 엽니다. 확대/축소 수준 범위는 1에서 23: 1 전체 지구를 표시 하 고 23 가장 가까운 확대/축소 수준입니다.
 
 -   `geo:0,0?q=my+street+address` &ndash; 주소의 위치를 지도 응용 프로그램을 엽니다. 
 
@@ -55,7 +55,7 @@ StartActivity (mapIntent);
 
 
 
-지역 URI 체계에 대 한 자세한 내용은 참조 하세요. [지도에 위치 표시](http://developer.android.com/guide/components/intents-common.html#Maps)합니다.
+지역 URI 체계에 대 한 자세한 내용은 참조 하세요. [지도에 위치 표시](https://developer.android.com/guide/components/intents-common.html#Maps)합니다.
 
 
 ## <a name="street-view"></a>거리 보기

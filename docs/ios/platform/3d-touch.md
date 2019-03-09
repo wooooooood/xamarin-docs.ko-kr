@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 60751437b891579c97acee0e032defcca2b510f6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233863"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668740"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.iOS에서 3D 터치 소개
 
@@ -86,7 +86,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 ### <a name="checking-for-3d-touch-availability"></a>3D 터치 가용성 확인
 
-사용 하 여 작업 하는 경우는 [UIViewController]() iOS 장치에서 앱을 실행 하는 3D 터치를 지원 하는지 확인 하려면 다음 코드를 사용할 수 있습니다.
+작업할 때는 `UIViewController` iOS 장치에서 앱을 실행 하는 3D 터치를 지원 하는지 확인 하려면 다음 코드를 사용할 수 있습니다.
 
 ```csharp
 public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
@@ -101,7 +101,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
         ...
 ```
 
-하기 전에이 메서드를 호출할 수 있습니다 *후 나* `ViewDidLoad()`합니다. 
+하기 전에이 메서드를 호출할 수 있습니다 *후 나* `ViewDidLoad()`합니다.
 
 ### <a name="handling-peek-and-pop"></a>처리 미리 보기 및 Pop
 
@@ -281,7 +281,7 @@ public override void ViewDidLoad ()
 * `UIApplicationShortcutItemType` -사용 하 여 앱에서 항목을 식별 하는 문자열 값이입니다. 자세한 내용은 다음 단원을 참조하세요.
 
 > [!IMPORTANT]
-> 에 설정 된 빠른 동작 바로 가기 항목을 `Info.plist` 파일을 사용 하 여 액세스할 수 없습니다는 `Application.ShortcutItems` 속성입니다. 에만 전달 되는 `HandleShortcutItem` 이벤트 처리기입니다. 
+> 에 설정 된 빠른 동작 바로 가기 항목을 `Info.plist` 파일을 사용 하 여 액세스할 수 없습니다는 `Application.ShortcutItems` 속성입니다. 에만 전달 되는 `HandleShortcutItem` 이벤트 처리기입니다.
 
 
 

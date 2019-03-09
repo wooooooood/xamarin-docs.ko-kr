@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f54da980834b44bbca7dc8619943769f8f429a7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb7cbb6160865af5b1e40d40c7b999a8bd5ebc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115291"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668519"
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
 
@@ -74,12 +74,12 @@ Xamarin.Android 바인딩 프로젝트 빌드의 일부로, XML 파일 이름이
 이 섹션에서는 일반적인 오류 메시지 또는 증상의 일부 표시 하는 내 Android 라이브러리를 바인딩하는 동안 발생 합니다.
 
 
-### <a name="problem-java-version-mismatch"></a>문제: Java 버전 불일치
+### <a name="problem-java-version-mismatch"></a>문제점: Java 버전이 일치 하지 않습니다.
 
 형식이 생성 되지 않을 경우에 따라 또는 예기치 않은 작동 중단 중 어떤 라이브러리를 사용 하 여 컴파일된 비교할 Java의 최신 또는 이전 버전을 사용 하 고 있으므로 발생할 수 있습니다. 동일한 버전의 Xamarin.Android 프로젝트를 사용 하는 JDK 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
 
 
-### <a name="problem-at-least-one-java-library-is-required"></a>문제: Java 라이브러리를 하나 이상 필요 있습니다.
+### <a name="problem-at-least-one-java-library-is-required"></a>문제점: Java 라이브러리를 하나 이상 필요합니다.
 
 오류가 나타나면 "Java 라이브러리를 하나 이상 필요 하다"도 합니다. JAR 추가 되었습니다.
 
@@ -88,7 +88,7 @@ Xamarin.Android 바인딩 프로젝트 빌드의 일부로, XML 파일 이름이
 빌드 작업 설정 되어 있는지 확인 `EmbeddedJar`합니다. 때문에 여러 빌드 작업이 있습니다. JAR 파일 (같은 `InputJar`, `EmbeddedJar`, `ReferenceJar` 고 `EmbeddedReferenceJar`), 바인딩 생성기 기본적으로 사용 하는 것을 자동으로 추측할 수 없습니다. 빌드 작업에 대 한 자세한 내용은 참조 하세요. [빌드 작업](~/android/platform/binding-java-library/index.md)합니다.
 
 
-### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>문제:를 로드할 수 없습니다 바인딩 도구를 합니다. JAR 라이브러리
+### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>문제점: 바인딩 도구를 로드할 수 없습니다 합니다. JAR 라이브러리
 
 바인딩 라이브러리 생성기 로드에 실패 합니다. JAR 라이브러리입니다.
 
@@ -98,7 +98,7 @@ Xamarin.Android 바인딩 프로젝트 빌드의 일부로, XML 파일 이름이
 
 
 
-### <a name="problem-missing-c-types-in-generated-output"></a>문제: 누락 된 C# 에서 생성 된 출력 형식입니다.
+### <a name="problem-missing-c-types-in-generated-output"></a>문제점: 누락 된 C# 에서 생성 된 출력 형식입니다.
 
 바인딩을 **.dll** 작성 하지만 일부 Java 형식 또는 생성 된 누락 C# 원본 형식은 누락 되었다는 오류로 인해 빌드하지 않습니다.
 
@@ -128,7 +128,7 @@ Xamarin.Android 바인딩 프로젝트 빌드의 일부로, XML 파일 이름이
         name="obfuscated">false</attr>
     ```
 
-### <a name="problem-generated-c-source-does-not-build-due-to-parameter-type-mismatch"></a>문제: 생성 된 C# 매개 변수 유형이 일치 하지 않아 소스를 빌드하지 않습니다
+### <a name="problem-generated-c-source-does-not-build-due-to-parameter-type-mismatch"></a>문제점: 생성 된 C# 매개 변수 유형이 일치 하지 않아 소스를 빌드하지 않습니다
 
 생성 된 C# 소스를 빌드하지 않습니다. 형식이 일치 하지 않는 메서드의 매개 변수를 재정의 합니다.
 
@@ -136,15 +136,15 @@ Xamarin.Android 바인딩 프로젝트 빌드의 일부로, XML 파일 이름이
 
 Xamarin.Android는 다양 한 Java 필드에서 열거형에 매핑되는 C# 바인딩. 생성 된 바인딩에서 형식 비 호환성 문제가 발생할 수 있습니다 이러한. 이 해결 하려면 바인딩 생성기에서 생성 하는 메서드 시그니처는 열거형을 사용 하도록 수정 해야 합니다. 자세한 정보를 참조 하세요 [수정 열거형](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md)합니다.
 
-### <a name="problem-noclassdeffounderror-in-packaging"></a>문제: NoClassDefFoundError 패키지
+### <a name="problem-noclassdeffounderror-in-packaging"></a>문제점: 패키지에 NoClassDefFoundError
 
 `java.lang.NoClassDefFoundError` 패키징 단계에서 throw 됩니다.
 
 #### <a name="possible-causes"></a>가능한 원인:
 
-가장 가능성이 높은이 오류의 원인을 필수 Java 라이브러리 응용 프로그램 프로젝트에 추가 해야 한다는 것 (**.csproj**). . JAR 파일을 자동으로 확인 되지 않습니다. Java 라이브러리 바인딩 대상 장치 또는 에뮬레이터에서 존재 하지 않는 사용자 어셈블리에 대해 생성 되지 않습니다 (Google Maps 등 **maps.jar**). 이 아닌 경우 Android 라이브러리 프로젝트 지원에 대 한 사례를 라이브러리로 JAR는 라이브러리 dll에 포함 됩니다. 예를 들어: [버그 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+가장 가능성이 높은이 오류의 원인을 필수 Java 라이브러리 응용 프로그램 프로젝트에 추가 해야 한다는 것 (**.csproj**). . JAR 파일을 자동으로 확인 되지 않습니다. Java 라이브러리 바인딩 대상 장치 또는 에뮬레이터에서 존재 하지 않는 사용자 어셈블리에 대해 생성 되지 않습니다 (Google Maps 등 **maps.jar**). 이 아닌 경우 Android 라이브러리 프로젝트 지원에 대 한 사례를 라이브러리로 JAR는 라이브러리 dll에 포함 됩니다. 예를 들어: [Bug 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
 
-### <a name="problem-duplicate-custom-eventargs-types"></a>문제: 사용자 지정 EventArgs 형식을 복제합니다
+### <a name="problem-duplicate-custom-eventargs-types"></a>문제점: 중복 된 사용자 지정 EventArgs 형식
 
 빌드는 사용자 지정 EventArgs 형식을 중복으로 인해 실패합니다. 다음과 같은 오류가 발생합니다.
 
@@ -182,7 +182,7 @@ public interface MediationInterstitialListener {
         name="argsType">DialogClickEventArgs</attr>
 ```
 
-### <a name="problem-class-does-not-implement-interface-method"></a>문제: 클래스가 인터페이스 메서드를 구현 하지 않습니다.
+### <a name="problem-class-does-not-implement-interface-method"></a>문제점: 클래스는 인터페이스 메서드를 구현 하지 않습니다.
 
 오류 메시지를 나타내는 생성된 된 클래스 생성된 된 클래스를 구현 하는 인터페이스에 필요한 메서드를 구현 하지 않습니다 생성 됩니다. 그러나 생성된 된 코드를 살펴보면 메서드를 구현 하는 볼 수 있습니다.
 
@@ -222,7 +222,7 @@ return type of 'Java.Lang.Object'
     </attr>
     ```
 
-### <a name="problem-name-collisions-on-inner-classes--properties"></a>문제: 내부 클래스에서 충돌을 이름 / 속성
+### <a name="problem-name-collisions-on-inner-classes--properties"></a>문제점: 이름 충돌 내부 클래스 / 속성
 
 상속 된 개체에 충돌 하는 표시 유형입니다.
 
@@ -236,9 +236,9 @@ Java이 든, 필요 하지는 파생된 클래스는 부모 표시 유형이 같
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']/method[@name='MethodName']" name="visibility">public</attr>
 ```
 
-### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>문제: A **.so** 바인딩에서 필요한 라이브러리는 로드 되지 않고
+### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>문제점: A **.so** 바인딩에서 필요한 라이브러리는 로드 되지 않고
 
-일부 바인딩 프로젝트의 기능에 따라 달라질 수도 있습니다는 **.so** 라이브러리입니다. Xamarin.Android 자동으로 로드 되지 것입니다 불가능 합니다 **.so** 라이브러리입니다. JNI 호출 및 오류 메시지에 실패 하기 래핑된 Java 코드를 실행 하는 경우 Xamarin.Android _java.lang.UnsatisfiedLinkError: 네이티브 메서드를 찾을 수 없음:_ 응용 프로그램에 대 한 아웃 logcat에 나타납니다.
+일부 바인딩 프로젝트의 기능에 따라 달라질 수도 있습니다는 **.so** 라이브러리입니다. Xamarin.Android 자동으로 로드 되지 것입니다 불가능 합니다 **.so** 라이브러리입니다. Xamarin.Android JNI 호출 및 오류 메시지에 실패 하기 래핑된 Java 코드를 실행 하는 경우 _java.lang.UnsatisfiedLinkError: 네이티브 메서드를 찾을 수 없음:_ 응용 프로그램에 대 한 아웃 logcat에 나타납니다.
 
 이 해결 수동으로 로드 하는 것은 **.so** 라이브러리를 호출 하 여 `Java.Lang.JavaSystem.LoadLibrary`입니다. 예를 들어 Xamarin.Android 프로젝트는 공유 라이브러리를 가정 **libpocketsphinx_jni.so** 빌드 작업을 사용 하 여 바인딩 프로젝트에 포함 된 **EmbeddedNativeLibrary**, 다음 코드 조각 (공유 라이브러리를 사용 하기 전에 실행)가 로드 된 **.so** 라이브러리:
 
@@ -253,7 +253,7 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 
 ## <a name="related-links"></a>관련 링크
 
-- [라이브러리 프로젝트](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [라이브러리 프로젝트](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Jni 작업](~/android/platform/java-integration/working-with-jni.md)
 - [진단 출력을 사용 하도록 설정](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Android 개발자를 위한 Xamarin](~/android/get-started/java-developers.md)

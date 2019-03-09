@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233564"
 ---
+
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
 이 가이드의 어떤 스토리 보드 설명할 것 이며 – 고 Segues 같은 주요 구성 요소 중 일부를 검토 합니다. 스토리 보드 수 생성 및 사용 하는 방법을 살펴보겠습니다 있고 어떤 이점을 개발자.
@@ -492,5 +487,5 @@ Storyboards.Conditional 솔루션에 대 한 참조를 [수동 스토리 보드 
 
 - [수동 스토리 보드 (샘플)](https://developer.xamarin.com/samples/ManualStoryboard/)
 - [IOS 디자이너 소개](~/ios/user-interface/designer/introduction.md)
-- [스토리 보드에 변환](http://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
+- [스토리 보드에 변환](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [UIStoryboard 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

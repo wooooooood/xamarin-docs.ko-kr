@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267640"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670148"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
 
@@ -34,7 +34,7 @@ Xamarin.Android 9.0 Android 원형에 대 한 지원을 제공합니다. Android
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 나중에 설치 해야 Visual Studio를 사용 하 여 또는 (Xamarin.Android의 일부로 자동으로 설치 됩니다 합니다 **.NET을 사용한 모바일 개발** 작업).
 
--   **Java Developer Kit** &ndash; Xamarin Android 9.0 개발 필요 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (Microsoft의 분포의 미리 보기를 시도할 수 있습니다 합니다 [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8의 일부로 자동으로 설치 되는 **.NET을 사용한 모바일 개발** 워크 로드.
+-   **Java Developer Kit** &ndash; Xamarin Android 9.0 개발 필요 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (Microsoft의 분포의 미리 보기를 시도할 수 있습니다 합니다 [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8의 일부로 자동으로 설치 되는 **.NET을 사용한 모바일 개발** 워크 로드.
 
 -   **Android SDK** &ndash; Android SDK Manager를 통해 Android SDK API 28 이상을 설치 해야 합니다.
 
@@ -173,7 +173,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
     ```
 
 2. 만들기는 `Notification.MessagingStyle.Message` 보낼 이미지가 포함 된 새 이미지 전달 [Notification.MessagingStyle.Message.SetData](https://developer.android.com/reference/android/app/Notification.MessagingStyle.Message.html#setData%28java.lang.String,%20android.net.Uri) 메서드.
-   예를 들어 다음과 같습니다.
+   예를 들어:
 
     ```csharp
     Uri imageUri = Uri.Parse("android.resource://com.xamarin.pminidemo/drawable/example_image");
@@ -182,14 +182,14 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
             .SetData("image/", imageUri);
     ```
 
-3. 메시지를 추가 `Notification.MessagingStyle` 개체입니다. 예를 들어 다음과 같습니다.
+3. 메시지를 추가 `Notification.MessagingStyle` 개체입니다. 예를 들어:
 
     ```csharp
     Notification.MessagingStyle style = new Notification.MessagingStyle(fromPerson)
             .AddMessage(message);
     ```
 
-4. 알림 작성기에이 스타일을 연결 합니다. 예를 들어 다음과 같습니다.
+4. 알림 작성기에이 스타일을 연결 합니다. 예를 들어:
 
     ```csharp
     builder = new Notification.Builder(this, MY_CHANNEL)
@@ -200,7 +200,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
         .SetChannelId(MY_CHANNEL);
     ```
 
-5. 알림을 게시 합니다. 예를 들어 다음과 같습니다.
+5. 알림을 게시 합니다. 예를 들어:
 
     ```csharp
     const int notificationId = 1000;
@@ -270,4 +270,4 @@ API 설명서에 대 한 링크를 포함 하 고 원형 Android 용 앱을 만�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android 9 원형](https://developer.android.com/about/versions/pie/)
+- [Android 9 Pie](https://developer.android.com/about/versions/pie/)

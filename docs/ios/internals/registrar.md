@@ -6,13 +6,13 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
-ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 08/29/2018
+ms.openlocfilehash: 83340ce2d5db145c29166d90d3a5180b1767d7ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233590"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672497"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Xamarin.iOS 용 형식 등록
 
@@ -144,7 +144,7 @@ class MyClass : IMyProtocol
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -178,7 +178,7 @@ class MyClass : IMyProtocol
 
 새 등록 기관에 대 한 염두에 몇 가지 사항은 다음과 같습니다.
 
-- 일부 타사 라이브러리는 새 등록 시스템과 함께 작동 하도록 업데이트 되어야 합니다. 참조 [수정 필요한](#required_modifications) 아래 대 한 자세한 내용은 합니다.
+- 일부 타사 라이브러리는 새 등록 시스템과 함께 작동 하도록 업데이트 되어야 합니다. 참조 [수정 필요한](#required-modifications) 아래 대 한 자세한 내용은 합니다.
 
 - 단기 단점이 이기도 Clang 계정 프레임 워크를 사용 하는 경우 사용 해야 함을 (때문에 이것이 Apple **accounts.h** 헤더 Clang 서만 컴파일할 수 있으며). 추가 `--compiler:clang` Clang Xcode 4.6 또는 이전 버전을 사용 하는 경우 사용할 추가 mtouch 인수에 (Xamarin.iOS가 자동으로 선택 Clang Xcode 5.0 이상.)
 
@@ -203,6 +203,8 @@ class MyClass : IMyProtocol
 - Objective-c 시그니처가 동일한 두 메서드를 내보낼 수 있습니다. 아직 다시 Objective-c에서 호출 되는 임의 (했지만 실제로이 버그를 경험 하는 유일한 방법은 운 관리 되는 메서드를 재정의 하는 것 이었습니다 있으므로이 문제는 이전 쿼리에서와 같이 일반적인 않았습니다).
 - 내보낸 메서드 집합에서 동적 및 정적 빌드 간에 약간 다릅니다.
 - 제네릭 클래스를 내보낼 때 제대로 작동 하지 않습니다 (런타임에 실행 하는 정확한 제네릭 구현을 무작위 일 효과적으로 결정 되지 않은 동작이 발생).
+
+<a name="required-modifications" />
 
 ## <a name="new-registrar-required-changes-to-bindings"></a>새 등록자: 필요한 바인딩 변경
 

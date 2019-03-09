@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171475"
 ---
+
 # <a name="android-wear"></a>Android Wear
 
 Android Wear 착용 식 장치 스마트 감시 등을 위해 설계 된 Android 버전이 있습니다. 이 섹션에서는 Wear 개발, 첫 번째 Wear 장치 및 사용자 고유의 작성용 Wear 앱을 참조할 수 있는 샘플 목록을 만들기 위한 단계별 연습에 필요한 도구 설치 및 구성 하는 방법에 대 한 지침을 포함 합니다.
@@ -64,21 +59,21 @@ Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정�
 
 |설명|스크린 샷|
 |--- |--- |
-|[Android L 및 훨씬](http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L 개발자 미리 재료 디자인, 알림 및 새 애니메이션 등을 비롯 한 다양 한 새로운 Api 활용 하는 개발자를 위한 도입 합니다.|![프레젠테이션 비디오 스크린샷](images/video-android-l.png)|
-|[C#내 귀에 눈에: Google 투명 하 고 Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; 미래 (또는 검사기 가젯 에피소드가)에서 것 처럼 보일 수 착용 식 계산 되지만 많은 사람들이 이미 수용 하는 미래 지금! C#개발자가이 사실을 잘 알고 있고 이미 도구 및 기술을 착용 식 장치 (진화 2014)에서 기능을 활용할 수 있습니다.|![프레젠테이션 비디오 스크린샷](images/video-eyes-ears.png)|
+|[Android L 및 훨씬](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android L 개발자 미리 재료 디자인, 알림 및 새 애니메이션 등을 비롯 한 다양 한 새로운 Api 활용 하는 개발자를 위한 도입 합니다.|![프레젠테이션 비디오 스크린샷](images/video-android-l.png)|
+|[C#내 귀에 눈 같습니다. Google 투명 하 고 Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; 미래 (또는 검사기 가젯 에피소드가)에서 것 처럼 보일 수 착용 식 계산 되지만 많은 사람들이 이미 수용 하는 미래 지금! C#개발자가이 사실을 잘 알고 있고 이미 도구 및 기술을 착용 식 장치 (진화 2014)에서 기능을 활용할 수 있습니다.|![프레젠테이션 비디오 스크린샷](images/video-eyes-ears.png)|
 |[Xamarin.Android의 새로운 기능](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android Wear, Android TV, Android Auto, 재질 디자인 및 아트;이 용도 Xamarin 개발자로 서 의미? 진화 2014에서.|![프레젠테이션 비디오 스크린샷](Images/video-whats-new.png)|
 
 
 <!--
 
 March 18
-http://blog.xamarin.com/android-wear/
+https://blog.xamarin.com/android-wear/
 
 August 14
-http://blog.xamarin.com/android-l-developer-preview-android-wear-support/
+https://blog.xamarin.com/android-l-developer-preview-android-wear-support/
 
 August 27
-http://blog.xamarin.com/tips-for-your-first-android-wear-app/
+https://blog.xamarin.com/tips-for-your-first-android-wear-app/
 
 Watch Face
 https://github.com/Redth/Xamarin.Wear.WatchFace

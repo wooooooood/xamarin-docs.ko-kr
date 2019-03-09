@@ -1,19 +1,19 @@
 ---
-title: Xamarin.Android API 디자인 원칙
+title: Xamarin.Android API Design Principles
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207936"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668493"
 ---
-# <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 디자인 원칙
+# <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API Design Principles
 
 
 ## <a name="overview"></a>개요
@@ -76,13 +76,13 @@ Xamarin.Android를 구성 하는 어셈블리의 여러 포함 된 *MonoMobile �
 
 Android Api 목록, 집합 및 지도 제공 하는 광범위 하 게 java.util 컬렉션을 활용 합니다. 사용 하 여 이러한 요소를 위해 노출 합니다 [System.Collections.Generic](xref:System.Collections.Generic) 바인딩의 인터페이스입니다. 기본 매핑은 다음과 같습니다.
 
--   [java.util.Set<E> ](http://developer.android.com/reference/java/util/Set.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/)합니다.
+-   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/)합니다.
 
--   [java.util.List<E> ](http://developer.android.com/reference/java/util/List.html) 시스템 형식에 매핑됩니다 [IList<T>](xref:System.Collections.Generic.IList`1), 도우미 클래스 [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/)합니다.
+-   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) 시스템 형식에 매핑됩니다 [IList<T>](xref:System.Collections.Generic.IList`1), 도우미 클래스 [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/)합니다.
 
--   [< K, V > java.util.Map](http://developer.android.com/reference/java/util/Map.html) 시스템 형식에 매핑됩니다 [< TKey, TValue > IDictionary](xref:System.Collections.Generic.IDictionary`2), 도우미 클래스 [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/)합니다.
+-   [< K, V > java.util.Map](https://developer.android.com/reference/java/util/Map.html) 시스템 형식에 매핑됩니다 [< TKey, TValue > IDictionary](xref:System.Collections.Generic.IDictionary`2), 도우미 클래스 [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/)합니다.
 
--   [java.util.Collection<E> ](http://developer.android.com/reference/java/util/Collection.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/)합니다.
+-   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/)합니다.
 
 이러한 형식의 마샬링 copyless 빠르게를 용이 하 게 하기 위한 도우미 클래스를 준비 했습니다. 가능한 경우 제공 된 프레임 워크 구현 대신 컬렉션을 제공 하는이 사용 하는 것이 좋습니다와 같은 [ `List<T>` ](xref:System.Collections.Generic.List`1) 하거나 [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2)합니다. 합니다 [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) 구현을 네이티브 Java 컬렉션을 내부적으로 사용 되며 따라서 필요 하지 않습니다는 Android API 멤버에 전달 하는 경우 기본 컬렉션에서 복사 합니다.
 
@@ -113,7 +113,7 @@ Java 메서드를 속성으로 해당 하는 경우 변환 됩니다.
 
 -  Java 메서드 쌍 `T getFoo()` 하 고 `void setFoo(T)` 으로 변환 되는 `Foo` 속성입니다. 예제: [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)합니다.
 
--  다음 Java 메서드의 경우 `getFoo()` 읽기 전용 Foo 속성으로 변환 됩니다. 예제: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/)합니다.
+-  다음 Java 메서드의 경우 `getFoo()` 읽기 전용 Foo 속성으로 변환 됩니다. 예제: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/).
 
 -  집합 전용 속성이 생성 되지 않습니다.
 
@@ -240,11 +240,11 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 
 예를 들어 합니다 [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 인터페이스입니다.
 합니다 *Parcelable* 인터페이스 메서드 및 중첩된 형식 상수를 포함 합니다. 합니다 *Parcelable* 인터페이스 메서드는 배치 합니다 [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) 인터페이스입니다.
-합니다 *Parcelable* 인터페이스 상수에 배치 되는 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) 형식입니다. 중첩 [android.os.Parcelable.ClassLoaderCreator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 하 고 [android.os.Parcelable.Creator <t> </t> ](http://developer.android.com/reference/android/os/Parcelable.Creator.html) 유형은 현재 없습니다 제네릭 지원과;의 제한으로 인해 바인딩된 으로 표시 됩니다, 지원 된 경우에 *Android.OS.IParcelableClassLoaderCreator* 하 고 *Android.OS.IParcelableCreator* 인터페이스입니다. 예를 들어 중첩 [android.os.IBinder.DeathRecpient](http://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스로 바인딩되어 합니다 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) 인터페이스입니다.
+합니다 *Parcelable* 인터페이스 상수에 배치 되는 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) 형식입니다. 중첩 [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 하 고 [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) 유형은 현재 없습니다 제네릭 지원과;의 제한으로 인해 바인딩된 으로 표시 됩니다, 지원 된 경우에 *Android.OS.IParcelableClassLoaderCreator* 하 고 *Android.OS.IParcelableCreator* 인터페이스입니다. 예를 들어 중첩 [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스로 바인딩되어 합니다 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) 인터페이스입니다.
 
 
 > [!NOTE]
-> Java 인터페이스 상수는 Xamarin.Android 1.9부터 <em>중복</em> Java 포팅 간소화 하기 위해에서 코드입니다. 사용 하는 이식 Java 코드를 개선 하기 위해 이렇게 [android 공급자](http://developer.android.com/reference/android/provider/package-summary.html) 상수 인터페이스입니다.
+> Java 인터페이스 상수는 Xamarin.Android 1.9부터 <em>중복</em> Java 포팅 간소화 하기 위해에서 코드입니다. 사용 하는 이식 Java 코드를 개선 하기 위해 이렇게 [android 공급자](https://developer.android.com/reference/android/provider/package-summary.html) 상수 인터페이스입니다.
 
 위의 형식 외에 4 개의 추가 변경 내용이:
 
@@ -257,9 +257,9 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 1. 합니다 *비용* 형식 이제 사용 되지 않습니다.
 
 
-에 대 한 합니다 *android.os.Parcelable* 인터페이스, 즉, 이제 것을 [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 상수를 포함 하는 형식입니다. 예를 들어 합니다 [Parcelable.CONTENTS_FILE_DESCRIPTOR](http://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) 상수로 바인딩될 합니다 [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) 상수를 대신 합니다  *ParcelableConsts.ContentsFileDescriptor* 상수입니다.
+에 대 한 합니다 *android.os.Parcelable* 인터페이스, 즉, 이제 것을 [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 상수를 포함 하는 형식입니다. 예를 들어 합니다 [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) 상수로 바인딩될 합니다 [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) 상수를 대신 합니다  *ParcelableConsts.ContentsFileDescriptor* 상수입니다.
 
-포함 된 다른 인터페이스를 구현 하는 상수 아직 자세한 상수를 포함 하는 인터페이스에 대 한 모든 상수 합한 이제 생성 됩니다. 예를 들어 합니다 [android.provider.MediaStore.Video.VideoColumns](http://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) 구현 인터페이스는 [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) 인터페이스입니다. 그러나 1.9를 이전 합니다 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) 형식에 대해 선언 된 상수에 액세스 하는 방법은 없습니다 [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/)합니다.
+포함 된 다른 인터페이스를 구현 하는 상수 아직 자세한 상수를 포함 하는 인터페이스에 대 한 모든 상수 합한 이제 생성 됩니다. 예를 들어 합니다 [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) 구현 인터페이스는 [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) 인터페이스입니다. 그러나 1.9를 이전 합니다 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) 형식에 대해 선언 된 상수에 액세스 하는 방법은 없습니다 [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/)합니다.
 결과적으로 Java 표현식 *MediaStore.Video.VideoColumns.TITLE* C# 식에 바인딩해야 *MediaStore.Video.MediaColumnsConsts.Title* 읽지도 않고 검색 하기 어려운는 Java 설명서 다양 합니다. 1.9에 해당 하는 C# 식 됩니다 [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)합니다.
 
 또한 고려해 야 합니다 [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) Java를 구현 하는 형식 *Parcelable* 인터페이스입니다. 예를 들어 해당 인터페이스의 모든 상수는 "통해" 번들 형식에 액세스할 수 있는 인터페이스를 구현 하기 때문 *Bundle.CONTENTS_FILE_DESCRIPTOR* 완벽 하 게 유효한 Java 식입니다.
@@ -270,8 +270,8 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 
 ## <a name="resources"></a>자료
 
-이미지, 레이아웃 설명, 이진 blob 및 문자열 사전으로 응용 프로그램에 포함할 수 [리소스 파일](http://developer.android.com/guide/topics/resources/providing-resources.html)합니다.
-다양 한 Android Api는 데 사용할 [리소스 Id 작업할](http://developer.android.com/guide/topics/resources/accessing-resources.html) 이미지로 처리 하는 대신 문자열이 나 이진 blob 직접.
+이미지, 레이아웃 설명, 이진 blob 및 문자열 사전으로 응용 프로그램에 포함할 수 [리소스 파일](https://developer.android.com/guide/topics/resources/providing-resources.html)합니다.
+다양 한 Android Api는 데 사용할 [리소스 Id 작업할](https://developer.android.com/guide/topics/resources/accessing-resources.html) 이미지로 처리 하는 대신 문자열이 나 이진 blob 직접.
 
 예를 들어 샘플 Android 앱을 사용자 인터페이스 레이아웃을 포함 하는 ( `main.axml`)은 국제화 테이블 문자열 ( `strings.xml`) 및 일부 아이콘 ( `drawable-*/icon.png`) 응용 프로그램의 "리소스" 디렉터리에 해당 리소스를 보관할 때:
 
@@ -317,7 +317,7 @@ public class Resource {
 
 네이티브 Android Api에 수행 하거나 int의 의미를 확인 하는 상수 필드에 매핑해야 하는 int를 반환 하는 여러 메서드가 있습니다. 이러한 메서드를 사용 하려면 사용자가 이상적인 되는 상수는 적절 한 값을 확인 하려면 설명서를 참조 해야 합니다.
 
-예를 들어 [Activity.requestWindowFeature (int featureID)](http://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int))합니다.
+예를 들어 [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int))합니다.
 
 이러한 경우.NET 열거형에 관련된 상수를 함께 그룹화 하 여 열거형을 대신 수행할 메서드를 다시 매핑할 다해야 합니다.
 이 작업을 수행 하면 IntelliSense 다양 한 잠재적인 값을 제공할 수 있습니다.

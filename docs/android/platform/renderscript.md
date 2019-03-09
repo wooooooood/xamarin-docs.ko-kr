@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108732"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670729"
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 소개
 
@@ -20,7 +20,7 @@ _이 가이드는 Renderscript를 소개 하 고 내장 Renderscript API의 Xama
 
 ## <a name="overview"></a>개요
 
-Renderscript는 광범위 한 계산 리소스를 필요로 하는 Android 응용 프로그램의 성능 향상을 위해 Google에서 만든 프로그래밍 프레임 워크입니다. 낮은 수준의 높은 성능에 따라 API [C99](http://en.wikipedia.org/wiki/C99)합니다. 낮은 수준에서 Cpu, Gpu 또는 Dsp 실행 되는 API 이기 때문에 Renderscript는 다음 중 하나를 수행 해야 할 수 있는 Android 앱에 적합 합니다.
+Renderscript는 광범위 한 계산 리소스를 필요로 하는 Android 응용 프로그램의 성능 향상을 위해 Google에서 만든 프로그래밍 프레임 워크입니다. 낮은 수준의 높은 성능에 따라 API [C99](https://en.wikipedia.org/wiki/C99)합니다. 낮은 수준에서 Cpu, Gpu 또는 Dsp 실행 되는 API 이기 때문에 Renderscript는 다음 중 하나를 수행 해야 할 수 있는 Android 앱에 적합 합니다.
 
 * 그래픽
 * 이미지 처리
@@ -49,7 +49,7 @@ Renderscripts Android 응용 프로그램에서 사용 하기 위한 세 가지 
 3. **할당 된 메모리** &ndash; 데이터와 커널을 통해 전달 되는  _[할당](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_ 합니다. 에 대 한 커널에는 하나의 입력 수 및/또는 할당 출력
 
 합니다 [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) 네임 스페이스 Renderscript 런타임과 상호 작용 하기 위한 클래스를 포함 합니다. 특히 합니다 [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) 클래스 수명 주기 및 Renderscript 엔진의 리소스를 관리 합니다. 하나 이상의 Android 앱 초기화 해야 합니다. [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
-개체입니다. 할당은 할당 및 Android 앱 및 Renderscript 런타임 간에 공유 되는 메모리에 액세스 하는 일을 담당 하는 관리 되는 API입니다. 일반적으로 하나의 할당 입력에 대해 생성 됩니다 하 고 필요에 따라 다른 할당 커널 출력을 포함할 만들어집니다. Renderscript 런타임 엔진과 연결 된 관리 되는 래퍼 클래스 할당을 보유 한 메모리에 대 한 액세스 관리, 추가 작업을 수행 하는 Android 앱 개발자를 위한 하지 않아도 됩니다.
+개체여야 합니다. 할당은 할당 및 Android 앱 및 Renderscript 런타임 간에 공유 되는 메모리에 액세스 하는 일을 담당 하는 관리 되는 API입니다. 일반적으로 하나의 할당 입력에 대해 생성 됩니다 하 고 필요에 따라 다른 할당 커널 출력을 포함할 만들어집니다. Renderscript 런타임 엔진과 연결 된 관리 되는 래퍼 클래스 할당을 보유 한 메모리에 대 한 액세스 관리, 추가 작업을 수행 하는 Android 앱 개발자를 위한 하지 않아도 됩니다.
 
 하나 이상의 할당 될 [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/)합니다.
 요소는 각 할당의 데이터를 설명 하는 특수화 된 형식입니다.
@@ -161,4 +161,4 @@ blurScript.ForEach(outputAllocation);
 - [Android.Renderscripts 네임 스페이스](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)
 - [Renderscript 사용 하 여 이미지를 흐리게 표시](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/drawing/blur_an_image_with_renderscript)
 - [Renderscript](https://developer.android.com/guide/topics/renderscript/compute.html)
-- [자습서: Renderscript 시작 합니다.](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)
+- [자습서: Renderscript 시작](https://software.intel.com/en-us/articles/renderscript-basic-sample-for-android-os)

@@ -5,13 +5,13 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/0/2018
-ms.openlocfilehash: fb0e1c42efc6bb51dcd899c7e6017007a82d5c7f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 09/09/2018
+ms.openlocfilehash: c7953748e79bd43bc14601c1f0ea05d1a36adf08
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105937"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668130"
 ---
 # <a name="fonts"></a>글꼴
 
@@ -21,7 +21,7 @@ ms.locfileid: "50105937"
 
 대상으로 하는 API 26 또는 Android 지원 라이브러리 v26 설치 후 Android 응용 프로그램에서 글꼴을 사용 하는 방법은 두 가지 있습니다.
 
-1. **패키지는 Android 리소스와 글꼴** &ndash; 하면 글꼴은 항상 응용 프로그램에 사용할 수 있지만 APK의 크기를 증가 합니다. 
+1. **패키지는 Android 리소스와 글꼴** &ndash; 하면 글꼴은 항상 응용 프로그램에 사용할 수 있지만 APK의 크기를 증가 합니다.
 2. **글꼴 다운로드** &ndash; Android에서 글꼴 다운로드도 지원를 _글꼴 공급자_합니다. 글꼴 공급자는 이미 글꼴 장치의 적용 인지를 확인 합니다. 필요한 경우 글꼴을 다운로드 하 고 장치에 캐시 됩니다. 이 글꼴은 여러 응용 프로그램 간에 공유할 수 있습니다.
 
 비슷한 글꼴 (또는 몇 가지 다른 스타일을 가질 수 있는 글꼴)으로 그룹화 할 수 있습니다 _글꼴 패밀리_합니다. 개발자가 글꼴의 가중치 등의 특정 특성을 지정할 수 있으며 Android가 글꼴 패밀리에서 적절 한 글꼴을 자동으로 선택 합니다.
@@ -30,15 +30,15 @@ Android 지원 라이브러리 v26 API 수준 26 글꼴에 대 한 백 포팅 �
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<font-family 
+<font-family
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-     <font  android:font="@font/sourcesanspro_regular" 
-            android:fontStyle="normal" 
+     <font  android:font="@font/sourcesanspro_regular"
+            android:fontStyle="normal"
             android:fontWeight="400"
-            app:font="@font/sourcesanspro_regular" 
-            app:fontStyle="normal" 
+            app:font="@font/sourcesanspro_regular"
+            app:fontStyle="normal"
             app:fontWeight="400" />
 
 </font-family>
@@ -60,7 +60,7 @@ Android 지원 라이브러리 v26 API 수준 26 글꼴에 대 한 백 포팅 �
 
 ## <a name="fonts-as-a-resource"></a>리소스로 글꼴
 
-Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항상 인지 확인 합니다. 글꼴 파일 (중 하나를 합니다. TTF 또는 합니다. OTF 파일)에서 하위 디렉터리에 파일을 복사 하 여 다른 리소스와 마찬가지로 Xamarin.Android 응용 프로그램에 추가 됩니다는 **리소스** Xamarin.Android 프로젝트의 폴더입니다. 글꼴 리소스에 유지 되는 **글꼴** 의 하위 디렉터리를 **리소스** 프로젝트의 폴더입니다. 
+Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항상 인지 확인 합니다. 글꼴 파일 (중 하나를 합니다. TTF 또는 합니다. OTF 파일)에서 하위 디렉터리에 파일을 복사 하 여 다른 리소스와 마찬가지로 Xamarin.Android 응용 프로그램에 추가 됩니다는 **리소스** Xamarin.Android 프로젝트의 폴더입니다. 글꼴 리소스에 유지 되는 **글꼴** 의 하위 디렉터리를 **리소스** 프로젝트의 폴더입니다.
 
 > [!NOTE]
 > 글꼴 있어야를 **빌드 작업** 의 **AndroidResource** 또는 최종 APK에 패키지 되지 것입니다. IDE에서 빌드 작업을 자동으로 설정 되어야 합니다.
@@ -81,23 +81,23 @@ Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항�
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
-    <font android:font="@font/sourcesanspro_regular" 
-          android:fontStyle="normal" 
+    <font android:font="@font/sourcesanspro_regular"
+          android:fontStyle="normal"
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_regular" 
-          app:fontStyle="normal" 
+          app:font="@font/sourcesanspro_regular"
+          app:fontStyle="normal"
           app:fontWeight="400" />
-    <font android:font="@font/sourcesanspro_bold" 
-          android:fontStyle="normal" 
-          android:fontWeight="800" 
-          app:font="@font/sourcesanspro_bold" 
-          app:fontStyle="normal" 
+    <font android:font="@font/sourcesanspro_bold"
+          android:fontStyle="normal"
+          android:fontWeight="800"
+          app:font="@font/sourcesanspro_bold"
+          app:fontStyle="normal"
           app:fontWeight="800" />
-    <font android:font="@font/sourcesanspro_italic" 
-          android:fontStyle="italic" 
+    <font android:font="@font/sourcesanspro_italic"
+          android:fontStyle="italic"
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_italic" 
-          app:fontStyle="italic" 
+          app:font="@font/sourcesanspro_italic"
+          app:fontStyle="italic"
           app:fontWeight="400" />
 </font-family>
 ```
@@ -110,14 +110,14 @@ Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항�
 합니다 `fontWeight` CSS에 해당 하는 특성 `font-weight` 특성 및 글꼴의 두께 가리킵니다. 100-900 범위의 값입니다. 다음 목록에는 일반 글꼴 두께 값 및 해당 이름을 설명합니다.
 
 * **씬** &ndash; 100
-* **추가 밝은** &ndash; 200
+* **Extra Light** &ndash; 200
 * **Light** &ndash; 300
 * **Normal** &ndash; 400
 * **중간** &ndash; 500
 * **굵게 semi** &ndash; 600
 * **굵은** &ndash; 700
 * **아주 굵게** &ndash; 800
-* **검정** &ndash; 900
+* **Black** &ndash; 900
 
 설정 하 여 선언적으로 사용할 수 있습니다 글꼴 패밀리를 정의한 후 합니다 `fontFamily`, `textStyle`, 및 `fontWeight` 레이아웃 파일의 특성입니다.  예를 들어 다음 XML 조각 (일반) 600 가중치 글꼴 및 기울임꼴 텍스트 스타일을 설정합니다.
 
@@ -153,7 +153,7 @@ textView1.Typeface = typeface;
 
 ## <a name="downloading-fonts"></a>글꼴 다운로드
 
-응용 프로그램 리소스로 글꼴 패키징, 대신 Android 원격 원본에서 글꼴을 다운로드할 수 있습니다. 이 APK의 크기를 줄이는 바람직하지 적용을 해야 합니다. 
+응용 프로그램 리소스로 글꼴 패키징, 대신 Android 원격 원본에서 글꼴을 다운로드할 수 있습니다. 이 APK의 크기를 줄이는 바람직하지 적용을 해야 합니다.
 
 글꼴의 도움으로 다운로드 됩니다는 _글꼴 공급자_합니다. 다운로드 및 장치에서 모든 응용 프로그램에 글꼴의 캐싱을 관리 하는 특수 한 콘텐츠 공급자입니다. Android 8.0에서 글꼴을 다운로드 하려면 글꼴 공급자를 포함 합니다 [Google 글꼴 리포지토리](http://fonts.google.com)합니다. 이 기본 글꼴 공급자는 Android 지원 라이브러리 v26 사용 하 여 API 수준 14로 백 포팅 합니다.
 
@@ -172,12 +172,12 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:fontProviderAuthority="com.google.android.gms.fonts" 
-             android:fontProviderPackage="com.google.android.gms" 
-             android:fontProviderQuery="VT323" 
+             android:fontProviderAuthority="com.google.android.gms.fonts"
+             android:fontProviderPackage="com.google.android.gms"
+             android:fontProviderQuery="VT323"
              android:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
-             app:fontProviderAuthority="com.google.android.gms.fonts" 
-             app:fontProviderPackage="com.google.android.gms" 
+             app:fontProviderAuthority="com.google.android.gms.fonts"
+             app:fontProviderPackage="com.google.android.gms"
              app:fontProviderQuery="VT323"
              app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
 >
@@ -195,9 +195,9 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 
 ### <a name="font-certificates"></a>글꼴 인증서
 
-글꼴 공급자 장치에 사전 설치 되지 않은 경우 또는 앱을 사용 하는 경우는 `Xamarin.Android.Support.Compat` Android 라이브러리 글꼴 공급자의 보안 인증서를 요구 합니다. 이러한 인증서에 보관 되는 배열 리소스 파일에 나열 됩니다 **리소스/값** 디렉터리입니다. 
+글꼴 공급자 장치에 사전 설치 되지 않은 경우 또는 앱을 사용 하는 경우는 `Xamarin.Android.Support.Compat` Android 라이브러리 글꼴 공급자의 보안 인증서를 요구 합니다. 이러한 인증서에 보관 되는 배열 리소스 파일에 나열 됩니다 **리소스/값** 디렉터리입니다.
 
-예를 들어, 다음 XML 이름이 **Resources/values/fonts_cert.xml** Google 글꼴 공급자에 대 한 인증서를 저장 합니다. 
+예를 들어, 다음 XML 이름이 **Resources/values/fonts_cert.xml** Google 글꼴 공급자에 대 한 인증서를 저장 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -223,7 +223,7 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>다운로드할 수 있는 글꼴을 리소스로 선언
 
-다운로드할 수 있는 글꼴을 나열 하 여 합니다 **AndroidManifest.XML**, 앱을 처음 시작할 때 Android 글꼴을 비동기적으로 다운로드 됩니다. 글꼴의 자체는이 이와 유사한 배열 리소스 파일에 나열 됩니다. 
+다운로드할 수 있는 글꼴을 나열 하 여 합니다 **AndroidManifest.XML**, 앱을 처음 시작할 때 Android 글꼴을 비동기적으로 다운로드 됩니다. 글꼴의 자체는이 이와 유사한 배열 리소스 파일에 나열 됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,7 +234,7 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 </resources>
 ```
 
-이러한 글꼴을 다운로드 하려면에 선언할 필요가 **AndroidManifest.XML** 더하여 `meta-data` 의 자식으로는 `application` 요소. 예를 들어, 다운로드 가능한 글꼴에 있는 리소스 파일에 선언 된 경우 **Resources/values/downloadable_fonts.xml**를 매니페스트에 추가 되었으면이 코드 조각: 
+이러한 글꼴을 다운로드 하려면에 선언할 필요가 **AndroidManifest.XML** 더하여 `meta-data` 의 자식으로는 `application` 요소. 예를 들어, 다운로드 가능한 글꼴에 있는 리소스 파일에 선언 된 경우 **Resources/values/downloadable_fonts.xml**를 매니페스트에 추가 되었으면이 코드 조각:
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
@@ -242,14 +242,14 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>글꼴 Api 사용 하 여 글꼴 다운로드
 
-프로그래밍 방식으로 인스턴스화하여 글꼴을 다운로드할 수 있기를 [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) 개체에 전달 하는 `FontContractCompat.RequestFont` 메서드. `FontContractCompat.RequestFont` 메서드를 먼저 글꼴 장치에 존재 하는지 확인 하 고 다음 필요한 경우는 비동기적으로 쿼리 글꼴 공급자 및 앱에 대 한 글꼴을 다운로드 하려고 합니다. 경우 `FontRequest` Android는 기본 시스템 글꼴을 사용 하 여 글꼴을 다운로드할 수 없는 합니다. 
+프로그래밍 방식으로 인스턴스화하여 글꼴을 다운로드할 수 있기를 [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) 개체에 전달 하는 `FontContractCompat.RequestFont` 메서드. `FontContractCompat.RequestFont` 메서드를 먼저 글꼴 장치에 존재 하는지 확인 하 고 다음 필요한 경우는 비동기적으로 쿼리 글꼴 공급자 및 앱에 대 한 글꼴을 다운로드 하려고 합니다. 경우 `FontRequest` Android는 기본 시스템 글꼴을 사용 하 여 글꼴을 다운로드할 수 없는 합니다.
 
 `FontRequest` 개체를 찾아 글꼴 다운로드 글꼴 공급자에서 사용할 정보를 포함 합니다. `FontRequest` 네 가지 정보가 필요 합니다.
 
 1. **글꼴 공급자 기관** &ndash; 요청에 사용할 글꼴 공급자의 기관입니다.
 2. **글꼴 패키지** &ndash; 요청에 사용할 글꼴 공급자에 대 한 패키지 있습니다. 이 공급자의 id를 확인 하려면 사용 됩니다.
 3. **글꼴 쿼리** &ndash; 글꼴 공급자 요청 된 글꼴을 찾는 데 도움이 되는 문자열입니다. 글꼴 쿼리에 대 한 세부 정보는 글꼴 공급자와 관련이 있습니다. 문자열의 세부 사항은 글꼴 공급자별으로 다릅니다. 합니다 [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) 클래스를 [다운로드 글꼴](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) 샘플 앱 일부 정보를 제공 하는 쿼리 형식에 글꼴에 대 한 Google 글꼴 오픈 소스 컬렉션에서 합니다.
-4. **글꼴 공급자 인증서** &ndash; 공급자를 사용 하 여 서명 인증서에 대 한 해시 집합의 목록으로는 리소스 배열입니다. 
+4. **글꼴 공급자 인증서** &ndash; 공급자를 사용 하 여 서명 인증서에 대 한 해시 집합의 목록으로는 리소스 배열입니다.
 
 이 코드 조각은 새 인스턴스화의 한 예로 `FontRequest` 개체:
 
@@ -257,14 +257,14 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.google.android.gms", <FontToDownload>, Resource.Array.com_google_android_gms_fonts_certs);
 ```
 
-이전 코드 조각에서 `FontToDownload` Google 글꼴 오픈 소스 컬렉션에서 글꼴을 안내 하는 쿼리입니다. 
+이전 코드 조각에서 `FontToDownload` Google 글꼴 오픈 소스 컬렉션에서 글꼴을 안내 하는 쿼리입니다.
 
 전달 하기 전에 합니다 `FontRequest` 에 `FontContractCompat.RequestFont` 메서드를 작성 해야 하는 개체 두 개가:
 
 * **`FontsContractCompat.FontRequestCallback`** &ndash; 이것이 확장 해야 하는 추상 클래스입니다. 콜백이 될 것이 될 때 호출 `RequestFont` 가 완료 합니다. Xamarin.Android 앱을 서브 클래스 해야 `FontsContractCompat.FontRequestCallback` 재정의 `OnTypefaceRequestFailed` 및 `OnTypefaceRetrieved`, 다운로드가 실패 하거나 각각 성공 하는 경우 수행할 작업을 제공 합니다.
 * **`Handler`** &ndash; 이 `Handler` 에서 사용 됩니다 `RequestFont` 필요한 경우 스레드에서 글꼴을 다운로드 합니다. 글꼴 해야 **되지** UI 스레드에서 다운로드할 수 있습니다.
 
-이 코드 조각은의 한 예로 C# Google 글꼴 오픈 소스 컬렉션에서 글꼴을 비동기적으로 다운로드 하는 클래스입니다. 구현 하는 `FontRequestCallback` 인터페이스를 발생 시킵니다를 C# 이벤트 때 `FontRequest` 완료 합니다. 
+이 코드 조각은의 한 예로 C# Google 글꼴 오픈 소스 컬렉션에서 글꼴을 비동기적으로 다운로드 하는 클래스입니다. 구현 하는 `FontRequestCallback` 인터페이스를 발생 시킵니다를 C# 이벤트 때 `FontRequest` 완료 합니다.
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
@@ -332,7 +332,7 @@ public class FontDownloadEventArg : EventArgs
 ```csharp
 var fontHelper = new FontDownloadHelper();
 
-fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) => 
+fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 {
     //React to the request
 };
@@ -350,7 +350,7 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 - [FontRequest](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html)
 - [FontsContractCompat](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html)
 - [Resources.GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
-- [서체](https://developer.android.com/reference/android/graphics/Typeface.html)
+- [Typeface](https://developer.android.com/reference/android/graphics/Typeface.html)
 - [Android 지원 라이브러리 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
 - [Android에서 글꼴을 사용 하 여](https://www.youtube.com/watch?v=TfB-TsLFJdM)
 - [CSS 글꼴 두께 사양](https://www.w3.org/TR/css-fonts-3/#font-weight-numeric-values)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 1ac68992d36627eb5d6aee0d4d19564ce63a3936
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8bd77ec4975fae3cc7245c5adc2b5ef18568b9e1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052137"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667585"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Azure 모바일 앱 사용
 
@@ -21,7 +21,7 @@ ms.locfileid: "53052137"
 _Azure Mobile Apps를 사용 하면 모바일 인증, 오프 라인 동기화 및 푸시 알림 지원을 통해 Azure App Service에서 호스트 되는 확장 가능한 백 엔드를 사용 하 여 앱을 개발할 수 있습니다. 이 기사를만 적용할 수 있는 Azure Mobile apps Node.js 백 엔드를 사용 하는 쿼리, 삽입, 업데이트 및 Azure Mobile Apps 인스턴스 테이블에 저장 된 데이터를 삭제 하는 방법을 설명 합니다._
 
 > [!NOTE]
-> 월 30 일에 시작, 모든 새 Azure Mobile Apps 만들어집니다 TLS 1.2를 사용 하 여 기본적으로. 또한 하는 것이 좋습니다 기존 Azure Mobile Apps는 TLS 1.2를 사용 하도록 다시 구성할 수 있습니다. Azure 모바일 앱에서 TLS 1.2를 적용 하는 방법에 대 한 자세한 내용은 [TLS 1.2 적용](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112)합니다. TLS 1.2를 사용 하도록 Xamarin 프로젝트를 구성 하는 방법에 대 한 자세한 내용은 [전송 계층 보안 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)합니다.
+> 월 30 일에 시작, 모든 새 Azure Mobile Apps 만들어집니다 TLS 1.2를 사용 하 여 기본적으로. 또한 하는 것이 좋습니다 기존 Azure Mobile Apps는 TLS 1.2를 사용 하도록 다시 구성할 수 있습니다. Azure 모바일 앱에서 TLS 1.2를 적용 하는 방법에 대 한 자세한 내용은 [적용 TLS 버전](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-versions)합니다. TLS 1.2를 사용 하도록 Xamarin 프로젝트를 구성 하는 방법에 대 한 자세한 내용은 [전송 계층 보안 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)합니다.
 
 Xamarin.Forms에서 사용할 수 있는 Azure Mobile Apps 인스턴스를 만드는 방법에 대 한 자세한 내용은 [Xamarin.Forms 앱 만들기](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/)합니다. 이 단계를 따라 다운로드 가능한 샘플 응용 프로그램을 구성할 수 있습니다 설정 하 여 Azure Mobile Apps 인스턴스를 사용 하 여 `Constants.ApplicationURL` Azure Mobile Apps 인스턴스의 URL로 합니다. 그런 다음 샘플 응용 프로그램이 실행 될 때이 Azure Mobile Apps 인스턴스에 연결할 다음 스크린샷에 표시 된 대로:
 

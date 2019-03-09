@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 81e6cbb39a522a471e739e7e9bbb8a0f451a38cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 640d50a45b4b7f61113b609fa6a5e4a04566b360
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052901"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667553"
 ---
 # <a name="searching-data-with-azure-search"></a>Azure Search를 사용 하 여 데이터를 검색합니다.
 
@@ -156,7 +156,7 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-데이터 인덱스를 가져올 수는으로 패키지를 `IndexBatch` 개체의 컬렉션을 캡슐화 하는 `IndexAction` 개체입니다. 각 `IndexAction` 인스턴스 문서 및 Azure Search 문서에 대해 수행할 작업을 지시 하는 속성을 포함 합니다. 위의 코드 예제는 `IndexAction.Upload` 작업 문서의 새로운 이면 인덱스에 삽입 되는 결과 지정 되었거나 이미 있는 경우 대체 합니다. `IndexBatch` 개체는 다음 호출 하 여 인덱스에 전송 됩니다 합니다 `Documents.Index` 메서드를 `SearchIndexClient` 개체. 다른 인덱싱 작업에 대 한 정보를 참조 하세요 [사용할 인덱싱 동작 결정](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use)합니다.
+데이터 인덱스를 가져올 수는으로 패키지를 `IndexBatch` 개체의 컬렉션을 캡슐화 하는 `IndexAction` 개체입니다. 각 `IndexAction` 인스턴스 문서 및 Azure Search 문서에 대해 수행할 작업을 지시 하는 속성을 포함 합니다. 위의 코드 예제는 `IndexAction.Upload` 작업 문서의 새로운 이면 인덱스에 삽입 되는 결과 지정 되었거나 이미 있는 경우 대체 합니다. `IndexBatch` 개체는 다음 호출 하 여 인덱스에 전송 됩니다 합니다 `Documents.Index` 메서드를 `SearchIndexClient` 개체. 다른 인덱싱 작업에 대 한 정보를 참조 하세요 [사용할 인덱싱 동작 결정](/azure/search/search-import-data-dotnet#decide-which-indexing-action-to-use)합니다.
 
 > [!NOTE]
 > 단일 인덱싱 요청에만 1000 개의 문서를 포함할 수 있습니다.

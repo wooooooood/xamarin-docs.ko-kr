@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3d0394f6b2388918f728bd5a25e9e809a832ca6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115772"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670976"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
@@ -21,7 +21,7 @@ ms.locfileid: "50115772"
 
 과도 하 게 사용 하 여 주의 해야 합니다 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)합니다.
 여러 중첩을 시작 하면 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)사용을 고려 하려는 s는 [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
-대신 합니다.
+사용합니다.
 
 명명 된 새 프로젝트를 시작 **HelloLinearLayout**합니다.
 
@@ -122,11 +122,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 합니다 [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) 에 대 한 레이아웃 파일을 로드 하는 메서드를 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID 기준으로 지정 된 &ndash; `Resources.Layout.Main` 가리킵니다는 **리소스/레이아웃 / Main.axml** 레이아웃 파일입니다.
 
-응용 프로그램을 실행합니다. 다음을 참조 해야 합니다.
+애플리케이션을 실행합니다. 다음을 참조 해야 합니다.
 
 [![스크린 샷 첫 번째 LinearLayout 가로로 정렬 하는 앱의 두 번째 세로 방향으로](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-XML 특성은 각 보기의 동작을 정의 하는 방법을 확인할 수 있습니다. 에 대해 다른 값을 사용 하 여 실험해 `android:layout_weight` 각 요소의 가중치에 따라 화면 부동산을 분산 하는 방법을 확인 합니다. 참조 된 [일반적인 레이아웃 개체](http://developer.android.com/guide/topics/ui/declaring-layout.html) 하는 방법에 대 한 자세한 문서 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+XML 특성은 각 보기의 동작을 정의 하는 방법을 확인할 수 있습니다. 에 대해 다른 값을 사용 하 여 실험해 `android:layout_weight` 각 요소의 가중치에 따라 화면 부동산을 분산 하는 방법을 확인 합니다. 참조 된 [일반적인 레이아웃 개체](https://developer.android.com/guide/topics/ui/declaring-layout.html) 하는 방법에 대 한 자세한 문서 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 핸들을 `android:layout_weight` 특성입니다.
 
 

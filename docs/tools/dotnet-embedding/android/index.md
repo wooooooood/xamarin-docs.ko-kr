@@ -5,13 +5,8 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
-ms.openlocfilehash: 5c8d493bf54ee1a8a1e7d4b3266451c78a4aa51e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123689"
 ---
+
 # <a name="net-embedding-on-android"></a>Android를 포함 하는.NET
 
 일부 경우에는 기존 네이티브 Android 프로젝트에는 Xamarin.NET 라이브러리를 추가 하는 것이 좋습니다. 이 위해 사용할 수 있습니다 합니다 [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/) 도구를 네이티브 Java 기반 Android 앱에 통합할 수 있는 네이티브 라이브러리를.NET 라이브러리를 설정 합니다.
@@ -26,7 +21,7 @@ ms.locfileid: "50123689"
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) 나중에 설치 해야 합니다.
 
--   **Java Developer Kit** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
+-   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
 
 
 ## <a name="using-embeddinator-4000"></a>Embeddinator 4000을 사용 하 여
@@ -62,9 +57,9 @@ ms.locfileid: "50123689"
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) 나중에 설치 해야 합니다.
 
--   **Java Developer Kit** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
+-   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
 
--   **Mono** &ndash; [Mono 5.0](http://www.mono-project.com/download/) 나중에 설치 해야 합니다 (mono는 Mac 용 Visual Studio와 함께 설치 됨).
+-   **Mono** &ndash; [Mono 5.0](https://www.mono-project.com/download/) 나중에 설치 해야 합니다 (mono는 Mac 용 Visual Studio와 함께 설치 됨).
 
 
 ## <a name="using-embeddinator-4000"></a>Embeddinator 4000을 사용 하 여

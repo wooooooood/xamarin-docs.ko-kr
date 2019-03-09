@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: a203975545c9f6e258505404d76e3fd5519a5a31
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 14711f9cc2c34d72765e28db158379bc2a26849b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674737"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670292"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>요소 API를 사용 하 여 Xamarin.iOS 응용 프로그램 만들기
 
@@ -154,5 +154,5 @@ public class Task
 - [JSON 요소 연습](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [Github에서 MonoTouch 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [TweetStation 응용 프로그램](https://github.com/migueldeicaza/TweetStation)
-- [UITableViewController 클래스 참조](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [UINavigationController 클래스 참조](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [UITableViewController 클래스 참조](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [UINavigationController 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f4a21e25f418cc81d5f210098ded648b3d70ae14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116734"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671054"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Apple Watch 장치에서 테스트
 
@@ -93,7 +93,7 @@ ms.locfileid: "50116734"
 
 배포를 사용 하는 동안 오류가 발생 하는 경우는 **보기 > 패드 > 장치 로그** 오류에 대 한 자세한 내용은 합니다. 일부 오류와 원인이 다음과 같습니다.
 
-### <a name="error-mt3001-could-not-aot-the-assembly"></a>오류 MT3001: 하지 AOT을 어셈블리를 수 있습니다.
+### <a name="error-mt3001-could-not-aot-the-assembly"></a>오류 MT3001: AOT을 어셈블리 없습니다 수 없습니다.
 
 이 Apple Watch 장치에 배포 하려면 디버그 모드에서 빌드하는 경우 발생할 수 있습니다.
 
@@ -152,7 +152,7 @@ SPErrorGizmoInstallNeverFinishedErrorMessage
 waiting for debugger to connect
 ```
 
-하는 경우 모든 프로젝트에 포함 된 Nuget에 대 한 종속성 확인 **Microsoft.Bcl.Build**합니다. 포함 하 여 널리 사용 되는 Microsoft에서 게시 일부 라이브러리를 사용 하 여 자동으로 추가 됩니다 [Microsoft Http 클라이언트 라이브러리](http://www.nuget.org/packages/Microsoft.Net.Http/)합니다.
+하는 경우 모든 프로젝트에 포함 된 Nuget에 대 한 종속성 확인 **Microsoft.Bcl.Build**합니다. 포함 하 여 널리 사용 되는 Microsoft에서 게시 일부 라이브러리를 사용 하 여 자동으로 추가 됩니다 [Microsoft Http 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http/)합니다.
 
 합니다 **Microsoft.Bcl.Build.targets** 에 추가 되는 파일을 **.csproj** 배포 하는 동안 iOS 확장의 포장을 방해할 수 있습니다. 추적할 수 있습니다 합니다 [버그](https://bugzilla.xamarin.com/show_bug.cgi?id=29912)합니다.
 .Csproj 파일을 편집 하 여 수동으로 이동이 가능한 문제를 해결 합니다 **Microsoft.Bcl.Build.targets** 마지막 요소 여야 합니다.

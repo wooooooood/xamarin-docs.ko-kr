@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 79547277b00ae1f1d9b035d5fb08685562cefc79
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bc50f3567135d5b1dc805fa691cdd95acadf34f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052584"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667554"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure Cosmos DB 문서 데이터베이스를 사용합니다.
 
@@ -41,7 +41,7 @@ Azure Cosmos DB에 대 한 자세한 내용은 참조는 [Azure Cosmos DB 설명
 
 Xamarin.Forms 응용 프로그램에 Azure Cosmos DB 문서 데이터베이스를 통합 하기 위한 프로세스는 다음과 같습니다.
 
-1. Cosmos DB 계정을 만듭니다. 자세한 내용은 [Azure Cosmos DB 계정을 만들고](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)합니다.
+1. Cosmos DB 계정을 만듭니다. 자세한 내용은 [Azure Cosmos DB 계정을 만들고](/azure/cosmos-db/sql-api-dotnetcore-get-started#create-an-azure-cosmos-account)합니다.
 1. 추가 된 [Azure Cosmos DB.NET Standard 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) Xamarin.Forms 솔루션의 플랫폼 프로젝트에 NuGet 패키지.
 1. 추가 `using` 에 대 한 지시문의 `Microsoft.Azure.Documents`, `Microsoft.Azure.Documents.Client`, 및 `Microsoft.Azure.Documents.Linq` Cosmos DB 계정에 액세스 하는 클래스에 네임 스페이스입니다.
 

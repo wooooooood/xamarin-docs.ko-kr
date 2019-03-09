@@ -1,5 +1,5 @@
 ---
-title: 더 스마트 한 Xamarin Android 지원 v4 / v13 NuGet 패키지
+title: 더 스마트한 Xamarin Android 지원 v4/v13 NuGet 패키지
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 43627884c2f8bc4d9e5b5faa2c3af08f74487b65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a990d933c258812b2b3d3374fb6435af06f729ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114647"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671795"
 ---
-# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>더 스마트 한 Xamarin Android 지원 v4 / v13 NuGet 패키지
+# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>더 스마트한 Xamarin Android 지원 v4/v13 NuGet 패키지
 
 ## <a name="about-the-android-support-libraries"></a>Android 지원 라이브러리에 대 한
 
-Google에서 새로운 기능을 이전 버전의 Android 사용할 수 있도록 지원 라이브러리를 만들었습니다. 지원 라이브러리 최하위 수준인 Android API와 호환 되는 이름에 버전 번호를 지정은 일반적으로 (예: API 수준 4 이상에 지원 v4를 사용할 수 있습니다. 이 자세한 [스택 오버플로 토론](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google에서 새로운 기능을 이전 버전의 Android 사용할 수 있도록 지원 라이브러리를 만들었습니다. 지원 라이브러리 최하위 수준인 Android API와 호환 되는 이름에 버전 번호를 지정은 일반적으로 (예: 지원 v4 API 수준 4 이상에 사용할 수 있습니다. 이 자세한 [스택 오버플로 토론](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
 
 지원 라이브러리의 두: `Support-v4` 고 `Support-v13` 사용할 수 없습니다 함께 동일한 앱에서,는 함께 사용할 수 없습니다. 왜냐하면 `Support-v13` 실제로 형식 및 구현의 모든 포함 `Support-v4`합니다. 시도 하 고 모두 동일한 프로젝트에서 참조 하는 경우 중복 된 형식 오류가 발생 합니다.
 

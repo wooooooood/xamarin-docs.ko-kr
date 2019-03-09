@@ -1,19 +1,19 @@
 ---
-title: 네이티브 라이브러리를 사용 하 여
+title: 네이티브 라이브러리 사용
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0df39dc51cf17e1b9ecfd2279d047020f0237cb6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666379"
 ---
-# <a name="using-native-libraries"></a>네이티브 라이브러리를 사용 하 여
+# <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
 Xamarin.Android 표준 PInvoke 메커니즘을 통해 네이티브 라이브러리의 사용을 지원 합니다. 또한 프로그램.apk에 운영 체제의 일부분이 아닌 추가 네이티브 라이브러리를 묶을 수 있습니다.
 
@@ -40,7 +40,7 @@ Xamarin.Android 라이브러리 프로젝트를 사용 하 여 네이티브 라�
 </ItemGroup>
 ```
 
-네이티브 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [네이티브 라이브러리를 사용 하 여 Interop](http://www.mono-project.com/docs/advanced/pinvoke/)합니다.
+네이티브 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [네이티브 라이브러리를 사용 하 여 Interop](https://www.mono-project.com/docs/advanced/pinvoke/)합니다.
 
 ## <a name="debugging-native-code-with-visual-studio-2017"></a>Visual Studio 2017을 사용 하 여 네이티브 코드 디버깅
 

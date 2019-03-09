@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 2dc56d9c5b63d428663d98bae4c8687c1f621a04
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 7dbb0044f09d5bc00f2393eb647efba05a061c3f
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233196"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669546"
 ---
 # <a name="threading-in-xamarinios"></a>Xamarin.iOS에서 스레딩
 
@@ -20,7 +20,7 @@ Xamarin.iOS 런타임은 개발자에 액세스할.NET 스레딩 스레드를 �
 
 
 
-Xamarin을 사용 하는 적극 권장 합니다 [Task Parallel Library](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) 몇 가지 이유로 응용 프로그램을 빌드하기 위한:
+Xamarin을 사용 하는 적극 권장 합니다 [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) 몇 가지 이유로 응용 프로그램을 빌드하기 위한:
 -  기본 TPL 스케줄러에 동적으로 확장 프로세스는에 있는 CPU 시간에 대 한 경쟁 너무 많은 스레드를 종료 하는 시나리오를 방지 하는 동안 필요한 스레드 수가 스레드 풀에 작업 실행을 위임 합니다. 
 -  TPL 작업와 관련 된 작업에 대해 생각 하는 것이 쉽습니다. 수 쉽게 조작할 예약한, 해당 실행을 직렬화 또는 다양 한 Api 사용 하 여 병렬로 여러 시작 합니다. 
 -  새 C# 비동기 언어 확장을 사용 하 여 프로그래밍을 위한 기초가 됩니다. 

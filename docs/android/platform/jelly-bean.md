@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9e83c9a8c1e2740596a981598cafbbfb65e2caf2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24fc14b0342591c56f5bf91862b0d94759a42834
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119243"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670105"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean 기능
 
@@ -79,7 +79,7 @@ animator.Start();
 
 ### <a name="application-stack-navigation"></a>응용 프로그램 스택 탐색
 
-Android 4.1 Android 3.0에 도입 된 응용 프로그램 스택 탐색을 개선 합니다. 지정 하 여는 `ParentName` 의 속성을 `ActivityAttribute`, Android를 누를 때 적절 한 부모 활동을 열 수를 [위로 단추를 클릭](http://developer.android.com/design/patterns/navigation.html#up-vs-back) 작업 모음의-Android 합니다 하여지정된활동인스턴스화`ParentName`속성입니다. 따라서 특정된 작업 하는 작업의 계층 구조를 유지 하기 위해 응용 프로그램.
+Android 4.1 Android 3.0에 도입 된 응용 프로그램 스택 탐색을 개선 합니다. 지정 하 여는 `ParentName` 의 속성을 `ActivityAttribute`, Android를 누를 때 적절 한 부모 활동을 열 수를 [위로 단추를 클릭](https://developer.android.com/design/patterns/navigation.html#up-vs-back) 작업 모음의-Android 합니다 하여지정된활동인스턴스화`ParentName`속성입니다. 따라서 특정된 작업 하는 작업의 계층 구조를 유지 하기 위해 응용 프로그램.
 
 대부분의 응용 프로그램 설정의 `ParentName` 활동에는 응용 프로그램 스택을 탐색 하는 것에 대 한 올바른 동작을 제공 하는 Android에 대 한 충분 한 정보 Android는 각 부모 활동에 대 한 일련의 의도 만들어 필요한 백 스택에 합성 됩니다. 그러나, 인위적인 응용 프로그램 스택을 이기 때문에 각 가상 작업 자연 스러운 활동을 포함 하는 저장된 된 상태가 제공 되지 않습니다. 가상 부모 활동에 저장 된 상태를 제공 하려면 작업 보다 우선 합니다 `OnPrepareNavigationUpTaskStack` 메서드. 이 메서드는 수신는 `TaskStackBuilder` 의도의 컬렉션을 갖게 되는 인스턴스는 Android 백 스택에 만드는 데 사용할 개체입니다. 가상 작업을 만들 때 적절 한 상태 정보를 받이 되도록 작업에서 이러한 의도 수정할 수 있습니다.
 
@@ -149,7 +149,7 @@ mediaActionPlayer.Release();
 
 
 
-#### <a name="android-beam"></a>Android 보
+#### <a name="android-beam"></a>Android Beam
 
 Android 보는 두 개의 Android 장치가 서로 통신할 수 있도록 NFC 기반 기술입니다. Android 4.1 큰 파일 전송에 대 한 더 나은 지원을 제공합니다. 새 메서드를 사용 하는 경우 `NfcAdapter.SetBeamPushUris()` Android 빠른 전송 속도 달성 하기 위해 대체 전송 메커니즘 (예: Bluetooth) 간을 전환 합니다.
 
@@ -284,6 +284,6 @@ Android 4.1 컨트롤 알림을 표시 하 고 유연 하 게 응용 프로그�
 ## <a name="related-links"></a>관련 링크
 
 - [시간에 애니메이션 예제 (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 Api](http://developer.android.com/about/versions/android-4.1.html)
-- [작업 및 백 스택](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [뒤로 / 위쪽으로 탐색](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 Api](https://developer.android.com/about/versions/android-4.1.html)
+- [작업 및 백 스택](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [뒤로 / 위쪽으로 탐색](https://developer.android.com/design/patterns/navigation.html)

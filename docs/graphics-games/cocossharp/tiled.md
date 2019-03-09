@@ -6,12 +6,12 @@ ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 4582b59a8a441c9e22761d498126898e66db08c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8e7ef890af264bb08827d86c635d555184f1ec00
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117930"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672510"
 ---
 # <a name="using-tiled-with-cocossharp"></a>CocosSharp로 바둑판식 화면 사용
 
@@ -35,7 +35,7 @@ _바둑판식으로 배열은 강력 하 고 유연 하 고 완성 된 응용 �
 
 ![](tiled-images/image2.png "시각화 타일 집합 데모에 사용할 타일 집합을 표를 추가 하 여 사용 하는 방법 보기")
 
-타일 맵 타일 집합에서 개별 타일을 정렬합니다. 각 타일 지도 타일의 자체 복사본을 저장할 필요가 없습니다 드릴 set – 대신 여러 타일 맵이 참조할 수 동일한 타일 집합입니다. 이 타일 집합 외에도 타일 맵에서 필요 거의 메모리 것을 의미 합니다. 와 같은 큰 게임 플레이 영역을 만드는 데는 경우에 많은 타일 맵 만들 수 있도록이 [platformer 스크롤](http://en.wikipedia.org/wiki/Platform_game) 환경입니다. 다음은 동일한 타일 집합을 사용 하 여 가능한 배열.
+타일 맵 타일 집합에서 개별 타일을 정렬합니다. 각 타일 지도 타일의 자체 복사본을 저장할 필요가 없습니다 드릴 set – 대신 여러 타일 맵이 참조할 수 동일한 타일 집합입니다. 이 타일 집합 외에도 타일 맵에서 필요 거의 메모리 것을 의미 합니다. 와 같은 큰 게임 플레이 영역을 만드는 데는 경우에 많은 타일 맵 만들 수 있도록이 [platformer 스크롤](https://en.wikipedia.org/wiki/Platform_game) 환경입니다. 다음은 동일한 타일 집합을 사용 하 여 가능한 배열.
 
 ![](tiled-images/image3.png "이 이미지에서는 동일한 타일 집합을 사용 하 여 가능한 정렬을 보여 줍니다.")
 

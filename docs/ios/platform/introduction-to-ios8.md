@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 8e95e674f52cb23be769473e27dc8eb785a77820
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116045"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668753"
 ---
 # <a name="introduction-to-ios-8"></a>IOS 8 소개
 
@@ -44,7 +44,7 @@ iOS 8 단단히 HomeKit 및 HealthKit를 사용 하 여 집의 핵심으로 바�
 
 HomeKit를 사용 하 여 제 3 자 프로그램과 Siri 보조 프로그램을 검색 하 고 해당 개인 홈 구성 데이터베이스에 추가할 및이 데이터를 작업할 편집한 accessories 및 동작을 수행 하는 서비스와 통신 합니다.
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>구성하기
 
 아래 다이어그램 HomeKit 액세서리 구성의 기본 계층을 보여 줍니다.
 
@@ -151,7 +151,7 @@ Sprite Kit를 Apple에서 2D 게임 프레임 워크에는 iOS 8 및 OS X Yosemi
 ## <a name="other-changes"></a>기타 변경 내용
 위에서 설명 하는 iOS 8의에서 주요 변경 내용 뿐 아니라 Apple 또한 많은 기존 프레임 워크를 업데이트 했습니다. 이러한 아래에서 자세히 설명 합니다.
 
-- **[Core 이미지가](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  – Apple에 해당 이미지 처리 프레임 워크의 사각형 영역을 검색에 대 한 더 나은 지원을 추가 하 여 확장 하 고 QR 코드 이미지 내에서. Mike Bluestein 탐색이 post 자격이 블로그에서 [iOS 8에서에서 이미지 검색](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Core 이미지가](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  – Apple에 해당 이미지 처리 프레임 워크의 사각형 영역을 검색에 대 한 더 나은 지원을 추가 하 여 확장 하 고 QR 코드 이미지 내에서. Mike Bluestein 탐색이 post 자격이 블로그에서 [iOS 8에서에서 이미지 검색](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## <a name="deprecated-apis"></a>사용되지 않는 API
 모든의 개선 된 ios 8 사용 하 여 다양 한 Api가 사용 되지 않습니다. 그 중 일부는 다음과 같습니다.

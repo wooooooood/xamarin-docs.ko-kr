@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6f5af5fde46676cf669e6c02fb83f4aac5d31c46
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292092"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667206"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Xamarin.Forms 스타일 소개
 
@@ -133,7 +133,7 @@ public class NoStylesPageCS : ContentPage
 > [!NOTE]
 > **StyleId 란?**
 >
-> Xamarin.Forms 2.2 이전 합니다 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성은 Pixate 같은 테마 엔진 및 UI 테스트에서 id에 대 한 응용 프로그램의 개별 요소를 식별 하는 데 사용 되었습니다. 하지만 Xamarin.Forms 2.2가 도입 합니다 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) 속성에는 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성. 자세한 내용은 [Xamarin.UITest 및 Test Cloud를 사용 하 여 테스트 자동화 Xamarin.Forms](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md)합니다.
+> Xamarin.Forms 2.2 이전 합니다 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성은 Pixate 같은 테마 엔진 및 UI 테스트에서 id에 대 한 응용 프로그램의 개별 요소를 식별 하는 데 사용 되었습니다. 하지만 Xamarin.Forms 2.2 도입 합니다 [ `AutomationId` ](xref:Xamarin.Forms.Element.AutomationId) 속성에는 [ `StyleId` ](xref:Xamarin.Forms.Element.StyleId) 속성입니다.
 
 ## <a name="related-links"></a>관련 링크
 

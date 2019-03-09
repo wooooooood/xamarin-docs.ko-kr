@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: 9458c1f8efa36199b21127123f0013b494a224b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103740"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667895"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>IBTool 오류: 작업을 완료할 수 없습니다.
 
@@ -26,7 +26,7 @@ Apple [고정](https://developer.apple.com/library/content/documentation/Xcode/C
 
 `ibtool` Xcode 6.0에서 명령 OS X 10.10 yosemite 버그가 있었습니다. Xcode의을 사용 하 여 Xamarin.iOS `ibtool` 스토리 보드를 컴파일하려면 및 `XIB` 파일입니다.
 
-Xcode와 관련 된 버그에 대 한 자세한 내용은 다음에서 확인할 수 있습니다 Stack Overflow 게시물: [http://stackoverflow.com/questions/25754763/cant-open-storyboard](http://stackoverflow.com/questions/25754763/cant-open-storyboard)
+Xcode와 관련 된 버그에 대 한 자세한 내용은 다음에서 확인할 수 있습니다 Stack Overflow 게시물: [https://stackoverflow.com/questions/25754763/cant-open-storyboard](https://stackoverflow.com/questions/25754763/cant-open-storyboard)
 
 ### <a name="error-message"></a>오류 메시지
 
@@ -38,11 +38,11 @@ Xcode와 관련 된 버그에 대 한 자세한 내용은 다음에서 확인할
 
 설정 하는 대신를 `Image` 의 속성을 `UIImageView` 스토리 보드에서 또는 `.xib` 파일을 설정할 수 있습니다 속성 뷰 중 하나에서 뷰 컨트롤러의 수명 주기 재정의 메서드 (예를 들어 `ViewDidLoad()`). 참고 항목 [이미지를 사용 하 여 작업](~/ios/app-fundamentals/images-icons/index.md) 사용에 관한 팁 `UIImage.FromBundle()` 비교 `UIImage.FromFile()`합니다.
 
-### <a name="option-2-move-all-of-the-image-resources-to-the-top-level-resources-folder"></a>옵션 2: 이동 이미지 리소스의 모든 최상위 `Resources` 폴더
+### <a name="option-2-move-all-of-the-image-resources-to-the-top-level-resources-folder"></a>옵션 2: 이미지 리소스의 모든 최상위 수준으로 이동 `Resources` 폴더
 
 최상위 이미지를 이동 하 고 나면 `Resources` 스토리 보드를 업데이트 해야 폴더 및 `.xib` 새 이미지 경로 사용 하는 파일입니다.
 
-### <a name="option-3-set-the-logicalname-for-any-problematic-image-assets-so-they-are-copied-to-the-top-level-of-theapp-bundle"></a>옵션 3: 설정 합니다 `LogicalName` 의 최상위 수준에 복사 됩니다 있도록 문제가 이미지 자산에 대 한는`.app` 번들
+### <a name="option-3-set-the-logicalname-for-any-problematic-image-assets-so-they-are-copied-to-the-top-level-of-theapp-bundle"></a>옵션 3: 설정 된 `LogicalName` 의 최상위 수준에 복사 됩니다 있도록 문제가 이미지 자산에 대 한는`.app` 번들
 
 예를 들어 원래 `.csproj` 파일에 다음 항목이 포함 되어 있습니다.
 
@@ -56,7 +56,7 @@ Xcode와 관련 된 버그에 대 한 자세한 내용은 다음에서 확인할
 </BundleResource>
 ```
 
-Mac 용 Visual Studio에서의 `LogicalName` 를 사용 하 여 설정할 수도 있습니다는 `Resource ID` 아래에 있는 이미지에 대 한 필드 **보기 > 패드 > 속성**합니다. (참고: [ http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](http://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
+Mac 용 Visual Studio에서의 `LogicalName` 를 사용 하 여 설정할 수도 있습니다는 `Resource ID` 아래에 있는 이미지에 대 한 필드 **보기 > 패드 > 속성**합니다. (참고: [ https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545 ](https://stackoverflow.com/questions/16938250/xamarin-studio-folder-structure-issue-in-ios-project/16951545#16951545))
 
 이렇게이 변경한 후 스토리 보드를 업데이트 해야 하 고 `.xib` 새 최상위 이미지 경로 사용 하는 파일입니다. Mac 용 visual Studio에 대 한 autocompletions 목록을 자동으로 업데이트 됩니다는 `Image` iOS 디자이너의에서 속성입니다. Visual Studio에서 경로 수동으로 편집 해야 합니다. IOS 디자이너는 누락 된 이미지를 표시 한 다음 하지만 프로젝트 빌드 및 제대로 실행 됩니다.
 

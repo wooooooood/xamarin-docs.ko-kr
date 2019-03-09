@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/25/2015
-ms.openlocfilehash: 014de47660f2c0ac8295495e417b3d5def135470
-ms.sourcegitcommit: ee626f215de02707b7a94ba1d0fa1d75b22ab84f
+ms.openlocfilehash: e6df2d9d45eb2f898bb3c4957ec7960956a184e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54879318"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671782"
 ---
 # <a name="systemdata-in-xamarinios"></a>Xamarin.iOS System.Data
 
@@ -108,7 +108,7 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> 것은 바람직하지 만들므로 코드에 취약 한 SQL 명령에서 문자열을 포함 하 고 위의 코드 샘플에서 설명 했 듯이 [SQL 주입](http://en.wikipedia.org/wiki/SQL_injection)합니다.
+> 것은 바람직하지 만들므로 코드에 취약 한 SQL 명령에서 문자열을 포함 하 고 위의 코드 샘플에서 설명 했 듯이 [SQL 주입](https://en.wikipedia.org/wiki/SQL_injection)합니다.
 
 
 ### <a name="using-command-parameters"></a>Command 매개 변수 사용

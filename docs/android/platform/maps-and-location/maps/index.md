@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117140"
 ---
+
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Xamarin.Android를 사용 하 여 Google Maps 및 위치를 사용 하는 방법
 
 _이 문서에서는 Xamarin.Android를 사용 하 여 지도 및 위치를 사용 하는 방법을 설명 합니다. 직접 Google 맵 Android API V2를 사용 하 여 기본 제공 지도 응용 프로그램을 활용 하 여 모든 항목을 설명 합니다._
@@ -32,8 +27,8 @@ _이 문서에서는 Xamarin.Android를 사용 하 여 지도 및 위치를 사�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MapsAndLocationDemo_v3 (샘플)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Android 장치에서 Google 응용 프로그램을 호출 하는 인 텐트 목록:](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [위치 및 지도](http://developer.android.com/guide/topics/location/index.html)
+- [인 텐트 목록: Android 장치에서 Google 응용 프로그램 호출](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [위치 및 지도](https://developer.android.com/guide/topics/location/index.html)

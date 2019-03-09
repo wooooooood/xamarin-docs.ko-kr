@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 42ec5ddb6846ccf733f2bf18812f43e7afd45f34
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 92c068ceb3d382ed4612318dc987d950ec7e7ef2
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058580"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672549"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Azure 모바일 앱에서 푸시 알림 보내기
 
@@ -58,7 +58,7 @@ Azure Notification Hubs에 대 한 자세한 내용은 참조 하세요. [Azure 
 Azure Mobile Apps 인스턴스는 Azure 알림 허브를 통합 하는 프로세스는 다음과 같습니다.
 
 1. Azure Mobile Apps 인스턴스를 만듭니다. 자세한 내용은 [Azure 모바일 앱 사용](~/xamarin-forms/data-cloud/consuming/azure.md)합니다.
-1. 알림 허브를 구성 합니다. 자세한 내용은 [알림 허브 구성](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#create-hub)합니다.
+1. 알림 허브를 구성 합니다. 자세한 내용은 [알림 허브 구성](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#configure-hub)합니다.
 1. 푸시 알림을 보내도록 Azure Mobile Apps 인스턴스를 업데이트 합니다. 자세한 내용은 [푸시 알림을 전송 하도록 서버 프로젝트 업데이트](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#update-the-server-project-to-send-push-notifications)합니다.
 1. 각 PNS를 등록 합니다.
 1. 각 PNS와 통신 하는 알림 허브를 구성 합니다.

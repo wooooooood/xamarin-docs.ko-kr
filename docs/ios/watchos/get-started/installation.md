@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050324"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668545"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 watchOS에서 Xamarin 사용
 
@@ -178,7 +178,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 Xcode 6을 사용 하는 경우 iPhone 5, iPhone 5, 6, iPhone 및 iPhone 6 Plus에 대 한 외부 디스플레이 활성화할 수 있습니다 **Apple Watch-(38mm** 하거나 **Apple Watch-42 mm** watch 응용 프로그램 될 위치 표시 됩니다.
 
-**참고:** 기억 Xcode 6을 사용 하는 경우 watch 화면 iOS 시뮬레이터에에서 자동으로 표시 되지 않습니다.
+**참고:** Xcode 6을 사용 하는 경우 watch 화면이 iOS 시뮬레이터에서에서 자동으로 표시 되지 않으면 해야 합니다.
 사용 된 **하드웨어 > 외부 표시** watch 화면에 표시할 메뉴.
 
 <a name="custommodes" />
@@ -232,5 +232,5 @@ WatchOS 템플릿 파일 (같은 `InterfaceController`, `ExtensionDelegate`를 `
 ## <a name="related-links"></a>관련 링크
 
 - [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [첫 번째 Watch 앱 비디오](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [첫 번째 Watch 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple의 WatchKit 팁](https://developer.apple.com/watchkit/tips/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: eb636c3b7a41adbab9162e192ead65def377a1a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118983"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669656"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Xamarin.Android 디자이너 재질 디자인 기능
 
@@ -20,7 +20,7 @@ _이 항목에서는 쉽게 재료 디자인 규격 레이아웃을 만드는 �
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Evolve 2016: 모든 사용자가 앱을 만들 수 멋진 재질 디자인**
+**Evolve 2016: 재질 디자인을 사용 하 여 멋진 앱을 만들 수 있습니다 모든 사람**
 
 ## <a name="overview"></a>개요
 
@@ -90,7 +90,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 [![탭 상속](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 이 예는 **기본 테마** 사용 하는 스타일에서 상속 `@color/background_material_light` 사용 하 여 재정의 하지만 `color/material_grey_50`, 색 코드 값은 `#fffafafa`합니다.
-스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](http://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
+스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
 
 ### <a name="color-picker"></a>색 선택
 
@@ -112,7 +112,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 
 합니다 **리소스** 탭 테마에 존재 하는 색 리소스의 목록을 제공 합니다.
 
-[![리소스](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
+[![Resources](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
 
 사용 하는 **리소스** 탭 색이이 목록에 선택 항목을 제한 합니다. 염두에 테마의 다른 부분에 이미 할당 되어 있는 색 리소스를 선택 하면 두 인접 요소의 UI "겹칠 수도" (있기 때문에 동일한 색)와 구분 하기 위해 사용자에 대 한 어렵습니다.
 
@@ -214,7 +214,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 색상표에서 맨 팔레트의 맨 아래 선택한 기본 색에 대 한 색상의 범위를 표시 하는 동안 기본 재질 디자인 색을 표시 합니다. 예를 들어, 선택 하면 **Indigo**, 컬렉션인 **Indigo** 색상 대화 상자의 맨 아래에 표시 됩니다.
 색상을 선택 하면 색 속성을 선택한 색상으로 변경 됩니다. 다음 예제에서는 `Background Tint` 로 변경 되는 단추의 *Indigo 500*:
 
-[![Indigo 500를 선택 합니다.](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` 에 대 한 색 코드로 설정 됩니다 *Indigo 500* (`#ff3f51b5`), 디자이너가이 변경 내용을 반영 하는 단추의 배경색을 업데이트 합니다.
 
@@ -271,7 +271,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 [![탭 상속](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 이 예는 **기본 테마** 사용 하는 스타일에서 상속 `@color/background_material_dark` 사용 하 여 재정의 하지만 `color/material_grey_850`, 색 코드 값은 `#ff303030`합니다.
-스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](http://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
+스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
 
 ### <a name="color-picker"></a>색 선택
 
@@ -294,7 +294,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 
 합니다 **리소스** 탭 테마에 존재 하는 색 리소스의 목록을 제공 합니다.
 
-[![리소스](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
+[![Resources](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 사용 하는 **리소스** 탭 색이이 목록에 선택 항목을 제한 합니다. 염두에 테마의 다른 부분에 이미 할당 되어 있는 색 리소스를 선택 하면 두 인접 요소의 UI "겹칠 수도" (있기 때문에 동일한 색)와 구분 하기 위해 사용자에 대 한 어렵습니다.
 

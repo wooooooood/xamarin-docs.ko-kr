@@ -1,18 +1,18 @@
 ---
 title: 요약 10 장입니다. XAML 태그 확장
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 10 장 요약 합니다. XAML 태그 확장'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 10 장입니다. XAML 태그 확장
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: f326d0434fd2565c30890dea0838168c9d8b4287
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 076e9f5155492e5a69d906c587b24495fe39d3f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054743"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672640"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>요약 10 장입니다. XAML 태그 확장
 
@@ -40,7 +40,7 @@ XAML 태그 확장은 구현 하는 클래스를 [ `IMarkupExtension` ](xref:Xam
 
 - `StaticResource` 지 원하는 [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
 - `DynamicResource` 지 원하는 [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
-- `Binding` 지 원하는 [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;에 설명 된 [16 장입니다. 데이터 바인딩](#chapter16)
+- `Binding` 지 원하는 [ `BindingExtension` ](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash;에 설명 된 [16 장입니다. 데이터 바인딩](chapter16.md)
 - `TemplateBinding` 지 원하는 [ `TemplateBindingExtension` ](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash;책에서 다루지 않는
 
 추가 XAML 태그 확장에 연결 하 여 Xamarin.Forms 있기 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout):

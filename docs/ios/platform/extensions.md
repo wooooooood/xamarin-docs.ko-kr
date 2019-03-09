@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233928"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667817"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -45,7 +45,7 @@ ms.locfileid: "55233928"
 유니버설 제한은 다음과 같습니다.
 
 - 합니다 [상태 키트](~/ios/platform/healthkit.md) 하 고 [이벤트 키트 UI](~/ios/platform/eventkit.md) 프레임 워크를 사용할 수 없는 경우
-- 확장에서 사용할 수 없습니다 [백그라운드 모드를 확장 합니다.](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
+- 확장에서 사용할 수 없습니다 [백그라운드 모드를 확장 합니다.](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - (하지만 기존 미디어 파일에 액세스할 수) 확장 장치 카메라 또는 마이크에 액세스할 수 없습니다.
 - 확장 (공기 삭제를 통해 데이터를 전송할 수 있습니다) 하지만 공기 삭제 데이터를 받을 수 없습니다.
 - [UIActionSheet](xref:UIKit.UIActionSheet) 하 고 [UIAlertView](xref:UIKit.UIAlertView) 를 사용할 수 없습니다; 확장을 사용 해야 [UIAlertController](xref:UIKit.UIAlertController)
@@ -71,11 +71,11 @@ ms.locfileid: "55233928"
 
 확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](xref:Foundation.NSExtensionContext) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#Communicating-with-the-Host-App) 대 한 자세한 내용은 아래 섹션입니다.
 
-기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [카운트다운 위젯 발전](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)합니다.
+기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [카운트다운 위젯 발전](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)합니다.
 
 ## <a name="creating-an-extension"></a>확장 만들기
 
-확장 (및 해당 컨테이너 앱) 64 비트 이진 파일 이어야 합니다 하 고는 Xamarin.iOS를 사용 하 여 빌드된 [Unified Api](http://developer.xamarin.com/guides/cross-platform/macios/unified)합니다. 확장을 개발 하는 경우, 솔루션 적어도 두 개의 프로젝트가 포함 됩니다: 각 확장의 컨테이너 제공에 대 한 컨테이너 앱 및 프로젝트입니다. 
+확장 (및 해당 컨테이너 앱) 64 비트 이진 파일 이어야 합니다 하 고는 Xamarin.iOS를 사용 하 여 빌드된 [Unified Api](https://developer.xamarin.com/guides/cross-platform/macios/unified)합니다. 확장을 개발 하는 경우, 솔루션 적어도 두 개의 프로젝트가 포함 됩니다: 각 확장의 컨테이너 제공에 대 한 컨테이너 앱 및 프로젝트입니다. 
 
 ### <a name="container-app-project-requirements"></a>컨테이너 앱 프로젝트 요구 사항
 

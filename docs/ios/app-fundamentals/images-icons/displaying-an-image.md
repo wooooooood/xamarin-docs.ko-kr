@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526562"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670704"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.iOS에서 이미지를 표시합니다.
 
@@ -213,7 +213,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage");
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-아이콘 및 이미지에 대 한 자세한 내용은 Apple 설명서를 참조 [사용자 지정 아이콘 및 이미지 만들기 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)합니다.
+아이콘 및 이미지에 대 한 자세한 내용은 Apple 설명서를 참조 [사용자 지정 아이콘 및 이미지 만들기 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)합니다.
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>스토리 보드에 이미지를 표시합니다.
 

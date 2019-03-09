@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 84c4b699ba2c046eeb70963f3df71ca9a4760f3b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b3fee9009afb86ccd3fd0e16d7812a8e90feb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104182"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672796"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Xamarin.iOS에서 수동 카메라 컨트롤
 
@@ -276,7 +276,7 @@ AV 캡처 세션 iOS 장치의 카메라에서 라이브 비디오 기록 제어
 
 최종 사용자가 포커스의 컨트롤을 직접 수행 함으로써 응용 프로그램 예술적인 제어할 가져온 이미지를 제공할 수 있습니다.
 
-예를 들어는 전문 사진사 달성 하기 위해 이미지의 포커스를 출시할 수를 [빛 망 울 효과](http://en.wikipedia.org/wiki/Bokeh):
+예를 들어는 전문 사진사 달성 하기 위해 이미지의 포커스를 출시할 수를 [빛 망 울 효과](https://en.wikipedia.org/wiki/Bokeh):
 
 [![](intro-to-manual-camera-controls-images/image2.png "빛 망 울 효과")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
@@ -517,7 +517,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 세 가지 기본 요소 노출을 제어 하 함께 제공 되는 다음과 같습니다.
 
 -  **속도 셔터** – 셔터 빛의 카메라 센서에 있도록 열려 있는 시간의 길이입니다. 짧은 셔터 열려 있는 경우 시간 적은 광원은 허용 하 고는 선명한 이미지는 (작은 동작 흐림 효과). 길수록 셔터를 열지 더 많이 발생 하는 흐림 효과 동작 및 자세한 조명 사용 수 있습니다.
--  **ISO 매핑** – 필름 사진에서 가져온 용어임 이며 빛 영화에서는 화학 물질의 민감도 가리킵니다. 영화에서는 낮은 ISO 값 있고 작은 수준이 finer 색 재생; 디지털 센서에서 낮은 ISO 값 어둡게 하지만 센서 노이즈가 경우 ISO 값이 높을수록, 밝을수록 이미지 했지만 센서 노이즈를 더 많이 있습니다. "ISO" 디지털 센서에 대 한 측정입니다 [electronic 향상](http://en.wikipedia.org/wiki/Gain), 물리적 기능 하지 않습니다. 
+-  **ISO 매핑** – 필름 사진에서 가져온 용어임 이며 빛 영화에서는 화학 물질의 민감도 가리킵니다. 영화에서는 낮은 ISO 값 있고 작은 수준이 finer 색 재생; 디지털 센서에서 낮은 ISO 값 어둡게 하지만 센서 노이즈가 경우 ISO 값이 높을수록, 밝을수록 이미지 했지만 센서 노이즈를 더 많이 있습니다. "ISO" 디지털 센서에 대 한 측정입니다 [electronic 향상](https://en.wikipedia.org/wiki/Gain), 물리적 기능 하지 않습니다. 
 -  **Aperture 렌즈** – 렌즈 열기의 크기입니다. 모든 iOS 장치에서 렌즈 구경 고정 되어 있으므로 노출 조정에 사용할 수 있는 두 개의 값은 셔터 속도 및 ISO입니다.
 
 
@@ -817,7 +817,7 @@ CaptureDevice.UnlockForConfiguration();
 
 전에 IOS 8 응용 프로그램의 흰색 균형을 제어 하는 데 대 한 세부 정보를 설명 합니다. 신속 하 게 확인 하는 방법을 흰색 분산 작동을 살펴보겠습니다.
 
-색상 관념 연구에는 [CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간](http://en.wikipedia.org/wiki/CIE_1931_color_space) 첫 번째 색 공간을 수학적으로 정의 됩니다. 1931에서 국제 Commission 조명을 (CIE)에 의해 생성 되었습니다.
+색상 관념 연구에는 [CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간](https://en.wikipedia.org/wiki/CIE_1931_color_space) 첫 번째 색 공간을 수학적으로 정의 됩니다. 1931에서 국제 Commission 조명을 (CIE)에 의해 생성 되었습니다.
 
 [![](intro-to-manual-camera-controls-images/image17.png "CIE 1931 RGB 색 공간 및 CIE 1931 XYZ 색 공간")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
@@ -825,7 +825,7 @@ CaptureDevice.UnlockForConfiguration();
 
 그래프에 표시로 휴먼 비전의 범위를 벗어난 것을 그래프에 표시할 수 있는 X 및 Y 값 및 결과적으로 카메라에서 이러한 색을 재현할 수 없는 합니다.
 
-위의 차트에서 작은 곡선 이라고 합니다 [Planckian 궤적](http://en.wikipedia.org/wiki/Planckian_locus)색 온도 (도 켈빈) (더울) 파란색 우변 많으면를 표현 하는, 및 빨간색 우변 (울지) 더 낮은 숫자입니다. 이러한 일반적인 조명 상황에 유용합니다.
+위의 차트에서 작은 곡선 이라고 합니다 [Planckian 궤적](https://en.wikipedia.org/wiki/Planckian_locus)색 온도 (도 켈빈) (더울) 파란색 우변 많으면를 표현 하는, 및 빨간색 우변 (울지) 더 낮은 숫자입니다. 이러한 일반적인 조명 상황에 유용합니다.
 
 혼합된 조명 조건에서 필요한 변경을 수행 하려면 Planckian 궤적에서 벗어날 흰색 균형 조정 해야 합니다. 조정 해야 하는 이러한 상황에서를 이동 하거나 녹색 또는 CIE 빨간색/자홍 변의 확장 합니다.
 

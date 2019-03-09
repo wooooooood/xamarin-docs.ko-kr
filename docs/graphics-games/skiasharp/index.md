@@ -8,13 +8,8 @@ ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 95f259ce054b14a2301bb9549f809d5e4f407884
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109902"
 ---
+
 # <a name="2d-drawing-with-skiasharp"></a>2D와 SkiaSharp 그리기
 
 SkiaSharp 2D 그래픽 작업을 수행 하는 강력한 C# API를 제공 합니다. 전원을 [Google의 Skia 라이브러리](http://skia.org), Google Chrome, Firefox 및 Android의 그래픽 스택을 구동 하는 라이브러리입니다.
@@ -35,7 +30,7 @@ Xamarin.Forms에서 렌더링 되는 플랫폼 그래픽 간 사용 하는 방�
 
 이 페이지에는 iOS, Android, macOS 및 Windows를 비롯 한 다양 한 플랫폼에서 SkiaSharp에 대 한 설치 지침을 설명 합니다.
 
-## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp)
+## <a name="api-documentationhttpsdocsmicrosoftcomdotnetapiskiasharp"></a>[API 문서](https://docs.microsoft.com/dotnet/api/skiasharp)
 
 찾아볼 수 있습니다 합니다 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp) SkiaSharp에 대 한 합니다.
 
@@ -43,4 +38,4 @@ Xamarin.Forms에서 렌더링 되는 플랫폼 그래픽 간 사용 하는 방�
 
 SkiaSharp는 진행 중인 작업 커뮤니티와 공유 하는 것입니다. Skia API의 중요 한 부분을 바인딩한 우리가 하는 동안 수행 남은 작업량입니다. Skia에 의해 표시 되는 안정적인 C API를 사용 하는 것 이며 온갖 작업의 전체 검사 Api를 제공 하는 Skia C 바인딩에 영향을 주는 계속 합니다.
 
-바인딩 노력 가이드를 남겨 주세요 의견이 나 제안 문제 GitHub 리포지토리에서 도움이 [ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp)합니다.
+바인딩 노력 가이드를 남겨 주세요 의견이 나 제안 문제 GitHub 리포지토리에서 도움이 [ https://github.com/mono/SkiaSharp ](https://github.com/mono/SkiaSharp)합니다.
