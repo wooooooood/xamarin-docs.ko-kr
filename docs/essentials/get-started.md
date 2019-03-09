@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 7152e37c4035ac5f9a259fa48b91d5f29752d1f7
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0ba748823f980f65d1a341d2b2c15610440bf05e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197136"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668298"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
@@ -102,6 +102,6 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
 
 Xamarin을 처음 접하는 개발자의 경우 [Xamarin 개발 시작](~/cross-platform/getting-started/index.md)을 방문하는 것이 좋습니다.
 
-현재 소스 코드 및 향후 제공될 기능을 확인하고, 샘플을 실행하고, 리포지토리를 복제하려면 [Xamarin.Essentials GitHub 리포지토리](http://github.com/xamarin/Essentials)를 방문하세요. 커뮤니티 기여 환영!
+현재 소스 코드 및 향후 제공될 기능을 확인하고, 샘플을 실행하고, 리포지토리를 복제하려면 [Xamarin.Essentials GitHub 리포지토리](https://github.com/xamarin/Essentials)를 방문하세요. 커뮤니티 기여 환영!
 
 [API 문서](xref:Xamarin.Essentials)에서 Xamarin.Essentials의 모든 기능을 살펴보세요.
