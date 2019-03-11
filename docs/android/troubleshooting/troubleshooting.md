@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: b2f11bd09e1b1b3fd7af29a026229494a081ad11
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267601"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668558"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -38,7 +38,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 1.  클릭 **도구 > 옵션...**
 2.  왼쪽 트리 뷰에서 선택 **프로젝트 및 솔루션 > 빌드 및 실행**
 3.  오른쪽 창에서 MSBuild 빌드 출력 세부 정보 표시 드롭다운을 진단 설정
-4.  **확인**을 클릭합니다.
+4.   **확인**을 클릭합니다.
 5.  패키지를 지우고 다시 빌드합니다.
 6.  진단 출력이 출력 패널에 표시 됩니다.
 
@@ -48,7 +48,7 @@ Mac/OS x:에 대 한 Visual Studio 내에서 진단 MSBuild 출력을 사용 하
 1.  클릭 **Mac 용 Visual Studio > 기본 설정...**
 2.  왼쪽 트리 뷰에서 선택 **프로젝트 > 빌드**
 3.  오른쪽 패널에서로 로그 세부 정보 표시 드롭다운 진단
-4.  **확인**을 클릭합니다.
+4.   **확인**을 클릭합니다.
 5.  Mac용 Visual Studio 다시 시작
 6.  패키지를 지우고 다시 빌드합니다.
 7.  진단 출력이 오류 패드 내에서 표시 됩니다 (**보기 > 패드 > 오류** ), 빌드 출력 단추를 클릭 합니다.
@@ -66,7 +66,7 @@ Visual Studio 내 장치 배포 로깅을 설정 하려면
 4.  로그 메시지는 데스크톱에 monodroid.log 파일에 기록 됩니다.
 
 
-Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾을 수 있으며 병렬화가 약간 더 어렵습니다. *AndroidUtils* 모든 날짜 + 예를 들어 배포를 발생 하는 시간에 대 한 로그 파일이 만들어집니다. **AndroidTools-2012-10-24_12-35-45.log**합니다.
+Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾을 수 있으며 병렬화가 약간 더 어렵습니다. *AndroidUtils* 모든 날짜 + 예를 들어 배포를 발생 하는 시간에 대 한 로그 파일이 만들어집니다. **AndroidTools-2012-10-24_12-35-45.log**.
 
 -  Windows에서의 로그 파일에 기록 됩니다 `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`합니다.
 -  OS X에서 로그 파일에 기록 됩니다 `$HOME/Library/Logs/XamarinStudio-{VERSION}`합니다.
@@ -77,7 +77,7 @@ Mac 용 visual Studio는 항상 장치 배포 로그를 기록합니다. 찾을 
 ## <a name="android-debug-log-output"></a>Android 디버그 로그 출력
 
 Android 많은 메시지를 작성 합니다 [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md)합니다.
-Xamarin.Android는 Android 시스템 속성을 사용 하 여 Android 디버그 로그에 추가 메시지의 생성을 제어 하 합니다. Android 시스템 속성을 통해 설정할 수 있습니다는 *setprop* 내에서 명령을 합니다 [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Xamarin.Android는 Android 시스템 속성을 사용 하 여 Android 디버그 로그에 추가 메시지의 생성을 제어 하 합니다. Android 시스템 속성을 통해 설정할 수 있습니다는 *setprop* 내에서 명령을 합니다 [Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -105,7 +105,7 @@ Xamarin.Android에는 다음 시스템 속성을 지원합니다.
 
 -   *debug.mono.log*: 쉼표로 구분 된 ('*,*') Android 디버그 로그에 추가 메시지를 인쇄 해야 하는 구성 요소의 목록입니다. 기본적으로 아무 것도 설정 됩니다. 구성 요소에는 다음이 포함 됩니다.
 
-    -   *모든*: 모든 메시지를 인쇄 합니다.
+    -   *all*: 모든 메시지를 인쇄 합니다.
     -   *gc*: GC 관련 메시지를 인쇄 합니다.
     -   *gref*: (약한, 전역) 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
     -   *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
