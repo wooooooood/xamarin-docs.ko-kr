@@ -5,12 +5,12 @@ ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3440b572514c02c8c2240dc99b09aecfde06fcb9
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: d13589680161de4c9b5d77eef6d5f823cc884136
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898755"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671431"
 ---
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: 문제 해결
 
@@ -30,4 +30,4 @@ NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference 
 
 문제를 해결하는 방법에 대한 자세한 내용 및 비디오는 [이 블로그 게시물](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/)을 참조하세요.
 
-문제가 발생하거나 버그를 찾은 경우 [Xamarin.Essentials GitHub 리포지토리](http://github.com/xamarin/Essentials)에서 보고해주세요.
+문제가 발생하거나 버그를 찾은 경우 [Xamarin.Essentials GitHub 리포지토리](https://github.com/xamarin/Essentials)에서 보고해주세요.
