@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d460bf867ce09e614be76d0a4a7ffef01420cf82
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55234032"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669481"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 유형 참조 가이드
 
@@ -1851,7 +1851,7 @@ public class LinkWithAttribute : Attribute {
 
 `WeakFrameworks` 속성이 동일한 방식으로 작동 합니다 `Frameworks` 링크 타임에 제외 하 고 속성을는 `-weak_framework` 지정자 gcc 각 나열 된 프레임 워크에 대 한 전달 됩니다.
 
-`WeakFrameworks` 수 있도록 라이브러리 및 응용 프로그램 플랫폼 프레임 워크에 대 한 약한 링크는 사용할 수 있도록 필요에 따라 이러한 경우 사용할 수 있지만 사용 하지 않는 라이브러리에 추가 기능을 추가 하려는 경우 유용에 강한 종속성 최신 iOS의 버전입니다. 취약 한 연결에 대 한 자세한 내용은 Apple 설명서를 참조 [약한 연결](http://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html)합니다.
+`WeakFrameworks` 수 있도록 라이브러리 및 응용 프로그램 플랫폼 프레임 워크에 대 한 약한 링크는 사용할 수 있도록 필요에 따라 이러한 경우 사용할 수 있지만 사용 하지 않는 라이브러리에 추가 기능을 추가 하려는 경우 유용에 강한 종속성 최신 iOS의 버전입니다. 취약 한 연결에 대 한 자세한 내용은 Apple 설명서를 참조 [약한 연결](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html)합니다.
 
 약한 연결에 대 한 좋은 후보 것 `Frameworks` 계정 같은 `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` 및 `Twitter` 때문만 iOS 5에서에서 사용할 수 있습니다.
 

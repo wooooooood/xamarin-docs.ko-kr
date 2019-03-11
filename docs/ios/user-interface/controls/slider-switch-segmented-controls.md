@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f3315563725da7c54febd852298c60003eb056a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104897"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671457"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>슬라이더, 스위치 및 Xamarin.iOS에서 분할 된 컨트롤
 
@@ -50,7 +50,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
  [![](slider-switch-segmented-controls-images/image27a.png "사용자 지정 슬라이더")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> 현재는 [버그](http://stackoverflow.com/a/19496179) 일으키는 `ThumbTint` 예상 대로 런타임에 렌더링 되지 합니다. 다음 코드 줄을 추가할 수 있습니다 **하기 전에** 위의 코드는이 문제를 해결 합니다. [[Source](http://stackoverflow.com/a/21396794)]:
+> 현재는 [버그](https://stackoverflow.com/a/19496179) 일으키는 `ThumbTint` 예상 대로 런타임에 렌더링 되지 합니다. 다음 코드 줄을 추가할 수 있습니다 **하기 전에** 위의 코드는이 문제를 해결 합니다. [[Source](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
@@ -62,7 +62,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 iOS를 사용 하는 `UISwitch` 부울 값을 입력 하는 다른 플랫폼에서 라디오 단추에 표시 될 수 있습니다. 이동 하 여 컨트롤을 조작할 수는 *thumb* 간에 **켜고** 위치 합니다.
 
- [![](slider-switch-segmented-controls-images/image28a.png "스위치")](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 스위치의 모양을 사용자 지정할 수 있습니다 합니다 **Properties Pad** 하면 기본 상태를 제어, 디자이너 **켜고 tint** 색 및 **on/off 이미지**. 이 아래 이미지에 나와 있습니다.
 

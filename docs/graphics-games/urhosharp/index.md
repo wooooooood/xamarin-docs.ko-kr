@@ -1,17 +1,11 @@
 ---
 title: UrhoSharp-3D/2D 엔진
-description: UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메이션이 적용 된 2D 및 3D 장면 기 하 도형, 자료, 광원 및 카메라를 사용 하 여 응용 프로그램을 만드는 데 사용할 수 있습니다.
+description: 'UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메이션이 적용 된 2D 및 3D 장면 기 하 도형, 자료, 광원 및 카메라를 사용 하 여 응용 프로그램을 만드는 데 사용할 수 있습니다.'
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 8a3663a6fb0e9bfe3970bcca5769181fca34ae43
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "33920522"
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp-3D/2D 엔진
 
@@ -19,7 +13,7 @@ _UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메
 
 ![UrhoSharp 게임 샘플](images/video.gif)
 
-UrhoSharp Mac 용 Visual Studio 또는 Visual Studio에서 설치할 수 있으며 다음 플랫폼 중 하나를 대상으로 사용할 수 있는 NuGet 패키지로 배포 됩니다: Android, MacOS, iOS, tvOS 및 Windows입니다.
+UrhoSharp는 Mac 용 Visual Studio 또는 Visual Studio에서 설치할 수 있으며 다음 플랫폼 중 하나를 대상으로 사용할 수 있는 NuGet 패키지로 배포 됩니다. Android, MacOS, iOS, tvOS 및 Windows입니다.
 
 ## <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[UrhoSharp 소개](~/graphics-games/urhosharp/introduction.md)
 
@@ -33,17 +27,17 @@ UrhoSharp Mac 용 Visual Studio 또는 Visual Studio에서 설치할 수 있으�
 
 이러한 가이드 Urho의 설치 지침은 각 대상 플랫폼에 설명 하며 Urho 기존 Android 및 iOS 응용 프로그램과 통합 하는 방법에 설명 합니다.
 
-## <a name="programming-urhosharp-with-fgraphics-gamesurhosharpfsharpmd"></a>[F #으로 UrhoSharp 프로그래밍](~/graphics-games/urhosharp/fsharp.md)
+## <a name="programming-urhosharp-with-fgraphics-gamesurhosharpfsharpmd"></a>[으로 UrhoSharp 프로그래밍F#](~/graphics-games/urhosharp/fsharp.md)
 
-이 가이드는 간단한 "Hello, World!"의 생성 방법을 안내합니다 Mac 용 F # 및 Visual Studio를 사용 하 여 UrhoSharp 솔루션
+이 가이드는 간단한 "Hello, World!"의 생성 방법을 안내합니다 사용 하 여 UrhoSharp 솔루션 F# 및 mac 용 Visual Studio
 
-## <a name="api-documentationhttpsdeveloperxamarincomapirooturho"></a>[API 설명서](https://developer.xamarin.com/api/root/Urho/)
+## <a name="api-documentationhttpsdeveloperxamarincomapirooturho"></a>[API 문서](https://developer.xamarin.com/api/root/Urho/)
 
 찾아볼 수 있습니다 합니다 [UrhoSharp에 대 한 API 설명서](https://developer.xamarin.com/api/root/Urho/) 웹 사이트에서.
 
 ## <a name="samples"></a>샘플
 
-만들었습니다 [GitHub의 샘플](http://github.com/xamarin/urho-samples) UrhoSharp 사용 하는 방법을 설명 합니다.
+만들었습니다 [GitHub의 샘플](https://github.com/xamarin/urho-samples) UrhoSharp 사용 하는 방법을 설명 합니다.
 
 - **FeatureSamples** Urho의 특정 기능을 소개 하는 40 개 이상의 개별 샘플을 보여 줍니다.
 

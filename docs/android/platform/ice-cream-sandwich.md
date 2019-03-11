@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: adb53af9d2e6707cb1fca3c59af63db76e5346d5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 00b553ae8de0dfcd86d57d1d5e3e2a892d6b5463
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102622"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667284"
 ---
 # <a name="ice-cream-sandwich-features"></a>Ice Cream Sandwich 기능
 
@@ -68,5 +68,5 @@ ICS x86 사용 하 여 개발을 아직 지원 하지 않습니다 에뮬레이�
 - [TextureViewDemo (샘플)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
 - [CalendarDemo (샘플)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
 - [탭 레이아웃 자습서](~/android/user-interface/layouts/tab-layout/index.md)
-- [Ice Cream Sandwich](http://developer.android.com/about/versions/android-4.0-highlights.html)
-- [Android 4.0 플랫폼](http://developer.android.com/about/versions/android-4.0.html)
+- [Ice Cream Sandwich](https://developer.android.com/about/versions/android-4.0-highlights.html)
+- [Android 4.0 플랫폼](https://developer.android.com/about/versions/android-4.0.html)
