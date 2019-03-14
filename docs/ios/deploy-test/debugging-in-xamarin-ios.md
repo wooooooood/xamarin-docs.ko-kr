@@ -1,36 +1,36 @@
 ---
 title: Xamarin.iOS 앱 디버깅
-description: 이 문서에서는 Mac 또는 Visual Studio 2017용 Visual Studio에서 디버거를 사용하여 중단점 설정, 무선 디버깅 등을 포함한 Xamarin.iOS 응용 프로그램을 디버깅하는 방법을 설명합니다.
+description: 이 문서에서는 Mac 또는 Visual Studio 2017용 Visual Studio에서 디버거를 사용하여 중단점 설정, 무선 디버깅 등을 포함한 Xamarin.iOS 애플리케이션을 디버깅하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d1a3090318649e6f04a5b8f44dc4a9b2689a870
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119633"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668779"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
-_Mac용 Visual Studio 또는 Visual Studio에서 기본 제공 디버거를 사용하여 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다._
+_Mac용 Visual Studio 또는 Visual Studio에서 기본 제공 디버거를 사용하여 Xamarin.iOS 애플리케이션을 디버그할 수 있습니다._
 
 C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual Studio의 네이티브 디버깅 지원을 사용하고, Xamarin.iOS 프로젝트와 연결할 수 있는 C, C++ 또는 Objective C 코드를 디버그해야 하는 경우 [LLDB](http://lldb.llvm.org/tutorial.html)를 사용합니다.
 
 
 > [!NOTE]
-> 디버그 모드에서 응용 프로그램을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 응용 프로그램을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
+> 디버그 모드에서 애플리케이션을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 애플리케이션을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
 
-Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 디바이스에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 응용 프로그램을 디버그할 수 있습니다.
+Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 장치에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 애플리케이션을 디버그할 수 있습니다.
 
-Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)를 사용합니다. 즉, 생성된 코드와 Mono 런타임이 IDE와 협력하여 디버깅 환경을 제공합니다. 이는 디버그된 프로그램의 지식이나 협력 없이 프로그램을 제어하는 LLDB 또는 MDB와 같은 하드 디버거와 다릅니다.
+Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)를 사용합니다. 즉, 생성된 코드와 Mono 런타임이 IDE와 협력하여 디버깅 환경을 제공합니다. 이는 디버그된 프로그램의 지식이나 협력 없이 프로그램을 제어하는 LLDB 또는 MDB와 같은 하드 디버거와 다릅니다.
 
 ## <a name="setting-breakpoints"></a>중단점 설정
 
-응용 프로그램 디버깅을 시작할 준비가 되면 첫 번째 단계는 [응용 프로그램에 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하는 것입니다. 이 작업은 중단하려는 코드 번호 옆에 있는 편집기의 여백 영역에서 클릭하여 수행됩니다.
+애플리케이션 디버깅을 시작할 준비가 되면 첫 번째 단계는 [애플리케이션에 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하는 것입니다. 이 작업은 중단하려는 코드 번호 옆에 있는 편집기의 여백 영역에서 클릭하여 수행됩니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -58,17 +58,17 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
  
 -----
 
-응용 프로그램 디버깅을 시작하기 전에 중단점, 데이터 시각화 도우미 사용, 호출 스택 보기와 같은 디버깅을 지원하는 유용한 도구 모음이 포함되어 있으므로 구성이 **디버그**로 설정되어 있는지 항상 확인해야 합니다.
+애플리케이션 디버깅을 시작하기 전에 중단점, 데이터 시각화 도우미 사용, 호출 스택 보기와 같은 디버깅을 지원하는 유용한 도구 모음이 포함되어 있으므로 구성이 **디버그**로 설정되어 있는지 항상 확인해야 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](debugging-in-xamarin-ios-images/debugging7.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
-[![](debugging-in-xamarin-ios-images/debugging7a.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "물리적 디바이스에서 디버깅")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/debugging7c.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
-[![](debugging-in-xamarin-ios-images/debugging7d.png "물리적 장치에서 디버깅")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "물리적 디바이스에서 디버깅")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
@@ -77,17 +77,17 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](http://www.mono-project.com/
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging7b.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "대상 디바이스 선택")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging7e.png "대상 장치 선택")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "대상 디바이스 선택")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
 
 
-그런 다음, **재생** 단추를 눌러 응용 프로그램을 배포합니다.
+그런 다음, **재생** 단추를 눌러 애플리케이션을 배포합니다.
 
 중단점을 적중하면 코드가 노란색으로 강조 표시됩니다.
 
@@ -171,7 +171,7 @@ Visual Studio에서는 다음과 같이 표시됩니다.
 
 ### <a name="breakpoints"></a>중단점
 
-iOS가 응용 프로그램 대리자에서 `FinishedLaunching` 메서드를 시작하고 완료하는 데 몇 초(10)만 응용 프로그램에 제공한다는 점을 지적하는 것이 중요합니다. 응용 프로그램에서 이 메서드가 10초 내에 완료되지 않으면 iOS에서 해당 프로세스를 종료합니다.
+iOS가 애플리케이션 대리자에서 `FinishedLaunching` 메서드를 시작하고 완료하는 데 몇 초(10)만 애플리케이션에 제공한다는 점을 지적하는 것이 중요합니다. 애플리케이션에서 이 메서드가 10초 내에 완료되지 않으면 iOS에서 해당 프로세스를 종료합니다.
 
 즉 프로그램의 시작 코드에 중단점을 설정하는 것이 거의 불가능합니다. 시작 코드를 디버그하려면 초기화 중 일부를 지연시키고 타이머 호출 메서드 또는 FinishedLaunching이 종료된 후 실행되는 다른 형식의 콜백 메서드에 배치해야 합니다.
 
@@ -183,7 +183,7 @@ iOS가 응용 프로그램 대리자에서 `FinishedLaunching` 메서드를 시�
 
 ## <a name="wireless-debugging"></a>무선 디버깅
 
-Xamarin.iOS는 기본적으로 USB 연결을 통해 디바이스에서 응용 프로그램을 디버그합니다. 때로는 ExternalAccessory 지원 응용 프로그램을 개발하기 위해 USB 디바이스에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
+Xamarin.iOS는 기본적으로 USB 연결을 통해 장치에서 애플리케이션을 디버그합니다. 때로는 ExternalAccessory 지원 애플리케이션을 개발하기 위해 USB 장치에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
 
 무선 배포 및 디버깅에 대한 자세한 내용은 [무선 배포](~/ios/deploy-test/wireless-deployment.md) 가이드를 참조하세요.
 
@@ -193,7 +193,7 @@ Xamarin.iOS는 기본적으로 USB 연결을 통해 디바이스에서 응용 �
 
 Xamarin.iOS는 새로운 Mono 소프트 디버거를 사용합니다. 별도의 프로세스를 제어하기 위해 운영 체제 인터페이스를 사용하여 별도의 프로세스를 제어하는 프로그램인 표준 Mono 디버거와 달리, 소프트 디버거는 Mono 런타임에서 유선 프로토콜을 통해 디버깅 기능이 노출되도록 함으로써 작동합니다.
 
-시작 시 디버그할 응용 프로그램이 디버거에 연결되어 디버거가 작동하기 시작합니다. Visual Studio용 Xamarin.iOS에서 Xamarin Mac 에이전트는 Visual Studio에 있는 응용 프로그램과 디버거 사이의 중개자 역할을 합니다.
+시작 시 디버그할 애플리케이션이 디버거에 연결되어 디버거가 작동하기 시작합니다. Visual Studio용 Xamarin.iOS에서 Xamarin Mac 에이전트는 Visual Studio에 있는 애플리케이션과 디버거 사이의 중개자 역할을 합니다.
 
 이 소프트 디버거에는 디바이스에서 실행할 때 공동 작업 디버깅 구성표가 필요합니다. 즉 디버깅을 지원하기 위해 모든 시퀀스 점에서 추가 코드를 포함하도록 코드가 계측되므로 디버깅이 커질 때 바이너리가 빌드됩니다.
 
@@ -234,7 +234,7 @@ Visual Studio에서 클래스 라이브러리를 디버그하려면 _디버그 >
 
 -----
 
-이렇게 하면 응용 프로그램을 시작하고 Mono의 핵심 클래스 라이브러리 중 하나에서 코드를 한 단계씩 실행할 수 있습니다.
+이렇게 하면 애플리케이션을 시작하고 Mono의 핵심 클래스 라이브러리 중 하나에서 코드를 한 단계씩 실행할 수 있습니다.
 
 
 ## <a name="related-links"></a>관련 링크

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d5d4274adad64e8555659645533a8e58b845bfa7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617568"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667908"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -22,20 +22,20 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 
 ## <a name="overview"></a>개요
 
-응용 프로그램에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 저장소를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 디바이스나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 디바이스와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
+애플리케이션에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 저장소를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 장치나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 디바이스와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
 
--  **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 디바이스별 APK를 만들면 응용 프로그램의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
+-  **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 장치별 APK를 만들면 애플리케이션의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
 
--  **여러 CPU 아키텍처 지원** - 응용 프로그램에 특정 CPU에 대한 공유 라이브러리가 있을 경우 해당 CPU에 대한 공유 라이브러리만 배포할 수 있습니다.
+-  **여러 CPU 아키텍처 지원** - 애플리케이션에 특정 CPU에 대한 공유 라이브러리가 있을 경우 해당 CPU에 대한 공유 라이브러리만 배포할 수 있습니다.
 
 
-여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 응용 프로그램의 버전 코드 및 기타 메타데이터에 따라 디바이스에 올바른 APK가 제공되도록 합니다. Google Play에서 응용 프로그램에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](http://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
+여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 애플리케이션의 버전 코드 및 기타 메타데이터에 따라 장치에 올바른 APK가 제공되도록 합니다. Google Play에서 애플리케이션에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](https://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
 
-이 가이드에서는 Xamarin.Android 응용 프로그램을 위해 각 APK가 특정 ABI를 대상으로 하는 여러 APK 빌드를 스크립팅하는 방법을 설명합니다. 다음 토픽을 살펴봅니다.
+이 가이드에서는 Xamarin.Android 애플리케이션을 위해 각 APK가 특정 ABI를 대상으로 하는 여러 APK 빌드를 스크립팅하는 방법을 설명합니다. 다음 토픽을 살펴봅니다.
 
 1.  APK의 고유한 *버전 코드*를 만듭니다.
 1.  이 APK에 사용할 임시 버전의 **AndroidManifest.XML**을 만듭니다.
-1.  이전 단계의 **AndroidManifest.XML**을 사용하여 응용 프로그램을 빌드합니다.
+1.  이전 단계의 **AndroidManifest.XML**을 사용하여 애플리케이션을 빌드합니다.
 1.  APK에 서명하고 zipalign하여 릴리스를 준비합니다.
 
 
@@ -45,7 +45,7 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 
 ### <a name="creating-the-version-code-for-the-apk"></a>APK의 버전 코드 만들기
 
-Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 알고리즘을 권장합니다([여러 APK 지원 문서](http://developer.android.com/google/play/publishing/multiple-apks.html)에서 *버전 코드 구성표 사용* 섹션 참조).
+Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 알고리즘을 권장합니다([여러 APK 지원 문서](https://developer.android.com/google/play/publishing/multiple-apks.html)에서 *버전 코드 구성표 사용* 섹션 참조).
 이 버전 코드 구성표를 8자리로 확장하면 일부 ABI 정보를 버전 코드에 포함하여 Google Play에서 디바이스에 올바른 APK를 배포하도록 할 수 있습니다. 다음 목록에서는 이 8자리 버전 코드 형식을 설명합니다(왼쪽에서 오른쪽으로 인덱싱됨).
 
 -   **인덱스 0**(아래 다이어그램에서 빨간색) &ndash; ABI의 정수:
@@ -53,7 +53,7 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
     -   2 &ndash; `armeabi-v7a`
     -   6 &ndash; `x86`
 
--   **인덱스 1-2**(아래 다이어그램에서 주황색) &ndash; 응용 프로그램에서 지원하는 최소 API 수준입니다.
+-   **인덱스 1-2**(아래 다이어그램에서 주황색) &ndash; 애플리케이션에서 지원하는 최소 API 수준입니다.
 
 -   **인덱스 3-4**(아래 다이어그램에서 파란색) &ndash; 지원되는 화면 크기:
     -   1 &ndash; 소형
@@ -62,14 +62,14 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
     -   4 &ndash; 초대형
 
 -   **인덱스 5-7**(아래 다이어그램에서 녹색) &ndash; 버전 코드의 고유 번호입니다. 
-    이 항목은 개발자가 설정합니다. 응용 프로그램의 각 공용 릴리스마다 증가해야 합니다.
+    이 항목은 개발자가 설정합니다. 애플리케이션의 각 공용 릴리스마다 증가해야 합니다.
 
 다음 다이어그램에서는 위 목록에 설명된 각 코드의 위치를 보여줍니다.
 
 [![다이어그램의 8자리 버전 코드 형식의 다이어그램(색상으로 구분)](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
-Google Play에서는 `versionCode` 및 APK 구성에 따라 디바이스에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 디바이스에 제공됩니다. 예를 들어 응용 프로그램에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
+Google Play에서는 `versionCode` 및 APK 구성에 따라 디바이스에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 디바이스에 제공됩니다. 예를 들어 애플리케이션에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
 
 -  11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 번호는 456입니다.
 -  21423456 - ABI가 `armeabi-v7a`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
@@ -124,13 +124,13 @@ ABI별 APK를 빌드할 때는 다음 샘플 명령줄에 나와 있는 것처�
 
 ### <a name="sign-and-zipalign-the-apk"></a>APK 서명 및 Zipalign
 
-APK에 서명해야 Google Play를 통해 배포할 수 있습니다. 이는 Java 개발자 키트에 포함된 `jarsigner` 응용 프로그램을 사용하여 수행할 수 있습니다. 다음 명령은 명령줄에서 `jarsigner`를 사용하는 방법을 보여줍니다.
+APK에 서명해야 Google Play를 통해 배포할 수 있습니다. 이는 Java 개발자 키트에 포함된 `jarsigner` 애플리케이션을 사용하여 수행할 수 있습니다. 다음 명령은 명령줄에서 `jarsigner`를 사용하는 방법을 보여줍니다.
 
 ```shell
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTORE> -storepass <PASSWORD> -signedjar <PATH/FOR/SIGNED_JAR> <PATH/FOR/JAR/TO/SIGN> <NAME_OF_KEY_IN_KEYSTORE>
 ```
 
-모든 Xamarin.Android 응용 프로그램은 zipalign되어야 디바이스에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
+모든 Xamarin.Android 애플리케이션은 zipalign되어야 장치에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
 
 ```shell
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
@@ -159,7 +159,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 1. APK [zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67)을 수행합니다.
 
 
-응용 프로그램의 모든 APK를 빌드하려면 명령줄에서 `build` Rake 작업을 실행합니다.
+애플리케이션의 모든 APK를 빌드하려면 명령줄에서 `build` Rake 작업을 실행합니다.
 
 ```shell
 $ rake build
@@ -186,5 +186,5 @@ Rake 작업이 완료되면 `xamarin.helloworld.apk` 파일이 있는 `bin` 폴�
 ## <a name="related-links"></a>관련 링크
 
 - [OneABIPerAPK(샘플)](https://developer.xamarin.com/samples/OneABIPerAPK/)
-- [응용 프로그램 게시](~/android/deploy-test/publishing/index.md)
-- [Google Play에 대한 여러 APK 지원](http://developer.android.com/google/play/publishing/multiple-apks.html)
+- [애플리케이션 게시](~/android/deploy-test/publishing/index.md)
+- [Google Play에 대한 여러 APK 지원](https://developer.android.com/google/play/publishing/multiple-apks.html)

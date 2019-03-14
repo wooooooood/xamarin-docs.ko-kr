@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f60c15ba4b57ed61405b7081ed1cc3cee99c372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ba09afc477ddaadc07aa415376860eea3c8c28d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115551"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671470"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Xamarin.Mac에서 인증서 및 식별자
 
@@ -20,7 +20,7 @@ _이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요한 인증서 
 
 ## <a name="certificates-and-identifiers"></a>인증서 및 식별자
 
-개발용 Mac을 구성하려면 [Apple Developer Member Center](http://developer.apple.com)를 방문하세요. 주 메뉴는 아래에 나와 있습니다.
+개발용 Mac을 구성하려면 [Apple Developer Member Center](https://developer.apple.com)를 방문하세요. 주 메뉴는 아래에 나와 있습니다.
 
 [![Apple Developer Member Center](certificates-identifiers-images/devcenter01.png "Apple Developer Member Center")](certificates-identifiers-images/devcenter01-large.png#lightbox)
 
@@ -40,18 +40,18 @@ _이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요한 인증서 
 
 이 섹션의 나머지 부분에서는 Mac 개발자 계정 설정을 완료하는 4개 섹션을 하나씩 안내합니다.
 
--   **Mac 앱 ID 등록** – 개발자는 자신이 작성하는 각 응용 프로그램에 대해 다음 단계를 수행해야 합니다.
+-   **Mac 앱 ID 등록** – 개발자는 자신이 작성하는 각 애플리케이션에 대해 다음 단계를 수행해야 합니다.
 -   **macOS 시스템 등록** – 테스트할 컴퓨터를 추가할 때에만 필요합니다.
 -   **인증서 만들기** - 인증서를 설정할 때 그리고 나중에 인증서를 갱신할 때 한 번만 필요합니다.
--   **프로비전 프로필 만들** - 개발자는 작성하는 새 응용 프로그램마다 그리고 새 시스템을 추가할 때 다음 단계를 수행해야 합니다.
+-   **프로비전 프로필 만들** - 개발자는 작성하는 새 애플리케이션마다 그리고 새 시스템을 추가할 때 다음 단계를 수행해야 합니다.
 
 언제든지 페이지 왼쪽 상단의 **개요** 링크를 클릭하여 이 메뉴로 돌아올 수 있습니다.
 
 ### <a name="register-mac-app-id"></a>Mac 앱 ID 등록
 
-개발자는 작성하는 각 응용 프로그램의 앱 ID를 등록해야 합니다. 아래 단계를 사용하여 "MacWriter"라고 하는 기본 샘플 앱에 대한 항목을 만듭니다.
+개발자는 작성하는 각 애플리케이션의 앱 ID를 등록해야 합니다. 아래 단계를 사용하여 "MacWriter"라고 하는 기본 샘플 앱에 대한 항목을 만듭니다.
 
-1. **앱 ID 설명**을 입력하고 응용 프로그램에 필요한 **앱 서비스**를 선택합니다. 
+1. **앱 ID 설명**을 입력하고 애플리케이션에 필요한 **앱 서비스**를 선택합니다. 
 
     [![설명 및 앱 서비스 입력](certificates-identifiers-images/devcenter04.png "설명 및 앱 서비스 입력")](certificates-identifiers-images/devcenter04-large.png#lightbox)
 2. 앱의 **번들 ID**를 입력하고 **계속** 단추를 클릭합니다. 
@@ -87,7 +87,7 @@ Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고
 
 ### <a name="create-certificates"></a>인증서 만들기
 
-인증서 섹션을 사용하여 Mac 응용 프로그램을 서명하는 데 사용할 여러 가지 형식의 인증서를 만듭니다.
+인증서 섹션을 사용하여 Mac 애플리케이션을 서명하는 데 사용할 여러 가지 형식의 인증서를 만듭니다.
 
 [![새 인증서 만들기](certificates-identifiers-images/certif01.png "새 인증서 만들기")](certificates-identifiers-images/certif01-large.png#lightbox)
 
@@ -131,7 +131,7 @@ Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고
 
 #### <a name="mac-app-store-certificates"></a>Mac 앱 스토어 인증서
 
-앱 스토어에 앱을 릴리스하려면 응용 프로그램 및 Mac 설치 관리자 패키지를 서명하는 데 사용할 **Mac 앱 스토어** 인증서를 만들어야 합니다.
+앱 스토어에 앱을 릴리스하려면 애플리케이션 및 Mac 설치 관리자 패키지를 서명하는 데 사용할 **Mac 앱 스토어** 인증서를 만들어야 합니다.
 
 1. 인증서 유형으로 **Mac 앱 스토어**를 선택하고 **계속** 단추를 클릭합니다. 
 
@@ -142,7 +142,7 @@ Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고
 3. 다음 페이지에서는 **키 집합 액세스**를 사용하여 인증서 요청 파일을 생성하는 방법을 설명합니다. 다음 지침을 따릅니다. 
 
      [![키 집합 요청 생성](certificates-identifiers-images/certif06.png "키 집합 요청 생성")](certificates-identifiers-images/certif06-large.png#lightbox)
-4. 구체적인 **일반 이름**을 선택합니다. 예를 들어 이름에 "앱 스토어 응용 프로그램"이라는 텍스트를 사용합니다. 
+4. 구체적인 **일반 이름**을 선택합니다. 예를 들어 이름에 "앱 스토어 애플리케이션"이라는 텍스트를 사용합니다. 
 
      ![설명이 포함된 이름 입력](certificates-identifiers-images/image20.png "설명이 포함된 이름 입력")
 5. 인증서 요청 파일(확장명 `.certSigningRequest`)은 Mac에 로컬로 저장됩니다. 저장된 위치를 기억해 둡니다(기본 위치는 바탕 화면). 
@@ -171,7 +171,7 @@ Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고
 
 #### <a name="developer-id-certificates"></a>개발자 ID 인증서
 
-Xamarin.Mac 응용 프로그램을 셀프 릴리스하려면(Apple 앱 스토어를 통해 릴리스하지 않고) 개발자는 릴리스 및 설치할 앱을 서명하기 위한 개발자 ID 인증서가 필요합니다.
+Xamarin.Mac 애플리케이션을 셀프 릴리스하려면(Apple 앱 스토어를 통해 릴리스하지 않고) 개발자는 릴리스 및 설치할 앱을 서명하기 위한 개발자 ID 인증서가 필요합니다.
 
 다음을 수행합니다.
 
@@ -181,11 +181,11 @@ Xamarin.Mac 응용 프로그램을 셀프 릴리스하려면(Apple 앱 스토어
 2. **계속** 단추를 클릭하고 만들려는 개발자 ID 유형을 선택합니다. 
 
     [![개발자 ID 유형 선택](certificates-identifiers-images/certif08.png "개발자 ID 유형 선택")](certificates-identifiers-images/certif08-large.png#lightbox)
-3. 두 개가 필요합니다. 하나는 응용 프로그램 자체를 서명하는 데 필요하고, 다른 하나는 응용 프로그램의 설치 관리자를 서명하는 데 필요합니다. 이러한 키의 인증서 요청 이름을 지정할 때 주의해야 합니다. 나중에 쉽게 구분할 수 있도록 `Application` 및 `Installer` 텍스트를 포함하는 구체적인 이름을 사용해야 합니다.
+3. 두 개가 필요합니다. 하나는 애플리케이션 자체를 서명하는 데 필요하고, 다른 하나는 애플리케이션의 설치 관리자를 서명하는 데 필요합니다. 이러한 키의 인증서 요청 이름을 지정할 때 주의해야 합니다. 나중에 쉽게 구분할 수 있도록 `Application` 및 `Installer` 텍스트를 포함하는 구체적인 이름을 사용해야 합니다.
 4. 다음 화면은 인증서를 만드는 방법에 대한 자세한 지침을 제공합니다. **계속** 단추를 클릭하세요. 
 
     [![인증서를 만드는 방법](certificates-identifiers-images/certif09.png "인증서를 만드는 방법")](certificates-identifiers-images/certif09-large.png#lightbox)
-5. 구체적인 **일반 이름**을 선택합니다. 예를 들어 이름에 "개발자 ID 응용 프로그램"이라는 텍스트를 사용합니다. 
+5. 구체적인 **일반 이름**을 선택합니다. 예를 들어 이름에 "개발자 ID 애플리케이션"이라는 텍스트를 사용합니다. 
 
      ![인증서 이름 입력](certificates-identifiers-images/image33.png "인증서 이름 입력")
 6. 인증서 요청 파일(확장명 `.certSigningRequest`)은 Mac에 로컬로 저장됩니다. 저장된 위치를 기억해 둡니다(기본 위치는 바탕 화면). 

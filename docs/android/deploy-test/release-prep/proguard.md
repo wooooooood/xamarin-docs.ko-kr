@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f6f3377c4fdeedefa3277d05012ec868f6626c41
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117397"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670001"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -21,7 +21,7 @@ _Xamarin.Android ProGuard는 Java 클래스 파일 축소, 최적화 및 사전 
 
 ## <a name="overview"></a>개요
 
-ProGuard는 패키지 응용 프로그램에서 사용되지 않는 클래스, 필드, 메서드 및 특성을 검색하고 제거합니다. 참조된 라이브러리에 대해서도 동일한 작업을 수행할 수 있습니다(64k 참조 제한에 도달하지 않도록 하는 데 도움이 됨). 또한 Android SDK에서 ProGuard 도구는 바이트 코드를 최적화하고 사용되지 않는 코드 지침을 제거합니다. ProGuard는 **입력 jar**를 읽은 다음, 축소, 최적화, 사전 검증하고, 하나 이상의**출력 jar**에 결과를 기록합니다. 
+ProGuard는 패키지 애플리케이션에서 사용되지 않는 클래스, 필드, 메서드 및 특성을 검색하고 제거합니다. 참조된 라이브러리에 대해서도 동일한 작업을 수행할 수 있습니다(64k 참조 제한에 도달하지 않도록 하는 데 도움이 됨). 또한 Android SDK에서 ProGuard 도구는 바이트 코드를 최적화하고 사용되지 않는 코드 지침을 제거합니다. ProGuard는 **입력 jar**를 읽은 다음, 축소, 최적화, 사전 검증하고, 하나 이상의**출력 jar**에 결과를 기록합니다. 
 
 ProGuard는 다음 단계를 통해 입력 APK를 처리합니다. 
 
@@ -56,7 +56,7 @@ ProGuard를 사용하기 전에 미리 알아두어야 할 중요한 항목은 `
 
 ### <a name="linker-step"></a>링커 단계
 
-Xamarin.Android 링커는 응용 프로그램의 정적 분석을 적용하여 다음을 확인합니다. 
+Xamarin.Android 링커는 애플리케이션의 정적 분석을 적용하여 다음을 확인합니다. 
 
 -   실제로 사용되는 어셈블리.
 
@@ -140,7 +140,7 @@ Xamarin.Android 링커는 응용 프로그램의 정적 분석을 적용하여 �
     }
     
 
-ProGuard가 응용 프로그램을 제대로 분석할 수 없는 경우가 있을 수 있습니다. 이 경우 응용 프로그램에 실제로 필요한 코드를 잠재적으로 제거할 수 있습니다. 그러면 사용자 지정 ProGuard 구성 파일에 `-keep` 줄을 추가할 수 있습니다. 
+ProGuard가 애플리케이션을 제대로 분석할 수 없는 경우가 있을 수 있습니다. 이 경우 애플리케이션에 실제로 필요한 코드를 잠재적으로 제거할 수 있습니다. 그러면 사용자 지정 ProGuard 구성 파일에 `-keep` 줄을 추가할 수 있습니다. 
 
     -keep public class MyClass
 
@@ -192,7 +192,7 @@ Xamarin.Android는 다음과 같은 ProGuard 옵션을 지원합니다.
 
 Android 7.0 이상에서 ProGuard를 사용하려는 경우 최신 버전의 ProGuard를 다운로드해야 합니다. Android SDK는 JDK 1.8과 호환되는 새 버전을 제공하지 않기 때문입니다.
 
-이 [NuGet 패키지](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0)를 사용하여 최신 버전의 `proguard.jar`를 설치할 수 있습니다. 기본 Android SDK `proguard.jar`를 업데이트하는 방법에 대한 자세한 내용은 이 [스택 오버플로](http://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706) 설명을 참조하세요.
+이 [NuGet 패키지](https://www.nuget.org/packages/name.atsushieno.proguard.facebook/5.3.0)를 사용하여 최신 버전의 `proguard.jar`를 설치할 수 있습니다. 기본 Android SDK `proguard.jar`를 업데이트하는 방법에 대한 자세한 내용은 이 [스택 오버플로](https://stackoverflow.com/questions/39514518/xamarin-android-proguard-unsupported-class-version-number-52-0/39514706#39514706) 설명을 참조하세요.
 
 ProGuard의 모든 버전은 [SourceForge 페이지](https://sourceforge.net/projects/proguard/files/)에서 찾을 수 있습니다. 
 
@@ -217,7 +217,7 @@ ProGuard 구성 파일의 두 예제는 다음과 같습니다. 이 경우에는
 
     -keep public class mypackage.MyActivity
 
-### <a name="a-complete-android-application"></a>완전한 Android 응용 프로그램
+### <a name="a-complete-android-application"></a>완전한 Android 애플리케이션
 
 다음 예제에서는 완전한 Android 앱에 대한 구성을 보여줍니다.
 
@@ -341,9 +341,9 @@ ProGuard [문제 해결](https://stuff.mit.edu/afs/sipb/project/android/sdk/andr
 
 ## <a name="summary"></a>요약
 
-이 가이드에서는 Xamarin.Android에서 ProGuard가 작동하는 방법, ProGuard를 앱 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 예제 ProGuard 구성을 제공하고 일반적인 문제에 대한 해결책을 설명합니다. ProGuard 도구 및 Android에 대한 자세한 내용은 [코드 축소 및 리소스](http://developer.android.com/tools/help/proguard.html)를 참조하세요. 
+이 가이드에서는 Xamarin.Android에서 ProGuard가 작동하는 방법, ProGuard를 앱 프로젝트에서 사용하는 방법과 구성하는 방법을 설명합니다. 예제 ProGuard 구성을 제공하고 일반적인 문제에 대한 해결책을 설명합니다. ProGuard 도구 및 Android에 대한 자세한 내용은 [코드 축소 및 리소스](https://developer.android.com/tools/help/proguard.html)를 참조하세요. 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [릴리스할 응용 프로그램 준비](~/android/deploy-test/release-prep/index.md)
+- [릴리스할 애플리케이션 준비](~/android/deploy-test/release-prep/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061961"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669988"
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어 만들기
 
@@ -220,7 +220,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-media-element"></a>UWP 미디어 요소
 
-UWP(유니버설 Windows 플랫폼)에서 가장 일반적인 비디오 플레이어는 [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/)입니다. `MediaElement`의 설명서에서는 빌드 1607부터 Windows 10 버전을 지원하는 데 필요한 경우 대신 [`MediaPlayerElement`](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/)를 사용해야 함을 나타냅니다.
+UWP(유니버설 Windows 플랫폼)에서 가장 일반적인 비디오 플레이어는 [`MediaElement`](xref:Windows.UI.Xaml.Controls.MediaElement)입니다. `MediaElement`의 설명서에서는 빌드 1607부터 Windows 10 버전을 지원하는 데 필요한 경우 대신 [`MediaPlayerElement`](xref:Windows.UI.Xaml.Controls.MediaPlayerElement)를 사용해야 함을 나타냅니다.
 
 `OnElementChanged` 재정의는 `MediaElement`를 만들고, 몇 가지 이벤트 처리기를 설정하고, `MediaElement` 개체를 `SetNativeControl`에 전달해야 합니다.
 
@@ -424,7 +424,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-transport-controls-property"></a>UWP 전송 컨트롤 속성
 
-UWP `MediaElement`는 [`AreTransportControlsEnabled`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled)라는 속성을 정의합니다. 따라서 해당 속성은 동일한 이름의 `VideoPlayer` 속성에서 설정됩니다.
+UWP `MediaElement`는 [`AreTransportControlsEnabled`](xref:Windows.UI.Xaml.Controls.MediaElement.AreTransportControlsEnabled*)라는 속성을 정의합니다. 따라서 해당 속성은 동일한 이름의 `VideoPlayer` 속성에서 설정됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.UWP

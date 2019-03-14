@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
-ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
+ms.openlocfilehash: 86e2380a2931517b021162a6cecadc7d6d5b4c43
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305648"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669396"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -98,7 +98,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 설치 속성은 `Install` 및 `Uninstall` 대상의 동작을 제어합니다.
 
--   **AdbTarget**&ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 디바이스를 지정합니다. 이 속성의 값은 [`adb` 대상 디바이스 옵션](http://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
+-   **AdbTarget**&ndash; Android 패키지를 설치하거나 제거할 수 있는 Android 대상 디바이스를 지정합니다. 이 속성의 값은 [`adb` 대상 디바이스 옵션](https://developer.android.com/tools/help/adb.html#issuingcommands)과 동일합니다.
 
     ```bash
     # Install package onto emulator via -e
@@ -145,7 +145,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     기본적으로 이 속성은 `False`입니다.
 
--   **AndroidEnableSGenConcurrent** &ndash; Mono의 [동시 GC 수집기](http://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen)를 사용할지 여부를 결정하는 부울 속성입니다.
+-   **AndroidEnableSGenConcurrent** &ndash; Mono의 [동시 GC 수집기](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen)를 사용할지 여부를 결정하는 부울 속성입니다.
 
     이 속성에 대한 지원은 Xamarin.Android 7.2에 추가되었습니다.
 
@@ -293,7 +293,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     `$(AotAssemblies)` MSBuild 속성이 `True`가 아닐 경우 이러한 속성이 무시됩니다.
 
--   **EnableProguard** &ndash; Java 코드를 연결하기 위해 패키징 프로세스의 일부로 [proguard](http://developer.android.com/tools/help/proguard.html)를 실행할지 여부를 결정하는 부울 속성입니다.
+-   **EnableProguard** &ndash; Java 코드를 연결하기 위해 패키징 프로세스의 일부로 [proguard](https://developer.android.com/tools/help/proguard.html)를 실행할지 여부를 결정하는 부울 속성입니다.
 
     이 속성에 대한 지원은 Xamarin.Android 5.1에 추가되었습니다.
 

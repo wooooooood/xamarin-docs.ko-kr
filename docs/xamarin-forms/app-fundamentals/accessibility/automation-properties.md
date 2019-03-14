@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831991"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672562"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
 
@@ -36,7 +36,7 @@ Xamarin.Forms를 사용하면 자동화 속성을 다음과 같은 연결된 속
 
 - iOS에는 VoiceOver가 있습니다. 자세한 내용은 developer.apple.com에서 [VoiceOver를 사용하여 디바이스에 대한 엑세스 가능성 테스트](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)를 참조하세요.
 - Android에는 TalkBack이 있습니다. 자세한 내용은 developer.android.com에서 [앱의 액세스 가능성 테스트](https://developer.android.com/training/accessibility/testing.html#talkback)를 참조하세요.
-- Windows에는 내레이터가 있습니다. 자세한 내용은 [내레이터를 사용하여 기본 앱 시나리오 확인](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/)을 참조하세요.
+- Windows에는 내레이터가 있습니다. 자세한 내용은 [내레이터를 사용하여 기본 앱 시나리오 확인](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator)을 참조하세요.
 
 그러나 화면 판독기의 정확한 동작은 소프트웨어 및 사용자의 소프트웨어 구성에 따라 달라집니다. 예를 들어 대부분의 화면 판독기는 포커스를 받을 때 컨트롤과 연결된 텍스트를 읽고, 페이지에서 컨트롤 사이를 이동하는 경우 사용자가 스스로 방향을 지정하게 할 수 있습니다. 일부 화면 판독기에는 페이지가 나타나면 사용자가 이동하기 전에 페이지의 사용 가능한 모든 정보 콘텐츠를 받을 수 있도록 설정되는 전체 애플리케이션 사용자 인터페이스가 표시됩니다.
 

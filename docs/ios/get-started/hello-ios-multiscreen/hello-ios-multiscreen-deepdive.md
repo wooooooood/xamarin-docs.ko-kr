@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: e8b3881db99d569008ce1290f81891f1b3b183d7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 953f626774c02a2861d0d9b3be1f1234f181c622
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563812"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670599"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -24,7 +24,7 @@ ms.locfileid: "51563812"
 
 ## <a name="model-view-controller-mvc"></a>MVC(모델-뷰-컨트롤러)
 
-[Hello, iOS](~/ios/get-started/hello-ios/index.md) 자습서에서는 iOS 응용 프로그램에 뷰 컨트롤러가 해당 *콘텐츠 뷰 계층 구조*를 창으로 로딩할 책임이 있는 하나의 *창*만 있다는 것을 배웠습니다. 두 번째 Phoneword 연습에서는 애플리케이션에 두 번째 화면을 추가하고 아래 다이어그램에 표시된 것처럼 두 개의 화면 간에 일부 데이터(전화번호 목록)를 전달했습니다.
+[Hello, iOS](~/ios/get-started/hello-ios/index.md) 자습서에서는 iOS 애플리케이션에 뷰 컨트롤러가 해당 *콘텐츠 뷰 계층 구조*를 창으로 로딩할 책임이 있는 하나의 *창*만 있다는 것을 배웠습니다. 두 번째 Phoneword 연습에서는 애플리케이션에 두 번째 화면을 추가하고 아래 다이어그램에 표시된 것처럼 두 개의 화면 간에 일부 데이터(전화번호 목록)를 전달했습니다.
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "이 다이어그램은 두 개의 화면 간 데이터 전달을 보여줍니다.")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
@@ -68,7 +68,7 @@ Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 �
 
 탐색 컨트롤러는 iOS 애플리케이션에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 애플리케이션에 대한 탐색을 제공합니다.
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "탐색 컨트롤러는 여기에 표시된 Settings 앱과 같은 iOS 응용 프로그램에 대한 탐색을 제공합니다.")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "탐색 컨트롤러는 여기에 표시된 Settings 앱과 같은 iOS 애플리케이션에 대한 탐색을 제공합니다.")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 탐색 컨트롤러는 세 가지 기본 기능을 제공합니다.
 
@@ -206,5 +206,5 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 ## <a name="related-links"></a>관련 링크
 
 - [Hello, iOS(샘플)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS 휴먼 인터페이스 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

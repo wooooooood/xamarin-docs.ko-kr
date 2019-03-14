@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831952"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669643"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -360,7 +360,7 @@ Xamarin.iOS 애플리케이션에서 인앱 구매를 수행하는 작업에 대
 ## <a name="related-links"></a>관련 링크
 
 - [이미지 작업](~/ios/app-fundamentals/images-icons/index.md)
-- [iOS 앱 개발 워크플로 가이드: 애플리케이션 배포](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [iOS 앱 개발 워크플로 가이드: 애플리케이션 배포](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [앱 스토어 제출 팁](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [앱 스토어 검토 지침](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [iTunes Connect 개발자 가이드](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

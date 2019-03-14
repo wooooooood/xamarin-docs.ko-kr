@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233759"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671120"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
-낮은 애플리케이션 성능은 여러가지 방법으로 나타납니다. 이 경우에 애플리케이션이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 애플리케이션 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다. 
+낮은 애플리케이션 성능은 여러가지 방법으로 나타납니다. 이 경우에 애플리케이션이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 애플리케이션 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
 
 이 문서에서는 Xamarin.iOS 애플리케이션에서 성능 및 메모리 사용을 개선하기 위해 사용할 수 있는 기술을 설명합니다.
 
@@ -140,7 +140,7 @@ public class MyFooDelegate : FooDelegate {
 다음은 [위임](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html) 패턴의 컨텍스트에서 `[Weak]`를 사용하는 또 다른 예제입니다.
 
 ```csharp
-public class MyViewController : UIViewController 
+public class MyViewController : UIViewController
 {
     WKWebView webView;
 
@@ -155,7 +155,7 @@ public class MyViewController : UIViewController
     }
 }
 
-public class UIDelegate : WKUIDelegate 
+public class UIDelegate : WKUIDelegate
 {
     [Weak] MyViewController controller;
 
@@ -196,7 +196,7 @@ class MyContainer : UIView
 부모에 대한 강력한 참조를 유지하는 자식 개체의 경우 `Dispose` 구현에서 부모에 대한 참조를 제거합니다.
 
 ```csharp
-class MyChild : UIView 
+class MyChild : UIView
 {
     MyContainer container;
     public MyChild (MyContainer container)
@@ -215,13 +215,13 @@ class MyChild : UIView
 
 ### <a name="more-information"></a>추가 정보
 
-자세한 내용은 [순환 유지를 방지하는 규칙](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html)(Cocoa With Love 제공), [MonoTouch GC에 있는 버그인가요?](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc)(StackOverflow 제공) 및 [MonoTouch GC에서 refcount가 1보다 큰 관리 개체를 종료할 수 없는 이유는 무엇인가요?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1)(StackOverflow 제공)를 참조하세요
+자세한 내용은 [순환 유지를 방지하는 규칙](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html)(Cocoa With Love 제공), [MonoTouch GC에 있는 버그인가요?](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc)(StackOverflow 제공) 및 [MonoTouch GC에서 refcount가 1보다 큰 관리 개체를 종료할 수 없는 이유는 무엇인가요?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1)(StackOverflow 제공)를 참조하세요
 
 ## <a name="optimize-table-views"></a>테이블 보기 최적화
 
 사용자에게는 [`UITableView`](xref:UIKit.UITableView) 인스턴스에 대한 부드러운 스크롤 및 빠른 로드 시간이 필요합니다. 그러나 셀에 깊게 중첩된 뷰 계층 구조 또는 복잡한 레이아웃이 포함되어 있으면 스크롤 성능이 저하될 수 있습니다. 그러나 `UITableView` 성능이 저하되지 않도록 방지하는 데 사용할 수 있는 방법이 있습니다.
 
-- 셀을 다시 사용합니다. 자세한 내용은 [셀 재사용](#reusecells)을 참조하세요.
+- 셀을 다시 사용합니다. 자세한 내용은 [셀 재사용](#reuse-cells)을 참조하세요.
 - 하위 뷰의 수를 줄입니다.
 - 웹 서비스에서 검색된 셀 내용을 캐시합니다.
 - 동일하지 않은 경우 모든 행의 높이를 캐시합니다.

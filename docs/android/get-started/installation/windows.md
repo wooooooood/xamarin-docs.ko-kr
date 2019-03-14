@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 26865fdbfc1cc6f11a978a70bd768e63771bcd4b
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 0053bf97dbcc98c5ffbd6fbddb1e40f884810e60
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197474"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670755"
 ---
 # <a name="windows-installation"></a>Windows 설치
 
@@ -47,7 +47,7 @@ Xamarin.Android는 JDK(Java Development Kit) 및 Android SDK를 사용하여 앱
 
 대부분의 사용자의 경우 이러한 기본 위치는 추가 변경 없이 사용할 수 있습니다. 그러나 이러한 도구에 사용자 지정 위치를 포함하는 Visual Studio를 구성할 수도 있습니다(예: 다른 위치에서 Java JDK, Android SDK 또는 NDK를 설치한 경우). 변경하려는 경로 옆에 있는 **변경**을 클릭한 다음, 새 위치로 이동합니다.
 
-Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함). API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
+Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함). API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.

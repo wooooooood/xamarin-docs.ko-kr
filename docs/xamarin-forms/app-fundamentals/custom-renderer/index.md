@@ -7,13 +7,8 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998746"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러
 
 _Xamarin.Forms 사용자 인터페이스는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링되기 때문에 Xamarin.Forms 애플리케이션이 각 플랫폼에 적합한 모양과 느낌을 유지할 수 있습니다. 사용자 지정 렌더러를 사용하면 개발자가 이 프로세스를 재정의하여 각 플랫폼에서 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정할 수 있습니다._
@@ -24,7 +19,7 @@ _Xamarin.Forms 사용자 인터페이스는 대상 플랫폼의 네이티브 컨
 
 ## <a name="renderer-base-classes-and-native-controlsrenderersmd"></a>[렌더러 기본 클래스 및 네이티브 컨트롤](renderers.md)
 
-모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
+모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 보기 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
 
 ## <a name="customizing-an-entryentrymd"></a>[항목 사용자 지정](entry.md)
 
@@ -44,7 +39,7 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)는 데이터의 컬렉�
 
 ## <a name="customizing-a-viewcellviewcellmd"></a>[ViewCell 사용자 지정](viewcell.md)
 
-Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell)은 개발자 정의 보기가 포함된 [`ListView`](xref:Xamarin.Forms.ListView) 또는 [`TableView`](xref:Xamarin.Forms.TableView)에 추가할 수 있는 셀입니다. 이 문서에서는 Xamarin.Forms `ListView` 컨트롤 내부에 호스팅되는 `ViewCell`에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. `ListView` 스크롤 중에 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되는 것을 중지합니다.
+Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell)은 개발자 정의 보기가 포함된 [`ListView`](xref:Xamarin.Forms.ListView) 또는 [`TableView`](xref:Xamarin.Forms.TableView)에 추가할 수 있는 셀입니다. 이 문서에서는 Xamarin.Forms `ListView` 컨트롤 내부에 호스팅되는 `ViewCell`에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. 이렇게 하면 `ListView`를 스크롤하는 동안 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다.
 
 ## <a name="implementing-a-viewviewmd"></a>[보기 구현](view.md)
 
@@ -63,4 +58,3 @@ Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 
 
 - [효과](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [사용자 지정 렌더러(Xamarin University 비디오)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [사용자 지정 렌더러(Xamarin University 비디오) 샘플](http://bit.ly/xf-customrenderer)

@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 4ea9690812675c48524393576e5509ab37e26981
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197149"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667992"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -70,7 +70,7 @@ Visual Studio 2017 설치 관리자에는 Xamarin을 자동으로 설치하는 �
 
 macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/download)에서 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) 설치 지침을 따릅니다.
 
-현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](http://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
+현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](https://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
 
 각 플랫폼에 대한 자세한 [설치](~/get-started/installation/index.md) 지침은 다음에서 볼 수 있습니다.
 

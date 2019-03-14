@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 6023bb4ebcc9d4adcd3408ca09bf9118d14351d4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d0eb5d1c2c45ce347a7ddf9ed0e72bddc57e4188
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120816"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668792"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -42,9 +42,9 @@ Xamarin Android SDK Manager는 Visual Studio 2015와 호환되지 않습니다. 
 
 Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치되는) Java Development Kit도 필요합니다. 여러 가지 JDK 대안 중에서 선택할 수 있습니다.
 
--   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
+-   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
 
--   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
+-   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
 -   Visual Studio 15.8 미리 보기 5 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 모바일 OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
 
@@ -139,9 +139,9 @@ Xamarin Android SDK Manager를 사용하려면 다음이 필요합니다.
 
 Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치되는) Java Development Kit도 필요합니다. 여러 가지 JDK 대안 중에서 선택할 수 있습니다.
 
--   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
+-   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
 
--   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
+-   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
 -   Mac용 Visual Studio 7.7 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 모바일 OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 6f12670dd463471ba1e337802453c775adbe16a7
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666950"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672718"
 ---
 # <a name="localization"></a>지역화
 
@@ -22,7 +22,7 @@ _.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있
 
 ## <a name="overview"></a>개요
 
-.NET 애플리케이션 지역화를 위해 기본 제공되는 메커니즘에서는 [RESX 파일](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx)과 `System.Resources` 및 `System.Globalization` 네임스페이스의 클래스를 사용합니다. 변환된 문자열이 포함된 RESX 파일이 변환에 대한 강력한 형식의 액세스 권한을 제공하는 컴파일러 생성 클래스와 함께 Xamarin.Forms 어셈블리에 포함됩니다. 그러면 변환된 텍스트를 코드에서 검색할 수 있습니다.
+.NET 애플리케이션 지역화를 위해 기본 제공되는 메커니즘에서는 [RESX 파일](https://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx)과 `System.Resources` 및 `System.Globalization` 네임스페이스의 클래스를 사용합니다. 변환된 문자열이 포함된 RESX 파일이 변환에 대한 강력한 형식의 액세스 권한을 제공하는 컴파일러 생성 클래스와 함께 Xamarin.Forms 어셈블리에 포함됩니다. 그러면 변환된 텍스트를 코드에서 검색할 수 있습니다.
 
 ### <a name="sample-code"></a>샘플 코드
 
@@ -761,7 +761,7 @@ Android는 언어 코드 접미사가 있는 다양한 **드로어블** 및 **�
 
 Android에서는 중국어 간체 및 번체에 대해 zh-Hans 및 zh-Hant를 사용하지 않고 대신 zh-CN 및 zh-TW와 같은 국가별 코드를 지원합니다.
 
-고밀도 화면에 대한 다른 해상도 이미지를 지원하려면 **drawables-es-mdpi**, **drawables-es-xdpi**, **drawables-es-xxdpi** 등의 `-*dpi` 접미사가 있는 언어 폴더를 추가로 만듭니다. 자세한 내용은 [대체 Android 리소스 제공](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)을 참조하세요.
+고밀도 화면에 대한 다른 해상도 이미지를 지원하려면 **drawables-es-mdpi**, **drawables-es-xdpi**, **drawables-es-xxdpi** 등의 `-*dpi` 접미사가 있는 언어 폴더를 추가로 만듭니다. 자세한 내용은 [대체 Android 리소스 제공](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)을 참조하세요.
 
 #### <a name="app-name"></a>앱 이름
 
@@ -811,5 +811,5 @@ RESX 파일 및 .NET 글로벌화 클래스를 사용하여 Xamarin.Forms 애플
 - [iOS 지역화](~/ios/app-fundamentals/localization/index.md)
 - [Android 지역화](~/android/app-fundamentals/localization.md)
 - [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)
-- [CultureInfo 클래스 사용(MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
-- [특정 문화권에 대한 리소스 찾기 및 사용(MSDN)](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [CultureInfo 클래스 사용(MSDN)](https://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
+- [특정 문화권에 대한 리소스 찾기 및 사용(MSDN)](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
