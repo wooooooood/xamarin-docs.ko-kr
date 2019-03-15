@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e57135c5a9a90ec75ae610ad92cecaa2a9b1e482
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557040"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972678"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -356,7 +356,7 @@ public partial class MainPage : ContentPage
 
 ### <a name="creating-a-reusable-hyperlink-class"></a>다시 사용할 수 있는 하이퍼링크 클래스 만들기
 
-하이퍼링크 응용 프로그램에서 필요할 때마다 반복적인 코드를 작성 해야 하는 하이퍼링크를 만드는 이전 접근 방식입니다. 그러나 모두를 [ `Label` ](xref:Xamarin.Forms.Label) 하 고 [ `Span` ](xref:Xamarin.Forms.Span) 클래스를 만들려면 서브클래싱된 될 수 있습니다 `HyperlinkLabel` 및 `HyperlinkSpan` 제스처 인식기 및 텍스트 서식을 사용 하 여 클래스 코드를 추가 합니다.
+하이퍼링크 응용 프로그램에서 필요할 때마다 반복적인 코드를 작성 해야 하는 하이퍼링크를 만드는 이전 접근 방식입니다. 그러나 두 합니다 [ `Label` ](xref:Xamarin.Forms.Label) 및 [ `Span` ](xref:Xamarin.Forms.Span) 클래스를 만들려면 하위 클래스화 될 수 있습니다 `HyperlinkLabel` 및 `HyperlinkSpan` 제스처 인식기 및 텍스트 서식 지정 코드를 사용 하 여 클래스 추가 합니다.
 
 가져온 다음 코드 예제는 [하이퍼링크 데모](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) 샘플을 보여 줍니다는 `HyperlinkSpan` 클래스:
 

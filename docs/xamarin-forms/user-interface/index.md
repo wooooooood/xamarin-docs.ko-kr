@@ -105,7 +105,7 @@ Xamarin.Forms 테마에는 표준 컨트롤에 대 한 시각적인 특정 모�
 
 ## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Xamarin.Forms Visual 렌더러를 선택적으로 적용할 수 있도록 `VisualElement` 서브 클래스 Xamarin.Forms 컨트롤 하지 않고도 개체입니다.
+Xamarin.Forms 자료 Visual iOS 및 Android에서 동일 하거나 거의 동일 보이는 Xamarin.Forms 응용 프로그램을 만드는 데 사용할 수 있습니다.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[시각적 상태 관리자](visual-state-manager.md)
 

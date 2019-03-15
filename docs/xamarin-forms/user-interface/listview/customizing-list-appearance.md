@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831797"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972652"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
@@ -206,8 +206,8 @@ XAML:
 [`ListView`](xref:Xamarin.Forms.ListView) 가 `HorizontalScrollBarVisibility` 하 고 `VerticalScrollBarVisibility` 속성을 가져오거나 설정를 [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) 가로나 세로로 스크롤 막대에 표시 되는 경우를 나타내는 값입니다. 두 속성은 다음 값으로 설정할 수 있습니다.
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 플랫폼에 대 한 기본 스크롤 막대 동작을 나타내며의 기본값은는 `HorizontalScrollBarVisibility` 고 `VerticalScrollBarVisibility` 속성입니다.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠 보기에 맞지 않는 경우에 스크롤 막대 표시 수를 나타냅니다.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 스크롤 막대 표시 수 없음을 나타내는 이벤트 콘텐츠 보기에 맞지 않는 경우.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 보기에는 콘텐츠를 맞추는 경우에 스크롤 막대 표시 수를 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠 보기에 맞지 않는 경우에 스크롤 막대가 표시 되지 않습니다 나타냅니다.
 
 <a name="Row_Separators" />
 

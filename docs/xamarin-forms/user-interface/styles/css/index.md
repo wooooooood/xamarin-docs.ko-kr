@@ -336,7 +336,7 @@ stacklayout>image {
 |`.class`|`.header`|모든 요소를 선택 합니다 `StyleClass` 'header'를 포함 하는 속성입니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`#id`|`#email`|사용 하 여 요소를 모두 선택 `StyleId` 로 `email`합니다. 하는 경우 `StyleId` 을 설정 하지 않으면 대체 `x:Name`합니다. XAML을 사용 하는 경우 `x:Name` 보다 선호 됩니다 `StyleId`합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`*`|`*`|모든 요소를 선택합니다.|
-|`element`|`label`|형식의 요소를 모두 선택 `Label`, 하위 클래스가 아니라 하지만 합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
+|`element`|`label`|형식의 요소를 모두 선택 `Label`, 하지만 하위 클래스가 없습니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`^base`|`^contentpage`|사용 하 여 요소를 모두 선택 `ContentPage` 기본 클래스를 포함 하 여 `ContentPage` 자체. 참고가이 선택기는 대/소문자를 구분 하 고 CSS 사양에 포함 되지 않습니다.|
 |`element,element`|`label,button`|모두 선택 `Button` 요소와 모든 `Label` 요소입니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`element element`|`stacklayout label`|모두 선택 `Label` 내부 요소는 `StackLayout`합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
