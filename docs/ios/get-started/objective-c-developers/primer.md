@@ -7,24 +7,24 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: bfb20e8eddb4969f3418d0a0dddfcd19f2eeba02
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: df477dc0e4708a1d309810b5b8d4f755f3c49afb
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117553"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669819"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Objective-C 개발자용 C# 입문서
 
-_Xamarin.iOS를 사용하면 C#에서 작성된 플랫폼 제약 없는 코드를 플랫폼 간에 공유할 수 있습니다. 그러나 기존 iOS 응용 프로그램은 이미 만들어진 Objective-C 코드를 활용하려 할 수 있습니다. 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다._
+_Xamarin.iOS를 사용하면 C#에서 작성된 플랫폼 제약 없는 코드를 플랫폼 간에 공유할 수 있습니다. 그러나 기존 iOS 애플리케이션은 이미 만들어진 Objective-C 코드를 활용하려 할 수 있습니다. 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다._
 
-Objective-C에서 개발된 iOS 및 OS X 응용 프로그램은 플랫폼별 코드가 필요 없는 곳에서 C#을 활용하여 Xamarin의 장점을 얻을 수 있으며, 이러한 코드를 Apple 이외의 디바이스에서 사용할 수 있습니다. 그리고 웹 서비스, JSON, XML 구문 분석 같은 것들과 사용자 지정 알고리즘을 플랫폼 간 방식으로 사용할 수 있습니다.
+Objective-C에서 개발된 iOS 및 OS X 애플리케이션은 플랫폼별 코드가 필요 없는 곳에서 C#을 활용하여 Xamarin의 장점을 얻을 수 있으며, 이러한 코드를 Apple 이외의 장치에서 사용할 수 있습니다. 그리고 웹 서비스, JSON, XML 구문 분석 같은 것들과 사용자 지정 알고리즘을 플랫폼 간 방식으로 사용할 수 있습니다.
 
 Objective-C 자산을 유지하면서도 Xamarin을 활용하려면 바인딩이라고 하는 Xamarin의 기술로 Xamarin을 C#에 노출하면 됩니다. 그러면 Objective-C 코드가 관리 C# 세계에 표시됩니다. 또한 원한다면 코드를 한 줄씩 C#으로 이식할 수 있습니다. 하지만 바인딩을 사용하든 아니면 이식을 사용하든, 기존 Objective-C 코드를 Xamarin.iOS에 효율적으로 활용하려면 Objective-C 및 C#에 대한 약간의 지식이 필요합니다.
 
 ## <a name="objective-c-interop"></a>Objective-C 상호 운용성
 
-현재 Xamarin.iOS를 사용하여 Objective-C에서 호출 가능한 라이브러리를 C#으로 만드는 메커니즘은 지원되지 않습니다. 주요 이유는 바인딩 외에도 Mono 런타임이 필요하기 때문입니다. 하지만 사용자 인터페이스를 포함한 대부분의 논리는 여전히 Objective-C로 만들 수 있습니다. 이렇게 하려면 라이브러리에 Objective-C 코드를 래핑하고 그에 대한 바인딩을 만듭니다. 응용 프로그램을 부트스트랩하려면 Xamarin.iOS가 필요합니다(`Main` 진입점을 만들어야 한다는 의미). 그 후, 그 외의 다른 논리는 Objective-C에서 바인딩을 통해(또는 P/Invoke를 통해) C#에 노출할 수 있습니다. 이러한 방식으로 플랫폼 관련 논리는 Objective-C로 유지하고 플랫폼 중립적 부분은 C#으로 개발할 수 있습니다.
+현재 Xamarin.iOS를 사용하여 Objective-C에서 호출 가능한 라이브러리를 C#으로 만드는 메커니즘은 지원되지 않습니다. 주요 이유는 바인딩 외에도 Mono 런타임이 필요하기 때문입니다. 하지만 사용자 인터페이스를 포함한 대부분의 논리는 여전히 Objective-C로 만들 수 있습니다. 이렇게 하려면 라이브러리에 Objective-C 코드를 래핑하고 그에 대한 바인딩을 만듭니다. 애플리케이션을 부트스트랩하려면 Xamarin.iOS가 필요합니다(`Main` 진입점을 만들어야 한다는 의미). 그 후, 그 외의 다른 논리는 Objective-C에서 바인딩을 통해(또는 P/Invoke를 통해) C#에 노출할 수 있습니다. 이러한 방식으로 플랫폼 관련 논리는 Objective-C로 유지하고 플랫폼 중립적 부분은 C#으로 개발할 수 있습니다.
 
 이 문서는 기존 Objective-C 코드로 바인딩하든 아니면 C#으로 이식하든, C# 및 Xamarin.iOS로 전환하는 개발자를 위한 입문서로써 두 언어의 비슷한 점과 차이점을 설명합니다.
 
@@ -64,7 +64,7 @@ public static class UITextViewExtensions
 
 ### <a name="frameworks-vs-assemblies"></a>프레임워크 vs. 어셈블리
 
-Objective-C는 관련 클래스를 프레임워크라고 하는 특수 디렉터리에 패키징합니다. 그러나 C# 및 .NET에서는 어셈블리를 사용하여 미리 컴파일된 코드의 재사용 가능한 비트를 제공합니다. iOS 외부 환경에서 어셈블리에는 런타임에 JIT(Just-In-Time) 컴파일되는 IL(중간 언어) 코드가 포함됩니다. 그러나 Apple은 iOS 응용 프로그램에서 JIT를 허용하지 않습니다. 따라서 Xamarin을 사용하는 iOS를 대상으로 하는 C# 코드는 AOT(Ahead Of Time) 컴파일되고, 응용 프로그램 번들에 포함된 메타데이터 파일과 함께 단일 Unix 실행 파일을 생성합니다.
+Objective-C는 관련 클래스를 프레임워크라고 하는 특수 디렉터리에 패키징합니다. 그러나 C# 및 .NET에서는 어셈블리를 사용하여 미리 컴파일된 코드의 재사용 가능한 비트를 제공합니다. iOS 외부 환경에서 어셈블리에는 런타임에 JIT(Just-In-Time) 컴파일되는 IL(중간 언어) 코드가 포함됩니다. 그러나 Apple은 iOS 애플리케이션에서 JIT를 허용하지 않습니다. 따라서 Xamarin을 사용하는 iOS를 대상으로 하는 C# 코드는 AOT(Ahead Of Time) 컴파일되고, 애플리케이션 번들에 포함된 메타데이터 파일과 함께 단일 Unix 실행 파일을 생성합니다.
 
 ### <a name="selectors-vs-named-parameters"></a>선택기 vs. 명명된 매개 변수
 
@@ -143,7 +143,7 @@ Objective-C는 *블록*을 사용하여 클로저를 만들며, 여기서 사용
 };
 ```
 
-람다 식에 대한 자세한 내용은 Microsoft의 [C# 프로그래밍 가이드](http://msdn.microsoft.com/library/vstudio/bb397687.aspx)를 참조하세요.
+람다 식에 대한 자세한 내용은 Microsoft의 [C# 프로그래밍 가이드](https://msdn.microsoft.com/library/vstudio/bb397687.aspx)를 참조하세요.
 
 ## <a name="summary"></a>요약
 

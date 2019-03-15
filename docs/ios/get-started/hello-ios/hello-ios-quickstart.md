@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS - 빠른 시작
-description: 이 연습에서는 Hello, iOS라는 간단한 Xamarin.iOS 응용 프로그램을 빌드하는 방법을 보여줍니다. 이 과정에서 Xamarin.iOS 응용 프로그램을 빌드하기 위해 이해해야 하는 기본 도구 및 개념을 소개합니다.
+description: 이 연습에서는 Hello, iOS라는 간단한 Xamarin.iOS 애플리케이션을 빌드하는 방법을 보여줍니다. 이 과정에서 Xamarin.iOS 애플리케이션을 빌드하기 위해 이해해야 하는 기본 도구 및 개념을 소개합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,16 +9,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0ec24e49e03237829474515a9abe9b014d10014f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527120"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672731"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
-이 가이드에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환한 다음, 해당 번호로 전화하는 응용 프로그램을 만드는 방법을 설명합니다. 최종 응용 프로그램은 다음과 같습니다.
+이 가이드에서는 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환한 다음, 해당 번호로 전화하는 애플리케이션을 만드는 방법을 설명합니다. 최종 애플리케이션은 다음과 같습니다.
 
  [![](hello-ios-quickstart-images/image1.png "Hello.iOS 빠른 시작 앱")](hello-ios-quickstart-images/image1.png#lightbox)
 
@@ -54,9 +54,9 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Mac용 Visual Studio 연습
 
-이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 응용 프로그램을 만드는 방법을 설명합니다.
+이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 애플리케이션을 만드는 방법을 설명합니다.
 
-1. **응용 프로그램** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다.
+1. **애플리케이션** 폴더 또는 **스포트라이트**에서 Mac용 Visual Studio를 시작합니다.
 
     ![](hello-ios-quickstart-images/image2new.png "시작 화면")
 
@@ -64,9 +64,9 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
     ![](hello-ios-quickstart-images/image3new.png "iOS 솔루션")
 
-2. **새 솔루션 대화 상자**에서 **iOS > 응용 프로그램 > 단일 뷰 응용 프로그램** 템플릿을 선택하여 C#이 선택되어 있는지 확인합니다. **다음**을 클릭합니다.
+2. **새 솔루션 대화 상자**에서 **iOS &gt; 애플리케이션 &gt; 단일 뷰 애플리케이션** 템플릿을 선택하여 C#이 선택되어 있는지 확인합니다. **다음**을 클릭합니다.
 
-    ![](hello-ios-quickstart-images/image4new.png "단일 뷰 응용 프로그램 선택")
+    ![](hello-ios-quickstart-images/image4new.png "단일 뷰 애플리케이션 선택")
 
 3. 앱을 구성합니다. **이름**으로 `Phoneword_iOS`를 지정하고, 나머지는 기본값을 유지합니다. **다음**을 클릭합니다.
 
@@ -246,22 +246,22 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
         };
     ```
 
-23. 변경 내용을 저장한 다음, **빌드 > 모두 빌드**를 선택하거나 **⌘+B**를 눌러 응용 프로그램을 빌드합니다.  응용 프로그램이 컴파일되면 IDE의 위쪽에 성공 메시지가 표시됩니다.
+23. 변경 내용을 저장한 다음, **빌드 &gt; 모두 빌드**를 선택하거나 **⌘+B**를 눌러 애플리케이션을 빌드합니다.  애플리케이션이 컴파일되면 IDE의 위쪽에 성공 메시지가 표시됩니다.
 
     ![](hello-ios-quickstart-images/image21.png "IDE 위쪽에 표시된 성공 메시지")
 
-    오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다.
+    오류가 있는 경우 이전 단계를 진행하고, 애플리케이션이 성공적으로 빌드될 때까지 모든 오류를 수정합니다.
 
-27. 마지막으로, **iOS 시뮬레이터**에서 응용 프로그램을 테스트합니다. IDE의 왼쪽 위에 있는 첫 번째 드롭다운에서 **디버그**를 선택하고, 두 번째 드롭다운에서 **iPhone XR iOS 12.0**(또는 사용 가능한 다른 시뮬레이터)을 선택하고, **시작**(재생 단추와 비슷한 삼각형 단추)을 누릅니다.
+27. 마지막으로, **iOS 시뮬레이터**에서 애플리케이션을 테스트합니다. IDE의 왼쪽 위에 있는 첫 번째 드롭다운에서 **디버그**를 선택하고, 두 번째 드롭다운에서 **iPhone XR iOS 12.0**(또는 사용 가능한 다른 시뮬레이터)을 선택하고, **시작**(재생 단추와 비슷한 삼각형 단추)을 누릅니다.
 
     ![](hello-ios-quickstart-images/image27.png "시뮬레이터를 선택하고 시작을 누릅니다.")
 
     > [!NOTE]
     > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
-28. 그러면 iOS 시뮬레이터 내에서 응용 프로그램이 시작됩니다.
+28. 그러면 iOS 시뮬레이터 내에서 애플리케이션이 시작됩니다.
 
-    ![](hello-ios-quickstart-images/image28.png "iOS 시뮬레이터 내에서 실행되는 응용 프로그램")
+    ![](hello-ios-quickstart-images/image28.png "iOS 시뮬레이터 내에서 실행되는 애플리케이션")
 
     iOS 시뮬레이터에서는 전화 통화가 지원되지 않습니다. 대신 통화를 시도할 때 경고 대화 상자가 표시됩니다.
 
@@ -272,12 +272,12 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
 ## <a name="visual-studio-walkthrough"></a>Visual Studio 연습
 
-이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 응용 프로그램을 만드는 방법을 설명합니다.
+이 연습에서는 영숫자 전화 번호를 숫자 전화 번호로 변환하는 Phoneword라는 애플리케이션을 만드는 방법을 설명합니다.
 
-**참고**: 이 연습에서는 Windows 10 가상 머신에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
+**참고**: 이 연습에서는 Windows 10 Virtual Machine에서 Visual Studio Enterprise 2017을 사용합니다. 위의 요구 사항을 충족하는 한 설정이 이와 다를 수 있지만, 일부 스크린샷은 설정에 따라 다를 수 있습니다.
 
 > [!NOTE]
-> 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 응용 프로그램을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
+> 이 연습을 진행하기 전에 이미 Visual Studio에서 Mac에 연결되어 있어야 합니다. 이는 Xamarin.iOS에서 Apple의 도구를 사용하여 iOS 디자이너 및 애플리케이션을 빌드하고 실행하기 때문입니다. 설정하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드의 단계를 수행합니다.
 
 1. **시작** 메뉴에서 Visual Studio를 시작합니다.
 
@@ -468,19 +468,19 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
     };
     ```
 
-21. 변경 내용을 저장한 다음, **빌드 > 솔루션 빌드**를 선택하거나 **Ctrl+Shift+B**를 눌러 응용 프로그램을 빌드합니다.  응용 프로그램이 컴파일되면 IDE의 아래쪽에 성공 메시지가 표시됩니다.
+21. 변경 내용을 저장한 다음, **빌드 &gt; 솔루션 빌드**를 선택하거나 **Ctrl+Shift+B**를 눌러 애플리케이션을 빌드합니다.  애플리케이션이 컴파일되면 IDE의 아래쪽에 성공 메시지가 표시됩니다.
 
     ![](hello-ios-quickstart-images/vs-image21.png "IDE 아래쪽에 표시된 성공 메시지")
 
-    오류가 있는 경우 이전 단계를 진행하고, 응용 프로그램이 성공적으로 빌드될 때까지 모든 오류를 수정합니다.
+    오류가 있는 경우 이전 단계를 진행하고, 애플리케이션이 성공적으로 빌드될 때까지 모든 오류를 수정합니다.
 
-22. 마지막으로, **원격 iOS 시뮬레이터**에서 응용 프로그램을 테스트합니다. IDE 도구 모음의 드롭다운 메뉴에서 **디버그** 및 **iPhone 8 Plus iOS x.x**를 선택하고, **시작**(재생 단추와 비슷한 녹색 삼각형)을 누릅니다.
+22. 마지막으로, **원격 iOS 시뮬레이터**에서 애플리케이션을 테스트합니다. IDE 도구 모음의 드롭다운 메뉴에서 **디버그** 및 **iPhone 8 Plus iOS x.x**를 선택하고, **시작**(재생 단추와 비슷한 녹색 삼각형)을 누릅니다.
 
     ![](hello-ios-quickstart-images/vs-image27.png "시작 누르기")
 
-23. 그러면 iOS 시뮬레이터 내에서 응용 프로그램이 시작됩니다.
+23. 그러면 iOS 시뮬레이터 내에서 애플리케이션이 시작됩니다.
 
-    ![](hello-ios-quickstart-images/vs-image28.png "iOS 시뮬레이터 내에서 실행되는 응용 프로그램")
+    ![](hello-ios-quickstart-images/vs-image28.png "iOS 시뮬레이터 내에서 실행되는 애플리케이션")
 
     iOS 시뮬레이터에서는 전화 통화가 지원되지 않습니다. 대신 통화를 시도할 때 경고 대화 상자가 표시됩니다.
 
@@ -488,7 +488,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
 ::: zone-end
 
-첫 번째 Xamarin.iOS 응용 프로그램을 완성한 것을 축하합니다!
+첫 번째 Xamarin.iOS 애플리케이션을 완성한 것을 축하합니다!
 
 이제 이 가이드의 도구와 기술을 [Hello, iOS 심층 분석](~/ios/get-started/hello-ios/hello-ios-deepdive.md)에서 분석할 시간입니다.
 
@@ -496,5 +496,5 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
 - [Xamarin 앱 아이콘 및 시작 이미지(샘플)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
 - [Hello, iOS(샘플)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS 휴먼 인터페이스 지침](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+- [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

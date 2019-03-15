@@ -6,13 +6,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059732"
 ---
+
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
 애플리케이션을 코딩하고 테스트한 후에 배포할 패키지를 준비해야 합니다. 이 패키지를 준비하는 첫 번째 작업은 릴리스할 애플리케이션을 빌드하는 것입니다. 여기에는 주로 일부 애플리케이션 특성을 설정하는 작업이 포함됩니다.
@@ -222,7 +217,7 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 **AOT 컴파일** 옵션([패키지 속성](#Set_Packaging_Properties) 페이지)을 사용하면 어셈블리의 AOT(Ahead-of-Time) 컴파일이 가능합니다. 이 옵션을 사용하면 런타임 이전에 어셈블리를 미리 컴파일하여 JIT(Just In Time) 시작 과부하가 최소화됩니다. 나타나는 네이티브 코드는 컴파일되지 않은 어셈블리와 함께 APK에 포함됩니다. 이로 인해 애플리케이션 시작 시간이 짧아지며 APK 크기는 약간 커집니다.
 
-**AOT 컴파일** 옵션에는 엔터프라이즈 이상의 라이선스가 필요합니다. **AOT 컴파일**은 프로젝트가 릴리스 모드로 구성된 경우에만 사용할 수 있고 기본적으로 사용하지 않게 설정되어 있습니다. AOT에 대한 자세한 내용은 [AOT](http://www.mono-project.com/docs/advanced/aot/)를 참조하세요.
+**AOT 컴파일** 옵션에는 엔터프라이즈 이상의 라이선스가 필요합니다. **AOT 컴파일**은 프로젝트가 릴리스 모드로 구성된 경우에만 사용할 수 있고 기본적으로 사용하지 않게 설정되어 있습니다. AOT에 대한 자세한 내용은 [AOT](https://www.mono-project.com/docs/advanced/aot/)를 참조하세요.
 
 #### <a name="llvm-optimizing-compiler"></a>LLVM 최적화 컴파일러
 
@@ -266,7 +261,7 @@ Xamarin.Android 앱의 릴리스를 준비할 때는 지원되는 CPU 아키텍�
 
 앱이 참조되는 모든 라이브러리의 모든 메서드를 사용하는 것은 아니므로 ProGuard 같은 도구(위 참조)를 사용하면 사용되지 않는 메서드를 코드에서 제거할 수 있습니다. **Multi-Dex 사용**은 절대적으로 필요한 경우에만 사용하도록 설정합니다. 즉 ProGuard를 사용한 후에도 앱이 65K 이상의 Java 메서드를 참조하는 경우입니다.
 
-Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](http://developer.android.com/tools/building/multidex.html)을 참조하세요.
+Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](https://developer.android.com/tools/building/multidex.html)을 참조하세요.
 
 <a name="Compile" />
 
@@ -374,6 +369,6 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 - [다중 코어 디바이스 및 Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [CPU 아키텍처](~/android/app-fundamentals/cpu-architectures.md)
-- [AOT](http://www.mono-project.com/docs/advanced/aot/)
-- [코드 및 리소스 축소 ](http://developer.android.com/tools/help/proguard.html)
-- [64K가 넘는 메서드의 앱 구성](http://developer.android.com/tools/building/multidex.html)
+- [AOT](https://www.mono-project.com/docs/advanced/aot/)
+- [코드 및 리소스 축소 ](https://developer.android.com/tools/help/proguard.html)
+- [64K가 넘는 메서드의 앱 구성](https://developer.android.com/tools/building/multidex.html)

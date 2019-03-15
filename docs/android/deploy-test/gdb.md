@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111384"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667592"
 ---
 # <a name="gdb"></a>GDB
 
@@ -119,7 +119,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 3. `AndroidNativeLibrary`의 **빌드 동작**을 사용하여 프로젝트에 **libs/armeabi-v7a/libgdbserver.so**를 추가합니다.
 
-4. 응용 프로그램을 다시 빌드하고 다시 설치합니다.
+4. 애플리케이션을 다시 빌드하고 다시 설치합니다.
 
 앱이 다시 설치되면 빠른 배포를 사용하는 디버그 빌드 구성과 마찬가지로 `_Gdb` 대상과 인쇄된 `gdb` 명령을 실행합니다.
 
@@ -145,7 +145,7 @@ GNU gdb (GDB) 7.3.1-gg2
 2.  앱 디버깅 활성화.
 3.  액세스 가능한 `gdbserver`.
 
-디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 응용 프로그램에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)을 편집하여 추가할 수 있습니다.
+디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 애플리케이션에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)을 편집하여 추가할 수 있습니다.
 
 앱 디버깅은 [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) 사용자 지정 특성 속성을 `true`로 설정하거나 **속성/AndroidManifest.xml**을 편집하고 `//application/@android:debuggable` 특성을 `true`로 설정하여 활성화할 수 있습니다.
 
@@ -163,9 +163,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip`가 작동하지 않음
 
-`mono_pmip` 함수([관리되는 스택 프레임 가져오기](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)에 유용)가 `libmonosgen-2.0.so`에서 내보내졌고, `_Gdb` 대상을 현재 끌어내릴 수 없습니다. (이 문제는 향후 릴리스에서 수정됩니다.)
+`mono_pmip` 함수([관리되는 스택 프레임 가져오기](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)에 유용)가 `libmonosgen-2.0.so`에서 내보내졌고, `_Gdb` 대상을 현재 끌어내릴 수 없습니다. (이 문제는 향후 릴리스에서 수정됩니다.)
 
-`libmonosgen-2.0.so`에 있는 함수 호출을 활성화하려면 대상 장치에서 `gdb-symbols` 디렉터리로 복사합니다.
+`libmonosgen-2.0.so`에 있는 함수 호출을 활성화하려면 대상 디바이스에서 `gdb-symbols` 디렉터리로 복사합니다.
 
 ```bash
 $ adb pull /data/data/Mono.Android.DebugRuntime/lib/libmonosgen-2.0.so Project/gdb-symbols
@@ -173,9 +173,9 @@ $ adb pull /data/data/Mono.Android.DebugRuntime/lib/libmonosgen-2.0.so Project/g
 
 그런 다음, 디버깅 세션을 다시 시작합니다.
 
-### <a name="bus-error-10-when-running-the-gdb-command"></a>`gdb` 명령을 실행할 경우 Bus error: 10
+### <a name="bus-error-10-when-running-the-gdb-command"></a>버스 오류: `gdb` 명령을 실행할 때 10
 
-`"Bus error: 10"`과 함께 `gdb` 명령 오류가 출력될 경우 Android 장치를 다시 시작합니다.
+`"Bus error: 10"`과 함께 `gdb` 명령 오류가 출력될 경우 Android 디바이스를 다시 시작합니다.
 
 ```bash
 $ "/path/to/arm-linux-androideabi-gdb" -x "Project/gdb-symbols/gdb.env"

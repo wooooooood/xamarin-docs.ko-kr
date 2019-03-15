@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Mac – 관련 설명서
-description: '이 문서에서는 Xamarin.Mac 개발자를 위한 관련 설명서: Xamarin.iOS 설명서, Apple의 Mac 개발자 센터 및 Xamarin.Mac으로 사용자 인터페이스를 작성하는 방법을 설명하는 다양한 설명서에 대한 연결을 제공합니다.'
+description: 이 문서는 Xamarin.Mac 개발자를 위한 관련 설명서에 대한 링크를 제공합니다. Xamarin.iOS 설명서, Apple의 Mac 개발자 센터 및 Xamarin.Mac으로 사용자 인터페이스를 작성하는 방법을 설명하는 다양한 안내서를 제공합니다.
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526951"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667655"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac – 관련 설명서
 
@@ -22,13 +22,13 @@ ms.locfileid: "51526951"
 
 - **Apple의 [Mac 개발자 센터](https://developer.apple.com/devcenter/mac/)** - Objective-C에서 호출하는 API를 간단하게 C#으로 변환하는 예제를 자주 제공합니다. 자세한 방법은 [Mac API 이해](~/mac/app-fundamentals/mac-apis.md)를 참조하세요.
 
-- [**스택 오버플로**](http://stackoverflow.com/) - ["NSOutlineView의 모든 노드를 자동으로 확장하려면 어떻게 해야 하나요"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes)와 같은 간단한 일회성 질문에 대한 답을 제공하는 훌륭한 리소스입니다. 이러한 예제는 종종 Objective-C에서도 제공되며 C#으로 변환해야 합니다. 하지만 C#에는 답변의 하위 집합이 있습니다.
+- [**스택 오버플로**](https://stackoverflow.com/) - ["NSOutlineView의 모든 노드를 자동으로 확장하려면 어떻게 해야 하나요"](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes)와 같은 간단한 일회성 질문에 대한 답을 제공하는 훌륭한 리소스입니다. 이러한 예제는 종종 Objective-C에서도 제공되며 C#으로 변환해야 합니다. 하지만 C#에는 답변의 하위 집합이 있습니다.
 
 ## <a name="user-interface"></a>사용자 인터페이스
 
 Xamarin.Mac 애플리케이션에서 C# 및 .NET을 작업할 때 개발자는 *Objective-C* 및 *Xcode*에서 작업하는 개발자와 동일한 사용자 인터페이스 컨트롤에 액세스할 수 있습니다. Xamarin.Mac이 Xcode와 직접 통합되므로 개발자는 Xcode의 _Interface Builder_를 사용하여 앱의 사용자 인터페이스를 만들고 유지 관리할 수 있습니다(또는 필요에 따라 C# 코드에서 바로 작성).
 
-아래에 나열된 지침은 Xamarin.Mac 응용 프로그램에서 macOS 요소를 작업하는 자세한 방법을 설명합니다.
+아래에 나열된 지침은 Xamarin.Mac 애플리케이션에서 macOS 요소를 작업하는 자세한 방법을 설명합니다.
 
 - [Windows](~/mac/user-interface/window.md)
 - [대화 상자](~/mac/user-interface/dialog.md)

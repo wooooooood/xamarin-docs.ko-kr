@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: ecd3fe7256eeaa51baf1bc2c367ff7560db51b0c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055817"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667057"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -35,7 +35,6 @@ Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 다른 구성 
 -  **Subscribe** - 특정 서명이 있는 메시지를 수신 대기하고, 수신되면 일부 작업을 수행합니다. 여러 구독자가 동일한 메시지를 수신 대기할 수 있습니다.
 -  **Send** - 수신기에서 수행할 메시지를 게시합니다. 수신기에서 구독하지 않으면 메시지가 무시됩니다.
 
-
 `MessagingService`는 솔루션 전체에서 사용되는 `Subscribe` 및 `Send` 메서드가 있는 정적 클래스입니다.
 
 메시지에는 메시지를 *처리*하는 방법으로 사용되는 `message` 문자열 매개 변수가 있습니다. `Subscribe` 및 `Send` 메서드는 제네릭 매개 변수를 사용하여 메시지를 전달하는 방식을 더 자세히 제어합니다. 동일한 `message` 텍스트를 사용하지만 제네릭 형식 인수가 다른 두 개의 메시지는 동일한 구독자에게 전달되지 않습니다.
@@ -56,6 +55,8 @@ Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 다른 구성 
 ## <a name="using-the-messagingcenter"></a>MessagingCenter 사용
 
 메시지는 사용자 상호 작용(예: 단추 클릭), 시스템 이벤트(예: 컨트롤 변경 상태) 또는 일부 다른 인시던트(예: 비동기 다운로드 완료 등)의 결과로 전송될 수 있습니다. 구독자는 사용자 인터페이스의 모양을 변경하거나, 데이터를 저장하거나, 일부 다른 작업을 트리거하기 위해 수신 대기 중일 수 있습니다.
+
+`MessagingCenter` 클래스 사용에 대한 자세한 내용은 [느슨하게 결합된 구성 요소 간 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)을 참조하세요.
 
 ### <a name="simple-string-message"></a>간단한 문자열 메시지
 
@@ -114,3 +115,4 @@ MessagingCenter는 특히 보기 모델 간의 결합을 줄일 수 있는 간�
 
 - [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
+- [느슨하게 결합된 구성 요소 간 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)
