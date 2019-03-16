@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 0401c2c05677c719bbe4914cc7e008b650fdd198
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526244"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070828"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>IOS 디자이너를 사용 하 여 사용자 지정 컨트롤을 사용 하 여
 
 ## <a name="requirements"></a>요구 사항
 
-IOS 용 Xamarin 디자이너는 Windows에서 Mac 및 Visual Studio 2015 및 2017 용 Visual Studio에서 사용할 수 있습니다.
+IOS 용 Xamarin 디자이너는 Mac 및 Visual Studio 2017 및 나중에 Windows 용 Visual Studio에서 사용할 수 있습니다.
 
 이 가이드에서 다루는 내용에 익숙하다고 가정 합니다 [시작 하기 가이드](~/ios/get-started/index.md)합니다.
 

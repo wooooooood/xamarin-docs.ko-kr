@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056138"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981733"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -393,7 +393,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 시작 될 때 프로그램을 5 `Picker` 이러한 5 개 기본 값을 표시 하는 뷰 `FlexLayout` 속성입니다. `FlexLayout` 화면 아래쪽에 세 명의 자식을 포함 합니다.
 
-[![실험 페이지: 기본값](flex-layout-images/ExperimentDefault.png "실험 페이지-기본")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![실험 페이지: 기본](flex-layout-images/ExperimentDefault.png "실험 페이지-기본")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 각 합니다 `Label` 보기에는 할당 된 공간을 보여 주는 회색 배경이 `Label` 내는 `FlexLayout`합니다. 배경색을 `FlexLayout` 자체는 연한 청회색 합니다. 왼쪽 및 오른쪽에 작은 여백을 제외 하 고 페이지의 전체 아래쪽 영역을 차지 합니다.
 
@@ -412,7 +412,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 같습니다.는 **실험** (왼쪽에서 오른쪽)으로 표시 하는 페이지의 `Row` 방향 `Column` 방향 및 `ColumnReverse` 방향:
 
-[![실험 페이지: 방향을](flex-layout-images/ExperimentDirection.png "방향 실험 페이지")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
+[![실험 페이지: 방향](flex-layout-images/ExperimentDirection.png "방향 실험 페이지")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
 
 대 여 `Reverse` 오른쪽 또는 아래쪽에서 옵션을 항목의 시작 합니다.
 
@@ -428,7 +428,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 화면 왼쪽에서 오른쪽으로 표시 합니다 `NoWrap`하십시오 `Wrap` 및 `Reverse` 12 자식에 대 한 옵션:
 
-[![실험 페이지: Wrap](flex-layout-images/ExperimentWrap.png "실험 페이지-줄 바꿈")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![실험 페이지: 줄 바꿈](flex-layout-images/ExperimentWrap.png "실험 페이지-줄 바꿈")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 경우는 `Wrap` 속성이 `NoWrap` 주 축 (예:이 프로그램)에 제한 되 고 기본 축이 전각 또는 모든 자식에 맞게 충분히 긴는 `FlexLayout` iOS 스크린 샷으로 더 작은 항목을 확인 하려고 합니다. 방법을 보여 줍니다. 가진 품목의 shrinkness를 제어할 수 있습니다.는 [ `Shrink` ](#shrink) 바인딩 가능 속성을 연결 합니다.
 
@@ -447,7 +447,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 속성에 지정 하는 방법 항목 정도 까우 며이 예제에서 가로 축에는 기본 축의 합니다.
 
-[![실험 페이지: 콘텐츠를 정당화](flex-layout-images/ExperimentJustifyContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
+[![실험 페이지: 콘텐츠 맞춤](flex-layout-images/ExperimentJustifyContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
 
 모든 스크린샷 세 개에 `Wrap` 속성이 `Wrap`합니다. `Start` 기본 이전 Android 스크린샷에 표시 됩니다. IOS 다음 스크린샷에서 `Center` 옵션: 모든 항목 센터로 이동 됩니다. 세 가지 다른 옵션으로 시작 `Space` 항목 차지 하지 않는 추가 공간을 할당 합니다. `SpaceBetween` 할당 된 항목 동일 하 게 사이의 공간 `SpaceAround` puts 같은 각 항목 둘레의 공간 동안 `SpaceEvenly` puts 공간 각 항목 사이 및 첫 번째 항목 전후 행에서 마지막 항목 동일 합니다.
 
@@ -464,7 +464,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 두 속성 중 하나입니다 (다른 되 고 [ `AlignContent` ](#align-content)) 자식 교차 축에 정렬 되는 방법을 나타내는입니다. 각 행 내에서 자식 (이전 스크린샷에 표시 된)으로 확장 기능은 다음 세 가지 스크린샷에서 표시 된 것 처럼 시작, 가운데 또는 각 항목의 끝에 정렬 합니다.
 
-[![실험 페이지: 항목을 정렬](flex-layout-images/ExperimentAlignItems.png "실험 페이지-항목 정렬")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
+[![실험 페이지: 항목 정렬](flex-layout-images/ExperimentAlignItems.png "실험 페이지-항목 정렬")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 IOS 스크린샷에서 모든 자식의 위쪽을 맞춥니다. Android 스크린샷에서 항목은 세로로 가운데에 가장 높은 자식 기반 합니다. UWP 스크린샷에 있는 모든 항목의 아래쪽 정렬 됩니다.
 
@@ -490,7 +490,7 @@ IOS 스크린샷에서 모든 자식의 위쪽을 맞춥니다. Android 스크�
 
 IOS 스크린샷에서; 맨 위에 있는 두 행은 Android 스크린 샷 있을 때에 센터; 그리고 UWP 스크린샷에서 맨 아래에서. 행은 다양 한 방법으로 간격이 수 있습니다.
 
-[![실험 페이지: 콘텐츠 2 Align](flex-layout-images/ExperimentAlignContent2.png "실험 페이지-정렬 콘텐츠 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![실험 페이지:  콘텐츠 2 align](flex-layout-images/ExperimentAlignContent2.png "실험 페이지-정렬 콘텐츠 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 `AlignContent` 행 또는 열이 하나만 있으면 효과가 없습니다.
 
@@ -517,13 +517,13 @@ IOS 스크린샷에서; 맨 위에 있는 두 행은 Android 스크린 샷 있�
 에 대 한는 `Label` 라는 요소가 `label` (또는 예제)를 설정할 수 있습니다는 `AlignSelf` 다음과 같은 코드의 속성:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 에 대 한 참조는 합니다 `FlexLayout` 의 부모는 `Label`합니다. XAML을에서 다음과 같은 속성을 설정할 수 있습니다.
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>Order 속성
@@ -580,7 +580,7 @@ XAML, 장치 독립적 단위에서 크기에 대 한 숫자를 사용할 수 �
 
 [![기본 페이지를 실험](flex-layout-images/BasisExperiment.png "기반 실험 페이지")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-왼쪽에 있는 iOS 스크린샷은 두 `Label` 장치 독립적 단위에서 높이 지정 된 요소입니다. 전체 높이의 비율을 된 높이 지정 된 Android 화면 표시를 `FlexLayout`입니다. 경우는 `Basis` 자식의 높이 100%로 설정 됩니다는 `FlexLayout`, 고 다음 열으로 줄 바꿈되면 하 및 UWP 스크린샷에서 보여 주듯이 해당 열의 전체 높이 차지 합니다: 5 명의 자식 행에서 정렬 되는 것 처럼 표시 됩니다 하지만 실제로 5 개의 열에 정렬 됩니다.
+왼쪽에 있는 iOS 스크린샷은 두 `Label` 장치 독립적 단위에서 높이 지정 된 요소입니다. 전체 높이의 비율을 된 높이 지정 된 Android 화면 표시를 `FlexLayout`입니다. 경우는 `Basis` 자식의 높이 100%로 설정 됩니다는 `FlexLayout`, 고 다음 열으로 줄 바꿈되면 하 및 UWP 스크린샷에서 보여 주듯이 해당 열의 전체 높이 차지 합니다: 5 명의 자식 행에 정렬 됩니다 있지만 실제로 5 개의 열에 정렬 처럼 표시 됩니다.
 
 ### <a name="the-grow-property"></a>속성을 증가
 

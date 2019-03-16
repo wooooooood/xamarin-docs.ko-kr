@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285588"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071080"
 ---
 # <a name="ios-designer-basics"></a>iOS Designer 기본 사항
 
 _이 가이드에서는 Xamarin iOS 디자이너 소개 합니다. IOS 디자이너를 사용 하 여 시각적으로 컨트롤을 배치 하는 방법, 코드에서 해당 컨트롤에 액세스 하는 방법 및 속성을 편집 하는 방법을 보여 줍니다._
 
-IOS 용 Xamarin 디자이너에는 Xcode의 Interface Builder 비슷합니다는 시각적 인터페이스 디자이너와 Android Designer는입니다. 여러 기능 중 일부 Mac 및 Visual Studio 2015 및 2017 용 Visual Studio, 끌어서 놓기, 이벤트 처리기를 설정에 대 한 인터페이스 및 사용자 지정 컨트롤을 렌더링 하는 기능을 사용 하 여 원활한 통합을 포함 합니다.
+IOS 용 Xamarin 디자이너에는 Xcode의 Interface Builder 비슷합니다는 시각적 인터페이스 디자이너와 Android Designer는입니다. 여러 기능 중 일부 Visual Studio에 대 한 Windows 및 Mac, 끌어서 놓기, 이벤트 처리기를 설정에 대 한 인터페이스 및 사용자 지정 컨트롤을 렌더링 하는 기능을 사용 하 여 원활한 통합을 포함 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-IOS 디자이너는 Windows에서 Visual Studio 2015 및 2017 및 Mac 용 Visual Studio에서 사용할 수 있습니다. Visual Studio 2015 또는 2017에서 iOS 디자이너 Xcode에 필요한 실행 되 고 있지 않더라도 올바르게 구성 된 Mac 빌드 호스트에 대 한 연결을 필요 합니다.
+IOS 디자이너는 Mac 및 Visual Studio 2017 및 나중에 Windows 용 Visual Studio에서 사용할 수 있습니다. Visual Studio에 대 한 Windows, iOS 디자이너는 Xcode를 실행 해야 하지만 올바르게 구성 된 Mac 빌드 호스트에 대 한 연결을 필요 합니다.
 
 이 가이드에서 다루는 내용에 익숙하다고 가정 합니다 [시작 하기 가이드](~/ios/get-started/index.md)합니다.
 
@@ -84,13 +84,13 @@ IOS 디자이너는 개발자가 응용 프로그램의 사용자 인터페이�
 
 에 **Solution Pad**로 이동 하면 **ViewController.cs** 함을 의미할 공개 표시기를 클릭 하 고 뷰 컨트롤러의 `ViewController` 각각 두 개의 클래스 정의 범위 파일 포함 된 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의:
 
-[![ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
+[![두 ViewController 클래스를 구성 하는 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 에 **솔루션 탐색기**로 이동 하면 **ViewController.cs** 함을 의미할 공개 표시기를 클릭 하 고 뷰 컨트롤러의 `ViewController` 클래스 정의의 각 두 파일에 걸쳐 포함 하는 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의:
 
-[![ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
+[![두 ViewController 클래스를 구성 하는 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "ViewController 클래스를 구성 하는 두 개의 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
@@ -151,7 +151,7 @@ Xamarin.iOS 프로젝트 Mac 용 Visual Studio를 사용 하 여 만든 스토�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-대부분의 Xamarin.iOS 프로젝트를 Visual Studio 2015 또는 2017을 사용 하 여 만든 스토리 보드를 포함 합니다. 스토리 보드의 콘텐츠를 보려면에서.storyboard 파일을 두 번 클릭 합니다 **솔루션 탐색기**:
+대부분의 Xamarin.iOS 프로젝트를 Visual Studio를 사용 하 여 만든 스토리 보드를 포함 합니다. 스토리 보드의 콘텐츠를 보려면에서.storyboard 파일을 두 번 클릭 합니다 **솔루션 탐색기**:
 
 [![IOS 디자이너에서에서 스토리 보드를 엽니다](introduction-images/7-storyboardopen-vs.png "iOS 디자이너에서에서 스토리 보드 열기")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 

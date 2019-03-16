@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2765ab0c697d977eb332e47cfbc413e3e0adafb7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ac8df634c4abe3aafa725992c251f9ef879dc00
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668818"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070984"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>파트 1-Xamarin Mobile Platform 이해
 
@@ -105,7 +105,7 @@ Visual Studio IDE를 사용 하 여 코드를 작성 하 고 화면 레이아웃
 Android 응용 프로그램 개발에는 Java 및 Android Sdk 설치에 필요 합니다. 이러한 컴파일러, 에뮬레이터 및 빌드, 배포 및 테스트에 필요한 다른 도구를 제공 합니다. Java, Google의 Android SDK 및 Xamarin 도구 수 모두 설치 하 고 다음 구성에서 실행 합니다.
 
 -  Mac OS X El Capitan 10.11 + () 위에 Mac 용 Visual Studio 사용 하 여
--  Windows 7 및 위의 Visual Studio 2015 또는 2017을 사용 하 여
+-  Windows 7 및 위의 Visual Studio 2017 이상
 
 
 Xamarin 구성 하는 시스템 필수 구성 요소는 Java를 사용 하 여 Android 및 Xamarin 도구 (화면 레이아웃을 위한 비주얼 디자이너가 포함)를 통합된 설치 관리자를 제공 합니다. 참조를 [Xamarin.Android 설치 가이드](~/android/get-started/installation/index.md) 자세한 지침입니다.

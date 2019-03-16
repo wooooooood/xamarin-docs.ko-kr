@@ -1,5 +1,5 @@
 ---
-title: 질문과 대답
+title: Xamarin.Android에 대 한 질문과 대답
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
@@ -7,14 +7,9 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: ad3fc32245880f6603c63d33aac49309fd61b753
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "36935466"
 ---
-# <a name="frequently-asked-questions"></a>질문과 대답
+
+# <a name="android-frequently-asked-questions"></a>Android 질문과 대답
 
 ## <a name="installation--setup"></a>설치 및 설정
 
@@ -72,7 +67,7 @@ Windows;에서 개발할 때 Android 장치에서 디버그 하려면 호환 USB
 
 
 
-## <a name="deprecated"></a>사용 되지 않음
+## <a name="deprecated"></a>사용되지 않음
 
 > [!NOTE]
 > 아래 문서는 Xamarin의 최신 버전에서 해결 된 문제에 적용 됩니다. 그러나 소프트웨어의 최신 버전에 문제가 발생 하면 제출 하세요를 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 버전을 사용 하 여 합니다.

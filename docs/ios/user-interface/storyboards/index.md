@@ -20,7 +20,7 @@ ms.date: 03/22/2017
 
 ## <a name="requirements"></a>요구 사항
 
-스토리 보드 설치 Xamarin 워크 로드를 사용 하 여 Visual Studio 2015 및 2017 또는 Mac 용 Visual Studio의 디자이너 iOS를 사용 하 여 사용할 수 있습니다.
+스토리 보드 설치 Xamarin 워크 로드를 사용 하 여 Visual Studio 2017 또는 Mac 용 Visual Studio의 디자이너 iOS를 사용 하 여 사용할 수 있습니다.
 
 ## <a name="what-is-a-storyboard"></a>Storyboard 란?
 

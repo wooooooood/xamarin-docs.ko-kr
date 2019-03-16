@@ -1,5 +1,5 @@
 ---
-title: 질문과 대답
+title: Xamarin.iOS에 대 한 질문과 대답
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107510"
 ---
-# <a name="frequently-asked-questions"></a>질문과 대답
+
+# <a name="ios-frequently-asked-questions"></a>Frequently Asked Questions iOS
 
 ## <a name="general-questions"></a>일반적인 질문
 
@@ -42,7 +37,7 @@ Mono에 대 한 모든 런타임 환경 변수를 설정 해야 할 경우 설�
 
 ## <a name="publishing-questions"></a>질문 게시
 
-### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[앱 스토어에 제출 하는 동안 오류가 발생 했습니다: "잘못 된 번들-bitcode에 포함 될 수 없는 옵션이 제출에서 감지 됩니다."](invalid-bundle-bitcode.md)
+### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[앱 스토어에 제출 하는 동안 오류가 발생 했습니다. "잘못 된 번들-bitcode에 포함 될 수 없는 옵션이 제출에서 감지 됩니다."](invalid-bundle-bitcode.md)
 
 앱을 제출 하는 _필요_ watchOS 및 tvOS 앱과 같은 bitcode Xcode 9를 사용 하 여 수행 해야 합니다.
 
@@ -58,7 +53,7 @@ Xamarin 주기 7 일부 터이 달성 하기 위해 사용자 지정된 MSBuild 
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[Visual Studio에서.xcarchive 아카이브를 만들 수는?](create-xcarchive.md)
 Xamarin 4부터 아니며 이제 만들 수는 `.xcarchive` 설정 하 여 Windows에서의 `ArchiveOnBuild` 속성을 `true`입니다.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[“Disallowed paths ( "iTunesMetadata.plist" ) found at ...”(허용되지 않은 경로(“iTunesMetadata.plist”)가 발견되었습니다...) 오류와 함께 앱 제출에 실패하는 이유는 무엇인가요?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[다음 메시지가 표시되며 내 앱 제출에 실패한 이유는 무엇인가요? "...에서 허용되지 않는 경로("iTunesMetadata.plist")를 발견했습니다."](itunesmetadata-disallowed-paths.md)
 이 오류는 Apple 앱 스토어 확인 프로세스에 변경의 결과입니다. 이 특정 오류는 _되지_ 에 관련 된 특정 버전의 Xamarin이 설치 되어 있는 것 이므로 다운 그레이드 됩니다 _하지_ 도움말입니다. 이 가이드는 문제를 해결 하는 방법에 대 한 자세한 정보에 연결 됩니다.
 
 
@@ -70,13 +65,13 @@ Xamarin 4부터 아니며 이제 만들 수는 `.xcarchive` 설정 하 여 Windo
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[키 집합에 유효한 iPhone 코드 서명 키가 없다는 오류와 함께 iOS 빌드에 실패하는 이유는 무엇인가요?](no-codesigning-keys.md)
 이 오류 메시지 때 해당 프로젝트를 유효한 코드 서명 자격 증명을 찾고 발생 되지만 찾을 수 없습니다. 테스트 및 실제 iOS 장치에 배포에 반드시 코드 서명 뿐만 아니라 임시 및 앱 빌드를 저장 합니다.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Objective-C 개체를 마샬링하지 못하는 System.Exception 오류와 함께 iOS 9 앱에 실패하는 이유는 무엇인가요?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[다음 메시지를 표시하며 내 iOS 9 앱이 실패한 이유는 무엇인가요? System.Exception: Objective-C 개체를 마샬링하지 못했습니다.](exception-marshal-obj-c.md)
 IOS 9에서에서 API 변경 필요 이제 기본 API로 관리 되지 않는 코드를 호출 하는 경우 콜백 생성자를 사용는 필요 합니다.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[런타임 오류: 어셈블리 mscorlib.dll을 찾을 수 없거나 로드할 수 없습니다.](error-mscorlib-not-found.md)
 이런 경우는 *숨겨진* `.monotouch-32` 및 `.monotouch-64` 폴더에서 누락 된를 `.xcarchive` 서명에 / IPA 만들기, 런타임 오류를 발생 시키는.
 
-## <a name="deprecated"></a>사용 되지 않음
+## <a name="deprecated"></a>사용되지 않음
 
 > [!IMPORTANT]
 > 아래 문서는 Xamarin의 최신 버전에서 해결 된 문제에 적용 됩니다. 그러나 소프트웨어의 최신 버전에 문제가 발생 하면 제출 하세요를 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 버전을 사용 하 여 합니다.

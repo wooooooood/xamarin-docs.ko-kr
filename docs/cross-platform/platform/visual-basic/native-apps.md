@@ -6,12 +6,12 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 55c08c1bd0d82f8458e0c07b4202b6275600ff38
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: f62d3cb076019ba49303f2c82f009975d9fbdc50
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671106"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070971"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>Visual Basic.NET Xamarin iOS 및 Android
 
@@ -284,18 +284,6 @@ Mac 용 visual Studio는 Visual Basic 언어를 지원 하지 않습니다 – �
 2. 추가 _post-build_ 프로젝트 루트 디렉터리에이 프로젝트에서 출력 DLL을 복사 하는 스크립트 (인 외부 **/bin/**). 버전 제어 구성에 따라 DLL 이제 있어야 소스 제어에 추가 합니다.
 
   [![](native-apps-images/image6-vs-sml.png "빌드 이벤트 사후 빌드 스크립트 VB DLL을 복사 하려면")](native-apps-images/image6-vs.png#lightbox)
-
-#### <a name="visual-studio-2015"></a>Visual Studio 2015
-
-1.  선택한 프로젝트를 마우스 오른쪽 단추로 클릭 **속성 > 컴파일** , 한 다음 왼쪽 위 조합 상자에 모든 구성 선택 되어 있는지 확인 합니다. 클릭 된 **이벤트를 작성 하는 중...**  오른쪽 아래에는 단추입니다.
-
-    [![](native-apps-images/image6.png "프로젝트 속성 컴파일 섹션")](native-apps-images/image6.png#lightbox)
-
-1.  이 프로젝트에서 프로젝트 루트 디렉터리에 출력 DLL을 복사 하는 빌드 후 스크립트 추가 (외부 되 **/bin/** ). 버전 제어 구성에 따라 DLL 이제 있어야 소스 제어에 추가 합니다.
-
-    [![](native-apps-images/image7.png "빌드 이벤트 창")](native-apps-images/image7.png#lightbox)
-
-#### <a name="all-versions"></a>모든 버전
 
 다음에 프로젝트를 빌드하면, 이식 가능한 클래스 라이브러리 어셈블리 확인에서 / 커밋/푸시 DLL 변경 해야 하는 경우 및 프로젝트 루트에 복사 됩니다 (되도록 Mac 용 Visual Studio를 사용 하 여 Mac에 다운로드할 수 있습니다)를 저장 합니다.
 

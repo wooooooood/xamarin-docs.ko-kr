@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668883"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071023"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.iOS와 iCloud를 사용 하 여
 
@@ -37,7 +37,7 @@ IOS 5에서에서 iCloud 저장소 API에는 응용 프로그램을을 중앙 �
 
 - Xamarin.iOS의 안정적인 최신 버전
 - Xcode 8 이상
-- Visual Studio for Mac 또는 Visual Studio 2015 이상입니다.
+- Visual Studio for Mac 또는 Visual Studio 2017 이상입니다.
 
 ## <a name="preparing-for-icloud-development"></a>ICloud 개발을 위한 준비
 

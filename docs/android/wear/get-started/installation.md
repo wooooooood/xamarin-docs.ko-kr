@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: af9be54b4509f7202618d9d68210eb534f63ccbf
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 96fd6d32f37dd90422f05caf33cfda9a65683fd2
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671639"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071036"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -22,7 +22,7 @@ _이 문서에서는 컴퓨터와 Android Wear 개발용 장치를 준비 하는
 
 다음은 Xamarin 기반 Android Wear 앱을 만드는 데 필요 합니다.
 
--   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; 하는 사용 경우 Visual Studio, Visual Studio 2015 Professional 이상 버전이 필요 합니다.
+-   **Visual Studio 또는 Mac 용 Visual Studio** &ndash; Visual Studio 2017 Community 이상 버전이 필요 합니다.
 
 -   **Xamarin.Android** &ndash; 4.17 이상 Xamarin.Android를 설치 하 고 mac 용 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야
 

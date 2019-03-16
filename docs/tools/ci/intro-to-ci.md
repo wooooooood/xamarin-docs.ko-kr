@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: f2db5f4acd57cbf887d9955d9ea61fce4427c1c3
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 35c5811d57ade1d320e56e292c1eeed094963a0d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672406"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070919"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용 하 여 연속 통합 소개
 
@@ -65,7 +65,7 @@ Visual Studio, Azure DevOps 및 Team Foundation Server 참조의 모든 응용 �
 
 Git 또는 웹 브라우저를 통해 완전히 작동할 수 있습니다 [GUI 클라이언트](http://git-scm.com/downloads/guis) Linux, Mac OSX 및 Windows에서 실행 되는 합니다. 무료 공용 리포지토리입니다. 개인 리포지토리 필요는 [유료 플랜](https://github.com/pricing)합니다.
 
-Visual Studio 2015 및 Visual Studio for Mac에 Git;에 대 한 기본 지원을 제공합니다 Microsoft는 이전 버전의 경우 다음을 제공 합니다.는 [Git에 대 한 다운로드 가능한 확장](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c)합니다. 위에서 설명한 대로 Visual Studio Team Services 및 TFS TFVC 대신 버전 제어에 Git을 사용할 수 있습니다.
+현재 버전의 Visual Studio에 대 한 Windows 및 Mac에 Git에 대 한 기본 지원을 제공합니다. Microsoft에서 제공 된 [Git에 대 한 다운로드 가능한 확장](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) 이전 버전의 Visual Studio에 대 한 합니다. 위에서 설명한 대로 Visual Studio Team Services 및 TFS TFVC 대신 버전 제어에 Git을 사용할 수 있습니다.
 
 ### <a name="subversion"></a>Subversion
 

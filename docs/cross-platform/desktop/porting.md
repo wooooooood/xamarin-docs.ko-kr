@@ -5,12 +5,12 @@ description: UWP 또는 Windows 10 뿐만 아니라 macOS, iOS, Android에서 �
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4bf1dea170bd6b63209693963d54cc2e16163eea
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617542"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071101"
 ---
 # <a name="desktop-app-porting-guidance"></a>데스크톱 앱 포팅 참고 자료
 
@@ -26,7 +26,7 @@ ms.locfileid: "51617542"
 
 ## <a name="net-portability-analyzer"></a>.NET 이식성 분석기
 
-Visual Studio 2015 및 2017 지원 합니다 [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([Windows 용 다운로드](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer))는 기존 응용 프로그램을 검토 하 고 코드의 양을에 이식할 수 있습니다 "있는 그대로" 다른 플랫폼에 알리는 수 . 이 대 한 자세히 알아볼 수 있습니다 [Channel 9 비디오](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)합니다.
+Visual Studio 2017 및 이상 지원 합니다 [.NET Portability Analyzer](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer) ([Windows 용 다운로드](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer))는 기존 응용 프로그램을 검토 하 고 다른 코드의 양을 "있는 그대로" 이식할 수를 알 수 플랫폼입니다. 이 대 한 자세히 알아볼 수 있습니다 [Channel 9 비디오](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)합니다.
 
 이기도에서 명령줄 도구를 다운로드할 수 있습니다 [GitHub에서 이식성 분석기](https://github.com/Microsoft/dotnet-apiport) 동일한 보고서를 제공 하는 데 사용 합니다.
 

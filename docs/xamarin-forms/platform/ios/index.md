@@ -1,5 +1,5 @@
 ---
-title: iOS 플랫폼 기능
+title: Xamarin.Forms의 iOS 플랫폼 기능
 description: Xamarin.Forms 응용 프로그램에 특정 iOS 기능을 추가 합니다.
 ms.prod: xamarin
 ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/22/2019
 ---
 
-# <a name="ios-platform-features"></a>iOS 플랫폼 기능
+# <a name="ios-platform-features-in-xamarinforms"></a>Xamarin.Forms의 iOS 플랫폼 기능
 
 IOS 용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/get-started/requirements.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.
 

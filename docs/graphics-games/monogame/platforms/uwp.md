@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666427"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070932"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
@@ -26,10 +26,10 @@ _MonoGame 유니버설 Windows 플랫폼, 코드 베이스 하나를 사용 하 
 MonoGame UWP 앱 개발에 필요 합니다.
 
 - Windows 10 운영 체제
-- Visual Studio 2015의 모든 버전
+- Visual Studio 2017의 모든 버전
 - Windows 10 개발자 도구
 - 장치가 개발자 모드 설정
-- [Visual Studio 용 MonoGame 3.5](http://www.monogame.net/2016/03/17/monogame-3-5/) 이상
+- [Visual Studio 용 3.7.1 MonoGame](http://community.monogame.net/t/monogame-3-7-1-release/11173) 이상
 
 자세한 내용은 참조 [Windows 10 UWP 개발에 대 한 설정 페이지](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up)합니다.
 

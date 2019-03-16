@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b02ecc8a40f6ff8a1862d50202439d369003a53d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103896"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981603"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>ARKit Xamarin.iOS에서 UrhoSharp 사용
 
@@ -118,7 +118,7 @@ ARKit API는 상당히 간단, 만들기 및 구성 하는 [ARSession](https://d
 그러나이 두 환경을 함께 혼합 하려면 두 가지 문제를 사용 하 여 직면 했습니다.
 
 
-1. IOS, GPU 질감은 2의 제곱이 해상도 있어야 없는 카메라에서 얻게 되는 프레임 예를 들어 2의 거듭제곱 된 해상도: 1280 x 720입니다.
+1. IOS에서 GPU 질감은 2의 제곱이 해상도 있어야 없는 카메라에서 얻게 되는 프레임 예를 들어 2의 거듭제곱 된 해결 방법: 1280x720.
 2. 프레임은 인코딩된 [YUV](https://en.wikipedia.org/wiki/YUV) 두 이미지-하 고 색도 광도가 됩니다 나타내는 형식입니다.
 
 YUV 프레임을 두 개의 다른 해결 방법으로 제공 됩니다.  광도 (기본적으로 회색조 이미지)를 나타내며 훨씬 더 작은 640x360 색차 구성 요소를 1280 x 720 이미지:
@@ -207,11 +207,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 
 실제 조명 조건에 따라 더 밝게 또는 주변에 더 잘 맞게 음영이 짙을 수록 가상 장면 이어야 합니다. Urho 앰비언트 조명 조정에 사용할 수 있는 LightEstimate 속성을 포함 하는 ARFrame 이렇게 같이:
 
-
-    var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
-    var zone = Scene.GetComponent<Zone>();
-    zone.AmbientColor = Color.White * ambientIntensity;
-
+```csharp
+var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
+var zone = Scene.GetComponent<Zone>();
+zone.AmbientColor = Color.White * ambientIntensity;
+```
 
 ### <a name="beyond-ios---hololens"></a>IOS-HoloLens 초과
 

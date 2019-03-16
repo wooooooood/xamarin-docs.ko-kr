@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: d9f4717a4dd76e2fb3767c7baf9aaa868cfc21ff
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 62a10ca57b867255766c02616ee41e57ac166af3
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199819"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071049"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 설치
 
@@ -29,7 +29,7 @@ Visual Studio 2017에서 **도움말** 메뉴를 클릭하여 Xamarin이 설치�
 
 **도움말 > Microsoft Visual Studio 정보**를 클릭하고 설치된 제품 목록을 스크롤하여 Xamarin이 설치되었는지 확인할 수도 있습니다.
 
-![Visual Studio 2015 설치된 제품 화면](windows-images/13-xamarin-is-installed.png "Visual Studio 2015 설치된 제품 화면")
+![Visual Studio 2017 설치 된 제품 화면](windows-images/13-xamarin-is-installed.png "Visual Studio 2017 설치 된 제품 화면")
 
 버전 정보를 찾는 방법에 대한 자세한 내용은 [내 버전 정보와 로그를 어디에서 찾을 수 있습니까?](~/cross-platform/troubleshooting/questions/version-logs.md)를 참조하세요.
 

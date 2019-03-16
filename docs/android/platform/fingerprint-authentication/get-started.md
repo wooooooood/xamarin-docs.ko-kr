@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667726"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070711"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>지문 인증 시작
 
@@ -25,7 +25,7 @@ ms.locfileid: "57667726"
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Android 응용 프로그램을 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에서 권한. 다음 스크린샷은 Visual Studio 2015에서 응용 프로그램에이 권한을 추가 하는 방법을 보여 줍니다.
+Android 응용 프로그램을 요청 해야 합니다는 `USE_FINGERPRINT` 매니페스트에서 권한. 다음 스크린샷은 Visual Studio에서 응용 프로그램에이 권한을 추가 하는 방법을 보여 줍니다.
 
 [![사용 하도록 설정 하면\_Android 매니페스트 화면에서 지문](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 

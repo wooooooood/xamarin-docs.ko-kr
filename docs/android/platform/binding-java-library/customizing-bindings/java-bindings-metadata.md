@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669897"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070906"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
@@ -246,7 +246,10 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>obfuscated
 
-Java 라이브러리를 난독 처리 하는 도구 Xamarin.Android 바인딩 생성기를 생성 하는 기능을 방해할 수 C# 래퍼 클래스입니다. 난독 처리 된 클래스의 특성 포함: * 클래스 이름에는 **$**, 즉 **$.class** * 클래스 이름을 완전히 손상 된 소문자 문자 즉,  **a.class**
+Java 라이브러리를 난독 처리 하는 도구 Xamarin.Android 바인딩 생성기를 생성 하는 기능을 방해할 수 C# 래퍼 클래스입니다. 난독 처리 된 클래스의 특징은 다음과 같습니다. 
+
+* 클래스 이름에는 **$**, 즉 **$.class**
+* 클래스 이름을 완전히 손상 된 소문자 문자 즉, **a.class**
 
 이 코드 조각을 생성 하는 방법의 예로 "난독 처리 되지 않은"는 C# 형식:
 

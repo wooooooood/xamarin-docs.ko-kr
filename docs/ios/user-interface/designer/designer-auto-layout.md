@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cfb684df89bf800a0d32607b119d1bd3fc297c58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123741"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070868"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>IOS 용 Xamarin 디자이너를 사용 하 여 자동 레이아웃
 
@@ -22,7 +22,7 @@ ms.locfileid: "50123741"
 
 ## <a name="requirements"></a>요구 사항
 
-IOS 용 Xamarin 디자이너는 Windows에서 Visual Studio 2015 및 2017에서 Mac 용 Visual Studio에서 사용할 수 있습니다.
+IOS 용 Xamarin 디자이너는 Visual Studio 2017 및 나중에 Windows에서 Mac 용 Visual Studio에서 사용할 수 있습니다.
 
 이 가이드에서 디자이너의 구성 요소에 대 한 지식이 있다고 가정 합니다 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드입니다.
 
@@ -56,11 +56,11 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
 제약 조건 도구 모음 업데이트 되었습니다 및 이제 두 주요 부분으로 구성 됩니다.
 
-- **제약 조건 모드 단추 토글**: 이전에 디자인 화면에서 선택한 뷰를 다시 클릭 하 여 제약 조건 모드를 전환할 합니다. 제약 조건 표시줄에서이 토글 단추를 사용 하면 이제 됩니다.
+- **제약 조건 모드 단추 토글**: 이전에 디자인 화면에서 선택한 뷰를 다시 클릭 하 여 제약 조건 모드를 시작 해야 합니다. 제약 조건 표시줄에서이 토글 단추를 사용 하면 이제 됩니다.
 
   ![제약 조건 모드 설정/해제](designer-auto-layout-images/constraints.png)
 
-- **"업데이트 제약 조건" 단추를:** 제약 조건 편집 모드에에서는 경우에 따라 변경 해야 합니다.
+- **"업데이트 제약 조건" 단추를 합니다.** 경우에 따라 변경 하는 제약 조건 편집 모드에에서 두는 것이 반드시 합니다.
   - 제약 조건 편집 모드에서이 단추 요소 프레임에 맞게 제약 조건을 조정 합니다.
   - 프레임 편집 모드에서에서이 단추 요소 프레임 제약 조건을 정의 하는 위치와 일치 하도록 조정 합니다.
 

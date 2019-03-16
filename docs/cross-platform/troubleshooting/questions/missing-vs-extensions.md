@@ -6,21 +6,18 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2017
-ms.openlocfilehash: 7b1f96807d77d9db0a892c5e78124eb3a9890edc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 3e3d426e7b00725eafeba139de5bc46d416c368a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251096"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070893"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>설치 후 Visual Studio 확장 누락
 
-## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>오류 메시지:이 프로젝트는 현재 버전의 Visual Studio와 호환 되지 않습니다.
+## <a name="error-message-this-project-is-incompatible-with-the-current-edition-of-visual-studio"></a>오류 메시지: 이 프로젝트는 현재 버전의 Visual Studio와 호환 되지 않습니다.
 
-호환 되는 버전의 Visual Studio가 설치 되어 있는지 확인 합니다.
-
--   Visual Studio 2017 (Community, Professional 또는 Enterprise)
--   Visual Studio 2015 (Community, Professional 또는 Enterprise)
+Visual Studio 2017 (Community, Professional 또는 Enterprise)를 확인 또는 이상이 설치 되어 있습니다.
 
 참고 항목의 [Windows 요구 사항](~/cross-platform/get-started/requirements.md#windows-requirements)합니다.
 
@@ -55,7 +52,7 @@ ms.locfileid: "40251096"
 
     `"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /setup`
 
-## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>가능한 해결 방법 3: Xamarin 새로 다시 설치를 시도 하세요.
+## <a name="possible-fix-3-try-a-fresh-reinstall-of-xamarin"></a>가능한 해결 방법 3: Xamarin의 새로 다시 설치 해 보십시오.
 
 1.  Windows 제어판에서 표시 되는 다음 중 하나를 제거 합니다.
 
@@ -99,7 +96,7 @@ ms.locfileid: "40251096"
 
 10.  현재 안정적인 버전의 Xamarin에서 다시 [visualstudio.com](https://visualstudio.com/xamarin)합니다.
 
-## <a name="possible-fix-4-repair-visual-studio-installation"></a>가능한 해결 방법 4: 복구 Visual Studio 설치
+## <a name="possible-fix-4-repair-visual-studio-installation"></a>가능한 해결 방법 4: Visual Studio 설치 복구
 
 1.  Windows를 엽니다 **프로그램 및 기능** 제어판입니다.
 
