@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
+ms.sourcegitcommit: 8dd04ead238be3f46cb6700e8eaa3d87f7b6d533
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670679"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57981707"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
@@ -85,19 +85,20 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
 
 1. 마지막으로 다음 코드를 추가 하면 `FinishedLaunching` AppDelegate 클래스의 메서드:
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            // create a new window instance based on the screen size
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
+    ```csharp
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // make the window visible
-            window.MakeKeyAndVisible();
+        // make the window visible
+        window.MakeKeyAndVisible();
 
-            return true;
-        }
+        return true;
+    }
+    ```
 
 에 추가 된 코드는 `FinishedLaunching` 메서드 위의 5 단계에서 iOS 응용 프로그램에 대 한 창을 만드는 데 필요한 코드의 최소 양입니다.
-
 
 -----
 
