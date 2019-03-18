@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: bc08554f0060ca5de8d7ffc90ea5c65463b93f3b
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898981"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972600"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지오코딩
 
@@ -32,7 +32,7 @@ ms.locfileid: "52898981"
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-지오코딩 기능을 사용하려면 Bing Maps API 키가 필요합니다. [Bing Maps](https://www.bingmapsportal.com/) 체험 계정을 등록합니다. **내 계정 > 내 키**에서 새 키를 만들고 응용 프로그램 유형(UWP 앱의 경우 **공용 Windows 앱(UWP, 8.x 이하)** 이어야 함)에 따라 정보를 입력합니다.
+지오코딩 기능을 사용하려면 Bing Maps API 키가 필요합니다. [Bing Maps](https://www.bingmapsportal.com/) 체험 계정을 등록합니다. **내 계정 &gt; 내 키**에서 새 키를 만들고 애플리케이션 유형(UWP 앱의 경우 **공용 Windows 앱(UWP, 8.x 이하)** 이어야 함)에 따라 정보를 입력합니다.
 
 **지오코딩** 메서드를 호출하기 전에 애플리케이션 수명 초기에 API 키를 설정합니다(UWP에서만 사용 가능).
 
@@ -76,7 +76,9 @@ catch (Exception ex)
 
 고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다.
 
-기존 좌표 집합의 [장소 표시](xref:Xamarin.Essentials.Placemark)를 가져옵니다.
+## <a name="using-reverse-geocoding"></a>역방향 지오코딩 사용
+
+역방향 지오코딩은 기존 좌표 집합의 [placemarks](xref:Xamarin.Essentials.Placemark)를 가져오는 프로세스입니다.
 
 ```csharp
 try
@@ -116,7 +118,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 위치 간 거리를 계산하는 메서드를 정의합니다. 예제를 보려면 [**Xamarin.Essentials: 지리적 위치**](geolocation.md#calculate-distance) 문서를 참조하세요.
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 위치 간 거리를 계산하는 메서드를 정의합니다. 예는 [**Xamarin.Essentials: 지리적 위치**](geolocation.md#calculate-distance) 문서를 참조하세요.
 
 ## <a name="api"></a>API
 
