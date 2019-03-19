@@ -5,12 +5,12 @@ description: 이 문서는 간의 유사점 및 차이점 Xamarin.Forms 및 WPF 
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526795"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175228"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및입니다. Xamarin.Forms 앱 수명 주기
 
@@ -79,14 +79,14 @@ BindableObject - base class for all bindable things
 
 Xamarin.Forms는 모바일 시나리오 주로 지향 합니다. 응용 프로그램은 이와 같이 _활성화_를 _일시 중단_, 및 _다시 활성화_ 사용자 상호 작용 하는 대로 합니다. 클릭 비슷합니다는 `Window` WPF 응용 프로그램에서 되며는 일련의 메서드 및 해당 이벤트를 재정의 하거나이 동작을 모니터링 하려면 후크 할 수 있습니다.
 
-| 용도 | WPF 메서드 | Xamarin.Forms 메서드 |
+| 용도 | WPF 메서드 | Xamarin.Forms Method |
 |--- |--- |--- |
 |초기 활성화|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |표시|Window.IsVisibleChanged|Page.Appearing|
 |Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |일시 중단/손실 포커스|Window.OnDeactivated|Page.OnSleep|
 |활성화/가져왔습니다 포커스|Window.OnActivated|Page.OnResume|
-|Closed|Window.OnClosing + Window.OnClosed|N/A|
+|닫힘|Window.OnClosing + Window.OnClosed|N/A|
 
 
 지원 숨기기/표시 된 자식 컨트롤 모두 WPF에서는 세 가지 상태 속성 `IsVisible` (표시, 숨김 및 축소) 합니다. Xamarin.Forms에서는 방금 통해 표시 되거나 숨겨지도록는 `IsVisible` 속성입니다.
@@ -151,7 +151,7 @@ Xamarin.Forms는 간단한 사각형 초과 기본 형식에 대해 그래픽 �
 
 ## <a name="resources"></a>자료
 
-WPF 및 Xamarin.Forms 둘 다 리소스 및 리소스 사전 개념을 가집니다. 임의의 개체 형식으로 배치할 수 있습니다는 `ResourceDictionary` 키로 사용 하 여를 조회 `{StaticResource}` 변경 되지 것입니다는 항목에 대 한 또는 `{DynamicResource}` 런타임 시 사전에 변경 될 수 있는 항목에 대 한 합니다. 사용량 및 메커니즘은 차이점 중 하나를 사용 하 여 동일: Xamarin.Forms에서는 정의 해야 합니다 `ResourceDictionary` 할당할는 `Resources` 속성 WPF 미리 만들고를 할당 하는 반면.
+WPF 및 Xamarin.Forms 둘 다 리소스 및 리소스 사전 개념을 가집니다. 임의의 개체 형식으로 배치할 수 있습니다는 `ResourceDictionary` 키로 사용 하 여를 조회 `{StaticResource}` 변경 되지 것입니다는 항목에 대 한 또는 `{DynamicResource}` 런타임 시 사전에 변경 될 수 있는 항목에 대 한 합니다. 사용량 및 mechanics 차이점 중 하나를 사용 하 여 동일합니다. Xamarin.Forms에서는 정의 해야 합니다 `ResourceDictionary` 할당할는 `Resources` 속성 WPF 미리 만들고를 할당 하는 반면 합니다.
 
 예를 들어, 아래 정의 참조 하세요.
 

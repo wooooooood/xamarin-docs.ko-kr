@@ -5,12 +5,12 @@ description: 이 문서는 비교 하 고 WPF Xamarin.Forms에 대조 합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 990253cbd31ad79bc47f086dc5bd2b99233f2032
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617594"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175241"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및입니다. Xamarin.Forms: 유사성 및 차이점
 
@@ -71,7 +71,7 @@ Xamarin.Forms의 바인딩 가능한 속성에 대 한 정의 WPF와 같습니�
 
 전체 예제를 참조 하세요 [xamarin.forms에서 바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)합니다.
 
-### <a name="attached-properties"></a>연결 된 속성
+### <a name="attached-properties"></a>연결된 속성
 
 연결 된 속성은 바인딩 가능한 속성의 하위 집합 및 WPF에서 동일한 방식으로 작동 합니다. 주요 차이점은 속성 래퍼가 경우 매개 변수가 생략 되는 것은 소유 하는 클래스에서 정적 get/set 메서드 집합이 바뀝니다. 참조 [Xamarin.Forms에서 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 자세한 내용은 합니다.
 
@@ -127,7 +127,7 @@ Xamarin.Forms에서이 동일한 기능은 사용할 수 있는, 있지만 속�
 
 값 변환기는 WPF와 마찬가지로-Xamarin.Forms에서 완전히 지원 됩니다. 동일한 인터페이스 셰이프는 사용 되지 않지만 Xamarin.Forms에 정의 된 인터페이스가 `Xamarin.Forms` 네임 스페이스입니다.
 
-### <a name="model-view-viewmodel"></a>모델-뷰-ViewModel
+### <a name="model-view-viewmodel"></a>Model-View-ViewModel
 
 MVVM은 WPF 및 Xamarin.Forms를 둘 다에서 완전히 지원 됩니다.
 
@@ -154,7 +154,7 @@ Xamarin.forms의 렌더링을 사용자 지정 데이터 템플릿은 지원 되
 
 ## <a name="itemscontrol"></a>ItemsControl
 
-에 없는 기본 제공 equivelent는는 `ItemsControl` xamarin.forms; 이지만 [사용 가능한 여기에 Xamarin.Forms에 대 한 사용자 지정 항목](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs)합니다.
+기본 제공과 관련 하는 `ItemsControl` xamarin.forms; 이지만 [사용 가능한 여기에 Xamarin.Forms에 대 한 사용자 지정 항목](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs)합니다.
 
 ## <a name="user-controls"></a>사용자 정의 컨트롤
 
@@ -173,7 +173,7 @@ WPF는 드물게 사용 되는 `NavigationService` "브라우저와 유사한" �
 |탭|TabbedPage|
 |안쪽으로 살짝 밀어 왼쪽/오른쪽|CarouselView|
 
-합니다 `NavigationPage` 가장 일반적인 방법은 이며 모든 페이지에는 `Navigation` 푸시 또는 페이지에는 탐색 스택에서 팝을 사용할 수 있는 속성입니다. 가장 가까운 equivelent 이것이 `NavigationService` WPF에서 찾을 수 있습니다.
+합니다 `NavigationPage` 가장 일반적인 방법은 이며 모든 페이지에는 `Navigation` 푸시 또는 페이지에는 탐색 스택에서 팝을 사용할 수 있는 속성입니다. 가장 가까운 같습니다는 `NavigationService` WPF에서 찾을 수 있습니다.
 
 ### <a name="url-navigation"></a>URL 탐색
 

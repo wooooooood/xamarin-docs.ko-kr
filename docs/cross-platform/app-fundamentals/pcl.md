@@ -6,18 +6,18 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 221ee49e282b3b038d03f659d238336710283a66
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666881"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175410"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
-> [!WARNING]
+> [!TIP]
 > 이식 가능한 클래스 라이브러리 (Pcl)는 최신 버전의 Visual Studio에서 사용 되지 않는 것으로 간주 됩니다.
-> 여전히, 편집을 열고 컴파일 Pcl을 하는 동안 새 프로젝트에 대 한 것이 좋습니다는 데 [.NET Standard 라이브러리](~/cross-platform/app-fundamentals/net-standard.md)합니다.
+> 여전히, 편집을 열고 컴파일 Pcl을 하는 동안 새 프로젝트에 대 한 것이 좋습니다 사용 [.NET Standard 라이브러리](~/cross-platform/app-fundamentals/net-standard.md) 대형 API 노출 영역을 액세스할 수 있습니다.
 
 플랫폼 간 응용 프로그램을 구축 하는 핵심 구성 요소는 다양 한 플랫폼 특정 프로젝트에서 코드를 공유할 수 있다는 것입니다. 그러나 다양 한 플랫폼의.NET 클래스 라이브러리 BCL (기본), 다른 하위 집합을 자주 사용 하 고 따라서 실제로 기본 제공 되는 다른.NET Core 라이브러리 프로필 한다는 사실에서 작업이 복잡해 집니다. 즉, 각 플랫폼을 대상으로 하는 동일한 프로필 나타나도록는 각 플랫폼에 대해 별도 클래스 라이브러리 프로젝트를 요구 하는 클래스 라이브러리 사용할 수 있습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "57666881"
 
 |기능|.NET Framework|UWP 앱|Silverlight|Windows Phone|Xamarin|
 |---|---|---|---|---|---|
-|코어|Y|Y|Y|Y|Y|
+|핵심|Y|Y|Y|Y|Y|
 |LINQ|Y|Y|Y|Y|Y|
 |IQueryable|Y|Y|Y|7.5 +|Y|
 |Serialization|Y|Y|Y|Y|Y|
@@ -56,7 +56,7 @@ Xamarin 열에는 Xamarin.iOS 및 Xamarin.Android 지원 Visual Studio와 함께
 
 알아볼 수 있습니다에 다양 한 프로필 기능에 대 한 [Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 멤버의 내용과 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 지원 되는 프레임 워크 정보 및 기타 정보를 포함 하는 합니다.
 
-**혜택**
+**이점**
 
 1. 중앙 집중식된 코드 공유-작성 및 다른 라이브러리 또는 응용 프로그램에서 사용할 수 있는 단일 프로젝트에서 코드를 테스트 합니다.
 2. 모든 코드는 영향이 리팩터링 작업 (이식 가능한 클래스 라이브러리 및 플랫폼 특정 프로젝트) 솔루션에 로드 합니다.
