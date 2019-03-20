@@ -1,20 +1,20 @@
 ---
 title: Xamarin.Essentials 브라우저 열기
-description: Xamarin.Essentials의 Browser 클래스를 사용하면 응용 프로그램이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
+description: Xamarin.Essentials의 Browser 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 03/13/2019
+ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898903"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175319"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
-**Browser** 클래스를 사용하면 응용 프로그램이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
+**Browser** 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -43,6 +43,24 @@ public class BrowserTest
 
 이 메서드는 브라우저가 _시작_된 후 반환되며, 반드시 사용자가 _종료_하는 것은 아닙니다.  `bool` 결과는 시작의 성공 여부를 나타냅니다.
 
+## <a name="customization"></a>사용자 지정
+
+시스템 기본 브라우저를 사용할 때 iOS 및 Android에서 사용할 수 있는 몇 가지 사용자 지정 옵션이 있습니다. 여기에는 `TitleMode`(Android에만 해당), 표시되는 `Toolbar`(iOS 및 Android) 및 `Controls`(iOS만 해당)에 대한 기본 색상 옵션이 포함됩니다. 
+
+이러한 옵션은 `OpenAsync`를 호출할 때 `BrowserLaunchOptions`를 사용하여 지정됩니다.
+
+```csharp
+await Browser.OpenAsync(uri, new BrowserLaunchOptions
+                {
+                    LaunchMode = BrowserLaunchMode.SystemPreferred,
+                    TitleMode = BrowserTitleMode.Show,
+                    PreferredToolbarColor = Color.AliceBlue,
+                    PreferredControlColor = Color.Violet
+                });
+```
+
+![브라우저 옵션](images/browser-options.png)
+
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
@@ -65,7 +83,7 @@ public class BrowserTest
 
 ## <a name="external"></a>외부
 
-기본 응용 프로그램의 표준 `OpenUrl`를 사용하여 응용 프로그램 외부에서 기본 브라우저를 시작합니다.
+기본 애플리케이션의 표준 `OpenUrl`를 사용하여 애플리케이션 외부에서 기본 브라우저를 시작합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

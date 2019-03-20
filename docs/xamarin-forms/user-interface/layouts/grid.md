@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
+ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059342"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222317"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 표
 
@@ -54,7 +54,7 @@ ms.locfileid: "53059342"
 - **절대** &ndash; 열과 높이 및 너비 값이 특정 한 고정 된 행의 크기를 조정 합니다. 값으로 지정 하 고 `GridUnitType.Absolute` C#에서 `#` 에서 XAML을 사용 하 여 `#` 원하는 값 중.
 
 > [!NOTE]
-> 열에 대 한 너비 값으로 설정 되어 ' * ' Xamarin.Forms에는 기본적으로 확인 하는 열에 의해 사용 가능한 공간이 채워질는 합니다.
+> 열에 대 한 너비 값으로 설정 되어 `*` Xamarin.Forms에는 기본적으로 확인 하는 열이 사용 가능한 공간을 입력 합니다. 행의 높이 값으로 설정 됩니다 `*` 기본적으로 합니다. 
 
 세 개의 행과 두 개의 열을 해야 하는 앱을 고려해 야 합니다. 맨 아래 행 높이가 200px 정확 하 게 해야 하며 맨 위 행은 가운데 행 높이가 두 배가 됩니다. 왼쪽된 열 콘텐츠에 맞게 하기에 충분 해야 하며 오른쪽 열 나머지 공간을 채우도록 합니다.
 
