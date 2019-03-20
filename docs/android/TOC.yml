@@ -390,10 +390,14 @@ items:
       href: ~/essentials/battery.md?context=xamarin/android
     - name: 클립보드
       href: ~/essentials/clipboard.md?context=xamarin/android
+    - name: 색 변환기
+      href: ~/essentials/color-converters.md?context=xamarin/android
     - name: 나침반
       href: ~/essentials/compass.md?context=xamarin/android
     - name: 연결
       href: ~/essentials/connectivity.md?context=xamarin/android
+    - name: 흔들림 탐지
+      href: ~/essentials/detect-shake.md?context=xamarin/android
     - name: 디바이스 표시 정보
       href: ~/essentials/device-display.md?context=xamarin/android
     - name: 디바이스 정보
@@ -424,6 +428,8 @@ items:
       href: ~/essentials/orientation-sensor.md?context=xamarin/android
     - name: 전화 걸기
       href: ~/essentials/phone-dialer.md?context=xamarin/android
+    - name: 플랫폼 확장(크기, 직사각형, 점)
+      href: ~/essentials/platform-extensions.md?context=xamarin/android
     - name: 기본 설정
       href: ~/essentials/preferences.md?context=xamarin/android
     - name: 보안 스토리지
@@ -434,6 +440,8 @@ items:
       href: ~/essentials/sms.md?context=xamarin/android
     - name: 텍스트 음성 변환
       href: ~/essentials/text-to-speech.md?context=xamarin/android
+    - name: 단위 변환기
+      href: ~/essentials/unit-converters.md?context=xamarin/android
     - name: 버전 추적
       href: ~/essentials/version-tracking.md?context=xamarin/android
     - name: 진동
@@ -650,9 +658,9 @@ items:
   - name: 샘플
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 40bbc9dbf2a05212c1a901492520ff83f06c974c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7621bf3950c58cb4ffd6f33b73e9153409f93c9e
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671600"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58175384"
