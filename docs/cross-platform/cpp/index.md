@@ -4,7 +4,7 @@ title: Xamarin을 사용 하 여 C/c + + 라이브러리를 사용 합니다.
 description: 'Xamarin을 사용 하 여 구축 하 고 Android 및 iOS 용 모바일 앱 플랫폼 간 C/c + + 코드를 통합 Mac 용 visual Studio를 사용할 수 있습니다 하 고 C#입니다. 이 문서에는 설정 하 고 Xamarin 앱에서 c + + 프로젝트를 디버그 하는 방법을 설명 합니다.'
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/20178
+ms.date: 12/17/2018
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Xamarin을 사용 하 여 C/c + + 라이브러리를 사용 합니다.
 
