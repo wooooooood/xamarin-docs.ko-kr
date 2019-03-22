@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c43b3f3204cba890cb2fa9c4cfc33a23250e0550
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112054"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070841"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>NuGet을 사용하여 NUnit 2.6.4 설치하기
 
@@ -25,7 +25,7 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-이 가이드에서는 Visual Studio 2015에서 NuGet을 사용하여 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 다룹니다.
+이 가이드에서는 Visual Studio 2015 이상에서 NuGet을 사용하여 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 다룹니다.
 
 -----
 
@@ -62,7 +62,7 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>NUnit 2.6.4를 Visual Studio에 설치함
 
-이 섹션에서는 Visual Studio 2015에서 _NuGet 패키지 관리자 콘솔_을 사용하여 NUnit 3.0을 제거하고 NUnit 2.6.4를 설치하는 방법에 중점을 둡니다.
+이 섹션에서는 Visual Studio 2015 이상에서 _NuGet 패키지 관리자 콘솔_을 사용하여 NUnit 3.0을 제거하고 NUnit 2.6.4를 설치하는 방법에 중점을 둡니다.
 
 
 1. **NuGet 패키지 관리자 콘솔 시작하기** - **도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔**을 선택합니다.
@@ -105,7 +105,7 @@ NUnit 3.0 이상을 보면 NUnit 2.6.4로 다운그레이드해야 합니다.
     
 ## <a name="summary"></a>요약
 
-이 가이드는 패키지 관리자 콘솔을 사용하여 Visual Studio 2015에서 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 설명합니다.
+이 가이드에서는 패키지 관리자 콘솔을 사용하여 Visual Studio 2015 이상에서 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 설명합니다.
 
 -----
 

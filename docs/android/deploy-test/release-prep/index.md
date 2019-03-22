@@ -38,7 +38,7 @@ ms.date: 03/21/2018
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio 2015 이상에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션을 통해 애플리케이션 아이콘을 지정합니다.
+Visual Studio 2017 이상에서는 다음 스크린샷과 같이 프로젝트 **속성**의 **Android 매니페스트** 섹션을 통해 애플리케이션 아이콘을 지정합니다.
 
 [![애플리케이션 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
@@ -186,7 +186,8 @@ Android 매니페스트에는 애플리케이션의 디버그 가능 여부를 �
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 애플리케이션을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 애플리케이션의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 디바이스에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
 
-Dotfuscator CE는 Visual Studio에 포함되지만 Visual Studio 2015 업데이트 3 이상에만 Xamarin.Android에서 작동하는 정확한 버전이 있습니다. Dotfuscator를 사용하려면 **도구 > PreEmptive Protection - Dotfuscator**를 클릭합니다.
+Dotfuscator CE는 Visual Studio 2017에 포함되어 있습니다.
+Dotfuscator를 사용하려면 **도구 > PreEmptive Protection - Dotfuscator**를 클릭합니다.
 
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.

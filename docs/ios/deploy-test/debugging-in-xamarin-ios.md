@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: a6cc7ffe52711f4e65f0191f8dc556760e8817ea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: f11e727edd5101d332f8452a26056f15e3587d8b
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668779"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58070997"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
@@ -121,7 +121,7 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio 2015에서 조건부 중단점을 설정하려면 먼저 [일반 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)합니다. 중단점을 마우스 오른쪽 단추로 클릭하여 팝업 메뉴를 표시합니다.
+Visual Studio에서 조건부 중단점을 설정하려면 먼저 [일반 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)합니다. 중단점을 마우스 오른쪽 단추로 클릭하여 팝업 메뉴를 표시합니다.
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "중단점 팝업 메뉴")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 

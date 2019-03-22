@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms 동작
+title: Xamarin.Forms 동작 만들기
 description: Xamarin.Forms 동작은 Behavior 또는 Behavior<T> 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다.
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: e52ee0a14098c967923f8d92ac47bc64dac08e8c
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: be7263ad0c9112aa640a4558d7fdbaf2a16ce079
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207897"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57981681"
 ---
-# <a name="xamarinforms-behaviors"></a>Xamarin.Forms 동작
+# <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
 
