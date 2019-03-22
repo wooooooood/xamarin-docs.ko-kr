@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197552"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329366"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작에 대 한 심층 정보
 
@@ -353,7 +353,7 @@ public App ()
 }
 ```
 
-모든 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스에는 페이지 스택을 수정하기 위해 메서드를 노출하는 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성이 있습니다. 이들 메서드는 애플리케이션에 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 포함되는 경우에만 호출해야합니다. `NoteEntryPage`로 이동하려면 아래 코드 예제에서 설명한 것처럼 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 메서드를 호출해야 합니다.
+모든 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스에는 페이지 스택을 수정하기 위해 메서드를 노출하는 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성이 있습니다. 이들 메서드는 애플리케이션에 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)가 포함되는 경우에만 호출해야합니다. `NoteEntryPage`로 이동하려면 아래 코드 예제에서 설명한 것처럼 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PushAsync(new NoteEntryPage());
@@ -424,7 +424,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 
 *source* 개체의 [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) 속성과 `Text` 속성 간의 바인딩이 설정됩니다. 변경 합니다 `Editor` 자동으로 전파 됩니다는 `Note` 개체입니다. 마찬가지로, 변경 사항을 적용 하는 경우는 `Note.Text` 속성인 Xamarin.Forms 바인딩 엔진은 내용도 업데이트의 `Editor`합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다.
 
-데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)합니다.
+데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
 ## <a name="styling"></a>스타일 지정
 
@@ -509,14 +509,14 @@ Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 
 
 이 심층 분석에 Xamarin.Forms를 사용 하 여 응용 프로그램 개발의 기본적인 사항을 살펴보았습니다. 제안된 다음 단계로는 다음 기능에 대한 내용이 있습니다.
 
-- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주된 제어 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)합니다.
-- 데이터 바인딩은 한 속성의 변경 내용이 자동으로 다른 속성에 반영 되도록 두 개체의 속성을 연결 하는 기법입니다. 자세한 내용은 [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)합니다.
-- Xamarin.Forms는 다양 한 사용 중인 페이지 형식에 따라 다른 페이지 탐색 환경 제공 합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
-- 스타일 반복 태그를 줄이고 보다 쉽게 변경 하 여 응용 프로그램 모양을 허용 하는 데 도움이 됩니다. 자세한 내용은 [Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/index.md)합니다.
-- XAML 태그 확장 요소 리터럴 텍스트 문자열 이외의 원본에서 설정할 수 있도록 하 여 성능과 유연성 XAML 확장 합니다. 자세한 내용은 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)합니다.
-- 데이터 템플릿은 지원 되는 뷰에 데이터를 정의 하는 기능을 제공 합니다. 자세한 내용은 [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
-- 각 페이지, 레이아웃 및 뷰 사용 하 여 각 플랫폼에서 다르게 렌더링 됩니다는 `Renderer` 차례로 네이티브 컨트롤을 만드는 클래스를 화면에 정렬 하 고 공유 코드에 지정 된 동작을 추가 합니다. 개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 자세한 내용은 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조하세요.
-- 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과 서브클래싱하 여 플랫폼별 프로젝트에 생성 됩니다는 [ `PlatformEffect` ](xref:Xamarin.Forms.PlatformEffect`2) 클래스 및 적절 한 Xamarin.Forms 컨트롤에 연결 하 여 사용 됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
+- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주된 제어 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)를 참조하세요.
+- 데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 자세한 내용은 [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+- Xamarin.Forms는 사용되는 페이지 형식에 따라 다양한 페이지 탐색 환경을 제공합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
+- 스타일을 통해 반복 태그를 줄이고, 애플리케이션 모양을 쉽게 변경할 수 있습니다. 자세한 내용은 [Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
+- XAML 태그 확장은 요소 특성을 리터럴 텍스트 문자열 이외의 원본으로 설정할 수 있도록 하여 XAML의 성능과 유연성을 확장합니다. 자세한 내용은 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)을 참조하세요.
+- 데이터 템플릿은 지원되는 보기에서 데이터 표현을 정의하는 기능을 제공합니다. 자세한 내용은 [데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
+- 각 페이지, 레이아웃 및 보기는 차례로 네이티브 컨트롤을 만들고, 화면에 정렬하고, 공유 코드에 지정된 동작을 추가하는 `Renderer` 클래스를 사용하여 각 플랫폼에서 다르게 렌더링됩니다. 개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 자세한 내용은 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조하세요.
+- 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과의 경우, 플랫폼별 프로젝트에서 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 클래스를 하위 클래스로 지정하여 만들어지고, 적절한 Xamarin.Forms 컨트롤에 연결하여 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 - 공유 코드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 네이티브 기능에 액세스할 수 있습니다. 자세한 내용은 [DependencyService를 사용한 네이티브 기능 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 
 또는 Charles Petzold의 책인 [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)(Xamarin.Forms를 사용하여 모바일 앱 만들기)는 Xamarin.Forms에 대해 더 배울 수 있는 좋은 자료입니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.

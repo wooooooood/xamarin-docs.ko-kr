@@ -1,18 +1,18 @@
 ---
 title: 요약 24 장입니다. 페이지 탐색
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 24 장 요약 합니다. 페이지 탐색'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 24 장입니다. 페이지 탐색
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7210cffb3cd348a6bdbf6cee80c4b6cd55553c58
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052743"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329379"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>요약 24 장입니다. 페이지 탐색
 
@@ -22,7 +22,7 @@ ms.locfileid: "53052743"
 
 ## <a name="modal-pages-and-modeless-pages"></a>모달 및 모덜리스 페이지
 
-`VisualElement` 정의 된 [ `Navigation` ](xref:Xamarin.Forms.VisualElement.Navigation) 형식의 속성 [ `INavigation` ](xref:Xamarin.Forms.INavigation)를 포함 하는 새 페이지로 이동 하려면 다음 두 가지 방법:
+`VisualElement` 정의 된 [ `Navigation` ](xref:Xamarin.Forms.NavigableElement.Navigation) 형식의 속성 [ `INavigation` ](xref:Xamarin.Forms.INavigation)를 포함 하는 새 페이지로 이동 하려면 다음 두 가지 방법:
 
 - [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page))
 - [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page))

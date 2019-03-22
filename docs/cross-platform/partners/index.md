@@ -223,6 +223,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[CommerceLab](http://www.commercelab.com.au)|오스트레일리아 시드니|시드니 기반 앱 개발 소규모 기업의 경우 온라인 및 오프 라인으로 최신 시장에서 경쟁 하려면 기능 제공|
 |[Datacom](http://www.datacom.co.nz/)|웰링턴, 뉴질랜드; 오클랜드, 뉴질랜드; 오스트레일리아 시드니|취득 디자인, 빌드 및 IT 시스템 및 비즈니스 프로세스를 실행 합니다.|
 |[고급 기술을 envoy](http://www.envoyat.com/)|Chatswood, 오스트레일리아|Envoy specialises 웹, 모바일, 엔터프라이즈 응용 프로그램을 작성 합니다.|
+|[XAM 컨설팅](http://www.xam-consulting.com/)|오스트레일리아 와이드|XAM은 엔터프라이즈급 응용 프로그램을 빌드합니다. 20 개 이상의 서버 리스 및 Xamarin에서 전문가 팀입니다.|
 |[Kloud 솔루션](http://www.kloud.com.au)|멜버른, 오스트레일리아|다양 한 오스트레일리아의 가장 큰 브랜드 해당 비즈니스를 혁신, 비용 절감, 프로세스를 간소화 및 클라우드를 사용 하 여 혁신적인 새로운 서비스를 도입 했습니다 했습니다 컴퓨팅|
 |[표식 Metro](http://www.markermetro.com/)|오클랜드, 뉴질랜드; 오스트레일리아 시드니|키 클라이언트 환경을 Disney Mobile, Sony, NZTE, Carters Holt Harvey, 주 은행 및 Air 뉴질랜드 포함 됩니다. 표식 Metro 경우 Xamarin 파트너로 서의 자부심|
 |[Millipede](http://millipede.com.au)|멜버른, 오스트레일리아|Millipede는 WPP에 8000 개 사람들과 글로벌 회사의 일부입니다. 우리는 소프트웨어 엔지니어, 디자이너 및 더 유용 하 고 효과적인 모바일 솔루션 은행 보안 소비자 및 엔터프라이즈 유틸리티 앱에서 모바일 게임 개발에 집중 UX 전문가의 매우 창의적인 그룹.|

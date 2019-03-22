@@ -27,7 +27,7 @@ Xamarin.Forms를 쉬우면서도 컬 복잡 한 애니메이션을 만드는 간
 
 `Button` 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다.
 
-## <a name="collectionviewcollectionviewmd"></a>[CollectionView](collectionview.md)
+## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
 `CollectionView` 레이아웃이 사양을 사용 하 여 데이터의 목록을 제공 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
 

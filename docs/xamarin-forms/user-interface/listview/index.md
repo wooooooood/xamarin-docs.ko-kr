@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 967d4ae65bdb47adf824f20f47c7b32e24211f9a
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831812"
 ---
+
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/WorkingWithListview)
 
 [`ListView`](xref:Xamarin.Forms.ListView) 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다.
+
+> [!IMPORTANT]
+> `CollectionView` 데이터의 목록을 표시 하는 것에 대 한 뷰를 다른 레이아웃 사양을 사용 합니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)합니다.
 
 ## <a name="use-cases"></a>사용 사례
 
