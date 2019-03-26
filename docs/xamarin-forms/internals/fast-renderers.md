@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 42889e3805391e9e586cda61d26103398ba16269
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 9a40644df6abcbbcc327b1b0c2dcb26c2dbc4db5
+ms.sourcegitcommit: 247a6d00a95fd7f4cf918d923e5f357c8db56761
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898526"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420212"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 빠른 렌더러
 
 ![미리 보기](~/media/shared/preview.png)
 
-_이 문서에서는 결과 네이티브 컨트롤 계층 구조를 평면화 하 여 인플레이션 및 Android에서 Xamarin.Forms 컨트롤의 렌더링 비용을 줄일 수 있는 빠른 렌더러를 소개 합니다._
+_이 문서에서는 결과 네이티브 컨트롤 계층 구조를 평면화 하 여 인플레이션 및 Android에서 Xamarin.Forms 컨트롤의 렌더링 비용을 줄일 수 있는 빠른 렌더러 (Xamarin.Forms 2.4에서 추가)를 소개 합니다._
 
 일반적으로 대부분의 Android에서 원래 컨트롤 렌더러는 두 보기 중 구성 되어 있습니다.
 
