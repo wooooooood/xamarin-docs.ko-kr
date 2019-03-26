@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: e78c224bae3a0e2c2dfcfded30a4bf2c4794e255
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 370867b52ec09d0c3ad0f801b6a75c356d806734
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112015"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477397"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>SQLite.NET를 사용 하 여 Xamarin.iOS를 사용 하 여
 
@@ -27,7 +27,7 @@ Xamarin 앱에서 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet �
 
 - **패키지 이름:** sqlite-net-pcl
 - **작성자:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
+- **ID:** sqlite-net-pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![SQLite.NET NuGet 패키지](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 패키지")](using-sqlite-orm-images/image1a.png#lightbox)
@@ -196,11 +196,13 @@ var rowcount = db.Delete<Stock>(someStock.Id); // Id is the primary key
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>SQLite.NET를 사용 하 여 여러 스레드를 사용 하 여
 
-SQLite는 서로 다른 3 가지 스레딩 모드를 지원 합니다. *단일 스레드*, *다중 스레드*, 및 *직렬화 됨*합니다. 아무런 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우 SQLite를 사용 하 여 구성할 수 있습니다 합니다 **직렬화 됨** 모드를 스레딩 합니다. 응용 프로그램의 초기에이 모드를 설정 해야 (예를 들어 맨 앞에 `OnCreate` 메서드).
+SQLite는 서로 다른 3 가지 스레딩 모드를 지원합니다. *단일 스레드*하십시오 *다중 스레드*, 및 *직렬화*합니다. 아무런 제한 없이 여러 스레드에서 데이터베이스에 액세스 하려는 경우 SQLite를 사용 하 여 구성할 수 있습니다 합니다 **직렬화 됨** 모드를 스레딩 합니다. 응용 프로그램의 초기에이 모드를 설정 해야 (예를 들어 맨 앞에 `OnCreate` 메서드).
 
-스레딩 모드를 변경 하려면 호출 `SqliteConnection.SetConfig`합니다. 이 코드 줄에 대해 SQLite를 구성 하는 예를 들어 **직렬화 됨** 모드:
+스레딩 모드를 변경 하려면 호출 `SqliteConnection.SetConfig` 에 `Mono.Data.Sqlite` 네임 스페이스입니다. 이 코드 줄에 대해 SQLite를 구성 하는 예를 들어 **직렬화 됨** 모드:
 
 ```csharp
+using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
