@@ -106,6 +106,8 @@ items:
   - name: 배포 및 디버깅
     href: deploy-test/index.md
     items:
+    - name: 로컬 웹 서비스에 연결
+      href: deploy-test/connect-to-local-web-services.md
     - name: 사용자 지정 링커 구성
       href: deploy-test/linker.md
     - name: NuGet을 사용하여 NUnit 2.6.4 설치하기
@@ -175,9 +177,9 @@ items:
   - name: 샘플
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 083bc3dc1dbd392977b0d4902e37fe0f78513c29
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 52090f962b611d4b4f0ff1cef318b1edd3a0f7b1
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197331"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477358"
