@@ -1,22 +1,17 @@
 ---
-title: Android 응용 프로그램 패키지에 서명
-description: 게시할 APK(Android 응용 프로그램 패키지)에 서명하는 방법
+title: Android 애플리케이션 패키지에 서명
+description: 게시할 APK(Android 애플리케이션 패키지)에 서명하는 방법
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: f05de5185f224f8606f38011d8f307ed62d64541
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112873"
 ---
-# <a name="signing-the-android-application-package"></a>Android 응용 프로그램 패키지에 서명
 
-[릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 응용 프로그램에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 디바이스에 생성된 APK를 사이드로드할 수 있습니다.
+# <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
+
+[릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 애플리케이션에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 디바이스에 생성된 APK를 사이드로드할 수 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -42,11 +37,11 @@ ms.locfileid: "50112873"
 
 **임시**를 선택하면 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 대화 상자의 **서명 ID** 페이지가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다.
 
-**가져오기** 단추를 클릭한 후 [APK 서명](#signapkvs)으로 이동하면 기존 인증서를 사용할 수 있습니다. 또는 **+** 단추를 클릭하여 새 인증서를 만들 수 있습니다.
+**가져오기** 단추를 클릭한 후 [APK 서명](#sign-the-apk)으로 이동하면 기존 인증서를 사용할 수 있습니다. 또는 **+** 단추를 클릭하여 새 인증서를 만들 수 있습니다.
 
 [![임시 서명 ID](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
-**Android 키 저장소 만들기** 대화 상자가 표시됩니다. 이 대화 상자를 사용하여 Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 서명 인증서를 만들 수 있습니다. 이 대화 상자에 표시된 것과 같이 필요한 정보(빨간색으로 윤곽선 처리)를 입력합니다.
+**Android 키 저장소 만들기** 대화 상자가 표시됩니다. 이 대화 상자를 사용하여 Android 애플리케이션에 서명하는 데 사용할 수 있는 새로운 서명 인증서를 만들 수 있습니다. 이 대화 상자에 표시된 것과 같이 필요한 정보(빨간색으로 윤곽선 처리)를 입력합니다.
 
 [![Android 키 저장소 만들기 대화 상자](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
@@ -69,11 +64,11 @@ ms.locfileid: "50112873"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-**임시**를 클릭하면 Mac용 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 **Android 서명 ID** 대화 상자가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다. 인증서가 이미 있는 경우 **기존 키 가져오기** 단추를 클릭하여 가져온 후 [APK 서명](#signapkxs)을 진행합니다. 그렇지 않을 경우 **새 키 만들기** 단추를 클릭하여 새 인증서를 만듭니다. 
+**임시**를 클릭하면 Mac용 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 **Android 서명 ID** 대화 상자가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다. 인증서가 이미 있는 경우 **기존 키 가져오기** 단추를 클릭하여 가져온 후 [APK 서명](#sign-the-apk)을 진행합니다. 그렇지 않을 경우 **새 키 만들기** 단추를 클릭하여 새 인증서를 만듭니다.
 
 [![Android 서명 ID 대화 상자](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
-Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 서명 인증서를 만들 때는 **새 인증서 만들기** 대화 상자가 사용됩니다. 필요한 정보를 입력한 후 **확인**을 클릭하세요.
+Android 애플리케이션에 서명하는 데 사용할 수 있는 새로운 서명 인증서를 만들 때는 **새 인증서 만들기** 대화 상자가 사용됩니다. 필요한 정보를 입력한 후 **확인**을 클릭하세요.
 
 [![새 인증서 만들기 대화 상자](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png#lightbox)
 
@@ -92,8 +87,6 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 
 -----
-
-<a name="signapkvs" />
 
 ## <a name="sign-the-apk"></a>APK 서명
 
@@ -116,7 +109,7 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 [![배포 열기 단추](images/vs/08-open-distribution-sml.png)](images/vs/08-open-distribution.png#lightbox)
 
-이렇게 하면 Windows 탐색기에 생성된 APK 파일을 포함하는 폴더가 열립니다. 이때 Visual Studio는 Xamarin.Android 응용 프로그램을 배포 준비가 된 APK로 컴파일했습니다.
+이렇게 하면 Windows 탐색기에 생성된 APK 파일을 포함하는 폴더가 열립니다. 이때 Visual Studio는 Xamarin.Android 애플리케이션을 배포 준비가 된 APK로 컴파일했습니다.
 다음 스크린샷에서는 게시 준비가 된 응용 프로그램의 예 **MyApp.MyApp.apk**를 보여 줍니다.
 
 [![Windows 탐색기에 표시된 APK](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
@@ -137,7 +130,7 @@ Android 응용 프로그램에 서명하는 데 사용할 수 있는 새로운 �
 
 ![출력 APK 파일 대화 상자](images/xs/06-output-apk-file.png)
 
-다음으로, 인증서 암호(**새 인증서 만들기** 대화 상자에서 사용된 암호)를 입력하고 **확인**을 클릭합니다. 
+다음으로, 인증서 암호(**새 인증서 만들기** 대화 상자에서 사용된 암호)를 입력하고 **확인**을 클릭합니다.
 
 ![인증서 암호 입력](images/xs/07-signing-certificate.png)
 
@@ -157,4 +150,4 @@ APK가 Finder에서 복사하여 최종 대상으로 보낼 수 있습니다. An
 
 ## <a name="next-steps"></a>다음 단계
 
-릴리스를 위해 서명한 응용 프로그램 패키지를 게시해야 합니다. 다음 섹션에서는 응용 프로그램을 게시하는 여러 가지 방법을 설명합니다.
+릴리스를 위해 서명한 애플리케이션 패키지를 게시해야 합니다. 다음 섹션에서는 애플리케이션을 게시하는 여러 가지 방법을 설명합니다.

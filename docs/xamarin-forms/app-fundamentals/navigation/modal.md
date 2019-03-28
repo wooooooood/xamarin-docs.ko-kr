@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057063"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329288"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
@@ -39,9 +39,9 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 ## <a name="performing-navigation"></a>탐색 수행
 
-모달 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에 의해 노출됩니다. 이러한 메서드는 모달 스택으로 [모달 페이지를 푸시](#Pushing_Pages_to_the_Modal_Stack)하고, 모달 스택에서 [모달 페이지를 팝](#Popping_Pages_from_the_Modal_Stack)하는 기능을 제공합니다.
+모달 탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이러한 메서드는 모달 스택으로 [모달 페이지를 푸시](#Pushing_Pages_to_the_Modal_Stack)하고, 모달 스택에서 [모달 페이지를 팝](#Popping_Pages_from_the_Modal_Stack)하는 기능을 제공합니다.
 
-[`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 또한 모달 스택의 모달 페이지를 얻을 수 있는 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 속성을 노출합니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 빼(pop)는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
+[`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 또한 모달 스택의 모달 페이지를 얻을 수 있는 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 속성을 노출합니다. 그러나 모달 스택 조작을 수행하거나 모달 탐색에서 루트 페이지에 빼(pop)는 개념은 없습니다. 이러한 작업이 기본 플랫폼에서 보편적으로 지원되지 않기 때문입니다.
 
 > [!NOTE]
 > [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스는 모달 페이지 탐색을 수행하는 데 필요하지 않습니다.
@@ -50,7 +50,7 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>페이지를 모달 스택에 푸시
 
-`ModalPage`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) 메서드를 호출해야 합니다.
+`ModalPage`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에서 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) 메서드를 호출해야 합니다.
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -107,7 +107,7 @@ Android에서 사용자는 항상 디바이스에서 표준 *뒤로* 단추를 �
 
 ### <a name="animating-page-transitions"></a>페이지 전환에 애니메이션 적용
 
-각 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 또한 다음 코드 예제에 나온 것처럼 탐색하는 동안 페이지 애니메이션을 표시할지 여부를 제어하는 `boolean` 매개 변수가 포함된 재정의 푸시 및 팝 메서드를 제공합니다.
+각 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 또한 다음 코드 예제에 나온 것처럼 탐색하는 동안 페이지 애니메이션을 표시할지 여부를 제어하는 `boolean` 매개 변수가 포함된 재정의 푸시 및 팝 메서드를 제공합니다.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

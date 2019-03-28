@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667057"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477332"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -35,7 +35,7 @@ Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 다른 구성 
 -  **Subscribe** - 특정 서명이 있는 메시지를 수신 대기하고, 수신되면 일부 작업을 수행합니다. 여러 구독자가 동일한 메시지를 수신 대기할 수 있습니다.
 -  **Send** - 수신기에서 수행할 메시지를 게시합니다. 수신기에서 구독하지 않으면 메시지가 무시됩니다.
 
-`MessagingService`는 솔루션 전체에서 사용되는 `Subscribe` 및 `Send` 메서드가 있는 정적 클래스입니다.
+`MessagingCenter`는 솔루션 전체에서 사용되는 `Subscribe` 및 `Send` 메서드가 있는 정적 클래스입니다.
 
 메시지에는 메시지를 *처리*하는 방법으로 사용되는 `message` 문자열 매개 변수가 있습니다. `Subscribe` 및 `Send` 메서드는 제네릭 매개 변수를 사용하여 메시지를 전달하는 방식을 더 자세히 제어합니다. 동일한 `message` 텍스트를 사용하지만 제네릭 형식 인수가 다른 두 개의 메시지는 동일한 구독자에게 전달되지 않습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: b88226dda14e2ae5cd21bb066e107fb4bcad78f6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 0b91aae1456827625526d7568176a07e7e61f225
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672523"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507125"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -30,7 +30,7 @@ _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에
 
 1. `HybridWebView` 사용자 지정 컨트롤을 [만듭니다](#Creating_the_HybridWebView).
 1. Xamarin.Forms에서 `HybridWebView`를 [사용합니다](#Consuming_the_HybridWebView).
-1. 각 플랫폼의 `HybridWebView`에 대한 사용자 지정 렌더러를 [만듭니다](#Creating_the_Custom_Renderer_on_each_Platform).
+1. 각 플랫폼의 `HybridWebView`에 대한 사용자 지정 렌더러를 [만듭니다](#creating-the-custom-renderer-on-each-platform).
 
 이제 각 항목을 차례로 살펴보며 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼별 웹 컨트롤을 강화하는 `HybridWebView` 렌더러를 구현하겠습니다. `HybridWebView` 인스턴스는 사용자에게 이름 입력을 요청하는 HTML 페이지를 표시하는 데 사용됩니다. 사용자가 HTML 단추를 클릭하면 JavaScript 함수는 사용자 이름이 포함된 팝업을 표시하는 C# `Action`을 호출합니다.
 
@@ -141,8 +141,6 @@ public partial class HybridWebViewPage : ContentPage
 이 작업은 `HybridWebView` 인스턴스를 통해 HTML 페이지에서 입력된 이름을 표시하는 모달 팝업을 나타내는 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 메서드를 호출합니다.
 
 이제 사용자 지정 렌더러를 각 애플리케이션 프로젝트에 추가하여 JavaScript에서 C# 코드를 호출할 수 있도록 허용함으로써 플랫폼별 웹 컨트롤을 강화할 수 있습니다.
-
-<a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>각 플랫폼에서 사용자 지정 렌더러 만들기
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207988"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329301"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
 
@@ -115,7 +115,7 @@ public class MainPageCS : TabbedPage
 
 #### <a name="navigation-inside-a-tab"></a>탭 내에서 검색
 
-다음 코드 예제에서 설명한 대로 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출하여 두 번째 탭에서 검색을 수행할 수 있습니다.
+다음 코드 예제에서 설명한 대로 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출하여 두 번째 탭에서 검색을 수행할 수 있습니다.
 
 ```csharp
 async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)

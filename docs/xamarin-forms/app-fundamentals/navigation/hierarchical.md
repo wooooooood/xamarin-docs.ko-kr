@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: c5eeb00d4dc5992666a7ba5f9fef2685d5056447
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207975"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329275"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -28,7 +28,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ![](hierarchical-images/popping.png "탐색 스택에서 페이지 꺼내기")
 
-탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
+탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
 
 <a name="Performing_Navigation" />
 
@@ -69,7 +69,7 @@ public App ()
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>탐색 스택으로 페이지 푸시
 
-`Page2Xaml`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출해야 합니다.
+`Page2Xaml`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출해야 합니다.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -114,7 +114,7 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 
 그러나 이러한 이벤트가 발생하는 정확한 순서는 플랫폼에 따라 다릅니다. 자세한 내용은 Charles Petzold의 Xamarin.Forms 책 [24장](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)을 참조하세요.
 
-각 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 및 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드뿐만 아니라 [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) 메서드도 제공하며 다음 코드 예제에 표시됩니다.
+각 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 및 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드뿐만 아니라 [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) 메서드도 제공하며 다음 코드 예제에 표시됩니다.
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -127,7 +127,7 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="animating-page-transitions"></a>페이지 전환에 애니메이션 적용
 
-각 페이지의 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 또한 다음 코드 예제에 나온 것처럼 탐색하는 동안 페이지 애니메이션을 표시할지 여부를 제어하는 `boolean` 매개 변수가 포함된 재정의 푸시 및 팝 메서드를 제공합니다.
+각 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 또한 다음 코드 예제에 나온 것처럼 탐색하는 동안 페이지 애니메이션을 표시할지 여부를 제어하는 `boolean` 매개 변수가 포함된 재정의 푸시 및 팝 메서드를 제공합니다.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -276,7 +276,7 @@ public class SecondPageCS : ContentPage
 
 ## <a name="manipulating-the-navigation-stack"></a>탐색 스택 조작
 
-[`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 속성은 탐색 스택의 페이지를 얻을 수 있는 [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) 속성을 노출합니다. Xamarin.Forms는 탐색 스택에 대한 액세스를 유지 관리하는 반면, `Navigation` 속성은 페이지를 삽입하거나 제거하여 스택을 조작하는 [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) 및 [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) 메서드를 제공합니다.
+[`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 탐색 스택의 페이지를 얻을 수 있는 [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) 속성을 노출합니다. Xamarin.Forms는 탐색 스택에 대한 액세스를 유지 관리하는 반면, `Navigation` 속성은 페이지를 삽입하거나 제거하여 스택을 조작하는 [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) 및 [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) 메서드를 제공합니다.
 
 [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) 메서드는 다음 다이어그램에 표시된 것처럼 탐색 스택에서 기존 지정된 페이지 앞에 지정된 페이지를 삽입합니다.
 
