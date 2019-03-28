@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507164"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>3D 게임을 제작 하 UrhoSharp 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "34784041"
 
 구성 요소 기반 장면 그래프로 장면 모델을 설명할 수 있습니다. 장면 전체 장면에도 나타내는 루트 노드에서 시작 장면 노드 계층으로 구성 됩니다. 각 [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) 개의 3D 변환 (위치, 회전 및 배율), 이름, ID와 임의 개수의 구성 요소입니다.  구성 요소에 활기를 노드, 시각적 표시를 추가 할 수 있습니다 ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), 소리를 내보낼 수 있습니다 ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), 충돌 경계에 제공할 수 있습니다.
 
-설정 노드를 사용 하 고 자동으로 만들 수 있습니다 합니다 [Urho 편집기](#UrhoEditor), 또는 C# 코드에서 작업을 수행할 수 있습니다.  이 문서의 살펴봅니다 코드를 사용 하 여 설정 작업을으로 진행 화면에 표시 되도록 하는 데 필요한 요소를 보여 줍니다.
+설정 노드를 사용 하 고 자동으로 만들 수 있습니다 합니다 [Urho 편집기](#urhoeditor), 또는 C# 코드에서 작업을 수행할 수 있습니다.  이 문서의 살펴봅니다 코드를 사용 하 여 설정 작업을으로 진행 화면에 표시 되도록 하는 데 필요한 요소를 보여 줍니다.
 
 장면에 설정 하는 것 외에도 설치 해야는 [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/),이 사용자에 게 표시 가져오기는 무엇을 결정 합니다.
 

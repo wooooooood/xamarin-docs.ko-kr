@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 30c507a1b78600ef1b9a96e37f88904daaf82987
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 22b5fe703486f0ded3a5b91241e3fe5ce41bbc98
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507099"
 ---
 # <a name="validation-in-enterprise-apps"></a>엔터프라이즈 앱의 유효성 검사
 
@@ -22,7 +22,7 @@ ms.locfileid: "51528574"
 
 [![](validation-images/validation.png "EShopOnContainers 모바일 앱에서 유효성 검사 클래스")](validation-images/validation-large.png#lightbox "eShopOnContainers 모바일 앱에서 유효성 검사 클래스")
 
-**그림 6-1**: eShopOnContainers 모바일 앱에서 유효성 검사 클래스
+**그림 6-1**: EShopOnContainers 모바일 앱에서 유효성 검사 클래스
 
 유효성 검사를 요구 하는 보기 모델 속성은 `ValidatableObject<T>`, 및 각 `ValidatableObject<T>` 인스턴스를 추가 하는 유효성 검사 규칙에 해당 `Validations` 속성입니다. 유효성 검사를 호출 하 여 뷰 모델에서 호출를 `Validate` 메서드의 `ValidatableObject<T>` 인스턴스 유효성 검사를 검색 하는 규칙 및에 대해 실행 합니다 `ValidatableObject<T>` `Value` 속성입니다. 유효성 검사 오류에 배치 됩니다는 `Errors` 의 속성을 `ValidatableObject<T>` 인스턴스를 및 `IsValid` 의 속성은 `ValidatableObject<T>` 인스턴스 유효성 검사의 성공 여부를 나타내도록 업데이트 됩니다.
 
@@ -216,7 +216,7 @@ EShopOnContainers 모바일 앱 사용자에 게 모든 유효성 검사 오류�
 
 ![](validation-images/validation-login.png "로그인 하는 동안 유효성 검사 오류를 표시합니다.")
 
-**그림 6-2:** 로그인 하는 동안 유효성 검사 오류를 표시 합니다.
+**그림 6-2:** 로그인 하는 동안 유효성 검사 오류를 표시합니다.
 
 ### <a name="highlighting-a-control-that-contains-invalid-data"></a>잘못 된 데이터를 포함 하는 컨트롤을 강조 표시
 
@@ -248,7 +248,7 @@ EShopOnContainers 모바일 앱 사용자에 게 모든 유효성 검사 오류�
 </Style>
 ```
 
-이 스타일 설정를 `ApplyLineColor` 및 `LineColor` 의 연결 된 속성을 `LineColorBehavior` 동작에 연결 합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤입니다. 스타일에 대 한 자세한 내용은 참조 하세요. [스타일](~/xamarin-forms/user-interface/styles/index.md)합니다.
+이 스타일 설정를 `ApplyLineColor` 및 `LineColor` 의 연결 된 속성을 `LineColorBehavior` 동작에 연결 합니다 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤입니다. 스타일에 대한 자세한 내용은 [스타일](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.
 
 때 값을 `ApplyLineColor` 연결 된 속성은 집합 또는 변경 합니다 `LineColorBehavior` 연결 된 동작을 실행는 `OnApplyLineColorChanged` 메서드를 다음 코드 예제에 나와 있는:
 
@@ -296,7 +296,7 @@ public class EntryLineColorEffect : RoutingEffect
 }
 ```
 
-합니다 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스 내부 효과 플랫폼별으로를 래핑하는 플랫폼 독립적인 효과 나타냅니다. 이 플랫폼별 효과 대 한 형식 정보에 액세스할 수 없는 컴파일 시간 이후 효과 제거 프로세스를 간소화 합니다. `EntryLineColorEffect` 확인 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID를 연결으로 구성 된 매개 변수를 전달 하는 기본 클래스 생성자를 호출 합니다.
+합니다 [ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect) 클래스 내부 효과 플랫폼별으로를 래핑하는 플랫폼 독립적인 효과 나타냅니다. 이는 플랫폼별 효과에 대한 형식 정보에 컴파일 시간 액세스가 없으므로 효과 제거 프로세스를 간소화합니다. `EntryLineColorEffect` 확인 그룹 이름 및 각 플랫폼별 결과 클래스에 지정 된 고유 ID를 연결으로 구성 된 매개 변수를 전달 하는 기본 클래스 생성자를 호출 합니다.
 
 다음 코드 예제는 `eShopOnContainers.EntryLineColorEffect` iOS에 대 한 구현 합니다.
 
@@ -374,7 +374,7 @@ namespace eShopOnContainers.iOS.Effects
 }
 ```
 
-합니다 `OnAttached` Xamarin.Forms에 대 한 네이티브 컨트롤을 검색 하는 메서드 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤을 호출 하 여 선 색을 업데이트 합니다 `UpdateLineColor` 메서드. `OnElementPropertyChanged` 에 바인딩 가능한 속성 변경에 응답 하는 재정의 `Entry` 제어 하는 경우 선 색을 업데이트 하 여 연결 된 `LineColor` 속성이 변경 또는 [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) 속성을 `Entry`변경 합니다. 효과 대 한 자세한 내용은 참조 하세요. [효과](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
+합니다 `OnAttached` Xamarin.Forms에 대 한 네이티브 컨트롤을 검색 하는 메서드 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤을 호출 하 여 선 색을 업데이트 합니다 `UpdateLineColor` 메서드. `OnElementPropertyChanged` 에 바인딩 가능한 속성 변경에 응답 하는 재정의 `Entry` 제어 하는 경우 선 색을 업데이트 하 여 연결 된 `LineColor` 속성이 변경 또는 [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) 속성을 `Entry`변경 합니다. 효과에 대한 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
 에 유효한 데이터를 입력 하는 경우는 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤 유효성 검사 오류가 없는지를 나타내기 위해 컨트롤의 아래쪽에 검은색 줄 적용 됩니다. 그림 6-3의 예를 보여 줍니다.
 
@@ -414,7 +414,7 @@ namespace eShopOnContainers.iOS.Effects
 UI는 데이터 유효성 검사에 실패 하는 각 컨트롤 아래 레이블 컨트롤에 유효성 검사 오류 메시지를 표시 합니다. 다음 코드 예제는 [ `Label` ](xref:Xamarin.Forms.Label) 표시 하는 유효성 검사 오류 메시지를 사용자가 올바른 사용자 이름을 입력 하지 하는 경우:
 
 ```xaml
-<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}"  
+<Label Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"  
        Style="{StaticResource ValidationErrorLabelStyle}" />
 ```
 

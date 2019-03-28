@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms 시각적 렌더러 만들기
-description: Xamarin.Forms Visual 렌더러를 서브 클래스 Xamarin.Forms 뷰 않고도 VisualElement 개체에 선택적으로 적용할 수 있습니다.
+description: 서브 클래스 Xamarin.Forms 뷰 않고도 VisualElement 개체에 선택적으로 적용할 Xamarin.Forms 시각적 개체를 만듭니다.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 1bd56d09932c97508dd0a05fbc0eb2bad3af3f0e
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972587"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506969"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Xamarin.Forms 시각적 렌더러 만들기
 
@@ -25,7 +25,7 @@ Xamarin.Forms Visual 렌더러를 만들고 선택적으로 적용할 수 있습
 
 만들고 Xamarin.Forms 시각적 렌더러를 사용 하기 위한 프로세스 다음과 같습니다.
 
-1. 필요한 보기에 대 한 플랫폼 렌더러를 만듭니다. 자세한 내용은 [렌더러를 만들](#create-platfomr-renderers)합니다.
+1. 필요한 보기에 대 한 플랫폼 렌더러를 만듭니다. 자세한 내용은 [렌더러를 만들](#create-platform-renderers)합니다.
 1. 파생 되는 형식을 만드는 `IVisual`합니다. 자세한 내용은 [IVisual 형식을 만들려면](#create-an-ivisual-type)합니다.
 1. 등록 된 `IVisual` 의 일부로 형식은 `ExportRendererAttribute` 된 렌더러를 데코 레이트 하는 합니다. 자세한 내용은 [IVisual 형식을 등록](#register-the-ivisual-type)합니다.
 1. 설정 하 여 시각적 렌더러를 사용 합니다 [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) 뷰의 속성을 `IVisual` 이름. 자세한 내용은 [시각적 렌더러 사용](#consume-the-visual-renderer)합니다.

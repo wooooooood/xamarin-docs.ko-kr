@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 59c61cc637a435f8107256ddcd6bfacfb0466867
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669656"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507021"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Xamarin.Android 디자이너 재질 디자인 기능
 
@@ -145,9 +145,9 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 
 합니다 **백그라운드** 새 색 선택 항목에 디자이너에서 색 변경 되었지만이 변경 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
 
--   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다. 
+-   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다.
 
--   키를 눌러 <kbd>CTRL + S</kbd> 에 변경 내용을 저장 하는 현재 테마입니다. 
+-   키를 눌러 <kbd>CTRL + S</kbd> 에 변경 내용을 저장 하는 현재 테마입니다.
 
 다음 예에서 <kbd>CTRL + S</kbd> 에 변경 내용을 저장할 수 있도록 눌렀습니다 **AppTheme**:
 
@@ -300,7 +300,7 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 
 ### <a name="material-palette"></a>재질 팔레트
 
-합니다 **재질 팔레트** 탭이 열립니다 합니다 **재료 디자인 색상표** 설명 [이전](#material_palette)합니다. 재료 디자인 지침에 부합 되도록에 색 선택을 제한이 색상표에서 색 값을 선택 합니다.
+합니다 **재질 팔레트** 탭이 열립니다 합니다 **재료 디자인 색상표** 설명 [이전](#material-design-color-palette)합니다. 재료 디자인 지침에 부합 되도록에 색 선택을 제한이 색상표에서 색 값을 선택 합니다.
 
 [![재질 팔레트](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
@@ -316,9 +316,9 @@ Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레�
 
 디자이너에서 색 변경 내용이 있지만이 변경 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
 
--   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다. 
+-   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다.
 
--   키를 눌러  **&#8984; + S** 새 테마에 변경 내용을 저장 하려면 호출 **Custom**합니다. 
+-   키를 눌러  **&#8984; + S** 새 테마에 변경 내용을 저장 하려면 호출 **Custom**합니다.
 
 
 ## <a name="summary"></a>요약

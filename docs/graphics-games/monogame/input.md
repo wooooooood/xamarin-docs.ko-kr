@@ -6,12 +6,12 @@ ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c1c03e0ec17ade57536b4ed121469e3ae2274e75
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 235166b78dfbd4998086a2925a54137f1922f5d1
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668974"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507008"
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame GamePad 참조
 
@@ -113,7 +113,7 @@ Apple TV 게임 입력 Siri 원격 또는 무선 게임 컨트롤러를 사용�
 
 ### <a name="apple-tv-game-controller"></a>Apple TV 게임 컨트롤러
 
-Apple TV에 대 한 게임 컨트롤러는 iOS 앱에 대 한 게임 컨트롤러에 동일 하 게 작동 합니다. 자세한 내용은 참조는 [iOS 게임 컨트롤러 섹션](#iOS-game-controller)합니다. 
+Apple TV에 대 한 게임 컨트롤러는 iOS 앱에 대 한 게임 컨트롤러에 동일 하 게 작동 합니다. 자세한 내용은 참조는 [iOS 게임 컨트롤러](#ios-game-controller) 섹션입니다. 
 
 ## <a name="xbox-one"></a>Xbox One
 

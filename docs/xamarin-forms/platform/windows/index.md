@@ -21,21 +21,21 @@ Windows 플랫폼용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio�
 
 Xamarin.Forms 뷰, 페이지 및 유니버설 Windows 플랫폼 (UWP)의 레이아웃에 대해 다음 플랫폼 특정 기능을 제공 됩니다.
 
-- 설정에 대 한 액세스 키를 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [VisualElement 액세스 키 Windows](#visualelement-accesskeys)합니다.
-- 지원 되는 레거시 색 모드 사용 안 함 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [VisualElement 레거시 색 모드의 경우 Windows](#legacy-color-mode)합니다.
+- 설정에 대 한 액세스 키를 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [VisualElement 액세스 키 Windows](visualelement-access-keys.md)합니다.
+- 지원 되는 레거시 색 모드 사용 안 함 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 자세한 내용은 [VisualElement 레거시 색 모드의 경우 Windows](legacy-color-mode.md)합니다.
 
 Xamarin.Forms 보기 UWP에 대 한 다음과 같은 플랫폼별 기능 제공 됩니다.
 
-- 검색에서 텍스트 콘텐츠를 읽는 순서 [ `Entry` ](xref:Xamarin.Forms.Entry)를 [ `Editor` ](xref:Xamarin.Forms.Editor), 및 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 자세한 내용은 [Windows에 있던 InputView 읽는 순서](#inputview-readingorder)합니다.
-- 탭 제스처 지원을 사용 하도록 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Windows에서 ListView SelectionMode](#listview-selectionmode)합니다.
-- 사용 하도록 설정 된 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 맞춤법 검사 엔진과 상호 작용을 합니다. 자세한 내용은 [Windows에서 SearchBar Spell Check](#searchbar-spellcheck)합니다.
-- 사용을 [ `WebView` ](xref:Xamarin.Forms.WebView) UWP 메시지 대화 상자에서 JavaScript 경고를 표시 하도록 합니다. 자세한 내용은 [Windows에서 WebView JavaScript 경고](#webview-javascript-alert)합니다.
+- 검색에서 텍스트 콘텐츠를 읽는 순서 [ `Entry` ](xref:Xamarin.Forms.Entry)를 [ `Editor` ](xref:Xamarin.Forms.Editor), 및 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 자세한 내용은 [Windows에 있던 InputView 읽는 순서](inputview-reading-order.md)합니다.
+- 탭 제스처 지원을 사용 하도록 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Windows에서 ListView SelectionMode](listview-selectionmode.md)합니다.
+- 사용 하도록 설정 된 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 맞춤법 검사 엔진과 상호 작용을 합니다. 자세한 내용은 [Windows에서 SearchBar Spell Check](searchbar-spell-check.md)합니다.
+- 사용을 [ `WebView` ](xref:Xamarin.Forms.WebView) UWP 메시지 대화 상자에서 JavaScript 경고를 표시 하도록 합니다. 자세한 내용은 [Windows에서 WebView JavaScript 경고](webview-javascript-alert.md)합니다.
 
 다음 플랫폼 특정 기능을 UWP에 Xamarin.Forms 페이지에 대 한 제공 됩니다.
 
-- 축소 된 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 탐색 모음입니다. 자세한 내용은 [MasterDetailPage 탐색 모음의 Windows](#collapsable_navigation_bar)합니다.
-- 도구 모음 배치 옵션을 설정 합니다. 자세한 내용은 [Windows에서 페이지 도구 모음 배치](#toolbar_placement)합니다.
-- 페이지에 표시 되는 아이콘을 사용 하도록 설정 된 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 도구 모음입니다. 자세한 내용은 [TabbedPage Windows 아이콘](#tabbedpage-icons)합니다.
+- 축소 된 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 탐색 모음입니다. 자세한 내용은 [MasterDetailPage 탐색 모음의 Windows](masterdetailpage-navigation-bar.md)합니다.
+- 도구 모음 배치 옵션을 설정 합니다. 자세한 내용은 [Windows에서 페이지 도구 모음 배치](page-toolbar-placement.md)합니다.
+- 페이지에 표시 되는 아이콘을 사용 하도록 설정 된 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 도구 모음입니다. 자세한 내용은 [TabbedPage Windows 아이콘](tabbedpage-icons.md)합니다.
 
 ## <a name="platform-support"></a>플랫폼 지원
 

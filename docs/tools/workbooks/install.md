@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: a1001163d89a9a9cda16a7ee5e644307fcc9875c
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506982"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -27,7 +27,7 @@ ms.locfileid: "57667713"
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-1. 확인 합니다 [요구 사항](#Requirements) 아래.
+1. 확인 합니다 [요구 사항](#requirements) 아래.
 2. 다운로드 및 설치 [Mac 용 Xamarin Workbooks](https://dl.xamarin.com/interactive/XamarinInteractive.pkg)합니다.
 3. 시작 [생길](~/tools/workbooks/workbook.md) 통합 문서에 사용 된 [샘플](https://developer.xamarin.com/workbooks)
 

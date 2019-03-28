@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2019
-ms.openlocfilehash: 70b241944376782ec4c9446878ee2a19dcee2bbd
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330035"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507190"
 ---
 # <a name="populate-xamarinforms-collectionview-with-data"></a>Xamarin.Forms CollectionView 데이터로 채우기
 
@@ -76,7 +76,7 @@ collectionView.ItemsSource = new string[]
 
 [![스크린 샷의 CollectionView iOS 및 Android에서 텍스트 항목이 포함 된](populate-data-images/text.png "수집 뷰의 텍스트 항목")](populate-data-images/text-large.png#lightbox "수집 뷰의 텍스트 항목")
 
-변경 하는 방법에 대 한 정보에 대 한 합니다 `CollectionView` 레이아웃을 참조 하세요 [레이아웃을 지정할](layout.md)합니다. 각 항목의 모양을 정의 하는 방법에 대 한 정보에 대 한 합니다 `CollectionView`를 참조 하세요 [목록 항목 모양을 정의](#define-list-item-appearance).
+변경 하는 방법에 대 한 정보에 대 한 합니다 `CollectionView` 레이아웃을 참조 하세요 [레이아웃을 지정할](layout.md)합니다. 각 항목의 모양을 정의 하는 방법에 대 한 정보에 대 한 합니다 `CollectionView`를 참조 하세요 [항목 모양을 정의](#define-item-appearance).
 
 ### <a name="data-binding"></a>데이터 바인딩
 
