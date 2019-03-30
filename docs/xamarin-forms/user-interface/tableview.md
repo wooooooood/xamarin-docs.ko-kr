@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fda8c08cdbdab01f5d68b7f349d5f28f31316290
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: c18eba873dc1a1dae36c401507d55652ed233b00
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832004"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641441"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -115,7 +115,7 @@ Xamarin.Forms를 수집 하 고 정보를 표시 하는 기본 제공 셀 수반
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) 사용자를 편집할 수 있는 텍스트 데이터를 표시 해야 하는 경우 유용 합니다. 다음 속성을 정의 합니다.
 
 - `Keyboard` – 키보드를 편집 하는 동안 표시 합니다. 숫자 값, 전자 메일, 전화 번호 등과 같은 항목에 대 한 옵션이 있습니다. [API 문서를 참조 하세요](xref:Xamarin.Forms.Keyboard)합니다.
-- `Label` – 텍스트 입력 필드의 오른쪽에 표시할 레이블 텍스트입니다.
+- `Label` – 텍스트 입력 필드의 왼쪽에 표시할 레이블 텍스트입니다.
 - `LabelColor` – 레이블 텍스트의 색입니다.
 - `Placeholder` -Null 이거나 비워 둘 경우 입력 필드에 표시할 텍스트입니다. 이 텍스트는 텍스트 입력을 시작할 때 사라집니다.
 - `Text` – 텍스트 입력 필드입니다.

@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/29/2019
+ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
+ms.sourcegitcommit: 236a346838c421c7d8951f50abbf4f5365559372
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052253"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58641454"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -331,11 +331,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤트를 발생 시킵니다.
 
-- **탐색** – WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
-- **탐색** – 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
-- **ReloadRequested** – 현재 콘텐츠를 다시 로드 요청이 있을 때 발생 하는 이벤트입니다.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) – WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) – 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) – 현재 콘텐츠를 다시 로드 요청이 있을 때 발생 하는 이벤트입니다.
 
-로드 시간이 오래 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 사용을 고려 합니다 `Navigating` 고 `Navigated` 상태 표시기를 구현 하는 이벤트입니다. 예를 들어는 XAML은 다음과 같습니다.
+합니다 [ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) 와 함께 제공 되는 개체를 [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) 이벤트에 4 개의 속성이:
+
+- `Cancel` – 탐색을 취소할 것인지 여부를 나타냅니다.
+- `NavigationEvent` – 발생 하는 탐색 이벤트.
+- `Source` – 탐색을 수행 하는 요소입니다.
+- `Url` – 탐색 대상입니다.
+
+합니다 [ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) 와 함께 제공 되는 개체를 [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) 이벤트에 4 개의 속성이:
+
+- `NavigationEvent` – 발생 하는 탐색 이벤트.
+- `Result` –는 탐색의 결과 설명를 사용 하는 [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) 열거형 멤버입니다. 유효한 값은 `Cancel`, `Failure`, `Success` 및 `Timeout`입니다.
+- `Source` – 탐색을 수행 하는 요소입니다.
+- `Url` – 탐색 대상입니다.
+
+로드 시간이 오래 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 사용을 고려 합니다 [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) 하 고 [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) 상태 표시기를 구현 하는 이벤트입니다. 예를 들어:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
