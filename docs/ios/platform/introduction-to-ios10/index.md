@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233746"
 ---
+
 # <a name="introduction-to-ios-10"></a>IOS 10 소개
 
 _이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 10에서에서 사용할 수 있는 기능을 소개합니다._
@@ -231,7 +226,7 @@ IOS 10에서에서 다음 Api가 사용 되지 않습니다.
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
 - `ADBannerView`를 `ADInterstitialAd` 과의 기호를 [UIViewController](xref:UIKit.UIViewController) 클래스 사용 되지 않습니다.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) 부동 소수점 값에 관련 된 기호 사용 되지 않습니다.
-- `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`를 `UIUserNotificationCategory` 및 `UIUserNotificationSettings` UIKit의 클래스 사용 되지 않습니다. 사용 된 [사용자 알림](#User-Notifications) framework 대신 합니다.
+- `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`를 `UIUserNotificationCategory` 및 `UIUserNotificationSettings` UIKit의 클래스 사용 되지 않습니다. 사용 된 [사용자 알림](#user-notifications) framework 대신 합니다.
 - 합니다 `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`를 `DidReceiveLocalNotification` 및 `DidReceiveRemoteNotification` WatchKit 메서드 사용 되지 않습니다. 사용 된 `HandleActionForNotification` 고 `DidReceiveNotification` 메서드 대신 합니다.
 - `DidReceiveLocalNotification` 하 고 `DidReceiveRemoteNotification` 의 메서드는 [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) 사용 되지 않습니다. 인스턴스를 만듭니다 [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) 적절 한 메서드를 구현 하 고 할당 합니다 `Delegate` 의 속성을 [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) 개체.
 - 합니다 **게임 센터 앱** 사용 되지 않으며 iOS에서 제거 되었습니다. 앱 GameKit를 사용 하는 경우 해당 _해야_ 순위표 등 GameKit 기능을 표시 하는 자체 인터페이스를 제공 합니다.

@@ -17,7 +17,7 @@ _이 문서에서는 iOS SDK의 지역화 기능 및 Xamarin을 사용 하 여 �
 
 ## <a name="ios-platform-features"></a>iOS 플랫폼 기능
 
-이 섹션에서는 iOS의 지역화 기능 중 일부를 설명합니다. 건너뜁니다 합니다 [다음 섹션](#Localization-basics-in-iOS) 를 특정 코드 및 예제를 참조 하세요.
+이 섹션에서는 iOS의 지역화 기능 중 일부를 설명합니다. 건너뜁니다 합니다 [다음 섹션](#localization-basics-in-ios) 를 특정 코드 및 예제를 참조 하세요.
 
 ### <a name="language"></a>언어
 

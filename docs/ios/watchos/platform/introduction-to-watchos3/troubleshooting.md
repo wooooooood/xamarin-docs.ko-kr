@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ce4f0ecbd5e4d49d2ff88855ff68dd9a63e43
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d2aaf12bd6c45f6268cf87a77d2ee03a9d7a888
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123227"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677731"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 문제 해결
 
@@ -84,7 +84,7 @@ WatchOS 3 기준으로 `HTTPBodyStream` 의 속성을 `NSMutableURLRequest` 이�
 - **[3:-9824]-1200** -http 로드 실패 합니다.
 - **-1200**  -  `NSURLConnection` 오류를 사용 하 여 완료 합니다.
 
-WatchOS 3 기준으로 SSL/TLS 연결 보안 Apple에서 엄격 하 게 적용 됩니다. 영향을 받는 서비스 및 앱에 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다. 참조 [NSURLConnection](#NSURLConnection) 위에 자세한 내용은 합니다.
+WatchOS 3 기준으로 SSL/TLS 연결 보안 Apple에서 엄격 하 게 적용 됩니다. 영향을 받는 서비스 및 앱에 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다. 참조 [NSURLConnection](#nsurlconnection) 위에 자세한 내용은 합니다.
 
 ## <a name="snapshots"></a>스냅숏
 

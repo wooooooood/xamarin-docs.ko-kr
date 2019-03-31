@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667817"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677926"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -69,7 +69,7 @@ ms.locfileid: "57667817"
 
 앱 중 하나 선택 하는 경우의 확장을 해당 `UIViewController` 를 인스턴스화할 수 및 일반 뷰 컨트롤러 수명 주기를 시작 합니다. 그러나 일시 중단 하지만 일반적으로 사용자가 상호 작용을 마치면 종료, 일반 앱와 달리 확장은 로드, 실행 및을 반복적으로 종료 합니다.
 
-확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](xref:Foundation.NSExtensionContext) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#Communicating-with-the-Host-App) 대 한 자세한 내용은 아래 섹션입니다.
+확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](xref:Foundation.NSExtensionContext) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#communicating-with-the-host-app) 대 한 자세한 내용은 아래 섹션입니다.
 
 기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [카운트다운 위젯 발전](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)합니다.
 

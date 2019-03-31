@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114732"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677991"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.iOS에서 컬렉션 뷰
 
@@ -203,7 +203,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
  <a name="Cell_HighLighting" />
 
 
-#### <a name="cell-highlighting"></a>셀을 강조 표시
+#### <a name="cell-highlighting"></a>Cell HighLighting
 
 셀은 강조 표시 된 상태로 셀 전환 하며까지 선택 하지 않은 경우 사용자가 셀에서 해당 손가락을 뗄 합니다. 이 실제로 선택한 셀의 모양이 임시 변경을 허용 합니다. 선택 된 셀의 `SelectedBackgroundView` 표시 됩니다. 아래 그림 선택이 발생 직전 강조 표시 된 상태를 보여 줍니다.
 
@@ -443,7 +443,7 @@ Ios 9, 컬렉션 보기 (`UICollectionView`) 지 원하는 새 기본 제스처 
     - [예제에서는 다시 정렬](#Simple-Reordering-Example)
     - [사용자 지정 제스처 인식기를 사용 하 여](#Using-a-Custom-Gesture-Recognizer)
     - [사용자 지정 레이아웃, 다시 정렬](#Custom-Layouts-and-Reording)
-- [변경 내용 컬렉션 보기](#Collection-View-Changes)
+- [변경 내용 컬렉션 보기](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 

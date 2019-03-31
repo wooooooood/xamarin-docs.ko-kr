@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acfff90b4b983f92718bb9af1f587a73ec0f8da7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104260"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677861"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.iOS에서 NSUserActivity 사용 하 여 검색
 
@@ -29,7 +29,7 @@ IOS 9 접하는 `NSUserActivity` (공개적으로 및 개인적으로) 인덱싱
 
  - `EligibleForHandoff` - `true`를 핸드 오프 작업에서이 작업을 사용할 수 있습니다.
  - `EligibleForSearch` - `true`,이 작업을 장치에서 인덱스에 추가 하 고 검색 결과에 표시 합니다.
- - `EligibleForPublicIndexing` - `true`,이 작업을 Apple의 클라우드 기반 인덱스를 추가 하 고 iOS 장치에서 앱을 이미 설치 되지 않은 (검색)를 통해 사용자에 게 표시 합니다. 참조 된 [공용 검색 인덱싱](#Public-Search-Indexing) 대 한 자세한 내용은 아래 섹션입니다.
+ - `EligibleForPublicIndexing` - `true`,이 작업을 Apple의 클라우드 기반 인덱스를 추가 하 고 iOS 장치에서 앱을 이미 설치 되지 않은 (검색)를 통해 사용자에 게 표시 합니다. 참조 된 [공용 검색 인덱싱](#public-search-indexing) 대 한 자세한 내용은 아래 섹션입니다.
  - `Title` – 작업에 대 한 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자 자체 제목 텍스트를 검색할 수도 있습니다.
  - `Keywords` -인덱싱된 되며 최종 사용자가 검색을 수행 하는 작업에 설명 하는 데 사용 하는 문자열의 배열이입니다.
  - `ContentAttributeSet` -입니다는 `CSSearchableItemAttributeSet` 추가 세부 정보에서 작업을 설명 하 고 검색 결과에 서식 있는 콘텐츠를 제공 하는 데 사용 합니다.

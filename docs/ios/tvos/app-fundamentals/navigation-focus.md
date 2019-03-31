@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1cfa51b8e5434480d7d15fbf23d78f8b8735f16a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cb8d1c1d92146e70056c6cf562f2fa1cb028e7c
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112593"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677874"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스를 사용 하 여 작업
 
@@ -25,7 +25,7 @@ _이 문서에서는 포커스 및 있고 Xamarin.tvOS 앱 내에서 탐색을 �
 
 다음으로 사용 하 여 포커스를 사용할 수 있는 방법을 살펴보겠습니다를 알아보겠습니다 [시차](#Focus-and-Parallax) 하 고 *계층화 된 이미지* 최종 사용자에 게 현재 탐색 상태에 대 한 시각적 단서를 제공 합니다.
 
-마지막으로, 작업할 살펴보도록 하겠습니다 [포커스](#Working-with-Focus), [포커스 업데이트](#Working-with-Focus-Updates)를 [포커스 가이드](#Working-with-Focus-Guides)를 [컬렉션 포커스](#Working-with-Focus-in-Collections) 및 [ 시차를 사용 하도록 설정 하면](#Enabling-Parallax) Xamarin.tvOS 앱의 이미지 뷰에 있습니다.
+마지막으로, 작업할 살펴보도록 하겠습니다 [포커스](#Working-with-Focus), [포커스 업데이트](#Working-with-Focus-Updates)를 [포커스 가이드](#Working-with-Focus-Guides)를 [컬렉션 포커스](#Working-with-Focus-in-Collections) 및 [ 시차를 사용 하도록 설정 하면](#enabling-parallax) Xamarin.tvOS 앱의 이미지 뷰에 있습니다.
 
 <a name="Navigation" />
 

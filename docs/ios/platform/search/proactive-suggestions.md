@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b7564e3b94062c2294919121f32c4f830346bda
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105339"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677900"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.iOS에서 자동 제안 소개
 
@@ -397,7 +397,7 @@ namespace MonkeyNotification
 }
 ```
 
-세부 정보에서이 코드를 살펴보면 만들고의 인스턴스를 채우는 `NSUserActivity` (에서처럼 합니다 [활동 만들기](#Creating-an-Activity) 위의 섹션). 인스턴스를 만들고이 어 `INSendMessageIntent` (에서 상속 하는 `INIntent`) 송신할 메시지의 세부 정보를 사용 하 여 채웁니다.
+세부 정보에서이 코드를 살펴보면 만들고의 인스턴스를 채우는 `NSUserActivity` (에서처럼 합니다 [활동 만들기](#creating-an-activity) 위의 섹션). 인스턴스를 만들고이 어 `INSendMessageIntent` (에서 상속 하는 `INIntent`) 송신할 메시지의 세부 정보를 사용 하 여 채웁니다.
 
 ```csharp
 var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
@@ -480,7 +480,7 @@ Schema.org 같은 종류의 웹 사이트에 위치 기반 상호 작용을 제�
 
 Safari는 다음과 같은 스키마 속성을 준수 하는 웹 페이지에서 아무 것도 추출 됩니다.
 
-- **다음 표**
+- **PostalAddress**
 - **GeoCoordinates**
 - 전화 속성입니다.
 

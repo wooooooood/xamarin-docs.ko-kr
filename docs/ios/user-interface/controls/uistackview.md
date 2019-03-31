@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122675"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677848"
 ---
 # <a name="stack-views-in-xamarinios"></a>Xamarin.iOS에서 스택 뷰
 
@@ -233,7 +233,7 @@ icon.RemoveFromSuperview();
 - **기준 상대** – `true`, 각 하위 보기의 세로 간격의 기준에서 파생 됩니다.
 - **레이아웃 여백 상대** – 표준 레이아웃 여백을 기준으로 하위 뷰를 배치 합니다.
 
-일반적으로 소수의 하위 뷰를 정렬 하는 스택 뷰를 사용 합니다. 하나 이상의 스택 뷰 서로의 내부에 중첩 하 여 더 복잡 한 사용자 인터페이스를 만들 수 있습니다 (에서 수행한 것 처럼 합니다 [UIStackView 퀵 스타트](#UIStackView-Quickstart) 위에).
+일반적으로 소수의 하위 뷰를 정렬 하는 스택 뷰를 사용 합니다. 하나 이상의 스택 뷰 서로의 내부에 중첩 하 여 더 복잡 한 사용자 인터페이스를 만들 수 있습니다 (에서 수행한 것 처럼 합니다 [UIStackView 퀵 스타트](#uistackview-quickstart) 위에).
 
 추가 제약 조건 (예: 컨트롤의 높이 또는 너비)를 하위 뷰를 추가 하 여 추가 Ui 모양을 미세 조정할 수 있습니다. 그러나 주의 해야를 자체 스택 보기에 의해 발생 하는 충돌 하는 제약 조건을 포함 하지 않도록 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116331"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677757"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 고급 사용자 알림
 
@@ -375,7 +375,7 @@ namespace MonkeyChatNotifyExtension
 
 ### <a name="using-media-attachments-in-custom-ui"></a>사용자 지정 UI에서 미디어 첨부 파일을 사용 하 여
 
-때문에 미디어 첨부 파일 (에서처럼 합니다 [미디어 첨부 파일 추가](#Adding-Media-Attachments) 위의 섹션) 알림 페이로드가의 일부인, 액세스 및 기본에서 것 처럼 알림 콘텐츠 확장에 표시 된 수 알림 UI입니다.
+때문에 미디어 첨부 파일 (에서처럼 합니다 [미디어 첨부 파일 추가](#adding-media-attachments) 위의 섹션) 알림 페이로드가의 일부인, 액세스 및 기본에서 것 처럼 알림 콘텐츠 확장에 표시 된 수 알림 UI입니다.
 
 예를 들어, 위의 사용자 지정 UI를 포함 하는 경우는 `UIImageView` 에 노출 된는 C# 코드를 다음 코드는 미디어 첨부 파일을 사용 하 여에서 채우는 데 사용할 수 없습니다.
 

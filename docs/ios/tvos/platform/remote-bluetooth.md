@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115538"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677952"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri 원격 및 Bluetooth 컨트롤러 Xamarin에서 tvOS에 대 한
 
@@ -38,9 +38,9 @@ Siri 원격에는 다음 기능 및 tvOS 앱 내에서 예상된 사용량:
 
 |기능|일반 앱 사용|게임 앱 사용|
 |---|---|---|
-|**터치 화면**<br />탐색 키를 선택 하 고 상황에 맞는 메뉴를 누릅니다을 살짝 밉니다.|**탭/살짝 밀기**<br />포커스 항목 간의 UI 탐색 합니다.<br /><br />**클릭**<br />선택한 (포커스 내) 항목을 활성화합니다.|**탭/살짝 밀기**<br />게임 디자인에 따라 다르며 가장자리 탭 하 여 방향 패드도 사용할 수 있습니다.<br /><br />**클릭**<br />기본 단추 함수를 수행 합니다.|
+|**터치 화면**<br />탐색 키를 선택 하 고 상황에 맞는 메뉴를 누릅니다을 살짝 밉니다.|**Tap/Swipe**<br />포커스 항목 간의 UI 탐색 합니다.<br /><br />**클릭**<br />선택한 (포커스 내) 항목을 활성화합니다.|**Tap/Swipe**<br />게임 디자인에 따라 다르며 가장자리 탭 하 여 방향 패드도 사용할 수 있습니다.<br /><br />**클릭**<br />기본 단추 함수를 수행 합니다.|
 |**메뉴**<br />이전 화면에서 메뉴에 반환 하는 키를 누릅니다.|이전 화면으로 반환 하 고 기본 앱 화면에서 Apple TV 홈 화면으로 종료 됩니다.|일시 중지 하 고 이전 화면으로 반환 하 고 기본 앱 화면에서 Apple TV 홈 화면으로 종료 게임 플레이 다시 시작 합니다.|
-|**Siri/검색**<br />Siri 사용 하 여 국가에서 키를 누른 음성 컨트롤의 경우 모든 다른 국가에서 검색 화면을 표시 합니다.|N/A|N/A|
+|**Siri/Search**<br />Siri 사용 하 여 국가에서 키를 누른 음성 컨트롤의 경우 모든 다른 국가에서 검색 화면을 표시 합니다.|N/A|N/A|
 |**재생/일시 중지**<br />재생 하 고 미디어를 일시 중지 하거나 앱에서 보조 기능을 제공 합니다.|미디어 재생 및 일시 중지/계속할 재생을 시작합니다.|보조 단추 함수를 수행 하거나 소개 비디오를 건너뜁니다 (하는 경우 존재).|
 |**Home**<br />홈 화면으로 돌아가려면 키를 눌러, 실행 중인 앱을 표시, 누른 장치를 절전 모드를 두 번 클릭 합니다.|N/A|N/A|
 |**볼륨**<br />컨트롤에는 오디오/비디오 장치가 볼륨을 연결 합니다.|N/A|N/A|
@@ -51,7 +51,7 @@ Siri 원격에는 다음 기능 및 tvOS 앱 내에서 예상된 사용량:
 
 Siri 원격의 터치 화면은 다양 한 Xamarin.tvOS 앱에서 응답할 수 있는 한 손가락 제스처를 검색할 수 있습니다.
 
-|살짝 밀기|클릭|탭|
+|살짝 밀기|클릭 대상|탭|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |선택 영역 (포커스 내) 화면에서 UI 요소 간에 이동 (, 왼쪽, 아래쪽 오른쪽). 큰 목록을 신속 하 게 관성을 사용 하 여 콘텐츠를 스크롤할 수 살짝를 사용할 수 있습니다.|선택한 (포커스 내) 항목을 활성화 하거나 게임의 기본 단추 처럼 작동 합니다. 누른 채 클릭 상황에 맞는 메뉴 또는 보조 함수를 활성화할 수 있습니다.|방향 패드-D, 위쪽, 아래쪽, 왼쪽 또는 탭 영역 오른쪽에 따라 포커스를 이동 단추 처럼 작동 lightly 가장자리에서 터치 화면을 탭 합니다. 앱에 따라 숨겨진된 컨트롤을 표시 하기 위해 사용할 수 있습니다.|
@@ -271,7 +271,7 @@ namespace tvRemote
 
 Apple TV, 제 3 자에 대 한 iOS를 사용 하 여 제공 되는 표준 Siri 원격 외에도 (MFI) Bluetooth 게임 컨트롤러 Apple TV를 사용 하 여 쌍을 이루는 고 Xamarin.tvOS 앱을 제어 하는 데 사용 될 수 있습니다.
 
-[![](remote-bluetooth-images/game01.png "Bluetooth 게임 컨트롤러")](remote-bluetooth-images/game01.png#lightbox)
+[![](remote-bluetooth-images/game01.png "Bluetooth Game Controllers")](remote-bluetooth-images/game01.png#lightbox)
 
 게임 플레이 높이고 게임에서 집중 교육의 의미를 제공 게임 컨트롤러를 사용할 수 있습니다. 사용 하 여 원격 인스턴스 및 컨트롤러 사이 전환 하지 않아도 되므로 표준 Apple TV 인터페이스를 제어 하도 사용 수 있습니다.
 
@@ -310,7 +310,7 @@ Apple에서는 게임 컨트롤러를 사용 하 여 작업 하기 위한 다음
 앱 하위 수준 컨트롤러 입력, 필요한 경우에 Apple의를 사용 하 여 다음 작업을 수 있습니다 [게임 컨트롤러 프레임 워크](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) tvOS에 대 한 다음 수정 된:
 
 - Micro 게임 컨트롤러 프로필 (`GCMicroGamepad`) Siri 원격 대상에 추가 되었습니다.
-- 새 `GCEventViewController` 클래스 앱을 통해 게임 컨트롤러 이벤트 라우팅에 사용할 수 있습니다. 참조 된 [게임 컨트롤러 입력 결정](#Determining-Game-Controller-Input) 대 한 자세한 내용은 아래 섹션입니다.
+- 새 `GCEventViewController` 클래스 앱을 통해 게임 컨트롤러 이벤트 라우팅에 사용할 수 있습니다. 참조 된 [게임 컨트롤러 입력 결정](#determining-game-controller-input) 대 한 자세한 내용은 아래 섹션입니다.
 
 <a name="Game-Controller-Support-Requirements" />
 

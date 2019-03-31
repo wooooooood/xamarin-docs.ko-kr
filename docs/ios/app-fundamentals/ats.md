@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: f9308d3a746a5a0a43cf47cc5ea809c0f82bbe7b
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: a901e16b3d5befc25864af39cb255d1833400e7f
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233824"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677887"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.iOS 앱 전송 보안
 
@@ -73,13 +73,13 @@ Xamarin.iOS 앱 라이브러리 또는 서비스를 사용 하는 인터넷에 �
 
 새 Xamarin.iOS 앱에 대 한 사용할지 `HTTPS` 인터넷 리소스와 통신 하는 경우에 합니다. 마찬가지로 경우가 있을 수 있습니다 (예: 타사 웹 서비스를 사용 하 여) 여기서 이것이 불가능 하 고 옵트아웃 ATS 해야 합니다.
 
-또한 ATS는 높은 수준의 API 통신을 전달 완전 보안을 사용 하 여 TLS 버전 1.2 사용 하 여 암호화를 적용 합니다. 참조를 [ATS 연결 요구 사항을](#ATS-Connection-Requirements) 하 고 [ATS 호환 암호화](#ATS-Compatible-Ciphers) 대 한 자세한 내용은 위의 섹션입니다.
+또한 ATS는 높은 수준의 API 통신을 전달 완전 보안을 사용 하 여 TLS 버전 1.2 사용 하 여 암호화를 적용 합니다. 참조를 [ATS 연결 요구 사항을](#ats-connection-requirements) 하 고 [ATS 호환 암호화](#ats-compatible-ciphers) 대 한 자세한 내용은 위의 섹션입니다.
 
 TLS를 사용 하 여 친숙 하지 않을 때 ([Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)) SSL로의 후속 작업 ([Secure Socket Layer](https://en.wikipedia.org/wiki/Transport_Layer_Security))를 통해 보안을 적용 하는 암호화 프로토콜의 컬렉션을 제공 하 고 네트워크 연결입니다.
 
 TLS 수준을 사용 하는 웹 서비스에 의해 제어 됩니다 이므로 앱의 컨트롤 외부에서. 모두를 `HttpClient` 하며 `ModernHttpClient` 자동으로 가장 높은 수준의 서버에서 지원 되는 TLS 암호화를 사용 해야 합니다.
 
-서버 따라에 말하는 (특히 경우가 타사 추가 서비스)에 전달 완전 보안을 사용 하지 않도록 설정 하거나 더 낮은 TLS 수준 선택 해야 할 수 있습니다. 참조 된 [ATS 옵션 구성](#Configuring-ATS-Options) 대 한 자세한 내용은 아래 섹션입니다.
+서버 따라에 말하는 (특히 경우가 타사 추가 서비스)에 전달 완전 보안을 사용 하지 않도록 설정 하거나 더 낮은 TLS 수준 선택 해야 할 수 있습니다. 참조 된 [ATS 옵션 구성](#configuring-ats-options) 대 한 자세한 내용은 아래 섹션입니다.
 
 > [!IMPORTANT]
 > 앱 전송 보안을 사용 하 여 Xamarin 앱에 적용 되지 않습니다 **관리 되는 HTTPClient 구현**합니다. CFNetwork를 사용 하 여 연결에 적용 됩니다 **HTTPClient 구현** 하거나 **NSURLSession HTTPClient 구현** 만 합니다.

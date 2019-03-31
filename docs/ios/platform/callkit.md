@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 6db9ff0085c17f07d07a7591f5d735793bfbc5f9
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459930"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678043"
 ---
 # <a name="callkit-in-xamarinios"></a>Xamarin.iOS에서 CallKit
 
@@ -278,7 +278,7 @@ namespace MonkeyCall
 }
 ```
 
-합니다 `CallHandleFromURL` 및 `CallHandleFromActivity` 클래스 AppDelegate에서 사용 하는 나가는 호출에서 호출할 사람의 연락처 핸들을 가져올 수 있습니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#Handling-Outgoing-Calls) 섹션 아래.
+합니다 `CallHandleFromURL` 및 `CallHandleFromActivity` 클래스 AppDelegate에서 사용 하는 나가는 호출에서 호출할 사람의 연락처 핸들을 가져올 수 있습니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#handling-outgoing-calls) 섹션 아래.
 
 ### <a name="the-activecallmanager-class"></a>ActiveCallManager 클래스
 
@@ -392,7 +392,7 @@ namespace MonkeyCall
 }
 ```
 
-다시 시뮬레이션만 이므로, 합니다 `ActiveCallManager` 만의 컬렉션을 유지 `ActiveCall` 개체에서 지정된 된 호출을 찾기 위한 루틴을 있고 해당 `UUID` 속성입니다. 또한 시작, 종료 및 나가는 호출의-대기 상태를 변경 하는 메서드를 포함 합니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#Handling-Outgoing-Calls) 섹션 아래.
+다시 시뮬레이션만 이므로, 합니다 `ActiveCallManager` 만의 컬렉션을 유지 `ActiveCall` 개체에서 지정된 된 호출을 찾기 위한 루틴을 있고 해당 `UUID` 속성입니다. 또한 시작, 종료 및 나가는 호출의-대기 상태를 변경 하는 메서드를 포함 합니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#handling-outgoing-calls) 섹션 아래.
 
 ### <a name="the-providerdelegate-class"></a>ProviderDelegate 클래스
 
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-합니다 `OpenUrl` 및 `ContinueUserActivity` 재정의 메서드는 앱은 나가는 호출을 처리 하는 경우 사용 됩니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#Handling-Outgoing-Calls) 섹션 아래.
+합니다 `OpenUrl` 및 `ContinueUserActivity` 재정의 메서드는 앱은 나가는 호출을 처리 하는 경우 사용 됩니다. 자세한 내용은 참조 하십시오 합니다 [나가는 호출 처리](#handling-outgoing-calls) 섹션 아래.
 
 ## <a name="handling-incoming-calls"></a>들어오는 호출 처리
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-여기를 `CallHandleFromActivity` 도우미 클래스의 메서드 `StartCallRequest` 호출 되는 사용자에 핸들을 가져오는 데 사용 되 고 됩니다 (참조 [StartCallRequest 클래스](#The-StartCallRequest-Class) 위에). 
+여기를 `CallHandleFromActivity` 도우미 클래스의 메서드 `StartCallRequest` 호출 되는 사용자에 핸들을 가져오는 데 사용 되 고 됩니다 (참조 [StartCallRequest 클래스](#the-startcallrequest-class) 위에).
 
-합니다 `PerformStartCallAction` 메서드를 [ProviderDelegate 클래스](#The-ProviderDelegate-Class) 마지막 실제 보내는 호출을 시작 하 고 수명 주기의 체제에 알려주는 데:
+합니다 `PerformStartCallAction` 메서드를 [ProviderDelegate 클래스](#the-providerdelegate-class) 마지막 실제 보내는 호출을 시작 하 고 수명 주기의 체제에 알려주는 데:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)

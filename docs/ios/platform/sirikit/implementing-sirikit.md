@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: c8d5c1394bee2ca2419904b077522fac9d03d825
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669448"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678056"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.iOS에서 SiriKit 구현
 
@@ -635,7 +635,7 @@ SiriKit을 채택 하도록 앱 준비 되었으므로 이제는 개발자 하�
     
 -----
 
-의도 확장명의 수에 대 한 이러한 단계를 반복 (기준 [확장에 대 한 앱을 설계](#Architecting-the-App-for-Extensions) 위의 섹션) 앱 해야 하는 합니다.
+의도 확장명의 수에 대 한 이러한 단계를 반복 (기준 [확장에 대 한 앱을 설계](#architecting-the-app-for-extensions) 위의 섹션) 앱 해야 하는 합니다.
 
 ### <a name="configuring-the-infoplist"></a>Info.plist를 구성합니다.
 

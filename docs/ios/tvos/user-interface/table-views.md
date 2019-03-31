@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105898"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678004"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>TvOS Xamarin의 테이블 뷰를 사용 하 여 작업
 
@@ -101,7 +101,7 @@ Xamarin.tvOS 앱에서 테이블 뷰를 사용 하는 가장 쉬운 방법은 �
 1. 각각에 대 한 **프로토타입 셀**선택 하 고 고유한 할당 **식별자** 에 **위젯** 탭을 **속성 탐색기**합니다. 이 단계는 _매우 중요 한_ 나중에이 식별자는 필요에 따라 채울 경우 테이블입니다. 예를 들어 `AttrCell`: 
 
     [![](table-views-images/table12.png "위젯 탭")](table-views-images/table12.png#lightbox)
-1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#Table-View-Cell-Types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
+1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
 
     [![](table-views-images/table13.png "셀 레이아웃")](table-views-images/table13.png#lightbox)
 1. 고유한 할당 **이름을** 의 프로토타입 셀 디자인에서는 각 UI 요소에는 **위젯** 탭의 **속성 탐색기** 되므로 나중에 액세스할 수 있습니다 C# 코드: 
@@ -142,7 +142,7 @@ Xamarin.tvOS 앱에서 테이블 뷰를 사용 하는 가장 쉬운 방법은 �
 1. 각각에 대 한 **프로토타입 셀**선택 하 고 고유한 할당 **식별자** 에 **위젯** 탭을 **속성 탐색기**합니다. 이 단계는 _매우 중요 한_ 나중에이 식별자는 필요에 따라 채울 경우 테이블입니다. 예를 들어 `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "식별자를 할당 합니다.")](table-views-images/table12-vs.png#lightbox)
-1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#Table-View-Cell-Types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
+1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
 
     [![](table-views-images/table13-vs.png "스타일 드롭다운")](table-views-images/table13-vs.png#lightbox)
 1. 고유한 할당 **이름을** 의 프로토타입 셀 디자인에서는 각 UI 요소에는 **위젯** 탭의 **속성 탐색기** 되므로 나중에 액세스할 수 있습니다 C# 코드: 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 899e40460371933a3e1cb694618c7d33a124e76c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 1a5cc9f06fdca5944a9a3201ac15d63ca7f15453
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672705"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677965"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.iOS에서 핸드 오프
 
@@ -52,9 +52,9 @@ Apple는 iOS 8 및 OS X Yosemite(10.10 () 장치 중 하나에서 시작 하는 
 
 수신 응용 프로그램의 정보를 사용 합니다 `NSUserActivity`의 `UserInfo` 사용자 인터페이스를 구성 하 고 전환을 원활 하 게 최종 사용자에 게 표시 되도록 지정된 된 활동의 상태를 복원 하는 사전입니다.
 
-연속 통해 효율적으로 전송할 수 있는 추가 정보가 필요한 경우는 `NSUserActivity`, 원래 앱에 대 한 호출을 전송 하 고 필요한 데이터를 전송 하려면 하나 이상의 스트림을 연결할 수 앱을 다시 시작 합니다. 예를 들어, 활동 된 여러 이미지를 사용 하 여 큰 텍스트 문서를 편집 하는 경우 스트리밍는 해야 수신 장치에서 작업을 계속 하는 데 필요한 정보를 전송 합니다. 자세한 내용은 참조는 [지원 연속 스트림을](#Supporting-Continuation-Streams) 섹션 아래.
+연속 통해 효율적으로 전송할 수 있는 추가 정보가 필요한 경우는 `NSUserActivity`, 원래 앱에 대 한 호출을 전송 하 고 필요한 데이터를 전송 하려면 하나 이상의 스트림을 연결할 수 앱을 다시 시작 합니다. 예를 들어, 활동 된 여러 이미지를 사용 하 여 큰 텍스트 문서를 편집 하는 경우 스트리밍는 해야 수신 장치에서 작업을 계속 하는 데 필요한 정보를 전송 합니다. 자세한 내용은 참조는 [지원 연속 스트림을](#supporting-continuation-streams) 섹션 아래.
 
-위에서 설명한 것 처럼 `NSDocument` 또는 `UIDocument` 기반된 앱 기본 제공 지원 핸드 오프를 자동으로 포함 합니다. 자세한 내용은 참조는 [문서 기반 앱에서 지 원하는 핸드 오프](#Supporting-Handoff-in-Document-Based-Apps) 섹션 아래.
+위에서 설명한 것 처럼 `NSDocument` 또는 `UIDocument` 기반된 앱 기본 제공 지원 핸드 오프를 자동으로 포함 합니다. 자세한 내용은 참조는 [문서 기반 앱에서 지 원하는 핸드 오프](#supporting-handoff-in-document-based-apps) 섹션 아래.
 
 ### <a name="the-nsuseractivity-class"></a>NSUserActivity 클래스
 
@@ -68,7 +68,7 @@ Apple는 iOS 8 및 OS X Yosemite(10.10 () 장치 중 하나에서 시작 하는 
 
 구현 해야 합니다는 `UserActivityWillSave` 메서드와으로 변경한 합니다 `NSUserActivity` (같은 `UserInfo`, `Title`등) 현재 활동의 상태는 여전히 반영 되도록 합니다. 시스템 호출 하는 경우는 `UserActivityWillSave` 메서드는 `NeedsSave` 플래그를 지웁니다. 설정 해야 모든 작업의 데이터 속성을 수정 하면 `NeedsSave` 에 `true` 다시 합니다.
 
-사용 하는 대신 합니다 `UserActivityWillSave` 위의 메서드를 필요에 따라 있습니다 `UIKit` 또는 `AppKit` 사용자 활동을 자동으로 관리 합니다. 이 위해 응답자 개체를 설정 `UserActivity` 속성을 구현 합니다 `UpdateUserActivityState` 메서드. 참조 된 [응답자에서 핸드 오프를 지 원하는](#Supporting-Handoff-in-Responders) 자세한 내용은 아래 섹션입니다.
+사용 하는 대신 합니다 `UserActivityWillSave` 위의 메서드를 필요에 따라 있습니다 `UIKit` 또는 `AppKit` 사용자 활동을 자동으로 관리 합니다. 이 위해 응답자 개체를 설정 `UserActivity` 속성을 구현 합니다 `UpdateUserActivityState` 메서드. 참조 된 [응답자에서 핸드 오프를 지 원하는](#supporting-handoff-in-responders) 자세한 내용은 아래 섹션입니다.
 
 ### <a name="app-framework-support"></a>응용 프로그램 프레임 워크 지원
 
@@ -84,7 +84,7 @@ OS X에서 합니다 `NSUserActivity` 에서 관리 하는 `AppKit` 응답기를
 
 `AppKit` 하나를 자동으로 복원 된다는 `UserActivity` OS X에서 이러한 방식으로 생성 하는 속성입니다. 이 경우에 발생 합니다 `ContinueUserActivity` 메서드가 반환 되는 `false` 구현 하지 않으면. 이 경우 문서를 사용 하 여 열을 `OpenDocument` 메서드의 `NSDocumentController` 다음을 수신 합니다를 `RestoreUserActivityState` 메서드 호출 합니다.
 
-참조 된 [문서 기반 앱에서 지 원하는 핸드 오프](#Supporting-Handoff-in-Document-Based-Apps) 자세한 내용은 아래 섹션입니다.
+참조 된 [문서 기반 앱에서 지 원하는 핸드 오프](#supporting-handoff-in-document-based-apps) 자세한 내용은 아래 섹션입니다.
 
 #### <a name="user-activities-and-responders"></a>사용자 활동 및 응답자
 
@@ -94,7 +94,7 @@ OS X에서 합니다 `NSUserActivity` 에서 관리 하는 `AppKit` 응답기를
 
 응답기를 설정할 수의 연결을 끊을 자체 작업을 해당 `UserActivity` 속성을 `null`입니다. 앱 프레임 워크를 관리 하는 경우 `NSUserActivity` 인스턴스 연결된 응답자 더 없거나 문서에 자동으로 유효성이 검사 된 것입니다.
 
-참조 된 [응답자에서 핸드 오프를 지 원하는](#Supporting-Handoff-in-Responders) 자세한 내용은 아래 섹션입니다.
+참조 된 [응답자에서 핸드 오프를 지 원하는](#supporting-handoff-in-responders) 자세한 내용은 아래 섹션입니다.
 
 #### <a name="user-activities-and-the-appdelegate"></a>사용자 활동 및 AppDelegate
 
@@ -102,7 +102,7 @@ OS X에서 합니다 `NSUserActivity` 에서 관리 하는 `AppKit` 응답기를
 
 `NSUserActivity` 때 인스턴스가 배달 되는지 합니다 `AppDelegate`의 `ContinueUserActivity` 메서드가 호출 됩니다. 이 시점에서 앱의 사용자 인터페이스를 구성 하 고 지정된 된 활동을 계속 해야 합니다.
 
-참조 된 [핸드 오프 구현](#Implementing-Handoff) 자세한 내용은 아래 섹션.
+참조 된 [핸드 오프 구현](#implementing-handoff) 자세한 내용은 아래 섹션.
 
 ## <a name="enabling-handoff-in-a-xamarin-app"></a>Xamarin 앱에서 사용 하도록 설정 하면 핸드 오프
 
@@ -201,7 +201,7 @@ namespace MonkeyBrowse
 }
 ```
 
-`UserActivityReceivedData` 연속 Stream에 보내는 장치에서 데이터를 수신 하는 메서드가 호출 됩니다. 자세한 내용은 참조는 [지원 연속 스트림을](#Supporting-Continuation-Streams) 섹션 아래.
+`UserActivityReceivedData` 연속 Stream에 보내는 장치에서 데이터를 수신 하는 메서드가 호출 됩니다. 자세한 내용은 참조는 [지원 연속 스트림을](#supporting-continuation-streams) 섹션 아래.
 
 `UserActivityWasContinued` 메서드 다른 장치는 현재 장치에서 작업 동안 수행 된 경우 호출 됩니다. 할 일 목록에 새 항목을 추가 하는 등의 작업의 유형에 따라 앱에서 보내는 장치 작업을 중단 필요 될 수 있습니다.
 
@@ -246,7 +246,7 @@ userInfo.Add (new NSString ("Url"), new NSString (url));
 UserActivity.AddUserInfoEntries (userInfo);
 ```
 
-Apple 활동 수신 장치에 시기 적절 한 방식으로 전송 되도록 분위기 최소값으로 보내는 정보를 유지 하는 것이 좋습니다. 문서에 연결 하는 이미지를 편집할 수와 같은 큰 정보가 필요한 경우를 사용 해야 연속 스트림을 전송 되어야 합니다. 참조 된 [지원 연속 스트림을](#Supporting-Continuation-Streams) 대 한 자세한 내용은 아래 섹션입니다.
+Apple 활동 수신 장치에 시기 적절 한 방식으로 전송 되도록 분위기 최소값으로 보내는 정보를 유지 하는 것이 좋습니다. 문서에 연결 하는 이미지를 편집할 수와 같은 큰 정보가 필요한 경우를 사용 해야 연속 스트림을 전송 되어야 합니다. 참조 된 [지원 연속 스트림을](#supporting-continuation-streams) 대 한 자세한 내용은 아래 섹션입니다.
 
 ### <a name="continuing-an-activity"></a>작업을 계속할 수 없습니다.
 
@@ -421,7 +421,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 }
 ```
 
-문서 기반 앱을 구현 하는 경우는 `ContinueUserActivity` 메서드 또는 해당 반환 `false`를 `UIKit` 또는 `AppKit` 자동으로 작업을 재개할 수 있습니다. 참조 된 [문서 기반 앱에서 지 원하는 핸드 오프](#Supporting-Handoff-in-Document-Based-Apps) 자세한 내용은 아래 섹션입니다.
+문서 기반 앱을 구현 하는 경우는 `ContinueUserActivity` 메서드 또는 해당 반환 `false`를 `UIKit` 또는 `AppKit` 자동으로 작업을 재개할 수 있습니다. 참조 된 [문서 기반 앱에서 지 원하는 핸드 오프](#supporting-handoff-in-document-based-apps) 자세한 내용은 아래 섹션입니다.
 
 ### <a name="failing-handoff-gracefully"></a>핸드 오프를 정상적으로 실패
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528782"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677835"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>watchOS에서 Xamarin 운동 앱
 
@@ -97,7 +97,7 @@ Apple Watch 높은 성능을 유지 하기 위해 백그라운드에서 실행�
 1. 편집하기 위해 **솔루션 탐색기**에서 `Entitlements.plist` 파일을 두 번 클릭하여 엽니다.
 2. 확인 하 고 아래쪽으로 스크롤하여 **HealthKit 사용**: 
 
-    [![](workout-apps-images/auth01.png "HealthKit 사용 확인")](workout-apps-images/auth01.png#lightbox)
+    [![](workout-apps-images/auth01.png "Check Enable HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. 파일의 변경 내용을 저장합니다.
 4. 지침에 따라 합니다 [명시적 앱 ID 및 프로 비전 프로필](~/ios/platform/healthkit.md) 및 [앱 ID 및 프로 비전 프로필 사용 하 여 Xamarin.iOS 앱 연결](~/ios/platform/healthkit.md) 부분은 [소개 HealthKit](~/ios/platform/healthkit.md) 문서를 올바르게 앱 프로 비전 합니다.
 5. 지침을 마지막으로 사용 합니다 [상태 키트 프로그래밍](~/ios/platform/healthkit.md) 및 [the 사용자에서 권한을 요청](~/ios/platform/healthkit.md) 부분을 [HealthKit 소개](~/ios/platform/healthkit.md) 요청에 문서 사용자의 HealthKit 데이터 저장소에 액세스할 수 있는 권한입니다.
@@ -636,7 +636,7 @@ private void SaveWorkoutSamples (HKWorkout workout)
 
 ## <a name="workouts-and-ios-10"></a>IOS 10 및 달리기
 
-모든 watchOS 3 워크 아웃 응용 프로그램에는 부모 iOS 10 기반된 워크 아웃 앱과 iOS 10에 새 iOS 앱이를 사용 하 여 Apple Watch 워크 아웃 모드 (사용자 개입 없음)에 배치 되며 백그라운드에서 실행 모드에서 watchOS 응용 프로그램을 실행 하는 워크 아웃을 시작할 수 있습니다 ( 참조[배경 실행에 대 한](#About-Background-Running) 위의 자세한 세부 정보에 대 한).
+모든 watchOS 3 워크 아웃 응용 프로그램에는 부모 iOS 10 기반된 워크 아웃 앱과 iOS 10에 새 iOS 앱이를 사용 하 여 Apple Watch 워크 아웃 모드 (사용자 개입 없음)에 배치 되며 백그라운드에서 실행 모드에서 watchOS 응용 프로그램을 실행 하는 워크 아웃을 시작할 수 있습니다 ( 참조[배경 실행에 대 한](#about-background-running) 위의 자세한 세부 정보에 대 한).
 
 WatchOS 앱 실행 되는 동안 WatchConnectivity 메시징 및 상위 iOS 앱과의 통신에 사용할 수 있습니다.
 
@@ -649,7 +649,7 @@ WatchOS 앱 실행 되는 동안 WatchConnectivity 메시징 및 상위 iOS 앱�
 3. 사용 하 여 전달 된 운동 구성, watchOS 3 앱 새 운동 세션을 시작 (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Apple Watch 만납니다를 시작 하려면 부모 iPhone 앱의 순서로 3 watchOS 앱 백그라운드 실행 해야 사용 하도록 설정 합니다. 참조 하세요 [백그라운드 실행 활성화](#Enabling-Background-Running) 위에 대 한 자세한 내용은 합니다.
+> Apple Watch 만납니다를 시작 하려면 부모 iPhone 앱의 순서로 3 watchOS 앱 백그라운드 실행 해야 사용 하도록 설정 합니다. 참조 하세요 [백그라운드 실행 활성화](#enabling-background-running) 위에 대 한 자세한 내용은 합니다.
 
 이 프로세스는 3 watchOS 앱에서 직접 운동 세션을 시작 하는 프로세스와 매우 유사 합니다. IPhone에서 다음 코드를 사용 합니다.
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b2f9ab4cf9bad71153d5bdae9ae44ddf091deed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106366"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677796"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>WatchOS 앱을 앱 스토어에 배포
 
 > [!IMPORTANT]
-> 검토 해야 [Apple Watch 키트 제출 가이드](https://developer.apple.com/app-store/watch/), 참조 및 합니다 [문제 해결](#Troubleshooting) 해야 하는 모든 문제에 대 한 섹션입니다.
+> 검토 해야 [Apple Watch 키트 제출 가이드](https://developer.apple.com/app-store/watch/), 참조 및 합니다 [문제 해결](#troubleshooting) 해야 하는 모든 문제에 대 한 섹션입니다.
 
 - 했는지 확인 합니다.
   - [**배포 프로 비전 프로필** ](#provisioning) 프로젝트에 대해 생성 합니다.
@@ -41,7 +41,7 @@ ms.locfileid: "50106366"
   - (선택 사항) **의 유효성을 검사 하는 중...**  보관 합니다.
   - **전송...**  보관 및 iTunes를 업로드 하는 단계 검토 및 승인에 대 한 연결에 따라 합니다.
 
-이러한 항목 아래에 관련 된 특정 팁을 읽어 보세요. 참조 된 [문제 해결](#Troubleshooting) 문제가 있는 경우 섹션입니다.
+이러한 항목 아래에 관련 된 특정 팁을 읽어 보세요. 참조 된 [문제 해결](#troubleshooting) 문제가 있는 경우 섹션입니다.
 
 <a name="provisioning" />
 
@@ -148,7 +148,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 수행 합니다 [알파 채널을 제거 하는 것에 대 한 지침](~/ios/watchos/troubleshooting.md) 아이콘에서.
 
-### <a name="cfbundleversion-mismatch"></a>CFBundleVersion 일치 하지 않습니다.
+### <a name="cfbundleversion-mismatch"></a>CFBundleVersion Mismatch
 
 ```csharp
 CFBundleVersion Mismatch. The CFBundleVersion value '1' of watch application
