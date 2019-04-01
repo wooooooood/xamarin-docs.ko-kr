@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 56df2f7e6b83ddd4a5780506471cbd32a3aced40
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: cdca5294ea12bf8907ea5f6242efea00f384e77e
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171952"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329340"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러 기본 클래스 및 네이티브 컨트롤
 
@@ -31,7 +31,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 - **Android** – Xamarin.Forms.Maps.Android
 - **UWP(유니버설 Windows 플랫폼)** – Xamarin.Forms.Maps.UWP
 
-## <a name="pages"></a>인쇄할 페이지
+## <a name="pages"></a>Pages
 
 다음 표에서는 각 Xamarin.Forms [페이지](~/xamarin-forms/user-interface/controls/pages.md) 형식을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
 
@@ -70,11 +70,12 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
 |[`BoxView`](xref:Xamarin.Forms.BoxView)|BoxRenderer(iOS 및 Android), BoxViewRenderer(UWP)|UIView|ViewGroup||사각형|
 |[`Button`](xref:Xamarin.Forms.Button)|ButtonRenderer|UIButton|단추|AppCompatButton|단추|
+|`CollectionView`|CollectionViewRenderer|UICollectionView||RecyclerView||
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
 |[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||이미지|
-|`ImageButton`|ImageButtonRenderer|UIButton||AppCompatImageButton|단추|
+|[`ImageButton`](xref:Xamarin.Forms.ImageButton)|ImageButtonRenderer|UIButton||AppCompatImageButton|단추|
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)|MKMapView|MapView||MapControl|
@@ -82,8 +83,8 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`ProgressBar`](xref:Xamarin.Forms.ProgressBar)|ProgressBarRenderer|UIProgressView|ProgressBar||ProgressBar|
 |[`SearchBar`](xref:Xamarin.Forms.SearchBar)|SearchBarRenderer|UISearchBar|SearchView||AutoSuggestBox|
 |[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||슬라이더|
-|[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||Control|
-|[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|전환|SwitchCompat|ToggleSwitch|
+|[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||컨트롤|
+|[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|스위치|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
 |[`WebView`](xref:Xamarin.Forms.WebView)|WebViewRenderer|UIWebView|WebView||WebView|
@@ -95,7 +96,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |셀|렌더러|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
 |[`EntryCell`](xref:Xamarin.Forms.EntryCell)|EntryCellRenderer|UITextField를 포함한 UITableViewCell|TextView와 EditText를 포함한 LinearLayout|TextBox를 포함한 DataTemplate|
-|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UISwitch를 포함한 UITableViewCell|전환|TextBlock과 ToggleSwitch가 있는 그리드를 포함한 DataTemplate|
+|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UISwitch를 포함한 UITableViewCell|스위치|TextBlock과 ToggleSwitch가 있는 그리드를 포함한 DataTemplate|
 |[`TextCell`](xref:Xamarin.Forms.TextCell)|TextCellRenderer|UITableViewCell|두 개의 TextViews를 포함한 LinearLayout|두 개의 TextBlock이 있는 StackPanel을 포함한 DataTemplate|
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UIImage를 포함한 UITableViewCell|두 개의 TextViews와 ImageView를 포함한 LinearLayout|이미지와 두 개의 TextBlock이 있는 그리드를 포함한 DataTemplate|
 |[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|보기|ContentPresenter를 포함한 DataTemplate|

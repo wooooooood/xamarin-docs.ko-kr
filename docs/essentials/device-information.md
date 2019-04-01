@@ -1,20 +1,20 @@
 ---
 title: 'Xamarin.Essentials: 디바이스 정보'
-description: 이 문서에서는 응용 프로그램이 실행 중인 디바이스에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.
+description: 이 문서에서는 애플리케이션이 실행 중인 장치에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: a7868277cd5e924d55ad688df1e8e07c81c5f074
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898955"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329327"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: 디바이스 정보
 
-**DeviceInfo** 클래스는 응용 프로그램이 실행 중인 장치에 대한 정보를 제공합니다.
+**DeviceInfo** 클래스는 애플리케이션이 실행 중인 장치에 대한 정보를 제공합니다.
 
 ## <a name="get-started"></a>시작
 
@@ -53,18 +53,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[플랫폼](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## <a name="platforms"></a>플랫폼
 
-`DeviceInfo.Platform`은 운영 체제에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DevicePlatform` 구조체를 사용하여 확인할 수 있습니다.
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform)은 운영 체제에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DevicePlatform` 구조체를 사용하여 확인할 수 있습니다.
 
 - **DevicePlatform.iOS** – iOS
 - **DevicePlatform.Android** – Android
 - **DevicePlatform.UWP** – UWP
 - **DevicePlatform.Unknown** – 알 수 없음
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Idioms](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idioms"></a>Idioms
 
-`DeviceInfo.Idiom`은 응용 프로그램이 실행 중인 장치 유형에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DeviceIdiom` 구조체를 사용하여 확인할 수 있습니다.
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom)은 애플리케이션이 실행 중인 디바이스 유형에 매핑되는 상수 문자열에 상호 연결됩니다. 값은 `DeviceIdiom` 구조체를 사용하여 확인할 수 있습니다.
 
 - **DeviceIdiom.Phone** – 휴대폰
 - **DeviceIdiom.Tablet** – 태블릿
@@ -75,7 +75,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="device-type"></a>디바이스 유형
 
-`DeviceInfo.DeviceType`은 응용 프로그램이 물리적 또는 가상 장치에서 실행 중인지 판별하는 열거형에 상호 연결됩니다. 가상 디바이스는 시뮬레이터 또는 에뮬레이터입니다.
+`DeviceInfo.DeviceType`은 애플리케이션이 물리적 또는 가상 장치에서 실행 중인지 판별하는 열거형에 상호 연결됩니다. 가상 디바이스는 시뮬레이터 또는 에뮬레이터입니다.
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
