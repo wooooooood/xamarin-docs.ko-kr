@@ -49,10 +49,6 @@ Windows;에서 개발할 때 Android 장치에서 디버그 하려면 호환 USB
 
 이 가이드에서는 Android NUnit 테스트 프로젝트를 설정 하기 위한 단계를 다룹니다 _되지_ Xamarin.UITest 프로젝트입니다. Xamarin.UITest 안내서 [여기](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)합니다.
 
-### <a name="how-do-i-enable-intellisense-in-android-axml-filesenable-axml-intellisensemd"></a>[Android .axml 파일에서 Intellisense를 사용하려면 어떻게 해야 하나요?](enable-axml-intellisense.md)
-
-이 가이드에서는 Android.axml 파일에 대 한 Visual Studio의 Intellisense를 활성화 하는 방법을 설명 합니다.
-
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Android 릴리스 빌드를 인터넷에 연결할 수 없는 이유는 무엇인가요?](android-internet.md)
 
 이 문제의 가장 일반적인 원인은 합니다 **인터넷** 권한은 디버그 빌드에서 자동으로 포함 되어 있지만 릴리스 빌드를 수동으로 설정 해야 합니다. 이 가이드에는 릴리스 빌드에 대 한 권한을 사용 하도록 설정 하는 방법을 설명 합니다.
