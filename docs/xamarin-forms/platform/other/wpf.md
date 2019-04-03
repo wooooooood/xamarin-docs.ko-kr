@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: cdf115c4ea6d6613a1da2d0d2cfa14ed500086f8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209188"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854810"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치
 
@@ -21,7 +21,7 @@ ms.locfileid: "54209188"
 
 Xamarin.Forms는 Windows Presentation Foundation (WPF)에 대 한 미리 보기 지원이 되었습니다. 이 문서에서는 Xamarin.Forms 솔루션에 WPF 프로젝트를 추가 하는 방법에 설명 합니다.
 
-시작 하기 전이나, Visual Studio 2017에서 새 Xamarin.Forms 솔루션을 만드는 예를 들어 기존 Xamarin.Forms 솔루션을 사용 하 여 [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)합니다. Windows에서 Xamarin.Forms 솔루션에 WPF 앱만 추가할 수 있습니다.
+시작 하기 전이나, Visual Studio 2019에서 새 Xamarin.Forms 솔루션을 만드는 예를 들어 기존 Xamarin.Forms 솔루션을 사용 하 여 [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)합니다. Windows에서 Xamarin.Forms 솔루션에 WPF 앱만 추가할 수 있습니다.
 
 ## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>WPF 프로젝트 Xamarin.University 사용 하 여 Xamarin.Forms 앱에 추가
 
@@ -33,7 +33,7 @@ Xamarin.Forms는 Windows Presentation Foundation (WPF)에 대 한 미리 보기 
 
 Windows 7, 8 및 10 데스크톱에서 실행 되는 WPF 앱을 추가 하려면 이러한 지침을 따릅니다.
 
-1. 솔루션 이름을 마우스 오른쪽 단추로 Visual Studio 2017에는 **솔루션 탐색기** 선택한 **추가 > 새 프로젝트...** .
+1. 솔루션 이름을 마우스 오른쪽 단추로 Visual Studio 2019에는 **솔루션 탐색기** 선택한 **추가 > 새 프로젝트...** .
 
 2. 에 **새 프로젝트** 창에서 왼쪽된 선택 **Visual C#** 및 **Windows 클래식 바탕 화면**. 프로젝트 형식 목록에서 선택 **WPF 앱 (.NET Framework)** 합니다. 
 

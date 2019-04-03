@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: c34d81feee48caca94989973a67ba783a0139a90
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 24a9fa0e954ddba1451ba8bf98216550d7d70b51
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071076"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854784"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -52,23 +52,23 @@ Android Oreo Xamarin.Android와 함께 사용 하 여 시작 하려면 다운로
 
 이러한 각 단계는 다음 섹션에서 설명 됩니다.
 
-
-
 ### <a name="update-visual-studio-and-xamarinandroid"></a>Visual Studio를 업데이트 및 Xamarin.Android
 
 Visual Studio에 Android Oreo 지원을 추가 하려면 다음을 수행 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
--   Visual Studio 2017을 사용 하는 경우 
+- Visual Studio 2019 사용 합니다 [SDK Manager](~/android/get-started/installation/android-sdk.md) API 수준 26.0 이상 설치 합니다.
+
+- Visual Studio 2017을 사용 하는 경우
 
     1. Visual Studio 2017 버전 15.7 이상의 업데이트 (참조 [Visual Studio 2017 업데이트](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
     2. 사용 합니다 [SDK Manager](~/android/get-started/installation/android-sdk.md) API 수준 26.0 이상 설치 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
--   에 설명 된 대로 Mac 용 Visual Studio 2017의 안정적인 최신 버전으로 업데이트 [Mac 용 Visual Studio 업데이트](https://docs.microsoft.com/visualstudio/mac/update)합니다.
+- 에 설명 된 대로 Mac 용 Visual Studio의 안정적인 최신 버전으로 업데이트 [Mac 용 Visual Studio 업데이트](https://docs.microsoft.com/visualstudio/mac/update)합니다.
 
 -----
 
@@ -80,29 +80,29 @@ Android Oreo 용 Xamarin 지원에 대 한 자세한 내용은 참조는 [Xamari
 
 Xamarin.Android 8.0을 사용 하 여 프로젝트를 만들려면 하면 먼저 사용 하 여 Xamarin Android SDK Manager에 대 한 SDK 플랫폼을 설치 하려면 **Android 8.0-Oreo** 이상. Android SDK Tools 26.0 이상 설치 해야 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 1. SDK Manager 시작 (Visual Studio에서 클릭 **도구 > Android > Android SDK Manager**).
 
 2. 설치 합니다 **Android 8.0-Oreo** 패키지 있습니다. Android SDK 에뮬레이터를 사용 하는 경우 포함 해야 합니다 **x86** 해야 하는 시스템 이미지:
 
-    [![Android SDK Manager에서 Android 8.0 패키지 선택](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [![SAndroid SDK Manager에서 Android 8.0 패키지 선택](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. 설치할 **Android SDK Tools 26.0.2** 이상을 **Android SDK Platform-tools 26.0.0** 이상, 및 **Android SDK Build-tools 26.0.0** (또는 이상):
 
-    [![Android SDK Manager에서 Android SDK Tools 26 선택](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
+    [![SAndroid SDK Tools 26 Android SDK Manager의 선택](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 1. SDK Manager 시작 (Mac 용 Visual Studio에서 클릭 **도구 > SDK Manager**).
 
 2. 설치 합니다 **Android 8.0-Oreo** SDK 패키지 있습니다. Android SDK 에뮬레이터를 사용 하는 경우 포함 해야 합니다 **x86** 해야 하는 시스템 이미지:
 
-    [![SDK Manager에서 Android 8.0 패키지 선택](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [![SSDK Manager에서 Android 8.0 패키지 선택](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. 설치할 **Android SDK Tools 26.0.2** 이상을 **Android SDK Platform-tools 26.0.0** 이상, 및 **Android SDK Build-tools 26.0.0** (또는 이상):
 
-    [![SDK Manager에서 Android SDK Tools 26 선택](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [![SAndroid SDK Tools 26 SDK 관리자를 선택](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
@@ -119,11 +119,11 @@ Android 프로젝트를 만든 경우에 대상 Android 8.0 이상 버전 설정
 
 Android SDK Tools 26.0 설치 후 기본 Google GUI 기반 AVD 관리자를 시작 하려는 경우 나중에 명령줄 AVD manager 도구를 사용 하 고 다음 오류 대화 상자를 표시 될 수 있습니다 **avdmanager** 대신 :
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 ![Android Emulator 관리자 경고 대화 상자](oreo-images/win/03-avd-warning.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 ![Android Emulator 관리자 경고 대화 상자](oreo-images/mac/03-avd-warning.png)
 
@@ -139,7 +139,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 사용 하도록 **avdmanager** 새 가상 장치를 만들려면 다음이 단계를 수행 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 1.  명령 프롬프트 창을 열고 설정 `JAVA_HOME` 컴퓨터에서 Java SDK의 위치입니다. 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
@@ -164,9 +164,9 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 한 후 **avdmanager** 가상 장치를 만들려면 장치 풀 다운 메뉴에 포함 될지 것입니다.
 
-[![새 AVD 장치 풀 다운 메뉴에 추가](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
+[![N활용 하면 초보 AVD 장치 풀 다운 메뉴에 추가](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 1.  엽니다는 **터미널** 창과 mac에서 Android SDK tools 디렉터리의 위치 변경 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
@@ -184,7 +184,7 @@ Android 장치 관리자를 만들고 가상 장치 관리를 사용 하려면 �
 
 사용 하 여 **avdmanager** 가상 장치를 만들려면 장치 풀 다운 메뉴에 포함 될지 것입니다.
 
-[![새 AVD 장치 풀 다운 메뉴에 추가](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
+[![N활용 하면 초보 AVD 장치 풀 다운 메뉴에 추가](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -213,7 +213,7 @@ Android Oreo 다양 한 새로운 기능 및 알림 채널, 알림 배지, XML�
 
 알림 배지가 스크린샷에 표시 된 대로 앱 아이콘 위에 표시 되는 작은 점 같습니다.
 
-[![앱 아이콘에 알림 배지를 예제](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[![E앱 아이콘에 알림 배지를 xample](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
 이러한 점을 나타내는 앱 아이콘을 사용 하 여 연결 된 앱에서 하나 이상의 알림 채널에 대 한 새 알림이 &ndash; 이들은 사용자가 아직 해제 되지 않았거나 취해야 하는 알림입니다. 사용자 수 장기-아이콘 키를 눌러 해제 하거나 해당 appeaars 장기-키를 눌러 메뉴에서 알림에서 작동 하는 알림 배지를 사용 하 여 연관 된 알림도 살펴봅니다.
 

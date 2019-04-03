@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: 78051fce44239eea86948988a4d19ac37c5ea0d5
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666937"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854901"
 ---
 # <a name="external-storage"></a>외부 저장소
 
@@ -140,17 +140,17 @@ Android를 외부 저장소에 액세스 하는 것으로 간주는 _위험한 �
 > [!NOTE]
 > 사용자가 부여 하는 경우 `WRITE_EXTERNAL_STORAGE`, 다음 `READ_EXTERNAL_STORAGE` 도 암시적으로 부여 됩니다. 모두 권한을 요청 하려면 필요한 경우가 아니라면 **AndroidManifest.xml**합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 사용 하 여 사용 권한을 추가할 수도 있습니다는 **Android 매니페스트** 탭의 **솔루션 속성**:
 
-![솔루션 탐색기-Visual Studio 2017에 대 한 필요한 권한](./images/required-permissions.w157.png)
+![솔루션 탐색기-Visual Studio에 필요한 권한](./images/required-permissions.w157.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 사용 하 여 사용 권한을 추가할 수도 있습니다는 **Android 매니페스트** 탭의 **솔루션 속성 패드**:
 
-[![Solution Pad-Mac 용 Visual Studio에 필요한 권한](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
+[![S솔루션 패드-Mac 용 Visual Studio에 필요한 권한](./images/required-permissions.m752-sml.png)](./images/required-permissions.m752.png#lightbox)
 
 -----
 
@@ -181,4 +181,4 @@ System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/file
 ## <a name="related-links"></a>관련 링크
 
 * [Xamarin.Android 로컬 파일에서 샘플 **monodroid 샘플**](https://github.com/xamarin/monodroid-samples/tree/master/LocalFiles)
-* [Xamarin.Android에서 사용 권한](~/android/app-fundamentals/permissions.md)
+* [Permissions In Xamarin.Android](~/android/app-fundamentals/permissions.md)

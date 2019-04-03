@@ -1,17 +1,17 @@
 ---
 title: 전송 계층 보안 (TLS) 1.2
-description: 이 문서에서는 설명 하는 방법을 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 프로젝트에 대 한 TLS 1.2를 사용 하도록 설정 하려면. Mac 용 Visual Studio 2017 및 Visual Studio에서 그렇게 하는 방법을 보여 줍니다.
+description: 이 문서에서는 설명 하는 방법을 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 프로젝트에 대 한 TLS 1.2를 사용 하도록 설정 하려면. Mac 용 Visual Studio 2019 및 Visual Studio에서 그렇게 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 889eaf2b2f87b22010315f5e92dcfd1cd4c7c446
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 26870ae0e84a84a7b78f7766a8e134ecfc7b223e
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668272"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855005"
 ---
 # <a name="transport-layer-security-tls-12"></a>전송 계층 보안 (TLS) 1.2
 
@@ -31,17 +31,17 @@ ms.locfileid: "57668272"
 > [!NOTE]
 > Android 5.0 이상이 필요합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 이러한 설정에서 찾을 수 있습니다 **프로젝트 속성 > Android 옵션** 클릭 하 여 **고급** 단추:
 
-[![Visual Studio에서 TLS 및 HttpClient 구성](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
+[![CHttpClient onfigure 및 Visual Studio에서 TLS](transport-layer-security-images/android-win-sml.png)](transport-layer-security-images/android-win.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 이러한 설정에서 찾을 수 있습니다 **프로젝트 옵션 > 빌드 > Android 빌드** 탭:
 
-[![Mac 용 Visual Studio에서 TLS 및 HttpClient 구성](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
+[![CHttpClient onfigure 및 Mac 용 Visual Studio에서 TLS](transport-layer-security-images/android-mac-sml.png)](transport-layer-security-images/android-mac.png#lightbox)
 
 -----
 
@@ -49,17 +49,17 @@ ms.locfileid: "57668272"
 
 업데이트를 **HttpClient 구현** TSL 1.2 보안을 사용 하는 옵션입니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 이 설정에서 찾을 수 있습니다 **프로젝트 속성 > iOS 빌드**:
 
-[![Visual Studio에서 TLS 및 HttpClient 구성](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
+[![CHttpClient onfigure 및 Visual Studio에서 TLS](transport-layer-security-images/ios-win-sml.png)](transport-layer-security-images/ios-win.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 이 설정에서 찾을 수 있습니다 **프로젝트 옵션 > 빌드 > iOS 빌드** 탭:
 
-[![Mac 용 Visual Studio에서 HttpClient 구성](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
+[![CMac 용 Visual Studio의 HttpClient onfigure](transport-layer-security-images/ios-mac-sml.png)](transport-layer-security-images/ios-mac.png#lightbox)
 
 -----
 
@@ -67,7 +67,7 @@ ms.locfileid: "57668272"
 
 Mac 용 Visual Studio에서 업데이트에 Xamarin.Mac 앱에서 TLS 1.2를 사용 하도록 설정 합니다 **HttpClient 구현** 옵션 **프로젝트 옵션 > 빌드 > Mac 빌드**:
 
-[![Mac 용 Visual Studio에서 HttpClient 구성](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
+[![CMac 용 Visual Studio의 HttpClient onfigure](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)
 
 > [!WARNING]
 > 예정된 Xamarin.Mac 4.8 릴리스는 macOS 10.9 이상만 지원합니다.
@@ -120,7 +120,7 @@ Android 프로젝트 옵션을 선택할 수 있는 SSL/TLS 구현 지원:
 ## <a name="related-links"></a>관련 링크
 
 - [앱 전송 보안](~/ios/app-fundamentals/ats.md)
-- [Xamarin.Android Environment](~/android/deploy-test/environment.md)
+- [Xamarin.Android 환경](~/android/deploy-test/environment.md)
 - [Xamarin Cycle 9 (2017 년 2 월)](https://releases.xamarin.com/stable-release-cycle-9/)
 - [TLS (Wikipedia)](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 - [Mono 4.8 릴리스 정보-TLS 1.2 지원](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#tls-12-support)

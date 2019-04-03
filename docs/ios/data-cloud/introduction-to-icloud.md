@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071023"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855096"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.iOS와 iCloud를 사용 하 여
 
@@ -36,8 +36,8 @@ IOS 5에서에서 iCloud 저장소 API에는 응용 프로그램을을 중앙 �
 ## <a name="requirements"></a>요구 사항
 
 - Xamarin.iOS의 안정적인 최신 버전
-- Xcode 8 이상
-- Visual Studio for Mac 또는 Visual Studio 2017 이상입니다.
+- Xcode 10
+- Visual Studio for Mac or Visual Studio 2019.
 
 ## <a name="preparing-for-icloud-development"></a>ICloud 개발을 위한 준비
 
@@ -439,4 +439,4 @@ Apple에서 제공 [데이터 저장소 지침 iOS](https://developer.apple.com/
 - [iCloud 세미나 샘플 코드](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud 세미나 슬라이드](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [iCloud Storage](https://support.apple.com/kb/HT4847)
+- [iCloud 저장소](https://support.apple.com/kb/HT4847)

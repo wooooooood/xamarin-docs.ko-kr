@@ -6,12 +6,12 @@ ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 1ebc450a285d47fe1eedb0f8d72d6c9dc2b95644
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: f9cfc69c2cd711460233e609d63bcbb8eb172ccf
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666885"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854758"
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Live Player 설치
 
@@ -19,11 +19,14 @@ Xamarin Live Player를 사용 하면 앱에 라이브 편집을 확인 하 고�
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
+> [!NOTE]
+> 실시간 플레이어 미리 보기에만 Visual Studio 2017에서 제공 됩니다.
+
 ## <a name="1-get-the-android-app"></a>1. Android 앱 다운로드
 
 Xamarin Live Player에서 직접 intalling 하 여 Android에 대 한 사용할 수 [HockeyApp](https://aka.ms/xlp-hockeyapp)합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 ## <a name="2-get-visual-studio-2017"></a>2. Get Visual Studio 2017
 
@@ -63,7 +66,7 @@ Xamarin Live Player에는 다음이 필요합니다.
 
     연결에 대 한 장치에 연결할 수 없는 경우 오류 메시지가 표시 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 ## <a name="2-get-visual-studio-for-mac"></a>2. Mac 용 Visual Studio 받기
 
@@ -79,7 +82,7 @@ Xamarin Live Player에는 다음이 필요합니다.
 2. 로 **Visual Studio > 기본 설정...**  하 고 선택 합니다 **프로젝트 > Xamarin Live Player (미리 보기)** 탭 합니다.
 3. 눈금 **Xamarin Live Player 사용**:
 
-    [![옵션 창에서 Xamarin Live Player 사용 확인란](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![C옵션 창에서 Xamarin Live Player 사용 상자 도대체](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 4. Xamarin 프로젝트를 열거나 만듭니다 (또는 [샘플](~/tools/live-player/samples.md)).
 5. 선택할 **Live Player** 장치 목록에 있습니다.
@@ -114,6 +117,5 @@ Xamarin Live Player에는 다음이 필요합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [제한 사항](~/tools/live-player/limitations.md)
+- [Live Player를 사용 하는 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
 - [문제 해결](~/tools/live-player/troubleshooting.md)
-- [Xamarin Live Player 샘플](~/tools/live-player/samples.md)

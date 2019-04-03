@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 6243f7d90b921207f4dd406a1f33f4d7af40ecfb
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668371"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854875"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
 
@@ -29,11 +29,11 @@ Xamarin.Forms는 GTK# 앱에 대한 제한적인 지원을 하고 있습니다. 
 
 GTK # macos 및 Linux의 일부로 설치 됩니다 [Mono](https://www.mono-project.com/download/stable/)합니다. GTK # for.NET에 설치할 수 있습니다 사용 하 여 Windows를 [GTK # Installer](https://www.mono-project.com/download/stable/#download-win)합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한 지침을 따릅니다.
 
-1. Visual Studio 2017에서 마우스 오른쪽 단추로 클릭에서 솔루션 이름을 **솔루션 탐색기** 선택한 **추가 > 새 프로젝트...** .
+1. 솔루션 이름을 마우스 오른쪽 단추로에서 Visual Studio 2019 **솔루션 탐색기** 선택한 **추가 > 새 프로젝트...** .
 
 2. 에 **새 프로젝트** 창에서 왼쪽된 선택 **Visual C#** 및 **Windows 클래식 바탕 화면**. 프로젝트 형식 목록에서 선택 **클래스 라이브러리 (.NET Framework)**, 있는지 확인 합니다 **Framework** 드롭다운 최소.NET Framework 4.7로 설정 됩니다.
 
@@ -110,7 +110,7 @@ GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한
 
     ![GTK # 게임 수명의](gtk-images/win/gtk-gameoflife.png "GTK # 게임 수명")
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 앱을 추가 하려면 GTK # Mac 데스크톱에서 실행 되는 이러한 지침을 따릅니다.
 

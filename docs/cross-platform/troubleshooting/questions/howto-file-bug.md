@@ -1,5 +1,5 @@
 ---
-title: 시기와 방법을 제출 해야 하나요 버그 보고서를?
+title: 버그 보고서를 언제 어떻게 제출해야 하나요?
 description: 이 문서에서는 설명 하면 위치 및 버그 보고서를 파일에 있습니다. 또한 문제를 진단 하는 가장 하기 위해 엔지니어가 사용 하도록 설정 하는 모범 사례는 버그 보고서를 제공 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,19 +7,19 @@ ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2018
-ms.openlocfilehash: f20740ff1e16187be3d3703b3da07329f6f52daf
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: 1224d38a2230fa2f5c7ca08f6e33c5468886c206
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514340"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855213"
 ---
-# <a name="when-and-how-should-i-file-a-bug-report"></a>시기와 방법을 제출 해야 하나요 버그 보고서를?
+# <a name="when-and-how-should-i-file-a-bug-report"></a>버그 보고서를 언제 어떻게 제출해야 하나요?
 
 > [!TIP]
 > 사용 된 **문제 보고** Visual Studio에서 메뉴 항목 &ndash; 진단 정보를 문제 해결을 위해 버그 보고서와 함께 전송 됩니다.
 >
-> 에 대 한 자세한 지침은 [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 하 고 [Mac 용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/report-a-problem)합니다.
+> 에 대 한 자세한 지침은 [Visual Studio 2017 또는 Visual Studio 2019](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) 하 고 [Mac 용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/report-a-problem)합니다.
 >
 > 기존 보고서를 검색할 수 있습니다 합니다 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 웹 사이트입니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "39514340"
 
 ## <a name="additional-details"></a>추가 세부 정보
 
-1. <a name="note-1" />[*^*](#ref-1) 이상적으로 통해 "표시 증상" 설명은 다른 고객에 게 동일한 문제가 표시 되 고 있는지 여부를 확인할 수 있도록 충분 한 세부 정보를 포함 해야 (동일한 오류 메시지, 동일한 성능 저하, 충돌이 발생 한 동일한 스택 추적 _등입니다._ ). "정확한 경우" 좋은 예로 됩니다 하는 경우와 같이 말할 수 있습니다. "일반적으로 누르면 문제 75%의 시간, 하지만 한 가지 사항을 변경 하면 다음 방지할 수 있습니다 문제 완전히." "정확한 경우" 다른 비슷한 예는 Xamarin의 이전 버전으로 다운 그레이드 중지 문제입니다.
+1. <a name="note-1" />[*^*](#ref-1) 이상적으로 통해 "표시 증상" 설명은 다른 고객에 게 동일한 문제가 표시 되 고 있는지 여부를 확인할 수 있도록 충분 한 세부 정보를 포함 해야 (동일한 오류 메시지, 동일한 성능 저하, 충돌이 발생 한 동일한 스택 추적 _등입니다._ ). "정확한 경우" 좋은 예로가 됩니다 하는 경우와 같이 말할 수 있습니다. "일반적으로 누르면 문제 75%의 시간, 하지만 한 가지 사항을 변경 하면 다음 방지할 수 있습니다 문제 완전히." "정확한 경우" 다른 비슷한 예는 Xamarin의 이전 버전으로 다운 그레이드 중지 문제입니다.
 
 1. <a name="note-2" />[*^*](#ref-2) 짐작할 수 있겠지만 오류 텍스트 (또는 다른 고유 하 게 설명 텍스트)의 조각은 일반적으로 최상의 검색어입니다. 기존 버그 보고서를 완료 하는 경우 라면 세부 정보를 추가 하거나 새 파일을 더 잘 버그 보고서를 시작 합니다.
 

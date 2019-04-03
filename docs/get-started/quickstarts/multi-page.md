@@ -1,5 +1,5 @@
 ---
-title: 다중 페이지 Xamarin.Forms 응용 프로그램에서 탐색을 수행 합니다.
+title: 다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
 description: 이 문서에서는 다중 페이지 응용 프로그램으로, 여러 정보를 저장할 수 있는 단일 메모를 저장할 수 있는 단일 페이지 응용 프로그램을 설정 하는 방법에 설명 합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: f3c5ec1c6d37c74fd9b4fb4980c68a59c9864c05
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.date: 04/01/2019
+ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197370"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854979"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 응용 프로그램에서 탐색을 수행 합니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 이 빠른 시작에서는 배웁니다 방법:
 
@@ -39,7 +39,7 @@ ms.locfileid: "57197370"
 
 ## <a name="update-the-app-with-visual-studio"></a>Visual Studio를 사용하여 앱 업데이트
 
-1. Visual Studio를 실행합니다. 시작 페이지에서 클릭 **열려 있는 프로젝트 / 솔루션**, 및를 **프로젝트 열기** 정보 프로젝트에 대 한 솔루션 파일을 선택 하는 대화 상자:
+1. Visual Studio를 실행합니다. 시작 창에서 클릭 합니다 **노트** 클릭 또는 최근 프로젝트/솔루션 목록에서 솔루션 **프로젝트 또는 솔루션 열기**, 및를 **프로젝트/솔루션 열기** 대화 메모 프로젝트에 대 한 솔루션 파일을 선택 합니다.
 
     ![](multi-page-images/vs/open-solution.png "프로젝트 열기")
 
@@ -285,9 +285,7 @@ ms.locfileid: "57197370"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -324,7 +322,7 @@ ms.locfileid: "57197370"
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 앱 업데이트
 
-1. Mac용 Visual Studio. 시작 페이지에서 클릭 **열기...** , 대화 상자에서 정보 프로젝트에 대 한 솔루션 파일을 선택 합니다.
+1. Mac용 Visual Studio. 시작 창에서 클릭 **열려**, 대화 상자에서 정보 프로젝트에 대 한 솔루션 파일을 선택 합니다.
 
     ![](multi-page-images/vsmac/open-solution.png "솔루션 열기")
 
@@ -570,9 +568,7 @@ ms.locfileid: "57197370"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -621,5 +617,5 @@ ms.locfileid: "57197370"
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [메모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)

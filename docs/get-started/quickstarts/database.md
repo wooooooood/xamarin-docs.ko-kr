@@ -1,5 +1,5 @@
 ---
-title: 로컬 SQLite.NET 데이터베이스에서 데이터를 저장 합니다.
+title: 로컬 SQLite.NET 데이터베이스에 데이터 저장
 description: 이 문서에서는 로컬 SQLite.NET 데이터베이스에서 데이터를 저장 하는 방법에 설명 합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -8,17 +8,17 @@ ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/02/2019
-ms.openlocfilehash: 3cea41aa3c021dbb03f851a4deb443ee86fcad25
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 04/01/2019
+ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854992"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에서 데이터를 저장 합니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 이 빠른 시작에서는 배웁니다 방법:
 
@@ -44,19 +44,19 @@ ms.locfileid: "55293368"
 
     ![](database-images/vs/add-nuget-packages.png "NuGet 패키지 추가")    
 
-3. **NuGet 패키지 관리자**를 선택 합니다 **찾아보기** 탭에서 검색할를 **sqlite-net-pcl** NuGet 패키지를 선택 하 고 클릭는 **설치**단추를 프로젝트에 추가 합니다.
+3. **NuGet 패키지 관리자**에서 **찾아보기** 탭을 선택하고 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **설치** 단추를 클릭하여 프로젝트에 추가합니다.
 
     ![](database-images/vs/add-package.png "패키지 추가")
 
     > [!NOTE]
-    > 유사한 이름을 사용 하 여 NuGet 패키지는 여러 가지가 있습니다. 올바른 패키지에 이러한 특성이 있습니다.
-    > - **경우:** Frank A. Krueger
+    > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
+    > - **작성자:** Frank A. Krueger
     > - **ID:** sqlite-net-pcl
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > 패키지 이름에도 불구 하 고이 NuGet 패키지가.NET Standard 프로젝트에서 사용할 수 있습니다.
+    > 패키지 이름에도 불구하고 이 NuGet 패키지는 .NET 표준 패키지에서 사용할 수 있습니다.
 
-    이 패키지는 응용 프로그램에 데이터베이스 작업을 통합 하기 위해 사용 됩니다.
+    이 패키지는 데이터베이스 작업을 애플리케이션에 통합하는 데 사용됩니다.
 
 4. **솔루션 탐색기**를 **정보** 프로젝트를 엽니다 **Note.cs** 에 **모델** 폴더 및 기존 코드를 코드를 다음과 같습니다.
 
@@ -139,7 +139,7 @@ ms.locfileid: "55293368"
     }
     ```
 
-    이 클래스에는 데이터베이스 만들기, 데이터를 읽고에서 데이터를 쓸 것에서 데이터를 삭제 하는 코드가 포함 됩니다. 코드는 데이터베이스 작업을 백그라운드 스레드로 이동 하는 비동기 SQLite.NET Api를 사용 합니다. 또한는 `NoteDatabase` 생성자 인수로 서 데이터베이스 파일의 경로입니다. 이 경로에서 제공 하는 `App` 다음 단계에는 클래스입니다.
+    이 클래스에는 데이터베이스 만들기, 데이터를 읽고에서 데이터를 쓸 것에서 데이터를 삭제 하는 코드가 포함 됩니다. 코드는 데이터베이스 작업을 백그라운드 스레드로 이동시키는 비동기 SQLite.NET API를 사용합니다. 또한 `NoteDatabase` 생성자는 데이터베이스 파일의 경로를 인수로 사용합니다. 이 경로에서 제공 하는 `App` 다음 단계에는 클래스입니다.
 
     변경 내용을 저장 **NoteDatabase.cs** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
 
@@ -152,10 +152,8 @@ ms.locfileid: "55293368"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -249,19 +247,19 @@ ms.locfileid: "55293368"
 
     ![](database-images/vsmac/add-nuget-packages.png "NuGet 패키지 추가")    
 
-3. 에 **패키지 추가** 창에서 검색 합니다 **sqlite-net-pcl** NuGet 패키지를 선택 하 고 클릭는 **패키지 추가** 프로젝트에 추가 하려면 단추:
+3. **패키지 추가** 창에서 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **패키지 추가** 단추를 클릭하여 프로젝트에 추가합니다.
 
     ![](database-images/vsmac/add-package.png "패키지 추가")
 
     > [!NOTE]
-    > 유사한 이름을 사용 하 여 NuGet 패키지는 여러 가지가 있습니다. 올바른 패키지에 이러한 특성이 있습니다.
+    > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
     > - **작성자:** Frank A. Krueger
     > - **ID:** sqlite-net-pcl
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
-    > 패키지 이름에도 불구 하 고이 NuGet 패키지가.NET Standard 프로젝트에서 사용할 수 있습니다.
+    > 패키지 이름에도 불구하고 이 NuGet 패키지는 .NET 표준 패키지에서 사용할 수 있습니다.
 
-    이 패키지는 응용 프로그램에 데이터베이스 작업을 통합 하기 위해 사용 됩니다.
+    이 패키지는 데이터베이스 작업을 애플리케이션에 통합하는 데 사용됩니다.
 
 4. 에 **Solution Pad**의 **정보** 프로젝트를 엽니다 **Note.cs** 에 **모델** 폴더 및 다음을 사용 하 여 기존 코드 코드:
 
@@ -344,7 +342,7 @@ ms.locfileid: "55293368"
     }
     ```
 
-    이 클래스에는 데이터베이스 만들기, 데이터를 읽고에서 데이터를 쓸 것에서 데이터를 삭제 하는 코드가 포함 됩니다. 코드는 데이터베이스 작업을 백그라운드 스레드로 이동 하는 비동기 SQLite.NET Api를 사용 합니다. 또한는 `NoteDatabase` 생성자 인수로 서 데이터베이스 파일의 경로입니다. 이 경로에서 제공 하는 `App` 다음 단계에는 클래스입니다.
+    이 클래스에는 데이터베이스 만들기, 데이터를 읽고에서 데이터를 쓸 것에서 데이터를 삭제 하는 코드가 포함 됩니다. 코드는 데이터베이스 작업을 백그라운드 스레드로 이동시키는 비동기 SQLite.NET API를 사용합니다. 또한 `NoteDatabase` 생성자는 데이터베이스 파일의 경로를 인수로 사용합니다. 이 경로에서 제공 하는 `App` 다음 단계에는 클래스입니다.
 
     변경 내용을 저장 **NoteDatabase.cs** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 
@@ -357,10 +355,8 @@ ms.locfileid: "55293368"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
     using Notes.Data;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace Notes
     {
         public partial class App : Application
@@ -459,5 +455,5 @@ XAML 스타일을 사용 하 여 응용 프로그램의 스타일, 다음 빠른
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [메모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)

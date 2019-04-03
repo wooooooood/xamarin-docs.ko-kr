@@ -6,12 +6,12 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: 75216eb5c5b471b8837da3635b1680cdf80a0bfe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5b969c6118d1fa23558efaabc87cd53a920f3490
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118008"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855044"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms 용 Xamarin Live Player
 
@@ -21,32 +21,27 @@ Xamarin Live Player 미리 보기에는 장치에 신속 하 게 시각화 자�
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
+> [!NOTE]
+> 실시간 플레이어 미리 보기에만 Visual Studio 2017에서 제공 됩니다.
+
 ## <a name="get-started-with-xamarin-live-player"></a>Xamarin Live Player를 사용 하 여 시작
 
-[![Xamarin Live Player: 코드를 검사, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player: 코드 검사 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. 아래에서 앱을 다운로드 합니다 [Xamarin Live Player 설치](install.md) 지침입니다.
 2. 사용 하도록 설정 합니다 *Xamarin Live Player* 에서 **기본 설정**에서 장치를 선택 합니다 **장치** 목록.
 3. Visual Studio로 장치 쌍에 QR 코드 스캔을 Live Player 장치를 관리 합니다.
 4. 휴대폰 이나 태블릿에 앱을 바로 실행 됩니다.
 
-## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin Live Player 설치](install.md)
+## [<a name="xamarin-live-player-setup"></a>Xamarin Live Player 설치](install.md)
 
 Xamarin Live Player를 다운로드 하 고 mac 용 Visual Studio 2017 또는 Visual Studio에서 Xamarin.Forms 앱을 사용 하 여 사용 하 여 IDE를 구성 합니다. 
 
-## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 앱](player.md)
+## [<a name="xamarin-live-player-app"></a>Xamarin Live Player 앱](player.md)
 
 Xamarin을 사용 하 여 플레이어 앱을 라이브입니다.
 
-## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[Xamarin Live Player를 사용 하 여 시도 하는 샘플](samples.md)
-
-Xamarin Live Player 앱을 사용 하는 샘플에 연결 합니다.
-
-## <a name="limitationslimitationsmd"></a>[제한 사항](limitations.md)
-
-Xamarin Live Player 제한이 몇 가지 기능을 지원할 수 있습니다.
-
-## <a name="troubleshootingtroubleshootingmd"></a>[문제 해결](troubleshooting.md)
+## [<a name="troubleshooting"></a>문제 해결](troubleshooting.md)
 
 문제가 발생 하는 경우 도움말 찾기
 

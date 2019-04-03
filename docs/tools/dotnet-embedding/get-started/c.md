@@ -1,17 +1,17 @@
 ---
 title: C 시작
-description: 이 문서에는 C 응용 프로그램에서.NET 코드를 포함 하려면 포함 하는.NET을 사용 하는 방법을 설명 합니다. Mac 용 Visual Studio 2017 및 Visual Studio에서.NET 포함을 사용 하는 방법에 설명
+description: 이 문서에는 C 응용 프로그램에서.NET 코드를 포함 하려면 포함 하는.NET을 사용 하는 방법을 설명 합니다. Mac 용 Visual Studio 2019 및 Visual Studio에서.NET 포함을 사용 하는 방법에 설명
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 author: lobrien
 ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 66475b7629f01b4229539e1edc323491a7861dfe
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 342ba2a6b51483983df7bd04034a4cef62fd57ff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668402"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854914"
 ---
 # <a name="getting-started-with-c"></a>C 시작
 

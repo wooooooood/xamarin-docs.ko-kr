@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292144"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854706"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
+XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 애플리케이션에서 사용자 인터페이스를 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 콘텐츠
 
 * [개요](#Overview)
-* [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [1장. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 * [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
@@ -89,7 +89,7 @@ XAML은 또한 iOS, Android 및 UWP 모바일 장치용 교차 플랫폼의 고�
 -  일반적으로 XAML에서는 매개 변수가 없는 생성자 클래스가 아니면 인스턴스화할 수 없습니다. (그러나 때때로 해당 제한을 해결할 수 있는 방법이 있습니다.)
 -  일반적으로 XAML에서는 메서드를 호출할 수 없습니다. (이 제한 사항 역시, 경우에 따라 해결할 수 있습니다.)
 
-아직 Xamarin.Forms 응용 프로그램에서 XAML을 생성하는 비주얼 디자이너는 없습니다. 모든 XAML을 직접 작성해야 하지만 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer.md)가 있습니다. 특히 종종 XAML을 처음 접하는 프로그래머는 명백하게 올바른지를 확인한 후에 자신의 응용 프로그램을 빌드하고 실행하기를 바랄 수 있습니다. XAML 경험이 많은 개발자일지라도 미리보기가 중요하다는 것을 알고 있습니다.
+아직 Xamarin.Forms 응용 프로그램에서 XAML을 생성하는 비주얼 디자이너는 없습니다. 모든 XAML을 직접 작성해야 하지만 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer/index.md)가 있습니다. 특히 종종 XAML을 처음 접하는 프로그래머는 명백하게 올바른지를 확인한 후에 자신의 응용 프로그램을 빌드하고 실행하기를 바랄 수 있습니다. XAML 경험이 많은 개발자일지라도 미리보기가 중요하다는 것을 알고 있습니다.
 
 XAML은 기본적으로 XML이지만 XAML에는 몇 가지 고유한 구문 기능이 있습니다. 가장 중요한 것은 다음과 같습니다.
 
@@ -107,6 +107,6 @@ Xamarin.Forms 및 XML에 익숙한 경우, [1장. XAML 시작하기](~/xamarin-f
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 - [모바일 앱 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)

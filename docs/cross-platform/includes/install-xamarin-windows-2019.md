@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: cfb387f452939bf72ca3606f9f88f482f6622202
+ms.openlocfilehash: 0270f4a5ddab593372eb6687650e24d627f97c62
 ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855360"
+ms.locfileid: "58855350"
 ---
 Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visual Studio 2019 설치:
 
@@ -15,25 +15,21 @@ Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visu
 
 3. 설치 화면에서 **.NET을 사용한 모바일 개발** 워크로드를 선택합니다.
 
-    ![워크로드 화면에서 .NET을 사용한 모바일 개발 선택](~/get-started/installation/windows-images/01-mobile-dev-workload.png)
+    [![M.NET 선택 하 여 obile 개발](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
 
-4. **.NET을 사용한 모바일 개발**이 선택된 상태에서 오른쪽에 있는 **설치 세부 정보** 창을 봅니다. 여기에서는 설치하지 않으려는 모바일 개발 옵션의 선택을 취소할 수 있습니다.
+4. Visual Studio 2019 설치를 시작할 준비가 되 면 클릭 합니다 **설치** 오른쪽 아래 모서리에 단추:
 
-    ![설치할 Xamarin 옵션이 나열되는 설치 세부 정보 창](~/get-started/installation/windows-images/02-summary.png)
-
-5. Visual Studio 2019 설치를 시작할 준비가 되 면 클릭 합니다 **설치** 오른쪽 아래 모서리에 단추:
-
-    ![설치 단추](~/get-started/installation/windows-images/03-click-install.png)
+    ![설치 단추](~/get-started/installation/windows-images/vs2019-click-install.png)
 
    Visual Studio 2019의 버전을 설치 하는 따라 설치 프로세스에는 완료 하는 데 시간이 오래 걸릴 수 있습니다. 진행률 표시줄을 통해 설치를 모니터링할 수 있습니다.
 
-    ![설치 중 진행률 표시줄](~/get-started/installation/windows-images/04-progress-bars.png)
+    ![설치 중 진행률 표시줄](~/get-started/installation/windows-images/vs2019-progress-bars.png)
 
-6. Visual Studio 2019 설치가 완료 되 면 클릭 합니다 **시작** 단추 Visual Studio를 시작 하려면:
+5. Visual Studio 2019 설치가 완료 되 면 클릭 합니다 **시작** 단추 Visual Studio를 시작 하려면:
 
-    ![시작 단추의 위치](~/get-started/installation/windows-images/05-launch.png)
+    ![시작 단추의 위치](~/get-started/installation/windows-images/vs2019-launch.png)
 
-<a name="vs2017" />
+<a name="vs2019" />
 
 ### <a name="adding-xamarin-to-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 추가
 

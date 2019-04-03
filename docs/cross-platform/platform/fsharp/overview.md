@@ -1,17 +1,17 @@
 ---
 title: 시작 하기F#
-description: 이 문서에서는 설명 하는 방법을 설명 F# mac 용 Visual Studio 2017 및 Visual Studio를 사용 하 여 Xamarin 응용 프로그램을 구축 하는 데 사용
+description: 이 문서에서는 설명 하는 방법을 설명 F# mac 용 Visual Studio 2019 및 Visual Studio를 사용 하 여 Xamarin 응용 프로그램을 구축 하는 데 사용
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 044767d52588e48e563a40cb70ef0bfe910f9a3e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2f67983addd03a065383a2940d6e6dfc7076f2be
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112834"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854315"
 ---
 # <a name="getting-started-with-f35"></a>F # 시작&#35;
 

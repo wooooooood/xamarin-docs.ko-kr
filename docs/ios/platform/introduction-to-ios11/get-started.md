@@ -1,18 +1,18 @@
 ---
 title: IOS 11 사용 하 여 시작
-description: 이 문서에서는 iOS 11 앱 개발을 시작 하기 위해 완료 해야 하는 단계를 설명 합니다. Xcode를 다운로드 하 고 Visual Studio 2017을 업데이트 하는 방법을 설명 합니다.
+description: 이 문서에서는 iOS 11 앱 개발을 시작 하기 위해 완료 해야 하는 단계를 설명 합니다. Xcode를 다운로드 하 고 Visual Studio 2019를 업데이트 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 697ae79ea7dd9aaeedb1400a405a4ca5c4dc3d1e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec69cd7d176ca4047ffa37fcc2ed8554bd9f9353
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854602"
 ---
 # <a name="getting-started-with-ios-11"></a>IOS 11 사용 하 여 시작
 
@@ -27,7 +27,7 @@ _다운로드 하 고 Xcode 9 설치_
 
 최신 iOS, tvOS 및 watchOS 기능을 사용 하 여 사용할 준비가 되었습니다. 확인 하려면 다음이 단계를 수행 합니다.
 
-1. **최신 Xcode를 설치** – [다운로드](https://developer.apple.com/download/) 의 최신 버전을 설치 하 고 _Xcode 9_합니다.
+1. **최신 Xcode를 설치** – [다운로드](https://developer.apple.com/download/) 의 최신 버전을 설치 하 고 _Xcode 10_합니다.
 
 2. **Xcode 첫 번째 실행** – Xcode 실행 한 번 해당 Xamarin 도구를 업데이트 하 고 일부를 설치 하는 대로 Mac 용 Visual Studio를 실행 하기 전에 필요한 처음으로 실행 합니다.
 

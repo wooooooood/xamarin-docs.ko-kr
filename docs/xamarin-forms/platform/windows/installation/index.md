@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: fb166b69c76ca4c87746358258d97f1cb81cb301
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f06cf15d3a3ec7eae4742d5d037e233be46d08
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123234"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855187"
 ---
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
@@ -22,7 +22,7 @@ _기존 Xamarin.Forms 솔루션에 새 Windows 프로젝트를 추가합니다._
 
 ## <a name="add-a-universal-windows-platform-app"></a>추가 유니버설 Windows 플랫폼 앱
 
-실행 해야 **Visual Studio 2017** 온 **Windows 10** UWP 앱을 빌드할 수 있습니다. 유니버설 Windows 플랫폼에 대 한 자세한 내용은 참조 하세요. [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide/)합니다.
+**Visual Studio 2019** 대 **Windows 10** UWP 앱을 빌드할 것이 좋습니다. 유니버설 Windows 플랫폼에 대 한 자세한 내용은 참조 하세요. [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide/)합니다.
 
 UWP Xamarin.Forms 2.1에서 제공 되며 나중에 및 Xamarin.Forms 2.2 이상 Xamarin.Forms.Maps 지원 됩니다.
 
@@ -75,7 +75,7 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10입니다. UWP 프로젝트에서 편집 **MainPage.xaml.cs** 제거할 합니다 `: Page` 클래스 이름에 대 한 상속 지정자 (이제에서 상속 하므로 `WindowsPage` 이전 단계에서 수행 된 변경으로 인해):
+ 10 . UWP 프로젝트에서 편집 **MainPage.xaml.cs** 제거할 합니다 `: Page` 클래스 이름에 대 한 상속 지정자 (이제에서 상속 하므로 `WindowsPage` 이전 단계에서 수행 된 변경으로 인해):
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
@@ -100,7 +100,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12입니다. 모든 로컬 리소스 (예: 추가 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
+12 . 모든 로컬 리소스 (예: 추가 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
 
 ## <a name="troubleshooting"></a>문제 해결
 
