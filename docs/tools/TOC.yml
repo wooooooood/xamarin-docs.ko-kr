@@ -2,19 +2,6 @@ items:
 - name: 도구
   href: index.yml
   items:
-  - name: Live Player
-    href: live-player/index.md
-    items:
-    - name: 설정
-      href: live-player/install.md
-    - name: Xamarin Live Player 앱
-      href: live-player/player.md
-    - name: 샘플
-      href: live-player/samples.md
-    - name: 제한 사항
-      href: live-player/limitations.md
-    - name: 문제 해결
-      href: live-player/troubleshooting.md
   - name: iOS 시뮬레이터
     href: ios-simulator/index.md
     items:
@@ -31,6 +18,15 @@ items:
       href: inspector/inspect.md
     - name: 릴리스 정보
       href: /xamarin/tools/inspector/release-notes/
+  - name: Live Player
+    href: live-player/index.md
+    items:
+    - name: 설정
+      href: live-player/install.md
+    - name: Xamarin Live Player 앱
+      href: live-player/player.md
+    - name: 문제 해결
+      href: live-player/troubleshooting.md
   - name: 프로파일러
     href: profiler/index.md
     items:
@@ -126,9 +122,9 @@ items:
     - name: Xamarin에서 Jenkins 사용
       href: ci/jenkins-walkthrough.md
   expanded: true
-ms.openlocfilehash: 4e1f5a02b1f53d9b1f2acc75f31123f4a910c2dd
-ms.sourcegitcommit: 7db5be0bb11e8914e1d1760e5f969ed17731e3a1
+ms.openlocfilehash: d5645302045dd5b7552f79bcddbcb60b43c74d7a
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54114981"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854966"

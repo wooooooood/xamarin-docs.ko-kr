@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f7106c9b23fa71b32043ef8190691d798c36370d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5156259f8178da69595464f75a10cd8f41965519
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672575"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870328"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경
 
@@ -24,7 +24,7 @@ IOS에 주요 변경 내용 외에도 Apple가 수정 및 여러 기존 프레�
 
 ## <a name="avfoundation-framework-additions"></a>AVFoundation Framework Additions
 
-AVFoundation 프레임 워크에는 [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/) 클래스 이제 지정할 수 있습니다 음성 언어 외에도 식별자로.
+AVFoundation 프레임 워크에는 [AVSpeechSynthesisVoice](xref:AVFoundation.AVSpeechSynthesisVoice) 클래스 이제 지정할 수 있습니다 음성 언어 외에도 식별자로.
 
 예를 들어, 다음 코드는 모든 가능한 음성의 목록을 가져옵니다.
 
@@ -32,15 +32,15 @@ AVFoundation 프레임 워크에는 [AVSpeechSynthesisVoice](https://developer.x
 var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 ```
 
-로 설정 하 여 목록에서 음성 중 다음 사용할 수는 `Voice` 인스턴스의 속성을 [AVSpeachUtterance](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechUtterance/) 클래스입니다.
+로 설정 하 여 목록에서 음성 중 다음 사용할 수는 `Voice` 인스턴스의 속성을 [AVSpeachUtterance](xref:AVFoundation.AVSpeechUtterance) 클래스입니다.
 
-합니다 [AVQueuePlayer](https://developer.xamarin.com/api/type/AVFoundation.AVQueuePlayer/) 이제 클래스 큐에서 인터넷 및 파일 기반 스트리밍 미디어의 혼합을 지원 합니다. 이전 버전에는 같은 형식의 큐 미디어만 수 없습니다.
+합니다 [AVQueuePlayer](xref:AVFoundation.AVQueuePlayer) 이제 클래스 큐에서 인터넷 및 파일 기반 스트리밍 미디어의 혼합을 지원 합니다. 이전 버전에는 같은 형식의 큐 미디어만 수 없습니다.
 
 자세한 내용은 Apple의를 참조 하세요 [AVSpeechSynthesisVoice 참조](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVSpeechSynthesisVoice_Ref/index.html#//apple_ref/occ/cl/AVSpeechSynthesisVoice)합니다.
 
 ## <a name="avkit-framework-additions"></a>AVKit 프레임 워크 추가
 
-새 그림-에-그림 (PIP) 기능을 사용 하려면 AVKit 프레임 워크는 새 `AVPictureInPictureController` 하 고 [AVPlayerViewController](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) 클래스:
+새 그림-에-그림 (PIP) 기능을 사용 하려면 AVKit 프레임 워크는 새 `AVPictureInPictureController` 하 고 [AVPlayerViewController](xref:AVKit.AVPlayerViewController) 클래스:
 
 - **AVPictureInPictureController** -이 클래스에는 iOS 9 앱 iPad에서 부동, 크기 조정 가능한 PIP 창에서 비디오 재생을 시작 사용자에 게 응답을 허용 합니다.
 - **AVPlayerViewController** -관리는 `AVPlayer` iPad에서 부동, 크기 조정 가능한 PIP 창에서 비디오를 제공 하는 데 사용 하는 컨트롤러입니다.
@@ -117,7 +117,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 
 ## <a name="healthkit-framework-changes"></a>HealthKit Framework 변경 내용
 
-Apple 포함 다음과 같이 변경 합니다 [HealthKit](https://developer.xamarin.com/api/namespace/HealthKit/) iOS 9 프레임 워크:
+Apple 포함 다음과 같이 변경 합니다 [HealthKit](xref:HealthKit) iOS 9 프레임 워크:
 
 - 대량 삭제 및 HealthKit 데이터베이스에 있는 항목의 삭제 추적을 지원 합니다. Apple의를 참조 하세요 [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) 하 고 [HKHealthStore 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) 자세한 내용은 합니다.
 - 새 추적 범주 및 특성에 추가 된를 `HKQuantityTypeIdentifier` 클래스 (같은 `UVExposure`) 및 합니다 `HKCategoryTypeIdentifier` 클래스 (같은 `OvulationTestResult`). Apple의를 참조 하세요 [HealthKit 상수 참조](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) 자세한 내용은 합니다.
@@ -126,9 +126,9 @@ Apple 포함 다음과 같이 변경 합니다 [HealthKit](https://developer.xam
 
 ## <a name="local-authentication-framework-changes"></a>로컬 인증 프레임 워크 변경 내용
 
-Apple 포함 다음과 같이 변경 합니다 [Local Authentication](https://developer.xamarin.com/api/namespace/LocalAuthentication/) iOS 9 프레임 워크:
+Apple 포함 다음과 같이 변경 합니다 [Local Authentication](xref:LocalAuthentication) iOS 9 프레임 워크:
 
-- 사용 하 여 합니다 `EvaluateAccessControl` 및 `EvaluatePolicy` 의 메서드는 [LAContext](https://developer.xamarin.com/api/type/LocalAuthentication.LAContext/) 클래스 이제 수 있습니다. 이전 성공적으로 잠금 해제에서 Touch ID와 일치 하는 다시 사용할 수 있도록 시도 합니다.
+- 사용 하 여 합니다 `EvaluateAccessControl` 및 `EvaluatePolicy` 의 메서드는 [LAContext](xref:LocalAuthentication.LAContext) 클래스 이제 수 있습니다. 이전 성공적으로 잠금 해제에서 Touch ID와 일치 하는 다시 사용할 수 있도록 시도 합니다.
 - 현재 등록 된 손가락 목록을 가져올 수 있습니다.
 - 손가락을 추가 하거나 인증에서 제거할 때 추적을 지원 합니다.
 - 사용할 수 있다는 _인증 컨텍스트_ Keychain 호출에 키 집합 액세스 제어를 평가 하는 것에 대 한 지원을 나열 합니다.
@@ -138,7 +138,7 @@ Apple 포함 다음과 같이 변경 합니다 [Local Authentication](https://de
 
 ### <a name="lacontext-changes"></a>LAContext 변경
 
-에 다음 변경 사항이 생겼는지 합니다 [LAContext](https://developer.xamarin.com/api/type/LocalAuthentication.LAContext/) iOS 9에 대 한 클래스:
+에 다음 변경 사항이 생겼는지 합니다 [LAContext](xref:LocalAuthentication.LAContext) iOS 9에 대 한 클래스:
 
 - **TouchIdAuthenticationMaximumAllowableReuseDuration** -터치 ID 인증을 다시 사용할 수 있는 최대 기간을 반환 합니다.
 - **EvaluatedPolicyDomainState** -가져오거나 계산 정책의 상태를 설정 합니다.
@@ -153,17 +153,17 @@ Apple의를 참조 하세요 [LAContext 참조](https://developer.apple.com/libr
 
 ## <a name="mapkit-framework-changes"></a>MapKit Framework 변경 내용
 
-Apple 포함 다음과 같이 변경 합니다 [MapKit](https://developer.xamarin.com/api/namespace/MapKit/) iOS 9 프레임 워크:
+Apple 포함 다음과 같이 변경 합니다 [MapKit](xref:MapKit) iOS 9 프레임 워크:
 
-- 전송 지침에 직접 맵 앱 시작 및 전송 사용 (ETA) 도착 예상 시간을 쿼리 하기 위해 이제 MapKit 지원을 제공 합니다 [MKLaunchOptions](https://developer.xamarin.com/api/type/MapKit.MKLaunchOptions/) 하 고 [MKDirections](https://developer.xamarin.com/api/type/MapKit.MKLaunchOptions/) 클래스입니다.
-- MapKit 반환한 검색 결과 및 [CLGeocoder](https://developer.xamarin.com/api/type/CoreLocation.CLGeocoder/) 클래스는 결과 표준 시간대를 제공할 수도 있습니다.
-- 이제 완전히 사용자 지정할 수 있습니다 사용 하 여 iOS 앱에서 제공 하는 맵 주석 합니다 `DetailCalloutAccessoryView` 의 속성을 [MKAnnotationView](https://developer.xamarin.com/api/type/MapKit.MKAnnotationView/) 클래스.
+- 전송 지침에 직접 맵 앱 시작 및 전송 사용 (ETA) 도착 예상 시간을 쿼리 하기 위해 이제 MapKit 지원을 제공 합니다 [MKLaunchOptions](xref:MapKit.MKLaunchOptions) 하 고 [MKDirections](xref:MapKit.MKLaunchOptions) 클래스입니다.
+- MapKit 반환한 검색 결과 및 [CLGeocoder](xref:CoreLocation.CLGeocoder) 클래스는 결과 표준 시간대를 제공할 수도 있습니다.
+- 이제 완전히 사용자 지정할 수 있습니다 사용 하 여 iOS 앱에서 제공 하는 맵 주석 합니다 `DetailCalloutAccessoryView` 의 속성을 [MKAnnotationView](xref:MapKit.MKAnnotationView) 클래스.
 
 참조 하십시오 우리의 [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) 하 고 [연습-주석 및 오버레이 MapKit의 탐색](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) 맵과 Xamarin.iOS에서 Apple 주석을사용한작업에대한자세한내용은설명서[CLGeocoder 참조](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) 자세한 내용은 합니다.
 
 ## <a name="passkit-framework-additions"></a>PassKit Framework 추가
 
-Apple 포함 다음과 같이 변경 합니다 [PassKit](https://developer.xamarin.com/api/namespace/PassKit/) iOS 9 프레임 워크:
+Apple 포함 다음과 같이 변경 합니다 [PassKit](xref:PassKit) iOS 9 프레임 워크:
 
 - 이제, Apple Pay 저장소 직불와 검색 카드와 함께 신용 카드를 모두 지원합니다. 참조를 **지불 네트워크** Apple의 섹션 [PKPaymentRequest 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKPaymentRequest_Ref/index.html#//apple_ref/doc/uid/TP40014832) 자세한 내용은 합니다.
 - Xamarin.iOS 앱 내에서 직접 추가할 수 있습니다 이제 결제 네트워크와 카드 발급자 Apple Pay까지. Apple의를 참조 하세요 [PKAddPaymentPassViewController 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/PassKit/Reference/PKAddPaymentPassViewController_Class/index.html#//apple_ref/doc/uid/TP40016116) 대 한 자세한 내용은 합니다.
@@ -172,15 +172,15 @@ Apple 포함 다음과 같이 변경 합니다 [PassKit](https://developer.xamar
 
 ## <a name="safari-services-framework-additions"></a>Safari 서비스 프레임 워크 추가
 
-Apple 포함 다음과 같이 변경 합니다 [Safari Services](https://developer.xamarin.com/api/namespace/SafariServices/) iOS 9 프레임 워크:
+Apple 포함 다음과 같이 변경 합니다 [Safari Services](xref:SafariServices) iOS 9 프레임 워크:
 
-- 이제 사용할 수 있습니다 새 [필요한 SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) 클래스 Xamarin.iOS 앱 내에서 웹 콘텐츠를 표시 합니다. Safari 앱을 사용 하 여 웹 사이트 데이터 및 쿠키를 공유 하는 기능을 제공 하 고 다양 한 Safari의 기능 (예: 판독기 및 자동 채우기)을 포함 합니다. [필요한 SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) 기능을 **수행** 웹 콘텐츠를 볼 때 사용자가 앱에 반환 하는 단추입니다.
+- 이제 사용할 수 있습니다 새 [필요한 SFSafariViewController](xref:SafariServices.SFSafariViewController) 클래스 Xamarin.iOS 앱 내에서 웹 콘텐츠를 표시 합니다. Safari 앱을 사용 하 여 웹 사이트 데이터 및 쿠키를 공유 하는 기능을 제공 하 고 다양 한 Safari의 기능 (예: 판독기 및 자동 채우기)을 포함 합니다. [필요한 SFSafariViewController](xref:SafariServices.SFSafariViewController) 기능을 **수행** 웹 콘텐츠를 볼 때 사용자가 앱에 반환 하는 단추입니다.
 
-때문에 합니다 [필요한 SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) 클래스는 페이지만 웹 콘텐츠 표시에 맞게 조정 됩니다을 바꾸는 데 사용 하는 것이 좋습니다 [WKWebKit](xref:WebKit.WKWebView) 또는 [UIWebView](xref:UIKit.UIWebView)기존 Xamarin.iOS 앱 내에서 제어 합니다.
+때문에 합니다 [필요한 SFSafariViewController](xref:SafariServices.SFSafariViewController) 클래스는 페이지만 웹 콘텐츠 표시에 맞게 조정 됩니다을 바꾸는 데 사용 하는 것이 좋습니다 [WKWebKit](xref:WebKit.WKWebView) 또는 [UIWebView](xref:UIKit.UIWebView)기존 Xamarin.iOS 앱 내에서 제어 합니다.
 
 ### <a name="displaying-a-website"></a>웹 사이트를 표시합니다.
 
-아래 코드는 호출의 예는 [필요한 SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/) 에서 다른 뷰 컨트롤러 내에서:
+아래 코드는 호출의 예는 [필요한 SFSafariViewController](xref:SafariServices.SFSafariViewController) 에서 다른 뷰 컨트롤러 내에서:
 
 ```csharp
 // Create an instance of the Safari Services View Controller
@@ -267,6 +267,6 @@ Ios 9에서 더 이상 발생이 자동 크기 조정 하 고 컨트롤 화면 �
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
-- [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
+- [IOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [새로운 iOS 9.0에서](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

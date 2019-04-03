@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669195"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870146"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>연습-Xamarin.iOS에서 백그라운드 위치
 
@@ -72,7 +72,7 @@ ms.locfileid: "57669195"
     }
     ```
 
-    위의 코드에서 다양 한 속성 및 사용 권한을 설정 합니다 [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) 클래스:
+    위의 코드에서 다양 한 속성 및 사용 권한을 설정 합니다 [CLLocationManager](xref:CoreLocation.CLLocationManager) 클래스:
 
     - `PausesLocationUpdatesAutomatically` -시스템 위치 업데이트를 일시 중지 허용 되는지 여부에 따라 설정할 수 있는 부울입니다. 기본값은 일부 장치에서 `true`, 장치 백그라운드 약 15 분 후 위치 업데이트 수신을 중지를 유발할 수 있습니다.
     - `RequestAlwaysAuthorization` -앱 사용자에 게 백그라운드에서 액세스할 수 위치를 허용 하는 옵션을 제공 하려면이 메서드를 전달 해야 합니다. `RequestWhenInUseAuthorization` 사용자에 게 앱이 포그라운드에서 하는 경우에 액세스할 수 위치를 허용 하는 옵션을 제공 하려는 경우에 전달 수 있습니다.
