@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: becba36655a5247a11decb7dc54334f9397ecdfc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233538"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870198"
 ---
 # <a name="introduction-to-ios-9"></a>IOS 9 소개
 
@@ -58,7 +58,7 @@ IOS 9의 새로운 멀티태스킹 기능에 대 한 자세한 내용을 알아�
 
 ## <a name="new-contacts-and-contacts-ui-frameworks"></a>새 연락처 및 연락처 UI 프레임 워크
 
-Apple iOS 9의 도입으로 두 가지 새 프레임 워크를 출시 했습니다 [연락처](https://developer.xamarin.com/api/namespace/Contacts/) 하 고 [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/)기존 주소록을 대체 하 고 주소 책 UI 프레임 워크에서 사용 하는 iOS 8 및 이전 버전입니다.
+Apple iOS 9의 도입으로 두 가지 새 프레임 워크를 출시 했습니다 [연락처](xref:Contacts) 하 고 [ContactsUI](xref:ContactsUI)기존 주소록을 대체 하 고 주소 책 UI 프레임 워크에서 사용 하는 iOS 8 및 이전 버전입니다.
 
 이러한 새, 개체 지향 프레임 워크 다음 정보를 제공 합니다.
 
@@ -103,7 +103,7 @@ SpriteKit 체제 미 설치 컴퓨터, SceneKit을 더욱 향상 기능과 함�
 
 ## <a name="homekit-framework-changes"></a>HomeKit 프레임 워크 변경
 
-합니다 [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) iOS 8에에서 도입 된 프레임 워크를 설정 하 고 Xamarin.iOS 앱에서 (예: 자동화 된 광원, 도어 잠금 및 차고문 개폐) 다양 한 사용 HomeKit 액세서리를 제어 하는 기능을 제공 합니다. 쉽게 설치 및 구성할 수 있을 뿐만 HomeKit 액세서리 음성된 Siri 명령을 통해 제어할 수 있습니다.
+합니다 [HomeKit](xref:HomeKit) iOS 8에에서 도입 된 프레임 워크를 설정 하 고 Xamarin.iOS 앱에서 (예: 자동화 된 광원, 도어 잠금 및 차고문 개폐) 다양 한 사용 HomeKit 액세서리를 제어 하는 기능을 제공 합니다. 쉽게 설치 및 구성할 수 있을 뿐만 HomeKit 액세서리 음성된 Siri 명령을 통해 제어할 수 있습니다.
 
 Ios 9에서 Apple 설치 프로그램을 쉽게에 지원 하 고 (예: iCloud 통해 원격으로 액세서리 제어) 자세한 액세서리 상호 작용을 제공 하는 보조 프로그램 유형을 확장 합니다.
 
@@ -213,7 +213,7 @@ Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페�
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
 - [3D 터치 소개](~/ios/platform/3d-touch.md)
 - [앱 전송 보안](~/ios/app-fundamentals/ats.md)
-- [iPad용 멀티태스킹](~/ios/platform/multitasking.md)
+- [IPad 용 멀티태스킹](~/ios/platform/multitasking.md)
 - [연락처 및 연락처 UI](~/ios/platform/contacts.md)
 - [새 검색 Api](~/ios/platform/search/index.md)
 - [스택 뷰 소개](~/ios/user-interface/controls/uistackview.md)
@@ -221,7 +221,7 @@ Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페�
 - [게임 향상 된 기능](~/ios/platform/gaming/index.md)
 - [HomeKit 소개](~/ios/platform/homekit.md)
 - [핸드 오프 소개](~/ios/platform/handoff.md)
-- [추가 iOS 9 프레임워크 추가 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [추가 iOS 9 프레임 워크 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [문제 해결](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [새로운 iOS 9.0에서](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

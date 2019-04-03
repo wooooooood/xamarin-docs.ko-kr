@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/14/2018
-ms.openlocfilehash: 525ddf3c8cfc457738099c3afbb162fd3fb9239b
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 946cba08e1e504962c093f67e336d72b654a3a41
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870003"
 ---
 # <a name="picker-control-in-xamarinios"></a>Xamarin.iOS에서 선택 컨트롤
 
@@ -131,7 +131,7 @@ public class PeopleModel : UIPickerViewModel
 
 ### <a name="customizing-a-pickers-appearance"></a>선택기의 모양 사용자 지정
 
-선택기의 모양을 사용자 지정 하려면 사용 합니다 [`UIPickerView.UIPickerViewAppearance`](https://developer.xamarin.com/api/type/UIKit.UIPickerView+UIPickerViewAppearance/)
+선택기의 모양을 사용자 지정 하려면 사용 합니다 [`UIPickerView.UIPickerViewAppearance`](xref:UIKit.UIPickerView.UIPickerViewAppearance)
 클래스 또는 재정의 [ `GetView` ](xref:UIKit.UIPickerViewModel.GetView(UIKit.UIPickerView,System.nint,System.nint,UIKit.UIView)) 하 고 [ `GetRowHeight` ](xref:UIKit.UIPickerViewModel.GetRowHeight(UIKit.UIPickerView,System.nint)) 의 메서드는 `UIPickerViewModel`합니다.
 
 ## <a name="uidatepicker"></a>UIDatePicker

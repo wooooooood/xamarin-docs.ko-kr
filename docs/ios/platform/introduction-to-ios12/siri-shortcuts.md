@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233733"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869826"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
 
@@ -149,7 +149,7 @@ public static NSUserActivity ViewMenuActivity {
 다음을 특히 note:
 
 - 설정 `EligibleForPrediction` 에 `true` Siri이이 활동을 예측 하 고 바로 가기로 화면 수 있는지를 나타냅니다.
-- 합니다 [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) 배열이 표준 [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) 포함 하는 데는 `NSUserActivity` iOS 검색 결과에서.
+- 합니다 [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) 배열이 표준 [ `CSSearchableItemAttributeSet` ](xref:CoreSpotlight.CSSearchableItemAttributeSet) 포함 하는 데는 `NSUserActivity` iOS 검색 결과에서.
 - [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) Siri가 제안 사용자에 게 잠재적인 선택 항목으로 바로 가기는 문구를 할당할 때 하는 구문이입니다.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>사용 하 여 NSUserActivity 바로 처리
@@ -227,7 +227,8 @@ Siri를 호출 하 고이 구를 사용 하 여 열립니다 Soup Chef 메뉴 �
 이 항목을 보려면 코드를 생성 합니다.
 
 - 오픈 **AppDelegate.m**합니다.
-- 사용자 지정 의도 헤더 파일에 가져오기를 추가 합니다. `#import "OrderSoupIntent.h"`
+- 사용자 지정 의도 헤더 파일에 가져오기를 추가 합니다.
+`#import "OrderSoupIntent.h"`
 - 클래스의 모든 메서드를 추가에 대 한 참조 `OrderSoupIntent`합니다.
 - 마우스 오른쪽 단추로 클릭 `OrderSoupIntent` 선택한 **정의로 이동**합니다.
 - 새로 열린 파일을 마우스 오른쪽 단추로 클릭 **OrderSoupIntent.h**, 선택한 **Finder에 표시**합니다.
@@ -318,7 +319,7 @@ Siri가 바로 가기를 제안에 대 한 순서 대로 바로 가기 관련이
 이 이해 Soup Chef Siri 제공할 _donates_ 하려는 의도 Siri 될 때마다 사용자 soup 주문 합니다. 이 된 기부를 기부 있는 경우이 기부 – 기반 포함 하는 매개 변수를 – Siri 나중에 바로 가기를 제안 하는 경우 학습 합니다.
 
 **SoupChef** 사용 하는 `SoupOrderDataManager` 기부를 배치 하는 클래스입니다.
-사용자에 대해 soup 주문 하기 위해 호출 하는 경우는 `PlaceOrder` 메서드 호출 [ `DonateInteraction` ](https://developer.xamarin.com/api/member/Intents.INInteraction.DonateInteraction/):
+사용자에 대해 soup 주문 하기 위해 호출 하는 경우는 `PlaceOrder` 메서드 호출 [ `DonateInteraction` ](xref:Intents.INInteraction.DonateInteraction*):
 
 ```csharp
 void DonateInteraction(Order order)
@@ -332,8 +333,8 @@ void DonateInteraction(Order order)
 }
 ```
 
-의도 페치를 후에 래핑된를 [ `INInteraction` ](https://developer.xamarin.com/api/type/Intents.INInteraction/)합니다.
-`INInteraction` 지정 되는 [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
+의도 페치를 후에 래핑된를 [ `INInteraction` ](xref:Intents.INInteraction)합니다.
+`INInteraction` 지정 되는 [`Identifier`](xref:Intents.INInteraction.Identifier*)
 (이 때 도움이 되는 나중에 유효 하지 않은 의도 기부 삭제) 주문의 고유 ID와 일치 하는 합니다. 그런 다음 상호 작용은 단체에 기부 Siri 합니다.
 
 에 대 한 호출을 `order.Intent` getter 인출을 `OrderSoupIntent` 설정 하 여 순서를 나타내는 해당 `Quantity`를 `Soup`, `Options`, 이미지 및 사용자 레코드를 연결할 Siri에 대 한 구 때 제안으로 사용 하는 호출 구 의도로:
@@ -469,7 +470,7 @@ Siri 의도 호출할 때 실행 되는 코드를 새 프로젝트로 기존 Xam
 
 인 텐트 확장을 사용자 지정 의도에 따라 바로 가기에 대 한 필요한 백그라운드 작업을 실행 합니다.
 
-Siri 호출을 [ `GetHandler` ](https://developer.xamarin.com/api/member/Intents.INExtension.GetHandler/) 메서드를 `IntentHandler` 클래스 (에 정의 된 **Info.plist** 으로 `NSExtensionPrincipalClass`) 확장 하는 클래스의 인스턴스를 가져옵니다 `OrderSoupIntentHandling`, 사용할 수 있는 처리 하는 `OrderSoupIntent`:
+Siri 호출을 [ `GetHandler` ](xref:Intents.INExtension.GetHandler*) 메서드를 `IntentHandler` 클래스 (에 정의 된 **Info.plist** 으로 `NSExtensionPrincipalClass`) 확장 하는 클래스의 인스턴스를 가져옵니다 `OrderSoupIntentHandling`, 사용할 수 있는 처리 하는 `OrderSoupIntent`:
 
 ```csharp
 [Register("IntentHandler")]
@@ -563,9 +564,9 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 > [!NOTE]
 > 에 대 한 인터페이스 **invoiceView** 하 고 **confirmationView** 에 정의 된 **Main.storyboard** 보조 뷰로 합니다. IOS Mac 및 Visual Studio 2017 용 Visual Studio의 디자이너 보기 또는 편집 보조 뷰;에 대 한 지원 하지 않습니다. 이렇게 하려면 엽니다 **Main.storyboard** Xcode의 Interface Builder에서.
 
-`IntentViewController` 구현 하는 [`IINUIHostedViewControlling`](https://developer.xamarin.com/api/type/IntentsUI.IINUIHostedViewControlling/)
-인터페이스, Siri 의도 사용 하 여 작업 하는 경우 사용자 지정 인터페이스를 제공 하는 데 사용 합니다. 는 [`ConfigureView`](https://developer.xamarin.com/api/member/IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView/)
-메서드를 호출 하는 인터페이스를 확인 하거나 상호 작용 확인 되는 여부에 따라 청구서에 표시를 사용자 지정 ([`INIntentHandlingStatus.Ready`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)) 또는 성공적으로 실행 되었습니다 ([ `INIntentHandlingStatus.Success`](https://developer.xamarin.com/api/type/Intents.INIntentHandlingStatus/)):
+`IntentViewController` 구현 하는 [`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
+인터페이스, Siri 의도 사용 하 여 작업 하는 경우 사용자 지정 인터페이스를 제공 하는 데 사용 합니다. 는 [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
+메서드를 호출 하는 인터페이스를 확인 하거나 상호 작용 확인 되는 여부에 따라 청구서에 표시를 사용자 지정 ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) 또는 성공적으로 실행 되었습니다 ([ `INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus)):
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -631,9 +632,9 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-현재 표시 된 주문에 대 한 기존 음성 바로 가기 있는지 여부에 따라 `RowSelected` 형식의 뷰 컨트롤러를 제시 [ `INUIEditVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIEditVoiceShortcutViewController/) 하거나 [ `INUIAddVoiceShortcutViewController` ](https://developer.xamarin.com/api/type/IntentsUI.INUIAddVoiceShortcutViewController/).
-각 예에서 `OrderDetailViewController` 뷰 컨트롤러의 자체 설정 `Delegate`, 또한 구현 하는 이유는 [`IINUIAddVoiceShortcutViewControllerDelegate`](https://developer.xamarin.com/api/type/IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate/)
-및 [ `IINUIEditVoiceShortcutViewControllerDelegate` ](https://developer.xamarin.com/api/type/IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate/)합니다.
+현재 표시 된 주문에 대 한 기존 음성 바로 가기 있는지 여부에 따라 `RowSelected` 형식의 뷰 컨트롤러를 제시 [ `INUIEditVoiceShortcutViewController` ](xref:IntentsUI.INUIEditVoiceShortcutViewController) 하거나 [ `INUIAddVoiceShortcutViewController` ](xref:IntentsUI.INUIAddVoiceShortcutViewController).
+각 예에서 `OrderDetailViewController` 뷰 컨트롤러의 자체 설정 `Delegate`, 또한 구현 하는 이유는 [`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+및 [ `IINUIEditVoiceShortcutViewControllerDelegate` ](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate)합니다.
 
 ## <a name="testing-on-device"></a>장치에서 테스트
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669755"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870178"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Xamarin.iOS에서 Objective-c 선택기
 
@@ -137,15 +137,15 @@ else
 
 ### <a name="selector-targets"></a>선택기 대상
 
-선택기 대상이 개체 인스턴스 또는 Objective-c 클래스 중 하나입니다. 대상 인스턴스는 바인딩된 Xamarin.iOS 유형에 서 제공를 사용 합니다 [ `ObjCRuntime.INativeObject.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.INativeObject.Handle/) 속성입니다.
+선택기 대상이 개체 인스턴스 또는 Objective-c 클래스 중 하나입니다. 대상 인스턴스는 바인딩된 Xamarin.iOS 유형에 서 제공를 사용 합니다 [ `ObjCRuntime.INativeObject.Handle` ](xref:ObjCRuntime.INativeObject.Handle) 속성입니다.
 
-대상 클래스를 사용 하 여 [ `ObjCRuntime.Class` ](https://developer.xamarin.com/api/type/ObjCRuntime.Class/) 클래스 인스턴스에 대 한 참조를 가져오려면 다음을 사용 합니다 [ `Class.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.Class.Handle/) 속성입니다.
+대상 클래스를 사용 하 여 [ `ObjCRuntime.Class` ](xref:ObjCRuntime.Class) 클래스 인스턴스에 대 한 참조를 가져오려면 다음을 사용 합니다 [ `Class.Handle` ](xref:ObjCRuntime.Class.Handle) 속성입니다.
 
 ### <a name="selector-names"></a>선택기 이름
 
 Apple 설명서에 선택기 이름이 나열 됩니다. 예를 들어 [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring?language=objc) 포함 [ `sizeWithFont:` ](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) 고 [ `sizeWithFont:forWidth:lineBreakMode:` ](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) 선택기입니다. Embedded 및 후행 콜론 선택기 이름의 일부인 되며 마찬가지로 생략 될 수 없습니다.
 
-선택기 이름이 만들 수 있습니다는 [ `ObjCRuntime.Selector` ](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) 인스턴스에 있습니다.
+선택기 이름이 만들 수 있습니다는 [ `ObjCRuntime.Selector` ](xref:ObjCRuntime.Selector) 인스턴스에 있습니다.
 
 ### <a name="calling-objcmsgsend"></a>Objc_msgSend 호출
 

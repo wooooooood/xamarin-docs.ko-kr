@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233604"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870315"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.iOS에서 ARKit 2
 
@@ -394,7 +394,7 @@ Console.WriteLine(xform);
 
 ![행 중심 vs 열 중심](images/arkit_row_vs_column.png)
 
-행렬 해석 선택 하 여 일치 하는 것이 적절 한 동작에 중요 합니다. 일관성 실수는 어떤 유형의 컴파일 타임 또는 런타임도 예외를 생성 하지 않습니다 3D 변환 행렬 4x4 되므로-작업이 예기치 않게 할 뿐입니다. 경우에 SceneKit / 멈출 수, 귀여운, 또는 지터 처럼 보이는 ARKit 개체는 잘못 된 변환 행렬을 가능성이 높습니다. 해결책은 간단 합니다. [ `NMatrix4.Transpose` ](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) 요소는 전체 변환 수행 됩니다.
+행렬 해석 선택 하 여 일치 하는 것이 적절 한 동작에 중요 합니다. 일관성 실수는 어떤 유형의 컴파일 타임 또는 런타임도 예외를 생성 하지 않습니다 3D 변환 행렬 4x4 되므로-작업이 예기치 않게 할 뿐입니다. 경우에 SceneKit / 멈출 수, 귀여운, 또는 지터 처럼 보이는 ARKit 개체는 잘못 된 변환 행렬을 가능성이 높습니다. 해결책은 간단 합니다. [ `NMatrix4.Transpose` ](xref:OpenTK.NMatrix4.Transpose*) 요소는 전체 변환 수행 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

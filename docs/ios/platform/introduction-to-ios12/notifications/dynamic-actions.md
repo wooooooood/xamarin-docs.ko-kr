@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: edaf9d90e019729f69f721c0a92826c0148db8df
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669634"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870094"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Xamarin.iOS에서 동적 알림 실행 단추
 
@@ -131,15 +131,15 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
 샘플 앱에서 알림 콘텐츠 확장의 뷰 컨트롤러는 기존 작업 단추 탭에 응답 하는 경우에 실행 단추를 수정 합니다.
 
 > [!NOTE]
-> 알림 콘텐츠 확장에서 해당 뷰 컨트롤러는 작업 단추 탭으로 응답할 수 있습니다 [ `DidReceiveNotificationResponse` ](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) 메서드를의 일부로 선언 [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/)합니다.
+> 알림 콘텐츠 확장에서 해당 뷰 컨트롤러는 작업 단추 탭으로 응답할 수 있습니다 [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) 메서드를의 일부로 선언 [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension)합니다.
 >
 > 와 이름을 공유 하지만 합니다 `DidReceiveNotificationResponse` 메서드 [위에서 설명한](#in-app-handling-of-notification-action-buttons), 다른 메서드입니다.
 >
-> 알림 콘텐츠 확장 단추를 눌러 처리 완료 되 면 기본 응용 프로그램에는 동일한 단추 탭을 처리 하도록 지시를 여부를 선택할 수 있습니다. 이렇게 하려면 적절 한 값을 전달 해야 합니다 [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/) 완료 처리기에:
+> 알림 콘텐츠 확장 단추를 눌러 처리 완료 되 면 기본 응용 프로그램에는 동일한 단추 탭을 처리 하도록 지시를 여부를 선택할 수 있습니다. 이렇게 하려면 적절 한 값을 전달 해야 합니다 [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) 완료 처리기에:
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/) 알림 인터페이스를 해제 해야, 및 기본 앱 단추 탭을 처리할 필요가 없습니다를 나타냅니다.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/) 알림 인터페이스를 해제 해야, 및는 기본 앱도 처리 하는 단추 탭을 나타냅니다.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/) 알림 인터페이스를 해제 하지 해야, 및 기본 앱 단추 탭을 처리할 필요가 없습니다를 나타냅니다.
+> - `Dismiss` 알림 인터페이스를 해제 해야, 및 기본 앱 단추 탭을 처리할 필요가 없습니다를 나타냅니다.
+> - `DismissAndForwardAction` 알림 인터페이스를 해제 해야, 및는 기본 앱도 처리 하는 단추 탭을 나타냅니다.
+> - `DoNotDismiss` 알림 인터페이스를 해제 하지 해야, 및 기본 앱 단추 탭을 처리할 필요가 없습니다를 나타냅니다.
 
 콘텐츠 확장의 `DidReceiveNotificationResponse` 메서드는 작업 단추를 눌렀는지 확인, 알림 인터페이스를 표시 하거나 숨깁니다에서 이미지를 회전을 **재설정** 작업 단추:
 

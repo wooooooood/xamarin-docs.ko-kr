@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677900"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870406"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.iOS에서 자동 제안 소개
 
@@ -51,7 +51,7 @@ UIKit ios 10 포함 하도록 확장 되었습니다를 [TextContentType](https:
 
 ## <a name="media-based-suggestions"></a>미디어 기반 추천
 
-앱을 사용 하 여 미디어를 재생 하는 경우는 [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API iOS 10에는 사용자가 앨범 표지의 보기 및 잠금 화면에서 앱을 통해 미디어를 재생할 수 있습니다.
+앱을 사용 하 여 미디어를 재생 하는 경우는 [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API iOS 10에는 사용자가 앨범 표지의 보기 및 잠금 화면에서 앱을 통해 미디어를 재생할 수 있습니다.
 
 ## <a name="contextual-siri-reminders"></a>상황에 맞는 Siri 미리 알림
 
@@ -63,12 +63,12 @@ Siri를 사용 하 여 나중에 앱에서 현재 표시 되어 콘텐츠를 보
 
 ## <a name="ride-sharing-based-suggestions"></a>공유 승객 기반 추천
 
-공유 앱을 사용 하는 경우는 [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API iOS 10 됩니다 표시 앱 전환기에 옵션으로 사용자는 승객 가능성이 높은 경우에 가끔 있습니다. 앱을 등록 해야 합니다도 공유 앱으로 지정 하 여는 `MKDirectionsModeRideShare` 에 대 한는 [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) 키에 해당 `Info.plist` 파일.
+공유 앱을 사용 하는 경우는 [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API iOS 10 됩니다 표시 앱 전환기에 옵션으로 사용자는 승객 가능성이 높은 경우에 가끔 있습니다. 앱을 등록 해야 합니다도 공유 앱으로 지정 하 여는 `MKDirectionsModeRideShare` 에 대 한는 [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) 키에 해당 `Info.plist` 파일.
 
 앱만을 지 원하는 경우 승객 공유 시스템 제안 시작 *"에 승객 Get..."*, 시스템에서 사용 됩니다 (예: Walking 또는 자전거) 라우팅 방향 다른 유형의 지원 되 면 *"지침에 Get..."*
 
 > [!IMPORTANT]
-> 합니다 [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) 앱을 받는 개체 위도 및 경도 정보를 포함 될 수 있습니다 및 지 오 코딩 해야 합니다.
+> 합니다 [MKMapItem](xref:MapKit.MKMapItem) 앱을 받는 개체 위도 및 경도 정보를 포함 될 수 있습니다 및 지 오 코딩 해야 합니다.
 
 ## <a name="implementing-proactive-suggestions"></a>자동 제안 구현
 
@@ -189,7 +189,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 최소한 위에 제시 된 코드를 사용 하 여 앱이 이제 세 가지 새 iOS 10 기능을 활용 하려면 수 있습니다:
 
-- **Handoff**
+- **핸드 오프**
 - **스포트라이트 검색**
 - **상황에 맞는 Siri 미리 알림**
 

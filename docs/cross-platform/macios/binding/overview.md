@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667966"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870341"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Objective-c 바인딩 개요
 
@@ -88,7 +88,7 @@ namespace Example.Binding {
 }
 ```
 
-셋째, Objective-c로 설명서를 검토 및 만들기 [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) 사용 하려는 각 선택기에 대 한 인스턴스. 클래스 본문 내에서이 배치 합니다.
+셋째, Objective-c로 설명서를 검토 및 만들기 [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) 사용 하려는 각 선택기에 대 한 인스턴스. 클래스 본문 내에서이 배치 합니다.
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -116,7 +116,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-다섯째, 3 단계에서에서 선언 된 각 선택기에 대 한 메서드를 제공 합니다. 이러한 사용할지 `objc_msgSend()` 네이티브 개체에서 선택기를 호출 합니다. 사용 하 여 [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) 변환 하는 `IntPtr` 에 적절 하 게 형식화 된 `NSObject` (sub) 형식입니다. Objective C 코드에서 멤버를 호출할 수 있으려면 메서드로 *해야 합니다* 될 **가상**합니다.
+다섯째, 3 단계에서에서 선언 된 각 선택기에 대 한 메서드를 제공 합니다. 이러한 사용할지 `objc_msgSend()` 네이티브 개체에서 선택기를 호출 합니다. 사용 하 여 [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) 변환 하는 `IntPtr` 에 적절 하 게 형식화 된 `NSObject` (sub) 형식입니다. Objective C 코드에서 멤버를 호출할 수 있으려면 메서드로 *해야 합니다* 될 **가상**합니다.
 
 ```csharp
 [Export("nextObject")]

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617581"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869730"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Xamarin.iOS에서 ML 2 코어
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for 루프
 
-합니다 `for` 잡이 지정된 된 수의 입력 루프 버전의 테스트를 반복 호출 [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) 각 하 고 결과 삭제 합니다. 메서드는 예측을 수행 하는 데 걸리는 시간:
+합니다 `for` 잡이 지정된 된 수의 입력 루프 버전의 테스트를 반복 호출 [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) 각 하 고 결과 삭제 합니다. 메서드는 예측을 수행 하는 데 걸리는 시간:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (새 일괄 처리 API)
 
-테스트의 일괄 처리 버전 만듭니다는 `MLArrayBatchProvider` 입력된 배열에서 개체 (에 필요한 입력된 매개 변수 이므로 `GetPredictions` 메서드)를 만듭니다는 [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+테스트의 일괄 처리 버전 만듭니다는 `MLArrayBatchProvider` 입력된 배열에서 개체 (에 필요한 입력된 매개 변수 이므로 `GetPredictions` 메서드)를 만듭니다는 [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 CPU로 제한 하는 예측 계산을 방지 하 고 사용 하는 개체는 `GetPredictions` 다시 결과 삭제 하는 예측을 인출 하는 API:
 
 ```csharp

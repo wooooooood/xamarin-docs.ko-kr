@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: b21bf4da7cf862bd32e71708f9e3657f577682c2
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677926"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870276"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -99,7 +99,7 @@ ms.locfileid: "58677926"
 
     ![](extensions-images/registerandprincipalclass.png)
 
-특정 유형의 확장에는 추가 요구 사항이 있을 수 있습니다. 예를 들어를 **오늘** 또는 **알림 센터** 확장의 보안 주체 클래스를 구현 해야 [INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/)합니다.
+특정 유형의 확장에는 추가 요구 사항이 있을 수 있습니다. 예를 들어를 **오늘** 또는 **알림 센터** 확장의 보안 주체 클래스를 구현 해야 [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding)합니다.
 
 > [!IMPORTANT]
 > Mac 용 Visual Studio에서 제공 되는 확장 템플릿을 하나를 사용 하 여 프로젝트를 시작 하는 경우 (모두는 아님) 경우에 대부분의 이러한 요구 사항은 제공 되며 템플릿에서 자동으로를 충족 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
-ms.openlocfilehash: 42cf10e592a37f9a979d05d7784553059923646c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667323"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870263"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.iOS에서 네이티브 라이브러리 참조
 
@@ -122,8 +122,7 @@ Xcode 사용 하 여 빌드를 인터넷에서 가져온 "libMyLibrary.a" 라이
 -  상주 하는 라이브러리를 확인 합니다.
 -  적절 한 P/Invoke 선언을 작성합니다
 
-
-P/Invoke를 사용 하는 경우와 연결 되어 있는 라이브러리의 경로 지정 해야 합니다. IOS를 사용 하 여 공유 라이브러리, 하드 코드 된 경로 또는에서 정의한 편의 상수를 사용할 수 있습니다 하는 경우 우리의 [상수 클래스](https://developer.xamarin.com/api/type/Constants/), 이러한 상수는 iOS 공유 라이브러리를 포함 해야 합니다.
+P/Invoke를 사용 하는 경우와 연결 되어 있는 라이브러리의 경로 지정 해야 합니다. IOS를 사용 하 여 공유 라이브러리, 하드 코드 된 경로 또는에서 정의한 편의 상수를 사용할 수 있습니다 하는 경우이 `Constants`, 이러한 상수는 iOS 공유 라이브러리를 포함 해야 합니다.
 
 예를 들어,이 서명이 c: \에서는 Apple의 UIKit 라이브러리에서 UIRectFrameUsingBlendMode 메서드를 호출 하려는 경우
 

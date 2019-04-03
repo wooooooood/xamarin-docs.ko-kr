@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870250"
 ---
-
 # <a name="introduction-to-ios-10"></a>IOS 10 소개
 
 _이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 10에서에서 사용할 수 있는 기능을 소개합니다._
@@ -221,9 +226,9 @@ Apple 위젯 시스템을 확인 하는 위젯 10 잠금 화면에서 새 iOS �
 
 IOS 10에서에서 다음 Api가 사용 되지 않습니다.
 
-- `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` 고 `CKFetchRecordChangesOperation` 클래스에서에서 사용 되지 CloudKit iOS 10에 대 한 합니다. 사용 된 [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) 및 [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) 클래스 (레코드 공유를 지) 대신 합니다.
-- 몇 가지 [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) Api (예: 영역 및 쿼리 기반 구독)가 사용 되지 않습니다. 사용 된 [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) 하 고 [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) Api 대신 합니다.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
+- `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` 고 `CKFetchRecordChangesOperation` 클래스에서에서 사용 되지 CloudKit iOS 10에 대 한 합니다. 사용 된 [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) 및 [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) 클래스 (레코드 공유를 지) 대신 합니다.
+- 몇 가지 [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) Api (예: 영역 및 쿼리 기반 구독)가 사용 되지 않습니다. 사용 된 [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) 하 고 [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) Api 대신 합니다.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
 - `ADBannerView`를 `ADInterstitialAd` 과의 기호를 [UIViewController](xref:UIKit.UIViewController) 클래스 사용 되지 않습니다.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) 부동 소수점 값에 관련 된 기호 사용 되지 않습니다.
 - `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`를 `UIUserNotificationCategory` 및 `UIUserNotificationSettings` UIKit의 클래스 사용 되지 않습니다. 사용 된 [사용자 알림](#user-notifications) framework 대신 합니다.

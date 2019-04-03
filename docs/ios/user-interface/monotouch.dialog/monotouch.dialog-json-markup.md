@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870133"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
-이 페이지에서는 MonoTouch.Dialog의에서 허용 하는 Json 태그 [JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
+이 페이지에서는 MonoTouch.Dialog의에서 허용 하는 Json 태그 [JsonElement](xref:MonoTouch.Dialog.JsonElement)
 
 예를 들어 시작 하겠습니다. 다음은 JsonElement에 전달할 수 있는 완전 한 Json 파일입니다.
 
@@ -153,7 +153,7 @@ RootElement에 사용 되는 제목이 있는 경우 됩니다.
 
 -  `header` (선택 사항)
 -  `footer` (선택 사항)
--  `elements` 배열
+-  `elements` array
 
 
  <a name="header" />

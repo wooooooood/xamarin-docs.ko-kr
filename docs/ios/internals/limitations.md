@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668350"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870184"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 
@@ -83,7 +83,7 @@ System.Reflection 부족 합니다. **내보낼** 런타임 코드 생성에 종
 C# 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선언 다음 특성 중 하나를 사용 하 여 데코레이팅 해야 합니다.
 
 - [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (기본 플랫폼 간 및.NET 표준 1.1 +와 호환 되므로)
-- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+- [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 이러한 특성 중 하나를 제공 하는 데 실패 하면 다음과 같은 런타임 오류가 발생 합니다.
 
@@ -100,8 +100,8 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 Mono에서 이러한 브리지는 구현한 시간에서 Just 컴파일러. 시간 미리 컴파일러를 사용 하 여 필요한 경우 iPhone에서 두 가지 중요 한 제약이 따릅니다가 시점에서:
 
--  사용 하 여 콜백 메서드의 모든 플래그 해야는 [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  메서드가 정적 메서드로 지원은 없습니다. 예를 들어 메서드. 
+-  사용 하 여 콜백 메서드의 모든 플래그 해야는 [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
+-  메서드가 정적 메서드로 지원은 없습니다. 예를 들어 메서드.
  
 <a name="No_Remoting" />
 
