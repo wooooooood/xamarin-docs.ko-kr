@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
+ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666374"
 ---
-
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러
 
 _Xamarin.Forms 사용자 인터페이스는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링되기 때문에 Xamarin.Forms 애플리케이션이 각 플랫폼에 적합한 모양과 느낌을 유지할 수 있습니다. 사용자 지정 렌더러를 사용하면 개발자가 이 프로세스를 재정의하여 각 플랫폼에서 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정할 수 있습니다._
