@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
+ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670534"
 ---
-
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
 _Android 커뮤니티는 앱에서 사용 하려는 많은 Java 라이브러리 이 가이드에서는 Xamarin.Android 응용 프로그램에 바인딩 라이브러리를 만들어 Java 라이브러리를 통합 하는 방법을 설명 합니다._

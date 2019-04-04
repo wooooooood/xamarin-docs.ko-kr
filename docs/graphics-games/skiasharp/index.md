@@ -8,8 +8,13 @@ ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+ms.openlocfilehash: 2aebc28f322bbd7b77a2dbee78e496ec628e5c74
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666377"
 ---
-
 # <a name="2d-drawing-with-skiasharp"></a>2D와 SkiaSharp 그리기
 
 SkiaSharp 2D 그래픽 작업을 수행 하는 강력한 C# API를 제공 합니다. 전원을 [Google의 Skia 라이브러리](http://skia.org), Google Chrome, Firefox 및 Android의 그래픽 스택을 구동 하는 라이브러리입니다.

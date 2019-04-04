@@ -5,8 +5,13 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
+ms.openlocfilehash: 6917267896cff796af4e5cff095720eaeccc7652
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671176"
 ---
-
 # <a name="net-embedding-on-android"></a>Android를 포함 하는.NET
 
 일부 경우에는 기존 네이티브 Android 프로젝트에는 Xamarin.NET 라이브러리를 추가 하는 것이 좋습니다. 이 위해 사용할 수 있습니다 합니다 [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/) 도구를 네이티브 Java 기반 Android 앱에 통합할 수 있는 네이티브 라이브러리를.NET 라이브러리를 설정 합니다.

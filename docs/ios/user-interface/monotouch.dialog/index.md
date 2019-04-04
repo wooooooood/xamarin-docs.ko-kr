@@ -1,14 +1,19 @@
 ---
 title: MonoTouch.Dialog Xamarin.iOS에 대 한 소개
-description: '이 문서에서는 MonoTouch.Dialog (콜로라도 설명 D), Xamarin.iOS 사용 하 여 신속 하 게 하 고 선언적인 UI 개발을 위한 프레임 워크입니다. MonoTouch.Dialog Api를 사용 하 여 코드 또는 JSON에서 인터페이스를 만들고 끌어오기-새로 고침, 검색, 배경 이미지 로드 등과 같은 기능을 사용 하는 방법을 설명 합니다.'
+description: 이 문서에서는 MonoTouch.Dialog (콜로라도 설명 D), Xamarin.iOS 사용 하 여 신속 하 게 하 고 선언적인 UI 개발을 위한 프레임 워크입니다. MonoTouch.Dialog Api를 사용 하 여 코드 또는 JSON에서 인터페이스를 만들고 끌어오기-새로 고침, 검색, 배경 이미지 로드 등과 같은 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
+ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670147"
 ---
-
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>MonoTouch.Dialog Xamarin.iOS에 대 한 소개
 
 MonoTouch.Dialog, MT와 참조 줄여서 D는 개발자가 응용 프로그램 화면 및 탐색 하는 번거로움을 뷰 컨트롤러, 테이블 등을 만드는 것이 아니라 정보를 사용 하 여 구축을 신속 하 게 UI 개발 도구 키트입니다. 따라서 UI 개발 및 코드 영역 축소의 중요 한 단순화를 제공합니다. 예를 들어 다음 스크린 샷에서를 것이 좋습니다.

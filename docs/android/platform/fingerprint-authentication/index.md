@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667336"
 ---
-
 # <a name="fingerprint-authentication"></a>지문 인증
 
 _이 가이드에서는 Android 6.0에서는 Xamarin.Android 응용 프로그램을 소개 하 고 지문 인증을 추가 하는 방법을 설명 합니다._

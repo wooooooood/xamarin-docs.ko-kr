@@ -1,13 +1,18 @@
 ---
 title: Xamarin Profiler
-description: '이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다.'
+description: 이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
+ms.openlocfilehash: 15739ff191953e4730d44c6ad9f63dccb9a0017e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668415"
 ---
-
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
 _이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. Xamarin 응용 프로그램 프로 파일링에 대 한 프로파일러, 프로 파일링 및 때 사용 해야, 및 표준 워크플로 찾습니다._

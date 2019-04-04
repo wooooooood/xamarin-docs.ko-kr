@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
+ms.openlocfilehash: 9620362b48e9cf1db4c25e4470851fb518a8e0f3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671173"
 ---
-
 # <a name="android-wear-controls"></a>Android Wear 컨트롤
 
 Android Wear 앱에서에서 사용할 수 동일한 컨트롤은 대부분 이미 사용을 비롯 한 일반적인 Android 앱에 대 한 `Button`, `TextView`, 및 드로어 블 이미지입니다. 포함 하는 레이아웃 컨트롤 `ScrollView`, `LinearLayout`, 및 `RelativateLayout` 사용할 수도 있습니다.

@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
+ms.openlocfilehash: f14b3fd31fdda200f51f429367465677d389b1ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666380"
 ---
-
 # <a name="android-resources"></a>Android 리소스
 
 _이 문서는 Xamarin.Android에서 Android 리소스의 개념을 소개 하 고 사용 하는 방법을 설명할. 응용 프로그램 지역화 및 다양 한 화면 크기 및 밀도 비롯 한 여러 장치를 지원 하도록 Android 응용 프로그램에서 리소스를 사용 하는 방법을 설명 합니다._

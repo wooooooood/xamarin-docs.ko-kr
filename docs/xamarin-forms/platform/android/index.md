@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
+ms.openlocfilehash: 3bd606ae87c524202fd5ea7c141223042e90ec1a
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197461"
 ---
-
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
 Android 용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/get-started/requirements.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.

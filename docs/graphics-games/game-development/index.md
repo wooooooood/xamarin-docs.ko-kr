@@ -6,8 +6,13 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
+ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672432"
 ---
-
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin 사용한 게임 개발 소개
 
 게임 개발 될 수 있습니다 매우 흥미로운 특히 모바일 플랫폼에서 작업을 게시할 수 얼마나 있습니다를 지정 합니다. 개념에 설명 하는 데 도움이 되는 게임 개발에 관련 된 기술 게임을 만들, 목표를 만들거나 고품질 AAA 게임 재미 있는 작업에 대 한 프로그램에 방금 인지 합니다.

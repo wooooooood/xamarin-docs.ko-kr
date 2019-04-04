@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
+ms.openlocfilehash: ca8b554e03c4e8339922ca99619245a45bd08e1d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669091"
 ---
-
 # <a name="android-wear"></a>Android Wear
 
 Android Wear 착용 식 장치 스마트 감시 등을 위해 설계 된 Android 버전이 있습니다. 이 섹션에서는 Wear 개발, 첫 번째 Wear 장치 및 사용자 고유의 작성용 Wear 앱을 참조할 수 있는 샘플 목록을 만들기 위한 단계별 연습에 필요한 도구 설치 및 구성 하는 방법에 대 한 지침을 포함 합니다.

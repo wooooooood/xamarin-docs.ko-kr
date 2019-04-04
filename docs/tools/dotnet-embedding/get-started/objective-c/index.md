@@ -1,13 +1,18 @@
 ---
 title: Objective C를 사용 하 여 시작
-description: '이 문서에서는 설명 하는 방법을 보여주기 위한 것입니다.를 사용 하 여.NET 포함를 사용 하 여 시작 요구 사항, NuGet 및 지원 되는 플랫폼에서.NET 포함 설치에 대해 설명 합니다.'
+description: 이 문서에서는 설명 하는 방법을 보여주기 위한 것입니다.를 사용 하 여.NET 포함를 사용 하 여 시작 요구 사항, NuGet 및 지원 되는 플랫폼에서.NET 포함 설치에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
+ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670222"
 ---
-
 # <a name="getting-started-with-objective-c"></a>Objective C를 사용 하 여 시작
 
 이 모든 지원 되는 플랫폼에 대 한 기본 사항을 다루는 Objective-c 용 시작된 페이지를 합니다.

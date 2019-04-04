@@ -1,11 +1,17 @@
 ---
 title: UrhoSharp-3D/2D 엔진
-description: 'UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메이션이 적용 된 2D 및 3D 장면 기 하 도형, 자료, 광원 및 카메라를 사용 하 여 응용 프로그램을 만드는 데 사용할 수 있습니다.'
+description: UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메이션이 적용 된 2D 및 3D 장면 기 하 도형, 자료, 광원 및 카메라를 사용 하 여 응용 프로그램을 만드는 데 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
+ms.openlocfilehash: c008711a12729779312ae41388495e2058b4f27b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670274"
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp-3D/2D 엔진
 

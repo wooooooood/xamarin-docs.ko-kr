@@ -6,8 +6,13 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
+ms.openlocfilehash: e4c8c43b4df1a7bfc5436f14564c6d0164216c46
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669247"
 ---
-
 # <a name="portable-visual-basicnet"></a>이식 가능한 Visual Basic.NET
 
 Xamarin iOS 및 Android 프로젝트 지원 하지 않습니다 기본적으로 Visual Basic; 그러나 iOS 및 Android를 기존 Visual Basic 코드를 마이그레이션하도록 또는 Visual Basic에서 응용 프로그램 논리의 상당 부분을 작성 하려면 개발자 이식 가능한 클래스 라이브러리를 사용할 수 있습니다. Visual Basic (사용자 지정 렌더러, 종속성 서비스 및 XAML 코드 숨김 파일 제외)에서 완전히 Xamarin.Forms 응용 프로그램을 만들 수 있습니다.

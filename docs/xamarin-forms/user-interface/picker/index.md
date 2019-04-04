@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557271"
 ---
-
 # <a name="xamarinforms-picker"></a>Xamarin.Forms 선택
 
 _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다._

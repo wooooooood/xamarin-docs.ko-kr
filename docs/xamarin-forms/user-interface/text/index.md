@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
+ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557092"
 ---
-
 # <a name="text-in-xamarinforms"></a>Xamarin.Forms에는 텍스트
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)

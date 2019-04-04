@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
+ms.openlocfilehash: 2ff4729e68497391d41521da26917571c146b541
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667267"
 ---
-
 # <a name="implementing-fragments---walkthrough"></a>연습-조각 구현
 
 _조각은 다양 한 화면 크기를 사용 하 여 장치를 대상으로 하는 Android 앱의 복잡성을 해결 하는 데 도움이 되는 자체 포함 된, 모듈식 구성 요소입니다. 이 문서는 만들고 Xamarin.Android 응용 프로그램을 개발 하는 경우 조각을 사용 하는 방법을 안내 합니다._

@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+ms.openlocfilehash: c05bc88ef6d182f282decedff3e4fb03b4bb96b1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671756"
 ---
-
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)
