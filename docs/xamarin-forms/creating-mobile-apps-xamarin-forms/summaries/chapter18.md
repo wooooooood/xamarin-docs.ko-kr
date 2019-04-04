@@ -1,22 +1,22 @@
 ---
 title: 요약 18 장입니다. MVVM
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 18 장 요약 합니다. MVVM'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 18 장입니다. MVVM
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050129"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870224"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 18 장입니다. MVVM
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 이 라고도 하는 기본 코드의 사용자 인터페이스를 분리 하 여는 응용 프로그램을 설계 하는 가장 좋은 방법 중 하나는 *비즈니스 논리*합니다. 다양 한 기술을 존재 하지만 XAML 기반 환경에 맞게 작성 된 것은 모델-뷰-ViewModel 또는 MVVM 이라고 합니다.
 
@@ -87,7 +87,7 @@ ViewModel 형식의 각 속성을 설정 하는 내부적으로 `ICommand` 구�
 
 ### <a name="a-calculator-almost"></a>계산기를 거의
 
-[ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) 는 샘플을 모두 사용 합니다 `Execute` 및 `CanExecute` 의 메서드 `ICommand`합니다. 사용 하 여는 [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) 클래스를 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) 라이브러리입니다. 형식의 6 개의 속성을 포함 하는 ViewModel `ICommand`합니다. 초기화 되는 이러한 합니다 [ `Command` 생성자](xref:Xamarin.Forms.Command.%23ctor(System.Action)) 하 고 [ `Command` 생성자](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) 의 `Command` 하며 [ `Command<T>` 생성자](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command%3CT%3E.Command%3CT%3E/p/System.Action%7BT%7D/System.Func%7BT,System.Boolean%7D/) `Command<T>`합니다. 추가 컴퓨터의 숫자 키를 모두 사용 하 여 초기화 된 속성에 바인딩된 `Command<T>`, 및 `string` 인수 `Execute` 및 `CanExecute` 특정 키를 식별 합니다.
+[ **AddingMachine** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) 는 샘플을 모두 사용 합니다 `Execute` 및 `CanExecute` 의 메서드 `ICommand`합니다. 사용 하 여는 [ `AdderViewModel` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) 클래스를 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) 라이브러리입니다. 형식의 6 개의 속성을 포함 하는 ViewModel `ICommand`합니다. 초기화 되는 이러한 합니다 [ `Command` 생성자](xref:Xamarin.Forms.Command.%23ctor(System.Action)) 하 고 [ `Command` 생성자](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) 의 `Command` 하며 [ `Command<T>` 생성자](https://docs.microsoft.com/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) `Command<T>`합니다. 추가 컴퓨터의 숫자 키를 모두 사용 하 여 초기화 된 속성에 바인딩된 `Command<T>`, 및 `string` 인수 `Execute` 및 `CanExecute` 특정 키를 식별 합니다.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>Viewmodel 및 응용 프로그램 수명 주기
 

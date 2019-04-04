@@ -2,12 +2,18 @@
 layout: HubPage
 hide_bc: true
 title: Xamarin 설명서
-description: 'Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다.'
+description: Xamarin을 사용하면 .NET 코드 및 플랫폼별 사용자 인터페이스를 사용하여 Android, iOS 및 macOS용 네이티브 앱을 빌드할 수 있습니다. Xamarin.Forms를 사용하면 C# 또는 XAML에서 작성된 공유 UI 코드를 통해 네이티브 앱을 빌드할 수 있습니다.
 author: conceptdev
 ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
-  - clicktale
+- clicktale
+ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854004"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -544,12 +550,12 @@ Mac</a>
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visual Studio 2017</h3>
-                                                    <p>Visual Studio 2017을 사용하는 개발에 대해 자세히 알아봅니다.</p>
+                                                    <h3>Visual Studio 2019</h3>
+                                                    <p>Visual Studio 2019를 사용하는 개발에 대해 자세히 알아봅니다.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -563,7 +569,7 @@ Mac</a>
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -737,19 +743,24 @@ Mac</a>
         <h2>연락 방법</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/"> 블로그 </a>
+                <a href="https://blog.xamarin.com/">
+블로그 </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/"> 포럼 </a>
+                <a href="https://forums.xamarin.com/">
+포럼 </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq"> Twitter </a>
+                <a href="https://twitter.com/xamarinhq">
+Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin">
+스택 오버플로 </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community"> 개발자 커뮤니티 </a>
+                <a href="https://dotnet.microsoft.com/platform/community">
+개발자 커뮤니티 </a>
             </li>
         </ul>
     </div>

@@ -1,22 +1,22 @@
 ---
 title: 요약 14 장입니다. 절대 레이아웃
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 14 장 요약 합니다. 절대 레이아웃'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 14 장입니다. 절대 레이아웃
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870237"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 14 장입니다. 절대 레이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 와 같은 `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) 에서 파생 `Layout<View>` 상속을 `Children` 속성입니다. `AbsoluteLayout` 프로그래머가 해당 자식이 있고 선택적으로 해당 크기의 위치를 지정 하는 레이아웃 시스템을 구현 합니다. 왼쪽 위 모퉁이 기준으로 자식 항목의 왼쪽 위 모퉁이에서 위치 지정을 `AbsoluteLayout` 장치 독립적 단위에서입니다. `AbsoluteLayout` 또한 비례 위치 및 크기 조정 기능을 구현합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "53053492"
 
 ## <a name="absolutelayout-in-code"></a>코드에서 AbsoluteLayout
 
-자식으로 추가할 수 있습니다는 `Children` 의 컬렉션을 `AbsoluteLayout` 표준을 사용 하 여 [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) 메서드를 하지만 `AbsoluteLayout` 도 확장을 제공 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) 지정할 수 있는 메서드를 [ `Rectangle` ](xref:Xamarin.Forms.Rectangle)합니다. 다른 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) 하기만 메서드를 [ `Point` ](xref:Xamarin.Forms.Point), 자식 제약을 받지 않는 하 고 크기가 자동으로 조정 하는 경우.
+자식으로 추가할 수 있습니다는 `Children` 의 컬렉션을 `AbsoluteLayout` 표준을 사용 하 여 [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) 메서드를 하지만 `AbsoluteLayout` 도 확장을 제공 [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) 지정할 수 있는 메서드를 [ `Rectangle` ](xref:Xamarin.Forms.Rectangle)합니다. 다른 [ `Add` ](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) 하기만 메서드를 [ `Point` ](xref:Xamarin.Forms.Point), 자식 제약을 받지 않는 하 고 크기가 자동으로 조정 하는 경우.
 
 만들 수 있습니다는 `Rectangle` 값을 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) 네 가지 값을 지정 해야 하는 &mdash; 부모에 상대적인 자식 항목의 왼쪽 위 모퉁이 위치를 나타내는 첫 번째 두 및 나타내는 두는 자식의 크기입니다. 사용할 수 있습니다는 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) 필요로 하는 `Point` 및 [ `Size` ](xref:Xamarin.Forms.Size) 값입니다.
 

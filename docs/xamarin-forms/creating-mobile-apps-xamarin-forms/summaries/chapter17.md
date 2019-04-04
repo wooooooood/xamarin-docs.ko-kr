@@ -1,22 +1,22 @@
 ---
 title: 요약 17 장입니다. 눈금 마스터
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 17 장 요약 합니다. 눈금 마스터'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 17 장입니다. 눈금 마스터
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050899"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869990"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 17 장입니다. 눈금 마스터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid) 자식 셀의 행과 열으로 정렬 하는 강력한 레이아웃 메커니즘입니다. 비슷한 HTML과는 달리 `table` 요소는 `Grid` 표시가 아니라 레이아웃의 용도로 됩니다.
 
@@ -68,11 +68,11 @@ XAML에서 이러한 값을 설정 하는 것에 대 한 다음과 같은 특성
 
 ### <a name="the-grid-in-code"></a>코드에서 표
 
-합니다 [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) 샘플을 만들고 채우는 방법을 보여 줍니다는 `Grid` 코드에서입니다. 각 자식에 직접 또는 간접적으로 추가 호출 하 여 연결 된 속성을 설정할 수 있습니다 `Add` 와 같은 메서드와 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) 정의한 합니다 [Grid.IGridList<T> ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) 인터페이스입니다.
+합니다 [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) 샘플을 만들고 채우는 방법을 보여 줍니다는 `Grid` 코드에서입니다. 각 자식에 직접 또는 간접적으로 추가 호출 하 여 연결 된 속성을 설정할 수 있습니다 `Add` 와 같은 메서드와 [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) 정의한 합니다 [Grid.IGridList<T> ](xref:Xamarin.Forms.Grid.IGridList`1) 인터페이스입니다.
 
 ### <a name="the-grid-bar-chart"></a>표 가로 막대형 차트
 
-합니다 [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) 샘플에서는 여러 개를 추가 하는 방법을 보여 줍니다 `BoxView` 요소를 사용 하는 `Grid` 대량을 사용 하 여 [ `AddHorizontal` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) 메서드. 기본적으로 이러한 `BoxView` 요소는 동일 너비입니다. 각각의 높이 `BoxView` 가로 막대형 차트와 유사 하 게 제어할 수 있습니다.
+합니다 [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) 샘플에서는 여러 개를 추가 하는 방법을 보여 줍니다 `BoxView` 요소를 사용 하는 `Grid` 대량을 사용 하 여 [ `AddHorizontal` ](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) 메서드. 기본적으로 이러한 `BoxView` 요소는 동일 너비입니다. 각각의 높이 `BoxView` 가로 막대형 차트와 유사 하 게 제어할 수 있습니다.
 
 `Grid` 에 **GridBarChart** 샘플 공유를 `AbsoluteLayout` 처음에 보이지 않는 사용 하 여 부모 `Frame`. 프로그램 설정를 `TapGestureRecognizer` 각 `BoxView` 사용 하는 `Frame` 탭된 막대에 대 한 정보를 표시 합니다.
 
@@ -108,4 +108,4 @@ XAML에서 이러한 값을 설정 하는 것에 대 한 다음과 같은 특성
 
 - [17 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [17 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [눈금](~/xamarin-forms/user-interface/layouts/grid.md)
+- [표](~/xamarin-forms/user-interface/layouts/grid.md)

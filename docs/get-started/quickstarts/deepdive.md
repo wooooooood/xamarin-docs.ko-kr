@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855018"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작에 대 한 심층 정보
 
@@ -80,6 +80,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 - **Models\Note.cs** –이 클래스 정의 `Note` 모델 인스턴스가 응용 프로그램에서 각 메모에 대 한 데이터를 저장 합니다.
 - **App.xaml** - 응용 프로그램의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
 - **App.xaml.cs** – `App` 클래스의 코드 숨김으로, 각 플랫폼에서 응용 프로그램이 표시할 첫 번째 페이지를 인스턴스화하고 응용 프로그램 수명 주기 이벤트를 처리하는 역할을 담당합니다.
+- **AssemblyInfo.cs** –이 파일에 어셈블리 수준에서 적용 되는 프로젝트에 대 한 응용 프로그램 특성을 포함 합니다.
 - **NotesPage.xaml** – The XAML 태그에 대 한는 `NotesPage` 응용 프로그램이 시작 될 때 표시 되는 페이지의 UI를 정의 하는 클래스입니다.
 - **NotesPage.xaml.cs** –에 대 한 코드 숨김의 `NotesPage` 페이지와 상호 작용할 때 실행 되는 비즈니스 논리를 포함 하는 클래스입니다.
 - **NoteEntryPage.xaml** – The XAML 태그를 `NoteEntryPage` 메모를 입력할 때 표시 되는 페이지의 UI를 정의 하는 클래스입니다.
@@ -106,9 +107,7 @@ Xamarin.Forms 애플리케이션은 기존의 플랫폼 간 애플리케이션�
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Notes
 {
     public partial class App : Application
@@ -123,7 +122,17 @@ namespace Notes
 }
 ```
 
-설정 하는이 코드는 `MainPage` 의 속성을 `App` 클래스를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 내용이 인스턴스를 `NotesPage` 인스턴스. 또한 [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성은 XAML이 중간 언어로 직접 컴파일되도록 XAML 컴파일러를 켭니다. 자세한 내용은 [XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)을 참조하세요.
+설정 하는이 코드는 `MainPage` 의 속성을 `App` 클래스를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 내용이 인스턴스를 `NotesPage` 인스턴스.
+
+또한 합니다 **AssemblyInfo.cs** 파일 어셈블리 수준에서 적용 되는 단일 응용 프로그램 특성을 포함 합니다.
+
+```csharp
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+```
+
+합니다 [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) XAML 중간 언어로 직접 컴파일될 수 있도록 특성 XAML 컴파일러를 켭니다. 자세한 내용은 [XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)을 참조하세요.
 
 ## <a name="launching-the-application-on-each-platform"></a>각 플랫폼에서 응용 프로그램 시작
 
@@ -412,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 에 `OnNoteAddedClicked` 응용 프로그램에 새 메모 추가 될 때 실행 되는 메서드를를 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 의 `NoteEntryPage` 새로 설정 된 `Note` 인스턴스. 에 `OnListViewItemSelected` 에서 기존 메모를 선택할 때 실행 되는 메서드를를 [ `ListView` ](xref:Xamarin.Forms.ListView)의 `BindingContext` 의 `NoteEntryPage` 선택한로 설정 되어 `Note` 인스턴스를 통해 액세스할 수 있는 [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 속성입니다.
 
 > [!IMPORTANT]
-> 각 *target* 개체의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 개별적으로 설정할 수 있으나, 그럴 필요는 없습니다. `BindingContext`는 자신의 모든 자식에서 상속한 특별 속성입니다. 따라서 때를 `BindingContext` 에 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 로 설정 됩니다는 `Note` 자식의 모든 인스턴스를 `ContentPage` 동일 `BindingContext`, 합니다 의공용속성에바인딩될수있습니다`Note`개체입니다.
+> 각 *target* 개체의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 개별적으로 설정할 수 있으나, 그럴 필요는 없습니다. `BindingContext` 모든 자식에서 상속 되는 특별 한 속성이입니다. 따라서 때를 `BindingContext` 에 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 로 설정 됩니다는 `Note` 자식의 모든 인스턴스를 `ContentPage` 동일 `BindingContext`, 합니다 의공용속성에바인딩될수있습니다`Note`개체입니다.
 
 [ `Editor` ](xref:Xamarin.Forms.Editor) 에서 `NoteEntryPage` 에 바인딩됩니다 합니다 `Text` 의 속성을 `Note` 개체:
 
@@ -523,11 +532,11 @@ Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 
 
 ## <a name="related-links"></a>관련 링크
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
+- [XAML(eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.md)
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)
-- [XAML 마크업 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [시작 샘플](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
 - [Xamarin.Forms API 참조](xref:Xamarin.Forms)
-- [무료 학습(비디오)](https://university.xamarin.com/self-guided/)
+- [무료 사용자 진행 방식 학습 (비디오)](https://university.xamarin.com/self-guided/)

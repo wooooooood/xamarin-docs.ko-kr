@@ -1,22 +1,22 @@
 ---
 title: 요약 28 장입니다. 위치 및 지도
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 28 장 요약 합니다. 위치 및 지도'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 28 장입니다. 위치 및 지도
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bcca7bc7ac56b745945b6d7daef3c4ddd634b486
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870419"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
@@ -62,7 +62,7 @@ Xamarin.Forms `Map` 클래스에서 사용자의 지리적 위치를 가져올 �
 
 #### <a name="the-ios-location-manager"></a>IOS 위치 관리자
 
-IOS 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) iOS 클래스는 사용 [ `CLLocationManager` ](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/)합니다.
+IOS 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) iOS 클래스는 사용 [ `CLLocationManager` ](xref:CoreLocation.CLLocationManager)합니다.
 
 #### <a name="the-android-location-manager"></a>Android 위치 관리자
 
@@ -146,7 +146,7 @@ Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가�
 
 `VisibleRegion` 유형의 [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), 4 개의 읽기 전용 속성을 사용 하 여 클래스:
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) 형식의 [`Position`](xref:Xamarin.Forms.Maps.Position)
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center)([`Position`](xref:Xamarin.Forms.Maps.Position) 형식)
 - [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) 형식의 `double`, 지도의 표시 영역 높이 나타내는
 - [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 형식의 `double`, 지도의 표시 영역 너비를 나타내는
 - [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) 형식의 [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), 지도 가장 큰 순환 영역 크기를 나타내는

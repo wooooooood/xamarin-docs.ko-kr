@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
+ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870367"
 ---
-
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
 Core, Mono 포함 된 기본 클래스 라이브러리 외에도 [Xamarin.iOS](http://www.xamarin.com/iOS) 다양 한 iOS 개발자 Mono를 사용 하 여 네이티브 iOS 응용 프로그램을 만들 수 있도록 Api에 대 한 바인딩을 포함 합니다.
@@ -57,7 +62,7 @@ Objective-c 코드를 사용 하 여 통신 하도록 하위 수준 런타임 �
 
 - 네이티브 C# 형식:
 
-  - [`NSString` 됩니다. `string`](~/ios/internals/api-design/nsstring.md)
+  - [`NSString` 다음이 됩니다. `string`](~/ios/internals/api-design/nsstring.md)
   - 설정할 `int` 하 고 `uint` C# 열거형을 사용 하 여 C# 열거형 열거형 었어야 하는 매개 변수 `[Flags]` 특성
   - 형식 중립적인 대신 `NSArray` 개체를 강력한 형식의 배열로 배열을 노출 합니다.
   - 이벤트 및 알림에 대 한 중에서 선택할 사용자에 게 제공 합니다.
@@ -80,7 +85,7 @@ Xamarin.iOS를 구성 하는 어셈블리의 여러 포함 된 *Xamarin.iOS 프�
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-합니다 [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/) C#과 보여주기 위한 것입니다. 세계를 개발자가 네임 스페이스
+합니다 [ObjCRuntime](xref:ObjCRuntime) C#과 보여주기 위한 것입니다. 세계를 개발자가 네임 스페이스
 Cocoa # 및 Gtk # 경험을 바탕으로 iOS를 위해 특별히 설계 된 새 바인딩입니다.
 
 <a name="MonoTouch.Foundation" />
@@ -201,13 +206,13 @@ C# 대리자는 일반적인 작업에 제공 됩니다. 참조 된 [대리자](
 
 #### <a name="opengles"></a>OpenGLES
 
-배포 합니까 OpenGLES에 대 한는 [수정 버전](https://developer.xamarin.com/api/namespace/OpenTK/) 의 합니다 [OpenTK](http://www.opentk.com/) API에만 노출 뿐만 아니라 OpenGL CoreGraphics 데이터 형식 및 구조를 사용 하 여 수정 된 개체 지향 바인딩이 합니다 iOS에서 사용할 수 있는 기능입니다.
+배포 합니까 OpenGLES에 대 한는 [수정 버전](xref:OpenTK) 의 합니다 [OpenTK](http://www.opentk.com/) API에만 노출 뿐만 아니라 OpenGL CoreGraphics 데이터 형식 및 구조를 사용 하 여 수정 된 개체 지향 바인딩이 합니다 iOS에서 사용할 수 있는 기능입니다.
 
-OpenGLES 1.1 기능은 문서화 된 ES11.GL 형식을 통해 사용할 수 있습니다 [여기](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES11.GL/) 형식입니다.
+OpenGLES 1.1 기능은 문서화 된 ES11.GL 형식을 통해 사용할 수 있습니다 [여기](xref:OpenTK.Graphics.ES11.GL) 형식입니다.
 
-OpenGLES 2.0 기능은 문서화 된 ES20.GL 형식을 통해 사용할 수 있습니다 [여기](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES20.GL/) 형식입니다.
+OpenGLES 2.0 기능은 문서화 된 ES20.GL 형식을 통해 사용할 수 있습니다 [여기](xref:OpenTK.Graphics.ES20.GL) 형식입니다.
 
-OpenGLES 3.0 기능은 문서화 된 ES30.GL 형식을 통해 사용할 수 있습니다 [여기](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/) 형식입니다.
+OpenGLES 3.0 기능은 문서화 된 ES30.GL 형식을 통해 사용할 수 있습니다 [여기](xref:OpenTK.Graphics.ES30.GL) 형식입니다.
 
 
 ### <a name="binding-design"></a>디자인 바인딩
