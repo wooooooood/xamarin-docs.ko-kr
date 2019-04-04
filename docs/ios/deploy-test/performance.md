@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870393"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 여기에서 포함된 개체는 부모를 활성 상태로 유지합니다. 그러나 부모는 `container.AddSubView`에 수행한 호출을 통해 자식을 활성 상태로 유지합니다.
 
-이는 대리자 또는 데이터 원본 패턴을 사용하는 iOS API에서도 발생합니다. 예를 들어 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) 클래스에서
-[`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) 속성 또는
+이는 대리자 또는 데이터 원본 패턴을 사용하는 iOS API에서도 발생합니다. 예를 들어 [`Delegate`](xref:UIKit.UITableView.Delegate*) 클래스에서
+[`DataSource`](xref:UIKit.UITableView.DataSource*) 속성 또는
 [`UITableView`](xref:UIKit.UITableView)를 설정할 때 피어 클래스에 구현이 포함됩니다.
 
-하위 클래스를 만드는 대신 수행할 수 있는 작업인 [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/)와 같이 프로토콜을 구현하기 위해 순전히 만들어진 클래스의 경우, 클래스에서 인터페이스를 구현하고, 메서드를 재정의하고, `DataSource` 속성을 `this`에 할당할 수 있습니다.
+하위 클래스를 만드는 대신 수행할 수 있는 작업인 [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource)와 같이 프로토콜을 구현하기 위해 순전히 만들어진 클래스의 경우, 클래스에서 인터페이스를 구현하고, 메서드를 재정의하고, `DataSource` 속성을 `this`에 할당할 수 있습니다.
 
 #### <a name="weak-attribute"></a>약한 특성
 
@@ -278,7 +278,7 @@ XIB가 대부분 스토리보드로 대체되었지만, XIB를 여전히 사용�
 
 게임에는 게임 논리를 실행하고 화면을 업데이트하기 위해 긴밀한 루프가 사용되는 경향이 있습니다. 일반적인 프레임 속도의 범위는 초당 30-60회 프레임입니다. 일부 개발자는 게임 시뮬레이션을 화면 업데이트와 결합하여 가능한 한 많은 초당 횟수로 화면을 업데이트해야 하고, 초당 60회 프레임을 초과하도록 유혹받을 수 있다고 느낍니다.
 
-그러나 디스플레이 서버는 초당 60회 상한에서 화면 업데이트를 수행합니다. 따라서 이 제한보다 더 빠르게 화면을 업데이트하려고 하면 화면이 찢기거나 미세한 끊김 현상이 발생할 수 있습니다. 화면 업데이트가 디스플레이 업데이트와 동기화되도록 코드를 구조화하는 것이 가장 좋습니다. 이 작업은 시각화에 적합한 타이머인 [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/) 클래스와 초당 60회 프레임으로 실행되는 게임을 사용하여 수행할 수 있습니다.
+그러나 디스플레이 서버는 초당 60회 상한에서 화면 업데이트를 수행합니다. 따라서 이 제한보다 더 빠르게 화면을 업데이트하려고 하면 화면이 찢기거나 미세한 끊김 현상이 발생할 수 있습니다. 화면 업데이트가 디스플레이 업데이트와 동기화되도록 코드를 구조화하는 것이 가장 좋습니다. 이 작업은 시각화에 적합한 타이머인 [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink) 클래스와 초당 60회 프레임으로 실행되는 게임을 사용하여 수행할 수 있습니다.
 
 ## <a name="avoid-core-animation-transparency"></a>코어 애니메이션 투명도 방지
 
