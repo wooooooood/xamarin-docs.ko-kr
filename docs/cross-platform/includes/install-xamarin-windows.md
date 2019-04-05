@@ -1,15 +1,15 @@
 ---
 ms.topic: include
-ms.openlocfilehash: cfb387f452939bf72ca3606f9f88f482f6622202
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 5fccbcf56037b4c4538ccfa16515ea63aa53c57c
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855360"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59041636"
 ---
-Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visual Studio 2019 설치:
+Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일부로 설치할 수 있습니다.
 
-1. Visual Studio 2019 Community, Visual Studio Professional 또는 Visual Studio Enterprise를 다운로드 합니다 [Visual Studio](https://visualstudio.microsoft.com/vs/) 페이지 (다운로드 링크는 맨 아래에 제공 됨).
+1. [Visual Studio](https://visualstudio.microsoft.com/vs/) 페이지에서 Visual Studio 2017 Community, Visual Studio Professional 또는 Visual Studio Enterprise를 다운로드합니다(아래쪽에 다운로드 링크가 제공됨).
 
 2. 다운로드한 패키지를 두 번 클릭하여 설치를 시작합니다.
 
@@ -21,22 +21,22 @@ Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visu
 
     ![설치할 Xamarin 옵션이 나열되는 설치 세부 정보 창](~/get-started/installation/windows-images/02-summary.png)
 
-5. Visual Studio 2019 설치를 시작할 준비가 되 면 클릭 합니다 **설치** 오른쪽 아래 모서리에 단추:
+5. Visual Studio 2017 설치를 시작할 준비가 되면 오른쪽 아래 모서리에서 **설치** 단추를 클릭합니다.
 
     ![설치 단추](~/get-started/installation/windows-images/03-click-install.png)
 
-   Visual Studio 2019의 버전을 설치 하는 따라 설치 프로세스에는 완료 하는 데 시간이 오래 걸릴 수 있습니다. 진행률 표시줄을 통해 설치를 모니터링할 수 있습니다.
+   설치하는 Visual Studio 2017의 버전에 따라 설치 프로세스를 완료하는 데 시간이 오래 걸릴 수 있습니다. 진행률 표시줄을 통해 설치를 모니터링할 수 있습니다.
 
     ![설치 중 진행률 표시줄](~/get-started/installation/windows-images/04-progress-bars.png)
 
-6. Visual Studio 2019 설치가 완료 되 면 클릭 합니다 **시작** 단추 Visual Studio를 시작 하려면:
+6. Visual Studio 2017 설치가 완료되면 **시작** 단추를 클릭하여 Visual Studio를 시작합니다.
 
     ![시작 단추의 위치](~/get-started/installation/windows-images/05-launch.png)
 
 <a name="vs2017" />
 
-### <a name="adding-xamarin-to-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 추가
+### <a name="adding-xamarin-to-visual-studio-2017"></a>Visual Studio 2017에 Xamarin 추가
 
-Visual Studio 2019가 이미 설치 되어 다시 작업을 수정 하려면 Visual Studio 2019 설치 관리자를 실행 하 여 Xamarin을 추가할 (참조 [Visual Studio 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 세부 정보에 대 한). 그런 다음, 위에 나열된 단계를 따라 Xamarin을 설치합니다.
+Visual Studio 2017이 이미 설치되어 있는 경우 Visual Studio 2017 설치 관리자를 다시 실행하여 워크로드를 수정함으로써 Xamarin을 추가합니다(자세한 내용은 [Visual Studio 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) 참조). 그런 다음, 위에 나열된 단계를 따라 Xamarin을 설치합니다.
 
-다운로드 하 고 Visual Studio 2019를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio 설치 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio)합니다.
+Visual Studio 2017을 다운로드하고 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)를 참조하세요.
