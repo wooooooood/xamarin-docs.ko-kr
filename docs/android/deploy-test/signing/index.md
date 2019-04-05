@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
+ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506995"
 ---
-
 # <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
 
 [릴리스용 앱 준비](~/android/deploy-test/release-prep/index.md)에서는 **보관 관리자**를 사용하여 앱을 빌드하고, 서명 및 게시를 위해 아카이브에 저장했습니다. 이 섹션에서는 Android 서명 ID를 만들고, Android 애플리케이션에 대한 새 서명 인증서를 만들고, 보관된 앱 *ad hoc*을 디스크에 게시하는 방법을 설명합니다. 앱 스토어를 통하지 않고 Android 디바이스에 생성된 APK를 사이드로드할 수 있습니다.

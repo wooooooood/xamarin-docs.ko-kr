@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 4b50d230be642466de68c54957a3fe9a79c1093b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670954"
 ---
-
 # <a name="publishing-an-application"></a>응용 프로그램 게시
 
 멋진 애플리케이션을 만들었다면 사람들이 이를 사용하고자 할 것입니다. 이 섹션에서는 Xamarin.Android로 만든 애플리케이션을 이메일, 개인 웹 서버, Google Play 또는 Amazon App Store for Android 등을 통해 공개 배포하는 단계를 설명합니다.

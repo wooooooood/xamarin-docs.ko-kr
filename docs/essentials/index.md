@@ -5,8 +5,13 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
+ms.openlocfilehash: 08f97263ccb5b4c91a541d06534e82aaaebbae1e
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175397"
 ---
-
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
 Xamarin.Essentials는 모바일 애플리케이션에 대한 플랫폼 간 API를 개발자에게 제공합니다.

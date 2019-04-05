@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668857"
 ---
-
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
 앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다. 

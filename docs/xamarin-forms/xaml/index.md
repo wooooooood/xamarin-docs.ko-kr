@@ -6,13 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2019
-ms.openlocfilehash: fa93cb86867cb8539fb7ce4db45ad4751bfe6e04
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.date: 04/03/2019
+ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854226"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019349"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
@@ -24,6 +24,10 @@ _XAML은 사용자 인터페이스를 정의하는 데 사용하는 선언적 �
 
 > [!NOTE]
 > [XAML Standard 미리 보기](standard/index.md) 사용해 보기
+
+## [<a name="xaml-controls"></a>XAML 컨트롤](xaml-controls.md)
+
+모든 Xamarin.Forms에 정의 된 뷰의 XAML 파일에서 참조할 수 있습니다.
 
 <a name="xaml" />
 
@@ -43,7 +47,7 @@ XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 �
 
 XAML에서 `xmlns`라는 XML 특성은 네임스페이스를 선언하는 데 사용합니다. 이 문서는 XAML 네임스페이스 구문을 소개하고 형식을 사용하기 위해 XAML 네임스페이스를 선언하는 방법을 보여줍니다.
 
-## [<a name="xaml-custom-namespace-schemas"></a>XAML Namespace 사용자 지정 스키마](custom-namespace-schemas.md)
+## [<a name="xaml-custom-namespace-schemas"></a>XAML 사용자 지정 네임스페이스 스키마](custom-namespace-schemas.md)
 
 XAML 네임 스페이스 사용자 지정 스키마를 정의할 수 있습니다는 `XmlnsDefinitionAttribute` 사용자 지정 URL 및 하나 이상의 CLR 네임 스페이스 간의 매핑을 지정 하는 클래스입니다. 사용자 지정 네임 스페이스 스키마 XAML 네임 스페이스 선언에서 사용할 수 있습니다.
 

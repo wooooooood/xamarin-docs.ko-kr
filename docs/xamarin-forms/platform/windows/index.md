@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
+ms.openlocfilehash: 9367e22ede733ee2d93feccc001836fb4dc02564
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507112"
 ---
-
 # <a name="windows-platform-features"></a>Windows 플랫폼 기능
 
 Windows 플랫폼용 Xamarin.Forms 응용 프로그램 개발에 Visual Studio가 필요 합니다. 합니다 [요구 사항 페이지](~/get-started/requirements.md) 필수 조건에 대 한 자세한 정보를 포함 합니다.

@@ -7,8 +7,13 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2019
+ms.openlocfilehash: b22449659d2d4b7791328d53ed2d2b29d405ffc8
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330041"
 ---
-
 # <a name="xamarinforms-collectionview"></a>Xamarin.Forms CollectionView
 
 ![미리 보기](~/media/shared/preview.png)

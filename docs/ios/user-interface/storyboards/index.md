@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
+ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071114"
 ---
-
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
 이 가이드의 어떤 스토리 보드 설명할 것 이며 – 고 Segues 같은 주요 구성 요소 중 일부를 검토 합니다. 스토리 보드 수 생성 및 사용 하는 방법을 살펴보겠습니다 있고 어떤 이점을 개발자.

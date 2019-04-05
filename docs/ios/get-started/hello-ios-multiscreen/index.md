@@ -1,6 +1,6 @@
 ---
-title: 'Hello, iOS 멀티스크린'
-description: '이 문서는 Phoneword 샘플 애플리케이션을 확장하여 두 번째 화면을 추가하는 연습으로 연결합니다. 연습은 모델-뷰-컨트롤러 디자인 패턴, iOS 탐색 및 기타 핵심 iOS 개발 개념을 탐색합니다.'
+title: Hello, iOS 멀티스크린
+description: 이 문서는 Phoneword 샘플 애플리케이션을 확장하여 두 번째 화면을 추가하는 연습으로 연결합니다. 연습은 모델-뷰-컨트롤러 디자인 패턴, iOS 탐색 및 기타 핵심 iOS 개발 개념을 탐색합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
@@ -8,6 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
+ms.openlocfilehash: 8545afc9957f263104afa69359847d2b187e2558
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669364"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS 멀티스크린
 

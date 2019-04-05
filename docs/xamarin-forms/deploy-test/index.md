@@ -1,14 +1,19 @@
 ---
 title: Xamarin.Forms 배포 및 테스트
-description: '이 가이드에서는 성능을 튜닝하고, Xamarin.UITest 및 AppCenter로 테스트를 자동화하여 Xamarin.Forms 애플리케이션을 안정화하는 방법을 검사합니다.'
+description: 이 가이드에서는 성능을 튜닝하고, Xamarin.UITest 및 AppCenter로 테스트를 자동화하여 Xamarin.Forms 애플리케이션을 안정화하는 방법을 검사합니다.
 ms.prod: xamarin
 ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
+ms.openlocfilehash: e290c52b2f6ed6a7fc194dea6a9155b57bea3d4b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669585"
 ---
-
 # <a name="xamarinforms-deployment-and-testing"></a>Xamarin.Forms 배포 및 테스트
 
 ## <a name="publishing-ios-appsiosdeploy-testapp-distributionindexmd"></a>[iOS 앱 게시](~/ios/deploy-test/app-distribution/index.md)

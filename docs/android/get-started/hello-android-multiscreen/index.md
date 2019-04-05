@@ -1,6 +1,6 @@
 ---
-title: 'Hello, Android 멀티스크린'
-description: '두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에서 만든 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 가이드에서는 이 과정에서 Android 애플리케이션 구조 및 기능을 더 이해하면 기본 Android 애플리케이션 구성 요소 및 Android 아키텍처에 대한 자세한 분석을 소개합니다.'
+title: Hello, Android 멀티스크린
+description: 두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에서 만든 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 가이드에서는 이 과정에서 Android 애플리케이션 구조 및 기능을 더 이해하면 기본 Android 애플리케이션 구성 요소 및 Android 아키텍처에 대한 자세한 분석을 소개합니다.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
+ms.openlocfilehash: c67d2be3d0bb1a159d234e815b16a988b93087d4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670894"
 ---
-
 # <a name="hello-android-multiscreen"></a>Hello, Android 멀티스크린
 
 _두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에서 만든 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 가이드에서는 이 과정에서 Android 애플리케이션 구조 및 기능을 더 이해하면 기본 Android 애플리케이션 구성 요소 및 Android 아키텍처에 대한 자세한 분석을 소개합니다._

@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
+ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58071072"
 ---
-
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
 애플리케이션을 코딩하고 테스트한 후에 배포할 패키지를 준비해야 합니다. 이 패키지를 준비하는 첫 번째 작업은 릴리스할 애플리케이션을 빌드하는 것입니다. 여기에는 주로 일부 애플리케이션 특성을 설정하는 작업이 포함됩니다.
