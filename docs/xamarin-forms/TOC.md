@@ -9,6 +9,7 @@
 ### [스타일 지정 빠른 시작](~/get-started/quickstarts/styling.md)
 ### [심층 분석](~/get-started/quickstarts/deepdive.md)
 ## [XAML](xaml/index.md)
+### [XAML 컨트롤](xaml/xaml-controls.md)
 ### [XAML 기본 사항](xaml/xaml-basics/index.md)
 #### [1부. XAML 시작](xaml/xaml-basics/get-started-with-xaml.md)
 #### [2부. 필수 XAML 구문](xaml/xaml-basics/essential-xaml-syntax.md)
