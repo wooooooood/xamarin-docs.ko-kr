@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 680fe2f8980d66b6dc80ec9a98898f9925df25f4
-ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
+ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
+ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59239903"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 스택 및 Android에 대 한 SSL/TLS 구현 선택기
 
@@ -25,22 +25,22 @@ HttpClient 스택 및 SSL/TLS 구현 선택기에는 Xamarin.Android 앱에 사�
 >
 > 앱이 이러한 서버 및 서비스를 사용 하 여 작업을 계속할 수 있도록 **Xamarin 프로젝트를 업데이트 해야 합니다 `Android HttpClient` 및 `Native TLS 1.2` 설정 아래에 표시 된 다음 다시 빌드하고 다시 배포 앱** 를 프로그램 사용자입니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Xamarin.Android HttpClient 구성이 **프로젝트 옵션 > Android 옵션**를 클릭 합니다 **고급 옵션** 단추입니다.
 
 이러한 TLS 1.2 지원에 대 한 권장 설정은 다음과 같습니다.
 
-[![Visual Studio Android 옵션](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
+[![Visual Studio Android Options](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 Xamarin.Android HttpClient 구성이 **프로젝트 옵션 > 빌드 > Android 빌드** 설정과 클릭 합니다 **일반** 탭 합니다.
 
 이러한 TLS 1.2 지원에 대 한 권장 설정은 다음과 같습니다.
 
-[![Android 옵션 Mac 용 visual Studio](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
+[![Visual Studio for Mac Android Options](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
 
 -----
 
@@ -58,7 +58,7 @@ AndroidClientHandler은 모든 관리 코드에서 구현 하는 대신 네이�
 
 #### <a name="cons"></a>단점
 
-- Android 5.0 이상이 필요합니다.
+- Android 4.1 이상 필요합니다.
 - 일부 HttpClient 기능/옵션이 제공 됩니다.
 
 ### <a name="managed-httpclienthandler"></a>관리 (HttpClientHandler)
@@ -82,11 +82,11 @@ AndroidClientHandler은 모든 관리 코드에서 구현 하는 대신 네이�
 간의 선택 `AndroidClientHandler` 고 `HttpClientHandler` 응용 프로그램의 필요에 따라 달라 집니다. `AndroidClientHandler` 것이 좋습니다는 최신 보안 지원에 대 한 예입니다.
 
 -   TLS 1.2 이상 지원 해야 합니다.
--   앱을 대상으로 Android 5.0 (API 21) 이상.
+-   앱을 대상으로 Android 4.1 (API 16) 이상.
 -   TLS 1.2 이상 해야 지원 `HttpClient`합니다.
 -   필요가 없는 TLS 1.2 이상에 대 한 지원 `WebClient`합니다.
 
-`HttpClientHandler` TLS 1.2 이상 필요한 경우 적합 한 선택은 지원 하지만 Android 5.0 이전 버전의 Android 지원 해야 합니다. 것도 적합 한 TLS 1.2 이상 필요한 경우에 대 한 지원 `WebClient`합니다.
+`HttpClientHandler` TLS 1.2 이상 필요한 경우 적합 한 선택은 지원 하지만 Android 4.1 이전 버전의 Android 지원 해야 합니다. 것도 적합 한 TLS 1.2 이상 필요한 경우에 대 한 지원 `WebClient`합니다.
 
 Xamarin.Android 8.3 부터는 `HttpClientHandler` Boring SSL 기본값으로 (`btls`) 기본 TLS 공급자입니다. Boring SSL TLS 공급자는 다음과 같은 이점을 제공합니다.
 
@@ -107,25 +107,25 @@ Xamarin.Android 8.3 부터는 기본 TLS 공급자는 Boring SSL (`btls`). 설�
 이 코드의 단일 인스턴스에 대해 명시적으로 하는 방법의 한 예로 `HttpClient` 클래스:
 
 ```csharp
-// Android 5.0 or higher, Xamarin.Android 6.1 or higher
+// Android 4.1 or higher, Xamarin.Android 6.1 or higher
 HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler ());
 ```
 
 > [!NOTE]
-> 기본 Android 장치가 TLS 1.2 (즉를 지원 해야 합니다. Android 5.0 이상)
+> 기본 Android 장치가 TLS 1.2 (즉를 지원 해야 합니다. Android 4.1 이상)
 
 
 ## <a name="ssltls-implementation-build-option"></a>SSL/TLS 구현 빌드 옵션
 
 이 프로젝트 옵션 제어 모든 웹 요청에서 사용할 기본 TLS 라이브러리 둘 다 `HttpClient` 고 `WebRequest`입니다. 기본적으로 TLS 1.2 선택 됩니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-[![Visual Studio에서 TLS/SSL 구현 콤보 상자](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
+[![TLS/SSL 구현 콤보 상자는 Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
-[![Mac 용 Visual Studio에서 TLS/SSL 구현 콤보 상자](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
+[![TLS/SSL 구현을 콤보 상자 Mac 용 Visual Studio](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 
@@ -169,11 +169,11 @@ Xamarin.Android에는 TLS 사용에 관련 된 두 개의 환경 변수는
 
 이 환경 변수를 추가 하 여 설정 된 _환경 파일_ 프로젝트에. 환경 파일 빌드 작업으로는 Unix 형식의 일반 텍스트 파일은 **AndroidEnvironment**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 ![Visual Studio에서 AndroidEnvironment 빌드 작업의 스크린샷.](http-stack-images/tls03-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 ![AndroidEnvironment 스크린샷 빌드 mac 용 Visual Studio에서 작업](http-stack-images/tls03-xs.png)
 
