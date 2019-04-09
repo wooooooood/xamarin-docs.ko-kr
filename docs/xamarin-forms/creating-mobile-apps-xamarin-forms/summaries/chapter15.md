@@ -1,22 +1,22 @@
 ---
 title: 요약 15 장입니다. 대화형 인터페이스
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 15 장 요약 합니다. 대화형 인터페이스'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 15 장입니다. 대화형 인터페이스
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6b519b15199373762965a8eeee6c9ae73f125cf3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060435"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870120"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>요약 15 장입니다. 대화형 인터페이스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 이 챕터에서는 8 `View` 파생형을 사용자와 상호 작용을 허용 합니다.
 
@@ -24,12 +24,12 @@ ms.locfileid: "53060435"
 
 파생 되는 20 인스턴스화할 수 있는 클래스를 포함 하는 Xamarin.Forms `View` 있지만 `Layout`합니다. 이러한 6 이전 챕터에서 설명 되었을:
 
-- `Label`: [ **2 장입니다. 앱 분석**](chapter02.md)
-- `BoxView`: [ **3 장입니다. 스택 스크롤**](chapter03.md)
-- `Button`: [ **6 장입니다. 단추 클릭**](chapter06.md)
-- `Image`: [ **13 장입니다. Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [ **13 장입니다. Bitmaps**](chapter13.md)
-- `ProgressBar`: [ **14 장입니다. AbsoluteLayout**](chapter14.md)
+- `Label`: [**2 장입니다. 앱 분석**](chapter02.md)
+- `BoxView`: [**3 장입니다. 스택 스크롤**](chapter03.md)
+- `Button`: [**6 장입니다. 단추 클릭**](chapter06.md)
+- `Image`: [**13 장입니다. Bitmaps**](chapter13.md)
+- `ActivityIndicator`: [**13 장입니다. Bitmaps**](chapter13.md)
+- `ProgressBar`: [**14 장입니다. AbsoluteLayout**](chapter14.md)
 
 이 챕터에 8 뷰는 기본.NET 데이터 유형과 상호 작용할 수를 효과적으로 허용:
 
@@ -44,12 +44,12 @@ ms.locfileid: "53060435"
 
 나머지 6 개의 뷰가 다음 챕터에서 적용 됩니다.
 
-- `WebView`: [ **16 장입니다. 데이터 바인딩**](chapter16.md)
-- `Picker`: [ **19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `ListView`: [ **19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `TableView`: [ **19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `Map`: [ **28 장입니다. 위치 및 지도**](chapter28.md)
-- `OpenGLView`:이 책 (및 Windows 플랫폼에 대 한 지원 되지 않습니다)에서 설명 하는 되지 않음
+- `WebView`: [**16 장입니다. 데이터 바인딩**](chapter16.md)
+- `Picker`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
+- `ListView`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
+- `TableView`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
+- `Map`: [**28 장입니다. 위치 및 지도**](chapter28.md)
+- `OpenGLView`: 이 책 (및 Windows 플랫폼에 대 한 지원 되지 않습니다)에 적용 되지 않습니다.
 
 ## <a name="slider-and-stepper"></a>슬라이더 및 스텝 퍼
 
@@ -65,8 +65,8 @@ ms.locfileid: "53060435"
 
 이러한 속성을 백업 하는 바인딩 가능한 속성 일치 하는지 확인 합니다.
 
-- 모든 세 가지 속성에는 [ `coerceValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+CoerceValueDelegate/) 되도록 바인딩 가능한 속성에 대해 지정 된 메서드 `Value` 사이 `Minimum` 및 `Maximum`합니다.
-- [ `validateValue` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty+ValidateValueDelegate/) 메서드를 `MinimumProperty` 반환 `false` 경우 `Minimum` 보다 크거나 같은 값으로 설정 되 `Maximum`, 및에 대 한 유사한 `MaximumProperty`합니다. 반환 `false` 에서 합니다 `validateValue` 메서드를 사용 하면은 `ArgumentException` 발생 합니다.
+- 모든 세 가지 속성에는 [ `coerceValue` ](xref:Xamarin.Forms.BindableProperty.CoerceValueDelegate) 되도록 바인딩 가능한 속성에 대해 지정 된 메서드 `Value` 사이 `Minimum` 및 `Maximum`합니다.
+- [ `validateValue` ](xref:Xamarin.Forms.BindableProperty.ValidateValueDelegate) 메서드를 `MinimumProperty` 반환 `false` 경우 `Minimum` 보다 크거나 같은 값으로 설정 되 `Maximum`, 및에 대 한 유사한 `MaximumProperty`합니다. 반환 `false` 에서 합니다 `validateValue` 메서드를 사용 하면은 `ArgumentException` 발생 합니다.
 
 `Slider` 발생 합니다 [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트를 [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) 인수 때를 `Value` 속성 변경 내용을 프로그래밍 방식으로 또는 경우에 사용자 조작를 `Slider`.
 
@@ -246,6 +246,6 @@ Xamarin.Forms는 사용자가 입력 하 고 텍스트를 편집할 수 있는 �
 - [15 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [15 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 - [슬라이더](~/xamarin-forms/user-interface/slider.md)
-- [항목](~/xamarin-forms/user-interface/text/entry.md)
+- [입력](~/xamarin-forms/user-interface/text/entry.md)
 - [편집기](~/xamarin-forms/user-interface/text/editor.md)
 - [DatePicker](~/xamarin-forms/user-interface/datepicker.md)
