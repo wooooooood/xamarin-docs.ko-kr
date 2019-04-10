@@ -6,16 +6,19 @@ ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: fdd602da932e0c36cadade50476babba51d67398
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855200"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
 
 ![미리 보기 기능](~/media/shared/preview.png)
+
+> [!NOTE]
+> 실시간 플레이어 미리 보기에만 Visual Studio 2017에서 제공 됩니다.
 
 휴대폰에서 앱을 설치한 후에 따라를 [설치 지침](~/tools/live-player/install.md) 컴퓨터에 연결 합니다. 중 하나를 시도 합니다 [샘플 앱](~/tools/live-player/samples.md) 작동 시켜야 합니다.
 
@@ -35,7 +38,7 @@ ms.locfileid: "50113172"
 
 정보 단추를 눌러 **(i)** 표시 하기 위해 앱의 맨 아래에는 **옵션** 메뉴:
 
-[![[옵션] 메뉴의 스크린샷](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![S[옵션] 메뉴의 creenshot](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>로그
 
@@ -47,13 +50,13 @@ ms.locfileid: "50113172"
 - 버전 정보입니다.
 - 피드백을 보냅니다.
 
-[![설정의 스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![S설정의 creenshot](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>장치 관리
 
 처음으로 장치를 연결할의 지침을 따릅니다 [요구 사항 및 설치](~/tools/live-player/install.md)합니다. 여러 장치를 연결 하 고 IDE를 통해 관리할 수 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 Visual studio에서 **도구 > Xamarin Live Player > 장치를 관리 하는 중...**
 
@@ -67,7 +70,7 @@ Visual studio에서 **도구 > Xamarin Live Player > 장치를 관리 하는 중
 
 또한 장치 목록에서이 창에 액세스할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual studio **도구 > 장치를 관리 하는 (Xamarin Live Player)...**
 
@@ -91,6 +94,5 @@ Mac 용 Visual studio **도구 > 장치를 관리 하는 (Xamarin Live Player)..
 
 ## <a name="related-links"></a>관련 링크
 
-- [제한 사항](~/tools/live-player/limitations.md)
 - [문제 해결](~/tools/live-player/troubleshooting.md)
-- [Xamarin Live Player 샘플](samples.md)
+- [Live Player를 사용 하는 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
