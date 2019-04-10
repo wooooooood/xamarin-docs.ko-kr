@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 06b95c40b12aa93b79f25c3adf12b74bda232267
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869671"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![D샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
-`VideoPlayer` 클래스는 비디오 파일의 원본을 지정하는 데 사용되는 `AutoPlay` 속성 및 `Source` 속성을 정의합니다. `AutoPlay`에는 `true`인 기본 설정 있습니다. 즉, `Source`를 설정한 후에 비디오는 자동으로 재생하기 시작해야 합니다.
+`VideoPlayer` 클래스는 비디오 파일의 원본을 지정하는 데 사용되는 `AutoPlay` 속성 및 `Source` 속성을 정의합니다. `AutoPlay` `true`의 기본 설정이 있습니다. 즉, `Source`를 설정한 후에 비디오는 자동으로 재생을 시작해야 합니다.
 
 ```csharp
 using System;
@@ -225,7 +225,7 @@ namespace FormsVideoLibrary.iOS
 
 나중에 `Source` 속성이 변경되는 경우 `OnElementPropertyChanged` 메서드는 "원본"의 `PropertyName` 속성에서 호출되고, `SetSource`가 다시 호출됩니다.
 
-iOS에서 비디오 파일을 재생하려면 [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) 형식의 개체를 먼저 만들어서 비디오 파일을 캡슐화하고 [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/)을 만드는 데 사용합니다. 그런 다음, `AVPlayer`개체로 넘겨집니다. `SetSource` 메서드가 `UriVideoSource` 형식의 `Source` 속성을 처리하는 방법은 다음과 같습니다.
+iOS에서 비디오 파일을 재생하려면 [`AVAsset`](xref:AVFoundation.AVAsset) 형식의 개체를 먼저 만들어서 비디오 파일을 캡슐화하고 [`AVPlayerItem`](xref:AVFoundation.AVPlayerItem)을 만드는 데 사용합니다. 그런 다음, `AVPlayer`개체로 넘겨집니다. `SetSource` 메서드가 `UriVideoSource` 형식의 `Source` 속성을 처리하는 방법은 다음과 같습니다.
 
 ```csharp
 namespace FormsVideoLibrary.iOS

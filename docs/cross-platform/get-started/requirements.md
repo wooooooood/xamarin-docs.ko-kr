@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667992"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854563"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -45,20 +45,20 @@ Xamarin 개발에 Mac 컴퓨터를 사용하려면 다음 소프트웨어/SDK �
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> 예정된 Xamarin.Mac 4.8 릴리스는 macOS 10.9 이상만 지원합니다.
+> Xamarin.Mac 4.8은 macOS 10.9() 이상만 지원합니다.
 > 이전 버전의 Xamarin.Mac은 macOS 10.7 이상을 지원했지만 이러한 이전 macOS 버전에는 TLS 1.2를 지원할 수 있는 TLS 인프라가 충분하지 않습니다. macOS 10.7 또는 macOS 10.8을 대상으로 하려면 Xamarin.Mac 4.6 또는 이전 버전을 사용하세요.
 
 ## <a name="windows-requirements"></a>Windows 요구 사항
 
 Xamarin 개발에 Windows 컴퓨터를 사용하려면 다음 소프트웨어/SDK 버전이 필요합니다.
 운영 체제 버전을 확인하세요. (그리고 Visual Studio의 *Express* 버전을 사용하고 있지 않은지 확인하세요. 그렇다면 *Community* 버전으로 업데이트하는 것이 좋습니다.)
-Visual Studio 2017 설치 관리자에는 Xamarin을 자동으로 설치하는 옵션이 포함되어 있습니다(**.NET을 사용한 모바일 개발**).
+Visual Studio 2019 및 Visual Studio 2017 설치 관리자에는 Xamarin을 자동으로 설치하는 옵션이 포함되어 있습니다(**.NET을 사용한 모바일 개발** 워크로드).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
-> - Visual Studio용 Xamarin은 모든 Visual Studio 2017(Community, Professional 및 Enterprise)을 지원합니다.
-> - UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱을 개발하려면 Visual Studio 2017이 설치된 Windows 10이 필요합니다.
+> - Visual Studio용 Xamarin은 Visual Studio 2019 또는 Visual Studio 2017(Community, Professional 및 Enterprise)을 지원합니다.
+> - UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱을 개발하려면 Visual Studio 2017이 설치된 Windows 10이 필요합니다. Visual Studio 2019를 사용하는 것이 좋습니다.
 
 ### <a name="testing--debugging-on-windows"></a>Windows에서 테스트 및 디버깅
 
@@ -68,7 +68,7 @@ Visual Studio 2017 설치 관리자에는 Xamarin을 자동으로 설치하는 �
 
 ## <a name="installation-instructions"></a>설치 지침
 
-macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/download)에서 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) 설치 지침을 따릅니다.
+macOS용 최신 Xamarin 릴리스는 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation)로 다운로드할 수 있습니다. Windows의 경우, [Visual Studio 설치 지침](https://docs.microsoft.com/visualstudio/install/install-visual-studio)을 따릅니다.
 
 현재 제품 버전의 전체 목록은 [현재 릴리스 페이지](https://developer.xamarin.com/releases/current/)에서 볼 수 있습니다. 또한 이 페이지에는 베타 및 알파 채널의 개별 제품 버전(및 릴리스 정보에 대한 링크)도 간략하게 나와 있습니다.
 
@@ -83,4 +83,6 @@ macOS용 최신 Xamarin 릴리스는 [xamarin.com/download](http://xamarin.com/d
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin 다운로드](https://visualstudio.microsoft.com/xamarin/)
-- [현재 릴리스](https://developer.xamarin.com/releases/current/)
+- [Xamarin.Forms 릴리스 정보](/xamarin/xamarin-forms/release-notes/)
+- [Xamarin.Android 릴리스 정보](/xamarin/android/release-notes/)
+- [Xamarin.iOS 릴리스 정보](/xamarin/ios/release-notes/)

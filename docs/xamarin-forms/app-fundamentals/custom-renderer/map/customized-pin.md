@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870302"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![D샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 보기가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
@@ -225,9 +225,9 @@ namespace CustomRenderer.iOS
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 [`MKMapView`](https://developer.xamarin.com/api/type/MapKit.MKMapView/) 인스턴스의 다음 구성을 수행합니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 [`MKMapView`](xref:MapKit.MKMapView) 인스턴스의 다음 구성을 수행합니다.
 
-- [`GetViewForAnnotation`](https://developer.xamarin.com/api/property/MapKit.MKMapView.GetViewForAnnotation/) 속성은 `GetViewForAnnotation` 메서드로 설정됩니다. 이 메서드는 [주석의 위치가 맵에 표시](#Displaying_the_Annotation)될 때 호출되고 표시 전에 주석을 사용자 지정하는 데 사용됩니다.
+- [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) 속성은 `GetViewForAnnotation` 메서드로 설정됩니다. 이 메서드는 [주석의 위치가 맵에 표시](#Displaying_the_Annotation)될 때 호출되고 표시 전에 주석을 사용자 지정하는 데 사용됩니다.
 - `CalloutAccessoryControlTapped`, `DidSelectAnnotationView` 및 `DidDeselectAnnotationView` 이벤트에 대한 이벤트 처리기가 등록됩니다. 이러한 이벤트는 사용자가 [설명선에 오른쪽 액세서리를 태핑](#Tapping_on_the_Right_Callout_Accessory_View)하고 사용자가 주석을 각각 [선택](#Selecting_the_Annotation) 및 [선택 취소](#Deselecting_the_Annotation)할 때 해제됩니다. 이벤트는 렌더러가 변경 내용에 연결된 요소에서만 등록이 취소됩니다.
 
 <a name="Displaying_the_Annotation" />
@@ -273,7 +273,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
 이 메서드를 사용하면 주석이 시스템 정의 핀이 아닌 사용자 지정이미지로 표시되도록 하고, 주석을 누르면 주석 제목과 주소의 왼쪽과 오른쪽에 추가 내용이 포함된 설명선이 표시됩니다. 이는 다음과 같이 수행됩니다.
 
 1. 주석에 대한 사용자 지정 핀 데이터를 반환하기 위해 `GetCustomPin` 메서드가 호출됩니다.
-1. 메모리를 절약하기 위해 주석의 보기는 [`DequeueReusableAnnotation`](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/)을 호출하여 다시 사용할 수 있도록 풀링됩니다.
+1. 메모리를 절약하기 위해 주석의 보기는 [`DequeueReusableAnnotation`](xref:MapKit.MKMapView.DequeueReusableAnnotation*)을 호출하여 다시 사용할 수 있도록 풀링됩니다.
 1. `CustomMKAnnotationView` 클래스는 `CustomPin` 인스턴스의 동일한 속성에 해당하는 `Id` 및 `Url` 속성으로 `MKAnnotationView` 클래스를 확장합니다. 주석이 `null`인 경우 `CustomMKAnnotationView`의 새 인스턴스가 생성됩니다.
     - `CustomMKAnnotationView.Image` 속성이 맵에서 주석을 나타내는 이미지로 설정됩니다.
     - `CustomMKAnnotationView.CalloutOffset` 속성은 설명선이 주석 위 중앙에 위치하도록 지정하는 `CGPoint`로 설정됩니다.
@@ -281,7 +281,7 @@ protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKA
     - `CustomMKAnnotationView.RightCalloutAccessoryView` 속성은 주석 제목 및 주소 오른쪽에 표시되는 *정보* 단추로 설정됩니다.
     - `CustomMKAnnotationView.Id` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Id` 속성으로 설정됩니다. 이렇게 하면 주석을 식별할 수 있으므로, 원하는 경우 [설명선을 추가로 사용자 지정할 수 있습니다](#Selecting_the_Annotation).
     - `CustomMKAnnotationView.Url` 속성은 `GetCustomPin` 메서드에서 반환된 `CustomPin.Url` 속성으로 설정됩니다. 사용자가 [오른쪽 설명선 액세서리 보기에 표시된 단추를 누를](#Tapping_on_the_Right_Callout_Accessory_View) 때 URL이 탐색됩니다.
-1. 주석을 누를 때 설명선이 표시되도록 [`MKAnnotationView.CanShowCallout`](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) 속성이 `true`로 설정됩니다.
+1. 주석을 누를 때 설명선이 표시되도록 [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) 속성이 `true`로 설정됩니다.
 1. 주석이 맵에 표시하기 위해 반환됩니다.
 
 <a name="Selecting_the_Annotation" />
@@ -661,6 +661,6 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [맵 컨트롤](~/xamarin-forms/user-interface/map.md)
-- [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
-- [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)
+- [iOS 맵](~/ios/user-interface/controls/ios-maps/index.md)
+- [맵 API](~/android/platform/maps-and-location/maps/maps-api.md)
 - [사용자 지정된 Pin(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)

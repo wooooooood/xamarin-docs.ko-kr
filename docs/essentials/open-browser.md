@@ -4,13 +4,14 @@ description: Xamarin.Essentials의 Browser 클래스를 사용하면 애플리�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4a822b4b6738e261b9ddaee02334ad629e1d4879
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175319"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869589"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
@@ -63,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 시작 모드는 브라우저 시작 방법을 결정합니다.
 
@@ -75,17 +76,17 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 `Intent`를 사용하여 시스템 일반 브라우저에서 URI를 열도록 요청합니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>시스템 기본 설정
 
-[SFSafariViewController](https://developer.xamarin.com/api/type/SafariServices.SFSafariViewController/)를 사용하여 URI를 로드하고 탐색 인식을 유지합니다.
+[SFSafariViewController](xref:SafariServices.SFSafariViewController)를 사용하여 URI를 로드하고 탐색 인식을 유지합니다.
 
 ## <a name="external"></a>외부
 
 기본 애플리케이션의 표준 `OpenUrl`를 사용하여 애플리케이션 외부에서 기본 브라우저를 시작합니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 `BrowserLaunchMode`와 관계없이 항상 사용자의 기본 브라우저가 시작됩니다.
 
@@ -93,5 +94,12 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="api"></a>API
 
-- [Browser 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
-- [Browser API 문서](xref:Xamarin.Essentials.Browser)
+- [브라우저 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Browser)
+- [브라우저 API 설명서](xref:Xamarin.Essentials.Browser)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Open-Browser-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

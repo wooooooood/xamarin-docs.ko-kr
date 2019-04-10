@@ -4,17 +4,18 @@ description: Xamarin.Essentials의 가속도계 클래스를 사용하면 3차�
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: f443cc094c7d7be6ec782df27332bafe5d51dda3
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 04/02/2019
+ms.custom: video
+ms.openlocfilehash: f22563aeaeb7bec2f87ca7892005f2cfb1c4e84b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898799"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870380"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: 가속도계
 
-**Accelerometer** 클래스를 사용하면 3차원 공간에서 장치의 가속을 나타내는 장치의 가속도계 센서를 모니터링할 수 있습니다.
+**Accelerometer** 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -77,7 +78,7 @@ public class AccelerometerTest
 
 X축은 가로이고 오른쪽을 가리키며, Y축은 세로이고 위를 가리키며, Z축은 화면 앞의 바깥쪽을 가리킵니다. 이 시스템에서 화면 뒤에 있는 좌표는 음수 Z 값입니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 - 디바이스가 테이블 위에 눕혀 있고 왼쪽을 오른쪽 방향으로 푸시한 경우 x 가속 값은 양수입니다.
 
@@ -91,3 +92,10 @@ X축은 가로이고 오른쪽을 가리키며, Y축은 세로이고 위를 가�
 
 - [가속도계 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
 - [가속도계 API 설명서](xref:Xamarin.Essentials.Accelerometer)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Accelerometer-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
+

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 02e0484a417b5d42129fa4e7a6ab9576c1817d74
-ms.sourcegitcommit: 8e8f83da636b63d14d1305c43a99736a00b9f590
+ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55969595"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855317"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – 연습
 
@@ -23,7 +23,7 @@ Xamarin.Mac을 사용하면 *Objective-C* 또는 *Swift*에서 개발할 때 사
 
 이 문서에서는 단추 클릭 횟수를 계산하는 간단한 **Hello, Mac** 앱을 빌드하는 프로세스를 살펴보면서 Xamarin.Mac, Mac용 Visual Studio 및 Xcode의 Interface Builder를 사용하여 Mac 앱을 만드는 데 필요한 핵심 개념을 소개합니다.
 
-[![](hello-mac-images/run02-sml.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "실행 중인 Hello, Mac 앱의 예제")](hello-mac-images/run02.png#lightbox)
 
 다음 개념을 다룹니다.
 
@@ -77,7 +77,7 @@ Mac용 visual Studio가 새 Xamarin.Mac 앱을 만들고 앱의 솔루션에 추
 
 [![](hello-mac-images/project01-sml.png "새 솔루션 기본 보기")](hello-mac-images/project01.png#lightbox)
 
-Mac용 Visual Studio는 Visual Studio 2017과 동일한 **솔루션** 및 **프로젝트** 구조를 사용합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 애플리케이션, 지원 라이브러리, 테스트 애플리케이션 등을 포함할 수 있습니다. **파일 &gt; 새 프로젝트** 템플릿은 솔루션 및 애플리케이션 프로젝트를 자동으로 만듭니다.
+Mac용 Visual Studio는 Visual Studio 2019와 동일한 **솔루션** 및 **프로젝트** 구조를 사용합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 애플리케이션, 지원 라이브러리, 테스트 애플리케이션 등을 포함할 수 있습니다. **파일 &gt; 새 프로젝트** 템플릿은 솔루션 및 애플리케이션 프로젝트를 자동으로 만듭니다.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Xamarin.Mac 애플리케이션 분석
 

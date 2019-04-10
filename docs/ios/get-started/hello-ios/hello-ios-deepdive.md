@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669468"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751256"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -310,7 +310,7 @@ public partial class ViewController : UIViewController
 
 뷰 컨트롤러의 가장 중요한 역할은 단추 누르기, 탐색 등과 같은 사용자 상호 작용에 응답하는 것입니다. 사용자 상호 작용을 처리하는 가장 간단한 방법은 사용자 입력을 수신 대기하도록 컨트롤을 연결하고 입력에 응답하도록 이벤트 처리기를 연결하는 것입니다. 예를 들어 Phoneword 앱에 설명되어 있듯이 터치 이벤트에 응답하도록 단추를 연결할 수 있습니다.
 
-뷰 및 뷰 컨트롤러에 대해 자세히 알아보았습니다. 이제 작동 원리를 살펴보겠습니다.
+이 과정을 살펴보겠습니다.
 `Phoneword_iOS` 프로젝트에서 콘텐츠 뷰 계층 구조에 `TranslateButton`이라고 하는 단추가 추가되었습니다.
 
 [![](hello-ios-deepdive-images/image1.png "콘텐츠 보기 계층 구조에 TranslateButton이라는 단추가 추가되었습니다.")](hello-ios-deepdive-images/image1.png#lightbox)

@@ -1,24 +1,24 @@
 ---
 title: Xamarin.iOS에서 기능 사용
-description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다.
+description: 애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855031"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
-_응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 모든 기능에 필요한 설정을 설명합니다._
 
-Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 디바이스 서비스 등과 같은 플랫폼 기능을 응용 프로그램에 더 깊이 통합할 수 있습니다.
+Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 장치 서비스 등과 같은 플랫폼 기능을 애플리케이션에 더 깊이 통합할 수 있습니다.
 이러한 기능은 Xamarin.iOS 프로젝트에 사용할 수 있습니다. 전체 서비스 목록은 아래에 설명되어 있습니다.
 
 * 앱 그룹
@@ -44,14 +44,13 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 * 다중 경로
 * NFC 태그 읽기
 
+기능은 Mac용 Visual Studio 및 Visual Studio 2019를 통해 사용하도록 설정하거나 Apple Developer Portal에서 수동으로 사용하도록 설정할 수 있습니다. Wallet, Apple Pay 및 iCloud와 같은 특정 기능을 사용하려면 앱 ID를 추가로 구성해야 합니다.
 
-기능은 Mac용 Visual Studio 및 Visual Studio 2017을 통해 사용하도록 설정하거나 Apple Developer Portal에서 수동으로 사용하도록 설정할 수 있습니다. Wallet, Apple Pay 및 iCloud와 같은 특정 기능을 사용하려면 앱 ID를 추가로 구성해야 합니다.
-
-이 가이드에서는 Visual Studio의 응용 프로그램에서 각 App Services를 수동으로 사용하도록 설정하는 방법과 개발자 센터를 통해 수동으로 설정하는 방법 및 필요한 추가 설정을 설명합니다. 
+이 가이드에서는 Visual Studio의 애플리케이션에서 각 App Services를 수동으로 사용하도록 설정하는 방법과 개발자 센터를 통해 수동으로 설정하는 방법 및 필요한 추가 설정을 설명합니다. 
 
 ## <a name="adding-app-services"></a>App Services 추가
 
-기능을 사용하려면 앱에 올바른 서비스가 활성화되어 있고 앱 ID가 포함된 유효한 프로비전 프로필이 있어야 합니다. 프로비전 프로필은 Mac용 Visual Studio 및 Visual Studio 2017에서 자동으로 만들거나 Apple Developer Center에서 수동으로 만들 수 있습니다.
+기능을 사용하려면 앱에 올바른 서비스가 활성화되어 있고 앱 ID가 포함된 유효한 프로비전 프로필이 있어야 합니다. 프로비전 프로필은 Mac용 Visual Studio 및 Visual Studio 2019에서 자동으로 만들거나 Apple Developer Center에서 수동으로 만들 수 있습니다.
 
 이 섹션에서는 Visual Studio의 자동 프로비전 또는 개발자 센터를 사용하여 대부분의 기능을 사용하도록 설정하는 방법에 대해 설명합니다. Wallet, iCloud, Apple Pay 및 앱 그룹과 같은 일부 기능은 추가 설정이 필요합니다. 이 내용은 인접한 가이드에 자세히 설명되어 있습니다.
 
@@ -73,11 +72,11 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 
-1. iOS 응용 프로그램의 **Info.plist** 파일을 열고, 콤보 상자에서 **자동 프로비저닝** 구성표 및 **팀**을 선택합니다. 도움이 필요하면 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) 가이드의 단계를 수행합니다.
+1. iOS 애플리케이션의 **Info.plist** 파일을 열고, 콤보 상자에서 **자동 프로비저닝** 구성표 및 **팀**을 선택합니다. 도움이 필요하면 [자동 프로비저닝](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) 가이드의 단계를 수행합니다.
 
     ![자동으로 서명 관리 옵션](images/manage-signing.png)
 
@@ -93,11 +92,11 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
     ![entitlements.plist 파일에 기능 추가](images/image18.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-기능은 **Entitlements.plist**에 추가됩니다. Visual Studio 2017에서 기능을 추가하려면 다음 단계를 사용합니다.
+기능은 **Entitlements.plist**에 추가됩니다. Visual Studio 2019에서 기능을 추가하려면 다음 단계를 사용합니다.
 
-1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2017을 페어링합니다.
+1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2019를 페어링합니다.
 
 2. **프로젝트 > 속성 프로비전...** 을 선택하여 프로비전 옵션을 엽니다.
 
@@ -142,7 +141,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
     ![App Services 선택 페이지](images/image8.png)
 
 7.  **계속**을 누릅니다.
-8.  앱 ID를 확인합니다. 각 서비스의 상태는 다음 그림과 같이 **사용**, **사용 안 함** 또는 **구성 가능** 중 하나입니다. **사용**이면 프로비전 프로필에 사용할 준비가 된 상태입니다. **구성 가능**이면 해당 기능에 대해 추가 설정이 필요합니다. 추가 단계는 뒷부분에 나오는 섹션에 자세히 설명되어 있습니다.
+8.  앱 ID를 확인합니다. 각 서비스는 다음 상태 중 하나에 있습니다. 아래 그림과 같이 **사용**, **사용 안 함** 또는 **구성 가능**. **사용**이면 프로비전 프로필에 사용할 준비가 된 상태입니다. **구성 가능**이면 해당 기능에 대해 추가 설정이 필요합니다. 추가 단계는 뒷부분에 나오는 섹션에 자세히 설명되어 있습니다.
 
     ![앱 ID 확인](images/image9.png)
 

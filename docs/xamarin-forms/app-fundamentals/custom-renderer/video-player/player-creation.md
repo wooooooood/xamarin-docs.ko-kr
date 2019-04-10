@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2679756cd9a9a60c2d7ab637678ff1d8262b2403
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870016"
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![D샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 솔루션에는 Xamarin.Forms에서 비디오 플레이어를 구현하는 모든 코드를 포함합니다. 또한 애플리케이션 내에서 비디오 플레이어를 사용하는 방법에 설명하는 일련의 페이지가 포함됩니다. 모든 `VideoPlayer` 코드 및 해당 플랫폼 렌더러는 `FormsVideoLibrary`라는 프로젝트 폴더에 위치하며, `FormsVideoLibrary` 네임스페이스를 사용합니다. 그러면 고유한 애플리케이션에 쉽게 파일을 복사하고 클래스를 참조할 수 있습니다.
 
@@ -43,7 +43,7 @@ namespace FormsVideoLibrary
 
 ### <a name="the-ios-player-view-controller"></a>iOS 플레이어 보기 컨트롤러
 
-iOS에서 비디오 플레이어를 구현하는 경우 여러 클래스가 포함됩니다. 애플리케이션은 먼저 [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/)를 만든 다음, [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) 속성을 [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/) 형식의 개체로 설정합니다. 플레이어가 비디오 원본에 할당되는 경우 추가 클래스가 필요합니다.
+iOS에서 비디오 플레이어를 구현하는 경우 여러 클래스가 포함됩니다. 애플리케이션은 먼저 [`AVPlayerViewController`](xref:AVKit.AVPlayerViewController)를 만든 다음, [`Player`](xref:AVKit.AVPlayerViewController.Player*) 속성을 [`AVPlayer`](xref:AVFoundation.AVPlayer) 형식의 개체로 설정합니다. 플레이어가 비디오 원본에 할당되는 경우 추가 클래스가 필요합니다.
 
 모든 렌더러처럼 iOS [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs)에는 렌더러를 사용하여 `VideoPlayer` 보기를 식별하는 `ExportRenderer` 특성이 포함됩니다.
 
@@ -318,7 +318,7 @@ namespace FormsVideoLibrary
 
 ### <a name="ios-playback-controls"></a>iOS 재생 컨트롤
 
-전송 컨트롤의 재생을 관리하는 iOS `AVPlayerViewController`의 속성은 [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/)입니다. iOS `VideoViewRenderer`에서 해당 속성을 설정하는 방법은 다음과 같습니다.
+전송 컨트롤의 재생을 관리하는 iOS `AVPlayerViewController`의 속성은 [`ShowsPlaybackControls`](xref:AVKit.AVPlayerViewController.ShowsPlaybackControls*)입니다. iOS `VideoViewRenderer`에서 해당 속성을 설정하는 방법은 다음과 같습니다.
 
 ```csharp
 namespace FormsVideoLibrary.iOS

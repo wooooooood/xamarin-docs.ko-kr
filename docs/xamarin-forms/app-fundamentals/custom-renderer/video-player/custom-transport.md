@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e687a724c8455d954969f83b8ee48c87ca9dbb09
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870159"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![D샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 비디오 플레이어의 전송 컨트롤에는 **재생**, **일시 중지**, **중지** 기능을 수행하는 단추가 포함됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생**과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
 
@@ -360,7 +360,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-`AVPlayer`의 두 가지 속성인 `AVPlayerStatus` 형식의 [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) 속성과 `AVPlayerTimeControlStatus` 형식의 [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) 속성에 액세스해야 합니다. `Status` 속성을 설정하려면 `Element` 속성(`VideoPlayer`임)을 `IVideoPlayerController`로 캐스팅해야 합니다.
+`AVPlayer`의 두 가지 속성인 `AVPlayerStatus` 형식의 [`Status`](xref:AVFoundation.AVPlayer.Status*) 속성과 `AVPlayerTimeControlStatus` 형식의 [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) 속성에 액세스해야 합니다. `Status` 속성을 설정하려면 `Element` 속성(`VideoPlayer`임)을 `IVideoPlayerController`로 캐스팅해야 합니다.
 
 ### <a name="the-android-status-setting"></a>Android 상태 설정
 

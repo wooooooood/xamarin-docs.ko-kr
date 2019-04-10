@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672666"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855239"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기 소개
 
@@ -151,7 +151,7 @@ Android는 이 정보를 사용하여 Android OS 내에서 실행되는 애플�
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="uwp"></a>UWP 
+#### <a name="uwp"></a>UWP
 
 UWP 애플리케이션은 Microsoft Store를 통해 사용자에게 배포됩니다. 개발자가 앱을 제출하여 승인을 받으면 해당 앱이 스토어에 표시됩니다. Windows 앱 게시에 대한 자세한 내용은 UWP의 [게시](https://docs.microsoft.com/windows/uwp/publish/) 설명서를 참조하세요.
 
@@ -233,7 +233,7 @@ Android OS의 애플리케이션은 모두 제한된 권한을 사용하여 별�
 
 #### <a name="multitasking"></a>멀티태스킹
 
-UWP의 멀티태스킹은 페이지 및 애플리케이션에 대한 수명 주기와 백그라운드 프로세스라는 두 부분으로 구성됩니다. 애플리케이션의 각 화면은 활성 또는 비활성(비활성 상태를 처리하거나 “삭제 표시”하는 특수 규칙이 있음)과 관련된 이벤트가 있는 Page 클래스의 인스턴스입니다. 
+UWP의 멀티태스킹은 페이지 및 애플리케이션에 대한 수명 주기와 백그라운드 프로세스라는 두 부분으로 구성됩니다. 애플리케이션의 각 화면은 활성 또는 비활성(비활성 상태를 처리하거나 “삭제 표시”하는 특수 규칙이 있음)과 관련된 이벤트가 있는 Page 클래스의 인스턴스입니다.
 
 두 번째 부분은 애플리케이션이 포그라운드에서 실행되지 않는 경우에도 작업 처리를 위한 백그라운드 에이전트를 제공합니다. 
 
@@ -249,9 +249,8 @@ UWP의 중요한 보안 고려 사항에 대한 자세한 내용은 [보안](htt
 
 이 가이드에서는 모바일 개발과 관련하여 SDLC에 대한 소개를 제공했습니다. 모바일 애플리케이션 빌드에 대한 일반적인 고려 사항을 소개하고 설계, 테스트 및 배포를 비롯한 다양한 플랫폼별 고려 사항도 살펴보았습니다.
 
-## <a name="related-links"></a>관련 링크
+## <a name="next-steps"></a>다음 단계
 
 - [모바일 개발 소개](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [애플리케이션 기본 사항](~/cross-platform/app-fundamentals/index.md)
+- [Xamarin 시작](~/get-started/index.yml)
+- [플랫폼 간 코드 공유](~/cross-platform/app-fundamentals/index.md)

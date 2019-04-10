@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: babfc85de645b285812421d453d51d5be6dceb1c
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831939"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855161"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -67,7 +67,7 @@ Apple에 앱을 제출할 때 앱 스토어 아이콘이 들어 있는 자산 �
 
 Apple이 IOS 앱을 앱 스토어에서 사용할 수 있도록 하려면, 앱이 실행되는 모든 iOS 디바이스에 대해 적절한 아이콘 및 시작 화면이 있어야 합니다. 앱 아이콘 및 시작 화면을 설정하는 방법에 대한 자세한 내용은 다음 가이드를 읽어보세요.
 
-- [Xamarin.iOS 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
+- [Xamarin.iOS의 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Xamarin.iOS 앱에 대한 시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 ## <a name="create-and-install-an-app-store-provisioning-profile"></a>앱 스토어 프로비전 프로필 생성 및 설치
@@ -90,7 +90,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 새 Xamarin.iOS 프로젝트는 자동으로 **디버그** 및 **릴리스**_빌드 구성_을 설정합니다. **릴리스** 빌드를 올바르게 구성하려면, 다음 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 1. **Solution Pad**에서 **Info.plist**를 엽니다. **수동 프로비저닝**을 선택합니다. 파일을 저장한 후 닫습니다.
 2. **Solution Pad**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택한 후, **iOS 빌드** 탭으로 이동합니다.
@@ -120,9 +120,9 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 15. **OK**를 클릭하여 변경 내용을 프로젝트 속성에 저장합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
-1. Visual Studio 2017이 [Mac 빌드 호스트와 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
+1. Visual Studio 2019 또는 Visual Studio 2017이 [Mac 빌드 호스트에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
 2. **솔루션 탐색기**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 3. **iOS 빌드** 탭으로 이동하고 **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
@@ -172,7 +172,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 빌드 설정을 올바르게 구성하고 iTunes Connect가 제출 대기 중인 경우, 이제 앱을 빌드하고 Apple에 제출할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
 
 1. Mac용 Visual Studio에서 빌드 구성 및 빌드할 디바이스(시뮬레이터는 해당사항 없음) **릴리스**를 선택합니다.
 
@@ -231,12 +231,12 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
     >
     > 이 오류의 해결 방법은 [Xamarin 포럼의 이 게시물](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)을 참조합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Visual Studio 2017은 현재 mac용 Visual Studio에서 찾은 워크플로 **게시를 위해 보관**을 지원하지 않습니다.
 
-1. Visual Studio 2017이 [Mac 빌드 호스트와 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
+1. Visual Studio 2019 또는 Visual Studio 2017이 [Mac 빌드 호스트에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
 2. Visual Studio 2017 **솔루션 구성** 드롭다운에서 **릴리스**를 선택하고 **솔루션 플랫폼**에서 **iPhone**을 선택합니다.
 
     ![빌드 구성 및 플랫폼 선택](publishing-to-the-app-store-images/chooseConfig-w157.png "빌드 구성 및 플랫폼 선택")
@@ -246,8 +246,8 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
     > [!NOTE]
     > 이 문서의[릴리스 빌드 구성 업데이트](#update-the-release-build-configuration) 섹션에서는 각각의 **릴리스** 빌드에 대한.ipa 파일을 만들기 위한 앱의 빌드 설정을 구성했습니다.
 
-4. Windows 컴퓨터에서 .ipa 파일을 찾으려면 Visual Studio 2017 **솔루션 탐색기**에서 Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 선택합니다. 그런 다음, 방금 연 Windows **파일 탐색기**에서 **bin/iPhone/Release** 하위 디렉터리로 이동합니다. [사용자 지정한 .ipa 파일 출력 위치](#customize-the-ipa-location)가 없다면, 이 디렉터리에 있어야 합니다.
-5. 대신 Mac 빌드 호스트에서 .ipa 파일을 보려면 Visual Studio 2017 **솔루션 탐색기**(Windows에서) Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고  **빌드 서버에 IPA 파일 표시**를 선택합니다. 이렇게 하면 .ipa 파일이 선택된 Mac 빌드 호스트에서 **Finder** 창이 열립니다.
+4. Windows 머신에서 .ipa 파일을 찾으려면 Visual Studio 2019 또는 Visual Studio 2017 **솔루션 탐색기**에서 Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 선택합니다. 그런 다음, 방금 연 Windows **파일 탐색기**에서 **bin/iPhone/Release** 하위 디렉터리로 이동합니다. [사용자 지정한 .ipa 파일 출력 위치](#customize-the-ipa-location)가 없다면, 이 디렉터리에 있어야 합니다.
+5. 대신 Mac 빌드 호스트에서 .ipa 파일을 보려면 Visual Studio 2019 또는 Visual Studio 2017 **솔루션 탐색기**(Windows에서) Xamarin.iOS 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고  **빌드 서버에 IPA 파일 표시**를 선택합니다. 이렇게 하면 .ipa 파일이 선택된 Mac 빌드 호스트에서 **Finder** 창이 열립니다.
 6. Mac 빌드 호스트에서 **애플리케이션 로더**를 엽니다. Xcode에서 **Xcode &gt; 개발자 도구 열기 &gt; 애플리케이션 로더**를 선택합니다.
 
     > [!NOTE]
@@ -352,6 +352,6 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 - [Xamarin.iOS에서 기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md)
 - [Xamarin.iOS에서 자격 사용](~/ios/deploy-test/provisioning/entitlements.md)
 - [iTunes Connect에서 앱 구성](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
-- [Xamarin.iOS 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
+- [Xamarin.iOS의 애플리케이션 아이콘](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Xamarin.iOS 앱에 대한 시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 - [애플리케이션 로더 설명서(Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)

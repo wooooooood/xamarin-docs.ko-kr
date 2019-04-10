@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 0062c5da4db206a9fe4dc0030a104ec034ab97f1
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 296284b7f9a8eac26817e76a97bf35b03d591532
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197162"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855330"
 ---
 # <a name="introduction-to-mobile-development"></a>모바일 개발 소개
 
@@ -38,14 +38,10 @@ Xamarin은 네이티브 플랫폼의 모든 기능을 결합하고 다음과 같
 1.   **현대적인 IDE(통합 개발 환경)** - Xamarin은 Mac OS X에서 Mac용 Visual Studio를 사용하고 Windows에서 Visual Studio를 사용합니다. 코드 자동 완성, 정교한 프로젝트 및 솔루션 관리 시스템, 포괄적인 프로젝트 템플릿 라이브러리, 통합 소스 제어 및 기타 여러 기능을 포함하는 현대적인 IDE입니다.
 1.   **모바일 플랫폼 간 지원** - Xamarin은 iOS, Android 및 Windows Phone의 세 가지 주요 모바일 플랫폼에 대해 정교한 플랫폼 간 지원을 제공합니다. 애플리케이션은 코드의 최대 90%를 공유하도록 작성할 수 있으며 Xamarin.Mobile 라이브러리는 세 가지 모든 플랫폼 간에 공통의 리소스에 액세스할 수있는 통합 API를 제공합니다. 이를 통해 가장 널리 사용되는 세 가지 모바일 플랫폼을 대상으로 하는 모바일 개발자의 개발 비용과 출시 시간을 크게 줄일 수 있습니다.
 
-
 Xamarin의 강력하고 포괄적인 기능 집합으로 인해, 플랫폼 간 모바일 애플리케이션을 개발하기 위해 현대적인 언어 및 플랫폼을 사용하려는 애플리케이션 개발자에게 도움이 됩니다.
-
 
 > [!NOTE]
 > 이 시작 시리즈에서는 iOS 및 Android 애플리케이션 빌드를 시작하는 데 중점을 둡니다. Microsoft는 태블릿 및 데스크톱용 [UWP(유니버설 Windows 플랫폼) 개발](https://docs.microsoft.com/windows/uwp/develop/)에 대한 정보를 제공합니다. Xamarin(Windows용 UWP 앱 포함)을 사용한 플랫폼 간 개발에 대한 자세한 내용은 [플랫폼 간 애플리케이션 빌드 가이드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)를 읽어 보세요.
-
-
 
 ## <a name="how-does-xamarin-work"></a>Xamarin 작동 방식
 
@@ -54,8 +50,6 @@ Xamarin은 Xamarin.iOS 및 Xamarin.Android라는 두 가지 상업용 제품을 
 iOS, Xamarin의 *AOT*(*Ahead-of-Time*) 컴파일러는 Xamarin.iOS 애플리케이션을 네이티브 ARM 어셈블리 코드로 직접 컴파일합니다. Android에서는 Xamarin의 컴파일러가 *IL*(*중간 언어*)로 컴파일한 후 애플리케이션이 시작될 때 네이티브 어셈블리로 *JIT*(*Just in Time*) 컴파일됩니다.
 
 두 경우 모두, Xamarin 애플리케이션은 메모리 할당, 가비지 수집, 기본 플랫폼 상호 운용 등을 자동으로 처리하는 런타임을 활용합니다.
-
-
 
 ### <a name="xamariniosdll-and-monoandroiddll"></a>Xamarin.iOS.dll 및 Mono.Android.dll
 
@@ -69,27 +63,10 @@ BCL 외에도, 이러한 .dll에는 C#에서 기본 SDK API를 직접 호출할 
 
 Xamarin 애플리케이션이 컴파일되면 결과는 애플리케이션 패키지(iOS에서는 .app 파일, Android에서는 .apk 파일)로 생성됩니다. 이러한 파일은 플랫폼의 기본 IDE로 작성된 애플리케이션 패키지와 구별할 수 없으며 동일한 방식으로 배포할 수 있습니다.
 
-## <a name="getting-started"></a>시작
+## <a name="next-steps"></a>다음 단계
 
-지금까지 Xamarin의 작동 방식에 대해 간단히 알아보았으며 이제 시작해 보겠습니다.
+이제 Xamarin의 작동 방식에 대해 조금 배웠습니다. 다음 단계는 다음 가이드 중 하나를 사용하여 앱을 빌드하는 것입니다.
 
-다음 단계는 다음 지침 중 하나를 사용하여 앱을 빌드하는 것입니다.
-
-* [**Hello, iOS**](~/ios/get-started/hello-ios/index.md)
-
-![](introduction-to-mobile-development-images/ios.png "Hello, iOS")
-
-* [**Hello, Android**](~/android/get-started/hello-android/index.md)
-
-![](introduction-to-mobile-development-images/android.png "Hello, Android")
-
-* [**Xamarin.Forms 시작**](~/get-started/index.yml)
-
-## <a name="summary"></a>요약
-
-이 문서에서는 단순히 Xamarin 플랫폼을 소개했습니다. 진정한 재미는 첫 번째 앱을 가동 및 실행시킬 때부터 시작됩니다. 시작하려면 [Hello, iOS](~/ios/get-started/hello-ios/index.md), [Hello, Android](~/android/get-started/hello-android/index.md) 및 [Xamarin.Forms 시작](~/get-started/index.yml) 가이드를 확인해 보세요.
-
-## <a name="related-links"></a>관련 링크
-
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](~/android/get-started/hello-android/index.md)
+- [**Xamarin.Forms 시작**](~/get-started/index.yml)
+- [**Xamarin.iOS 시작**](~/ios/get-started/hello-ios/index.md)
+- [**Xamarin.Android 시작**](~/android/get-started/hello-android/index.md)
