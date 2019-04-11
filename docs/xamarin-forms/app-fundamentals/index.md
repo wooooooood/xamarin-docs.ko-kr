@@ -30,7 +30,7 @@ Xamarin.Forms로 액세스 가능한 기능(예: 화면 판독 도구 지원)을
 
 ## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[애플리케이션 인덱싱 및 딥 링크 설정](deep-linking.md)
 
-애플리케이션 인덱싱은 검색 결과에 나타나서 관련성을 유지하기 위해 몇 번 사용한 후에 잊혀질 애플리케이션을 허용합니다. 딥 링크 설정은 애플리케이션이 애플리케이션 데이터를 포함하는 검색 결과에 응답할 수 있도록 하며, 일반적으로 딥 링크에서 참조하는 페이지로 이동하면 됩니다.
+애플리케이션 인덱싱은 애플리케이션에서 검색 결과에 표시되어 몇 번 사용 후 잊혀질 정보가 관련성을 유지하도록 허용합니다. 딥 링크 설정은 애플리케이션이 애플리케이션 데이터를 포함하는 검색 결과에 응답할 수 있도록 하며, 일반적으로 딥 링크에서 참조하는 페이지로 이동하면 됩니다.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[동작](behaviors/index.md)
 
@@ -38,7 +38,7 @@ Xamarin.Forms로 액세스 가능한 기능(예: 화면 판독 도구 지원)을
 
 ## <a name="custom-rendererscustom-rendererindexmd"></a>[사용자 지정 렌더러](custom-renderer/index.md)
 
-사용자 지정 렌더러를 사용하면 개발자가 Xamarin.Forms 컨트롤의 기본 렌더링을 ‘재정의’하여 각 플랫폼의 모양과 동작을 사용자 지정할 수 있습니다(필요한 경우 네이티브 SDK 사용).
+사용자 지정 렌더러를 사용하면 개발자가 Xamarin.Forms 컨트롤의 기본 렌더링을 ‘재정의(override)’하여 각 플랫폼의 모양과 동작을 사용자 지정할 수 있습니다(필요한 경우 네이티브 SDK 사용).
 
 ## <a name="data-bindingdata-bindingindexmd"></a>[데이터 바인딩](data-binding/index.md)
 
@@ -62,7 +62,7 @@ Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래
 
 ## <a name="localizationlocalizationindexmd"></a>[지역화](localization/index.md)
 
-기본 제공되는 .NET 지역화 프레임워크는 Xamarin.Forms로 플랫폼 간 다국어 애플리케이션을 빌드하는 데 사용할 수 있습니다.
+기본 제공되는 .NET 지역화 프레임워크는 Xamarin.Forms로 플랫폼 간 다국어 애플리케이션을 작성하는 데 사용할 수 있습니다.
 
 ## <a name="local-databasesdatabasesmd"></a>[로컬 데이터베이스](databases.md)
 
@@ -70,7 +70,7 @@ Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베�
 
 ## <a name="messaging-centermessaging-centermd"></a>[메시징 센터](messaging-center.md)
 
-Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 기타 구성 요소가 간단한 메시지 계약 외에 서로에 대해 알 필요 없이 통신이 가능합니다.
+Xamarin.Forms `MessagingCenter`를 사용하면 뷰 모델 및 기타 구성 요소가 서로에 대해 알 필요 없이 간단한 메시지 계약으로 통신이 가능합니다.
 
 ## <a name="navigationnavigationindexmd"></a>[탐색](navigation/index.md)
 
@@ -82,7 +82,7 @@ Xamarin.Forms Shell은 애플리케이션의 컨테이너로, 대부분의 애�
 
 ## <a name="templatestemplatesindexmd"></a>[템플릿](templates/index.md)
 
-컨트롤 템플릿은 런타임에 애플리케이션 페이지에 쉽게 테마를 지정하고 다시 지정할 수 있는 기능을 제공하며 데이터 템플릿은 지원되는 컨트롤의 데이터 표현을 정의할 수 있는 기능을 제공합니다.
+컨트롤 템플릿은 런타임에 애플리케이션 페이지에 쉽게 테마를 지정하고 다시 지정할 수 있는 기능을 제공하며, 데이터 템플릿은 지원되는 컨트롤의 데이터 표현을 정의할 수 있는 기능을 제공합니다.
 
 ## <a name="triggerstriggersmd"></a>[트리거](triggers.md)
 
