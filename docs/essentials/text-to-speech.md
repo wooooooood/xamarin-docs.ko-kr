@@ -1,20 +1,20 @@
 ---
 title: 'Xamarin.Essentials: 텍스트 음성 변환'
-description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 디바이스에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
+description: Xamarin.Essentials의 TextToSpeech 클래스를 사용하면 애플리케이션이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: a7f40fc652c6f02d68a9f01dcdd0f4132893a6ca
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 35ef922553cb91aa915c08df03414d1e5f3034cb
+ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59239929"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: 텍스트 음성 변환
 
-**TextToSpeech** 클래스를 사용하면 응용 프로그램이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
+**TextToSpeech** 클래스를 사용하면 애플리케이션이 기본 제공 텍스트 음성 변환 엔진을 이용하여 장치에서 텍스트를 말하고, 엔진이 지원할 수 있는 사용 가능한 언어를 쿼리할 수도 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -102,8 +102,8 @@ public async Task SpeakNow()
 {
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0
+            Volume = .75f,
+            Pitch = 1.0f
         };
 
     await TextToSpeech.SpeakAsync("Hello World", settings);
@@ -131,8 +131,8 @@ public async Task SpeakNow()
 
     var settings = new SpeechOptions()
         {
-            Volume = .75,
-            Pitch = 1.0,
+            Volume = .75f,
+            Pitch = 1.0f,
             Locale = locale
         };
 
