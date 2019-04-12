@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2fa40925b67e60c5e03e3059c7c369f2a53ce540
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672432"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509955"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin 사용한 게임 개발 소개
 
@@ -24,11 +24,9 @@ ms.locfileid: "57672432"
 - **게임 아이디어를 만드는** -이 섹션에서는 도움이 될 수 있습니다 새 게임 아이디어 – 새 게임을 만드는 첫 번째 단계입니다.
 - **게임 개발 기술을** – 여기에서는 게임 개발자 생산성을 향상 시킬 수 있는 사용 가능한 플랫폼 간 기술을의 일부를 나열 합니다.
 
-
 ## <a name="game-vs-non-game-programming-concepts"></a>게임 및 게임 내 프로그래밍 개념
 
 게임 개발으로 이동 하는 프로그래머는 새로운 개념 및 개발 패턴을 사용 하 여 상책 경우가 많습니다. 이 섹션에서는 이러한 개념 중 일부는 상위 수준 보기를 제공 합니다.
-
 
 ### <a name="the-game-loop"></a>게임 루프
 
@@ -53,7 +51,6 @@ ms.locfileid: "57672432"
 
 많은 게임 내 앱에서 발생 하는 이벤트에 대 한 응답 상태 변경 데 비해 전체 응용 프로그램의 상태를 변경할 수는 위에 나열 된 활동 중 상당수는 염두에서에 둡니다.
 
-
 ### <a name="content-loading-and-unloading"></a>콘텐츠 로드 및 언로드
 
 수동으로 로드 및 언로드 (또는 삭제) 콘텐츠 개발에서 사용 하는 기술에 따라 필요할 수 있습니다. 수동으로 로드 / 언로드 자산에 대 한 여러 가지 이유로 필요할 수 있습니다.
@@ -63,7 +60,6 @@ ms.locfileid: "57672432"
  - 게임을 RAM에 들어가는 개수 보다 자세한 자산을 표시 해야 합니다. "World open" 게임에는 플레이어를 원활 하 게 탐색할 수 없는 로드 화면입니다 – 대규모 환경의 포함 되는 많습니다. 이 경우에 스트리밍 콘텐츠에 대 한 사용자 지정 시스템을 만들고 관리 메모리 사용 해야 합니다.
 
 사용자 지정 파일 형식을 사용자 지정 로딩 코드를 요구 하는 로드 시간에 처리를 해야 합니다.
-
 
 ### <a name="math"></a>수식
 
@@ -77,17 +73,13 @@ ms.locfileid: "57672432"
 > 일부 엔진/a p i에 있는 개체의 Y 값을 늘리면이 아래로 이동, 양의 Y 중인지 좌표계를 사용 하는 다른 시스템 좌표 시스템을 사용 합니다. 시스템 간에 이동 하는 경우이 점에 염두 해야 합니다.
 삼각 함수 (예: 사인 및 코사인) 회전의 모든 형태를 구현 하는 2D 게임에서 자주 사용 됩니다.
 
-
-
 3D 게임을 만들면 하려는 경우 (에 대 한 가속을 구현 하는) 일부 계산법 뿐만 아니라 선형 대 수 (및에 대 한 회전 3D 공간에서 이동)의 개념을 잘 알고 수 해야 수 있습니다.
-
 
 ### <a name="content-pipelines"></a>콘텐츠 파이프라인
 
 용어 *콘텐츠 파이프라인* 최종 형식으로 게임에서 사용 하는 경우 (예:.png 이미지 파일)을 작성할 때 해당 형식에서 가져올 파일을 사용 하는 프로세스를 말합니다. 끝 형식은 콘텐츠 유형에 사용 되는 되는 뿐만 아니라 기술 되는 콘텐츠를 제공 하 달라 집니다.
 
 몇 가지 콘텐츠 파이프라인 매우 빠 및 수동 작업 없이 필요한 수 있습니다. 예를 들어, 대부분의 게임 엔진 및 Api는.png 파일 형식의 처리 되지 않은 형식으로 로드할 수 있습니다. 다른 한편으로 더 복잡 한 형식 (예: 3D 모델)을 로드 하기 전에 다른 형식으로 처리 해야 할 수 있습니다 하 고이 처리 자산의 크기 및 복잡성에 따라 다소 시간이 걸릴 수 있습니다.
-
 
 ## <a name="game-development-teams"></a>게임 개발 팀
 
@@ -98,7 +90,6 @@ ms.locfileid: "57672432"
 - **3D 아티스트** – 3D 아티스트를 만들 책임이 *3D 자산*합니다. 여기에 환경, 문자 및 props (가구, 시설 및 다른 inanimate 개체)에 대 한 3D 모델 포함 됩니다. 일부 팀은 3D 아티스트, 3D 애니메이터 팀의 크기에 따라 구분 합니다. 무료 있습니다에서 게임에 대 한 3D 아트 [ http://opengameart.org/ ](http://opengameart.org/) 합니다.
 - **디자이너 게임** – 게임 디자이너는 게임을 실행 하는 방법을 정의 하는 일을 담당 합니다. 이 게임, 게임 및 플레이어 게임 진행 하는 방법의 전반적인 목표를 설정 하는 등 높은 수준의 의사 결정을 포함할 수 있습니다. 이동 또는 ups 수준에 대 한 계수를 정의 하 고 수준 레이아웃 디자인 게임 디자이너 작업에 매핑 입력과 같은 매우 자세한 의사 결정에 참여할 수도 있습니다. 에 유의 용어 *디자이너* 게임 디자이너 또는 컨텍스트에 따라 비주얼 디자이너를 참조할 수 있습니다.
 - **디자이너 사운드** – 사운드 디자이너는 게임의 오디오 자산을 담당 합니다. 일부 팀은 소규모 팀에는 모든 오디오에 대 한 책임을 단일 사용자가 있을 수 음향 효과 작곡가 생성을 담당 하는 개인 구분할 수도 있습니다.
-
 
 ## <a name="creating-a-game-idea"></a>게임 아이디어를 만들기
 
@@ -114,11 +105,9 @@ ms.locfileid: "57672432"
 
 기존 게임을 다시 만드는 또한는 교육 있지만 완성 된 제품의 상업적 가능성 제한 됩니다. 하나라도 정확 하 게 복제 되는 게임을 만드는 과정 유용한 교육 환경을 제공 합니다.
 
-
 ## <a name="game-development-technology"></a>게임 개발 기술
 
 Xamarin.iOS 및 Xamarin.Android를 사용 하는 개발자가 다양 한 게임 개발에 도움이 되 게 제공 되는 기술입니다. 이 섹션에서는 가장 인기 있는 플랫폼 간 솔루션의 일부를 설명 합니다.
-
 
 ### <a name="cocossharp"></a>CocosSharp
 
@@ -133,7 +122,6 @@ CocosSharp 사용을 시작 하려면 체크 아웃 우리의 [CocosSharp 가이
 ![](images/image3.png "게임 화난 Ninjas CocosSharp를 사용 하 여 만든")
 
 다운로드 하 고 자세한 정보를 받을 수는 [AngryNinjas Github 페이지](https://github.com/xamarin/AngryNinjas)합니다.
-
 
 ### <a name="monogame"></a>MonoGame
 
@@ -154,7 +142,6 @@ FEZ:
 ![](images/image8.jpg "Bastion")
 
 MonoGame을 사용 하 여 작업을 시작 하려면로 이동 하세요 [MonoGame 가이드](~/graphics-games/monogame/index.md)합니다.
-
 
 ### <a name="urhosharp"></a>UrhoSharp
 

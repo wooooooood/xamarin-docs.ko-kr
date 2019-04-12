@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: 35c5811d57ade1d320e56e292c1eeed094963a0d
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.openlocfilehash: 44e45d38ecd98be6f75c619125f9c14ce707b251
+ms.sourcegitcommit: 9e9340999d569a3db01b4b59a0fcf24b8caa869c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070919"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509890"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin 사용 하 여 연속 통합 소개
 
@@ -40,9 +40,13 @@ CI (지속적인 통합)를 지속적으로 공용 코드 베이스에 모든 �
 
 [![](intro-to-ci-images/intro02-small.png "이러한 테스트는 App Center에 업로드 되 면 CI 서버를 실행할 수 자동으로 CI 프로세스의 일부로이 다이어그램에 표시 된 대로")](intro-to-ci-images/intro02.png#lightbox)
 
-## <a name="version-control"></a>버전 제어
+## <a name="components-of-continuous-integration"></a>연속 통합 구성 요소
 
-### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps 및 Team Foundation Server
+CI 지원 하도록 설계 하는 상용 및 오픈 소스 도구의 광범위 한 에코 시스템을 있습니다. 이 섹션의 가장 일반적인 몇 가지를 설명합니다.
+
+### <a name="version-control"></a>버전 제어
+
+#### <a name="azure-devops-and-team-foundation-server"></a>Azure DevOps 및 Team Foundation Server
 
 [Azure DevOps](https://azure.microsoft.com/services/devops/) 하 고 [Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS)는 Microsoft의 지속적인 통합에 대 한 공동 작업 도구 빌드 서비스, 작업 추적, agile 계획 및 보고 도구 및 버전 제어 합니다. 버전 제어를 사용 하 여 Azure DevOps 및 TFS (Team Foundation 버전 제어 또는 TFVC) 자체 시스템을 사용 하 여 또는 GitHub에서 호스트 되는 프로젝트를 사용 하 여 작업할 수 있습니다.
 
@@ -55,11 +59,11 @@ TFS와 Azure DevOps Visual Studio와 긴밀히 통합 되어 있고 개발자가
 
 Visual Studio, Azure DevOps 및 Team Foundation Server 참조의 모든 응용 프로그램 수명 주기 관리 (ALM) 기능의 전체 요약은 [Xamarin 앱을 사용 하 여 DevOps](https://docs.microsoft.com/visualstudio/cross-platform/application-lifecycle-management-alm-with-xamarin-apps)합니다.
 
-### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
+#### <a name="team-explorer-everywhere"></a>Team Explorer Everywhere
 
 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) Visual Studio 외부에서 개발 팀에 Team Foundation Server 및 Visual Studio Team Services의 기능을 제공 합니다. 개발자가 OS X 및 Linux 용 Eclipse 또는 크로스 플랫폼 명령줄 클라이언트에서 온-프레미스 또는 클라우드의 팀 프로젝트에 연결할 수 있습니다. 전체를 제공 하는 Team Explorer Everywhere 작업 항목, 버전 제어 (Git 포함)에 액세스 하 고 Windows가 아닌 플랫폼용 기능을 빌드합니다.
 
-### <a name="git"></a>Git
+#### <a name="git"></a>Git
 
 [Git](http://git-scm.com) 는 Linux 커널에 대 한 소스 코드를 관리 하려면 원래 개발한 인기 있는 오픈 소스 버전 제어 솔루션입니다. 이 모든 규모의 소프트웨어 프로젝트를 사용 하 여 널리 사용 되는 매우 빠르고 유연한 시스템입니다. 쉽게을 전 세계에 걸쳐 있는 대규모 팀으로 저하 인터넷 액세스를 사용 하 여 단일 개발자의 조정 합니다. Git 분기에서 위험을 최소화 하는 개발의 병렬 스트림으로 권장할 수 있는 매우 쉽게 하기도 합니다.
 
@@ -67,11 +71,11 @@ Git 또는 웹 브라우저를 통해 완전히 작동할 수 있습니다 [GUI 
 
 현재 버전의 Visual Studio에 대 한 Windows 및 Mac에 Git에 대 한 기본 지원을 제공합니다. Microsoft에서 제공 된 [Git에 대 한 다운로드 가능한 확장](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) 이전 버전의 Visual Studio에 대 한 합니다. 위에서 설명한 대로 Visual Studio Team Services 및 TFS TFVC 대신 버전 제어에 Git을 사용할 수 있습니다.
 
-### <a name="subversion"></a>Subversion
+#### <a name="subversion"></a>Subversion
 
 [Subversion](http://subversion.apache.org) (SVN)는 2000 년 이후로 사용 된 인기 있는 오픈 소스 버전 제어 시스템입니다. SVN 모든 최신 버전의 OS X, Windows, FreeBSD, Linux 및 Unix에서 실행 됩니다. Mac 용 visual Studio는 네이티브 SVN 지원 합니다. Visual Studio에 SVN 지원을 제공 하는 제 3 자 확장이 있습니다.
 
-## <a name="continuous-integration-environments"></a>연속 통합 환경
+### <a name="continuous-integration-environments"></a>연속 통합 환경
 
 연속 통합 환경 설정의 버전 제어 시스템을 빌드 서비스로 결합을 의미 합니다.  후자의 경우 두 가지 가장 일반적인 것 같습니다.
 
@@ -80,7 +84,7 @@ Git 또는 웹 브라우저를 통해 완전히 작동할 수 있습니다 [GUI 
 
 TFS/Azure DevOps를 사용 하 여 자체적으로 또는 다음 섹션에 설명 된 대로 TFS/Azure DevOps 또는 Git와 함께에서 Jenkins를 사용할 수 있습니다.
 
-### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services 및 Team Foundation Server
+#### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services 및 Team Foundation Server
 
 Visual Studio Team Services 및 Team Foundation Server 버전 모두 제공에 설명한 대로 제어 하 고 서비스를 구축 합니다. 빌드 서비스는 항상 각 대상 플랫폼에 대 한 Xamarin Business 또는 Enterprise 라이선스를 요구합니다.
 
@@ -97,13 +101,13 @@ Team Foundation Server를 사용 하 여 다음과 같은 특정 대상 플랫�
 
 로컬 서버에 위임 하 여 Azure DevOps 빌드 프로젝트를 Visual Studio Team Services를 로컬 TFS 서버에 연결할 수 이기도 합니다. 자세한 내용은 참조 하세요 [에이전트 빌드 및 릴리스](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/)합니다.
 
-### <a name="visual-studio-team-services-and-jenkins"></a>Visual Studio Team Services 및 Jenkins
+#### <a name="visual-studio-team-services-and-jenkins"></a>Visual Studio Team Services 및 Jenkins
 
 앱을 빌드하도록 Jenkins를 사용 하는 경우 Visual Studio Team Services 또는 Team Foundation Server에서 코드를 저장할 수 있으며 계속 Jenkins CI 빌드에 사용할 수 있습니다. 팀 프로젝트의 Git 리포지토리 또는 tfvc 코드를 확인 하는 경우 코드를 푸시할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 참조 하세요 [Azure DevOps를 사용 하 여 Jenkins](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins)합니다.
 
 [![](intro-to-ci-images/intro04-small.png "Visual Studio Team Services 또는 Team Foundation Server에서 코드를 저장할 수 있으며 계속 Jenkins CI 빌드에 사용할 앱을 빌드하도록 Jenkins를 사용 하는 경우")](intro-to-ci-images/intro04.png#lightbox)
 
-### <a name="git-and-jenkins"></a>Git 및 Jenkins
+#### <a name="git-and-jenkins"></a>Git 및 Jenkins
 
 다른 일반적인 CI 환경을 완전히 OS X 기반 수 있습니다. 이 시나리오에서는 빌드 서버에 대 한 소스 코드 제어 및 Jenkins에 대 한 Git을 사용 합니다. 설치 하는 Mac 용 Visual Studio를 사용 하 여 단일 Mac OS X 컴퓨터에서 실행 중인 둘 다. Visual Studio Team Services + 이전 섹션에서 설명 하는 Jenkins 환경을 매우 비슷합니다.
 
