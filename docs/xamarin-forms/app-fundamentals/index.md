@@ -66,7 +66,7 @@ Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래
 
 ## <a name="local-databasesdatabasesmd"></a>[로컬 데이터베이스](databases.md)
 
-Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다.
+Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 읽고 저장할 수 있습니다.
 
 ## <a name="messaging-centermessaging-centermd"></a>[메시징 센터](messaging-center.md)
 
