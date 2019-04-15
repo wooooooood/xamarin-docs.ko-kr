@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116799"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574821"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>파일 저장소 및 Xamarin.Android 사용 하 여 액세스
 
@@ -66,15 +66,14 @@ ms.locfileid: "50116799"
 
 | System.Environment.SpecialFolder | Path  |
 |----------------------|---|
-| `ApplicationData` | **_내부\_저장소_/.config** |
-| `Desktop` | **_내부\_저장소_  /데스크톱** |
-| `LocalApplicationData` | **_내부\_저장소_/.local/share** |
-| `MyComputer` | **_내부\_저장소_/.local/share** |
-| `MyDocuments` | **_내부\_저장소_** |
-| `MyMusic` | **_내부\_저장소_/Music** |
-| `MyPictures` | **_내부\_저장소_/Music** |
-| `MyVideos` | **_내부\_저장소_/Videos** |
-| `Personal` | **_내부\_저장소_** |
+| `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
+| `Desktop` | **_INTERNAL\_STORAGE_/Desktop** |
+| `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
+| `MyDocuments` | **_INTERNAL\_STORAGE_** |
+| `MyMusic` | **_INTERNAL\_STORAGE_/Music** |
+| `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
+| `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
+| `Personal` | **_INTERNAL\_STORAGE_** |
 
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>읽기 또는 쓰기를 내부 저장소의 파일
@@ -145,7 +144,7 @@ var cacheFile = Path.Combine(Xamarin.Essentials.FileSystem.CacheDirectory, "coun
 
 ## <a name="related-links"></a>관련 링크
 
-* [외부 저장소](~/android/platform/files/external-storage.md)
+* [외부 스토리지](~/android/platform/files/external-storage.md)
 * [장치 저장소에 파일을 저장](https://developer.android.com/training/data-storage/files)
 * [Xamarin.Essentials 파일 시스템 도우미](~/essentials/file-system-helpers.md?context=xamarin/android)
 * [자동 백업을 사용 하 여 백업 사용자 데이터](https://developer.android.com/guide/topics/data/autobackup)
