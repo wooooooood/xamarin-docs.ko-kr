@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0f747c37362997563a35d9b94f8e677d4104ee1
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110136"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587766"
 ---
 # <a name="android-resource-basics"></a>Android 리소스 기본 사항
 
@@ -96,8 +96,8 @@ public partial class Resource
 
 프로그래밍 방식으로 코드에서 리소스를 참조 하는 경우 다음 구문을 사용 하는 리소스 클래스 계층 구조를 통해 액세스할 수 있습니다.
 
-```xml
-@[<PackageName>.]Resource.<ResourceType>.<ResourceName>
+```csharp
+[<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
 -  **PackageName** &ndash; 패키지 리소스를 제공 하 고만 필요한 경우 다른 패키지에서 리소스를 사용 하 합니다.
@@ -112,7 +112,7 @@ public partial class Resource
 수행 하 여 XML 파일에 리소스에 액세스 하는 특수 구문을:
 
 ```xml
-@[<PackageName>:]<ResourceType>/<ResourceName>.
+@[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
 -  **PackageName** &ndash; 패키지 리소스를 제공 하 고만 필요한 경우 다른 패키지에서 리소스를 사용 하 합니다.
@@ -136,8 +136,7 @@ public partial class Resource
 </LinearLayout>
 ```
 
-이 예제에는 [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) 라는 드로어 블 리소스를 필요한 **플래그**합니다. 합니다 `ImageView` 에 해당 `src` 특성이로 설정 **@drawable/flag**합니다. 작업이 시작 되 면 Android 디렉터리 안에 보입니다 **리소스/Drawable** 라는 파일에 대 한 **flag.png** (파일 확장명 수 다른 이미지 형식을 같은 **flag.jpg**) 및 해당 파일을 로드 하 여 표시 된 `ImageView`합니다.
+이 예제에는 [ `ImageView` ](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/imageview) 라는 드로어 블 리소스를 필요한 **플래그**합니다. 합니다 `ImageView` 에 해당 `src` 특성이로 설정 `@drawable/flag`합니다. 작업이 시작 되 면 Android 디렉터리 안에 보입니다 **리소스/Drawable** 라는 파일에 대 한 **flag.png** (파일 확장명 수 다른 이미지 형식을 같은 **flag.jpg**) 및 해당 파일을 로드 하 여 표시 된 `ImageView`합니다.
 이 응용 프로그램을 실행 하는 경우 다음 이미지와 같이 표시 됩니다.
 
 ![지역화 된 ImageView](android-resource-basics-images/03-localized-screenshot.png)
-
