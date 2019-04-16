@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 5c3daf04c08e2109c46b24c198fef8e71fac2f3d
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/16/2019
 ms.locfileid: "58854992"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에서 데이터를 저장 합니다.
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 
 이 빠른 시작에서는 배웁니다 방법:
 
@@ -455,5 +455,5 @@ XAML 스타일을 사용 하 여 응용 프로그램의 스타일, 다음 빠른
 
 ## <a name="related-links"></a>관련 링크
 
-- [메모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
 - [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)
