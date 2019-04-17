@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 12066b25ff3e5f02cf4ad17e7c8cbfdb31395405
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 7c7a3e311a6c5f19242b51dd14f59bcdc9a75c64
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854888"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574717"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Windows에 Xamarin.iOS 설치
 
@@ -32,6 +32,11 @@ Windows에서 Visual Studio 2019를 사용하여 Xamarin.iOS 애플리케이션�
 - Apple의 빌드 도구와 Xamarin.iOS로 설정되어 네트워크에 액세스할 수 있는 Mac. Visual Studio 2019는 네트워크 연결을 통해 이 머신에 액세스하여 네이티브 iOS 애플리케이션을 컴파일하는 데 필요한 Apple의 빌드 도구를 사용합니다.
 
   - [Mac 시스템 요구 사항](~/cross-platform/get-started/requirements.md#macos-requirements)
+
+  > [!TIP]
+  > Mac에 액세스할 수 없으십니까?
+  >
+  > Mac에 액세스할 수 없는 경우 [MacinCloud](https://www.macincloud.com/pages/visual-studio-mac.html) 또는 [MacStadium](https://www.macstadium.com/)을 사용할 수 있습니다. 두 서비스 모두에서는 Xamarin.iOS 프로젝트를 빌드하는 데 사용할 수 있는 클라우드 기반 Mac 하드웨어를 제공합니다.
 
 ## <a name="setup"></a>설정
 

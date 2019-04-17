@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 6af392988b8ffa5f01ef07f81be53ea8f82e8fb5
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
+ms.openlocfilehash: 6b1df62aec12c1c34d49bd6dfa16368a6b0092f9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477332"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574730"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -24,7 +24,7 @@ _Xamarin.Forms에는 메시지를 보내거나 받을 수 있는 간단한 메�
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 다른 구성 요소에서 간단한 메시지 계약 외에도 서로에 대해 인식할 필요 없이 통신할 수 있습니다.
+Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 기타 구성 요소가 서로에 대해 알 필요 없이 간단한 메시지 계약으로 통신이 가능합니다.
 
 <a name="How_the_MessagingCenter_Works" />
 
