@@ -9,16 +9,16 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2019
-ms.openlocfilehash: 0031cb7fb46cf5ad35872963fd3c3def0a2ae9a6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
+ms.sourcegitcommit: 34819671c7910d29f018bdb394ddd4a4b0cd3a31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58855304"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675818"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
-_Xamarin.Forms를 사용 하 여 첫 번째 모바일 앱을 만드는 과정을 따르려면 한이 비디오를 보고 합니다._
+_이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 만듭니다._
 
 ::: zone pivot="windows"
 
@@ -26,25 +26,25 @@ _Xamarin.Forms를 사용 하 여 첫 번째 모바일 앱을 만드는 과정을
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
 1. 선택 **파일 > 새로 만들기 > 프로젝트...**  누르거나는 **새 프로젝트 만들기...**  단추:
 
-    [![C새 프로젝트를 reate](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [![새 프로젝트 만들기](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. "Xamarin"를 검색 하거나 선택 **Mobile** 에서 합니다 **프로젝트 형식을** 메뉴. 선택 된 **모바일 앱 (Xamarin.Forms)** 프로젝트 형식:
 
-    [![FXamarin 프로젝트에 대 한 ilter](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [![Xamarin 프로젝트에 대 한 필터](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
 3. 프로젝트 이름을 선택 &ndash; 이 예제에서는 "AwesomeApp"를 사용 합니다.
 
-    [![C프로젝트 이름 설치할](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [![프로젝트 이름을 선택 합니다.](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
-4. 클릭 합니다 **검정** 프로젝트 형식 및 확인 **Android** 및 **iOS** 선택:
+4. 클릭 합니다 **빈** 프로젝트 형식 및 확인 **Android** 및 **iOS** 선택:
 
-    [![Android 및.NET Standard를 사용 하 여 iOS](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
+    [![.NET Standard가 포함된 Android 및 iOS](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
 
 5. NuGet 패키지가 복원될 때까지 기다립니다(상태 표시줄에 "복원 완료" 메시지가 표시됨).
 
@@ -81,17 +81,17 @@ _Xamarin.Forms를 사용 하 여 첫 번째 모바일 앱을 만드는 과정을
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
 1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > Cross-Platform > 모바일 앱(Xamarin.Forms)** 를 선택합니다.
 
-    [![Mobile 앱 (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
+    [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
 2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
-    [![Android 및.NET Standard를 사용 하 여 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
+    [![.NET Standard가 포함된 Android 및 iOS](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. NuGet 패키지가 복원될 때까지 기다립니다(상태 표시줄에 "복원 완료" 메시지가 표시됨).
 
@@ -128,17 +128,17 @@ _Xamarin.Forms를 사용 하 여 첫 번째 모바일 앱을 만드는 과정을
 
 ## <a name="step-by-step-instructions-for-mac"></a>Mac용 단계별 지침
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
 1. **파일 > 새 솔루션...** 을 선택하거나 **새 프로젝트...** 단추를 누른 다음, **멀티 플랫폼 > 앱 > 빈 Forms 앱**을 선택합니다.
 
-    [![Blank Forms 앱](images/01-sml.png)](images/01.png#lightbox)
+    [![빈 Forms 앱](images/01-sml.png)](images/01.png#lightbox)
 
-2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
-    [![Android 및.NET Standard를 사용 하 여 iOS](images/02-sml.png)](images/02.png#lightbox)
+    [![.NET Standard가 포함된 Android 및 iOS](images/02-sml.png)](images/02.png#lightbox)
 
 3. 솔루션을 마우스 오른쪽 단추로 클릭하여 NuGet 패키지를 복원합니다.
 
@@ -169,7 +169,7 @@ _Xamarin.Forms를 사용 하 여 첫 번째 모바일 앱을 만드는 과정을
 
 8. 마우스 오른쪽 단추를 클릭하여 iOS를 **시작 프로젝트**로 설정합니다.
 
-    [![S예: iOS 시작 프로젝트](images/08-sml.png)](images/08.png#lightbox)
+    [![시작 프로젝트를 iOS로 설정](images/08-sml.png)](images/08.png#lightbox)
 
 9. iOS에서 앱을 디버그합니다.
 

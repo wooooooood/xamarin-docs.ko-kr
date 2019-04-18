@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: ef3ec5f8d1a2ded8fc7cae34663f10ab6eb7c86f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
+ms.sourcegitcommit: 34819671c7910d29f018bdb394ddd4a4b0cd3a31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052973"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675870"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -34,7 +34,7 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
-* 테마 구현 (예: Nuget Xamarin.Forms.Themes.Light)
+* 테마 구현 (예: Nuget Xamarin.Forms.Theme.Light)
 
 ## <a name="2-add-theme-reference"></a>2. 테마 참조를 추가 합니다.
 
@@ -51,7 +51,7 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 </Application>
 ```
 
-**중요:** 단계를 따라야 [테마 어셈블리 (아래)를 로드할](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
+**중요:** 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
