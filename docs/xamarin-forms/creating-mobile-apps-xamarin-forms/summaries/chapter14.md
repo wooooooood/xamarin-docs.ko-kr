@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870237"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 14 장입니다. 절대 레이아웃
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 와 같은 `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) 에서 파생 `Layout<View>` 상속을 `Children` 속성입니다. `AbsoluteLayout` 프로그래머가 해당 자식이 있고 선택적으로 해당 크기의 위치를 지정 하는 레이아웃 시스템을 구현 합니다. 왼쪽 위 모퉁이 기준으로 자식 항목의 왼쪽 위 모퉁이에서 위치 지정을 `AbsoluteLayout` 장치 독립적 단위에서입니다. `AbsoluteLayout` 또한 비례 위치 및 크기 조정 기능을 구현합니다.
 

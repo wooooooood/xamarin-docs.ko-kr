@@ -115,4 +115,4 @@ sections:
           - title: 샘플
             html: '<p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms 샘플</a></p>'
           - title: 책
-            html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">모바일 앱 ebook 만들기</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">엔터프라이즈 애플리케이션 패턴 ebook</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Xamarin.Forms의 SkiaSharp 그래픽 ebook</a></p>
+            html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">모바일 앱 전자책 만들기</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">엔터프라이즈 애플리케이션 패턴 전자책</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">Xamarin.Forms의 SkiaSharp 그래픽 전자책</a></p>

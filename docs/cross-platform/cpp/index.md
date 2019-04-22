@@ -1,52 +1,52 @@
 ---
 ms.assetid: EA2D979E-9151-4CE9-9289-13B6A979838B
-title: Xamarin을 사용 하 여 C/c + + 라이브러리를 사용 합니다.
-description: Xamarin을 사용 하 여 구축 하 고 Android 및 iOS 용 모바일 앱 플랫폼 간 C/c + + 코드를 통합 Mac 용 visual Studio를 사용할 수 있습니다 하 고 C#입니다. 이 문서에는 설정 하 고 Xamarin 앱에서 c + + 프로젝트를 디버그 하는 방법을 설명 합니다.
+title: 사용 하 여 C /C++ Xamarin 사용 하 여 라이브러리
+description: Mac 용 visual Studio를 사용 하 여 구축 하 고 플랫폼 간 C 통합 수 /C++ Android 및 iOS, Xamarin을 사용 하 여 모바일 앱 코드 및 C#합니다. 이 문서에서는 설정 하 고 디버그 하는 방법에 설명 된 C++ Xamarin 앱에서 프로젝트입니다.
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
 ms.openlocfilehash: a235a24d544e938d4bf29e6569564aface2f6972
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866386"
 ---
-# <a name="use-cc-libraries-with-xamarin"></a>Xamarin을 사용 하 여 C/c + + 라이브러리를 사용 합니다.
+# <a name="use-cc-libraries-with-xamarin"></a>사용 하 여 C /C++ Xamarin 사용 하 여 라이브러리
 
 ## <a name="overview"></a>개요
 
 Xamarin은 개발자가 Visual Studio를 사용 하 여 플랫폼 간 네이티브 모바일 앱을 만들 수 있습니다. 일반적으로 C# 바인딩은 기존 플랫폼 구성 요소 개발자에 게 노출 하는 데 사용 됩니다. 그러나 기존 작업 Xamarin 앱에 필요가 코드 베이스의 경우 경우가 있습니다. 팀은 단순히 없는 경우도 코드 베이스를 포트 a에 크고 잘 테스트 된 고도로 최적화 된 리소스, 예산, 시간 또는 C#입니다.
 
-[플랫폼 간 모바일 개발용 visual c + +](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) C/c + +를 사용 하도록 설정 하 고 C# 통합 된 디버깅 환경을 포함 하 여 많은 이점을 제공 합니다. 동일한 솔루션의 일부로 빌드해야 하는 코드입니다. Microsoft에 사용 되는 C/c + + 및 Xamarin와 같은 앱을 제공 하려면 이렇게에서 [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) 하 고 [Pix 카메라](https://www.microsoft.com/microsoftpix)합니다.
+[Visual C++ 플랫폼 간 모바일 개발용](https://docs.microsoft.com/visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development) C를 사용 하도록 설정 /C++ 및 C# 코드를 통합 된 디버깅 환경을 포함 하 여 많은 이점을 제공 합니다. 동일한 솔루션의 일부로 빌드됩니다. Microsoft가 C를 사용 하는 /C++ 및 Xamarin 앱 같은 전달할 이렇게에서 [Hyperlapse Mobile](https://www.microsoft.com/p/hyperlapse-mobile/9wzdncrd1prw) 하 고 [Pix 카메라](https://www.microsoft.com/microsoftpix)합니다.
 
-그러나 경우에 따라 있습니다 인지 원하는 (요구 사항) 되도록 기존 C/c + + 도구 및 프로세스를 진행에서 하 고 타사 구성 요소에 비슷한 것 처럼 라이브러리를 처리 하는 응용 프로그램에서 분리 하는 라이브러리 코드를 유지 합니다. 이러한 상황에서 챌린지 없습니다만 공개 하는 관련 멤버 C# 종속성으로 라이브러리를 관리 하지만 합니다. 물론,이 프로세스를 가능한 한 많은 자동화를 합니다.  
+그러나 일부 경우에는 원하는 (또는 요구 사항) C 기존 유지 /C++ 도구 및 프로세스 진행에서 하 고 타사 구성 요소에 비슷한 것 처럼 라이브러리를 처리 하는 응용 프로그램에서 분리 하는 라이브러리 코드를 유지 합니다. 이러한 상황에서 챌린지 없습니다만 공개 하는 관련 멤버 C# 종속성으로 라이브러리를 관리 하지만 합니다. 물론,이 프로세스를 가능한 한 많은 자동화를 합니다.  
 
 이 게시물은이 시나리오에 대 한 높은 수준의 방법에 간략하게 설명 하 고 간단한 예제를 안내 합니다.
 
 ## <a name="background"></a>배경
 
-C/c + + 플랫폼 간 언어에서 것으로 간주 됩니다 있지만 유용한 주의 해야 실제로 플랫폼 간 C/c + +만 모든 대상 컴파일러에서 지 원하는 거의 또는 전혀 조건부로 포함 된 플랫폼을 포함 하 고 사용 하 여 소스 코드 인지 확인 하거나 컴파일러 별 코드입니다.
+C /C++ 플랫폼 간 언어에서 비율은 훌륭한 주의 해야 실제로 플랫폼 간 C만을 사용 하 여 소스 코드 인지 확인 하지만 /C++ 모든 대상 컴파일러에서 지 원하는 거의 또는 전혀 조건부로 포함 된 플랫폼을 포함 하 고 또는 컴파일러 별 코드입니다.
 
 궁극적으로 코드를 컴파일하고 하므로이를 나타낸다고 공통성 대상 플랫폼 (및 컴파일러)에서 모든 대상 플랫폼에서 성공적으로 실행 해야 합니다. 문제가 사소한 차이점 컴파일러에서에서 여전히 발생할 수 있습니다 및 따라서 철저 한 테스트 (가급적 자동) 각 대상 플랫폼이 점점 더 중요 합니다.  
 
 ## <a name="high-level-approach"></a>고급 접근 방식
 
-다음 그림에서는 NuGet을 통해 공유 및 Xamarin.Forms 앱에서 사용 되는 플랫폼 간 Xamarin 라이브러리에 C/c + + 소스 코드를 변환 하는 데 4 단계 접근 방식을 나타냅니다.
+다음 그림에서는 C를 변환 하는 데 사용 하는 4 단계 방식을 나타냅니다 /C++ NuGet을 통해 공유 및 Xamarin.Forms 앱에서 사용 되는 플랫폼 간 Xamarin 라이브러리 소스 코드입니다.
  
 
-![Xamarin을 사용 하 여 C/c + +를 사용 하기 위한 고급 방법](images/cpp-steps.jpg)
+![C를 사용 하기 위한 고급 방법을 /C++ Xamarin을 사용 하 여](images/cpp-steps.jpg)
 
 4 단계는 다음과 같습니다.
 
-1.  플랫폼별 기본 라이브러리를 C/c + + 소스 코드를 컴파일할 때.
+1.  컴파일 C /C++ 플랫폼별 기본 라이브러리에 소스 코드입니다.
 2.  Visual Studio 솔루션을 사용 하 여 네이티브 라이브러리를 배치 합니다.
 3.  압축 하 고.NET 래퍼에 대 한 NuGet 패키지를 푸시합니다.
 4.  Xamarin 앱에서 NuGet 패키지를 사용 합니다.
 
-### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>1 단계: 플랫폼별 기본 라이브러리를 C/c + + 소스 코드를 컴파일할 때
+### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>1 단계: 컴파일 C /C++ 플랫폼별 기본 라이브러리에 소스 코드
 
-이 단계의 목표에서 호출할 수 있는 네이티브 라이브러리를 만드는 것을 C# 래퍼입니다. 이 수 또는 상황에 따라 관련 되지 않을 수 있습니다. 많은 도구 및 일반적인 시나리오에서 제공 될 수 있습니다 하는 프로세스를이 문서에서 다루지 않습니다. 주요 고려 사항이 C/c + + codebase 네이티브 래퍼 코드에 충분 한 단위 테스트와 동기화 하는 유지 되며 빌드 자동화 합니다. 
+이 단계의 목표에서 호출할 수 있는 네이티브 라이브러리를 만드는 것을 C# 래퍼입니다. 이 수 또는 상황에 따라 관련 되지 않을 수 있습니다. 많은 도구 및 일반적인 시나리오에서 제공 될 수 있습니다 하는 프로세스를이 문서에서 다루지 않습니다. C를 관리 하는 주요 고려 사항 /C++ 동기화 된 모든 네이티브 래퍼 코드를 충분 한 단위 테스트, 코드 베이스 및 빌드 자동화 합니다. 
 
 이 연습의의 라이브러리를 함께 제공 되는 셸 스크립트를 사용 하 여 Visual Studio Code를 사용 하 여 생성 되었습니다. 이 연습의 확장된 버전에서 찾을 수 있습니다 합니다 [Mobile CAT GitHub 리포지토리](https://github.com/xamarin/mobcat/blob/dev/samples/cppwithxamarin/README.md) 자세히 샘플의이 부분에 설명 하는 합니다. 하지만 네이티브 라이브러리는 처리 될 타사 종속성으로이 경우 컨텍스트에 대해이 단계를 보여 줍니다.
 
@@ -92,7 +92,7 @@ C/c + + 플랫폼 간 언어에서 것으로 간주 됩니다 있지만 유용�
 
 ## <a name="creating-the-native-libraries-stage-1"></a>네이티브 라이브러리 (1 단계) 만들기
 
-예제를 기반으로 하는 네이티브 라이브러리 기능 [연습: 만들기 및 정적 라이브러리 (c + +)를 사용 하 여](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)입니다.
+예제를 기반으로 하는 네이티브 라이브러리 기능 [연습: 정적 라이브러리 만들기 및 사용 (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)합니다.
 
 이 연습에서는 라이브러리는이 시나리오에서는 타사 종속성으로 제공 하므로 네이티브 라이브러리를 빌드하는 첫 번째 단계를 건너뜁니다. 미리 컴파일된 네이티브 라이브러리와 함께 포함 된 합니다 [샘플 코드](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) 수 있습니다 [다운로드](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) 직접.
 
@@ -248,7 +248,7 @@ extern "C" {
 4. 구성 된 **네이티브 참조** 속성 (눈금 아이콘을 표시) 확인에 **속성** 패드:
         
     - 강제 로드
-    - c + +
+    - 는C++
     - 스마트 링크 
 
     > [!NOTE]
@@ -406,7 +406,7 @@ extern "C" {
 
 #### <a name="writing-the-mymathfuncs-class"></a>MyMathFuncs 클래스를 작성합니다.
 
-래퍼를 완료 했으므로 관리 되지 않는 c + + MyMathFuncs 개체에 대 한 참조를 관리 하는 MyMathFuncs 클래스를 만듭니다.  
+래퍼를 완료 했으므로 관리 되지 않는 참조를 관리 하는 MyMathFuncs 클래스를 만듭니다 C++ MyMathFuncs 개체입니다.  
 
 1. **컨트롤에서 클릭** 에 **MathFuncs.Shared** 프로젝트를 선택한 **파일 추가...**  에서 합니다 **추가** 메뉴. 
 2. 선택 **빈 클래스** 에서 합니다 **새 파일** 창에서 이름을 **MyMathFuncs** 클릭 하 고 **새로 만들기**
@@ -655,7 +655,7 @@ extern "C" {
 
 1. **컨트롤에서 클릭** 프로젝트에서 선택한 **NuGet 패키지 추가...**  에서 합니다 **추가** 메뉴.
 2. 검색할 **MathFuncs**합니다. 
-3. 확인 합니다 **버전** 패키지입니다 **1.0.0** 기타 세부 정보 같은 예상 대로 나타나고를 **제목** 및 **설명**, 즉 를 *MathFuncs* 하 고 *c + + 래퍼 라이브러리 샘플*합니다. 
+3. 확인 합니다 **버전** 패키지입니다 **1.0.0** 기타 세부 정보 같은 예상 대로 나타나고를 **제목** 및 **설명**, 즉 하십시오 *MathFuncs* 하 고 *샘플 C++ 래퍼 라이브러리*합니다. 
 4. 선택 된 **MathFuncs** 패키지를 클릭 **패키지 추가**합니다.
 
 ### <a name="using-the-library-functions"></a>라이브러리 함수를 사용 하 여
@@ -758,7 +758,7 @@ extern "C" {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 NuGet 패키지를 통해 배포 되는 일반적인.NET 래퍼를 통해 네이티브 라이브러리를 사용 하는 Xamarin.Forms 앱을 만드는 방법을 설명 합니다. 이 연습에 제공 된 예제 보다 쉽게 방법을 보여 주기 위해 의도적으로 매우 단순한입니다. 실제 응용 프로그램 예외 처리와 같은 복잡성, 콜백, 더 복잡 한 형식의 마샬링 및 다른 종속 라이브러리를 사용 하 여 링크를 사용 하 여 처리 해야 합니다. 주요 고려 사항인 경우 c + + 코드의 발전은 조정 하 고는 래퍼 및 클라이언트 응용 프로그램을 사용 하 여 동기화 프로세스 이 프로세스는 있는지 여부에 따라 이러한 문제 중 하나 또는 모두를 단일 팀의 책임 달라질 수 있습니다. 어느 방법이 든 자동화는 실제 혜택입니다. 다음은 관련 다운로드와 함께 주요 개념 중 일부를 관련 추가 정보를 제공 하는 몇 가지 리소스입니다. 
+이 문서에서는 NuGet 패키지를 통해 배포 되는 일반적인.NET 래퍼를 통해 네이티브 라이브러리를 사용 하는 Xamarin.Forms 앱을 만드는 방법을 설명 합니다. 이 연습에 제공 된 예제 보다 쉽게 방법을 보여 주기 위해 의도적으로 매우 단순한입니다. 실제 응용 프로그램 예외 처리와 같은 복잡성, 콜백, 더 복잡 한 형식의 마샬링 및 다른 종속 라이브러리를 사용 하 여 링크를 사용 하 여 처리 해야 합니다. 중요시 되는 프로세스의 발전 된 C++ 코드를 조정 하 고 래퍼 및 클라이언트 응용 프로그램을 사용 하 여 동기화 합니다. 이 프로세스는 있는지 여부에 따라 이러한 문제 중 하나 또는 모두를 단일 팀의 책임 달라질 수 있습니다. 어느 방법이 든 자동화는 실제 혜택입니다. 다음은 관련 다운로드와 함께 주요 개념 중 일부를 관련 추가 정보를 제공 하는 몇 가지 리소스입니다. 
 
 ### <a name="downloads"></a>다운로드
 
@@ -767,8 +767,8 @@ extern "C" {
 
 ### <a name="examples"></a>예제
 
-- [C + +를 사용 하 여 Hyperlapse 플랫폼 간 모바일 개발](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
-- [Microsoft Pix (c + + 및 Xamarin)](https://blog.xamarin.com/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
+- [Hyperlapse 사용한 플랫폼 간 모바일 개발C++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
+- [Microsoft Pix (C++ 및 Xamarin)](https://blog.xamarin.com/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
 - [Mono San Angeles 샘플 포트](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
 
 ### <a name="further-reading"></a>추가 정보

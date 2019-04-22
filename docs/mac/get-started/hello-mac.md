@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
 ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855317"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – 연습
@@ -23,7 +23,7 @@ Xamarin.Mac을 사용하면 *Objective-C* 또는 *Swift*에서 개발할 때 사
 
 이 문서에서는 단추 클릭 횟수를 계산하는 간단한 **Hello, Mac** 앱을 빌드하는 프로세스를 살펴보면서 Xamarin.Mac, Mac용 Visual Studio 및 Xcode의 Interface Builder를 사용하여 Mac 앱을 만드는 데 필요한 핵심 개념을 소개합니다.
 
-[![](hello-mac-images/run02-sml.png "실행 중인 Hello, Mac 앱의 예제")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "실행 중인 Hello, Mac 앱의 예")](hello-mac-images/run02.png#lightbox)
 
 다음 개념을 다룹니다.
 

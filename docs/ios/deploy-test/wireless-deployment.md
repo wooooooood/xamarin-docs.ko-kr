@@ -9,10 +9,10 @@ ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854836"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
@@ -27,14 +27,14 @@ ms.locfileid: "58854836"
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio
 - Xcode 9.0 이상
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 디바이스
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - 최신 버전의 Visual Studio
 - iOS 11.0 또는 tvOS 11.0 이상이 설치된 디바이스

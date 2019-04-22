@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
 ms.openlocfilehash: 533ab09a73116402e39da65933f26b8f3065357c
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855070"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 무료 프로비전
@@ -87,7 +87,7 @@ ms.locfileid: "58855070"
 
 ### <a name="deploy-your-xamarinios-app"></a>Xamarin.iOS 앱 배포
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. USB를 통하거나 [무선](~/ios/deploy-test/wireless-deployment.md)으로 Mac 빌드 호스트에 iOS 디바이스를 연결합니다.
 2. Mac용 Visual studio **Solution Pad**에서 **Info.plist**를 두 번 클릭합니다.
@@ -106,7 +106,7 @@ ms.locfileid: "58855070"
 9. **확인**을 클릭하여 **프로젝트 옵션**을 저장하고 닫습니다.
 10. iOS 디바이스를 선택하고 앱을 실행합니다.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio 2019 또는 Visual Studio 2017이 [Mac 빌드 호스트에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
 2. USB를 통하거나 [무선](~/ios/deploy-test/wireless-deployment.md)으로 Mac 빌드 호스트에 iOS 디바이스를 연결합니다.

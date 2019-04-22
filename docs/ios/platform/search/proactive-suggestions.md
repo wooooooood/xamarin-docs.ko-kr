@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870406"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.iOS에서 자동 제안 소개
@@ -189,7 +189,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 최소한 위에 제시 된 코드를 사용 하 여 앱이 이제 세 가지 새 iOS 10 기능을 활용 하려면 수 있습니다:
 
-- **핸드 오프**
+- **Handoff**
 - **스포트라이트 검색**
 - **상황에 맞는 Siri 미리 알림**
 

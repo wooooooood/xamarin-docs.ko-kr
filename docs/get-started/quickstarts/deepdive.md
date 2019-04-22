@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
 ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855018"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작에 대 한 심층 정보
@@ -421,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 에 `OnNoteAddedClicked` 응용 프로그램에 새 메모 추가 될 때 실행 되는 메서드를를 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) 의 `NoteEntryPage` 새로 설정 된 `Note` 인스턴스. 에 `OnListViewItemSelected` 에서 기존 메모를 선택할 때 실행 되는 메서드를를 [ `ListView` ](xref:Xamarin.Forms.ListView)의 `BindingContext` 의 `NoteEntryPage` 선택한로 설정 되어 `Note` 인스턴스를 통해 액세스할 수 있는 [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 속성입니다.
 
 > [!IMPORTANT]
-> 각 *target* 개체의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 개별적으로 설정할 수 있으나, 그럴 필요는 없습니다. `BindingContext` 모든 자식에서 상속 되는 특별 한 속성이입니다. 따라서 때를 `BindingContext` 에 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 로 설정 됩니다는 `Note` 자식의 모든 인스턴스를 `ContentPage` 동일 `BindingContext`, 합니다 의공용속성에바인딩될수있습니다`Note`개체입니다.
+> 각 *target* 개체의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 개별적으로 설정할 수 있으나, 그럴 필요는 없습니다. `BindingContext`는 자신의 모든 자식에서 상속한 특별 속성입니다. 따라서 때를 `BindingContext` 에 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 로 설정 됩니다는 `Note` 자식의 모든 인스턴스를 `ContentPage` 동일 `BindingContext`, 합니다 의공용속성에바인딩될수있습니다`Note`개체입니다.
 
 [ `Editor` ](xref:Xamarin.Forms.Editor) 에서 `NoteEntryPage` 에 바인딩됩니다 합니다 `Text` 의 속성을 `Note` 개체:
 
@@ -532,11 +532,11 @@ Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 
 
 ## <a name="related-links"></a>관련 링크
 
-- [XAML(eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.md)
+- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)
-- [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [XAML 마크업 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [시작 샘플](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
 - [Xamarin.Forms API 참조](xref:Xamarin.Forms)
-- [무료 사용자 진행 방식 학습 (비디오)](https://university.xamarin.com/self-guided/)
+- [무료 학습(비디오)](https://university.xamarin.com/self-guided/)

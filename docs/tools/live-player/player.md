@@ -7,10 +7,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
 ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855200"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
@@ -38,7 +38,7 @@ ms.locfileid: "58855200"
 
 정보 단추를 눌러 **(i)** 표시 하기 위해 앱의 맨 아래에는 **옵션** 메뉴:
 
-[![S[옵션] 메뉴의 creenshot](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![[옵션] 메뉴의 스크린샷](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>로그
 
@@ -50,13 +50,13 @@ ms.locfileid: "58855200"
 - 버전 정보입니다.
 - 피드백을 보냅니다.
 
-[![S설정의 creenshot](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![설정의 스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>장치 관리
 
 처음으로 장치를 연결할의 지침을 따릅니다 [요구 사항 및 설치](~/tools/live-player/install.md)합니다. 여러 장치를 연결 하 고 IDE를 통해 관리할 수 있습니다.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual studio에서 **도구 > Xamarin Live Player > 장치를 관리 하는 중...**
 
@@ -70,7 +70,7 @@ Visual studio에서 **도구 > Xamarin Live Player > 장치를 관리 하는 중
 
 또한 장치 목록에서이 창에 액세스할 수 있습니다.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac 용 Visual studio **도구 > 장치를 관리 하는 (Xamarin Live Player)...**
 

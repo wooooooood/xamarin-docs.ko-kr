@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859013"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 용 XAML 미리 보기
@@ -31,7 +31,7 @@ XAML 미리 보기에서는 iOS 및 Android에서 Xamarin.Forms XAML 페이지 �
 
 분할 뷰 창에 있는 화살표를 클릭 하 여 XAML 미리 보기를 열 수 있습니다. 기본 분할 보기 동작을 변경 하려는 경우, 사용 된 **도구 > 옵션 > Xamarin > Forms 미리 보기** 대화 합니다. 이 대화 상자에서 기본 문서 보기 및 분할 방향을 선택할 수 있습니다.
 
-[![Xamarin 합니다. Visual Studio에서 미리 보기 옵션 구성](xaml-previewer-images/xamlp-options-vs-sm.png "Visual Studio에서 Xamarin.Forms 미리 보기 옵션")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Visual Studio에서 Xamarin.Forms 미리 보기 옵션](xaml-previewer-images/xamlp-options-vs-sm.png "Visual Studio에서 Xamarin.Forms 미리 보기 옵션")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 XAML 파일을 열면 편집기가 열립니다 큰 또는 옆에서 선택한 설정에 따라 미리 보기에는 **도구 > 옵션 > Xamarin > Forms 미리 보기** 대화 합니다. 그러나 분할 편집기 창에서 각 파일에 대 한 변경할 수 있습니다.
 
@@ -39,11 +39,11 @@ XAML 파일을 열면 편집기가 열립니다 큰 또는 옆에서 선택한 �
 
 XAML 미리 보기 코드를 확인 하려는 여부 창을 보려면 분할에서 다음과 같은이 단추를 선택 하 여 둘 다 선택 합니다. 가운데 단추 쪽 미리 보기 및 코드에 있는 교환 합니다.
 
-[![Xamarin 합니다. Forms 디자인, 원본 및 Visual Studio의 분할 보기 간에 전환 하려면 미리 보기 컨트롤](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Xamarin.Forms 미리 보기를 디자인, 원본 및 Visual Studio에서 분할 뷰를 전환 하려면 제어")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Xamarin.Forms 미리 보기를 디자인, 원본 및 Visual Studio에서 분할 뷰를 전환 하려면 제어](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Xamarin.Forms 미리 보기를 디자인, 원본 및 Visual Studio에서 분할 뷰를 전환 하려면 제어")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 세로 또는 가로로 화면 분할 여부를 변경 하거나 하나의 창을 완전히 축소할 수 있습니다.
 
-[![Xamarin 합니다. Visual Studio의 forms 미리 보기 창 방향 컨트롤](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Visual Studio에서 Xamarin.Forms 미리 보기 창 방향 컨트롤")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Visual Studio에서 Xamarin.Forms 미리 보기 창 방향 컨트롤](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Visual Studio에서 Xamarin.Forms 미리 보기 창 방향 컨트롤")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ XAML 미리 보기 코드를 확인 하려는 여부 창을 보려면 분할에�
 
 XAML 페이지를 열면 편집기에 **미리 보기** 단추가 표시됩니다. 키를 눌러 미리 보기를 표시할지를 **미리 보기** 모든 XAML 문서 창의 오른쪽 위 모서리에 있는 단추:
 
-[![Xamarin 합니다. Mac 용 Visual Studio에서 미리 보기를 형성](xaml-previewer-images/xamlp-list-sml.png "Mac 용 Visual Studio에서 Xamarin.Forms 미리 보기")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Mac 용 Visual Studio에서 Xamarin.Forms 미리 보기](xaml-previewer-images/xamlp-list-sml.png "Mac 용 Visual Studio에서 Xamarin.Forms 미리 보기")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

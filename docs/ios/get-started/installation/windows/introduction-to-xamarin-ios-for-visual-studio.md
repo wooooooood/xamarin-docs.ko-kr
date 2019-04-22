@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855135"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
@@ -93,7 +93,7 @@ Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하�
 
 - **디버그**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "출력 디버깅")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "출력 디버그")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **빌드** & **빌드 순서**
 
@@ -149,9 +149,9 @@ Visual Studio 2017에서는 Android 및 iOS 로그 패드가 통합되었습니�
 
 새로운 Visual Studio용 디바이스 로그 도구 창은 Android 및 iOS 디바이스에 대한 로그를 표시할 수 있습니다. 다음 명령 중 하나를 실행하여 표시할 수 있습니다.
 
-- **보기 > 다른 창 > 디바이스 로그**
-- **도구 > iOS > 디바이스 로그**
-- **iOS 도구 모음 > 디바이스 로그**
+- **보기 &gt; 다른 창 &gt; 디바이스 로그**
+- **도구 &gt; iOS &gt; 디바이스 로그**
+- **iOS 도구 모음 &gt; 디바이스 로그**
 
 도구 창이 표시되면 사용자가 디바이스 드롭다운에서 물리적 디바이스를 선택할 수 있습니다. 디바이스를 선택하면 로그가 테이블에 자동으로 추가됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다.
 

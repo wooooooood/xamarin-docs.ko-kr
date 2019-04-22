@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 855962560897789dadba535f69c4a7da42bb4742
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854979"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 응용 프로그램에서 탐색을 수행 합니다.
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 
 이 빠른 시작에서는 배웁니다 방법:
 
@@ -617,5 +617,5 @@ ms.locfileid: "58854979"
 
 ## <a name="related-links"></a>관련 링크
 
-- [메모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
 - [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)

@@ -1,10 +1,10 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 0270f4a5ddab593372eb6687650e24d627f97c62
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855350"
 ---
 Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visual Studio 2019 설치:
@@ -15,7 +15,7 @@ Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visu
 
 3. 설치 화면에서 **.NET을 사용한 모바일 개발** 워크로드를 선택합니다.
 
-    [![M.NET 선택 하 여 obile 개발](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
+    [![.NET 선택 영역을 사용한 모바일 개발](~/get-started/installation/windows-images/vs2019-mobile-dev-workload-sml.png)](~/get-started/installation/windows-images/vs2019-mobile-dev-workload.png#lightbox)
 
 4. Visual Studio 2019 설치를 시작할 준비가 되 면 클릭 합니다 **설치** 오른쪽 아래 모서리에 단추:
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870419"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
 > 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
@@ -146,7 +146,7 @@ Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가�
 
 `VisibleRegion` 유형의 [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), 4 개의 읽기 전용 속성을 사용 하 여 클래스:
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center)([`Position`](xref:Xamarin.Forms.Maps.Position) 형식)
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) 형식의 [`Position`](xref:Xamarin.Forms.Maps.Position)
 - [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) 형식의 `double`, 지도의 표시 영역 높이 나타내는
 - [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 형식의 `double`, 지도의 표시 영역 너비를 나타내는
 - [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) 형식의 [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), 지도 가장 큰 순환 영역 크기를 나타내는

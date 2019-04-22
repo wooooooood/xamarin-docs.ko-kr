@@ -77,7 +77,7 @@ Xamarin.Android는 32 비트 및 64 비트 장치를 비롯 한 여러 CPU 아�
 
 
 
-##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android Audio](~/android/app-fundamentals/android-audio.md)
+##  <a name="android-audioandroidapp-fundamentalsandroid-audiomd"></a>[Android 오디오](~/android/app-fundamentals/android-audio.md)
 
 Android OS는 광범위 한 지원 멀티미디어, 오디오와 비디오 둘 다 포함 합니다. 이 가이드는 Android에서 오디오에 중점을 둡니다 하 고 재생 하 고 낮은 수준의 오디오 API 뿐만 아니라 기본 제공 오디오 플레이어 레코더 클래스를 사용 하 여 오디오를 녹음/녹화를 다룹니다. 또한 커지긴 응용 프로그램을 개발할 수 있도록 다른 응용 프로그램에 의해 브로드캐스팅 되는 오디오 이벤트를 사용 하 여 작업을 다룹니다.
 

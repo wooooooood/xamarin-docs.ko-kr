@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
 ms.openlocfilehash: 9ce56891eeab73f661a9c22cc047c4d0bcb10337
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854797"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Windows에서 Xamarin 미리 보기 설치
@@ -38,7 +38,7 @@ Visual Studio의 미리 보기 버전에는 다음을 비롯한 Xamarin 기능�
 
 설치 프로세스 중 **설치 애칭**을 아래와 같이 병렬 설치에 적용할 수 있습니다([시작] 메뉴에서 구분되도록).
 
-[![e설치 전 애칭 편집](windows-images/vs2017-nickname-sml.png "설치 전 애칭 편집")](windows-images/vs2017-nickname.png#lightbox)
+[![설치 전 애칭 편집](windows-images/vs2017-nickname-sml.png "설치 전 애칭 편집")](windows-images/vs2017-nickname.png#lightbox)
 
 ### <a name="uninstalling-visual-studio-2019-preview"></a>Visual Studio 2019 Preview를 제거합니다.
 

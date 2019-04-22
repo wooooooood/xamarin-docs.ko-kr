@@ -8,22 +8,22 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854706"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-XAML(Extensible Application Markup Language)을 통해 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 애플리케이션에서 사용자 인터페이스를 정의할 수 있습니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
+XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 콘텐츠
 
 * [개요](#Overview)
-* [1장. XAML 시작하기](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 * [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 * [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 * [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
@@ -107,6 +107,6 @@ Xamarin.Forms 및 XML에 익숙한 경우, [1장. XAML 시작하기](~/xamarin-f
 
 ## <a name="related-links"></a>관련 링크
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 - [모바일 앱 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)

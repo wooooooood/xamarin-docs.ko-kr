@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870367"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
@@ -62,7 +62,7 @@ Objective-c 코드를 사용 하 여 통신 하도록 하위 수준 런타임 �
 
 - 네이티브 C# 형식:
 
-  - [`NSString` 다음이 됩니다. `string`](~/ios/internals/api-design/nsstring.md)
+  - [`NSString` 됩니다. `string`](~/ios/internals/api-design/nsstring.md)
   - 설정할 `int` 하 고 `uint` C# 열거형을 사용 하 여 C# 열거형 열거형 었어야 하는 매개 변수 `[Flags]` 특성
   - 형식 중립적인 대신 `NSArray` 개체를 강력한 형식의 배열로 배열을 노출 합니다.
   - 이벤트 및 알림에 대 한 중에서 선택할 사용자에 게 제공 합니다.

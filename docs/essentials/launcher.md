@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870055"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
@@ -44,11 +44,11 @@ public class LauncherTest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 `CanOpenAsync`에서 반환된 작업이 즉시 완료됩니다.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 이 장치의 대상 애플리케이션이 사용자 애플리케이션의 `OpenAsync`에 의해 열린 적이 없는 경우 iOS에서 앱이 열 수 있도록 허용하라는 메시지를 사용자에게 한 번 표시합니다.
 
@@ -56,7 +56,7 @@ public class LauncherTest
 
 [여기](xref:UIKit.UIApplication.CanOpenUrl*)에서 iOS 구현에 대한 자세한 정보를 확인할 수 있습니다.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 플랫폼의 차이점이 없습니다.
 
@@ -65,4 +65,4 @@ public class LauncherTest
 ## <a name="api"></a>API
 
 - [Launcher 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
-- [Launcher API 설명서](xref:Xamarin.Essentials.Launcher)
+- [Launcher API 문서](xref:Xamarin.Essentials.Launcher)

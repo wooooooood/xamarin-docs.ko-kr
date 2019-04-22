@@ -9,10 +9,10 @@ ms.date: 02/12/2019
 featureFlags:
 - clicktale
 ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854004"
 ---
 <div id="main" class="v2">
@@ -743,24 +743,19 @@ Mac</a>
         <h2>연락 방법</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/">
-블로그 </a>
+                <a href="https://blog.xamarin.com/"> 블로그 </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/">
-포럼 </a>
+                <a href="https://forums.xamarin.com/"> 포럼 </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq">
-Twitter </a>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin">
-스택 오버플로 </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community">
-개발자 커뮤니티 </a>
+                <a href="https://dotnet.microsoft.com/platform/community"> 개발자 커뮤니티 </a>
             </li>
         </ul>
     </div>

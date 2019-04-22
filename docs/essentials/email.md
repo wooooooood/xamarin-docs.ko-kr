@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.openlocfilehash: 06b4f4b612d0cb44e467a9da6dbee3194338027d
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869964"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
@@ -62,15 +62,15 @@ public class EmailTest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 모든 Android용 이메일 클라이언트가 `Html`을 지원하는 것은 아닙니다. 지원 여부를 확인할 방법은 없으므로 이메일을 보낼 때는 `PlainText`를 사용하는 것이 좋습니다.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 플랫폼의 차이점이 없습니다.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 `PlainText`를 `Html`을 보내려는 `BodyFormat`으로 지원하면 `FeatureNotSupportedException`을 throw합니다.
 
@@ -108,5 +108,5 @@ await Email.ComposeAsync(message);
 
 ## <a name="api"></a>API
 
-- [이메일 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [이메일 API 설명서](xref:Xamarin.Essentials.Email)
+- [메일 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [메일 API 문서](xref:Xamarin.Essentials.Email)

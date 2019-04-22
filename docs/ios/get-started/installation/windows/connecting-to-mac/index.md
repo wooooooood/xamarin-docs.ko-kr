@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
 ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855148"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
@@ -130,7 +130,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
 
     - Mac에서 **시스템 기본 설정 > 공유> 원격 로그인**을 차례로 엽니다.
 
-        [![T시스템 기본 설정 > 공유에 있는 Mac의 IP 주소](images/sharing-ipaddress.png "시스템 기본 설정 > 공유에 있는 Mac의 IP 주소")](images/sharing.png#lightbox)
+        [![시스템 기본 설정 > 공유에 있는 Mac의 IP 주소](images/sharing-ipaddress.png "시스템 기본 설정 > 공유에 있는 Mac의 IP 주소")](images/sharing.png#lightbox)
 
     - 또는 명령줄을 사용합니다. 터미널에서 다음 명령을 실행합니다. 
 
@@ -143,7 +143,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
 
 2. Visual Studio 2019의 **Mac에 페어링** 대화 상자에서 **Mac 추가...** 를 선택합니다.
 
-    [![TMac에 페어링 대화 상자의 Mac 추가 단추](images/addtomac.png "Mac에 페어링 대화 상자의 Mac 추가 단추")](images/addtomac-large.png#lightbox)
+    [![Mac에 페어링 대화 상자의 Mac 추가 단추](images/addtomac.png "Mac에 페어링 대화 상자의 Mac 추가 단추")](images/addtomac-large.png#lightbox)
 
 3. Mac의 IP 주소를 입력하고 **추가**를 클릭합니다.
 
@@ -177,7 +177,7 @@ Mac에 페어링은 Mono가 설치되어 있는지 확인합니다. 설치되어
 
 ||설치 확인|다운로드|설치
 |---|---|---|---|
-|Mono|[![MMono 설치 누락](images/mono-missing.png "Mono 설치 누락")](images/mono-missing-large.png#lightbox)|[![DMono 다운로드](images/mono-downloading.png "Mono 다운로드")](images/mono-downloading-large.png#lightbox)|[![IMono 설치](images/mono-installing.png "Mono 설치")](images/mono-installing-large.png#lightbox)|
+|Mono|[![모노 설치 누락](images/mono-missing.png "모노 설치 누락")](images/mono-missing-large.png#lightbox)|[![모노 다운로드](images/mono-downloading.png "모노 다운로드")](images/mono-downloading-large.png#lightbox)|[![모노 설치](images/mono-installing.png "모노 설치")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,7 +192,7 @@ Mac에 페어링은 Windows 컴퓨터에 설치된 버전과 일치하도록 Mac
 
 ||설치 확인|다운로드|설치
 |---|---|---|---|
-|Xamarin.iOS|[![MXamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![DXamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![IXamarin.iOS 설치](images/xamios-installing.png "Xamarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Xamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![Xamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![Xamarin.iOS 설치](images/xamios-installing.png "Xamarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Xcode 도구 및 라이선스
 
@@ -200,7 +200,7 @@ Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인�
 
 ||설치 확인|라이선스 승인|
 |---|---|---|
-|Xcode|[![MXcode 설치 누락](images/xcode-missing.png "Xcode 설치 누락")](images/xcode-missing-large.png#lightbox)|[![X코드 라이선스](images/xcode-license.png "Xcode 라이선스")](images/xcode-license-large.png#lightbox)|
+|Xcode|[![Xcode 설치 누락](images/xcode-missing.png "Xcode 설치 누락")](images/xcode-missing-large.png#lightbox)|[![Xcode 라이선스](images/xcode-license.png "Xcode 라이선스")](images/xcode-license-large.png#lightbox)|
 
 또한 Mac에 페어링은 Xcode와 함께 배포되는 다양한 패키지를 설치하거나 업데이트합니다. 예:
 

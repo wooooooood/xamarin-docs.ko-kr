@@ -9,15 +9,15 @@ ms.author: crdun
 ms.custom: video
 ms.date: 04/02/2019
 ms.openlocfilehash: 642f66e068f021e76402c9dcc6f167bb74283aaa
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854849"
 ---
 # <a name="installing-xamarin"></a>Xamarin 설치
 
-_.NET을 사용 하 여 모바일 앱 빌드를 시작 하려면 Visual Studio 및 Xamarin 설정 하는 방법입니다._
+_.NET으로 모바일 앱 빌드를 시작하기 위해 Visual Studio 및 Xamarin을 설정하는 방법입니다._
 
 ::: zone pivot="windows"
 

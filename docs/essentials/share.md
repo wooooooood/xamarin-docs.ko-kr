@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 1a9a7b008773255d9d7743a4fcb21f02feb3e116
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869379"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: 공유
@@ -61,19 +61,19 @@ public class ShareTest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 * `Subject` 속성은 메시지의 원하는 제목에 사용됩니다.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` 사용되지 않습니다.
-* `Title` 사용되지 않습니다.
+* `Subject`가 사용되지 않습니다.
+* `Title`이 사용되지 않습니다.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` 설정되지 않은 경우 기본적으로 애플리케이션 이름으로 설정됩니다.
-* `Subject` 사용되지 않습니다.
+* 설정되지 않은 경우 `Title`은 기본적으로 애플리케이션 이름으로 설정됩니다.
+* `Subject`이 사용되지 않습니다.
 
 -----
 
@@ -105,8 +105,8 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="api"></a>API
 
-- [소스 코드 공유](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
-- [API 설명서 공유](xref:Xamarin.Essentials.Share)
+- [Share 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)
+- [Share API 문서](xref:Xamarin.Essentials.Share)
 
 ## <a name="related-video"></a>관련 동영상
 

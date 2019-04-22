@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869826"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
@@ -227,8 +227,7 @@ Siri를 호출 하 고이 구를 사용 하 여 열립니다 Soup Chef 메뉴 �
 이 항목을 보려면 코드를 생성 합니다.
 
 - 오픈 **AppDelegate.m**합니다.
-- 사용자 지정 의도 헤더 파일에 가져오기를 추가 합니다.
-`#import "OrderSoupIntent.h"`
+- 사용자 지정 의도 헤더 파일에 가져오기를 추가 합니다. `#import "OrderSoupIntent.h"`
 - 클래스의 모든 메서드를 추가에 대 한 참조 `OrderSoupIntent`합니다.
 - 마우스 오른쪽 단추로 클릭 `OrderSoupIntent` 선택한 **정의로 이동**합니다.
 - 새로 열린 파일을 마우스 오른쪽 단추로 클릭 **OrderSoupIntent.h**, 선택한 **Finder에 표시**합니다.

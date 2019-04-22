@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
 ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58853978"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 설치
@@ -42,7 +42,7 @@ Visual Studio 2019에 Xamarin 설치를 앱에 대 한 코드 작성을 시작�
 자세한 내용은 [Windows에 Xamarin.iOS 설치](~/ios/get-started/installation/windows/index.md) 가이드를 참조하세요. 
 
 1. [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
-2. [Visual Studio를 Mac 빌드 호스트 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+2. [Mac 빌드 호스트에 Visual Studio 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [iOS 개발자 설정](~/ios/get-started/installation/device-provisioning/index.md) - 장치에서 애플리케이션을 실행하는 데 필요합니다.
 5. [원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
 6. [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
@@ -51,7 +51,7 @@ Visual Studio 2019에 Xamarin 설치를 앱에 대 한 코드 작성을 시작�
 
 자세한 내용은 [Windows에 Xamarin.Android 설치](~/android/get-started/installation/windows.md) 가이드를 참조하세요.
 
-1. [Xamarin.Android 구성](~/android/get-started/installation/windows.md#configuration)
-2. [Xamarin Android SDK Manager를 사용 하 여](~/android/get-started/installation/android-sdk.md?ide=vs)
+1. [Xamarin.Android Configuration](~/android/get-started/installation/windows.md#configuration)
+2. [Xamarin Android SDK Manager 사용](~/android/get-started/installation/android-sdk.md?ide=vs)
 3. [Android SDK 에뮬레이터](~/android/get-started/installation/android-emulator/index.md)
 4. [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)

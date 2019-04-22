@@ -1,5 +1,5 @@
 ---
-title: IOS 9 소개
+title: iOS 9 소개
 description: 이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 9에서에서 사용할 수 있는 기능을 소개합니다.
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870198"
 ---
-# <a name="introduction-to-ios-9"></a>IOS 9 소개
+# <a name="introduction-to-ios-9"></a>iOS 9 소개
 
 _이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 9에서에서 사용할 수 있는 기능을 소개합니다._
 
@@ -44,7 +44,7 @@ ATS 대 한 자세한 정보를 확인 하려면 하세요 우리의 [앱 전송
 
 <a name="multitasking" />
 
-## <a name="multitasking-for-ipad"></a>IPad 용 멀티태스킹
+## <a name="multitasking-for-ipad"></a>iPad용 멀티태스킹
 
 IOS 9 사용 하 여 Apple에는 특정 iPad 하드웨어에서 동시에 두 개의 앱을 실행 하기 위한 멀티태스킹 지원이 추가 되었습니다. 결과적으로, Xamarin.iOS 앱 특정된 시점에 실행 중인 유일한 앱 되는지 또는 전체 화면 또는 장치 리소스에 액세스할 수 있는 더 이상 가정할 수 없습니다.
 
@@ -213,7 +213,7 @@ Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페�
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
 - [3D 터치 소개](~/ios/platform/3d-touch.md)
 - [앱 전송 보안](~/ios/app-fundamentals/ats.md)
-- [IPad 용 멀티태스킹](~/ios/platform/multitasking.md)
+- [iPad용 멀티태스킹](~/ios/platform/multitasking.md)
 - [연락처 및 연락처 UI](~/ios/platform/contacts.md)
 - [새 검색 Api](~/ios/platform/search/index.md)
 - [스택 뷰 소개](~/ios/user-interface/controls/uistackview.md)
@@ -221,7 +221,7 @@ Ios 9에서 Apple 했습니다 하는 데 대칭 이동 된 사용자 인터페�
 - [게임 향상 된 기능](~/ios/platform/gaming/index.md)
 - [HomeKit 소개](~/ios/platform/homekit.md)
 - [핸드 오프 소개](~/ios/platform/handoff.md)
-- [추가 iOS 9 프레임 워크 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [추가 iOS 9 프레임워크 추가 변경 내용](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [문제 해결](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [새로운 iOS 9.0에서](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

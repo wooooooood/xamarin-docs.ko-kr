@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854875"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설치
@@ -29,7 +29,7 @@ Xamarin.Forms는 GTK# 앱에 대한 제한적인 지원을 하고 있습니다. 
 
 GTK # macos 및 Linux의 일부로 설치 됩니다 [Mono](https://www.mono-project.com/download/stable/)합니다. GTK # for.NET에 설치할 수 있습니다 사용 하 여 Windows를 [GTK # Installer](https://www.mono-project.com/download/stable/#download-win)합니다.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한 지침을 따릅니다.
 
@@ -110,7 +110,7 @@ GTK # 앱을 Windows 데스크톱에서 실행 되는 추가 하려면 이러한
 
     ![GTK # 게임 수명의](gtk-images/win/gtk-gameoflife.png "GTK # 게임 수명")
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 앱을 추가 하려면 GTK # Mac 데스크톱에서 실행 되는 이러한 지침을 따릅니다.
 

@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869990"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 17 장입니다. 눈금 마스터
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid) 자식 셀의 행과 열으로 정렬 하는 강력한 레이아웃 메커니즘입니다. 비슷한 HTML과는 달리 `table` 요소는 `Grid` 표시가 아니라 레이아웃의 용도로 됩니다.
 
@@ -108,4 +108,4 @@ XAML에서 이러한 값을 설정 하는 것에 대 한 다음과 같은 특성
 
 - [17 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [17 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [표](~/xamarin-forms/user-interface/layouts/grid.md)
+- [눈금](~/xamarin-forms/user-interface/layouts/grid.md)

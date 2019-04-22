@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870107"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
@@ -22,7 +22,7 @@ ms.locfileid: "58870107"
 
 **손전등** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Flashlight 및 Camera 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
@@ -51,11 +51,11 @@ Flashlight 및 Camera 권한이 필요하며 Android 프로젝트에서 구성�
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 추가 설정이 필요하지 않습니다.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 추가 설정이 필요하지 않습니다.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-### [<a name="android"></a>Android](#tab/android)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었습니다.
 
@@ -108,11 +108,11 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 
 카메라 표면 텍스처는 카메라 장치의 `FlashMode`을 켜거나 끄기 위해 만들어졌습니다. 
 
-### [<a name="ios"></a>iOS](#tab/ios)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](xref:AVFoundation.AVCaptureDevice)는 디바이스의 손전등 및 플래시 모드를 켜고 끄는 데 사용됩니다.
 
-### [<a name="uwp"></a>UWP](#tab/uwp)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [램프](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp)는 켜거나 끌 디바이스 뒷면에 있는 첫 번째 램프를 검색하는 데 사용됩니다.
 
@@ -121,4 +121,4 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 ## <a name="api"></a>API
 
 - [손전등 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [손전등 API 설명서](xref:Xamarin.Essentials.Flashlight)
+- [손전등 API 문서](xref:Xamarin.Essentials.Flashlight)

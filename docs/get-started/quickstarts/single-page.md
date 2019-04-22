@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855122"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 응용 프로그램 만들기
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
 
 이 빠른 시작에서는 배웁니다 방법:
 
@@ -160,7 +160,7 @@ ms.locfileid: "58855122"
 
     ![](single-page-images/vs/android-start.png "Visual Studio Android 도구 모음")
 
-    [![](single-page-images/vs/notes-android.png "Android Emulator의 노트")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Android 에뮬레이터에서 정보")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -310,7 +310,7 @@ ms.locfileid: "58855122"
 
     ![](single-page-images/vs/android-start.png "Visual Studio Android 도구 모음")
 
-    [![](single-page-images/vs/notes-android.png "Android Emulator의 노트")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Android 에뮬레이터에서 정보")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -480,7 +480,7 @@ ms.locfileid: "58855122"
 
 5. Mac용 Visual Studio 도구 모음에서 선택한 Android 에뮬레이터 안에 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-      [![](single-page-images/vsmac/notes-android.png "Android Emulator의 노트")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![](single-page-images/vsmac/notes-android.png "Android 에뮬레이터에서 정보")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -503,5 +503,5 @@ ms.locfileid: "58855122"
 
 ## <a name="related-links"></a>관련 링크
 
-- [메모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
 - [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)

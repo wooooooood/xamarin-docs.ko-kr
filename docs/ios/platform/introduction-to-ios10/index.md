@@ -1,5 +1,5 @@
 ---
-title: IOS 10 소개
+title: iOS 10 소개
 description: 이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 10에서에서 사용할 수 있는 기능을 소개합니다.
 ms.prod: xamarin
 ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870250"
 ---
-# <a name="introduction-to-ios-10"></a>IOS 10 소개
+# <a name="introduction-to-ios-10"></a>iOS 10 소개
 
 _이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 10에서에서 사용할 수 있는 기능을 소개합니다._
 
@@ -116,7 +116,7 @@ iOS 10과 통합 된 Xamarin.iOS 솔루션에서 메시지 앱 확장을 포함�
 
 IOS 10 사용 하 여 Apple 주요 잡지 및 블로거, 독립 게시자 등록 및 제품에 새 조직에서 허용 되며 Apple 뉴스 앱에 콘텐츠를 제공 합니다. 자세한 내용은 Apple의를 참조 하세요 [뉴스 리소스](https://newsresources.apple.com/) 설명서.
 
-## <a name="providing-haptic-feedback"></a>햅 틱 피드백 제공
+## <a name="providing-haptic-feedback"></a>햅틱 피드백 제공
 
 IPhone 7 및 iPhone의 7 및 Apple가 실제로 사용자를 참여 하는 다른 방법을 제공 하는 새 haptics 응답에 포함 합니다. 사용자의 주의 가져오고 해당 작업을 보강 새 tactile 피드백 옵션을 사용 합니다.
 

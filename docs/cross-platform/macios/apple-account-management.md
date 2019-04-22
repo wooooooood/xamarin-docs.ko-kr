@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855057"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
@@ -44,7 +44,7 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
 ## <a name="adding-an-apple-developer-account"></a>Apple 개발자 계정 추가
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 계정 관리 대화 상자를 열려면로 이동 **Visual Studio > 기본 설정 > Apple 개발자 계정**:
 
@@ -68,7 +68,7 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
     ![서명 id 및 프로 비전 프로필 컴퓨터 보기 세부 정보 화면 표시](apple-account-management-images/image6.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio 2019에 Apple ID 추가 시작 하기 전에 개발 환경 인지 확인 [Mac 빌드 호스트에 쌍을 이루는](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
 
@@ -109,11 +109,11 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
 옵션 드롭다운 목록에서 회색을 선택 하지 않은 경우이 유형의 인증서를 만드는 데 올바른 팀 권한 없는 것을 의미 합니다.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![인증서 옵션 만들기](apple-account-management-images/image8.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![인증서 옵션 만들기](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
 팀 정보 대화 상자는 또한 개발자 계정에 연결 하는 모든 프로 비전 프로필의 목록을 표시 합니다. 키를 눌러 로컬 컴퓨터에 모든 프로 비전 프로필을 다운로드할 수 있습니다 합니다 **모든 프로필 다운로드** 단추
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![프로 비전 프로필 섹션 다운로드](apple-account-management-images/image9.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![프로 비전 프로필 섹션 다운로드](apple-account-management-images/prov4.png)
 

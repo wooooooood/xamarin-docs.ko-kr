@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: e08324d5a905639e7ecd59bc4c7a5c0f02d0adfe
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854719"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
@@ -43,7 +43,7 @@ Xamarin.Android 9.0 Android 원형에 대 한 지원을 제공합니다. Android
 
 Xamarin.Android 사용 하 여 Android 원형 앱 개발 시작 하려면 다운로드 하며 첫 번째 Android 원형 프로젝트를 만들려면 먼저 최신 도구 및 SDK 패키지를 설치 합니다.
 
-1. Visual Studio 2019 것이 좋습니다. Visual Studio 2017를 사용 하는 경우 업데이트 [Visual Studio 2017 버전 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상. Visual Studio for Mac를 사용 하는 경우 업데이트 [버전 7.6(visual Mac 용 Visual Studio 2017](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상.
+1. Visual Studio 2019를 사용하는 것이 좋습니다. Visual Studio 2017를 사용 하는 경우 업데이트 [Visual Studio 2017 버전 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상. Visual Studio for Mac를 사용 하는 경우 업데이트 [버전 7.6(visual Mac 용 Visual Studio 2017](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 이상.
 
 2. 설치할 **Android 원형 (API 28)** 패키지 및 SDK 관리자를 통해 도구입니다.
 
@@ -67,11 +67,11 @@ Xamarin.Android 9.0을 사용 하 여 프로젝트를 만들려면 하면 먼저
 
 2. 오른쪽 모서리에서 기어 아이콘을 클릭 하 고 선택 **리포지토리 > Google (지원 되지 않음)**:
 
-    [![SGoogle 리포지토리 etting](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Google 리포지토리 설정](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. 설치를 **Android 원형** 으로 나열 된 SDK 패키지 **Android SDK 플랫폼 28** 에 **플랫폼** 탭 (SDK 관리자를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [ Android SDK 설치](~/android/get-started/installation/android-sdk.md)):
 
-    [![Installing Android 원형 패키지](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Android 원형 패키지 설치](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. 에뮬레이터를 사용 하는 경우를 지 원하는 가상 장치를 만드는 **API 수준 28**합니다. 가상 장치를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [가상 장치 관리 Android 장치 관리자를 사용 하 여](~/android/get-started/installation/android-emulator/device-manager.md)입니다.
 
@@ -111,7 +111,7 @@ Android 원형 다양 한 새 기능을 소개합니다. 이러한 새 기능 �
 Edge-에 지 화면을 사용 하 여 많은 최신 Android 장치에는 *잘라낸 표시* (또는 "등급") 카메라 및 스피커 디스플레이의 맨 위에 있는 합니다.
 다음 스크린 샷에서 잘라낸 부분 에뮬레이터 예제를 제공 합니다.
 
-[![A잘라낸 부분을 시뮬레이션 하는 ndroid 에뮬레이터](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![잘라낸 부분을 시뮬레이션 하는 android 에뮬레이터](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 앱 창 표시 잘라낸 부분을 사용 하 여 장치에서 해당 콘텐츠를 표시 하는 방법을 관리 하려면 Android 원형 새로 추가 했습니다 [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) 창 레이아웃 특성입니다. 이 특성은 다음 값 중 하나로 설정할 수 있습니다.
 
@@ -130,7 +130,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 다음 예제에서는 이러한 잘라낸 모드의 예제를 제공 합니다. 왼쪽의 첫 번째 스크린샷에서 비-전체 화면 모드에서 앱입니다. Center 스크린샷에서 앱 이동 전체 화면으로 `LayoutInDisplayCutoutMode` 로 `LayoutInDisplayCutoutModeShortEdges`합니다. 앱의 흰색 배경 표시 잘라낸 부분 영역에는 확장을 확인 합니다.
 
-[![E에뮬레이터에서 잘라낸 모드를 표시 하는 xample](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![예제는 에뮬레이터에서 잘라낸 모드를 표시 합니다.](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 최종 스크린샷의 (위의 오른쪽), `LayoutInDisplayCutoutMode` 로 설정 된 `LayoutInDisplayCutoutModeShortNever` 전체 화면으로 이동 하기 전에 합니다.
 앱의 흰색 배경 표시 오려낸 영역 안에 허용 되지 않음을 알 수 있습니다.
@@ -155,7 +155,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
 
 다음 예제에서는 새로운 Api를 사용 하 여 이미지를 포함 하는 알림을 생성 하는 방법을 보여 줍니다. 다음 스크린샷에서 텍스트 알림을 게시 되 고 포함 된 이미지를 사용 하 여 알림을 나옵니다. (처럼 오른쪽에) 알림을 확장 되어, 첫 번째 알림 텍스트를 표시 되 고 이미지에 포함 된 두 번째 알림을 확대 됩니다.
 
-[![E이미지를 사용 하 여 xample 알림](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![이미지를 사용 하 여 예제 알림](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 다음 예제 이미지는 Android 원형 알림을 포함 하는 방법 및 새 사용 방법을 보여 줍니다 `Person` 클래스:
 
@@ -211,7 +211,7 @@ Android 원형 메시징 환경을 개선 하기 위해 다음과 같은 향상 
 
 IEEE 802.11mc android 원형 지 (라고도 _WiFi Round 왕복 시간_ 또는 _WiFi RTT_), 하나는 거리를 검색 하는 앱에 대 한 수 있습니다 또는 Wi-fi 액세스 지점입니다. 이 정보를 사용 하는 것 활용 하기 위해 앱에 대 한 가능한 *실내 위치* 1-2 미터의 정확도 사용 하 여 합니다. IEEE 801.11mc에 대 한 하드웨어 지원을 제공 하는 Android 장치에서 앱 스마트 어플라이언스의 저장소를 통해 설정 하 여 설정 지침 위치 기반 컨트롤과 같은 탐색 기능을 제공할 수 있습니다.
 
-[![EWiFi RTT를 사용 하 여 실내 탐색 xample](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![WiFi RTT를 사용 하 여 실내 탐색의 예](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 새 [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) 클래스와 몇 가지 도우미 클래스 Wi-fi 장치로 거리를 측정 하기 위한 방법을 제공 합니다. Android P에 도입 된 실내 위치 Api에 대 한 자세한 내용은 참조 하세요. [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary)합니다.
 

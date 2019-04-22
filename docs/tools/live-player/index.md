@@ -7,10 +7,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2017
 ms.openlocfilehash: 5b969c6118d1fa23558efaabc87cd53a920f3490
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855044"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms 용 Xamarin Live Player
@@ -33,15 +33,15 @@ Xamarin Live Player 미리 보기에는 장치에 신속 하 게 시각화 자�
 3. Visual Studio로 장치 쌍에 QR 코드 스캔을 Live Player 장치를 관리 합니다.
 4. 휴대폰 이나 태블릿에 앱을 바로 실행 됩니다.
 
-## [<a name="xamarin-live-player-setup"></a>Xamarin Live Player 설치](install.md)
+## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin Live Player 설치](install.md)
 
 Xamarin Live Player를 다운로드 하 고 mac 용 Visual Studio 2017 또는 Visual Studio에서 Xamarin.Forms 앱을 사용 하 여 사용 하 여 IDE를 구성 합니다. 
 
-## [<a name="xamarin-live-player-app"></a>Xamarin Live Player 앱](player.md)
+## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 앱](player.md)
 
 Xamarin을 사용 하 여 플레이어 앱을 라이브입니다.
 
-## [<a name="troubleshooting"></a>문제 해결](troubleshooting.md)
+## <a name="troubleshootingtroubleshootingmd"></a>[문제 해결](troubleshooting.md)
 
 문제가 발생 하는 경우 도움말 찾기
 

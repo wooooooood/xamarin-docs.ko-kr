@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 5156259f8178da69595464f75a10cd8f41965519
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870328"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경
@@ -267,6 +267,6 @@ Ios 9에서 더 이상 발생이 자동 크기 조정 하 고 컨트롤 화면 �
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
-- [IOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
+- [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)
 - [개발자를 위한 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [새로운 iOS 9.0에서](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

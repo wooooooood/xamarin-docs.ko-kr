@@ -7,45 +7,42 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: e009ec60abc5afd06e43122424c325bbb1bf42ac
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d1e43d211f639c422bbed3a6afad9f2136551071
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668870"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59690292"
 ---
 # <a name="set-up-device-for-development"></a>개발용 디바이스 설정
 
-_이 아티클에서는 장치를 사용하여 Xamarin.Android 애플리케이션을 실행하고 디버깅할 수 있도록 Android 장치를 설정하고 컴퓨터에 연결하는 방법을 설명합니다._
+_이 문서에서는 디바이스를 사용하여 Xamarin.Android 애플리케이션을 실행하고 디버깅할 수 있도록 Android 디바이스를 설정하고 컴퓨터에 연결하는 방법을 설명합니다._
 
-지금까지 Android 에뮬레이터에서 실행되는 새 애플리케이션을 확인했으며, Android 장치에서 실행되는 것을 확인하려고 합니다. 디버깅을 위해 컴퓨터에 디바이스를 연결하는 것과 관련된 단계는 다음과 같습니다.
+Android 에뮬레이터에서 테스트한 후 Android 디바이스에서 실행 중인 앱을 보고 테스트해야 합니다. 디버깅을 위해 컴퓨터에 디바이스를 연결하는 것과 관련된 단계는 다음과 같습니다.
 
-1.  **장치에서 디버깅 사용** - 기본적으로 Android 장치에서 애플리케이션을 디버깅할 수 없습니다.
+1. **디바이스에서 디버깅 사용** - 기본적으로 Android 디바이스에서 애플리케이션을 디버깅할 수 없습니다.
 
-2.  **USB 드라이버 설치** - 이 단계는 OS X 컴퓨터에서 필요하지 않습니다. Windows 컴퓨터에는 USB 드라이버를 설치해야 합니다.
+2. **USB 드라이버 설치** - 이 단계는 macOS 컴퓨터에서 필요하지 않습니다. Windows 컴퓨터에는 USB 드라이버를 설치해야 합니다.
 
-3.  **컴퓨터에 디바이스 연결** -최종 단계에는 USB 또는 WiFi로 컴퓨터에 디바이스를 연결하는 것이 포함됩니다.
+3. **컴퓨터에 디바이스 연결** - 최종 단계에는 USB 또는 WiFi로 컴퓨터에 디바이스를 연결하는 것이 포함됩니다.
 
 이러한 각 단계는 아래 섹션에서 자세히 다룹니다.
-
 
 ## <a name="enable-debugging-on-the-device"></a>디바이스에서 디버깅 사용
 
 Android 장치를 사용하여 Android 애플리케이션을 테스트할 수 있습니다. 그러나 디버깅하기 전에 디바이스를 올바르게 구성해야 합니다. 포함된 단계는 디바이스에서 실행되는 Android 버전에 따라 약간 다릅니다.
 
-
 ### <a name="android-40-to-android-41"></a>Android 4.0부터 Android 4.1까지
 
 Android 4.0.x부터 Android 4.1.x까지는 다음과 같은 단계에서 디버깅을 사용합니다.
 
-1.  **설정** 화면으로 이동합니다.
-2.  **개발자 옵션**을 선택합니다.
-3.  **USB 디버깅** 옵션을 확인합니다.
+1. **설정** 화면으로 이동합니다.
+2. **개발자 옵션**을 선택합니다.
+3. **USB 디버깅** 옵션을 확인합니다.
 
 이 스크린샷에서는 Android 4.0.3을 실행하는 디바이스의 **개발자 옵션** 화면을 보여줍니다.
 
 [![개발자 옵션](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
-
 
 ### <a name="android-42-and-higher"></a>Android 4.2 이상
 
@@ -59,10 +56,9 @@ Android 4.2 이상 버전부터는 **개발자 옵션**이 기본적으로 숨�
 
 USB 디버깅 등 개발자 옵션을 사용하도록 설정하고 절전 모드를 유지하는 위치입니다.
 
-
 ## <a name="install-usb-drivers"></a>USB 드라이버 설치
 
-이 단계는 OS X에 필요하지 않습니다. USB 케이블을 사용하여 디바이스를 Mac에 연결하기만 하면 됩니다.
+이 단계는 macOS에 필요하지 않습니다. USB 케이블을 사용하여 디바이스를 Mac에 연결하기만 하면 됩니다.
 
 Windows 컴퓨터에서 USB로 연결된 Android 디바이스를 인식하기 전에 몇 가지 추가 드라이버를 설치해야 할 수도 있습니다.
 
@@ -71,8 +67,7 @@ Windows 컴퓨터에서 USB로 연결된 Android 디바이스를 인식하기 �
 
 **[Android SDK install path]\tools** 디렉터리에서 **android.bat** 애플리케이션을 실행합니다. 기본적으로 Xamarin.Android 설치 관리자는 Windows 컴퓨터의 다음과 같은 위치에 Android SDK를 배치합니다.
 
-    C:\Users\[username]\AppData\Local\Android\android-sdk
-
+`C:\Users\[username]\AppData\Local\Android\android-sdk`
 
 ### <a name="download-the-usb-drivers"></a>USB 드라이버를 다운로드합니다.
 
@@ -86,101 +81,103 @@ Google Nexus 디바이스(Galaxy Nexus 제외)에는 Google USB 드라이버가 
 **Google USB 드라이버** 상자를 확인하고 **설치** 단추를 클릭합니다.
 드라이버 파일은 다음 위치에 다운로드됩니다.
 
-    [Android SDK install path]\extras\google\usb\_driver
+`[Android SDK install path]\extras\google\usb\_driver`
 
 Xamarin.Android 설치의 기본 경로는 다음과 같습니다.
 
-    C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
-
-
+`C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver`
 
 ### <a name="installing-the-usb-driver"></a>USB 드라이버 설치
 
 USB 드라이버를 다운로드한 후에 설치해야 합니다.
 Windows 7에서 드라이버를 설치하려면:
 
-1.  USB 케이블을 사용하여 컴퓨터에 디바이스를 연결합니다.
+1. USB 케이블을 사용하여 컴퓨터에 디바이스를 연결합니다.
 
-2.  바탕 화면 또는 Windows 탐색기에서 컴퓨터를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택합니다.
+2. 바탕 화면 또는 Windows 탐색기에서 컴퓨터를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택합니다.
 
-3.  왼쪽 창에서 **디바이스**를 선택합니다.
+3. 왼쪽 창에서 **디바이스**를 선택합니다.
 
-4.  오른쪽 창에서 **기타 디바이스**를 찾아 확장합니다.
+4. 오른쪽 창에서 **기타 디바이스**를 찾아 확장합니다.
 
-5.  디바이스 이름을 마우스 오른쪽 단추로 클릭하고 **드라이버 소프트웨어 업데이트**를 선택합니다.
+5. 디바이스 이름을 마우스 오른쪽 단추로 클릭하고 **드라이버 소프트웨어 업데이트**를 선택합니다.
     하드웨어 업데이트 마법사를 시작합니다.
 
-6.  **컴퓨터에서 드라이버 소프트웨어 찾아보기**를 선택하고 **다음**을 클릭합니다.
+6. **내 컴퓨터에서 드라이버 소프트웨어 찾아보기**를 선택하고 **다음**을 클릭합니다.
 
-7.  **찾아보기**를 클릭하고 USB 드라이버 폴더를 찾습니다. Google USB 드라이버는 **[Android SDK 설치 경로]\extras\google\usb_driver**에 위치합니다.
+7. **찾아보기**를 클릭하고 USB 드라이버 폴더를 찾습니다. Google USB 드라이버는 **[Android SDK 설치 경로]\extras\google\usb_driver**에 위치합니다.
 
-8.  **다음**을 클릭하여 드라이버를 설치합니다.
-
+8. **다음**을 클릭하여 드라이버를 설치합니다.
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Windows 8에서 확인되지 않은 드라이버 설치
 
 Windows 8에서 확인되지 않은 드라이버를 설치하기 위해 추가 단계가 필요할 수 있습니다. 다음 단계에서는 Galaxy Nexus용 드라이버를 설치하는 방법에 대해 설명합니다.
 
-1.  **Windows 8 고급 부팅 옵션에 액세스** - 이 단계에는 고급 부팅 옵션에 액세스하기 위해 컴퓨터를 다시 부팅하는 작업이 포함됩니다. 명령줄 프롬프트를 시작하고 다음 명령을 사용하여 컴퓨터를 다시 부팅합니다.
+1. **Windows 8 고급 부팅 옵션에 액세스** - 이 단계에는 고급 부팅 옵션에 액세스하기 위해 컴퓨터를 다시 부팅하는 작업이 포함됩니다. 명령줄 프롬프트를 시작하고 다음 명령을 사용하여 컴퓨터를 다시 부팅합니다.
 
-        shutdown.exe /r /o
+    ```command
+    shutdown.exe /r /o
+    ```
 
-2.  **디바이스 연결** - 컴퓨터에 디바이스를 연결합니다.
+2. **디바이스 연결** - 컴퓨터에 디바이스를 연결합니다.
 
-3.  **디바이스 관리자 시작** - **devmgmt.msc**를 실행합니다. 그러면 위에 노란색 삼각형이 나열된 디바이스가 표시됩니다.
+3. **디바이스 관리자 시작** - **devmgmt.msc**를 실행합니다. 그러면 위에 노란색 삼각형이 나열된 디바이스가 표시됩니다.
 
-4.  **디바이스 드라이버 설치** - 위에 설명한 대로 디바이스 드라이버를 설치합니다.
-
-
+4. **디바이스 드라이버 설치** - 위에 설명한 대로 디바이스 드라이버를 설치합니다.
 
 ## <a name="connect-the-device-to-the-computer"></a>컴퓨터에 디바이스 연결
 
 마지막 단계는 컴퓨터에 디바이스를 연결하는 것입니다. 여기에는 두 가지 방법이 있습니다.
 
--   **USB 케이블** - 가장 쉽고 일반적인 방법입니다. 디바이스에 USB 케이블을 연결한 다음, 컴퓨터에 연결하면 됩니다.
+- **USB 케이블** - 가장 쉽고 일반적인 방법입니다. 디바이스에 USB 케이블을 연결한 다음, 컴퓨터에 연결하면 됩니다.
 
--   **WiFi** - USB 케이블을 사용하지 않고 WiFi를 통해 컴퓨터에 Android 디바이스를 연결할 수 있습니다. 이 기술은 약간 더 많은 노력이 필요하지만 USB 케이블이 없거나 디바이스가 USB 케이블에서 멀리 떨어져 있는 경우에 유용할 수 있습니다. WiFi를 통한 연결은 다음 섹션에서 설명합니다.
-
+- **WiFi** - USB 케이블을 사용하지 않고 WiFi를 통해 컴퓨터에 Android 디바이스를 연결할 수 있습니다. 이 기술은 좀 더 많은 노력이 필요하지만 디바이스가 컴퓨터에서 너무 멀리 떨어져 있어 케이블을 통해 지속적으로 플러그 인되어 있을 때 유용할 수 있습니다. WiFi를 통한 연결은 다음 섹션에서 설명합니다.
 
 ### <a name="connecting-over-wifi"></a>WiFi를 통한 연결
 
 기본적으로 *ADB*([Android Debug Bridge](https://developer.android.com/tools/help/adb.html))는 USB를 통해 Android 디바이스와 통신하도록 구성됩니다. USB 대신 TCP/IP를 사용하도록 다시 구성할 수 있습니다. 이렇게 하려면 디바이스와 컴퓨터가 모두 동일한 WiFi 네트워크에 위치해야 합니다. 명령줄에서 다음 단계를 통해 WiFi 문제를 디버깅하도록 환경을 설정하려면:
 
-1.  Android 디바이스의 IP 주소를 확인합니다. IP 주소를 확인하려면 **설정 &gt; Wi-Fi**를 찾은 다음, 디바이스를 연결할 WiFi 네트워크를 누릅니다. 그러면 아래 스크린샷에 표시된 것과 비슷하게 네트워크 연결에 대한 정보를 보여주는 설정 화면이 표시됩니다.
+1. Android 디바이스의 IP 주소를 확인합니다. IP 주소를 확인하려면 **설정 &gt; Wi-Fi**를 찾은 다음, 디바이스를 연결할 WiFi 네트워크를 누릅니다. 그러면 아래 스크린샷에 표시된 것과 비슷하게 네트워크 연결에 대한 정보를 보여주는 설정 화면이 표시됩니다.
 
     ![IP 주소](set-up-device-for-development-images/ip-settings.png)
 
     일부 버전의 Android에서는 IP 주소가 표시되지 않습니다. 하지만 대신 **설정 > 휴대폰 정보 > 상태** 아래에서 찾을 수 있습니다.
 
-2.  USB를 통해 Android 디바이스를 컴퓨터에 연결합니다.
+2. USB를 통해 Android 디바이스를 컴퓨터에 연결합니다.
 
-3.  다음으로 5555 포트에서 TCP를 사용하도록 ADB를 다시 시작합니다. 명령 프롬프트에서 다음 명령을 입력합니다.
+3. 다음으로 5555 포트에서 TCP를 사용하도록 ADB를 다시 시작합니다. 명령 프롬프트에서 다음 명령을 입력합니다.
 
-        adb tcpip 5555
+    ```command
+    adb tcpip 5555
+    ```
 
     이 명령이 실행된 후에 컴퓨터에서는 USB를 통해 연결된 디바이스를 수신할 수 없습니다.
 
-4.  디바이스를 컴퓨터에 연결하는 USB 케이블을 분리합니다.
+4. 디바이스를 컴퓨터에 연결하는 USB 케이블을 분리합니다.
 
-5.  위의 1단계에서 지정된 포트의 Android 디바이스에 연결할 수 있도록 ADB를 구성합니다.
+5. 위의 1단계에서 지정된 포트의 Android 디바이스에 연결할 수 있도록 ADB를 구성합니다.
 
-        adb connect 192.168.1.28:5555
+    ```command
+    adb connect 192.168.1.28:5555
+    ```
 
     이 명령이 완료되면 Android 디바이스는 WiFi를 통해 컴퓨터에 연결되어 있습니다.
 
 WiFi를 통해 디버깅을 완료하면 다음 명령을 사용하여 ADB를 USB 모드로 다시 설정할 수 있습니다.
 
-    adb usb
+```command
+adb usb
+```
 
 컴퓨터에 연결되는 디바이스를 나열하도록 ADB에 요청할 수 있습니다. 디바이스가 연결되는 방식에 관계 없이 명령 프롬프트에서 다음 명령을 실행하여 연결된 항목을 확인할 수 있습니다.
 
-    adb devices
-
+```command
+adb devices
+```
 
 ## <a name="summary"></a>요약
 
 이 문서는 디바이스에서 디버깅을 사용하여 개발할 Android 디바이스를 구성하는 방법을 설명합니다. USB 또는 WiFi 중 하나를 사용하여 컴퓨터에 디바이스를 연결하는 방법을 설명합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -8,15 +8,15 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855031"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
-_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 모든 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다._
 
 Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 장치 서비스 등과 같은 플랫폼 기능을 애플리케이션에 더 깊이 통합할 수 있습니다.
 이러한 기능은 Xamarin.iOS 프로젝트에 사용할 수 있습니다. 전체 서비스 목록은 아래에 설명되어 있습니다.
@@ -72,7 +72,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 
@@ -92,7 +92,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
     ![entitlements.plist 파일에 기능 추가](images/image18.png)
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 기능은 **Entitlements.plist**에 추가됩니다. Visual Studio 2019에서 기능을 추가하려면 다음 단계를 사용합니다.
 

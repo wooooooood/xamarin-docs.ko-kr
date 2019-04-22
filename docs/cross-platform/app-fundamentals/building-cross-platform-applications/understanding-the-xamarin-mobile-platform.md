@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: f5008d4986baa0575030e077b66b69ec0a4fad00
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854420"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>파트 1-Xamarin Mobile Platform 이해
@@ -172,6 +172,6 @@ public static extern Result Open (string filename, out IntPtr db);
 이 iOS 및 Android에서 native C 언어 SQLite 구현에 바인딩합니다.
 기존 C API를 사용 하 여 친숙 한 개발자는 집합을 생성할 수 있습니다 C# 네이티브 API에 매핑 기존 플랫폼 코드를 활용 하는 클래스입니다. 에 대 한 설명서는 [네이티브 라이브러리 연결](~/ios/platform/native-interop.md) Xamarin.iOS, Xamarin.Android에 유사한 원칙이 적용 됩니다.
 
-### <a name="c-via-cppsharp"></a>CppSharp 통해 c + +
+### <a name="c-via-cppsharp"></a>C++CppSharp 통해
 
-Miguel CXXI 설명 (현재의 [CppSharp](https://github.com/mono/CppSharp))에서 자신의 [블로그](https://tirania.org/blog/archive/2011/Dec-19.html)합니다. C + + 라이브러리를 직접 바인딩 대신 C 래퍼를 만들고 바인딩하는 P/Invoke를 통해 야 합니다.
+Miguel CXXI 설명 (현재의 [CppSharp](https://github.com/mono/CppSharp))에서 자신의 [블로그](https://tirania.org/blog/archive/2011/Dec-19.html)합니다. 바인딩할 대신은 C++ 라이브러리는 C 래퍼를 만들고에 바인딩하는 P/Invoke를 통해 직접는 합니다.

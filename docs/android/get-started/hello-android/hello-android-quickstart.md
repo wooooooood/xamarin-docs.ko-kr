@@ -10,21 +10,21 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
 ms.openlocfilehash: 71343aa69cc7fa34fb716ea39454e6437a64169f
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855083"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
 _두 부분으로 구성된 이 가이드에서는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 애플리케이션을 빌드하고, Xamarin을 사용하여 Android 애플리케이션 개발에 대한 기본 사항을 이해하기 시작합니다._
 
-[![D샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/monodroid/Phoneword/)
 
 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 해당 숫자 전화 번호를 사용자에게 표시하는 애플리케이션을 만듭니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![S완료 시 앱 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+[![완료 시 앱 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
 ::: zone pivot="windows"
 
@@ -64,18 +64,18 @@ Visual Studio를 시작합니다. **파일 > 새로 만들기 > 프로젝트**�
 **새 프로젝트** 대화 상자에서 **Android 앱** 템플릿을 클릭합니다.
 새 프로젝트 이름을 `Phoneword`로 지정하고 **확인**을 클릭합니다.
 
-[![N새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/01-new-project-name-w158-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w158.png#lightbox)
+[![새 프로젝트는 Phoneword입니다.](hello-android-quickstart-images/vs/01-new-project-name-w158-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w158.png#lightbox)
 
 **새 Android 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고 **확인**을 클릭하여 새 프로젝트를 만듭니다.
 
-[![S비어 있는 앱 템플릿 선택](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
+[![비어 있는 앱 템플릿 선택](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
 
 ## <a name="create-a-layout"></a>레이아웃 만들기
 
 새 프로젝트를 만든 후에 **솔루션 탐색기**에서 **리소스** 폴더 및 **레이아웃** 폴더를 차례로 확장합니다.
 **activity_main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. 앱의 화면에 대한 레이아웃 파일입니다.
 
-[![Oactivity axml 파일 열기](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+[![activity axml 파일 열기](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
 
 > [!TIP]
 > Visual Studio의 최신 릴리스는 약간 다른 앱 템플릿을 포함합니다.
@@ -85,35 +85,35 @@ Visual Studio를 시작합니다. **파일 > 새로 만들기 > 프로젝트**�
 
 **도구 상자**(왼쪽 영역)에서 검색 표시줄에 `text`을 입력하고,**큰 텍스트** 위젯을 디자인 화면(가운데 영역)으로 끌어옵니다.
 
-[![A큰 텍스트 위젯 추가](hello-android-quickstart-images/vs/04-large-text-w158-sml.png)](hello-android-quickstart-images/vs/04-large-text-w158.png#lightbox)
+[![큰 텍스트 위젯 추가](hello-android-quickstart-images/vs/04-large-text-w158-sml.png)](hello-android-quickstart-images/vs/04-large-text-w158.png#lightbox)
 
 디자인 화면에서 선택한 **큰 텍스트** 컨트롤에서 **속성** 창을 사용하여 **큰 텍스트** 위젯의 `Text` 속성을 `Enter a Phoneword:`로 변경합니다.
 
-[![S큰 텍스트 속성 설정](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
+[![큰 텍스트 속성 설정](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158-sml.png)](hello-android-quickstart-images/vs/05-enter-a-phoneword-w158.png#lightbox)
 
 **도구 상자**에서 **일반 텍스트** 위젯을 디자인 화면으로 끌어와서 **큰 텍스트** 위젯 아래에 놓습니다. 위젯을 사용할 수 있는 레이아웃의 위치로 마우스 포인터를 이동할 때가지 위젯을 배치할 수 없습니다. 아래 스크린샷에서 마우스 포인터를 이전의 `TextView` 바로 아래로 이동할 때까지(오른쪽과 같이) 위젯을 배치할 수 없습니다(왼쪽과 같이).
 
-[![M마우스는 위젯을 어디에 배치할 수 있는지 나타냅니다.](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
+[![마우스는 위젯을 어디에 배치할 수 있는지 나타냅니다.](hello-android-quickstart-images/vs/06a-cant-drop-w158-sml.png)](hello-android-quickstart-images/vs/06a-cant-drop-w158.png#lightbox)
 
 **일반 텍스트**(`EditText` 위젯)가 올바르게 배치되면 다음 스크린샷에 표시된 것처럼 나타납니다.
 
-[![A일반 텍스트 위젯 추가](hello-android-quickstart-images/vs/06b-plain-text-w158-sml.png)](hello-android-quickstart-images/vs/06b-plain-text-w158.png#lightbox)
+[![일반 텍스트 위젯 추가](hello-android-quickstart-images/vs/06b-plain-text-w158-sml.png)](hello-android-quickstart-images/vs/06b-plain-text-w158.png#lightbox)
 
 디자인 화면에서 선택한 **일반 텍스트** 위젯에서 **속성** 창을 사용하여 **일반 텍스트** 위젯의 `Id` 속성을 `@+id/PhoneNumberText`로 변경하고 `Text` 속성을 `1-855-XAMARIN`로 변경합니다.
 
-[![S일반 텍스트 속성 설정](hello-android-quickstart-images/vs/07-add-properties-w158-sml.png)](hello-android-quickstart-images/vs/07-add-properties-w158.png#lightbox)
+[![일반 텍스트 속성 설정](hello-android-quickstart-images/vs/07-add-properties-w158-sml.png)](hello-android-quickstart-images/vs/07-add-properties-w158.png#lightbox)
 
 **도구 상자**에서 **단추**를 디자인 화면으로 끌어와서 **일반 텍스트** 위젯 아래에 놓습니다.
 
-[![D디자인에 변환 단추 끌어오기](hello-android-quickstart-images/vs/08-drag-button-w158-sml.png)](hello-android-quickstart-images/vs/08-drag-button-w158.png#lightbox)
+[![디자인에 변환 단추 끌어오기](hello-android-quickstart-images/vs/08-drag-button-w158-sml.png)](hello-android-quickstart-images/vs/08-drag-button-w158.png#lightbox)
 
 디자인 화면에서 선택한 **단추**에서 **속성** 창을 사용하여 `Text` 속성을 `Translate`으로 변경하고 `Id` 속성을 `@+id/TranslateButton`로 변경합니다.
 
-[![S변환 단추 속성 설정](hello-android-quickstart-images/vs/09-translate-button-w158-sml.png)](hello-android-quickstart-images/vs/09-translate-button-w158.png#lightbox)
+[![변환 단추 속성 설정](hello-android-quickstart-images/vs/09-translate-button-w158-sml.png)](hello-android-quickstart-images/vs/09-translate-button-w158.png#lightbox)
 
 **도구 상자**에서 **TextView**를 디자인 화면으로 끌어와서 **단추** 위젯 아래에 놓습니다. **TextView**의 `Text` 속성을 빈 문자열로 변경하고 `Id` 속성을 `@+id/TranslatedPhoneword`로 설정합니다.
 
-[![S텍스트 보기에서 속성 설정](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)
+[![텍스트 보기에서 속성 설정](hello-android-quickstart-images/vs/10-textview-properties-w158-sml.png)](hello-android-quickstart-images/vs/10-textview-properties-w158.png#lightbox)
 
 **CTRL+S** 키를 눌러 작업을 저장합니다.
 
@@ -121,11 +121,11 @@ Visual Studio를 시작합니다. **파일 > 새로 만들기 > 프로젝트**�
 
 다음 단계는 전화 번호를 영숫자에서 숫자로 변환하는 코드를 추가하는 것입니다. **솔루션 탐색기**에서 **Phoneword** 프로젝트를 마우스 오른쪽 단추로 클릭하고, 아래에 표시된 대로 **추가 > 새 항목...** 을 선택하여 프로젝트에 새 파일을 추가합니다.
 
-[![A새 항목 추가](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
+[![새 항목 추가](hello-android-quickstart-images/vs/12-add-new-item-w158-sml.png)](hello-android-quickstart-images/vs/12-add-new-item-w158.png#lightbox)
 
 **새 항목 추가** 대화 상자에서 **Visual C# > 코드 > 코드 파일**을 선택하고, 새 코드 파일에 **PhoneTranslator.cs**라는 이름을 지정합니다.
 
-[![APhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-w158-sml.png)](hello-android-quickstart-images/vs/14-add-class-w158.png#lightbox)
+[![PhoneTranslator.cs 추가](hello-android-quickstart-images/vs/14-add-class-w158-sml.png)](hello-android-quickstart-images/vs/14-add-class-w158.png#lightbox)
 
 그러면 비어 있는 새 C# 클래스가 만들어집니다. 다음 코드를 파일에 삽입합니다.
 
@@ -268,7 +268,7 @@ translateButton.Click += (sender, e) =>
 Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하여 테스트합니다.
 **좌표 이동** 단추를 눌러 **1-855-XAMARIN**을 전화 번호로 변환합니다.
 
-[![S실행 중인 앱의 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
+[![실행 중인 앱의 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
 
 Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
 
@@ -281,11 +281,11 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 
 **새 프로젝트의 템플릿 선택** 대화 상자에서 **Android > 앱**을 클릭하고 **Android 앱** 템플릿을 선택합니다. **다음**을 클릭합니다.
 
-[![CAndroid 앱 템플릿 선택](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
+[![Android 앱 템플릿 선택](hello-android-quickstart-images/xs/03-choose-template-sml.png)](hello-android-quickstart-images/xs/03-choose-template.png#lightbox)
 
 **Android 앱 구성** 대화 상자에서 새 앱의 이름을 `Phoneword`으로 지정하고 **다음**을 클릭합니다.
 
-[![CAndroid 앱 구성](hello-android-quickstart-images/xs/04-configure-android-app-sml.png)](hello-android-quickstart-images/xs/04-configure-android-app.png#lightbox)
+[![Android 앱 구성](hello-android-quickstart-images/xs/04-configure-android-app-sml.png)](hello-android-quickstart-images/xs/04-configure-android-app.png#lightbox)
 
 **새 Android 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 `Phoneword`로 설정해 두고 **만들기**를 클릭하여 프로젝트를 만듭니다.
 
@@ -294,37 +294,37 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 새 프로젝트를 만든 후에 **솔루션** 패드에서 **리소스** 폴더 및 **레이아웃** 폴더를 차례로 확장합니다.
 **Main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. Android Designer에서 볼 때 화면에 대한 레이아웃 파일입니다.
 
-[![OMain.axml 열기](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
+[![Main.axml 열기](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
 **Hello World, 클릭하세요.** 를 선택합니다. 디자인 화면의 **단추** 및 **삭제** 키를 눌러서 제거합니다. 
 
 **도구 상자**(오른쪽 영역)에서 검색 표시줄에 `text`을 입력하고,**큰 텍스트** 위젯을 디자인 화면(가운데 영역)으로 끌어옵니다.
 
-[![A큰 텍스트 위젯 추가](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png#lightbox)
+[![큰 텍스트 위젯 추가](hello-android-quickstart-images/xs/06-large-text-sml.png)](hello-android-quickstart-images/xs/06-large-text.png#lightbox)
 
 디자인 화면에서 선택한 **큰 텍스트** 위젯에서 **속성** 패드를 사용하여 다음과 같이 **큰 텍스트** 위젯의 `Text` 속성을 `Enter a Phoneword:`로 변경할 수 있습니다.
 
-[![S큰 텍스트 위젯 속성 설정](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
+[![큰 텍스트 위젯 속성 설정](hello-android-quickstart-images/xs/07-enter-a-phoneword-sml.png)](hello-android-quickstart-images/xs/07-enter-a-phoneword.png#lightbox)
 
 다음으로 **도구 상자**에서 **일반 텍스트** 위젯을 디자인 화면으로 끌어와서 **큰 텍스트** 위젯 아래에 놓습니다. 필드를 사용하여 위젯을 이름으로 찾을 수 있습니다.
 
-[![A일반 텍스트 위젯 추가](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
+[![일반 텍스트 위젯 추가](hello-android-quickstart-images/xs/08-plain-text-sml.png)](hello-android-quickstart-images/xs/08-plain-text.png#lightbox)
 
 디자인 화면에서 선택한 **일반 텍스트** 위젯에서 **속성** 패드를 사용하여 **일반 텍스트** 위젯의 `Id` 속성을 `@+id/PhoneNumberText`로 변경하고 `Text` 속성을 `1-855-XAMARIN`로 변경할 수 있습니다.
 
-[![S일반 텍스트 위젯 속성 설정](hello-android-quickstart-images/xs/09-add-properties-sml.png)](hello-android-quickstart-images/xs/09-add-properties.png#lightbox)
+[![일반 텍스트 위젯 속성 설정](hello-android-quickstart-images/xs/09-add-properties-sml.png)](hello-android-quickstart-images/xs/09-add-properties.png#lightbox)
 
 **도구 상자**에서 **단추**를 디자인 화면으로 끌어와서 **일반 텍스트** 위젯 아래에 놓습니다.
 
-[![A단추 추가](hello-android-quickstart-images/xs/10-drag-button-sml.png)](hello-android-quickstart-images/xs/10-drag-button.png#lightbox)
+[![단추 추가](hello-android-quickstart-images/xs/10-drag-button-sml.png)](hello-android-quickstart-images/xs/10-drag-button.png#lightbox)
 
 디자인 화면에서 선택한 **단추**에서 **속성** 패드를 사용하여 **단추**의 `Id` 속성을 `@+id/TranslateButton`로 변경하고 `Text` 속성을 `Translate`로 변경할 수 있습니다.
 
-[![C변환 단추로 구성](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png#lightbox)
+[![변환 단추로 구성](hello-android-quickstart-images/xs/11-translate-button-sml.png)](hello-android-quickstart-images/xs/11-translate-button.png#lightbox)
 
 **도구 상자**에서 **TextView**를 디자인 화면으로 끌어와서 **단추** 위젯 아래에 놓습니다. **TextView**를 선택하여 **TextView**의 `id` 속성을 `@+id/TranslatedPhoneWord`로 설정하고 `text`를 빈 문자열로 변경합니다.
 
-[![S텍스트 보기에서 속성 설정](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
+[![텍스트 보기에서 속성 설정](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
 
 **&#8984; + S** 키를 눌러 작업을 저장합니다.
 
@@ -332,7 +332,7 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 
 이제 전화 번호를 영숫자에서 숫자로 변환하는 코드 추가합니다. **솔루션** 패드에서 **Phoneword** 프로젝트의 옆에 있는 기어 아이콘을 클릭하고 **추가 > 새 파일...** 을 선택하하여 프로젝트에 새 파일을 추가합니다.
 
-[![A프로젝트에 새 파일 추가](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
+[![프로젝트에 새 파일 추가](hello-android-quickstart-images/xs/14-add-new-file-sml.png)](hello-android-quickstart-images/xs/14-add-new-file.png#lightbox)
 
 **새 파일** 대화 상자에서 **General > Empty Class**를 선택하고, 새 파일에 **PhoneTranslator**라는 이름을 지정하고 **새로 만들기**를 클릭합니다. 이렇게 하면 비어 있는 새 C# 클래스가 만들어집니다.
 
@@ -489,31 +489,31 @@ namespace Phoneword
 
 이러한 아이콘 파일을 각 프로젝트에서 삭제해야 합니다. 각 **Icon.png** 파일을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **제거**를 선택합니다.
 
-[![D기본 Icon.png 삭제](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png#lightbox)
+[![기본 Icon.png 삭제](hello-android-quickstart-images/xs/23-delete-icon-sml.png)](hello-android-quickstart-images/xs/23-delete-icon.png#lightbox)
 
 대화 상자에서 **삭제** 단추를 클릭합니다.
 
 다음으로 [Xamarin 앱 아이콘 설정](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)을 다운로드하고 압축을 풉니다. 이 zip 파일은 애플리케이션에 대한 아이콘을 보관합니다. 각 아이콘은 시각적으로 거의 동일하지만 다양한 화면 밀도를 가진 다양한 디바이스에서 다른 해상도로 올바르게 렌더링합니다.  파일 집합을 Xamarin.Android 프로젝트에 복사해야 합니다. Mac용 Visual Studio의 **Solution Pad**에서 **mipmap-hdpi** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가 > 파일 추가**를 선택합니다.
 
-[![A파일 추가](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png#lightbox)
+[![파일 추가](hello-android-quickstart-images/xs/24-add-files-sml.png)](hello-android-quickstart-images/xs/24-add-files.png#lightbox)
 
 선택 영역 대화 상자에서 압축을 푼 Xamarin AdApp 아이콘 디렉터리로 이동하고 **mipmap-hdpi** 폴더를 엽니다. **Icon.png**를 선택하고 **열기**를 클릭합니다.
 
 **폴더에 파일 추가** 대화 상자에서 **디렉터리에 파일 복사**를 선택하고 **확인**을 클릭합니다.
 
-[![C디렉터리 대화 상자에 파일 복사](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
+[![디렉터리 대화 상자에 파일 복사](hello-android-quickstart-images/xs/26-copy-to-directory-sml.png)](hello-android-quickstart-images/xs/26-copy-to-directory.png#lightbox)
 
 **Phoneword** 프로젝트에서 **mipmap-** Xamarin 앱 아이콘 폴더의 콘텐츠를 해당하는 **mipmap-** 폴더에 복사할 때까지 **mipmap-** 폴더의 각각에 대해 이러한 단계를 반복합니다.
 
-모든 아이콘을 Xamarin.Android 프로젝트에 복사한 후에 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다. **빌드 &gt; Android 애플리케이션**을 선택하고 **애플리케이션 아이콘** 콤보 상자에서 `@mipmap/icon`을 선택합니다.
+모든 아이콘을 Xamarin.Android 프로젝트에 복사한 후에 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다. **빌드 > Android 응용 프로그램**을 선택하고 **응용 프로그램 아이콘** 콤보 상자에서 `@mipmap/icon`을 선택합니다.
 
-[![S프로젝트 아이콘 설정](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
+[![프로젝트 아이콘 설정](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
 
 ## <a name="run-the-app"></a>앱 실행
 
 마지막으로 Android 장치 또는 에뮬레이터에서 애플리케이션을 실행하고 Phoneword를 변환하여 테스트합니다.
 
-[![S완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
+[![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 방법을 참조하세요.
 

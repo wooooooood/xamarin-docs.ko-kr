@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/16/2018
 ms.openlocfilehash: eb6be5cd77dddad553376d18808092c6566021bc
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854680"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>iOS 개발을 위한 Visual Studio 구성

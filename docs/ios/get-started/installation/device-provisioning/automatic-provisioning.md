@@ -9,10 +9,10 @@ ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855174"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
@@ -21,12 +21,12 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="requirements"></a>요구 사항
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - Mac용 Visual Studio 7.3 이상
 - Xcode 9 이상
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Visual Studio 2019
 - 또는 Visual Studio 2017 버전 15.7(이상)
@@ -55,7 +55,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수행합니다.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac용 Visual Studio에서 iOS 프로젝트를 엽니다.
 
@@ -73,7 +73,7 @@ IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수�
 
     자동 서명이 실패하면 **자동 서명 패드**에 오류의 원인이 표시됩니다.
 
-# [<a name="visual-studio"></a>Visual Studio](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드에 설명된 대로 Mac에 Visual Studio 2019를 페어링합니다.
 

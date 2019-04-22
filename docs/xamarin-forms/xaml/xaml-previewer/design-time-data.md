@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866360"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기를 사용 하 여 디자인 타임 데이터를 사용 하 여
@@ -36,7 +36,7 @@ mc:Ignorable="d"
 <Label Text={Binding Name} d:Text="Name" />
 ```
 
-[![D레이블의 텍스트를 사용 하 여 설계 시간 데이터](xaml-previewer-images/designtimedata-label-sm.png "디자인 시간 텍스트를 사용 하 여 데이터 레이블")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[![디자인 타임 데이터 레이블의 텍스트를 사용 하 여](xaml-previewer-images/designtimedata-label-sm.png "디자인 시간 텍스트를 사용 하 여 데이터 레이블")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
  이 예제에서는 없이 `d:Text`, XAML 미리 보기는 레이블에 대 한 아무 것도 표시 됩니다. 대신, 표시 "Name" 레이블을 런타임에 실제 데이터를가 됩니다.
 
@@ -46,7 +46,7 @@ mc:Ignorable="d"
 <d:Button Text="Design Time Button" />
 ```
 
-[![D단추 컨트롤을 사용 하 여 시간 데이터를 설계](xaml-previewer-images/designtimedata-controls-sm.png "단추 컨트롤을 사용 하 여 시간 데이터를 디자인 합니다.")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[![단추 컨트롤을 사용 하 여 시간 데이터를 디자인할](xaml-previewer-images/designtimedata-controls-sm.png "단추 컨트롤을 사용 하 여 시간 데이터를 디자인 합니다.")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 이 예제에서는 단추 디자인 타임에만 표시 됩니다. 이 메서드를 사용 하 여 자리 표시자에 배치 된 [XAML 미리 보기에서 지원 되지 않습니다 사용자 지정 컨트롤](render-custom-controls.md)합니다.
 
@@ -57,7 +57,7 @@ mc:Ignorable="d"
 ```csharp
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
-[![D이미지를 사용 하 여 설계 시간 데이터](xaml-previewer-images/designtimedata-image-sm.png "iamges 사용 하 여 시간 데이터를 디자인 합니다.")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[![이미지를 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-image-sm.png "iamges 사용 하 여 시간 데이터를 디자인 합니다.")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Listview에 대 한 디자인 타임 데이터
 
@@ -83,7 +83,7 @@ Listview는 모바일 앱에서 데이터를 표시 하는 인기 있는 방법�
 </StackLayout>
 ```
 
-[![D시간 데이터를 ListView 사용 하 여 설계](xaml-previewer-images/designtimedata-itemssource-sm.png "디자인 타임 데이터를 ListView 사용 하 여")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[![디자인 타임 데이터를 ListView 사용 하 여](xaml-previewer-images/designtimedata-itemssource-sm.png "디자인 타임 데이터를 ListView 사용 하 여")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
 이 예제는 세 가지 TextCells의 ListView XAML 미리 보기에서 표시 됩니다. 변경할 수 있습니다 `x:String` 프로젝트에서 기존 데이터 모델에 있습니다.
 

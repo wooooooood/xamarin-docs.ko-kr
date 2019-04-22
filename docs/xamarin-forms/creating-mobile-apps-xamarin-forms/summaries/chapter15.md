@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870120"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>요약 15 장입니다. 대화형 인터페이스
 
-[![Download 샘플](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 이 챕터에서는 8 `View` 파생형을 사용자와 상호 작용을 허용 합니다.
 
@@ -246,6 +246,6 @@ Xamarin.Forms는 사용자가 입력 하 고 텍스트를 편집할 수 있는 �
 - [15 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [15 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 - [슬라이더](~/xamarin-forms/user-interface/slider.md)
-- [입력](~/xamarin-forms/user-interface/text/entry.md)
+- [항목](~/xamarin-forms/user-interface/text/entry.md)
 - [편집기](~/xamarin-forms/user-interface/text/editor.md)
 - [DatePicker](~/xamarin-forms/user-interface/datepicker.md)

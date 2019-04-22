@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
 ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870178"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Xamarin.iOS에서 Objective-c 선택기
 
 Objective C 언어를 기반으로 *선택기*합니다. 선택기는 개체에 보낼 수 있는 메시지 또는 *클래스*합니다. [Xamarin.iOS](~/ios/internals/api-design/index.md) 맵 인스턴스 메서드에 선택기 인스턴스 및 정적 메서드를 선택기 클래스입니다.
 
-일반 C 함수와 달리 (및 c + + 멤버 함수와 마찬가지로)을 호출할 수 없습니다 직접 사용 하 여 선택기 [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) 대신 선택기 Objective-c 클래스에 보내거나를 사용 하 여 인스턴스를 [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
+일반 C 함수와 달리 (및 C++ 멤버 함수)를 사용 하 여 선택기를 직접 호출할 수 없습니다 [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) 대신 선택기 Objective-c 클래스에 보내거나 인스턴스에서 사용 하 여는 [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 함수입니다.
 
 Objective C에서 메시지에 대 한 자세한 내용은 살펴보겠습니다 Apple [개체를 사용 하 여 작업](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) 가이드입니다.
