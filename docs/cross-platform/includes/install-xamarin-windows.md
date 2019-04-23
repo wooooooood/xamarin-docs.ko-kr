@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 5fccbcf56037b4c4538ccfa16515ea63aa53c57c
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59041636"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60118697"
 ---
 Xamarin은 다음 단계에 따라 _새로운_ Visual Studio 2017 설치의 일부로 설치할 수 있습니다.
 

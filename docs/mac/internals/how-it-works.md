@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac의 작동 원리
+title: Xamarin.Mac 작동 방법
 description: 이 문서에서는 Xamarin.Mac의 내부 작업을 설명 합니다. 특히, 생성자, 미리 컴파일, 메모리 관리 및 등록 기관에 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/25/2017
-ms.openlocfilehash: cd5371cde1dfcbe3cb1aea5dbdf8439816d66d95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0635e110cb2aa7bc00234d3d06df57e0fd6f966e
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111319"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893233"
 ---
-# <a name="how-xamarinmac-works"></a>Xamarin.Mac의 작동 원리
+# <a name="how-xamarinmac-works"></a>Xamarin.Mac 작동 방법
 
 그러나 대부분의 개발자는 걱정할 필요가 없습니다를 내부 "매직" xamarin.mac,에 대 한 것으로 해석 모두 기존 문서의 내부적인 작업 작동 방법을 대 한 대략적인 이해는 C# 렌즈 및 디버깅 문제가 발생 하는 경우입니다.
 
-Xamarin.Mac에서 응용 프로그램 연결 두 세계: 네이티브 클래스의 인스턴스를 포함 하는 기반 Objective-c 런타임에서 (`NSString`, `NSApplication`등) 한지를 C# 관리 되는 클래스의 인스턴스를 포함 하는 런타임 (`System.String` 를 `HttpClient`등). 이 두 환경을 사이 Xamarin.Mac 만들므로 양방향 브리지 앱 Objective C에서 (선택기) 메서드를 호출할 수 있습니다 (같은 `NSApplication.Init`) Objective-c로 앱을 호출할 수 있습니다 C# 메서드 (예: 메서드를 사용 하는 앱 대리자를) 다시 합니다. Objective C에 대 한 호출을 통해 투명 하 게 처리는 일반적으로 **P/Invoke** 와 Xamarin에서는 런타임 코드입니다.
+Xamarin.Mac, 응용 프로그램 두 세계를 연결 합니다. 기본 클래스의 인스턴스를 포함 하는 기반 Objective-c 런타임에서 (`NSString`, `NSApplication`등) 한지를 C# 관리 되는 클래스의 인스턴스를 포함 하는 런타임 (`System.String`를 `HttpClient`등). 이 두 환경을 사이 Xamarin.Mac 만들므로 양방향 브리지 앱 Objective C에서 (선택기) 메서드를 호출할 수 있습니다 (같은 `NSApplication.Init`) Objective-c로 앱을 호출할 수 있습니다 C# 메서드 (예: 메서드를 사용 하는 앱 대리자를) 다시 합니다. Objective C에 대 한 호출을 통해 투명 하 게 처리는 일반적으로 **P/Invoke** 와 Xamarin에서는 런타임 코드입니다.
 
 <a name="exposing-classes" />
 
@@ -120,7 +120,7 @@ AOT 컴파일 Xamarin.Mac 앱에서 사용 하도록 설정할 때 조정할 수
 - `core` -AOT 컴파일 합니다 `Xamarin.Mac`하십시오 `System` 및 `mscorlib` 어셈블리.
 - `sdk` -AOT 컴파일는 `Xamarin.Mac` 및 클래스 라이브러리 (BCL (기본) 어셈블리입니다.
 - `|hybrid` -하이브리드 AOT IL 제거를 허용 하는 하지만 결과에서 더 이상 컴파일되지 번이 위의 옵션 중 하나를 추가 합니다.
-- `+` -AOT 컴파일으로에 대 한 단일을 포함 되어 있습니다.
+- `+` -AOT 컴파일 단일 파일을 포함합니다.
 - `-` -AOT 컴파일에서 단일 파일을 제거합니다.
 
 예를 들어 `--aot:all,-MyAssembly.dll` AOT 컴파일 어셈블리를 MonoBundle에 모든 사용 하도록 설정 됩니다 _제외 하 고_ `MyAssembly.dll` 및 `--aot:core|hybrid,+MyOtherAssembly.dll,-mscorlib.dll` 하이브리드를 사용 하는, 코드 AOT 포함는 `MyOtherAssembly.dll` 를제외하고`mscorlib.dll`.

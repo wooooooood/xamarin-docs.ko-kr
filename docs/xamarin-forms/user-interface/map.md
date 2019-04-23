@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672484"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893246"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -129,7 +129,16 @@ Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 
 
 마지막 두는 응용 프로그램 맵 데이터를 다운로드 하려면 네트워크 연결이 필요 하기 때문에 필요 합니다. Android에 대해 알아보세요 [권한을](https://developer.android.com/reference/android/Manifest.permission.html) 에 대해 자세히 알아보세요.
 
-### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+또한 Android 9가 bootclasspath에서 Apache HTTP 클라이언트 라이브러리를 제거 및 이므로 이상의 API 28를 대상으로 하는 응용 프로그램에 사용할 수 없습니다. 에 다음 줄을 추가 해야 합니다 `application` 노드의 하 **AndroidManifest.xml** 28 이상 API를 대상으로 하는 응용 프로그램에서 Apache HTTP 클라이언트를 사용 하 여 계속 하려면 파일:
+
+```xml
+<application ...>
+    ...
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
+
+### <a name="universal-windows-platform"></a>UWP
 
 유니버설 Windows 플랫폼에서 지도 사용 하 여 권한 부여 토큰을 생성 해야 합니다. 자세한 내용은 [지도 인증 키를 요청](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx) MSDN에서.
 

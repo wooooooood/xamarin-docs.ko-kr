@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/28/2016
 ms.openlocfilehash: 7ed8fc18624f46abd4a9fc293d8c33a1722da7dd
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870263"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893116"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.iOS에서 네이티브 라이브러리 참조
 
@@ -98,7 +98,7 @@ Xcode 사용 하 여 빌드를 인터넷에서 가져온 "libMyLibrary.a" 라이
 -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-네이티브 라이브러리는 c + + 코드를 포함 하는 경우 전달 해야-cxx 플래그를 "추가 인수"에 올바른 컴파일러를 사용 하려면 Xamarin.iOS가 알 수 있도록 합니다. C + +에 대 한 이전 옵션과 같습니다.
+네이티브 라이브러리를 포함 하는 경우 C++ 코드를 전달 해야-cxx 플래그를 "추가 인수"에 올바른 컴파일러를 사용 하려면 Xamarin.iOS가 알 수 있도록 합니다. 에 대 한 C++ 이전 옵션과 같습니다.
 
 ```bash
 -cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"

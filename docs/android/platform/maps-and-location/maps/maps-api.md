@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 12ff6f615b30e53704fee6368c9d7f171f881df0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 1889154a12a701fb4ce57ef8644699dd978f768e
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671067"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893259"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
 
@@ -41,7 +41,7 @@ Xamarin.Android 앱을 Google Maps Android API를 사용할 수 있기 전에 �
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Google Maps API 키를 가져오려면
 
 첫 번째 단계 (참고 레거시 Google Maps v1 API에서 API 키를 다시 사용할 수 없습니다) Google Maps API 키를 가져오는 것입니다. Xamarin.Android를 사용 하 여 API 키를 사용 하는 방법에 대 한 정보를 참조 하세요 [는 Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)합니다.
- 
+
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Google Play Services SDK 설치
 
@@ -89,8 +89,8 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
 -  **OpenGL ES v2** &ndash; 응용 프로그램에는 OpenGL ES v2에 대 한 요구 사항을 선언 해야 합니다.
 
 -  **Google Maps API 키** &ndash; 응용 프로그램이 등록 되 고 Google Play 서비스를 사용할 수 있는 권한이 있는지 확인 하려면 API 키가 사용 됩니다. 참조 [Google Maps API 키를 가져오는](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md) 이 키에 대 한 세부 정보에 대 한 합니다.
-   
-- **레거시 Apache HTTP 클라이언트 요청** &ndash; Android 9.0 (API 레벨 28)를 대상으로 하는 앱 또는 위에 임을 지정 해야 기존 Apache HTTP 클라이언트를 사용 하는 선택적 라이브러리입니다. 
+
+- **레거시 Apache HTTP 클라이언트 요청** &ndash; Android 9.0 (API 레벨 28)를 대상으로 하는 앱 또는 위에 임을 지정 해야 기존 Apache HTTP 클라이언트를 사용 하는 선택적 라이브러리입니다.
 
 -  **Google 웹 기반 서비스에 액세스할** &ndash; 응용 프로그램에는 Android Maps API를 지 Google의 웹 서비스에 액세스할 수 있는 권한이 필요 합니다.
 
@@ -99,6 +99,14 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
 -  **위치 공급자에 대 한 액세스** &ndash; 권한은 선택 사항입니다.
    이러한 자습서를 통해 여 `GoogleMap` 맵에 장치 위치를 표시 하는 클래스입니다.
 
+또한 Android 9가 bootclasspath에서 Apache HTTP 클라이언트 라이브러리를 제거 및 이므로 이상의 API 28를 대상으로 하는 응용 프로그램에 사용할 수 없습니다. 에 다음 줄을 추가 해야 합니다 `application` 노드의 하 **AndroidManifest.xml** 28 이상 API를 대상으로 하는 응용 프로그램에서 Apache HTTP 클라이언트를 사용 하 여 계속 하려면 파일:
+
+```xml
+<application ...>
+   ...
+   <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 > [!NOTE]
 > Google Play SDK의 아주 오래 된 버전에서는 앱이 요청은 `WRITE_EXTERNAL_STORAGE` 권한. 이 요구 사항을 Google Play 서비스에 대 한 최근 Xamarin 바인딩을 사용 하 여 필요한 경우 더 이상
@@ -112,7 +120,7 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
 
     <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    
+
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
@@ -131,6 +139,8 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
         <!-- Put your Google Maps V2 API Key here. -->
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <!-- Necessary for apps that target Android 9.0 or higher -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
     </application>
 </manifest>
 ```
@@ -184,7 +194,7 @@ Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되�
     ```
 
 -   **프로그래밍 방식으로** - `MapFragment` 사용 하 여 프로그래밍 방식으로 인스턴스화할 수 있습니다 합니다 [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) 메서드 후 활동에 추가 합니다. 이 조각을 인스턴스화하는 가장 간단한 방법은 사용 하는 `MapFragment` 활동에 추가 합니다.
-    
+
     ```csharp
         var mapFrag = MapFragment.NewInstance();
         activity.FragmentManager.BeginTransaction()
@@ -195,7 +205,7 @@ Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되�
 
     구성 하는 것이 불가능 합니다 `MapFragment` 전달 하 여 개체를 [ `GoogleMapOptions` ](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 개체를 `NewInstance`입니다. 이 섹션에 설명 되어 [GoogleMap 속성](#googlemap_object) 이 가이드에 나중에 표시 됩니다.
 
-`MapFragment.GetMapAsync` 메서드 초기화를 사용 하는 [ `GoogleMap` ](#googlemap_object) 조각에서 호스트 되는 및에서 호스트 되는 map 개체에 대 한 참조는 `MapFragment`합니다. 이 메서드는 구현 하는 개체는 `IOnMapReadyCallback` 인터페이스입니다. 
+`MapFragment.GetMapAsync` 메서드 초기화를 사용 하는 [ `GoogleMap` ](#googlemap_object) 조각에서 호스트 되는 및에서 호스트 되는 map 개체에 대 한 참조는 `MapFragment`합니다. 이 메서드는 구현 하는 개체는 `IOnMapReadyCallback` 인터페이스입니다.
 
 이 인터페이스에는 단일 메서드 `IMapReadyCallback.OnMapReady(MapFragment map)` 상호 작용 하는 앱에 대 한 가능한 경우 호출 되는 여 `GoogleMap` 개체입니다. 다음 코드 조각은 Android 활동을 초기화할 수는 방법을 보여 줍니다.는 `MapFragment` 하 고 구현 된 `IOnMapReadyCallback` 인터페이스:
 ```csharp
@@ -205,13 +215,13 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
     {
         base.OnCreate(bundle);
         SetContentView(Resource.Layout.MapLayout);
-    
+
         var mapFragment = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.map);
         mapFragment.GetMapAsync(this);
-    
+
         // remainder of code omitted
     }
-    
+
     public void OnMapReady(GoogleMap map)
     {
         // Do something with the map, i.e. add markers, move to a specific location, etc.
@@ -304,15 +314,15 @@ Maps API를 제공 된 [CameraPosition](https://developer.android.com/reference/
 public void OnMapReady(GoogleMap map)
 {
     LatLng location = new LatLng(50.897778, 3.013333);
-    
+
     CameraPosition.Builder builder = CameraPosition.InvokeBuilder();
     builder.Target(location);
     builder.Zoom(18);
     builder.Bearing(155);
     builder.Tilt(65);
-    
+
     CameraPosition cameraPosition = builder.Build();
-    
+
     CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition(cameraPosition);
 
     map.MoveCamera(cameraUpdate);
@@ -350,7 +360,7 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -383,10 +393,10 @@ public void OnMapReady(GoogleMap map)
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    
+
     var bmDescriptor = BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan);
     markerOpt1.InvokeIcon(bmDescriptor);
-    
+
     map.AddMarker(markerOpt1);
 }
 ```
@@ -520,7 +530,7 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
     if (marker.Id.Equals(gotMauiMarkerId))
     {
         LatLng InMaui = new LatLng(20.72110, -156.44776);
-    
+
         // Move the camera to look at Maui.
         PositionPolarBearGroundOverlay(InMaui);
         googleMap.AnimateCamera(CameraUpdateFactory.NewLatLngZoom(InMaui, 13));
