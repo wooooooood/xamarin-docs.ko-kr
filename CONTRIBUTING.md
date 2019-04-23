@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 63ddc7d34d0bcca4e86cb03b08a6040d20f8f037
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60857637"
 ---
 # <a name="contributing"></a>참여
 
@@ -78,4 +78,5 @@ Xamarin 팀은 PR을 검토하고 승인하기 위해 변경 내용이 적합하
 
 > [!NOTE]
 > 현재 일부 항목이 여기 및 [스타일 가이드](./contributing-guidelines/template.md)에 지정된 모든 지침에 따르지 않는다는 점을 확인할 수 있습니다. 사이트 전체에서 일관성을 달성하기 위해 노력하고 있습니다. 
+
 
