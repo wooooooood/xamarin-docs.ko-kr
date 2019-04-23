@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 5929648b802c27916c0a21142907644781d59d0d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193258"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Visual Studio를 실행하고 **LocalDatabaseTutorial**라는 새로운 빈 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
@@ -27,7 +35,7 @@
 
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. Mac용 Visual Studio를 실행하고 **LocalDatabaseTutorial**라는 새로운 빈 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
 

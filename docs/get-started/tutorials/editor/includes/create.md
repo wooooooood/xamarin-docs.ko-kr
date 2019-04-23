@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ce3e0f18d299d2bdf8d9bd81c467d45924d0d2bc
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373428"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Visual Studio를 실행하고 **EditorTutorial**라는 새 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
@@ -30,7 +38,7 @@
     > [!NOTE]
     > Android는 [`Editor`](xref:Xamarin.Forms.Editor)의 높이를 나타내지만 iOS는 그렇지 않습니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. Mac용 Visual Studio를 실행하고 **EditorTutorial**라는 새 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
 

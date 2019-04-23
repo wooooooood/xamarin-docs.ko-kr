@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 32b9941aa700d5834616a04f8b3e15054c6137d9
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037575"
+---
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
@@ -14,7 +22,7 @@
 
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
-- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작.
+- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작
 - [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서.
 - [그리드](~/get-started/tutorials/grid/index.yml) 자습서.
 - [레이블](~/get-started/tutorials/label/index.yml) 자습서.
@@ -28,7 +36,7 @@
 
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
-- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작.
+- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작
 - [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서.
 - [그리드](~/get-started/tutorials/grid/index.yml) 자습서.
 - [레이블](~/get-started/tutorials/label/index.yml) 자습서.

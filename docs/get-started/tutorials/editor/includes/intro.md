@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f0a7a0f66f78739ce191c257de91e4770e65282c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373437"
+---
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
@@ -13,8 +21,8 @@
 
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
-- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작.
-- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서.
+- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작
+- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -24,5 +32,5 @@
 
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
-- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작.
-- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서.
+- [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작
+- [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서

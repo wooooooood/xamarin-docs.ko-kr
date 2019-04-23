@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037563"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.ListView) 선언을 수정하여 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 및 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 대한 처리기를 설정합니다.
@@ -37,7 +45,7 @@
 
     항목 선택 및 탭에 대한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md) 안내서의 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps)을 참조하세.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.ListView) 선언을 수정하여 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 및 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 대한 처리기를 설정합니다.
 

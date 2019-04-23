@@ -1,8 +1,16 @@
-이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
+---
+ms.openlocfilehash: d7af34feb7ca9526efef067bdce79a59164d0e3f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61376000"
+---
+축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 > - XAML에서 Xamarin.Forms [`Grid`](xref:Xamarin.Forms.Grid)를 만듭니다.
-> - `Grid`에 대해 열과 행을 지정합니다.
+> - `Grid`에 대한 열과 행을 지정합니다.
 > - `Grid`의 여러 열 또는 여러 행에 콘텐츠를 스패닝합니다.
 
 ## <a name="next-steps"></a>다음 단계

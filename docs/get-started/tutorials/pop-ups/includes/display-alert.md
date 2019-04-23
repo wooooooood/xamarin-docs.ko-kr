@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384735"
+---
 Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 묻는 모달 팝업(경고라고도 함)이 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 사용하여 사용자에게 경고를 표시하고 간단한 질문을 묻습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

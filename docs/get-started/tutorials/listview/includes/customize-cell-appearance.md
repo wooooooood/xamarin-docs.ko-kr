@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037627"
+---
 이전에 [`ListView`](xref:Xamarin.Forms.ListView)는 데이터 바인딩을 사용하는 데이터로 채워졌습니다. 하지만 컬렉션에 데이터를 바인딩함에도 불구하고 컬렉션의 각 개체가 데이터의 여러 항목을 정의하는 경우 데이터의 단일 항목만 개체별로 표시되었습니다(`Monkey` 개체의 `Name` 속성).
 
 이 연습에서는 [`ListView`](xref:Xamarin.Forms.ListView)가 각 행에 있는 데이터의 여러 항목을 표시하도록 **ListViewTutorial** 프로젝트를 수정합니다.

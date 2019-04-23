@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f0c07199a8f839d8dc9d334ae06c96a9b363c36e
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388883"
+---
 웹 브라우저가 페이지를 검색하고 서버에 데이터를 보내는 데 사용하는 동일한 HTTP 동사를 사용하여 HTTP를 통해 REST 요청이 이루어집니다. 이 연습에서는 GET 동사를 사용하여 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하는 클래스를 만듭니다. 웹 API를 사용하여 지정된 위치에 대한 일기 예보 데이터를 검색할 수 있습니다. 이 웹 API를 사용하려면 API 키에 등록해야 합니다.
 
 > [!div class="nextstepaction"]

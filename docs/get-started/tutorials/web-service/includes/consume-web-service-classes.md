@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fe38e13ff4b6c89905769d5ef0e5163a538e1e86
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61388891"
+---
 이 연습에서는 `RestService` 클래스를 사용하는 사용자 인터페이스를 만듭니다. 그러면 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하게 됩니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

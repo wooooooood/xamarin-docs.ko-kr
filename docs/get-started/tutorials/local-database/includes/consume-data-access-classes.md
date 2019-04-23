@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193263"
+---
 이 연습에서는 이전에 만든 데이터 액세스 클래스를 사용하는 사용자 인터페이스를 만듭니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

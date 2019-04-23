@@ -1,185 +1,178 @@
-items:
 - name: 플랫폼 간
   href: index.yml
-  items:
-  - name: 모바일 앱 빌드
-    href: get-started/index.md
-    items:
-    - name: 요구 사항
-      displayName: System requirements
-      href: get-started/requirements.md
-    - name: 모바일 개발 소개
-      href: get-started/introduction-to-mobile-development.md
-    - name: 모바일 SDLC 소개
-      href: get-started/introduction-to-mobile-sdlc.md
-    - name: 플랫폼 간 애플리케이션 빌드
-      href: app-fundamentals/building-cross-platform-applications/index.md
-      items:
-      - name: 개요
-        href: app-fundamentals/building-cross-platform-applications/overview.md
-      - name: 1부 - Xamarin 모바일 플랫폼 이해
-        href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
-      - name: 2부 - 아키텍처
-        href: app-fundamentals/building-cross-platform-applications/architecture.md
-      - name: 3부 - Xamarin 플랫폼 간 솔루션 설정
-        href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
-      - name: 4부 - 다중 플랫폼 처리
-        href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
-      - name: 5부 - 실제 코드 공유 전략
-        href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
-      - name: 6부 - 테스트 및 App Store 승인
-        href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
-      - name: '사례 연구: Tasky'
-        href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
-    expanded: true
-  - name: 코드 공유
-    href: app-fundamentals/index.md
-    items:
-    - name: 개요
-      href: app-fundamentals/code-sharing.md
-    - name: .NET Standard
-      href: app-fundamentals/net-standard.md
-    - name: 공유 프로젝트
-      href: app-fundamentals/shared-projects.md
-    - name: PCL(이식 가능한 클래스 라이브러리)
-      href: app-fundamentals/pcl.md
-    - name: NuGet 다중 플랫폼 라이브러리 프로젝트
-      displayName: Nugetizer 3000
-      href: app-fundamentals/nuget-multiplatform-libraries/index.md
-      items:
-      - name: 기존 라이브러리 프로젝트
-        href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
-      - name: 새 다중 플랫폼 라이브러리
-        href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
-      - name: 새 플랫폼 특정 라이브러리
-        href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
-      - name: 메타데이터 가이드
-        href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
-    - name: NuGet 패키지(수동)
-      href: app-fundamentals/nuget-manual.md
-    - name: 플랫폼 간 앱에서 C/C++ 라이브러리 사용
-      href: cpp/index.md
-  - name: 언어 지원
-    href: platform/index.md
-    items:
-    - name: C#
-      items:
-      - name: 비동기 지원 개요
-        href: platform/async.md
-      - name: C# 6 언어 기능
-        href: platform/csharp-six.md
-    - name: F#
-      href: platform/fsharp/index.md
-      items:
-      - name: 시작
-        href: platform/fsharp/overview.md
-      - name: F# 샘플
-        href: platform/fsharp/samples.md
-    - name: Visual Basic.NET
-      href: platform/visual-basic/index.md
-      items:
-      - name: Xamarin iOS 및 Android
-        href: platform/visual-basic/native-apps.md
-      - name: Xamarin.Forms
-        href: platform/visual-basic/xamarin-forms.md
-    - name: Razor HTML 템플릿
-      href: platform/razor-html-templates/index.md
-  - name: 성능 및 보안
-    href: deploy-test/performance.md
-    items:
-    - name: 성능
-      href: deploy-test/memory-perf-best-practices.md
-      items:
-      - name: Android 성능
-        href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
-      - name: iOS 성능
-        href: ~/ios/deploy-test/performance.md?context=xamarin/cross-platform
-      - name: Mac 성능
-        href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
-    - name: TLS(전송 계층 보안)
-      href: app-fundamentals/transport-layer-security.md
-      items:
-      - name: Android
-        href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
-      - name: iOS 및 Mac
-        href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
-  - name: 배포 및 디버깅
-    href: deploy-test/index.md
-    items:
-    - name: 로컬 웹 서비스에 연결
-      href: deploy-test/connect-to-local-web-services.md
-    - name: 사용자 지정 링커 구성
-      href: deploy-test/linker.md
-    - name: NuGet을 사용하여 NUnit 2.6.4 설치하기
-      href: deploy-test/installing-nunit-using-nuget.md
-    - name: 다중 프로세스 디버깅
-      href: deploy-test/multi-process-debugging.md
-  - name: 데스크톱 개발자
-    displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
-    href: desktop/index.md
-    items:
-    - name: 앱 수명 주기 비교
-      href: desktop/lifecycle.md
-    - name: UI 제어 비교
-      href: desktop/controls/index.md
-      items:
-      - name: WPF 및 Xamarin.Forms
-        href: desktop/controls/wpf.md
-    - name: 이식 지침
-      href: desktop/porting.md
-    - name: 샘플
-      href: desktop/samples.md
-  - name: 문제 해결
-    href: troubleshooting/index.md
-    items:
-    - name: 질문과 대답
-      displayName: FAQ
-      href: troubleshooting/questions/index.md
-      items:
-      - name: PCL에서 지원되는 라이브러리를 어떻게 볼 수 있나요?
-        href: troubleshooting/questions/pcl-support-libraries.md
-      - name: PCL 리플렉션 API
-        href: troubleshooting/questions/pcl-reflection.md
-      - name: 'PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 할까요?'
-        href: troubleshooting/questions/pcl-case-study.md
-      - name: NuGet을 업데이트하려면 어떻게 할까요?
-        href: troubleshooting/questions/nuget-update.md
-      - name: NuGet 패키지를 다운그레이드하려면 어떻게 할까요?
-        href: troubleshooting/questions/nuget-package-downgrade.md
-      - name: Nuget 패키지를 업데이트한 후 패키지 오류 누락
-        href: troubleshooting/questions/nuget-packages-missing.md
-      - name: Google Play 서비스 구성 요소 및 NuGet 통합
-        href: troubleshooting/questions/gps-components-nuget.md
-      - name: 머신에 구성 요소가 저장된 위치는 어디인가요?
-        href: troubleshooting/questions/component-storage.md
-      - name: 버전 정보 및 로그는 어디에서 확인할 수 있나요?
-        href: troubleshooting/questions/version-logs.md
-      - name: 버그 보고서를 언제 어떻게 제출해야 하나요?
-        href: troubleshooting/questions/howto-file-bug.md
-      - name: Xamarin에서 Jenkins가 지원되지 않는 이유는 무엇인가요?
-        href: troubleshooting/questions/xamarin-jenkins.md
-      - name: 디버거에 필요한 프로젝트 설정은 무엇인가요?
-        href: troubleshooting/questions/debugger-settings.md
-    - name: Visual Studio 질문
-      items:
-      - name: Configuration Manager에서 비활성화된 확인란 배포
-        href: troubleshooting/questions/deploy-checkboxes.md
-      - name: 설치 후 Visual Studio 확장 누락
-        href: troubleshooting/questions/missing-vs-extensions.md
-      - name: Visual Studio용 Xamarin을 완전히 제거하려면 어떻게 할까요?
-        href: troubleshooting/questions/uninstall-xamarin-vs.md
-      - name: Visual Studio 프로세스의 현재 호출 스택을 수집하려면 어떻게 할까요?
-        href: troubleshooting/questions/vs-callstack.md
-      - name: Visual Studio에서 내 참조된 라이브러리 프로젝트를 빌드에 포함시키지 않는 이유는 무엇인가요?
-        href: troubleshooting/questions/vs-config-manager.md
-    - name: 구성 요소 참조를 NuGet으로 업데이트
-      href: troubleshooting/component-nuget.md
-  - name: 샘플
-    href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 52090f962b611d4b4f0ff1cef318b1edd3a0f7b1
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477358"
+  items:
+    - name: 모바일 앱 빌드
+      href: get-started/index.md
+      expanded: true
+      items:
+        - name: 요구 사항
+          displayName: System requirements
+          href: get-started/requirements.md
+        - name: 모바일 개발 소개
+          href: get-started/introduction-to-mobile-development.md
+        - name: 모바일 SDLC 소개
+          href: get-started/introduction-to-mobile-sdlc.md
+        - name: 플랫폼 간 애플리케이션 빌드
+          href: app-fundamentals/building-cross-platform-applications/index.md
+          items:
+            - name: 개요
+              href: app-fundamentals/building-cross-platform-applications/overview.md
+            - name: 1부 - Xamarin 모바일 플랫폼 이해
+              href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
+            - name: 2부 - 아키텍처
+              href: app-fundamentals/building-cross-platform-applications/architecture.md
+            - name: 3부 - Xamarin 플랫폼 간 솔루션 설정
+              href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
+            - name: 4부 - 다중 플랫폼 처리
+              href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
+            - name: 5부 - 실제 코드 공유 전략
+              href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
+            - name: 6부 - 테스트 및 App Store 승인
+              href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
+            - name: '사례 연구: Tasky'
+              href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
+    - name: 코드 공유
+      href: app-fundamentals/index.md
+      items:
+        - name: 개요
+          href: app-fundamentals/code-sharing.md
+        - name: .NET Standard
+          href: app-fundamentals/net-standard.md
+        - name: 공유 프로젝트
+          href: app-fundamentals/shared-projects.md
+        - name: PCL(이식 가능한 클래스 라이브러리)
+          href: app-fundamentals/pcl.md
+        - name: NuGet 다중 플랫폼 라이브러리 프로젝트
+          displayName: Nugetizer 3000
+          href: app-fundamentals/nuget-multiplatform-libraries/index.md
+          items:
+            - name: 기존 라이브러리 프로젝트
+              href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
+            - name: 새 다중 플랫폼 라이브러리
+              href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
+            - name: 새 플랫폼 특정 라이브러리
+              href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
+            - name: 메타데이터 가이드
+              href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
+        - name: NuGet 패키지(수동)
+          href: app-fundamentals/nuget-manual.md
+        - name: 플랫폼 간 앱에서 C/C++ 라이브러리 사용
+          href: cpp/index.md
+    - name: 언어 지원
+      href: platform/index.md
+      items:
+        - name: 'C#'
+          items:
+            - name: 비동기 지원 개요
+              href: platform/async.md
+            - name: 'C# 6 언어 기능'
+              href: platform/csharp-six.md
+        - name: 'F#'
+          href: platform/fsharp/index.md
+          items:
+            - name: 시작
+              href: platform/fsharp/overview.md
+            - name: 'F# 샘플'
+              href: platform/fsharp/samples.md
+        - name: Visual Basic.NET
+          href: platform/visual-basic/index.md
+          items:
+            - name: Xamarin iOS 및 Android
+              href: platform/visual-basic/native-apps.md
+            - name: Xamarin.Forms
+              href: platform/visual-basic/xamarin-forms.md
+        - name: Razor HTML 템플릿
+          href: platform/razor-html-templates/index.md
+    - name: 성능 및 보안
+      href: deploy-test/performance.md
+      items:
+        - name: 성능
+          href: deploy-test/memory-perf-best-practices.md
+          items:
+            - name: Android 성능
+              href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
+            - name: iOS 성능
+              href: ~/ios/deploy-test/performance.md?context=xamarin/cross-platform
+            - name: Mac 성능
+              href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
+        - name: TLS(전송 계층 보안)
+          href: app-fundamentals/transport-layer-security.md
+          items:
+            - name: Android
+              href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
+            - name: iOS 및 Mac
+              href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
+    - name: 배포 및 디버깅
+      href: deploy-test/index.md
+      items:
+        - name: 로컬 웹 서비스에 연결
+          href: deploy-test/connect-to-local-web-services.md
+        - name: 사용자 지정 링커 구성
+          href: deploy-test/linker.md
+        - name: NuGet을 사용하여 NUnit 2.6.4 설치하기
+          href: deploy-test/installing-nunit-using-nuget.md
+        - name: 다중 프로세스 디버깅
+          href: deploy-test/multi-process-debugging.md
+    - name: 데스크톱 개발자
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      href: desktop/index.md
+      items:
+        - name: 앱 수명 주기 비교
+          href: desktop/lifecycle.md
+        - name: UI 제어 비교
+          href: desktop/controls/index.md
+          items:
+            - name: WPF 및 Xamarin.Forms
+              href: desktop/controls/wpf.md
+        - name: 이식 지침
+          href: desktop/porting.md
+        - name: 샘플
+          href: desktop/samples.md
+    - name: 문제 해결
+      href: troubleshooting/index.md
+      items:
+        - name: 질문과 대답
+          displayName: FAQ
+          href: troubleshooting/questions/index.md
+          items:
+            - name: PCL에서 지원되는 라이브러리를 어떻게 볼 수 있나요?
+              href: troubleshooting/questions/pcl-support-libraries.md
+            - name: PCL 리플렉션 API
+              href: troubleshooting/questions/pcl-reflection.md
+            - name: 'PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 할까요?'
+              href: troubleshooting/questions/pcl-case-study.md
+            - name: NuGet을 업데이트하려면 어떻게 할까요?
+              href: troubleshooting/questions/nuget-update.md
+            - name: NuGet 패키지를 다운그레이드하려면 어떻게 할까요?
+              href: troubleshooting/questions/nuget-package-downgrade.md
+            - name: Nuget 패키지를 업데이트한 후 패키지 오류 누락
+              href: troubleshooting/questions/nuget-packages-missing.md
+            - name: Google Play 서비스 구성 요소 및 NuGet 통합
+              href: troubleshooting/questions/gps-components-nuget.md
+            - name: 머신에 구성 요소가 저장된 위치는 어디인가요?
+              href: troubleshooting/questions/component-storage.md
+            - name: 버전 정보 및 로그는 어디에서 확인할 수 있나요?
+              href: troubleshooting/questions/version-logs.md
+            - name: 버그 보고서를 언제 어떻게 제출해야 하나요?
+              href: troubleshooting/questions/howto-file-bug.md
+            - name: Xamarin에서 Jenkins가 지원되지 않는 이유는 무엇인가요?
+              href: troubleshooting/questions/xamarin-jenkins.md
+            - name: 디버거에 필요한 프로젝트 설정은 무엇인가요?
+              href: troubleshooting/questions/debugger-settings.md
+        - name: Visual Studio 질문
+          items:
+            - name: Configuration Manager에서 비활성화된 확인란 배포
+              href: troubleshooting/questions/deploy-checkboxes.md
+            - name: 설치 후 Visual Studio 확장 누락
+              href: troubleshooting/questions/missing-vs-extensions.md
+            - name: Visual Studio용 Xamarin을 완전히 제거하려면 어떻게 할까요?
+              href: troubleshooting/questions/uninstall-xamarin-vs.md
+            - name: Visual Studio 프로세스의 현재 호출 스택을 수집하려면 어떻게 할까요?
+              href: troubleshooting/questions/vs-callstack.md
+            - name: Visual Studio에서 내 참조된 라이브러리 프로젝트를 빌드에 포함시키지 않는 이유는 무엇인가요?
+              href: troubleshooting/questions/vs-config-manager.md
+        - name: 구성 요소 참조를 NuGet으로 업데이트
+          href: troubleshooting/component-nuget.md
+    - name: 샘플
+      href: samples/index.yml

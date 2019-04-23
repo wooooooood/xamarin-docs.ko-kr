@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382569"
+---
 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내에 자식 뷰의 크기와 위치는 자식 뷰의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성 값과 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성 값에 따라 달라집니다.
 
 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성은 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) 구조체의 필드로 설정할 수 있습니다. 이 구조체는 두 가지 레이아웃 기본 설정을 캡슐화합니다.

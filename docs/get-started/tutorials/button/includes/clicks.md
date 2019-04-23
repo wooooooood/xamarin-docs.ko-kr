@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61372976"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 대한 처리기를 설정합니다.
@@ -29,7 +37,7 @@
 
     단추 클릭 처리에 대한 자세한 내용은 [Xamarin.Forms 버튼](~/xamarin-forms/user-interface/button.md) 가이드의 [단추 클릭 처리](~/xamarin-forms/user-interface/button.md#handling-button-clicks)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 대한 처리기를 설정합니다.
 

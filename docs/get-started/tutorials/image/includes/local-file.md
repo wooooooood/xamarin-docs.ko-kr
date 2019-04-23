@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384589"
+---
 이미지 파일은 플랫폼 프로젝트에 추가되고 Xamarin.Forms 공유 코드에서 참조될 수 있습니다. 이미지를 배포하는 이 메서드는 다양한 플랫폼 또는 약간 다른 디자인의 다양한 해결 방법을 사용하는 경우와 같이 이미지가 특정 플랫폼을 지정하는 경우에 필요합니다.
 
 이 연습에서는 **ImageTutorial** 솔루션을 수정하여 URI에서 다운로드된 이미지가 아닌 로컬 이미지를 표시합니다. 로컬 이미지는 Xamarin 로고이며 아래 단추를 클릭하여 다운로드됩니다.

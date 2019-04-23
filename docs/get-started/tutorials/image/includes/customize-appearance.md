@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8a4fbed10fa52c08a63f3aed306fe5cde21804b4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384577"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Image`](xref:Xamarin.Forms.Image) 선언을 수정하여 모양을 사용자 지정합니다.

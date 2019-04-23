@@ -1,4 +1,12 @@
-이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
+---
+ms.openlocfilehash: 1433246ee892d7642cb012a1aa9372153741f2b0
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037584"
+---
+축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 > - XAML에서 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)를 만듭니다.

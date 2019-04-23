@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 846ff203a26f38fdaabe5a5dd6eff1c6a6b39b08
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61343467"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Entry`](xref:Xamarin.Forms.Entry) 선언을 수정하여 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트에 대한 처리기를 설정합니다.

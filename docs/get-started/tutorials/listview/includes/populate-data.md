@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037595"
+---
 [`ListView`](xref:Xamarin.Forms.ListView)는 `IEnumerable` 형식인 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 사용하여 데이터를 채웁니다. 이전 단계에서 XAML의 `ListView`를 문자열 배열로 채웠습니다. 그러나 일반적으로 `ListView`은 코드 숨김으로 정의된 `IEnumerable`를 구현하는 컬렉션의 데이터로 채워집니다.
 
 이 연습에서는 **ListViewTutorial** 프로젝트를 수정하여 [`ListView`](xref:Xamarin.Forms.ListView)를 `List`에 저장된 개체 컬렉션의 데이터로 채웁니다.

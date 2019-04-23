@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 84c4ed5c2e019750db80a6dd930c818dcc9e401c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896712"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Visual Studio를 실행하고 **LabelTutorial**라는 새 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
@@ -27,7 +35,7 @@
 
     [![iOS 및 Android에서 가운데 맞춤 레이블의 스크린샷](../images/create-label.png "가운데 맞춤 레이블")](../images/create-label-large.png#lightbox "가운데 맞춤 레이블")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. Mac용 Visual Studio를 실행하고 **LabelTutorial**라는 새 Xamarin.Forms 애플리케이션을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지 확인합니다.
 

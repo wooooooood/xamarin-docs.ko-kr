@@ -1,8 +1,16 @@
+---
+ms.openlocfilehash: ef559ed48a448679a9fd86fdf95054a9fa6368e5
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373000"
+---
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
 > - XAML에서 Xamarin.Forms [`Button`](xref:Xamarin.Forms.Button)을 만듭니다.
-> - 눌러진 `Button`에 대해 응답합니다.
+> - 눌러진 `Button`에 응답합니다.
 > - `Button`의 모양을 변경합니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -16,7 +24,7 @@
 - [첫 번째 Xamarin.Forms 앱 빌드](~/get-started/first-app/index.md) 빠른 시작
 - [StackLayout](~/get-started/tutorials/stacklayout/index.yml) 자습서
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 ### <a name="prerequisites"></a>전제 조건
 

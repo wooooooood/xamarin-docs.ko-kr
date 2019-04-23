@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 2983dfd895aaaf8560b3e630faacf24b45dd05cd
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292053"
 documentType: LandingData
 title: Xamarin 도구
 metadata:
@@ -17,62 +11,62 @@ abstract:
   description: Xamarin 개발 환경을 개선하는 데 도움이 되는 도구입니다.
   menu:
     items:
-    - href: https://visualstudio.com/
-      text: Visual Studio
-    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      text: 릴리스 정보
+      - href: 'https://visualstudio.com/'
+        text: Visual Studio
+      - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+        text: 릴리스 정보
 sections:
-- title: 도구
-  items:
-  - type: list
-    style: cards
-    className: cardsC
+  - title: 도구
     items:
-    - href: ~/tools/ios-simulator/index.md
-      html: Windows에서 Visual Studio를 사용하여 iOS 시뮬레이터와 상호 작용합니다.
-      image:
-        src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
-        href: ~/tools/ios-simulator/index.md
-      title: Windows용 iOS 시뮬레이터
-    - href: ~/tools/inspector/index.md
-      html: 사용자 인터페이스를 이해하고 디버그합니다.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/profiler/index.md
-      html: 성능 문제를 식별하고 해결합니다.
-      image:
-        src: ~/media/index/xamarin-tools-profiler.svg?branch=master
-        href: ~/tools/profiler/index.md
-      title: Xamarin Profiler
-    - href: ~/tools/workbooks/index.md
-      html: C# 및 Xamarin 플랫폼을 대화형으로 학습할 수 있습니다.
-      image:
-        src: https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
-    - href: ~/tools/dotnet-embedding/index.md
-      html: 다른 프로그래밍 언어에서 기존 .NET 코드를 사용하도록 허용합니다.
-      image:
-        src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
-        href: ~/tools/dotnet-embedding/index.md
-      title: .NET 포함
-- title: 플랫폼
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsC
+        items:
+          - href: ~/tools/ios-simulator/index.md
+            html: Windows에서 Visual Studio를 사용하여 iOS 시뮬레이터와 상호 작용합니다.
+            image:
+              src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
+              href: ~/tools/ios-simulator/index.md
+            title: Windows용 iOS 시뮬레이터
+          - href: ~/tools/inspector/index.md
+            html: 사용자 인터페이스를 이해하고 디버그합니다.
+            image:
+              src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+              href: ~/tools/inspector/index.md
+            title: Xamarin Inspector
+          - href: ~/tools/profiler/index.md
+            html: 성능 문제를 식별하고 해결합니다.
+            image:
+              src: ~/media/index/xamarin-tools-profiler.svg?branch=master
+              href: ~/tools/profiler/index.md
+            title: Xamarin Profiler
+          - href: ~/tools/workbooks/index.md
+            html: 'C# 및 Xamarin 플랫폼을 대화형으로 학습할 수 있습니다.'
+            image:
+              src: 'https://docs.microsoft.com/media/illustrations/dynamics-resource-library.svg'
+              href: ~/tools/workbooks/index.md
+            title: Xamarin Workbooks
+          - href: ~/tools/dotnet-embedding/index.md
+            html: 다른 프로그래밍 언어에서 기존 .NET 코드를 사용하도록 허용합니다.
+            image:
+              src: ~/media/index/xamarin-cross-platform-dotnet-embedding.svg
+              href: ~/tools/dotnet-embedding/index.md
+            title: .NET 포함
+  - title: 플랫폼
     items:
-    - title: Xamarin.Forms
-      href: ~/xamarin-forms/index.md
-      html: <p><a href="~/get-started/quickstarts/index.md">시작</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/xamarin-forms/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/xamarin-forms/platform/index.md">플랫폼 기능</a><br /><a href="~/xamarin-forms/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/xamarin-forms/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: Android
-      href: ~/android/index.md
-      html: <p><a href="~/android/get-started/index.md">시작</a><br /><a href="~/android/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/android/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/android/platform/index.md">플랫폼 기능</a><br /><a href="~/android/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/android/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/android/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: iOS
-      href: ~/ios/index.md
-      html: <p><a href="~/ios/get-started/index.md">시작</a><br /><a href="~/ios/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/ios/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/ios/platform/index.md">플랫폼 기능</a><br /><a href="~/ios/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/ios/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/ios/internals/index.md">고급 개념 및 내부 요소</a></p>
-    - title: Mac
-      href: ~/mac/index.md
-      html: <p><a href="~/mac/get-started/index.md">시작</a><br /><a href="~/mac/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/mac/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/mac/platform/index.md">플랫폼 기능</a><br /><a href="~/mac/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/mac/internals/index.md">고급 개념 및 내부 요소</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Xamarin.Forms
+            href: ~/xamarin-forms/index.md
+            html: <p><a href="~/get-started/quickstarts/index.md">시작</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/xamarin-forms/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/xamarin-forms/platform/index.md">플랫폼 기능</a><br /><a href="~/xamarin-forms/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/xamarin-forms/internals/index.md">고급 개념 및 내부 요소</a></p>
+          - title: Android
+            href: ~/android/index.md
+            html: <p><a href="~/android/get-started/index.md">시작</a><br /><a href="~/android/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/android/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/android/platform/index.md">플랫폼 기능</a><br /><a href="~/android/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/android/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/android/internals/index.md">고급 개념 및 내부 요소</a></p>
+          - title: iOS
+            href: ~/ios/index.md
+            html: <p><a href="~/ios/get-started/index.md">시작</a><br /><a href="~/ios/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/ios/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/ios/platform/index.md">플랫폼 기능</a><br /><a href="~/ios/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/ios/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/ios/internals/index.md">고급 개념 및 내부 요소</a></p>
+          - title: Mac
+            href: ~/mac/index.md
+            html: <p><a href="~/mac/get-started/index.md">시작</a><br /><a href="~/mac/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/mac/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/mac/platform/index.md">플랫폼 기능</a><br /><a href="~/mac/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/mac/internals/index.md">고급 개념 및 내부 요소</a></p>

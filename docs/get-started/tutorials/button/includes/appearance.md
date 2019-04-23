@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61372973"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 해당 시각적 개체 모양을 변경합니다.

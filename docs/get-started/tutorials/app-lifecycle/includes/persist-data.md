@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2c6c71f5ed46cc1cae66c5d1f412898825805cc6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187518"
+---
 [`Application`](xref:Xamarin.Forms.Application) 서브클래스에는 수명 주기 상태 변경에 따라 데이터를 저장하는 데 사용할 수 있는 정적 [`Properties`](xref:Xamarin.Forms.Application.Properties) 사전이 있습니다. 이 사전은 `string` 키를 사용하고 `object` 값을 저장합니다. 사전은 자동으로 디바이스에 저장되며, 애플리케이션을 다시 시작하면 다시 채워집니다.
 
 > [!IMPORTANT]

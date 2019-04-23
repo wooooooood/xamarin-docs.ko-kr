@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eaac96ae4c5b8cb960f52ce635a132f534a5846c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384726"
+---
 이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
 
 > [!div class="checklist"]

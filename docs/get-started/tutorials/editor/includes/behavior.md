@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bd3f37082443e93f10f60d9466fe22aae8571b14
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373440"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Editor`](xref:Xamarin.Forms.Editor) 선언을 수정하여 해당 동작을 사용자 지정합니다.

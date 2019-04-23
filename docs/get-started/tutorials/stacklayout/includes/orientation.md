@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a7c2aa15521b89e4930746dc5421ce67fa26b2b9
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382581"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 선언을 수정하여 그 자식 요소를 세로가 아닌 가로로 정렬합니다.
@@ -19,7 +27,7 @@
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스는 이제 세로가 아닌 가로로 정렬됩니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 선언을 수정하여 그 자식 요소를 세로가 아닌 가로로 정렬합니다.
 

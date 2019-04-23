@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: dd8888652fca616b466a4a104eedc956b0e31498
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193240"
+---
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
@@ -19,7 +27,7 @@
 - [항목](~/get-started/tutorials/entry/index.yml) 자습서
 - [ListView](~/get-started/tutorials/listview/index.yml) 자습서
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 ### <a name="prerequisites"></a>전제 조건
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61376012"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Grid`](xref:Xamarin.Forms.Grid) 선언을 수정하여 열과 행을 정의하고 콘텐츠를 열과 행에 배치합니다.

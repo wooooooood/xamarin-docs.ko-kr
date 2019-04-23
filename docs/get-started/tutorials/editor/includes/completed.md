@@ -1,4 +1,12 @@
-이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
+---
+ms.openlocfilehash: e114b674b0c106acfd07a101b22bbf4f437519e8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373416"
+---
+축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
 > - XAML에서 Xamarin.Forms [`Editor`](xref:Xamarin.Forms.Editor)를 만듭니다.

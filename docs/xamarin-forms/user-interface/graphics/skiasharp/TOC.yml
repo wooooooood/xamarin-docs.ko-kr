@@ -1,134 +1,127 @@
-items:
 - name: Xamarin.Forms의 SkiaSharp 그래픽
   href: index.md
-  items:
-  - name: 그리기 기본 사항
-    href: basics/index.md
-    items:
-    - name: 단순 원 그리기
-      href: basics/circle.md
-    - name: Xamarin.Forms와 통합
-      href: basics/integration.md
-    - name: 픽셀 및 디바이스 독립적 단위
-      href: basics/pixels.md
-    - name: 기본 애니메이션
-      href: basics/animation.md
-    - name: 텍스트와 그래픽 통합
-      href: basics/text.md
-    - name: 비트맵 기본 사항
-      href: basics/bitmaps.md
-    - name: 투명도
-      href: basics/transparency.md
-    expanded: true
-  - name: 선 및 경로
-    href: paths/index.md
-    items:
-    - name: 선 및 스트로크 단면
-      href: paths/lines.md
-    - name: 경로 기본 사항
-      href: paths/paths.md
-    - name: 경로 채우기 유형
-      href: paths/fill-types.md
-    - name: 폴리라인 및 파라메트릭 수식
-      href: paths/polylines.md
-    - name: 점 및 대시
-      href: paths/dots.md
-    - name: 손가락으로 그리기
-      href: paths/finger-paint.md
-  - name: 변형
-    href: transforms/index.md
-    items:
-    - name: 좌표 이동 변환
-      href: transforms/translate.md
-    - name: 크기 조정 변환
-      href: transforms/scale.md
-    - name: 회전 변환
-      href: transforms/rotate.md
-    - name: 기울이기 변환
-      href: transforms/skew.md
-    - name: 매트릭스 변환
-      href: transforms/matrix.md
-    - name: 터치 조작
-      href: transforms/touch.md
-    - name: 비아핀(Non-Affine) 변환
-      href: transforms/non-affine.md
-    - name: 3D 회전
-      displayName: Three-D Rotation
-      href: transforms/3d-rotation.md
-  - name: 곡선 및 경로
-    href: curves/index.md
-    items:
-    - name: 원호를 그리는 3가지 방법
-      href: curves/arcs.md
-    - name: 3가지 형식의 Bézier 곡선
-      href: curves/beziers.md
-    - name: SVG 경로 데이터
-      href: curves/path-data.md
-    - name: 경로 및 지역 클리핑
-      href: curves/clipping.md
-    - name: 경로 효과
-      href: curves/effects.md
-    - name: 경로 및 텍스트
-      href: curves/text-paths.md
-    - name: 경로 정보 및 열거형
-      href: curves/information.md
-  - name: 비트맵
-    href: bitmaps/index.md
-    items:
-    - name: 비트맵 표시
-      href: bitmaps/displaying.md
-    - name: 비트맵에서 만들기 및 그리기
-      href: bitmaps/drawing.md
-    - name: 비트맵 자르기
-      href: bitmaps/cropping.md
-    - name: 분할된 비트맵 표시
-      href: bitmaps/segmented.md
-    - name: 파일에 비트맵 저장
-      href: bitmaps/saving.md
-    - name: 비트맵 픽셀 비트에 액세스
-      href: bitmaps/pixel-bits.md
-    - name: 비트맵에 애니메이션 적용
-      href: bitmaps/animating.md
-  - name: 효과
-    href: effects/index.md
-    items:
-    - name: 셰이더
-      href: effects/shaders/index.md
-      items:
-      - name: 선형 그라데이션
-        href: effects/shaders/linear-gradient.md
-      - name: 원형 그라데이션
-        href: effects/shaders/circular-gradients.md
-      - name: 비트맵 타일
-        href: effects/shaders/bitmap-tiling.md
-      - name: 노이즈
-        href: effects/shaders/noise.md
-    - name: 혼합 모드
-      href: effects/blend-modes/index.md
-      items:
-      - name: Porter-Duff 혼합 모드
-        href: effects/blend-modes/porter-duff.md
-      - name: 분리 가능한 혼합 모드
-        href: effects/blend-modes/separable.md
-      - name: 분리 불가능한 혼합 모드
-        href: effects/blend-modes/non-separable.md
-    - name: 마스크 필터
-      href: effects/mask-filters.md
-    - name: 이미지 필터
-      href: effects/image-filters.md
-    - name: 색 필터
-      href: effects/color-filters.md
-  - name: 플랫폼 독립적인 예제
-    href: ~/graphics-games/skiasharp/introduction.md
-    items:
-    - name: 플랫폼 특정 정보
-      href: ~/graphics-games/skiasharp/platform.md
-  - name: API 참조
-    href: /dotnet/api/skiasharp/
   expanded: true
-ms.openlocfilehash: 59cc8bbb28a912ae32ef189c83c5d2e4f3209f31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130227"
+  items:
+    - name: 그리기 기본 사항
+      href: basics/index.md
+      expanded: true
+      items:
+        - name: 단순 원 그리기
+          href: basics/circle.md
+        - name: Xamarin.Forms와 통합
+          href: basics/integration.md
+        - name: 픽셀 및 디바이스 독립적 단위
+          href: basics/pixels.md
+        - name: 기본 애니메이션
+          href: basics/animation.md
+        - name: 텍스트와 그래픽 통합
+          href: basics/text.md
+        - name: 비트맵 기본 사항
+          href: basics/bitmaps.md
+        - name: 투명도
+          href: basics/transparency.md
+    - name: 선 및 경로
+      href: paths/index.md
+      items:
+        - name: 선 및 스트로크 단면
+          href: paths/lines.md
+        - name: 경로 기본 사항
+          href: paths/paths.md
+        - name: 경로 채우기 유형
+          href: paths/fill-types.md
+        - name: 폴리라인 및 파라메트릭 수식
+          href: paths/polylines.md
+        - name: 점 및 대시
+          href: paths/dots.md
+        - name: 손가락으로 그리기
+          href: paths/finger-paint.md
+    - name: 변환
+      href: transforms/index.md
+      items:
+        - name: 좌표 이동 변환
+          href: transforms/translate.md
+        - name: 크기 조정 변환
+          href: transforms/scale.md
+        - name: 회전 변환
+          href: transforms/rotate.md
+        - name: 기울이기 변환
+          href: transforms/skew.md
+        - name: 매트릭스 변환
+          href: transforms/matrix.md
+        - name: 터치 조작
+          href: transforms/touch.md
+        - name: 비아핀(Non-Affine) 변환
+          href: transforms/non-affine.md
+        - name: 3D 회전
+          displayName: Three-D Rotation
+          href: transforms/3d-rotation.md
+    - name: 곡선 및 경로
+      href: curves/index.md
+      items:
+        - name: 원호를 그리는 3가지 방법
+          href: curves/arcs.md
+        - name: 3가지 형식의 Bézier 곡선
+          href: curves/beziers.md
+        - name: SVG 경로 데이터
+          href: curves/path-data.md
+        - name: 경로 및 지역 클리핑
+          href: curves/clipping.md
+        - name: 경로 효과
+          href: curves/effects.md
+        - name: 경로 및 텍스트
+          href: curves/text-paths.md
+        - name: 경로 정보 및 열거형
+          href: curves/information.md
+    - name: 비트맵
+      href: bitmaps/index.md
+      items:
+        - name: 비트맵 표시
+          href: bitmaps/displaying.md
+        - name: 비트맵에서 만들기 및 그리기
+          href: bitmaps/drawing.md
+        - name: 비트맵 자르기
+          href: bitmaps/cropping.md
+        - name: 분할된 비트맵 표시
+          href: bitmaps/segmented.md
+        - name: 파일에 비트맵 저장
+          href: bitmaps/saving.md
+        - name: 비트맵 픽셀 비트에 액세스
+          href: bitmaps/pixel-bits.md
+        - name: 비트맵에 애니메이션 적용
+          href: bitmaps/animating.md
+    - name: 효과
+      href: effects/index.md
+      items:
+        - name: 셰이더
+          href: effects/shaders/index.md
+          items:
+            - name: 선형 그라데이션
+              href: effects/shaders/linear-gradient.md
+            - name: 원형 그라데이션
+              href: effects/shaders/circular-gradients.md
+            - name: 비트맵 타일
+              href: effects/shaders/bitmap-tiling.md
+            - name: 노이즈
+              href: effects/shaders/noise.md
+        - name: 혼합 모드
+          href: effects/blend-modes/index.md
+          items:
+            - name: Porter-Duff 혼합 모드
+              href: effects/blend-modes/porter-duff.md
+            - name: 분리 가능한 혼합 모드
+              href: effects/blend-modes/separable.md
+            - name: 분리 불가능한 혼합 모드
+              href: effects/blend-modes/non-separable.md
+        - name: 마스크 필터
+          href: effects/mask-filters.md
+        - name: 이미지 필터
+          href: effects/image-filters.md
+        - name: 색 필터
+          href: effects/color-filters.md
+    - name: 플랫폼 독립적인 예제
+      href: ~/graphics-games/skiasharp/introduction.md
+      items:
+        - name: 플랫폼 특정 정보
+          href: ~/graphics-games/skiasharp/platform.md
+    - name: API 참조
+      href: /dotnet/api/skiasharp/
