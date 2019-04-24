@@ -1,4 +1,12 @@
-||권장|노트|
+---
+ms.openlocfilehash: 6f72c951f28940c5382e3ed321cbd982cdafcfbf
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61303314"
+---
+||권장|참고 사항|
 |---|---|---|
 |**운영 체제**|macOS High Sierra|[Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)는 macOS High Sierra 이상이 필요합니다.|
 |**Xamarin.iOS**|iOS 11 SDK|iOS 11 SDK는 [Xcode 9](https://developer.apple.com/library/archive/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html#//apple_ref/doc/uid/TP40001051-CH1-SW876)와 함께 제공됩니다.|

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ef7e0e0e0874857786196452de83d7532b80c347
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61079270"
+---
 |장르 ID|장르 이름|
 |---|---|
 |6000|비즈니스|
@@ -35,7 +43,7 @@
 |7006|카지노|
 |7007|주사위|
 |7008|교육|
-|7009|패밀리|
+|7009|가족|
 |7010|어린이|
 |7011|음악|
 |7012|퍼즐|
