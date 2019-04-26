@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953326"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>iOS 게임 Api Xamarin.iOS에서
 
@@ -374,7 +374,7 @@ public override void ViewWillLayoutSubviews ()
 위의 샘플 외에도 Apple를 제공한 다음 샘플 앱으로 트랜스 코딩할 수 있는 C# Xamarin.iOS 및:
 
 - [FourInARow: GameplayKit Minmax 전략가 사용 하 여 상대가 AI에 대 한](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
-- [AgentsCatalog: GameplayKit에서 에이전트 시스템 사용](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
+- [AgentsCatalog: 에이전트 시스템을 사용 하 여 GameplayKit에서](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
 - [DemoBots: SpriteKit GameplayKit와 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
@@ -445,7 +445,7 @@ Apple는 iOS 9 용 SceneKit에 다음과 같은 새로운 기능을 추가:
 - 합니다 `SCNView` 고 `SCNSceneRenderer` Metal 렌더링 (지원 되는 iOS 장치)에서 사용할 수 있도록 클래스를 사용할 수 있습니다.
 - 합니다 `SCNAudioPlayer` 고 `SCNNode` 클래스를 사용 하 여 자동으로 iOS 앱에는 플레이어 위치를 추적 하는 공간 오디오 효과 추가할 수 있습니다.
 
-자세한 내용은 참조 하십시오 우리의 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 과 Apple [SceneKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 및 [Fox: Xcode 장면 편집기를 사용한SceneKit게임제작](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)샘플 프로젝트입니다.
+자세한 내용은 참조 하십시오 우리의 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 과 Apple [SceneKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 고 [Fox: SceneKit 게임 Xcode 장면 편집기를 사용 하 여 제작](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) 샘플 프로젝트입니다.
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -462,7 +462,7 @@ Apple는 iOS 9 용 SpriteKit에 다음과 같은 새로운 기능을 추가:
 - 쉽게 새 카메라 노드를 사용 하 여 게임 지원 스크롤 (`SKCameraNode`) 개체입니다.
 - 체제 미 설치 컴퓨터를 지 원하는 iOS 장치에서 SpriteKit를 자동으로 사용 렌더링을 위해 사용자 지정 OpenGL ES 셰이더를 이미 사용한 경우에 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [DemoBots: SpriteKit 사용 하 여 크로스 플랫폼 게임을 빌드 및 GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱입니다.
+자세한 내용은 참조 하십시오 우리의 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [DemoBots: SpriteKit GameplayKit와 크로스 플랫폼 게임 제작](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱입니다.
 
 ## <a name="summary"></a>요약
 

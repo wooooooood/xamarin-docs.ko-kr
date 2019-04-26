@@ -1,5 +1,5 @@
 ---
-title: IOS의 그래픽 및 애니메이션
+title: iOS의 그래픽 및 애니메이션
 description: 이 문서는 Xamarin.iOS에서 Core 이미지, Core Graphics 및 핵심 애니메이션 프레임 워크를 사용 하는 방법을 설명 하는 다양 한 설명서를 링크 합니다.
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c553bd6d81e43913b6322b2ff85972a81b87f6cf
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945707"
 ---
-# <a name="graphics-and-animation-in-ios"></a>IOS의 그래픽 및 애니메이션
+# <a name="graphics-and-animation-in-ios"></a>iOS의 그래픽 및 애니메이션
 
 ![Images/00_final_app.png](images/00-final-app.png "실행 하는 예제 앱")
 

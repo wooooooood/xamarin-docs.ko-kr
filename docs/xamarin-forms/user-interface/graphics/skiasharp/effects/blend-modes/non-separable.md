@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61162574"
 ---
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
@@ -28,7 +28,7 @@ ms.locfileid: "53055013"
 
 HSL 색 모델 문서에서 설명한 [ **Xamarin.Forms를 사용 하 여 통합** ](../../basics/integration.md) 하 고 해당 문서의 예제 프로그램 HSL 색을 사용 하 여 실험을 허용 합니다. 만들 수 있습니다는 `SKColor` 색상, 채도 및 명도 값을 사용 하 여 정적을 사용 하 여 값 [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) 메서드.
 
-색조 색의 기준 파장을 나타냅니다. 색상 값 범위는 0에서 360 및 가산적 및 무언가 감 주 순환: 빨간색은 값 0, 노란색 60, 녹색은 120, 녹청 180, 파란색은 240, 자홍 300 이며 주기 360에 빨간색으로 돌아갑니다.
+색조 색의 기준 파장을 나타냅니다. 색상 값 범위는 0에서 360 및 가산적 및 무언가 감 주 순환 합니다. 빨간색은 값 0, 노란색 60, 녹색은 120, 녹청 180, 파란색은 240, 자홍 300 이며 주기 360에 빨간색으로 돌아갑니다.
 
 주요 색상 없는 경우 &mdash; 예를 들어, 색은 흰색, 검은색 또는 회색 음영을 &mdash; 색상은 정의 되지 않은 하 고 일반적으로 0으로 설정 합니다. 
 
@@ -198,7 +198,7 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 이 혼합 모드 응용 프로그램을 곧 표시 됩니다.
 
-마지막으로, 합니다 `SKBlendModes.Luminosity` 혼합 모드의 반대는 `SKBlendModes.Color`합니다. 해당 색상 및 대상의 채도 유지 하지만 원본의 명도 사용 합니다. `Luminosity` blend 모드는 일괄 처리의 가장 알 수 없는: The 색상 및 채도 슬라이더 이미지에 영향을 줍니다 하지만 보통 명도에 이미지는 고유 합니다.
+마지막으로, 합니다 `SKBlendModes.Luminosity` 혼합 모드의 반대는 `SKBlendModes.Color`합니다. 해당 색상 및 대상의 채도 유지 하지만 원본의 명도 사용 합니다. `Luminosity` blend 모드는 일괄 처리의 가장 알 수 없는 합니다. 색상 및 채도 슬라이더 이미지에 영향을 줍니다 하지만 보통 명도에 이미지는 고유 합니다.
 
 [![분리 가능한 비 Blend 모드-명도](non-separable-images/NonSeparableBlendModes-Luminosity.png "명도 분리 되지 않은 혼합 모드")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 

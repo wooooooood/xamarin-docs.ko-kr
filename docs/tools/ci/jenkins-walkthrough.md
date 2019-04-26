@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/23/2017
 ms.openlocfilehash: 2e6a75fa3c4c63e8dea402c6761f8ef753908540
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58507203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61047868"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin에서 Jenkins 사용
 
@@ -142,7 +142,7 @@ MSBuild 플러그 인을 사용 하도록 구성 해야 합니다 **/Library/Fra
 TFS 서버와 상호 작용 하는 macOS 워크스테이션에 대 한 순서로 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) 워크스테이션에 설치 해야 합니다. Team Explorer Everywhere는 TFS에 액세스 하기 위한 플랫폼 간 명령줄 클라이언트가 포함 된 Microsoft의 도구 집합입니다. Team Explorer Everywhere 수 Microsoft에서 다운로드 되어 설치 3 단계에 따라:
 
 1. 사용자 계정에 액세스할 수 있는 디렉터리에 보관 파일을 압축을 풉니다. 예를 들어, 있습니다 수 파일 압축을 풉니다 **~/tee**합니다.
-2. 위의 1 단계에서 압축 되지 않은 파일이 들어 있는 폴더를 포함 하도록 셸 또는 시스템 경로 구성 합니다. 예를 들어 개체에 적용된
+2. 위의 1 단계에서 압축 되지 않은 파일이 들어 있는 폴더를 포함 하도록 셸 또는 시스템 경로 구성 합니다. 예를 들면 다음과 같습니다.
 
     ```
     echo export PATH~/tee/:$PATH' >> ~/.bash_profile

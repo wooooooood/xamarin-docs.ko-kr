@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 267dac5b6aec263f1d8b69d81f34f732118c1802
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61406893"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Xamarin.iOS에서 구성과 앱에서 바로 구매 기본 사항
 
@@ -44,7 +44,7 @@ Apple에서 판매 – 이름, 설명 들어가고 'product' 스크린샷 검토
 
 제품에 대 한 모든 가격을 선택할 수 없습니다.-'가격 계층을 ' Apple 지 각 국가/통화에 특정 값만 선택할 수 있습니다. 다양 한 시장에서 다른 가격 계층 수는 없습니다.
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 앱 내 구매 코드를 작성 하기 전에 iTunes Connect에서에서 일부 설정 작업을 수행 해야 합니다 ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) 및 iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 

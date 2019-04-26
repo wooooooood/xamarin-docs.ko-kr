@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61038406"
 ---
 # <a name="viewpager-with-fragments"></a>조각이 있는 ViewPager
 
@@ -29,7 +29,7 @@ _ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 
 
 ## <a name="start-an-app-project"></a>앱 프로젝트를 시작 합니다.
 
-라는 새 Android 프로젝트를 만듭니다 **FlashCardPager**합니다. 그런 다음 NuGet 패키지 관리자를 시작 (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치 합니다 **Xamarin.Android.Support.v4** 에 설명 된 대로 패키지 [Viewpager 뷰와](~/android/user-interface/controls/view-pager/viewpager-and-views.md)합니다. 
+라는 새 Android 프로젝트를 만듭니다 **FlashCardPager**합니다. 그런 다음 NuGet 패키지 관리자를 시작 (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치 합니다 **Xamarin.Android.Support.v4** 에 설명 된 대로 패키지 [Viewpager 뷰와](~/android/user-interface/controls/view-pager/viewpager-and-views.md)합니다. 
 
 
 

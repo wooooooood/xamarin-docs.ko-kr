@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 03b80d3fb1ed7c8db108f86b3b3923c20e1d908f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61089989"
 ---
 # <a name="alternative-layout-views"></a>대체 레이아웃 보기
 
@@ -79,7 +79,7 @@ _이 항목에서는 리소스 한정자를 사용 하 여 버전 레이아웃 �
 
 ## <a name="handling-conflicts"></a>충돌 처리 
 
-에 있는 텍스트의 색을 변경 하려는 경우는 **기본** 녹색으로 레이아웃, 연결 된 레이아웃에 표시 되는 경고 아이콘이 표시 됩니다. 해당 레이아웃을 클릭 하면 충돌을 표시 하기 위해 레이아웃을 열립니다. 충돌을 일으킨 위젯 빨간색 프레임을 사용 하 여 강조 표시 되 고 다음 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
+에 있는 텍스트의 색을 변경 하려는 경우는 **기본** 녹색으로 레이아웃, 연결 된 레이아웃에 표시 되는 경고 아이콘이 표시 됩니다. 해당 레이아웃을 클릭 하면 충돌을 표시 하기 위해 레이아웃을 열립니다. 빨간색 프레임을 사용 하 여 충돌을 일으킨 위젯이 강조 표시 하 고 다음과 같은 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
 
 [![충돌 하는 변경](alternative-layout-views-images/vs/11-conflicting-change-sml.png "충돌 하는 변경")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
@@ -101,7 +101,7 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 [![확인란 충돌](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "확인란 충돌")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
-클릭 하는 **land 큰** 레이아웃 충돌을 표시 합니다. 다음과 같은 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*: 
+클릭 하는 **land 큰** 레이아웃 충돌을 표시 합니다. 다음 메시지가 표시됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*: 
 
 [![대체 레이아웃 충돌](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt 레이아웃 충돌")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
 
@@ -179,7 +179,7 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 ## <a name="handling-conflicts"></a>충돌 처리 
 
-에 있는 텍스트의 색을 변경 하려는 경우는 **기본** 녹색으로 레이아웃, 연결 된 레이아웃에 표시 되는 경고 아이콘이 표시 됩니다. 해당 레이아웃을 클릭 하면 충돌을 표시 하기 위해 레이아웃을 열립니다. 충돌을 일으킨 위젯 빨간색 프레임을 사용 하 여 강조 표시 되 고 다음 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
+에 있는 텍스트의 색을 변경 하려는 경우는 **기본** 녹색으로 레이아웃, 연결 된 레이아웃에 표시 되는 경고 아이콘이 표시 됩니다. 해당 레이아웃을 클릭 하면 충돌을 표시 하기 위해 레이아웃을 열립니다. 빨간색 프레임을 사용 하 여 충돌을 일으킨 위젯이 강조 표시 하 고 다음과 같은 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
 
 [![변경 내용이 충돌](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
@@ -201,7 +201,7 @@ A *충돌 상자* 충돌을 설명 하기 위해 위젯의 오른쪽에 표시 �
 
 [![확인란 충돌](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
-클릭 하는 **land 큰** 레이아웃 충돌을 표시 합니다. 다음과 같은 메시지가 표시 됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
+클릭 하는 **land 큰** 레이아웃 충돌을 표시 합니다. 다음 메시지가 표시됩니다. *최근 내용으로 인해 충돌이 대체 레이아웃에서*합니다. 
 
 [![대체 레이아웃 충돌](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157398"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
@@ -104,7 +104,7 @@ Android 운영 체제를 사용할 때 예외가 발생 합니다 `Stream` 에�
 
 코드 측면에서 비트맵을 로드 하는 가장 쉬운 방법은 비트맵 리소스를 포함 하 여 응용 프로그램에서 직접 됩니다. 합니다 **SkiaSharpFormsDemos** 라는 폴더를 포함 하는 프로그램 **Media** 라는 하나를 포함 하 여 파일, 비트맵 몇 개 포함 **monkey.png**합니다. 프로그램 리소스로 저장 하는 비트맵을 사용 해야 합니다 **속성** 파일에는 대화는 **빌드 작업** 의 **포함 리소스**!
 
-각 포함된 리소스에는 *리소스 ID* 프로젝트 이름, 폴더 및 마침표로 연결 된 모든 파일 이름으로 이루어진: **SkiaSharpFormsDemos.Media.monkey.png**합니다. 해당 리소스를 지정 하 여이 리소스에 대 한 액세스를 얻을 수 있습니다 인수로 ID는 [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) 메서드를 [ `Assembly` ](xref:System.Reflection.Assembly) 클래스:
+각 포함된 리소스에는 *리소스 ID* 프로젝트 이름, 폴더 및 파일 이름, 마침표로 연결 된 모든 구성 된: **SkiaSharpFormsDemos.Media.monkey.png**. 해당 리소스를 지정 하 여이 리소스에 대 한 액세스를 얻을 수 있습니다 인수로 ID는 [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) 메서드를 [ `Assembly` ](xref:System.Reflection.Assembly) 클래스:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

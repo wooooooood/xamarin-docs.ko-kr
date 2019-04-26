@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
 ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953747"
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
@@ -345,7 +345,7 @@ class BetterActivity : Activity {
 
 
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 Xamarin.Android 가비지 수집기를 설정 하 여 구성할 수 있습니다는 `MONO_GC_PARAMS` 환경 변수입니다. 빌드 작업을 사용 하 여 환경 변수를 설정할 수 있습니다 [AndroidEnvironment](~/android/deploy-test/environment.md)합니다.
 

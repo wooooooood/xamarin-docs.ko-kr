@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/18/2019
 ms.openlocfilehash: 441afb9348a85de61d35574bb9121c7de713a897
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61367778"
 ---
 # <a name="set-collectionview-selection-mode"></a>CollectionView 선택 모드를 설정 합니다.
 

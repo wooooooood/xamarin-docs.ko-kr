@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: b2f4cc71c1993e51ed55b51edd7c50d393e60873
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61412907"
 ---
 # <a name="working-with-watchos-screen-sizes-in-xamarin"></a>WatchOS에서 Xamarin 화면 크기를 사용 하 여 작업
 
@@ -32,7 +32,7 @@ Mac 디자이너에 대 한 Visual Studio에서 표시 하는 기본적으로에
 
 ![](screen-sizes-images/screen-any-sml.png "디자이너를 표시 하는 모든 Apple Watch 인터페이스 컨트롤러를 시청 하세요.")
 
-크기 메뉴를 사용 하 여 편집 및 사용 가능한 화면 크기 중 하나에서 스토리 보드를 미리 보기: **(38mm** 하거나 **42 mm**:
+크기 메뉴를 사용 하 여 편집 및 사용 가능한 화면 크기 중 하나에서 스토리 보드를 미리 보려면: **(38mm** 나 **42 mm**:
 
 ![](screen-sizes-images/screen-menu-sml.png "(38mm 또는 42 mm 크기 선택")
 

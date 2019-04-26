@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 7696c820ab6fdf19bdef46db31061fb5914e6cf4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60880688"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>watchOS에서 Xamarin 메뉴 컨트롤 (Force Touch)
 
@@ -40,7 +40,7 @@ A `Menu` 에 추가 되어야 합니다는 `InterfaceController` 디자인 타�
 
 - 제목 및
 - 사용자 지정 이미지 또는
-- 시스템 이미지: 허용, 블록, 추가, 거부, 정보를 더 음소거, 일시 중지, 재생, 반복, 다시 시작 "," 공유 "," Shuffle "," 스피커 "," 휴지통입니다.
+- 시스템 이미지: 허용, 차단, 거부, 정보, 추가 더 음소거, 일시 중지, 재생, 반복, 다시 시작 "," 공유 "," Shuffle "," 스피커 "," 휴지통입니다.
 
 만들기는 `Action` 선택 하 여는 **이벤트** 의 섹션을 **속성** 패드 및 동작 메서드에 대 한 이름을 입력 합니다. 부분 메서드에 코드를 다음과 같이 하는 인터페이스 컨트롤러 클래스에서 구현 될 수 있음에 만들어집니다.
 

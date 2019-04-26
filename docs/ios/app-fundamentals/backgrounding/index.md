@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
 ms.openlocfilehash: a4f5112b6e77ab6e00453c19c766d1e905df1144
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946659"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Xamarin.iOS의 backgrounding
 
@@ -27,7 +27,7 @@ IOS의 backgrounding가 응용 프로그램 상태를 인식 및 앱의 앱 및 
 ## <a name="contents"></a>목차
 
 1.  [iOS의 Backgrounding 소개](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
-1.  [응용 프로그램 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
+1.  [애플리케이션 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
 1.  [iOS Backgrounding 기술](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
 1.  [연습: iOS의 Backgrounding](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
 1.  [iOS Backgrounding 지침](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)

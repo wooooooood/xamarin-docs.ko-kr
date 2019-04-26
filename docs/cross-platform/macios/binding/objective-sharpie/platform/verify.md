@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: 4bca896afb4dfc96fd6c1d7cdf489feb6a879e31
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261230"
 ---
 # <a name="objective-sharpie-verify-attributes"></a>목표 Sharpie 특성 확인
 
@@ -22,7 +22,7 @@ ms.locfileid: "37855031"
 바인딩 인지 확인 한 후 수정 하거나, 올바른 수를 수정 _제거할_ 는 `[Verify]` 바인딩에서 특성입니다.
 
 > [!IMPORTANT]
-> `[Verify]` 특성은 바인딩을 확인 하도록 강제 됩니다 있도록 C# 컴파일 오류가 의도적으로 발생 합니다. 제거 해야 합니다 `[Verify]` 검토 (하 고 수정할 수 있는) 코드 특성입니다.
+> `[Verify]` 특성 의도적으로 C# 컴파일 오류 바인딩을 확인 하도록 강제 됩니다 있도록 합니다. 제거 해야 합니다 `[Verify]` 검토 (하 고 수정할 수 있는) 코드 특성입니다.
 
 ## <a name="verify-hints-reference"></a>힌트 참조를 확인 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "37855031"
 |---|---|
 |InferredFromPreceedingTypedef|일반적인 규칙에 따라이 선언의 이름을 유추 된는 바로 앞의 `typedef` 원래 기본 소스 코드에서입니다. 이 규칙은 모호한 올바른 유추 된 이름 인지 확인 합니다.|
 |ConstantsInterfaceAssociation|바보 증명 확인할 방법은 없으며 Objective-c 인터페이스를 사용 하 여 extern 변수 선언은 연결할 수 있습니다. 이러한 인스턴스의 바인딩된 `[Field]` 속성 근처에서 구체적인 인터페이스에 가능한 경우 '상수'를 제거는 보다 직관적인 API를 생성 하기 위해 일부 인터페이스에서 완전히 인터페이스입니다.|
-|MethodToProperty|Objective-c 메서드로 없는 매개 변수 및 반환 값 (void가 아닌 반환)와 같은 규칙으로 인해 C# 속성으로 바인딩 되었습니다. 이러한 방법을 자주 바인딩할 속성으로 편리한 API를 노출 하지만 가양성 발생 하는 경우도 있습니다 및 바인딩 메서드를 실제로 이어야 합니다.|
+|MethodToProperty|메서드를 Objective-c로 바인딩된는 C# 없습니다 매개 변수 및 반환 값 (void가 아닌 반환)와 같은 규칙으로 인해 속성입니다. 이러한 방법을 자주 바인딩할 속성으로 편리한 API를 노출 하지만 가양성 발생 하는 경우도 있습니다 및 바인딩 메서드를 실제로 이어야 합니다.|
 |StronglyTypedNSArray|네이티브 `NSArray*` 으로 바인딩 `NSObject[]`합니다. 예상 API 설명서 (예: 헤더 파일에 주석)를 통해 설정에 따라 바인딩에 배열을 더욱 강력 하 게 입력할 수 있습니다 또는 테스트를 통해 배열 내용을 검사 하 여 합니다. 예를 들어는 NSArray* NSNumber* 만 포함 된 instancescan 변수로 바인딩되어야 `NSNumber[]` 대신 `NSObject[]`합니다.|
 
 사용 하 여 힌트에 대 한 설명서를 신속 하 게도 받을 수 있습니다는 `sharpie verify-docs` 도구, 예를 들어:
@@ -43,5 +43,5 @@ sharpie verify-docs InferredFromPreceedingTypedef
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

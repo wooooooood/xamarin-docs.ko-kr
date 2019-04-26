@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
 ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61160569"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -41,7 +41,7 @@ Windows에서에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profi
 
 합니다 **.mlpd** 를 선택 하 여 현재 세션으로 저장할 수도 있습니다에 대 한 **파일 > 다른 이름으로 저장 하는 중...** Profiler의 메뉴에서:
 
-**Mac 용 visual Studio**:
+**Visual Studio for Mac**:
 
 ![](troubleshooting-images/image17.png "Mac 용 Visual Studio에서.mlpd 파일 저장")
 

@@ -1,5 +1,5 @@
 ---
-title: TvOS 12 소개
+title: tvOS 12 소개
 description: 이 문서는 Xamarin의 미리 보기 릴리스에 대 한 12 tvOS에서 새롭고 업데이트 된 기능의 개요는 고급 C# 바인딩을 현재 제공을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932545"
 ---
-# <a name="introduction-to-tvos-12"></a>TvOS 12 소개
+# <a name="introduction-to-tvos-12"></a>tvOS 12 소개
 
 이 문서는 새롭고 업데이트 된 tvOS 12의 대략적인 개요를 제공합니다.
 

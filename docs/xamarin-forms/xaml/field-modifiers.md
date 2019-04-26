@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Forms의 XAML 필드 한정자
 description: x:Fieldmodifier 네임 스페이스 특성은 명명된 XAML 요소를 위해 생성된 필드에 대한 접근 수준을 지정합니다.
 ms.prod: xamarin
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
 ms.openlocfilehash: 8be56524ec1c5331f30418fcc29a4bd2c26ccde1
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075300"
 ---
 # <a name="xaml-field-modifiers-in-xamarinforms"></a>Xamarin.Forms의 XAML 필드 한정자
 

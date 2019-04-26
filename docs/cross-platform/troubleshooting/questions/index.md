@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157195"
 ---
 # <a name="general-frequently-asked-questions"></a>일반 질문과 대답
 
@@ -23,7 +23,7 @@ ms.locfileid: "39350822"
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[PCL 리플렉션 API](pcl-reflection.md)
 Microsoft 이식 가능한 클래스 라이브러리의 사용을 위한 새로운 리플렉션 API를 개발 합니다. 일부 기존 리플렉션 코드는 PCL을 이동 하려는 경우 작동 하지 않을 수 있습니다.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 해야 하나요?](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 system.diagnostics.tracing과 관련 된 문제를 해결 하는 방법](pcl-case-study.md)
 Xamarin.iOS 및 Xamarin.Android에는 참조로 허용 되는 모든 PCL 프로필의 100%를 구현 하지 않습니다. Visual Studio for Mac을 Visual Studio 및 NuGet 패키지 관리자에서에서 실제 편의 위해 Xamarin 프로젝트만 불완전 한 구현이 있는 몇 가지 프로필의 사용을 허용 합니다. 예를 들어 Xamarin.iOS 아니고 Xamarin.Android 현재 포함 형식에 완전 한 구현 된 `System.Diagnostics.Tracing` PCL 네임 스페이스입니다. 앱 프로젝트를 이식 가능 net45 + win8 + wp8 + wpa81 참조를 전환 하 여이 문제를 해결 해도 TPL 데이터 흐름 라이브러리의 버전입니다.
 
 ## <a name="nuget-packages--xamarin-components"></a>NuGet 패키지 및 Xamarin 구성 요소

@@ -1,5 +1,5 @@
 ---
-title: 라이브 응용 프로그램 검사
+title: 라이브 애플리케이션 검사
 description: 이 문서에서는 Xamarin Inspector를 사용 하 여 응용 프로그램을 검사 하는 방법을 설명 합니다. 또한 Xamarin Inspector 도구의 제한에 대해서도 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60948157"
 ---
-# <a name="inspecting-live-applications"></a>라이브 응용 프로그램 검사
+# <a name="inspecting-live-applications"></a>라이브 애플리케이션 검사
 
 라이브 앱 검사는 엔터프라이즈 고객이 사용할 수 있습니다.
 

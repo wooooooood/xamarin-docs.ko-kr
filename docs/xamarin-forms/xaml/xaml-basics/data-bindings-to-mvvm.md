@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61174578"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5장. 데이터 바인딩부터 MVVM까지
 
@@ -35,7 +35,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`는 매우 특별한 속성입니다. 하나의 요소에 `BindingContext`를 설정하면, 해당 요소의 모든 자식에게 상속됩니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
+`BindingContext` 매우 특별 한 속성이입니다. 설정 하는 경우는 `BindingContext` 해당 요소의 모든 자식에 의해 상속 된 요소에 있습니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
 
 **One-Shot DateTime** 프로그램에서 두 개의 자식은 `DateTime` 값의 속성에 바인딩을 포함하고 있지만, 다른 두 자식은 바인딩 경로가 없는 것으로 보입니다. 이는 다음과 같이 `DateTime` 값 자체가 `StringFormat`에 사용됨을 의미합니다.
 
@@ -298,7 +298,7 @@ namespace XamlSamples
 
 ## <a name="commanding-with-viewmodels"></a>ViewModel을 사용하여 명령 실행
 
-대부분의 경우 MVVM 패턴은 데이터 항목의 조작으로 제한됩니다. 뷰의 사용자 인터페이스 개체는 ViewModel의 데이터 개체와 병렬입니다.
+대부분의 경우에서 MVVM 패턴은 데이터 항목의 조작에 제한 됩니다. ViewModel에서 뷰 병렬 데이터 개체의 사용자 인터페이스 개체입니다.
 
 하지만 뷰에는 ViewModel에서 다양한 작업을 실행하는 단추가 포함되는 경우가 있습니다. 그러나 ViewModel은 특정 사용자 인터페이스 패러다임을 ViewModel에 묶어주기 때문에 `Clicked` 처리기를 포함시키면 안됩니다.
 
@@ -702,7 +702,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Xamarin Evolve 2016: Xamarin.Forms 및 Prism을 사용하여 단순화된 MVVM**
+**Xamarin Evolve 2016: Xamarin.Forms 및 Prism을 사용 하 여 간단 하 게 MVVM**
 
 ## <a name="summary"></a>요약
 

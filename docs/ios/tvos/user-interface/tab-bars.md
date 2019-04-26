@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: a0efc30fd9814e4da858c4e3e4e99990eccf102e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61164296"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>TvOS Xamarin에 탭 표시줄 컨트롤러 작업
 

@@ -7,17 +7,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: e35577b116180d2745e2f6afb792547f63873214
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61424606"
 ---
 # <a name="sample-integrations"></a>샘플 통합
 
 참조 된 [주방 싱크] [ KitchenSink] 통합의 작업 예제에 대 한 샘플. 간단히 빌드할 `KitchenSink.sln` Mac 또는 Visual Studio를 열고 Visual Studio에서 `KitchenSink.workbook`합니다.
 
-[![주방 싱크 통합 스크린 샷](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
+[![Kitchen Sink Integration Screenshot](samples-images/kitchensinkintegrationscreenshot.png)](samples-images/kitchensinkintegrationscreenshot.png#lightbox)
 
 주방 싱크 샘플에는 개념 집합을 모두 보여 줍니다.
 

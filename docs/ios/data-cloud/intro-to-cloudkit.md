@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
 ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165592"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.iOS에서 CloudKit
 
@@ -151,7 +151,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 ||Public 데이터베이스|전용 데이터베이스|
 |---|--- |--- |
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
-|**할당량**|개발자의 할당량에 대 한 고려|사용자의 할당량에 대 한 고려|
+|**Quota**|개발자의 할당량에 대 한 고려|사용자의 할당량에 대 한 고려|
 |**기본 권한**|읽을 수 있는 전 세계|읽을 수 있는 사용자|
 |**사용 권한 편집**|레코드 클래스 수준을 통해 iCloud 대시보드 역할|N/A|
 
@@ -278,7 +278,7 @@ newRecord ["name"] = asset;
 
 CloudKit 내 기본 개체의 모든 설명 이제 했습니다. 컨테이너 응용 프로그램에 연결 되 고 데이터베이스를 포함 합니다. 데이터베이스는 레코드 영역으로 그룹화 되 고 레코드 식별자가 가리키는 레코드를 포함 합니다. 참조를 사용 하 여 레코드 간의 부모-자식 관계 정의 됩니다. 마지막으로, 큰 파일 업로드 및 자산을 사용 하 여 레코드를 연결할 수 있습니다.
 
-## <a name="cloudkit-convenience-api"></a>CloudKit 편의 API
+## <a name="cloudkit-convenience-api"></a>CloudKit Convenience API
 
 Apple에서는 CloudKit을 사용 하 여 작업에 대 한 두 가지 API 집합을 제공 합니다.
 

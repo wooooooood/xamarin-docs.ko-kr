@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
 ms.openlocfilehash: e60892edfcf73f3e7cada8923e16bcc1be2c203e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876931"
 ---
 # <a name="getting-started-with-android"></a>Android 시작
 
@@ -105,7 +105,7 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 
 이 복사 AAR 파일 라는 이름의 새 모듈 **hello_from_csharp**합니다.
 
-![Android Studio 프로젝트](android-images/androidstudioproject.png)
+![Android Studio Project](android-images/androidstudioproject.png)
 
 새 모듈을 사용 하 여 **앱**, 마우스 오른쪽 단추로 클릭 하 고 선택 **모듈 설정 열기**합니다. 에 **종속성** 탭에서 새 **모듈 종속성** 선택한 **: hello_from_csharp**합니다.
 

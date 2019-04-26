@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085021"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -41,12 +41,12 @@ Android 3.0 조각을, 휴대폰 및 태블릿에 많은 다양 한 화면 크�
 
 
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[앱 연결](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
 
 이 가이드에서는 Android 6.0에서 지 원하는 방법 설명 _앱 연결_, 모바일 앱 웹 사이트에서 Url에 응답할 수 있는 기술입니다. Android 6.0 응용 프로그램에 앱 연결을 구현 하는 방법 및 도메인에 대 한 앱 링크를 처리 하도록 모바일 앱에 권한을 부여 하 여 웹 사이트를 구성 하는 방법을 설명 합니다.
 
 
-##  <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 원형](~/android/platform/pie.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 Pie](~/android/platform/pie.md)
 
 이 문서에서는 Android 원형의 새로운 기능에 간략하게 Xamarin.Android Android 원형 개발, 준비 하는 방법을 설명 하 고 Android 원형 표시 알림 및 잘라낸 부분의 새로운 기능을 사용 하는 방법을 보여 주는 앱의 예를 제공 Xamarin.Android 앱입니다.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420894"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거 수 있나요?
 
@@ -46,7 +46,7 @@ ms.locfileid: "50117410"
 
 9.  원하는 파일을 삭제 합니다 `.ipa`합니다. Finder를 사용 하 여 휴지통으로 이동 하거나 사용 하 여 명령줄에서 삭제할 `Terminal.app`합니다. 내용을 보려고 합니다 `Payload/iPhone` 파일을 컨트롤 클릭 Finder에서 파일을 선택 **패키지 내용 표시**.
 
-10.  3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾을 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![](modify-ipa-images/build-log.png "파인더에서 프로젝트 빌드 로그를 찾으려면")
+10.  3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾고 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![](modify-ipa-images/build-log.png "Finder에서 프로젝트 빌드 로그를 찾으려면")
 
 11.  두 번 클릭 하 여 10 단계에서 빌드 로그를 예를 들어 엽니다.
 
@@ -88,4 +88,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 및 앱 스토어 인증 프로세스와 유사한 오류 메시지를 보고 합니다.
 
-> 오류 ITMS-90035: "잘못 된 서명입니다. 봉인 된 리소스 누락 되었거나 잘못 되었습니다. 이진 경로 [iPhoneApp1.app/iPhoneApp1]에 잘못 된 서명이 있습니다. 배포 인증서, 없습니다 임시 인증서를 또는 개발 인증서를 사용 하 여 응용 프로그램을 체결 해야 합니다. 수준 대상 (프로젝트 수준에서 모든 값을 재정의) Xcode에서 코드 서명 설정이 올바른지 확인 합니다. 또한 업로드 하는 번들 릴리스 대상 시뮬레이터 대상 없습니다 Xcode에서 사용 하 여 빌드된 해야 합니다. 인 경우 코드 서명 설정이 잘못 된 특정 Xcode에서 정리 "모두"를 선택, 파인더에서 "빌드" 디렉터리를 삭제 및 릴리스 대상을 다시 작성 합니다. 자세한 내용은 참조 하세요 [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "시그니처가 잘못 되었습니다. 봉인 된 리소스 누락 되었거나 잘못 되었습니다. 이진 경로 [iPhoneApp1.app/iPhoneApp1]에 잘못 된 서명이 있습니다. 배포 인증서, 없습니다 임시 인증서를 또는 개발 인증서를 사용 하 여 응용 프로그램을 체결 해야 합니다. 수준 대상 (프로젝트 수준에서 모든 값을 재정의) Xcode에서 코드 서명 설정이 올바른지 확인 합니다. 또한 업로드 하는 번들 릴리스 대상 시뮬레이터 대상 없습니다 Xcode에서 사용 하 여 빌드된 해야 합니다. 인 경우 코드 서명 설정이 잘못 된 특정 Xcode에서 정리 "모두"를 선택, 파인더에서 "빌드" 디렉터리를 삭제 및 릴리스 대상을 다시 작성 합니다. 자세한 내용은 참조 하세요 [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

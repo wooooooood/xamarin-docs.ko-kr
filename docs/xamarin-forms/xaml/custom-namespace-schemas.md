@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
 ms.openlocfilehash: 2e09e89fe17956efaef910638e827b69a5795bc0
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60857486"
 ---
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Xamarin.forms에서 XAML Namespace 사용자 지정 스키마
 

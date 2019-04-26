@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 13c5ae3fac76ec1ec1a0ade135d5919403066226
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61409836"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 사용
 
@@ -59,7 +59,7 @@ Apple에는 경고에 단추를 추가 하기 위한 다음 제안에 있습니�
 
 <a name="Displaying-an-Alert" />
 
-## <a name="displaying-an-alert"></a>경고를 표시합니다.
+## <a name="displaying-an-alert"></a>경고 표시
 
 인스턴스를 만든 경고를 표시 하려면를 `UIAlertViewController` 및 작업 (단추)를 추가 하 고 경고의 스타일을 선택 하 여 구성 합니다. 예를 들어, 다음 코드를 확인/취소 경고를 표시 합니다.
 

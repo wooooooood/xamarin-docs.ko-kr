@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
 ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61422054"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 오류
 
@@ -2221,7 +2221,7 @@ BindAs 특성의 형식에 연결 된 멤버의 형식과 일치 하는지 확�
 * 관리 되는 바인딩을 네이티브 라이브러리에 존재 하지 않는 네이티브 기호를 가리킵니다.
     이 문제는 일반적으로 바인딩에 일정 시간 동안 존재 하 고 네이티브 코드에 수정 되어 해당 시간 동안 특정 기본 클래스 중 하나 제거 되거나 이름이 바뀌었거나, 바인딩을 업데이트 되지 않은 동안 발생 합니다.
 * P/Invoke 존재 하지 않는 네이티브 기호를 가리킵니다. Xamarin.iOS 7.4부터를 <a href="#MT5214">MT5214</a> 이 사례에 대 한 오류가 보고 됩니다 (자세한 내용은 MT5214 참조).
-* 타사 바인딩 / 라이브러리를 c + +를 사용 하 여 빌드 되었지만 바인딩이이 지정 하지 않으면 해당 `[LinkWith]` 특성입니다. 이 일반적으로 매우 쉽게 인식 하도록 작업에 기호 때문에 잘못 된 c + + 기호 (한 가지 일반적인 예는 `__ZNKSt9exception4whatEv`).
+* 타사 바인딩 / 라이브러리를 사용 하 여 빌드된 C++, 하지만 바인딩이이 지정 하지 않는 해당 `[LinkWith]` 특성입니다. 이 일반적으로 매우 쉽게 인식, 기호 때문에 손상 된 C++ 기호 (한 가지 일반적인 예는 `__ZNKSt9exception4whatEv`).
   - 타사 바인딩 작성자는 해당 원본에 액세스할 경우, 수정할 바인딩의 `[LinkWith]` 특성을 설정 하는 `IsCxx` 플래그:
 
             [LinkWith ("mylib.a", IsCxx = true)]
@@ -2739,7 +2739,7 @@ Xamarin.iOS 프로젝트는 자주 참조 네이티브 기호 동적으로 즉, 
 - array
 - dict
 - bool
-- 실수
+- REAL
 - 정수
 - date
 - 데이터

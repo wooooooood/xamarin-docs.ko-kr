@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2019
 ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58507190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61367033"
 ---
 # <a name="populate-xamarinforms-collectionview-with-data"></a>Xamarin.Forms CollectionView 데이터로 채우기
 

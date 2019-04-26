@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
 ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60951777"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Tvos 빠른 시작 가이드
 
@@ -51,23 +51,23 @@ Xamarin.tvOS을 사용 하면에서 완전 한 네이티브 Apple TV 앱을 개�
 
 1. Mac용 Visual Studio 시작:
 
-    [![](hello-tvos-images/setup01.png "Mac 용 visual Studio")](hello-tvos-images/setup01.png#lightbox)
+    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
 2. 클릭 된 **새 솔루션...**  열려면 화면의 왼쪽 위 모서리에 있는 링크를 **새 프로젝트** 대화 상자.
 3. 선택 **tvOS** > **앱** > **단일 뷰 앱** 을 클릭 합니다 **다음** 단추:
 
     [![](hello-tvos-images/setup02.png "단일 뷰 앱 선택")](hello-tvos-images/setup02.png#lightbox)
 4. 입력 `Hello, tvOS` 에 대 한는 **앱 이름**, 입력에 **조직 식별자** 을 클릭 합니다 **다음** 단추:
 
-    [![](hello-tvos-images/setup04.png "Tvos를 입력 합니다.")](hello-tvos-images/setup04.png#lightbox)
+    [![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
 5. 입력 `Hello_tvOS` 에 대 한 합니다 **프로젝트 이름** 을 클릭 합니다 **만들기** 단추:
 
-    [![](hello-tvos-images/setup03.png "HellotvOS 입력")](hello-tvos-images/setup03.png#lightbox)
+    [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
 
 Mac 용 visual Studio를 새 Xamarin.tvOS 앱을 만들고 응용 프로그램의 솔루션에 추가 하는 기본 파일을 표시 합니다.
 
  [![](hello-tvos-images/project01.png "기본 파일 보기")](hello-tvos-images/project01.png#lightbox)
 
-사용 하 여 Mac 용 visual Studio **솔루션** 하 고 **프로젝트**, Visual Studio는 정확히 동일한 방식으로 합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 응용 프로그램, 지원 라이브러리, 테스트 응용 프로그램 등을 포함할 수 있습니다. 이 경우 Mac 용 Visual Studio를 모두 솔루션 및 응용 프로그램 프로젝트를 마련 했습니다.
+사용 하 여 Mac 용 visual Studio **솔루션** 하 고 **프로젝트**, Visual Studio는 정확히 동일한 방식으로 합니다. 솔루션은 하나 이상의 프로젝트를 보관할 수 있는 컨테이너이고, 프로젝트는 애플리케이션, 지원 라이브러리, 테스트 애플리케이션 등을 포함할 수 있습니다. 이 경우 Mac 용 Visual Studio를 모두 솔루션 및 응용 프로그램 프로젝트를 마련 했습니다.
 
 를 하려는 경우 일반적인 공유 코드를 포함 하는 라이브러리 프로젝트 하나 이상의 코드를 만들 수 있습니다. 이러한 라이브러리 프로젝트를 응용 프로그램 프로젝트에서 사용 하거나 다른 Xamarin.tvOS 앱 프로젝트와 공유할 수 있습니다 (또는 Xamarin.iOS, Xamarin.Android 및 Xamarin.Mac 코드의 형식에 따라) 동일한 방식으로 표준.NET 응용 프로그램을 빌드하는 경우.
 
@@ -429,7 +429,7 @@ partial void Clicked (UIButton sender)
 
 에서는 곳에서 모든 항목을 사용 하 여 빌드하고 Xamarin.tvOS 응용 프로그램을 테스트할 준비가 이제 됩니다.
 
-## <a name="testing-the-application"></a>응용 프로그램 테스트
+## <a name="testing-the-application"></a>애플리케이션 테스트
 
 빌드 및 예상 대로 실행 되도록 응용 프로그램을 실행 하는 차례입니다. 빌드 수 고 한 단계에서 모두 실행 하거나 실행 하지 않고 작성할 수 있습니다.
 

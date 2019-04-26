@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 0dcda2e4fd1ca7773668a0a6fdf46e01f2f0841d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61367019"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>StoreKit 개요 및 Xamarin.iOS에서 제품 정보 검색
 
@@ -52,11 +52,11 @@ ms.locfileid: "50118528"
 
 대부분의 StoreKit 작업 테스트에 대 한 실제 장치를 필요합니다. (즉 제품 정보 검색 가격 &amp; 설명) 구매 시뮬레이터 에서만 작동 하 고 복원 작업에서 오류를 반환 합니다 (FailedTransaction 코드와 같은 5002 = 알 수 없는 오류가 발생 했습니다).
 
-참고: StoreKit iOS 시뮬레이터에서에서 작동 하지 않습니다. IOS 시뮬레이터에서에서 응용 프로그램을 실행 하는 경우 StoreKit 응용 프로그램이 결제 큐를 검색 하려고 시도할 경우 경고를 기록 합니다. 저장소 테스트를 실제 장치에서 수행 되어야 합니다.   
+참고: StoreKit은 iOS 시뮬레이터에서에서 작동 하지 않습니다. IOS 시뮬레이터에서에서 응용 프로그램을 실행 하는 경우 StoreKit 응용 프로그램이 결제 큐를 검색 하려고 시도할 경우 경고를 기록 합니다. 저장소 테스트를 실제 장치에서 수행 되어야 합니다.   
    
    
    
- 중요: 로그인 하지 마십시오 설정 응용 프로그램에서 테스트 계정. 모든 기존 Apple ID 계정 로그 아웃 로그인 설정 응용 프로그램을 사용할 수 있습니다 다음 라는 메시지가 표시 될 때까지 기다려야 *인 앱 구매 시퀀스 내에서* 테스트 Apple ID를 사용 하 여 로그인   
+ 중요: 설정 응용 프로그램에서 테스트 계정으로 로그인 수행 되지 않습니다. 모든 기존 Apple ID 계정 로그 아웃 로그인 설정 응용 프로그램을 사용할 수 있습니다 다음 라는 메시지가 표시 될 때까지 기다려야 *인 앱 구매 시퀀스 내에서* 테스트 Apple ID를 사용 하 여 로그인   
    
    
    

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 82b1408cafedf98a8619e8e039ba00b332f74516
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "33921991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381842"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>플랫폼 간 MonoGame 만들기 – 1 부
 
@@ -30,7 +30,7 @@ MonoGame에 추가할 수 있습니다 추가 기능으로 Visual Studio for mac
 ![MonoGame을 선택 하면 Mac 확장 갤러리에 대 한 visual Studio](part1-images/image2.png)
 
 > [!IMPORTANT]
-> **참고**: 경우 합니다 **게임 개발** 섹션은 추가 기능 관리자에 나타나지 않으면, 수동으로 다운로드 하 고 여기에서 최신 버전을 설치할 수 있습니다: http://www.monogame.net/downloads/합니다. 표시할 템플릿에 대 한 Mac 용 Visual Studio를 다시 시작 해야 합니다.
+> **참고**: 경우는 **게임 개발** 섹션은 추가 기능 관리자에 나타나지 않으면, 수동으로 다운로드 하 고 여기에서 최신 버전을 설치할 수 있습니다: http://www.monogame.net/downloads/합니다. 표시할 템플릿에 대 한 Mac 용 Visual Studio를 다시 시작 해야 합니다.
 
 설치 되 면 메시지는 다음 섹션에서 보듯이 Mac 용 Visual Studio에서 MonoGame 템플릿 표시 됩니다.
 

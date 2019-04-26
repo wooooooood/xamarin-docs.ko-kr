@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61375041"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 분할 된 컨트롤을 사용 하 여 작업
 
@@ -42,7 +42,7 @@ Apple에서 간단 하 고 인식할 수 있는 이미지를 사용 하 여 검�
 
 Apple에서는 세그먼트 텍스트를 사용 하 여 작업 하기 위한 다음 제안 합니다.
 
-- **짧은, 의미 있는 명사를 사용 하 여** -The 세그먼트 제목 사용자 지정된 세그먼트를 선택할 때 필요로 하는 콘텐츠 형식의 상태 명확 하 게 해야 합니다. 예를 들어: 음악 또는 비디오.
+- **짧은, 의미 있는 명사를 사용 하 여** -The 세그먼트 제목 사용자 지정된 세그먼트를 선택할 때 필요로 하는 콘텐츠 형식의 상태 명확 하 게 해야 합니다. 예를 들어: 음악 또는 비디오를 제공 합니다.
 - **첫 글자를 대문자로 대/소문자를 사용 하 여** -문서, 결합 및 전치사 보다 작은 4 개의 문자를 제외 하 고 세그먼트의 모든 단어는 대문자로 시작 해야 합니다.
 - **짧은 초점을 맞춘 제목을 사용 하 여** -단기 및 세그먼트는 선택 될 때 예상 되는 콘텐츠 형식에 포커스가 있는 제목, 유지 합니다.
 

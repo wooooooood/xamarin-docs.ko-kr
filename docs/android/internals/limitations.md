@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Android vs입니다. Desktop-Mono 런타임에서 차이점
+title: Xamarin.Android vs. Desktop-Mono 런타임에서 차이점
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 115d715214d7af3174c41d9d82e894ce429dab42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953346"
 ---
 # <a name="limitations"></a>제한 사항
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 595e673c59d23a45cbaf923a0d58faff2000c296
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61370939"
 ---
 # <a name="margin-and-padding"></a>여백 및 안쪽 여백
 
@@ -49,7 +49,7 @@ _여백 및 안쪽 여백 속성 사용자 인터페이스에서 요소를 렌�
 </StackLayout>
 ```
 
-해당하는 C# 코드가 다음 코드 예제에 표시됩니다.
+동등한 C# 코드는 다음 코드 예제와 같습니다.
 
 ```csharp
 var stackLayout = new StackLayout {
@@ -73,5 +73,5 @@ var stackLayout = new StackLayout {
 ## <a name="related-links"></a>관련 링크
 
 - [여백](xref:Xamarin.Forms.View.Margin)
-- [안쪽 여백](xref:Xamarin.Forms.Layout.Padding)
+- [Padding](xref:Xamarin.Forms.Layout.Padding)
 - [두께](xref:Xamarin.Forms.Thickness)

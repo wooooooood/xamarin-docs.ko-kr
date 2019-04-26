@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
 ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386582"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -133,7 +133,7 @@ XAML에서 설정 된 `CachingStrategy` 아래 코드에 표시 된 대로 특�
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>서브클래싱된 ListView에서 캐싱 전략을 설정합니다.
 
-설정 합니다 `CachingStrategy` 서브클래싱된를에서 XAML의 특성 [ `ListView` ](xref:Xamarin.Forms.ListView) 있기 때문에 원하는 동작을 생성 하지 것입니다 없습니다 `CachingStrategy` 속성을 `ListView`합니다. 또한 경우 [XAMLC](~/xamarin-forms/xaml/xamlc.md) 가 사용 하도록 설정 하면 다음 오류 메시지가 생성 됩니다: **없거나 속성, 바인딩 가능한 속성을 'CachingStrategy'에 대 한 이벤트**
+설정 합니다 `CachingStrategy` 서브클래싱된를에서 XAML의 특성 [ `ListView` ](xref:Xamarin.Forms.ListView) 있기 때문에 원하는 동작을 생성 하지 것입니다 없습니다 `CachingStrategy` 속성을 `ListView`합니다. 또한 경우 [XAMLC](~/xamarin-forms/xaml/xamlc.md) 가 사용 하도록 설정 하면 다음 오류 메시지가 생성 됩니다. **없거나 속성, 바인딩 가능한 속성을 'CachingStrategy'에 대 한 이벤트**
 
 이 문제를 해결 하려면는 하위 클래스에서 생성자를 지정 하는 것 [ `ListView` ](xref:Xamarin.Forms.ListView) 받아들이는 [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) 매개 변수를 기본 클래스로 전달:
 

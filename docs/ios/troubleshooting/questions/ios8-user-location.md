@@ -1,5 +1,5 @@
 ---
-title: IOS 8에서에서 작동 하지 않는 사용자 위치
+title: iOS 8에서 작동하지 않는 사용자 위치
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9BE92C99-C9C5-427E-ADE4-789DF258BACE
@@ -8,15 +8,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 8b800d0c5639d4679b5e17c6c6a4689690529b85
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421167"
 ---
-# <a name="user-location-not-working-in-ios-8"></a>IOS 8에서에서 작동 하지 않는 사용자 위치
+# <a name="user-location-not-working-in-ios-8"></a>iOS 8에서 작동하지 않는 사용자 위치
 
-텍스트 편집기 내의: 열고 Info.plist를 설정 하 고 다음을 추가 합니다.
+텍스트 편집기 내: Info.plist를 열고 다음을 추가 합니다.
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>

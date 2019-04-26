@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076673"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -149,7 +149,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 하지만의 막대는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 는 여전히 노란색 때문에 [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 `ResourceDictionary`합니다.
 
-에 대해 생각 하는 또 다른 방법은 다음과 같습니다 `ResourceDictionary` 우선 순위: 때의 XAML 파서는 `StaticResource`시각적 트리를 통해 위로 이동 하 여 일치 하는 키에 대 한 검색, 찾으면 첫 번째 일치 항목을 사용 하 여 합니다. 페이지에서이 검색이 종료 없고 키 여전히 않은 검색 하는 경우 XAML 파서를 검색 합니다 `ResourceDictionary` 연결할는 `App` 개체. 키를 아직 없는 경우 예외가 발생 합니다.
+에 대해 생각 하는 또 다른 방법은 다음과 같습니다 `ResourceDictionary` 우선 순위: XAML 파서를 발견할 경우는 `StaticResource`시각적 트리를 통해 위로 이동 하 여 일치 하는 키에 대 한 검색, 찾으면 첫 번째 일치 항목을 사용 합니다. 페이지에서이 검색이 종료 없고 키 여전히 않은 검색 하는 경우 XAML 파서를 검색 합니다 `ResourceDictionary` 연결할는 `App` 개체. 키를 아직 없는 경우 예외가 발생 합니다.
 
 ## <a name="stand-alone-resource-dictionaries"></a>독립 실행형 리소스 사전
 
@@ -195,7 +195,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 인스턴스의 `MyResourceDictionary` 로 설정 되어를 `Resources` 의 속성을 `ContentPage` 개체입니다.
 
-그러나이 방법에 몇 가지 제한 사항이:는 `Resources` 의 속성을 `ContentPage` 이 하나만 참조 `ResourceDictionary`합니다. 대부분의 경우에서 다른 포함 옵션을 원하는 `ResourceDictionary` 인스턴스 및 아마도 다른 리소스도 있습니다.
+그러나이 접근 방식에 몇 가지 제한 사항이 있습니다. 합니다 `Resources` 의 속성을 `ContentPage` 이 하나만 참조 `ResourceDictionary`합니다. 대부분의 경우에서 다른 포함 옵션을 원하는 `ResourceDictionary` 인스턴스 및 아마도 다른 리소스도 있습니다.
 
 이 작업에는 병합 된 리소스 사전에 필요합니다.
 

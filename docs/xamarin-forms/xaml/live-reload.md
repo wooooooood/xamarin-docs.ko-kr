@@ -9,11 +9,11 @@ ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
 ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384935"
 ---
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
@@ -119,17 +119,17 @@ IOS 시뮬레이터는 Android 에뮬레이터를 디버깅 하는 경우 라이
 * 앱 전체 리소스를 다시 로드 (예: **App.xaml** 또는 리소스가 공유), 앱 탐색을 다시 설정 됩니다. 
 * 현재 ContentView 다시 로드를 포함 하는 페이지를 다시 로드 해야 합니다.
 * AutomationId를 포함 하는 요소는 다시 로드 오류가 발생할 수 있습니다.
-* 런타임 크래시가 발생할 수 있습니다 UWP를 디버깅 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 **(Ctrl + F5) 디버깅 하지 않고 시작** of **디버깅 시작 (F5)** 합니다.
+* 런타임 크래시가 발생할 수 있습니다 UWP를 디버깅 하는 동안 XAML을 편집 합니다. 해결 방법: 사용 하 여 **(Ctrl + F5) 디버깅 하지 않고 시작** of **디버깅 시작 (F5)** 합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
 ### <a name="error-codes"></a>오류 코드
 
-* **XLR001**: *현재 프로젝트 참조 'Xamarin.LiveReload' NuGet 패키지 버전 '[VERSION]' 하지만 Xamarin 라이브 다시 로드 확장 버전 '[VERSION]'이 필요 합니다.*
+* **XLR001**: *현재 프로젝트 'Xamarin.LiveReload' NuGet 패키지 버전 '[VERSION]'를 참조 하지만, Xamarin 라이브 다시 로드 확장 버전 '[VERSION]'이 필요 합니다.*
 
   라이브 다시 로드 기능의 발전와 신속 하 게 반복을 허용 하기 위해 nuget 패키지와 Visual Studio 확장명 정확히 일치 해야 합니다. Nuget 패키지를 설치한 확장의 동일한 버전으로 업데이트 합니다.
 
-* **XLR002**: *명령줄에서 빌드할 때 라이브 다시 로드 해야 적어도 'MqttHostname' 속성입니다. 또는 'EnableLiveReload' 기능을 사용 하지 않도록 설정 하려면 'false'를 설정 합니다.*
+* **XLR002**: *실시간 다시 로드 명령줄에서 빌드할 때 'MqttHostname' 속성 이상이 필요 합니다. 또는 'EnableLiveReload' 기능을 사용 하지 않도록 설정 하려면 'false'를 설정 합니다.*
 
   라이브 다시 로드에 필요한 속성을 사용할 수 없는 경우 명령줄에서 (또는 연속 통합) 빌드 및 따라서 명시적으로 제공 해야 합니다. 
 
@@ -137,7 +137,7 @@ IOS 시뮬레이터는 Android 에뮬레이터를 디버깅 하는 경우 라이
 
   라이브 다시 로드 nuget 패키지를 참조 하는 프로젝트 빌드를 시도 하지만 Visual 확장이 설치 되어 있지.  
 
-* *어셈블리를 로드 하는 동안 예외: System.IO.FileNotFoundException: 어셈블리를 로드할 수 없습니다 ' Xamarin.Live.Reload, 버전 0.3.27.0, Culture = neutral, PublicKeyToken = ='.*
+* *어셈블리를 로드 하는 동안 예외가 발생 합니다. System.IO.FileNotFoundException: 어셈블리를 로드할 수 없습니다 ' Xamarin.Live.Reload, 버전 0.3.27.0, Culture = neutral, PublicKeyToken = ='.*
 
   호스트 프로젝트를 사용 해야 `PackageReference` 대신 `packages.config`
 

@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
 ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946740"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android Designer용 Java 메모리 매개 변수 조정
 
@@ -73,7 +73,7 @@ Xamarin Studio 5.7.2.7 (및 이상, Visual Studio for Mac)부터 Visual Studio T
 
 4.  편집 된 `.userprefs` 텍스트 편집기에서 파일입니다.
 
-5.  다음 형식 사용 하 여 기존 XML 요소를 찾습니다. 이 요소 이름의 마지막 부분에는 프로젝트의 이름과 일치 합니다:이 예에서 "AndroidApplication1":
+5.  다음 형식 사용 하 여 기존 XML 요소를 찾습니다. 이 요소 이름의 마지막 부분을 프로젝트의 이름과 일치 합니다. "AndroidApplication1"이이 예제에서:
 
     ```xml
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >

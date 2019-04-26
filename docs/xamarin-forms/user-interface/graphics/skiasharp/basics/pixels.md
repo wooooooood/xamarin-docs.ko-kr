@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
 ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019972"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
@@ -55,7 +55,7 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-텍스트 문자열을 지정 하면, X 및 Y 좌표를 시작 하려면 텍스트 인 및 `SKPaint` 개체입니다. X 좌표, 주의 있지만 텍스트의 왼쪽 위치 지정: Y 좌표 위치를 지정 합니다 *기준* 텍스트의 합니다. 그 어느 때 인라인된 종이에 손으로 작성 했다면, 기준 (예: g, p, q 및 y에 해당)는 디센더와 내림차순 아래는 자 사이트에 선입니다.
+텍스트 문자열을 지정 하면, X 및 Y 좌표를 시작 하려면 텍스트 인 및 `SKPaint` 개체입니다. X 좌표, 주의 있지만 텍스트의 왼쪽 위치를 지정 합니다. Y 좌표 위치를 지정 합니다 *기준* 텍스트입니다. 그 어느 때 인라인된 종이에 손으로 작성 했다면, 기준 (예: g, p, q 및 y에 해당)는 디센더와 내림차순 아래는 자 사이트에 선입니다.
 
 `SKPaint` 개체를 사용 하면 텍스트, 글꼴 패밀리 및 텍스트 크기의 색을 지정할 수 있습니다. 기본적으로 [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) 속성이 휴대폰과 같은 고해상도 장치에서 작은 텍스트의 결과 12의 값입니다. 가장 간단한 응용 프로그램을 제외 해야 표시 하는 텍스트의 크기에 대 한 정보입니다. `SKPaint` 클래스 정의 [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) 속성과 여러 [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) 메서드를 하지만 덜 멋진 요구 사항에는 [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) 속성은 텍스트의 연속 줄 간격에 대 한 권장 되는 값을 제공합니다.
 

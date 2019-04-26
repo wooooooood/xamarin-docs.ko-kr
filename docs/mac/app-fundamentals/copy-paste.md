@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: f9e05b6d16210021257fe3958966739e526aed18
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61378642"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.Mac에서 복사 및 붙여넣기
 
@@ -617,7 +617,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 자세한 내용은 참조 하십시오 우리의 [메뉴](~/mac/user-interface/menu.md) 설명서.
 
-### <a name="testing-the-app"></a>앱 테스트
+### <a name="testing-the-app"></a>앱 테스트하기
 
 곳에서 모든 항목을 사용 하 여 응용 프로그램을 테스트할 준비가 됩니다. 빌드 및 앱을 실행 하 고 기본 인터페이스 표시 됩니다.
 
@@ -1283,4 +1283,4 @@ if (ok) {
 - [MacCopyPaste (샘플)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [임시 보드 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

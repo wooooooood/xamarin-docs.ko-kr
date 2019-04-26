@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61167022"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.Mac의 메뉴
 
@@ -1011,7 +1011,7 @@ public override void DidFinishLaunching (NSNotification notification)
 1. Mac 용 Visual Studio에서 마우스 오른쪽 단추로 클릭 응용 프로그램의 프로젝트 및 선택 **추가** > **새 파일...** 새 파일 대화 상자에서 선택 **Xamarin.Mac** > **빈 인터페이스 정의**, "DockMenu" 하는 데는 **이름** 을 클릭 합니다 **새로 만들기**  만들 새 단추 **DockMenu.xib** 파일:
 
     ![빈 인터페이스 정의 추가](menu-images/dock02.png "빈 인터페이스 정의 추가 합니다.")
-2. 에 **Solution Pad**, 두 번 클릭 합니다 **DockMenu.xib** Xcode에서 편집 하기 위해 열려는 파일입니다. 새 **메뉴** 다음 항목과: **주소**에 **날짜**를 **인사말**, 및 **서명** 
+2. 에 **Solution Pad**, 두 번 클릭 합니다 **DockMenu.xib** Xcode에서 편집 하기 위해 열려는 파일입니다. 새 **메뉴** 다음 항목: **주소**하십시오 **날짜**를 **인사말**, 및 **서명** 
 
     [![UI를 레이아웃할](menu-images/dock03.png "UI 레이아웃")](menu-images/dock03-large.png#lightbox)
 3. 그런 다음에 사용자 지정 메뉴에 대 한 만든이 기존 작업에는 새 메뉴 항목을 연결 하겠습니다 합니다 [추가, 편집 및 삭제 메뉴](#Adding,_Editing_and_Deleting_Menus) 위의 섹션. 전환할 합니다 **연결 검사기** 선택한를 **첫 번째 응답자** 에 **인터페이스 계층 구조**. 아래로 스크롤하여 찾을 `phraseAddress:` 동작 합니다. 원 줄 해당 작업을 끌기에 합니다 **주소** 메뉴 항목:
@@ -1051,7 +1051,7 @@ public override void DidFinishLaunching (NSNotification notification)
 1. 편집 합니다 **Main.storyboard** 놓습니다 Xcode에서 파일을 **팝업 단추** 에서 **라이브러리 검사기** 에 **패널** 창에서 만든 합니다 [상황에 맞는 메뉴](#Contextual_Menus) 섹션: 
 
     [![단추 추가 하는 팝업](menu-images/popup01.png "팝업 단추 추가")](menu-images/popup01-large.png#lightbox)
-2. 새 메뉴 항목을 추가 하 고를 팝업에서 항목의 제목을 설정: **주소**, **날짜**하십시오 **인사말**, 및 **서명** 
+2. 새 메뉴 항목을 추가 하 고를 팝업에서 항목의 제목을 설정 합니다. **주소**하십시오 **날짜**를 **인사말**, 및 **서명** 
 
     [![메뉴 항목을 구성](menu-images/popup02.png "메뉴 항목 구성")](menu-images/popup02-large.png#lightbox)
 3. 다음으로 사용자 지정 메뉴에서 만든 기존 작업에는 새 메뉴 항목을 연결 하겠습니다 합니다 [추가, 편집 및 삭제 메뉴](#Adding,_Editing_and_Deleting_Menus) 위의 섹션입니다. 전환할 합니다 **연결 검사기** 선택한를 **첫 번째 응답자** 에 **인터페이스 계층 구조**. 아래로 스크롤하여 찾을 `phraseAddress:` 동작 합니다. 원 줄 해당 작업을 끌기에 합니다 **주소** 메뉴 항목: 

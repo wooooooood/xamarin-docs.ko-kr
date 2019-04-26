@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
 ms.openlocfilehash: 97d2a126be70e210d2e8f4ebf4d7a25ff8777a02
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945453"
 ---
 # <a name="ratingbar"></a>RatingBar
 
@@ -48,5 +48,5 @@ RatingBar 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. 이 섹�
 
     캡처합니다 합니다 [ `RatingBar` ](https://developer.xamarin.com/api/type/Android.Widget.RatingBar/) 사용 하 여 레이아웃을 통해 위젯을 [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/) 다음 이벤트 메서드를 설정 하 고 사용자가 등급을 설정 하는 경우 수행할 동작을 정의 합니다. 에이 경우 간단한 [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) 메시지 새 등급을 표시 합니다.
 
-3.  응용 프로그램을 실행합니다.
+3.  애플리케이션을 실행합니다.
 

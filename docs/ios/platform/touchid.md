@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087856"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.iOS에서 touch ID
 
@@ -63,7 +63,7 @@ IOS 8 기준으로 이제 새 사용자 현재 상태 정책이 되어, `SecAcce
 
 이전 섹션에서 설정 했습니다 응용 프로그램 로컬 인증 장치에서 설정 된 보안 정책 사용 하 여 준수에서 사용자를 인증에 사용할 수 있습니다.
 
-API는 두 가지 기능을 제공 하는 현재: 첫째, 새 키 집합 액세스 제어 목록 (Acl)를 사용 하 여 기존 키 집합 서비스를 도와줍니다. 키 집합 데이터는 사용자가 지문을 성공적인 인증을 사용 하 여 잠금 수 있습니다.
+현재 API 두 기능을 제공 합니다. 첫째, 새 키 집합 액세스 제어 목록 (Acl)를 사용 하 여 기존 키 집합 서비스를 지원 합니다. 키 집합 데이터는 사용자가 지문을 성공적인 인증을 사용 하 여 잠금 수 있습니다.
 
 둘째, LocalAuthentication 로컬로 응용 프로그램을 인증 하는 두 가지 방법 제공 합니다. 개발자 사용할지 `CanEvaluatePolicy` Touch ID를 받아들일 수 있는 장치 인지 확인 하 고 `EvaluatePolicy` 인증 작업을 시작 합니다.
 

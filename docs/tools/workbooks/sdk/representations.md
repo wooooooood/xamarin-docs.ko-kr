@@ -1,5 +1,5 @@
 ---
-title: Xamarin Workbooks 표시
+title: Xamarin Workbooks에 표시
 description: 이 문서는 다양 한 결과 값을 반환 하는 코드에 대 한 렌더링을 사용 하도록 설정 하는 Xamarin Workbooks 표현을 파이프라인을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: d9aafbe13e06875b6577a4d2308e419932fd1589
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382115"
 ---
-# <a name="representations-in-xamarin-workbooks"></a>Xamarin Workbooks 표시
+# <a name="representations-in-xamarin-workbooks"></a>Xamarin Workbooks에 표시
 
 ## <a name="representations"></a>표현
 

@@ -1,5 +1,5 @@
 ---
-title: IOS 11에 앱을 업데이트 하는 중입니다.
+title: 앱을 iOS 11로 업데이트
 description: 이 문서는 iOS 11의 릴리스를 사용 하 여 Xamarin.iOS 개발자에 게 사용할 수 있는 새 기능을 설명 하는 다양 한 가이드에 연결 합니다. 예를 들어, 시각적 디자인 업데이트를 App Store 변경 하 고 앱 아이콘 업데이트 합니다.
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
 ms.openlocfilehash: 3193f27c30080a4335abfe969acb3c8b33516469
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386349"
 ---
-# <a name="updating-your-app-to-ios-11"></a>IOS 11에 앱을 업데이트 하는 중입니다.
+# <a name="updating-your-app-to-ios-11"></a>앱을 iOS 11로 업데이트
 
 Ios 11에서 Apple 아키텍처 업데이트, 새 visual 변경 내용 및 업데이트 된 iTunes Connect 프로세스를 도입 되었습니다. 이 가이드에서는 Xamarin.iOS 앱을 iOS 11에 대 한 업데이트를 활용할 수 있도록 돕는 이러한 변경 내용을 각 살펴봅니다.
 

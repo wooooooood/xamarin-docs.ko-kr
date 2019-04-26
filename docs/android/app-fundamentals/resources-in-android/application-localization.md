@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 지역화 및 문자열 리소스
+title: 애플리케이션 지역화 및 문자열 리소스
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2017
 ms.openlocfilehash: d9d90e371199c8587d61199240523cf0a23f5efd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013379"
 ---
-# <a name="application-localization-and-string-resources"></a>응용 프로그램 지역화 및 문자열 리소스
+# <a name="application-localization-and-string-resources"></a>애플리케이션 지역화 및 문자열 리소스
 
 응용 프로그램 지역화는 특정 지역 또는 로캘을 대상으로 대체 리소스를 제공 하는 행위. 예를 들어, 다양 한 국가 대 한 지역화 된 언어 문자열을 제공할 수 있습니다 또는 색 또는 특정 문화권에 맞게 레이아웃을 변경할 수 있습니다. Android는 장치의 로캘에 대 한 적절 한 리소스를 사용 하 여 소스 코드를 변경 하지 않고도 런타임 시을 로드 합니다.
 

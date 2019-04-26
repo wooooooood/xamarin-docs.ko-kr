@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
 ms.openlocfilehash: e394377043953a297afed36a3ce0747a3e6d1512
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60955873"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Javadoc 사용 하 여 매개 변수 이름 지정
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/05/2018
 ms.openlocfilehash: b59fd7c1a9e5f528878b90e1a76fabe5a79bab81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60946826"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Xamarin.iOS에서 포함 된 프레임 워크
 
@@ -70,7 +70,7 @@ Mac 용 Visual Studio 및 Xamarin Tools for Visual Studio의 향후 버전에서
 
 프로젝트의 iOS 빌드 옵션에서에서 추가 mtouch 인수도 다음을 추가 하 여 앱 개발자가이 동작을 재정의할 수 있습니다.
 
-- `--mono:static`: 링크는 Mono 런타임과 함께 정적으로 합니다.
+- `--mono:static`: Mono 런타임을 사용 하 여 정적으로 연결합니다.
 - `--mono:framework`: 프레임 워크는 Mono 런타임과 함께 연결 합니다.
 
 확장 없이 앱에 대해서도 프레임 워크로 Mono 런타임과 함께 연결 하는 것에 대 한 하나의 시나리오, Apple가 실행 파일에 강제로 적용 하는 모든 크기 제한을 극복 하기 위해 실행 파일 크기를 줄일 것입니다. 하지만 참조에 대 한 Mono 런타임 (Xamarin.iOS 8.12의 자신의 다름 릴리스에서 앱 간에) 하는 대로 1.7MB 아키텍처 당를 추가 합니다. 약 2.3MB 즉 확장 하지 않고 앱의 단일 아키텍처, 아키텍처 당 앱 링크를 만드는 추가 하는 Mono 프레임 워크는 Mono 런타임과 함께 프레임 워크는 ~1.7MB, 하 여 실행 파일을 축소 하지만 ~2.3MB 프레임 워크를 추가, 생성 ~0.6MB 더 큰 앱 alltogether에서.

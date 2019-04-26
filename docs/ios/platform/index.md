@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364423"
 ---
 # <a name="ios-platform-features"></a>iOS 플랫폼 기능
 
@@ -102,7 +102,7 @@ Apple는 iOS 9에서에서 게임 Api 쉽게 Xamarin.iOS 앱에서 오디오 및
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[iPad용 멀티태스킹](~/ios/platform/multitasking.md)
 
-iOS 9 iPad 특정 하드웨어에서 동시에 두 개의 앱을 실행 하기 위한 멀티태스킹 지원을 추가 합니다. IPad 용 멀티태스킹 다음과 같은 기능을 통해 지원 됩니다: 슬라이드를 통해 사람, 분할 된 뷰 및 그림에는 그림입니다.
+iOS 9 iPad 특정 하드웨어에서 동시에 두 개의 앱을 실행 하기 위한 멀티태스킹 지원을 추가 합니다. IPad 용 멀티태스킹 다음 기능을 통해 사용할 수 있습니다. 슬라이드를 통해, 분할 된 뷰 및 그림에는 그림입니다.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 

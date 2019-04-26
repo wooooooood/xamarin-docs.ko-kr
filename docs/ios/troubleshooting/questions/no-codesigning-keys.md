@@ -1,5 +1,5 @@
 ---
-title: '이유는 내 iOS 빌드 실패: 키 집합에 없는 유효한 iPhone 코드 서명 키가?'
+title: 키 집합에 유효한 iPhone 코드 서명 키가 없다는 오류와 함께 iOS 빌드에 실패하는 이유는 무엇인가요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fe267db1f83695b3d0e8f3d828f91e01b56ba8ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61419667"
 ---
-# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>이유는 내 iOS 빌드 실패: 키 집합에 없는 유효한 iPhone 코드 서명 키가?
+# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>키 집합에 유효한 iPhone 코드 서명 키가 없다는 오류와 함께 iOS 빌드에 실패하는 이유는 무엇인가요?
 
 ## <a name="cause-of-the-error"></a>오류의 원인
 이 오류 메시지 때 해당 프로젝트를 유효한 코드 서명 자격 증명을 찾고 발생 되지만 찾을 수 없습니다. 테스트 및 실제 iOS 장치에 배포에 반드시 코드 서명 뿐만 아니라 임시 및 앱 빌드를 저장 합니다. 
@@ -33,9 +33,9 @@ ms.locfileid: "50115434"
 시뮬레이터에 Entitlements.plist codesign 빌드의; 추가할 Xamarin.Forms 템플릿에서 iOS 프로젝트를 일으키는 Xamarin.Visual Studio 3.11에 버그가 있었습니다. 시뮬레이터를 사용 하 여 테스트 효과적으로 차단 합니다.
 
 ### <a name="how-to-fix"></a>해결 방법
-제거 하 여 문제를 해결 하면는 `<CodesignEntitlements>` 디버그에서 플래그.csproj 파일을 만듭니다. 이 작업은 다음과 같이 수행할 수 있습니다.
+제거 하 여 문제를 해결 하면는 `<CodesignEntitlements>` 디버그에서 플래그.csproj 파일을 만듭니다. 다음과 같이 이 작업을 수행할 수 있습니다.
 
-*경고:.csproj 파일에서 오류 프로젝트를 중단 하 수 있으므로이 작업을 수행 하기 전에 파일을 백업 하는 것이 좋습니다.*
+*경고: .Csproj 파일에서 오류 전에이 파일을 백업 하는 것이 좋습니다 하므로 프로젝트를 중단할 수 있습니다.*
 
 1. 솔루션 창에서 iOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **프로젝트 언로드**
 2. 프로젝트를 다시 클릭 마우스 오른쪽 단추로 선택한 **[ProjectName].csproj 편집**

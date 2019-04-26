@@ -1,25 +1,25 @@
 ---
 title: .NET 포함
-description: '.NET 포함 기존.NET 코드 (C#, F # 및 다른) 다른 프로그래밍 언어로 작성 된 코드에서 사용할 수 있습니다.'
+description: 기존.NET 코드를 사용 하면.NET 포함 (C#, F#, 및 기타) 다른 프로그래밍 언어로 작성 된 코드에서 사용할 수 있도록 합니다.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61363552"
 ---
 # <a name="net-embedding"></a>.NET 포함
 
 ![미리 보기](~/media/shared/preview.png)
 
-.NET 포함 기존.NET 코드 (C#, F # 및 기타) 다양 한 다른 환경 및 다른 프로그래밍 언어에서 사용할 수 있습니다.
+기존.NET 코드를 사용 하면.NET 포함 (C#, F#, 및 기타) 다양 한 다른 환경 및 다른 프로그래밍 언어에서 사용할 수 있도록 합니다.
 
-즉,이 기존 iOS 앱에서 사용 하려는.NET 라이브러리를 사용 하는 경우 이렇게 할 수 있습니다.   또는 네이티브 c + + 라이브러리와 연결 하려는 경우 이렇게 할 수 있습니다도 합니다.   또는 Java에서.NET 코드를 사용 합니다.
+즉,이 기존 iOS 앱에서 사용 하려는.NET 라이브러리를 사용 하는 경우 이렇게 할 수 있습니다.   네이티브를 사용 하 여 연결 하려는 경우 또는 C++ 라이브러리에도 수행할 수 있습니다.   또는 Java에서.NET 코드를 사용 합니다.
 
 .NET 포함 기반으로 합니다 [Embeddinator 4000](https://github.com/mono/Embeddinator-4000) 오픈 소스 프로젝트입니다.
 

@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
 ms.openlocfilehash: dbd3287e7c646be7fd969699eab685906a1c6c1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093937"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
@@ -48,13 +48,13 @@ Visual Studio 및 Mac 용 Visual Studio는 이제 지원 되지 않는 Google GU
 
 #### <a name="sdkmanager"></a>sdkmanager
 
-**추가 됨:** Android SDK Tools 25.2.3 (2016 년 11 월) 이상.
+**에 추가 합니다.** Android SDK Tools 25.2.3 (2016 년 11 월) 이상.
 
 호출 하는 새 프로그램 **sdkmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 명령줄에서 Android SDK 유지 하기 위해 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)합니다.
 
 #### <a name="avdmanager"></a>avdmanager
 
-**추가 됨:** Android SDK Tools 25.3.0 (2017 년 3 월) 이상.
+**에 추가 합니다.** Android SDK Tools 25.3.0 (2017 년 3 월) 이상.
 
 호출 하는 새 프로그램 **avdmanager** 에 **도구/bin** Android SDK의 폴더입니다. 이 도구는 Android 에뮬레이터를 Avd를 유지 하기 위해 사용 됩니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)합니다.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075483"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
@@ -36,7 +36,7 @@ XAML 태그 확장은 일반적인 텍스트 문자열 이외의 소스에서 �
 
 `Color` 특성을 리소스 사전에 저장 된 값, 또는 사용자가 생성한 클래스의 정적 속성의 값, 또는 페이지에 있는 다른 요소의 `Color` 유형, 또는 색조, 채도 및 명도 값으로 구분하여 설정하는 것을 선호할 수 있습니다.
 
-이러한 모든 옵션은 XAML 태그 확장을 사용하여 수행할 수 있습니다.  그러나 "태그 확장"이라는 문구를 두려워하지 마십시오. XAML 태그 확장은 XML 확장이 *아닙*니다. XAML 태그 확장을 사용하더라도 XAML은 항상 유효한 XML입니다.
+이러한 모든 옵션은 XAML 태그 확장을 사용하여 수행할 수 있습니다.  그러나 구 "태그 확장" 하다 고 걱정할: XAML 태그 확장은 *되지* XML에 대 한 확장입니다. XAML 태그 확장을 사용하더라도 XAML은 항상 유효한 XML입니다.
 
 태그 확장은 실제로 요소 특성을 표현하는 다른 방식입니다. XAML 태그 확장은 일반적으로 다음과 같이 중괄호로 묶인 특성 설정으로 식별할 수 있습니다.
 

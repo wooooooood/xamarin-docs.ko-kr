@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382452"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
@@ -136,7 +136,7 @@ using (SKPaint textPaint = new SKPaint())
 
 두 번째 예제에서는 호출 [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix)합니다. 이렇게 하면 모든 변환 기본 상태로 돌아갑니다.
 
-상태를 저장 하는 세 번째 예제는 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](xref:SkiaSharp.SKCanvas.Save) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 하 고 `Restore` 스택 처럼 함수를 호출: 호출할 수 있습니다 `Save` 여러 시간 및 호출 `Restore` 반대로 이전 상태를 반환할 시퀀스입니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
+상태를 저장 하는 세 번째 예제는 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](xref:SkiaSharp.SKCanvas.Save) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 고 `Restore` 스택 처럼 함수를 호출 합니다. 호출할 수 있습니다 `Save` 여러 시간 및 호출 `Restore` 반대로 이전 상태를 반환할 시퀀스입니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
 
 사용할 수도 있습니다는 [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) 캔버스 상태를 복원 하기 위한 클래스입니다. 이 클래스의 생성자에서 호출 될 것을 `using` 문; 캔버스 상태가 끝날 때 자동으로 복원 되는 `using` 블록. 
 

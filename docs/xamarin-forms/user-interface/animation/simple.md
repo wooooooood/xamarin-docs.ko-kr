@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
 ms.openlocfilehash: 93bb138b3a78b6052715ab987a4634a18cdce317
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60897033"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Xamarin.Forms에서 간단한 애니메이션 만들기
 
@@ -27,7 +27,7 @@ _ViewExtensions 클래스는 간단한 애니메이션을 만드는 데 사용�
 - [`ScaleTo`](xref:Xamarin.Forms.VisualElement.Scale)는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) 속성에 애니메이션을 적용합니다.
 - [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) 속성에 증가분과 감소분에 대한 애니메이션을 적용합니다.
 - [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation)의 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 속성에 애니메이션을 적용합니다.
-- [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation)의 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 속성에 증가분과 감소분에 대한 애니메이션을 적용합니다.
+- [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) 속성에 증가분과 감소분에 대한 애니메이션을 적용합니다.
 - [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) 속성에 애니메이션을 적용합니다.
 - [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY)의 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 속성에 애니메이션을 적용합니다.
 - [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) 속성에 애니메이션을 적용합니다.
@@ -41,7 +41,7 @@ _ViewExtensions 클래스는 간단한 애니메이션을 만드는 데 사용�
 
 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스에 있는 애니메이션 확장 메서드는 모두 비동기적으로 처리되고 `Task<bool>` 개체를 반환합니다. 반환 값은 애니메이션이 정상적으로 완료되었으면 `false`를, 애니메이션이 취소되었으면 `true`를 반환합니다. 그렇기 때문에 애니메이션은 일반적으로 애니메이션이 끝났는지 쉽게 확인할 수 있도록 `await` 연산자와 함께 사용해야 합니다. 또한 이를 통해 이전 메서드가 종료된 후 다음 애니메이션을 실행시키는 순차적인 애니메이션 생성이 가능합니다. 자세한 내용은 [복합 애니메이션](#compound)을 참조합니다.
 
-애니메이션을 사용 하는 요구 사항이 없는 경우 백그라운드에서 완료 하면 `await` 연산자를 생략할 수 있습니다. 이 시나리오에서는 애니메이션 확장 메서드는 신속 하 게 백그라운드에서 발생 하는 애니메이션을 사용 하 여 애니메이션을 시작한 후 반환 됩니다. 이 작업 복합 애니메이션을 만들 때의 이점은 수행할 수 있습니다. 자세한 내용은 [복합 애니메이션](#composite)을 참조합니다.
+만약 애니메이션이 백그라운드에서 완료되어야 한다면 `await` 연산자를 생략할 수 있습니다. 이 시나리오에서는 애니메이션 확장 메서드는 애니메이션을 시작하자마자 결과를 반환합니다. 이러한 특성은 합성 애니메이션을 만들 때 좋습니다. 자세한 내용은 [복합 애니메이션](#composite)을 참조합니다.
 
 `await` 연산자에 대한 더 많은 정보는 [비동기 지원 개요](~/cross-platform/platform/async.md)를 참조합니다.
 
@@ -103,7 +103,7 @@ await image.ScaleTo (2, 2000);
 await image.RelScaleTo (2, 2000);
 ```
 
-이 코드는 [`Image`](xref:Xamarin.Forms.Image) 인스턴스를 2초(2000 밀리초) 동안 2배 확장하는 애니메이션을 적용합니다. 합니다 [ `RelScaleTo` ](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 메서드는 현재 가져옵니다 [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) 를 시작 하 고 애니메이션 된 값과 첫 번째 인수 (2)에 해당 값에서 다음 확장 속성 값입니다. 이렇게 하면 각 애니메이션 항상 되도록 2 시작 위치에서 크기 조정 합니다.
+이 코드는 [`Image`](xref:Xamarin.Forms.Image) 인스턴스를 2초(2000 밀리초) 동안 2배 확장하는 애니메이션을 적용합니다. [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 메서드는 시작할 때의 [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) 속성 값에서 그 값에서 첫 번째 인수(2)를 더한 값으로 확장합니다. 이렇게 하면 각 애니메이션은 항상 시작 위치에서 2배 확장됩니다.
 
 ### <a name="scaling-and-rotation-with-anchors"></a>앵커를 사용한 크기 조정 및 회전
 

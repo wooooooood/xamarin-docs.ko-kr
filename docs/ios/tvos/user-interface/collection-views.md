@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: f815afa6b1abb15348019b0c53333b4acb054008
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60933881"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>TvOS Xamarin에서 컬렉션 뷰를 사용 하 여 작업
 
@@ -800,7 +800,7 @@ public override void ViewWillAppear (bool animated)
 
 <a name="Testing-the-app" />
 
-## <a name="testing-the-app"></a>앱 테스트
+## <a name="testing-the-app"></a>앱 테스트하기
 
 곳에서 모든 항목을 사용 하 여 빌드하고 앱을 실행 하는 경우 기본 도시를 사용 하 여 기본 보기 표시 됩니다.
 

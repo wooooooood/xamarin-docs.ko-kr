@@ -1,5 +1,5 @@
 ---
-title: '연습: IOS Objective-c 라이브러리 바인딩'
+title: '연습: iOS Objective-C 라이브러리 바인딩'
 description: 이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실습 연습을 제공 합니다. 정적 Objective-c 라이브러리 바인딩, 컴파일하고 Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 주제를 다룹니다.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392012"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: IOS Objective-c 라이브러리 바인딩
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
 _이 문서는 기존 Objective-c 라이브러리 InfColorPicker에 대 한 Xamarin.iOS 바인딩을 만드는 실습 연습을 제공 합니다. 정적 Objective-c 라이브러리 바인딩, 컴파일하고 Xamarin.iOS 응용 프로그램에 바인딩 사용 같은 주제를 다룹니다._
 

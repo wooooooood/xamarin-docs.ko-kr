@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 445661513b0cf79df99d54ed0bb4b0261dd75c2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381502"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>주석 및 Xamarin.iOS에서 오버레이
 
@@ -277,7 +277,7 @@ ms.locfileid: "50105439"
     }
     ```
 
-응용 프로그램을 실행합니다. 이제 사용자 지정 주석 및 오버레이 사용 하 여 대화형 맵을 했습니다! 주석을 탭 하 고 아래와 같이, 오스틴의 이미지가 표시 됩니다.
+애플리케이션을 실행합니다. 이제 사용자 지정 주석 및 오버레이 사용 하 여 대화형 맵을 했습니다! 주석을 탭 하 고 아래와 같이, 오스틴의 이미지가 표시 됩니다.
 
  [![](ios-maps-walkthrough-images/01-map-image.png "주석을 누르고 오스틴의 이미지가 표시 됩니다.")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 

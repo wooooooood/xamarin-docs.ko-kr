@@ -1,5 +1,5 @@
 ---
-title: IOS 디자이너를 사용 하 여 사용자 지정 컨트롤을 사용 하 여
+title: iOS 디자이너에서 사용자 지정 컨트롤 사용
 description: 이 문서에서는 사용자 지정 컨트롤을 만들고 iOS 용 Xamarin 디자이너를 사용 하 여 사용 하는 방법을 설명 합니다. 컨트롤을 iOS 디자이너의 도구 상자에서 사용할 수 있도록 올바르게 렌더링 되도록 컨트롤을 구현 하 고 시간 등을 디자인 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154424"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>IOS 디자이너를 사용 하 여 사용자 지정 컨트롤을 사용 하 여
+# <a name="using-custom-controls-with-the-ios-designer"></a>iOS 디자이너에서 사용자 지정 컨트롤 사용
 
 ## <a name="requirements"></a>요구 사항
 

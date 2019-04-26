@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392354"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>백그라운드에서 Xamarin.iOS 앱을 업데이트합니다.
 
@@ -162,4 +162,4 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 이 섹션에서는 백그라운드 필요한 범주에 맞지 않는 작업을 실행 하려면 백그라운드로 콘텐츠를 새로 고치기 위한 다양 한 옵션에 설명 했습니다. 이제 작업에 이러한 Api의 일부를 확인해 보겠습니다.
 
- [다음: 4 부-iOS Backgrounding 연습](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [다음: 파트 4-iOS Backgrounding 연습](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

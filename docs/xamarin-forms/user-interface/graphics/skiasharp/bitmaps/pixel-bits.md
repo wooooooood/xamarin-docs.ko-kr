@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
 ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61411269"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트에 액세스
 
@@ -20,7 +20,7 @@ ms.locfileid: "53059206"
 
 이 문서에서 볼 수 있듯이 [ **파일에 저장 SkiaSharp 비트맵**](saving.md), 비트맵은 일반적으로 압축 된 형식으로 JPEG 또는 PNG와 같은 파일에 저장 됩니다. 이와 달리 SkiaSharp 비트맵 메모리에 저장 된 압축 되지 않습니다. 픽셀의 순차적으로 저장 됩니다. 압축 되지 않은 형식으로 표시 화면에 비트맵의 전송을 지원합니다.
 
-SkiaSharp 비트맵을 차지 하는 메모리 블록은 아주 간단 하 게 구성 됩니다: 왼쪽에서 오른쪽으로 까지의 픽셀의 첫 번째 행을 시작 하 고 두 번째 행을 사용 하 여 계속 합니다. 전체 색 비트맵에 대 한 각 픽셀 이루어져 있습니다 4 바이트 비트맵에 필요한 총 메모리 공간 4 번의 너비와 높이의 제품 임을 의미입니다.
+SkiaSharp 비트맵을 차지 하는 메모리 블록은 아주 간단 하 게 구성 되어 있습니다. 왼쪽에서 오른쪽으로 까지의 픽셀의 첫 번째 행을 시작 하 고 두 번째 행을 사용 하 여 계속 합니다. 전체 색 비트맵에 대 한 각 픽셀 이루어져 있습니다 4 바이트 비트맵에 필요한 총 메모리 공간 4 번의 너비와 높이의 제품 임을 의미입니다.
 
 이 문서에서는 응용 프로그램에서 비트맵의 픽셀 메모리 블록에 액세스 하 여 간접적으로 이러한 픽셀에 대 한 액세스를 가져올 수는 방법에 대해 설명 합니다. 또는 간접적으로 합니다. 일부 경우에 프로그램 하려는 이미지의 픽셀을 분석 하 고 일종의 히스토그램을 생성 합니다. 일반적으로 응용 프로그램은 비트맵을 구성 하는 픽셀 알고리즘 방식으로 만들어 고유 이미지를 생성할 수 있습니다.
 
@@ -280,7 +280,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-만 질문은: 정수 형식에 `SKColor` 순서로 값를 `SKColorType.Rgba8888` 형식 색 또는 `SKColorType.Bgra8888` 색 형식 또는 다른 완전히? 해당 질문에 대답 곧 공개 됩니다.
+유일한 질문은 다음과 같습니다. 정수 형식은 `SKColor` 순서로 값을 `SKColorType.Rgba8888` 형식 색 또는 `SKColorType.Bgra8888` 색 형식 또는 다른 완전히? 해당 질문에 대답 곧 공개 됩니다.
 
 ### <a name="the-setpixels-method"></a>SetPixels 메서드
 
@@ -294,7 +294,7 @@ bitmap.SetPixels(intPtr);
 
 처음에 것 같습니다 처럼 `SetPixels` 더 더욱 강력 하 고 보다 성능을 제공 `GetPixels` 동시에 보다 편리 합니다. 사용 하 여 `GetPixels` 비트맵 메모리 블록을 가져오고 액세스 합니다. 사용 하 여 `SetPixels` 할당 하 고 일부 메모리에 액세스 하 고 비트맵 메모리 블록으로 설정 하는 합니다.
 
-하지만 사용 하 여 `SetPixels` 고유 구문 이점이: 비트맵 픽셀 비트 배열을 사용 하 여 액세스할 수 있습니다. 여기에 메서드가 `GradientBitmapPage` 이 기법을 보여 주는 합니다. 메서드는 먼저 비트맵의 픽셀의 바이트를 해당 다차원 바이트 배열을 정의 합니다. 첫 번째 차원 행을 두 번째 차원의 열 이며 각 픽셀의 네 가지 구성 요소를 세 번째 차원의 합니다.
+하지만 사용 하 여 `SetPixels` 구문 이점이 고유 합니다. 배열을 사용 하 여 비트맵 픽셀 비트에 액세스 할 수 있습니다. 여기에 메서드가 `GradientBitmapPage` 이 기법을 보여 주는 합니다. 메서드는 먼저 비트맵의 픽셀의 바이트를 해당 다차원 바이트 배열을 정의 합니다. 첫 번째 차원 행을 두 번째 차원의 열 이며 각 픽셀의 네 가지 구성 요소를 세 번째 차원의 합니다.
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -499,7 +499,7 @@ public class GradientBitmapPage : ContentPage
 
 예상 대로 호출 `SetPixel` 65,536 번 하는 방법은 최소 effeicient 비트맵의 픽셀을 설정 합니다. 채우기는 `SKColor` 배열 및 설정 합니다 `Pixels` 속성 훨씬 더 좋고도 중 일부를 사용 하 여 알맞게 비교를 `GetPixels` 및 `SetPixels` 기술. 작업할 `uint` 픽셀 값은 일반적으로 별도 설정 보다 더 빠릅니다 `byte` 구성 요소 및 변환의 `SKColor` 프로세스에 약간의 오버 헤드를 추가 하는 부호 없는 정수 값입니다.
 
-다양 한 그라데이션 비교할 사실도: 각 플랫폼의 맨 위 행은 동일 하며 및 의도 대로 그라데이션을 보여 줍니다. 즉 합니다 `SetPixel` 메서드 및 `Pixels` 속성 기본 픽셀 형식에 관계 없이 색에서 픽셀을 올바르게 만듭니다.
+다양 한 그라데이션 비교할 흥미로운 이기도 합니다. 각 플랫폼의 맨 위 행은 동일 하며 및 의도 대로 그라데이션을 보여 줍니다. 즉 합니다 `SetPixel` 메서드 및 `Pixels` 속성 기본 픽셀 형식에 관계 없이 색에서 픽셀을 올바르게 만듭니다.
 
 IOS 및 Android 스크린샷 다음 두 행은 동일 수도 있는지 확인 하는 작은 `MakePixel` 메서드가 기본 올바르게 정의 되어 `Rgba8888` 이러한 플랫폼에 대 한 픽셀 형식입니다.
 

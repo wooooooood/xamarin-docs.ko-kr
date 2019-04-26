@@ -1,5 +1,5 @@
 ---
-title: Google Maps 가져오기 API 키
+title: Google Maps API 키 가져오기
 description: 추가 하기 위한 Google Maps API 키를 얻는 방법 앱에 기능을 매핑합니다.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155431"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Google Maps 가져오기 API 키
+# <a name="obtaining-a-google-maps-api-key"></a>Google Maps API 키 가져오기
 
 Android에서 Google Maps 기능을 사용 하려면 google Maps API 키를 등록 해야 합니다. 이 작업을 수행 될 때까지 응용 프로그램에 맵이 아니라 표에서 비어 있는 표시 됩니다. Google Maps Android API v2 키를 받아야-이전 Google Maps Android API 키 v1의 키 작동 하지 않습니다.
 
@@ -38,7 +38,7 @@ Xamarin.Android 응용 프로그램의 디버그 버전에 서명 하는 데 사
 
 JDK에서 `keytool` 명령을 실행하면 키 저장소에 대한 정보를 가져올 수 있습니다. 이 도구는 일반적으로 Java bin 디렉터리에 있습니다.
 
-**C:\\프로그램 파일 (x86)\\Java\\jdk [VERSION]\\bin\\keytool.exe**
+**C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

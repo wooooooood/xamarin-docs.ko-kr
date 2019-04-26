@@ -1,5 +1,5 @@
 ---
-title: iOS Backgrounding 작업
+title: 작업이 있는 iOS Backgrounding
 description: 이 문서에는 백그라운드 태스크를 사용 하 여는 응용 프로그램이 백그라운드에서 배치 되 면 장기 실행 작업을 수행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170684"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 작업
+# <a name="ios-backgrounding-with-tasks"></a>작업이 있는 iOS Backgrounding
 
 IOS의 backgrounding 수행 하는 가장 간단한 방법은 backgrounding 요구 작업을 중단 하 고 백그라운드에서 작업을 실행 하는 경우 작업에서 엄격한 시간 제한이 되며 일반적으로 가져오고 약 600 초 (10 분) 응용 프로그램이 iOS 6, 백그라운드로 이동 후 처리 시간이 10 분 이상 iOS 7 이상에서.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: f139bcceda12752e43a3a8330fa0a0e038e539f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61423565"
 ---
 # <a name="wide-color-in-xamarinios"></a>Xamarin.iOS에서 광범위 한 색
 
@@ -135,7 +135,7 @@ Apple에 따라 사용자를 이동 하는 해당 워크플로 모바일 플랫�
 - Core 이미지
 - WebKit
 - SpriteKit
-- 코어 애니메이션
+- 핵심 애니메이션
 - (MacOS만 해당)에 대 한 AppKit
 
 또한 확장 범위 sRGB 색 공간에 대 한 지원이 향상 되었습니다 레 티 나 디스플레이 및 디스플레이 P3 표시 합니다.

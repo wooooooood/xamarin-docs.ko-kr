@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
 ms.openlocfilehash: 5e354f8271257ab21a855bdf5d576ce3062fadc7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957395"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -181,7 +181,7 @@ Android 매니페스트 사용 권한을 추가 하면 (에 설명 된 대로 [A
 Android 매니페스트에서 작업의 기능을 설명 하는 방법을 제공 합니다. 이 통해 이루어집니다 [의도](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 및 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 사용자 지정 특성입니다. 작업을 사용 하 여 작업에 대 한 적절 한를 지정할 수는 [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
 생성자 및 범주와 적합 합니다 [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
-속성의 값에 따라 달라집니다. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
+속성. 하나 이상의 활동 (이 활동의 생성자에서 제공 되는 이유)를 제공 합니다. `[IntentFilter]` 여러 번 사용 하 여 각 별도의 결과 제공 될 수 있습니다 `<intent-filter/>` 내의 요소는 `<activity/>`합니다. 예를 들어:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

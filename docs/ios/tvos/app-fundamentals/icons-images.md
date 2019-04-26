@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418197"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>TvOS 아이콘 및 Xamarin에서 이미지를 사용 하 여 작업
 
@@ -40,7 +40,7 @@ ms.locfileid: "50116461"
 
 |시작 이미지 크기|노트|
 |---|---|
-|1920x1080px<br>|비-레이어.png 파일에만|
+|1920x1080px|비-레이어.png 파일에만|
 
 Apple에서는 앱의 시작 이미지를 디자인 하기 위한 다음 제안 합니다.
 

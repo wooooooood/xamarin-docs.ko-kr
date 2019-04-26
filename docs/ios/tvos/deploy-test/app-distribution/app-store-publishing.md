@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61416679"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -30,10 +30,10 @@ ms.locfileid: "50122402"
 
 <a name="Before_you_Submit" />
 
-## <a name="before-you-submit-an-application"></a>응용 프로그램을 제출하기 전에
+## <a name="before-you-submit-an-application"></a>애플리케이션을 제출하기 전에
 
-Apple TV App Store에 게시할 앱을 제출 하면 이동 검토 프로세스를 통해 apple 품질 및 내용에 대 한 Apple의 지침을 충족 하는지 확인 합니다. 응용 프로그램이 이러한 지침을 충족하지 못하는 경우 Apple에서 이를 거부합니다. 이 경우 Apple에서 언급한 부적합 사항을 처리하고 다시 제출해야 합니다.
-따라서 이러한 지침을 숙지하고 프로그램을 응용 프로그램에 적용하여 Apple 검토를 통해 최상의 기회를 얻을 수 있습니다. Apple의 지침에서 제공 됩니다 [앱 스토어 검토 지침](https://developer.apple.com/appstore/resources/approval/guidelines.html) 하 고 [에 새 Apple TV 프로그램 앱 제출 준비](https://developer.apple.com/tvos/submit/)합니다.
+Apple TV App Store에 게시할 앱을 제출 하면 이동 검토 프로세스를 통해 apple 품질 및 내용에 대 한 Apple의 지침을 충족 하는지 확인 합니다. 애플리케이션이 이러한 지침을 충족하지 못하는 경우 Apple에서 이를 거부합니다. 이 경우 Apple에서 언급한 부적합 사항을 처리하고 다시 제출해야 합니다.
+따라서 이러한 지침을 숙지하고 프로그램을 애플리케이션에 적용하여 Apple 검토를 통해 최상의 기회를 얻을 수 있습니다. Apple의 지침에서 제공 됩니다 [앱 스토어 검토 지침](https://developer.apple.com/appstore/resources/approval/guidelines.html) 하 고 [에 새 Apple TV 프로그램 앱 제출 준비](https://developer.apple.com/tvos/submit/)합니다.
 
 앱을 제출할 때 주의해야 할 몇 가지 사항은 다음과 같습니다.
 
@@ -45,13 +45,13 @@ Apple에는 Apple TV 앱 스토어 제출 팁의 목록을 유지 관리합니�
 
 <a name="Configuring_your_Application_in_iTunes_Connect" />
 
-## <a name="configuring-your-application-in-itunes-connect"></a>iTunes Connect에서 응용 프로그램 구성
+## <a name="configuring-your-application-in-itunes-connect"></a>iTunes Connect에서 애플리케이션 구성
 
 [iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa) 은 무엇 보다도, Apple TV App Store에서 tvOS 앱 관리에 대 한 웹 기반 도구 모음입니다. Xamarin.tvOS 앱 해야 제대로 설치 하 고 검토를 위해 Apple에 제출할 수 있습니다 하 고 궁극적으로 판매 하거나 Apple TV 앱 스토어에서 무료 앱으로 릴리스할 수 있기 전에 iTunes Connect에서에서 구성 합니다.
 
 다음을 수행합니다.
 
-1. iTunes Connect의 **계약, 세금 및 뱅킹** 섹션에서 적절한 계약이 적용되고 최신 상태인지 확인하여 iOS 응용 프로그램을 무료 또는 판매용으로 릴리스합니다.
+1. iTunes Connect의 **계약, 세금 및 뱅킹** 섹션에서 적절한 계약이 적용되고 최신 상태인지 확인하여 iOS 애플리케이션을 무료 또는 판매용으로 릴리스합니다.
 2. 새 **iTunes Connect 레코드** 응용 프로그램에 대 한 지정 하 고 해당 **표시 이름** (처럼 Apple TV App Store에서).
 3. **판매 가격**을 선택하거나 응용 프로그램이 무료로 릴리스되도록 지정합니다.
 4. 제공을 **앱 스토어 아이콘** (큰 아이콘) 및 작업을 지 원하는 Apple TV 장치에 응용 프로그램의 스크린샷입니다. 참조 우리의 [아이콘 및 이미지 작업](~/ios/tvos/app-fundamentals/icons-images.md) 자세한 가이드입니다.
@@ -71,7 +71,7 @@ Apple TV 앱 스토어에 앱을 게시 하려면 먼저 배포의 경우 여러
 
 <a name="Provisioning_for_Application_Services" />
 
-### <a name="provisioning-for-application-services"></a>응용 프로그램 서비스 프로비전
+### <a name="provisioning-for-application-services"></a>애플리케이션 서비스 프로비전
 
 Apple에 대 한 고유 ID를 만들면 tvOS 앱에 대 한 활성화 될 수 있는 자격이 라고도 하는 특별 한 응용 프로그램 서비스를 제공 합니다. 여부 사용자 지정 자격을 사용 하는 경우, Apple TV App Store에 게시 하기 전에 Xamarin.tvOS 앱에 대 한 고유 ID를 만들려면 해야 계속 합니다.
 
@@ -93,7 +93,7 @@ Mac 용 Visual Studio에서 다음을 수행 합니다.
 5. 선택한 앱 ID를 정의할 때 위에서 수행한 설정과 일치 하도록 하면 Xamarin.tvOS 앱에 필요한 자격을 구성
 6. 변경 내용을 `Entitlements.plist` 파일에 저장합니다.
 
-자세한 지침은 [응용 프로그램 서비스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) 설명서를 참조하세요. 이 문서는 iOS 용으로 작성 된 경우 동일한 단계를 Xamarin.tvOS 앱 프로 비전에 사용 됩니다.
+자세한 지침은 [애플리케이션 서비스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) 설명서를 참조하세요. 이 문서는 iOS 용으로 작성 된 경우 동일한 단계를 Xamarin.tvOS 앱 프로 비전에 사용 됩니다.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
@@ -107,7 +107,7 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>배포 프로필 만들기 및 설치
 
-사용 하 여 tvOS *프로 비전 프로필* 특정 응용 프로그램 빌드를 배포 하는 방법을 제어 합니다. 이러한 파일은 앱 서명에 사용된 인증서, *응용 프로그램 ID* 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 디바이스 목록도 포함됩니다. 그러나 Apple TV App Store 배포에 대 한 인증서 및 앱 ID 정보만 포함 됩니다, Apple TV App Store를 통해 공개 배포 하는 유일한 메커니즘 이므로 합니다.
+사용 하 여 tvOS *프로 비전 프로필* 특정 응용 프로그램 빌드를 배포 하는 방법을 제어 합니다. 이러한 파일은 앱 서명에 사용된 인증서, *애플리케이션 ID* 및 앱을 설치할 수 있는 위치에 대한 정보가 포함된 파일입니다. 개발 및 임시 배포의 경우 프로비전 프로필에는 앱이 배포될 수 있도록 허용되는 디바이스 목록도 포함됩니다. 그러나 Apple TV App Store 배포에 대 한 인증서 및 앱 ID 정보만 포함 됩니다, Apple TV App Store를 통해 공개 배포 하는 유일한 메커니즘 이므로 합니다.
 
 프로비전에는 Apple의 웹 기반 iOS 프로비전 포털을 사용하는 다음 단계가 포함됩니다.
 
@@ -124,7 +124,7 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
-### <a name="setting-the-build-configuration-for-your-application"></a>응용 프로그램에 대한 빌드 구성 설정
+### <a name="setting-the-build-configuration-for-your-application"></a>애플리케이션에 대한 빌드 구성 설정
 
 기본적으로 새 Xamarin.tvOS 앱을 만들 때 _빌드 구성_ 둘 다에 대해 자동으로 생성 됩니다 **디버그** 하 고 **릴리스** 배포 합니다. Apple에 제출할 앱의 최종 빌드를 수행 하기 전에 자료에 있도록 해야 하는 몇 가지 수정 **릴리스** 구성 합니다.
 
@@ -159,7 +159,7 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 ### <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
-보관용 응용 프로그램을 빌드할 때마다 *보관 보기*가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 이 보기에는 기본적으로 현재 열려 있는 솔루션만 표시됩니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 옵션을 클릭합니다.
+보관용 애플리케이션을 빌드할 때마다 *보관 보기*가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 이 보기에는 기본적으로 현재 열려 있는 솔루션만 표시됩니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 옵션을 클릭합니다.
 
 나중에 생성된 모든 디버그 정보를 기호로 나타낼 수 있도록 고객에게 배포된 보관 파일(앱 스토어 또는 엔터프라이즈 배포)을 유지하는 것이 좋습니다.
 
@@ -181,13 +181,13 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
     [![](app-store-publishing-images/distribute04.png "응용 프로그램 로더를 통해 iTunes Connect에 업로드")](app-store-publishing-images/distribute04.png#lightbox)
 
-배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 응용 프로그램을 제출할 준비가 되었습니다.
+배포 빌드를 만들고 보관했으므로 이제 iTunes Connect에 애플리케이션을 제출할 준비가 되었습니다.
 
 <a name="Submitting_Your_App_to_Apple" />
 
 ## <a name="submitting-your-app-to-apple"></a>Apple에 앱 제출
 
-배포 빌드가 완료되면 iOS 응용 프로그램을 Apple에 제출하여 앱 스토어에서 검토하고 릴리스할 준비가 됩니다.
+배포 빌드가 완료되면 iOS 애플리케이션을 Apple에 제출하여 앱 스토어에서 검토하고 릴리스할 준비가 됩니다.
 
 
 Mac 용 Visual Studio의 보관 워크플로에서 응용 프로그램 로더 열기 자동으로 저장 한 후의 `.ipa`:
@@ -197,14 +197,14 @@ Mac 용 Visual Studio의 보관 워크플로에서 응용 프로그램 로더 �
     [![](app-store-publishing-images/publishvs01.png "앱 배달 선택")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
-4. 응용 프로그램 로더에서 파일의 유효성을 검사합니다.
+4. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
 
     [![](app-store-publishing-images/publishvs02.png "응용 프로그램 로더 유효성 검사 화면")](app-store-publishing-images/publishvs02.png#lightbox)
 5. *다음* 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
 
     [![](app-store-publishing-images/publishvs03.png "앱 스토어에 대 한 유효성을 검사할 응용 프로그램")](app-store-publishing-images/publishvs03.png#lightbox)
 6. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
-7. 파일이 성공적으로 업로드되면 응용 프로그램 로더에서 알려줍니다.
+7. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
 
 <a name="iTunes_Connect_Status" />
 

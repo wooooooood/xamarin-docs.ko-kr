@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61430503"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.iOS에서 통합된 Storyboards
 
@@ -552,7 +552,7 @@ public override void ViewDidLoad ()
 
 Size 클래스는 모든 방법을 보려면 적응 사진 응용 프로그램에 자세히 살펴보겠습니다, 그리고 특성 (trait) 컬렉션과 적응 뷰 컨트롤러를 Xamarin.iOS에서 통합 된 응용 프로그램을 만드는 쉽게 사용할 수 있습니다.
 
-## <a name="unified-storyboards"></a>통합된 Storyboards
+## <a name="unified-storyboards"></a>통합 Storyboards
 
 새 통합 스토리 보드 하면 개발자가 만든 스토리 보드 파일 여러 Size 클래스를 대상으로 하 여 iPhone 및 iPad 장치에 표시 될 수 있는 ios 8, 통합 합니다. 통합 스토리 보드를 사용 하 여 개발자는 UI 특정 코드 쓰고 하나만 인터페이스 디자인을 만들고 유지 관리 합니다.
 
@@ -625,7 +625,7 @@ Size 클래스 및 Iphone 및 Ipad에 대 한 레이아웃에 미치는 영향�
 
 ### <a name="adaptive-segue-types"></a>적응 Segue 형식
 
-개발자가 이전에 스토리 보드를 사용 하는 경우 기존 segue 유형의 익숙할 **푸시**를 **모달** 하 고 **팝 오버**합니다. Size 클래스 통합 스토리 보드 파일을 사용 하는 경우 다음과 같은 적응 Segue 형식 (위에서 설명한 새로운 뷰 컨트롤러 API 해당 함)는 사용 가능: **표시** 하 고 **세부 정보 표시** .
+개발자가 이전에 스토리 보드를 사용 하는 경우 기존 segue 유형의 익숙할 **푸시**를 **모달** 하 고 **팝 오버**합니다. Size 클래스 통합 스토리 보드 파일을 사용 하는 경우 다음 적응 Segue 형식 (위에서 설명한 새로운 뷰 컨트롤러 API 해당 함)이 제공 됩니다. **표시** 하 고 **세부 정보 표시**합니다.
 
 > [!IMPORTANT]
 > Size 클래스를 사용할 경우에 segue 기존 새 형식으로 변환 합니다.
@@ -738,7 +738,7 @@ IPad 시뮬레이터에서에서 응용 프로그램이 실행 되 면 요소가
 14. 선택 합니다 `LaunchScreen.xib` 위에서 만든 파일을 클릭 합니다 **오픈** 단추:
 
     [![](unified-storyboards-images/dls10.png "LaunchScreen.xib 파일 선택")](unified-storyboards-images/dls10.png#lightbox)
-15. 응용 프로그램을 빌드합니다.
+15. 애플리케이션을 빌드합니다.
 
 ### <a name="testing-the-dynamic-launch-screen"></a>동적 시작 화면 테스트
 

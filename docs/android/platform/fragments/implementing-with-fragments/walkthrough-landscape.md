@@ -1,5 +1,5 @@
 ---
-title: 조각 연습-2 부
+title: 조각 연습 - 2부
 ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
 ms.openlocfilehash: 7ec8ad6ce428107d2255dd07c7e69c9e77780c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026324"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>조각 연습 &ndash; 가로
 
@@ -233,7 +233,7 @@ protected override void OnCreate(Bundle savedInstanceState)
 
 장치 방향에 대 한 검사를 추가 하는이 수정 합니다. 다음 가로 모드에 있을 경우 `PlayQuoteActivity` 자체 닫힙니다.
 
-## <a name="4-run-the-application"></a>4. 응용 프로그램 실행
+## <a name="4-run-the-application"></a>4. 애플리케이션 실행
 
 이러한 변경 내용은 앱을 실행 완료 되 면 가로 모드로 (필요한 경우) 장치를 회전할 하 고 재생을 선택 합니다. 견적 재생 목록와 동일한 화면에 표시 합니다.
 

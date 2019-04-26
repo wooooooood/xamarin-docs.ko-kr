@@ -8,16 +8,16 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 78f6c03f73f0e4d8a74f826dd7bc25bbe325d545
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61411720"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>WatchOS에서 Xamarin 앱 그룹 사용
 
 
-앱 그룹을 사용하면 서로 다른 응용 프로그램(또는 응용 프로그램과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
+앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
 - Apple Watch [설정을](~/ios/watchos/app-fundamentals/settings.md)합니다.
 - 공유 [NSUserDefaults](~/ios/watchos/app-fundamentals/parent-app.md#nsuserdefaults)합니다.

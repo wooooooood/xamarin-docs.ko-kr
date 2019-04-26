@@ -1,5 +1,5 @@
 ---
-title: iPad 모달 페이지 표시 스타일
+title: iPad 모달 페이지 프레젠테이션 스타일
 description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에는 iOS 플랫폼 특정 집합 iPad에서 모달 페이지의 표시 스타일을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896928"
 ---
-# <a name="ipad-modal-page-presentation-style"></a>iPad 모달 페이지 표시 스타일
+# <a name="ipad-modal-page-presentation-style"></a>iPad 모달 페이지 프레젠테이션 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 

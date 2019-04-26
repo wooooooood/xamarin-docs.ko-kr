@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170802"
 ---
 # <a name="listview"></a>ListView
 
@@ -159,12 +159,12 @@ static readonly string[] countries = new String[] {
 
 이 배치할 수 있는 문자열의 배열 합니다 [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
 
-응용 프로그램을 실행합니다. 목록 스크롤 또는 다음 항목을 클릭 하는 메시지가 표시를 필터링 하려면 입력 수 있습니다. 다음과 같이 표시되어야 합니다.
+애플리케이션을 실행합니다. 목록 스크롤 또는 다음 항목을 클릭 하는 메시지가 표시를 필터링 하려면 입력 수 있습니다. 다음과 같이 표시되어야 합니다.
 
 [![국가 이름 사용 하 여 ListView의 예제 스크린샷](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 하드 코드 된 문자열 배열을 사용 하 여 최상의 디자인 되지 않은 참고 합니다. 설명 하기 위해 편의상,이 자습서에 사용 된는 [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-위젯입니다. 와 같은 외부 리소스를 정의한 문자열 배열을 참조 하는 것이 좋습니다는 `string-array` 프로젝트에서 리소스 **Resources/Values/Strings.xml** 파일입니다. 예를 들어:
+widget. 와 같은 외부 리소스를 정의한 문자열 배열을 참조 하는 것이 좋습니다는 `string-array` 프로젝트에서 리소스 **Resources/Values/Strings.xml** 파일입니다. 예를 들어:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -189,7 +189,7 @@ static readonly string[] countries = new String[] {
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
-응용 프로그램을 실행합니다. 다음과 같이 표시되어야 합니다.
+애플리케이션을 실행합니다. 다음과 같이 표시되어야 합니다.
 
 [![더 작은 이름 목록 사용 하 여 ListView의 예제 스크린샷](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 

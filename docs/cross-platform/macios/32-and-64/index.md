@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 31eb0bfae58ecdca40548e46d1d9d95828be67b4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347842"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 비트 플랫폼 고려 사항
 
@@ -79,7 +79,7 @@ ARM64는 iOS 8 iPhone 6 또는 기타 64 비트 장치에서 지원 하는 데 �
 32 비트 및 64 비트 아키텍처를 대상으로 하는 응용 프로그램의 크기를 크게 늘어납니다. 그러나 이렇게 하면 수 있게 됩니다 최신 장치 이전 장치를 계속 지원 하면서 최적화 된 코드를 실행 하도록 합니다.
 
 > [!IMPORTANT]
-> IOS 응용 프로그램을 iTunes 앱 스토어에 제출 하는 경우 다음과 같은 메시지가 표시 되 면 _"경고 ITMS 9000: 64 비트 지원은 없습니다. 2015 년 2 월 1 새 iOS 앱 스토어에 업로드 하는 앱 64 비트 지원을 포함 해야 시작한 Xcode 6에서 이상을 포함 하는 8 SDK, iOS를 사용 하 여 빌드할 수입니다. 사용 하도록 설정 하려면 프로젝트에 64 비트 좋습니다 Xcode 빌드 설정 "표준 아키텍처"의 기본값을 사용 하 여 32 비트 및 64 비트 코드를 사용 하 여 단일 이진 파일을 빌드하려면. "_ 지원 되는 아키텍처 중 하나를 전환 해야 할 **ARM64** 조합 (위와 같이), 다시 컴파일 및 다시 전송 합니다.
+> IOS 응용 프로그램을 iTunes 앱 스토어에 제출 하는 경우 다음과 같은 메시지가 표시 되 면 _"경고 ITMS 9000: 누락 된 64 비트 지원 합니다. 2015 년 2 월 1 새 iOS 앱 스토어에 업로드 하는 앱 64 비트 지원을 포함 해야 시작한 Xcode 6에서 이상을 포함 하는 8 SDK, iOS를 사용 하 여 빌드할 수입니다. 사용 하도록 설정 하려면 프로젝트에 64 비트 좋습니다 Xcode 빌드 설정 "표준 아키텍처"의 기본값을 사용 하 여 32 비트 및 64 비트 코드를 사용 하 여 단일 이진 파일을 빌드하려면. "_ 지원 되는 아키텍처 중 하나를 전환 해야 할 **ARM64** 조합 (위와 같이), 다시 컴파일 및 다시 전송 합니다.
 
 ## <a name="mac"></a>Mac
 
@@ -90,7 +90,7 @@ Mac 컴퓨터를 최신 32 비트 및 64 비트 응용 프로그램을 지원 �
 
 IOS와 달리 여러 macOS의 최신 버전에 도입 된 새 프레임 워크만 지 (CloudKit EventKit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, 소셜, 64 비트 모드에서 및 다른 MapKit)입니다.
 
-생성 하고자 하는 응용 프로그램의 종류를 선택 하는 개발자를 사용 하는 통합 API: 32 비트 또는 64 비트입니다.
+Unified API 생성 하고자 하는 응용 프로그램의 종류를 선택 하는 개발자를 허용 합니다. 32 비트 또는 64 비트입니다.
 
 **32 비트 응용 프로그램** 32 비트 및 64 비트 Mac 컴퓨터에서 실행, 32 비트로 제한 된 주소 공간 및 모든 라이브러리는 32 비트 요구 됩니다.
 

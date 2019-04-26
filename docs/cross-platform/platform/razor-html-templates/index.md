@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
 ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61168077"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 템플릿을 사용 하 여 빌드 HTML 보기
 

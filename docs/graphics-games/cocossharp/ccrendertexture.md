@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 95227689303a8367785202956a6aaef921c1c593
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085266"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>성능 및 CCRenderTexture 사용 하 여 시각 효과
 
@@ -67,7 +67,7 @@ protected override void AddedToScene ()
 
 ### <a name="card-draw-calls"></a>카드 그리기 호출
 
-코드 전체에서 발견 될 수 어떤의 단순화 된 버전 *수집 가능 카드 게임* (CCG) 예: "매직:: The 수집" 또는 "Hearthstone"입니다. 게임이 한 번에 세 개의 카드 표시 있고 소수의 가능한 단위 (파랑, 녹색 및 주황색). 반면 전체 게임 20 개가 넘는 카드 화면의 지정된 된 시간에 없고 플레이어 수백 개의 카드는 데크를 만들 때 선택할 수 있을 수 있습니다. 여기서 다루는 게임 현재 성능 문제에서 문제가 발생 하지 않는 경우에 유사한 구현 사용 하 여 전체 게임 될 수 있습니다.
+코드 전체에서 발견 될 수 어떤의 단순화 된 버전 *수집 가능 카드 게임* (CCG)와 같은 "매직: 수집"또는"Hearthstone"입니다. 게임이 한 번에 세 개의 카드 표시 있고 소수의 가능한 단위 (파랑, 녹색 및 주황색). 반면 전체 게임 20 개가 넘는 카드 화면의 지정된 된 시간에 없고 플레이어 수백 개의 카드는 데크를 만들 때 선택할 수 있을 수 있습니다. 여기서 다루는 게임 현재 성능 문제에서 문제가 발생 하지 않는 경우에 유사한 구현 사용 하 여 전체 게임 될 수 있습니다.
 
 CocosSharp는 그리기 호출을 노출 하 여 렌더링 성능에 몇 가지 정보 프레임당 수행을 제공 합니다. 우리의 `GameLayer.AddedToScene` 메서드 집합을 `GameView.Stats.Enabled` 에 `true`로 화면의 왼쪽 아래에 표시 되는 성능 정보:
 

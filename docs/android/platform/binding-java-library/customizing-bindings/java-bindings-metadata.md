@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
 ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60955673"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
@@ -276,7 +276,7 @@ Java 라이브러리를 난독 처리 하는 도구 Xamarin.Android 바인딩 �
 
 참고 setter 및 getter 메서드를 여전히 바인딩 생성기에서 만들 수 있습니다.
 
-### <a name="sender"></a>sender
+### <a name="sender"></a>보낸 사람
 
 메서드의 매개 변수 지정은 `sender` 메서드 이벤트에 매핑된 경우 매개 변수입니다. 값은 `true` 또는 `false`합니다. 예를 들어:
 

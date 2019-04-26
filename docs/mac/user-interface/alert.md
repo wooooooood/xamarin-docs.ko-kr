@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61237652"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.Mac의 경고
 
@@ -78,7 +78,7 @@ Apple 경고 사용자 지정에 사용할 수 있는 여러 속성을 제공 �
 
 <a name="Displaying_an_Alert" />
 
-## <a name="displaying-an-alert"></a>경고를 표시합니다.
+## <a name="displaying-an-alert"></a>경고 표시
 
 두 가지 다른 경고를 표시, 자유롭게 이동할 수 있는지 또는 시트를 합니다. 다음 코드는 자유 부동으로 경고를 표시합니다.
 
@@ -130,7 +130,7 @@ var result = alert.RunModal ();
 
 첫 번째 단추가 추가 됩니다는 _기본값 단추_ 사용자가 Enter 키를 누르면 활성화 되는 합니다. 반환된 된 값에는 사용자가 어느 단추를 나타내는 정수 됩니다. 여기서는 다음 값이 반환 됩니다.
 
-- **확인** -1000입니다.
+- **OK** - 1000.
 - **취소** 1001-합니다.
 - **아마도** 1002-합니다.
 

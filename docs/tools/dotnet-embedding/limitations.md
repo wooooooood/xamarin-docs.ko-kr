@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945796"
 ---
 # <a name="net-embedding-limitations"></a>.NET 포함 제한 사항
 
@@ -23,7 +23,7 @@ ms.locfileid: "50114355"
 
 동일한 응용 프로그램 내에서 존재 하는 두 개의 Mono 런타임이 할는 것이 불가능 합니다. 즉, 동일한 응용 프로그램 내에서 서로 다른 두 개의.NET 포함에서 생성 된 라이브러리를 사용할 수 없습니다.
 
-**해결 방법:** (서로 다른 프로젝트)에서 여러 어셈블리를 포함 하는 단일 라이브러리를 만들려면 생성기를 사용할 수 있습니다.
+**해결 방법:** (다른 프로젝트)에서 여러 어셈블리를 포함 하는 단일 라이브러리를 만들려면 생성자를 사용할 수 있습니다.
 
 ### <a name="subclassing"></a>서브클래싱
 

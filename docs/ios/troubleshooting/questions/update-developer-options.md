@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: 42f7f63c1da54bc7596d52c78cbcc1ed76931424
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61417684"
 ---
 # <a name="how-can-i-reenable-developer-options-after-updating-ios"></a>IOS를 업데이트 한 후 개발자 옵션 다시 수는 방법
 

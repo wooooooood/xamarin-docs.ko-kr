@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175180"
 ---
 # <a name="xaml-standard-preview-controls"></a>XAML 표준 (미리 보기) 컨트롤
 
@@ -27,7 +27,7 @@ XAML 표준에 새 속성 이름과 열거형이 있는 컨트롤의 목록은 �
 |Xamarin.Forms|XAML 표준|
 |--- |--- |
 |프레임|테두리|
-|선택|ComboBox|
+|선택기|ComboBox|
 |ActivityIndicator|ProgressRing|
 |StackLayout|StackPanel|
 |레이블|TextBlock|
@@ -47,7 +47,7 @@ XAML 표준에 새 속성 이름과 열거형이 있는 컨트롤의 목록은 �
 |ProgressBar|진행률|값|
 |단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributesBold, 기울임꼴, 없음|FontStyleItalic, 일반|
 |단추, 항목, 레이블, 편집기, SearchBar, 범위, 글꼴|FontAttributes|FontWeights * 굵게, 일반|
-|있던 InputView|KeyboardDefault, Url, 숫자, 전화, 텍스트, 채팅, 전자 메일|InputScopeNameValue * 기본, Url, 숫자, TelephoneNumber, 텍스트, 채팅, EmailNameOrAddress|
+|InputView|KeyboardDefault, Url, 숫자, 전화, 텍스트, 채팅, 전자 메일|InputScopeNameValue * 기본, Url, 숫자, TelephoneNumber, 텍스트, 채팅, EmailNameOrAddress|
 |StackPanel|StackOrientation|방향 *|
 
 > [!IMPORTANT]

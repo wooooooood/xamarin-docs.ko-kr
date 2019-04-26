@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: 8fe5b508bb92d11bc1a76c96ece0b89fd06dd402
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61415743"
 ---
 # <a name="tvos-application-fundamentals"></a>tvOS 응용 프로그램 기본 사항
 
@@ -40,7 +40,7 @@ _이 섹션에서는 가장 일반적인 태스크 및 개발자가 Xamarin.tvOS
 
 <a name="Resources-and-Data-Storage" />
 
-### <a name="resources-and-data-storageiostvosapp-fundamentalsresources-data-storagemd"></a>[리소스 및 데이터 저장소](~/ios/tvos/app-fundamentals/resources-data-storage.md)
+### <a name="resources-and-data-storageiostvosapp-fundamentalsresources-data-storagemd"></a>[리소스 및 데이터 스토리지](~/ios/tvos/app-fundamentals/resources-data-storage.md)
 
 IOS 장치와 달리 새 Apple TV tvOS 앱에 대 한 영구적이 고 로컬 저장소를 제공 하지 않습니다. 이 문서에서는 리소스 및 Xamarin.tvOS 앱에서 영구 데이터 저장소를 사용 하 여 작업을 설명 합니다.
 

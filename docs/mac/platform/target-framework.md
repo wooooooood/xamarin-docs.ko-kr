@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac의 대상 프레임 워크
+title: Target Framework for Xamarin.Mac
 description: 이 문서에서는 대상 프레임 워크 (기본 클래스 라이브러리)을 Xamarin.Mac에 사용할 수 있는 및 Xamarin.Mac 프로젝트에서 사용 하 여 의미를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
 ms.openlocfilehash: 15c93126f80917df45a5b80fb84397dc6ef0d5fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075630"
 ---
-# <a name="target-framework-for-xamarinmac"></a>Xamarin.Mac의 대상 프레임 워크
+# <a name="target-framework-for-xamarinmac"></a>Target Framework for Xamarin.Mac
 
 _이 문서에서는 대상 프레임 워크 (기본 클래스 라이브러리)을 Xamarin.Mac에 사용할 수 있는 및 Xamarin.Mac 프로젝트에서 사용 하 여 의미를 설명 합니다._
 

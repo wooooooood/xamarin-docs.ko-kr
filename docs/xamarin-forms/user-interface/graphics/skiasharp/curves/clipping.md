@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
 ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61086052"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
@@ -366,7 +366,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 이 작업은 각 경로 가로 검색, 여러 줄 구식 진공 tube Tv의에서 함수와 같이 축소 된 경우 상당히 간소화 됩니다. 각 스캐닝선은 시작점 및 끝점을 사용 하 여 가로줄 하기만 하면 됩니다. 예를 들어 10 픽셀의 radius 사용 하 여 원은 원의 왼쪽된 부분에서 시작 하 고 오른쪽 부분에서 끝납니다 각각 20 가로 검색 선으로 분해할 수 있습니다. 영역 작업을 사용 하 여 두 개의 원을 결합 됩니다 해당 스캐닝선의 각 쌍의 시작 및 끝 좌표를 검사 하는 단순히 이기 때문에 매우 간단 합니다.
 
-이것이 지역이: 영역을 정의 하는 가로 스캐닝선의 시리즈입니다.
+이것이 영역은입니다. 영역을 정의 하는 가로 스캐닝선의 일련입니다.
 
 그러나 일련의 검색 영역 축소 된 경우 줄 줄 특정 픽셀 크기를 기반으로 이러한 검색 합니다. 엄격히 말해서, 지역 벡터 그래픽 개체가 아닙니다. 경로 보다 압축 된 흑백 비트맵에 본질적으로 더 가까운 것입니다. 따라서 지역 크기를 조정 하거나 회전 클리핑 영역에 사용 되는 경우 변환 되지 않습니다이 따라서 한 충실도 유지 하면서 수 없습니다.
 

@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 48caa70cf2bd408f8afc673b400f7d5a4369e108
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230850"
 ---
 # <a name="objective-c-support"></a>Objective C 지원
 
@@ -114,7 +114,7 @@ C# 생성자는 상속 되지 즉 클래스, 생성자 멤버를 명시적으로
 
 오른쪽 표현의 노출 하는 C# Objective C API `NS_UNAVAILABLE` 부모 클래스에서 자식 클래스에 존재 하지 않는 모든 이니셜라이저에 추가 됩니다.
 
-C#API:
+C# API:
 
 ```csharp
 public class Unique {
@@ -180,7 +180,7 @@ public static AllOperatorsWithFriendly Add (AllOperatorsWithFriendly c1, AllOper
 }
 ```
 
-다음과 같이 됩니다.
+다음과 같이 사용하십시오.
 
 ```objc
 + (instancetype)add:(Overloads_AllOperatorsWithFriendly *)anObjectC1 c2:(Overloads_AllOperatorsWithFriendly *)anObjectC2;

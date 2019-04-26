@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
 ms.openlocfilehash: db24c8677b0a3099193132575e92bc43a4c31dea
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61251035"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Xamarin.iOS의 국제화 인코딩
 
@@ -30,8 +30,8 @@ Mac 또는 Visual Studio에 대 한 Visual Studio에서 iOS 빌드/고급 창에
 
 -  한 중일: Chineese, 일본어 및 한국어
 -  mideast: 아랍어, 히브리어, 터키어 및 Latin5 합니다.
--  다른: 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
--  드문: EBCDIC 인코딩 및 다른 드문 코드 페이지
+-  기타: 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
+-  드물게 발생 합니다. EBCDIC 인코딩 및 다른 드문 코드 페이지
 -  서 부: 라틴어, 이스터 및 유럽 서 부
 -  모두
 

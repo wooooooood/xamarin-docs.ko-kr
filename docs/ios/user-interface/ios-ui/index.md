@@ -1,5 +1,5 @@
 ---
-title: IOS의 사용자 인터페이스
+title: iOS의 사용자 인터페이스
 description: 이 문서는 Xamarin.iOS 앱에 대 한 사용자 인터페이스를 작성 하는 방법에 설명 하는 지침에 연결 합니다. 연결 된 가이드 모양을 API를 만들고 사용자 인터페이스 개체를 레이아웃 옵션을 자세히 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382338"
 ---
-# <a name="user-interfaces-in-ios"></a>IOS의 사용자 인터페이스
+# <a name="user-interfaces-in-ios"></a>iOS의 사용자 인터페이스
 
 ## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[모양 API](introduction-to-the-appearance-api.md)
 
@@ -26,7 +26,7 @@ Apple 그룹 관련된 부분 "프레임 워크" Xamarin.iOS 네임 스페이스
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[레이아웃 옵션](~/ios/user-interface/ios-ui/layout-options.md)
 
-메커니즘은 두 가지 다른 보기를 조정 하거나 회전 하는 경우 레이아웃을 제어 하기 위한: 자동 크기 조정 및 자동 레이아웃 합니다.
+보기 크기를 조정 하거나 회전 하는 경우 레이아웃을 제어 하기 위한 두 가지 메커니즘 가지가 있습니다. 자동 크기 조정 및 자동 레이아웃 합니다.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

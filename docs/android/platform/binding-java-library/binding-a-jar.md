@@ -1,5 +1,5 @@
 ---
-title: 바인딩를 합니다. JAR
+title: JAR 바인딩
 description: 이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. JAR 파일입니다.
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 3c84b29807fd4a181ed867095645005bf9ba4df0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957333"
 ---
-# <a name="binding-a-jar"></a>바인딩를 합니다. JAR
+# <a name="binding-a-jar"></a>JAR 바인딩
 
 _이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. JAR 파일입니다._
 
@@ -190,7 +190,7 @@ public class MainActivity : Activity
 
 [![BindingTest의 스크린 샷 실행](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
-지금까지 Java 라이브러리를 성공적으로 연결 했습니다. Xamarin android 앱에서 사용 하는 JAR.
+축하합니다. Java 라이브러리를 성공적으로 연결 했습니다. Xamarin android 앱에서 사용 하는 JAR.
  
  
 ## <a name="summary"></a>요약

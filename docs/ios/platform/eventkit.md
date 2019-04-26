@@ -1,5 +1,5 @@
 ---
-title: Xamarin.iOS에서 EventKit
+title: EventKit in Xamarin.iOS
 description: 이 문서는 EventKit 및 Xamarin.iOS에서 사용 하는 방법을 설명 합니다. 달력, 달력 이벤트 및 알림 살펴보고 EventKit, 등을 사용 하 여 프로그래밍할 때 일반적으로 사용 하는 클래스에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: ea03c8b382e2de29bd20ab1d696d7abb7733e182
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61369250"
 ---
-# <a name="eventkit-in-xamarinios"></a>Xamarin.iOS에서 EventKit
+# <a name="eventkit-in-xamarinios"></a>EventKit in Xamarin.iOS
 
 iOS에는 두 가지 일정 관련 응용 프로그램이 기본 제공: 일정 응용 프로그램 및 미리 알림 응용 프로그램입니다. 일정 응용 프로그램의 일정 데이터를 관리 하는 방법을 이해 하기에 충분히 간단 이지만 미리 알림 응용 프로그램 덜 명확 합니다. 미리 알림 실제로 기한, 완료 되 면 있을 때의 측면에서 상호 연결 하는 날짜 수 등입니다. 달력 이벤트 또는 알림 라는 한 위치에서 든 iOS에서 모든 일정 데이터를 저장 하는 이와 같이 합니다 *달력 데이터베이스*합니다.
 

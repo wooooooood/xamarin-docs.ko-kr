@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 4ab98d59bc74672f9531f4dbd3c33a6270582612
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "33920808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386274"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame 통한 게임 개발 소개
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158543"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>SkiaSharp 선형 그라데이션
 
@@ -27,7 +27,7 @@ ms.locfileid: "53053583"
 이러한 메서드는 형식의 개체를 반환 [ `SKShader` ](xref:SkiaSharp.SKShader) 로 설정 하는 [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) 속성 `SKPaint`. 경우는 `Shader` 속성이 null이 아닌, 재정의 `Color` 속성입니다. 스트로크 하는 모든 줄 또는이 사용 하 여 채워진 `SKPaint` 단색을 나타내는 보다는 그라데이션에 개체를 기반으로 합니다.
 
 > [!NOTE]
-> 합니다 `Shader` 포함 하는 경우 속성은 무시 됩니다는 `SKPaint` 개체를 `DrawBitmap` 호출 합니다. 사용할 수는 `Color` 속성을 `SKPaint` 비트맵을 표시 하는 것에 대 한 투명도 수준을 설정 하려면 (문서에 설명 된 대로 [SkiaSharp 표시 비트맵](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), 하지만 사용할 수 없습니다는 `Shader` 표시에 대 한 속성 그라데이션 투명도 사용 하 여 비트맵입니다. 그라데이션 투명도 사용 하 여 비트맵을 표시 하기 위한 다른 기술을 사용할: 문서에 설명 된 이러한 [SkiaSharp 순환 그라데이션](circular-gradients.md#radial-gradients-for-masking) 하 고 [SkiaSharp 합치기 및 혼합 모드](../blend-modes/porter-duff.md#gradient-transparency-and-transitions)합니다.
+> 합니다 `Shader` 포함 하는 경우 속성은 무시 됩니다는 `SKPaint` 개체를 `DrawBitmap` 호출 합니다. 사용할 수는 `Color` 속성을 `SKPaint` 비트맵을 표시 하는 것에 대 한 투명도 수준을 설정 하려면 (문서에 설명 된 대로 [SkiaSharp 표시 비트맵](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), 하지만 사용할 수 없습니다는 `Shader` 표시에 대 한 속성 그라데이션 투명도 사용 하 여 비트맵입니다. 다른 기술을 그라데이션 투명도 사용 하 여 비트맵을 표시 하기 위해 사용할 수 있습니다. 문서에 설명 된 이러한 [SkiaSharp 순환 그라데이션](circular-gradients.md#radial-gradients-for-masking) 하 고 [SkiaSharp 합치기 및 혼합 모드](../blend-modes/porter-duff.md#gradient-transparency-and-transitions)합니다.
 
 ## <a name="corner-to-corner-gradients"></a>모퉁이가-그라데이션
 
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 합니다 `OnTimerTick` 메서드를 계산는 `angle` 애니메이션 효과가 적용 됩니다 0에서 2 π 매 3 초입니다. 
 
-두 개의 그라데이션 점을 계산 하는 한 가지 방법은 다음과 같습니다. `SKPoint` 라는 값 `vector` 원의 반지름의 지점에 캔버스의 가운데에서 확장으로 계산 됩니다. 이 벡터의 방향 각도의 사인 및 코사인 값을 기반으로 합니다. 두 반대 그라데이션 점 계산 됩니다: 하나의 지점 center 지점에서 해당 벡터를 뺀 값으로 계산 되 고 다른 중심점에 벡터를 추가 하 여 계산 됩니다.
+두 개의 그라데이션 점을 계산 하는 한 가지 방법은 다음과 같습니다. `SKPoint` 라는 값 `vector` 원의 반지름의 지점에 캔버스의 가운데에서 확장으로 계산 됩니다. 이 벡터의 방향 각도의 사인 및 코사인 값을 기반으로 합니다. 두 개의 반대 그라데이션 지점 계산 됩니다. 1 포인트는 center 지점에서 해당 벡터를 빼서 계산 하 고 다른 중심점에 벡터를 추가 하 여 계산 됩니다.
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,7 +617,7 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-두 그라데이션 점은 `CreateLinearGradient` 메서드가이 경로 정의 하는 지점 2에 기반한: 두 지점 왼쪽 위 모퉁이 가까워질 합니다. 첫 번째는 캔버스의 위쪽 가장자리에서 이며 두 번째 캔버스의 왼쪽된 가장자리입니다. 결과 다음과 같습니다.
+두 그라데이션 점은 `CreateLinearGradient` 메서드 두이 경로 정의 하는 지점을 기반으로 합니다. 두 지점 왼쪽 위 모퉁이 가까워질 합니다. 첫 번째는 캔버스의 위쪽 가장자리에서 이며 두 번째 캔버스의 왼쪽된 가장자리입니다. 결과 다음과 같습니다.
 
 [![잘못 된 rainbow 그라데이션](linear-gradient-images/RainbowGradientFaulty.png "결함이 있는 레인 보우 그라데이션")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 

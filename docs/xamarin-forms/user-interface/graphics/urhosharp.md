@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
 ms.openlocfilehash: b251fa13c4b436a837f71b5362ae85dffd245092
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61408847"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Xamarin.Forms에서 UrhoSharp 사용
 
@@ -43,7 +43,7 @@ UrhoSharp.Forms NuGet 패키지를 프로젝트에 추가 됩니다.
 
 플랫폼별 프로젝트 (예: iOS 및 Android)에 대해 위의 단계를 반복 합니다.
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>연습: Xamarin.Forms 앱에 UrhoSharp 추가
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>연습: UrhoSharp는 Xamarin.Forms 앱에 추가
 
 이러한 단계는 Xamarin.Forms UrhoSharp 샘플의 코드를 설명합니다.
 

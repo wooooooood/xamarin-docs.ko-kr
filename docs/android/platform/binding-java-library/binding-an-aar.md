@@ -1,5 +1,5 @@
 ---
-title: 바인딩는 합니다. AAR
+title: .AAR 바인딩
 description: 이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. AAR 파일입니다.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 7f71ccf4ff61c176e73be6d3855136697a5c2130
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60958175"
 ---
-# <a name="binding-an-aar"></a>바인딩는 합니다. AAR
+# <a name="binding-an-aar"></a>.AAR 바인딩
 
 _이 연습에서는 Android에서 Xamarin.Android Java 바인딩 라이브러리를 만들기 위한 단계별 지침을 제공 합니다. AAR 파일입니다._
 
@@ -303,7 +303,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 [![BindingTest 자음 수를 표시 합니다.](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
 
-지금까지 Java 라이브러리를 성공적으로 연결 했습니다. AAR!
+축하합니다. Java 라이브러리를 성공적으로 연결 했습니다. AAR!
 
 
 

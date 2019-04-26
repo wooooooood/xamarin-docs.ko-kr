@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 6f32d8f328232bdfc644da57bdb3201c60010063
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381905"
 ---
 # <a name="configuration-management"></a>구성 관리
 
@@ -34,16 +34,16 @@ Xamarin.Forms 영구 사전을 사용 하 여 데이터를 저장 하는 단점�
 Xam.Plugins.Settings 라이브러리를 사용 하는 경우 단일 정적 클래스로 만들어야 하는 앱에 필요한 앱 및 사용자 설정이 포함 됩니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱에서 설정 클래스를 보여 줍니다.
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    private static ISettings AppSettings  
-    {  
-        get  
-        {  
-            return CrossSettings.Current;  
-        }  
-    }  
-    ...  
+    private static ISettings AppSettings  
+    {  
+        get  
+        {  
+            return CrossSettings.Current;  
+        }  
+    }  
+    ...  
 }
 ```
 
@@ -57,24 +57,24 @@ public static class Settings
 각 설정 키, 기본 값, 및 속성으로 구성 됩니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱에 연결 하는 온라인 서비스에 대 한 기본 URL을 나타내는 사용자 설정에 대 한 모든 세 가지 항목을 보여 줍니다.
 
 ```csharp
-public static class Settings  
+public static class Settings  
 {  
-    ...  
-    private const string IdUrlBase = "url_base";  
-    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
-    ...  
+    ...  
+    private const string IdUrlBase = "url_base";  
+    private static readonly string UrlBaseDefault = GlobalSetting.Instance.BaseEndpoint;  
+    ...  
 
-    public static string UrlBase  
-    {  
-        get  
-        {  
-            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
-        }  
-        set  
-        {  
-            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
-        }  
-    }  
+    public static string UrlBase  
+    {  
+        get  
+        {  
+            return AppSettings.GetValueOrDefault<string>(IdUrlBase, UrlBaseDefault);  
+        }  
+        set  
+        {  
+            AppSettings.AddOrUpdateValue<string>(IdUrlBase, value);  
+        }  
+    }  
 }
 ```
 
@@ -85,33 +85,33 @@ public static class Settings
 내에서 기본 값을 정의 하는 대신 합니다 `Settings` 클래스를 `UrlBaseDefault` 문자열에서 값을 가져옵니다는 `GlobalSetting` 클래스입니다. 다음 코드 예제는 `BaseEndpoint` 속성 및 `UpdateEndpoint` 이 클래스의 메서드:
 
 ```csharp
-public class GlobalSetting  
+public class GlobalSetting  
 {  
-    ...  
-    public string BaseEndpoint  
-    {  
-        get { return _baseEndpoint; }  
-        set  
-        {  
-            _baseEndpoint = value;  
-            UpdateEndpoint(_baseEndpoint);  
-        }  
-    }  
-    ...  
+    ...  
+    public string BaseEndpoint  
+    {  
+        get { return _baseEndpoint; }  
+        set  
+        {  
+            _baseEndpoint = value;  
+            UpdateEndpoint(_baseEndpoint);  
+        }  
+    }  
+    ...  
 
-    private void UpdateEndpoint(string baseEndpoint)  
-    {  
-        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
-        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
-        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
-        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
-        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
-        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
-        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
-        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
-        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
-        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
-    }  
+    private void UpdateEndpoint(string baseEndpoint)  
+    {  
+        RegisterWebsite = string.Format("{0}:5105/Account/Register", baseEndpoint);  
+        CatalogEndpoint = string.Format("{0}:5101", baseEndpoint);  
+        OrdersEndpoint = string.Format("{0}:5102", baseEndpoint);  
+        BasketEndpoint = string.Format("{0}:5103", baseEndpoint);  
+        IdentityEndpoint = string.Format("{0}:5105/connect/authorize", baseEndpoint);  
+        UserInfoEndpoint = string.Format("{0}:5105/connect/userinfo", baseEndpoint);  
+        TokenEndpoint = string.Format("{0}:5105/connect/token", baseEndpoint);  
+        LogoutEndpoint = string.Format("{0}:5105/connect/endsession", baseEndpoint);  
+        IdentityCallback = string.Format("{0}:5105/xamarincallback", baseEndpoint);  
+        LogoutCallback = string.Format("{0}:5105/Account/Redirecting", baseEndpoint);  
+    }  
 }
 ```
 
@@ -123,55 +123,55 @@ EShopOnContainers 모바일 앱에서의 `SettingsView` 두 사용자 설정을 
 
 ![](configuration-management-images/settings-endpoint.png "EShopOnContainers 모바일 앱에서 노출 하는 사용자 설정")
 
-**그림 7-1**: eShopOnContainers 모바일 앱에서 노출 하는 사용자 설정
+**그림 7-1**: EShopOnContainers 모바일 앱에서 노출 하는 사용자 설정
 
 데이터 바인딩을 검색 하 고 설정에 의해 노출 되는 설정을 사용할 수는 `Settings` 클래스입니다. 컨트롤의 속성에 액세스 하는 보기 모델 속성을 보기 바인딩의 이렇게는 `Settings` 클래스 및 속성을 발생 시키는 변경 알림 설정 값이 변경 합니다. EShopOnContainers 모바일 앱에서 뷰를 생성 하는 방법에 대 한 정보를 모델링 하 고 연결 합니다 뷰를 참조 하세요 [자동으로 보기 모델 로케이터를 사용 하 여 뷰 모델을 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)합니다.
 
 다음 코드 예제는 [ `Entry` ](xref:Xamarin.Forms.Entry) 에서 제어를 `SettingsView` 컨테이너 화 된 마이크로 서비스에 대 한 기본 끝점 URL을 입력 하 여 사용자를 허용 하는:
 
 ```xaml
-<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
+<Entry Text="{Binding Endpoint, Mode=TwoWay}" />
 ```
 
 이 [ `Entry` ](xref:Xamarin.Forms.Entry) 컨트롤에 바인딩되는 `Endpoint` 속성을 `SettingsViewModel` 양방향 바인딩을 사용 하 여 클래스입니다. 다음 코드 예제에서는 끝점 속성을 보여 줍니다.
 
 ```csharp
-public string Endpoint  
+public string Endpoint  
 {  
-    get { return _endpoint; }  
-    set  
-    {  
-        _endpoint = value;  
+    get { return _endpoint; }  
+    set  
+    {  
+        _endpoint = value;  
 
-        if(!string.IsNullOrEmpty(_endpoint))  
-        {  
-            UpdateEndpoint(_endpoint);  
-        }  
+        if(!string.IsNullOrEmpty(_endpoint))  
+        {  
+            UpdateEndpoint(_endpoint);  
+        }  
 
-        RaisePropertyChanged(() => Endpoint);  
-    }  
+        RaisePropertyChanged(() => Endpoint);  
+    }  
 }
 ```
 
-경우는 `Endpoint` 속성이 설정 되어를 `UpdateEndpoint` 메서드가 호출 되 면 제공 하는 제공 된 값이 유효 하면 속성 변경 알림이 발생 합니다. 다음 코드 예제는 `UpdateEndpoint` 메서드:
+경우는 `Endpoint` 속성이 설정 되어를 `UpdateEndpoint` 메서드가 호출 되 면 제공 하는 제공 된 값이 유효 하면 속성 변경 알림이 발생 합니다. 다음 코드 예제는 `UpdateEndpoint` 메서드를 보여줍니다.
 
 ```csharp
-private void UpdateEndpoint(string endpoint)  
+private void UpdateEndpoint(string endpoint)  
 {  
-    Settings.UrlBase = endpoint;  
+    Settings.UrlBase = endpoint;  
 }
 ```
 
 이 메서드를 업데이트 합니다 `UrlBase` 속성에는 `Settings` 플랫폼별 저장소에 유지 하도록 할 수 있는 사용자가 입력 한 기본 끝점 URL 값을 사용 하 여 클래스입니다.
 
-경우는 `SettingsView` 을 탐색 하면를 `InitializeAsync` 에서 메서드를 `SettingsViewModel` 클래스에서 실행 됩니다. 다음 코드 예제에서는이 메서드를 보여 줍니다.
+경우는 `SettingsView` 을 탐색 하면를 `InitializeAsync` 에서 메서드를 `SettingsViewModel` 클래스에서 실행 됩니다. 다음 코드 예제에서는 이 메서드를 보여줍니다.
 
 ```csharp
-public override Task InitializeAsync(object navigationData)  
+public override Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Endpoint = Settings.UrlBase;  
-    ...  
+    ...  
+    Endpoint = Settings.UrlBase;  
+    ...  
 }
 ```
 

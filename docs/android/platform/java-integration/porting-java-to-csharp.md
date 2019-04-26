@@ -1,5 +1,5 @@
 ---
-title: Java를 이식합니다.C#
+title: Java를 C#으로 이식
 description: Java 소스 코드를 이식 하는 Java를 사용 하 여 Xamarin.Android 응용 프로그램에서 세 번째 옵션인 C#입니다.
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/05/2016
 ms.openlocfilehash: 9beb6d59c9376a404c06af7f0cd1efd985929843
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075148"
 ---
-# <a name="porting-java-to-c"></a>Java를 이식합니다.C#
+# <a name="porting-java-to-c"></a>Java를 C#으로 이식
 
 _Java 소스 코드를 이식 하는 Java를 사용 하 여 Xamarin.Android 응용 프로그램에서 세 번째 옵션인 C#입니다._
 

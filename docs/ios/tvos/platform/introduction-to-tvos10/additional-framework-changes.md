@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 4ca9856251d35a741d496b6e8b45b07e851e0e89
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932548"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경
 
@@ -20,7 +20,7 @@ TvOS에 주요 변경 내용 외에도 Apple가 수정 및 여러 기존 프레�
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="avfoundation-framework-additions"></a>AVFoundation 프레임 워크 추가
+## <a name="avfoundation-framework-additions"></a>AVFoundation Framework Additions
 
 AVFoundation 프레임 워크에는 다음과 같은 향상 기능이 포함 됩니다.
 

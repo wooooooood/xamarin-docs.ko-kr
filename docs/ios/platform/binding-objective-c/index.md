@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61346943"
 ---
 # <a name="binding-ios-libraries"></a>IOS 라이브러리 바인딩
 
@@ -42,11 +42,11 @@ Xamarin.iOS 및 Xamarin.Mac CocoaPods 및 Objective-c 라이브러리 바인딩 
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS 바인딩 C/c + +에서에서 [Xamarin University](https://university.xamarin.com/)**
+**iOS 바인딩 c에서 /C++으로 [Xamarin University](https://university.xamarin.com/)**
 
 ## <a name="related-links"></a>관련 링크
 
 - [Objective-C 바인딩](~/cross-platform/macios/binding/index.md)
 - [Mac 바인딩](~/mac/platform/binding.md)
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

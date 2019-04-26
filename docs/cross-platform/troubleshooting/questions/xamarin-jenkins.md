@@ -8,11 +8,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 06/05/2018
 ms.openlocfilehash: c2e409b796d5ef2525079e02aafdd0c6e8db5d81
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158938"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Jenkins는 Microsoft에서 지원 되지 않는 이유는?
 
@@ -32,7 +32,7 @@ Jenkins 문제; 팀에서 직접 지원 되지 않습니다 위에서 언급 했
 
 이 문제에 대 한 오류 메시지는 다음과 같습니다.
 
-> 오류 XA5205: The Android SDK 디렉터리를 찾을 수 없습니다. /P:AndroidSdkDirectory 통해 설정 하세요.
+> error XA5205: Android SDK 디렉터리를 찾을 수 없습니다. /P:AndroidSdkDirectory 통해 설정 하세요.
 
 SDK 위치를 설정 하기 위한 옵션; 사용 하는 정확한 Jenkins Android 플러그 인에 따라 달라질 수 있습니다. 이 설정 하는 방법에 대 한 확인 하는 것이 좋습니다 플러그 인 가이드입니다. 예를 들어, 합니다 [Android 에뮬레이터 플러그 인](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) 이루어지지만 SDK를 자동으로 찾습니다 찾을 수 없는 것; 위치는 플러그 인에 대해 Jenkins 시스템 구성 페이지를 통해 설정할 수도 있습니다. 
 
@@ -51,6 +51,6 @@ SDK 위치를 설정 하기 위한 옵션; 사용 하는 정확한 Jenkins Andro
 
 또는
 
-> 오류: 스타터 버전의 Xamarin.iOS Xamarin Studio 외부에서 빌드를 지원 하지 않습니다. 
+> 오류: 시작 버전의 Xamarin.iOS Xamarin Studio 외부에서 빌드를 지원 하지 않습니다. 
 
 이 시나리오의 가장 일반적인 원인은 Xamarin 라이선스를 사용 하 여 연결 되지 않은 사용자 계정으로 로그인 하 여 Jenkins 사용 됩니다. 이 확인 하는 가장 간단한 방법은 Jenkins 사용자 계정을 통해 직접 앱을 설치 합니다. 일부 추가 고려 사항과 해당 프로세스는 다음과 같습니다. [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

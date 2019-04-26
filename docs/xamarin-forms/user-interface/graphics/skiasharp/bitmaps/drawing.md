@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61401599"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
 
@@ -121,7 +121,7 @@ public partial class HelloBitmapPage : ContentPage
 
 표시 된 **Hello 비트맵** 페이지 비트맵 만든 프로그램은 검은색 텍스트로 제외 하 고 투명 하 게 하는 방법을 보여 줍니다. 이유는 바다색 색 화면을 통해 보여 줍니다.
 
-설명서의 `Clear` 메서드의 `SKCanvas` 문을 사용 하 여 이러한 기능을 설명: "현재 클립 캔버스의 모든 픽셀을 대체 합니다." "대체" 라는 단어를 사용 하 여 이러한 메서드의 중요 한 특징 표시:의 모든 그리기 메서드 `SKCanvas` 기존 화면에 내용을 추가 합니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
+설명서의 `Clear` 의 메서드 `SKCanvas` 문을 사용 하 여 이러한 기능을 설명 합니다. "현재 클립 캔버스의 모든 픽셀을 대체합니다." "대체" 라는 단어를 사용 하 여 이러한 메서드의 중요 한 특징 표시 됩니다. 모든 그리기 메서드 `SKCanvas` 기존 화면에 내용을 추가 합니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
 
 `Clear` 두 가지 버전에 있습니다. 
 
@@ -131,7 +131,7 @@ public partial class HelloBitmapPage : ContentPage
 
 호출 `Clear` 새 비트맵에 인수를 사용 하 여 완전히 투명 하 게 전체 비트맵을 초기화 합니다. 비트맵에 이후에 그려지는 아무것도 보통은 불투명 하 게 또는 부분적으로 불투명 합니다.
 
-하려는 것 같습니다:에서 **Hello 비트맵** 페이지에서 대체를 `Clear` 에 적용 하는 메서드를 `bitmapCanvas` 이 사용 하 여:
+다음은 하려는 것입니다. 에 **Hello 비트맵** 페이지에서 자리를 `Clear` 에 적용 하는 메서드는 `bitmapCanvas` 이 사용 하 여:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));

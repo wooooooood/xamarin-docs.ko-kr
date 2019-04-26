@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
 ms.openlocfilehash: 3ab31fb7cac97fbae3315f51daf3dd4b1edbcc1d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085294"
 ---
 # <a name="java-integration-overview"></a>Java 통합 개요
 
@@ -27,7 +27,7 @@ Xamarin.Android 응용 프로그램에 필요한 특정된 기능에 이미 Java
 
 -   **Java 바인딩 라이브러리를 만듭니다** &ndash; 이 기법을 Xamarin.Android 프로젝트를 만드는 데 사용 됩니다 C# Java 형식에 대 한 래퍼입니다. Xamarin.Android 응용 프로그램을 참조할 수 있습니다는 C# 래퍼가이 프로젝트에서 생성 한 다음 사용 합니다 `.jar` 파일입니다. 
 
--   **Java 기본 인터페이스** &ndash; 는 *Java 네이티브* *인터페이스* (JNI)는 Java가 아닌 코드를 허용 하는 프레임 워크 (c + +와 같은 또는 C#)를 호출 하거나 실행 하는 Java 코드에서 호출할 수 JVM 내에서. 
+-   **Java 기본 인터페이스** &ndash; 는 *Java 네이티브* *인터페이스* (JNI)는 Java가 아닌 코드를 허용 하는 프레임 워크 (같은 C++ 또는 C#)를 호출 하거나 Java 코드에서 호출할 수 JVM 내에서 실행 합니다. 
 
 -   **코드를 이식할** &ndash; 이 방법은 Java 소스 코드 가져와으로 변환한 다음 C#합니다. 수동으로 또는 선명 하 게 같은 자동화 된 도구를 사용 하 여 수행할 수 있습니다. 
 
