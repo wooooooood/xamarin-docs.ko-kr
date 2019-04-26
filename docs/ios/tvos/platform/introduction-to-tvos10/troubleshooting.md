@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 3815790cfb73f93f399c14d3da44aa3210725388
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60932440"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Xamarin을 사용 하 여 앱을 빌드할 tvOS 10 문제 해결
 
@@ -20,7 +20,7 @@ ms.locfileid: "50119999"
 
 - [App Store](#App-Store)
 - [이진 호환성](#Binary-Compatibility)
-- [CFNetwork HTTP 프로토콜](#CFNetwork-HTTP-Protocol)
+- [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
 - [Core 이미지](#CoreImage)
 - [NSUserActivity](#NSUserActivity)
@@ -28,7 +28,7 @@ ms.locfileid: "50119999"
 
 <a name="App-Store" />
 
-## <a name="app-store"></a>앱 스토어
+## <a name="app-store"></a>App Store
 
 알려진 문제:
 
@@ -49,7 +49,7 @@ ms.locfileid: "50119999"
 
 <a name="CFNetwork-HTTP-Protocol" />
 
-## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP 프로토콜
+## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP Protocol
 
 `HTTPBodyStream` 의 속성을 `NSMutableURLRequest` 이후 열려 있지 않은 스트림에 클래스를 설정 해야 합니다 `NSURLConnection` 및 `NSURLSession` 이제이 요구 사항을 엄격 하 게 적용 합니다.
 

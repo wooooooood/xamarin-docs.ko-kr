@@ -1,5 +1,5 @@
 ---
-title: Android Resource.designer.cs 파일이 업데이트 되지 않습니다.
+title: 내 Android Resource.designer.cs 파일이 업데이트되지 않습니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3F7376E3-59CC-4722-AEED-BB50E4D952AA
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
 ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153290"
 ---
-# <a name="my-android-resourcedesignercs-file-will-not-update"></a>Android Resource.designer.cs 파일이 업데이트 되지 않습니다.
+# <a name="my-android-resourcedesignercs-file-will-not-update"></a>내 Android Resource.designer.cs 파일이 업데이트되지 않습니다.
 
 > [!NOTE]
 > Xamarin Studio 5.1.4 및 이상 버전에서이 문제가 해결 되었습니다. 그러나 Mac 용 Visual Studio에서 문제가 발생 하는 경우를 보내주세요를 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 버전을 사용 하 여 합니다.

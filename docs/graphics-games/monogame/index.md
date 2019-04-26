@@ -1,5 +1,5 @@
 ---
-title: Monogame 프레임 워크
+title: Monogame Framework
 description: '이 문서는 MonoGame 통한 게임 개발을 설명 하는 다양 한 가이드에 연결: 개요, 3D 그래픽 및 게임 패드에 대 한 토론 및 플랫폼별 고려 사항도 살펴보겠습니다.'
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 9b51bba3491af593b4378cbd5aaf42043927ab68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157353"
 ---
-# <a name="monogame-framework"></a>Monogame 프레임 워크
+# <a name="monogame-framework"></a>Monogame Framework
 
 MonoGame은 2D 및 3D 게임을 개발 하기 위한 효율적인, 유연 하 고 플랫폼 간 API. 많은 플랫폼 간 게임 엔진을 위한 토대를 제공 하 않지만 게임 엔진 래핑되지 않고 게임에서 직접 사용할 수 있습니다.
 
