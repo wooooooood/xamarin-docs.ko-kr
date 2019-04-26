@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: a12553cf0b7b9584bb8ff7bc04ed326ad4a7ad2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61281599"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>Xamarin.Mac의 macOS 사용자 인터페이스 컨트롤
 
@@ -38,7 +38,7 @@ Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업에 액
 
 ## <a name="menusmacuser-interfacemenumd"></a>[메뉴](~/mac/user-interface/menu.md)
 
-메뉴는 Mac 응용 프로그램의 사용자 인터페이스의 여러 부분에 사용 됩니다. 응용 프로그램의 주 메뉴에서 팝업 메뉴 및 상황에 맞는 메뉴 창에서 아무 곳 이나 표시 될 수 있는 화면 맨 위에 있는 합니다. 메뉴는 Mac 응용 프로그램의 사용자 경험의 필수적인 부분입니다. 이 문서에서는 Xamarin.Mac 응용 프로그램에서 Cocoa 메뉴를 사용 하 여 작업을 설명 합니다.
+메뉴는 Mac 응용 프로그램의 사용자 인터페이스의 여러 부분에 사용 됩니다. 응용 프로그램의 주 메뉴에서 팝업 메뉴 및 상황에 맞는 메뉴 창에서 아무 곳 이나 표시 될 수 있는 화면 맨 위에 있는 합니다. 메뉴는 Mac 애플리케이션의 사용자 환경에서 필수 요소입니다. 이 문서에서는 Xamarin.Mac 응용 프로그램에서 Cocoa 메뉴를 사용 하 여 작업을 설명 합니다.
 
 ## <a name="standard-controlsmacuser-interfacestandard-controlsmd"></a>[표준 컨트롤](~/mac/user-interface/standard-controls.md)
 
@@ -74,4 +74,4 @@ Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업에 액
 
 ## <a name="related-links"></a>관련 링크
 
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

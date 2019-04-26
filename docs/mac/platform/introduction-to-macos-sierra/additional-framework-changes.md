@@ -1,5 +1,5 @@
 ---
-title: 추가 macOS Sierra 프레임 워크 변경 내용
+title: 추가 macOS Sierra 프레임워크 변경 내용
 description: 이 문서는 사소한 변경 및 macOS Sierra에에서 도입 된 기존 프레임 워크의 향상 된 기능을 설명 합니다. 획기적인 프레임 워크, AppKit, AVFoundation, 핵심 데이터, Core 이미지, Foundation 및 자세한 변경 내용은 검사합니다.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6ed827c018931e5b79887dc355f136e2a84623d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031629"
 ---
-# <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임 워크 변경 내용
+# <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
 <a name="Accelerate-Framework-Enhancements" />
 

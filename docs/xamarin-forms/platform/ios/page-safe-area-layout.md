@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: bc18f1e1f051e18a970464b134733f2af39681ae
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250910"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>IOS에서 안전 영역 레이아웃 안내선
 

@@ -1,17 +1,17 @@
 ---
 title: 목표 Sharpie 예제
-description: 이 문서는 C# 바인딩을 Objective-c 코드를 만드는 프로세스를 자동화 하는 데 사용 되는 목표 Sharpie 도구를 사용 하는 방법에 설명 하는 다양 한 지침에 연결 합니다.
+description: 이 문서를 만드는 과정을 자동화 하는 데 사용 되는 목표 Sharpie 도구를 사용 하는 방법에 설명 하는 다양 한 지침에 연결 C# Objective-c 코드에 대 한 바인딩을 합니다.
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 4cb2dde4dc23bb9376343b49a091277b667d834e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199631"
 ---
 # <a name="objective-sharpie-examples"></a>목표 Sharpie 예제
 
@@ -29,5 +29,5 @@ ms.locfileid: "37855197"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

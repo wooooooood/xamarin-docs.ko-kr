@@ -8,11 +8,11 @@ ms.author: crdun
 ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191362"
 ---
 # <a name="net-standard-library-code-sharing"></a>.NET 표준 라이브러리 코드 공유
 
@@ -52,7 +52,7 @@ Xamarin 및.NET Core를 포함 하 여 모든.NET 플랫폼에 대 한 균일 �
 
 내부 버전을 변경할 수 있습니다 `netstandard` 바꿔서는 `Target Framework` 드롭다운 값입니다.
 
-**또한** 편집할 수는 `.csproj` 이 값을 변경 하려면 직접.
+**또한:** 편집할 수는 `.csproj` 이 값을 변경 하려면 직접.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -78,7 +78,7 @@ Xamarin 및.NET Core를 포함 하 여 모든.NET 플랫폼에 대 한 균일 �
 
 ![.NET 표준 대상 프레임 워크 프로젝트 속성에서 편집](net-standard-images/vs03-w157.png "다른 프로젝트와 동일한 방식으로.NET 표준 라이브러리 참조")
 
-**또한** 편집할 수 있습니다 합니다 `.csproj` 직접 편집 하는 `TargetFramework` 요소 및 버전 변경 (예: 대상 `<TargetFramework>netstandard2.0</TargetFramework>`).
+**또한:** 편집할 수는 `.csproj` 직접 편집 하는 `TargetFramework` 요소 및 버전 변경 (예: 대상 `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>.NET Standard 라이브러리 프로젝트를 사용 하 여
 

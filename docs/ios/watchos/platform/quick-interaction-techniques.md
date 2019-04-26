@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082318"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin에서 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -179,7 +179,7 @@ Apple이이 회전 수를 업데이트 중인 UI 요소에 대 한 변경의 민
 
 예를 들어 디지털 Crown의 포커스를 도용 수 다음 컨트롤 중 하나:
 
-- 선택
+- 선택기
 - 슬라이더
 - 스크롤 컨트롤러
 

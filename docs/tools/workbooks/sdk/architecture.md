@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 352e8d0191512184ffd7d82fa0dfa0bc79fa24ca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61257427"
 ---
 # <a name="architecture-overview"></a>아키텍처 개요
 
-Xamarin Workbooks 서로 함께 작동 해야 하는 두 개의 주요 구성 기능: _에이전트_ 하 고 _클라이언트_합니다.
+Xamarin Workbooks 서로 함께 작동 해야 하는 두 가지 주요 구성 요소를 제공 합니다. _에이전트_ 하 고 _클라이언트_합니다.
 
 ## <a name="interactive-agent"></a>대화형 에이전트
 

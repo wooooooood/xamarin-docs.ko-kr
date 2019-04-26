@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
 ms.openlocfilehash: fd48c7148aadd8d156544113e2d719295294bf40
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261287"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>IOS/macOS에 대 한 HttpClient 및 SSL/TLS 구현 선택기
 
@@ -30,7 +30,7 @@ ms.locfileid: "40251027"
 
 1. 두 번 클릭 합니다 **프로젝트 이름** 에 **솔루션 탐색기** 프로젝트 옵션을 열려면 합니다.
 2. 으로 전환 합니다 **빌드** 프로젝트에 대 한 설정 (예를 들어 **iOS 빌드** Xamarin.iOS 앱에 대 한).
-3. **HttpClient 구현** 드롭다운을 선택 합니다 `HttpClient` 중 하나로 입력: **NSUrlSession** (권장) **CFNetwork**, 또는  **관리 되는**합니다.
+3. **HttpClient 구현** 드롭다운을 `HttpClient` 다음 중 하나로 입력: **NSUrlSession** (권장) **CFNetwork**, 또는 **관리 되는**합니다.
 
 [![관리 되는, CFNetwork, 또는 NSUrlSession 로부터 HttpClient 구현 선택](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
@@ -104,8 +104,8 @@ HttpClient client = new HttpClient(new NSUrlSessionHandler());
 SSL (Secure Socket Layer) 및 그 후속 버전인 TLS (Transport Layer Security)에 대해 지원을 제공 HTTP 통해 다른 네트워크 연결과 `System.Net.Security.SslStream`합니다. Xamarin.tvOS Xamarin.iOS, Xamarin.Mac의 `System.Net.Security.SslStream` 구현 Apple의 기본 SSL/TLS 구현 Mono가 제공한 관리 되는 구현을 사용 하는 대신 호출 됩니다. Apple의 기본 구현은 TLS 1.2를 지원합니다.
 
 > [!WARNING]
-> 곧 출시 될 Xamarin.Mac 4.8 macOS 10.9 이상만 지원 됩니다.
-> 이전 버전의 Xamarin.Mac 10.7 이상 macOS를 지원 하지만 이러한 이전 macOS 버전 TLS 1.2를 지 원하는 충분 한 TLS 인프라가 부족 합니다. MacOS 10.7 또는 macOS 10.8(mountain 대상 Xamarin.Mac 4.6 또는 이전 버전을 사용 합니다.
+> 예정된 Xamarin.Mac 4.8 릴리스는 macOS 10.9 이상만 지원합니다.
+> 이전 버전의 Xamarin.Mac은 macOS 10.7 이상을 지원했지만 이러한 이전 macOS 버전에는 TLS 1.2를 지원할 수 있는 TLS 인프라가 충분하지 않습니다. macOS 10.7 또는 macOS 10.8을 대상으로 하려면 Xamarin.Mac 4.6 또는 이전 버전을 사용하세요.
 
 ## <a name="app-transport-security"></a>앱 전송 보안
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61042284"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>xamarin.mac에서.storyboard/.xib-less 사용자 인터페이스 디자인
 
@@ -299,7 +299,7 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에는 UI 요소 추가
 
-창의 코드에서 생성 되었거나.storyboard 또는.xib 파일에서 로드를 여부를 경우가 있을 창에 코드에서 UI 요소를 추가 하려고 합니다. 예:
+창의 코드에서 생성 되었거나.storyboard 또는.xib 파일에서 로드를 여부를 경우가 있을 창에 코드에서 UI 요소를 추가 하려고 합니다. 예를 들어:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){

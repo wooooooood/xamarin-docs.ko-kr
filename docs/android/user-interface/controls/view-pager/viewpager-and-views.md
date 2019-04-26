@@ -1,5 +1,5 @@
 ---
-title: 있는 ViewPager
+title: 보기가 있는 ViewPager
 description: ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드에서는 ViewPager 및 PagerTabStrip을 뷰를 사용 하 여 데이터 페이지를 사용 하 여 swipeable UI를 구현 하는 방법을 설명 (후속 가이드 페이지 조각을 사용 하는 방법에 설명).
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a8b7fa53d3384821d028e4a88ba22071a17e5bd9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61311607"
 ---
-# <a name="viewpager-with-views"></a>있는 ViewPager
+# <a name="viewpager-with-views"></a>보기가 있는 ViewPager
 
 _ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드에서는 ViewPager 및 PagerTabStrip을 뷰를 사용 하 여 데이터 페이지를 사용 하 여 swipeable UI를 구현 하는 방법을 설명 (후속 가이드 페이지 조각을 사용 하는 방법에 설명)._
 
@@ -29,7 +29,7 @@ _ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 
 
 ## <a name="start-an-app-project"></a>앱 프로젝트를 시작 합니다.
 
-라는 새 Android 프로젝트를 만듭니다 **TreePager** (참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 새 Android 프로젝트 만들기에 대 한 자세한 내용은). 그런 다음 NuGet 패키지 관리자를 시작 합니다. (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치 **Android 지원 라이브러리 v4**: 
+라는 새 Android 프로젝트를 만듭니다 **TreePager** (참조 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) 새 Android 프로젝트 만들기에 대 한 자세한 내용은). 그런 다음 NuGet 패키지 관리자를 시작 합니다. (NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 찾기 및 설치 **Android 지원 라이브러리 v4**: 
 
 [![NuGet 패키지 관리자에서 선택 스크린 샷 지원 v4 Nuget](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
@@ -341,7 +341,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 
 
-### <a name="pagertitlestrip-variation"></a>PagerTitleStrip 변형
+### <a name="pagertitlestrip-variation"></a>PagerTitleStrip Variation
 
 `PagerTitleStrip` 매우 비슷합니다 `PagerTabStrip` 점을 제외 하 고 `PagerTabStrip` 현재 선택한 탭에는 밑줄을 추가 합니다. 바꿀 수 있습니다 `PagerTabStrip` 사용 하 여 `PagerTitleStrip` 위의 레이아웃 및 모양을 사용 하 여 확인을 다시 앱 실행에서 `PagerTitleStrip`: 
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61204873"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵을 표시합니다.
 
@@ -73,7 +73,7 @@ catch
 
 있음을 합니다 `Stream` 개체에서 가져온 `GetStreamAsync` 에 복사 됩니다는 `MemoryStream`합니다. Android 허용 하지 않습니다 합니다 `Stream` 에서 `HttpClient` 비동기 메서드에서 제외 하 고 주 스레드에서 처리 되도록 합니다. 
 
-[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) 은 많은 작업 수행:는 `Stream` 전달 된 개체를 일반적인 비트맵 파일 형식, 일반적으로 JPEG, PNG 또는 GIF 중 하나는 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
+합니다 [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) 은 많은 한 작업을 수행 합니다. `Stream` 전달 된 개체를 일반적인 비트맵 파일 형식, 일반적으로 JPEG, PNG 또는 GIF 중 하나는 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
 
 코드 호출 후 `SKBitmap.Decode`, 아마도으로 무효화 됩니다 합니다 `CanvasView` 있도록는 `PaintSurface` 처리기 새로 로드 된 비트맵을 표시할 수 있습니다.
 

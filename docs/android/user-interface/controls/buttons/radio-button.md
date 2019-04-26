@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: be473580b24dba6b4f08384771e2097d368f8dc8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61276635"
 ---
 # <a name="radiobutton"></a>RadioButton
 
@@ -68,7 +68,7 @@ radio_blue.Click += RadioButtonClick;
 
 각 캡처합니다 합니다 [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)레이아웃에서 s는 새로 만든 이벤트 handlerto 각 추가 합니다.
 
-응용 프로그램을 실행합니다.
+애플리케이션을 실행합니다.
 
 **팁:** 상태를 변경 해야 할 경우 (때와 같이 저장 된 로드 [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/))를 사용 합니다 [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
 속성 setter 또는 [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)

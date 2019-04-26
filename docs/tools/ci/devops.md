@@ -1,5 +1,5 @@
 ---
-title: Xamarin 사용한 DevOps
+title: Xamarin을 사용한 DevOps
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
 author: conceptdev
 ms.author: crdun
@@ -8,13 +8,13 @@ ms.workload:
 - xamarin
 ms.date: 10/23/2018
 ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293689"
 ---
-# <a name="devops-with-xamarin"></a>Xamarin 사용한 DevOps
+# <a name="devops-with-xamarin"></a>Xamarin을 사용한 DevOps
 
 Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Windows를 대상으로 하는 플랫폼 간 모바일 앱을 빌드할 수 있습니다. Xamarin을 통해 많은 양의 코드를 플랫폼 간에 공유할 수 있으므로 일부 코드만 플랫폼별로 작성하면 됩니다.
 
@@ -26,7 +26,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 
 ## <a name="agile-tools"></a>Agile 도구
 
-참조 링크:  **[Agile 도구 및 Agile 프로젝트 관리 정보](/azure/devops/boards/backlogs/overview?view=vsts)**
+참조 링크: **[Agile 도구 및 Agile 프로젝트 관리 하는 방법에 대 한](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 일반 설명: 모든 계획 및 추적 기능은 프로젝트 형식 및 코딩 언어와 독립적입니다.
 
@@ -102,7 +102,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 
 ## <a name="release-management"></a>릴리스 관리
 
-참조 링크: **[Azure Pipelines 및 TFS에서 빌드 및 릴리스](/azure/devops/pipelines/overview?view=vsts)**
+참조 링크: **[빌드 및 Azure 파이프라인 및 TFS의 릴리스](/azure/devops/pipelines/overview?view=vsts)**
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac 등록자
+title: Xamarin.Mac registrar
 description: 이 문서에서는 Xamarin.Mac 등록 기관 및 해당 동적, 고정 및 부분 정적 (하이브리드)의 용도 설명 구성을 사용 합니다.
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
 ms.openlocfilehash: 21e1a2c6ae5a9ad8b6acf520851ea92a340da887
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032500"
 ---
-# <a name="xamarinmac-registrar"></a>Xamarin.Mac 등록자
+# <a name="xamarinmac-registrar"></a>Xamarin.Mac registrar
 
 _이 문서는 Xamarin.Mac 등록자 및 다른 사용 구성을의 용도 설명 합니다._
 

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
 ms.openlocfilehash: 9e9fa1e2651661670f89baac7fcd438b3d14bfb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61201012"
 ---
 # <a name="replacing-the-action-bar"></a>작업 모음 바꾸기
 
@@ -283,7 +283,7 @@ Android 메뉴에 대 한 자세한 내용은 Android 개발자 참조 [메뉴](
 
 ![사용자 지정 테마를 사용 하지 않으면 발생할 수 있는 오류](replacing-the-action-bar-images/03-theme-not-defined.png)
 
-또한 오류 메시지 등 다음 만들어질 수 있습니다: _Java.Lang.IllegalStateException:이 작업에 이미 창 장식 제공한 작업 모음입니다._ 
+또한 다음과 같은 오류 메시지가 생성 될 수 있습니다. _Java.Lang.IllegalStateException: 이 작업 창 장식에서 제공 하는 작업 표시줄을 이미 있습니다._ 
 
 이 오류를 해결 하려면 있는지를 확인 합니다 `android:theme` 특성이 사용자 지정 테마를 추가할 `<application>` (에서 **Properties/AndroidManifest.xml**)에서 이전에 설명 된 대로 [사용자지정테마를적용](#apply-the-custom-theme). 또한이 오류가 발생할 수 하는 경우는 `Toolbar` 레이아웃 또는 사용자 지정 테마 제대로 구성 되지 않았습니다.
 

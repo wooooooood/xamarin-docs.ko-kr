@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Android 디자이너
+title: Xamarin.Android Designer
 description: 이 문서에서는 Xamarin.Android 디자이너의 기능을 설명 합니다. 디자이너를 사용 하는 위젯을 시각적으로 레이아웃 속성을 편집 하는 방법을 보여 주는 디자이너 기본 사항을 설명 합니다. 또한 디자이너를 사용 하 여 사용자 인터페이스 및 리소스를 사용 하 여 테마, 언어 및 장치 구성 등의 다양 한 구성에서 작동 하는 방법 뿐만 아니라 가로 및 세로 같은 다른 보기에 대 한 디자인 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 1923d11829cf96941c8775f5f6b013116e0f2893
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200376"
 ---
-# <a name="xamarinandroid-designer"></a>Xamarin.Android 디자이너
+# <a name="xamarinandroid-designer"></a>Xamarin.Android Designer
 
 _이 문서에서는 Xamarin.Android 디자이너의 기능을 설명 합니다. 디자이너를 사용 하는 위젯을 시각적으로 레이아웃 속성을 편집 하는 방법을 보여 주는 디자이너 기본 사항을 설명 합니다. 또한 디자이너를 사용 하 여 사용자 인터페이스 및 리소스를 사용 하 여 테마, 언어 및 장치 구성 등의 다양 한 구성에서 작동 하는 방법 뿐만 아니라 가로 및 세로 같은 다른 보기에 대 한 디자인 하는 방법을 보여 줍니다._
 

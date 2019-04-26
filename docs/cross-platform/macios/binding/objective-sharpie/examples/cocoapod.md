@@ -1,17 +1,17 @@
 ---
 title: CocoaPods를 사용 하 여 실제 예제
-description: 이 문서의 목표 Sharpie를 사용 하 여 CocoaPod를에서 C# 바인딩 정의 자동으로 생성 하는 방법에 설명 합니다.
+description: 이 문서의 목적은 Sharpie를 사용 하 여 자동으로 생성 하는 방법에 설명 합니다 C# 바인딩는 CocoaPod에서 정의 합니다.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
 ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200317"
 ---
 # <a name="real-world-example-using-cocoapods"></a>CocoaPods를 사용 하 여 실제 예제
 
@@ -93,6 +93,6 @@ Done.
 
 - [Objective-c 바인딩 개요](~/cross-platform/macios/binding/overview.md)
 - [Objective-c 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [연습:는 iOS Objective-c 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [연습: iOS Objective-c 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

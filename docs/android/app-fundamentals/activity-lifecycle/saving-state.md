@@ -1,5 +1,5 @@
 ---
-title: 연습-작업 상태를 저장 합니다.
+title: 연습 - 작업 상태 저장
 description: 작업 수명 주기 가이드;의 상태를 저장 이론 살펴 봤 이제 예제를 살펴보겠습니다.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: c8f92e55648dff469227cc3bad981ad5f6e6d0ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019156"
 ---
-# <a name="walkthrough---saving-the-activity-state"></a>연습-작업 상태를 저장 합니다.
+# <a name="walkthrough---saving-the-activity-state"></a>연습 - 작업 상태 저장
 
 _작업 수명 주기 가이드;의 상태를 저장 이론 살펴 봤 이제 예제를 살펴보겠습니다._
 

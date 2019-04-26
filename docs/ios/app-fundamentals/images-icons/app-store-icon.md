@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/26/2017
 ms.openlocfilehash: 53e25ae9f4650254f2aaaa03dc8727fae674c9f0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61258115"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Xamarin.iOS 앱 스토어 아이콘
 
@@ -20,12 +20,12 @@ Xcode 9 하기 전에 모든 앱 스토어 아이콘은 iTunes Connect 통해 �
 
 앱 스토어 아이콘은 사용자가 기억 하기 쉬운 이어야 하므로 작은 크기로 잘 표시 하도록 응용 프로그램의 모양입니다. 기억하기 쉬운 아이콘은 명확하고 간단하며 즉시 인식할 수 있습니다.
 
-응용 프로그램 아이콘을 디자인할 때 Apple에서 제안하는 지침은 다음과 같습니다.
+애플리케이션 아이콘을 디자인할 때 Apple에서 제안하는 지침은 다음과 같습니다.
 
-- 응용 프로그램에 적합한 아이콘을 만듭니다.
-- 응용 프로그램의 디자인과 일치하는 간단한 아이콘을 만듭니다.
+- 애플리케이션에 적합한 아이콘을 만듭니다.
+- 애플리케이션의 디자인과 일치하는 간단한 아이콘을 만듭니다.
 - 단어는 아이콘에 사용하지 않습니다.
-- 전 세계적으로 생각: 단일 앱 아이콘이 모든 스토어 지역에서 사용됩니다.
+- 생각은 세계적으로: 모든 스토어 지역에서 단일 앱 아이콘이 사용됩니다.
 
 앱 스토어에 표시할 앱 아이콘에는 1024x1024 픽셀 이미지가 필요합니다.  Apple은 자산 카탈로그의 앱 스토어 아이콘이 투명하거나 알파 채널을 포함할 수 없다고 주장했습니다.
 
@@ -46,7 +46,7 @@ Xcode 9 하기 전에 모든 앱 스토어 아이콘은 iTunes Connect 통해 �
 
 2. 스크롤하여 합니다 **앱 스토어** 목록에서 아이콘:
 
-    ![앱 스토어 아이콘](app-store-icon-images/image2.png)
+    ![App Store 아이콘](app-store-icon-images/image2.png)
 
 3. 아이콘을 클릭 하 고 1024x1024 픽셀 이미지를 찾아봅니다. 자산 카탈로그를 저장 합니다.
 

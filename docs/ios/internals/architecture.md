@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61036174"
 ---
 # <a name="ios-app-architecture"></a>iOS 앱 아키텍처
 
@@ -22,7 +22,7 @@ Xamarin.iOS 응용 프로그램 Mono 실행 환경 내에서 실행 하 고 전�
 
 [ ![](architecture-images/ios-arch-small.png "이 다이어그램은 계속 해 서의 시간 (AOT) 컴파일 아키텍처의 기본적인 개요를 보여 줍니다.")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 코드: An 설명
+## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 되는 코드의 경우: 자세한 내용
 
 Xamarin 용 개발 하는 경우 용어 *네이티브 및 관리* 코드는 종종 사용 됩니다. [관리 코드](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) 에서 관리 하는 실행 된 코드를 [.NET Framework 공용 언어 런타임](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), 또는 Xamarin의 경우: Mono 런타임입니다. 중간 언어 라는 것입니다.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61236197"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.Mac의 사용자 지정 컨트롤 만들기
 
@@ -212,7 +212,7 @@ public override void DrawRect (CGRect dirtyRect)
 
 ### <a name="responding-to-user-input"></a>사용자 입력에 응답
 
-사용자 입력 사용자 지정 컨트롤을 추가할 수 있는 두 가지 기본 방법이 가지: **재정의 마우스 처리 루틴** 하거나 **제스처 인식기**합니다. 를 사용 하는 방법은 제어에 필요한 기능에 따라 달라 집니다.
+사용자 입력 사용자 지정 컨트롤을 추가할 수 있는 두 가지 기본 방법이 있습니다. **마우스 처리 루틴을 재정의** 나 **제스처 인식기**합니다. 를 사용 하는 방법은 제어에 필요한 기능에 따라 달라 집니다.
 
 > [!IMPORTANT]
 > 만든 모든 사용자 지정 컨트롤을 사용 해야 하거나 **메서드 재정의** _또는_ **제스처 인식기**, 하지만 둘 다 동시 시간을 서로 충돌할 수 있습니다.

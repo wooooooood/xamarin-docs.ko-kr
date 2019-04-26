@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 5d1bb5ab636cd7527a560332a9890e9907fac454
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61295892"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>IOS 6에에서 StoreKit 변경
 
@@ -530,4 +530,4 @@ Apple iCloud 백업 지침은 사용자가 아닌 콘텐츠 서버에서 쉽게 
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
-- [저장소 키트를 사용 하 여 제품을 판매 중인 WWDC 비디오:](https://developer.apple.com/videos/wwdc/2012/?include=302#302)
+- [WWDC 비디오: 저장소 키트를 사용 하 여 제품을 판매](https://developer.apple.com/videos/wwdc/2012/?include=302#302)

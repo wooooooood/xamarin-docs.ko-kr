@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: e3eb4e3454aeab08d1333c5dbc3d4808fa4d676c
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224515"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>추가 watchOS 3 프레임 워크 변경
 
@@ -76,7 +76,7 @@ Watch OS 3 HomeKit 프레임 워크 같이 향상 됩니다.:
 Watch OS 3 PassKit framework 같이 향상 됩니다.:
 
 - Apple Watch 실제 상품 및 서비스 모두에서 지불을 안전 하 고 앱을 지원 하기 위해 프레임 워크를 확장 합니다.
-- 다음 클래스는 이제 사용할 수 있습니다: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment)를 [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod)를 [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) 및 [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
+- 다음 클래스는 이제 사용할 수 있습니다. [PKPayment](https://developer.apple.com/reference/passkit/pkpayment)하십시오 [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod)하십시오 [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) 고 [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
 
 ## <a name="uikit"></a>UIKit

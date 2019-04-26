@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 6ade1c05c8e1cc64a4d24df1284d86175083ab80
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293654"
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
@@ -60,7 +60,7 @@ Xamarin.iOS의 안정적인 최신 릴리스를 사용 하 여 앱을 다시 작
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView는 생성자에서 null입니다.
 
-**원인:** Ios 9 `initWithFrame:` 생성자는 이제 iOS 9로의 동작 변경 내용으로 인해 필요한 합니다 [UICollectionView 설명서에 나와](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). 셀을 호출 하 여 초기화 됩니다 지정된 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 해당 `initWithFrame:` 메서드.
+**원인:** Ios 9 `initWithFrame:` 생성자는 이제 iOS 9로의 동작 변경 내용으로 인해 필요한 합니다 [UICollectionView 설명서에 나와](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)합니다. 셀을 호출 하 여 초기화 됩니다 지정된 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 해당 `initWithFrame:` 메서드.
 
 **해결 방법:** 추가 된 `initWithFrame:` 다음과 같은 생성자:
 
@@ -72,13 +72,13 @@ public YourCellClassName (CGRect frame) : base (frame)
 }
 ```
 
-관련 샘플: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
+관련된 샘플: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
 
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView는 Xib/Nib에서 뷰를 로드할 때 코드 작성자를 사용 하 여 초기화 하지 못함
 
-**원인:** 는 `initWithCoder:` 생성자 인터페이스 작성기 Xib 파일에서 뷰를 로드할 때 호출 됩니다. 이 생성자는 내보내지지 않음 경우 비관리 코드는 관리 되는 버전을 호출할 수 없습니다. 이전에 (예: iOS 8)에 `IntPtr` 뷰를 초기화 하려면 생성자 호출 되었습니다.
+**원인:** `initWithCoder:` 생성자 인터페이스 작성기 Xib 파일에서 뷰를 로드할 때 호출 됩니다. 이 생성자는 내보내지지 않음 경우 비관리 코드는 관리 되는 버전을 호출할 수 없습니다. 이전에 (예: iOS 8)에 `IntPtr` 뷰를 초기화 하려면 생성자 호출 되었습니다.
 
 **해결 방법:** 만들기 및 내보내기는 `initWithCoder:` 다음과 같은 생성자:
 
@@ -90,7 +90,7 @@ public YourClassName (NSCoder coder) : base (coder)
 }
 ```
 
-관련된 샘플: [채팅](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
+관련된 샘플: [Chat](https://github.com/xamarin/monotouch-samples/commit/7b81138d52e5f3f1aa3769fcb08f46122e9b6a88)
 
 
 ### <a name="dyld-message-no-cache-image-with-name"></a>Dyld 메시지: 캐시 이미지가 없는 이름...
@@ -102,9 +102,9 @@ Dyld Error Message:
 Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**원인:** 할 개인 프레임 워크를 공개 하는 경우 발생 하는 Apple 네이티브 링커가의 버그입니다 (JavaScriptCore 수행 된 iOS 7에서에서 공개 하기 전에 개인 프레임 워크 였습니다) 앱의 배포 대상은 iOS 버전 이며 경우는 프레임 워크가 개인입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전을 사용 하 여 연결 됩니다.
+**원인:** 개인 프레임 워크를 활용 하며 공개 하는 경우 발생 하는 Apple 네이티브 링커가의 버그입니다 (JavaScriptCore 수행 된 iOS 7에서에서 공개 하기 전에 개인 프레임 워크 였습니다) 및 프레임 워크 개인 때 앱의 배포 대상은 iOS 버전입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전을 사용 하 여 연결 됩니다.
 
-**해결 방법:** iOS 9에 대 한 해결 될 것 이지만 그 동안에 직접 적용할 수 있습니다 문제를 쉽게 해결: 방금 이상 (보십시오 iOS 7이 예제의) 프로젝트에서 iOS 버전을 대상입니다. 다른 프레임 워크와 비슷한 문제가 발생할 수 있습니다, 예를 들어 WebKit framework iOS 8에서에서 공용으로 설정 되었습니다 (및 iOS 앱에서 WebKit를 사용 하는 8을 두어야 이므로이 오류를 발생 하면 iOS 7을 대상으로).
+**해결 방법:** IOS 9에 대 한 해결 될 것 이지만 그 동안에 직접 적용할 수 있습니다 문제를 쉽게 해결: 방금 이상 (보십시오 iOS 7이 예제의) 프로젝트에서 iOS 버전을 대상입니다. 다른 프레임 워크와 비슷한 문제가 발생할 수 있습니다, 예를 들어 WebKit framework iOS 8에서에서 공용으로 설정 되었습니다 (및 iOS 앱에서 WebKit를 사용 하는 8을 두어야 이므로이 오류를 발생 하면 iOS 7을 대상으로).
 
 
 

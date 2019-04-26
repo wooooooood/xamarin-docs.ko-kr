@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 96fd6d32f37dd90422f05caf33cfda9a65683fd2
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58071036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61308073"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -80,7 +80,7 @@ Xamarin.Android를 설치한 후 Android Wear 앱 빌드 및 테스트 준비가
 -----
 
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 앱 테스트를 사용 하려면 먼저 Android Wear 에뮬레이터 또는 실제 Android Wear 장치를 구성 해야 합니다. 
 

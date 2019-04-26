@@ -1,6 +1,6 @@
 ---
-title: 요약 21 장입니다. 변형
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 21 장 요약 합니다. 변형'
+title: 요약 21 장입니다. 변환
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 21 장입니다. 변환
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53048819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61335280"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
 

@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: 0270f4a5ddab593372eb6687650e24d627f97c62
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61264191"
 ---
 Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visual Studio 2019 설치:
 

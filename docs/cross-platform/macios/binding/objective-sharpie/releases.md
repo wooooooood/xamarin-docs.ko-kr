@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 03e4a5ac8906d2593cbdf3c15f6b2d1f4a2c6d19
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199651"
 ---
 # <a name="objective-sharpie-release-history"></a>목표 Sharpie 릴리스 기록
 
@@ -68,13 +68,13 @@ ms.locfileid: "57667261"
 
 [V2.1.0 다운로드](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.0.pkg)
 
-* [bxc#27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): 확인 `using ObjCRuntime;` 때 생성 됩니다 `ArgumentSemantic` 사용 됩니다.
-* [bxc#27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): 확인 `using System.Runtime.InteropServices;` 때 생성 됩니다 `DllImport` 사용 됩니다.
-* [bxc#27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): 기본 `DllImport` 에서 기호를 로드 하려면 `__Internal`합니다.
-* [bxc#27848](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): Objective-c로 컨테이너 선언 전방 선언를 건너뜁니다.
-* [bxc#27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): 구체적인 인터페이스로 단일 한정자를 사용 하 여 프로토콜 형식을 바인딩합니다 (`id<Foo>` 으로 `Foo` 대신 `Foundation.NSObject<Foo>`).
-* [bxc#28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): 바인딩할 `UInt32`, `UInt64`, 및 `Int64` 으로 리터럴 `Int32` 삭제 하는 `u` 및/또는 `uL` 접미사가 값에 안전 하 게 맞출 수 있는 경우 `Int32`합니다.
-* [bxc#28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): 열거형 이름 매핑 원래 기본 이름으로 시작 하는 경우 수정 된 `k` 접두사입니다.
+* [bxC#27849](https://bugzilla.xamarin.com/show_bug.cgi?id=27849): 확인 `using ObjCRuntime;` 때 생성 됩니다 `ArgumentSemantic` 사용 됩니다.
+* [bxC#27850](https://bugzilla.xamarin.com/show_bug.cgi?id=27850): 확인 `using System.Runtime.InteropServices;` 때 생성 됩니다 `DllImport` 사용 됩니다.
+* [bxC#27852](https://bugzilla.xamarin.com/show_bug.cgi?id=27852): 기본 `DllImport` 에서 기호를 로드 하려면 `__Internal`합니다.
+* [bxC#27848](https://bugzilla.xamarin.com/show_bug.cgi?id=27848): Objective-c로 컨테이너 선언 전방 선언를 건너뜁니다.
+* [bxC#27846](https://bugzilla.xamarin.com/show_bug.cgi?id=27846): 구체적인 인터페이스로 단일 한정자를 사용 하 여 프로토콜 형식을 바인딩합니다 (`id<Foo>` 으로 `Foo` 대신 `Foundation.NSObject<Foo>`).
+* [bxC#28037](https://bugzilla.xamarin.com/show_bug.cgi?id=28037): 바인딩할 `UInt32`, `UInt64`, 및 `Int64` 으로 리터럴 `Int32` 삭제 하는 `u` 및/또는 `uL` 접미사가 값에 안전 하 게 맞출 수 있는 경우 `Int32`합니다.
+* [bxC#28038](https://bugzilla.xamarin.com/show_bug.cgi?id=28038): 열거형 이름 매핑 원래 기본 이름으로 시작 하는 경우 수정 된 `k` 접두사입니다.
 * `sizeof` C 식 인수 형식이에 매핑되지 않는 경우는 C# Clang에서 평가 하 고 잘못 된 생성 되지 않도록 하는 정수 리터럴으로 바인딩 기본 형식 C#합니다.
 * Objective C 구문은 블록 형식인 속성을 수정 (Objective-c 코드에 바인딩된 선언 위에 주석 표시 됨).
 * 쇠퇴 한 형식을 원래 형식으로 바인딩합니다 (`int[]` 를 감소 시킵니다 `int*` Clang에서 의미 체계 분석 하는 동안 하지만 바인딩하지 기록으로 원래 `int[]` 대신).

@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: 221ee49e282b3b038d03f659d238336710283a66
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61230032"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
@@ -39,7 +39,7 @@ ms.locfileid: "58175410"
 
 |기능|.NET Framework|UWP 앱|Silverlight|Windows Phone|Xamarin|
 |---|---|---|---|---|---|
-|핵심|Y|Y|Y|Y|Y|
+|코어|Y|Y|Y|Y|Y|
 |LINQ|Y|Y|Y|Y|Y|
 |IQueryable|Y|Y|Y|7.5 +|Y|
 |Serialization|Y|Y|Y|Y|Y|
@@ -56,7 +56,7 @@ Xamarin 열에는 Xamarin.iOS 및 Xamarin.Android 지원 Visual Studio와 함께
 
 알아볼 수 있습니다에 다양 한 프로필 기능에 대 한 [Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 다른 커뮤니티 멤버의 내용과 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 지원 되는 프레임 워크 정보 및 기타 정보를 포함 하는 합니다.
 
-**이점**
+**혜택**
 
 1. 중앙 집중식된 코드 공유-작성 및 다른 라이브러리 또는 응용 프로그램에서 사용할 수 있는 단일 프로젝트에서 코드를 테스트 합니다.
 2. 모든 코드는 영향이 리팩터링 작업 (이식 가능한 클래스 라이브러리 및 플랫폼 특정 프로젝트) 솔루션에 로드 합니다.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
 ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019589"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-합니다 [ **점 및 대시** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 문서 사용 하는 방법을 설명 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) 파선을 만드는 방법. 첫 번째 인수는 `float` 일반적으로 두 개의 요소가 있는 배열: 첫 번째 요소는 대시의 길이 이며 두 번째 요소 대시 사이의 간격입니다. 경우는 `StrokeCap` 속성이 `SKStrokeCap.Round`, 둥근된 끝 대시 대시의 양쪽에서 스트로크 너비에 따라 대시 길이 효과적으로 연장 합니다. 따라서 첫 번째 배열 요소를 0으로 설정 된 점선을 만듭니다.
+합니다 [ **점 및 대시** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 문서 사용 하는 방법을 설명 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) 파선을 만드는 방법. 첫 번째 인수는 `float` 두 요소가 일반적으로 배열입니다. 첫 번째 요소는 대시의 길이 이며 두 번째 요소 대시 사이의 간격입니다. 경우는 `StrokeCap` 속성이 `SKStrokeCap.Round`, 둥근된 끝 대시 대시의 양쪽에서 스트로크 너비에 따라 대시 길이 효과적으로 연장 합니다. 따라서 첫 번째 배열 요소를 0으로 설정 된 점선을 만듭니다.
 
 이러한 점 사이의 거리는 두 번째 배열 요소에 의해 제어 됩니다. 알 수 있듯이 곧 이러한 두 `SKPaint` 개체 90 단위의 반지름 원을 그리는 데 사용 됩니다. 이 원의 원주 60 분 표시 모든 3 π 단위 표시 되어야 함을 의미 합니다 180π 되므로에서 두 번째 값을 `float` 배열을 `minuteMarkPaint`합니다. 12 시간 표시 나타나야 모든 15π 단위를 두 번째에서 값인 `float` 배열입니다.
 

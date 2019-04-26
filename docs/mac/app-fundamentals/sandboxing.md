@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61237105"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.Mac 앱 샌드 박싱
 
@@ -472,7 +472,7 @@ Apple 서명된 된 버전의 Xamarin.Mac 앱이 실행 되도록 허용 하려�
 다음을 수행 하 여 컨테이너의 ACL에 코드 요구 사항 목록을 볼 수 있습니다.
 
 1. 터미널 앱을 열고 (에서 `/Applications/Utilities`).
-2. `asctl container acl list -bundle <container-name>`를 입력합니다.
+2. `asctl container acl list -bundle <container-name>`을 입력합니다.
 3. 키를 눌러 **Enter** 명령을 실행 합니다.
 
 `<container-name>` 일반적으로 Xamarin.Mac 응용 프로그램의 번들 식별자입니다.

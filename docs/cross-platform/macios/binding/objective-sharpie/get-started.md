@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199782"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>목표 Sharpie 시작
 
@@ -47,7 +47,7 @@ ms.locfileid: "57670118"
 > [!IMPORTANT]
 > 목표 Sharpie 하나가 함께 제공 됩니다 **주요** 적절 한 사용에 대 한 규칙: 반드시 전달 해야 올바른 clang 컴파일러 명령줄 인수를 적절 한 구문 분석 되도록 합니다. 단계를 구문 분석 목표 Sharpie는 단순히 도구 이므로 이것이 [clang libtooling API에 대 한 구현](http://clang.llvm.org/docs/LibTooling.html)합니다.
 
-즉, 목표 Sharpie Clang (실제로 네이티브 라이브러리를 바인딩하는 것 컴파일되지 않는 C/주기-C + + 컴파일러) 및 모든 바인딩에 대 한 헤더 파일의 내부 정보를 최대한 활용 합니다.
+즉, 목표 Sharpie Clang의 모든 기능 (C/Objective C /C++ 바인딩하는 실제로 네이티브 라이브러리를 컴파일되지 않는 컴파일러) 및 모든 바인딩에 대 한 헤더 파일의 내부 정보입니다.
 구문 분석 된 변환 하는 대신 [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) 개체 코드를 목표 Sharpie 변환에 대 한 AST를 C# "스 캐 폴드" 입력에 대 한 적합 한에 바인딩를 `bmac` 및 `btouch` Xamarin 바인딩 도구입니다.
 
 목표 Sharpie 오류가 출력을 구문 분석 하는 동안 의미 하는 동안 오류 발생 하는 clang AST를 생성 하는 동안 단계는 구문 분석 하 고 이유를 파악 해야 합니다.

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/05/2017
 ms.openlocfilehash: 167d6ac421bdd2652e7f8474e1ea21bd9040723f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075097"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Xamarin.iOS에서 마샬링 예외
 
@@ -261,16 +261,16 @@ xamarin_dyn_objc_msgSend (id obj, SEL sel)
 
 다음 모드를 사용할 수 있습니다.
 
-- `Default`: 기본 플랫폼에 따라 다릅니다. 것 `ThrowObjectiveCException` GC (watchOS) 협조적 모드인 경우 및 `UnwindNativeCode` 그렇지 않은 경우 (iOS / watchOS / macOS). 기본값은 나중에 변경할 수 있습니다.
-- `UnwindNativeCode`:이 동작은 이전 (정의 되지 않음)입니다. 사용할 수 없는 협조적 모드에서 GC를 사용 하는 경우 (watchOS에서 유일한 옵션에 따라서 아닙니다 watchOS에서 유효한 옵션), 다른 모든 플랫폼에 대 한 기본 옵션 이지만 합니다.
-- `ThrowObjectiveCException`: 관리 되는 예외는 Objective C 예외 변환 및 Objective-c 예외를 throw 합니다. WatchOS에서 기본값입니다.
+- `Default`: 기본은 플랫폼에 따라 다릅니다. 것 `ThrowObjectiveCException` GC (watchOS) 협조적 모드인 경우 및 `UnwindNativeCode` 그렇지 않은 경우 (iOS / watchOS / macOS). 기본값은 나중에 변경할 수 있습니다.
+- `UnwindNativeCode`: 이 동작은 이전 (정의 되지 않음)입니다. 사용할 수 없는 협조적 모드에서 GC를 사용 하는 경우 (watchOS에서 유일한 옵션에 따라서 아닙니다 watchOS에서 유효한 옵션), 다른 모든 플랫폼에 대 한 기본 옵션 이지만 합니다.
+- `ThrowObjectiveCException`: Objective C 예외가 관리 되는 예외를 변환 및 Objective-c 예외를 throw 합니다. WatchOS에서 기본값입니다.
 - `Abort`: 프로세스를 중단 합니다.
-- `Disable`: 않도록 예외 인터 셉 션 이벤트 처리기에서이 값을 설정 하는 것이 하지 않는 것 이지만 이벤트가 발생 한 후 너무 늦을 사용 하지 않도록 합니다. 어떤 경우 든 경우 설정 처럼 동작 `UnwindNativeCode`합니다.
+- `Disable`: 이벤트 처리기에서이 값을 설정 하려면 적합 하지 않습니다 하지만 사용 하지 않도록 늦는 이벤트가 발생 되 면 예외 가로채기를 사용 하지 않도록 설정 합니다. 어떤 경우 든 경우 설정 처럼 동작 `UnwindNativeCode`합니다.
 
 관리 코드에 대 한 Objective-c 예외 마샬링에 대 한 다음 모드는 다음과 같은 작업 사용할 수 있습니다.
 
-- `Default`: 기본 플랫폼에 따라 다릅니다. 것 `ThrowManagedException` GC (watchOS) 협조적 모드인 경우 및 `UnwindManagedCode` 그렇지 않은 경우 (iOS / tvOS / macOS). 기본값은 나중에 변경할 수 있습니다.
-- `UnwindManagedCode`:이 동작은 이전 (정의 되지 않음)입니다. 사용할 수 없는 협조적 모드에서 GC를 사용 하는 경우 (watchOS에만 유효한 GC 모드는; 따라서이 유효한 옵션이 아닙니다 watchOS에서), 다른 모든 플랫폼에 대 한 기본값 이지만 합니다.
+- `Default`: 기본은 플랫폼에 따라 다릅니다. 것 `ThrowManagedException` GC (watchOS) 협조적 모드인 경우 및 `UnwindManagedCode` 그렇지 않은 경우 (iOS / tvOS / macOS). 기본값은 나중에 변경할 수 있습니다.
+- `UnwindManagedCode`: 이 동작은 이전 (정의 되지 않음)입니다. 사용할 수 없는 협조적 모드에서 GC를 사용 하는 경우 (watchOS에만 유효한 GC 모드는; 따라서이 유효한 옵션이 아닙니다 watchOS에서), 다른 모든 플랫폼에 대 한 기본값 이지만 합니다.
 - `ThrowManagedException`: Objective-c 예외 관리 되는 예외를 변환 하 고 관리 되는 예외를 throw 합니다. WatchOS에서 기본값입니다.
 - `Abort`: 프로세스를 중단 합니다.
 - `Disable`: 예외를 가로채 사용 하지 않도록 설정, 설정에 적합 하지 않습니다 있도록 이벤트 처리기를 수 있지만 한 번 이벤트에서 발생 하는 값이 너무 늦게 사용 하지 않도록 하는 것입니다. 어떤 경우 든 경우 설정 하는 프로세스를 중단 합니다.

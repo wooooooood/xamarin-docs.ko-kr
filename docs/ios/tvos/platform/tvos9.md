@@ -1,5 +1,5 @@
 ---
-title: TvOS 9 소개
+title: tvOS 9 소개
 description: 이 아티클에서 Xamarin.tvOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 tvOS 9에서에서 사용할 수 있는 기능을 소개합니다.
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
 ms.openlocfilehash: dda197f71b2a2ab3e0d61a838ab85d79b7a078c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61270352"
 ---
-# <a name="introduction-to-tvos-9"></a>TvOS 9 소개
+# <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
 _이 아티클에서 Xamarin.tvOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 tvOS 9에서에서 사용할 수 있는 기능을 소개합니다._
 
@@ -75,7 +75,7 @@ Apple TV에서 실행 중인 tvOS 앱 다음 지원 되는 기능 및 특징:
 
 ### <a name="siri-remote"></a>Siri 원격
 
-지역에 따라 제공 된 Apple TV 원격 들어옵니다 중 하나의 구성을: Siri 원격 또는 Apple TV 원격입니다.
+지역에 따라 제공 된 Apple TV 원격 들어옵니다 중 하나의 구성: Siri 원격 또는 Apple TV 원격입니다.
 
 Siri 원격은 현재 다음 국가의
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290206"
 ---
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
 
@@ -28,7 +28,7 @@ ms.locfileid: "53050376"
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>벡터 그래픽 및 비트맵을 흐리게 표시
 
-만든 흐림 효과 [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) 정적 메서드가에 흐리게 방법에 대 한 중요 한 장점 합니다 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 클래스: 이미지 필터 수는 전체 비트맵을 흐리게 표시 합니다. 메서드가 다음 구문:
+만든 흐림 효과 [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) 정적 메서드가에 흐리게 방법에 대 한 중요 한 장점 합니다 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 클래스: 이미지 필터는 전체 비트맵을 흐리게 표시 수 있습니다. 메서드가 다음 구문:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-첫 번째 인수 `SKImageFilter.CreateDistantLitDiffuse` 광원의 방향입니다. 양의 X 및 Y 좌표 광원 오른쪽 및 아래쪽 뾰족한 임을 나타냅니다. 화면에 양수 Z 좌표 지점입니다. XAML 파일을 사용 하면 음수 Z 값을 선택할 수 있습니다 하지만 볼 수 있도록에 작업이 수행 됩니다: 음수 Z 좌표는 화면 가리키도록 광원을 발생 하는 개념적으로 합니다. 항목에 대 한 다른 다음 작은 음수 값에 조명 효과 작동이 중지 됩니다.
+첫 번째 인수 `SKImageFilter.CreateDistantLitDiffuse` 광원의 방향입니다. 양의 X 및 Y 좌표 광원 오른쪽 및 아래쪽 뾰족한 임을 나타냅니다. 화면에 양수 Z 좌표 지점입니다. XAML 파일을 사용 하면 음수 Z 값을 선택할 수 있습니다 하지만 볼 수 있도록에 작업이 수행 됩니다. 개념적으로 음의 Z 좌표는 화면 가리키도록 light을 발생 합니다. 항목에 대 한 다른 다음 작은 음수 값에 조명 효과 작동이 중지 됩니다.
 
 `surfaceScale` 인수는-1에서 1까지 수 있습니다. (높거나 낮은 값 있을 영향을 주지 않습니다.) 이들은 그래픽 개체 (이 경우 텍스트 문자열) 캔버스 화면에서 거리를 나타내는 Z 축에 상대 값입니다. 캔버스의 화면 위의 텍스트 문자열을 발생 시키는 음수 및 양수 값을 캔버스에 들어온 사용 합니다.
 

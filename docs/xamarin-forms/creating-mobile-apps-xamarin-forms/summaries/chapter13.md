@@ -1,6 +1,6 @@
 ---
 title: 요약 13 장입니다. 비트맵
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 13 장 요약 합니다. 비트맵'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 13 장입니다. 비트맵
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334619"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
 

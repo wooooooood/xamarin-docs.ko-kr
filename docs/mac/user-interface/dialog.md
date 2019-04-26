@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61283463"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Xamarin.Mac의 대화 상자
 
@@ -87,7 +87,7 @@ A _시트_ 사용자가 대화 상자를 해제 될 때까지 창을 사용 하 
 
 ### <a name="save-dialogs"></a>저장 대화 상자
 
-저장 대화 상자는 사용자 응용 프로그램에 항목을 저장 하는 일관적인 방법을 제공 합니다. 저장 대화 상자에는 두 가지 상태: **최소** (라고도 축소):
+저장 대화 상자는 사용자 응용 프로그램에 항목을 저장 하는 일관적인 방법을 제공 합니다. 저장 대화 상자는 두 상태가 있습니다. **최소** (라고도 축소):
 
 [![](dialog-images/save01.png "저장 대화 상자")](dialog-images/save01.png#lightbox)
 
@@ -754,7 +754,7 @@ namespace SourceWriter
 }
 ```
 
-이 클래스에 다음 두 가지를 수행 함을 알 수 있습니다: 먼저는 도우미 `App` 속성을 액세스 하는 **AppDelegate** 쉽게 합니다. 두 번째는 `Preferences` 속성은 전역 노출 **AppPreferences** 이 보기에 UI 컨트롤을 사용 하 여 데이터 바인딩 배치에 대 한 클래스입니다.
+이 클래스에 다음 두 가지를 수행 함을 알 수 있습니다. 먼저는 도우미 `App` 속성을 액세스 하는 **AppDelegate** 쉽습니다. 두 번째는 `Preferences` 속성은 전역 노출 **AppPreferences** 이 보기에 UI 컨트롤을 사용 하 여 데이터 바인딩 배치에 대 한 클래스입니다.
 
 다음으로 두 번 클릭 스토리 보드 파일을 다시 열고 Interface Builder에서 (위에서 방금 만든 변경 내용을 참조 하세요). 보기에는 기본 인터페이스를 빌드하는 데 필요한 UI 컨트롤을 끕니다. 각 컨트롤에 대 한 전환 합니다 **바인딩 검사기** 의 개별 속성에 바인딩하고 합니다 **AppPreference** 클래스:
 

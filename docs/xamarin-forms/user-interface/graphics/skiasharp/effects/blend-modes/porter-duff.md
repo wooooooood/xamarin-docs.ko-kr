@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61205895"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter 임신 blend 모드
 
@@ -279,7 +279,7 @@ canvas.Clear(SKColors.White);
 
 ## <a name="using-mattes-with-porter-duff"></a>Porter 임신 매트 사용
 
-**Brick-Wall 합성** 페이지 클래식 합치기 작업의 예를 보여 줍니다: 그림 제거 해야 하는 백그라운드를 사용 하 여 비트맵을 포함 하 여 여러 조각에서 조합할 수 해야 합니다. 다음은 **SeatedMonkey.jpg** 문제가 있는 배경 비트맵:
+**Brick-Wall 합치기** 페이지 클래식 합치기 작업의 예를 보여 줍니다. 그림 제거 해야 하는 백그라운드를 사용 하 여 비트맵을 포함 하 여 여러 조각에서 조합할 수 해야 합니다. 다음은 **SeatedMonkey.jpg** 문제가 있는 배경 비트맵:
 
 ![Monkey 장착](porter-duff-images/SeatedMonkey.jpg "Monkey를 장착 합니다.")
 

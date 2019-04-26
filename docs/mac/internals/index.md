@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
 ms.openlocfilehash: 872f26febf3abbe4d659773d2bf2d27348c64513
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61033245"
 ---
 # <a name="under-the-hood-in-xamarinmac"></a>Xamarin.mac에서 내부 살펴보기
 
@@ -24,6 +24,6 @@ ms.locfileid: "50118775"
 
 Objective-c, 컴파일, 선택기, 기관, 앱 시작 및 생성자와 같은 개념을 포함 하 여 Xamarin.Mac의 관계입니다.
 
-## <a name="xamarinmac-registrarregistrarmd"></a>[Xamarin.Mac 등록자](registrar.md)
+## <a name="xamarinmac-registrarregistrarmd"></a>[Xamarin.Mac registrar](registrar.md)
 
 Xamarin.Mac는 Cocoa의 런타임, 관리 되는 클래스를 관리 되지 않는 Objective-c 클래스를 호출 하 여 이벤트가 발생할 때 호출할 수 있도록 관리 되는 환경 사이의 간극 합니다. 이 "매직"을 수행 하는 데 필요한 작업은 등록 기관에서 처리 하지만 "내부적인" 진행 상황을 이해 경우에 따라 유용할 수 있습니다.

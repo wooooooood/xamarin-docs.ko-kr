@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Android 데이터 액세스
+title: Xamarin.Android Data Access
 description: 대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구 사항이. 데이터의 양이 일반적으로 작은 아닌 일반적으로 데이터베이스 및 데이터 계층 응용 프로그램 데이터베이스 액세스를 관리 하에 있어야 합니다.  Android에 '기본 제공' SQLite 데이터베이스 엔진 및 데이터 저장 및 검색에 대 한 액세스는 Xamarin의 플랫폼을 통해 간소화 되었습니다. 이 문서에는 플랫폼 간 방식으로 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61011357"
 ---
-# <a name="xamarinandroid-data-access"></a>Xamarin.Android 데이터 액세스
+# <a name="xamarinandroid-data-access"></a>Xamarin.Android Data Access
 
 _대부분의 응용 프로그램에는 로컬 장치에서 데이터를 저장 하려면 몇 가지 요구 사항이. 데이터의 양이 일반적으로 작은 아닌 일반적으로 데이터베이스 및 데이터 계층 응용 프로그램 데이터베이스 액세스를 관리 하에 있어야 합니다.  Android에 '기본 제공' SQLite 데이터베이스 엔진 및 데이터 저장 및 검색에 대 한 액세스는 Xamarin의 플랫폼을 통해 간소화 되었습니다. 이 문서에는 플랫폼 간 방식으로 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다._
 

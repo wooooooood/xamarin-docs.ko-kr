@@ -1,6 +1,6 @@
 ---
 title: 요약 11 장입니다. 바인딩할 수 있는 인프라
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 11 장 요약 합니다. 바인딩할 수 있는 인프라'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 11 장입니다. 바인딩할 수 있는 인프라
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334364"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 11 장입니다. 바인딩할 수 있는 인프라
 
@@ -20,7 +20,7 @@ ms.locfileid: "53054238"
 
 모든 C# 프로그래머는 C#을 사용 하 여 익숙한 *속성*합니다. 속성에 포함 된 *설정* 접근자 및/또는 *가져오기* 접근자입니다. 이러한 이라고 *CLR 속성* 공용 언어 런타임에 대 한 합니다.
 
-호출 하는 향상 된 속성 정의 정의 하는 Xamarin.Forms를 *바인딩 가능 속성* 캡슐화를 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 클래스 및에서 지 원하는 합니다 [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)클래스입니다. 이러한 클래스는 관련 하지만 매우 고유한:는 `BindableProperty` 자체; 속성을 정의 하는 `BindableObject` 비슷합니다 `object` 바인딩 가능한 속성을 정의 하는 클래스에 대 한 기본 클래스입니다.
+호출 하는 향상 된 속성 정의 정의 하는 Xamarin.Forms를 *바인딩 가능 속성* 캡슐화를 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 클래스 및에서 지 원하는 합니다 [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)클래스입니다. 이러한 클래스는 관련 하지만 매우 고유한입니다. `BindableProperty` 자체; 속성을 정의 하는 `BindableObject` 비슷합니다 `object` 바인딩 가능한 속성을 정의 하는 클래스에 대 한 기본 클래스입니다.
 
 ## <a name="the-xamarinforms-class-hierarchy"></a>Xamarin.Forms 클래스 계층 구조
 

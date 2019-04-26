@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
 ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227487"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>watchOS에서 Xamarin 백그라운드 작업
 
@@ -543,7 +543,7 @@ WatchOS 3 앱이 포그라운드에서 이지만, 실행 및 수 모든 유형�
 
 - 지정된 된 태스크를 완료 하려면 몇 초만 지정 됩니다. 시스템 고려 전달 하는 시간 뿐 아니라 얼마나 많은 CPU 전원도 앱이이 제한 파생에 사용 합니다.
 - 해당 제한을 초과 하는 모든 앱에 다음 오류 코드를 사용 하 여 종료 됩니다.
-    - **CPU** -0xc51bad01
+    - **CPU** - 0xc51bad01
     - **시간** -0xc51bad02
 - 시스템 앱 수행 하 라는 메시지가 표시 되는 백그라운드 작업의 형식을 기반으로 하는 다른 제한도 적용 됩니다. 예를 들어 `WKApplicationRefreshBackgroundTask` 고 `WKURLSessionRefreshBackgroundTask` 작업 다른 유형의 백그라운드 작업 보다 약간 더 런타임을 제공 됩니다.
 

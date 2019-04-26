@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: a40d0911b7dabc900a4c6e50c692e4f091f22be9
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61206364"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.iOS에서 핵심 애니메이션
 
@@ -25,7 +25,7 @@ iOS를 포함 [ *Core Animation* ](https://developer.apple.com/library/ios/docum
 
 <a name="Using_Core_Animation" />
 
-## <a name="core-animation"></a>코어 애니메이션
+## <a name="core-animation"></a>핵심 애니메이션
 
 iOS 핵심 애니메이션 프레임 워크를 사용 하 여 뷰 간을 전환, 메뉴 슬라이딩, 효과 등 스크롤 등 애니메이션 효과 만듭니다. 애니메이션을 사용 하는 방법은 두 가지 있습니다.
 

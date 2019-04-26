@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61305160"
 ---
 # <a name="tablelayout"></a>TableLayout
 
@@ -120,7 +120,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 합니다 [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) 에 대 한 레이아웃 파일을 로드 하는 메서드를 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID 기준으로 지정 된 &mdash; `Resource.Layout.Main` 가리킵니다는 **리소스/레이아웃 / Main.axml** 레이아웃 파일입니다.
 
-응용 프로그램을 실행합니다. 다음을 참조 해야 합니다.
+애플리케이션을 실행합니다. 다음을 참조 해야 합니다.
 
 [![여러 테이블 행을 표시 하는 TableLayout 앱의 스크린샷 예제](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 

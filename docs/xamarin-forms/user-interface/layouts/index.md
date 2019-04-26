@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300397"
 ---
 # <a name="layouts-in-xamarinforms"></a>Xamarin.Forms에서 레이아웃
 
@@ -204,7 +204,7 @@ Xamarin.Forms 및 해당 기본 제공 레이아웃 장치 방향에서 변경 �
 
 iOS, Android 및 유니버설 Windows 플랫폼에서 큰 화면 크기를 지 원하는 모든 태블릿 장치 (랩톱 및 데스크톱 Windows에 대 한). Xamarin.Forms를 사용 하면 장치 유형 및 페이지 레이아웃을 조정 하거나 검색 하거나 더 큰 화면에 대 한 완전히 다른 페이지를 모두 사용 하 여 더 큰 화면에 대 한 앱을 최적화할 수 있습니다.
 
-### <a name="bindable-layoutsbindable-layoutsmd"></a>[바인딩할 수 있는 레이아웃](bindable-layouts.md)
+### <a name="bindable-layoutsbindable-layoutsmd"></a>[바인딩 가능한 레이아웃](bindable-layouts.md)
 
 합니다 `BindableLayout` 클래스에서 파생 되는 모든 레이아웃 클래스를 사용 하면 합니다 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) 사용 하 여 각 항목의 모양을 설정 하는 옵션을 사용 하 여 항목의 컬렉션에 바인딩하여 해당 콘텐츠를 생성 하는 클래스를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
 

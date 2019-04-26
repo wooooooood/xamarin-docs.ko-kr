@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 6803dc2668b89ee2d037da8b34e202191dd5465d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307822"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>CocosSharp에서 여러 해결 방법 처리
 
@@ -22,11 +22,11 @@ CocosSharp는 장치의 디스플레이의 픽셀의 실제 수에 관계 없이
 기본 확인 CocosSharp의 동작은 물리적 픽셀 게임에서 좌표와 일치 해야 합니다. 다음 표에서 다양 한 장치 368 x 240의 너비와 높이 사용 하 여 백그라운드 환경 스프라이트 렌더링 하는 것입니다. 첫 번째 행에 기술적 하지 실제 장치를 중이지만 필요한 장치 해상도 관계 없이 스프라이트 렌더링 대신:
 
 
-| **장치** | **디스플레이 해상도** | **예제 스크린 샷** |
+| **디바이스** | **디스플레이 해상도** | **예제 스크린 샷** |
 |--- | --- |--- |
 |원하는 표시|368 x 240 (사용 하 여 가로 세로 비율에 대 한 검은색 막대)| ![368 x 240 (사용 하 여 가로 세로 비율에 대 한 검은색 막대)](resolutions-images/image1.png) |
-|iPhone 4 초|960x640| ![iPhone 4 초 960 x 640](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 이 문서에서는 위의 표에 표시 된 문제를 해결 하려면 CocosSharp를 사용 하는 방법을 설명 합니다. 즉, 화면 해상도 관계 없이 – 첫 번째 행에 표시 된 대로 렌더링 하는 모든 장치를 확인 하는 방법을 설명 합니다.
 

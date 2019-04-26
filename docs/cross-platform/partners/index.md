@@ -9,11 +9,11 @@ ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
 ms.openlocfilehash: ddf80fb650127b91bef89792fc622267ad1ed0d4
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61211602"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
 

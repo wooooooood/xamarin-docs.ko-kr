@@ -6,11 +6,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269343"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및입니다. Xamarin.Forms 앱 수명 주기
 
@@ -86,7 +86,7 @@ Xamarin.Forms는 모바일 시나리오 주로 지향 합니다. 응용 프로�
 |Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |일시 중단/손실 포커스|Window.OnDeactivated|Page.OnSleep|
 |활성화/가져왔습니다 포커스|Window.OnActivated|Page.OnResume|
-|닫힘|Window.OnClosing + Window.OnClosed|N/A|
+|Closed|Window.OnClosing + Window.OnClosed|N/A|
 
 
 지원 숨기기/표시 된 자식 컨트롤 모두 WPF에서는 세 가지 상태 속성 `IsVisible` (표시, 숨김 및 축소) 합니다. Xamarin.Forms에서는 방금 통해 표시 되거나 숨겨지도록는 `IsVisible` 속성입니다.
@@ -181,7 +181,7 @@ WPF 및 Xamarin.Forms 둘 다 리소스 및 리소스 사전 개념을 가집니
 
 스타일은 Xamarin.Forms에서도 완전히 지원 및 수 UI를 구성 하는 Xamarin.Forms 요소 테마를 사용 합니다. 트리거 (속성, 이벤트 및 데이터), 상속을 통해 지 `BasedOn`, 및 값에 대 한 리소스를 조회 합니다. 스타일은 요소에 적용 하거나 통해 명시적으로 `Style` 속성 또는 암시적으로 WPF와 마찬가지로 리소스 키-제공 안 함.
 
-### <a name="device-styles"></a>장치 스타일
+### <a name="device-styles"></a>디바이스 스타일
 
 WPF에는 미리 정의 된 속성 집합이 있습니다. (같은 정적 클래스의 집합에 정적 값으로 저장 `SystemColors`) 시스템 색, 글꼴 및 메트릭 값과 리소스 키의 형태로 지정입니다. Xamarin.Forms는 유사 하지만 집합을 정의 [장치 스타일](~/xamarin-forms/user-interface/styles/device.md) 동일한 항목을 나타냅니다. 이러한 스타일 프레임 워크에서 제공 되며 런타임 환경 (예: 내게 필요한 옵션)에 따라 값으로 설정 됩니다.
 

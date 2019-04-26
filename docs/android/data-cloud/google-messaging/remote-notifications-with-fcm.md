@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
 ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
-ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/28/2018
-ms.locfileid: "53814039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019079"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>원격 알림 firebase Cloud Messaging
 
@@ -771,7 +771,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM 모두에서 장치 등록을 취소 하려면 호출 하 여 인스턴스 ID를 삭제 합니다 [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드는 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스입니다. 다음은 사용 예를 보여줍니다.
+FCM 모두에서 장치 등록을 취소 하려면 호출 하 여 인스턴스 ID를 삭제 합니다 [DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드는 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스입니다. 예를 들어:
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();

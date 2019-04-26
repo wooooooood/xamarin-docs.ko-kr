@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac로 macOS Sierra 문제 해결
+title: Xamarin.Mac - macOS Sierra Troubleshooting
 description: 이 문서는 macOS Sierra Xamarin.Mac 앱에서 사용 하기 위한 몇 가지 문제 해결 팁을 제공 합니다. 팁은 Mac 앱 스토어, Apple Pay, 이진 호환성, CFNetwork, CloudKit, 등와 관련이 있습니다.
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
 ms.openlocfilehash: 1b379bef98e498df4c58ba7209aa46b0b2542fe1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031423"
 ---
-# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac로 macOS Sierra 문제 해결
+# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra Troubleshooting
 
 _이 문서에서는 Xamarin.Mac 앱에 macOS Sierra 사용 하 여 작업에 대 한 몇 가지 문제 해결 팁을 제공 합니다._
 
@@ -23,7 +23,7 @@ _이 문서에서는 Xamarin.Mac 앱에 macOS Sierra 사용 하 여 작업에 �
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
 - [이진 호환성](#Binary-Compatibility)
-- [CFNetwork HTTP 프로토콜](#CFNetwork-HTTP-Protocol)
+- [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
 - [Core 이미지](#CoreImage)
 - [알림](#Notifications)
@@ -32,7 +32,7 @@ _이 문서에서는 Xamarin.Mac 앱에 macOS Sierra 사용 하 여 작업에 �
 
 <a name="App-Store" />
 
-## <a name="app-store"></a>앱 스토어
+## <a name="app-store"></a>App Store
 
 알려진 문제:
 
@@ -58,7 +58,7 @@ Apple Pay까지 새 결제 카드를 추가 하는 경우를 잘못 된 만료 �
 
 <a name="CFNetwork-HTTP-Protocol" />
 
-## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP 프로토콜
+## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP Protocol
 
 `HTTPBodyStream` 의 속성을 `NSMutableURLRequest` 이후 열려 있지 않은 스트림에 클래스를 설정 해야 합니다 `NSURLConnection` 및 `NSURLSession` 이제이 요구 사항을 엄격 하 게 적용 합니다.
 

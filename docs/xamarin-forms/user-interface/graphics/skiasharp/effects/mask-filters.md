@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289145"
 ---
 # <a name="skiasharp-mask-filters"></a>SkiaSharp 마스크 필터
 
@@ -182,7 +182,7 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 IOS 스크린 샷에 표시 된 `Solid` 스타일: 텍스트 문자 solid 검정 선으로 계속 제공 되며 흐리게 효과 이러한 텍스트 문자의 바깥쪽에 추가 됩니다. 
 
-중간 보여 Android 스크린샷에서 `Outer` 스타일: (그대로 비트맵) 자체 문자 스트로크를 제거 되 고 흐리게 효과 텍스트 문자를 한 번만 나타나는 빈 공간을 둘러쌉니다. 
+중간 보여 Android 스크린샷에서 `Outer` 스타일: (그대로 비트맵) 자체 문자 스트로크를 제거 하 고 흐리게 효과 텍스트 문자를 한 번만 나타나는 빈 공간을 묶습니다. 
 
 오른쪽은 UWP 스크린샷에 `Inner` 스타일입니다. 흐리게 효과 일반적으로 텍스트 문자를 차지한 영역이 제한 됩니다.
 

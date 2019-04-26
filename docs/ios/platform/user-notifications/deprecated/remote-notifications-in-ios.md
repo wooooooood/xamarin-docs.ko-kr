@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087049"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 
@@ -22,7 +22,7 @@ ms.locfileid: "50110019"
 푸시 알림을 간략하게 유지 해야 하 고만 업데이트에 대 한 서버 응용 프로그램에 문의 해야 하는 모바일 응용 프로그램에 알리기 위해 충분 한 데이터를 포함 합니다. 예를 들어, 새 전자 메일이 도착 하는 경우에 서버 응용 프로그램을 새 이메일이 도착 하는 모바일 응용 프로그램을 알립니다만. 알림 자체는 새 전자 메일을 포함 하지 않으므로 합니다. 모바일 응용 프로그램을 검색 새 전자 메일 서버에서 적절 한 때
 
 IOS에서 알림을 푸시의 중심이 되는 *Apple 푸시 알림 게이트웨이 서비스 (APNS)* 합니다. IOS 장치에 응용 프로그램 서버에서 라우팅 알림을 담당 하는 Apple에서 제공 하는 서비스입니다.
-다음 그림에서는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다: ![](remote-notifications-in-ios-images/image4.png "iOS에 대 한 푸시 알림 토폴로지를 보여 주는이 이미지")
+다음 이미지에서는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다. ![](remote-notifications-in-ios-images/image4.png "이 이미지에서는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다.")
 
 원격 알림 자체는 JSON 형식을 준수 하는 문자열 형식 및 프로토콜에 지정 된 [The 알림 페이로드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) 섹션을 [로컬 및 푸시 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)에 [iOS 개발자 설명서](https://developer.apple.com/devcenter/ios/index.action)합니다.
 

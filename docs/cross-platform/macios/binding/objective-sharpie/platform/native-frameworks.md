@@ -1,5 +1,5 @@
 ---
-title: 네이티브 프레임 워크 바인딩
+title: 네이티브 프레임워크 바인딩
 description: 이 문서에서는 목표 Sharpie를 사용 하는 방법을 설명의-프레임 워크로 배포 프레임 워크 라이브러리에 대 한 바인딩을 만들 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: ca103ee027597813be51e126aaa05f9aa969af35
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61199130"
 ---
-# <a name="binding-native-frameworks"></a>네이티브 프레임 워크 바인딩
+# <a name="binding-native-frameworks"></a>네이티브 프레임워크 바인딩
 
 네이티브 라이브러리는 배포 되는 경우에 따라 한 [framework](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WhatAreFrameworks.html)합니다. 프레임 워크를 통해 정의 된 바인딩을 올바르게 목표 Sharpie 주는 편리한 기능을 제공 합니다 `-framework` 옵션입니다.
 
@@ -38,6 +38,6 @@ ms.locfileid: "37855099"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
 

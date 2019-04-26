@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/18/2016
 ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61179609"
 ---
 # <a name="accessibility-on-ios"></a>IOS에서 내게 필요한 옵션
 
@@ -112,7 +112,7 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 
 <a name="testing" />
 
-## <a name="testing-accessibility"></a>액세스 가능성 테스트
+## <a name="testing-accessibility"></a>접근성 테스트
 
 VoiceOver에서 사용 되는 **설정을** 로 이동 하 여 앱 **일반 > 내게 필요한 옵션 > VoiceOver**:
 
@@ -140,6 +140,6 @@ VoiceOver에서 사용 되는 **설정을** 로 이동 하 여 앱 **일반 > �
 
 ## <a name="related-links"></a>관련 링크
 
-- [플랫폼 간 내게 필요한 옵션](~/cross-platform/app-fundamentals/accessibility.md)
+- [플랫폼 간 접근성](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS (Apple) 내게 필요한 옵션](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
 - [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)

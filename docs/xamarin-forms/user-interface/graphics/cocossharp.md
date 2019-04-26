@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
 ms.openlocfilehash: 55e5627a492636efaa6eeb6b8c302d143b08e2cc
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400706"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
@@ -22,7 +22,7 @@ _CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에
 
 > [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-**Evolve 2016: Cocos # xamarin.forms**
+**Evolve 2016: Xamarin.Forms의 cocos #**
 
 ## <a name="overview"></a>개요
 
@@ -30,7 +30,7 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 
 * [CocosSharp 란?](#what)
 * [CocosSharp Nuget 패키지 추가](#nuget)
-* [연습: CocosSharp를 Xamarin.Forms 앱에 추가](#add)
+* [연습: CocosSharp는 Xamarin.Forms 앱에 추가](#add)
 
 <a name="what" />
 
@@ -74,7 +74,7 @@ CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에
 
 <a name="add" />
 
-## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: CocosSharp를 Xamarin.Forms 앱에 추가
+## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: CocosSharp는 Xamarin.Forms 앱에 추가
 
 Xamarin.Forms 앱에 간단한 CocosSharp 뷰를 추가 하려면 다음이 단계를 수행 합니다.
 

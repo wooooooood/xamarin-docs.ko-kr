@@ -1,6 +1,6 @@
 ---
 title: 요약 7 장입니다. 코드 및 XAML
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 7 장 요약 합니다. 코드 및 XAML'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 7 장입니다. 코드 및 XAML
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334738"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>요약 7 장입니다. 코드 및 XAML
 

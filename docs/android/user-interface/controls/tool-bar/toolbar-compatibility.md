@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 12c19cf1024b78e8be30b7c9f2652019e9854375
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300359"
 ---
 # <a name="toolbar-compatibility"></a>도구 모음 호환성
 
@@ -49,7 +49,7 @@ API 수준 21 수준의 이상 대상 프레임 워크를 설정 하 고 Android
 
 [![NuGet 패키지 관리에서 선택한 V7 Appcompat 스크린 샷 패키지](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-이 NuGet을 설치 하면 몇 가지 다른 NuGet 패키지도 설치 됩니다 아직 없는 경우 (같은 **Xamarin.Android.Support.Animated.Vector.Drawable**하십시오 **Xamarin.Android.Support.v4**, 및 **Xamarin.Android.Support.Vector.Drawable**). NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다. 
+이 NuGet을 설치 하면 몇 가지 다른 NuGet 패키지도 설치 됩니다 아직 없는 경우 (같은 **Xamarin.Android.Support.Animated.Vector.Drawable**하십시오 **Xamarin.Android.Support.v4**, 및 **Xamarin.Android.Support.Vector.Drawable**). NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)입니다. 
 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>AppCompat 테마 및 도구 모음 사용

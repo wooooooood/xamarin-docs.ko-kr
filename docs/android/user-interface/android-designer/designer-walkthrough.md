@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 1174fe5cb417d4977fd6519086e6c4942e74c10b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61207998"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Xamarin.Android 디자이너를 사용 하 여
 
@@ -174,7 +174,7 @@ UI 표시를 수정 하려면 다음 단계는 합니다 `ImageView` 왼쪽에�
 
 이 시점에서 사용자 인터페이스를 사용할 준비가 되었습니다.
 
-### <a name="running-the-application"></a>응용 프로그램 실행
+### <a name="running-the-application"></a>애플리케이션 실행
 
 오픈 **MainActivity.cs** 및 해당 코드를 다음으로 바꿉니다.
 
@@ -274,7 +274,7 @@ namespace DesignerWalkthrough
 
 이 코드에서는 사용자 지정 `ListView` 어댑터 색 정보를 로드 하 고 방금 만든 UI에이 데이터를 표시 합니다. 을 유지 하기 위해이 예제에서는 짧은 색 정보를 목록에 하드 코딩 되었지만를 데이터 원본에서 색 정보를 추출 하거나 즉시 계산 하는 어댑터를 수정 될 수 있습니다. 에 대 한 자세한 내용은 `ListView` 어댑터 참조 [ListView](~/android/user-interface/layouts/list-view/index.md)합니다.
 
-응용 프로그램을 빌드 및 실행합니다. 다음 스크린샷은 다음과 같습니다. 앱을 장치에서 실행할 때 표시 되는 방식을 예로
+애플리케이션을 빌드 및 실행합니다. 다음 스크린샷은 다음과 같습니다. 앱을 장치에서 실행할 때 표시 되는 방식을 예로
 
 [![최종 스크린 샷](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
@@ -420,7 +420,7 @@ UI 표시를 수정 하려면 다음 단계는 합니다 `ImageView` 왼쪽에�
 
 이 시점에서 사용자 인터페이스를 사용할 준비가 되었습니다.
 
-### <a name="running-the-application"></a>응용 프로그램 실행
+### <a name="running-the-application"></a>애플리케이션 실행
 
 오픈 **MainActivity.cs** 및 해당 코드를 다음으로 바꿉니다.
 
@@ -518,7 +518,7 @@ namespace DesignerWalkthrough
 
 이 코드에서는 사용자 지정 `ListView` 어댑터 색 정보를 로드 하 고 방금 만든 UI에이 데이터를 표시 합니다. 을 유지 하기 위해이 예제에서는 짧은 색 정보를 목록에 하드 코딩 되었지만를 데이터 원본에서 색 정보를 추출 하거나 즉시 계산 하는 어댑터를 수정 될 수 있습니다. 에 대 한 자세한 내용은 `ListView` 어댑터 참조 [ListView](~/android/user-interface/layouts/list-view/index.md)합니다.
 
-응용 프로그램을 빌드 및 실행합니다. 다음 스크린샷은 다음과 같습니다. 앱을 장치에서 실행할 때 표시 되는 방식을 예로
+애플리케이션을 빌드 및 실행합니다. 다음 스크린샷은 다음과 같습니다. 앱을 장치에서 실행할 때 표시 되는 방식을 예로
 
 [![최종 스크린 샷](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 

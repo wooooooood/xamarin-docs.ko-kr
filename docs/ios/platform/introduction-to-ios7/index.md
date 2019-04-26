@@ -1,5 +1,5 @@
 ---
-title: IOS 7 소개
+title: iOS 7 소개
 description: 이 문서에서는 iOS 뷰 컨트롤러 전환 애니메이션 UIView UIKit Dynamics 및 텍스트 키트의 향상 된 기능을 포함 하 여 7에에서 도입 된 주요 새로운 Api를 설명 합니다. 또한 일부 사용자 인터페이스 및 새로운 향상 된 멀티태스킹 기능 변경 내용을 다룹니다.
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: db2ce779962947e2121ff03280544a080e193e2e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037420"
 ---
-# <a name="introduction-to-ios-7"></a>IOS 7 소개
+# <a name="introduction-to-ios-7"></a>iOS 7 소개
 
 _이 문서에서는 iOS 뷰 컨트롤러 전환 애니메이션 UIView UIKit Dynamics 및 텍스트 키트의 향상 된 기능을 포함 하 여 7에에서 도입 된 주요 새로운 Api를 설명 합니다. 또한 일부 사용자 인터페이스 및 새로운 향상 된 멀티태스킹 기능 변경 내용을 다룹니다._
 

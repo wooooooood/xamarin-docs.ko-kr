@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: b35149028763691c17fe526673d023cc9b707c28
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61246099"
 ---
 # <a name="layout-options-in-xamarinios"></a>Xamarin.iOS에서 레이아웃 옵션
 
@@ -25,11 +25,11 @@ ms.locfileid: "50116656"
 
 사용자 장치를 회전 하는 경우 및 방향 변경 등의 창 크기가 조정 될 때 시스템 자동 크기 조정 규칙에 따라 해당 창 내에서 뷰를 자동으로 조정 됩니다. 이러한 규칙을 설정할 수 있습니다 C# 를 사용 하 여는 `AutoresizingMask` 의 속성을 `UIView` 또는 **Properties Pad** ios 디자이너, 아래 그림과 같이:
 
- [![](layout-options-images/image41.png "Visual Studio for Mac 디자이너")](layout-options-images/image41.png#lightbox)
+ [![](layout-options-images/image41.png "Visual Studio for Mac Designer")](layout-options-images/image41.png#lightbox)
 
 이 수동으로 컨트롤의 크기와 위치를 지정할 수 있습니다 하는 컨트롤을 선택 하면 선택 뿐만 아니라 **자동 크기 조정** 동작 합니다. 아래 스크린샷에 표시 된 것과 같이에 사용 하는 스프링 및 struts 자동 크기 조정 컨트롤의 부모에 선택한 뷰에서 관계를 정의 하려면:
 
- [![](layout-options-images/image42.png "Visual Studio for Mac 디자이너")](layout-options-images/image42.png#lightbox)
+ [![](layout-options-images/image42.png "Visual Studio for Mac Designer")](layout-options-images/image42.png#lightbox)
 
 조정 된 *spring* 하면 크기 조정에 뷰를 너비 또는 높이의 부모 보기에 따라 합니다. 조정 된 *strut* 뷰 자체와 해당 부모 뷰의 해당 특정에 지 간에 일정 한 간격으로 유지 관리 하 게 합니다.
 

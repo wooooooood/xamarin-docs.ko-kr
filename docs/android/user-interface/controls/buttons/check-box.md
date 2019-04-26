@@ -7,16 +7,16 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: e03595e8d88a2f12341b9e339d0581c631224848
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61268320"
 ---
 # <a name="checkbox"></a>CheckBox
 
 이 섹션에서는 만들려는 항목을 선택 하는 것에 대 한 확인란을 사용 하 여 [`CheckBox`](https://developer.xamarin.com/api/type/Android.Widget.CheckBox)
-위젯입니다. 확인란을 누르면 알림 메시지는 확인란의 현재 상태를 나타냅니다.
+widget. 확인란을 누르면 알림 메시지는 확인란의 현재 상태를 나타냅니다.
 
 열기를 **Resources/layout/Main.axml** 파일을 추가 합니다 [ `CheckBox` ](https://developer.xamarin.com/api/type/Android.Widget.CheckBox/) 요소 (내 합니다 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout)):
 

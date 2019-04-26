@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/07/2017
 ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61400334"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>IOS 11의에서 SiriKit 업데이트
 
@@ -118,7 +118,7 @@ Siri 요청을 처리할 앱에 새 확장 프로젝트를 추가 합니다.
 
 1. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > 새 프로젝트 추가...** .
 2. 선택 된 **iOS > 확장 > 인 텐트 확장** 템플릿.
-3. 새 프로젝트가 추가 됩니다: 의도 및 IntentUI 합니다. UI를 사용자 지정 선택 사항 이므로 샘플 코드에 포함 된 **의도** 프로젝트입니다.
+3. 새 프로젝트가 추가 됩니다. 의도 및 IntentUI 합니다. UI를 사용자 지정 선택 사항 이므로 샘플 코드에 포함 된 **의도** 프로젝트입니다.
 
 확장 프로젝트는 모든 SiriKit 요청 처리할입니다. 별도 확장으로 자동으로 없는 앱 그룹을 사용 하 여 공유 파일 저장소를 구현 하 여이 오류를 해결 일반적으로 기본 앱 –와 통신 하는 방식으로 합니다.
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
 ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61190604"
 ---
 # <a name="the-scale-transform"></a>크기 조정 변환
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-궁금할: 크기 조정 요인을 미치는 영향은 무엇입니까에서 반환 되는 값을 `MeasureText` 메서드의 `SKPaint`? 대답: 전혀 그렇지 않습니다. `Scale` 메서드는 `SKCanvas`합니다. 사용 하 여 수행 하는 아무 것도 변경 되지 않습니다는 `SKPaint` 캔버스의 항목을 렌더링 하는 개체를 사용 하기 전에 개체입니다.
+궁금할 수 있습니다. 크기 조정 요인을 미치는 영향은 무엇입니까에서 반환 되는 값을 `MeasureText` 메서드의 `SKPaint`? 대답은: 전혀 그렇지 않습니다. `Scale` 메서드는 `SKCanvas`합니다. 사용 하 여 수행 하는 아무 것도 변경 되지 않습니다는 `SKPaint` 캔버스의 항목을 렌더링 하는 개체를 사용 하기 전에 개체입니다.
 
 알 수 있듯이 그린 후 모든 것을 `Scale` 증가 비례적으로 호출:
 
@@ -251,7 +251,7 @@ using (SKPaint strokePaint = new SKPaint
 
 [![](scale-images/anisotropicscaling-small.png "3 중 이방성 크기 조정 페이지 스크린샷")](scale-images/anisotropicscaling-large.png#lightbox "3 중 이방성 크기 조정 페이지 스크린샷")
 
-다른 방식으로 생각할 수 있습니다 합니다 `Scale` 및 `Translate` 호출 역방향 시퀀스의 효과 결정 하는 것:는 `Translate` 캔버스의 왼쪽 위 모서리에 기반 하지만 완벽 하 게 표시 되도록 호출 경로 이동 합니다. `Scale` 메서드 그러면 해당 별 큰 왼쪽 위 모퉁이 기준으로 합니다.
+다른 방식으로 생각할 수 있습니다는 `Scale` 및 `Translate` 역방향 시퀀스의 효과 확인 하려면 호출 됩니다. `Translate` 캔버스의 왼쪽 위 모서리에 기반 하지만 완벽 하 게 표시 되도록 호출 경로 이동 합니다. `Scale` 메서드 그러면 해당 별 큰 왼쪽 위 모퉁이 기준으로 합니다.
 
 사실 별 캔버스 보다 약간 더 큰 인지 표시 됩니다. 문제는 스트로크 너비입니다. `Bounds` 의 속성 `SKPath` 좌표 차원의 인코딩된 경로 나타내고 크기를 조정 하는 프로그램이 사용 하는 것이입니다. 특정 스트로크 너비를 사용 하 여 경로 렌더링할 때 렌더링 되는 경로 캔버스 보다 큽니다.
 

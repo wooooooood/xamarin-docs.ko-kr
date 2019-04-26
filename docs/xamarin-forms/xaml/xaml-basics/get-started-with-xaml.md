@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61344865"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
@@ -102,7 +102,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다.  **�
 </ContentPage>
 ```
 
-URI를 참조하는 두 개의 XML 네임 스페이스(`xmlns`) 선언 중 첫 번째는 Xamarin 그리고 두 번째는 Microsoft의 웹 사이트로 보입니다. 궁금한 경우 해당 URI 지점을 확인해보면 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
+URI를 참조하는 두 개의 XML 네임 스페이스(`xmlns`) 선언 중 첫 번째는 Xamarin 그리고 두 번째는 Microsoft의 웹 사이트로 보입니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
 
 첫 번째 XML 네임 스페이스 선언은 Xamarin.Forms에서 접두사가 없는 클래스 참조를 갖는 XAML 파일 내의 정의된 태그, 예를 들면 `ContentPage`와 같은 태그를 의미합니다. 두 번째 네임 스페이스 선언은 `x`의 접두사를 정의합니다. 이는 XAML 자체에 내장된 몇 가지 요소와 특성 및 XAML의 다른 구현이 지원되는 곳에서 사용됩니다. 그러나 이러한 요소와 특성은 URI에 포함된 연도에 따라 약간 다릅니다. Xamarin.Forms는 전체가 아니라 2009 XAML 사양을 지원합니다.
 
@@ -203,9 +203,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 또한 `Title` 특성이 루트 태그에 설정되었다는 것에 주의하십시오.
 
-이쯤에서 클래스, 속성 및 XML 간의 관계는 분명해집니다. Xamarin.Forms 클래스(`ContentPage` 또는 `Label` 등)는 XML 요소로 XAML 파일에 표시됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
+이때 클래스, 속성 및 XML 간의 관계는 분명 하 게 해야 합니다. Xamarin.Forms 클래스 (같은 `ContentPage` 또는 `Label`) XML 요소에 XAML 파일에 표시 됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
 
-대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 유형이 있으며, 예를 들어 `Title` 및 `Text` 속성의 유형은 `String`이고, `Rotation` 속성의 유형은 `Double`이며, `IsVisible`의 유형은 `Boolean`(기본적으로 `true`이며 여기서는 오직 설명 용도로 설정됨)입니다.
+대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 형식: 예를 들어, 합니다 `Title` 및 `Text` 형식의 속성은 `String`, `Rotation` 형식입니다 `Double`, 및 `IsVisible` (되 `true` 기본적으로 설명을 돕기 위해 여기에서 설정 되 고) 형식의`Boolean`.
 
 `HorizontalTextAlignment` 속성은 열거형인 `TextAlignment` 유형입니다. 모든 열거형 유형 속성에는 멤버 이름만 제공하면 됩니다.
 

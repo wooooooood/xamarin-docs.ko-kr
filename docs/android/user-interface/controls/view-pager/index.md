@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: bb9795eb1e77a48b01556c553ae19613d6ab6de6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61267607"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -39,7 +39,7 @@ _ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 
 
 ## <a name="requirements"></a>요구 사항
 
-사용 하도록 `ViewPager` 앱 프로젝트에 설치 해야 합니다 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 패키지. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다. 
+사용 하도록 `ViewPager` 앱 프로젝트에 설치 해야 합니다 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 패키지. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)입니다. 
 
  
 ## <a name="architecture"></a>아키텍처

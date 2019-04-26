@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/19/2019
 ms.openlocfilehash: a430387bba83887045e5687c99d9295d4be373e4
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019468"
 ---
 # <a name="display-an-emptyview-when-data-is-unavailable"></a>데이터를 사용할 수 없는 경우는 EmptyView 표시
 

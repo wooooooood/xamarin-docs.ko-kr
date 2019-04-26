@@ -1,5 +1,5 @@
 ---
-title: Toolbar
+title: ToolBar
 description: '도구 모음에는 기본 작업 모음 보다 더 많은 유연성을 제공 하는 작업 표시줄 구성 요소: 앱에서 아무 곳 이나 배치 될 수, 크기를 변경할 수 있으며 다른 앱의 테마 색 구성표를 사용할 수 있습니다. 또한 각 앱 화면에는 여러 도구 모음이 있을 수 있습니다.'
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 2c9de4058fdaee53671e65f49ad95c3af5e127d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082857"
 ---
-# <a name="toolbar"></a>Toolbar
+# <a name="toolbar"></a>ToolBar
 
 _도구 모음에는 기본 작업 모음 보다 더 많은 유연성을 제공 하는 작업 표시줄 구성 요소: 앱에서 아무 곳 이나 배치 될 수, 크기를 변경할 수 있으며 다른 앱의 테마 색 구성표를 사용할 수 있습니다. 또한 각 앱 화면에는 여러 도구 모음이 있을 수 있습니다._
 

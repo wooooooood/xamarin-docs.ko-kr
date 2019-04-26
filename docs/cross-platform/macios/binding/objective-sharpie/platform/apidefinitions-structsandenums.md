@@ -1,17 +1,17 @@
 ---
 title: ApiDefinitions 및 StructsAndEnums 파일
-description: 이 문서에서는 발생 하는 목표 Sharpie ApiDefinitions.cs 및 StructsAndEnums.cs 파일을 설명 합니다. 이러한 파일은 다음 C#에서 Objective-c 코드에 액세스 하려면 사용 됩니다.
+description: 이 문서에서는 발생 하는 목표 Sharpie ApiDefinitions.cs 및 StructsAndEnums.cs 파일을 설명 합니다. 이러한 파일은 다음에서 Objective-c 코드에 액세스 하는 데 사용 됩니다 C#입니다.
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: df8d4508db14116a5b36e893f161ac891d58dc46
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266365"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions 및 StructsAndEnums 파일
 
@@ -25,8 +25,8 @@ ms.locfileid: "37855184"
 - **이름을 조정**: 메서드 및.NET Framework 디자인 지침을 일치 하는 클래스의 이름을 조정할 수도 있습니다.
 - **메서드 또는 속성**: 때로는 목표 Sharpie에서 사용 되는 추론을 속성으로 설정 하는 메서드를 선택 합니다. 이 시점에서 의도 된 동작 인지 여부를 결정할 수 있습니다.
 - **이벤트 후크**: 대리자 클래스를 사용 하 여 클래스에 연결 하 고 해당 이벤트를 자동으로 생성할 수 없습니다.
-- **알림 후크**: 알림의 API 계약 순수 헤더 파일에서 추출할 수 없으면,이 API 설명서를 새로 구입 해야 합니다. 강력한 형식의 알림을 원하는 경우에 결과 업데이트 해야 합니다.
-- **API 큐 레이 션**:이 시점에서 추가 생성자를 제공, 추가 방법 (C# 생성에서 초기화 구문에 대 한 허용), 연산자 오버 로드를 구현 하도록 선택할 수 있습니다 추가 정의 파일에 직접 인터페이스입니다.
+- **알림 후크**: 알림 API 계약 순수 헤더 파일에서 추출할 수 없는, API 설명서를 새로 구입 해야 합니다. 강력한 형식의 알림을 원하는 경우에 결과 업데이트 해야 합니다.
+- **API 큐 레이 션**: 이 시점에서 추가 생성자를 제공 하 여 메서드를 추가를 선택할 수 있습니다 (허용 하기 위해 C# 생성에 초기화 구문을), 연산자 오버 로드 하 고 추가 정의 파일에 고유한 인터페이스를 구현 합니다.
 
 참조를 [API를 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md) 설명 아래 다이어그램에 표시 된 대로 이러한 파일에 바인딩 프로세스를 어떻게 확인 하려면:
 
@@ -36,5 +36,5 @@ ms.locfileid: "37855184"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

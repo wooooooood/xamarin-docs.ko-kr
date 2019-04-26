@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
 ms.openlocfilehash: 3592a3027469cb9997d973db53d636ddea9e679d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61024313"
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 
@@ -187,7 +187,7 @@ public void OnPause()
 
 `OnStop` 항상 호출할 수 없습니다 Android 리소스를 겪게 됩니다 하 고 작업을 백그라운드 제대로 없습니다 하는 경우와 같이 메모리 부족 상황에서. 이러한 이유로 유용 하지 의존 `OnStop` 소멸에 대 한 작업을 준비 하는 경우 호출 시작 합니다. 이 개 후 호출할 수 있는 다음 수명 주기 메서드 `OnDestroy` 활동이 제거 될 경우 또는 `OnRestart` 경우 활동 사용자 상호 작용에 다시 제공 됩니다.
 
-#### <a name="ondestroy"></a>onDestroy
+#### <a name="ondestroy"></a>OnDestroy
 
 [OnDestroy](https://developer.xamarin.com/api/member/Android.App.Activity.OnDestroy/) 소멸 있고 메모리에서 완전히 제거 하려면 먼저 활동 인스턴스에서 호출 되는 최종 메서드입니다. 극단적인 경우 Android 됩니다 하는 활동을 호스팅하는 응용 프로그램 프로세스를 제거할 수 있습니다 `OnDestroy` 호출 되지 않습니다. 대부분의 작업은 대부분 정리 및 종료 저희 때문에이 메서드를 구현 하지는 `OnPause` 고 `OnStop` 메서드. `OnDestroy` 메서드를 재정의 일반적으로 장기를 정리 하는 리소스를 실행할 누수 될 수 리소스입니다. 이 예제에서 시작 된 백그라운드 스레드 수 `OnCreate`입니다.
 

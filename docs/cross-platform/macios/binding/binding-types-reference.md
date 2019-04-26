@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
 ms.openlocfilehash: d460bf867ce09e614be76d0a4a7ffef01420cf82
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61266507"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 유형 참조 가이드
 
@@ -1821,7 +1821,7 @@ public class LinkWithAttribute : Attribute {
 
 #### <a name="linkwithattributeiscxx"></a>LinkWithAttribute.IsCxx
 
-이 속성을 결과 실행 파일을 c + + 컴파일러는 C 컴파일러는 기본값을 대신 사용 하 여 컴파일할 수 해야 할 경우 true로 설정 합니다. C + + 라이브러리를 바인딩하는 작성 된 경우이 사용 합니다.
+이 속성을 결과 실행 파일을 사용 하 여 컴파일할 수 해야 할 경우 true로 설정 된 C++ 컴파일러는 C 컴파일러는 기본값을 대신 합니다. 바인딩 라이브러리 작성 된 경우이 사용 하 여 C++입니다.
 
 #### <a name="linkwithattributelibraryname"></a>LinkWithAttribute.LibraryName
 

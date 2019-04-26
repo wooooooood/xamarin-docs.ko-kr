@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac 아키텍처
+title: Xamarin.Mac architecture
 description: 이 가이드에서는 objective-c 낮은 수준에서 Xamarin.Mac 및 해당 관계를 살펴봅니다. 컴파일, 선택기, 기관, 앱 시작 및 생성자와 같은 개념을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/12/2017
 ms.openlocfilehash: 1ea38b527acaa89b9f25690de4e55664a7afd9e8
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61034152"
 ---
-# <a name="xamarinmac-architecture"></a>Xamarin.Mac 아키텍처
+# <a name="xamarinmac-architecture"></a>Xamarin.Mac architecture
 
 _이 가이드에서는 objective-c 낮은 수준에서 Xamarin.Mac 및 해당 관계를 살펴봅니다. 컴파일, 선택기, 기관, 앱 시작 및 생성자와 같은 개념을 설명합니다._
 
@@ -34,13 +34,13 @@ Xamarin을 개발 하는 경우 용어 *네이티브* 하 고 *관리* 코드는
 
 ## <a name="requirements"></a>요구 사항
 
-Xamarin.Mac으로 macOS 응용 프로그램을 개발하려면 다음이 필요합니다.
+Xamarin.Mac으로 macOS 애플리케이션을 개발하려면 다음이 필요합니다.
 
 - Mac 실행 중인 macOS Sierra 10.12 이상.
 - 최신 버전의 Xcode (에서 설치 합니다 [앱 스토어](https://itunes.apple.com/us/app/xcode/id497799835?mt=12))
 - 최신 버전의 Xamarin.Mac 및 Mac 용 Visual Studio
 
-Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 같은 시스템 요구 사항이 필요합니다.
+Xamarin.Mac으로 만든 Mac 애플리케이션을 실행하려면 다음과 같은 시스템 요구 사항이 필요합니다.
 
 - Mac OS X 10.7 이상을 실행 하는 Mac.
 

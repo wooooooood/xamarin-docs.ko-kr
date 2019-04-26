@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321575"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Xamarin.Forms에 바인딩할 수 있는 레이아웃
 
@@ -85,7 +85,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 
 ![DataTemplate 사용 하 여 바인딩 가능한 레이아웃](bindable-layouts-images/top-followers.png "데이터 템플릿 사용 하 여 바인딩 가능한 레이아웃")
 
-데이터 템플릿에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)합니다.
+데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
 ## <a name="choosing-item-appearance-at-runtime"></a>런타임 시 선택 항목 모양
 

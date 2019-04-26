@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
 ms.openlocfilehash: 1332a7ef5b8e5bb2f1178582bcf058123f1e177c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61308763"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -40,7 +40,7 @@ _RecyclerView는 컬렉션을 표시 하기 위한 뷰 그룹 ListView 및 GridV
 
 -  **Xamarin.Android** &ndash; 4.20 이상 Xamarin.Android를 설치 하 고 mac 용 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야
 
--  앱 프로젝트를 포함 해야 합니다 **Xamarin.Android.Support.v7.RecyclerView** 패키지 있습니다. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)합니다.
+-  앱 프로젝트를 포함 해야 합니다 **Xamarin.Android.Support.v7.RecyclerView** 패키지 있습니다. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)입니다.
 
 
 ### <a name="overview"></a>개요

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Mac의 Windows
+title: Windows in Xamarin.Mac
 description: 이 문서에서는 windows 및 Xamarin.Mac 응용 프로그램에서 패널을 사용 하 여 작업을 다룹니다. Windows 만들고 패널 Xcode 및 Interface Builder 스토리 보드 및.xib 파일에서 로드 하 고 프로그래밍 방식으로 작업에서 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61240841"
 ---
-# <a name="windows-in-xamarinmac"></a>Xamarin.Mac의 Windows
+# <a name="windows-in-xamarinmac"></a>Windows in Xamarin.Mac
 
 _이 문서에서는 windows 및 Xamarin.Mac 응용 프로그램에서 패널을 사용 하 여 작업을 다룹니다. Windows 만들고 패널 Xcode 및 Interface Builder 스토리 보드 및.xib 파일에서 로드 하 고 프로그래밍 방식으로 작업에서 설명 합니다._
 
@@ -744,7 +744,7 @@ void OpenDialog (NSObject sender)
 
 [![](window-images/panel03.png "특성 검사기")](window-images/panel03.png#lightbox)
 
-- **스타일** -에서 패널의 스타일을 조정할 수 있습니다: 일반 패널 (같습니다 표준 창), 유틸리티 패널 (작은 제목 표시줄이 있는) HUD 패널 (반투명 백그라운드의 일부인 제목 표시줄).
+- **스타일** -에서 패널의 스타일을 조정할 수 있습니다. 일반 패널 (같습니다 표준 창), 유틸리티 패널 (작은 제목 표시줄이 있는) HUD 패널 (반투명 백그라운드의 일부인 제목 표시줄).
 - **비 활성** -에 따라 결정 패널 키 창이 됩니다.
 - **모달 문서** -경우 문서 모달 패널의 응용 프로그램의 창 위에 배치만 됩니다, 다른 모든 부동 합니다.
 

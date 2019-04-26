@@ -6,11 +6,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215880"
 ---
 # <a name="callbacks-on-android"></a>Android에서 콜백
 
@@ -157,7 +157,7 @@ Java 상호 운용성에 대 한 내용은 참조는 놀라운 [Xamarin.Android 
 
 ## <a name="interfaces"></a>인터페이스
 
-인터페이스는 하나의 세부 정보를 제외 하 고 추상 클래스와 거의 비슷하게: Xamarin.Android에 Java를 생성 하지 않습니다. .NET 포함 하기 전에 없는 Java를 구현 하는 다양 한 시나리오 이므로이 C# 인터페이스입니다.
+인터페이스는 하나의 세부 정보를 제외 하 고 추상 클래스와 거의 동일 합니다. Xamarin.Android에 Java를 생성 하지 않습니다. .NET 포함 하기 전에 없는 Java를 구현 하는 다양 한 시나리오 이므로이 C# 인터페이스입니다.
 
 다음을 가정해 보겠습니다 C# 인터페이스.
 
@@ -264,7 +264,7 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-수행한 경우는 `abstract` 하나의 세부 정보를 제외 하 고 작동할 것 위의 클래스 예제: _Xamarin.Android를 조회 하지는 `Invoker`_ 합니다.
+수행한 경우는 `abstract` 하나의 세부 정보를 제외 하 고 작동할 것 위의 클래스 예제: _Xamarin.Android를 조회 하지 합니다 `Invoker`_ 합니다.
 
 이 문제를 해결 하려면 수정 된 C# 클래스 `abstract`:
 

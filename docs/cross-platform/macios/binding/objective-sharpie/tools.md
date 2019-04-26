@@ -7,17 +7,17 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
 ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261170"
 ---
 # <a name="objective-sharpie-tools--commands"></a>목표 Sharpie 도구 및 명령
 
 _개요와 목표 Sharpie 명령줄 인수를 사용 하는 포함 된 도구입니다._
 
-<style type="text/css"> .terminal 파란색 {color: rgb(10,96,254);}.terminal 녹색 {색: rgb(12,156,26);}.terminal 자홍 {색: rgb(152,12,103);} </style>
+<style type="text/css"> .terminal-blue { color: rgb(10,96,254); } .terminal-green { color: rgb(12,156,26); } .terminal-magenta { color: rgb(152,12,103); } </style>
 
 
 목표 Sharpie 성공적으로 되 면 [설치](~/cross-platform/macios/binding/objective-sharpie/get-started.md)터미널을 열고 숙지 합니다 <em>명령</em> 목표 Sharpie에서 제공 하는:
@@ -88,5 +88,5 @@ Xcode Options:
 
 ## <a name="related-links"></a>관련 링크
 
-- [Objective-c 바인딩 라이브러리를 빌드할 Xamarin University 과정:](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie 사용 하 여 Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

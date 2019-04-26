@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 512775864f5ad55ddfedd53b83dd02d7b0e1d1f8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309133"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -52,7 +52,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법에 알아보려면 참조 [
 
 ## <a name="using-the-built-in-themes"></a>기본 테마를 사용 하 여
 
-재질 테마를 사용 하는 가장 쉬운 방법은 사용자 지정 하지 않고 기본 테마를 사용 하 여 앱을 구성 하는 것입니다. 앱은 기본적으로 명시적으로 테마를 구성 하지 않으려는 경우 `Theme.Material` (어두운 테마). 앱에 활동이 하나만 있으면 응용 프로그램 수준 테마를 구성할 수 있습니다. 앱이 여러 작업에 동일한 테마를 사용 하 여 모든 활동 간에 또는 다른 작업에 다양 한 테마를 할당할 수 있도록 응용 프로그램 수준 테마를 구성할 수 있습니다. 다음 섹션에서는 앱 수준 및 작업 수준에서 테마를 구성 하는 방법에 설명 합니다.
+재질 테마를 사용 하는 가장 쉬운 방법은 사용자 지정 하지 않고 기본 테마를 사용 하 여 앱을 구성 하는 것입니다. 앱은 기본적으로 명시적으로 테마를 구성 하지 않으려는 경우 `Theme.Material` (어두운 테마). 앱에 활동이 하나만 있으면 작업 수준에서 테마를 구성할 수 있습니다. 앱이 여러 작업에 동일한 테마를 사용 하 여 모든 활동 간에 또는 다른 작업에 다양 한 테마를 할당할 수 있도록 응용 프로그램 수준 테마를 구성할 수 있습니다. 다음 섹션에서는 앱 수준 및 작업 수준에서 테마를 구성 하는 방법에 설명 합니다.
 
 
 ### <a name="theming-an-application"></a>응용 프로그램 테마

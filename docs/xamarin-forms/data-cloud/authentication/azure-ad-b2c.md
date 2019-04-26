@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331501"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 사용 하 여 사용자 인증
 
@@ -35,8 +35,8 @@ Azure Active Directory B2C는 소비자가에 로그인 하 여 응용 프로그
 모바일 응용 프로그램에 Azure Active Directory B2C id 관리 서비스를 통합 하기 위한 프로세스는 다음과 같습니다.
 
 1. Azure Active Directory B2C 테 넌 트를 만듭니다. 자세한 내용은 [Azure portal에서 Azure Active Directory B2C 테 넌 트를 만드는](/azure/active-directory-b2c/active-directory-b2c-get-started/)합니다.
-1. Azure Active Directory B2C 테 넌 트를 사용 하 여 모바일 응용 프로그램을 등록 합니다. 등록 프로세스에서 할당을 **응용 프로그램 ID** 고유 하 게 식별 하는 응용 프로그램 및 **리디렉션 URL** 응답 응용 프로그램을 다시 보내기 위해 사용할 수 있는 합니다. 자세한 내용은 [Azure Active Directory B2C: 응용 프로그램을 등록](/azure/active-directory-b2c/active-directory-b2c-app-registration/)합니다.
-1. 등록 및 로그인 정책을 만듭니다. 이 정책 정의 등록 및 로그인 하는 동안 소비자가 경험한 환경 및 성공적으로 응용 프로그램이 받을 토큰의 내용을 지정 등록 또는 로그인 합니다. 자세한 내용은 [Azure Active Directory B2C: 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/)합니다.
+1. Azure Active Directory B2C 테 넌 트를 사용 하 여 모바일 응용 프로그램을 등록 합니다. 등록 프로세스에서 할당을 **응용 프로그램 ID** 고유 하 게 식별 하는 응용 프로그램 및 **리디렉션 URL** 응답 응용 프로그램을 다시 보내기 위해 사용할 수 있는 합니다. 자세한 내용은 참조 하세요. [Azure Active Directory B2C: 응용 프로그램을 등록](/azure/active-directory-b2c/active-directory-b2c-app-registration/)합니다.
+1. 등록 및 로그인 정책을 만듭니다. 이 정책 정의 등록 및 로그인 하는 동안 소비자가 경험한 환경 및 성공적으로 응용 프로그램이 받을 토큰의 내용을 지정 등록 또는 로그인 합니다. 자세한 내용은 참조 하세요. [Azure Active Directory B2C: 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/)합니다.
 1. 사용 된 [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) Azure Active Directory B2C 테 넌 트를 사용 하 여 인증 하는 워크플로 시작 하려면 모바일 응용 프로그램에서 합니다.
 
 > [!NOTE]

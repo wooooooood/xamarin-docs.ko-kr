@@ -1,5 +1,5 @@
 ---
-title: IOS 디자이너에서에서 테이블 작업
+title: iOS Designer에서 테이블 작업
 description: 이전 섹션에서 테이블을 사용 하 여 개발 하는 것이 살펴보았습니다. 이 다섯 번째이자 마지막 섹션 내용에서는 지금까지 배운 집계 하 고 스토리 보드를 사용 하 여 기본 작업 목록 응용 프로그램을 만듭니다.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227615"
 ---
-# <a name="working-with-tables-in-the-ios-designer"></a>IOS 디자이너에서에서 테이블 작업
+# <a name="working-with-tables-in-the-ios-designer"></a>iOS Designer에서 테이블 작업
 
 스토리 보드는 wysiwyg (위지윅) iOS 응용 프로그램을 만드는 방법 및 Mac 및 Windows에서 Visual Studio 내에서 지원 됩니다. 스토리 보드에 대 한 자세한 내용은 참조는 [소개에 스토리 보드](~/ios/user-interface/storyboards/index.md) 문서. 스토리 보드도 편집할 수 있도록 셀 레이아웃 *에서* 테이블 및 셀을 사용 하 여 개발을 간소화 하는 테이블
 
-IOS 디자이너에서에서 테이블 보기의 속성을 구성할 때 두 가지가 셀 내용을 선택할 수 있습니다: **동적** 하거나 **정적** 프로토타입 콘텐츠입니다.
+IOS 디자이너에서에서 테이블 보기의 속성을 구성할 때 두 가지가 셀 내용을 선택할 수 있습니다. **동적** 나 **정적** 프로토타입 콘텐츠입니다.
 
 <a name="Prototype_Content" />
 
@@ -79,11 +79,11 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 
 5. 다음을 선택 하 고 속성 패드를 사용 하 여 두 테이블 뷰를 구성 합니다. 뷰와 뷰 컨트롤러가 아닌 선택 되어 있는지 확인 – 선택에 도움이 되도록 문서 개요를 사용할 수 있습니다.
 
-6.  루트 뷰 컨트롤러에 액세스할 수 변경 **콘텐츠: 동적 프로토타입** (디자인 화면의 보기를 레이블이 지정 됩니다 **프로토타입 콘텐츠** ):
+6.  루트 뷰 컨트롤러에 액세스할 수 변경 **콘텐츠: 동적 프로토타입을** (디자인 화면의 보기를 레이블이 지정 됩니다 **프로토타입 콘텐츠** ):
 
     [![콘텐츠 속성을 동적 프로토타입을 설정](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  새 변경 **UITableViewController** 되도록 **콘텐츠: 정적 셀**합니다. 
+7.  새 변경 **UITableViewController** 되도록 **콘텐츠: 고정 셀**합니다. 
 
 
 8. 클래스 이름 및 식별자를 설정할 새 UITableViewController 있어야 합니다. 뷰 컨트롤러와 유형을 선택 _TaskDetailViewController_ 에 대 한 합니다 **클래스** 에 **Properties Pad** – 새 만들어집니다 `TaskDetailViewController.cs` 솔루션의 파일 패드입니다. 입력 된 **StoryboardID** 으로 _세부 정보_아래 예제에 설명 된 대로, 합니다. 이 사용 됩니다 나중에이 보기를 로드 하려면 C# 코드:  
@@ -115,7 +115,7 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 다음을 수행합니다. 
 
 -  끌어서를 **모음 단추 항목** 도구 상자에서를 _탐색 표시줄의 오른쪽_합니다.
--  에 **Properties Pad**아래에 있는 **표시줄 단추 항목** 선택 **식별자: 추가** (있도록를 *+* 단추와). 
+-  에 **Properties Pad**아래에 있는 **표시줄 단추 항목** 선택 **식별자: 추가** (있도록 하는 *+* 더하기 단추). 
 -  이후 단계에서 코드에서 식별할 수 있도록 이름을 지정 합니다. 참고 루트 뷰 컨트롤러 클래스 이름을 지정 해야 합니다 (예를 들어 **ItemViewController**) 막대 단추 항목의 이름을 설정할 수 있도록 합니다.
 
 
@@ -132,7 +132,7 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 -  **섹션**: _2_ 
 -  **스타일**: _그룹화_
 -  **구분 기호**: _없음_
--  **선택 영역**: _선택 항목 없음_
+-  **선택**: _선택 영역 없음_
 
 맨 위 섹션을 선택 및 아래 **속성 > 테이블 뷰 섹션** 변경 **행** 하 _3_아래 그림과 같이:
 
@@ -141,15 +141,15 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 
 열린 각 셀에 대 한 합니다 **Properties Pad** 설정:
 
--  **스타일**: _사용자 지정_
--  **식별자**: (예: 각 셀에 대 한 고유 식별자를 선택 합니다. "_제목_","_노트_","_완료_").
+-  **스타일**:  _사용자 지정_
+-  **식별자**: (예: 각 셀에 대 한 고유 식별자를 선택 합니다. “_title_”, “_notes_”, “_done_”).
 -  스크린샷에 표시 된 레이아웃을 생성 하기 위해 필요한 컨트롤을 끌어 (배치 **UILabel**, **UITextField** 하 고 **UISwitch** 올바른 셀 레이블을 설정 적절 하 게 ie입니다. 제목, 메모 및 완료).
 
 
 두 번째 섹션에서는 설정 **행** 하 _1_ 더 길게 셀의 아래쪽 크기 조정 핸들을 선택 하 고 있습니다.
 
 -  **식별자를 설정할**: 고유한 값 (예: "저장"). 
--  **배경색을 설정**: _색 지우기_ 합니다.
+-  **배경을 설정**:  _색 지우기_ 합니다.
 -  두 개의 단추 셀으로 끌어서 직함을 적절 하 게 설정 (예: _저장_ 하 고 _삭제_) 아래 그림과 같이:
 
    [![아래쪽 섹션에서 두 개의 단추를 설정합니다.](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
@@ -161,10 +161,10 @@ StoryboardTable 예제에서는 두 가지 유형의 UITableView 스토리 보�
 이 스토리 보드를 만드는 마지막 단계는 몇 가지 있습니다. 먼저에서는 각 컨트롤이 여기에 이름을 지정 해야 아래 **Identity > 이름** 되므로 나중에 코드에서 사용할 수 있습니다. 다음과 같이 이름:
 
 -  **제목 UITextField** : _TitleText_
--  **정보 UITextField** : _NotesText_
+-  **UITextField 정보** : _NotesText_
 -  **UISwitch** : _DoneSwitch_
--  **UIButton 삭제할** : _DeleteButton_
--  **저장 UIButton** : _저장 단추_
+-  **UIButton 삭제** : _DeleteButton_
+-  **UIButton 저장** : _SaveButton_
 
 
 <a name="Adding_Code" />

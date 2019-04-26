@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
 ms.openlocfilehash: 984e72f2b3ee11bcc0902663893509e5687fc099
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61026449"
 ---
 # <a name="fragments-walkthrough-ndash-phone"></a>조각 연습 &ndash; 전화
 

@@ -1,5 +1,5 @@
 ---
-title: WatchOS 4 소개
+title: watchOS 4 소개
 description: 이 문서는 이제 Xamarin 개발자에 게 사용할 수 있는 새로운 기능을 설명 하는 watchOS 4, 간략 한 소개를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: ca922840b47899b62615bded852e66fe81b3371c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61223977"
 ---
-# <a name="introduction-to-watchos-4"></a>WatchOS 4 소개
+# <a name="introduction-to-watchos-4"></a>watchOS 4 소개
 
 앱에서 watchOS 4의 새 기능에 액세스 합니다.
 

@@ -1,5 +1,5 @@
 ---
-title: 플랫폼 간 Xamarin.Forms 응용 프로그램 스타일
+title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
 description: 이 문서에는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin.Forms 응용 프로그램 스타일을 지정 하는 방법을 설명 합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -10,11 +10,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191239"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 응용 프로그램 스타일
 

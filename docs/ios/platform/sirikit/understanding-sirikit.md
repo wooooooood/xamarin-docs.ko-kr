@@ -1,5 +1,5 @@
 ---
-title: SiriKit 개념 이해
+title: SiriKit 개념 이해하기
 description: 이 문서에서는 SiriKit Xamarin.iOS 앱에서 사용 하는 데 필요한 핵심 개념을 설명 합니다. 의도 설명 하는 예를 들어, 및 인 텐트 UI 확장을 SiriKit 권한 훌륭한 환경 등을 디자인 합니다.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188984"
 ---
-# <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해
+# <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해하기
 
 _이 문서에서는 Xamarin.iOS 앱에 SiriKit을 사용 해야 하는 주요 개념을 다룹니다._
 
@@ -65,22 +65,22 @@ MonkeyChat 사용자 친구의 연락 자체 책을 유지 하 고 각 화면 �
 
 예를 들어, 사용자가 friend Bobo 메시지를 보낼 경우, Siri 사용 하 여 다음 대화를 해야 할 수 있습니다.
 
-_사용자: Hey Siri MonkeyChat 메시지를 보냅니다._<br />
-_Siri:가?_<br />
-_사용자: Bobo 합니다._<br />
-_Siri: 원하는 Bobo에 게?_<br />
+_사용자: 안녕하세요, Siri MonkeyChat 메시지를 보냅니다._<br />
+_Siri: 부여한?_<br />
+_사용자: Bobo._<br />
+_Siri: Bobo로 업데이트 한다고 가정 하 시겠습니까?_<br />
 _사용자: 자세한 Bananas 보내 주십시오._<br />
 
 다른 사람이 다른 대화와 같은 요청을 해야 합니다.
 
-_사용자: MonkeyChat에 Bobo에 메시지를 보냅니다._<br />
-_Siri: 원하는 Bobo에 게?_<br />
+_사용자: Bobo MonkeyChat에서 메시지를 보냅니다._<br />
+_Siri: Bobo로 업데이트 한다고 가정 하 시겠습니까?_<br />
 _사용자: 자세한 bananas 보내 주십시오._<br />
 
 하 고 다른 사용자 요청을 더 짧게 만들 수 있습니다.
 
-_사용자: MonkeyChat Bobo 자세한 bananas이 보내주세요._<br />
-_Siri: 확인 메시지를 보내는 자세한 bananas을 보내주세요 Bobo Monkeychat에서._<br />
+_사용자: MonkeyChat Bobo 자세한 bananas 보내 주십시오._<br />
+_Siri: 확인 메시지를 보내는 Monkeychat에서 Bobo을 자세한 bananas를 보내 주십시오._<br />
 
 또는 다른 언어로 동일한 요청을 수행 합니다.
 
@@ -89,8 +89,8 @@ _Siri: Oui, envoi 메시지 s'il vous plaît envoyer + de bananes 회사 Bobo �
 
 아직 다른 사용자가 대화의 매우 자세한 정보를 수 있습니다.
 
-_사용자: Hey Siri 있습니다 하세요 부탁를 보내도록 MonkeyChat 앱 시작 메시지를 사용 하 여 텍스트 자세한 bananas를 보내 주세요._<br />
-_Siri:가?_<br />
+_사용자: 안녕하세요, Siri 하세요 부탁 서 수 MonkeyChat 응용 프로그램에서 메시지를 사용 하 여 문자 메시지 보내기 시작 자세한 bananas를 보내 주세요._<br />
+_Siri: 부여한?_<br />
 _사용자: 내 최상의 pal Bobo 합니다._<br />
 
 또한는 Siri 요청 하는 방법에 따라 일부 요청에 응답 하는 여러 가지가 있습니다.
@@ -123,8 +123,8 @@ Siri의 요청을 하면 이들은 Siri 이어지는 단계:
 
 다음 대화 MonkeyChat 앱 상호 작용 하는 방법을 검사 위의 정보를 지정 합니다.
 
-_사용자: Hey Siri Bobo MonkeyChat에서 메시지를 송신 합니다._<br />
-_Siri: 원하는 Bobo에 게?_<br />
+_사용자: 안녕하세요, Siri Bobo MonkeyChat에서 메시지를 보냅니다._<br />
+_Siri: Bobo로 업데이트 한다고 가정 하 시겠습니까?_<br />
 _사용자: 자세한 bananas 보내 주십시오._<br />
 
 Siri 사용자의 음성을 인식 하는 데 앱 대화에 사용 하는 첫 번째 역할은:
@@ -133,7 +133,7 @@ Siri 사용자의 음성을 인식 하는 데 앱 대화에 사용 하는 첫 �
 
 Siri가 해당 데이터베이스의 이름을 "Bobo" 없지만 앱 않으며 해당 어휘를 통해 Siri를 사용 하 여이 정보를 공유 했습니다. Siri Bobo는 받는 사람으로 Siri를 지정 했으므로 인식 앱에도 도움이 됩니다는 *연락처*합니다.
 
-Siri 이상이 되는 메시지 받는 사람에만 보다 보내므로 메시지 콘텐츠를 요구 하는 경우를 확인 하려면 앱 확장을 사용 하 여 신속 하 게 확인 하는 데 필요한 것을 알고 있습니다. Siri가 질문을 사용 하 여 사용자와 응답할 MonkeyChat 수행 되므로: *"원하는 작업 Bobo에 게?"*
+Siri 이상이 되는 메시지 받는 사람에만 보다 보내므로 메시지 콘텐츠를 요구 하는 경우를 확인 하려면 앱 확장을 사용 하 여 신속 하 게 확인 하는 데 필요한 것을 알고 있습니다. MonkeyChat 수행 되므로 질문을 사용 하 여 사용자에 게 Siri 응답할 수 있습니다. *"원하는 작업 Bobo에 게"?*
 
 위의 예제에서는 사용자가 응답을 *"보내주세요 자세한 bananas"*, Siri를 구조적으로 번들은입니다 **의도**:
 

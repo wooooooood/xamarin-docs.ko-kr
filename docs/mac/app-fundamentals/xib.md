@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 45eeee745b133646aef0f775bc879fa6a5d867c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61062909"
 ---
 # <a name="xib-files-in-xamarinmac"></a>xamarin.mac에서.xib 파일
 
@@ -595,4 +595,4 @@ Xamarin.Mac 응용 프로그램에서 Windows 사용 하 여 작업에 대 한 �
 - [메뉴](~/mac/user-interface/menu.md)
 - [대화 상자](~/mac/user-interface/dialog.md)
 - [이미지 작업](~/mac/app-fundamentals/image.md)
-- [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

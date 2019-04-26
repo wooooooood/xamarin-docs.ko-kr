@@ -1,5 +1,5 @@
 ---
-title: 대화형 통합 문서
+title: 대화형 Workbooks
 description: 이 문서에서는 Xamarin Workbooks를 사용 하 여 포함 된 라이브 문서를 만드는 방법을 설명 C# 실험, 교육, 학습 또는 탐색에 대 한 코드입니다.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
@@ -7,13 +7,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61197947"
 ---
-# <a name="interactive-workbooks"></a>대화형 통합 문서
+# <a name="interactive-workbooks"></a>대화형 Workbooks
 
 IDE에서 별도 독립 실행형 응용 프로그램 통합 문서를 사용할 수 있습니다.
 

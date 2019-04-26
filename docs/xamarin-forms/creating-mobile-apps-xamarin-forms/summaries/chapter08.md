@@ -1,6 +1,6 @@
 ---
 title: 8 장의 요약입니다. 코드 및 XAML의 조율
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 8 장 요약 합니다. 코드 및 XAML의 조율'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 8 장의 요약입니다. 코드 및 XAML의 조율
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 75f153499edb6d979f9a0269a1439eaf8ca53878
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334244"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>8 장의 요약입니다. 코드 및 XAML의 조율
 

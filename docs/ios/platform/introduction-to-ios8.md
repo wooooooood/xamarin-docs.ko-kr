@@ -1,5 +1,5 @@
 ---
-title: IOS 8 소개
+title: iOS 8 소개
 description: IOS 8 사용 하 여 Apple는 다양 한 새로운 프레임 워크 및 자극 개발자를 만족 하는 Api를 제공 합니다. 이 가이드의 이러한 새 Api를 소개 하 고 개발자와 사용자 모두 iOS 8 이점을 얻을 수 있습니다 하는 방법을 참조 하세요.
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61317639"
 ---
-# <a name="introduction-to-ios-8"></a>IOS 8 소개
+# <a name="introduction-to-ios-8"></a>iOS 8 소개
 
 _IOS 8 사용 하 여 Apple는 다양 한 새로운 프레임 워크 및 자극 개발자를 만족 하는 Api를 제공 합니다. 이 가이드의 이러한 새 Api를 소개 하 고 개발자와 사용자 모두 iOS 8 이점을 얻을 수 있습니다 하는 방법을 참조 하세요._
 
@@ -44,7 +44,7 @@ iOS 8 단단히 HomeKit 및 HealthKit를 사용 하 여 집의 핵심으로 바�
 
 HomeKit를 사용 하 여 제 3 자 프로그램과 Siri 보조 프로그램을 검색 하 고 해당 개인 홈 구성 데이터베이스에 추가할 및이 데이터를 작업할 편집한 accessories 및 동작을 수행 하는 서비스와 통신 합니다.
 
-### <a name="configuration"></a>구성하기
+### <a name="configuration"></a>구성
 
 아래 다이어그램 HomeKit 액세서리 구성의 기본 계층을 보여 줍니다.
 
@@ -101,7 +101,7 @@ Touch ID 및 Xamarin.iOS 응용 프로그램에 통합 하는 방법에 자세�
 
 문서 선택기 더 자세히 알아보려면 및 Xamarin.iOS 응용 프로그램에 통합 하는 방법을 알아보려면 참조를 [The 문서 선택기 소개](~/ios/platform/document-picker.md) 가이드입니다.
 
-### <a name="handoff"></a>핸드 오프
+### <a name="handoff"></a>Handoff
 
 전달의 일부인 큰 연속성 기능, OS X 및 iOS를 통합 하기 위한 단계를 사용 합니다. 여기에 플랫폼 간 AirDrop, 호출 iPhone, iPad 및 Mac iPhone에서 테더 링의 향상 된 기능에는 SMS를 수행할 수 있게 합니다.
 
@@ -109,7 +109,7 @@ Touch ID 및 Xamarin.iOS 응용 프로그램에 통합 하는 방법에 자세�
 
 자세한 내용은 참조 하십시오 우리의 [핸드 오프](~/ios/platform/handoff.md) 가이드입니다.
 
-## <a name="unified-storyboards"></a>통합된 Storyboards
+## <a name="unified-storyboards"></a>통합 Storyboards
 iOS 8 포함 새 사용자 인터페이스를 만들기 위한 메커니즘을 사용 하기 더욱 간편해졌으며-통합된 스토리 보드입니다. 모든 다른 하드웨어 화면 크기에 맞게 단일 스토리 보드를 사용 하 여 true "한 번 설계 하면, 대부분 사용 하 여" 스타일의 빠르고 응답성이 뷰를 만들 수 있습니다.
 
 Ios8에 전송 하기 전에 개발자는 다음과 같이 사용 됩니다. `UIInterfaceOrientation` 가로 및 세로 모드를 구별할 수 및 `UIInterfaceIdiom` iOS 장치를 구별할 수 있습니다. Ios8에 전송에서는 더 이상 iPhone 및 iPad 장치에 대 한 별도 스토리 보드를 작성 하는 데 필요한-방향 및 장치를 사용 하 여 결정 됩니다 *Size 클래스*합니다.

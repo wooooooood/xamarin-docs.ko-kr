@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 3f83bd394ff631ebe3991a0c3e72240c979454ca
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61341280"
 ---
 편집기에 note: 이 콘텐츠는 의도적으로 삭제 되 고 리디렉션됩니다. 이 리디렉션 다른 리디렉션을 사용 하 여 중앙에서 관리할 수는이 파일 제거 해야 합니다.

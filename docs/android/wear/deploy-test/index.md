@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: db3f9b1c8eaed89046dd10621d5c942b21fae159
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61276354"
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 
@@ -23,7 +23,7 @@ ms.locfileid: "50114745"
 
 Android SDK 에뮬레이터에서 Xamarin.Android Wear 응용 프로그램을 디버깅 하는 방법입니다.
 
-## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Wear 장치에서 디버그](~/android/wear/deploy-test/debug-on-device.md)
+## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Wear 디바이스에서 디버그](~/android/wear/deploy-test/debug-on-device.md)
 
 Xamarin.Android Wear 응용 프로그램에서 배포할 수 있습니다를 직접 Visual Studio 또는 Visual Studio for mac 있도록 Android 장치를 구성 하는 방법
 

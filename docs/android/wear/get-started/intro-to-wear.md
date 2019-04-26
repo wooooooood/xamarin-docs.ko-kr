@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: a35cb82f4f6d20e91f45a782c73d3ef811947c3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61284253"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
 
@@ -129,7 +129,7 @@ Xamarin.Android 사용 하 여 2.0 Wear 앱을 작성 하려면 추가 해야 �
 Android Wear 2.0 2014의 초기 출시 이후 대대적으로 Android Wear 업데이트 됩니다. 다음 섹션에서는 Android Wear 2.0의 주요 기능을 강조 표시 하는 데 대 한 링크가 제공 됩니다 및 앱에서 이러한 새 기능을 사용 하기 시작 합니다. 
 
 
-#### <a name="complications"></a>복잡성
+#### <a name="complications"></a>컴플리케이션
 
 *복잡성* 얼굴 위젯 watch 화면을 살짝 필요 없이 한눈에 볼 수 있는 작은 조사식 됩니다. 복잡성은 데스크톱 스타일 대시보드 위젯;에 대해 비슷합니다. 날씨, 배터리, 일정 이벤트, 및 적합성에 대 한 앱 통계 등의 정보 표시: 
 
@@ -184,11 +184,11 @@ Android Wear 2.0 앱 핸드헬드 앱 독립적으로 작업할 수 있습니다
 Android Wear를 실행할 수 있는 장치의 몇 가지 예는 다음과 같습니다.
 
 * [Motorola 360](https://moto360.motorola.com/)
-* [LG G 시청](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-* [LG G 조사식 R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung 기어 라이브](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+* [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
+* [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
+* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
 * [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-* [ASU ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+* [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 1d159d280bd3b8855c32e3e437dfdefcbe0463cb
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261131"
 ---
 # <a name="unified-api-overview"></a>통합 된 API 개요
 
@@ -40,8 +40,8 @@ Xamarin의 통합 API Mac 및 iOS 지원 32 비트 및 64 비트 응용 프로�
 
 이 시점에서 두 가지 방법으로 Api는 표시 됩니다.
 
--  **클래식 API:** 32 비트 (전용) 제한 및 노출 합니다 `monotouch.dll` 및 `XamMac.dll` 어셈블리.
--  **통합된 API:** 에서 사용할 수 있는 단일 API 사용 하 여 모두 32 비트 및 64 비트 개발을 지원 합니다 `Xamarin.iOS.dll` 및 `Xamarin.Mac.dll` 어셈블리입니다.
+-  **클래식 API:** 32 비트 (전용) 제한 및 노출 된 `monotouch.dll` 및 `XamMac.dll` 어셈블리입니다.
+-  **API 통합된:** 사용할 수 있는 단일 API 사용 하 여 모두 32 비트 및 64 비트 개발을 지원 합니다 `Xamarin.iOS.dll` 및 `Xamarin.Mac.dll` 어셈블리입니다.
 
 즉, 엔터프라이즈에 대 한 새로운 Api를 개발자 (없습니다 대상으로 하는 앱 스토어), 영원히 또는 있습니다 유지 유지는 대로 기존 클래식 Api를 사용 하 여 계속 수 있습니다 업그레이드할 수 있습니다.
 
@@ -55,8 +55,8 @@ Mac 및 iOS 제품 간에 코드를 공유 마찰을 줄이기 위해 제품의 
 
 이 간편 하 게 조건부 컴파일을 사용 하지 않고도 Mac 및 iOS 플랫폼 간에 코드 공유 및 소스 코드 파일의 맨 위에 있는 노이즈를 줄일 수 있습니다.
 
--  **클래식 API:** 네임 스페이스 사용 `MonoTouch.` 또는 `MonoMac.` 접두사입니다.
--  **통합 된 API:** 네임 스페이스 접두사가 없는
+-  **클래식 API:** 네임 스페이스를 사용 하 여 `MonoTouch.` 또는 `MonoMac.` 접두사입니다.
+-  **API 통합된:** 네임 스페이스 접두사가 없는
 
 ## <a name="runtime-defaults"></a>런타임 기본값
 
@@ -179,7 +179,7 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 내부 Xamarin.iOS 클래식 (monotouch.dll) API는 `[Obsolete]` 특성을 두 가지 방법으로 사용 했습니다.
 
--  **IOS API를 사용 되지 않음:** 때 최신 버전으로 대체 되는 때문에 API를 사용 하 여 중지 하는 데 Apple 힌트입니다. 클래식 API 이것도 이며 종종 필요 (iOS의 이전 버전 지원) 하는 경우.
+-  **사용 되지 않는 iOS API:** 이 경우 Apple 힌트를 최신 버전으로 대체 되는 때문에 API를 사용 하 여 중지할 수 있습니다. 클래식 API 이것도 이며 종종 필요 (iOS의 이전 버전 지원) 하는 경우.
  이러한 API (및 `[Obsolete]` 특성) 새 Xamarin.iOS 어셈블리에 포함 되어 있습니다.
 -  **잘못 된 API** 일부 API 이름에 오타를 했습니다.
 
@@ -287,7 +287,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 Unified API에서이 수정 했습니다.  새 어셈블리는 하나만 합니다 `.ctor(NSCoder)` 형식을 준수 하는 경우 `NSCoding`합니다. 또한 이러한 형식을 이제는 `Encode(NSCoder)` 준수 하는 메서드는 `INSCoding` 인터페이스입니다.
 
-낮은 영향: 대부분의 경우에서이 변경 영향을 주지 않습니다 응용 프로그램 이전, 제거, 생성자를 사용할 수 없습니다.
+낮은 영향: 대부분의 경우에서이 변경으로 이전, 제거, 생성자를 사용할 수 없는 응용 프로그램 적용 되지 않습니다.
 
 ## <a name="further-tips"></a>추가 팁
 

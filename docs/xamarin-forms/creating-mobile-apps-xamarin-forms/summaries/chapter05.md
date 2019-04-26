@@ -1,6 +1,6 @@
 ---
 title: 요약 5 장입니다. 크기를 사용 하 여 처리
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 5 장 요약 합니다. 크기를 사용 하 여 처리'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 5 장입니다. 크기를 사용 하 여 처리
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334390"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 5 장입니다. 크기를 사용 하 여 처리
 
@@ -80,7 +80,7 @@ Windows 휴대폰 및 모바일 장치 160 장치 독립적인 1/96 인치 단�
 
 ## <a name="accessibility-issues"></a>액세스 가능성 문제
 
-합니다 **EstimatedFontSize** 프로그램 및 **FitToSizeClock** 프로그램 둘 다 포함 결함이 있다는: 사용자 Android 또는 Windows 10 Mobile, 더 이상 프로그램에 휴대폰의 내게 필요한 옵션 설정을 변경 하는 경우 예측할 수 얼마나 큰 텍스트를 렌더링 글꼴 크기를 기준으로 합니다. 합니다 [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) 샘플에서는이 문제를 보여 줍니다.
+합니다 **EstimatedFontSize** 프로그램 및 **FitToSizeClock** 두 프로그램 결함이 있다는 포함: 사용자가 Android 또는 Windows 10 Mobile 휴대폰의 내게 필요한 옵션 설정을 변경 하면 프로그램 이상 예측할 수 얼마나 큰 텍스트를 렌더링 하 글꼴 크기를 기준으로 합니다. 합니다 [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) 샘플에서는이 문제를 보여 줍니다.
 
 ## <a name="empirically-fitting-text"></a>경험적으로 맞춤 텍스트
 

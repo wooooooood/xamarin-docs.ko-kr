@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
 ms.openlocfilehash: 85edbf657382b7c85ab2c5af543431fb51fb0d4e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019642"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
@@ -52,7 +52,7 @@ Xamarin.Forms에 기본 제공 벡터 그래픽 시스템에 없기 때문에 `B
 
 `WidthRequest` 및 `HeightRequest` 경우 속성은 무시 됩니다는 `BoxView` 는 *제한* 레이아웃으로 경우 레이아웃 컨테이너 자체 크기에 적용 합니다 `BoxView`합니다.
 
-`BoxView` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다. 예를 들어 경우는 `BoxView` 세로의 자식인 `StackLayout`의 수직 크기는 `BoxView` 은 비제한 및 해당 가로 방향 일반적으로 제한 됩니다. 가로 해당 차원에 대 한 예외 되지만: 경우 합니다 `BoxView` 에 해당 `HorizontalOptions` 이외의 값으로 설정 하는 속성 `LayoutOptions.Fill`를 가로 방향도 제한 되지 않습니다. 수 이기도 합니다 `StackLayout` 자체는 경우에 제한 되지 않은 가로 방향에는 `BoxView` 됩니다 가로 방향으로 제한 합니다.
+`BoxView` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다. 예를 들어 경우는 `BoxView` 세로의 자식인 `StackLayout`의 수직 크기는 `BoxView` 은 비제한 및 해당 가로 방향 일반적으로 제한 됩니다. 하지만 가로 해당 차원에 대 한 예외 사항이 있습니다. 경우는 `BoxView` 에 해당 `HorizontalOptions` 이외의 값으로 설정 하는 속성 `LayoutOptions.Fill`를 가로 방향도 제한 되지 않습니다. 수 이기도 합니다 `StackLayout` 자체는 경우에 제한 되지 않은 가로 방향에는 `BoxView` 됩니다 가로 방향으로 제한 합니다.
 
 합니다 [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView) 비제한 하나-인치-사각형을 표시 하는 샘플 `BoxView` 해당 페이지의 가운데에:
 
@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-초침 약간 다르게 처리 됩니다: 부드러운 대신 기계적 보일 이동 하도록 애니메이션 감속/가속 함수 적용 됩니다. 각 틱에를 초침 약간 다시 가져온 다음 대상 짧게 표시 되 면 합니다. 이 약간의 코드 이동 현실감을 많이 추가합니다.
+두 번째 손 모양 아이콘이 약간 다르게 처리 됩니다. 부드러운 대신 기계적 보일 이동 하도록 애니메이션 감속/가속 함수 적용 됩니다. 각 틱에를 초침 약간 다시 가져온 다음 대상 짧게 표시 되 면 합니다. 이 약간의 코드 이동 현실감을 많이 추가합니다.
 
 ## <a name="conclusion"></a>결론
 

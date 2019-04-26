@@ -7,11 +7,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61291162"
 ---
 # <a name="skiasharp-graphics-in-xamarinforms"></a>Xamarin.Forms의 SkiaSharp 그래픽
 
@@ -25,7 +25,7 @@ SkiaSharp는.NET 및 Google 제품에 광범위 하 게 사용 되는 오픈 소
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**Xamarin.Forms에 대 한 웹 세미나: SkiaSharp**
+**웹 세미나: Xamarin.Forms에 대 한 SkiaSharp**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp 준비
 

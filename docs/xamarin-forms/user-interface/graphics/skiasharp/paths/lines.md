@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290783"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -30,7 +30,7 @@ SkiaSharp, 전혀 렌더링에서는 일련의 연결 된 직선 렌더링에서
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 또 다른 문제를 발생 시키는 많은 두께의 줄 그리기를 시작 하면 되지만: 시작 되 고 이러한 두꺼운 선 끝 렌더링 되는 방식을?
+기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 하지만 또 다른 문제를 발생 시키는 많은 두께의 그리기 줄을 시작 하면: 시작 되 고 이러한 두꺼운 선 끝 렌더링 되는 방식을?
 
 작업이 시작 되 고 줄 끝 모양을 라고는 *선 끝 모양을* 또는 Skia는 *스트로크 단면*합니다. "이 컨텍스트에서" cap 라는 단어는 hat의 종류를 의미 &mdash; 줄의 끝에 위치 하는 것입니다. 설정한 합니다 [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) 의 속성을 `SKPaint` 개체의 다음 멤버 중 하나를 [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) 열거형:
 

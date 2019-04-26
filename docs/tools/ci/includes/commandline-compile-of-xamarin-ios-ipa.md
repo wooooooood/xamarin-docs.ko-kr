@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61047861"
+---
 
 솔루션의 릴리스 빌드를 지정 하려면 다음 명령줄 **SOLUTION_FILE.sln** iPhone 용입니다. IPA 위치를 지정 하 여 설정할 수는 `IpaPackageDir` 명령줄에서 속성:
 

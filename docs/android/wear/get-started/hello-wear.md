@@ -1,5 +1,5 @@
 ---
-title: Hello, 마모
+title: Hello, Wear
 description: 첫 번째 Android Wear 앱을 만들고 Wear 에뮬레이터 또는 장치에서 실행 합니다. 이 연습에서는 단추 클릭을 처리 하 고 Wear 장치에서 클릭 카운터를 표시 하는 작은 Android Wear 프로젝트를 만들기 위한 단계별 지침을 제공 합니다. Wear 에뮬레이터 또는 Android 휴대폰에 Bluetooth를 통해 연결 된 Wear 장치를 사용 하 여 앱을 디버그 하는 방법을 설명 합니다. 또한 Android Wear 용 디버깅 팁의 집합을 제공합니다.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
 ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277397"
 ---
-# <a name="hello-wear"></a>Hello, 마모
+# <a name="hello-wear"></a>Hello, Wear
 
 _첫 번째 Android Wear 앱을 만들고 Wear 에뮬레이터 또는 장치에서 실행 합니다. 이 연습에서는 단추 클릭을 처리 하 고 Wear 장치에서 클릭 카운터를 표시 하는 작은 Android Wear 프로젝트를 만들기 위한 단계별 지침을 제공 합니다. Wear 에뮬레이터 또는 Android 휴대폰에 Bluetooth를 통해 연결 된 Wear 장치를 사용 하 여 앱을 디버그 하는 방법을 설명 합니다. 또한 Android Wear 용 디버깅 팁의 집합을 제공합니다._
 

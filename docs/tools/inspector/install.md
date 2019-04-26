@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
-ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373471"
 ---
 # <a name="inspector-installation-and-requirements"></a>관리자 설치 및 요구 사항
 
@@ -70,7 +70,7 @@ Visual Studio를 통해 직접 버그를 보고 해야 합니다.
 
 이 정보는 중요 합니다.
 
-Mac 용 visual Studio
+Visual Studio For Mac
 
 - **Visual Studio > Visual Studio에 대 한 > 세부 정보 표시 > 정보 복사**
 - 버그 보고서에 붙여 넣습니다.
@@ -93,7 +93,7 @@ Visual Studio
 
 - **도움말 > 로그 파일 표시**
 
-Mac 용 visual Studio
+Visual Studio For Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
 

@@ -8,18 +8,18 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 6a2b8c99156963ae167aecd29a618d0feeffbdc7
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61229041"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>watchOS에서 Xamarin 이미지 컨트롤
 
 watchOS 제공 된 [`WKInterfaceImage` ](xref:WatchKit.WKInterfaceImage) 간단한 애니메이션 및 이미지를 표시 하도록 컨트롤입니다. 일부 컨트롤 (예: 단추, 그룹 및 인터페이스 컨트롤러) 배경 이미지를 포함할 수도 있습니다.
 
-![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![](image-images/image-animation.png "간단한 애니메이션을 사용 하 여 Apple Watch")
- <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
+![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![](image-images/image-animation.png "간단한 애니메이션으로 Apple Watch")
+<!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 자산 카탈로그 이미지를 사용 하 여 조사 키트 앱에 이미지를 추가 합니다.
 만 **@2x** 레 티 나 디스플레이 장치를 시청 하는 모든 이후 버전은 필수입니다.

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
 ms.openlocfilehash: bfd7330fa1eee5f80a9043341d9760058d99d48b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321764"
 ---
 # <a name="understanding-the-sample"></a>샘플 이해
 
@@ -29,7 +29,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 모든 경우에는 작업은 웹 서비스를 통해 액세스 되는 백 엔드에 저장 됩니다.
 
-응용 프로그램을 시작할 때 웹 서비스에서 검색 된 모든 작업을 나열 하 고 새 작업을 만들 수 있도록 하는 페이지가 표시 됩니다. 작업을 클릭 하면 두 번째 페이지는 태스크를 편집, 저장, 삭제 및 수 음성 응용 프로그램을 이동 합니다. 최종 응용 프로그램은 다음과 같습니다.
+응용 프로그램을 시작할 때 웹 서비스에서 검색 된 모든 작업을 나열 하 고 새 작업을 만들 수 있도록 하는 페이지가 표시 됩니다. 작업을 클릭 하면 두 번째 페이지는 태스크를 편집, 저장, 삭제 및 수 음성 응용 프로그램을 이동 합니다. 최종 애플리케이션은 다음과 같습니다.
 
 ![](walkthrough-images/app-example-1.png "Todo 응용 프로그램-첫 번째 페이지")
 ![](walkthrough-images/app-example-2.png "Todo 응용 프로그램-두 번째 페이지")

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218238"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 순환 그라데이션
 
@@ -140,7 +140,7 @@ public partial class RadialGradientPage : ContentPage
 
 [![방사형 그라데이션](circular-gradients-images/RadialGradient.png "방사형 그라데이션")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-세 가지 경우 모두 그라데이션의 캔버스를 채웁니다. 왼쪽에 있는 iOS 화면에서 반지름 초과 그라데이션의 마지막 색은 흰색는 계속 됩니다. 결과 `SKShaderTileMode.Clamp`합니다. Android 화면 효과 보여 줍니다. `SKShaderTileMode.Repeat`: 센터에서에서 100 픽셀 그라데이션의 시작 다시 첫 번째 색은 검정입니다. 그라데이션의는 반지름의 모든 100 픽셀을 반복합니다. 
+세 가지 경우 모두 그라데이션의 캔버스를 채웁니다. 왼쪽에 있는 iOS 화면에서 반지름 초과 그라데이션의 마지막 색은 흰색는 계속 됩니다. 결과 `SKShaderTileMode.Clamp`합니다. Android 화면 효과 보여 줍니다. `SKShaderTileMode.Repeat`: 센터에서 100 픽셀로 그라데이션의 검정색 인 첫 번째 색으로 다시 시작 됩니다. 그라데이션의는 반지름의 모든 100 픽셀을 반복합니다. 
 
 유니버설 Windows 플랫폼 화면 오른쪽에 나와 있는에 어떻게 `SKShaderTileMode.Mirror` 대체 directions 그라데이션 하면 합니다. 첫 번째 그라데이션 방법은 검정 가운데에 100 픽셀의 반지름에 흰색입니다. 다음은 200 픽셀 반지름에 검정색으로 100 픽셀 radius에서 흰색 및 다음 그라데이션 다시 반전 됩니다.
 

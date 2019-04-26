@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/03/2017
 ms.openlocfilehash: 85b0c9b0688e9fb310a8f427018a02fe629404bb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61225546"
 ---
 # <a name="watchos-complications-in-xamarin"></a>watchOS Xamarin의 복잡성
 
@@ -24,7 +24,7 @@ _watchOS는 조사식 얼굴에 대 한 사용자 지정 복잡성을 작성 하
 
 먼저 읽으십시오 [Apple 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) 앱은 복잡 한 상황에 적합 한지 확인 하려면. 5 가지 `CLKComplicationFamily` 형식에서 선택할 수 표시:
 
-[![](complications-images/all-complications-sml.png "사용 가능한 5 CLKComplicationFamily 형식이: 순환 작은, 모듈식 작은, 모듈식 큰, Utilitarian 작은, Utilitarian 대규모")](complications-images/all-complications.png#lightbox)
+[![](complications-images/all-complications-sml.png "5 CLKComplicationFamily 형식을 사용할 수 있습니다. 원형 소형 작은 모듈 형식 큰, Utilitarian 작은 모듈 형식, 큰 Utilitarian")](complications-images/all-complications.png#lightbox)
 
 앱은 하나의 스타일 또는 5 개 모두에 표시 되는 데이터에 따라 구현할 수 있습니다.
 또한 시간 이동, 사용자가 디지털 Crown 대로 지난 및/또는 이후 시간에 대 한 값을 제공을 지원할 수 있습니다.

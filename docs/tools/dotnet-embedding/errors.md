@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/11/2018
 ms.openlocfilehash: 5c3dd406f1132f51a86ddf574ab7ad0b279bc9ec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215343"
 ---
 # <a name="net-embedding-errors"></a>.NET 포함 오류
 
@@ -71,7 +71,7 @@ ms.locfileid: "50106314"
 
 <a name="EM0007" />
 
-### <a name="em0007-could-not-get-the-sdk-version-for-sdk"></a>EM0007: '{sdk}'에 대 한 sdk 버전을 가져올 수 없습니다.
+### <a name="em0007-could-not-get-the-sdk-version-for-sdk"></a>EM0007: '{Sdk}'에 대 한 sdk 버전을 가져올 수 없습니다.
 
 도구를 사용 하 여 SDK 버전을 가져올 수 없습니다는 `xcrun --show-sdk-version --sdk {sdk}` 명령입니다. 이 명령은 성공 하 고 SDK 버전을 반환 합니다. 확인 하세요.
 
@@ -89,7 +89,7 @@ ms.locfileid: "50106314"
 
 <a name="EM0010" />
 
-### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>'{File}' 파일 모두에 존재 하기 때문에 프레임 워크 '{0} simulatorFramework}' 및 '{deviceFramework}' EM0010: 병합할 수 없습니다.
+### <a name="em0010-cant-merge-the-frameworks-simulatorframework-and-deviceframework-because-the-file-file-exists-in-both"></a>EM0010: '{File}' 파일 모두에 존재 하기 때문에 프레임 워크 '{0} simulatorFramework}' 및 '{deviceFramework}'를 병합할 수 없습니다.
 
 도구는 서로 공통 된 파일이 있기 때문에 오류 메시지에 언급 된 프레임 워크를 병합 하지 못했습니다.
 
@@ -103,7 +103,7 @@ ms.locfileid: "50106314"
 
 <a name="EM0012" />
 
-### <a name="em0012-the-assembly-name-x-is-not-unique"></a>EM0012: 어셈블리 이름 `X` 고유 하지 않습니다.
+### <a name="em0012-the-assembly-name-x-is-not-unique"></a>EM0012: 어셈블리 이름을 `X` 고유 하지 않습니다.
 
 제공 된 하나 이상의 어셈블리 이름이 동일 하 고 내부 및 런타임 시 구별할 수 없습니다.
 
@@ -117,19 +117,19 @@ ms.locfileid: "50106314"
 
 <a name="EM0014" />
 
-### <a name="em0014-could-not-find-product-product-minversion-is-required"></a>EM0014: {product}를 찾을 수 없습니다 ({product} {min_version} 필수임).
+### <a name="em0014-could-not-find-product-product-minversion-is-required"></a>EM0014: {Product}를 찾을 수 없습니다 ({product} {min_version} 필수임).
 
 시스템에서 오류 메시지에 대 한 종속성을 찾을 수 없습니다.
 
 <a name="EM0015" />
 
-### <a name="em0015-could-not-find-a-valid-version-of-product-found-version-but-at-least-minversion-is-required"></a>EM0015: {product}의 올바른 버전을 찾을 수 없습니다 ({버전}을 찾을 수 있지만 적어도 {min_version} 필요).
+### <a name="em0015-could-not-find-a-valid-version-of-product-found-version-but-at-least-minversion-is-required"></a>EM0015: {Product}의 올바른 버전을 찾을 수 없습니다 ({버전}을 찾을 수 있지만 적어도 {min_version} 필요).
 
 종속성 오류에서 언급 되는 메시지 시스템에서 발견 되었지만 너무 오래 되어 있습니다. 최신 버전으로 업데이트 하세요.
 
 <a name="EM0016" />
 
-### <a name="em0016-could-not-create-symlink-file---target-error-number"></a>EM0016: symlink를 만들지 못했습니다 '{대상}'-> '{file}': 오류 {number 개}
+### <a name="em0016-could-not-create-symlink-file---target-error-number"></a>EM0016: Symlink를 만들 수 없습니다 '{대상}'-> '{file}': 오류 {number 개}
 
 오류 메시지에 언급 한 symlink를 만들 수 없습니다.
 
@@ -141,7 +141,7 @@ ms.locfileid: "50106314"
 
 <a name="EM0099" />
 
-### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: 내부 오류 *. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (https://github.com/mono/Embeddinator-4000/issues)합니다.
+### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: 내부 오류 * 합니다. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (https://github.com/mono/Embeddinator-4000/issues)합니다.
 
 .NET 포함 된 내부 일관성 검사가 실패 하면이 오류 메시지가 보고 됩니다.
 
@@ -153,7 +153,7 @@ ms.locfileid: "50106314"
 
 <a name="EM1010" />
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: 입력 `T` 때문에 생성 되지 않습니다 `X` 지원 되지 않습니다.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: 형식 `T` 때문에 생성 되지 않습니다 `X` 지원 되지 않습니다.
 
 이 **경고** 는 형식 `T` 무시 됩니다 (즉, 아무 것도 생성 됨) 사용 하므로 `X`, 지원 되지 않는 기능입니다.
 
@@ -161,11 +161,11 @@ ms.locfileid: "50106314"
 
 <a name="EM1011" />
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: 입력 `T` 네이티브는 대응 사용자를 사용 하 여 마샬링 코드를 포함 하지 않으므로 생성 되지 않습니다.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: 형식 `T` 네이티브는 대응 사용자를 사용 하 여 마샬링 코드를 포함 하지 않으므로 생성 되지 않습니다.
 
 이 **경고** 하는 형식 `T` 무시 됩니다 (즉, 아무 것도 생성 됨) 마샬링 추가 해야 하는.NET framework에서 무언가 표시 하기 때문에 합니다.
 
-참고: 이후 버전의 도구에서 몇 가지 제한 사항이 지원 가져올 수 있는 것입니다.
+참고: 이 이후 버전의 도구에서 몇 가지 제한 사항이 지원 가져올 수 있습니다.
 
 <a name="EM1020" />
 
@@ -251,7 +251,7 @@ public class MyType {
 
 <a name="EM1041" />
 
-### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041:에서 인덱싱된 속성 `T` 여러 인덱싱된 속성은 지원 되지 않으므로 생성 되지 않습니다.
+### <a name="em1041-indexed-properties-on-t-is-not-generated-because-multiple-indexed-properties-are-not-supported"></a>EM1041: 인덱싱된 속성 `T` 여러 인덱싱된 속성은 지원 되지 않으므로 생성 되지 않습니다.
 
 이 **경고** 는 인덱싱된 속성 `T` 무시 됩니다 (즉, 아무 것도 생성 됨) 여러 인덱싱된 속성은 지원 되지 않으므로 합니다.
 

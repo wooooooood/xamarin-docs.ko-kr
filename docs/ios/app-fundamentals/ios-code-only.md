@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
 ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
-ms.sourcegitcommit: 8dd04ead238be3f46cb6700e8eaa3d87f7b6d533
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57981707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61251382"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 

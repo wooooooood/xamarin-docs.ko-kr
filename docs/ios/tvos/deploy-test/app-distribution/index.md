@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 0a40d50d02008439e81d5db19bcda0647203e2da
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61414430"
 ---
 # <a name="tvos-app-distribution-overview"></a>tvOS 앱 배포 개요
 
@@ -31,7 +31,7 @@ Apple는 Xamarin.tvOS 지 원하는 tvOS 앱을 배포 하는 다음 방법을 �
 2. [**사내(엔터프라이즈)**](#In-House-Distribution) 
 2. [**임시**](#Ad_Hoc_Distribution) 
 
-이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 응용 프로그램을 프로비전해야 합니다. 프로비전 프로필은 응용 프로그램 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
+이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 애플리케이션을 프로비전해야 합니다. 프로비전 프로필은 애플리케이션 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 
 <a name="Apple-TV-App-Store-Distribution" />
 

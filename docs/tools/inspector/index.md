@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
 ms.openlocfilehash: 41111a0ae87b2b1c4a7b1c77bfeeeb3c9e5fa000
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896008"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
@@ -25,7 +25,7 @@ Xamarin Inspector 앱 디버깅 워크플로와 대화형으로 실행할 수 �
 
 Xamarin Inspector를 가져오는 방법에 대 한 정보는 Mac 또는 Windows 컴퓨터에 설치 합니다.
 
-## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[라이브 응용 프로그램 검사](~/tools/inspector/inspect.md)
+## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[라이브 애플리케이션 검사](~/tools/inspector/inspect.md)
 
 해당 상태를 탐색 하 고 일시 중지 하지 않고 조작할 수 있도록 IDE에서 실행 되는 동안 앱을 연결할 검사를 사용 하는 방법을 설명 합니다.
 

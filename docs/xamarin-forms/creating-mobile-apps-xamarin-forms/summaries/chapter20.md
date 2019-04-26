@@ -1,6 +1,6 @@
 ---
 title: 요약 20 장입니다. 비동기 및 파일 I/O
-description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 20 장 요약 합니다. 비동기 및 파일 I/O'
+description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 20 장입니다. 비동기 및 파일 I/O
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61333717"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
 

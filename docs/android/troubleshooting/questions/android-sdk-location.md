@@ -1,5 +1,5 @@
 ---
-title: 내 Android SDK 위치 설정
+title: Android SDK 위치를 어디에 설정할 수 있나요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 11/16/2017
 ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227688"
 ---
-# <a name="where-can-i-set-my-android-sdk-locations"></a>내 Android SDK 위치 설정
+# <a name="where-can-i-set-my-android-sdk-locations"></a>Android SDK 위치를 어디에 설정할 수 있나요?
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -26,7 +26,7 @@ Visual Studio로 이동 **도구 > 옵션 > Xamarin > Android 설정** 검토 �
 
 - Java Development Kit 위치: 
 
-    **C:\\프로그램 파일\\Java\\jdk1.8.0_131**
+    **C:\\Program Files\\Java\\jdk1.8.0_131**
 
 - Android SDK 위치: 
 

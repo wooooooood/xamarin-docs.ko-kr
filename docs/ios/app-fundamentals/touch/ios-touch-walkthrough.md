@@ -1,5 +1,5 @@
 ---
-title: '연습: Xamarin.iOS에서 터치 사용'
+title: '연습: Xamarin.iOS에서 터치를 사용 하 여'
 description: 이 문서에서는 Xamarin.iOS 응용 프로그램에서 샘플 터치 상호 작용, 제스처 인식기 및 사용자 지정 제스처 인식기를 설명 하는 터치를 처리 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407816"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.iOS에서 터치 사용
+# <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.iOS에서 터치를 사용 하 여
 
 이 연습에서는 다른 종류의 터치 이벤트에 응답 하는 코드를 작성 하는 방법에 설명 합니다. 각 예제는 별도 화면에 포함 되어 있습니다.
 
