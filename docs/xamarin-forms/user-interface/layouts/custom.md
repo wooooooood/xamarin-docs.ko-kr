@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: a1027b1fd738c80cf5917effc66957f77a337ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 56f7a5308d15425bdedd7d9098882a072d90d1f7
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61304848"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347064"
 ---
 # <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
 
@@ -380,27 +380,36 @@ public class ImageWrapLayoutPageCS : ContentPage
 ```csharp
 protected override async void OnAppearing()
 {
-  base.OnAppearing();
+    base.OnAppearing();
 
-  var images = await GetImageListAsync();
-  foreach (var photo in images.Photos)
-  {
-    var image = new Image
+    var images = await GetImageListAsync();
+    if (images != null)
     {
-      Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
-    };
-    wrapLayout.Children.Add(image);
-  }
+        foreach (var photo in images.Photos)
+        {
+            var image = new Image
+            {
+                Source = ImageSource.FromUri(new Uri(photo))
+            };
+            wrapLayout.Children.Add(image);
+        }
+    }
 }
 
 async Task<ImageList> GetImageListAsync()
 {
-  var requestUri = "https://docs.xamarin.com/demo/stock.json";
-  using (var client = new HttpClient())
-  {
-    var result = await client.GetStringAsync(requestUri);
-    return JsonConvert.DeserializeObject<ImageList>(result);
-  }
+    try
+    {
+        string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
+        string result = await _client.GetStringAsync(requestUri);
+        return JsonConvert.DeserializeObject<ImageList>(result);
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine($"\tERROR: {ex.Message}");
+    }
+
+    return null;
 }
 ```
 
@@ -415,11 +424,6 @@ async Task<ImageList> GetImageListAsync()
 ![](custom-images/landscape-uwp.png " 샘플 UWP 응용 프로그램 가로 스크린 샷")
 
 각 행의 열 수가 사진 크기, 화면 너비를 픽셀 장치 독립적 단위 수에 따라 달라 집니다. [ `Image` ](xref:Xamarin.Forms.Image) 사진, 비동기적으로 로드 하는 요소 및 합니다 `WrapLayout` 클래스를 자주 호출할 받을 해당 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 각 메서드 `Image` 요소에는 로드 된 사진에 따라 새 크기를 받습니다.
-
-## <a name="summary"></a>요약
-
-이 문서에서는 사용자 지정 레이아웃 클래스를 작성 하는 방법을 설명 하 고 알아봅니다는 방향에 민감한 `WrapLayout` 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 클래스입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

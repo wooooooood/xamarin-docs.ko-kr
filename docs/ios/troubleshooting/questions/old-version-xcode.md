@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
-ms.openlocfilehash: 2a208d39454a33adc849bcccc66802361693e82e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 7cbc14e0a912fe9c55ff672796e839a8dcdfd9b5
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61419317"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347110"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>이전 버전의 Xcode 또는 Xamarin.iOS를 사용할 수 있습니까?
 
@@ -53,7 +53,7 @@ Xamarin.iOS 및 Xcode를 업데이트 하지 가능 적어도 어느 정도의 �
 Xamarin.iOS는 일반적 합리적으로 가능한 한 때마다 이전 Xcode 버전을 지원 합니다. 몇 가지 잠재적인 과제는 다음과 같습니다.
 
 - 최신 Xamarin.iOS 일부 기능을 지원할 수 있습니다 하 고 선택한 Xcode에서 Api가 없음. 
-- **정적 등록 기관** 이어지는 응용 프로그램을 빌드할 Xcode 헤더 파일이 필요 [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) 하거나 [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109)' Api를 사용할 수 없는 경우 오류.
+- **정적 등록 기관** 이어지는 응용 프로그램을 빌드할 Xcode 헤더 파일이 필요 [ `MT0091` ](~/ios/troubleshooting/mtouch-errors.md#MT0091) 하거나 [ `MT4109` ](~/ios/troubleshooting/mtouch-errors.md#MT4109) Api를 사용할 수 없는 경우 오류.
   - 대부분의 관리 되는 링커는 데 도움이 됩니다 (새 API에 대 한 관리 되는 바인딩을 제거) 하 여 사용 하지 않는 경우.
 - Bitcode 빌드 (tvOS 및 watchOS)에 Xcode 9.0 이상 도구 체인 사용 되지 않은 경우 앱 스토어에 제출할을 실패할 수 있습니다.
 

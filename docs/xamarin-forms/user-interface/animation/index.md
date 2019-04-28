@@ -1,19 +1,14 @@
 ---
 title: Xamarin.Forms의 애니메이션
-description: Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도, 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다.
+description: 'Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도, 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다.'
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: bebb3e32f298a2079069787dba3453e1817cf64f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158604"
 ---
+
 # <a name="animation-in-xamarinforms"></a>Xamarin.Forms의 애니메이션
 
 _Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도, 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다._
