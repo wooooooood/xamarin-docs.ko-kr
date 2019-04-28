@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407656"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
-_XAML은 주로 인스턴스화 및 초기화 개체에 대 한 설계 되었습니다. 하지만 XML 문자열로 쉽게 표현할 수 없는 복잡 한 개체에 속성을 설정 해야 하 고 하나의 클래스에 의해 정의 된 속성을 자식 클래스에 설정 해야 하는 경우에 따라 경우가 많습니다. 이러한 두 요구 속성 요소 및 연결 된 속성의 필수 XAML 구문 기능 필요합니다._
+_XAML은 주로 인스턴스화 및 초기화 개체에 대 한 설계 되었습니다. 하지만 종종 속성을 XML 문자열로 쉽게 표현할 수 없는 복잡한 개체 속성으로 설정해야 하고 하나의 클래스에 의해 정의된 속성을 자식 클래스에 설정해야 하는 경우가 있습니다. 따라서 속성 요소 및 연결 속성이라는 필수 XAML 구문 기능이 필요합니다._
 
 ## <a name="property-elements"></a>속성 요소
 
@@ -143,7 +143,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-또 다른 예로, `Grid`는 `RowDefinitions` 및 `ColumnDefinitions`라는 두 개의 속성을 가지고 있습니다. 해당 두 속성은 `RowDefinitionCollection`및 `ColumnDefinitionCollection` 형식이며, 이들은 `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
+다른 예제입니다. 합니다 `Grid` 라는 두 속성이 `RowDefinitions` 고 `ColumnDefinitions`합니다. 해당 두 속성은 `RowDefinitionCollection`및 `ColumnDefinitionCollection` 형식이며, 이들은 `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
 
 다음은 `GridDemoPage` 클래스에 대한 XAML 파일의 시작 부분으로, `RowDefinitions` 및 `ColumnDefinitions` 컬렉션에 대한 속성 요소 태그를 보여줍니다.
 
@@ -351,7 +351,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-진짜 질문은 XAML 파일에 해당 속성 요소가 필요하지 *않은* 이유는 무엇인가입니다.
+현실적인 질문 다음과 같습니다. 이러한 속성 요소 이유는 무엇 인가요 *되지* 는 XAML 파일에 필요한?
 
 XAML에서 사용하기 위해 Xamarin.Forms에 정의된 요소는 클래스의 `ContentProperty` 특성에 플래그가 지정된 하나의 속성을 가질 수 있습니다. 온라인 Xamarin.Forms 문서에서 `ContentPage` 클래스를 검색하면 해당 특성을 볼 수 있습니다.
 
@@ -525,7 +525,7 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 
 ## <a name="summary"></a>요약
 
-속성 요소 및 연결 된 속성을 사용 하 여 기본 XAML 구문의 상당 부분이 설정 되었습니다. 그러나 때로는 해야 리소스 사전에서 간접 방식으로, 예를 들어, 개체 속성을 설정 합니다. 이 방법은 다음 부분을 파트에 대해서는 [3입니다. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)합니다.
+속성 요소 및 연결 속성을 사용하여 상당 부분의 기본 XAML 구문을 설정하였습니다. 그러나 때로는 리소스 사전과 같은 간접 방식으로 개체 속성을 설정해야 합니다. 해당 접근 방식은 다음 부분인 [3부.  XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)에서 다룹니다.
 
 
 
@@ -535,4 +535,4 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-- [5부. MVVM에 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+- [5장. MVVM 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

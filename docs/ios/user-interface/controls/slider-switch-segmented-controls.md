@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61029977"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>슬라이더, 스위치 및 Xamarin.iOS에서 분할 된 컨트롤
 
@@ -77,7 +77,7 @@ switch1.On = true;
  <a name="Segmented_Controls" />
 
 
-## <a name="segmented-controls"></a>분할 된 컨트롤
+## <a name="segmented-controls"></a>분할된 컨트롤
 
 분할 된 컨트롤은 체계적인된 방식으로 사용자가 적은 수의 옵션을 사용 하 여 상호 작용할 수 있도록 합니다. 가로로 배치 하 고 각 세그먼트 별도 단추로 작동 합니다. 분할 된 컨트롤 디자이너를 사용 하는 경우 아래에서 확인할 수 있습니다 **도구 상자 > 컨트롤**, 다음 이미지와 같이 표시 됩니다.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Xamarin.Forms의 애니메이션
 description: Xamarin.Forms는 복잡한 애니메이션을 만들 수 있을 정도로 다양하면서도, 간단한 애니메이션을 직관적으로 만들 수 있는 자체 애니메이션 체계를 가지고 있습니다.
 ms.prod: xamarin
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
 ms.openlocfilehash: bebb3e32f298a2079069787dba3453e1817cf64f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158604"
 ---
 # <a name="animation-in-xamarinforms"></a>Xamarin.Forms의 애니메이션
 
@@ -22,7 +22,7 @@ Xamarin.Forms 애니메이션 클래스는 시각 요소들(Visual Elments)의 �
 
 ## <a name="simple-animationssimplemd"></a>[간단한 애니메이션](simple.md)
 
-[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)클래스를 사용해 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 회전, 크기 조정, 변환 및 페이드 인하는 간단한 애니메이션을 만들 수 있습니다. 이 문서는 `ViewExtensions` 클래스를 이용해 애니메이션을 만들고 취소하는 방법을 보여줍니다.
+[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스를 사용해 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 회전, 크기 조정, 변환 및 페이드 인하는 간단한 애니메이션을 만들 수 있습니다. 이 문서는 `ViewExtensions` 클래스를 이용해 애니메이션을 만들고 취소하는 방법을 보여줍니다.
 
 ## <a name="easing-functionseasingmd"></a>[감속/가속 함수](easing.md)
 
