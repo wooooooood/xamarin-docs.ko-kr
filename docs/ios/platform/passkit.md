@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
 ms.openlocfilehash: d1c640bef41e875b3bb427d657c9c239e4c3e16d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61192678"
 ---
 # <a name="passkit-in-xamarinios"></a>Xamarin.iOS에서 PassKit
 
@@ -169,7 +169,7 @@ Pass 파일의 디렉터리 구조는 다음과 같습니다 (이 ZIP 보관 파
 
 ### <a name="barcodes"></a>바코드
 
-지원 되는 형식은 2D: PDF417, 아즈텍 QR 합니다. Apple 1d 바코드 백라이트 전화 화면에서 검색 하는 데 적합 하지는 클레임입니다.
+만 2D 형식이 지원 됩니다. PDF417, Aztec, QR. Apple 1d 바코드 백라이트 전화 화면에서 검색 하는 데 적합 하지는 클레임입니다.
 
 바코드 아래에 표시 되는 대체 텍스트는 선택 사항 – 일부 merchants 수동으로 읽기/형식 수 있게 되기를 원하는 합니다.
 
@@ -225,9 +225,9 @@ ISO-8859-1 인코딩을 가장 일반적인 확인 패스를 읽어들일 검색
 
 전달 형식 ID에 대 한 각각의 다른 설정 하는 첫 번째 단계입니다 _형식_ 지원 해야 하는 통과 합니다. 전달 ID (또는 전달 형식 식별자)는 Pass에 대 한 고유 식별자를 만듭니다. 이 ID는 인증서를 사용 하 여 개발자 계정을 사용 하 여 패스를 연결할 사용 됩니다.
 
-1. 에 [iOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action), 이동할 **식별자** 선택한 **유형 Id 전달** 합니다. 선택한 합니다 **+** 단추를 새 패스 유형 만들기: [ ![](passkit-images/passid.png "새 패스 유형 만들기")](passkit-images/passid.png#lightbox)
+1. 에 [iOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action), 이동할 **식별자** 선택한 **유형 Id 전달** 합니다. 다음을 선택 합니다 **+** 새 패스 유형을 만드는 단추: [![](passkit-images/passid.png "새 패스 유형 만들기")](passkit-images/passid.png#lightbox)
 
-2.   제공 된 **설명** (이름) 및 **식별자** (고유 문자열) Pass에 대 한 합니다. 모든 전달할 유형 Id 문자열을 사용 하 여 시작 해야 하는 참고 `pass.` 사용 하 여이 예제의 `pass.com.xamarin.coupon.banana` : [ ![](passkit-images/register.png "설명과 식별자를 제공 합니다.")](passkit-images/register.png#lightbox)
+2.   제공 된 **설명** (이름) 및 **식별자** (고유 문자열) Pass에 대 한 합니다. 모든 전달할 유형 Id 문자열을 사용 하 여 시작 해야 하는 참고 `pass.` 사용 하 여이 예제의 `pass.com.xamarin.coupon.banana` : [![](passkit-images/register.png "설명 및 식별자를 제공 합니다.")](passkit-images/register.png#lightbox)
 
 
 3.   전달 ID 키를 눌러 확인 합니다 **등록** 단추입니다.
@@ -236,7 +236,7 @@ ISO-8859-1 인코딩을 가장 일반적인 확인 패스를 읽어들일 검색
 
 이 패스 유형 ID에 대 한 새 인증서를 만들려면 다음을 수행 합니다.
 
-1.  목록에서 새로 만든된 패스 ID를 선택 하 고 클릭 **편집할** : [ ![](passkit-images/pass-done.png "새 패스 ID 목록에서 선택")](passkit-images/pass-done.png#lightbox)
+1.  목록에서 새로 만든된 패스 ID를 선택 하 고 클릭 **편집** : [![](passkit-images/pass-done.png "새 패스 ID 목록에서 선택")](passkit-images/pass-done.png#lightbox)
 
     그런 다음 선택 **Create Certificate...** :
 
