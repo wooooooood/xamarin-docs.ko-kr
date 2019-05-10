@@ -1,27 +1,24 @@
 ---
-title: 데이터를 사용할 수 없는 경우는 EmptyView 표시
+title: Xamarin.Forms CollectionView EmptyView
 description: CollectionView, 빈 뷰를 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 지정할 수 있습니다. 빈 뷰는 문자열로, 뷰 또는 여러 뷰 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: a430387bba83887045e5687c99d9295d4be373e4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 78e9ddcb1d9dd91dadea94016b206867ac9508e6
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019468"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048176"
 ---
-# <a name="display-an-emptyview-when-data-is-unavailable"></a>데이터를 사용할 수 없는 경우는 EmptyView 표시
+# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
 
-![미리 보기](~/media/shared/preview.png)
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` 는 현재 미리 보기, 및 일부 계획된 기능 부족 합니다. 또한 API 구현을 완료 되 면 변경할 수 있습니다.
 
 `CollectionView` 표시할 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 다음 속성을 정의 합니다.
 
@@ -260,8 +257,80 @@ void ToggleEmptyView(bool isToggled)
 
 리소스 사전에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 리소스가](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
 
+## <a name="choose-an-emptyviewtemplate-at-runtime"></a>런타임에 EmptyViewTemplate 선택
+
+모양의 합니다 `EmptyView` 해당 값을 기준으로 설정 하 여 런타임 시 선택할 수 있습니다 합니다 `CollectionView.EmptyViewTemplate` 속성을을 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) 개체:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AdvancedTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="BasicTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:SearchTermDataTemplateSelector x:Key="SearchSelector"
+                                                 DefaultTemplate="{StaticResource AdvancedTemplate}"
+                                                 OtherTemplate="{StaticResource BasicTemplate}" />
+    </ContentPage.Resources>
+
+    <StackLayout Margin="20">
+        <SearchBar x:Name="searchBar"
+                   SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"
+                   Placeholder="Filter" />
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                        EmptyView="{Binding Source={x:Reference searchBar}, Path=Text}"
+                        EmptyViewTemplate="{StaticResource SearchSelector}" />
+    </StackLayout>
+</ContentPage>
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+SearchBar searchBar = new SearchBar { ... };
+CollectionView collectionView = new CollectionView
+{
+    EmptyView = searchBar.Text,
+    EmptyViewTemplate = new SearchTermDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+`EmptyView` 속성을 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성 및 `EmptyViewTemplate` 속성를 `SearchTermDataTemplateSelector` 개체.
+
+경우는 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 실행를 `FilterCommand`, 컬렉션으로 표시를 `CollectionView` 에 저장 된 검색 용어에 대 한 필터링 된를 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성입니다. 필터링 작업에 없는 데이터를 생성 하는 경우는 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 에서 선택한를 `SearchTermDataTemplateSelector` 개체도 설정 됩니다는 `EmptyViewTemplate` 속성 표시 합니다.
+
+다음 예제는 `SearchTermDataTemplateSelector` 클래스:
+
+```csharp
+public class SearchTermDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate OtherTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        string query = (string)item;
+        return query.ToLower().Equals("xamarin") ? OtherTemplate : DefaultTemplate;
+    }
+}
+```
+
+합니다 `SearchTermTemplateSelector` 클래스 정의 `DefaultTemplate` 하 고 `OtherTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 다른 데이터 템플릿에 설정 된 속성을 합니다. 합니다 `OnSelectTemplate` 반환 재정의 `DefaultTemplate`, 검색 쿼리 "xamarin"과 같지 않습니다 때 사용자에 게 메시지를 표시 하는 합니다. 검색 쿼리 "xamarin" 다음과 같을 경우 합니다 `OnSelectTemplate` 반환 재정의 `OtherTemplate`, 사용자에 게 기본 메시지를 표시 하는:
+
+[![CollectionView 런타임 빈 뷰 템플릿 선택, iOS 및 Android에서 스크린샷](emptyview-images/datatemplateselector.png "수집 뷰의 런타임 빈 뷰 템플릿 선택을")](emptyview-images/datatemplateselector-large.png#lightbox "런타임 빈 뷰 템플릿 수집 뷰의 선택")
+
+데이터 템플릿 선택기에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms DataTemplateSelector 만들](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)합니다.
+
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Xamarin.Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

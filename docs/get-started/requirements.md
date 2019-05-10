@@ -6,13 +6,13 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/01/2019
+ms.openlocfilehash: 89afb106320ce77e86a66f2c78bd6e32de8c38f3
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189801"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64986968"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 
@@ -25,10 +25,10 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 다음 운영 체제에 대한 Xamarin.Forms 애플리케이션을 작성할 수 있습니다.
 
 - iOS 8 이상
-- Android 4.4(API 19) 이상([자세한 내용](#android))
+- Android 5.0 (API 21) 이상 ([자세한 내용은](#android))
 - Windows 10 UWP(Universal Windows Platform)([자세한 내용)](#windows10))
 
-개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)에 익숙하다고 가정합니다.
+개발자에 잘 알고 있다고 가정 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)합니다.
 
 ### <a name="additional-platform-support"></a>추가 플랫폼 지원
 
@@ -38,13 +38,6 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 - macOS
 - GTK#
 - WPF
-
-### <a name="platforms-from-earlier-versions"></a>이전 버전의 플랫폼
-
-Xamarin.Forms 3.0을 사용하는 경우 이러한 플랫폼은 지원되지 않습니다.
-
-- *Windows 8.1 / Windows Phone 8.1 WinRT*
-- *Windows Phone 8 Silverlight*
 
 ### <a name="android"></a>Android
 
@@ -98,3 +91,10 @@ UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
 언제든지 [UWP(Univeral Windows Platform) 앱](~/xamarin-forms/platform/windows/installation/index.md)을 기존 Xamarin.Forms 솔루션에 추가할 수 있습니다.
+
+## <a name="deprecated-platforms"></a>사용 되지 않는 플랫폼
+
+3.0 이상 Xamarin.Forms를 사용 하는 경우에 이러한 플랫폼 지원 되지 않습니다.
+
+- *Windows 8.1 / Windows Phone 8.1 WinRT*
+- *Windows Phone 8 Silverlight*

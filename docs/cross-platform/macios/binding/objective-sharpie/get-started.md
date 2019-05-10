@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5e503a82a2b666bf6f8d7d7166475e94546e7
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199782"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978410"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>목표 Sharpie 시작
 
@@ -58,8 +58,3 @@ Xcode 프로젝트가 없습니다. 사용 가능한 경우 올바른 입력된 
 
 **새로운!** 버전 3.0에도 쉽게 바인딩에 대 한 도구 소개 [CocoaPods](https://cocoapods.org) 를 통해를 `sharpie pod` 명령입니다.
 관심이 있다면 라이브러리는 CocoaPod로 사용 가능한 경우 원본에 대해 직접 바인딩을 시도) (대비 목표 Sharpie를 사용 하 여 CocoaPod를 바인딩할 시도 하 여 시작 하는 것이 좋습니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

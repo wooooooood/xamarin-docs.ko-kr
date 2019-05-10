@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 92c068ceb3d382ed4612318dc987d950ec7e7ef2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2cfb15222c33309101366273d5bc9c42db68b436
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61327477"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978116"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Azure 모바일 앱에서 푸시 알림 보내기
 
@@ -23,7 +23,7 @@ _Azure Notification Hubs 다양 한 플랫폼 알림 시스템을 사용 하 여
 
 > [!VIDEO https://youtube.com/embed/le2lDY22xwM]
 
-**Azure 알림 허브 및 Xamarin.Forms 푸시에서 [Xamarin University](https://university.xamarin.com/)**
+**Azure 알림 허브 푸시 및 Xamarin.Forms 비디오**
 
 푸시 알림은 응용 프로그램 계약 및 사용량을 높이기 위해 백 엔드 시스템에서 모바일 장치의 응용 프로그램으로 메시지와 같은 정보를 전송하는 데 사용됩니다. 알림은 사용자가 알림을 사용하는 대상 응용 프로그램을 활성화 하지 않은 경우에도 언제든지 보낼 수 있습니다.
 

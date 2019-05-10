@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8c4dcbe0baf74479e94f8663280e7654b4d58a9d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346943"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978161"
 ---
 # <a name="binding-ios-libraries"></a>IOS 라이브러리 바인딩
 
@@ -38,15 +38,13 @@ Xamarin.iOS 및 Xamarin.Mac CocoaPods 및 Objective-c 라이브러리 바인딩 
 이 페이지에서는 오픈 소스를 사용 하 여 iOS 바인딩 프로젝트 만들기의 단계별 연습은 [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) 예로 Objective C 프로젝트입니다. 합니다 **InfColorPicker** 라이브러리는 사용자가 색 선택 영역을 보다 친숙 한 만들기, HSB 표현에 따라 색을 선택할 수 있는 재사용 가능한 뷰 컨트롤러를 제공 합니다.
 목표 Sharpie 바인딩 프로세스를 지원 하기 위해 사용 됩니다.
 
-## <a name="xamarin-university-lightning-lecture"></a>Xamarin University 번개 강의
+## <a name="video"></a>비디오
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS 바인딩 c에서 /C++으로 [Xamarin University](https://university.xamarin.com/)**
+**iOS 바인딩 c에서 /C++ 비디오**
 
 ## <a name="related-links"></a>관련 링크
 
 - [Objective-C 바인딩](~/cross-platform/macios/binding/index.md)
 - [Mac 바인딩](~/mac/platform/binding.md)
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

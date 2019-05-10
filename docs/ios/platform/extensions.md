@@ -8,18 +8,18 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322063"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978584"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**ios에서 확장을 만들어 [Xamarin University](https://university.xamarin.com/)**
+**IOS에서 비디오 확장명 만들기**
 
 확장을 iOS 8에에서 도입 된 특수화 된 `UIViewControllers` 하 여 표시 되는 표준 컨텍스트 내에서 iOS 등으로 내 합니다 **알림 센터**처럼 특수화 하는 데 사용자가 요청 하는 사용자 지정 키보드 형식 입력 또는 다른 컨텍스트 확장 필터 특수 효과 제공할 수 있는 사진 편집을 선호 합니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e820a0c208907a95dda4a50427bb4dac27b88964
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61200287"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977900"
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예제
 
@@ -137,8 +137,3 @@ Done.
 이 두 파일 이제 Mac 용 Visual Studio에서 바인딩 프로젝트에 추가 수 또는 직접 전달할 업데이트가 완료 되 면 합니다 `btouch` 또는 `bmac` 최종 바인딩을 생성 하는 도구입니다.
 
 바인딩 프로세스를 세부적 설명은 참조 하십시오 우리의 [연습은 지침](~/ios/platform/binding-objective-c/walkthrough.md)합니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

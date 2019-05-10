@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 3f1e1ce324e849c0c939d936eb6ee1470cf24a3b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61266610"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978450"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 
@@ -45,17 +45,13 @@ C Api만을 바인딩하는 경우이 P/Invoke 프레임 워크에 대 한 표�
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[바인딩 샘플](https://github.com/mono/monotouch-bindings)
 
-새 바인딩 프로젝트를 만들 때 대 한 참조를 사용 하는 수 있는 타사 바인딩의 컬렉션입니다.
+새 바인딩 프로젝트를 만들 때 참조로 사용할 수 있는 타사 바인딩의 컬렉션입니다.
 
 ## <a name="mac"></a>Mac
 
 지금까지 [Mac 바인딩](~/mac/platform/binding.md) 매우 수동 프로세스가 되었습니다. 현재는 [다운로드할 수 있는 미리 보기](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) mac 용 Visual Studio의 향후 릴리스에 대 한 Mac 바인딩 프로젝트 지원
 
-
-
 ## <a name="related-links"></a>관련 링크
 
 - [iOS Binding](~/ios/platform/binding-objective-c/index.md)
 - [Mac 바인딩](~/mac/platform/binding.md)
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

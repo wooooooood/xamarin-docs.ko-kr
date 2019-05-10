@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300397"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977787"
 ---
 # <a name="layouts-in-xamarinforms"></a>Xamarin.Forms에서 레이아웃
 
@@ -23,7 +23,7 @@ Xamarin.Forms 여러 레이아웃 고 화면의 콘텐츠를 구성 하기 위�
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Xamarin.Forms 레이아웃으로 [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 레이아웃 비디오**
 
 각 레이아웃 컨트롤은 화면 방향 변경을 처리 하는 방법에 대 한 세부 정보 뿐만 아니라, 아래 설명 되어 있습니다.
 

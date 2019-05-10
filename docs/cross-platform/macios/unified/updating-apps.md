@@ -6,25 +6,21 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b8e82a1191f3213453e9a213ea615e476662d5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61195602"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978218"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Unified API로 기존 앱을 업데이트 하는 중입니다.
 
 > [!IMPORTANT]
-> 앞에 통합 API를 사용 하 여 Xamarin 클래식 API는 더 이상 사용 되지 않습니다. 
+> 앞에 통합 API를 사용 하 여 Xamarin 클래식 API는 더 이상 사용 되지 않습니다.
 > - 클래식 API (monotouch.dll)를 지원 하기 위해 Xamarin.iOS의 마지막 버전 9.10 Xamarin.iOS 했습니다.
 > - Xamarin.Mac을 클래식 API를 계속 지원 되지만 더 이상으로 업데이트 됩니다. 되지 하므로 개발자가 응용 프로그램 통합 API로 이동 해야 합니다.
 
 ## <a name="how-to-update-your-apps"></a>앱을 업데이트 하는 방법
-
-Xamarin University에 자유롭게 사용할 수 있는 비디오를 주지 **iOS 통합 API로**합니다. 방문 [Xamarin University 번개 강의](http://university.xamarin.com/lightninglectures) 를 시청 하세요!
-
-[ ![](updating-apps-images/xamu-video-sml.png "Xamarin University")](http://university.xamarin.com/lightninglectures)
 
 앱을 업데이트 하는 다음과 같은 세 가지 단계가 있습니다.
 

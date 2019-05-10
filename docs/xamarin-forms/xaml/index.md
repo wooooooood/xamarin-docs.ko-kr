@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 073bfc27b45a802fd5d6062d4750cc3e20a065e6
+ms.sourcegitcommit: 0d2f708f6d581e94302f26d4670458837dfaa31c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075270"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64992348"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
@@ -21,9 +21,6 @@ _XAML은 사용자 인터페이스를 정의하는 데 사용하는 선언적 �
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
 **Evolve 2016: XAML 마스터 되 고**
-
-> [!NOTE]
-> [XAML Standard 미리 보기](standard/index.md) 사용해 보기
 
 ## <a name="xaml-controlsxaml-controlsmd"></a>[XAML 컨트롤](xaml-controls.md)
 

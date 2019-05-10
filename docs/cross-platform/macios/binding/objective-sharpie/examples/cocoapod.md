@@ -6,12 +6,12 @@ ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
-ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 266f2bca1f4a96242b17080e60c9f43cb956a5fd
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61200317"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977878"
 ---
 # <a name="real-world-example-using-cocoapods"></a>CocoaPods를 사용 하 여 실제 예제
 
@@ -94,5 +94,3 @@ Done.
 - [Objective-c 바인딩 개요](~/cross-platform/macios/binding/overview.md)
 - [Objective-c 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [연습: iOS Objective-c 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

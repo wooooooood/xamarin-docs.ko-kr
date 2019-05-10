@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: ca87e5997fa05e014be56f85087ce3e7ffe1ab12
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 04/11/2019
+ms.openlocfilehash: 7dc9a0c0d7330588dc4a6d3f3dedd4b72211f019
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250889"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048021"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -417,6 +417,19 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
 |`width`|`VisualElement`|_Double_ \| `initial`|`min-width: 320;`|
 
+> [!NOTE]
+> `initial` 모든 속성에 대 한 유효한 값이입니다. 다른 스타일에서 설정 된 값 (기본값으로 다시 설정)을 지웁니다.
+
+다음 속성을 현재 지원 되지 않습니다.
+
+- `all: initial`.
+- 레이아웃 속성 (상자 또는 그리드)입니다.
+- 줄임 속성 같은 `font`, 및 `border`합니다.
+
+또한 방법이 없는 `inherit` 값 등 상속은 지원 되지 않습니다. 예를 들어, 설정할 수 없습니다, 따라서 합니다 `font-size` 레이아웃의 속성 모두 예상 합니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 값을 상속할 수에서. 한 가지 예외는 합니다 `direction` 속성의 기본값은의 `inherit`합니다.
+
+### <a name="xamarinforms-specific-properties"></a>Xamarin.Forms 특정 속성
+
 다음 Xamarin.Forms 특정 CSS 속성 에서도 지원 됩니다 (에 **값** 열 유형은 _기울임꼴_반면 문자열 리터럴은 `gray`):
 
 |속성|적용 대상|값|예제|
@@ -434,16 +447,23 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`-xf-thumb-color`|`Slider`|_색_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_Double_ \| `initial` |`-xf-spacing: 8;`|
 
-> [!NOTE]
-> `initial` 모든 속성에 대 한 유효한 값이입니다. 다른 스타일에서 설정 된 값 (기본값으로 다시 설정)을 지웁니다.
+### <a name="xamarinforms-shell-specific-properties"></a>Xamarin.Forms 셸 특정 속성
 
-다음 속성을 현재 지원 되지 않습니다.
+다음 Xamarin.Forms 셸 특정 CSS 속성 에서도 지원 됩니다 (에 **값** 열 유형은 _기울임꼴_반면 문자열 리터럴은 `gray`):
 
-- `all: initial`.
-- 레이아웃 속성 (상자 또는 그리드)입니다.
-- 줄임 속성 같은 `font`, 및 `border`합니다.
-
-또한 방법이 없는 `inherit` 값 등 상속은 지원 되지 않습니다. 예를 들어, 설정할 수 없습니다, 따라서 합니다 `font-size` 레이아웃의 속성 모두 예상 합니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 값을 상속할 수에서. 한 가지 예외는 합니다 `direction` 속성의 기본값은의 `inherit`합니다.
+|속성|적용 대상|값|예제|
+|---|---|---|---|
+|`-xf-flyout-background`|`Shell`|_색_ \| `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_색_ \| `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_색_ \| `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_색_ \| `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_색_ \| `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_색_ \| `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_색_ \| `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_색_ \| `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_색_ \| `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_색_ \| `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_색_ \| `initial` |`-xf-shell-unselected: limegreen;`|
 
 ### <a name="color"></a>색
 
@@ -484,7 +504,7 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS, [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 CSS 비디오**
 
 ## <a name="related-links"></a>관련 링크
 

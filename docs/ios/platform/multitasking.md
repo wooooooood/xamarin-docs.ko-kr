@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 68c2ae6eace2669d2ea6c77d72f4476d767c0a7d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6a9c66720aeb97c5b894cbea42c6cc0c5285c67d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61426314"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978622"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.iOS 방향의 iPad 용 멀티태스킹
 
@@ -39,7 +39,7 @@ iOS 9 iPad 특정 하드웨어에서 동시에 두 개의 앱을 실행 하기 �
 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
-**IPad 용 멀티태스킹 여 [Xamarin University](https://university.xamarin.com)**
+**비디오 iPad 용 멀티태스킹**
 
 
 <a name="Multitasking-QuickStart" />

@@ -6,12 +6,12 @@ ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261170"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977660"
 ---
 # <a name="objective-sharpie-tools--commands"></a>목표 Sharpie 도구 및 명령
 
@@ -85,8 +85,3 @@ Xcode Options:
 <span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
 
 위의 보면 있다는 것을 `iphoneos9.1` SDK 컴퓨터에 설치 되어 있고 `arm64` 아키텍처 지원 합니다. 이 섹션에 있는 모든 샘플에 대 한이 값이를 사용 합니다. 이 정보를 사용 하 여 초기에는 Objective C 라이브러리 헤더 파일을 구문 분석할 준비가 됩니다 `ApiDefinition.cs` 고 `StructsAndEnums.cs` 바인딩 프로젝트에 대 한 합니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

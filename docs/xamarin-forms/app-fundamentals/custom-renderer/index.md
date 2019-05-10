@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666374"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978133"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러
 
@@ -58,8 +58,6 @@ Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 
 
 이 문서에서는 웹의 비디오, 애플리케이션 리소스로 포함된 비디오 또는 사용자 디바이스의 비디오 라이브러리에 저장된 비디오를 재생할 수 있는 사용자 지정 `VideoPlayer` 컨트롤을 구현하는 렌더러를 작성하는 방법을 보여줍니다. 메서드 구현 및 읽기 전용 바인딩 가능 속성을 비롯한 여러 가지 기술을 보여줍니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
 - [효과](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [사용자 지정 렌더러(Xamarin University 비디오)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

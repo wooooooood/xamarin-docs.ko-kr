@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: bc50f3567135d5b1dc805fa691cdd95acadf34f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b1453164533e2905e78407f33d79a178c7f1ae8
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61327925"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978280"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Azure Cosmos DB 문서 데이터베이스를 사용합니다.
 
@@ -23,7 +23,7 @@ _Azure Cosmos DB 문서 데이터베이스는 원활한 확장 및 전역 복제
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
-**Microsoft Azure Cosmos DB에서 [Xamarin University](https://university.xamarin.com/)**
+**Microsoft Azure Cosmos DB 비디오**
 
 Azure Cosmos DB 문서 데이터베이스 계정은 Azure 구독을 사용 하 여 프로 비전 할 수 있습니다. 각 데이터베이스 계정에는 0 개 이상의 데이터베이스가 있을 수 있습니다. Azure Cosmos db에서 문서 데이터베이스는 문서 컬렉션 및 사용자에 대 한 논리적 컨테이너입니다.
 

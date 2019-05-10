@@ -1,27 +1,24 @@
 ---
-title: 항목을 스크롤하여
+title: Xamarin.Forms CollectionView 스크롤
 description: 스크롤을 시작 하는 사용자 천공 기와 때 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 또한 CollectionView 프로그래밍 방식으로 스크롤하여 항목 두 ScrollTo 메서드를 정의 합니다.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367659"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048168"
 ---
-# <a name="scroll-an-item-into-view"></a>항목을 스크롤하여
+# <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
-![미리 보기](~/media/shared/preview.png)
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` 는 현재 미리 보기, 및 일부 계획된 기능 부족 합니다. 또한 API 구현을 완료 되 면 변경할 수 있습니다.
 
 `CollectionView` 두 정의 `ScrollTo` 메서드를 스크롤하여 항목입니다. 오버 로드 중 하나는 동안 지정된 된 항목을 뷰로 스크롤합니다 다른 보기에 지정된 된 인덱스에 항목을 스크롤합니다. 두 오버 로드는 스크롤 완료 된 후 항목의 정확한 위치를 나타내기 위해 지정 될 수 있는 추가 인수 및 애니메이션 스크롤 효과를 줄 지 여부를 갖습니다.
 

@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 04/10/2019
+ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343299"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048327"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -27,6 +27,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 - [`x:Null`](#null) – `null` 값으로 특성을 설정합니다.
 - [`OnPlatform`](#onplatform) – 플랫폼별 기준에서 UI 모양을 사용자 지정합니다.
 - [`OnIdiom`](#onidiom) – 응용 프로그램이 실행 중인 장치의 관용구를 기반으로 UI 모양을 사용자 지정합니다.
+- [`DataTemplate`](#datatemplate-markup-extension) -형식으로 변환 된 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)합니다.
 
 추가적인 XAML 태그 확장은 지금까지 다른 XAML 구현에서 지원되었으며, Xamarin.Forms에서도 지원됩니다. 해당 내용은 다음과 같이 다른 글에서 더 자세히 설명합니다.
 
@@ -503,7 +504,7 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="onidiom-markup-extension"></a>OnIdiom 태그 확장
 
-`OnIdiom` 태그 확장을 사용하면 응용 프로그램이 실행 중인 장치의 관용구를 기반으로 UI 모양을 사용자 지정할 수 있습니다. 다음 속성을 정의하는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스에서 지원됩니다.
+`OnIdiom` 태그 확장을 사용 하면 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정할 수 있습니다. 다음 속성을 정의하는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스에서 지원됩니다.
 
 - 장치 관용구를 나타내는 속성에 적용할 기본 값으로 설정하는 `object` 유형의 `Default`.
 - 휴대폰에 적용할 값으로 설정하는 `object` 유형의 `Phone`.
@@ -537,6 +538,25 @@ public partial class TypeDemoPage : ContentPage
 
 [![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
+## <a name="datatemplate-markup-extension"></a>DataTemplate 태그 확장
+
+합니다 `DataTemplate` 태그 확장을 사용 하면 형식으로 변환 하는 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)합니다. 지 원하는 합니다 `DataTemplateExtension` 클래스를 정의 하는 `TypeName` 형식의 속성을 `string`가 변환할 형식의 이름으로 설정를 `DataTemplate`. `TypeName` 속성은 `DataTemplateExtension`의 콘텐츠 속성입니다. 따라서 XAML 태그 식 중괄호를 사용 하 여 표현에서 제거할 수 있습니다는 `TypeName=` 식의 일부입니다.
+
+> [!NOTE]
+> XAML 파서에서 허용 합니다 `DataTemplateExtension` 로 축약할 수 클래스 `DataTemplate`합니다.
+
+다음 예제에서 표시 된 것과 같이 셸 응용 프로그램에서이 태그 확장의 일반적인 사용이입니다.
+
+```xaml
+<ShellContent Title="Monkeys"
+              Icon="monkey.png"
+              ContentTemplate="{DataTemplate views:MonkeysPage}" />
+```
+
+이 예제에서는 `MonkeysPage` 에서 변환 되는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 에 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)의 값으로 설정 된를 `ShellContent.ContentTemplate` 속성. 이렇게 하면 `MonkeysPage` 페이지 탐색을 발생 시 생성 뿐만 아니라 응용 프로그램 시작 시.
+
+셸 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 셸](~/xamarin-forms/app-fundamentals/shell/index.md)합니다.
+
 ## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장 정의
 
 Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장이 필요하다면 [직접 만들기](creating.md)를 참조하십시오.
@@ -548,3 +568,4 @@ Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장이 필요하다면 [
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [동적 스타일](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms 셸](~/xamarin-forms/app-fundamentals/shell/index.md)합니다.

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a7dbe7ae5bb1162bcbcb58ea1b39df197b8ed916
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61246339"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977721"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설치
 
@@ -27,7 +27,7 @@ Xamarin.Forms는 Windows Presentation Foundation (WPF)에 대 한 미리 보기 
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Xamarin.Forms 3.0 WPF 지원이, [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 WPF 지원 비디오**
 
 ## <a name="adding-a-wpf-app"></a>WPF 앱 추가
 

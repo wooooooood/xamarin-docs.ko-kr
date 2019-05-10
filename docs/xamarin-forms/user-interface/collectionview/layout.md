@@ -1,27 +1,24 @@
 ---
-title: Xamarin.Forms CollectionView 레이아웃 지정
+title: Xamarin.Forms CollectionView 레이아웃
 description: 기본적으로 CollectionView 세로 목록에 해당 항목을 표시 됩니다. 그러나 가로 및 세로 목록 및 표를 지정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367692"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048247"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView 레이아웃 지정
+# <a name="xamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView 레이아웃
 
-![미리 보기](~/media/shared/preview.png)
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` 는 현재 미리 보기, 및 일부 계획된 기능 부족 합니다. 또한 API 구현을 완료 되 면 변경할 수 있습니다.
 
 `CollectionView` 레이아웃을 제어 하는 다음 속성을 정의 합니다.
 
@@ -43,7 +40,7 @@ ms.locfileid: "61367692"
 - `SnapPointsAlignment`형식의 `SnapPointsAlignment`, 끌기 지점 항목을 사용 하 여 정렬 되는 방법을 지정 합니다.
 - `SnapPointsType`형식의 `SnapPointsType`를 스크롤할 때 맞춤 지점이의 동작을 지정 합니다.
 
-이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다. 끌기 지점에 대 한 자세한 내용은 참조 하세요. [맞춤 지점을](scrolling.md#snap-points) 에 [항목을 스크롤하여](scrolling.md) 가이드입니다.
+이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다. 끌기 지점에 대 한 자세한 내용은 참조 하세요. [맞춤 지점을](scrolling.md#snap-points) 에 [Xamarin.Forms CollectionView 스크롤](scrolling.md) 가이드입니다.
 
 `ItemsLayoutOrientation` 열거형은 다음 멤버를 정의 합니다.
 
@@ -344,7 +341,7 @@ CollectionView collectionView = new CollectionView
 - `MeasureFirstItem` – 첫 번째 항목으로 같은 크기로 지정 되는 모든 후속 항목을 사용 하 여 첫 번째 항목만 측정 됩니다.
 
 > [!IMPORTANT]
-> `MeasureFirstItem` 전략을 크기 조정 항목 크기의 모든 항목에서 균일 할 것 및 성능이 향상된 됩니다 있는 상황에서 사용 해야 합니다.
+> `MeasureFirstItem` 여기서 항목 크기에서 모든 항목 동일 하 게 되는 상황에서 사용할 때 성능이 향상된 하면 전략의 크기를 조정 합니다.
 
 다음 코드 예제에서는 설정 된 `ItemSizingStrategy` 속성:
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> 전략을 크기 조정 항목이 현재 구현된에서 iOS에만 표시 됩니다.
+
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [항목을 스크롤하여](scrolling.md)
+- [Xamarin.Forms CollectionView 스크롤](scrolling.md)

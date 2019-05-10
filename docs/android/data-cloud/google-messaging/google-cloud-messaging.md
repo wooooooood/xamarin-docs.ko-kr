@@ -6,25 +6,26 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 04/12/2018
-ms.openlocfilehash: c2ca567ffcb247622d1b3e8f3e0136c453723b96
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/02/2019
+ms.openlocfilehash: 46de067e52ff141ea30a097562874ff4b2fa1c01
+ms.sourcegitcommit: 53480ed32a126f88eec82e8c8ee5ed8d30616c44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61017683"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "65017704"
 ---
 # <a name="google-cloud-messaging"></a>Google Cloud Messaging
+
+> [!WARNING]
+> Google GCM을 2018 년 4 월 10 일부 터는 사용 되지 않습니다. 다음 문서 및 샘플 프로젝트를 더 이상 관리할 수 없습니다. Google의 GCM 서버 및 클라이언트 Api는 2019 년 5 월 29 일 즉시 제거 됩니다. Google Firebase Cloud Messaging (FCM)에 GCM 앱을 마이그레이션하는 것이 좋습니다. GCM 사용 중단 및 마이그레이션에 대 한 자세한 내용은 참조 하세요. [Cloud Messaging 사용 되지 않는 Google](https://developers.google.com/cloud-messaging/)합니다.
+>
+> Firebase Cloud Messaging을 사용 하 여 Xamarin을 사용한 시작을 참조 하세요 [Firebase Cloud Messaging](firebase-cloud-messaging.md)합니다.
 
 _Google Cloud Messaging (GCM)는 모바일 앱 및 서버 응용 프로그램 간의 메시징에 유용한 서비스입니다. GCM 작동 하는 방법의 개요를 제공 하는이 문서 및 앱이 GCM 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다._
 
 [![Google Cloud Messaging 로고](google-cloud-messaging-images/preview-sml.png)](google-cloud-messaging-images/preview.png#lightbox)
 
 이 항목에서는 Google Cloud Messaging가 라우팅하는 방법 간에 앱 및 앱 서버의 메시지의 대략적인 개요를 제공 및 앱에서 GCM 서비스를 사용할 수 있도록 자격 증명을 획득 하는 것에 대 한 단계별 절차를 제공 합니다.
-
-> [!NOTE]
-> GCM에 의해 대체 되었습니다 [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
-> GCM 서버 및 클라이언트 Api [되지](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) 더 이상 사용할 수 있는 한 빨리 2019 년 4 월 11 일을 합니다.
 
 ## <a name="overview"></a>개요
 

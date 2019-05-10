@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 0270f4a5ddab593372eb6687650e24d627f97c62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2ab71fa96be44168a52e5dde24967136e9a06fb
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61264191"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64992217"
 ---
 Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visual Studio 2019 설치:
 
@@ -21,7 +21,7 @@ Xamarin의 일부로 설치할 수는 _새_ 다음 단계를 사용 하 여 Visu
 
     ![설치 단추](~/get-started/installation/windows-images/vs2019-click-install.png)
 
-   Visual Studio 2019의 버전을 설치 하는 따라 설치 프로세스에는 완료 하는 데 시간이 오래 걸릴 수 있습니다. 진행률 표시줄을 통해 설치를 모니터링할 수 있습니다.
+   진행률 표시줄을 사용 하 여 설치를 모니터링 하려면:
 
     ![설치 중 진행률 표시줄](~/get-started/installation/windows-images/vs2019-progress-bars.png)
 

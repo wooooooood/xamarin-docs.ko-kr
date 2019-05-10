@@ -1,27 +1,24 @@
 ---
-title: Xamarin.Forms CollectionView 데이터로 채우기
+title: Xamarin.Forms CollectionView 데이터
 description: CollectionView IEnumerable을 구현 하는 모든 컬렉션이 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 채워집니다.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 1350d5a5a0845029b7ef6a06647ad4c56f0f8135
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367033"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048256"
 ---
-# <a name="populate-xamarinforms-collectionview-with-data"></a>Xamarin.Forms CollectionView 데이터로 채우기
+# <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView 데이터
 
-![미리 보기](~/media/shared/preview.png)
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> `CollectionView` 는 현재 미리 보기, 및 일부 계획된 기능 부족 합니다. 또한 API 구현을 완료 되 면 변경할 수 있습니다.
 
 `CollectionView` 해당 모양과 표시할 데이터를 정의 하는 다음 속성을 정의 합니다.
 
@@ -188,8 +185,66 @@ public class Monkey
 
 데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
+## <a name="choose-item-appearance-at-runtime"></a>런타임 시 항목 모양을 선택 합니다.
+
+각 항목의 모양을 합니다 `CollectionView` 값을 기반으로 항목을 설정 하 여 런타임 시 선택할 수 있습니다 합니다 `CollectionView.ItemTemplate` 속성을을 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) 개체:
+
+```xaml
+<ContentPage ...
+             xmlns:controls="clr-namespace:CollectionViewDemos.Controls">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="AmericanMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <DataTemplate x:Key="OtherMonkeyTemplate">
+            ...
+        </DataTemplate>
+
+        <controls:MonkeyDataTemplateSelector x:Key="MonkeySelector"
+                                             AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
+                                             OtherMonkey="{StaticResource OtherMonkeyTemplate}" />
+    </ContentPage.Resources>
+
+    <CollectionView ItemsSource="{Binding Monkeys}"
+                    ItemTemplate="{StaticResource MonkeySelector}" />
+</ContentPage>
+```
+
+해당 하는 C# 코드가입니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemTemplate = new MonkeyDataTemplateSelector { ... }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+합니다 `ItemTemplate` 속성을 `MonkeyDataTemplateSelector` 개체입니다. 다음 예제는 `MonkeyDataTemplateSelector` 클래스:
+
+```csharp
+public class MonkeyDataTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate AmericanMonkey { get; set; }
+    public DataTemplate OtherMonkey { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        return ((Monkey)item).Location.Contains("America") ? AmericanMonkey : OtherMonkey;
+    }
+}
+```
+
+합니다 `MonkeyDataTemplateSelector` 클래스 정의 `AmericanMonkey` 하 고 `OtherMonkey` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 다른 데이터 템플릿에 설정 된 속성을 합니다. 합니다 `OnSelectTemplate` 반환 재정의 `AmericanMonkey` monkey 이름을 "America"를 포함 하는 경우 청록에서 monkey 이름 및 위치를 표시 하는 템플릿. Monkey 이름을 "America", 없는 경우는 `OnSelectTemplate` 반환 재정의 `OtherMonkey` silver에서 monkey 이름 및 위치를 표시 하는 템플릿:
+
+[![IOS 및 Android에서 CollectionView의 스크린 샷 런타임 항목 템플릿 선택](populate-data-images/datatemplateselector.png "수집 뷰의 런타임 항목 템플릿 선택")](populate-data-images/datatemplateselector-large.png#lightbox "런타임 항목 템플릿 선택에는 CollectionView")
+
+데이터 템플릿 선택기에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms DataTemplateSelector 만들](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)합니다.
+
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

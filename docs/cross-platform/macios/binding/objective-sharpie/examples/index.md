@@ -6,12 +6,12 @@ ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4cb2dde4dc23bb9376343b49a091277b667d834e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c3232282b788edbc401f889f5277d0227a1572b8
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199631"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977735"
 ---
 # <a name="objective-sharpie-examples"></a>목표 Sharpie 예제
 
@@ -26,8 +26,3 @@ ms.locfileid: "61199631"
 ## <a name="completed-ios-bindings"></a>완료 된 iOS 바인딩
 
 완료 된 바인딩의 숫자로 표시 하거나에서 다운로드할 수는 [monotouch 바인딩 Github 리포지토리](https://github.com/mono/monotouch-bindings/)합니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

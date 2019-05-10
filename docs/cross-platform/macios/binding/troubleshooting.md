@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: fcdd712313becd1335479013f44886086dde7bff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261248"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977603"
 ---
 # <a name="binding-troubleshooting"></a>바인딩 문제 해결
 
@@ -55,9 +55,4 @@ GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 �
 
 - 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**. 
 - 크래시의 전체 스택 추적.
-- 크래시 주변의 C# 코드. 
-
-## <a name="related-links"></a>관련 링크
-
-- [Xamarin University 과정: Objective-c 바인딩 라이브러리를 빌드](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University 과정: 목표 Sharpie로는 Objective-c 바인딩 라이브러리 빌드](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- 크래시 주변의 C# 코드.
