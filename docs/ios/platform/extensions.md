@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: fb5cea018180966e914a5bce5e85cb83fbdf901d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978584"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557254"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.iOS의 iOS 확장
 
@@ -71,7 +71,7 @@ ms.locfileid: "64978584"
 
 확장을 통해 앱을 해당 호스트와 통신할 수 있는 [NSExtensionContext](xref:Foundation.NSExtensionContext) 개체입니다. 일부 확장에는 결과 사용 하 여 비동기 콜백을 수신 하는 작업이 있습니다. 이러한 콜백을 백그라운드 스레드에서 실행 되 고 확장이 고려해 야 합니다. 사용 하 여 예를 들어 [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) 사용자 인터페이스를 업데이트 하는 경우. 참조 된 [호스트 앱을 사용 하 여 통신](#communicating-with-the-host-app) 대 한 자세한 내용은 아래 섹션입니다.
 
-기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [카운트다운 위젯 발전](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)합니다.
+기본적으로 확장 및 해당 컨테이너 앱 수 통신 하지 않습니다, 함께 설치 되 고 불구 하 고. 경우에 따라 컨테이너 앱은 기본적으로 빈 "shipping" 컨테이너 확장이 설치 되 면 해당 용도로 제공 됩니다. 그러나 상황에 따라 필요 하는 경우 컨테이너 앱 및 확장 공유할 수 있습니다 일반 영역에서 리소스. 또한 한 **오늘 확장** 는 URL을 열 수는 컨테이너 앱을 요청할 수 있습니다. 이 동작에 표시 됩니다는 [이벤트 카운트다운 위젯](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions)합니다.
 
 ## <a name="creating-an-extension"></a>확장 만들기
 

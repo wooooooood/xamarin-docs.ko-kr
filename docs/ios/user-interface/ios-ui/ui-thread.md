@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6dd55f5c4316ed8f1d4f16d9e282cc2647350518
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61245358"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557374"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.iOS에서 UI 스레드 작업
 
@@ -61,7 +61,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-수행 하지 않아도 없습니다 알림 센터 또는 다른 실행 되는 완료 처리기를 필요로 하는 다른 방법을 사용 하 여가이 문서에서는 하지만 예제의 나머지에 대해이 앱이 네트워크 요청을 실행 하면 때 기억해 야 할 중요 한 개념 사용 스레드입니다.
+이 문서의 예제에서는 나머지에 대해이 사용 하지 않아도 됩니다. 이지만 중요 한 경우 앱이 실행 하면 네트워크 요청을 기억 하는 개념에 알림 센터 또는 다른 실행 되는 완료 처리기를 필요로 하는 다른 방법을 사용 하 여 스레드입니다.
 
  <a name="Async_Await_Example" />
 

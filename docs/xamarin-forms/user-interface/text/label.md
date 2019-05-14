@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: e220abc575270f483c0a822ae01f979966691432
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 31303114ddd829b596569981b5812b91c4e95b30
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186507"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557449"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -157,7 +157,7 @@ var label =
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – 범위에 있는 텍스트의 글꼴 크기입니다.
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – 범위에 있는 텍스트의 색입니다. 이 속성은 사용 되지 않습니다 및 바뀌었습니다는 `TextColor` 속성입니다.
 - [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -범위의 기본 줄 높이에 적용할 승수입니다. 자세한 내용은 [줄 높이](#line-height)합니다.
-- [`Text`](xref:Xamarin.Forms.Span.Text)  – 범위에 적용할 스타일입니다.
+- [`Style`](xref:Xamarin.Forms.Span.Style)  – 범위에 적용할 스타일입니다.
 - [`Text`](xref:Xamarin.Forms.Span.Text) – 텍스트 범위입니다.
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 범위에 있는 텍스트의 색입니다.
 - `TextDecorations` -범위에 있는 텍스트에 적용할 장식 합니다. 자세한 내용은 [텍스트 장식을](#text-decorations)합니다.
