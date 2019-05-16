@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 63ddc7d34d0bcca4e86cb03b08a6040d20f8f037
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857637"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557212"
 ---
 # <a name="contributing"></a>참여
 
@@ -24,7 +24,7 @@ Xamarin 설명서에 기여하는 데 관심을 가져주셔서 감사합니다!
 
 2. 변경 내용에 대해 `branch`를 만듭니다.
 
-3. 콘텐츠를 작성합니다. [템플릿](../contributing-guidelines/template.md) 및 [스타일 가이드](../contributing-guidelines/voice-tone.md)를 참조하세요.
+3. 콘텐츠를 작성합니다. [템플릿](contributing-guidelines/template.md) 및 [스타일 가이드](contributing-guidelines/voice-tone.md)를 참조하세요.
 
 4. 분기의 PR(끌어오기 요청)을 `MicrosoftDocs/xamarin-docs/live`에 제출합니다.
 
