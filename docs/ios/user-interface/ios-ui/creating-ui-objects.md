@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: a4cf63b84d0686bc28b02b18a6266908251bdf6f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154077"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804922"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.iOS에서 사용자 인터페이스 개체 만들기
 
@@ -80,7 +80,7 @@ Xcode에서 스토리 보드를 열려면 마우스 오른쪽 단추로 클릭 �
 
  [![](creating-ui-objects-images/image6a.png "단말기 편집기 단추")](creating-ui-objects-images/image6a.png#lightbox)
 
-사용자 인터페이스 개체;를 클릭합니다 그런 다음 **컨트롤 끌기** .h 파일에 있습니다. * * 컨트롤 끌기 * * 컨트롤 키를 클릭 하 고 사용자 인터페이스 개체 위로 가져가면 만들려는 출 선 (또는 작업)에 대 한 합니다. 헤더 파일을 끌어다 있지만 컨트롤 키를 누른 유지 합니다. 아래 끌어 마침은 `@interface` 정의 합니다. 아래 스크린샷에 표시 된 것과 같이 캡션 삽입 출 선 또는 출 선 컬렉션을 사용 하 여 파란색 선이 표시 됩니다.
+사용자 인터페이스 개체;를 클릭합니다 그런 다음 **컨트롤 끌기** .h 파일에 있습니다. 하 **컨트롤 끌기**, 컨트롤 키를 누른 다음 클릭 하 고 만들려는 출 선 (또는 작업)에 대 한 사용자 인터페이스 개체에 대해 보유 합니다. 헤더 파일을 끌어다 있지만 컨트롤 키를 누른 유지 합니다. 아래 끌어 마침은 `@interface` 정의 합니다. 아래 스크린샷에 표시 된 것과 같이 캡션 삽입 출 선 또는 출 선 컬렉션을 사용 하 여 파란색 선이 표시 됩니다.
 
 만들기에 사용 되는 콘센트에 대 한 이름을 제공 하기 위해 묻는 클릭 놓으면는 C# 코드에서 참조할 수 있는 속성:
 

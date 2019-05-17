@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: cf04c3e89e3effdd317fa98beb46f9075a1defcd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
+ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61301972"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65731530"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -37,8 +37,8 @@ Xamarin.Forms XAML 파일에 대 한 기본 보기를 포함 합니다.
 1. 추가 `xmlns` 기본 뷰가 포함 된 네임 스페이스에 대 한 XAML 파일의 네임 스페이스 선언 합니다.
 1. XAML 파일의 기본 보기의 인스턴스를 만듭니다.
 
-> [!NOTE]
-> 네이티브 뷰를 사용 하는 모든 XAML 페이지 XAMLC 꺼져 있어야 합니다.
+> [!IMPORTANT]
+> 네이티브 뷰를 사용 하는 모든 XAML 페이지에 대 한 컴파일된 XAML은 사용 하지 않도록 설정 해야 합니다. 사용 하 여 XAML 페이지에 대 한 코드 숨김 클래스를 데코레이팅하여이 작업을 수행할 수 있습니다는 `[XamlCompilation(XamlCompilationOptions.Skip)]` 특성입니다. XAML 컴파일에 대 한 자세한 내용은 참조 하세요. [xamarin.forms에서 XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)합니다.
 
 코드 숨김 파일에서 네이티브 뷰를 참조 하는 공유 자산 프로젝트 (SAP)를 사용 하며 조건부 컴파일 지시문을 사용 하 여 플랫폼별 코드를 래핑합니다. 자세한 내용은 참조 [코드에서 네이티브 뷰를 참조](#native_view_code)합니다.
 
