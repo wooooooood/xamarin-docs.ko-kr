@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112504"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978531"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -154,7 +154,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 - **제한** – Mac 빌드 호스트가 인터넷에 액세스할 수 없는 라우터에 연결되어 있는 경우(또는 Windows 컴퓨터의 역방향 DNS 조회가 요청되면 Mac에서 사용 중인 DNS 서버의 시간이 초과되는 경우) 이 오류가 발생할 수 있습니다. Visual Studio가 SSH 지문을 검색하고 결국 연결에 실패할 때까지 약 30초가 걸립니다.
 
-    **가능한 해결 방법**: **sshd\_config** 파일에 "UseDNS no"를 추가합니다. 변경하기 전에 이 SSH 설정에 대해 꼭 읽어보아야 합니다. [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option) 예제를 참조하세요.
+    **가능한 해결 방법**: **sshd\_config** 파일에 “UseDNS no”를 추가합니다. 변경하기 전에 이 SSH 설정에 대해 꼭 읽어보아야 합니다. [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option) 예제를 참조하세요.
 
     다음 단계는 설정을 변경하는 방법 중 한 가지를 설명합니다. 단계를 완료하려면 Mac에서 관리자 계정으로 로그인해야 합니다.
 
@@ -210,7 +210,7 @@ Mac 에이전트와 관련된 "설치", "업로드" 또는 "시작" 단계에서
 
 Mac과 Windows를 동일한 Xamarin 배포 채널로 업데이트한 것을 확인했다면 이 경고를 무시해도 됩니다.
 
-#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"'ls /usr/bin/mono' 실행 실패: ExitStatus=1"
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>“'ls /usr/bin/mono' 실행 실패: ExitStatus=1”
 
 Mac에서 OS X 10.11(El Capitan) 이상을 실행 중이면 이 메시지를 무시해도 됩니다. OS X 10.11에서는 이 메시지가 표시되어도 아무 문제 없습니다. OS X 10.11의 `mono`에 대한 올바른 예상 위치인 **/usr/local/bin/mono**를 Xamarin에서도 검사하기 때문입니다.
 
@@ -377,4 +377,4 @@ killall mono
 ## <a name="related-links"></a>관련 링크
 
 - [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Xamarin Mac 빌드 에이전트 - Xamarin University 번개 강의](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Xamarin Mac 빌드 에이전트 동영상](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

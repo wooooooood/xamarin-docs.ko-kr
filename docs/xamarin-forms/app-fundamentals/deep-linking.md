@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208059"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978504"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -23,7 +23,7 @@ _애플리케이션 인덱싱은 검색 결과에 나타나서 관련성을 유�
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**[Xamarin University](https://university.xamarin.com/)의 Xamarin.Forms 및 Azure와 딥 링크 설정**
+**Xamarin.Forms 및 Azure와 딥 링크 설정 동영상**
 
 
 Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 설정은 사용자가 애플리케이션을 탐색할 때 애플리케이션 인덱싱에 대한 메타데이터를 게시하기 위한 API를 제공합니다. 그런 다음, 스포트라이트 검색, Google 검색 또는 웹 검색에서 인덱싱된 콘텐츠를 검색할 수 있습니다. 딥 링크가 포함된 검색 결과를 누르면 애플리케이션에서 처리할 수 있는 이벤트가 발생하고 일반적으로 딥 링크에서 참조되는 페이지로 이동하는 데 사용됩니다.

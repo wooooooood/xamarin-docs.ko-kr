@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: cdca5294ea12bf8907ea5f6242efea00f384e77e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 7eeb1aebd0a95ae9ecbcc39e70a3931ee76fb0ce
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329340"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048301"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러 기본 클래스 및 네이티브 컨트롤
 
@@ -30,6 +30,9 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 - **iOS** – Xamarin.Forms.Maps.iOS
 - **Android** – Xamarin.Forms.Maps.Android
 - **UWP(유니버설 Windows 플랫폼)** – Xamarin.Forms.Maps.UWP
+
+> [!NOTE]
+> 셸 애플리케이션의 사용자 지정 렌더러를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms Shell 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)를 참조하세요.
 
 ## <a name="pages"></a>Pages
 
@@ -104,7 +107,3 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 ## <a name="summary"></a>요약
 
 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다. 모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [사용자 지정 렌더러(Xamarin University 비디오)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

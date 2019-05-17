@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557284"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977780"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
@@ -109,7 +109,7 @@ ms.locfileid: "57557284"
 
 **Simple Color Selector**(간단한 색 선택기) 페이지는 간단한 ViewModel 사용을 보여줍니다. 데이터 바인딩을 사용하여 사용자가 색상, 채도 및 광도에 대한 세 가지 `Slider` 요소를 사용하여 색상을 선택할 수 있습니다.
 
-ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이러한 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 속성을 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
+ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 이벤트를 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
 
 `HslColorViewModel` 클래스는 5개 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity` 및 `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
 
@@ -677,7 +677,7 @@ public partial class SampleSettingsPage : ContentPage
 
 [![샘플 설정](binding-mode-images/samplesettings-small.png "샘플 설정")](binding-mode-images/samplesettings-large.png#lightbox "샘플 설정")
 
-다른 두 스크린샷은 변경된 설정을 보여줍니다. 이 페이지로 실험할 때는 프로그램을 절전 상태로 두거나 실행 중인 디바이스나 에뮬레이터에서 종료해야 합니다. Visual Studio 디버거에서 프로그램을 종료하면 `App` 클래스의 `OnSleep` 재정의가 호출되지 않습니다.
+다른 스크린샷은 변경된 설정을 보여 줍니다. 이 페이지로 실험할 때는 프로그램을 절전 상태로 두거나 실행 중인 디바이스나 에뮬레이터에서 종료해야 합니다. Visual Studio 디버거에서 프로그램을 종료하면 `App` 클래스의 `OnSleep` 재정의가 호출되지 않습니다.
 
 다음 문서에서는 `Label`의 `Text` 속성에 설정된 데이터 바인딩의 [**문자열 서식**](string-formatting.md)을 지정하는 방법을 알아봅니다.
 

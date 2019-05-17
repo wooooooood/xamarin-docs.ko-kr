@@ -1,18 +1,18 @@
 ---
 title: Xamarin 시작
-description: 이 문서는 Xamarin 개발을 시작하는 방법을 설명하는 다양한 설명서로 연결합니다. 연결된 콘텐츠에서는 첫 번째 앱을 빌드하는 방법을 설명하고, 모바일 개발에 대한 일반 소개를 제공하고, Xamarin University로 교육을 살펴봅니다.
+description: 이 문서는 Xamarin 개발을 시작하는 방법을 설명하는 다양한 설명서로 연결합니다. 연결된 콘텐츠에서는 첫 번째 앱을 빌드하는 방법을 설명하고 모바일 개발에 대한 일반 소개를 제공합니다.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: b9b48d83199f83c69a42785d4d0c4008a5c6a5e1
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: da2c927bc7d6943066b6b2541d9af98a560c40b5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197396"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978425"
 ---
 # <a name="building-mobile-apps"></a>모바일 앱 빌드
 
@@ -48,11 +48,11 @@ Xamarin 작동 방법 및 모바일 앱 개발 프로젝트에 접근하는 방�
 
 macOS용 IDE(통합 개발 환경)인 Mac용 Visual Studio에 대해 자세히 알아보세요.
 
-## <a name="get-started-with-xamarin-university"></a>Xamarin University 시작
+## <a name="get-started-video"></a>시작 동영상
 
 > [!VIDEO https://youtube.com/embed/NGvn-pGZFPA]
 
-**Visual Studio에서 Xamarin을 사용하여 첫 번째 Xamarin.Forms 앱 빌드, 작성자: [Xamarin University](https://university.xamarin.com)**
+**Visual Studio에서 Xamarin을 사용하여 첫 번째 Xamarin.Forms 앱 빌드**
 
 ## <a name="related-links"></a>관련 링크
 

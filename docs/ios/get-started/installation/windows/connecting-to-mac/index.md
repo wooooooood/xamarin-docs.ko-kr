@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855148"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978322"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -247,7 +247,7 @@ Mac에 페어링은 Visual Studio 2019 또는 명령줄에서 특정 Mac 빌드 
 ## <a name="next-steps"></a>다음 단계
 
 - [연결 문제 해결](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
-- [Xamarin Mac 빌드 에이전트 - Xamarin University 번개 강의](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
+- [Xamarin Mac 빌드 에이전트 동영상](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Windows용 원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
 - [무선 배포](~/ios/deploy-test/wireless-deployment.md)

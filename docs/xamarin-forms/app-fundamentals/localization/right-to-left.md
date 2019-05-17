@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: c4098bfe40a252da2adbe7a7a2cd4c0f105ad1c8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050415"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978594"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화
 
@@ -150,7 +150,7 @@ using System.Resources;
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Xamarin.Forms 3.0 오른쪽에서 왼쪽으로 쓰는 언어 지원, 작성: [Xamarin University](https://university.xamarin.com/)**
+**Xamarin.Forms 3.0 오른쪽에서 왼쪽으로 쓰는 언어 지원 동영상**
 
 ## <a name="related-links"></a>관련 링크
 

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
-ms.date: 07/24/2018
-ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 04/26/2018
+ms.openlocfilehash: 3f51b61cd7dcc3c7b17881b3576aa2c22a45e470
+ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854563"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64987039"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -45,7 +45,7 @@ Xamarin 개발에 Mac 컴퓨터를 사용하려면 다음 소프트웨어/SDK �
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> Xamarin.Mac 4.8은 macOS 10.9() 이상만 지원합니다.
+> Xamarin.Mac 4.8은 macOS 10.9(Mavericks) 이상만 지원합니다.
 > 이전 버전의 Xamarin.Mac은 macOS 10.7 이상을 지원했지만 이러한 이전 macOS 버전에는 TLS 1.2를 지원할 수 있는 TLS 인프라가 충분하지 않습니다. macOS 10.7 또는 macOS 10.8을 대상으로 하려면 Xamarin.Mac 4.6 또는 이전 버전을 사용하세요.
 
 ## <a name="windows-requirements"></a>Windows 요구 사항

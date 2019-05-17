@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 1e40b0a71317d8c9cb3de391a0b941a5bb081956
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292157"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048155"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 애플리케이션 기본 사항
 
@@ -66,7 +66,7 @@ Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래
 
 ## <a name="local-databasesdatabasesmd"></a>[로컬 데이터베이스](databases.md)
 
-Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 읽고 저장할 수 있습니다.
+Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다.
 
 ## <a name="messaging-centermessaging-centermd"></a>[메시징 센터](messaging-center.md)
 
@@ -76,9 +76,9 @@ Xamarin.Forms `MessagingCenter`를 사용하면 뷰 모델 및 기타 구성 요
 
 Xamarin.Forms는 사용되는 `Page` 형식에 따라 다양한 페이지 탐색 환경을 제공합니다.
 
-## <a name="shellshellmd"></a>[셸](shell.md)
+## <a name="shellshellindexmd"></a>[셸](shell/index.md)
 
-Xamarin.Forms Shell은 애플리케이션의 컨테이너로, 대부분의 애플리케이션에서 필요로 하는 기본 UI 기능을 제공하므로 애플리케이션의 핵심 워크로드에 집중할 수 있습니다.
+Xamarin.Forms Shell은 대부분의 모바일 애플리케이션에 필요한 기본 기능을 제공하여 모바일 애플리케이션 개발의 복잡성을 줄입니다. 여기에는 일반 탐색 사용자 환경, URI 기반 탐색 체계 및 통합 검색 처리기가 포함됩니다.
 
 ## <a name="templatestemplatesindexmd"></a>[템플릿](templates/index.md)
 
