@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 58b3787b71cff9b78f1c6b577be6c320367f1cee
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2f6a402d1df8b842e147ab145474688c203aaa6
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952160"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925876"
 ---
 # <a name="listview-group-header-style-on-ios"></a>IOS에서 ListView 그룹 헤더 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 iOS 플랫폼 특정 컨트롤 여부 [ `ListView` ](xref:Xamarin.Forms.ListView) 스크롤 하는 동안 머리글 셀 float입니다. 설정 하 여 XAML에서 사용 되는 `ListView.GroupHeaderStyle` 바인딩 가능한 속성의 값을 `GroupHeaderStyle` 열거형:
 
@@ -54,6 +54,6 @@ listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

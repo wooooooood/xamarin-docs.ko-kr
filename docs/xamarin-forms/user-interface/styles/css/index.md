@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2019
-ms.openlocfilehash: 7dc9a0c0d7330588dc4a6d3f3dedd4b72211f019
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: bb13113a947fe6ff25f5e96e299828d1d93e20ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048021"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927043"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -246,7 +246,7 @@ stacklayout {
 }
 ```
 
-CSS 클래스를 설정 하 여 XAML 요소에 할당할 수 있습니다 합니다 [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) CSS 클래스 이름 요소의 속성입니다. 따라서 다음 XAML 예제에서는 스타일을 정의 하 여는 `.detailPageTitle` 클래스는 첫 번째에 할당 된 [ `Label` ](xref:Xamarin.Forms.Label), 정의한 스타일 동안 합니다 `.detailPageSubtitle` 클래스는 두 번째 할당 된 `Label`.
+CSS 클래스를 설정 하 여 XAML 요소에 할당할 수 있습니다 합니다 [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) CSS 클래스 이름 요소의 속성입니다. 따라서 다음 XAML 예제에서는 스타일을 정의 하 여는 `.detailPageTitle` 클래스는 첫 번째에 할당 된 [ `Label` ](xref:Xamarin.Forms.Label), 정의한 스타일 동안 합니다 `.detailPageSubtitle` 클래스는 두 번째 할당 된 `Label`.
 
 ```xaml
 <ContentPage ...>

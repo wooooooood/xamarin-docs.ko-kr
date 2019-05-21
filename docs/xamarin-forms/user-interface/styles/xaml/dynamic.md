@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 260c215df52eb31139998438cc0eda10a887be65
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 574f4cb5541a12525fb0d160599d4d2f13653cf0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395211"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926940"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Xamarin.Forms에서 동적 스타일
 
@@ -53,7 +53,7 @@ _스타일 속성 변경에 응답 하지 않으며 응용 프로그램의 기�
 </ContentPage>
 ```
 
-[ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스를 사용 하 여를 `DynamicResource` 태그 확장 참조 하는 [ `Style` ](xref:Xamarin.Forms.Style) 라는 `searchBarStyle`는 XAML에서 정의 되지 않은 합니다. 그러나 때문에 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 의 속성을 `SearchBar` 인스턴스를 사용 하 여 설정 됩니다는 `DynamicResource`, 누락 사전 키 throw 예외가 발생 하지 않습니다.
+[ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스를 사용 하 여를 `DynamicResource` 태그 확장 참조 하는 [ `Style` ](xref:Xamarin.Forms.Style) 라는 `searchBarStyle`는 XAML에서 정의 되지 않은 합니다. 그러나 때문에 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 의 속성을 `SearchBar` 인스턴스를 사용 하 여 설정 됩니다는 `DynamicResource`, 누락 사전 키 throw 예외가 발생 하지 않습니다.
 
 대신 코드 숨김 파일에서 생성자를 만듭니다는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 키를 사용 하 여 항목 `searchBarStyle`다음 코드 예제 에서처럼:
 
@@ -205,7 +205,7 @@ public class DynamicStylesInheritancePageCS : ContentPage
 }
 ```
 
-`tealSearchBarStyle` 에 직접 할당 된를 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스. 이 `Style` 몇 가지 추가 속성을 설정 하 고 사용 합니다 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 참조할 속성 `searchBarStyle`합니다. [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) 메서드는 필요치 여기 하므로 `tealSearchBarStyle` 변경 되지 것입니다 제외 하 고는 `Style` 에서 파생 합니다. 따라서 `tealSearchBarStyle` 에 대 한 링크를 유지 관리 `searchBarStyle` 기본 스타일이 변경 될 때 변경 됩니다.
+`tealSearchBarStyle` 에 직접 할당 된를 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성을 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스. 이 `Style` 몇 가지 추가 속성을 설정 하 고 사용 합니다 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 참조할 속성 `searchBarStyle`합니다. [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) 메서드는 필요치 여기 하므로 `tealSearchBarStyle` 변경 되지 것입니다 제외 하 고는 `Style` 에서 파생 합니다. 따라서 `tealSearchBarStyle` 에 대 한 링크를 유지 관리 `searchBarStyle` 기본 스타일이 변경 될 때 변경 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

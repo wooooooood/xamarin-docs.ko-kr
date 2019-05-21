@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f14014b257ee5061b6dd074719c3ca27577c6013
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854945"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926845"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Windows에서 VisualElement 액세스 키
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 액세스 키는 터치를 통해 대신 키보드를 통해 앱의 표시 되는 UI를 사용 하 여 사용자가 신속 하 게 이동 하 고 상호 작용 하는 직관적인 방법을 제공 하 여 유용성 및 유니버설 Windows 플랫폼 (UWP)에서 앱의 액세스 가능성을 개선 하는 바로 가기 키 또는 마우스입니다. 이러한는 일반적으로 순차적으로 누르면 하나 이상의 영숫자 키 및 Alt 키의 조합입니다. 바로 가기 키는 단일 영문자를 사용 하는 액세스 키에 대 한 자동으로 지원 됩니다.
 
@@ -104,6 +104,6 @@ button4.On<Windows>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

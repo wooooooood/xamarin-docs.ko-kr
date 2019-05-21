@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 252f3271c7247f7070df66712035938be651e7f4
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345528"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924797"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms에서 장치 스타일
 
@@ -29,7 +29,7 @@ _Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일으로 알려진
 - [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-모든 6 스타일에만 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 예를 들어, 한 `Label` 단락의 본문을 표시 하는 설정할 수 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을 [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle)합니다.
+모든 6 스타일에만 적용할 수 있습니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 예를 들어, 한 `Label` 단락의 본문을 표시 하는 설정할 수 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성을 [ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle)합니다.
 
 다음 코드 예제는 *장치* XAML 페이지의 스타일:
 
@@ -109,7 +109,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-[ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 의 각 속성 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스가에서 적절 한 속성에 설정 되어 합니다 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다.
+[ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 의 각 속성 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스가에서 적절 한 속성에 설정 되어 합니다 [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) 클래스입니다.
 
 ## <a name="accessibility"></a>액세스 가능성
 

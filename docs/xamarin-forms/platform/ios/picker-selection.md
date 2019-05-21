@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 21c4c289a3fd30db890be6811875412ce4913cf5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250599"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925371"
 ---
 # <a name="picker-item-selection-on-ios"></a>IOS에서 선택 항목 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 iOS 플랫폼 관련 항목 선택에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker), 항목 선택 컨트롤에서 항목을 검색할 때 또는 한 번만 발생 하도록 지정할 수 있도록 허용 합니다 **수행** 단추가 눌러져 있습니다. 설정 하 여 XAML에서 사용 되는 `Picker.UpdateMode` 연결 된 속성의 값으로는 `UpdateMode` 열거형:
 
@@ -67,6 +67,6 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

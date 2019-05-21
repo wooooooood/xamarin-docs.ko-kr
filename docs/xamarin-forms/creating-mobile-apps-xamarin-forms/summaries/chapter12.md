@@ -7,12 +7,12 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bb2cd1c97cc588923e0da1a8793f16445c111f0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 408f171a3c7c690b700f7be21a3dcaff503467d9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334340"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926915"
 ---
 # <a name="summary-of-chapter-12-styles"></a>요약 12 장입니다. 스타일
 
@@ -20,7 +20,7 @@ ms.locfileid: "61334340"
 
 Xamarin.Forms 스타일 속성 설정의 컬렉션을 공유할 수 있는 여러 보기를 허용 합니다. 태그 줄이고 일관 된 시각적 테마를 유지 관리를 사용 하도록 설정 합니다.
 
-스타일은 거의 항상 정의 이며 태그에 사용 됩니다. 형식의 개체 [ `Style` ](xref:Xamarin.Forms.Style) 리소스 사전에서 인스턴스화되고로 설정 합니다 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 사용 하 여 시각적 요소 속성을 `StaticResource` 또는 `DynamicResource` 태그 확장입니다.
+스타일은 거의 항상 정의 이며 태그에 사용 됩니다. 형식의 개체 [ `Style` ](xref:Xamarin.Forms.Style) 리소스 사전에서 인스턴스화되고로 설정 합니다 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 사용 하 여 시각적 요소 속성을 `StaticResource` 또는 `DynamicResource` 태그 확장입니다.
 
 ## <a name="the-basic-style"></a>기본 스타일
 

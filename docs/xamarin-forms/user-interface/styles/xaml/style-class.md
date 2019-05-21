@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: dd749a4a78adbab5317f1ae5ca6334caa009b9b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3ef0f96bcc955dcac4231f9eb9cf1ab16ee61aa
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925280"
 ---
 # <a name="xamarinforms-style-classes"></a>Xamarin.Forms 스타일 클래스
 
@@ -78,7 +78,7 @@ _Xamarin.Forms 스타일 클래스 스타일 상속 방식을 사용 하지 않�
 
 합니다 `Rotated` 스타일 클래스에는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 의 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement), 즉만 적용할 수 있습니다 `VisualElement` 인스턴스. 그러나 해당 [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성이로 설정 되어 `true`에서 파생 되는 모든 컨트롤에 적용할 수 있는지 확인 하는 `VisualElement`와 같은 [ `BoxView` ](xref:Xamarin.Forms.BoxView)합니다. 파생된 형식으로 스타일을 적용 하는 방법에 대 한 자세한 내용은 참조 하세요. [파생된 형식에 스타일을 적용할](implicit.md#apply-a-style-to-derived-types)합니다.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var separatorBoxViewStyle = new Style(typeof(BoxView))
@@ -180,7 +180,7 @@ Resources = new ResourceDictionary
 
 ## <a name="consume-style-classes"></a>스타일 클래스를 사용 합니다.
 
-스타일 클래스를 설정 하 여 사용할 수는 [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) 유형인 컨트롤의 속성 `IList<string>`, 스타일 클래스 이름 목록에 있습니다. 스타일 클래스를 적용할 컨트롤 형식이 일치 하는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 스타일 클래스입니다.
+스타일 클래스를 설정 하 여 사용할 수는 [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) 유형인 컨트롤의 속성 `IList<string>`, 스타일 클래스 이름 목록에 있습니다. 스타일 클래스를 적용할 컨트롤 형식이 일치 하는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 스타일 클래스입니다.
 
 다음 예제에서는 세 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 인스턴스를 각각 설정 다른 스타일 클래스:
 
@@ -206,9 +206,9 @@ Resources = new ResourceDictionary
 ![](style-class-images/boxviews.png "BoxViews는 스타일 클래스를 사용 하 여 스타일")
 
 > [!IMPORTANT]
-> 여러 스타일 클래스에 적용할 수를 제어 하기 때문에 합니다 [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) 형식의 속성이 `IList<string>`합니다. 이 경우 스타일 클래스 목록을 오름차순 적용 됩니다. 따라서 여러 스타일 클래스와 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스에서 속성 우선을 적용 됩니다.
+> 여러 스타일 클래스에 적용할 수를 제어 하기 때문에 합니다 [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) 형식의 속성이 `IList<string>`합니다. 이 경우 스타일 클래스 목록을 오름차순 적용 됩니다. 따라서 여러 스타일 클래스와 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스에서 속성 우선을 적용 됩니다.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 ...

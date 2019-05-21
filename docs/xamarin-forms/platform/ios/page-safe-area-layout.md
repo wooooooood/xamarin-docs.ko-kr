@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: bc18f1e1f051e18a970464b134733f2af39681ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f38064027b4eb6dada2becc69b4163d6fa6082fb
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250910"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927009"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>IOS에서 안전 영역 레이아웃 안내선
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 iOS 플랫폼 특정 화면 iOS 11 이상를 사용 하는 모든 장치에 대 한 안전한 영역에서 페이지 콘텐츠가 배치 되는 확인 하는 데 사용 됩니다. 있는지 확인 하는 데는 특히 장치 둥근된 모서리, 홈 표시기 또는 iPhone X에서 센서 하우징 하 여 해당 콘텐츠가 클리핑 되지 않습니다. 설정 하 여 XAML에서 사용 되는 `Page.UseSafeArea` 연결 된 속성을 `boolean` 값:
 
@@ -65,6 +65,6 @@ protected override void OnAppearing()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

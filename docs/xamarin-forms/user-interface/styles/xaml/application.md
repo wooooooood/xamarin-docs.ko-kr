@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 749e9bca87b2c9547b9733248d75718a4443ab88
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 665f5d1653b74997519149cef68e0882f476179d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160744"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924612"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Xamarin.Forms에서 글로벌 스타일
 
@@ -148,7 +148,7 @@ public class ApplicationStylesPageCS : ContentPage
 }
 ```
 
-`buttonStyle` 에 적용 되는 [ `Button` ](xref:Xamarin.Forms.Button) 설정 하 여 인스턴스 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성의 모양을 제어 하 고는 `Button` 인스턴스.
+`buttonStyle` 에 적용 되는 [ `Button` ](xref:Xamarin.Forms.Button) 설정 하 여 인스턴스 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성의 모양을 제어 하 고는 `Button` 인스턴스.
 
 ## <a name="related-links"></a>관련 링크
 

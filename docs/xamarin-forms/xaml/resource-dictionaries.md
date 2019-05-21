@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8b5a610cbd87ca9e80272b6be8e726e4fd323dd0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076673"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925616"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 
 _XAML 리소스는 공유 하 고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있는 개체의 정의입니다._
 
@@ -305,6 +305,6 @@ Xamarin.Forms 3.0 자동으로 인스턴스화합니다. 때문에 합니다 `Re
 
 ## <a name="related-links"></a>관련 링크
 
-- [리소스 사전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/xaml/resourcedictionaries/)
+- [리소스 사전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)

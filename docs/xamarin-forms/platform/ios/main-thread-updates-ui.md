@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 56109cc9064de4b995e75ceb967abe4995504660
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b9f39cd33d660999cfa00f2003edab7af731ca7c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953398"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925711"
 ---
 # <a name="main-thread-control-updates-on-ios"></a>IOS에서 주 스레드 컨트롤 업데이트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 iOS 플랫폼 특정 컨트롤 레이아웃 및 렌더링 업데이트 백그라운드 스레드에서 수행 되는 대신 주 스레드에서 수행할 수 있습니다. 거의 필요 하지, 있지만 일부의 경우에서 충돌 하지 못할 수 있습니다. 설정 하 여 해당 사용된에서 XAML 합니다 `Application.HandleControlUpdatesOnMainThread` 바인딩 가능한 속성을 `true`:
 
@@ -42,6 +42,6 @@ Xamarin.Forms.Application.Current.On<iOS>().SetHandleControlUpdatesOnMainThread(
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

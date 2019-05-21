@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d2a94347448af031f50341729d77c7385225d107
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 59b9025b58af4d7080d0506d4994cb72bf4f096d
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60855053"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924756"
 ---
 # <a name="listview-selectionmode-on-windows"></a>Windows에서 ListView SelectionMode
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 유니버설 Windows 플랫폼에서 Xamarin.Forms 기본적 [ `ListView` ](xref:Xamarin.Forms.ListView) 네이티브를 사용 하 여 `ItemClick` 네이티브 보다는 상호 작용에 응답할 이벤트 `Tapped` 이벤트입니다. Windows 내레이터와 키보드 상호 작용할 수 있도록 내게 필요한 옵션 기능을 제공 합니다 `ListView`합니다. 그러나 렌더링 내에서 모든 탭 제스처를 `ListView` 작동 하지 않습니다.
 
@@ -57,6 +57,6 @@ listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

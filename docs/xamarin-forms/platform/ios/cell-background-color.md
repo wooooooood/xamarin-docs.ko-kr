@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 396e674bb3e5642f7c54455ee9e30ba5bf232f18
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b1e2fe534c8b7d0c3346a18d1b82d797e52dba1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61030090"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926770"
 ---
 # <a name="cell-background-color-on-ios"></a>IOS에서 셀 배경색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 기본 배경색을 설정 하는이 iOS 플랫폼별 [ `Cell` ](xref:Xamarin.Forms.Cell) 인스턴스. 설정 하 여 XAML에서 사용 되는 `Cell.DefaultBackgroundColor` 바인딩 가능한 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
 
@@ -60,6 +60,6 @@ viewCell.On<iOS>().SetDefaultBackgroundColor(Color.Teal);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

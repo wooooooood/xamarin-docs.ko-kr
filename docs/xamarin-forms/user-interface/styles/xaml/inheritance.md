@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: bef48db93ae76346802b6569080bb1e54e3e51b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c0b38453c5e573a13a51b6c001d3324936a8b7fb
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61394008"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926873"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Xamarin.Forms에서 스타일 상속
 
@@ -62,7 +62,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 </ContentPage>
 ```
 
-`baseStyle` 대상 [ `View` ](xref:Xamarin.Forms.View) 인스턴스와 설정 된 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신 `labelStyle` 고 `buttonStyle` 추가 바인딩 가능한 속성 값 설정에서 상속 합니다. 합니다 `labelStyle` 하 고 `buttonStyle` 적용 되는 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 및 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다. 이 인해 다음 스크린샷에 표시 된 모양:
+`baseStyle` 대상 [ `View` ](xref:Xamarin.Forms.View) 인스턴스와 설정 된 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신 `labelStyle` 고 `buttonStyle` 추가 바인딩 가능한 속성 값 설정에서 상속 합니다. 합니다 `labelStyle` 하 고 `buttonStyle` 적용 되는 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 및 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성입니다. 이 인해 다음 스크린샷에 표시 된 모양:
 
 [![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
@@ -110,7 +110,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 
 ## <a name="style-inheritance-in-c35"></a>C에서 스타일 상속&#35;
 
-해당 하는 C# 페이지, 여기서 [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스에 직접 할당 됩니다 합니다 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 필요한 컨트롤의 속성은 다음 코드 예제에 표시 됩니다:
+해당 하는 C# 페이지, 여기서 [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스에 직접 할당 됩니다 합니다 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 필요한 컨트롤의 속성은 다음 코드 예제에 표시 됩니다:
 
 ```csharp
 public class StyleInheritancePageCS : ContentPage
@@ -153,7 +153,7 @@ public class StyleInheritancePageCS : ContentPage
 }
 ```
 
-`baseStyle` 대상 [ `View` ](xref:Xamarin.Forms.View) 인스턴스와 설정 된 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신 `labelStyle` 고 `buttonStyle` 추가 바인딩 가능한 속성 값 설정에서 상속 합니다. 합니다 `labelStyle` 하 고 `buttonStyle` 적용 되는 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 및 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성입니다.
+`baseStyle` 대상 [ `View` ](xref:Xamarin.Forms.View) 인스턴스와 설정 된 [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) 및 [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) 속성입니다. `baseStyle` 모든 컨트롤에 직접 설정 되지 않았습니다. 대신 `labelStyle` 고 `buttonStyle` 추가 바인딩 가능한 속성 값 설정에서 상속 합니다. 합니다 `labelStyle` 하 고 `buttonStyle` 적용 되는 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 및 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성입니다.
 
 ## <a name="related-links"></a>관련 링크
 

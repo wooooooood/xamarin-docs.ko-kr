@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7fa309000ecfa30593d8b71b7c2836fb6cebfec1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 18e27cfc8ebf0a3d9e94ebbbf3b0da06dd30ed48
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854972"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926864"
 ---
 # <a name="tabbedpage-icons-on-windows"></a>Windows에서 TabbedPage 아이콘
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 유니버설 Windows 플랫폼 플랫폼별 페이지 아이콘에 표시할 수 있습니다는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 도구 모음에서 필요에 따라 아이콘 크기를 지정 하는 기능을 제공 합니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.HeaderIconsEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) 연결 된 속성을 `true`, 필요에 따라 설정 하 고는 [ `TabbedPage.HeaderIconsSize` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) 연결 된 속성을 [ `Size` ](xref:Xamarin.Forms.Size) 값:
 
@@ -75,6 +75,6 @@ public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

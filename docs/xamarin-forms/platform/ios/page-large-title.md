@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: ad1c7f94467c6f32b9108ab7f6abe85d31679d3a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 01c5e4f449a1aed84a73b0284ba15e0c03deeed7
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952134"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925778"
 ---
 # <a name="large-page-titles-on-ios"></a>IOS에서 큰 페이지 제목
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 iOS 플랫폼별의 탐색 모음에서 큰 제목으로 페이지 제목을 표시 되는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage), iOS 11 이상를 사용 하는 장치에 대 한 합니다. 큰 제목 왼쪽 맞춤은 큰 글꼴을 사용 하 여 및 화면 부동산 효율적으로 사용 되도록 사용자가 콘텐츠를 스크롤 하는 대로 표준 제목으로 전환 합니다. 그러나 가로 방향으로 제목 콘텐츠 레이아웃을 최적화 하기 위해 탐색 모음의 센터로 돌아갑니다. 설정 하 여 XAML에서 사용 되는 `NavigationPage.PrefersLargeTitles` 연결 된 속성을 `boolean` 값:
 
@@ -101,6 +101,6 @@ switch (On<iOS>().LargeTitleDisplay())
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7f6ec13b1b21a1526bb53f260c4d80e881e7feba
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 19a683fbd4aeb7060d97406a89c1e9308fb56b03
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952242"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926007"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>IOS에서 ScrollView 콘텐츠 터치
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 암시적 타이머를 터치 제스처 시작 되 면 트리거됩니다를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) ios 및 `ScrollView` 타이머 범위 내의 사용자 동작을 기준으로 제스처 처리 또는 해당 콘텐츠를 전달 해야 하는지 여부를 결정 합니다. 기본적으로 iOS `ScrollView` 지연 콘텐츠 터치를 하지만 사용 하 여 일부 상황에서 문제를 일으킬 수이 있습니다는 `ScrollView` 하지 말아야 할 때 제스처를 최우선 콘텐츠입니다. 따라서이 플랫폼별 제어 하는지 여부를 `ScrollView` 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 설정 하 여 XAML에서 사용 되는 `ScrollView.ShouldDelayContentTouches` 연결 된 속성을 `boolean` 값:
 
@@ -61,6 +61,6 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: ab9c404fc9051014fd3a243848290087f43a46d2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 295b060ee795244184b3ea88b101c720436d1fe5
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926533"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Android의 페이지 수명 주기 이벤트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 Android 플랫폼별 사용 하지 않도록 설정 되는 [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) 하 고 [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) 페이지 이벤트 응용 프로그램에서 일시 중지 하 고 각각 AppCompat를 사용 하는 응용 프로그램에 대 한 다시 시작 합니다. 소프트 키보드는 소프트 키보드의 운영 모드를로 일시 중지에 표시 된 경우 다시 시작할 때 표시 되는지 여부를 제어 하는 기능 포함 하는 또한 [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize)합니다.
 
@@ -59,7 +59,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

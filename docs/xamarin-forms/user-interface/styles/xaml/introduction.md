@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 4048ec78d48b810b39d46fbcb7708860c478cce3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc0173df1d4318af7db945d1c5ed6654282e31f5
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023436"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927006"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Xamarin.Forms 스타일 소개
 
@@ -107,7 +107,7 @@ public class NoStylesPageCS : ContentPage
 
 각 [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스 수 *명시적*, 또는 *암시적*:
 
-- *명시적* [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스를 지정 하 여 정의 되는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 및 `x:Key` 값을 설정 하 여 대상 요소의 [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) 속성을는 `x:Key` 참조 합니다. 에 대 한 자세한 내용은 *명시적* 스타일을 참조 하십시오 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md)합니다.
+- *명시적* [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스를 지정 하 여 정의 되는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 및 `x:Key` 값을 설정 하 여 대상 요소의 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성을는 `x:Key` 참조 합니다. 에 대 한 자세한 내용은 *명시적* 스타일을 참조 하십시오 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md)합니다.
 - *암시적* [ `Style` ](xref:Xamarin.Forms.Style) 인스턴스만 지정 하 여 정의 되는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType)합니다. `Style` 인스턴스 자동으로 해당 형식의 모든 요소에 적용 한 다음 됩니다. 참고의 해당 서브 클래스는 `TargetType` 자동으로 부여 되지 않습니다는 `Style` 적용 합니다. 에 대 한 자세한 내용은 *암시적* 스타일을 참조 하십시오 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)합니다.
 
 만들 때를 [ `Style` ](xref:Xamarin.Forms.Style)서 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성은 항상 필요 합니다. 다음 코드 예제는 *명시적* 스타일 (참고는 `x:Key`) XAML에서 만든:

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: a78911a13ca3682a18b0911d020d98445b4f560c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afeae9d893b2ebe161943286d348f7a7a1074b0b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371000"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925396"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Xamarin.forms에서 레이아웃 옵션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 
 _모든 Xamarin.Forms 보기 LayoutOptions 형식의 HorizontalOptions 및 VerticalOptions 속성에 있습니다. 이 문서에서는 각 LayoutOptions 값 맞춤 및 보기의 확장에는 영향을 설명 합니다._
 
@@ -160,5 +160,5 @@ Content = new StackLayout
 
 ## <a name="related-links"></a>관련 링크
 
-- [LayoutOptions (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
+- [LayoutOptions (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutOptions/)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

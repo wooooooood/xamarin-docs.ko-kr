@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 157e044fd96cdeff87d8fb56029fe625b7312bf4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 012fd6e5d9650a58018ccb7456ce48dcc0048405
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345742"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925017"
 ---
 # <a name="custom-animations-in-xamarinforms"></a>Xamarin.Forms에서 사용자 지정 애니메이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Custom/)
 
 _애니메이션 클래스는 하나 이상의 애니메이션 개체를 만드는 ViewExtensions 클래스의 확장 메서드를 사용 하 여 모든 Xamarin.Forms 애니메이션의 빌딩 블록입니다. 이 문서에서는 기존 애니메이션 방법으로 애니메이션 효과가 적용 되지 않습니다 하는 속성에 애니메이션을 적용 하는 사용자 지정 애니메이션을 만들고 애니메이션 클래스를 사용 하 여 만드는 애니메이션을 취소 하 고 여러 애니메이션을 동기화 하는 방법을 보여 줍니다._
 
@@ -184,6 +184,6 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 
 ## <a name="related-links"></a>관련 링크
 
-- [사용자 지정 애니메이션 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/custom/)
+- [사용자 지정 애니메이션 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Animation/Custom/)
 - [애니메이션](xref:Xamarin.Forms.Animation)
 - [AnimationExtensions](xref:Xamarin.Forms.AnimationExtensions)
