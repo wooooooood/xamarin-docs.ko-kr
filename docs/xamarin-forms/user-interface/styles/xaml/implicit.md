@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 67b8bac62cacb091323d084e1c7cec9accc30844
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0be5c788b5be3d01234cc9a3124fa6a01ded2394
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61394336"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971138"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Xamarin.Forms에서 암시적 스타일
 
@@ -27,7 +27,7 @@ _암시적 스타일은 각 컨트롤에 스타일을 참조 하지 않고도 �
 다음 코드 예제는 *암시적* 페이지의 XAML에 선언 된 스타일 `ResourceDictionary`, 페이지에 적용 하 고 [ `Entry` ](xref:Xamarin.Forms.Entry) 인스턴스:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Entry">
@@ -62,7 +62,7 @@ _암시적 스타일은 각 컨트롤에 스타일을 참조 하지 않고도 �
 외에도 *암시적* 페이지 수준에서 스타일도 만들 수 있습니다 제어 수준에서 다음 코드 예제 에서처럼:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>
@@ -135,7 +135,7 @@ public class ImplicitStylesPageCS : ContentPage
 
 이 스타일을 페이지 수준에 배치 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 모두에 적용 되 고 하면 [ `Button` ](xref:Xamarin.Forms.Button) 페이지 및 컨트롤에서 파생 되는 인스턴스 `Button`합니다. 그러나 경우 합니다 [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성으로 설정 되지 않은 남아, 스타일에만 적용 됩니다 `Button` 인스턴스.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var buttonStyle = new Style(typeof(Button))

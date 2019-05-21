@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 3b23a1a07741cd048ea034b2b39b5f9cde902dc6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bab38ebbef7083fa55e9942ad6826566e3ea5fdb
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61020199"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971089"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
@@ -429,7 +429,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 > [!NOTE]
 > `Button` 클래스에 [ `Margin` ](xref:Xamarin.Forms.View.Margin) 하 고 [ `Padding` ](xref:Xamarin.Forms.Button.Padding) 레이아웃 동작을 제어 하는 속성을 `Button`합니다. 자세한 내용은 [여백 및 안쪽 여백](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)합니다.
 
-이러한 속성 중 6 개 미치는 (제외 `FontFamily` 및 `FontAttributes`)에서 설명 됩니다 합니다 **단추의 모양을** 페이지. 다른 속성인 [ `Image` ](xref:Xamarin.Forms.Button.Image), 섹션에 설명 되어 [ **단추를 사용 하 여 비트맵을 사용 하 여**](#image-button)합니다.
+이러한 속성 중 6 개 미치는 (제외 `FontFamily` 및 `FontAttributes`)에서 설명 됩니다 합니다 **단추의 모양을** 페이지. 다른 속성인 [ `Image` ](xref:Xamarin.Forms.Button.ImageSource), 섹션에 설명 되어 [ **단추를 사용 하 여 비트맵을 사용 하 여**](#image-button)합니다.
 
 뷰 및 데이터 바인딩에 모든 합니다 **단추의 모양을** XAML 파일에 정의 된 페이지:
 
@@ -748,9 +748,9 @@ IOS, Android 및 UWP에서 실행 중인 프로그램이 다음과 같습니다.
 
 ## <a name="using-bitmaps-with-buttons"></a>단추를 사용 하 여 비트맵을 사용 하 여
 
-`Button` 클래스 정의 [ `Image` ](xref:Xamarin.Forms.Button.Image) 에서 비트맵 이미지를 표시할 수 있는 속성을 `Button`, 단독으로 또는 텍스트와 함께에서 합니다. 텍스트 및 이미지 정렬 방식을 지정할 수 있습니다.
+`Button` 클래스 정의 [ `ImageSource` ](xref:Xamarin.Forms.Button.Image) 에서 비트맵 이미지를 표시할 수 있는 속성을 `Button`, 단독으로 또는 텍스트와 함께에서 합니다. 텍스트 및 이미지 정렬 방식을 지정할 수 있습니다.
 
-`Image` 형식의 속성은 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), 즉 비트맵에서 개별 플랫폼 프로젝트가 및.NET Standard 라이브러리 프로젝트에 리소스로 저장 수 있어야 합니다.
+합니다 `ImageSource` 형식의 속성은 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 즉, 파일, 포함된 리소스, URI 또는 스트림에서 비트맵을 로드할 수 있습니다.
 
 Xamarin.Forms에서 지 원하는 각 플랫폼 이미지를 응용 프로그램에서 실행 될 수 있는 다양 한 장치의 다른 픽셀 해상도 대해 다양 한 크기에 저장할 수 있습니다. 여러 비트맵은 명명 된 또는 저장 장치의 비디오에 대 한 운영 체제 가장 일치 하는 중 선택할 수는 방식으로 디스플레이 해상도입니다.
 
@@ -781,7 +781,7 @@ UWP 프로젝트에서 비트맵에에서 저장할 수 어디서 나 프로젝�
 
 모든 제공 된를 **빌드 작업** 의 **콘텐츠**합니다.
 
-지정할 수 있습니다 하는 방법을 `Text` 및 `Image` 속성에 정렬 되는 `Button` 를 사용 하 여를 [ `ContentLayout` ](xref:Xamarin.Forms.Button.ContentLayout) 속성 `Button`. 이 속성은 형식의 [ `ButtonContentLayout` ](xref:Xamarin.Forms.Button.ButtonContentLayout)에 포함된 된 클래스에는 `Button`합니다. 합니다 [생성자](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) 두 인수를 포함 합니다.
+지정할 수 있습니다 하는 방법을 `Text` 및 `ImageSource` 속성에 정렬 되는 `Button` 를 사용 하 여를 [ `ContentLayout` ](xref:Xamarin.Forms.Button.ContentLayout) 속성 `Button`. 이 속성은 형식의 [ `ButtonContentLayout` ](xref:Xamarin.Forms.Button.ButtonContentLayout)에 포함된 된 클래스에는 `Button`합니다. 합니다 [생성자](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) 두 인수를 포함 합니다.
 
 - 멤버는 [ `ImagePosition` ](xref:Xamarin.Forms.Button.ButtonContentLayout.ImagePosition) 열거형: `Left`, `Top`를 `Right`, 또는 `Bottom` 비트맵 텍스트를 기준으로 표시 되는 방식을 나타내는입니다.
 - `double` 비트맵와 텍스트 사이의 간격에 대 한 값입니다.
@@ -794,7 +794,7 @@ UWP 프로젝트에서 비트맵에에서 저장할 수 어디서 나 프로젝�
 Button button = new Button
 {
     Text = "button text",
-    Image = new FileImageSource
+    ImageSource = new FileImageSource
     {
         File = "image filename"
     },
@@ -806,7 +806,7 @@ XAML, 열거형 멤버에만 또는 간격을 지정 해야 또는 쉼표로 구
 
 ```xaml
 <Button Text="button text"
-        Image="image filename"
+        ImageSource="image filename"
         ContentLayout="Right, 20" />
 ```
 
@@ -816,22 +816,22 @@ XAML, 열거형 멤버에만 또는 간격을 지정 해야 또는 쉼표로 구
 
 ```xaml
 <Button>
-    <Button.Image>
+    <Button.ImageSource>
         <OnPlatform x:TypeArguments="FileImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
-    </Button.Image>
+    </Button.ImageSource>
 </Button>
 ```
 
 UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그는 상당히 간소화할 수 있습니다.
 
 ```xaml
-<Button Image="MonkeyFace.png" />
+<Button ImageSource="MonkeyFace.png" />
 ```
 
-태그를 반복적으로 많이 방지 하려면 합니다 **ImageButtonDemo.xaml** 파일을 암시적 `Style` 설정도 정의 되어를 `Image` 속성입니다. 이렇게 `Style` 5 다른 자동으로 적용 됩니다 `Button` 요소입니다. 다음은 전체 XAML 파일이입니다.
+태그를 반복적으로 많이 방지 하려면 합니다 **ImageButtonDemo.xaml** 파일을 암시적 `Style` 설정도 정의 되어를 `ImageSource` 속성입니다. 이렇게 `Style` 5 다른 자동으로 적용 됩니다 `Button` 요소입니다. 다음은 전체 XAML 파일이입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -844,7 +844,7 @@ UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그
 
         <FlexLayout.Resources>
             <Style TargetType="Button">
-                <Setter Property="Image">
+                <Setter Property="ImageSource">
                     <OnPlatform x:TypeArguments="FileImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
@@ -854,12 +854,12 @@ UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그
         </FlexLayout.Resources>
 
         <Button>
-            <Button.Image>
+            <Button.ImageSource>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
-            </Button.Image>
+            </Button.ImageSource>
         </Button>
 
         <Button Text="Default" />

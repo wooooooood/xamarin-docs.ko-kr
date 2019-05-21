@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 41390a36eb303b7e06bcb31f89c23120cede0271
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6d075f782778313fafff3f26760152a1efbd84c8
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926749"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971028"
 ---
 # <a name="entry-cursor-color-on-ios"></a>IOS에서 커서 색 항목
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
-커서 색을 설정 하는이 플랫폼별을 [ `Entry` ](xref:Xamarin.Forms.Entry) 지정 된 색입니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) 바인딩 가능한 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+이 iOS 플랫폼 특정 커서 색을 설정 합니다는 [ `Entry` ](xref:Xamarin.Forms.Entry) 지정 된 색입니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.CursorColor` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.CursorColorProperty) 바인딩 가능한 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
 <ContentPage ...

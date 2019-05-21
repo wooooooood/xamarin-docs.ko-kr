@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: 471e09f236be505190ad2c08169bd445dcfca0a3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365670"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971015"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>Xamarin.Forms의 iOS 플랫폼 기능
 
@@ -45,6 +45,7 @@ IOS에서 Xamarin.Forms 페이지에 대 한 다음과 같은 플랫폼별 기�
 - 탐색 모음 반투명 인지 여부를 제어 합니다. 자세한 내용은 [iOS에서 탐색 모음 반투명도](navigation-bar-translucent.md)합니다.
 - 제어 상태 표시줄 텍스트의 색 여부는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 탐색 모음의 광도 맞게 조정 됩니다. 자세한 내용은 [NavigationPage 막대 텍스트 색 모드 iOS에서](status-bar-text-color.md)합니다.
 - 페이지 탐색 모음에서 큰 제목으로 페이지 제목이 표시 되는지 여부를 제어 합니다. 자세한 내용은 [iOS에서 큰 페이지 제목](page-large-title.md)합니다.
+- 홈 표시기의 표시 유형을 설정 된 [ `Page` ](xref:Xamarin.Forms.Page)합니다. 자세한 내용은 [iOS 표시기 표시 유형이 홈](page-home-indicator.md)합니다.
 - 상태 표시줄 표시 여부 설정 된 [ `Page` ](xref:Xamarin.Forms.Page)합니다. 자세한 내용은 [iOS에서 상태 표시줄 표시 유형 페이지](page-status-bar-visibility.md)합니다.
 - 콘텐츠 페이지를 확인 합니다. 모든 iOS 장치에 대 한 안전한 화면 영역에 배치 됩니다. 자세한 내용은 [iOS에서 안전 영역 레이아웃 안내선](page-safe-area-layout.md)합니다.
 - IPad에서 모달 페이지 표시 스타일을 설정 합니다. 자세한 내용은 [iPad 모달 페이지 표시 스타일](ipad-page-presentation-style.md)합니다.

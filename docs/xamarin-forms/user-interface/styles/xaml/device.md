@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 252f3271c7247f7070df66712035938be651e7f4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 05e8fb9ef26f2a2a0b812b25853e4f61e658fa46
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924797"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970560"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms에서 장치 스타일
 
@@ -34,7 +34,7 @@ _Xamarin.Forms는 Device.Styles 클래스에서 장치 스타일으로 알려진
 다음 코드 예제는 *장치* XAML 페이지의 스타일:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="myBodyStyle" TargetType="Label"
@@ -89,7 +89,7 @@ public class DeviceStylesPageCS : ContentPage
         };
 
         Title = "Device";
-        Icon = "csharp.png";
+        IconImageSource = "csharp.png";
         Padding = new Thickness (0, 20, 0, 0);
 
         Content = new StackLayout {

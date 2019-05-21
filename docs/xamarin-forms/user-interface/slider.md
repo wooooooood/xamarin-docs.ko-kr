@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250799"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970546"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
@@ -49,10 +49,10 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) 막대는 왼쪽 엄지 단추의 색입니다.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) 막대는 오른쪽에 있는 엄지 단추의 색입니다.
 - [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) thumb 색이 됩니다.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) 형식의 thumb을 사용 하는 이미지인 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)합니다.
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) 형식의 thumb을 사용 하는 이미지인 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource)합니다.
 
 > [!NOTE]
-> 합니다 `ThumbColor` 고 `ThumbImage` 속성은 함께 사용할 수 없습니다. 두 속성을 설정 하는 경우는 `ThumbImage` 속성 우선 적용 됩니다.
+> 합니다 `ThumbColor` 고 `ThumbImageSource` 속성은 함께 사용할 수 없습니다. 두 속성을 설정 하는 경우는 `ThumbImageSource` 속성 우선 적용 됩니다.
 
 ## <a name="basic-slider-code-and-markup"></a>기본 슬라이더 코드와 태그
 

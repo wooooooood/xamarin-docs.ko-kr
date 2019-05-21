@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957453"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970211"
 ---
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
@@ -70,7 +70,7 @@ using Com.Company.Package;
 
 * **라이브러리에 대 한 모든 외부 종속성 있습니까?** &ndash; Android 라이브러리에 필요한 Java 종속성을 Xamarin.Android 프로젝트에 포함 되어야 합니다는 **ReferenceJar** 또는 **EmbeddedReferenceJar**합니다. 네이티브 어셈블리 바인딩 프로젝트에 추가 되어야 합니다는 **EmbeddedNativeLibrary**합니다.  
 
-* **Android API의 버전은 Android 라이브러리 대상 하나요?** &ndash; "다운 그레이드" Android API 레벨; 불가능 Xamarin.Android 바인딩 프로젝트에는 수준 (이상) 동일한 API를 대상으로 하는지 확인 하는 Android 라이브러리와 합니다.
+* **Android API의 버전은 Android 라이브러리 대상?** &ndash; "다운 그레이드" Android API 레벨; 불가능 Xamarin.Android 바인딩 프로젝트에는 수준 (이상) 동일한 API를 대상으로 하는지 확인 하는 Android 라이브러리와 합니다.
 
 * **어떤 버전 JDK의 라이브러리를 컴파일하는 데 사용 되었습니다.** &ndash; 바인딩 오류 Android 라이브러리는 Xamarin.Android에서 사용에서 보다 JDK의 다른 버전으로 작성 된 경우 발생할 수 있습니다. 가능한 경우 동일한 버전의 Xamarin.Android 설치에서 사용 되는 JDK 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
 

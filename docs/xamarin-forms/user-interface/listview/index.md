@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 540e787b476fc2b249bfbe487e45ac61f2e7405a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ec988508aaff1b433008add0bfbf0f2ad5f2dcf3
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61320006"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970945"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
@@ -21,7 +21,7 @@ ms.locfileid: "61320006"
 [`ListView`](xref:Xamarin.Forms.ListView) 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다.
 
 > [!IMPORTANT]
-> `CollectionView` 데이터의 목록을 표시 하는 것에 대 한 뷰를 다른 레이아웃 사양을 사용 합니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)합니다.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) 데이터의 목록을 표시 하는 것에 대 한 뷰를 다른 레이아웃 사양을 사용 합니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)합니다.
 
 ## <a name="use-cases"></a>사용 사례
 

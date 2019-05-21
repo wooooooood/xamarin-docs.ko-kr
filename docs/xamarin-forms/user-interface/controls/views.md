@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/21/2019
-ms.openlocfilehash: 5b2e58901d4a850863f68b26ce41e1aa4e8daee4
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: 779b39441893324e38843e036614484443e37574
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "61358952"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971296"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -174,7 +174,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| `CollectionView` 다른 레이아웃 사양을 사용 하 여 선택할 수 있는 데이터 항목의 스크롤 가능한 목록이 표시 됩니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 설정 합니다 `ItemsSource` 속성을 설정 하 고 개체의 컬렉션을 `ItemTemplate` 속성을를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 항목 형식을 지정 하는 하는 방법을 설명 하는 개체. 합니다 `SelectionChanged` 이벤트는 선택 된 내용이으로 사용할 수 있는 신호를 `SelectedItem` 속성입니다.<br /><br />[가이드](~/xamarin-forms/user-interface/collectionview/index.md) / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![CollectionView 예제](views-images/CollectionView.png "CollectionView 예제")](views-images/CollectionView-Large.png#lightbox "CollectionView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
+| [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다른 레이아웃 사양을 사용 하 여 선택할 수 있는 데이터 항목의 스크롤 가능한 목록이 표시 됩니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 설정 합니다 `ItemsSource` 속성을 설정 하 고 개체의 컬렉션을 `ItemTemplate` 속성을를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 항목 형식을 지정 하는 하는 방법을 설명 하는 개체. 합니다 `SelectionChanged` 이벤트는 선택 된 내용이으로 사용할 수 있는 신호를 `SelectedItem` 속성입니다.<br /><br />[가이드](~/xamarin-forms/user-interface/collectionview/index.md) / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![CollectionView 예제](views-images/CollectionView.png "CollectionView 예제")](views-images/CollectionView-Large.png#lightbox "CollectionView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />
@@ -186,7 +186,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 | [`ListView`](xref:Xamarin.Forms.ListView) 파생 [ `ItemsView` ](xref:Xamarin.Forms.ItemsView`1) 선택할 수 있는 데이터 항목의 스크롤 가능한 목록이 표시 됩니다. 설정 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 설정 하 고 개체의 컬렉션을 [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성을을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 항목 하는 방법을 설명 하는 개체 형식을 지정 해야 합니다. 합니다 [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트 신호는 선택 된 내용이으로 제공 되는 [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) 속성입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ListView) / [가이드](~/xamarin-forms/user-interface/listview/index.md) / [샘플](https://developer.xamarin.com/samples/WorkingWithListview) | [![ListView 예제](views-images/ListView.png "ListView 예제")](views-images/ListView-Large.png#lightbox "ListView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
-### <a name="picker"></a>선택
+### <a name="picker"></a>선택기
 
 |     |     |
 | --- | --- |

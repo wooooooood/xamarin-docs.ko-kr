@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c0b38453c5e573a13a51b6c001d3324936a8b7fb
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c5fa46a67496123eb105ae12404d5607032f5ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926873"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971143"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Xamarin.Forms에서 스타일 상속
 
@@ -29,7 +29,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 다음 코드를 보여 줍니다 *명시적* 상속 XAML 페이지의 스타일 지정 합니다.
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">
@@ -80,7 +80,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 이 상속 체인에 대해서는 다음 코드 예제에서 설명:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.StyleInheritancePage" Title="Inheritance" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseStyle" TargetType="View">

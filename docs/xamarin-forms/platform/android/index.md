@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: 3bd606ae87c524202fd5ea7c141223042e90ec1a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dc02fdc8754db4ae97c29ba2a496804b2263abdc
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363047"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970738"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
@@ -34,6 +34,7 @@ Xamarin.Forms 뷰, 페이지 및 Android에서 레이아웃에 대해 다음 플
 - 에 그림자를 사용 하도록 설정 된 `ImageButton`합니다. 자세한 내용은 [Android에서 Drop 그림자 ImageButton](imagebutton-drop-shadow.md)합니다.
 - 빠른 스크롤을 사용 하도록 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView) 자세한 내용은 참조 하세요. [Android에서 ListView 빠른 스크롤](listview-fast-scrolling.md).
 - 제어 여부는 [ `WebView` ](xref:Xamarin.Forms.WebView) 혼합 된 콘텐츠를 표시할 수 있습니다. 자세한 내용은 [WebView 혼합 콘텐츠 Android에서](webview-mixed-content.md)합니다.
+- 확대/축소를 사용 하도록 설정 된 [ `WebView` ](xref:Xamarin.Forms.WebView)합니다. 자세한 내용은 [android WebView 확대/축소](webview-zoom-controls.md)합니다.
 
 다음 플랫폼 특정 기능을 Android에서 Xamarin.Forms 페이지에 제공 됩니다.
 

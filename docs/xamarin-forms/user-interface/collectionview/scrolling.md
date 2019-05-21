@@ -7,28 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: b2f32f6695fffa27068fce9d8c12f4ecd9157bc2
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048168"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970533"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
-![](~/media/shared/preview.png "이 API는 현재 시험판")
-
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` 두 정의 `ScrollTo` 메서드를 스크롤하여 항목입니다. 오버 로드 중 하나는 동안 지정된 된 항목을 뷰로 스크롤합니다 다른 보기에 지정된 된 인덱스에 항목을 스크롤합니다. 두 오버 로드는 스크롤 완료 된 후 항목의 정확한 위치를 나타내기 위해 지정 될 수 있는 추가 인수 및 애니메이션 스크롤 효과를 줄 지 여부를 갖습니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 두 정의 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드를 스크롤하여 항목입니다. 오버 로드 중 하나는 동안 지정된 된 항목을 뷰로 스크롤합니다 다른 보기에 지정된 된 인덱스에 항목을 스크롤합니다. 두 오버 로드는 스크롤 완료 된 후 항목의 정확한 위치를 나타내기 위해 지정 될 수 있는 추가 인수 및 애니메이션 스크롤 효과를 줄 지 여부를 갖습니다.
 
-`CollectionView` 정의 `ScrollToRequested` 될 때 발생 하는 이벤트 중 하나는 `ScrollTo` 메서드가 호출 됩니다. `ScrollToRequestedEventArgs` 와 함께 제공 되는 개체를 `ScrollToRequested` 이벤트에 여러 속성을 포함 하 여 `IsAnimated`, `Index`를 `Item`, 및 `ScrollToPosition`합니다. 이러한 속성에 지정 된 인수에서 설정 된 `ScrollTo` 메서드 호출 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 정의 [ `ScrollToRequested` ](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 될 때 발생 하는 이벤트 중 하나는 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드가 호출 됩니다. [ `ScrollToRequestedEventArgs` ](xref:Xamarin.Forms.ScrollToRequestedEventArgs) 와 함께 제공 되는 개체를 `ScrollToRequested` 이벤트에 여러 속성을 포함 하 여 `IsAnimated`를 `Index`를 `Item`, 및 `ScrollToPosition`합니다. 이러한 속성에 지정 된 인수에서 설정 된 `ScrollTo` 메서드 호출 합니다.
 
 스크롤을 시작 하는 사용자 천공 기와 때 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능은 중지를 스크롤할 때 위치로 항목 맞춤 때문에 맞추기로 알려져 있습니다. 자세한 내용은 [맞춤 지점을](#snap-points)합니다.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>인덱스에 있는 항목을 스크롤하여
 
-첫 번째 `ScrollTo` 메서드 오버 로드는 지정된 된 인덱스에 항목을 뷰로 스크롤합니다. 지정 된을 `CollectionView` 라는 개체 `collectionView`, 다음 예제에서는 뷰로 12 인덱스의 항목 스크롤 하는 방법을 보여 줍니다.
+첫 번째 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정된 된 인덱스에 항목을 뷰로 스크롤합니다. 지정 된을 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 라는 개체 `collectionView`, 다음 예제에서는 뷰로 12 인덱스의 항목 스크롤 하는 방법을 보여 줍니다.
 
 ```csharp
 collectionView.ScrollTo(12);
@@ -36,7 +34,7 @@ collectionView.ScrollTo(12);
 
 ## <a name="scroll-an-item-into-view"></a>항목을 스크롤하여
 
-두 번째 `ScrollTo` 메서드 오버 로드는 지정된 된 항목을 뷰로 스크롤합니다. 지정 된을 `CollectionView` 라는 개체 `collectionView`, 다음 예제에서는 지정된 된 항목 보기로 스크롤할 하는 방법을 보여 줍니다.
+두 번째 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정된 된 항목을 뷰로 스크롤합니다. 지정 된을 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 라는 개체 `collectionView`, 다음 예제에서는 지정된 된 항목 보기로 스크롤할 하는 방법을 보여 줍니다.
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -46,7 +44,7 @@ collectionView.ScrollTo(monkey);
 
 ## <a name="control-scroll-position"></a>컨트롤의 스크롤 위치
 
-뷰를 항목 스크롤할 때 사용 하 여 스크롤 완료 된 후 항목의 정확한 위치를 지정할 수 있습니다 합니다 `position` 의 인수는 `ScrollTo` 메서드. 이 인수를 허용 된 [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) 열거형 멤버입니다.
+뷰를 항목 스크롤할 때 사용 하 여 스크롤 완료 된 후 항목의 정확한 위치를 지정할 수 있습니다 합니다 `position` 인수를 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드. 이 인수를 허용 된 [ `ScrollToPosition` ](xref:Xamarin.Forms.ScrollToPosition) 열거형 멤버입니다.
 
 ### <a name="makevisible"></a>MakeVisible
 
@@ -109,10 +107,10 @@ collectionView.ScrollTo(monkey, animate: false);
 
 ## <a name="snap-points"></a>맞춤 지점
 
-스크롤을 시작 하는 사용자 천공 기와 때 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능 이라고 맞추기 중지 되 고 다음 속성을 통해 제어 됩니다 스크롤 하는 경우 위치에 항목 맞춤 때문에 `ItemsLayout` 클래스:
+스크롤을 시작 하는 사용자 천공 기와 때 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능 이라고 맞추기 중지 되 고 다음 속성을 통해 제어 됩니다 스크롤 하는 경우 위치에 항목 맞춤 때문에 합니다 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) 클래스:
 
-- `SnapPointsType`형식의 `SnapPointsType`를 스크롤할 때 맞춤 지점이의 동작을 지정 합니다.
-- `SnapPointsAlignment`형식의 `SnapPointsAlignment`, 끌기 지점 항목을 사용 하 여 정렬 되는 방법을 지정 합니다.
+- [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType)를 형식 [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType)를 스크롤할 때 맞춤 지점이의 동작을 지정 합니다.
+- [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment)를 형식 [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment), 끌기 지점 항목을 사용 하 여 정렬 되는 방법을 지정 합니다.
 
 이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다.
 
@@ -121,28 +119,28 @@ collectionView.ScrollTo(monkey, animate: false);
 
 ### <a name="snap-points-type"></a>맞춤 지점 유형
 
-`SnapPointsType` 열거형은 다음 멤버를 정의 합니다.
+합니다 [ `SnapPointsType` ](xref:Xamarin.Forms.SnapPointsType) 열거형은 다음 멤버를 정의 합니다.
 
 - `None` 스크롤 스냅 되지 않습니다 항목을 나타냅니다.
 - `Mandatory` 해당 콘텐츠를 나타내는 가장 가까운 맞춤에 대 한 스냅숏 항상 있는 스크롤은 자연스럽 게 중지 관성의 방향을 가리킵니다.
 - `MandatorySingle` 와 같은 동작을 나타내는 `Mandatory`, 하지만 한 번에 하나의 항목을 스크롤합니다.
 
-기본적으로 `SnapPointsType` 속성이 `SnapPointsType.None`, 해당 스크롤 하면 스냅 되지 않습니다 항목 다음 스크린샷과에서 같이:
+기본적으로 [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이 `SnapPointsType.None`, 해당 스크롤 하면 스냅 되지 않습니다 항목 다음 스크린샷과에서 같이:
 
 [![IOS 및 Android에서 맞춤 지점이 없이 CollectionView 세로 목록 스크린샷](scrolling-images/snappoints-none.png "끌기 지점 없이 CollectionView 세로 목록")](scrolling-images/snappoints-none-large.png#lightbox "스냅인 없이 CollectionView 세로 목록 지점")
 
 ### <a name="snap-points-alignment"></a>맞춤 지점 맞춤
 
-합니다 `SnapPointsAlignment` 열거형 정의 `Start`를 `Center`, 및 `End` 멤버입니다.
+합니다 [ `SnapPointsAlignment` ](xref:Xamarin.Forms.SnapPointsAlignment) 열거형 정의 `Start`를 `Center`, 및 `End` 멤버입니다.
 
 > [!IMPORTANT]
-> 값을 `SnapPointsAlignment` 속성은만 적용 될 때를 `SnapPointsType` 속성이로 설정 되어 `Mandatory`, 또는 `MandatorySingle`.
+> 값을 [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성은만 적용 될 때를 [ `SnapPointsType` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이로 설정 되어 `Mandatory`, 또는 `MandatorySingle`.
 
 #### <a name="start"></a>시작
 
 `SnapPointsAlignment.Start` 끌기 지점 항목의 선행 가장자리에 부합 되는 멤버를 나타냅니다.
 
-기본적으로 `SnapPointsAlignment` 속성은 `SnapPointsAlignment.Start`로 설정됩니다. 그러나 완성도 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
+기본적으로 [ `SnapPointsAlignment` ](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성이 `SnapPointsAlignment.Start`합니다. 그러나 완성도 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <CollectionView x:Name="collectionView"
@@ -163,7 +161,7 @@ collectionView.ScrollTo(monkey, animate: false);
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -207,7 +205,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -251,7 +249,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321575"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970962"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Xamarin.Forms에 바인딩할 수 있는 레이아웃
 
@@ -31,8 +31,10 @@ ms.locfileid: "61321575"
 
 합니다 `Layout<T>` 노출 클래스를 [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) 레이아웃의 자식 요소에 추가 되는 컬렉션입니다. 경우는 `BinableLayout.ItemsSource` 속성 항목의 컬렉션 설정 되 고 연결을 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)-파생된 클래스는 컬렉션의 각 항목에 추가 됩니다는 `Layout<T>.Children` 레이아웃으로 표시 하기 위해 컬렉션. `Layout<T>`-파생된 클래스는 기본 컬렉션이 변경 될 때에 다음 해당 자식 뷰를 업데이트 합니다. Xamarin.Forms 레이아웃 주기에 대 한 자세한 내용은 참조 하세요. [사용자 지정 레이아웃 만들기](~/xamarin-forms/user-interface/layouts/custom.md)합니다.
 
+표시할 항목의 컬렉션 이며, 스크롤 및 선택을 필요 하지 않습니다 하는 경우에 바인딩할 수 있는 레이아웃을 사용 해야 합니다. 스크롤에 바인딩할 수 있는 레이아웃을 래핑하여 제공 될 수 있습니다 하는 동안를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)를 바인딩할 수 있는 레이아웃 UI 가상화 부족으로 권장 되지 않습니다. 스크롤이 필요한 경우, 같은 UI 가상화를 포함 하는 스크롤 가능한 뷰입니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 하거나 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView)를 사용 해야 합니다. 이 권장 사항을 준수 하지 않으면 성능 문제가 발생할 수 있습니다.
+
 > [!IMPORTANT]
-> 표시할 항목의 컬렉션 이며, 스크롤 및 선택을 필요 하지 않습니다 하는 경우에 바인딩할 수 있는 레이아웃을 사용 해야 합니다. 스크롤에 바인딩할 수 있는 레이아웃을 래핑하여 제공 될 수 있습니다 하는 동안를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)를 바인딩할 수 있는 레이아웃 UI 가상화 부족으로 권장 되지 않습니다. 스크롤이 필요한 경우, 같은 UI 가상화를 포함 하는 스크롤 가능한 뷰입니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 또는 `CollectionView`를 사용 해야 합니다. 이 권장 사항을 준수 하지 않으면 성능 문제가 발생할 수 있습니다.
+>기술적으로 바인딩할 수 있는 레이아웃에서 파생 되는 모든 레이아웃 클래스에 연결할 수 있지만 합니다 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) 클래스인 어렵습니다 항상 이렇게 하는 데에 [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) 하십시오 [ `Grid` ](xref:Xamarin.Forms.Grid), 및 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 클래스입니다. 예를 들어 있는 데이터의 컬렉션을 표시 하려는 시나리오를 [ `Grid` ](xref:Xamarin.Forms.Grid) 여기서 각 항목 컬렉션에는 개체를 바인딩할 수 있는 레이아웃을 사용 하 여 여러 속성을 포함 합니다. 각 행에는 `Grid` 의 각 열을 사용 하 여 컬렉션에서 개체를 표시 해야 합니다 `Grid` 개체의 속성 중 하나를 표시 합니다. 때문에 합니다 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 특정에서개체의속성중하나가표시각각여러뷰가포함된레이아웃클래스로개체에필요한것만바인딩할수있는레이아웃단일개체를포함할수있습니다에대한`Grid` 열입니다. 이 시나리오는 바인딩할 수 있는 레이아웃을 사용 하 여 realised 수, 하는 동안 발생 하는 부모 `Grid` 자식이 포함 된 `Grid` 바인딩된 컬렉션에 있는 각 항목에 대해는 매우 비효율적 이며 문제가 사용 되는 `Grid` 레이아웃 합니다.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>데이터를 사용 하 여 바인딩 가능한 레이아웃 채우기
 
@@ -42,7 +44,7 @@ ms.locfileid: "61321575"
 <Grid BindableLayout.ItemsSource="{Binding Items}" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 IEnumerable<string> items = ...;
@@ -72,7 +74,7 @@ BindableLayout.SetItemsSource(grid, items);
 </StackLayout>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 DataTemplate circleImageTemplate = ...;
@@ -97,7 +99,7 @@ BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
             ... />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 DataTemplateSelector dataTemplateSelector = new TechItemTemplateSelector { ... };

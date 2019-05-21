@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 996e6469347a50523964a5b855804b0041ff8d21
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61041139"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970976"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -102,13 +102,13 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 
 일부 컨트롤에 같은 이미지를 표시 하는 속성이 있습니다.
 
-- [`Page`](xref:Xamarin.Forms.Page) -형식에서 파생 되는 페이지 any `Page` 가 [ `Icon` ](xref:Xamarin.Forms.Page.Icon) 및 [ `BackgroundImage` ](xref:Xamarin.Forms.Page.BackgroundImage) 속성을 로컬 파일 참조를 할당할 수 있습니다. 때와 같이 특정 상황을 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 표시 되는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), 플랫폼에서 지원 되는 경우 아이콘이 표시 됩니다.
+- [`Page`](xref:Xamarin.Forms.Page) -형식에서 파생 되는 페이지 any `Page` 가 [ `IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) 및 [ `BackgroundImageSource` ](xref:Xamarin.Forms.Page.BackgroundImageSource) 속성 파일, 포함된 리소스, URI 또는 스트림을 지정할 수 있습니다. 때와 같이 특정 상황을 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 표시 되는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage), 플랫폼에서 지원 되는 경우 아이콘이 표시 됩니다.
 
   > [!IMPORTANT]
-  > Ios의 경우는 [ `Page.Icon` ](xref:Xamarin.Forms.Page.Icon) 이미지 자산 카탈로그 이미지 집합에서 속성을 채울 수 없습니다. 대신에 대 한 아이콘 이미지를 로드 합니다 `Page.Icon` 속성을 **리소스** iOS 프로젝트의 폴더.
+  > Ios의 경우는 [ `Page.IconImageSource` ](xref:Xamarin.Forms.Page.IconImageSource) 이미지 자산 카탈로그 이미지 집합에서 속성을 채울 수 없습니다. 대신에 대 한 아이콘 이미지를 로드 합니다 `Page.IconImageSource` 파일, 포함된 리소스, URI 또는 스트림에서 속성입니다.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) -는 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 로컬 파일 참조로 설정할 수 있는 속성입니다.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) -는 [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) 속성 이미지를 설정할 수 있는 로컬 파일, 포함된 된 리소스 또는 URI에서 검색 합니다.
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) -는 [ `IconImageSource` ](xref:Xamarin.Forms.MenuItem.IconImageSource) 파일, 포함된 리소스, URI 또는 스트림에서 로드 되는 이미지를 설정할 수 있는 속성입니다.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) -는 [ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource) 파일, 포함된 리소스, URI 또는 스트림에서 이미지를 설정할 수 있는 속성 검색 합니다.
 
 ## <a name="embedded-images"></a>포함 이미지
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 12420f0559d27becb839307d6a1ed4489c895e7d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a149a41a6e50d3b18da166d9c7cb61e36f2d0e7
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926879"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970460"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms에 명시적 스타일
 
@@ -27,7 +27,7 @@ _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨�
 다음 코드 예와 *명시적* 페이지의 XAML에 선언 된 스타일 `ResourceDictionary` 페이지에 적용 하 고 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="labelRedStyle" TargetType="Label">
@@ -75,7 +75,7 @@ _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨�
 외에도 *명시적* 페이지 수준에서 스타일도 만들 수 있습니다 제어 수준에서 다음 코드 예제 에서처럼:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ExplicitStylesPage" Title="Explicit" IconImageSource="xaml.png">
     <ContentPage.Content>
         <StackLayout Padding="0,20,0,0">
             <StackLayout.Resources>
