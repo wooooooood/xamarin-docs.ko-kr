@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 930614b2479d0edcdba74ed3f98a169491252c63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4da446cf342065ce7766f8df0c71008ab47c31c4
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293890"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926825"
 ---
 # <a name="entry-input-method-editor-options-on-android"></a>Android에서 항목 입력 방법 편집기 옵션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 이 Android 플랫폼 특정 입력된 메서드 (입력기) 옵션을 설정 하에 대 한 소프트 키보드를 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 소프트 키보드와의 상호 작용의 아래쪽 모서리에서 사용자 작업 단추를 설정 하는 것이 여기는 `Entry`합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 연결 된 속성의 값에는 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 열거형:
 
@@ -62,7 +62,7 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
