@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 74cfade0cd872ae107f74ca86d6bc5fffa22e1f6
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: a64a54d763edc4f02383af686fc8e9386daad572
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971274"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005234"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView 레이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 레이아웃을 제어 하는 다음 속성을 정의 합니다.
 
@@ -381,6 +383,6 @@ void OnImageTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.Forms CollectionView 스크롤](scrolling.md)

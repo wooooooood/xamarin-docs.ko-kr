@@ -7,20 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 2ee7b2c203251e519af088a550e7e26f30aa62c8
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 889c78ea6849cdd094d34ed0cf74ceebd33ce51d
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971093"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005147"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Xamarin.Forms CollectionView 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 데이터의 목록을 표시 하는 것에 대 한 뷰를 다른 레이아웃 사양을 사용 합니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 예를 들어 다음 스크린샷에서 표시 된 `CollectionView` 세로 격자 눈금 두 열을 사용 하 고 있어 여러 선택:
 
 [![IOS 및 Android에서 CollectionView 세로 격자 레이아웃의 스크린 샷](introduction-images/verticalgrid-multipleselection.png "다중 선택 영역을 사용 하 여 CollectionView 세로 격자 레이아웃")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "으로 CollectionView 세로 모눈 레이아웃 다중 선택")
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) Xamarin.Forms 4.0에서 제공 됩니다. 그러나 현재 실험적 이므로 코드를 다음 줄을 추가 하 여 에서만 사용할 수 있습니다 하 `AppDelegate` 또는 ios의 경우 클래스에 `MainActivity` 호출 하기 전에 android에서 클래스 `Forms.Init`:
+
+```csharp
+Forms.SetFlags("CollectionView_Experimental");
+```
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) iOS 및 Android에서 사용할 수만 있습니다.
@@ -57,4 +65,4 @@ ms.locfileid: "65971093"
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)

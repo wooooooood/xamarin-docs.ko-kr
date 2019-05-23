@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b2f32f6695fffa27068fce9d8c12f4ecd9157bc2
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: bd328c307ef5ad243569c294a7256ae9bdb3806a
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970533"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005257"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.Forms CollectionView 스크롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 두 정의 [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드를 스크롤하여 항목입니다. 오버 로드 중 하나는 동안 지정된 된 항목을 뷰로 스크롤합니다 다른 보기에 지정된 된 인덱스에 항목을 스크롤합니다. 두 오버 로드는 스크롤 완료 된 후 항목의 정확한 위치를 나타내기 위해 지정 될 수 있는 추가 인수 및 애니메이션 스크롤 효과를 줄 지 여부를 갖습니다.
 
@@ -272,4 +274,4 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
