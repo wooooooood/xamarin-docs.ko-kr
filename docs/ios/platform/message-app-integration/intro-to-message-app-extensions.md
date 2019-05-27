@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7bd4a87843852e940da96f688371ddbecbf7e0b4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cdeaae6cb83062f0d84a3605582b9779c9f36145
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153981"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178052"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Xamarin.iOS에서 메시지 앱 확장 기본 사항
 
@@ -133,7 +133,7 @@ Xcode의 특성 검사기를 사용 하 여 전체 스티커 팩에 대 한 크�
 
 1. Visual Studio를 시작합니다.
 2. 메시지 앱 확장을 추가 하려면 솔루션을 엽니다.
-3. 선택 * * iOS 확장 > iMessage 확장 (iOS) * *을 클릭 합니다 **다음** 단추:
+3. 선택 **iOS 확장 > iMessage 확장 (iOS)** 을 클릭 합니다 **다음** 단추:
 
     [![IMessage 확장 (iOS)를 선택 합니다.](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 

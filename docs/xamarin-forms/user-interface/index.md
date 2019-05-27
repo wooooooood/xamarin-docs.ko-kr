@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: b54dce66e234807a3f03251461f8f8c868ce95e9
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7c3a26854c65de260aa9b3c8ed00966749eb4d9c
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970952"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178078"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
@@ -51,6 +51,10 @@ DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 �
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
 `DatePicker` 지정된 된 범위 내에서 날짜를 선택할 수 있습니다. 응용 프로그램에서 실행 되는 특정 플랫폼에서 지원 되는 날짜 선택기를 사용 하 여 구현 됩니다.
+
+## <a name="display-pop-upspop-upsmd"></a>[팝업 표시](pop-ups.md)
+
+Xamarin.Forms는 팝업과 같은 두 가지 사용자 인터페이스 요소인 경고와 작업 시트를 제공합니다. 사용자가 간단한 질문 하 고 작업을 통해 사용자를 안내 하는 대화 상자를 표시 하도록 이러한 인터페이스 요소를 사용할 수 있습니다.
 
 ## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[SkiaSharp를 사용한 그래픽](graphics/skiasharp/index.md)
 

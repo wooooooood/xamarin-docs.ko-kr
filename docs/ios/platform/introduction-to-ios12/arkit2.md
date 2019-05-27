@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 81d9ab12a4b8e8184e0a61dc9b6d53d72004d25c
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399202"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213324"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.iOS에서 ARKit 2
 
@@ -300,7 +300,7 @@ configuration.TrackingImages = referenceImages;
 하려면 환경 질감을 사용 합니다.
 
 * 프로그램 [ `SCNMaterial` ](xref:SceneKit.SCNMaterial) 개체를 사용 해야 합니다 [ `SCNLightingModel.PhysicallyBased` ](xref:SceneKit.SCNLightingModel.PhysicallyBased) 에 대 한 0 ~ 1 범위에 값을 할당 하 고 [ `Metalness.Contents` ](xref:SceneKit.SCNMaterial.Metalness) 고 [ `Roughness.Contents` ](xref:SceneKit.SCNMaterialProperty.Contents) 및
-* 추적 구성을 설정 해야 합니다 [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [AREnvironmentTexturing.Automatic'](xref:ARKit.AREnvironmentTexturing.Automatic) :
+* 추적 구성을 설정 해야 합니다 [ `EnvironmentTexturing` ](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [ `AREnvironmentTexturing.Automatic` ](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -323,7 +323,7 @@ var configuration = new ARWorldTrackingConfiguration
 
 ### <a name="shared-and-persistent-ar-experiences"></a>공유 및 영구 AR 환경
 
-ARKit 2로 주 또한 합니다 [ `ARWorldMap` ](xref:ARKit.ARWorldMap) 공유 또는 전 세계 추적 데이터를 저장할 수 있는 클래스입니다. 현재 전 세계 맵에 사용 하 여 얻게 [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) 하거나 [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
+ARKit 2로 주 또한 합니다 [ `ARWorldMap` ](xref:ARKit.ARWorldMap) 공유 또는 전 세계 추적 데이터를 저장할 수 있는 클래스입니다. 현재 전 세계 맵에 사용 하 여 얻게 [ `ARSession.GetCurrentWorldMapAsync` ](xref:ARKit.ARSession.GetCurrentWorldMapAsync) 하거나 [ `GetCurrentWorldMap(Action<ARWorldMap,NSError>)` ](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage

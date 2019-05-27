@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054313"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005154"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
-
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 플라이아웃 후에 셸 애플리케이션에서 다음 탐색 수준은 아래쪽 탭 표시줄입니다. 또는 플라이아웃이 닫히면 아래쪽 탭 표시줄을 최상위 탐색 수준으로 간주합니다.
 
@@ -112,8 +110,8 @@ ms.locfileid: "65054313"
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -228,7 +226,7 @@ ms.locfileid: "65054313"
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ ms.locfileid: "65054313"
 
 `Shell` 클래스는 탭 모양을 제어하는 다음 속성을 정의합니다.
 
-- `Color` 형식의 `ShellTabBarBackgroundColor` - 탭 표시줄의 배경색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ShellBackgroundColor` 속성 값이 사용됩니다.
-- `Color` 형식의 `ShellTabBarDisabledColor` - 탭 표시줄의 사용할 수 없는 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ShellDisabledColor` 속성 값이 사용됩니다.
-- `Color` 형식의 `ShellTabBarForegroundColor` - 탭 표시줄의 전경색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ShellForegroundColor` 속성 값이 사용됩니다.
-- `Color` 형식의 `ShellTabBarTitleColor` - 탭 표시줄의 제목 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ShellTitleColor` 속성 값이 사용됩니다.
-- `Color` 형식의 `ShellTabBarUnselectedColor` - 탭 표시줄의 선택되지 않은 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ShellUnselectedColor` 속성 값이 사용됩니다.
+- `Color` 형식의 `TabBarBackgroundColor` - 탭 표시줄의 배경색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `BackgroundColor` 속성 값이 사용됩니다.
+- `Color` 형식의 `TabBarDisabledColor` - 탭 표시줄의 사용할 수 없는 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `DisabledColor` 속성 값이 사용됩니다.
+- `Color` 형식의 `TabBarForegroundColor` - 탭 표시줄의 전경색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `ForegroundColor` 속성 값이 사용됩니다.
+- `Color` 형식의 `TabBarTitleColor` - 탭 표시줄의 제목 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `TitleColor` 속성 값이 사용됩니다.
+- `Color` 형식의 `TabBarUnselectedColor` - 탭 표시줄의 선택되지 않은 색을 정의하는 연결된 속성입니다. 이 속성을 설정하지 않으면 `UnselectedColor` 속성 값이 사용됩니다.
 
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
@@ -281,11 +279,11 @@ ms.locfileid: "65054313"
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ CSS(CSS 스타일시트)를 사용하여 탭 스타일을 지정할 수도 있�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms Shell 탐색](navigation.md)
 - [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

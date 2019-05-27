@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 184aa18ac8c0f27ce92a23b06b9dd0364f977abc
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 5c67684f7d8cb763d4698de86c904e2887185361
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050886"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925179"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>맵의 경로 강조 표시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
 
 _이 문서에서는 맵에 다각형 오버레이를 추가하는 방법을 설명합니다. 다각형 오버레이는 일반적으로 맵에 경로를 표시하거나 필요한 모든 모양을 형성하는 데 사용되는 일련의 연결된 라인 세그먼트입니다._
 
@@ -304,6 +304,6 @@ namespace MapOverlay.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [폴리라인 맵 오버레이(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
+- [폴리라인 맵 오버레이(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
 - [지도 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

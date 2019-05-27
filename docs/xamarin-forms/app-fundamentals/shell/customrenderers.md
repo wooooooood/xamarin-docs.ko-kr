@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c1418e581e2896a77d0b83a46ecc8d3a0ce8c510
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054213"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970781"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.Forms Shell 사용자 지정 렌더러
-
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 Xamarin.Forms Shell 애플리케이션의 이점 중 하나는 다양한 셸 클래스가 공개하는 속성 및 메서드를 통해 해당 모양과 동작을 세부적으로 사용자 지정할 수 있다는 것입니다. 그러나 더 정교한 플랫폼별 사용자 지정이 필요한 경우에는 셸 사용자 지정 렌더러를 만들 수도 있습니다. 다른 사용자 지정 렌더러와 마찬가지로, 다른 플랫폼에서 기본 동작을 허용하는 동안 셸 사용자 지정 렌더러를 하나의 플랫폼 프로젝트에만 추가하여 모양과 동작을 사용자 지정할 수 있습니다. 또는 다른 셸 사용자 지정 렌더러를 각 플랫폼 프로젝트에 추가하여 iOS 및 Android에서 모양과 동작을 사용자 지정할 수 있습니다.
 

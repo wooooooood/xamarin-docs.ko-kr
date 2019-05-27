@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 489d2a76e6eff661360b24d1872ed1343c74b85e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 847566feec2069dea924bcd2a18abf2b3ddb250b
+ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261183"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66213284"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
@@ -36,9 +36,9 @@ Xamarin.iOS 및 Xamarin.Mac 통합 Api는 계속 포함 합니다 `int`, `uint` 
 
 ### <a name="portable-class-library-projects"></a>이식 가능한 클래스 라이브러리 프로젝트
 
-이식 가능한 클래스 라이브러리 (PCL)를 지원 하 고 인터페이스를 사용 하 여 플랫폼 특정 기능을 제공 하려는 플랫폼을 대상으로 수 있습니다.
+이식 가능한 클래스 라이브러리 (PCL)를 사용 하면를 지원 하 고 인터페이스를 사용 하 여 플랫폼 특정 기능을 제공 하려는 플랫폼을 대상으로 수 있습니다.
 
-PCL 프로젝트 형식으로 컴파일된 이후를 `.DLL` Unified API의 당면한 있기를 기존 데이터 형식을 사용 하 여 유지 해야 할 수 있습니다 (`int`를 `uint`, `float`) PCL에서 소스 코드 형식으로 캐스팅 Pcl에 대 한 호출 클래스 및 프런트 엔드 응용 프로그램의 메서드입니다. 예를 들면 다음과 같습니다.
+PCL 프로젝트 형식으로 컴파일된 이후를 `.DLL` Unified API의 당면한 있기를 기존 데이터 형식을 사용 하 여 유지 해야 할 수 있습니다 (`int`를 `uint`, `float`) PCL에서 소스 코드 형식으로 캐스팅 PCL의에 대 한 호출 클래스 및 프런트 엔드 응용 프로그램의 메서드입니다. 예를 들어:
 
 ```csharp
 using NativePCL;
@@ -52,7 +52,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 공유 자산 프로젝트 형식을 사용 하면 개별 플랫폼 특정 프런트 엔드 앱에 다음 포함 가져오고 컴파일되는 별도 프로젝트에서 소스 코드를 구성 하 고 사용할 `#if` 관리 하는 데 필요한 컴파일러 지시문 플랫폼 특정 요구 사항입니다.
 
-크기와 복잡성 앞의 크기와 공유 되는 코드의 복잡성과 함께 공유 코드를 사용 하는 플랫폼 간 호환 형식을 네이티브 데이터 지원의 메서드를 선택 하는 경우 계정에 수행 해야 하는 모바일 응용 프로그램을 종료 합니다 공유 자산 프로젝트 유형입니다.
+크기 및 크기와 공유 되는 코드의 복잡성과 함께 공유 코드를 사용 하는, 크로스 플랫폼에서 네이티브 데이터 형식에 대 한 지원의 메서드를 선택할 때 고려해 야 하는 프런트 엔드 모바일 응용 프로그램의 복잡성 공유 자산 프로젝트입니다.
 
 이러한 요인에 따라 다음과 같은 유형의 솔루션을 구현할 수 있습니다를 사용 하 여는 `if __UNIFIED__ ... #endif` 컴파일러 지시문을 코드를 Unified API 특정 변경을 처리할 수 있도록 합니다.
 
@@ -103,7 +103,7 @@ namespace NativeShared
 
 #### <a name="using-method-overloads"></a>메서드를 사용 하 여 오버 로드
 
-이 경우, 솔루션 있도록 이제 32 비트 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 수 있습니다 `CGRect` 매개 변수 및/또는 반환 값을 해당 값을 변환할를 `RectangleF` (알면 해당 변환에서 `nfloat` 를`float` 손실 변환이), 실제 작업을 수행 하는 루틴 원래 버전을 호출 합니다. 예를 들어:
+이 경우, 솔루션을 이제 가지도록 32-bit 데이터 형식을 사용 하 여 메서드의 오버 로드 버전을 만들어 수 있습니다 `CGRect` 매개 변수 및/또는 반환 값을 해당 값을 변환할를 `RectangleF` (해당 변환에서 알 `nfloat` 를 `float` 손실 변환이), 실제 작업을 수행 하는 루틴 원래 버전을 호출 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -127,8 +127,8 @@ namespace NativeShared
         #if __UNIFIED__
             public static nfloat CalculateArea(CGRect rect) {
 
-            // Call original routine to calculate area
-            return (nfloat)CalculateArea((RectangleF)rect);
+                // Call original routine to calculate area
+                return (nfloat)CalculateArea((RectangleF)rect);
 
             }
         #endif
@@ -173,12 +173,12 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-    // Mappings Unified CoreGraphic classes to MonoTouch classes
+    // Map Unified CoreGraphic classes to MonoTouch classes
     using RectangleF = global::CoreGraphics.CGRect;
     using SizeF = global::CoreGraphics.CGSize;
     using PointF = global::CoreGraphics.CGPoint;
 #else
-    // Mappings Unified types to MonoTouch types
+    // Map Unified types to MonoTouch types
     using nfloat = global::System.Single;
     using nint = global::System.Int32;
     using nuint = global::System.UInt32;
@@ -207,14 +207,14 @@ namespace NativeShared
 }
 ```
 
-변경한 다음 합니다 `CalculateArea` 반환 메서드를 `nfloat` 표준 대신 `float`. 가 이렇게 하는 동안 컴파일 오류가 발생 하지 얻게 _암시적으로_ 변환의 `nfloat` 계산의 결과 (곱하는 값이 모두 있으므로 `nfloat`)에 `float` 값을 반환 합니다.
+변경한 다음 합니다 `CalculateArea` 반환할 메서드는 `nfloat` 표준 대신 `float`. 가 이렇게 하는 동안 컴파일 오류가 발생 하지 얻게 _암시적으로_ 변환 합니다 `nfloat` 계산의 결과 (형식의 값을 곱하는 모두 되므로 `nfloat`)에 `float` 값을 반환 합니다.
 
 코드 컴파일 및 비 통합 API 장치에서 실행 하는 경우는 `using nfloat = global::System.Single;` 매핑합니다를 `nfloat` 에 `Single` 는 암시적으로 변환 됩니다는 `float` 프런트 엔드 응용 프로그램을 사용 하려면 허용를 `CalculateArea` 없이 메서드 수정 내용입니다.
 
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>프런트 엔드 앱에서 형식 변환 사용
 
-프런트 엔드 응용 프로그램에만 몇 가지 공유 코드 라이브러리에 대 한 호출을, 하는 경우에 다른 라이브러리 변경 되지 않은 상태로 유지 하는 것입니다 솔루션과 수행 형식 캐스팅 Xamarin.iOS 또는 Xamarin.Mac 응용 프로그램에서 기존 루틴을 호출 하는 경우. 예를 들면 다음과 같습니다.
+프런트 엔드 응용 프로그램에만 몇 가지 공유 코드 라이브러리에 대 한 호출을, 하는 경우에 다른 라이브러리 변경 되지 않은 상태로 유지 하는 것입니다 솔루션과 수행 형식 캐스팅 Xamarin.iOS 또는 Xamarin.Mac 응용 프로그램에서 기존 루틴을 호출 하는 경우. 예를 들어:
 
 ```csharp
 using NativeShared;
@@ -236,13 +236,13 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 - 전체 솔루션을 버전 1.3.1 사용 해야 합니다 (또는 이상)의 Xamarin.Forms NuGet 패키지.
 - 모든 Xamarin.iOS 사용자 지정 렌더링에 대 한 UI 코드 공유 (공유 프로젝트 또는 PCL) 되었으면 하는 방법에 따라 위의 솔루션의 동일한 형식을 사용 합니다.
 
-표준 플랫폼 간 응용 프로그램에서와 같이 기존 32 비트 데이터 형식은 사용할 공유 되는 플랫폼 간 코드에서 대부분의 모든 상황에 대 한 합니다. 새 네이티브 데이터 형식은 여기서 아키텍처 인식 형식이 필요한 지에 대 한 지원 iOS 또는 Mac API를 호출 하는 경우에 사용 해야 합니다.
+표준 플랫폼 간 응용 프로그램에서와 같이 대부분의 상황에 대 한 기존 32-bit 데이터 형식은 공유 되는 플랫폼 간 코드에서 사용 해야 합니다. 새로운 네이티브 데이터 형식은 반드시 있는 아키텍처를 인식 한 형식에 대 한 지원 iOS 또는 Mac API 호출 하 하는 경우에 사용 해야 합니다.
 
 자세한 내용은 참조 하세요. 당사의 [기존 Xamarin.Forms 앱 업데이트](https://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/) 설명서.
 
 ## <a name="summary"></a>요약
 
-이 문서는 통합 API 응용 프로그램 및 해당 의미 플랫폼의 네이티브 데이터 형식을 사용 해야 하는 경우 참조를 해야 합니다. 플랫폼 간 라이브러리에서 새 기본 데이터 형식을 사용 해야 합니다는 상황에서 사용할 수 있는 몇 가지 솔루션을 설명 합니다. 및 Xamarin.Forms 플랫폼 간 응용 프로그램에서 통합 Api를 지원 하기 위한 요약 가이드가 살펴보았습니다.
+이 문서는 통합 API 응용 프로그램 및 해당 의미 플랫폼의 네이티브 데이터 형식을 사용 하는 경우 살펴보았습니다. 플랫폼 간 라이브러리에서 새 기본 데이터 형식을 사용 해야 합니다는 상황에서 사용할 수 있는 몇 가지 솔루션을 설명 합니다. 또한 Xamarin.Forms 플랫폼 간 응용 프로그램에서 통합 Api를 지원 하기 위한 요약 가이드가 살펴보았습니다.
 
 
 

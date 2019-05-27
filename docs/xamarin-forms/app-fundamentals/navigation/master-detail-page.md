@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
-ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
+ms.openlocfilehash: c60eecd5ebd0f518514cd77d8dd963568d1a1d43
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56666911"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970911"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
@@ -111,7 +111,7 @@ public class MainPageCS : MasterDetailPage
              xmlns:local="using:MasterDetailPageNavigation"
              x:Class="MasterDetailPageNavigation.MasterPage"
              Padding="0,40,0,0"
-             Icon="hamburger.png"
+             IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout>
         <ListView x:Name="listView" x:FieldModifier="public">
@@ -145,7 +145,7 @@ public class MainPageCS : MasterDetailPage
 
 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 각각의 `MasterPageItem`을 표시하기 위해 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성에 할당됩니다. `DataTemplate`에는 [`Image`](xref:Xamarin.Forms.Image) 및 [`Label`](xref:Xamarin.Forms.Label)로 구성된 [`ViewCell`](xref:Xamarin.Forms.ViewCell)이 포함됩니다. [`Image`](xref:Xamarin.Forms.Image)에는 `IconSource` 속성 값이 표시되고, [`Label`](xref:Xamarin.Forms.Label)에는 각 `MasterPageItem`에 대한 `Title` 속성 값이 표시됩니다.
 
-이 페이지에는 해당 [`Title`](xref:Xamarin.Forms.Page.Title) 및 [`Icon`](xref:Xamarin.Forms.Page.Icon) 속성이 설정되어 있습니다. 세부 정보 페이지에 제목 표시줄이 있으면 아이콘이 세부 정보 페이지에 표시됩니다. 세부 정보 페이지 인스턴스를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에 래핑하여 iOS에서 이를 활성화해야 합니다.
+이 페이지에는 해당 [`Title`](xref:Xamarin.Forms.Page.Title) 및 [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) 속성이 설정되어 있습니다. 세부 정보 페이지에 제목 표시줄이 있으면 아이콘이 세부 정보 페이지에 표시됩니다. 세부 정보 페이지 인스턴스를 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에 래핑하여 iOS에서 이를 활성화해야 합니다.
 
 > [!NOTE]
 > [`MasterDetailPage.Master`](xref:Xamarin.Forms.MasterDetailPage.Master) 페이지에는 해당 [`Title`](xref:Xamarin.Forms.Page.Title) 속성이 설정되어 있어야 하며, 그렇지 않으면 예외가 발생합니다.
@@ -198,7 +198,7 @@ public class MasterPageCS : ContentPage
       SeparatorVisibility = SeparatorVisibility.None
     };
 
-    Icon = "hamburger.png";
+    IconImageSource = "hamburger.png";
     Title = "Personal Organiser";
     Content = new StackLayout
     {
@@ -239,7 +239,7 @@ public partial class MainPage : MasterDetailPage
 
 `OnItemSelected` 메서드에서 수행하는 작업은 다음과 같습니다.
 
-- [`ListView`](xref:Xamarin.Forms.ListView) 인스턴스에서 [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem)을 검색하여 `null`이 아닌 경우 세부 정보 페이지를 `MasterPageItem`의 `TargetType` 속성에 저장된 페이지 형식의 새 인스턴스로 설정합니다. `MasterPage`의 [`Icon`](xref:Xamarin.Forms.Page.Icon) 속성을 통해 참조된 아이콘이 iOS의 세부 정보 페이지에 표시되도록 페이지 형식이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에 래핑됩니다.
+- [`ListView`](xref:Xamarin.Forms.ListView) 인스턴스에서 [`SelectedItem`](xref:Xamarin.Forms.ListView.SelectedItem)을 검색하여 `null`이 아닌 경우 세부 정보 페이지를 `MasterPageItem`의 `TargetType` 속성에 저장된 페이지 형식의 새 인스턴스로 설정합니다. `MasterPage`의 [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) 속성을 통해 참조된 아이콘이 iOS의 세부 정보 페이지에 표시되도록 페이지 형식이 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에 래핑됩니다.
 - 다음에 `MasterPage`가 표시되면 `ListView` 항목이 선택되지 않도록 [`ListView`](xref:Xamarin.Forms.ListView)에서 선택한 항목이 `null`로 설정됩니다.
 - 세부 정보 페이지는 [`MasterDetailPage.IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) 속성을 `false`로 설정하여 사용자에게 표시됩니다. 이 속성은 마스터 페이지 또는 세부 정보 페이지의 표시 여부를 제어합니다. 마스터 페이지를 표시하려면 `true`로 설정하고, 세부 정보 페이지를 표시하려면 `false`로 설정해야 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672562"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971252"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
 
@@ -149,7 +149,7 @@ Android에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`Navi
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-iOS 및 UWP(유니버설 Windows 플랫폼)에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)에서 토글 단추에 대해 읽고, `AutomationProperties.Name` 및 `MasterDetailPage`의 `AutomationProperties.HelpText` 속성 또는 `Master` 페이지의 `Icon` 속성을 설정합니다.
+iOS 및 UWP(유니버설 Windows 플랫폼)에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)에서 토글 단추에 대해 읽고, `AutomationProperties.Name` 및 `MasterDetailPage`의 `AutomationProperties.HelpText` 속성 또는 `Master` 페이지의 `IconImageSource` 속성을 설정합니다.
 
 Android에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)에서 토글 단추에 대해 읽고, 문자열 리소스를 Android 프로젝트에 추가합니다.
 
@@ -161,11 +161,11 @@ Android에서 텍스트를 설정하기 위해 해당 화면 판독기는 [`Mast
 </resources>
 ```
 
-그런 다음, `Master` 페이지에서 `Icon` 속성의 `AutomationId` 속성을 적절한 문자열로 설정합니다.
+그런 다음, `Master` 페이지에서 `IconImageSource` 속성의 `AutomationId` 속성을 적절한 문자열로 설정합니다.
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

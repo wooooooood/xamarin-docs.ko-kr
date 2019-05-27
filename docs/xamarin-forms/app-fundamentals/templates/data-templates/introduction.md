@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: bcea44688a64e741868e7ad2adf6c4dc65a5071a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c547a851d9e042f0289ac5c3a2d20ff97f681551
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052279"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926945"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
 
 _Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤의 데이터 표현을 정의하는 기능을 제공합니다. 이 문서에서는 데이터 템플릿이 필요한 이유를 검토하면서 데이터 템플릿을 소개합니다._
 
@@ -138,5 +138,5 @@ public class Person
 ## <a name="related-links"></a>관련 링크
 
 - [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [데이터 템플릿(샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [데이터 템플릿(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

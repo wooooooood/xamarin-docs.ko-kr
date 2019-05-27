@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d39015b77396a87eb2f8c993a0e0ec42c563658
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ab48d6d3a463a287af8de7d3926287b799ae43a6
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057476"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926260"
 ---
 # <a name="xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
 
 _DataTemplate은 지원되는 컨트롤의 데이터 모양을 지정하는 데 사용되며 일반적으로 표시할 데이터에 바인딩됩니다._
 
@@ -35,4 +35,4 @@ Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤의 데이터 표현�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 템플릿(샘플)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [데이터 템플릿(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)

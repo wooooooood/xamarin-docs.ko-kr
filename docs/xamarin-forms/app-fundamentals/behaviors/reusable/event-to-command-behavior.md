@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 1c2aea9a5dead1962cfd4bb71d1a1211e8b98ee9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1bb3f319eb104a7425c3be820f5c91efe300737f
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056709"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925174"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다._
 
@@ -35,7 +35,7 @@ _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명
 - **Converter** – 바인딩 엔진이 원본과 대상 사이에서 데이터를 전달할 때 이벤트 인수의 데이터의 형식을 변경하는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현입니다.
 
 > [!NOTE]
-> `EventToCommandBehavior`는 [EventToCommand 동작 샘플](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)에 배치할 수 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
+> `EventToCommandBehavior`는 [EventToCommand 동작 샘플](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)에 배치할 수 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 
@@ -208,6 +208,6 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 ## <a name="related-links"></a>관련 링크
 
-- [EventToCommand 동작(샘플)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [EventToCommand 동작(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [동작](xref:Xamarin.Forms.Behavior)
 - [동작&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
