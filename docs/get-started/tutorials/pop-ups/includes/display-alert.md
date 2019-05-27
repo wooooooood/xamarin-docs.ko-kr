@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384735"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193783"
 ---
 Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 묻는 모달 팝업(경고라고도 함)이 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 사용하여 사용자에게 경고를 표시하고 간단한 질문을 묻습니다.
 
@@ -67,7 +67,7 @@ Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 �
 
     질문에 대한 응답을 선택한 후에 응답이 Visual Studio **출력** 창에 출력되는지 살펴봅니다.
 
-    경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert)를 참조하세요.
+    경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert)를 참조하세요.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 �
 
     질문에 대한 응답을 선택한 후에 응답이 Mac용 Visual Studio **애플리케이션 출력** 창에 출력되는지 살펴봅니다.
 
-    경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert)를 참조하세요.
+    경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert)를 참조하세요.

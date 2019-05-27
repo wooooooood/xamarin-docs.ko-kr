@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b1709330678a201521fd226d473cd334bcd86f94
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054273"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005173"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
-
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell에는 세트 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동하는 데 경로를 사용하는 URI 기반 탐색 환경이 포함됩니다. 또한 탐색 스택의 모든 페이지를 방문하지 않고도 뒤로 이동할 수 있는 기능을 제공합니다.
 
@@ -274,7 +272,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-이 코드 예제는 `CollectionView`에서 현재 선택된 코끼리를 검색하고 `elephantdetails` 경로로 이동하여 `elephantName`을 쿼리 매개 변수로 전달합니다. 쿼리 매개 변수는 탐색용으로 인코딩된 URL이므로 “Indian Elephant”는 “Indian%20Elephant”가 됩니다.
+이 코드 예제는 [`CollectionView`](xref:Xamarin.Forms.CollectionView)에서 현재 선택된 코끼리를 검색하고 `elephantdetails` 경로로 이동하여 `elephantName`을 쿼리 매개 변수로 전달합니다. 쿼리 매개 변수는 탐색용으로 인코딩된 URL이므로 “Indian Elephant”는 “Indian%20Elephant”가 됩니다.
 
 데이터를 수신하려면 이동할 페이지를 나타내는 클래스 또는 페이지의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 대한 클래스가 각 쿼리 매개 변수에 대해 `QueryPropertyAttribute`로 데코레이팅되어야 합니다.
 
@@ -341,4 +339,4 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

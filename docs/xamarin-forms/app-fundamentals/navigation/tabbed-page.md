@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 0f0c2e9f3e0a2309db1ad96ff286d6ac17f78bc5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329301"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970932"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
 
@@ -44,9 +44,18 @@ _Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 �
 
 - Windows 태블릿 양식 요소에서 탭은 표시되지 않을 수 있습니다. 또한 사용자는 `TabbedPage` 탭을 보기 위해 (다음과 같이) 아래로 스와이프(또는 마우스가 연결된 경우 마우스 오른쪽 단추 클릭)해야 합니다.
 
-![](tabbed-page-images/windows-tabs.png "Windows의 TabbedPage 탭")
+    ![](tabbed-page-images/windows-tabs.png "Windows의 TabbedPage 탭")
 
 ## <a name="creating-a-tabbedpage"></a>TabbedPage 만들기
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 다음 속성을 정의합니다.
+
+- 탭 표시줄의 배경색인 [`Color`](xref:Xamarin.Forms.Color) 형식의 [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor).
+- 탭 표시줄의 텍스트 색인 [`Color`](xref:Xamarin.Forms.Color) 형식의 [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor).
+- 선택된 탭의 색인 [`Color`](xref:Xamarin.Forms.Color) 형식의 [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor).
+- 선택 취소된 탭의 색인 [`Color`](xref:Xamarin.Forms.Color) 형식의 [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor).
+
+이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성에 스타일을 지정할 수 있으며 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
 두 방법을 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)를 만드는 데 사용할 수 있습니다.
 
@@ -70,7 +79,7 @@ _Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 �
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -86,7 +95,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -148,7 +157,7 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -204,7 +213,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {

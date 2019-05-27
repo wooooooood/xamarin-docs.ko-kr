@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 05ce2536c04306c2881ccc5dfa5e2016c9025b11
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054493"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005219"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
-
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 플라이아웃은 셸 애플리케이션의 루트 메뉴이며, 아이콘을 통해 또는 화면 측면에서 살짝 밀어 액세스할 수 있습니다. 플라이아웃은 선택적 헤더, 플라이아웃 항목 및 선택적 메뉴 항목으로 구성됩니다.
 
@@ -183,8 +181,8 @@ Shell.Current.FlyoutIsPresented = false;
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
-    <views:CatsPage Icon="cat.png" />
-    <views:DogsPage Icon="dog.png" />
+    <views:CatsPage IconImageSource="cat.png" />
+    <views:DogsPage IconImageSource="dog.png" />
 </Shell>
 ```
 
@@ -360,23 +358,18 @@ Shell.Current.CurrentItem = aboutItem;
 > [!NOTE]
 > `MenuItem` 클래스에는 [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) 이벤트 및 [`Command`](xref:Xamarin.Forms.MenuItem.Command) 속성이 포함됩니다. 따라서 `MenuItem` 개체를 통해 탭되는 `MenuItem`에 대한 응답으로 작업을 실행하는 시나리오를 실현합니다. 이 시나리오에는 탐색 수행 및 특정 웹 페이지에서 웹 브라우저 열기가 포함됩니다.
 
-`Shell.MenuItems` 컬렉션은 플라이아웃에 표시될 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체 목록을 정의합니다. 이 컬렉션은 다음 예제에 표시된 대로 `MenuItem` 개체로 채울 수 있습니다.
+[`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체를 다음 예제에서와 같이 플라이아웃에 추가할 수 있습니다.
 
 ```xaml
-<Shell ...
-       x:Name="self">
+<Shell ...>
     ...            
-    <Shell.MenuItems>
-        <MenuItem Text="Random"
-                  Icon="random.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding RandomPageCommand}" />
-        <MenuItem Text="Help"
-                  Icon="help.png"
-                  BindingContext="{x:Reference self}"
-                  Command="{Binding HelpCommand}"
-                  CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
-    </Shell.MenuItems>    
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
 </Shell>
 ```
 
@@ -384,7 +377,10 @@ Shell.Current.CurrentItem = aboutItem;
 
 [![iOS 및 Android에서 MenuItem 개체가 포함된 플라이아웃의 스크린샷](flyout-images/flyout.png "MenuItem 개체가 포함된 셸 플라이아웃")](flyout-images/flyout-large.png#lightbox "MenuItem 개체가 포함된 셸 플라이아웃")
 
-첫 번째 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체는 애플리케이션의 임의 페이지로 이동하는 `RandomPageCommand`라는 `ICommand`를 실행합니다. 두 번째 `MenuItem` 개체는 웹 브라우저에서 `CommandParameter` 속성으로 지정된 URL을 여는 `HelpCommand`라는 `ICommand`를 실행합니다. 각 `MenuItem`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)는 서브클래싱된 `Shell` 개체로 설정됩니다.
+첫 번째 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체는 애플리케이션의 임의 페이지로 이동하는 `RandomPageCommand`라는 `ICommand`를 실행합니다. 두 번째 `MenuItem` 개체는 웹 브라우저에서 `CommandParameter` 속성으로 지정된 URL을 여는 `HelpCommand`라는 `ICommand`를 실행합니다.
+
+> [!NOTE]
+> 각 `MenuItem`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)는 서브클래싱된 `Shell` 개체에서 상속됩니다.
 
 ## <a name="define-menuitem-appearance"></a>MenuItem 모양 정의
 
@@ -415,8 +411,8 @@ Shell.Current.CurrentItem = aboutItem;
 [![iOS 및 Android에서 템플릿 기반 MenuItem 개체의 스크린샷](flyout-images/menuitem-templated.png "셸 템플릿 기반 MenuItem 개체")](flyout-images/menuitem-templated-large.png#lightbox "셸 템플릿 기반 MenuItem 개체")
 
 > [!NOTE]
-> 셸은 `MenuItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 [`Text`](xref:Xamarin.Forms.MenuItem.Text) 및 [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) 속성을 제공합니다.
+> 셸은 `MenuItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 [`Text`](xref:Xamarin.Forms.MenuItem.Text) 및 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 속성을 제공합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

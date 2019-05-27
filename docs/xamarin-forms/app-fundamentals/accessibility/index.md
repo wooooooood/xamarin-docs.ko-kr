@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116448"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971057"
 ---
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms 접근성
 
@@ -24,7 +24,7 @@ Xamarin.Forms 애플리케이션을 접근성이 있도록 만들려면 다양�
 
 Xamarin.Forms에는 각각의 기본 플랫폼에서 사용할 수 있는 모든 접근성 API에 대한 *기본* 지원이 포함되어 있지 않습니다. 하지만 화면 판독기와 탐색 지원 도구를 지원하는 사용자 인터페이스 요소의 자동화 속성을 설정하는 기능은 지원되며, 이것은 접근성 있는 애플리케이션을 구축하는 데 가장 중요한 부분 중 하나입니다. 자세한 내용은 [자동화 속성](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)을 참조하십시오.
 
-Xamarin.Forms 애플리케이션에는 지정된 컨트롤의 탭 순서도 사용할 수 있습니다. 자세한 내용은 [키보드 탐색](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)을 참조하세요.
+Xamarin.Forms 애플리케이션에서는 지정된 컨트롤의 탭 순서를 사용하여 유용성 및 접근성을 개선할 수도 있습니다. 자세한 내용은 [키보드 접근성](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)을 참조하세요.
 
 다른 접근성 API(예: [iOS의 PostNotification](~/ios/app-fundamentals/accessibility.md))는 [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) 또는 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) 구현에 더 적합할 수 있습니다. 이 내용은 가이드에서 다루지 않습니다.
 

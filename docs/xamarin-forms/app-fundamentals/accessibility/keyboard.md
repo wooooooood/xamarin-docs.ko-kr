@@ -1,26 +1,26 @@
 ---
-title: 키보드 탐색
-description: 기본 탭 시퀀스를 사용하지 않고 TabIndex 속성 및 IsTapStop 속성의 결합으로 탭 시퀀스를 지정하여 경우에 따라 UI를 조정할 필요가 있습니다.
+title: 키보드 접근성
+description: 기본 탭 시퀀스를 사용하지 않고 TabIndex 속성 및 IsTapStop 속성의 결합으로 탭 시퀀스를 지정하여 경우에 따라 UI의 접근성을 조정할 필요가 있습니다.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
-ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 05/09/2019
+ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207884"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971269"
 ---
-# <a name="keyboard-navigation-in-xamarinforms"></a>Xamarin.Forms의 키보드 탐색
+# <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
-일부 사용자는 적절한 키보드 액세스 권한을 제공하지 않는 애플리케이션을 사용하는 데 문제가 있을 수 있습니다. 컨트롤에 대한 탭 순서를 지정하면 키보드 탐색을 사용하도록 설정하고 특정 순서로 입력을 수신할 애플리케이션 페이지를 준비할 수 있습니다.
+화면 판독기를 사용하거나 이동성 문제가 있는 사용자는 적절한 키보드 액세스 권한을 제공하지 않는 애플리케이션을 사용하는 데 문제가 있을 수 있습니다. Xamarin.Forms 애플리케이션에서는 유용성 및 접근성을 개선하기 위해 예상 탭 순서가 지정되어 있을 수도 있습니다. 컨트롤에 대한 탭 순서를 지정하면 키보드 탐색을 사용하도록 설정하고 특정 순서로 입력을 수신할 애플리케이션 페이지를 준비하고 화면 판독기를 통해 사용자가 포커스 가능한 요소를 읽을 수 있게 할 수 있습니다.
 
-기본적으로 컨트롤의 탭 순서는 XAML에 나열되거나 프로그래밍 방식으로 자식 컬렉션에 추가되는 순서와 동일합니다. 이 순서는 컨트롤을 키보드로 탐색하는 순서이고 종종 이 기본 순서는 최적의 순서입니다. 그러나 기본 순서는 다음 XAML 코드 예제에 표시된 것처럼 예상 순서와 항상 동일하지는 않습니다.
+기본적으로 컨트롤의 탭 순서는 XAML에 나열되거나 프로그래밍 방식으로 자식 컬렉션에 추가되는 순서와 동일합니다. 이 순서는 컨트롤을 키보드로 탐색하고 화면 판독기로 읽는 순서이고, 종종 이 기본 순서가 최적의 순서입니다. 그러나 기본 순서는 다음 XAML 코드 예제에 표시된 것처럼 예상 순서와 항상 동일하지는 않습니다.
 
 ```xaml
 <Grid>
@@ -113,6 +113,9 @@ ms.locfileid: "54207884"
 ![](keyboard-images/correct-tab-order.png "열 기반 탭 순서")
 
 여기서 탭 순서는 열 기반입니다. 따라서 Tab 키를 누르면 이름-성 [`Entry`](xref:Xamarin.Forms.Entry) 쌍을 탐색합니다.
+
+> [!IMPORTANT]
+> iOS 및 Android의 화면 판독기는 화면에서 접근 가능한 요소를 읽을 때 [`VisualElement`](xref:Xamarin.Forms.VisualElement)의 `TabIndex`를 따릅니다.
 
 ## <a name="excluding-controls-from-the-tab-order"></a>탭 순서에서 컨트롤 제외
 

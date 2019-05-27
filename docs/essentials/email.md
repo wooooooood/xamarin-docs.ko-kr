@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 06b4f4b612d0cb44e467a9da6dbee3194338027d
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869964"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804907"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
 
@@ -19,6 +19,9 @@ ms.locfileid: "58869964"
 ## <a name="get-started"></a>시작
 
 [!include[](~/essentials/includes/get-started.md)]
+
+> [!TIP]
+> iOS에서 Email API를 사용하려면 물리적 디바이스에서 실행해야 하며, 예외는 throw됩니다.
 
 ## <a name="using-email"></a>메일 사용
 

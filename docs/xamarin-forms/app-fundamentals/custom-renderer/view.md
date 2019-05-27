@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057972"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926602"
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 보기 클래스에서 파생되어야 합니다. 이 문서에서는 디바이스 카메라에서 미리 보기 비디오 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
@@ -56,13 +56,13 @@ public class CameraPreview : View
 }
 ```
 
-`CameraPreview` 사용자 지정 컨트롤은 PCL(이식 가능한 클래스 라이브러리) 프로젝트에서 생성되고 컨트롤에 대한 API를 정의합니다. 사용자 지정 컨트롤은 디바이스의 전면 또는 후면 카메라의 비디오 스트림을 표시해야 하는지 여부를 제어하는 데 사용되는 `Camera` 속성을 노출합니다. 컨트롤이 생성될 때 `Camera` 속성에 대해 값이 지정되지 않은 경우에는 기본적으로 후면 카메라가 지정됩니다.
+`CameraPreview` 사용자 지정 컨트롤은 .NET Standard 라이브러리 프로젝트에서 생성되고 컨트롤에 대한 API를 정의합니다. 사용자 지정 컨트롤은 디바이스의 전면 또는 후면 카메라의 비디오 스트림을 표시해야 하는지 여부를 제어하는 데 사용되는 `Camera` 속성을 노출합니다. 컨트롤이 생성될 때 `Camera` 속성에 대해 값이 지정되지 않은 경우에는 기본적으로 후면 카메라가 지정됩니다.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>사용자 지정 컨트롤 사용
 
-`CameraPreview` 사용자 지정 컨트롤은 해당 위치의 네임스페이스를 선언하고 사용자 지정 컨트롤 요소의 네임스페이스 접두사를 사용하여 PCL 프로젝트의 XAML에서 참조할 수 있습니다. 다음 코드 예제에서는 `CameraPreview` 사용자 지정 컨트롤을 XAML 페이지에서 사용하는 방법을 보여줍니다.
+`CameraPreview` 사용자 지정 컨트롤은 해당 위치의 네임스페이스를 선언하고 사용자 지정 컨트롤 요소의 네임스페이스 접두사를 사용하여 .NET 표준 라이브러리 프로젝트의 XAML에서 참조할 수 있습니다. 다음 코드 예제에서는 `CameraPreview` 사용자 지정 컨트롤을 XAML 페이지에서 사용하는 방법을 보여줍니다.
 
 ```xaml
 <ContentPage ...
@@ -334,4 +334,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+- [CustomRendererView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)

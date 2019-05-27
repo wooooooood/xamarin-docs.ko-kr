@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 20d9fb79d03990824dd884b62138a3e29b3ee04f
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: f6662f20485c6671edcb5a1654569cdd8498607e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054483"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005214"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
-
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell은 다음을 비롯한 대부분의 모바일 애플리케이션에 필요한 기본 기능을 제공하여 모바일 애플리케이션 개발의 복잡성을 줄입니다.
 
@@ -30,48 +28,7 @@ Xamarin.Forms Shell은 다음을 비롯한 대부분의 모바일 애플리케�
 또한 셸 애플리케이션은 렌더링 속도 향상 및 메모리 사용 감소의 혜택을 받습니다.
 
 > [!IMPORTANT]
-> 기존 iOS 및 Android 애플리케이션은 셸을 채택하고 탐색, 성능 및 확장성 향상으로 즉시 이점을 얻을 수 있습니다.
-
-셸은 현재 시험 단계이며 `Forms.Init` 메서드를 호출하기 전에 플랫폼 프로젝트에 `Forms.SetFlags("Shell_Experimental");`을(를) 추가하는 경우에만 사용할 수 있습니다.
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-```csharp
-public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-{
-    protected override void OnCreate(Bundle savedInstanceState)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        TabLayoutResource = Resource.Layout.Tabbar;
-        ToolbarResource = Resource.Layout.Toolbar;
-
-        base.OnCreate(savedInstanceState);
-
-        global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-        LoadApplication(new App());
-    }
-}
-```
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-```csharp
-public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-{
-    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-    {
-        global::Xamarin.Forms.Forms.SetFlags("Shell_Experimental");
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new App());
-
-        return base.FinishedLaunching(app, options);
-    }
-}
-```
-
-----
+> iOS 및 Android에서는 Xamarin.Forms 셸만 사용할 수 있습니다. 기존 iOS 및 Android 애플리케이션은 셸을 채택하고 탐색, 성능 및 확장성 향상으로 즉시 이점을 얻을 수 있습니다.
 
 ## <a name="shell-navigation-experience"></a>셸 탐색 환경
 
@@ -181,11 +138,11 @@ namespace Xaminals
 
 `Shell` 클래스는 셸 애플리케이션의 모양을 제어하는 다음 속성을 정의합니다.
 
-- `Color` 형식의 `ShellBackgroundColor` - 셸 크롬의 배경색을 정의하는 연결된 속성입니다. 셸 콘텐츠 뒤의 색은 채워지지 않습니다.
-- `Color` 형식의 `ShellDisabledColor` - 사용할 수 없는 텍스트 및 아이콘을 음영 처리할 색을 정의하는 연결된 속성입니다.
-- `Color` 형식의 `ShellForegroundColor` - 텍스트 및 아이콘을 음영 처리할 색을 정의하는 연결된 속성입니다.
-- `Color` 형식의 `ShellTitleColor` - 현재 페이지의 제목에 사용되는 색을 정의하는 연결된 속성입니다.
-- `Color` 형식의 `ShellUnselectedColor` - 셸 크롬에서 선택되지 않은 텍스트 및 아이콘에 사용되는 색을 정의하는 연결된 속성입니다.
+- `Color` 형식의 `BackgroundColor` - 셸 크롬의 배경색을 정의하는 연결된 속성입니다. 셸 콘텐츠 뒤의 색은 채워지지 않습니다.
+- `Color` 형식의 `DisabledColor` - 사용할 수 없는 텍스트 및 아이콘을 음영 처리할 색을 정의하는 연결된 속성입니다.
+- `Color` 형식의 `ForegroundColor` - 텍스트 및 아이콘을 음영 처리할 색을 정의하는 연결된 속성입니다.
+- `Color` 형식의 `TitleColor` - 현재 페이지의 제목에 사용되는 색을 정의하는 연결된 속성입니다.
+- `Color` 형식의 `UnselectedColor` - 셸 크롬에서 선택되지 않은 텍스트 및 아이콘에 사용되는 색을 정의하는 연결된 속성입니다.
 
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
@@ -196,7 +153,6 @@ CSS(CSS 스타일시트)를 사용하여 이 속성을 설정할 수도 있습�
 `Shell` 클래스는 셸 애플리케이션 콘텐츠의 레이아웃에 영향을 주는 다음 속성을 정의합니다.
 
 - `boolean` 형식의 `NavBarIsVisible` - 페이지가 제공될 때 탐색 모음을 표시할지 여부를 정의하는 연결된 속성입니다. 이 속성은 페이지에서 설정해야 하며 기본값은 `true`입니다.
-- `bool` 형식의 `SetPaddingInsets` - 페이지 콘텐츠가 셸 크롬 아래에 가로질러 표시될지 여부를 제어하는 연결된 속성입니다. 이 속성은 페이지에서 설정해야 하며 기본값은 `false`입니다.
 - `bool` 형식의 `TabBarIsVisible` - 페이지가 제공될 때 탭 표시줄을 표시할지 여부를 정의하는 연결된 속성입니다. 이 속성은 페이지에서 설정해야 하며 기본값은 `true`입니다.
 - `View` 형식의 `TitleView` - 페이지의 `TitleView`를 정의하는 연결된 속성입니다. 이 속성은 페이지에서 설정해야 합니다.
 
@@ -204,5 +160,5 @@ CSS(CSS 스타일시트)를 사용하여 이 속성을 설정할 수도 있습�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

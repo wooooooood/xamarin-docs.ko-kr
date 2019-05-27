@@ -1,18 +1,18 @@
 ---
 title: 개발용 디바이스 설정
-description: 이 문서에서는 장치를 사용하여 Xamarin.Android 애플리케이션을 실행하고 디버깅할 수 있도록 Android 장치를 설정하고 컴퓨터에 연결하는 방법을 설명합니다.
+description: 이 문서에서는 디바이스를 사용하여 Xamarin.Android 응용 프로그램을 실행하고 디버깅할 수 있도록 Android 디바이스를 설정하고 컴퓨터에 연결하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: d1e43d211f639c422bbed3a6afad9f2136551071
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59690292"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925055"
 ---
 # <a name="set-up-device-for-development"></a>개발용 디바이스 설정
 
@@ -30,7 +30,7 @@ Android 에뮬레이터에서 테스트한 후 Android 디바이스에서 실행
 
 ## <a name="enable-debugging-on-the-device"></a>디바이스에서 디버깅 사용
 
-Android 장치를 사용하여 Android 애플리케이션을 테스트할 수 있습니다. 그러나 디버깅하기 전에 디바이스를 올바르게 구성해야 합니다. 포함된 단계는 디바이스에서 실행되는 Android 버전에 따라 약간 다릅니다.
+Android 디바이스를 사용하여 Android 응용 프로그램을 테스트할 수 있습니다. 그러나 디버깅하기 전에 디바이스를 올바르게 구성해야 합니다. 포함된 단계는 디바이스에서 실행되는 Android 버전에 따라 약간 다릅니다.
 
 ### <a name="android-40-to-android-41"></a>Android 4.0부터 Android 4.1까지
 
@@ -135,7 +135,7 @@ Windows 8에서 확인되지 않은 드라이버를 설치하기 위해 추가 �
 
 ### <a name="connecting-over-wifi"></a>WiFi를 통한 연결
 
-기본적으로 *ADB*([Android Debug Bridge](https://developer.android.com/tools/help/adb.html))는 USB를 통해 Android 디바이스와 통신하도록 구성됩니다. USB 대신 TCP/IP를 사용하도록 다시 구성할 수 있습니다. 이렇게 하려면 디바이스와 컴퓨터가 모두 동일한 WiFi 네트워크에 위치해야 합니다. 명령줄에서 다음 단계를 통해 WiFi 문제를 디버깅하도록 환경을 설정하려면:
+기본적으로 *ADB*([Android Debug Bridge](https://developer.android.com/tools/help/adb.html))는 USB를 통해 Android 디바이스와 통신하도록 구성됩니다. USB 대신 TCP/IP를 사용하도록 다시 구성할 수 있습니다. 이렇게 하려면 디바이스와 컴퓨터가 모두 동일한 WiFi 네트워크에 위치해야 합니다. 명령줄에서 다음 단계를 통해 WiFi 문제를 디버깅하도록 환경을 설정하는 방법은 다음과 같습니다.
 
 1. Android 디바이스의 IP 주소를 확인합니다. IP 주소를 확인하려면 **설정 &gt; Wi-Fi**를 찾은 다음, 디바이스를 연결할 WiFi 네트워크를 누릅니다. 그러면 아래 스크린샷에 표시된 것과 비슷하게 네트워크 연결에 대한 정보를 보여주는 설정 화면이 표시됩니다.
 

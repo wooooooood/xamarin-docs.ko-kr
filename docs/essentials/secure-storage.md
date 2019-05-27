@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: b9838ddb9771cb6ce757a4080520a5edd720531a
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: e0bc4b988905f03edbc66a252cc47a05c441f2c9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574743"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925834"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
@@ -51,7 +51,7 @@ ms.locfileid: "59574743"
     </application>
     ```
 
-2. **Resources/xml** 디렉터리에 **auto_backup_rules.xml**이라는 새 XML 파일을 만듭니다. `SecureStorage`를 제외한 모든 공유 기본 설정을 포함하는 다음 콘텐츠를 설정합니다.
+2. **AndroidResource**의 빌드 작업으로 **Resources/xml** 디렉터리에 **auto_backup_rules.xml**이라는 새 XML 파일을 만듭니다. `SecureStorage`를 제외한 모든 공유 기본 설정을 포함하는 다음 콘텐츠를 설정합니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +132,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
+[Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키(_값_에 대한 _키_인 암호화 키 아님)는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
 
 ## <a name="api-level-23-and-higher"></a>API 레벨 23 이상
 
@@ -148,7 +148,7 @@ SecureStorage.RemoveAll();
 
 [KeyChain](xref:Security.SecKeyChain)을 사용하여 iOS 디바이스에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials**로 설정됩니다.
 
-KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해도 iCloud 및 사용자의 다른 장치에서 안전한 값이 제거되지 않는 경우도 있습니다.
+KeyChain 데이터가 iCloud와 동기화되어 응용 프로그램을 제거해도 iCloud 및 사용자의 다른 디바이스에서 안전한 값이 제거되지 않는 경우도 있습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

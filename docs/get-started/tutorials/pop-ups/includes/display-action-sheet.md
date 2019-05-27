@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193787"
 ---
 
 Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 팝업은 사용자에게 작업을 안내하는 데 사용할 수 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스의 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 메서드를 사용하여 사용자에게 작업을 안내하는 작업 시트를 표시합니다.
@@ -41,7 +41,7 @@ Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 �
 
     작업 시트 대화 상자에서 대안을 선택한 후 선택 영역이 Visual Studio **출력** 창에 출력되는지 확인합니다.
 
-    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) 안내서의 [사용자에게 작업 안내](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks)를 참조하세요.
+    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks)를 참조하세요.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -75,4 +75,4 @@ Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 �
 
     작업 시트 대화 상자에서 대안을 선택한 후 선택 영역이 Mac용 Visual Studio **출력** 창에 출력되는지 확인합니다.
 
-    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md) 안내서의 [사용자에게 작업 안내](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks)를 참조하세요.
+    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks)를 참조하세요.

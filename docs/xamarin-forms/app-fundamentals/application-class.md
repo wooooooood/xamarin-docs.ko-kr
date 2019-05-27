@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
-ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
+ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078422"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971211"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
 
@@ -32,7 +32,9 @@ ms.locfileid: "56078422"
 XAML을 사용하여 **App** 클래스를 만들려면 다음 코드 예제와 같이 기본 **App** 클래스를 XAML **App** 클래스 및 연결된 코드 숨김으로 바꿔야 합니다.
 
 ```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Photos.App">
 
 </Application>
 ```
@@ -73,7 +75,7 @@ public class App : Xamarin.Forms.Application
 
 <a name="Properties_Dictionary" />
 
-## <a name="properties-dictionary"></a>Properties 사전
+## <a name="properties-dictionary"></a>속성 사전
 
 `Application` 하위 클래스에는 데이터를 저장하는 데 사용할 수 있는 정적 `Properties` 사전이 있으며, 특히 `OnStart`, `OnSleep` 및 `OnResume` 메서드에서 사용할 수 있습니다. 이 하위 클래스는 `Application.Current.Properties`를 사용하여 Xamarin.Forms 코드의 어느 곳에서나 액세스할 수 있습니다.
 
@@ -111,9 +113,7 @@ Xamarin.Forms 1.4는 `Application` 클래스에 `SavePropertiesAsync()` 추가 �
 
 **Xamarin.Forms를 사용하여 모바일 애플리케이션 만들기** 서적의 [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) 및 [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 장과 관련 [샘플](https://github.com/xamarin/xamarin-forms-book-preview-2)에서 `Properties` 사전 사용에 대한 참조를 찾을 수 있습니다.
 
-
-
-## <a name="the-application-class"></a>Application 클래스
+## <a name="the-application-class"></a>애플리케이션 클래스
 
 참조에 대한 완전한 `Application` 클래스 구현은 아래와 같습니다.
 
@@ -143,7 +143,6 @@ public class App : Xamarin.Forms.Application
         Debug.WriteLine ("OnResume");
     }
 }
-
 ```
 
 그러면 이 클래스가 각 플랫폼별 프로젝트에서 인스턴스화되고, `MainPage`가 로드되어 사용자에게 표시되는 `LoadApplication` 메서드로 전달됩니다.
