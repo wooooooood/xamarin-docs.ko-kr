@@ -112,6 +112,7 @@
 #### [모달 페이지](app-fundamentals/navigation/modal.md)
 ### [셸](app-fundamentals/shell/index.md)
 #### [소개](app-fundamentals/shell/introduction.md)
+#### [셸 애플리케이션 만들기](app-fundamentals/shell/create.md)
 #### [플라이아웃](app-fundamentals/shell/flyout.md)
 #### [탭](app-fundamentals/shell/tabs.md)
 #### [탐색](app-fundamentals/shell/navigation.md)
