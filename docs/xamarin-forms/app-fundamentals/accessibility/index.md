@@ -6,13 +6,14 @@ ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
-ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.date: 05/28/2019
+ms.custom: video
+ms.openlocfilehash: 2aaa61400d3775c4d622b805d24ff0b338017de5
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971057"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354036"
 ---
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms 접근성
 
@@ -34,10 +35,16 @@ Xamarin.Forms 애플리케이션은 대개 여러 플랫폼을 대상으로 합�
 
 - [**iOS 테스팅**](~/ios/app-fundamentals/accessibility.md)
 - [**Android 테스팅**](~/android/app-fundamentals/accessibility.md)
-- [**Windows AccScope(MSDN)**](https://msdn.microsoft.com/library/windows/desktop/dn433239)
+- [**Windows AccScope(MSDN)** ](https://msdn.microsoft.com/library/windows/desktop/dn433239)
 
 ## <a name="related-links"></a>관련 링크
 
 - [플랫폼 간 접근성](~/cross-platform/app-fundamentals/accessibility.md)
 - [Automation 속성](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)
 - [키보드 접근성](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Making-Mobile-Apps-Accessible/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

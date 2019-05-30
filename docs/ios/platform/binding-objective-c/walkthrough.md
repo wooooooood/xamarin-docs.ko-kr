@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: c8adc7ec7f717cf0004f79e3b71123d6daeaee86
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 2897129779b698eae60338d44f9af19b6a2761bc
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978439"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252352"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -172,7 +172,7 @@ InfColorPicker 프로젝트를 다운로드 합시다 [GitHub](https://github.co
 
 ### <a name="creating-a-fat-binary"></a>Fat 이진 파일 만들기
 
-모든 iOS 장치에 시간이 지남에 따라 개발 ARM 아키텍처에서 제공 하는 프로세서 있습니다. 각 새 아키텍처 이전 버전과 호환성 유지 하면서 새 지침 및 기타 향상 된 기능을 추가 합니다. IOS 장치에서 있다고 armv6 armv7, armv7s, arm64 명령 집합 – 있지만 [armv6 더 이상 사용](~/ios/deploy-test/compiling-for-different-devices.md)합니다. IOS 시뮬레이터는 ARM에서 전원이 이며 istead는 x86 및 전원이 x86_64 시뮬레이터입니다. 각 명령에 라이브러리를 제공 해야 합니다는 것을 의미 하는 설정입니다.
+모든 iOS 장치에 시간이 지남에 따라 개발 ARM 아키텍처에서 제공 하는 프로세서 있습니다. 각 새 아키텍처 이전 버전과 호환성 유지 하면서 새 지침 및 기타 향상 된 기능을 추가 합니다. iOS 장치에 armv6 armv7, armv7s, arm64 명령 집합 – 있지만 [armv6 더 이상 사용 되지 않습니다](~/ios/deploy-test/compiling-for-different-devices.md)합니다. IOS 시뮬레이터는 ARM에서 전원이 이며 대신는 x86 및 전원이 x86_64 시뮬레이터입니다. 즉, 각 명령 집합에 대 한 라이브러리를 제공 해야 합니다.
 
 Fat 라이브러리를 `.a` 지원 되는 모든 아키텍처를 포함 하는 파일입니다.
 
@@ -182,9 +182,9 @@ fat 이진 만들기는 3 단계 프로세스입니다.
 - 정적 라이브러리는 x86 및 x84_64 버전을 컴파일하십시오.
 - 사용 된 `lipo` 명령줄 도구를 두 정적 라이브러리를 하나로 결합 합니다.
 
-이 세 단계는 매우 간단 하 고 나중에 업데이트를 수신 하는 Objective-c 라이브러리 또는 버그 수정 해야 하는 경우를 반복 하는 일을 할 수 있습니다. 이러한 단계를 자동화 하려는 경우 향후 유지 관리 및 지원 iOS 바인딩 프로젝트의이 간소화 됩니다.
+다음 세 단계는 매우 간단 하지만, 나중에 받으면 Objective-c 라이브러리 업데이트 또는 버그 수정 해야 하는 경우이 반복 하는 데 필요한 수 있습니다. 이러한 단계를 자동화 하려는 경우 향후 유지 관리 및 지원 iOS 바인딩 프로젝트의이 간소화 됩니다.
 
-셸 스크립트를 이러한 작업을 자동화 하는 사용 가능한 도구가 많이 [rake](http://rake.rubyforge.org/)를 [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치할 때이 연습에 사용할 빌드 시스템에서 정말 make를 설치도 했습니다. 다음은 **메이크파일** iOS 장치 및 모든 라이브러리에 대 한 시뮬레이터에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
+셸 스크립트를 이러한 작업을 자동화 하는 사용 가능한 도구가 많이 [rake](http://rake.rubyforge.org/)를 [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), 및 [확인](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)합니다. Xcode 명령줄 도구를 설치 되 면 `make` 설치 되어이 연습에 사용 될 빌드 시스템입니다. 다음은 **메이크파일** 라이브러리에 대 한 시뮬레이터 및 iOS 장치에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -213,7 +213,7 @@ clean:
     -rm -f *.a *.dll
 ```
 
-입력 합니다 **메이크파일** , 일반 텍스트 편집기에서 명령을 사용 하 여 섹션을 업데이트 하 고 **YOUR 프로젝트 이름** 프로젝트의 이름입니다. 것도 되도록 중요 지침 내에서 탭을 그대로 남아 있을 위의 지침을 붙여 넣을 것입니다.
+입력 합니다 **메이크파일** , 일반 텍스트 편집기에서 명령을 사용 하 여 섹션을 업데이트 하 고 **YOUR 프로젝트 이름** 프로젝트의 이름입니다. 것도 붙여 넣어야 위의 지침에 따라 정확 하 게 유지 하는 지침 내에서 탭을 사용 하 여 확인 해야 합니다.
 
 파일 이름으로 저장 **메이크파일** 위에서 만든 InfColorPicker Xcode 정적 라이브러리와 동일한 위치에 있습니다.
 
@@ -280,7 +280,7 @@ Xcode 및 Xcode 명령줄 도구를 사용 하 여 정적 라이브러리를 만
 
     ![새 프로젝트를 시작](walkthrough-images/bind01vs.png "새 프로젝트를 시작 합니다.")
 
-1. 새 프로젝트 대화 상자에서 선택 **시각적 C# > iPhone 및 iPad > iOS 바인딩 라이브러리 (Xamarin)**:
+1. 새 프로젝트 대화 상자에서 선택 **시각적 C# > iPhone 및 iPad > iOS 바인딩 라이브러리 (Xamarin)** :
 
     [![IOS 바인딩 라이브러리를 선택 합니다.](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 

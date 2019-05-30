@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855031"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178133"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
 _애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드는 모든 기능에 필요한 설정을 설명합니다._
 
-Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 장치 서비스 등과 같은 플랫폼 기능을 애플리케이션에 더 깊이 통합할 수 있습니다.
+Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 디바이스 서비스 등과 같은 플랫폼 기능을 응용 프로그램에 더 깊이 통합할 수 있습니다.
 이러한 기능은 Xamarin.iOS 프로젝트에 사용할 수 있습니다. 전체 서비스 목록은 아래에 설명되어 있습니다.
 
 * 앱 그룹
@@ -205,12 +205,12 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 아래 목록에는 앱 서비스를 사용하도록 설정한 상태에서 앱을 개발할 때 장애물을 만들 수 있는 가장 일반적인 문제 중 일부가 자세히 나열되어 있습니다.
 
--   Apple Developer 포털의  **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
--   서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의  **Certificates, IDs & Profiles** (인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
--   프로비전 프로필과 App ID가 설치되어 있는지, 앱의  **Info.plist** (Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
--   앱의  **Entitlements.plist**  파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
+-   Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
+-   서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
+-   프로비전 프로필과 App ID가 설치되어 있는지, 앱의 **Info.plist**(Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
+-   앱의 **Entitlements.plist** 파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
 -   info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
--   앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이  _아닙니다_ .
+-   앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
 
 <a name="summary" />
 

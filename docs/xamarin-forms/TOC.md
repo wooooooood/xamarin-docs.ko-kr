@@ -115,6 +115,7 @@
 #### [셸 애플리케이션 만들기](app-fundamentals/shell/create.md)
 #### [플라이아웃](app-fundamentals/shell/flyout.md)
 #### [탭](app-fundamentals/shell/tabs.md)
+#### [페이지 구성](app-fundamentals/shell/configuration.md)
 #### [탐색](app-fundamentals/shell/navigation.md)
 #### [검색](app-fundamentals/shell/search.md)
 #### [사용자 지정 렌더러](app-fundamentals/shell/customrenderers.md)

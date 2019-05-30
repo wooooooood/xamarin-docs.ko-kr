@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: cfb2bddceea7717ac87bd7a78fd9cd45e8b93144
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4f70690df46b71db75e48eca0fd901a854be0b21
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61285150"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354004"
 ---
 # <a name="part-2---architecture"></a>2부 - 아키텍처
 
@@ -31,7 +31,7 @@ ms.locfileid: "61285150"
 
 이 문서 및 사례 연구 전체에 걸쳐 이라고 다음 6 개의 응용 프로그램 계층:
 
--   **데이터 계층** – 비휘발성 데이터 지 속성, SQLite 데이터베이스 일 수 있지만 XML 파일 또는 다른 적합 한 메커니즘을 사용 하 여 구현할 수 있습니다.
+-   **데이터 계층** – 비휘발성 데이터 지 속성, SQLite 데이터베이스를 사용할 수 있지만 XML 파일 또는 다른 적합 한 메커니즘을 사용 하 여 구현할 수 있습니다.
 -   **데이터 액세스 계층** -만들기, 읽기, 업데이트, 삭제 (CRUD) 호출자에 게 구현 세부 정보를 노출 하지 않고 데이터에 대 한 액세스를 제공 하는 데이터 계층의 래퍼입니다. 예를 들어 DAL 쿼리 또는 데이터를 업데이트 하는 SQL 문이 있을 수 있지만 참조 하는 코드를이 알 필요가 없습니다.
 -   **비즈니스 계층** – (비즈니스 논리 레이어 또는 BLL이 라고도 함) 비즈니스 엔터티 정의 (모델) 및 비즈니스 논리를 포함 합니다. 비즈니스 외관 패턴에 대 한 후보입니다.
 -   **서비스 액세스 계층** – 클라우드에서 서비스에 액세스 하는 데 사용: 복잡 한 웹 서비스 (REST, JSON, WCF) 데이터 및 이미지의 단순 검색을 원격 서버입니다. 네트워킹 동작을 캡슐화 하 고 응용 프로그램 및 UI 계층에서 사용할 수 있도록 간단한 API를 제공 합니다.

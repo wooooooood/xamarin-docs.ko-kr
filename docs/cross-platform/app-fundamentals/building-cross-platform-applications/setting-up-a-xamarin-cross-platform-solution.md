@@ -1,25 +1,25 @@
 ---
-title: 3부 - Xamarin 플랫폼 간 솔루션 설정
-description: 이 문서에서는 Xamarin의 플랫폼 간 솔루션을 설정 하는 방법을 설명 합니다. 해당 discuses 다양 한 코드 공유 전략을 같은 프로젝트 및.NET Standard를 공유 합니다.
+title: 3 부-Xamarin 플랫폼 간 솔루션 설정
+description: 이 문서에서는 Xamarin의 플랫폼 간 솔루션을 설정 하는 방법을 설명 합니다. 공유 프로젝트 및.NET Standard와 같은 전략을 공유 하는 다양 한 코드에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276630"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354066"
 ---
-# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3부 - Xamarin 플랫폼 간 솔루션 설정
+# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3 부-Xamarin 플랫폼 간 솔루션 설정
 
 사용 중인 플랫폼에 관계 없이 모든 Xamarin 프로젝트 형식을 사용 하 여 동일한 솔루션 파일 (Visual Studio **.sln** 파일 형식). 개별 프로젝트 (예: Mac 용 Visual Studio에서 Windows 프로젝트를) 로드할 수 없는 경우에 개발 환경에서 솔루션을 공유할 수 있습니다.
 
 
 
-새 크로스 플랫폼 응용 프로그램을 만들 때 첫 번째 단계는 빈 솔루션을 만드는 것입니다. 이 섹션 다음: 플랫폼 간 모바일 앱을 빌드하기 위한 프로젝트를 설정 합니다.
+새 플랫폼 간 응용 프로그램을 만들 때 첫 번째 단계는 빈 솔루션을 만드는 것입니다. 이 섹션에서는 다음을 설명 합니다: 플랫폼 간 모바일 앱을 빌드하기 위한 프로젝트를 설정 합니다.
 
  <a name="Sharing_Code" />
 
@@ -33,7 +33,7 @@ ms.locfileid: "61276630"
 
 ### <a name="shared-projects"></a>공유 프로젝트
 
-코드 파일을 공유 하는 가장 간단한 방법은 사용 되는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)합니다.
+코드 파일을 공유 하는 가장 간단한 방법은 사용 하는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)합니다.
 
 이 메서드를 사용 하면 다양 한 플랫폼 프로젝트에서 동일한 코드를 공유 하 고 컴파일러 지시문을 사용 하 여 다양 한 플랫폼 특정 코드 경로 포함할 수 있습니다.
 

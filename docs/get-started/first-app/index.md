@@ -8,13 +8,13 @@ ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 04/02/2019
-ms.openlocfilehash: 5dc37212facbc5b58b807d3fbcba8650a5b065f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/23/2019
+ms.openlocfilehash: 3b25be2c929e0f072af2ff563d49ceaf07cae058
+ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61352035"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66252338"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -22,7 +22,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 ::: zone pivot="windows"
 
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-Android-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ## <a name="step-by-step-instructions-for-windows"></a>Windows용 단계별 지침
 
@@ -73,6 +73,12 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     > [!TIP]
     > 네트워크로 연결된 Mac 컴퓨터를 사용하여 Visual Studio에서 iOS 앱을 빌드하고 디버그할 수 있습니다. 자세한 내용은 [설치 지침](~/ios/get-started/installation/windows/index.md)을 참조하세요.
+
+## <a name="build-an-ios-app-in-visual-studio-2019"></a>Visual Studio 2019에서 iOS 앱 빌드
+
+이 비디오는 구축 하 고 Windows에서 Visual Studio 2019를 사용 하 여 iOS 앱을 테스트 프로세스를 설명 합니다.
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Build-Your-First-iOS-App-with-Visual-Studio-2019-and-Xamarin/player]
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
