@@ -6,13 +6,13 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/01/2018
-ms.openlocfilehash: f2865858552d4445dff95c85767c41849c19cc29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/30/2019
+ms.openlocfilehash: 46e628700771864c6a4b99edea550af694bf3a62
+ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018268"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66394677"
 ---
 # <a name="cpu-architectures"></a>CPU 아키텍처
 
@@ -49,6 +49,9 @@ Xamarin.Android는 다음과 같은 아키텍처를 지원합니다.
 
 -   **armeabi** &ndash; ARM 기반 Cpu 이상 ARMv5TE 명령 집합을 지원 합니다. `armeabi` 는 스레드 안전 하지 않으며 다중 CPU 장치에서 사용할 수 없습니다.
 
+> [!NOTE]
+> 일부로 [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` 는 지원 되지 않습니다.
+
 -   **armeabi-v7a** &ndash; 하드웨어 부동 소수점 연산 및 여러 CPU (SMP) 장치를 사용 하 여 ARM 기반 Cpu입니다. `armeabi-v7a` 기계어 코드는 ARMv5 장치에서 실행 되지 것입니다.
 
 -   **arm64-v8a** &ndash; Cpu ARMv8 64 비트 아키텍처를 기반으로 합니다.
@@ -66,7 +69,7 @@ Xamarin.Android는 다음과 같은 아키텍처를 지원합니다.
 선택할 필요가 없습니다 **arm64-v8a** 하거나 **x86_64** 64 비트 장치를 대상으로 64 비트 지원 64 비트 하드웨어에서 앱을 실행 하지 않아도 됩니다. 예를 들어, 64 비트 ARM 장치 (예는 [Nexus 9](http://www.google.com/nexus/9/))에 대해 구성 된 앱을 실행할 수 `armeabi-v7a`합니다. 64 비트 지원을 사용 하도록 설정 하는 주요 장점은 더 많은 메모리를 앱에 대 한 수 있도록 하는 것입니다.
 
 > [!NOTE]
-> 64 비트 런타임 지원은 현재 실험적인 기능입니다. 64 비트 런타임을 *되지* 64 비트 장치에서 앱을 실행 하는 데 필요한 합니다. 
+> 2018년 8월부터 새 앱은 API 레벨 26을 대상으로 해야 하고, 2019년 8월부터 앱은 32비트 버전 외에 [‘64비트 버전을 제공’](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)해야 합니다.
 
 ## <a name="additional-information"></a>추가 정보
 
