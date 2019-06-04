@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ecb68d662c64b65346ffd04f0d3d3cd525533151
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970781"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178037"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.Forms Shell 사용자 지정 렌더러
 
@@ -42,6 +42,8 @@ iOS 및 Android에서는 `ShellRenderer` 클래스를 사용하여 셸 애플리
 | iOS | Android |
 | --- | --- |
 | `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+
+`FlyoutItem` 및 `TabBar` 클래스는 `ShellItem` 클래스의 별칭이고 `Tab` 클래스는 `ShellSection` 클래스의 별칭입니다. 따라서 `FlyoutItem` 개체의 사용자 지정 렌더러를 만들 때는 `CreateShellItemRenderer` 메서드를 재정의하고 `Tab` 개체의 사용자 지정 렌더러를 만들 때는 `CreateShellSectionRenderer` 메서드를 재정의해야 합니다.
 
 > [!IMPORTANT]
 > iOS 및 Android에는 둘 다 `ShellSectionRenderer` 및 `ShellItemRenderer`와 같은 셸 렌더러 클래스가 있습니다. 그러나 이 추가 렌더러 클래스는 `ShellRenderer` 클래스에서 재정의를 통해 생성됩니다. 따라서 이 추가 렌더러 클래스의 동작을 사용자 지정하려면 해당 클래스를 서브클래싱하고 서브클래싱된 `ShellRenderer` 클래스에서 적절한 재정의로 서브클래스 인스턴스를 만들면 됩니다.

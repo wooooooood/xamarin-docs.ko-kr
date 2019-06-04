@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/23/2019
+ms.openlocfilehash: 51d8764854db2fb62a412fab6e1e48c8beabbf1f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178064"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -133,7 +133,9 @@ Shell.Current.FlyoutIsPresented = false;
 
 ## <a name="flyout-items"></a>플라이아웃 항목
 
-모든 서브클래싱된 `Shell` 개체는 하나 이상의 `FlyoutItem` 개체를 포함해야 하고, 각 `FlyoutItem` 개체는 플라이아웃의 항목을 나타냅니다. 다음 예제에서는 플라이아웃 헤더 및 두 플라이아웃 항목을 포함하는 플라이아웃을 만듭니다.
+애플리케이션의 탐색 패턴이 플라이아웃을 포함하는 경우 `Shell` 개체는 각 `FlyoutItem` 개체가 플라이아웃의 항목을 나타내는 `FlyoutItem` 개체를 하나 이상 포함해야 합니다. 각 `FlyoutItem` 개체는 `Shell` 개체의 자식이어야 합니다.
+
+다음 예제에서는 플라이아웃 헤더 및 두 플라이아웃 항목을 포함하는 플라이아웃을 만듭니다.
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -170,7 +172,7 @@ Shell.Current.FlyoutIsPresented = false;
 > [!NOTE]
 > 플라이아웃 헤더가 없으면 플라이아웃 항목이 플라이아웃 위쪽에 나타납니다. 플라이아웃 헤더가 있으면 플라이아웃 항목이 플라이아웃 헤더 아래에 나타납니다.
 
-셸에는 시각적 트리에 추가적인 뷰를 도입하지 않고도 셸 시각적 계층 구조를 단순화할 수 있는 암시적 변환 연산자가 있습니다. 서브클래싱된 `Shell` 개체는 `FlyoutItem` 개체만 포함할 수 있고, 이 개체도 `Tab` 개체만 포함할 수 있고, 이 개체도 `ShellContent` 개체만 포함할 수 있기 때문에 이 작업이 가능합니다. 이 암시적 변환 연산자를 사용하여 이전 예제에서 `FlyoutItem`, `Tab` 및 `ShellContent` 개체를 제거할 수 있습니다.
+셸에는 시각적 트리에 추가적인 뷰를 도입하지 않고도 셸 시각적 계층 구조를 단순화할 수 있는 암시적 변환 연산자가 있습니다. 서브클래싱된 `Shell` 개체는 `FlyoutItem` 또는 `TabBar` 개체만 포함할 수 있고, 이 개체도  개체만 포함할 수 있고, 이 개체도 `Tab` 개체만 포함할 수 있고, 이 개체도 `ShellContent` 개체만 포함할 수 있기 때문에 이 작업이 가능합니다. 이 암시적 변환 연산자를 사용하여 이전 예제에서 `FlyoutItem`, `Tab` 및 `ShellContent` 개체를 제거할 수 있습니다.
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -193,11 +195,11 @@ Shell.Current.FlyoutIsPresented = false;
 
 ### <a name="flyoutitem-class"></a>FlyoutItem 클래스
 
-`FlyoutItem` 클래스에는 해당 모양 및 동작을 제어하는 다음 속성이 포함됩니다.
+`FlyoutItem` 클래스에는 플라이아웃 항목의 및 동작을 제어하는 다음 속성이 포함됩니다.
 
 - `FlyoutDisplayOptions` 형식의 `FlyoutDisplayOptions` - 항목 및 해당 자식이 플라이아웃에 표시되는 방식을 정의합니다. 기본값은 `AsSingleItem`입니다.
 - `Tab` 형식의 `CurrentItem` - 선택된 항목입니다.
-- `ShellSectionCollection` 형식의 `Items` - `FlyoutItem` 내의 모든 탭을 정의합니다.
+- `IList<Tab>` 형식의 `Items` - `FlyoutItem` 내의 모든 탭을 정의합니다.
 - `ImageSource` 형식의 `FlyoutIcon` - 항목에 사용할 아이콘입니다. 이 속성을 설정하지 않으면 `Icon` 속성 값이 대신 사용됩니다.
 - `ImageSource` 형식의 `Icon` - 플라이아웃이 아닌 크롬의 일부로 표시할 아이콘을 정의합니다.
 - `boolean` 형식의 `IsChecked` - 플라이아웃에서 현재 항목을 강조 표시할지 여부를 정의합니다.
@@ -268,7 +270,7 @@ Shell.Current.FlyoutIsPresented = false;
 </Shell>
 ```
 
-이 예제에서 플라이아웃 항목은 `FlyoutItem` 개체의 자식인 `Tab` 개체 및 `FlyoutItem` 개체의 자식인 `Shellontent` 개체에 대해 생성됩니다. `FlyoutItem` 개체의 자식인 각 `ShellContent` 개체가 자동으로 `Tab` 개체로 래핑되기 때문에 이 작업이 수행됩니다. 또한 플라이아웃 항목은 최종 `ShellContent` 개체에 대해 생성되고, 이 개체는 `Tab` 개체로 래핑된 후 `FlyoutItem` 개체로 래핑됩니다.
+이 예제에서 플라이아웃 항목은 `FlyoutItem` 개체의 자식인 `Tab` 개체 및 `FlyoutItem` 개체의 자식인 `ShellContent` 개체에 대해 생성됩니다. `FlyoutItem` 개체의 자식인 각 `ShellContent` 개체가 자동으로 `Tab` 개체로 래핑되기 때문에 이 작업이 수행됩니다. 또한 플라이아웃 항목은 최종 `ShellContent` 개체에 대해 생성되고, 이 개체는 `Tab` 개체로 래핑된 후 `FlyoutItem` 개체로 래핑됩니다.
 
 이를 통해 다음 플라이아웃 항목이 생성됩니다.
 
@@ -276,7 +278,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 ## <a name="define-flyoutitem-appearance"></a>FlyoutItem 모양 정의
 
-각 `FlyoutItem`의 모양은 `Shell.ItemTemplate` 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정하여 사용자 지정할 수 있습니다.
+각 `FlyoutItem`의 모양은 `Shell.ItemTemplate`에 연결된 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정하여 사용자 지정할 수 있습니다.
 
 ```xaml
 <Shell ...>
@@ -288,7 +290,7 @@ Shell.Current.FlyoutIsPresented = false;
                     <ColumnDefinition Width="0.2*" />
                     <ColumnDefinition Width="0.8*" />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
+                <Image Source="{Binding FlyoutIcon}"
                        Margin="5"
                        HeightRequest="45" />
                 <Label Grid.Column="1"
@@ -306,7 +308,7 @@ Shell.Current.FlyoutIsPresented = false;
 [![iOS 및 Android에서 템플릿 기반 FlyoutItem 개체의 스크린샷](flyout-images/flyoutitem-templated.png "셸 템플릿 기반 FlyoutItem 개체")](flyout-images/flyoutitem-templated-large.png#lightbox "셸 템플릿 기반 FlyoutItem 개체")
 
 > [!NOTE]
-> 셸은 `ItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 `Title` 및 `Icon` 속성을 제공합니다.
+> 셸은 `ItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 `Title` 및 `FlyoutIcon` 속성을 제공합니다.
 
 ## <a name="flyoutitem-tab-order"></a>FlyoutItem 탭 순서
 
@@ -353,7 +355,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="menu-items"></a>메뉴 항목
 
-메뉴 항목은 선택적으로 플라이아웃에서 플라이아웃 항목 아래에 표시됩니다. 각 메뉴 항목은 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체로 표시됩니다.
+메뉴 항목은 플라이아웃에 선택적으로 추가될 수 있으며 각 메뉴 항목은 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체로 표시됩니다. 플라이아웃에서 `MenuItem` 개체의 위치는 Shell 시각적 계층 구조에서의 선언 순서에 따라 달라집니다. 따라서 `FlyoutItem` 개체가 플라이아웃 상단에 나타나기 전에 선언된 `MenuItem` 개체 및 `FlyoutItem` 개체 후에 선언된 `MenuItem` 개체는 플라이아웃 하단에 나타납니다.
 
 > [!NOTE]
 > `MenuItem` 클래스에는 [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) 이벤트 및 [`Command`](xref:Xamarin.Forms.MenuItem.Command) 속성이 포함됩니다. 따라서 `MenuItem` 개체를 통해 탭되는 `MenuItem`에 대한 응답으로 작업을 실행하는 시나리오를 실현합니다. 이 시나리오에는 탐색 수행 및 특정 웹 페이지에서 웹 브라우저 열기가 포함됩니다.
@@ -373,7 +375,7 @@ Shell.Current.CurrentItem = aboutItem;
 </Shell>
 ```
 
-이 코드는 두 개의 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체를 플라이아웃에 추가합니다.
+이 코드는 2개의 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체를 플라이아웃에서 모든 플라이아웃 항목 아래쪽에 추가합니다.
 
 [![iOS 및 Android에서 MenuItem 개체가 포함된 플라이아웃의 스크린샷](flyout-images/flyout.png "MenuItem 개체가 포함된 셸 플라이아웃")](flyout-images/flyout-large.png#lightbox "MenuItem 개체가 포함된 셸 플라이아웃")
 
@@ -384,34 +386,84 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="define-menuitem-appearance"></a>MenuItem 모양 정의
 
-각 `MenuItem`의 모양은 `Shell.MenuItemTemplate` 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정하여 사용자 지정할 수 있습니다.
+각 `MenuItem`의 모양은 `Shell.MenuItemTemplate`에 연결된 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정하여 사용자 지정할 수 있습니다.
 
 ```xaml
-<Shell.MenuItemTemplate>
-    <DataTemplate>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*" />
-                <ColumnDefinition Width="0.8*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="{Binding Icon}"
-                   Margin="5"
-                   HeightRequest="45" />
-            <Label Grid.Column="1"
-                   Text="{Binding Text}"
-                   FontAttributes="Italic"
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </DataTemplate>
-</Shell.MenuItemTemplate>
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
+</Shell>
 ```
 
-이 예제에서는 각 `MenuItem` 개체의 제목을 기울임꼴로 표시합니다.
+이 예제에서는 Shell 수준 `MenuItemTemplate`을 각 `MenuItem` 개체에 첨부하여 각 `MenuItem` 개체의 제목을 기울임꼴로 표시합니다.
 
 [![iOS 및 Android에서 템플릿 기반 MenuItem 개체의 스크린샷](flyout-images/menuitem-templated.png "셸 템플릿 기반 MenuItem 개체")](flyout-images/menuitem-templated-large.png#lightbox "셸 템플릿 기반 MenuItem 개체")
 
 > [!NOTE]
 > 셸은 `MenuItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 [`Text`](xref:Xamarin.Forms.MenuItem.Text) 및 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 속성을 제공합니다.
+
+`Shell.MenuItemTemplate`은 연결된 속성이므로 특정 `MenuItem` 개체에 서로 다른 템플릿을 첨부할 수 있습니다.
+
+```xaml
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell">
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                ...
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+</Shell>
+```
+
+이 예제에서는 Shell 수준 `MenuItemTemplate`을 첫 번째 `MenuItem` 개체에 첨부하고 인라인 `MenuItemTemplate`을 두 번째 `MenuItem`에 첨부합니다.
 
 ## <a name="related-links"></a>관련 링크
 
