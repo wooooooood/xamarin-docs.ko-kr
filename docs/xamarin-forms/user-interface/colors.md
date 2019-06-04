@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 43854929cfc232b24cad18e276b3ba51d1e5dece
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b07bfd9f9ecbde66dbac3854bdbb611ad89e0ee2
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153505"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469519"
 ---
 # <a name="colors-in-xamarinforms"></a>Xamarin.Forms의 색
 
@@ -25,7 +25,7 @@ _Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공 합니다._
 `Color` 다양 한 색 인스턴스를 생성 하는 메서드를 제공 하는 클래스
 
 -  **명명 된 색** -일반적인 명명 된 색을 포함 하 여 컬렉션인 `Red`를 `Green`, 및 `Blue`합니다.
--  **FromHex** -문자열 값 "00FF00" 예: HTML에 사용 되는 구문과 유사 합니다. 알파는 필요에 따라 문자 ("CC00FF00")의 첫 번째 쌍으로 지정할 수 있습니다.
+-  **FromHex** -문자열 값 "00FF00" 예를 들어 HTML에 사용 되는 구문과 유사 합니다. 알파 문자 ("CC00FF00")의 첫 번째 쌍으로 선택적으로 지정할 수 있습니다.
 -  **FromHsla** -색상, 채도 및 명도 `double` 선택적 알파 값 (0.0-1.0) 값입니다.
 -  **FromRgb** -빨강, 녹색 및 파랑 `int` 값 (0-255).
 -  **FromRgba** -빨간색, 녹색, 파랑 및 알파 `int` 값 (0-255).

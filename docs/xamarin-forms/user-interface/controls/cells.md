@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 5ef1aba847954ccdeb230acd82ebbc5015ebd6b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c4d73f131b8b20f17c5a3df13a3c4590f4ca926c
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61030620"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469501"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
@@ -48,7 +48,7 @@ Xamarin.Forms 셀 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) 로 설정 하는 텍스트를 포함 합니다 [ `Text`'](xref:Xamarin.Forms.SwitchCell.Text) 속성 및 설정/해제 스위치 부울을 사용 하 여 처음에 설정 됩니다 [ `On` ](xref:Xamarin.Forms.SwitchCell.On) 속성입니다. 처리를 [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) 때 알림을 받도록 이벤트는 `On` 속성 변경 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SwitchCell) / [가이드](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![SwitchCell 예제](cells-images/SwitchCell.png "SwitchCell 예제")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+| [ `SwitchCell` ](xref:Xamarin.Forms.SwitchCell) 로 설정 하는 텍스트를 포함 합니다 [ `Text` ](xref:Xamarin.Forms.SwitchCell.Text) 속성 및 설정/해제 스위치를 처음에 부울 값을 사용 하 여 설정 [ `On` ](xref:Xamarin.Forms.SwitchCell.On) 속성입니다. 처리를 [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) 때 알림을 받도록 이벤트는 `On` 속성 변경 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SwitchCell) / [가이드](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![SwitchCell 예제](cells-images/SwitchCell.png "SwitchCell 예제")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="entrycell"></a>EntryCell
